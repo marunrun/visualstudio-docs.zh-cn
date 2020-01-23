@@ -2,17 +2,17 @@
 title: C++ IntelliSense
 ms.date: 10/08/2018
 ms.topic: conceptual
-author: mikeblome
-ms.author: mblome
+author: TerryGLee
+ms.author: tglee
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a0acaea4cf01d9c0158dfbf6d9feab37238f88f
-ms.sourcegitcommit: 85d66dc9fea3fa49018263064876b15aeb6f9584
+ms.openlocfilehash: c0d1be12f733a858bf223fb1dce6a091c0dc6c50
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68461701"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594209"
 ---
 # <a name="visual-c-intellisense-features"></a>Visual C++ IntelliSense 功能
 

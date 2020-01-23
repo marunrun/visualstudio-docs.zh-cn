@@ -21,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f261eac1c3cbc73bb12323c089ae88f4ffc6b120
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: d9c52c76bbd8623f9ec9b0ce8f3e5463c638d8f7
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72431674"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75916452"
 ---
 # <a name="debugging-errors-and-warning-dialog-boxes"></a>“调试错误和警告”对话框
 以下是在调试应用程序时可能遇到的错误和警告对话框。
@@ -63,9 +63,9 @@ ms.locfileid: "72431674"
 
  [远程调试错误](../debugger/remote-debugging-errors-and-troubleshooting.md)
 
- [附加错误](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/8dbb3we5(v=vs.100))
+ [附加错误](/previous-versions/visualstudio/visual-studio-2010/8dbb3we5(v=vs.100))
 
- [SQL 调试安装程序疑难解答](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/s7ahaxtd(v=vs.100))
+ [SQL 调试安装程序疑难解答](/previous-versions/visualstudio/visual-studio-2010/s7ahaxtd(v=vs.100))
 
  [调试本机代码常见问题解答](../debugger/debugging-native-code-faqs.md)
 

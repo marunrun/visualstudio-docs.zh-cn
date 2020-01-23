@@ -11,17 +11,17 @@ helpviewer_keywords:
 - TextMate language grammar
 - language support
 ms.assetid: d78c43ee-4ef2-42e5-984e-d137de4e7e92
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4e43325a6d749653c063c06f2c1c10c69f708da9
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: d4fafaf9356d8862808e1ac6ad125207d71769b5
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72647787"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590873"
 ---
 # <a name="add-visual-studio-editor-support-for-other-languages"></a>为其他语言添加 Visual Studio 编辑器支持
 
@@ -74,7 +74,7 @@ Visual Studio 通过 [TextMate 语法](https://manual.macromates.com/en/language
 
 如适用，请在此基路径下添加下列文件夹：
 
-|文件夹名|说明|
+|文件夹名|描述|
 |-----------------|-----------------|
 |\\ *\<language name>*|语言文件夹。 用语言的名称替换 *\<language name>* 。 例如， *\Matlab*。|
 |*\Syntaxes*|语法文件夹。 包含语言的 .json 语法文件，如 Matlab.json   。|

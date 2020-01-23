@@ -11,23 +11,23 @@ helpviewer_keywords:
 - WPF Designer, data binding
 - data binding, WPF
 ms.assetid: 56a1fbff-c7e8-4187-a1c1-ffd17024bc1b
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: a2a2179a759bc11a9466361d3c8cc2df45c12f20
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a14209d895b461c64b30d0f1690b68484f09d970
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648593"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586752"
 ---
 # <a name="create-lookup-tables-in-wpf-applications"></a>在 WPF 应用程序中创建查找表
 
 字词*查找表*（有时称为*查找绑定*）描述了一个控件，该控件基于另一个表中的外键字段的值显示一个数据表中的信息。 您可以通过将父表或对象在 "**数据源**" 窗口中的主节点拖到已绑定到相关子表中的列或属性的控件来创建查找表。
 
-例如，假设有一个表在 sales 数据库中 `Orders`。 @No__t_0 表中的每条记录都包含一个 `CustomerID`，用于指示下订单的客户。 @No__t_0 是指向 `Customers` 表中的客户记录的外键。 显示 `Orders` 表中的订单列表时，可能需要显示实际的客户名称，而不是 `CustomerID`。 由于客户名称位于 `Customers` 表中，因此需要创建查找表以显示客户名称。 查找表使用 `Orders` 记录中的 `CustomerID` 值来导航关系，并返回客户名称。
+例如，假设有一个表在 sales 数据库中 `Orders`。 `Orders` 表中的每条记录都包含一个 `CustomerID`，用于指示下订单的客户。 `CustomerID` 是指向 `Customers` 表中的客户记录的外键。 显示 `Orders` 表中的订单列表时，可能需要显示实际的客户名称，而不是 `CustomerID`。 由于客户名称位于 `Customers` 表中，因此需要创建查找表以显示客户名称。 查找表使用 `Orders` 记录中的 `CustomerID` 值来导航关系，并返回客户名称。
 
 ## <a name="to-create-a-lookup-table"></a>创建查找表的步骤
 
@@ -68,7 +68,7 @@ ms.locfileid: "72648593"
         > [!NOTE]
         > 如果列表中未显示**ListBox**或**ListView**控件，则可以将这些控件添加到列表。 有关信息，请参阅在[从 "数据源" 窗口拖动时，设置要创建的控件](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md)。
 
-    - 派生自 <xref:System.Windows.Controls.Primitives.Selector> 的任何自定义控件。
+    - 派生自 <xref:System.Windows.Controls.Primitives.Selector>的任何自定义控件。
 
         > [!NOTE]
         > 有关如何将自定义控件添加到可以为 "**数据源**" 窗口中的项选择的控件列表的信息，请参阅[将自定义控件添加到 "数据源" 窗口](../data-tools/add-custom-controls-to-the-data-sources-window.md)。
@@ -88,7 +88,7 @@ ms.locfileid: "72648593"
     |<xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A>|Visual Studio 将此属性绑定到你拖到设计器中的子数据的列或属性。 这是父数据的外键。|
     |<xref:System.Windows.Controls.Primitives.Selector.SelectedValuePath%2A>|Visual Studio 将此属性设置为子数据（父数据的外键）的列或属性的路径。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在 Visual Studio 中将 WPF 控件绑定到数据](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md)
 - [在 WPF 应用程序中显示相关数据](../data-tools/display-related-data-in-wpf-applications.md)

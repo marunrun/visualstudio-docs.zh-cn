@@ -2,17 +2,17 @@
 title: 自定义复制行为
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e33ab59660263a5053642c95ec62ab36663f8e7b
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 4e3ab9a30b373e2421607f6dd1609b13adad3087
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72984307"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76115354"
 ---
 # <a name="customizing-copy-behavior"></a>自定义复制行为
 在使用 Visual Studio 可视化和建模 SDK 创建的域特定语言（DSL）中，可以更改用户复制和粘贴元素时所发生的情况。
@@ -42,13 +42,13 @@ ms.locfileid: "72984307"
  **启用或禁用复制、剪切和粘贴。**
 在 "DSL 资源管理器" 中，设置 "**编辑器**" 节点的 "**启用复制粘贴**" 属性。
 
- **将链接复制到同一目标。** 例如，若要将复制的注释框链接到同一个 subject 元素，则为。
+ **将链接复制到同一目标。** 例如，将复制的注释框链接到相同的使用者元素。
 将角色的 "**传播复制**" 属性设置为 "**仅将副本传播到链接**"。 有关详细信息，请参阅[自定义链接复制行为](#customizeLinks)。
 
  复制链接的元素。 例如，在复制新元素时，还建立了任何链接的注释框的副本。
 将角色的 "**传播复制**" 属性设置为 "将**副本传播到链接和相反的角色扮演**者"。 有关详细信息，请参阅[自定义链接复制行为](#customizeLinks)。
 
- **通过复制和粘贴快速复制元素。** 通常，您刚刚复制的项仍处于选中状态，并且您不能将相同类型的元素粘贴到其中。
+ **通过复制和粘贴快速复制元素。** 通常，刚复制的项仍处于选中状态，并且你无法将相同类型的元素粘贴到该项上。
 将元素合并指令添加到域类，并将其设置为向前合并到父类。 这将在拖动操作上产生相同的效果。 有关详细信息，请参阅[自定义元素创建和移动](../modeling/customizing-element-creation-and-movement.md)。
 
  \- 或 -
@@ -72,7 +72,7 @@ partial class MyDslClipboardCommandSet
 } }
 ```
 
- **当用户粘贴到选定目标时创建其他链接。** 例如，在将注释框粘贴到元素上时，将在其之间建立链接。
+ **当用户粘贴到选定目标时创建其他链接。** 例如，在将注释框粘贴到元素上时，它们之间即创建一个链接。
 将元素合并指令添加到目标域类，并将其设置为通过添加链接来处理合并。 这将在拖动操作上产生相同的效果。 有关详细信息，请参阅[自定义元素创建和移动](../modeling/customizing-element-creation-and-movement.md)。
 
  \- 或 -
@@ -80,10 +80,10 @@ partial class MyDslClipboardCommandSet
  重写 `ClipboardCommandSet.ProcessOnPasteCommand()` 以在调用基方法后创建附加链接。
 
  **自定义可将元素复制**到外部应用程序的格式-例如，将边框添加到位图窗体。
-在 DslPackage 项目中重写*MyDsl* `ClipboardCommandSet.ProcessOnMenuCopyCommand()`。
+在 DslPackage 项目中重写*MyDsl*`ClipboardCommandSet.ProcessOnMenuCopyCommand()`。
 
  **自定义通过复制命令（而不是在拖动操作中）将元素复制到剪贴板的方式。**
-在 DslPackage 项目中重写*MyDsl* `ClipboardCommandSet.CopyModelElementsIntoElementGroupPrototype()`。
+在 DslPackage 项目中重写*MyDsl*`ClipboardCommandSet.CopyModelElementsIntoElementGroupPrototype()`。
 
  **通过复制和粘贴保留形状布局。**
 当用户复制多个形状时，可以在粘贴它们时保留其相对位置。 此方法由[VMSDK：线路图示例](https://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)中的示例演示。
@@ -284,12 +284,12 @@ using Microsoft.VisualStudio.Modeling.Diagrams.ExtensionEnablement;
 
  在 ElementOperations 类中定义两个方法：
 
-- `CanMerge(ModelElement targetElement, System.Windows.Forms.IDataObject data)`，用于确定是否可将源元素拖动到目标形状、连接符或关系图上。
+- `CanMerge(ModelElement targetElement, System.Windows.Forms.IDataObject data)` 确定源元素是否可拖动到目标形状、连接符或关系图上。
 
-- `MergeElementGroupPrototype(ModelElement targetElement, ElementGroupPrototype sourcePrototype)`，用于将源元素合并到目标中。
+- `MergeElementGroupPrototype(ModelElement targetElement, ElementGroupPrototype sourcePrototype)`，它将源元素与目标组合在一起。
 
 ### <a name="canmerge"></a>CanMerge()
- 调用 `CanMerge()`，以确定当鼠标在关系图上移动时应向用户提供的反馈。 该方法的参数是在其上鼠标悬停的元素，以及有关源的数据（拖动操作从该源执行）。 用户可以从屏幕上的任何位置进行拖动。 因此，源对象可以为多种不同类型，并且可以采用不同的格式进行序列化。 如果源是 DSL 或 UML 模型，则数据参数是 <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> 的序列化。 拖动、复制和工具箱操作使用 ElementGroupPrototypes 来表示模型的片段。
+ 当鼠标在关系图中移动时，将调用 `CanMerge()` 来确定应向用户提供的反馈。 该方法的参数是在其上鼠标悬停的元素，以及有关源的数据（拖动操作从该源执行）。 用户可以从屏幕上的任何位置进行拖动。 因此，源对象可以为多种不同类型，并且可以采用不同的格式进行序列化。 如果源是 DSL 或 UML 模型，则数据参数是 <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> 的序列化。 拖动、复制和工具箱操作使用 ElementGroupPrototypes 来表示模型的片段。
 
  元素组原型可以包含任意数目的元素和链接。 元素类型可由其 GUID 标识。 GUID 属于已拖动的形状，而不属于基础模型元素。 在以下示例中，如果将来自 UML 关系图的类形状拖动到此关系图上，则 `CanMerge()` 将返回 True。
 
@@ -367,7 +367,7 @@ private ElementGroupPrototype ConvertDraggedTypeToLocal (MyTargetShape snapshot,
 
  当用户按 CTRL+C 或使用“复制”菜单命令时，将调用方法 <xref:Microsoft.VisualStudio.Modeling.Shell.ClipboardCommandSet.ProcessOnMenuCopyCommand%2A>。 你可以在**DslPackage\Generated Code\CommandSet.cs**中了解这是如何设置的。 有关如何设置命令的详细信息，请参阅[如何：向快捷菜单中添加命令](../modeling/how-to-add-a-command-to-the-shortcut-menu.md)。
 
- 可以通过在 DslPackage 项目中添加*MyDsl* `ClipboardCommandSet` 的分部类定义来替代 ProcessOnMenuCopyCommand。
+ 可以通过在 DslPackage 项目中添加*MyDsl*`ClipboardCommandSet` 的分部类定义来替代 ProcessOnMenuCopyCommand。
 
 ```csharp
 using System.Collections.Generic;
@@ -552,7 +552,7 @@ namespace Company.MyDsl
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [自定义元素创建和移动](../modeling/customizing-element-creation-and-movement.md)
 - [如何：添加拖放处理程序](../modeling/how-to-add-a-drag-and-drop-handler.md)

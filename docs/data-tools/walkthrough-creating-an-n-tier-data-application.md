@@ -9,17 +9,17 @@ helpviewer_keywords:
 - n-tier applications, creating
 - n-tier applications, walkthroughs
 ms.assetid: d15e4d31-2839-48d9-9e0e-2e73404d82a2
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 8fad79423465ac3d90c426862f93f09d721c7df3
-ms.sourcegitcommit: 8589d85cc10710ef87e6363a2effa5ee5610d46a
+ms.openlocfilehash: a88f0382a93027cc952dfe44f0027e6ab1076a45
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72806985"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75916499"
 ---
 # <a name="walkthrough-create-an-n-tier-data-application"></a>演练：创建 n 层数据应用程序
 “N 层”数据应用程序是指用于访问数据且分为多个逻辑层（或“多层”）的应用程序。 通过将应用程序组件分离到相对独立的层中，可以提高应用程序的可维护性和可伸缩性。 该结构之所以具有这种优点，是因为它有利于采用可应用于单个层而无需重新设计整个解决方案的新技术。 N 层体系结构包括一个表示层、一个中间层和一个数据层。 中间层通常包括数据访问层、业务逻辑层和共享组件（例如身份验证和验证）。 数据层则包括关系数据库。 N 层应用程序通常将敏感信息存储在中间层的数据访问层中，目的是将它们与访问表示层的最终用户隔离。 有关详细信息，请参阅[N 层数据应用程序概述](../data-tools/n-tier-data-applications-overview.md)。
@@ -48,9 +48,9 @@ ms.locfileid: "72806985"
 
 - 编写代码以填充数据表。
 
-![视频链接](../data-tools/media/playvideo.gif)本主题的视频版本，请参阅[视频帮助：创建 N 层数据应用程序](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/cc178916(v=vs.90))。
+![视频链接](../data-tools/media/playvideo.gif)本主题的视频版本，请参阅[视频帮助：创建 N 层数据应用程序](/previous-versions/visualstudio/visual-studio-2008/cc178916(v=vs.90))。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
 本演练使用 SQL Server Express LocalDB 和 Northwind 示例数据库。
 
 1. 如果没有 SQL Server Express 的 LocalDB，请从[SQL Server Express 下载 "页](https://www.microsoft.com/sql-server/sql-server-editions-express)或通过**Visual Studio 安装程序**安装它。 在**Visual Studio 安装程序**中，可以将 SQL Server Express LocalDB 作为 **.net 桌面开发**工作负荷的一部分进行安装，也可以作为单个组件安装。
@@ -75,7 +75,7 @@ ms.locfileid: "72806985"
 
 ### <a name="to-create-the-n-tier-solution-and-dataentitytier-class-library"></a>创建 N 层解决方案和 DataEntityTier 类库
 
-1. 在 Visual Studio 的 "**文件**" 菜单上，选择 "**新建** > **项目**"。
+1. 在 Visual Studio 的“文件”菜单中，依次选择“新建” > “项目”。
 
 2. 在左侧窗格中展开 "**视觉对象C#**  " 或 " **Visual Basic** "，然后选择 " **Windows 桌面**"。
 
@@ -218,7 +218,7 @@ ms.locfileid: "72806985"
 
 3. 选择“DataAccessTier”和“DataEntityTier”项目。
 
-4. 单击“确定”。
+4. 单击" **确定**"。
 
 ## <a name="add-functions-to-the-service-to-call-the-getcustomers-and-getorders-methods-in-the-data-access-tier"></a>向服务添加函数以调用数据访问层中的 GetCustomers 和 GetOrders 方法
 现在数据访问层包含返回数据的方法，接下来要在数据服务中创建调用这些方法的方法。
@@ -358,7 +358,7 @@ ms.locfileid: "72806985"
     ```
 
 ## <a name="increase-the-maximum-message-size-allowed-by-the-service"></a>增加服务允许的最大消息大小
-@No__t_0 的默认值不够大，无法保存从 `Customers` 和 `Orders` 表中检索的数据。 在下面的步骤中，将值增加到6553600。 您可以更改客户端上的值，这会自动更新服务引用。
+`maxReceivedMessageSize` 的默认值不够大，无法保存从 `Customers` 和 `Orders` 表中检索的数据。 在下面的步骤中，将值增加到6553600。 您可以更改客户端上的值，这会自动更新服务引用。
 
 > [!NOTE]
 > 较小的默认大小旨在降低遭受拒绝服务 (DoS) 攻击的可能性。 有关更多信息，请参见<xref:System.ServiceModel.WSHttpBindingBase.MaxReceivedMessageSize%2A>。
@@ -379,7 +379,7 @@ ms.locfileid: "72806985"
 
 - 将其他方法添加到服务，以将数据更新回数据库。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在 N 层应用程序中使用数据集](../data-tools/work-with-datasets-in-n-tier-applications.md)
 - [分层更新](../data-tools/hierarchical-update.md)

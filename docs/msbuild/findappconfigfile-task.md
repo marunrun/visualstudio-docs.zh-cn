@@ -11,25 +11,25 @@ helpviewer_keywords:
 - FindAppConfigFile task [MSBuild]
 - MSBuild, FindAppConfigFile task
 ms.assetid: e292de3e-7482-4426-83ce-d921061808bf
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0033bcb21922d6f7e0204b1555fa2c46f8d91d50
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: de2b36f1003515a47774eaa40fda390728940324
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62977560"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591146"
 ---
 # <a name="findappconfigfile-task"></a>FindAppConfigFile 任务
-在提供的列表中查找 app.config 文件（若有）。
+在提供的列表中查找 app.config 文件（若有）  。
 
 ## <a name="parameters"></a>参数
  下表描述了 `FindAppConfigFile` 任务的参数。
 
-|参数|说明|
+|参数|描述|
 |---------------|-----------------|
 |`AppConfigFile`|可选的 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 输出参数。<br /><br /> 指定在列表中发现的第一个匹配项（如有）。|
 |`PrimaryList`|必选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 指定要在其中进行搜索的主列表。|

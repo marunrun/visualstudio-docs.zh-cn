@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9cc8ab1ac26f4aa01342d9949243772edd3de91f
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: b1928176ef1c2612585c7fa46ea653f3ff800050
+ms.sourcegitcommit: 9a5cf730d8e43eed6eba25369b7b44cae0b26b98
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73189410"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75929249"
 ---
 # <a name="quickstart-first-look-at-profiling-tools"></a>快速入门：首先了解分析工具
 
@@ -38,7 +38,7 @@ Visual Studio 提供了各种分析工具，可依据你的应用类型帮助你
 
 ## <a name="analyze-cpu-usage"></a>分析 CPU 的使用量
 
-CPU 使用率工具很适合用于开始分析应用的性能。 它将向你详细介绍应用正在使用的 CPU 资源。 有关 CPU 使用率工具的更详细的演练，请参阅[性能分析初学者指南](../profiling/beginners-guide-to-performance-profiling.md)。
+CPU 使用率工具很适合用于开始分析应用的性能。 它将向你详细介绍应用正在使用的 CPU 资源。 有关 CPU 使用率工具的更详细演练，请参阅[通过分析 CPU 使用情况衡量应用程序性能](../profiling/beginners-guide-to-performance-profiling.md)。
 
 在诊断工具的“摘要”  视图中，选择“启用 CPU 分析”  （必须正在参与调试会话）。
 

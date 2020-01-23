@@ -1,24 +1,24 @@
 ---
 title: Visual Studio for Mac 教程
 description: Visual Studio for Mac 提供用于在 macOS 上生成 .NET 应用程序的集成开发环境，包括 ASP.NET Core 网站和适用于 iOS、Android、Mac 和 Xamarin.Forms 的 Xamarin 项目。
-author: conceptdev
-ms.author: crdun
+author: heiligerdankgesang
+ms.author: dominicn
 ms.date: 02/07/2019
 ms.assetid: 7DC64A52-AA41-4F3A-A8A1-8A20BCD81CC7
 ms.custom: video
-ms.openlocfilehash: 43b7918dfba6ff1d8076d3173900ecdc1b1223a3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3d25fced1e9c9dd6431f4056b5b561f476eecb28
+ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62998315"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74984982"
 ---
 # <a name="visual-studio-2017-for-mac-tour"></a>Visual Studio 2017 for Mac 导览
 
 > [!NOTE]
 > Visual Studio 2019 for Mac [现已推出](installation.md)。
 
-Visual Studio for Mac 是 Mac 上的 .NET 集成开发环境，可用于编辑、调试和生成代码，然后发布应用。 除了预期的功能（例如，标准编辑器和调试程序）外，Visual Studio for Mac 还包括编译器、代码完成工具、图形设计器和源代码管理，以简化软件开发过程。
+Visual Studio for Mac 是 Mac 上的 .NET 集成开发环境，可用于编辑、调试和生成代码，然后发布应用  。 除了预期的功能（例如，标准编辑器和调试程序）外，Visual Studio for Mac 还包括编译器、代码完成工具、图形设计器和源代码管理，以简化软件开发过程。
 
 Visual Studio for Mac 支持许多与其 Windows 对应的文件类型相同的文件类型（例如 `.csproj`、`.fsproj` 或 `.sln`文件），并且支持 EditorConfig 等功能，这意味着可以使用最适合自己的 IDE。
 对于之前使用过 Windows 上的 Visual Studio 人的任何人来说，在创建、打开和开发应用时将不会觉得陌生。 此外，Visual Studio for Mac 采用许多强大的工具，将它的 Windows 对应产品打造成十分强大的 IDE。 Roslyn 编译器平台用于重构和 IntelliSense。 它的项目系统和生成引擎使用 MSBuild，它的源编辑器支持 TextMate 包。 对于 Xamarin 和 .NET Core 应用，使用的是相同的调试器引擎，对于 Xamarin.iOS 和 Xamarin.Android 使用的是相同的设计器。
@@ -41,16 +41,16 @@ Visual Studio for Mac 分为多个部分，用于管理应用程序文件和设�
 
 ## <a name="welcome-screen"></a>欢迎屏幕
 
-启动时，Visual Studio for Mac 将显示“欢迎屏幕”：
+启动时，Visual Studio for Mac 将显示“欢迎屏幕”  ：
 
 ![欢迎屏幕](media/ide-tour-image1.png)
 
 欢迎屏幕包含以下部分：
 
-- 工具栏 - 提供到搜索栏的快速访问。 加载解决方案时，工具栏用于设置调试和显示错误相关的应用配置。
-- 入门 - 为开始使用 Visual Studio for Mac 的开发人员提供到实用主题的快速访问。
-- 最新解决方案 - 提供到最近打开的解决方案的快速访问和用于打开或创建项目的便捷按钮。
-- 开发人员新闻 - 有助于了解 Microsoft 开发人员的最新信息的新闻源。
+- 工具栏  - 提供到搜索栏的快速访问。 加载解决方案时，工具栏用于设置调试和显示错误相关的应用配置。
+- 入门  - 为开始使用 Visual Studio for Mac 的开发人员提供到实用主题的快速访问。
+- 最新解决方案  - 提供到最近打开的解决方案的快速访问和用于打开或创建项目的便捷按钮。
+- 开发人员新闻  - 有助于了解 Microsoft 开发人员的最新信息的新闻源。
 
 ## <a name="solutions-and-projects"></a>解决方案和项目
 
@@ -76,7 +76,7 @@ Solution Pad 在解决方案中组织项目：
 
 ![Solution Pad 中的“引用”文件夹](media/ide-tour-image19.png)
 
-使用“编辑引用”对话框添加其他引用，双击“引用”文件夹或在其上下文菜单操作中选择“编辑引用”便可显示该对话框：
+使用“编辑引用”  对话框添加其他引用，双击“引用”文件夹或在其上下文菜单操作中选择“编辑引用”  便可显示该对话框：
 
 ![“编辑引用”对话框](media/ide-tour-image20.png)
 
@@ -88,7 +88,7 @@ Solution Pad 在解决方案中组织项目：
 
 NuGet 是 .NET 开发最常用的程序包管理器。 通过 Visual Studio 的 NuGet 支持，可以轻松地搜索包并将其添加到项目，再添加到应用程序。
 
-若要将依赖关系添加到应用程序，请右键单击“依赖关系”/“包”文件夹，然后选择“添加包”：
+若要将依赖关系添加到应用程序，请右键单击“依赖关系”/“包”文件夹，然后选择“添加包”  ：
 
 ![添加 NuGet 包](media/ide-tour-image21.png)
 

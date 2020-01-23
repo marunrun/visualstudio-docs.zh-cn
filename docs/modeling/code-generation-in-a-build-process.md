@@ -5,20 +5,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - text templates, build tasks
 - text templates, transforming by using msbuild
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 9c9cc0d8a40970e2ec36030ab3121d6fc02748e2
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: e01136b845124d74c22ceb1c7cab877a8e2d1d04
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72654198"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590548"
 ---
 # <a name="invoke-text-transformation-in-the-build-process"></a>在生成过程中调用文本转换
 
@@ -51,7 +51,7 @@ ms.locfileid: "72654198"
   - VisualStudio. TextTemplating. 15。0
 
 > [!TIP]
-> 如果在生成服务器上运行 TextTemplating 生成目标时获取 CodeAnalysis 方法的 `MissingMethodException`，请确保 Roslyn 程序集位于与生成可执行文件相同的目录中的一个名为*Roslyn*的目录中（例如， *msbuild.exe*）。
+> 如果在生成服务器上运行 TextTemplating 生成目标时获取 CodeAnalysis 方法的 `MissingMethodException`，请确保 Roslyn 程序集位于与生成可执行文件相同的目录中的一个名为*Roslyn*的目录（例如， *msbuild.exe*）。
 
 ## <a name="edit-the-project-file"></a>编辑项目文件
 
@@ -252,7 +252,7 @@ Dim value = Host.ResolveParameterValue("-", "-", "parameterName")
 ```
 
 > [!NOTE]
-> 仅当你使用 MSBuild 时，`ResolveParameterValue` 才会通过 `T4ParameterValues` 获取数据。 使用 Visual Studio 转换模板时，这些参数具有默认值。
+> 仅当使用 MSBuild 时，`ResolveParameterValue` 从 `T4ParameterValues` 中获取数据。 使用 Visual Studio 转换模板时，这些参数具有默认值。
 
 ## <a name="msbuild"></a>在 assembly 和 include 指令中使用项目属性
 
@@ -299,17 +299,17 @@ Visual Studio 宏（如 **$ （SolutionDir））** 在 MSBuild 中不起作用�
 
 - [运行时文本模板](../modeling/run-time-text-generation-with-t4-text-templates.md)在运行时在应用程序中转换。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 ::: moniker range="vs-2017"
 
-- @No__t_0 中的 T4 MSbuild 模板有很好的指导。
+- `%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\msbuild\Microsoft\VisualStudio\v15.0\TextTemplating\Microsoft.TextTemplating.targets` 中的 T4 MSbuild 模板有很好的指导。
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-- @No__t_0 中的 T4 MSbuild 模板有很好的指导。
+- `%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Enterprise\msbuild\Microsoft\VisualStudio\v16.0\TextTemplating\Microsoft.TextTemplating.targets` 中的 T4 MSbuild 模板有很好的指导。
 
 ::: moniker-end
 

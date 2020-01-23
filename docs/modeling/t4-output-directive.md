@@ -2,17 +2,17 @@
 title: T4 输出指令
 ms.date: 11/04/2016
 ms.topic: reference
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1da8ec010e878ff80a9f46748993705b87193d99
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: eb1634da6374ad49f1386be4403e72e8edeff2ca
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72606217"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591809"
 ---
 # <a name="t4-output-directive"></a>T4 输出指令
 
@@ -39,7 +39,7 @@ ms.locfileid: "72606217"
 
  默认值为 **.cs**
 
- 示例： `<#@ output extension=".txt" #>`
+ 示例：`<#@ output extension=".txt" #>`
 
  `<#@ output extension=".htm" #>`
 
@@ -50,7 +50,7 @@ ms.locfileid: "72606217"
  可接受的值：任何有效的文件扩展名。
 
 ## <a name="encoding-attribute"></a>编码属性
- 指定生成输出文件时要使用的编码。 例如:
+ 指定生成输出文件时要使用的编码。 例如：
 
  `<#@ output encoding="utf-8"#>`
 
@@ -68,6 +68,6 @@ ms.locfileid: "72606217"
 
  `utf-32`
 
- `0`（系统默认）
+ `0` （系统默认值）
 
  一般情况下，可以使用 WebName 字符串或 <xref:System.Text.Encoding.GetEncodings%2A?displayProperty=fullName> 返回的任一编码的 CodePage 编号。

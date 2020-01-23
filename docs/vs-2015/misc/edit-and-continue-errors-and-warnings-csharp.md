@@ -61,12 +61,12 @@ ms.assetid: c0e12b0a-8009-4a4a-979f-c804a91a5d9b
 caps.latest.revision: 11
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: d0865e06c5abb5faccce51a2bc38bb223f7fa3eb
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: eec40bc584e831f8b43b79c9bc7cee5a48a291aa
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299275"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850977"
 ---
 # <a name="edit-and-continue-errors-and-warnings-c"></a>“编辑并继续”错误和警告 (C#)
 已对 Visual C#“编译并继续”中不允许的代码段进行了编辑。  
@@ -75,7 +75,7 @@ ms.locfileid: "74299275"
   
  通常情况下，影响类的公共结构的声明性代码编辑是禁止的，但对类内部的方法、属性体或私有声明进行某些编辑是允许的。 “编辑并继续”会尽可能将不可编辑的代码标记为浅灰色并显示错误消息。  
   
- 有关 [!INCLUDE[csharp_current_short](../includes/csharp-current-short-md.md)]的 "编辑并继续" 中支持的编辑的详细信息，请参阅[支持的代码更改（C#）](../debugger/supported-code-changes-csharp.md)。 如果需要有关特定错误或警告的详细信息，可以在 MSDN [Visual C# IDE 论坛](https://go.microsoft.com/fwlink/?LinkId=214693)上搜索或发布。  
+ 有关 [!INCLUDE[csharp_current_short](../includes/csharp-current-short-md.md)]的 "编辑并继续" 中支持的编辑的详细信息，请参阅[支持的代码更改（C#）](../debugger/supported-code-changes-csharp.md)。 如果需要有关特定错误或警告的详细信息，可以在 MSDN [Visual C# IDE 论坛](https://social.msdn.microsoft.com/Forums/en-US/csharpide/threads)上搜索或发布。  
   
 ### <a name="to-correct-this-error"></a>更正此错误  
   

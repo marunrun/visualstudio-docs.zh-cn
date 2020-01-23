@@ -17,12 +17,12 @@ caps.latest.revision: 51
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: bd77006eda03b716e3c54c0b5b52ac633a383377
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 195a3a36b53e5f84f6052a15e01007bb5ed77fac
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299598"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75844201"
 ---
 # <a name="walkthrough-creating-an-n-tier-data-application"></a>演练：创建 N 层数据应用程序
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -53,7 +53,7 @@ N 层 * 数据应用程序是访问数据并分为多个逻辑层或*层*的应�
 
 - 编写代码以填充数据表。
 
-  ![视频链接](../data-tools/media/playvideo.gif "PlayVideo")有关本主题的视频版本，请参阅[视频如何：创建 N 层数据应用程序](https://go.microsoft.com/fwlink/?LinkId=115188)。
+  ![视频链接](../data-tools/media/playvideo.gif "PlayVideo")有关本主题的视频版本，请参阅[视频如何：创建 N 层数据应用程序](https://msdn2.microsoft.com/library/cc178916.aspx)。
 
 ## <a name="prerequisites"></a>先决条件
  若要完成本演练，你需要：
@@ -361,13 +361,13 @@ N 层 * 数据应用程序是访问数据并分为多个逻辑层或*层*的应�
  由于服务会返回 Customers 和 Orders 表中的数据，而 maxReceivedMessageSize 的默认值还不够大，无法容纳这些数据，因此必须予以增加。 对于本演练，将值更改为 6553600。 将在客户端上更改该值，此操作将自动更新服务引用。
 
 > [!NOTE]
-> 较小的默认大小旨在降低遭受拒绝服务 (DoS) 攻击的可能性。 有关详细信息，请参阅 <xref:System.ServiceModel.WSHttpBindingBase.MaxReceivedMessageSize%2A>。
+> 较小的默认大小旨在降低遭受拒绝服务 (DoS) 攻击的可能性。 有关更多信息，请参见<xref:System.ServiceModel.WSHttpBindingBase.MaxReceivedMessageSize%2A>。
 
 #### <a name="to-increase-the-maxreceivedmessagesize-value"></a>增加 maxReceivedMessageSize 值
 
 1. 在**解决方案资源管理器**中，双击 PresentationTier 项目中的 app.config 文件。
 
-2. 查找“maxReceivedMessage”大小属性，然后将该值更改为`6553600`。
+2. 查找“maxReceivedMessage”大小属性，然后将该值更改为 `6553600`。
 
 ## <a name="testing-the-application"></a>测试应用程序
  运行该应用程序。 它会从数据服务中检索数据，并将检索到的数据显示在窗体上。

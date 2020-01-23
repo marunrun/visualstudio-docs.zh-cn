@@ -6,15 +6,15 @@ helpviewer_keywords:
 - project templates [Visual Studio], locations
 - item templates [Visual Studio], locations
 - template locations [Visual Studio]
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: f9035e63fd172727f3bfae44e18a0727599d4edc
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 480f583bb997a19bc84fcfbe6824c12a3c638784
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72645880"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591042"
 ---
 # <a name="how-to-locate-and-organize-project-and-item-templates"></a>如何：查找和组织项目和项模板
 
@@ -106,9 +106,9 @@ C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Common7\\IDE\
 
 1. 将此类别的所有模板放入新文件夹。
 
-1. 在“文件”菜单上，选择“新建”>“项目”    。
+1. 在“文件”  菜单上，选择“新建”  >“项目”  。
 
-   “HelloWorld”类别出现在“已安装”>“Visual C#”下的“新建项目”对话框中     。
+   “HelloWorld”  类别出现在“已安装”  >“Visual C#”  下的“新建项目”  对话框中。
 
 ### <a name="create-new-user-item-template-categories"></a>创建新的用户项模板类别
 
@@ -120,7 +120,7 @@ C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Common7\\IDE\
 
 1. 创建项目或打开现有项目。 然后，在“项目”菜单上选择“添加新项”   。
 
-   “HelloWorld”类别出现在“已安装”>“Visual C# 项”下的“添加新项”对话框中     。
+   “HelloWorld”  类别出现在“已安装”  >“Visual C# 项”  下的“添加新项”  对话框中。
 
 ### <a name="display-templates-in-parent-categories"></a>在父类别中显示模板
 
@@ -146,7 +146,7 @@ C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Common7\\IDE\
 
 1. 保存并关闭 .vstemplate 文件  。
 
-1. 选择模板中的文件，右键单击所选文件，然后选择“发送至”>“压缩的文件夹（zip 格式）”   。
+1. 选择模板中的文件，右键单击所选文件，然后选择“发送至”  >“压缩的文件夹（zip 格式）”  。
 
    这些文件会压缩到一个 .zip 文件中  。
 

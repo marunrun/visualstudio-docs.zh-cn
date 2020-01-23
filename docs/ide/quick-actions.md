@@ -2,20 +2,20 @@
 title: 快速操作、灯泡和螺丝刀
 ms.date: 03/28/2018
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 18df1378218d2188ee78d1b1b2a991e35f5ed689
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 2ce8ce85e027a7ed7f78d0da1f68f328c1ca103d
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72666759"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596952"
 ---
 # <a name="quick-actions"></a>快速操作
 
@@ -50,7 +50,7 @@ ms.locfileid: "72666759"
 
 ## <a name="icons"></a>图标
 
-当存在可用的快速操作时，会出现一个图标，指示可用的修复方法或重构的类型。 螺丝刀  ![螺丝刀图标](media/screwdriver-icon.png)图标仅指示存在可用于更改代码的操作，但不一定要使用它们。 黄色灯泡  ![灯泡图标](media/light-bulb-icon.png)图标指示存在应  执行的、用于改进代码的可用操作。 错误灯泡  ![错误灯泡图标](media/error-light-bulb-icon.png)图标指示存在可用于修复代码中的错误的操作。
+当存在可用的快速操作时，会出现一个图标，指示可用的修复方法或重构的类型。 螺丝刀  ![ 螺丝刀图标](media/screwdriver-icon.png)图标仅指示存在可用于更改代码的操作，但不一定要使用它们。 黄色灯泡  ![灯泡图标](media/light-bulb-icon.png)图标指示存在应  执行的、用于改进代码的可用操作。 错误灯泡  ![错误灯泡图标](media/error-light-bulb-icon.png)图标指示存在可用于修复代码中的错误的操作。
 
 ## <a name="to-see-a-light-bulb-or-screwdriver"></a>查看灯泡或螺丝刀
 

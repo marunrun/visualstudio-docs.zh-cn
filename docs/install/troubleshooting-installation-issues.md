@@ -8,19 +8,19 @@ helpviewer_keywords:
 - '{{PLACEHOLDER}}'
 - '{{PLACEHOLDER}}'
 ms.assetid: 556EDD3F-E365-43EE-B3DD-03AA4353F75B
-author: TerryGLee
-ms.author: tglee
+author: ornellaalt
+ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: f9612d9943c425a91bb3d01ea3bb5b1e37f270d3
-ms.sourcegitcommit: 2db01751deeee7b2bdb1db25419ea6706e6fcdf8
+ms.openlocfilehash: 9dfdf504378dafd7d71288cae1927dd8d6bb9e56
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71062813"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76114994"
 ---
 # <a name="troubleshoot-visual-studio-installation-and-upgrade-issues"></a>Visual Studio 安装和升级问题疑难解答
 
@@ -127,11 +127,11 @@ Visual Studio 安装程序引导程序是最轻型的可执行文件，用于安
 
 若要排查大部分的安装问题，需要有安装日志。 使用 Visual Studio 安装程序中的[报告问题](../ide/how-to-report-a-problem-with-visual-studio.md)提交问题时，这些日志会自动添加到报告中。
 
-如果联系 Microsoft 支持部门，可能需要使用 [Microsoft Visual Studio 和 .NET Framework 日志收集工具](https://aka.ms/vscollect)来提供这些安装日志。 日志收集工具从 Visual Studio 安装的所有组件（包括 .NET Framework、Windows SDK 和 SQL Server）收集安装日志。 它还会收集计算机信息、Windows Installer 清单，以及 Visual Studio 安装程序、Windows Installer 和系统还原的 Windows 事件日志信息。
+如果联系 Microsoft 支持部门，可能需要使用 [Microsoft Visual Studio 和 .NET Framework 日志收集工具](https://www.microsoft.com/download/details.aspx?id=12493)来提供这些安装日志。 日志收集工具从 Visual Studio 安装的所有组件（包括 .NET Framework、Windows SDK 和 SQL Server）收集安装日志。 它还会收集计算机信息、Windows Installer 清单，以及 Visual Studio 安装程序、Windows Installer 和系统还原的 Windows 事件日志信息。
 
 收集日志的具体步骤：
 
-1. [下载工具](https://aka.ms/vscollect)。
+1. [下载工具](https://www.microsoft.com/download/details.aspx?id=12493)。
 2. 打开管理命令提示符。
 3. 从工具保存目录运行 `Collect.exe`。
 4. 在 `%TEMP%` 目录中查找生成的 `vslogs.zip` 文件，例如，`C:\Users\YourName\AppData\Local\Temp\vslogs.zip`。
@@ -141,7 +141,7 @@ Visual Studio 安装程序引导程序是最轻型的可执行文件，用于安
 
 ## <a name="live-help"></a>实时帮助
 
-如果本疑难解答指南中列出的解决方案无法帮助你成功安装或升级 Visual Studio，请使用我们的[ **实时聊天** ](https://visualstudio.microsoft.com/vs/support/#talktous)支持选项（仅英语）以获取进一步的帮助。
+如果本疑难解答指南中列出的解决方案无法帮助你成功安装或升级 Visual Studio，请使用我们的[**实时聊天**](https://visualstudio.microsoft.com/vs/support/#talktous)支持选项（仅英语）以获取进一步的帮助。
 
 ## <a name="see-also"></a>请参阅
 

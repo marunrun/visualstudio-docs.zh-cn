@@ -33,12 +33,12 @@ caps.latest.revision: 29
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: c366ce44ab65ded62370dd3c219473089d5ca111
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: e988c8818cdee756310b73d0d214deda43226f2b
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299566"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850218"
 ---
 # <a name="windows-communication-foundation-services-and-wcf-data-services-in-visual-studio"></a>Visual Studio 中的 Windows Communication Foundation 服务和 WCF 数据服务
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -49,7 +49,7 @@ Visual Studio 提供了用于处理 Windows Communication Foundation （WCF）�
  [!INCLUDE[vsindigo](../includes/vsindigo-md.md)] 是一种统一的框架，用于创建安全、可靠、事务处理和可互操作的分布式应用程序。 它取代了较旧的进程间通信技术，如 .ASMX Web 服务、.NET 远程处理、企业服务（DCOM）和 MSMQ。 WCF 将所有这些技术的功能汇集在一个统一的编程模型下。 这简化了开发分布式应用程序的体验。
 
 #### <a name="what-are-wcf-data-services"></a>WCF 数据服务
- [!INCLUDE[ssAstoria](../includes/ssastoria-md.md)] 是开放数据（OData）协议标准的实现。  WCF 数据服务使你能够以一组 REST Api 的形式公开表格数据，从而使你能够使用标准 HTTP 谓词（如 GET、POST、PUT 或 DELETE）返回数据。 在服务器端，WCF 数据服务被[ASP.NET Web API](https://dotnet.microsoft.com/apps/aspnet/apis)用于创建新的 OData 服务。 在 Visual Studio 中使用 .NET 应用程序中的 OData 服务时，WCF 数据服务客户端库仍是一个不错的选择（**项目&#124;添加服务引用**）。 有关详细信息，请参阅 [WCF Data Services 4.5](https://go.microsoft.com/fwlink/?LinkID=119952)。
+ [!INCLUDE[ssAstoria](../includes/ssastoria-md.md)] 是开放数据（OData）协议标准的实现。  WCF 数据服务使你能够以一组 REST Api 的形式公开表格数据，从而使你能够使用标准 HTTP 谓词（如 GET、POST、PUT 或 DELETE）返回数据。 在服务器端，WCF 数据服务被[ASP.NET Web API](https://dotnet.microsoft.com/apps/aspnet/apis)用于创建新的 OData 服务。 在 Visual Studio 中使用 .NET 应用程序中的 OData 服务时，WCF 数据服务客户端库仍是一个不错的选择（**项目&#124;添加服务引用**）。 有关详细信息，请参阅 [WCF Data Services 4.5](https://msdn.microsoft.com/library/cc668792.aspx)。
 
 ### <a name="wcf-programming-model"></a>WCF 编程模型
  WCF 编程模型基于两个实体之间的通信： WCF 服务和 WCF 客户端。 编程模型封装在 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]中的 <xref:System.ServiceModel> 命名空间中。
@@ -232,7 +232,7 @@ Visual Studio 提供了用于处理 Windows Communication Foundation （WCF）�
 
 ## <a name="related-topics"></a>相关主题
 
-|标题|描述|
+|职务|描述|
 |-----------|-----------------|
 |[演练：在 Windows 窗体中创建简单的 WCF 服务](../data-tools/walkthrough-creating-a-simple-wcf-service-in-windows-forms.md)|提供在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]中创建和使用 WCF 服务的分步演示。|
 |[演练：通过 WPF 和 Entity Framework 创建 WCF 数据服务](../data-tools/walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework.md)|提供如何创建和使用 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]中 [!INCLUDE[ssAstoria](../includes/ssastoria-md.md)] 的分步演示。|

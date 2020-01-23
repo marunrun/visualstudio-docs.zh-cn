@@ -13,17 +13,17 @@ helpviewer_keywords:
 - MSBuild, Message task
 - Message task [MSBuild]
 ms.assetid: 2293309d-42b6-46dc-9684-8c146f66bc28
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5efcc41a82cab32172aa395b488535f2777b9e13
-ms.sourcegitcommit: 5694c5236fa32ba7f5bc1236a853f725ec7557e9
+ms.openlocfilehash: c5a2e2a1adb810a8468d318298747eec226846df
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68681155"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592173"
 ---
 # <a name="message-task"></a>Message 任务
 在生成期间记录消息。
@@ -31,7 +31,7 @@ ms.locfileid: "68681155"
 ## <a name="parameters"></a>参数
  下表描述了 `Message` 任务的参数。
 
-|参数|说明|
+|参数|描述|
 |---------------|-----------------|
 |`Importance`|可选 `String` 参数。<br /><br /> 指定消息的重要性。 此参数的值可以是 `high`、`normal` 或 `low`。 默认值为 `normal`。|
 |`Text`|可选 `String` 参数。<br /><br /> 要记录的错误文本。|

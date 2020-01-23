@@ -3,17 +3,17 @@ title: 如何：保存和编辑连接字符串
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: f8ef3a2c-029c-423b-9d9e-a4f1add4f640
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: a78194ae6e4f462ec732e1ae2a1981aa8d857978
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ed0f0105383667e1122d6636a3baab3aa925a742
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72641804"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586453"
 ---
 # <a name="how-to-save-and-edit-connection-strings"></a>如何：保存和编辑连接字符串
 Visual Studio 应用程序中的连接字符串保存在应用程序配置文件（也称为应用程序设置）中，或直接在应用程序中进行硬编码。 在应用程序配置文件中保存连接字符串简化了维护应用程序的任务。 如果连接字符串需要进行更改，则可以在应用程序设置文件中对其进行更新（这与必须在源代码中对其进行更改并重新编译应用程序相反）。
@@ -52,10 +52,10 @@ Visual Studio 应用程序中的连接字符串保存在应用程序配置文件
 1. 在 "**属性**" 窗口中，展开 "**连接" 节点**。
 1. 若要快速修改连接字符串，请编辑**ConnectionString**属性，或单击**连接**属性中的向下箭头，然后选择 "**新建连接**"。
 
-## <a name="security"></a>安全
+## <a name="security"></a>安全性
 将敏感信息（如密码）存储在连接字符串中可能会影响应用程序的安全性。 若要控制对数据库的访问，一种较为安全的方法是使用 Windows 集成安全性。
 有关详细信息，请参阅[保护连接信息](/dotnet/framework/data/adonet/protecting-connection-information)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [添加连接](../data-tools/add-new-connections.md)

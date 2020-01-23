@@ -5,17 +5,17 @@ ms.technology: vs-ide-general
 ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.HTML.Validation
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6baaf22b0a57cf669fbe0ffc4fe75cf1c72baa3b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ede4600cb1fa1df118b4635a193d8bff348d5119
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72666124"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75568277"
 ---
 # <a name="options-text-editor-html-web-forms-validation"></a>“选项”>“文本编辑器”>“HTML (Web 窗体)”>“验证”
 
@@ -27,7 +27,7 @@ ms.locfileid: "72666124"
 
    架构用于确定在此架构中有效的元素、属性和大小写。 架构还用于确定 IntelliSense 中可用的标记和属性。
 
-   如果希望 Visual Studio 使用页面的 <!DOCTYPE>  声明和 html  元素内容来确定架构，请选中此选项。 例如，如果你选中此选项，且页面中有声明 `<!DOCTYPE html>`，Visual Studio 就会使用 HTML5 架构。 不过，如果 html  标记有 xmlns  属性（如 `<html xmlns="http://www.w3.org/1999/xhtml">`），Visual Studio 就会使用 XHTML5 架构。
+   如果希望 Visual Studio 使用页面的 <!DOCTYPE>  声明和 html  元素内容来确定架构，请选中此选项。 例如，如果你选中此选项，且页面中有声明 `<!DOCTYPE html>`，Visual Studio 就会使用 HTML5 架构。 不过，如果 html  标记有 xmlns  属性（如 `<html>`），Visual Studio 就会使用 XHTML5 架构。
 
 - **找不到 doctype 时的目标**
 

@@ -19,18 +19,18 @@ caps.latest.revision: 183
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: a31bc328c20aada21b05edeef61886d57e914165
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: dc84fc135e59a43a05ce66186c4a44e9e31f8f2c
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74298051"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851051"
 ---
 # <a name="install-visual-studio-2015"></a>安装 Visual Studio 2015
 
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-此页包含帮助安装“Visual Studio 2015”的详细信息，这是一款由开发人员工作效率工具组成的集成套件。 此外，还介绍了可帮助你快速了解有关 [功能](https://www.visualstudio.com/news/vs2015-vs.aspx)、 [版本](https://go.microsoft.com/fwlink/?LinkID=242142)、 [系统要求](https://www.visualstudio.com/products/visual-studio-2015-compatibility-vs)、 [下载](https://go.microsoft.com/fwlink/?LinkId=517106)和更多信息的链接。
+此页包含帮助安装“Visual Studio 2015”的详细信息，这是一款由开发人员工作效率工具组成的集成套件。 此外，还介绍了可帮助你快速了解有关 [功能](https://www.visualstudio.com/news/vs2015-vs.aspx)、 [版本](https://visualstudio.microsoft.com/en-US/products/compare-visual-studio-products-vs)、 [系统要求](https://www.visualstudio.com/products/visual-studio-2015-compatibility-vs)、 [下载](https://visualstudio.microsoft.com/downloads/)和更多信息的链接。
 
 ## <a name="quick-links"></a>快速链接
 
@@ -39,11 +39,11 @@ ms.locfileid: "74298051"
 |||
 |------------------|----------------|
 |![下载 Visual Studio](../install/media/downloads.png "下载") |**下载**：若要安装 Visual Studio 2015，你可以从 " [My.VisualStudio.com](https://my.visualstudio.com/downloads?q=visual%20studio%20enterprise%202015) " 页下载产品可执行文件（需要订阅），或使用盒装产品中的安装媒体。 [了解有关如何下载当前版本或以前版本的 Visual Studio 的详细信息](https://www.visualstudio.com/vs/older-downloads/)。|
-|![了解有关功能的详细信息](../install/media/features.png "功能") |**功能**：若要了解有关 Visual Studio 2015 中的功能的详细信息，请参阅[RTM](https://www.visualstudio.com/news/vs2015-vs)、 [update 1](https://www.visualstudio.com/news/vs2015-update1-vs)、 [update 2](https://www.visualstudio.com/news/vs2015-update2-vs)和[update 3](https://www.visualstudio.com/news/releasenotes/vs2015-update3-vs)的发行说明。|
-|![了解每个 SKU 中的内容](../install/media/sku.png "SKU") |**SKU**：若要查看 Visual Studio 2015 各个版本中的可用功能，请参阅我们的[比较 Visual Studio 产品](https://go.microsoft.com/fwlink/?LinkID=242142)页。|
-|![查看系统要求](../install/media/system-requirements.png "系统要求") |**系统要求**：若要查看每个版本的 visual studio 2015 的系统要求，请参阅[Visual Studio 2015 兼容性](https://www.visualstudio.com/products/visual-studio-2015-compatibility-vs)页。|
+|![了解有关功能的详细信息](../install/media/features.png "特征") |**功能**：若要了解有关 Visual Studio 2015 中的功能的详细信息，请参阅[RTM](https://www.visualstudio.com/news/vs2015-vs)、 [update 1](https://www.visualstudio.com/news/vs2015-update1-vs)、 [update 2](https://www.visualstudio.com/news/vs2015-update2-vs)和[update 3](https://www.visualstudio.com/news/releasenotes/vs2015-update3-vs)的发行说明。|
+|![了解每个 SKU 中的内容](../install/media/sku.png "SKU") |**SKU**：若要查看 Visual Studio 2015 各个版本中的可用功能，请参阅我们的[比较 Visual Studio 产品](https://visualstudio.microsoft.com/en-US/products/compare-visual-studio-products-vs)页。|
+|![查看系统要求](../install/media/system-requirements.png "系统需求") |**系统要求**：若要查看每个版本的 visual studio 2015 的系统要求，请参阅[Visual Studio 2015 兼容性](https://www.visualstudio.com/products/visual-studio-2015-compatibility-vs)页。|
 |![找到你的产品密钥](../install/media/product-keys.png "产品密钥") |**产品密钥**：若要查找产品密钥，请参阅[如何：查找 Visual Studio 产品密钥](../install/how-to-locate-the-visual-studio-product-key.md)主题。|
-|![了解许可](../install/media/licensing.png "授权") |**许可**：若要了解个人或企业客户的许可选项，请参阅[VISUAL Studio 和 MSDN 许可](https://www.microsoft.com/download/details.aspx?id=13350)白皮书。|
+|![了解许可](../install/media/licensing.png "许可") |**许可**：若要了解个人或企业客户的许可选项，请参阅[VISUAL Studio 和 MSDN 许可](https://www.microsoft.com/download/details.aspx?id=13350)白皮书。|
 
 ## <a name="custom"></a>默认值与自定义设置
  在安装 Visual Studio 2015 时，你可以包括或排除你每天都会使用的组件。 这意味着，默认安装比自定义安装所占用的空间更小，安装速度更快。 这还意味着在以前的版本中，默认安装的许多组件现在被视为必须在此版本中显式选择的自定义组件。
@@ -60,14 +60,14 @@ ms.locfileid: "74298051"
 |功能集|组件数|
 |------------------|----------------|
 |**更新**|Visual Studio 2015 Update 3|
-|**编程语言**|Visual C++<br />Visual F#<br />Visual Studio 的 Python 工具|
+|**编程语言**|Visual C++<br />Visual F#<br />Python Tools for Visual Studio|
 |**Windows 和 Web 开发**|ClickOnce 发布工具<br />LightSwitch<br />Microsoft Office 开发人员工具<br />Microsoft SQL Server Data Tools<br /> Microsoft Web 开发人员工具<br />PowerShell Tools for Visual Studio （第三方）<br />Silverlight 开发工具包<br />通用 Windows 应用开发工具<br />Windows 10 工具和 SDK<br />Windows 8.1 和 Windows Phone 8.0/8.1 工具<br />Windows 8.1 工具和 SDK|
 |**跨平台移动开发**|C#/.NET (Xamarin)<br />HTML/JavaScript (Apache Cordova)<br />适用于 iOS/Android 的 Visual C++ 移动开发<br />Clang with Microsoft CodeGen|
 |**常用工具和软件开发工具包**|Android 本机开发工具包（第三方）<br /> Android SDK [第三方]<br />Android SDK 安装 Api （第三方）<br />Apache Ant （第三方）<br /> Java SE 开发工具包（第三方）<br /> Joyent node.js （第三方）|
 |**常用工具**|Git for Windows （第三方）<br />适用于 Visual Studio 的 GitHub 扩展（第三方）<br /> Visual Studio 扩展性工具|
 
 ## <a name="installing"></a>安装 Visual Studio
- 你可以通过使用安装媒体（Dvd）、从[My.VisualStudio.com](https://my.visualstudio.com/downloads?q=visual%20studio%20enterprise%202015)网站下载 web 安装程序、从[visual studio 下载](https://go.microsoft.com/fwlink/?LinkId=517106)网站下载 web 安装程序或通过创建脱机安装布局（有关详细信息，请参阅[创建 Visual studio 的脱机安装](../install/create-an-offline-installation-of-visual-studio.md)页）安装 visual studio。
+ 你可以通过使用安装媒体（Dvd）、从[My.VisualStudio.com](https://my.visualstudio.com/downloads?q=visual%20studio%20enterprise%202015)网站下载 web 安装程序、从[visual studio 下载](https://visualstudio.microsoft.com/downloads/)网站下载 web 安装程序或通过创建脱机安装布局（有关详细信息，请参阅[创建 Visual studio 的脱机安装](../install/create-an-offline-installation-of-visual-studio.md)页）安装 visual studio。
 
 > [!IMPORTANT]
 > 你必须具有管理员凭据才能安装 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]。 但是，在安装 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 之后，在使用时不需要凭据。
@@ -85,14 +85,14 @@ ms.locfileid: "74298051"
 ### <a name="BKMK_Media"></a>使用安装媒体
  若要在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]安装媒体上的根目录中安装 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ，请运行所需版本的安装文件：
 
-|版本|安装文件|
+|版本类别|安装文件|
 |-------------|-----------------------|
 |Visual Studio Enterprise|vs_enterprise.exe|
 |Visual Studio Professional|vs_professional.exe|
-|Visual Studio 社区|vs_community.exe|
+|Visual Studio Community|vs_community.exe|
 
 ### <a name="BKMK_Website"></a>从产品网站下载
- 访问[Visual Studio 下载](https://go.microsoft.com/fwlink/?LinkId=517106)页，然后选择所需的 visual studio 版本。
+ 访问[Visual Studio 下载](https://visualstudio.microsoft.com/downloads/)页，然后选择所需的 visual studio 版本。
 
 ### <a name="downloading-from-your-subscription-service"></a>正在从订阅服务下载
  访问 " [My.VisualStudio.com](https://my.visualstudio.com/downloads?q=visual%20studio%20enterprise%202015) " 页，然后选择所需的 Visual Studio 版本。
@@ -108,7 +108,7 @@ ms.locfileid: "74298051"
 
  如果你运行的 Windows Server 2008 R2 启用了 Hyper-V 并包含加速图形适配器，则你可能会遇到系统速度下降的情况。
 
- 有关详细信息，请参阅 Microsoft 网站上的以下页面： [在基于 Windows Server 2008 或 Windows Server 2008 R2 的计算机启用了 Hyper-V 角色并安装加速显示适配器时，视频性能可能会降低](https://go.microsoft.com/fwlink/?LinkID=231084)。
+ 有关详细信息，请参阅 Microsoft 网站上的以下页面： [在基于 Windows Server 2008 或 Windows Server 2008 R2 的计算机启用了 Hyper-V 角色并安装加速显示适配器时，视频性能可能会降低](https://support.microsoft.com/kb/961661)。
 
  **使用 HYPER-V 模拟设备**
 
@@ -178,13 +178,13 @@ ms.locfileid: "74298051"
 ## <a name="troubleshooting"></a>排查安装问题
  使用这些资源来获取关于设置和安装问题的帮助：
 
-- [Visual Studio Setup and Installation（Visual Studio 设置和安装）](https://go.microsoft.com/fwlink/?LinkID=151190) 论坛。 查看 Visual Studio 社区中他人的问题和回答。 如果未找到所需的帮助，可自行提问。
+- [Visual Studio Setup and Installation（Visual Studio 设置和安装）](https://social.msdn.microsoft.com/Forums/en-US/vssetup/threads) 论坛。 查看 Visual Studio 社区中他人的问题和回答。 如果未找到所需的帮助，可自行提问。
 
-- [Microsoft Support for Visual Studio（针对 Visual Studio 的 Microsoft 支持）](https://go.microsoft.com/fwlink/?LinkID=251019) 网站。 阅读知识库 (KB) 文章并了解如何联系 Microsoft 支持，以获取有关 Visual Studio 安装问题的信息。
+- [Microsoft Support for Visual Studio（针对 Visual Studio 的 Microsoft 支持）](https://support.microsoft.com/ph/1117) 网站。 阅读知识库 (KB) 文章并了解如何联系 Microsoft 支持，以获取有关 Visual Studio 安装问题的信息。
 
 ## <a name="relatedTopics"></a>相关主题
 
-|标题|描述|
+|职务|描述|
 |-----------|-----------------|
 |[创建 Visual Studio 的脱机安装](../install/create-an-offline-installation-of-visual-studio.md)|介绍如何在未连接到 Internet 时安装 Visual Studio。
 |[并行安装 Visual Studio 版本](../install/install-visual-studio-versions-side-by-side.md)|提供有关如何在同一台计算机上安装多个 Visual Studio 版本的信息。|

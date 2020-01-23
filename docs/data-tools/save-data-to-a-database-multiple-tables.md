@@ -11,17 +11,17 @@ helpviewer_keywords:
 - saving data, walkthroughs
 - data [Visual Studio], updating
 ms.assetid: 7ebe03da-ce8c-4cbc-bac0-a2fde4ae4d07
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: bcb551cdcd5b2505c6ac536a440fcc3e70464bfb
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 8d4dd98a622a3aa09b2ec11f4f3521ce1839ce8c
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648197"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586245"
 ---
 # <a name="save-data-to-a-database-multiple-tables"></a>将数据保存到数据库（多个表）
 
@@ -41,7 +41,7 @@ ms.locfileid: "72648197"
 
 - 修改用于将数据集中的更新后的数据发回数据库的代码。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
 
 本演练使用 SQL Server Express LocalDB 和 Northwind 示例数据库。
 
@@ -95,7 +95,7 @@ ms.locfileid: "72648197"
 
 ## <a name="set-the-controls-to-be-created"></a>设置要创建的控件
 
-对于本演练，`Customers` 表中的数据位于**详细信息**布局中，其中的数据显示在单独的控件中。 @No__t_0 表中的数据位于 <xref:System.Windows.Forms.DataGridView> 控件中显示的**网格**布局中。
+对于本演练，`Customers` 表中的数据位于**详细信息**布局中，其中的数据显示在单独的控件中。 `Orders` 表中的数据位于 <xref:System.Windows.Forms.DataGridView> 控件中显示的**网格**布局中。
 
 ### <a name="to-set-the-drop-type-for-the-items-in-the-data-sources-window"></a>设置“数据源”窗口中项的拖放类型
 
@@ -109,7 +109,7 @@ ms.locfileid: "72648197"
 
 1. 将主“Customers”节点从“数据源”窗口拖到“Form1”上。
 
-     带有描述性标签的数据绑定控件将显示在窗体上，同时还显示一个工具条 (<xref:System.Windows.Forms.BindingNavigator>)，用于在记录间进行导航。 组件栏中显示[NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md)、`CustomersTableAdapter`、<xref:System.Windows.Forms.BindingSource> 和 <xref:System.Windows.Forms.BindingNavigator>。
+     带有描述性标签的数据绑定控件将显示在窗体上，同时还显示一个工具条 (<xref:System.Windows.Forms.BindingNavigator>)，用于在记录间进行导航。 组件栏中显示[NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md)、`CustomersTableAdapter`、<xref:System.Windows.Forms.BindingSource>和 <xref:System.Windows.Forms.BindingNavigator>。
 
 2. 将相关的“Orders”节点从“数据源”窗口拖到“Form1”上。
 
@@ -127,7 +127,7 @@ ms.locfileid: "72648197"
 
 ### <a name="to-add-update-logic-to-the-application"></a>将更新逻辑添加到应用程序
 
-1. 选择 <xref:System.Windows.Forms.BindingNavigator> 上的 "**保存**" 按钮。 这将打开 "代码编辑器" 到 `bindingNavigatorSaveItem_Click` 事件处理程序。
+1. 选择 <xref:System.Windows.Forms.BindingNavigator>上的 "**保存**" 按钮。 这将打开 "代码编辑器" 到 `bindingNavigatorSaveItem_Click` 事件处理程序。
 
 2. 替换事件处理程序中的代码以调用相关 TableAdapter 的 `Update` 方法。 下面的代码首先创建三个临时数据表以保存每个 <xref:System.Data.DataRowState> 的更新信息（<xref:System.Data.DataRowState.Deleted>、<xref:System.Data.DataRowState.Added> 和 <xref:System.Data.DataRowState.Modified>）。 更新按正确的顺序运行。 代码应类似于：
 
@@ -144,6 +144,6 @@ ms.locfileid: "72648197"
 
 4. 检查数据库中的值以验证更改是否已保存。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [将数据保存回数据库](../data-tools/save-data-back-to-the-database.md)

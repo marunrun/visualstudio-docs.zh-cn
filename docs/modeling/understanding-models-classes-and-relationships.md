@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, models
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 391dff6540bcea26f63d8ea88f344455722b742a
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: c2e8891307520ee841fbed1591565624f2016939
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748222"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75565898"
 ---
 # <a name="understanding-models-classes-and-relationships"></a>了解模型、类和关系
 域特定语言（DSL）由其 DSL 定义文件定义，以及你可能编写的任何自定义程序代码。 DSL 解决方案中的大多数程序代码都是通过此文件生成的。
@@ -22,7 +22,7 @@ ms.locfileid: "72748222"
  本主题介绍 DSL 定义的核心功能。
 
 ## <a name="the-dsl-definition"></a>DSL 定义
- 打开 `Dsl\DslDefinition.dsl` 时，Visual Studio 窗口如下图所示。
+ 打开 `Dsl\DslDefinition.dsl`时，Visual Studio 窗口如下图所示。
 
  ![dsl 设计器](../modeling/media/dsl_designer.png)
 
@@ -128,7 +128,7 @@ ms.locfileid: "72748222"
  在 DSL 定义中创建关系时，将为属性和关系名称提供默认值。 不过，你可以更改它们。
 
 ## <a name="multiplicities"></a>重数
- 重数指定在域关系中有多少个元素可以具有相同的角色。 在此示例中，**目录**角色上的 "零对多（0 \*）重数" 设置指定**发布服务器**域类的任何实例都可以具有任意数量的**PublisherCatalog**关系链接，以便您可以对其进行指定。
+ 重数指定在域关系中有多少个元素可以具有相同的角色。 在此示例中，**目录**角色上的 "零对多（0\*）重数" 设置指定**发布服务器**域类的任何实例都可以具有任意数量的**PublisherCatalog**关系链接，以便您可以对其进行指定。
 
  通过在关系图上键入或在 "**属性**" 窗口中修改 `Multiplicity` 属性来配置角色的重数。 下表描述了此属性的设置。
 
@@ -148,6 +148,6 @@ ms.locfileid: "72748222"
 
  派生关系专门用于其基本关系。 它链接的域类应派生自或与基关系链接的类相同。 在模型中创建派生关系的链接时，它是派生关系和基关系的实例。 在程序代码中，可以使用由基类或派生类生成的属性，导航到链接的另一端。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [域特定语言工具术语表](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

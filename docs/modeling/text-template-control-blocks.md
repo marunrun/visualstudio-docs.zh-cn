@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - text templates, template code
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 128be69d356b371cc34f5e089df25546428bc83f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ef39e82ea1abe95b3bea799545ed7fbf5b766fd3
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72606078"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591783"
 ---
 # <a name="text-template-control-blocks"></a>文本模板控制块
 控制块可使你在文本模板中编写代码以便改变输出。 有三种类型的控制块，通过其左大括号来区分：
@@ -117,7 +117,7 @@ Some text.
 > [!NOTE]
 > 类功能控制块的后面一定不能跟相同模板文件中的标准控制块。 但是，此限制并不适用于使用 `<#@include#>` 指令的结果。 每个包含的文件都可以具有后跟类功能块的标准块。
 
- 你可以通过将文本和表达式块嵌入到类功能控制块来创建生成输出的函数。 例如:
+ 你可以通过将文本和表达式块嵌入到类功能控制块来创建生成输出的函数。 例如：
 
 ```
 <#+
@@ -145,7 +145,7 @@ Some text.
 
  在使用控制块时，请记住考虑以下事项：
 
-- **语言.** 你可以使用文本模板中的 C# 或 Visual Basic 代码。 默认语言为 C#，但你可以使用 `template` 指令的 `language` 参数指定 Visual Basic。 （有关 `template` 指令的详细信息，请参阅[T4 文本模板指令](../modeling/t4-text-template-directives.md)。）
+- **语言。** 你可以使用文本模板中的 C# 或 Visual Basic 代码。 默认语言为 C#，但你可以使用 `template` 指令的 `language` 参数指定 Visual Basic。 （有关 `template` 指令的详细信息，请参阅[T4 文本模板指令](../modeling/t4-text-template-directives.md)。）
 
      控制块中使用的语言与文本模板中生成的文本的语言或格式无关。 你可以使用 Visual Basic 代码生成 C#，反之亦然。
 

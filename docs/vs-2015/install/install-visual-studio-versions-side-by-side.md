@@ -13,17 +13,17 @@ caps.latest.revision: 48
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: a146872561c4be5fe48016c17eb64ad6f854106a
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 1ef2d51e35a198dbe6da3c1a034dd7c8d1bf8922
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74298026"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851026"
 ---
 # <a name="install-visual-studio-versions-side-by-side"></a>并行安装 Visual Studio 版本
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-您可以在已安装早期版本的计算机上安装此版本的 Visual Studio。 如果遇到安装故障，则可以使用 [日志收集工具](https://go.microsoft.com/fwlink/?LinkId=262077) 收集有关故障的信息，以便可以自行调试问题。
+您可以在已安装早期版本的计算机上安装此版本的 Visual Studio。 如果遇到安装故障，则可以使用 [日志收集工具](https://www.microsoft.com/download/details.aspx?id=12493) 收集有关故障的信息，以便可以自行调试问题。
 
 > [!NOTE]
 > 建议您按照发布顺序来安装不同版本的 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 。 例如，在安装 Visual Studio 2015 之前安装 Visual Studio 2013。
@@ -36,7 +36,7 @@ ms.locfileid: "74298026"
 
 - 如果在已安装多个版本的计算机上卸载 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的一个版本，则将为所有版本移除 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的文件关联。 通过使用 **“选项”** 对话框的 **“常规”** 页上的 **“环境”** 中的 [“还原文件关联”](../ide/reference/general-environment-options-dialog-box.md) 按钮，可以重新映射这些文件关联。
 
-- 因为并非所有扩展都兼容，所以 Visual Studio 不会自动升级扩展。 必须从 [Visual Studio Marketplace](https://go.microsoft.com/fwlink/?LinkId=178891) 或软件发行者处重新安装扩展。
+- 因为并非所有扩展都兼容，所以 Visual Studio 不会自动升级扩展。 必须从 [Visual Studio Marketplace](https://visualstudiogallery.msdn.microsoft.com/) 或软件发行者处重新安装扩展。
 
 ## <a name="net-framework-versions-and-side-by-side-installations"></a>.NET Framework 版本和并行安装
 

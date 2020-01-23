@@ -17,12 +17,12 @@ caps.latest.revision: 56
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: c170827825d772f4d97cd22f0b5754232e8d2257
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 4f4fd6eed634da3aea956cddca8d2e1ff6220a94
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74297292"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850191"
 ---
 # <a name="uml-class-diagrams-guidelines"></a>UML 类图：准则
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "74297292"
  若要查看支持此功能的 Visual Studio 的版本，请参阅 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)。
 
 > [!NOTE]
-> 本主题针对 UML 类图。 还可以创建另一种类图，它用于可视化程序代码。 请参阅[设计和查看类和类型](https://go.microsoft.com/fwlink/?LinkId=142231)。
+> 本主题针对 UML 类图。 还可以创建另一种类图，它用于可视化程序代码。 请参阅[设计和查看类和类型](https://msdn.microsoft.com/library/ab7aty24.aspx)。
 
 ## <a name="Using"></a>使用 UML 类图
  UML 类图有多种用途：
@@ -142,7 +142,7 @@ ms.locfileid: "74297292"
 
  例如，你可以在一个关系图中显示“订餐”和餐馆“菜单”之间的关联，在另一个关系图中显示“订餐”和“付款”之间的关联。
 
- 组件图
+ 组件关系图
 
  如果在组件图中的组件上定义了接口，则可以将接口从 " **UML 模型资源管理器**" 拖动到类图中。 在类图中，你可以定义接口包含的方法。
 
@@ -262,7 +262,7 @@ visibility attribute-name : Type
 visibility operation-name (parameter1 : Type1, ...) : Type
 ```
 
- 例如:
+ 例如：
 
 ```
 + AddItem (item : MenuItem, quantity : Integer) : Boolean
@@ -289,7 +289,7 @@ visibility operation-name (parameter1 : Type1, ...) : Type
  但是，您只能在 "**属性**" 窗口中设置**为 Static**并且**是抽象**属性。
 
 #### <a name="full-signature"></a>完全签名
- 编辑特性或操作的签名时，可能会在行尾所有参数之后出现某些附加属性。 它们显示在一对大括号 {…} 内。 可以编辑或添加这些属性。 例如:
+ 编辑特性或操作的签名时，可能会在行尾所有参数之后出现某些附加属性。 它们显示在一对大括号 {…} 内。 可以编辑或添加这些属性。 例如：
 
 ```
 + AddItems (items: MenuItem [1..*] {unique, ordered})
@@ -322,7 +322,7 @@ visibility operation-name (parameter1 : Type1, ...) : Type
 
  该特性是从其他特性或关联计算得出的。
 
- “/”显示在特性名称的前面。 例如:
+ “/”显示在特性名称的前面。 例如：
 
 ```
 /TotalPrice: Integer

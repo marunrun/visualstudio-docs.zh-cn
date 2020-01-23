@@ -6,14 +6,15 @@ manager: lank
 ms.date: 08/07/2019
 ms.topic: conceptual
 description: 了解如何开始在订阅管理门户中管理组织的 Visual Studio 订阅。
-ms.openlocfilehash: 6ee33bfaf47452a1213cd5def206e47aee790fc3
-ms.sourcegitcommit: 5b34052a1c7d86179d7898ed532babb2d9dad4a3
+ms.openlocfilehash: b7a6d93e3c284e3778d9574eb86c4e998324c559
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69490704"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850544"
 ---
-# <a name="overview-of-the-visual-studio-subscriptions-administration-portal"></a>Visual Studio 订阅管理门户概述
+# <a name="overview-of-the-visual-studio-subscriptions-administrator-portal"></a>Visual Studio 订阅管理员门户概述
+
 Visual Studio 订阅管理门户提供了集中管理组织订阅的工具。 
 
 ## <a name="important-considerations"></a>重要注意事项
@@ -46,7 +47,7 @@ Visual Studio 订阅管理门户提供了集中管理组织订阅的工具。
 > ![Visual Studio 订阅管理门户的“详细信息”页](_img/using-admin-portal/details-page.png)
 
 ## <a name="resources"></a>资源
-- [Visual Studio 授权白皮书](https://aka.ms/vslicensing)
+- [Visual Studio 授权白皮书](https://visualstudio.microsoft.com/wp-content/uploads/2019/06/Visual-Studio-Licensing-Whitepaper-May-2019.pdf)
 - [比较订阅选项和定价](https://visualstudio.microsoft.com/vs/pricing)
 - [比较 Visual Studio IDE 功能](https://visualstudio.microsoft.com/vs/compare)
 - [Visual Studio 管理和订阅支持](https://visualstudio.microsoft.com/support/support-overview-vs)

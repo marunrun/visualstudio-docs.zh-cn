@@ -15,12 +15,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: a28f491ea5af53546f66e066bf8f78575708bc57
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 134a5b7cd4bb0ffc9c00a41df12ed196dd2a9212
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72656589"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76115135"
 ---
 # <a name="how-to-specify-build-events-c"></a>如何：指定生成事件 (C#)
 

@@ -7,15 +7,15 @@ helpviewer_keywords:
 - load test, iterations
 - load tests, scenarios
 ms.assetid: ac480fb7-f4f7-47dc-9ae5-98be3aca4fba
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: ae0f75ac19f858cba9de1e2d75d4ef5529da1d75
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: e95ca27ace50c7b28d1ffb1d3fc02589daddee2d
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72665162"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590977"
 ---
 # <a name="configure-test-iterations-in-a-load-test-scenario"></a>在负载测试方案中配置测试迭代
 
@@ -62,7 +62,7 @@ ms.locfileid: "72665162"
     > [!NOTE]
     > “最大测试迭代数”属性的值为 0 则指定没有最大迭代次数。 
 
-6. 更改完此属性后，请选择“文件”菜单上的“保存”。   然后，可以使用新的“最大测试迭代数”值运行负载测试。 
+6. 更改完此属性后，请选择“文件”菜单上的“保存”   。 然后，可以使用新的“最大测试迭代数”值运行负载测试。 
 
 ## <a name="specify-think-times-between-test-iterations-for-a-scenario"></a>为方案指定测试迭代之间的思考时间
 
@@ -87,7 +87,7 @@ ms.locfileid: "72665162"
 
 4. 在“测试迭代之间的思考时间”属性的值中输入一个数字，该数字表示开始下一个测试迭代之前需要等待的秒数。 
 
-5. 更改完此属性后，请选择“文件”菜单上的“保存”。   然后，可以使用新的“测试迭代之间的思考时间”值运行负载测试。 
+5. 更改完此属性后，请选择“文件”菜单上的“保存”   。 然后，可以使用新的“测试迭代之间的思考时间”值运行负载测试。 
 
 ## <a name="see-also"></a>请参阅
 

@@ -3,17 +3,17 @@ title: 在调试时计算 XPath 表达式
 ms.date: 03/05/2019
 ms.topic: conceptual
 ms.assetid: 159ba4ef-75e4-4ac8-80dc-e064e0bec345
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 523c89af70c762f0cd0e31519c8c862c440c79eb
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c2e0b6c84fa9447dc38aa7976fa59bb5aa67d5c3
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72654275"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592719"
 ---
 # <a name="evaluate-xpath-expressions"></a>计算 XPath 表达式
 
@@ -34,7 +34,7 @@ ms.locfileid: "72654275"
 
 1. 在 `xsl:if` 开始标记处插入断点。
 
-2. 若要开始调试，请在菜单栏上选择 " **XML**  > **启动 XSLT 调试**" （或按**Alt** +**F5**）。
+2. 若要开始调试，请在菜单栏上选择 " **XML** > **启动 XSLT 调试**" （或按**Alt**+**F5**）。
 
    调试程序在 `xsl:if` 标记处开始和中断。
 
@@ -52,6 +52,6 @@ ms.locfileid: "72654275"
 
    "**值**" 框显示 XPath 表达式的计算结果为 `true`。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [调试 XSLT](../xml-tools/debugging-xslt.md)

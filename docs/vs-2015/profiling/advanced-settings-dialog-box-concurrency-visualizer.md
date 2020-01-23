@@ -11,12 +11,12 @@ caps.latest.revision: 14
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 8e1dbe50f3161ca80b4eabe63cbf9264210e9658
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 128327b956734f7d28e7ff88f3eb6c297544587c
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74300318"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75849810"
 ---
 # <a name="advanced-settings-dialog-box-concurrency-visualizer"></a>“高级设置”对话框（并发可视化工具）
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "74300318"
  在收集跟踪时，.exe 和 .dll 文件的路径存储在跟踪文件中。  更改此设置不会影响任何之前收集的跟踪。  
   
 ## <a name="buffering"></a>缓冲  
- 收集跟踪时，并发可视化工具使用 Windows 事件跟踪 (ETW)。  在存储事件时，ETW 会使用各种缓冲区。  默认 ETW 缓冲区设置可能不是在所有情况下都最优，在某些情况下，可能会导致诸如丢失事件等问题。  可以使用“缓冲”选项卡来配置 ETW 缓冲区设置。 有关详细信息，请参阅 [Event Tracing](https://go.microsoft.com/fwlink/?LinkId=234579)（事件跟踪）和 [EVENT_TRACE_PROPERTIES structure](https://go.microsoft.com/fwlink/?LinkId=234580)（EVENT_TRACE_PROPERTIES 结构）。  
+ 收集跟踪时，并发可视化工具使用 Windows 事件跟踪 (ETW)。  在存储事件时，ETW 会使用各种缓冲区。  默认 ETW 缓冲区设置可能不是在所有情况下都最优，在某些情况下，可能会导致诸如丢失事件等问题。  可以使用“缓冲”选项卡来配置 ETW 缓冲区设置。 有关详细信息，请参阅 [Event Tracing](https://msdn.microsoft.com/library/bb968803(VS.85).aspx)（事件跟踪）和 [EVENT_TRACE_PROPERTIES structure](https://msdn.microsoft.com/library/aa363784(VS.85).aspx)（EVENT_TRACE_PROPERTIES 结构）。  
   
 ## <a name="filter"></a>筛选器  
  在“筛选器”选项卡上，可以选择并发可视化工具收集的一组事件。 选择一部分事件会限制报告中显示的数据类型，减少每个跟踪的大小，并缩减处理跟踪所需的时间。  

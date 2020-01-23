@@ -2,17 +2,17 @@
 title: 使用多个用户帐户
 ms.date: 07/23/2019
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5993d550d85cdc0bd1c9ce6b72553eda6fc280e5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: fd265d24fad683e031436d7cc81fa7fa74034ddc
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72647068"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76115259"
 ---
 # <a name="work-with-multiple-user-accounts"></a>使用多个用户帐户
 

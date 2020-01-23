@@ -9,12 +9,12 @@ caps.latest.revision: 17
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 2f68328fb243c00c43c8ef454f10ad94c7d004a4
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 7dc2ba585c500fe045d143a2b8baa2d193466fdf
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74296783"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75917789"
 ---
 # <a name="work-with-multiple-user-accounts"></a>使用多个用户帐户
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "74296783"
 
  ![更改 ASP.NET 的身份验证对话框](../ide/media/vs2015-change-authentication.png "VS2015_change_authentication")
 
- 有关 ASP.NET 中不同种类的身份验证的详细信息，请参阅 [在 isual Studio 2013 中创建 ASP.NET Web 项目](https://docs.microsoft.com/aspnet/visual-studio/overview/2013/creating-web-projects-in-visual-studio#orgauth) （有关身份验证的信息仍适用于 Visual Studio 2015）。
+ 有关 ASP.NET 中不同种类的身份验证的详细信息，请参阅 [在 isual Studio 2013 中创建 ASP.NET Web 项目](/aspnet/visual-studio/overview/2013/creating-web-projects-in-visual-studio#orgauth) （有关身份验证的信息仍适用于 Visual Studio 2015）。
 
 ### <a name="access-your-visual-studio-team-services-account"></a>访问你的 Visual Studio Team Services 帐户
  在主菜单中，选择“团队”>“连接到 Team Foundation Server”打开“团队资源管理器”窗口。 单击“选择团队项目”，在“选择 Team Foundation Server”下的列表框中，你应该看到你的 Visual Studio Team Services 帐户的 URL。 当你选择 URL 时，无需重新输入你的凭据就可登录。

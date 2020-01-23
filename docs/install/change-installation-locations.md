@@ -9,19 +9,19 @@ helpviewer_keywords:
 - select an installation location for Visual Studio files
 - move installation files to different drives
 - use the D drive
-author: TerryGLee
-ms.author: tglee
+author: ornellaalt
+ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 651295d94a8125e26caa96b71ab438c62841ac10
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7f80d3c30c536e58811f8ca92676694b6d010010
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62974324"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76111786"
 ---
 # <a name="select-the-installation-locations-in-visual-studio"></a>在 Visual Studio 中选择安装位置
 
@@ -44,22 +44,22 @@ ms.locfileid: "62974324"
 
 ::: moniker range="vs-2017"
 
-1. 安装 Visual Studio 时，选择“安装位置”选项卡。
+1. 安装 Visual Studio 时，选择“安装位置”选项卡  。
 
    ![Visual Studio 2017 - 选择安装位置](media/vs-installation-locations.png "选择安装位置。")
 
-1. 在“Visual Studio IDE”部分中，接受默认值。 Visual Studio 将安装核心产品并包含特定于此版本的 Visual Studio 的文件。
+1. 在“Visual Studio IDE”部分中，接受默认值  。 Visual Studio 将安装核心产品并包含特定于此版本的 Visual Studio 的文件。
 
    ![“安装位置”选项卡的“Visual Studio IDE”部分](media/vs-installation-locations-ide.png "接受“安装位置”选项卡的“Visual Studio IDE”部分的默认值。")
 
    > [!TIP]
    > 如果系统驱动器是固态硬盘 (SSD)，建议你接受系统驱动器上的默认位置。 原因？ 当使用 Visual Studio 进行开发时，将从大量文件进行读取并写入大量文件，这会增加磁盘 I/O 活动。 最好选择最快的驱动器来处理负载。
 
-1. 在“下载缓存”部分，决定是否保留下载缓存，然后决定其文件的存储位置。
+1. 在“下载缓存”部分，决定是否保留下载缓存，然后决定其文件的存储位置  。
 
      ![“安装位置”选项卡的“下载缓存”部分](media/vs-installation-locations-cache.png "选择安装完成后是否保留下载缓存，然后指定要存储文件的驱动器。")
 
-    1. 选中或取消选中“安装完成后保留下载缓存”。
+    1. 选中或取消选中“安装完成后保留下载缓存”  。
 
        如果决定不保留下载缓存，则仅临时使用该位置。 此操作不会影响或删除以前的安装内容。
 
@@ -70,26 +70,26 @@ ms.locfileid: "62974324"
        > [!IMPORTANT]
        > 该位置在首次安装时进行设置，并且之后无法从安装程序 UI 中更改。 相反，必须[使用命令行参数](use-command-line-parameters-to-install-visual-studio.md)删除下载缓存。
 
-1. 在“共享组件、工具和 SDK”部分，指定要存储由 Visual Studio 并行安装所共享的文件的驱动器。 SDK 和工具也存储在此目录中。
+1. 在“共享组件、工具和 SDK”部分，指定要存储由 Visual Studio 并行安装所共享的文件的驱动器  。 SDK 和工具也存储在此目录中。
 
-   ![“安装位置”选项卡的“共享组件、工具和 SDK”部分](media/vs-installation-locations-shared.png "指定想要存储共享组件、工具和 SDK 的位置。")
+   ![“安装位置”选项卡的“共享组件、工具和 SDK”部分](media/vs-installation-locations-shared.png "指定要存储共享组件、工具和 SDK 的位置。")
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-1. 安装 Visual Studio 时，选择“安装位置”选项卡。
+1. 安装 Visual Studio 时，选择“安装位置”选项卡  。
 
    ![Visual Studio 2019 - 选择安装位置](media/vs-2019/vs-installer-installation-locations.png "选择安装位置。")
 
-1. 在“Visual Studio IDE”部分中，接受默认值。 Visual Studio 将安装核心产品并包含特定于此版本的 Visual Studio 的文件。
+1. 在“Visual Studio IDE”部分中，接受默认值  。 Visual Studio 将安装核心产品并包含特定于此版本的 Visual Studio 的文件。
 
    > [!TIP]
    > 如果系统驱动器是固态硬盘 (SSD)，建议你接受系统驱动器上的默认位置。 原因？ 当使用 Visual Studio 进行开发时，将从大量文件进行读取并写入大量文件，这会增加磁盘 I/O 活动。 最好选择最快的驱动器来处理负载。
 
-1. 在“下载缓存”部分，决定是否保留下载缓存，然后决定其文件的存储位置。
+1. 在“下载缓存”部分，决定是否保留下载缓存，然后决定其文件的存储位置  。
 
-    * 选中或取消选中“安装完成后保留下载缓存”。
+    * 选中或取消选中“安装完成后保留下载缓存”  。
 
        如果决定不保留下载缓存，则仅临时使用该位置。 此操作不会影响或删除以前的安装内容。
 
@@ -100,7 +100,7 @@ ms.locfileid: "62974324"
        > [!IMPORTANT]
        > 该位置在首次安装时进行设置，并且之后无法从安装程序 UI 中更改。 相反，必须[使用命令行参数](use-command-line-parameters-to-install-visual-studio.md)删除下载缓存。
 
-1. 在“共享组件、工具和 SDK”部分中，请注意它使用在“下载缓存”部分中选择的同一驱动器。 Visual Studio 在\Microsoft\VisualStudio\Shared 目录中存储由并行 Visual Studio 安装共享的文件。 SDK 和工具也存储在此目录中。
+1. 在“共享组件、工具和 SDK”部分中，请注意它使用在“下载缓存”部分中选择的同一驱动器  。 Visual Studio 在\Microsoft\VisualStudio\Shared 目录中存储由并行 Visual Studio 安装共享的文件。 SDK 和工具也存储在此目录中。
 
 ::: moniker-end
 

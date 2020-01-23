@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
 - CPP
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
 - cplusplus
-ms.openlocfilehash: 33c91a7c21a04624d71692d12b7a7f15a16e1d67
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 2be19729b61831e6f15ff40b6b4e1d7b4b0bb541
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72639507"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586050"
 ---
 # <a name="visual-studio-data-tools-for-c"></a>适用于 C++ 的 Visual Studio Data Tools
 
@@ -41,7 +41,7 @@ ms.locfileid: "72639507"
 
 4. 下载 ODBC Windows SDK 示例，并将其解压缩到新位置。 此示例显示了用于连接到数据库和发出查询和命令的基本 ODBC 命令。 可以在[Microsoft 开放式数据库连接（ODBC）](/sql/odbc/microsoft-open-database-connectivity-odbc)中了解有关这些函数的详细信息。 首次加载解决方案（它位于C++文件夹中）时，visual studio 会将解决方案升级到当前版本的 Visual studio。 单击“是”。
 
-5. 若要使用 native client，需要其*头*文件和*lib*文件。 这些文件包含特定于 SQL Server 的函数和定义，但在 SQL .h 中定义的 ODBC 函数之外。 在 "**项目** > **属性**"  >  "**VC + + 目录**" 中，添加以下包含目录：
+5. 若要使用 native client，需要其*头*文件和*lib*文件。 这些文件包含特定于 SQL Server 的函数和定义，但在 SQL .h 中定义的 ODBC 函数之外。 在 "**项目** > **属性**" > " **VC + + 目录**" 中，添加以下包含目录：
 
    **%ProgramFiles%\Microsoft SQL Server\110\SDK\Include**
 
@@ -58,7 +58,7 @@ ms.locfileid: "72639507"
 
     请注意，该示例不会实际使用任何本机客户端功能，因此，编译和运行上述步骤并不是必需的。 但现在已将该项目配置为使用此功能。 有关详细信息，请参阅 [SQL Server Native Client 编程](/sql/relational-databases/native-client/sql-server-native-client)。
 
-7. 指定要在 ODBC 子系统中使用的驱动程序。 此示例在中将驱动程序连接字符串特性传递为命令行参数。 在 "**项目** > **属性**"  > **调试**中，添加以下命令参数：
+7. 指定要在 ODBC 子系统中使用的驱动程序。 此示例在中将驱动程序连接字符串特性传递为命令行参数。 在 "**项目** > **属性**" > **调试**中，添加以下命令参数：
 
    ```cpp
    DRIVER="SQL Server Native Client 11.0"
@@ -68,6 +68,6 @@ ms.locfileid: "72639507"
 
    ![ODBC 示例查询输出](../data-tools/media/raddata-odbc-sample-query-output.png)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在 Visual Studio 中访问数据](../data-tools/accessing-data-in-visual-studio.md)

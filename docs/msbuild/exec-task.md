@@ -13,17 +13,17 @@ helpviewer_keywords:
 - Exec task [MSBuild]
 - MSBuild, Exec task
 ms.assetid: c9b7525a-b1c9-40fc-8bce-77a5b8f960d8
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ef9759c5a422a0b67cdb9e8f7dde565b732958dd
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 78aef20a322ad3743ed1cb89955654456dff670e
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62973651"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591445"
 ---
 # <a name="exec-task"></a>Exec 任务
 通过使用指定的参数来运行指定程序或命令。
@@ -31,9 +31,9 @@ ms.locfileid: "62973651"
 ## <a name="parameters"></a>参数
 下表描述了 `Exec` 任务的参数。
 
-|参数|说明|
+|参数|描述|
 |---------------|-----------------|
-|`Command`|必选 `String` 参数。<br /><br /> 要运行的命令。 可以是系统命令（例如 attrib），也可以是可执行文件（例如 program.exe、runprogram.bat 或 setup.msi）。<br /><br /> 此参数可包含多行命令。 或者，可将多个命令放在批文件中，然后使用此参数运行文件。|
+|`Command`|必选 `String` 参数。<br /><br /> 要运行的命令。 可以是系统命令（例如 attrib），也可以是可执行文件（例如 program.exe、runprogram.bat 或 setup.msi）    。<br /><br /> 此参数可包含多行命令。 或者，可将多个命令放在批文件中，然后使用此参数运行文件。|
 |`ConsoleOutput`|可选的 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 输出参数。<br /><br /> 每个项输出都是工具发出的标准输出或标准错误流的一行。 仅当 `ConsoleToMsBuild` 设置为 `true`，才会捕获此信息。|
 |`ConsoleToMsBuild`|可选 `Boolean` 参数。<br /><br /> 如果为 `true`，任务将捕获该工具的标准错误和标准输出，并使其在 `ConsoleOutput` 输出参数中可用。<br /><br />默认值：`false`。|
 |`CustomErrorRegularExpression`|可选 `String` 参数。<br /><br /> 指定用于查找工具输入中错误行的正则表达式。 这对会生成不常见格式的输出的工具非常有用。<br /><br />默认值：`null`（无自定义处理）。|
@@ -50,7 +50,7 @@ ms.locfileid: "62973651"
 ## <a name="remarks"></a>备注
 在要执行的作业的特定 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 任务不可用时，此任务会非常有用。 但是，与更加具体的任务不同，`Exec` 任务不能根据运行的工具或命令的结果执行其他处理或条件操作。
 
-`Exec` 任务调用 cmd.exe 而不是直接调用进程。
+`Exec` 任务调用 cmd.exe 而不是直接调用进程  。
 
 除本文档列出的参数外，此任务还从 <xref:Microsoft.Build.Tasks.ToolTaskExtension> 类继承参数，后者自身继承自 <xref:Microsoft.Build.Utilities.ToolTask> 类。 有关这些其他参数的列表及其说明，请参阅 [ToolTaskExtension 基类](../msbuild/tooltaskextension-base-class.md)。
 

@@ -14,17 +14,17 @@ helpviewer_keywords:
 - MSBuild (C++), tasks
 - SetEnv task (MSBuild (C++))
 ms.assetid: fd9e4225-68cb-4608-8b27-468b0218c936
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3ec3170c9662cd9ef67521addfdf0d0095bd23b3
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 59523e3f6b12eb5921235efcf15d7937a14e7247
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72747213"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75595093"
 ---
 # <a name="setenv-task"></a>SetEnv 任务
 设置或删除指定环境变量的值。
@@ -32,7 +32,7 @@ ms.locfileid: "72747213"
 ## <a name="parameters"></a>参数
  下表描述了 SetEnv 任务的参数  。
 
-|参数|说明|
+|参数|描述|
 |---------------|-----------------|
 |**Name**|必需的 **String** 参数。<br /><br /> 环境变量名。|
 |OutputEnvironmentVariable |可选的 **String** 输出参数。<br /><br /> 包含分配给 Name 参数指定的环境变量的值  。|

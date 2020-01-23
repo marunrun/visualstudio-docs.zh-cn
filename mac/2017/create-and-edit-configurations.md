@@ -1,17 +1,17 @@
 ---
 title: 创建和编辑生成配置
 description: 本文介绍如何在 Visual Studio for Mac 中创建生成配置
-author: conceptdev
-ms.author: crdun
+author: heiligerdankgesang
+ms.author: dominicn
 ms.date: 05/06/2018
 ms.assetid: CC1B72D6-12FF-4CCC-A9D4-00F2DC14589F
 ms.custom: video
-ms.openlocfilehash: 14a9ed8423779ad878fb5c304bbb6d28e1945a91
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 09591cb4feee4e9dc673f925bf3917eb3d07319b
+ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62932855"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74983582"
 ---
 # <a name="creating-and-editing-build-configurations"></a>创建和编辑生成配置
 
@@ -23,15 +23,15 @@ ms.locfileid: "62932855"
 
 要创建项目生成配置，请执行以下步骤：
 
-1. 右键单击项目节点，然后选择“选项”。
+1. 右键单击项目节点，然后选择“选项”  。
 
-2. 在“项目选项”对话框中，选择“生成”>“配置”：
+2. 在“项目选项”对话框中，选择“生成”>“配置”： 
 
     ![项目选项中的配置管理器](media/create-and-edit-configurations-image2.png)
 
-3. 要创建新配置，请选择“添加”。 或者，可以复制一个现有配置。
+3. 要创建新配置，请选择“添加”  。 或者，可以复制一个现有配置。
 
-创建配置后，可以使用项目选项中的“生成”部分调整属性，使其适合配置：
+创建配置后，可以使用项目选项中的“生成”部分调整属性，使其适合配置： 
 
 ![配置生成选项](media/create-and-edit-configurations-image3.png)
 
@@ -39,15 +39,15 @@ ms.locfileid: "62932855"
 
 要创建解决方案生成配置，请执行以下步骤：
 
-1. 右键单击解决方案节点，然后选择“选项”。
+1. 右键单击解决方案节点，然后选择“选项”  。
 
-2. 在“解决方案选项”对话框中，选择“生成”>“配置”：
+2. 在“解决方案选项”对话框中，选择“生成”>“配置”： 
 
     ![解决方案选项中的配置管理器](media/create-and-edit-configurations-image1.png)
 
-3. 要创建新配置，请选择“添加”。 或者，可以复制一个现有配置。
+3. 要创建新配置，请选择“添加”  。 或者，可以复制一个现有配置。
 
-创建配置后，可以使用每个项目选项中的“生成”部分调整属性，使其适合配置：
+创建配置后，可以使用每个项目选项中的“生成”部分调整属性，使其适合配置： 
 
 ![配置生成选项](media/create-and-edit-configurations-image3.png)
 
@@ -57,7 +57,7 @@ ms.locfileid: "62932855"
 
 ![配置列表](media/create-and-edit-configurations-image4.png)
 
-选择“重命名”按钮。
+选择“重命名”按钮  。
 
 ![“重命名”对话框](media/create-and-edit-configurations-image5.png)
 

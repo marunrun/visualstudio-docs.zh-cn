@@ -15,12 +15,12 @@ caps.latest.revision: 43
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 60813fcce28c71c91a3e0c2af9889261c8897a99
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: e17171b79e06a273e9a9f4bb5032781963e8d818
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74301409"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75918819"
 ---
 # <a name="how-to-create-a-domain-specific-language-solution"></a>如何：创建域特定语言解决方案
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -32,9 +32,9 @@ ms.locfileid: "74301409"
 
 |||
 |-|-|
-|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]|[http://go.microsoft.com/fwlink/?LinkID=185579](https://go.microsoft.com/fwlink/?LinkID=185579)|
-|[!INCLUDE[vssdk_current_short](../includes/vssdk-current-short-md.md)]|[http://go.microsoft.com/fwlink/?LinkID=185580](https://go.microsoft.com/fwlink/?LinkID=185580)|
-|Visual Studio 可视化和建模 SDK|[http://go.microsoft.com/fwlink/?LinkID=185581](https://go.microsoft.com/fwlink/?LinkID=185581)|
+|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]|[https://www.visualstudio.com/](https://www.visualstudio.com/)|
+|[!INCLUDE[vssdk_current_short](../includes/vssdk-current-short-md.md)]|[Visual Studio SDK](../extensibility/visual-studio-sdk.md)|
+|Visual Studio 可视化和建模 SDK|[建模 SDK 下载](https://www.microsoft.com/download/details.aspx?id=48148)|
 
 ## <a name="creating-a-domain-specific-language-solution"></a>创建域特定语言解决方案
 
@@ -127,7 +127,7 @@ ms.locfileid: "74301409"
 
  **使用现有的强名称密钥**如果要将 DSL 与其他程序集集成，请使用此选项。
 
- 有关强命名的详细信息，请参阅[创建和使用具有强名称的程序集](https://go.microsoft.com/fwlink/?LinkId=186073)。
+ 有关强命名的详细信息，请参阅[创建和使用具有强名称的程序集](/dotnet/standard/assembly/create-use-strong-named)。
 
 ## <a name="see-also"></a>请参阅
- [如何定义域特定语言](../modeling/how-to-define-a-domain-specific-language.md)[特定于域的语言工具术语表](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+ [如何定义域特定语言](../modeling/how-to-define-a-domain-specific-language.md)[特定于域的语言工具术语表](/previous-versions/bb126564(v=vs.100))

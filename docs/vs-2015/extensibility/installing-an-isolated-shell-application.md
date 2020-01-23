@@ -11,12 +11,12 @@ ms.assetid: 33416226-9083-41b5-b153-10d2bf35c012
 caps.latest.revision: 41
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: a077173a0d095ee10cc1fa16da3db1f3744dafa8
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 0adc81cfe9ea4462940c31a02c6429be89709565
+ms.sourcegitcommit: 9a66f1c31cc9eba0b5231af72da1d18761a9c56a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74301158"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75944264"
 ---
 # <a name="installing-an-isolated-shell-application"></a>安装独立 Shell 应用程序
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,14 +29,14 @@ ms.locfileid: "74301158"
   
 - 创建安装引导程序。  
   
-  本文档中的所有示例代码均来自[Shell 部署示例](https://go.microsoft.com/fwlink/?LinkId=262245)，您可以从 MSDN 网站上的代码库下载该示例。 此示例显示了执行其中每个步骤的结果。  
+  本文档中的所有示例代码均来自[Shell 部署示例](https://code.msdn.microsoft.com/Sample-setup-program-for-81ca73f7)，您可以从 MSDN 网站上的代码库下载该示例。 此示例显示了执行其中每个步骤的结果。  
   
 ## <a name="prerequisites"></a>先决条件  
  若要执行本主题描述的过程，必须在计算机上安装以下工具。  
   
 - Visual Studio SDK  
   
-- [WINDOWS INSTALLER XML 工具集](https://go.microsoft.com/fwlink/?LinkId=82720)版本3。6  
+- [WINDOWS INSTALLER XML 工具集](https://documentation.help/WiX-Toolset/index.html/)版本3。6  
   
   该示例还需要 Microsoft 可视化和建模 SDK，这并非所有外壳都需要。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "74301158"
 2. 对于包含 VSIX 清单的每个项目，编辑生成任务，将内容输出到 MSI 将安装到的位置。 在生成输出中包括 VSIX 清单，但不生成 .vsix 文件。  
   
 ## <a name="creating-an-msi-for-your-shell"></a>为 Shell 创建 MSI  
- 为了构建你的 MSI 包，我们建议你使用[Windows Installer 的 XML 工具集](https://go.microsoft.com/fwlink/?LinkId=82720)，因为它比标准安装项目提供更大的灵活性。  
+ 为了构建你的 MSI 包，我们建议你使用[Windows Installer 的 XML 工具集](https://documentation.help/WiX-Toolset/index.html)，因为它比标准安装项目提供更大的灵活性。  
   
  在 wsmanconfig.wxs 文件中，设置检测块和 Shell 组件的布局。  
   
@@ -176,10 +176,10 @@ ms.locfileid: "74301158"
   
 5. 对于*项目名称*中的每个注册表项，添加相应的注册表块，如以下示例中所示。  
   
-    |*项目名称*.reg|ApplicationRegisty.wxs|  
+    |*ProjectName*.reg|ApplicationRegisty.wxs|  
     |-----------------------|----------------------------|  
-    |[HKEY_CLASSES_ROOT \CLSID\\{bb431796-a179-4df7-b65d-c0df6bda7cc6}]<br /><br /> @ = "PhotoStudio DTE Object"|\<RegistryKey Id = "DteClsidRegKey" Root = "HKCR" Key = "$ （var。DteClsidRegKey） "Action = ' createAndRemoveOnUninstall ' ><br /><br /> \<RegistryValue 类型 = "string" Name = "@" Value = "$ （var。ShortProductName） DTE 对象 '/><br /><br /> \</RegistryKey >|  
-    |[HKEY_CLASSES_ROOT \CLSID\\{bb431796-a179-4df7-b65d-c0df6bda7cc6} \LocalServer32]<br /><br /> @="$RootFolder$\PhotoStudio.exe"|\<RegistryKey Id = "DteLocSrv32RegKey" Root = "HKCR" Key = "$ （var。DteClsidRegKey） \LocalServer32 ' Action = ' createAndRemoveOnUninstall ' ><br /><br /> \<RegistryValue 类型 = "string" Name = "@" Value = "[INSTALLDIR] $ （var。ShortProductName） .exe '/><br /><br /> \</RegistryKey >|  
+    |[HKEY_CLASSES_ROOT\CLSID\\{bb431796-a179-4df7-b65d-c0df6bda7cc6}]<br /><br /> @ = "PhotoStudio DTE Object"|\<RegistryKey Id='DteClsidRegKey' Root='HKCR' Key='$(var.DteClsidRegKey)' Action='createAndRemoveOnUninstall'><br /><br /> \<RegistryValue Type='string' Name='@' Value='$(var.ShortProductName) DTE Object' /><br /><br /> \</RegistryKey >|  
+    |[HKEY_CLASSES_ROOT\CLSID\\{bb431796-a179-4df7-b65d-c0df6bda7cc6}\LocalServer32]<br /><br /> @="$RootFolder$\PhotoStudio.exe"|\<RegistryKey Id='DteLocSrv32RegKey' Root='HKCR' Key='$(var.DteClsidRegKey)\LocalServer32' Action='createAndRemoveOnUninstall'><br /><br /> \<RegistryValue Type='string' Name='@' Value='[INSTALLDIR]$(var.ShortProductName).exe' /><br /><br /> \</RegistryKey >|  
   
      在此示例中，DteClsidRegKey 解析为顶部行中的注册表项。 ShortProductName 解析为 `PhotoStudio`。  
   

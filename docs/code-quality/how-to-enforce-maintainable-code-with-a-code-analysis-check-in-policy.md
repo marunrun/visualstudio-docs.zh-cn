@@ -5,17 +5,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - code analysis, check-in policies
 ms.assetid: d1b3b04f-4dd9-40e6-b2d4-b414d33fb647
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1b5a165d2f0f3c17a91775d2d37eadf32307d248
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 2de2322b42be2591fa0f6cdcfc49572322dcd140
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72649423"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75587480"
 ---
 # <a name="how-to-enforce-maintainable-code-with-a-code-analysis-check-in-policy"></a>如何：使用代码分析签入策略强制实现代码的可维护性
 
@@ -55,9 +55,9 @@ Team Foundation 版本控制的管理员可以将代码分析可维护性规则�
 
      此外，如果你希望规则冲突阻止成功生成，请选中规则说明旁边的 "将**警告视为错误**" 复选框。
 
-3. 单击“确定”。 新的签入策略现在适用于将来的签入。
+3. 单击" **确定**"。 新的签入策略现在适用于将来的签入。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [代码度量值](../code-quality/code-metrics-values.md)
 - [创建和使用代码分析签入策略](../code-quality/how-to-create-or-update-standard-code-analysis-check-in-policies.md)

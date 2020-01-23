@@ -3,17 +3,17 @@ title: 如何：基于 XSD 架构创建 XML 文档
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 193b195f-e918-4c79-a1a1-8096a1433bde
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1f423af7dc4fae7a116acbaf8497c5ee4268653e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 3139df600654513912abeae64c1ef2980493574d
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72645977"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592797"
 ---
 # <a name="how-to-create-an-xml-document-based-on-an-xsd-schema"></a>如何：基于 XSD 架构创建 XML 文档
 
@@ -35,7 +35,7 @@ ms.locfileid: "72645977"
 
 - `xs:QName` 类型的枚举。
 
-- `xs:ENTITY`、`xs:ENTITIES` 和 `xs:NOTATION` 类型。
+- `xs:ENTITY`、`xs:ENTITIES`和 `xs:NOTATION` 类型。
 
 另请注意，只有当架构中发生 `xs:base64Binary` 类型的枚举时，才会生成同类型的内容。
 

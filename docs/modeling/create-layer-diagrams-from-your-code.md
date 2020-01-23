@@ -7,17 +7,17 @@ helpviewer_keywords:
 - dependency diagrams
 - diagrams - modeling, layer
 - constraints, architectural
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d956115da6b129263ee236109e278ac19db63a62
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 51e33d5f9b20230b056c017c9067bb4b2acafce6
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72747627"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75597186"
 ---
 # <a name="create-dependency-diagrams-from-your-code"></a>从代码创建依赖项关系图
 
@@ -70,7 +70,7 @@ ms.locfileid: "72747627"
 
 4. 使用 "**体系结构**" 菜单为解决方案创建新的依赖关系图
 
-5. 选择代码图上的所有节点 _（在单击_、拖动和释放_之前，请_使用_Ctrl_  +  或使用橡皮带选择。
+5. 选择代码图上的所有节点 _（在单击_、拖动和释放_之前，请_使用_Ctrl_ + 或使用橡皮带选择。
 
 6. 将所选元素拖放或复制和粘贴到新的依赖项验证关系图。
 
@@ -91,8 +91,8 @@ ms.locfileid: "72747627"
 |为所有选择的项目创建单个层|同时将所有项目拖到依赖关系图中。<br /><br /> 一个层将出现在关系图上，并链接到所有这些项目。|
 |为每个所选的项目创建一个层|按住**SHIFT**键，同时将所有项目同时拖到依赖关系图中。 **注意：** 如果使用**SHIFT**键来选择项目范围，请在选择项目后释放该密钥。 将这些项目拖到关系图上时再次按住该键。 <br /><br /> 每个项目的层将出现在关系图上，并链接到该项目。|
 |向层中添加项目|将项目拖到层上。|
-|创建新的未链接的层|在 "**工具箱**" 中，展开 "**依赖关系图**" 部分，然后将**层**拖到依赖关系图。<br /><br /> 若要添加多个层，请双击该工具。 完成后，选择 "**指针**" 工具或按**ESC**键。<br /><br /> - 或 -<br /><br /> 打开依赖关系图的快捷菜单，选择 "**添加**"，然后选择 "**层**"。|
-|创建嵌套的层|将现有层拖到另一个层上。<br /><br /> - 或 -<br /><br /> 打开层的快捷菜单，选择 "**添加**"，然后选择 "**层**"。|
+|创建新的未链接的层|在 "**工具箱**" 中，展开 "**依赖关系图**" 部分，然后将**层**拖到依赖关系图。<br /><br /> 若要添加多个层，请双击该工具。 完成后，选择 "**指针**" 工具或按**ESC**键。<br /><br /> -或者-<br /><br /> 打开依赖关系图的快捷菜单，选择 "**添加**"，然后选择 "**层**"。|
+|创建嵌套的层|将现有层拖到另一个层上。<br /><br /> -或者-<br /><br /> 打开层的快捷菜单，选择 "**添加**"，然后选择 "**层**"。|
 |创建包含两个或更多现有层的新层|选择层，打开所选内容的快捷菜单，然后选择 "**组**"。|
 |更改层的颜色|将其 "**颜色**" 属性设置为所需的颜色。|
 |指定与层关联的项目必须不属于指定的命名空间|在层的 "**禁止的命名空间**" 属性中键入命名空间。 使用分号（ **;** ）分隔命名空间。|
@@ -118,7 +118,7 @@ ms.locfileid: "72747627"
 |**若要**|**在层资源管理器中**|
 |-|-|
 |删除层与项目之间的链接|打开项目链接的快捷菜单，然后选择 "**删除**"。|
-|将链接从一个层移到另一个层|将项目链接拖到关系图上的一个现有层。<br /><br /> - 或 -<br /><br /> 1. 打开项目链接的快捷菜单，然后选择 "**剪切**"。<br />2. 在依赖关系图上，打开层的快捷菜单，然后选择 "**粘贴**"。|
+|将链接从一个层移到另一个层|将项目链接拖到关系图上的一个现有层。<br /><br /> -或者-<br /><br /> 1. 打开项目链接的快捷菜单，然后选择 "**剪切**"。<br />2. 在依赖关系图上，打开层的快捷菜单，然后选择 "**粘贴**"。|
 |将链接从一个层复制到另一个层|1. 打开项目链接的快捷菜单，然后选择 "**复制**"。<br />2. 在依赖关系图上，打开层的快捷菜单，然后选择 "**粘贴**"。|
 |基于现有项目链接创建一个新层|将项目链接拖到关系图上的空白区域。|
 |验证链接的项目是否支持对依赖关系图进行验证。|查看项目链接的 "**支持验证**" 列。|
@@ -156,7 +156,7 @@ ms.locfileid: "72747627"
 
 - [使用代码图分析查找潜在问题](../modeling/find-potential-problems-using-code-map-analyzers.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [对体系结构和建模工具的版本支持](../modeling/what-s-new-for-design-in-visual-studio.md#edition-support-for-architecture-and-modeling-tools)
 - [视频：实时验证你的体系结构依赖关系](https://sec.ch9.ms/sessions/69613110-c334-4f25-bb36-08e5a93456b5/170ValidateArchitectureDependenciesWithVisualStudio.mp4)

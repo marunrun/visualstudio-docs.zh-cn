@@ -7,18 +7,18 @@ dev_langs:
 - VB
 helpviewer_keywords:
 - language code style rules [EditorConfig]
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 38d625b774bc828741e2e4f227a45a293c029235
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: d03af1625086a56a6f36e48d59fd00c2461c0751
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72652810"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75588624"
 ---
 # <a name="language-conventions"></a>语言约定
 
@@ -1838,7 +1838,7 @@ void M()
 | **规则名称** | csharp_prefer_simple_using_statement |
 | **规则 ID** | IDE0063 |
 | **适用的语言** | C# 8.0+ |
-| **值** | `true` - 首选使用简单语句 `using` <br /><br />`false` - 不推荐使用简单语句 `using`  |
+| **值** | `true` - 首选使用简单  `using` 语句<br /><br />`false` - 不推荐使用简单  `using` 语句 |
 | **Visual Studio 默认值** | `true:suggestion` |
 
 代码示例：

@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 660c93c5e1ee6b41369ebbfc9f43c4c047042589
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: bfd073b07902e3c0a9e33dfe9ae50d4947a50ef2
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72652405"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75597264"
 ---
 # <a name="about-domain-specific-languages"></a>关于域特定语言
 
@@ -68,13 +68,13 @@ DSL 的典型应用是生成程序代码或其他项目。 定义 DSL 时，可�
 
 - 项目生成
 
-- 序列化
+- Serialization
 
 - 与 Visual Studio 的集成
 
 ### <a name="notation"></a>Notation
 
-域特定语言必须具有一组合理的元素，这些元素可以很容易地定义和扩展以表示特定于域的构造。 表示法由图形组成，表示元素和连接线，它们表示图形图面上元素之间的关系。 在 [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] 中，可以对形状进行扩展和优化，以表示域特定语言的元素。
+域特定语言必须具有一组合理的元素，这些元素可以很容易地定义和扩展以表示特定于域的构造。 表示法由图形组成，表示元素和连接线，它们表示图形图面上元素之间的关系。 在 [!INCLUDE[dsl](../modeling/includes/dsl_md.md)]中，可以对形状进行扩展和优化，以表示域特定语言的元素。
 
 ### <a name="domain-model"></a>域模型
 
@@ -84,7 +84,7 @@ DSL 的典型应用是生成程序代码或其他项目。 定义 DSL 时，可�
 
 域特定语言的主要用途之一就是生成一个项目，例如源代码、XML 文件或其他一些可用的数据。 通常情况下，模型中的更改表示项目中的更改。 您可以使用 [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] 来生成项目，并在更改模型时重新生成项目。
 
-### <a name="serialization"></a>序列化
+### <a name="serialization"></a>Serialization
 
 必须以某种形式保留域特定语言，以便进行编辑、保存、关闭和重新加载。 [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] 使用 XML 格式，该格式允许定义和自定义如何序列化或保存域特定语言。
 

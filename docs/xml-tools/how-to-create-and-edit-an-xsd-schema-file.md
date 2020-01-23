@@ -3,17 +3,17 @@ title: 创建和编辑 XSD 架构文件
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 91b10cd7-c0cd-4e5a-a46b-4fed60dff542
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b2df904b4f5351611e4d15775f68d94db4cc876e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 976448709f7ecf9eaff0a563b867f12b3d9fa770
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72645952"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592758"
 ---
 # <a name="how-to-create-and-edit-an-xsd-schema-file"></a>如何：创建和编辑 XSD 架构文件
 
@@ -21,7 +21,7 @@ ms.locfileid: "72645952"
 
 ## <a name="to-create-a-new-xml-schema-file"></a>创建新的 XML 架构文件
 
-1. 在 Visual Studio 中，打开 "**文件**" 菜单并选择 "**新建**"  > **文件**。 或者，使用**Ctrl** +**N**键盘快捷方式。
+1. 在 Visual Studio 中，打开 "**文件**" 菜单并选择 "**新建**" > **文件**。 或者，使用**Ctrl**+**N**键盘快捷方式。
 
 2. 在 "**新建文件**" 对话框中，选择 " **XML 架构**"，然后选择 "**打开**"。
 

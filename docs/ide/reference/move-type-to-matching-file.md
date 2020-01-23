@@ -3,20 +3,20 @@ title: “将类型移到匹配的文件”重构
 description: 将某个类型移动到具有相同名称的单独文件。 右键单击该类型，选择“快速操作和重构”，然后选择“将类型移动到 <TypeName>.cs”。
 ms.date: 01/26/2018
 ms.topic: reference
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: ba822981ade5ebdc191732e0a32b02a9a4005fb4
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ba082e90c2447d1da7510ce16f888f67a52b5ac0
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72666479"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75585266"
 ---
 # <a name="move-a-type-to-a-matching-file-refactoring"></a>“将类型移到匹配的文件”重构
 
@@ -34,7 +34,7 @@ ms.locfileid: "72666479"
 
 ## <a name="how-to"></a>操作说明
 
-1. 将光标置于定义类型的类型名称中。 例如:
+1. 将光标置于定义类型的类型名称中。 例如：
 
    ```csharp
    class Person

@@ -5,15 +5,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - test settings, for distributed load tests
 ms.assetid: b63d4b71-3b74-4872-b2d1-f0bd1a9a8544
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 4704ae4d6a43eb3ac23b928b26515b545164e495
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 3129aa5139533db0783c168c3489e071fe9339b5
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653655"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589131"
 ---
 # <a name="how-to-create-a-test-settings-file-for-a-distributed-load-test"></a>如何：为分布式负载测试创建测试设置文件
 
@@ -124,7 +124,7 @@ Visual Studio 的测试设置存储在一个文件中。 测试设置定义了�
     |**网络仿真：** 可以使用测试设置指定希望在测试中放置人工网络负载。 网络仿真将仿真特定网络连接（如拨号连接）的速度，从而影响计算机的往来通信。 **注意：** 网络仿真不能用于提高网络连接速度。|负载测试会忽略网络仿真适配器。 实际上，负载测试使用在负载测试方案的网络组合中指定的设置。<br /><br /> 有关详细信息，请参阅[指定虚拟网络类型](../test/specify-virtual-network-types-in-a-load-test-scenario.md)。||
     |**系统信息：** 可以设置测试设置来包含有关在其上运行系统信息诊断和数据收集器的计算机的系统信息。 通过使用测试设置可在测试结果中指定系统信息。|![“信息”图标](../test/media/vc364f4.gif)<br /><br /> 您可以从负载代理和测试中的系统收集系统信息。|收集此信息不需要任何配置。|
     |**测试影响：** 可以收集在运行某个测试用例时使用了哪些应用程序代码方法的相关信息。 将它与开发人员进行的应用程序代码更改结合使用，可确定这些开发更改影响了哪些测试。|测试影响数据不是使用负载测试收集到的。||
-    |**视频录制器：** 运行自动测试时可以创建桌面会话的视频记录。 这对查看编码的 UI 测试的用户操作非常有用。 该视频可帮助其他团队成员隔离难以重现的应用程序问题。 **注意：** 远程运行测试时，除非代理在交互式进程模式下运行，否则视频记录器不起作用。|![“重要事项”图标](../test/media/vc364f3.gif)警告  ：我们建议不要对负载测试使用视频记录器适配器。|[如何：使用测试设置在测试期间包括屏幕和语音录制](../test/how-to-include-recordings-of-the-screen-and-voice-during-tests.md)|
+    |**视频录制器：** 运行自动测试时可以创建桌面会话的视频记录。 这对查看编码的 UI 测试的用户操作非常有用。 该视频可帮助其他团队成员隔离难以重现的应用程序问题。 **注意：** 远程运行测试时，除非代理在交互式进程模式下运行，否则视频记录器不起作用。|![重要事项图标](../test/media/vc364f3.gif)**警告：** 我们建议不要对负载测试使用视频记录器适配器。|[如何：使用测试设置在测试期间包括屏幕和语音录制](../test/how-to-include-recordings-of-the-screen-and-voice-during-tests.md)|
 
 19. 选择“部署”  。
 

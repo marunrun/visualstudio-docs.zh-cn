@@ -11,19 +11,19 @@ helpviewer_keywords:
 - export installation configuration
 - install Visual Studio
 - Visual Studio installer
-author: TerryGLee
-ms.author: tglee
+author: ornellaalt
+ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 8150aa3369eb385ebad865d261f9e8c2d71d7dbe
-ms.sourcegitcommit: 2ee11676af4f3fc5729934d52541e9871fb43ee9
+ms.openlocfilehash: 12d22334094b848350d44d245685532fed196389
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65849038"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76114841"
 ---
 # <a name="import-or-export-installation-configurations"></a>导入或导出安装配置
 
@@ -44,15 +44,15 @@ ms.locfileid: "65849038"
 
 1. 打开 Visual Studio 安装程序。
 
-1. 在产品卡中，选择“更多”按钮，然后选择“导出配置”。
+1. 在产品卡中，选择“更多”  按钮，然后选择“导出配置”  。
 
    ![从 Visual Studio 安装程序的产品卡中导出配置](../install/media/vs-2019/vs-installer-export-config.png)
 
-1. 浏览到或键入要保存 .vsconfig 文件的位置，然后选择“查看详细信息”。
+1. 浏览到或键入要保存 .vsconfig 文件的位置，然后选择“查看详细信息”  。
 
    ![从 Visual Studio 安装程序中导出配置](../install/media/vs-2019/export-configuration-confirmation.png)
 
-1. 确保已有所需的工作负载和组件，然后选择“导出”。
+1. 确保已有所需的工作负载和组件，然后选择“导出”  。
 
 ## <a name="import-a-configuration"></a>导入配置
 
@@ -60,17 +60,17 @@ ms.locfileid: "65849038"
 
 1. 打开 Visual Studio 安装程序。
 
-1. 在产品卡中，选择“更多”按钮，然后选择“导入配置”。
+1. 在产品卡中，选择“更多”  按钮，然后选择“导入配置”  。
 
-1. 找到要导入的 .vsconfig 文件，然后选择“查看详细信息”。
+1. 找到要导入的 .vsconfig 文件，然后选择“查看详细信息”  。
 
-1. 确保已有所需的工作负载和组件，然后选择“关闭”。
+1. 确保已有所需的工作负载和组件，然后选择“关闭”  。
 
 ::: moniker range="vs-2019"
 
 ## <a name="automatically-install-missing-components"></a>自动安装缺少的组件
 
-Visual Studio 2019 新增功能：将 .vsconfig 文件保存到解决方案根目录并打开解决方案时，Visual Studio 会自动检测缺少哪些组件并提示你安装它们。
+ Visual Studio 2019 新增功能：将 .vsconfig 文件保存到解决方案根目录并打开解决方案时，Visual Studio 会自动检测缺少哪些组件并提示你安装它们。
 
 ![解决方案资源管理器建议安装其他组件](../install/media/vs-2019/solution-explorer-config-file.png)
 
@@ -78,11 +78,11 @@ Visual Studio 2019 新增功能：将 .vsconfig 文件保存到解决方案根�
 
 1. 右键单击解决方案文件。
 
-1. 选择“添加”>“安装配置文件”。
+1. 选择“添加”>“安装配置文件”   。
 
-1. 确认要保存 .vconfig 文件的位置，然后选择“查看详细信息”。
+1. 确认要保存 .vconfig 文件的位置，然后选择“查看详细信息”  。
 
-1. 确保已有所需的工作负载和组件，然后选择“导出”。
+1. 确保已有所需的工作负载和组件，然后选择“导出”  。
 
 ::: moniker-end
 

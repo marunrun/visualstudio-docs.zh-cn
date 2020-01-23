@@ -2,17 +2,17 @@
 title: 如果：在程序代码中从文件打开模型
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d39543a388c112cf13a5841e4fe825717597d5c1
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: fae71f748f1f64480c046ae157e1fbca0dd0bec9
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661183"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594612"
 ---
 # <a name="how-to-open-a-model-from-file-in-program-code"></a>如果：在程序代码中从文件打开模型
 
@@ -20,7 +20,7 @@ ms.locfileid: "72661183"
 
 在 Visual Studio 扩展中，你可以使用 ModelBus 来实现此目的。 ModelBus 提供了用于引用模型或模型中的元素的标准机制，并用于查找模型（如果该模型已移动）。 有关详细信息，请参阅[使用 Visual Studio 集成模型 Modelbus](../modeling/integrating-models-by-using-visual-studio-modelbus.md)。
 
-## <a name="target-framework"></a>目标 Framework
+## <a name="target-framework"></a>目标框架
 
 将应用程序项目的**目标框架**设置为 .NET Framework 4 或更高版本。
 
@@ -33,7 +33,7 @@ ms.locfileid: "72661183"
 > [!NOTE]
 > 目标框架不 **.NET Framework 4 客户端配置文件**。
 
-## <a name="references"></a>reference
+## <a name="references"></a>引用
 
 将这些引用添加到你的 Visual Studio 应用程序项目：
 
@@ -49,7 +49,7 @@ ms.locfileid: "72661183"
 
 这些是你应该识别的类：
 
-- *YourDslRootClass* -这是 `DslDefinition.dsl` 中的根类的名称。
+- *YourDslRootClass* -这是 `DslDefinition.dsl`中的根类的名称。
 
 - *E* `SerializationHelper`-此类是在 DSL 项目 `SerializationHelper.cs` 中定义的。
 

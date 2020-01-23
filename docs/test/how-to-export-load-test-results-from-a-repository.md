@@ -8,15 +8,15 @@ helpviewer_keywords:
 - Load Test Results Repository
 - load test results, exporting
 ms.assetid: 716c2af5-8737-4d31-956f-a0273f7c5c0c
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 86453ef9aa92c63ae4e96566fd08aa328b71b50e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 3f72dbd687bc9177cd4cfd36416acb23445d30c8
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653538"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589040"
 ---
 # <a name="how-to-export-load-test-results-from-a-repository"></a>如何：从存储库导出负载测试结果
 

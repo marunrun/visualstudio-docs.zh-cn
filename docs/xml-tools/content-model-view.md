@@ -3,23 +3,23 @@ title: XML 架构设计器内容模型视图
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: e8db7c7d-31cf-479e-9dcc-299759891795
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 67453571963ae22910842be0021e008632942de5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 830dbdda0027551a25747235e6ad9dffbbc11b23
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661529"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592908"
 ---
 # <a name="content-model-view"></a>内容模型视图
 
-内容模型视图提供局部和全局架构节点及其组件（包括简单类型和复杂类型、元素、模型组、特性及特性组）的图形表示形式。 在内容模型视图中不能查看 XML 注释和处理指令。 内容模型视图包含两个面板：一个**工作区**面板，其中包含 " [XML 架构设计器" 工作区](../xml-tools/xml-schema-designer-workspace.md)中的节点列表，以及可以查看**工作区中所选架构节点的内容模型的设计图面**面板。 内容模型视图还包括 XML 架构设计器工具栏和痕迹栏。
+内容模型视图提供局部和全局架构节点及其组件（包括简单类型和复杂类型、元素、模型组、特性及特性组）的图形表示形式。 在内容模型视图中不能查看 XML 注释和处理指令。 内容模型视图包含两个面板：一个**工作区**面板，其中包含 " [XML 架构设计器" 工作区](../xml-tools/xml-schema-designer-workspace.md)中的节点列表，以及您可以在其中查看在 "**工作区**" 面板中选择的架构节点的内容模型的设计图面。 内容模型视图还包括 XML 架构设计器工具栏和痕迹栏。
 
-在下图中，"**工作区**" 面板包含六个架构节点。 "@No__t_0" 节点在 "**工作区**" 面板中选择，并显示在设计图面中。
+在下图中，"**工作区**" 面板包含六个架构节点。 "`purchaseOrder`" 节点在 "**工作区**" 面板中选择，并显示在设计图面中。
 
 ![XML 架构设计器内容模型视图](../xml-tools/media/xsddesigner_contentmodelview.gif)
 
@@ -81,9 +81,9 @@ ms.locfileid: "72661529"
 
 |选项|描述|
 |-|-----------------|
-|**显示起始视图**|切换到[起始视图](../xml-tools/start-view.md)。 可以使用键盘快捷方式访问此视图： **Ctrl** +**1**。|
-|**显示内容模型视图**|切换到[内容模型视图](../xml-tools/content-model-view.md)。 可以使用键盘快捷方式访问此视图： **Ctrl** +**2**。|
-|**显示图形视图**|切换到[图形视图](../xml-tools/graph-view.md)。 可以使用键盘快捷方式访问此视图： **Ctrl** +**3**。|
+|**显示起始视图**|切换到[起始视图](../xml-tools/start-view.md)。 可以使用键盘快捷方式访问此视图： **Ctrl**+**1**。|
+|**显示内容模型视图**|切换到[内容模型视图](../xml-tools/content-model-view.md)。 可以使用键盘快捷方式访问此视图： **Ctrl**+**2**。|
+|**显示图形视图**|切换到[图形视图](../xml-tools/graph-view.md)。 可以使用键盘快捷方式访问此视图： **Ctrl**+**3**。|
 |**清除工作区**|清空工作区和设计图面。|
 |**从工作区中删除**|从工作区和设计图面中删除所选节点。|
 |**从工作区中删除所有内容但选择**|从工作区和设计图面中删除未选择的节点。|
@@ -123,6 +123,6 @@ ms.locfileid: "72661529"
 
 如果在 XML 编辑器中对架构集进行更改，则更改会在内容模型视图中同步。 有关详细信息，请参阅[与 XML 编辑器集成](../xml-tools/integration-with-xml-editor.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [XML 架构设计器工作区](../xml-tools/xml-schema-designer-workspace.md)

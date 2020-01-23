@@ -9,19 +9,17 @@ caps.latest.revision: 18
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: a2757201f482682b8fdf26275f510984629204f6
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: c7e8ca0fa1558ce0a2d37d4e11a35ba10a27fd2d
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74300919"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75919084"
 ---
 # <a name="getting-started-with-domain-specific-languages"></a>域特定语言入门
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 本主题介绍如何定义和使用通过用于 Visual Studio 的建模 SDK 创建的域特定语言（DSL）的基本概念。
-
- 如果你不熟悉 Dsl，我们建议你完成**DSL 工具实验室**，你可以在此站点中找到此工具：[初学者和建模 SDK](https://go.microsoft.com/fwlink/?LinkID=186128)
 
 ## <a name="what-can-you-do-with-a-domain-specific-language"></a>使用域特定语言可以执行什么操作？
  域特定语言是一种通常为图形的表示法，用于特定目的。 与此相反，UML 等语言是通用的。 在 DSL 中，可以定义模型元素的类型及其关系，以及如何在屏幕上显示它们。
@@ -41,8 +39,8 @@ ms.locfileid: "74300919"
 
 |||
 |-|-|
-|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185579](https://go.microsoft.com/fwlink/?LinkId=185579)|
-|[!INCLUDE[vssdk_current_short](../includes/vssdk-current-short-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185580](https://go.microsoft.com/fwlink/?LinkId=185580)|
+|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185579](https://www.visualstudio.com/)|
+|[!INCLUDE[vssdk_current_short](../includes/vssdk-current-short-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185580](/azure/devops/integrate/index?view=azure-devops&viewFallbackFrom=vsts)|
 |Visual Studio 的建模 SDK|[下载 MSDK](https://www.microsoft.com/download/details.aspx?id=48148)|
 
 ## <a name="creating-a-dsl-solution"></a>创建 DSL 解决方案
@@ -141,7 +139,7 @@ ms.locfileid: "74300919"
 
  编辑模型时，可以在 "**资源管理器**" 视图中查看作为树的模型。 将形状添加到关系图中时，模型元素也会显示在资源管理器中。 即使没有关系图，也可以使用资源管理器。
 
- 如果在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]的调试实例中看不到 "资源管理器"，请在 "**视图**" 菜单上指向 "**其他窗口**"，然后单击 " *\<你的语言 >* **资源管理器**"。
+ 如果您不能看到的调试实例中的资源管理器[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]，然后在**视图**菜单中的指向**其他 Windows**，然后单击 *\<Your 语言>* **资源管理器**。
 
 ### <a name="the-api-of-your-dsl"></a>DSL 的 API
  DSL 生成一个 API，该 API 允许你读取和更新作为 DSL 实例的模型。 API 的一个应用是从模型生成文本文件。 有关详细信息，请参阅[使用 T4 文本模板生成设计时代码](../modeling/design-time-code-generation-by-using-t4-text-templates.md)。
@@ -399,4 +397,4 @@ ms.locfileid: "74300919"
 2. 重新生成仍想要使用的任何实验性 Dsl 或其他实验性 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 扩展。
 
 ## <a name="see-also"></a>请参阅
- [了解模型、类和关系](../modeling/understanding-models-classes-and-relationships.md)[如何定义域特定语言](../modeling/how-to-define-a-domain-specific-language.md)[初学者和建模 SDK](https://go.microsoft.com/fwlink/?LinkID=186128)
+ [了解模型、类和关系](../modeling/understanding-models-classes-and-relationships.md)[如何定义域特定语言](../modeling/how-to-define-a-domain-specific-language.md)[初学者和建模 SDK](https://www.microsoft.com/download/details.aspx?id=48148)

@@ -6,17 +6,17 @@ f1_keywords:
 - vs.findcommandbox
 helpviewer_keywords:
 - Find/Command box
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 024491180528dd4b8335c88623e7d261c0a2bbe2
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 99b50c0503d313d4482d8370071220dbf1403d9a
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653734"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591523"
 ---
 # <a name="findcommand-box"></a>“查找/命令”框
 
@@ -34,7 +34,7 @@ ms.locfileid: "72653734"
 
 ## <a name="entering-commands"></a>输入命令
 
-若要使用“查找/命令”框发布单个 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 命令或别名，而不是搜索文本，请在该命令前面加一个大于 (>) 符号   。 例如:
+若要使用“查找/命令”框发布单个 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 命令或别名，而不是搜索文本，请在该命令前面加一个大于 (>) 符号   。 例如：
 
 ```
 >File.NewFile c:\temp\MyFile /t:"General\Text File"
@@ -44,7 +44,7 @@ ms.locfileid: "72653734"
 
 ## <a name="escape-characters"></a>转义字符
 
-命令中的插入符号 (^) 字符表示紧随其后的字符将按字面意思而不是作为控制字符进行解释  。 这可以用于嵌入参数或开关值中的直引号 (")、空格、前导斜杠，插入符号或其他任何字符，开关名称除外  。 例如:
+命令中的插入符号 (^) 字符表示紧随其后的字符将按字面意思而不是作为控制字符进行解释  。 这可以用于嵌入参数或开关值中的直引号 (")、空格、前导斜杠，插入符号或其他任何字符，开关名称除外  。 例如：
 
 ```
 >Edit.Find ^^t /regex

@@ -6,17 +6,17 @@ helpviewer_keywords:
 - Visual Studio Workflow Designer [WFD], debugging workflows
 - Workflow Designer [WFD], debugging workflows
 ms.assetid: d71308cf-d464-4536-8711-0d0a8eadb255
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7432e02a4c8e133d7d758909a7ea851f90b88841
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 4b8de1ff9875d175c956a45b87d459d0943e783c
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72650562"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75597056"
 ---
 # <a name="debug-workflows-with-the-workflow-designer"></a>用工作流设计器调试工作流
 
@@ -33,13 +33,13 @@ ms.locfileid: "72650562"
 - 使用远程调试。 有关使用远程调试的信息，请参阅[如何：启用远程调试](/previous-versions/visualstudio/visual-studio-2010/febz73k0(v=vs.100))。
 
    > [!NOTE]
-   > 如果工作流应用程序针对 x86 体系结构并托管在运行64位操作系统的计算机上，则除非远程计算机上安装了 Visual Studio 或将工作流应用程序的目标更改为 **，否则远程调试将不起作用。任何 CPU**。
+   > 如果工作流应用程序针对 x86 体系结构并托管在运行64位操作系统的计算机上，则除非远程计算机上安装了 Visual Studio，否则远程调试将不起作用，或将工作流应用程序的目标更改为 "**任意 CPU**"。
 
 ## <a name="step-through-code"></a>逐行执行代码
 
 - **单步**执行：按**F11**单步执行活动。 此调试器可以单步执行任何定义的处理程序。 如果未定义处理程序，则可以逐过程执行该活动，或者对于包含其他活动的复合活动，您可以单步执行第一个要执行的活动。
 
-- **跳出：** 按**Shift** +**F11**跳出活动。 如果跳出某个活动，则会运行当前活动及其所有同级活动，直到这些活动完成为止。 然后调试器将在当前活动的父项处中断。 从代码处理程序中跳出时，调试器将在与此处理程序关联的活动处中断。
+- **跳出：** 按**Shift**+**F11**跳出活动。 如果跳出某个活动，则会运行当前活动及其所有同级活动，直到这些活动完成为止。 然后调试器将在当前活动的父项处中断。 从代码处理程序中跳出时，调试器将在与此处理程序关联的活动处中断。
 
 - **逐过程**：按**F10**逐过程执行活动。 逐过程执行复合活动时，调试器将在此复合活动的第一个可执行的子活动处中断。 逐过程执行非复合活动（例如 <xref:System.Activities.Statements.Assign> 活动）时，调试器将执行此活动及其关联的处理程序并在下一个活动处中断。 如果执行的活动是复合活动中的最后一个子活动，则在执行之后，调试器将在父活动处中断。
 

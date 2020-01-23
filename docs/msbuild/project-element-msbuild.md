@@ -14,17 +14,17 @@ helpviewer_keywords:
 - <Project> element [MSBuild]
 - Project element [MSBuild]
 ms.assetid: d1cda56a-dbef-4109-9201-39e962e3f653
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c69d010f9a4e834f9435616747c2776786706445
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 1bb7c49e4f3dc86594c8a3211bacb538d3f10c4f
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62999337"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75597433"
 ---
 # <a name="project-element-msbuild"></a>Project 元素 (MSBuild)
 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 项目文件必需的根元素。
@@ -54,18 +54,18 @@ ms.locfileid: "62999337"
 
 ### <a name="attributes"></a>特性
 
-| 特性 | 说明 |
+| 特性 | 描述 |
 |------------------------| - |
 | `DefaultTargets` | 可选特性。<br /><br /> 如果未指定目标，则默认目标将作为生成的入口点。 使用分号 (;) 分隔多个目标。<br /><br /> 如果未在 `DefaultTargets` 属性或 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 命令行中指定默认目标，那么引擎会在评估 [Import](../msbuild/import-element-msbuild.md) 元素后在项目文件中执行第一个目标。 |
 | `InitialTargets` | 可选特性。<br /><br /> 会在 `DefaultTargets` 属性中或命令行上指定的目标前运行初始目标。 使用分号 (`;`) 分隔多个目标。 如果多个导入文件定义 `InitialTargets`，则将按照导入的顺序运行所有提到的目标。 |
 | `Sdk` | 可选特性。 <br /><br /> 用于创建添加到 .proj 文件的隐式 Import 语句的 SDK 名称和可选版本。 如果不指定任何版本，则 MSBuild 将尝试解析默认版本。  例如，`<Project Sdk="Microsoft.NET.Sdk" />` 或 `<Project Sdk="My.Custom.Sdk/1.0.0" />`。 |
 | `ToolsVersion` | 可选特性。<br /><br /> 用于确定 $(MSBuildBinPath) 和 $(MSBuildToolsPath) 的值的工具集 MSBuild 的版本。 |
-| `TreatAsLocalProperty` | 可选特性。<br /><br /> 不会被视为全局的属性名称。 此属性可防止特定命令行属性替代项目或目标文件和所有后续导入中设置的属性值。 使用分号 (;) 分隔多个属性。<br /><br /> 通常，全局属性会替代项目或文件中设置的属性值。 如果该属性在 `TreatAsLocalProperty` 值中列出，那么全局属性值不会替代在该文件或任何后续导入中设置的属性值。 有关详细信息，请参阅[如何：使用不同选项生成相同的源文件](../msbuild/how-to-build-the-same-source-files-with-different-options.md)。 **注意：** 可使用“-property”（或“-p”）开关，在命令提示符处设置全局属性。 还可使用 MSBuild 任务的 `Properties` 属性为多项目生成中的子项目设置或修改全局属性。 有关详细信息，请参阅 [MSBuild 任务](../msbuild/msbuild-task.md)。 |
+| `TreatAsLocalProperty` | 可选特性。<br /><br /> 不会被视为全局的属性名称。 此属性可防止特定命令行属性替代项目或目标文件和所有后续导入中设置的属性值。 使用分号 (;) 分隔多个属性。<br /><br /> 通常，全局属性会替代项目或文件中设置的属性值。 如果该属性在 `TreatAsLocalProperty` 值中列出，那么全局属性值不会替代在该文件或任何后续导入中设置的属性值。 有关详细信息，请参阅[如何：使用不同选项生成相同的源文件](../msbuild/how-to-build-the-same-source-files-with-different-options.md)。 **注意：** 可使用“-property”（或“-p”）开关，在命令提示符处设置全局属性   。 还可使用 MSBuild 任务的 `Properties` 属性为多项目生成中的子项目设置或修改全局属性。 有关详细信息，请参阅 [MSBuild 任务](../msbuild/msbuild-task.md)。 |
 | `xmlns` | 可选特性。<br /><br /> 指定后，`xmlns` 属性必须具有 `http://schemas.microsoft.com/developer/msbuild/2003` 值。 |
 
 ### <a name="child-elements"></a>子元素
 
-| 元素 | 说明 |
+| 元素 | 描述 |
 | - | - |
 | [Choose](../msbuild/choose-element-msbuild.md) | 可选元素。<br /><br /> 评估子元素，选择一组 `ItemGroup` 元素和/或 `PropertyGroup` 元素进行评估。 |
 | [Import](../msbuild/import-element-msbuild.md) | 可选元素。<br /><br /> 启用项目文件，导入另一项目文件。 项目中可能有零个或零个以上的 `Import` 元素。 |

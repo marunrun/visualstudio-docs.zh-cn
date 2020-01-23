@@ -8,17 +8,17 @@ helpviewer_keywords:
 - Start Page [Visual Studio]
 - customizing Start Page [Visual Studio]
 - Visual Studio Start Page
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b0a415c8a61e360ed1bcc323214d4144b2875cc0
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 281a0c43c0163d158151683e9fdc483dfc1709f5
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72652541"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75567211"
 ---
 # <a name="customize-startup"></a>自定义启动
 
@@ -58,7 +58,7 @@ ms.locfileid: "72652541"
 
 ### <a name="to-select-which-custom-start-page-to-display"></a>选择要显示的自定义起始页
 
-1. 在菜单栏上，依次选择“工具”>“选项”   。
+1. 在菜单栏上，依次选择“工具”  >“选项”  。
 
 1. 展开“环境”  ，然后选择“启动”  。
 

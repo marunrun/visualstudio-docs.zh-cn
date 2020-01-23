@@ -2,7 +2,7 @@
 title: 安装 Visual Studio
 titleSuffix: ''
 description: 了解如何逐步安装 Visual Studio。
-ms.date: 10/07/2019
+ms.date: 12/13/2019
 ms.custom: seodec18
 ms.topic: conceptual
 f1_keywords:
@@ -13,19 +13,19 @@ helpviewer_keywords:
 - set up Visual Studio
 - Visual Studio setup
 - Visual Studio installer
-author: TerryGLee
-ms.author: tglee
+author: ornellaalt
+ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 6cd91fadea397955b756461383ed8e17030b4c3b
-ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
+ms.openlocfilehash: d8e6e3a857c9bbf5577cf395f698f64cfb11bddc
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72018849"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76114569"
 ---
 # <a name="install-visual-studio"></a>安装 Visual Studio
 
@@ -139,7 +139,7 @@ ms.locfileid: "72018849"
 
  ::: moniker range="vs-2017"
 
-1. 在“安装 Visual Studio”  屏幕中找到所需的工作负载。
+1. 在“Visual Studio 安装程序”  中找到所需的工作负载。
 
    ![Visual Studio 2017：安装工作负载](../install/media/vs-installer-installing-workloads.png)
 
@@ -153,7 +153,7 @@ ms.locfileid: "72018849"
 
 ::: moniker range="vs-2019"
 
-1. 安装完新的工作负载和组件后，选择“启动”  。
+1. 在“Visual Studio 安装程序”  中找到所需的工作负载。
 
    ![Visual Studio 2019：安装工作负载](../install/media/vs-2019/vs-installer-workloads.png)
 

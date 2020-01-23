@@ -1,25 +1,25 @@
 ---
 title: 安装 Visual Studio 2019 for Mac
 description: 介绍如何安装 Visual Studio 2019 for Mac 以及跨平台开发所需的附加组件。
-author: asb3993
-ms.author: amburns
+author: heiligerdankgesang
+ms.author: dominicn
 ms.date: 09/18/2019
 ms.technology: vs-ide-install
 ms.assetid: 22B1F2CD-32AE-464D-80AC-C8AB4786B015
 ms.custom: video
-ms.openlocfilehash: 1ace600f9c4582e99c6fa324cb9dcc61593d3d97
-ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
+ms.openlocfilehash: 45f9756607cbb638d1f69f77bdf8cd2ee30953c5
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73716784"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851942"
 ---
 # <a name="install-visual-studio-2019-for-mac"></a>安装 Visual Studio 2019 for Mac
 
 要开始在 macOS 上开发本机跨平台 .NET 应用，请按照下列步骤安装 Visual Studio 2019 for Mac。
 
  > [!div class="button"]
- > [下载 Visual Studio for Mac](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=navigation+cta&utm_content=download+vsmac2019)
+ > [下载 Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/)
 
 ## <a name="requirements"></a>要求
 
@@ -32,7 +32,7 @@ ms.locfileid: "73716784"
 
 ## <a name="installation-instructions"></a>安装说明
 
-1. 从 [Visual Studio for Mac 下载页面](https://aka.ms/vsmac)下载安装程序。
+1. 从 [Visual Studio for Mac 下载页面](https://visualstudio.microsoft.com/vs/mac/)下载安装程序。
 2. 下载完成后，单击 VisualStudioforMacInstaller.dmg 以装载安装程序，然后双击箭头徽标运行它  ：
 
     [![单击大箭头开始安装](media/install-installer-sml.png)](media/install-installer.png#lightbox)

@@ -13,12 +13,12 @@ caps.latest.revision: 30
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f27fede436ea6cabe0aab6480cd4841299c42293
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: a94a4bd479c3ad48efe44d3a92e91dc3a050efcd
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74302780"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75918267"
 ---
 # <a name="model-user-requirements"></a>建立用户需求模型
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -87,7 +87,7 @@ ms.locfileid: "74302780"
 
   下列主题提供了更多信息：
 
-|了解|读取|
+|若要了解|读取|
 |--------------------|----------|
 |有关如何创建用例的更详细信息|[UML 用例图：准则](../modeling/uml-use-case-diagrams-guidelines.md)|
 |用例图上的元素|[UML 用例图：参考](../modeling/uml-use-case-diagrams-reference.md)|
@@ -132,18 +132,18 @@ ms.locfileid: "74302780"
 
   下列主题提供了更多信息：
 
-|了解|读取|
+|若要了解|读取|
 |--------------------|----------|
 |有关查找要求类的更详细信息|[UML 类图：准则](../modeling/uml-class-diagrams-guidelines.md)|
 |概念类图上的元素|[UML 类图：参考](../modeling/uml-class-diagrams-reference.md)|
 |如何从概念类开发代码|[应用体系结构建模](../modeling/model-your-app-s-architecture.md)|
 
- 在概念类图中，通常在关联上放置箭头来表示可导航性没什么用处。 这是因为此关系图并不表示实现。 关联表示现实世界对象间的关系。 下面的 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 扩展将无方向箭头当成默认选择： [示例：UML 域建模功能](https://go.microsoft.com/fwlink/?LinkId=213849)。
+ 在概念类图中，通常在关联上放置箭头来表示可导航性没什么用处。 这是因为此关系图并不表示实现。 关联表示现实世界对象间的关系。
 
 ## <a name="BusinessRules"></a> Showing Business Rules
  业务规则是一个不与特定用例相关联的要求，应在整个系统中进行观察。
 
- 许多业务规则受概念类间关系的约束。 您可以编写这些*静态业务规则*作为与概念类图上的相关类关联的注释。 例如:
+ 许多业务规则受概念类间关系的约束。 您可以编写这些*静态业务规则*作为与概念类图上的相关类关联的注释。 例如：
 
  ![附加到 Order 类的注释中的规则。](../modeling/media/uml-reqmcd2.png "UML_ReqmCD2")
 
@@ -155,18 +155,18 @@ ms.locfileid: "74302780"
 
  下列主题提供了更多信息：
 
-|了解|读取|
+|若要了解|读取|
 |--------------------|----------|
 |有关查找和记录静态业务规则的更详细信息|[UML 类图：准则](../modeling/uml-class-diagrams-guidelines.md)|
 |概念类图上的元素|[UML 类图：参考](../modeling/uml-class-diagrams-reference.md)|
 |如何开发符合业务规则的代码|[应用体系结构建模](../modeling/model-your-app-s-architecture.md)|
 
 ## <a name="QoSRequirements"></a> Describing Quality of Service Requirements
- 服务质量要求有多个类别。 它们包括以下类型：
+ 服务质量要求有多个类别。 它们包括以下内容：
 
 - 性能
 
-- 安全
+- 安全性
 
 - 可用性
 
@@ -180,7 +180,7 @@ ms.locfileid: "74302780"
 
   下列主题提供了更多信息：
 
-|了解|读取|
+|若要了解|读取|
 |--------------------|----------|
 |将其他文档附加到用例|[将用例链接到文档和关系图](../modeling/link-a-use-case-to-documents-and-diagrams.md)|
 |如何开发符合服务质量要求的代码|[应用体系结构建模](../modeling/model-your-app-s-architecture.md)|
@@ -188,11 +188,11 @@ ms.locfileid: "74302780"
 ## <a name="Workflow"></a>显示用户与系统之间的工作流
  可以使用活动图来显示不同用例间的工作流。 通过绘制显示用户执行的主要任务（通过系统执行或在系统以外执行的任务）的活动图来开始建立要求模型常常非常有用。
 
- 例如:
+ 例如：
 
  ![具有三个操作和循环的活动。](../modeling/media/uc-reqmwfact.png "UC_ReqmWFAct")
 
- 可以绘制用例图和活动图来显示相同信息的不同视图。  虽然用例图在显示大型活动中嵌套的较小型活动时更具效率，但不会显示工作流。 例如:
+ 可以绘制用例图和活动图来显示相同信息的不同视图。  虽然用例图在显示大型活动中嵌套的较小型活动时更具效率，但不会显示工作流。 例如：
 
  ![之前操作的用例](../modeling/media/uml-reqmwfuc.png "UML_ReqmWFUC")
 
@@ -200,7 +200,7 @@ ms.locfileid: "74302780"
 
  下列主题提供了更多信息：
 
-|了解|读取|
+|若要了解|读取|
 |--------------------|----------|
 |有关如何定义业务工作流的更多信息|[UML 活动图：准则](../modeling/uml-activity-diagrams-guidelines.md)|
 |活动图中的元素|[UML 活动图：参考](../modeling/uml-activity-diagrams-reference.md)|
@@ -209,7 +209,7 @@ ms.locfileid: "74302780"
 ## <a name="Sequences"></a>显示用户与系统之间的交互
  可以使用序列图显示系统和外部参与者之间或系统的各部件与系统之间的消息交换。 这在用例中提供了一个步骤视图，非常清晰地显示了交互序列。 当用例内有多个交互方，且你的系统有 API 时，序列图非常有用。
 
- 例如:
+ 例如：
 
  ![系统和参与者的序列图。](../modeling/media/uml-reqmseq.png "UML_ReqmSeq")
 
@@ -217,7 +217,7 @@ ms.locfileid: "74302780"
 
  下列主题提供了更多信息：
 
-|了解|读取|
+|若要了解|读取|
 |--------------------|----------|
 |有关如何定义交互的更多信息|[UML 序列图：准则](../modeling/uml-sequence-diagrams-guidelines.md)|
 |序列图上的元素|[UML 序列图：参考](../modeling/uml-sequence-diagrams-reference.md)|
@@ -239,4 +239,4 @@ ms.locfileid: "74302780"
   通过检查不同关系图提供的视图之间的关系，可以快速理解用户使用的主要概念，并帮助他们理解他们需要从系统中获得什么。 还可以更好地理解利益干系人最不确定的需求。 可以计划在项目的早期阶段至少以简化的形式开发这些功能，从而允许用户体验这些功能。
 
 ## <a name="see-also"></a>请参阅
- [编辑 UML 模型和关系图](../modeling/edit-uml-models-and-diagrams.md)[从模型开发测试](../modeling/develop-tests-from-a-model.md)[使用开发过程模型中](../modeling/use-models-in-your-development-process.md)的模型使用模型[应用的体系结构](../modeling/model-your-app-s-architecture.md)[示例 Vs 扩展： Uml 域建模功能](https://go.microsoft.com/fwlink/?LinkId=213849)[示例 vs 扩展：按构造型显示的 Uml 元素](https://go.microsoft.com/fwlink/?LinkID=213841)示例 vs 扩展：[将 Uml 元素链接到关系图、文件和其他元素](https://go.microsoft.com/fwlink/?LinkID=213813)[示例 Vs 扩展：对齐 uml 关系图上](https://go.microsoft.com/fwlink/?LinkID=213809)[的形状视频：对业务域建模](https://channel9.msdn.com/blogs/clinted/uml-with-vs-2010-part-3-modeling-the-business-domain)
+ [编辑 UML 模型和关系图](../modeling/edit-uml-models-and-diagrams.md)[从模型开发测试](../modeling/develop-tests-from-a-model.md)[使用开发过程中](../modeling/use-models-in-your-development-process.md)[的模型模型应用的体系结构](../modeling/model-your-app-s-architecture.md)[视频：业务域建模](https://channel9.msdn.com/blogs/clinted/uml-with-vs-2010-part-3-modeling-the-business-domain)

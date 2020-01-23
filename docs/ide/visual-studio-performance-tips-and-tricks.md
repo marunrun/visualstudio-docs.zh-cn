@@ -2,17 +2,17 @@
 title: 有关提高性能的提示
 ms.date: 08/14/2018
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ccf785cec859290cac0ebcf5c9685861bd2887e4
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: e3cd7fe9781048f6612ff6bd81c0bf0cbc00a30b
+ms.sourcegitcommit: 9a66f1c31cc9eba0b5231af72da1d18761a9c56a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72647139"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75944210"
 ---
 # <a name="visual-studio-performance-tips-and-tricks"></a>Visual Studio 性能提示和技巧
 
@@ -63,7 +63,7 @@ Visual Studio 会自动重新打开上一个会话中处于打开状态的文档
 
     将选项设置为“仅指定模块”  ，而不是“所有模块”  ，然后指定要加载的负载。 调试时，还可以在“模块”  窗口中右键单击特定模块，将其显示包含在系统加载中。 （要在调试时打开窗口，请选择“调试”   > “窗口”   > “模块”  。）
 
-    有关详细信息，请参阅[了解符号文件](https://blogs.msdn.microsoft.com/visualstudioalm/2015/01/05/understanding-symbol-files-and-visual-studios-symbol-settings/)。
+    有关详细信息，请参阅[了解符号文件](/visualstudio/ide/visual-studio-performance-tips-and-tricks?view=vs-2019)。
 
 - **禁用诊断工具**
 
@@ -107,13 +107,13 @@ Visual Studio 会自动重新打开上一个会话中处于打开状态的文档
 
    ::: moniker range="vs-2017"
 
-    若要禁用扩展，请转到“工具”  >  “扩展和更新”，然后禁用特定扩展。
+    要禁用扩展，请转到“工具”  >“扩展和更新”  ，然后禁用特定扩展。
 
    ::: moniker-end
 
    ::: moniker range=">=vs-2019"
 
-    若要禁用扩展，请转到“扩展”  >  “管理扩展”，然后禁用特定扩展。
+    若要禁用扩展，请转到“扩展”  >“管理扩展”  ，然后禁用特定扩展。
 
    ::: moniker-end
 

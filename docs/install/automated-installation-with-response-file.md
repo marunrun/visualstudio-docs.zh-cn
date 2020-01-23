@@ -9,19 +9,19 @@ helpviewer_keywords:
 - automate
 - installation
 - command-line
-author: TerryGLee
-ms.author: tglee
+author: ornellaalt
+ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: d26211f566bb8f683f3b38deade4f13defe9cb01
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: ecdda55bbe4e79af01f8fb9a9a2b77f775548b10
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73189502"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76115234"
 ---
 # <a name="how-to-define-settings-in-a-response-file"></a>如何在响应文件中定义设置
 

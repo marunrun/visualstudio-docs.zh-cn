@@ -6,17 +6,17 @@ ms.assetid: fd39882e-06d1-4b39-80d2-4d07b6e4f8f5
 caps.latest.revision: 15
 ms.author: crdun
 manager: crdun
-ms.openlocfilehash: 134ed47d26fb7afb50bb50ac18418b436a563eb6
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 98925402b91bea62e10b47312e7834ed92a1a178
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74297589"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75918741"
 ---
 # <a name="verify-your-xamarin-environment"></a>验证 Xamarin 环境
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-安装程序完成安装后（请参阅） [Setup and install](../cross-platform/setup-and-install.md)，请花几分钟时间验证体验 Xamarin 开发所需的一切就绪。  
+安装程序完成安装后（详见[设置和安装](../cross-platform/setup-and-install.md)），请花几分钟时间验证 Xamarin 开发的体验准备事项是否均已就绪。  
   
  完成这些验证后，就可执行下面的一个或两个演练：  
   
@@ -56,10 +56,10 @@ ms.locfileid: "74297589"
   
              注意：如果未显示“工具”>“适用于 Android 的 Visual Studio 模拟器...”菜单选项，则可能没有安装模拟器。 转到“控制面板”>“程序和功能”，选择“Microsoft Visual Studio”，然后单击“更改”重新运行安装程序。 在安装程序中单击“修改”，勾选“跨平台移动开发”>“适用于 Android 的Microsoft Visual Studio 模拟器”框，然后单击“更新”。  
   
-        - 对于 Windows 7 和更低操作系统版本：在下拉列表中改为选择“适用于 Android 的 Xamarin Player”并按 F5 运行。 有关 Xamarin 播放器、其设备管理器和故障排除技巧的详细信息，请参阅 [Xamarin Android 播放器](https://docs.microsoft.com/xamarin/android/deploy-test/debugging/debug-on-emulator?tabs=windows) (xamarin.com)。  
+        - 对于 Windows 7 和更低操作系统版本：在下拉列表中改为选择“适用于 Android 的 Xamarin Player”并按 F5 运行。 有关 Xamarin 播放器、其设备管理器和故障排除技巧的详细信息，请参阅 [Xamarin Android 播放器](/xamarin/android/deploy-test/debugging/debug-on-emulator?tabs=windows) (xamarin.com)。  
   
 > [!NOTE]
-> 在 Visual Studio 中，你可能会看到工具栏中有一个 Android 模拟器管理器 (AVD) 按钮（如下所示），该按钮可打开专用于配置 Google Android 模拟器的设备管理器。  它对 Visual Studio Android 模拟器或 Xamarin 播放器均无影响，这二者均通过其自己的设备管理器来配置配置文件。  有关详细信息，请参阅 [介绍适用于 Android 的 Visual Studio 仿真程序](https://devblogs.microsoft.com/devops/introducing-visual-studios-emulator-for-android/) （Visual Studio ALM 博客）和 [Xamarin Android 播放器](https://docs.microsoft.com/xamarin/android/deploy-test/debugging/debug-on-emulator?tabs=windows) (xamarin.com)。  
+> 在 Visual Studio 中，你可能会看到工具栏中有一个 Android 模拟器管理器 (AVD) 按钮（如下所示），该按钮可打开专用于配置 Google Android 模拟器的设备管理器。  它对 Visual Studio Android 模拟器或 Xamarin 播放器均无影响，这二者均通过其自己的设备管理器来配置配置文件。  See [Introducing Visual Studio’s Emulator for Android](https://devblogs.microsoft.com/devops/introducing-visual-studios-emulator-for-android/) (Visual Studio ALM blog) and [Xamarin Android Player](/xamarin/android/deploy-test/debugging/debug-on-emulator?tabs=windows) (xamarin.com) for details.  
 > ![CrossPlat Xamarin 验证 7](../cross-platform/media/crossplat-xamarin-verify-7.png "CrossPlat Xamarin 验证 7")  
   
 ## <a name="windows-phone"></a>Windows Phone  
@@ -78,7 +78,7 @@ ms.locfileid: "74297589"
   
 ## <a name="ios"></a>iOS  
   
-1. 确保你的 Mac 在网络上可用且已与 Visual Studio 配对，如 [连接到 Mac](https://docs.microsoft.com/xamarin/ios/get-started/installation/windows/connecting-to-mac/) (xamarin.com) 上所述。  
+1. 确保你的 Mac 在网络上可用且已与 Visual Studio 配对，如 [连接到 Mac](/xamarin/ios/get-started/installation/windows/connecting-to-mac/) (xamarin.com) 上所述。  
   
 2. 验证情节提要设计器：在“解决方案资源管理器”中的 iOS 项目中，打开“Main.storyboard” 文件。 在这里，Visual Studio 托管着在 Mac 上远程运行的设计器。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "74297589"
   
          ![选择 iPhone 调试目标](../cross-platform/media/crossplat-xamarin-verify-6.png "CrossPlat Xamarin 验证6")  
   
-    4. 如果在连接到 Mac 时遇到问题，请参阅 [连接疑难解答](https://docs.microsoft.com/xamarin/ios/get-started/installation/windows/connecting-to-mac/troubleshooting) (xamarin.com)。  
+    4. 如果在连接到 Mac 时遇到问题，请参阅 [连接疑难解答](/xamarin/ios/get-started/installation/windows/connecting-to-mac/troubleshooting) (xamarin.com)。  
   
     5. 如果看到错误显示“安装的配置文件与安装的 iOS 签名密钥不匹配”，请执行以下操作：  
   
@@ -104,7 +104,7 @@ ms.locfileid: "74297589"
   
         - 在 iOS 捆绑签名选项卡的 iOS 项目属性中，验证活动调试配置的“自定义”授权字段是否为空。  注意：如果遇到以上错误消息，则应仅尝试删除此设置。  
   
-## <a name="missing"></a>是否缺少 Xamarin 项目模板？ 尝试此操作  
+## <a name="missing"></a> 是否缺少 Xamarin 项目模板？ 尝试此操作  
  如果从 Xamarin 网站直接安装 Xamarin，且并行安装了 Visual Studio 2013 和 Visual Studio 2015，则可能缺少模板。 但这很容易解决：启用 Xamarin 安装程序中的“Xamarin for Visual Studio 2015” 功能即可。  
   
 1. 在控制面板中，打开“程序和功能”，选择“Xamarin” 项，然后单击“更改”。  

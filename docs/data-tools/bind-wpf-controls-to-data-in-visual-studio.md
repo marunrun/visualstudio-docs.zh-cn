@@ -11,17 +11,17 @@ helpviewer_keywords:
 - WPF Designer, data binding
 - data binding, WPF
 ms.assetid: e05a1e0c-5082-479d-bbc9-d395b0bc6580
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: ee858c7c17798f327d323f632d4cb9e8a77b6712
-ms.sourcegitcommit: bde55773485c9bca50a760ac9e4c919e0a208a51
+ms.openlocfilehash: 5c9136b5047f835ecbf56df71bb226b5f56a6e19
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72924526"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586947"
 ---
 # <a name="bind-wpf-controls-to-data-in-visual-studio"></a>在 Visual Studio 中将 WPF 控件绑定到数据
 
@@ -54,8 +54,8 @@ ms.locfileid: "72924526"
 | - | - | - |
 | 数据集 | 是 | 是 |
 | [!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)] | 是 | 是 |
-| 服务 | 是 | No |
-| 对象 | 是 | No |
+| 服务 | 是 | 否 |
+| 对象 | 是 | 否 |
 
 ### <a name="datasets"></a>数据集
 
@@ -106,6 +106,6 @@ Visual Studio 将生成执行以下操作的 [!INCLUDE[TLA#tla_titlexaml](../dat
 
 - 为控件创建数据绑定。 如果将项拖动到设计器中的一个现有控件上，则 XAML 会将该控件绑定到该项。 如果将项拖动到容器中，则 XAML 会创建为拖动项选择的控件，并将该控件绑定到该项。 将在新的 <xref:System.Windows.Controls.Grid> 内创建该控件。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在 Visual Studio 中将控件绑定到数据](../data-tools/bind-controls-to-data-in-visual-studio.md)

@@ -3,20 +3,20 @@ title: 常见快速操作
 description: C# 和 Visual Basic 最常用的快速操作包括修复拼错的关键字或符号、解决合并冲突、删除必要的导入、生成类型、引入局部变量等。
 ms.date: 03/28/2018
 ms.topic: reference
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: bad97ac5574afd65103263b2ce51a4dfba02741c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: db7a3a550f6bfc1250679eeefa0ba3ec6291eef0
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72652250"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75585517"
 ---
 # <a name="common-quick-actions"></a>常见快速操作
 
@@ -30,7 +30,7 @@ ms.locfileid: "72652250"
 
 ### <a name="correct-misspelled-symbol-or-keyword"></a>更正拼写错误的符号或关键字
 
-如果在 Visual Studio 中意外拼错类型或关键字，此“快速操作”会自动更正拼写错误。 灯泡菜单“将‘\<拼写错误的单词>’更改为‘\<正确单词>’”中会显示这些项  。 例如:
+如果在 Visual Studio 中意外拼错类型或关键字，此“快速操作”会自动更正拼写错误。 灯泡菜单“将‘\<拼写错误的单词>’更改为‘\<正确单词>’”中会显示这些项  。 例如：
 
 ```csharp
 // Before

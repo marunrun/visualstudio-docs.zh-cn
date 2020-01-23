@@ -15,17 +15,17 @@ helpviewer_keywords:
 - datasets [Visual Basic], constraints
 - TableAdapters
 ms.assetid: afe6cb8a-dc6a-428b-b07b-903ac02c890b
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: ab2bd92b5636c89027c9c5954567be8048c1b152
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 64d46d4d662b7226dd2be15e6281a17e5b87e577
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648228"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586284"
 ---
 # <a name="save-data-back-to-the-database"></a>将数据保存回数据库
 
@@ -96,14 +96,14 @@ ms.locfileid: "72648228"
 
 若要对现有数据行进行更改，请在单独的列中添加或更新数据。 如果数据集包含约束（例如，外键或不可为 null 的约束），则在您更新记录时，可能会暂时处于错误状态。 也就是说，在您完成更新一列后，但在到达下一个列之前，它可能处于错误状态。
 
-若要防止过早的约束冲突，可以暂时挂起更新约束。 这有两个用途：
+若要防止过早的约束冲突，可以暂时挂起更新约束。 这有两种用途：
 
 - 它可防止在完成更新一列但尚未开始更新其他列后引发错误。
 
 - 它禁止引发某些更新事件（通常用于验证的事件）。
 
 > [!NOTE]
-> 在 Windows 窗体中，datagrid 中内置的数据绑定体系结构会挂起约束检查，直到焦点移出行为止，并且无需显式调用 <xref:System.Data.DataRow.BeginEdit%2A>、<xref:System.Data.DataRow.EndEdit%2A> 或 <xref:System.Data.DataRow.CancelEdit%2A> 方法。
+> 在 Windows 窗体中，datagrid 中内置的数据绑定体系结构会挂起约束检查，直到焦点移出行为止，并且无需显式调用 <xref:System.Data.DataRow.BeginEdit%2A>、<xref:System.Data.DataRow.EndEdit%2A>或 <xref:System.Data.DataRow.CancelEdit%2A> 方法。
 
 在对数据集调用 <xref:System.Data.DataSet.Merge%2A> 方法时，将自动禁用约束。 合并完成后，如果不能启用数据集上的任何约束，则会引发 <xref:System.Data.ConstraintException>。 在这种情况下，<xref:System.Data.DataSet.EnforceConstraints%2A> 属性设置为 `false,` 并且必须解决所有约束冲突，然后才能将 <xref:System.Data.DataSet.EnforceConstraints%2A> 属性重置为 `true`。
 
@@ -121,17 +121,17 @@ ms.locfileid: "72648228"
 
 ### <a name="rowstate-property"></a>RowState 属性
 
-@No__t_1 对象的 <xref:System.Data.DataRow.RowState%2A> 属性是一个值，它提供有关特定数据行的状态的信息。
+<xref:System.Data.DataRow> 对象的 <xref:System.Data.DataRow.RowState%2A> 属性是一个值，它提供有关特定数据行的状态的信息。
 
 下表详细说明 <xref:System.Data.DataRowState> 枚举的可能值：
 
 |DataRowState 值|描述|
 | - |-----------------|
-|<xref:System.Data.DataRowState.Added>|该行已作为一项添加到 <xref:System.Data.DataRowCollection> 中。 （此状态中的行没有相应的原始版本，因为在调用最后一个 <xref:System.Data.DataRow.AcceptChanges%2A> 方法时它不存在）。|
+|<xref:System.Data.DataRowState.Added>|该行已作为一项添加到 <xref:System.Data.DataRowCollection>中。 （此状态中的行没有相应的原始版本，因为在调用最后一个 <xref:System.Data.DataRow.AcceptChanges%2A> 方法时它不存在）。|
 |<xref:System.Data.DataRowState.Deleted>|已使用 <xref:System.Data.DataRow> 对象的 <xref:System.Data.DataRow.Delete%2A> 删除了该行。|
-|<xref:System.Data.DataRowState.Detached>|该行已创建但不属于任何 <xref:System.Data.DataRowCollection>。 @No__t_0 对象在创建后立即处于此状态，在将其添加到集合之前，以及在将其从集合中删除之后。|
+|<xref:System.Data.DataRowState.Detached>|已创建该行，但它不是任何 <xref:System.Data.DataRowCollection> 的一部分。 <xref:System.Data.DataRow> 对象在创建后立即处于此状态，在将其添加到集合之前，以及在将其从集合中删除之后。|
 |<xref:System.Data.DataRowState.Modified>|行中的列值在某种程度上已更改。|
-|<xref:System.Data.DataRowState.Unchanged>|自上次调用 <xref:System.Data.DataRow.AcceptChanges%2A> 以来，该行尚未发生更改。|
+|<xref:System.Data.DataRowState.Unchanged>|自上一次调用 <xref:System.Data.DataRow.AcceptChanges%2A> 之后，该行未更改。|
 
 ### <a name="datarowversion-enumeration"></a>DataRowVersion 枚举
 
@@ -192,11 +192,11 @@ ms.locfileid: "72648228"
 
 - 将记录的 <xref:System.Data.DataRowVersion.Current> 版本写入其 <xref:System.Data.DataRowVersion.Original> 版本，并覆盖原始版本。
 
-- 删除 <xref:System.Data.DataRow.RowState%2A> 属性设置为 <xref:System.Data.DataRowState.Deleted> 的任何行。
+- 删除 <xref:System.Data.DataRow.RowState%2A> 属性设置为 <xref:System.Data.DataRowState.Deleted>的任何行。
 
 - 将记录的 <xref:System.Data.DataRow.RowState%2A> 属性设置为 <xref:System.Data.DataRowState.Unchanged>。
 
-@No__t_0 方法在三个级别提供。 您可以对 <xref:System.Data.DataRow> 对象调用此方法，以便只为该行提交更改。 您还可以对 <xref:System.Data.DataTable> 对象调用它以提交表中的所有行。 最后，您可以对 <xref:System.Data.DataSet> 对象调用此方法，以提交该数据集的所有表的所有记录中的所有挂起的更改。
+<xref:System.Data.DataSet.AcceptChanges%2A> 方法在三个级别提供。 您可以对 <xref:System.Data.DataRow> 对象调用此方法，以便只为该行提交更改。 您还可以对 <xref:System.Data.DataTable> 对象调用它以提交表中的所有行。 最后，您可以对 <xref:System.Data.DataSet> 对象调用此方法，以提交该数据集的所有表的所有记录中的所有挂起的更改。
 
 下表说明了根据调用方法的对象提交的更改：
 
@@ -224,7 +224,7 @@ ms.locfileid: "72648228"
 - 在数据后端，将数据发送到数据源（例如数据库），并允许数据源接受或拒绝数据。 如果您使用的数据库具有用于验证数据和提供错误信息的复杂设施，则这可能是一种可行的方法，因为无论数据来自何处，都可以验证数据。 但是，这种方法可能无法满足特定于应用程序的验证要求。 此外，使数据源验证数据可能会导致大量与数据源的往返，具体取决于应用程序如何帮助解决后端引发的验证错误。
 
    > [!IMPORTANT]
-   > 将数据命令与设置为 <xref:System.Data.CommandType.Text> 的 <xref:System.Data.SqlClient.SqlCommand.CommandType%2A> 属性一起使用时，请在将客户端传递到数据库之前，仔细检查从客户端发送的信息。 恶意用户会设法发送（注入）经过修改或附加的 SQL 语句，企图对数据库进行未经授权的访问或破坏数据库。 将用户输入传输到数据库之前，请始终验证信息是否有效。 最佳做法是尽可能使用参数化查询或存储过程。
+   > 将数据命令与设置为 <xref:System.Data.CommandType.Text>的 <xref:System.Data.SqlClient.SqlCommand.CommandType%2A> 属性一起使用时，请在将客户端传递到数据库之前，仔细检查从客户端发送的信息。 恶意用户会设法发送（注入）经过修改或附加的 SQL 语句，企图对数据库进行未经授权的访问或破坏数据库。 将用户输入传输到数据库之前，请始终验证信息是否有效。 最佳做法是尽可能使用参数化查询或存储过程。
 
 ## <a name="transmit-updates-to-the-data-source"></a>将更新传输到数据源
 
@@ -250,9 +250,9 @@ ms.locfileid: "72648228"
 
 但对于第二行，`Update` 方法会自动调用正确的数据命令并将其传输到数据库。 SQL 语句的特定语法取决于基础数据存储所支持的 SQL 的方言。 但以下是已传输的 SQL 语句的一般特征：
 
-- 传输的 SQL 语句是 UPDATE 语句。 适配器知道要使用 UPDATE 语句，因为 <xref:System.Data.DataRowState.Modified> <xref:System.Data.DataRow.RowState%2A> 属性的值。
+- 传输的 SQL 语句是 UPDATE 语句。 适配器知道要使用 UPDATE 语句，因为 <xref:System.Data.DataRowState.Modified><xref:System.Data.DataRow.RowState%2A> 属性的值。
 
-- 传输的 SQL 语句包含一个 WHERE 子句，该子句指示 UPDATE 语句的目标是 `CustomerID = 'c400'` 的行。 SELECT 语句的此部分将目标行与所有其他语句区分开来，因为该 `CustomerID` 是目标表的主键。 WHERE 子句的信息从记录的原始版本（`DataRowVersion.Original`）派生，以防标识行所需的值已更改。
+- 传输的 SQL 语句包含一个 WHERE 子句，该子句指示 UPDATE 语句的目标是 `CustomerID = 'c400'`的行。 SELECT 语句的此部分将目标行与所有其他语句区分开来，因为该 `CustomerID` 是目标表的主键。 WHERE 子句的信息从记录的原始版本（`DataRowVersion.Original`）派生，以防标识行所需的值已更改。
 
 - 传输的 SQL 语句包含 SET 子句，用于设置已修改列的新值。
 
@@ -272,7 +272,7 @@ ms.locfileid: "72648228"
 > [!NOTE]
 > 你还可以在代码中自行设置 `Parameters` 集合中的值，你通常会在数据适配器的 <xref:System.Data.DataTable.RowChanging> 事件的事件处理程序中执行此操作。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Studio 中的数据集工具](../data-tools/dataset-tools-in-visual-studio.md)
 - [创建和配置 Tableadapter](create-and-configure-tableadapters.md)

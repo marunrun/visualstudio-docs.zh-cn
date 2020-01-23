@@ -8,15 +8,15 @@ dev_langs:
 - CSharp
 - VB
 - CPP
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: dc3c11610d95756b265d5ba01a6f8365f115548a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 6dd6dde83720c6e6f37bd6827bb5d97526202aa7
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72659807"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75585595"
 ---
 # <a name="use-code-coverage-to-determine-how-much-code-is-being-tested"></a>使用代码覆盖率确定所测试的代码量
 
@@ -54,7 +54,7 @@ ms.locfileid: "72659807"
 
 ::: moniker-end
 
-2. 测试运行后，若要查看已运行的行，请选择“代码覆盖率结果”窗口中的![显示代码覆盖率着色图标](../test/media/codecoverage-showcoloringicon.png)“显示代码覆盖率着色”   。 默认情况下，测试覆盖的代码以浅蓝色突出显示。
+2. 测试运行后，若要查看已运行的行，请选择“代码覆盖率结果”  窗口中的![显示代码覆盖率着色图标](../test/media/codecoverage-showcoloringicon.png)“显示代码覆盖率着色”  。 默认情况下，测试覆盖的代码以浅蓝色突出显示。
 
    > [!TIP]
    > 要更改颜色或使用加粗，请选择“工具” > “选项” > “环境” > “字体和颜色” > “显示其设置:      文本编辑器”。 在“显示项”下，调整“覆盖率”项的设置，例如“覆盖率未涉及的区域”   。
@@ -105,7 +105,7 @@ ms.locfileid: "72659807"
 
 例如，假设你在运行某个测试（输入为“2”）时发现某个特定函数已被覆盖了 50%。 当你第二次运行该测试（输入为“-2”）时，你在覆盖着色视图中发现该函数的另外 50% 也被覆盖。 现在，你合并来自这两个测试运行的结果，报告和覆盖率着色视图显示该函数已经 100% 被覆盖。
 
-为此，请使用![“代码覆盖率”窗口中“合并”按钮的图标](../test/media/codecoverage-mergeicon.png) **合并代码覆盖率结果**。 你可以选择最近的运行或导入的结果的任意组合。 如果要组合导出的结果，则必须先将其导入。
+为此，请使用![“代码覆盖率”窗口中“合并”按钮的图标](../test/media/codecoverage-mergeicon.png)合并代码覆盖率结果  。 你可以选择最近的运行或导入的结果的任意组合。 如果要组合导出的结果，则必须先将其导入。
 
 使用“导出代码覆盖率结果”  可保存合并操作的结果。
 
@@ -124,7 +124,7 @@ ms.locfileid: "72659807"
 > [!TIP]
 > 排除某个类并不会排除它的派生类。
 
-例如:
+例如：
 
 ```csharp
 using System.Diagnostics.CodeAnalysis;
@@ -243,9 +243,9 @@ ExcludeSourceFromCodeCoverage(Exclusion4, L"*\\unittest1.cpp");
 
 使用以下宏：
 
-`ExcludeFromCodeCoverage(` *ExclusionName* `, L"` *FunctionName* `");`
+`ExcludeFromCodeCoverage(` ExclusionName  `, L"` FunctionName  `");`
 
-`ExcludeSourceFromCodeCoverage(` *ExclusionName* `, L"` *SourceFilePath* `");`
+`ExcludeSourceFromCodeCoverage(` ExclusionName  `, L"` SourceFilePath  `");`
 
 - *ExclusionName* 是唯一名称。
 
@@ -282,13 +282,13 @@ ExcludeSourceFromCodeCoverage(Exclusion4, L"*\\unittest1.cpp");
 
    ::: moniker range="vs-2017"
 
-   在 Windows“启动”菜单中，选择“Visual Studio 2017”>“VS 2017 的开发人员命令提示”    。
+   在 Windows“启动”  菜单中，选择“Visual Studio 2017”  >“VS 2017 的开发人员命令提示”  。
 
    ::: moniker-end
 
    ::: moniker range=">=vs-2019"
 
-   在 Windows“启动”菜单中，选择“Visual Studio 2019”>“VS 2019 的开发人员命令提示”    。
+   在 Windows“启动”  菜单中，选择“Visual Studio 2019”  >“VS 2019 的开发人员命令提示”  。
 
    ::: moniker-end
 

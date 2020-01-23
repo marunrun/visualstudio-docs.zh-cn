@@ -19,12 +19,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e6fdf3fa790a29f94a5bf3b40bc0d2ada703bc5b
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 754d2ceef776ab0dea2d8d51151d4170839173b9
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68925766"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76114698"
 ---
 # <a name="how-to-create-and-edit-configurations"></a>如何：创建和编辑配置
 

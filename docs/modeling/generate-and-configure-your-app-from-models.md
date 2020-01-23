@@ -2,17 +2,17 @@
 title: 从模型中生成并配置你的应用程序
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 13d943b8d86bd9ca912816e0f19993959ca303c1
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 8ea3fe0027827396a49eec4c6b245a9ea59652b7
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748387"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76114895"
 ---
 # <a name="generate-and-configure-your-app-from-models"></a>从模型中生成并配置你的应用程序
 你可从模型生成或配置你的应用程序的不同部件。
@@ -20,7 +20,7 @@ ms.locfileid: "72748387"
  模型比代码更能直接表示要求。 与更新代码相比，通过直接从模型派生应用程序的行为，你可以更加快速可靠地对更改的需求做出响应。 尽管需要做一些初始工作来设置派生，但如果你预计要求会发生改变，或者你计划生成产品的几个变体，则这种投资是会有回报的。
 
 ## <a name="generating-the-code-of-your-application-from-a-model"></a>从模型生成应用程序代码
- 生成代码的最便捷方法是使用模板。 您可以在保存模型的同一 Visual Studio 解决方案中生成代码。 有关详细信息，请参见:
+ 生成代码的最便捷方法是使用模板。 您可以在保存模型的同一 Visual Studio 解决方案中生成代码。 有关详细信息，请参阅：
 
 - [使用 T4 文本模板生成设计时代码](../modeling/design-time-code-generation-by-using-t4-text-templates.md)
 
@@ -35,7 +35,7 @@ ms.locfileid: "72748387"
   但是，如果是从一个现有应用程序开始，你可能会发现需要进行很多重构才能隔开受模型控制的不同行为，以便这些行为可以独立改变。 建议你在估计项目成本时，将应用程序的这一方面评估在内。
 
 ## <a name="configuring-your-application-from-a-model"></a>从模型进配置应用程序
- 如果你希望在运行时改变应用程序的行为，则无法使用在编译应用程序前生成源代码的代码生成。 相反，你可以将应用程序设计为读取模型，并相应地改变其行为。 有关详细信息，请参见:
+ 如果你希望在运行时改变应用程序的行为，则无法使用在编译应用程序前生成源代码的代码生成。 相反，你可以将应用程序设计为读取模型，并相应地改变其行为。 有关详细信息，请参阅：
 
 - [如何：在程序代码中从文件打开模型](../modeling/how-to-open-a-model-from-file-in-program-code.md)
 
@@ -70,7 +70,7 @@ ms.locfileid: "72748387"
 
      例如，UML 类图是框和箭头的集合；有了这种表示法，你在理论上能定义任何内容。 但是，除非你实际需要描述一组类型，否则我们不建议你使用类图。 例如，您可以修改类图来描述不同类型的网页。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [从域特定语言生成代码](../modeling/generating-code-from-a-domain-specific-language.md)
 - [如何：在程序代码中从文件打开模型](../modeling/how-to-open-a-model-from-file-in-program-code.md)

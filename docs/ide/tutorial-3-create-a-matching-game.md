@@ -9,12 +9,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5161f81aaf3edf654a5979f6226449bc52604167
-ms.sourcegitcommit: 6244689e742e551e7b6933959bd42df56928ece3
+ms.openlocfilehash: 3039207cd36e1fcfedef95830fec9ebb91686491
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72516579"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590262"
 ---
 # <a name="tutorial-3-create-a-matching-game"></a>教程 3：创建匹配游戏
 
@@ -41,7 +41,7 @@ ms.locfileid: "72516579"
 
 ## <a name="tutorial-links"></a>教程链接
 
-|Title|说明|
+|Title|描述|
 |-----------|-----------------|
 |[步骤 1：创建项目并向窗体添加表](../ide/step-1-create-a-project-and-add-a-table-to-your-form.md)|首先创建项目并添加 `TableLayoutPanel` 控件，以保持控件正确对齐。|
 |[步骤 2：添加 Random 对象和图标列表](../ide/step-2-add-a-random-object-and-a-list-of-icons.md)|添加 `Random` 对象和 `List` 对象，以创建图标列表。|
@@ -57,7 +57,7 @@ ms.locfileid: "72516579"
 
 ## <a name="next-steps"></a>后续步骤
 
-要开始学习本教程，请从[步骤 1：创建项目并向窗体添加表](../ide/step-1-create-a-project-and-add-a-table-to-your-form.md)  。
+要开始学习本教程，请从[步骤 1：  创建项目并向窗体添加表](../ide/step-1-create-a-project-and-add-a-table-to-your-form.md)。
 
 ## <a name="see-also"></a>请参阅
 

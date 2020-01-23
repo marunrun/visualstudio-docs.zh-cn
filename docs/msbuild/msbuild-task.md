@@ -13,17 +13,17 @@ helpviewer_keywords:
 - MSBuild task [MSBuild]
 - MSBuild, MSBuild task
 ms.assetid: 76577f6c-7669-44ad-a840-363e37a04d34
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3d0b2b0c4cee2a372bccb8ad461ed195fc5519d7
-ms.sourcegitcommit: 0554b59a2a251661e56824fb9cd6e9b1f326cef1
+ms.openlocfilehash: c881b1a59e8e434dee33d99d81d0c8ac20909f5f
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71831854"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75593832"
 ---
 # <a name="msbuild-task"></a>MSBuild 任务
 
@@ -33,11 +33,11 @@ ms.locfileid: "71831854"
 
  下表描述了 `MSBuild` 任务的参数。
 
-| 参数 | 说明 |
+| 参数 | 描述 |
 |-----------------------------------| - |
 | `BuildInParallel` | 可选 `Boolean` 参数。<br /><br /> 如果为 `true`，会并行生成 `Projects` 参数中指定的项目（如有可能）。 默认值为 `false`。 |
 | `Projects` | 必选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 指定要生成的项目文件。 |
-| `Properties` | 可选 `String` 参数。<br /><br /> 以分号分隔的作为全局属性应用到子项目的属性名称/值对列表。 指定此参数在功能上等效于，在使用 [MSBuild.exe  ](../msbuild/msbuild-command-line-reference.md) 进行生成时，设置包含 -property  开关的属性。 例如:<br /><br /> `Properties="Configuration=Debug;Optimize=$(Optimize)"`<br /><br /> 通过 `Properties` 参数将属性传递到项目时，即使已加载了项目文件，[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 也可能会创建项目的新实例。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 为给定项目路径和一组唯一的全局属性创建单个项目实例。 例如，通过此行为可以创建多个调用 myproject.proj  的 MSBuild 任务，如果 Configuration=Release，将获取 myproject.proj  的单个实例（如果未在任务中指定任何唯一属性）。 如果指定尚未被 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 看到的属性，则 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 将创建该项目的新实例，可将该实例并行生成到项目的其他实例。 例如，可同时生成发布配置和调试配置。|
+| `Properties` | 可选 `String` 参数。<br /><br /> 以分号分隔的作为全局属性应用到子项目的属性名称/值对列表。 指定此参数在功能上等效于，在使用 [MSBuild.exe  ](../msbuild/msbuild-command-line-reference.md) 进行生成时，设置包含 -property  开关的属性。 例如：<br /><br /> `Properties="Configuration=Debug;Optimize=$(Optimize)"`<br /><br /> 通过 `Properties` 参数将属性传递到项目时，即使已加载了项目文件，[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 也可能会创建项目的新实例。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 为给定项目路径和一组唯一的全局属性创建单个项目实例。 例如，通过此行为可以创建多个调用 myproject.proj  的 MSBuild 任务，如果 Configuration=Release，将获取 myproject.proj  的单个实例（如果未在任务中指定任何唯一属性）。 如果指定尚未被 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 看到的属性，则 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 将创建该项目的新实例，可将该实例并行生成到项目的其他实例。 例如，可同时生成发布配置和调试配置。|
 | `RebaseOutputs` | 可选 `Boolean` 参数。<br /><br /> 如果为 `true`，则生成项目中目标输出项的相对路径将其路径调整为相对于调用项目。 默认值为 `false`。 |
 | `RemoveProperties` | 可选 `String` 参数。<br /><br /> 指定要删除的全局属性的集。 |
 | `RunEachTargetSeparately` | 可选 `Boolean` 参数。<br /><br /> 如果为 `true`，则 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 任务一次一个地调用被传递到 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 的列表中调用一个目标，不会同时调用目标。 将此参数设置为 `true` 可确保即使先前调用目标失败，也可调用后续目标。 否则，生成错误将停止调用所有后续目标。 默认值为 `false`。 |

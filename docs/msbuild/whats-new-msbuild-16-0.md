@@ -2,26 +2,26 @@
 title: MSBuild 16.0 中的新增功能 | Microsoft Docs
 ms.date: 03/11/2019
 ms.topic: conceptual
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: 9fb23c8a48493056c9a37f510cefea3cc3374095
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 1a83ce4cf47f8a1607e562dfdb69b5b7374de1a6
+ms.sourcegitcommit: ca9375d1c48355f2e9f7bc1b2d3f0e94eb15db00
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62777901"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76022346"
 ---
 # <a name="whats-new-in-msbuild-160"></a>MSBuild 16.0 中的新增功能
 
-本文介绍 MSBuild 16.0 中已更新的功能和属性。 有关详细的发行说明（仅限草稿），请参阅 [MSBuild 16.0](https://gist.github.com/rainersigwald/009627466f03964d0028e16fda633d9c)。
+本文介绍 MSBuild 16.0 中已更新的功能和属性。 有关详细的发行说明，请参阅 [MSBuild 16.0](https://github.com/microsoft/msbuild/releases/tag/v16.0.461.62831)。
 
 ## <a name="changed-path"></a>更改的路径
 
- MSBuild 安装在每版 Visual Studio 下的 \Current 文件夹中。 例如，C:\Program Files (x86)\Microsoft Visual Studio\Current\Enterprise\MSBuild。 也可使用下面的 PowerShell 模块查找 MSBuild：[vssetup.powershell](https://github.com/Microsoft/vssetup.powershell)。
+ MSBuild 安装在每版 Visual Studio 下的 \Current 文件夹中  。 例如，C:\Program Files (x86)\Microsoft Visual Studio\Current\Enterprise\MSBuild  。 也可使用下面的 PowerShell 模块查找 MSBuild：[vssetup.powershell](https://github.com/Microsoft/vssetup.powershell)。
 
 ## <a name="changed-properties"></a>更改的属性
 

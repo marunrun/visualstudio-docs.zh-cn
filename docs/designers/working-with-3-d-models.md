@@ -3,17 +3,17 @@ title: 处理三维模型
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: fa035091-1354-4d1c-be44-4fb83860466f
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b364682d8173d34d2b9977836929ca93ddf45a78
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 60789dece03487f3f3a6dfd71407ec03bab6700e
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72633985"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589872"
 ---
 # <a name="work-with-3d-models"></a>处理三维模型
 
@@ -29,7 +29,7 @@ ms.locfileid: "72633985"
 
 ## <a name="related-topics"></a>相关主题
 
-|Title|说明|
+|Title|描述|
 |-----------|-----------------|
 |[模型编辑器](../designers/model-editor.md)|描述如何使用模型编辑器处理三维模型。|
 |[模型编辑器示例](../designers/how-to-create-a-basic-3-d-model.md)|提供演示如何使用模型编辑器执行常见三维模型任务的主题的链接。|

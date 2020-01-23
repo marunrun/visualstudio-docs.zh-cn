@@ -5,15 +5,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - code analysis, disable
 - disable code analysis
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: cb1a41642e405046459f6196a98cd6290a217223
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: d25254cabecd88c6e876646c3c276503aadf7eb7
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72649654"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75587662"
 ---
 # <a name="how-to-disable-source-code-analysis-for-managed-code"></a>如何禁用托管代码的源代码分析
 
@@ -51,7 +51,7 @@ ms.locfileid: "72649654"
 
 若要关闭作为 NuGet 包的一部分安装的分析器的源代码分析，请将以下一个或多个 MSBuild 属性添加到[项目文件](../ide/solutions-and-projects-in-visual-studio.md#project-file)。
 
-| MSBuild 属性 | 描述 | Default |
+| MSBuild 属性 | 描述 | 默认值 |
 | - | - | - |
 | `RunAnalyzersDuringBuild` | 控制基于 NuGet 的分析器是否在生成时运行。 | `true` |
 | `RunAnalyzersDuringLiveAnalysis` | 控制基于 NuGet 的分析器是否在设计时实时分析代码。 | `true` |
@@ -81,7 +81,7 @@ ms.locfileid: "72649654"
 
 ::: moniker-end
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [禁止冲突](use-roslyn-analyzers.md#suppress-violations)
 - [如何：启用和禁用旧代码分析](how-to-enable-and-disable-automatic-code-analysis-for-managed-code.md)

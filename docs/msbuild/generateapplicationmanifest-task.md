@@ -14,17 +14,17 @@ helpviewer_keywords:
 - HostInBrowser property (MSBuild)
 - GenerateApplicationManifest task [MSBuild]
 ms.assetid: a494102b-0cb2-4755-8e2a-d2c0f39fac1d
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 86593ca3ac437b9a36fb671694898a7d80434eba
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 446f4728f92d5a486afea1a7c03c8d5006690bfc
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63003634"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589300"
 ---
 # <a name="generateapplicationmanifest-task"></a>GenerateApplicationManifest 任务
 生成 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序清单或本机清单。 本机清单通过为组件定义唯一标识，并标识组成该组件的所有程序集和文件来描述组件。 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序清单通过指示应用程序的入口点并指定应用程序安全级别来扩展本机清单。
@@ -32,7 +32,7 @@ ms.locfileid: "63003634"
 ## <a name="parameters"></a>参数
 下表描述了 `GenerateApplicationManifest` 任务的参数。
 
-| 参数 | 说明 |
+| 参数 | 描述 |
 |---------------------------------| - |
 | `AssemblyName` | 可选 `String` 参数。<br /><br /> 指定生成的清单的程序集标识的 `Name` 字段。 如果未指定此参数，则从 `EntryPoint` 或 `InputManifest` 参数中推断名称。 如果无法创建任何名称，该任务将引发错误。 |
 | `AssemblyVersion` | 可选 `String` 参数。<br /><br /> 指定生成的清单的程序集标识的 `Version` 字段。 如果未指定此参数，请使用默认值“1.0.0.0”。 |
@@ -45,7 +45,7 @@ ms.locfileid: "63003634"
 | `FileAssociations` | 可选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 指定与 ClickOnce 部署清单关联的一个或多个文件类型的列表。<br /><br /> 文件关联只在面向 .NET Framework 3.5 或更高版本时才有效。 |
 | `Files` | 可选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 要包含在清单中的文件。 指定每个文件的完整路径。 |
 | `HostInBrowser` | 可选 <xref:System.Boolean> 参数。<br /><br /> 如果为 `true`，则应用程序托管在浏览器中（与 WPF Web 浏览器应用程序一样）。 |
-| `IconFile` | 可选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 指示应用程序图标文件。 应用程序图标在生成的应用程序清单中表示，可用于“开始”菜单和“添加/删除程序”对话框。 如果未指定此输入，将使用默认图标。 如果任务正在生成本机清单，将忽略此参数。 |
+| `IconFile` | 可选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 指示应用程序图标文件。 应用程序图标在生成的应用程序清单中表示，可用于“开始”菜单和“添加/删除程序”对话框   。 如果未指定此输入，将使用默认图标。 如果任务正在生成本机清单，将忽略此参数。 |
 | `InputManifest` | 可选 <xref:Microsoft.Build.Framework.ITaskItem> 参数。<br /><br /> 指示输入 XML 文档，使其充当清单生成器的基础。 这使得结构数据（如应用程序安全或自定义清单定义）可反映在输出清单中。 XML 文档中的根元素必须是 asmv1 命名空间中的程序集节点。 |
 | `IsolatedComReferences` | 可选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 指定要在生成清单中隔离的 COM 组件。 此参数支持隔离 COM 组件以实现“免注册 COM”部署。 方法是通过自动生成具有标准 COM 注册定义的清单。 但为了保证组件正常工作，必须在生成计算机上注册这些 COM 组件。 |
 | `ManifestType` | 可选 `String` 参数。<br /><br /> 指定要生成的清单类型。 此参数可以具有下列值：<br /><br /> -   `Native`<br />-   `ClickOnce`<br /><br /> 如果未指定此参数，则该任务默认为 `ClickOnce`。 |
@@ -53,8 +53,8 @@ ms.locfileid: "63003634"
 | `OSVersion` | 可选 `String` 参数。<br /><br /> 指定应用程序所需的最低操作系统 (OS) 版本。 例如，值“5.1.2600.0”表示操作系统为 Windows XP。 如果未指定此参数，则使用值“4.10.0.0”，表示 Windows 98 Second Edition，即 .NET Framework 支持的最低 OS 版本。 如果任务正在生成本机清单，将忽略此输入。 |
 | `OutputManifest` | 可选 <xref:Microsoft.Build.Framework.ITaskItem> 输出参数。<br /><br /> 指定所生成的输出清单文件的名称。 如果未指定此参数，则将从生成的清单的标识中推断输出文件的名称。 |
 | `Platform` | 可选 `String` 参数。<br /><br /> 指定应用程序的目标平台。 此参数可以具有下列值：<br /><br /> -   `AnyCPU`<br />-   `x86`<br />-   `x64`<br />-   `Itanium`<br /><br /> 如果未指定此参数，则该任务默认为 `AnyCPU`。 |
-| `Product` | 可选 `String` 参数。<br /><br /> 指定应用程序的名称。 如果未指定此参数，则将从生成的清单的标识中推断该名称。 该名称将用作“开始”菜单上的快捷名称，且将作为“添加或删除程序”对话框中显示的名称的一部分。 |
-| `Publisher` | 可选 `String` 参数。<br /><br /> 指定应用程序的发布者。 如果未指定此参数，则将从注册的用户或生成的清单的标识中推断该名称。 该名称将用作“开始”菜单上的文件夹名称，且将作为“添加或删除程序”对话框中显示的名称的一部分。 |
+| `Product` | 可选 `String` 参数。<br /><br /> 指定应用程序的名称。 如果未指定此参数，则将从生成的清单的标识中推断该名称。 该名称将用作“开始”菜单上的快捷名称，且将作为“添加或删除程序”对话框中显示的名称的一部分   。 |
+| `Publisher` | 可选 `String` 参数。<br /><br /> 指定应用程序的发布者。 如果未指定此参数，则将从注册的用户或生成的清单的标识中推断该名称。 该名称将用作“开始”菜单上的文件夹名称，且将作为“添加或删除程序”对话框中显示的名称的一部分   。 |
 | `RequiresMinimumFramework35SP1` | 可选 `Boolean` 参数。<br /><br /> 如果为 true，则该应用程序要求 .NET Framework 3.5 SP1 或更新的版本。 |
 | `TargetCulture` | 可选 `String` 参数。<br /><br /> 标识应用程序的区域性，并指定生成的清单的程序集标识的 `Language` 字段。 如果未指定此参数，则会假定该应用程序的区域性是固定的。 |
 | `TargetFrameworkMoniker` | 可选 `String` 参数。<br /><br /> 指定目标框架名字对象。 |
@@ -73,7 +73,7 @@ ms.locfileid: "63003634"
 
 ## <a name="item-metadata"></a>项元数据
 
-|元数据名称|说明|
+|元数据名称|描述|
 |-------------------|-----------------|
 |`DependencyType`|指示依赖项是随应用程序一起发布并安装还是一个必备组件。 此元数据对所有依赖项均有效，但不可用于文件。 可用于此元数据的值有：<br /><br /> -   `Install`<br />-   `Prerequisite`<br /><br /> Install 是默认值。|
 |`AssemblyType`|指示依赖项是托管程序集还是本机程序集。 此元数据对所有依赖项均有效，但不可用于文件。 可用于此元数据的值有：<br /><br /> -   `Managed`<br />-   `Native`<br />-   `Unspecified`<br /><br /> `Unspecified` 是默认值，指示清单生成器将自动确定程序集类型。|
@@ -313,9 +313,9 @@ ms.locfileid: "63003634"
 ```
 
 ## <a name="example"></a>示例
-此示例使用 `GenerateApplicationManifest` 任务为应用程序 Test.exe 生成本机清单，引用本机组件 Alpha.dll 和独立的 COM 组件 Bravo.dll。
+此示例使用 `GenerateApplicationManifest` 任务为应用程序 Test.exe 生成本机清单，引用本机组件 Alpha.dll 和独立的 COM 组件 Bravo.dll    。
 
-此示例生成 Test.exe.manifest，使该应用程序可借助“免注册 COM”进行 XCOPY 部署。
+此示例生成 Test.exe.manifest，使该应用程序可借助“免注册 COM”进行 XCOPY 部署  。
 
 > [!NOTE]
 > 在下面的示例中，为将重点放在清单生成方面上，预先生成了所有应用程序二进制文件。 此示例会生成一个完全可用的 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 部署。

@@ -2,8 +2,8 @@
 title: Visual Studio Test Professional 工作负载和组件 ID
 titleSuffix: ''
 description: 使用 Visual Studio 工作负载和组件 ID 为技术全面的测试人员提供集成的测试工具
-author: TerryGLee
-ms.author: tglee
+author: ornellaalt
+ms.author: ornella
 manager: jillfra
 ms.date: 09/23/2019
 ms.topic: reference
@@ -15,12 +15,12 @@ ms.assetid: 70c03438-8434-4921-ada0-c172519af431
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 monikerRange: vs-2017
-ms.openlocfilehash: d61105a16919e8384aad961d62a81ff3a8688b25
-ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
+ms.openlocfilehash: c662732a4ba1cd05b1c9affa8fb86305f65b10a7
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71213649"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76114314"
 ---
 # <a name="visual-studio-test-professional-component-directory"></a>Visual Studio Test Professional 组件目录
 
@@ -45,7 +45,7 @@ ms.locfileid: "71213649"
 
 ### <a name="components-included-by-this-workload"></a>此工作负载所包含的组件
 
-组件 ID | name | Version | 依赖项类型
+组件 ID | “属性” | Version | 依赖项类型
 --- | --- | --- | ---
 Microsoft.VisualStudio.Component.TestTools.FeedbackClient | Microsoft Feedback Client | 15.6.27406.0 | 必需
 Microsoft.VisualStudio.Component.TestTools.MicrosoftTestManager | Microsoft 测试管理器 | 15.6.27406.0 | 必需
@@ -54,7 +54,7 @@ Microsoft.VisualStudio.Component.TestTools.MicrosoftTestManager | Microsoft 测�
 
 这些组件不随附于任何工作负载，但可选择作为单个组件。
 
-组件 ID | name | Version
+组件 ID | “属性” | Version
 --- | --- | ---
 n/a | 不可用 | n/a
 

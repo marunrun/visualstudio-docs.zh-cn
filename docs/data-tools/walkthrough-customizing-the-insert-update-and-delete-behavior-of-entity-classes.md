@@ -6,23 +6,23 @@ dev_langs:
 - VB
 - CSharp
 ms.assetid: 03ff1146-706e-4780-91cb-56a83df63eea
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 14b44a16f6652fe8d94669f99107ebe59b790a0e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 105519153e92e3944971f60ae2ff6151fa6a3fdf
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72639174"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75585946"
 ---
 # <a name="walkthrough-customize-the-insert-update-and-delete-behavior-of-entity-classes"></a>演练：自定义实体类的插入、更新和删除行为
 
 [Visual Studio 中的 LINQ to SQL 工具](../data-tools/linq-to-sql-tools-in-visual-studio2.md)提供了一个可视化设计图面，用于创建和编辑基于数据库中的对象 LINQ to SQL 类（实体类）。 使用[LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index)，可以使用 LINQ 技术访问 SQL 数据库。 有关详细信息，请参阅 [LINQ（语言集成查询）](/dotnet/csharp/linq/)。
 
-默认情况下，LINQ to SQL 运行时提供用于执行更新的逻辑。 运行时根据表的架构（列定义和主键信息）创建默认 `Insert`、`Update` 和 `Delete` 语句。 当不希望使用默认行为时，可以配置更新行为并指定特定的存储过程，来执行处理数据库中数据所必需的插入、更新和删除。 在不生成默认行为时（例如，实体类映射到视图时），也可以这样做。 另外，在数据库要求通过存储过程访问表时，您可以重写默认的更新行为。 有关详细信息，请参阅[使用存储过程自定义操作](/dotnet/framework/data/adonet/sql/linq/customizing-operations-by-using-stored-procedures)。
+默认情况下，LINQ to SQL 运行时提供用于执行更新的逻辑。 运行时根据表的架构（列定义和主键信息）创建默认 `Insert`、`Update`和 `Delete` 语句。 当不希望使用默认行为时，可以配置更新行为并指定特定的存储过程，来执行处理数据库中数据所必需的插入、更新和删除。 在不生成默认行为时（例如，实体类映射到视图时），也可以这样做。 另外，在数据库要求通过存储过程访问表时，您可以重写默认的更新行为。 有关详细信息，请参阅[使用存储过程自定义操作](/dotnet/framework/data/adonet/sql/linq/customizing-operations-by-using-stored-procedures)。
 
 > [!NOTE]
 > 本演练要求可以使用 Northwind 数据库的“InsertCustomer”、“UpdateCustomer”和“DeleteCustomer”存储过程。
@@ -45,7 +45,7 @@ ms.locfileid: "72639174"
 
 - 配置 `Customer` 类以使用存储过程执行插入、更新和删除操作。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
 
 本演练使用 SQL Server Express LocalDB 和 Northwind 示例数据库。
 
@@ -71,7 +71,7 @@ ms.locfileid: "72639174"
 
 ### <a name="to-create-a-new-windows-forms-application-project-that-contains-linq-to-sql-classes"></a>创建包含 LINQ to SQL 类的新 Windows 窗体应用程序项目
 
-1. 在 Visual Studio 的 "**文件**" 菜单上，选择 "**新建** > **项目**"。
+1. 在 Visual Studio 的“文件”菜单中，依次选择“新建” > “项目”。
 
 2. 在左侧窗格中展开 "**视觉对象C#**  " 或 " **Visual Basic** "，然后选择 " **Windows 桌面**"。
 
@@ -85,7 +85,7 @@ ms.locfileid: "72639174"
 
 5. 单击“LINQ to SQL 类”模板，然后在“名称”框中键入 Northwind.dbml。
 
-6. 单击 **添加**。
+6. 单击“添加”。
 
      空的 LINQ to SQL 类文件（**Northwind**）将添加到项目中，并且打开**O/R 设计器**。
 
@@ -229,7 +229,7 @@ ms.locfileid: "72639174"
 
 18. 将“Original_CustomerID”方法参数映射到“CustomerID (Original)”类属性。
 
-19. 单击“确定”。
+19. 单击" **确定**"。
 
 > [!NOTE]
 > 虽然这对于此特定演练并不是问题，但值得注意的是，LINQ to SQL 会自动处理数据库生成的值，以便在插入和期间自动为标识（自动递增）、rowguidcol （数据库生成的 GUID）以及时间戳列处理程序. 在其他列类型中，数据库生成的值将意外导致 Null 值。 若要返回数据库生成的值，应手动将 <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> 设置为 `true` 并将 <xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A> 为以下值之一： [AutoSync](<xref:System.Data.Linq.Mapping.AutoSync.Always>)、 [AutoSync](<xref:System.Data.Linq.Mapping.AutoSync.OnInsert>)或[AutoSync。](<xref:System.Data.Linq.Mapping.AutoSync.OnUpdate>)
@@ -269,7 +269,7 @@ ms.locfileid: "72639174"
 
 - 添加 LINQ 查询以筛选数据。 有关信息，请参阅[LINQ 查询简介（C#）](/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq-queries)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Studio 中的 LINQ to SQL 工具](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
 - [DataContext 方法](../data-tools/datacontext-methods-o-r-designer.md)

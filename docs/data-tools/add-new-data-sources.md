@@ -8,17 +8,17 @@ helpviewer_keywords:
 - data [Visual Studio], data sources
 - data sources
 ms.assetid: ed28c625-bb89-4037-bfde-cfa435d182a2
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 99e9d9d466ae32d86b64b17738c96c245bda8f96
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 555d32eb295e944060d2efe0b843e9d157b7c675
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648888"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75587051"
 ---
 # <a name="add-new-data-sources"></a>添加新数据源
 
@@ -37,7 +37,7 @@ ms.locfileid: "72648888"
 > [!NOTE]
 > 如果未使用数据绑定功能、数据集、实体框架、LINQ to SQL、WCF 或 SharePoint，则 "数据源" 的概念不适用。 只需使用 SQLCommand 对象直接连接到数据库，并直接与数据库进行通信。
 
-您可以使用 Windows 窗体或 Windows Presentation Foundation 应用程序中的 "**数据源配置向导**" 来创建和编辑数据源。 对于实体框架，请先创建实体类，然后通过选择 "**项目**"  >  "**添加新数据源**" （本文稍后将详细介绍）来启动向导。
+您可以使用 Windows 窗体或 Windows Presentation Foundation 应用程序中的 "**数据源配置向导**" 来创建和编辑数据源。 对于实体框架，请先创建实体类，然后通过选择 "**项目**" > "**添加新数据源**" （本文稍后将详细介绍）来启动向导。
 
 ![数据源配置向导](../data-tools/media/data-source-configuration-wizard.png)
 
@@ -46,7 +46,7 @@ ms.locfileid: "72648888"
 创建数据源后，它将显示在 "**数据源**" 工具窗口中。
 
 > [!TIP]
-> 若要打开 "**数据源**" 窗口，请确保您的项目已打开，然后按**Shift** +**Alt** +**D**或选择 "**查看** > **其他 Windows**  > **数据源**"。
+> 若要打开 "**数据源**" 窗口，请确保您的项目已打开，然后按**Shift**+**Alt**+**D**或选择 "**查看** > **其他 Windows** > **数据源**"。
 
 您可以将数据源从 "**数据源**" 窗口拖到窗体设计图面或控件上。 这将导致生成用于显示来自数据存储的数据的样板代码。
 
@@ -60,13 +60,13 @@ ms.locfileid: "72648888"
 
 ### <a name="dataset"></a>数据集
 
-若要创建数据集作为数据源，请通过选择 "**项目**"  >  "**添加新数据源**"，运行 "**数据源配置向导**"。 选择**数据库**数据源类型，然后按照提示指定新的或现有的数据库连接或数据库文件。
+若要创建数据集作为数据源，请通过选择 "**项目**" > "**添加新数据源**"，运行 "**数据源配置向导**"。 选择**数据库**数据源类型，然后按照提示指定新的或现有的数据库连接或数据库文件。
 
 ### <a name="entity-classes"></a>实体类
 
 若要创建实体框架模型作为数据源：
 
-1. 运行**实体数据模型向导**创建实体类。 选择**项目** >  "**添加新项**"  > **ADO.NET 实体数据模型**"。
+1. 运行**实体数据模型向导**创建实体类。 选择**项目** > "**添加新项**" > **ADO.NET 实体数据模型**"。
 
    ![新建实体框架模型项目项](../data-tools/media/raddata-new-entity-framework-model-project-item.png)
 
@@ -90,7 +90,7 @@ ms.locfileid: "72648888"
 
 - [WCF 服务](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)
 
-- Web 服务
+- Web Services
 
     > [!NOTE]
     > "**数据源**" 窗口中显示的项取决于服务返回的数据。 某些服务可能没有为“数据源配置”向导创建可绑定的对象提供足够的信息。 例如，如果服务返回非类型化数据集，则在完成该向导时，"**数据源**" 窗口中将不会显示任何项。 这是因为非类型化数据集不提供架构，因此该向导没有足够的信息来创建数据源。
@@ -113,6 +113,6 @@ ms.locfileid: "72648888"
 
 通过运行 "**数据源配置向导**" 并选择 " **sharepoint**数据源类型"，可以从 SharePoint 列表创建数据源。 SharePoint 通过 WCF 数据服务公开数据，因此创建 SharePoint 数据源与从服务创建数据源相同。 在 "**数据源配置向导**" 中选择**SharePoint**项将打开 "**添加服务引用**" 对话框，在该对话框中，您可以通过指向 sharepoint 服务器来连接到 sharepoint 数据服务。 这需要 SharePoint SDK。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [适用于 NET 的 Visual Studio Data Tools](../data-tools/visual-studio-data-tools-for-dotnet.md)

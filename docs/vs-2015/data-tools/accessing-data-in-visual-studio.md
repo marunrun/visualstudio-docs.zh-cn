@@ -22,12 +22,12 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 robots: noindex,nofollow
-ms.openlocfilehash: 158bc4c2fc7734957c7d3e946390ab1339a322ba
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: d2b716bb4e6119c76f593ff067784f360cb48187
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299438"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75917029"
 ---
 # <a name="accessing-data-in-visual-studio"></a>在 Visual Studio 中访问数据
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "74299438"
 
 ||||
 |-|-|-|
-|SQL 数据库|DocumentDB|存储（blob、表、队列、文件）|
+|SQL Database|DocumentDB|存储（blob、表、队列、文件）|
 |SQL 数据仓库|SQL Server Stretch Database|StorSimple|
 
  更多内容...
@@ -52,7 +52,7 @@ ms.locfileid: "74299438"
 ||||
 |-|-|-|
 |SQL Server 2005 –2016，包括 Express 和 LocalDB|Firebird|MariaDB|
-|MySQL|Oracle|PostgreSQL|
+|MySQL|Oracle|postgresql|
 |SQLite|||
 
  更多内容...
@@ -70,12 +70,12 @@ ms.locfileid: "74299438"
  许多数据库供应商和第三方支持通过 NuGet 包与 Visual Studio 集成。 可以通过 Visual Studio 中的 NuGet 包管理器或 Visual Studio 中的 NuGet 包管理器来浏览 nuget.org （**Tools** > **Nuget 包管理器** > **管理解决方案的 nuget 包**）。 其他数据库产品与 Visual Studio 集成以作为扩展。   通过导航到 "**工具**" > "**扩展和更新**"，然后在对话框的左窗格中选择 "**联机**"，可以在 Visual Studio 库中浏览这些产品/服务。  有关详细信息，请参阅[安装数据库系统、工具和示例](../data-tools/installing-database-systems-tools-and-samples.md)。
 
 > [!NOTE]
-> 2005年4月 12 2016 日结束对 SQL Server 的扩展支持。   不保证 Visual Studio 2015 和更高版本中的数据工具在此日期后继续与 SQL Server 2005 一起工作。 有关详细信息，请参阅[SQL Server 2005 的支持终止公告](https://www.microsoft.com/sql-server/sql-server-2005)。
+> 对 SQL Server 2005 的延长支持已于 2016 年 4 月 12 日结束。   不保证 Visual Studio 2015 和更高版本中的数据工具在此日期后继续与 SQL Server 2005 一起工作。 有关详细信息，请参阅[SQL Server 2005 的支持终止公告](https://www.microsoft.com/sql-server/sql-server-2005)。
 
 ### <a name="net-languages"></a>.NET 语言
  所有 .NET 数据访问（包括在 .NET Core 中）都基于 ADO.NET，这是一组类，用于定义用于访问任何类型数据源（关系数据源和非关系数据源）的接口。 Visual Studio 有多个工具和设计器，可与 ADO.NET 配合使用，帮助你连接到数据库、操作数据，以及向用户提供数据。 本部分中的文档介绍了如何使用这些工具。 你还可以对 ADO.NET 命令对象直接编程。 有关直接调用 ADO.NET Api 的详细信息，请参阅 MSDN Library 中的[ADO.NET](https://msdn.microsoft.com/library/e80y5yhx\(v=vs.110\).aspx) 。
 
- 有关专门与 ASP.NET 相关的数据访问文档，请参阅使用 ASP.NET 站点上的[数据](https://docs.microsoft.com/aspnet/web-forms/overview/presenting-and-managing-data/)。 有关将实体框架与 ASP.NET MVC 配合使用的教程，请参阅使用[mvc 5 Code First 实体框架6入门](https://docs.microsoft.com/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application)。
+ 有关专门与 ASP.NET 相关的数据访问文档，请参阅使用 ASP.NET 站点上的[数据](/aspnet/web-forms/overview/presenting-and-managing-data/)。 有关将实体框架与 ASP.NET MVC 配合使用的教程，请参阅使用[mvc 5 Code First 实体框架6入门](/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application)。
 
  或 Visual Basic 中C#的通用 WINDOWS 平台（UWP）应用可以使用用于 .NET 的 Microsoft Azure SDK 访问 azure 存储和其他 azure 服务。 HttpClient 类启用与任何 RESTful 服务的通信。 有关详细信息，请参阅[如何使用 Windows 连接到 http 服务器](https://msdn.microsoft.com/library/windows/apps/dn469430.aspx)。
 
@@ -133,7 +133,7 @@ ms.locfileid: "74299438"
 
  [ADO.NET 实体框架](https://msdn.microsoft.com/data/ef)介绍如何创建允许开发人员针对概念模型而不是直接针对关系数据库进行编程的数据应用程序。
 
- [WCF 数据服务 4.5](https://msdn.microsoft.com/library/73d2bec3-7c92-4110-b905-11bb0462357a)介绍如何使用 [!INCLUDE[ssAstoria](../includes/ssastoria-md.md)] 在实现[Open Data Protocol （OData）](https://go.microsoft.com/fwlink/?LinkID=182204)的 web 或 intranet 上部署数据服务。
+ [WCF 数据服务 4.5](https://msdn.microsoft.com/library/73d2bec3-7c92-4110-b905-11bb0462357a)介绍如何使用 [!INCLUDE[ssAstoria](../includes/ssastoria-md.md)] 在实现[Open Data Protocol （OData）](https://www.odata.org/)的 web 或 intranet 上部署数据服务。
 
  [Office 解决方案中的数据](https://msdn.microsoft.com/library/8478c095-864b-4ed3-8a70-1fc19b411c6a)包含指向一些主题的链接，这些主题说明了如何在 Office 解决方案中使用数据。 这包括有关面向架构的编程、数据缓存和服务器端数据访问的信息。
 

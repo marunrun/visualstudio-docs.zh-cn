@@ -29,17 +29,17 @@ caps.latest.revision: 62
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 03cd890802e5563ce2daeb78438c56f4452d74f0
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: cf4d63d7d00e91daa2564992f801896075f73aab
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299515"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75918947"
 ---
 # <a name="attach-to-running-processes-with-the-visual-studio-debugger"></a>使用 Visual Studio 调试器附加到运行的进程
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-可将 Visual Studio 调试器附加到本地或远程计算机上正在运行的进程。 运行进程后，单击 "**调试"/"附加到进程**" （或按**CTRL + ALT + P**）打开 "**附加到进程**" 对话框。
+你可将 Visual Studio 调试器附加到正在本地或远程计算机上运行的进程上。 运行进程后，单击 "**调试"/"附加到进程**" （或按**CTRL + ALT + P**）打开 "**附加到进程**" 对话框。
 
 您可以使用此功能来调试在本地或远程计算机上运行的应用程序，同时调试多个进程或调试未在 Visual Studio 中创建的应用程序。 当你想要调试应用时，它通常非常有用，但在任何情况下，你没有在附加调试器的情况下从 Visual Studio 启动应用。 例如，如果在没有调试器的情况下运行应用程序并遇到异常，则可以附加到运行该应用程序的进程开始调试。
 
@@ -105,13 +105,13 @@ ms.locfileid: "74299515"
 
 6. 单击 **“附加”** 。
 
-## <a name="additional-info"></a>附加信息
+## <a name="additional-info"></a>其他信息
 
 调试时可以附加到多个程序，但在任何时间，调试器中都只有一个程序处于活动状态。 可以在 **“调试位置”** 工具栏或 **“进程”** 窗口中设置活动程序。 有关详细信息，请参阅 [如何：设置当前程序](https://msdn.microsoft.com/7e1d7fa5-0e40-44cf-8c41-d3dba31c969e)。
 
 如果尝试附加到不受信任的用户帐户拥有的进程，则会出现安全警告对话框确认。 有关详细信息请参阅[安全警告：附加到不受信任的用户所拥有的进程可能很危险。如果以下信息看上去可疑或者你无法确定，请勿附加到此进程](/visualstudio/debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user?view=vs-2015).
 
-在某些情况下，在“远程桌面”（“终端服务”）会话中进行调试时， **“可用进程”** 列表不会显示所有可用进程。 如果以具有有限用户帐户的用户身份运行 Visual Studio，“可用进程” 列表将不显示在会话 0 中运行的进程，会话 0 用于服务与其他服务器进程，包括 w3wp.exe。 你可以通过以下方法解决该问题：使用管理员帐户运行 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 或从服务器控制台而不是“终端服务”会话运行 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 。 如果这两种解决方法都不奏效，第三种方法是通过从 Windows 命令行运行 `vsjitdebugger.exe -p` *ProcessId* 来附加到进程。 你可以使用 tlist.exe 来确定进程 ID。 若要获取 tlist.exe，可从  [WDK 和 WinDbg 下载](https://go.microsoft.com/fwlink/?LinkId=168279)中下载并安装 Windows 调试工具。
+在某些情况下，在“远程桌面”（“终端服务”）会话中进行调试时， **“可用进程”** 列表不会显示所有可用进程。 如果以具有有限用户帐户的用户身份运行 Visual Studio，“可用进程” 列表将不显示在会话 0 中运行的进程，会话 0 用于服务与其他服务器进程，包括 w3wp.exe。 你可以通过以下方法解决该问题：使用管理员帐户运行 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 或从服务器控制台而不是“终端服务”会话运行 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 。 如果这两种解决方法都不可行，则第三种方法是通过从 Windows 命令行运行 `vsjitdebugger.exe -p` *ProcessId*来附加到进程。 你可以使用 tlist.exe 来确定进程 ID。 若要获取 tlist.exe，可从  [WDK 和 WinDbg 下载](/windows-hardware/drivers/dashboard/)中下载并安装 Windows 调试工具。
 
 ## <a name="BKMK_Scenarios"></a>常见调试方案
 
@@ -122,9 +122,9 @@ ms.locfileid: "74299515"
 > [!NOTE]
 > 有关 Visual Studio 中的基本调试的信息，请参阅[调试器](../debugger/getting-started-with-the-debugger.md)入门。
 
-|方案|调试方法|进程名|说明和链接|
+|方案|调试方法|进程名称|说明和链接|
 |-|-|-|-|
-|在本地计算机上调试托管应用或本机应用|使用 "附加到进程" 或 "[标准" 调试](../debugger/getting-started-with-the-debugger.md)|*appname*|若要快速访问对话框，请按**CTRL + ALT + P** ，然后键入进程名称的第一个字母。|
+|在本地计算机上调试托管应用或本机应用|使用 "附加到进程" 或 "[标准" 调试](../debugger/getting-started-with-the-debugger.md)|*appname*.exe|若要快速访问对话框，请按**CTRL + ALT + P** ，然后键入进程名称的第一个字母。|
 |在没有调试器的情况下启动应用后，在本地计算机上调试 ASP.NET 应用|使用 "附加到进程"|iiexpress.exe|这可能会使应用程序加载速度更快，如在分析时（例如）。 |
 |IIS 服务器上的远程调试 ASP.NET 4 或4。5|使用远程工具并附加到进程|w3wp.exe|请参阅远程[调试 ASP.NET 在远程 IIS 计算机上](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md)|
 |IIS 服务器上的远程调试 ASP.NET Core|使用远程工具并附加到进程|dnx.exe|有关应用部署，请参阅[发布到 IIS](https://docs.asp.net/en/latest/publishing/iis.html)。 对于调试，请参阅远程[调试 ASP.NET 在远程 IIS 计算机上](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md)|

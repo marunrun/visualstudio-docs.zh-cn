@@ -1,16 +1,16 @@
 ---
 title: 面向 Windows 用户的 Visual Studio for Mac
 description: 介绍 Visual Studio for Mac 中的辅助功能及其启用方法。
-author: alclark
-ms.author: alcl
+author: heiligerdankgesang
+ms.author: dominicn
 ms.date: 09/25/2019
 ms.assetid: 61CB6883-08CE-470F-8599-6F7570DB756E
-ms.openlocfilehash: 3306cdec93b501ad2006bbee2ceca3bf42514fe9
-ms.sourcegitcommit: 7739f36507b4762eea83c692102bdc5188460f28
+ms.openlocfilehash: b414026ba7297dd6c93fecdf56d9a9c58c99f294
+ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71315075"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74984270"
 ---
 # <a name="visual-studio-for-mac-for-windows-users"></a>面向 Windows 用户的 Visual Studio for Mac
 

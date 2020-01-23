@@ -10,17 +10,17 @@ helpviewer_keywords:
 - Complete word
 - List members
 - IntelliSense [Visual Studio]
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 011542bc45680f6fb5b7bd2b83283605922189ee
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 34e038256d46909e135f8285cb1b3edc45d0ba3e
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72647353"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75565339"
 ---
 # <a name="intellisense-in-visual-studio"></a>Visual Studio 中的 IntelliSense
 
@@ -83,7 +83,7 @@ IntelliSense 选项默认为启用状态。 要关闭它们，可选择“工具
 ## <a name="intellisense-icons"></a>IntelliSense 图标
 IntelliSense 中的图标可以通过图标修饰符传达其他含义。 它们分为星形、心形和锁形，层叠在对象图标之上，分别传达受保护、内部或私有信息。
 
-|    图标    |    可访问性    |    说明    |
+|    图标    |    可访问性    |    描述    |
 |------------|--------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ![公共图标修饰符](../ide/media/intellisensePublicNoModifier.png)       |    公共类    |    访问不受限制。   |
 | ![受保护图标修饰符](../ide/media/intellisenseProtectedModifier.png)       |    受保护类    |    访问限于包含类或派生自包含类的类型。    |

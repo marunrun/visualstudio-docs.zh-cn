@@ -9,12 +9,12 @@ caps.latest.revision: 13
 author: kraigb
 ms.author: kraigb
 manager: jillfra
-ms.openlocfilehash: 21e724e585f2a5bf0e1fe2a6b70f89c1bd5f5eec
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 960511fcfb83dfc6ac3c58a806d8a23f1ff61597
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74298188"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75918768"
 ---
 # <a name="getting-started-with-python"></a>Python 入门
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -40,7 +40,7 @@ Python 是一种常用的编程语言，由许多大学、科学家、应用程�
 
 若要安装 Python，请访问[https://www.python.org/download/](https://www.python.org/download/)。
 
-## <a name="python-tools-for-visual-studio"></a>Visual Studio 的 Python 工具
+## <a name="python-tools-for-visual-studio"></a>Python Tools for Visual Studio
   
 针对 Visual Studio 的 Python 工具（可从[visualstudio.com](https://www.visualstudio.com/explore/python-vs)安装）提供以下功能：  
   
@@ -73,7 +73,7 @@ Python 是一种常用的编程语言，由许多大学、科学家、应用程�
   
 Azure SDK for Python 支持 Windows、Mac 和 Linux，使得使用和管理 Microsoft Azure 服务更加方便。 请参阅下列资源了解详细信息： 
 
-- 若要安装 SDK，请使用 [Python 软件包索引](https://pypi.python.org/pypi/azure)或者按照 Azure 文档中的[安装 Python 和 SDK](https://docs.microsoft.com/azure/python/python-sdk-azure-install) 的说明进行操作。 
+- 若要安装 SDK，请使用 [Python 软件包索引](https://pypi.python.org/pypi/azure)或者按照 Azure 文档中的[安装 Python 和 SDK](/azure/python/python-sdk-azure-install) 的说明进行操作。 
 - [Azure SDK for Python 开发人员中心](https://azure.microsoft.com/develop/python/)通过教程提供许多从安装到文档的帮助。  以下为一些要点：  
 - 操作指南：
   - [存储 Blob](https://azure.microsoft.com/develop/python/how-to-guides/blob-service/)  

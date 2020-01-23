@@ -6,17 +6,17 @@ f1_keywords:
 - vs.codeanalysis.policyeditor
 helpviewer_keywords:
 - code analysis, migrating check-in policy
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e6d502dc75530bb6b95f38b069b9220c5ad54cac
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: d034d65cd356ff44a42d10840ae064d81713457f
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72649480"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75587532"
 ---
 # <a name="how-to-create-or-update-standard-code-analysis-check-in-policies"></a>如何：创建或更新标准代码分析签入策略
 
@@ -61,12 +61,12 @@ ms.locfileid: "72649480"
 
 - 选择 Microsoft 标准规则集。
 
-- 单击 "**源代码管理" \<Select 规则集 "，选择自定义规则集 .。。>** 。 然后，在源代码管理器浏览器中键入规则集的版本控制路径。 版本控制路径的语法为：
+- 选择自定义规则集通过单击 **\<选择规则集从源代码管理...>** 。 然后，在源代码管理器浏览器中键入规则集的版本控制路径。 版本控制路径的语法为：
 
    **$/** `TeamProjectName` **/** `VersionControlPath`
 
 有关如何创建和实现自定义签入策略规则集的详细信息，请参阅[为托管代码实现自定义签入策略](../code-quality/implementing-custom-code-analysis-check-in-policies-for-managed-code.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [创建和使用代码分析签入策略](../code-quality/how-to-create-or-update-standard-code-analysis-check-in-policies.md)
+- [实现托管代码的自定义代码分析签入策略](../code-quality/implementing-custom-code-analysis-check-in-policies-for-managed-code.md)

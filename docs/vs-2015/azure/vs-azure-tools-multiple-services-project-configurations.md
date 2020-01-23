@@ -11,12 +11,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/11/2017
 ms.author: ghogen
-ms.openlocfilehash: 70217cc4c83a1f281e8a2fdebec404fa9757bf01
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 59996180661806eee60d18ab4b7b5fd26f4a2e7b
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299026"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75915588"
 ---
 # <a name="configuring-your-azure-project-in-visual-studio-to-use-multiple-service-configurations"></a>在 Visual Studio 中配置 Azure 项目以使用多个服务配置
 
@@ -37,7 +37,7 @@ Visual Studio 中的 Azure 云服务项目包括三个配置文件：`ServiceDef
 
 选择受更改影响的 `ServiceConfiguration.*.cscfg` 文件。 默认情况下有本地和云变体，并且可以使用“管理...”命令来复制、重命名和删除配置文件。 这些文件会被添加到你的云服务项目，并显示在“解决方案资源管理器”中。 但是，只能从该控件中完成重命名或删除配置操作。
 
-### <a name="instances"></a>实例数
+### <a name="instances"></a>实例
 
 将“实例计数”属性设置为服务应为此角色运行的实例的数目。
 
@@ -51,13 +51,13 @@ Visual Studio 中的 Azure 云服务项目包括三个配置文件：`ServiceDef
 
 如果已添加 HTTPS 终结点，则将默认启用“HTTPS 终结点”选项，Visual Studio 除了为 HTTP 终结点启动浏览器之外，还会在开始调试时为此终结点启动浏览器，假定这两个启动选项均已启用。
 
-### <a name="diagnostics"></a>诊断
+### <a name="diagnostics"></a>Diagnostics
 
 默认情况下，将对 Web 角色启用诊断。 Azure 云服务项目和存储帐户都设置为使用本地存储模拟器。 准备好部署到 Azure 后，可以选择生成器按钮 (…) 以改用 Azure 存储。 可以根据需要或自动计划的间隔，将诊断数据传输到存储帐户。 有关 Azure 诊断的详细信息，请参阅[在 Azure 云服务和虚拟机中启用诊断](/azure/cloud-services/cloud-services-dotnet-diagnostics)。
 
 ## <a name="settings-page"></a>“设置”页
 
-在“设置”页上，可以将设置以名称/值对形式添加到配置中。 角色中运行的代码可以使用 [Azure 托管库](https://go.microsoft.com/fwlink?LinkID=171026)提供的类（具体而言，[GetConfigurationSettingValue](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.serviceruntime.roleenvironment.getconfigurationsettingvalue.aspx) 方法），在运行时读取配置设置的值。
+在“设置”页上，可以将设置以名称/值对形式添加到配置中。 角色中运行的代码可以使用 [Azure 托管库](/previous-versions/azure/dn602775(v=azure.11))提供的类（具体而言，[GetConfigurationSettingValue](/previous-versions/azure/reference/ee772857(v=azure.100)) 方法），在运行时读取配置设置的值。
 
 ### <a name="configuring-a-connection-string-for-a-storage-account"></a>为存储帐户配置连接字符串
 

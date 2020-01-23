@@ -6,17 +6,17 @@ f1_keywords:
 - vs.dsltools.dsldesigner.xmlbehavior
 helpviewer_keywords:
 - Domain-Specific Language, serialization
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 27d8672ea94cf2a1547904f313ac36509f111462
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: d8fe9fb5086b93861c7ca12a208affe7aa979df2
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748459"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76114433"
 ---
 # <a name="customize-file-storage-and-xml-serialization"></a>自定义文件存储和 XML 序列化
 
@@ -101,7 +101,7 @@ ms.locfileid: "72748459"
 
 名字对象用于表示在模型和关系图文件的不同部分之间进行交叉引用。 它们还用于在 `.diagram` 文件中引用模型文件中的节点。 名字对象有两种形式：
 
-- *Id 名字对象*引用目标元素的 GUID。 例如:
+- *Id 名字对象*引用目标元素的 GUID。 例如：
 
     ```xml
     <personShapeMoniker Id="f79734c0-3da1-4d72-9514-848fa9e75157" />
@@ -124,13 +124,13 @@ ms.locfileid: "72748459"
 
 1. 请确保为类及其基类中的每个域属性都 `false`**为名字对象密钥**。
 
-    1. 在 "DSL 资源管理器" 中，展开 " **Xml 序列化 Behavior\Class data \\ \<the 域类 > \Element 数据**"。
+    1. 在 "DSL 资源管理器" 中，展开 **"Xml 序列化 Behavior\Class data\\\<域类 > \Element" 数据**。
 
     2. 验证是否为每个域属性 `false` 为**名字对象密钥**。
 
     3. 如果域类有一个基类，请重复此类中的过程。
 
-2. 设置域类的**序列化 Id**  =  `true`。
+2. 设置域类的**序列化 Id** = `true`。
 
      此属性可在 " **Xml 序列化行为**" 下找到。
 
@@ -138,7 +138,7 @@ ms.locfileid: "72748459"
 
 - Set 是现有域类的域属性的**名字对象密钥**。 属性的类型必须为 `string`。
 
-    1. 在 "DSL 资源管理器" 中，展开 " **Xml 序列化 Behavior\Class data \\ \<the 域类 > \Element data**"，然后选择 "域" 属性。
+    1. 在 "DSL 资源管理器" 中，展开 **"Xml 序列化 Behavior\Class data\\\<域类 > \Element" 数据**，然后选择 "域" 属性。
 
     2. 在属性窗口中，set**是名字对象键**以 `true`。
 
@@ -158,7 +158,7 @@ ms.locfileid: "72748459"
 
 有多种方法可帮助避免这种情况：
 
-- 对于键域属性，设置**为元素名称** =  `true`。 选择 DSL 定义关系图上的 "域" 属性，然后在 "属性窗口中设置值。
+- 对于键域属性，设置**为元素名称** = `true`。 选择 DSL 定义关系图上的 "域" 属性，然后在 "属性窗口中设置值。
 
      当用户创建类的新实例时，此值将导致自动为域属性分配不同的值。 默认行为向类名的末尾添加一个数字。 这不会阻止用户将该名称更改为重复的名称，但在保存模型之前，用户不设置该值时，这会有所帮助。
 
@@ -230,7 +230,7 @@ ms.locfileid: "72748459"
     </familyTreeModel>
     ```
 
-- @No__t_1**元素**中设置**表示形式**，以将域属性另存为元素而不是属性值。
+-  = **元素**中设置**表示形式**，以将域属性另存为元素而不是属性值。
 
     ```xml
     <person name="Elizabeth I" birthYear="1533">
@@ -275,10 +275,10 @@ ms.locfileid: "72748459"
 |元素名称|此类的元素的 Xml 节点名称。 默认值为域类名称的小写形式。|
 |名字对象特性名称|用于包含引用的名字对象元素中的属性的名称。 如果为空，则使用键属性或 id 的名称。<br /><br /> 在此示例中，为 "name"： `<personMoniker name="/Mike Nash"/>`|
 |名字对象元素名称|用于引用此类的元素的名字对象的 xml 元素的名称。<br /><br /> 默认值是类名以 "名字对象" 作为后缀的小写形式。 例如 `personMoniker`。|
-|名字对象类型名称|为此类的元素的名字对象生成的 xsd 类型的名称。 XSD 位于 Dsl\Generated 的**代码 \\ \*Schema .xsd**|
+|名字对象类型名称|为此类的元素的名字对象生成的 xsd 类型的名称。 XSD 位于 Dsl\Generated 的**代码\\\***|
 |序列化 Id|如果为 True，则元素 GUID 包含在文件中。 如果没有标记**为名字对象键**的属性，并且 DSL 定义了此类的引用关系，则必须为 true。|
 |类型名称|在指定域类的 xsd 中生成的 xml 类型的名称。|
-|注意|与此元素关联的非正式说明|
+|注释|与此元素关联的非正式说明|
 
 ### <a name="xml-property-data"></a>Xml 属性数据
 
@@ -290,9 +290,9 @@ Xml 属性节点位于类节点下。
 |域属性|Xml 序列化配置数据应用到的属性。 只读。|
 |是名字对象键|如果为 True，则将属性用作创建引用此域类的实例的名字对象的键。|
 |是名字对象限定符|如果为 True，则该属性用于在名字对象中创建限定符。 如果为 false，并且对于此域类，如果 SerializeId 不为 true，则名字对象由嵌入树中父元素的名字对象限定。|
-|表达|如果特性，则将属性序列化为 xml 特性;如果为元素，则序列化为元素;如果为 Ignore，则不序列化。|
+|Representation|如果特性，则将属性序列化为 xml 特性;如果为元素，则序列化为元素;如果为 Ignore，则不序列化。|
 |Xml 名称|用于表示属性的 xml 特性或元素的名称。 默认情况下，这是域属性名称的小写形式。|
-|注意|与此元素关联的非正式说明|
+|注释|与此元素关联的非正式说明|
 
 ### <a name="xml-role-data"></a>Xml 角色数据
 
@@ -306,7 +306,7 @@ Xml 属性节点位于类节点下。
 |角色元素名称|指定从源角色派生的 XML 元素的名称。 默认值为角色属性名称。|
 |使用完整形式|如果为 true，则每个目标元素或名字对象都包含在表示关系的 XML 节点中。 如果关系具有其自己的域属性，则应将其设置为 true。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在程序代码中导航和更新模型](../modeling/navigating-and-updating-a-model-in-program-code.md)
 - [从域特定语言生成代码](../modeling/generating-code-from-a-domain-specific-language.md)

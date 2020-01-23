@@ -13,17 +13,17 @@ helpviewer_keywords:
 - UsingTask element [MSBuild]
 - <UsingTask> element [MSBuild]
 ms.assetid: 20247902-9446-4a1f-8253-5c7a17e4fe43
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8341a83443855f2fd90d7f5a742251fa54fc4890
-ms.sourcegitcommit: dc12a7cb66124596089f01d3e939027ae562ede9
+ms.openlocfilehash: 7bd62738a89b38adb6cd01d6a33d661e95144d34
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71962904"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75565261"
 ---
 # <a name="usingtask-element-msbuild"></a>UsingTask 元素 (MSBuild)
 将 [Task](../msbuild/task-element-msbuild.md) 元素中引用的任务映射到包含该任务实现的程序集。
@@ -40,14 +40,14 @@ ms.locfileid: "71962904"
 ```
 
 > [!NOTE]
-> 不同于属性和项，将使用应用于 `TaskName` 的第一个 `UsingTask` 元素；若要覆盖任务，必须在现有任务之前定义一个新的 `UsingTask`   。
+> 不同于属性和项，将使用应用于 `TaskName` 的第一个  `UsingTask` 元素；若要覆盖任务，必须在现有任务之前  定义一个新的 `UsingTask`。
 
 ## <a name="attributes-and-elements"></a>特性和元素
  下列各节描述了特性、子元素和父元素。
 
 ### <a name="attributes"></a>特性
 
-|特性|说明|
+|特性|描述|
 |---------------|-----------------|
 |`AssemblyName`|`AssemblyName` 属性或 `AssemblyFile` 属性是必需的。<br /><br /> 要加载的程序集的名称。 尽管强命名不是必需的，但是 `AssemblyName` 属性可以接受强名称程序集。 使用此属性等效于使用 .NET 中的 <xref:System.Reflection.Assembly.Load%2A> 方法加载程序集。<br /><br /> 如果使用了 `AssemblyFile` 属性，则不能使用此属性。|
 |`AssemblyFile`|`AssemblyName` 或 `AssemblyFile` 属性是必需的。<br /><br /> 程序集的文件路径。 此属性接受完整路径或相对路径。 相对路径是相对于声明 `UsingTask` 元素的项目文件或目标文件的目录位置而言的。 使用此属性等效于使用 .NET 中的 <xref:System.Reflection.Assembly.LoadFrom%2A> 方法加载程序集。<br /><br /> 如果使用了 `AssemblyName` 属性，则不能使用此属性。|
@@ -57,14 +57,14 @@ ms.locfileid: "71962904"
 
 ### <a name="child-elements"></a>子元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[ParameterGroup](../msbuild/parametergroup-element.md)|参数集，在指定 `TaskFactory` 生成的任务中显示。|
 |[Task](../msbuild/task-element-msbuild.md)|传递给 `TaskFactory` 的数据，用于生成任务的实例。|
 
 ### <a name="parent-elements"></a>父元素
 
-| 元素 | 说明 |
+| 元素 | 描述 |
 | - | - |
 | [Project](../msbuild/project-element-msbuild.md) | [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 项目文件必需的根元素。 |
 

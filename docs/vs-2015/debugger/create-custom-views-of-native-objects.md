@@ -16,12 +16,12 @@ caps.latest.revision: 24
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: a510c522723cf991c7a3fff21542a069a3de000a
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 63390672b246add079806c68a23b69f0e0132c2d
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299494"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850210"
 ---
 # <a name="create-custom-views-of-native-objects"></a>创建本机对象的自定义视图
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -40,7 +40,7 @@ Visual Studio Natvis 框架允许你在调试器变量窗口（例如 **“监�
 ## <a name="BKMK_Why_create_visualizations_"></a> 为什么创建 Natvis 可视化？  
  可使用 Natvis 框架为你创建的类型创建可视化规则，以便开发人员可以在调试期间轻松查看它们。  
 
- 例如，下图显示了类型 [Windows::UI::Xaml::Controls::TextBox](https://go.microsoft.com/fwlink/?LinkId=258422) 的变量，此类型显示在未应用任何自定义可视化的调试器中。  
+ 例如，下图显示了类型 [Windows::UI::Xaml::Controls::TextBox](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textbox.aspx) 的变量，此类型显示在未应用任何自定义可视化的调试器中。  
 
  ![TextBox 默认可视化](../debugger/media/dbg-natvis-textbox-default.png "DBG_NATVIS_TextBox_Default")  
 
@@ -109,7 +109,7 @@ Visual Studio Natvis 框架允许你在调试器变量窗口（例如 **“监�
 
 - Natvis 表达式在可视化对象上下文而非当前堆栈框架中进行计算。 例如，如果在 Natvis 表达式中使用 `x` ，则它指的是可视化对象中名为 `x` 的字段，而非当前执行的函数中名为 `x` 的局部变量。 你可以访问全局变量，但不能访问 Natvis 表达式内的局部变量。  
 
-- Natvis 表达式不允许函数求值或副作用。 这意味着函数调用和赋值运算符被忽略。 由于 [调试器内部函数](../debugger/expressions-in-the-debugger.md#BKMK_Using_debugger_intrinisic_functions_to_maintain_state) 没有副作用，因此可以从所有 Natvis 表达式自由调用它们，即使不允许其他函数调用也是如此。  
+- Natvis 表达式不允许函数求值或副作用。 这意味着函数调用和赋值运算符被忽略。 由于[调试器内部函数](../debugger/expressions-in-the-debugger.md#BKMK_Using_debugger_intrinisic_functions_to_maintain_state)没有副作用，因此可以从任何 Natvis 表达式随意调用，即使系统不允许进行其他函数调用也是如此。  
 
   若要控制表达式在变量窗口中的显示方式，可以使用主题[中C++格式说明符](../debugger/format-specifiers-in-cpp.md)的[格式](../debugger/format-specifiers-in-cpp.md#BKMK_Visual_Studio_2012_format_specifiers)说明符部分介绍的任何格式说明符。 请注意，Natvis 在内部使用虚拟化条目时，将忽略格式说明符，如 ArrayItems 扩展中的 `Size` 表达式。  
 
@@ -171,7 +171,7 @@ Visual Studio Natvis 框架允许你在调试器变量窗口（例如 **“监�
 
 3. 当用户在变量窗口（ `Expand` 节点）中展开类型的成员时，它们应如何显示。  
 
-   **模板化类** `Name` 元素的 `Type` 特性接受一个星号 `*` 作为可用于模板化类名的通配符：  
+   **模板化类**`Name` 元素的 `Type` 特性接受一个星号 `*` 作为可用于模板化类名的通配符：  
 
 ```xml  
 <Type Name="ATL::CAtlArray&lt;*&gt;">  
@@ -224,7 +224,7 @@ Visual Studio Natvis 框架允许你在调试器变量窗口（例如 **“监�
 ```  
 
 #### <a name="BKMK_Versioning"></a> Version 元素  
- 使用 `Version` 元素将可视化效果的作用范围限定为特定模块及其版本，以便最大程度地减少名称冲突，并使不同的可视化效果可用于类型的不同版本。 例如:  
+ 使用 `Version` 元素将可视化效果的作用范围限定为特定模块及其版本，以便最大程度地减少名称冲突，并使不同的可视化效果可用于类型的不同版本。 例如：  
 
 ```xml  
 <Type Name="DirectUI::Border">  
@@ -348,7 +348,7 @@ Visual Studio Natvis 框架允许你在调试器变量窗口（例如 **“监�
 - 如果在类型下方无子节点的情况下指定 `Expand` 节点，将不会在调试器窗口中展开该类型。  
 
 #### <a name="BKMK_Item_expansion"></a> Item 展开  
- `Item` 元素是用于 `Expand` 节点的最基本和最常见的元素。 `Item` 定义单个子元素。 例如，假设你拥有包含 `CRect` 、 `top`、 `left`和 `right`字段的 `bottom` 类以及以下可视化条目：  
+ `Item` 元素是用于 `Expand` 节点的最基本和最常见的元素。 `Item` 用于定义单个子元素。 例如，假设你拥有包含 `CRect` 、 `top`、 `left`和 `right`字段的 `bottom` 类以及以下可视化条目：  
 
 ```xml  
 <Type Name="CRect">  
@@ -371,7 +371,7 @@ Visual Studio Natvis 框架允许你在调试器变量窗口（例如 **“监�
 > 如果项元素的表达式指向一个复杂类型，则 `Item` 节点本身可展开。  
 
 #### <a name="BKMK_ArrayItems_expansion"></a> Size  
- 使用 `ArrayItems` 节点使 Visual Studio 调试器将类型解释为数组并显示其各个元素。 `std::vector` 的可视化效果是一个很好的示例：  
+ 使用 `ArrayItems` 节点，让 Visual Studio 调试器将类型解释为一个数组并显示其各个元素。 `std::vector` 的可视化效果是一个很好的示例：  
 
 ```xml  
 <Type Name="std::vector&lt;*&gt;">  

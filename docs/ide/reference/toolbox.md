@@ -8,17 +8,17 @@ f1_keywords:
 helpviewer_keywords:
 - Toolbox [Visual Studio]
 - custom controls [Visual Studio]
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5311c9a910c3140d5a5053a42befe7ed7f5b1278
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c7decdb80cd06b1af3230b2926c4ebd37b48e422
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72651129"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596445"
 ---
 # <a name="toolbox"></a>工具箱
 
@@ -61,7 +61,7 @@ ms.locfileid: "72651129"
 
 ## <a name="create-and-distribute-custom-toolbox-controls"></a>创建和分发自定义“工具箱”控件
 
-可以从基于 [Windows Presentation Foundation](../../extensibility/creating-a-wpf-toolbox-control.md) 或 [Windows 窗体](../../extensibility/creating-a-windows-forms-toolbox-control.md)的项目模板入手，创建自定义“工具箱”  控件。 然后，可以使用[“工具箱”控件安装程序](http://download.microsoft.com/download/8/3/6/836657BD-9CCB-4ED4-B9D2-FB769473B284/TCI_whitepaper.docx)，将自定义控件分发给团队成员或发布到网上。
+可以从基于 [Windows Presentation Foundation](../../extensibility/creating-a-wpf-toolbox-control.md) 或 [Windows 窗体](../../extensibility/creating-a-windows-forms-toolbox-control.md)的项目模板入手，创建自定义“工具箱”  控件。 然后，可以使用[“工具箱”控件安装程序](https://download.microsoft.com/download/8/3/6/836657BD-9CCB-4ED4-B9D2-FB769473B284/TCI_whitepaper.docx)，将自定义控件分发给团队成员或发布到网上。
 
 ## <a name="help-on-toolbox-tabs"></a>“工具箱”选项卡方面的帮助
 

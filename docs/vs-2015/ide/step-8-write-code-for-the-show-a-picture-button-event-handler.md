@@ -9,12 +9,12 @@ caps.latest.revision: 26
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: c2c1b09d88de938ee4bc93b69b50d53c0d39006f
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 7f5d58533f6f2207d1b07883ab741eb900cdfbbf
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299998"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851116"
 ---
 # <a name="step-8-write-code-for-the-show-a-picture-button-event-handler"></a>步骤 8：为“显示图片”按钮事件处理程序编写代码
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "74299998"
 
   IDE 提供一种名为 IntelliSense 的强大工具，可帮助您编写代码。 当您输入代码时，IDE 会打开一个框，其中显示与您所输入的部分单词对应的完整建议内容。 它尝试确定您接下来要做的事情，并自动跳到您从列表中选择的最后一项。 您可以使用向上键或向下键在列表中进行移动，也可以继续键入字母以缩小选择范围。 当您看到所需的选项时，请选择 Tab 键以将其选中。 或者，也可以忽略不需要的建议。
 
-  ![视频链接](../data-tools/media/playvideo.gif "PlayVideo")有关本主题的视频版本，请参阅[教程1：在 Visual Basic 中创建图片查看器-视频 4](https://go.microsoft.com/fwlink/?LinkId=205215)或[教程1：在视频4中C#创建图片查看器](https://go.microsoft.com/fwlink/?LinkId=205203)。 这些视频使用 Visual Studio 的早期版本，因此在一些菜单命令和其他用户界面元素上略有差异。 但是，概念和过程与当前版本的 Visual Studio 大同小异。
+  ![视频链接](../data-tools/media/playvideo.gif "PlayVideo")有关本主题的视频版本，请参阅[教程1：在 Visual Basic 中创建图片查看器-视频 4](https://msdn.microsoft.com/vbasic/gg315355.aspx)或[教程1：在视频4中C#创建图片查看器](https://msdn.microsoft.com/vcsharp/gg278412.aspx)。 这些视频使用 Visual Studio 的早期版本，因此在一些菜单命令和其他用户界面元素上略有差异。 但是，概念和过程与当前版本的 Visual Studio 大同小异。
 
 ### <a name="to-write-code-for-the-show-a-picture-button-event-handler"></a>为“显示图片”按钮事件处理程序编写代码
 
@@ -67,14 +67,14 @@ ms.locfileid: "74299998"
     5. 对控件或组件使用方法（称为“调用方法”）时，需要添加圆括号。 因此请在 `ShowDialog` 中紧接着“g”之后输入左括号和右括号 `()`，现在它看起来应像“openFileDialog1.ShowDialog()”。
 
         > [!NOTE]
-        > 方法是所有程序的重要组成部分，本教程演示了方法的多种使用方式。 可以调用组件的方法告诉组件要执行的操作，这与调用“OpenFileDialog”组件的  **方法的方式类似**`ShowDialog()`。 您可创建自己的方法来使程序执行操作，如您现在正构建的名为 `showButton_Click()` 方法的方法，该方法将在用户选择一个按钮时打开对话框和图片。
+        > 方法是所有程序的重要组成部分，本教程演示了方法的多种使用方式。 可以调用组件的方法告诉组件要执行的操作，这与调用“OpenFileDialog”组件的 `ShowDialog()` 方法的方式类似。 您可创建自己的方法来使程序执行操作，如您现在正构建的名为 `showButton_Click()` 方法的方法，该方法将在用户选择一个按钮时打开对话框和图片。
 
     6. 对于 Visual C#，添加一个空格，然后添加两个等号 (`==`)。 对于 Visual Basic，添加一个空格，然后使用单个等号 (`=`)。 （Visual C# 和 Visual Basic 使用不同的相等运算符。）
 
     7. 添加另一个空格。 一旦这样做之后，另一个“IntelliSense”窗口将打开。 开始键入 `DialogResult`，然后选择 Tab 键以进行添加。
 
         > [!NOTE]
-        > 当编写代码来调用方法时，有时代码会返回一个值。 在这种情况下，“OpenFileDialog”组件的  **方法会返回一个 DialogResult 值**`ShowDialog()`。 DialogResult 是一个特殊的值，此值告诉您对话框中所发生的改变。 “OpenFileDialog”组件可让用户选择“OK”或“Cancel”，这样它的  **方法将返回 DialogResult.OK 或 DialogResult.Cancel**`ShowDialog()`。
+        > 当编写代码来调用方法时，有时代码会返回一个值。 在这种情况下，“OpenFileDialog”组件的 `ShowDialog()` 方法会返回一个 DialogResult 值。 DialogResult 是一个特殊的值，此值告诉您对话框中所发生的改变。 “OpenFileDialog”组件可让用户选择“OK”或“Cancel”，这样它的 `ShowDialog()` 方法将返回 DialogResult.OK 或 DialogResult.Cancel。
 
     8. 键入一个点，在“IntelliSense”窗口中打开 DialogResult 值。 输入字母 `O`，然后选择 Tab 键插入“OK”。
 

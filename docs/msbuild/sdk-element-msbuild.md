@@ -12,17 +12,17 @@ dev_langs:
 helpviewer_keywords:
 - Sdk element [MSBuild]
 - <Sdk> element [MSBuild]
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 40b155af29d2d81a43eb0270e776e40df335a4bf
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8c65bafd9183c97efa7595c10d7bdb3641c5f75f
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62838771"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75595132"
 ---
 # <a name="sdk-element-msbuild"></a>Sdk 元素 (MSBuild)
 引用 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 项目 SDK。
@@ -41,7 +41,7 @@ ms.locfileid: "62838771"
 
 ### <a name="attributes"></a>特性
 
-|特性|说明|
+|特性|描述|
 |---------------|-----------------|
 |`Name`|必需的特性。<br /><br /> 项目 SDK 的名称。|
 |`Version`|可选特性。<br /><br /> 项目 SDK 的版本|
@@ -51,7 +51,7 @@ ms.locfileid: "62838771"
 
 ### <a name="parent-elements"></a>父元素
 
-| 元素 | 说明 |
+| 元素 | 描述 |
 | - | - |
 | [Project](../msbuild/project-element-msbuild.md) | [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 项目文件必需的根元素。 |
 

@@ -9,17 +9,17 @@ caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
 manager: jillfra
-ms.openlocfilehash: c8f29a909f6aef75976a551546d4cbeafdf03b37
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: a184ad6ebc1b3fc2dc21b7a1774b37fef8d359ec
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74291879"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75848468"
 ---
 # <a name="understanding-sal"></a>了解 SAL
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Microsoft 源代码注释语言（SAL）提供了一组可用于描述函数如何使用其参数的注释、对它们做出的假设，以及在完成时的保证。 批注是在标头文件 `<sal.h>`中定义的。 适用于的C++ Visual Studio 代码分析使用 SAL 批注来修改其函数分析。 有关适用于 Windows 驱动程序开发的 SAL 2.0 的详细信息，请参阅[Windows 驱动程序的 sal 2.0 注释](https://go.microsoft.com/fwlink/?LinkId=250979)。  
+Microsoft 源代码注释语言（SAL）提供了一组可用于描述函数如何使用其参数的注释、对它们做出的假设，以及在完成时的保证。 批注是在标头文件 `<sal.h>`中定义的。 适用于的C++ Visual Studio 代码分析使用 SAL 批注来修改其函数分析。 有关适用于 Windows 驱动程序开发的 SAL 2.0 的详细信息，请参阅[Windows 驱动程序的 sal 2.0 注释](https://msdn.microsoft.com/library/windows/hardware/hh454237.aspx)。  
   
  对于开发人员而言C++ ，在本机和 C 中仅提供有限的方式，以一致的方式来表达意图和不变性。 通过使用 SAL 批注，可以更详细地描述函数，以便使用它们的开发人员可以更好地了解如何使用它们。  
   
@@ -108,7 +108,7 @@ wchar_t * wmemcpy(
  此部分显示基本 SAL 批注的代码示例。  
   
 ### <a name="using-the-visual-studio-code-analysis-tool-to-find-defects"></a>使用 Visual Studio 代码分析工具查找 Bug  
- 在示例中，Visual Studio Code 分析工具与 SAL 注释一起用于查找代码缺陷。 下面介绍了如何执行此操作。  
+ 在示例中，Visual Studio Code 分析工具与 SAL 注释一起用于查找代码缺陷。 下面是操作方法。  
   
 ##### <a name="to-use-visual-studio-code-analysis-tools-and-sal"></a>使用 Visual Studio 代码分析工具和 SAL  
   
@@ -409,7 +409,7 @@ bool GetValue(_Out_ int *pInt, bool flag)
   或者，您可以为所有参数添加注释以使您的意图清晰明了，并使您能够轻松地检查批注是否已完成。  
   
 ## <a name="related-resources"></a>相关资源  
- [代码分析团队博客](https://go.microsoft.com/fwlink/p/?LinkId=251197)  
+ [代码分析团队博客](https://blogs.msdn.com/b/codeanalysis/)  
   
 ## <a name="see-also"></a>请参阅  
  [使用 SAL 注释减少 C/C++代码缺陷](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)   

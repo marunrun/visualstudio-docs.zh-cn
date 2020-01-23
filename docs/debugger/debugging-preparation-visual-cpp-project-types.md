@@ -19,19 +19,19 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c7d223b9ea542177176045c9abd103958e5ae33
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: dc663115e98d7553e03a186874d59b75eb68cb90
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738115"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75916311"
 ---
 # <a name="debugging-preparation-c-project-types"></a>调试准备： C++项目类型
 本节描述如何调试用 [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] 项目模板创建的基本项目类型。
 
  请注意，将 Dll 创建为其输出的项目类型已分组为[调试 DLL 项目](../debugger/debugging-dll-projects.md)，原因是它们共享的常见功能。
 
-## <a name="BKMK_In_this_topic"></a> 在本主题中
+## <a name="BKMK_In_this_topic"></a> 主题内容
  [建议的属性设置](#BKMK_Recommended_Property_Settings)
 
  [Win32 项目](#BKMK_Win32_Projects)
@@ -64,7 +64,7 @@ ms.locfileid: "72738115"
 
  Win32 应用程序包括 MFC 应用程序和 ATL 项目。 Win32 应用程序使用 Windows API，也可使用 MFC 或 ATL，但不使用公共语言运行时 (CLR)。 但是，它们可以调用使用 CLR 的托管代码。
 
- 下面的过程解释如何在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 中调试 Win32 项目。 调试 Win32 应用程序的另一种方法是在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 之外启动并附加到该应用程序。 有关详细信息，请参阅[附加到运行中的进程](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)。
+ 下面的过程解释如何在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 中调试 Win32 项目。 调试 Win32 应用程序的另一种方法是在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 之外启动并附加到该应用程序。 有关详细信息，请参阅[附加到正在运行的进程](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)。
 
 ### <a name="BKMK_To_debug_a_C_or_C___Win32_application"></a>调试 C 或 C++ Win32 应用程序
 
@@ -97,7 +97,7 @@ ms.locfileid: "72738115"
    [主题内容](../debugger/debugging-preparation-visual-cpp-project-types.md#BKMK_In_this_topic)
 
 ## <a name="BKMK_Windows_Forms_Applications___NET_"></a>Windows 窗体应用程序 (.NET)
- “Windows 窗体应用程序 (.NET)”模板可创建 [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)]Windows 窗体应用程序。 有关详细信息，请参阅 [How to: Create a Windows Application Project](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/42wc9kk5(v=vs.100))。
+ “Windows 窗体应用程序 (.NET)”模板可创建 [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)]Windows 窗体应用程序。 有关详细信息，请参阅[如何：创建 Windows 应用程序项目](/previous-versions/visualstudio/visual-studio-2010/42wc9kk5(v=vs.100))。
 
  在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 中调试此类应用程序类似于在托管的 Windows 窗体应用程序中进行调试。
 
@@ -109,9 +109,9 @@ ms.locfileid: "72738115"
 
  [主题内容](../debugger/debugging-preparation-visual-cpp-project-types.md#BKMK_In_this_topic)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [初探调试器](../debugger/debugger-feature-tour.md)
 - [C++ 调试配置的项目设置](../debugger/project-settings-for-a-cpp-debug-configuration.md)
 - [附加到正在运行的程序或多个程序](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)
 - [调试和发布配置](../debugger/how-to-set-debug-and-release-configurations.md)
-- [如何：创建一个 Windows 应用程序项目](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/42wc9kk5(v=vs.100))
+- [如何：创建一个 Windows 应用程序项目](/previous-versions/visualstudio/visual-studio-2010/42wc9kk5(v=vs.100))

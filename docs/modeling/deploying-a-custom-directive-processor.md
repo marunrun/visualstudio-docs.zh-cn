@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - text templates, custom directive processors
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 83edb231819a47c3c8a6f7a1943ae9086e06467d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 8a10252d8465373c8637681763e59511b1e2d621
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653884"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596666"
 ---
 # <a name="deploying-a-custom-directive-processor"></a>部署自定义指令处理器
 
@@ -54,7 +54,7 @@ ms.locfileid: "72653884"
 
          **内容类型** = **VSPackage**
 
-         *当前项目*\<**源项目** =  >
+         *当前项目*\<**源项目** = >
 
     2. 单击 "**所选版本**"，然后检查要在其中使用指令处理器的安装类型。
 
@@ -66,7 +66,7 @@ ms.locfileid: "72653884"
 
     2. 在解决方案资源管理器中，选中该文件并将其属性设置如下：
 
-         @No__t_1**内容** **生成操作**
+         **生成操作** = **内容**
 
          **复制到输出目录** = **始终复制**
 
@@ -89,11 +89,11 @@ ms.locfileid: "72653884"
 
 5. 将下列引用添加到该项目中：
 
-    - **VisualStudio. TextTemplating. \***
+    - **Microsoft.VisualStudio.TextTemplating.\*.0**
 
-    - **VisualStudio. TextTemplating. \***
+    - **Microsoft.VisualStudio.TextTemplating.Interfaces.\*.0**
 
-    - **VisualStudio. TextTemplating. Vshost.exe. \***
+    - **Microsoft.VisualStudio.TextTemplating.VSHost.\*.0**
 
 6. 将自定义指令处理器类添加到项目。
 
@@ -124,7 +124,7 @@ ms.locfileid: "72653884"
 
 - `IsDirectiveSupported` 方法在传递 `true` 的名称时必须返回 `CustomDirective`。
 
-- 如果在 "扩展管理器" 中看不到该扩展，但是系统将不允许安装该扩展，请从%Localappdata%\Microsoft\VisualStudio 中删除该扩展， **\\ \* .0 \ 扩展 \\** 。
+- 如果在 "扩展管理器" 中看不到该扩展，但是系统将不允许安装该扩展，请从%Localappdata%\Microsoft\VisualStudio 中删除该扩展， **\\\*.0 \ 扩展\\** 。
 
 - 打开 .vsix 文件并检查其内容。 若要打开该文件，请将文件扩展名更改为 .zip。 确认该文件包含 .dll、.pkgdef 和 extension.vsixmanifest 文件。 extension.vsixmanifest 文件的 SupportedProducts 节点应包含相应的列表，“内容”节点下还应包含 VsPackage 节点：
 
@@ -164,7 +164,7 @@ ms.locfileid: "72653884"
 
 2. 在 regedit 中，定位到
 
-    **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio \\ \* 0 \ TextTemplating\DirectiveProcessors**
+    **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\\\*.0\TextTemplating\DirectiveProcessors**
 
     如果要在 Visual Studio 的实验版本中安装指令处理器，请在 "11.0" 后插入 "Exp"。
 
@@ -182,20 +182,20 @@ ms.locfileid: "72653884"
 
    如果自定义指令处理器不在 GAC 中，则注册表子项应如下表所示：
 
-|“属性”|键入|数据|
+|Name|类型|数据|
 |-|-|-|
 |(默认)|REG_SZ|(未设置值)|
-|实例|REG_SZ|**\<Namespace 名称 >。\<Class 名称 >**|
-|CodeBase|REG_SZ|**\<Your 路径 > \\ < 程序集名称 \>**|
+|类|REG_SZ|**\<命名空间名称 >。\<类名称 >**|
+|CodeBase|REG_SZ|**\<路径 >\\< 程序集名称\>**|
 
  如果程序集在 GAC 中，则注册表子项应如下表所示：
 
-|“属性”|键入|数据|
+|Name|类型|数据|
 |-|-|-|
 |(默认)|REG_SZ|(未设置值)|
-|实例|REG_SZ|\<**完全限定的类名**>|
+|类|REG_SZ|\<**完全限定的类名**>|
 |Assembly|REG_SZ|\<**GAC 中的程序集名称**>|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [创建自定义 T4 文本模板指令处理器](../modeling/creating-custom-t4-text-template-directive-processors.md)

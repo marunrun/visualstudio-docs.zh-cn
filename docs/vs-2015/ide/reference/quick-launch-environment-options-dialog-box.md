@@ -15,12 +15,12 @@ caps.latest.revision: 15
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 2439f280ee590f1b13e339b69c6f3f147bb1ea39
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: abd8f8e9ee35c234a79af74199b11d5491e6fbee
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74297802"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851638"
 ---
 # <a name="quick-launch-environment-options-dialog-box"></a>“选项”对话框 ->“环境”->“快速启动”
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "74297802"
 ## <a name="show-previous-results"></a>显示以前的结果
  默认情况下，搜索会话之间不保留你输入的搜索词。 如果搜索某一个词，将光标移动到“快速启动”区域外，然后返回，则搜索字符串将被清除。 要保留搜索结果，请转到“选项”对话框，选择“快速启动”，然后选择“快速启动激活时显示上一次搜索的搜索结果” 复选框。 下一次搜索时，停留在快速启动区域内，然后返回，则快速启动将保留上次使用的搜索词并显示搜索结果。
 
- 有关使用“快速启动”的最新提示和技巧，请参阅 [Visual Studio 博客](https://go.microsoft.com/fwlink/?LinkId=236054)。
+ 有关使用“快速启动”的最新提示和技巧，请参阅 [Visual Studio 博客](https://blogs.msdn.com/b/visualstudio/)。
 
 ## <a name="see-also"></a>请参阅
- [General User Interface Elements (Visual Studio)](../../ide/reference/general-user-interface-elements-visual-studio.md) [Environment Options Dialog Box](../../ide/reference/environment-options-dialog-box.md)
+ [常规用户界面元素（Visual Studio）](../../ide/reference/general-user-interface-elements-visual-studio.md) ["环境选项" 对话框](../../ide/reference/environment-options-dialog-box.md)

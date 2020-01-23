@@ -4,19 +4,19 @@ ms.date: 11/15/2018
 ms.technology: vs-ide-general
 ms.custom: get-started
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 554311f7b7af5c104b48f5a4901677595d60ab41
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 5cf5f8d3660abcf941eb5cc429b8f190459d9c56
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72647825"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596042"
 ---
 # <a name="welcome-to-the-visual-studio-ide--visual-basic"></a>欢迎使用 Visual Studio IDE | Visual Basic
 
@@ -237,7 +237,7 @@ Visual Studio 中的一些常用功能可帮助你在开发软件时提高工作
 
 2. 在菜单栏中，选择“工具” > “选项”，打开“选项”对话框    。
 
-3. 在“环境” > “常规”选项页上，将选择的“颜色主题”更改为“深色”，然后选择“确定”      。
+3. 在“环境”   > “常规”  选项页上，将选择的“颜色主题”  更改为“深色”  ，然后选择“确定”  。
 
    ![将 Visual Studio 中的“颜色主题”更改为“深色”](media/change-color-theme.png)
 
@@ -277,7 +277,7 @@ Visual Studio 中的一些常用功能可帮助你在开发软件时提高工作
 
 ::: moniker range="vs-2017"
 
-1. 在 Visual Studio 菜单栏上，依次选择 **“文件”** >“新建项目”  。
+1. 在 Visual Studio 菜单栏上，依次选择“文件”>“新建项目”   。
 
    ![菜单栏上的“文件”>“新建项目”](media/file-new-project-menu.png)
 
@@ -341,7 +341,7 @@ Visual Studio 中的一些常用功能可帮助你在开发软件时提高工作
 
 ::: moniker range=">=vs-2019"
 
-1. 在 Visual Studio 菜单栏上，依次选择 **“文件”** >“新建项目”  。
+1. 在 Visual Studio 菜单栏上，依次选择“文件”>“新建项目”   。
 
    ![菜单栏上的“文件”>“新建项目”](media/vs-2019/file-new-project.png)
 

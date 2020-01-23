@@ -3,17 +3,17 @@ title: 键盘和鼠标快捷方式
 description: 本文包含 Visual Studio 中键盘和鼠标快捷方式的提示，这些快捷方式有助于提高工作效率。
 ms.date: 11/02/2018
 ms.topic: reference
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7cbe2ddd87f867768c6fd7c041f6b88fbe88c44f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 71116fbc05eade8ffb89c38a922106f375b86021
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72666744"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75585725"
 ---
 # <a name="shortcut-tips-for-visual-studio"></a>Visual Studio 的快捷方式提示
 
@@ -43,9 +43,9 @@ ms.locfileid: "72666744"
 
 |任务|快捷键|
 |-|-|
-|解决方案资源管理器搜索| Ctrl+  ;|
-|在任何工具窗口中将焦点置于搜索框中（编辑器除外）| Alt+`  （工具窗口有焦点时）|
-|搜索 Visual Studio|Ctrl+Q  |
+|解决方案资源管理器搜索|**Ctrl**+ **;**|
+|在任何工具窗口中将焦点置于搜索框中（编辑器除外）|**Alt**+ **`** （工具窗口有焦点时）|
+|搜索 Visual Studio|**Ctrl**+**Q**|
 |搜索框结果筛选器|@opt - 选项<br />@cmd - 命令<br />@mru - 最近使用<br />@doc - 打开文档|
 |在工具选项中搜索| Ctrl+  E|
 

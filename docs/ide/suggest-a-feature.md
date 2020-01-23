@@ -8,28 +8,28 @@ ms.author: seiyer
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4da08c2a7fed28b7f4ca75770682673bf58e30c3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3af6d0b7b9f211fb9d0aa0a4b9a96b618081b89e
+ms.sourcegitcommit: 2148f3fd69569d8ec54fd21a66370932ce610ce4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62951015"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74853511"
 ---
-# <a name="overview-suggest-a-feature"></a>概述：功能建议
+# <a name="suggest-a-feature-for-visual-studio"></a>建议 Visual Studio 功能
 
 [Visual Studio 开发人员社区](https://developercommunity.visualstudio.com)除了提供当前的问题报告功能，还引入了全新的功能建议体验。 这是一种可用来直接参与 Visual Studio 工程工作流的新方式。
 
 ![开发者社区中的“功能建议”按钮](media/suggest-a-feature/suggest-feature-button.png)
 
-还可以直接在 Visual Studio 中提交功能建议，方法是从 Visual Studio 主窗口右上角附近的“提供反馈”图标中选择“提供建议”：
+还可以直接在 Visual Studio 中提交功能建议，方法是从 Visual Studio 主窗口右上角附近的“提供反馈”图标中选择“提供建议”   ：
 
 ![Visual Studio 中的“提供建议”菜单](media/suggest-a-feature/provide-suggestion.png)
 
-选择“提供建议”会转到[开发人员社区](https://developercommunity.visualstudio.com)，可在其中输入建议。
+选择“提供建议”会转到[开发人员社区](https://developercommunity.visualstudio.com)，可在其中输入建议  。
 
 ## <a name="user-voice"></a>UserVoice
 
-到目前为止，VisualStudio 用户在 User Voice 上提交新的功能建议。 通过向开发人员社区添加“功能建议”功能，可在同一个位置留存针对 Visual Studio 产品团队的所有反馈。
+到目前为止，VisualStudio 用户在 User Voice 上提交新的功能建议。 通过向开发人员社区添加“功能建议”功能，可在同一个位置留存针对 Visual Studio 产品团队的所有反馈  。
 
 User Voice 网站设为只读模式。 可以根据需要查看上下文，但所有新功能建议须在开发人员社区中提交。
 
@@ -45,13 +45,13 @@ User Voice 网站设为只读模式。 可以根据需要查看上下文，但�
 
 ![开发人员社区中功能建议的“新”状态](../ide/media/SuggestStates/New.jpg)
 
-“新”表示功能建议是由你或其他人新提出的， 尚未对功能建议采取任何措施。 前线工作人员会进行一些初步检查，以确保可进一步处理功能建议。 我们大约会在五个工作日内予以回复，同时告知后续步骤。
+“新”  表示功能建议是由你或其他人新提出的， 尚未对功能建议采取任何措施。 前线工作人员会进行一些初步检查，以确保可进一步处理功能建议。 我们大约会在五个工作日内予以回复，同时告知后续步骤。
 
 - - -
 
 ![开发人员社区中功能建议的“正在评审”状态](../ide/media/SuggestStates/UnderReview.jpg)
 
-“正在评审”表示功能建议已排入优先级设定队列。 我们会在考虑产品路线图的同时，设定功能建议的优先级，以为更广泛的开发人员社区创造最大价值。
+“正在评审”  表示功能建议已排入优先级设定队列。 我们会在考虑产品路线图的同时，设定功能建议的优先级，以为更广泛的开发人员社区创造最大价值。
 
 即使无法立即采纳新功能建议，我们也会继续监视功能建议 90 天左右，让社区参与讨论，然后决定后续步骤。
 
@@ -59,31 +59,31 @@ User Voice 网站设为只读模式。 可以根据需要查看上下文，但�
 
 ![开发人员社区中功能建议的“已划入路线图”状态](../ide/media/SuggestStates/OnRoadmap.jpg)
 
-“已划入路线图”表示功能建议有广泛的社区影响力，并有助于提升产品体验。 我们已在路线图上为它分配了时间。 并告知你最新进度。
+“已划入路线图”  表示功能建议有广泛的社区影响力，并有助于提升产品体验。 我们已在路线图上为它分配了时间。 并告知你最新进度。
 
 - - -
 
 ![开发人员社区中功能建议的“需要更多信息”状态](../ide/media/SuggestStates/NeedMoreInfo.jpg)
 
-标记有“需要更多信息”的功能建议表示，需要更多详细信息，才能更好地了解功能建议。 请查看注释，我们会在其中要求你提供更多信息，以便我们深入了解功能建议。
+标记有“需要更多信息”  的功能建议表示，需要更多详细信息，才能更好地了解功能建议。 请查看注释，我们会在其中要求你提供更多信息，以便我们深入了解功能建议。
 
 - - -
 
 ![开发人员社区中功能建议的“已关闭 - 其他产品”状态](../ide/media/SuggestStates/ClosedOtherProduct.jpg)
 
-“已关闭 - 其他产品”表示暂无法处理功能建议，因为它不适用于所针对的产品。 不过，我们会详细指明可以针对哪个相应产品分享你的新功能建议。
+“已关闭 - 其他产品”表示暂无法处理功能建议，因为它不适用于所针对的产品。  不过，我们会详细指明可以针对哪个相应产品分享你的新功能建议。
 
 - - -
 
 ![开发人员社区中功能建议的“已关闭 - 重复”状态](../ide/media/SuggestStates/ClosedDuplicate.jpg)
 
-“已关闭 - 重复”表示其他人已提出相同的功能建议。 请查看注释，以查找现有功能建议的链接。 投票和注释已合并到原始功能建议中。 请关注原始功能建议。
+“已关闭 - 重复”  表示其他人已提出相同的功能建议。 请查看注释，以查找现有功能建议的链接。 投票和注释已合并到原始功能建议中。 请关注原始功能建议。
 
 - - -
 
 ![开发人员社区中功能建议的“已关闭 - 信息不足”状态](../ide/media/SuggestStates/ClosedNotEnoughInfo.jpg)
 
-“已关闭 - 信息不足”表示经过多次尝试后，我们获得的信息仍不足，无法全面了解你的功能建议。 我们不得不关闭新功能建议，因为在此阶段无法进一步采取任何措施。
+“已关闭 - 信息不足”  表示经过多次尝试后，我们获得的信息仍不足，无法全面了解你的功能建议。 我们不得不关闭新功能建议，因为在此阶段无法进一步采取任何措施。
 
 找到了所需的信息后，该怎么办？ 找到其他信息后，可发出重新激活票证的请求。
 
@@ -91,13 +91,13 @@ User Voice 网站设为只读模式。 可以根据需要查看上下文，但�
 
 ![开发人员社区中功能建议的“已完成 - 预览”状态](../ide/media/SuggestStates/CompletedPreview.jpg)
 
-“已完成 - 预览”表示已实现功能建议。 可单击注释中的链接，下载包含功能建议的 Visual Studio 预览版。
+“已完成 - 预览”  表示已实现功能建议。 可单击注释中的链接，下载包含功能建议的 Visual Studio 预览版。
 
 - - -
 
 ![开发人员社区中功能建议的“已完成 - 发布”状态](../ide/media/SuggestStates/CompletedRelease.jpg)
 
-“已完成 - 已发布”表示新功能建议已在最新产品更新中发布。 可单击注释中的链接，下载 Visual Studio 更新。
+“已完成 - 已发布”  表示新功能建议已在最新产品更新中发布。 可单击注释中的链接，下载 Visual Studio 更新。
 
 - - -
 

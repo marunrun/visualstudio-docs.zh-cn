@@ -3,17 +3,17 @@ title: XML 编辑器的 IntelliSense 功能
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 2b26f214-cc3a-46bf-b260-14eb8e599182
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5a44af076e8663e525e33727a24aa93f9391f4b5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 609684452190bf7471f90fee75f66dbb2fcbec8e
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72603953"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592381"
 ---
 # <a name="xml-editor-intellisense-features"></a>XML 编辑器 IntelliSense 功能
 
@@ -87,7 +87,7 @@ ms.locfileid: "72603953"
 
 ## <a name="brace-matching"></a>大括号匹配
 
-“XML 编辑器”提供括号突出显示功能，针对您刚封闭的元素提供即时反馈。 你还可以使用键盘快捷方式（**Ctrl** + **]** ）从一个大括号跳转到匹配的大括号。
+“XML 编辑器”提供括号突出显示功能，针对您刚封闭的元素提供即时反馈。 你还可以使用键盘快捷方式（**Ctrl**+ **]** ）从一个大括号跳转到匹配的大括号。
 
 “XML 编辑器”对下列项执行此操作：
 
@@ -111,7 +111,7 @@ ms.locfileid: "72603953"
 
 "**杂项**" 页的 "**自动插入**" 部分控制以下行为：
 
-|“属性”|描述|
+|Name|描述|
 |-|-----------------|
 |结束标记|为新元素插入结束标记。|
 |属性引号|在输入新特性名时插入特性值引号。|
@@ -125,7 +125,7 @@ ms.locfileid: "72603953"
 
 3. 对 "**自动插入**" 部分进行任何更改，然后单击 **"确定"** 。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [XML 编辑器](../xml-tools/xml-editor.md)
 - [使用 IntelliSense](../ide/using-intellisense.md)

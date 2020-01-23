@@ -14,12 +14,12 @@ caps.latest.revision: 39
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 6a816981b41dd8ca2a2119bbd99c776c6a7e2436
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: e9e8b53c5bd4d6045d7582c24be865ae216f1114
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74296890"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851092"
 ---
 # <a name="visual-studio-multi-targeting-overview"></a>Visual Studio 多目标概述
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "74296890"
 > 在 Visual Studio Express 版中，不能通过“新建项目”  对话框设置目标框架。
 
 ## <a name="resolving-system-and-user-assembly-references"></a>解析系统和用户程序集引用
- 若要以 .NET Framework 版本为目标，必须先安装相应的程序集引用。 .NET Framework 2.0 版、3.0 版和 3.5 版的程序集引用包含在 .NET Framework 3.5 SP1 中，可从 [Microsoft 下载中心、Microsoft Visual Studio](https://www.microsoft.com/download/details.aspx?id=25150) 网站进行下载。 也可在 [Visual Studio 下载](https://go.microsoft.com/fwlink/?LinkId=179687)网站下载 .NET Framework 3.5 Client Profile、.NET Framework 4、.NET Framework 4 Client Profile 和 Silverlight 的程序集引用。
+ 若要以 .NET Framework 版本为目标，必须先安装相应的程序集引用。 .NET Framework 2.0 版、3.0 版和 3.5 版的程序集引用包含在 .NET Framework 3.5 SP1 中，可从 [Microsoft 下载中心、Microsoft Visual Studio](https://www.microsoft.com/download/details.aspx?id=25150) 网站进行下载。 也可在 [Visual Studio 下载](https://msdn.microsoft.com/vstudio/bb984878.aspx)网站下载 .NET Framework 3.5 Client Profile、.NET Framework 4、.NET Framework 4 Client Profile 和 Silverlight 的程序集引用。
 
 > [!NOTE]
 > .NET Framework 客户端配置文件是 .NET Framework 的子集，可提供一组有限的库和功能。 有关客户端配置文件的详细信息，请参阅 [.NET Framework Client Profile](https://msdn.microsoft.com/library/f0219919-1f02-4588-8704-327a62fd91f1)。

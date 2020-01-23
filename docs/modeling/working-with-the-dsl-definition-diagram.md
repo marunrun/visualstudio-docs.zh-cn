@@ -11,23 +11,23 @@ helpviewer_keywords:
 - Domain-Specific Language Tools, Show Map Lines
 - Domain-Specific Language Tools, Show As Class
 - Domain-Specific Language Tools, Bring Tree Here
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c0e65b47baba985012dccad0c838c65d2d8bf2ef
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 53bbfbca975625a8f56f7519a15ac1670b94861b
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748151"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76115286"
 ---
 # <a name="working-with-the-dsl-definition-diagram"></a>使用 DSL 定义图表
-@No__t_0 定义的关系图是用于定义域特定语言的重要工具。 你可以将元素添加到域模型并定义关系图上的关系，也可以修改关系图的布局以使其更具可读性。
+[!INCLUDE[dsl](../modeling/includes/dsl_md.md)] 定义的关系图是用于定义域特定语言的重要工具。 你可以将元素添加到域模型并定义关系图上的关系，也可以修改关系图的布局以使其更具可读性。
 
 ## <a name="the-layout-of-the-diagram"></a>关系图的布局
- @No__t_0 定义关系图有两个分区：**类和关系**分区以及**关系图元素**分区。 **类和关系**分区显示域类、域关系和继承。 **关系图元素**分区显示了形状类、连接器类、泳道类和生成的设计器关系图。
+ [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] 定义关系图有两个分区：**类和关系**分区以及**关系图元素**分区。 **类和关系**分区显示域类、域关系和继承。 **关系图元素**分区显示了形状类、连接器类、泳道类和生成的设计器关系图。
 
  域类可以出现在 "**类和关系**" 分区的多个位置中。 如果域类是其他域类的基类，则域类定义将显示继承树；如果域类是嵌入或引用关系的源，则其定义将显示关系树。 域类占位符将显示为嵌入或引用关系的目标。 默认情况下，将显示占位符元素，并折叠 "**域属性**" 隔离舱。 它们不显示继承，也不显示嵌入或引用关系。
 
@@ -70,6 +70,6 @@ ms.locfileid: "72748151"
 ### <a name="show-as-class"></a>显示为类
  如果域关系具有派生关系，或者它具有与其他域关系的嵌入或引用关系，则可以通过右键单击该关系，然后单击 "**显示为类**"，将该关系显示为类。 将显示 "**域属性**" 隔离舱的关系，并显示继承和关系树。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [域特定语言工具术语表](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

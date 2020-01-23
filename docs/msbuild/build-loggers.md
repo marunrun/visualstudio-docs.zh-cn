@@ -7,25 +7,25 @@ helpviewer_keywords:
 - MSBuild, logging
 - logging [MSBuild]
 ms.assetid: fa34810d-185a-4d22-92bd-9852915e5f1d
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9c5bb6bbd3d05c22b7615a027ac3fcf6aa686156
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2c82b7456e0fc497b753c87f7a4d6808c81d5ab2
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62823023"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75593403"
 ---
 # <a name="build-loggers"></a>生成记录器
-记录器提供一种方法，通过此方法可自定义生成的输出并显示消息、错误或警告以响应特定生成事件。 每个记录器作为 .NET 类实现，此类实现 Microsoft.Build.Framework.dll 程序集中定义的 <xref:Microsoft.Build.Framework.ILogger> 接口。
+记录器提供一种方法，通过此方法可自定义生成的输出并显示消息、错误或警告以响应特定生成事件。 每个记录器作为 .NET 类实现，此类实现 Microsoft.Build.Framework.dll 程序集中定义的 <xref:Microsoft.Build.Framework.ILogger> 接口  。
 
 在实现记录器时，有两种方法可供选择：
 
 - 直接实现 <xref:Microsoft.Build.Framework.ILogger> 接口。
-- 从 Microsoft.Build.Utilities.dll 程序集中定义的帮助程序类 <xref:Microsoft.Build.Utilities.Logger> 中派生类。 <xref:Microsoft.Build.Utilities.Logger> 实现 <xref:Microsoft.Build.Framework.ILogger>，并提供了一些 <xref:Microsoft.Build.Framework.ILogger> 成员的默认实现代码。
+- 从 Microsoft.Build.Utilities.dll 程序集中定义的帮助程序类 <xref:Microsoft.Build.Utilities.Logger> 中派生类  。 <xref:Microsoft.Build.Utilities.Logger> 实现 <xref:Microsoft.Build.Framework.ILogger>，并提供了一些 <xref:Microsoft.Build.Framework.ILogger> 成员的默认实现代码。
 
   本主题将介绍如何编写派生自 <xref:Microsoft.Build.Utilities.Logger> 的简单记录器，并在控制台上显示用于响应特定生成事件的消息。
 
@@ -40,14 +40,14 @@ ms.locfileid: "62823023"
 [!code-csharp[msbuild_SimpleConsoleLogger#3](../msbuild/codesnippet/CSharp/build-loggers_2.cs)]
 
 ## <a name="respond-to-logger-verbosity-values"></a>响应记录器详细信息值
-在某些情况下，如果 MSBuild.exe -verbosity 开关包含特定值，建议仅记录事件信息。 在此示例中，仅当 verbosity 开关设置的 <xref:Microsoft.Build.Utilities.Logger.Verbosity%2A> 属性为 <xref:Microsoft.Build.Framework.LoggerVerbosity>`Detailed` 时，<xref:Microsoft.Build.Framework.IEventSource.TargetStarted> 事件处理程序才记录消息。
+在某些情况下，如果 MSBuild.exe -verbosity  开关包含特定值，建议仅记录事件信息。 在此示例中，仅当 verbosity  开关设置的 <xref:Microsoft.Build.Utilities.Logger.Verbosity%2A> 属性为 <xref:Microsoft.Build.Framework.LoggerVerbosity>`Detailed` 时，<xref:Microsoft.Build.Framework.IEventSource.TargetStarted> 事件处理程序才记录消息。
 
 [!code-csharp[msbuild_SimpleConsoleLogger#4](../msbuild/codesnippet/CSharp/build-loggers_3.cs)]
 
 ## <a name="specify-a-logger"></a>指定记录器
-将记录器编译到程序集后，你需要告诉 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 在生成过程中使用该记录器。 为此，可结合使用 -logger 开关和 MSBuild.exe。 有关可用于 MSBuild.exe 的开关的详细信息，请参阅[命令行参考](../msbuild/msbuild-command-line-reference.md)。
+将记录器编译到程序集后，你需要告诉 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 在生成过程中使用该记录器。 为此，可结合使用 -logger  开关和 MSBuild.exe  。 有关可用于 MSBuild.exe 的开关的详细信息，请参阅[命令行参考](../msbuild/msbuild-command-line-reference.md)  。
 
-以下命令行生成项目 MyProject.csproj，并使用在 SimpleLogger.dll 中实现的记录器类。 -nologo 开关隐藏横幅和版权所有消息，-noconsolelogger 开关禁用默认的 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 控制台记录器。
+以下命令行生成项目 MyProject.csproj，并使用在 SimpleLogger.dll 中实现的记录器类   。 -nologo  开关隐藏横幅和版权所有消息，-noconsolelogger  开关禁用默认的 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 控制台记录器。
 
 ```cmd
 MSBuild -nologo -noconsolelogger -logger:SimpleLogger.dll
@@ -61,7 +61,7 @@ MSBuild -nologo -noconsolelogger -logger:SimpleLogger.dll -verbosity:Detailed
 
 ## <a name="example"></a>示例
 
-### <a name="description"></a>说明
+### <a name="description"></a>描述
 下面的示例包含记录器的完整代码。
 
 ### <a name="code"></a>代码
@@ -69,7 +69,7 @@ MSBuild -nologo -noconsolelogger -logger:SimpleLogger.dll -verbosity:Detailed
 
 ## <a name="example"></a>示例
 
-### <a name="description"></a>说明
+### <a name="description"></a>描述
 以下示例演示如何实现将日志写入到文件的记录器（而非在控制台窗口中显示记录器）。
 
 ### <a name="code"></a>代码

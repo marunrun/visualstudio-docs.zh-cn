@@ -3,17 +3,17 @@ title: XML 编辑器中的 XML 文档验证
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: abb353bd-6c4a-4978-b03b-a8c245bbfb55
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2c4133268f2e07753ab7ecd276bf92712484e9f5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 389328e97f29d97962353e86f73c39c7c5459bfc
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72604051"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592407"
 ---
 # <a name="xml-document-validation"></a>XML 文档验证
 
@@ -43,6 +43,6 @@ XML 编辑器检查 XML 1.0 语法，还会在您键入时执行数据验证。 
 ## <a name="xml-schema-xsd-files"></a>XML 架构（XSD）文件
 编辑 XML 架构文件时，位于架构缓存中的*xsdschema*文件用于验证。 验证错误以蓝色的波浪形下划线显示。 任何编译错误也会显示为红色的波浪形下划线。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [XML 编辑器](../xml-tools/xml-editor.md)

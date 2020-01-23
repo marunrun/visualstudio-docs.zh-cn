@@ -6,18 +6,18 @@ ms.author: ghogen
 ms.date: 10/16/2019
 ms.technology: vs-azure
 ms.topic: quickstart
-ms.openlocfilehash: 8083d2d6446c872791501f76cb0167a92a9ef660
-ms.sourcegitcommit: 6244689e742e551e7b6933959bd42df56928ece3
+ms.openlocfilehash: af859c1c06820aa477869f6968e9c652bd525de6
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72516439"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75916751"
 ---
 # <a name="quickstart-use-docker-with-a-react-single-page-app-in-visual-studio"></a>快速入门：将 Docker 与 Visual Studio 中的 React 单页面应用结合使用
 
 借助 Visual Studio，可以轻松地生成、调试和运行容器化的 ASP.NET Core 应用（包括使用客户端 JavaScript 的应用，如 React.js 单页面应用）并将其发布到 Azure 容器注册表 (ACR)、Docker 中心、Azure 应用服务或你自己的容器注册表。 在本文中，我们将发布到 ACR。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 ::: moniker range="vs-2017"
 * [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
@@ -47,7 +47,7 @@ ms.locfileid: "72516439"
 
    ![新 React.js 项目的屏幕截图](media/container-tools-react/vs2017/new-react-project.png)
 
-1. 右键单击项目节点，然后选择“添加”  >“Docker 支持”  ，将 Dockerfile 添加到你的项目中。
+1. 右键单击项目节点，然后选择“添加”>“Docker 支持”，将 Dockerfile 添加到你的项目中   。
 
    ![添加 Docker 支持](media/container-tools-react/vs2017/add-docker-support.png)
 
@@ -59,7 +59,7 @@ ms.locfileid: "72516439"
 
    ![新 React.js 项目的屏幕截图](media/container-tools-react/vs2019/new-react-project.png)
 
-1. 右键单击项目节点，然后选择“添加”  >“Docker 支持”  ，将 Dockerfile 添加到你的项目中。
+1. 右键单击项目节点，然后选择“添加”>“Docker 支持”，将 Dockerfile 添加到你的项目中   。
 
    ![添加 Docker 支持](media/container-tools-react/vs2017/add-docker-support.png)
 
@@ -72,7 +72,7 @@ ms.locfileid: "72516439"
 
 Dockerfile，用于创建最终 Docker 映像的方案，已在项目中创建  。 请参阅 [Dockerfile 引用](https://docs.docker.com/engine/reference/builder/)，了解其中的命令。
 
-在项目中打开“Dockerfile”  ，并添加以下代码行以将 Node.js 10.x 安装到容器中。 请务必在第一部分中添加这些行，以将 Node 包管理器 npm.exe   的安装添加到后续步骤中使用的基础映像中。
+在项目中打开“Dockerfile”  ，并添加以下代码行以将 Node.js 10.x 安装到容器中。 请务必在第一部分中添加这些行，以将 Node 包管理器 npm.exe  的安装添加到后续步骤中使用的基础映像中。
 
 ```
 RUN curl -sL https://deb.nodesource.com/setup_10.x |  bash -
@@ -222,12 +222,12 @@ cf5d2ef5f19a        webapplication37:dev   "tail -f /dev/null"   2 minutes ago  
 1. 选择“创建新的 Azure 容器注册表”并单击“发布”   。
 1. 在“创建新 Azure 容器注册表”中填写所需的值  。
 
-    | 设置      | 建议的值  | 说明                                |
+    | 设置      | 建议的值  | 描述                                |
     | ------------ |  ------- | -------------------------------------------------- |
     | **DNS 前缀** | 全局唯一名称 | 用于唯一标识容器注册表的名称。 |
     | **订阅** | 选择订阅 | 要使用的 Azure 订阅。 |
     | **[资源组](/azure/azure-resource-manager/resource-group-overview)** | myResourceGroup |  要在其中创建容器注册表的资源组的名称。 选择“新建”  创建新的资源组。|
-    | **[SKU](https://docs.microsoft.com/azure/container-registry/container-registry-skus)** | 标准 | 容器注册表的服务层  |
+    | **[SKU](/azure/container-registry/container-registry-skus)** | 标准 | 容器注册表的服务层  |
     | **注册表位置** | 靠近你的位置 | 在你附近或将使用容器注册表的其他服务附近的[区域](https://azure.microsoft.com/regions/)中，选择位置。 |
 
     ![Visual Studio 的创建 Azure 容器注册表对话框][0]

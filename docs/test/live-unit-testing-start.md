@@ -4,17 +4,17 @@ ms.date: 08/31/2017
 ms.topic: conceptual
 helpviewer_keywords:
 - Live Unit Testing
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: a5b136c91873c0af60705ea361a19e53f28e06b0
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 748dfc592fbf7a3b9737e9f418362067b92bb8ff
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653060"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594287"
 ---
 # <a name="get-started-with-live-unit-testing"></a>Live Unit Testing 入门
 
@@ -24,7 +24,7 @@ Live Unit Testing 可用于测试针对 .NET Framework 或 .NET Core 的解决�
 
 可从 GitHub 上的 [MicrosoftDocs/visualstudio-docs](https://github.com/MicrosoftDocs/visualstudio-docs/tree/master/docs/test/samples/csharp/UtilityLibraries/) 存储库下载完整的 C# 解决方案。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 本教程需要已安装具有 .NET Core 跨平台开发工作负载的 Visual Studio Enterprise Edition  。
 

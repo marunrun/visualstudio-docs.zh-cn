@@ -11,17 +11,17 @@ helpviewer_keywords:
 - ADO.NET Data Services, Visual Studio
 - WCF data services in Visual Studio
 ms.assetid: da66ad1b-a25d-485c-af13-2d18f0422e3d
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: c17872b7fcfd0ecfa7c927880980fce79f432451
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 9abdeee9a785a8bccf6cbb580c87bae4fa313036
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648080"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75585985"
 ---
 # <a name="walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework"></a>演练：使用 WPF 和 Entity Framework 创建 WCF Data Service
 本演练演示如何创建一个承载于 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web 应用程序中的简单 [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)]，然后从 Windows 窗体应用程序中访问它。
@@ -32,7 +32,7 @@ ms.locfileid: "72648080"
 
 - 创建一个表示 Northwind 数据库中的 `Customers` 表的 [!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)]。
 
-- 创建 [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)]。
+- 创建[!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)]。
 
 - 创建一个客户端应用程序，并添加对 [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)]的引用。
 
@@ -40,7 +40,7 @@ ms.locfileid: "72648080"
 
 - 可以选择向应用程序添加筛选功能。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
 本演练使用 SQL Server Express LocalDB 和 Northwind 示例数据库。
 
 1. 如果没有 SQL Server Express 的 LocalDB，请从[SQL Server Express 下载 "页](https://www.microsoft.com/sql-server/sql-server-editions-express)或通过**Visual Studio 安装程序**安装它。 在**Visual Studio 安装程序**中，可以将 SQL Server Express LocalDB 作为**数据存储和处理**工作负荷的一部分进行安装，也可以作为单个组件安装。
@@ -84,7 +84,7 @@ ms.locfileid: "72648080"
 
 3. 在 "**名称**" 文本框中，输入 `NorthwindModel`，然后选择 "**添加**" 按钮。
 
-     此时将显示实体数据模型向导。
+     此时将出现“实体数据模型向导”。
 
 4. 在实体数据模型向导的“选择模型内容”页上，选择“数据库的 EF 设计器”项，然后选择“下一步”按钮。
 
@@ -132,7 +132,7 @@ ms.locfileid: "72648080"
      [!code-vb[WCFDataServiceWalkthrough#2](../data-tools/codesnippet/VisualBasic/walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework_2.vb)]
      [!code-csharp[WCFDataServiceWalkthrough#2](../data-tools/codesnippet/CSharp/walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework_2.cs)]
 
-6. 在菜单栏上，选择 "**调试**"  >  "开始执行（**不调试**）" 以运行服务。 此时将打开一个浏览器窗口，其中显示了该服务的 XML 架构。
+6. 在菜单栏上，选择 "**调试**" > "开始执行（**不调试**）" 以运行服务。 此时将打开一个浏览器窗口，其中显示了该服务的 XML 架构。
 
 7. 在**地址**栏中，在**NorthwindCustomers**的 URL 的末尾输入 `Customers`，然后选择**enter**键。
 
@@ -178,7 +178,7 @@ ms.locfileid: "72648080"
 
 ### <a name="to-enable-data-binding-to-the-service"></a>启用对服务的数据绑定
 
-1. 在菜单栏上，选择 "**查看** > **其他 Windows**  > **数据源**"。
+1. 在菜单栏上，选择 "**查看** > **其他 Windows** > **数据源**"。
 
    “数据源”窗口随即打开。
 
@@ -236,7 +236,7 @@ ms.locfileid: "72648080"
 
 8. 在步骤 4 中添加的代码中，选择 `http://localhost:53161/NorthwindCustomers.svc/` 并使用刚刚复制的 URL 替换它。
 
-9. 在菜单栏上，选择 "**调试**"  >  "**开始调试**" 以运行应用程序。 显示客户信息。
+9. 在菜单栏上，选择 "**调试**" > "**开始调试**" 以运行应用程序。 显示客户信息。
 
    现在，你有了一个可以使用的应用程序，该应用程序将显示 NorthwindCustomers 服务中的客户的列表。 如果希望通过该服务公开其他数据，则可以修改[!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)]以包括 Northwind 数据库中的其他表。
 
@@ -282,11 +282,11 @@ ms.locfileid: "72648080"
 
 4. 在以上代码中，使用 `http://localhost:53161/NorthwindCustomers.svc` 事件处理程序中的 URL 替换 `Form1_Load`。
 
-5. 在菜单栏上，选择 "**调试**"  >  "**开始调试**" 以运行应用程序。
+5. 在菜单栏上，选择 "**调试**" > "**开始调试**" 以运行应用程序。
 
 6. 在文本框中，输入“London”，然后选择该按钮。 将仅显示来自 London 的客户。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Studio 中的 Windows Communication Foundation 服务和 WCF 数据服务](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)
 - [如何：添加、更新或删除 WCF Data Service 引用](../data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference.md)

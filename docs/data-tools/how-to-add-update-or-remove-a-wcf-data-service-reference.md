@@ -1,5 +1,5 @@
 ---
-title: 如何：添加、更新或移除 WCF 数据服务引用
+title: 如何：添加、更新或删除 WCF 数据服务引用
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,17 +9,17 @@ helpviewer_keywords:
 - ADO.NET service references
 - ADO.NET Data Service reference
 ms.assetid: 892ebf37-3af4-472e-8744-92837677d611
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 8f19fbfb82a74de0f0eedf784483ecaeccc9a5fc
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c60dffc7bb47336ae36e64a366def3c4dce06213
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648424"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586579"
 ---
 # <a name="how-to-add-update-or-remove-a-wcf-data-service-reference"></a>如何：添加、更新或删除 WCF 数据服务引用
 *服务引用*允许项目访问一个或多个 [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)]。 使用 "**添加服务引用**" 对话框可以在本地、局域网或 Internet 上搜索当前解决方案中的 [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)]。
@@ -70,7 +70,7 @@ ms.locfileid: "72648424"
     将生成服务客户端（代理），并将描述服务的元数据添加到*app.config*文件中。
 
 ## <a name="update-a-service-reference"></a>更新服务引用
-@No__t_0 的实体数据模型有时会发生变化。 如果发生这种情况，则必须更新服务引用。
+[!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] 的实体数据模型有时会发生变化。 如果发生这种情况，则必须更新服务引用。
 
 ### <a name="to-update-a-service-reference"></a>更新服务引用
 
@@ -90,6 +90,6 @@ ms.locfileid: "72648424"
     > [!NOTE]
     > 引用服务引用的任何代码都必须手动删除。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Studio 中的 Windows Communication Foundation 服务和 WCF 数据服务](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)

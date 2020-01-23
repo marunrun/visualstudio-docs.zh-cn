@@ -20,19 +20,19 @@ caps.latest.revision: 15
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: c66a25830e34571648727bd6ec71791e5e637ca8
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 81bb9bcecf37d2ed3fca29a4edc57738732de1a5
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74294729"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75917282"
 ---
 # <a name="troubleshooting-specific-errors-in-clickonce-deployments"></a>ClickOnce 部署中的特定错误的疑难解答
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 本主题列出了在部署 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 应用程序时可能出现的以下常见错误，并提供解决每个问题的步骤。  
   
-## <a name="general-errors"></a>一般错误  
+## <a name="general-errors"></a>常规错误  
   
 #### <a name="when-you-try-to-locate-an-application-file-nothing-occurs-or-xml-renders-in-internet-explorer-or-you-receive-a-run-or-save-as-dialog-box"></a>当你尝试在 Internet Explorer 中找不到应用程序文件、任何内容或 XML 呈现时，或者你收到 "运行" 或 "另存为" 对话框  
  此错误可能是由于未在服务器或客户端上正确注册内容类型（也称为 MIME 类型）引起的。  
@@ -105,7 +105,7 @@ ms.locfileid: "74294729"
  如果你使用 URL 发布，请确保目标计算机已启用 FrontPage 服务器扩展。  
   
 #### <a name="error-message-unable-to-create-the-web-site-site-the-components-for-communicating-with-frontpage-server-extensions-are-not-installed"></a>错误消息：无法创建网站 "\<站点 >"。 未安装用于与 FrontPage 服务器扩展通信的组件。  
- 请确保在要发布的计算机上安装了 Microsoft Visual Studio Web 创作组件。 对于 Express 用户，默认情况下不安装此组件。 有关详细信息，请参阅 [http://go.microsoft.com/fwlink/?LinkId=102310](https://go.microsoft.com/fwlink/?LinkId=102310)。  
+ 请确保在要发布的计算机上安装了 Microsoft Visual Studio Web 创作组件。 对于 Express 用户，默认情况下不安装此组件。  
   
 #### <a name="error-message-could-not-find-file-microsoftwindowscommon-controls-version6000-culture-publickeytoken6595b64144ccf1df-processorarchitecture-typewin32"></a>错误消息：找不到文件 "6.0.0.0，Version =，Culture = *，PublicKeyToken = 6595b64144ccf1df，ProcessorArchitecture =\*，Type = win32"  
  当你尝试发布启用了视觉样式的 WPF 应用程序时，会出现此错误消息。 若要解决此问题，请参阅[如何：发布启用了视觉样式的 WPF 应用程序](../deployment/how-to-publish-a-wpf-application-with-visual-styles-enabled.md)。  

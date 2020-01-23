@@ -8,12 +8,12 @@ ms.assetid: 0b0afa22-3fca-4d59-908e-352464c1d903
 caps.latest.revision: 6
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 9fbba44ef5ac0e531198b3569008a260118aefcf
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: fd54c5e730f757a0e198ad7cf1d8577e686b9ea9
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74298372"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75845881"
 ---
 # <a name="roslyn-analyzers-and-code-aware-library-for-immutablearrays"></a>Roslyn 分析器和 ImmutableArrays 的代码识别库
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "74298372"
 
 - [Visual Studio SDK](../extensibility/visual-studio-sdk.md)。 你还可以在安装 Visual Studio 时，查看 "常用工具" 下的 Visual Studio 扩展性工具同时安装 SDK。 如果你已经安装了 Visual Studio，则还可以通过转到主菜单**文件&#124; "新建&#124;项目 ...** "，在左侧导航窗格中C#选择，然后选择 "扩展性" 来安装此 SDK。 选择 "**安装 Visual Studio 扩展性工具**" 痕迹导航项目模板时，会提示您下载并安装 SDK。
 
-- [.NET Compiler Platform （"Roslyn"） SDK](https://aka.ms/roslynsdktemplates)。 你还可以通过转到主菜单**文件&#124; "新建&#124;项目 ...** "，在左侧导航窗格中**C#** 选择，然后选择 "**扩展性**" 来安装此 SDK。 选择 "**下载 .NET COMPILER PLATFORM sdk**" 痕迹导航项目模板时，会提示您下载并安装 sdk。 此 SDK 包括[Roslyn Syntax Visualizer](https://github.com/dotnet/roslyn/wiki/Syntax%20Visualizer)。 此非常有用的工具可帮助你确定应在分析器中查找的代码模型类型。 分析器基础结构针对特定代码模型类型调入您的代码，因此，您的代码仅在必要时才执行，并且只能重点分析相关的代码。
+- [.NET Compiler Platform （"Roslyn"） SDK](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.NETCompilerPlatformSDK)。 你还可以通过转到主菜单**文件&#124; "新建&#124;项目 ...** "，在左侧导航窗格中**C#** 选择，然后选择 "**扩展性**" 来安装此 SDK。 选择 "**下载 .NET COMPILER PLATFORM sdk**" 痕迹导航项目模板时，会提示您下载并安装 sdk。 此 SDK 包括[Roslyn Syntax Visualizer](https://github.com/dotnet/roslyn/wiki/Syntax%20Visualizer)。 此非常有用的工具可帮助你确定应在分析器中查找的代码模型类型。 分析器基础结构针对特定代码模型类型调入您的代码，因此，您的代码仅在必要时才执行，并且只能重点分析相关的代码。
 
 ## <a name="whats-the-problem"></a>怎么了？
 假设您提供了一个库，其中包含 ImmutableArray （例如 <xref:System.Collections.Immutable.ImmutableArray%601?displayProperty=fullName>）支持。 C#开发人员对 .NET 阵列有很多经验。 然而，由于实现中使用的 ImmutableArrays 和优化技术的性质， C#开发人员 intuitions 会导致库用户编写破坏的代码，如下所述。 此外，在运行时，用户不会看到其错误，这不是在 Visual Studio 中通过 .NET 使用的质量经验。
@@ -102,7 +102,7 @@ context.RegisterSyntaxNodeAction(c => AnalyzeObjectCreation(c),
 internal const string Category = "Naming";
 ```
 
-将 `"Naming"` 更改为 `"API Guidance"`。
+更改`"Naming"`到`"API Guidance"`。
 
 接下来，使用**解决方案资源管理器**查找并打开项目中的资源 .resx 文件。 你可以为你的分析器、标题等提供说明。现在可以将所有这些值的值更改为 `“Don’t use ImmutableArray<T> constructor”`。 你可以在字符串中（{0}、{1}等）中放置字符串格式参数，然后在调用 `Diagnostic.Create()`时，可以提供要传递的参数的参数数组。
 

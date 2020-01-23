@@ -2,17 +2,17 @@
 title: T4 模板指令
 ms.date: 11/04/2016
 ms.topic: reference
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 410bc879ff4822f19436794d3cb99732be9d413e
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: f7ada5558cfdfaadca5793d9edc61f13a6d4d11b
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72983708"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591835"
 ---
 # <a name="t4-template-directive"></a>T4 模板指令
 
@@ -30,7 +30,7 @@ Visual Studio T4 文本模板通常以 `template` 指令开头，该指令指定
 
 ## <a name="compileroptions-attribute"></a>compilerOptions 特性
 
-示例:
+示例：
 
 `compilerOptions="optimize+"`
 
@@ -44,7 +44,7 @@ Visual Studio T4 文本模板通常以 `template` 指令开头，该指令指定
 
 ## <a name="culture-attribute"></a>culture 特性
 
-示例:
+示例：
 
 `culture="de-CH"`
 
@@ -58,7 +58,7 @@ Culture 特性指定将表达式块转换为文本时要使用的区域性。
 
 ## <a name="debug-attribute"></a>debug 特性
 
-示例:
+示例：
 
 ```
 debug="true"
@@ -68,7 +68,7 @@ debug="true"
 
 `true`
 
-`false`（默认值）
+`false`（默认）
 
 如果 `debug` 特性为 `true`，则中间代码文件将包含使调试器能够更精确地识别模板中出现中断或异常的位置的信息。
 
@@ -78,7 +78,7 @@ debug="true"
 
 ## <a name="hostspecific-attribute"></a>hostspecific 特性
 
-示例:
+示例：
 
 ```
 hostspecific="true"
@@ -88,7 +88,7 @@ hostspecific="true"
 
 `true`
 
-`false`（默认值）
+`false`（默认）
 
 `trueFromBase`
 
@@ -96,7 +96,7 @@ hostspecific="true"
 
 因为此属性的类型取决于宿主的类型，所以仅当编写只适用于特定宿主的文本模板时才有用。 它适用于[设计时模板](../modeling/design-time-code-generation-by-using-t4-text-templates.md)，但不适用于[运行时模板](../modeling/run-time-text-generation-with-t4-text-templates.md)。
 
-当 `true` `hostspecific` 并且使用的是 Visual Studio 时，可以将 `this.Host` 强制转换为 IServiceProvider，以便访问 Visual Studio 功能。 还可以使用 `Host.ResolvePath(filename)` 来获得项目中文件的绝对路径。 例如:
+当 `true` `hostspecific` 并且使用的是 Visual Studio 时，可以将 `this.Host` 强制转换为 IServiceProvider，以便访问 Visual Studio 功能。 还可以使用 `Host.ResolvePath(filename)` 来获得项目中文件的绝对路径。 例如：
 
 ```csharp
 <#@ template debug="false" hostspecific="true" language="C#" #>
@@ -122,19 +122,19 @@ Content of myFile is:
 
 ## <a name="language-attribute"></a>language 特性
 
-示例:
+示例：
 
 `language="VB"`
 
 有效值：
 
-`C#`（默认值）
+`C#`（默认）
 
 `VB`
 
 `language` 特性指定用于语句和表达式块中的源代码的语言（[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 或 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]）。 从中生成输出的中间代码文件将使用此语言。 此语言与您的模板生成的语言无关，它可以是任何类型的文本。
 
-例如:
+例如：
 
 ```vb
 <#@ template language="VB" #>
@@ -239,13 +239,13 @@ This is the common footer.
 
 ## <a name="linepragmas-attribute"></a>linePragmas 特性
 
-示例:
+示例：
 
 `linePragmas="false"`
 
 有效值：
 
-`true`（默认值）
+`true`（默认）
 
 `false`
 
@@ -255,13 +255,13 @@ This is the common footer.
 
 ## <a name="visibility-attribute"></a>visibility 特性
 
-示例:
+示例：
 
 `visibility="internal"`
 
 有效值：
 
-`public`（默认值）
+`public`（默认）
 
 `internal`
 

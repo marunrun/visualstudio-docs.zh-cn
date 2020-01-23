@@ -16,17 +16,17 @@ helpviewer_keywords:
 - diagrams - modeling, layer
 - software, designing
 - software, modeling
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 95df70a3458c758fb886cbe2bc5d52d3192ba7cc
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: b7015583fef2323e3c53b8e786c9e8a529e0fab6
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72984433"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75590522"
 ---
 # <a name="create-models-for-your-app"></a>为你的应用程序创建模型
 
@@ -38,13 +38,13 @@ ms.locfileid: "72984433"
 
 |**关系图**|**显示**|
 |-|-|
-|[依赖关系图：指南](../modeling/layer-diagrams-guidelines.md)<br /><br /> [依赖关系图：参考](../modeling/layer-diagrams-reference.md)|系统的上层体系结构|
+|[依赖项关系图：指南](../modeling/layer-diagrams-guidelines.md)<br /><br /> [依赖项关系图：参考](../modeling/layer-diagrams-reference.md)|系统的上层体系结构|
 |代码图<br /><br /> [映射解决方案中的依赖项](../modeling/map-dependencies-across-your-solutions.md)<br /><br /> [使用代码图分析查找潜在问题](../modeling/find-potential-problems-using-code-map-analyzers.md)|现有代码中的依赖关系和其他关系|
 |代码生成的类图<br /><br /> [使用类图（类设计器）](../ide/class-designer/designing-and-viewing-classes-and-types.md)|.NET 代码中的类型及其关系|
 
 ## <a name="related-tasks"></a>相关任务
 
-|**标题**|**Task**|
+|**主题**|**Task**|
 |-|-|
 |[代码可视化](../modeling/visualize-code.md)|创建代码图和依赖项关系图，以便更好地了解不熟悉的代码。|
 |[建立用户需求模型](../modeling/model-user-requirements.md)|使用模型来阐明和传达用户的需求。|

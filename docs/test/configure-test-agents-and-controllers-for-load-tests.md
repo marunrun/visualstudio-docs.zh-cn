@@ -4,15 +4,15 @@ ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - load tests, test agents and controllers
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 657037cdb3ef36c4ef81c72cb4fc43f6a94203a3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: b8824e1836d8a49de91cf0e3b9cccf2e85a7de18
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72665175"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75597342"
 ---
 # <a name="overview-of-test-agents-and-test-controllers-for-running-load-tests"></a>用于运行负载测试的测试代理和测试控制器的概述
 
@@ -37,7 +37,7 @@ Visual Studio 可以使用物理计算机或虚拟机为应用生成模拟负载
 
 - 通过将其他测试代理添加到测试控制器增加负载生成的功能。
 
-- 在相同或不同计算机上灵活安装客户端、测试控制器和测试代理软件。 例如:
+- 在相同或不同计算机上灵活安装客户端、测试控制器和测试代理软件。 例如：
 
    **本地配置：**
 

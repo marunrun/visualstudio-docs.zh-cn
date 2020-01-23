@@ -12,19 +12,19 @@ caps.latest.revision: 39
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 9c0fa4e92c62ffb5b9c41cf5e297ed11ca63c38e
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: c38150dd84ef8898b2aa894a614dfb79e289b593
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74298721"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850455"
 ---
 # <a name="define-and-install-a-modeling-extension"></a>定义和安装建模扩展
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-在 Visual Studio 中，可以为建模图定义扩展。 以这种方式，你可以根据自己的需要调整关系图和模型。 例如，可以定义菜单命令、UML 配置文件、有效性约束和工具箱项。 可以在单个的扩展中定义多个组件。 此外，还可以以 [Visual Studio 集成扩展 (VSIX)](https://go.microsoft.com/fwlink/?LinkId=160780)的形式将这些扩展分发给其他 Visual Studio 用户。 可以使用 Visual Studio 中的 VSIX 项目创建 VSIX。
+在 Visual Studio 中，可以为建模图定义扩展。 以这种方式，你可以根据自己的需要调整关系图和模型。 例如，可以定义菜单命令、UML 配置文件、有效性约束和工具箱项。 可以在单个的扩展中定义多个组件。 此外，还可以以 [Visual Studio 集成扩展 (VSIX)](https://msdn.microsoft.com/library/dd393694(VS.100).aspx)的形式将这些扩展分发给其他 Visual Studio 用户。 可以使用 Visual Studio 中的 VSIX 项目创建 VSIX。
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>需求
  请参阅 [要求](../modeling/extend-uml-models-and-diagrams.md#Requirements)。
 
  若要查看支持此功能的 Visual Studio 的版本，请参阅 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)。
@@ -54,7 +54,7 @@ ms.locfileid: "74298721"
 
     1. 在“解决方案资源管理器”中，该解决方案的快捷菜单上，选择“添加”、“新建项目”。
 
-    2. 在“已安装的模板”下，展开“Visual C#” 或“Visual Basic”，然后选择“扩展性”。 在中间栏中，选择“VSIX 项目”。
+    2. 在 **“已安装的模板”** 下，展开 **“Visual C#”** 或 **“Visual Basic”** ，然后选择 **“扩展性”** 。 在中间栏中，选择“VSIX 项目”。
 
 3. 将 VSIX 项目设置为解决方案的启动项目。
 
@@ -74,9 +74,9 @@ ms.locfileid: "74298721"
 
         |||
         |-|-|
-        |**类型** =|**VisualStudio. Microsoft.visualstudio.mefcomponent**|
-        |Source =|**当前解决方案中的项目**|
-        |**项目** =|*你的类库项目*|
+        |**类型** =|**Microsoft.VisualStudio.MefComponent**|
+        |**Source** =|**当前解决方案中的项目**|
+        |**Project** =|*你的类库项目*|
         |**嵌入此文件夹** =|*空白处*|
 
          有关其他组件类型，请参阅下一部分中的链接。
@@ -138,7 +138,7 @@ ms.locfileid: "74298721"
 
    在极少数情况下，有错误的扩展无法加载并在错误窗口中创建报告，但不显示在扩展管理器中。 在这种情况下，可以通过从以下位置删除文件来删除扩展，其中 *% LocalAppData%* 通常为*DriveName*： \Users\\*UserName*\AppData\Local：
 
-   *% LocalAppData%* **\Microsoft\VisualStudio\\[version] \Extensions**
+   *%LocalAppData%* **\Microsoft\VisualStudio\\[version]\Extensions**
 
 ## <a name="see-also"></a>请参阅
  [定义用于扩展 UML 的配置文件](../modeling/define-a-profile-to-extend-uml.md)[定义自定义建模工具箱项](../modeling/define-a-custom-modeling-toolbox-item.md)[为 UML 模型定义验证约束](../modeling/define-validation-constraints-for-uml-models.md)[在建模图上定义菜单命令](../modeling/define-a-menu-command-on-a-modeling-diagram.md)

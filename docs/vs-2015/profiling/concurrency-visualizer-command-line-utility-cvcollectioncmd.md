@@ -11,12 +11,12 @@ caps.latest.revision: 26
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 23c6f008050cc2695a5b86d2164093823726a7b2
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 9b08035deec65c8c42fe875d380d9cc3d15533a4
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74300649"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850272"
 ---
 # <a name="concurrency-visualizer-command-line-utility-cvcollectioncmd"></a>并发可视化工具命令行实用工具 (CVCollectionCmd)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -44,13 +44,13 @@ ms.locfileid: "74300649"
 |选项|描述|参数|返回值|  
 |------------|-----------------|----------------|-------------------|  
 |查询|返回是否可以启动收集。|无|如果准备开始启动收集，则为 0。<br /><br /> 如果收集已在进行中，则为 1。<br /><br /> 如果收集未在进行，但是已经启用一个或多个必需的 [ETW](https://msdn.microsoft.com/library/ac99a063-e2d2-40cc-b659-d23c2f783f92) 会话，则为 2。|  
-|启动|在并发可视化工具下运行指定的进程。|可执行文件的路径。|如果运行已成功，则为 0。<br /><br /> 如果因为目标应用程序无法启动而运行失败，则为 1。<br /><br /> 如果因为 CVCollectionCmd 没有足够的权限写入指定的输出目录而运行失败，则为 13。|  
+|从|在并发可视化工具下运行指定的进程。|可执行文件的路径。|如果运行已成功，则为 0。<br /><br /> 如果因为目标应用程序无法启动而运行失败，则为 1。<br /><br /> 如果因为 CVCollectionCmd 没有足够的权限写入指定的输出目录而运行失败，则为 13。|  
 |Attach|开始收集系统级跟踪，否则如果指定了一个进程，则附加到该进程。|无。|如果附加成功，则为 0。<br /><br /> 如果因为指定的进程无效或不明确而附加失败，则为 1。<br /><br /> 如果因为 CVCollectionCmd 没有足够的权限写入指定的输出目录而附加失败，则为 13。|  
 |Detach|停止收集。|无。|如果分离成功，则为 0。<br /><br /> 如果因为收集当前没有进行而分离失败，则为 1。<br /><br /> 如果因为无法停止收集而分离失败，则为 2。|  
 |分析|分析指定的跟踪。|CVTrace 文件的完整路径。|如果分析成功，则为 0。<br /><br /> 如果因为指定的跟踪为系统级但是未指定目标进程而无法启动分析，则为 1。<br /><br /> 如果因为跟踪并非系统级并且已指定进程而无法启动分析，则为 2。<br /><br /> 如果因为指定的进程无效而分析失败，则为 3。<br /><br /> 如果因为指定的 CVTrace 文件无效而分析失败，则为 4。|  
 |LaunchArgs|指定目标可执行文件参数。 此选项仅适用于“启动”命令。|应用程序的命令行参数。|无。|  
 |Outdir|指定用于保存跟踪文件的目录。 适用于“启动”和“附加”命令。|目录路径或相对路径。|无。|  
-|过程|当执行“附加”命令时，指定要附加到的进程，或者当执行“分析”命令时，指定要分析的跟踪中的进程。 适用于“附加”和“分析”命令。|PID 或进程的名称。|无。|  
+|Process|当执行“附加”命令时，指定要附加到的进程，或者当执行“分析”命令时，指定要分析的跟踪中的进程。 适用于“附加”和“分析”命令。|PID 或进程的名称。|无。|  
 |配置|如果你想要收集设置而非默认值，则指定配置文件的路径。   适用于“启动”、“附加”和“分析”命令。|XML 配置文件的目录路径或相对路径。|无。|  
   
 ## <a name="customizing-configuration-settings"></a>自定义配置设置  
@@ -64,19 +64,19 @@ ms.locfileid: "74300649"
 ### <a name="configuration-file-tags"></a>配置文件标记  
  此配置文件基于 XML 文件。 以下是有效的标记和值：  
   
-|标记|描述|值|  
+|Tag|描述|值|  
 |---------|-----------------|------------|  
 |配置|划分整体配置文件。|必须包含以下元素：<br /><br /> -   MinorVersion<br />-   MajorVersion|  
 |MajorVersion|指定配置文件的主要版本。|对于 [!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)] 项目，必须为 1。 如果不是 1，则实用工具不起作用。|  
 |MinorVersion|指定配置文件的次要版本。|对于 [!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)] 项目，必须为 0。 如果不是 0，则实用工具不起作用。|  
 |IncludeEnvSymbolPath|设置一个值，该值确定是否使用环境符号路径 (_NT_SYMBOL_PATH)。|-   True<br />-   False|  
 |DeleteEtlsAfterAnalysis|设置一个值，该值确定是否在分析完成时，删除 ETL 文件。|-   True<br />-   False|  
-|SymbolPath|指定符号服务器的路径。 有关详细信息，请参阅 [使用 Microsoft 符号服务器获取调试符号文件](https://go.microsoft.com/fwlink/?LinkID=149389)。|目录名或 URL。|  
+|SymbolPath|指定符号服务器的路径。 有关详细信息，请参阅 [使用 Microsoft 符号服务器获取调试符号文件](https://support.microsoft.com/kb/311503)。|目录名或 URL。|  
 |标记|包含标记提供程序的列表。|可能不包含也可能包含多个 MarkerProvider 元素。|  
 |MarkerProvider|指定单个标记提供程序。|必须包含以下元素：<br /><br /> -   Level<br />-   GUID<br />-   Name<br /><br /> 可以包含以下元素：<br /><br /> -   Categories<br />-   IsEnabled|  
-|层次|设置 MarkerProvider 的重要性级别。|-   低<br />-   普通<br />-   高<br />-   严重<br />-   全部|  
-|Guid|ETW 标记提供程序的全局唯一标识符。|一个 GUID。|  
-|名称|指定标记提供程序的说明。|一个字符串。|  
+|Level|设置 MarkerProvider 的重要性级别。|-   低<br />-   普通<br />-   高<br />-   严重<br />-   全部|  
+|GUID|ETW 标记提供程序的全局唯一标识符。|一个 GUID。|  
+|Name|指定标记提供程序的说明。|一个字符串。|  
 |类别|指定为标记提供程序收集的类别。|一个以逗号分隔的数字或数字范围的字符串。|  
 |IsEnabled|设置一个值，该值确定是否针对收集启用标记提供程序。|-   True<br />-   False|  
 |FilterConfig|指定 ETW 事件的配置选项的列表，这些事件筛选自收集。|可能包含以下元素：<br /><br /> -   CollectClrEvents<br />-   ClrCollectionOptions<br />-   CollectSampleEvents<br />-   CollectGpuEvents<br />-   CollectFileIO|  

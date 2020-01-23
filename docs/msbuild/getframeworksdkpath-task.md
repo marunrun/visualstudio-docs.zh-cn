@@ -13,17 +13,17 @@ helpviewer_keywords:
 - GetFrameworkSdkPath task [MSBuild]
 - MSBuild, GetFrameworkSdkPath task
 ms.assetid: 2ef82b98-02b6-40cf-a9b5-f0e882fb5064
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 15346bdd7c049a152a5a2d1668891f9d97da31fe
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8fbe0dbda58a0c57cacd64c40b66cc640b779bca
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62977511"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75593312"
 ---
 # <a name="getframeworksdkpath-task"></a>GetFrameworkSdkPath 任务
 检索 [!INCLUDE[winsdklong](../deployment/includes/winsdklong_md.md)] 的路径。
@@ -31,7 +31,7 @@ ms.locfileid: "62977511"
 ## <a name="task-parameters"></a>任务参数
 下表描述了 `GetFrameworkSdkPath` 任务的参数。
 
-|参数|说明|
+|参数|描述|
 |---------------|-----------------|
 |`FrameworkSdkVersion20Path`|可选的 `String` 只读输出参数。<br /><br /> 如果存在，则返回 .NET SDK 2.0 版的路径。 否则返回 `String.Empty`。|
 |`FrameworkSdkVersion35Path`|可选的 `String` 只读输出参数。<br /><br /> 如果存在，则返回 .NET SDK 3.5 版的路径。 否则返回 `String.Empty`。|

@@ -12,23 +12,23 @@ ms.author: corob
 manager: jillfra
 ms.workload:
 - xplat-cplusplus
-ms.openlocfilehash: 33adad7117678ccc5550db86baada43a1c487916
-ms.sourcegitcommit: 8a96a65676fd7a2a03b0803d7eceae65f3fa142b
+ms.openlocfilehash: e869a02475917f2444bedbb1bc9b7373b893d098
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72588862"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75846903"
 ---
 # <a name="install-and-configure-tools-to-build-using-ios"></a>安装并配置使用 iOS 进行构建的工具
 
-可以将 Visual Studio 与使用 C++ 进行跨平台移动开发的工具一起使用，以编辑、调试 iOS 代码，并将其部署到 iOS 模拟器或 iOS 设备  。 但由于许可限制，必须在 Mac 上远程生成和运行代码。 若要使用 Visual Studio 生成和运行 iOS 应用，需要在 Mac 上安装并配置远程代理 [vcremote](https://go.microsoft.com/fwlink/p/?LinkId=534988)。 该远程代理会处理来自 Visual Studio 的生成请求，并在连接到 Mac 的 iOS 设备上或 Mac 上的 iOS 仿真程序中运行应用。
+可以将 Visual Studio 与使用 C++ 进行跨平台移动开发的工具一起使用，以编辑、调试 iOS 代码，并将其部署到 iOS 模拟器或 iOS 设备  。 但由于许可限制，必须在 Mac 上远程生成和运行代码。 若要使用 Visual Studio 生成和运行 iOS 应用，需要在 Mac 上安装并配置远程代理 [vcremote](https://www.npmjs.com/package/vcremote)。 该远程代理会处理来自 Visual Studio 的生成请求，并在连接到 Mac 的 iOS 设备上或 Mac 上的 iOS 仿真程序中运行应用。
 
 > [!NOTE]
 > 有关使用云托管的 Mac 服务而不是 Mac 的信息，请参阅[配置 Visual Studio 以连接到云托管的 Mac](/visualstudio/cross-platform/tools-for-cordova/tips-workarounds/host-a-mac-in-the-cloud?view=toolsforcordova-2017#configure-visual-studio-to-connect-to-your-cloud-hosted-mac)。 此说明适用于使用 Visual Studio Tools for Apache Cordova 进行生成。 要通过 C++ 使用指令进行生成，请将 `vcremote` 替换为 `remotebuild`。
 
 使用 iOS 进行生成的工具安装完成后，请参阅本文，了解如何快速配置和更新远程代理以便在 Visual Studio 中和 Mac 上进行 iOS 开发。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 若要安装和使用远程代理以开发 iOS 代码，必须首先具备以下先决条件：
 
@@ -68,7 +68,7 @@ ms.locfileid: "72588862"
 
 ## <a name="Install"></a> 安装适用于 iOS 的远程代理
 
-当使用 C++ 工作负载安装移动开发时，Visual Studio 可以与 [vcremote](https://go.microsoft.com/fwlink/p/?LinkId=534988) 进行通信，这是一个在 Mac 上运行的远程代理，用于传输文件、生成和运行 iOS 应用，以及发送调试命令。
+当使用 C++ 工作负载安装移动开发时，Visual Studio 可以与 [vcremote](https://www.npmjs.com/package/vcremote) 进行通信，这是一个在 Mac 上运行的远程代理，用于传输文件、生成和运行 iOS 应用，以及发送调试命令。
 
 安装远程代理之前，请确保已经满足[先决条件](#prerequisites)并完成了[使用 C++ 安装跨平台移动开发](../cross-platform/install-visual-cpp-for-cross-platform-mobile-development.md#install-the-tools)中的安装步骤。
 

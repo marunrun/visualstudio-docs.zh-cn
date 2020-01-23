@@ -1,6 +1,6 @@
 ---
 title: 使用连接的服务添加 Azure 存储
-description: 使用 Visual Studio 的“添加连接服务”对话框将 Azure 存储添加到应用
+description: 使用 Visual Studio 的“添加连接服务”对话框将 Azure 存储空间添加到您的应用
 author: ghogen
 manager: jillfra
 assetId: 521ec044-ad4b-4828-8864-01decde2e758
@@ -11,12 +11,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 03/26/2017
 ms.author: ghogen
-ms.openlocfilehash: 6d7bf7901ab33dc6dba50013ebdfa05c3188cd6c
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 3acb009d27a9fa47f890235f6957d1f29ed2f4a0
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74300171"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75916698"
 ---
 # <a name="adding-azure-storage-by-using-visual-studio-connected-services"></a>使用 Visual Studio 连接服务添加 Azure 存储空间
 在 Visual Studio 中，通过使用“添加连接服务”对话框可将以下任何服务连接到 Azure 存储：
@@ -31,7 +31,7 @@ ms.locfileid: "74300171"
 
 完成后，“添加连接服务”对话框会自动显示文档，其中详细介绍开始使用 blob 存储、队列和表所需的步骤。
 
-## <a name="connect-to-azure-storage-using-the-connected-services-dialog"></a>使用“连接服务”对话框连接到 Azure 存储
+## <a name="connect-to-azure-storage-using-the-connected-services-dialog"></a>使用“连接服务”对话框连接到 Azure 存储空间
 1. 在 Visual Studio 中打开项目
 
 1. 在“解决方案资源管理器”中，右键单击“连接服务”节点，并在上下文菜单中选择“添加连接服务”。
@@ -60,15 +60,15 @@ ms.locfileid: "74300171"
 
 1. 该存储连接服务会显示在项目的“服务引用”节点下。
 
-## <a name="how-your-project-is-modified"></a>项目的修改情况
+## <a name="how-your-project-is-modified"></a>您的项目的修改情况
 完成该对话框后，Visual Studio 将添加引用并修改特定配置文件。 具体更改情况取决于项目类型：
 
-- ASP.NET 项目 - [完成的操作 – ASP.NET 项目](https://go.microsoft.com/fwlink/p/?LinkId=513126)
-- ASP.NET Core 项目 - [完成的操作 – ASP.NET 5 项目](https://go.microsoft.com/fwlink/p/?LinkId=513124)
-- 云服务项目（Web 角色和辅助角色）- [完成的操作 – 云服务项目](https://go.microsoft.com/fwlink/p/?LinkId=516965)
+- ASP.NET 项目 - [完成的操作 – ASP.NET 项目](/azure/visual-studio/vs-storage-aspnet-getting-started-blobs)
+- ASP.NET Core 项目 - [完成的操作 – ASP.NET 5 项目](/azure/visual-studio/vs-storage-aspnet5-getting-started-blobs)
+- 云服务项目（Web 角色和辅助角色）- [完成的操作 – 云服务项目](/azure/visual-studio/vs-storage-cloud-services-getting-started-blobs)
 - WebJob 项目 - [完成的操作 – WebJob 项目](/azure/visual-studio/vs-storage-webjobs-what-happened)
 
 ## <a name="next-steps"></a>后续步骤
-- [MSDN 论坛： Azure 存储](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuredata)
+- [MSDN 论坛：Azure 存储](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuredata)
 - [Microsoft Azure 存储团队博客](https://blogs.msdn.microsoft.com/windowsazurestorage/)
-- [Azure 存储文档](https://docs.microsoft.com/azure/storage/)
+- [Azure 存储文档](/azure/storage/)

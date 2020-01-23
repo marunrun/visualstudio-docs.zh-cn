@@ -12,12 +12,12 @@ ms.author: mblome
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdb99cf487995859b9623f11b3559f1b5e7e3ca7
-ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
+ms.openlocfilehash: e2154a07d498012c9c45f992ebed51b0218e823a
+ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72018338"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75401023"
 ---
 # <a name="walkthrough-analyzing-cc-code-for-defects"></a>演练：对 C/C++ 代码进行缺陷分析
 
@@ -49,7 +49,7 @@ ms.locfileid: "72018338"
 
      随即显示 " **CodeDefects 属性页**" 对话框。
 
-5. 单击 "**代码分析**"。
+5. 单击“代码分析”。
 
 6. 单击 "对**生成启用代码分析C++**  " 复选框。
 
@@ -59,7 +59,7 @@ ms.locfileid: "72018338"
 
 ### <a name="to-analyze-code-defect-warnings"></a>分析代码缺陷警告
 
-1. 在 "**视图**" 菜单上，单击**错误列表**。
+1. 在 **“视图”** 菜单上单击 **“错误列表”** 。
 
      根据在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]中选择的开发人员配置文件，可能需要指向 "**视图**" 菜单上的 "**其他窗口**"，然后单击 "**错误列表**"。
 
@@ -67,9 +67,9 @@ ms.locfileid: "72018338"
 
      警告 C6230：语义不同类型之间的隐式强制转换：在 Boolean 上下文中使用 HRESULT。
 
-     代码编辑器显示导致函数 `bool ProcessDomain()`中出现警告的行。 此警告意味着在需要布尔值结果的 "if" 语句中使用 HRESULT。
+     代码编辑器显示导致函数 `bool ProcessDomain()`中出现警告的行。 此警告意味着在需要布尔值结果的 "if" 语句中使用 `HRESULT`。  这通常是一个错误，因为从其返回 `S_OK` HRESULT 时，它表示成功，但当转换为布尔值时，它的计算结果为 `false`。
 
-3. 使用 SUCCEEDED 宏更正此警告。 你的代码应与以下代码类似：
+3. 使用 `SUCCEEDED` 宏更正此警告，当 `HRESULT` 返回值指示成功时，此宏会转换为 `true`。 你的代码应与以下代码类似：
 
    ```cpp
    if (SUCCEEDED (ReadUserAccount()) )
@@ -111,7 +111,7 @@ ms.locfileid: "72018338"
 
      将显示 "**批注属性页**" 对话框。
 
-3. 单击 "**代码分析**"。
+3. 单击“代码分析”。
 
 4. 选中 "对**生成启用代码分析C++**  " 复选框。
 
@@ -128,11 +128,11 @@ ms.locfileid: "72018338"
 8. 若要更正此警告，请使用 "if" 语句测试返回值。 你的代码应与以下代码类似：
 
    ```cpp
-   if (NULL != newNode)
+   if (nullptr != newNode)
    {
-   newNode->data = value;
-   newNode->next = 0;
-   node->next = newNode;
+       newNode->data = value;
+       newNode->next = 0;
+       node->next = newNode;
    }
    ```
 
@@ -142,14 +142,10 @@ ms.locfileid: "72018338"
 
 ### <a name="to-use-source-code-annotation"></a>使用源代码批注
 
-1. 使用 Pre 和 Post 条件（如以下示例中所示）对函数 `AddTail` 的形参和返回值进行批注：
+1. 批注函数 `AddTail` 的形参和返回值，以指示指针值可以为 null：
 
    ```cpp
-   [returnvalue:SA_Post (Null=SA_Maybe)] LinkedList* AddTail
-   (
-   [SA_Pre(Null=SA_Maybe)] LinkedList* node,
-   int value
-   )
+   _Ret_maybenull_ LinkedList* AddTail(_Maybenull_ LinkedList* node, int value)
    ```
 
 2. 重新生成注释项目。
@@ -160,21 +156,18 @@ ms.locfileid: "72018338"
 
      此警告表明传递到函数的节点可能为 null，并指示引发警告的行号。
 
-4. 若要更正此警告，请使用 "if" 语句测试返回值。 你的代码应与以下代码类似：
+4. 若要更正此警告，请在函数开头使用 "if" 语句来测试传入的值。 你的代码应与以下代码类似：
 
    ```cpp
-   . . .
-   LinkedList *newNode = NULL;
-   if (NULL == node)
+   if (nullptr == node)
    {
-        return NULL;
-        . . .
+        return nullptr;
    }
    ```
 
 5. 重新生成注释项目。
 
-     项目生成时不会出现任何警告或错误。
+     项目现在生成时没有任何警告或错误。
 
 ## <a name="see-also"></a>另请参阅
 

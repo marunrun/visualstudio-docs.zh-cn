@@ -4,17 +4,17 @@ ms.date: 07/22/2019
 ms.technology: vs-ide-general
 ms.custom: get-started
 ms.topic: tutorial
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: caa8fde228d83cbb14b911965573e78648133b81
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 7c130f7f55409bd24520dd55e949d20e8d5bbb97
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72647819"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75567263"
 ---
 # <a name="learn-about-projects-and-solutions"></a>了解项目和解决方案
 
@@ -49,7 +49,7 @@ ms.locfileid: "72647819"
 
 1. 打开 Visual Studio。
 
-1. 在顶部菜单栏上，依次选择“文件”  >“新建”  >“项目”  。
+1. 从顶部菜单栏中选择“文件”  >“新建”  >“项目”  。
 
    **“新建项目”** 对话框随即打开。
 
@@ -83,7 +83,7 @@ ms.locfileid: "72647819"
 
 ::: moniker range="vs-2017"
 
-1. 在“解决方案资源管理器”中的“解决方案‘QuickSolution’”的右键菜单或上下文菜单中，依次选择“添加”>“新建项目”     。
+1. 在“解决方案资源管理器”  中的“解决方案‘QuickSolution’”  的右键菜单或上下文菜单中，依次选择“添加”  >“新建项目”  。
 
    此时会打开 **“添加新项目”** 对话框。
 
@@ -100,7 +100,7 @@ ms.locfileid: "72647819"
 
 ::: moniker range=">=vs-2019"
 
-1. 在“解决方案资源管理器”中的“解决方案‘QuickSolution’”的右键菜单或上下文菜单中，依次选择“添加”>“新建项目”     。
+1. 在“解决方案资源管理器”  中的“解决方案‘QuickSolution’”  的右键菜单或上下文菜单中，依次选择“添加”  >“新建项目”  。
 
    随即打开显示“添加新项目”的对话框  。
 

@@ -6,12 +6,12 @@ manager: lank
 ms.date: 07/11/2019
 ms.topic: conceptual
 description: 了解如何使用 GitHub 帐户登录到 Visual Studio 订阅。
-ms.openlocfilehash: 6279c9399a42bc07579f48c887987b4b662da9da
-ms.sourcegitcommit: 57866dd72fd0e15ce61128df70729b427a2d02eb
+ms.openlocfilehash: ffafd3821112a62ec1f86666f8c0fe6571bbb335
+ms.sourcegitcommit: 9a66f1c31cc9eba0b5231af72da1d18761a9c56a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68315368"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75944198"
 ---
 # <a name="signing-in-to-visual-studio-subscriptions-with-your-github-account"></a>使用 GitHub 帐户登录到 Visual Studio 订阅 
 
@@ -49,7 +49,7 @@ ms.locfileid: "68315368"
 答：完全不需要。 这不会更改你的 GitHub 密码；你只是具有另一种方式登录 Microsoft 帐户。 每当你使用电子邮件地址登录时，我们都会为你提供使用 Microsoft 帐户密码登录或前往 GitHub 登录的选项。 我们强烈建议，如果需要添加密码，请确保该密码与 GitHub 帐户的密码不同。
 
 #### <a name="q-i-want-to-add-the-authenticator-app-to-the-account-i-created-using-github--can-i-do-that"></a>问：我想将 Authenticator 应用添加到我使用 GitHub 创建的帐户。  我是否可以执行此操作？
-答：没问题，只需下载应用并使用你的电子邮件地址登录即可。 使用电子邮件地址登录时，系统会提示你选择 [Authenticator 应用](https://go.microsoft.com/fwlink/?linkid=2090219)或 GitHub 作为你的凭据。
+答：没问题，只需下载应用并使用你的电子邮件地址登录即可。 使用电子邮件地址登录时，系统会提示你选择 [Authenticator 应用](https://www.microsoft.com/p/microsoft-authenticator/9nblgggzmcj6)或 GitHub 作为你的凭据。
 
 #### <a name="q-ive-enabled-two-factor-authentication-on-both-my-github-and-microsoft-accounts-msa-but-when-i-sign-in-to-my-msa-im-still-asked-to-authenticate-twice--why"></a>问：我对我的 GitHub 和 Microsoft 帐户 (MSA) 都启用了双因素身份验证，但是当我登录 MSA 时，我仍需要进行两次身份验证。  为什么？
 答：由于安全限制，即使对帐户启用了双重验证，Microsoft 也会将使用 GitHub 登录视为单因素验证。 因此，必须再次对 Microsoft 帐户进行身份验证。 

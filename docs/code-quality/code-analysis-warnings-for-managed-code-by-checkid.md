@@ -258,31 +258,31 @@ f1_keywords:
 - CA2243
 - CA5122
 ms.assetid: 5cb221f6-dc59-4abf-9bfa-adbd6f907f96
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2811c905650f215272b650bff955b7264f56d4b5
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 8fe3e338cf2db2493f9f855c5ef398bbb4232e8e
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73188836"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75587727"
 ---
-# <a name="code-analysis-warnings-for-managed-code-by-checkid"></a>托管代码的代码分析警告（按 CheckId）
+# <a name="code-analysis-warnings-for-managed-code-by-checkid"></a>按 checkid 排列的托管代码的代码分析警告
 
 下表列出了托管代码的代码分析警告，按警告的 CheckId 标识符排列。
 
 | CheckId | 警告 | 描述 |
 |---------| - | - |
-| CA2007 | [CA2007：不直接等待任务](ca2007.md) | 异步方法会直接[等待](/dotnet/csharp/language-reference/keywords/await)<xref:System.Threading.Tasks.Task>。 当异步方法直接等待 <xref:System.Threading.Tasks.Task> 时，延续将在创建任务的同一线程中发生。 此行为在性能方面可能会很大，并且可能会在 UI 线程上导致死锁。 请考虑调用 <xref:System.Threading.Tasks.Task.ConfigureAwait(System.Boolean)?displayProperty=nameWithType> 以通知你的继续符。 |
+| CA2007 | [CA2007：不直接等待任务](ca2007.md) | 异步方法会 直接[等待](/dotnet/csharp/language-reference/keywords/await) <xref:System.Threading.Tasks.Task>。 当异步方法直接等待 <xref:System.Threading.Tasks.Task> 时，延续将在创建任务的同一线程中发生。 此行为在性能方面可能会很大，并且可能会在 UI 线程上导致死锁。 请考虑调用 <xref:System.Threading.Tasks.Task.ConfigureAwait(System.Boolean)?displayProperty=nameWithType> 以通知你的继续符。 |
 | CA1000 | [CA1000：不要在泛型类型中声明静态成员](../code-quality/ca1000.md) | 调用泛型类型的静态成员时，必须指定该类型的类型参数。 当调用不支持推理的泛型实例成员时，必须指定该成员的类型参数。 在上述两种情况下，用于指定类型自变量的语法不同，但很容易混淆。 |
 | CA1001 | [CA1001：具有可释放字段的类型应该是可释放的](../code-quality/ca1001.md) | 一个类声明并实现 System.IDisposable 类型的实例字段，但该类不实现 IDisposable。 声明 IDisposable 字段的类间接拥有非托管资源，并且应该实现 IDisposable 接口。 |
-| CA1002 | [CA1002：不要公开泛型列表](../code-quality/ca1002.md) | < （\<（T >） >）的泛型集合是设计为性能的泛型集合，而不是继承。 因此，List 不包含任何虚拟成员。 应改为公开针对继承设计的泛型集合。 |
-| CA1003 | [CA1003：使用泛型事件处理程序实例](../code-quality/ca1003.md) |类型包含一个返回 void 的委托，该委托的签名包含两个参数（第一个对象，第二个参数是可分配给 EventArgs 的类型），而包含程序集则以 Microsoft .NET Framework 2.0 为目标。 |
+| CA1002 | [CA1002：不要公开泛型列表](../code-quality/ca1002.md) | System.Collections.Generic.List < (的\<(T >) >) 是专为性能，不继承的泛型集合。 因此，List 不包含任何虚拟成员。 应改为公开针对继承设计的泛型集合。 |
+| CA1003 | [CA1003：使用泛型事件处理程序实例](../code-quality/ca1003.md) |一种类型包含一个委托，它返回 void，其签名包含两个参数 （一个的对象的第一个和第二个是分配给 EventArgs 的类型） 和包含程序集面向 Microsoft.NET Framework 2.0。 |
 | CA1004 | [CA1004：泛型方法应提供类型形参](../code-quality/ca1004.md) | 推理是指由传递给泛型方法的自变量类型来确定该方法的类型参数，而不是显式指定类型参数。 若要启用推理，泛型方法的参数签名必须包含与该方法的类型参数属于相同类型的参数。 在这种情况下，不必指定类型参数。 如果对所有类型参数都使用推理，则调用泛型实例方法和非泛型实例方法的语法完全相同；这简化了泛型方法的可用性。 |
-| CA1005 | [CA1005：避免泛型类型的参数过多](../code-quality/ca1005.md) | 泛型类型包含的类型参数越多，越难以知道并记住每个类型参数各代表什么。 通常情况下，使用一个类型形参（如 List \<T >），并且在具有两个类型形参的某些情况下（如字典 \<TKey、TValue > 中）。 但是，如果存在两个以上的类型参数，则大多数用户都会感到过于困难。 |
+| CA1005 | [CA1005：避免泛型类型的参数过多](../code-quality/ca1005.md) | 泛型类型包含的类型参数越多，越难以知道并记住每个类型参数各代表什么。 它是使用一个类型参数，如下所示列表通常明显\<T >，并在某些情况下有两个类型参数，如\<TKey，TValue >。 但是，如果存在两个以上的类型参数，则大多数用户都会感到过于困难。 |
 | CA1006 | [CA1006：不要将泛型类型嵌套在成员签名中](../code-quality/ca1006.md) | 嵌套类型参数是一个类型参数，也是一个泛型类型。 若要调用签名包含嵌套类型参数的成员，用户必须实例化一个泛型类型，并将此类型传递到另一个泛型类型的构造函数。 所需的过程和语法很复杂，应当避免。 |
 | CA1007 |[CA1007：在适用处使用泛型](../code-quality/ca1007.md) | 外部可见方法包含类型为 System.Object 的引用参数。 使用泛型方法使受约束的所有类型都可以传递给该方法，而比不先将类型强制转换为引用参数类型。 |
 | CA1008 | [CA1008：枚举应具有零值](../code-quality/ca1008.md) | 像其他值类型一样，未初始化枚举的默认值为零。 无标志特性的枚举应通过使用零值来定义成员，这样默认值即为该枚举的有效值。 如果应用了 FlagsAttribute 特性的枚举定义值为零成员，则该成员的名称应为“None”，以指示枚举中尚未设置值。 |
@@ -336,7 +336,7 @@ ms.locfileid: "73188836"
 | CA1061 |[CA1061：不要隐藏基类方法](../code-quality/ca1061.md) | 如果派生方法的参数签名只是在类型方面有所不同，而且与基方法的参数签名中的对应类型相比，这些类型的派生方式更弱，则基类型中的方法由派生类型中的同名方法隐藏。 |
 | CA1062 | [CA1062：验证公共方法的参数](../code-quality/ca1062.md) | 对于传递给外部可见方法的所有引用自变量，都应检查其是否为 null。 |
 | CA1063 | [CA1063：正确实现 IDisposable](../code-quality/ca1063.md) | 所有的 IDisposable 类型都应当正确实现 Dispose 模式。 |
-| CA1064 | [CA1064：异常应该是公共的](../code-quality/ca1064.md) | 内部异常仅在其自己的内部范围内可见。 当异常超出内部范围后，只能使用基异常来捕获该异常。 如果从 <xref:System.Exception>、<xref:System.SystemException> 或 <xref:System.ApplicationException> 继承内部异常，则外部代码将不会有足够的信息来了解如何处理该异常。 |
+| CA1064 | [CA1064：异常应该是公共的](../code-quality/ca1064.md) | 内部异常仅在其自己的内部范围内可见。 当异常超出内部范围后，只能使用基异常来捕获该异常。 如果内部异常继承自<xref:System.Exception>， <xref:System.SystemException>，或<xref:System.ApplicationException>，外部代码将没有足够的信息来了解应如何处理异常。 |
 | CA1065 | [CA1065：不要在意外的位置引发异常](../code-quality/ca1065.md) | 不应引发异常的方法引发了异常。 |
 | CA1068 | [CA1068： CancellationToken 参数必须位于最后](../code-quality/ca1068.md) | 方法具有一个不是最后一个参数的 CancellationToken 参数。 |
 | CA1200 | [CA1200：避免使用带有前缀的 cref 标记](../code-quality/ca1200.md) | XML 文档标记中的[cref](/dotnet/csharp/programming-guide/xmldoc/cref-attribute)特性表示 "代码引用"。 它指定标记的内部文本是一个代码元素，例如类型、方法或属性。 避免使用带有前缀的 `cref` 标记，因为这会阻止编译器验证引用。 它还可防止 Visual Studio 集成开发环境（IDE）在重构期间查找和更新这些符号引用。 |
@@ -354,9 +354,9 @@ ms.locfileid: "73188836"
 | CA1401 | [CA1401：P/Invokes 应为不可见](../code-quality/ca1401.md) | 公共类型中的公共或受保护方法具有 System.Runtime.InteropServices.DllImportAttribute 特性（还在 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 中由 Declare 关键字实现）。 这些方法不能公开。 |
 | CA1402 |[CA1402：避免在 COM 可见接口中进行重载](../code-quality/ca1402.md) | 在向 COM 客户端公开重载的方法时，只有第一个方法重载保留其名称。 对于后续重载，将为其指定唯一名称，方法是在其名称后面追加一个下划线字符 (_) 和一个与该重载的声明顺序对应的整数。 |
 | CA1403 | [CA1403：自动布局类型不应对 COM 可见](../code-quality/ca1403.md) | COM 可见值类型是使用设置为 LayoutKind 的 InteropServices. StructLayoutAttribute 特性标记的。这些类型的布局在 .NET 版本之间可能会发生变化，这会中断需要特定布局的 COM 客户端。 |
-| CA1404 | [CA1404：紧接在 P/Invoke 之后调用 GetLastError](../code-quality/ca1404.md) | 对 GetLastWin32Error 方法或等效 [!INCLUDE[TLA2#tla_win32](../code-quality/includes/tla2sharptla_win32_md.md)] GetLastError 函数进行调用，并且直接上一个调用不是操作系统调用方法。 |
+| CA1404 | [CA1404：紧接在 P/Invoke 之后调用 GetLastError](../code-quality/ca1404.md) | 调用了 Marshal.GetLastWin32Error 方法或等效[!INCLUDE[TLA2#tla_win32](../code-quality/includes/tla2sharptla_win32_md.md)]GetLastError 函数，并紧位于前面的调用不为操作系统调用方法。 |
 | CA1405 | [CA1405：COM 可见类型的基类型应对 COM 可见](../code-quality/ca1405.md) | 某个 COM 可见的类型是从非 COM 可见的类型派生而来。 |
-| CA1406 |[CA1406：避免对 Visual Basic 6 客户端使用 Int64 参数](../code-quality/ca1406.md) | Visual Basic 6 COM 客户端无法访问64位整数。 |
+| CA1406 |[CA1406：避免对 Visual Basic 6 客户端使用 Int64 参数](../code-quality/ca1406.md) | Visual Basic 6 COM 客户端不能访问 64 位整数。 |
 | CA1407 |[CA1407：避免在 COM 可见类型中使用静态成员](../code-quality/ca1407.md) | COM 不支持静态方法。 |
 | CA1408 | [CA1408：请不要使用 AutoDual ClassInterfaceType](../code-quality/ca1408.md) | 使用双重接口的类型使客户端可以绑定到特定的接口布局。 如果在将来的版本中对该类型或任何基类型的布局进行更改，将中断绑定到该接口的 COM 客户端。 默认情况下，如果未指定 ClassInterfaceAttribute 特性，则使用仅支持调度的接口。 |
 | CA1409 | [CA1409：Com 可见类型应该可创建](../code-quality/ca1409.md) |专门标记为对 COM 可见的某个引用类型包含公共的参数化构造函数，但不包含公共的默认（无参数）构造函数。 没有公共默认构造函数的类型不能由 COM 客户端创建。 |
@@ -369,7 +369,7 @@ ms.locfileid: "73188836"
 | CA1500 | [CA1500：变量名不应与字段名相同](../code-quality/ca1500.md) | 实例方法声明一个名称与声明类型的实例字段匹配的参数或局部变量，从而导致错误。 |
 | CA1501 | [CA1501：避免过度继承](../code-quality/ca1501.md) | 类型在继承层次结构中的深度超过四级。 深度嵌套的类型层次结构可能很难遵循、理解和维护。 |
 | CA1502 | [CA1502：避免过度复杂](../code-quality/ca1502.md) | 此规则通过方法来测量线性独立的路径的数量，该数量是由条件分支的数量和复杂度决定的。 |
-| CA1504 | [CA1504：检查令人误解的字段名](../code-quality/ca1504.md) | 实例字段的名称以 "s_" 开头，或静态（在 Visual Basic 中共享）字段的名称以 "m_" 开头。 |
+| CA1504 | [CA1504：检查令人误解的字段名](../code-quality/ca1504.md) | 实例字段的名称以"s_"开头或静态 (在 Visual Basic 中的为 Shared) 字段的名称以"m_"开头。 |
 | CA1505 | [CA1505：避免编写无法维护的代码](../code-quality/ca1505.md) | 类型或方法具有较低的可维护性索引值。 如果可维护性指数较低，则表示类型或方法可能难以维护，最好重新进行设计。 |
 | CA1506 |[CA1506：避免过度类耦合](../code-quality/ca1506.md) | 此规则通过计算类型或方法包含的唯一类型引用的个数来衡量类耦合。 |
 | CA1600 | [CA1600：不要使用 Idle 进程优先级](../code-quality/ca1600.md) | 不要将进程优先级设置为 Idle。 具有 System.Diagnostics.ProcessPriorityClass.Idle 优先级的进程将在 CPU 本应处于空闲状态时占用它，从而阻止进入待机状态。 |
@@ -399,17 +399,17 @@ ms.locfileid: "73188836"
 | CA1726 | [CA1726：使用首选词条](../code-quality/ca1726.md) | 在外部可见的标识符的名称中，包括一个存在首选备用词条的词条。 或者，名称中包含“Flag”或“Flags”一词。 |
 | CA1800 | [CA1800：避免进行不必要的强制转换](../code-quality/ca1800.md) | 重复强制转换会降低性能，特别是在精简的迭代语句中执行强制转换时。 |
 | CA1801 | [CA1801：检查未使用的参数](../code-quality/ca1801.md) | 方法签名包含一个没有在方法体中使用的参数。 |
-| CA1802 |[CA1802：在合适的位置使用文本](../code-quality/ca1802.md) |某个字段被声明为 static 和 read-only（在 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 中为 Shared 和 ReadOnly），并使用可在编译时计算的值初始化。 由于分配给目标字段的值是在编译时可的，因此请将声明更改为 const （[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]中的 Const）字段，以便在编译时（而不是在运行时）计算此值。 |
+| CA1802 |[CA1802：在合适的位置使用文本](../code-quality/ca1802.md) |某个字段被声明为 static 和 read-only（在 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 中为 Shared 和 ReadOnly），并使用可在编译时计算的值初始化。 因为分配给目标字段的值可在编译时，将声明更改为一个常量 (中的常量[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]) 字段，以便在编译时而不是在运行时计算的值。 |
 | CA1804 | [CA1804：移除未使用的局部变量](../code-quality/ca1804.md) | 未使用的局部变量和不必要的赋值会增加程序集的大小并降低性能。 |
 | CA1806 | [CA1806：不要忽略方法结果](../code-quality/ca1806.md) | 创建一个新对象，但从不使用该对象；或者调用会创建并返回一个新字符串的方法，但从不使用这个新字符串；或者 COM 或 P/Invoke 方法返回一个从不使用的 HRESULT 或错误代码。 |
-| CA1809 |[CA1809：避免过多的局部变量](../code-quality/ca1809.md) | 优化性能的常见方法是将值存储于处理器寄存器，而不是内存中，这称为“注册值”。 为了增加所有局部变量的 enregistered，将局部变量的数目限制为64。 |
+| CA1809 |[CA1809：避免过多的局部变量](../code-quality/ca1809.md) | 优化性能的常见方法是将值存储于处理器寄存器，而不是内存中，这称为“注册值”。 若要增加所有本地变量都是以内的机会，限制为 64 的本地变量的数目。 |
 | CA1810 | [CA1810：以内联方式初始化引用类型的静态字段](../code-quality/ca1810.md) | 当一个类型声明显式静态构造函数时，实时 (JIT) 编译器会向该类型的每个静态方法和实例构造函数中添加一项检查，以确保之前已调用该静态构造函数。 静态构造函数检查会降低性能。 |
 | CA1811 | [CA1811：避免使用未调用的私有代码](../code-quality/ca1811.md) | 某个私有或内部（程序集级别）成员在程序集中没有调用方，既不是由公共语言运行时调用的，也不是由委托调用的。 |
 | CA1812 | [CA1812：避免未实例化的内部类](../code-quality/ca1812.md) | 程序集级别类型的实例不是由程序集中的代码创建的。 |
 | CA1813 | [CA1813：避免使用未密封的特性](../code-quality/ca1813.md) | .NET 提供了用于检索自定义特性的方法。 默认情况下，这些方法搜索特性继承层次结构。 通过密封特性，将无需搜索继承层次结构，且能够提高性能。 |
 | CA1814 | [CA1814：与多维数组相比，首选使用交错的数组](../code-quality/ca1814.md) | 交错数组是元素为数组的数组。 构成元素的数组可以是不同的大小，以减少某些数据集的浪费空间。 |
 | CA1815 | [CA1815：重写值类型上的 Equals 和相等运算符](../code-quality/ca1815.md) | 对于值类型，Equals 的继承的实现使用反射库，并比较所有字段的内容。 反射需要消耗大量计算资源，可能没有必要比较每一个字段是否相等。 如果希望用户对实例进行比较或排序，或者希望用户将实例用作哈希表键，则值类型应实现 Equals。 |
-| CA1816 | [CA1816：正确调用 GC.SuppressFinalize](../code-quality/ca1816.md) | 作为 Dispose 实现的方法不调用 GC。Gc.suppressfinalize或者不是 Dispose 的实现的方法会调用 GC。Gc.suppressfinalize或方法调用 GC。Gc.suppressfinalize 并传递除此外的其他内容（我在 Visual Basic 中）。 |
+| CA1816 | [CA1816：正确调用 GC.SuppressFinalize](../code-quality/ca1816.md) | 实现 Dispose 方法不会调用 GC。SuppressFinalize;或不是实现 Dispose 方法调用 GC。SuppressFinalize;或使用方法调用 GC。SuppressFinalize 和传递内容以外此 （我在 Visual Basic 中）。 |
 | CA1819 | [CA1819：属性不应返回数组](../code-quality/ca1819.md) | 即使属性是只读的，该属性返回的数组也不是写保护的。 若要使数组不会被更改，属性必须返回数组的副本。 通常，用户不能理解调用这种属性的负面性能影响。 |
 | CA1820 | [CA1820：使用字符串长度测试是否有空字符串](../code-quality/ca1820.md) | 使用 String.Length 属性或 String.IsNullOrEmpty 方法比较字符串要比使用 Equals 的速度快得多。 |
 | CA1821 | [CA1821：移除空的终结器](../code-quality/ca1821.md) | 应尽可能避免终结器，因为跟踪对象生存期会产生额外的性能系统开销。 空的终结器只会徒增系统开销，没有一点好处。 |
@@ -456,7 +456,7 @@ ms.locfileid: "73188836"
 | CA2133 | [CA2133：委托必须绑定到具有一致透明度的方法](../code-quality/ca2133.md) | 将对一个具有以下特点的方法引发此警告：该方法将用 SecurityCriticalAttribute 标记的委托绑定到一个透明的或用 SecuritySafeCriticalAttribute 标记的方法。 还会对另一个具有以下特点的方法引发此警告：该方法将透明的或安全关键的委托绑定到一个关键方法。 |
 | CA2134 | [CA2134：在重写基方法时，方法必须保持一致的透明度](../code-quality/ca2134.md) |当用 SecurityCriticalAttribute 标记的方法重写一个透明的或用 SecuritySafeCriticalAttribute 标记的方法时，将会引发此规则。 当一个透明的或用 SecuritySafeCriticalAttribute 标记的方法重写一个用 SecurityCriticalAttribute 标记的方法时，也会引发此规则。 该规则在重写虚方法或实现接口时应用。 |
 | CA2135 | [CA2135：级别 2 程序集不应包含 LinkDemand](../code-quality/ca2135.md) | 在级别为 2 的安全规则集中已弃用 LinkDemand。 现在使用 SecurityCriticalAttribute 特性标记方法、类型和字段，而不是使用 LinkDemand 在实时 (JIT) 编译时进行强制安全检查。 |
-| CA2127 | [CA2136：成员不应有相互冲突的透明度注释](../code-quality/ca2136.md) | 100透明的程序集中不能出现关键代码。 此规则将为类型、字段和方法级别的任何 SecurityCritical 批注分析 100%-透明程序集。 |
+| CA2127 | [CA2136：成员不应有相互冲突的透明度注释](../code-quality/ca2136.md) | 在 100%透明的程序集不能出现关键代码。 此规则分析在类型、 字段和方法级别任何 SecurityCritical 批注的 100%透明程序集。 |
 | CA2136 | [CA2136：成员不应有相互冲突的透明度注释](../code-quality/ca2136.md) | 将透明特性从较大作用域的代码元素应用到较小作用域的元素。 具有较大作用域的代码元素的透明特性优于第一个元素中包含的代码元素的透明特性。 例如，用 SecurityCriticalAttribute 特性标记的类不能包含用 SecuritySafeCriticalAttribute 特性标记的方法。 |
 | CA2137 | [CA2137：透明方法必须仅包含可验证 IL](../code-quality/ca2137.md) | 某个方法包含无法验证的代码或通过引用返回类型。 在尝试通过安全透明代码执行无法验证的 Microsoft 中间语言 (MSIL) 时将引发此规则。 但是，此规则不包含完整的 IL 验证程序，而是使用试探法来捕捉 MSIL 验证的大部分冲突。 |
 | CA2138 | [CA2138：透明方法不得调用具有 SuppressUnmanagedCodeSecurity 特性的方法](../code-quality/ca2138.md) | 一个安全透明方法调用使用 SuppressUnmanagedCodeSecurityAttribute 特性标记的方法。 |
@@ -469,7 +469,7 @@ ms.locfileid: "73188836"
 | CA2144 | [CA2144：透明代码不应从字节数组加载程序集](../code-quality/ca2144.md) | 透明代码安全检查不像关键代码的安全检查一样全面，因为透明代码不能执行安全敏感的操作。 从字节数组中加载的程序集在透明代码中可能不会被注意到，并且该字节数组可能包含确实需要审核的关键或更重要的安全关键代码。 |
 | CA2145 | [CA2145：不应使用 SuppressUnmanagedCodeSecurityAttribute 修饰透明方法](../code-quality/ca2145.md) | 用 SuppressUnmanagedCodeSecurityAttribute 特性修饰的方法有一个隐式的 LinkDemand 作用于调用它的任何方法。 此 LinkDemand 要求调用代码是关键安全的。 用 SecurityCriticalAttribute 特性标记使用 SuppressUnmanagedCodeSecurity 的方法会使此需求对方法的调用方更加明显。 |
 | CA2146 | [CA2146：类型必须至少与其基类型和接口一样关键](../code-quality/ca2146.md) | 当派生类型具有的安全透明特性与其基类型或实现的接口不是同样关键时，将引发此规则。 只有关键类型可以从关键基类型派生或实现关键接口，并且只有关键或关键安全类型可以从安全关键基类型派生或实现关键安全接口。 |
-| CA2128 |[CA2147：透明方法不得使用安全断言](../code-quality/ca2147.md) | 此规则分析程序集中的所有方法和类型均为 100%-透明或混合透明/关键，并标记 Assert 的任何声明性或命令性使用。 |
+| CA2128 |[CA2147：透明方法不得使用安全断言](../code-quality/ca2147.md) | 此规则分析的所有方法和程序集是 100%透明或混合透明/关键，并标记 Assert 的任何声明性或命令性用法中的类型。 |
 | CA2147 |[CA2147：透明方法不得使用安全断言](../code-quality/ca2147.md) | 标记为 SecurityTransparentAttribute 的代码未被授予足够的权限进行断言。 |
 | CA2149 | [CA2149：透明方法不得调入本机代码](../code-quality/ca2149.md) | 对于直接调用到本机代码中（例如通过使用 P/Invoke）的任何透明方法，将引发此规则。 违反此规则会导致级别 2 透明度模型中的 MethodAccessException，以及级别 1 透明度模型中对 UnmanagedCode 的完全要求。 |
 | CA2151 |[CA2151：具有关键类型的字段应是安全关键的](../code-quality/ca2151.md) | 若要使用安全关键类型，引用该类型的代码必须是安全关键或安全可靠关键。 即使引用是间接的，也需如此。 因此，具有安全透明字段或安全可靠关键字段具有误导性，因为透明代码仍然无法访问该字段。 |

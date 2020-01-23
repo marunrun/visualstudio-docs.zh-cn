@@ -3,21 +3,21 @@ title: 使用 Docker Compose 与 ASP.NET Core 的多容器教程
 author: ghogen
 description: 了解如何将多个容器与 Docker Compose 配合使用
 ms.author: ghogen
-ms.date: 02/21/2019
+ms.date: 01/10/2020
 ms.technology: vs-azure
 ms.topic: include
-ms.openlocfilehash: ce6e98e2d068cd569247c4c4ea869c4280101d47
-ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
+ms.openlocfilehash: 5d6b867c2f237f20747628533af055e5c4900ceb
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "71126087"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75916513"
 ---
 # <a name="tutorial-create-a-multi-container-app-with-docker-compose"></a>教程：使用 Docker Compose 创建多容器应用
 
 本教程介绍如何在 Visual Studio 中使用容器工具管理多个容器并在容器之间通信。  管理多个容器需要容器业务流程，并需要 Docker Compose、Kubernetes 或 Service Fabric 等业务流程协调程序  。 我们将在这里使用 Docker Compose。 Docker Compose 非常适用于开发周期中的本地调试和测试。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 ::: moniker range="vs-2017"
 * [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
@@ -28,6 +28,7 @@ ms.locfileid: "71126087"
 * [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
 * 安装了“Web 开发”、“Azure 工具”工作负载和/或“.NET Core 跨平台开发”工作负载的 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads)   
 * 用于使用 .NET Core 2.2 进行开发的 [.NET Core 2.2 开发工具](https://dotnet.microsoft.com/download/dotnet-core/2.2)
+* 用于使用 .NET Core 3.1 进行开发的 [.NET Core 3 开发工具](https://dotnet.microsoft.com/download/dotnet-core/3.1)。
 ::: moniker-end
 
 ## <a name="create-a-web-application-project"></a>创建 Web 应用程序项目
@@ -54,7 +55,7 @@ ms.locfileid: "71126087"
 
 ## <a name="create-a-web-api-project"></a>创建 Web API 项目
 
-将项目添加到同一解决方案中，并将其称为 MyWebAPI  。 对于“项目类型”，选择“API”，并清除“HTTPS 配置”复选框   。 在此设计中，我们仅将 SSL 用于客户端通信，而不用于在同一个 Web 应用程序中的容器之间进行通信。 仅 `WebFrontEnd` 需要 HTTPS。
+将项目添加到同一解决方案中，并将其称为 MyWebAPI  。 对于“项目类型”，选择“API”，并清除“HTTPS 配置”复选框   。 在此设计中，我们仅将 SSL 用于客户端通信，而不用于在同一个 Web 应用程序中的容器之间进行通信。 只有 `WebFrontEnd` 需要 HTTPS，且示例中的代码假定你已清除该复选框。
 
 ::: moniker range="vs-2017"
    ![创建 Web API 项目的屏幕截图](./media/tutorial-multicontainer/docker-tutorial-mywebapi.png)
@@ -76,12 +77,15 @@ ms.locfileid: "71126087"
        {
           // Call *mywebapi*, and display its response in the page
           var request = new System.Net.Http.HttpRequestMessage();
-          request.RequestUri = new Uri("http://mywebapi/api/values/1");
+          // request.RequestUri = new Uri("http://mywebapi/WeatherForecast"); // ASP.NET 3 (VS 2019 only)
+          request.RequestUri = new Uri("http://mywebapi/api/values/1"); // ASP.NET 2.x
           var response = await client.SendAsync(request);
           ViewData["Message"] += " and " + await response.Content.ReadAsStringAsync();
        }
     }
    ```
+
+   对于 Visual Studio 2019 或更高版本中的 .NET Core 3.1，Web API 模板使用 WeatherForecast API，因此请取消注释该行，并注释掉 ASP.NET 2.x 行。
 
 1. 在 Index.cshtml  文件中，添加一行以显示 `ViewData["Message"]`，以便该文件看起来如以下代码：
     
@@ -94,12 +98,12 @@ ms.locfileid: "71126087"
     
       <div class="text-center">
           <h1 class="display-4">Welcome</h1>
-          <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+          <p>Learn about <a href="/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
           <p>@ViewData["Message"]</p>
       </div>
       ```
 
-1. 现在在 Web API 项目中，将代码添加到“值”控制器以自定义 API 针对从 webfrontend 添加的调用返回的消息  。
+1. （仅限 ASP.NET 2.x）现在在 Web API 项目中，将代码添加到“值”控制器以自定义 API 针对从 webfrontend  添加的调用返回的消息。
     
       ```csharp
         // GET api/values/5
@@ -109,6 +113,12 @@ ms.locfileid: "71126087"
             return "webapi (with value " + id + ")";
         }
       ```
+
+    使用 .NET Core 3.1 则不需要执行此操作，因为你可以使用已存在的 WeatherForecast API。 但是，你需要在 Startup.cs 的 `Configure` 方法中注释掉对 <xref:Microsoft.AspNetCore.Builder.HttpsPolicyBuilderExtensions.UseHttpsRedirection*> 的调用，因为此代码使用 HTTP 而不是 HTTPS 来调用 Web API  。
+
+    ```csharp
+                //app.UseHttpsRedirection();
+    ```
 
 1. 在 `WebFrontEnd` 项目中，依次选择“添加”、“容器业务流程协调程序支持”  。 此时显示“Docker 支持选项”对话框  。
 
@@ -163,15 +173,17 @@ ms.locfileid: "71126087"
           dockerfile: MyWebAPI/Dockerfile
     ```
 
-1. 立即在本地运行站点（按 F5 或 Ctrl+F5），验证站点是否按预期方式工作。 如果所有内容配置正确，你将看到消息“来自 webfrontend 和 webapi 的问候(值为 1)。”
+1. 立即在本地运行站点（按 F5 或 Ctrl+F5），验证站点是否按预期方式工作。 如果 .NET Core 2.x 版本中的所有内容配置正确，你将看到消息“来自 webfrontend 和 webapi 的问候(值为 1)。”  通过 .NET Core 3，可以看到天气预测数据。
 
    添加容器业务流程时使用的第一个项目设置为在运行或调试时启动。 可以在 docker-compose 项目的“项目属性”中配置启动操作  。  在 docker-compose 项目节点上，右键单击以打开上下文菜单，然后选择“属性”，或使用 Alt+Enter  。  以下屏幕截图显示需要解决方案在此使用的属性。  例如，可以通过自定义“服务 URL”属性来更改已加载的页面  。
 
    ![docker-compose 项目属性的屏幕截图](media/tutorial-multicontainer/launch-action.png)
 
-   下面是启动时显示的内容：
+   下面是启动时看到的内容（.NET Core 2.x 版本）：
 
    ![正在运行的 Web 应用的屏幕截图](media/tutorial-multicontainer/webfrontend.png)
+
+   适用于 .NET 3.1 的 Web 应用显示 JSON 格式的天气数据。
 
 ## <a name="next-steps"></a>后续步骤
 

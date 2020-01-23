@@ -3,8 +3,8 @@ title: Visual Studio 团队资源管理器工作负载和组件 ID
 titleSuffix: ''
 description: 使用 Visual Studio 工作负载和组件 ID 为技术全面的测试人员提供集成的测试工具
 keywords: ''
-author: TerryGLee
-ms.author: tglee
+author: ornellaalt
+ms.author: ornella
 manager: jillfra
 ms.date: 12/03/2019
 ms.topic: reference
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c6ef9a3b-d13d-49b4-9faa-51fa06b21e1f
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: a7667c5ad4a1b6de7427d00ef6a9591dc84c04f3
-ms.sourcegitcommit: af9bbf9116a63c0631ff2f4f3a878564aa63cd8c
+ms.openlocfilehash: 036cf810e16aec6e4d692f18b23f38d763630c6a
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74797322"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76114373"
 ---
 # <a name="visual-studio-team-explorer-component-directory"></a>Visual Studio 团队资源管理器组件目录
 

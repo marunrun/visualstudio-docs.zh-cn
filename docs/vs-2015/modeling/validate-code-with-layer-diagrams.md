@@ -21,12 +21,12 @@ caps.latest.revision: 84
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 596711c5c59738d5356437bb761e80caeddfbd6b
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 45b82ece15cfef4d313764027c0220453a6d4849
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74301349"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75845431"
 ---
 # <a name="validate-code-with-layer-diagrams"></a>用层关系图验证代码
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "74301349"
 
   若要查看支持此功能的 Visual Studio 的版本，请参阅 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)。
 
-  你可以从 Visual Studio 中打开的层关系图或从命令提示符手动验证代码。 你还可以在运行本地生成或 Team Foundation Build 时自动验证代码。 请参阅[第9频道视频：使用层关系图设计和验证体系结构](https://go.microsoft.com/fwlink/?LinkID=252073)。
+  你可以从 Visual Studio 中打开的层关系图或从命令提示符手动验证代码。 你还可以在运行本地生成或 Team Foundation Build 时自动验证代码。 请参阅[第9频道视频：使用层关系图设计和验证体系结构](https://s.ch9.ms/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012-Using-layer-diagrams-to-design-and-validate-your-architecture)。
 
 > [!IMPORTANT]
 > 如果想要使用 Team Foundation Build 运行层验证，则还必须在生成服务器上安装相同版本的 Visual Studio。
@@ -227,7 +227,7 @@ ms.locfileid: "74301349"
 
 |**语法**|**描述**|
 |----------------|---------------------|
-|*ArtifactN*（*ArtifactTypeN*）|*ArtifactN*是一个与层关系图上的层关联的项目。<br /><br /> *ArtifactTypeN*是*ArtifactN*的类型，例如**类**或**方法**，例如：<br /><br /> MySolution.MyProject.MyClass.MyMethod(Method)|
+|*ArtifactN*(*ArtifactTypeN*)|*ArtifactN*是一个与层关系图上的层关联的项目。<br /><br /> *ArtifactTypeN*是*ArtifactN*的类型，例如**类**或**方法**，例如：<br /><br /> MySolution.MyProject.MyClass.MyMethod(Method)|
 |*NamespaceNameN*|命名空间的名称。|
 |*LayerNameN*|层在层关系图上的名称。|
 |*DependencyType*|*Artifact1*和*Artifact2*之间的依赖关系的类型。 例如， *Artifact1*具有与*Artifact2*的**调用**关系。|
@@ -241,7 +241,7 @@ ms.locfileid: "74301349"
 |AV3001：缺少链接：层 "*LayerName*" 链接到无法找到的 "*项目*"。 是否缺少程序集引用?|*LayerName*无法找到的项目的链接。 例如，由于建模项目缺少对包含某个类的程序集的引用，因此可能缺少指向该类的链接。|
 |AV9001: 体系结构分析遇到了内部错误。 结果可能不完整。 有关详细信息，请参阅详细的生成事件日志或输出窗口。|有关更多详细信息，请参阅生成事件日志或输出窗口。|
 
-## <a name="security"></a>安全
+## <a name="security"></a>安全性
 
 ## <a name="see-also"></a>请参阅
  [在开发过程中验证系统](../modeling/validate-your-system-during-development.md)

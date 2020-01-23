@@ -10,12 +10,12 @@ caps.latest.revision: 34
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 257c3e097f890cc5b3ceec03aca8b264695e1bd9
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 8457dde4a447b3b49349ee7f9a979479abe4aaf8
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74301223"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851626"
 ---
 # <a name="signing-in-to-visual-studio"></a>登录 Visual Studio
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "74301223"
 ## <a name="why-should-i-sign-in-to-visual-studio"></a>我为什么应该登录到 Visual Studio？
  登录到 Visual Studio 可获得以下好处：
 
-- **授予访问 Visual Studio Dev Essentials 程序中大量优点的权限** ，包括免费软件、培训、支持等。 请参阅 [Visual Studio Dev Essential](https://aka.ms/vsdevhelp) 了解详细信息。
+- **授予访问 Visual Studio Dev Essentials 程序中大量优点的权限** ，包括免费软件、培训、支持等。 请参阅 [Visual Studio Dev Essential](https://visualstudio.microsoft.com/dev-essentials/) 了解详细信息。
 
 - **同步你的 Visual Studio 设置** – 当你登录到任何设备上的 Visual Studio 时，将立即应用你自定义的设置（例如，键绑定、窗口布局和颜色主题）。 请参阅 [Visual Studio 中的同步设置](https://msdn.microsoft.com/library/dn135229%28v=vs.120%29.aspx)。
 

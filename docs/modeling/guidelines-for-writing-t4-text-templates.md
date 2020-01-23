@@ -2,17 +2,17 @@
 title: T4 文本模板编写准则
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a0b1a8c70a0e7ec95e0545ecf3caf932f582b3c5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 24c8afd5e34d4957dac3d9f4d5b0e4409ad20895
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72667277"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596536"
 ---
 # <a name="guidelines-for-writing-t4-text-templates"></a>T4 文本模板编写准则
 
@@ -115,7 +115,7 @@ MyProject
 
 允许自定义代码：提供扩展点。
 
-请考虑在 \< # + 类功能块 # > 中生成虚方法。 这允许在许多上下文中使用单个模板，而无需修改。 您可以构造一个提供最少附加逻辑的派生类，而不是修改模板。 派生类可以是常规代码，也可以是运行时模板。
+请考虑在 \<# + 类功能块 # > 中生成虚方法。 这允许在许多上下文中使用单个模板，而无需修改。 您可以构造一个提供最少附加逻辑的派生类，而不是修改模板。 派生类可以是常规代码，也可以是运行时模板。
 
 例如，在 MyStandardRunTimeTemplate.tt 中：
 
@@ -139,7 +139,7 @@ class FabrikamTemplate : MyStandardRunTimeTemplate
 
 从文本生成中分离数据。
 
-尝试避免混合计算和文本块。 在每个文本模板中，使用第一个 \< # 代码块 # > 设置变量并执行复杂的计算。 从第一个文本块到模板末尾，或第一个 \< # + 类功能块 # >，避免长表达式，并避免循环和条件，除非它们包含文本块。 这种做法使模板更易于阅读和维护。
+尝试避免混合计算和文本块。 在每个文本模板中，使用第一个 \<# 代码块 # > 设置变量并执行复杂的计算。 从第一个文本块到模板末尾，或第一个 \<# + 类功能块 # >，避免长表达式，并避免循环和条件，除非它们包含文本块。 这种做法使模板更易于阅读和维护。
 
 请勿使用包含文件的 `.tt`。
 
@@ -151,7 +151,7 @@ class FabrikamTemplate : MyStandardRunTimeTemplate
 
 请考虑使用类型化模型。
 
-尽管可以为模型创建 XML 架构或数据库架构，但创建域特定语言（DSL）可能会很有用。 DSL 的优点在于，它会生成一个类来表示架构中的每个节点，并使用属性来表示属性。 这意味着您可以根据业务模式进行编程。 例如:
+尽管可以为模型创建 XML 架构或数据库架构，但创建域特定语言（DSL）可能会很有用。 DSL 的优点在于，它会生成一个类来表示架构中的每个节点，并使用属性来表示属性。 这意味着您可以根据业务模式进行编程。 例如：
 
 ```
 Team Members:
@@ -169,7 +169,7 @@ Team Members:
 
 你还可以将自己的关系图类型设计为域特定语言（DSL）。 可从 UML 和 Dsl 生成代码。 有关详细信息，请参阅[体系结构分析和建模](../modeling/analyze-and-model-your-architecture.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用 T4 文本模板生成设计时代码](../modeling/design-time-code-generation-by-using-t4-text-templates.md)
 - [使用 T4 文本模板的运行时文本生成](../modeling/run-time-text-generation-with-t4-text-templates.md)

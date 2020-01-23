@@ -15,33 +15,33 @@ caps.latest.revision: 19
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: ff56c89a56af54288284d9cc62c71d0c9b2179b4
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 23b5705b7ee81e56945050fe63dd2f086894bd08
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661101"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75917933"
 ---
 # <a name="ca1900-value-type-fields-should-be-portable"></a>CA1900：值类型字段应为可移植字段
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-有关 Visual Studio 的最新文档，请参阅[CA1900：值类型字段应为可移植字段](https://docs.microsoft.com/visualstudio/code-quality/ca1900-value-type-fields-should-be-portable)。
+有关 Visual Studio 的最新文档，请参阅[CA1900：值类型字段应为可移植字段](/visualstudio/code-quality/ca1900-value-type-fields-should-be-portable)。
 
 |||
 |-|-|
 |TypeName|ValueTypeFieldsShouldBePortable|
 |CheckId|CA1900|
-|类别|Microsoft 可移植性|
+|类别|Microsoft.Portability|
 |是否重大更改|如果该字段可以在程序集外查看，则为。<br /><br /> 无间断-如果该字段在程序集外部不可见，则为。|
 
 ## <a name="cause"></a>原因
  此规则检查在被封送到64位操作系统上的非托管代码时，通过显式布局声明的结构是否会正确对齐。 IA-64 不允许未对齐的内存访问，如果不解决此冲突，进程将崩溃。
 
-## <a name="rule-description"></a>规则说明
+## <a name="rule-description"></a>规则描述
  具有包含未对齐字段的显式布局的结构会导致在64位操作系统上发生崩溃。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
- 小于8个字节的所有字段的偏移量必须是其大小的倍数，而大于8个字节或更大的字段的偏移量必须是8的倍数。 另一种解决方法是使用 `LayoutKind.Sequential` 而不是 `LayoutKind.Explicit` （如果合理）。
+ 小于8个字节的所有字段的偏移量必须是其大小的倍数，而大于8个字节或更大的字段的偏移量必须是8的倍数。 另一种解决方法是使用 `LayoutKind.Sequential` 而不是 `LayoutKind.Explicit`（如果合理）。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
  只有出现错误时才应禁止显示此警告。

@@ -3,17 +3,17 @@ title: DataContext 方法（O-R 设计器）
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: c149f4e5-3b61-4c33-892e-3e26d47f3eeb
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 0e81f2337931f565e0068a852bf9b8284350690c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: b8b9d322ea9c805b7fc1ce55dbf93b72b29958af
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648545"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586700"
 ---
 # <a name="datacontext-methods-or-designer"></a>DataContext 方法（O/R 设计器）
 
@@ -26,7 +26,7 @@ ms.locfileid: "72648545"
 映射到存储过程和函数的 <xref:System.Data.Linq.DataContext> 方法将显示在**O/R 设计器**的 "**方法**" 窗格中。 “方法”窗格位于“实体”窗格（主设计图面）的旁边。 "**方法**" 窗格列出了通过使用**O/R 设计器**创建的所有 <xref:System.Data.Linq.DataContext> 方法。 默认情况下，**方法**窗格为空;将存储过程或函数从**服务器资源管理器**或**数据库资源管理器**拖到**O/R 设计器**上，以创建 <xref:System.Data.Linq.DataContext> 方法并填充**方法**窗格。 有关详细信息，请参阅[如何：创建映射到存储过程和函数的 DataContext 方法（O/R 设计器）](../data-tools/how-to-create-datacontext-methods-mapped-to-stored-procedures-and-functions-o-r-designer.md)。
 
 > [!NOTE]
-> 打开并关闭方法窗格，方法是右键单击**O/R 设计器**，然后单击 **"隐藏方法窗格**" 或 "**显示方法窗格**"，或使用键盘快捷方式**CTRL** +**1**。
+> 打开并关闭方法窗格，方法是右键单击**O/R 设计器**，然后单击 **"隐藏方法窗格**" 或 "**显示方法窗格**"，或使用键盘快捷方式**CTRL**+**1**。
 
 ## <a name="two-types-of-datacontext-methods"></a>DataContext 方法的两种类型
 
@@ -34,7 +34,7 @@ DataContext 方法指的是那些映射到数据库中的存储过程和函数�
 
 - 返回一个或多个结果集的 <xref:System.Data.Linq.DataContext> 方法：
 
-   如果应用程序只需运行数据库中的存储过程和函数并返回结果，可创建这种 <xref:System.Data.Linq.DataContext> 方法。 有关详细信息，请参阅[如何：创建映射到存储过程和函数的 DataContext 方法（O/R 设计器）](../data-tools/how-to-create-datacontext-methods-mapped-to-stored-procedures-and-functions-o-r-designer.md)、ISingleResult \<T > 和 <xref:System.Data.Linq.IMultipleResults>。
+   如果应用程序只需运行数据库中的存储过程和函数并返回结果，可创建这种 <xref:System.Data.Linq.DataContext> 方法。 有关详细信息，请参阅[如何：创建映射到存储过程和函数的 DataContext 方法（O/R 设计器）](../data-tools/how-to-create-datacontext-methods-mapped-to-stored-procedures-and-functions-o-r-designer.md)、ISingleResult\<t > 和 <xref:System.Data.Linq.IMultipleResults>。
 
 - 不返回结果集的 <xref:System.Data.Linq.DataContext> 方法，例如：对特定实体类执行插入、更新和删除操作。
 
@@ -49,7 +49,7 @@ DataContext 方法指的是那些映射到数据库中的存储过程和函数�
 
 从数据库拖动到 O/R 设计器图面上的对象将根据数据库中对象的名称自动命名。 如果多次拖动相同的对象，则会将数字添加到新名称的末尾，以区分名称。 如果数据库对象名称包含空格或 Visual Basic 或 C# 中不支持的字符，将使用下划线替代空格或无效字符。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Studio 中的 LINQ to SQL 工具](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
 - [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index)

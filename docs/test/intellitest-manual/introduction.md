@@ -4,17 +4,17 @@ ms.date: 05/02/2017
 ms.topic: conceptual
 helpviewer_keywords:
 - IntelliTest, Visual Studio IntelliTest developer testing tool
-ms.author: jillfra
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-author: jillre
-ms.openlocfilehash: 94bd67ecb4646e3b8079d2d1aadda097c655af4c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+author: mikejo5000
+ms.openlocfilehash: dfa81e7afe313a112e2355ddf5efadb70c555477
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653174"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591589"
 ---
 # <a name="overview-of-microsoft-intellitest"></a>Microsoft IntelliTest 的概述
 
@@ -77,6 +77,9 @@ public partial class HelloWorldTest {
 6. "Hello\0\0"
 7. "Hello\0World!"
 8. "Hello World!"
+
+> [!NOTE]
+> 对于生成问题，请尝试将Microsoft.VisualStudio.TestPlatform.TestFramework 和 Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions 引用替换为 Microsoft.VisualStudio.QualityTools.UnitTestFramework。
 
 阅读[使用 IntelliTest 生成单元测试](../../test/generate-unit-tests-for-your-code-with-intellitest.md)，了解生成的测试的保存位置。 生成的测试代码应包含如下所示的测试：
 

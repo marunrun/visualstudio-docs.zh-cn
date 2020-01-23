@@ -6,15 +6,15 @@ helpviewer_keywords:
 - load tests, properties
 - load tests, scenarios
 ms.assetid: 4414a638-1fa2-40ad-b1f4-b99f90b62e62
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 54159ca7b0d99e0bba7e7b048138ffacf6ab5b0b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c2011438f1fcb0230cde0de527216456553e7c64
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72652958"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75584434"
 ---
 # <a name="load-test-scenario-properties"></a>负载测试方案属性
 
@@ -24,13 +24,13 @@ ms.locfileid: "72652958"
 
 ## <a name="general"></a>常规
 
-|属性|定义|
+|Property|定义|
 |-|----------------|
 |**Name**|方案的名称。|
 
 ## <a name="mix"></a>组合
 
-|属性|定义|
+|Property|定义|
 |-|----------------|
 |**浏览器组合**|指定负载测试的 Web 浏览器组合。 可以指定不同的 Web 浏览器类型及其负载分布。<br /><br />选择省略号 (…) 按钮以打开“编辑浏览器组合”对话框，并使用“添加”和“删除”来选择负载测试中的 Web 浏览器类型     。<br /><br />有关详细信息，请参阅[指定 Web 浏览器类型](../test/edit-the-test-mix-to-specify-which-web-browsers-types-in-a-load-test-scenario.md)。|
 |**网络组合**|指定负载测试的网络组合。 可以指定要包括的网络类型及其负载分布。<br /><br />选择省略号 (…) 按钮以打开“编辑网络组合”对话框，并使用“添加”和“删除”来选择负载测试中的网络类型     。<br /><br />有关详细信息，请参阅[指定虚拟网络类型](../test/specify-virtual-network-types-in-a-load-test-scenario.md)。|
@@ -39,7 +39,7 @@ ms.locfileid: "72652958"
 
 ## <a name="options"></a>选项
 
-|属性|定义|
+|Property|定义|
 |-|----------------|
 |**要使用的代理**|指定在远程运行负载测试时希望方案使用的代理。 例如，你可能希望指定一组特定的代理，以便在分析性能趋势时保持一致性。 此外，还可以按地理位置分布各代理，以便代理运行的脚本和代理所在的位置之间存在关联。<br /><br />代理必须用逗号分隔，例如“Agent1, Agent2, Agent3”  。 将该属性保留为空白会指定该方案应使用所有可用的代理。<br /><br />有关详细信息，请参阅[如何：指定要使用的测试代理](../test/how-to-specify-test-agents-to-use-in-load-test-scenarios.md)。|
 |**对节奏延迟应用分布**|该布尔值用于指定是否要在用户节奏测试组合模型中应用典型分布延迟。 此属性仅在“测试组合类型”属性设置为“基于用户节奏”时适用   。<br /><br />有关详细信息，请参阅[如何：对节奏延迟应用分布](../test/how-to-apply-distribution-to-pacing-delay-when-using-a-user-pace-test-mix-model.md)|
@@ -50,7 +50,7 @@ ms.locfileid: "72652958"
 
 ## <a name="timing"></a>计时
 
-|属性|定义|
+|Property|定义|
 |-|----------------|
 |**延迟开始时间**|该时间值用于指示在负载测试开始后延迟启动方案的小时数、分钟数和秒数。 如果“预热过程中禁用”属性设置为“True”，则在预热期完成后将应用要等待的时间量   。<br /><br />有关详细信息，请参阅[配置方案启动延迟](../test/configure-scenario-start-delays.md)。|
 |**预热过程中禁用**|该布尔值用于指定方案是否应在负载测试的运行设置中指定的“预热持续时间”属性时间值期间运行  。<br /><br />有关负载测试运行设置属性的详细信息，请参阅[负载测试运行设置属性](../test/load-test-run-settings-properties.md)。<br /><br />有关详细信息，请参阅[配置方案启动延迟](../test/configure-scenario-start-delays.md)。|

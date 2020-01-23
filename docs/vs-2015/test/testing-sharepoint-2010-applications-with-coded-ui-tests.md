@@ -8,12 +8,12 @@ ms.assetid: 51b53778-469c-4cc9-854c-4e4992d6389b
 caps.latest.revision: 32
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 73dd0e406e8e0a00260d922e38dee70135c3645d
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: b44e921a8e1ba13d3f0786d4633f942f94f3eaaa
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74298006"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851277"
 ---
 # <a name="testing-sharepoint-2010-applications-with-coded-ui-tests"></a>使用编码的 UI 测试来测试 SharePoint 2010 应用程序
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -25,9 +25,9 @@ ms.locfileid: "74298006"
 - Visual Studio Enterprise
 
 ## <a name="what-else-should-i-know-about-coded-ui-tests"></a>还应当编码的 UI 测试了解什么?
- 若要详细了解使用编码的 UI 测试的相关好处，请参阅[使用 UI 自动化来测试代码](../test/use-ui-automation-to-test-your-code.md)和[使用 Visual Studio 2012 测试持续交付 - 第 5 章：实现系统测试的自动化](https://go.microsoft.com/fwlink/?LinkID=255196)。
+ 若要详细了解使用编码的 UI 测试的相关好处，请参阅[使用 UI 自动化来测试代码](../test/use-ui-automation-to-test-your-code.md)和[使用 Visual Studio 2012 测试持续交付 - 第 5 章：实现系统测试的自动化](https://msdn.microsoft.com/library/jj159335.aspx)。
 
- **注意**
+ **备注**
 
 - ![先决条件](../test/media/prereq.png "Prereq")只有 SharePoint 2010 支持对 SharePoint 应用程序进行编码的 UI 测试。
 
@@ -53,7 +53,7 @@ ms.locfileid: "74298006"
 > [!WARNING]
 > 如果在任何 Excel 单元格中输入文本，然后进行箭头键操作，将无法正确进行录制。 使用鼠标选择单元格。
 
- 如果要录制对空单元格的操作，则必须双击该单元格，然后执行设置文本操作，以此修改代码。 这是必需的，因为如果单击单元格，然后进行任何键盘操作，将会激活单元格内的 `textarea` 。 如果只是录制对空单元格的 `setvalue` ，将会搜索直到单击单元格后才会显示的 `editbox` 。 例如:
+ 如果要录制对空单元格的操作，则必须双击该单元格，然后执行设置文本操作，以此修改代码。 这是必需的，因为如果单击单元格，然后进行任何键盘操作，将会激活单元格内的 `textarea` 。 如果只是录制对空单元格的 `setvalue` ，将会搜索直到单击单元格后才会显示的 `editbox` 。 例如：
 
 ```csharp
 Mouse.DoubliClick(uiItemCell,new Point(31,14));
@@ -138,10 +138,10 @@ uiGridKeyboardInputEdit.Text=value;
  [编码的 UI 测试的内容索引](https://blogs.msdn.microsoft.com/mathew_aniyan/2013/02/18/content-index-for-coded-ui-test/)
 
 ### <a name="guidance"></a>指导
- [使用 Visual Studio 2012 测试持续交付 - 第 5 章：实现系统测试的自动化](https://go.microsoft.com/fwlink/?LinkID=255196)
+ [使用 Visual Studio 2012 测试持续交付 - 第 5 章：实现系统测试的自动化](https://msdn.microsoft.com/library/jj159335.aspx)
 
 ### <a name="forum"></a>论坛
- [Visual Studio ALM + Team Foundation Server 博客](https://go.microsoft.com/fwlink/?LinkID=254496)
+ [Visual Studio ALM + Team Foundation Server 博客](https://blogs.msdn.com/b/visualstudioalm/)
 
 ## <a name="see-also"></a>请参阅
  [使用 UI 自动化来测试代码](../test/use-ui-automation-to-test-your-code.md) [Web 性能和负载测试 SharePoint 2010 和2013应用程序](https://msdn.microsoft.com/library/20c2e469-0e4e-4296-a739-c0e8fff36e54)[创建 sharepoint 解决方案](https://msdn.microsoft.com/library/4bfb1e59-97c9-4594-93f8-3068b4eb9631)[验证和调试 sharepoint 代码](https://msdn.microsoft.com/library/b5f3bce2-6a51-41b1-a292-9e384bae420c)[生成和调试 sharepoint 解决方案](https://msdn.microsoft.com/library/c9e7c9ab-4eb3-40cd-a9b9-6c2a896f70ae)[分析 sharepoint 应用程序的性能](https://msdn.microsoft.com/library/61ae02e7-3f37-4230-bae1-54a498c2fae8)

@@ -14,12 +14,12 @@ ms.assetid: e6c0e636-5ec3-450e-b395-fc4bb9d75918
 caps.latest.revision: 35
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 1e30be26c40834d3122d491f8d150f02b6f3b776
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 4512867f636e2362aa28d52c5af28bf8eb9697f9
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74300696"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851153"
 ---
 # <a name="options-and-options-pages"></a>选项和选项页
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "74300696"
 - <xref:System.ComponentModel.DescriptionAttribute> 确定选项的说明。  
   
   > [!NOTE]
-  > 等效属性、SRCategory、LocDisplayName 和 SRDescription，使用字符串资源进行本地化，并在[托管项目示例](https://go.microsoft.com/fwlink/?LinkId=122774)中定义。  
+  > 等效属性、SRCategory、LocDisplayName 和 SRDescription，使用字符串资源进行本地化，并在[托管项目示例](https://msdn.com/vsx)中定义。  
   
   考虑以下代码片断：  
   

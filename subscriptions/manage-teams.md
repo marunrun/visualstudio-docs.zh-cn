@@ -6,12 +6,12 @@ manager: lank
 ms.date: 07/23/2019
 ms.topic: conceptual
 description: 了解管理员管理大型团队和外部承包商订阅的职责。
-ms.openlocfilehash: 975db18e207f52db8e9d37aa190f9085d4069163
-ms.sourcegitcommit: b5cb0eb09369677514ee1f44d5d7050d34c7fbc1
+ms.openlocfilehash: 379bb6b868d40a332d563a33f3a30a575aa235b7
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74491691"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850051"
 ---
 # <a name="large-teams-and-external-contractors"></a>大型团队和外部承包商
 Visual Studio 订阅管理员负责确保与 Visual Studio 授权软件交互的每个用户都获得自己的 Visual Studio 订阅的适当授权。
@@ -29,7 +29,7 @@ Visual Studio 订阅管理员负责确保与 Visual Studio 授权软件交互的
 外部承包商可以引入许可证以使用你的 Visual Studio 授权环境。 Microsoft 认证合作伙伴可获取一些免费 Visual Studio 订阅供内部使用。 但是，这些订阅不能用于产生收入的活动，比如为客户开发自定义软件。 请合作伙伴向你发送一封确认函，说明他们正在提供的许可证以及需要你购买的许可证。
 
 ## <a name="resources"></a>资源
-- [Visual Studio 授权白皮书](https://aka.ms/vslicensing)
+- [Visual Studio 授权白皮书](https://visualstudio.microsoft.com/wp-content/uploads/2019/06/Visual-Studio-Licensing-Whitepaper-May-2019.pdf)
 - [Visual Studio 管理和订阅支持](https://visualstudio.microsoft.com/support/support-overview-vs)
 - [批量许可条款](https://www.microsoft.com/licensing/product-licensing/products.aspx)
 

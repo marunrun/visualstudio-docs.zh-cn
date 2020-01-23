@@ -7,23 +7,23 @@ helpviewer_keywords:
 - connecting to data, Access databases
 - Access databases, connecting
 ms.assetid: 4159e815-d430-4ad0-a234-e4125fcbef18
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 65fa8b823a49644110dc773eb614da6022f4e8f5
-ms.sourcegitcommit: bde55773485c9bca50a760ac9e4c919e0a208a51
+ms.openlocfilehash: deb163779110c50560787b35ad7744f90f6a7f36
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72924517"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586856"
 ---
 # <a name="connect-to-data-in-an-access-database"></a>连接到 Access 数据库中的数据
 
 您可以使用 Visual Studio 连接到 Access 数据库（ *.mdb*文件或 *.accdb*文件）。 在定义此连接后，数据会显示在“数据源”窗口中。 您可以从此处将表或视图拖动到设计图面上。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
 
 若要使用这些过程，您需要 Windows 窗体或 WPF 项目以及 Access 数据库（ *.accdb*文件）或 access 2000-2003 数据库（ *.mdb*文件）。 按照与你的文件类型对应的过程操作。
 
@@ -33,7 +33,7 @@ ms.locfileid: "72924517"
 
 1. 在 Visual Studio 中打开 Windows 窗体或 WPF 应用程序项目。
 
-2. 若要打开 "**数据源**" 窗口，请在 "**视图**" 菜单上，选择 "**其他 Windows**  > **数据源**"。
+2. 若要打开 "**数据源**" 窗口，请在 "**视图**" 菜单上，选择 "**其他 Windows** > **数据源**"。
 
    ![查看其他 Windows 数据源](../data-tools/media/viewdatasources.png)
 
@@ -75,7 +75,7 @@ ms.locfileid: "72924517"
 
 1. 在 Visual Studio 中打开 Windows 窗体或 WPF 应用程序项目。
 
-2. 在 "**视图**" 菜单上，选择 "**其他 Windows**  > **数据源**"。
+2. 在 "**视图**" 菜单上，选择 "**其他 Windows** > **数据源**"。
 
    ![查看其他 Windows 数据源](../data-tools/media/viewdatasources.png)
 
@@ -115,7 +115,7 @@ ms.locfileid: "72924517"
 
 - 将验证逻辑添加到数据集中的数据表 <xref:System.Data.DataTable.ColumnChanging> 或 <xref:System.Data.DataTable.RowChanging> 事件（请参阅[验证数据集中的数据](../data-tools/validate-data-in-datasets.md)）。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [添加连接](../data-tools/add-new-connections.md)
 - [WPF 数据绑定概述](/dotnet/framework/wpf/data/data-binding-overview)

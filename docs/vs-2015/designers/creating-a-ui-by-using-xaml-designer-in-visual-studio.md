@@ -14,12 +14,12 @@ caps.latest.revision: 31
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 879d8457a0f5fd4bf63a2d69a4f3f026ce4c6fe1
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: d230d9a4719e1757820de87b60bcc7566a785f99
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74294663"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75844022"
 ---
 # <a name="creating-a-ui-by-using-xaml-designer-in-visual-studio"></a>在 Visual Studio 中，使用 XAML 设计器创建 UI
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -36,15 +36,15 @@ Visual Studio 中的 XAML 设计器提供可视化界面，有助于设计基于
 
  在“设计”视图，包括 *“美工板”* 的窗口是活动窗口，并且可以将其用作主要工作台面。 可通过添加或绘制元素，然后对其进行修改，在应用程序中用于直观地设计页面。 有关更多信息，请参见 [Working with elements in XAML Designer](../designers/working-with-elements-in-xaml-designer.md)。 此图显示了“设计”视图中的美工板。
 
- ![Design view of XAML Designer](../designers/media/xaml-editor-design-view.png "xaml_editor_design_view")
+ ![XAML 设计器的设计视图](../designers/media/xaml-editor-design-view.png "xaml_editor_design_view")
 
  这些功能在美工板中可用：
 
  对齐线：对齐线是显示为红色虚线的“对齐边界”，在控件的边缘对齐时或文本基线对齐时显示。 仅当启用了“对齐线对齐” 时，才会显示对齐边界。
 
- **网格滑轨** 使用 `Grid` 滑轨可以管理 [网格](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.aspx)面板中的行和列。 可以创建和删除行和列，并可以调整其相对宽度和高度。 显示在美工板左侧的垂直网格轨道用于行，而显示在顶部的水平线则用于列。
+ **网格轨道**`Grid` rails 用于管理[网格](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.aspx)面板中的行和列。 可以创建和删除行和列，并可以调整其相对宽度和高度。 显示在美工板左侧的垂直网格轨道用于行，而显示在顶部的水平线则用于列。
 
- **网格装饰器** `Grid` 装饰器显示为 `Grid` 滑轨上具有垂直或水平线条附加到其上的一个三角形。 当拖动 `Grid` 装饰器时，相邻的列或行的宽度或高度随鼠标的移动而改变。
+ **网格装饰器**`Grid` 装饰器显示为 `Grid` 滑轨上具有垂直或水平线条附加到其上的一个三角形。 当拖动 `Grid` 装饰器时，相邻的列或行的宽度或高度随鼠标的移动而改变。
 
  `Grid` 装饰器用于控制 `Grid`的行和列的宽度和高度。 可以通过单击 `Grid` 轨道，添加新列或行。 当为具有两个或多个列或行的 `Grid` 面板添加新行或列时，轨道外将显示一个小型工具栏，可显式设置宽度和高度。 小型工具栏使你能够为 `Grid` 行和列设置调整大小选项。
 
@@ -58,7 +58,7 @@ Visual Studio 中的 XAML 设计器提供可视化界面，有助于设计基于
 
  在“设计”视图中，其他美工板命令在屏幕的左下角区域可用，如下所示：
 
- ![Design view commands](../designers/media/xaml-editor-design-controls.png "xaml_editor_design_controls")
+ ![设计视图命令](../designers/media/xaml-editor-design-controls.png "xaml_editor_design_controls")
 
  此工具栏上的这些命令可用：
 
@@ -72,16 +72,16 @@ Visual Studio 中的 XAML 设计器提供可视化界面，有助于设计基于
 
  在 XAML 视图中，包含 XAML 编辑器窗口是活动窗口，且 XAML 编辑器是主要创作工具。 可扩展应用程序标记语言 (XAML) 提供基于 XML 的声明性词汇，用于指定应用程序的用户界面。 XAML 视图包括 IntelliSense、自动格式设置、语法突出显示和标记导航。 此图显示了 XAML 视图：
 
- ![XAML view](../designers/media/xaml-editor.png "xaml_editor")
+ ![XAML 视图](../designers/media/xaml-editor.png "xaml_editor")
 
  **拆分视图栏** 当 XAML 编辑器在下方窗口时，拆分视图栏将显示在 XAML 视图顶部。 拆分视图栏可控制“设计”视图和 XAML 视图的相对大小。 也可交换视图的位置（使用“交换窗格” 按钮），指定视图是水平排列或是垂直排列以及折叠任一视图。
 
  **标记缩放** 可通过标记缩放调整 XAML 视图大小。 可以从 20% 缩放到 400%。
 
 ## <a name="device-window"></a>设备窗口
- XAML 设计器中的“设备”窗口可以在设计时模拟各种视图、显示屏并显示 Windows 应用商店或 Windows Phone 项目的选项。 在 XAML 设计器中工作时，“设备”窗口在“设计” 菜单中可用。 如下所示：
+ XAML 设计器中的“设备”窗口可以在设计时模拟各种视图、显示屏并显示 Windows 应用商店或 Windows Phone 项目的选项。 在 XAML 设计器中工作时，“设备”窗口在“设计” 菜单中可用。 它如下所示：
 
- ![Device window](../designers/media/xaml-editor-device-panel.png "xaml_editor_device_panel")
+ ![设备窗口](../designers/media/xaml-editor-device-panel.png "xaml_editor_device_panel")
 
  以下是“设备”窗口中可用的选项：
 
@@ -116,7 +116,7 @@ Visual Studio 中的 XAML 设计器提供可视化界面，有助于设计基于
 
   若要查看“文档大纲”窗口，请依次在菜单栏上选择“查看”、“其他窗口”、“文档大纲”。
 
-  ![Document Outline window](../designers/media/xaml-editor-doc-outline.png "xaml_editor_doc_outline")
+  !["文档大纲" 窗口](../designers/media/xaml-editor-doc-outline.png "xaml_editor_doc_outline")
 
   以下是“文档大纲”窗口中可用的选项：
 
@@ -129,13 +129,13 @@ Visual Studio 中的 XAML 设计器提供可视化界面，有助于设计基于
   **返回到 pageRoot 范围** “文档大纲”窗口顶部的选项显示向上箭头符号，将使文档大纲返回到之前的范围。 仅当在样式或模板的范围中时，范围向上可用。
 
 ## <a name="properties-window"></a>“属性”窗口
- 通过“属性”窗口可以设置控件的属性值。 如下所示：
+ 通过“属性”窗口可以设置控件的属性值。 它如下所示：
 
  ![属性窗口](../designers/media/xaml-editor-prop-window.png "xaml_editor_prop_window")
 
- “属性”窗口顶部有多种选项。 可以通过使用“名称” 框，更改当前所选元素的名称。 在左上角，有一个表示当前所选元素的图标。 若要按类别或按字母顺序排列属性，请单击“类别”、“名称”或“排列方式” 列表中的“源” 。 若要查看控件的事件列表，请单击“事件” 按钮，该按钮显示为一个闪电形符号。 若要搜索属性，请开始在“搜索属性” 框中键入属性的名称。 “属性”窗口将显示与键入搜索的内容相匹配的属性。 某些属性允许通过选择向下箭头按钮设置高级属性。 有关使用属性和处理事件的详细信息，请参见 [快速入门：添加控件和处理事件](https://go.microsoft.com/fwlink/?LinkID=247983)
+ “属性”窗口顶部有多种选项。 可以通过使用“名称” 框，更改当前所选元素的名称。 在左上角，有一个表示当前所选元素的图标。 若要按类别或按字母顺序排列属性，请单击“类别”、“名称”或“排列方式” 列表中的“源” 。 若要查看控件的事件列表，请单击“事件” 按钮，该按钮显示为一个闪电形符号。 若要搜索属性，请开始在“搜索属性” 框中键入属性的名称。 “属性”窗口将显示与键入搜索的内容相匹配的属性。 某些属性允许通过选择向下箭头按钮设置高级属性。 有关使用属性和处理事件的详细信息，请参见 [快速入门：添加控件和处理事件](https://msdn.microsoft.com/library/windows/apps/xaml/hh465336.aspx)
 
  每个属性值的右侧是一个“属性标记” ，显示为一个方框符号。 属性标记的外观指示是否有数据绑定到或有资源应用于该属性。 例如，白色方框符号指示默认值，黑色方框符号通常指示已应用某个本地资源，而橙色方框通常指示已应用某个数据绑定。 单击属性标记时，可以导航到一种样式的定义、打开数据绑定生成器或打开资源选取器。
 
 ## <a name="see-also"></a>请参阅
- [Working with elements in XAML Designer](../designers/working-with-elements-in-xaml-designer.md) [How to create and apply a resource](../designers/how-to-create-and-apply-a-resource.md) [Walkthrough: Binding to data in XAML Designer](../designers/walkthrough-binding-to-data-in-xaml-designer.md)
+ 使用[中的元素 XAML 设计器](../designers/working-with-elements-in-xaml-designer.md)[如何创建和应用资源](../designers/how-to-create-and-apply-a-resource.md)[演练：绑定到 XAML 设计器中的数据](../designers/walkthrough-binding-to-data-in-xaml-designer.md)

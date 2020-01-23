@@ -4,16 +4,16 @@ ms.date: 10/03/2017
 ms.topic: conceptual
 helpviewer_keywords:
 - Live Unit Testing FAQ
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8db8264268eb04edc3140d0e2a6ece5896692e38
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ba231e6c203197518b75a7a8c0592f01bba4ffe9
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653040"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591536"
 ---
 # <a name="live-unit-testing-frequently-asked-questions"></a>Live Unit Testing 常见问题解答
 
@@ -85,15 +85,26 @@ Live Unit Testing 是否适用于 .NET Core？
 </Target>
 ```
 
-## <a name="error-messages-with-outputpath-or-outdir"></a>\<OutputPath> 或 \<OutDir> 错误消息
+## <a name="error-messages-with-outputpath-outdir-or-intermediateoutputpath"></a>\<OutputPath>、\<OutDir> 或 \<IntermediateOutputPath> 错误消息
 
 Live Unit Testing 尝试生成解决方案时为什么出现了以下错误：“….似乎无条件地设置 `<OutputPath>` 或 `<OutDir>`。  Live Unit Testing 将不会从输出程序集执行测试”？
 
-如果解决方案的生成过程无条件地替代 `<OutputPath>` 或 `<OutDir>`，使其不是 `<BaseOutputPath>` 的子目录，则可能会出现此错误。 在这种情况下，Live Unit Testing 不会工作，因为它也会替代这些值以确保将生成项目拖放到 `<BaseOutputPath>` 下的文件夹。 如果在一个常规生成中，必须替代要放入生成项目的位置，请基于 `<BaseOutputPath>` 有条件地替代 `<OutputPath>`。
+如果解决方案的生成过程具有指定应在何处生成二进制文件的自定义逻辑，则会出现此错误。 默认情况下，二进制文件的位置取决于 `<OutputPath>`、`<OutDir>` 或 `<IntermediateOutputPath>` 以及 `<BaseOutputPath>` 或 `<BaseIntermediateOutputPath>`。
 
-例如，如果生成过程如下所示替代 `<OutputPath>`：
+Live Unit Testing 将重写这些变量，以确保将生成项目拖放到 Live Unit Testing 的项目文件夹，如果生成过程也会重写这些变量，则失败。
 
-```xml 
+可以通过两种主要方法来成功生成 Live Unit Testing。 为了简化生成配置，可以将输出路径基于 `<BaseIntermediateOutputPath>`。 对于更复杂的配置，可以将输出路径基于 `<LiveUnitTestingBuildRootPath>`。
+
+### <a name="overriding-outputpathintermediateoutputpath-conditionally-based-on-baseoutputpath-baseintermediateoutputpath"></a>根据 `<BaseOutputPath>`/ `<BaseIntermediateOutputPath>` 在特定条件下重写 `<OutputPath>`/`<IntermediateOutputPath>`。
+
+> [!NOTE]
+> 若要使用此方法，每个项目都需要能够彼此独立地生成。 在生成过程中，一个项目引用项不能源自另一个项目。 在运行时（例如调用 `Assembly.Loadfile("..\..\Project2\Release\Project2.dll")`），一个项目不能在另一个项目中动态加载程序集。
+
+在生成过程中，Live Unit Testing 会自动覆盖 `<BaseOutputPath>`/`<BaseIntermediateOutputPath>` 变量以定位 Live Unit Testing 项目文件夹。
+
+例如，如果生成过程如下所示替代 <OutputPath>：
+
+```xml
 <Project>
   <PropertyGroup>
     <OutputPath>$(SolutionDir)Artifacts\$(Configuration)\bin\$(MSBuildProjectName)</OutputPath>
@@ -103,7 +114,7 @@ Live Unit Testing 尝试生成解决方案时为什么出现了以下错误：�
 
 然后可使用以下 XML 替换它：
 
-```xml 
+```xml
 <Project>
   <PropertyGroup>
     <BaseOutputPath Condition="'$(BaseOutputPath)' == ''">$(SolutionDir)Artifacts\$(Configuration)\bin\$(MSBuildProjectName)\</BaseOutputPath>
@@ -115,6 +126,46 @@ Live Unit Testing 尝试生成解决方案时为什么出现了以下错误：�
 这可确保 `<OutputPath>` 位于 `<BaseOutputPath>` 文件夹中。
 
 请勿直接在生成过程中替代 `<OutDir>`；请转而替代 `<OutputPath>` 以将生成项目放置到特定位置。
+
+### <a name="overriding-your-properties-based-on-the-liveunittestingbuildrootpath-property"></a>基于 `<LiveUnitTestingBuildRootPath>` 属性重写你的属性。
+
+> [!NOTE]
+> 在此方法中，你需要注意项目文件夹下添加的文件，这些文件在生成过程中不会生成。 下面的示例演示了在将包文件夹置于项目下时要执行的操作。 由于在生成过程中不会生成此文件夹的内容，因此不应更改 MSBuild 属性  。
+
+在 Live Unit Testing 生成过程中，`<LiveUnitTestingBuildRootPath>` 属性设置为 Live Unit Testing 项目文件夹的位置。
+
+例如，假定你的项目包含此处所示的结构。
+
+```
+.vs\...\lut\0\b
+artifacts\{binlog,obj,bin,nupkg,testresults,packages}
+src\{proj1,proj2,proj3}
+tests\{testproj1,testproj2}
+Solution.sln
+```
+在 Live Unit Testing 生成过程中，`<LiveUnitTestingBuildRootPath>` 属性设置为 `.vs\...\lut\0\b` 的完整路径。 如果项目定义映射到解决方案目录的 `<ArtifactsRoot>` 属性，则可以按如下所示更新 MSBuild 项目：
+
+```xml
+<Project>
+    <PropertyGroup Condition="'$(LiveUnitTestingBuildRootPath)' == ''">
+        <SolutionDir>$([MSBuild]::GetDirectoryNameOfFileAbove(`$(MSBuildProjectDirectory)`, `YOUR_SOLUTION_NAME.sln`))\</SolutionDir>
+
+        <ArtifactsRoot>Artifacts\</ArtifactsRoot>
+        <ArtifactsRoot Condition="'$(LiveUnitTestingBuildRootPath)' != ''">$(LiveUnitTestingBuildRootPath)</ArtifactsRoot>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <BinLogPath>$(ArtifactsRoot)\BinLog</BinLogPath>
+        <ObjPath>$(ArtifactsRoot)\Obj</ObjPath>
+        <BinPath>$(ArtifactsRoot)\Bin</BinPath>
+        <NupkgPath>$(ArtifactsRoot)\Nupkg</NupkgPath>
+        <TestResultsPath>$(ArtifactsRoot)\TestResults</TestResultsPath>
+
+        <!-- Note: Given that a build doesn't generate packages, the path should be relative to the solution dir, rather than artifacts root, which will change during a Live Unit Testing build. -->
+        <PackagesPath>$(SolutionDir)\artifacts\packages</PackagesPath>
+    </PropertyGroup>
+</Project>
+```
 
 ## <a name="build-artifact-location"></a>生成项目位置
 
@@ -133,8 +184,6 @@ Live Unit Testing 尝试生成解决方案时为什么出现了以下错误：�
 - Live Unit Testing 不会创建新的应用程序域来运行测试，但从测试资源管理器窗口运行的测试确实会创建新的应用程序域  。
 
 - Live Unit Testing 按顺序运行每个测试程序集中的测试。 在“测试资源管理器”中，可以选择并行运行多个测试  。
-
-- Live Unit Testing 中测试的发现和执行使用 `TestPlatform` 版本 2，而测试资源管理器窗口使用版本 1  。 但在大多数情况下，将不会注意到有差异。
 
 - 测试资源管理器默认以单线程单元 (STA) 运行测试，而 Live Unit Testing 以多线程单元 (MTA) 运行测试  。 若要在 Live Unit Testing 中以 STA 实运行 MSTest 测试，请 `MSTest.STAExtensions 1.0.3-beta` NuGet 包中可找到的 `<STATestMethod>` 或 `<STATestClass>` 属性修饰测试方法或所包含的类。 对于 NUnit，请使用 `<RequiresThread(ApartmentState.STA)>` 属性修饰测试方法，对于 xUnit，则使用 `<STAFact>` 属性。
 

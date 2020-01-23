@@ -18,28 +18,26 @@ caps.latest.revision: 45
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: b4bcd1f1f023c9e439fb870c9e31f07aa5be215d
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 03c0da634ea740517380896542e9df5e6c7a5fbd
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299556"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75918596"
 ---
 # <a name="how-to-define-a-domain-specific-language"></a>如何定义域特定语言
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 若要定义域特定语言 (DSL)，请从模板创建 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 解决方案。 解决方案的重要组成部分是 DSL 定义关系图，它存储在 DslDefinition.dsl 中。 DSL 定义将定义 DSL 的类和形状。 在进行修改并将所做修改添加到这些元素后，可以添加程序代码以更详细地自定义 DSL。
 
- 如果你不熟悉 Dsl，我们建议你完成**DSL 工具实验室**，你可以在此站点中找到此工具：[初学者和建模 SDK](https://go.microsoft.com/fwlink/?LinkID=186128)
-
 ## <a name="templates"></a>选择模板解决方案
  若要定义 DSL，必须安装以下组件：
 
 |||
 |-|-|
-|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185579](https://go.microsoft.com/fwlink/?LinkId=185579)|
-|[!INCLUDE[vssdk_current_short](../includes/vssdk-current-short-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185580](https://go.microsoft.com/fwlink/?LinkId=185580)|
-|Visual Studio 可视化和建模 SDK|[http://go.microsoft.com/fwlink/?LinkID=186128](https://go.microsoft.com/fwlink/?LinkID=186128)|
+|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]|[https://www.visualstudio.com/](https://www.visualstudio.com/)|
+|[!INCLUDE[vssdk_current_short](../includes/vssdk-current-short-md.md)]|[Visual Studio SDK](../extensibility/visual-studio-sdk.md)|
+|Visual Studio 可视化和建模 SDK|[建模 SDK 下载](https://www.microsoft.com/download/details.aspx?id=48148)|
 
  若要创建新的域特定语言，请使用域特定语言项目模板创建新的 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 解决方案。
 
@@ -192,7 +190,7 @@ ms.locfileid: "74299556"
 
  单击类中的 "**域属性**"，按 enter 键，然后键入属性的名称。 域属性的默认类型是 String。 若要更改类型，请选择 "域" 属性，然后在 "**属性**" 窗口中设置**类型**。 如果所需的类型不在下拉列表中，请参阅[添加属性类型](#addTypes)。
 
- **设置 "元素名称" 属性。** 选择可用于标识语言资源管理器中的元素的域属性。 例如，在 Song 域类中可以选择 Title 域属性。 在 "**属性**" 窗口中，将 "**元素名称**" 设置为 `true`。
+ **设置 "元素名称" 属性。** 在语言资源管理器中选择可以用于标识元素的域属性。 例如，在 Song 域类中可以选择 Title 域属性。 在 "**属性**" 窗口中，将 "**元素名称**" 设置为 `true`。
 
 ### <a name="create-derived-domain-classes"></a>创建派生的域类
  如果希望域类具有继承其属性和关系的变量，则创建从它派生的类。 例如，Album 可能具有派生类 WMA 和 MP3。
@@ -346,7 +344,7 @@ ms.locfileid: "74299556"
 
  **调整每个角色**的重数（如有必要）。 如果希望每个 Person 最多只有一个 Manager，则将显示在关系图上的 Manager 标签下的重数设置为 0..1。
 
- **向关系添加域属性。** 在图中，"艺术家-唱片集" 关系具有 "角色" 属性。
+ **向关系添加域属性。** 在该图中，Artist-Album 关系具有角色的属性。
 
  如果相同的模型元素对之间可以存在多个相同类的链接 **，则设置该关系的 "允许重复项" 属性**。 例如，可以允许 Teacher 向相同的 Student 教授多个 Subject。
 
@@ -398,7 +396,7 @@ ms.locfileid: "74299556"
 
 5. 在形状之间**创建连接**。 依次单击连接符工具、形状，然后单击另一个形状。
 
-6. **验证是否无法在不适当的类之间创建连接。** 例如，如果您的关系在唱片集和艺术家之间，则验证不能将艺人链接到艺术家。
+6. **验证是否无法在不适当的类之间创建连接。** 例如，如果存在 Album 和 Artist 之间的关系，则验证是否无法将 Artist 链接到 Artist。
 
 7. **验证多重性是否正确。例如，验证你是否无法将人员连接到多个经理。**
 
@@ -608,10 +606,10 @@ ms.locfileid: "74299556"
 
  另请参阅[如何：更改域特定语言的命名空间](../modeling/how-to-change-the-namespace-of-a-domain-specific-language.md)。
 
-## <a name="trouble"></a>有关
- 下表列出了在设计 DSL 时遇到的一些最常见问题，以及其解决方案的建议。 [可视化工具扩展性论坛](https://go.microsoft.com/fwlink/?LinkId=186074)上提供了更多建议。
+## <a name="trouble"></a> 故障排除
+ 下表列出了在设计 DSL 时遇到的一些最常见问题，以及其解决方案的建议。 [可视化工具扩展性论坛](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=dslvsarchx)上提供了更多建议。
 
-|问题|建议|
+|Problem|建议|
 |-------------|----------------|
 |在 DSL 定义文件中进行的更改不起作用。|单击工具栏上的 "**转换所有模板**" 解决方案资源管理器，然后重新生成解决方案。|
 |形状显示了修饰器的名称而不是属性值。|设置修饰器映射。 在 DSL 定义关系图上，单击“关系图元素映射”，它是域类和形状类之间的灰色线条。<br /><br /> 打开 " **DSL 详细信息**" 窗口。 如果看不到该窗口，请在 "视图" 菜单上，指向 "**其他窗口**"，再单击 " **DSL 详细信息**"。<br /><br /> 单击 "**修饰器映射**" 选项卡。选择修饰器的名称。 确保选中它旁边的框。 在 "**显示属性**" 下，选择域属性的名称。<br /><br /> 有关详细信息，请参阅[关系图上的形状](#shapes)。|

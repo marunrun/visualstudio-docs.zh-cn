@@ -5,20 +5,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - text templates, custom directive processors
 - walkthroughs [text templates], directive processor
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: 73473a549c774cd0f4302404e2ca3a450cc2e6d2
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 8e280f64cc23dc2e949e5aa896a8e20673a3f293
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72666980"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596484"
 ---
 # <a name="walkthrough-create-a-custom-directive-processor"></a>演练：创建自定义指令处理器
 
@@ -42,7 +42,7 @@ ms.locfileid: "72666980"
 
 `<#@ CoolDirective Processor="CustomDirectiveProcessor" FileName="<Your Path>DocFile.xml" #>`
 
-自定义指令处理器将变量和属性添加到生成转换类。 您编写的指令使用 <xref:System.CodeDom> 类创建引擎添加到生成转换类的代码。 @No__t_0 类在视觉对象C#或 Visual Basic 中创建代码，具体取决于 `template` 指令的 `language` 参数中指定的语言。 指令处理器的语言和访问指令处理器的文本模板的语言不必一致。
+自定义指令处理器将变量和属性添加到生成转换类。 您编写的指令使用 <xref:System.CodeDom> 类创建引擎添加到生成转换类的代码。 <xref:System.CodeDom> 类在视觉对象C#或 Visual Basic 中创建代码，具体取决于 `template` 指令的 `language` 参数中指定的语言。 指令处理器的语言和访问指令处理器的文本模板的语言不必一致。
 
 指令创建的代码如下所示：
 
@@ -84,9 +84,9 @@ End Property
 
 2. 添加对这些程序集的引用：
 
-    - **VisualStudio. TextTemplating. \***
+    - **Microsoft.VisualStudio.TextTemplating.\*.0**
 
-    - **VisualStudio. TextTemplating. \***
+    - **Microsoft.VisualStudio.TextTemplating.Interfaces.\*.0**
 
 3. 将**Class1**中的代码替换为以下代码。 此代码定义一个继承自 <xref:Microsoft.VisualStudio.TextTemplating.DirectiveProcessor> 类的 CustomDirectiveProcessor 类并实现必需的方法。
 
@@ -603,11 +603,11 @@ End Property
 
 5. 在“文件”菜单上，单击“全部保存”。
 
-6. 在 **“生成”** 菜单上，单击 **“生成解决方案”** 。
+6. 在 **“生成”** 菜单上，单击 **“生成解决方案”**。
 
 ### <a name="build-the-project"></a>生成项目
 
-生成项目。 在 **“生成”** 菜单上，单击 **“生成解决方案”** 。
+生成此项目。 在 **“生成”** 菜单上，单击 **“生成解决方案”**。
 
 ## <a name="register-the-directive-processor"></a>注册指令处理器
 
@@ -637,9 +637,9 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\*.0\TextTemplatin
 
 1. 使用 "开始" 菜单或命令行运行 `regedit` 命令。
 
-2. 浏览到位置**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio \\ \* .0 \ TextTemplating\DirectiveProcessors**，并单击节点。
+2. 浏览到**\software\microsoft\visualstudio\\位置 HKEY_LOCAL_MACHINE \*.0 \ TextTemplating\DirectiveProcessors**，然后单击该节点。
 
-   在64位系统上，使用**HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio \\ \*。 0 \ TextTemplating\DirectiveProcessors**
+   在64位系统上，使用**HKEY_LOCAL_MACHINE \software\wow6432node\microsoft\visualstudio\\\*。 0 \ TextTemplating\DirectiveProcessors**
 
 3. 添加名为 CustomDirectiveProcessor 的新项。
 
@@ -654,18 +654,18 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\*.0\TextTemplatin
 
      注册表项应具有以下值：
 
-   | “属性” | 键入 | 数据 |
+   | Name | 类型 | 数据 |
    |-|-|-|
    | (默认) | REG_SZ | (未设置值) |
-   | 实例 | REG_SZ | CustomDP.CustomDirectiveProcessor |
-   | CodeBase | REG_SZ | <strong>\<Path 到解决方案 ></strong>CustomDP\bin\Debug\CustomDP.dll |
+   | 类 | REG_SZ | CustomDP.CustomDirectiveProcessor |
+   | CodeBase | REG_SZ | <strong>解决方案的\<路径 ></strong>CustomDP\bin\Debug\CustomDP.dll |
 
      如果已将程序集放置在 GAC 中，则值应如下所示：
 
-   | “属性” | 键入 | 数据 |
+   | Name | 类型 | 数据 |
    |-|-|-|
    | (默认) | REG_SZ | (未设置值) |
-   | 实例 | REG_SZ | CustomDP.CustomDirectiveProcessor |
+   | 类 | REG_SZ | CustomDP.CustomDirectiveProcessor |
    | Assembly | REG_SZ | CustomDP.dll |
 
 6. 重新启动 Visual Studio。
@@ -877,7 +877,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\*.0\TextTemplatin
 1. 将*TestDP.tt*中的代码替换为以下代码。 HTML 为突出显示状态。 请确保将字符串 `YOUR PATH` 替换为*docfile.xml*文件的路径。
 
     > [!NOTE]
-    > 其他打开的 \< # 和 close # > 标记与 HTML 标记中的语句代码分开。
+    > 其他打开的 \<# 和 close # > 标记与 HTML 标记中的语句代码分开。
 
     ```csharp
     <#@ assembly name="System.Xml" #>

@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7ac1a2812cb86108d32d769595affd53fc402ff4
-ms.sourcegitcommit: 57bc1c3887838d707c13feff72a677b3bad3be4b
+ms.openlocfilehash: d7bda9882a8f46f3b32c658db952a2eaf73d3fb7
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72777723"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75916473"
 ---
 # <a name="visual-studio-emulator-for-android"></a>适用于 Android 的 Visual Studio 仿真程序
 
@@ -25,10 +25,10 @@ ms.locfileid: "72777723"
 > 在大多数情况下，建议使用 Google Android Emulator，而不是适用于 Android 的 Visual Studio 模拟器：
 > - Visual Studio 2015 后不支持适用于 Android 的 Visual Studio 模拟器。
 > - 适用于 Android 的 Visual Studio 模拟器不支持 Android 版本 6.0 以后的模拟器映像。
-> - Google Android Emulator 现在支持 [Hyper-V](https://docs.microsoft.com/xamarin/android/get-started/installation/android-emulator/hardware-acceleration#accelerating-with-hyper-v)。
+> - Google Android Emulator 现在支持 [Hyper-V](/xamarin/android/get-started/installation/android-emulator/hardware-acceleration#accelerating-with-hyper-v)。
 > - 用于 Apache Cordova 的 Visual Studio Tools 可与 Google Android Emulator 共同使用。 有关详细信息，请参阅[在 Android 上运行 Apache Cordova 应用](/visualstudio/cross-platform/tools-for-cordova/run-your-app/run-app-android#google-android-emulator)（请注意，不再需要如文本所述禁用 Hyper-V）。
 >
-> 有关配置和使用 Google Android Emulator 的详细信息，请参阅 [Android Emulator 安装](https://docs.microsoft.com/xamarin/android/get-started/installation/android-emulator/)。
+> 有关配置和使用 Google Android Emulator 的详细信息，请参阅 [Android Emulator 安装](/xamarin/android/get-started/installation/android-emulator/)。
 
  适用于 Android 的 Visual Studio 仿真程序旨在为实际设备提供水平相当的性能。 但是，在发布你的应用之前，我们建议你在物理设备上测试应用。
 
@@ -105,4 +105,4 @@ ms.locfileid: "72777723"
 - 在 Visual Studio 或在仿真程序管理器中使用“发送笑脸”工具来报告问题。
 
 ## <a name="see-also"></a>请参阅
- [适用于 Android 的 Visual Studio 仿真程序的系统要求](../cross-platform/system-requirements-for-the-visual-studio-emulator-for-android.md) [适用于 Android 的 Visual Studio 仿真程序的疑难解答](../cross-platform/troubleshooting-the-visual-studio-emulator-for-android.md)
+ [适用于 Android 的 Visual Studio 模拟器的系统要求](../cross-platform/system-requirements-for-the-visual-studio-emulator-for-android.md) [适用于 Android 的 Visual Studio 模拟器的疑难解答](../cross-platform/troubleshooting-the-visual-studio-emulator-for-android.md)

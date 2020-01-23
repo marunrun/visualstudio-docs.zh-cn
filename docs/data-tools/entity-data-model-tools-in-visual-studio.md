@@ -3,17 +3,17 @@ title: 实体框架工具
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 1b06b573-84aa-4458-b3f5-e238df47bf45
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 6efcd0ca4e8274df7667b5a5b2b75020def8c358
-ms.sourcegitcommit: 8589d85cc10710ef87e6363a2effa5ee5610d46a
+ms.openlocfilehash: 250f1ad55f8d60396b8423098e58801d0ed81e77
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72807027"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75916728"
 ---
 # <a name="entity-framework-tools-in-visual-studio"></a>Visual Studio 中的 Entity Framework Tools
 
@@ -43,17 +43,17 @@ Entity Framework Tools 旨在帮助您生成实体框架（EF）应用程序。 
 
 这些工具可生成或修改 *.edmx*文件。 此 *.edmx*文件包含描述概念模型、存储模型和这些模型之间的映射的信息。 有关详细信息，请参阅[EDMX](/ef/ef6/)。
 
-[实体框架 Power Tools](https://marketplace.visualstudio.com/items?itemName=EntityFrameworkTeam.EntityFrameworkPowerToolsBeta4)可帮助生成使用实体数据模型的应用程序。 Power tools 可以生成概念模型、验证现有模型、生成包含基于概念模型的对象类的源代码文件，并生成包含模型生成的视图的源代码文件。 有关详细信息，请参阅[预生成的映射视图](https://docs.microsoft.com/ef/ef6/fundamentals/performance/pre-generated-views)。
+[实体框架 Power Tools](https://marketplace.visualstudio.com/items?itemName=EntityFrameworkTeam.EntityFrameworkPowerToolsBeta4)可帮助生成使用实体数据模型的应用程序。 Power tools 可以生成概念模型、验证现有模型、生成包含基于概念模型的对象类的源代码文件，并生成包含模型生成的视图的源代码文件。 有关详细信息，请参阅[预生成的映射视图](/ef/ef6/fundamentals/performance/pre-generated-views)。
 
 ## <a name="related-topics"></a>相关主题
 
-| Title | 描述 |
+| 职务 | 描述 |
 | - | - |
 | [ADO.NET 实体框架](/dotnet/framework/data/adonet/ef/index) | 描述如何使用 [!INCLUDE[adonet_ef](../data-tools/includes/adonet_ef_md.md)] 提供的 [!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)] 工具来创建应用程序。 |
 | [实体数据模型](/dotnet/framework/data/adonet/entity-data-model) | 提供有关使用 [!INCLUDE[adonet_ef](../data-tools/includes/adonet_ef_md.md)]上构建的应用程序所使用的数据的链接和信息。 |
 | [实体框架（EF）文档）](/ef/ef6/get-started) | 提供视频、教程和高级文档的索引，以帮助您充分利用实体框架。 |
 | [ASP.NET 5 应用程序到新数据库](https://docs.efproject.net/en/latest/platforms/aspnetcore/new-db.html) | 介绍如何使用实体框架7创建新的 ASP.NET 5 应用程序。 |
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [适用于 NET 的 Visual Studio Data Tools](../data-tools/visual-studio-data-tools-for-dotnet.md)

@@ -12,17 +12,17 @@ helpviewer_keywords:
 - MSBuild, command line reference
 - msbuild.exe
 ms.assetid: edaa65ec-ab8a-42a1-84cb-d76d5b2f4584
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7a23a82afcc484cbbe71bf167ecd0884f399e656
-ms.sourcegitcommit: 3e94d9fb6dc56fa8b23fbacd5d11cf8d6e7e18f1
+ms.openlocfilehash: e8cd04d16f35ae2cc1edaf43ae9f8803c3e424ba
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72252649"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589248"
 ---
 # <a name="msbuild-command-line-reference"></a>MSBuild 命令行参考
 使用 MSBuild.exe 生成项目或解决方案文件时，可以包含几个开关来指定过程的各个方面  。
@@ -37,13 +37,13 @@ MSBuild.exe [Switches] [ProjectFile]
 
 ## <a name="arguments"></a>自变量
 
-|参数|说明|
+|参数|描述|
 |--------------|-----------------|
 |`ProjectFile`|在指定项目文件中生成目标。 如果不指定项目文件，则 MSBuild 会在当前工作目录中搜索以“proj”结尾的文件扩展名并使用该文件  。 还可以为此参数指定 Visual Studio 解决方案文件。|
 
 ## <a name="switches"></a>开关
 
-|开关|缩写形式|说明|
+|开关|缩写形式|描述|
 |------------|----------------|-----------------|
 |-help|/? 或 -h|显示用法信息。 以下命令是一个示例：<br /><br /> `msbuild.exe -?`|
 |-detailedsummary|-ds|在生成日志末尾显示有关生成的配置以及如何将它们安排到节点中的详细信息。|
@@ -64,7 +64,7 @@ MSBuild.exe [Switches] [ProjectFile]
 
 ### <a name="switches-for-loggers"></a>记录器的开关
 
-|开关|缩写形式|说明|
+|开关|缩写形式|描述|
 |------------|----------------|-----------------|
 |-consoleloggerparameters:<br /><br /> `parameters`|-clp:`parameters`|将指定的参数传递到控制台记录器，后者会在控制台窗口中显示生成信息。 可以指定以下参数：<br /><br /> -   **PerformanceSummary**。 显示在任务、目标和项目中所花费的时间。<br />-   **Summary**。 在末尾显示错误和警告摘要。<br />-   **NoSummary**。 不在末尾显示错误和警告摘要。<br />-   **ErrorsOnly**。 仅显示错误。<br />-   **WarningsOnly**。 仅显示警告。<br />-   **NoItemAndPropertyList**。 如果详细级别设置为 `diagnostic`，则不在每个项目生成开头显示项和属性的列表。<br />-   **ShowCommandLine**。 显示 `TaskCommandLineEvent` 消息。<br />-   **ShowTimestamp**。 将时间戳显示为任何消息的前缀。<br />-   **ShowEventId**。 显示每个已启动事件、已完成事件和消息的事件 ID。<br />-   **ForceNoAlign**。 不将文本与控制台缓冲区大小对齐。<br />-   **DisableConsoleColor**。 将默认控制台颜色用于所有日志记录消息。<br />-   **DisableMPLogging**。 在非多处理器模式下运行时，禁用输出的多处理器日志记录样式。<br />-   **EnableMPLogging**。 启用多处理器日志记录样式（即使在非多处理器模式下运行）。 默认情况下，此日志记录样式处于启用状态。<br />-   **Verbosity**。 重写此记录器的 -verbosity  设置。<br /><br /> 使用分号分隔多个参数，如以下示例所示：<br /><br /> `-consoleloggerparameters:PerformanceSummary;NoSummary -verbosity:minimal`|
 |-distributedFileLogger|-dfl|将每个 MSBuild 节点的生成输出记录到其自己的文件。 这些文件的初始位置是当前目录。 默认情况下，这些文件命名为“MSBuild\<NodeId>.log”  。 可使用 -fileLoggerParameters  开关指定文件位置和 fileLogger 的其他参数。<br /><br /> 如果你使用 -fileLoggerParameters  开关命名日志文件，分布式记录器会在为每个节点创建日志文件时，将相应名称用作模板，并将节点 ID 追加到相应名称中。|
@@ -72,7 +72,7 @@ MSBuild.exe [Switches] [ProjectFile]
 |-fileLogger<br /><br /> *[number]*|-fl[`number`]|将生成输出记录到当前目录中的单个文件。 如果没有指定 `number`，输出文件名为 msbuild.log  。 如果指定 `number`，输出文件名为 msbuild\<n>.log，其中 \<n> 是 `number`  。 `Number` 可以是 1 到 9 的数字。<br /><br /> 可使用 -fileLoggerParameters  开关指定文件位置和 fileLogger 的其他参数。|
 |-fileloggerparameters:[number]<br /><br /> `parameters`|-flp:[ `number`] `parameters`|为文件记录器和分布式文件记录器指定任何额外参数。 若有此开关，表明存在对应的 -filelogger[  `number`]  开关。 `Number` 可以是 1 到 9 的数字。<br /><br /> 可使用针对 -consoleloggerparameters  列出的所有参数。 还可以使用以下一个或多个参数：<br /><br /> -   **LogFile**。 写入生成日志的日志文件的路径。 分布式文件记录器将此路径用作其日志文件的名称的前缀。<br />-   **Append**。 确定是将生成日志追加到日志文件还是覆盖它。 设置该开关时，生成日志将追加到日志文件。 此开关不存在时，将覆盖现有日志文件的内容。<br />     如果包含追加开关，则无论它是设置为 true 还是 false，都会追加日志。 如果不包含追加开关，则会覆盖日志。<br />     在此例中会覆盖文件：`msbuild myfile.proj -l:FileLogger,Microsoft.Build;logfile=MyLog.log`<br />     在此例中会追加文件：`msbuild myfile.proj -l:FileLogger,Microsoft.Build;logfile=MyLog.log;append=true`<br />     在此例中会追加文件：`msbuild myfile.proj -l:FileLogger,Microsoft.Build;logfile=MyLog.log;append=false`<br />-   **Encoding**。 指定文件的编码（例如，UTF-8、Unicode 或 ASCII）。<br /><br /> 下面的示例为警告和错误生成单独的日志文件：<br /><br /> `-flp1:logfile=errors.txt;errorsonly -flp2:logfile=warnings.txt;warningsonly`<br /><br /> 下面的示例演示其他可能性：<br /><br /> `-fileLoggerParameters:LogFile=MyLog.log;Append; Verbosity=diagnostic;Encoding=UTF-8`<br /><br /> `-flp:Summary;Verbosity=minimal;LogFile=msbuild.sum`<br /><br /> `-flp1:warningsonly;logfile=msbuild.wrn`<br /><br /> `-flp2:errorsonly;logfile=msbuild.err`|
 |-binaryLogger[:[LogFile=]`output.binlog`[;ProjectImports=[None,Embed,ZipFile]]]|-bl|将所有生成事件串行化为压缩的二进制文件。 默认情况下，该文件位于当前目录中，名称为 msbuild.binlog  。 二进制日志是对生成过程的详细描述，可在将来用于重建文本日志，或由其它分析工具使用。 二进制日志的大小通常只有最详细文本诊断级日志的 1/10 到 1/20，但却能包含更多信息。<br /><br />二进制记录器默认收集项目文件的源文本，包括所有导入的项目，以及在生成期间所遇到的目标文件。 可选的 `ProjectImports` 开关控制此行为：<br /><br /> -   ProjectImports=None  。 不收集项目导入。<br /> -   ProjectImports=Embed  。 在日志文件中嵌入项目导入（默认）。<br /> -   ProjectImports=ZipFile  。 将项目文件保存至 \<output>.projectimports.zip，其中 \<output> 的名称与二进制日志文件的名称相同  。<br /><br />ProjectImports 的默认设置为“嵌入”。<br />请注意：记录器不收集 .cs、.cpp 等非 MSBuild 源文件    。<br />将 .binlog 文件作为参数而非项目/解决方案传递给 msbuild.exe 可“播放”该文件   。 其他记录器将接收日志文件中包含的信息，就像原始生成发生时那样。 若要详细了解二进制日志及其使用情况，可访问 https://github.com/Microsoft/msbuild/wiki/Binary-Log <br /><br />示例： <br /> -   `-bl`<br /> -    `-bl:output.binlog`<br /> -   `-bl:output.binlog;ProjectImports=None`<br /> -   `-bl:output.binlog;ProjectImports=ZipFile`<br /> -   `-bl:..\..\custom.binlog`<br /> -   `-binaryLogger`|
-|-logger:<br /><br /> `logger`|-l:`logger`|指定要用于记录 MSBuild 中的事件的记录器。 若要指定多个记录器，请分别指定每个记录器。<br /><br /> 将以下语法用于 `logger`: `[``LoggerClass``,]``LoggerAssembly``[;``LoggerParameters``]`<br /><br /> 将以下语法用于 `LoggerClass`: `[``PartialOrFullNamespace``.]``LoggerClassName`<br /><br /> 如果程序集恰好包含一个记录器，则不必指定记录器类。<br /><br /> 将以下语法用于 `LoggerAssembly`: `{``AssemblyName``[,``StrongName``] &#124;` `AssemblyFile``}`<br /><br /> 记录器参数是可选的，传递给记录器时与输入时完全一致。<br /><br /> 下面的示例使用 -logger  开关。<br /><br /> `-logger:XMLLogger,MyLogger,Version=1.0.2,Culture=neutral`<br /><br /> `-logger:XMLLogger,C:\Loggers\MyLogger.dll;OutputAsHTML`|
+|-logger:<br /><br /> `logger`|-l:`logger`|指定要用于记录 MSBuild 中的事件的记录器。 若要指定多个记录器，请分别指定每个记录器。<br /><br /> 将以下语法用于 `logger`: `[``LoggerClass``,]``LoggerAssembly``[;``LoggerParameters``]`<br /><br /> 将以下语法用于 `LoggerClass`: `[``PartialOrFullNamespace``.]``LoggerClassName`<br /><br /> 如果程序集恰好包含一个记录器，则不必指定记录器类。<br /><br /> 将以下语法用于 `LoggerAssembly`：`{``AssemblyName``[,``StrongName``] &#124;` `AssemblyFile``}`<br /><br /> 记录器参数是可选的，传递给记录器时与输入时完全一致。<br /><br /> 下面的示例使用 -logger  开关。<br /><br /> `-logger:XMLLogger,MyLogger,Version=1.0.2,Culture=neutral`<br /><br /> `-logger:XMLLogger,C:\Loggers\MyLogger.dll;OutputAsHTML`|
 |-noconsolelogger|-noconlog|禁用默认控制台记录器，不将事件记录到控制台。|
 
 ## <a name="example"></a>示例

@@ -6,21 +6,21 @@ f1_keywords:
 - VS.CHOOSEITEMS.SYSTEM.ACTIVITIES_COMPONENTS
 - VS.CHOOSEITEMS.SYSTEM.ACTIVITIES COMPONENTS
 ms.assetid: cef390cd-eeda-42e6-9d2e-18c8325a4f06
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 14ca8baa34de7763608641d9269b1721058c5af2
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 3f1a7030b6c351407814314ccd41e0e2ed6a880e
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72649865"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75593104"
 ---
 # <a name="systemactivities-tab-choose-toolbox-items-dialog-box"></a>"系统活动" 选项卡，"选择工具箱项" 对话框
 
-"**选择工具箱项**" 对话框的此选项卡显示可供您使用的 WINDOWS WORKFLOW FOUNDATION （WF）活动、模板和项的列表。 若要显示此列表，请从 "**工具**" 菜单中选择 "**工具箱项**"，或通过右键单击**工具箱**并选择 "**选择项**" 以显示 "**选择工具箱项**" 对话框，然后选择其 **"系统**" 选项卡。在此框中，列表包含来自 system.object、system.web 和 system.object 程序集的工作流活动。但是，默认情况下，仅检查显示的系统提供的活动和通过**工具箱**中显示的其他程序集添加的活动。 当你在对话框上单击 **"确定"** 时，将自动检查并显示最近**添加的活动**。 此外，这些项将显示在**工具箱**中与活动/项/模板所在的命名空间对应的新类别中。
+"**选择工具箱项**" 对话框的此选项卡显示可供您使用的 WINDOWS WORKFLOW FOUNDATION （WF）活动、模板和项的列表。 若要显示此列表，请从 "**工具**" 菜单中选择 "**工具箱项**"，或通过右键单击**工具箱**并选择 "**选择项**" 以显示 "**选择工具箱项**" 对话框，然后选择其 "**系统**" 选项卡。在框外，列表包含来自 system.object、system.web 和 system.object 程序集的工作流活动。但是，默认情况下，仅检查显示的系统提供的活动和通过**工具箱**中显示的其他程序集添加的活动。 当你在对话框上单击 **"确定"** 时，将自动检查并显示最近**添加的活动**。 此外，这些项将显示在**工具箱**中与活动/项/模板所在的命名空间对应的新类别中。
 
 > [!WARNING]
 > 如果您试图添加未包含任何工作流活动的程序集，则将显示一个错误对话框，指出该程序集没有包含任何活动。
@@ -29,7 +29,7 @@ ms.locfileid: "72649865"
 
 筛选是在每个选项卡上完成的，并且不能通过 " **.Net 组件**" 选项卡添加工作流活动。通过 "**系统**" 选项卡本身添加它们。
 
-您可以在此对话框选项卡中取消选中不希望在**工具箱**中看到的任何项，也可以使用 "**工具箱**" 中的 "**删除**" 右键单击菜单选项来取消引用程序集，而不会从**工具箱**。
+您可以在此对话框选项卡中取消选中不希望在**工具箱**中看到的任何项，也可以使用 "**工具箱**" 中的 "**删除**" 右键单击菜单选项来取消引用程序集，而不会从**工具箱**中移除该项。
 
 通过将活动拖放到设计器上来实例化该活动会自动将包含该项的程序集添加到引用的程序集列表中。 此外，如果该活动引用程序集 C，它不会将 C 添加到引用的程序集列表中。 程序集 C 必须位于 GAC 中或与活动 B 相同的目录中。在独立情况下，程序集必须位于 GAC 中或 VS 的探测路径中。 只有在那时，您可以拖动和删除工作流设计器图面上的活动。
 

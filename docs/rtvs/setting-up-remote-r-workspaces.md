@@ -8,12 +8,12 @@ ms.author: kraigb
 manager: jillfra
 ms.workload:
 - data-science
-ms.openlocfilehash: e8cd1868e61b0691be7ea639d8b5d826c608915d
-ms.sourcegitcommit: 978df2feb5e64228d2e3dd430b299a5c234cda17
+ms.openlocfilehash: 686f98aaaade035f1632139d255ccff8b37eddf3
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72888537"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850058"
 ---
 # <a name="set-up-remote-workspaces"></a>设置远程工作区
 
@@ -143,7 +143,7 @@ RTVS 要求通过 HTTP 实现所有与远程服务器的通信，这就要求服
 
      虽然二者功能相同，但 Microsoft R Open 另外还受益于 [Intel Math Kernel 库](https://software.intel.com/intel-mkl)的附加硬件加速线性代数库。
 
-2. 运行 [R 服务安装程序](https://aka.ms/rtvs-services)并根据提示重启。 安装程序执行如下操作：
+2. 运行 [R 服务安装程序](https://github.com/Microsoft/RTVS/blob/master/doc/rtvsd/rtvs-remote-downloads.md)并根据提示重启。 安装程序执行如下操作：
 
     - 在 %PROGRAMFILES%\R Tools for Visual Studio\1.0\\ 中创建文件夹并复制所有所需二进制文件  。
     - 安装 `RHostBrokerService` 和 `RUserProfileService` 并配置为自动启动。

@@ -8,17 +8,17 @@ helpviewer_keywords:
 - data tier
 - n-tier applications, about n-tier applications
 ms.assetid: 1020581d-eaaa-41a2-aca4-bf4c212895f6
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 80b6f89d9c074d7d17c258263c03e97334e6fd90
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 21233b94350823b1f765aa33f9304c10c43e0535
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648279"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586375"
 ---
 # <a name="n-tier-data-applications-overview"></a>N 层数据应用程序概述
 *N 层*数据应用程序是分为多个*层*的数据应用程序。 也称为 "分布式应用程序" 和 "多层应用程序"，n 层应用程序将处理单独处理到在客户端和服务器之间分布的离散层。 开发访问数据的应用程序时，应在构成应用程序的各个层之间明确分隔。
@@ -42,7 +42,7 @@ Visual Studio 包含多项功能，可帮助开发人员创建 n 层应用程序
 
 呈现层通常使用服务引用访问中间层（例如，[在 Visual Studio 应用程序中 Windows Communication Foundation 服务和 WCF 数据服务](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)）。 呈现层不直接访问数据层。 呈现层通过中间层中数据访问组件的方式与数据层通信。
 
-## <a name="middle-tier"></a>中间层
+## <a name="middle-tier"></a>Middle tier（中间层）
 *中间层*是表示层和数据层用来相互通信的层。 典型的中间层组件包括：
 
 - 业务逻辑，如业务规则和数据验证。
@@ -57,16 +57,16 @@ Visual Studio 包含多项功能，可帮助开发人员创建 n 层应用程序
 
 下图显示了 Visual Studio 中可用的功能和技术，以及它们可能适合于 n 层应用程序的中间层的位置。
 
-![Middle 层组件 ](../data-tools/media/ntiermid.png) 中间层
+中间层](../data-tools/media/ntiermid.png) ![中间层组件
 
 中间层通常使用数据连接连接到数据层。 此数据连接通常存储在数据访问组件中。
 
 ## <a name="data-tier"></a>数据层
-*数据层*基本上是存储应用程序数据的服务器（例如，运行 SQL Server 的服务器）。
+数据层基本上是存储应用程序数据的服务器（例如运行 SQL Server 的服务器）。
 
 下图显示了 Visual Studio 中可用的功能和技术，以及它们可能适合 n 层应用程序的数据层的位置。
 
-![Data 层组件 ](../data-tools/media/ntierdatatier.png) 数据层
+数据层](../data-tools/media/ntierdatatier.png) ![数据层组件
 
 数据层无法直接从表示层中的客户端访问。 中间层中的数据访问组件用于表示层和数据层之间的通信。
 
@@ -79,7 +79,7 @@ Visual Studio 包含多项功能，可帮助开发人员创建 n 层应用程序
 
 [使用 LINQ to SQL 的 n 层和远程应用程序](/dotnet/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [演练：创建 N 层数据应用程序](../data-tools/walkthrough-creating-an-n-tier-data-application.md)
 - [分层更新](../data-tools/hierarchical-update.md)

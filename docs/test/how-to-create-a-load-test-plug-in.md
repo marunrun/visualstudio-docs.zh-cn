@@ -9,15 +9,15 @@ helpviewer_keywords:
 - plug-ins, load test
 - load tests, plug-ins
 ms.assetid: 27806972-1b15-4388-833d-6d0632816f1f
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: e2eea116eb18e192720410b71136de9d823ed0fe
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 97952f65d78f7204410d07b90e0e538fb8499116
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653670"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589118"
 ---
 # <a name="how-to-create-a-load-test-plug-in"></a>如何：创建负载测试插件
 

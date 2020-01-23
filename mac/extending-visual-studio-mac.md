@@ -1,17 +1,17 @@
 ---
 title: 扩展 Visual Studio for Mac
 description: 可使用被称为“扩展包”的模块扩展 Visual Studio for Mac 的特性和功能。 本指南的第一部分创建了一个简单的 Visual Studio for Mac 扩展包，用于在文档中插入日期和时间。 本指南的第二部分介绍了该扩展包系统和一些构成 Visual Studio for Mac 基础的核心 API 的基础知识。
-author: conceptdev
-ms.author: crdun
-ms.date: 05/07/2019
+author: heiligerdankgesang
+ms.author: dominicn
+ms.date: 12/20/2019
 ms.technology: vs-ide-sdk
 ms.assetid: D5245AB0-8404-426B-B538-F49125E672B2
-ms.openlocfilehash: 02285a38214b4f13c45b4868599c84f47e67013c
-ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
+ms.openlocfilehash: 30826f68be1ef2f29940c8f9c95b2b79435e0a2a
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73716828"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75852040"
 ---
 # <a name="extending-visual-studio-for-mac"></a>扩展 Visual Studio for Mac
 
@@ -72,10 +72,10 @@ Visual Studio for Mac 包含一组被称为“扩展包”的模块  。 可使�
 
  ```xml
 <Extension path="/MonoDevelop/Ide/Commands/Edit">
-  <command id="DateInserter.DateInserterCommands.InsertDate"
+  <Command id="DateInserter.DateInserterCommands.InsertDate"
             _label="Insert Date"
             _description="Insert the current date"
-            defaulthandler="DateInserter.InsertDateHandler" />
+            defaultHandler="DateInserter.InsertDateHandler" />
 </Extension>
 ```
 
@@ -92,7 +92,7 @@ Visual Studio for Mac 包含一组被称为“扩展包”的模块  。 可使�
 
 ```xml
 <Extension path="/MonoDevelop/Ide/MainMenu/Edit">
-  <commanditem id="DateInserter.DateInserterCommands.InsertDate" />
+  <CommandItem id="DateInserter.DateInserterCommands.InsertDate" />
 </Extension>
 ```
 
@@ -161,7 +161,7 @@ public enum DateInserterCommands
 
 ## <a name="extending-the-new-editor"></a>扩展新编辑器
 
-Visual Studio for Mac [引入新的本机 Cocoa 文本编辑器 UI](https://aka.ms/vs/mac/editor/learn-more)，它基于 Windows 上的 Visual Studio 的相同编辑器层而构建。
+Visual Studio for Mac [引入新的本机 Cocoa 文本编辑器 UI](https://docs.microsoft.com/visualstudio/releasenotes/vs2019-mac-relnotes#RTW)，它基于 Windows 上的 Visual Studio 的相同编辑器层而构建。
 
 在 Visual Studio 和 Visual Studio for Mac 之间共享编辑器的诸多好处之一是，可以采用针对 Visual Studio 编辑器的代码以在 Visual Studio for Mac 上运行。
 
@@ -186,12 +186,12 @@ Visual Studio for Mac [引入新的本机 Cocoa 文本编辑器 UI](https://aka.
 
 * `ITextView` 是在编辑器控件的屏幕上如何呈现 `ITextBuffer` 的 UI 表示。 它引用其文本缓冲区，以及 `Caret``Selection` 和其他与 UI 相关的概念。
 
-对于给定的 [`MonoDevelop.Ide.Gui.Document` ](http://source.monodevelop.com/#MonoDevelop.Ide/MonoDevelop.Ide.Gui/Document.cs,4e960d4735f089b5)，可以分别通过 `Document.GetContent<ITextBuffer>()` 和 `Document.GetContent<ITextView>()` 检索关联的基础 `ITextBuffer` 和 `ITextView`。
+对于给定的 [`MonoDevelop.Ide.Gui.Document`](http://source.monodevelop.com/#MonoDevelop.Ide/MonoDevelop.Ide.Gui/Document.cs,4e960d4735f089b5)，可以分别通过 `Document.GetContent<ITextBuffer>()` 和 `Document.GetContent<ITextView>()` 检索关联的基础 `ITextBuffer` 和 `ITextView`。
 
 ## <a name="additional-information"></a>其他信息
 
 > [!NOTE]
-> 我们正在致力于改善针对 Visual Studio for Mac 的扩展性方案。 若要创建扩展，并需要其他帮助或信息，或希望提供反馈，请填写 [Visual Studio for Mac 扩展创建](https://aka.ms/vsmac-extensions-survey)表单。
+> 我们正在致力于改善针对 Visual Studio for Mac 的扩展性方案。 若要创建扩展，并需要其他帮助或信息，或希望提供反馈，请填写 [Visual Studio for Mac 扩展创建](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR3YufGX_azhFl7MkrQO9i9JUNVMyMklVVlAzQVdURDg2NjQxTFRBVTJURC4u)表单。
 
 ## <a name="see-also"></a>请参阅
 

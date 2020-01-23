@@ -5,20 +5,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - walkthroughs [text templates], custom host
 - text templates, custom host walkthrough
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: 999e8f27a9c60d776d65dc87eb2b42adeec2226c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 3d578161d43de68d85f3b7704c9fd69fe4e268ea
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72666975"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75593533"
 ---
 # <a name="walkthrough-create-a-custom-text-template-host"></a>演练：创建自定义文本模板主机
 
@@ -35,7 +35,7 @@ ms.locfileid: "72666975"
 
 - 测试自定义主机。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
 
 若要完成本演练，您必须具有：
 
@@ -51,7 +51,7 @@ ms.locfileid: "72666975"
 
 2. 添加对下列程序集的引用：
 
-   - **VisualStudio. TextTemplating. \***
+   - **Microsoft.VisualStudio.TextTemplating.\*.0**
 
    - **VisualStudio. TextTemplating 和更高版本**
 
@@ -730,7 +730,7 @@ ms.locfileid: "72666975"
 
      可以使用任何文本编辑器（例如记事本）来创建文件。
 
-2. 将以下内容添加到文件中：
+2. 向文件中添加以下内容：
 
     > [!NOTE]
     > 文本模板的编程语言不必与自定义宿主的编程语言一致。
@@ -821,6 +821,6 @@ ms.locfileid: "72666975"
 
 在本演练中，你创建了一个支持基本转换功能的文本模板转换主机。 您可以对该宿主进行扩展，以支持可调用自定义或生成的指令处理器的文本模板。 有关详细信息，请参阅[演练：将主机连接到生成的指令处理器](../modeling/walkthrough-connecting-a-host-to-a-generated-directive-processor.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [ITextTemplatingEngineHost](/previous-versions/visualstudio/visual-studio-2012/bb126505(v=vs.110))

@@ -14,18 +14,18 @@ ms.workload:
 - multiple
 author: kendrahavens
 manager: jillfra
-ms.openlocfilehash: dca1fbb8f199db56563f4107ec88b832ec445bde
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: cec8ea3ea091ab1ea65bcad2bd4cca139fd74042
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71254551"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75846812"
 ---
 # <a name="visual-studio-test-explorer-faq"></a>Visual Studio 测试资源管理器常见问题解答
 ::: moniker range=">=vs-2019"
 
 ## <a name="where-is-group-by-traits-in-visual-studio-2019"></a>Visual Studio 2019 中的特征分组位于何处？
-此特征分组已移至列。 通过 Visual Studio 2019 版本 16.2 中的多层和可自定义层次结构，我们认为将特征作为分组包含在内造成了不必要的视觉复杂性。 我们希望获得关于此设计的反馈！ https://developercommunity.visualstudio.com/content/problem/588029/no-longer-able-to-group-by-trait-in-test-explorer.html
+此特征分组已移至列。 通过 Visual Studio 2019 版本 16.2 中的多层和可自定义层次结构，我们认为将特征作为分组包含在内造成了不必要的视觉复杂性。 我们希望获得关于此设计的反馈！ [https://digitalcommons.usu.edu/all_datasets/48](https://developercommunity.visualstudio.com/content/problem/588029/no-longer-able-to-group-by-trait-in-test-explorer.html )
 
 现在，你可以右键单击测试资源管理器中的列，然后选择“列”。 检查“特征”列，它将出现在测试资源管理器中。 你现在可以依据你感兴趣的特征筛选此列。
 
@@ -43,7 +43,7 @@ ms.locfileid: "71254551"
 ::: moniker range="vs-2017"
 请生成你的项目，并确保在“工具”>“选项”>“测试”中打开基于程序集的发现    。
 ::: moniker-end
-[实时测试发现](https://go.microsoft.com/fwlink/?linkid=862824)是一种基于源的测试发现功能。 该功能无法发现使用理论、自定义适配器、自定义特征和 `#ifdef` 语句等的测试，因为这些项是在运行时定义的。 需要进行生成才能准确发现此类测试。 在 Visual Studio 2017 版本 15.6 及更高版本中，基于程序集的发现（传统发现）仅在生成后运行。 此设置意味着实时测试发现会在编辑时找到尽可能多的测试，并且通过基于程序集的发现可在生成之后显示动态定义的测试。 实时测试发现改进了响应能力，但仍可让你在生成后获取完整且准确的结果。
+[实时测试发现](https://devblogs.microsoft.com/dotnet/real-time-test-discovery/)是一种基于源的测试发现功能。 该功能无法发现使用理论、自定义适配器、自定义特征和 `#ifdef` 语句等的测试，因为这些项是在运行时定义的。 需要进行生成才能准确发现此类测试。 在 Visual Studio 2017 版本 15.6 及更高版本中，基于程序集的发现（传统发现）仅在生成后运行。 此设置意味着实时测试发现会在编辑时找到尽可能多的测试，并且通过基于程序集的发现可在生成之后显示动态定义的测试。 实时测试发现改进了响应能力，但仍可让你在生成后获取完整且准确的结果。
 
 ## <a name="test-explorer--plus-symbol"></a>测试资源管理器加号 (+)
 
@@ -58,7 +58,7 @@ ms.locfileid: "71254551"
 
 基于程序集的发现不再对我的项目有效。  如何重新启动它？
 
-请转到“工具”>“选项”>“测试”，并选中“另外，生成后从已生成的程序集中发现测试”框     。
+请转到“工具”>“选项”>“测试”，选中“另外，生成后从已生成的程序集中发现测试”框     。
 
 ![基于程序集的选项](media/testex-toolsoptions.png)
 ::: moniker-end
@@ -67,13 +67,13 @@ ms.locfileid: "71254551"
 
 在我键入时，测试现在会显示在测试资源管理器中，而不必生成我的项目。  进行了哪些更改？
 
-此功能称为[实时测试发现](https://go.microsoft.com/fwlink/?linkid=862824)。 它使用 Roslyn 分析器来发现测试并实时填充测试资源管理器，而无需你生成项目。 有关动态定义测试（如理论或自定义特征）的测试发现行为，请参阅[动态测试发现](#dynamic-test-discovery)。
+此功能称为[实时测试发现](https://devblogs.microsoft.com/dotnet/real-time-test-discovery/)。 它使用 Roslyn 分析器来发现测试并实时填充测试资源管理器，而无需你生成项目。 有关动态定义测试（如理论或自定义特征）的测试发现行为，请参阅[动态测试发现](#dynamic-test-discovery)。
 
 ## <a name="real-time-test-discovery-compatibility"></a>实时测试发现兼容性
 
 哪些语言和测试框架可以使用实时测试发现？ 
 
-由于[实施测试发现](https://go.microsoft.com/fwlink/?linkid=862824)是使用 Roslyn 编译器生成的，因此仅适用于托管语言（C# 和 Visual Basic）。 目前，实时测试发现仅适用于 xUnit、NUnit 和 MSTest 框架。
+由于[实施测试发现](https://devblogs.microsoft.com/dotnet/real-time-test-discovery/)是使用 Roslyn 编译器生成的，因此仅适用于托管语言（C# 和 Visual Basic）。 目前，实时测试发现仅适用于 xUnit、NUnit 和 MSTest 框架。
 
 ## <a name="test-explorer-logs"></a>测试资源管理器日志
 

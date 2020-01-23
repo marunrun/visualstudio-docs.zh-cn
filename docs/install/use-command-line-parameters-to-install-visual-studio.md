@@ -10,19 +10,19 @@ f1_keywords:
 - switches
 - command prompt
 ms.assetid: 480f3cb4-d873-434e-a8bf-82cff7401cf2
-author: TerryGLee
-ms.author: tglee
+author: ornellaalt
+ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: fd40a1adbf6f1f35a651f38ce5173400d208b2bc
-ms.sourcegitcommit: 978df2feb5e64228d2e3dd430b299a5c234cda17
+ms.openlocfilehash: 7210a2834dda749cfe1d89b9093cd627b7c0ae1b
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72888512"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76114369"
 ---
 # <a name="use-command-line-parameters-to-install-visual-studio"></a>使用命令行参数安装 Visual Studio
 
@@ -170,7 +170,7 @@ ms.locfileid: "72888512"
 | ----------------------- | --------------- |
 | `--channelId <id>` | **可选**：要安装的实例的通道 ID。 如果指定了 `--installPath`，则此参数对于 install 命令是必需参数，对于其他命令则可忽略。 |
 | `--channelUri <uri>` | **可选**：通道清单的 URI。 如果不需要更新，`--channelUri` 可指向不存在的文件（例如 --channelUri C:\doesntExist.chman）。 此参数可用于 install 命令；其他命令则可忽略。 |
-| `--installChannelUri <uri>` | **可选**：要用于安装的通道清单的 URI。 `--channelUri` 指定的 URI（指定 `--installChannelUri` 时必须指定）用于检测更新。 此参数可用于 install 命令；其他命令则可忽略。 |
+| `--installChannelUri <uri>` | **可选**：要用于安装的通道清单的 URI。 `--channelUri` 指定的 URI（指定 `--installChannelUri`时必须指定）用于检测更新。 此参数可用于 install 命令；其他命令则可忽略。 |
 | `--installCatalogUri <uri>` | **可选**：要用于安装的目录清单的 URI。 如果指定此选项，通道管理器会先尝试通过此 URI 下载目录清单，然后再在安装通道清单中使用 URI。 此参数用于支持脱机安装，安装期间会使用已下载的产品目录创建布局缓存。 此参数可用于 install 命令；其他命令则可忽略。 |
 | `--productId <id>` | **可选**：将要安装的实例的产品 ID。 在正常安装条件下，这是预填充的。 |
 | `--wait` | **可选**：进程会先等待安装完成，然后再返回退出代码。 在需要等待安装完成以处理来自该安装的返回代码的自动安装中，这非常有用。 |
@@ -204,7 +204,7 @@ ms.locfileid: "72888512"
 | ----------------------- | --------------- |
 | `--channelId <id>` | **可选**：要安装的实例的通道 ID。 如果指定了 `--installPath`，则此参数对于 install 命令是必需参数，对于其他命令则可忽略。 |
 | `--channelUri <uri>` | **可选**：通道清单的 URI。 如果不需要更新，`--channelUri` 可指向不存在的文件（例如 --channelUri C:\doesntExist.chman）。 此参数可用于 install 命令；其他命令则可忽略。 |
-| `--installChannelUri <uri>` | **可选**：要用于安装的通道清单的 URI。 `--channelUri` 指定的 URI（指定 `--installChannelUri` 时必须指定）用于检测更新。 此参数可用于 install 命令；其他命令则可忽略。 |
+| `--installChannelUri <uri>` | **可选**：要用于安装的通道清单的 URI。 `--channelUri` 指定的 URI（指定 `--installChannelUri`时必须指定）用于检测更新。 此参数可用于 install 命令；其他命令则可忽略。 |
 | `--installCatalogUri <uri>` | **可选**：要用于安装的目录清单的 URI。 如果指定此选项，通道管理器会先尝试通过此 URI 下载目录清单，然后再在安装通道清单中使用 URI。 此参数用于支持脱机安装，安装期间会使用已下载的产品目录创建布局缓存。 此参数可用于 install 命令；其他命令则可忽略。 |
 | `--productId <id>` | **可选**：将要安装的实例的产品 ID。 在正常安装条件下，这是预填充的。 |
 | `--wait` | **可选**：进程会先等待安装完成，然后再返回退出代码。 在需要等待安装完成以处理来自该安装的返回代码的自动安装中，这非常有用。 |

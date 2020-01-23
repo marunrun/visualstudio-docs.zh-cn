@@ -2,7 +2,7 @@
 title: Visual Studio 2019 中的新增功能
 titleSuffix: ''
 description: 了解 Visual Studio 2019 中的新增功能。
-ms.date: 12/03/2019
+ms.date: 12/10/2019
 helpviewer_keywords:
 - Visual Studio, what's new
 - what's new [Visual Studio]
@@ -15,12 +15,12 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: eb4282941af9dff8619cb15510399b2e37e0c718
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.openlocfilehash: 4a9d8babb55a615e12c575f30426c8e73aa1c6e1
+ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74777903"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75406722"
 ---
 # <a name="whats-new-in-visual-studio-2019"></a>Visual Studio 2019 中的新增功能
 
@@ -198,9 +198,11 @@ Visual Studio 2019 中会默认安装此服务。
 
 ### <a name="pinnable-properties-tool"></a>可固定属性工具
 
-**16.4 中的新增功能**：现在使用新的可固定属性工具进行调试时，可以更轻松地按属性来识别对象。 只需将光标悬停在要在“监视”、“自动”和“本地”窗口的调试程序窗口中显示的属性上，单击图钉图标，然后可立即在窗口顶部看到你要查找的信息！
+**16.4 中的新增功能**：现在使用新的可固定属性工具进行调试时，可以更轻松地按属性来识别对象。 只需将光标悬停在要在“监视”、“自动”和“本地”窗口的调试程序窗口中显示的属性上，选择图钉图标，然后可立即在窗口顶部看到你要查找的信息！
 
    ![演示如何使用固定属性工具在 Visual Studio 调试程序中固定属性的动画](media/vs-2019/debugger-pinnable-properties.gif)
+
+有关详细信息，请参阅[可固定属性：自主调试和显示托管对象](https://devblogs.microsoft.com/visualstudio/pinnable-properties-debug-display-managed-objects-your-way/)博客文章。
 
 ## <a name="whats-next"></a>后续步骤
 

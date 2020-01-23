@@ -15,23 +15,23 @@ caps.latest.revision: 31
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 5988d472317540ca1b1a7f91acd75a48fa9743b4
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 1e85929202d36be2e6dcc2b08b5b2a60e7656b27
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669106"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75919192"
 ---
 # <a name="ca1715-identifiers-should-have-correct-prefix"></a>CA1715：标识符应具有正确的前缀
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-有关 Visual Studio 的最新文档，请参阅[CA1715：标识符应具有正确的前缀](https://docs.microsoft.com/visualstudio/code-quality/ca1715-identifiers-should-have-correct-prefix)。
+有关 Visual Studio 的最新文档，请参阅[CA1715：标识符应具有正确的前缀](/visualstudio/code-quality/ca1715-identifiers-should-have-correct-prefix)。
 
 |||
 |-|-|
 |TypeName|IdentifiersShouldHaveCorrectPrefix|
 |CheckId|CA1715|
-|类别|Microsoft。命名|
+|类别|Microsoft.Naming|
 |是否重大更改|正在进行-在接口上引发。<br /><br /> 非换行-对泛型类型参数引发时。|
 
 ## <a name="cause"></a>原因
@@ -41,7 +41,7 @@ ms.locfileid: "72669106"
 
  外部可见类型或方法的泛型类型参数的名称不以大写 "t" 开头。
 
-## <a name="rule-description"></a>规则说明
+## <a name="rule-description"></a>规则描述
  按照约定，某些编程元素的名称以特定的前缀开头。
 
  接口名称应以大写的 "I" 开头，后跟另一个大写字母。 此规则报告接口名称（如 "MyInterface" 和 "IsolatedInterface"）的冲突。

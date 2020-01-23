@@ -9,17 +9,17 @@ f1_keywords:
 helpviewer_keywords:
 - solutions [Visual Studio], creating
 - projects [Visual Studio], creating
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: abe2cbd18e87c7045d44e597e3a5bb93a64a1c35
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 503b343299f7b30e9f5e834099274215b262a635
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72747968"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589742"
 ---
 # <a name="create-solutions-and-projects"></a>创建解决方案和项目
 
@@ -88,11 +88,11 @@ ms.locfileid: "72747968"
 
 ### <a name="to-create-an-empty-solution"></a>创建空解决方案
 
-1. 在菜单栏上，依次选择“文件”   > “新建”   > “项目”  。
+1. 在菜单栏上选择“文件”   > “新建”   > “项目”  。
 
 ::: moniker range="vs-2017"
 
-2. 在左侧（“模板”）窗格中，依次选择展开列表中的“其他项目类型”>“Visual Studio 解决方案”    。
+2. 在左侧（“模板”  ）窗格中，依次选择展开列表中的“其他项目类型”  >“Visual Studio 解决方案”  。
 
 3. 在中间窗格中，选择“空白解决方案”  。
 

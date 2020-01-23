@@ -9,12 +9,12 @@ caps.latest.revision: 12
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: d3a17275730cd093f8f9fa433aa28c7f9ca86e80
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 02ab48e2fcd014508277a9bc361cde65d62ef38c
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74298142"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850795"
 ---
 # <a name="t4-template-directive"></a>T4 模板指令
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -45,12 +45,12 @@ ms.locfileid: "74298142"
 
  有效值： ""，固定区域性，这是默认值。
 
- 表示为 xx-XX 形式字符串的区域性。 例如：en-US、ja-JP、de-CH、de-DE。 有关详细信息，请参阅 <xref:System.Globalization.CultureInfo?displayProperty=fullName>。
+ 表示为 xx-XX 形式字符串的区域性。 例如：en-US、ja-JP、de-CH、de-DE。 有关更多信息，请参见<xref:System.Globalization.CultureInfo?displayProperty=fullName>。
 
  Culture 特性指定将表达式块转换为文本时要使用的区域性。
 
 ## <a name="debug-attribute"></a>debug 特性
- 例如：
+ 示例：
 
 ```
 debug="true"
@@ -65,7 +65,7 @@ debug="true"
  若要在调试器中运行设计时模板，请保存文本模板，然后在解决方案资源管理器中打开文本模板的快捷菜单，然后选择 "**调试 T4 模板**"。
 
 ## <a name="hostspecific-attribute"></a>hostspecific 特性
- 例如：
+ 示例：
 
 ```
 hostspecific="true"
@@ -77,7 +77,7 @@ hostspecific="true"
 
  因为此属性的类型取决于宿主的类型，所以仅当编写只适用于特定宿主的文本模板时才有用。 它适用于[设计时模板](../modeling/design-time-code-generation-by-using-t4-text-templates.md)，但不适用于[运行时模板](../modeling/run-time-text-generation-with-t4-text-templates.md)。
 
- 当 `hostspecific` 为 `true`，而且正在使用 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 时，可以将 `this.Host` 强制转换为 IServiceProvider，以访问 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 功能。 还可以使用 `Host.ResolvePath(filename)` 来获得项目中文件的绝对路径。 例如:
+ 当 `hostspecific` 为 `true`，而且正在使用 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 时，可以将 `this.Host` 强制转换为 IServiceProvider，以访问 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 功能。 还可以使用 `Host.ResolvePath(filename)` 来获得项目中文件的绝对路径。 例如：
 
 ```csharp
 <#@ template debug="false" hostspecific="true" language="C#" #>
@@ -110,7 +110,7 @@ Content of myFile is:
 
  Language 特性指定要用于语句和表达式块中的源代码的语言（[!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 或 [!INCLUDE[csprcs](../includes/csprcs-md.md)]）。 从中生成输出的中间代码文件将使用此语言。 此语言与您的模板生成的语言无关，它可以是任何类型的文本。
 
- 例如:
+ 例如：
 
 ```vb
 <#@ template language="VB" #>
@@ -211,7 +211,7 @@ This is the common footer.
 
  对于设计时文本模板来说，可以指定从 <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation?displayProperty=fullName> 派生的任何基类。 使用 `<#@assembly#>` 指令来加载包含基类的程序集或项目。
 
- 有关详细信息，请参阅[Gareth 的 "博客中的" 文本模板中的继承 "](https://go.microsoft.com/fwlink/?LinkId=208373)。
+ 有关详细信息，请参阅[Gareth 的 "博客中的" 文本模板中的继承 "](https://blogs.msdn.microsoft.com/garethj/2011/01/03/vs2010-sp1-t4-template-inheritance-part-i-sample-metadata/)。
 
 ## <a name="linepragmas-attribute"></a>LinePragmas 特性
  示例：`linePragmas="false"`

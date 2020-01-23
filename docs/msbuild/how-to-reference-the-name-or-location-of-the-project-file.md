@@ -11,17 +11,17 @@ helpviewer_keywords:
 - reserved properties
 - project files, referencing
 ms.assetid: c8fcc594-5d37-4e2e-b070-4d9c012043b5
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 88d0eb1e4daa3e68468165589830ecf60a218da5
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.openlocfilehash: 739d444fe8ad3951e8b8f2f0026d5d986ea65c52
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63386802"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75574777"
 ---
 # <a name="how-to-reference-the-name-or-location-of-the-project-file"></a>如何：引用项目文件的名称或位置
 可以在项目文件自身中使用该项目的名称或位置，而无需创建你自己的属性。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 提供引用项目文件名的保留属性和与项目相关的其他属性。 有关保留属性的详细信息，请参阅 [MSBuild 保留属性和已知属性](../msbuild/msbuild-reserved-and-well-known-properties.md)。
@@ -31,7 +31,7 @@ ms.locfileid: "63386802"
 
 #### <a name="to-use-the-project-properties"></a>使用项目属性
 
-- 使用 $() 表示法在项目文件中引用属性，就像引用任何其他属性一样。 例如:
+- 使用 $() 表示法在项目文件中引用属性，就像引用任何其他属性一样。 例如：
 
   ```xml
   <CSC Sources = "@(CSFile)"
@@ -40,6 +40,8 @@ ms.locfileid: "63386802"
   ```
 
   使用保留属性的一个优点是对项目文件名所作的任何更改都将自动纳入。 下次生成项目时，输出文件将具有该新名称，而你不需要执行任何进一步的操作。
+
+  有关如何在文件或项目引用中使用特殊字符的详细信息，请参阅 [MSBuild 特殊字符](../msbuild/msbuild-special-characters.md)。
 
 > [!NOTE]
 > 无法在项目文件中重新定义保留属性。

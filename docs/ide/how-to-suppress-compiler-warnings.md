@@ -8,12 +8,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: aec3dfb45471a3349e14419671ef1fb3b5e05db5
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: b604f6a1392353d304897a233b74c0d81fc258df
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72747950"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76114509"
 ---
 # <a name="how-to-suppress-compiler-warnings"></a>如何：取消编译器警告
 
@@ -87,7 +87,7 @@ ms.locfileid: "72747950"
     ```
 
    > [!NOTE]
-   > 在默认情况下，.NET Core 项目不包含生成配置属性组。 若要取消显示 .NET Core 项目中的警告，请将生成配置部分手动添加到文件。 例如:
+   > 在默认情况下，.NET Core 项目不包含生成配置属性组。 若要取消显示 .NET Core 项目中的警告，请将生成配置部分手动添加到文件。 例如：
    >
    > ```xml
    > <Project Sdk="Microsoft.NET.Sdk">

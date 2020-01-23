@@ -3,17 +3,17 @@ title: 编辑 XSLT 样式表
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 080bed0f-0ca9-4be7-aecd-6bdaebc04007
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7fc987f8362d5daf435b7e9de860cc13f16a1aaf
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 81bab324c58c06cc1ca553bae2f81faf474c4ad0
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72646060"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592836"
 ---
 # <a name="edit-xslt-style-sheets"></a>编辑 XSLT 样式表
 
@@ -43,6 +43,6 @@ XSLT 调试程序支持脚本块中的代码，这样，你可以设置断点并
 
 可以从 "XML 编辑器" 中的 XSLT 文件启动 XSLT 调试程序。 调试程序支持在 XSLT 文件中设置断点、查看 XSLT 执行状态等。 将光标置于 XSLT 变量上，可以显示包含变量值的工具提示。 调试程序可以用于调试样式表，也可以用于调试从另一个应用程序调用的已编译 XSLT 转换。 有关详细信息，请参阅[调试 XSLT](../xml-tools/debugging-xslt.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [XML 编辑器](../xml-tools/xml-editor.md)

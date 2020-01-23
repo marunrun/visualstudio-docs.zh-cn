@@ -13,17 +13,17 @@ helpviewer_keywords:
 - MakeDir task [MSBuild]
 - MSBuild, MakeDir task
 ms.assetid: bc951577-1bfb-4100-b1f1-bc8278c45bf7
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 89bfc33aaf4b3f80ee6b80a93ad6b71dd3786599
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 011cc16dd965b952aa382c46f01d09fcc41bc02e
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62855926"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592160"
 ---
 # <a name="makedir-task"></a>MakeDir 任务
 创建目录，并在必要时创建任何父目录。
@@ -31,7 +31,7 @@ ms.locfileid: "62855926"
 ## <a name="parameters"></a>参数
 下表描述了 `MakeDir` 任务的参数。
 
-|参数|说明|
+|参数|描述|
 |---------------|-----------------|
 |`Directories`|必选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 要创建的目录集。|
 |`DirectoriesCreated`|可选的 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 输出参数。<br /><br /> 由此任务创建的目录。 如果无法创建某些目录，则其中可能不包含已传递到 `Directories` 参数的所有项。|

@@ -2,20 +2,20 @@
 title: 使用存根隔离应用程序的各个部分以进行测试
 ms.date: 11/04/2016
 ms.topic: conceptual
-ms.author: jillfra
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-author: jillre
+author: mikejo5000
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: 6c980ab2d920a80e49450f6ffe4a9433f490b412
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 328551a78464c7b682eea6a988c20e742f2797c9
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72982848"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75568543"
 ---
 # <a name="use-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing"></a>使用存根隔离应用程序的各个部分以进行单元测试
 
@@ -218,7 +218,7 @@ End Class
 
 ### <a name="verify-parameter-values"></a>验证参数值
 
-你可以验证，当你的组件对另一个组件进行调用时，它是否传递正确的值。 你可以在存根中放置一个断言，或者也可以存储值并在测试的主体中验证它。 例如:
+你可以验证，当你的组件对另一个组件进行调用时，它是否传递正确的值。 你可以在存根中放置一个断言，或者也可以存储值并在测试的主体中验证它。 例如：
 
 ```csharp
 [TestClass]
@@ -390,7 +390,7 @@ public void TestGetValue()
 
 ### <a name="stubs-of-virtual-classes"></a>虚拟类的存根
 
-在前面的示例中，已从接口生成存根。 还可以从具有虚拟或抽象成员的类生成存根。 例如:
+在前面的示例中，已从接口生成存根。 还可以从具有虚拟或抽象成员的类生成存根。 例如：
 
 ```csharp
 // Base class in application under test

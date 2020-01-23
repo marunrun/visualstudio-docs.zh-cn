@@ -13,19 +13,19 @@ caps.latest.revision: 111
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 40a61ef8c8b3f389af97024475fab9a625131a44
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 02639b91ce07ade97e9023dee3de7cfdaf10a07e
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74297122"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75847972"
 ---
 # <a name="using-the-intellitrace-stand-alone-collector"></a>使用 IntelliTrace 独立收集器
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 **IntelliTrace 独立收集器** 可让你收集生产服务器或其他环境中应用的 IntelliTrace 诊断数据，而无需在目标计算机上安装 Visual Studio 或更改目标系统环境。 IntelliTrace 独立收集器可用于 Web、SharePoint、WPF 和 Windows 窗体应用中。 数据收集完毕后，只需删除收集器以进行卸载。
 
- 在操作中观察 IntelliTrace： [收集并分析生成的 IntelliTrace 数据以便进行调试（第 9 频道视频）](https://go.microsoft.com/fwlink/?LinkID=251851)
+ 在操作中观察 IntelliTrace： [收集并分析生成的 IntelliTrace 数据以便进行调试（第 9 频道视频）](https://s.ch9.ms/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012-Collecting-and-analyzing-data-in-production)
 
 > [!NOTE]
 > 通过在 **跟踪** 模式下使用 **Microsoft 监视代理** ，你还可以收集远程计算机上运行的 Web 及 SharePoint 应用的相同 IntelliTrace 数据。
@@ -118,7 +118,7 @@ ms.locfileid: "74297122"
 
 1. 以管理员身份打开应用服务器上的命令提示符窗口。
 
-2. 使用 Windows **icacls** 命令授予服务器管理员访问收集器目录的完全权限。 例如:
+2. 使用 Windows **icacls** 命令授予服务器管理员访问收集器目录的完全权限。 例如：
 
      `icacls "C:\IntelliTraceCollector" /grant "` *\<Domain\AdministratorID>* `":F`
 
@@ -126,13 +126,13 @@ ms.locfileid: "74297122"
 
     1. 向将运行 IntelliTrace PowerShell cmdlet 的人员授予访问收集器目录的完全权限。
 
-         例如:
+         例如：
 
          `icacls "C:\IntelliTraceCollector" /grant "` *\<Domain\UserID>* `":F`
 
     2. 授予 Web 应用或 SharePoint 应用程序的应用程序池对收集器目录的读取和执行权限。
 
-         例如:
+         例如：
 
         - 对于“DefaultAppPool” 应用程序池中的 Web 应用：
 
@@ -162,7 +162,7 @@ ms.locfileid: "74297122"
 
     2. 在 PowerShell 命令窗口，使用 **导入模块** 命令导入 **Microsoft.VisualStudio.IntelliTrace.PowerShell.dll**。
 
-         例如:
+         例如：
 
          `Import-Module "C:\IntelliTraceCollector\Microsoft.VisualStudio.IntelliTrace.PowerShell.dll"`
 
@@ -180,7 +180,7 @@ ms.locfileid: "74297122"
 
 2. 针对 Web 应用或 SharePoint 应用程序，授予其应用程序池对 .iTrace 文件目录的完全权限。 你可以使用 Windows **icacls** 命令或使用 Windows 资源管理器（或文件资源管理器）。
 
-    例如:
+    例如：
 
    - 要使用 Windows **icacls** 命令设置权限，请：
 
@@ -226,14 +226,14 @@ ms.locfileid: "74297122"
     |||
     |-|-|
     |*应用程序池*|应用程序运行的应用程序池名|
-    |*收集计划路径*|收集计划路径，配置收集器设置的 .xml 文件。<br /><br /> 你可指定收集器附带的一个计划。 以下计划适合 Web 应用和 SharePoint 应用程序：<br /><br /> -   collection_plan.ASP.NET.default.xml<br />     仅收集 IntelliTrace 事件和 SharePoint 事件，包括异常、数据库调用及 Web 服务器请求。<br />-   collection_plan.ASP.NET.trace.xml<br />     收集 collection_plan.ASP.NET.default.xml 中的函数调用及所有数据。 该计划非常适合进行详细分析，但其可能导致你的应用速度比 collection_plan.ASP.NET.default.xml 更慢。<br /><br /> 为避免应用速度变慢，自定义这些计划或创建自己的计划。 为安全起见，将所有自定义计划放在收集器文件所在的同一安全位置。 请参阅 [创建并自定义 IntelliTrace 收集计划](https://go.microsoft.com/fwlink/?LinkId=227871) 和 [如何在应用速度不减的前提下获取最多的数据？](#Minimizing) **注意：** 默认情况下，.Itrace 文件的最大大小为 100 MB。 .iTrace 文件大小达到该上限时，收集器会删除文件中最早的项以便为更新的项让出空间。 要更改该上限，请修改此收集计划的 `MaximumLogFileSize` 属性。 <br /><br /> *从何处可找到这些收集计划的本地版本？*<br /><br /> 可在收集器子文件夹中找到本地计划。|
+    |*收集计划路径*|收集计划路径，配置收集器设置的 .xml 文件。<br /><br /> 你可指定收集器附带的一个计划。 以下计划适合 Web 应用和 SharePoint 应用程序：<br /><br /> -   collection_plan.ASP.NET.default.xml<br />     仅收集 IntelliTrace 事件和 SharePoint 事件，包括异常、数据库调用及 Web 服务器请求。<br />-   collection_plan.ASP.NET.trace.xml<br />     收集 collection_plan.ASP.NET.default.xml 中的函数调用及所有数据。 该计划非常适合进行详细分析，但其可能导致你的应用速度比 collection_plan.ASP.NET.default.xml 更慢。<br /><br /> 为避免应用速度变慢，自定义这些计划或创建自己的计划。 为安全起见，将所有自定义计划放在收集器文件所在的同一安全位置。 请参阅 [创建并自定义 IntelliTrace 收集计划](https://blogs.msdn.com/b/visualstudioalm/archive/2011/09/15/modifying-an-intellitrace-collection-plan-for-the-stand-alone-collector.aspx) 和 [如何在应用速度不减的前提下获取最多的数据？](#Minimizing) **注意：** 默认情况下，.Itrace 文件的最大大小为 100 MB。 .iTrace 文件大小达到该上限时，收集器会删除文件中最早的项以便为更新的项让出空间。 要更改该上限，请修改此收集计划的 `MaximumLogFileSize` 属性。 <br /><br /> *从何处可找到这些收集计划的本地版本？*<br /><br /> 可在收集器子文件夹中找到本地计划。|
     |*跟踪文件目录的完整路径*|跟踪 .iTrace 文件目录的完整路径。 **安全说明：** 提供完整路径，而不是相对路径。|
 
      收集器连接到应用程序池并开始收集数据。
 
      *此时可打开 .iTrace 文件吗？* 不可以，数据收集过程中该文件处于锁定状态。
 
-2. 再现此问题。
+2. 重现问题。
 
 3. 要获得 .iTrace 文件的快照，请使用该语法：
 
@@ -265,7 +265,7 @@ ms.locfileid: "74297122"
     |||
     |-|-|
     |*IntelliTrace 收集器可执行文件完整路径*|收集器可执行文件的完整路径，IntelliTraceSC.exe|
-    |*收集计划路径*|收集计划路径，配置收集器设置的 .xml 文件。<br /><br /> 你可指定收集器附带的一个计划。 以下计划适合托管应用：<br /><br /> -   collection_plan.ASP.NET.default.xml<br />     仅收集 IntelliTrace 事件，包括异常、数据库调用及 Web 服务器请求。<br />-   collection_plan.ASP.NET.trace.xml<br />     收集 collection_plan.ASP.NET.default.xml 中的函数调用及所有数据。 该计划非常适合进行详细分析，但其可能导致你的应用速度比 collection_plan.ASP.NET.default.xml 更慢。<br /><br /> 为避免应用速度变慢，自定义这些计划或创建自己的计划。 为安全起见，将所有自定义计划放在收集器文件所在的同一安全位置。 请参阅 [创建并自定义 IntelliTrace 收集计划](https://go.microsoft.com/fwlink/?LinkId=227871) 和 [如何在应用速度不减的前提下获取最多的数据？](#Minimizing) **注意：** 默认情况下，.Itrace 文件的最大大小为 100 MB。 .iTrace 文件大小达到该上限时，收集器会删除文件中最早的项以便为更新的项让出空间。 要更改该上限，请修改此收集计划的 `MaximumLogFileSize` 属性。 <br /><br /> *从何处可找到这些收集计划的本地版本？*<br /><br /> 可在收集器子文件夹中找到本地计划。|
+    |*收集计划路径*|收集计划路径，配置收集器设置的 .xml 文件。<br /><br /> 你可指定收集器附带的一个计划。 以下计划适合托管应用：<br /><br /> -   collection_plan.ASP.NET.default.xml<br />     仅收集 IntelliTrace 事件，包括异常、数据库调用及 Web 服务器请求。<br />-   collection_plan.ASP.NET.trace.xml<br />     收集 collection_plan.ASP.NET.default.xml 中的函数调用及所有数据。 该计划非常适合进行详细分析，但其可能导致你的应用速度比 collection_plan.ASP.NET.default.xml 更慢。<br /><br /> 为避免应用速度变慢，自定义这些计划或创建自己的计划。 为安全起见，将所有自定义计划放在收集器文件所在的同一安全位置。 请参阅 [创建并自定义 IntelliTrace 收集计划](https://blogs.msdn.com/b/visualstudioalm/archive/2011/09/15/modifying-an-intellitrace-collection-plan-for-the-stand-alone-collector.aspx) 和 [如何在应用速度不减的前提下获取最多的数据？](#Minimizing) **注意：** 默认情况下，.Itrace 文件的最大大小为 100 MB。 .iTrace 文件大小达到该上限时，收集器会删除文件中最早的项以便为更新的项让出空间。 要更改该上限，请修改此收集计划的 `MaximumLogFileSize` 属性。 <br /><br /> *从何处可找到这些收集计划的本地版本？*<br /><br /> 可在收集器子文件夹中找到本地计划。|
     |*.iTrace文件目录及文件名完整路径*|.iTrace 文件目录及包含 **.itrace** 扩展名的 .iTrace 文件名的完整路径。 **安全说明：** 提供完整路径，而不是相对路径。|
     |*应用可执行文件及文件名路径*|托管应用的路径及文件名|
 
@@ -288,7 +288,7 @@ ms.locfileid: "74297122"
     > 要调试 IntelliTrace 并单步调试代码，你的开发计算机上必须有相匹配的源文件和符号文件。 请参阅[部署后诊断问题](../debugger/diagnose-problems-after-deployment.md)。
 
 ## <a name="Minimizing"></a> 如何在应用速度不减的前提下获取最多的数据？
- IntelliTrace 可收集大量数据，因此对应用性能的影响取决于 IntelliTrace 收集的数据及其分析的代码类型。 请参阅 [优化生产服务器上的 IntelliTrace 收集](https://go.microsoft.com/fwlink/?LinkId=255233)。
+ IntelliTrace 可收集大量数据，因此对应用性能的影响取决于 IntelliTrace 收集的数据及其分析的代码类型。 请参阅 [优化生产服务器上的 IntelliTrace 收集](https://blogs.msdn.com/b/visualstudioalm/archive/2012/05/18/optimizing-intellitrace-collection-on-production-server.aspx)。
 
  以下是在应用速度不减的前提下获取最多的数据的一些方法：
 
@@ -391,16 +391,16 @@ ms.locfileid: "74297122"
  [IntelliTrace](../debugger/intellitrace.md)
 
 ### <a name="blogs"></a>博客
- [远程使用 IntelliTrace 独立收集器](https://go.microsoft.com/fwlink/?LinkId=262277)
+ [远程使用 IntelliTrace 独立收集器](https://blogs.msdn.com/b/visualstudioalm/archive/2012/07/09/using-the-intellitrace-standalone-collector-remotely.aspx)
 
- [创建并自定义 IntelliTrace 收集计划](https://go.microsoft.com/fwlink/?LinkId=227871)
+ [创建并自定义 IntelliTrace 收集计划](https://blogs.msdn.com/b/visualstudioalm/archive/2011/09/15/modifying-an-intellitrace-collection-plan-for-the-stand-alone-collector.aspx)
 
- [优化生产服务器上的 IntelliTrace 收集](https://go.microsoft.com/fwlink/?LinkId=255233)
+ [优化生产服务器上的 IntelliTrace 收集](https://blogs.msdn.com/b/visualstudioalm/archive/2012/05/18/optimizing-intellitrace-collection-on-production-server.aspx)
 
- [Visual Studio ALM + TFS 博客](https://go.microsoft.com/fwlink/?LinkID=201340)
+ [Visual Studio ALM + TFS 博客](https://blogs.msdn.com/b/visualstudioalm)
 
 ### <a name="forums"></a>论坛
- [Visual Studio 调试器](https://go.microsoft.com/fwlink/?LinkId=262263)
+ [Visual Studio 调试器](https://social.msdn.microsoft.com/Forums/vsdebug)
 
 ### <a name="videos"></a>视频
- [第 9 频道：收集和分析 IntelliTrace 数据](https://go.microsoft.com/fwlink/?LinkID=251851)
+ [第 9 频道：收集和分析 IntelliTrace 数据](https://s.ch9.ms/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012-Collecting-and-analyzing-data-in-production)

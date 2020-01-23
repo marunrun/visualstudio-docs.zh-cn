@@ -3,17 +3,17 @@ title: 托管代码的“安全规则”规则集
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 564aeac6-03fa-41b0-b655-88179f0ab01b
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: ea23186ff03ccdb0ff7678380eadc866b63654f2
-ms.sourcegitcommit: 4f82de3fb0cfae226aef1abb40c47e63d2036a5c
+ms.openlocfilehash: 49fe666884c3a96a5c8eb632308e7f732150805e
+ms.sourcegitcommit: 9a5cf730d8e43eed6eba25369b7b44cae0b26b98
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72918912"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75929228"
 ---
 # <a name="security-rules-rule-set-for-managed-code"></a>托管代码的“安全规则”规则集
 
@@ -86,4 +86,5 @@ ms.locfileid: "72918912"
 |[CA3010](../code-quality/ca3010.md)|查看 XAML 注入漏洞的代码|
 |[CA3011](../code-quality/ca3011.md)|查看 DLL 注入漏洞的代码|
 |[CA3012](../code-quality/ca3012.md)|查看正则表达式注入漏洞的代码|
-|[CA5403](../code-quality/ca5403.md)|不硬编码证书|
+|[CA5358](../code-quality/ca5358.md)|不要使用不安全的密码模式|
+|[CA5403](../code-quality/ca5403.md)|请勿硬编码证书|

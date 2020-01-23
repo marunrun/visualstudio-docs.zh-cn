@@ -9,17 +9,17 @@ helpviewer_keywords:
 - managed code analysis warnings, usage warnings
 - usage warnings
 ms.assetid: fe7dc2a3-289d-4bf7-a1e4-0947a81287c4
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 423367381c9b4624b9b3f4f739b017231276c76d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ca3a5efb7d75cebfd36ea6ac190f50ab90dcb06c
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72649061"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75587181"
 ---
 # <a name="usage-warnings"></a>用法警告
 
@@ -31,7 +31,7 @@ ms.locfileid: "72649061"
 |----------|-----------------|
 |[CA1801：检查未使用的参数](../code-quality/ca1801.md)|方法签名包含一个没有在方法体中使用的参数。|
 |[CA1806：不要忽略方法结果](../code-quality/ca1806.md)|创建一个新对象，但从不使用该对象；或者调用会创建并返回一个新字符串的方法，但从不使用这个新字符串；或者 COM 或 P/Invoke 方法返回一个从不使用的 HRESULT 或错误代码。|
-|[CA1816：正确调用 GC.SuppressFinalize](../code-quality/ca1816.md)|作为 Dispose 实现的方法不调用 GC。Gc.suppressfinalize或者不是 Dispose 的实现的方法会调用 GC。Gc.suppressfinalize或方法调用 GC。Gc.suppressfinalize 并传递除此外的其他内容（我在 Visual Basic 中）。|
+|[CA1816：正确调用 GC.SuppressFinalize](../code-quality/ca1816.md)|实现 Dispose 方法不会调用 GC。SuppressFinalize;或不是实现 Dispose 方法调用 GC。SuppressFinalize;或使用方法调用 GC。SuppressFinalize 和传递内容以外此 （我在 Visual Basic 中）。|
 |[CA2200：再次引发以保留堆栈详细信息](../code-quality/ca2200.md)|再次引发某个异常，在 throw 语句中显式指定了该异常。 如果通过在 throw 语句中指定异常来重新引发该异常，则引发该异常的原始方法与当前方法之间的方法调用的列表将丢失。|
 |[CA2201：不要引发保留的异常类型](../code-quality/ca2201.md)|这会使原始错误难以检测和调试。|
 |[CA2202：不要多次释放对象](../code-quality/ca2202.md)|某个方法实现所包含的代码路径可能导致对同一对象多次调用 System.IDisposable.Dispose 或与 Dispose 等效的方法（例如，用于某些类型的 Close() 方法）。|
@@ -59,7 +59,7 @@ ms.locfileid: "72649061"
 |[CA2228：不要发行未发布的资源格式](../code-quality/ca2228.md)|使用 .NET 的预发布版本生成的资源文件可能无法由受支持的 .NET 版本使用。|
 |[CA2229：实现序列化构造函数](../code-quality/ca2229.md)|要修复与该规则的冲突，请实现序列化构造函数。 对于密封类，请使构造函数成为私有；否则，请使构造函数成为受保护。|
 |[CA2230：对可变数量的实参使用形参](../code-quality/ca2230.md)|公共或受保护类型包含一个使用 VarArgs 调用约定（而不是 params 关键字）的公共或受保护方法。|
-|[CA2231：重写 ValueType.Equals 时应重载相等运算符](../code-quality/ca2231.md)|值类型覆盖 `Object.Equals`，但不实现相等运算符。|
+|[CA2231：重写 ValueType.Equals 时应重载相等运算符](../code-quality/ca2231.md)|值类型 `Object.Equals` 重写，但不实现相等运算符。|
 |[CA2232：使用 STAThread 标记 Windows 窗体的入口点](../code-quality/ca2232.md)|STAThreadAttribute 指示应用程序的 COM 线程模型是单线程单元。 使用 Windows 窗体的任何应用程序的入口点上必须存在此特性；如果没有此特性，则 Windows 组件可能无法正常工作。|
 |[CA2233：运算不应溢出](../code-quality/ca2233.md)|在未首先验证操作数的情况下，不应执行算术运算，以确保操作的结果不在涉及的数据类型的可能值范围之外。|
 |[CA2234：传递 System.Uri 对象，而不传递字符串](../code-quality/ca2234.md)|调用了带有一个字符串参数的方法，该参数的名称中包含“uri”、“URI”、“urn”、“URN”、“url”或“URL”。  此方法的声明类型包含具有 System.Uri 参数的对应方法重载。|

@@ -5,15 +5,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Diagnostic Data Adapter, creating
 ms.assetid: bd7ad36c-54cb-4d2a-9aea-9d10ad98d7ba
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: a1940cda15d1ac5515e25b1e1e997f13a32d6e53
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f196c3850c9413a7c68fd1fe67af50273915f249
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653686"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75589170"
 ---
 # <a name="how-to-create-a-diagnostic-data-adapter"></a>如何：创建诊断数据适配器
 
@@ -32,7 +32,7 @@ ms.locfileid: "72653686"
 
 下面是创建诊断数据适配器时可以使用的关键事件的部分列表。 有关诊断数据适配器事件的完整列表，请参见 <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents> 抽象类。
 
-|事件|说明|
+|事件|描述|
 |-|-----------------|
 |<xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents.SessionStart>|开始测试运行|
 |<xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents.SessionEnd>|结束测试运行|

@@ -16,12 +16,12 @@ caps.latest.revision: 19
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 84828024e19d731c3de7db0859aa3b2033379a49
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 1121058d38d129b417cbd79b685e5bd549353a7c
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74290319"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75845255"
 ---
 # <a name="globalizing-and-localizing-applications"></a>对应用程序进行全球化和本地化
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -38,9 +38,9 @@ ms.locfileid: "74290319"
  [全球化应用程序](../ide/globalizing-applications.md)提供有关创建支持多种区域性的应用程序的页面的链接。
 
 ## <a name="related-sections"></a>相关章节
- [全球化应用（使用 JavaScript 和 HTML 的 Windows 应用商店应用）](https://go.microsoft.com/fwlink/?LinkId=258266)包含帮助你全球化和本地化使用 JavaScript 和 HTML 构建的 [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] 应用程序的操作方法主题和指南。
+ [全球化应用（使用 JavaScript 和 HTML 的 Windows 应用商店应用）](https://msdn.microsoft.com/library/windows/apps/hh465006.aspx)包含帮助你全球化和本地化使用 JavaScript 和 HTML 构建的 [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] 应用程序的操作方法主题和指南。
 
- [全球化应用（ C#使用/VB/C++和 XAML 的 Windows 应用商店应用）](https://go.microsoft.com/fwlink/?LinkId=258267)包含操作方法主题和指南，可帮助你全球化和本地化使用 XAML 和视觉对象C#、Visual Basic 或视觉对象C++构建的 [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] 应用。
+ [全球化应用（ C#使用/VB/C++和 XAML 的 Windows 应用商店应用）](https://msdn.microsoft.com/library/windows/apps/xaml/Hh965328(v=win.10).aspx)包含操作方法主题和指南，可帮助你全球化和本地化使用 XAML 和视觉对象C#、Visual Basic 或视觉对象C++构建的 [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] 应用。
 
  [开发全球通用应用程序的最佳实践](https://msdn.microsoft.com/library/f08169c7-aad8-4ec3-9a21-9ebd3b89986c)提供有关面向国际受众的编程背景信息。
 

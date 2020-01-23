@@ -5,18 +5,18 @@ author: seaniyer
 ms.author: seiyer
 ms.date: 11/19/2019
 ms.topic: reference
-ms.openlocfilehash: d61e7f47fde06c12b6b133ced76e5a8d72d220b0
-ms.sourcegitcommit: b5cb0eb09369677514ee1f44d5d7050d34c7fbc1
+ms.openlocfilehash: 119de27298acafee7dc563a30246b18da42f9f29
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74528534"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75918166"
 ---
 # <a name="how-to-increase-the-chances-of-a-performance-issue-being-fixed"></a>如何提高解决性能问题的几率
 
-Visual Studio 用户常使用[报告问题](https://aka.ms/vs-rap)工具来报告一系列问题。 Visual Studio 团队在用户反馈中发现故障和运行缓慢的趋势，并解决影响大量用户的问题。 特定反馈工单的可操作性越高，产品团队就越有可能快速诊断和解决问题。 本文档介绍了在报告故障或运行缓慢问题时可用于提高这些问题的可操作性的最佳做法。
+Visual Studio 用户常使用[报告问题](/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2019)工具来报告一系列问题。 Visual Studio 团队在用户反馈中发现故障和运行缓慢的趋势，并解决影响大量用户的问题。 特定反馈工单的可操作性越高，产品团队就越有可能快速诊断和解决问题。 本文档介绍了在报告故障或运行缓慢问题时可用于提高这些问题的可操作性的最佳做法。
 
-## <a name="general-best-practices"></a>常规最佳做法
+## <a name="general-best-practices"></a>一般最佳实践
 
 Visual Studio 是一个大型的综合平台，支持多种语言、项目类型和平台等等。 它的性能取决于会话中安装和启用的组件、安装的扩展、Visual Studio 设置、计算机配置，以及正在编辑的代码的形状。 考虑到变量数目，即使看到的症状相同，也很难判断某个用户的问题报告是否与其他用户的问题报告一样具有相同的基础问题。 鉴于这种情况，下面介绍了一些最佳做法，可确保提高诊断出特定问题报告的可能性。
 
@@ -40,7 +40,9 @@ Visual Studio 是一个大型的综合平台，支持多种语言、项目类型
 
 -   [CPU 使用率过高：](#slowness-and-high-cpu-issues)CPU 使用率长时间高乎寻常
 
-## <a name="crashes"></a>崩溃
+-   [进程外问题：](#out-of-process-issues)Visual Studio 附属进程导致的问题
+
+## <a name="crashes"></a>故障
 进程 (Visual Studio) 意外终止时发生故障。
 
 **可直接重现的故障**
@@ -53,7 +55,7 @@ Visual Studio 是一个大型的综合平台，支持多种语言、项目类型
 
 - 可以在能够通过链接访问或在反馈中提供的示例代码或项目中重现（如果步骤涉及打开项目或文档）
 
-对于这类问题，请按照“[如何报告问题](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)”中的步骤进行操作，并确保包含：
+对于这类问题，请按照“[如何报告问题](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)”中的步骤进行操作，并确保包含：
 
 -   问题重现步骤
 
@@ -85,7 +87,7 @@ reg add "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\Windows Error
 Reporting\\LocalDumps\\devenv.exe" /v DumpFolder /t REG_SZ /d "C:\\CrashDumps"
 ```
 
-根据需要自定义转储计数和转储文件夹。 有关这些设置的详细信息，请单击[此处](https://docs.microsoft.com/windows/win32/wer/collecting-user-mode-dumps?redirectedfrom=MSDN)。
+根据需要自定义转储计数和转储文件夹。 有关这些设置的详细信息，请单击[此处](/windows/win32/wer/collecting-user-mode-dumps)。
 
 > [!NOTE]
 > 使用任务管理器捕获的转储可能位数不正确，因此用处不大。 上述过程是捕获堆转储的首选方法。 如果想使用任务管理器，请关闭当前正在运行的命令，启动 32 位任务管理器 (%windir%\\syswow64\\taskmgr.exe) 并通过它收集堆转储。
@@ -101,7 +103,7 @@ Reporting\\LocalDumps\\devenv.exe" /v DumpFolder /t REG_SZ /d "C:\\CrashDumps"
 
 2.  如果可能，请在提交反馈之前压缩文件 (\*.zip) 以减小其大小
 
-3.  按照[如何报告问题](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)中的步骤操作，并将堆转储附加到新的反馈项。
+3.  按照[如何报告问题](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)中的步骤操作，并将堆转储附加到新的反馈项。
 
 > [!NOTE] 
 > **最有价值的反馈：** 对于这种情况，最有价值的反馈是发生故障时捕获的堆转储。
@@ -116,9 +118,9 @@ VS 长时间处于无响应状态。
 **未知的无响应**
 
 如果无响应状态以一种不可预知的方式出现，请在下一次发生时启动 Visual Studio 的新实例并从该实例报告问题。
-在[“记录”屏幕](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2019#record-a-repro)中，确保选择挂起的 Visual Studio 会话。
+在[“记录”屏幕](/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2019#record-a-repro)中，确保选择无响应的 Visual Studio 会话。
 
-如果挂起的 Visual Studio 实例是在管理员模式下启动的，那么第二个实例也需要在管理员模式下启动。
+如果无响应的 Visual Studio 实例是在管理员模式下启动的，那么第二个实例也需要在管理员模式下启动。
 
 >[!NOTE] 
 > **最有价值的反馈：** 对于这种情况，最有价值的反馈是在无响应时捕获的堆转储。
@@ -143,7 +145,7 @@ VS 长时间处于无响应状态。
 
 3.  在 Visual Studio 的新副本中，打开“报告问题”工具 
 
-4.  按照[如何报告问题](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)中的步骤操作，直到完成“提供跟踪和堆转储（可选）”步骤。
+4.  按照[如何报告问题](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)中的步骤操作，直到完成“提供跟踪和堆转储（可选）”步骤。
 
 5.  选择记录 Visual Studio 的第一个副本（即遇到性能问题的副本）并开始记录。
 
@@ -163,7 +165,7 @@ VS 长时间处于无响应状态。
 
 记录性能跟踪时，如果要报告的运行缓慢的操作或 CPU 使用率过高的事件结束，则立即停止记录。 如果收集的信息过多，最早的信息将被覆盖。 如果在感兴趣的操作之后没有很快（几秒钟内）停止跟踪，有用的跟踪数据将被覆盖。
 
-请勿直接将性能跟踪附加到开发者社区网站中的现有反馈项。 请求/提供附加信息是 Visual Studio 内置“报告问题”工具中受支持的工作流。 如果需要进行性能跟踪才能解析以前的反馈项，我们会将反馈项的状态设置为“需要更多信息”，然后可以用报告新问题的方式对其进行回应。 有关详细说明，请参阅“报告问题”工具文档中的[“需要更多信息”部分](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017?view=vs-2017#when-further-information-is-needed-need-more-info)。
+请勿直接将性能跟踪附加到开发者社区网站中的现有反馈项。 请求/提供附加信息是 Visual Studio 内置“报告问题”工具中受支持的工作流。 如果需要进行性能跟踪才能解析以前的反馈项，我们会将反馈项的状态设置为“需要更多信息”，然后可以用报告新问题的方式对其进行回应。 有关详细说明，请参阅“报告问题”工具文档中的[“需要更多信息”部分](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017?view=vs-2017#when-further-information-is-needed-need-more-info)。
 
 > [!NOTE] 
 > **最有价值的反馈：** 几乎对于所有运行缓慢/CPU 使用率过高的问题来说，最有价值的反馈都概括说明了你已尝试的操作，以及在该时间段内捕获行为的性能跟踪 (\*.etl.zip)。
@@ -171,6 +173,23 @@ VS 长时间处于无响应状态。
 **高级性能跟踪**
 
 “报告问题”工具中的跟踪收集功能就足以应对大多数情况。 但有时需要加强控制跟踪集合（例如，缓冲区更大的跟踪），此时适合使用 PerfView 工具。 使用 PerfView 工具手动记录性能跟踪的步骤可在 [Recording performance traces with PerfView](https://github.com/dotnet/roslyn/wiki/Recording-performance-traces-with-PerfView)（使用 PerfView 记录性能跟踪）页中找到。
+
+## <a name="out-of-process-issues"></a>进程外问题
+
+> [!NOTE]
+> 从 Visual Studio 2019 版本 16.3 开始，进程外日志会自动附加到使用“报告问题”工具提交的反馈。 但是，如果问题可直接重现，遵循以下步骤仍然可以帮助添加附加信息，以帮助更好地诊断问题。
+
+有许多与 Visual Studio 并行运行的附属进程，并从 Visual Studio 主进程外提供各种功能。 如果其中一个附属进程发生错误，则通常在 Visual Studio 端看到“StreamJsonRpc. RemoteInvocationException”或“StreamJsonRpc ConnectionLostException”。
+
+最能使这些类型的问题付诸实践的是提供可通过以下步骤收集的其他日志：
+
+1.  如果这是直接可重现的问题，请从删除 %temp%/servicehub/logs  文件夹开始。 如果无法重现此问题，请保持此文件夹不变，并忽略以下项目符号：
+
+    -   将全局环境变量 ServiceHubTraceLevel  设置为“全部” 
+    -   重现此问题。
+
+2.  在[此处](https://www.microsoft.com/download/details.aspx?id=12493)下载 Microsoft Visual Studio 和 .NET Framework 日志收集工具。
+3.  运行该工具。 这会将一个 zip 文件输出到 %temp%/vslogs.zip  。 请将该文件附加到你的反馈。
 
 ## <a name="see-also"></a>请参阅
 

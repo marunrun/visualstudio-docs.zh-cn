@@ -12,15 +12,15 @@ helpviewer_keywords:
 - load test results, analyzing threshold violations
 - thresholds in load tests
 ms.assetid: 969ed346-cf2e-4d48-82b3-edb3e075e1c0
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 7ffff5818c5d3c7085ef3bebcc29c31a363a09b9
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 0a20c5e3f30a6d006175e78fc70dab79d0b9bf8a
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72665341"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591276"
 ---
 # <a name="analyzing-threshold-rule-violations-in-load-tests-using-the-load-test-analyzer"></a>使用负载测试分析器分析负载测试中的阈值规则冲突
 
@@ -34,7 +34,7 @@ ms.locfileid: "72665341"
 
 阈值冲突表显示前 1,000 个冲突。 下面举例说明了一个表：
 
-|列|说明|默认情况下可见|
+|列|描述|默认情况下可见|
 |-|-|-|
 |时间|负载测试过程中发生冲突的时间。|是|
 |计算机|发生冲突的测试计算机的名称。 **注意：** 在远程测试机组 (Rig) 上运行负载测试时，这一项很重要。|是|

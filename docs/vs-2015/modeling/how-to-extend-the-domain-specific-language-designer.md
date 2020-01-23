@@ -9,19 +9,17 @@ caps.latest.revision: 10
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 33a7f5a0f183030f9de021df328f8c5e50f5fd5a
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: faac29c59b78d8f3f1a0260b0b7a8ace16169f9d
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74300898"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75916802"
 ---
 # <a name="how-to-extend-the-domain-specific-language-designer"></a>如何：扩展域特定语言设计器
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 你可以对用于编辑 DSL 定义的设计器进行扩展。 可以进行的扩展类型包括添加菜单命令、添加拖放和双击笔势的处理程序，以及在特定类型的值或关系发生更改时触发的规则。 可以将扩展打包为 Visual Studio 集成扩展（VSIX），并将其分发给其他用户。
-
- 有关此功能的示例代码和详细信息，请参阅 Visual Studio[可视化和建模 SDK （VMSDK）](https://go.microsoft.com/fwlink/?LinkID=186128)网站。
 
 ## <a name="setting-up-the-solution"></a>设置解决方案
  设置包含扩展代码的项目，以及一个导出项目的 VSIX 项目。 你的解决方案可以包含合并到同一 VSIX 中的其他项目。
@@ -71,7 +69,7 @@ ms.locfileid: "74300898"
 
  若要将扩展部署到主 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]和其他计算机上，请执行以下步骤：
 
-1. 在 bin 中的 VSIX 项目中查找 VSIX 安装文件\\*\\\*.vsix
+1. 查找 VSIX 安装文件，在 VSIX 项目中 bin\\*\*\\\*.vsix
 
 2. 将此文件复制到目标计算机，然后在 Windows 资源管理器（或文件资源管理器）中双击它。
 

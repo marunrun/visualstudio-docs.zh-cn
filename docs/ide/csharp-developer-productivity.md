@@ -1,7 +1,7 @@
 ---
 title: 提高 .NET 开发工作效率
 description: 概述导航、代码分析、单元测试和其他功能，帮助提升编写 .NET 代码的速度和质量。
-author: mikadumont
+author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.date: 11/21/2019
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - editor
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5777ef318d557b85abddf35d2fbdf37a044b0ead
-ms.sourcegitcommit: b5cb0eb09369677514ee1f44d5d7050d34c7fbc1
+ms.openlocfilehash: 0aa8e19f2be78671587dd1d9bc6254306c82a78c
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74491636"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75567497"
 ---
 # <a name="visual-studio-productivity-guide-for-c-developers"></a>面向 C# 开发人员的 Visual Studio 工作效率指南
 
@@ -41,7 +41,7 @@ ms.locfileid: "74491636"
 
 Visual Studio 常用快捷方式如下：
 
-| 快捷方式（所有配置文件） | 命令 | 说明 |
+| 快捷方式（所有配置文件） | 命令 | 描述 |
 |-|-|-|
 |  Ctrl + T  | 转到全部 | 导航到任何文件、类型、成员或符号声明 |
 | F12（也可使用 Ctrl+单击    ） | 转到定义 | 导航到定义符号的位置 |

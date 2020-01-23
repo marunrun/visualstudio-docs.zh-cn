@@ -11,12 +11,12 @@ caps.latest.revision: 67
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f7ad3ebd395c813877c444b5531255f56690c98b
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 7f005ea0fce0ccf33902b6ebfd6822640782ef20
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74292057"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75917595"
 ---
 # <a name="get-started-developing-with-visual-studio"></a>Get Started Developing with Visual Studio
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -25,13 +25,13 @@ ms.locfileid: "74292057"
 
 - **[制作 Web 应用程序](https://www.visualstudio.com/features/modern-web-tooling-vs)：** 创建和部署现代 Web 应用程序的工具。
 
-     [学习教程](https://docs.asp.net/en/latest/tutorials/your-first-aspnet-application.html) |                              [浏览文档](https://docs.asp.net/) |                                  [观看视频](https://docs.microsoft.com/aspnet/core/?view=aspnetcore-3.0)
+     [学习教程](https://docs.asp.net/en/latest/tutorials/your-first-aspnet-application.html) |                              [浏览文档](https://docs.asp.net/) |                                  [观看视频](/aspnet/core/?view=aspnetcore-3.0)
 
-- **[在 HTML/Javascript (Apache Cordova) 中创建跨平台的移动应用程序](https://docs.microsoft.com/visualstudio/cross-platform/tools-for-cordova/?view=toolsforcordova-2017)** ：             Apache Cordova 是基于 HTML/CSS/Javascript 的一个开源跨平台环境。  Javascript 代码在面向特定平台的包装器中进行执行，并启用对设备所有硬件功能的访问。 开发适用于 Apple 应用商店、Android 应用商店和 Windows 应用商店的应用程序。
+- **[在 HTML/Javascript (Apache Cordova) 中创建跨平台的移动应用程序](/visualstudio/cross-platform/tools-for-cordova/?view=toolsforcordova-2017)** ：             Apache Cordova 是基于 HTML/CSS/Javascript 的一个开源跨平台环境。  Javascript 代码在面向特定平台的包装器中进行执行，并启用对设备所有硬件功能的访问。 开发适用于 Apple 应用商店、Android 应用商店和 Windows 应用商店的应用程序。
 
-     [加载示例](https://github.com/Microsoft/cordova-samples/tree/master/todo-angularjs) | [学习教程](https://docs.microsoft.com/visualstudio/cross-platform/tools-for-cordova/?view=toolsforcordova-2017) |                              [浏览文档](https://docs.microsoft.com/visualstudio/cross-platform/tools-for-cordova/?view=toolsforcordova-2017) |                               [观看视频](https://channel9.msdn.com/Blogs/Seth-Juarez/Getting-Started-with-Apache-Cordova-in-Visual-Studio)
+     [加载示例](https://github.com/Microsoft/cordova-samples/tree/master/todo-angularjs) | [学习教程](/visualstudio/cross-platform/tools-for-cordova/?view=toolsforcordova-2017) |                              [浏览文档](/visualstudio/cross-platform/tools-for-cordova/?view=toolsforcordova-2017) |                               [观看视频](https://channel9.msdn.com/Blogs/Seth-Juarez/Getting-Started-with-Apache-Cordova-in-Visual-Studio)
 
-- **[在 C# 或 Visual Basic (Xamarin) 中创建跨平台的移动应用程序](../cross-platform/visual-studio-and-xamarin.md)** ：开始使用 Visual Studio 和适用于 Xamarin 的工具从共享代码库创建在 Android、iOS 和通用 Windows 平台上运行的移动应用程序。
+- **[在 C# 或 Visual Basic (Xamarin) 中制作跨平台的移动应用程序](../cross-platform/visual-studio-and-xamarin.md)** ：开始使用 Visual Studio 和适用于 Xamarin 的工具从共享代码库创建在 Android、iOS 和通用 Windows 平台上运行的移动应用程序。
 
      加载示例： [TaskyPortable](https://github.com/xamarin/mobile-samples/tree/master/TaskyPortable) （本机 UI）或[Xamarin Forms Todo 示例](https://github.com/xamarin/xamarin-forms-samples/tree/master/Todo)（Xamarin. Forms 共享 UI） &#124;[执行教程](https://msdn.microsoft.com/library/dn879698\(v=vs.140\).aspx) &#124;[浏览](https://msdn.microsoft.com/library/mt299001.aspx) &#124;[观看视频](https://channel9.msdn.com/Series/Cross-Platform-Development-with-Xamarin--Visual-Studio/01)的文档
 
@@ -39,11 +39,11 @@ ms.locfileid: "74292057"
 
      [加载示例](https://code.msdn.microsoft.com/MoreTeaPots-Android-a9bd8549) | [学习教程](https://msdn.microsoft.com/library/dn707595.aspx) |                              [浏览文档](https://msdn.microsoft.com/library/dn707591.aspx) |                               [观看视频](https://channel9.msdn.com/Series/ConnectOn-Demand/239)
 
-- **[使用 DirectX 创建游戏](https://msdn.microsoft.com/library/windows/desktop/ee663274\(v=vs.85\).aspx)** ：开始使用 DirectX 创建通用 Windows 平台游戏。
+- **[使用 DirectX 制作游戏](https://msdn.microsoft.com/library/windows/desktop/ee663274\(v=vs.85\).aspx)** ：开始使用 DirectX 创建通用 Windows 平台游戏。
 
      [加载示例](https://msdn.microsoft.com/library/windows/desktop/bb153300\(v=vs.85\).aspx) |                   [学习教程](https://msdn.microsoft.com/library/windows/desktop/bb153264\(v=vs.85\).aspx) |                               [浏览文档](https://msdn.microsoft.com/library/windows/desktop/ee663274\(v=vs.85\).aspx) |                                  [观看视频](https://channel9.msdn.com/Series/Introduction-to-C-and-DirectX-Game-Development/01)
 
-- **[使用 Unity 创建游戏](../cross-platform/visual-studio-tools-for-unity.md)** ：开始使用 Unity 框架创建跨平台游戏。
+- **[使用 Unity 制作游戏](../cross-platform/visual-studio-tools-for-unity.md)** ：开始使用 Unity 框架创建跨平台游戏。
 
      [加载示例](http://unity3d.com/learn/resources/downloads) |                    [学习教程](https://learn.unity.com/projects) |                              [浏览文档](https://msdn.microsoft.com/library/dn940019\(v=vs.140\).aspx) |    [观看视频](https://www.youtube.com/playlist?list=PLReL099Y5nRfseAg0k1SJOlpqdcsDs8Em)
 

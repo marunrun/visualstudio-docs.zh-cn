@@ -4,17 +4,17 @@ ms.date: 08/07/2019
 ms.topic: conceptual
 f1_keywords:
 - vs.UnitTest.CreateUnitTest
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 25e594136fe79d38268999099231791364d1082a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 77ac5ffd14f97fd6fdd753327fe193ceb80ea57e
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72659895"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75846934"
 ---
 # <a name="unit-test-basics"></a>单元测试基础知识
 
@@ -91,13 +91,16 @@ public void Withdraw(double amount)
 
    ::: moniker range="vs-2017"
    ![从编辑器窗口查看上下文菜单](../test/media/createunittestsrightclick.png)
-   ::: moniker-end
-   ::: moniker range=">=vs-2019"
-   ![从编辑器窗口查看上下文菜单](../test/media/vs-2019/basics-create-unit-tests.png)
-   ::: moniker-end
 
    > [!NOTE]
    > “创建单元测试”菜单命令仅适用于面向 .NET Framework（但不是 .NET Core）的托管代码  。
+   ::: moniker-end
+   ::: moniker range=">=vs-2019"
+   ![从编辑器窗口查看上下文菜单](../test/media/vs-2019/basics-create-unit-tests.png)
+
+   > [!NOTE]
+   > “创建单元测试”菜单命令仅适用于托管代码  。
+   ::: moniker-end
 
 2. 单击“确定”接受默认值以创建单元测试，或更改用于创建并命名单元测试项目和单元测试的值  。 你可以选择默认添加到单元测试方法的代码。
 
@@ -120,7 +123,7 @@ public void Withdraw(double amount)
 
 **若要向解决方案中添加单元测试项目：**
 
-1. 在“解决方案资源管理器”中，右键单击解决方案，然后依次选择“添加” > “新建项目”     。
+1. 在“解决方案资源管理器”  中，右键单击解决方案，然后依次选择“添加”   > “新建”  “项目”  。
 
 ::: moniker range="vs-2017"
 
@@ -273,7 +276,7 @@ public void My_Test ()
 
 ::: moniker range="vs-2017"
 
-|Button|说明|
+|Button|描述|
 |-|-|
 |![生成后运行](../test/media/ute_runafterbuild_btn.png)|要在每个本地生成后运行单元测试，请在标准菜单上选择“测试”，然后在测试资源管理器的工具栏上选择“生成后运行测试”    。|
 
@@ -299,7 +302,7 @@ public void My_Test ()
 ![搜索筛选器类别](../test/media/vs-2019/test-explorer-search-filter-16-2.png)
 ::: moniker-end
 
-|Button|说明|
+|Button|描述|
 |-|-|
 |![测试资源管理器的分组按钮](../test/media/ute_groupby_btn.png)|若要按类别分组测试，请选择“分组依据”  按钮。|
 

@@ -6,17 +6,17 @@ helpviewer_keywords:
 - typed datasets, creating
 - datasets, creating
 - datasets, configuring
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 44023543f1f7b57352448755de942af1c0c712ac
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 8222b1985ab7f765be9b06fdd6abf7cb1e1cb2dc
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72642406"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586908"
 ---
 # <a name="how-to-create-and-configure-datasets-in-visual-studio"></a>如何：在 Visual Studio 中创建和配置数据集
 
@@ -26,7 +26,7 @@ ms.locfileid: "72642406"
 
 ## <a name="create-a-new-dataset-by-using-the-data-source-configuration-wizard"></a>使用 "数据源配置向导" 创建新数据集
 
-1. 在 Visual Studio 中打开项目，然后选择 "**项目**"  >  "**添加新数据源**" 以启动 "**数据源配置向导**"。
+1. 在 Visual Studio 中打开项目，然后选择 "**项目**" > "**添加新数据源**" 以启动 "**数据源配置向导**"。
 
 2. 选择要连接的数据源的类型。
 
@@ -88,7 +88,7 @@ ms.locfileid: "72642406"
 
 独立表需要在独立的表中实现 `Fill` 逻辑，以便可以用数据填充它们。 有关填充独立数据表的信息，请参阅[从 DataAdapter 填充数据集](/dotnet/framework/data/adonet/populating-a-dataset-from-a-dataadapter)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Studio 中的数据集工具](../data-tools/dataset-tools-in-visual-studio.md)
 - [数据集中的关系](../data-tools/relationships-in-datasets.md)

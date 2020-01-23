@@ -9,12 +9,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1fe1932930c869e3d4d3d74eb641da068e1cffec
-ms.sourcegitcommit: 3cda0d58c5cf1985122b8977b33a171c7359f324
+ms.openlocfilehash: d3996ef0db25a6552a1a32cd121dbf2f750d460c
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154812"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76114463"
 ---
 # <a name="how-to-view-save-and-configure-build-log-files"></a>如何：查看、保存和配置生成日志文件
 
@@ -52,7 +52,7 @@ ms.locfileid: "70154812"
 
 3. 在“MSBuild 项目生成输出详细信息”列表中，选择以下值之一，然后选择“确定”按钮   。
 
-    |详细级别|说明|
+    |详细级别|描述|
     | - |-----------------|
     |**安静**|仅显示生成总结。|
     |**最低**|显示生成总结；错误、警告以及分类为极为重要的信息。|

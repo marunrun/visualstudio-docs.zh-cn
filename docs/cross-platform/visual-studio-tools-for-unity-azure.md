@@ -12,12 +12,12 @@ manager: crdun
 ms.workload:
 - azure
 - unity
-ms.openlocfilehash: 454cb3617bb918b67784ebd2a3388ac6ee9f3826
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e9a07a7f04cae433803d012302555821fc851075
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62818357"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75916828"
 ---
 # <a name="program-with-unity-and-azure"></a>使用 Unity 和 Azure 进行编程
 
@@ -30,12 +30,12 @@ Azure 提供将遥测和其他游戏数据存储在云中的可缩放解决方�
 
 请访问[沙盒](/sandbox/)，尝试通过 Unity 试用以下实验性 Azure SDK：
 
-* [用于 Unity 的 Azure 存储 SDK](https://aka.ms/azstoragegamedev)
-* [用于 Unity 的 Azure 事件中心 SDK](https://aka.ms/azeventhubsgamedev)
-* [用于 Unity 的 Azure 移动应用 SDK](https://aka.ms/azmobileappsgamedev)
+* [用于 Unity 的 Azure 存储 SDK](/sandbox/gamedev/unity/azure-storage-unity?wt.mc_id=azgamedev-sandbox-brpeek)
+* [用于 Unity 的 Azure 事件中心 SDK](/sandbox/gamedev/unity/azure-event-hubs-unity?WT.mc_id=azgamedev-sandbox-brpeek)
+* [用于 Unity 的 Azure 移动应用 SDK](/sandbox/gamedev/unity/azure-mobile-apps-unity?WT.mc_id=azgamedev-sandbox-brpeek)
 
 ## <a name="azure-sdk-sample"></a>Azure SDK 示例
 
-还有一个使用 Azure 简易表 SDK 和 Unity 的[简单示例游戏](https://aka.ms/azmobileappsracer)。 此游戏使用 Azure 简易表数据存储，以跟踪高分排行榜，并存储游戏内遥测。可以[从 GitHub 下载](https://aka.ms/azsamples-unity)此游戏。
+还有一个使用 Azure 简易表 SDK 和 Unity 的[简单示例游戏](/sandbox/gamedev/unity/samples/azure-mobile-apps-unity-racer)。 此游戏使用 Azure 简易表数据存储，以跟踪高分排行榜，并存储游戏内遥测。可以[从 GitHub 下载](https://github.com/BrianPeek/AzureSamples-Unity)此游戏。
 
 ![示例游戏屏幕截图](media/vstu_azure-test-sample-game-image2.png)

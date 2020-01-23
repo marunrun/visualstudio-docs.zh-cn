@@ -2,22 +2,21 @@
 title: Visual Studio 内部版本号和发布日期
 titleSuffix: ''
 description: Visual Studio 已发布的版本和生成号列表，按日期排序。
-author: TerryGLee
-ms.author: tglee
+author: ornellaalt
+ms.author: ornella
 manager: jillfra
-ms.date: 12/03/2019
+ms.date: 01/15/2020
 ms.topic: reference
-ms.custom: seodec18
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 1520f5f74ea28850d615b93f37278c4cda090988
-ms.sourcegitcommit: af9bbf9116a63c0631ff2f4f3a878564aa63cd8c
+ms.openlocfilehash: 6864f6ad7819cf163c20f0d604d90370454b53a4
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74797228"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76114179"
 ---
 # <a name="visual-studio-build-numbers-and-release-dates"></a>Visual Studio 内部版本号和发布日期
 
@@ -29,6 +28,11 @@ ms.locfileid: "74797228"
 
 | **Version**| **频道** | **发布日期** | **内部版本** |
 | ---------------------- | ----------- | ---------------- | ----------------- |
+| 16.4.3 | Release | 2020 年 1 月 14 日 | 16.4.29709.97 |
+| 16.0.11 | Release | 2020 年 1 月 14 日 | 16.0.28803.653 |
+| 16.4.2 | Release | 2019 年 12 月 17 日 | 16.4.29613.14 |
+| 16.4.1 | Release | 2019 年 12 月 10 日 | 16.4.29609.76 |
+| 16.0.10 | Release | 2019 年 12 月 10 日 | 16.0.28803.631 |
 | 16.5.0 | 预览版 1 | 2019 年 12 月 3 日 | 16.5.29521.150 |
 | 16.4.0 | Release | 2019 年 12 月 3 日 | 16.4.29519.181 |
 | 16.4.0 | 预览版 6 | 2019 年 11 月 21 日 | 16.4.29519.161 |
@@ -116,6 +120,9 @@ ms.locfileid: "74797228"
 
 | **Version**| **频道** | **发布日期** | **内部版本** |
 | ---------------------- | ----------- | ---------------- | ----------------- |
+| 15.9.19 | Release | 2020 年 1 月 14 日 | 15.9.28307.1000 |
+| 15.0.28 | Release | 2019 年 12 月 11 日 | 15.0.26228.102 |
+| 15.9.18 | Release | 2019 年 12 月 10 日 | 15.9.28307.960 |
 | 15.9.17 | Release | 2019 年 10 月 15 日 | 15.9.28307.905 |
 | 15.9.16 | Release | 2019 年 9 月 10 日 | 15.9.28307.858 |
 | 15.0.27 | Release | 2019 年 9 月 10 日 | 15.0.26228.98 |

@@ -5,17 +5,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - MSBuild, property functions
 ms.assetid: 2253956e-3ae0-4bdc-9d3a-4881dfae4ddb
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a92d5a593c67f54b50649a48b8f973bbfbff8958
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: b0551162a00437b01c7357dfdac16462aad8f2fc
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65694950"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75597381"
 ---
 # <a name="property-functions"></a>属性函数
 
@@ -149,7 +149,7 @@ $([MSBuild]::Add($(NumberOne), $(NumberTwo)))
 
 下面列出了 MSBuild 属性函数：
 
-|函数签名|说明|
+|函数签名|描述|
 |------------------------|-----------------|
 |double Add(双精度型值 a, 双精度型值 b)|将两个双精度型值相加。|
 |long Add(长型值 a, 长型值 b)|将两个长型值相加。|
@@ -261,7 +261,7 @@ MSBuild `GetRegistryValueFromView` 属性函数在给定了注册表项、值以
 [MSBuild]::GetRegistryValueFromView(string keyName, string valueName, object defaultValue, params object[] views)
 ```
 
-Windows 64 位操作系统维护一个 HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node 注册表项，它表示 32 位应用程序的 HKEY_LOCAL_MACHINE\SOFTWARE 注册表视图。
+Windows 64 位操作系统维护一个 HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node  注册表项，它表示 32 位应用程序的 HKEY_LOCAL_MACHINE\SOFTWARE  注册表视图。
 
 默认情况下，在 WOW64 上运行的 32 位应用程序将访问 32 位注册表视图，而 64 位应用程序将访问 64 位注册表视图。
 
@@ -279,7 +279,7 @@ Windows 64 位操作系统维护一个 HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node �
 $([MSBuild]::GetRegistryValueFromView('HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SDKs\Silverlight\v3.0\ReferenceAssemblies', 'SLRuntimeInstallPath', null, RegistryView.Registry64, RegistryView.Registry32))
 ```
 
-首先在 64 位注册表视图中查找，然后在 32 位注册表视图中查找，以获取 ReferenceAssemblies 项的 SLRuntimeInstallPath 数据。
+首先在 64 位注册表视图中查找，然后在 32 位注册表视图中查找，以获取 ReferenceAssemblies  项的 SLRuntimeInstallPath  数据。
 
 ## <a name="msbuild-makerelative"></a>MSBuild MakeRelative
 

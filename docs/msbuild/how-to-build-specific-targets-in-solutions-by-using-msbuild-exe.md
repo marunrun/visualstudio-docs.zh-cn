@@ -7,20 +7,20 @@ helpviewer_keywords:
 - msbuild.exe, building specific targets in a solution
 - MSBuild, msbuild.exe
 ms.assetid: f46feb9b-4c16-4fec-b6e1-36a959692ba3
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 34c04d12ccc17424a2f938c04751d4e3d4c9f05f
-ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
+ms.openlocfilehash: 921b5d2d4aad7cfe48b7f6cc9cb802fde9520e19
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66263792"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75585253"
 ---
 # <a name="how-to-build-specific-targets-in-solutions-by-using-msbuildexe"></a>如何：使用 MSBuild.exe 生成解决方案中的特定目标
-可使用 MSBuild 在解决方案中生成特定项目的特定目标。
+可使用 MSBuild 在解决方案中生成特定项目的特定目标  。
 
 #### <a name="to-build-a-specific-target-of-a-specific-project-in-a-solution"></a>在解决方案中生成特定项目的特定目标
 
@@ -29,7 +29,7 @@ ms.locfileid: "66263792"
 2. 指定 \<ProjectName> 格式的 `-target:` 开关后的目标：\<TargetName>。 如果项目名称包含任何字符 `%`、`$`、`@`、`;`、`.`、`(`、`)` 或 `'`，请将其替换为指定目标名称中的 `_`。
 
 ## <a name="example"></a>示例
- 以下示例执行 `NotInSlnFolder` 项目的 `Rebuild` 目标，然后执行位于 NewFolder 解决方案文件夹的 `InSolutionFolder` 项目的 `Clean` 目标。
+ 以下示例执行 `NotInSlnFolder` 项目的 `Rebuild` 目标，然后执行位于 NewFolder 解决方案文件夹的 `InSolutionFolder` 项目的 `Clean` 目标  。
 
 ```cmd
 msbuild SlnFolders.sln -target:NotInSlnfolder:Rebuild;NewFolder\InSolutionFolder:Clean
@@ -37,7 +37,7 @@ msbuild SlnFolders.sln -target:NotInSlnfolder:Rebuild;NewFolder\InSolutionFolder
 
 ## <a name="troubleshooting"></a>疑难解答
 
-如果想检查可用选项，可使用 MSBuild 提供的调试选项来执行此操作。 设置环境变量 `MSBUILDEMITSOLUTION=1` 并生成解决方案。 此操作将生成一个名为 \<SolutionName>.sln.metaproj 的 MSBuild 文件，该文件在生成时显示 MSBuild 解决方案的内部视图。 可检查此视图以确定可以生成的目标。
+如果想检查可用选项，可使用 MSBuild 提供的调试选项来执行此操作。 设置环境变量 `MSBUILDEMITSOLUTION=1` 并生成解决方案。 此操作将生成一个名为 \<SolutionName>.sln.metaproj 的 MSBuild 文件，该文件在生成时显示 MSBuild 解决方案的内部视图  。 可检查此视图以确定可以生成的目标。
 
 除非需要此内部视图，否则不要使用此环境变量集进行生成操作。 此设置可能会在解决方案中生成项目时导致问题产生。
 

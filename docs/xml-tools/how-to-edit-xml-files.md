@@ -3,17 +3,17 @@ title: 如何：编辑 XML 文件
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 07fa3ecf-6345-4d30-9d85-d5ef5b083319
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fd8671bf45230ec24a37d5006a2d32e5aabe8f28
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 216718627936ac7f519c1a6a28a30886e8ae9c27
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72645926"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592732"
 ---
 # <a name="how-to-edit-xml-files"></a>如何：编辑 XML 文件
 
@@ -36,7 +36,7 @@ ms.locfileid: "72645926"
 
 ## <a name="add-an-existing-xml-file-to-a-project"></a>向项目中添加现有的 XML 文件
 
-1. 从 "**项目**" 菜单中，选择 "**添加现有项**"。
+1. 从“项目”菜单中选择“添加现有项”。
 
    此时将显示 "**添加现有项**" 对话框。
 
@@ -46,7 +46,7 @@ ms.locfileid: "72645926"
 
 1. 从 "**文件**" 菜单中选择 "**新建**"。
 
-   此时将显示 "**新建文件**" 对话框。
+   此时将显示 **“新建文件”** 对话框。
 
 2. 选择 " **Xml 文件**" 以创建新的 xml 文件;或者，选择 " **Xslt 文件**" 以创建新的 xslt 样式表。
 
@@ -56,19 +56,19 @@ ms.locfileid: "72645926"
 
 ::: moniker range="vs-2017"
 
-1. 从“文件”菜单中选择“新建”>“项目”。
+1. 从 "**文件**" 菜单中，选择 "**新建**>**项目**"。
 
-   此时将出现“新建项目”对话框。
+   此时将出现 **“新建项目”** 对话框。
 
 2. 选择所选的代码语言，然后选择 "**空项目（.NET Framework）** " 模板。
 
-3. 单击“确定”。
+3. 单击" **确定**"。
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-1. 从“文件”菜单中选择“新建”>“项目”。
+1. 从 "**文件**" 菜单中，选择 "**新建**>**项目**"。
 
 2. 在模板搜索框中输入 "**空项目**"，选择 "**空项目（.NET Framework）** " 模板，然后单击 "**下一步**"。
 
@@ -80,7 +80,7 @@ ms.locfileid: "72645926"
 
    "XML 编辑器" 查找你添加到此项目中的架构，并将其用于在此项目打开时编辑的任何 XML、架构或 XSLT 文件中的验证和 IntelliSense。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [XML 编辑器](../xml-tools/xml-editor.md)
 - [XML 文档属性，"属性" 窗口](../xml-tools/xml-document-properties-properties-window.md)

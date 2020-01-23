@@ -9,14 +9,14 @@ caps.latest.revision: 12
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: eed389a3847145a0f37eb3141526a38e4374d368
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 6de07c705129aaef705d0c9651d53fdf35e6d0c0
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74297910"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850752"
 ---
-# <a name="network-usage"></a>网络使用情况
+# <a name="network-usage"></a>呼隔ㄏノ秖
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Visual Studio“网络”诊断工具用于收集有关使用 [Windows.Web.Http API](https://msdn.microsoft.com/library/windows/apps/windows.web.http.aspx) 执行的网络操作的数据。 分析数据可以帮助你解决问题（如访问和身份验证问题、不正确的缓存用法和不良的显示和下载性能）。  
@@ -75,5 +75,5 @@ Visual Studio“网络”诊断工具用于收集有关使用 [Windows.Web.Http 
   
 ## <a name="see-also"></a>请参阅  
  [运行分析工具而不调试](https://msdn.microsoft.com/library/e97ce1a4-62d6-4b8e-a2f7-61576437ff01)   
- [Visual Studio 博客：Visual Studio 网络检查器简介](https://go.microsoft.com/fwlink/?LinkId=535022)   
+ [Visual Studio 博客：Visual Studio 网络检查器简介](https://blogs.msdn.com/b/visualstudio/)   
  [第 9 频道视频：VS 诊断工具 – 新的网络探查器](https://channel9.msdn.com/Series/ConnectOn-Demand/206)

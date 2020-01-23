@@ -7,17 +7,17 @@ helpviewer_keywords:
 - custom dictionary, code analysis
 - dictionary, code analysis
 ms.assetid: 667e3b4e-beff-48be-b3d1-376e1716a895
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 26629ed099eea9a1d0c73a2eaa1105525d05dcf3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c3fbcbbfd52e4715dc6ee063ae0bae905eb3e65a
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72649461"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75587519"
 ---
 # <a name="how-to-customize-the-code-analysis-dictionary"></a>如何：自定义代码分析字典
 
@@ -66,13 +66,13 @@ ms.locfileid: "72649461"
 
 - [字典/字词/无法识别/Word](../code-quality/how-to-customize-the-code-analysis-dictionary.md#BKMK_DictionaryWordsUnrecognizedWord)
 
-- [字典/字词/弃用/字词 [@PreferredAlternate]](../code-quality/how-to-customize-the-code-analysis-dictionary.md#BKMK_DictionaryWordsDeprecatedTermPreferredAlternate)
+- [Dictionary/Words/Deprecated/Term[@PreferredAlternate]](../code-quality/how-to-customize-the-code-analysis-dictionary.md#BKMK_DictionaryWordsDeprecatedTermPreferredAlternate)
 
 - [字典/字词/复合/字词 [@CompoundAlternate]](../code-quality/how-to-customize-the-code-analysis-dictionary.md#BKMK_DictionaryWordsCompoundTermCompoundAlternate)
 
-- [字典/字词/DiscreteExceptions/字词](../code-quality/how-to-customize-the-code-analysis-dictionary.md#BKMK_DictionaryWordsDiscreteExceptionsTerm)
+- [Dictionary/Words/DiscreteExceptions/Term](../code-quality/how-to-customize-the-code-analysis-dictionary.md#BKMK_DictionaryWordsDiscreteExceptionsTerm)
 
-- [字典/缩写词/CasingExceptions/缩写](../code-quality/how-to-customize-the-code-analysis-dictionary.md#BKMK_DictionaryAcronymsCasingExceptionsAcronym)
+- [Dictionary/Acronyms/CasingExceptions/Acronym](../code-quality/how-to-customize-the-code-analysis-dictionary.md#BKMK_DictionaryAcronymsCasingExceptionsAcronym)
 
 ### <a name="BKMK_DictionaryWordsRecognizedWord"></a>字典/字词/识别/字
 
@@ -241,7 +241,7 @@ ms.locfileid: "72649461"
 
 ### <a name="BKMK_DictionaryAcronymsCasingExceptionsAcronym"></a>字典/缩写词/CasingExceptions/缩写
 
-若要在代码分析标识为正确拼写的字词列表中包括首字母缩写，并指示用复合单词的大小写规则检查字词时首字母缩写词，请将该词添加为字典/缩写词/CasingExceptions/的内部文本缩写词元素。 字典/缩写词/CasingExceptions/缩写元素中的首字母缩写词区分大小写。
+若要在代码分析标识为正确拼写的字词列表中包含首字母缩写，并指示用复合词的大小写规则检查术语的首字母缩写，请将该词添加为字典/首字母缩写/CasingExceptions/缩写元素的内部文本。 字典/缩写词/CasingExceptions/缩写元素中的首字母缩写词区分大小写。
 
 **示例**
 

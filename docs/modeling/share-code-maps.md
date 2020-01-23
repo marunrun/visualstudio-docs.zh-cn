@@ -2,17 +2,17 @@
 title: 导出和保存代码图
 ms.date: 05/16/2018
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 991773953338e38331bad45bfa1149aeb27c748b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 57989de2cca3582b3193a7b55b81d1d444dcf1c1
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72670805"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75591926"
 ---
 # <a name="share-code-maps"></a>共享代码图
 
@@ -24,7 +24,7 @@ ms.locfileid: "72670805"
 
 或
 
-若要将地图保存为特定项目的一部分，请在地图工具栏上选择 "**共享**"  >  "**将 \<CodeMapName >" 移动到**"，然后选择要在其中保存地图的项目。
+若要将地图保存为特定项目的一部分，请在地图工具栏上选择 "**共享**" > "**将 \<> CodeMapName" 移动到**"，然后选择要在其中保存地图的项目。
 
 ![将映射移动到另一个项目中](../modeling/media/codemapsmovemapmenu.png)
 
@@ -55,8 +55,8 @@ Visual Studio 将映射保存为 *.dgml*文件，您可以与 Visual Studio Ente
 
 2. 浏览到你要保存文件的位置。
 
-3. 对代码图命名。 请确保将 "**保存类型**" 框设置为 " **xps 文件（\* .xps）** "。 选择“保存”。
+3. 对代码图命名。 请确保将 "**保存类型**" 框设置为 " **xps 文件（\*.xps）** "。 选择“保存”。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [映射与代码图的依赖项](../modeling/map-dependencies-across-your-solutions.md)

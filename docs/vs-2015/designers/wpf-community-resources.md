@@ -9,12 +9,12 @@ caps.latest.revision: 7
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 7d740f1cc6c19e8d3b53dc084d9de01547369337
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 167fc2f80a8eaeddb121d208f714fe134c63a198
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MTE95
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299540"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75843882"
 ---
 # <a name="wpf-community-resources"></a>WPF 社区资源
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -22,11 +22,11 @@ ms.locfileid: "74299540"
 Microsoft 公开各种社区资源以便于你了解、讨论 Windows Presentation Foundation (WPF) 并提供对它的反馈，包括 WPF 团队成员和社区负责人、论坛和 Microsoft Connect 反馈中心的博客。
 
 ## <a name="community"></a>社区
- [WPF 论坛](https://go.microsoft.com/fwlink/?LinkId=187440)
+ [WPF 论坛](https://social.msdn.microsoft.com/forums/en-US/wpf/threads/)
 
- [Stack Overflow](https://stackoverflow.com/questions/tagged/wpf)
+ [堆栈溢出](https://stackoverflow.com/questions/tagged/wpf)
 
- [WPF Team Blog](https://devblogs.microsoft.com/wpf/)（WPF 团队博客）
+ [WPF 团队博客](https://devblogs.microsoft.com/wpf/)
 
  [CodePlex 上的 WPF 工具包](https://archive.codeplex.com/?p=wpf)
 

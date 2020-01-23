@@ -14,17 +14,17 @@ helpviewer_keywords:
 - data [Visual Studio], retrieving
 - data [Visual Studio], datasets
 ms.assetid: 55f3bfbe-db78-4486-add3-c62f49e6b9a0
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: fcecafaa36aabf3249bacf0788c2d19f945ad1b1
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a79f7b781944bb93a60794e748eefb9375723384
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648478"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75586622"
 ---
 # <a name="fill-datasets-by-using-tableadapters"></a>使用 Tableadapter 填充数据集
 
@@ -52,18 +52,18 @@ Tableadapter 是由设计器生成的组件，用于连接到数据库、运行�
 
 ![客户端应用程序中的数据流](../data-tools/media/clientdatadiagram.gif)
 
-尽管 Tableadapter 是用**数据集设计器**设计的，但 TableAdapter 类并不是作为 <xref:System.Data.DataSet> 的嵌套类生成的。 它们位于特定于每个数据集的不同命名空间中。 例如，如果您有一个名为 `NorthwindDataSet` 的数据集，则与 `NorthwindDataSet` 中 <xref:System.Data.DataTable>s 相关联的 Tableadapter 将在 `NorthwindDataSetTableAdapters` 命名空间中。 若要以编程方式访问特定 TableAdapter，必须声明 TableAdapter 的新实例。 例如:
+尽管 Tableadapter 是用**数据集设计器**设计的，但 TableAdapter 类并不是作为 <xref:System.Data.DataSet>的嵌套类生成的。 它们位于特定于每个数据集的不同命名空间中。 例如，如果你有一个名为 `NorthwindDataSet`的数据集，则与 `NorthwindDataSet` 中的 <xref:System.Data.DataTable>相关联的 Tableadapter 将位于 `NorthwindDataSetTableAdapters` 命名空间中。 若要以编程方式访问特定 TableAdapter，必须声明 TableAdapter 的新实例。 例如：
 
 [!code-csharp[VbRaddataTableAdapters#7](../data-tools/codesnippet/CSharp/fill-datasets-by-using-tableadapters_1.cs)]
 [!code-vb[VbRaddataTableAdapters#7](../data-tools/codesnippet/VisualBasic/fill-datasets-by-using-tableadapters_1.vb)]
 
 ## <a name="associated-datatable-schema"></a>关联的 DataTable 架构
 
-创建 TableAdapter 时，使用初始查询或存储过程来定义 TableAdapter 的关联 <xref:System.Data.DataTable> 的架构。 可以通过调用 TableAdapter 的 `Fill` 方法（填充 TableAdapter 的关联 <xref:System.Data.DataTable>）来运行此初始查询或存储过程。 对 TableAdapter 的主查询所做的任何更改都会反映在关联数据表的架构中。 例如，从主查询中删除列还会从关联的数据表中删除列。 如果针对 TableAdapter 的任何附加查询使用 SQL 语句来返回主查询中不存在的列，则设计器将尝试同步主查询与其他查询之间的列更改。
+创建 TableAdapter 时，使用初始查询或存储过程来定义 TableAdapter 的关联 <xref:System.Data.DataTable>的架构。 可以通过调用 TableAdapter 的 `Fill` 方法（填充 TableAdapter 的关联 <xref:System.Data.DataTable>）来运行此初始查询或存储过程。 对 TableAdapter 的主查询所做的任何更改都会反映在关联数据表的架构中。 例如，从主查询中删除列还会从关联的数据表中删除列。 如果针对 TableAdapter 的任何附加查询使用 SQL 语句来返回主查询中不存在的列，则设计器将尝试同步主查询与其他查询之间的列更改。
 
 ## <a name="tableadapter-update-commands"></a>TableAdapter 更新命令
 
-TableAdapter 的更新功能取决于在**Tableadapter 向导**的主查询中提供了多少信息。 例如，配置为从多个表中提取值的 Tableadapter （使用 `JOIN`）、标量值、视图或聚合函数的结果，最初不能将更新发送回底层数据库。 不过，您可以在 "**属性**" 窗口中手动配置 `INSERT`、`UPDATE` 和 `DELETE` 命令。
+TableAdapter 的更新功能取决于在**Tableadapter 向导**的主查询中提供了多少信息。 例如，配置为从多个表中提取值的 Tableadapter （使用 `JOIN`）、标量值、视图或聚合函数的结果，最初不能将更新发送回底层数据库。 不过，您可以在 "**属性**" 窗口中手动配置 `INSERT`、`UPDATE`和 `DELETE` 命令。
 
 ## <a name="tableadapter-queries"></a>TableAdapter 查询
 
@@ -85,7 +85,7 @@ Tableadapter 通过封装配置的 <xref:System.Data.Common.DataAdapter> 类来�
 
 ## <a name="tableadapter-methods-and-properties"></a>TableAdapter 方法和属性
 
-TableAdapter 类不是 .NET 类型。 这意味着不能在文档或**对象浏览器**中查找。 它在设计时使用前面提到的向导之一创建。 根据所使用的表的名称，在创建时分配给 TableAdapter 的名称。 例如，基于名为 `Orders` 的数据库中的表创建 TableAdapter 时，TableAdapter 会命名为 `OrdersTableAdapter`。 可以使用**数据集设计器**中的 "**名称**" 属性更改 TableAdapter 的类名。
+TableAdapter 类不是 .NET 类型。 这意味着不能在文档或**对象浏览器**中查找。 它在设计时使用前面提到的向导之一创建。 根据所使用的表的名称，在创建时分配给 TableAdapter 的名称。 例如，基于名为 `Orders`的数据库中的表创建 TableAdapter 时，TableAdapter 会命名为 `OrdersTableAdapter`。 可以使用**数据集设计器**中的 "**名称**" 属性更改 TableAdapter 的类名。
 
 下面是 Tableadapter 的常用方法和属性：
 
@@ -99,16 +99,16 @@ TableAdapter 类不是 .NET 类型。 这意味着不能在文档或**对象浏�
 
 ## <a name="tableadapter-update-method"></a>TableAdapter 更新方法
 
-Tableadapter 使用数据命令从数据库中读取和写入数据。 使用 TableAdapter 的初始 `Fill` （main）查询作为创建关联数据表的架构的基础，以及与 `TableAdapter.Update` 方法关联的 `InsertCommand`、`UpdateCommand` 和 `DeleteCommand` 命令。 调用 TableAdapter 的 `Update` 方法将运行最初配置 TableAdapter 时创建的语句，而不是使用**TableAdapter 查询配置向导**添加的其他查询之一。
+Tableadapter 使用数据命令从数据库中读取和写入数据。 使用 TableAdapter 的初始 `Fill` （main）查询作为创建关联数据表的架构的基础，以及与 `TableAdapter.Update` 方法关联的 `InsertCommand`、`UpdateCommand`和 `DeleteCommand` 命令。 调用 TableAdapter 的 `Update` 方法将运行最初配置 TableAdapter 时创建的语句，而不是使用**TableAdapter 查询配置向导**添加的其他查询之一。
 
-使用 TableAdapter 时，它会有效地执行与通常会执行的命令相同的操作。 例如，当您调用适配器的 `Fill` 方法时，适配器会在其 `SelectCommand` 属性中运行数据命令，并使用数据读取器（例如 <xref:System.Data.SqlClient.SqlDataReader>）将结果集加载到数据表中。 同样，在调用适配器的 `Update` 方法时，它会为数据表中的每个已更改的记录运行相应的命令（在 `UpdateCommand`、`InsertCommand` 和 `DeleteCommand` 属性中）。
+使用 TableAdapter 时，它会有效地执行与通常会执行的命令相同的操作。 例如，当您调用适配器的 `Fill` 方法时，适配器会在其 `SelectCommand` 属性中运行数据命令，并使用数据读取器（例如 <xref:System.Data.SqlClient.SqlDataReader>）将结果集加载到数据表中。 同样，在调用适配器的 `Update` 方法时，它会为数据表中的每个已更改的记录运行相应的命令（在 `UpdateCommand`、`InsertCommand`和 `DeleteCommand` 属性中）。
 
 > [!NOTE]
-> 如果主查询中有足够的信息，则在生成 TableAdapter 时默认情况下会创建 `InsertCommand`、`UpdateCommand` 和 `DeleteCommand` 命令。 如果 TableAdapter 的主查询多于单个表 `SELECT` 语句，则设计器可能无法生成 `InsertCommand`、`UpdateCommand` 和 `DeleteCommand`。 如果未生成这些命令，则在运行 `TableAdapter.Update` 方法时可能会收到错误。
+> 如果主查询中有足够的信息，则在生成 TableAdapter 时默认情况下会创建 `InsertCommand`、`UpdateCommand`和 `DeleteCommand` 命令。 如果 TableAdapter 的主查询多于单个表 `SELECT` 语句，则设计器可能无法生成 `InsertCommand`、`UpdateCommand`和 `DeleteCommand`。 如果未生成这些命令，则在运行 `TableAdapter.Update` 方法时可能会收到错误。
 
 ## <a name="tableadapter-generatedbdirectmethods"></a>TableAdapter GenerateDbDirectMethods
 
-除了 `InsertCommand`、`UpdateCommand` 和 `DeleteCommand` 外，还会创建 Tableadapter，它具有可直接针对数据库运行的方法。 您可以直接调用这些方法（`TableAdapter.Insert`、`TableAdapter.Update` 和 `TableAdapter.Delete`）来操作数据库中的数据。 这意味着你可以从代码中调用这些单独方法，而不是调用 `TableAdapter.Update` 来处理为关联数据表挂起的插入、更新和删除操作。
+除了 `InsertCommand`、`UpdateCommand`和 `DeleteCommand`外，还会创建 Tableadapter，它具有可直接针对数据库运行的方法。 您可以直接调用这些方法（`TableAdapter.Insert`、`TableAdapter.Update`和 `TableAdapter.Delete`）来操作数据库中的数据。 这意味着你可以从代码中调用这些单独方法，而不是调用 `TableAdapter.Update` 来处理为关联数据表挂起的插入、更新和删除操作。
 
 如果不想创建这些直接方法，请将 TableAdapter 的**GenerateDbDirectMethods**属性设置为 `false` （在 "**属性**" 窗口中）。 添加到 TableAdapter 的其他查询是独立查询，它们不会生成这些方法。
 
@@ -133,10 +133,10 @@ TableAdapterManager 类不是 .NET 类型。 因此，您不能在文档中查�
 |*tableName* `TableAdapter` 属性|表示 TableAdapter。 生成的 TableAdapterManager 包含其管理的每个 `TableAdapter` 的属性。 例如，具有 Customers 和 Orders 表的数据集生成的 TableAdapterManager 包含 `CustomersTableAdapter` 和 `OrdersTableAdapter` 属性。|
 |`UpdateOrder` 属性|控制单个 insert、update 和 delete 命令的顺序。 将此项设置为 `TableAdapterManager.UpdateOrderOption` 枚举中的值之一。<br /><br /> 默认情况下，`UpdateOrder` 设置为**InsertUpdateDelete**。 这意味着对数据集中的所有表执行 insert、update 和 delete 操作。|
 
-## <a name="security"></a>安全
+## <a name="security"></a>安全性
 
-使用 CommandType 属性设置为 <xref:System.Data.CommandType.Text> 的数据命令时，请仔细检查从客户端发送到数据库之前从客户端发送的信息。 恶意用户会设法发送（注入）经过修改或附加的 SQL 语句，企图对数据库进行未经授权的访问或破坏数据库。 将用户输入传输到数据库之前，请始终验证信息是否有效。 最佳做法是尽可能使用参数化查询或存储过程。
+使用 CommandType 属性设置为 <xref:System.Data.CommandType.Text>的数据命令时，请仔细检查从客户端发送到数据库之前从客户端发送的信息。 恶意用户会设法发送（注入）经过修改或附加的 SQL 语句，企图对数据库进行未经授权的访问或破坏数据库。 将用户输入传输到数据库之前，请始终验证信息是否有效。 最佳做法是尽可能使用参数化查询或存储过程。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [数据集工具](../data-tools/dataset-tools-in-visual-studio.md)

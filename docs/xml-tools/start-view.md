@@ -3,17 +3,17 @@ title: XML 架构设计器起始视图
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: f25e7a2f-7469-4279-b2f4-ee2dfd4d3af1
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1978760aba90b884099085c995372f9612be3c8a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f05c3023a246ba193c98cb1b01984a54fdaa0ebb
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72608495"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75592524"
 ---
 # <a name="start-view"></a>起始视图
 
@@ -31,7 +31,7 @@ ms.locfileid: "72608495"
 
 "**架构集详细信息**" 窗格列出全局架构节点类型，并显示架构中每种类型的实例数。 你可以使用节点类型旁边的 "**添加**链接" 向工作区添加新节点。
 
-## <a name="toolbar"></a>Toolbar
+## <a name="toolbar"></a>ToolBar
 
 您可以从 "XML 架构设计器" 工具栏中的 "开始" 视图、"[内容模型视图](../xml-tools/content-model-view.md)" 和 "[图形" 视图](../xml-tools/graph-view.md)之间导航。
 
@@ -41,11 +41,11 @@ ms.locfileid: "72608495"
 
 |选项|描述|
 |-|-----------------|
-|**显示起始视图**|切换到起始视图。 可以使用键盘快捷方式访问此视图： **Ctrl** +**1**。|
-|**显示内容模型视图**|切换到内容模型视图。 可以使用键盘快捷方式访问此视图： **Ctrl** +**2**。|
-|**显示图形视图**|切换到图形视图。 可以使用键盘快捷方式访问此视图： **Ctrl** +**3**。|
+|**显示起始视图**|切换到起始视图。 可以使用键盘快捷方式访问此视图： **Ctrl**+**1**。|
+|**显示内容模型视图**|切换到内容模型视图。 可以使用键盘快捷方式访问此视图： **Ctrl**+**2**。|
+|**显示图形视图**|切换到图形视图。 可以使用键盘快捷方式访问此视图： **Ctrl**+**3**。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [XML 架构资源管理器](../xml-tools/xml-schema-explorer.md)
 - [图形视图](../xml-tools/graph-view.md)

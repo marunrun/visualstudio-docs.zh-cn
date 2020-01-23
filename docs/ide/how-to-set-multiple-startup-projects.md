@@ -11,12 +11,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: be2f782d8dcdbf81ca2446a73ac7f13dea4f2ef9
-ms.sourcegitcommit: 59e5758036223ee866f3de5e3c0ab2b6dbae97b6
+ms.openlocfilehash: 2a1eec02adf0a643d7ac7e0da8a75da5328c601b
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68416770"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76115143"
 ---
 # <a name="how-to-set-multiple-startup-projects"></a>如何：设置多个启动项目
 

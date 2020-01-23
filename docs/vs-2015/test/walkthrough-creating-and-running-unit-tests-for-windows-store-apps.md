@@ -13,12 +13,12 @@ ms.assetid: dd3e8a6a-b366-433e-a409-b9a9b89da89a
 caps.latest.revision: 23
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 60e7ddd7c535d99abcb64d4adde97157b117f3ed
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: f5e62fe83d644b577d7d0a5f87312642f438c490
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74301383"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851175"
 ---
 # <a name="walkthrough-creating-and-running-unit-tests-for-windows-store-apps"></a>演练：为 Windows 应用商店应用程序创建和运行单元测试
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "74301383"
 Visual Studio 支持对托管的 [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] 应用进行单元测试，并包括 Visual C#、Visual Basic 和 Visual C++ 的单元测试库模板。
 
 > [!TIP]
-> 有关开发 [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] 应用的详细信息，请参阅 [Windows 应用商店应用入门](https://go.microsoft.com/fwlink/?LinkID=241410)。
+> 有关开发 [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] 应用的详细信息，请参阅 [Windows 应用商店应用入门](https://msdn.microsoft.com/windows/apps/br211386.aspx)。
 
  Visual Studio 提供以下单元测试功能：
 
@@ -96,7 +96,7 @@ Visual Studio 支持对托管的 [!INCLUDE[win8_appname_long](../includes/win8-a
 
 1. 在“代码编辑器”中，编辑单元测试并添加测试所需的断言和逻辑。
 
-     有关详细信息，请参阅 MSDN Library 中的 [使用 Assert 类](https://go.microsoft.com/fwlink/?LinkID=224991) 。
+     有关详细信息，请参阅 MSDN Library 中的 [使用 Assert 类](https://msdn.microsoft.com/library/ms182530.aspx) 。
 
 ## <a name="CreateAndRunUnitTestWin8Tailored_Run"></a> 运行单元测试
 
@@ -136,16 +136,16 @@ Visual Studio 支持对托管的 [!INCLUDE[win8_appname_long](../includes/win8-a
 
      ![单元测试资源&#45;管理器测试已完成](../test/media/unit-test-win8-unittestexplorer-done.png "Unit_Test_Win8_UnitTestExplorer_Done")
 
-## <a name="external-resources"></a>外部资源
+## <a name="external-resources"></a>外部資源
 
 ### <a name="videos"></a>视频
- [第 9 频道：对使用 XAML 编写的 Windows 应用商店应用进行单元测试](https://go.microsoft.com/fwlink/?LinkId=226285)
+ [第 9 频道：对使用 XAML 编写的 Windows 应用商店应用进行单元测试](https://channel9.msdn.com/Events/BUILD/BUILD2011/TOOL-529T)
 
 ### <a name="forums"></a>论坛
- [Visual Studio 单元测试](https://go.microsoft.com/fwlink/?LinkId=224477)
+ [Visual Studio 单元测试](https://social.msdn.microsoft.com/Forums/en/vsunittest/threads)
 
 ### <a name="msdn-library"></a>MSDN Library
- [MSDN 库 - 为现有代码创建和运行单元测试 (Visual Studio 2010)](https://go.microsoft.com/fwlink/?LinkID=223683)
+ [MSDN 库 - 为现有代码创建和运行单元测试 (Visual Studio 2010)](https://msdn.microsoft.com/library/hh270865(v=vs.110).aspx)
 
 ## <a name="see-also"></a>请参阅
  使用[Visual Studio](../test/testing-store-apps-with-visual-studio.md) [生成和测试应用商店应用使用 Team Foundation build 生成和测试 Windows 应用商店应用](https://msdn.microsoft.com/library/d0ca17bb-deae-4f3d-a18d-1a99bebceaa9)

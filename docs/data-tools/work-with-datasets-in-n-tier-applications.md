@@ -14,17 +14,17 @@ helpviewer_keywords:
 - typed datasets, n-tier applications
 - multiple tier applications
 ms.assetid: f6ae2ee0-ea5f-4a79-8f4b-e21c115afb20
-author: jillre
-ms.author: jillfra
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: b96f2e51048216388eea50935a1ced536d8d230b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c7532bed6a7d43c24d698870723d2265fc2b176f
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648031"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75585920"
 ---
 # <a name="work-with-datasets-in-n-tier-applications"></a>在 n 层应用程序中使用数据集
 
@@ -34,12 +34,12 @@ ms.locfileid: "72648031"
 
 使用类型化数据集的 N 层支持，可以将应用程序体系结构迭代开发到 n 层设计。它还消除了将代码手动分隔到多个项目中的要求。 使用**数据集设计器**开始设计数据层。 如果已准备好对应用程序体系结构采用 n 层设计，请设置数据集的“数据集项目”属性，以在另一个项目中生成数据集类。
 
-## <a name="reference"></a>参考
+## <a name="reference"></a>引用
 
 - <xref:System.Data.DataSet>
 - <xref:System.Data.TypedTableBase%601>
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [N 层数据应用程序概述](../data-tools/n-tier-data-applications-overview.md)
 - [演练：创建 n 层数据应用程序](../data-tools/walkthrough-creating-an-n-tier-data-application.md)

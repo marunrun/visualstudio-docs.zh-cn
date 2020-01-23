@@ -11,12 +11,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 1786c8c57c841744ed27b03e4969fe2bd21ce2c7
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 03a0eb6808b2298e0727492978d9beb7cfaf2216
+ms.sourcegitcommit: 0d8488329263cc0743a89d43f6de863028e982ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985197"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75678956"
 ---
 # <a name="step-2-create-a-flask-app-with-views-and-page-templates"></a>步骤 2：使用视图和页面模板创建 Flask 应用
 
@@ -204,10 +204,6 @@ ms.locfileid: "72985197"
 答：页面模板文件的 .html 扩展名是完全可选的，因为你始终可以识别出 `render_template` 函数第一个参数中文件的确切相对路径  。 然而，Visual Studio（和其他编辑器）通常会在 .html 文件中提供代码完成和语法着色等功能，这比页面模板不是严格的 HTML 更重要  。
 
 实际上，在使用 Flask 项目时，Visual Studio 会自动检测到你正在编辑的 HTML 文件实际上是 Flask 模板，并提供某些自动完成功能。 例如，在开始键入 Flask 页面模板注释 `{#` 时，Visual Studio 会自动提供右边的 `#}` 字符。 “注释选定内容”  和“取消注释选定内容”  命令（在“编辑”   > “高级”  菜单上和工具栏上）也使用模板注释，而不是 HTML 注释。
-
-### <a name="question-when-i-run-the-project-i-see-an-error-that-the-template-cannot-be-found-whats-wrong"></a>问：运行项目时发生了一个错误：找不到模板。 为什么会这样？
-
-答：如果看到无法找到模板的错误，请确保已将应用添加到 Flask 项目 `INSTALLED_APPS` 列表的 settings.py 中  。 如果没有该条目，Flask 将不知道在应用的 templates 文件夹中查找  。
 
 ### <a name="question-can-templates-be-organized-into-further-subfolders"></a>问：模板是否可以整理到下级子文件夹中？
 

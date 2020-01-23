@@ -14,17 +14,17 @@ helpviewer_keywords:
 - MSBuild, tasks
 - MSBuild, dependency diagrams
 - MSBuild, validating code
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9fc852b4d5003cf809248c72ca3ac42ad3a6bf23
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 36320daf91380d0b04333b228a1d4b9d58c6693c
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72981133"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594014"
 ---
 # <a name="validate-code-with-dependency-diagrams"></a>使用依赖项关系图验证代码
 
@@ -218,7 +218,7 @@ ms.locfileid: "72981133"
 
 |**语法**|**描述**|
 |-|-|
-|*ArtifactN*（*ArtifactTypeN*）|*ArtifactN*是与依赖关系图上的层关联的项目。<br /><br /> *ArtifactTypeN*是*ArtifactN*的类型，例如**类**或**方法**，例如：<br /><br /> MySolution.MyProject.MyClass.MyMethod(Method)|
+|*ArtifactN*(*ArtifactTypeN*)|*ArtifactN*是与依赖关系图上的层关联的项目。<br /><br /> *ArtifactTypeN*是*ArtifactN*的类型，例如**类**或**方法**，例如：<br /><br /> MySolution.MyProject.MyClass.MyMethod(Method)|
 |*NamespaceNameN*|命名空间的名称。|
 |*LayerNameN*|依赖关系图层的名称。|
 |*DependencyType*|*Artifact1*和*Artifact2*之间的依赖关系的类型。 例如， *Artifact1*具有与*Artifact2*的**调用**关系。|
@@ -229,10 +229,12 @@ ms.locfileid: "72981133"
 | DV1001：**无效的命名空间名称** | 此问题将在与 "允许的命名空间名称" 属性不包含定义此代码元素的命名空间的层关联的代码元素上报告。 这是一个命名约束冲突。 请注意，"允许的命名空间名称" 的语法应为命名空间的分号列表，在这些命名空间中，将允许定义与关联的代码元素。 |
 | DV1002：**依赖不可引用命名空间** | 此问题在与层关联的代码元素上报告，并引用在层的 "不可引用 Namespace" 属性中定义的命名空间中定义的另一个代码元素。 这是一个命名约束冲突。 请注意，"不可引用命名空间" 属性定义为不应在与此层关联的代码元素中引用的以分号分隔的命名空间列表。 |
 | DV1003：不**允许的命名空间名称** | 此问题将在与 "不允许的命名空间名称" 属性包含定义此代码元素的命名空间的层关联的代码元素上报告。 这是一个命名约束冲突。 请注意，"不允许的命名空间名称" 属性定义为分号分隔的命名空间列表，其中不应定义与此层关联的代码元素。 |
+| DV2001：**层关系图存在** | 此问题在不包含依赖关系关系图文件的项目上报告，但引用依赖项验证分析器。 如果未使用依赖项验证，则可以直接从解决方案资源管理器中移除 "DependencyValidation" 或取消显示此警告。 若要添加依赖关系图，请参阅[从代码创建依赖项关系](../modeling/create-layer-diagrams-from-your-code.md)图。 |
+| DV2002：未**映射的类型基** | 当代码元素未映射到任何层时，会报告此问题。 |
 | DV3001：**缺少链接** | 层 "*LayerName*" 链接到了找不到的 "*项目*"。 是否缺少程序集引用? |
 | DV9001：**体系结构分析找到内部错误** | 结果可能不完整。 有关详细信息，请参阅详细的生成事件日志或输出窗口。 |
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Studio 中的实时依赖项验证](https://devblogs.microsoft.com/devops/live-dependency-validation-in-visual-studio-2017/)
 - [在开发过程中验证系统](../modeling/validate-your-system-during-development.md)

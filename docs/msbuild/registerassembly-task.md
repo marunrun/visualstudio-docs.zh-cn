@@ -13,17 +13,17 @@ helpviewer_keywords:
 - MSBuild, RegisterAssembly task
 - RegisterAssembly task [MSBuild]
 ms.assetid: ba5f19ac-6764-4d28-9b79-a86de58f8987
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 488ae44a89c203b70e6c8e635d99eb699349156e
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.openlocfilehash: 57031bd49a67e1961b5413a59f66562cc9c1b883
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66747326"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75596783"
 ---
 # <a name="registerassembly-task"></a>RegisterAssembly 任务
 读取指定程序集中的元数据，并将所需项添加到注册表中，使 COM 客户端可以透明方式创建 .NET Framework 类。 此任务的行为与 [Regasm.exe（程序集注册工具）](/dotnet/framework/tools/regasm-exe-assembly-registration-tool)的行为类似，但不完全相同。
@@ -31,7 +31,7 @@ ms.locfileid: "66747326"
 ## <a name="parameters"></a>参数
  下表描述了 `RegisterAssembly` 任务的参数。
 
-|参数|说明|
+|参数|描述|
 |---------------|-----------------|
 |`Assemblies`|必选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 指定要向 COM 注册的程序集。|
 |`AssemblyListFile`|可选 <xref:Microsoft.Build.Framework.ITaskItem> 参数。<br /><br /> 包含 `RegisterAssembly` 任务和 [UnregisterAssembly](../msbuild/unregisterassembly-task.md) 任务之间的状态信息。 此信息可以防止 `UnregisterAssembly` 任务尝试注销无法在 `RegisterAssembly` 任务中注册的程序集。|

@@ -11,12 +11,12 @@ caps.latest.revision: 15
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 5979363f16f2e9d78a2f50ffbb6511d03146caaa
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 6e4f239c5be290f6d79f52f55dbcb6da60d10785
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74297852"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851705"
 ---
 # <a name="options-text-editor-cc-experimental"></a>选项, 文本编辑器, C/C++, 实验
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "74297852"
  这些功能在 Visual Studio 2015 Update 1 RC 安装中可用。
 
 > [!NOTE]
-> 以下说明中的某些 Visual Studio 用户界面元素在计算机上出现的名称或位置可能会不同。 这些元素取决于你所使用的 Visual Studio 版本和你所使用的设置。 请参阅[在 Visual Studio 中自定义开发设置](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。
+> 以下说明中的某些 Visual Studio 用户界面元素在计算机上出现的名称或位置可能会不同。 这些元素取决于你所使用的 Visual Studio 版本和你所使用的设置。 请参阅 [在 Visual Studio 中自定义开发设置](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。
 
 ## <a name="browsingnavigation"></a>浏览/导航
  **启用新数据库引擎**这应该会自动提高数据库填充速度，并使所有数据库操作更快（不损失准确性）执行操作（例如，"**转向定义**" 和 "**查找所有引用**"）的速度。 （只需关闭并重新打开你的解决方案即可应用所做的更改；不需要重新启动 Visual Studio。）
@@ -46,7 +46,7 @@ ms.locfileid: "74297852"
 
  **启用展开优先级**如果启用，则可以通过在文本编辑器中键入 ' （' 来包围选定文本和括号。
 
- 有关 Visual Studio 库上的其他文本编辑器功能，请参阅 [此处](https://go.microsoft.com/fwlink/?LinkId=692016)列表。 一个示例是 [C++ 快速修补](https://visualstudiogallery.msdn.microsoft.com/be91feef-8dc3-4f7a-ac9f-f34e7ca5918f)，它支持以下内容：
+ 有关 Visual Studio 库上的其他文本编辑器功能，请参阅 [此处](https://marketplace.visualstudio.com/)列表。 一个示例是 [C++ 快速修补](https://visualstudiogallery.msdn.microsoft.com/be91feef-8dc3-4f7a-ac9f-f34e7ca5918f)，它支持以下内容：
 
 - **添加缺少的 #include** - 建议对你代码中的未知符号使用相关的 #include
 

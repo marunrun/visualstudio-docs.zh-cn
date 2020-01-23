@@ -8,17 +8,17 @@ helpviewer_keywords:
 - project properties, modifying
 - Hello World example [Visual Studio]
 ms.assetid: d14f1212-ddd9-434f-b138-f840011b0fb2
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8cb678a05b9301982b4842d272c3032cafa46a87
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b196ae92b7388e8b9f4e1cee60a62b3839a9c120
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62977335"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75585227"
 ---
 # <a name="how-to-build-the-same-source-files-with-different-options"></a>如何：使用不同选项生成相同的源文件
 在生成项目时，你经常使用不同的生成选项编译相同的组件。 例如，你可以使用符号信息创建调试版本，或者使用无符号信息但启用优化来创建发布版本。 或者，可以生成项目，在某个特定平台（例如，x86 或[!INCLUDE[vcprx64](../extensibility/internals/includes/vcprx64_md.md)]）上运行。 在所有这些情况下，大部分生成选项保持不变；只更改几个选项以控制生成配置。 利用 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]，你可以使用属性和条件来创建不同的生成配置。
@@ -48,11 +48,11 @@ ms.locfileid: "62977335"
   ```
 
 ## <a name="specify-properties-on-the-command-line"></a>在命令行上指定属性
-你的项目文件编写为接受多个配置后，你需要能够在生成项目时更改这些配置。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 可以提供此功能，具体是通过允许使用 -property 或 -p 开关在命令行中指定属性。
+你的项目文件编写为接受多个配置后，你需要能够在生成项目时更改这些配置。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 可以提供此功能，具体是通过允许使用 -property  或 -p  开关在命令行中指定属性。
 
 #### <a name="to-set-a-project-property-at-the-command-line"></a>在命令行中设置项目属性
 
-- 结合使用 -property 开关与属性和属性值。 例如:
+- 结合使用 -property  开关与属性和属性值。 例如：
 
   ```cmd
   msbuild file.proj -property:Flavor=Debug
@@ -66,7 +66,7 @@ ms.locfileid: "62977335"
 
 #### <a name="to-specify-more-than-one-project-property-at-the-command-line"></a>在命令行上指定多个项目属性
 
-- 多次结合使用 -property 或 -p 开关与属性和属性值，或使用一个 -property 或 -p 开关，并使用分号 (;) 分隔多个属性。 例如:
+- 多次结合使用 -property  或 -p  开关与属性和属性值，或使用一个 -property  或 -p  开关，并使用分号 (;) 分隔多个属性。 例如：
 
   ```cmd
   msbuild file.proj -p:Flavor=Debug;Platform=x86

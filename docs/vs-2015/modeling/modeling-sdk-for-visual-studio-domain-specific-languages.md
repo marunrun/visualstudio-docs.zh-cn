@@ -12,12 +12,12 @@ caps.latest.revision: 79
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 505c17635c80a165a7a094d3ce2bec3c32bd7101
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 4907838720e3a68614e4b9774eb2d7e9fb42ff20
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74297686"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75916543"
 ---
 # <a name="modeling-sdk-for-visual-studio---domain-specific-languages"></a>Visual Studio 的建模 SDK - 特定于域的语言
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -43,9 +43,7 @@ ms.locfileid: "74297686"
 ## <a name="samples-and-the-latest-information"></a>示例和最新信息
  [下载适用于 Visual Studio 2015 的建模 SDK](https://www.microsoft.com/download/details.aspx?id=48148)
 
- 适用于 Visual Studio 的建模 SDK 的[示例](https://go.microsoft.com/fwlink/?LinkId=186128)。
-
- 有关高级技巧和故障排除的指导，请访问[Visual STUDIO DSL & 建模工具扩展性论坛](https://go.microsoft.com/fwlink/?LinkID=186074)。
+ 高级的技术和故障排除指导，请访问[Visual Studio DSL 和建模工具扩展性论坛](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=dslvsarchx)。
 
 ## <a name="in-this-section"></a>本节内容
  [域特定语言入门](../modeling/getting-started-with-domain-specific-languages.md)

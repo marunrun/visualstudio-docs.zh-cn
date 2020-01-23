@@ -9,17 +9,17 @@ helpviewer_keywords:
 - install packages
 - managing extensions visual studio
 ms.assetid: 4ca92d93-31b9-47ef-8109-4a429d9e2ca3
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 92fe7d47a74112fb804770cca356084fa79fe1e4
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f016af58b5799ca37b1a8f0cc54366d639c57c03
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72654217"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594404"
 ---
 # <a name="manage-extensions-for-visual-studio"></a>管理 Visual Studio 的扩展
 
@@ -182,13 +182,13 @@ Visual Studio Marketplace 中有可用的新版本时，将自动更新扩展。
 
 ::: moniker range="vs-2017"
 
-你可以使用“工具”>“扩展和更新”对话框来执行这些与示例相关的任务   ：
+你可以使用“工具”  >“扩展和更新”  对话框来执行这些与示例相关的任务：
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-你可以使用“扩展”>“管理扩展”对话框来执行这些与示例相关的任务   ：
+你可以使用“扩展”  >“管理扩展”  对话框来执行这些与示例相关的任务：
 
 ::: moniker-end
 

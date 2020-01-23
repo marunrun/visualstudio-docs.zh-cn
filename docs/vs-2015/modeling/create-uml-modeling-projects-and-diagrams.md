@@ -25,12 +25,12 @@ caps.latest.revision: 50
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: d5884dcd3f9e3cb8f1910d2e23ec80f910ed2fc9
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 52c55b2cfdf000d91a83071b53e8e9450187b720
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74301003"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75852022"
 ---
 # <a name="create-uml-modeling-projects-and-diagrams"></a>创建 UML 建模项目和关系图
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -40,7 +40,7 @@ UML 模型的有助于你了解、讨论和设计软件系统。 Visual Studio �
  UML 建模图和层关系图只可以存在于建模项目内。 每个建模项目包含一个共享的 UML 模型和几个 UML 关系图。 每个关系图是模型的部分视图。 UML 模型包含在 UML 关系图上的所有元素，并可以使用 UML 模型资源管理器来查看。 有关模型及其与关系图的关系的信息，请参阅[编辑 UML 模型和关系图](../modeling/edit-uml-models-and-diagrams.md)。 有关版本控制下的建模项目的信息，请参阅[管理版本控制下的模型和关系图](../modeling/manage-models-and-diagrams-under-version-control.md)并[构建建模解决方案](../modeling/structure-your-modeling-solution.md)
 
 > [!NOTE]
-> 还有另一种关系图，即 .NET 类关系图，它用于可视化程序代码。 有关详细信息，请参阅[设计和查看类和类型](https://go.microsoft.com/fwlink/?LinkId=142231)。
+> 还有另一种关系图，即 .NET 类关系图，它用于可视化程序代码。 有关详细信息，请参阅[设计和查看类和类型](https://msdn.microsoft.com/library/ab7aty24.aspx)。
 
 ## <a name="CreatingModelingDiagrams"></a>在建模项目中创建关系图
  若要查看支持此功能的 Visual Studio 的版本，请参阅 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)。
@@ -129,7 +129,7 @@ UML 模型的有助于你了解、讨论和设计软件系统。 Visual Studio �
     > [!NOTE]
     > 建模项目包含一个名为**ModelDefinition**的模型定义文件夹。
 
-2. 在 "**项目**" 菜单上，单击 "**添加现有项**"。
+2. 在“项目”菜单上，单击“添加现有项”。
 
 3. 在 "**添加现有项**" 对话框中，找到该关系图文件，选择该文件，然后单击 "**添加**"。
 
@@ -153,7 +153,7 @@ UML 模型的有助于你了解、讨论和设计软件系统。 Visual Studio �
 |**问题**|**导致**|**解决方法**|
 |---------------|----------------|--------------------|
 |建模项目无法打开或加载到解决方案中。<br /><br /> 显示以下消息：<br /><br /> “解决方案中的一个或多个项目未能正确加载。 请参阅输出窗口获取有关的详细信息。”<br /><br /> 输出窗口将显示以下消息：<br /><br /> "*ModelingProjectFilenameAndPath*： .modelproj：错误：无法识别的 Guid 格式。"|建模项目引用的项目名称相同，而且在相同的解决方案中。<br /><br /> 例如，一个层链接到名称相同的项目中，而且它们在相同的解决方案中。|使用文本编辑器打开建模项目文件并删除引用，然后尝试再次打开该建模项目。<br /><br /> 若要避免此问题，不要添加对具有相同名称的项目的引用。 请确保项目具有唯一的名称。|
-|元素从添加、复制或拖放到其他建模项目或解决方案中其他位置的关系图中丢失。<br /><br /> - 或 -<br /><br /> 当你尝试打开关系图时，将显示以下消息：<br /><br /> -缺少关系图上的某些形状或连接符，因为此项目中不存在其定义。 关系图关闭时定义已从模型中删除，或关系图被复制到另一个不包含这些定义的项目中。”<br /><br /> - 或 -<br /><br /> -"此文档由另一个项目打开。"|关系图文件或从建模项目添加、拖动或复制到另一个建模项目或解决方案中的另一个位置。|若要复制一个关系图文件，请创建一个新的关系图，然后将源关系图中的元素复制到新关系图中。|
+|元素从添加、复制或拖放到其他建模项目或解决方案中其他位置的关系图中丢失。<br /><br /> -或者-<br /><br /> 当你尝试打开关系图时，将显示以下消息：<br /><br /> -缺少关系图上的某些形状或连接符，因为此项目中不存在其定义。 关系图关闭时定义已从模型中删除，或关系图被复制到另一个不包含这些定义的项目中。”<br /><br /> -或者-<br /><br /> -"此文档由另一个项目打开。"|关系图文件或从建模项目添加、拖动或复制到另一个建模项目或解决方案中的另一个位置。|若要复制一个关系图文件，请创建一个新的关系图，然后将源关系图中的元素复制到新关系图中。|
 
 ## <a name="see-also"></a>请参阅
  [编辑 UML 模型和关系图](../modeling/edit-uml-models-and-diagrams.md)[构建建模解决方案](../modeling/structure-your-modeling-solution.md)

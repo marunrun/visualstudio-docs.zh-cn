@@ -11,17 +11,17 @@ helpviewer_keywords:
 - MSBuild, XslTransformation task
 - XslTransformation task [MSBuild]
 ms.assetid: 6f3a7d81-3ae3-4703-9a06-870b32b69d80
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8330cb006143244458c9da0f3e76060275607fa5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 90b56d3b36545ecfe97015fc301ce3ce72e781ba
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62777598"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75588364"
 ---
 # <a name="xsltransformation-task"></a>XslTransformation 任务
 通过使用 XSLT 或编译的 XSLT 转换 XML 输入并输出到输出设备或文件。
@@ -29,7 +29,7 @@ ms.locfileid: "62777598"
 ## <a name="parameters"></a>参数
  下表描述了 `XslTransformation` 任务的参数。
 
-|参数|说明|
+|参数|描述|
 |---------------|-----------------|
 |`OutputPaths`|必选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 指定 XML 转换的输出文件。|
 |`Parameters`|可选 `String` 参数。<br /><br /> 指定 XSLT 输入文档的参数。|

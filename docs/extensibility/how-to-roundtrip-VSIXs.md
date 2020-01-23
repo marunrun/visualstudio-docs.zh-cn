@@ -8,18 +8,18 @@ ms.author: madsk
 manager: justinclareburt
 ms.workload:
 - willbrown
-ms.openlocfilehash: 44b5c5c58c46017730f06142548505c628894a11
-ms.sourcegitcommit: b04c603ce73b993d042ebdf7f3722cf4fe2ef7f4
+ms.openlocfilehash: d6de945e7221d2239e1b4f00185a5b16c04b717d
+ms.sourcegitcommit: e3c3d2b185b689c5e32ab4e595abc1ac60b6b9a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74316490"
+ms.lasthandoff: 01/18/2020
+ms.locfileid: "76269067"
 ---
-# <a name="how-to-make-extensions-compatible-with-visual-studio-2017-and-visual-studio-2015"></a>如何：使扩展与 Visual Studio 2017 和 Visual Studio 2015 兼容
+# <a name="how-to-make-extensions-compatible-with-visual-studio-20192017-and-visual-studio-2015"></a>如何：使扩展与 Visual Studio 2019/2017 和 Visual Studio 2015 兼容
 
-本文档介绍如何在 Visual Studio 2015 和 Visual Studio 2017 之间进行扩展。 完成此升级后，项目将能够在 Visual Studio 2015 和 Visual Studio 2017 中打开、生成、安装和运行。 作为参考，可以在[VS SDK 扩展性示例](https://github.com/Microsoft/VSSDK-Extensibility-Samples)中找到可以在 visual studio 2015 和 visual studio 2017 之间往返的一些扩展。
+本文档介绍如何在 Visual Studio 2015 和 Visual Studio 2019 或 Visual studio 2017 之间进行扩展。 完成此升级后，项目将能够在 Visual Studio 2015 和 Visual Studio 2019 或2017中打开、生成、安装和运行。 作为参考，可以在[VS SDK 扩展性示例](https://github.com/Microsoft/VSSDK-Extensibility-Samples)中找到可以在 visual studio 2015 和 visual studio 2019 或2017之间往返的一些扩展。
 
-如果只打算在 Visual Studio 2017 中生成，但希望输出 VSIX 在 Visual Studio 2015 和 Visual Studio 2017 中运行，请参阅[扩展迁移文档](how-to-migrate-extensibility-projects-to-visual-studio-2017.md)。
+如果只打算在 Visual Studio 2019/2017 中生成，但希望输出 VSIX 在 Visual Studio 2015 和 Visual Studio 2019/2017 中运行，请参阅[扩展迁移文档](how-to-migrate-extensibility-projects-to-visual-studio-2017.md)。
 
 > [!NOTE]
 > 由于 Visual Studio 在版本之间发生了更改，因此在一个版本中使用的某些功能在另一个版本中不起作用。 确保你尝试访问的功能在两个版本中均可用，或者扩展将产生意外的结果。
@@ -43,11 +43,11 @@ ms.locfileid: "74316490"
 本文档假定计算机上已安装以下各项：
 
 * 安装了 VS SDK 的 Visual Studio 2015
-* 安装了扩展性工作负载的 Visual Studio 2017
+* 安装了扩展性工作负载的 Visual Studio 2019 或2017
 
 ## <a name="recommended-approach"></a>推荐的方法
 
-强烈建议使用 Visual Studio 2015 （而不是 Visual Studio 2017）开始这一升级。 在 Visual Studio 2015 中进行开发的主要好处是确保不引用 Visual Studio 2015 中没有的程序集。 如果你在 Visual Studio 2017 中进行开发，则你可能会在仅存在于 Visual Studio 2017 中的程序集上引入依赖关系。
+强烈建议使用 Visual Studio 2015 而不是 Visual Studio 2019 或2017开始此次升级。 在 Visual Studio 2015 中进行开发的主要好处是确保不引用 Visual Studio 2015 中没有的程序集。 如果你在 Visual Studio 2019 或2017中进行开发，则你可能会在仅存在于 Visual Studio 2019 或2017中的程序集上引入依赖关系。
 
 ## <a name="ensure-there-is-no-reference-to-projectjson"></a>确保不存在对项目 json 的引用
 
@@ -67,12 +67,12 @@ ms.locfileid: "74316490"
 
 我们需要确保添加使我们能够相应地生成和调试的生成工具。 Microsoft 为此名为 VisualStudio 的程序集创建了一个程序集。
 
-若要在 Visual Studio 2015 和2017中生成和部署 VSIXv3，你将需要以下 NuGet 包：
+若要在 Visual Studio 2015 和2019/2017 中生成和部署 VSIXv3，你将需要以下 NuGet 包：
 
-版本 | 构建的工具
+{2&gt;版本&lt;2} | 构建的工具
 --- | ---
 Visual Studio 2015 | Microsoft.VisualStudio.Sdk.BuildTasks.14.0
-Visual Studio 2017 | Microsoft.VSSDK.BuildTool
+Visual Studio 2019 或2017 | Microsoft.VSSDK.BuildTool
 
 为此，请执行以下操作：
 
@@ -109,10 +109,10 @@ Visual Studio 2017 | Microsoft.VSSDK.BuildTool
 </Prerequisites>
 ```
 
-* 保存并关闭该文件。
+* 保存并关闭文件。
 
 > [!NOTE]
-> 你可能需要手动编辑必备版本，以确保它与所有版本的 Visual Studio 2017 兼容。 这是因为设计器将插入最小版本作为 Visual Studio 的当前版本（例如，15.0.26208.0）。 但是，因为其他用户可能有较早的版本，你需要手动将其编辑为15.0。
+> 你可能需要手动编辑必备版本，以确保它与所有版本的 Visual Studio 2019 或2017兼容。 这是因为设计器将插入最小版本作为 Visual Studio 的当前版本（例如，15.0.26208.0）。 但是，因为其他用户可能有较早的版本，你需要手动将其编辑为15.0。
 
 此时，清单文件应如下所示：
 
@@ -165,7 +165,7 @@ Visual Studio 2017 | Microsoft.VSSDK.BuildTool
 
 * 将其他条件语句添加到具有 VSSDK 引用的 `<import>` 标记。 在 condition 语句的前面插入 `'$(VisualStudioVersion)' != '14.0' And`。 这些语句将显示在 .csproj 文件的页眉和页脚中。
 
-例如:
+例如：
 
 ```xml
 <Import Project="packages\Microsoft.VSSDK.BuildTools.15.0.26201…" Condition="'$(VisualStudioVersion)' != '14.0' And Exists(…" />
@@ -173,7 +173,7 @@ Visual Studio 2017 | Microsoft.VSSDK.BuildTool
 
 * 将其他条件语句添加到具有 VisualStudio 的 `<import>` 标记中。 在 condition 语句的前面插入 `'$(VisualStudioVersion)' == '14.0' And`。 这些语句将显示在 .csproj 文件的页眉和页脚中。
 
-例如:
+例如：
 
 ```xml
 <Import Project="packages\Microsoft.VisualStudio.Sdk.BuildTasks.14.0.14.0…" Condition="'$(VisualStudioVersion)' == '14.0' And Exists(…" />
@@ -181,7 +181,7 @@ Visual Studio 2017 | Microsoft.VSSDK.BuildTool
 
 * 将其他条件语句添加到具有 VSSDK 引用的 `<Error>` 标记。 为此，请在 condition 语句的前面插入 `'$(VisualStudioVersion)' != '14.0' And`。 这些语句将显示在 .csproj 文件的页脚中。
 
-例如:
+例如：
 
 ```xml
 <Error Condition="'$(VisualStudioVersion)' != '14.0' And Exists('packages\Microsoft.VSSDK.BuildTools.15.0.26201…" />
@@ -189,23 +189,24 @@ Visual Studio 2017 | Microsoft.VSSDK.BuildTool
 
 * 将其他条件语句添加到具有 VisualStudio 的 `<Error>` 标记中。 在 condition 语句的前面插入 `'$(VisualStudioVersion)' == '14.0' And`。 这些语句将显示在 .csproj 文件的页脚中。
 
-例如:
+例如：
 
 ```xml
 <Error Condition="'$(VisualStudioVersion)' == '14.0' And Exists('packages\Microsoft.VisualStudio.Sdk.BuildTasks.14.0.14.0…" />
 ```
 
-* 保存 .csproj 文件并将其关闭。
+* 保存 .csproj 文件并将其关闭。 
+  * 请注意，如果您在解决方案中使用多个项目，请使用项目上下文菜单上的 "设置为启动项目" 将此项目设置为启动项目。 这可确保在卸载此项目后，Visual Studio 将重新打开它。
 
-## <a name="test-the-extension-installs-in-visual-studio-2015-and-visual-studio-2017"></a>测试在 Visual Studio 2015 和 Visual Studio 2017 中安装的扩展
+## <a name="test-the-extension-installs-in-visual-studio-2015-and-visual-studio-2019-or-2017"></a>测试在 Visual Studio 2015 和 Visual Studio 2019 或2017中安装的扩展
 
 此时，你的项目应准备好生成可在 Visual Studio 2015 和 Visual Studio 2017 上安装的 VSIXv3。
 
 * 在 Visual Studio 2015 中打开你的项目。
 * 生成项目，并在输出中确认 VSIX 生成正确。
 * 导航到项目目录。
-* 打开 *\bin\Debug*文件夹。
-* 双击 VSIX 文件，并在 Visual Studio 2015 和 Visual Studio 2017 上安装扩展。
+* 打开 *\bin\Debug* 文件夹。
+* 双击 VSIX 文件，并在 Visual Studio 2015 和 Visual Studio 2019/2017 上安装扩展。
 * 请确保在 "**已安装**" 部分中的 "**工具**" > "**扩展和更新**" 中可以看到该扩展。
 * 尝试运行/使用该扩展来检查它是否正常工作。
 

@@ -4,16 +4,16 @@ ms.date: 03/07/2017
 ms.topic: conceptual
 helpviewer_keywords:
 - Live Unit Testing
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 ms.workload:
 - dotnet
-ms.openlocfilehash: b5974819e9dca064655cf04eec3dd371f09ee15c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 1e1a0ec1fd6f2fbdf4f016b1d22db5a6929b5e24
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653006"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75851435"
 ---
 # <a name="how-to-configure-and-use-live-unit-testing"></a>如何配置和使用 Live Unit Testing
 
@@ -79,7 +79,7 @@ Live Unit Testing 适用于下表中列出的三个常用的单元测试框架�
 
 ## <a name="start-pause-and-stop"></a>启动、暂停和停止
 
-若要启用 Live Unit Testing，请从顶级 Visual Studio 菜单中依次选择“测试” > “Live Unit Testing” > “启动”    。 启用 Live Unit Testing 后，“Live Unit Testing”  菜单上的可用选项从一个“开始”  项变为“暂停”  、“停止”  和“重置清理”  ：
+若要启用 Live Unit Testing，请从顶级 Visual Studio 菜单中依次选择“测试” > “Live Unit Testing” > “启动”    。 启用 Live Unit Testing 后，“Live Unit Testing”  菜单上的可用选项从单项的“开始”  变为“暂停”  和“停止”  ：
 
 - **暂停**：可临时挂起 Live Unit Testing。
 
@@ -87,10 +87,8 @@ Live Unit Testing 适用于下表中列出的三个常用的单元测试框架�
 
 - **停止**：可完全停止 Live Unit Testing。 Live Unit Testing 将放弃已收集的所有数据。
 
-- **重置清理**：可停止 Live Unit Testing、删除持久化数据，然后重启 Live Unit Testing。
-
 > [!NOTE]
-> 如果在不包含单元测试项目的解决方案中启动 Live Unit Testing，“Live Unit Testing”菜单上会显示“暂停”、“停止”和“重置清理”选项，但 Live Unit Testing 不会启动     。 “输出”窗口显示以“此解决方案没有引用受支持的测试适配器...”开头的消息  。
+> 如果在不包含单元测试项目的解决方案中启动 Live Unit Testing，“Live Unit Testing”  菜单上会显示“暂停”  和“停止”  选项，但 Live Unit Testing 不会启动。 “输出”窗口显示以“此解决方案没有引用受支持的测试适配器...”开头的消息  。
 
 在任何时候，都可以临时暂停或完全停止 Live Unit Testing。 例如，当你正在重构且知道测试将停止一段时间时，你可能想要执行此操作。
 
@@ -156,7 +154,7 @@ Live Unit Testing 自动运行、更新测试结果与通过“测试资源管�
 如果你的解决方案包含 10 个或更多项目，则在以下情况下时，Visual Studio 会显示以下对话框：
 
 - 启动 Live Unit Testing，并且没有持久化数据
-- 选择“测试”   > “Live Unit Testing”   > “重置清理” 
+- 选择“工具”   > “选项”   > “Live Unit Testing”   > “删除持久化数据” 
 
 ![大型项目的“Live Unit Testing”对话框](media/lut-large-project.png)
 
@@ -200,6 +198,6 @@ Live Unit Testing 自动运行、更新测试结果与通过“测试资源管�
 ## <a name="see-also"></a>请参阅
 
 - [代码测试工具](https://visualstudio.microsoft.com/vs/testing-tools/)
-- [Live Unit Testing 博客](https://go.microsoft.com/fwlink/?linkid=842514)
+- [Live Unit Testing 博客](https://devblogs.microsoft.com/visualstudio/live-unit-testing-in-visual-studio-2017-enterprise/)
 - [实时单元测试常见问题解答](live-unit-testing-faq.md)
 - [第 9 频道视频：Visual Studio 中的 Live Unit Testing](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T105)

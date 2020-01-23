@@ -1,26 +1,26 @@
 ---
 title: 更新基于网络的安装
 description: 了解如何使用 --layout 命令更新基于网络的 Visual Studio 安装
-ms.date: 10/07/2019
+ms.date: 01/08/2020
 ms.custom: seodec18
 ms.topic: conceptual
 helpviewer_keywords:
 - '{{PLACEHOLDER}}'
 - '{{PLACEHOLDER}}'
 ms.assetid: 1AF69C0E-0AC9-451B-845D-AE4EDBCEA65C
-author: TerryGLee
-ms.author: tglee
+author: ornellaalt
+ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 2157a6142f95b6ffe34503a8ee80419fcb9ca506
-ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
+ms.openlocfilehash: 68acfcd4acc06ff2b370f3d77a30bd4ec21eb6d1
+ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72018812"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76114975"
 ---
 # <a name="update-a-network-based-installation-of-visual-studio"></a>更新基于网络的 Visual Studio 安装
 
@@ -28,17 +28,20 @@ ms.locfileid: "72018812"
 
 ## <a name="how-to-update-a-network-layout"></a>如何更新网络布局
 
+> [!IMPORTANT]
+> 这些说明假定你之前已创建了一个网络安装布局。 要详细了解如何执行此操作，请参阅[创建 Visual Studio 的网络安装](create-a-network-installation-of-visual-studio.md)页面。
+
 要刷新网络安装共享，使其包含最新更新，请运行 `--layout` 命令，从而以增量方式下载更新后的包。
 
 ::: moniker range="vs-2017"
 
-**15.3 中的新增功能**：如果在首次创建网络布局时选择了部分布局，那么这些设置将被保存。 此后一切布局命令都将使用先前的选项以及任何指定的新选项。 但是，如果正在使用早期版本的布局，则应使用与首次创建网络安装布局相同的命令行参数（即相同的工作负载和语言）来更新其内容。
+**15.3 中的新增功能**：如果你在[首次创建网络布局](create-a-network-installation-of-visual-studio.md)时选择了部分布局，这些设置将被保存。 此后一切布局命令都将使用先前的选项以及任何指定的新选项。 但是，如果正在使用早期版本的布局，则应使用与首次创建网络安装布局相同的命令行参数（即相同的工作负载和语言）来更新其内容。
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-如果在首次创建网络布局时选择了部分布局，那么这些设置将被保存。 此后一切布局命令都将使用先前的选项以及任何指定的新选项。
+如果你在[首次创建网络布局](create-a-network-installation-of-visual-studio.md)时选择了部分布局，这些设置将被保存。 此后一切布局命令都将使用先前的选项以及任何指定的新选项。
 
 ::: moniker-end
 
@@ -81,7 +84,7 @@ ms.locfileid: "72018812"
   vs_enterprise.exe --layout c:\VSLayout --add Microsoft.VisualStudio.Workload.NetWeb --lang fr-FR --keepLayoutVersion
   ```
 
-## <a name="how-to-deploy-an-update-to-client-machines"></a>如何将更新部署到客户端计算机
+## <a name="deploy-an-update-to-client-machines"></a>将更新部署到客户端计算机
 
 更新可以由企业管理员进行部署，也可以由客户端计算机启动，具体视网络环境的配置方式而定。
 
@@ -111,7 +114,7 @@ ms.locfileid: "72018812"
 > [!TIP]
 > 若要详细了解如何控制何时向用户显示更新通知，请参阅[控制对基于网络的 Visual Studio 部署的更新](controlling-updates-to-visual-studio-deployments.md)。
 
-## <a name="how-to-verify-a-layout"></a>如何验证布局
+## <a name="verify-a-layout"></a>验证布局
 
 使用 `--verify` 在提供的脱机缓存中执行验证。 它将检查包文件是否缺少或无效。 验证完成后，它将打印缺少的文件和无效文件的列表。
 
@@ -129,7 +132,7 @@ vs_enterprise.exe --layout <layoutDir> --verify
 > [!NOTE]
 > 验证仅适用于 Visual Studio 的特定次要版本的最新版本。 发布新版本后，验证将不适用于同一次要版本的早期修补级别版本。
 
-## <a name="how-to-fix-a-layout"></a>如何修复布局
+## <a name="fix-a-layout"></a>修复布局
 
 使用 `--fix` 执行与 `--verify` 相同的验证，并尝试修复标识的问题。 `--fix` 过程需要 Internet 连接，因此在调用 `--fix` 前请确保计算机已连接至 Internet。
 
@@ -139,7 +142,7 @@ vs_enterprise.exe --layout <layoutDir> --fix
 
 可在 layoutDir 内调用 vs_enterprise.exe。
 
-## <a name="how-to-remove-older-versions-from-a-layout"></a>如何从布局中删除旧版本
+## <a name="remove-older-versions-from-a-layout"></a>从布局中删除旧版本
 
 对脱机缓存执行布局更新后，布局缓存文件夹中可能存在某些已过时的包，最新版本的 Visual Studio 安装不再需要这些包。 可使用 `--clean` 选项从脱机缓存文件夹中删除已过时的包。
 
@@ -165,7 +168,13 @@ c:\VSLayout\vs_enterprise.exe --layout c:\VSLayout --clean c:\VSLayout\Archive\1
 
 执行此命令时，安装程序会分析脱机缓存文件夹，以查找要删除的文件列表。 然后，可以对要删除的文件进行评审，并确认是否删除。
 
-[!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
+## <a name="get-support-for-your-offline-installer"></a>获取对脱机安装程序的支持
+
+如果脱机安装遇到问题，请告知我们。 告知我们的最好方式是使用[报告问题](../ide/how-to-report-a-problem-with-visual-studio.md)工具。 使用此工具时，可发送我们诊断和修复问题所需的遥测数据和日志。
+
+对于安装相关问题，我们还提供[实时聊天  ](https://visualstudio.microsoft.com/vs/support/#talktous)（仅限英语）支持选项。
+
+我们还提供其他支持选项。 若要查看列表，请参阅[反馈](../ide/feedback-options.md)页面。
 
 ## <a name="see-also"></a>请参阅
 

@@ -14,12 +14,12 @@ caps.latest.revision: 364
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: ce064209ca96abda1f9e44825fa869c2ba250a32
-ms.sourcegitcommit: 08105865a9643fb20dce9b8b7580452cfbbe7ee7
+ms.openlocfilehash: 758e2bbf69c7b48a1027819377839cbdce9204fe
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74538983"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75919253"
 ---
 # <a name="what39s-new-in-visual-studio-2015"></a>Visual Studio 2015 中的新增功能
 [!INCLUDE[vs2017banner](./includes/vs2017banner.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "74538983"
  适用于 Apache Cordova 的 Visual Studio 工具是 Microsoft 和开放源 Apache Cordova 社区紧密合作的成果。 通过这些工具，可使用 HTML、CSS 和 JavaScript（或 Typescript）进行跨平台移动开发。 你可将单一基本代码面向 Android、iOS 和 Windows，并且享受 Visual Studio IDE 的丰富功能，包括 JavaScript IntelliSense、DOM 资源管理器、JavaScript 控制台、断点、监视、局部变量、仅我的代码等等。  凭借适用于 Apache Cordova 的 Visual Studio 工具，你的应用可通过提供通用 JavaScript API 的插件使用所有平台上的原生设备功能。 若要开始，请参阅[Apache Cordova 的 Visual Studio Tools 入门](https://msdn.microsoft.com/library/db446f2c-6ba4-4c76-aac5-4c66f43b8c42)。
 
 ### <a name="cross-platform-mobile-games-in-c-with-unity"></a>通过 Unity 在 C# 中编写的跨平台移动游戏
- Unity 是用于开发多平台 2D 和 3D 游戏的使用广泛的平台。 可以使用 C# 编写你的游戏，并在 Android、iOS、Windows Phone 和许多其他平台上本机运行该游戏。 适用于 Unity 的 Visual Studio 工具是集成了 Unity 和 Visual Studio IDE 的扩展。 通过此扩展，你除了获得为 Unity 开发人员所设计的工作效率功能外，还可获得 Visual Studio IDE 和调试器的所有功能。 Visual Studio Tools for Unity 2.0 Preview 2 添加了对 Visual Studio 2015 的支持以及一些新功能，例如为“局部变量”和“监视”窗口中的对象提供更好的可视化效果。 Microsoft 最近收购了 SyntaxTree，这家公司是适用于 Unity 的 Visual Studio 工具的创建者。 要下载 Visual Studio Tools for Unity 2.0 Preview 2，以及获取有关 Visual Studio Tools for Unity 的详细信息，请参阅 [Visual Studio Tools for Unity 2.0](https://aka.ms/vstu)。
+ Unity 是用于开发多平台 2D 和 3D 游戏的使用广泛的平台。 可以使用 C# 编写你的游戏，并在 Android、iOS、Windows Phone 和许多其他平台上本机运行该游戏。 适用于 Unity 的 Visual Studio 工具是集成了 Unity 和 Visual Studio IDE 的扩展。 通过此扩展，你除了获得为 Unity 开发人员所设计的工作效率功能外，还可获得 Visual Studio IDE 和调试器的所有功能。 Visual Studio Tools for Unity 2.0 Preview 2 添加了对 Visual Studio 2015 的支持以及一些新功能，例如为“局部变量”和“监视”窗口中的对象提供更好的可视化效果。 Microsoft 最近收购了 SyntaxTree，这家公司是适用于 Unity 的 Visual Studio 工具的创建者。 要下载 Visual Studio Tools for Unity 2.0 Preview 2，以及获取有关 Visual Studio Tools for Unity 的详细信息，请参阅 [Visual Studio Tools for Unity 2.0](https://visualstudio.microsoft.com/vs/features/game-development/#tab-4b0d0be8de5f65564ad)。
 
 ### <a name="cross-platform-apps-and-libraries-for-native-c"></a>针对本机 C++ 的跨平台应用程序和库
  C++ 是跨大部分移动设备本机可用的语言。 它可用于编写跨平台共享代码库，这些代码库可以针对多个移动平台目标进行生成。 甚至可以使用 C++ 创建完整的移动应用。 Visual C++ 为你提供编辑、生成、部署和调试跨平台代码的工具。 除适用于 Windows 应用的模板外，还可以根据适用于 Android Native Activity 应用和 iOS 应用的模板创建项目，或创建适用于多个平台的共享代码库项目，包括 Xamarin 混合应用。 借助特定于平台的 IntelliSense，可以浏览 API 以及生成针对 Android、iOS 或 Windows 目标的正确代码。 可以针对 x86 或 ARM 本机平台配置生成，并将代码部署到 iOS 模拟器、联网 Mac 上 iOS 设备或直接附加的 Android 设备，或使用高性能的 Microsoft Visual Studio Emulator for Android 进行测试。 可以在 Visual Studio 调试程序中设置断点、监视变量、查看堆栈和逐句通过 C++ 代码。 可以跨多个应用平台共享除最具有平台特定性的代码之外的所有代码，并在 Visual Studio 中用一个解决方案生成所有这些代码。
@@ -129,7 +129,7 @@ ms.locfileid: "74538983"
 
 - **C#/Xamarin**。 通过 [Xamarin](https://msdn.microsoft.com/library/dn879698\(v=vs.140\).aspx) ，在 Visual Studio 中使用 C# 生成适用于 Windows、iOS 和 Android 的本机应用。
 
-     [Xamarin 开发人员指南](https://docs.microsoft.com/xamarin/ios/deploy-test/debugging-in-xamarin-ios?tabs=windows) 中的 [调试](https://docs.microsoft.com/xamarin/android/deploy-test/debugging/debug-on-device?tabs=windows) (iOS) 和 [在设备上进行调试](https://docs.microsoft.com/xamarin/) 介绍了调试体验。
+     [Xamarin 开发人员指南](/xamarin/ios/deploy-test/debugging-in-xamarin-ios?tabs=windows) 中的 [调试](/xamarin/android/deploy-test/debugging/debug-on-device?tabs=windows) (iOS) 和 [在设备上进行调试](/xamarin/) 介绍了调试体验。
 
 - **C++/Android**。 配合使用 [用于跨平台移动开发的 Visual C++](cross-platform/visual-cpp-for-cross-platform-mobile-development.md) 模板和 [Android NDK](https://developer.android.com/tools/sdk/ndk/index.html) 等第三方工具，创建适用于 Windows 和 Android 的本机应用。
 
@@ -158,7 +158,7 @@ ms.locfileid: "74538983"
 ### <a name="synchronized-settings-roaming-settings"></a>同步设置（漫游设置）
  Visual Studio 2013 针对最常用的设置（例如文本编辑器、键盘关联、主题和字体及颜色、启动以及环境别名）引入同步设置。  Visual Studio 2015 通过同步更多设置并在 Professional、Enterprise、Express SKU、Blend 等 Visual Studio 应用程序系列中同步设置，使这种体验获得提升。 当你使用在 Visual Studio 2013 中使用的同一帐户首次登录 Visual Studio 2015 时，你会发现你的 Visual Studio 2013 设置同步到了 Visual Studio 2015 中。 可以通过以下方式访问设置：在“快速启动”中输入“sync”，或者导航至“工具”>“选项”>“环境”>“同步设置”。
 
-### <a name="automatic-extension-updates"></a>“自动扩展更新”
+### <a name="automatic-extension-updates"></a>自动扩展更新
  当 Visual Studio 库里有可用的新版本时，已安装的 Visual Studio 扩展现在将会自动更新。 请参阅 [查找和使用 Visual Studio 拓展](./ide/finding-and-using-visual-studio-extensions.md) 以获取有关可如何自定义自动扩展更新的详细信息。
 
 ### <a name="title-case-menus"></a>标题首字母大写菜单
@@ -257,7 +257,7 @@ ms.locfileid: "74538983"
 ### <a name="send-a-frown"></a>发送哭脸
  了解我们在产品中的改进之处有助于我们首先关注对客户最重要的事，从而管理我们的积压工作 (backlog)。 若有任何相关的疑难之事，请直接从 IDE 内使用“发送哭脸” 功能告诉我们。 我们也让这一流程异常简单：
 
- 单击标题栏上的黄色笑脸，然后单击“发送哭脸”。 告诉我们你不喜欢的内容，然后单击“发送哭脸”按钮。 有关详细信息，请参阅 [Talk to Us](./ide/talk-to-us.md)。
+ 单击标题栏上的黄色笑脸，然后单击“发送哭脸”。 告诉我们你不喜欢的内容，然后单击“发送哭脸”按钮。 有关更多信息，请参见 [Talk to Us](./ide/talk-to-us.md)。
 
 ### <a name="report-crashes-hangs-and-performance-issues"></a>报告崩溃、挂起和性能问题
  有时，快速标记哭脸不足以传达你不喜欢的内容造成的完全影响。 当你遭遇挂起、崩溃或性能问题时，你可以通过使用发送哭脸后显示的对话框方便地共享重现步骤、故障转储和跟踪文件。

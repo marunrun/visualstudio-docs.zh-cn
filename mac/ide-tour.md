@@ -1,17 +1,17 @@
 ---
 title: Visual Studio for Mac 教程
 description: Visual Studio for Mac 提供用于在 macOS 上生成 .NET 应用程序的集成开发环境，包括 ASP.NET Core 网站和适用于 iOS、Android、Mac 和 Xamarin.Forms 的 Xamarin 项目。
-author: asb3993
-ms.author: amburns
-ms.date: 09/18/2019
+author: heiligerdankgesang
+ms.author: dominicn
+ms.date: 12/13/2019
 ms.assetid: 7DC64A52-AA41-4F3A-A8A1-8A20BCD81CC7
 ms.custom: video
-ms.openlocfilehash: 60691ef47b3a3dfdb2fa1148507697a27a99ef7b
-ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
+ms.openlocfilehash: f7686efae903912b64d8692a823d6e82592cbec9
+ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71213731"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75405821"
 ---
 # <a name="visual-studio-2019-for-mac-tour"></a>Visual Studio 2019 for Mac 导览
 
@@ -123,7 +123,7 @@ NuGet 是 .NET 开发最常用的程序包管理器。 通过 Visual Studio 的 
 
 ## <a name="debugging"></a>调试
 
-Visual Studio for Mac 具有本机调试器，支持 Xamarin.iOS、Xamarin.Mac 和 Xamarin.Android 应用程序的调试。 Visual Studio for Mac 使用 Mono 软调试器，该调试器在 Mono 运行时中实施，以便 IDE 跨所有平台调试托管代码。 有关调试的其他信息，请访问[调试](/visualstudio/mac/debugging)一文。
+Visual Studio for Mac 提供支持 .Net Core、.NET Framework、Unity 和 Xamarin 项目的调试器。 Visual Studio for Mac 使用 .NET Core 调试器和 Mono 软调试器，以便 IDE 跨所有平台调试托管代码。 有关调试的其他信息，请访问[调试](/visualstudio/mac/debugging)一文。
 
 调试器包含丰富的可视化工具，可用于字符串、颜色、URL、大小、坐标和贝塞尔曲线等特殊类型。
 

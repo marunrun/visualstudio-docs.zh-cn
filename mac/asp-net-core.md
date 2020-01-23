@@ -6,12 +6,12 @@ ms.author: sayedha
 ms.date: 04/02/2019
 ms.assetid: 6E8B0C90-33D6-4546-8207-CE0787584565
 ms.custom: video
-ms.openlocfilehash: d07849a362779f3fad8f7544899dc23b9d4538d6
-ms.sourcegitcommit: b60a00ac3165364ee0e53f7f6faef8e9fe59ec4a
+ms.openlocfilehash: d0e00929de11ff3fd820670be2bb6361cfb5fa6c
+ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70913318"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75405004"
 ---
 # <a name="getting-started-with-aspnet-core"></a>ASP.NET Core 入门
 
@@ -118,9 +118,9 @@ Startup 类必须始终遵守以下规则：
 
 预建模板的 `Configure` 方法有数种作用。 首先，它会配置开发中使用的意外处理页面。 其次，它会向请求网页发送响应，内容为简单的“Hello World”。
 
-不添加任何其他代码也可运行此简单的“Hello, World”项目。 要运行此应用并在浏览器中查看它，请按工具栏上的“播放”（三角形）按钮：
+不添加任何其他代码也可运行此简单的“Hello, World”项目。 若要运行应用，可以使用“播放”按钮的下拉列表选择要在其中运行应用的浏览器，或只需点击“播放”（三角形）按钮即可使用默认浏览器：
 
-![运行应用](media/asp-net-core-2019-run-debug.png)
+![浏览器运行](media/asp-net-web-picker.png)
 
 Visual Studio for Mac 使用随机端口启动 Web 项目。 要找到该端口，请打开“视图”>“面板”下列出的“应用程序输出”  。 之后应找到类似下图内容的输出：
 

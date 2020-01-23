@@ -14,12 +14,12 @@ ms.assetid: 1f7c348a-114c-4243-b392-3531e9c9c6fd
 caps.latest.revision: 57
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 59ef6ae6b042b1616997821febe156ef5cac3b7f
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 27dce16d9fe02063eae935af96c26184285e583d
+ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299704"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75850368"
 ---
 # <a name="visual-studio-sdk"></a>Visual Studio SDK
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -62,7 +62,7 @@ Visual Studio SDK 可帮助你扩展 Visual Studio 的功能，或将新功能�
  可在[Visual STUDIO Sdk 参考](../extensibility/visual-studio-sdk-reference.md)中找到 VISUAL STUDIO sdk API 参考。  
   
 ## <a name="visual-studio-sdk-samples"></a>Visual Studio SDK 示例  
- 可在 GitHub 上的[Visual Studio 示例](https://aka.ms/vs2015sdksamples)中找到 VS SDK 扩展的开源示例。 此 GitHub 存储库包含说明 Visual Studio 中各种可扩展功能的示例。  
+ 可在 GitHub 上的[Visual Studio 示例](https://github.com/Microsoft/VSSDK-Extensibility-Samples)中找到 VS SDK 扩展的开源示例。 此 GitHub 存储库包含说明 Visual Studio 中各种可扩展功能的示例。  
   
 ## <a name="other-visual-studio-sdk-resources"></a>其他 Visual Studio SDK 资源  
  如果对 VSSDK 有疑问或想要分享开发扩展的经验，可以使用[Visual Studio 扩展性论坛](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vsx)或[ExtendVS 组聊天](https://gitter.im/Microsoft/extendvs)。  

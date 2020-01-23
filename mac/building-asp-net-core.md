@@ -5,12 +5,12 @@ author: sayedihashimi
 ms.author: sayedha
 ms.date: 05/30/2019
 ms.assetid: 771C2F8E-46BC-4280-AFE8-ED9D5C7790CE
-ms.openlocfilehash: 5aa0b02c87335305f29d098b51c89310cc0a9e5d
-ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
+ms.openlocfilehash: 5600fd2f0b6d83a3bd27350a4d4f0137ea44ced2
+ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73717267"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75398291"
 ---
 # <a name="building-aspnet-core-applications-in-visual-studio-for-mac"></a>在 Visual Studio for Mac 中生成 ASP.NET Core 应用程序
 
@@ -25,7 +25,7 @@ ASP.NET Core 是开放源跨平台框架，用于生成基于新式云的 Intern
 > * 了解 ASP.NET Core 托管、配置和中间件模型
 > * 调试 ASP.NET Core Web 应用
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 - [Visual Studio for Mac](https://www.visualstudio.com/vs/visual-studio-mac)
 
@@ -73,9 +73,9 @@ ASP.NET Core 是开放源跨平台框架，用于生成基于新式云的 Intern
 
     ![](media/netcore-image8.png)
 
-7. 还有各种在运行时用来管理项目、包以及应用程序的配置文件。 例如，默认应用程序[配置](/aspnet/core/fundamentals/configuration)存储在 appsettings.json  中。 但可以通过为“开发”  环境提供 appsettings.Development.json  文件之类的方式，基于每个环境替代部分/所有这些设置。
+7. 还有各种在运行时用来管理项目、包以及应用程序的配置文件。 例如，默认应用程序[配置](/aspnet/core/fundamentals/configuration)存储在 appsettings.json  中。 嵌套在 appsettings.json 文件下面的是 appsettings.Development.json  文件。 在此，你可以在每个环境的基础上部分/全部重写这些设置。 Visual Studio for Mac 将使用与 Visual Studio for Windows 相同的逻辑以此方式嵌套文件，这样你需要经常访问的文件就位于最前面。 
 
-    ![](media/netcore-image9.png)
+    ![](media/netcore-build-nested.png)
 
 ## <a name="task-3-understanding-how-the-application-is-hosted"></a>任务 3：了解如何托管应用程序
 

@@ -17,20 +17,20 @@ helpviewer_keywords:
 - MSBuild, Unzip task
 ms.assetid: 916bb2e3-3017-4828-ae27-c0b5c99bbb48
 caps.latest.revision: 16
-author: Mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f570009ad937e955853a616987a08583f2ba2237
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c3b02108e2ee47a31ced196643bf917b3b63c1c6
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62970765"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594898"
 ---
 # <a name="unzip-task"></a>Unzip 任务
-将 .zip 存档解压缩到指定位置。
+将 .zip 存档解压缩到指定位置。 
 
 >[!NOTE]
 >仅在 MSBuild 15.8 及更高版本中提供 `Unzip` 任务。
@@ -38,7 +38,7 @@ ms.locfileid: "62970765"
 ## <a name="parameters"></a>参数
  下表描述了 `Unzip` 任务的参数。
 
-|参数|说明|
+|参数|描述|
 |---------------|-----------------|
 |`DestinationFolder`|<xref:Microsoft.Build.Framework.ITaskItem> 参数（必选）<br /><br /> 指定文件要解压到的目的文件夹。|
 |`OverwriteReadOnlyFiles`|可选 `Boolean` 参数。<br /><br /> 如果为 `true`，则覆盖只读文件。 默认为 `false`。|

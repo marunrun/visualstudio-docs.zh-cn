@@ -2,17 +2,17 @@
 title: “本机建议规则”规则集
 ms.date: 11/04/2016
 ms.topic: reference
-author: jillre
-ms.author: jillfra
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dcc5112262dd36e431a34becd36729ea9a3c186f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 9d8080005b9d1d9cbd055e0475517738223bba1d
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72649170"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75587259"
 ---
 # <a name="native-recommended-rules-rule-set"></a>“本机建议规则”规则集
 
@@ -154,7 +154,7 @@ ms.locfileid: "72649170"
 |[C28020](../code-quality/c28020.md)|此调用中的表达式不为 true|
 |[C28021](../code-quality/c28021.md)|批注的参数必须为指针型|
 |[C28022](../code-quality/c28022.md)|此函数上的函数类与用于定义此函数的 typedef 上的函数类不匹配。|
-|[C28023](../code-quality/c28023.md)|分配或传递的函数应具有一个 \_Function \_class 至少一个类的 \_ 批注|
+|[C28023](../code-quality/c28023.md)|分配或传递的函数应具有一个 \_函数\_类\_ 至少一个类的批注|
 |[C28024](../code-quality/c28024.md)|向其分配的函数指针是用函数类（不包含在函数类列表中）进行批注的。|
 |[C28039](../code-quality/c28039.md)|实参的类型应与类型完全匹配|
 |[C28112](../code-quality/c28112.md)|通过互锁函数访问的变量必须始终通过联锁函数访问。|
@@ -172,14 +172,14 @@ ms.locfileid: "72649170"
 |[C28196](../code-quality/c28196.md)|不满足要求。 （该表达式的计算结果不为 true。）|
 |[C28202](../code-quality/c28202.md)|非法引用非静态成员|
 |[C28203](../code-quality/c28203.md)|对类成员的不明确的引用。|
-|[C28205](../code-quality/c28205.md)|\_Success 在非法上下文中使用 \_ 或 \_On \_failure \_|
+|[C28205](../code-quality/c28205.md)|\_在非法上下文中使用的\_失败\_ 或 \_\_|
 |[C28206](../code-quality/c28206.md)|若左操作数指向结构，则使用“->”|
 |[C28207](../code-quality/c28207.md)|若左操作数是一个结构，则使用“.”|
 |[C28209](../code-quality/c28209.md)|符号的声明具有冲突的声明|
 |[C28210](../code-quality/c28210.md)|__on_failure 上下文的批注不得位于显式的 pre 上下文中|
 |[C28211](../code-quality/c28211.md)|SAL_context 所需的静态上下文名称|
 |[C28212](../code-quality/c28212.md)|批注所需的指针表达式|
-|[C28213](../code-quality/c28213.md)|@No__t_0Use \_decl \_annotations \_ 批注必须用于引用，而无需修改以前的声明。|
+|[C28213](../code-quality/c28213.md)|\_使用\_decl\_批注\_ 批注必须用于引用，而无需修改以前的声明。|
 |[C28214](../code-quality/c28214.md)|特性参数的名称必须为 p1...p9|
 |[C28215](../code-quality/c28215.md)|不能将 typefix 应用于已包含 typefix 的参数|
 |[C28216](../code-quality/c28216.md)|checkReturn 批注仅应用于特定函数参数的后置条件。|
@@ -222,7 +222,7 @@ ms.locfileid: "72649170"
 |[C28267](../code-quality/c28267.md)|在函数中找到了批注的语法错误。|
 |[C28272](../code-quality/c28272.md)|在检查参数时，函数的批注与函数声明不一致|
 |[C28273](../code-quality/c28273.md)|对于函数，线索与函数声明不一致|
-|[C28275](../code-quality/c28275.md)|@No__t_0Macro \_value \_ 的参数为 null|
+|[C28275](../code-quality/c28275.md)|用于 \_宏的参数\_值\_ 为 null|
 |[C28279](../code-quality/c28279.md)|对于符号，已找到“起始”符号，但没有匹配的“结束”符号|
 |[C28280](../code-quality/c28280.md)|对于符号，已找到“结束”符号，但没有匹配的“起始”符号|
 |[C28282](../code-quality/c28282.md)|格式字符串必须位于前置条件中|

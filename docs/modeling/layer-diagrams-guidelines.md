@@ -7,17 +7,17 @@ helpviewer_keywords:
 - dependency diagrams
 - diagrams - modeling, layer
 - constraints, architectural
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8613633289189bec5e403ec76b78731d5e3ecc4f
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 9f8ec90d045259cd5d10533db6096154376d48fe
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72983745"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594625"
 ---
 # <a name="dependency-diagrams-guidelines"></a>依赖项关系图：准则
 
@@ -107,9 +107,9 @@ ms.locfileid: "72983745"
 |删除不应存在的依赖项|单击 "依赖关系"，然后按 "**删除**"。|
 |更改或限制依赖项的方向|设置其**方向**属性。|
 |创建新的依赖项|使用**依赖**关系和**双向依赖关系**工具。<br /><br /> 若要绘制多个依赖关系，请双击该工具。 完成后，请单击**指针**工具或按**ESC**键。|
-|指定与层关联的项目不能依赖于指定的命名空间|在层的 "**禁止的命名空间依赖项**" 属性中键入命名空间。 使用分号（**;**）分隔命名空间。|
-|指定与层关联的项目必须不属于指定的命名空间|在层的 "**禁止的命名空间**" 属性中键入命名空间。 使用分号（**;**）分隔命名空间。|
-|指定与层关联的项目必须属于某个指定的命名空间|在层的 "**必需的命名空间**" 属性中键入命名空间。 使用分号（**;**）分隔命名空间。|
+|指定与层关联的项目不能依赖于指定的命名空间|在层的 "**禁止的命名空间依赖项**" 属性中键入命名空间。 使用分号（ **;** ）分隔命名空间。|
+|指定与层关联的项目必须不属于指定的命名空间|在层的 "**禁止的命名空间**" 属性中键入命名空间。 使用分号（ **;** ）分隔命名空间。|
+|指定与层关联的项目必须属于某个指定的命名空间|在层的 "**必需的命名空间**" 属性中键入命名空间。 使用分号（ **;** ）分隔命名空间。|
 
 ### <a name="Improving"></a>改进代码的结构
 
@@ -172,7 +172,7 @@ ms.locfileid: "72983745"
 
 若要确保以后代码中的更改符合依赖关系图，请在解决方案的标准生成过程中包括层验证。 当其他团队成员生成解决方案时，代码中的依赖关系和依赖关系关系图中的任何差异将报告为生成错误。 有关在生成过程中包括层验证的详细信息，请参阅[通过依赖项关系图验证代码](../modeling/validate-code-with-layer-diagrams.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [依赖项关系图：参考](../modeling/layer-diagrams-reference.md)
 - [从代码创建依赖项关系图](../modeling/create-layer-diagrams-from-your-code.md)

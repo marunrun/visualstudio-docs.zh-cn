@@ -6,12 +6,12 @@ ms.author: ghogen
 ms.date: 11/20/2019
 ms.technology: vs-azure
 ms.topic: conceptual
-ms.openlocfilehash: e1b2f332563503dcb4d63faf301000db83eed5ea
-ms.sourcegitcommit: 49ebf69986713e440fd138fb949f1c0f47223f23
+ms.openlocfilehash: 6f11082a0e309d4e34dd25a1085c1f8c971f28f7
+ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74706824"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75916941"
 ---
 # <a name="how-visual-studio-builds-containerized-apps"></a>Visual Studio 如何构建容器化应用
 
@@ -76,7 +76,7 @@ docker build -f Dockerfile ..
 
 由 Visual Studio for .NET Framework 项目（以及使用 Visual Studio 2017 Update 4 之前版本的 Visual Studio 版本创建的 .NET Core 项目）创建的 Dockerfile 不是多阶段 Dockerfile。  这些 Dockerfile 中的步骤不编译代码。  当 Visual Studio 生成 .NET Framework Dockerfile 时，它将首先使用 MSBuild 编译项目。  成功后，Visual Studio 会生成 Dockerfile，这只是将生成输出从 MSBuild 复制到生成的 Docker 映像中。  由于编译代码的步骤不包含在 Dockerfile 中，因此不能从命令行使用 `docker build` 生成 .NET Framework Dockerfile。 应使用 MSBuild 生成这些项目。
 
-要为单个 Docker 容器项目生成映像，可以将 MSBuild 与 `/t:ContainerBuild` 命令选项一起使用。 例如:
+要为单个 Docker 容器项目生成映像，可以将 MSBuild 与 `/t:ContainerBuild` 命令选项一起使用。 例如：
 
 ```cmd
 MSBuild MyProject.csproj /t:ContainerBuild /p:Configuration=Release
@@ -103,7 +103,7 @@ msbuild /p:SolutionPath=<solution-name>.sln /p:Configuration=Release docker-comp
 
 ## <a name="volume-mapping"></a>卷映射
 
-为了能够在容器中正常调试，Visual Studio 使用卷映射从主机映射调试程序和 NuGet 文件夹。 下面是在容器中装载的卷：
+为了能够在容器中正常调试，Visual Studio 使用卷映射从主机映射调试程序和 NuGet 文件夹。 有关卷映射，可参阅[此处](https://docs.docker.com/storage/volumes/)的 Docker 文档。 下面是在容器中装载的卷：
 
 |||
 |-|-|
@@ -116,10 +116,10 @@ msbuild /p:SolutionPath=<solution-name>.sln /p:Configuration=Release docker-comp
 
 ## <a name="ssl-enabled-aspnet-core-apps"></a>启用 SSL 的 ASP.NET Core 应用
 
-Visual Studio 中的容器工具支持使用开发证书调试启用 SSL 的 ASP.NET Core 应用，调试方式与在没有容器的情况下相同。 为实现此目的，Visual Studio 会添加几个步骤来导出证书，使其可供容器使用。 流程如下：
+Visual Studio 中的容器工具支持使用开发证书调试启用 SSL 的 ASP.NET Core 应用，调试方式与在没有容器的情况下相同。 为实现此目的，Visual Studio 会添加几个步骤来导出证书，使其可供容器使用。 下面是 Visual Studio 在容器中进行调试时处理的流：
 
 1. 通过 `dev-certs` 工具，确保主机上存在本地开发证书且该证书受主机信任。
-2. 将该证书导出到 %APPDATA%\ASP.NET\Https，并将安全密码存储在此特定应用的用户机密存储中。
+2. 使用存储在此特定应用的用户机密存储中的安全密码将该证书导出到 %APPDATA%\ASP.NET\Https。
 3. 卷装载以下目录：
 
    -  %APPDATA%\Microsoft\UserSecrets
@@ -140,7 +140,9 @@ ASP.NET Core 将查找与 Https 文件夹下的程序集名称匹配的证书，
 }
 ```
 
-要详细了解如何将 SSL 与容器中的 ASP.NET Core 应用结合使用，请参阅 [Hosting ASP.NET Core images with Docker over HTTPS](https://docs.microsoft.com/aspnet/core/security/docker-https)（通过 HTTPS 使用 Docker 托管 ASP.NET Core 映像）。
+如果配置同时支持容器化和非容器化生成，则你应使用环境变量，因为路径是特定于容器环境的。
+
+要详细了解如何将 SSL 与容器中的 ASP.NET Core 应用结合使用，请参阅[通过 HTTPS 使用 Docker 托管 ASP.NET Core 映像](/aspnet/core/security/docker-https)。
 
 ## <a name="debugging"></a>调试
 

@@ -11,12 +11,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 95693261cebf26bb740861795f7faf5c56503daf
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.openlocfilehash: 3f8fa8fcd859a7464d471972689728dc556a79bd
+ms.sourcegitcommit: 0d8488329263cc0743a89d43f6de863028e982ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74777928"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75678969"
 ---
 # <a name="debug-a-javascript-or-typescript-app-in-visual-studio"></a>在 Visual Studio 中调试 JavaScript 或 TypeScript 应用
 
@@ -44,7 +44,7 @@ ms.locfileid: "74777928"
 ## <a name="debug-client-side-script"></a>调试客户端脚本
 
 ::: moniker range=">=vs-2019"
-Visual Studio 仅为 Chrome 和 Microsoft Edge (Chromium) 提供客户端调试支持。 在某些情况下，调试器会自动命中 JavaScript 和 TypeScript 代码中以及 HTML 文件的嵌入脚本中的断点。 若要在 ASP.NET 应用中调试客户端脚本，请参阅博客文章[在 Microsoft Edge 中调试 JavaScript](https://devblogs.microsoft.com/visualstudio/debug-javascript-in-microsoft-edge-from-visual-studio/) 和 [Google Chrome 文章](https://devblogs.microsoft.com/aspnet/client-side-debugging-of-asp-net-projects-in-google-chrome)。
+Visual Studio 仅为 Chrome 和 Microsoft Edge (Chromium) 提供客户端调试支持。 在某些情况下，调试器会自动命中 JavaScript 和 TypeScript 代码中以及 HTML 文件的嵌入脚本中的断点。 若要在 ASP.NET 应用中调试客户端脚本，请参阅博客文章[在 Microsoft Edge 中调试 JavaScript](https://devblogs.microsoft.com/visualstudio/debug-javascript-in-microsoft-edge-from-visual-studio/) 和 [Google Chrome 文章](https://devblogs.microsoft.com/aspnet/client-side-debugging-of-asp-net-projects-in-google-chrome)。 若要在 ASP.NET Core 中调试 TypeScript，另请参阅[使用 TypeScript 创建 ASP.NET Core 应用](tutorial-aspnet-with-typescript.md)。
 ::: moniker-end
 ::: moniker range="vs-2017"
 Visual Studio 仅为 Chrome 和 Internet 资源管理器提供客户端调试支持。 在某些情况下，调试器会自动命中 JavaScript 和 TypeScript 代码中以及 HTML 文件的嵌入脚本中的断点。 若要在 ASP.NET 应用中调试客户端脚本，请参阅博客文章[在 Google Chrome中对 ASP.NET 项目进行客户端调试](https://devblogs.microsoft.com/aspnet/client-side-debugging-of-asp-net-projects-in-google-chrome/)。
@@ -86,7 +86,7 @@ Visual Studio 仅为 Chrome 和 Internet 资源管理器提供客户端调试支
 
     `msedge --remote-debugging-port=9222`
 
-    或者，
+    或
 
     `chrome.exe --remote-debugging-port=9222`
     ::: moniker-end

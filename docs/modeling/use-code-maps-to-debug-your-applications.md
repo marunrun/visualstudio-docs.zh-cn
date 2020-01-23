@@ -1,5 +1,5 @@
 ---
-title: 使用代码图调试你的应用程序
+title: 使用代码图调试应用程序
 ms.date: 09/28/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - mapping code relationships
 - code maps
 - mapping relationships in code
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d0b3c65c0a7e5cb08869a6d756ce0c443fa3bf2e
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: e01857878f927c619529d3bbfc63728f84f0b81d
+ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748271"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75594105"
 ---
-# <a name="use-code-maps-to-debug-your-applications"></a>使用代码图调试你的应用程序
+# <a name="use-code-maps-to-debug-your-applications"></a>使用代码图调试应用程序
 
 代码图有助于防止你在大型基本代码、不熟悉的代码或旧代码中迷失方向。 例如，当您进行调试时，可能需要跨多个文件和项目查看代码。 使用代码图在这些代码段中导航，了解代码段之间的关系。 这样，你不必在脑海中跟踪此代码，或绘制单独的关系图。 所以，在你的工作中断时，代码图有助于让你回想起你正在处理的代码。
 
@@ -31,7 +31,7 @@ ms.locfileid: "72748271"
 
 **绿色箭头显示你的光标在编辑器中的显示位置**
 
-有关使用代码图时可以使用的命令和操作的详细信息，请参阅[浏览和重新排列代码图](../modeling/browse-and-rearrange-code-maps.md)。
+有关命令和使用代码图时，可以使用的操作的详细信息，请参阅[浏览和重新排列代码图](../modeling/browse-and-rearrange-code-maps.md)。
 
 > [!NOTE]
 > 若要创建和编辑代码图，需要 Visual Studio Enterprise 版本。 在 Visual Studio 社区版和专业版中，你可以打开在 Enterprise edition 中生成的关系图，但不能对其进行编辑。
@@ -140,7 +140,7 @@ ms.locfileid: "72748271"
 
  现在，你已经完成了调查。 你通过映射代码成功找到并解决了问题。 你也拥有可帮助你浏览代码的代码图，请记住你所学的内容并演示你用于解决此问题的步骤。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [调试时映射调用堆栈上的方法](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md)
 - [代码可视化](../modeling/visualize-code.md)
