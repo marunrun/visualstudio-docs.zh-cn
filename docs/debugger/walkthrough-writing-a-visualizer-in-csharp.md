@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 995508380fd551af33d98ebd48ab02a8287d0284
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a46967d5f46c4f495a07d80e5f73cfc9f9d60c1a
+ms.sourcegitcommit: 7b07e7b5e06e2e13f622445c568b78a284e1a40d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72637956"
+ms.lasthandoff: 01/23/2020
+ms.locfileid: "76542628"
 ---
 # <a name="walkthrough-writing-a-visualizer-in-c"></a>演练：用 C\# 编写可视化工具
 本演练演示如何使用 C# 编写简单的可视化工具。 本演练中创建的可视化工具使用 Windows 窗体消息框显示字符串的内容。 这种简单的字符串可视化工具本身并不有用，但它显示为其他数据类型创建更有用的可视化工具时必须遵循的基本步骤。
@@ -38,10 +38,10 @@ ms.locfileid: "72637956"
 1. 创建一个新类库项目。
 
     ::: moniker range=">=vs-2019"
-    按 Esc 关闭启动窗口。 键入**Ctrl + Q**打开搜索框 **，键入 "类库"** ，选择 "**模板**"，然后选择 "**创建新的类库（.NET Standard）** "。 在出现的对话框中，选择“创建”。
+    按 Esc 关闭启动窗口。 键入**Ctrl + Q**打开搜索框 **，键入 "类库"** ，选择 "**模板**"，然后选择 "**创建新的类库（.NET Framework）** "。 在出现的对话框中，选择“创建”。
     ::: moniker-end
     ::: moniker range="vs-2017"
-    在顶部菜单栏，依次选择“文件” > “新建” > “项目”。 在 "**新建项目**" 对话框的左窗格中，选择 **" C#视觉对象**" 下的 " **.NET Standard**"，然后在中间窗格中选择 "类库 **（.NET Standard）** "。
+    从顶部菜单栏中选择“文件” > “新建” > “项目”。 在 "**新建项目**" 对话框的左窗格中，选择 **" C#视觉对象**" 下的 " **.NET Framework**"，然后在中间窗格中选择 "类库 **（.NET Framework）** "。
     ::: moniker-end
 
 2. 为类库键入适当的名称，如 "`MyFirstVisualizer`"，然后单击 "**创建**" 或 **"确定"** 。
@@ -63,7 +63,7 @@ ms.locfileid: "72637956"
 
     可在 Visual Studio 安装目录的 *\<Visual Studio 安装目录 > \Common7\IDE\PublicAssemblies*子目录中找到该 DLL。
 
-5. 单击“确定”。
+5. 单击" **确定**"。
 
 6. 在 DebuggerSide.cs 中，将以下内容添加到 `using` 指令中：
 
@@ -109,7 +109,7 @@ ms.locfileid: "72637956"
 
     可以在*C:\Windows\Microsoft.NET\Framework\v4.0.30319*中找到该 DLL。
 
-3. 单击“确定”。
+3. 单击" **确定**"。
 
 4. 在 DebuggerSide.cs 中，将以下内容添加到 `using` 指令中：
 
@@ -135,7 +135,7 @@ ms.locfileid: "72637956"
 
 ### <a name="to-add-the-debuggee-side-code"></a>添加调试对象端代码
 
-1. 在 `using` 指令之后但在 `namespace MyFirstVisualizer` 之前，将以下特性代码添加到 DebuggerSide.cs：
+1. 在 `using` 指令之后但在 `namespace MyFirstVisualizer`之前，将以下特性代码添加到 DebuggerSide.cs：
 
    ```csharp
    [assembly:System.Diagnostics.DebuggerVisualizer(
@@ -173,7 +173,7 @@ ms.locfileid: "72637956"
     在搜索框中，键入 "**控制台应用**"，选择 "**模板**"，然后选择 "**创建新的控制台应用（.NET Framework）** "。 在出现的对话框中，选择“创建”。
     ::: moniker-end
     ::: moniker range="vs-2017"
-    在顶部菜单栏，依次选择“文件” > “新建” > “项目”。 在“新建项目”对话框的左窗格中，在“Visual C#”下，选择“Windows 桌面”，然后在中间窗格中选择“控制台应用(.NET Framework)”。
+    从顶部菜单栏中选择“文件” > “新建” > “项目”。 在“新建项目”对话框的左窗格中，在“Visual C#”下，选择“Windows 桌面”，然后在中间窗格中选择“控制台应用(.NET Framework)”。
     ::: moniker-end
 
 2. 为类库键入适当的名称，如 "`MyTestConsole`"，然后单击 "**创建**" 或 **"确定"** 。
@@ -186,13 +186,13 @@ ms.locfileid: "72637956"
 
 2. 在 "**添加引用**" 对话框中，选择 "**浏览**" 选项卡，然后选择 VisualStudio. microsoft.visualstudio.debuggervisualizers.dll。
 
-3. 单击“确定”。
+3. 单击" **确定**"。
 
 4. 右键单击**MyTestConsole** ，然后再次选择 "**添加引用**"。
 
 5. 在 "**添加引用**" 对话框中，单击 "**项目**" 选项卡，然后单击 "MyFirstVisualizer"。
 
-6. 单击“确定”。
+6. 单击" **确定**"。
 
    现在，你将添加代码以完成测试套。
 
@@ -228,7 +228,7 @@ ms.locfileid: "72637956"
 
     控制台应用程序启动并显示可视化工具，并显示字符串 "Hello，World"。
 
-   祝贺您！ 你刚刚生成了第一个可视化工具并进行了测试。
+   祝贺你。 你刚刚生成了第一个可视化工具并进行了测试。
 
    如果您想在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 中使用可视化工具，而不是只从测试工具中调用它，则需要安装它。 有关详细信息，请参阅[如何：安装可视化工具](../debugger/how-to-install-a-visualizer.md)。
 
@@ -242,13 +242,13 @@ ms.locfileid: "72637956"
 
 1. 在“文件”菜单上，选择“新建”>“项目”。
 
-2. 在 "**新建项目**" 对话框中的 **" C#视觉对象**" 下，选择 **.NET Standard**。
+2. 在 "**新建项目**" 对话框中的 **" C#视觉对象**" 下，选择 **.NET Framework**。
 
 3. 在中间窗格中 **，选择 "类库"** 。
 
 4. 在 "**名称**" 框中，为类库键入适当的名称，如 "MySecondVisualizer"。
 
-5. 单击“确定”。
+5. 单击" **确定**"。
 
    现在，你可以向其添加可视化工具项：
 
@@ -262,11 +262,11 @@ ms.locfileid: "72637956"
 
 4. 在 "**名称**" 框中，键入适当的名称，如 SecondVisualizer.cs。
 
-5. 单击 **添加**。
+5. 单击“添加”。
 
    就是这样。 查看文件 SecondVisualizer.cs，并查看模板添加的代码。 继续测试代码。 了解基础知识后，你将能够创建自己的更复杂、更有用的可视化工具。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [可视化工具体系结构](../debugger/visualizer-architecture.md)
 - [如何：安装可视化工具](../debugger/how-to-install-a-visualizer.md)
