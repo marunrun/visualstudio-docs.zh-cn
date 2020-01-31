@@ -8,12 +8,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0c34995a49a785061c67f1324c9c9cd5b5316178
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: d486aac8e990fef6b139bca989a51d74146ecb67
+ms.sourcegitcommit: 8cbced0fb46959a3a2494852df1e41db1177a26c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72633117"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76826401"
 ---
 # <a name="how-to-provide-an-asynchronous-visual-studio-service"></a>如何：提供异步 Visual Studio 服务
 如果要在不阻止 UI 线程的情况下获取服务，则应创建一个异步服务，并在后台线程上加载该包。 出于此目的，你可以使用 <xref:Microsoft.VisualStudio.Shell.AsyncPackage> 而不是 <xref:Microsoft.VisualStudio.Shell.Package>，并使用异步包的特殊异步方法添加该服务。
@@ -22,9 +22,9 @@ ms.locfileid: "72633117"
 
 ## <a name="implement-an-asynchronous-service"></a>实现异步服务
 
-1. 创建 vsix 项目（**文件** > **新**的  > **项目** > **Visual C#**   > **所在**0**VSIX 项目**）。 将项目命名为**TestAsync**。
+1. 创建 vsix 项目（**文件** > **新**的 > **项目** > **Visual C#**  > **所在** > **VSIX 项目**）。 将项目命名为**TestAsync**。
 
-2. 将 VSPackage 添加到项目。 在**解决方案资源管理器**中选择项目节点，然后单击 "**添加** > **新项**"  >  **C#可视化项**" > **扩展性** > **visual Studio 包**"。 将此文件命名为*TestAsyncPackage.cs*。
+2. 将 VSPackage 添加到项目。 在**解决方案资源管理器**中选择项目节点，然后单击 "**添加** > **新项**" >  **C#可视化项**" > **扩展性** > **visual Studio 包**"。 将此文件命名为*TestAsyncPackage.cs*。
 
 3. 在*TestAsyncPackage.cs*中，将包更改为继承自 `AsyncPackage` 而不是 `Package`：
 
@@ -130,6 +130,7 @@ public sealed class TestAsyncPackage : AsyncPackage
     }
 
     ```
+    若要使此服务在此包外可见，请将升级标志值设置为*true* ，作为最后一个参数： `this.AddService(typeof(STextWriterService), CreateTextWriterService, true);`
 
 2. 添加对 VisualStudio 的引用。 *DesignTime*的引用。
 
@@ -178,7 +179,7 @@ public sealed class TestAsyncPackage : AsyncPackage
     TestAsyncCommand.Initialize(this);
     ```
 
-     将此行移到*AsyncPackageForService.cs*文件中的 `InitializeAsync()` 方法。 由于这是异步初始化，因此在使用 <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory.SwitchToMainThreadAsync%2A> 初始化命令之前，必须切换到主线程。 它现在应如下所示：
+     将此行移到*AsyncPackageForService.cs*文件中的 `InitializeAsync()` 方法。 由于这是异步初始化，因此在使用 <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory.SwitchToMainThreadAsync%2A>初始化命令之前，必须切换到主线程。 该类现在应如下所示：
 
     ```csharp
 
@@ -209,7 +210,7 @@ public sealed class TestAsyncPackage : AsyncPackage
     using System.IO;
     ```
 
-6. 添加一个名为 `UseTextWriterAsync()` 的异步方法，该方法可获取服务并使用其方法：
+6. 添加一个名为 `UseTextWriterAsync()`的异步方法，该方法可获取服务并使用其方法：
 
     ```csharp
     private async System.Threading.Tasks.Task UseTextWriterAsync()
@@ -237,5 +238,5 @@ public sealed class TestAsyncPackage : AsyncPackage
 
 8. 生成解决方案并启动调试。 显示 Visual Studio 的实验实例后，请切换到 "**工具**" 菜单，然后查找 "**调用 TestAsyncCommand** " 菜单项。 单击该文件时，TextWriterService 将写入指定的文件。 （无需打开解决方案，因为调用命令也会导致包加载。）
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [使用并提供服务](../extensibility/using-and-providing-services.md)
