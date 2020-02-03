@@ -52,6 +52,8 @@
       items:
         - name: 检查调试器窗口中的数据
           href: debugger-windows.md
+        - name: 检查异常
+          href: exception-helper.md
         - name: 检查变量
           href: autos-and-locals-windows.md
         - name: 监视变量

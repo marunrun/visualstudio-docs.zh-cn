@@ -1,4 +1,4 @@
-- name: MsBuild
+- name: MSBuild
   items:
     - name: MsBuild
       href: msbuild.md
@@ -8,7 +8,8 @@
       href: what-s-new-in-msbuild-15-0.md
     - name: MSBuild 概念
       items:
-        - name: MSBuild 概念 - 概述
+        - name: 概述
+          displayName: msbuild concepts
           href: msbuild-concepts.md
         - name: 属性
           items:
@@ -134,7 +135,7 @@
               href: resolving-assemblies-at-design-time.md
             - name: 任务和任务配置
               items:
-                - name: 配置目标和任务
+                - name: 概述
                   href: configuring-targets-and-tasks.md
                 - name: 配置目标和任务
                   href: how-to-configure-targets-and-tasks.md
@@ -142,7 +143,8 @@
               href: troubleshooting-dotnet-framework-targeting-errors.md
         - name: 文件跟踪
           items:
-            - name: 文件跟踪 - 概述
+            - name: 概述
+              displayName: file tracking
               href: file-tracking.md
             - name: EndTrackingContext
               href: endtrackingcontext.md
@@ -168,7 +170,8 @@
           href: msbuild-best-practices.md
     - name: Logging
       items:
-        - name: MSBuild 中的日志记录 - 概述
+        - name: 概述
+          displayName: logging
           href: logging-in-msbuild.md
         - name: 用 MSBuild 获取生成日志
           href: obtaining-build-logs-with-msbuild.md
@@ -186,63 +189,67 @@
       href: walkthrough-creating-an-msbuild-project-file-from-scratch.md
     - name: MSBuild 参考
       items:
-        - name: MSBuild 参考 - 概述
+        - name: 概述
+          displayName: msbuild reference
           href: msbuild-reference.md
         - name: MSBuild 项目文件架构引用
           items:
-            - name: MSBuild 项目文件架构引用 - 概述
+            - name: 概述
+              displayName: Project File Schema Reference
               href: msbuild-project-file-schema-reference.md
-            - name: Choose 元素 (MSBuild)
+            - name: Choose 元素
               href: choose-element-msbuild.md
-            - name: Import 元素 (MSBuild)
+            - name: Import 元素
               href: import-element-msbuild.md
             - name: ImportGroup 元素
               href: importgroup-element.md
-            - name: Item 元素 (MSBuild)
+            - name: Item 元素
               href: item-element-msbuild.md
-            - name: ItemDefinitionGroup 元素 (MSBuild)
+            - name: ItemDefinitionGroup 元素
               href: itemdefinitiongroup-element-msbuild.md
-            - name: ItemGroup 元素 (MSBuild)
+            - name: ItemGroup 元素
               href: itemgroup-element-msbuild.md
-            - name: ItemMetadata 元素 (MSBuild)
+            - name: ItemMetadata 元素
               href: itemmetadata-element-msbuild.md
-            - name: OnError 元素 (MSBuild)
+            - name: OnError 元素
               href: onerror-element-msbuild.md
-            - name: Otherwise 元素 (MSBuild)
+            - name: Otherwise 元素
               href: otherwise-element-msbuild.md
-            - name: Output 元素 (MSBuild)
+            - name: Output 元素
               href: output-element-msbuild.md
             - name: Parameter 元素
               href: parameter-element.md
             - name: ParameterGroup 元素
               href: parametergroup-element.md
-            - name: Project 元素 (MSBuild)
+            - name: Project 元素
               href: project-element-msbuild.md
-            - name: ProjectExtensions 元素 (MSBuild)
+            - name: ProjectExtensions 元素
               href: projectextensions-element-msbuild.md
-            - name: Property 元素 (MSBuild)
+            - name: Property 属性
               href: property-element-msbuild.md
-            - name: PropertyGroup 元素 (MSBuild)
+            - name: PropertyGroup 元素
               href: propertygroup-element-msbuild.md
-            - name: Sdk 元素 (MSBuild)
+            - name: Sdk 元素
               href: sdk-element-msbuild.md
-            - name: Target 元素 (MSBuild)
+            - name: Target 元素
               href: target-element-msbuild.md
-            - name: Task 元素 (MSBuild)
+            - name: Task 元素
               href: task-element-msbuild.md
-            - name: TaskBody 元素 (MSBuild)
+            - name: TaskBody 元素
               href: taskbody-element-msbuild.md
-            - name: UsingTask 元素 (MSBuild)
+            - name: UsingTask 元素
               href: usingtask-element-msbuild.md
-            - name: When 元素 (MSBuild)
+            - name: When 元素
               href: when-element-msbuild.md
         - name: 任务参考
           items:
-            - name: MSBuild 任务参考 - 概述
+            - name: 概述
+              displayName: Task Reference
               href: msbuild-task-reference.md
-            - name: 特定于 Visual C++ 的任务
+            - name: 特定于 C++ 的任务
               items:
-                - name: 特定于 Visual C++ 的 MSBuild 任务 - 概述
+                - name: 概述
+                  displayName: C++ tasks
                   href: msbuild-tasks-specific-to-visual-cpp.md
                 - name: BscMake 任务
                   href: bscmake-task.md
@@ -442,13 +449,15 @@
           href: msbuild-response-files.md
         - name: WPF 参考
           items:
-            - name: WPF MSBuild 参考 - 概述
+            - name: 概述
+              displayName: WPF MSBuild Reference
               href: wpf-msbuild-reference.md
             - name: WPF .Targets 文件
               href: wpf-dot-targets-files.md
             - name: WPF 任务参考
               items:
-                - name: WPF MSBuild 任务参考 - 概述
+                - name: 概述
+                  displayName: WPF MSBuild Task Reference
                   href: wpf-msbuild-task-reference.md
                 - name: FileClassifier 任务
                   href: fileclassifier-task.md
@@ -472,7 +481,8 @@
           href: special-characters-to-escape.md
     - name: 以编程方式使用 MSBuild
       items:
-        - name: 以编程方式使用 MSBuild
+        - name: 概述
+          displayName: Use MSBuild Programmatically
           href: msbuild-api.md
         - name: 更新到 MSBuild 15
           href: updating-an-existing-application.md
