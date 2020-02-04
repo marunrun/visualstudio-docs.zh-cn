@@ -71,7 +71,7 @@ ms.locfileid: "75585634"
 
      如果你刚创建了编码的 UI 项目，则自动添加第一个 CUIT 文件。 要添加另一个测试文件，请在解决方案资源管理器中打开编码的 UI 测试项目上的快捷菜单，然后选择“添加” > “编码的 UI 测试”    。
 
-     在“为编码的 UI 测试生成代码”对话框中，选择“录制操作” > “编辑 UI 映射”或“添加断言”    。
+     在“为编码的 UI 测试生成代码”对话框中，选择“录制操作” > “编辑 UI 映射或添加断言”    。
 
      ![“为编码的 UI 测试生成代码”对话框](media/generate-code-for-coded-ui-test.png)
 
@@ -154,7 +154,7 @@ ms.locfileid: "75585634"
 
 - 添加一个在每个测试方法开始时运行代码的测试初始化方法（通过 `[TestInitialize]` 属性标识）。 例如，你可以从 TestInitialize 方法启动应用程序。
 
-- 添加一个在每个测试方法开始时运行代码的测试清除方法（通过 `[TestCleanup]` 属性标识）。 例如，可以从 TestCleanup 方法调用用于关闭应用程序的方法。
+- 添加一个在每个测试方法结尾时运行代码的测试清除方法（通过 `[TestCleanup]` 属性标识）。 例如，可以从 TestCleanup 方法调用用于关闭应用程序的方法。
 
 ## <a name="validate-the-properties-of-ui-controls"></a>验证 UI 控件的属性
 
@@ -262,7 +262,7 @@ Mouse.Hover(uIItem1Text, new Point(87, 9));
 
 如果录制网站上的鼠标悬停时遇到了一些问题：
 
-在很多网站中，当你在一个特定的控件上悬停时，它就会展开以显示更多细节。 通常，它们看起来像桌面应用程序中的菜单。 因为这是通用模式，因此编码的 UI 测试支持 Web 浏览的隐式悬停。 例如，如果你在 Internet Explorer 中录制悬停，会触发一个事件。 这些事件可能导致冗余悬停的录制。 因此，隐式悬停采用在 UI 测试配制文件中设置为 `ContinueOnError` 的 `true` 录制。 这可允许在悬停事件失败时，播放继续进行。
+在很多网站中，当你在一个特定的控件上悬停时，它就会展开以显示更多细节。 通常，它们看起来像桌面应用程序中的菜单。 因为这是通用模式，因此编码的 UI 测试支持 Web 浏览的隐式悬停。 例如，如果你在 Internet Explorer 中录制悬停，会触发一个事件。 这些事件可能导致冗余悬停的录制。 因此，录制隐式悬停时，UI 测试配置文件中的 `ContinueOnError` 设置为 `true`。 这可允许在悬停事件失败时，播放继续进行。
 
 若要在 Web 浏览器中启用隐式悬停的录制，请打开配置文件：
 
@@ -400,7 +400,7 @@ Mouse.Hover(uIItem1Text, new Point(87, 9));
 
 ### <a name="to-get-or-set-properties-from-ui-test-controls-directly"></a>从 UI 测试控件直接获取或设置属性
 
-使用派生自 <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl>如 [HtmlList](xref:Microsoft.VisualStudio.TestTools.UITesting.HtmlControls.HtmlList) 或 [WinComboBox](xref:Microsoft.VisualStudio.TestTools.UITesting.WinControls.WinComboBox)）的控件，可以直接获取或设置其属性值。 以下代码演示了部分示例：
+使用派生自 <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl> (如 [HtmlList](xref:Microsoft.VisualStudio.TestTools.UITesting.HtmlControls.HtmlList) 或 [WinComboBox](xref:Microsoft.VisualStudio.TestTools.UITesting.WinControls.WinComboBox)）的控件，可以直接获取或设置其属性值。 以下代码显示了部分示例：
 
 ```csharp
 int i = myHtmlList.ItemCount;

@@ -38,6 +38,8 @@
 - name: 学习 Visual Studio
   expanded: true
   items:
+    - name: 运行程序
+      href: run-program.md
     - name: 打开存储库中的项目
       href: ../tutorial-open-project-from-repo.md?toc=/visualstudio/get-started/csharp/toc.json&bc=/visualstudio/get-started/csharp/breadcrumb/toc.json
     - name: 编写和编辑代码
