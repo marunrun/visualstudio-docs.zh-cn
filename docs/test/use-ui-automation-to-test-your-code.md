@@ -264,7 +264,7 @@ Mouse.Hover(uIItem1Text, new Point(87, 9));
 
 在很多网站中，当你在一个特定的控件上悬停时，它就会展开以显示更多细节。 通常，它们看起来像桌面应用程序中的菜单。 因为这是通用模式，因此编码的 UI 测试支持 Web 浏览的隐式悬停。 例如，如果你在 Internet Explorer 中录制悬停，会触发一个事件。 这些事件可能导致冗余悬停的录制。 因此，隐式悬停采用在 UI 测试配制文件中设置为 `ContinueOnError` 的 `true` 录制。 这可允许在悬停事件失败时，播放继续进行。
 
-若要在 Web 浏览器中启用隐式悬停的录制，请打开配制文件：
+若要在 Web 浏览器中启用隐式悬停的录制，请打开配置文件：
 
 %ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\CodedUITestBuilder.exe.config 
 
@@ -328,7 +328,7 @@ Mouse.Hover(uIItem1Text, new Point(87, 9));
 
 -  UIMap.uitest 中的方法。
 
-     此方法包括你所录制的方法的详细信息或你验证的值。 打开 UIMap.uitest，可编辑此代码  。 它在专用编辑器中打开，你可以从中删除或重构录制的操作。
+     此方法包括你所录制的操作的详细信息或你验证的值。 打开 UIMap.uitest，可编辑此代码  。 它在专用编辑器中打开，你可以从中删除或重构录制的操作。
 
      还可在 UIMap.Designer.cs 中查看生成的方法  。 此方法执行运行测试时录制的操作。
 
@@ -376,7 +376,7 @@ Mouse.Hover(uIItem1Text, new Point(87, 9));
 
 在编码的 UI 测试中使用 UI 测试控件时，这些控件分为两部分：操作和属性。
 
-- 第一部分包括可对 UI 测试控件执行的操作。 例如，编码的 UI 测试可以模拟鼠标点击 UI 测试控件，或模拟键盘键入来影响 UI 测试控件。
+- 第一部分包括可对 UI 测试控件执行的操作。 例如，编码的 UI 测试可以模拟 UI 测试控件上的鼠标点击，或模拟键盘键入来影响 UI 测试控件。
 
 - 第二部分包括允许你获取和设置 UI 测试控件的属性。 例如，编码的 UI 测试可以获取 `ListBox` 中的项计数，或将 `CheckBox` 设置为选定状态。
 
