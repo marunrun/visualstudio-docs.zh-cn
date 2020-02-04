@@ -7,7 +7,7 @@
     - name: 快速入门
       expanded: true
       items:
-        - name: 容器中的 ASP.NET Core 应用
+        - name: 容器中的 ASP.NET 应用
           href: container-tools.md
         - name: 容器中的 React.js 单页应用
           href: container-tools-react.md
