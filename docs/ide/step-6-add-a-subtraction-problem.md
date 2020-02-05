@@ -43,7 +43,7 @@ ms.locfileid: "75776107"
 
      [!INCLUDE [devlang-control-csharp-vb](./includes/devlang-control-csharp-vb.md)]
 
-     新的整型变量的名称（“minuend”和“subtrahend”）不是编程术语。 它们是传统的算术名称，分别是指要减去的数字（subtrahend，减数）和从中减去减数的数字（minuend，被减数）。 差值是被减数减去减数的结果。 你可以使用其他名称，因为程序不要求变量、控件、组件或方法使用特定的名称。 你必须遵循诸如名称不得以数字开头等规则，但通常可以使用 x1、、x2、x3 和 x4 等名称。 但是，通用名称会使代码难以理解，而且几乎无法查明问题。 为了使变量名称保持唯一性和有用性，在本教程的后面部分中，你将使用传统的乘法名称（multiplicand × multiplier = product，被乘数 × 乘数 = 积）和除法名称（dividend ÷ divisor = quotient，被除数 ÷ 除数 = 商）。
+     新的整型变量的名称（“minuend”和“subtrahend”）不是编程术语。   它们是传统的算术名称，分别是指要减去的数字（subtrahend，减数）和从中减去减数的数字（minuend，被减数）。 差值是被减数减去减数的结果。 你可以使用其他名称，因为程序不要求变量、控件、组件或方法使用特定的名称。 你必须遵循诸如名称不得以数字开头等规则，但通常可以使用 x1、、x2、x3 和 x4 等名称。 但是，通用名称会使代码难以理解，而且几乎无法查明问题。 为了使变量名称保持唯一性和有用性，在本教程的后面部分中，你将使用传统的乘法名称（multiplicand × multiplier = product，被乘数 × 乘数 = 积）和除法名称（dividend ÷ divisor = quotient，被除数 ÷ 除数 = 商）。
 
      接下来，您将修改 `StartTheQuiz()` 方法，以便为减法题提供随机值。
 
@@ -60,12 +60,12 @@ ms.locfileid: "75776107"
      可以用多种方法调用 Random 类的 `Next()` 方法，在本教程的前面部分中，已将此类命名为“randomizer”。 可使用多种方式调用的方法称为重载，您可以使用 IntelliSense 来探索这些方法。 请再次查看 IntelliSense 窗口中关于 `Next()` 方法的工具提示。
 
      ![IntelliSense 窗口工具提示](../ide/media/express_overloads.png)<br/>
-IntelliSense 窗口工具提示
+IntelliSense 窗口工具提示 
 
-     此工具提示显示“(+ 2 重载)”，这意味着可以用另外两种方法来调用 `Next()` 方法。 重载包含不同数量或类型的自变量，因此，它们的工作方式彼此略有不同。 例如，某个方法可能只采用一个整型参数，而其重载之一则可能采用一个整数和一个字符串。 您应选择正确的重载，使之执行您所需操作。 将代码添加到 `StartTheQuiz()` 方法时，只要输入 `randomizer.Next(`，IntelliSense 窗口中将显示详细信息。 若要循环显示重载，请选择向上键和向下键，如下图所示：
+     此工具提示显示“(+ 2 重载)”，这意味着可以用另外两种方法来调用 `Next()` 方法。  重载包含不同数量或类型的自变量，因此，它们的工作方式彼此略有不同。 例如，某个方法可能只采用一个整型参数，而其重载之一则可能采用一个整数和一个字符串。 您应选择正确的重载，使之执行您所需操作。 将代码添加到 `StartTheQuiz()` 方法时，只要输入 `randomizer.Next(`，IntelliSense 窗口中将显示详细信息。 若要循环显示重载，请选择向上键  和向下键  ，如下图所示：
 
      ![IntelliSense 中 Next&#40;&#41; 方法的重载](../ide/media/express_nextoverload.png)<br/>
-IntelliSense 中 Next() 方法的重载
+IntelliSense 中 Next() 方法  的重载 
 
      在此示例中，您想要选择最后一个重载，因为您可以指定最小值和最大值。
 
@@ -86,10 +86,10 @@ IntelliSense 中 Next() 方法的重载
      如下图所示，你的程序包括一道减法题：
 
      ![带减法题的数学测验](../ide/media/express_addsubtract.png)<br/>
-有减法问题的数学测验
+有减法问题  的数学测验
 
 ## <a name="to-continue-or-review"></a>继续或查看
 
-- 要转到下一个教程步骤，请参阅**[步骤 7：添加乘法和除法题](../ide/step-7-add-multiplication-and-division-problems.md)**。
+- 要转到下一个教程步骤，请参阅 **[步骤 7：添加乘法和除法题](../ide/step-7-add-multiplication-and-division-problems.md)** 。
 
 - 要返回上一个教程步骤，请参阅[步骤 5：为 NumericUpDown 控件添加 Enter 事件处理程序](../ide/step-5-add-enter-event-handlers-for-the-numericupdown-controls.md)。
