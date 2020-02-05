@@ -16,17 +16,21 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a4480442577ccb321d66ad65f94a7c86cdae62ae
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 56d3c301eb0e9b660a82b6552792a96aa5bd8596
+ms.sourcegitcommit: 8cbced0fb46959a3a2494852df1e41db1177a26c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75574001"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76826583"
 ---
 # <a name="importgroup-element"></a>ImportGroup 元素
+  
 包含在可选条件下进行分组的 `Import` 元素的集合。 有关详细信息，请参阅 [Import 元素 (MSBuild)](../msbuild/import-element-msbuild.md)。
 
- \<Project> \<ImportGroup>
+```xml
+<Project>
+  <ImportGroup>
+```
 
 ## <a name="syntax"></a>语法
 
@@ -72,5 +76,6 @@ ms.locfileid: "75574001"
 ```
 
 ## <a name="see-also"></a>请参阅
+
 - [项目文件架构参考](../msbuild/msbuild-project-file-schema-reference.md)
 - [项](../msbuild/msbuild-items.md)

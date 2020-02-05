@@ -6,20 +6,18 @@ ms.author: dominicn
 ms.date: 05/06/2018
 ms.technology: vs-ide-install
 ms.assetid: 4EB95F75-BC2E-4982-9564-2975805712D8
-ms.openlocfilehash: 78bf7fce98f2a77e05a3fbbd31afcf3f20d97a9f
-ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
+ms.openlocfilehash: ad0be8546b88fbd01f54faf7eb00f71ddd6aa632
+ms.sourcegitcommit: 6375001ab26786af8d4d449f5846f8a49779ed18
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74985138"
+ms.lasthandoff: 01/30/2020
+ms.locfileid: "76892150"
 ---
 # <a name="uninstalling-visual-studio-for-mac"></a>卸载 Visual Studio for Mac
 
 许多 Xamarin 产品支持跨平台应用程序开发，包括 Visual Studio for Mac 等独立应用。
 
 可根据本指南导航到相关部分，单独卸载每个产品，或使用[卸载脚本](#uninstall-script)部分提供的脚本卸载所有内容。
-
-如果之前已在计算机上安装 Xamarin Studio，则除了执行以下步骤外，可能还需按照 [Xamarin 卸载](/xamarin/cross-platform/get-started/installation/uninstalling-xamarin#uninstall-xamarin-studio-on-mac)指南中的说明进行操作。
 
 ## <a name="uninstall-script"></a>卸载脚本
 

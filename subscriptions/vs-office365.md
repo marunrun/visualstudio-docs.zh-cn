@@ -6,29 +6,29 @@ manager: lank
 ms.date: 08/02/2019
 ms.topic: conceptual
 description: 了解一些 Visual Studio 订阅中随附的 Office 365 权益。
-ms.openlocfilehash: 2dde8489f15d8bd2e6a5d04045b99aea2245f73d
-ms.sourcegitcommit: ca3bb6db949f5e405f6ffe1afa5f430662c1173f
+ms.openlocfilehash: b9834411c4b951fb7cdb09ac48dad651d109d618
+ms.sourcegitcommit: bb72ce6ec173f3ae06c7ae57322c43690f27553c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74099614"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76967340"
 ---
-# <a name="office-365-proplus-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 Office 365 专业增强版
+# <a name="office-365-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 Office 365
 
-出色地完成工作。 使用不断更新的应用随时随地工作。 Office 365 专业增强版订阅随附以下高级应用：Word、Excel、PowerPoint、OneNote、Outlook、Publisher 和 Access（Publisher 和 Access 仅适用于电脑）。 这些应用可安装在多台设备上，包括 PC、Mac、iPad、iPhone、Android 平板电脑和 Android 手机。 借助订阅，可获取最新版应用，并自动接收已发布的更新。
+出色地完成工作。 使用不断更新的应用随时随地工作。 Office 365 是随附高级应用的订阅，如 Word、Excel、PowerPoint、OneNote、Outlook、Publisher 和 Access（Publisher 和 Access 仅适用于 PC）。 这些应用可安装在多台设备上，包括 PC、Mac、iPad、iPhone、Android 平板电脑和 Android 手机。 借助订阅，可获取最新版应用，并自动接收已发布的更新。
 
 > [!NOTE]
 > Visual Studio 订阅允许将 Office 365 用于生产用途。  
 
-## <a name="getting-started-with-office-365-proplus"></a>开始使用 Office 365 专业增强版
+## <a name="getting-started-with-office-365"></a>开始使用 Office 365 
 
-请按照以下步骤下载并激活 Office 365 专业增强版：
+若要下载和激活 Office 365，请按照下面这些步骤操作：
 1. 登录 Visual Studio Enterprise 订阅。
 2. 单击“下载”  选项卡。
 3. 此时，系统会列出特别推荐的下载内容。 在 Office 列表中，选择“Office 365”  。
    > [!div class="mx-imgBorder"]
    > ![Office 365 下载](_img/vs-office365/vs-office365-downloads.png)
-0. 必须有产品密钥，才能安装 Office 365 专业增强版。  单击 Office 365 列表下的“获取密钥”链接  。
+0. 必须有产品密钥，才能安装 Office 365。  单击 Office 365 列表下的“获取密钥”链接  。
    > [!div class="mx-imgBorder"]
    > ![Office 365：获取产品密钥](_img/vs-office365/vs-office365-get-key.png)
 0. 弹出窗口将显示任何你已认领的密钥以及可用的密钥。  要获取新密钥，请单击“Office Professional Plus 2019”列表下的“索取密钥”   。
@@ -60,10 +60,10 @@ ms.locfileid: "74099614"
 | Visual Studio Enterprise、Visual Studio Professional（月度云） | Azure | 不可用 | 不可用 |
 |  |
 
-<sup>1</sup>  包括：  不得转售 (NFR)、Visual Studio 行业合作伙伴 (VSIP)、Microsoft 合作伙伴网络 (MPN)、FTE、MCT 软件和服务开发人员、BizSpark、最有价值专家 (MVP)、区域总监 (RD)、MCT 软件和服务、Imagine、Microsoft 合作伙伴网络。
+<sup>1</sup>  *包括：* 不得转售 (NFR)、Visual Studio 行业合作伙伴 (VSIP)、Microsoft 合作伙伴网络 (MPN)、FTE、MCT 软件和服务开发人员、BizSpark、最有价值专家 (MVP)、区域总监 (RD)、MCT 软件和服务、Imagine、Microsoft 合作伙伴网络。
 
 > [!NOTE]
-> Microsoft 不再在云订阅中提供 Visual Studio Professional 年度订阅和 Visual Studio Enterprise 年度订阅。 现有客户体验以及续订、增加、减少或取消订阅的能力不会发生变化。 我们鼓励新客户访问 [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) 以浏览购买 Visual Studio 的不同选项。
+> Microsoft 不再在云订阅中提供 Visual Studio Professional 年度订阅和 Visual Studio Enterprise 年度订阅。 现有客户体验以及续订、增加、减少或取消订阅的能力不会发生变化。 建议新客户访问 [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/)，查看各 Visual Studio 购买选项。
 
 无法确定正在使用哪些订阅？  连接到 [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs)，查看分配给电子邮件地址的所有订阅。 如果没有看到所有订阅，则可能是有一个或多个订阅分配给了不同的电子邮件地址。  你需要使用其他电子邮件地址登录来查看那些订阅。
 
