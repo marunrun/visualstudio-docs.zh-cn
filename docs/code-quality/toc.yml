@@ -12,7 +12,7 @@
           href: roslyn-analyzers-overview.md
         - name: 安装
           href: install-roslyn-analyzers.md
-        - name: 配置
+        - name: Configuration
           href: use-roslyn-analyzers.md
         - name: 禁用代码分析
           href: disable-code-analysis.md
@@ -27,7 +27,7 @@
               href: fxcop-analyzers.yml
             - name: 安装
               href: install-fxcop-analyzers.md
-            - name: 配置
+            - name: Configuration
               items:
                 - name: 概述
                   href: configure-fxcop-analyzers.md
@@ -54,7 +54,7 @@
           href: fxcop-analyzers.yml
         - name: 手动运行旧版分析
           href: how-to-run-code-analysis-manually-for-managed-code.md
-        - name: 配置
+        - name: Configuration
           items:
             - name: 配置旧版分析
               href: how-to-configure-code-analysis-for-a-managed-code-project.md
@@ -1055,6 +1055,10 @@
           href: c26812.md
         - name: C26814
           href: c26814.md
+        - name: C26815
+          href: c26815.md
+        - name: C26816
+          href: c26816.md
     - name: C/C++ 警告
       items:
         - name: 概述
