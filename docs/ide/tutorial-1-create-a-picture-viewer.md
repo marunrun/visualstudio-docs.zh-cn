@@ -64,7 +64,7 @@ ms.locfileid: "76115092"
 
 ## <a name="next-steps"></a>后续步骤
 
-要开始学习本教程，请从[步骤 1：创建 Windows 窗体应用程序项目](../ide/step-1-create-a-windows-forms-application-project.md)** 开始。
+要开始学习本教程，请从 **[步骤 1：创建 Windows 窗体应用程序项目](../ide/step-1-create-a-windows-forms-application-project.md)** 开始。
 
 ## <a name="see-also"></a>请参阅
 
