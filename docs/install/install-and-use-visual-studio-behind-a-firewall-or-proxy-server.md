@@ -1,7 +1,7 @@
 ---
 title: 在防火墙或代理服务器背后安装和使用
 description: 如果组织使用防火墙或代理服务器，请检查希望添加到允许列表或打开的域 URL、端口和协议
-ms.date: 05/22/2019
+ms.date: 02/01/2020
 ms.custom: seodec18
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +17,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: d74cb5b1594c0e4d347e2f8a4e1924cf68d64eed
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.openlocfilehash: 474042f88b0bee90f2bdd61298e09c5fabfa122c
+ms.sourcegitcommit: b2fc9ac7d73c847508f6ed082bed026476bb3955
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76114940"
+ms.lasthandoff: 02/05/2020
+ms.locfileid: "77027567"
 ---
 # <a name="install-and-use-visual-studio-and-azure-services-behind-a-firewall-or-proxy-server"></a>在防火墙或代理服务器后面安装和使用 Visual Studio 和 Azure 服务
 
@@ -53,6 +53,7 @@ ms.locfileid: "76114940"
 | dl.xamarin.com | 安装包下载位置 |
 | xamarin-downloads.azureedge.net | Android SDK 包下载列表位置 |
 | marketplace.visualstudio.com | Visual Studio 扩展下载位置 |
+| \*.gallerycdn.vsassets.io  | Visual Studio 扩展下载位置 |
 | visualstudio.microsoft.com | 文档位置 |
 | docs.microsoft.com | 文档位置 |
 | msdn.microsoft.com | 文档位置 |
@@ -76,6 +77,10 @@ ms.locfileid: "76114940"
 | www\.incredibuild.com | 使用 C++ 的游戏开发 (IncrediBuild) |
 | incredibuildvs2017i.azureedge.net | 使用 C++ 的游戏开发 (IncrediBuild) |
 | www\.python.org | Python 开发 (Python) <br /><br />数据科学和分析应用程序 (Python) |
+| developerservices2.apple.com | Xamarin.iOS provisioning |
+| developer.apple.com | Xamarin.iOS provisioning |
+| appstoreconnect.apple.com | Xamarin.iOS provisioning |
+| idmsa.apple.com | Xamarin.iOS provisioning |
 | | |
 
 ## <a name="use-visual-studio-and-azure-services"></a>使用 Visual Studio 和 Azure 服务
@@ -88,24 +93,24 @@ ms.locfileid: "76114940"
 | - | - | - | - | - |
 | URL<br>解析 | go.microsoft.com<br><br>aka.ms | | | 用于缩短 URL，然后解析为更长的 URL |
 | 起始页 | vsstartpage.blob.core.windows.net | | 443 | 用于显示起始页上显示的开发人员新闻（仅 Visual Studio 2017） |
-| 目标<br> 通知 <br>服务 | targetednotifications.azurewebsites.net <br><br>www.research.net | | 80<br><br>443 | 用于将全局通知列表筛选为一个仅适用于特定类型计算机/使用方案的列表 |
+| 目标<br> 通知 <br>服务 | targetednotifications-tm.trafficmanager.net <br><br>www.research.net | | 443<br><br>443 | 用于将全局通知列表筛选为一个仅适用于特定类型计算机/使用方案的列表 |
 | 扩展名 <br>更新检查 | marketplace.visualstudio.com<br><br>&#42;.windows.net <br>&#42;.microsoftonline.com <br>&#42;.live.com | | 443 | 用于在已安装扩展有可用更新时提供通知 <br><br> 用作登录位置 |
 | AI 项目 <br>集成 | az861674.vo.msecnd.net | | 443<br> | 用于配置新项目，以将使用情况数据发送到你注册的 Application Insights 帐户 |
 | 代码透镜 | codelensprodscus1su0.app。<br>codelens.visualstudio.com | | 443 | 用于在编辑器中提供有关上次更新文件的时间、更改的时间线、更改与之关联的工作项、作者等信息 |
 | 实验 <br>功能启用 | visualstudio-devdiv-c2s.msedge.net | | 80 | 用于激活实验性新功能或功能更改 |
-| 标识“徽章” <br>（用户名和虚拟形象）<br>和 <br>漫游设置 | app.vssps.visualstudio.com <br><br>app.vsspsext.visualstudio.com<br><br>app.vssps.visualstudio.com<br><br> ns-sb2-prod-ch1-002.cloudapp.net <br><br>az700632.vo.msecnd.net | | 443 | 用于在 IDE 中显示用户的名称和虚拟形象 <br><br> 用于确保设置更改从一台计算机漫游到另一台计算机 |
+| 标识“徽章” <br>（用户名和虚拟形象）<br>和 <br>漫游设置 | app.vssps.visualstudio.com <br><br>app.vsspsext.visualstudio.com<br><br>app.vssps.visualstudio.com<br><br> ns-sb2-prod-ch1-002.cloudapp.net <br><br>az700632.vo.msecnd.net<br><br>api.vstsusers.visualstudio.com/profiles/* | | 443 | 用于在 IDE 中显示用户的名称和虚拟形象 <br><br> 用于确保设置更改从一台计算机漫游到另一台计算机 |
 | 远程设置 | az700632.vo.msecnd.net | | 443 | 用于关闭已知会在 Visual Studio 中引发问题的扩展 |
 | Windows 工具 | developer.microsoft.com <br><br>dev.windows.com  <br><br>appdev.microsoft.com | https | 443 | 用于 Windows 应用商店方案 |
 | JSON 架构 <br>发现 <br><br>JSON 架构 <br>定义<br><br>JSON 架构 <br>支持 <br>Azure 资源 | json.schemastore.org <br>schemastoreorg.azurewebsites.net<br><br>json-schema.org<br><br>schema.management.azure.com | http<br>https<br><br>http<br><br>https | 80<br>443 <br><br> 443<br><br>443 | 用于发现和下载 JSON 架构，用户在编辑 JSON 文档时可能会用到此架构 <br><br>用于获取 JSON 的元验证架构<br><br>用于获取 Azure 资源管理器部署模板的当前架构 |
 | NPM 包 <br>发现 | Skimdb.npmjs.com <br><br>Registry.npmjs.org <br><br>Api.npms.io | https<br><br>http/s<br><br>https | 443<br><br>80/443<br><br>443 | 搜索 NPM 包的必要条件，并用于 Web 项目中客户端脚本包的安装 |
 | Bower 包<br> 图标<br><br>Bower 包 <br>search | Bower.io <br><br>bowercache.azurewebsites.net <br>go.microsoft.com <br>Registry.bower.io | http<br><br>https<br>http<br>https | 80<br><br>443<br>80<br>443 | 提供默认的 Bower 包图标  <br><br>提供搜索 Bower 包的能力 |
-| NuGet<br><br>NuGet 程序包<br> 发现 | Api.nuget.org <br>www.nuget.org <br>Nuget.org<br><br>crl3.digicert.com <br>crl4.digicert.com <br>ocsp.digicert.com <br>cacerts.digicert.com | https<br><br>http/s | 443<br><br>80/443<br> | 用于验证签名的 NuGet 包。<br><br>搜索 NuGet 包和版本的必要条件 |
+| NuGet<br><br>NuGet 程序包<br> 发现 | api.nuget.org <br>www.nuget.org <br>nuget.org <br>azuresearch-usnc.nuget.org <br>azuresearch-usnc.nuget.org <br>licenses.nuget.org <br>nuget.cdn.azure.cn <br>azuresearch-ea.nuget.org <br>azuresearch-sea.nuget.org <br><br>crl3.digicert.com <br>crl4.digicert.com <br>ocsp.digicert.com <br>cacerts.digicert.com | https<br><br>http/s | 443<br><br>80/443<br> | 用于验证签名的 NuGet 包。<br><br>搜索 NuGet 包和版本的必要条件 |
 | GitHub 存储库信息 | api.github.com | https | 443 | 获取有关 Bower 包其他信息的必要条件 |
 | Web Linters | Eslint.org<br><br>www.Bing.com <br><br>www.coffeelint.org | http | 80 | |
 | Cookiecutter<br>资源管理器模板<br>发现 <br><br>Cookiecutter <br>资源管理器项目<br> 创建 | api.github.com <br>raw.githubusercontent.com <br>go.microsoft.com<br><br>pypi.org <br> pypi.python.org | https | 443<br> | 用于从我们建议的源和 github 存储库发现联机模板 <br><br>用于从 cookiecutter 模板创建一个项目，要求从 Python 包索引 (PyPI) 一次性按需安装 cookiecutter Python 包 |
 | Python 包 <br>发现<br><br>Python 包 <br>管理<br><br>新建 <br>Python <br> 项目 <br>模板 | pypi.org<br> <br>pypi.python.org <br>bootstrap.pypa.io<br><br>go.microsoft.com | https | 443 | 提供搜索 pip 包的能力<br><br>用于自动安装 pip（如缺失） <br><br>用于将以下 Python 项目模板解析为 cookiecutter 模板 URL：<br> - 分类器项目<br>- 聚类分析项目 <br> - 回归项目 <br> - 使用 PyKinect 的 PyGame <br> - Pyvot 项目 |
 | Office Web <br>Add-in — 外接程序 <br> file:/// <br>确认 <br>服务 | verificationservice.osi.office.net | https | 443 | 用于验证 Office Web 外接程序的清单 |
-| SharePoint 和 <br>Office 外接程序 | sharepoint.com | https | 443 | 用于将 SharePoint 和 Office 外接程序发布到 SharePoint Online 并对其进行测试 |
+| SharePoint 和 <br>Office 外接程序 | sharepoint.com<br> office365.com<br> microsoftonline.com <br> outlook.com | https | 443 | 用于将 SharePoint 和 Office 外接程序发布到 SharePoint Online 和 Office 365 并对其进行测试 |
 | 工作流管理器 <br>测试服务<br> 主机 | | http | 12292 | 自动创建的防火墙规则，用于测试带工作流的 SharePoint 外接程序 |
 | 自动收集 <br>可靠性统计信息 <br>和其他 <br>客户体验 <br>改善计划 (CEIP)<br> 面向 Azure SDK 和 <br>面向 SQL 工具 <br><br> | vortex.data.microsoft.com<br> <br>dc.services.visualstudio.com | https | 443 | 用于将可靠性统计信息（故障/挂起数据）从用户发送到 Microsoft。 在启用 Windows 错误报告的情况下，仍将上传实际故障/挂起转储；只会禁止统计信息； <br>用于向 Visual Studio 显示 Azure Tools SDK 扩展的匿名使用模式，并向 Visual Studio 显示 SQL 工具的使用模式 |
 | Visual Studio <br> 客户体验 <br>改善计划 (CEIP) <br><br>PerfWatson.exe | vortex.data.microsoft.com<br>dc.services.visualstudio.com<br>visualstudio-devdiv-c2s.msedge.net<br>az667904.vo.msecnd.net <br>scus-breeziest-in.cloudapp.net<br> | https | 443 | 用于收集匿名使用模式和错误日志 <br><br>用于跟踪 UI 冻结问题 |
@@ -122,8 +127,18 @@ ms.locfileid: "76114940"
 | 快照 <br>调试器 | 1. go.microsoft.com <br>2. management.azure.com <br> 3. &#42;azurewebsites.net <br> 4. &#42;scm.azurewebsites.net<br>5. api.nuget.org/v3/index.json <br>6. msvsmon (.exe) | 1. https <br>2. https  <br>3. http <br>4. https <br>5. https <br>6.Concord <br> | 1. 443<br> 2. 443<br>3. 80  <br>4. 443<br> 5. 443<br> 6. 4022（Visual Studio 从属版本） | 1.查询 .json 文件的应用服务 SKU 大小 <br>2.各种 Azure RM 调用 <br>3.站点预热调用渠道  <br>4.客户的目标应用服务 Kudu 终结点 <br>5.查询 nuget.org 中发布的站点扩展版本 <br>6.远程调试通道 |
 | Azure 流分析 <br><br>HDInsight | Management.azure.com | https | 443 | 用于查看、提交、运行和管理 ASA 作业 <br><br> 用于浏览 HDI 群集，以及提交、诊断和调试 HDI 作业 |
 | Azure Data Lake | &#42;.azuredatalakestore.net <br>&#42;.azuredatalakeanalytics.net | https | 443 | 用于编译、提交、查看、诊断和调试作业；用于浏览 ADLS 文件；用于上传和下载文件 |
-| 打包服务 | [account].visualstudio.com <br/> [account].\*.visualstudio.com <br/> \*.blob.core.windows.net <br/> registry.npmjs.org </br> nodejs.org <br/> dist.nuget.org <br/> nuget.org | https | 443 | 仅特定生成任务方案（例如：NuGet 工具安装程序、节点工具安装程序）或者打算将公共上游与源结合使用时才需使用 .npmjs.org、.nuget.org 和 .nodejs.org。 要使用打包服务的核心功能，还需具备其他三个域。 |
+| 打包服务 | [account].visualstudio.com <br/> [account].\*.visualstudio.com <br/> \*.blob.core.windows.net <br/> registry.npmjs.org </br> nodejs.org <br/> dist.nuget.org <br/> nuget.org | https | 443 | 仅特定生成任务方案（例如：NuGet 工具安装程序、节点工具安装程序）或者打算将公共上游与源结合使用时才需使用 \*.npmjs.org、\*.nuget.org 和 \*.nodejs.org。 要使用打包服务的核心功能，还需具备其他三个域。 |
 | Azure DevOps Services | \*.vsassets.io <br/> static2.sharepointonline.com <br/> dev.azure.com | | | 用于连接 Azure DevOps Services |
+| 开发人员社区 | sendvsfeedback2.azurewebsites.net/api | https | 443 | 用于调用开发者社区反馈工具 API（我的问题、搜索、投票、评论、提交、上传、恢复） |
+| Intellicode | \*.intellicode.vsengsaas.visualstudio.com | https | 443 | 用于调用 Intellicode API |
+| Live Share | \*.liveshare.vsengsaas.visualstudio.com| https | 443 | 用于调用 Live Share API |
+| Visual Studio Online | \*.online.visualstudio.com | https | 443 | 用于调用 Visual Studio Online API |
+| JavaScript 自动类型获取 | registry.npmjs.org | https | 443 | 用于安装 TypeScript 类型定义，为常用 JavaScript 库提供 Intellisense |
+| Visual Studio 订阅许可服务 | app.vssps.visualstudio.com/apis/Licensing/ClientRights | https | 443 | 联机激活的许可 |
+| 调试器 | 1. <br>vsdebugger.blob.core.windows.net <br>vsdebugger.azureedge.net <br><br>2. <br>download.visualstudio.com/\*/onecore.msvsmon.\*.zip<br><br> 3. referencesource.microsoft.com/symbols <br><br> 4. <br>symbols.nuget.org/download/symbols<br><br> 5. visualstudio.commsdl.microsoft.com/download/symbols | https | 443 | 1. <br>用于下载在 Unix/MacOS 上通过 SSH 进行 .NET Core 调试所需的调试器位 <br><br>2. <br>用于下载远程 Windows Docker 容器调试的调试器位<br><br> 3.用于 .NET Framework 源单步执行 <br><br> 4. <br>（如果用户选择加入）用于下载已发布到 nuget.org 符号服务器的符号。<br><br> 5.（如果用户选择加入）用于下载 MS 符号和二进制文件，还可能需要调试转储中的托管代码 |
+| Visual Studio Online| \*.online.visualstudio.com | https | 443 | 用于调用 Visual Studio Online API |
+| Xamarin Android 应用发布 | \*.googleapis.com <br/> play.google.com <br/>accounts.google.com | https | 443 | 用于与 Google Play Store 服务交互，以便直接从 Visual Studio 发布/上传 Xamarin Android 应用程序。 |
+| Azure 容器注册表 | *.azurecr.io | https | 443 | 访问 Azure 上托管的容器注册表，用于配置 CICD 管道 |
 | | | | | |
 
 ## <a name="troubleshoot-network-related-errors"></a>与网络相关错误的疑难解答

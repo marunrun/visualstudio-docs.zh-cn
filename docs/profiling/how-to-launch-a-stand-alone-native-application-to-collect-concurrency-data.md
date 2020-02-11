@@ -6,14 +6,15 @@ ms.assetid: e5aed651-afed-4b70-9a7e-1a6032cc614f
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b20d239ee1be6cba9484e31efc95b1f38572b59
-ms.sourcegitcommit: 91c7f1b525e0c22d938bc4080ba4ceac2483474f
+ms.openlocfilehash: 1bb8baed0d9154c02f23738944de2d3e84b7402b
+ms.sourcegitcommit: 0c3c4bd38455f7046c5c5a448eaaa5e407ad5bf4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67032926"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76726030"
 ---
 # <a name="how-to-launch-a-stand-alone-native-application-with-the-profiler-to-collect-concurrency-data-by-using-the-command-line"></a>如何：使用探查器启动独立本机应用程序，并通过命令行收集并发数据
 本主题介绍如何使用 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 分析工具命令行工具启动本机独立（客户端）应用程序以及收集进程和线程并发数据。
@@ -42,7 +43,7 @@ ms.locfileid: "67032926"
 
      可以将下表中的任意选项与 **/start:concurrency** 选项一起使用。
 
-    |选项|说明|
+    |选项|描述|
     |------------|-----------------|
     |[/wincounter](../profiling/wincounter.md) **:** `WinCounterPath`|指定要在分析期间收集的 Windows 性能计数器。|
     |[/automark](../profiling/automark.md) **:** `Interval`|仅与 **/wincounter** 一起使用。 指定两次 Windows 性能计数器收集事件相隔的毫秒数。 默认值为 500。|
@@ -54,7 +55,7 @@ ms.locfileid: "67032926"
 
      可以将下表中的任意选项与 **/launch** 选项一起使用。
 
-    |选项|说明|
+    |选项|描述|
     |------------|-----------------|
     |[/args](../profiling/args.md) **:** `Arguments`|指定一个字符串，其中包含要传递给目标应用程序的命令行参数。|
     |[/console](../profiling/console.md)|在另一个窗口中启动目标命令行应用程序。|
@@ -67,7 +68,7 @@ ms.locfileid: "67032926"
 
 - 下表中的选项对可启动和停止数据收集。 在单独的命令行上指定每个选项。 可多次打开和关闭数据收集。
 
-    |选项|说明|
+    |选项|描述|
     |------------|-----------------|
     |[/globalon /globaloff](../profiling/globalon-and-globaloff.md)|启动 ( **/globalon**) 或停止 ( **/globaloff**) 所有进程的数据收集。|
     |[/processon](../profiling/processon-and-processoff.md) **:** `PID` [/processoff](../profiling/processon-and-processoff.md) **:** `PID`|启动 ( **/processon**) 或停止 ( **/processoff**) 由进程 ID (`PID`) 指定的进程的数据收集。|
@@ -86,4 +87,4 @@ ms.locfileid: "67032926"
 
 2. 在命令提示符下键入以下命令以关闭探查器：
 
-     **VSPerfCmd** [/shutdown](../profiling/shutdown.md)
+     **VSPerfCmd**  [/shutdown](../profiling/shutdown.md)

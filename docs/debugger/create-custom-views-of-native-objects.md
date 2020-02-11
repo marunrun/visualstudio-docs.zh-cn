@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67c96c8d28014ee22a387c3ba3ca828b37f267dd
-ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
+ms.openlocfilehash: 61a8cce68a55f6db26de7754bdfc9dda196c457a
+ms.sourcegitcommit: 00ba14d9c20224319a5e93dfc1e0d48d643a5fcd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75405213"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77091777"
 ---
 # <a name="create-custom-views-of-c-objects-in-the-debugger-using-the-natvis-framework"></a>使用 Natvis 框架在C++调试器中创建对象的自定义视图
 
@@ -37,7 +37,7 @@ Natvis 替换了 Visual Studio 早期版本中的 *autoexp.dat* 文件，提供�
 
 ![TextBox 默认可视化](../debugger/media/dbg_natvis_textbox_default.png "TextBox 默认可视化")
 
-突出显示的行显示 `Text` 类的 `TextBox` 属性。 由于类的层次结构很复杂，因此很难找到这个属性。 调试器不知道如何解释自定义字符串类型，所以你看不到文本框中的字符串。
+高亮行显示的是 `Text` 类的 `TextBox` 属性。 由于类的层次结构很复杂，因此很难找到这个属性。 调试器不知道如何解释自定义字符串类型，所以你看不到文本框中的字符串。
 
 如果应用了 Natvis 自定义可视化工具规则，那么在变量窗口中，同样的`TextBox`看起来就简单得多。 类的重要成员会显示在一起，并且调试器会显示自定义字符串类型的基础字符串值。
 
@@ -84,7 +84,7 @@ Visual Studio 调试器会自动在 C++ 项目中加载 *.natvis* 文件，默�
 
 **从 *.pdb* 中排除 *.natvis* 文件：**
 
-1. 在**解决方案资源管理器**中选择 *.natvis* 文件，然后选择**属性**图标，或右键单击该文件并选择**属性**。
+1. 在*解决方案资源管理器*中选择 **.natvis** 文件，然后选择**属性**图标，或右键单击该文件并选择**属性**。
 
 1. 按下**从生成中排除**旁边的箭头并选择**是**，然后选择**确定**。
 
@@ -92,7 +92,7 @@ Visual Studio 调试器会自动在 C++ 项目中加载 *.natvis* 文件，默�
 >如果是调试可执行的项目，则使用解决方案项来添加 *.pdb* 中不包含的 *.natvis* 文件，因为没有可用的 C++ 项目。
 
 >[!NOTE]
->从 *.pdb* 加载的 Natvis 规则仅适用于 *.pdb* 引用的模块中的类型。 例如，如果 *Module1.pdb* 包含一个名为 `Test` 的类型的 Natvis 条目，则它仅适用于 *Module1.dll* 中的 `Test` 类。 如果另一个模块也定义了一个名为 `Test` 的类，则 *Module1.pdb* 的 Natvis 条目不适用于它。
+>从 *.pdb* 加载的 Natvis 规则仅适用于 *.pdb* 引用的模块中的类型。 例如，如果 *Module1.pdb* 包含一个名为 `Test` 的类型的 Natvis 条目，则它仅适用于 `Test`Module1.dll*中的* 类。 如果另一个模块也定义了一个名为 `Test` 的类，则 *Module1.pdb* 的 Natvis 条目不适用于它。
 
 ### <a name="BKMK_natvis_location"></a>Natvis 文件位置
 
@@ -131,17 +131,17 @@ Visual Studio 调试器会自动在 C++ 项目中加载 *.natvis* 文件，默�
 还可以使用 **.natvisreload** 命令将 *.natvis* 文件升级到较新的版本。 例如， *.natvis* 文件可能被纳入了源代码管理中，并且你需要获取其他人最近所做的更改。
 
 ## <a name="BKMK_Expressions_and_formatting"></a> 表达式和格式化
-Natvis 可视化效果使用 C++ 表达式指定需显示的数据项。 除了[上下文运算符 (C++)](../debugger/context-operator-cpp.md) 中所述的、调试器中的 C++ 表达式的增强功能和限制外，还要注意以下事项：
+Natvis 的可视化功能使用 C++ 表达式来指定要显示的数据项。 除了[上下文运算符 (C++)](../debugger/context-operator-cpp.md) 中所述的、调试器中的 C++ 表达式的增强功能和限制外，还要注意以下事项：
 
 - Natvis 表达式在可视化对象上下文而非当前堆栈框架中进行计算。 例如，Natvis 表达式中的 `x` 指的是可视化对象中名为**x**的字段，而不是当前函数中名为**x**的局部变量。 尽管可以访问全局变量，但不能访问 Natvis 表达式中的局部变量。
 
 - Natvis 表达式不允许函数计算或副作用。 函数调用和赋值运算符会被忽略。 由于[调试器内部函数](../debugger/expressions-in-the-debugger.md#BKMK_Using_debugger_intrinisic_functions_to_maintain_state)没有副作用，因此可以从任何 Natvis 表达式随意调用，即使系统不允许进行其他函数调用也是如此。
 
-- 要控制表达式的显示方式，可以使用 [C++ 中的格式说明符](format-specifiers-in-cpp.md#BKMK_Visual_Studio_2012_format_specifiers)中所述的任何格式说明符。 如果条目由 Natvis 在内部使用，格式说明符将被忽略，例如 [ArrayItems 扩展](../debugger/create-custom-views-of-native-objects.md#BKMK_ArrayItems_expansion)中的 `Size` 表达式。
+- 要控制表达式的显示方式，可以使用 [C++ 中的格式说明符](format-specifiers-in-cpp.md#BKMK_Visual_Studio_2012_format_specifiers)中所述的任何格式说明符。 如果条目由 Natvis 在内部使用，格式说明符将被忽略，例如 `Size`ArrayItems 扩展[中的 ](../debugger/create-custom-views-of-native-objects.md#BKMK_ArrayItems_expansion) 表达式。
 
 ## <a name="natvis-views"></a>Natvis 视图
 
-你可以定义不同的 Natvis 视图，以便用不同的方式来显示类型。 例如，下面是 `std::vector` 的一个可视化效果，定义了一个名为 `simple` 的简化视图。 默认视图和 `simple` 视图中都显示了 `DisplayString` 和 `ArrayItems` 元素，但 `simple` 视图中却未显示 `[size]` 和 `[capacity]` 项。
+你可以定义不同的 Natvis 视图，以便用不同的方式来显示类型。 例如，下面是 `std::vector` 的一个可视化效果，定义了一个名为 `simple` 的简化视图。 默认视图和 `DisplayString` 视图中都显示了 `ArrayItems` 和 `simple` 元素，但 `[size]` 视图中却未显示 `[capacity]` 和 `simple` 项。
 
 ```xml
 <Type Name="std::vector&lt;*&gt;">
@@ -186,7 +186,7 @@ Natvis 可视化效果使用 C++ 表达式指定需显示的数据项。 除了[
 
 `AutoVisualizer` 元素可以具有[类型](#BKMK_Type)、 [HResult](#BKMK_HResult)、 [UIVisualizer](#BKMK_UIVisualizer)和[CustomVisualizer](#BKMK_CustomVisualizer)子项。
 
-### <a name="BKMK_Type"></a> Type 元素
+### <a name="BKMK_Type"></a>Type 元素
 
 基本 `Type` 如下例所示：
 
@@ -236,7 +236,7 @@ Natvis 可视化效果使用 C++ 表达式指定需显示的数据项。 除了[
 
 #### <a name="priority-attribute"></a>优先级特性
 
-如果某个定义的分析失败，可选的 `Priority` 属性会指定使用备用定义的顺序。 `Priority` 的值包括：`Low`、`MediumLow`、`Medium`、`MediumHigh` 和 `High`。 默认值为 `Medium`。 `Priority`属性只区分同一个 *.natvis* 文件中的优先级。
+如果某个定义的分析失败，可选的 `Priority` 属性会指定使用备用定义的顺序。 `Priority` 的值包括：`Low`、`MediumLow`、`Medium`、`MediumHigh` 和 `High`。 默认值是 `Medium`。 `Priority`属性只区分同一个 *.natvis* 文件中的优先级。
 
 下面的示例会首先分析与 2015 STL 匹配的条目。 如果分析失败，就会使用 STL 的 2013 版本的备用条目：
 
@@ -259,7 +259,7 @@ Natvis 可视化效果使用 C++ 表达式指定需显示的数据项。 除了[
 ```
 
 ### <a name="optional-attribute"></a>可选特性
-你可以将 `Optional` 属性放在任一节点上。 如果某个可选节点内的某个子表达式的分析失败，调试器就会忽略该节点，但会应用 `Type` 规则的其余部分。 在下面的类型中， `[State]` 不可选，但 `[Exception]` 可选。  如果 `MyNamespace::MyClass` 包含名为 `M_exceptionHolder` 的字段，就会同时显示 `[State]` 节点和 `[Exception]` 节点，但如果不包含 `_M_exceptionHolder` 字段，就会只显示 `[State]` 节点。
+你可以将 `Optional` 属性放在任一节点上。 如果某个可选节点内的某个子表达式的分析失败，调试器就会忽略该节点，但会应用 `Type` 规则的其余部分。 在下面的类型中，`[State]` 不是可选的，但 `[Exception]` 是可选的。  如果 `MyNamespace::MyClass` 包含名为 `M_exceptionHolder` 的字段，就会同时显示 `[State]` 节点和 `[Exception]` 节点，但如果不包含 `_M_exceptionHolder` 字段，就会只显示 `[State]` 节点。
 
 ```xml
 <Type Name="MyNamespace::MyClass">
@@ -311,7 +311,7 @@ Natvis 可视化效果使用 C++ 表达式指定需显示的数据项。 除了[
 
 如果某个由不同模块使用的公共头文件定义了一个类型，则只有当该类型位于指定的模块版本中时，版本化的可视化效果才会显示。
 
-在下面的示例中，可视化效果只适用于在 `Windows.UI.Xaml.dll` 版本 1.0 到 1.5 中找到的 `DirectUI::Border` 类型。
+在下面的示例中，可视化效果只适用于在 `DirectUI::Border` 版本 1.0 到 1.5 中找到的 `Windows.UI.Xaml.dll` 类型。
 
 ```xml
 <Type Name="DirectUI::Border">
@@ -328,7 +328,7 @@ Natvis 可视化效果使用 C++ 表达式指定需显示的数据项。 除了[
 `Name` 特性的格式为*filename. ext*，如*hello*或*some*。 不允许使用路径名。
 
 ### <a name="BKMK_DisplayString"></a>DisplayString 元素
-`DisplayString` 元素用于指定要显示为变量值的字符串。 它接受混合表达式的任意字符串。 大括号内的所有内容都可解释为表达式。 例如，以下 `DisplayString` 条目：
+`DisplayString` 元素用于指定要显示为变量值的字符串。 它接受混合了表达式的任意字符串。 大括号内的所有内容都将被解释为表达式。 例如，以下 `DisplayString` 条目：
 
 ```xml
 <Type Name="CPoint">
@@ -340,7 +340,7 @@ Natvis 可视化效果使用 C++ 表达式指定需显示的数据项。 除了[
 
  ![使用 DisplayString 元素](../debugger/media/dbg_natvis_cpoint_displaystring.png "使用 DisplayString 元素")
 
-在 `DisplayString` 表达式中，属于 `CPoint` 成员的 `x` 和 `y` 位于大括号内，因此它们的值会被计算。 该示例还介绍了如何用双层大括号（`{{` 或 `}}`）对大括号进行转义。
+在 `DisplayString` 表达式中，属于 `x` 成员的 `y` 和 `CPoint` 位于大括号内，因此它们的值会被计算。 该示例还介绍了如何用双层大括号（`{{` 或 `}}`）对大括号进行转义。
 
 > [!NOTE]
 > `DisplayString` 元素是唯一接受任意字符串和大括号语法的元素。 所有其他可视化元素只接受调试器可以计算的表达式。
@@ -384,7 +384,7 @@ Natvis 可视化效果使用 C++ 表达式指定需显示的数据项。 除了[
 
 #### <a name="BKMK_Item_expansion"></a> Item 展开
 
- `Item` 元素是 `Expand` 节点中最基本、最常见的元素。 `Item` 用于定义单个子元素。 例如，一个包含 `top`、`left`、`right` 和 `bottom` 字段的 `CRect` 类具有以下可视化条目：
+ `Item` 元素是 `Expand` 节点中最基本、最常见的元素。 `Item` 定义单个子元素。 例如，一个包含 `CRect`、`top`、`left` 和 `right` 字段的 `bottom` 类具有以下可视化条目：
 
 ```xml
 <Type Name="CRect">
@@ -407,7 +407,7 @@ Natvis 可视化效果使用 C++ 表达式指定需显示的数据项。 除了[
 > [!NOTE]
 > 如果项元素的表达式指向复杂类型，则**项**节点本身是可展开的。
 
-#### <a name="BKMK_ArrayItems_expansion"></a> Size
+#### <a name="BKMK_ArrayItems_expansion"></a> ArrayItems 展开
 使用 `ArrayItems` 节点，让 Visual Studio 调试器将类型解释为一个数组并显示其各个元素。 `std::vector` 的可视化效果是一个很好的示例：
 
 ```xml
@@ -424,7 +424,7 @@ Natvis 可视化效果使用 C++ 表达式指定需显示的数据项。 除了[
 </Type>
 ```
 
-`std::vector` 在变量窗口中展开时显示其自身的元素：
+在变量窗口中展开时，`std::vector` 显示了它的各个元素：
 
 ![std：： vector 使用 ArrayItems 扩展](../debugger/media/dbg_natvis_expand_arrayitems_stdvector.png "使用 ArrayItems 扩展的 std::vector")
 
@@ -480,7 +480,7 @@ Natvis 可视化效果使用 C++ 表达式指定需显示的数据项。 除了[
 </Type>
 ```
 
-`ArrayItems` 和 `IndexListItems` 之间的唯一区别是 `ValueNode`，它期望带有隐式元素 `$i` 参数的第 i<sup></sup> 个元素的完整表达式。
+`ArrayItems` 和 `IndexListItems` 之间的唯一区别是 `ValueNode`，它期望带有隐式元素 <sup> 参数的第 i</sup>`$i` 个元素的完整表达式。
 
 >[!NOTE]
 >可以使用 `[]` 运算符（例如 `vector[i]`）以及任何使用了 `IndexListItems` 的一维数组可视化效果，即使该类型本身（例如 `CATLArray`）不允许使用此运算符。
@@ -506,12 +506,12 @@ Natvis 可视化效果使用 C++ 表达式指定需显示的数据项。 除了[
 
 `Size` 元素引用该列表的长度。 `HeadPointer` 指向第一个元素， `NextPointer` 引用下一个元素，而 `ValueNode` 引用项的值。
 
-调试器将在 `LinkedListItems` 节点元素（而不是父列表类型）环境中计算 `NextPointer` 和 `ValueNode` 表达式。 在前面的示例中，`CAtlList` 有一个 `CNode` 类（位于 `atlcoll.h` 中），它是链接列表的节点。 `m_pNext` 和 `m_element` 是 `CNode` 类（而不是 `CAtlList` 类）的字段。
+调试器将在 `NextPointer` 节点元素（而不是父列表类型）环境中计算 `ValueNode` 和 `LinkedListItems` 表达式。 在前面的示例中，`CAtlList` 有一个 `CNode` 类（位于 `atlcoll.h` 中），它是链接列表的节点。 `m_pNext` 和 `m_element` 是 `CNode` 类（而不是 `CAtlList` 类）的字段。
 
 `ValueNode` 可以保留为空或使用 `this` 来引用 `LinkedListItems` 节点本身。
 
 #### <a name="customlistitems-expansion"></a>CustomListItems 展开
-`CustomListItems` 展开允许编写自定义逻辑，以遍历数据结构（如哈希表）。 使用 `CustomListItems` 来可视化数据结构，这些数据结构可以使用 C++ 表达式进行所有运算，但不太适合 `ArrayItems`、`IndexListItems` 或 `LinkedListItems` 模式。
+借助 `CustomListItems` 展开，你可以编写自定义逻辑，用于遍历哈希表等数据结构。 使用 `CustomListItems` 来可视化数据结构，这些数据结构可以使用 C++ 表达式进行所有运算，但不太适合 `ArrayItems`、`IndexListItems` 或 `LinkedListItems` 模式。
 
 下面的 `CAtlMap` 可视化工具是一个很好的例子，其中的 `CustomListItems` 用得很恰当。
 
@@ -544,7 +544,7 @@ Natvis 可视化效果使用 C++ 表达式指定需显示的数据项。 除了[
 </Type>
 ```
 
-借助在展开内定义的变量和对象，你可以在 `CustomListItems` 展开中使用 `Exec` 来执行内部代码。 可以将逻辑运算符、算术运算符和赋值运算符与  `Exec` 一起使用。 不能使用 `Exec` 来计算函数。
+借助在展开内定义的变量和对象，你可以在 `Exec` 展开中使用 `CustomListItems` 来执行内部代码。 可以将逻辑运算符、算术运算符和赋值运算符与  `Exec` 一起使用。 不能使用 `Exec` 来计算函数。
 
 `CustomListItems` 支持以下内部函数：
 
@@ -604,7 +604,7 @@ Natvis 可视化效果使用 C++ 表达式指定需显示的数据项。 除了[
 
  ![自动&#95;ptr&#60;向量&#60;int&#62; &#62; ExpandedItem 扩展](../debugger/media/dbg_natvis_expand_expandeditem_visualized.png "ExpandedItem 展开")
 
-下面的示例介绍了如何将基类的属性聚合到一个派生类中。 假定 `CPanel` 类派生自 `CFrameworkElement`。 `ExpandedItem` 节点的可视化会将基 `CFrameworkElement` 类的属性附加到 `CPanel` 类的子列表中，而不是重复这些属性。
+下面的示例介绍了如何将基类的属性聚合到一个派生类中。 假设 `CPanel` 类派生自 `CFrameworkElement`。 `CFrameworkElement` 节点的可视化会将基 `ExpandedItem` 类的属性附加到 `CPanel` 类的子列表中，而不是重复这些属性。
 
 ```xml
 <Type Name="CPanel">
@@ -652,7 +652,7 @@ Natvis 可视化效果使用 C++ 表达式指定需显示的数据项。 除了[
 ```
 
 ### <a name="BKMK_UIVisualizer"></a>UIVisualizer 元素
-`UIVisualizer` 元素向调试器注册图形可视化工具插件。 图形可视化工具会创建一个对话框或其他界面，用符合其数据类型的方式显示变量或对象。 可视化工具插件必须被编写为 [VSPackage](../extensibility/internals/vspackages.md)，并且必须公开一项调试器可以使用的服务。 *.Natvis* 文件包含插件的注册信息，例如名称、所公开服务的 GUID 以及它可以直观显示的类型。
+`UIVisualizer` 元素用于向调试器注册图形可视化工具插件。 图形可视化工具会创建一个对话框或其他界面，用符合其数据类型的方式显示变量或对象。 可视化工具插件必须被编写为 [VSPackage](../extensibility/internals/vspackages.md)，并且必须公开一项调试器可以使用的服务。 *.Natvis* 文件包含插件的注册信息，例如名称、所公开服务的 GUID 以及它可以直观显示的类型。
 
 下面是 UIVisualizer 元素的示例：
 
@@ -689,4 +689,10 @@ Natvis 可视化效果使用 C++ 表达式指定需显示的数据项。 除了[
 
 编写自定义可视化工具比 XML Natvis 定义要费事得多，但 Natvis 在支持方面的限制对你没有影响。 自定义可视化工具有权访问所有的调试器扩展性 API，因此可以查询和修改调试对象进程，也可以与 Visual Studio 的其他部分通信。
 
- 可以在 `CustomVisualizer` 元素上使用 `Condition`、`IncludeView` 和 `ExcludeView` 属性。
+ 可以在 `Condition` 元素上使用 `IncludeView`、`ExcludeView` 和 `CustomVisualizer` 属性。
+
+ ## <a name="limitations"></a>限制
+
+Natvis 自定义项适用于类和结构，但不能使用 typedef。
+
+Natvis 不支持用于基元类型的可视化工具（例如 `int`、`bool`）或指向基元类型的指针。 在此方案中，一种选择是使用适合用例的[格式说明符](../debugger/format-specifiers-in-cpp.md)。 例如，如果您在代码中使用 `double* mydoublearray`，则可以在调试器的 "**监视**" 窗口中使用数组格式说明符，如表达式 `mydoublearray, [100]`，这将显示前100个元素。

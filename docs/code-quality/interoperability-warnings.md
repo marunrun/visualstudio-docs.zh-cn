@@ -10,16 +10,16 @@ helpviewer_keywords:
 - warnings, interoperability
 ms.assetid: 95de6eb3-40c4-4063-9f59-25cb70e3b2b3
 author: jillre
-ms.author: jillfra
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6ba2f717c4bdccd662764b73530d3ae416f8b95b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a1eb65f52df4b27837c00b7557db0c5e15e6c187
+ms.sourcegitcommit: 00ba14d9c20224319a5e93dfc1e0d48d643a5fcd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72649290"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77091751"
 ---
 # <a name="interoperability-warnings"></a>互操作性警告
 
@@ -27,7 +27,7 @@ ms.locfileid: "72649290"
 
 ## <a name="in-this-section"></a>本节内容
 
-| 规则 | 描述 |
+| 规则 | 说明 |
 | - | - |
 | [CA1400：P/Invoke 入口点应该存在](../code-quality/ca1400.md) | 公共或受保护方法标有 System.Runtime.InteropServices.DllImportAttribute 特性。 未能找到非托管库，或者未能将方法与库中的函数匹配。 |
 | [CA1401：P/Invokes 应为不可见](../code-quality/ca1401.md) | 公共类型中的公共或受保护方法具有 InteropServices. DllImportAttribute 属性（也由 Visual Basic 中的 Declare 关键字实现）。 这些方法不能公开。 |
@@ -35,7 +35,7 @@ ms.locfileid: "72649290"
 | [CA1403：自动布局类型不应对 COM 可见](../code-quality/ca1403.md) | COM 可见值类型是使用设置为 LayoutKind 的 InteropServices. StructLayoutAttribute 特性标记的。这些类型的布局在 .NET 版本之间可能会发生变化，这会中断需要特定布局的 COM 客户端。 |
 | [CA1404：紧接在 P/Invoke 之后调用 GetLastError](../code-quality/ca1404.md) | 对 GetLastWin32Error 方法或等效 [!INCLUDE[TLA2#tla_win32](../code-quality/includes/tla2sharptla_win32_md.md)] GetLastError 函数进行调用，并且直接上一个调用不是平台调用方法。 |
 | [CA1405：COM 可见类型的基类型应对 COM 可见](../code-quality/ca1405.md) | 某个 COM 可见的类型是从非 COM 可见的类型派生而来。 |
-| [CA1406：避免对 Visual Basic 6 客户端使用 Int64 参数](../code-quality/ca1406.md) | Visual Basic 6 COM 客户端无法访问64位整数。 |
+| [CA1406：避免对 Visual Basic 6 客户端使用 Int64 参数](../code-quality/ca1406.md) | Visual Basic 6 COM 客户端不能访问 64 位整数。 |
 | [CA1407：避免在 COM 可见类型中使用静态成员](../code-quality/ca1407.md) | COM 不支持静态方法。 |
 | [CA1408：请不要使用 AutoDual ClassInterfaceType](../code-quality/ca1408.md) | 使用双重接口的类型使客户端可以绑定到特定的接口布局。 如果在将来的版本中对该类型或任何基类型的布局进行更改，将中断绑定到该接口的 COM 客户端。 默认情况下，如果未指定 ClassInterfaceAttribute 特性，则使用仅支持调度的接口。 |
 | [CA1409：Com 可见类型应该可创建](../code-quality/ca1409.md) | 专门标记为对 COM 可见的某个引用类型包含公共的参数化构造函数，但不包含公共的默认（无参数）构造函数。 没有公共默认构造函数的类型不能由 COM 客户端创建。 |

@@ -14,12 +14,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 619840f417c922b4019bafffca8d66c9b1c939e2
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 85bf50c653d82a7de22d5a81fd81c38db0db1be8
+ms.sourcegitcommit: 4be64917e4224fd1fb27ba527465fca422bc7d62
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75596861"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76923271"
 ---
 # <a name="build-page-project-designer-c"></a>“项目设计器”->“生成”页 (C#)
 
@@ -65,6 +65,12 @@ ms.locfileid: "75596861"
 指定将作为输出文件目标的处理器。 对于任何 32 位 Intel 兼容处理器，请选择“x86”  ；对于任何 64 位 Intel 兼容处理器，请选择“x64”  ；对于 ARM 处理器，请选择“ARM”  ；或选择“任何 CPU”  指定可接受任何处理器。 “任何 CPU”  是项目的默认值，因为这允许在最广泛的硬件上运行应用程序。
 
 有关详细信息，请参阅 [/platform（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/platform-compiler-option)。
+
+**可以为 Null**
+
+指定项目范围内可以为 null 的 C# 上下文。 此 UI 选项是在 Visual Studio 16.5 中引入的，并且仅适用于使用 C# 8.0 或更高版本的项目。
+
+有关详细信息，请参阅[可以为 null 的上下文](/dotnet/csharp/nullable-references#nullable-contexts)。
 
 **首选 32 位**
 

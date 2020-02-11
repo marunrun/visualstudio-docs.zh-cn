@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6d10b02908c63d177149f9113c37f71813ee09dc
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: e912459f45086b1bf5f96a9458f006354e982ffd
+ms.sourcegitcommit: 7b07e7b5e06e2e13f622445c568b78a284e1a40d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75567432"
+ms.lasthandoff: 01/23/2020
+ms.locfileid: "76542680"
 ---
 # <a name="customize-build-and-debug-tasks-for-open-folder-development"></a>自定义“打开文件夹”开发的生成和调试任务
 
@@ -224,6 +224,8 @@ bin:
 |`${fileExtname}`| 所选文件的扩展名（例如，.js  ）|
 
 ## <a name="configure-debugging-with-launchvsjson"></a>使用 launch.vs.json 配置调试
+
+若要配置 CMake 项目以进行调试，请参阅[配置 CMake 调试会话](/cpp/build/configure-cmake-debugging-sessions)。
 
 1. 要配置用于调试的代码库，请在“解决方案资源管理器”  中，通过右键单击或从可执行文件的上下文菜单选择“调试和启动设置”  菜单项。
 

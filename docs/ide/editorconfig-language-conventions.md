@@ -13,12 +13,12 @@ manager: jillfra
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: d03af1625086a56a6f36e48d59fd00c2461c0751
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 471932f6a097879da194dc6bb4f18807f2323397
+ms.sourcegitcommit: 7b07e7b5e06e2e13f622445c568b78a284e1a40d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75588624"
+ms.lasthandoff: 01/23/2020
+ms.locfileid: "76542654"
 ---
 # <a name="language-conventions"></a>语言约定
 
@@ -1558,7 +1558,7 @@ csharp_prefer_braces = true:silent
 | **规则名称** | csharp_prefer_braces |
 | **规则 ID** | IDE0011 |
 | **适用的语言** | C# |
-| **值** | `true` - 使用大括号为首选项，即使只有一个代码行，也是如此<br /><br />`false` - 如可能，不使用大括号为首选项 |
+| **值** | `true` - 使用大括号为首选项，即使只有一个代码行，也是如此<br /><br />`false` - 如可能，不使用大括号为首选项<br /><br />`when_multiline` - 对多行首选大括号 |
 | **Visual Studio 默认值** | `true:silent` |
 
 代码示例：

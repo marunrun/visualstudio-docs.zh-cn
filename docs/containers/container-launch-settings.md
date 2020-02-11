@@ -6,12 +6,12 @@ ms.author: ghogen
 ms.date: 08/15/2019
 ms.technology: vs-azure
 ms.topic: conceptual
-ms.openlocfilehash: b8c732fb847e4d9944e0d6a5405a29e7879cbdc9
-ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
+ms.openlocfilehash: 1c9786c29573da3b0149a9ec6578f2ce58c4de9f
+ms.sourcegitcommit: 7b07e7b5e06e2e13f622445c568b78a284e1a40d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75400866"
+ms.lasthandoff: 01/23/2020
+ms.locfileid: "76542589"
 ---
 # <a name="container-tools-launch-settings"></a>容器工具启动设置
 
@@ -53,7 +53,7 @@ commandName 设置确定此部分是否适用于容器工具。 下表显示了�
 |设置名|Version|示例|描述|
 |------------|-------|-------|---------------|
 |launchBrowser|Visual Studio 2017|"launchBrowser": true|指示在成功启动项目后是否启动浏览器。|
-|launchUrl|Visual Studio 2017|"launchUrl": "\<scheme>://\<serviceHost>:\<servicePort>"|启动浏览器时使用该 URL。  此字符串支持的替换令牌为：<br>   \<方案> - 根据是否使用 SSL 将其替换为“http”或“https”。<br>   \<serviceHost > - 通常替换为“localhost”。 但是，面向使用 Windows 10 RS3 或更低版本的 Windows 容器时，将其替换为容器的 IP。<br>   \<servicePort> - 通常根据是否使用 SSL 将其替换为 sslPort 或 httpPort。  但是，在面向使用 Windows 10 RS3 或更低版本的 Windows 容器时，根据是否使用 SSL 将其替换为“443”或“80”。|
+|launchUrl|Visual Studio 2017|"launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}"|启动浏览器时使用该 URL。  此字符串支持的替换令牌为：<br>   {Scheme} - 根据是否使用了 SSL，将其替换为“http”或“https”。<br>   {ServiceHost} - 通常替换为“localhost”。 但是，面向使用 Windows 10 RS3 或更低版本的 Windows 容器时，将其替换为容器的 IP。<br>   {ServicePort} - 通常替换为 sslPort 或 httpPort，具体取决于是否使用了 SSL。  但是，在面向使用 Windows 10 RS3 或更低版本的 Windows 容器时，根据是否使用 SSL 将其替换为“443”或“80”。|
 
 ::: moniker-end
 
@@ -69,11 +69,11 @@ commandName 设置确定此部分是否适用于容器工具。 下表显示了�
 | httpPort             | "httpPort":24051                                     | 启动容器时，主机上的此端口映射到容器的端口 80。                                |
 |                      |                                                       | 如果未指定，则该值取自 iisSettings 值。                                                          |
 | launchBrowser        | "launchBrowser": true                                 | 指示在成功启动项目后是否启动浏览器。                                       |
-| launchUrl            | "launchUrl": "<scheme>://<serviceHost>:<servicePort>" | 启动浏览器时使用该 URL。 此字符串支持的替换令牌为：                          |
-|                      |                                                       | - <scheme> - 根据是否使用 SSL 将其替换为“http”或“https”。                                   |
-|                      |                                                       | - <serviceHost> - 通常替换为“localhost”。                                                                    |
+| launchUrl            | "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}" | 启动浏览器时使用该 URL。 此字符串支持的替换令牌为：                          |
+|                      |                                                       | - {Scheme} - 替换为“http”或“https”，具体取决于是否使用 SSL。                                   |
+|                      |                                                       | - {ServiceHost} - 通常替换为“localhost”。                                                                    |
 |                      |                                                       | 但是，面向使用 Windows 10 RS3 或更低版本的 Windows 容器时，将其替换为容器的 IP。           |
-|                      |                                                       | - <servicePort> - 通常根据是否使用 SSL 将其替换为 sslPort 或 httpPort。                   |
+|                      |                                                       | - {ServicePort} - 通常替换为 sslPort 或 httpPort，具体取决于是否使用 SSL。                   |
 |                      |                                                       | 但是，面向使用 Windows 10 RS3 或更低版本的 Windows 容器时，将其替换为“443”或“80”，         |
 |                      |                                                       | 具体取决于是否使用 SSL。                                                                                       |
 | sslPort              | "sslPort":44381                                      | 启动容器时，主机上的此端口映射到容器的端口 443。                               |
