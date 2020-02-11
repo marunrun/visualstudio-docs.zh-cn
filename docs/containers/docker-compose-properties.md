@@ -6,12 +6,12 @@ ms.author: ghogen
 ms.date: 08/12/2019
 ms.technology: vs-azure
 ms.topic: conceptual
-ms.openlocfilehash: c528d1ca2d767b914bba2fd554699985c37d6ba1
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: 226078127d2fe61675a592bbafa06d732afc7c49
+ms.sourcegitcommit: 8cbced0fb46959a3a2494852df1e41db1177a26c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75916922"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76826453"
 ---
 # <a name="docker-compose-build-properties"></a>Docker Compose 生成属性
 
@@ -109,6 +109,20 @@ services:
 |com.microsoft.visualstudio.debuggee.killprogram|此命令用于停止在容器中运行的调试对象程序（如有必要）。|
 |com.microsoft.visualstudio.debuggee.program|启动调试时启动的程序。 对于 .Net Core 应用，此设置通常为“dotnet”  。|
 |com.microsoft.visualstudio.debuggee.workingdirectory|开始调试时用作起始目录的目录。 对于 Linux 容器，此设置通常为 /app；对于 Windows 容器，此设置通常为 C:\app   。|
+
+## <a name="customize-the-app-startup-process"></a>自定义应用启动过程
+
+你可以通过使用 `entrypoint` 设置并使其依赖于配置，在启动应用之前运行命令或自定义脚本。 例如，如果只需要在“调试”模式下而不是“发布模式”下通过运行 `update-ca-certificates` 设置证书，则仅在 docker-compose.vs.debug.yml 中添加以下代码    ：
+
+```yml
+services:
+  webapplication1:
+    entrypoint: "sh -c 'update-ca-certificates && tail -f /dev/null'"
+    labels:
+      ...
+```
+
+如果省略 docker-compose.vs.release.yml 或 docker-compose.vs.debug.yml，则 Visual Studio 将基于默认设置生成被省略的内容   。
 
 ## <a name="next-steps"></a>后续步骤
 

@@ -6,12 +6,12 @@ manager: lank
 ms.date: 07/29/2019
 ms.topic: conceptual
 description: 了解如何激活 Visual Studio 订阅中包含的 Azure 开发测试个人额度权益。
-ms.openlocfilehash: a6d0eee97ddf2d3a5a35af60ba6c6daf8bcc8425
-ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
+ms.openlocfilehash: 01c31d96b7ee3e696f941725bbcb314c5f0e0e60
+ms.sourcegitcommit: 7b07e7b5e06e2e13f622445c568b78a284e1a40d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75405320"
+ms.lasthandoff: 01/23/2020
+ms.locfileid: "76542667"
 ---
 # <a name="use-microsoft-azure-in-visual-studio-subscriptions"></a>在 Visual Studio 订阅中使用 Microsoft Azure
 Visual Studio 订阅者无需额外付费即可使用 Microsoft Azure。  通过[每月 Azure 开发测试个人额度](https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/)，可将 Azure 用作开发/测试的个人沙盒。  你可以预配虚拟机、云服务和其他 Azure 资源。  信用额度因订阅级别而异。
@@ -110,7 +110,7 @@ Visual Studio 订阅者无需额外付费即可使用 Microsoft Azure。  通过
 ## <a name="support-resources"></a>支持资源
 - 需要与 Azure 有关的帮助？  请参阅下列资源：
   - 技术支持：[https://azure.microsoft.com/support/options/](https://azure.microsoft.com/support/options/)
-  - [Azure 文档](/azure/)
+  - [Azure 提示与技巧](https://microsoft.github.io/AzureTipsAndTricks/ "Azure 提示与技巧") 
 - 有关 Visual Studio 订阅的销售、订阅、帐户和账单的帮助，请与 Visual Studio [订阅支持](https://visualstudio.microsoft.com/subscriptions/support/)联系。
 - 对有关 Visual Studio IDE、Azure DevOps Services 或其他 Visual Studio 产品或服务有疑问？  请访问 [Visual Studio 支持](https://visualstudio.microsoft.com/support/)。
 

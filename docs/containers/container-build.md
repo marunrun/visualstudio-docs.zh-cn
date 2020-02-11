@@ -6,12 +6,12 @@ ms.author: ghogen
 ms.date: 11/20/2019
 ms.technology: vs-azure
 ms.topic: conceptual
-ms.openlocfilehash: 6f11082a0e309d4e34dd25a1085c1f8c971f28f7
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: d91dd01879ac3bb62b981109463f6762046382ef
+ms.sourcegitcommit: b2fc9ac7d73c847508f6ed082bed026476bb3955
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75916941"
+ms.lasthandoff: 02/05/2020
+ms.locfileid: "77027265"
 ---
 # <a name="how-visual-studio-builds-containerized-apps"></a>Visual Studio 如何构建容器化应用
 
@@ -32,7 +32,7 @@ EXPOSE 80
 EXPOSE 443
 ```
 
-Dockerfile 中的行以 Microsoft 容器注册表 (mcr.microsoft.com) 中的 Nano Server 映像开头，并创建公开端口 80 和 443 的中间映像 `base`，并将工作目录设置为 `/app`。
+Dockerfile 中的行以 Microsoft 容器注册表 (mcr.microsoft.com) 中的 Debian 映像开头，并创建公开端口 80 和 443 的中间映像 `base`，并将工作目录设置为 `/app`。
 
 下一阶段是 `build`，其显示如下：
 

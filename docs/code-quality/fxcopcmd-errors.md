@@ -5,17 +5,17 @@ ms.topic: reference
 helpviewer_keywords:
 - FxCopCmd errors
 ms.assetid: bb614ed0-1b7c-4b56-99ae-da50ef6cfef9
-ms.author: jillfra
+ms.author: mikejo
 author: jillre
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 315f74348ffc7983088e7601f51a667ce8598b2e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 5916121a555531672cf70280051f02a889f611ac
+ms.sourcegitcommit: 00ba14d9c20224319a5e93dfc1e0d48d643a5fcd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72649563"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77091764"
 ---
 # <a name="fxcopcmd-tool-errors"></a>FxCopCmd 工具错误
 
@@ -23,7 +23,7 @@ FxCopCmd 不会将所有错误视为严重错误。 如果 FxCopCmd 具有足够
 
 下表描述了 FxCopCmd 返回的错误代码：
 
-|Error|数值|
+|错误|数值|
 |-----------|-------------------|
 |无错误|0x0|
 |分析错误|0x1|
@@ -52,6 +52,6 @@ FxCopCmd 不会将所有错误视为严重错误。 如果 FxCopCmd 具有足够
 > [!NOTE]
 > FxCopCmd 返回代码**程序集引用错误**0x200 本身就是警告而不是错误。 此返回代码指示缺少间接引用，但 FxCopCmd 可以处理它们。 警告意味着某些分析结果可能已泄露。 将**程序集引用错误**视为与任何其他返回代码结合使用时的错误。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [代码分析应用程序错误](../code-quality/code-analysis-application-errors.md)

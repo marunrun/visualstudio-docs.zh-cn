@@ -1,5 +1,5 @@
 ---
-title: 使用 ASP.NET Core 的 Visual Studio Tools for Docker
+title: Visual Studio Tools for Docker 与 ASP.NET
 author: ghogen
 description: 了解如何使用 Visual Studio 2019 工具和 Docker for Windows
 ms.author: ghogen
@@ -7,12 +7,12 @@ ms.date: 02/01/2019
 ms.prod: visual-studio-dev16
 ms.technology: vs-azure
 ms.topic: include
-ms.openlocfilehash: d0da02773913a610c77d7165fdb0f9becfc59e9c
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: 3869cf025b4ed0e744a7fea929aac38acb7dd816
+ms.sourcegitcommit: 4be64917e4224fd1fb27ba527465fca422bc7d62
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75928136"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76922990"
 ---
 使用 Visual Studio，可以轻松地生成、调试和运行容器化的 .NET、ASP.NET 和 ASP.NET Core 应用并将其发布到 Azure 容器注册表 (ACR)、Docker Hub、Azure 应用服务或你自己的容器注册表。 本文介绍如何将 ASP.NET Core 应用发布到 ACR。
 
@@ -20,7 +20,7 @@ ms.locfileid: "75928136"
 
 * [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
 * 安装了“Web 开发”、“Azure 工具”工作负载和/或“.NET Core 跨平台开发”工作负载的 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads)   
-* 用于使用 .NET Core 2.2 进行开发的 [.NET Core 2.2 开发工具](https://dotnet.microsoft.com/download/dotnet-core/2.2)
+* 用于使用 .NET Core 进行开发的 [.NET Core 开发工具](https://dotnet.microsoft.com/download/dotnet-core/)
 * 若要发布到 Azure 容器注册表，需要 Azure 订阅。 [注册免费试用版](https://azure.microsoft.com/offers/ms-azr-0044p/)。
 
 ## <a name="installation-and-setup"></a>安装和设置
@@ -29,10 +29,12 @@ ms.locfileid: "75928136"
 
 ## <a name="add-a-project-to-a-docker-container"></a>向 Docker 容器添加项目
 
-1. 使用“ASP.NET Core Web 应用程序”  模板创建新项目。
+1. 使用 ASP.NET Core Web 应用程序模板创建新项目，或如果要使用 .NET Framework 而不是 .NET Core，请选择 ASP.NET Web 应用程序 (.NET Framework)   。
 1. 选择“Web 应用程序”，确保已选择“启用 Docker 支持”复选框   。
 
    ![“启用 Docker 支持”复选框](../../media/container-tools/vs-2019/create-new-web-application.PNG)
+
+   屏幕截图显示 .NET Core；如果使用的是 .NET Framework，则略有不同。
 
 1. 选择所需的容器类型（Windows 或 Linux），然后单击“创建”  。
 
@@ -63,7 +65,7 @@ COPY --from=publish /app .
 ENTRYPOINT ["dotnet", "HelloDockerTools.dll"]
 ```
 
-前面的 Dockerfile 基于 [microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) 映像，并包括通过构建项目并将其添加到容器中修改基本映像的说明  。
+前面的 Dockerfile 基于 [microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) 映像，并包括通过构建项目并将其添加到容器中修改基本映像的说明  。 如果使用的是 .NET Framework，则基本映像将有所不同。
 
 如果选中了新建项目对话框的“为 HTTPS 配置”复选框，则 Dockerfile 公开两个端口   。 一个端口用于 HTTP 流量；另一个端口用于 HTTPS。 如果未选中该复选框，则为 HTTP 流量公开单个端口 (80)。
 
@@ -71,7 +73,7 @@ ENTRYPOINT ["dotnet", "HelloDockerTools.dll"]
 
 在工具栏的调试下拉列表中选择“Docker”  ，然后开始调试应用。 你可能会看到提示信任证书的消息；选择信任证书以继续。
 
-“输出”  窗口中的“容器工具”  选项显示正在进行的操作。
+“输出”  窗口中的“容器工具”  选项显示正在进行的操作。 第一次时，可能需要一些时间来下载基本映像，但在后续运行时速度要快得多。
 
 ## <a name="containers-window"></a>容器窗口
 

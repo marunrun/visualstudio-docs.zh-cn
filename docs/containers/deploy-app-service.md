@@ -6,14 +6,14 @@ manager: jillfra
 ms.technology: vs-azure
 ms.devlang: dotnet
 ms.topic: article
-ms.date: 03/08/2019
+ms.date: 01/27/2020
 ms.author: ghogen
-ms.openlocfilehash: 5d1f160435fd8c62a44d3e5d3192870143558de4
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 6c1d56f788294826853ad441313597255308bb39
+ms.sourcegitcommit: b2fc9ac7d73c847508f6ed082bed026476bb3955
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73188789"
+ms.lasthandoff: 02/05/2020
+ms.locfileid: "77027293"
 ---
 # <a name="deploy-an-aspnet-core-container-to-azure-app-service-using-visual-studio"></a>使用 Visual Studio 将 ASP.NET Core 容器部署到 Azure 应用服务
 
@@ -21,7 +21,7 @@ ms.locfileid: "73188789"
 
 如果没有 Azure 订阅，请在开始之前创建一个[免费帐户](https://azure.microsoft.com/free/dotnet/?utm_source=acr-publish-doc&utm_medium=docs&utm_campaign=docs)。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 完成本教程：
 
@@ -29,7 +29,7 @@ ms.locfileid: "73188789"
 - 安装带有“ASP.NET 和 Web 开发”工作负载的最新版本 [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download)
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-- 带有 ASP.NET 和 Web 开发  工作负荷的 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads)。
+- [Visual Studio 2019](https://visualstudio.microsoft.com/downloads) 与“ASP.NET 和 Web 开发”工作负载  。
 ::: moniker-end
 - 安装 [Docker Desktop](https://docs.docker.com/docker-for-windows/install/)
 
@@ -53,13 +53,13 @@ ms.locfileid: "73188789"
 1. 选择“Web 应用程序”  。
 1. 通过使用“为 HTTPS 配置”复选框，选择是否需要 SSL 支持  。
 1. 勾选“启用 Docker 支持”复选框  。
-1. 选择“Linux”容器类型，然后单击“创建”   。 不支持将 Windows 容器作为容器部署到 Azure 应用服务。
+1. 选择容器类型，然后单击“创建”  。 不支持将 Windows 容器作为容器部署到 Azure 应用服务。
 ::: moniker-end
 
 ## <a name="deploy-the-container-to-azure"></a>将容器部署到 Azure
 
 1. 在解决方案资源管理器中右键单击项目，并选择“发布”   。
-1. 在“发布目标”对话框中，选择“应用服务 Linux”  。
+1. 在发布目标对话框中，选择“应用服务 Linux”或“应用服务”   。 这是将托管 Web 服务器的操作系统。
 1. 可以只发布到应用服务，也可以发布到应用服务和 Azure 容器注册表 (ACR)。 若要将容器发布到 Azure 容器注册表 (ACR)，请选择“为容器创建新的应用服务”，并单击“发布”   。
 
    ![“发布”对话框的屏幕截图](media/deploy-app-service/publish-app-service-linux.PNG)
@@ -79,7 +79,18 @@ ms.locfileid: "73188789"
    ![Web 应用程序的屏幕截图](media/deploy-app-service/web-application-running.png)
 
 1. 发布配置文件会保存你所选的所有详细信息，如资源组和容器注册表。
+
 1. 若要使用相同的发布配置文件再次部署，请使用“发布”按钮、“Web 发布活动”窗口中的“发布”按钮，或在解决方案资源管理器中右键单击该项目，并在上下文菜单上选择“发布”项      。
+
+## <a name="view-container-settings"></a>查看容器设置
+
+在 [Azure 门户](https://portal.azure.com)中，可以打开已部署的应用服务。
+
+可通过打开“容器设置”菜单来查看已部署应用服务的设置（使用 Visual Studio 2019 版本 16.4 或更高版本）  。
+
+![Azure 门户中的容器设置菜单的屏幕截图](media/deploy-app-service/container-settings-menu.png)
+
+可以从此处查看容器信息、查看或下载日志记录或设置持续部署。 请参阅 [Azure 应用服务持续部署 CI/CD](/azure/app-service/containers/app-service-linux-ci-cd)。
 
 ## <a name="clean-up-resources"></a>清理资源
 
@@ -89,7 +100,7 @@ ms.locfileid: "73188789"
 
 ## <a name="next-steps"></a>后续步骤
 
-使用 [Azure Pipelines](/azure/devops/pipelines/?view=azure-devops) 设置持续集成和持续交付 (CI/CD)。
+详细了解 [Azure 应用服务 Linux](/azure/app-service/containers/app-service-linux-intro)。
 
 ## <a name="see-also"></a>请参阅
 

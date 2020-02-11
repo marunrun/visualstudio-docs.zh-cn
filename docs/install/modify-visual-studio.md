@@ -2,8 +2,7 @@
 title: 修改 Visual Studio
 titleSuffix: ''
 description: 了解如何逐步修改 Visual Studio。
-ms.custom: H1Hack27Feb2017,seodec18
-ms.date: 12/19/2019
+ms.date: 12/29/2019
 ms.topic: conceptual
 helpviewer_keywords:
 - modify Visual Studio
@@ -18,12 +17,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 07aa8afbb4e4ca3970a0f082ec6649a90bfaf2ed
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.openlocfilehash: 2abb8ad86315a4be4c2c44488bd97d413415e614
+ms.sourcegitcommit: 4be64917e4224fd1fb27ba527465fca422bc7d62
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76112699"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76922879"
 ---
 # <a name="modify-visual-studio-by-adding-or-removing-workloads-and-components"></a>通过添加或删除工作负载和组件修改 Visual Studio
 
@@ -144,6 +143,9 @@ ms.locfileid: "76112699"
 ## <a name="modify-individual-components"></a>修改各个组件
 
 如果不想使用工作负载来自定义 Visual Studio 安装，请从 Visual Studio 安装程序中选择“单个组件”  选项卡，选择所需组件，然后按提示操作。
+
+>[!TIP]
+> 有关 SQL Server Data Tools (SSDT) 组件的信息，请参阅[下载并安装 SSDT for Visual Studio](/sql/ssdt/download-sql-server-data-tools-ssdt?view=sql-server-ver15)。
 
 ## <a name="modify-language-packs"></a>修改语言包
 

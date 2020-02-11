@@ -18,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2797e8b51bba0e71db07ec748d7a6813183250fb
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: e8f99bc18f4fdc834d0c5fdc7818d945d116251e
+ms.sourcegitcommit: b2fc9ac7d73c847508f6ed082bed026476bb3955
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75596185"
+ms.lasthandoff: 02/05/2020
+ms.locfileid: "77027632"
 ---
 # <a name="common-msbuild-project-properties"></a>常用的 MSBuild 项目属性
 下表列出了在 Visual Studio 项目文件中定义的或者在 MSBuild 提供的 .targets 文件中包括的经常使用的属性  。
@@ -83,6 +83,7 @@ ms.locfileid: "75596185"
 | OptionExplicit | 一个布尔值，设置为 `true` 时，要求在源代码中显式声明变量。 此属性等效于 `/optionexplicit` 编译器开关。 |
 | OptionInfer | 一个布尔值，设置为 `true` 时，允许进行变量的类型推理。 此属性等效于 `/optioninfer` 编译器开关。 |
 | OptionStrict | 一个布尔值，设置为 `true` 时，将使得生成任务强制使用严格类型语义来限制隐式类型转换。 此属性等效于 vbc.exe 编译器的 `/optionstrict` 开关  。 |
+| OutDir | 指示项目或解决方案的最终输出位置。 在生成解决方案时，可以使用 OutDir 将多个项目输出收集到一个位置。 此外，OutDir 包含在用于解析引用的 AssemblySearchPaths 中。 例如 bin\Debug  。 |
 | OutputPath | 相对于项目目录，例如 bin\Debug，指定输出目录的路径  。 |
 | OutputType | 指定输出文件的文件格式。 此参数可以具有下列值之一：<br /><br /> -   Library。 创建一个代码库。 （默认值）。<br />-   Exe。 创建控制台应用程序。<br />-   Module。 创建一个模块。<br />-   Winexe。 创建一个基于 Windows 的程序。<br /><br /> 此属性等效于 vbc.exe 编译器的 `/target` 开关  。 |
 | OverwriteReadOnlyFiles | 一个布尔值，指示要让生成覆盖只读文件还是触发错误。 |

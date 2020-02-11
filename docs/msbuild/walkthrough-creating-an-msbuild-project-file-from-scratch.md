@@ -10,12 +10,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0c7b79347416df5fd0790baf7ebe6495c739f7c4
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 891b0f1197ad178a705de5d64026beebc62615dd
+ms.sourcegitcommit: 8cbced0fb46959a3a2494852df1e41db1177a26c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75565963"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76826492"
 ---
 # <a name="walkthrough-create-an-msbuild-project-file-from-scratch"></a>演练：从头开始创建 MSBuild 项目文件
 面向 .NET Framework 的编程语言将使用 MSBuild 项目文件来介绍并控制应用程序生成过程。 使用 Visual Studio 创建 MSBuild 项目文件时，会自动将适当的 XML 添加到该文件。 但是，你可能会发现，了解 XML 的组织方式以及如何能够更改 XML 来控制生成将非常有用。
@@ -44,12 +44,10 @@ ms.locfileid: "75565963"
 
 此演练演示如何在命令提示符下生成项目并检查结果。 有关 MSBuild 以及如何在命令提示符下运行 MSBuild 的详细信息，请参阅[演练：使用 MSBuild](../msbuild/walkthrough-using-msbuild.md)。
 
-若要完成演练，你必须安装 .NET Framework（版本 2.0、3.5、4.0 或 4.5），因为其中包括演练所需的 MSBuild 和 Visual C# 编译器。
+若要完成本演练，必须安装 .NET Framework（版本 2.0、3.5、4.0、4.5 或更高版本），因为它包含演练所需的 MSBuild 和 Visual C# 编译器。
 
 ## <a name="create-a-minimal-application"></a>创建最小的应用程序
- 本节演示如何使用文本编辑器创建最小的 Visual C# 应用程序源文件。
-
-#### <a name="to-create-the-minimal-application"></a>创建最小的应用程序
+ 本部分演示如何使用文本编辑器创建最小的 C# 应用程序源文件。
 
 1. 在命令提示符下，浏览到要在其中创建应用程序的文件夹，例如，\My Documents\\  或 \Desktop\\  。
 
@@ -98,7 +96,7 @@ ms.locfileid: "75565963"
 
 - 一个 `Task` 元素，用于启动 Visual C# 编译器以生成应用程序。
 
-#### <a name="to-create-a-minimal-msbuild-project-file"></a>创建最小的 MSBuild 项目文件
+### <a name="to-create-a-minimal-msbuild-project-file"></a>创建最小的 MSBuild 项目文件
 
 1. 在文本编辑器中，用以下两行替换现有文本：
 
@@ -157,20 +155,17 @@ Build 目标中的任务按顺序执行。 在本例中，Visual C# 编译器 `C
 > 但是，建议不要使用通配符，因为在添加或删除了源文件的情况下，这样会使调试和选择性目标设定更为困难。
 
 ## <a name="extend-the-path-to-include-msbuild"></a>扩展路径以包括 MSBuild
- 必须先扩展 PATH 环境变量以包括 .NET Framework 文件夹，然后才能访问 MSBuild。
 
-#### <a name="to-add-msbuild-to-your-path"></a>向你的路径添加 MSBuild
+必须先扩展 PATH 环境变量以包括 .NET Framework 文件夹，然后才能访问 MSBuild。
 
-- 从 Visual Studio 2013 开始，可以在“MSBuild”文件夹中查找 MSBuild.exe  （32 位操作系统上的 %ProgramFiles%\MSBuild  ，或者 64 位操作系统上的 %ProgramFiles(x86)%\MSBuild  ）。
+从 Visual Studio 2013 开始，可以在 MSBuild 文件夹（32 位操作系统上的 %ProgramFiles%\MSBuild 或 64 位操作系统上的 %ProgramFiles(x86)%\MSBuild）中查找 MSBuild.exe    。
 
-     在命令提示符处，键入 **set PATH=%PATH%;%ProgramFiles%\MSBuild** 或 **set PATH=%PATH%;%ProgramFiles(x86)%\MSBuild**。
+在命令提示符处，键入 **set PATH=%PATH%;%ProgramFiles%\MSBuild** 或 **set PATH=%PATH%;%ProgramFiles(x86)%\MSBuild**。
 
-     或者，如果安装了 Visual Studio，则可以使用 Visual Studio 命令提示符  ，其中有包括“MSBuild”  文件夹的路径。
+或者，如果安装了 Visual Studio，则可以使用 Visual Studio 开发人员命令提示，其中具有包含 MSBuild 文件夹的路径   。
 
-## <a name="use-the-project-file-to-build-the-application"></a>使用项目文件生成应用程序
+## <a name="build-the-application"></a>生成应用程序
  现在，为了生成应用程序，请使用刚刚创建的项目文件。
-
-#### <a name="to-build-the-application"></a>生成应用程序
 
 1. 在命令提示符处，键入 msbuild helloworld.csproj -t:Build  。
 
@@ -192,7 +187,7 @@ Build 目标中的任务按顺序执行。 在本例中，Visual C# 编译器 `C
 
 - 一个 `OutputPath` 属性，用于指定要包含应用程序的文件夹。
 
-#### <a name="to-add-build-properties"></a>添加生成属性
+### <a name="to-add-build-properties"></a>添加生成属性
 
 1. 在命令提示符下，键入 **del helloworld.exe** 删除现有应用程序。
 
@@ -257,8 +252,6 @@ Build 目标中的任务按顺序执行。 在本例中，Visual C# 编译器 `C
 ## <a name="test-the-build-properties"></a>测试生成属性
  现在即可使用项目文件来生成应用程序，在该项目文件中，你使用了生成属性来指定输出文件夹和应用程序名称。
 
-#### <a name="to-test-the-build-properties"></a>测试生成属性
-
 1. 在命令提示符处，键入 msbuild helloworld.csproj -t:Build  。
 
      这将创建“\Bin\\”  文件夹，然后调用 Visual C# 编译器创建 MSBuildSample  应用程序，并将其放在“\Bin\\”  文件夹中。
@@ -278,7 +271,7 @@ Build 目标中的任务按顺序执行。 在本例中，Visual C# 编译器 `C
 
 既然有多个目标，就可以将 Build 目标设置为默认目标。
 
-#### <a name="to-add-build-targets"></a>添加生成目标
+### <a name="to-add-build-targets"></a>添加生成目标
 
 1. 在项目文件中添加以下两个目标，置于 Build 目标的后面：
 
@@ -332,7 +325,7 @@ Build 目标中的任务按顺序执行。 在本例中，Visual C# 编译器 `C
 
 - 删除应用程序，而不生成其他应用程序。
 
-#### <a name="to-test-the-build-targets"></a>测试生成目标
+### <a name="to-test-the-build-targets"></a>测试生成目标
 
 1. 在命令提示符处，键入msbuild helloworld.csproj -p:AssemblyName=Greetings  。
 
@@ -363,7 +356,7 @@ Build 目标中的任务按顺序执行。 在本例中，Visual C# 编译器 `C
 ## <a name="build-incrementally"></a>增量生成
  可以指示 MSBuild 仅在目标所依赖的源文件或目标文件发生更改时才生成目标。 MSBuild 使用文件的时间戳来确定文件是否已更改。
 
-#### <a name="to-build-incrementally"></a>以增量方式生成
+### <a name="to-build-incrementally"></a>以增量方式生成
 
 1. 在项目文件中，将以下特性添加到起始 Build 目标：
 
@@ -398,10 +391,9 @@ Build 目标中的任务按顺序执行。 在本例中，Visual C# 编译器 `C
 
      MSBuild 将跳过 Build 目标，原因是自上次生成应用程序以来没有任何源文件发生更改。
 
-## <a name="example"></a>示例
+## <a name="c-example"></a>C# 示例
 
-### <a name="description"></a>描述
- 下面的示例演示一个项目文件，该项目文件编译 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 应用程序，并记录一条包含输出文件名的消息。
+下面的示例演示一个项目文件，该项目文件编译 C# 应用程序并记录包含输出文件名的消息。
 
 ### <a name="code"></a>代码
 
@@ -436,10 +428,9 @@ Build 目标中的任务按顺序执行。 在本例中，Visual C# 编译器 `C
 </Project>
 ```
 
-## <a name="example"></a>示例
+## <a name="visual-basic-example"></a>Visual Basic 示例
 
-### <a name="description"></a>描述
- 下面的示例演示一个项目文件，该项目文件编译 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 应用程序，并记录一条包含输出文件名的消息。
+下面的示例演示一个项目文件，该项目文件编译 Visual Basic 应用程序并记录包含输出文件名的消息。
 
 ### <a name="code"></a>代码
 
@@ -478,5 +469,6 @@ Build 目标中的任务按顺序执行。 在本例中，Visual C# 编译器 `C
  Visual Studio 能够自动执行本演练中演示的大部分工作。 若要了解如何使用 Visual Studio 来创建、编辑、生成和测试 MSBuild 项目文件，请参阅[演练：使用 MSBuild](../msbuild/walkthrough-using-msbuild.md)。
 
 ## <a name="see-also"></a>请参阅
+
 - [MSBuild 概述](../msbuild/msbuild.md)
 - [MSBuild 参考](../msbuild/msbuild-reference.md)

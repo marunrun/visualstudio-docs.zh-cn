@@ -11,23 +11,24 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a489f9d42930dca88a6de69b8875a4406250f66e
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: e93e7d30a194df70260ef010b81c3026299f8565
+ms.sourcegitcommit: 4be64917e4224fd1fb27ba527465fca422bc7d62
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75595054"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76923325"
 ---
 # <a name="msbuild"></a>MSBuild
-[!INCLUDE[vstecmsbuildengine](../msbuild/includes/vstecmsbuildengine_md.md)] 是一个用于生成应用程序的平台。 此引擎（也称为 MSBuild）为项目文件提供了一个 XML 架构，用于控制生成平台处理和生成软件的方式。 Visual Studio 会使用 MSBuild，但它不依赖于 Visual Studio。 通过在项目或解决方案文件中调用 msbuild.exe  ，可以在未安装 Visual Studio 的环境中安排和生成产品。
+
+[!INCLUDE[vstecmsbuildengine](../msbuild/includes/vstecmsbuildengine_md.md)] 是一个用于生成应用程序的平台。 此引擎（也称为 MSBuild）为项目文件提供了一个 XML 架构，用于控制生成平台处理和生成软件的方式。 Visual Studio 会使用 MSBuild，但 MSBuild 不依赖于 Visual Studio。 通过在项目或解决方案文件中调用 msbuild.exe  ，可以在未安装 Visual Studio 的环境中安排和生成产品。
 
  Visual Studio 使用 MSBuild 来加载和生成托管项目。 Visual Studio 中的项目文件（.csproj  、.vbproj  、vcxproj  等）包含 MSBuild XML 代码，当你使用 IDE 来生成项目时，此代码就会运行。 Visual Studio 项目会导入所有必要的设置和生成过程来执行典型的开发工作，但你可以从 Visual Studio 内或通过使用 XML 编辑器对其进行扩展或修改。
 
  有关适用于 C++ 的 MSBuild 的信息，请参阅 [MSBuild (C++)](/cpp/build/msbuild-visual-cpp)。
 
- 下面的示例介绍了什么情况下可使用 MSBuild 命令行而不是 Visual Studio IDE 来运行生成。
+ 下面的示例介绍了什么情况下可从命令行调用 MSBuild 而不是 Visual Studio IDE 来运行生成。
 
-- 未安装 Visual Studio。 （[下载 MSBuild 且不使用 Visual Studio](https://visualstudio.microsoft.com/downloads/?q=build+tools)）
+- 未安装 Visual Studio。 （[下载 MSBuild 而不下载 Visual Studio](https://visualstudio.microsoft.com/downloads/?q=build+tools)。）
 
 - 你想要使用 64 位版本的 MSBuild。 通常情况下不必使用此版本的 MSBuild，但它可以让 MSBuild 访问更多内存。
 
@@ -43,12 +44,12 @@ ms.locfileid: "75595054"
 
   - 执行后处理步骤。 例如，你可能希望使用其他版本来标记程序集。
 
-你可以在 Visual Studio IDE 中编写代码，但使用 MSBuild 来运行生成。 或者，你也可以在开发计算机的 IDE 中生成代码，但使用 MSBuild 命令行生成从多个开发人员集成的代码。
+你可以在 Visual Studio IDE 中编写代码，但使用 MSBuild 来运行生成。 或者，你也可以在开发计算机的 IDE 中生成代码，但从命令行运行 MSBuild 来生成从多个开发人员集成的代码。 还可以使用 [.NET Core 命令行接口 (CLI)](/dotnet/core/tools/)（使用 MSBuild）来生成 .NET Core 项目。
 
 > [!NOTE]
-> 你可以使用 Team Foundation Build 自动编译、测试和部署你的应用程序。 你的生成系统会在开发人员签入代码（例如，作为持续集成策略的一部分）时或按照计划（例如，夜间版本验证测试生成）自动运行生成。 Team Foundation Build 使用 MSBuild 来编译你的代码。 有关详细信息，请参阅 [Azure Pipelines](/azure/devops/pipelines/index?view=vsts)。
+> 你可以使用 Azure Pipelines 自动编译、测试和部署应用程序。 你的生成系统会在开发人员签入代码（例如，作为持续集成策略的一部分）时或按照计划（例如，夜间版本验证测试生成）自动运行生成。 Azure Pipelines 使用 MSBuild 来编译代码。 有关详细信息，请参阅 [Azure Pipelines](/azure/devops/pipelines/index?view=vsts)。
 
- 本主题概述了 MSBuild。 有关介绍性教程，请参阅[演练：使用 MSBuild](../msbuild/walkthrough-using-msbuild.md)。
+本文提供 MSBuild 的概述。 有关介绍性教程，请参阅[演练：使用 MSBuild](../msbuild/walkthrough-using-msbuild.md)。
 
 ## <a name="use-msbuild-at-a-command-prompt"></a>在命令提示符处使用 MSBuild
  若要在命令提示符处运行 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]，请将项目文件随相应的命令行选项一起传递到 MSBuild.exe  。 命令行选项允许你设置属性、执行特定的目标，以及设置可控制生成过程的其他选项。 例如，使用以下命令行语法生成文件 MyProj.proj  ，并将 `Configuration` 属性设置为 `Debug`。
@@ -116,7 +117,7 @@ MSBuild.exe MyProj.proj -property:Configuration=Debug
 
  任务的执行逻辑在托管代码中编写，并使用 [UsingTask](../msbuild/usingtask-element-msbuild.md) 元素映射到 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]。 你可以通过创作一个实现 <xref:Microsoft.Build.Framework.ITask> 接口的托管类型来编写自己的任务。 有关如何编写任务的详细信息，请参阅[任务写入](../msbuild/task-writing.md)。
 
- [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 包含一些可按需进行修改的常见任务。  例如，用于复制文件的[复制](../msbuild/copy-task.md)、用于创建目录的 [MakeDir](../msbuild/makedir-task.md) 以及用于编译 Visual C# 源代码文件的 [Csc](../msbuild/csc-task.md)。 有关可用任务的列表以及用法信息，请参阅[任务参考](../msbuild/msbuild-task-reference.md)。
+ [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 包含一些可按需进行修改的常见任务。 例如，用于复制文件的[复制](../msbuild/copy-task.md)、用于创建目录的 [MakeDir](../msbuild/makedir-task.md) 以及用于编译 Visual C# 源代码文件的 [Csc](../msbuild/csc-task.md)。 有关可用任务的列表以及用法信息，请参阅[任务参考](../msbuild/msbuild-task-reference.md)。
 
  通过创建一个与任务同名的元素，并将其指定为 [Target](../msbuild/target-element-msbuild.md) 元素的子元素，以在 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 项目文件中执行此任务。 任务通常接受参数，参数将作为元素的特性进行传递。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 的属性和项都可用作参数。 例如，以下代码将调用 [MakeDir](../msbuild/makedir-task.md) 任务，并将前面示例中声明的 `BuildDir` 属性的值传递到该任务。
 
@@ -160,7 +161,7 @@ MSBuild.exe MyProj.proj -property:Configuration=Debug
 
 - 可以一个*框架配置文件*为目标，该文件是目标框架的预定义子集。
 
-- 如果已发布 .NET Framework 当前版本的 Service Pack，则可以将其作为目标。
+- 如果已发布 .NET Framework 当前版本的服务包，则可以将其作为目标。
 
 - 多目标功能可以保证应用程序仅使用目标框架和平台中的可用功能。
 
@@ -183,6 +184,8 @@ MSBuild.exe MyProj.proj -property:Configuration=Debug
 | [其他资源](https://social.msdn.microsoft.com/forums/vstudio/home?forum=msbuild) | 列出社区和支持资源，用于了解有关 MSBuild 的更多信息。 |
 
 ## <a name="reference"></a>参考
-- [MSBuild 参考](../msbuild/msbuild-reference.md) 指向包含参考信息的主题的链接。
+- [MSBuild 参考](../msbuild/msbuild-reference.md)\
+ 链接到包含参考信息的主题。
 
-- [术语](msbuild-glossary.md) 定义常见 MSBuild 术语。
+- [术语表](msbuild-glossary.md)\
+ 定义常见 MSBuild 术语。

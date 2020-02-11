@@ -5,18 +5,18 @@ description: Visual Studio 已发布的版本和生成号列表，按日期排�
 author: ornellaalt
 ms.author: ornella
 manager: jillfra
-ms.date: 01/15/2020
+ms.date: 01/31/2020
 ms.topic: reference
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 6864f6ad7819cf163c20f0d604d90370454b53a4
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.openlocfilehash: 978ea63149223738e39be7035b5af6a5f7087591
+ms.sourcegitcommit: 4be64917e4224fd1fb27ba527465fca422bc7d62
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76114179"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76922936"
 ---
 # <a name="visual-studio-build-numbers-and-release-dates"></a>Visual Studio 内部版本号和发布日期
 
@@ -28,6 +28,8 @@ ms.locfileid: "76114179"
 
 | **Version**| **频道** | **发布日期** | **内部版本** |
 | ---------------------- | ----------- | ---------------- | ----------------- |
+| 16.4.4 | Release | 2020 年 1 月 31 日 | 16.4.29728.190 |
+| 16.5.0 | 预览版 2 | 2020 年 1 月 22 日 | 16.5.29721.120 |
 | 16.4.3 | Release | 2020 年 1 月 14 日 | 16.4.29709.97 |
 | 16.0.11 | Release | 2020 年 1 月 14 日 | 16.0.28803.653 |
 | 16.4.2 | Release | 2019 年 12 月 17 日 | 16.4.29613.14 |
