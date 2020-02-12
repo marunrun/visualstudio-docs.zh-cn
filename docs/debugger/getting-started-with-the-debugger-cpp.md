@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 96c928606c0fbc306a72347f85841677d0f69ec8
-ms.sourcegitcommit: b2fc9ac7d73c847508f6ed082bed026476bb3955
+ms.openlocfilehash: 47b1a031a6c4e4e823a1fcc12aba228750aee27e
+ms.sourcegitcommit: 00ba14d9c20224319a5e93dfc1e0d48d643a5fcd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/05/2020
-ms.locfileid: "77027385"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77091803"
 ---
 # <a name="tutorial-learn-to-debug-c-code-using-visual-studio"></a>教程：了解如何使用 Visual Studio 调试 C++ 代码
 
@@ -74,9 +74,11 @@ ms.locfileid: "77027385"
 
 3. 在“新建项目”对话框左侧的窗格中，展开“Visual C++”，然后选择“Windows 桌面”    。 在中间窗格中，选择“Windows 控制台应用程序”  。 然后将项目命名为 get-started-debugging  。
 
-     如果没有看到“控制台应用”项目模板，请选择“新建项目”对话框左侧窗格中的“打开 Visual Studio 安装程序”链接    。
+     如果没有看到“控制台应用”项目模板，请选择“新建项目”对话框左侧窗格中的“打开 Visual Studio 安装程序”链接    。 Visual Studio 安装程序启动。 选择“.NET Core 跨平台开发”工作负载，然后选择“修改”   。
 
-     Visual Studio 安装程序启动。 选择“.NET Core 跨平台开发”工作负载，然后选择“修改”   。
+4. 单击 **“确定”** 。
+
+   此时，Visual Studio 将打开新项目。
 
 ::: moniker-end
 
@@ -212,7 +214,7 @@ ms.locfileid: "77027385"
 
      ![使用 F10 单步跳过代码](../debugger/media/get-started-step-over-cpp.png "F10 单步跳过")
 
-     请注意，这次调试器不会单步执行 `SendMessage` 方法。 按 F10 将使调试器前进，但不会单步执行应用代码中的函数或方法（代码仍将执行）  。 通过在进行 `SendMessage` 方法调用时按“F10”（而不是“F11”），我们跳过了 `SendMessage` 的实现代码（我们现在可能对此不感兴趣）   。 有关通过代码进行移动的不同方法的详细信息，请参阅[调试器中的导航代码](../debugger/navigating-through-code-with-the-debugger.md)。
+     请注意，这次调试器不会单步执行 `SendMessage` 方法。 按 F10 将使调试器前进，但不会单步执行应用代码中的函数或方法（代码仍将执行）  。 通过在进行 `SendMessage` 方法调用时按“F10”（而不是“F11”），我们跳过了 `SendMessage` 的实现代码（我们现在可能对此不感兴趣）   。 有关在代码中进行移动的不同方法的详细信息，请参阅[浏览调试器中的代码](../debugger/navigating-through-code-with-the-debugger.md)。
 
 ## <a name="navigate-code-using-run-to-click"></a>使用“运行时单击”导航代码
 

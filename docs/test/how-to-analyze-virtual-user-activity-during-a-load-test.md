@@ -6,14 +6,14 @@ helpviewer_keywords:
 - virtual user activity chart, viewing
 ms.assetid: 8bda19b3-91c1-4daf-b6c7-09108bddadff
 author: jillre
-ms.author: jillfra
+ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 97abfe3740ea9209768e82eca1b269cd0a381233
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: dda1f35a63d3f7788faf9a94f16888c8323529c4
+ms.sourcegitcommit: 00ba14d9c20224319a5e93dfc1e0d48d643a5fcd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72644169"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77091712"
 ---
 # <a name="how-to-analyze-what-virtual-users-are-doing-during-a-load-test-using-the-virtual-user-activity-chart"></a>如何：使用虚拟用户活动图分析虚拟用户在负载测试期间的操作
 
@@ -29,7 +29,7 @@ ms.locfileid: "72644169"
 
 2. 运行完负载测试之后，将显示测试结果摘要页。 选择工具栏上的“用户详细信息”按钮。 
 
-     -或-
+     \- 或 -
 
      通过选择工具栏上的“关系图”按钮打开关系图视图。  右键单击某个关系图，然后选择“转到用户详细信息”。 
 
