@@ -13,12 +13,12 @@ manager: jillfra
 ms.workload:
 - multiple
 monikerRange: '>= vs-2019'
-ms.openlocfilehash: ffd5f2e4bfc13f79b519fbdf9b3cf517793cd324
-ms.sourcegitcommit: 00ba14d9c20224319a5e93dfc1e0d48d643a5fcd
+ms.openlocfilehash: 5087c439533aa447708d0f1bfae653054fd16089
+ms.sourcegitcommit: a86ee68e3ec23869b6eaaf6c6b7946b1d9a88d01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77091872"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77144790"
 ---
 # <a name="generate-source-code-from-net-assemblies-while-debugging"></a>在调试时从 .NET 程序集生成源代码
 
@@ -80,8 +80,27 @@ ms.locfileid: "77091872"
 - 断点并非始终绑定到匹配的采购位置。
 - 单步执行可能并不总是单步执行到正确的位置。
 - 局部变量的名称可能不正确。
+- 某些变量可能不可用于计算。
 
 有关更多详细信息，请参阅 GitHub 问题：[反编译程序集成到 VS 调试器中 IChsarpCompiler。](https://github.com/icsharpcode/ILSpy/issues/1901)
+
+### <a name="decompilation-reliability"></a>Ilspy 可靠性
+
+相对较小的 ilspy 尝试百分比可能会导致失败。 这是由于 ILSpy 中的序列点为空引用错误引起的。  我们缓解了这些问题，并在 ilspy 尝试中进行了正确的故障转移。
+
+有关更多详细信息，请参阅 GitHub 问题：[反编译程序集成到 VS 调试器中 IChsarpCompiler。](https://github.com/icsharpcode/ILSpy/issues/1901)
+
+### <a name="limitations-with-async-code"></a>异步代码的限制
+
+具有 async/await 代码模式的反编译模块的结果可能不完整或完全失败。 Async/await 和 yield 状态的 ILSpy 实现仅部分实现。 
+
+有关更多详细信息，请参阅 GitHub 问题： [PDB 生成器状态](https://github.com/icsharpcode/ILSpy/issues/1422)。
+
+### <a name="just-my-code"></a>仅我的代码
+
+[仅我的代码（JMC）](https://docs.microsoft.com/visualstudio/debugger/just-my-code)设置允许 Visual Studio 逐过程执行系统、框架、库和其他非用户调用。 在调试会话期间，"**模块**" 窗口将显示调试器处理为 "我的代码" 的代码模块（用户代码）。
+
+优化或发布模块的 ilspy 生成非用户代码。 例如，如果调试器在反编译非用户代码中中断，则不会显示 "**无源**" 窗口。 若要禁用仅我的代码，请导航到 "**工具**" > **选项**"（或"**调试** > **选项**"） >**调试** > "**常规**"，然后取消选择"**启用仅我的代码**"。
 
 ### <a name="extracted-sources"></a>提取的源
 

@@ -1,48 +1,52 @@
 ---
-title: Office 365 权益 | Microsoft Docs
+title: Office 365 专业增强版权益 | Microsoft Docs
 author: evanwindom
 ms.author: lank
 manager: lank
 ms.date: 08/02/2019
 ms.topic: conceptual
-description: 了解一些 Visual Studio 订阅中随附的 Office 365 权益。
-ms.openlocfilehash: b9834411c4b951fb7cdb09ac48dad651d109d618
-ms.sourcegitcommit: bb72ce6ec173f3ae06c7ae57322c43690f27553c
+description: 了解一些 Visual Studio 订阅中随附的 Office 365 专业增强版权益。
+ms.openlocfilehash: 4ff521651e25fd1ad73bd629a111c7f8378fbfe3
+ms.sourcegitcommit: b2fc9ac7d73c847508f6ed082bed026476bb3955
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76967340"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036729"
 ---
-# <a name="office-365-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 Office 365
+# <a name="office-365-pro-plus-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 Office 365 Pro Plus
 
-出色地完成工作。 使用不断更新的应用随时随地工作。 Office 365 是随附高级应用的订阅，如 Word、Excel、PowerPoint、OneNote、Outlook、Publisher 和 Access（Publisher 和 Access 仅适用于 PC）。 这些应用可安装在多台设备上，包括 PC、Mac、iPad、iPhone、Android 平板电脑和 Android 手机。 借助订阅，可获取最新版应用，并自动接收已发布的更新。
+出色地完成工作。 使用不断更新的应用随时随地工作。 Office 365 Pro Plus 订阅随附以下高级应用：Word、Excel、PowerPoint、OneNote、Outlook、Publisher 和 Access（Publisher 和 Access 仅适用于电脑）。 这些应用可安装在多台设备上，包括 PC、Mac、iPad、iPhone、Android 平板电脑和 Android 手机。 借助订阅，可获取最新版应用，并自动接收已发布的更新。
 
 > [!NOTE]
-> Visual Studio 订阅允许将 Office 365 用于生产用途。  
+> Visual Studio 订阅授权你将 Office 365 专业增强版用于生产用途。  
 
-## <a name="getting-started-with-office-365"></a>开始使用 Office 365 
+> [!IMPORTANT]
+> 我们已经注意到，获取 Office 365 专业增强版产品密钥存在问题。  我们正在努力解决此问题，并将在问题解决时提供更新。 
 
-若要下载和激活 Office 365，请按照下面这些步骤操作：
+
+## <a name="getting-started-with-office-365-pro-plus"></a>开始使用 Office 365 Pro Plus
+
+请按照以下步骤下载并激活 Office 365 Pro Plus：
 1. 登录 Visual Studio Enterprise 订阅。
 2. 单击“下载”  选项卡。
-3. 此时，系统会列出特别推荐的下载内容。 在 Office 列表中，选择“Office 365”  。
+3. 此时，系统会列出特别推荐的下载内容。 在 Office 列表中，选择“Office 365 专业增强版”  。
    > [!div class="mx-imgBorder"]
-   > ![Office 365 下载](_img/vs-office365/vs-office365-downloads.png)
-0. 必须有产品密钥，才能安装 Office 365。  单击 Office 365 列表下的“获取密钥”链接  。
+   > ![Office 365 专业增强版下载](_img/vs-office365/vs-office365-downloads.png)
+0. 必须有产品密钥，才能安装 Office 365 专业增强版。  单击 Office 365 专业增强版列表下的“获取密钥”  链接。
    > [!div class="mx-imgBorder"]
-   > ![Office 365：获取产品密钥](_img/vs-office365/vs-office365-get-key.png)
+   > ![Office 365 专业增强版 - 获取产品密钥](_img/vs-office365/vs-office365-get-key.png)
 0. 弹出窗口将显示任何你已认领的密钥以及可用的密钥。  要获取新密钥，请单击“Office Professional Plus 2019”列表下的“索取密钥”   。
    > [!div class="mx-imgBorder"]
-   > ![Office 365：索取产品密钥](_img/vs-office365/vs-office365-claim-key.png)
+   > ![Office 365 专业增强版 - 声明产品密钥](_img/vs-office365/vs-office365-claim-key.png)
 0. 记录刚刚声明的密钥。 （可随时返回到此列表，以再次查看。）
 0. 关闭弹出窗口。
 0. 单击“下载”  按钮。
    > [!div class="mx-imgBorder"]
-   > ![Office 365：开始下载](_img/vs-office365/vs-office365-download-button.png)
+   > ![Office 365 专业增强版 - 开始下载](_img/vs-office365/vs-office365-download-button.png)
 0. 使用 Microsoft 帐户登录。 （如果已登录，请单击“下一步”  。）
 0. 输入产品密钥、国家/地区和语言，再单击“下一步”  。
    > [!div class="mx-imgBorder"]
-   > ![Office 365：输入产品密钥](_img/vs-office365/vs-office365-enter-key.png)
+   > ![Office 365 专业增强版 - 输入产品密钥](_img/vs-office365/vs-office365-enter-key.png)
 0. 再次单击“下一步”  。
 0. 单击“安装”  ，以安装 Office 应用。
 
@@ -77,3 +81,9 @@ ms.locfileid: "76967340"
 - [Visual Studio](vs-ide-benefit.md)
 - [Azure DevOps](vs-azure-devops.md)
 - [Azure 开发测试个人额度](vs-azure.md) 如果你打算开发 Office 应用，建议激活 [Office 开发人员订阅](vs-office-dev.md)
+
+## <a name="see-also"></a>请参阅
+- [Visual Studio 文档](/visualstudio/)
+- [Azure DevOps 文档](/azure/devops/)
+- [Azure 文档](/azure/)
+- [Microsoft 365 文档](/microsoft-365/)

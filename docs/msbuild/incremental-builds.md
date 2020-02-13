@@ -10,16 +10,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fb4cfc272b24bf014691b5d130f71f97e4849a31
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 43c739cc24d453ad4129d8cb7cc4bfbebec07aa4
+ms.sourcegitcommit: 00ba14d9c20224319a5e93dfc1e0d48d643a5fcd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75573815"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77091816"
 ---
 # <a name="incremental-builds"></a>增量生成
 
 增量生成是经过优化的生成。优化后，如果目标具有的输出文件相对于其相应的输入文件保持为最新，则系统不会执行该目标。 目标元素可同时具有 `Inputs` 属性（指示目标要预期为输入的项）和 `Outputs` 属性（指示目标要生成为输出的项）。 MSBuild 尝试在这些属性的值之间找到一对一映射。 如果存在一对一映射，MSBuild 比较每个输入项的时间戳和其对应的输出项的时间戳。 不具有一对一映射的输出文件则与所有输入文件进行对比。 如果某项的输出文件的时间戳与该项的一个或多个输入文件相同，或与之相比较新，则将该项视为最新。
+
+> [!NOTE]
+> 当 MSBuild 评估输入文件时，只考虑当前执行中列表的内容。 自上次生成后的列表更改不会自动让目标到期。
 
 如果所有输出项均为最新，MSBuild 就跳过目标。 目标的这种增量生成可以显著提高生成速度  。 如果只有部分文件保持为最新，MSBuild 会执行目标，但跳过最新的项，从而使所有项均保持为最新。 此进程称为“部分增量生成”  。
 

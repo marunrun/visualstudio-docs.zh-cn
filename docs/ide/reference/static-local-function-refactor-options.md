@@ -1,6 +1,6 @@
 ---
-title: 静态本地函数重构
-ms.date: 09/28/2019
+title: 静态本地函数重构选项
+ms.date: 02/10/2020
 ms.topic: reference
 author: governesss
 ms.author: midumont
@@ -11,12 +11,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: adbf84b9ae7566cd5e58a7c757ce09a37252b754
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.openlocfilehash: c297457c910c484c05c974c581e89c75e0ad44e5
+ms.sourcegitcommit: a86ee68e3ec23869b6eaaf6c6b7946b1d9a88d01
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74782317"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77144834"
 ---
 # <a name="static-local-function-refactorings-and-quick-actions"></a>静态本地重构和快速操作
 

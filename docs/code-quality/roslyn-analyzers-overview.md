@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 77ee96272733eb519e92262cece405de21c06fa3
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 34225858e88f4ee969f0e51013bcdb04812d425f
+ms.sourcegitcommit: a86ee68e3ec23869b6eaaf6c6b7946b1d9a88d01
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75587272"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77144775"
 ---
 # <a name="overview-of-source-code-analyzers"></a>源代码分析器概述
 
@@ -28,7 +28,7 @@ ms.locfileid: "75587272"
 - 可以将其他分析器作为 NuGet 包或 Visual Studio 扩展进行安装。 例如：
 
   - [FxCop 分析器](../code-quality/install-fxcop-analyzers.md)，Microsoft 的推荐代码质量分析器
-  - 第三方分析器，例如 [StyleCop](https://www.nuget.org/packages/StyleCop.Analyzers/)、[Roslynator](https://www.nuget.org/packages/Roslynator/)、[XUnit Analyzers](https://www.nuget.org/packages/xunit.analyzers/) 和 [Sonar Analyzer](https://www.nuget.org/packages/SonarAnalyzer.CSharp/)
+  - 第三方分析器，例如 [StyleCop](https://www.nuget.org/packages/StyleCop.Analyzers/)、[Roslynator](https://www.nuget.org/packages/Roslynator.Analyzers/)、[XUnit Analyzers](https://www.nuget.org/packages/xunit.analyzers/) 和 [Sonar Analyzer](https://www.nuget.org/packages/SonarAnalyzer.CSharp/)
 
 如果分析器发现规则冲突，将在代码编辑器（违规代码下方有波浪线）和“错误列表”窗口中报告  。
 
