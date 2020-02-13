@@ -2,7 +2,7 @@
 title: 修改 Visual Studio
 titleSuffix: ''
 description: 了解如何逐步修改 Visual Studio。
-ms.date: 12/29/2019
+ms.date: 02/10/2019
 ms.topic: conceptual
 helpviewer_keywords:
 - modify Visual Studio
@@ -17,12 +17,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 2abb8ad86315a4be4c2c44488bd97d413415e614
-ms.sourcegitcommit: 4be64917e4224fd1fb27ba527465fca422bc7d62
+ms.openlocfilehash: 57aa5531eb6d6517b520991ababefc38b25a9a2d
+ms.sourcegitcommit: 00ba14d9c20224319a5e93dfc1e0d48d643a5fcd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76922879"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77125346"
 ---
 # <a name="modify-visual-studio-by-adding-or-removing-workloads-and-components"></a>通过添加或删除工作负载和组件修改 Visual Studio
 
@@ -123,6 +123,9 @@ ms.locfileid: "76922879"
 ::: moniker range="vs-2019"
 
  工作负载包含所用编程语言或平台必需的功能。 可以使用工作负载来修改 Visual Studio，以便在需要执行某项操作时为其提供支持。
+
+ > [!TIP]
+>若要详细了解开发所需的工具和组件捆绑包，请参阅 [Visual Studio 工作负荷](https://visualstudio.microsoft.com/vs/#workloads)。
 
 1. 在 Visual Studio 安装程序中，选择“工作负载”  选项卡，然后选择或取消选择所需的工作负载。
 

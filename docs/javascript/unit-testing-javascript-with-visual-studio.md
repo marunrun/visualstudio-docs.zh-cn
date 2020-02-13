@@ -11,12 +11,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 90a440ce88690c12792c17729e93f9fa287dabb6
-ms.sourcegitcommit: 978df2feb5e64228d2e3dd430b299a5c234cda17
+ms.openlocfilehash: 792c74a3b5da5ed6528fa3919a0c60625d1a38ef
+ms.sourcegitcommit: 5806d463780368515e59c2614ed9cfaaa4ab4b91
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72888628"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77071942"
 ---
 # <a name="unit-testing-javascript-and-typescript-in-visual-studio"></a>在 Visual Studio 中对 JavaScript 和 TypeScript 代码进行单元测试
 
@@ -173,3 +173,5 @@ Visual Studio 启动时开始发现可用测试框架。 如果在 Visual Studio
     <GenerateProgramFile>false</GenerateProgramFile>
 </PropertyGroup>
 ```
+
+一些测试框架可能需要额外的 npm 包来进行测试检测。 例如，jest 需要 jest-editor-support npm 包。 如果需要，请查看特定框架的文档。
