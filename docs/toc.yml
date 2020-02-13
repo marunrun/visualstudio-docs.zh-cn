@@ -382,6 +382,8 @@
                   href: ide/reference/invert-conditional-logical.md
                 - name: 反转 if 语句
                   href: ide/reference/invert-if-statement.md
+                - name: 静态本地函数重构选项
+                  href: ide/reference/static-local-function-refactor-options.md
                 - name: 将声明移至引用附近
                   href: ide/reference/move-declaration-near-reference.md
                 - name: 将类型移到匹配的文件
@@ -396,7 +398,7 @@
                   href: ide/reference/remove-unreachable-code.md
                 - name: 重命名
                   href: ide/reference/rename.md
-                - name: 对 Using 排序
+                - name: 对 using 排序
                   href: ide/reference/sort-usings.md
                 - name: Split 或 merge if 语句
                   href: ide/reference/split-or-merge-if-statement.md
