@@ -13,48 +13,48 @@ f1_keywords:
 - _Inexpressible_
 ms.assetid: adf29f8c-89fd-4a5e-9804-35ac83e1c457
 caps.latest.revision: 9
-author: mikeblome
-ms.author: mblome
+author: corob-msft
+ms.author: corob
 manager: jillfra
-ms.openlocfilehash: e5284ae41f961d8e027590b4296037236e7108f6
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: a0a6cd31cbc8cf73cfa2c7e9ee7c096fa56799b9
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65699440"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77277964"
 ---
 # <a name="intrinsic-functions"></a>内部函数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-在 SAL 表达式可以是 C /C++表达式提供，它是不具有副作用的表达式-例如，+ +、--，和所有在此上下文中具有副作用的函数调用。  但是，SAL 提供一些类似函数的对象以及可以在 SAL 表达式中使用一些保留的符号。 这些称为*内部函数*。  
+SAL 中的表达式可以是 C/C++表达式，前提是它是一个不具有副作用的表达式，例如 + +、--, 和函数调用都在此上下文中有副作用。  但是，SAL 提供一些类似函数的对象和一些可用于 SAL 表达式的保留符号。 这些*函数称为内部函数*。  
   
 ## <a name="general-purpose"></a>通用  
- 以下内部函数批注的 sal 提供常规实用程序。  
+ 以下内部函数注释提供了用于 SAL 的常规实用工具。  
   
-|批注|描述|  
+|Annotation|说明|  
 |----------------|-----------------|  
-|`_Curr_`|同义词所批注的对象。  当`_At_`正在使用中，批注`_Curr_`的第一个参数相同`_At_`。  否则，将参数或批注与从词法上关联的整个函数/返回值。|  
-|`_Inexpressible_(expr)`|表示一个缓冲区的大小是太复杂，无法通过使用批注表达式表示的情况 — 例如，通过扫描输入的数据集，然后再计算的计算时所选成员。|  
-|`_Nullterm_length_(param)`|`param` 是最多缓冲区，但不是包括 null 终止符中的元素数。 它可应用于非聚合，非 void 类型的任何缓冲。|  
-|`_Old_(expr)`|在不满足前提条件，计算时`_Old_`将返回输入的值`expr`。  当它计算后置条件中时，它将返回值`expr`根据它进行计算中不满足前提条件。|  
-|`_Param_(n)`|`n`个参数的函数，从 1 到计数`n`，和`n`是文本的整数常量。 如果名为的参数，此批注等同于按名称访问该参数。 **注意：** `n`可能指由省略号，或者可能在不使用名称函数原型中使用的位置参数。|  
-|`return`|C /C++保留的关键字`return`可用于在 SAL 表达式中指示函数的返回值。  在 post 状态; 值才可用它会导致语法错误之前状态使用它。|  
+|`_Curr_`|当前正在进行批注的对象的同义词。  当使用 `_At_` 批注时，`_Curr_` 与 `_At_`的第一个参数相同。  否则，它是批注在词法上关联的参数或整个函数/返回值。|  
+|`_Inexpressible_(expr)`|表示缓冲区的大小太复杂，无法通过使用批注表达式来表示，例如，通过扫描输入数据集并对选定成员进行计数来计算。|  
+|`_Nullterm_length_(param)`|`param` 是缓冲区中的元素数目，但不包括 null 终止符。 它可以应用于非聚合非 void 类型的任何缓冲区。|  
+|`_Old_(expr)`|当在前置条件中进行计算时，`_Old_` 返回输入值 `expr`。  当在后置条件中进行计算时，它将返回值 `expr`，因为它会在前置条件中进行计算。|  
+|`_Param_(n)`|函数的 `n`第一个参数，从1到 `n`，`n` 是一个文本整数常量。 如果参数名为，则此批注与按名称访问参数相同。 **注意：** `n` 可以引用省略号定义的位置参数，也可以在未使用名称的函数原型中使用。|  
+|`return`|可以在 SALC++表达式中使用 C/reserved 关键字 `return` 来指示函数的返回值。  该值仅在 post 状态中可用;在 pre 状态中使用它是一个语法错误。|  
   
 ## <a name="string-specific"></a>特定于字符串  
- 下面的内部函数批注启用操作的字符串。 这些函数的所有四个具有相同的用途： 若要返回的 null 终止符之前找到的类型的元素数。 差异几种类型的引用的元素中的数据。 请注意，如果你想要指定以 null 结尾的长度的缓冲区，不由字符，请使用`_Nullterm_length_(param)`批注与上一节。  
+ 以下内部函数批注允许对字符串进行操作。 所有这四个函数都具有相同的用途：返回在 null 终止符之前找到的类型的元素数。 不同之处在于引用的元素中的数据类型。 请注意，如果想要指定不由字符组成的以 null 结尾的缓冲区的长度，请使用上一节中的 `_Nullterm_length_(param)` 注释。  
   
-|批注|描述|  
+|Annotation|说明|  
 |----------------|-----------------|  
-|`_String_length_(param)`|`param` 是为字符串，但不是包括 null 终止符中的元素数。 此批注被保留的字符串的字符类型。|  
-|`strlen(param)`|`param` 是为字符串，但不是包括 null 终止符中的元素数。 此批注保留以供使用的字符数组和类似于 C 运行时函数[strlen （)](https://msdn.microsoft.com/library/16462f2a-1e0f-4eb3-be55-bf1c83f374c2)。|  
-|`wcslen(param)`|`param` 是 （但不是包括） 在字符串中的元素数目 null 终止符。 此批注保留以供使用宽字符数组和类似于 C 运行时函数[wcslen （)](https://msdn.microsoft.com/library/16462f2a-1e0f-4eb3-be55-bf1c83f374c2)。|  
+|`_String_length_(param)`|`param` 是字符串中的元素数，最大为，但不包括 null 终止符。 此批注是为字符字符串类型保留的。|  
+|`strlen(param)`|`param` 是字符串中的元素数，最大为，但不包括 null 终止符。 此批注保留用于字符数组，类似于 C 运行时函数[strlen （）](https://msdn.microsoft.com/library/16462f2a-1e0f-4eb3-be55-bf1c83f374c2)。|  
+|`wcslen(param)`|`param` 是字符串中的元素数（但不包括）为 null 终止符。 此批注保留用于宽字符数组，类似于 C 运行时函数[wcslen （）](https://msdn.microsoft.com/library/16462f2a-1e0f-4eb3-be55-bf1c83f374c2)。|  
   
-## <a name="see-also"></a>请参阅  
- [使用 SAL 注释减少 C /C++代码缺陷](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)   
+## <a name="see-also"></a>另请参阅  
+ [使用 SAL 注释减少 C/C++代码缺陷](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)   
  [了解 SAL](../code-quality/understanding-sal.md)   
- [对函数参数和返回值进行批注](../code-quality/annotating-function-parameters-and-return-values.md)   
- [对函数行为进行批注](../code-quality/annotating-function-behavior.md)   
+ [批注函数参数和返回值](../code-quality/annotating-function-parameters-and-return-values.md)   
+ [批注函数行为](../code-quality/annotating-function-behavior.md)   
  [批注结构和类](../code-quality/annotating-structs-and-classes.md)   
- [对锁定行为进行批注](../code-quality/annotating-locking-behavior.md)   
+ [批注锁定行为](../code-quality/annotating-locking-behavior.md)   
  [指定何时以及在何处应用批注](../code-quality/specifying-when-and-where-an-annotation-applies.md)   
  [最佳做法和示例](../code-quality/best-practices-and-examples-sal.md)

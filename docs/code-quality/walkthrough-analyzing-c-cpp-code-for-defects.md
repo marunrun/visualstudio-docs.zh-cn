@@ -7,17 +7,17 @@ helpviewer_keywords:
 - code analysis, walkthroughs
 - code, analyzing C/C++
 - code analysis tool, walkthroughs
-author: mikeblome
-ms.author: mblome
+author: corob-msft
+ms.author: corob
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2154a07d498012c9c45f992ebed51b0218e823a
-ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
+ms.openlocfilehash: 74a878b8c64955927357e45c668c4d100007d373
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75401023"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77271810"
 ---
 # <a name="walkthrough-analyzing-cc-code-for-defects"></a>演练：对 C/C++ 代码进行缺陷分析
 
@@ -45,7 +45,7 @@ ms.locfileid: "75401023"
 
 3. 在**解决方案资源管理器**中，选择 CodeDefects 项目。
 
-4. 在“项目”菜单上，单击“属性”。
+4. 在 **“项目”** 菜单上，单击 **“属性”** 。
 
      随即显示 " **CodeDefects 属性页**" 对话框。
 
@@ -107,7 +107,7 @@ ms.locfileid: "75401023"
 
 1. 在解决方案资源管理器中，选择 "批注" 项目。
 
-2. 在“项目”菜单上，单击“属性”。
+2. 在 **“项目”** 菜单上，单击 **“属性”** 。
 
      将显示 "**批注属性页**" 对话框。
 

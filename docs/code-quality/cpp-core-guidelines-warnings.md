@@ -3,17 +3,17 @@ title: C++核心准则警告
 ms.date: 10/16/2019
 ms.topic: conceptual
 ms.assetid: 7c83814a-f21d-4323-ad5f-13bac40d3e38
-author: mblome
-ms.author: mblome
+author: corob
+ms.author: corob
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69adb52b4fa7649bd99ecb5d4e29aa69390f6076
-ms.sourcegitcommit: 8589d85cc10710ef87e6363a2effa5ee5610d46a
+ms.openlocfilehash: 4bcd32d633c2b88bba53aa79b670a59bda1ebef3
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72807122"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77271393"
 ---
 # <a name="using-the-c-core-guidelines-checkers"></a>使用 C++ 核心准则检查程序
 
@@ -64,7 +64,7 @@ int main()
 
 - C26485 是规则界限。3：没有数组到指针的衰减。
 
-- C26481 是规则界限。1：不要使用指针算法。 请改用 `span` 。
+- C26481 是规则界限。1：不要使用指针算法。 请改用 `span`。
 
 如果编译C++此代码时安装并启用了核心检查代码分析规则集，则会输出前两个警告，但会禁止显示第三个警告。 下面是示例代码的生成输出：
 
@@ -84,7 +84,7 @@ C++核心准则可帮助您编写更好和更安全的代码。 但是，如果�
 
 将新规则添加到C++核心准则检查器时，为预先存在的代码生成的警告数可能会增加。 您可以使用预定义的规则集来筛选要启用的规则类型。 在 Visual Studio 2017 版本15.3 中，支持的规则集包括：
 
-- **所有者指针规则**强制执行与[从核心准则 > 所有者 \<T 相关的C++资源管理检查](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management)。
+- **所有者指针规则**强制执行与[从核心准则中的 Owner\<t > 相关C++的资源管理检查](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management)。
 
 - **Const 规则**强制实施[来自C++核心准则的 const 相关检查](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#con-constants-and-immutability)。
 
@@ -120,7 +120,7 @@ CPPCORECHECK_BOUNDS_WARNINGS
 #pragma warning(default: CPPCORECHECK_CONST_WARNINGS)
 ```
 
-## <a name="attributes"></a>特性
+## <a name="attributes"></a>属性
 
 Microsoft C++编译器对 GSL 禁止显示属性的支持有限。 它可用于禁止在函数内的 expression 和 block 语句上出现警告。
 

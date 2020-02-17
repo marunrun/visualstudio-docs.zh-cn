@@ -15,19 +15,19 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 4d3afc8ff48355c74544edf123689495bfde1302
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 27024f3b28b97a1a5d0befc3d70dbf8144fb9e24
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73189133"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77277648"
 ---
 # <a name="walkthrough-profile-a-sharepoint-application"></a>演练：分析 SharePoint 应用程序
   本演练演示在 Visual Studio 中如何使用分析工具优化 SharePoint 应用程序的性能。 此示例应用程序是 SharePoint 功能事件接收器，其中包含降低功能事件接收器性能的空闲循环。 Visual Studio 探查器使你能够查找并消除最昂贵（执行速度最慢）的项目部分，也称为*热路径*。
 
  本演练演示了下列任务：
 
-- [Addg 功能和功能事件接收器](#add-a-feature-and-feature-event-receiver)。
+- [添加功能和功能事件接收器](#add-a-feature-and-feature-event-receiver)。
 
 - [配置和部署 SharePoint 应用程序](#configure-and-deploy-the-sharepoint-application)。
 
@@ -37,12 +37,12 @@ ms.locfileid: "73189133"
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>系统必备
  你需要以下组件来完成本演练：
 
 - 支持的 Microsoft Windows 和 SharePoint 版本。
 
-- [!INCLUDE[vs_dev11_long](../sharepoint/includes/vs-dev11-long-md.md)]
+- [!INCLUDE[vs_dev11_long](../sharepoint/includes/vs-dev11-long-md.md)]。
 
 ## <a name="create-a-sharepoint-project"></a>创建 SharePoint 项目
  首先，创建一个 SharePoint 项目。
@@ -65,7 +65,7 @@ ms.locfileid: "73189133"
 
     目前，只能分析场解决方案。 有关沙盒解决方案与场解决方案的详细信息，请参阅[沙盒解决方案注意事项](../sharepoint/sandboxed-solution-considerations.md)。
 
-7. 选择 "**完成**" 按钮。 项目将显示在**解决方案资源管理器**中。
+7. 单击“完成”按钮。 项目将显示在**解决方案资源管理器**中。
 
 ## <a name="add-a-feature-and-feature-event-receiver"></a>添加功能和功能事件接收器
  接下来，向项目中添加功能和该功能的事件接收器。 此事件接收器将包含要分析的代码。
@@ -272,8 +272,7 @@ ms.locfileid: "73189133"
 
      现在已消除对空闲循环的调用，功能应更快激活。 示例分析报告应反映此情况。
 
-## <a name="see-also"></a>请参阅
-- [性能资源管理器](../profiling/performance-explorer.md)
+## <a name="see-also"></a>另请参阅
 - [性能会话概述](../profiling/performance-session-overview.md)
 - [性能分析初学者指南](../profiling/beginners-guide-to-performance-profiling.md)
 - [通过 Visual Studio 探查器查找应用程序瓶颈](https://msdn.microsoft.com/magazine/cc337887.aspx)
