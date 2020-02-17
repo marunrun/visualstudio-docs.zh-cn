@@ -21,44 +21,44 @@ f1_keywords:
 - _Field_size_full_opt_
 ms.assetid: b8278a4a-c86e-4845-aa2a-70da21a1dd52
 caps.latest.revision: 11
-author: mikeblome
-ms.author: mblome
+author: corob-msft
+ms.author: corob
 manager: jillfra
-ms.openlocfilehash: df2e75bb3dd01d051d8fed29748e499f8f620128
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6db2202971facb0419db68c04835c8d5c848f528
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68157081"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77271582"
 ---
 # <a name="annotating-structs-and-classes"></a>批注结构和类
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-你可以通过使用类似于固定条件注释批注结构和类成员，它们都假定为满足的任何函数调用或进入/退出函数涉及封闭结构作为参数或结果值。  
+您可以通过使用类似于固定条件的批注来批注结构和类成员，在任何将封闭结构作为参数或结果值的函数调用或函数入口/出口上，它们都假设为 true。  
   
 ## <a name="struct-and-class-annotations"></a>结构和类批注  
   
 - `_Field_range_(low, high)`  
   
-     该字段是从 （含） 范围内`low`到`high`。  等效于`_Satisfies_(_Curr_ >= low && _Curr_ <= high)`通过使用适当的前置或后置条件应用于带批注的对象。  
+     该字段的范围是从 `low` 到 `high`。  等效于使用合适的前置或后置条件应用于批注对象的 `_Satisfies_(_Curr_ >= low && _Curr_ <= high)`。  
   
-- `_Field_size_(size)`, `_Field_size_opt_(size)`, `_Field_size_bytes_(size)`, `_Field_size_bytes_opt_(size)`  
+- `_Field_size_(size)`、`_Field_size_opt_(size)`、`_Field_size_bytes_(size)`、`_Field_size_bytes_opt_(size)`  
   
-     具有可写大小以元素 （或字节数） 为指定的字段`size`。  
+     在 `size`指定的元素（或字节）内具有可写大小的字段。  
   
-- `_Field_size_part_(size, count)`, `_Field_size_part_opt_(size, count)`,         `_Field_size_bytes_part_(size, count)`, `_Field_size_bytes_part_opt_(size, count)`  
+- `_Field_size_part_(size, count)`、`_Field_size_part_opt_(size, count)`、`_Field_size_bytes_part_(size, count)``_Field_size_bytes_part_opt_(size, count)`  
   
-     具有可写大小以元素 （或字节数） 为指定的字段`size`，和`count`这些元素 （字节） 的可读。  
+     在 `size`指定的元素（或字节）中具有可写大小的字段，以及可读的元素（字节）的 `count`。  
   
-- `_Field_size_full_(size)`, `_Field_size_full_opt_(size)`, `_Field_size_bytes_full_(size)`, `_Field_size_bytes_full_opt_(size)`  
+- `_Field_size_full_(size)`、`_Field_size_full_opt_(size)`、`_Field_size_bytes_full_(size)`、`_Field_size_bytes_full_opt_(size)`  
   
-     具有可读和可写大小元素 （或字节数） 为指定的字段`size`。  
+     在 `size`指定的元素（或字节）中具有可读和可写大小的字段。  
   
 - `_Struct_size_bytes_(size)`  
   
-     具有可读和可写大小元素 （或字节数） 为指定的字段`size`。  
+     在 `size`指定的元素（或字节）中具有可读和可写大小的字段。  
   
-     适用于结构或类声明。  指示该类型的有效对象，可能与指定的字节数会大于声明的类型， `size`。  例如：  
+     适用于 struct 或类声明。  指示该类型的有效对象可能大于声明的类型，以及 `size`指定的字节数。  例如：  
   
     ```cpp  
   
@@ -70,18 +70,18 @@ ms.locfileid: "68157081"
   
     ```  
   
-     以字节为单位的参数的缓冲区大小`pM`类型的`MyStruct *`然后将其视为：  
+     然后，将 `MyStruct *` 类型的参数 `pM` 的缓冲区大小（以字节为单位）为：  
   
     ```cpp  
     min(pM->nSize, sizeof(MyStruct))  
     ```  
   
-## <a name="see-also"></a>请参阅  
- [使用 SAL 注释减少 C /C++代码缺陷](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)   
+## <a name="see-also"></a>另请参阅  
+ [使用 SAL 注释减少 C/C++代码缺陷](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)   
  [了解 SAL](../code-quality/understanding-sal.md)   
- [对函数参数和返回值进行批注](../code-quality/annotating-function-parameters-and-return-values.md)   
- [对函数行为进行批注](../code-quality/annotating-function-behavior.md)   
- [对锁定行为进行批注](../code-quality/annotating-locking-behavior.md)   
+ [批注函数参数和返回值](../code-quality/annotating-function-parameters-and-return-values.md)   
+ [批注函数行为](../code-quality/annotating-function-behavior.md)   
+ [批注锁定行为](../code-quality/annotating-locking-behavior.md)   
  [指定何时以及在何处应用批注](../code-quality/specifying-when-and-where-an-annotation-applies.md)   
  [内部函数](../code-quality/intrinsic-functions.md)   
  [最佳做法和示例](../code-quality/best-practices-and-examples-sal.md)

@@ -1,27 +1,27 @@
 ---
-title: 最佳做法和示例 (SAL) |Microsoft Docs
+title: 最佳做法和示例（SAL） |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
 ms.topic: conceptual
 ms.assetid: 666276fb-99c2-4dc9-8bac-d74861c203ea
 caps.latest.revision: 14
-author: mikeblome
-ms.author: mblome
+author: corob-msft
+ms.author: corob
 manager: jillfra
-ms.openlocfilehash: 56e57d182a21429d73b8eae0b79f96532732ae7b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 5a03d2f64e3facba434de03bb18dbb2ac5bd809b
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62428568"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77275243"
 ---
 # <a name="best-practices-and-examples-sal"></a>最佳做法和示例 (SAL)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 下面是一些关于充分利用源代码批注语言 (SAL)，并避免一些常见问题的方法。  
   
-## <a name="in"></a>\_In\_
+## <a name="_in_"></a>\_位于\_
  如果函数应写入元素，请使用 `_Inout_` 而不是 `_In_`。 这在从旧的宏自动转换为 SAL 的情况下尤为重要。 在 SAL 之前，许多程序员使用宏作为注释，这些宏命名为 `IN`、`OUT`、`IN_OUT`，或是这些宏的变体。 尽管建议您将这些宏转换为 SAL，但在转换时应谨慎，因为代码自写入原型以来可能已经发生改变，并且旧的宏可能已不再反映代码的作用。 请特别注意 `OPTIONAL` 注释宏，因为它经常错误放置；例如，在逗号错误的一边。  
   
 ```cpp  
@@ -45,8 +45,8 @@ void Func2(_Inout_ PCHAR p1)
 }  
 ```  
   
-## <a name="opt"></a>\_opt\_  
- 如果不允许调用方传递 null 指针，请使用 `_In_` 或 `_Out_`，而不是 `_In_opt_` 或 `_Out_opt_`。 这甚至适用于函数，该函数会检查其参数，如果参数不应为 NULL 但却为 NULL，则会返回错误。 尽管具有意外的 NULL 检查其参数并适当地返回的函数是很好的防御性编码习惯，但它并不意味着参数批注可以是可选类型 (\_*Xxx*_opt\_).  
+## <a name="_opt_"></a>\_opt\_  
+ 如果不允许调用方传递 null 指针，请使用 `_In_` 或 `_Out_`，而不是 `_In_opt_` 或 `_Out_opt_`。 这甚至适用于函数，该函数会检查其参数，如果参数不应为 NULL 但却为 NULL，则会返回错误。 尽管让函数检查其参数中是否存在意外的 NULL 并正常返回是一种很好的防御性编码做法，但并不意味着参数批注可以是可选类型（\_*Xxx*_opt\_）。  
   
 ```cpp  
   
@@ -64,10 +64,10 @@ void Func2(_Out_ int *p1)
   
 ```  
   
-## <a name="predefensive-and-postdefensive"></a>\_Pre_defensive\_和\_Post_defensive\_  
+## <a name="_pre_defensive_-and-_post_defensive_"></a>\_Pre_defensive\_ 和 \_Post_defensive\_  
  如果函数出现在信任边界上，则建议您使用 `_Pre_defensive_` 批注。  “防御性”修饰符可修改特定批注，用于指明在调用时应严格检查界面，但在实现体中，应假定可能会传递错误的参数。 这种情况下，在信任边界上将首选 `_In_ _Pre_defensive_`，以便指明尽管调用方在尝试传递 NULL 时会出现错误，但还是会分析函数体（就像参数可能是 NULL 一样），因此，任何取消指针引用而不首先检查其是否为 NULL 的尝试都会被标记。  还可使用 `_Post_defensive_` 批注，以便用于回调，其中假设受信任方为调用方，而不受信任的代码为调用的代码。  
   
-## <a name="outwrites"></a>\_Out_writes\_  
+## <a name="_out_writes_"></a>\_Out_writes\_  
  下面的示例演示一种常见的 `_Out_writes_` 误用案例。  
   
 ```cpp  
@@ -101,7 +101,7 @@ void Func3(_Out_writes_(size) PSTR pb,
   
 ```  
   
-## <a name="out-pstr"></a>\_Out\_ PSTR  
+## <a name="_out_-pstr"></a>\_\_ PSTR  
  任何时候，使用 `_Out_ PSTR` 几乎都是错误的。 这可解释为具有指向字符缓冲区的输出参数，并且以 null 结尾。  
   
 ```cpp  
@@ -116,7 +116,7 @@ void Func2(_Out_writes_(n) PSTR wszFileName, size_t n);
   
  诸如 `_In_ PCSTR` 等批注很常见和有用。 它指向具有 NULL 终止的输入字符串，因为 `_In_` 的前置条件允许识别以 null 结尾的字符串。  
   
-## <a name="in-wchar-p"></a>\_在\_WCHAR * p  
+## <a name="_in_-wchar-p"></a>\_ WCHAR * p 中的 \_  
  `_In_ WCHAR* p` 声明具有指向一个字符的输入指针 `p`。 但是，在大多数情况下，这可能不是预期的规范。 预期的可能是以 null 结尾的数组的规范；为此，请使用 `_In_ PWSTR`。  
   
 ```cpp  
@@ -147,7 +147,7 @@ BOOL StrEquals2(_In_ PSTR p1, _In_ PSTR p2)
   
 ```  
   
-## <a name="outrange"></a>\_Out_range\_  
+## <a name="_out_range_"></a>\_Out_range\_  
  如果参数是一个指针，并且想要表示指针指向的元素值的范围，请使用 `_Deref_out_range_` 而不是 `_Out_range_`。 在下面的示例中，表示的是 *pcbFilled 的范围，而不是 pcbFilled 的范围。  
   
 ```cpp  
@@ -168,9 +168,9 @@ void Func2(
   
 ```  
   
- 一些工具并不是严格需要 `_Deref_out_range_(0, cbSize)`，因为它可从 `_Out_writes_to_(cbSize,*pcbFilled)` 推断，但为了完整性而将其显示在此处。  
+ 某些工具并非严格需要 `_Deref_out_range_(0, cbSize)`，因为它可以从 `_Out_writes_to_(cbSize,*pcbFilled)`中推断出来，但此处显示的是完整性。  
   
-## <a name="wrong-context-in-when"></a>错误的上下文中的\_时\_  
+## <a name="wrong-context-in-_when_"></a>\_ 时 \_中存在错误的上下文  
  另一个常见错误是使用前置条件的状态后计算。 在下面的示例中，`_Requires_lock_held_` 是一个前置条件。  
   
 ```cpp  
@@ -187,7 +187,7 @@ int Func2(_In_ MyData *p, int flag);
   
  表达式 `result` 是指不适用于状态前的状态后值。  
   
-## <a name="true-in-success"></a>在中，则返回 TRUE\_成功\_  
+## <a name="true-in-_success_"></a>如果 \_成功\_，则为 TRUE  
  如果函数成功（范围值为非零），请使用 `return != 0` 作为成功条件，而不使用 `return == TRUE`。 非零不一定表示等于编译器为 `TRUE` 提供的实际值。 `_Success_` 的参数是一个表达式，并且以下表达式的计算结果相等：`return != 0`、`return != false`、`return != FALSE` 和 `return`（无参数或比较）。  
   
 ```cpp  
@@ -240,12 +240,12 @@ _Ret_maybenull_ void *MightReturnNullPtr2();
   
  在此示例中，`_Out_opt_` 声明作为前置条件的一部分，指针可以为 NULL。 但是，前置条件不能应用于返回值。 在这种情况下，正确的批注为 `_Ret_maybenull_`。  
   
-## <a name="see-also"></a>请参阅  
- [使用 SAL 注释减少 C /C++代码缺陷](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)   
+## <a name="see-also"></a>另请参阅  
+ [使用 SAL 注释减少 C/C++代码缺陷](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)   
  [了解 SAL](../code-quality/understanding-sal.md)   
- [对函数参数和返回值进行批注](../code-quality/annotating-function-parameters-and-return-values.md)   
- [对函数行为进行批注](../code-quality/annotating-function-behavior.md)   
+ [批注函数参数和返回值](../code-quality/annotating-function-parameters-and-return-values.md)   
+ [批注函数行为](../code-quality/annotating-function-behavior.md)   
  [批注结构和类](../code-quality/annotating-structs-and-classes.md)   
- [对锁定行为进行批注](../code-quality/annotating-locking-behavior.md)   
+ [批注锁定行为](../code-quality/annotating-locking-behavior.md)   
  [指定何时以及在何处应用批注](../code-quality/specifying-when-and-where-an-annotation-applies.md)   
  [内部函数](../code-quality/intrinsic-functions.md)

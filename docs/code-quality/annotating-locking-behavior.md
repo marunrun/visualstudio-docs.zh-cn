@@ -27,17 +27,17 @@ f1_keywords:
 - _Lock_level_order_
 - _Lock_kind_event_
 ms.assetid: 07769c25-9b97-4ab7-b175-d1c450308d7a
-author: mikeblome
-ms.author: mblome
+author: corob-msft
+ms.author: corob
 manager: markl
 ms.workload:
 - multiple
-ms.openlocfilehash: ce5e4d1e8ed3505d1f971ef209c7e05ba85e0d69
-ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
+ms.openlocfilehash: ae15230557ee0c415082f981a7ad3588694eadea
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75402030"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77265131"
 ---
 # <a name="annotating-locking-behavior"></a>对锁定行为进行批注
 若要避免多线程程序中的并发 Bug，请遵循适当的锁定规则并使用 SAL 批注。
@@ -48,7 +48,7 @@ ms.locfileid: "75402030"
 
 并发 SAL 批注用于帮助您指定锁定的副作用、锁定责任、数据保护、锁的顺序层次结构，以及其他预期的锁定行为。 通过将隐式规则设置为显式，SAL 并发批注可提供一致方式，用于说明代码使用锁定规则的方式。 并发批注还可增强代码分析工具查找争用条件、死锁、不匹配的同步操作和其他细微并发错误的能力。
 
-## <a name="general-guidelines"></a>通用准则
+## <a name="general-guidelines"></a>一般性指导
 通过使用批注，您可以显式声明在实现（被调用方）和客户端（调用方）之间通过函数定义隐式使用的协定，并表明程序中可进一步改进分析的固定条件及其他属性。
 
 SAL 支持许多不同类型的锁定基元，例如临界区、互斥锁、自旋锁和其他资源对象。 许多并发批注采用锁表达式作为参数。 按照约定，锁由基础锁对象的路径表达式表示。
@@ -64,7 +64,7 @@ SAL 支持许多不同类型的锁定基元，例如临界区、互斥锁、自�
 ## <a name="locking-annotations"></a>锁定批注
 下表列出了锁定批注。
 
-|批注|描述|
+|Annotation|说明|
 |----------------|-----------------|
 |`_Acquires_exclusive_lock_(expr)`|批注函数并表明在状态后，函数会将 `expr` 命名的锁对象的排他锁计数递增 1。|
 |`_Acquires_lock_(expr)`|批注函数并表明在状态后，函数会将 `expr` 命名的锁对象的锁计数递增 1。|
@@ -88,7 +88,7 @@ SAL 支持许多不同类型的锁定基元，例如临界区、互斥锁、自�
 ## <a name="sal-intrinsics-for-unexposed-locking-objects"></a>非公开锁定对象的 SAL 内部
 某些锁对象不通过关联锁定函数的实现公开。  下表列出可对在未公开的锁对象上运行的函数启用批注的 SAL 内部变量。
 
-|批注|描述|
+|Annotation|说明|
 |----------------|-----------------|
 |`_Global_cancel_spin_lock_`|说明取消自旋锁。|
 |`_Global_critical_region_`|说明临界区。|
@@ -98,7 +98,7 @@ SAL 支持许多不同类型的锁定基元，例如临界区、互斥锁、自�
 ## <a name="shared-data-access-annotations"></a>共享数据访问批注
 下表列出了用于共享数据访问的批注。
 
-|批注|描述|
+|Annotation|说明|
 |----------------|-----------------|
 |`_Guarded_by_(expr)`|批注变量并表明变量每次受到访问时，`expr` 命名的锁对象的锁计数至少为 1。|
 |`_Interlocked_`|批注变量，与 `_Guarded_by_(_Global_interlock_)` 等效。|
@@ -108,7 +108,7 @@ SAL 支持许多不同类型的锁定基元，例如临界区、互斥锁、自�
 ## <a name="smart-lock-and-raii-annotations"></a>Smart Lock 和 RAII 批注
 智能锁通常会包装本机锁并管理其生存期。 下表列出了可与智能锁定和 RAII 编码模式结合使用的批注，支持 `move` 语义。
 
-|批注|描述|
+|Annotation|说明|
 |----------------|-----------------|
 |`_Analysis_assume_smart_lock_acquired_`|通知分析器假设已获取智能锁定。 此批注需要引用锁类型作为其参数。|
 |`_Analysis_assume_smart_lock_released_`|通知分析器假设已释放智能锁定。 此批注需要引用锁类型作为其参数。|

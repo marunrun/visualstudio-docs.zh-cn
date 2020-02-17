@@ -1,5 +1,5 @@
 ---
-title: 数据访问和工具
+title: 在 Visual Studio 中使用数据
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,28 +12,33 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 3a53561e8c62fcf523f13d17d5228d33a6a0af6d
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: 7c7aa1544f998a88424c0087fadceab63757d23b
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75916722"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77272086"
 ---
-# <a name="access-data-in-visual-studio"></a>在 Visual Studio 中访问数据
+# <a name="work-with-data-in-visual-studio"></a>在 Visual Studio 中使用数据
 
 在 Visual Studio 中，你可以创建应用程序，这些应用程序在任何格式、任何位置、本地计算机上、在本地计算机上或在公共、私有或混合云中连接到数据。
 
 对于 JavaScript、Python、PHP、Ruby 或C++中的应用程序，你可以通过获取库和编写代码来连接到你执行任何其他操作的数据。 对于 .NET 应用程序，Visual Studio 提供的工具可用于浏览数据源、创建对象模型以便在内存中存储和处理数据，以及将数据绑定到用户界面。 Microsoft Azure 提供适用于 .NET、Java、node.js、PHP、Python、Ruby 和移动应用的 Sdk 以及 Visual Studio 中用于连接到 Azure 存储的工具。
 
+::: moniker range="vs-2017"
 以下列表仅显示了可从 Visual Studio 中使用的多个数据库和存储系统中的几个。 [Microsoft Azure](https://azure.microsoft.com/)产品是数据服务，其中包括基础数据存储的所有预配和管理。 利用[Visual studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download)中的**azure 开发**工作负载，你可以直接从 Visual studio 使用 azure 数据存储。
+::: moniker-end
+::: moniker range=">=vs-2019"
+以下列表仅显示了可从 Visual Studio 中使用的多个数据库和存储系统中的几个。 [Microsoft Azure](https://azure.microsoft.com/)产品是数据服务，其中包括基础数据存储的所有预配和管理。 利用[Visual studio 2019](https://visualstudio.microsoft.com/downloads)中的**azure 开发**工作负载，你可以直接从 Visual studio 使用 azure 数据存储。
+::: moniker-end
 
-![Azure 开发工作负载](media/azure-development-workload.png)
+![“Azure 开发”工作负载](media/azure-development-workload.png)
 
 此处列出的大多数其他 SQL 和 NoSQL 数据库产品都可以托管在本地计算机、本地网络或虚拟机上的 Microsoft Azure 中。 如果在 Microsoft Azure 虚拟机中托管数据库，则需要负责管理数据库本身。
 
 **Microsoft Azure**
 
-- SQL Database
+- SQL 数据库
 - Azure Cosmos DB
 - 存储（blob、表、队列、文件）
 - SQL 数据仓库
@@ -48,7 +53,7 @@ ms.locfileid: "75916722"
 - MariaDB
 - MySQL
 - Oracle
-- postgresql
+- PostgreSQL
 - SQLite
 - 更多内容...
 
