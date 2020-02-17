@@ -38,7 +38,7 @@ ms.locfileid: "77272433"
   
 - 批注源代码以改进代码缺陷分析。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
   
 - [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)] 或 [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)]。  
   
