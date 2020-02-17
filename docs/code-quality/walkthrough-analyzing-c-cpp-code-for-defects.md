@@ -28,7 +28,7 @@ ms.locfileid: "77271810"
 - 将警告视为错误。
 - 批注源代码以改进代码缺陷分析。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 - [演示示例](../code-quality/demo-sample.md)的副本。
 - 基本了解 C/C++。
