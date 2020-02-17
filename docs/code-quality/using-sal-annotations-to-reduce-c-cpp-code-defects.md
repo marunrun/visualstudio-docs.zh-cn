@@ -7,17 +7,17 @@ helpviewer_keywords:
 - SAL annotations
 - code analysis, annotation
 ms.assetid: a16e47d0-6f3e-4ed6-8883-459b2874e9a4
-author: mikeblome
-ms.author: mblome
+author: corob-msft
+ms.author: corob
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 506e8516c7a7bbc0ccc610b843763017ae90f547
-ms.sourcegitcommit: 8589d85cc10710ef87e6363a2effa5ee5610d46a
+ms.openlocfilehash: 4d227ca8c88770548a1d53a4f40eb1ce62d5919c
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72807059"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77271733"
 ---
 # <a name="using-sal-annotations-to-reduce-cc-code-defects"></a>使用 SAL 批注以减少 C/C++ 代码缺陷
 SAL 是 Microsoft 源代码批注语言。 通过使用源代码批注，你可以使代码的意图清晰。 这些批注还启用了自动化静态分析工具，以便更准确地分析代码，但使用的误报和漏报都要少得多。
@@ -59,5 +59,5 @@ SAL 是 Microsoft 源代码批注语言。 通过使用源代码批注，你可�
 ## <a name="related-resources"></a>相关资源
 [代码分析团队博客](https://blogs.msdn.microsoft.com/codeanalysis/)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 [Windows 驱动程序的 SAL 2.0 批注](/windows-hardware/drivers/devtest/sal-2-annotations-for-windows-drivers)

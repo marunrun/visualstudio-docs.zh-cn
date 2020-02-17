@@ -6,15 +6,15 @@ ms.technology: vs-ide-code-analysis
 ms.topic: conceptual
 ms.assetid: a94d6907-55f2-4874-9571-51d52d6edcfd
 caps.latest.revision: 20
-author: mikeblome
-ms.author: mblome
+author: corob-msft
+ms.author: corob
 manager: jillfra
-ms.openlocfilehash: a184ad6ebc1b3fc2dc21b7a1774b37fef8d359ec
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 1c0129c6832c347e989b482acb2cf6ab9b80e60d
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75848468"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77278438"
 ---
 # <a name="understanding-sal"></a>了解 SAL
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -84,7 +84,7 @@ wchar_t * wmemcpy(
 ### <a name="sal-basics"></a>SAL 基础  
  SAL 定义了四种基本类型的参数，这些参数按使用模式分类。  
   
-|类别|参数批注|描述|  
+|类别|参数批注|说明|  
 |--------------|--------------------------|-----------------|  
 |**被调用函数的输入**|`_In_`|数据将传递给被调用的函数，并被视为只读。|  
 |**对被调用函数的输入和到调用方的输出**|`_Inout_`|可用数据将传递到函数中，并可能被修改。|  
@@ -108,7 +108,7 @@ wchar_t * wmemcpy(
  此部分显示基本 SAL 批注的代码示例。  
   
 ### <a name="using-the-visual-studio-code-analysis-tool-to-find-defects"></a>使用 Visual Studio 代码分析工具查找 Bug  
- 在示例中，Visual Studio Code 分析工具与 SAL 注释一起用于查找代码缺陷。 下面是操作方法。  
+ 在示例中，Visual Studio Code 分析工具与 SAL 注释一起用于查找代码缺陷。 下面介绍了如何执行此操作。  
   
 ##### <a name="to-use-visual-studio-code-analysis-tools-and-sal"></a>使用 Visual Studio 代码分析工具和 SAL  
   
@@ -411,7 +411,7 @@ bool GetValue(_Out_ int *pInt, bool flag)
 ## <a name="related-resources"></a>相关资源  
  [代码分析团队博客](https://blogs.msdn.com/b/codeanalysis/)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用 SAL 注释减少 C/C++代码缺陷](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)   
  [批注函数参数和返回值](../code-quality/annotating-function-parameters-and-return-values.md)   
  [批注函数行为](../code-quality/annotating-function-behavior.md)   
