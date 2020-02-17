@@ -6,17 +6,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - C/C++ code analysis
 - code analysis,C/C++
-author: mikeblome
-ms.author: mblome
+author: corob-msft
+ms.author: corob
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4beaff14e896eae15d4ce68acf35331d03203246
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: 41d5c5a5ea966d1e092e7038d2fc3734c9bd9f15
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72445643"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77272318"
 ---
 # <a name="quickstart-code-analysis-for-cc"></a>快速入门：C/C++ 代码分析
 
@@ -36,7 +36,7 @@ ms.locfileid: "72445643"
 
 Visual Studio 包括两个本机代码标准规则集：
 
-|规则集|描述|
+|规则集|说明|
 |--------------|-----------------|
 |Microsoft 本机最少量建议规则|此规则集重点关注本机代码中的最关键问题，包括潜在安全漏洞和应用程序故障。 应在你为本机项目创建的任何自定义规则集中包含此规则集。|
 |Microsoft 本机建议规则|此规则集涵盖多种问题。 它包括 Microsoft 本机最少量建议规则中的所有规则。|
@@ -107,6 +107,6 @@ Visual Studio 包括两个本机代码标准规则集：
 
 - **按严重性筛选警告**：默认情况下，将为代码分析消息分配严重性 "**警告**"。 可以将一个或多个消息的严重性指定为自定义规则集中的**错误**。 在**错误列表**的 "**严重性**" 列中，选择下拉箭头，然后选择 "筛选器" 图标。 选择 "**警告**" 或 "**错误**" 以仅显示分配了相应严重性的消息。 选择 "全**选**" 以显示所有消息。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C/的代码分析C++](../code-quality/code-analysis-for-c-cpp-overview.md)

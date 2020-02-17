@@ -2,17 +2,17 @@
 title: 使用 C++ 核心准则检查程序
 ms.date: 08/14/2018
 ms.topic: conceptual
-author: mikeblome
-ms.author: mblome
+author: corob-msft
+ms.author: corob
 manager: markl
 dev_langs:
 - CPP
-ms.openlocfilehash: 762ba639c1443bb737087233d04c9e3753f2f455
-ms.sourcegitcommit: 8589d85cc10710ef87e6363a2effa5ee5610d46a
+ms.openlocfilehash: 95b3af7db7fc0e4c71d78716714031fd07dbdab5
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72807083"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77271768"
 ---
 # <a name="use-the-c-core-guidelines-checkers"></a>使用 C++ Core Guidelines 检查器
 
@@ -59,7 +59,7 @@ int main()
 
 - C26485 是规则界限。3：没有数组到指针的衰减。
 
-- C26481 是规则界限。1：不要使用指针算法。 请改用 `span` 。
+- C26481 是规则界限。1：不要使用指针算法。 请改用 `span`。
 
 如果编译C++此代码时安装并启用了核心检查代码分析规则集，则会输出前两个警告，但会禁止显示第三个警告。 下面是示例代码的生成输出：
 
@@ -80,7 +80,7 @@ C++核心准则可帮助您编写更好和更安全的代码。 但是，如果�
 大多数规则的参考主题位于[Visual Studio C++ Core 检查参考](code-analysis-for-cpp-corecheck.md)中。
 
 在 Visual Studio 2017 版本15.3 中，支持的规则集包括：
-- **所有者指针规则**强制执行与[从核心准则 > 所有者 \<T 相关的C++资源管理检查](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management)。
+- **所有者指针规则**强制执行与[从核心准则中的 Owner\<t > 相关C++的资源管理检查](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management)。
 
 - **Const 规则**强制实施[来自C++核心准则的 const 相关检查](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#con-constants-and-immutability)。
 
@@ -129,7 +129,7 @@ CPPCORECHECK_BOUNDS_WARNINGS
 #pragma warning(default: CPPCORECHECK_CONST_WARNINGS)
 ```
 
-## <a name="attributes"></a>特性
+## <a name="attributes"></a>属性
 
 Microsoft C++编译器对 GSL 禁止显示属性的支持有限。 它可用于禁止在函数内的 expression 和 block 语句上出现警告。
 
@@ -253,6 +253,6 @@ msbuild /p:EnableCppCoreCheck=true /p:RunCodeAnalysis=true /p:CodeAnalysisRuleSe
 
    在项目中启用代码分析后，NuGet 包会向项目添加一个附加*的 MSBuild 文件。* 此 *.targets*文件将C++核心检查规则作为附加扩展添加到 Visual Studio 代码分析工具。 安装包后，可以使用 "属性页" 对话框启用或禁用已发布和实验性规则。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Studio C++ Core 检查引用](code-analysis-for-cpp-corecheck.md)

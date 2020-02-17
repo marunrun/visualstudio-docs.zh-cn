@@ -10,32 +10,32 @@ helpviewer_keywords:
 - __analysis_assume
 ms.assetid: 51205d97-4084-4cf4-a5ed-3eeaf67deb1b
 caps.latest.revision: 12
-author: mikeblome
-ms.author: mblome
+author: corob-msft
+ms.author: corob
 manager: jillfra
-ms.openlocfilehash: dfae7d858dbb462ec6a93de9eb63b1b3b2a711ab
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: f2f18c9284ec96de7a7b8663aff485962d194282
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65685823"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77277970"
 ---
-# <a name="how-to-specify-additional-code-information-by-using-analysisassume"></a>如何：使用 _analysis_assume 指定其他代码信息
+# <a name="how-to-specify-additional-code-information-by-using-__analysis_assume"></a>如何：使用 __analysis_assume 指定其他代码信息
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-您可以对代码分析工具的提示，对于 C /C++代码，可以帮助分析处理并减少警告。 若要提供的其他信息，请使用以下函数：  
+您可以为适用于 C/C++代码的代码分析工具提供提示，以帮助分析过程并减少警告。 若要提供其他信息，请使用以下函数：  
   
  `__analysis_assume(`  `expr`  `)`  
   
- `expr` -假定为计算结果为 true 的任何表达式。  
+ `expr`-假定为 true 的任何表达式。  
   
- 代码分析工具假设由表达式表示的条件是在其中该函数将显示，并将保持为 true，直到表达式更改，例如，通过对变量赋值的点，则返回 true。  
+ 代码分析工具假定表达式所表示的条件在函数显示的点处为 true，并在更改表达式（例如，通过赋值给变量时）时保持为 true。  
   
 > [!NOTE]
-> `__analysis_assume` 不会影响代码优化。 外部代码分析工具，`__analysis_assume`定义为执行任何操作。  
+> `__analysis_assume` 不会影响代码优化。 在代码分析工具外部，`__analysis_assume` 定义为 "无操作"。  
   
 ## <a name="example"></a>示例  
- 下面的代码使用`__analysis_assume`若要更正代码分析警告[C6388](../code-quality/c6388.md):  
+ 下面的代码使用 `__analysis_assume` 更正代码分析警告[C6388](../code-quality/c6388.md)：  
   
 ```  
 #include<windows.h>  
@@ -58,5 +58,5 @@ void test( )
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [__assume](https://msdn.microsoft.com/library/d8565123-b132-44b1-8235-5a8c8bff85a7)

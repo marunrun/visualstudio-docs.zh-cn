@@ -3,21 +3,21 @@ title: 了解 SAL
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: a94d6907-55f2-4874-9571-51d52d6edcfd
-author: mikeblome
-ms.author: mblome
+author: corob-msft
+ms.author: corob
 manager: markl
 ms.workload:
 - multiple
-ms.openlocfilehash: df04186fd7524649dfe7ac89e53ca4ca907cc5c4
-ms.sourcegitcommit: 8589d85cc10710ef87e6363a2effa5ee5610d46a
+ms.openlocfilehash: e2cb2cb263344e45d83a2b143f6c56f138f77bf5
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72807086"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77271823"
 ---
 # <a name="understanding-sal"></a>了解 SAL
 
-Microsoft 源代码注释语言（SAL）提供了一组可用于描述函数如何使用其参数的注释、对它们做出的假设，以及在完成时的保证。 批注是在标头文件 `<sal.h>` 中定义的。 适用于的C++ Visual Studio 代码分析使用 SAL 批注来修改其函数分析。 有关适用于 Windows 驱动程序开发的 SAL 2.0 的详细信息，请参阅[Windows 驱动程序的 sal 2.0 注释](/windows-hardware/drivers/devtest/sal-2-annotations-for-windows-drivers)。
+Microsoft 源代码注释语言（SAL）提供了一组可用于描述函数如何使用其参数的注释、对它们做出的假设，以及在完成时的保证。 批注是在标头文件 `<sal.h>`中定义的。 适用于的C++ Visual Studio 代码分析使用 SAL 批注来修改其函数分析。 有关适用于 Windows 驱动程序开发的 SAL 2.0 的详细信息，请参阅[Windows 驱动程序的 sal 2.0 注释](/windows-hardware/drivers/devtest/sal-2-annotations-for-windows-drivers)。
 
 对于开发人员而言C++ ，在本机和 C 中仅提供有限的方式，以一致的方式来表达意图和不变性。 通过使用 SAL 批注，可以更详细地描述函数，以便使用它们的开发人员可以更好地了解如何使用它们。
 
@@ -49,7 +49,7 @@ void * memcpy(
 
 - 目标缓冲区的大小必须至少与源缓冲区的大小相同。
 
-但编译器无法读取文档或非正式注释。 这并不知道两个缓冲区与 `count` 之间存在关系，也不能有效地推测关系。 SAL 可以更清楚地了解函数的属性和实现，如下所示：
+但编译器无法读取文档或非正式注释。 这并不知道两个缓冲区与 `count`之间存在关系，也不能有效地推测关系。 SAL 可以更清楚地了解函数的属性和实现，如下所示：
 
 ```cpp
 
@@ -82,7 +82,7 @@ wchar_t * wmemcpy(
 ### <a name="sal-basics"></a>SAL 基础
 SAL 定义了四种基本类型的参数，这些参数按使用模式分类。
 
-|类别|参数批注|描述|
+|类别|参数批注|说明|
 |--------------|--------------------------|-----------------|
 |**被调用函数的输入**|`_In_`|数据将传递给被调用的函数，并被视为只读。|
 |**对被调用函数的输入和到调用方的输出**|`_Inout_`|可用数据将传递到函数中，并可能被修改。|
@@ -154,7 +154,7 @@ void BadInCaller()
 }
 ```
 
-如果在此示例中使用 Visual Studio Code 分析，它将验证调用方是否将非 Null 指针传递到 `pInt` 的已初始化缓冲区。 在这种情况下，`pInt` 指针不能为 NULL。
+如果在此示例中使用 Visual Studio Code 分析，它将验证调用方是否将非 Null 指针传递到 `pInt`的已初始化缓冲区。 在这种情况下，`pInt` 指针不能为 NULL。
 
 ### <a name="example-the-_in_opt_-annotation"></a>示例：\_opt\_ 批注中的 \_
 
@@ -266,7 +266,7 @@ void BadInOutCaller()
 }
 ```
 
-Visual Studio Code 分析验证调用方将非 NULL 指针传递到 `pInt` 的已初始化缓冲区，并且在返回之前，`pInt` 仍为非 NULL，并且已初始化缓冲区。
+Visual Studio Code 分析验证调用方将非 NULL 指针传递到 `pInt`的已初始化缓冲区，并且在返回之前，`pInt` 仍为非 NULL，并且已初始化缓冲区。
 
 ### <a name="example-the-_inout_opt_-annotation"></a>示例： \_Inout\_opt\_ 批注
 
@@ -325,7 +325,7 @@ void OutPtrCaller()
 }
 ```
 
-Visual Studio Code 分析验证调用方传递 `*pInt` 的非 NULL 指针，并验证该缓冲区是否在返回前由函数进行了初始化。
+Visual Studio Code 分析验证调用方传递 `*pInt`的非 NULL 指针，并验证该缓冲区是否在返回前由函数进行了初始化。
 
 ### <a name="example-the-_outptr_opt_-annotation"></a>示例： \_Outptr\_opt\_ 批注
 
@@ -404,7 +404,7 @@ Microsoft 公共标头已进行批注。 因此，我们建议在项目中首先
 
 [代码分析团队博客](https://blogs.msdn.microsoft.com/codeanalysis/)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用 SAL 批注以减少 C/C++ 代码缺陷](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)
 - [对函数参数和返回值进行批注](../code-quality/annotating-function-parameters-and-return-values.md)

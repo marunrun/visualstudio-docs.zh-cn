@@ -4,21 +4,21 @@ ms.date: 04/28/2018
 ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.rulesets.native
-author: mikeblome
-ms.author: mblome
+author: corob-msft
+ms.author: corob
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e25e28c2ff20a628058d5dfa71de0368fbe9249
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: ec2d9c812de9ec6be5ba5f42ca2a4484703d0b84
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72445612"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77271793"
 ---
 # <a name="use-rule-sets-to-specify-the-c-rules-to-run"></a>使用规则集指定要运行C++的规则
 
-在 Visual Studio 中，你可以创建和修改自定义*规则集*，以满足与代码分析相关的特定项目需求。 默认规则集存储在 `%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Rule Sets` 中。
+在 Visual Studio 中，你可以创建和修改自定义*规则集*，以满足与代码分析相关的特定项目需求。 默认规则集存储在 `%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Rule Sets`中。
 
 **Visual Studio 2017 版本15.7 及更高版本：** 你可以使用任何文本编辑器创建自定义规则集，并在命令行生成中应用它们，无论你使用的是何种生成系统。 有关详细信息，请参阅[/analyze：规则集](/cpp/build/reference/analyze-code-analysis)。
 
@@ -38,7 +38,7 @@ ms.locfileid: "72445612"
 
      \- 或 -
 
-   - 选择 **\<Browse .。。>** 指定列表中不存在的现有规则集。
+   - 选择 **\<浏览 .。。>** 指定列表中不存在的现有规则集。
 
 4. 选择 "**打开**" 以在规则集编辑器中显示规则。
 
@@ -66,7 +66,7 @@ ms.locfileid: "72445612"
 
 - 若要折叠所有组中的规则，请选择 "**全部折叠**"。
 
-- 若要更改对规则进行分组所依据的字段，请从 "**分组依据**" 列表中选择字段。 若要显示未分组的规则，请选择 **\<None >** 。
+- 若要更改对规则进行分组所依据的字段，请从 "**分组依据**" 列表中选择字段。 若要显示未分组的规则，请选择 " **\<无" >** 。
 
 - 若要在规则列中添加或删除字段，请选择**列选项**。
 

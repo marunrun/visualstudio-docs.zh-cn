@@ -16,17 +16,17 @@ helpviewer_keywords:
 - '#pragma directives, code analysis'
 - C, code analysis
 ms.assetid: 81f0c9e8-f471-4de5-aac4-99db336a8809
-author: mikeblome
-ms.author: mblome
+author: corob-msft
+ms.author: corob
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 515b9b7eb1b1a4d2dbee6329be782386b8370338
-ms.sourcegitcommit: 8589d85cc10710ef87e6363a2effa5ee5610d46a
+ms.openlocfilehash: 4991a72b2761e96e143bfa33e0b55f9a4e9467c6
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72806308"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77271216"
 ---
 # <a name="code-analysis-for-cc-overview"></a>C/C++ 代码分析概述
 
@@ -64,7 +64,7 @@ C:\>cl /analyze Sample.cpp
 
 你可以使用生成系统的集成功能在 [!INCLUDE[esprtfs](../code-quality/includes/esprtfs_md.md)] 生成过程中运行代码分析工具。 有关详细信息，请参阅 [Azure Pipelines](/azure/devops/pipelines/index?view=vsts)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [快速入门： C/的代码分析C++](quick-start-code-analysis-for-c-cpp.md)
 - [演练：分析 C/C++代码的缺陷](walkthrough-analyzing-c-cpp-code-for-defects.md)
