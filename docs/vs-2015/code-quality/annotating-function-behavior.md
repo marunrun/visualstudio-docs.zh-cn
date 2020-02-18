@@ -36,7 +36,7 @@ ms.locfileid: "77277869"
 ## <a name="function-annotations"></a>功能批注  
  下列批注适用于整个函数，并描述了其行为或预期。  
   
-|批注|说明|  
+|Annotation|说明|  
 |----------------|-----------------|  
 |`_Called_from_function_class_(name)`|不是为了单独存在；相反，它是一个旨在与 `_When_` 批注一起使用的谓词。 有关详细信息，请参阅[指定何时以及在何处应用批注](../code-quality/specifying-when-and-where-an-annotation-applies.md)。<br /><br /> `name` 参数是一个任意字符串，该字符串也会出现在某些函数声明中的 `_Function_class_` 注释中。  如果当前正在分析的函数使用的 `_Function_class_` 具有相同的 `name`值，`_Called_from_function_class_` 将返回非零值;否则，它返回零。|  
 |`_Check_return_`|批注一个返回值，并声明调用方应检查此值。 如果在 void 上下文中调用函数，则检查器将报告错误。|  
@@ -49,7 +49,7 @@ ms.locfileid: "77277869"
 ## <a name="successfailure-annotations"></a>成功/失败批注  
  函数可能会失败，此时，函数的结果可能不完整或与成功时的结果不同。  下面列表中的批注提供了表示失败行为的方法。  若要使用这些批注，您必须使它们能够确定成功；因此，需要 `_Success_` 批注。  请注意，`NTSTATUS` 和 `HRESULT` 已内置 `_Success_` 批注；但是，如果对 `_Success_` 或 `NTSTATUS` 指定自己的 `HRESULT` 批注，则它将重写内置批注。  
   
-|批注|说明|  
+|Annotation|说明|  
 |----------------|-----------------|  
 |`_Always_(anno_list)`|等效于 `anno_list _On_failure_(anno_list)`；也就是说，无论函数是否成功，`anno_list` 中的批注都适用。|  
 |`_On_failure_(anno_list)`|仅当同时使用 `_Success_` 来批注函数时使用，并通过 typedef 的 `_Return_type_success_` 以显式或隐式方式使用。 当 `_On_failure_` 批注位于函数参数或返回值上时，`anno_list` (anno) 中的每个批注的行为就像将其编码为 `_When_(!expr, anno)`，其中，`expr` 是所需 `_Success_` 批注的参数。 这意味着，`_Success_` 到所有后置条件的隐含应用并不适用于 `_On_failure_`。|  

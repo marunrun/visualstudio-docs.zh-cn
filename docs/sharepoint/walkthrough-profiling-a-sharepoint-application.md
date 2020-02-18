@@ -37,12 +37,12 @@ ms.locfileid: "77277648"
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>系统必备
- 你需要以下组件来完成本演练：
+## <a name="prerequisites"></a>必备条件
+ 您需要满足以下条件才能完成本演练：
 
 - 支持的 Microsoft Windows 和 SharePoint 版本。
 
-- [!INCLUDE[vs_dev11_long](../sharepoint/includes/vs-dev11-long-md.md)]。
+- [!INCLUDE[vs_dev11_long](../sharepoint/includes/vs-dev11-long-md.md)] 列中的一个值匹配。
 
 ## <a name="create-a-sharepoint-project"></a>创建 SharePoint 项目
  首先，创建一个 SharePoint 项目。
