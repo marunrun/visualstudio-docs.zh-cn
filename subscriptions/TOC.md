@@ -27,7 +27,7 @@
 ### 工具
 #### [Azure 开发测试个人额度](vs-azure.md)
 #### [Azure DevOps](vs-azure-devops.md)
-#### [Azure 即用即付](vs-azure-payg.md)
+#### [Azure 开发测试即用即付](vs-azure-payg.md)
 #### [CAST 突出显示](vs-cast.md)
 #### [CloudPilot](vs-cloudpilot.md)
 #### [企业移动性和安全性](vs-ems.md)
@@ -84,7 +84,7 @@
 ### [过度分配](handle-overclaimed-license.md)
 ### [最大用量](maximum-usage.md)
 ### [过期订阅](handle-expired-license.md)
-### [使用别名的订阅者](aliasing.md)
+### [订阅者登录方案](aliasing.md)
 ### [使用个人电子邮件登录的订阅者](personal-email-sign-ins.md)
 ### [使用 GitHub Enterprise 管理 Visual Studio](assign-github.md)
 # 资源
