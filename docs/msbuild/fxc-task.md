@@ -13,16 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - MSBuild (C++), FXC task
 - FXC task (MSBuild (C++))
-author: mikeblome
-ms.author: mblome
+author: corob-msft
+ms.author: corob
 ms.workload:
 - multiple
-ms.openlocfilehash: 766a3dc35d72e21fc0aca9436ebff25dc3193a2e
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 67958a1a1ebb2ff382d0896e2fbaec6105c0c785
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72747324"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77279284"
 ---
 # <a name="fxc-task"></a>FXC 任务
 
@@ -32,7 +32,7 @@ ms.locfileid: "72747324"
 
 下表介绍了 FXC 任务的参数  。
 
-|参数|说明|
+|参数|描述|
 |---------------|-----------------|
 |**AdditionalIncludeDirectories**|可选的 string[]  参数。<br/><br/>指定一个或多个要添加到包含路径中的目录；存在多个目录时，请用分号分隔。<br/><br/>请使用 `/I[path]`。|
 |**AdditionalOptions**|可选的 string  参数。|

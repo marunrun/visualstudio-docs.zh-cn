@@ -13,16 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - MSBuild (C++), GetOutOfDateItems task
 - GetOutOfDateItems task (MSBuild (C++))
-author: mikeblome
-ms.author: mblome
+author: corob-msft
+ms.author: corob
 ms.workload:
 - multiple
-ms.openlocfilehash: d3dc343c595606faf5bd31d7f087f7ba8d95f69e
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: bfa60ff0f7e4060f5725fe54bd5950d858b86a22
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72747308"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77272403"
 ---
 # <a name="getoutofdateitems-task"></a>GetOutOfDateItems 任务
 
@@ -32,7 +32,7 @@ ms.locfileid: "72747308"
 
 下表介绍了 GetOutOfDateItems 任务的参数  。
 
-|参数|说明|
+|参数|描述|
 |---------------|-----------------|
 |**CheckForInterdependencies**|可选的 bool  参数。|
 |**CommandMetadataName**|可选的 string  参数。|
