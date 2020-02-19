@@ -11,12 +11,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 85ee317b315f8f8d21f5a2d97d91a9950fd395f9
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.openlocfilehash: 3c8f72d4e1d1caeacd5dfefef5310dc2cef83b92
+ms.sourcegitcommit: 83d9f2b56955f7a5267a1438bb28ef804775f88b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76114404"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77173078"
 ---
 # <a name="application-property-page-uwp-projects"></a>应用程序属性页（UWP 项目）
 
@@ -38,7 +38,7 @@ ms.locfileid: "76114404"
 
  程序集信息 &mdash; 选择此按钮将显示[“程序集信息”对话框](../../ide/reference/assembly-information-dialog-box.md)。
 
- 包清单 &mdash; 选择此按钮将打开清单设计器。 此外，还可以通过选择“解决方案资源管理器”  中的 Package.appxmanifest  文件来访问清单设计器。 有关详细信息，请参阅[使用清单设计器配置包](/windows/uwp/packaging/packaging-uwp-apps#configure-an-app-package)。
+ 包清单 &mdash; 选择此按钮将打开清单设计器。 此外，还可以通过选择“解决方案资源管理器”  中的 Package.appxmanifest  文件来访问清单设计器。 有关详细信息，请参阅[使用清单设计器配置包](/windows/msix/package/packaging-uwp-apps#configure-your-project)。
 
 ## <a name="targeting-section"></a>“设定目标”部分
 

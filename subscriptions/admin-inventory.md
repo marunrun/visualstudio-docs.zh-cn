@@ -3,15 +3,15 @@ title: 清点预生产环境 | Visual Studio Marketplace
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 07/23/2019
+ms.date: 02/17/2020
 ms.topic: conceptual
 description: 了解管理员管理预生产库存的职责
-ms.openlocfilehash: 8218b1802a6369aed00be63572c80cba7b5c29f3
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 0eacd177b0901d866bbb974aca81a0e77cdaf25d
+ms.sourcegitcommit: e3b9cbeea282f1b531c6a3f60515ebfe1688aa0e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75849828"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77439110"
 ---
 # <a name="inventory-of-pre-production-environment"></a>清点预生产环境
 Visual Studio 订阅对用户而非设备计数，从而简化了资产管理。
@@ -35,3 +35,9 @@ Visual Studio 管理员必须将 Visual Studio 订阅分配给**特定的指定�
 - [管理大型团队和外部承包商](manage-teams.md)
 - [跟踪用户分配和处理订单](assignments-orders.md)
 - 使用[最大用量](maximum-usage.md)跟踪购买承诺
+
+## <a name="see-also"></a>请参阅
+- [Visual Studio 文档](/visualstudio/)
+- [Azure DevOps 文档](/azure/devops/)
+- [Azure 文档](/azure/)
+- [Microsoft 365 文档](/microsoft-365/)

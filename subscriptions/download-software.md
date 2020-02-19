@@ -3,15 +3,15 @@ title: 下载 Visual Studio 订阅中的软件标题 | Microsoft Docs
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 07/18/2019
+ms.date: 02/17/2020
 ms.topic: conceptual
 description: 了解如何在 Visual Studio 订阅中查找和下载 Microsoft 软件标题
-ms.openlocfilehash: 003d27e1c8344c6c4cb22a69e06efc94238bb622
-ms.sourcegitcommit: 6993bcb0d2b0067b1b7b7899bfba52c31c70b7e7
+ms.openlocfilehash: d6ce32b0478b145b7d1814efa3738664ee622cf5
+ms.sourcegitcommit: e3b9cbeea282f1b531c6a3f60515ebfe1688aa0e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71095398"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77439161"
 ---
 # <a name="downloading-software-titles-in-visual-studio-subscriptions"></a>下载 Visual Studio 订阅中的软件标题
 根据你所订阅的 Visual Studio，你可以获得各种各样的 Microsoft 软件标题。  本文将概述如何查找和下载所需的软件，以便最大限度地利用订阅。 
@@ -51,3 +51,9 @@ ms.locfileid: "71095398"
 要了解有关查找、声明和导出产品密钥的详细信息，请查看我们的产品密钥文档：
 - [产品密钥概述](product-keys.md)
 - [查找和声明密钥](find-keys.md)
+
+## <a name="see-also"></a>请参阅
+- [Visual Studio 文档](/visualstudio/)
+- [Azure DevOps 文档](/azure/devops/)
+- [Azure 文档](/azure/)
+- [Microsoft 365 文档](/microsoft-365/)

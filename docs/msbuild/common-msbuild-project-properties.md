@@ -18,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e8f99bc18f4fdc834d0c5fdc7818d945d116251e
-ms.sourcegitcommit: b2fc9ac7d73c847508f6ed082bed026476bb3955
+ms.openlocfilehash: dd3ccd23775c93fb7222960c4db3ae5d35eb349f
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/05/2020
-ms.locfileid: "77027632"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77275488"
 ---
 # <a name="common-msbuild-project-properties"></a>常用的 MSBuild 项目属性
 下表列出了在 Visual Studio 项目文件中定义的或者在 MSBuild 提供的 .targets 文件中包括的经常使用的属性  。
@@ -43,8 +43,8 @@ ms.locfileid: "77027632"
 | AssemblySearchPaths | 要在生成时引用程序集解析期间搜索的位置列表。 路径在此列表中的出现顺序是有含义的，因为先列出的路径优先于后列出的条目。 |
 | AssemblyName | 生成项目后的最终输出程序集的名称。 |
 | BaseAddress | 指定主输出程序集的基址。 此属性等效于 `/baseaddress` 编译器开关。 |
-| BaseOutputPath | 指定输出文件的基路径。 如果设置此属性，[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 将使用 `OutputPath = $(BaseOutputPath)\$(Configuration)\`。 示例语法：`<BaseOutputPath>c:\xyz\bin\</BaseOutputPath>` |
 | BaseIntermediateOutputPath | 在其中创建所有配置特定的中间输出文件夹的顶级文件夹。 默认值为 `obj\`。 下面的代码是一个示例：`<BaseIntermediateOutputPath>c:\xyz\obj\</BaseIntermediateOutputPath>` |
+| BaseOutputPath | 指定输出文件的基路径。 如果设置此属性，[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 将使用 `OutputPath = $(BaseOutputPath)\$(Configuration)\`。 示例语法：`<BaseOutputPath>c:\xyz\bin\</BaseOutputPath>` |
 | BuildInParallel | 一个布尔值，指示在使用多处理器 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 时并行生成还是清理项目引用。 默认值为 `true`，该值表示如果系统有多个核心或处理器，则将并行生成项目。 |
 | BuildProjectReferences | 一个布尔值，指示是否由 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 生成项目引用。 如果在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 集成开发环境 (IDE) 中生成项目，则自动设置为 `false`；否则设置为 `true`。 可以在命令行上指定 `-p:BuildProjectReferences=false` 以避免检查引用的项目是否为最新。 |
 | CleanFile | 将用作“清理缓存”的文件的名称。 清理缓存是要在清理操作期间删除的已生成文件的列表。 该文件由生成过程放在中间输出路径中。<br /><br /> 此属性只指定没有路径信息的文件名。 |
@@ -72,8 +72,8 @@ ms.locfileid: "77027632"
 | IntermediateOutputPath | 如果未指定路径，则为从 `BaseIntermediateOutputPath` 派生的完整中间输出路径。 例如 \obj\debug\\  。 |
 | KeyContainerName | 强名称密钥容器的名称。 |
 | KeyOriginatorFile | 强名称密钥文件的名称。 |
-| MSBuildProjectExtensionsPath | 指定项目扩展所在的路径。 默认情况下，该路径与 `BaseIntermediateOutputPath` 具有相同值。 |
 | ModuleAssemblyName | 要将编译好的模块并入其中的程序集的名称。 该属性等效于 `/moduleassemblyname` 编译器开关。 |
+| MSBuildProjectExtensionsPath | 指定项目扩展所在的路径。 默认情况下，该路径与 `BaseIntermediateOutputPath` 具有相同值。 |
 | NoLogo | 一个指示是否关闭编译器徽标的布尔值。 此属性等效于 `/nologo` 编译器开关。 |
 | NoStdLib | 一个指示是否避免引用标准库 (mscorlib.dll) 的布尔值  。 默认值为 `false`。 |
 | NoVBRuntimeReference | 一个布尔值，指示是否应将 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 运行时 (Microsoft.VisualBasic.dll) 包括为项目中的引用  。 |
@@ -90,13 +90,10 @@ ms.locfileid: "77027632"
 | PathMap | 指定如何将物理路径映射到编译器输出的源路径名称。 此属性等效于 csc.exe 编译器的 `/pathmap` 开关  。 |
 | PdbFile | 正在发出的 .pdb 文件的文件名  。 此属性等效于 csc.exe 编译器的 `/pdb` 开关  。 |
 | Platform | 生成所面向的操作系统。 有效值是“Any CPU”、“x86”和“x64”。 |
-| ProduceReferenceAssembly | 一个布尔值，设置为 `true` 时，可为当前程序集生成[引用程序集](/dotnet/standard/assembly/reference-assemblies)。 使用此功能时，`Deterministic` 应为 `true`。 此属性对应于 vbc.exe 和 csc.exe 编译器的 `/refout` 开关   。 |
-| ProduceOnlyReferenceAssembly | 布尔值，指示编译器仅发出引用程序集，而不是已编译代码。 无法与 `ProduceReferenceAssembly` 一起使用。  此属性对应于 vbc.exe 和 csc.exe 编译器的 `/refonly` 开关   。 |
-| RemoveIntegerChecks | 一个布尔值，指示是否禁用整数溢出错误检查。 默认值为 `false`。 此属性等效于 vbc.exe 编译器的 `/removeintchecks` 开关  。 |
-| SGenUseProxyTypes | 一个布尔值，指示是否应由 SGen.exe 生成代理类型  。 这仅适用于 GenerateSerializationAssemblies 设置为开的情况，且仅适用于 .NET Framework  。<br /><br /> SGen 目标使用此属性来设置 UseProxyTypes 标志。 此属性默认为 true，并且没有更高属性的 UI。 若要生成非 webservice 类型的序列化程序集，请在导入 Microsoft.Common.Targets 或 C#/VB.targets 之前将此属性添加到项目文件并将其设为 false   。 |
-| SGenToolPath | 一个可选的工具路径，指示在当前版本的 SGen.exe 被重写时可以获得 SGen.exe 的位置   。 此属性仅用于 .NET Framework。|
-| StartupObject | 指定包含 Main 方法或 Sub Main 过程的类或模块。 此属性等效于 `/main` 编译器开关。 |
 | ProcessorArchitecture | 解析程序集引用时使用的处理器架构。 有效值为“msil”、“x86”、“amd64”或“ia64”。 |
+| ProduceOnlyReferenceAssembly | 布尔值，指示编译器仅发出引用程序集，而不是已编译代码。 无法与 `ProduceReferenceAssembly` 一起使用。  此属性对应于 vbc.exe 和 csc.exe 编译器的 `/refonly` 开关   。 |
+| ProduceReferenceAssembly | 一个布尔值，设置为 `true` 时，可为当前程序集生成[引用程序集](/dotnet/standard/assembly/reference-assemblies)。 使用此功能时，`Deterministic` 应为 `true`。 此属性对应于 vbc.exe 和 csc.exe 编译器的 `/refout` 开关   。 |
+| RemoveIntegerChecks | 一个布尔值，指示是否禁用整数溢出错误检查。 默认值为 `false`。 此属性等效于 vbc.exe 编译器的 `/removeintchecks` 开关  。 |
 | RootNamespace | 在命名嵌入资源时要使用的根命名空间。 此命名空间属于嵌入资源清单名称的一部分。 |
 | Satellite_AlgorithmId | 在创建附属程序集时要使用的 AL.exe 哈希算法的 ID  。 |
 | Satellite_BaseAddress | 在使用 `CreateSatelliteAssemblies` 目标生成特定于区域性的附属程序集时要使用的基址。 |
@@ -117,6 +114,9 @@ ms.locfileid: "77027632"
 | Satellite_Version | 指定附属程序集的版本信息。 |
 | Satellite_Win32Icon | 在附属程序集中插入一个 .ico 图标文件  。 |
 | Satellite_Win32Resource | 在附属程序集中插入一个 Win32 资源（.res 文件）  。 |
+| SGenToolPath | 一个可选的工具路径，指示在当前版本的 SGen.exe 被重写时可以获得 SGen.exe 的位置   。 此属性仅用于 .NET Framework。|
+| SGenUseProxyTypes | 一个布尔值，指示是否应由 SGen.exe 生成代理类型  。 这仅适用于 GenerateSerializationAssemblies 设置为开的情况，且仅适用于 .NET Framework  。<br /><br /> SGen 目标使用此属性来设置 UseProxyTypes 标志。 此属性默认为 true，并且没有更高属性的 UI。 若要生成非 webservice 类型的序列化程序集，请在导入 Microsoft.Common.Targets 或 C#/VB.targets 之前将此属性添加到项目文件并将其设为 false   。 |
+| StartupObject | 指定包含 Main 方法或 Sub Main 过程的类或模块。 此属性等效于 `/main` 编译器开关。 |
 | SubsystemVersion | 指定生成的可执行文件可以使用的子系统的最低版本。 此属性等效于 `/subsystemversion` 编译器开关。 有关此属性的默认值的信息，请参阅 [/subsystemversion (Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/subsystemversion) 或 [/subsystemversion（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/subsystemversion-compiler-option)。 |
 | TargetCompactFramework | 运行你所生成的应用程序所需要的 .NET Compact Framework 的版本。 通过指定此属性，你可以引用否则将无法引用的某些 Framework 程序集。 |
 | TargetFrameworkVersion | 运行你生成的应用程序所需要的 .NET Framework 版本。 通过指定此属性，你可以引用否则将无法引用的某些 Framework 程序集。 |

@@ -21,12 +21,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5dc130c4802aa65317edb7b9dc013c7943f3cc30
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 42fcd289f5258fde7ae8f17a9e19a25427fe6885
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75595210"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77278354"
 ---
 # <a name="resolveassemblyreference-task"></a>ResolveAssemblyReference 任务
 确定依赖指定程序集的所有程序集，其中包括第二级和第 `n` 级的依赖项。
@@ -39,10 +39,9 @@ ms.locfileid: "75595210"
 |`AllowedAssemblyExtensions`|可选 `String[]` 参数。<br /><br /> 将在解析引用时使用的程序集文件扩展名。 默认文件扩展名为 .exe 和 .dll。  |
 |`AllowedRelatedFileExtensions`|可选 `String[]` 参数。<br /><br /> 要用于搜索彼此相互关联的文件的文件扩展名。 默认扩展名是 .pdb 和 .xml。  |
 |`AppConfigFile`|可选 `String` 参数。<br /><br /> 指定从中进行分析和提取 bindingRedirect 映射的 app.config 文件。  如果指定此参数，则 `AutoUnify` 参数必须是 `false`。|
-|`AutoUnify`|可选 `Boolean` 参数。<br /><br /> 此参数用于构建程序集（如 DLL），它不能有一个普通的 App.Config 文件。 <br /><br /> 当为 `true` 时，会自动处理最后得到的依赖项关系图，如同向 AppConfigFile 参数传递了 App.Config 文件一样。  此虚拟 App.Config 文件对每组冲突程序集具有 bindingRedirect 条目，以便选择最高版本的程序集。  这样做的结果是避免有关冲突程序集的警告，因为每个冲突都将得到解决。<br /><br /> 当为 `true`时，每个不同的重映射将导致高优先级注释，显示新旧版本以及 `AutoUnify` 是 `true`。<br /><br /> 当为 `true` 时，AppConfigFile 参数必须为空。<br /><br /> 当为 `false`时，不会自动发生程序集版本重映射。 当存在两个版本的程序集时，将发出警告。<br /><br /> 当为 `false`时，同一个程序集不同版本间的不同冲突将导致高优先级注释。 这些注释后跟单个警告。 警告具有唯一的错误代码，其文本写有“找到不同引用版本和依赖程序集之间的冲突”。|
 |`Assemblies`|可选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 指定必须为其标识完整路径和依赖项的项。 这些项可以具有类似“System”的简单名称或类似“System, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089”的强名称。<br /><br /> 传递给此参数的项可选择性地包含以下项的元数据：<br /><br /> -   `Private`： `Boolean` 值。 如果为 `true`，则在本地复制该项。 默认值为 `true`。<br />-   `HintPath`： `String` 值。 指定要用作引用的路径和文件名。 当在 `SearchPaths` 参数内指定 {HintPathFromItem} 时使用此元数据。 默认值为一个空字符串。<br />-   `SpecificVersion`： `Boolean` 值。 如果为 `true`，则在 `Include` 特性内指定的确切名称必须匹配。 如果为 `false`，则具有同一简单名称的任何程序集都将起作用。 如果 `SpecificVersion` 未指定，则该任务会检查项中 `Include` 特性的值。 如果该特性是一个简单名称，则其行为方式如同 `SpecificVersion` 是 `false`。 如果该特性是一个强名称，则其行为方式如同 `SpecificVersion` 是 `true`。<br />     当与引用项类型搭配使用时， `Include` 特性必须是要解析的程序集的完整合成名称。 仅当合成名称完全匹配 `Include` 特性时才解析该程序集。<br />     如果项目面向 .NET Framework 版本，且引用了为更高版本 .NET Framework 编译的程序集，则该引用仅当 `SpecificVersion` 设置为 `true`。<br />     如果项目面向配置文件，且引用的程序集不位于该配置文件中，则该引用仅当 `SpecificVersion` 设置为 `true`。<br />-   `ExecutableExtension`： `String` 值。 当存在时，解析的程序集必须具有此扩展名。 当不存在时，对于每个检查的目录，最先考虑 .dll，其次考虑 .exe。  <br />-   `SubType`： `String` 值。 仅当项具有空的子类型元数据时才解析为完整的程序集路径。 具有非空子类型元数据的项将被忽略。<br />-   `AssemblyFolderKey`： `String` 值。 出于兼容目的支持此元数据。 它指定一个用户定义的注册表项，如“hklm\\\<VendorFolder>”，该 `Assemblies` 应用于解析程序集引用。 |
 |`AssemblyFiles`|可选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 指定为其查找依赖项的完全限定程序集列表。<br /><br /> 传递给此参数的项可选择性地包含以下项的元数据：<br /><br /> -   `Private`：可选 `Boolean` 值。 如果为 true，则在本地复制该项。<br />-   `FusionName`：可选的 `String` 元数据。 指定此项的简单名称或强名称。 若此特性存在，则可节省时间，因为不必打开程序集文件即可获取名称。|
-|`AutoUnify`|可选 `Boolean` 参数。<br /><br /> 如果为 `true`，会自动处理最后得到的依赖项关系图，如同向 AppConfigFile 参数传递了 App.Config 文件一样。  此虚拟 App.Config 文件对每组冲突程序集具有 bindingRedirect 条目，以便选择最高版本的程序集。  这样做的结果是避免有关冲突程序集的警告，因为每个冲突都将得到解决。 每个不同的重映射将导致高优先级注释，指示新旧版本以及自动完成的事实（因为 `AutoUnify` 是 `true`。<br /><br /> 如果为 `false`时，不会自动发生程序集版本重映射。 当存在两个版本的程序集时，将发出警告。 同一个程序集不同版本间每个不同的冲突将导致高优先级注释。 所有这些注释显示后，将显示具有唯一错误代码的一条警告，其文本写有“找到不同引用版本和依赖程序集之间的冲突”。<br /><br /> 默认值为 `false`。|
+|`AutoUnify`|可选 `Boolean` 参数。<br /><br /> 此参数用于构建程序集（如 DLL），它不能有一个普通的 App.Config 文件。 <br /><br /> 当为 `true` 时，会自动处理最后得到的依赖项关系图，如同向 AppConfigFile 参数传递了 App.Config 文件一样。  此虚拟 App.Config 文件对每组冲突程序集具有 bindingRedirect 条目，以便选择最高版本的程序集。  这样做的结果是避免有关冲突程序集的警告，因为每个冲突都将得到解决。<br /><br /> 当为 `true`时，每个不同的重映射将导致高优先级注释，显示新旧版本以及 `AutoUnify` 是 `true`。<br /><br /> 当为 `true` 时，AppConfigFile 参数必须为空。<br /><br /> 当为 `false`时，不会自动发生程序集版本重映射。 当存在两个版本的程序集时，将发出警告。<br /><br /> 当为 `false`时，同一个程序集不同版本间的不同冲突将导致高优先级注释。 这些注释后跟单个警告。 警告具有唯一的错误代码，其文本写有“找到不同引用版本和依赖程序集之间的冲突”。<br /><br /> 默认值为 `false`。|
 |`CandidateAssemblyFiles`|可选 `String[]` 参数。<br /><br /> 指定用于搜索和解析过程的程序集列表。 传递给此参数的值必须是绝对文件名或项目相对文件名。<br /><br /> 当 `SearchPaths` 参数包含 {CandidateAssemblyFiles} 作为要考虑的路径之一时，将会考虑此列表中的程序集。|
 |`CopyLocalDependenciesWhenParentReferenceInGac`|可选 <xref:System.Boolean> 参数。<br /><br /> 如果为 true，若要确定是否应在本地复制依赖项，则其中一项完成的检查是查看项目文件中的父引用是否设置了 Private 元数据。 如果设置了元数据，则将 Private 值用作依赖项。<br /><br /> 如果未设置元数据，则依赖项将进行与父引用相同的检查。 其中一项检查是查看该引用是否位于 GAC 中。 如果引用位于 GAC 中，则不会在本地复制它，因为假设它位于目标计算机上的 GAC 中。 这仅应用于特定的引用，而不是其依赖项。<br /><br /> 例如，位于 GAC 中的项目文件中的引用不在本地复制，但可在本地复制其依赖项，因为它们不在 GAC 中。<br /><br /> 如果为 false，则检查项目文件引用，以确定它们是否位于 GAC 中，并且视情况进行本地复制。<br /><br /> 检查依赖项以确定它们是否位于 GAC 中，还要确定项目文件的父引用是否位于 GAC 中。<br /><br /> 如果项目文件的父引用位于 GAC 中，则不在本地复制依赖项。<br /><br /> 无论此参数是为 true 还是 false，如果存在多个父引用，且任一父引用都不位于 GAC 中，则在本地复制所有这些父引用。|
 |`CopyLocalFiles`|可选的 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 只读输出参数。<br /><br /> 返回 `ResolvedFiles`、 `ResolvedDependencyFiles`、 `RelatedFiles`、 `SatelliteFiles`和 `ScatterFiles` 参数中的每个具有值为 `CopyLocal` true `true`。|
