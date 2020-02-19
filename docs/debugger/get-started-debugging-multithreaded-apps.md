@@ -2,7 +2,7 @@
 title: 了解如何调试多线程应用程序
 description: 在 Visual Studio 中使用 "并行堆栈" 和 "并行监视" 窗口进行调试
 ms.custom: ''
-ms.date: 11/16/2018
+ms.date: 02/14/2020
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6e21d5174c9a909e9ad8031dfb7585abc52a7e78
-ms.sourcegitcommit: 00ba14d9c20224319a5e93dfc1e0d48d643a5fcd
+ms.openlocfilehash: f280a93022342fd9ca4dcae5cdac1de919fe1657
+ms.sourcegitcommit: 6ef52c2030b37ea7a64fddb32f050ecfb77dd918
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77091788"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416395"
 ---
 # <a name="get-started-debugging-multithreaded-applications-c-visual-basic-c"></a>开始调试多线程应用程序C#（、Visual Basic C++）
 
@@ -34,7 +34,7 @@ Visual Studio 提供多种工具和用户界面元素，用于调试多线程应
 
 - 如需使用 <xref:System.Threading.Tasks.Task>（托管代码）和并发运行时 (C++) 的示例，请参阅[演练：调试并行应用程序](../debugger/walkthrough-debugging-a-parallel-application.md)。 有关适用于大多数多线程应用程序类型的常规调试技巧，请阅读该主题和本主题。
 
-首先需要一个多线程应用程序项目。 以下是一个示例。
+首先需要一个多线程应用程序项目。 示例如下。
 
 ## <a name="create-a-multithreaded-app-project"></a>创建一个多线程应用项目
 
@@ -42,7 +42,7 @@ Visual Studio 提供多种工具和用户界面元素，用于调试多线程应
 
    ::: moniker range=">=vs-2019"
 
-   如果 "启动" 窗口未打开，请选择 "**文件**" > "**开始" 窗口**。
+   如果开始窗口未打开，请选择“文件” **“开始窗口”** >。
 
    在“开始”窗口上，选择“创建新项目”。
 
@@ -57,7 +57,7 @@ Visual Studio 提供多种工具和用户界面元素，用于调试多线程应
 
    ::: moniker-end
    ::: moniker range="vs-2017"
-   在顶部菜单栏，依次选择“文件” **“新建”** “项目” >  > 。 在 "**新建项目**" 对话框的左窗格中，选择以下项：
+   从顶部菜单栏中选择“文件” > “新建” > “项目”。 在 "**新建项目**" 对话框的左窗格中，选择以下项：
 
    - 对于C#应用程序，在 **" C#视觉对象**" 下选择 " **Windows 桌面**"，然后在中间窗格中选择 "**控制台应用（.NET Framework）** "。
    - 对于 Visual Basic 应用，请在 " **Visual Basic**" 下选择 " **Windows 桌面**"，然后在中间窗格中选择 "**控制台应用（.NET Framework）** "。
@@ -248,7 +248,7 @@ Visual Studio 提供多种工具和用户界面元素，用于调试多线程应
 
 2. 按一下 **F11** 使调试器前进一个代码行。
 
-3. 查看窗口左侧的滚动条。 在此行上，你将看到一个*线程标记*图标![线程标记](../debugger/media/dbg-thread-marker.png "ThreadMarker")，它类似于两个双绞线线程。 线程标记指示线程在此位置停止。
+3. 查看窗口左侧的滚动条槽。 在此行上，你将看到一个*线程标记*图标![线程标记](../debugger/media/dbg-thread-marker.png "ThreadMarker")，它类似于两个双绞线线程。 线程标记指示线程在此位置停止。
 
     线程标记可以被断点部分隐藏。
 
@@ -362,7 +362,7 @@ Visual Studio 提供多种工具和用户界面元素，用于调试多线程应
 
 ## <a name="see-also"></a>另请参阅
 
-- [调试多线程应用程序](../debugger/debug-multithreaded-applications-in-visual-studio.md)
+- [调试多线程应用](../debugger/debug-multithreaded-applications-in-visual-studio.md)
 - [如何：在调试时切换到另一个线程](../debugger/how-to-switch-to-another-thread-while-debugging.md)
 - [如何：使用 "并行堆栈" 窗口](../debugger/using-the-parallel-stacks-window.md)
 - [如何：使用“并行监视”窗口](../debugger/how-to-use-the-parallel-watch-window.md)

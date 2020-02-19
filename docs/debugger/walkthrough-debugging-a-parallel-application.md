@@ -1,7 +1,7 @@
 ---
 title: 调试并行应用程序 |Microsoft Docs
 description: 在 Visual Studio 中使用 "并行任务" 和 "并行堆栈" 窗口进行调试
-ms.date: 03/22/2018
+ms.date: 02/14/2020
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -22,12 +22,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b2213da69561e8868c158a3b2cbcaa8efc6adfaf
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: c9079fc17da9f89ceae61cbd7d4f086f1db133cf
+ms.sourcegitcommit: 6ef52c2030b37ea7a64fddb32f050ecfb77dd918
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72728601"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416420"
 ---
 # <a name="walkthrough-debugging-a-parallel-application-in-visual-studio-c-visual-basic-c"></a>演练：在 Visual Studio 中调试并行应用程序C#（、Visual Basic C++、）
 
@@ -45,7 +45,7 @@ ms.locfileid: "72728601"
 
 - 窗口如何通过分组、缩放和其他相关功能来处理缩放。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>系统必备
  本演练假定已启用**仅我的代码**（默认情况下，它在 Visual Studio 的较新版本中启用）。 在“工具”菜单上，单击“选项”，展开“调试”节点，选择“常规”，然后选择“启用仅我的代码(仅限托管)”。 如果未设置此功能，您仍可以使用本演练，但结果可能会与以下各图不同。
 
 ## <a name="c-sample"></a>C# 示例
@@ -64,25 +64,37 @@ ms.locfileid: "72728601"
 
 1. 打开 Visual Studio 并创建一个新项目。
 
-    ::: moniker range=">=vs-2019"
-    按 Esc 关闭启动窗口。 键入**Ctrl + Q**打开搜索框，键入 "**控制台**（或**c + +** ）"，选择 "**模板**"，然后执行以下操作：
+   ::: moniker range=">=vs-2019"
 
-    - 对于C#或 Visual Basic，请选择 "为或 Visual Basic**创建新的控制台应用程序（.NET Framework）** " C# 。 在出现的对话框中，选择“创建”。
-    - 对于C++""，请选择 "为C++**创建新的控制台应用项目**"。 在出现的对话框中，选择“创建”。
+   如果开始窗口未打开，请选择“文件” **“开始窗口”** >。
 
-    然后，键入名称或使用默认名称，然后单击 "**创建**"。
-    ::: moniker-end
-    ::: moniker range="vs-2017"
-    在顶部菜单栏，依次选择“文件” > “新建” > “项目”。 在 "**新建项目**" 对话框的左窗格中，选择以下项：
+   在“开始”窗口上，选择“创建新项目”。
 
-    - 对于C#应用程序，在 **" C#视觉对象**" 下选择 " **Windows 桌面**"，然后在中间窗格中选择 "**控制台应用（.NET Framework）** "。
-    - 对于 Visual Basic 应用，请在 " **Visual Basic**" 下选择 " **Windows 桌面**"，然后在中间窗格中选择 "**控制台应用（.NET Framework）** "。
-    - 对于C++应用程序，在 **" C++视觉对象**" 下，选择 " **windows 桌面**"，然后选择 " **windows 控制台应用程序**"。
+   在“创建新项目”窗口的搜索框中输入或键入“控制台”。 接下来， **C#** 从**C++** "语言" 列表中选择 " **Visual Basic** "，然后从平台列表中选择 " **Windows** "。 
 
-    然后，键入名称或使用默认名称，然后单击 **"确定"** 。
-    ::: moniker-end
+   应用语言和平台筛选器后，选择 "**控制台应用（.net Core）** "，或者对于C++"**控制台应用**模板"，选择 "**下一步**"。
 
-    如果没有看到“控制台应用”项目模板，请转到“工具” > “获取工具和功能...”，这会打开 Visual Studio 安装程序。 选择“.NET 桌面开发”或“使用 C++ 的桌面开发”工作负载，然后选择“修改”。
+   > [!NOTE]
+   > 如果看不到正确的模板，请转到 "**工具**" > **获取工具和功能 ...** "，这将打开 Visual Studio 安装程序。 选择“.NET 桌面开发”或“使用 C++ 的桌面开发”工作负载，然后选择“修改”。
+
+   在 "**配置新项目**" 窗口中，在 "**项目名称**" 框中键入名称或使用默认名称。 然后，选择“创建”。
+
+   ::: moniker-end
+   ::: moniker range="vs-2017"
+   从顶部菜单栏中选择“文件” > “新建” > “项目”。 在 "**新建项目**" 对话框的左窗格中，选择以下项：
+
+   - 对于C#应用程序，在 **" C#视觉对象**" 下选择 " **Windows 桌面**"，然后在中间窗格中选择 "**控制台应用（.NET Framework）** "。
+   - 对于 Visual Basic 应用，请在 " **Visual Basic**" 下选择 " **Windows 桌面**"，然后在中间窗格中选择 "**控制台应用（.NET Framework）** "。
+   - 对于C++应用程序，在 **" C++视觉对象**" 下，选择 " **windows 桌面**"，然后选择 " **windows 控制台应用程序**"。
+
+   如果看不到**控制台应用（.Net Core）** 或C++**控制台应用**项目模板，请转到 "**工具**" > **获取工具和功能 ...** "，这将打开 Visual Studio 安装程序。 选择“.NET 桌面开发”或“使用 C++ 的桌面开发”工作负载，然后选择“修改”。
+
+   然后，键入名称或使用默认名称，然后单击 **"确定"** 。
+
+   选择“确定”。
+   ::: moniker-end
+
+   新的控制台项目随即显示。 创建该项目后，将显示源文件。
 
 1. 在项目中打开 .cpp、.cs 或 .vb 代码文件。 删除其内容以创建一个空代码文件。
 
@@ -244,7 +256,7 @@ ms.locfileid: "72728601"
 
      !["任务" 窗口中的两个等待任务](../debugger/media/pdb_walkthrough_7.png "PDB_Walkthrough_7")
 
-     任务 4 又在等待分配给任务 2 的线程所拥有的监视器。 （右键单击标题行，然后选择 "**列**"  > **线程分配**查看任务2的线程分配值 "）。
+     任务 4 又在等待分配给任务 2 的线程所拥有的监视器。 （右键单击标题行，然后选择 "**列**" > **线程分配**查看任务2的线程分配值 "）。
 
      !["任务" 窗口中的等待任务和工具提示](../debugger/media/pdb_walkthrough_7a.png "PDB_Walkthrough_7A")
 
@@ -308,10 +320,10 @@ ms.locfileid: "72728601"
 
      你可以冻结一个或多个任务的基础线程，也可以冻结除指定线程外的所有线程。 冻结的线程在 "**任务**" 窗口中以 "**线程**" 窗口中的蓝色*暂停*图标表示。
 
-## <a name="summary"></a>总结
+## <a name="summary"></a>摘要
  本演练演示了“并行任务”和“并行堆栈”调试程序窗口。 请在采用多线程代码的实际项目中使用这些窗口。 可以检查用 C++、C# 或 Visual Basic 编写的并行代码。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [调试多线程应用程序](../debugger/walkthrough-debugging-a-parallel-application.md)
 - [初探调试器](../debugger/debugger-feature-tour.md)
 - [调试托管代码](../debugger/debugging-managed-code.md)

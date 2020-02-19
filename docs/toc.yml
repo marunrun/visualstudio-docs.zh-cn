@@ -362,6 +362,8 @@
                   href: ide/reference/convert-local-function-method.md
                 - name: 将 foreach 循环转换为 LINQ
                   href: ide/reference/convert-foreach-linq.md
+                - name: 将 if 语句转换为 switch 语句或 switch 表达式
+                  href: ide/reference/convert-if-statement-to-switch-statement-or-switch-expression.md
                 - name: 将 LINQ 查询转换为 foreach 语句
                   href: ide/reference/convert-linq-to-foreach.md
                 - name: 将 Switch 语句转换为 Switch 表达式
@@ -398,6 +400,8 @@
                   href: ide/reference/remove-unreachable-code.md
                 - name: 重命名
                   href: ide/reference/rename.md
+                - name: 简化字符串内插
+                  href: ide/reference/simplify-string-interpolation.md
                 - name: 对 using 排序
                   href: ide/reference/sort-usings.md
                 - name: Split 或 merge if 语句
