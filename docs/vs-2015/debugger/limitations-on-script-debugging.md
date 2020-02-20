@@ -18,12 +18,12 @@ caps.latest.revision: 25
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 5ea088eadc09d45d576dd3c9cd33e5d9e2d79fc8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9f4f8f1e2fb014dc812bb5980d333e0a851f9222
+ms.sourcegitcommit: 374f5ec9a5fa18a6d4533fa2b797aa211f186755
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68160632"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77476820"
 ---
 # <a name="limitations-on-script-debugging"></a>脚本调试的限制
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68160632"
   
 - 必须在 `<script>` 块的内部设置断点。 如果断点位于内联脚本或 `<% %>` 块中，则无法进行映射。  
   
-- 页的浏览器 URL 必须包含页名称。 例如 http://microsoft.com/default.apsx 。 断点映射不能识别从地址的重定向如 http://microsoft.com 为默认页。  
+- 页的浏览器 URL 必须包含页名称。 例如 `http://microsoft.com/default.apsx`。 断点映射不能识别从地址的重定向如 [http://microsoft.com](`http://microsoft.com`) 为默认页。  
   
 - 断点必须设置在由浏览器 URL 指定的页内，而不能设置在该页包括的 ASPX 控件 (ascx) 文件、母版页或其他文件中。 无法映射包含的页中设置的断点。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "68160632"
 - 对于 `<script id="">` 块中设置的断点，断点映射将忽略 `id` 特性。  
   
 ## <a name="breakpoint-mapping-and-duplicate-lines"></a>断点映射和重复行  
- 为了查找服务器端脚本和客户端脚本中的对应位置，断点映射算法将逐行检查代码。 该算法假定每一行都是唯一的。 如果有两行或更多行包含相同的代码，而断点设置在其中一个重复行上，则断点映射算法可能会在客户端文件中选择错误的重复行。 若要避免这种情况，请向设置了断点的行中添加一条注释。 例如:  
+ 为了查找服务器端脚本和客户端脚本中的对应位置，断点映射算法将逐行检查代码。 该算法假定每一行都是唯一的。 如果有两行或更多行包含相同的代码，而断点设置在其中一个重复行上，则断点映射算法可能会在客户端文件中选择错误的重复行。 若要避免这种情况，请向设置了断点的行中添加一条注释。 例如：  
   
 ```  
 i++ ;  

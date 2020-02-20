@@ -18,12 +18,12 @@ caps.latest.revision: 40
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 07036fd7c1db7dc8b56502ab9c914f1ba808e876
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 5726e964a0db2fae1b902f54a14e206dbc03a148
+ms.sourcegitcommit: 374f5ec9a5fa18a6d4533fa2b797aa211f186755
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65703666"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77477011"
 ---
 # <a name="how-to-enable-debugging-for-aspnet-applications"></a>如何：为 ASP.NET 应用程序启用调试
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "65703666"
 若要启用调试，必须同时在“项目属性”  页和应用程序的 web.config 文件中启用它。  
   
 > [!NOTE]  
-> 显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅 [在 Visual Studio 中自定义开发设置](https://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+> 显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](/previous-versions/zbhkx167(v=vs.140))。  
   
 ### <a name="to-enable-aspnet-debugging-in-the-project-properties-visual-basicc"></a>在项目属性中启用 ASP.NET 调试 (Visual Basic/C#)  
   
@@ -78,14 +78,14 @@ web.config 文件应类似于下面的示例。 请注意，在 configuration �
 </configuration>  
 ```  
   
-## <a name="robust-programming"></a>可靠编程  
+## <a name="robust-programming"></a>可靠的编程  
 [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] 会自动检测对 Web.config 文件的任何更改，并应用新的配置设置。 不必重新启动计算机或 IIS 服务器，更改即可生效。  
   
 一个网站可包含多个虚拟目录和子目录，而 Web.config 文件可能存在于每个目录中。 [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] 应用程序从 URL 路径中更高级别的 Web.config 文件中继承设置。 使用分层配置文件可以同时更改若干个 [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] 应用程序的设置，例如，层次结构下所有应用程序的设置。 但是，如果在层次结构中位于较低位置的文件中设置了 `debug` ，则它将替代较高位置的文件中的值。  
   
-例如，可以在 www.microsoft.com/aaa/Web.config 中指定 `debug="true"` ，并且 aaa 文件夹中或 aaa 的任何子文件夹中的所有应用程序都将继承该设置。 因此，如果你[!INCLUDE[vstecasp](../includes/vstecasp-md.md)]应用程序位于 www.microsoft.com/aaa/bbb，它将继承该设置，如将任何[!INCLUDE[vstecasp](../includes/vstecasp-md.md)]www.microsoft.com/aaa/ccc 和 www.microsoft.com/aaa/ddd，等等的应用程序。 唯一的例外情况是其中一个应用程序通过自己的较低级的 Web.config 文件提替代设置。  
+例如，您可以在 `www.microsoft.com/aaa/Web.config`中指定 `debug="true"`，aaa 文件夹中或 aaa 的任何子文件夹中的任何应用程序都将继承该设置。 因此，如果你的 [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] 应用程序 `www.microsoft.com/aaa/bbb`，它将继承该设置，就像 `www.microsoft.com/aaa/ccc`中的所有 [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] 应用程序、`www.microsoft.com/aaa/ddd`等。 唯一的例外情况是其中一个应用程序通过自己的较低级的 Web.config 文件提替代设置。  
   
 启用调试模式将极大地影响你的 [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] 应用程序的性能。 请记住，在部署发布版本的应用程序或进行性能度量之前要禁用调试模式。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
 [调试 ASP.NET 和 AJAX 应用程序](../debugger/debugging-aspnet-and-ajax-applications.md)  

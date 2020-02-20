@@ -11,26 +11,26 @@ caps.latest.revision: 20
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 2c080f1b5d4b36093cca44daaac644276039718e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: e1a692ee29ea9d43e1a0a4fbed5c52934d69256d
+ms.sourcegitcommit: 374f5ec9a5fa18a6d4533fa2b797aa211f186755
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72667955"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77476988"
 ---
 # <a name="how-to-distribute-code-snippets"></a>如何：分发代码段
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 你可以只向朋友提供代码片段，然后让他们使用代码片段管理器在自己的计算机上安装代码片段。 但是，如果你有若干代码片段要分发或者希望进行范围更广泛的分发，则可以将代码片段文件包含到 Visual Studio 扩展中，用户可以安装该扩展。
 
- 要创建 Visual Studio 扩展，你必须安装 Visual Studio SDK。 在[Visual studio 2015 下载](http://www.visualstudio.com/downloads/visual-studio-2015-downloads-vs.aspx)中查找与 visual studio 安装匹配的 VSSDK 版本。
+ 要创建 Visual Studio 扩展，你必须安装 Visual Studio SDK。 在[Visual studio 2015 下载](https://visualstudio.microsoft.com/vs/older-downloads/)中查找与 visual studio 安装匹配的 VSSDK 版本。
 
 ## <a name="setting-up-the-extension"></a>设置扩展
  在此过程中，将使用在[演练：创建代码片段](../ide/walkthrough-creating-a-code-snippet.md)中创建的相同 Hello World 代码片段。 我们将提供 .snippet 文本，因此无需返回该演练并获取相关代码片段。
 
 1. 创建名为 **TestSnippet** 的新 VSIX 项目。 （“文件”->“新建”->“项目”->“Visual C#”（或“Visual Basic”）->“扩展性”）
 
-2. 在 **TestSnippet** 项目中，添加一个新的 XML 文件，并将其命名为 **VBCodeSnippet.snippet**。 将内容替换为以下内容：
+2. 在 **TestSnippet** 项目中，添加一个新的 XML 文件，并将其命名为 **VBCodeSnippet.snippet**。 将文件中的内容替换为以下内容：
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -102,5 +102,5 @@ ms.locfileid: "72667955"
     Console.WriteLine("Hello, World!")
     ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [代码片段](../ide/code-snippets.md)

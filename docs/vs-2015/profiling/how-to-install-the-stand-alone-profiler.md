@@ -12,14 +12,14 @@ caps.latest.revision: 29
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 5923bc99906cf4bcad8ea92ad74a30470fb41a1c
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 026162a2c8334c7163f9c7853d2de30e58e5939a
+ms.sourcegitcommit: 374f5ec9a5fa18a6d4533fa2b797aa211f186755
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63432722"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77476786"
 ---
-# <a name="how-to-install-the-stand-alone-profiler"></a>如何：安装独立 Profiler
+# <a name="how-to-install-the-stand-alone-profiler"></a>如何：安装独立探查器
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 提供了一个基于命令行的独立探查器，它可在没有安装 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] IDE 的情况下运行。 当计算机没有安装或无法安装开发环境时会发生这种情况。 例如，不应在生产 Web 服务器上安装开发环境。  
@@ -41,20 +41,20 @@ ms.locfileid: "63432722"
     > [!NOTE]
     > 如果显示 vsinstr.exe 的用法信息，则表明安装无误。 如果看见一条错误信息，该消息指出找不到 vsinstr.exe 或它的依赖项，请确保已经按步骤 2 中的说明正确设置了路径。  
   
-4. 通过将 _NT_SYMBOL_PATH 变量设置为 symsrv\*symsrv.dll\*c:\localcache\*http://msdl.microsoft.com/download/symbols 来设置符号服务器  
+4. 设置符号服务器，方法是将 **_NT_SYMBOL_PATH**变量设置为 `symsrv*symsrv.dll*c:\localcache*https://msdl.microsoft.com/download/symbols`  
   
-5. 使用系统环境变量设置符号服务器后，请在新的命令提示符处运行命令行探查器工具。 这将使新环境变量生效。 在命令提示符窗口中，键入以下命令：  
+5. 使用系统环境变量设置符号服务器后，请在新的命令提示符处运行命令行探查器工具。 这将使新环境变量生效。 在命令提示窗口中，输入以下命令：  
   
      start %COMSPEC%  
   
     > [!NOTE]
-    > 要详细了解如何设置符号服务器包，请参阅[如何：引用 Windows 符号信息](../profiling/how-to-reference-windows-symbol-information.md)。  
+    > 有关如何设置符号服务器包的详细说明，请参阅[如何：引用 Windows 符号信息](../profiling/how-to-reference-windows-symbol-information.md)。  
   
 6. 使用 [VSPerfReport](../profiling/vsperfreport.md) 工具将符号串行化到分析数据 (.vsp) 文件中。 使用 VSPerfReport /summary:all /packsymbols 开关。 如果数据文件中未插入符号，请确保设置了 _NT_SYMBOL_PATH 环境变量。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [从命令行分析](../profiling/using-the-profiling-tools-from-the-command-line.md)   
- [演练：命令行使用采样分析](../profiling/walkthrough-command-line-profiling-using-sampling.md)   
- [演练：命令行使用检测进行分析](../profiling/walkthrough-command-line-profiling-using-instrumentation.md)   
+ [演练：使用采样进行命令行分析](../profiling/walkthrough-command-line-profiling-using-sampling.md)   
+ [演练：使用检测进行命令行分析](../profiling/walkthrough-command-line-profiling-using-instrumentation.md)   
  [如何：引用 Windows 符号信息](../profiling/how-to-reference-windows-symbol-information.md)   
  [VSPerfReport](../profiling/vsperfreport.md)
