@@ -16,12 +16,12 @@ caps.latest.revision: 17
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 9d604c8505612ff2c33e4b14241288358f920c2c
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: d62e7ce1c419a9c53e40e1ecf2f71497d60d7a23
+ms.sourcegitcommit: 374f5ec9a5fa18a6d4533fa2b797aa211f186755
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65684833"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77477061"
 ---
 # <a name="unable-to-connect-to-the-microsoft-visual-studio-remote-debugging-monitor"></a>Unable to Connect to the Microsoft Visual Studio Remote Debugging Monitor
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "65684833"
 当你在“附加到进程”  对话框中输入无效的 Visual Studio 远程调试监视器名称时，会出现此错误消息。 远程调试监视器名称通常与尝试连接以进行远程调试的计算机的名称相同。 出现此消息的原因可能是网络上不存在该远程计算机，远程计算机上的远程调试监视器未正确设置，或者由于网络问题或存在防火墙而导致远程计算机不可访问。  
   
 > [!IMPORTANT]
-> 如果你认为你因产品 Bug 而收到此消息，请向 Visual Studio 报告此问题 [发送笑脸](https://msdn.microsoft.com/library/5cc9b67a-54d0-41b0-aa8f-80dff4475a6b)。 如果需要更多帮助，请参阅 [Talk to Us](../ide/talk-to-us.md) 了解与 Microsoft 联系的方法。  
+> 如果需要更多帮助，请参阅 [Talk to Us](../ide/talk-to-us.md) 了解与 Microsoft 联系的方法。  
   
 ## <a name="i-got-this-message-while-i-was-debugging-locally"></a>我在本地调试时收到了此消息  
  如果在本地调试时收到此消息，问题可能出在你的防病毒软件或第三方防火墙。 Visual Studio 是一个 32 位应用程序，因此它使用 64 位的远程调试器版本来调试 64 位应用程序。 两个进程使用本地计算机内的本地网络进行通信。 计算机会持续进行网络通信，但第三方安全软件可能会阻止通信。  
@@ -38,7 +38,7 @@ ms.locfileid: "65684833"
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
-- 确保远程计算机上已安装并且正在运行 Visual Studio 远程调试监视器。 有关远程调试器和如何安装它的信息，请参阅[远程调试](../debugger/remote-debugging.md)。  
+- 确保远程计算机上已安装并且正在运行 Visual Studio 远程调试监视器。 有关远程调试器及其安装方法的信息，请参阅[远程调试](../debugger/remote-debugging.md)。  
   
 - 在 Visual Studio 中查看项目属性（“项目”/“属性”/“调试”）。 确保“远程服务器名称”  正确。  
   
@@ -48,9 +48,10 @@ ms.locfileid: "65684833"
  尝试 [ping](https://technet.microsoft.com/library/ee624059\(v=ws.10\).aspx) 远程计算机。 如果它不响应 ping 操作，则远程工具也将无法连接。 请尝试重新启动远程计算机，或者确保它在网络上正确配置。  
   
 ## <a name="the-version-of-the-remote-debugger-doesnt-match-the-version-of-visual-studio"></a>远程调试器的版本不匹配 Visual Studio 的版本  
- 在本地运行的 Visual Studio 的版本必须与远程计算机上运行的远程调试监视器的版本匹配。 若要解决此问题，请下载并安装匹配的远程调试监视器版本。 转到 [下载中心](http://www.microsoft.com/download) 以查找正确版本的远程调试器。  
-  
+ 在本地运行的 Visual Studio 的版本必须与远程计算机上运行的远程调试监视器的版本匹配。 若要解决此问题，请下载并安装匹配的远程调试监视器版本。 请参阅[Visual studio 订阅](https://my.visualstudio.com/Downloads?q=remote%20tools%20visual%20studio%202015)，查找适用于你的 Visual studio 版本的远程调试器的正确版本。
+
 ## <a name="the-local-and-remote-machines-have-different-authentication-modes"></a>本地和远程计算机具有不同的身份验证模式  
+
  本地和远程计算机需要使用相同的身份验证模式。 若要解决此问题，请确保这两台计算机使用相同的身份验证模式。 你可在“工具”/“选项”  对话框中的远程调试器上更改身份验证模式。  
   
  有关身份验证模式的详细信息，请参阅 [Windows 身份验证概述](https://technet.microsoft.com/library/hh831472.aspx)。  
@@ -60,7 +61,7 @@ ms.locfileid: "65684833"
   
 - 你可以停止远程调试器，并使用本地计算机上使用的帐户重新启动它。  
   
-- 可以使用“/allow \<username>”参数 `msvsmon /allow <username@computer>` 从命令行启动远程调试器  
+- 可以使用“/allow **username>”参数 \< 从命令行启动远程调试器**`msvsmon /allow <username@computer>`  
   
 - 你可以将此用户添加到远程调试器权限（在远程调试器窗口“工具/权限” ）。  
   
@@ -83,5 +84,5 @@ ms.locfileid: "65684833"
   
  **res://C:\Program%20Files\Microsoft%20Visual%20Studio%2014.0\Common7\IDE\Remote%20Debugger\x64\msvsmon.exe/help.htm**  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [远程调试](../debugger/remote-debugging.md)

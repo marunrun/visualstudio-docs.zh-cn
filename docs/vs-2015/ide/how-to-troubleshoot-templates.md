@@ -11,12 +11,12 @@ caps.latest.revision: 13
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: acee84f582f2d6b8e2905e50db352cde794b73e7
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c481b2b9c90b15f4cbc709cad89e5b772ad95cee
+ms.sourcegitcommit: 374f5ec9a5fa18a6d4533fa2b797aa211f186755
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72670601"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77477088"
 ---
 # <a name="how-to-troubleshoot-templates"></a>如何：进行模板的故障排除
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -32,14 +32,14 @@ ms.locfileid: "72670601"
 
 2. 解压缩 .zip 文件。
 
-3. 在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中的“文件”菜单上，单击“打开”，再单击“文件”。
+3. 在  **中的“文件”菜单上，单击“打开”，再单击“文件”** [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]。
 
 4. 选择模板的 .vstemplate 文件，然后单击“打开”。
 
 5. 验证 .vstemplate 文件的 XML 是否遵循 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 模板架构。 有关 .vstemplate 架构的详细信息，请参阅 [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)。
 
     > [!NOTE]
-    > 要在创作 .vstemplate 文件时获得 IntelliSense 支持，请将`xmlns` 属性添加到 `VSTemplate` 元素，并为其赋值 http://schemas.microsoft.com/developer/vstemplate/2005 。
+    > 要在创作 .vstemplate 文件时获得 IntelliSense 支持，请将`xmlns` 属性添加到 `VSTemplate` 元素，并为其赋值 `http://schemas.microsoft.com/developer/vstemplate/2005`。
 
 6. 保存并关闭 .vstemplate 文件。
 
@@ -58,9 +58,9 @@ ms.locfileid: "72670601"
 
 2. 在左窗格中单击“应用程序”。
 
-3. 查找“源”值为 `Visual Studio - VsTemplate` 的事件。
+3. 查找“源”值为  **的事件**`Visual Studio - VsTemplate`。
 
 4. 双击模板事件以查看错误。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [自定义模板](../ide/customizing-project-and-item-templates.md)[创建项目和项模板](../ide/creating-project-and-item-templates.md) [Visual Studio 模板架构引用](../extensibility/visual-studio-template-schema-reference.md)
