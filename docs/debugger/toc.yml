@@ -16,7 +16,7 @@
       href: quickstart-debug-with-managed.md
     - name: 调试 C++ 应用
       href: quickstart-debug-with-cplusplus.md
-    - name: 调试 ASP.NET 应用
+    - name: 部署 ASP.NET Core 应用
       href: quickstart-debug-aspnet.md
 - name: 教程
   items:
