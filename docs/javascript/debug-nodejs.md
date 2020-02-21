@@ -78,7 +78,7 @@ Visual Studio 仅为 Chrome 和 Internet 资源管理器提供客户端调试支
 2. 启动浏览器并启用调试。
 
     ::: moniker range=">=vs-2019"
-    从 Visual Studio 2019 开始，可以在浏览器启动时设置 `--remote-debugging-port=9222` 标志，方法是从“调试”工具栏选择“浏览方式...”，然后选择“添加”，并在“参数”字段中设置标志     。 为浏览器使用其他易记名称，如“带有调试功能的 Edge”或“带有调试功能的 Chrome”   。 有关详细信息，请参阅[发行说明](/visualstudio/releases/2019/release-notes-v16.2)。
+    从 Visual Studio 2019 开始，可以在浏览器启动时设置 `--remote-debugging-port=9222` 标志，方法是从“调试”工具栏选择“浏览方式...”，然后选择“添加”，并在“参数”字段中设置标志     。 为浏览器使用其他易记名称，如“带有调试功能的 Microsoft Edge或“带有调试功能的 Chrome”   。 有关详细信息，请参阅[发行说明](/visualstudio/releases/2019/release-notes-v16.2)。
 
     ![将浏览器设置为打开并启用调试](../javascript/media/tutorial-nodejs-react-edge-with-debugging.png)
 
