@@ -1,5 +1,5 @@
 ---
-title: IDebugEngineProgram2::Stop |Microsoft Docs
+title: IDebugEngineProgram2：： Stop |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -15,15 +15,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ba93c88eb3d7e996b2a5f19dda605653af090c94
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 9d7213dcd2484ba69caf51fdc21f52bba5bb3361
+ms.sourcegitcommit: 260d093d2287ba791f28bdc7103493beabf80b2e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66345220"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77506446"
 ---
 # <a name="idebugengineprogram2stop"></a>IDebugEngineProgram2::Stop
-停止此程序中正在运行的所有线程。
+停止在此程序中运行的所有线程。
 
 ## <a name="syntax"></a>语法
 
@@ -38,13 +38,13 @@ int Stop();
 ```
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，将返回 `S_OK`;否则，将返回错误代码。
 
 ## <a name="remarks"></a>备注
- 此程序在调试多程序环境中时，调用此方法。 收到一些其他程序中的停止事件后，此程序上调用此方法。 此方法的实现应为异步的;也就是说，并非所有的线程数应需要此方法返回之前停止。 此方法的实现可能很简单，与调用[CauseBreak](../../../extensibility/debugger/reference/idebugprogram2-causebreak.md)上此程序的方法。
+ 在多程序环境中调试此程序时，将调用此方法。 当收到来自某个其他程序的停止事件时，将对此程序调用此方法。 此方法的实现应为异步;也就是说，在此方法返回之前，并不是所有线程都需要停止。 此方法的实现可能与在此程序上调用[CauseBreak](../../../extensibility/debugger/reference/idebugprogram2-causebreak.md)方法一样简单。
 
- 没有调试事件是发送给此方法的响应。
+ 当程序停止时，实现程序应发送[IDebugStopCompleteEvent2](../../../extensibility/debugger/reference/idebugstopcompleteevent2.md) 。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IDebugEngineProgram2](../../../extensibility/debugger/reference/idebugengineprogram2.md)
 - [CauseBreak](../../../extensibility/debugger/reference/idebugprogram2-causebreak.md)
