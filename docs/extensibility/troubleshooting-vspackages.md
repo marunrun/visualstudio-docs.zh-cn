@@ -11,12 +11,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 94cb575969f232c9b4d60e7ddc93f9f727132951
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: a231d8d02ce7432188053293684d09c7243dfd5e
+ms.sourcegitcommit: 260d093d2287ba791f28bdc7103493beabf80b2e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72718713"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77506395"
 ---
 # <a name="troubleshooting-vspackages"></a>VSPackages 故障排除
 下面是你可能会遇到的一些常见问题和解决问题的技巧。
@@ -27,7 +27,7 @@ ms.locfileid: "72718713"
 
    若要在安全模式下启动 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]，请在命令提示符下键入**devenv/safemode**。
 
-   在此过程中，不会加载任何 Vspackage，但 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 附带的 Vspackage 除外。
+   在此过程中，不会加载任何 Vspackage，但 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]附带的 Vspackage 除外。
 
 ### <a name="to-troubleshoot-a-vspackage-that-does-not-load"></a>对不加载的 VSPackage 进行故障排除
 
@@ -35,7 +35,7 @@ ms.locfileid: "72718713"
 
     有关详细信息，请参阅[实验实例](../extensibility/the-experimental-instance.md)。
 
-2. 如果 VSPackage 的目标是在实验性的注册表根中运行，请确保您运行的是 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 的实验版本。
+2. 如果 VSPackage 的目标是在实验性的注册表根中运行，请确保您运行的是 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]的实验版本。
 
     若要运行实验版本，请在命令窗口中键入以下内容： **devenv/rootsuffix exp**。
 
@@ -66,7 +66,7 @@ ms.locfileid: "72718713"
 
    1. 在注册表的 "包" 部分中找到 VSPackage 的 CLSID：
 
-        HKLM\Software\Microsoft\Visual Studio \\ *\<version >* \Packages
+        HKLM\Software\Microsoft\Visual Studio\\ *\<版本 >* \Packages
 
    2. 验证 SatelliteDll 子项给定的路径是否正确。
 
@@ -76,7 +76,7 @@ ms.locfileid: "72718713"
 
      调试的良好起点是构造函数和初始化方法。 您还可以在要计算的区域中设置断点，例如菜单命令。 若要启用断点，必须在调试器下运行。
 
-    1. 在“项目”菜单上，单击“属性”。
+    1. 在 **“项目”** 菜单上，单击 **“属性”** 。
 
     2. 在 "**属性页**" 对话框中，选择 "**调试**" 选项卡。
 
@@ -99,7 +99,7 @@ ms.locfileid: "72718713"
 
     2. 添加此**符号文件（.pdb）位置**：
 
-         [http://msdl.microsoft.com/download/symbols](http://msdl.microsoft.com/download/symbols)
+         `https://msdl.microsoft.com/download/symbols`
 
     3. 若要提高性能，请指定符号缓存文件夹，例如：
 
@@ -111,7 +111,7 @@ ms.locfileid: "72718713"
 
 1. 对于托管代码，请确保引用路径正确。
 
-   1. 在“项目”菜单上，单击“属性”。
+   1. 在 **“项目”** 菜单上，单击 **“属性”** 。
 
    2. 在 "**属性页**" 对话框中选择 "**引用**" 选项卡，并确保所有路径都是正确的。 或者，您可以使用**对象浏览器**浏览引用的对象。
 
@@ -119,9 +119,9 @@ ms.locfileid: "72718713"
 
 2. 对于非托管代码，请在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] CLSID 注册表节点中找到 VSPackage 的 CLSID：
 
-    HKLM\Software\Microsoft\Visual Studio \\ *\<version >* \CLSID
+    HKLM\Software\Microsoft\Visual Studio\\ *\<版本 >* \CLSID
 
    请确保 InprocServer32 项具有 VSPackage dll 的正确路径。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [VSPackage](../extensibility/internals/vspackages.md)

@@ -13,12 +13,12 @@ manager: jillfra
 ms.workload:
 - multiple
 monikerRange: '>= vs-2019'
-ms.openlocfilehash: 5087c439533aa447708d0f1bfae653054fd16089
-ms.sourcegitcommit: a86ee68e3ec23869b6eaaf6c6b7946b1d9a88d01
+ms.openlocfilehash: 46c6110cb977e3a309f27fc5a014522494f18c9a
+ms.sourcegitcommit: 260d093d2287ba791f28bdc7103493beabf80b2e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77144790"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77506514"
 ---
 # <a name="generate-source-code-from-net-assemblies-while-debugging"></a>在调试时从 .NET 程序集生成源代码
 
@@ -64,7 +64,7 @@ ms.locfileid: "77144790"
 
 ![包含杂项文件的解决方案资源管理器的屏幕截图。](media/decompilation-solution-explorer.png)
 
-## <a name="known-limitations"></a>已知限制
+## <a name="known-limitations"></a>已知的限制
 
 ### <a name="requires-break-mode"></a>需要中断模式
 
@@ -82,13 +82,13 @@ ms.locfileid: "77144790"
 - 局部变量的名称可能不正确。
 - 某些变量可能不可用于计算。
 
-有关更多详细信息，请参阅 GitHub 问题：[反编译程序集成到 VS 调试器中 IChsarpCompiler。](https://github.com/icsharpcode/ILSpy/issues/1901)
+有关更多详细信息，请参阅 GitHub 问题：[反编译程序集成到 VS 调试器中 ICSharpCode。](https://github.com/icsharpcode/ILSpy/issues/1901)
 
 ### <a name="decompilation-reliability"></a>Ilspy 可靠性
 
 相对较小的 ilspy 尝试百分比可能会导致失败。 这是由于 ILSpy 中的序列点为空引用错误引起的。  我们缓解了这些问题，并在 ilspy 尝试中进行了正确的故障转移。
 
-有关更多详细信息，请参阅 GitHub 问题：[反编译程序集成到 VS 调试器中 IChsarpCompiler。](https://github.com/icsharpcode/ILSpy/issues/1901)
+有关更多详细信息，请参阅 GitHub 问题：[反编译程序集成到 VS 调试器中 ICSharpCode。](https://github.com/icsharpcode/ILSpy/issues/1901)
 
 ### <a name="limitations-with-async-code"></a>异步代码的限制
 
