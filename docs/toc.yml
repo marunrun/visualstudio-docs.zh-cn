@@ -331,6 +331,8 @@
                   href: ide/reference/generate-deconstructor.md
                 - name: 将参数添加到方法
                   href: ide/reference/add-parameter.md
+                - name: 从构造函数生成私有字段
+                  href: ide/reference/generate-private-field-from-constructor.md
                 - name: 生成替代
                   href: ide/reference/generate-override.md
                 - name: 生成 Equals 和 GetHashCode 方法替代
@@ -374,6 +376,8 @@
                   href: ide/reference/extract-interface.md
                 - name: 提取方法
                   href: ide/reference/extract-method.md
+                - name: 提取本地函数
+                  href: ide/reference/extract-local-function.md
                 - name: 生成参数
                   href: ide/reference/generate-parameter.md
                 - name: 内联临时变量
@@ -386,6 +390,8 @@
                   href: ide/reference/invert-if-statement.md
                 - name: 静态本地函数重构选项
                   href: ide/reference/static-local-function-refactor-options.md
+                - name: 将成员设为静态成员
+                  href: ide/reference/make-member-static.md
                 - name: 将声明移至引用附近
                   href: ide/reference/move-declaration-near-reference.md
                 - name: 将类型移到匹配的文件
@@ -416,10 +422,8 @@
                   href: ide/reference/use-block-body-lambda.md
                 - name: 未使用的值分配、变量和参数
                   href: ide/reference/unused-values-parameters.md
-                - name: 自动换行和对齐调用链接
-                  href: ide/reference/wrap-and-align-call-chains.md
-                - name: 自动换行、缩进和对齐参数
-                  href: ide/reference/wrap-align-indent-parameters.md
+                - name: 自动换行、缩进和对齐重构
+                  href: ide/reference/wrap-indent-align-refactorings.md
             - name: 演练：基于使用情况生成代码
               href: ide/walkthrough-test-first-support-with-the-generate-from-usage-feature.md
         - name: IntelliSense
