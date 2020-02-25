@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b833d8b68af418b727861226df41c700d582805e
-ms.sourcegitcommit: d55438841123aad56a524a65332a86ad67af386b
+ms.openlocfilehash: 792b5e2d40f7299bf019fd3f9c86697bf008c391
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73599294"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77578770"
 ---
 # <a name="find-your-debugging-task-in-visual-studio"></a>在 Visual Studio 中查找调试任务
 
@@ -130,3 +130,7 @@ ms.locfileid: "73599294"
 ### <a name="debug-multithreaded-applications"></a>调试多线程应用程序
 
 请参阅[调试多线程应用程序](debug-multithreaded-applications-in-visual-studio.md)。
+
+### <a name="fix-performance-issues"></a>修复性能问题
+
+请参阅[分析工具](../profiling/profiling-feature-tour.md)
