@@ -18,12 +18,12 @@ caps.latest.revision: 35
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: a8f068099ec77f35919f880512e6c66f8e648cbe
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: f8e5054b4da0122c40c3ad62cfebcace973f7b20
+ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75918816"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77558018"
 ---
 # <a name="server-and-client-configuration-issues-in-clickonce-deployments"></a>ClickOnce 部署中的服务器和客户端配置问题
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "75918816"
 ## <a name="clickonce-and-proxy-authentication"></a>ClickOnce 和代理身份验证  
  [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 在 .NET Framework 3.5 中开始提供对 Windows 集成代理身份验证的支持。 不需要特定的 machine.config 指令。 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 不支持其他身份验证协议，如 Basic 或 Digest。  
   
- 你还可以将修补程序应用到 .NET Framework 2.0 来启用此功能。 有关更多信息，请参见 https://go.microsoft.com/fwlink/?LinkId=158730 。  
+ 你还可以将修补程序应用到 .NET Framework 2.0 来启用此功能。 有关详细信息，请参阅[修复：尝试将在 .NET Framework 2.0 中创建的 ClickOnce 应用程序安装到配置为使用代理服务器的客户端计算机时，请参阅修复：错误消息： "需要代理身份验证"](https://support.microsoft.com/en-in/help/917952/fix-error-message-when-you-try-to-install-a-clickonce-application-that)。 
   
  有关详细信息，请参阅[\<defaultProxy > 元素（网络设置）](https://msdn.microsoft.com/library/9d663c4b-07b4-4f6f-9b12-efbd3630354f)。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "75918816"
 ## <a name="ftp-protocol-not-supported-for-installing-applications"></a>用于安装应用程序的 FTP 协议不受支持  
  [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 支持从任何 HTTP 1.1 Web 服务器或文件服务器安装应用程序。 安装应用程序不支持 FTP、文件传输协议。 仅可使用 FTP 发布应用程序。 下表总结了这些差异：  
   
-|URL 类型|描述|  
+|URL 类型|说明|  
 |--------------|-----------------|  
 |ftp://|你可以使用此协议发布 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 应用程序。|  
 |http://|你可以使用此协议安装 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 应用程序。|  
@@ -121,7 +121,7 @@ ms.locfileid: "75918816"
   
 - 如果创建扩展名为 "*" 且 MIME 类型为 "application/八进制流" 的 MIME 类型，则将允许下载不受阻止的文件类型的文件。 （但是，不能下载被阻止的文件类型，如 .aspx 和 .asmx。）  
   
-  有关在 Windows Server 上配置 MIME 类型的具体说明，请参阅 Microsoft 知识库文章 KB326965 "IIS 6.0 不提供未知 MIME 类型" [https://support.microsoft.com/default.aspx?scid=kb ; en-us; 326965](https://support.microsoft.com/default.aspx?scid=kb;en-us;326965)。  
+  有关在 Windows Server 上配置 MIME 类型的具体说明，请参阅如何向网站[或应用程序添加 mime 类型](/iis/configuration/system.webserver/staticcontent/mimemap#how-to-add-a-mime-type-to-a-web-site-or-application)。  
   
 ## <a name="content-type-mappings"></a>内容类型映射  
  通过 HTTP 发布时，应用程序文件的内容类型（也称为 MIME 类型）应为 "应用程序/x 应用程序"。 如果已在服务器上安装 [!INCLUDE[dnprdnlong](../includes/dnprdnlong-md.md)]，则会自动设置。 如果未安装，则需要为 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 应用程序 vroot （或整个服务器）创建 MIME 类型关联。  
@@ -133,7 +133,7 @@ ms.locfileid: "75918816"
   
  如果使用的是 IIS，则可以轻松启用 HTTP 压缩。 但是，当启用 HTTP 压缩时，仅对某些文件类型（即 HTML 和文本文件）启用它。 若要为程序集（.dll）、XML （.xml）、部署清单（应用程序）和应用程序清单（.manifest）启用压缩，则必须将这些文件类型添加到 IIS 的类型列表中以进行压缩。 将文件类型添加到部署之前，只会压缩文本和 HTML 文件。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [ClickOnce 部署疑难解答](../deployment/troubleshooting-clickonce-deployments.md)   
  [选择 ClickOnce 部署策略](../deployment/choosing-a-clickonce-deployment-strategy.md)   
  [应用程序部署必备](../deployment/application-deployment-prerequisites.md)

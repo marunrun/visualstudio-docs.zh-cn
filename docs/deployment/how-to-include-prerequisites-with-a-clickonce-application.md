@@ -8,12 +8,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c6826ae1f957778ac6eea556fdbbe9589ab3390b
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 94ed90b9fcdd0c4ffe35789d00de4bbbd4aaa355
+ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72727898"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77557640"
 ---
 # <a name="how-to-include-prerequisites-with-a-clickonce-application"></a>如何：将必备组件与 ClickOnce 应用程序包括在一起
 你必须先将必备软件的安装程序包下载到开发计算机上，然后才能使用 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序分发这些软件。 发布应用程序并选择“从与我的应用程序相同的位置下载系统必备组件”时，如果安装程序包不在“包”文件夹中，则将发生错误。
@@ -31,10 +31,10 @@ ms.locfileid: "72727898"
 
 3. 在记事本中，打开“Package.xml”文件。
 
-4. 找到包含 **http://go.microsoft.com/fwlink** 的 "**名称**" 元素，并复制 URL。 包括“LinkID”部分。
+4. 找到包含 `http://go.microsoft.com/fwlink`的 "**名称**" 元素，并复制 URL。 包括“LinkID”部分。
 
    > [!NOTE]
-   > 如果没有**名称**元素包含 **http://go.microsoft.com/fwlink** ，请打开必备组件的根文件夹**中的 fwlink 文件，** 并找到 " " 字符串。
+   > 如果没有**名称**元素包含 `http://go.microsoft.com/fwlink`，请打开必备组件的根文件夹**中的 fwlink 文件，** 并找到 "  " 字符串。
 
    > [!IMPORTANT]
    > 某些系统必备组件具有多个安装程序包（例如，用于 32 位或 64 位系统）。 如果多个“名称”元素包含“fwlink”，则必须对每个元素重复剩余步骤。
@@ -49,5 +49,5 @@ ms.locfileid: "72727898"
 
     现在你可以将安装程序包与你的应用程序一起分发。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [如何：与 ClickOnce 应用程序一起安装系统必备组件](../deployment/how-to-install-prerequisites-with-a-clickonce-application.md)
