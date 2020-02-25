@@ -9,12 +9,12 @@ caps.latest.revision: 16
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 5ed6ddc11a998d97a193c2ab01ff69d386ed4ffe
-ms.sourcegitcommit: 374f5ec9a5fa18a6d4533fa2b797aa211f186755
+ms.openlocfilehash: 01fbb6cfd1717562af79c067ede0cad9753ad5dd
+ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77476969"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77557902"
 ---
 # <a name="how-to-specify-symbol-file-locations-from-the-command-line"></a>如何：从命令行指定符号文件位置
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -48,20 +48,20 @@ ms.locfileid: "77476969"
   
 2. 使用以下语法设置 **_NT_SYMBOL_PATH** 环境变量或 VSPerfReport /SymbolPath 选项：  
   
-    `srv*<LocalStore>*https://msdl.microsoft.com/downloads/symbols`  
+   `srv*<LocalStore>*https://msdl.microsoft.com/downloads/symbols`  
   
-    其中*<LocalStore>* 是所创建的本地目录的路径。  
+   其中*<LocalStore>* 是所创建的本地目录的路径。  
   
 ## <a name="specifying-component-symbol-files"></a>指定组件符号文件  
  分析工具会在以下位置搜索待分析组件的 .pdb 文件：.pdb 文件在组件中的原始存储位置，或者包含分析数据文件的文件夹。 可通过向 **_NT_SYMBOL_PATH** 或向 **/SymbolPath** 选项添加一个或多个路径来指定要搜索的其他位置。 各个路径之间用分号分隔。  
   
 ## <a name="example"></a>示例  
  以下命令行将 **_NT_SYMBOL_PATH** 环境变量设置为 Windows 符号服务器，将本地目录设置为 **C:\Symbols**。  
-  
+
  ```cmd
- set  _NT_SYMBOL_PATH=srv*C:\symbols*https://msdl.microsoft.com/downloads/symbols`  
+ set  _NT_SYMBOL_PATH=srv*C:\symbols*https://msdl.microsoft.com/downloads/symbols
  ```
-  
+
  通过使用 **/SymbolPath** 选项，以下 VSPerfReport 命令行向搜索路径添加 C:\Projects\Symbols 目录。  
   
  **VSPerfReport**  *MyApp* **.exe/SymbolPath： C:\Projects\Symbols/summary： all**

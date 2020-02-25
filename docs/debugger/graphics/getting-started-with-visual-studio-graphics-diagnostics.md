@@ -8,12 +8,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: eb651d9b35dd4531f4d14e169ab6f04376d4dfff
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 575b0254768ac359e43cd5b04c23a220549ac973
+ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72735691"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77557928"
 ---
 # <a name="getting-started-with-visual-studio-graphics-diagnostics"></a>Visual Studio 图形诊断入门
 在此部分中，你会准备首次使用图形诊断，然后从 Direct3D 应用捕获帧并在图形分析器中检查它们。
@@ -35,11 +35,11 @@ ms.locfileid: "72735691"
 
 1. 在 "搜索" 中，键入 "**应用和功能**"，然后打开 "**应用 & 功能**" 设置。
 
-2. 在 "**应用 & 功能**" 对话框的右侧，选择 "**管理可选功能**" （在 "**应用" & 功能**下）。
+2. 在 "**应用" & "功能**" "设置" 下，选择 "**可选功能**" （在 "**应用" & 功能**下）。
 
-   “管理可选功能”对话框随即出现。
+   将显示**可选功能**设置。
 
-3. 在“管理可选功能”对话框中，选择“添加功能”。 可以安装的可选功能列表随即出现。
+3. 在 "**可选功能**" 设置中，选择 "**添加功能**"。 可以安装的可选功能列表随即出现。
 
 4. 从功能列表中选择“图形工具”，然后选择“安装”。
 
@@ -49,7 +49,7 @@ ms.locfileid: "72735691"
 > Windows 10 的可选图形工具功能可提供轻量级捕获和播放功能（如命令行捕获程序 dxcap.exe），该功能可以在未安装开发人员工具的计算机上用于支持、测试和诊断方案。 有关详细信息，请参阅[命令行捕获工具](command-line-capture-tool.md)主题。
 
 ## <a name="using-graphics-diagnostics-for-the-first-time"></a>首次使用图形诊断
- 现在你拥有所有所需内容，已准备好开始使用图形诊断。 请执行这些步骤。
+ 现在你拥有所有所需内容，已准备好开始使用图形诊断。 只需执行以下步骤。
 
 ### <a name="1---create-a-direct3d-app"></a>1 - 创建 Direct3D 应用
  如果你已经拥有自己的 Direct3D 应用程序来浏览图形诊断，很好！ 否则，请使用以下项之一：
@@ -87,5 +87,5 @@ ms.locfileid: "72735691"
 
  若要详细了解如何结合使用图形分析器工具，请参阅[示例](graphics-diagnostics-examples.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [Direct3D 12 图形](/windows/desktop/direct3d12/direct3d-12-graphics)

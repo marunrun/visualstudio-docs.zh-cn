@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 794b53a71a0a8215ae6bc9af47f9fe2a0ff911b5
-ms.sourcegitcommit: 8589d85cc10710ef87e6363a2effa5ee5610d46a
+ms.openlocfilehash: b1d2512c14c0630d2268adfa465e092555150943
+ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72806887"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77557865"
 ---
 # <a name="server-and-client-configuration-issues-in-clickonce-deployments"></a>ClickOnce 部署中的服务器和客户端配置问题
 如果你在 Windows Server 上使用 Internet Information Services （IIS），并且你的部署包含 Windows 无法识别的文件类型（如 Microsoft Word 文件），则 IIS 将拒绝传输该文件，并且你的部署将不会成功。
@@ -49,7 +49,7 @@ ms.locfileid: "72806887"
 ## <a name="clickonce-and-proxy-authentication"></a>ClickOnce 和代理身份验证
  [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 在 .NET Framework 3.5 中开始提供对 Windows 集成代理身份验证的支持。 不需要特定的 machine.config 指令。 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 不支持其他身份验证协议，如 Basic 或 Digest。
 
- 你还可以将修补程序应用到 .NET Framework 2.0 来启用此功能。 有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkId=158730 。
+ 你还可以将修补程序应用到 .NET Framework 2.0 来启用此功能。 有关详细信息，请参阅[修复：尝试将在 .NET Framework 2.0 中创建的 ClickOnce 应用程序安装到配置为使用代理服务器的客户端计算机时，请参阅修复：错误消息： "需要代理身份验证"](https://support.microsoft.com/help/917952/fix-error-message-when-you-try-to-install-a-clickonce-application-that)。
 
  有关详细信息，请参阅[\<defaultProxy > 元素（网络设置）](/dotnet/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings)。
 
@@ -75,7 +75,7 @@ ms.locfileid: "72806887"
 ```
 
 > [!NOTE]
-> 如果站点提示输入默认凭据以外的凭据，则可以使 NTLM （NT 质询-响应）身份验证正常工作，在 "安全" 对话框中，当系统提示你是否要保存提供的凭据时，请单击 **"确定"** 。未来的会话。 但是，此解决方法不适用于基本身份验证。
+> 如果站点提示输入默认凭据以外的凭据，则可以使 NTLM （NT 质询-响应）身份验证正常工作，当系统提示你是否要保存提供的凭据以供将来的会话时，你可以在 "安全" 对话框中单击 **"确定"** 。 但是，此解决方法不适用于基本身份验证。
 
 ## <a name="use-third-party-web-servers"></a>使用第三方 Web 服务器
  如果要从 IIS 之外的 Web 服务器部署 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序，则如果服务器返回密钥 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 文件（如部署清单和应用程序清单）的错误内容类型，则可能会遇到问题。 若要解决此问题，请参阅 Web 服务器的帮助文档，了解如何向服务器添加新内容类型，并确保下表中列出的所有文件扩展名映射都已准备就绪。
@@ -94,7 +94,7 @@ ms.locfileid: "72806887"
 ## <a name="ftp-protocol-not-supported-for-installing-applications"></a>用于安装应用程序的 FTP 协议不受支持
  [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 支持从任何 HTTP 1.1 Web 服务器或文件服务器安装应用程序。 安装应用程序不支持 FTP、文件传输协议。 仅可使用 FTP 发布应用程序。 下表总结了这些差异：
 
-| URL 类型 | 描述 |
+| URL 类型 | 说明 |
 |----------| - |
 | ftp:// | 你可以使用此协议发布 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序。 |
 | http:// | 你可以使用此协议安装 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序。 |
@@ -118,7 +118,7 @@ ms.locfileid: "72806887"
 
 - 如果创建扩展名为 "<em>" 且 mime 类型为 "application/八进制流" 的 mime 类型，则将允许下载不受阻止的文件类型的文件。（但是，不能下载被阻止的文件类型，例如 * .aspx</em>和 *.asmx* 。）
 
-  有关在 Windows Server 上配置 MIME 类型的具体说明，请参阅 Microsoft 知识库文章 KB326965 "IIS 6.0 不提供未知 MIME 类型" [http://support.microsoft.com/default.aspx?scid=kb ; en-us; 326965](http://support.microsoft.com/default.aspx?scid=kb;en-us;326965)。
+  有关在 Windows Server 上配置 MIME 类型的具体说明，请参阅如何向网站[或应用程序添加 mime 类型](/iis/configuration/system.webserver/staticcontent/mimemap#how-to-add-a-mime-type-to-a-web-site-or-application)。
 
 ## <a name="content-type-mappings"></a>内容类型映射
  通过 HTTP 发布时，*应用程序*文件的内容类型（也称为 MIME 类型）应为 "应用程序/x 应用程序"。 如果在服务器上安装了 .NET Framework 2.0，将自动为您设置此设置。 如果未安装，则需要为 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序 vroot （或整个服务器）创建 MIME 类型关联。
@@ -128,11 +128,11 @@ ms.locfileid: "72806887"
 ## <a name="http-compression-issues"></a>HTTP 压缩问题
  使用 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]，你可以执行使用 HTTP 压缩的下载，它是使用 GZIP 算法在将流发送到客户端之前压缩数据流的 Web 服务器技术。 在这种情况下，客户端（在本例中为 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]）将在读取文件之前对其进行解压缩。
 
- 如果使用的是 IIS，则可以轻松启用 HTTP 压缩。 但是，当启用 HTTP 压缩时，仅对某些文件类型（即 HTML 和文本文件）启用它。 若要为程序集（ *.dll*）、xml （ *.xml*）、部署清单（*应用程序*）和应用程序清单（ *.manifest*）启用压缩，则必须将这些文件类型添加到 IIS 的类型列表中以进行压缩。 将文件类型添加到部署之前，只会压缩文本和 HTML 文件。
+ 如果使用的是 IIS，则可以轻松启用 HTTP 压缩。 但是，当启用 HTTP 压缩时，仅对某些文件类型（即 HTML 和文本文件）启用它。 若要为程序集（*.dll*）、xml （*.xml*）、部署清单（*应用程序*）和应用程序清单（*.manifest*）启用压缩，则必须将这些文件类型添加到 IIS 的类型列表中以进行压缩。 将文件类型添加到部署之前，只会压缩文本和 HTML 文件。
 
  有关 IIS 的详细说明，请参阅[如何为 HTTP 压缩指定其他文档类型](https://support.microsoft.com/help/234497)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [ClickOnce 部署疑难解答](../deployment/troubleshooting-clickonce-deployments.md)
 - [选择 ClickOnce 部署策略](../deployment/choosing-a-clickonce-deployment-strategy.md)
 - [应用程序部署必备](../deployment/application-deployment-prerequisites.md)

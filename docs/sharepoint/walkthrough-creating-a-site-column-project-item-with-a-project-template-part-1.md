@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 6c8d4949bc8bbef0231986d2eeedfd36a2f678ea
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 843d56482a82c2a8210de50455753c9703698503
+ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73189167"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77557843"
 ---
 # <a name="walkthrough-create-a-site-column-project-item-with-a-project-template-part-1"></a>演练：使用项目模板创建网站栏项目项（第1部分）
   SharePoint 项目是一个或多个 SharePoint 项目项的容器。 你可以通过创建自己的 SharePoint 项目项类型，然后将其与项目模板关联，在 Visual Studio 中扩展 SharePoint 项目系统。 在本演练中，您将定义用于创建网站列的项目项类型，然后您将创建一个可用于创建包含网站列项目项的新项目的项目模板。
@@ -40,12 +40,12 @@ ms.locfileid: "73189167"
 > [!NOTE]
 > 有关一系列示例工作流，请参阅[SharePoint 工作流示例](/sharepoint/dev/general-development/sharepoint-workflow-samples)。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必备条件
  若要完成本演练，开发计算机上需要以下组件：
 
 - 支持的 Microsoft Windows、SharePoint 和 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]版本。
 
-- [!include[vssdk_current_long](../sharepoint/includes/vssdk-current-long-md.md)] 本演练使用 SDK 中的**Vsix 项目**模板来创建用于部署项目项的 vsix 包。 有关详细信息，请参阅[在 Visual Studio 中扩展 SharePoint 工具](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)。
+- [!include[vssdk_current_long](../sharepoint/includes/vssdk-current-long-md.md)]。 本演练使用 SDK 中的**Vsix 项目**模板来创建用于部署项目项的 vsix 包。 有关详细信息，请参阅[在 Visual Studio 中扩展 SharePoint 工具](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)。
 
   以下概念的知识非常有用，但并不是必需的，无法完成本演练：
 
@@ -103,7 +103,7 @@ ms.locfileid: "73189167"
 
     - *MyApplication*
 
-    - MyApplication myapp
+    - MyApplication.myapp
 
     - *资源. 设计器 .vb*
 
@@ -215,7 +215,7 @@ ms.locfileid: "73189167"
 
      `OutputSubPath` 元素指定生成项目时创建项目模板的路径中的其他文件夹。 此处指定的文件夹将确保项目模板仅在客户打开 "**新建项目**" 对话框时可用，展开 " **SharePoint** " 节点，然后选择 " **2010** " 节点。
 
-5. 保存并关闭文件。
+5. 保存并关闭该文件。
 
 6. 在**解决方案资源管理器**中，打开**SiteColumnProjectTemplate**项目的快捷菜单，然后选择 "**重新加载项目**"。
 
@@ -252,7 +252,7 @@ ms.locfileid: "73189167"
 
      当 SharePoint 项目的 "**沙盒解决方案**" 属性设置为 " **True**" 时，Visual Studio 会将 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 添加到 AssemblyInfo 代码文件。 但是，默认情况下，项目模板中的 AssemblyInfo 代码文件不会导入 <xref:System.Security> 命名空间。 必须**使用**或**Imports**语句添加此语句，以防止编译错误。
 
-2. 保存并关闭文件。
+2. 保存并关闭该文件。
 
 #### <a name="to-edit-the-elementsxml-file"></a>编辑元素 .xml 文件
 
@@ -272,7 +272,7 @@ ms.locfileid: "73189167"
 
      新 XML 会添加一个 `Field` 元素，该元素定义网站列的名称、其基类型以及要在其中列出库中的网站列的组。 有关此文件的内容的详细信息，请参阅[字段定义架构](/previous-versions/office/developer/sharepoint-2010/ms196289(v=office.14))。
 
-2. 保存并关闭文件。
+2. 保存并关闭该文件。
 
 #### <a name="to-edit-the-sharepointprojectitemspdata-file"></a>编辑 SharePointProjectItem. spdata 文件
 
@@ -296,7 +296,7 @@ ms.locfileid: "73189167"
 
      有关*spdata*文件的内容的详细信息，请参阅[SharePoint 项目项架构参考](../sharepoint/sharepoint-project-item-schema-reference.md)。
 
-2. 保存并关闭文件。
+2. 保存并关闭该文件。
 
 #### <a name="to-edit-the-feature1feature-file"></a>编辑 Feature1 文件
 
@@ -322,7 +322,7 @@ ms.locfileid: "73189167"
 
      有关 *. 功能*文件的详细信息，请参阅[为 SharePoint 项目项创建项模板和项目模板](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md)。
 
-2. 保存并关闭文件。
+2. 保存并关闭该文件。
 
 #### <a name="to-edit-the-packagepackage-file"></a>编辑包文件
 
@@ -347,7 +347,7 @@ ms.locfileid: "73189167"
 
      有关*包*文件的详细信息，请参阅[为 SharePoint 项目项创建项模板和项目模板](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md)。
 
-2. 保存并关闭文件。
+2. 保存并关闭该文件。
 
 #### <a name="to-edit-the-sitecolumnprojecttemplatevstemplate-file"></a>编辑 sitecolumnprojecttemplate 文件
 
@@ -431,11 +431,11 @@ ms.locfileid: "73189167"
 
    - 为每个项目实例中包含的每个 filethat 添加 `ProjectItem` 元素。
 
-   - 使用命名空间 "<http://schemas.microsoft.com/developer/vstemplate/2005>"。 此解决方案中的其他项目文件使用 "<http://schemas.microsoft.com/developer/msbuild/2003>" 命名空间。 因此，将生成 XML 架构警告消息，但在本演练中，您可以忽略这些消息。
+   - 使用命名空间 `http://schemas.microsoft.com/developer/vstemplate/2005`。 此解决方案中的其他项目文件使用 `http://schemas.microsoft.com/developer/msbuild/2003` 命名空间。 因此，将生成 XML 架构警告消息，但在本演练中，您可以忽略这些消息。
 
      有关 *.vstemplate*文件的内容的详细信息，请参阅[Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)。
 
-2. 保存并关闭文件。
+2. 保存并关闭该文件。
 
 #### <a name="to-edit-the-projecttemplatecsproj-or-projecttemplatevbproj-file"></a>编辑 projecttemplate 或 projecttemplate 文件
 
@@ -630,7 +630,7 @@ ms.locfileid: "73189167"
 
     - 为项目中的每个默认文件（如*SharePointProjectItem 和 spdata*）添加*元素。*
 
-2. 保存并关闭文件。
+2. 保存并关闭该文件。
 
 ## <a name="create-a-vsix-package-to-deploy-the-project-template"></a>创建 VSIX 包以部署项目模板
  若要部署扩展，请使用**SiteColumnProjectItem**解决方案中的 vsix 项目创建 vsix 包。 首先，通过修改 VSIX 项目中包含的 source.extension.vsixmanifest 文件来配置 VSIX 包。 然后，通过生成解决方案创建 VSIX 包。
@@ -702,7 +702,7 @@ ms.locfileid: "73189167"
 
 6. 在**解决方案资源管理器**中，选择 " **Field1** " 节点，然后按**F4**键。
 
-     此时将打开 "**属性**" 窗口。
+     此时将打开“属性”窗口。
 
 7. 在 "属性" 列表中，验证是否显示 "属性**示例" 属性**。
 
@@ -752,7 +752,7 @@ ms.locfileid: "73189167"
 ## <a name="next-steps"></a>后续步骤
  完成本演练后，可以将向导添加到项目模板。 当用户创建网站列项目时，向导会要求用户提供用于调试的网站 URL 以及新的解决方案是否已进行了沙盒处理，向导将使用此信息配置新的项目。 该向导还会收集有关列的信息（例如，要在其中列出站点列库中的列的基础类型和组），并将此信息添加到新项目中的*元素 .xml*文件。 有关详细信息，请参阅[演练：使用项目模板创建网站栏项目项（第2部分）](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [演练：使用项目模板创建网站栏项目项（第2部分）](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2.md)
 - [定义自定义 SharePoint 项目项类型](../sharepoint/defining-custom-sharepoint-project-item-types.md)

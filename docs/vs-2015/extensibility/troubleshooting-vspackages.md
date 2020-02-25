@@ -11,12 +11,12 @@ ms.assetid: 274673e7-72e7-476f-a263-3411b5b874be
 caps.latest.revision: 23
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: b092c910b0303a62289e75b168e39628cbd0314b
-ms.sourcegitcommit: 374f5ec9a5fa18a6d4533fa2b797aa211f186755
+ms.openlocfilehash: e740860046ee9d18a137dbd513202e259e90bf79
+ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77476991"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77557971"
 ---
 # <a name="troubleshooting-vspackages"></a>VSPackages 故障排除
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "77476991"
   
      调试的良好起点是构造函数和初始化方法。 您还可以在要计算的区域中设置断点，例如菜单命令。 若要启用断点，必须在调试器下运行。  
   
-    1. 在“项目”菜单上，单击“属性”。  
+    1. 在 **“项目”** 菜单上，单击 **“属性”**。  
   
     2. 在 "**属性页**" 对话框中，选择 "**调试**" 选项卡。  
   
@@ -101,23 +101,21 @@ ms.locfileid: "77476991"
   
     2. 添加此**符号文件（.pdb）位置**：  
   
-         `https://msdl.microsoft.com/download/symbols`  
+       `https://msdl.microsoft.com/download/symbols`  
   
     3. 若要提高性能，请指定符号缓存文件夹，例如：  
-  
-        ```  
-        C:\symbols  
-        ```  
+
+       `C:\symbols`  
   
 ### <a name="to-troubleshoot-a-missing-vspackage-or-one-of-its-dependencies"></a>排查缺少的 VSPackage 或它的某个依赖项  
   
 1. 对于托管代码，请确保引用路径正确。  
   
-   1. 在“项目”菜单上，单击“属性”。  
+   1. 在 **“项目”** 菜单上，单击 **“属性”**。  
   
    2. 在 "**属性页**" 对话框中选择 "**引用**" 选项卡，并确保所有路径都是正确的。 或者，您可以使用**对象浏览器**浏览引用的对象。  
   
-        对于托管代码，你可以使用[fuslogvw.exe （程序集绑定日志查看器）](https://msdn.microsoft.com/library/e32fa443-0778-4cc3-bf36-5c8ea297d296)来显示失败的程序集加载的详细信息。  
+        对于托管代码，你可以使用[fuslogvw.exe （程序集绑定日志查看器）](/dotnet/framework/tools/fuslogvw-exe-assembly-binding-log-viewer)来显示失败的程序集加载的详细信息。  
   
 2. 对于非托管代码，请在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] CLSID 注册表节点中找到 VSPackage 的 CLSID：  
   
