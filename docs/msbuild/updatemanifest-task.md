@@ -11,17 +11,17 @@ helpviewer_keywords:
 - MSBuild, UpdateManifest task
 - UpdateManifest task [MSBuild]
 ms.assetid: 1291fd33-b89e-4e15-8fb1-69f9625cf2d2
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0dd2ddfdbe784a45badfd0138b41b1f5dbff8ec7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 215092d7fbcee8ec30210dd8332bc6ae5b7ad412
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62954461"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77578275"
 ---
 # <a name="updatemanifest-task"></a>UpdateManifest 任务
 更新清单中所选的属性并重新签名。
@@ -29,7 +29,7 @@ ms.locfileid: "62954461"
 ## <a name="parameters"></a>参数
  下表描述了 `UpdateManifest` 任务的参数。
 
-|参数|说明|
+|参数|描述|
 |---------------|-----------------|
 |`ApplicationManifest`|必选 <xref:Microsoft.Build.Framework.ITaskItem> 参数。<br /><br /> 指定应用程序清单。|
 |`ApplicationPath`|必选 `String` 参数。<br /><br /> 指定应用程序清单的路径。|

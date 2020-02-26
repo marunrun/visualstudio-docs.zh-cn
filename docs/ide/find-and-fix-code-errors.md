@@ -9,12 +9,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e66d0d1ed8115b214b1da1654cbefdc96f7d1774
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 48fa03dec65bcdc1e6c3af94200cfb6c46907e49
+ms.sourcegitcommit: 374f5ec9a5fa18a6d4533fa2b797aa211f186755
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75588611"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77476862"
 ---
 # <a name="make-code-work-in-visual-studio"></a>确保代码在 Visual Studio 中正常运行
 
@@ -78,7 +78,7 @@ Visual Studio 包括一系列内置的 [.NET Compiler Platform 分析器](../cod
 
 ### <a name="c-code-analysis"></a>C++ 代码分析
 
-若要分析 C++ 代码，请运行[静态代码分析](../code-quality/quick-start-code-analysis-for-c-cpp.md)。 养成在清除了阻止生成的明显错误后运行该分析的习惯，然后花一些时间解决其可能产生的警告。 这可避免将来的一些麻烦，并且你可由此了解一些代码样式技术。
+若要分析 C++ 代码，请运行[静态代码分析](/cpp/code-quality/quick-start-code-analysis-for-c-cpp)。 养成在清除了阻止生成的明显错误后运行该分析的习惯，然后花一些时间解决其可能产生的警告。 这可避免将来的一些麻烦，并且你可由此了解一些代码样式技术。
 
 按 Alt+F11（或从顶部菜单选择“分析” > “对解决方案运行代码分析”）启动静态代码分析     。
 

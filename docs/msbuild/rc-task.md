@@ -17,17 +17,17 @@ helpviewer_keywords:
 - RC task (MSBuild (C++))
 - MSBuild (C++), RC task
 ms.assetid: 2fd26c75-a056-4dda-9f7e-2f90d3748d88
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b6a0b19487551e7f132ea921eacdbcdb051104f9
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: b2bcc37446fe5b627ec789bc04461ea643e30575
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72912057"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77578484"
 ---
 # <a name="rc-task"></a>RC 任务
 包装 Microsoft Windows 资源编译器工具 rc.exe  。 RC  任务将游标、图标、位图、对话框和字体等资源编译为一个资源 (.res  ) 文件。 有关详细信息，请参阅[资源编译器](/windows/desktop/menurc/resource-compiler)。
@@ -35,7 +35,7 @@ ms.locfileid: "72912057"
 ## <a name="parameters"></a>参数
  下表描述了 RC 任务的参数。 大多数任务参数和若干组参数都对应于命令行选项。
 
-|参数|说明|
+|参数|描述|
 |---------------|-----------------|
 |**AdditionalIncludeDirectories**|可选 **String []** 参数。<br /><br /> 将目录添加到在其中搜索包含文件的目录列表中。<br /><br /> 有关详细信息，请参阅[使用 RC（RC 命令行）](/windows/win32/menurc/using-rc-the-rc-command-line-)中的 /I  选项。|
 |**AdditionalOptions**|可选 **String** 参数。<br /><br /> 命令行选项列表，例如，/\<option1> /\<option2> /\<option#>。 使用此参数可指定未由任何其他 RC  任务参数表示的命令行选项。<br /><br /> 有关详细信息，请参阅[使用 RC（RC 命令行）](/windows/win32/menurc/using-rc-the-rc-command-line-)中的选项。|

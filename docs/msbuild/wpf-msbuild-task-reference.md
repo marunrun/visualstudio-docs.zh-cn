@@ -13,17 +13,17 @@ helpviewer_keywords:
 - build tasks using the Microsoft build engine [WPF MSBuild], compile markup and process resources
 - WPF MSBuild task reference [WPF MSBuild]
 ms.assetid: 96df0370-e50f-4ffc-9771-b12fb8721143
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 121c3da6d3e2609c1a271177e089e0f38a0d89fe
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 84aeae06a5440bfc82eb9590919800ebcdd425d5
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62778277"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77578186"
 ---
 # <a name="wpf-msbuild-task-reference"></a>WPF MSBuild 任务参考
 Windows Presentation Foundation (WPF) 生成进程通过另一组生成任务扩展 Microsoft 生成引擎 (MSBuild)，这些任务包括编译标记和进程资源的任务。
@@ -55,7 +55,7 @@ Windows Presentation Foundation (WPF) 生成进程通过另一组生成任务扩
 
 - [ResourcesGenerator](../msbuild/resourcesgenerator-task.md)
 
- 将一个或多个资源（二进制格式的 .jpg、.ico、.bmp、[!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] 以及其他扩展名类型）嵌入 .resources 文件中。
+ 将一个或多个资源（二进制格式的 .jpg  、.ico  、.bmp  、[!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] 以及其他扩展名类型）嵌入 .resources  文件中。
 
 - [UidManager](../msbuild/uidmanager-task.md)
 
@@ -63,7 +63,7 @@ Windows Presentation Foundation (WPF) 生成进程通过另一组生成任务扩
 
 - [UpdateManifestForBrowserApplication](../msbuild/updatemanifestforbrowserapplication-task.md)
 
- 生成 [!INCLUDE[TLA#tla_xbap](../msbuild/includes/tlasharptla_xbap_md.md)] 项目时，将\<hostInBrowser /> 元素添加到应用程序清单中 (\<projectname>.exe.manifest)。
+ 生成 [!INCLUDE[TLA#tla_xbap](../msbuild/includes/tlasharptla_xbap_md.md)] 项目时，将\<hostInBrowser />  元素添加到应用程序清单中 (\<projectname>.exe.manifest  )。
 
 ## <a name="see-also"></a>请参阅
 - [MSBuild](../msbuild/msbuild.md)

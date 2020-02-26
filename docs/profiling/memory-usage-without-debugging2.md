@@ -13,22 +13,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 56ecf4cb1d777362daf381646094c20f82f30f85
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: eaf853cd19a44af4cb8510fde11da95bfa7de5c1
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72910343"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77578344"
 ---
 # <a name="analyze-memory-usage-without-the-debugger"></a>分析不调试的内存使用情况
 
 “内存使用情况”工具监视应用的内存使用情况  。 可以使用该工具来研究在 Visual Studio 中正在积极开发的场景的实时内存效果。 可以获取应用内存状态的详细情况快照，并比较快照以找出内存问题的根本原因。
 
 “内存使用情况”工具在带或不带调试器的情况下都可以运行  。 以下说明介绍如何在 Visual Studio“性能探查器”中使用不带调试器的“内存使用情况”工具   。
-
->[!NOTE]
->- 要测量 .NET Core 应用的内存使用情况，必须将“内存使用情况”工具与调试器一起使用  。 有关说明，请参阅 [Visual Studio 中的配置文件内存使用情况](memory-usage.md)。
->- 要分析 JavaScript 或 HTML UWP 应用中的内存使用情况，请使用性能探查器中的 [JavaScript 内存](../profiling/javascript-memory.md)工具  。
 
 ## <a name="memory-usage-diagnostic-sessions"></a>内存使用情况诊断会话
 

@@ -11,17 +11,17 @@ helpviewer_keywords:
 - MSBuild, GenerateTrustInfo task
 - GenerateTrustInfo task [MSBuild]
 ms.assetid: 3ca60816-4bb0-4fef-ae43-ca0bfb63def3
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9eda4e54c67a9e9e80b4fd8f59266bc4bc5f27a4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 5b9c32681af56595f8b00feab4979a3ec45f1588
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62577458"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77578688"
 ---
 # <a name="generatetrustinfo-task"></a>GenerateTrustInfo 任务
 从基本清单以及从 `TargetZone` 和 `ExcludedPermissions` 属性生成应用程序信任。
@@ -29,7 +29,7 @@ ms.locfileid: "62577458"
 ## <a name="parameters"></a>参数
  下表描述了 `GenerateTrustInfo` 任务的参数。
 
-|参数|说明|
+|参数|描述|
 |---------------|-----------------|
 |`ApplicationDependencies`|可选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 指定依赖项程序集。|
 |`BaseManifest`|可选 <xref:Microsoft.Build.Framework.ITaskItem> 参数。<br /><br /> 指定要从中生成应用程序信任的基本清单。|

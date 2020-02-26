@@ -18,12 +18,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 80c4af137edc80166d6a652c676d5607d8c2328d
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: cabbf36adb5019543b3cfb72b0b0e56976517d2d
+ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75595522"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77557931"
 ---
 # <a name="lcid-devenvexe"></a>/LCID (devenv.exe)
 
@@ -53,13 +53,18 @@ devenv {/LCID|/L} LocaleID
 |--------------|----------|
 |中文（简体）|2052|
 |和 SharePoint 2010 显示的“中文(繁体)”|1028|
+|捷克语|1029|
 |英语|2052|
 |法语|1036|
 |德语|1031|
 |意大利语|1040|
 |日语|1041|
 |朝鲜语|1042|
+|波兰语|1045|
+|葡萄牙语（巴西）|1046|
+|俄语|1049|
 |西班牙语|3082|
+|土耳其语|1055
 
 ## <a name="example"></a>示例
 

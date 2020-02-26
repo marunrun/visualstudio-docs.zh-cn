@@ -9,17 +9,17 @@ ms.topic: conceptual
 dev_langs:
 - VB
 ms.assetid: f84339c7-d617-4f56-bfcd-af2215c347ba
-author: TerryGLee
-ms.author: tglee
+author: ornellaalt
+ms.author: ornella
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4108298eb095cf31e5f5f7089cbc7cd8780e8977
-ms.sourcegitcommit: 78e2637e4fbfadd4509b55276816b64f5c24c606
+ms.openlocfilehash: d850f709921120fcb85f78f46eb0307d29801d11
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70864740"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77579949"
 ---
 # <a name="tutorial-create-a-simple-application-with-visual-basic"></a>教程：使用 Visual Basic 创建简单应用
 
@@ -63,11 +63,11 @@ ms.locfileid: "70864740"
 
 ::: moniker range="vs-2017"
 
-1. 创建新项目。 在菜单栏上，依次选择“文件” > “新建” > “项目”    。
+1. 创建新项目。 在菜单栏中，选择“文件” > “新建” > “项目”    。
 
      ![在菜单栏上，依次选择“文件”、“新建”和“项目”](../media/exploreide-filenewproject.png)
 
-2. 在“新项目”  对话框中，依次选择“已安装”   > “Visual Basic”   > “Windows 桌面”  类别和“WPF 应用(.NET Framework)”  模板。 将项目命名为“HelloWPFApp”  并选择“确定”  。
+2. 在“新建项目”对话框中，选择“已安装” > “Visual Basic” > “Windows 桌面”类别，然后选择“WPF 应用(.NET Framework)”模板      。 将项目命名为“HelloWPFApp”  并选择“确定”  。
 
      ![Visual Studio“新建项目”对话框中的 WPF 应用模板](media/exploreide-newproject-vb.png)
 
