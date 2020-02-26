@@ -1,8 +1,8 @@
 ---
-title: 分析 CPU 使用情况数据 (ASP.NET)
-description: 使用 CPU 使用情况诊断工具衡量 ASP.NET 应用中的应用性能
+title: 分析 CPU 使用情况数据 (ASP.NET Core)
+description: 使用 CPU 使用情况诊断工具衡量 ASP.NET Core 应用中的应用性能
 ms.custom: mvc
-ms.date: 08/06/2018
+ms.date: 02/14/2020
 ms.topic: quickstart
 helpviewer_keywords:
 - Profiling Tools, quick start
@@ -12,14 +12,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - aspnet
-ms.openlocfilehash: cbaaa53fe737761fdd938b7861c371e8e5619acc
-ms.sourcegitcommit: 53bc4c11b82882ab658e34c65ae374060f823531
+ms.openlocfilehash: 367d789513e8ac220566cb4e451bcea015ec5a2a
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71128163"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77275080"
 ---
-# <a name="quickstart-analyze-cpu-usage-data-in-visual-studio-aspnet"></a>快速入门：在 Visual Studio 中分析 CPU 使用率数据 (ASP.NET)
+# <a name="quickstart-analyze-cpu-usage-data-in-visual-studio-aspnet-core"></a>快速入门：在 Visual Studio 中分析 CPU 使用率数据 (ASP.NET Core)
 
 Visual Studio 提供了许多强大的功能来帮助你分析应用程序中的性能问题。 本主题提供了一种快速了解部分基本功能的方法。 此处，我们将了解用来确定由于 CPU 使用率高而导致性能瓶颈的工具。 Visual Studio 中的 .NET 开发（包括 ASP.NET、和本机 /C++ 开发）支持此诊断工具。
 
@@ -29,17 +29,37 @@ Visual Studio 提供了许多强大的功能来帮助你分析应用程序中的
 
 ## <a name="create-a-project"></a>创建项目
 
-1. 在 Visual Studio 中，依次选择“文件”   > “新建项目”  。
+1. 打开 Visual Studio 并创建项目。
 
-1. 在“Visual C#”  下，选择“Web”  ，然后在中间窗格中选择“ASP.NET Web 应用程序(.NET Framework)”  。
+   ::: moniker range="vs-2017"
+   从顶部菜单栏中选择“文件”>“新建”>“项目”    。
 
-    如果没有看到“ASP.NET Web 应用程序”项目模板，请单击“新建项目”对话框左侧窗格中的“打开 Visual Studio 安装程序”链接    。 Visual Studio 安装程序启动。 选择“ASP.NET 和 web 开发”工作负载，然后选择“修改”   。
+   在“新建项目”对话框的左窗格中，展开“Visual C#”，然后选择“Web”    。 在中间窗格中，选择“ASP.NET Web 应用程序(.NET Core)”  。 然后将该项目命名为 MyProfilingApp_MVC  。
 
-1. 键入名称（例如 MyProfilingApp_MVC  ），单击“确定”  。
+   > [!NOTE]
+   > 如果没有看到“ASP.NET Web 应用程序(.NET Core)”项目模板，请选择“新建项目”对话框左侧窗格中的“打开 Visual Studio 安装程序”链接    。 Visual Studio 安装程序启动。 选择“ASP.NET 和 Web 开发”工作负载，然后选择“修改”   。
 
-1. 在显示的对话框中，选择中间窗格中的“MVC”  ，然后单击“确定”  。
+   在显示的对话框中，选择中间窗格中的“MVC”  ，然后单击“确定”  。
+   ::: moniker-end
+   ::: moniker range="vs-2019"
+   如果开始窗口未打开，请选择“文件”>“开始窗口”   。
 
-    Visual Studio 随即创建项目。 解决方案资源管理器（右窗格）显示项目文件。
+   在“开始”窗口上，选择“创建新项目”  。
+
+   在“创建新项目”窗口中，在搜索框中输入或键入“asp.net”   。 接下来，从“语言”列表中选择 C#，然后从“平台”列表中选择 Windows   。
+
+   应用语言和平台筛选器之后，选择“ASP.NET Web 应用程序(.NET Core)”模板，然后选择“下一步”   。
+
+   > [!NOTE]
+   > 如果未看到“ASP.NET Web 应用程序(.NET Core)”模板，则可以从“创建新项目”窗口安装该模板   。 在“找不到所需内容?”消息中，选择“安装更多工具和功能”链接   。 然后，在 Visual Studio 安装程序中，选择“ASP.NET 和 Web 开发”工作负载  。
+
+   在“配置新项目”窗口中，在“项目名称”框中键入或输入“MyProfilingApp_MVC”    。 然后，选择“创建”  。
+
+   在出现的窗口中，选择“Web 应用程序(模型-视图-控制器)”，然后选择“创建”   。
+
+   ::: moniker-end
+
+   此时，Visual Studio 将打开新项目。
 
 1. 在解决方案资源管理器中右键单击“模型”文件夹，然后选择“添加”   > “类”  。
 
@@ -131,6 +151,8 @@ Visual Studio 提供了许多强大的功能来帮助你分析应用程序中的
 
 1. 在“解决方案资源管理器”中，打开“Controller/HomeControllers.cs”  ，并将以下代码：
 
+   ::: moniker range="vs-2017"
+
     ```csharp
     public ActionResult About()
     {
@@ -153,6 +175,30 @@ Visual Studio 提供了许多强大的功能来帮助你分析应用程序中的
     }
     ```
 
+    ::: moniker-end
+    ::: moniker range="vs-2019"
+
+    ```csharp
+    public IActionResult Privacy()
+    {
+        return View();
+    }
+    ```
+
+    替换为此代码：
+
+    ```csharp
+    public IActionResult Privacy()
+    {
+        Models.Simple s = new Models.Simple();
+
+        return View(s.GetData());
+    }
+    ```
+
+    ::: moniker-end
+
+
 ## <a name="step-1-collect-profiling-data"></a>步骤 1：收集分析数据
 
 1. 首先，在应用中在 `Simple` 构造函数的该代码行处设置一个断点：
@@ -172,7 +218,14 @@ Visual Studio 提供了许多强大的功能来帮助你分析应用程序中的
 
 1. 依次单击“调试”   > “启动调试”  或单击工具栏上的“启动”  或按 F5  。
 
-1. 应用加载完成后，单击网页顶部的“关于”  链接，开始运行新代码。
+1. 应用加载完成后，单击网页顶部的适当链接，开始运行新代码。
+
+   ::: moniker range="vs-2017"
+   在 Visual Studio 2017 中，单击“关于”链接以运行代码  。
+   ::: moniker-end
+   ::: moniker range="vs-2019"
+   在 Visual Studio 2019 中，单击“隐私”链接以运行代码  。
+   ::: moniker-end
 
 1. 查看显示的诊断工具的“摘要”  视图。
 

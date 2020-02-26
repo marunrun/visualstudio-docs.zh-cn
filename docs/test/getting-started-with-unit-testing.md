@@ -1,6 +1,6 @@
 ---
 title: 单元测试入门
-ms.date: 04/01/2019
+ms.date: 02/13/2020
 ms.topic: conceptual
 helpviewer_keywords:
 - unit testing, create unit test plans
@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 72ab0a6664740f2d772d79f9c77fddfbc12fb82f
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 7ffbc5c6730fb4ca4d2f39732ad2a595de15bbf2
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75596471"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77279329"
 ---
 # <a name="get-started-with-unit-testing"></a>单元测试入门
 
@@ -26,16 +26,18 @@ ms.locfileid: "75596471"
 
 1. 在 Visual Studio 中，打开要测试的项目。
 
-   为了演示示例单元测试，本文测试了简单的“Hello World”项目。 此类项目的示例代码如下所示：
+   为了演示示例单元测试，本文测试了简单的“Hello World”项目（名为“HelloWorldCore”）  。 此类项目的示例代码如下所示：
 
    ```csharp
-   public class Program
-   {
-       public static void Main()
-       {
-           Console.WriteLine("Hello World!");
-       }
-   }
+   namespace HelloWorldCore
+
+      public class Program
+      {
+         public static void Main()
+         {
+            Console.WriteLine("Hello World!");
+         }
+      }
    ```
 
 1. 在“解决方案资源管理器”中，选择解决方案节点  。 然后，在顶部菜单栏中，选择“文件” > “添加” > “新项目”    。
@@ -70,14 +72,48 @@ ms.locfileid: "75596471"
 
 1. 向单元测试方法添加代码。
 
-   ![在 Visual Studio 中向单元测试方法添加代码](media/vs-2019/unit-test-method.png)
+   例如，对于 MSTest 或 NUnit 测试项目，可以使用以下代码。
+
+   ```csharp
+   using Microsoft.VisualStudio.TestTools.UnitTesting;
+   using System.IO;
+   using System;
+
+   namespace HelloWorldTests
+   {
+      [TestClass]
+      public class UnitTest1
+      {
+         private const string Expected = "Hello World!";
+         [TestMethod]
+         public void TestMethod1()
+         {
+            using (var sw = new StringWriter())
+            {
+               Console.SetOut(sw);
+               HelloWorldCore.Program.Main();
+
+               var result = sw.ToString().Trim();
+               Assert.AreEqual(Expected, result);
+            }
+         }
+      }
+   }
+   ```
 
 > [!TIP]
 > 有关创建单元测试的更详细演练，请参阅[创建并运行托管代码的单元测试](walkthrough-creating-and-running-unit-tests-for-managed-code.md)。
 
 ## <a name="run-unit-tests"></a>运行单元测试
 
-1. 在顶部菜单栏中选择“测试” > “Windows” > “测试资源管理器”，打开[测试资源管理器](../test/run-unit-tests-with-test-explorer.md)    。
+1. 打开[“测试资源管理器”](../test/run-unit-tests-with-test-explorer.md)。
+
+   ::: moniker range=">=vs-2019"
+   若要打开测试资源管理器，请选择顶部菜单栏中的“测试”>“测试资源管理器”   。
+   ::: moniker-end
+   ::: moniker range="vs-2017"
+   若要打开测试资源管理器，请选择顶部菜单栏中的“测试”>“Windows”>“测试资源管理器”    。
+   ::: moniker-end
 
 1. 单击“全部运行”，运行单元测试  。
 

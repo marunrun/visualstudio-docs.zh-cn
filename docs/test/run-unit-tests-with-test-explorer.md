@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c2a0b9a69d035db5b1d2d638d97995613b50def0
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 1b183c1939ed48351bc15dacff31c85af46286ad
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75585439"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77278519"
 ---
 # <a name="run-unit-tests-with-test-explorer"></a>使用测试资源管理器运行单元测试
 
@@ -311,7 +311,7 @@ FilterName:"Criteria" -FilterName:"SubsetCriteria"
 
 ### <a name="diagnose-test-method-performance-issues"></a>诊断测试方法性能问题
 
-若要诊断测试方法为何花费过多时间，请在测试资源管理器中依次选择方法和右键单击菜单中的“配置文件选定测试”  。 请参阅[性能资源管理器](../profiling/performance-explorer.md)。
+若要诊断测试方法为何花费过多时间，请在测试资源管理器中依次选择方法和右键单击菜单中的“配置文件选定测试”  。 请参阅[检测分析报告](../profiling/understanding-instrumentation-data-values.md?view=vs-2017)。
 
 ### <a name="analyze-unit-test-code-coverage"></a>分析单元测试代码覆盖率
 

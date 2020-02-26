@@ -3,17 +3,17 @@ title: 如何使用适用于 C++ 的 Google Test
 description: 使用 Google Test 在 Visual Studio 中创建 C++ 单元测试。
 ms.date: 05/06/2017
 ms.topic: conceptual
-ms.author: mblome
+ms.author: corob
 manager: markl
 ms.workload:
 - cplusplus
-author: mikeblome
-ms.openlocfilehash: 73f62e8b74864af0292a9cc3ab1eb325d679d2ea
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+author: corob-msft
+ms.openlocfilehash: 31078b060c94f3253232d22681a1a5dae47e03b6
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68926755"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77279306"
 ---
 # <a name="how-to-use-google-test-for-c-in-visual-studio"></a>如何在 Visual Studio 中使用适用于 C++ 的 Google Test
 

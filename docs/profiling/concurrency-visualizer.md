@@ -15,18 +15,19 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 913984bcc5f9546589421d66d95b6bfb2740b870
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: d3b4e151db08ad5490ed6238223d553f9e76aa0f
+ms.sourcegitcommit: 41f4f55af0176bed1ed949426929d4bdb53105a7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72912031"
+ms.lasthandoff: 02/13/2020
+ms.locfileid: "77192398"
 ---
 # <a name="concurrency-visualizer"></a>并发可视化工具
 
 > [!NOTE]
 > 对于 Visual Studio，并发可视化工具是可选扩展。 从以下链接下载并发可视化工具和并发可视化工具收集工具：
 >
+> - 下载 [Visual Studio 2019 的并发可视化工具](https://marketplace.visualstudio.com/items?itemName=Diagnostics.DiagnosticsConcurrencyVisualizer2019#overview)扩展。
 > - 下载 [Visual Studio 2017 的并发可视化工具](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.ConcurrencyVisualizer2017#overview)扩展。
 > - 下载 [Visual Studio 2015 的并发可视化工具](https://marketplace.visualstudio.com/items?itemName=Diagnostics.ConcurrencyVisualizerforVisualStudio2015)扩展。
 > - 下载 [Visual Studio 2015 的并发可视化工具收集工具](https://www.microsoft.com/download/details.aspx?id=49103)。
@@ -42,7 +43,7 @@ ms.locfileid: "72912031"
 
 ## <a name="related-topics"></a>相关主题
 
-|Title|说明|
+|Title|描述|
 |-----------|-----------------|
 |[使用率视图](../profiling/utilization-view.md)|介绍如何在所有处理器中查看和分析系统活动。|
 |[线程视图](../profiling/threads-view-parallel-performance.md)|介绍如何分析程序中线程之间的交互。|

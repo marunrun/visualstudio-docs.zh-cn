@@ -6,12 +6,12 @@ manager: lank
 ms.date: 11/18/2019
 ms.topic: conceptual
 description: 了解有关所选的 Visual Studio 订阅中随附的 Pluralsight 培训订阅。
-ms.openlocfilehash: 2e57d3b1ede0320cdf0766e3b4ab64d67b16b808
-ms.sourcegitcommit: 49ebf69986713e440fd138fb949f1c0f47223f23
+ms.openlocfilehash: f76db59053451ca58890ec055295758add482725
+ms.sourcegitcommit: 41f4f55af0176bed1ed949426929d4bdb53105a7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74707004"
+ms.lasthandoff: 02/13/2020
+ms.locfileid: "77192411"
 ---
 # <a name="pluralsight-training-benefits-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 Pluralsight 培训权益
 
@@ -60,18 +60,18 @@ ms.locfileid: "74707004"
 |          带有 GitHub Enterprise 的 Visual Studio Enterprise          | VL  |   6 个月    | Yes<sup>2</sup> |
 |         Visual Studio Professional（标准）          | VL、Azure、零售 |   3 个月    | Yes<sup>2</sup> |
 |         带有 GitHub Enterprise 的 Visual Studio Professional          | VL  |   3 个月    | Yes<sup>2</sup> |
-|              Visual Studio Test Professional（标准）              |    VL、零售     |   3 个月    | Yes<sup>2</sup>  |
-|                      MSDN 平台（标准）                       |    VL、零售     |   3 个月    | Yes<sup>2</sup>  |
+|              Visual Studio Test Professional（标准）              |    VL、零售     |   不可用    | NA  |
+|                      MSDN 平台（标准）                       |    VL、零售     |   不可用    | NA  |
 | Visual Studio Enterprise、Visual Studio Professional（月度云） |       Azure       | 不可用 |       NA       |
 |             Visual Studio Enterprise (NFR<sup>1</sup> )              |      计划      | 不可用 |       NA       |
 ||
 
-<sup>1</sup>  包括：不得转售 (NFR)、Visual Studio 行业合作伙伴 (VSIP)、BizSpark、MCT 软件和服务开发人员、MCT 软件和服务、最有价值专家 (MVP)、区域总监 (RD)、Microsoft 合作伙伴网络 (MPN)、FTE、Imagine。  
+<sup>1</sup>  *包括：不得转售 (NFR)、Visual Studio 行业合作伙伴 (VSIP)、BizSpark、MCT 软件和服务开发人员、MCT 软件和服务、最有价值专家 (MVP)、区域总监 (RD)、Microsoft 合作伙伴网络 (MPN)、FTE、Imagine。  
 
 <sup>2</sup>  所选 Visual Studio 订阅中的 Pluralsight 权益随订阅一同续订。例如，如果你的年度订阅是每年续订一次，当你续订时也会获得每一年的权益。如果是多年订阅，你在订阅期间可获得 Pluralsight 权益。如果续订多年订阅，在续订后将再次获得该权益。  
 
 > [!NOTE]
-> Microsoft 不再在云订阅中提供 Visual Studio Professional 年度订阅和 Visual Studio Enterprise 年度订阅。 现有客户体验以及续订、增加、减少或取消订阅的能力不会发生变化。 我们鼓励新客户访问 [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) 以浏览购买 Visual Studio 的不同选项。
+> Microsoft 不再在云订阅中提供 Visual Studio Professional 年度订阅和 Visual Studio Enterprise 年度订阅。 现有客户体验以及续订、增加、减少或取消订阅的能力不会发生变化。 建议新客户访问 [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/)，查看各 Visual Studio 购买选项。
 
 无法确定正在使用哪些订阅？  连接到 [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs)，查看分配给电子邮件地址的所有订阅。 如果没有看到所有订阅，则可能是有一个或多个订阅分配给了不同的电子邮件地址。  你需要使用其他电子邮件地址登录来查看那些订阅。
 

@@ -2,7 +2,7 @@
 title: 分析 CPU 使用情况数据（C#、Visual Basic）
 description: 使用 CPU 使用情况诊断工具衡量 C++ 和 Visual Basic 中的应用性能
 ms.custom: mvc
-ms.date: 08/06/2018
+ms.date: 02/14/2020
 ms.topic: quickstart
 helpviewer_keywords:
 - Profiling Tools, quick start
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7d13a97c3fb228cb72040313c98b70e14fc44099
-ms.sourcegitcommit: 53bc4c11b82882ab658e34c65ae374060f823531
+ms.openlocfilehash: 92287c052282553a33222deb548609101d839291
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71128199"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77278677"
 ---
 # <a name="quickstart-analyze-cpu-usage-data-in-visual-studio-c-visual-basic"></a>快速入门：在 Visual Studio 中分析 CPU 使用情况数据（C#、Visual Basic）
 
@@ -29,15 +29,32 @@ Visual Studio 提供了许多强大的功能来帮助你分析应用程序中的
 
 ## <a name="create-a-project"></a>创建项目
 
-1. 在 Visual Studio 中，依次选择“文件”   > “新建项目”  。
+1. 打开 Visual Studio 并创建项目。
 
-2. 在“Visual C#”或“Visual Basic”下，选择“Windows 桌面”，然后在中间窗格中选择“控制台应用(.NET Framework)”     。
+   ::: moniker range="vs-2017"
+   从顶部菜单栏中选择“文件”>“新建”>“项目”    。
 
-    如果没有看到“控制台应用”项目模板，请单击“新建项目”对话框左侧窗格中的“打开 Visual Studio 安装程序”链接    。 Visual Studio 安装程序启动。 选择“.NET 桌面开发”工作负载，然后选择“修改”   。
+   在“新建项目”对话框左侧的窗格中，展开“C#”或“Visual Basic”，然后选择“.NET Core”     。 在中间窗格中，选择“控制台应用(.NET Core)”  。 然后将该项目命名为 MyProfilerApp  。
 
-3. 键入名称（例如 MyProfilerApp  ），单击“确定”  。
+   如果看不到“控制台应用(.NET Core)”  项目模板，请选择“新建项目”  对话框左侧窗格中的“打开 Visual Studio 安装程序”  链接。 Visual Studio 安装程序启动。 选择“.NET Core 跨平台开发”工作负载，然后选择“修改”   。
+   ::: moniker-end
+   ::: moniker range="vs-2019"
+   如果开始窗口未打开，请选择“文件”>“开始窗口”   。
 
-    Visual Studio 随即创建项目。
+   在“开始”窗口上，选择“创建新项目”  。
+
+   在“创建新项目”窗口的搜索框中输入或键入“控制台”   。 接下来，从“语言”列表中选择“C#”或“Visual Basic”，然后从“平台”列表中选择“Windows”    。
+
+   应用语言和平台筛选器之后，选择“控制台应用(.NET Core)”模板，然后选择“下一步”   。
+
+   > [!NOTE]
+   > 如果未看到“控制台应用(.NET Core)”模板，则可以通过“创建新项目”窗口安装该模板   。 在“找不到所需内容?”消息中，选择“安装更多工具和功能”链接   。 然后，在 Visual Studio 安装程序中，选择“.NET Core 跨平台开发”工作负载  。
+
+   在“配置新项目”窗口中，在“项目名称”框中键入或输入“MyProfilerApp”    。 然后，选择“创建”  。
+
+   ::: moniker-end
+
+   此时，Visual Studio 将打开新项目。
 
 2. 打开“Program.cs”  并将所有代码替换为以下代码：
 
@@ -209,7 +226,7 @@ Visual Studio 提供了许多强大的功能来帮助你分析应用程序中的
 
 1. 在函数列表中，检查执行大部分工作的函数。
 
-     ![诊断工具“ CPU 使用率”选项卡](../profiling/media/quickstart-cpu-usage-cpu.png "DiagToolsCPUUsageTab")
+     ![诊断工具“CPU 使用率”选项卡](../profiling/media/quickstart-cpu-usage-cpu.png "DiagToolsCPUUsageTab")
 
     > [!TIP]
     > 函数将按执行工作量从多到少排列（不按调用顺序）。 这有助于快速标识运行时间最长的函数。
@@ -218,7 +235,7 @@ Visual Studio 提供了许多强大的功能来帮助你分析应用程序中的
 
     双击该函数时，将在左侧窗格中打开“调用方/被调用方”  视图。
 
-    ![诊断工具调用方和被调用方视图](../profiling/media/quickstart-cpu-usage-caller-callee.png "DiagToolsCallerCallee")
+    ![诊断工具“调用方和被调用方”视图](../profiling/media/quickstart-cpu-usage-caller-callee.png "DiagToolsCallerCallee")
 
     在此视图中，所选函数显示在标题和“当前函数”  框中（本例中为 `GetNumber`）。 调用当前函数的函数显示在左侧的“调用函数”  中，当前函数调用的任何函数均显示在右侧的“被调用函数”  框中。 （可选择其中一个框来更改当前函数。）
 

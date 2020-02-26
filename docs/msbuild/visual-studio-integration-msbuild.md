@@ -20,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b1ddb8bdbc913a72791144d5e9d29d206712a3d6
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 9a48725c0877110e969a98deb8c03b3181d31153
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75594417"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77277699"
 ---
 # <a name="visual-studio-integration-msbuild"></a>Visual Studio 集成 (MSBuild)
 Visual Studio 承载有 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]，用以加载和生成托管项目。 由于 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 负责处理项目，因此，可以在 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 中成功使用几乎任何 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 格式的项目（即使项目是用另一种工具编写的，而且这些项目有自定义的生成过程）。
@@ -110,6 +110,9 @@ Condition=" '$(Something)|$(Configuration)|$(SomethingElse)' == 'xxx|Debug|yyy' 
     </IntermediateFile>
 </ItemGroup>
 ```
+
+> [!NOTE]
+> 对于 C++ 项目，“解决方案资源管理器”将忽略 `Visible` 元数据  。 即使 `Visible` 设置为 false，也将始终显示项。
 
  默认情况下，不会显示在导入到项目内的文件中所声明的项。 在生成过程中创建的项永远不会显示在解决方案资源管理器  中。
 

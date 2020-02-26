@@ -17,12 +17,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fe2be648703964328f9d678570137173429d84ed
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.openlocfilehash: 19da163c76724ae56c0e3d83f1ed795333d081d5
+ms.sourcegitcommit: e3b9cbeea282f1b531c6a3f60515ebfe1688aa0e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76115081"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77453390"
 ---
 # <a name="update-visual-studio-to-the-most-recent-release"></a>请将 Visual Studio 更新到最新版本
 
@@ -166,7 +166,7 @@ Visual Studio 自身或安装的任何组件有更新时，以及 Visual Studio 
 
 建议更新到[最新版本](/visualstudio/releases/2019/release-notes/)的 Visual Studio 2019，以便始终获得最新功能、修复和改进。
 
-如果尚未安装 Visual Studio 2019，请转到 [Visual Studio 下载](https://visualstudio.microsoft.com/downloads)页免费安装它。
+如果尚未安装 Visual Studio 2019，请转到 [Visual Studio 下载](https://visualstudio.microsoft.com/downloads)页免费安装。 如果当前使用其他版本的 Visual Studio，可以[并行安装 Visual Studio 版本](../install/install-visual-studio-versions-side-by-side.md)或[卸载以前版本的 Visual Studio](../install/uninstall-visual-studio.md)。
 
 > [!IMPORTANT]
 > 若要安装、更新或修改 Visual Studio，必须使用具有管理权限的帐户登录。 有关详细信息，请参阅[用户权限与 Visual Studio](../ide/user-permissions-and-visual-studio.md)。
