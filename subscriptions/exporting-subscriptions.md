@@ -3,15 +3,15 @@ title: 导出订阅信息 | Microsoft Docs
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 07/24/2019
+ms.date: 02/20/2020
 ms.topic: conceptual
 description: 了解如何导出订阅者列表及其订阅分配的详细信息。
-ms.openlocfilehash: 46e5ae706383d2ed03a289844bc9e6fcc4a01a91
-ms.sourcegitcommit: b5cb0eb09369677514ee1f44d5d7050d34c7fbc1
+ms.openlocfilehash: ddf466e314190b8c91d35aad522da14f4c4af69f
+ms.sourcegitcommit: 3c105990656cd509062ce60e52e776c794f6305d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74491738"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77520847"
 ---
 # <a name="export-subscription-information"></a>导出订阅信息
 在 Visual Studio 订阅[管理门户](https://manage.visualstudio.com)中，可以导出订阅者列表和有关其分配的详细信息。 这些信息包括：订阅者的姓名、电子邮件地址、备用电子邮件地址、订阅级别、分配日期、激活状态、到期日期、引用字段、是否启用下载、国家/地区、语言、订阅状态和订阅 GUID。  此列表将导出为 CSV 文件，并且可以在 Microsoft Excel 中轻松打开，以创建图表、透视图和其他项目。
@@ -36,3 +36,9 @@ ms.locfileid: "74491738"
     - [过度分配](handle-overclaimed-license.md)
     - [最大用量](maximum-usage.md)
 - 在管理订阅方面需要帮助？  联系 [Visual Studio 管理和订阅支持](https://visualstudio.microsoft.com/support/support-overview-vs)。
+
+## <a name="see-also"></a>请参阅
+- [Visual Studio 文档](https://docs.microsoft.com/visualstudio/)
+- [Azure DevOps 文档](https://docs.microsoft.com/azure/devops/)
+- [Azure 文档](https://docs.microsoft.com/azure/)
+- [Microsoft 365 文档](https://docs.microsoft.com/microsoft-365/)

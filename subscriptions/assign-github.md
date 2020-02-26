@@ -6,12 +6,12 @@ manager: lank
 ms.date: 07/28/2019
 ms.topic: conceptual
 description: 管理 Visual Studio + GitHub Enterprise 套餐中的订阅
-ms.openlocfilehash: 29df2d7c43f934e44b7585e975e0f77328305ba5
-ms.sourcegitcommit: a2df993dc5e11c5131dbfcba686f0028a589068f
+ms.openlocfilehash: 524002b875375c22da67bbf98d98f4ebc149c14b
+ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71150134"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77558149"
 ---
 # <a name="manage-visual-studio-subscriptions-with-github-enterprise"></a>管理带有 GitHub Enterprise 的 Visual Studio 订阅
 与 Microsoft 签订了企业协议 (EA) 的客户有资格购买新的订阅套餐，该套餐将 Visual Studio 标准订阅和 GitHub Enterprise 结合在了一起。 这是 Visual Studio 订阅者获取 GitHub Enterprise 的一种简单而实惠的方式。 
@@ -42,27 +42,27 @@ GitHub 可作为基于云的 GitHub.com 提供，也可提供为本地 GitHub En
 
 ### <a name="githubcom"></a>GitHub.com 
 要详细了解如何管理 GitHub.com，请查看下述有关 [GitHub 帮助](https://help.github.com/en)的主题。
-- [帮助主题的完整列表](https://help.github.com/en)
-- [Managing membership in your organization](https://help.github.com/en/articles/managing-membership-in-your-organization)（管理组织中的成员身份）
-> - [Inviting users to join your organization](https://help.github.com/en/articles/inviting-users-to-join-your-organization)（邀请用户加入你的组织）
-> - [Removing users from teams/organizations](https://help.github.com/en/articles/removing-a-member-from-your-organization)（从团队/组织中删除用户）
-> - [Reinstating a former member of your organization](https://help.github.com/en/articles/reinstating-a-former-member-of-your-organization)（恢复组织前成员的身份）
-- [Managing access using roles](https://help.github.com/en/articles/managing-peoples-access-to-your-organization-with-roles)（通过角色管理访问权限）
-- [Organizing users into teams](https://help.github.com/en/articles/organizing-members-into-teams)（将用户整理到团队中）
-- [Managing access to your organization's repositories](https://help.github.com/en/articles/managing-access-to-your-organizations-repositories)（管理对组织存储库的访问权限）
++ [帮助主题的完整列表](https://help.github.com/en)
++ [Managing membership in your organization](https://help.github.com/en/articles/managing-membership-in-your-organization)（管理组织中的成员身份）
++ [Inviting users to join your organization](https://help.github.com/en/articles/inviting-users-to-join-your-organization)（邀请用户加入你的组织）
+    - [Removing users from teams/organizations](https://help.github.com/en/articles/removing-a-member-from-your-organization)（从团队/组织中删除用户）
+    - [Reinstating a former member of your organization](https://help.github.com/en/articles/reinstating-a-former-member-of-your-organization)（恢复组织前成员的身份）
++ [Managing access using roles](https://help.github.com/en/articles/managing-peoples-access-to-your-organization-with-roles)（通过角色管理访问权限）
++ [Organizing users into teams](https://help.github.com/en/articles/organizing-members-into-teams)（将用户整理到团队中）
++ [Managing access to your organization's repositories](https://help.github.com/en/articles/managing-access-to-your-organizations-repositories)（管理对组织存储库的访问权限）
 
 ### <a name="github-enterprise-server"></a>GitHub Enterprise Server
 GitHub 帮助中提供了大量管理员指南来解答相关问题，还提供了相关提示帮你管理组织对 GitHub Enterprise Server 的实现。
 
-- [查看所有管理员指南](https://help.github.com/en/enterprise/2.16/admin)
-- [用户管理](https://help.github.com/en/enterprise/2.16/admin/user-management)
-> - [Organizations and teams](https://help.github.com/en/enterprise/2.16/admin/user-management/organizations-and-teams)（组织和团队）
-> > - [Creating organizations](https://help.github.com/en/enterprise/2.16/admin/user-management/creating-organizations)（创建组织）
-> > - [Creating teams](https://help.github.com/en/enterprise/2.16/admin/user-management/creating-teams)（创建团队）
-> > - [Adding people to teams](https://help.github.com/en/enterprise/2.16/admin/user-management/adding-people-to-teams)（将用户添加到团队）
-> > - [Removing people from teams and organizations](https://help.github.com/en/enterprise/2.16/admin/user-management/removing-users-from-teams-and-organizations)（从团队和组织中删除用户）
-> - [User security](https://help.github.com/en/enterprise/2.16/admin/user-management/user-security)（用户安全性）
-- [Installing and configuring GitHub Enterprise Server](https://help.github.com/en/enterprise/2.16/admin/installation)（安装和配置 GitHub Enterprise Server）
++ [查看所有管理员指南](https://help.github.com/en/enterprise/2.16/admin)
++ [用户管理](https://help.github.com/en/enterprise/2.16/admin/user-management)
+    - [Organizations and teams](https://help.github.com/en/enterprise/2.16/admin/user-management/organizations-and-teams)（组织和团队）
+        - [Creating organizations](https://help.github.com/en/enterprise/2.16/admin/user-management/creating-organizations)（创建组织）
+        - [Creating teams](https://help.github.com/en/enterprise/2.16/admin/user-management/creating-teams)（创建团队）
+        - [Adding people to teams](https://help.github.com/en/enterprise/2.16/admin/user-management/adding-people-to-teams)（将用户添加到团队）
+        - [Removing people from teams and organizations](https://help.github.com/en/enterprise/2.16/admin/user-management/removing-users-from-teams-and-organizations)（从团队和组织中删除用户）
+    - [User security](https://help.github.com/en/enterprise/2.16/admin/user-management/user-security)（用户安全性）
++ [Installing and configuring GitHub Enterprise Server](https://help.github.com/en/enterprise/2.16/admin/installation)（安装和配置 GitHub Enterprise Server）
 
 ## <a name="support-resources"></a>支持资源
 - 有关各种 GitHub 主题的问题解答，可查看 [GitHub 帮助](https://help.github.com/en)。
