@@ -8,17 +8,17 @@ ms.technology: vs-ide-general
 dev_langs:
 - CSharp
 - VB
-author: TerryGLee
-ms.author: tglee
+author: ornellaalt
+ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 615b112c8ad3e35449a1e3a6c2817db9c7699a73
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: a5c23f48e803665e00155d1b546ace4e4ec7bc54
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75589976"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77579790"
 ---
 # <a name="step-6-name-your-button-controls"></a>步骤 6：命名按钮控件
 
@@ -99,7 +99,7 @@ ms.locfileid: "75589976"
 
 ## <a name="next-steps"></a>后续步骤
 
-* 要转到下一个教程步骤，请参阅[步骤 7：向窗体添加对话框组件](../ide/step-7-add-dialog-components-to-your-form.md)  。
+* 要转到下一个教程步骤，请参阅[步骤 7：  向窗体添加对话框组件](../ide/step-7-add-dialog-components-to-your-form.md)。
 
 * 要返回上一个教程步骤，请参阅[步骤 5：向窗体添加控件](../ide/step-5-add-controls-to-your-form.md)。
 
