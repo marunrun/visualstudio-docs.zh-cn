@@ -9,25 +9,25 @@ monikerRange: vs-2019
 ms.topic: tutorial
 ms.devlang: CSharp
 author: ardalis
-ms.author: tglee
+ms.author: ornella
 manager: jillfra
 dev_langs:
 - CSharp
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 2d995818ec5b8ac01c9776bbf2290da39d2cc40b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: dc13dbdadb0c9bca25a816b15c5a99039bff454c
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62970914"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77580028"
 ---
 # <a name="step-5-deploy-your-aspnet-core-app-to-azure"></a>步骤 5：将 ASP.NET Core 应用部署到 Azure
 
 请按照下列步骤将 ASP.NET Core 应用及其数据库部署到 Azure。
 
-观看此视频，按照说明向 Azure 部署首个 ASP.NET Core 应用。
+观看此视频，按照说明向 Azure 部署首个 ASP.NET Core 应用。 
 
 > [!VIDEO https://www.youtube.com/embed/n8wz_f5_4wI]
 
@@ -37,7 +37,7 @@ ms.locfileid: "62970914"
 
 ## <a name="publish-to-azure-app-service"></a>发布到 Azure 应用服务
 
-在“解决方案资源管理器”中右键单击该项目，然后选择“发布”。 保留“应用服务”和“新建”的默认设置，然后单击“发布”按钮。 如果还没有 Azure 帐户，请单击“创建免费 Azure 帐户”并完成简短的注册过程。
+在“解决方案资源管理器”中右键单击该项目，然后选择“发布”  。 保留“应用服务”  和“新建”  的默认设置，然后单击“发布”  按钮。 如果还没有 Azure 帐户，请单击“创建免费 Azure 帐户”  并完成简短的注册过程。
 
 添加 SQL Server。 指定管理员用户名和密码。
 
@@ -45,13 +45,13 @@ ms.locfileid: "62970914"
 
 添加 Application Insights。
 
-单击“创建”按钮以继续。
+单击“创建”  按钮以继续。
 
 ![Visual Studio 2019 创建新的 Azure 应用服务](media/vs-2019/vs2019-azure-create-new-app-service.png)
 
 ## <a name="exploring-the-azure-portal-and-your-hosted-app"></a>浏览 Azure 门户和托管应用
 
-创建应用服务后，将在浏览器中启动网站。 加载网站时，还可以在 Azure 门户中找到应用服务。 浏览应用服务的可用选项，将会发现可在其中启动和停止应用的“概述”部分。
+创建应用服务后，将在浏览器中启动网站。 加载网站时，还可以在 Azure 门户中找到应用服务。 浏览应用服务的可用选项，将会发现可在其中启动和停止应用的“概述”  部分。
 
 ![Azure 应用服务选项](media/vs-2019/vs2019-azure-app-service-menu-options.png)
 
@@ -69,11 +69,11 @@ ms.locfileid: "62970914"
 
 ## <a name="update-connection-string"></a>更新连接字符串
 
-默认情况下，Azure 希望新应用连接到其新的 SQL Server 数据库，以使用名为 `DefaultConnection` 的连接字符串。 目前，我们在本系列教程的前面创建的应用使用名为 `AppDbContext` 的连接字符串。 需要在 appsettings.json 和 Startup.cs 中对此进行更改，然后重新部署应用。
+默认情况下，Azure 希望新应用连接到其新的 SQL Server 数据库，以使用名为 `DefaultConnection` 的连接字符串。 目前，我们在本系列教程的前面创建的应用使用名为 `AppDbContext` 的连接字符串。 需要在 appsettings.json  和 Startup.cs  中对此进行更改，然后重新部署应用。
 
 ## <a name="test-the-app-running-in-azure"></a>测试在 Azure 中运行的应用
 
-导航到 /Games 路径，应能够添加一个新游戏并看到它显示在其中。 接下来，导航到 /swagger 路径，应能够使用其中的 Web API 终结点确认应用的 API 也工作正常。
+导航到 /Games  路径，应能够添加一个新游戏并看到它显示在其中。 接下来，导航到 /swagger  路径，应能够使用其中的 Web API 终结点确认应用的 API 也工作正常。
 
 祝贺你！ 你已经完成本系列视频教程！
 

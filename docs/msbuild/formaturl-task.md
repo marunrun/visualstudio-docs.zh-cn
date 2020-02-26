@@ -11,17 +11,17 @@ helpviewer_keywords:
 - MSBuild, FormatUrl task
 - FormatUrl task [MSBuild]
 ms.assetid: 81114b67-520f-43b5-8891-224f68a78516
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e6c8bc23a843112a234dad0dfc718937bebfe5aa
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c5d5a5d6cbe1f0e39f82d551c8c7933104110f4a
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62931458"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77579652"
 ---
 # <a name="formaturl-task"></a>FormatUrl 任务
 将 URL 转换为正确的 URL 格式。
@@ -29,7 +29,7 @@ ms.locfileid: "62931458"
 ## <a name="parameters"></a>参数
  下表描述了 `FormatUrl` 任务的参数。
 
-|参数|说明|
+|参数|描述|
 |---------------|-----------------|
 |`InputUrl`|可选 `String` 参数。<br /><br /> 指定要格式化的 URL。|
 |`OutputUrl`|可选 `String` 输出参数。<br /><br /> 指定已格式化的 URL。|

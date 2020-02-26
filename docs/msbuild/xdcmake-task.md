@@ -14,17 +14,17 @@ helpviewer_keywords:
 - XDCMake task (MSBuild (C++))
 - MSBuild (C++), XDCMake task
 ms.assetid: a7de9c64-903a-4a02-85f3-f37672270f25
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0b1ae0fbbcdb36c13a8c0ee91011f2b7d6fba9f5
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 797a2f80c4e634b3dcb3b0fa32c46476e32cc334
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72747162"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77578128"
 ---
 # <a name="xdcmake-task"></a>XDCMake 任务
 包装 XML 文档工具 (xdcmake.exe  )，它将 XML 文档注释 (.xdc  ) 文件合并到一个 .xml  文件中。
@@ -37,7 +37,7 @@ ms.locfileid: "72747162"
 ## <a name="parameters"></a>参数
  下表介绍了 **XDCMake** 任务的参数。
 
-|参数|说明|
+|参数|描述|
 |---------------|-----------------|
 |**AdditionalDocumentFile**|可选 **String []** 参数。<br /><br /> 指定还要合并的一个或多个 .xdc  文件。<br /><br /> 有关详细信息，请参阅 [XML 文档生成器工具属性页](/cpp/build/reference/xml-document-generator-tool-property-pages)中的**附加文档文件**说明。 另请参阅 xdcmake.exe  的“/old”  和“/Fs”  命令行选项。|
 |**AdditionalOptions**|可选 **String** 参数。<br /><br /> 在命令行上指定的选项列表。 例如，/\<option1> /\<option2> /\<option#>。 此参数用于指定无法由其他任何 **XDCMake** 任务参数表示的选项。<br /><br /> 有关详细信息，请参阅 [XDCMake 参考](/cpp/build/reference/xdcmake-reference)、[XML 文档生成器工具属性页](/cpp/build/reference/xml-document-generator-tool-property-pages)和 xdcmake.exe  的命令行帮助 (/?  )。|

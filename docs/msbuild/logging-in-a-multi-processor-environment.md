@@ -6,17 +6,17 @@ helpviewer_keywords:
 - MSBuild, multi-processor logging
 - MSBuild, logging
 ms.assetid: dd4dae65-ed04-4883-b48d-59bcb891c4dc
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: efbc02bb536ca8e39454fbbb476460c4cbd51363
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 65f0558e26583961d94ce380b59a60ecca45987b
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62856021"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77578519"
 ---
 # <a name="logging-in-a-multi-processor-environment"></a>多处理器环境下的日志记录
 MSBuild 使用多个处理器的能力可以显著缩短项目生成时间，但同时会增加日志记录的复杂性。 在单处理器环境下，记录器可以用可预测的顺序方式处理传入的事件、消息、警告和错误。 但在多处理器环境下，来自多个源的事件可能同时到达或以无序方式到达。 MSBuild 提供了可以识别多处理器的新记录器，并允许创建自定义“转发记录器”。
@@ -27,7 +27,7 @@ MSBuild 使用多个处理器的能力可以显著缩短项目生成时间，但
 通过创建自定义转发记录器，可以进一步提高日志记录效率。 自定义转发记录器可充当筛选器，生成前你只需选择要监视的事件。 使用自定义转发记录器时，不需要的事件不会严重影响记录器，造成日志混乱或降低生成速度。
 
 ### <a name="central-logging-model"></a>集中式日志记录模型
-对于多处理器生成，MSBuild 使用“集中式日志记录模型”。 在集中式日志记录模型中，MSBuild.exe 的实例充当主生成进程或“中心节点”。 MSBuild.exe 的辅助实例或者“辅助节点”会附加到中心节点。 附加到中心节点的任何基于 ILogger 的记录器均称为“中心记录器”，附加到辅助节点的记录器均称为“辅助记录器”。
+对于多处理器生成，MSBuild 使用“集中式日志记录模型”。 在集中式日志记录模型中，MSBuild.exe 的实例充当主生成进程或“中心节点”  。 MSBuild.exe 的辅助实例或者“辅助节点”会附加到中心节点  。 附加到中心节点的任何基于 ILogger 的记录器均称为“中心记录器”，附加到辅助节点的记录器均称为“辅助记录器”。
 
 进行生成时，辅助记录器会将其事件流量路由到中心记录器。 由于事件来源于多个辅助节点，因此数据会同时但交错地到达中心节点。 为了解析事件到项目和事件到目标的引用，事件参数将包括其他生成事件上下文信息。
 

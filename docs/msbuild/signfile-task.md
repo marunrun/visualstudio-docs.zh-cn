@@ -13,17 +13,17 @@ helpviewer_keywords:
 - MSBuild, SignFile task
 - SignFile task [MSBuild]
 ms.assetid: edef1819-ddeb-4e09-95de-fc7063ba9388
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 496017f386e731e553bfce237bd1d2eabea46f49
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 397366a7dac601cd11dc1c70efc352edf303a92e
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62976455"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77579577"
 ---
 # <a name="signfile-task"></a>SignFile 任务
 
@@ -38,7 +38,7 @@ ms.locfileid: "62976455"
 > [!WARNING]
 > 自 Visual Studio 2013 Update 3 起，此任务有一个新的签名，使你可以指定文件的目标框架版本。 建议尽可能地使用此新签名，因为 MSBuild 过程只在目标框架为 .NET 4.5 或更高版本时使用 SHA-256 哈希。 如果目标框架是 .NET 4.0 或更低版本，将不使用 SHA-256 哈希。
 
-|参数|说明|
+|参数|描述|
 |---------------|-----------------|
 |`CertificateThumbprint`|必选 `String` 参数。<br /><br /> 指定用于签名的证书。 此证书必须在当前用户的个人存储区中。|
 |`SigningTarget`|必选 <xref:Microsoft.Build.Framework.ITaskItem> 参数。<br /><br /> 指定要与证书一起签名的文件。|

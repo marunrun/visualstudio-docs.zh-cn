@@ -7,19 +7,19 @@ ms.technology: vs-ide-general
 ms.prod: visual-studio-windows
 ms.topic: quickstart
 ms.devlang: vb
-author: TerryGLee
-ms.author: tglee
+author: ornellaalt
+ms.author: ornella
 manager: jillfra
 dev_langs:
 - vb
 ms.workload:
 - multiple
-ms.openlocfilehash: c7da73ac3f47b6b63817ff905923b71e3354b06c
-ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
+ms.openlocfilehash: 34f3dc8642e2cf8e965e2ad303bed79931d2645c
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70180083"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77579497"
 ---
 # <a name="quickstart-create-your-first-console-app-in-visual-studio-with-visual-basic"></a>快速入门：使用 Visual Basic 在 Visual Studio 中创建第一个控制台应用
 
@@ -45,7 +45,7 @@ ms.locfileid: "70180083"
 
 1. 打开 Visual Studio 2017。
 
-2. 从顶部菜单栏中选择“文件”  >“新建”  >“项目”  。
+2. 从顶部菜单栏中选择“文件”>“新建”>“项目”    。
 
 3. 在“新建项目”对话框左侧的窗格中，展开“Visual Basic”，然后选择“.NET Core”    。 在中间窗格中，选择“控制台应用(.NET Core)”  。 随后将项目命名为 HelloWorld  。
 

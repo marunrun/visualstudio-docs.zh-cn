@@ -5,17 +5,17 @@ ms.assetid: 9a8fe90e-c97b-4e98-b6c8-0c6b3962c49d
 ms.topic: tutorial
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
-author: TerryGLee
-ms.author: tglee
+author: ornellaalt
+ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9ee63c88bdca5f096fb5fbb8f36be0e2af8fbade
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 8204f2a32a1bb29203c75af55aa383141f17853f
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75588741"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77579413"
 ---
 # <a name="step-2-run-your-picture-viewer-app"></a>步骤 2：运行图片查看器应用
 
@@ -59,7 +59,7 @@ Windows 窗体应用正在运行
 
 ## <a name="next-steps"></a>后续步骤
 
-* 要转到下一个教程步骤，请参阅 **[步骤 3：设置窗体属性](../ide/step-3-set-your-form-properties.md)  。
+* 要转到下一个教程步骤，请参阅 **[步骤 3：设置窗体属性](../ide/step-3-set-your-form-properties.md)** 。
 
 * 若要返回上一个教程步骤，请参阅[步骤 1：创建 Windows 窗体应用项目](../ide/step-1-create-a-windows-forms-application-project.md)。
 

@@ -8,17 +8,17 @@ dev_langs:
 - C++
 - jsharp
 ms.assetid: 178ef49c-5dee-405b-a14b-a37f41dc0609
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e752e345de9211a2b6c8d8fe076be863a04c70ca
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 56e3526f130a8717dec2dafeef794375ceffc37c
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62977135"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77579621"
 ---
 # <a name="getreferenceassemblypaths-task"></a>GetReferenceAssemblyPaths 任务
 返回各种框架的引用程序集路径。
@@ -26,7 +26,7 @@ ms.locfileid: "62977135"
 ## <a name="parameters"></a>参数
  下表描述了 `GetReferenceAssemblyPaths` 任务的参数。
 
-|参数|说明|
+|参数|描述|
 |---------------|-----------------|
 |`ReferenceAssemblyPaths`|可选 `String[]` 输出参数。<br /><br /> 基于 `TargetFrameworkMoniker` 参数返回路径。 如果 `TargetFrameworkMoniker` 为 null 或为空，则此路径将为 `String.Empty`。|
 |`FullFrameworkReferenceAssemblyPaths`|可选 `String[]` 输出参数。<br /><br /> 基于 `TargetFrameworkMoniker` 参数返回路径，无需考虑名字对象的配置文件部分。 如果 `TargetFrameworkMoniker` 为 null 或为空，则此路径将为 `String.Empty`。|

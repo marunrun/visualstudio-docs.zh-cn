@@ -8,20 +8,20 @@ ms.technology: vs-ide-general
 ms.prod: visual-studio-windows
 ms.topic: tutorial
 ms.devlang: CSharp
-author: TerryGLee
-ms.author: tglee
+author: ornellaalt
+ms.author: ornella
 manager: jillfra
 dev_langs:
 - CSharp
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 4c2e9c890b0b676216a02a526cad5380df4ceb57
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: ef41e28d994f27f66f616623d1b2c9798b65ede4
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71252463"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77580060"
 ---
 # <a name="tutorial-get-started-with-c-and-aspnet-core-in-visual-studio"></a>教程：Visual Studio 中的 C# 和 ASP.NET Core 入门
 
@@ -59,7 +59,7 @@ ms.locfileid: "71252463"
 
 1. 打开 Visual Studio 2017。
 
-2. 从顶部菜单栏中选择“文件”  >“新建”  >“项目”  。
+2. 从顶部菜单栏中选择“文件”>“新建”>“项目”    。
 
 3. 在“新建项目”对话框左侧的窗格中，展开“Visual C#”和“Web”，然后选择“.NET Core”     。 在中间窗格中，选择“ASP.NET Core Web 应用程序”  。 然后，将文件命名为 MyCoreApp 并选择“确定”   。
 
