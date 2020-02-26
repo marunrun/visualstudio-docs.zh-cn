@@ -6,12 +6,12 @@ manager: lank
 ms.date: 02/17/2020
 ms.topic: conceptual
 description: 了解管理员管理预生产库存的职责
-ms.openlocfilehash: 0eacd177b0901d866bbb974aca81a0e77cdaf25d
-ms.sourcegitcommit: e3b9cbeea282f1b531c6a3f60515ebfe1688aa0e
+ms.openlocfilehash: 6d7dd3b49c11e94ffa09bc07bd745582f348763d
+ms.sourcegitcommit: 374f5ec9a5fa18a6d4533fa2b797aa211f186755
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/18/2020
-ms.locfileid: "77439110"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77476730"
 ---
 # <a name="inventory-of-pre-production-environment"></a>清点预生产环境
 Visual Studio 订阅对用户而非设备计数，从而简化了资产管理。
@@ -37,7 +37,8 @@ Visual Studio 管理员必须将 Visual Studio 订阅分配给**特定的指定�
 - 使用[最大用量](maximum-usage.md)跟踪购买承诺
 
 ## <a name="see-also"></a>请参阅
-- [Visual Studio 文档](/visualstudio/)
-- [Azure DevOps 文档](/azure/devops/)
-- [Azure 文档](/azure/)
-- [Microsoft 365 文档](/microsoft-365/)
+- [Visual Studio 文档](https://docs.microsoft.com/visualstudio/)
+- [Azure DevOps 文档](https://docs.microsoft.com/azure/devops/)
+- [Azure 文档](https://docs.microsoft.com/azure/)
+- [Microsoft 365 文档](https://docs.microsoft.com/microsoft-365/)
+

@@ -6,12 +6,12 @@ manager: lank
 ms.date: 02/17/2020
 ms.topic: conceptual
 description: 了解如何激活在 Microsoft Store 中购买的 Visual Studio 订阅。
-ms.openlocfilehash: 8df8125280e17eba941e099d8d27b37a19de79b1
-ms.sourcegitcommit: e3b9cbeea282f1b531c6a3f60515ebfe1688aa0e
+ms.openlocfilehash: 2fb3d958206cd3fcd76654b95d5be4b8d8e8a3a4
+ms.sourcegitcommit: 374f5ec9a5fa18a6d4533fa2b797aa211f186755
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/18/2020
-ms.locfileid: "77439148"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77476766"
 ---
 # <a name="how-do-i-activate-a-subscription-acquired-from-the-microsoft-store"></a>如何激活从 Microsoft Store 获取的订阅？
 如果你通过 Microsoft Store 购买了 Visual Studio 订阅，可从付款“确认页”或在购买后收到的“确认电子邮件”中启动激活步骤。
@@ -35,7 +35,8 @@ ms.locfileid: "77439148"
 请访问[权益](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)页，查看订阅中包含的所有工具、服务、培训和支持权益。  建议设置 [Visual Studio](vs-ide-benefit.md) 和 [Azure DevOps](vs-azure-devops.md) 以开始使用。 
 
 ## <a name="see-also"></a>请参阅
-- [Visual Studio 文档](/visualstudio/)
-- [Azure DevOps 文档](/azure/devops/)
-- [Azure 文档](/azure/)
-- [Microsoft 365 文档](/microsoft-365/)
+- [Visual Studio 文档](https://docs.microsoft.com/visualstudio/)
+- [Azure DevOps 文档](https://docs.microsoft.com/azure/devops/)
+- [Azure 文档](https://docs.microsoft.com/azure/)
+- [Microsoft 365 文档](https://docs.microsoft.com/microsoft-365/)
+
