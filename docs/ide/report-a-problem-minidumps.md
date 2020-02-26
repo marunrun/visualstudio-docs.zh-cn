@@ -4,8 +4,8 @@ ms.date: 06/27/2019
 ms.topic: conceptual
 helpviewer_keywords:
 - minidumps for Visual Studio issues"
-author: mikeblome
-ms.author: mblome
+author: corob-msft
+ms.author: corob
 manager: jillfra
 dev_langs:
 - CSharp
@@ -14,12 +14,12 @@ dev_langs:
 ms.workload:
 - multiple
 ms.description: Collect minidumps to send to Microsoft for help with troubleshooting issues with Visual Studio
-ms.openlocfilehash: 7d0580e04968a01dc8e447a9ee35f2b1c5934ccf
-ms.sourcegitcommit: 85d66dc9fea3fa49018263064876b15aeb6f9584
+ms.openlocfilehash: 7b3be91e5d0d2e1f14724dd647670fc4885bcd4d
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68461660"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77271184"
 ---
 # <a name="create-minidumps-for-a-visual-studio-process-with-all-call-stacks"></a>使用所有调用堆栈为 Visual Studio 进程创建小型转储
 
@@ -40,7 +40,7 @@ ms.locfileid: "68461660"
 ## <a name="get-the-call-stacks-from-the-minidump"></a>从小型转储中获取调用堆栈
 
 1. 在 Visual Studio 中打开转储文件。
-1. 转到“工具”   > “选项”   > “调试”   > “符号”  ，确保在“符号文件 (.pdb) 位置”  中勾选“Microsoft 符号服务器”  。
+1. 转到“工具” > “选项” > “调试” > “符号”，确保在“符号文件(.pdb) 位置”中勾选“Microsoft 符号服务器”       。
 1. 打开“命令”  窗口（“视图”   > “其他窗口”   > “命令窗口”  ）
 1. 键入“~*k”。 此窗口会显示所有线程的调用堆栈。
 1. 从命令窗口中复制所有文本并保存到文本文件中。

@@ -9,12 +9,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: b948aa83d5055fdf3d628a84002881eba9c91ac2
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.openlocfilehash: c3f5fe55a4e1afb1a9551d43d0d61ae9f76b81e4
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76112527"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77275434"
 ---
 # <a name="warnings-and-errors"></a>警告和错误
 
@@ -32,7 +32,7 @@ ms.locfileid: "76112527"
 * **约束求解**
   * [无法具体化解决方案](#cannot-concretize-solution)
 
-* **域**
+* **域或运行时**
   * [需要帮助来构造对象](#help-construct)
   * [需要帮助来查找类型](#help-types)
   * [猜测的可用类型](#usable-type-guessed)
@@ -254,7 +254,7 @@ IntelliTest 可针对任何 .NET 类型[生成测试输入](input-generation.md)
 
 IntelliTest 可针对任何 .NET 类型[生成测试输入](input-generation.md)。 当类型为抽象或接口时，IntelliTest 必须选择该类型的特定实现。 若要进行选择，需要知道存在哪些类型。
 
-显示此警告时，表示 IntelliTest 查找了一些引用程序集，并找到了一个实现类型，但不确定是否应使用该类型，或不确定其他位置是否有更合适的类型。 IntelliTest 只是选择了一个看似可行的类型。
+显示此警告，表示 IntelliTest 查找了一些引用程序集，并找到了一个实现类型，但不确定是否应使用该类型，或不确定其他位置是否有更合适的类型。 IntelliTest 只是选择了一个看似可行的类型。
 
 为避免此警告，可接受 IntelliTest 选择的类型，或添加相应的 [PexUseType](attribute-glossary.md#pexusetype) 来帮助 IntelliTest 使用其他类型。
 

@@ -1,7 +1,7 @@
 ---
 title: 容器的已知问题
 description: 详细了解将 Visual Studio 生成工具安装到 Windows 容器时可能会出现的已知问题。
-ms.date: 07/03/2019
+ms.date: 02/18/2020
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: 140083f1-05bc-4014-949e-fb5802397c7a
@@ -12,12 +12,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: a43c5dd9bec88ca7e972b4d681bc25c47a86bf0d
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.openlocfilehash: a864f1ef623197a44c7d816b051efd0106e86ece
+ms.sourcegitcommit: b873fce7ba40d825fcb59555360c002bbfcecd9e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76115214"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77611123"
 ---
 # <a name="known-issues-for-containers"></a>容器的已知问题
 
@@ -54,7 +54,11 @@ ms.locfileid: "76115214"
 
 * 在[某些情况](https://github.com/Microsoft/vstest/issues/940)下，IntelliTrace 在容器内可能无法正常工作。
 * 在用于 Windows 的 Docker 的较旧版本上，默认容器映像大小仅为 20 GB，因此不适用于生成工具。 按照[说明将映像大小更改为](/virtualization/windowscontainers/manage-containers/container-storage#storage-limits) 127 GB 或更多。
-
+若要确认磁盘空间问题，请查看日志文件以了解详细信息。 如果磁盘空间不足，则 `vslogs\dd_setup_<timestamp>_errors.log` 文件将包括以下内容： 
+```
+Pre-check verification: Visual Studio needs at least 91.99 GB of disk space. Try to free up space on C:\ or change your target drive.
+Pre-check verification failed with error(s) :  SizePreCheckEvaluator.
+```
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
 ## <a name="see-also"></a>请参阅

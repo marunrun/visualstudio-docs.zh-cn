@@ -2,17 +2,17 @@
 title: 编写 C++ DLL 单元测试
 ms.date: 05/01/2019
 ms.topic: conceptual
-ms.author: mblome
+ms.author: corob
 manager: markl
 ms.workload:
 - cplusplus
-author: mikeblome
-ms.openlocfilehash: f9f17b129b0d5d85abacb0723b57703db74bcbea
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+author: corob-msft
+ms.openlocfilehash: 856bc21fdee8945ddcd97e3978f46af0008af616
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68926656"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77279269"
 ---
 # <a name="write-unit-tests-for-c-dlls-in-visual-studio"></a>在 Visual Studio 中编写 C/C++ DLL 单元测试
 
@@ -141,7 +141,7 @@ ms.locfileid: "68926656"
 
 1. 在每个单元测试代码文件中，为所测试项目的标头添加 `#include` 语句。
 
-2. 向单元测试代码文件添加测试类和方法。 例如:
+2. 向单元测试代码文件添加测试类和方法。 例如：
 
     ```cpp
     #include "stdafx.h"

@@ -2,32 +2,32 @@
 title: 步骤 4：从 ASP.NET Core 应用中公开 Web API
 description: 通过此视频教程和分步说明将 Web API 添加到 ASP.NET Core Web 应用。
 ms.custom: get-started
-ms.date: 03/31/2019
+ms.date: 02/13/2020
 ms.technology: vs-ide-general
 ms.prod: visual-studio-windows
 monikerRange: vs-2019
 ms.topic: tutorial
 ms.devlang: CSharp
 author: ardalis
-ms.author: tglee
+ms.author: ornella
 manager: jillfra
 dev_langs:
 - CSharp
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 93e3b0af04060c3a3805b29e5d1da71c4f60ec31
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 5ea9468bdf86986ab542fb1cabc873c9aeb75fd6
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62553846"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77580035"
 ---
 # <a name="step-4-expose-a-web-api-from-your-aspnet-core-app"></a>步骤 4：从 ASP.NET Core 应用中公开 Web API
 
 请按照下列步骤将 Web API 添加到现有的 ASP.NET Core 应用。
 
-观看此视频，按照说明向你的首个 ASP.NET Core 应用添加 Web API 支持。
+观看此视频，按照说明向你的首个 ASP.NET Core 应用添加 Web API 支持。 
 
 > [!VIDEO https://www.youtube.com/embed/o_fYPOsAXts]
 
@@ -37,7 +37,7 @@ ms.locfileid: "62553846"
 
 ## <a name="add-an-api-controller"></a>添加 API 控制器
 
-右键单击项目并添加一个名为“Api”的新文件夹。 然后，右键单击文件夹并选择“添加” > “新搭建基架的项目”。 选择“其操作使用实体框架的 API 控制器”。 现在选择现有模型类，然后单击“添加”。
+右键单击项目并添加一个名为“Api”  的新文件夹。 然后，右键单击文件夹并选择“添加”   > “新搭建基架的项目”  。 选择“其操作使用实体框架的 API 控制器”。  现在选择现有模型类，然后单击“添加”  。
 
 ![Visual Studio 2019 ASP.NET Core 已搭建 API 控制器基架](media/vs-2019/vs2019-add-scaffold-api.png)
 
@@ -187,7 +187,7 @@ public async Task<IActionResult> DeleteGame([FromRoute] int id)
 
 ## <a name="adding-swagger"></a>添加 Swagger
 
-Swagger 是一个 API 文档兼测试工具，可以作为一组服务和中间件添加到 ASP.NET Core 应用。 为此，右键单击项目，然后选择“管理 NuGet 包”。 单击“浏览”并搜索 `Swashbuckle.AspNetCore`，然后安装相应的包。
+Swagger 是一个 API 文档兼测试工具，可以作为一组服务和中间件添加到 ASP.NET Core 应用。 为此，右键单击项目，然后选择“管理 NuGet 包”  。 然后，单击“浏览”，搜索 `Swashbuckle.AspNetCore`，并安装 4.0.1 版本  。
 
 ![Visual Studio 2019 从 Nuget 添加 Swashbuckle](media/vs-2019/vs2019-nuget-swashbuckle.png)
 

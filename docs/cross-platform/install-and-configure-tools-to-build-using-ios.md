@@ -12,12 +12,12 @@ ms.author: corob
 manager: jillfra
 ms.workload:
 - xplat-cplusplus
-ms.openlocfilehash: e869a02475917f2444bedbb1bc9b7373b893d098
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 37ef83cc968276fb29ae5380544ee9c27ffd485d
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75846903"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77272281"
 ---
 # <a name="install-and-configure-tools-to-build-using-ios"></a>安装并配置使用 iOS 进行构建的工具
 
@@ -62,9 +62,9 @@ ms.locfileid: "75846903"
 
    如果要进行手动签名，则需要为应用创建预配配置文件。 有关创建预配配置文件的详细信息，请参阅[创建开发预置描述文件](https://help.apple.com/developer-account/#/devf2eb157f8)。 
 
-- [Node.js](https://nodejs.org/) 8.11.3 版和 npm 5.6.0 版
+- [Node.js](https://nodejs.org/) 版本 12.14.1 和 npm 版本 6.13.4
 
-   在 Mac 上安装 Node.js 8.11.3 版。 如果安装 Node.js 包，该包应随附 npm 5.6.0 版。 其他版本的 Node.js 和 npm 可能不支持远程代理 `vcremote` 中使用的一些模块，这可能导致 `vcremote` 安装失败。
+   在 Mac 上安装 Node.js 12.14.1 版。 如果安装 Node.js 包，该包应随附 npm 6.13.4 版。 其他版本的 Node.js 和 npm 可能不支持远程代理 `vcremote` 中使用的一些模块，这可能导致 `vcremote` 安装失败。 建议使用包管理器（如 [Node 版本管理器](https://nodejs.org/en/download/package-manager/#nvm)）安装 Node.js。 请避免使用命令 `sudo` 来安装 Node.js，因为使用 `sudo` 时，某些模块可能安装失败。
 
 ## <a name="Install"></a> 安装适用于 iOS 的远程代理
 
@@ -74,11 +74,17 @@ ms.locfileid: "75846903"
 
 ### <a name="DownloadInstall"></a> 下载和安装远程代理
 
-- 在 Mac 上的 Terminal 应用中，输入：
+- 在你的 Mac 上的终端应用中，验证当前使用的 Node.js 版本是否为要求的版本 12.14.1。 若要查找版本，请运行以下命令：
 
-   `sudo npm install -g --unsafe-perm vcremote`
+  `node -v`
+  
+  如果版本不正确，则可能需要按照先决条件中的 Node.js 安装说明进行操作。 然后重启 Node.js。
 
-   全局安装 ( **-g**) 开关是推荐使用而不是必须使用的。
+- 验证正在使用要求的 Node.js 后，运行以下命令以在该 Node.js 版本下安装 vcremote：
+
+   `npm install -g --unsafe-perm vcremote`
+
+   全局安装 (-g) 开关是推荐使用而不是必须使用的  。 如果不使用全局安装开关，则会在终端应用中的当前活动路径下安装 vcremote。
 
    在安装期间，`vcremote` 将被安装在你的 Mac 上，同时将激活开发人员模式。 还会安装 [Homebrew](https://brew.sh/) 和两个 npm 包，`vcremote-lib` 和 `vcremote-utils`。 安装完成后，可以忽略有关跳过可选依赖项的警告。
 

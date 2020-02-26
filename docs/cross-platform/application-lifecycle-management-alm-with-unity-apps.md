@@ -9,12 +9,12 @@ ms.author: crdun
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: 8d6cbdee57d2f1edf7d696ad9a4053ddcb08bce3
-ms.sourcegitcommit: 57bc1c3887838d707c13feff72a677b3bad3be4b
+ms.openlocfilehash: 5a1c449a77e3000205ee81f5414949743b6035c4
+ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72777739"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77272274"
 ---
 # <a name="devops-with-unity-apps"></a>适用于 Unity 应用的 DevOps
 
@@ -46,14 +46,14 @@ Visual Studio、Azure DevOps Services 和 Team Foundation Server 提供了各种
 
 |功能|通过 Unity 提供支持|其他注释|
 |-------------|--------------------------|-------------------------|
-|序列图|No||
-|依赖项关系图|No||
-|调用层次结构|No||
-|类设计器|No||
-|体系结构资源管理器|No||
-|UML 关系图（用例、活动、类、组件、序列和 DSL）|No||
-|层关系图|No||
-|层验证|No||
+|序列图|否||
+|依赖项关系图|否||
+|调用层次结构|否||
+|类设计器|否||
+|体系结构资源管理器|否||
+|UML 关系图（用例、活动、类、组件、序列和 DSL）|否||
+|层关系图|否||
+|层验证|否||
 
 ## <a name="code"></a>代码
 
@@ -81,7 +81,7 @@ Visual Studio、Azure DevOps Services 和 Team Foundation Server 提供了各种
 |-------------|--------------------------|-------------------------|
 |本地 Team Foundation Server (TFS)|可能|Unity 项目通过 Unity 环境生成，而不是 Visual Studio 生成系统（在 Visual Studio Tools 中为 Unity 生成项目将对脚本进行编译，但不是会生成可执行文件）。 可以[从命令行生成 Unity 项目](https://docs.unity3d.com/Manual/CommandLineArguments.html)（Unity 文档），因此用户可以在 TFS 服务器上配置 MSBuild 进程，以执行相应的 Unity 命令，前提是该计算机已经安装了 Unity。<br /><br /> Unity 也提供 [Unity 云生成](https://build.cloud.unity3d.com/landing/)，它会监视 Git 或 SVN 储存库，并定期运行生成。 目前，它不适用于 TFVC 或 Azure DevOps Services。|
 |链接到 Azure DevOps Services 的本地生成服务器|可能|给定上述相同条件，更有可能指向通过 Azure DevOps Services 触发的生成，以便使用本地 TFS 计算机。 请参阅[生成和发布代理](/azure/devops/pipelines/agents/agents?view=vsts)了解相关介绍。|
-|Azure DevOps Services 的托管控制器服务|No|目前不支持 Unity 生成。|
+|Azure DevOps Services 的托管控制器服务|否|目前不支持 Unity 生成。|
 |生成带有前脚本和后脚本的定义|是|使用 Unity 命令行运行生成的自定义生成定义还可以配置为预生成和后生成脚本。|
 |包括封闭签入的持续集成|是|仅在 Git 用于拉取请求（而非签入）时，封闭签入才适用于 TFVC。|
 
@@ -94,7 +94,7 @@ Visual Studio、Azure DevOps Services 和 Team Foundation Server 提供了各种
 |测试管理器（记录和播放测试）|仅限 Windows 设备和 Android 模拟器||
 |代码覆盖率|n/a|Unity 内进行单元测试时以及不是 Visual Studio 时不适用，请参阅下文。|
 |[单元测试代码](../test/unit-test-your-code.md)|在 Unity 中，但不在 Visual Studio 中|Unity 提供了自己的单元测试框架作为 [Unity 测试工具](https://www.assetstore.unity3d.com/en/#!/content/13802)（Unity 资产商店）的一部分。 单元测试结果在 Unity 中报告，将不会出现在 Visual Studio 内。|
-|[使用 UI 自动化来测试代码](../test/use-ui-automation-to-test-your-code.md)|No|编码的 UI 测试依赖于应用 UI 中可读取的控件；Unity 应用在本质上都是图形，因此编码的 UI 测试工具无法读取其内容。|
+|[使用 UI 自动化来测试代码](../test/use-ui-automation-to-test-your-code.md)|否|编码的 UI 测试依赖于应用 UI 中可读取的控件；Unity 应用在本质上都是图形，因此编码的 UI 测试工具无法读取其内容。|
 
 ## <a name="improve-code-quality"></a>提高代码质量
 
@@ -105,8 +105,8 @@ Visual Studio、Azure DevOps Services 和 Team Foundation Server 提供了各种
 |[分析托管代码的质量](../code-quality/code-analysis-for-managed-code-overview.md)|是|可以在 Visual Studio 中分析 C# 脚本代码。|
 |[使用代码克隆检测功能查找重复代码](https://msdn.microsoft.com/library/hh205279.aspx)|是|可以在 Visual Studio 中分析 C# 脚本代码。|
 |[测量托管代码的复杂性和可维护性](../code-quality/code-metrics-values.md)|是|可以在 Visual Studio 中分析 C# 脚本代码。|
-|[性能资源管理器](../profiling/performance-explorer.md)|No|使用 [Unity 探查器](https://docs.unity3d.com/Manual/Profiler.html)（Unity 网站）。|
-|[分析 .NET Framework 内存问题](https://msdn.microsoft.com/library/dn342825.aspx)|No|Visual Studio 工具没有深入 Mono 框架（用于 Unity）进行探查的挂钩。 使用 [Unity Profiler](http://docs.unity3d.com/Manual/Profiler.html)（Unity 文档）。|
+|[性能工具](../profiling/performance-explorer.md)|否|使用 [Unity 探查器](https://docs.unity3d.com/Manual/Profiler.html)（Unity 网站）。|
+|[分析 .NET Framework 内存问题](https://msdn.microsoft.com/library/dn342825.aspx)|否|Visual Studio 工具没有深入 Mono 框架（用于 Unity）进行探查的挂钩。 使用 [Unity Profiler](http://docs.unity3d.com/Manual/Profiler.html)（Unity 文档）。|
 
 ## <a name="release-management"></a>发布管理
 
