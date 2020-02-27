@@ -28,6 +28,7 @@
 #### [Azure 开发测试个人额度](vs-azure.md)
 #### [Azure DevOps](vs-azure-devops.md)
 #### [Azure 开发测试即用即付](vs-azure-payg.md)
+#### [Azure EA DevTest](azure-ea-devtest.md)
 #### [CAST 突出显示](vs-cast.md)
 #### [CloudPilot](vs-cloudpilot.md)
 #### [企业移动性和安全性](vs-ems.md)
