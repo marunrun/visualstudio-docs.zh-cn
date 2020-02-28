@@ -1,8 +1,8 @@
 - name: MSBuild
   items:
-    - name: MsBuild
+    - name: MSBuild
       href: msbuild.md
-    - name: MSBuild 16.0 的新变化
+    - name: MSBuild 16.0 中的新增功能
       href: whats-new-msbuild-16-0.md
     - name: MSBuild 15.0 中的新增功能
       href: what-s-new-in-msbuild-15-0.md
@@ -129,11 +129,11 @@
                   href: standard-and-custom-toolset-configurations.md
                 - name: 重写 ToolsVersion 设置
                   href: overriding-toolsversion-settings.md
-            - name: MSBuild 目标 Framework 和目标平台
+            - name: MSBuild 目标框架和目标平台
               href: msbuild-target-framework-and-target-platform.md
             - name: 在设计时解析程序集
               href: resolving-assemblies-at-design-time.md
-            - name: 任务和任务配置
+            - name: 目标和任务配置
               items:
                 - name: 概述
                   href: configuring-targets-and-tasks.md
@@ -225,7 +225,7 @@
               href: project-element-msbuild.md
             - name: ProjectExtensions 元素
               href: projectextensions-element-msbuild.md
-            - name: Property 属性
+            - name: Property 元素
               href: property-element-msbuild.md
             - name: PropertyGroup 元素
               href: propertygroup-element-msbuild.md
@@ -244,7 +244,7 @@
         - name: 任务参考
           items:
             - name: 概述
-              displayName: Task Reference
+              displayName: task reference
               href: msbuild-task-reference.md
             - name: 特定于 C++ 的任务
               items:
@@ -299,7 +299,7 @@
               href: taskextension-base-class.md
             - name: ToolTaskExtension 基类
               href: tooltaskextension-base-class.md
-            - name: 诊断任务失败
+            - name: 诊断任务故障
               href: diagnosing-task-failures.md
             - name: AL（程序集链接器）任务
               href: al-assembly-linker-task.md
@@ -431,7 +431,7 @@
               href: zipdirectory-task.md
         - name: MSBuild 条件
           href: msbuild-conditions.md
-        - name: MSBuild 的条件构造
+        - name: MSBuild 条件构造
           href: msbuild-conditional-constructs.md
         - name: MSBuild 保留属性和已知属性
           href: msbuild-reserved-and-well-known-properties.md
@@ -441,7 +441,7 @@
           href: common-msbuild-project-items.md
         - name: MSBuild 命令行参考
           href: msbuild-command-line-reference.md
-        - name: MSBuild .Targets 文件
+        - name: MSBuild .targets 文件
           href: msbuild-dot-targets-files.md
         - name: MSBuild 常见的项元数据
           href: msbuild-well-known-item-metadata.md
@@ -450,14 +450,14 @@
         - name: WPF 参考
           items:
             - name: 概述
-              displayName: WPF MSBuild Reference
+              displayName: WPF MSBuild reference
               href: wpf-msbuild-reference.md
-            - name: WPF .Targets 文件
+            - name: WPF .targets 文件
               href: wpf-dot-targets-files.md
             - name: WPF 任务参考
               items:
                 - name: 概述
-                  displayName: WPF MSBuild Task Reference
+                  displayName: WPF MSBuild task reference
                   href: wpf-msbuild-task-reference.md
                 - name: FileClassifier 任务
                   href: fileclassifier-task.md
@@ -482,7 +482,7 @@
     - name: 以编程方式使用 MSBuild
       items:
         - name: 概述
-          displayName: Use MSBuild Programmatically
+          displayName: Use MSBuild programmatically
           href: msbuild-api.md
         - name: 更新到 MSBuild 15
           href: updating-an-existing-application.md

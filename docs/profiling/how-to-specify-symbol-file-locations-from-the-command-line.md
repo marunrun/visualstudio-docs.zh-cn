@@ -9,23 +9,23 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 3b4c4230ca2539b55f57990b90ae33d1f53726dc
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.openlocfilehash: 604863cbef5e42b31450ea09dffa56a1a00ae992
+ms.sourcegitcommit: 374f5ec9a5fa18a6d4533fa2b797aa211f186755
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74778721"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77476893"
 ---
 # <a name="how-to-specify-symbol-file-locations-from-the-command-line"></a>如何：从命令行指定符号文件位置
-为了显示函数名称和行号等符号信息，VSPerfReport 命令行工具要求访问被分析组件的符号 (.pdb) 文件以及 Windows 系统文件  。 编译组件时会创建符号文件。 有关详细信息，请参阅 [VSPerfReport](../profiling/vsperfreport.md)。 VSPerfReport 自动搜索以下位置的符号文件：
+为了显示函数名称和行号等符号信息，VSPerfReport 命令行工具要求访问被分析组件的符号 (.pdb) 文件以及 Windows 系统文件。 编译组件时会创建符号文件。 有关详细信息，请参阅 [VSPerfReport](../profiling/vsperfreport.md)。 VSPerfReport 自动搜索以下位置的符号文件：
 
 - **/SymbolPath** 选项中或 **_NT_SYMBOL_PATH** 环境变量中指定的路径。
 
 - 从中编译组件的准确本地路径。
 
-- 分析数据（.vsp 或 .vsps）文件所在的目录   。
+- 分析数据（.vsp 或 .vsps）文件所在的目录。
 
-  Microsoft 在符号服务器上联机提供其许多产品的 .pdb 文件  。 如果用于报告的计算机与 Internet 相连，则 VSPerfReport 将连接到联机符号服务器自动查找符号信息，并将文件保存到本地存储中。
+  Microsoft 在符号服务器上联机提供其许多产品的 .pdb 文件。 如果用于报告的计算机与 Internet 相连，则 VSPerfReport 将连接到联机符号服务器自动查找符号信息，并将文件保存到本地存储中。
 
   可以通过以下方式指定符号文件以及 Microsoft 符号服务器存储的位置：
 
@@ -46,18 +46,20 @@ ms.locfileid: "74778721"
 
 2. 使用以下语法设置 **_NT_SYMBOL_PATH** 环境变量或 VSPerfReport /SymbolPath 选项：
 
-    **srv\\** * *LocalStore* **\*http://msdl.microsoft.com/download/symbols**
+    `srv*<LocalStore>*https://msdl.microsoft.com/download/symbols`
 
-    其中，*LocalStore* 是用户创建的本地目录的路径。
+    其中，“<LocalStore>”是你创建的本地目录的路径。
 
 ## <a name="specify-component-symbol-files"></a>指定组件符号文件
- 分析工具会在以下位置搜索待分析组件的 .pdb 文件：.pdb 文件在组件中的原始存储位置，或者包含分析数据文件的文件夹  。 可通过向 **_NT_SYMBOL_PATH** 或向 **/SymbolPath** 选项添加一个或多个路径来指定要搜索的其他位置。 各个路径之间用分号分隔。
+ 分析工具会在以下位置搜索待分析组件的 .pdb 文件：.pdb 文件在组件中的原始存储位置，或者包含分析数据文件的文件夹。 可通过向 **_NT_SYMBOL_PATH** 或向 **/SymbolPath** 选项添加一个或多个路径来指定要搜索的其他位置。 各个路径之间用分号分隔。
 
 ## <a name="example"></a>示例
  以下命令行将 **_NT_SYMBOL_PATH** 环境变量设置为 Windows 符号服务器，将本地目录设置为 **C:\Symbols**。
 
- **设置 _NT_SYMBOL_PATH=srv\*C:\symbols\*http://msdl.microsoft.com/download/symbols**
+ ```cmd
+  set  _NT_SYMBOL_PATH=srv*C:\symbols*https://msdl.microsoft.com/download/symbols
+ ```
 
- 通过使用 /SymbolPath 选项，以下 VSPerfReport 命令行向搜索路径添加 C:\Projects\Symbols 目录   。
+ 通过使用 /SymbolPath 选项，以下 VSPerfReport 命令行向搜索路径添加 C:\Projects\Symbols 目录。
 
- **VSPerfReport**  *MyApp* **.exe /SymbolPath:C:\Projects\Symbols /summary:all**
+ **VSPerfReport** *MyApp* **.exe /SymbolPath:C:\Projects\Symbols /summary:all**

@@ -12,17 +12,17 @@ helpviewer_keywords:
 - MarkupCompilePass1 task [WPF MSBuild], parameters
 - converting XAML projects to compiled binary format [WPF MSBuild]
 - MarkupCompilePass1 task [WPF MSBuild], converting XAML to binary format
-author: mikejo5000
-ms.author: mikejo
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dfcd34daa6a9a2b4cb4bd095bc91ac5962c7335d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d72b0a63235de4cc93e97f6e85dc5728e5ebbf43
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62979771"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77579666"
 ---
 # <a name="markupcompilepass1-task"></a>MarkupCompilePass1 任务
 
@@ -30,12 +30,12 @@ ms.locfileid: "62979771"
 
 ## <a name="task-parameters"></a>任务参数
 
-| 参数 | 说明 |
+| 参数 | 描述 |
 | - | - |
 | `AllGeneratedFiles` | 可选的 **ITaskItem[]** 输出参数。<br /><br /> 包含由 <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass1> 任务生成的文件的完整列表。 |
 | `AlwaysCompileMarkupFilesInSeparateDomain` | 可选 **Boolean** 参数。<br /><br /> 指定是否在单独的 <xref:System.AppDomain> 下运行该任务。 如果此参数返回 false，则任务将在与 [!INCLUDE[TLA#tla_msbuild](../msbuild/includes/tlasharptla_msbuild_md.md)] 相同的 <xref:System.AppDomain> 中运行，且运行速度更快。 如果该参数返回 true，则任务将在独立于 [!INCLUDE[TLA2#tla_msbuild](../msbuild/includes/tla2sharptla_msbuild_md.md)] 的另一个 <xref:System.AppDomain> 中运行，且运行速度更慢。 |
 | `ApplicationMarkup` | 可选的 **ITaskItem[]** 参数。<br /><br /> 指定应用程序定义 [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] 文件的名称。 |
-| `AssembliesGeneratedDuringBuild` | 可选 **String []** 参数。<br /><br /> 指定在生成过程中对更改的程序集的引用。 例如，Visual Studio 解决方案可能包含一个引用了另一个项目的已编译输出的项目。 在这种情况下，可以将第二个项目的已编译输出添加到 **AssembliesGeneratedDuringBuild** 参数。<br /><br /> 注意:“AssembliesGeneratedDuringBuild”参数必须包含对生成解决方案所生成的一组完整程序集的引用。 |
+| `AssembliesGeneratedDuringBuild` | 可选 **String []** 参数。<br /><br /> 指定在生成过程中对更改的程序集的引用。 例如，Visual Studio 解决方案可能包含一个引用了另一个项目的已编译输出的项目。 在这种情况下，可以将第二个项目的已编译输出添加到 **AssembliesGeneratedDuringBuild** 参数。<br /><br /> 注意：“AssembliesGeneratedDuringBuild”参数必须包含对生成解决方案所生成的一组完整程序集的引用。 |
 | `AssemblyName` | 必需的 **String** 参数。<br /><br /> 指定为项目生成的程序集的简称。 例如，如果项目生成一个名为 *WinExeAssembly.exe* 的 [!INCLUDE[TLA#tla_mswin](../code-quality/includes/tlasharptla_mswin_md.md)] 可执行文件，则 **AssemblyName** 参数的值为 **WinExeAssembly**。 |
 | `AssemblyPublicKeyToken` | 可选 **String** 参数。<br /><br /> 指定程序集的公钥标记。 |
 | `AssemblyVersion` | 可选 **String** 参数。<br /><br /> 指定程序集的版本号。 |
@@ -98,7 +98,7 @@ ms.locfileid: "62979771"
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何将三个页面 [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] 文件转换成二进制格式文件。 Page1 包含对位于项目的根命名空间的类型 `Class1` 的引用，因此在此标记编译阶段不会转换为二进制格式文件。 改为执行 [GenerateTemporaryTargetAssembly](../msbuild/generatetemporarytargetassembly-task.md)，然后再执行 [MarkupCompilePass2](../msbuild/markupcompilepass2-task.md)。
+下面的示例演示如何将三个页 [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] 文件转换为二进制格式文件。 Page1 包含对位于项目的根命名空间的类型 `Class1` 的引用，因此在此标记编译阶段不会转换为二进制格式文件。 改为执行 [GenerateTemporaryTargetAssembly](../msbuild/generatetemporarytargetassembly-task.md)，然后再执行 [MarkupCompilePass2](../msbuild/markupcompilepass2-task.md)。
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">

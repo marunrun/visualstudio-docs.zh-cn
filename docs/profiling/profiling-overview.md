@@ -8,12 +8,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d99a6ae3d2b1a2c0acfe4aee160801181c72cbe7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c0d1c8cfb94b74f54eaaddd6b8d6d0fd17216b94
+ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62994916"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77577957"
 ---
 # <a name="overview-of-tools-for-measuring-performance-in-visual-studio"></a>Visual Studio 中的性能测量工具概述
 
@@ -26,3 +26,5 @@ ms.locfileid: "62994916"
 * [分析 CPU 使用情况](../profiling/cpu-usage.md)，更深入地了解 CPU 使用率工具。
 
 * [分析内存使用情况](../profiling/memory-usage.md)，确定性能瓶颈。
+
+* [使用 .NET 对象分配工具分析内存使用情况](../profiling/dotnet-alloc-tool.md)，以识别 .NET 应用中的性能瓶颈。
