@@ -1,8 +1,8 @@
 ---
-title: 从命令行测量 CPU 使用率
-description: 从命令行测量应用程序中的 CPU 性能。
+title: 从命令行测量性能
+description: 从命令行测量应用程序中的 CPU 性能和托管内存使用情况。
 ms.custom: ''
-ms.date: 02/19/2019
+ms.date: 02/21/2020
 ms.topic: conceptual
 helpviewer_keywords:
 - Profiling Tools, command-line
@@ -14,12 +14,12 @@ manager: jillfra
 monikerRange: '>= vs-2019'
 ms.workload:
 - multiple
-ms.openlocfilehash: 87bf0c236f34e753866ea114dfc7f45e8f16a979
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c109e2ae1db28f8e08ed7c34a7ee0871a6efe670
+ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62972404"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77558122"
 ---
 # <a name="measure-application-performance-from-the-command-line"></a>从命令行测量应用程序性能
 
@@ -27,7 +27,7 @@ ms.locfileid: "62972404"
 
 在本文所述的示例中，收集 Microsoft Notepad 的性能信息，但可以使用相同的方法来分析任何进程。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 * Visual Studio 2019 预览版 3 或更高版本
 
@@ -74,7 +74,7 @@ ms.locfileid: "62972404"
 ```<Visual Studio installation folder>\2019\Preview\Team Tools\DiagnosticsHub\Collector\AgentConfigs\```
 
 * CpuUsage 配置（基本/高/低），对应于为 [CPU 使用率](../profiling/cpu-usage.md)分析工具收集的数据。
-* DotNetObjectAlloc 配置（基本/低），对应于为 [.NET 对象分配工具](https://devblogs.microsoft.com/visualstudio/visual-studio-2017-version-15-8-preview-3/#tooling)收集的数据。
+* DotNetObjectAlloc 配置（基本/低），对应于为 [.NET 对象分配工具](../profiling/dotnet-alloc-tool.md)收集的数据。
 
 基本/低/高配置是指采样率。 例如，低为 100 样本/秒，高为 4000 样本/秒。
 

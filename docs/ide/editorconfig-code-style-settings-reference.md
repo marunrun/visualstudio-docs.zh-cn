@@ -1,6 +1,6 @@
 ---
 title: EditorConfig 的 .NET 编码约定设置
-ms.date: 06/14/2018
+ms.date: 02/21/2020
 ms.topic: reference
 helpviewer_keywords:
 - coding conventions [EditorConfig]
@@ -13,12 +13,12 @@ manager: jillfra
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2c93a6e86ba82a75dabb8b2be77d2a82a3b4d599
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: e3ca9ed577fd253c81919f49a67c8286fbe28255
+ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75566236"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77557787"
 ---
 # <a name="net-coding-convention-settings-for-editorconfig"></a>EditorConfig 的 .NET 编码约定设置
 
@@ -26,7 +26,7 @@ ms.locfileid: "75566236"
 
 > [!TIP]
 > - 在 EditorConfig 文件中定义编码约定时，可配置内置到 Visual Studio 中的[代码样式分析器](../code-quality/roslyn-analyzers-overview.md)如何分析你的代码。 EditorConfig 文件是适用于这些分析器的配置文件。
-> - Visual Studio 的代码样式首选项还可以在[文本编辑器选项](code-styles-and-code-cleanup.md)对话框中进行设置。 但是，EditorConfig 设置优先使用，在“选项”中设置的首选项不与特定项目关联  。
+> - Visual Studio 的代码样式首选项还可以在[文本编辑器选项](code-styles-and-code-cleanup.md)对话框中进行设置。 但是，EditorConfig 设置优先使用，在“选项”中设置的首选项不与特定项目关联。
 
 ## <a name="convention-categories"></a>约定类别
 
@@ -46,7 +46,7 @@ ms.locfileid: "75566236"
 
 ## <a name="example-editorconfig-file"></a>EditorConfig 文件示例
 
-下面是具有默认选项的示例 .editorconfig 文件，可帮助你入门  ：
+下面是具有默认选项的示例 .editorconfig 文件，可帮助你入门。 在 Visual Studio 中，你可以生成此文件并将其保存到项目中，步骤为“工具” > “选项” > “文本编辑器”> [“C#”或“基本”] >“代码样式” > “常规”。 然后，单击“从设置生成 .editorconfig 文件”按钮。 有关详细信息，请参阅[代码样式首选项](code-styles-and-code-cleanup.md)。
 
 ```ini
 ###############################
@@ -70,9 +70,9 @@ charset = utf-8-bom
 ###############################
 
 [*.{cs,vb}]
+
 # Organize usings
 dotnet_sort_system_directives_first = true
-dotnet_separate_import_directive_groups = false
 
 # this. preferences
 dotnet_style_qualification_for_field = false:silent
@@ -113,8 +113,7 @@ dotnet_style_prefer_conditional_expression_over_return = true:silent
 
 # Style Definitions
 dotnet_naming_style.pascal_case_style.capitalization             = pascal_case
-
-# Use PascalCase for constant fields
+# Use PascalCase for constant fields  
 dotnet_naming_rule.constant_fields_should_be_pascal_case.severity = suggestion
 dotnet_naming_rule.constant_fields_should_be_pascal_case.symbols  = constant_fields
 dotnet_naming_rule.constant_fields_should_be_pascal_case.style    = pascal_case_style
@@ -123,10 +122,11 @@ dotnet_naming_symbols.constant_fields.applicable_accessibilities  = *
 dotnet_naming_symbols.constant_fields.required_modifiers          = const
 
 ###############################
-# C# Code Style Rules         #
+# C# Coding Conventions       #
 ###############################
 
 [*.cs]
+
 # var preferences
 csharp_style_var_for_built_in_types = true:silent
 csharp_style_var_when_type_is_apparent = true:silent
@@ -140,7 +140,7 @@ csharp_style_expression_bodied_properties = true:silent
 csharp_style_expression_bodied_indexers = true:silent
 csharp_style_expression_bodied_accessors = true:silent
 
-# Pattern-matching preferences
+# Pattern matching preferences
 csharp_style_pattern_matching_over_is_with_cast_check = true:suggestion
 csharp_style_pattern_matching_over_as_with_null_check = true:suggestion
 
@@ -188,18 +188,17 @@ csharp_space_around_binary_operators = before_and_after
 csharp_space_between_method_declaration_empty_parameter_list_parentheses = false
 csharp_space_between_method_call_name_and_opening_parenthesis = false
 csharp_space_between_method_call_empty_parameter_list_parentheses = false
-csharp_space_after_comma = true
-csharp_space_after_dot = false
 
 # Wrapping preferences
 csharp_preserve_single_line_statements = true
 csharp_preserve_single_line_blocks = true
 
-##################################
-# Visual Basic Code Style Rules  #
-##################################
+###############################
+# VB Coding Conventions       #
+###############################
 
 [*.vb]
+
 # Modifier preferences
 visual_basic_preferred_modifier_order = Partial,Default,Private,Protected,Public,Friend,NotOverridable,Overridable,MustOverride,Overloads,Overrides,MustInherit,NotInheritable,Static,Shared,Shadows,ReadOnly,WriteOnly,Dim,Const,WithEvents,Widening,Narrowing,Custom,Async:suggestion
 ```
@@ -208,4 +207,5 @@ visual_basic_preferred_modifier_order = Partial,Default,Private,Protected,Public
 
 - [快速操作](../ide/quick-actions.md)
 - [创建可移植的自定义编辑器选项](../ide/create-portable-custom-editor-options.md)
-- [.NET 编译器平台的 .editorconfig 文件](https://github.com/dotnet/roslyn/blob/master/.editorconfig)
+- [.NET Compiler Platform“Roslyn”.editorconfig 文件](https://github.com/dotnet/roslyn/blob/master/.editorconfig)
+- [.NET Compiler Platform 运行时 .editorconfig 文件](https://github.com/dotnet/runtime/blob/master/.editorconfig)

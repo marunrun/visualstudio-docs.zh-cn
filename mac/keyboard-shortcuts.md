@@ -5,21 +5,28 @@ ms.date: 03/14/2019
 author: heiligerdankgesang
 ms.author: dominicn
 ms.assetid: 48E06A61-7294-4EC8-A09D-1763C32AD910
-ms.openlocfilehash: af7fa16100f31a6c4042e40bf8f270be9a78d2ec
-ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
+ms.openlocfilehash: 2877f50528c5f93d6f764cc0dbde12a5bdf06a49
+ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74984560"
+ms.lasthandoff: 02/24/2020
+ms.locfileid: "77567967"
 ---
 # <a name="default-keyboard-shortcuts-in-visual-studio-for-mac"></a>Visual Studio for Mac 中的默认键盘快捷键
 
 有关键盘辅助功能的信息，请参阅[如何：使用键盘导航](~/accessibility-keyboard.md)。
 
-可以通过使用相应的键盘快捷键来访问 Visual Studio for Mac 中的各种命令。 本文档列出了 Visual Studio for Mac 键绑定方案的默认快捷键  。 有关如何更改键绑定方案的详细信息，请参阅[自定义 IDE](~/customizing-the-ide.md#key-bindings)。 另外，还可以使用 Visual Studio for Mac   > “首选项”  菜单项并选择“首选项”  窗口中的“环境”   > “键绑定”  来自定义命令的快捷键。
+可以通过使用相应的键盘快捷键来访问 Visual Studio for Mac 中的各种命令。 本文档列出了 Visual Studio for Mac 键绑定方案的默认快捷键。 有关如何更改键绑定方案的详细信息，请参阅[自定义 IDE](~/customizing-the-ide.md#key-bindings)。 另外，还可以使用 Visual Studio for Mac > “首选项”菜单项并选择“首选项”窗口中的“环境” > “键绑定”来自定义命令的快捷键。
 
 > [!TIP]
 > 使用 macOS 中常用的符号将显示本文档中显示的键盘快捷键和 Visual Studio for Mac 中的键绑定首选项。 如果你不确定符号，请查看 [macOS 键符号查找表](#macos-key-symbols-lookup)。
+
+## <a name="downloadable-quick-ref-pdfs"></a>可下载的快速参考 pdf
+
+我们已将最常用和最有用的键盘快捷方式编译为可下载的 pdf 文件。 我们有两个版本，一个版本显示用于 Visual Studio for Mac 的快捷方式，另一个版本并排显示两种操作系统的 Visual Studio 快捷方式，适用于有在 Windows 上使用 Visual Studio 经验的用户。
+
+ - [Visual Studio for Mac 键盘快捷方式快速参考](https://aka.ms/vsm-keys)
+ - [Visual Studio 及 Visual Studio for Mac 键盘快捷方式快速参考](https://aka.ms/vsm-vs-keys)
 
 ## <a name="code-navigation"></a>代码导航
 
@@ -36,7 +43,7 @@ ms.locfileid: "74984560"
 
 |命令|键盘快捷键|
 |-|-|
-|启用或禁用断点|**⌥⌘/** 、**⌘F9**|
+|启用或禁用断点|**⌥⌘/**、**⌘F9**|
 |暂停|**⌥⌘P**、**⌥⌘L5**|
 |删除所有断点|**⇧⌘F9**|
 |运行到光标处|**⌘F10**|
@@ -45,7 +52,7 @@ ms.locfileid: "74984560"
 |逐语句|**⇧⌘I**、**⌘F11**|
 |跳出|**⇧⌘U**、**⇧⌘F11**|
 |逐过程|**⇧⌘O**、**F10**|
-|切换断点|**⌘\\** 、**F9**|
+|切换断点|**⌘\\**、**F9**|
 |查看断点|**⌥⌘B**|
 
 ## <a name="designer"></a>Designer
@@ -225,8 +232,8 @@ ms.locfileid: "74984560"
 |显示下一个|**⌥⌘↓**、**F8**|
 |显示上一个|**⌥⌘↑**、**⇧F8**|
 |两个编辑器列|**⌥⌘2**|
-|放大|**⌘+** 、**⌘=**|
-|缩小|**⌘-** 、**⌘_**|
+|放大|**⌘+**、**⌘=**|
+|缩小|**⌘-**、**⌘_**|
 
 ## <a name="window"></a>窗口
 
@@ -244,8 +251,8 @@ ms.locfileid: "74984560"
 |隐藏其他|**⌥⌘H**|
 |隐藏 Visual Studio|**⌘H**|
 |最小化|**⌘M**|
-|下一个文档|**⌘}** 、**⌘F6**|
-|上一个文档|**⌘{** 、**⇧⌘F6**|
+|下一个文档|**⌘}**、**⌘F6**|
+|上一个文档|**⌘{**、**⇧⌘F6**|
 |切换到下一个文档|**⌃⇥**|
 |切换到下一个窗口|**⌃⌥⇥**|
 |切换到上一个文档|**⌃⇧⇥**|
@@ -268,7 +275,7 @@ ms.locfileid: "74984560"
 |↖|**Home**|
 |↘|**End**|
 |␣|**空格键**|
-|⇥|Tab |
+|⇥|Tab|
 
 ## <a name="see-also"></a>请参阅
 

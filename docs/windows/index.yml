@@ -10,12 +10,12 @@ metadata:
   monikerRange: '>=vs-2017'
   f1_keywords:
   - MSDNSTART
-  ms.openlocfilehash: 1c4358fb1ceef0773a29c6860ee7b670c2d021b1
-  ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+  ms.openlocfilehash: 6ec31d2881abbfe2ae55174ea3f3fb15fd34651f
+  ms.sourcegitcommit: b016ea260856264eee730ee8cbcab198314a7ece
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 02/15/2020
-  ms.locfileid: "77265559"
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77904056"
 highlightedContent:
   items:
   - title: 设置和安装
@@ -150,7 +150,7 @@ additionalContent:
       url: ../profiling/index.yml
     - title: 扩展
       summary: 将自己的功能添加到 Visual Studio IDE，从而改进开发体验。
-      url: ../extensibility/index.md
+      url: ../extensibility/index.yml
     - title: 数据
       summary: 创建连接到任意数据库或服务及任意位置（本地或云）的数据应用。
       url: ../data-tools/accessing-data-in-visual-studio.md
@@ -202,7 +202,7 @@ additionalContent:
     - title: 其他工具集
       links:
       - text: Visual Studio 扩展开发
-        url: ../extensibility/index.md
+        url: ../extensibility/index.yml
       - text: 使用 C++ 的 Linux 开发
         url: /cpp/linux/
       - text: .NET Core 跨平台开发
