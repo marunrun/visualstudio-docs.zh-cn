@@ -14,24 +14,24 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 301b829341eeb859030afabbf2225ea833e99a22
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: ec257d67530692fc885d971e21136c10e7a271f6
+ms.sourcegitcommit: 1efb6b219ade7c35068b79fbdc573a8771ac608d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75587675"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78167789"
 ---
 # <a name="design-warnings"></a>设计警告
 
-设计警告支持遵从[.Net 设计准则](/dotnet/standard/design-guidelines/)。
+设计警告支持遵循[.NET Framework 设计准则](/dotnet/standard/design-guidelines/)。
 
 ## <a name="in-this-section"></a>本节内容
 
-| 规则 | 描述 |
+| 规则 | 说明 |
 | - | - |
 | [CA1000：不要在泛型类型中声明静态成员](../code-quality/ca1000.md) | 调用泛型类型的静态成员时，必须指定该类型的类型参数。 当调用不支持推理的泛型实例成员时，必须指定该成员的类型参数。 在上述两种情况下，用于指定类型自变量的语法不同，但很容易混淆。 |
 | [CA1001：具有可释放字段的类型应该是可释放的](../code-quality/ca1001.md) | 类声明并实现属于 IDisposable 类型并且类不实现 IDisposable 的实例字段。 声明 IDisposable 字段的类间接拥有非托管资源，并且应该实现 IDisposable 接口。 |
-| [CA1002：不要公开泛型列表](../code-quality/ca1002.md) | System.Collections.Generic.List < (的\<(T >) >) 是专为性能，不继承的泛型集合。 因此，List 不包含任何虚拟成员。 应改为公开针对继承设计的泛型集合。 |
+| [CA1002：不要公开泛型列表](../code-quality/ca1002.md) | < （\<（T >） >）的泛型集合是设计为性能的泛型集合，而不是继承。 因此，List 不包含任何虚拟成员。 应改为公开针对继承设计的泛型集合。 |
 | [CA1003：使用泛型事件处理程序实例](../code-quality/ca1003.md) | 类型包含一个返回 void 的委托，该委托的签名包含两个参数（第一个对象，第二个参数是可分配给 EventArgs 的类型），而包含的程序集目标 .NET Framework 2.0。 |
 | [CA1004：泛型方法应提供类型形参](../code-quality/ca1004.md) | 推理是指由传递给泛型方法的自变量类型来确定该方法的类型参数，而不是显式指定类型参数。 若要启用推理，泛型方法的参数签名必须包含与该方法的类型参数属于相同类型的参数。 在这种情况下，不必指定类型参数。 如果对所有类型参数使用推理，则调用泛型和非泛型实例方法的语法完全相同;这简化了泛型方法的可用性。 |
 | [CA1005：避免泛型类型的参数过多](../code-quality/ca1005.md) | 泛型类型包含的类型参数越多，越难以知道并记住每个类型参数各代表什么。 通常情况下，有一种类型参数会很明显，如 List\<T >，在某些情况下有两个类型参数，如 Dictionary\<TKey，TValue >。 但是，如果存在两个以上的类型参数，则大多数用户都会感到过于困难。 |
@@ -88,7 +88,7 @@ ms.locfileid: "75587675"
 | [CA1061：不要隐藏基类方法](../code-quality/ca1061.md) | 如果派生方法的参数签名只是在类型方面有所不同，而且与基方法的参数签名中的对应类型相比，这些类型的派生方式更弱，则基类型中的方法由派生类型中的同名方法隐藏。 |
 | [CA1062：验证公共方法的参数](../code-quality/ca1062.md) | 对于传递给外部可见方法的所有引用自变量，都应检查其是否为 null。 |
 | [CA1063：正确实现 IDisposable](../code-quality/ca1063.md) | 所有的 IDisposable 类型都应当正确实现 Dispose 模式。 |
-| [CA1064：异常应该是公共的](../code-quality/ca1064.md) | 内部异常仅在其自己的内部范围内可见。 当异常超出内部范围后，只能使用基异常来捕获该异常。 如果内部异常继承自<xref:System.Exception?displayProperty=fullName>， <xref:System.SystemException?displayProperty=fullName>，或<xref:System.ApplicationException?displayProperty=fullName>，外部代码将没有足够的信息来了解应如何处理异常。 |
+| [CA1064：异常应该是公共的](../code-quality/ca1064.md) | 内部异常仅在其自己的内部范围内可见。 当异常超出内部范围后，只能使用基异常来捕获该异常。 如果从 <xref:System.Exception?displayProperty=fullName>、<xref:System.SystemException?displayProperty=fullName>或 <xref:System.ApplicationException?displayProperty=fullName>继承内部异常，外部代码将不会有足够的信息来了解如何处理该异常。 |
 | [CA1065：不要在意外的位置引发异常](../code-quality/ca1065.md) | 不应引发异常的方法引发了异常。 |
 | [CA1068： CancellationToken 参数必须位于最后](../code-quality/ca1068.md) | 方法具有一个不是最后一个参数的 CancellationToken 参数。 |
 | [CA2210：程序集应具有有效的强名称](../code-quality/ca2210.md) | 强名称可避免客户端在不知情的情况下加载已被篡改的程序集。 除非极为有限的几种情况，否则不应部署没有强名称的程序集。 如果共享或发布未正确签名的程序集，则该程序集可能被篡改，公共语言运行时可能不会加载该程序集；而用户可能必须在他/她的计算机上禁用验证。 |

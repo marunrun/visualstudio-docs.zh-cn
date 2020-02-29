@@ -14,12 +14,12 @@ dev_langs:
 - CPP
 ms.workload:
 - multiple
-ms.openlocfilehash: 92e027b58d1a05d77055048872c38f45939cbfe0
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 71d2fe83690e55d49bb23bffb09de91c8f7534b6
+ms.sourcegitcommit: 1efb6b219ade7c35068b79fbdc573a8771ac608d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75587441"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78167619"
 ---
 # <a name="suppress-code-analysis-warnings"></a>禁止显示代码分析警告
 
@@ -78,7 +78,7 @@ CA_SUPPRESS_MESSAGE("Rule Category", "Rule Id", Justification = "Justification",
 
 - **作用域**-要禁止显示警告的目标。 如果未指定目标，则将其设置为属性的目标。 支持的[范围](xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.Scope)包括：
 
-  - `module`-此作用域禁止对程序集发出警告。 它是适用于整个项目的全局禁止显示。
+  - [`module`](#module-suppression-scope) -此作用域禁止对程序集发出警告。 它是适用于整个项目的全局禁止显示。
 
   - `resource`-（仅限[旧版 FxCop](../code-quality/static-code-analysis-for-managed-code-overview.md) ）此作用域禁止将诊断信息中的警告写入模块（程序集）中的资源文件。 对于 Roslyn 分析器诊断，不会在C#/VB 编译器中阅读/遵守此作用域，它仅分析源文件。
 
@@ -174,9 +174,17 @@ public class Animal
 > [!NOTE]
 > `Target` 始终包含完全限定的项目名称。
 
-## <a name="global-suppression-file"></a>全局禁止显示文件
+### <a name="global-suppression-file"></a>全局禁止显示文件
 
 全局禁止显示文件维护全局级禁止显示或未指定目标的禁止显示的禁止显示。 例如，程序集级别的冲突的禁止显示存储在此文件中。 此外，某些 ASP.NET 禁止显示文件存储在此文件中，因为项目级设置不适用于窗体的代码。 第一次在 "**错误列表**" 窗口中的 "**禁止显示**" 命令的 "**项目禁止显示文件**" 选项中，会创建全局禁止显示文件并将其添加到项目。
+
+### <a name="module-suppression-scope"></a>模块禁止显示范围
+
+您可以使用**模块**范围禁止整个程序集的代码质量冲突。
+
+例如， _GlobalSuppressions_项目文件中的以下属性将抑制 ASP.NET Core 项目的 ConfigureAwait 冲突：
+
+`[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "CA2007:Consider calling ConfigureAwait on the awaited task", Justification = "ASP.NET Core doesn't use thread context to store request context.", Scope = "module")]`
 
 ## <a name="see-also"></a>另请参阅
 
