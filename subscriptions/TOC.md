@@ -33,7 +33,7 @@
 #### [CloudPilot](vs-cloudpilot.md)
 #### [企业移动性和安全性](vs-ems.md)
 #### [Microsoft 365 开发人员](vs-m365.md)
-#### [Office 365 订阅](vs-office365.md)
+#### [Office 365 专业增强版](vs-office365.md)
 #### [Parasoft](vs-parasoft.md)
 #### [Power BI Pro](vs-pbi.md)
 #### [Visual Studio App Center](vs-visual-studio-app-center.md)
