@@ -47,14 +47,14 @@ ms.locfileid: "75588598"
 - struct
 - interface
 - enum
-- 属性
-- 方法
-- Field — 字段
-- 事件
-- 委托
-- 参数 (parameter)
+- property
+- method
+- field
+- event
+- delegate
+- parameter
 - type_parameter
-- 本地
+- local
 - local_function
 
 ### <a name="accessibility-levels-of-symbols"></a>符号的可访问性级别
@@ -72,7 +72,7 @@ ms.locfileid: "75588598"
 - protected
 - protected\_internal 或 protected_friend
 - private\_protected
-- 本地
+- local
 
    `local` 辅助功能级别适用于方法中定义的符号。 对于无法在代码中指定辅助功能的符号，定义命名约定非常有用。 例如，如果在常量命名约定 (`required_modifiers = const`) 上指定 `applicable_accessibilities = local`，则该规则只适用于方法中定义的常量，而不适用于类型中定义的常量。
 
