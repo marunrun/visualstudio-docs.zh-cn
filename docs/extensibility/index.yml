@@ -1,0 +1,78 @@
+### YamlMime:Landing
+title: Visual Studio 扩展性
+summary: 了解 Visual Studio 扩展性。
+metadata:
+  title: Visual Studio 扩展性
+  description: 演示如何扩展 Visual Studio。
+  ms.topic: landing-page
+  ms.date: 02/24/2020
+  author: madskristensen
+  ms.author: madsk
+  manager: jillfra
+  ms.prod: visual-studio-windows
+  ms.technology: vs-ide-general
+  ms.openlocfilehash: e37a713b133d76bbd3d0e3fa4363238d58407ce4
+  ms.sourcegitcommit: b016ea260856264eee730ee8cbcab198314a7ece
+  ms.translationtype: HT
+  ms.contentlocale: zh-CN
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77910857"
+landingContent:
+- title: 开始操作
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: 安装 Visual Studio SDK
+      url: /visualstudio/extensibility/installing-the-visual-studio-sdk/
+  - linkListType: overview
+    links:
+    - text: 编写 Visual Studio 扩展
+      url: https://devblogs.microsoft.com/visualstudio/getting-started-writing-visual-studio-extensions
+  - linkListType: tutorial
+    links:
+    - text: 编写自己的首个扩展：Hello World
+      url: /visualstudio/extensibility/extensibility-hello-world
+- title: 扩展
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: 菜单和命令
+      url: /visualstudio/extensibility/extending-menus-and-commands
+    - text: 工具窗口
+      url: /visualstudio/extensibility/extending-and-customizing-tool-windows
+    - text: 编辑器和语言
+      url: /visualstudio/extensibility/editor-and-language-service-extensions
+    - text: 语言服务器协议
+      url: /visualstudio/extensibility/language-server-protocol
+    - text: 设置和选项
+      url: /visualstudio/extensibility/extending-user-settings-and-options
+- title: 资源
+  linkLists:
+  - linkListType: sample
+    links:
+    - text: Visual Studio 扩展性示例
+      url: https://github.com/Microsoft/VSSDK-Extensibility-Samples
+  - linkListType: learn
+    links:
+    - text: ExtendVS Gitter 社区
+      url: https://gitter.im/Microsoft/extendvs
+    - text: Visual Studio 博客扩展
+      url: https://devblogs.microsoft.com/visualstudio/tag/extensions/
+- title: 交付扩展
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: 发布扩展
+      url: /visualstudio/extensibility/walkthrough-publishing-a-visual-studio-extension
+    - text: 命令行发布
+      url: /visualstudio/extensibility/walkthrough-publishing-a-visual-studio-extension-via-command-line
+    - text: 专用库
+      url: https://devblogs.microsoft.com/visualstudio/create-a-private-gallery-for-self-hosted-visual-studio-extensions
+- title: 了解新增功能
+  linkLists:
+  - linkListType: whats-new
+    links:
+    - text: Visual Studio 2019 SDK
+      url: /visualstudio/extensibility/whats-new-visual-studio-2019-sdk
+    - text: Visual Studio 2017 SDK
+      url: /visualstudio/extensibility/what-s-new-in-the-visual-studio-2017-sdk
