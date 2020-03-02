@@ -280,12 +280,14 @@
           href: remote-debugging-aspnet-on-a-remote-iis-computer.md
         - name: 远程调试 IIS 计算机上的 ASP.NET
           href: remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md
-        - name: 远程调试 Azure 上的 ASP.NET
+        - name: 远程调试 Azure 上的 ASP.NET Core
           href: remote-debugging-azure.md
         - name: '远程调试 C# 或 Visual Basic 项目'
           href: remote-debugging-csharp.md
         - name: 远程调试 C++ 项目
           href: remote-debugging-cpp.md
+        - name: 远程调试 Linux 上的 .NET Core
+          href: remote-debugging-dotnet-core-linux-with-ssh.md
         - name: 远程调试器端口分配
           href: remote-debugger-port-assignments.md
         - name: 配置 Windows 防火墙以便进行远程调试
