@@ -53,6 +53,6 @@ ms.locfileid: "77579326"
 
 ## <a name="to-continue-or-review"></a>继续或查看
 
-- 要转到下一个教程步骤，请参阅[步骤 6：**添加计时器](../ide/step-6-add-a-timer.md)**。
+- 要转到下一个教程步骤，请参阅 **[步骤 6：添加计时器](../ide/step-6-add-a-timer.md)**。
 
 - 要返回上一个教程步骤，请参阅[步骤 4：向每个标签添加一个 Click 事件处理程序](../ide/step-4-add-a-click-event-handler-to-each-label.md)。

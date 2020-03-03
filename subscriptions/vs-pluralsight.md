@@ -66,7 +66,7 @@ ms.locfileid: "77192411"
 |             Visual Studio Enterprise (NFR<sup>1</sup> )              |      计划      | 不可用 |       NA       |
 ||
 
-<sup>1</sup>  *包括：不得转售 (NFR)、Visual Studio 行业合作伙伴 (VSIP)、BizSpark、MCT 软件和服务开发人员、MCT 软件和服务、最有价值专家 (MVP)、区域总监 (RD)、Microsoft 合作伙伴网络 (MPN)、FTE、Imagine。  
+<sup>1</sup>  *包括：不得转售 (NFR)、Visual Studio 行业合作伙伴 (VSIP)、BizSpark、MCT 软件和服务开发人员、MCT 软件和服务、最有价值专家 (MVP)、区域总监 (RD)、Microsoft 合作伙伴网络 (MPN)、FTE、Imagine*。
 
 <sup>2</sup>  所选 Visual Studio 订阅中的 Pluralsight 权益随订阅一同续订。例如，如果你的年度订阅是每年续订一次，当你续订时也会获得每一年的权益。如果是多年订阅，你在订阅期间可获得 Pluralsight 权益。如果续订多年订阅，在续订后将再次获得该权益。  
 

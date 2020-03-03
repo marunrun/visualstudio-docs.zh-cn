@@ -590,8 +590,6 @@
                   items:
                     - name: 调试 COM 服务器和容器
                       href: com-server-and-container-debugging.md
-                    - name: 使用 RPC 调试来调试 COM 客户端和服务器
-                      href: how-to-debug-com-clients-and-servers-using-rpc-debugging.md
                 - name: ActiveX 控件
                   items:
                     - name: 调试 ActiveX 控件
