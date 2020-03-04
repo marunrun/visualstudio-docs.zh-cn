@@ -10,14 +10,15 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 51f7f65dd4e4d1922663ea020e55f551245a7444
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 6a86365ffe839b45fcd09862040fb88f0d4148bc
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75596120"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634404"
 ---
 # <a name="compare-properties-and-items"></a>比较属性和项
+
 MSBuild 属性和项都用于将信息传递给任务、评估条件，以及存储可在整个项目文件中引用的值。
 
 - 属性是名称/值对。 详情请参阅 [MSBuild 属性](../msbuild/msbuild-properties.md)。
@@ -25,9 +26,11 @@ MSBuild 属性和项都用于将信息传递给任务、评估条件，以及存
 - 项是通常表示文件的对象。 项对象具有关联的元数据集合。 元数据是名称/值对。 有关详细信息，请参阅[项](../msbuild/msbuild-items.md)。
 
 ## <a name="scalars-and-vectors"></a>标量和矢量
+
 由于 MSBuild 属性是只有一个字符串值的名称/值对，所以它们通常被描述为*标量*。 由于 MSBuild 项类型是项列表，所以它们通常被描述为*矢量*。 但是实际上，属性可以表示多个值，而项类型可以有零个或一个项。
 
 ### <a name="target-dependency-injection"></a>目标依赖关系注入
+
 若要查看属性如何表示多个值，请考虑使用常见使用模式将目标添加到要生成的目标列表。 此列表通常由属性值表示，包含用分号分隔的目标名称。
 
 ```xml
@@ -56,6 +59,7 @@ MSBuild 属性和项都用于将信息传递给任务、评估条件，以及存
 从 MSBuild 4.0 开始，弃用目标依赖关系注入。 改用 `AfterTargets` 和 `BeforeTargets` 特性。 有关详细信息，请参阅[目标生成顺序](../msbuild/target-build-order.md)。
 
 ### <a name="conversions-between-strings-and-item-lists"></a>字符串和项列表之间的转换
+
 MSBuild 执行项类型之间的转换，并且需要字符串值。 若要查看项列表如何成为字符串值，请思考项类型用作 MSBuild 属性的值时，会发生什么情况：
 
 ```xml
@@ -70,6 +74,7 @@ MSBuild 执行项类型之间的转换，并且需要字符串值。 若要查�
 项类型 OutputDir 具有值为“KeyFiles\\;Certificates\\”的 `Include` 属性。 MSBuild 将此字符串分析为两项：KeyFiles\ 和 Certificates\\。 当项类型 OutputDir 用作 OutputDirList 属性的值时，MSBuild 会将项类型转换或“平展”到用分号分隔的字符串“KeyFiles\\;Certificates\\”。
 
 ## <a name="properties-and-items-in-tasks"></a>任务中的属性和项
+
 对于 MSBuild 任务，属性和项用作输入和输出。 有关详细信息，请参阅[任务](../msbuild/msbuild-tasks.md)。
 
 属性将作为特性传递给任务。 在该任务中，MSBuild 属性由其值可转换为字符串和可由字符串转化得到的属性类型表示。 受支持的属性类型包括 `bool`、`char`、`DateTime`、`Decimal`、`Double`、`int`、`string`，以及任何 <xref:System.Convert.ChangeType%2A> 可以处理的类型。
@@ -79,6 +84,7 @@ MSBuild 执行项类型之间的转换，并且需要字符串值。 若要查�
 项类型的项列表可以作为 `ITaskItem` 对象的数组传递。 从 .NET Framework 3.5 开始，可以使用 `Remove` 属性将项从目标中的项列表中删除。 因为项可从项列表中删除，所以项类型可能有零个项。 如果项列表传递给任务，则该任务中的代码应该检查这种可能性。
 
 ## <a name="property-and-item-evaluation-order"></a>属性和项的计算顺序
+
 在生成的评估阶段期间，已导入的文件将以它们的显示顺序合并到生成中。 按以下顺序，分三个阶段定义属性和项：
 
 - 按照属性的显示顺序，对其进行定义和修改。
@@ -104,6 +110,7 @@ MSBuild 执行项类型之间的转换，并且需要字符串值。 若要查�
   - 在目标内定义的属性和项将以其显示顺序进行评估。 将执行属性函数，并且在表达式内展开属性值。 也会展开项值和项转换。 属性值、项类型值和元数据值设置为已扩展的表达式。
 
 ### <a name="subtle-effects-of-the-evaluation-order"></a>计算顺序的细微效果
+
 在生成的评估阶段中，属性计算优先于项计算。 不过，属性可以具有看起来依赖于项值的值。 请考虑使用以下脚本。
 
 ```xml
@@ -179,4 +186,5 @@ KeyFileVersion: 1.0.0.3
 ```
 
 ## <a name="see-also"></a>请参阅
+
 - [高级概念](../msbuild/msbuild-advanced-concepts.md)

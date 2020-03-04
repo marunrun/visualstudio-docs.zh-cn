@@ -22,20 +22,22 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 06171f3a1543f6fa827c1b6fd477b992d099fff6
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 81a9c3b1c22277261276ced1940f1f2e83d11882
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75590470"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634248"
 ---
 # <a name="downloadfile-task"></a>DownloadFile 任务
+
 使用超文本传输协议 (HTTP) 下载指定文件。
 
 >[!NOTE]
 >DownloadFile 任务仅在 MSBuild 15.8 及更高版本中提供。
 
 ## <a name="parameters"></a>参数
+
 下表描述了 `DownloadFile` 任务的参数。
 
 |参数|描述|
@@ -49,9 +51,11 @@ ms.locfileid: "75590470"
 |`SourceUrl`|必选 `String` 参数。<br /><br /> 指定要下载的 URL。|
 
 ## <a name="remarks"></a>备注
+
 除上面列出的参数外，此任务还从 <xref:Microsoft.Build.Tasks.TaskExtension> 类继承参数，后者自身继承自 <xref:Microsoft.Build.Utilities.Task> 类。 有关这些其他参数的列表及其说明的信息，请参阅 [TaskExtension 基类](../msbuild/taskextension-base-class.md)。
 
 ## <a name="example"></a>示例
+
 以下示例在生成项目前下载文件并将其包含在 `Content` 项中。
 
 ```xml
@@ -73,5 +77,6 @@ ms.locfileid: "75590470"
 ```
 
 ## <a name="see-also"></a>请参阅
+
 - [任务](../msbuild/msbuild-tasks.md)
 - [任务参考](../msbuild/msbuild-task-reference.md)

@@ -10,20 +10,22 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: eb91ffd6ad626a148c3f3ad71c307fc0d0df2c75
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: ead738042b15c955aadb458c527253f3759b934e
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75585894"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633221"
 ---
 # <a name="msbuild-inline-tasks-with-roslyncodetaskfactory"></a>使用 RoslynCodeTaskFactory 创建 MSBuild 内联任务
+
 RoslynCodeTaskFactory 与 [CodeTaskFactory](../msbuild/msbuild-inline-tasks.md) 类似，它使用跨平台的 Roslyn 编译器来生成内存中任务程序集用作内联任务。  RoslynCodeTaskFactory 任务面向的是 .NET Standard，它可用于 .NET Framework 和 .NET Core 运行时，还可用于 Linux 和 Mac 操作系统等其他平台。
 
 >[!NOTE]
 >RoslynCodeTaskFactory 仅在 MSBuild 15.8 及更高版本中提供。
 
 ## <a name="the-structure-of-an-inline-task-with-roslyncodetaskfactory"></a>使用 RoslynCodeTaskFactory 的内联任务的结构
+
  RoslynCodeTaskFactory 内联任务的声明方式与 [CodeTaskFactory](../msbuild/msbuild-inline-tasks.md) 的相同，唯一不同之处是它们面向 .NET Standard。  内联任务和包含它的 `UsingTask` 元素通常包括在 .targets 文件中，并根据需要导入到其他项目文件  。 下面是一个基本的内联任务。 请注意，它不执行任何操作。
 
 ```xml
@@ -68,6 +70,7 @@ RoslynCodeTaskFactory 与 [CodeTaskFactory](../msbuild/msbuild-inline-tasks.md) 
 > 由 `Task` 元素包含的元素均特定于任务工厂，在本例中，即代码任务工厂。
 
 ### <a name="code-element"></a>代码元素
+
 最后一个出现在 `Task`元素内的子元素是 `Code` 元素。 `Code` 元素包含或定位你想要编译到任务中的代码。 放置于 `Code` 元素中的内容具体取决于你希望如何编写任务。
 
 `Language` 属性指定编写代码的语言。 可接受的值为 `cs`（对于 C#）或 `vb`（对于 Visual Basic）。
@@ -88,6 +91,7 @@ RoslynCodeTaskFactory 与 [CodeTaskFactory](../msbuild/msbuild-inline-tasks.md) 
 > 当在源文件中定义任务类时，类名必须符合对应的 [UsingTask](../msbuild/usingtask-element-msbuild.md) 元素的 `TaskName` 属性。
 
 ## <a name="hello-world"></a>Hello World
+
  下面是使用 RoslynCodeTaskFactory 创建的内联任务，它的性能更可靠。 HelloWorld 任务 在默认错误日志记录设备上显示“Hello, World!”，该设备通常为系统控制台或 Visual Studio **输出**窗口。 示例中包含了 `Reference` 元素，这仅用于阐释目的。
 
 ```xml
@@ -125,6 +129,7 @@ Log.LogError("Hello, world!");
 ```
 
 ## <a name="input-and-output-parameters"></a>输入和输出参数
+
  内联任务参数是 `ParameterGroup` 元素的子元素。 每个参数将定义它的元素的名称作为其名称。 以下代码定义参数 `Text`。
 
 ```xml
@@ -162,6 +167,7 @@ Log.LogError("Hello, world!");
 如果 `Code` 元素具有 `Fragment` 或 `Method` 的 `Type` 特性，则将自动为每个参数创建属性。 否则，属性必须在源代码中显示声明，并且必须与其参数定义完全匹配。
 
 ## <a name="example"></a>示例
+
  以下内联任务记录部分消息并返回字符串。
 
 ```xml
@@ -254,5 +260,6 @@ Log.LogError("Hello, world!");
 ```
 
 ## <a name="see-also"></a>请参阅
+
 - [任务](../msbuild/msbuild-tasks.md)
 - [演练：创建内联任务](../msbuild/walkthrough-creating-an-inline-task.md)

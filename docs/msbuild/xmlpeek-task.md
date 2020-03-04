@@ -16,17 +16,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e10cf26ad23e6fe4c881f68ad87bc80d04f2cf8a
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 59bc42bd438d80bbaf0ff45cd1c95447961cd437
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75590964"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77630621"
 ---
 # <a name="xmlpeek-task"></a>XmlPeek 任务
+
 从 XML 文件返回 XPath 查询指定的值。
 
 ## <a name="parameters"></a>参数
+
  下表描述了 `XmlPeek` 任务的参数。
 
 |参数|描述|
@@ -38,8 +40,10 @@ ms.locfileid: "75590964"
 |`XmlInputPath`|可选 <xref:Microsoft.Build.Framework.ITaskItem> 参数。<br /><br /> 指定 XML 输入为文件路径。|
 
 ## <a name="remarks"></a>备注
+
  除了具有表中列出的参数外，此任务还将从本身继承自 <xref:Microsoft.Build.Utilities.Task> 类的 <xref:Microsoft.Build.Tasks.TaskExtension> 类继承参数。 有关这些其他参数的列表及其说明的信息，请参阅 [TaskExtension 基类](../msbuild/taskextension-base-class.md)。
 
 ## <a name="see-also"></a>请参阅
+
 - [任务](../msbuild/msbuild-tasks.md)
 - [任务参考](../msbuild/msbuild-task-reference.md)

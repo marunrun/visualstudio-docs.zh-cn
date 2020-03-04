@@ -15,14 +15,15 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b71f214a745222956c7dc9d582cc7fb2f1cfc427
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.openlocfilehash: bf982200b8e65e404325bdbd189ff3b0f2daebac
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77579697"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634235"
 ---
 # <a name="endtrackingcontext"></a>EndTrackingContext
+
 结束当前跟踪上下文。
 
 ## <a name="syntax"></a>语法
@@ -32,10 +33,13 @@ HRESULT WINAPI EndTrackingContext();
 ```
 
 ## <a name="return-value"></a>返回值
+
 如果跟踪上下文结束，返回带 SUCCEEDED  位组的 HRESULT  。
 
 ## <a name="requirements"></a>要求
+
 **标头：** FileTracker.h 
 
 ## <a name="see-also"></a>请参阅
+
 - [StartTrackingContext](../msbuild/starttrackingcontext.md)

@@ -15,14 +15,15 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5b1eb28d5a54af1708fa8d3ea7a12887174a15bb
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.openlocfilehash: 102f46ec639719bb2bec70a38c6c7177c63793c1
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77579585"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77632324"
 ---
 # <a name="setthreadcount"></a>SetThreadCount
+
 设置全局线程计数，并将该计数分配给当前线程。
 
 ## <a name="syntax"></a>语法
@@ -32,12 +33,15 @@ HRESULT WINAPI SetThreadCount(int threadCount);
 ```
 
 #### <a name="parameters"></a>参数
+
 [in] `threadCount`
 
  要使用的线程数。
 
 ## <a name="return-value"></a>返回值
+
  线程数更新后，则返回带 SUCCEEDED 位集的 HRESULT   。
 
 ## <a name="requirements"></a>要求
+
  **标头：** FileTracker.h 

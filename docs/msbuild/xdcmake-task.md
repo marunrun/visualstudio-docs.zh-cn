@@ -19,22 +19,25 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 797a2f80c4e634b3dcb3b0fa32c46476e32cc334
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.openlocfilehash: 3c41bfc2015f29cbb73b33df3594b3a3430af3f3
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77578128"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77630647"
 ---
 # <a name="xdcmake-task"></a>XDCMake 任务
+
 包装 XML 文档工具 (xdcmake.exe  )，它将 XML 文档注释 (.xdc  ) 文件合并到一个 .xml  文件中。
 
  如果在 C++ 源代码中提供文档注释，并使用 [/doc](/cpp/build/reference/doc-process-documentation-comments-c-cpp) 编译器选项进行编译，就会创建“.xdc”  文件。 有关详细信息，请参阅 [XDCMake 参考](/cpp/build/reference/xdcmake-reference)、[XML 文档生成器工具属性页](/cpp/build/reference/xml-document-generator-tool-property-pages)和 xdcmake.exe  的命令行帮助选项 (/?  )。
 
 ## <a name="remarks"></a>备注
+
  默认情况下，xdcmake.exe  工具支持几个命令行选项。 如果你指定 **/old** 命令行选项，此工具还支持其他选项。
 
 ## <a name="parameters"></a>参数
+
  下表介绍了 **XDCMake** 任务的参数。
 
 |参数|描述|
@@ -50,4 +53,5 @@ ms.locfileid: "77578128"
 |**TrackerLogDirectory**|可选 **String** 参数。<br /><br /> 指定跟踪器日志目录。|
 
 ## <a name="see-also"></a>请参阅
+
 - [任务参考](../msbuild/msbuild-task-reference.md)

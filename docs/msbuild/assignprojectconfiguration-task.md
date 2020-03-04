@@ -13,17 +13,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 95f61858bfcdf0f54c4f786e1b1064707b57c68c
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: b5159b73058c73c925cae644c2e3ddd2bc84ac41
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75593442"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634547"
 ---
 # <a name="assignprojectconfiguration-task"></a>AssignProjectConfiguration 任务
+
 此任务接受列表配置字符串，并将其分配给指定的项目。
 
 ## <a name="task-parameters"></a>任务参数
+
  下表描述了 `AssignProjectConfiguration` 任务的参数。
 
 |参数|描述|
@@ -41,8 +43,10 @@ ms.locfileid: "75593442"
 |`UnassignedProjects`|可选的 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 输出参数。<br /><br /> 包含项目引用项的列表，其中这些项无法使用输出的预解析列表进行解析。|
 
 ## <a name="remarks"></a>备注
+
  除上面列出的参数外，此任务还从 <xref:Microsoft.Build.Tasks.TaskExtension> 类继承参数，后者自身继承自 <xref:Microsoft.Build.Utilities.Task> 类。 有关这些其他参数的列表及其说明的信息，请参阅 [TaskExtension 基类](../msbuild/taskextension-base-class.md)。
 
 ## <a name="see-also"></a>请参阅
+
 - [任务](../msbuild/msbuild-tasks.md)
 - [任务参考](../msbuild/msbuild-task-reference.md)

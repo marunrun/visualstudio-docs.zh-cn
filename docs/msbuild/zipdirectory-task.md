@@ -22,20 +22,22 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dd4bf72509610e9d397e4b208294112fcc0975b4
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 8c9a51fe097eb110e44b3f4bd932a26f4efb6ea6
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75588325"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77630634"
 ---
 # <a name="zipdirectory-task"></a>ZipDirectory 任务
+
 根据目录内容创建 .zip 存档。 
 
 >[!NOTE]
 >仅在 MSBuild 15.8 及更高版本中提供 `ZipDirectory` 任务。
 
 ## <a name="parameters"></a>参数
+
  下表描述了 `ZipDirectory` 任务的参数。
 
 |参数|描述|
@@ -45,9 +47,11 @@ ms.locfileid: "75588325"
 |`SourceDirectory`|必选 <xref:Microsoft.Build.Framework.ITaskItem> 参数。<br /><br /> 指定要从中创建 .zip 存档的目录。 |
 
 ## <a name="remarks"></a>备注
+
  除上面列出的参数外，此任务还从 <xref:Microsoft.Build.Tasks.TaskExtension> 类继承参数，后者自身继承自 <xref:Microsoft.Build.Utilities.Task> 类。 有关这些其他参数的列表及其说明的信息，请参阅 [TaskExtension 基类](../msbuild/taskextension-base-class.md)。
 
 ## <a name="example"></a>示例
+
  以下示例在生成项目后基于输出目录创建 .zip 存档。 
 
 ```xml
@@ -63,5 +67,6 @@ ms.locfileid: "75588325"
 ```
 
 ## <a name="see-also"></a>请参阅
+
 - [任务](../msbuild/msbuild-tasks.md)
 - [任务参考](../msbuild/msbuild-task-reference.md)

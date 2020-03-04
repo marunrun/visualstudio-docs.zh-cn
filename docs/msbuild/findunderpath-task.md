@@ -18,17 +18,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 33912df490b148c91c2a0d152f979bd6149d8ae3
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 4d97b727dcba8cd16fe97ee33764947797c36db7
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75566067"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634131"
 ---
 # <a name="findunderpath-task"></a>FindUnderPath 任务
+
 确定指定项集合中的哪些项具有指定文件夹及其子文件夹的路径。
 
 ## <a name="parameters"></a>参数
+
 下表描述了 `FindUnderPath` 任务的参数。
 
 |参数|描述|
@@ -40,9 +42,11 @@ ms.locfileid: "75566067"
 |`UpdateToAbsolutePaths`|可选 `Boolean` 参数。<br /><br /> 如果为 true，则输出项的路径会更新为绝对路径。|
 
 ## <a name="remarks"></a>备注
+
 除上面列出的参数外，此任务还从 <xref:Microsoft.Build.Tasks.TaskExtension> 类继承参数，后者自身继承自 <xref:Microsoft.Build.Utilities.Task> 类。 有关这些其他参数的列表及其说明的信息，请参阅 [TaskExtension 基类](../msbuild/taskextension-base-class.md)。
 
 ## <a name="example"></a>示例
+
 以下示例使用 `FindUnderPath` 任务确定 `MyFiles` 项中所包含的文件是否具有位于 `SearchPath` 属性指定的路径下的路径。 任务完成后，`FilesNotFoundInPath` 项包含 File1.txt 文件，`FilesFoundInPath` 项包含 File2.txt 文件   。
 
 ```xml
@@ -73,6 +77,7 @@ ms.locfileid: "75566067"
 ```
 
 ## <a name="see-also"></a>请参阅
+
 - [任务参考](../msbuild/msbuild-task-reference.md)
 - [任务](../msbuild/msbuild-tasks.md)
 - [MSBuild 概念](../msbuild/msbuild-concepts.md)

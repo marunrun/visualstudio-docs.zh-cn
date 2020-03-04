@@ -20,20 +20,22 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 31c256e02901d4f7dd7de6f14e9f650626feac25
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 217e045a731efa1fe3ba1dda63e89eca685d4b75
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75565781"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77630777"
 ---
 # <a name="xsd-task"></a>XSD 任务
+
 包装从源生成架构或类文件的 XML 架构定义工具 (xsd.exe)。 
 
 > [!NOTE]
 > 自 Visual Studio 2017 开始，已弃用对 xsd.exe 的 C++ 项目支持  。 仍可通过向 GAC 手动添加 CppCodeProvider.dll 来使用 Microsoft.VisualC.CppCodeProvider   。
 
 ## <a name="parameters"></a>参数
+
  下表介绍了 **XSD** 任务的参数。
 
 - **AdditionalOptions**
@@ -87,4 +89,5 @@ ms.locfileid: "75565781"
      指定跟踪器日志目录。
 
 ## <a name="see-also"></a>请参阅
+
 - [任务参考](../msbuild/msbuild-task-reference.md)

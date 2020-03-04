@@ -18,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 397366a7dac601cd11dc1c70efc352edf303a92e
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.openlocfilehash: 133048a5bb8103c681d8e2b84e68033c486109e1
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77579577"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77632285"
 ---
 # <a name="signfile-task"></a>SignFile 任务
 
@@ -74,5 +74,6 @@ ms.locfileid: "77579577"
 > 证书指纹是该证书的 SHA-1 哈希。 有关详细信息，请参阅[获取受信任的根 CA 证书的 SHA-1 哈希](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc733076\(v\=ws.10\))。 如果复制并粘贴来自证书详细信息的缩略图，请确保不包含额外的 (3F) 不可见字符，它可能会阻止 `SignFile` 查找证书。
 
 ## <a name="see-also"></a>请参阅
+
 - [任务参考](../msbuild/msbuild-task-reference.md)
 - [任务](../msbuild/msbuild-tasks.md)

@@ -11,14 +11,15 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1706d0e82139da5962fbb43610cdecd6b1477ad1
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 13c33f0ef43707390aa32d4c26c0380a8a32883e
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75590483"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633013"
 ---
 # <a name="override-toolsversion-settings"></a>重写 ToolsVersion 设置
+
 可使用以下三种方式之一来更改项目和解决方案的工具集：
 
 1. 在从命令行生成项目或解决方案时，使用 `-ToolsVersion` 开关（或简称为 `-tv`）。
@@ -28,6 +29,7 @@ ms.locfileid: "75590483"
 3. 设置解决方案中某个项目的 `$(ProjectToolsVersion)` 参数。 使用此方法，可以在解决方案中使用不同于其他项目的工具集版本生成项目。
 
 ## <a name="override-the-toolsversion-settings-of-projects-and-solutions-on-command-line-builds"></a>在命令行生成上替代项目和解决方案的 ToolsVersion 设置
+
  虽然 Visual Studio 项目通常使用在项目文件中指定的 ToolsVersion 生成，但也可以使用命令行上的 `-ToolsVersion`（或 `-tv`）开关来替代该值，并用不同的工具集来生成所有项目及其项目到项目依赖项。 例如：
 
 ```cmd
@@ -39,6 +41,7 @@ msbuild.exe someproj.proj -tv:12.0 -p:Configuration=Debug
  使用命令行上的 `-tv` 开关时，可以选择在个别项目中使用 `$(ProjectToolsVersion)` 属性，使用与解决方案中的其他项目不同的 ToolsVersion 值来生成这些项目。
 
 ## <a name="override-the-toolsversion-settings-using-the-toolsversion-parameter-of-the-msbuild-task"></a>使用 MSBuild 任务的 ToolsVersion 参数替代 ToolsVersion 设置
+
  MSBuild 任务是一个项目生成另一个项目的主要方式。 为了使 MSBuild 任务能够使用与项目中指定的值不同的 ToolsVersion 来生成项目，它提供了名为 `ToolsVersion` 的可选任务参数。 下面的示例演示如何使用此参数：
 
 1. 创建一个名为“projectA.proj”  的文件，在其中包含以下代码：
@@ -95,6 +98,7 @@ msbuild.exe someproj.proj -tv:12.0 -p:Configuration=Debug
     ```
 
 ## <a name="order-of-precedence"></a>优先级顺序
+
  用于确定 `ToolsVersion` 的优先级顺序从高到低是：
 
 1. 用于生成项目的 MSBuild 任务的 `ToolsVersion` 属性（如果有）。
@@ -124,6 +128,7 @@ msbuild.exe someproj.proj -tv:12.0 -p:Configuration=Debug
     4. 否则，使用当前 `ToolsVersion`。
 
 ## <a name="see-also"></a>请参阅
+
 - [多定向](../msbuild/msbuild-multitargeting-overview.md)
 - [MSBuild 概念](../msbuild/msbuild-concepts.md)
 - [工具集 (ToolsVersion)](../msbuild/msbuild-toolset-toolsversion.md)

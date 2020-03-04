@@ -16,17 +16,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 58410d1a2dbb2fc477915ac78e30a67b525e59f0
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: c3dc771f16c7077549ba06d5cdda422319554d40
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75594950"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77631700"
 ---
 # <a name="taskextension-base-class"></a>TaskExtension 基类
+
 很多任务继承自 <xref:Microsoft.Build.Tasks.TaskExtension> 类，该类本身继承自 <xref:Microsoft.Build.Utilities.Task> 类。 此继承链向从它们派生的任务添加了几个参数。 本文档中列出了这些参数。
 
 ## <a name="parameters"></a>参数
+
  下表介绍基类的参数。
 
 |参数|描述|
@@ -38,5 +40,6 @@ ms.locfileid: "75594950"
 |<xref:Microsoft.Build.Tasks.TaskExtension.Log%2A>|可选 <xref:Microsoft.Build.Utilities.TaskLoggingHelper> 只读参数。<br /><br /> 获取包含任务日志记录方法的 `TaskLoggingHelperExtension` 对象。|
 
 ## <a name="see-also"></a>请参阅
+
 - [任务参考](../msbuild/msbuild-task-reference.md)
 - [任务](../msbuild/msbuild-tasks.md)

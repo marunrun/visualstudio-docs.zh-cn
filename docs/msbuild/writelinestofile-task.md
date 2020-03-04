@@ -18,17 +18,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cf7f36d0876b1f757dee1a752c8461745783a21e
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: b78ac2347a5143aeb532a4bcc294551430584b4a
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75595327"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77630660"
 ---
 # <a name="writelinestofile-task"></a>WriteLinesToFile 任务
+
 将指定项的路径写入指定的文本文件。
 
 ## <a name="task-parameters"></a>任务参数
+
  下表描述了 `WriteLinestoFile` 任务的参数。
 
 |参数|描述|
@@ -40,11 +42,13 @@ ms.locfileid: "75595327"
 |`WriteOnlyWhenDifferent`|可选 `Boolean` 参数。<br /><br /> 如果为 `true`，便会指定目标文件（若有），并先读取它来与写入的任务进行比较。 如果完全相同，此文件就不会写入到磁盘中，并且会保留时间戳。|
 
 ## <a name="remarks"></a>备注
+
  如果 `Overwrite` 为 `true`，创建一个新文件，向其中写入内容，然后关闭文件。 如果目标文件已存在，则覆盖该文件。 如果 `Overwrite` 为 `false`会将内容追加到文件中，如果目标文件还不存在则创建该文件。
 
  除上面列出的参数外，此任务还从 <xref:Microsoft.Build.Tasks.TaskExtension> 类继承参数，后者自身继承自 <xref:Microsoft.Build.Utilities.Task> 类。 有关这些其他参数的列表及其说明的信息，请参阅 [TaskExtension 基类](../msbuild/taskextension-base-class.md)。
 
 ## <a name="example"></a>示例
+
  以下示例使用 `WriteLinesToFile` 任务，将 `MyItems` 项集合中项的路径写入到 `MyTextFile` 项集合指定的文件中。
 
 ```xml
@@ -92,5 +96,6 @@ dotnet %~dp0$(AssemblyName).dll %*
 ```
 
 ## <a name="see-also"></a>请参阅
+
 - [任务](../msbuild/msbuild-tasks.md)
 - [任务参考](../msbuild/msbuild-task-reference.md)

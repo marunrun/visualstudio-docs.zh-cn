@@ -19,17 +19,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 59523e3f6b12eb5921235efcf15d7937a14e7247
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: c5df538e7eb86a20dfc06e6e6558bded577ba3d2
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75595093"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77632376"
 ---
 # <a name="setenv-task"></a>SetEnv 任务
+
 设置或删除指定环境变量的值。
 
 ## <a name="parameters"></a>参数
+
  下表描述了 SetEnv 任务的参数  。
 
 |参数|描述|
@@ -41,4 +43,5 @@ ms.locfileid: "75595093"
 |**值**|可选 **String** 参数。<br /><br /> 分配给 Name 参数指定的环境变量的值  。 如果 Value 为空并且该变量存在，则删除该变量  。 如果该变量不存在，即使无法执行该操作也不会出现任何错误。<br /><br /> 有关详细信息，请参阅 [Environment::SetEnvironmentVariable 方法](xref:System.Environment.SetEnvironmentVariable%2A)。|
 
 ## <a name="see-also"></a>请参阅
+
 - [任务参考](../msbuild/msbuild-task-reference.md)

@@ -3,15 +3,15 @@ title: 跟踪用户分配和处理订单 | Visual Studio Marketplace
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 07/23/2019
+ms.date: 03/02/2020
 ms.topic: conceptual
 description: 了解管理员跟踪用户分配和处理订单的职责。
-ms.openlocfilehash: bf7fcdb2fae2ad6d354c4320ec26c4f1025766dd
-ms.sourcegitcommit: bb72ce6ec173f3ae06c7ae57322c43690f27553c
+ms.openlocfilehash: c7dc2b55b3e9d1d1aea6b2712dbeb96316f48e7a
+ms.sourcegitcommit: 9eff8371b7a79a637ebb6850f775dd3eed343d8b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76967328"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78235220"
 ---
 # <a name="track-user-assignment-and-process-orders"></a>跟踪用户分配和处理订单
 Visual Studio 订阅管理员需要跟踪 Visual Studio 使用情况，并按批量许可协议或 Microsoft 产品和服务协议规定的计划处理因使用量增加而产生的订单。 新的 Visual Studio 订阅管理门户提供一个有用的跟踪器，可显示可用和已用的许可证，从而简化了这一过程。
@@ -36,6 +36,12 @@ Visual Studio 订阅管理员需要跟踪 Visual Studio 使用情况，并按批
 ## <a name="enterprise-mpsa-and-select-agreements"></a>企业协议、MPSA 和 Select 协议
 Microsoft 企业协议 (EA)、MPSA 和 Select Plus 协议允许你随时间推移灵活地使用和授权 Visual Studio 软件。 Visual Studio 管理员必须制定年度校准订单，使软件许可证数量在协议期间达到规定的最大使用量。
 
+## <a name="see-also"></a>请参阅
+- [Visual Studio 文档](https://docs.microsoft.com/visualstudio/)
+- [Azure DevOps 文档](https://docs.microsoft.com/azure/devops/)
+- [Azure 文档](https://docs.microsoft.com/azure/)
+- [Microsoft 365 文档](https://docs.microsoft.com/microsoft-365/)
+
 ## <a name="next-steps"></a>后续步骤
 详细了解管理员的职责：
 - [管理员职责](admin-responsibilities.md)
@@ -43,7 +49,3 @@ Microsoft 企业协议 (EA)、MPSA 和 Select Plus 协议允许你随时间推�
 - [管理大型团队和外部承包商](manage-teams.md)
 - 使用[最大用量](maximum-usage.md)跟踪购买承诺
 
-## <a name="see-also"></a>请参阅
-- [Visual Studio 文档](/visualstudio/)
-- [Azure 文档](/azure/)
-- [Azure DevOps](/azure/devops/)

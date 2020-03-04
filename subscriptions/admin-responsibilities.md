@@ -6,12 +6,12 @@ manager: lank
 ms.date: 07/20/2019
 ms.topic: conceptual
 description: 了解订阅管理员的职责。
-ms.openlocfilehash: 05b1a66eb6589f1d0d9502a754f67d0f9c31424f
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 1faa257278d1a477720d73271c6487d5d1618d8e
+ms.sourcegitcommit: 9eff8371b7a79a637ebb6850f775dd3eed343d8b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75851882"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78235153"
 ---
 # <a name="overview-of-administrator-responsibilities"></a>管理员职责概述
 管理员可以管理组织的订阅。  管理员角色还负责确保按照许可条款管理订阅。 本文概述了管理员角色的职责、权益和限制。
@@ -34,6 +34,12 @@ Visual Studio 管理员有四大职责：
 | 不能用于生产环境 | Visual Studio 订阅软件不能用于生产环境，包括最终用户因验收测试或反馈以外的目的访问的所有环境，连接到生产数据库的环境，支持灾难恢复或生产备份的环境，或用于在活动高峰期间进行生产的环境。 特例包括 [Visual Studio 授权白皮书](https://visualstudio.microsoft.com/wp-content/uploads/2019/06/Visual-Studio-Licensing-Whitepaper-May-2019.pdf)中规定的某些订阅级别的特定权益。                                                                                            |
 | 许可证重新分配                     | 用户离开团队且不再需要许可证时，你可以在 90 天后重新分配该许可证。 重新分配许可证时，已在使用的任何产品密钥仍可用但不会被替换。 组织若具有企业协议 (EA)，将重置供原始用户使用的任何权益（如 Pluralsight 培训）。                                                                                                                                                                                                                                                 |
 | 最终用户特例                  | 在软件开发项目末期，最终用户通常会检查应用程序，确定其是否符合必要的发布条件。 此过程称为用户验收测试 (UAT)。 业务发起人或产品经理等团队成员可以充当最终用户代理。 没有 Visual Studio 订阅的最终用户如果以其他符合所有 Visual Studio 许可条款的方式使用软件，则可访问软件进行 UAT。 仅在极少数情况下，一些主要职责是设计、开发或测试软件的人员也有资格充当“最终用户”。 |
+
+## <a name="see-also"></a>请参阅
+- [Visual Studio 文档](https://docs.microsoft.com/visualstudio/)
+- [Azure DevOps 文档](https://docs.microsoft.com/azure/devops/)
+- [Azure 文档](https://docs.microsoft.com/azure/)
+- [Microsoft 365 文档](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>后续步骤
 详细了解管理员的职责：

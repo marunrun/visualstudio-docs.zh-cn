@@ -30,17 +30,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 31bad6dfd0c336e4535e446d1167cb9fd6874972
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 0f954be3a77e42ea4323255f978f6602a70c9725
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592199"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633572"
 ---
 # <a name="link-task"></a>Link 任务
+
 包装 Microsoft C++ 链接器工具，link.exe  。 链接器工具将通用对象文件格式 (COFF) 对象文件和库链接起来，以创建可执行 (.exe) 文件或动态链接库 (DLL)  。 有关详细信息，请参阅[链接器选项](/cpp/build/reference/linker-options)。
 
 ## <a name="parameters"></a>参数
+
  下表描述了 Link 任务的参数  。 大多数任务参数和若干组参数都对应于命令行选项。
 
 - **AdditionalDependencies**
@@ -924,4 +926,5 @@ ms.locfileid: "75592199"
   有关详细信息，请参阅 [/VERSION（版本信息）](/cpp/build/reference/version-version-information)。
 
 ## <a name="see-also"></a>请参阅
+
 - [任务参考](../msbuild/msbuild-task-reference.md)

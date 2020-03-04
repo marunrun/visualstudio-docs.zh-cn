@@ -19,20 +19,23 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 66b1bf1eb222d70c18bfb94c65dddd2903864c68
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: a2247240ae0992c8275520ec5d7bf94d98ae1053
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75591107"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77631206"
 ---
 # <a name="vcmessage-task"></a>VCMessage 任务
+
 记录生成期间的警告消息和错误消息。
 
 ## <a name="remarks"></a>备注
+
  此任务可帮助实现 C++ 的 MSBuild 项目，不能由用户调用。 有关详细信息，请参阅 <xref:Microsoft.Build.Utilities.TaskLoggingHelper>。
 
 ## <a name="parameters"></a>参数
+
  下表描述了 VCMessage 任务的参数  。
 
 |参数|描述|
@@ -42,4 +45,5 @@ ms.locfileid: "75591107"
 |**Type**|可选 **String** 参数。<br /><br /> 指定要发出的消息类型。 指定“Warning”发出一条警告消息，或指定“Error”发出一条错误消息。|
 
 ## <a name="see-also"></a>请参阅
+
 - [任务参考](../msbuild/msbuild-task-reference.md)

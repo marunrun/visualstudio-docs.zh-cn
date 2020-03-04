@@ -21,17 +21,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 42fcd289f5258fde7ae8f17a9e19a25427fe6885
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+ms.openlocfilehash: b79bd8eb3f7d813e3acd091ce5f2ffbc7b3eeb49
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2020
-ms.locfileid: "77278354"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77632753"
 ---
 # <a name="resolveassemblyreference-task"></a>ResolveAssemblyReference 任务
+
 确定依赖指定程序集的所有程序集，其中包括第二级和第 `n` 级的依赖项。
 
 ## <a name="parameters"></a>参数
+
  下表描述了 `ResolveAssemblyReference` 任务的参数。
 
 |参数|描述|
@@ -78,6 +80,7 @@ ms.locfileid: "77278354"
 |`TargetProcessorArchitecture`|可选 `String` 参数。<br /><br /> 首选的目标处理器架构。 用于解析全局程序集缓存 (GAC) 引用。<br /><br /> 此参数可以具有 `x86`、`IA64` 或 `AMD64` 的值。<br /><br /> 如果缺少此参数，则该任务首先考虑与当前正在运行的进程架构匹配的程序集。 如果未找到程序集，该任务将考虑位于 GAC 中 `ProcessorArchitecture` 值为 `MSIL` 或没有 `ProcessorArchitecture` 值的程序集。|
 
 ## <a name="warnings"></a>警告
+
  将记录以下警告：
 
 - `ResolveAssemblyReference.TurnOnAutoGenerateBindingRedirects`
@@ -101,8 +104,10 @@ ms.locfileid: "77278354"
 - `ResolveAssemblyReference.UnificationByFrameworkRetarget`
 
 ## <a name="remarks"></a>备注
+
  除上面列出的参数外，此任务还从 <xref:Microsoft.Build.Tasks.TaskExtension> 类继承参数，后者自身继承自 <xref:Microsoft.Build.Utilities.Task> 类。 有关这些其他参数的列表及其说明的信息，请参阅 [TaskExtension 基类](../msbuild/taskextension-base-class.md)。
 
 ## <a name="see-also"></a>请参阅
+
 - [任务](../msbuild/msbuild-tasks.md)
 - [任务参考](../msbuild/msbuild-task-reference.md)

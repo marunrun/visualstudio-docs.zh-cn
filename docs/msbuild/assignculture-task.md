@@ -18,17 +18,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 393077d6391a5c1f5f4088773013538efbedc9f7
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.openlocfilehash: aa9f7bb47efefa3f7a1d4cf52cbfa5891602956f
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77578705"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634560"
 ---
 # <a name="assignculture-task"></a>AssignCulture 任务
+
 此任务接受文件名中可能包含有效 .NET 区域性标识符字符串的项的列表，并且生成包含相应的区域性标识符且名为 `Culture` 的元数据的项。 例如，文件名 Form1.fr-fr.resx 具有嵌入的区域性标识符“fr-fr”，因此该任务会生成具有相同文件名的项，其中元数据 `Culture` 等于 `fr-fr`  。 该任务还会生成文件名中删除了区域性的文件名列表。
 
 ## <a name="task-parameters"></a>任务参数
+
 下表描述了 `AssignCulture` 任务的参数。
 
 |参数|描述|
@@ -40,9 +42,11 @@ ms.locfileid: "77578705"
 |`Files`|必选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 指定要为其分配区域性并且嵌入了区域性名称的文件的列表。|
 
 ## <a name="remarks"></a>备注
+
 除上面列出的参数外，此任务还从 <xref:Microsoft.Build.Tasks.TaskExtension> 类继承参数，后者自身继承自 <xref:Microsoft.Build.Utilities.Task> 类。 有关这些其他参数的列表及其说明的信息，请参阅 [TaskExtension 基类](../msbuild/taskextension-base-class.md)。
 
 ## <a name="example"></a>示例
+
  以下示例使用 `ResourceFiles` 项集合执行 `AssignCulture` 任务。
 
 ```xml
@@ -78,5 +82,6 @@ ms.locfileid: "77578705"
 |`OutCultureNeutralAssignedFiles`|*MyResource1.resx* (Culture="fr")<br /><br /> *MyResource2.XX.resx*（无其他元数据）|
 
 ## <a name="see-also"></a>请参阅
+
 - [任务](../msbuild/msbuild-tasks.md)
 - [任务参考](../msbuild/msbuild-task-reference.md)

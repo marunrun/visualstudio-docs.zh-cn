@@ -10,12 +10,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: afa29a2fa3d853e61dbbc26c01d389e57116a1a5
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 0b3fcea8d073b4c40685d41b7432f1e24662a7ad
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75593845"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633182"
 ---
 # <a name="msbuild-targets"></a>MSBuild 目标
 
@@ -105,6 +105,7 @@ Reference: 4.0
  如果所有输出项都是最新的，则 MSBuild 将跳过目标，这可以显著加快生成速度。 这称为目标的增量生成。 如果只有部分文件为最新，则 MSBuild 将执行不包含最新项的目标。 这称为目标的部分增量生成。 有关详细信息，请参阅[增量生成](../msbuild/incremental-builds.md)。
 
 ## <a name="default-build-targets"></a>默认生成目标
+
 下面列出了 Microsoft.Common.CurrentVersion.Targets 中的公共目标。
 
 ```

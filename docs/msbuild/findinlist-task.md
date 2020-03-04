@@ -16,17 +16,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 650683c047f7df6422e25ef5b23201a2660b3125
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 915265a775f572467ad1296499bdd3201adc1f8b
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75591120"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634144"
 ---
 # <a name="findinlist-task"></a>FindInList 任务
+
 在指定的列表中查找具有匹配的 itemspec 的项。
 
 ## <a name="parameters"></a>参数
+
  下表描述了 [FindInList 任务](../msbuild/findinlist-task.md)的参数。
 
 |参数|描述|
@@ -39,8 +41,10 @@ ms.locfileid: "75591120"
 |`MatchFileNameOnly`|可选 `Boolean` 参数。<br /><br /> 如果为 `true`，只需对 itemspec 的文件名部分进行匹配；否则对整个 itemspec 进行匹配。 默认值是 `true`。|
 
 ## <a name="remarks"></a>备注
+
  除上面列出的参数外，此任务还从 <xref:Microsoft.Build.Tasks.TaskExtension> 类继承参数，后者自身继承自 <xref:Microsoft.Build.Utilities.Task> 类。 有关这些其他参数的列表及其说明的信息，请参阅 [TaskExtension 基类](../msbuild/taskextension-base-class.md)。
 
 ## <a name="see-also"></a>请参阅
+
 - [任务](../msbuild/msbuild-tasks.md)
 - [任务参考](../msbuild/msbuild-task-reference.md)

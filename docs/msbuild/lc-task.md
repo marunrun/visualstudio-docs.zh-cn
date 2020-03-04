@@ -18,17 +18,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 86525b2c4ddcf36ca85feee31f89f0003f1f9775
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 8cea0ca4e6562ccc626bf52ad74dfa75b4f118f9
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75590821"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633598"
 ---
 # <a name="lc-task"></a>LC 任务
+
 包装 LC.exe 文件，它可从 .licx 文件生成 .license 文件    。 有关 LC.exe 的详细信息，请参阅 [Lc.exe（许可证编译器）](/dotnet/framework/tools/lc-exe-license-compiler)  。
 
 ## <a name="parameters"></a>参数
+
 下表描述了 `LC` 任务的参数。
 
 |参数|描述|
@@ -44,6 +46,7 @@ ms.locfileid: "75590821"
  除上面列出的参数外，此任务还从 <xref:Microsoft.Build.Tasks.ToolTaskExtension> 类继承参数，后者自身继承自 <xref:Microsoft.Build.Utilities.ToolTask> 类。 有关这些其他参数的列表及其说明，请参阅 [ToolTaskExtension 基类](../msbuild/tooltaskextension-base-class.md)。
 
 ## <a name="example"></a>示例
+
 下例使用 `LC` 任务来编译许可证。
 
 ```xml
@@ -67,5 +70,6 @@ ms.locfileid: "75590821"
 ```
 
 ## <a name="see-also"></a>请参阅
+
 - [任务](../msbuild/msbuild-tasks.md)
 - [任务参考](../msbuild/msbuild-task-reference.md)

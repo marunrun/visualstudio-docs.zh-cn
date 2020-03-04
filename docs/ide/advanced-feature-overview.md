@@ -7,12 +7,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f3ece317d753cb5c4b0b4e5b0e02707a088e8917
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: f65ce2b986114dc553b87db846262c931d74b4c0
+ms.sourcegitcommit: 9eff8371b7a79a637ebb6850f775dd3eed343d8b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75591731"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78235194"
 ---
 # <a name="features-of-visual-studio"></a>Visual Studio 的功能
 
@@ -84,7 +84,7 @@ Web 推动着现代社会前进，Visual Studio 可以帮助你编写 Web 应用
 
 - 通过使用 [Visual Studio Tools for Unity](../cross-platform/visual-studio-tools-for-unity.md)，在 C# 中生成 2D 和 3D 游戏。
 
-- 生成适用于 iOS、Android 和 Windows 设备的本机 C++ 应用。 通过[适用于跨平台开发的 C++](../cross-platform/visual-cpp-for-cross-platform-mobile-development.md)，在专用于 iOS、Android 和 Windows 的库中分享通用代码。
+- 生成适用于 iOS、Android 和 Windows 设备的本机 C++ 应用。 通过[适用于跨平台开发的 C++](/cpp/cross-platform/visual-cpp-for-cross-platform-mobile-development)，在专用于 iOS、Android 和 Windows 的库中分享通用代码。
 
 - 通过 [Android 仿真器](../cross-platform/visual-studio-emulator-for-android.md)部署、测试和调试 Android 应用。
 

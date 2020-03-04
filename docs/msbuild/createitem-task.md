@@ -18,20 +18,22 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6b722604249b9c395f06bb038102d731fafe2efc
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 4364e6c3f637fdf2c3e02a52d3163e5cdd8a5861
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75590067"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634326"
 ---
 # <a name="createitem-task"></a>CreateItem 任务
+
 使用输入项填充项集合。 这会使项从一个列表复制到另一个列表。
 
 > [!NOTE]
 > 此任务已弃用。 从 .NET Framework 3.5 开始，项目组可放置在[目标](../msbuild/target-element-msbuild.md)元素内。 有关详细信息，请参阅[项](../msbuild/msbuild-items.md)。
 
 ## <a name="attributes"></a>特性
+
  下表描述了 `CreateItem` 任务的参数。
 
 |参数|描述|
@@ -42,9 +44,11 @@ ms.locfileid: "75590067"
 |`PreserveExistingMetadata`|可选 `Boolean` 参数。<br /><br /> 如果为 `True`，则仅应用其他元数据（如果尚不存在）。|
 
 ## <a name="remarks"></a>备注
+
  除上面列出的参数外，此任务还从 <xref:Microsoft.Build.Tasks.TaskExtension> 类继承参数，后者自身继承自 <xref:Microsoft.Build.Utilities.Task> 类。 有关这些其他参数的列表及其说明的信息，请参阅 [TaskExtension 基类](../msbuild/taskextension-base-class.md)。
 
 ## <a name="example"></a>示例
+
  以下代码示例会从项集合 `MySourceItems` 创建一个名为 `MySourceItemsWithMetadata` 的新项集合。 `CreateItem` 任务会使用 `MySourceItems` 项中的项填充新的项集合。 然后它会将一个名为 `MyMetadata` 的其他元数据条目（值为 `Hello`）添加到新集合中的每个项。
 
  任务执行后，`MySourceItemsWithMetadata` 项集合包含项 file1.resx 和 file2.resx，这两者都具有 `MyMetadata` 的元数据条目   。 `MySourceItems` 项集合保持不变。
@@ -77,5 +81,6 @@ ms.locfileid: "75590067"
 |`MySourceItemsWithMetadata`|*file1.resx* (`MyMetadata="Hello"`)<br /><br /> *file2.resx* (`MyMetadata="Hello"`)|
 
 ## <a name="see-also"></a>请参阅
+
 - [任务参考](../msbuild/msbuild-task-reference.md)
 - [任务](../msbuild/msbuild-tasks.md)

@@ -7,12 +7,12 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 20381dd78f169e2b549e077992ac0d1dc1b5c44c
-ms.sourcegitcommit: 6375001ab26786af8d4d449f5846f8a49779ed18
+ms.openlocfilehash: 0e21d0617f954c0cc34975b7f8626b83966f6b5d
+ms.sourcegitcommit: 9de7d25056da59df0941508c80c0b12766ba6580
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2020
-ms.locfileid: "76892126"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77706384"
 ---
 # <a name="how-to-insert-xml-comments-for-documentation-generation"></a>如何：为文档生成项插入 XML 注释
 
@@ -50,7 +50,7 @@ Visual Studio 可自动生成标准的 XML 文档注释结构，进而帮助记�
 
 你可以在 XML 注释中使用样式，将鼠标悬停在元素上时这些样式将在“快速信息”中呈现。 这些样式包括：斜体、粗体、项目符号和可单击的链接。
 
-   ![完成的注释](media/doc-styles-cs.png) 
+   ![完成的注释](media/doc-style-cs.png) 
 
 > [!NOTE]
 > 在 C# 中键入`///`（或在 Visual Basic 中键入 `'''`）后，可[选择](../../ide/reference/options-text-editor-csharp-advanced.md)切换 XML 文档注释。 在菜单栏中，选择“工具” > “选项”以打开“选项”对话框    。 然后，导航到“文本编辑器” > “C#”或导航到“基本” > “高级”     。 在“编辑器帮助”部分，查找“生成 XML 文档注释”选项   。
