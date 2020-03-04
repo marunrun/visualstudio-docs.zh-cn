@@ -28,12 +28,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8f605f9a7e07d485b4b1cb3835d53e4c4823fe7c
-ms.sourcegitcommit: 3d64bfb9bf85395357effe054db9a9afaa0be5ea
+ms.openlocfilehash: f2f00cde0c2ea3fad79c0f5ef75f3c33ad7afc22
+ms.sourcegitcommit: c98e0ccf236765b44e47095ee52836cb012e3854
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/29/2020
-ms.locfileid: "78181121"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78257184"
 ---
 # <a name="attach-to-running-processes-with-the-visual-studio-debugger"></a>使用 Visual Studio 调试器附加到正在运行的进程
 可将 Visual Studio 调试器附加到本地或远程计算机上正在运行的进程。 进程运行后，在 Visual Studio 中选择“调试” > “附加到进程”，或按 Ctrl+Alt+P，然后使用“附加到进程”对话框将调试器附加到进程。
@@ -229,7 +229,7 @@ ms.locfileid: "78181121"
 |调试本地 IIS 服务器上的客户端脚本以获取受支持的应用类型 |使用 "**附加到进程**"|*chrome*、 *MicrosoftEdgeCP*或*iexplore。*|必须启用脚本调试。 对于 Chrome，还必须在调试模式下运行 Chrome，然后在 "**附加到**" 字段中选择 " **Webkit 代码**"。|
 |调试本地C#计算机上的、 C++ Visual Basic 或应用|使用 "标准调试" （**F5**）或 "**附加到进程**"|*\<appname>.exe*|在大多数情况下，使用标准调试，而不是**附加到进程**。|
 |远程调试 Windows 桌面应用程序|远程工具|不可用| 请参阅[远程调试C# a 或 Visual Basic 应用](../debugger/remote-debugging-csharp.md)或[远程调试C++应用](../debugger/remote-debugging-cpp.md)|
-|在 Linux 上调试 .NET Core|使用 "**附加到进程**"|*dotnet.exe*|若要使用 SSH，请参阅[在 Linux 上使用 ssh 运行的远程调试 .Net Core](../debugger/remote-debugging-dotnet-core-linux-with-ssh.md)。 若要使用 Linux Docker 容器，请参阅[附加到在 Linux docker 容器上运行的进程](#BKMK_Docker_Attach)。|
+|在 Linux 上调试 .NET Core|使用 "**附加到进程**"|*dotnet.exe*|若要使用 SSH，请参阅[在 Linux 上使用 ssh 运行的远程调试 .Net Core](../debugger/remote-debugging-dotnet-core-linux-with-ssh.md)。 |
 |在不使用调试器的情况下启动应用后，在本地计算机上调试 ASP.NET 应用程序|使用 "**附加到进程**"|*iiexpress.exe*|这可能会使应用程序加载速度更快，如在分析时（例如）。 |
 |在服务器进程上调试其他受支持的应用类型|如果服务器是远程的，请使用远程工具，并**附加到进程**|*chrome*、 *iexplore*或其他进程|如有必要，请使用资源监视器来帮助确定该过程。 请参阅[远程调试](../debugger/remote-debugging.md)。|
 |远程调试通用 Windows 应用（UWP）、OneCore、HoloLens 或 IoT 应用|调试安装的应用包|不可用|请参阅[调试已安装的应用包](debug-installed-app-package.md)，而不是使用 "**附加到进程**"|
