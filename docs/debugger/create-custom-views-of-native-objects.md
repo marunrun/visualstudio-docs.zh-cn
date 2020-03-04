@@ -1,7 +1,7 @@
 ---
 title: 创建 C++ 对象的自定义视图
 description: 使用 Natvis 框架自定义 Visual Studio 在调试器中显示本机类型的方式
-ms.date: 10/31/2018
+ms.date: 03/02/2020
 ms.topic: conceptual
 f1_keywords:
 - natvis
@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c26c35c09353d740f6db9745222bb66db40e7ba
-ms.sourcegitcommit: 1efb6b219ade7c35068b79fbdc573a8771ac608d
+ms.openlocfilehash: 064761d87b9aa851e40cf906e7734a3578dcad1a
+ms.sourcegitcommit: 9eff8371b7a79a637ebb6850f775dd3eed343d8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78167749"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78234964"
 ---
 # <a name="create-custom-views-of-c-objects-in-the-debugger-using-the-natvis-framework"></a>使用 Natvis 框架在C++调试器中创建对象的自定义视图
 
@@ -537,7 +537,10 @@ Natvis 的可视化功能使用 C++ 表达式来指定要显示的数据项。 �
 `ValueNode` 可以保留为空或使用 `this` 来引用 `LinkedListItems` 节点本身。
 
 #### <a name="customlistitems-expansion"></a>CustomListItems 展开
+
 `CustomListItems` 展开允许编写自定义逻辑，以遍历数据结构（如哈希表）。 使用 `CustomListItems` 来可视化数据结构，这些数据结构可以使用 C++ 表达式进行所有运算，但不太适合 `ArrayItems`、`IndexListItems` 或 `LinkedListItems` 模式。
+
+借助在展开内定义的变量和对象，你可以在 `Exec` 展开中使用 `CustomListItems` 来执行内部代码。 可以将逻辑运算符、算术运算符和赋值运算符与  `Exec` 一起使用。 不能使用 `Exec` 来计算函数（ C++表达式计算器支持的[调试器内部函数](../debugger/expressions-in-the-debugger.md#BKMK_Using_debugger_intrinisic_functions_to_maintain_state)除外）。
 
 下面的 `CAtlMap` 可视化工具是一个很好的例子，其中的 `CustomListItems` 用得很恰当。
 
@@ -569,24 +572,6 @@ Natvis 的可视化功能使用 C++ 表达式来指定要显示的数据项。 �
     </Expand>
 </Type>
 ```
-
-借助在展开内定义的变量和对象，你可以在 `Exec` 展开中使用 `CustomListItems` 来执行内部代码。 可以将逻辑运算符、算术运算符和赋值运算符与  `Exec` 一起使用。 不能使用 `Exec` 来计算函数。
-
-`CustomListItems` 支持以下内部函数：
-
-- `strlen`、`wcslen`、`strnlen`、`wcsnlen`、`strcmp`、`wcscmp`、`_stricmp`、`_strcmpi`、`_wcsicmp`、`strncmp`、`wcsncmp`、`_strnicmp`、`_wcsnicmp`、`memcmp`、`memicmp`、`wmemcmp`、`strchr`、`wcschr`、`memchr`、`wmemchr`、`strstr`、`wcsstr`、`__log2`、`__findNonNull`
-- `GetLastError`、`TlsGetValue`、`DecodeHString`、`WindowsGetStringLen`、`WindowsGetStringRawBuffer`、`WindowsCompareStringOrdinal`、`RoInspectCapturedStackBackTrace`、`CoDecodeProxy`、`GetEnvBlockLength`、`DecodeWinRTRestrictedException`、`DynamicMemberLookup`、`DecodePointer`、`DynamicCast`
-- `ConcurrencyArray_OperatorBracket_idx // Concurrency::array<>::operator[index<>] and operator(index<>)`
-- `ConcurrencyArray_OperatorBracket_int // Concurrency::array<>::operator(int, int, ...)`
-- `ConcurrencyArray_OperatorBracket_tidx // Concurrency::array<>::operator[tiled_index<>] and operator(tiled_index<>)`
-- `ConcurrencyArrayView_OperatorBracket_idx // Concurrency::array_view<>::operator[index<>] and operator(index<>)`
-- `ConcurrencyArrayView_OperatorBracket_int // Concurrency::array_view<>::operator(int, int, ...)`
-- `ConcurrencyArrayView_OperatorBracket_tidx // Concurrency::array_view<>::operator[tiled_index<>] and operator(tiled_index<>)`
-- `Stdext_HashMap_Int_OperatorBracket_idx`
-- `Std_UnorderedMap_Int_OperatorBracket_idx`
-- `TreeTraverse_Init // Initializes a new tree traversal`
-- `TreeTraverse_Next // Returns nodes in a tree`
-- `TreeTraverse_Skip // Skips nodes in a pending tree traversal`
 
 #### <a name="BKMK_TreeItems_expansion"></a> TreeItems 展开
  如果可视化类型表示一个树，则调试器可以通过使用 `TreeItems` 节点遍历该树并显示其子级。 下面是使用 `TreeItems` 节点的 `std::map` 类型的可视化效果：

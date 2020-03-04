@@ -1,6 +1,6 @@
 ---
 title: 调试器中的表达式 |Microsoft Docs
-ms.date: 02/07/2018
+ms.date: 03/02/2020
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.expressions
@@ -19,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6040988961e918c66ed08e7620607d100b2e07fe
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: b05bc8de6db15261a9861867bc93a398b60bf0d0
+ms.sourcegitcommit: 9eff8371b7a79a637ebb6850f775dd3eed343d8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72736206"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78234998"
 ---
 # <a name="expressions-in-the-visual-studio-debugger"></a>Visual Studio 调试器中的表达式
 Visual Studio 调试器包括表达式计算器，当您在 **“快速监视”** 对话框、 **“监视”** 窗口或 **“即时”** 窗口中输入表达式时，这些计算器可以对其进行计算。 这些表达式计算器还可以在 **“断点”** 窗口和调试器中的许多其他位置使用。
@@ -59,7 +59,7 @@ new Date(2,3,1985)
 ```
 
 #### <a name="preprocessor-macros"></a>预处理器宏
-调试器中不支持预处理器宏。 例如，如果常量 `VALUE` 被声明为： `#define VALUE 3`，则不能使用 **监视** 窗口中的 `VALUE` 。 若要避免此限制，只要有可能就应将 `#define`替换为枚举和函数。
+调试器中不支持预处理器宏。 例如，如果常量 `VALUE` 被声明为： `#define VALUE 3`，则不能使用 `VALUE`监视**窗口中的** 。 若要避免此限制，只要有可能就应将 `#define`替换为枚举和函数。
 
 ### <a name="using-namespace-declarations"></a>使用命名空间声明
 不能使用 `using namespace` 声明。  若要访问一个类型名称或当前命名空间之外的变量，必须使用完全限定的名称。
@@ -101,10 +101,10 @@ int main()
 |----------|-------------------------|
 |**字符串长度**|strlen、wcslen、strnlen、wcsnlen|
 |**字符串比较**|strcmp、wcscmp、stricmp、_stricmp、_strcmpi、wcsicmp、_wcscmpi、_wcsnicmp、strncmp、wcsncmp、strnicmp、wcsnicmp|
-|**字符串搜索**|strchr、wcschr、strstr、wcsstr|
-|**Win32**|GetLastError()、TlsGetValue()|
-|**Windows 8**|WindowsGetStringLen()、WindowsGetStringRawBuffer()<br /><br /> 这些函数要求将调试的进程运行于 Windows 8 上。 调试从 Windows 8 设备生成的转储文件还要求 Visual Studio 计算机运行的是 Windows 8。 但是，如果远程调试 Windows 8 设备，则 Visual Studio 计算机可运行 Windows 7。|
-|**杂项**|__log2<br /><br /> 返回以 2 为底指定整数的对数，并舍入到最接近的较小整数。|
+|**字符串搜索**|strchr、wcschr、memchr、wmemchr、strstr、wcsstr|
+|**Win32**|GetLastError，TlsGetValue|
+|**Windows 8**|WindowsGetStringLen、WindowsGetStringRawBuffer<br /><br /> 这些函数要求将调试的进程运行于 Windows 8 上。 调试从 Windows 8 设备生成的转储文件还要求 Visual Studio 计算机运行的是 Windows 8。 但是，如果远程调试 Windows 8 设备，则 Visual Studio 计算机可运行 Windows 7。|
+|**其他**|__log2//返回指定整数的对数底2，舍入为最接近的较小整数。<br /><br />__findNonNull、DecodeHString、WindowsCompareStringOrdinal、RoInspectCapturedStackBackTrace、CoDecodeProxy、GetEnvBlockLength、DecodeWinRTRestrictedException、DynamicMemberLookup、DecodePointer、DynamicCast<br /><br />Stdext_HashMap_Int_OperatorBracket_idx，Std_UnorderedMap_Int_OperatorBracket_idx<br /><br />ConcurrencyArray_OperatorBracket_idx//Concurrency：： array < >：： operator [index < >] 和运算符（索引 < >）<br /><br />ConcurrencyArray_OperatorBracket_int//Concurrency：： array < >：： operator （int，int，...）<br /><br />ConcurrencyArray_OperatorBracket_tidx//Concurrency：： array < >：： operator [tiled_index < >] 和运算符（tiled_index < >）<br /><br />ConcurrencyArrayView_OperatorBracket_idx//Concurrency：： array_view < >：： operator [index < >] 和运算符（索引 < >）<br /><br />ConcurrencyArrayView_OperatorBracket_int//Concurrency：： array_view < >：： operator （int，int，...）<br /><br />ConcurrencyArrayView_OperatorBracket_tidx//Concurrency：： array_view < >：： operator [tiled_index < >] 和运算符（tiled_index < >）<br /><br />TreeTraverse_Init//初始化新的树遍历<br /><br />TreeTraverse_Next//返回树中的节点<br /><br />TreeTraverse_Skip//跳过挂起的树遍历中的节点|
 
 ## <a name="ccli---unsupported-expressions"></a>C++/CLI - 不支持的表达式
 
@@ -204,7 +204,7 @@ int main()
 
 - 命名空间或模块级的关键字，如 `End Sub` 或 `Module`。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [C++ 中的格式说明符](../debugger/format-specifiers-in-cpp.md)
 - [上下文运算符 (C++)](../debugger/context-operator-cpp.md)
 - [C# 中的格式说明符](../debugger/format-specifiers-in-csharp.md)
