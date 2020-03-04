@@ -9,12 +9,12 @@ manager: jillfra
 ms.workload:
 - multiple
 monikerRange: '>=vs-2017'
-ms.openlocfilehash: 49e248ee0e5537ae54957695ca698b041fc1ce8b
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 2503040e074a62422d4c7c904f5ad3a2bd84d6c1
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75567275"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77631024"
 ---
 # <a name="whats-new-in-msbuild-15"></a>MSBuild 15 中的新增功能
 
@@ -39,6 +39,7 @@ MSBuild 现已推出，属于 [.NET Core SDK](https://www.microsoft.com/net/down
 - `SDK35ToolsPath` 和 `SDK40ToolsPath` 属性指向与此版 Visual Studio 一起打包的 .NET Framework SDK（例如，对于 4.X 工具，则指向 10.0A）。
 
 ## <a name="updates"></a>更新
+
 - [项目元素](../msbuild/project-element-msbuild.md)具有新的 `SDK` 属性。 此外，`Xmlns` 属性现也是可选项。 有关 `SDK` 属性的详细信息，请参阅[如何：使用 MSBuild 项目 SDK](../msbuild/how-to-use-project-sdk.md)、[包、元包和框架](/dotnet/core/packages)以及 [.NET Core 的 csproj 格式的新增内容](/dotnet/core/tools/csproj)。
 - 目标外的[项元素](../msbuild/item-element-msbuild.md)具有新的 `Update` 属性。 此外，已放弃对 `Remove` 属性的限制。
 - Directory.Build.props  是用户定义文件，对目录下的项目提供自定义选项。 除非 `ImportDirectoryBuildTargets` 属性设为 false，否则该文件将从 Microsoft.Common.props 自动导入。   Directory.Build.targets 由 Microsoft.Common.targets 导入。  
@@ -52,4 +53,5 @@ MSBuild 现已推出，属于 [.NET Core SDK](https://www.microsoft.com/net/down
 - `GetPathOfFileAbove` 返回此文件前紧邻的文件的路径。 它在功能上等效于调用 `<Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.props))\dir.props" />`
 
 ## <a name="see-also"></a>请参阅
+
 - [MSBuild](../msbuild/msbuild.md)

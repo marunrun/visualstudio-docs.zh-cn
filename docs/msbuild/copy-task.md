@@ -21,22 +21,24 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 31ec191345e1a232e79a2eea21563bf41e5d555c
-ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
+ms.openlocfilehash: 28fd0033f5ef6f83ca29432f95d6b635fcd36116
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/22/2020
-ms.locfileid: "77558164"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634365"
 ---
 # <a name="copy-task"></a>Copy 任务
+
 将文件复制到文件系统的一个新位置。
 
 ## <a name="parameters"></a>参数
+
 下表描述了 `Copy` 任务的参数。
 
 |参数|描述|
 |---------------|-----------------|
-|`CopiedFiles`|可选的 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 输出参数。<br /><br /> 包含已成功复制的项，包括尚未进行实际复制但由于其已为最新且 `SkipUnchangedFiles` 为 `true` 因此被跳过的项。|
+|`CopiedFiles`|可选的 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 输出参数。<br /><br /> 包含已成功复制的项，包括尚未进行实际复制但由于其已为最新且 `SkipUnchangedFiles` 为 `true` 因此被跳过的项  。|
 |`DestinationFiles`|可选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 指定要对其复制源文件的文件的列表。 此列表应与 `SourceFiles` 参数中指定的列表具有一对一的映射关系。 也就是说，`SourceFiles` 中指定的第一个文件将复制到 `DestinationFiles` 中指定的第一个位置，依次类推。|
 |`DestinationFolder`|可选 <xref:Microsoft.Build.Framework.ITaskItem> 参数。<br /><br /> 指定要将文件复制到其中的目录。 这必须是目录，而不能是文件。 如果该目录不存在，将自动创建它。|
 |`OverwriteReadOnlyFiles`|可选 `Boolean` 参数。<br /><br /> 覆盖文件，即使它们标记为只读文件|
@@ -47,6 +49,7 @@ ms.locfileid: "77558164"
 |`UseHardlinksIfPossible`|可选 `Boolean` 参数。<br /><br /> 如果为 `true`，则创建已复制文件的硬链接，而不是复制该文件。|
 
 ## <a name="warnings"></a>警告
+
 警告将被记录，其中包括：
 
 - `Copy.DestinationIsDirectory`
@@ -66,12 +69,14 @@ ms.locfileid: "77558164"
 - `Copy.RemovingReadOnlyAttribute`
 
 ## <a name="remarks"></a>备注
+
 必须指定 `DestinationFolder` 或 `DestinationFiles` 参数，但不能对两者都进行指定。 如果指定了两者，则任务失败并记录一条错误。
 
 除上面列出的参数外，此任务还从 <xref:Microsoft.Build.Tasks.TaskExtension> 类继承参数，后者自身继承自 <xref:Microsoft.Build.Utilities.Task> 类。 有关这些其他参数的列表及其说明的信息，请参阅 [TaskExtension 基类](../msbuild/taskextension-base-class.md)。
 
 ## <a name="example"></a>示例
-以下示例将 `MySourceFiles` 项集合中的项复制到文件夹 c:\MyProject\Destination。
+
+以下示例将 `MySourceFiles` 项集合中的项复制到文件夹 c:\MyProject\Destination  。
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -91,7 +96,8 @@ ms.locfileid: "77558164"
 ```
 
 ## <a name="example"></a>示例
-以下示例演示如何执行递归复制。 此项目以递归方式将所有文件从 c:\MySourceTree 复制到 c:\MyDestinationTree，同时保留目录结构。
+
+以下示例演示如何执行递归复制。 此项目以递归方式将所有文件从 c:\MySourceTree 复制到 c:\MyDestinationTree，同时保留目录结构   。
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -111,5 +117,6 @@ ms.locfileid: "77558164"
 ```
 
 ## <a name="see-also"></a>请参阅
+
 - [任务](../msbuild/msbuild-tasks.md)
 - [任务参考](../msbuild/msbuild-task-reference.md)

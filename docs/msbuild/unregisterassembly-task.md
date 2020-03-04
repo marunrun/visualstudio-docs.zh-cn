@@ -18,17 +18,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 22be291184ebf02ae0455f5b4656b1dec976dc89
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.openlocfilehash: 2f8cddcf9bf0632914d1a6de1cc904dbf0f173e6
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77578290"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77631492"
 ---
 # <a name="unregisterassembly-task"></a>UnregisterAssembly 任务
+
 注销用于 COM 互操作的指定程序集。 执行 [RegisterAssembly 任务](../msbuild/registerassembly-task.md)的相反任务。
 
 ## <a name="parameters"></a>参数
+
  下表描述了 `UnregisterAssembly` 任务的参数。
 
 |参数|描述|
@@ -38,11 +40,13 @@ ms.locfileid: "77578290"
 |`TypeLibFiles`|可选的 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 输出参数。<br /><br /> 从指定的程序集中注销指定的类型库。 **注意：** 只有当类型库文件名不同于程序集名称时，此参数才是必需的。|
 
 ## <a name="remarks"></a>备注
+
  此任务的成功对是否存在程序集不作要求。 如果尝试注销不存在的程序集，则该任务将成功并且出现警告。 发生这种情况是因为此任务的工作就是从注册表中删除程序集注册。 如果该程序集不存在，则它不在注册表中，因此，任务将成功完成。
 
  除上面列出的参数外，此任务还从 <xref:Microsoft.Build.Tasks.AppDomainIsolatedTaskExtension> 类继承参数，后者自身继承自 <xref:System.MarshalByRefObject> 类。 `MarshalByRefObject` 类提供与 <xref:Microsoft.Build.Utilities.Task> 类相同的功能，但它可以在其自己的应用程序域中进行实例化。
 
 ## <a name="example"></a>示例
+
  以下示例使用 `UnregisterAssembly` 任务注销 `OutputPath` 和 `FileName` 属性指定的路径处的程序集（如果存在）。
 
 ```xml
@@ -61,6 +65,7 @@ ms.locfileid: "77578290"
 ```
 
 ## <a name="see-also"></a>请参阅
+
 - [RegisterAssembly 任务](../msbuild/registerassembly-task.md)
 - [任务](../msbuild/msbuild-tasks.md)
 - [任务参考](../msbuild/msbuild-task-reference.md)

@@ -16,17 +16,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3745e1c2f300c860d281752a0bf81359806c5d5e
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 0ab604b23a99ab2dd62adca6076168fe264ab1b4
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75567393"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77630687"
 ---
 # <a name="writecodefragment-task"></a>WriteCodeFragment 任务
+
 根据指定的生成代码片段，生成临时代码文件。 不会删除该文件。
 
 ## <a name="parameters"></a>参数
+
  下表描述了 `WriteCodeFragment` 任务的参数。
 
 |参数|描述|
@@ -37,8 +39,10 @@ ms.locfileid: "75567393"
 |`OutputFile`|可选 <xref:Microsoft.Build.Framework.ITaskItem> 输出参数。<br /><br /> 指定已生成文件的路径。 如果使用文件名设置此参数，则会将目标文件夹附加在文件名前。 如果使用根设置，则会忽略目标文件夹。<br /><br /> 如果未设置此参数，输出文件名将为目标文件夹、任意文件名称和指定语言的默认文件扩展名。|
 
 ## <a name="remarks"></a>备注
+
  除了具有表中列出的参数外，此任务还将从本身继承自 <xref:Microsoft.Build.Utilities.Task> 类的 <xref:Microsoft.Build.Tasks.TaskExtension> 类继承参数。 有关这些其他参数的列表及其说明的信息，请参阅 [TaskExtension 基类](../msbuild/taskextension-base-class.md)。
 
 ## <a name="see-also"></a>请参阅
+
 - [任务](../msbuild/msbuild-tasks.md)
 - [任务参考](../msbuild/msbuild-task-reference.md)

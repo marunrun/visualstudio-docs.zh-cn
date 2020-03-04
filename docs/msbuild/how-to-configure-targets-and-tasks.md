@@ -8,20 +8,23 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2f8f1bc76789ef80c1138efb94bda42442702c05
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: fe2955feb50a28e5ba631cdeddd169973a42ed25
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75596341"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633884"
 ---
 # <a name="how-to-configure-targets-and-tasks"></a>如何：配置目标和任务
+
+可将所选的 MSBuild 任务设置为在其目标环境中运行，而不考虑开发计算机的环境。 例如，当使用 64 位计算机生成面向 32 位体系结构的应用程序时，将在 32 位进程中运行所选的任务。
 可将所选的 MSBuild 任务设置为在其目标环境中运行，而不考虑开发计算机的环境。 例如，当使用 64 位计算机生成面向 32 位体系结构的应用程序时，将在 32 位进程中运行所选的任务。
 
 > [!NOTE]
 > 如果生成任务采用 .NET 语言（例如 Visual C# 或 Visual Basic）编写，并且不使用本机资源或工具，则该任务无需修改便可在任何目标上下文中运行。
 
 ## <a name="usingtask-attributes-and-task-parameters"></a>UsingTask 属性和任务参数
+
 以下 `UsingTask` 属性影响特定生成过程中任务的所有操作：
 
 - `Runtime` 属性（如果存在）可设置公共语言运行时 (CLR) 版本，并可采用以下值之一：`CLR2`、`CLR4`、`CurrentRuntime` 或 `*`（任何运行时）。
@@ -74,6 +77,7 @@ ms.locfileid: "75596341"
 ```
 
 ## <a name="task-factories"></a>任务工厂
+
 在其运行任务之前，MSBuild 将检查该任务是否指定为在当前软件上下文中运行。 如果该任务指定为在当前软件上下文中运行，则 MSBuild 将其传递给 AssemblyTaskFactory（它在当前进程中运行该任务）；否则，MSBuild 将其传递给 TaskHostFactory（它在匹配目标上下文的进程中运行该任务）。 即使当前上下文和目标上下文互相匹配，也可以通过将 `TaskFactory` 设置为 `TaskHostFactory`，强制任务在进程外运行（出于隔离、安全性或其他原因）。
 
 ```xml
@@ -84,6 +88,7 @@ ms.locfileid: "75596341"
 ```
 
 ## <a name="phantom-task-parameters"></a>虚拟任务参数
+
 与任何其他任务参数类似，可以从生成属性设置 `MSBuildRuntime` 和 `MSBuildArchitecture`。
 
 ```xml
@@ -108,4 +113,5 @@ ms.locfileid: "75596341"
 > 任务参数在父节点的上下文中，而不是在任务主机的上下文中进行计算。 运行时相关或体系结构相关的环境变量（例如程序文件位置）将计算为与该父节点匹配的值  。 但是，如果同一个环境变量直接由任务读取，则它会在任务主机的上下文中正确计算。
 
 ## <a name="see-also"></a>请参阅
+
 - [配置目标和任务](../msbuild/configuring-targets-and-tasks.md)

@@ -9,17 +9,19 @@ ms.assetid: e2f1ca4f-787b-44bd-bc64-81a036025e96
 author: ghogen
 ms.author: ghogen
 manager: jillfra
-ms.openlocfilehash: be8b4a6845e8fd14a0649f4134bcc26d8e1ad08e
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 9899b7367e6ae9255755ae04fe06d8c8733043ae
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75574946"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633819"
 ---
 # <a name="how-to-ignore-errors-in-tasks"></a>如何：忽略任务中的错误
+
 有时你希望生成能够容忍某些任务中的错误。 如果这些非关键任务失败，你希望生成能够继续进行，因为它仍然可以产生所需的输出。 例如，如果一个项目在每个组件生成之后都使用 `SendMail` 任务发送电子邮件消息，那么即使邮件服务器变得不可用而导致状态邮件无法发送，但依然让生成继续完成，这一情况或许便是可以接受的。 或者，如果在生成过程中，中间文件通常会被删除，但即使无法删除这些文件，那么让生成继续完成也是可以接受的。
 
 ## <a name="use-the-continueonerror-attribute"></a>使用 ContinueOnError 属性
+
 `Task` 元素的 `ContinueOnError` 属性控制在发生任务失败时，是停止还是继续生成。 此属性还可以控制在生成继续操作时，错误被视为错误还是警告。
 
 `ContinueOnError` 属性可以包含下列值之一：
@@ -43,6 +45,7 @@ ms.locfileid: "75574946"
 ```
 
 ## <a name="example"></a>示例
+
 以下代码示例阐释即使 `Delete` 任务失败，`Build` 目标仍将运行并且生成将被视为成功。
 
 ```xml
@@ -62,6 +65,7 @@ ms.locfileid: "75574946"
 ```
 
 ## <a name="see-also"></a>请参阅
+
 - [MSBuild](../msbuild/msbuild.md)
 - [任务参考](../msbuild/msbuild-task-reference.md)
 - [任务](../msbuild/msbuild-tasks.md)

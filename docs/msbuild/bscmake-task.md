@@ -20,20 +20,22 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ff0c95c37e24f8c51453a849159073baff8dca0d
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 668d42cdb0bc5cfb8dd344aab51ad0c66a838cd2
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75593416"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634508"
 ---
 # <a name="bscmake-task"></a>BscMake 任务
+
 > [!IMPORTANT]
 > Visual Studio IDE 不再使用 BscMake。 自 Visual Studio 2008 起，浏览信息自动存储在解决方案文件夹的 .sdf 文件中   。
 
  包装 Microsoft 浏览信息维护实用工具 (bscmake.exe)  。  Bscmake.exe 工具从在编译期间创建的源浏览器文件 (.sbr) 生成浏览信息文件 (.bsc)    。 可使用对象浏览器查看 .bsc 文件   。 有关详细信息，请参阅 [BSCMAKE 参考](/cpp/build/reference/bscmake-reference)。
 
 ## <a name="parameters"></a>参数
+
  下表介绍了 **BscMake** 任务的参数。 大多数任务参数都对应于命令行选项。
 
 |参数|描述|
@@ -46,4 +48,5 @@ ms.locfileid: "75593416"
 |**TrackerLogDirectory**|可选 **String** 参数。<br /><br /> 指定跟踪器日志目录。|
 
 ## <a name="see-also"></a>请参阅
+
 - [任务参考](../msbuild/msbuild-task-reference.md)

@@ -17,14 +17,15 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cd533507e1c498ae315529bd8ab17dd175b7f836
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.openlocfilehash: 46ed1b1f94cd2ef23ff0704912cb2a2194ba7dab
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77579680"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634183"
 ---
 # <a name="fileclassifier-task"></a>FileClassifier 任务
+
 <xref:Microsoft.Build.Tasks.Windows.FileClassifier> 任务将一组源资源分类为将嵌入到程序集的源资源。 如果资源不可本地化，则将其嵌入主应用程序程序集；否则，将其嵌入附属程序集。
 
 ## <a name="task-parameters"></a>任务参数
@@ -41,9 +42,11 @@ ms.locfileid: "77579680"
 |`SourceFiles`|必需的 **ITaskItem[]** 参数。<br /><br /> 指定要分类的文件的列表。|
 
 ## <a name="remarks"></a>备注
+
 如果未设置 **Culture** 参数，则所有通过 **SourceFiles** 参数指定的资源都不可本地化；反之都可本地化（除非它们与设置为 **false** 的 **Localizable** 属性相关联）。
 
 ## <a name="example"></a>示例
+
 下面示例将单个源文件分类为资源，并将其嵌入法语-加拿大 (fr-CA) 区域性的附属程序集。
 
 ```xml
@@ -64,6 +67,7 @@ ms.locfileid: "77579680"
 ```
 
 ## <a name="see-also"></a>请参阅
+
 - [WPF MSBuild 参考](../msbuild/wpf-msbuild-reference.md)
 - [任务参考](../msbuild/wpf-msbuild-task-reference.md)
 - [MSBuild 参考](../msbuild/msbuild-reference.md)

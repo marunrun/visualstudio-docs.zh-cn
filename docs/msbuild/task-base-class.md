@@ -13,17 +13,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7b3aaef85c53dfacf592251c95772d17b1a6ff96
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: d7d6e0870f809a30bc3feb7ecb7a7302b7729124
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75566392"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77631947"
 ---
 # <a name="task-base-class"></a>任务基类
+
 许多任务最终都继承自 <xref:Microsoft.Build.Utilities.Task> 类。 此类向派生自该类的任务添加几个参数。 本文档中列出了这些参数。
 
 ## <a name="parameters"></a>参数
+
  下表介绍此基类的参数。
 
 |参数|描述|
@@ -35,5 +37,6 @@ ms.locfileid: "75566392"
 |<xref:Microsoft.Build.Utilities.Task.Log%2A>|可选 <xref:Microsoft.Build.Utilities.TaskLoggingHelper> 只读参数。<br /><br /> 日志记录帮助程序对象。|
 
 ## <a name="see-also"></a>请参阅
+
 - [任务参考](../msbuild/msbuild-task-reference.md)
 - [任务](../msbuild/msbuild-tasks.md)

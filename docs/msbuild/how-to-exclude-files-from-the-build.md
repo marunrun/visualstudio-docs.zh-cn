@@ -12,17 +12,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3c55033d253b5c7dfeb2bed968f2418637ca3f0d
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 1914f709a69dbb120e4439ddceeda8b70ad570b4
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75576051"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633858"
 ---
 # <a name="how-to-exclude-files-from-the-build"></a>如何：从生成中排除文件
+
 在项目文件中，可以使用通配符将所有文件包括在一个目录或一组嵌套目录中，以作为生成的输入。 但是，对于目录中的某个文件或嵌套目录中的某个目录，你可能并不希望将其作为生成的输入包括在内。 你可以从输入列表中显示排除该文件或目录。 有些时候，你只希望在特定情况下才包括项目中的某个文件。 那么你可以显式声明将文件包括在生成中的条件。
 
 ## <a name="exclude-a-file-or-directory-from-the-inputs-for-a-build"></a>从生成的输入中排除文件或目录
+
  项列表是生成的输入文件。 要包括的项是使用 `Include` 属性单独或作为组声明的。 例如：
 
 ```xml
@@ -76,6 +78,7 @@ ms.locfileid: "75576051"
     > 必须指定这两个属性的路径。 如果你使用绝对路径在 `Include` 属性中指定文件位置，那么在 `Exclude` 属性中也必须使用绝对路径；如果你在 `Include` 属性中使用相对路径，那么在 `Exclude` 属性中也必须使用相对路径。
 
 ## <a name="use-conditions-to-exclude-a-file-or-directory-from-the-inputs-for-a-build"></a>使用条件从生成的输入中排除文件或目录
+
  如果你希望在调试生成中包括某些项，而不希望在发布生成中包括这些项，则可以使用 `Condition` 属性来指定包括该项的条件。
 
 #### <a name="to-include-the-file-formulavb-only-in-release-builds"></a>仅在发布生成中包括文件 Formula.vb 
@@ -89,6 +92,7 @@ ms.locfileid: "75576051"
     ```
 
 ## <a name="example"></a>示例
+
  以下代码示例生成一个项目，其中包括除 Form2.cs 以外目录中的所有 .cs 文件   。
 
 ```xml
@@ -123,6 +127,7 @@ ms.locfileid: "75576051"
 ```
 
 ## <a name="see-also"></a>请参阅
+
 - [项](../msbuild/msbuild-items.md)
 - [MSBuild](../msbuild/msbuild.md)
 - [如何：选择要生成的文件](../msbuild/how-to-select-the-files-to-build.md)

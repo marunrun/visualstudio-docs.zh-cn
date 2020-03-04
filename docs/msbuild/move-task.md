@@ -16,17 +16,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8adfa75964959e2cce61779914a52f03319ed314
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 05b9f83fa7c80769ea3c584e2885c8fb1db24176
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592134"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633455"
 ---
 # <a name="move-task"></a>Move 任务
+
 将文件移至新位置。
 
 ## <a name="parameters"></a>参数
+
  下表描述了 `Move` 任务的参数。
 
 |参数|描述|
@@ -38,6 +40,7 @@ ms.locfileid: "75592134"
 |`SourceFiles`|必选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 指定要移动的文件。|
 
 ## <a name="remarks"></a>备注
+
  必须指定 `DestinationFolder` 参数或 `DestinationFiles` 参数，但不能对两者都进行指定。 如果指定了两者，则任务失败并记录一条错误。
 
  `Move` 任务根据需要为所需的目标文件创建文件夹。
@@ -45,5 +48,6 @@ ms.locfileid: "75592134"
  除了具有表中列出的参数外，此任务还将从本身继承自 <xref:Microsoft.Build.Utilities.Task> 类的 <xref:Microsoft.Build.Tasks.TaskExtension> 类继承参数。 有关这些其他参数的列表及其说明的信息，请参阅 [TaskExtension 基类](../msbuild/taskextension-base-class.md)。
 
 ## <a name="see-also"></a>请参阅
+
 - [任务](../msbuild/msbuild-tasks.md)
 - [任务参考](../msbuild/msbuild-task-reference.md)

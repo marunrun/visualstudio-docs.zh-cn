@@ -16,17 +16,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4ebbc2a036700c26ccd6ca3bec7b235722432e9f
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 2628f06ac4eafc7d57123460771793005597b039
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75595171"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77632688"
 ---
 # <a name="resolvemanifestfiles-task"></a>ResolveManifestFiles 任务
+
 在生成过程中，将以下各项解析为文件以便生成清单：生成项、依赖项、附属项、内容、调试符号和文档。
 
 ## <a name="parameters"></a>参数
+
  下表描述了 `ResolveManifestFiles` 任务的参数。
 
 |参数|描述|
@@ -47,8 +49,10 @@ ms.locfileid: "75595171"
 |`TargetFrameworkVersion`|可选 `String` 参数。<br /><br /> 指定目标 .NET Framework 的版本。|
 
 ## <a name="remarks"></a>备注
+
  除了具有表中列出的参数外，此任务还将从本身继承自 <xref:Microsoft.Build.Utilities.Task> 类的 <xref:Microsoft.Build.Tasks.TaskExtension> 类继承参数。 有关这些其他参数的列表及其说明的信息，请参阅 [TaskExtension 基类](../msbuild/taskextension-base-class.md)。
 
 ## <a name="see-also"></a>请参阅
+
 - [任务](../msbuild/msbuild-tasks.md)
 - [任务参考](../msbuild/msbuild-task-reference.md)

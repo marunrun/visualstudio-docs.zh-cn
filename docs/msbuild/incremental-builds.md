@@ -10,12 +10,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 43c739cc24d453ad4129d8cb7cc4bfbebec07aa4
-ms.sourcegitcommit: 00ba14d9c20224319a5e93dfc1e0d48d643a5fcd
+ms.openlocfilehash: c7283d67710a3b5b319b2d25a1c5d6535fed83b9
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77091816"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633715"
 ---
 # <a name="incremental-builds"></a>增量生成
 
@@ -79,4 +79,5 @@ MSBuild 通过比较目标的 `Inputs` 和 `Outputs` 属性来确定是否执行
 该代码会创建 CompileRan 属性并为其赋予值 `true`，但仅当执行了目标时才如此操作。 如果跳过目标，则不会创建 CompileRan。
 
 ## <a name="see-also"></a>请参阅
+
 - [目标](../msbuild/msbuild-targets.md)

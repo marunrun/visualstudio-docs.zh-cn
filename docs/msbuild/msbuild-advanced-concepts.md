@@ -10,14 +10,15 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 88c051f71cf491efcf126af691dfb55b74e50db2
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 9f013464143929732da409f5dd9684ed73bcc705
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592121"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633442"
 ---
 # <a name="msbuild-advanced-concepts"></a>MSBuild 高级概念
+
 本部分中的文档介绍如何使用高级技术来改善使用 MSBuild 运行的版本。
 
 ## <a name="related-topics"></a>相关主题
@@ -32,5 +33,6 @@ ms.locfileid: "75592121"
 |[最佳做法](../msbuild/msbuild-best-practices.md)|建议用于编写 MSBuild 脚本的最佳做法。|
 
 ## <a name="see-also"></a>请参阅
+
 - [MSBuild 概念](../msbuild/msbuild-concepts.md)
 - [MSBuild 中的日志记录](../msbuild/logging-in-msbuild.md)

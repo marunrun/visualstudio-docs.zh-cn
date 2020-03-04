@@ -10,20 +10,22 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4f5f19d756d669a7b3e9e5d32a89c598c7edc9d3
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: e68f2bdf0559dc2bea6bd349dbf5f9bedca3671e
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75593650"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633312"
 ---
 # <a name="msbuild-inline-tasks"></a>MSBuild 内联任务
+
 通常，MSBuild 任务通过编译实现 <xref:Microsoft.Build.Framework.ITask> 接口的类进行创建。 有关详细信息，请参阅[任务](../msbuild/msbuild-tasks.md)。
 
  从 .NET Framework 版本 4 开始，你可以在项目文件中创建内联任务。 无需创建单独的程序集来承载该任务。 这使得更易于跟踪源代码和部署任务。 源代码将集成到脚本中。
 
  在 MSBuild 15.8 中，添加了可创建 .NET Standard 跨平台内联任务的 [RoslynCodeTaskFactory](../msbuild/msbuild-roslyncodetaskfactory.md)。  如果需要在 .NET Core 上使用内联任务，则必须使用 RoslynCodeTaskFactory。
 ## <a name="the-structure-of-an-inline-task"></a>内联任务的结构
+
  内联任务由 [UsingTask](../msbuild/usingtask-element-msbuild.md) 元素包含。 内联任务和包含它的 `UsingTask` 元素通常包括在 .targets 文件中，并根据需要导入到其他项目文件  。 下面是一个基本的内联任务。 请注意，它不执行任何操作。
 
 ```xml
@@ -68,6 +70,7 @@ ms.locfileid: "75593650"
 > 由 `Task` 元素包含的元素均特定于任务工厂，在本例中，即代码任务工厂。
 
 ### <a name="code-element"></a>代码元素
+
  最后一个出现在 `Task`元素内的子元素是 `Code` 元素。 `Code` 元素包含或定位你想要编译到任务中的代码。 放置于 `Code` 元素中的内容具体取决于你希望如何编写任务。
 
  `Language` 属性指定编写代码的语言。 可接受的值为 `cs`（对于 C#）或 `vb`（对于 Visual Basic）。
@@ -88,6 +91,7 @@ ms.locfileid: "75593650"
 > 当在源文件中定义任务类时，类名必须符合对应的 [UsingTask](../msbuild/usingtask-element-msbuild.md) 元素的 `TaskName` 属性。
 
 ## <a name="helloworld"></a>HelloWorld
+
  下面是一个更全面的内联任务。 HelloWorld 任务 在默认错误日志记录设备上显示“Hello, World!”，该设备通常为系统控制台或 Visual Studio **输出**窗口。 示例中包含了 `Reference` 元素，这仅用于阐释目的。
 
 ```xml
@@ -125,6 +129,7 @@ Log.LogError("Hello, world!");
 ```
 
 ## <a name="input-and-output-parameters"></a>输入和输出参数
+
  内联任务参数是 `ParameterGroup` 元素的子元素。 每个参数将定义它的元素的名称作为其名称。 以下代码定义参数 `Text`。
 
 ```xml
@@ -162,6 +167,7 @@ Log.LogError("Hello, world!");
 如果 `Code` 元素具有 `Fragment` 或 `Method` 的 `Type` 特性，则将自动为每个参数创建属性。 否则，属性必须在源代码中显示声明，并且必须与其参数定义完全匹配。
 
 ## <a name="example"></a>示例
+
  以下内联任务将给定文件中令牌的每个匹配项替换为给定的值。
 
 ```xml
@@ -190,5 +196,6 @@ File.WriteAllText(Path, content);
 ```
 
 ## <a name="see-also"></a>请参阅
+
 - [任务](../msbuild/msbuild-tasks.md)
 - [演练：创建内联任务](../msbuild/walkthrough-creating-an-inline-task.md)

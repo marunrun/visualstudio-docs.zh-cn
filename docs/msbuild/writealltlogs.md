@@ -15,14 +15,15 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7c64f0079a03b730fb700cfbc6320c5dffa05d7a
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.openlocfilehash: 7eadb30ee25b1182be5deb12feebd5ef280ebf4b
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77579513"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77630673"
 ---
 # <a name="writealltlogs"></a>WriteAllTLogs
+
 写入所有线程和上下文的跟踪日志。
 
 ## <a name="syntax"></a>语法
@@ -32,6 +33,7 @@ HRESULT WINAPI WriteAllTLogs(LPCTSTR intermediateDirectory, LPCTSTR tlogRootName
 ```
 
 #### <a name="parameters"></a>参数
+
 [in] `intermediateDirectory`
 
  存储跟踪日志的目录。
@@ -41,10 +43,13 @@ HRESULT WINAPI WriteAllTLogs(LPCTSTR intermediateDirectory, LPCTSTR tlogRootName
  日志文件名的根名称。
 
 ## <a name="return-value"></a>返回值
+
  如果跟踪上下文创建完成，则返回带 SUCCEEDED 位集的 HRESULT   。
 
 ## <a name="requirements"></a>要求
+
  **标头：** FileTracker.h 
 
 ## <a name="see-also"></a>请参阅
+
 - [WriteContextTLogs](../msbuild/writecontexttlogs.md)

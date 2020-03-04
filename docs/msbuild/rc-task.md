@@ -22,17 +22,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b2bcc37446fe5b627ec789bc04461ea643e30575
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.openlocfilehash: 13ae844759cb73de6dc7bcce6c8898c21132f9d7
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77578484"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77632909"
 ---
 # <a name="rc-task"></a>RC 任务
+
 包装 Microsoft Windows 资源编译器工具 rc.exe  。 RC  任务将游标、图标、位图、对话框和字体等资源编译为一个资源 (.res  ) 文件。 有关详细信息，请参阅[资源编译器](/windows/desktop/menurc/resource-compiler)。
 
 ## <a name="parameters"></a>参数
+
  下表描述了 RC 任务的参数。 大多数任务参数和若干组参数都对应于命令行选项。
 
 |参数|描述|
@@ -51,4 +53,5 @@ ms.locfileid: "77578484"
 |**UndefinePreprocessorDefinitions**|取消定义预处理器符号。<br /><br /> 有关详细信息，请参阅[使用 RC（RC 命令行）](/windows/win32/menurc/using-rc-the-rc-command-line-)中的 /u  选项。 另请参阅此表中的 PreprocessorDefinitions  。|
 
 ## <a name="see-also"></a>请参阅
+
 - [任务参考](../msbuild/msbuild-task-reference.md)

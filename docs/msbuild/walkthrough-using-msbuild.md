@@ -10,12 +10,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d874d8b9c96cc8cc58466bb42d8ac189e1aabc11
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: c3e3f0ec3938136370daf15954d8c13da5905ba4
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75567289"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77631076"
 ---
 # <a name="walkthrough-use-msbuild"></a>演练：使用 MSBuild
 
@@ -192,6 +192,7 @@ Message 任务将文本属性的字符串值作为输入并显示在输出设备
  稍后出现在项目文件中，或稍后出现在项目文件中的导入文件中，则 TargetFrameworkVersion 会采用新值“v3.5”。
 
 ## <a name="examine-a-property-value"></a>检查属性值
+
  若要获取属性值，请使用以下语法，其中 PropertyName 是属性的名称：
 
 ```xml
@@ -411,6 +412,7 @@ MSBuild 创建配置属性并赋予其“发布”值。
     ```
 
 ### <a name="include-exclude-and-wildcards"></a>Include、Exclude 和通配符
+
  可配合使用通配符“*”、“\*\*”和“?”和 Include 属性将项添加到项类型。 例如，应用于对象的
 
 ```xml
@@ -486,6 +488,7 @@ Exclude 属性只会影响由 Include 属性添加的项（这两个属性均位
     ```
 
 ## <a name="item-metadata"></a>项元数据
+
  除了从 Include 和 Exclude 属性收集的信息外，项还可能包含元数据。 对于需要关于项的详细信息而不仅仅是项值的任务，可使用此元数据。
 
  项元数据可通过创建元素（其中元数据的名称作为项的子元素）在项目文件中进行声明。 项可以有零个或零个以上的元数据值。 例如，以下 CSFile 项具有值为“Fr”的区域性元数据：

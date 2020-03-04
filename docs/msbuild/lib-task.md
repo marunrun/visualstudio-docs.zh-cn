@@ -25,17 +25,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c9daeb5264a4bebb67cfd486a5f05708d7e025f3
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.openlocfilehash: a5794d059a17f39531a7788895b604ae0e9590ce
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77578538"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633585"
 ---
 # <a name="lib-task"></a>LIB 任务
+
 包装 Microsoft 32 位库管理器工具 (lib.exe)  。 库管理器创建并管理通用对象文件格式 (COFF) 对象文件的库。 库管理器还可以创建导出文件和导入库，以便引用导出的定义。 有关详细信息，请参阅 [LIB 参考](/cpp/build/reference/lib-reference)和[运行 LIB](/cpp/build/reference/running-lib)。
 
 ## <a name="parameters"></a>参数
+
  下表介绍了 **LIB** 任务的参数。 大多数任务参数都对应于命令行选项。
 
 |参数|描述|
@@ -66,4 +68,5 @@ ms.locfileid: "77578538"
 |**Verbose**|可选 **Boolean** 参数。<br /><br /> 如果为 `true`，则显示有关会话进度的详细信息；这包括正在添加的 .obj 文件的名称  。 信息被发送到标准输出，并可重定向到文件。<br /><br /> 有关详细信息，请参阅[运行 LIB](/cpp/build/reference/running-lib) 中的 **/VERBOSE** 选项。|
 
 ## <a name="see-also"></a>请参阅
+
 - [任务参考](../msbuild/msbuild-task-reference.md)

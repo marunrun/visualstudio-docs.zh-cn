@@ -18,17 +18,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 57031bd49a67e1961b5413a59f66562cc9c1b883
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 0c95606a00e86ffd187162e444f2c710c5cc3a0e
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75596783"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77632883"
 ---
 # <a name="registerassembly-task"></a>RegisterAssembly 任务
+
 读取指定程序集中的元数据，并将所需项添加到注册表中，使 COM 客户端可以透明方式创建 .NET Framework 类。 此任务的行为与 [Regasm.exe（程序集注册工具）](/dotnet/framework/tools/regasm-exe-assembly-registration-tool)的行为类似，但不完全相同。
 
 ## <a name="parameters"></a>参数
+
  下表描述了 `RegisterAssembly` 任务的参数。
 
 |参数|描述|
@@ -39,9 +41,11 @@ ms.locfileid: "75596783"
 |`TypeLibFiles`|可选的 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 输出参数。<br /><br /> 指定要从指定的程序集中生成的类型库。 生成的类型库包含此程序集中定义的可访问类型的定义。 仅在下列情况之一成立时才会生成此类型库：<br /><br /> -   该位置不存在具有此名称的类型库。<br />-   存在类型库，但其早于要传入的程序集。<br /><br /> 如果类型库比要传递的程序集新，则不会创建新的类型库，但仍会注册程序集。<br /><br /> 如果指定此参数，则其项的数量必须与 `Assemblies` 参数中项的数量相同；否则任务将失败。 如果未指定输入，任务会默认使用程序集的名称，并将项的扩展名更改为 .tlb  。|
 
 ## <a name="remarks"></a>备注
+
  除上面列出的参数外，此任务还从 <xref:Microsoft.Build.Tasks.TaskExtension> 类继承参数，后者自身继承自 <xref:Microsoft.Build.Utilities.Task> 类。 有关这些其他参数的列表及其说明的信息，请参阅 [TaskExtension 基类](../msbuild/taskextension-base-class.md)。
 
 ## <a name="example"></a>示例
+
  下例使用 `RegisterAssembly` 任务注册由 `MyAssemblies` 项集合指定的程序集。
 
 ```xml
@@ -60,5 +64,6 @@ ms.locfileid: "75596783"
 ```
 
 ## <a name="see-also"></a>请参阅
+
 - [任务](../msbuild/msbuild-tasks.md)
 - [任务参考](../msbuild/msbuild-task-reference.md)

@@ -18,17 +18,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c0e83cc04b309a940f5aa4c5a36099f10afddcc3
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: dd5946612889e98b3b90f2ee3cb8665c43827a5e
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75594795"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634053"
 ---
 # <a name="generateresource-task"></a>GenerateResource 任务
+
 将文本 .txt 和 .resx（基于 XML 的资源格式）文件转换为公共语言运行时二进制 .resources 文件，这些 .resources 文件可嵌入到运行时二进制可执行文件中或编译到附属程序集中    。 此任务通常用于将 .txt 或 .resx 文件转换为 .resources 文件    。 `GenerateResource` 任务在功能上类似于 [resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator)。
 
 ## <a name="parameters"></a>参数
+
 下表描述了 `GenerateResource` 任务的参数。
 
 |参数|描述|
@@ -61,6 +63,7 @@ ms.locfileid: "75594795"
 |`UseSourcePath`|可选 `Boolean` 参数。<br /><br /> 如果为 `true`，则指定使用输入文件的目录来解析相对文件路径。|
 
 ## <a name="remarks"></a>备注
+
 由于 .resx 文件可能包含其他资源文件的链接，因此仅通过比较 .resx 和 .resources 文件时间戳的方式来查看是否为最新输出并不可靠    。 相反，`GenerateResource` 任务会跟踪 .resx 文件中的链接，同时也检查链接文件的时间戳  。 这意味着通常不应对包含 `GenerateResource` 任务的目标使用 `Inputs` 和 `Outputs` 属性，因为这样会导致在实际上应运行该任务时跳过此任务。
 
 除上面列出的参数外，此任务还从 <xref:Microsoft.Build.Tasks.TaskExtension> 类继承参数，后者自身继承自 <xref:Microsoft.Build.Utilities.Task> 类。 有关这些其他参数的列表及其说明的信息，请参阅 [TaskExtension 基类](../msbuild/taskextension-base-class.md)。
@@ -68,6 +71,7 @@ ms.locfileid: "75594795"
 使用 MSBuild 4.0 生成 .NET 3.5 项目时，x86 资源生成可能会失败。 若要解决此问题，可将目标生成为 AnyCPU 程序集。
 
 ## <a name="example"></a>示例
+
 以下示例使用 `GenerateResource` 任务从 `Resx` 项集合指定的文件中生成 .resources 文件  。
 
 ```xml
@@ -95,5 +99,6 @@ ms.locfileid: "75594795"
 如果没有 \<LogicalName> 元数据，则资源会命名为 myAssembly.myResource.resources  。  此示例仅适用于 Visual Basic 和 Visual C# 生成过程。
 
 ## <a name="see-also"></a>请参阅
+
 - [任务](../msbuild/msbuild-tasks.md)
 - [任务参考](../msbuild/msbuild-task-reference.md)

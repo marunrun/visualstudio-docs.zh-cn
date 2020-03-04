@@ -16,14 +16,15 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 93bbd0ab4ce0d27a270f3672e55173a1488e5910
-ms.sourcegitcommit: f28172c78745d14570e733db5d424f5fae98d139
+ms.openlocfilehash: 6e9320525d770344f131d9e3f04b357de43b5e73
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2020
-ms.locfileid: "75606653"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633091"
 ---
 # <a name="msbuild-well-known-item-metadata"></a>MSBuild 常见的项元数据
+
 下表描述了创建每个项时分配给该项的元数据。 在每个示例中，以下项声明用于将文件 C:\MyProject\Source\Program.cs  包含在项目中。
 
 ```xml
@@ -47,6 +48,7 @@ ms.locfileid: "75606653"
 |%(AccessedTime)|包含上一次访问项的时间戳。<br /><br /> `2004-08-14 16:52:36.3168743`|
 
 ## <a name="see-also"></a>请参阅
+
 - [项](../msbuild/msbuild-items.md)
 - [批处理](../msbuild/msbuild-batching.md)
 - [MSBuild 参考](../msbuild/msbuild-reference.md)

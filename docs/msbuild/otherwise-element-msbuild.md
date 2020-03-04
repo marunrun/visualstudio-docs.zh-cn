@@ -18,14 +18,15 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 460a02b3e2115c7ccb91258ffe960668e64fb363
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 384886ad4292661648f5cbfde1a583d8d75b1c03
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75594837"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633039"
 ---
 # <a name="otherwise-element-msbuild"></a>Otherwise 元素 (MSBuild)
+
 指定当且仅当所有 `When` 元素的条件的计算结果为 `false` 时才执行的代码块。
 
  \<Project> \<Choose> \<When> \<Choose> ...\<Otherwise> \<Choose> ...
@@ -41,9 +42,11 @@ ms.locfileid: "75594837"
 ```
 
 ## <a name="attributes-and-elements"></a>特性和元素
+
  下列各节描述了特性、子元素和父元素。
 
 ### <a name="attributes"></a>特性
+
  无。
 
 ### <a name="child-elements"></a>子元素
@@ -61,11 +64,13 @@ ms.locfileid: "75594837"
 |[Choose](../msbuild/choose-element-msbuild.md)|评估子元素以选择代码的一部分来执行。|
 
 ## <a name="remarks"></a>备注
+
  `Choose` 元素中可能只有一个 `Otherwise`元素，并且它必须是最后一个元素。
 
  `Choose`、`When` 和 `Otherwise` 元素一起用来提供一种方式，通过这种方式选择代码的一部分来执行许多种可能的替代选择。 有关详细信息，请参阅[条件构造](../msbuild/msbuild-conditional-constructs.md)。
 
 ## <a name="example"></a>示例
+
  以下项目使用 `Choose` 元素来选择要在 `When` 元素中设置的属性值组。 如果两个 `When` 元素的 `Condition` 属性的计算结果均为 `false`，则将设置 `Otherwise` 元素中的属性值。
 
 ```xml
@@ -114,5 +119,6 @@ ms.locfileid: "75594837"
 ```
 
 ## <a name="see-also"></a>请参阅
+
 - [条件构造](../msbuild/msbuild-conditional-constructs.md)
 - [项目文件架构参考](../msbuild/msbuild-project-file-schema-reference.md)

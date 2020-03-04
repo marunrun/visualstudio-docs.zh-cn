@@ -12,13 +12,12 @@ caps.latest.revision: 1
 author: bowdenk7
 ms.author: wilkelly
 manager: jillfra
-monikerRange: vs-2017
-ms.openlocfilehash: 653b2576b0076d02f2e18cedc6f9f9890fd98fe5
-ms.sourcegitcommit: 978df2feb5e64228d2e3dd430b299a5c234cda17
+ms.openlocfilehash: 2a0d3657843dcf282e5c9aab8609efe5f9611965
+ms.sourcegitcommit: 9eff8371b7a79a637ebb6850f775dd3eed343d8b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72888664"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78234951"
 ---
 # <a name="javascript-in-visual-studio-2017"></a>Visual Studio 2017 中的 JavaScript
 
@@ -261,7 +260,7 @@ XML 文档注释（有时称为 VSDoc）以前可用于修饰包含额外可强�
 由于新语言服务由静态分析（而不是执行引擎）提供支持（请阅读[此问题](https://github.com/Microsoft/TypeScript/issues/4789)获取有关差异的信息），因此，存在几种无法再检测到的 JavaScript 模式。
 最常见的模式是“expando”模式。
 当前语言服务无法向在声明后附加属性的对象提供 IntelliSense。
-例如:
+例如：
 
 ```js
 var obj = {};

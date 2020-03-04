@@ -17,12 +17,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ebea7356e81cb5924919f213327816dbd69e0c7b
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+ms.openlocfilehash: bb95da599e6362ad32c0ef94dcf9c184269ddedf
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2020
-ms.locfileid: "77278399"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633403"
 ---
 # <a name="msbuild-command-line-reference"></a>MSBuild 命令行参考
 
@@ -85,6 +85,7 @@ MSBuild.exe [Switches] [ProjectFile]
 |-noConsoleLogger|-noconlog|禁用默认控制台记录器，不将事件记录到控制台。|
 
 ## <a name="example"></a>示例
+
  下面的示例生成 MyProject.proj 项目的 `rebuild` 目标  。
 
 ```cmd
@@ -92,6 +93,7 @@ MSBuild.exe MyProject.proj -t:rebuild
 ```
 
 ## <a name="example"></a>示例
+
  可以使用 MSBuild.exe 执行更复杂的生成  。 例如，可以使用它在解决方案中生成特定项目的特定目标。 下面的示例重新生成项目 `NotInSolutionFolder` 并清理项目 `InSolutionFolder`（位于 NewFolder 解决方案文件夹中）  。
 
 ```cmd
@@ -99,5 +101,6 @@ msbuild SlnFolders.sln -t:NotInSolutionfolder:Rebuild;NewFolder\InSolutionFolder
 ```
 
 ## <a name="see-also"></a>请参阅
+
 - [MSBuild 参考](../msbuild/msbuild-reference.md)
 - [常用的 MSBuild 项目属性](../msbuild/common-msbuild-project-properties.md)

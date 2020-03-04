@@ -16,17 +16,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: de2b36f1003515a47774eaa40fda390728940324
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: c54f3c222588cd13711c832d12f7598f0cc5e223
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75591146"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634170"
 ---
 # <a name="findappconfigfile-task"></a>FindAppConfigFile 任务
+
 在提供的列表中查找 app.config 文件（若有）  。
 
 ## <a name="parameters"></a>参数
+
  下表描述了 `FindAppConfigFile` 任务的参数。
 
 |参数|描述|
@@ -37,8 +39,10 @@ ms.locfileid: "75591146"
 |`TargetPath`|必选 `String` 参数。<br /><br /> 指定要添加为元数据的值。|
 
 ## <a name="remarks"></a>备注
+
  除了具有表中列出的参数外，此任务还将从本身继承自 <xref:Microsoft.Build.Utilities.Task> 类的 <xref:Microsoft.Build.Tasks.TaskExtension> 类继承参数。 有关这些其他参数的列表及其说明的信息，请参阅 [TaskExtension 基类](../msbuild/taskextension-base-class.md)。
 
 ## <a name="see-also"></a>请参阅
+
 - [任务](../msbuild/msbuild-tasks.md)
 - [任务参考](../msbuild/msbuild-task-reference.md)

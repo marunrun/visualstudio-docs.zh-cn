@@ -13,17 +13,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 41a32b914cab8626df513994a3d68c2aac3d7cb7
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: e2d825c0c08ffeba1449954ed310644dd4437840
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75593429"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634534"
 ---
 # <a name="assigntargetpath-task"></a>AssignTargetPath 任务
+
 此任务接受文件列表，并添加 `<TargetPath>` 属性（如果尚未指定）。
 
 ## <a name="task-parameters"></a>任务参数
+
 下表描述了 `AssignTargetPath` 任务的参数。
 
 |参数|描述|
@@ -33,9 +35,11 @@ ms.locfileid: "75593429"
 |`AssignedFiles`|可选<br /><br /> <xref:Microsoft.Build.Framework.ITaskItem> `[]` 输出参数。<br /><br /> 包含生成的文件列表。|
 
 ## <a name="remarks"></a>备注
+
 除上面列出的参数外，此任务还从 <xref:Microsoft.Build.Tasks.TaskExtension> 类继承参数，后者自身继承自 <xref:Microsoft.Build.Utilities.Task> 类。 有关这些其他参数的列表及其说明的信息，请参阅 [TaskExtension 基类](../msbuild/taskextension-base-class.md)。
 
 ## <a name="example"></a>示例
+
 下例执行 `AssignTargetPath` 任务以对项目进行配置。
 
 ```xml
@@ -52,5 +56,6 @@ RootFolder="Resources"
 ```
 
 ## <a name="see-also"></a>请参阅
+
 - [任务](../msbuild/msbuild-tasks.md)
 - [任务参考](../msbuild/msbuild-task-reference.md)

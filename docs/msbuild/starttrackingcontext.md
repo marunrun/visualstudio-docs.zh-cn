@@ -15,14 +15,15 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4b84753974eeecb8dca85035d50635d0bee47645
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 50f62704897d68b0e323b948b8f4ed7e96a10c9a
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75595041"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77632103"
 ---
 # <a name="starttrackingcontext"></a>StartTrackingContext
+
 启动跟踪上下文。
 
 ## <a name="syntax"></a>语法
@@ -32,6 +33,7 @@ HRESULT WINAPI StartTrackingContext(LPCTSTR intermediateDirectory, LPCTSTR taskN
 ```
 
 #### <a name="parameters"></a>参数
+
 [in] `intermediateDirectory`
 
  存储跟踪日志的目录。
@@ -41,7 +43,9 @@ HRESULT WINAPI StartTrackingContext(LPCTSTR intermediateDirectory, LPCTSTR taskN
  标识跟踪上下文。 此名称用于创建日志文件名。
 
 ## <a name="return-value"></a>返回值
+
  如果跟踪上下文创建完成，则返回带 SUCCEEDED 位集的 HRESULT   。
 
 ## <a name="requirements"></a>要求
+
  **标头：** FileTracker.h 

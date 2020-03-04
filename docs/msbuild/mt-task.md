@@ -24,17 +24,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2f90a1349771ab67f342a3490874cd422051cac2
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 5fe0ce106fc471431d3aac088eb3f45cfb28c564
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75595025"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633052"
 ---
 # <a name="mt-task"></a>MT 任务
+
 包装 Microsoft 清单工具 mt.exe  。 有关详细信息，请参见 [Mt.exe](/windows/desktop/SbsCs/mt-exe)。
 
 ## <a name="parameters"></a>参数
+
  下表描述了 MT  任务的参数。 大多数任务参数和若干组参数都对应于命令行选项。
 
 > [!NOTE]
@@ -69,4 +71,5 @@ ms.locfileid: "75595025"
 |**VerboseOutput**|可选 `Boolean` 参数。<br /><br /> 如果为 `true`，则显示详细调试信息。<br /><br /> 有关详细信息，请参阅 [Mt.exe](/windows/desktop/SbsCs/mt-exe) 中的“/verbose”  选项。|
 
 ## <a name="see-also"></a>请参阅
+
 - [任务参考](../msbuild/msbuild-task-reference.md)

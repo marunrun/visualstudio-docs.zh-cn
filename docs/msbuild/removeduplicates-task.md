@@ -18,17 +18,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 235f96b3d67b0ad2e3c3bd1c486c5c9f2eeb86c2
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 90366bab14eefd1be4edac81d6b09b3f57aa3332
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75596003"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77632779"
 ---
 # <a name="removeduplicates-task"></a>RemoveDuplicates 任务
+
 从指定的项集合中删除重复的项。
 
 ## <a name="parameters"></a>参数
+
  下表描述了 `RemoveDuplicates` 任务的参数。
 
 |参数|描述|
@@ -37,11 +39,13 @@ ms.locfileid: "75596003"
 |`Inputs`|可选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 要从中删除重复项的项集合。|
 
 ## <a name="remarks"></a>备注
+
  此任务不区分大小写，并且在确定重复项时不比较项元数据。
 
  除上面列出的参数外，此任务还从 <xref:Microsoft.Build.Tasks.TaskExtension> 类继承参数，后者自身继承自 <xref:Microsoft.Build.Utilities.Task> 类。 有关这些其他参数的列表及其说明的信息，请参阅 [TaskExtension 基类](../msbuild/taskextension-base-class.md)。
 
 ## <a name="example"></a>示例
+
  以下示例使用 `RemoveDuplicates` 任务从 `MyItems` 项集合中删除重复项。 任务完成后，`FilteredItems` 项集合包含一个项。
 
 ```xml
@@ -90,6 +94,7 @@ ms.locfileid: "75596003"
 ```
 
 ## <a name="see-also"></a>请参阅
+
 - [任务参考](../msbuild/msbuild-task-reference.md)
 - [MSBuild 概念](../msbuild/msbuild-concepts.md)
 - [任务](../msbuild/msbuild-tasks.md)
