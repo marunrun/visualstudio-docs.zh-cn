@@ -11,14 +11,15 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b1aee1a6ae3abc06846523df9470ad75d316a50b
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 91b2e157ee64f5e4d91bc75a5d6f8d65d4312862
+ms.sourcegitcommit: 3ed59ce39692124fe61c484df4348c0b9abee9b9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592082"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78263144"
 ---
 # <a name="msbuild-best-practices"></a>MSBuild 最佳做法
+
 我们建议下列编写 MSBuild 脚本的最佳做法：
 
 - 默认属性值的最佳处理方式是使用 `Condition` 特性，而不是声明可在命令行中重写其默认值的属性。 例如，使用
@@ -29,7 +30,8 @@ ms.locfileid: "75592082"
 </MyProperty>
 ```
 
-- 在选择项目时，请避免使用通配符。 而应显式指定文件。 这使得跟踪在添加或删除文件时可能出现的错误更加简单。
+- 通常，选择项时，请避免使用通配符。 而应显式指定文件。 这是因为在大多数项目类型中，MSBuild 会在不同时间展开通配符，如添加或删除项时，这可能会导致意外行为。 在 .NET Core SDK 样式项目中有一个例外，该项目可以正确处理通配符。
 
 ## <a name="see-also"></a>请参阅
+
 - [高级概念](../msbuild/msbuild-advanced-concepts.md)

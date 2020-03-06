@@ -17,15 +17,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 703cd7bc3d0dd0e2229365dde39418ff32ad0a3e
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.openlocfilehash: 2b5aba45292aaa55a719eb19d6f0f6f115e8b477
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77579602"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77632506"
 ---
 # <a name="resourcesgenerator-task"></a>ResourcesGenerator 任务
-<xref:Microsoft.Build.Tasks.Windows.ResourcesGenerator> 任务将一个或多个资源（二进制格式的 .jpg  、.ico  、.bmp  、[!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] 以及其他扩展名类型）嵌入 .resources  文件中。
+
+<xref:Microsoft.Build.Tasks.Windows.ResourcesGenerator> 任务将一个或多个资源（二进制格式的 .jpg  、.ico  、.bmp  、XAML 以及其他扩展名类型）嵌入 .resources  文件中。
 
 ## <a name="task-parameters"></a>任务参数
 
@@ -36,6 +37,7 @@ ms.locfileid: "77579602"
 |`ResourcesFiles`|必需的 **ITaskItem[]** 参数。<br /><br /> 指定一个或多个资源，以嵌入生成的 .resources  文件中。|
 
 ## <a name="example"></a>示例
+
  以下示例使用单个 .bmp  资源生成 .resources  文件。 向项目根目录的相对目录生成 .bmp  资源。
 
 ```xml
@@ -53,6 +55,7 @@ ms.locfileid: "77579602"
 ```
 
 ## <a name="see-also"></a>请参阅
+
 - [WPF MSBuild 参考](../msbuild/wpf-msbuild-reference.md)
 - [任务参考](../msbuild/wpf-msbuild-task-reference.md)
 - [MSBuild 参考](../msbuild/msbuild-reference.md)

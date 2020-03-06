@@ -12,18 +12,20 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4d66fb73972a81e421b6e7343e549b0ef3069001
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: afc679f9b782b8bc9ed3e04a2b8fb684cdbc1a20
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75574413"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633780"
 ---
 # <a name="how-to-use-environment-variables-in-a-build"></a>如何：在生成中使用环境变量
+
 在生成项目时，有时经常需要使用非项目文件或构成项目的文件中的信息来设置生成选项。 此信息通常存储在环境变量中。
 
 ## <a name="reference-environment-variables"></a>引用环境变量
- 所有环境变量均可供 [!INCLUDE[vstecmsbuildengine](../msbuild/includes/vstecmsbuildengine_md.md)] ([!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]) 项目文件作为属性使用。
+
+ 所有环境变量均可供 Microsoft 生成引擎 (MSBuild) 项目文件作为属性使用。
 
 > [!NOTE]
 > 如果项目文件包含与环境变量具有相同名称的属性的显式定义，则项目文件中的属性将替代环境变量的值。
@@ -46,6 +48,7 @@ ms.locfileid: "75574413"
     > 属性名称不区分大小写，因此 `$(ToolsPath)` 和 `$(TOOLSPATH)` 均引用相同的属性或环境变量。
 
 ## <a name="example"></a>示例
+
  以下项目文件使用环境变量来指定目录的位置。
 
 ```xml
@@ -63,6 +66,7 @@ ms.locfileid: "75574413"
 ```
 
 ## <a name="see-also"></a>请参阅
+
 - [MSBuild](../msbuild/msbuild.md)
 - [MSBuild 属性](../msbuild/msbuild-properties.md)
 - [如何：使用不同选项生成相同的源文件](../msbuild/how-to-build-the-same-source-files-with-different-options.md)

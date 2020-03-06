@@ -10,15 +10,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 95275f90af0fbf6f002a7e3a127e7d7ca7d08a39
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 18d6a2a30af4fb29a8d9e924c44c1570ff1efe29
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75573776"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633702"
 ---
 # <a name="item-definitions"></a>项定义
-[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 2.0 使用 [ItemGroup](../msbuild/itemgroup-element-msbuild.md) 元素来启用项目文件中项的静态声明。 但是，只能在项级别添加元数据，即使所有项的元数据均相同，也是如此。 从 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 3.5 开始引入了一个名为 [ItemDefinitionGroup](../msbuild/itemdefinitiongroup-element-msbuild.md) 的项目元素，从而克服了这一限制。 使用 *ItemDefinitionGroup* 可以定义一组项定义，这些项定义将默认元数据值添加到命名项类型中的所有项中。
+
+MSBuild 2.0 版本可让你使用 [ItemGroup](../msbuild/itemgroup-element-msbuild.md) 元素在项目文件中实现项目的静态声明。 但是，只能在项级别添加元数据，即使所有项的元数据均相同，也是如此。 从 MSBuild 3.5 开始引入了一个名为 [ItemDefinitionGroup](../msbuild/itemdefinitiongroup-element-msbuild.md) 的项目元素，从而克服了这一限制。 使用 *ItemDefinitionGroup* 可以定义一组项定义，这些项定义将默认元数据值添加到命名项类型中的所有项中。
 
 *ItemDefinitionGroup* 元素紧跟在项目文件的 [Project](../msbuild/project-element-msbuild.md) 元素之后。 项定义提供以下功能：
 
@@ -33,6 +34,7 @@ ms.locfileid: "75573776"
 - 可使用条件来控制元数据的包含。
 
 ## <a name="item-metadata-default-values"></a>项元数据默认值
+
 在 ItemDefinitionGroup 中定义的项元数据仅是默认元数据的声明。 除非定义一个使用 ItemGroup 包含元数据值的项，否则元数据不适用。
 
 > [!NOTE]
@@ -61,6 +63,7 @@ ItemGroup 中显式定义的元数据优先于 ItemDefinitionGroup 中的元数�
 > XML 元素和参数名均区分大小写。 项元数据和项\/属性名均不区分大小写。 因此，应将名称中仅大小写不同的 ItemDefinitionGroup 项视作同一个 ItemGroup。
 
 ## <a name="value-sources"></a>值源
+
 ItemDefinitionGroup 中定义的元数据的值可能来自许多不同的源，如下所示：
 
 - PropertyGroup 属性
@@ -83,6 +86,7 @@ ItemDefinitionGroup 中定义的元数据的值可能来自许多不同的源，
 > ItemGroup 中的项元数据在 ItemDefinitionGroup 元数据声明中无用，这是因为已在 ItemGroup 元素之前处理 ItemDefinitionGroup 元素。
 
 ## <a name="additive-and-multiple-definitions"></a>累加性和多个定义
+
 当添加定义或使用多个 ItemDefinitionGroup 时，请记住以下几点：
 
 - 将其他元数据规范添加到此类型中。
@@ -143,6 +147,7 @@ ItemDefinitionGroup 中定义的元数据的值可能来自许多不同的源，
 ```
 
 ## <a name="use-conditions-in-an-itemdefinitiongroup"></a>在 ItemDefinitionGroup 中使用条件
+
 可使用 ItemDefinitionGroup 中的条件来控制元数据的包含。 例如：
 
 ```xml
@@ -189,7 +194,8 @@ ItemDefinitionGroup 中定义的元数据的值可能来自许多不同的源，
 在上述示例中，“m”将设置为值“m1”，作为项“yes”的条件引用项“i”的元数据值。
 
 ## <a name="override-and-delete-metadata"></a>替代和删除元数据
-通过将元数据值设置为空白，在 ItemDefinitionGroup 元素中定义的元数据可以在之后的 ItemDefinitionGroup 元素中被替代。 还可通过将元数据项设置为空值，高效删除元数据项。 例如：
+
+通过将元数据值设置为其他值，在 ItemDefinitionGroup 元素中定义的元数据可以在之后的 ItemDefinitionGroup 元素中被替代。 还可通过将元数据项设置为空值，高效删除元数据项。 例如：
 
 ```xml
 <ItemDefinitionGroup>
@@ -207,6 +213,7 @@ ItemDefinitionGroup 中定义的元数据的值可能来自许多不同的源，
 项“i”仍包含元数据“m”，但此时它的值为空。
 
 ## <a name="scope-of-metadata"></a>元数据范围
+
 ItemDefinitionGroups 在定义的位置具有全局范围和全局属性。 ItemDefinitionGroup 中的默认元数据定义可自引用。 例如，以下示例使用了一个简单的元数据引用：
 
 ```xml
@@ -240,7 +247,7 @@ ItemDefinitionGroups 在定义的位置具有全局范围和全局属性。 Item
 </ItemDefinitionGroup>
 ```
 
-从 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 3.5 开始，ItemGroups 可以自引用。 例如：
+从 MSBuild 3.5 开始，ItemGroups 可以自引用。 例如：
 
 ```xml
 <ItemGroup>
@@ -252,4 +259,5 @@ ItemDefinitionGroups 在定义的位置具有全局范围和全局属性。 Item
 ```
 
 ## <a name="see-also"></a>请参阅
+
 - [批处理](../msbuild/msbuild-batching.md)

@@ -18,17 +18,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 054874f6e8a3687291270fedbd45492f5167f765
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 2a1710336ebc73be707e962733e37376b5689e10
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75591133"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77631232"
 ---
 # <a name="vbc-task"></a>Vbc 任务
+
 包装可生成可执行文件 (.exe)、动态链接库 (.dll) 或代码模块 (.netmodule) 的 vbc.exe     。 有关 vbc.exe 的详细信息，请参阅 [Visual Basic 命令行编译器](/dotnet/visual-basic/reference/command-line-compiler/index)  。
 
 ## <a name="parameters"></a>参数
+
  下表描述了 `Vbc` 任务的参数。
 
 | 参数 | 描述 |
@@ -74,12 +76,12 @@ ms.locfileid: "75591133"
 | `RootNamespace` | 可选 `String` 参数。<br /><br /> 指定所有类型声明的根命名空间。 此参数对应于 vbc.exe 编译器的 [-rootnamespace](/dotnet/visual-basic/reference/command-line-compiler/rootnamespace) 开关  。 |
 | `SdkPath` | 可选 `String` 参数。<br /><br /> 指定 mscorlib.dll 和 microsoft.visualbasic.dll 的位置   。 此参数对应于 vbc.exe 编译器的 [-sdkpath](/dotnet/visual-basic/reference/command-line-compiler/sdkpath) 开关  。 |
 | `Sources` | 可选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 指定一个或多个 Visual Basic 源文件。 |
-| `TargetCompactFramework` | 可选 `Boolean` 参数。<br /><br /> 如果为 `true`，则任务面向 [!INCLUDE[Compact](../extensibility/includes/compact_md.md)]。 此参数对应于 vbc.exe 编译器的 [-netcf](/dotnet/visual-basic/reference/command-line-compiler/netcf) 开关  。 |
+| `TargetCompactFramework` | 可选 `Boolean` 参数。<br /><br /> 如果为 `true`，则任务面向 .NET Compact Framework。 此参数对应于 vbc.exe 编译器的 [-netcf](/dotnet/visual-basic/reference/command-line-compiler/netcf) 开关  。 |
 | `TargetType` | 可选 `String` 参数。<br /><br /> 指定输出文件的文件格式。 此参数可以具有 `library` 或 `winexe` 的值，前者将创建代码库 `exe`，代码库将创建控制台应用程序 `module`，应用程序将创建一个模块，后者将创建 Windows 程序。 默认值为 `library`。 此参数对应于 vbc.exe 编译器的 [-target](/dotnet/visual-basic/reference/command-line-compiler/target) 开关  。 |
 | `Timeout` | 可选 `Int32` 参数。<br /><br /> 指定终止任务可执行文件之前的时间量（以毫秒为单位）。 默认值是 `Int.MaxValue`，指示没有超时期限。 |
-| `ToolPath` | 可选 `String` 参数。<br /><br /> 指定任务从何处加载基础可执行文件 (vbc.exe)  。 如果未指定此参数，则任务会使用与运行 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 的框架版本对应的 SDK 安装路径。 |
+| `ToolPath` | 可选 `String` 参数。<br /><br /> 指定任务从何处加载基础可执行文件 (vbc.exe)  。 如果未指定此参数，则任务会使用与运行 MSBuild 的框架版本对应的 SDK 安装路径。 |
 | `TreatWarningsAsErrors` | 可选 `Boolean` 参数。<br /><br /> 如果为 `true`，则会将所有警告视为错误。 有关详细信息，请参阅 [-warnaserror (Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/warnaserror)。 |
-| `UseHostCompilerIfAvailable` | 可选 `Boolean` 参数。<br /><br /> 指示该任务使用进程内编译器对象（如果可用）。 仅由 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 使用。 |
+| `UseHostCompilerIfAvailable` | 可选 `Boolean` 参数。<br /><br /> 指示该任务使用进程内编译器对象（如果可用）。 仅由 Visual Studio 使用。 |
 | `Utf8Output` | 可选 `Boolean` 参数。<br /><br /> 记录使用 UTF-8 编码的编译器输出。 此参数对应于 vbc.exe 编译器的 [-utf8output](/dotnet/visual-basic/reference/command-line-compiler/utf8output) 开关  。 |
 | `Verbosity` | 可选 `String` 参数。<br /><br /> 指定编译器输出的详细级别。 详细级别可以为 `Quiet`、`Normal`（默认）或 `Verbose`。 |
 | `WarningsAsErrors` | 可选 `String` 参数。<br /><br /> 指定将被视为错误的警告的列表。 有关详细信息，请参阅 [-warnaserror (Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/warnaserror)。<br /><br /> 此参数替代 `TreatWarningsAsErrors` 参数。 |
@@ -88,9 +90,11 @@ ms.locfileid: "75591133"
 | `Win32Resources` | 可选 `String` 参数。<br /><br /> 在输出文件中插入 Win32 资源 (.res) 文件  。 此参数对应于 vbc.exe 编译器的 [-win32resource](/dotnet/visual-basic/reference/command-line-compiler/win32resource) 开关  。 |
 
 ## <a name="remarks"></a>备注
+
  除上面列出的参数外，此任务还从 <xref:Microsoft.Build.Tasks.ToolTaskExtension> 类继承参数，后者自身继承自 <xref:Microsoft.Build.Utilities.ToolTask> 类。 有关这些其他参数的列表及其说明，请参阅 [ToolTaskExtension 基类](../msbuild/tooltaskextension-base-class.md)。
 
 ## <a name="example"></a>示例
+
  以下示例编译 Visual Basic 项目。
 
 ```xml
@@ -102,6 +106,7 @@ ms.locfileid: "75591133"
 ```
 
 ## <a name="see-also"></a>请参阅
+
 - [Visual Basic 命令行编译器](/dotnet/visual-basic/reference/command-line-compiler/index)
 - [任务](../msbuild/msbuild-tasks.md)
 - [任务参考](../msbuild/msbuild-task-reference.md)

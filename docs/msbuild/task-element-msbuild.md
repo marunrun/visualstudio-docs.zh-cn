@@ -1,5 +1,5 @@
 ---
-title: 任务元素 (MSBuild) | Microsoft Docs
+title: Target 的 Task 元素 (MSBuild) | Microsoft Docs
 ms.date: 03/13/2017
 ms.topic: reference
 dev_langs:
@@ -16,15 +16,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 76f808c14b8459abfb3bf9c531cfff496932836c
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 8a4ec2203430045c083b46b2eea8d3e884a4b794
+ms.sourcegitcommit: 3ed59ce39692124fe61c484df4348c0b9abee9b9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75566353"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78263163"
 ---
-# <a name="task-element-msbuild"></a>Task 元素 (MSBuild)
-创建并执行的 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 任务的实例。 元素名称由正在创建的任务名称确定。
+# <a name="task-element-of-target-msbuild"></a>Target 的 Task 元素 (MSBuild)
+
+创建并执行的 MSBuild 任务的实例。 元素名称由正在创建的任务名称确定。
 
  \<Project> \<Target>
 
@@ -39,6 +40,7 @@ ms.locfileid: "75566353"
 ```
 
 ## <a name="attributes-and-elements"></a>特性和元素
+
  下列各节描述了特性、子元素和父元素。
 
 ### <a name="attributes"></a>特性
@@ -59,14 +61,16 @@ ms.locfileid: "75566353"
 
 | 元素 | 描述 |
 | - | - |
-| [Target](../msbuild/target-element-msbuild.md) | [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 任务的容器元素。 |
+| [Target](../msbuild/target-element-msbuild.md) | MSBuild 任务的容器元素。 |
 
 ## <a name="remarks"></a>备注
- [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 项目文件中的 `Task` 元素创建任务实例、在其中设置属性并执行它。 `Output` 元素存储属性或项中用于项目文件中其他位置的输出参数。
+
+ MSBuild 项目文件中的 `Task` 元素创建任务实例、在其中设置属性并执行它。 `Output` 元素存储属性或项中用于项目文件中其他位置的输出参数。
 
  如果任务的父 `Target` 元素中存在任何 [OnError](../msbuild/onerror-element-msbuild.md) 元素，当任务失败且 `ContinueOnError` 具有值 `false` 时仍将对该元素评估。 有关任务的详细信息，请参阅[任务](../msbuild/msbuild-tasks.md)。
 
 ## <a name="example"></a>示例
+
  下面的代码示例创建 [Csc 任务](../msbuild/csc-task.md)类的实例、设置其中 6 个属性并执行任务。 执行任何后，对象的 `OutputAssembly` 属性的值将放入名为 `FinalAssemblyName` 的项列表中。
 
 ```xml
@@ -84,6 +88,7 @@ ms.locfileid: "75566353"
 ```
 
 ## <a name="see-also"></a>请参阅
+
 - [任务](../msbuild/msbuild-tasks.md)
 - [任务参考](../msbuild/msbuild-task-reference.md)
 - [项目文件架构参考](../msbuild/msbuild-project-file-schema-reference.md)

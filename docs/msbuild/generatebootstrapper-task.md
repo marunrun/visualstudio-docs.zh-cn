@@ -18,17 +18,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 660f63f68435f4c4eba8d1c3dfb2438541da4841
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 6da773fdf6cd84819ea0e73083995f60e3c17e2d
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75589287"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634079"
 ---
 # <a name="generatebootstrapper-task"></a>GenerateBootstrapper 任务
+
 提供自动化方式来检测、下载和安装应用程序及其必备组件。 它可以作为集成不同的安装程序的单个安装程序为组成应用程序的所有组件提供服务。
 
 ## <a name="task-parameters"></a>任务参数
+
 下表描述了 `GenerateBootstrapper` 任务的参数。
 
 - `ApplicationFile`
@@ -76,7 +78,7 @@ ms.locfileid: "75589287"
   </BootstrapperItem>
   ```
 
-   `Include` 属性表示应安装的必备组件的名称。 `ProductName` 项元数据是可选的，并且在找不到包的情况下，生成引擎将其用作用户友好名称。 这些项不是必需的 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 输入参数，除非没有指定任何 `ApplicationFile`。 对于必须为应用程序安装的每个必备组件，应包括一个项。
+   `Include` 属性表示应安装的必备组件的名称。 `ProductName` 项元数据是可选的，并且在找不到包的情况下，生成引擎将其用作用户友好名称。 这些项不是必需的 MSBuild 输入参数，除非没有指定任何 `ApplicationFile`。 对于必须为应用程序安装的每个必备组件，应包括一个项。
 
    如果 `BootstrapperItems` 和 `ApplicationFile` 均未指定参数，将产生生成错误。
 
@@ -149,9 +151,11 @@ ms.locfileid: "75589287"
    如果为 `true`，则引导程序对指定输入的引导程序项执行 XSD 验证。 此参数的默认值为 `false`。
 
 ## <a name="remarks"></a>备注
+
 除上面列出的参数外，此任务还从 <xref:Microsoft.Build.Tasks.TaskExtension> 类继承参数，后者自身继承自 <xref:Microsoft.Build.Utilities.Task> 类。 有关这些其他参数的列表及其说明的信息，请参阅 [TaskExtension 基类](../msbuild/taskextension-base-class.md)。
 
 ## <a name="example"></a>示例
+
 以下示例使用 `GenerateBootstrapper` 任务来安装将 .NET Framework 2.0 作为必备组件安装的应用程序。
 
 ```xml
@@ -176,5 +180,6 @@ ms.locfileid: "75589287"
 ```
 
 ## <a name="see-also"></a>请参阅
+
 - [任务](../msbuild/msbuild-tasks.md)
 - [任务参考](../msbuild/msbuild-task-reference.md)

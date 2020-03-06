@@ -16,14 +16,15 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 56d3c301eb0e9b660a82b6552792a96aa5bd8596
-ms.sourcegitcommit: 8cbced0fb46959a3a2494852df1e41db1177a26c
+ms.openlocfilehash: 76dadd1a064a64884e3ff1cd1f2431bc1b94c3c4
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76826583"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633728"
 ---
 # <a name="importgroup-element"></a>ImportGroup 元素
+
   
 包含在可选条件下进行分组的 `Import` 元素的集合。 有关详细信息，请参阅 [Import 元素 (MSBuild)](../msbuild/import-element-msbuild.md)。
 
@@ -42,6 +43,7 @@ ms.locfileid: "76826583"
 ```
 
 ## <a name="attributes-and-elements"></a>特性和元素
+
  下列各节描述了特性、子元素和父元素。
 
 ### <a name="attributes"></a>特性
@@ -60,9 +62,10 @@ ms.locfileid: "76826583"
 
 | 元素 | 描述 |
 | - | - |
-| [Project](../msbuild/project-element-msbuild.md) | [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 项目文件必需的根元素。 |
+| [Project](../msbuild/project-element-msbuild.md) | MSBuild 项目文件必需的根元素。 |
 
 ## <a name="example"></a>示例
+
  以下代码示例演示 `ImportGroup` 元素。
 
 ```xml

@@ -18,29 +18,32 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 894cfe9fd6e116e983a5290e5817211182b073c7
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.openlocfilehash: ab8e15cef722e935dde322072f6834ba00be8bc5
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77578613"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633962"
 ---
 # <a name="getwinfxpath-task"></a>GetWinFXPath 任务
-<xref:Microsoft.Build.Tasks.Windows.GetWinFXPath> 任务返回当前 [!INCLUDE[TLA#tla_winfx](../msbuild/includes/tlasharptla_winfx_md.md)] 运行时的目录。
+
+<xref:Microsoft.Build.Tasks.Windows.GetWinFXPath> 任务返回当前 .NET 运行时的目录。
 
 ## <a name="task-parameters"></a>任务参数
 
 | 参数 | 描述 |
 |-------------------| - |
-| `WinFXPath` | 可选的 **String** 输出参数。<br /><br /> 指定 [!INCLUDE[TLA2#tla_winfx](../msbuild/includes/tla2sharptla_winfx_md.md)] 运行时的实际路径。 |
-| `WinFXNativePath` | 必需的 **String** 参数。<br /><br /> 指定本机 [!INCLUDE[TLA2#tla_titlewinfx](../msbuild/includes/tla2sharptla_titlewinfx_md.md)] 运行时的路径。 |
-| `WinFXWowPath` | 必需的 **String** 参数。<br /><br /> 指定 64 位系统上 32 位 **Windows on Windows** 模块中的 [!INCLUDE[TLA#tla_winfx](../msbuild/includes/tlasharptla_winfx_md.md)] 程序集的路径。 |
+| `WinFXPath` | 可选的 **String** 输出参数。<br /><br /> 指定 .NET 运行时的实际路径。 |
+| `WinFXNativePath` | 必需的 **String** 参数。<br /><br /> 指定本机 .NET 运行时的路径。 |
+| `WinFXWowPath` | 必需的 **String** 参数。<br /><br /> 指定 64 位系统上 32 位 Windows on Windows  模块中的 .NET 程序集的路径。 |
 
 ## <a name="remarks"></a>备注
+
  如果在 64 位处理器上执行 <xref:Microsoft.Build.Tasks.Windows.GetWinFXPath> 任务，则 WinFXPath  参数会设置为 WinFXWowPath  参数中存储的路径；否则，WinFXPath  参数会设置为 WinFXNativePath  参数中存储的路径。
 
 ## <a name="example"></a>示例
- 如下示例演示了如何使用 **GetWinFXPath** 任务来检测 [!INCLUDE[TLA2#tla_titlewinfx](../msbuild/includes/tla2sharptla_titlewinfx_md.md)] 运行时的本机路径。
+
+ 如下示例演示了如何使用 GetWinFXPath  任务来检测 .NET 运行时的本机路径。
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -57,6 +60,7 @@ ms.locfileid: "77578613"
 ```
 
 ## <a name="see-also"></a>请参阅
+
 - [WPF MSBuild 参考](../msbuild/wpf-msbuild-reference.md)
 - [任务参考](../msbuild/wpf-msbuild-task-reference.md)
 - [MSBuild 参考](../msbuild/msbuild-reference.md)

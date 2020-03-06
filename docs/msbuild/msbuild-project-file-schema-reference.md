@@ -15,24 +15,24 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c4a0ef3fc6fe446ccda5479c95301d71efa84be4
-ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
+ms.openlocfilehash: 824a6f562638edb04854431c437289f2741c46d9
+ms.sourcegitcommit: 3ed59ce39692124fe61c484df4348c0b9abee9b9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/22/2020
-ms.locfileid: "77557806"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78263077"
 ---
 # <a name="msbuild-project-file-schema-reference"></a>MSBuild 项目文件架构引用
 
-提供列有所有 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] XML 架构元素及其可用属性和子元素的表。
+提供列有所有 MSBuild XML 架构元素及其可用属性和子元素的表。
 
- [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 使用项目文件向生成引擎指示要生成的内容以及生成方法。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 项目文件是 XML 文件，其遵循 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] XML 架构。 本部分介绍 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 的 XML 架构定义 (.xsd) 文件。
+ MSBuild 使用项目文件指示生成引擎要生成哪些内容以及生成方法。 MSBuild 项目文件是 XML 文件，其遵循 MSBuild XML 架构。 本部分介绍 MSBuild 的 XML 架构定义 (.xsd  ) 文件。
 
 Visual Studio 2017 和更高版本不需要 MSBuild 项目文件中的架构链接。 如果该链接存在，则无论 Visual Studio 的版本如何，它都应为 ` http://schemas.microsoft.com/developer/msbuild/2003`。
 
 ## <a name="msbuild-xml-schema-elements"></a>MSBuild XML 架构元素
 
- 下表列出了所有 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] XML 架构元素及其子元素和属性。
+ 下表列出了所有 MSBuild XML 架构元素及其子元素和属性。
 
 |元素|子元素|特性|
 |-------------|--------------------|----------------|
@@ -54,9 +54,9 @@ Visual Studio 2017 和更高版本不需要 MSBuild 项目文件中的架构链�
 |[PropertyGroup 元素 (MSBuild)](../msbuild/propertygroup-element-msbuild.md)|*Property*|条件|
 |[Sdk 元素 (MSBuild)](../msbuild/sdk-element-msbuild.md)|--|“属性”<br /><br /> Version|
 |[Target 元素 (MSBuild)](../msbuild/target-element-msbuild.md)|OnError<br /><br /> *Task*|AfterTargets<br /><br /> BeforeTargets<br /><br /> 条件<br /><br /> DependsOnTargets<br /><br /> 输入<br /><br /> KeepDuplicateOutputs<br /><br /> “属性”<br /><br /> 输出<br /><br /> 返回|
-|[Task 元素 (MSBuild)](../msbuild/task-element-msbuild.md)|Output|条件<br /><br /> ContinueOnError<br /><br /> *Parameter*|
-|[TaskBody 元素 (MSBuild)](../msbuild/taskbody-element-msbuild.md)|*Data*|评估|
-|[UsingTask 元素 (MSBuild)](../msbuild/usingtask-element-msbuild.md)|ParameterGroup<br /><br /> TaskBody|AssemblyFile<br /><br /> AssemblyName<br /><br /> 条件<br /><br /> TaskFactory<br /><br /> TaskName|
+|[Target 的 Task 元素 (MSBuild)](../msbuild/task-element-msbuild.md)|Output|条件<br /><br /> ContinueOnError<br /><br /> *Parameter*|
+|[UsingTask 的 Task 元素 (MSBuild)](../msbuild/taskbody-element-msbuild.md)|*Data*|评估|
+|[UsingTask 元素 (MSBuild)](../msbuild/usingtask-element-msbuild.md)|ParameterGroup<br /><br /> 任务|AssemblyFile<br /><br /> AssemblyName<br /><br /> 条件<br /><br /> TaskFactory<br /><br /> TaskName|
 |[When 元素 (MSBuild)](../msbuild/when-element-msbuild.md)|Choose<br /><br /> ItemGroup<br /><br /> PropertyGroup|条件|
 
 ## <a name="see-also"></a>请参阅

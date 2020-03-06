@@ -18,14 +18,15 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 13ffaff052e672eb900d5ed3a1ce5ae7c2a370df
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 044c531432de987fc7f3d34ce5344ad0374bcd00
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75573988"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633741"
 ---
 # <a name="import-element-msbuild"></a>Import 元素 (MSBuild)
+
 将一个项目文件的内容导入其他项目文件中。
 
 \<Project> \<Import>
@@ -38,6 +39,7 @@ ms.locfileid: "75573988"
 ```
 
 ## <a name="attributes-and-elements"></a>特性和元素
+
  下列各节描述了特性、子元素和父元素。
 
 ### <a name="attributes"></a>特性
@@ -49,29 +51,32 @@ ms.locfileid: "75573988"
 |`Sdk`| 可选特性。<br /><br /> 引用项目 SDK。|
 
 ### <a name="child-elements"></a>子元素
+
  None
 
 ### <a name="parent-elements"></a>父元素
 
 | 元素 | 描述 |
 | - | - |
-| [Project](../msbuild/project-element-msbuild.md) | [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 项目文件必需的根元素。 |
+| [Project](../msbuild/project-element-msbuild.md) | MSBuild 项目文件必需的根元素。 |
 | [ImportGroup](../msbuild/importgroup-element.md) | 包含在可选条件下进行分组的 `Import` 元素的集合。 |
 
 ## <a name="remarks"></a>备注
+
  使用 `Import` 元素可以重复使用对许多项目文件通用的代码。 这样可以更轻松地维护代码，因为对共享的代码进行的任何更新都会传播到导入它的所有项目。
 
- 按照约定，共享导入项目文件会保存为 .targets 文件，但它们是标准 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 项目文件  。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 不会阻止导入具有不同文件扩展名的项目，但是我们建议使用 .targets 扩展名以保持一致性  。
+ 按照约定，共享导入项目文件会保存为 .targets  文件，但它们是标准 MSBuild 项目文件。 MSBuild 不会阻止导入具有不同文件扩展名的项目，但是我们建议使用 .targets  扩展名以保持一致性。
 
  导入项目中的相对路径会相对于导入项目的目录进行解释。 因此，如果项目文件导入位于不同位置的多个项目文件中，则导入项目文件中的相对路径对于每个导入项目会以不同方式进行解释。
 
- 与导入项目中引用的项目文件相关的所有 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 保留属性（例如， `MSBuildProjectDirectory` 和 `MSBuildProjectFile`）都会基于导入项目文件进行赋值。
+ 与导入项目中引用的项目文件相关的所有 MSBuild 保留属性（例如，`MSBuildProjectDirectory` 和 `MSBuildProjectFile`）都会基于导入项目文件进行赋值。
 
- 如果导入项目没有 `DefaultTargets` 属性，则会按导入顺序检查导入项目，并使用发现的第一个 `DefaultTargets` 属性的值。 例如，如果 ProjectA 导入 ProjectB 和 ProjectC（按照该顺序），并且 ProjectB 导入 ProjectD，则 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 会首先查找 ProjectA 上指定的 `DefaultTargets` ，然后是 ProjectB，接下来是 ProjectD，最后是 ProjectC。
+ 如果导入项目没有 `DefaultTargets` 属性，则会按导入顺序检查导入项目，并使用发现的第一个 `DefaultTargets` 属性的值。 例如，如果 ProjectA 导入 ProjectB 和 ProjectC（按照该顺序），并且 ProjectB 导入 ProjectD，则 MSBuild 会首先查找 ProjectA 上指定的 `DefaultTargets`，然后是 ProjectB，接下来是 ProjectD，最后是 ProjectC。
 
- 导入项目的架构与标准项目相同。 虽然 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 可能能够生成导入项目，不过这不太可能，因为导入项目通常不包含有关要设置的属性或运行目标的顺序的信息。 导入项目依靠将它导入其中的项目来提供该信息。
+ 导入项目的架构与标准项目相同。 虽然 MSBuild 可能能够生成导入项目，不过这不太可能，因为导入项目通常不包含有关要设置的属性或运行目标的顺序的信息。 导入项目依靠将它导入其中的项目来提供该信息。
 
 ## <a name="wildcards"></a>通配符
+
  在 .NET Framework 4 中，MSBuild 允许在项目属性中使用通配符。 存在通配符时，找到的所有匹配项会进行排序（实现可再现性），随后它们会按该顺序导入（如同显式设置了该顺序一样）。
 
  如果要提供一个扩展点，以便其他人可以导入文件而无需将文件名显式添加到导入文件，则这种行为十分有用。 因此，Microsoft.Common.Targets 在文件顶部包含以下行  。
@@ -81,6 +86,7 @@ ms.locfileid: "75573988"
 ```
 
 ## <a name="example"></a>示例
+
  下面的示例演示具有多个项和属性并导入常规项目文件的项目。
 
 ```xml
@@ -107,5 +113,6 @@ ms.locfileid: "75573988"
 ```
 
 ## <a name="see-also"></a>请参阅
+
 - [项目文件架构参考](../msbuild/msbuild-project-file-schema-reference.md)
 - [如何：在多个项目文件中使用同一目标](../msbuild/how-to-use-the-same-target-in-multiple-project-files.md)

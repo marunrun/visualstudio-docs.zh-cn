@@ -12,18 +12,20 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 369584a815f671c8b7b4f8a99a5280626b493104
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 8cbcf47ec83e1b900ba94ab3842c2cfa63fdcc5d
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75594989"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77631831"
 ---
 # <a name="task-writing"></a>任务写入
-任务提供在生成过程中运行的代码。 任务包含在目标中。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 附带一个典型任务库，也可以创建自己的任务。 有关 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 附带的任务库的详细信息，请参阅[任务参考](../msbuild/msbuild-task-reference.md)。
+
+任务提供在生成过程中运行的代码。 任务包含在目标中。 MSBuild 附带一个典型任务库，你也可以创建自己的任务。 有关 MSBuild 附带的任务库的详细信息，请参阅[任务参考](../msbuild/msbuild-task-reference.md)。
 
 ## <a name="tasks"></a>任务
- 任务的示例包括用于复制一个或多个文件的 [Copy](../msbuild/copy-task.md)、用于创建目录的 [MakeDir](../msbuild/makedir-task.md) 以及用于编译 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 源代码文件的 [Csc](../msbuild/csc-task.md)。 每个任务作为 .NET 类实现，此类实现 Microsoft.Build.Framework.dll  程序集中定义的 <xref:Microsoft.Build.Framework.ITask> 接口。
+
+ 任务的示例包括用于复制一个或多个文件的 [Copy](../msbuild/copy-task.md)、用于创建目录的 [MakeDir](../msbuild/makedir-task.md) 以及用于编译 C# 源代码文件的 [Csc](../msbuild/csc-task.md)。 每个任务作为 .NET 类实现，此类实现 Microsoft.Build.Framework.dll  程序集中定义的 <xref:Microsoft.Build.Framework.ITask> 接口。
 
  实现任务时，有两种方法可供选择：
 
@@ -60,7 +62,7 @@ namespace MyTasks
 </Project>
 ```
 
- 如果在任务类上创建了 .NET 属性，则在运行任务时，它们也可以从项目文件接收输入。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 设置这些属性，并随后立即调用任务的 `Execute` 方法。 要创建字符串属性，请使用任务代码，例如：
+ 如果在任务类上创建了 .NET 属性，则在运行任务时，它们也可以从项目文件接收输入。 MSBuild 设置这些属性，并随后立即调用任务的 `Execute` 方法。 要创建字符串属性，请使用任务代码，例如：
 
 ```csharp
 using System;
@@ -92,14 +94,16 @@ namespace MyTasks
 ```
 
 ## <a name="register-tasks"></a>注册任务
- 如果项目将要运行任务，[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 必须知道如何找到包含任务类的程序集。 任务是使用 [UsingTask 元素 (MSBuild)](../msbuild/usingtask-element-msbuild.md) 注册的。
 
- [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 文件 Microsoft.Common.Tasks  是一个包含 `UsingTask` 元素列表的项目文件，这些元素注册随 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 一起提供的所有任务。 生成每个项目时会自动包括该文件。 如果在 Microsoft.Common.Tasks  中注册的任务也在当前项目文件中进行了注册，则当前项目文件具有优先权；也就是说，可以使用自己的同名任务重写默认任务。
+ 如果项目将要运行任务，MSBuild 必须知道如何找到包含任务类的程序集。 任务是使用 [UsingTask 元素 (MSBuild)](../msbuild/usingtask-element-msbuild.md) 注册的。
+
+ MSBuild 文件 Microsoft.Common.Task  是一个包含 `UsingTask` 元素列表的项目文件，这些元素注册随 MSBuild 一起提供的所有任务。 生成每个项目时会自动包括该文件。 如果在 Microsoft.Common.Tasks  中注册的任务也在当前项目文件中进行了注册，则当前项目文件具有优先权；也就是说，可以使用自己的同名任务重写默认任务。
 
 > [!TIP]
-> 通过查看 Microsoft.Common.Tasks  的内容，可以看到随 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 一起提供的任务列表。
+> 通过查看 Microsoft.Common.Tasks  的内容，可以看到随 MSBuild 一起提供的任务列表。
 
 ## <a name="raise-events-from-a-task"></a>从任务引发事件
+
  如果任务派生自 <xref:Microsoft.Build.Utilities.Task> 帮助器类，可以使用 <xref:Microsoft.Build.Utilities.Task> 类上的下列任一帮助器方法来引发由任何注册的记录器捕获并显示的事件：
 
 ```csharp
@@ -132,6 +136,7 @@ public class SimpleTask : ITask
 ```
 
 ## <a name="require-task-parameters-to-be-set"></a>要求设置任务参数
+
  可以将特定任务属性标记为“必需”，使任何运行该任务的项目文件都必须对这些属性设置值，否则生成将会失败。 将 `[Required]` 特性应用到任务的 .NET 属性，如下所示：
 
 ```csharp
@@ -141,9 +146,9 @@ public string RequiredProperty { get; set; }
 
  `[Required]` 特性由 <xref:Microsoft.Build.Framework> 命名空间中的 <xref:Microsoft.Build.Framework.RequiredAttribute> 定义。
 
-## <a name="how-includevstecmsbuildextensibilityinternalsincludesvstecmsbuild_mdmd-invokes-a-task"></a>[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 如何调用任务
+## <a name="how-msbuild-invokes-a-task"></a>MSBuild 如何调用任务
 
-调用任务时，[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 首先实例化任务类，然后调用该对象的属性资源库，查找在项目文件的任务元素中设置的任务参数。 如果任务元素未指定参数，或者在元素中指定的表达式的计算结果为空字符串，则不调用属性资源库。
+调用任务时，MSBuild 首先实例化任务类，然后调用该对象的属性资源库，查找在项目文件的任务元素中设置的任务参数。 如果任务元素未指定参数，或者在元素中指定的表达式的计算结果为空字符串，则不调用属性资源库。
 
 例如，在该项目中
 
@@ -163,13 +168,13 @@ public string RequiredProperty { get; set; }
 
 ### <a name="task-parameter-types"></a>任务参数类型
 
-[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 本机处理类型为 `string`、`bool``ITaskItem` 和 `ITaskItem[]` 的属性。 如果任务接受其他类型的参数，[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 则调用 <xref:System.Convert.ChangeType%2A> 以从`string`（所有属性和项引用均已展开）转换为目标类型。 如果针对任何输入参数的转换失败，则 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 会发出错误，并且不会调用任务的 `Execute()` 方法。
+MSBuild 本机处理类型为 `string`、`bool`、`ITaskItem` 和 `ITaskItem[]` 的属性。 如果任务接受其他类型的参数，MSBuild 会调用 <xref:System.Convert.ChangeType%2A> 以从 `string`（所有属性和项引用均已展开）转换为目标类型。 如果针对任何输入参数的转换失败，则 MSBuild 会发出错误，并且不会调用任务的 `Execute()` 方法。
 
 ## <a name="example"></a>示例
 
 ### <a name="description"></a>描述
 
-以下 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 类演示一个从 <xref:Microsoft.Build.Utilities.Task> 帮助器类派生的任务。 该任务返回 `true`，表示执行成功。
+以下 C# 类演示一个从 <xref:Microsoft.Build.Utilities.Task> 帮助器类派生的任务。 该任务返回 `true`，表示执行成功。
 
 ### <a name="code"></a>代码
 
@@ -194,7 +199,7 @@ namespace SimpleTask1
 
 ### <a name="description"></a>描述
 
-以下 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 类演示一个实现 <xref:Microsoft.Build.Framework.ITask> 接口的任务。 该任务返回 `true`，表示执行成功。
+以下 C# 类演示一个实现 <xref:Microsoft.Build.Framework.ITask> 接口的任务。 该任务返回 `true`，表示执行成功。
 
 ### <a name="code"></a>代码
 
@@ -230,7 +235,7 @@ namespace SimpleTask2
 
 ### <a name="description"></a>描述
 
-此 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 类演示一个从 <xref:Microsoft.Build.Utilities.Task> 帮助器类派生的任务。 它有一个必需的字符串属性，并引发一个由所有注册的记录器显示的事件。
+此 C# 类演示一个从 <xref:Microsoft.Build.Utilities.Task> 帮助器类派生的任务。 它有一个必需的字符串属性，并引发一个由所有注册的记录器显示的事件。
 
 ### <a name="code"></a>代码
 

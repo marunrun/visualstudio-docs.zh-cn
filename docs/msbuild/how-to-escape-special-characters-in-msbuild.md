@@ -13,16 +13,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 955739372605b9e4f9fe58f73669322e2724de31
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: f9958ae93e2605ad3c89decb4ac9fabc18102148
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75595002"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633871"
 ---
 # <a name="how-to-escape-special-characters-in-msbuild"></a>如何：转义 MSBuild 中的特殊字符
 
-某些字符在 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 项目文件中具有特殊意义。 例如，这些字符包括分号 (`;`) 和星号 (`*`)。 有关这些特殊字符的完整列表，请参阅 [MSBuild 特殊字符](../msbuild/msbuild-special-characters.md)。
+某些字符在 MSBuild 项目文件中具有特殊意义。 例如，这些字符包括分号 (`;`) 和星号 (`*`)。 有关这些特殊字符的完整列表，请参阅 [MSBuild 特殊字符](../msbuild/msbuild-special-characters.md)。
 
 若要将这些特殊字符用作项目文件中的文本，必须使用语法 `%<xx>` 指定它们，其中 `<xx>` 表示字符的 ASCII 十六进制值。
 
@@ -34,7 +34,7 @@ ms.locfileid: "75595002"
 <Compile Include="MyFile.cs;MyClass.cs"/>
 ```
 
-若要声明名称中包含分号的项，必须使用 `%<xx>` 语法转义分号，并阻止 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 声明两个独立项。 例如，以下项转义分号，并且声明一个名为 `MyFile.cs;MyClass.cs` 的项。
+若要声明名称中包含分号的项，必须使用 `%<xx>` 语法转义分号，并阻止 MSBuild 声明两个独立项。 例如，以下项转义分号，并且声明一个名为 `MyFile.cs;MyClass.cs` 的项。
 
 ```xml
 <Compile Include="MyFile.cs%3BMyClass.cs"/>

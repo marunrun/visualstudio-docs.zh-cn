@@ -14,22 +14,26 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 995bf368d367d51a3d38e02dbab2d6e55ff4ab13
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: cca0c55951d4928347528814d043bb8a7c55be9a
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75575921"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633845"
 ---
 # <a name="how-to-extend-the-visual-studio-build-process"></a>如何：扩展 Visual Studio 生成过程
-[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 生成过程由导入到项目文件中的一系列 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] .targets  文件定义。 可扩展其中一个导入文件 Microsoft.Common.targets，以便在生成过程中的几个点上运行自定义任务  。 本文介绍两种可用于扩展 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 生成过程的方法：
+
+Visual Studio 生成过程由导入到项目文件中的一系列 MSBuild .targets  文件定义。 可扩展其中一个导入文件 Microsoft.Common.targets，以便在生成过程中的几个点上运行自定义任务  。 本文介绍两种可用于扩展 Visual Studio 生成过程的方法：
 
 - 重写公共目标中定义的特定预定义目标（Microsoft.Common.targets 或其导入的文件）  。
 
 - 重写公共目标中定义的“DependsOn”属性。
+## <a name="override-predefined-targets"></a>重写预定义目标
 
 ## <a name="override-predefined-targets"></a>重写预定义目标
-公共目标包含一组预定义的空目标，在生成过程中某些主目标的前后会调用这些空目标。 例如，[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 会在主 `CoreBuild` 目标和 `AfterBuild` 目标之前和 `CoreBuild` 目标之后调用 `BeforeBuild`。 公共目标中的空目标默认不执行任何操作，但可通过定义导入公共目标的项目文件中所需的目标，重写这些空目标的默认行为。 通过重写预定义目标，可以使用 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 任务，更好地控制生成过程。
+
+公共目标包含一组预定义的空目标，在生成过程中某些主目标的前后会调用这些空目标。 例如，MSBuild 会在主 `CoreBuild` 目标之前调用 `BeforeBuild` 目标，在 `CoreBuild` 目标之后调用 `AfterBuild` 目标。 公共目标中的空目标默认不执行任何操作，但可通过定义导入公共目标的项目文件中所需的目标，重写这些空目标的默认行为。 通过重写预定义目标，可以使用 MSBuild 任务，更好地控制生成过程。
+公共目标包含一组预定义的空目标，在生成过程中某些主目标的前后会调用这些空目标。 例如，MSBuild 会在主 `CoreBuild` 目标之前调用 `BeforeBuild` 目标，在 `CoreBuild` 目标之后调用 `AfterBuild` 目标。 公共目标中的空目标默认不执行任何操作，但可通过定义导入公共目标的项目文件中所需的目标，重写这些空目标的默认行为。 通过重写预定义目标，可以使用 MSBuild 任务，更好地控制生成过程。
 
 > [!NOTE]
 > SDK 类型的项目在项目文件的最后一行后会隐式导入目标  。 这意味着，除非根据[如何：使用 MSBuild 项目 SDK](how-to-use-project-sdk.md) 中所述的方法手动指定导入，否则无法重写默认目标。
@@ -67,7 +71,8 @@ ms.locfileid: "75575921"
 |`BeforeResGen`，`AfterResGen`|插入到这些目标之一中的任务，在生成资源之前或之后运行。|
 
 ## <a name="override-dependson-properties"></a>重写 DependsOn 属性
-重写预定义的目标是一种用于扩展生成过程的简单方法，但由于 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 按顺序计算目标的定义，任何方法都无法阻止已导入你的项目的另一个项目重写你已重写的目标。 因此，例如，在导入所有其他项目后，会在生成过程中使用项目文件中定义的最后一个 `AfterBuild` 目标。
+
+重写预定义的目标是一种用于扩展生成过程的简单方法，但由于 MSBuild 按顺序计算目标的定义，任何方法都无法阻止已导入你的项目的另一个项目重写你已重写的目标。 因此，例如，在导入所有其他项目后，会在生成过程中使用项目文件中定义的最后一个 `AfterBuild` 目标。
 
 通过重写在全部公共目标的 `DependsOnTargets` 特性中使用的“DependsOn”属性，可防止目标被意外重写。 例如，`Build` 目标包含 `"$(BuildDependsOn)"` 的 `DependsOnTargets` 属性值。 以此为例：
 
@@ -127,6 +132,7 @@ ms.locfileid: "75575921"
 |`CompileDependsOn`|在要在编译步骤之前或之后插入自定义过程的情况下，要重写的属性。|
 
 ## <a name="see-also"></a>请参阅
+
 - [Visual Studio 集成](../msbuild/visual-studio-integration-msbuild.md)
 - [MSBuild 概念](../msbuild/msbuild-concepts.md)
 - [.targets 文件](../msbuild/msbuild-dot-targets-files.md)

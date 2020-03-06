@@ -11,14 +11,15 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1d5c40af3e60add88948f8f1c5c36abf3b980eca
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+ms.openlocfilehash: 70ce19a6dcd9c61b0e14d0d88c52072f59f87fb9
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2020
-ms.locfileid: "77271170"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77631154"
 ---
 # <a name="walkthrough-create-an-inline-task"></a>演练：创建内联任务
+
 通常，MSBuild 任务通过编译实现 <xref:Microsoft.Build.Framework.ITask> 接口的类进行创建。 从 .NET Framework 版本 4 开始，可以在项目文件中创建内联任务。 无需创建单独的程序集来承载该任务。 有关详细信息，请参阅[内联任务](../msbuild/msbuild-inline-tasks.md)。
 
  此演练演示如何创建和运行以下内联任务：
@@ -40,13 +41,12 @@ ms.locfileid: "77271170"
 3. 使用**命令提示符窗口**生成项目并检查结果。
 
 ## <a name="create-and-modify-an-msbuild-project"></a>创建和修改 MSBuild 项目
+
  Visual Studio 项目系统以 MSBuild 为基础。 因此，可使用 Visual Studio 创建生成项目文件。 本部分将创建 Visual C# 项目文件。 （也可创建 Visual Basic 项目文件。 在本教程的上下文中，两种项目文件间的差异很小。）
 
 #### <a name="to-create-and-modify-a-project-file"></a>创建和修改项目文件
 
-1. 在 Visual Studio 中的“文件”  菜单上，单击“新建”  ，然后单击“项目”  。
-
-2. 在“新建项目”  对话框中，选择“Visual C#”  项目类型，然后选择“Windows 窗体应用程序”  模板。 在“名称”  框中键入 `InlineTasks`。 键入解决方案的“位置”  ，例如 D:\\。  请确保选择“创建解决方案目录”  和清除“添加到源代码管理”  ，并确保“解决方案名称”  为 InlineTasks。 
+1. 在 Visual Studio 中，使用 C#“Windows 窗体应用程序”  模板创建一个新项目。 在“名称”  框中键入 `InlineTasks`。 键入解决方案的“位置”  ，例如 D:\\。  请确保选择“创建解决方案目录”  和清除“添加到源代码管理”  ，并确保“解决方案名称”  为 InlineTasks。 
 
 3. 单击“确定”  创建项目文件。
 
@@ -57,6 +57,7 @@ ms.locfileid: "77271170"
      该项目文件出现在代码编辑器中。
 
 ## <a name="add-a-basic-hello-task"></a>添加基本 Hello 任务
+
  现在，向项目文件添加一个显示消息“Hello, world!”的基本任务。 同时添加一个用以调用此任务的默认 TestBuild 目标。
 
 #### <a name="to-add-a-basic-hello-task"></a>添加基本 Hello 任务
@@ -88,6 +89,7 @@ ms.locfileid: "77271170"
    此代码会创建一个名为 Hello 的内联任务，且不具有任何参数、引用或 `Using` 指令。 此 Hello 任务仅包含一行代码，这行代码会在默认日志记录设备上（通常在控制台窗口）显示一则问候消息。
 
 ### <a name="run-the-hello-task"></a>运行 Hello 任务
+
  使用“命令提示符窗口”  运行 MSBuild，以构造 Hello 任务并处理调用该任务的 TestBuild 目标。
 
 ##### <a name="to-run-the-hello-task"></a>运行 Hello 任务
@@ -108,6 +110,7 @@ ms.locfileid: "77271170"
    通过在代码编辑器和“命令提示符窗口”  之间进行交替，可更改项目文件并快速查看结果。
 
 ## <a name="define-the-echo-task"></a>定义 Echo 任务
+
  创建一个会接受字符串参数并在默认日志记录设备上显示字符串的内联任务。
 
 #### <a name="to-define-the-echo-task"></a>定义 Echo 任务
@@ -139,6 +142,7 @@ ms.locfileid: "77271170"
    此代码定义名为 Echo 的内联任务，且仅具有一个所需的输入参数 Text。 默认情况下，参数为 System.String 类型。 TestBuild 目标调用 Echo 任务时会设置 Text 参数的值。
 
 ## <a name="define-the-adder-task"></a>定义 Adder 任务
+
  创建一个会添加两个整数参数并将其总和作为 MSBuild 属性发出的内联任务。
 
 #### <a name="to-define-the-adder-task"></a>定义 Adder 任务
@@ -175,6 +179,7 @@ ms.locfileid: "77271170"
    此代码定义的内联任务名为 Adder，具有两个所需的整数输入参数（A 和 B）和一个整数输出参数 (C)。Adder 任务会添加这两个输入参数，并在输出参数中返回总和。 总和作为 MSBuild 属性 `Sum` 发出。 TestBuild 目标调用 Adder 任务时会设置输入参数的值。
 
 ## <a name="define-the-regx-task"></a>定义 RegX 任务
+
  创建一个内联任务，该内联任务接受项组和正则表达式，并返回其中包含与此表达式相匹配的文件内容的所有项列表。
 
 #### <a name="to-define-the-regx-task"></a>定义 RegX 任务
@@ -244,6 +249,7 @@ ms.locfileid: "77271170"
   TestBuild 目标调用 RegX 任务时会设置输入参数的值。 RegX 任务会读取每个文件并返回与正则表达式匹配的文件列表。 此列表作为 `Result` 输出参数返回，而该输出参数作为 MSBuild 项 `MatchedFiles` 发出。
 
 ### <a name="handle-reserved-characters"></a>处理保留字符
+
  MSBuild 分析器将内联任务当做 XML 处理。 XML 中具有保留意义的字符（例如“\<” 和“>”）会被检测到并当作 XML 而不是 .NET 源代码进行处理。 若要在代码表达式中包含保留字符（例如 `Files.Length > 0`），请写入 `Code` 元素，其内容就可以包含在 CDATA 表达式中，如下所示：
 
  ```xml
@@ -257,6 +263,7 @@ ms.locfileid: "77271170"
 ```
 
 ## <a name="see-also"></a>请参阅
+
 - [内联任务](../msbuild/msbuild-inline-tasks.md)
 - [任务](../msbuild/msbuild-tasks.md)
 - [目标](../msbuild/msbuild-targets.md)

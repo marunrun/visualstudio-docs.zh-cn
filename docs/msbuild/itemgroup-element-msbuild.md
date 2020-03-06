@@ -18,15 +18,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cd21d7da710a82d9396766971244aa5f7f9bbd4d
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+ms.openlocfilehash: 8064ce4c13419238ca5877893a731d2ac53afb25
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2020
-ms.locfileid: "77278790"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633637"
 ---
 # <a name="itemgroup-element-msbuild"></a>ItemGroup 元素 (MSBuild)
-包含一组用户定义的 [Item](../msbuild/item-element-msbuild.md) 元素。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 项目中使用的每个项都必须指定为 `ItemGroup` 元素的子元素。
+
+包含一组用户定义的 [Item](../msbuild/item-element-msbuild.md) 元素。 MSBuild 项目中使用的每一个项都必须被指定为 `ItemGroup` 元素的子元素。
 
 \<Project> \<ItemGroup>
 
@@ -41,6 +42,7 @@ ms.locfileid: "77278790"
 ```
 
 ## <a name="attributes-and-elements"></a>特性和元素
+
 下列各节描述了特性、子元素和父元素。
 
 ### <a name="attributes"></a>特性
@@ -60,10 +62,11 @@ ms.locfileid: "77278790"
 
 | 元素 | 描述 |
 | - | - |
-| [Project](../msbuild/project-element-msbuild.md) | [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 项目文件必需的根元素。 |
+| [Project](../msbuild/project-element-msbuild.md) | MSBuild 项目文件必需的根元素。 |
 | [Target](../msbuild/target-element-msbuild.md) | 从 .NET Framework 3.5 开始，`ItemGroup` 元素可以出现在 `Target` 元素内部。 有关详细信息，请参阅[目标](../msbuild/msbuild-targets.md)。 |
 
 ## <a name="example"></a>示例
+
 以下代码示例演示用户定义的项集合 `Res` 和 `ItemGroup` 元素内部声明的 `CodeFiles`。 `Res` 项集合中的每个项均包含用户定义的子 [ItemMetadata](../msbuild/itemmetadata-element-msbuild.md) 元素。
 
 ```xml
@@ -84,6 +87,7 @@ ms.locfileid: "77278790"
 ```
 
 ## <a name="see-also"></a>请参阅
+
 - [项目文件架构参考](../msbuild/msbuild-project-file-schema-reference.md)
 - [项](../msbuild/msbuild-items.md)
 - [常用的 MSBuild 项目项](../msbuild/common-msbuild-project-items.md)

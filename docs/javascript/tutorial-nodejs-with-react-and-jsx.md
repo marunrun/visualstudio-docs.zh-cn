@@ -12,12 +12,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: faf418155708ebc577efea57ed3352953a8d577d
-ms.sourcegitcommit: 5920a8b0c68350f11eabc1652a19b04d0196881a
+ms.openlocfilehash: f60cd71f1dda4e401acef1db9ccd8c5a0be2b961
+ms.sourcegitcommit: 9eff8371b7a79a637ebb6850f775dd3eed343d8b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75622574"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78235088"
 ---
 # <a name="tutorial-create-a-nodejs-and-react-app-in-visual-studio"></a>教程：在 Visual Studio 中创建 Node.js 和 React 应用
 
@@ -74,7 +74,9 @@ webpack 绑定 JavaScript 文件，使其可以在浏览器中运行。 它还�
 
     本教程已使用版本 10.16.0 测试过。
 
-    如果未安装，请从 [Node.js](https://nodejs.org/en/download/) 网站安装 LTS 版本。 一般情况下，Visual Studio 会自动检测已安装的 Node.js 运行时。 如果系统未检测到已安装运行时，则可以将项目配置为引用属性页中已安装的运行时（创建项目后，右键单击项目节点并选择“属性”）  。
+    如果尚未安装，我们建议从 [Node.js](https://nodejs.org/en/download/) 网站安装 LTS 版本，以实现与外部框架和库的最佳兼容性。 Node.js 是为 32 位和 64 位体系结构构建的。 Visual Studio 中的 Node.js 工具（包含在 Node.js 工作负载中）支持这两个版本。 只有一个版本是必需的，并且 Node.js 安装程序一次只支持安装一个版本。
+    
+    一般情况下，Visual Studio 会自动检测已安装的 Node.js 运行时。 如果系统未检测到已安装运行时，则可以将项目配置为引用属性页中已安装的运行时（创建项目后，右键单击项目节点，选择“属性”  ，并设置“Node.exe 路径”  ）。 可以使用 Node.js 的全局安装，或者可以在每个 Node.js 项目中指定本地解释器的路径。 
 
 ## <a name="create-a-project"></a>创建项目
 
@@ -412,7 +414,7 @@ webpack 绑定 JavaScript 文件，使其可以在浏览器中运行。 它还�
 2. 启动浏览器并启用调试。
 
     ::: moniker range=">=vs-2019"
-    从 Visual Studio 2019 开始，可以在浏览器启动时设置 `--remote-debugging-port=9222` 标志，方法是从“调试”工具栏选择“浏览方式...”，然后选择“添加”，并在“参数”字段中设置标志     。 为浏览器使用其他易记名称，如“带有调试功能的 Microsoft Edge”或“带有调试功能的 Chrome”   。 有关详细信息，请参阅[发行说明](/visualstudio/releases/2019/release-notes-v16.2)。
+    从 Visual Studio 2019 开始，可以在浏览器启动时设置 `--remote-debugging-port=9222` 标志，方法是从“调试”工具栏选择“浏览方式...”，然后选择“添加”，并在“参数”字段中设置标志     。 为浏览器使用其他易记名称，如“带有调试功能的 Microsoft Edge或“带有调试功能的 Chrome”   。 有关详细信息，请参阅[发行说明](/visualstudio/releases/2019/release-notes-v16.2)。
 
     ![将浏览器设置为打开并启用调试](../javascript/media/tutorial-nodejs-react-edge-with-debugging.png)
 

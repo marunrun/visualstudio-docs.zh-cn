@@ -10,20 +10,22 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 24a769f6d0b9aa847899c02c951921dc77bac21a
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: a66164426b760798571fc35e5288158a8dae9943
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592186"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633546"
 ---
 # <a name="logging-in-msbuild"></a>MSBuild 中的日志记录
+
 通过日志记录可监视生成的进度。 日志记录捕获日志文件中的生成事件、消息、警告和错误。
 
 ## <a name="in-this-section"></a>本节内容
+
 - [获取生成日志](../msbuild/obtaining-build-logs-with-msbuild.md)
 
- 描述 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 中日志记录的各个方面。
+ 描述 MSBuild 中日志记录的各个方面。
 
 - [生成记录器](../msbuild/build-loggers.md)
 
@@ -42,4 +44,5 @@ ms.locfileid: "75592186"
  概述如何创建自定义转发记录器。
 
 ## <a name="see-also"></a>请参阅
+
 - [并行生成多个项目](../msbuild/building-multiple-projects-in-parallel-with-msbuild.md) 介绍如何通过并行运行多个项目来更快地生成它们。

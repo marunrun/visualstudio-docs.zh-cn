@@ -18,17 +18,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c5a2e2a1adb810a8468d318298747eec226846df
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 2c570a5a783133f9422dc434d0ef460b9ca7510e
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592173"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633481"
 ---
 # <a name="message-task"></a>Message 任务
+
 在生成期间记录消息。
 
 ## <a name="parameters"></a>参数
+
  下表描述了 `Message` 任务的参数。
 
 |参数|描述|
@@ -37,7 +39,8 @@ ms.locfileid: "75592173"
 |`Text`|可选 `String` 参数。<br /><br /> 要记录的错误文本。|
 
 ## <a name="remarks"></a>备注
- 通过 `Message` 任务，[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 项目可以在生成过程中的不同阶段将消息发送到记录器中。
+
+ 通过 `Message` 任务，MSBuild 项目可以在生成过程中的不同阶段将消息发送到记录器中。
 
  如果 `Condition` 参数的计算结果为 `true`，则将会记录 `Text` 参数值，并继续执行生成。 如果 `Condition` 参数不存在，则将记录消息文本。 有关日志记录的详细信息，请参阅[获取生成日志](../msbuild/obtaining-build-logs-with-msbuild.md)。
 
@@ -46,6 +49,7 @@ ms.locfileid: "75592173"
  除上面列出的参数外，此任务还从 <xref:Microsoft.Build.Tasks.TaskExtension> 类继承参数，后者自身继承自 <xref:Microsoft.Build.Utilities.Task> 类。 有关这些其他参数的列表及其说明的信息，请参阅 [TaskExtension 基类](../msbuild/taskextension-base-class.md)。
 
 ## <a name="example"></a>示例
+
  下面的代码示例将消息记录到所有已注册的记录器。
 
 ```xml
@@ -59,5 +63,6 @@ ms.locfileid: "75592173"
 ```
 
 ## <a name="see-also"></a>请参阅
+
 - [任务参考](../msbuild/msbuild-task-reference.md)
 - [获取生成日志](../msbuild/obtaining-build-logs-with-msbuild.md)

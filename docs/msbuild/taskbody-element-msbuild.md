@@ -1,5 +1,5 @@
 ---
-title: TaskBody 元素 (MSBuild) | Microsoft Docs
+title: UsingTask 的 Task 元素 (MSBuild) | Microsoft Docs
 ms.date: 03/13/2017
 ms.topic: reference
 dev_langs:
@@ -8,33 +8,35 @@ dev_langs:
 - C++
 - jsharp
 helpviewer_keywords:
-- TaskBody element [MSBuild]
-- <TaskBody> element [MSBuild]
+- Task element [MSBuild]
+- <Task> element [MSBuild]
 ms.assetid: 49d8741b-f1ea-4470-94fd-a1ac27341a6a
 author: ghogen
 ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ac4e04c1a75fe7afdebc984381e17d7e55913fd4
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 36644a6b21092361d92dba5f0886eb4198884995
+ms.sourcegitcommit: 3ed59ce39692124fe61c484df4348c0b9abee9b9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75594976"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78263183"
 ---
-# <a name="taskbody-element-msbuild"></a>TaskBody 元素 (MSBuild)
+# <a name="task-element-of-usingtask-msbuild"></a>UsingTask 的 Task 元素 (MSBuild)
+
 包含传递给 `UsingTask` `TaskFactory` 的数据。 有关详细信息，请参阅 [UsingTask 元素 (MSBuild)](../msbuild/usingtask-element-msbuild.md)。
 
- \<Project> \<UsingTask> \<TaskBody>
+ \<Project> \<UsingTask> \<Task>
 
 ## <a name="syntax"></a>语法
 
 ```xml
-<TaskBody Evaluate="true/false" />
+<Task Evaluate="true/false" />
 ```
 
 ## <a name="attributes-and-elements"></a>特性和元素
+
  下列各节描述了特性、子元素和父元素。
 
 ### <a name="attributes"></a>特性
@@ -47,16 +49,17 @@ ms.locfileid: "75594976"
 
 |元素|描述|
 |-------------|-----------------|
-|数据|`TaskBody` 标记之间的文本一字不差地发送到 `TaskFactory`。|
+|数据|`Task` 标记之间的文本一字不差地发送到 `TaskFactory`。|
 
 ### <a name="parent-elements"></a>父元素
 
 | 元素 | 描述 |
 | - | - |
-| [UsingTask](../msbuild/usingtask-element-msbuild.md) | 提供在 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 中注册任务的方法。 项目中可能有零个或零个以上的 `UsingTask` 元素。 |
+| [UsingTask](../msbuild/usingtask-element-msbuild.md) | 提供在 MSBuild 中注册任务的方法。 项目中可能有零个或零个以上的 `UsingTask` 元素。 |
 
 ## <a name="example"></a>示例
- 下面的示例演示如何将 `TaskBody` 元素和 `Evaluate` 属性结合使用。
+
+ 下面的示例演示如何将 `Task` 元素和 `Evaluate` 属性结合使用。
 
 ```xml
 <UsingTask TaskName="MyTask" AssemblyName="My.Assembly" TaskFactory="MyTaskFactory">
@@ -65,13 +68,14 @@ ms.locfileid: "75594976"
               <Parameter2 ParameterType="System.Int" Required="True" Output="False"/>
               ...
 </ParameterGroup>
-       <TaskBody Evaluate="true">
-      ... Task factory-specific data ...
-       </TaskBody>
+       <Task Evaluate="true">
+       ... Task factory-specific data ...
+       </Task>
 </UsingTask>
 ```
 
 ## <a name="see-also"></a>请参阅
+
 - [任务](../msbuild/msbuild-tasks.md)
 - [任务参考](../msbuild/msbuild-task-reference.md)
 - [项目文件架构参考](../msbuild/msbuild-project-file-schema-reference.md)

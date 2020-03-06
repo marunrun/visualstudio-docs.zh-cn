@@ -12,12 +12,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 5f7b877d825a573b935a9bf0f2c907ec2ce6f808
-ms.sourcegitcommit: 2f64b3b231900018fceafb72b5a1c65140213a18
+ms.openlocfilehash: a1995353d00f9e48811f388e1d853c93850b85f4
+ms.sourcegitcommit: 9eff8371b7a79a637ebb6850f775dd3eed343d8b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73428761"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78235101"
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-vuejs-app"></a>快速入门：使用 Visual Studio 创建第一个 Vue.js 应用
 
@@ -26,7 +26,7 @@ ms.locfileid: "73428761"
 > [!IMPORTANT]
 > 本文需要从 Visual Studio 2017 版本 15.8 开始提供的 Vue.js 模板。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 * 须安装 Visual Studio 且具有 Node.js 开发工作负载。
 
@@ -43,7 +43,9 @@ ms.locfileid: "73428761"
 
 * 须安装 Node.js 运行时。
 
-    如果未安装，请从 [Node.js](https://nodejs.org/en/download/) 网站安装 LTS 版本。 一般情况下，Visual Studio 会自动检测已安装的 Node.js 运行时。 如果系统未检测到已安装运行时，则可以将项目配置为引用属性页中已安装的运行时（创建项目后，右键单击项目节点并选择“属性”）  。
+    如果尚未安装，我们建议从 [Node.js](https://nodejs.org/en/download/) 网站安装 LTS 版本，以实现与外部框架和库的最佳兼容性。 Node.js 是为 32 位和 64 位体系结构构建的。 Visual Studio 中的 Node.js 工具（包含在 Node.js 工作负载中）支持这两个版本。 只有一个版本是必需的，并且 Node.js 安装程序一次只支持安装一个版本。
+    
+    一般情况下，Visual Studio 会自动检测已安装的 Node.js 运行时。 如果系统未检测到已安装运行时，则可以将项目配置为引用属性页中已安装的运行时（创建项目后，右键单击项目节点，选择“属性”  ，并设置“Node.exe 路径”  ）。 可以使用 Node.js 的全局安装，或者可以在每个 Node.js 项目中指定本地解释器的路径。 
 
 ## <a name="create-a-project"></a>创建项目
 
@@ -51,7 +53,7 @@ ms.locfileid: "73428761"
 
 1. 如果尚未安装 Node.js 运行时，请从 [Node.js](https://nodejs.org/en/download/) 网站安装 LTS 版本。
 
-    一般情况下，Visual Studio 会自动检测已安装的 Node.js 运行时。 如果系统未检测到已安装运行时，则可以将项目配置为引用属性页中已安装的运行时（创建项目后，右键单击项目节点并选择“属性”）  。
+    有关详细信息，请参阅先决条件。
 
 1. 打开 Visual Studio。
 
@@ -63,7 +65,7 @@ ms.locfileid: "73428761"
     ![Vue.js 模板](../javascript/media/vs-2019/vuejs-template.png)
     ::: moniker-end
     ::: moniker range="vs-2017"
-    在顶部菜单栏，依次选择“文件”   > “新建”   > “项目”  。 在“新建项目”对话框的左窗格中，展开“JavaScript”或“TypeScript”，然后选择“Node.js”     。 在中间窗格中，选择“基本 Vue.js Web 应用程序”，键入名称“basic-vuejs”，然后选择“确定”    。
+    从顶部菜单栏中选择“文件”   > “新建”   > “项目”  。 在“新建项目”对话框的左窗格中，展开“JavaScript”或“TypeScript”，然后选择“Node.js”     。 在中间窗格中，选择“基本 Vue.js Web 应用程序”，键入名称“basic-vuejs”，然后选择“确定”    。
 
     ![Vue.js 模板](../javascript/media/vuejs-template.png)
     ::: moniker-end

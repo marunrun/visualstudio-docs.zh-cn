@@ -13,18 +13,18 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 4995c6b95ba12eb776130b17dab1911c47988871
-ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
+ms.openlocfilehash: f716421da3b9f888dbb7656c55db6814de88332b
+ms.sourcegitcommit: 9eff8371b7a79a637ebb6850f775dd3eed343d8b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70180338"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78235049"
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-nodejs-app"></a>快速入门：使用 Visual Studio 创建你的第一个 Node.js 应用
 
 在这个对 Visual Studio 集成开发环境 (IDE) 的 5-10 分钟简介中，可以创建简单的 Node.js Web 应用程序。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 * 须安装 Visual Studio 且具有 Node.js 开发工作负载。
 
@@ -41,7 +41,9 @@ ms.locfileid: "70180338"
 
 * 须安装 Node.js 运行时。
 
-    如果未安装，请从 [Node.js](https://nodejs.org/en/download/) 网站安装 LTS 版本。 一般情况下，Visual Studio 会自动检测已安装的 Node.js 运行时。 如果系统未检测到已安装运行时，则可以将项目配置为引用属性页中已安装的运行时（创建项目后，右键单击项目节点并选择“属性”）  。
+    如果尚未安装，我们建议从 [Node.js](https://nodejs.org/en/download/) 网站安装 LTS 版本，以实现与外部框架和库的最佳兼容性。 Node.js 是为 32 位和 64 位体系结构构建的。 Visual Studio 中的 Node.js 工具（包含在 Node.js 工作负载中）支持这两个版本。 只有一个版本是必需的，并且 Node.js 安装程序一次只支持安装一个版本。
+    
+    一般情况下，Visual Studio 会自动检测已安装的 Node.js 运行时。 如果系统未检测到已安装运行时，则可以将项目配置为引用属性页中已安装的运行时（创建项目后，右键单击项目节点，选择“属性”  ，并设置“Node.exe 路径”  ）。 可以使用 Node.js 的全局安装，或者可以在每个 Node.js 项目中指定本地解释器的路径。 
 
 ## <a name="create-a-project"></a>创建项目
 
@@ -49,17 +51,17 @@ ms.locfileid: "70180338"
 
 1. 如果尚未安装 Node.js 运行时，请从 [Node.js](https://nodejs.org/en/download/) 网站安装 LTS 版本。
 
-    一般情况下，Visual Studio 会自动检测已安装的 Node.js 运行时。 如果系统未检测到已安装运行时，则可以将项目配置为引用属性页中已安装的运行时（创建项目后，右键单击项目节点并选择“属性”）  。
+    有关详细信息，请参阅先决条件。
 
 1. 打开 Visual Studio。
 
 1. 创建新项目。
 
     ::: moniker range=">=vs-2019"
-    按 Esc  关闭启动窗口。 键入 Ctrl+Q 以打开搜索框，键入“Node.js”，然后选择“创建新的空白 Node.js Web 应用程序项目”(JavaScript)    。 在出现的对话框中，选择“创建”  。
+    按 Esc 关闭启动窗口  。 键入 Ctrl+Q 以打开搜索框，键入“Node.js”，然后选择“创建新的空白 Node.js Web 应用程序项目”(JavaScript)    。 在出现的对话框中，选择“创建”  。
     ::: moniker-end
     ::: moniker range="vs-2017"
-    在顶部菜单栏，依次选择“文件”   > “新建”   > “项目”  。 在“新建项目”对话框的左窗格中，展开“JavaScript”，然后选择“Node.js”    。 在中间窗格中，选择“空 Node.js Web 应用程序”，然后选择“确定”   。
+    从顶部菜单栏中选择“文件”   > “新建”   > “项目”  。 在“新建项目”对话框的左窗格中，展开“JavaScript”，然后选择“Node.js”    。 在中间窗格中，选择“空 Node.js Web 应用程序”，然后选择“确定”   。
     ::: moniker-end
     如果没有看到“空白 Node.js Web 应用程序”项目模板，  必须添加 Node.js 开发工作负载  。 有关详细说明，请参阅[先决条件](#prerequisites)。
 

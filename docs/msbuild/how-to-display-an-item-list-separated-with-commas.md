@@ -11,18 +11,20 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 677278d08e3223f759afc64692481311bfba3356
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 5493d3b95f7e9c0aa08ed3b06a99108e15697349
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75596328"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633897"
 ---
 # <a name="how-to-display-an-item-list-separated-with-commas"></a>如何：显示用逗号分隔的项列表
-在 [!INCLUDE[vstecmsbuildengine](../msbuild/includes/vstecmsbuildengine_md.md)] ([!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]) 中处理项列表时，有时以易于阅读的方式显示这些项列表的内容会很有帮助。 或者，你执行的任务可能会用到以特殊的分隔符字符串分隔的项列表。 在这两种情况中，可以为项列表指定分隔符字符串。
+
+在 Microsoft 生成引擎 (MSBuild) 中处理项列表时，有时以易于阅读的方式显示这些项列表的内容会很有帮助。 或者，你执行的任务可能会用到以特殊的分隔符字符串分隔的项列表。 在这两种情况中，可以为项列表指定分隔符字符串。
 
 ## <a name="separate-items-in-a-list-with-commas"></a>用逗号分隔列表中的项
-默认情况下，[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 用分号分隔列表中的项。 例如，请看一个含有以下值的 `Message` 元素：
+
+默认情况下，MSBuild 用分号分隔列表中的项。 例如，请看一个含有以下值的 `Message` 元素：
 
 `<Message Text="This is my list of TXT files: @(TXTFile)"/>`
 
@@ -43,6 +45,7 @@ ms.locfileid: "75596328"
     `@(TXTFile, ', ')`
 
 ## <a name="example"></a>示例
+
 在此示例中，[Exec](../msbuild/exec-task.md) 任务会运行 findstr 工具，在文件 Phrases.txt 中查找指定的文本字符串  。 在 findstr 命令中，文本搜索字符串由 -c:  开关指示，因此 `@(Phrase)` 项列表中各项之间插入的是项分隔符 `-c:`。
 
 对于此示例，等效的命令行命令为：
@@ -67,5 +70,6 @@ ms.locfileid: "75596328"
 ```
 
 ## <a name="see-also"></a>请参阅
+
 - [MSBuild 参考](../msbuild/msbuild-reference.md)
 - [项](../msbuild/msbuild-items.md)

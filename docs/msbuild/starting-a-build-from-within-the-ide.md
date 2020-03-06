@@ -10,22 +10,25 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 01ce9401174a26d58b7ef88d536a24bfb9017154
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: f8c4792590565c027a316ed95abb067faa30f5dc
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75595080"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77632116"
 ---
 # <a name="start-a-build-from-within-the-ide"></a>在 IDE 中启动生成
+
 自定义项目系统必须使用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildManagerAccessor> 启动生成。 本文介绍这一要求的原因并概述具体过程。
 
 ## <a name="parallel-builds-and-threads"></a>并行生成和线程
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 允许需要中介的并行生成访问常见资源。 项目系统可异步地运行生成，但此类系统不得从回调中调用生成函数。
+
+ Visual Studio 允许需要中介的并行生成访问常见资源。 项目系统可异步地运行生成，但此类系统不得从回调中调用生成函数。
 
  如果项目系统修改环境变量，它必须将生成的 NodeAffinity 设置为 OutOfProc。 此要求意味着无法使用主机对象，因为主机对象需要进程内节点。
 
 ## <a name="use-ivsbuildmanageraccessor"></a>使用 IVSBuildManagerAccessor
+
  下面的代码概述了项目系统可用于启动生成的方法：
 
 ```csharp
