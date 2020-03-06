@@ -14,12 +14,12 @@ dev_langs:
 - CPP
 ms.workload:
 - multiple
-ms.openlocfilehash: 71d2fe83690e55d49bb23bffb09de91c8f7534b6
-ms.sourcegitcommit: 1efb6b219ade7c35068b79fbdc573a8771ac608d
+ms.openlocfilehash: 67bb0d7ca38d4312dc2a1f1e7a8f50d0102a328a
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78167619"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78408724"
 ---
 # <a name="suppress-code-analysis-warnings"></a>禁止显示代码分析警告
 
@@ -92,6 +92,8 @@ CA_SUPPRESS_MESSAGE("Rule Category", "Rule Id", Justification = "Justification",
 
 - **目标**-用于指定取消警告的目标的标识符。 它必须包含完全限定的项目名称。
 
+当你在 Visual Studio 中看到警告时，可以通过[将抑制添加到全局禁止显示文件来](../code-quality/use-roslyn-analyzers.md#suppress-violations)查看 `SuppressMessage` 的示例。 禁止显示属性及其必需的属性将显示在预览窗口中。
+
 ## <a name="suppressmessage-usage"></a>SuppressMessage 用法
 
 在 <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> 特性应用到的级别上，会禁止显示代码分析警告。 例如，可以将属性应用于程序集、模块、类型、成员或参数级别。 这样做的目的是将抑制信息紧密地耦合到发生冲突的代码中。
@@ -147,15 +149,6 @@ public class Animal
 }
 ```
 
-## <a name="generated-code"></a>生成的代码
-
-托管代码编译器和一些第三方工具生成代码，以加速代码开发。 出现在源文件中的编译器生成的代码通常用 `GeneratedCodeAttribute` 属性进行标记。
-
-您可以选择是否取消生成代码的代码分析警告和错误。 有关如何禁止显示这些警告和错误的信息，请参阅[如何：取消显示生成代码的警告](../code-quality/how-to-suppress-code-analysis-warnings-for-generated-code.md)。
-
-> [!NOTE]
-> 当应用于整个程序集或单个参数时，代码分析将忽略 `GeneratedCodeAttribute`。
-
 ## <a name="global-level-suppressions"></a>全局禁止显示
 
 托管代码分析工具检查在程序集、模块、类型、成员或参数级别应用 `SuppressMessage` 特性。 它还会对资源和命名空间引发冲突。 必须在全局级别应用这些冲突，并确定其作用域和目标。 例如，以下消息取消了命名空间冲突：
@@ -185,6 +178,22 @@ public class Animal
 例如， _GlobalSuppressions_项目文件中的以下属性将抑制 ASP.NET Core 项目的 ConfigureAwait 冲突：
 
 `[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "CA2007:Consider calling ConfigureAwait on the awaited task", Justification = "ASP.NET Core doesn't use thread context to store request context.", Scope = "module")]`
+
+## <a name="generated-code"></a>生成的代码
+
+托管代码编译器和一些第三方工具生成代码，以加速代码开发。 出现在源文件中的编译器生成的代码通常用 `GeneratedCodeAttribute` 属性进行标记。
+
+对于源代码分析（FxCop 分析器），可以使用项目或解决方案根目录中的[editorconfig](../code-quality/configure-fxcop-analyzers.md)文件来取消生成的代码中的消息。 使用文件模式与生成的代码匹配。 例如，若要排除 **designer.cs*文件中的 CS1591 警告，请在配置文件中使用它。
+
+``` cmd
+[*.designer.cs]
+dotnet_diagnostic.CS1591.severity = none
+```
+
+对于旧的代码分析，可以选择是否取消生成代码的代码分析警告和错误。 有关如何禁止显示这些警告和错误的信息，请参阅[如何：取消显示生成代码的警告](../code-quality/how-to-suppress-code-analysis-warnings-for-generated-code.md)。
+
+> [!NOTE]
+> 当应用于整个程序集或单个参数时，代码分析将忽略 `GeneratedCodeAttribute`。
 
 ## <a name="see-also"></a>另请参阅
 
