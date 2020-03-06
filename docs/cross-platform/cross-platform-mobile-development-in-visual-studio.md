@@ -10,12 +10,12 @@ ms.author: crdun
 manager: crdun
 ms.workload:
 - multiple
-ms.openlocfilehash: 15c4d31c8cc835884f1093dc78083bbfa9448bc3
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: c7f40f656b533949748a7eb2ab88ea3d2b1d5923
+ms.sourcegitcommit: 9eff8371b7a79a637ebb6850f775dd3eed343d8b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75916877"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78234977"
 ---
 # <a name="cross-platform-mobile-development-in-visual-studio"></a>Visual Studio 中的跨平台移动开发
 
@@ -140,12 +140,12 @@ ms.locfileid: "75916877"
 
 |**了解更多信息**|
 |--------------------|
-|[下载 Visual Studio](https://visualstudio.microsoft.com/vs/community/) (VisualStudio.com)|
-|[使用 C++ 安装跨平台移动开发](install-visual-cpp-for-cross-platform-mobile-development.md)|
+|[下载 Visual Studio](https://visualstudio.microsoft.com/downloads/) (VisualStudio.com)|
+|[使用 C++ 安装跨平台移动开发](/cpp/cross-platform/install-visual-cpp-for-cross-platform-mobile-development)|
 |[了解面向多个平台使用 C++ 的更多信息](https://visualstudio.microsoft.com/vs/cplusplus-mdd/) (VisualStudio.com)|
-|[安装所需内容，然后针对 Android 创建本机活动应用程序](create-an-android-native-activity-app.md)|
+|[安装所需内容，然后针对 Android 创建 C++ 本机活动应用程序](/cpp/cross-platform/create-an-android-native-activity-app)|
 |[了解关于与 Android 和 Windows 应用程序共享 C++ 代码的更多信息](https://visualstudio.microsoft.com/vs/cplusplus-mdd/) (VisualStudio.com)|
-|[使用 C++ 的跨平台移动开发示例](cross-platform-mobile-development-examples.md)|
+|[使用 C++ 的跨平台移动开发示例](/cpp/cross-platform/cross-platform-mobile-development-examples)|
 
 <a name="Unity"></a>
 

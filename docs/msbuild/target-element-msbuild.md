@@ -18,15 +18,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c69ee5758d5c6e513af853a8d7589057c6537956
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 79686132adce043b4864d545f0912564709cfe2c
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75566418"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77631973"
 ---
 # <a name="target-element-msbuild"></a>Target 元素 (MSBuild)
-包含一组要连续执行的 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 任务。
+
+包含一组要连续执行的 MSBuild 任务。
 
  \<Project> \<Target>
 
@@ -51,6 +52,7 @@ ms.locfileid: "75566418"
 ```
 
 ## <a name="attributes-and-elements"></a>特性和元素
+
  下列各节描述了特性、子元素和父元素。
 
 ### <a name="attributes"></a>特性
@@ -72,7 +74,7 @@ ms.locfileid: "75566418"
 
 | 元素 | 描述 |
 | - | - |
-| [Task](../msbuild/task-element-msbuild.md) | 创建并执行的 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 任务的实例。 目标中可能有零个或零个以上的任务。 |
+| [Task](../msbuild/task-element-msbuild.md) | 创建并执行的 MSBuild 任务的实例。 目标中可能有零个或零个以上的任务。 |
 | [PropertyGroup](../msbuild/propertygroup-element-msbuild.md) | 包含一组用户定义的 `Property` 元素。 自 .NET Framework 3.5 起，`Target` 元素可能包含 `PropertyGroup` 元素。 |
 | [ItemGroup](../msbuild/itemgroup-element-msbuild.md) | 包含一组用户定义的 `Item` 元素。 自 .NET Framework 3.5 起，`Target` 元素可能包含 `ItemGroup` 元素。 有关详细信息，请参阅[项](../msbuild/msbuild-items.md)。 |
 | [OnError](../msbuild/onerror-element-msbuild.md) | 对于失败的任务，如果 `ContinueOnError` 属性为 ErrorAndStop（或 `false`），则会出现一个或多个要执行的任务。 目标中可能有零个或零个以上的 `OnError` 元素。 如果存在 `OnError` 元素，则其必须为 `Target` 元素中最后的元素。<br /><br /> 有关 `ContinueOnError` 属性的详细信息，请参阅 [Task 元素 (MSBuild)](../msbuild/task-element-msbuild.md)。 |
@@ -81,10 +83,11 @@ ms.locfileid: "75566418"
 
 | 元素 | 描述 |
 | - | - |
-| [Project](../msbuild/project-element-msbuild.md) | [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 项目文件必需的根元素。 |
+| [Project](../msbuild/project-element-msbuild.md) | MSBuild 项目文件必需的根元素。 |
 
 ## <a name="remarks"></a>备注
- 在运行时指定第一个要执行的目标。 目标可依赖于其他目标。 例如，部署的目标依赖于编译的目标。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 引擎按依赖关系在 `DependsOnTargets` 属性中出现的顺序从左到右依次执行依赖关系。 有关详细信息，请参阅[目标](../msbuild/msbuild-targets.md)。
+
+ 在运行时指定第一个要执行的目标。 目标可依赖于其他目标。 例如，部署的目标依赖于编译的目标。 MSBuild 引擎按依赖关系在 `DependsOnTargets` 属性中出现的顺序从左到右依次执行依赖关系。 有关详细信息，请参阅[目标](../msbuild/msbuild-targets.md)。
 
  MSBuild 依赖于导入顺序，带有特定 `Name` 属性的目标的最后一个定义是使用的定义。
 
@@ -101,6 +104,7 @@ ms.locfileid: "75566418"
  在 MSBuild 4 之前，只要 `Target` 的 `Outputs` 中包含对同一项的多个引用，就会记录这些副本项。 在含有许多输出和许多项目相互依赖项的各种大型生成中，这会浪费大量的内存，因为副本项没有任何用处。 将 `KeepDuplicateOutputs` 属性设置为 `true` 时，就会记录这些副本。
 
 ## <a name="example"></a>示例
+
  以下代码示例演示执行 `Csc` 任务的 `Target` 元素。
 
 ```xml
@@ -118,5 +122,6 @@ ms.locfileid: "75566418"
 ```
 
 ## <a name="see-also"></a>请参阅
+
 - [目标](../msbuild/msbuild-targets.md)
 - [项目文件架构参考](../msbuild/msbuild-project-file-schema-reference.md)

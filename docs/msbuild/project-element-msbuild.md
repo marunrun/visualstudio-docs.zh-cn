@@ -19,15 +19,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1bb7c49e4f3dc86594c8a3211bacb538d3f10c4f
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: df9eff3e941cc21aaa71c2779a72084e12e8e590
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75597433"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77632974"
 ---
 # <a name="project-element-msbuild"></a>Project 元素 (MSBuild)
-[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 项目文件必需的根元素。
+
+MSBuild 项目文件必需的根元素。
 
 ## <a name="syntax"></a>语法
 
@@ -50,13 +51,14 @@ ms.locfileid: "75597433"
 ```
 
 ## <a name="attributes-and-elements"></a>特性和元素
+
  下列各节描述了特性、子元素和父元素。
 
 ### <a name="attributes"></a>特性
 
 | 特性 | 描述 |
 |------------------------| - |
-| `DefaultTargets` | 可选特性。<br /><br /> 如果未指定目标，则默认目标将作为生成的入口点。 使用分号 (;) 分隔多个目标。<br /><br /> 如果未在 `DefaultTargets` 属性或 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 命令行中指定默认目标，那么引擎会在评估 [Import](../msbuild/import-element-msbuild.md) 元素后在项目文件中执行第一个目标。 |
+| `DefaultTargets` | 可选特性。<br /><br /> 如果未指定目标，则默认目标将作为生成的入口点。 使用分号 (;) 分隔多个目标。<br /><br /> 如果未在 `DefaultTargets` 属性或 MSBuild 命令行中指定默认目标，那么引擎会在评估 [Import](../msbuild/import-element-msbuild.md) 元素后在项目文件中执行第一个目标。 |
 | `InitialTargets` | 可选特性。<br /><br /> 会在 `DefaultTargets` 属性中或命令行上指定的目标前运行初始目标。 使用分号 (`;`) 分隔多个目标。 如果多个导入文件定义 `InitialTargets`，则将按照导入的顺序运行所有提到的目标。 |
 | `Sdk` | 可选特性。 <br /><br /> 用于创建添加到 .proj 文件的隐式 Import 语句的 SDK 名称和可选版本。 如果不指定任何版本，则 MSBuild 将尝试解析默认版本。  例如，`<Project Sdk="Microsoft.NET.Sdk" />` 或 `<Project Sdk="My.Custom.Sdk/1.0.0" />`。 |
 | `ToolsVersion` | 可选特性。<br /><br /> 用于确定 $(MSBuildBinPath) 和 $(MSBuildToolsPath) 的值的工具集 MSBuild 的版本。 |
@@ -72,16 +74,18 @@ ms.locfileid: "75597433"
 | [ImportGroup](../msbuild/importgroup-element.md) | 可选元素。<br /><br /> 包含在可选条件下进行分组的 `Import` 元素的集合。 |
 | [ItemGroup](../msbuild/itemgroup-element-msbuild.md) | 可选元素。<br /><br /> 各个项的分组元素。 使用 [Item](../msbuild/item-element-msbuild.md) 元素指定项。 项目中可能有零个或零个以上的 `ItemGroup` 元素。 |
 | [ItemDefinitionGroup](../msbuild/itemdefinitiongroup-element-msbuild.md) | 可选元素。<br /><br /> 可定义一组项定义，这些项定义默认为应用到项目中的所有项的元数据值。 ItemDefinitionGroup 取代使用 `CreateItem` 任务和 `CreateProperty` 任务。 |
-| [ProjectExtensions](../msbuild/projectextensions-element-msbuild.md) | 可选元素。<br /><br /> 提供在 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 项目文件中保留非 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 信息的方法。 项目中可能有零个或一个 `ProjectExtensions` 元素。 |
+| [ProjectExtensions](../msbuild/projectextensions-element-msbuild.md) | 可选元素。<br /><br /> 提供在 MSBuild 项目文件中保留非 MSBuild 信息的方法。 项目中可能有零个或一个 `ProjectExtensions` 元素。 |
 | [PropertyGroup](../msbuild/propertygroup-element-msbuild.md) | 可选元素。<br /><br /> 各个属性的分组元素。 使用 [Property](../msbuild/property-element-msbuild.md) 元素指定属性。 项目中可能有零个或零个以上的 `PropertyGroup` 元素。 |
-| [SDK](../msbuild/sdk-element-msbuild.md) | 可选元素。<br /><br /> 引用 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 项目 SDK。  此元素可以用作 SDK 属性的替代属性。 |
-| [Target](../msbuild/target-element-msbuild.md) | 可选元素。<br /><br /> 包含一组要连续执行的 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 任务。 使用 [Task](../msbuild/task-element-msbuild.md) 元素指定任务。 项目中可能有零个或零个以上的 `Target` 元素。 |
-| [UsingTask](../msbuild/usingtask-element-msbuild.md) | 可选元素。<br /><br /> 提供在 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 中注册任务的方法。 项目中可能有零个或零个以上的 `UsingTask` 元素。 |
+| [SDK](../msbuild/sdk-element-msbuild.md) | 可选元素。<br /><br /> 引用 MSBuild 项目 SDK。  此元素可以用作 SDK 属性的替代属性。 |
+| [Target](../msbuild/target-element-msbuild.md) | 可选元素。<br /><br /> 包含一组要连续执行的 MSBuild 任务。 使用 [Task](../msbuild/task-element-msbuild.md) 元素指定任务。 项目中可能有零个或零个以上的 `Target` 元素。 |
+| [UsingTask](../msbuild/usingtask-element-msbuild.md) | 可选元素。<br /><br /> 提供在 MSBuild 中注册任务的方法。 项目中可能有零个或零个以上的 `UsingTask` 元素。 |
 
 ### <a name="parent-elements"></a>父元素
+
  无。
 
 ## <a name="see-also"></a>请参阅
+
 - [如何：指定首先生成的目标](../msbuild/how-to-specify-which-target-to-build-first.md)
 - [命令行参考](../msbuild/msbuild-command-line-reference.md)
 - [项目文件架构参考](../msbuild/msbuild-project-file-schema-reference.md)

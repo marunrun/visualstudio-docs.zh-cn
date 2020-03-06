@@ -10,17 +10,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 65ca003375e54248852f5942bd2b5f62fe21a06c
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: af4fb872206611ea5eb1aa93b7aa759615b56e41
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75573789"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633676"
 ---
 # <a name="item-functions"></a>项函数
-从 MSBuild 4.0 开始，任务和目标中的代码可以调用项函数来获取项目中各项的相关信息。 这些函数简化 Distinct() 项的获取过程，并且比循环遍历项的速度更快。
+
+任务和目标中的代码可以调用项函数来获取项目中各项的相关信息（MSBuild 4.0 及更高版本）。 这些函数简化不同项的获取过程，并且比循环遍历项的速度更快。
 
 ## <a name="string-item-functions"></a>字符串项函数
+
 可以在 .NET Framework 中使用字符串方法和属性对任何项值进行操作。 对于 <xref:System.String> 方法，指定方法名称。 对于 <xref:System.String> 属性，请在“get_”之后指定属性名。
 
 对于具有多个字符串的项，字符串方法或属性会对每个字符串运行。
@@ -49,6 +51,7 @@ ms.locfileid: "75573789"
 ```
 
 ## <a name="intrinsic-item-functions"></a>内部项函数
+
 下表列出了可用于各项的内部函数。
 
 |函数|示例|描述|
@@ -100,4 +103,5 @@ ms.locfileid: "75573789"
 ```
 
 ## <a name="see-also"></a>请参阅
+
 - [项](../msbuild/msbuild-items.md)

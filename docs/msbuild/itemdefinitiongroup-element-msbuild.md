@@ -18,14 +18,15 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c5bfe09fec169495afa5b58a41f7c9f1b9bacfad
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 21e3b6554a9d6e0024cc21fd898962177acfffa7
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75573464"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633624"
 ---
 # <a name="itemdefinitiongroup-element-msbuild"></a>ItemDefinitionGroup 元素 (MSBuild)
+
 使用 `ItemDefinitionGroup` 元素可定义一组项定义，这些项定义默认为应用到项目中的所有项的元数据值。 ItemDefinitionGroup 取代使用 [CreateItem 任务](../msbuild/createitem-task.md)和 [CreateProperty 任务](../msbuild/createproperty-task.md)的需要。 有关详细信息，请参阅[项定义](../msbuild/item-definitions.md)。
 
 \<Project> \<ItemDefinitionGroup>
@@ -40,6 +41,7 @@ ms.locfileid: "75573464"
 ```
 
 ## <a name="attributes-and-elements"></a>特性和元素
+
 下列各节描述了特性、子元素和父元素。
 
 ### <a name="attributes"></a>特性
@@ -58,9 +60,10 @@ ms.locfileid: "75573464"
 
 | 元素 | 描述 |
 | - | - |
-| [Project](../msbuild/project-element-msbuild.md) | [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 项目文件必需的根元素。 |
+| [Project](../msbuild/project-element-msbuild.md) | MSBuild 项目文件必需的根元素。 |
 
 ## <a name="example"></a>示例
+
 下面的代码示例定义 ItemDefinitionGroup 中的两个元数据项，m 和 n。 在本例中，默认元数据“m”应用于项“i”，这是由于项“i”没有显式定义元数据“m”。 但是，默认元数据“n”无法应用于项“i”，这是由于元数据“n”已经由项“i”定义。
 
 ```xml
@@ -82,5 +85,6 @@ ms.locfileid: "75573464"
 ```
 
 ## <a name="see-also"></a>请参阅
+
 - [项目文件架构参考](../msbuild/msbuild-project-file-schema-reference.md)
 - [项](../msbuild/msbuild-items.md)

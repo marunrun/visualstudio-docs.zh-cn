@@ -18,15 +18,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a78add284a5cea966d1176645649eed19017addd
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.openlocfilehash: 079eecd6751f168a7beba32eda6d15eda712bd7f
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77579544"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77631323"
 ---
 # <a name="updatemanifestforbrowserapplication-task"></a>UpdateManifestForBrowserApplication 任务
-生成 [!INCLUDE[TLA#tla_xbap](../msbuild/includes/tlasharptla_xbap_md.md)] 项目时，运行 <xref:Microsoft.Build.Tasks.Windows.UpdateManifestForBrowserApplication> 任务，以将 \<hostInBrowser />  元素添加到应用程序清单中 (\<projectname>.exe.manifest  )。
+
+生成 XAML 浏览器应用程序 (XBAP) 项目时，运行 <xref:Microsoft.Build.Tasks.Windows.UpdateManifestForBrowserApplication> 任务，以将 \<hostInBrowser />  元素添加到应用程序清单中 (\<projectname>.exe.manifest  )。
 
 ## <a name="task-parameters"></a>任务参数
 
@@ -36,7 +37,8 @@ ms.locfileid: "77579544"
 |`HostInBrowser`|所需的 **Boolean** 参数。<br /><br /> 指定是否要修改应用程序清单，以包括 **\<hostInBrowser />** 元素。 如果为 **true**，则一个新 **\<hostInBrowser />** 元素将包括在 **\<entryPoint />** 元素中。 元素包含是累计的：如果 \<hostInBrowser />  元素已存在，则不会删除或覆盖它。 相反，将创建额外的 **\<hostInBrowser />** 元素。 如果为 false  ，则不会修改应用程序清单。|
 
 ## <a name="remarks"></a>备注
- [!INCLUDE[TLA2#tla_xbap#plural](../msbuild/includes/tla2sharptla_xbapsharpplural_md.md)] 通过 [!INCLUDE[TLA#tla_clickonce](../msbuild/includes/tlasharptla_clickonce_md.md)] 部署运行，因此必须使用支持部署和应用程序清单进行发布。 [!INCLUDE[TLA#tla_msbuild](../msbuild/includes/tlasharptla_msbuild_md.md)] 使用 [GenerateApplicationManifest](generateapplicationmanifest-task.md) 任务来生成应用程序清单。
+
+ XBAP 通过 ClickOnce 部署运行，因此必须使用支持部署和应用程序清单进行发布。 MSBuild 使用 [GenerateApplicationManifest](generateapplicationmanifest-task.md) 任务来生成应用程序清单。
 
  然后，若要将应用程序配置为从浏览器中进行管理，则必须将额外的 **\<hostInBrowser />** 元素添加到应用程序清单中，如以下示例所示：
 
@@ -54,9 +56,10 @@ ms.locfileid: "77579544"
 />
 ```
 
- 当生成 [!INCLUDE[TLA2#tla_xbap](../msbuild/includes/tla2sharptla_xbap_md.md)] 项目时，将运行 <xref:Microsoft.Build.Tasks.Windows.UpdateManifestForBrowserApplication> 任务，以添加 `<hostInBrowser />` 元素。
+ 当生成 XBAP 项目时，将运行 <xref:Microsoft.Build.Tasks.Windows.UpdateManifestForBrowserApplication> 任务，以添加 `<hostInBrowser />` 元素。
 
 ## <a name="example"></a>示例
+
  以下示例演示如何确保 `<hostInBrowser />` 元素包括在应用程序清单文件中。
 
 ```xml
@@ -73,6 +76,7 @@ ms.locfileid: "77579544"
 ```
 
 ## <a name="see-also"></a>请参阅
+
 - [WPF MSBuild 参考](../msbuild/wpf-msbuild-reference.md)
 - [任务参考](../msbuild/wpf-msbuild-task-reference.md)
 - [MSBuild 参考](../msbuild/msbuild-reference.md)

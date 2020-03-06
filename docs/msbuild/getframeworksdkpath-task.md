@@ -18,17 +18,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8fbe0dbda58a0c57cacd64c40b66cc640b779bca
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: d021bdb485846749ea2c7e9dfe483e09738fda46
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75593312"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633988"
 ---
 # <a name="getframeworksdkpath-task"></a>GetFrameworkSdkPath 任务
-检索 [!INCLUDE[winsdklong](../deployment/includes/winsdklong_md.md)] 的路径。
 
+检索 Windows 软件开发工具包 (SDK) 的路径。
 ## <a name="task-parameters"></a>任务参数
+
+下表描述了 `GetFrameworkSdkPath` 任务的参数。
 下表描述了 `GetFrameworkSdkPath` 任务的参数。
 
 |参数|描述|
@@ -39,10 +41,12 @@ ms.locfileid: "75593312"
 |`Path`|可选 `String` 输出参数。<br /><br /> 如果存在任何版本，则包含最新 .NET SDK 的路径。 否则返回 `String.Empty`。|
 
 ## <a name="remarks"></a>备注
+
 除上面列出的参数外，此任务还从 <xref:Microsoft.Build.Tasks.TaskExtension> 类继承参数，后者自身继承自 <xref:Microsoft.Build.Utilities.Task> 类。 有关这些其他参数的列表及其说明的信息，请参阅 [TaskExtension 基类](../msbuild/taskextension-base-class.md)。
 
 ## <a name="example"></a>示例
-以下示例使用 `GetFrameworkSdkPath` 任务将指向 [!INCLUDE[winsdkshort](../debugger/debug-interface-access/includes/winsdkshort_md.md)] 的路径存储在 `SdkPath` 属性中。
+
+以下示例使用 `GetFrameworkSdkPath` 任务将指向 Windows SDK 的路径存储在 `SdkPath` 属性中。
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -58,5 +62,6 @@ ms.locfileid: "75593312"
 ```
 
 ## <a name="see-also"></a>请参阅
+
 - [任务](../msbuild/msbuild-tasks.md)
 - [任务参考](../msbuild/msbuild-task-reference.md)

@@ -12,20 +12,22 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 013cf211fe9fdfb8fef07c5ac757fa5f4b35a521
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 83a5d0c9dec280633d0a39573581c083e6ddd4d8
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75577273"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633663"
 ---
 # <a name="item-metadata-in-target-batching"></a>目标批处理中的项元数据
-[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 能够对生成目标的输入和输出执行依赖项分析。 如果确定了目标的输入或输出是最新的，将跳过该目标并继续生成过程。 `Target` 元素使用 `Inputs` 和 `Outputs` 属性指定要在依赖项分析过程中检查的项。
 
-如果目标包含使用批处理的项作为输入或输出的任务，该目标的 `Target` 元素应在其 `Inputs` 或 `Outputs` 属性中使用批处理，以便 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 能够跳过最新的项批。
+MSBuild 可对生成目标的输入和输出执行依赖项分析。 如果确定了目标的输入或输出是最新的，将跳过该目标并继续生成过程。 `Target` 元素使用 `Inputs` 和 `Outputs` 属性指定要在依赖项分析过程中检查的项。
+
+如果目标包含使用批处理的项作为输入或输出的任务，该目标的 `Target` 元素应在其 `Inputs` 或 `Outputs` 属性中使用批处理，以便 MSBuild 能够跳过最新的项批。
 
 ## <a name="batch-targets"></a>批处理目标
-下面的示例包含名为 `Res` 的项列表，该列表根据 `Culture` 项元数据划分为两个批。 其中每个批分别传递到 `AL` 任务中，该任务为每个批创建一个输出程序集。 通过对 `Target` 元素的 `Outputs` 属性使用批处理，[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 可在运行目标之前确定各个批是否是最新的。 如果不使用目标批处理，在每次执行目标时，任务都会运行这两个项批。
+
+下面的示例包含名为 `Res` 的项列表，该列表根据 `Culture` 项元数据划分为两个批。 其中每个批分别传递到 `AL` 任务中，该任务为每个批创建一个输出程序集。 通过对 `Target` 元素的 `Outputs` 属性使用批处理，MSBuild 可在运行目标之前确定各个批是否是最新的。 如果不使用目标批处理，在每次执行目标时，任务都会运行这两个项批。
 
 ```xml
 <Project
@@ -66,6 +68,7 @@ ms.locfileid: "75577273"
 ```
 
 ## <a name="see-also"></a>请参阅
+
 - [如何：增量生成](../msbuild/how-to-build-incrementally.md)
 - [批处理](../msbuild/msbuild-batching.md)
 - [Target 元素 (MSBuild)](../msbuild/target-element-msbuild.md)

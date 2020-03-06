@@ -8,12 +8,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c3d5f9e402750978b1201c6b2a5b1ef0659e8789
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 8f20fdb4cd809e422bc33535f3143b45db99842f
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75593663"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633338"
 ---
 # <a name="msbuild-glossary"></a>MSBuild 词汇表
 
@@ -161,7 +161,7 @@ redist 列表\
 目标文件是包含大部分指导生成的目标和任务的项目文件。 按照约定，其文件扩展名为 .targets  。 通常在关联的项目文件的结尾导入目标文件。
 
 任务\
-任务是 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 项目用于执行生成操作的可执行代码单元。 例如，任务可能编译输入文件或运行外部工具。 有关详细信息，请参阅[任务](../msbuild/msbuild-tasks.md)。
+任务是 MSBuild 项目用于执行生成操作的可执行代码单元。 例如，任务可能编译输入文件或运行外部工具。 有关详细信息，请参阅[任务](../msbuild/msbuild-tasks.md)。
 
 转换\
 转换是指采用一对一的方式将一个项集合转换为另一集合。 除了使项目转换项集合外，转换也可让目标在其输入和输出间标识直接映射。 有关详细信息，请参阅[转换](../msbuild/msbuild-transforms.md)。

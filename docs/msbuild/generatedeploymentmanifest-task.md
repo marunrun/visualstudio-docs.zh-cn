@@ -17,16 +17,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fc953298241ec7c48bbf5ea87c902aa28b349ce0
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: ca55f3eeb9b3119b27e67dcb0255f8386c521af6
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75588299"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634066"
 ---
 # <a name="generatedeploymentmanifest-task"></a>GenerateDeploymentManifest 任务
 
-生成 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 部署清单。 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 部署清单描述如何通过为部署定义唯一标识、标识部署特征（如安装或联机模式）、指定应用程序更新设置和更新位置，以及指示相应的 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序清单，来进行应用程序的部署。
+生成 ClickOnce 部署清单。 ClickOnce 部署清单描述如何通过为部署定义唯一标识、标识部署特征（如安装或联机模式）、指定应用程序更新设置和更新位置，以及指示相应的 ClickOnce 应用程序清单，来进行应用程序的部署。
 
 ## <a name="parameters"></a>参数
 
@@ -40,12 +40,12 @@ ms.locfileid: "75588299"
 | `DeploymentUrl` | 可选 `String` 参数。<br /><br /> 指定应用程序的更新位置。 如果未指定此参数，则不会为应用程序定义更新位置。 但是，如果 `UpdateEnabled` 参数为 `true`，则必须指定更新位置。 指定的值应为完全限定的 URL 或 UNC 路径。 |
 | `Description` | 可选 `String` 参数。<br /><br /> 指定应用程序的可选说明。 |
 | `DisallowUrlActivation` | 可选 `Boolean` 参数。<br /><br /> 指定当通过 URL 打开应用程序时是否应该自动运行该应用程序。 如果此参数为 `true`，则应用程序只能从“开始”菜单中启动。  此参数的默认值为 `false`。 仅当 `Install` 参数值为 `true` 时才应用此输入。 |
-| `EntryPoint` | 可选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 指示生成的清单程序集的入口点。 对于 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 部署清单，此输入指定了 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序清单。<br /><br />如果未指定 `EntryPoint` 任务参数，将 `<customHostSpecified>` 标记作为 `<entryPoint>` 标记的子标记插入，例如：<br /><br /> `<entryPoint xmlns="urn:schemas-microsoft-com:asm.v2">`<br /><br /> `<co.v1:customHostSpecified />`<br /><br /> `</entryPoint>`<br /><br /> 通过执行以下步骤，可将 DDL 依赖项添加到应用程序清单：<br /><br /> 1.通过调用 <xref:Microsoft.Build.Tasks.ResolveAssemblyReference> 解析程序集引用。<br />2.将上一个任务的输出和程序集本身传递给 <xref:Microsoft.Build.Tasks.ResolveManifestFiles>。<br />3.使用 `Dependencies` 参数将依赖项传递给 <xref:Microsoft.Build.Tasks.GenerateApplicationManifest>。 |
+| `EntryPoint` | 可选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 指示生成的清单程序集的入口点。 对于 ClickOnce 部署清单，此输入指定了 ClickOnce 应用程序清单。<br /><br />如果未指定 `EntryPoint` 任务参数，将 `<customHostSpecified>` 标记作为 `<entryPoint>` 标记的子标记插入，例如：<br /><br /> `<entryPoint xmlns="urn:schemas-microsoft-com:asm.v2">`<br /><br /> `<co.v1:customHostSpecified />`<br /><br /> `</entryPoint>`<br /><br /> 通过执行以下步骤，可将 DDL 依赖项添加到应用程序清单：<br /><br /> 1.通过调用 <xref:Microsoft.Build.Tasks.ResolveAssemblyReference> 解析程序集引用。<br />2.将上一个任务的输出和程序集本身传递给 <xref:Microsoft.Build.Tasks.ResolveManifestFiles>。<br />3.使用 `Dependencies` 参数将依赖项传递给 <xref:Microsoft.Build.Tasks.GenerateApplicationManifest>。 |
 | `ErrorReportUrl` | 可选 <xref:System.String?displayProperty=fullName> 参数。<br /><br /> 指定安装 ClickOnce 过程中显示在对话框中的网页 URL。 |
 | `InputManifest` | 可选 <xref:Microsoft.Build.Framework.ITaskItem> 参数。<br /><br /> 指示输入 XML 文档，使其充当清单生成器的基础。 这使得结构化数据（如自定义清单定义）可反映在输出清单中。 XML 文档中的根元素必须是 asmv1 命名空间中的程序集节点。 |
 | `Install` | 可选 `Boolean` 参数。<br /><br /> 指定应用程序是已安装应用程序还是仅联机应用程序。 如果此参数为 `true`，则应用程序将安装在用户的“开始”菜单中，并可通过“添加或删除程序”对话框将其删除   。 如果此参数为 `false`，则应用程序适用于在网页上联机使用。 此参数的默认值为 `true`。 |
-| `MapFileExtensions` | 可选 `Boolean` 参数。<br /><br /> 指定是否使用 .deploy 文件扩展名映射  。 如果此参数为 `true`，则每个程序文件都使用 .deploy 文件扩展名发布  。 此选项限制文件扩展名的数量（必须取消阻止这些文件扩展名，才能启用 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序部署），有助于提升 Web 服务器安全性。 此参数的默认值为 `false`。 |
-| `MaxTargetPath` | 可选 `String` 参数。<br /><br /> 指定 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序部署中允许的最大文件路径长度。 如果指定此参数，则将针对此限制检查应用程序中每个文件路径的长度。 超出该限制的任何项都会导致一条生成警告。 如果此输入未指定或为零，则不会执行任何检查。 |
+| `MapFileExtensions` | 可选 `Boolean` 参数。<br /><br /> 指定是否使用 .deploy 文件扩展名映射  。 如果此参数为 `true`，则每个程序文件都使用 .deploy 文件扩展名发布  。 此选项限制文件扩展名的数量（必须取消阻止这些文件扩展名，才能启用 ClickOnce 应用程序部署），有助于提升 Web 服务器安全性。 此参数的默认值为 `false`。 |
+| `MaxTargetPath` | 可选 `String` 参数。<br /><br /> 指定 ClickOnce 应用程序部署中允许的最大文件路径长度。 如果指定此参数，则将针对此限制检查应用程序中每个文件路径的长度。 超出该限制的任何项都会导致一条生成警告。 如果此输入未指定或为零，则不会执行任何检查。 |
 | `MinimumRequiredVersion` | 可选 `String` 参数。<br /><br /> 指定用户是否可以跳过更新。 如果用户的版本低于所需的最低版本，则用户将无法选择跳过更新。 仅当 `Install` 参数的值为 `true` 时才应用此输入。 |
 | `OutputManifest` | 可选 <xref:Microsoft.Build.Framework.ITaskItem> 参数。<br /><br /> 指定所生成的输出清单文件的名称。 如果未指定此参数，则将从生成的清单的标识中推断输出文件的名称。 |
 | `Platform` | 可选 `String` 参数。<br /><br /> 指定应用程序的目标平台。 此参数可以具有下列值：<br /><br /> -   `AnyCPU`<br />-   `x86`<br />-   `x64`<br />-   `Itanium`<br /><br /> 默认值为 `AnyCPU`。 |
