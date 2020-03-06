@@ -18,28 +18,32 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cac0af3371a5c4ae385cc19367b360b8e8f608fd
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 155e8e6b57cc388e8c2981297be8b26ef5444c1b
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75590054"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634313"
 ---
 # <a name="createproperty-task"></a>CreateProperty 任务
+
 使用传入的值填充属性。 通过该操作可以将值从一个属性或字符串复制到另一个属性或字符串。
 
 ## <a name="attributes"></a>特性
+
 下表描述了 `CreateProperty` 任务的参数。
 
 | 参数 | 描述 |
 |------------------| - |
 | `Value` | 可选 `String` 输出参数。<br /><br /> 指定要复制到新属性的值。 |
-| `ValueSetByTask` | 可选 `String` 输出参数。<br /><br /> 包含与 `Value` 参数相同的值。 在由于输出是最新的而跳过封闭目标的情况下，仅当需要避免由 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 设置输出属性时，使用此参数。 |
+| `ValueSetByTask` | 可选 `String` 输出参数。<br /><br /> 包含与 `Value` 参数相同的值。 在由于输出是最新的而跳过封闭目标的情况下，仅当需要避免由 MSBuild 设置输出属性时，使用此参数。 |
 
 ## <a name="remarks"></a>备注
+
 除上面列出的参数外，此任务还从 <xref:Microsoft.Build.Tasks.TaskExtension> 类继承参数，后者自身继承自 <xref:Microsoft.Build.Utilities.Task> 类。 有关这些其他参数的列表及其说明的信息，请参阅 [TaskExtension 基类](../msbuild/taskextension-base-class.md)。
 
 ## <a name="example"></a>示例
+
 以下示例在 `CreateProperty` 任务中通过合并 `SourceFilename` 和 `SourceFileExtension` 属性的值创建 `NewFile` 属性。
 
 ```xml
@@ -67,5 +71,6 @@ ms.locfileid: "75590054"
 运行项目后，`NewFile` 属性的值为 Module1.vb  。
 
 ## <a name="see-also"></a>请参阅
+
 - [任务参考](../msbuild/msbuild-task-reference.md)
 - [任务](../msbuild/msbuild-tasks.md)

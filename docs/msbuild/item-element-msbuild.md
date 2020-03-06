@@ -16,15 +16,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 730e7d317ffa3fd5a450978f35659df3fe5629f3
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: ff7e446c319a08004260125580cdace43412cdba
+ms.sourcegitcommit: 1efb6b219ade7c35068b79fbdc573a8771ac608d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75573659"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78169347"
 ---
 # <a name="item-element-msbuild"></a>Item 元素 (MSBuild)
-包含用户定义的项和其元数据。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 项目中使用的每一个项都必须被指定为 `ItemGroup` 元素的子元素。
+
+包含用户定义的项和其元数据。 MSBuild 项目中使用的每一个项都必须被指定为 `ItemGroup` 元素的子元素。
 
 \<Project> \<ItemGroup> \<Item>
 
@@ -33,14 +34,14 @@ ms.locfileid: "75573659"
 ```xml
 <Item Include="*.cs"
         Exclude="MyFile.cs"
-        Remove="RemoveFile.cs"
-        Condition="'String A'=='String B'" >
+        Condition="'String A'=='String B'">
     <ItemMetadata1>...</ItemMetadata1>
     <ItemMetadata2>...</ItemMetadata2>
 </Item>
 ```
 
 ## <a name="specify-metadata-as-attributes"></a>指定元数据作为属性
+
 在 MSBuild 15.1 或更高版本中，名称不与当前属性列表冲突的元数据可选择性地表示为属性。
 
 例如，若要指定 NuGet 包列表，你通常会使用类似下列语法的内容。
@@ -62,6 +63,7 @@ ms.locfileid: "75573659"
 ```
 
 ## <a name="attributes-and-elements"></a>特性和元素
+
  下列各节描述了特性、子元素和父元素。
 
 ### <a name="attributes"></a>特性
@@ -90,13 +92,15 @@ ms.locfileid: "75573659"
 |[ItemGroup](../msbuild/itemgroup-element-msbuild.md)|为项进行元素分组。|
 
 ## <a name="remarks"></a>备注
+
 `Item` 元素定义输入到生成系统的输入，并且根据其用户定义的集合名被分组到项集合。 这些项集合可用作[任务](../msbuild/msbuild-tasks.md)的参数，这些任务使用集合中的各个项来执行生成过程的步骤。 有关详细信息，请参阅[项](../msbuild/msbuild-items.md)。
 
 使用表示法 @(\<myType>) 可使类型 \<myType> 的项的集合扩展为以分号分隔的字符串列表，并将传递给参数。 如果参数的类型为 `string`，则参数的值是以分号分隔的元素列表。 如果此参数是一个字符串数组 (`string[]`)，则根据分号的位置将每个元素插入到数组中。 如果任务参数的类型为 <xref:Microsoft.Build.Framework.ITaskItem>`[]`，则值是项集合的内容以及附加的任何元数据。 如需通过使用分号之外的其他字符来分隔每个项，请使用语法 @(\<myType>, '\<separator>')。
 
-[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 引擎能够计算通配符（如 `*` 和 `?`）和递归通配符（如 /\*\*/\*）  。 有关详细信息，请参阅[项](../msbuild/msbuild-items.md)。
+MSBuild 引擎能够计算通配符（如 `*` 和 `?`）和递归通配符（如 /\*\*/\*.cs  ）。 有关详细信息，请参阅[项](../msbuild/msbuild-items.md)。
 
 ## <a name="examples"></a>示例
+
 以下代码示例演示如何声明类型 `CSFile` 的两个项。 第二个声明项包含将 `MyMetadata` 设置为 `HelloWorld` 的元数据。
 
 ```xml
@@ -119,6 +123,7 @@ ms.locfileid: "75573659"
 ```
 
 ## <a name="see-also"></a>请参阅
+
 - [项](../msbuild/msbuild-items.md)
 - [常用的 MSBuild 项目项](../msbuild/common-msbuild-project-items.md)
 - [MSBuild 属性](../msbuild/msbuild-properties.md)

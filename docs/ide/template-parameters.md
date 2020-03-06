@@ -10,12 +10,12 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 582c87eee2586eab12f70e2d27341987e7cb7e2a
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 7076e8f5718e44cc382eb0768e6456dbd6ee5664
+ms.sourcegitcommit: 1efb6b219ade7c35068b79fbdc573a8771ac608d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75585881"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78169360"
 ---
 # <a name="template-parameters"></a>模板参数
 
@@ -61,7 +61,7 @@ ms.locfileid: "75585881"
 |safeitemrootname|与 `safeitemname` 相同。|
 |safeprojectname|用户在创建项目时提供的名称，但名称中删除了所有不安全字符和空格。|
 |time|以 DD/MM/YYYY 00:00:00 格式表示的当前时间。|
-|specifiedSolutionName|解决方案的名称。 在选中“创建解决方案目录”时，`specifiedSolutionName` 具有解决方案名称。 在未选中“创建解决方案目录”时，`specifiedSolutionName` 为空。|
+|specifiedsolutionname|解决方案的名称。 在选中“创建解决方案目录”时，`specifiedsolutionname` 具有解决方案名称。 在未选中“创建解决方案目录”时，`specifiedsolutionname` 为空。|
 |userdomain|当前的用户域。|
 |username|当前的用户名称。|
 |webnamespace|当前网站的名称。 此参数在 Web 窗体模板中用于保证类名是唯一的。 如果网站在 Web 服务器的根目录下，则此模板参数解析为 Web 服务器的根目录。|

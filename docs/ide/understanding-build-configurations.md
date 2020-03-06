@@ -26,12 +26,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6b472ca78d36247a76bf397989f48e04230ccd7d
-ms.sourcegitcommit: b2fc9ac7d73c847508f6ed082bed026476bb3955
+ms.openlocfilehash: a37d4fa5dc92253b94dc64590c9df5fec7703ceb
+ms.sourcegitcommit: b016ea260856264eee730ee8cbcab198314a7ece
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/05/2020
-ms.locfileid: "77027617"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904160"
 ---
 # <a name="understand-build-configurations"></a>了解生成配置
 
@@ -44,7 +44,7 @@ ms.locfileid: "77027617"
 
 用于存储生成的输出文件的配置和平台控件。 通常，在 Visual Studio 生成项目时，会将输出放置在以活动配置命名的项目子文件夹中（例如，“bin/Debug/x86”  ），这是可以更改的。
 
-可以在解决方案和项目级别创建自己的生成配置。 解决方案配置确定该配置处于活动状态时在生成中包含哪些项目。 将仅生成在活动解决方案配置中指定的项目。 项目配置确定生成项目时使用的生成设置和编译器选项。
+可以在解决方案和项目级别创建自己的生成配置。 解决方案配置确定该配置处于活动状态时在生成中包含哪些项目。 将仅生成在活动解决方案配置中指定的项目。 如果在配置管理器中选择了多个目标平台，则将生成适用于该平台的所有项目。 项目配置确定生成项目时使用的生成设置和编译器选项。
 
 若要创建、选择、修改或删除配置，可以使用“配置管理器”  。 若要打开它，请在菜单栏上选择“生成”   > “配置管理器”  ，或者直接在搜索框中键入“配置”  。 也可以使用“标准”  工具栏上的“解决方案配置”  列表，选择配置或打开“配置管理器”  。
 
@@ -70,6 +70,12 @@ ms.locfileid: "77027617"
 项目针对的配置和平台结合使用以指定在生成时要使用的生成设置和编译器选项。 对于配置和平台的每种组合，项目可以具有不同的设置。 要修改项目属性，请在“解决方案资源管理器”  中打开项目的快捷菜单，然后选择“属性”  。  在项目设计器的“生成”  选项卡的顶部，选择活动配置以编辑其生成设置。
 
 ![项目设计器配置](media/understanding-build-configurations/project-designer-configuration.png)
+
+## <a name="building-multiple-configurations"></a>生成多个配置
+
+使用“生成”   > “生成解决方案”  命令生成解决方案时，Visual Studio 只会生成活动配置。 将生成在该解决方案配置中指定的所有项目，并且生成的唯一项目配置是活动解决方案配置和活动解决方案平台中指定的项目配置，该配置在 Visual Studio 的工具栏中显示。 例如：“调试”  和“x86”  。 不会生成其他定义的配置和平台。
+
+如果要在一个操作中生成多个配置和平台，可以使用 Visual Studio 中的“生成”   > “批生成”  选项。 若要访问此功能，请按 Ctrl  +Q  打开搜索框，然后输入 `Batch build`。 批生成并非适用于所有项目类型。 请参阅[如何：同时生成多个配置](how-to-build-multiple-configurations-simultaneously.md)。
 
 ## <a name="how-visual-studio-assigns-project-configurations"></a>Visual Studio 如何分配项目配置
 

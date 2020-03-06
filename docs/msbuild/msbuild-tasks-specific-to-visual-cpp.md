@@ -15,21 +15,22 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89f7d8465b2078d4c0c1ce86894edb834581596d
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 6393e771f9e9ed862d21397dabacdb3f3808c386
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75593819"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633143"
 ---
 # <a name="msbuild-tasks-specific-to-c"></a>特定于 C++ 的 MSBuild 任务
-任务提供在生成过程中运行的代码。 安装 C++ 后，除了随 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 安装的任务外，以下任务也可用。 有关详细信息，请参阅 [MSBuild ( C++) 概述](/cpp/build/msbuild-visual-cpp-overview)。
+
+任务提供在生成过程中运行的代码。 安装 C++ 后，除了随 MSBuild 安装的任务外，以下任务也可用。 有关详细信息，请参阅 [MSBuild ( C++) 概述](/cpp/build/msbuild-visual-cpp-overview)。
 
  除了特定于每个任务的参数外，每个任务还具有以下参数。
 
 | 参数 | 描述 |
 |-------------------| - |
-| `Condition` | 可选 `String` 参数。<br /><br /> [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 引擎使用 `Boolean` 表达式来确定是否执行此任务。 有关 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 支持的条件的信息，请参阅[条件](../msbuild/msbuild-conditions.md)。 |
+| `Condition` | 可选 `String` 参数。<br /><br /> MSBuild 引擎使用 `Boolean` 表达式来确定是否执行此任务。 有关 MSBuild 支持的条件的信息，请参阅[条件](../msbuild/msbuild-conditions.md)。 |
 | `ContinueOnError` | 可选参数。 可以包含下列值之一：<br /><br /> -   **WarnAndContinue** 或 **true**。 当任务失败时，[Target](../msbuild/target-element-msbuild.md) 元素中的后续任务和生成将继续执行，并且来自该任务的所有错误都被视为警告<br />-   **ErrorAndContinue**。 当任务失败时，`Target` 元素中的后续任务和生成将继续执行，并且来自该任务的所有错误都被视为错误。<br />-   **ErrorAndStop** 或 **false**（默认值）。 当任务失败时，将不会执行 `Target` 元素中的剩余任务和生成，并且整个 `Target` 元素和生成都被视为已失败。<br /><br /> 4\.5 之前的 .NET Framework 版本仅支持 `true` 和 `false` 值。<br /><br /> 有关详细信息，请参阅[如何：忽略任务中的错误](../msbuild/how-to-ignore-errors-in-tasks.md)。 |
 
 ### <a name="related-topics"></a>相关主题

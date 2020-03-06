@@ -9,12 +9,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7f4abd95c2a37366b4f6dfabe141e6418d23301d
-ms.sourcegitcommit: 59e5758036223ee866f3de5e3c0ab2b6dbae97b6
+ms.openlocfilehash: 33cd217a08f62b4919af6d72017176c110cf5e5a
+ms.sourcegitcommit: b016ea260856264eee730ee8cbcab198314a7ece
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68416756"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904082"
 ---
 # <a name="how-to-build-multiple-configurations-simultaneously"></a>如何：同时生成多个配置
 
@@ -24,11 +24,13 @@ ms.locfileid: "68416756"
 
 2. 所有 Visual Basic 项目。
 
+如果解决方案包含这两个项目类型的任何项目，则“批生成”  不适用于该解决方案。 在这种情况下，该命令不会出现在“生成”  菜单上。
+
    有关生成配置的详细信息，请参阅[了解生成配置](../ide/understanding-build-configurations.md)。
 
 ## <a name="to-build-a-project-in-multiple-build-configurations"></a>在多个生成配置中生成项目
 
-1. 在菜单栏上，依次选择“生成” > “批生成”   。
+1. 在菜单栏上，依次选择“生成” > “批生成”   。 或者按 Ctrl  +Q  打开搜索框，然后搜索 `Batch Build`。
 
 2. 在“生成”列中，选择要在其中生成项目的配置的复选框  。
 

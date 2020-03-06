@@ -19,17 +19,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 446f4728f92d5a486afea1a7c03c8d5006690bfc
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: f77420c5ab269e1b0052ce6102c4e3196a3be52b
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75589300"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634092"
 ---
 # <a name="generateapplicationmanifest-task"></a>GenerateApplicationManifest 任务
-生成 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序清单或本机清单。 本机清单通过为组件定义唯一标识，并标识组成该组件的所有程序集和文件来描述组件。 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序清单通过指示应用程序的入口点并指定应用程序安全级别来扩展本机清单。
+
+生成 ClickOnce 应用程序清单或本机清单。 本机清单通过为组件定义唯一标识，并标识组成该组件的所有程序集和文件来描述组件。 ClickOnce 应用程序清单通过指示应用程序的入口点并指定应用程序安全级别来扩展本机清单。
 
 ## <a name="parameters"></a>参数
+
 下表描述了 `GenerateApplicationManifest` 任务的参数。
 
 | 参数 | 描述 |
@@ -40,7 +42,7 @@ ms.locfileid: "75589300"
 | `ConfigFile` | 可选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 指定包含应用程序配置文件的项。 如果任务正在生成本机清单，将忽略此参数。 |
 | `Dependencies` | 可选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 指定为生成的清单定义依赖程序集集的项列表。 项元数据可更详细地描述每个项，指示更多部署状态和依赖项类型。 有关详细信息，请参阅[项元数据](#item-metadata)。 |
 | `Description` | 可选 `String` 参数。<br /><br /> 指定应用程序或组件的说明。 |
-| `EntryPoint` | 可选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 指定一个项，用于指示生成的清单程序集的入口点。<br /><br /> 对于 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序清单，此参数指定在应用程序运行时启动的程序集。 |
+| `EntryPoint` | 可选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 指定一个项，用于指示生成的清单程序集的入口点。<br /><br /> 对于 ClickOnce 应用程序清单，此参数指定在应用程序运行时启动的程序集。 |
 | `ErrorReportUrl` | 可选 <xref:System.String?displayProperty=fullName> 参数。<br /><br /> 指定在安装 ClickOnce 时发出错误报告期间，对话框中显示的网页的 URL。 |
 | `FileAssociations` | 可选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 指定与 ClickOnce 部署清单关联的一个或多个文件类型的列表。<br /><br /> 文件关联只在面向 .NET Framework 3.5 或更高版本时才有效。 |
 | `Files` | 可选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 要包含在清单中的文件。 指定每个文件的完整路径。 |
@@ -49,7 +51,7 @@ ms.locfileid: "75589300"
 | `InputManifest` | 可选 <xref:Microsoft.Build.Framework.ITaskItem> 参数。<br /><br /> 指示输入 XML 文档，使其充当清单生成器的基础。 这使得结构数据（如应用程序安全或自定义清单定义）可反映在输出清单中。 XML 文档中的根元素必须是 asmv1 命名空间中的程序集节点。 |
 | `IsolatedComReferences` | 可选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 指定要在生成清单中隔离的 COM 组件。 此参数支持隔离 COM 组件以实现“免注册 COM”部署。 方法是通过自动生成具有标准 COM 注册定义的清单。 但为了保证组件正常工作，必须在生成计算机上注册这些 COM 组件。 |
 | `ManifestType` | 可选 `String` 参数。<br /><br /> 指定要生成的清单类型。 此参数可以具有下列值：<br /><br /> -   `Native`<br />-   `ClickOnce`<br /><br /> 如果未指定此参数，则该任务默认为 `ClickOnce`。 |
-| `MaxTargetPath` | 可选 `String` 参数。<br /><br /> 指定 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序部署中允许的最大文件路径长度。 如果指定此值，则将针对此限制检查应用程序中每个文件路径的长度。 超出该限制的任何项都会引发一条生成警告。 如果此输入未指定或为零，则不会执行任何检查。 如果任务正在生成本机清单，将忽略此参数。 |
+| `MaxTargetPath` | 可选 `String` 参数。<br /><br /> 指定 ClickOnce 应用程序部署中允许的最大文件路径长度。 如果指定此值，则将针对此限制检查应用程序中每个文件路径的长度。 超出该限制的任何项都会引发一条生成警告。 如果此输入未指定或为零，则不会执行任何检查。 如果任务正在生成本机清单，将忽略此参数。 |
 | `OSVersion` | 可选 `String` 参数。<br /><br /> 指定应用程序所需的最低操作系统 (OS) 版本。 例如，值“5.1.2600.0”表示操作系统为 Windows XP。 如果未指定此参数，则使用值“4.10.0.0”，表示 Windows 98 Second Edition，即 .NET Framework 支持的最低 OS 版本。 如果任务正在生成本机清单，将忽略此输入。 |
 | `OutputManifest` | 可选 <xref:Microsoft.Build.Framework.ITaskItem> 输出参数。<br /><br /> 指定所生成的输出清单文件的名称。 如果未指定此参数，则将从生成的清单的标识中推断输出文件的名称。 |
 | `Platform` | 可选 `String` 参数。<br /><br /> 指定应用程序的目标平台。 此参数可以具有下列值：<br /><br /> -   `AnyCPU`<br />-   `x86`<br />-   `x64`<br />-   `Itanium`<br /><br /> 如果未指定此参数，则该任务默认为 `AnyCPU`。 |
@@ -65,6 +67,7 @@ ms.locfileid: "75589300"
 | `UseApplicationTrust` | 可选 `Boolean` 参数。<br /><br /> 如果为 true，则将 `Product`、`Publisher` 和 `SupportUrl` 属性写入应用程序清单中。 |
 
 ## <a name="remarks"></a>备注
+
 除上面列出的参数外，此任务还从 <xref:Microsoft.Build.Tasks.GenerateManifestBase> 类继承参数，后者自身继承自 <xref:Microsoft.Build.Utilities.Task> 类。 有关任务类的参数列表，请参阅[任务基类](../msbuild/task-base-class.md)。
 
 有关如何使用 `GenerateDeploymentManifest` 任务的信息，请参阅 [GenerateApplicationManifest 任务](../msbuild/generateapplicationmanifest-task.md)。
@@ -82,12 +85,13 @@ ms.locfileid: "75589300"
 |`IsDataFile`|指示文件是否为数据文件的 `Boolean` 元数据值。 数据文件的特殊性在于它可以在应用程序更新之间迁移。 此元数据仅对文件有效。 默认值为 `False`。|
 
 ## <a name="example"></a>示例
-此示例针对具有单个程序集的应用程序，使用 `GenerateApplicationManifest` 任务生成 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序清单，并使用 `GenerateDeploymentManifest` 任务生成部署清单。 然后，使用 `SignFile` 任务对这些清单进行签名。
 
-上文说明了最简单的清单生成方案，并为单个程序生成了 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 清单。 根据清单的程序集可以推断出默认的名称和标识。
+此示例针对具有单个程序集的应用程序，使用 `GenerateApplicationManifest` 任务生成 ClickOnce 应用程序清单，并使用 `GenerateDeploymentManifest` 任务生成部署清单。 然后，使用 `SignFile` 任务对这些清单进行签名。
+
+上文说明了最简单的清单生成方案，其中为单个程序生成了 ClickOnce 清单。 根据清单的程序集可以推断出默认的名称和标识。
 
 > [!NOTE]
-> 在下面的示例中，为将重点放在清单生成方面上，预先生成了所有应用程序二进制文件。 此示例会生成一个完全可用的 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 部署。
+> 在下面的示例中，为将重点放在清单生成方面上，预先生成了所有应用程序二进制文件。 此示例会生成一个完全可用的 ClickOnce 部署。
 >
 > [!NOTE]
 > 有关在此示例的 `SignFile` 任务中使用的 `Thumbprint` 属性的详细信息，请参阅 [SignFile 任务](../msbuild/signfile-task.md)。
@@ -135,12 +139,13 @@ ms.locfileid: "75589300"
 ```
 
 ## <a name="example"></a>示例
-此示例针对具有单个程序集的应用程序，分别使用 `GenerateApplicationManifest` 和 `GenerateDeploymentManifest` 任务生成 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序清单和部署清单，指定了清单的名称和标识。
+
+此示例针对具有单个程序集的应用程序，分别使用 `GenerateApplicationManifest` 和 `GenerateDeploymentManifest` 任务生成 ClickOnce 应用程序清单和部署清单，指定了清单的名称和标识。
 
 此示例除显式指定清单的名称和标识之外，其他方面均与上一个示例类似。 此外，此示例还被配置为联机应用程序，而不是安装的应用程序。
 
 > [!NOTE]
-> 在下面的示例中，为将重点放在清单生成方面上，预先生成了所有应用程序二进制文件。 此示例会生成一个完全可用的 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 部署。
+> 在下面的示例中，为将重点放在清单生成方面上，预先生成了所有应用程序二进制文件。 此示例会生成一个完全可用的 ClickOnce 部署。
 >
 > [!NOTE]
 > 有关在此示例的 `SignFile` 任务中使用的 `Thumbprint` 属性的详细信息，请参阅 [SignFile 任务](../msbuild/signfile-task.md)。
@@ -195,10 +200,11 @@ ms.locfileid: "75589300"
 ```
 
 ## <a name="example"></a>示例
-此示例针对具有多个文件和程序集的应用程序，分别使用 `GenerateApplicationManifest` 和 `GenerateDeploymentManifest` 任务生成 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序清单和部署清单。
+
+此示例针对具有多个文件和程序集的应用程序，分别使用 `GenerateApplicationManifest` 和 `GenerateDeploymentManifest` 任务生成 ClickOnce 应用程序清单和部署清单。
 
 > [!NOTE]
-> 在下面的示例中，为将重点放在清单生成方面上，预先生成了所有应用程序二进制文件。 此示例会生成一个完全可用的 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 部署。
+> 在下面的示例中，为将重点放在清单生成方面上，预先生成了所有应用程序二进制文件。 此示例会生成一个完全可用的 ClickOnce 部署。
 >
 > [!NOTE]
 > 有关在此示例的 `SignFile` 任务中使用的 `Thumbprint` 属性的详细信息，请参阅 [SignFile 任务](../msbuild/signfile-task.md)。
@@ -313,12 +319,13 @@ ms.locfileid: "75589300"
 ```
 
 ## <a name="example"></a>示例
+
 此示例使用 `GenerateApplicationManifest` 任务为应用程序 Test.exe 生成本机清单，引用本机组件 Alpha.dll 和独立的 COM 组件 Bravo.dll    。
 
 此示例生成 Test.exe.manifest，使该应用程序可借助“免注册 COM”进行 XCOPY 部署  。
 
 > [!NOTE]
-> 在下面的示例中，为将重点放在清单生成方面上，预先生成了所有应用程序二进制文件。 此示例会生成一个完全可用的 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 部署。
+> 在下面的示例中，为将重点放在清单生成方面上，预先生成了所有应用程序二进制文件。 此示例会生成一个完全可用的 ClickOnce 部署。
 
 ```xml
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -350,6 +357,7 @@ ms.locfileid: "75589300"
 ```
 
 ## <a name="see-also"></a>请参阅
+
 - [任务](../msbuild/msbuild-tasks.md)
 - [GenerateDeploymentManifest 任务](../msbuild/generatedeploymentmanifest-task.md)
 - [SignFile 任务](../msbuild/signfile-task.md)

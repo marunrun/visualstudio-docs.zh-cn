@@ -8,33 +8,35 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b32960d46b4c7ae9b37cfec6cff97eb0540b868a
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: c3cccb9bb87d03d1fb285babe2a02cf30cfb9ed9
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75596770"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633195"
 ---
 # <a name="msbuild-target-framework-and-target-platform"></a>MSBuild 目标框架和目标平台
+
 可以生成要在目标框架  （.NET Framework 的一个特定版本）和目标平台  （一种特定的软件体系结构）上运行的项目。  例如，可将一个应用程序的目标设定为在与 802x86 处理器系列 (“x86”) 兼容的 32 位平台上的 .NET Framework 2.0 上运行。 目标框架与目标平台的组合称为“目标上下文”  。
 
 > [!IMPORTANT]
 > 本文介绍了指定目标框架的旧方法。 SDK 风格的项目支持不同的目标框架，例如 netstandard。 有关详细信息，请参阅[目标框架](/dotnet/standard/frameworks)。
 
 ## <a name="target-framework-and-profile"></a>目标框架和配置文件
+
  目标框架是将在其上运行项目的特定 .NET Framework 版本。 需要规范目标框架，因为它将启用专用于该框架版本的编译器功能和程序集引用。
 
  目前，以下版本的 .NET Framework 可供使用：
 
 - .NET Framework 2.0（包含在 Visual Studio 2005 中）
 
-- .NET Framework 3.0（包含在[!INCLUDE[wiprlhext](../debugger/includes/wiprlhext_md.md)] 中）
+- .NET Framework 3.0（包含在 Windows Vista 中）
 
-- .NET Framework 3.5（包含在[!INCLUDE[vs_orcas_long](../debugger/includes/vs_orcas_long_md.md)] 中）
+- .NET Framework 3.5（包含在 Visual Studio 2008 中）
 
 - .NET Framework 4.5.2
 
-- .NET Framework 4.6（包含在[!INCLUDE[vs_dev14](../misc/includes/vs_dev14_md.md)] 中）
+- .NET Framework 4.6（包含在 Visual Studio 2015 中）
 
 - .NET Framework 4.6.1
 
@@ -69,6 +71,7 @@ ms.locfileid: "75596770"
 ```
 
 ## <a name="target-platform"></a>目标平台
+
  平台  是定义特定运行时环境的硬件和软件的组合。 例如，应用于对象的
 
 - `x86` 指定在 Intel 80x86 处理器或等效处理器上运行的 32 位 Windows 操作系统。
@@ -97,4 +100,5 @@ ms.locfileid: "75596770"
 ```
 
 ## <a name="see-also"></a>请参阅
+
 - [多定向](../msbuild/msbuild-multitargeting-overview.md)

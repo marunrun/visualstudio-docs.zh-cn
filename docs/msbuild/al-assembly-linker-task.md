@@ -18,17 +18,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d90e6c94d07b73e79d793982944bca395a562df2
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 6861fee8691c32415111347ab673f9e48bfb9e11
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75593468"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634586"
 ---
 # <a name="al-assembly-linker-task"></a>AL（程序集链接器）任务
-AL 任务包装 AL.exe（一种随 [!INCLUDE[winsdklong](../deployment/includes/winsdklong_md.md)] 一起分发的工具）  。 此程序集链接器工具用于创建包含来自一个或多个文件（这些文件可以是模块或资源文件）的清单的程序集。 编译器和开发环境可能已提供这些功能，因此通常不需要直接使用此任务。 对于需要从多个组件文件（例如可能从混合语言开发生成的组件文件）创建单个程序集的开发人员来说，程序集链接器非常有用。 此任务不能将模块合并到单个程序集文件；单个模块必须仍为分布式且可用，以便正确加载生成程序集。 有关 AL.exe 的详细信息，请参阅 [Al.exe（程序集链接器）](/dotnet/framework/tools/al-exe-assembly-linker)  。
+
+AL 任务包装 AL.exe  （一种随 Windows 软件开发工具包 (SDK) 一起分发的工具）。 此程序集链接器工具用于创建包含来自一个或多个文件（这些文件可以是模块或资源文件）的清单的程序集。 编译器和开发环境可能已提供这些功能，因此通常不需要直接使用此任务。 对于需要从多个组件文件（例如可能从混合语言开发生成的组件文件）创建单个程序集的开发人员来说，程序集链接器非常有用。 此任务不能将模块合并到单个程序集文件；单个模块必须仍为分布式且可用，以便正确加载生成程序集。 有关 AL.exe 的详细信息，请参阅 [Al.exe（程序集链接器）](/dotnet/framework/tools/al-exe-assembly-linker)  。
 
 ## <a name="parameters"></a>参数
+
  下表描述了 `AL` 任务的参数。
 
 | 参数 | 描述 |
@@ -62,16 +64,18 @@ AL 任务包装 AL.exe（一种随 [!INCLUDE[winsdklong](../deployment/includes/
 | `TemplateFile` | 可选 `String` 参数。<br /><br /> 指定程序集，除区域性字段之外的所有程序集元数据都从该程序集继承。 指定的程序集必须具有强名称。<br /><br /> 使用 `TemplateFile` 参数创建的程序集将成为附属程序集。 此参数对应于 [Al.exe（程序集链接器）](/dotnet/framework/tools/al-exe-assembly-linker)中的 `/template` 选项。 |
 | `Timeout` | 可选 `Int32` 参数。<br /><br /> 指定终止任务可执行文件之前的时间量（以毫秒为单位）。 默认值是 `Int.MaxValue`，指示没有超时期限。 |
 | `Title` | 可选 `String` 参数。<br /><br /> 为程序集中的 `Title` 字段指定字符串。 有关详细信息，请参阅 [Al.exe（程序集链接器）](/dotnet/framework/tools/al-exe-assembly-linker)中 `/title` 选项的文档。 |
-| `ToolPath` | 可选 `String` 参数。<br /><br /> 指定任务从中加载基础可执行文件 (Al.exe) 的位置。 如果未指定此参数，则任务会使用与运行 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 的框架版本对应的 SDK 安装路径。 |
+| `ToolPath` | 可选 `String` 参数。<br /><br /> 指定任务从中加载基础可执行文件 (Al.exe) 的位置。 如果未指定此参数，则任务会使用与运行 MSBuild 的框架版本对应的 SDK 安装路径。 |
 | `Trademark` | 可选 `String` 参数。<br /><br /> 为程序集中的 `Trademark` 字段指定字符串。 有关详细信息，请参阅 [Al.exe（程序集链接器）](/dotnet/framework/tools/al-exe-assembly-linker)中 `/trade[mark]` 选项的文档。 |
 | `Version` | 可选 `String` 参数。<br /><br /> 指定此程序集的版本信息。 此字符串的格式是 *major.minor.build.revision*。 默认值为 0。 有关详细信息，请参阅 [Al.exe（程序集链接器）](/dotnet/framework/tools/al-exe-assembly-linker)中 `/v[ersion]` 选项的文档。 |
 | `Win32Icon` | 可选 `String` 参数。<br /><br /> 在程序集中插入 .ico 文件  。 .ico 文件在文件资源管理器中赋予输出文件所需的外观  。 此参数对应于 [Al.exe（程序集链接器）](/dotnet/framework/tools/al-exe-assembly-linker)中的 `/win32icon` 选项。 |
 | `Win32Resource` | 可选 `String` 参数。<br /><br /> 在输出文件中插入 Win32 资源（.res 文件）  。 有关详细信息，请参阅 [Al.exe（程序集链接器）](/dotnet/framework/tools/al-exe-assembly-linker)中 `/win32res` 选项的文档。 |
 
 ## <a name="remarks"></a>备注
+
  除上面列出的参数外，此任务还从 <xref:Microsoft.Build.Tasks.ToolTaskExtension> 类继承参数，后者自身继承自 <xref:Microsoft.Build.Utilities.ToolTask> 类。 有关这些其他参数的列表及其说明，请参阅 [ToolTaskExtension 基类](../msbuild/tooltaskextension-base-class.md)。
 
 ## <a name="example"></a>示例
+
  以下示例通过指定选项创建程序集。
 
 ```xml
@@ -92,5 +96,6 @@ AL 任务包装 AL.exe（一种随 [!INCLUDE[winsdklong](../deployment/includes/
 ```
 
 ## <a name="see-also"></a>请参阅
+
 * [任务参考](../msbuild/msbuild-task-reference.md)
 * [任务](../msbuild/msbuild-tasks.md)

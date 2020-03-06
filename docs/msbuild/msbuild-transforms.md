@@ -11,17 +11,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5c4262ed1a7b92170565f7006c9ed06ed884f928
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 34394ba35a349a1564f6c3fdd43052be3e1fdf03
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75593767"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633104"
 ---
 # <a name="msbuild-transforms"></a>MSBuild 转换
-转换是指采用一对一的方式将一个项列表转换为另一项列表。 通过转换，不仅项目可以转换项列表，而且目标还可以标识其输入和输出之间的直接映射。 本主题介绍转换以及 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 如何使用转换更有效地生成项目。
+
+转换是指采用一对一的方式将一个项列表转换为另一项列表。 通过转换，不仅项目可以转换项列表，而且目标还可以标识其输入和输出之间的直接映射。 本主题介绍转换以及 MSBuild 如何使用转换更有效地生成项目。
 
 ## <a name="transform-modifiers"></a>转换修饰符
+
 转换并不是任意的，而是受特殊语法的限制，其中所有的转换修饰符都必须采用 %(\<ItemMetaDataName>) 格式。 任何项元数据都可用作转换修饰符。 这包括在创建每个项时为其分配的常见项元数据。 要获得常见项元数据的列表，请参阅[常见项元数据](../msbuild/msbuild-well-known-item-metadata.md)。
 
 在以下示例中，.resx 文件列表会转换为 .resources 文件列表   。 %(Filename) 转换修饰符指定每个 .resources 文件与相应的 .resx 文件具有相同的文件名   。
@@ -36,6 +38,7 @@ ms.locfileid: "75593767"
 > 可以为转换后的项列表指定自定义分隔符，其采用的方式与为标准项列表指定分隔符的相同。 例如，要使用逗号 (,) 而非默认的分号 (;) 分隔转换后的项列表，请使用下面的 XML：`@(RESXFile->'Toolset\%(filename)%(extension)', ',')`
 
 ## <a name="use-multiple-modifiers"></a>使用多个修饰符
+
  转换表达式可包含多个修饰符，这些修饰符可按任何顺序组合，还可重复使用。 在以下示例中，包含文件的目录的名称会更改，但文件会保留原来的名称和文件扩展名。
 
 ```xml
@@ -45,7 +48,8 @@ ms.locfileid: "75593767"
  例如，如果 `RESXFile` 项列表中包含的项为 Project1\Form1.resx、Project1\Form2.resx 和 Project1\Form3.text，那么转换列表中的输出为 Toolset\Form1.resx、Toolset\Form2.resx 和 Toolset\Form3.text       。
 
 ## <a name="dependency-analysis"></a>依赖项分析
- 转换可保证在转换后的项列表和原来的项列表之间存在一对一的映射关系。 因此，如果目标创建的输出转换为输入，[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 就可分析输入和输出的时间戳，并确定是否跳过、生成或部分重新生成目标。
+
+ 转换可保证在转换后的项列表和原来的项列表之间存在一对一的映射关系。 因此，如果目标创建的输出转换为输入，MSBuild 就可分析输入和输出的时间戳，并确定是否跳过、生成或部分重新生成目标。
 
  在以下示例的[复制任务](../msbuild/copy-task.md)中，`BuiltAssemblies` 项列表中的每个文件都会映射到该任务目标文件夹中的某个文件，使用 `Outputs` 属性中的转换可指定该文件。 如果 `BuiltAssemblies` 项列表中的某个文件发生更改，则 `Copy` 任务会仅针对已更改的文件运行，并跳过所有其他文件。 有关依赖项分析和如何使用转换的详细信息，请参阅[如何：增量生成](../msbuild/how-to-build-incrementally.md)。
 
@@ -64,7 +68,8 @@ ms.locfileid: "75593767"
 ## <a name="example"></a>示例
 
 ### <a name="description"></a>描述
- 以下示例演示使用转换的 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 项目文件。 此示例假定 c:\sub0\sub1\sub2\sub3  目录中只存在一个 .xsd  文件，工作目录为 c:\sub0  。
+
+ 以下示例演示使用转换的 MSBuild 项目文件。 此示例假定 c:\sub0\sub1\sub2\sub3  目录中只存在一个 .xsd  文件，工作目录为 c:\sub0  。
 
 ### <a name="code"></a>代码
 
@@ -88,6 +93,7 @@ ms.locfileid: "75593767"
 ```
 
 ### <a name="comments"></a>注释
+
  该示例产生下面的输出：
 
 ```
@@ -102,6 +108,7 @@ extension: .xsd
 ```
 
 ## <a name="see-also"></a>请参阅
+
 - [MSBuild 概念](../msbuild/msbuild-concepts.md)
 - [MSBuild 参考](../msbuild/msbuild-reference.md)
 - [如何：增量生成](../msbuild/how-to-build-incrementally.md)
