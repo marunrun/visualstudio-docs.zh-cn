@@ -15,22 +15,22 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d050aa095868e229887e4928285d746e1b5906a5
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 13c0731781efec98a117c11a7172645c46028af3
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75593871"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633156"
 ---
 # <a name="msbuild-task-reference"></a>MSBuild 任务参考
 
-任务提供在生成过程中运行的代码。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 提供以下列表中的任务。 安装 [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] 时，可使用其他任务来生成 [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] 项目。 有关详细信息，请参阅 [C++ 任务](../msbuild/msbuild-tasks-specific-to-visual-cpp.md)。
+任务提供在生成过程中运行的代码。 MSBuild 提供以下列表中的任务。 安装 C++ 工作负载时，可使用其他任务来生成 C++ 项目。 有关详细信息，请参阅 [C++ 任务](../msbuild/msbuild-tasks-specific-to-visual-cpp.md)。
 
 除了此部分各主题中列出的参数外，每项任务还有下列参数：
 
 | 参数 | 描述 |
 |-------------------| - |
-| `Condition` | 可选 `String` 参数。<br /><br /> [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 引擎使用 `Boolean` 表达式来确定是否执行此任务。 有关 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 支持的条件的信息，请参阅[条件](../msbuild/msbuild-conditions.md)。 |
+| `Condition` | 可选 `String` 参数。<br /><br /> MSBuild 引擎使用 `Boolean` 表达式来确定是否执行此任务。 有关 MSBuild 支持的条件的信息，请参阅[条件](../msbuild/msbuild-conditions.md)。 |
 | `ContinueOnError` | 可选参数。 可以包含下列值之一：<br /><br /> -   **WarnAndContinue** 或 **true**。 当任务失败时，[Target](../msbuild/target-element-msbuild.md) 元素中的后续任务和生成将继续执行，并且来自该任务的所有错误都被视为警告。<br />-   **ErrorAndContinue**。 当任务失败时，`Target` 元素中的后续任务和生成将继续执行，并且来自该任务的所有错误都被视为错误。<br />-   **ErrorAndStop** 或 **false**（默认值）。 当任务失败时，将不会执行 `Target` 元素中的剩余任务和生成，并且整个 `Target` 元素和生成都被视为已失败。<br /><br /> 4\.5 之前的 .NET Framework 版本仅支持 `true` 和 `false` 值。<br /><br /> 有关详细信息，请参阅[如何：忽略任务中的错误](../msbuild/how-to-ignore-errors-in-tasks.md)。 |
 
 ## <a name="in-this-section"></a>本节内容
@@ -85,7 +85,7 @@ ms.locfileid: "75593871"
 
 - [CreateCSharpManifestResourceName 任务](../msbuild/createcsharpmanifestresourcename-task.md)
 
- 根据给定的 .resx 文件名或其他资源创建 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 样式的清单名称  。
+ 根据给定的 .resx  文件名或其他资源创建 C# 样式的清单名称。
 
 - [CreateItem 任务](../msbuild/createitem-task.md)
 
@@ -97,7 +97,7 @@ ms.locfileid: "75593871"
 
 - [CreateVisualBasicManifestResourceName 任务](../msbuild/createvisualbasicmanifestresourcename-task.md)
 
- 根据给定的 .resx 文件名或其他资源创建 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 样式的清单名称  。
+ 根据给定的 .resx  文件名或其他资源创建 Visual Basic 样式的清单名称。
 
 - [Csc 任务](../msbuild/csc-task.md)
 
@@ -141,7 +141,7 @@ ms.locfileid: "75593871"
 
 - [GenerateApplicationManifest 任务](../msbuild/generateapplicationmanifest-task.md)
 
- 生成 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序清单或本机清单。
+ 生成 ClickOnce 应用程序清单或本机清单。
 
 - [GenerateBootstrapper 任务](../msbuild/generatebootstrapper-task.md)
 
@@ -149,7 +149,7 @@ ms.locfileid: "75593871"
 
 - [GenerateDeploymentManifest 任务](../msbuild/generatedeploymentmanifest-task.md)
 
- 生成 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 部署清单。
+ 生成 ClickOnce 部署清单。
 
 - [GenerateResource 任务](../msbuild/generateresource-task.md)
 
@@ -173,7 +173,7 @@ ms.locfileid: "75593871"
 
 - [GetFrameworkSdkPath 任务](../msbuild/getframeworksdkpath-task.md)
 
- 检索 [!INCLUDE[winsdklong](../deployment/includes/winsdklong_md.md)] 的路径。
+ 检索 Windows 软件开发工具包 (SDK) 的路径。
 
 - [GetReferenceAssemblyPaths 任务](../msbuild/getreferenceassemblypaths-task.md)
 
@@ -197,7 +197,7 @@ ms.locfileid: "75593871"
 
 - [MSBuild 任务](../msbuild/msbuild-task.md)
 
- 从另一 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 项目生成 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 项目。
+ 从其他 MSBuild 项目生成 MSBuild 项目。
 
 - [ReadLinesFromFile 任务](../msbuild/readlinesfromfile-task.md)
 

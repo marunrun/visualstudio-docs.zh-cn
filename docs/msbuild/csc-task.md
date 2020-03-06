@@ -18,17 +18,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7443ba29a743f4936ae104d9d0bb556fae3c4e2d
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 3c88e5aaef9262d320cdf61564078246dee46b10
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75595379"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634261"
 ---
 # <a name="csc-task"></a>Csc 任务
+
 包装 csc.exe，生成可执行 (.exe) 文件、动态链接库（.dll 文件）或者代码模块（.netmodule 文件）     。 有关 csc.exe 的详细信息，请参阅 [C# 编译器选项](/dotnet/csharp/language-reference/compiler-options/index)  。
 
 ## <a name="parameters"></a>参数
+
 下表描述了 `Csc` 任务的参数。
 
 | 参数 | 描述 |
@@ -65,13 +67,13 @@ ms.locfileid: "75595379"
 | `OutputRefAssembly` | 可选 `String` 参数。<br /><br /> 指定输出引用程序集文件的名称。 有关详细信息，请参阅 [-refout （C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/refout-compiler-option)。 |
 | `PdbFile` | 可选 `String` 参数。<br /><br /> 指定调试信息文件名。 默认名称是扩展名为 .pdb 的输出文件名。  |
 | `Platform` | 可选 `String` 参数。<br /><br /> 指定将作为输出文件目标的处理器平台。 此参数可以具有 `x86`、`x64` 或 `anycpu` 的值。 默认值为 `anycpu`。 有关详细信息，请参阅 [-platform（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/platform-compiler-option)。 |
-| `References` | 可选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 促使该任务将公共类型信息从指定项导入到当前项目中。 有关详细信息，请参阅 [-reference（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/reference-compiler-option)。<br /><br /> 你可以通过将元数据 `Aliases` 添加到原始的“参考”项，在 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 文件中指定 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 引用别名。 例如，在以下 Csc 命令行中设置别名“LS1”：<br /><br /> `CSC /r:LS1=MyCodeLibrary.dll /r:LS2=MyCodeLibrary2.dll *.cs`<br /><br /> 将使用：<br /><br /> `<Reference Include="MyCodeLibrary"> <Aliases>LS1</Aliases> </Reference>` |
+| `References` | 可选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 促使该任务将公共类型信息从指定项导入到当前项目中。 有关详细信息，请参阅 [-reference（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/reference-compiler-option)。<br /><br /> 可以通过将元数据 `Aliases` 添加到原始的“参考”项，在 MSBuild 文件中指定 C# 引用别名。 例如，在以下 Csc 命令行中设置别名“LS1”：<br /><br /> `CSC /r:LS1=MyCodeLibrary.dll /r:LS2=MyCodeLibrary2.dll *.cs`<br /><br /> 将使用：<br /><br /> `<Reference Include="MyCodeLibrary"> <Aliases>LS1</Aliases> </Reference>` |
 | `Resources` | 可选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 将 .NET Framework 资源嵌入到输出文件。<br /><br /> 传递到此参数的项可以具有名为 `LogicalName` 和 `Access` 的可选元数据条目。 `LogicalName` 对应于 `/resource` 开关的 `identifier` 参数，`Access` 对应于 `accessibility-modifier` 参数。 有关详细信息，请参阅 [-resource（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/resource-compiler-option)。 |
 | `ResponseFiles` | 可选 `String` 参数。<br /><br /> 指定包含此任务命令的响应文件。 有关详细信息，请参阅 [@（指定响应文件）](/dotnet/csharp/language-reference/compiler-options/response-file-compiler-option)。 |
-| `Sources` | 可选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 指定一个或多个 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 源文件。 |
+| `Sources` | 可选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 指定一个或多个 C# 源文件。 |
 | `TargetType` | 可选 `String` 参数。<br /><br /> 指定输出文件的文件格式。 此参数可以具有 `library` 或 `winexe` 的值，前者将创建代码库 `exe`，代码库将创建控制台应用程序 `module`，应用程序将创建一个模块，后者将创建 Windows 程序。 默认值为 `library`。 有关详细信息，请参阅 [-target（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/target-compiler-option)。 |
 | `TreatWarningsAsErrors` | 可选 `Boolean` 参数。<br /><br /> 如果为 `true`，则将所有警告视为错误。 有关详细信息，请参阅 [-warnaserror（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/warnaserror-compiler-option)。 |
-| `UseHostCompilerIfAvailable` | 可选 `Boolean` 参数。<br /><br /> 指示该任务使用进程内编译器对象（如果可用）。 仅由 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 使用。 |
+| `UseHostCompilerIfAvailable` | 可选 `Boolean` 参数。<br /><br /> 指示该任务使用进程内编译器对象（如果可用）。 仅由 Visual Studio 使用。 |
 | `Utf8Output` | 可选 `Boolean` 参数。<br /><br /> 记录使用 UTF-8 编码的编译器输出。 有关详细信息，请参阅 [-utf8output（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/utf8output-compiler-option)。 |
 | `WarningLevel` | 可选 `Int32` 参数。<br /><br /> 指定编译器显示的警告级别。 有关详细信息，请参阅 [-warn（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/warn-compiler-option)。 |
 | `WarningsAsErrors` | 可选 `String` 参数。<br /><br /> 指定将被视为错误的警告的列表。 有关详细信息，请参阅 [-warnaserror（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/warnaserror-compiler-option)。<br /><br /> 此参数替代 `TreatWarningsAsErrors` 参数。 |
@@ -81,9 +83,11 @@ ms.locfileid: "75595379"
 | `Win32Resource` | 可选 `String` 参数。<br /><br /> 在输出文件中插入 Win32 资源 (.res) 文件  。 有关详细信息，请参阅 [-win32res（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/win32res-compiler-option)。 |
 
 ## <a name="remarks"></a>备注
+
 除上面列出的参数外，此任务还从 `Microsoft.Build.Tasks.ManagedCompiler` 类继承参数，该类继承自 <xref:Microsoft.Build.Tasks.ToolTaskExtension> 类（它自身继承自 <xref:Microsoft.Build.Utilities.ToolTask> 类）。 有关这些其他参数的列表及其说明，请参阅 [ToolTaskExtension 基类](../msbuild/tooltaskextension-base-class.md)。
 
 ## <a name="example"></a>示例
+
 以下示例使用 `Csc` 任务来编译 `Compile` 项集合的源文件中的可执行文件。
 
 ```xml
@@ -94,5 +98,6 @@ ms.locfileid: "75595379"
 ```
 
 ## <a name="see-also"></a>请参阅
+
 - [任务参考](../msbuild/msbuild-task-reference.md)
 - [任务](../msbuild/msbuild-tasks.md)

@@ -15,12 +15,12 @@ dev_langs:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 6e4bb97cc510ceb580b28a05eb6f3b27acdd451a
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.openlocfilehash: 528887c477814b7011cf941a9198f83701beee54
+ms.sourcegitcommit: 2f6c6434419ac25ef166b1ccc409527cf69e6674
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77580011"
+ms.lasthandoff: 03/02/2020
+ms.locfileid: "78215437"
 ---
 # <a name="tutorial-create-a-simple-c-console-app-in-visual-studio"></a>教程：在 Visual Studio 中创建一个简单的 C# 控制台应用程序
 
@@ -46,32 +46,32 @@ ms.locfileid: "77580011"
 
 1. 打开 Visual Studio 2017。
 
-2. 从顶部菜单栏中选择“文件” > “新建” > “项目”。
-   （或者，按 Ctrl+Shift+N）。
+2. 从顶部菜单栏中选择“文件”   > “新建”   > “项目”  。
+   （或者，按 Ctrl+Shift+N）    。
 
-3. 在“新建项目”对话框的左侧窗格中，展开“C#”，然后选择“.NET Core”。 在中间窗格中，选择“控制台应用(.NET Core)”。 然后，将文件命名为“计算器”。
+3. 在“新建项目”对话框的左侧窗格中，展开“C#”，然后选择“.NET Core”    。 在中间窗格中，选择“控制台应用(.NET Core)”  。 然后，将文件命名为“计算器”。
 
    ![Visual Studio IDE 中“新建项目”对话框中的控制台应用 (.NET Core) 项目模板](./media/new-project-csharp-calculator-console-app.png)
 
 ### <a name="add-a-workload-optional"></a>添加工作负载（可选）
 
-如果未显示“控制台应用(.NET Core)”项目模板，可通过添加“.NET Core 跨平台开发”工作负载获取它。 操作方法如下。
+如果未显示“控制台应用(.NET Core)”  项目模板，可通过添加“.NET Core 跨平台开发”  工作负载获取它。 操作方法如下。
 
 #### <a name="option-1-use-the-new-project-dialog-box"></a>选项 1：使用“新建项目”对话框
 
-1. 选择“新建项目”对话框左侧窗格中的“打开 Visual Studio 安装程序”链接。
+1. 选择“新建项目”  对话框左侧窗格中的“打开 Visual Studio 安装程序”  链接。
 
    ![选择“新建项目”对话框中的“打开 Visual Studio 安装程序”链接](./media/csharp-open-visual-studio-installer-generic-dark.png)
 
-1. Visual Studio 安装程序启动。 选择“.NET Core 跨平台开发”工作负载，然后选择“修改”。
+1. Visual Studio 安装程序启动。 选择“.NET Core 跨平台开发”工作负载，然后选择“修改”   。
 
    ![Visual Studio 安装程序中的 .NET Core 跨平台开发工作负荷](./media/dot-net-core-xplat-dev-workload.png)
 
 #### <a name="option-2-use-the-tools-menu-bar"></a>选项 2：使用“工具”菜单栏
 
-1. 取消“新建项目”对话框，再从顶部菜单栏中选择“工具”>“获取工具和功能”。
+1. 取消“新建项目”对话框，再从顶部菜单栏中选择“工具”>“获取工具和功能”    。
 
-1. Visual Studio 安装程序启动。 选择“.NET Core 跨平台开发”工作负载，然后选择“修改”。
+1. Visual Studio 安装程序启动。 选择“.NET Core 跨平台开发”工作负载，然后选择“修改”   。
 
 ::: moniker-end
 
@@ -79,28 +79,28 @@ ms.locfileid: "77580011"
 
 1. 打开 Visual Studio 2019。
 
-1. 在“开始”窗口上，选择“创建新项目”。
+1. 在“开始”窗口上，选择“创建新项目”  。
 
    ![查看“创建新项目”窗口](../../get-started/media/vs-2019/create-new-project-dark-theme.png)
 
-1. 在“创建新项目”窗口的搜索框中输入或键入“控制台”。 接下来，从“语言”列表中选择 C#，然后从“平台”列表中选择 Windows。 
+1. 在“创建新项目”窗口的搜索框中输入或键入“控制台”   。 接下来，从“语言”列表中选择 C#，然后从“平台”列表中选择 Windows   。 
 
-   应用语言和平台筛选器之后，选择“控制台应用(.NET Core)”模板，然后选择“下一步”。
+   应用语言和平台筛选器之后，选择“控制台应用(.NET Core)”模板，然后选择“下一步”   。
 
    ![为“控制台应用(.NET Framework)”选择 C# 模板](./media/vs-2019/csharp-create-new-project-search-console-net-core-filtered.png)
 
    > [!NOTE]
-   > 如果未看到“控制台应用(.NET Core)”模板，则可以通过“创建新项目”窗口安装该模板。 在“找不到所需内容?”消息中，选择“安装更多工具和功能”链接。
+   > 如果未看到“控制台应用(.NET Core)”模板，则可以通过“创建新项目”窗口安装该模板   。 在“找不到所需内容?”消息中，选择“安装更多工具和功能”链接   。
    >
    > ![“创建新项目”窗口内“找不到所需内容”消息中的“安装更多工具和功能”链接](../../get-started/media/vs-2019/not-finding-what-looking-for.png) 
    > 
-   > 然后，在 Visual Studio 安装程序中，选择“.NET Core 跨平台开发”工作负载。
+   > 然后，在 Visual Studio 安装程序中，选择“.NET Core 跨平台开发”工作负载  。
    >
    > ![Visual Studio 安装程序中的 .NET Core 跨平台开发工作负荷](./media/dot-net-core-xplat-dev-workload.png)
    >
-   > 之后，在 Visual Studio 安装程序中选择“修改”按钮。 系统可能会提示你保存所有内容；如果出现提示，请按照指示进行操作。 接下来，选择“继续”，以安装工作负载。 然后，返回到“[创建项目](#create-a-project)”过程中的步骤 2。
+   > 之后，在 Visual Studio 安装程序中选择“修改”按钮  。 系统可能会提示你保存所有内容；如果出现提示，请按照指示进行操作。 接下来，选择“继续”，以安装工作负载  。 然后，返回到“[创建项目](#create-a-project)”过程中的步骤 2。
 
-1. 在“配置新项目”窗口中，在“项目名称”框中键入或输入“Calculator”。 然后，选择“创建”。
+1. 在“配置新项目”窗口中，在“项目名称”框中键入或输入“Calculator”    。 然后，选择“创建”  。
 
    ![在“配置新项目”窗口中，将项目命名为“Calculator”](./media/vs-2019/csharp-name-your-calculator-project.png)
 
@@ -139,15 +139,15 @@ ms.locfileid: "77580011"
 
     ![显示 Visual Studio IDE 中 IntelliSense 自动完成功能的整数数学运算代码动画](./media/integer-math-intellisense.gif)
 
-1. 选择“计算器”旁的绿色“开始”按钮以生成并运行程序，或按“F5”。
+1. 选择“计算器”  旁的绿色“开始”  按钮以生成并运行程序，或按“F5”  。
 
    ![选择工具栏中的“计算器”按钮以运行应用程序](./media/csharp-console-calculator-button.png)
 
-   随即会打开控制台窗口，显示 42 + 119 的总和，即 161。
+   随即会打开控制台窗口，显示 42 + 119 的总和，即 161  。
 
     ![显示整数数学运算的结果的控制台窗口](./media/csharp-console-integer-math.png)
 
-1. （可选）可以更改运算符来更改结果。 例如，可以将 `int c = a + b;` 代码行中的 `+` 运算符更改为 `-` 进行减法运算，更改为 `*` 进行乘法运算，或更改为 `/` 进行除法运算。 然后，运行该程序时，结果也会改变。
+1. （可选）  可以更改运算符来更改结果。 例如，可以将 `int c = a + b;` 代码行中的 `+` 运算符更改为 `-` 进行减法运算，更改为 `*` 进行乘法运算，或更改为 `/` 进行除法运算。 然后，运行该程序时，结果也会改变。
 
 1. 关闭控制台窗口。
 
@@ -215,13 +215,13 @@ ms.locfileid: "77580011"
     }
     ```
 
-1. 选择“计算器”或按“F5”，以运行程序。
+1. 选择“计算器”  或按“F5”  ，以运行程序。
 
    ![选择工具栏中的“计算器”按钮以运行应用程序](./media/csharp-console-calculator-button.png)
 
    控制台窗口即会打开。
 
-1. 在控制台窗口中，查看应用，然后按照提示添加数字 42 和 119。
+1. 在控制台窗口中，查看应用，然后按照提示添加数字 42 和 119   。
 
    应用应如以下屏幕快照所示：
 
@@ -241,15 +241,15 @@ ms.locfileid: "77580011"
 
 现在来修正代码，使其能够处理小数。
 
-1. 按 Ctrl + F，以打开“查找和替换”控件。
+1. 按 Ctrl   + F  ，以打开“查找和替换”  控件。
 
 1. 将 `int` 变量的每个实例更改为 `float`。
 
-   请确保在“查找和替换”控件中切换“大小写匹配”(Alt+C) 和“全字匹配”(Alt+W)。
+   请确保在“查找和替换”控件中切换“大小写匹配”(Alt+C) 和“全字匹配”(Alt+W)        。
 
     ![展示如何将 int 变量更改为 float 的“查找和替换”控件动画](./media/find-replace-control-animation.gif)
 
-1. 再次运行计算器应用，用数字 42 除以数字 119。
+1. 再次运行计算器应用，用数字 42 除以数字 119   。
 
    注意，应用现在返回的是带小数的数字，而不是零。
 
@@ -257,9 +257,9 @@ ms.locfileid: "77580011"
 
 但是，应用现在只是能够生成带小数的结果。 让我们对代码做一些调整，以便应用可以计算小数。
 
-1. 使用“查找和替换”控件 (Ctrl + F) 将 `float` 变量的每个实例都更改为 `double`，并将 `Convert.ToInt32` 方法的每个实例都更改为 `Convert.ToDouble`。
+1. 使用“查找和替换”  控件 (Ctrl   + F  ) 将 `float` 变量的每个实例都更改为 `double`，并将 `Convert.ToInt32` 方法的每个实例都更改为 `Convert.ToDouble`。
 
-1. 运行计算器应用，用数字 42.5 除数字 119.75。
+1. 运行计算器应用，用数字 42.5 除数字 119.75   。
 
    注意，应用现在能够接受小数值，并返回具有更多小数位的数值。
 
@@ -329,15 +329,15 @@ ms.locfileid: "77580011"
 
 让我们开始吧。
 
-1. 删除下列代码块*之后*的所有内容：
+1. 删除 `Calculator` 命名空间左大括号和右大括号之间的所有内容：
 
     ```csharp
-
     using System;
 
     namespace Calculator
     {
-
+        
+    }
     ```
 
 1. 接下来，添加新的 `Calculator` 类，如下所示：
@@ -456,9 +456,9 @@ ms.locfileid: "77580011"
     }
     ```
 
-1. 选择“计算器”或按“F5”，以运行程序。
+1. 选择“计算器”  或按“F5”  ，以运行程序。
 
-1. 按照提示，用数字 42 除以数字 119。 应用应如以下屏幕快照所示：
+1. 按照提示，用数字 42 除以数字 119   。 应用应如以下屏幕快照所示：
 
     ![“控制台”窗口显示重构后的“计算器”应用，其中包括要执行的操作的相应提示和针对错误输入的错误处理措施](./media/csharp-console-calculator-refactored.png)
 
@@ -468,11 +468,11 @@ ms.locfileid: "77580011"
 
 1. 如果还没有这样做，请关闭计算器应用。
 
-1. 关闭 Visual Studio 中的输出窗格。
+1. 关闭 Visual Studio 中的输出  窗格。
 
    ![关闭 Visual Studio 中的输出窗格](./media/csharp-calculator-close-output-pane.png)
 
-1. 在 Visual Studio 中，按 Ctrl+S 保存应用。
+1. 在 Visual Studio 中，按 Ctrl+S 保存应用   。
 
 1. 关闭 Visual Studio。
 

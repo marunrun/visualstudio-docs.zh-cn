@@ -18,17 +18,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - aspnet
-ms.openlocfilehash: a6535dbec7c09f0888d0fb29a2e6b801632da22f
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 8707371fac876586d38f12a797aaee7228b5f729
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75593455"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634573"
 ---
 # <a name="aspnetcompiler-task"></a>AspNetCompiler 任务
-`AspNetCompiler` 任务包装 aspnet_compiler.exe，后者是用于预编译 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 应用程序的实用工具  。
+
+`AspNetCompiler` 任务包装 aspnet_compiler.exe  ，它是预编译 ASP.NET 应用程序的实用工具。
 
 ## <a name="task-parameters"></a>任务参数
+
 下表描述了 `AspNetCompiler` 任务的参数。
 
 |参数|描述|
@@ -49,10 +51,12 @@ ms.locfileid: "75593455"
 |`VirtualPath`|可选 `String` 参数。<br /><br /> 要编译的应用程序的虚拟路径。 如果指定 `PhysicalPath`，则物理路径将用于查找应用程序。 否则，将使用 IIS 元数据库，并假定应用程序位于默认站点中。 此参数对应于 aspnet_compiler.exe 上的 -v 开关   。|
 
 ## <a name="remarks"></a>备注
+
 除上面列出的参数外，此任务还从 <xref:Microsoft.Build.Tasks.ToolTaskExtension> 类继承参数，后者自身继承自 <xref:Microsoft.Build.Utilities.ToolTask> 类。 有关这些其他参数的列表及其说明，请参阅 [ToolTaskExtension 基类](../msbuild/tooltaskextension-base-class.md)。
 
 ## <a name="example"></a>示例
-以下代码示例使用 `AspNetCompiler` 任务预编译 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 应用程序。
+
+以下代码示例使用 `AspNetCompiler` 任务预编译 ASP.NET 应用程序。
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -69,5 +73,6 @@ ms.locfileid: "75593455"
 ```
 
 ## <a name="see-also"></a>请参阅
+
 * [任务](../msbuild/msbuild-tasks.md)
 * [任务参考](../msbuild/msbuild-task-reference.md)

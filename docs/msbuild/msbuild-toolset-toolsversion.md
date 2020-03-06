@@ -13,18 +13,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4af4816440c2eb285a0f30db50e18108ce79265f
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: b6aaa6309e04f5143b70ff233c0b621ab2350b9c
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75593802"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633117"
 ---
 # <a name="msbuild-toolset-toolsversion"></a>MSBuild 工具集 (ToolsVersion)
 
 MSBuild 使用任务、目标和工具的工具集以生成应用程序。 通常，MSBuild 工具集包括 microsoft.common.tasks  文件、microsoft.common.targets  文件以及编译器（如 csc.exe  和 vbc.exe  ）。 大多数工具集可用于将应用程序编译为多个版本的 .NET Framework 以及多个系统平台。 但 MSBuild 2.0 工具集仅可用于面向 .NET Framework 2.0。
 
 ## <a name="toolsversion-attribute"></a>ToolsVersion 特性
+
 ::: moniker range=">=vs-2019"
  在项目文件中 [Project](../msbuild/project-element-msbuild.md) 元素的 `ToolsVersion` 属性中指定工具集。 下面的示例指定应使用 MSBuild“Current”工具集来生成项目。
 

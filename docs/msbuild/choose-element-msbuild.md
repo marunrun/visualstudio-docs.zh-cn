@@ -19,14 +19,15 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 966e942fbd32841bbfe0a429c8623da09dcbbd0f
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: c4f699b4ffc9372af0c803d094390544932d652b
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75593364"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634469"
 ---
 # <a name="choose-element-msbuild"></a>Choose 元素 (MSBuild)
+
 评估子元素，选择一组 `ItemGroup` 元素和/或 `PropertyGroup` 元素进行评估。
 
  \<Project> \<Choose> \<When> \<Choose> ...\<Otherwise> \<Choose> ...
@@ -41,9 +42,11 @@ ms.locfileid: "75593364"
 ```
 
 ## <a name="attributes-and-elements"></a>特性和元素
+
  下列各节描述了特性、子元素和父元素。
 
 ### <a name="attributes"></a>特性
+
  无。
 
 ### <a name="child-elements"></a>子元素
@@ -58,13 +61,15 @@ ms.locfileid: "75593364"
 | 元素 | 描述 |
 | - | - |
 | [Otherwise](../msbuild/otherwise-element-msbuild.md) | 当所有 `When` 元素的条件的计算结果为 `false` 时，指定要执行的代码块。 |
-| [Project](../msbuild/project-element-msbuild.md) | [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 项目文件必需的根元素。 |
+| [Project](../msbuild/project-element-msbuild.md) | MSBuild 项目文件必需的根元素。 |
 | [When](../msbuild/when-element-msbuild.md) | 指定一个可能的代码块供 `Choose` 元素选择。 |
 
 ## <a name="remarks"></a>备注
+
  `Choose`、`When` 和 `Otherwise` 元素一起用来提供一种方式，通过这种方式选择代码的一部分来执行许多种可能的替代选择。 有关详细信息，请参阅[条件构造](../msbuild/msbuild-conditional-constructs.md)。
 
 ## <a name="example"></a>示例
+
  以下项目使用 `Choose` 元素来选择要在 `When` 元素中设置的属性值组。 如果两个 `When` 元素的 `Condition` 属性的计算结果均为 `false`，则将设置 `Otherwise` 元素中的属性值。
 
 ```xml
@@ -113,5 +118,6 @@ ms.locfileid: "75593364"
 ```
 
 ## <a name="see-also"></a>请参阅
+
 - [条件构造](../msbuild/msbuild-conditional-constructs.md)
 - [项目文件架构参考](../msbuild/msbuild-project-file-schema-reference.md)

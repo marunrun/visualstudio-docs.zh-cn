@@ -16,15 +16,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9576bdf06593ae3cde3bc29e2585a7ab475671a3
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 2e69e5c8fc7404c0c313774271fd07b6315e5270
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75566613"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633364"
 ---
 # <a name="msbuild-conditions"></a>MSBuild 条件
-[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 支持一组特定的条件，只要允许使用 `Condition` 属性，便应用这些条件。 下表对这些条件进行了说明。
+
+MSBuild 支持一组特定的条件，只要允许使用 `Condition` 属性，便应用这些条件。 下表对这些条件进行了说明。
 
 |条件|描述|
 |---------------|-----------------|
@@ -40,6 +41,7 @@ ms.locfileid: "75566613"
 |$if$ ( %expression% ), $else$, $endif$|检查指定的 `%expression%` 是否与传递的自定义模板参数的字符串值相匹配。 如果 `$if$` 条件计算结果为 `true`，则其语句处于运行状态；否则，检查 `$else$` 条件。 如果 `$else$` 条件为 `true`，则其语句为运行状态；否则，`$endif$` 条件将结束表达式求值。<br /><br /> 有关用法的示例，请参阅 [Visual Studio Project/Item Template Parameter Logic](https://stackoverflow.com/questions/6709057/visual-studio-project-item-template-parameter-logic)（Visual Studio 项目/项模板参数逻辑）。|
 
 ## <a name="see-also"></a>请参阅
+
 - [MSBuild 参考](../msbuild/msbuild-reference.md)
 - [条件构造](../msbuild/msbuild-conditional-constructs.md)
 - [演练：从头创建 MSBuild 项目文件](../msbuild/walkthrough-creating-an-msbuild-project-file-from-scratch.md)

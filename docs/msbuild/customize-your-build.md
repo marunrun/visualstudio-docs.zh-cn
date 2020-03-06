@@ -11,12 +11,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4f1b0e774d70c5787a7221aa0dfa7b0834dac7e3
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: e7ddf87f5fa9f937c0272e37f3a6b4aba29f2d6c
+ms.sourcegitcommit: a80489d216c4316fde2579a0a2d7fdb54478abdf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75588286"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77652789"
 ---
 # <a name="customize-your-build"></a>自定义生成
 
@@ -188,6 +188,72 @@ $(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\{TargetFileName}\ImportAfter\*.t
  </Target>
 </Project>
 ```
+
+## <a name="customize-all-net-builds"></a>自定义所有 .NET 生成
+
+维护生成服务器时，可能需要为服务器上的所有生成全局配置 MSBuild 设置。  原则上，可以修改全局 Microsoft.Common.Targets  或 Microsoft.Common.Props  文件，但有一种更好的方法。 可以通过使用特定的 MSBuild 属性并添加某些自定义 `.targets` 和 `.props` 文件，来影响特定项目类型的所有生成（如所有 C# 项目）。
+
+若要影响通过安装 MSBuild 或 Visual Studio 控制的所有 C# 或 Visual Basic 的生成，请创建 Custom.Before.Microsoft.Common.Targets  或 Custom.After.Microsoft.Common.Targets  文件（其目标将在 Microsoft.Common.targets  之前或之后运行），或创建 Custom.Before.Microsoft.Common.Props 或 Custom.After.Microsoft.Common.Props 文件    （将在 Microsoft.Common.props 之前或之后进行处理其属性）。
+
+可以使用以下 MSBuild 属性指定这些文件的位置：
+
+- CustomBeforeMicrosoftCommonProps
+- CustomBeforeMicrosoftCommonTargets
+- CustomAfterMicrosoftCommonProps
+- CustomAfterMicrosoftCommonTargets
+- CustomBeforeMicrosoftCSharpProps
+- CustomBeforeMicrosoftVisualBasicProps
+- CustomAfterMicrosoftCSharpProps
+- CustomAfterMicrosoftVisualBasicProps
+- CustomBeforeMicrosoftCSharpTargets
+- CustomBeforeMicrosoftVisualBasicTargets
+- CustomAfterMicrosoftCSharpTargets
+- CustomAfterMicrosoftVisualBasicTargets
+
+这些属性的通用  版本都会影响 C# 和 Visual Basic 项目。 可以在 MSBuild 命令行中设置这些属性。
+
+```cmd
+msbuild /p:CustomBeforeMicrosoftCommonTargets="C:\build\config\Custom.Before.Microsoft.Common.Targets" MyProject.csproj
+```
+
+可以针对不同的应用场景使用最适合的方法。 如果你有一个专用的生成服务器，并且需要确保特定目标始终在该服务器上执行的相应项目类型的所有生成上执行，则适合使用全局自定义 `.targets` 或 `.props` 文件。  如果需要让自定义目标仅在某些条件适用时执行，可使用其他文件位置，并（仅在需要时）通过在 MSBuild 命令行中设置相应的 MSBuild 属性设置该文件的路径。
+
+> [!WARNING]
+> 每当 Visual Studio 生成匹配类型的任何项目时，只要它能在 MSBuild 文件夹中找到自定义文件 `.targets` 或 `.props`，就能使用它们。 这可能会带来意想不到的后果，如果操作不正确，可能会导致 Visual Studio 无法在你的计算机上进行生成。
+
+## <a name="customize-all-c-builds"></a>自定义所有 C++ 生成
+
+对于 C++ 项目，会忽略前面提到的自定义 `.targets` 和 `.props` 文件。 对于 C++ 项目，可以为每个平台创建 `.targets` 文件，并将它们放置在这些平台的相应导入文件夹中。
+
+Win32 平台的 `.targets` 文件 (Microsoft.Cpp.Win32.targets  ) 包含以下 `Import` 元素：
+
+```xml
+<Import Project="$(VCTargetsPath)\Platforms\Win32\ImportBefore\*.targets"
+        Condition="Exists('$(VCTargetsPath)\Platforms\Win32\ImportBefore')"
+/>
+```
+
+同一文件的末尾附近有一个相似的元素：
+
+```xml
+<Import Project="$(VCTargetsPath)\Platforms\Win32\ImportAfter\*.targets"
+        Condition="Exists('$(VCTargetsPath)\Platforms\Win32\ImportAfter')"
+/>
+```
+
+*%ProgramFiles32%\MSBuild\Microsoft.Cpp\v{version}\Platforms\* 中的其他目标平台也存在类似的导入元素。
+
+根据平台将 `.targets` 文件放置到适当的文件夹中后，MSBuild 会将文件导入到该平台的每个 C++ 生成中。 如果需要，可以将多个 `.targets` 文件放在那里。
+
+### <a name="specify-a-custom-import-on-the-command-line"></a>在命令行上指定自定义导入
+
+对于要针对某个 C++ 项目的特定生成加入的自定义 `.targets`，请在命令行上设置 `ForceImportBeforeCppTargets` 和/或 `ForceImportAfterCppTargets` 属性。
+
+```cmd
+msbuild /p:ForceImportBeforeCppTargets="C:\build\config\Custom.Before.Microsoft.Cpp.Targets" MyCppProject.vcxproj
+```
+
+对于全局设置（例如，要影响生成服务器上某个平台的所有 C++ 生成），有两种方法。 首先，可以使用始终设置的系统环境变量来设置这些属性。 之所以可行，是因为 MSBuild 始终读取环境并为所有环境变量创建（或覆盖）属性。
 
 ## <a name="see-also"></a>请参阅
 

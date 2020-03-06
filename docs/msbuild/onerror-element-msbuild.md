@@ -18,14 +18,15 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b2ddf970225d96291f76935838a743ba358eff0f
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 18edfe06a4f2cb98fcb41e93c920b03c53daea8c
+ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75594872"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77633078"
 ---
 # <a name="onerror-element-msbuild"></a>OnError 元素 (MSBuild)
+
 对于某失败的任务，如果 `ContinueOnError` 属性为 `false`，则会出现一个或多个要执行的目标。
 
  \<Project> \<Target> \<OnError>
@@ -38,6 +39,7 @@ ms.locfileid: "75594872"
 ```
 
 ## <a name="attributes-and-elements"></a>特性和元素
+
  下列各节描述了特性、子元素和父元素。
 
 ### <a name="attributes"></a>特性
@@ -48,21 +50,24 @@ ms.locfileid: "75594872"
 |`ExecuteTargets`|必需的特性。<br /><br /> 任务失败时要执行的目标。 用分号分隔多个目标。 以指定顺序执行多个目标。|
 
 ### <a name="child-elements"></a>子元素
+
  无。
 
 ### <a name="parent-elements"></a>父元素
 
 | 元素 | 描述 |
 | - | - |
-| [Target](../msbuild/target-element-msbuild.md) | [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 任务的容器元素。 |
+| [Target](../msbuild/target-element-msbuild.md) | MSBuild 任务的容器元素。 |
 
 ## <a name="remarks"></a>备注
- 如果其中一个 `Target` 元素的任务失败并将 `ContinueOnError` 属性设置为 `ErrorAndStop`（或 `false`），则 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 执行 `OnError` 元素。 任务失败时，执行在 `ExecuteTargets` 属性中指定的目标。 如果目标中存在多个 `OnError` 元素，则在任务失败时将按顺序执行 `OnError` 元素。
+
+ MSBuild 执行 `OnError` 元素，前提是 `Target` 元素的一个任务失败且 `ContinueOnError` 属性设置为 `ErrorAndStop`（或 `false`）。 任务失败时，执行在 `ExecuteTargets` 属性中指定的目标。 如果目标中存在多个 `OnError` 元素，则在任务失败时将按顺序执行 `OnError` 元素。
 
  有关 `ContinueOnError` 属性的详细信息，请参阅 [Task 元素 (MSBuild)](../msbuild/task-element-msbuild.md)。 有关目标的信息，请参阅[目标](../msbuild/msbuild-targets.md)。
 
 ## <a name="example"></a>示例
- 以下代码执行 `TaskOne` 和 `TaskTwo` 任务。 如果 `TaskOne` 失败，[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 计算 `OnError` 元素并执行 `OtherTarget` 目标。
+
+ 以下代码执行 `TaskOne` 和 `TaskTwo` 任务。 如果 `TaskOne` 失败，MSBuild 计算 `OnError` 元素并执行 `OtherTarget` 目标。
 
 ```xml
 <Target Name="ThisTarget">
@@ -75,5 +80,6 @@ ms.locfileid: "75594872"
 ```
 
 ## <a name="see-also"></a>请参阅
+
 - [项目文件架构参考](../msbuild/msbuild-project-file-schema-reference.md)
 - [目标](../msbuild/msbuild-targets.md)
