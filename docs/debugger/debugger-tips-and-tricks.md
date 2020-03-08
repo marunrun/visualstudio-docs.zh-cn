@@ -15,11 +15,11 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: bf8d6df020694bb10fe4f3f051551056549d5673
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73188615"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78409349"
 ---
 # <a name="learn-productivity-tips-and-tricks-for-the-debugger-in-visual-studio"></a>了解 Visual Studio 调试器在工作效率方面的提示和技巧
 
@@ -102,7 +102,7 @@ ms.locfileid: "73188615"
 
 ![即时窗口](../debugger/media/dbg-tips-immediate-window.png "ImmediateWindow")
 
-此外，还可以在**监视**和**即时**窗口中使用[伪变量](../debugger/pseudovariables.md)，如 `$ReturnValue`。
+此外，还可以在[监视](../debugger/pseudovariables.md)和**即时**窗口中使用**伪变量**，如 `$ReturnValue`。
 
 ## <a name="string_visualizer"></a>检查可视化工具中的字符串
 
@@ -118,7 +118,7 @@ ms.locfileid: "73188615"
 
 ## <a name="break-into-code-on-handled-exceptions"></a>在已处理的异常处中断代码
 
-调试器在发生未经处理的异常时中断你的代码。 不过，处理的异常（如 `try/catch` 块内发生的异常）也可以是 bug 的源，并且你可能希望调查它们发生的时间。 您可以通过配置 "**异常设置**" 对话框中的选项，将调试器配置为中断已处理异常的代码。 通过选择 "**调试" > Windows > "异常设置**" 打开此对话框。
+调试器会在未经处理的异常处中断代码。 不过，处理的异常（如 `try/catch` 块内发生的异常）也可以是 bug 的源，并且你可能希望调查它们发生的时间。 您可以通过配置 "**异常设置**" 对话框中的选项，将调试器配置为中断已处理异常的代码。 通过选择 "**调试" > Windows > "异常设置**" 打开此对话框。
 
 通过**异常设置**对话框，你可以让调试器在特定异常处中断代码。 在下图中，调试器会在发生 `System.NullReferenceException` 时中断代码。 有关详细信息，请参阅[管理异常](../debugger/managing-exceptions-with-the-debugger.md)。
 
@@ -132,24 +132,24 @@ ms.locfileid: "73188615"
 
 1. 调试时，单击 "**在源中显示线程**" 按钮在**调试**工具栏中![显示源](../debugger/media/dbg-multithreaded-show-threads.png "ThreadMarker")中的线程。
 
-2. 查看窗口左侧的滚动条。 在此行上，可以看到一个*线程标记*图标![线程标记](../debugger/media/dbg-thread-marker.png "ThreadMarker")，该标记类似于两个抹布线程。 线程标记指示线程在此位置停止。
+2. 查看窗口左侧的滚动条槽。 在此行上，可以看到一个*线程标记*图标![线程标记](../debugger/media/dbg-thread-marker.png "ThreadMarker")，该标记类似于两个抹布线程。 线程标记指示线程在此位置停止。
 
     注意，线程标记可能被断点不完全遮挡。
 
-3. 将指针悬停在线程标记上。 屏幕上将显示数据提示。 数据提示将告诉你每个已停止线程的名称和线程 ID。
+3. 将指针悬停在线程标记上。 屏幕上显示数据提示。 数据提示将告诉您每个已停止线程的名称和线程 ID 号。
 
     您还可以在 "[并行堆栈" 窗口](../debugger/get-started-debugging-multithreaded-apps.md)中查看线程的位置。
 
 ::: moniker range="vs-2017"
 ## <a name="examine-payloads-for-web-services-and-network-resources-uwp"></a>检查 web 服务和网络资源（UWP）的负载
 
-在 UWP 应用中，可以使用 `Windows.Web.Http` API 分析执行的网络操作。 您可以使用此工具来帮助调试 web 服务和网络资源。 若要使用该工具，请选择 "**调试" > 性能探查器**"。 选择 "**网络**"，然后选择 "**启动**"。 在应用中，浏览使用 `Windows.Web.Http` 的应用场景，然后选择“停止收集”生成报表。
+在 UWP 应用中，可以使用 `Windows.Web.Http` API 分析执行的网络操作。 可以使用此工具来帮助调试 web 服务和网络资源。 若要使用该工具，请选择 "**调试" > 性能探查器**"。 选择 "**网络**"，然后选择 "**启动**"。 在应用中，浏览使用 `Windows.Web.Http` 的应用场景，然后选择“停止收集”生成报表。
 
 ![网络使用情况分析工具](../profiling/media/prof-tour-network-usage.png "NetworkUsageProfTool")
 
-在摘要视图中选择一个操作，查看更多详细信息。
+选择摘要视图中的操作以查看更多详细信息。
 
-![网络使用工具中的详细信息](../profiling/media/prof-tour-network-usage-details.png "DetailedViewNetworkUsage")
+![网络使用情况工具中的详细信息](../profiling/media/prof-tour-network-usage-details.png "DetailedViewNetworkUsage")
 
 有关详细信息，请参阅[网络使用情况](../profiling/network-usage.md)。
 ::: moniker-end
@@ -168,13 +168,13 @@ ms.locfileid: "73188615"
 
 了解如何调试器如何区分用户代码，请参阅[仅我的代码](../debugger/just-my-code.md)。 若要了解有关符号文件的详细信息，请参阅[在 Visual Studio 调试器中指定符号（.pdb）和源文件](specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)。
 
-## <a name="learn-more"></a>了解更多信息
+## <a name="learn-more"></a>了解详细信息
 
 有关其他提示和技巧以及更详细的信息，请参阅以下博客文章：
 
 - [使用 Visual Studio 调试时，7个简单的已知技巧](https://devblogs.microsoft.com/visualstudio/7-lesser-known-hacks-for-debugging-in-visual-studio/)
 - [Visual Studio 中 7 个隐藏的 gem](https://devblogs.microsoft.com/visualstudio/7-hidden-gems-in-visual-studio-2017/)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[键盘快捷键](../ide/productivity-shortcuts.md)
+[键盘快捷方式](../ide/productivity-shortcuts.md)
