@@ -19,11 +19,11 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 898eb0eb1489d83e97ec9f0a5b38b475bda0199d
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72450421"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78409378"
 ---
 # <a name="debug-dlls-in-visual-studio-c-c-visual-basic-f"></a>在 Visual Studio 中调试 dllC#（ C++、、Visual Basic F#、）
 
@@ -66,7 +66,7 @@ DLL （动态链接库） 是包含可被多个程序使用的代码和数据的
 
 ### <a name="vxtskdebuggingdllprojectsexternal"></a>设置 C/C++ DLL 文件位置
 
-若要调试外部 DLL，调用项目必须能够找到 dll、其[.pdb 文件](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)和 dll 所需的任何其他文件。 你可以创建自定义生成任务，将这些文件复制到 *\<project 文件夹 > \Debug* output 文件夹，也可以手动将文件复制到其中。
+若要调试外部 DLL，调用项目必须能够找到 dll、其[.pdb 文件](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)和 dll 所需的任何其他文件。 你可以创建自定义生成任务，将这些文件复制到 *\<项目文件夹 > \Debug* output 文件夹，也可以手动将文件复制到其中。
 
 对于 C/C++ 项目，可以在项目属性页中设置标头和 LIB 文件位置，而不必将其复制到输出文件夹。
 
@@ -90,13 +90,13 @@ DLL （动态链接库） 是包含可被多个程序使用的代码和数据的
 
 请确保在开始调试之前生成该 DLL 的调试版本。 若要调试 DLL，调用应用程序必须能够找到其 [.pdb 文件](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md) 和 DLL 要求的任何其他文件。
 
-你可以创建自定义生成任务，将 DLL 文件复制到 *\<calling 项目文件夹 > \Debug* output 文件夹，也可以手动将文件复制到其中。
+你可以创建自定义生成任务，将 DLL 文件复制到 *\<调用项目文件夹 > \Debug* output 文件夹，也可以手动将文件复制到其中。
 
 请确保调用位于正确位置的 DLL。 这似乎是理所当然的，但如果调用应用找到并加载其他不同的 DLL，调试器将永远不会命中你设置的断点。
 
 ## <a name="vxtskdebuggingdllprojectswaystodebugthedll"></a>调试 DLL
 
-无法直接运行 DLL。 它必须由应用程序调用，通常为 *.exe*文件。 有关详细信息，请参阅[Visual Studio 项目C++- ](/cpp/ide/creating-and-managing-visual-cpp-projects)。
+不能直接运行 DLL。 它必须由应用程序调用，通常为 *.exe*文件。 有关详细信息，请参阅[Visual Studio 项目C++- ](/cpp/ide/creating-and-managing-visual-cpp-projects)。
 
 若要调试 DLL，你可以[从调用应用开始调试](#vxtskdebuggingdllprojectsthecallingapplication)，或通过指定其调用应用[从 DLL 项目开始调试](how-to-debug-from-a-dll-project.md)。 此外可以使用调试器[即时窗口](#vxtskdebuggingdllprojectstheimmediatewindow)在设计时计算 DLL 函数或方法，而无需使用调用应用。
 
@@ -113,15 +113,15 @@ DLL （动态链接库） 是包含可被多个程序使用的代码和数据的
 
 从调用应用程序调试 DLL，你可以：
 
-- 打开调用应用程序的项目，然后通过选择 "**调试**"  >  "**开始调试**" 或按**F5**启动调试。
+- 打开调用应用程序的项目，然后通过选择 "**调试**" > "**开始调试**" 或按**F5**启动调试。
 
   或
 
-- 附加到已部署并在测试或生产计算机上运行的应用。 将此方法用于网站或 web 应用中的 Dll。 有关详细信息，请参阅[如何：附加到正在运行的进程](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)。
+- 附加到测试或生产计算机上已部署且正在运行的应用。 针对网站或 Web 应用中的 DLL 使用此方法。 有关详细信息，请参阅[如何：附加到正在运行的进程](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)。
 
 在开始调试调用应用程序之前，请在 DLL 中设置一个断点。 请参阅[使用断点](../debugger/using-breakpoints.md)。 DLL 断点命中时，可以单步跟踪代码，观察每个行的操作。 有关详细信息，请参阅[在调试器中浏览代码](../debugger/navigating-through-code-with-the-debugger.md)。
 
-在调试过程中，可以使用 "**模块**" 窗口验证应用程序加载的 dll 和 *.exe*文件。 若要在调试时打开 "**模块**" 窗口，请选择 "**调试**"  > **Windows**  > **模块**"。 有关详细信息，请参阅[如何：使用“模块”窗口](../debugger/how-to-use-the-modules-window.md)。
+在调试过程中，可以使用 "**模块**" 窗口验证应用程序加载的 dll 和 *.exe*文件。 若要在调试时打开 "**模块**" 窗口，请选择 "**调试**" > **Windows** > **模块**"。 有关详细信息，请参阅[如何：使用“模块”窗口](../debugger/how-to-use-the-modules-window.md)。
 
 ### <a name="vxtskdebuggingdllprojectstheimmediatewindow"></a>使用 "即时" 窗口
 
@@ -130,11 +130,11 @@ DLL （动态链接库） 是包含可被多个程序使用的代码和数据的
 >[!NOTE]
 >您可以在设计时使用 "**即时**" 窗口，其中包含大多数项目类型。 SQL、web 项目或脚本不支持此方法。
 
-例如，若要在 `Class1` 类中测试名为 `Test` 的方法:
+例如，若要在 `Test` 类中测试名为 `Class1` 的方法:
 
-1. 打开 DLL 项目， 通过选择**调试** > **窗口** > **即时**或按**Ctrl**+**Alt**+**I** 打开 **即时** 窗口。
+1. 打开 DLL 项目， 通过选择**调试**窗口 > 即时 > 或按**Ctrl**Alt+I+ 打开 **即时** 窗口。
 
-1. 在 **即时**窗口中键入以下 C# 代码并按**Enter**，以实例化`Class1`类型的对象。 此托管代码也适用于 C# 和 Visual Basic，只需进行合适的语法更改：
+1. 在 `Class1`即时**窗口中键入以下 C# 代码并按**Enter **，以实例化**类型的对象。 此托管代码也适用于 C# 和 Visual Basic，只需进行合适的语法更改：
 
    ```csharp
    Class1 obj = new Class1();
@@ -142,7 +142,7 @@ DLL （动态链接库） 是包含可被多个程序使用的代码和数据的
 
    在 C# 中，所有名称必须是全限定名称。 语言服务尝试计算表达式的值时，所有使用的方法或变量必须在当前作用域和上下文中。
 
-1. 假设 `Test` 带有一个 `int` 参数，使用 **即时** 窗口计算 `Test` ：
+1. 假设 `Test` 带有一个 `int` 参数，使用 `Test`即时**窗口计算** ：
 
    ```csharp
    ?obj.Test(10);
@@ -160,7 +160,7 @@ DLL （动态链接库） 是包含可被多个程序使用的代码和数据的
 
 你还可以从托管调用项目中调试本机 DLL。 有关详细信息，请参阅[如何调试托管代码和本机代码](how-to-debug-managed-and-native-code.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [调试托管代码](../debugger/debugging-managed-code.md)
 - [准备调试C++项目](../debugger/debugging-preparation-visual-cpp-project-types.md)
 - [C#、F# 和 Visual Basic 项目类型](../debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types.md)
