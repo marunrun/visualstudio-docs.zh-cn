@@ -20,11 +20,11 @@ manager: jillfra
 ms.workload:
 - data-storage
 ms.openlocfilehash: a79f7b781944bb93a60794e748eefb9375723384
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75586622"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78408746"
 ---
 # <a name="fill-datasets-by-using-tableadapters"></a>使用 Tableadapter 填充数据集
 
@@ -35,7 +35,7 @@ TableAdapter 组件根据指定的一个或多个查询或存储过程，使用�
 
 有关 TableAdapter 操作的详细信息，可以直接跳到以下主题之一：
 
-|主题|描述|
+|主题|说明|
 |-----------|-----------------|
 |[创建和配置 Tableadapter](../data-tools/create-and-configure-tableadapters.md)|如何使用设计器创建和配置 Tableadapter|
 |[创建参数化 TableAdapter 查询](../data-tools/create-parameterized-tableadapter-queries.md)|如何使用户能够为 TableAdapter 过程或查询提供参数|
@@ -89,7 +89,7 @@ TableAdapter 类不是 .NET 类型。 这意味着不能在文档或**对象浏�
 
 下面是 Tableadapter 的常用方法和属性：
 
-|成员|描述|
+|成员|说明|
 |------------|-----------------|
 |`TableAdapter.Fill`|用 TableAdapter 的 `SELECT` 命令的结果填充 TableAdapter 的关联数据表。|
 |`TableAdapter.Update`|将更改发送回数据库，并返回一个整数，该整数表示受更新影响的行数。 有关详细信息，请参阅[使用 TableAdapter 更新数据](../data-tools/update-data-by-using-a-tableadapter.md)。|
@@ -126,7 +126,7 @@ TableAdapterManager 类不是 .NET 类型。 因此，您不能在文档中查�
 
 下面是 `TableAdapterManager` 类的常用方法和属性：
 
-|成员|描述|
+|成员|说明|
 |------------|-----------------|
 |`UpdateAll` 方法|保存所有数据表中的所有数据。|
 |`BackUpDataSetBeforeUpdate` 属性|确定在执行 `TableAdapterManager.UpdateAll` 方法之前是否创建数据集的备份副本。变量.|

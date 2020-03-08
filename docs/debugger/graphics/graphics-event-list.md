@@ -11,11 +11,11 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: d5c4e8f39ff77779985536e53d98ddc2785b109b
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72911492"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78409320"
 ---
 # <a name="graphics-event-list"></a>图形事件列表
 使用 Visual Studio 图形分析器中的图形事件列表来浏览在呈现游戏或应用的帧时所记录的 Direct3D 事件。
@@ -32,10 +32,10 @@ ms.locfileid: "72911492"
 ### <a name="color-coded-events-in-direct3d-12"></a>Direct3D 12 中的着色事件
  Direct3D 12 公开多个对应于不同硬件功能的队列。 为帮助标识与 Direct3D 12 中特定图形事件关联的队列，当你使用 Direct3D 12 应用的捕获时，将根据事件的队列对事件列表中的事件进行着色。
 
-|Direct3D 12 队列|颜色|
+|Direct3D 12 队列|Color|
 |-----------------------|-----------|
 |呈现队列|绿色|
-|计算队列|黄色|
+|计算队列|Yellow|
 |复制队列|橙色|
 
  Direct3D 11 不公开多个队列，这样，因此在你使用 Direct3D 11 应用的捕获时不会再事件列表中对事件进行着色。
@@ -105,13 +105,13 @@ Visual Studio 2017 和更高版本包含 "**资源历史记录**" 窗口。  选
 
 此窗口允许您查看事件列表中选定项的历史记录。  顶部的下拉列表可用于选择其他项来查看的历史记录。  窗口的上半部分包含**框架安装事件**。  这些事件属于 "*创建*类型" 类别，是通常初始化和创建资源的调用。  窗口的下半部分包含 "**帧事件**" 部分。  这些是在资源使用期间发生的常规读写事件。
 
-| 列 | 描述 |
+| 列 | 说明 |
 |-----------| - |
-| **Type** | 显示条目的类型，通常为 "*创建*"、"*读取*" 和 "*写入*"。 |
+| 类型 | 显示条目的类型，通常为 "*创建*"、"*读取*" 和 "*写入*"。 |
 | **视图** | 显示当时某个资源的缩略图。  双击缩略图，以在该时间打开资源的详细信息视图。 |
-| **Event** | 显示生成事件的方法调用。  可以通过在相应的行中选择 "监视" 图标 ![手表 "图标](media/gfx_watch.png) 来查看单个项的任何其他历史记录。  此外，还可以选择在蓝色文本中绘制的任何项，如上面的屏幕截图中 `m_commandList`。 |
+| **事件** | 显示生成事件的方法调用。  可以通过在相应的行中选择 "监视" 图标 ![手表 "图标](media/gfx_watch.png) 来查看单个项的任何其他历史记录。  此外，还可以选择在蓝色文本中绘制的任何项，如上面的屏幕截图中 `m_commandList`。 |
 
 <!-- /VERSIONLESS -->
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [演练：因设备状态而缺少对象](walkthrough-missing-objects-due-to-device-state.md)
