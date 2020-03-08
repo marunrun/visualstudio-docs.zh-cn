@@ -9,11 +9,11 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 35136ac0b7b0104f1812df7a9bf8ba81f6907374
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71254426"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78408812"
 ---
 # <a name="build-actions"></a>生成操作
 
@@ -32,7 +32,7 @@ Visual Studio 项目中的所有文件都具有生成操作。 生成操作控�
 
 C# 和 Visual Basic 项目文件的一些更常见的生成操作如下所示：
 
-|生成操作 | 项目类型 | 说明 |
+|生成操作 | 项目类型 | 描述 |
 |-|-|
 | **AdditionalFiles** | C#, Visual Basic | 作为输入传递给 C# 或 Visual Basic 编译器的非源文本文件。 此生成操作主要用于向[分析器](../code-quality/roslyn-analyzers-overview.md)提供输入，项目引用这些分析器来验证代码质量。 有关详细信息，请参阅[使用其他文件](https://github.com/dotnet/roslyn/blob/master/docs/analyzers/Using%20Additional%20Files.md)。|
 | **ApplicationDefinition** | WPF | 定义应用程序的文件。 首次创建项目时，这是 App.xaml  。 |
