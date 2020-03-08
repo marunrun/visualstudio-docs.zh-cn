@@ -21,11 +21,11 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 8b413ce193e6761d515de5bc5ef30fae8e18a3a3
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73187514"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78409302"
 ---
 # <a name="remote-debugging-errors-and-troubleshooting"></a>远程调试错误和疑难解答
 
@@ -35,7 +35,7 @@ ms.locfileid: "73187514"
 
 - [错误：Microsoft Visual Studio 远程调试监视器 (MSVSMON.EXE) 似乎没有在远程计算机上运行。](error-remote-debugging-monitor-msvsmon-exe-does-not-appear-to-be-running.md)
 
-- [Unable to Connect to the Microsoft Visual Studio Remote Debugging Monitor](../debugger/unable-to-connect-to-the-microsoft-visual-studio-remote-debugging-monitor.md)
+- [无法连接到 Microsoft Visual Studio 远程调试监视器](../debugger/unable-to-connect-to-the-microsoft-visual-studio-remote-debugging-monitor.md)
 
 - [错误：远程计算机未显示在“远程连接”对话框中](../debugger/error-remote-machine-does-not-appear-in-a-remote-connections-dialog.md)
 
@@ -73,5 +73,5 @@ ms.locfileid: "73187514"
 
 如果你想要启动进程，并且你想要启动的进程**不**应是管理员，则**不**希望以管理员身份运行。
 
-## <a name="see-also"></a>请参阅
-- [Remote Debugging](../debugger/remote-debugging.md)
+## <a name="see-also"></a>另请参阅
+- [远程调试](../debugger/remote-debugging.md)

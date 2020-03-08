@@ -13,13 +13,13 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 7f4c490abbcd5b970c5bf9586ea881be4c5d62a4
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75849802"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78409512"
 ---
-# <a name="extend-uml-models-and-diagrams"></a>扩展 UML 模型和关系图
+# <a name="extend-uml-models-and-diagrams"></a>Extend UML models and diagrams
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 本主题汇总了扩展 Visual Studio 包含的 UML 建模工具可使用的不同方法。 若要查看支持每个模型类型和工具的 Visual Studio 版本，请参阅 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)。
@@ -118,5 +118,5 @@ ms.locfileid: "75849802"
 |**Blogs**|[Visual Studio ALM + Team Foundation Server 博客](https://blogs.msdn.com/b/visualstudioalm)|
 |**技术文章和日志**|[MSDN 体系结构中心](https://msdn.microsoft.com/architecture/default.aspx)|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [为适用于 UML 建模扩展性的应用 API 参考](../modeling/api-reference-for-uml-modeling-extensibility.md)[创建模型](../modeling/create-models-for-your-app.md)
