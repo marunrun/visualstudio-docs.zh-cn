@@ -14,11 +14,11 @@ manager: jillfra
 ms.workload:
 - data-storage
 ms.openlocfilehash: 555d32eb295e944060d2efe0b843e9d157b7c675
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75587051"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78408568"
 ---
 # <a name="add-new-data-sources"></a>添加新数据源
 
@@ -90,7 +90,7 @@ ms.locfileid: "75587051"
 
 - [WCF 服务](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)
 
-- Web Services
+- Web 服务
 
     > [!NOTE]
     > "**数据源**" 窗口中显示的项取决于服务返回的数据。 某些服务可能没有为“数据源配置”向导创建可绑定的对象提供足够的信息。 例如，如果服务返回非类型化数据集，则在完成该向导时，"**数据源**" 窗口中将不会显示任何项。 这是因为非类型化数据集不提供架构，因此该向导没有足够的信息来创建数据源。
