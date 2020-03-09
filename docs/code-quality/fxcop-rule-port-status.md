@@ -11,11 +11,11 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: f743df63ce779b90f728fd69622f621c8a2169d5
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75587584"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78408608"
 ---
 # <a name="fxcop-rule-port-status"></a>Fxcop 规则端口状态
 
@@ -178,7 +178,7 @@ CA3061 | 不按 URL 添加架构
 [CA3147](ca3147.md) | 用 Validate 防伪标记标记谓词处理程序
 [CA5350](ca5350.md) | 请勿使用弱加密算法
 [CA5351](ca5351.md) | 不要使用损坏的加密算法
-CA5358 | 不要使用不安全的密码模式
+CA5358 | 请勿使用不安全的密码模式
 CA5359 | 不禁用证书验证
 CA5360 | 不要在反序列化中调用危险方法
 CA5361 | 不要禁止 SChannel 使用强加密

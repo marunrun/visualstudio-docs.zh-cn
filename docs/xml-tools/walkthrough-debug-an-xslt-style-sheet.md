@@ -9,11 +9,11 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: cd5882cc606bf241a281940464ba028e77986807
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592472"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78410113"
 ---
 # <a name="walkthrough-debug-an-xslt-style-sheet"></a>演练：调试 XSLT 样式表
 
@@ -24,7 +24,7 @@ ms.locfileid: "75592472"
 > [!NOTE]
 > XSLT 调试程序仅适用于 Visual Studio Enterprise edition。
 
-## <a name="start-debugging"></a>“启动调试”
+## <a name="start-debugging"></a>开始调试
 
 1. 从 "**文件**" 菜单中，选择 "**打开** > **文件**"。
 
@@ -80,19 +80,19 @@ ms.locfileid: "75592472"
 
 ## <a name="step-through-the-code"></a>单步执行代码
 
-1. 按 F5继续。
+1. 按 F5 以继续操作。
 
    由于第一个书节点满足 `xsl:if` 条件，因此会将 "书籍" 节点添加到*below-average*输出文件。 调试器继续执行，直到它再次位于样式表中的 `xsl:if` 元素上。 调试器现在位于*books.xml*文件中的第二个 book 节点上。
 
    在 "**监视 1** " 窗口中，`self::node()` 值将更改为第二个 book 节点。 通过检查 price 元素的值，可以确定价格高于平均值，所以，`xsl:if` 条件应失败。
 
-2. 按 F5继续。
+2. 按 F5 以继续操作。
 
    由于第二个 book 节点不满足 `xsl:if` 条件，因此不会将书籍节点添加到*below-average*输出文件中。 调试器将继续执行，直到它再次定位在样式表中的 `xsl:if` 元素上。 调试器现在位于*books.xml*文件中的第三个 `book` 节点上。
 
    在 "**监视 1** " 窗口中，`self::node()` 值将更改为 "第三个书籍" 节点。 通过检查 `price` 元素的值，可以确定价格低于平均值。 `xsl:if` 条件应该会成功。
 
-3. 按 F5继续。
+3. 按 F5 以继续操作。
 
    由于满足了 `xsl:if` 条件，因此第三个书籍将添加到*below-average*输出文件中。 XML 文档中的所有 book 节点均已处理，调试程序停止。
 
