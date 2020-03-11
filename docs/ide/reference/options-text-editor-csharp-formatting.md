@@ -19,11 +19,11 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: 1176232eb3354a9b425e9432eb83037367ee7706
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75596237"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78408458"
 ---
 # <a name="options-dialog-box-text-editor--c--code-style--formatting"></a>“选项”对话框：文本编辑器 \> C# \> 代码样式 \> 格式设置
 
