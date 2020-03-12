@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 517a583c859870b979c89c4fe2f55cd3bc0fc913
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: d8e1df93fa9e865bb9b9136b9d0a0e07f1a485ea
+ms.sourcegitcommit: 514f0f7d1a61d292c7dbc80ec73a36bda960d6ce
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75587610"
+ms.lasthandoff: 03/09/2020
+ms.locfileid: "78937514"
 ---
 # <a name="frequently-asked-questions-about-fxcop-and-fxcop-analyzers"></a>有关 FxCop 和 FxCop 分析器的常见问题解答
 
@@ -35,7 +35,7 @@ No。 选择 "**分析** > "**运行代码分析**"时，会执行旧式分析�
 
 ## <a name="does-the-runcodeanalysis-msbuild-project-property-run-analyzers"></a>RunCodeAnalysis msbuild 项目属性是否运行分析器？
 
-No。 项目文件（例如 .csproj）中的 RunCodeAnalysis 属性仅用于执行旧版 FxCop。 它将运行调用 FxCopCmd.exe 的生成后 msbuild 任务。 这相当于在 Visual Studio 中选择“分析” > “运行代码分析”。
+No。 项目文件（例如 .csproj）中的 RunCodeAnalysis 属性仅用于执行旧版 FxCop。 它将运行调用 FxCopCmd.exe 的生成后 msbuild 任务。 这相当于在 Visual Studio 中选择“分析” **“运行代码分析”**  > 。
 
 ## <a name="so-how-do-i-run-fxcop-analyzers-then"></a>那么我该如何运行 FxCop 分析器呢？
 
@@ -60,5 +60,5 @@ No。 项目文件（例如 .csproj）中的 RunCodeAnalysis 属性仅用于执�
 ## <a name="see-also"></a>另请参阅
 
 - [.NET Compiler Platform 分析器概述](roslyn-analyzers-overview.md)
-- [分析器入门](fxcop-analyzers.yml)
+- [迁移到 FxCop 分析器](migrate-from-legacy-analysis-to-fxcop-analyzers.md)
 - [安装 FxCop 分析器](install-fxcop-analyzers.md)
