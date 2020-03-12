@@ -10,9 +10,9 @@
         - name: 概述
           displayName: 'roslyn analyzers, source analysis'
           href: roslyn-analyzers-overview.md
-        - name: 安装
+        - name: 安装源代码分析器
           href: install-roslyn-analyzers.md
-        - name: Configuration
+        - name: 配置源代码分析器
           href: use-roslyn-analyzers.md
         - name: 禁用代码分析
           href: disable-code-analysis.md
@@ -22,27 +22,24 @@
           href: analyzers-faq.md
         - name: FxCop 分析器
           items:
-            - name: 概述
-              displayName: fxcop analyzers
-              href: fxcop-analyzers.yml
-            - name: 安装
+            - name: 安装 FxCop 分析器
               href: install-fxcop-analyzers.md
-            - name: Configuration
+            - name: 迁移到 FxCop 分析器
               items:
-                - name: 概述
+                - name: 从旧版分析迁移到 FxCop 分析器
+                  href: migrate-from-legacy-analysis-to-fxcop-analyzers.md
+                - name: FAQ
+                  href: fxcop-analyzers-faq.md
+                - name: 移植的规则
+                  href: fxcop-rule-port-status.md
+            - name: 配置 FxCop 分析器
+              items:
+                - name: 配置规则和项目
                   href: configure-fxcop-analyzers.md
                 - name: 作用域选项
                   href: fxcop-analyzer-options.md
                 - name: 启用一种类别的规则
                   href: analyzer-rule-sets.md
-            - name: FAQ
-              href: fxcop-analyzers-faq.md
-        - name: 从旧版分析迁移到 FxCop 分析器
-          items:
-            - name: 概述
-              href: fxcop-analyzers.yml
-            - name: 移植的规则
-              href: fxcop-rule-port-status.md
     - name: 旧版分析
       items:
         - name: 概述
@@ -50,8 +47,8 @@
           href: static-code-analysis-for-managed-code-overview.md
         - name: 旧版分析演练
           href: walkthrough-analyzing-managed-code-for-code-defects.md
-        - name: 迁移
-          href: fxcop-analyzers.yml
+        - name: 迁移到 FxCop 分析器
+          href: migrate-from-legacy-analysis-to-fxcop-analyzers.md
         - name: 手动运行旧版分析
           href: how-to-run-code-analysis-manually-for-managed-code.md
         - name: Configuration
