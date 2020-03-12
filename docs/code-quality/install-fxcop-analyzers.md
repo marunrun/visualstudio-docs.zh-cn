@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 06362bcf00bc35fdef701e26fe03694b038e88b1
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 78935673dbf57f75988d4c0a9e862b11e2fe855f
+ms.sourcegitcommit: 514f0f7d1a61d292c7dbc80ec73a36bda960d6ce
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75587454"
+ms.lasthandoff: 03/09/2020
+ms.locfileid: "78937521"
 ---
 # <a name="install-fxcop-analyzers-in-visual-studio"></a>在 Visual Studio 中安装 FxCop 分析器
 
@@ -22,7 +22,7 @@ Microsoft 创建了一组名为[CodeAnalysis](https://www.nuget.org/packages/Mic
 
 您可以将这些 FxCop 分析器作为 NuGet 包或 VSIX 扩展安装到 Visual Studio。 若要了解每个的优缺点，请参阅[NuGet 包与 VSIX 扩展](roslyn-analyzers-overview.md#nuget-package-versus-vsix-extension)。
 
-## <a name="nuget-package"></a>NuGet 程序包
+## <a name="nuget-package"></a>NuGet 包
 
 ::: moniker range=">=vs-2019"
 
@@ -32,7 +32,7 @@ Microsoft 创建了一组名为[CodeAnalysis](https://www.nuget.org/packages/Mic
 
    ![在 Visual Studio 的 "属性" 页中安装 FxCop 分析器包](media/install-fxcop-properties-page.png)
 
-2. 选择“安装”。
+2. 选择**安装**。
 
    Visual Studio 将安装最新版本的 CodeAnalyzers。 FxCopAnalyzers 程序包。 程序集显示在 "**引用** > **分析器**" 下**解决方案资源管理器**中。
 
@@ -156,4 +156,4 @@ Microsoft 创建了一组名为[CodeAnalysis](https://www.nuget.org/packages/Mic
 
 - [Visual Studio 中的代码分析器概述](../code-quality/roslyn-analyzers-overview.md)
 - [在 Visual Studio 中使用代码分析器](../code-quality/use-roslyn-analyzers.md)
-- [从旧分析迁移到代码分析器](../code-quality/fxcop-analyzers.yml)
+- [从旧分析迁移到代码分析器](../code-quality/migrate-from-legacy-analysis-to-fxcop-analyzers.md)
