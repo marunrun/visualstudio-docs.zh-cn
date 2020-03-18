@@ -58,7 +58,7 @@ ms.locfileid: "78257171"
    >
    > *请单击电子邮件中提供的激活链接并完成激活过程。*
    >
-   > *激活后，你将有 30 天的时间访问 CAST Highlight 平台，并且最多可以载入 5 个应用程序。请注意，这是仅适用于 Microsoft Visual Studio Enterprise 客户的独家优惠。 
+   > *激活后，你将有 30 天的时间访问 CAST Highlight 平台，并且最多可以载入 5 个应用程序。请注意，这是仅适用于 Microsoft Visual Studio Enterprise 客户的独家优惠。*
    >
    > 我将与你保持联系，以确保一切顺利。  与此同时，这里有一些内容有助于入门：
    >
