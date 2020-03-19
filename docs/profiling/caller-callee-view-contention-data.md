@@ -12,10 +12,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 083386a808f7b91a18b3ea685ae657118c723978
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74779735"
 ---
 # <a name="callercallee-view----contention-data"></a>“调用方/被调用方”视图 - 争用数据
@@ -27,7 +27,7 @@ ms.locfileid: "74779735"
 
  **由当前函数调用的函数**在底部网格中显示，当前函数调用子函数时，它会显示所选函数的被调用方（子）函数的争用信息。
 
-|列|说明|
+|列|描述|
 |------------|-----------------|
 |**Type**|函数的上下文：<br /><br /> -   **0** - 当前函数<br />-   **1** - 调用当前函数的函数<br />-   **2** - 当前函数调用的函数<br /><br /> 仅在 [VSPerfReport](../profiling/vsperfreport.md) 命令行报表中。|
 |**独占阻塞的时间**|-   对于当前函数，为阻止此函数在函数体中执行代码的时间。 不包含此函数调用的函数中阻塞的时间。<br />-   对于调用方函数，为此函数调用当前函数时当前函数的部分独占阻塞的时间。<br />-   对于被调用方函数，为当前函数调用此函数时阻止此函数执行其自身代码的时间。 不包含被调用方函数调用的子函数中阻塞的时间。|

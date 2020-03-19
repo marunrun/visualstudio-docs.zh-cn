@@ -11,10 +11,10 @@ manager: crdun
 ms.workload:
 - unity
 ms.openlocfilehash: fe317d446ddc9196df02dfafcf0397f8815574c3
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74771538"
 ---
 # <a name="change-log-visual-studio-tools-for-unity-mac"></a>更改日志（Visual Studio Tools for Unity、Mac）
@@ -277,7 +277,7 @@ Visual Studio Tools for Unity 更改日志。
 
 ### <a name="new-features"></a>新增功能
 
-- **项目生成：**
+- **Project Generation:**
 
   - 处理解决方案文件时，请保留外部属性。
   
@@ -309,7 +309,7 @@ Visual Studio Tools for Unity 更改日志。
 
 ### <a name="new-features"></a>新增功能
 
-- **项目生成：**
+- **Project Generation:**
 
   - 公共字段和序列化字段将不再引发警告。 在创建这些消息的 Unity 项目中，我们自动禁止了 `CS0649` 和 `IDE0051` 编译器警告。
 
@@ -430,7 +430,7 @@ Visual Studio Tools for Unity 更改日志。
 
   - 修复了 OnApplicationFocus 消息拼写错误。
 
-- **项目生成：**
+- **Project Generation:**
 
   - Unity 性能 Bug 的暂时解决方法：生成项目时缓存 MonoIsland。
 
@@ -474,7 +474,7 @@ Visual Studio Tools for Unity 更改日志。
 
 ### <a name="new-features"></a>新增功能
 
-- **项目生成：**
+- **Project Generation:**
 
   - 添加了对 Unity 2018.1 中新项目生成器的支持。
 
@@ -488,7 +488,7 @@ Visual Studio Tools for Unity 更改日志。
 
 ### <a name="bug-fixes"></a>Bug 修复
 
-- **项目生成：**
+- **Project Generation:**
 
   - 修复了 Mono 版本检测的问题。
 
@@ -514,7 +514,7 @@ Visual Studio Tools for Unity 更改日志。
 
 ### <a name="new-features"></a>新增功能
 
-- **项目生成：**
+- **Project Generation:**
 
   - 添加了对 .NET Standard 的支持。
 
@@ -562,7 +562,7 @@ Visual Studio Tools for Unity 更改日志。
 
 ### <a name="bug-fixes"></a>Bug 修复
 
-- **项目生成：**
+- **Project Generation:**
 
   - 修复了额外 .dll 扩展名错误添加到程序集文件问题。
 
@@ -574,7 +574,7 @@ Visual Studio Tools for Unity 更改日志。
 
 ### <a name="new-features"></a>新增功能
 
-- **项目生成：**
+- **Project Generation:**
 
   - 添加了对 .NET 4.6 配置文件的支持。
 
@@ -588,7 +588,7 @@ Visual Studio Tools for Unity 更改日志。
 
   - 如果不确定附加到哪个 Unity，启动“附加到进程”对话框。
 
-- **项目生成：**
+- **Project Generation:**
 
   - 使用 Unity 5.6 时，始终启用不安全编译开关。
 
@@ -612,7 +612,7 @@ Visual Studio Tools for Unity 更改日志。
 
   - 添加了对通过“附加到进程”窗口附加到播放器和编辑器的支持。
 
-- **项目生成：**
+- **Project Generation:**
 
   - 修复了使用 mcs.rsp 文件的程序集名称引用。
 

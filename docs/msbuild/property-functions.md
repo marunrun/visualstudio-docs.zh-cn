@@ -10,20 +10,22 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b0551162a00437b01c7357dfdac16462aad8f2fc
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: bb4c44b4e642ff1137df7f0afe02502224060a64
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75597381"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79307189"
 ---
 # <a name="property-functions"></a>属性函数
 
-在 .NET Framework 4 和 4.5 版中，可以使用属性函数来计算 MSBuild 脚本。 可以在出现属性的任何位置使用属性函数。 与任务不同，属性函数可在目标外部使用，并在任何目标运行之前进行计算。
+属性函数是对在 MSBuild 属性定义中出现的 .NET Framework 方法的调用。 与任务不同，属性函数可在目标外部使用，并在任何目标运行之前进行计算。
 
- 可以在生成脚本中读取系统时间、比较字符串、匹配正则表达式及执行其他操作，而无需使用 MSBuild 任务。 MSBuild 将尝试将字符串转换为数字、将数字转换为字符串，并根据需要进行其他转换。
- 
+可以在生成脚本中读取系统时间、比较字符串、匹配正则表达式及执行其他操作，而无需使用 MSBuild 任务。 MSBuild 将尝试将字符串转换为数字、将数字转换为字符串，并根据需要进行其他转换。
+
 从属性函数返回的字符串值已转义[特殊字符](msbuild-special-characters.md)。 如果要将这些值视为如同直接置于项目文件中，请使用 `$([MSBuild]::Unescape())` 取消转义特殊字符。
+
+.NET Framework 4 及更高版本中提供了属性函数。
 
 ## <a name="property-function-syntax"></a>属性函数语法
 
@@ -37,7 +39,7 @@ ms.locfileid: "75597381"
 
 所有生成属性值都只是字符串值。 可以使用字符串（实例）方法来操作任何属性值。 例如，可以使用以下代码，从表示完整路径的生成属性中提取驱动器名称（前三个字符）：
 
-```fundamental
+```
 $(ProjectOutputFolder.Substring(0,3))
 ```
 
@@ -45,7 +47,7 @@ $(ProjectOutputFolder.Substring(0,3))
 
 在生成脚本中，可以访问许多系统类的静态属性和方法。 要获取静态属性的值，请使用以下语法，其中 \<Class> 是系统类的名称，\<Property> 是属性的名称。
 
-```fundamental
+```
 $([Class]::Property)
 ```
 
@@ -57,7 +59,7 @@ $([Class]::Property)
 
 要调用静态方法，请使用以下语法，其中 \<Class> 是系统类的名称，\<Method> 是方法的名称，而 (\<Parameters) 是方法的参数列表：
 
-```fundamental
+```
 $([Class]::Method(Parameters))
 ```
 
@@ -121,7 +123,7 @@ $([Class]::Method(Parameters))
 
 如果访问返回对象实例的静态属性，则可以调用该对象的实例方法。 要调用实例方法，请使用以下语法，其中 \<Class> 是系统类的名称，\<Property> 是属性的名称，\<Method> 是方法的名称，而 (\<Parameters>) 是方法的参数列表：
 
-```fundamental
+```
 $([Class]::Property.Method(Parameters))
 ```
 
@@ -137,13 +139,13 @@ $([Class]::Property.Method(Parameters))
 
 可以访问生成中的许多静态方法，以提供算术、按位逻辑和转义字符支持。 可以使用以下语法访问这些方法，其中 \<Method> 是方法的名称，(\<Parameters>) 是方法的参数列表。
 
-```fundamental
+```
 $([MSBuild]::Method(Parameters))
 ```
 
 例如，要一起添加两个具有数字值的属性，请使用以下代码。
 
-```fundamental
+```
 $([MSBuild]::Add($(NumberOne), $(NumberTwo)))
 ```
 
@@ -172,8 +174,8 @@ $([MSBuild]::Add($(NumberOne), $(NumberTwo)))
 |string NormalizePath(params string[] path)|获取指定路径的规范化完整路径，并确保其包含当前操作系统的正确目录分隔符。|
 |string NormalizeDirectory(params string[] path)|获取指定目录的规范化完整路径，确保其包含当前操作系统的正确目录分隔符，并确保其具有尾部反斜杠。|
 |string EnsureTrailingSlash(string path)|如果给定路径没有尾部反斜杠，请添加一个。 如果路径为空字符串，请勿其进行修改。|
-|string GetPathOfFileAbove(string file, string startingDirectory)|根据当前生成文件的位置，或根据 `startingDirectory`（如果已指定）搜索文件。|
-|GetDirectoryNameOfFileAbove(string startingDirectory, string fileName)|在指定目录或该目录上级的目录结构位置中查找文件。|
+|string GetPathOfFileAbove(string file, string startingDirectory)|在当前生成文件位置上级的目录结构中搜索并返回文件的完整路径，如果指定，则基于 `startingDirectory`。|
+|GetDirectoryNameOfFileAbove(string startingDirectory, string fileName)|在指定目录或该目录上级的目录结构位置中查找并返回文件目录。|
 |string MakeRelative(string basePath, string path)|将 `path` 关联到 `basePath`。 `basePath` 必须是绝对目录。 如果无法关联 `path`，则会返回逐字字符串。 类似于 `Uri.MakeRelativeUri`。|
 |string ValueOrDefault(string conditionValue, string defaultValue)|仅当“conditionValue”为空时在参数“defaultValue”中返回字符串，否则返回值 conditionValue。|
 
@@ -181,7 +183,7 @@ $([MSBuild]::Add($(NumberOne), $(NumberTwo)))
 
 可将属性函数组合在一起，组成更复杂的函数，如下例所示。
 
-```fundamental
+```
 $([MSBuild]::BitwiseAnd(32, $([System.IO.File]::GetAttributes(tempFile))))
 ```
 
@@ -195,7 +197,7 @@ MSBuild 中的 `DoesTaskHostExist` 属性函数将返回当前是否针对特定
 
 此属性函数具有以下语法：
 
-```fundamental
+```
 $([MSBuild]::DoesTaskHostExist(string theRuntime, string theArchitecture))
 ```
 
@@ -205,7 +207,7 @@ $([MSBuild]::DoesTaskHostExist(string theRuntime, string theArchitecture))
 
 此属性函数具有以下语法：
 
-```fundamental
+```
 $([MSBuild]::EnsureTrailingSlash('$(PathProperty)'))
 ```
 
@@ -215,7 +217,7 @@ MSBuild `GetDirectoryNameOfFileAbove` 属性函数在路径中当前目录的上
 
  此属性函数具有以下语法：
 
-```fundamental
+```
 $([MSBuild]::GetDirectoryNameOfFileAbove(string ThePath, string TheFile))
 ```
 
@@ -227,7 +229,7 @@ $([MSBuild]::GetDirectoryNameOfFileAbove(string ThePath, string TheFile))
 
 ## <a name="msbuild-getpathoffileabove"></a>MSBuild GetPathOfFileAbove
 
-MSBuild 中的 `GetPathOfFileAbove` 属性函数将返回此文件前紧邻的文件的路径。 它在功能上等效于调用
+如果位于当前目录上级的目录结构中，则 MSBuild 中的 `GetPathOfFileAbove` 属性函数将返回指定文件的路径。 它在功能上等效于调用
 
 ```xml
 <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.props))\dir.props" />
@@ -235,7 +237,7 @@ MSBuild 中的 `GetPathOfFileAbove` 属性函数将返回此文件前紧邻的�
 
 此属性函数具有以下语法：
 
-```fundamental
+```
 $([MSBuild]::GetPathOfFileAbove(dir.props))
 ```
 
@@ -245,7 +247,7 @@ MSBuild `GetRegistryValue` 属性函数返回注册表项的值。 此函数采�
 
 下面的示例演示如何使用此函数：
 
-```fundamental
+```
 $([MSBuild]::GetRegistryValue(`HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\10.0\Debugger`, ``))                                  // default value
 $([MSBuild]::GetRegistryValue(`HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\10.0\Debugger`, `SymbolCacheDir`))
 $([MSBuild]::GetRegistryValue(`HKEY_LOCAL_MACHINE\SOFTWARE\(SampleName)`, `(SampleValue)`))             // parens in name and value
@@ -257,7 +259,7 @@ MSBuild `GetRegistryValueFromView` 属性函数在给定了注册表项、值以
 
 该属性函数的语法是：
 
-```fundamental
+```
 [MSBuild]::GetRegistryValueFromView(string keyName, string valueName, object defaultValue, params object[] views)
 ```
 
@@ -275,7 +277,7 @@ Windows 64 位操作系统维护一个 HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node  
 
 下面是一个示例。
 
- ```fundamental
+ ```
 $([MSBuild]::GetRegistryValueFromView('HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SDKs\Silverlight\v3.0\ReferenceAssemblies', 'SLRuntimeInstallPath', null, RegistryView.Registry64, RegistryView.Registry32))
 ```
 
@@ -287,7 +289,7 @@ MSBuild `MakeRelative` 属性函数将返回第二条路径的相对路径（相
 
 此属性函数具有以下语法：
 
-```fundamental
+```
 $([MSBuild]::MakeRelative($(FileOrFolderPath1), $(FileOrFolderPath2)))
 ```
 

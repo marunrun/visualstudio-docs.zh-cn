@@ -1,19 +1,19 @@
 ---
 title: 编写适用于 C/C++ 的单元测试
 description: 使用 CTest、Boost.Test 和 Google Test 等各种测试框架在 Visual Studio 中编写 C++ 单元测试。
-ms.date: 01/08/2020
+ms.date: 02/08/2020
 ms.topic: conceptual
 ms.author: corob
 manager: markl
 ms.workload:
 - cplusplus
 author: corob-msft
-ms.openlocfilehash: bcddce98470bc4d1b68eb7c2a6e3936f3abbb930
-ms.sourcegitcommit: 789430e18dfe8e5f7db19273e7298af2f078c0dc
+ms.openlocfilehash: 354ccad121884c99541057a2e0e0a47d9d2a4341
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75755587"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "78937558"
 ---
 # <a name="write-unit-tests-for-cc-in-visual-studio"></a>在 Visual Studio 中编写 C/C++ 单元测试
 
@@ -41,7 +41,7 @@ C++ 单元测试项目支持 [CodeLens](../ide/find-code-changes-and-other-histo
 
 - **Boost.Test** 作为“使用 C++ 的桌面开发”  工作负荷的默认组件包含在内。 它与测试资源管理器集成，但当前没有项目模板  。 必须手动配置它。 有关详细信息，请参阅[如何：在 Visual Studio 中使用 Boost.Test](how-to-use-boost-test-for-cpp.md)。
 
-- CTest  支持随附在 C++ CMake 工具  组件中，该组件是“使用 C++ 的桌面开发”  工作负载的一部分。 但是，CTest 尚未与测试资源管理器完全集成  。 有关详细信息，请参阅[如何：在 Visual Studio 中使用 CTest](how-to-use-ctest-for-cpp.md)。
+- CTest  支持随附在 C++ CMake 工具  组件中，该组件是“使用 C++ 的桌面开发”  工作负载的一部分。 有关详细信息，请参阅[如何：在 Visual Studio 中使用 CTest](how-to-use-ctest-for-cpp.md)。
 
 **Visual Studio 2015 及更早版本**
 

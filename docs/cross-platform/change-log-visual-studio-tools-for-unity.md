@@ -11,10 +11,10 @@ manager: crdun
 ms.workload:
 - unity
 ms.openlocfilehash: 0e1810f452f48c95e0c4e8117820be3598b0f139
-ms.sourcegitcommit: 49ebf69986713e440fd138fb949f1c0f47223f23
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74706788"
 ---
 # <a name="change-log-visual-studio-tools-for-unity-windows"></a>更改日志（Visual Studio Tools for Unity、Windows）
@@ -214,7 +214,7 @@ Visual Studio Tools for Unity 更改日志。
 
   - 添加了对 UPE 中的 Unity 包的支持。 只有引用包（使用 `Packages` 文件夹中的 manifest.json）和本地包（嵌入在 `Packages` 文件夹中）是可见的。
 
-- **项目生成：**
+- **Project Generation:**
 
   - 处理解决方案文件时，请保留外部属性。
 
@@ -270,7 +270,7 @@ Visual Studio Tools for Unity 更改日志。
 
 ### <a name="new-features"></a>新增功能
 
-- **项目生成：**
+- **Project Generation:**
 
   - 公共字段和序列化字段将不再引发警告。 在创建这些消息的 Unity 项目中，我们自动禁止了 `CS0649` 和 `IDE0051` 编译器警告。
 
@@ -406,7 +406,7 @@ Visual Studio Tools for Unity 更改日志。
 
 ### <a name="bug-fixes"></a>Bug 修复
 
-- **项目生成：**
+- **Project Generation:**
 
   - 回滚了针对 Unity 性能缺陷的解决方案（此缺陷已由 Unity 修复）。
 
@@ -464,7 +464,7 @@ Visual Studio Tools for Unity 更改日志。
 
 ### <a name="bug-fixes"></a>Bug 修复
 
-- **项目生成：**
+- **Project Generation:**
 
   - （从 3.9.0.0 版向后移植）回滚了针对 Unity 性能缺陷的解决方案（此缺陷已由 Unity 修复）。
 
@@ -474,7 +474,7 @@ Visual Studio Tools for Unity 更改日志。
 
 ### <a name="bug-fixes"></a>Bug 修复
 
-- **项目生成：**
+- **Project Generation:**
 
   - Unity 性能 Bug 的暂时解决方法：生成项目时缓存 MonoIsland。
 
@@ -514,7 +514,7 @@ Visual Studio Tools for Unity 更改日志。
 
 ### <a name="bug-fixes"></a>Bug 修复
 
-- **项目生成：**
+- **Project Generation:**
 
   - 使用新版 Unity 运行时，不要再将可移植 pdb 转换为 mdb。
 
@@ -554,7 +554,7 @@ Visual Studio Tools for Unity 更改日志。
 
   - 修复了异常设置的使用情况。
 
-- **项目生成：**
+- **Project Generation:**
 
   - 从生成中排除包管理器编译单位。
 
@@ -564,7 +564,7 @@ Visual Studio Tools for Unity 更改日志。
 
 ### <a name="new-features"></a>新增功能
 
-- **项目生成：**
+- **Project Generation:**
 
   - 添加了对 Unity 2018.1 中新项目生成器的支持。
 
@@ -584,7 +584,7 @@ Visual Studio Tools for Unity 更改日志。
 
 ### <a name="bug-fixes"></a>Bug 修复
 
-- **项目生成：**
+- **Project Generation:**
 
   - 修复了 Mono 版本检测的问题。
 
@@ -598,13 +598,13 @@ Visual Studio Tools for Unity 更改日志。
 
 ### <a name="new-features"></a>新增功能
 
-- **项目生成：**
+- **Project Generation:**
 
   - 添加了对 .NET Standard 的支持。
 
 ### <a name="bug-fixes"></a>Bug 修复
 
-- **项目生成：**
+- **Project Generation:**
 
   - 修复了 Unity 目标框架检测的问题。
 
@@ -646,7 +646,7 @@ Visual Studio Tools for Unity 更改日志。
 
 ### <a name="new-features"></a>新增功能
 
-- **项目生成：**
+- **Project Generation:**
 
   - 添加了对 2018.1 MonoIsland 引用模型的支持。
 
@@ -664,7 +664,7 @@ Visual Studio Tools for Unity 更改日志。
 
 ### <a name="bug-fixes"></a>Bug 修复
 
-- **项目生成：**
+- **Project Generation:**
 
   - 修复了播放器项目的项目 GUID 计算。
 
@@ -710,7 +710,7 @@ Visual Studio Tools for Unity 更改日志。
 
   - 修复了 Unity API 帮助菜单未显示问题。
 
-- **项目生成：**
+- **Project Generation:**
 
   - 修复了在处理后端为 IL2CPP/.NET 4.6 的 UWP 游戏时玩家项目的生成问题。
 
@@ -726,7 +726,7 @@ Visual Studio Tools for Unity 更改日志。
 
 ### <a name="new-features"></a>新增功能
 
-- **项目生成：**
+- **Project Generation:**
 
   - 添加了对 assembly.json 编译单元的支持。
 
@@ -748,7 +748,7 @@ Visual Studio Tools for Unity 更改日志。
 
   - 修复了编译器使用局部变量生成的项。
 
-- **项目生成：**
+- **Project Generation:**
 
   - 修复了对 4.6 API 级别的 Microsoft.CSharp 的引用。
 
@@ -758,7 +758,7 @@ Visual Studio Tools for Unity 更改日志。
 
 ### <a name="bug-fixes"></a>Bug 修复
 
-- **项目生成：**
+- **Project Generation:**
 
   - 修复了 Unity 5.5 及更低版本上 Visual Studio 解决方案的生成问题。
 
@@ -820,7 +820,7 @@ Visual Studio Tools for Unity 更改日志。
 
   - 增加了对新的 Unity 运行时（与 .NET 4.6/C# 6 兼容）的支持。
 
-- **项目生成：**
+- **Project Generation:**
 
   - 添加了对 .NET 4.6 配置文件的支持。
 
@@ -836,7 +836,7 @@ Visual Studio Tools for Unity 更改日志。
 
   - 使用自动完成功能修复了插入方法后的插入符号位置。
 
-- **项目生成：**
+- **Project Generation:**
 
   - 删除了程序集版本后处理。
 
@@ -870,7 +870,7 @@ Visual Studio Tools for Unity 更改日志。
 
   - 添加了针对不可绑定断点的情况（即找不到对应的源位置时）的警告。
 
-- **项目生成：**
+- **Project Generation:**
 
   - 修复了包含特殊/本地化字符的 csproj 生成。
 
@@ -915,7 +915,7 @@ Visual Studio Tools for Unity 更改日志。
 
   - 改进了在需要或找不到某类型时显示的错误消息。
 
-- **项目生成：**
+- **Project Generation:**
 
   - 删除了项目名称中的 CSharp 后缀。
 
@@ -943,7 +943,7 @@ Visual Studio Tools for Unity 更改日志。
 
   - 修复了对使用新 C# 编译器调试迭代器框架的支持问题。
 
-- **项目生成：**
+- **Project Generation:**
 
   - 修复了在面向 Unity Web Player 时阻止编译的 bug。
 

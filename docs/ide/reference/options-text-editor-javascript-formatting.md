@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 957dbd557a15c4c1df6028672f204a06936767c1
-ms.sourcegitcommit: ce1ab8a25c66a83e60eab80ed8e1596fe66dd85c
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "68605989"
 ---
 # <a name="options-dialog-box-text-editor--javascript--formatting"></a>“选项”对话框：“文本编辑器”\>“JavaScript”\>“格式设置”
@@ -35,7 +35,7 @@ ms.locfileid: "68605989"
 
 ### <a name="uielement-list"></a>UIElement 列表
 
-|选项|说明|
+|选项|描述|
 |------------|-----------------|
 |**按 Enter 时设置已完成行的格式**|选择此选项后，如果按 Enter 键，代码编辑器会自动设置该行的格式。|
 |**输入 ; 时设置已完成语句的格式**|选择此选项后，如果按分号键，代码编辑器会自动设置该行的格式。|
@@ -49,7 +49,7 @@ ms.locfileid: "68605989"
 
 ### <a name="uielement-list"></a>UIElement 列表
 
-|选项|说明|
+|选项|描述|
 |------------|-----------------|
 |**将函数的左大括号置于新行**|选择此选项后，代码编辑器会将与函数关联的左大括号移动到新行。|
 |**将控制块的左大括号置于新行**|选择此选项后，代码编辑器会将与控制块（例如，`if` 和 `while` 控制块）关联的左大括号移动到新行。|
@@ -60,7 +60,7 @@ ms.locfileid: "68605989"
 
 ### <a name="uielement-list"></a>UIElement 列表
 
-|选项|说明|
+|选项|描述|
 |------------|-----------------|
 |**在逗号分隔符后插入空格**|选择此选项后，代码编辑器会在逗号分隔符后添加空格。|
 |**在“for”语句中的分号后插入空格**|选择此选项后，代码编辑器会在 `for` 循环首行的每个分号后添加一个空格。|

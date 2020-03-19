@@ -1,27 +1,30 @@
 ---
 title: 将 foreach 循环转换为 LINQ
 descritpion: Convert any foreach loop that uses an IEnumerable to a LINQ query or a LINQ call form (also known as a LINQ method).
-ms.date: 02/20/2019
+ms.date: 03/10/2020
 ms.topic: reference
-author: kendrahavens
-ms.author: kehavens
+author: mikadumont
+ms.author: midumont
 manager: jillfra
 dev_langs:
 - CSharp
+- VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: baa1f32bb981e6d244555baef2a00d03933cdd6c
-ms.sourcegitcommit: 0f5f7955076238742f2071d286ad8e896f3a6cad
+ms.openlocfilehash: 12c03830ccd37e0970e3c74bc78cdd9c8a8732b7
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68483721"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79094216"
 ---
 # <a name="convert-a-foreach-loop-to-linq"></a>将 foreach 循环转换为 LINQ
 
 此重构适用于：
 
 - C#
+
+- Visual Basic
 
 **功能：** 可以将使用 IEnumerables 的 foreach  循环轻松转换为 LINQ 查询或 LINQ 调用窗体（也称为 LINQ 方法）。
 

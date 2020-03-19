@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: cb48733f84dcf484d2c2d7ffb18e838faae07ab0
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "72911200"
 ---
 # <a name="concurrency-visualizer-sdk"></a>并发可视化工具 SDK
@@ -121,7 +121,7 @@ ms.locfileid: "72911200"
 
 ## <a name="see-also"></a>请参阅
 
-|Title|说明|
+|Title|描述|
 |-----------|-----------------|
 |[C++ 库参考](../profiling/cpp-library-reference.md)|介绍用于 C++ 的并发可视化工具 API。|
 |[C 库参考](../profiling/c-library-reference.md)|介绍用于 C 的并发可视化工具 API。|

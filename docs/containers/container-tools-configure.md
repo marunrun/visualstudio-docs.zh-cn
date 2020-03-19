@@ -7,10 +7,10 @@ ms.topic: conceptual
 ms.date: 03/20/2019
 ms.technology: vs-azure
 ms.openlocfilehash: 0ae81ed19a7fa8a967a3f9c3fe83c9f0d9e3ae51
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "73188772"
 ---
 # <a name="how-to-configure-visual-studio-container-tools"></a>如何配置 Visual Studio 容器工具
@@ -40,7 +40,7 @@ ms.locfileid: "73188772"
 下表可帮助确定如何设置这些选项。
 
 ::: moniker range="vs-2017"
-| name | 默认设置 | 适用于 | 说明 |
+| “属性” | 默认设置 | 适用于 | 描述 |
 | -----|:---------------:|:----------:| ----------- |
 | 在项目加载时自动拉取所需的 Docker 映像 | On | Docker Compose | 为了在加载项目时提高性能，Visual Studio 将在后台启动 Docker 拉取操作，以便在准备好运行代码时，映像已下载或正在下载。 如果只需加载项目和浏览代码，可以将其关闭，以避免下载不需要的容器映像。 |
 | 在后台自动启动容器 | On | Docker Compose | 同样，为了提高性能，Visual Studio 会在构建和运行容器时创建卷装载随时可用的容器。 如果要控制创建容器的时间，请将其关闭。 |
@@ -52,14 +52,14 @@ ms.locfileid: "73188772"
 
 下表描述了“常规”设置  ：
 
-| name | 默认设置 | 适用于 | 说明 |
+| “属性” | 默认设置 | 适用于 | 描述 |
 | -----|:---------------:|:----------:| ----------- |
 | 根据需要安装 Docker Desktop | 提醒我 | 单个项目、Docker Compose | 选择是否需要在未安装 Docker Desktop 时提醒你。 |
 | 信任 ASP.NET Core SSL 证书 | 提醒我 | ASP.NET Core 2.x 项目 | 设置为“提醒我”后，如果 localhost SSL 证书不受信任，则 Visual Studio 将在每次运行项目时提示你  。 |
 
 下表描述了“单个项目”和“Docker Compose”设置   ：
 
-| name | 默认设置 | 适用于 | 说明 |
+| “属性” | 默认设置 | 适用于 | 描述 |
 | -----|:---------------:|:----------:| ----------- |
 | 在项目打开时拉取所需的 Docker 映像 | True | 单个项目、Docker Compose | 为了在加载项目时提高性能，Visual Studio 将在后台启动 Docker 拉取操作，以便在准备好运行代码时，映像已下载或正在下载。 如果只需加载项目和浏览代码，可以将其设置为“False”，以避免下载不需要的容器映像  。 |
 | 在项目打开时运行容器 | True | 单个项目、Docker Compose | 同样，为了提高性能，Visual Studio 会提前创建一个容器，以便在构建和运行容器时随时可使用该容器。 如果要控制创建容器的时间，请将其设置为“False”  。 |

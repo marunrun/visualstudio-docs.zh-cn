@@ -9,10 +9,10 @@ ms.author: mikejo
 ms.workload:
 - dotnet
 ms.openlocfilehash: ba231e6c203197518b75a7a8c0592f01bba4ffe9
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75591536"
 ---
 # <a name="live-unit-testing-frequently-asked-questions"></a>Live Unit Testing 常见问题解答
@@ -39,7 +39,7 @@ Live Unit Testing 是否适用于 .NET Core？
 
 可以。 Live Unit Testing 可与 .NET Core 和 .NET Framework 配合使用。
 
-## <a name="configuration"></a>配置
+## <a name="configuration"></a>Configuration
 
 启用 Live Unit Testing 后，为什么它不工作？ 
 

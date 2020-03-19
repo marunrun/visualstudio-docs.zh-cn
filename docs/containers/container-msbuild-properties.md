@@ -7,10 +7,10 @@ ms.date: 06/06/2019
 ms.technology: vs-azure
 ms.topic: conceptual
 ms.openlocfilehash: 987d358abcccadf36d15593722ff55ba4b879d03
-ms.sourcegitcommit: 6ae0a289f1654dec63b412bfa22035511a2ef5ad
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "71950690"
 ---
 # <a name="container-tools-build-properties"></a>容器工具生成属性
@@ -29,7 +29,7 @@ ms.locfileid: "71950690"
 
 下表显示可用于容器项目的 MSBuild 属性。 NuGet 包版本应用于 [Microsoft.VisualStudio.Azure.Containers.Tools.Targets](https://www.nuget.org/packages/Microsoft.VisualStudio.Azure.Containers.Tools.Targets/)。
 
-| 属性名称 | 说明 | 默认值  | NuGet 包版本|
+| 属性名称 | 描述 | 默认值  | NuGet 包版本|
 |---------------|-------------|----------------|----------------------|
 | ContainerDevelopmentMode | 控制是否启用“build-on-host”优化（“快速模式”调试）。  允许的值为“快速”和“常规”   。 | 快速 |1.0.1872750 或更高版本|
 | ContainerVsDbgPath | VSDBG 调试器的路径。 | `%USERPROFILE%\vsdbg\vs2017u5` |1.0.1985401 或更高版本|

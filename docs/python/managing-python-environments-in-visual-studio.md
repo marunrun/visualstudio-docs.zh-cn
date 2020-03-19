@@ -10,11 +10,11 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: 5e269e19a09aec157e38eaf8938b5995c2647803
-ms.sourcegitcommit: 77ef1dcc71057cd5fdc4733ff0cb6085bd6113e0
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73661940"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79307159"
 ---
 # <a name="how-to-create-and-manage-python-environments-in-visual-studio"></a>如何在 Visual Studio 中创建和管理 Python 环境
 
@@ -157,10 +157,10 @@ Conda 环境是使用 `conda` 工具或通过 Visual Studio 2017 版本 15.7 及
 
 1. 配置以下字段：
 
-    | 字段 | 说明 |
+    | 字段 | 描述 |
     | --- | --- |
     | 项目 | 要在其中创建环境的项目（如果在同一 Visual Studio 解决方案中有多个项目）。 |
-    | name | Conda 环境的名称。 |
+    | “属性” | Conda 环境的名称。 |
     | 添加包 | 如果你有描述依赖项的 environment.yml 文件，请选择“环境文件”   ，或选择“一个或多个 Anaconda 包名称”  并在下面的字段中列出至少一个 Python 包或 Python 版本。 包列表可指示 conda 创建 Python 环境。 若要安装最新版本的 Python，请使用 `python`；若要安装特定版本，请使用 `python=,major>.<minor>`，如 `python=3.7` 所述。 还可以使用包按钮从一系列菜单中选择 Python 版本和常见包。 |
     | 设置为当前环境 | 创建环境后，在所选项目中激活新环境。 |
     | 设置为新项目的默认环境 | 自动设置和激活 Visual Studio 中创建的任何新项目中的 conda 环境。 此选项与使用“Python 环境”窗口中的“将此作为新项目的默认环境”相同   。 |

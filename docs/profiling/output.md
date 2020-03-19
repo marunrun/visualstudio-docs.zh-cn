@@ -10,10 +10,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: ab01f67d44e8c6e0cc13eaf9b0046695a0132e65
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74778500"
 ---
 # <a name="output"></a>Output
@@ -31,7 +31,7 @@ VSPerfCmd.exe /Start:Method /Output:FileName [Options]
 ## <a name="required-options"></a>必需选项
  “Output”选项必须与“Start”选项一起使用   。
 
- **Start：** `Method` 指定输出文件名。
+ **Start:** `Method` 指定输出文件名。
 
 ## <a name="example"></a>示例
  在下例中，分析数据文件是在当前目录中创建的。

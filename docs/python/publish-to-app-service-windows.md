@@ -12,10 +12,10 @@ ms.workload:
 - data-science
 - azure
 ms.openlocfilehash: cf9125476a4fdc369cc22034e081f2151020f064
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62784613"
 ---
 # <a name="publishing-to-azure-app-service-on-windows"></a>发布到 Windows 上的 Azure 应用服务
@@ -30,15 +30,15 @@ Visual Studio 2017 及更高版本与 Visual Studio 2015 的发布过程有所�
 > [!Note]
 > 有关 Visual Studio 2015 与 Visual Studio 2017 及更高版本之间的变化的背景信息，请参阅博客文章 [Publish to Azure in Visual Studio 2017](https://devblogs.microsoft.com/python/publish-to-azure-in-vs-2017/)（在 Visual Studio 2017 中发布到 Azure）。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 在本演练中，需要一个基于 Bottle、Flask 或 Django 框架的 Web 应用项目。 如果还没有项目，但想尝试发布过程，可按下面所示创建一个简单的测试项目：
 
-1. 在 Visual Studio 中，选择“文件”>“新建”>“项目”，搜索“Bottle”，选择“Bottle Web 项目”，为项目指定名称和路径，然后单击“确定”。 （Bottle 模板随附于 Python 开发工作负载中；请参阅[安装](installing-python-support-in-visual-studio.md)。）
+1. 在 Visual Studio 中，选择“文件”>“新建”>“项目”  ，搜索“Bottle”，选择“Bottle Web 项目”  ，为项目指定名称和路径，然后单击“确定”  。 （Bottle 模板随附于 Python 开发工作负载中；请参阅[安装](installing-python-support-in-visual-studio.md)。）
 
-1. 按提示安装外部程序包，并选择“安装到虚拟环境”和虚拟环境的首选基础解释器。 通常需要将此选项与 App Service 上安装的 Python 版本匹配。
+1. 按提示安装外部程序包，并选择“安装到虚拟环境”  和虚拟环境的首选基础解释器。 通常需要将此选项与 App Service 上安装的 Python 版本匹配。
 
-1. 按 F5 或选择“调试”>“开始调试”，在本地测试项目。
+1. 按 F5 或选择“调试”>“开始调试”  ，在本地测试项目。
 
 ## <a name="create-an-azure-app-service"></a>创建 Azure App Service
 
@@ -54,20 +54,20 @@ Visual Studio 2017 及更高版本与 Visual Studio 2015 的发布过程有所�
 使用有效的 Azure 订阅，创建一个包含空 Web 应用的 App Service，如下所示：
 
 1. 登录 [portal.azure.com](https://portal.azure.com)。
-1. 选择“+新建”，然后依次选择“Web + 移动”、“Web 应用”。
-1. 指定 Web 应用的名称，将“资源组”保留为“新建”，并选择“Windows”作为操作系统。
-1. 选择“应用服务计划/位置”，选择“新建”，并指定名称和位置。 然后选择“定价层”，向下滚动到“F1 免费”计划并选择该计划，依次按“选择”、“确定”、“创建”。
-1. （可选）创建 App Service 后，导航到该服务，选择“获取发布配置文件”，并将文件保存在本地。
+1. 选择“+新建”  ，然后依次选择“Web + 移动”  、“Web 应用”  。
+1. 指定 Web 应用的名称，将“资源组”  保留为“新建”，并选择“Windows”  作为操作系统。
+1. 选择“应用服务计划/位置”  ，选择“新建”  ，并指定名称和位置。 然后选择“定价层”  ，向下滚动到“F1 免费”  计划并选择该计划，依次按“选择”  、“确定”  、“创建”  。
+1. （可选）创建 App Service 后，导航到该服务，选择“获取发布配置文件”  ，并将文件保存在本地。
 
 ### <a name="using-a-temporary-app-service"></a>使用临时 App Service
 
 在没有 Azure 订阅的情况下创建临时 App Service，如下所示：
 
 1. 打开浏览器浏览 [try.azurewebsites.net](https://try.azurewebsites.net)。
-1. 选择“Web 应用”应用类型，然后选择“下一步”。
-1. 依次选择“空站点”、“创建”。
+1. 选择“Web 应用”  应用类型，然后选择“下一步”  。
+1. 依次选择“空站点”  、“创建”  。
 1. 使用所选社交登录名登录，不久后站点会在所显示的 URL 处准备就绪。
-1. 选择“下载发布配置文件”并保存 `.publishsettings` 文件，稍后会使用该文件。
+1. 选择“下载发布配置文件”并保存 `.publishsettings` 文件，稍后会使用该文件  。
 
 ## <a name="configure-python-on-azure-app-service"></a>在 Azure App Service 上配置 Python
 
@@ -79,7 +79,7 @@ Visual Studio 2017 及更高版本与 Visual Studio 2015 的发布过程有所�
 
 从 Visual Studio 2017 及更高版本发布到 Azure 应用服务时，只有项目中的文件会被复制到服务器中。 因此，必须创建所需的文件才能配置服务器环境。
 
-1. 在 Visual Studio 的“解决方案资源管理器”中，右键单击项目，选择“添加”>“新项...”。在随即出现的对话框中，选择“Azure web.config (Fast CGI)”模板并选择“确定”。 这会在项目根目录中创建 `web.config` 文件。
+1. 在 Visual Studio 的“解决方案资源管理器”中，右键单击项目，选择“添加”>“新项...”   。在随即出现的对话框中，选择“Azure web.config (Fast CGI)”模板并选择“确定”。 这会在项目根目录中创建 `web.config` 文件。
 
 1. 修改 `web.config` 中的 `PythonHandler` 条目，以便该路径与服务器上的 Python 安装相匹配（有关确切的详细信息，请参阅 [IIS 配置参考](https://www.iis.net/configreference) (iis.net)）。 例如，对于 Python 3.6.1 x64，该条目应如下所示：
 
@@ -133,19 +133,19 @@ Visual Studio 2017 及更高版本与 Visual Studio 2015 的发布过程有所�
 
     请注意，当数组为空时，Django 会自动允许“localhost”，但添加生产 URL 会删除这些功能。 因此，可能需要保留单独的 `settings.py` 开发和生产副本，或者使用环境变量来控制运行时值。
 
-1. 在“解决方案资源管理器”中，展开与项目同名的文件夹，右键单击 `static` 文件夹，选择“添加”>“新项...”，选择“Azure 静态文件 web.config”模板，然后选择“确定”。 此操作会在 `static` 文件夹中创建另一个 `web.config`，以禁止 Python 处理该文件夹。 此配置将静态文件请求发送到默认 Web 服务器，而不是使用 Python 应用程序。
+1. 在“解决方案资源管理器”  中，展开与项目同名的文件夹，右键单击 `static` 文件夹，选择“添加”>“新项...”  ，选择“Azure 静态文件 web.config”模板，然后选择“确定”  。 此操作会在 `static` 文件夹中创建另一个 `web.config`，以禁止 Python 处理该文件夹。 此配置将静态文件请求发送到默认 Web 服务器，而不是使用 Python 应用程序。
 
-1. 保存项目，然后在 Visual Studio 的“解决方案资源管理器”中，右键单击项目并选择“发布”。
+1. 保存项目，然后在 Visual Studio 的“解决方案资源管理器”  中，右键单击项目并选择“发布”  。
 
     ![在项目的上下文菜单上发布命令](media/template-web-publish-command.png)
 
-1. 在随即出现的“发布”选项卡中，选择发布目标：
+1. 在随即出现的“发布”  选项卡中，选择发布目标：
 
-    a. 用户自己的 Azure 订阅：选择“Microsoft Azure App Service”，然后依次选择“选择现有”、“发布”。 随即显示一个对话框，可在其中选择相应的订阅和 App Service。 如果未显示 App Service，则按下面所述，将下载的发布配置文件用于临时 App Service。
+    a. 用户自己的 Azure 订阅：选择“Microsoft Azure App Service”  ，然后依次选择“选择现有”  、“发布”  。 随即显示一个对话框，可在其中选择相应的订阅和 App Service。 如果未显示 App Service，则按下面所述，将下载的发布配置文件用于临时 App Service。
 
     ![发布到 Azure 步骤 1、Visual Studio 2017 及更高版本、现有订阅](media/tutorials-common-publish-1a-2017.png)
 
-    b. 如果正在 try.azurewebsites.net 上使用临时 App Service，或在其他情况下需要使用发布配置文件，则选择 **>** 控件查找“导入配置文件”，选择该选项，然后选择“发布”。 这会提示输入之前下载的 `.publishsettings` 文件的位置。
+    b. 如果正在 try.azurewebsites.net 上使用临时 App Service，或在其他情况下需要使用发布配置文件，则选择 **>** 控件查找“导入配置文件”  ，选择该选项，然后选择“发布”  。 这会提示输入之前下载的 `.publishsettings` 文件的位置。
 
     ![发布到 Azure 步骤 1、Visual Studio 2017 及更高版本、临时应用服务](media/tutorials-common-publish-1b-2017.png)
 
@@ -185,24 +185,24 @@ Visual Studio 2017 及更高版本与 Visual Studio 2015 的发布过程有所�
 > [!Note]
 > 可参考有关此过程的简短视频 [Visual Studio Python 教程：构建网站](https://www.youtube.com/watch?v=FJx5mutt1uk&list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff&index=6)（youtube.com，3 分 10 秒）。
 
-1. 在“解决方案资源管理器”中，右键单击项目，选择“发布”。
+1. 在“解决方案资源管理器”  中，右键单击项目，选择“发布”  。
 
-1. 在“发布”对话框中，选择“Microsoft Azure 应用服务”：
+1. 在“发布”  对话框中，选择“Microsoft Azure 应用服务”  ：
 
   ![发布到 Azure 步骤 1](media/tutorials-common-publish-1.png)
 
 1. 选择目标：
 
-    - 如果具有 Azure 订阅，请选择“Microsoft Azure 应用服务”作为发布目标，然后在以下对话框中，选择一个现有应用服务或选择“新建”新建一个。
-    - 如果从 try.azurewebsites.net 使用临时站点，请选择“导入”作为发布目标，然后浏览从该站点下载的 `.publishsettings` 文件，再选择“确定”。
+    - 如果具有 Azure 订阅，请选择“Microsoft Azure 应用服务”  作为发布目标，然后在以下对话框中，选择一个现有应用服务或选择“新建”  新建一个。
+    - 如果从 try.azurewebsites.net 使用临时站点，请选择“导入”  作为发布目标，然后浏览从该站点下载的 `.publishsettings` 文件，再选择“确定”  。
 
-1. 应用服务详细信息显示在下面的“发布”对话框的“连接”选项卡中。
+1. 应用服务详细信息显示在下面的“发布”  对话框的“连接”  选项卡中。
 
   ![发布到 Azure 步骤 2](media/tutorials-common-publish-2.png)
 
-1. 根据需要选择“下一步 >”，查看其他设置。
+1. 根据需要选择“下一步 >”  ，查看其他设置。
 
-1. 选择“发布”。 应用程序部署到 Azure 后，会在该站点上打开默认浏览器。
+1. 选择“发布”  。 应用程序部署到 Azure 后，会在该站点上打开默认浏览器。
 
 在此过程中，Visual Studio 还执行以下步骤：
 

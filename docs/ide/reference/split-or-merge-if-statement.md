@@ -1,26 +1,29 @@
 ---
 title: Split 或 merge if 语句
-ms.date: 06/12/2019
+ms.date: 03/10/2020
 ms.topic: reference
 author: mikadumont
 ms.author: midumont
 manager: jillfra
 dev_langs:
 - CSharp
+- VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 405ccd4bc0197ce06aa14982a16dc02f6d13a537
-ms.sourcegitcommit: d4920babfc3d24a3fe1d4bf446ed3fe73b344467
+ms.openlocfilehash: a3b42f83faacda6be34b282150cf4fb4c0f379f1
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67160733"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79093678"
 ---
 # <a name="split-or-merge-if-statements"></a>Split 或 merge if 语句
 
 此重构适用于：
 
 - C#
+
+- Visual Basic
 
 **功能：** **功能：** 拆分或合并 [if](/dotnet/csharp/language-reference/keywords/if-else) 语句。
 
