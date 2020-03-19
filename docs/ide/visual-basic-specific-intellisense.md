@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 118de9ec05bcd5c56376376619bea0c5148d36ab
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75594183"
 ---
 # <a name="intellisense-for-visual-basic-code-files"></a>Visual Basic 代码文件的 IntelliSense
@@ -55,6 +55,6 @@ IntelliSense in Zone 可在 Visual Basic 开发人员需要通过 [!INCLUDE[ndpt
 
 在 Visual Basic 中，IntelliSense 完成列表在列表底部附近有两个选项卡控件。 “常规”选项卡：在默认情况下处于选中状态，显示了最常用的补全正在编写的语句的项  。 “全部”选项卡：显示了可用来自动补全的所有项，其中包括“常规”选项卡中的项   。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用 IntelliSense](../ide/using-intellisense.md)

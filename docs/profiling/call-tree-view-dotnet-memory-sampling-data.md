@@ -12,10 +12,10 @@ monikerRange: vs-2017
 ms.workload:
 - dotnet
 ms.openlocfilehash: 76ea78f37cbc8c5e2b6df900aa0e3f320346300a
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74779761"
 ---
 # <a name="call-tree-view---net-memory-sampling-data"></a>“调用树”视图 - .NET 内存采样数据
@@ -51,7 +51,7 @@ ms.locfileid: "74779761"
 |**独占字节数**|调用树中父函数所调用的此函数的实例所分配的内存字节数。 此数目不包括子函数的分配数。|
 |**独占字节数百分比**|分析运行期间分配的属于此函数的独占分配的所有内存字节数的百分比。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [“调用树”视图 - 检测](../profiling/call-tree-view-dotnet-memory-instrumentation-data.md)
 - [“调用树”视图](../profiling/call-tree-view-sampling-data.md)
 - [“调用树”视图](../profiling/call-tree-view-instrumentation-data.md)

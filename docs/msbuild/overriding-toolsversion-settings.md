@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 13c33f0ef43707390aa32d4c26c0380a8a32883e
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77633013"
 ---
 # <a name="override-toolsversion-settings"></a>重写 ToolsVersion 设置
@@ -30,7 +30,7 @@ ms.locfileid: "77633013"
 
 ## <a name="override-the-toolsversion-settings-of-projects-and-solutions-on-command-line-builds"></a>在命令行生成上替代项目和解决方案的 ToolsVersion 设置
 
- 虽然 Visual Studio 项目通常使用在项目文件中指定的 ToolsVersion 生成，但也可以使用命令行上的 `-ToolsVersion`（或 `-tv`）开关来替代该值，并用不同的工具集来生成所有项目及其项目到项目依赖项。 例如：
+ 虽然 Visual Studio 项目通常使用在项目文件中指定的 ToolsVersion 生成，但也可以使用命令行上的 `-ToolsVersion`（或 `-tv`）开关来替代该值，并用不同的工具集来生成所有项目及其项目到项目依赖项。 例如:
 
 ```cmd
 msbuild.exe someproj.proj -tv:12.0 -p:Configuration=Debug
@@ -82,9 +82,9 @@ msbuild.exe someproj.proj -tv:12.0 -p:Configuration=Debug
     msbuild projectA.proj -t:go -toolsversion:3.5
     ```
 
-4. 将显示以下输出。 对于 `projectA`，命令行上的 `-toolsversion:3.5` 设置将替代 `Project` 标记中的 `ToolsVersion=12.0` 设置。
+4. 将显示以下输出。 对于 `projectA`，命令行上的 `-toolsversion:3.5` 设置将替代 `ToolsVersion=12.0` 标记中的 `Project` 设置。
 
-     `ProjectB` 由 `projectA` 中的任务调用。 该任务具有 `ToolsVersion=2.0`，替代了 `projectB` 的其他 `ToolsVersion` 设置。
+     `ProjectB` 由 `projectA` 中的任务调用。 该任务具有 `ToolsVersion=2.0`，替代了 `ToolsVersion` 的其他 `projectB` 设置。
 
     ```
     Output:
@@ -111,7 +111,7 @@ msbuild.exe someproj.proj -tv:12.0 -p:Configuration=Debug
 
 5. 如果设置了环境变量 `MSBUILDLEGACYDEFAULTTOOLSVERSION`，或者如果未设置 `ToolsVersion`，则使用以下步骤：
 
-    1. 项目文件的 [Project](../msbuild/project-element-msbuild.md) 元素的 `ToolsVersion` 属性。 如果此属性不存在，则假定是当前版本。
+    1. 项目文件的 `ToolsVersion`Project[ 元素的 ](../msbuild/project-element-msbuild.md) 属性。 如果此属性不存在，则假定是当前版本。
 
     2. MSBuild.exe.config  文件中的默认工具版本。
 
@@ -121,13 +121,13 @@ msbuild.exe someproj.proj -tv:12.0 -p:Configuration=Debug
 
     1. 如果环境变量 `MSBUILDDEFAULTTOOLSVERSION` 设置为现有的 `ToolsVersion`，请使用它。
 
-    2. 如果在 MSBuild.exe.config  中设置了 `DefaultOverrideToolsVersion`，请使用它。
+    2. 如果在 MSBuild.exe.config`DefaultOverrideToolsVersion`*中设置了*，请使用它。
 
     3. 如果在注册表中设置了 `DefaultOverrideToolsVersion`，请使用它。
 
     4. 否则，使用当前 `ToolsVersion`。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [多定向](../msbuild/msbuild-multitargeting-overview.md)
 - [MSBuild 概念](../msbuild/msbuild-concepts.md)

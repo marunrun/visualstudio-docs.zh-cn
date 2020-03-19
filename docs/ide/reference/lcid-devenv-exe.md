@@ -19,10 +19,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: cabbf36adb5019543b3cfb72b0b0e56976517d2d
-ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/22/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77557931"
 ---
 # <a name="lcid-devenvexe"></a>/LCID (devenv.exe)
@@ -35,7 +35,7 @@ ms.locfileid: "77557931"
 devenv {/LCID|/L} LocaleID
 ```
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
 
 - *LocaleID*
 
@@ -54,12 +54,12 @@ devenv {/LCID|/L} LocaleID
 |中文（简体）|2052|
 |和 SharePoint 2010 显示的“中文(繁体)”|1028|
 |捷克语|1029|
-|英语|2052|
+|英语|1033|
 |法语|1036|
 |德语|1031|
 |意大利语|1040|
 |日语|1041|
-|朝鲜语|1042|
+|韩语|1042|
 |波兰语|1045|
 |葡萄牙语（巴西）|1046|
 |俄语|1049|
@@ -74,7 +74,7 @@ devenv {/LCID|/L} LocaleID
 devenv /LCID 1033
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Devenv 命令行开关](../../ide/reference/devenv-command-line-switches.md)
 - [“选项”对话框 ->“环境”->“区域设置”](../../ide/reference/international-settings-environment-options-dialog-box.md)

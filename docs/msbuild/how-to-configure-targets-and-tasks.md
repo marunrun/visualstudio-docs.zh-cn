@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: fe2955feb50a28e5ba631cdeddd169973a42ed25
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77633884"
 ---
 # <a name="how-to-configure-targets-and-tasks"></a>如何：配置目标和任务
@@ -112,6 +112,6 @@ ms.locfileid: "77633884"
 > [!NOTE]
 > 任务参数在父节点的上下文中，而不是在任务主机的上下文中进行计算。 运行时相关或体系结构相关的环境变量（例如程序文件位置）将计算为与该父节点匹配的值  。 但是，如果同一个环境变量直接由任务读取，则它会在任务主机的上下文中正确计算。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [配置目标和任务](../msbuild/configuring-targets-and-tasks.md)

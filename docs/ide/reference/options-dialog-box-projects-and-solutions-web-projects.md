@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: b393291ccb316b62b2a056b55ca902781196b637
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "76114481"
 ---
 # <a name="options-dialog-box-projects-and-solutions-web-projects"></a>选项对话框、项目和解决方案、Web 项目
@@ -33,7 +33,7 @@ ms.locfileid: "76114481"
 
 如果已设置此选项，则在尝试运行存在编译错误的 Web 应用程序时，将发出警告。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [“选项”对话框 ->“项目和解决方案”](projects-and-solutions-options-dialog-box.md)
 - [“选项”对话框 ->“项目和解决方案”->“生成和运行”](options-dialog-box-projects-and-solutions-web-projects.md)

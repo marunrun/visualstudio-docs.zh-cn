@@ -15,15 +15,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 89dcb8bddf2c92406ad5eff952d1f4050d7f9262
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75593273"
 ---
 # <a name="diagnosing-task-failures"></a>诊断任务故障
 
-<xref:Microsoft.Build.Utilities.ToolTask> 派生类运行工具进程（如果任务未记录更具体的错误，则会返回非零退出代码）时，会发出 `MSB6006`。
+`MSB6006` 派生类运行工具进程（如果任务未记录更具体的错误，则会返回非零退出代码）时，会发出 <xref:Microsoft.Build.Utilities.ToolTask>。
 
 ## <a name="identifying-the-failing-task"></a>识别失败的任务
 

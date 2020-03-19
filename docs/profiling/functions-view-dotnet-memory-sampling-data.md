@@ -12,10 +12,10 @@ monikerRange: vs-2017
 ms.workload:
 - dotnet
 ms.openlocfilehash: cce13da0c2dfee61d70da8bc288d1f0ff4690deb
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74780034"
 ---
 # <a name="functions-view---net-memory-sampling-data"></a>“函数”视图 - .NET 内存采样数据
@@ -40,7 +40,7 @@ ms.locfileid: "74780034"
 |**独占字节数**|此函数而非其子函数分配的内存字节数。|
 |**独占字节数百分比**|分析运行期间分配的属于此函数的独占字节的所有内存字节数的百分比。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [“函数”视图 - 检测](../profiling/functions-view-dotnet-memory-instrumentation-data.md)
 - [“函数”视图](../profiling/functions-view-sampling-data.md)
 - [“函数”视图](../profiling/functions-view-instrumentation-data.md)

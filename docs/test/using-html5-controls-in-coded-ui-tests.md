@@ -8,10 +8,10 @@ ms.workload:
 - multiple
 author: mikejo5000
 ms.openlocfilehash: 13f5da784a43df5146a66ca868bb6add9a702906
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75585582"
 ---
 # <a name="using-html5-controls-in-coded-ui-tests"></a>在编码的 UI 测试中使用 HTML5 控件
@@ -20,7 +20,7 @@ ms.locfileid: "75585582"
 
 [!INCLUDE [coded-ui-test-deprecation](includes/coded-ui-test-deprecation.md)]
 
-**要求**
+**惠?**
 
 - Visual Studio Enterprise
 
@@ -72,7 +72,7 @@ ms.locfileid: "75585582"
 
 **搜索属性：** `HtmlVideo` 的搜索属性为 `Id`、`Name` 和 `Title`。
 
-**筛选器属性：** `HtmlVideo` 的筛选属性为 `Src`、`Poster``Class``ControlDefinition` 和 `TagInstance`。
+**筛选器属性：** `HtmlVideo` 的筛选器属性为 `Src`、`Poster`、`Class`、`ControlDefinition` 和 `TagInstance`。
 
 > [!NOTE]
 > 如果使用 -30s 或 +30s 标签对视频后退或快进，将聚合标签以定位到相应的时间。
@@ -82,7 +82,7 @@ ms.locfileid: "75585582"
 
 ![HTML5 进度条控件](../test/media/codedui_html5_progressbar.png)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [HTML 元素](https://developer.mozilla.org/docs/Web/HTML/Element)
 - [使用 UI 自动化来测试代码](../test/use-ui-automation-to-test-your-code.md)

@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: 7e78bd32bf9c21829adeb04a22cd30abb47a3379
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75596133"
 ---
 # <a name="how-to-specify-an-application-icon-visual-basic-c"></a>如何：指定应用程序图标（Visual Basic、C#）
@@ -31,15 +31,15 @@ ms.locfileid: "75596133"
 
 1. 在“解决方案资源管理器”中，选择项目节点（而非“解决方案”节点）。  
 
-1. 在菜单栏上，选择“项目” > “属性”   。
+1. 在菜单栏上，选择“项目” **“属性”**  >   。
 
 1. 当“项目设计器”出现时，选择“应用程序”选项卡。  
 
-1. (Visual Basic)&mdash;在“图标”列表中，选择一个图标 (.ico) 文件    。
+1. (Visual Basic)**在“图标”列表中，选择一个图标 (.ico) 文件**&mdash;   。
 
     C#  &mdash;在“图标”  列表附近，选择“浏览...>” **\<** 按钮，然后浏览到所需图标文件的位置。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [项目设计器的应用程序页 (Visual Basic)](../ide/reference/application-page-project-designer-visual-basic.md)
 - [项目设计器的应用程序页 (C#)](../ide/reference/application-page-project-designer-csharp.md)

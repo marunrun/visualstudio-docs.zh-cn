@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 77a6a33a1dde4d779a56c9ee559ecfd3b20dfbfb
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75585465"
 ---
 # <a name="create-a-new-project-in-visual-studio"></a>在 Visual Studio 中创建新项目
@@ -24,7 +24,7 @@ ms.locfileid: "75585465"
 
 ## <a name="open-the-new-project-dialog"></a>打开“新建项目”对话框
 
-可通过多种方式在 Visual Studio 2017 中创建新项目。 在起始页上，可在“搜索项目模板”框中键入项目模板的名称，或选择“创建新项目”链接打开“新建项目”对话框    。 除了通过起始页，也可以选择菜单栏上的“文件” > “新建” > “项目”，或单击工具栏上的“新建项目”按钮     。
+可通过多种方式在 Visual Studio 2017 中创建新项目。 在起始页上，可在“搜索项目模板”框中键入项目模板的名称，或选择“创建新项目”链接打开“新建项目”对话框    。 除了通过起始页，也可以选择菜单栏上的“文件” **“新建”** “项目”，或单击工具栏上的“新建项目”按钮 >    >    。
 
 ![起始页和“文件”>“新建”>“项目”](./media/vside-newproject1.png)
 
@@ -59,7 +59,7 @@ ms.locfileid: "75585465"
 
 ![从 VS 2019 的“启动”窗口创建新项目](media/vs-2019/start-window-create-new-project.png)
 
-如果已打开 Visual Studio 开发环境，在菜单栏上选择“文件”>“新建”>“项目”，或者单击工具栏上的“新建项目”按钮即可创建新项目     。
+如果已打开 Visual Studio 开发环境，在菜单栏上选择“文件” **“新建”** “项目”，或者单击工具栏上的“新建项目”按钮即可创建新项目>  >   。
 
 ![Visual Studio 2019 中的“新建项目”按钮](media/vs-2019/new-project-button.png)
 
@@ -97,8 +97,8 @@ ms.locfileid: "75585465"
 
 ## <a name="add-additional-projects-to-a-solution"></a>向解决方案添加其他项目
 
-若要向解决方案添加其他项目，请右键单击“解决方案资源管理器”中的解决方案节点，然后选择“添加” > “新建项目”    。
+若要向解决方案添加其他项目，请右键单击“解决方案资源管理器”中的解决方案节点，然后选择“添加” **“新建项目”**   >   。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [创建解决方案和项目](creating-solutions-and-projects.md)

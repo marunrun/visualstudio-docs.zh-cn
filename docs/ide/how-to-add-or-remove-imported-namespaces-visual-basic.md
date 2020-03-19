@@ -1,5 +1,5 @@
 ---
-title: 如何：添加或删除导入的命名空间 (Visual Basic)
+title: 如何：添加或移除导入的命名空间 (Visual Basic)
 ms.date: 06/21/2017
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,15 +15,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: e636969164c4cf2526bb85add95e7cfe02ce6176
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75593325"
 ---
-# <a name="how-to-add-or-remove-imported-namespaces-visual-basic"></a>如何：添加或删除导入的命名空间 (Visual Basic)
+# <a name="how-to-add-or-remove-imported-namespaces-visual-basic"></a>如何：添加或移除导入的命名空间 (Visual Basic)
 
-通过导入命名空间，可在代码中使用来自该命名空间的元素，而不必完全限定该元素。 例如，若要访问 `System.Messaging.MessageQueue` 类中的 `Create` 方法，可以导入 `System.Messaging` 命名空间，并引用代码中所需的元素作为 `MessageQueue.Create`。
+通过导入命名空间，可在代码中使用来自该命名空间的元素，而不必完全限定该元素。 例如，若要访问 `Create` 类中的 `System.Messaging.MessageQueue` 方法，可以导入 `System.Messaging` 命名空间，并引用代码中所需的元素作为 `MessageQueue.Create`。
 
 导入的命名空间托管在“项目设计器”的“引用”页上   。 在此对话框中指定的导入会直接传递到编译器 (/imports) 中，并应用到项目的所有文件  。 使用 `Imports` 语句在单个源代码文件中使用命名空间。
 
@@ -76,6 +76,6 @@ ms.locfileid: "75593325"
 
 5. 单击“更新用户导入”按钮，更新“导入的命名空间”列表中的命名空间   。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [管理项目中的引用](../ide/managing-references-in-a-project.md)

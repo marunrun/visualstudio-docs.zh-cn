@@ -14,13 +14,13 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: de6d6325b1e518146768798c773754c091861aa8
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74775909"
 ---
-# <a name="how-to-exclude-or-include-short-functions-from-instrumentation"></a>如何：在检测中排除或包括短函数
+# <a name="how-to-exclude-or-include-short-functions-from-instrumentation"></a>如何：在检测中排除或添加短函数
 默认情况下，分析工具会从检测中排除*小型函数*。 小型函数是不执行任何函数调用的短函数。 排除这些小型函数会减少检测开销，从而提高检测速度。 排除小型函数还能减少性能分析数据文件 (.vsp) 的大小和分析所需的时间  。 如果排除小型函数，花费在小型函数上的时间会减少，从而减少其父函数的独占和非独占时间。 可以在检测中排除或包括小型函数，具体在以下过程中说明。
 
 ### <a name="to-exclude-or-include-short-functions-from-instrumentation"></a>在检测中排除或包括短函数
@@ -33,12 +33,12 @@ ms.locfileid: "74775909"
 
 3. 若要从检测中排除短函数，请选择“从检测中排除短函数”  。 此为默认设置。
 
-     -或-
+     或
 
      若要在检测中包括短函数，请清除“从检测中排除短函数”  。
 
 4. 单击 **“确定”** 。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [控制数据收集](../profiling/controlling-data-collection.md)
 - [性能会话属性](../profiling/performance-session-properties.md)

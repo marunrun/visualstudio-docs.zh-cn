@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: fd3eaf1df585ac9c95355c0677934bee1ba3c09a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62830819"
 ---
 # <a name="measure-mode-onoff"></a>打开/关闭度量模式
@@ -24,7 +24,7 @@ ms.locfileid: "62830819"
 
  可以重复执行度量过程，但只显示最新的度量操作。 再次单击“度量”按钮即可关闭度量模式。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [管理通道](../profiling/manage-channels.md)
 - [缩放控件（线程视图）](../profiling/zoom-control-threads-view.md)
-- [线程视图](../profiling/threads-view-parallel-performance.md)
+- [“线程”视图](../profiling/threads-view-parallel-performance.md)

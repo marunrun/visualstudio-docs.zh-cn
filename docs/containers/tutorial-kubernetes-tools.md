@@ -9,10 +9,10 @@ ms.technology: vs-azure
 ms.workload:
 - azure
 ms.openlocfilehash: f5868f97301eba62d16ea68cdaa0c97c8e20edd1
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75916948"
 ---
 # <a name="get-started-with-visual-studio-kubernetes-tools"></a>Visual Studio Kubernetes 工具入门
@@ -21,7 +21,7 @@ Visual Studio Kubernetes 工具有助于简化面向 Kubernetes 的容器化应�
 
 本教程介绍如何使用 Visual Studio 将 Kubernetes 支持添加到项目并将其发布到 AKS。 如果主要需求是使用 [Azure Dev Spaces](/azure/dev-spaces/) 来调试和测试 AKS 中运行的项目，则可以改为转到 [Azure Dev Spaces 教程](/azure/dev-spaces/get-started-netcore-visualstudio)。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 若要利用此新的功能，将需要以下各项：
 
@@ -81,7 +81,7 @@ Visual Studio Kubernetes 工具有助于简化面向 Kubernetes 的容器化应�
 
 ## <a name="add-kubernetes-support-to-an-existing-project"></a>将 Kubernetes 支持添加到现有项目
 
-或者可将 Kubernetes 支持添加到现有 ASP.NET Core web 应用程序项目。 为此，请右键单击该项目，然后选择“添加” > “容器业务流程协调程序支持”   。
+或者可将 Kubernetes 支持添加到现有 ASP.NET Core web 应用程序项目。 为此，请右键单击该项目，然后选择“添加” **“容器业务流程协调程序支持”**  >   。
 
 ::: moniker range="vs-2017"
 

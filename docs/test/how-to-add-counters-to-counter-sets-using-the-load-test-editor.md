@@ -11,10 +11,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: b83d9c3624a4a268bfeba8a02b224fb9813ad7d1
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75594323"
 ---
 # <a name="how-to-add-counters-to-counter-sets-using-the-load-test-editor"></a>如何：使用负载测试编辑器向计数器集中添加计数器
@@ -26,7 +26,7 @@ ms.locfileid: "75594323"
 > [!NOTE]
 > 如果负载测试分布在多台远程计算机之间，则会将控制器和代理计数器映射到控制器和代理计数器集中。 有关如何在负载测试中使用远程计算机的详细信息，请参阅[测试控制器和测试代理](configure-test-agents-and-controllers-for-load-tests.md)。
 
-在“负载测试编辑器”中管理计数器。  已添加到测试中的计数器集会出现在负载测试的“计数器集”节点中。  创建负载测试后，可以向现有的计数器集中添加新的计数器。
+在“负载测试编辑器”中管理计数器  。 已添加到测试中的计数器集会出现在负载测试的“计数器集”节点中。  创建负载测试后，可以向现有的计数器集中添加新的计数器。
 
 ## <a name="to-add-counters-to-a-counter-set"></a>向计数器集添加计数器
 
@@ -62,7 +62,7 @@ ms.locfileid: "75594323"
     > [!NOTE]
     > 还可以通过选择现有计数器或计数器类别，选择“复制”，然后将它粘贴到另一计数器集节点，从而向计数器集添加计数器。 可以删除那些复制了但不需要的多余计数器。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [为负载测试中的计算机指定计数器集和阈值规则](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md)
 - [配置负载测试运行设置](../test/configure-load-test-run-settings.md)

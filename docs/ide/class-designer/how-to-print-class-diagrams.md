@@ -1,5 +1,5 @@
 ---
-title: 如何：打印类图（类设计器）
+title: 如何：打印类关系图（类设计器）
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: f259a36cb35b69954d99a2104903fb973930af42
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75596692"
 ---
 # <a name="how-to-print-class-diagrams"></a>如何：打印类图
@@ -30,7 +30,7 @@ ms.locfileid: "75596692"
 
 随即将打印整个类图。 可能需要调整“页面设置”  对话框中的设置，以便按适当大小进行打印。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [如何：将类图元素复制到 Microsoft Office 文档](how-to-copy-class-diagram-elements-to-a-microsoft-office-document.md)
 - [如何：将类图作为图像导出](how-to-export-class-diagrams-as-images.md)

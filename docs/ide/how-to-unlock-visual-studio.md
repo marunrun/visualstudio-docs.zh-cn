@@ -12,10 +12,10 @@ ms.workload:
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
 ms.openlocfilehash: 8e11d77a94c7c1d3d7b038ecea1a6c61646e371f
-ms.sourcegitcommit: b2fc9ac7d73c847508f6ed082bed026476bb3955
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/05/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77027582"
 ---
 # <a name="extend-a-trial-version-or-update-a-license"></a>扩展试用版或更新许可证
@@ -66,7 +66,7 @@ ms.locfileid: "77027582"
 
 ## <a name="update-an-expired-license"></a>更新已过期的许可证
 
-订阅过期后，将不再具有 Visual Studio 的访问权限，必须续订或添加另一个具有订阅的帐户。 若要查看有关正在使用的许可证的详细信息，请转到“文件” > “帐户设置”，然后在该对话框的右侧查看许可证信息   。 如果用户拥有另一个与不同的帐户关联的订阅，请通过选择“添加帐户”链接，将该帐户添加到对话框左侧的“所有帐户”列表中   。
+订阅过期后，将不再具有 Visual Studio 的访问权限，必须续订或添加另一个具有订阅的帐户。 若要查看有关正在使用的许可证的详细信息，请转到“文件” **“帐户设置”，然后在该对话框的右侧查看许可证信息** >   。 如果用户拥有另一个与不同的帐户关联的订阅，请通过选择“添加帐户”链接，将该帐户添加到对话框左侧的“所有帐户”列表中   。
 
 ## <a name="get-support"></a>获取支持
 
@@ -75,7 +75,7 @@ ms.locfileid: "77027582"
 * 使用[报告问题](how-to-report-a-problem-with-visual-studio.md)工具报告产品问题。
 * 在[订阅支持 FAQ](https://visualstudio.microsoft.com/subscriptions/support/) 中找到有关订阅、帐户和计费的问题解答。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 * [登录 Visual Studio](../ide/signing-in-to-visual-studio.md)
 * [比较 Visual Studio 版本](https://visualstudio.microsoft.com/vs/compare/)

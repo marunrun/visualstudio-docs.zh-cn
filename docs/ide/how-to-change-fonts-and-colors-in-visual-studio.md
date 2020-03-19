@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 592b8bb11fa5ea9cf18cfbd5f28aad4c487bedee
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75588871"
 ---
 # <a name="how-to-change-fonts-and-colors-in-visual-studio"></a>如何：在 Visual Studio 中更改字体和颜色
@@ -23,13 +23,13 @@ ms.locfileid: "75588871"
 在 Visual Studio 中，你可以使用多种方式来自定义 IDE 框架和工具窗口的颜色。
 
 > [!TIP]
-> 有关如何更改代码编辑器颜色的信息，请参见[如何：更改编辑器中的字体和颜色](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md)。
+> 有关如何更改代码编辑器的颜色的信息，请参阅[如何：更改编辑器中的字体和颜色](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md)。
 
 ## <a name="change-the-color-theme-of-the-ide"></a>更改 IDE 的颜色主题
 
-1. 在菜单栏上，依次选择“工具” > “选项”   。
+1. 在菜单栏上，依次选择“工具” **“选项”**  >   。
 
-1. 在选项列表中，选择“环境” > “常规”   。
+1. 在选项列表中，选择“环境” **“常规”**  >   。
 
 1. 在“颜色主题”列表中，选择默认的“蓝色”主题，或选择“深色”或“浅色”     。
 
@@ -41,7 +41,7 @@ ms.locfileid: "75588871"
 
 ## <a name="use-windows-high-contrast-colors"></a>使用 Windows 高对比度颜色
 
-选择左 Alt+左 Shift+PrtScn 键。   
+选择左 Alt**左 Shift**PrtScn 键。+  + 
 
 > [!WARNING]
 > 此选项为当前计算机上的所有应用程序和 UI 设置了高对比度。
@@ -52,9 +52,9 @@ ms.locfileid: "75588871"
 
 ### <a name="to-change-the-font-and-size-of-all-text-in-the-ide"></a>更改 IDE 中所有文本的字体和大小
 
-1. 在菜单栏上，依次选择“工具” > “选项”   。
+1. 在菜单栏上，依次选择“工具” **“选项”**  >   。
 
-1. 在选项列表中，选择“环境” > “字体和颜色”   。
+1. 在选项列表中，选择“环境” **“字体和颜色”**  >   。
 
 1. 在“显示以下对象的设置”列表中，选择“环境字体”   。
 
@@ -65,7 +65,7 @@ ms.locfileid: "75588871"
 
 1. 在“大小”列表中，选择文本大小，然后选择“确定”按钮   。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Studio 的辅助功能](../ide/reference/accessibility-features-of-visual-studio.md)
 - [如何：更改编辑器中的字体和颜色](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md)

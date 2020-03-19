@@ -10,10 +10,10 @@ author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.openlocfilehash: f4caebfdc4e61b683e0f1407d1522f6da2328fcf
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75591068"
 ---
 # <a name="how-to-create-project-templates"></a>如何：创建项目模板
@@ -41,7 +41,7 @@ ms.locfileid: "75591068"
 
    项目会导出到一个 .zip 文件中，并放在指定的输出位置，还可以导入到 Visual Studio（如果选择）  。
 
-若要在“新建项目”对话框中找到模板，请展开“已安装”，然后展开 .vstemplate 文件中与 `ProjectType` 元素对应的类别    。 例如，默认情况下，包含 `<ProjectType>CSharp</ProjectType>` 的 .vstemplate 文件显示在“已安装” > “Visual C#”下    。 可将模板组织到项目类型的子目录中，只需在该目录中创建一个文件夹，然后将模板的 .zip 文件放入其中即可  。 有关详细信息，请参阅[如何：查找和组织模板](../ide/how-to-locate-and-organize-project-and-item-templates.md)。
+若要在“新建项目”对话框中找到模板，请展开“已安装”，然后展开 .vstemplate 文件中与  **元素对应的类别**  `ProjectType`  。 例如，默认情况下，包含  *的 .vstemplate 文件显示在“已安装”* “Visual C#”下`<ProjectType>CSharp</ProjectType>`   >   。 可将模板组织到项目类型的子目录中，只需在该目录中创建一个文件夹，然后将模板的 .zip 文件放入其中即可  。 有关详细信息，请参阅[如何：查找和组织模板](../ide/how-to-locate-and-organize-project-and-item-templates.md)。
 
 ::: moniker-end
 
@@ -61,7 +61,7 @@ ms.locfileid: "75591068"
 
 如果已安装 Visual Studio SDK，可以使用“VSIX 项目”模板将完成的模板包装到 VSIX 文件中，供部署使用  。 有关详细信息，请参阅 [VSIX 项目模板入门](../extensibility/getting-started-with-the-vsix-project-template.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [创建项目和项模板](../ide/creating-project-and-item-templates.md)
 - [如何：创建项模板](../ide/how-to-create-item-templates.md)

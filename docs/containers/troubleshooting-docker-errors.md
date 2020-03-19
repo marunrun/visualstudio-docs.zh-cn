@@ -12,10 +12,10 @@ ms.workload: multiple
 ms.date: 01/27/2020
 ms.author: ghogen
 ms.openlocfilehash: d8aa3028a12bcfb49f2663b2bea688baf14fd7f2
-ms.sourcegitcommit: b2fc9ac7d73c847508f6ed082bed026476bb3955
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/05/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77027271"
 ---
 # <a name="troubleshoot-visual-studio-development-with-docker"></a>使用 Docker 排查 Visual Studio 开发方面的问题
@@ -83,7 +83,7 @@ net localgroup docker-users DOMAIN\username /add
 
 ## <a name="low-disk-space"></a>磁盘空间不足
 
-默认情况下，Docker 将映像存储在 %ProgramData%/Docker/ 文件夹中，该文件夹通常位于系统驱动器 *C:\ProgramData\Docker\*  。 若要防止映像占用系统驱动器上的宝贵空间，可以更改映像文件夹位置。  从任务栏上的 Docker 图标，打开“Docker 设置”，选择“守护程序”，并从“基本”切换到“高级”    。 在编辑窗格中，添加带有 Docker 映像所需位置值的 `graph` 属性设置：
+默认情况下，Docker 将映像存储在 %ProgramData%/Docker/ 文件夹中，该文件夹通常位于系统驱动器 *C:\ProgramData\Docker  \*。 若要防止映像占用系统驱动器上的宝贵空间，可以更改映像文件夹位置。  从任务栏上的 Docker 图标，打开“Docker 设置”，选择“守护程序”，并从“基本”切换到“高级”    。 在编辑窗格中，添加带有 Docker 映像所需位置值的 `graph` 属性设置：
 
 ```json
     "graph": "D:\\mypath\\images"

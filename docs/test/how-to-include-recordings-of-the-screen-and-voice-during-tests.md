@@ -9,10 +9,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 94d8fdc2765b3a073ca481d09bc38dfbc9b38f2c
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75589014"
 ---
 # <a name="how-to-include-recordings-of-the-screen-and-voice-during-tests-using-test-settings"></a>如何：使用测试设置在测试期间包括屏幕和语音录制
@@ -50,18 +50,18 @@ ms.locfileid: "75589014"
 
 6. 在“屏幕录制质量”下，配置以下下拉列表选项  ：
 
-    1. **帧速率：** 指定要在屏幕和语音录制中使用的每秒帧数。 默认值为 4 帧/每秒。 可指定介于 2 和 20 之间的值。
+    1. **帧速率**：指定要在屏幕和语音录制中使用的每秒帧数。 默认值为 4 帧/每秒。 可指定介于 2 和 20 之间的值。
 
-    2. **比特率：** 指定要在屏幕和语音录制器中使用的每秒 KB 数。 默认值为 512。 可指定介于 512 和 10,000 之间的值。
+    2. **比特率**：指定要在屏幕和语音录制器中使用的每秒 KB 数。 默认值为 512。 可指定介于 512 和 10,000 之间的值。
 
-    3. **品质 (1-100)：** 可以通过选择介于 1 和 100 之间的范围来指定屏幕和语音录制的品质。 默认值为 50（中等范围）。
+    3. **品质(1-100)** ：可以通过选择介于 1 和 100 之间的范围来指定屏幕和语音录制的品质。 默认值为 50（中等范围）。
 
 7. 选择 **“确定”** 。 现在已为测试设置配置和保存了诊断跟踪收集器设置。
 
     > [!TIP]
     > 若要重置此诊断数据适配器的配置，请为 Visual Studio 选择“重置为默认配置”，并为 Microsoft 测试管理器选择“重置为默认值”   。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在测试时收集诊断数据 (Azure Test Plans)](/azure/devops/test/collect-diagnostic-data?view=vsts)
 - [在手动测试中收集诊断数据 (Azure Test Plans)](/azure/devops/test/mtm/collect-more-diagnostic-data-in-manual-tests?view=vsts)

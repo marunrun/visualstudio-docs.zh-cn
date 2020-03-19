@@ -8,10 +8,10 @@ ms.workload:
 - uwp
 author: corob-msft
 ms.openlocfilehash: 540ff59838343988e7a27f42f8a10d723de1f649
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77274454"
 ---
 # <a name="how-to-test-a-c-dll"></a>如何测试 C++ DLL
@@ -26,7 +26,7 @@ ms.locfileid: "77274454"
 
 ::: moniker range="vs-2019"
 
-首先创建新的测试项目。 在“文件”菜单上，选择“新建” > “项目”    。 在“新建项目”对话框中，在搜索框中键入“测试”，然后将“语言”设置为 C++   。 然后从项目模板列表中选择“单元测试应用(通用 Windows)”  。
+首先创建新的测试项目。 在“文件”菜单上，选择“新建” **“项目”**   >   。 在“新建项目”对话框中，在搜索框中键入“测试”，然后将“语言”设置为 C++   。 然后从项目模板列表中选择“单元测试应用(通用 Windows)”  。
 
    ![创建新的 UWP 测试项目](media/vs-2019/cpp-new-uwp-test-project-vs2019.png)
 
@@ -34,7 +34,7 @@ ms.locfileid: "77274454"
 
 ::: moniker range="vs-2017"
 
-首先创建新的测试项目。 在“文件”菜单上，选择“新建” > “项目”    。 在“新建项目”对话框中，依次展开“已安装” > “Visual C++”，然后选择“Windows 通用”     。 然后从项目模板列表中选择“单元测试应用(通用 Windows)”  。
+首先创建新的测试项目。 在“文件”菜单上，选择“新建” **“项目”**   >   。 在“新建项目”对话框中，依次展开“已安装” **“Visual C++”，然后选择“Windows 通用”**   >    。 然后从项目模板列表中选择“单元测试应用(通用 Windows)”  。
 
 ::: moniker-end
 
@@ -56,7 +56,7 @@ ms.locfileid: "77274454"
 
     - 使用 `TEST_CLASS(YourClassName){...}`将测试方法分组为各个类。
 
-         当测试运行时，将为每个测试类创建一个实例。 测试方法以未指定的顺序进行调用。 可以定义在每个模块、类或方法之前和之后调用的特殊方法。 有关详细信息，请参阅[使用 Microsoft.VisualStudio.TestTools.CppUnitTestFramework](how-to-use-microsoft-test-framework-for-cpp.md)。
+         运行测试时，将为每个测试类创建一个实例。 测试方法以未指定的顺序进行调用。 可以定义在每个模块、类或方法之前和之后调用的特殊方法。 有关详细信息，请参阅[使用 Microsoft.VisualStudio.TestTools.CppUnitTestFramework](how-to-use-microsoft-test-framework-for-cpp.md)。
 
 ## <a name="Verify_that_the_tests_run_in_Test_Explorer"></a> 验证测试是否可在资源管理器中运行
 
@@ -130,7 +130,7 @@ ms.locfileid: "77274454"
 
     2. 在“RooterLib 属性页”对话框中，展开“配置属性”，展开“C++”并选择“预处理器”     。
 
-    3. 从“预处理器定义”列表选择“\<编辑...>”，然后在“预处理器定义”对话框中添加 `ROOTERLIB_EXPORTS`    。
+    3. 从“预处理器定义”列表选择“**编辑...>”，然后在“预处理器定义”对话框中添加 \<**  `ROOTERLIB_EXPORTS`  。
 
 4. 添加已声明函数的最小实现。 打开 *RooterLib.cpp* 并添加以下代码：
 
@@ -152,7 +152,7 @@ ms.locfileid: "77274454"
 
 1. 将 RooterLib 添加到 RooterLibTests 项目。
 
-   1. 在解决方案资源管理器中，选择“RooterLibTests”项目，然后选择快捷菜单上的“添加” > “引用”     。
+   1. 在解决方案资源管理器中，选择“RooterLibTests”项目，然后选择快捷菜单上的“添加” **“引用”**    >   。
 
    1. 在“添加引用”对话框中，选择“项目”   。 然后选择“RouterLib”  项。
 

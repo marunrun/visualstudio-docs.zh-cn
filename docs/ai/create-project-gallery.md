@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.workload:
 - multiple
 ms.openlocfilehash: d5e73757e10eec5e7e8c290772822f49129fd1e5
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75915904"
 ---
 # <a name="create-an-ai-project-from-the-azure-machine-learning-gallery-in-visual-studio"></a>在 Visual Studio 中通过 Azure 机器学习库创建 AI 项目
@@ -39,15 +39,15 @@ Azure 机器学习与 Visual Studio Tools for AI 集成在一起。 可以使用
 
 4. 对于本快速入门，选择“使用 TensorFlow 的 MNIST”示例，然后单击“安装”   。 提供以下内容：
 
-   - **资源组**：存储元数据的 Azure 资源组
+   - **资源组**：用于存储元数据的 Azure 资源组
    - **帐户**：Azure 机器学习试验帐户
    - **工作区**：Azure 机器学习工作区
    - **项目类型**：机器学习框架。 在此例中选择“TensorFlow” 
    - **添加到解决方案**：确定是添加到当前 Visual Studio 解决方案还是创建并打开新解决方案
-   - **项目路径**：保存代码的位置
+   - **项目路径**：用于保存代码的位置
    - **项目名称**：键入 TensorFlowMNIST 
 
-   ![使用 Python 应用程序模板时生成的项目](media/create-project-gallery/new-AzureSampleProject.png)
+   ![使用“Python 应用程序”模板时生成的项目](media/create-project-gallery/new-AzureSampleProject.png)
 
 5. Visual Studio 随即创建项目文件（磁盘上的 `.pyproj` 文件）以及示例中定义的其他文件。 对于“MNIST”模板，项目包含多个文件。
 

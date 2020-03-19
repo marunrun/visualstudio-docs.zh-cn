@@ -8,10 +8,10 @@ author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.openlocfilehash: 171cdffa569b342bdbc7dd0da1c8da218e1d622c
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75589885"
 ---
 # <a name="windows-forms-designer-overview"></a>Windows 窗体设计器概述
@@ -35,7 +35,7 @@ Visual Studio 中的 Windows 窗体设计器为创建基于 Windows 窗体的应
 > [!NOTE]
 > 使用 Windows 窗体设计器（而不是“资源编辑器”）更改窗体的资源 (.resx  ) 文件。 如果编辑基于窗体的 .resx 文件，将会看到一个警告，说明在“资源编辑器”中所做的更改可能会丢失。 这是因为 Windows 窗体设计器会生成 .resx 文件。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Windows 窗体概述](/dotnet/framework/winforms/windows-forms-overview)
 - [Windows 窗体控件](/dotnet/framework/winforms/controls/)

@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 6b7848189c866481e6e97d05d95b5fb97a3d4893
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77633910"
 ---
 # <a name="how-to-clean-a-build"></a>如何：清理生成
@@ -34,7 +34,7 @@ ms.locfileid: "77633910"
 
      `<builtdir>BuiltApp</builtdir>`
 
-2. 如果目录不存在，使用 [MakeDir](../msbuild/makedir-task.md) 任务创建目录。 例如：
+2. 如果目录不存在，使用 [MakeDir](../msbuild/makedir-task.md) 任务创建目录。 例如:
 
      ```xml
      <MakeDir Directories = "$(builtdir)"
@@ -47,7 +47,7 @@ ms.locfileid: "77633910"
 
 #### <a name="to-remove-a-directory-and-all-files-contained-in-the-directory"></a>删除目录和目录中包含的所有文件
 
-- 使用 `RemoveDir` 任务删除目录。 例如：
+- 使用 `RemoveDir` 任务删除目录。 例如:
 
      `<RemoveDir Directories="$(builtdir)" />`
 
@@ -55,7 +55,7 @@ ms.locfileid: "77633910"
 
  以下代码示例项目包含一个新目标 `Clean`，该目标使用 `RemoveDir` 任务删除目录和该目录中包含的所有文件和目录。 此外，在此示例中，`Compile` 目标还将为清理生成时删除的输出项创建一个单独的目录。
 
- 由于 `Compile` 被定义为默认目标，因此，除非另外指定一个或多个目标，否则会自动使用该默认目标。 使用命令行开关 -target  指定其他目标。 例如：
+ 由于 `Compile` 被定义为默认目标，因此，除非另外指定一个或多个目标，否则会自动使用该默认目标。 使用命令行开关 -target  指定其他目标。 例如:
 
  `msbuild <file name>.proj -target:Clean`
 
@@ -103,7 +103,7 @@ ms.locfileid: "77633910"
 </Project>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [MakeDir 任务](../msbuild/makedir-task.md)
 - [RemoveDir 任务](../msbuild/removedir-task.md)

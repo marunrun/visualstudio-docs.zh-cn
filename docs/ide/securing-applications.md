@@ -1,5 +1,5 @@
 ---
-title: 安全性
+title: 安全
 ms.date: 06/01/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 87f06746901baaaf14f91032f8968a0d99fc20c2
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75595444"
 ---
 # <a name="secure-applications"></a>保护应用程序
@@ -38,7 +38,7 @@ ms.locfileid: "75595444"
 - [Dotfuscator](dotfuscator/index.md) 免费提供，有助于防止 .NET 程序集遭受反向工程和未经授权的使用，如未经授权的调试。
 - [强名称签名](managing-assembly-and-manifest-signing.md)可用于唯一标识软件组件，从而防止名称欺骗。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [.NET 中的安全性](/dotnet/standard/security/index)
 - [Azure 安全性](/azure/security/)

@@ -8,10 +8,10 @@ ms.topic: conceptual
 ms.workload:
 - multiple
 ms.openlocfilehash: 0981a276a21e1b3f816c6a182df29f1c4adb0d1c
-ms.sourcegitcommit: 57bc1c3887838d707c13feff72a677b3bad3be4b
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "72777441"
 ---
 # <a name="create-an-ai-project-from-existing-code"></a>通过现有代码创建 AI 项目
@@ -40,6 +40,6 @@ ms.locfileid: "72777441"
 > [!div class="nextstepaction"]
 > [教程：在 Visual Studio 中使用 Python](../python/tutorial-working-with-python-in-visual-studio-step-00-installation.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [手动标识现有的 Python 环境](../python/managing-python-environments-in-visual-studio.md#manually-identify-an-existing-environment)

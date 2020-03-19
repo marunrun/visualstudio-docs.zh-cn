@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: 134a5b7cd4bb0ffc9c00a41df12ed196dd2a9212
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "76115135"
 ---
 # <a name="how-to-specify-build-events-c"></a>如何：指定生成事件 (C#)
@@ -32,7 +32,7 @@ ms.locfileid: "76115135"
 
 1. 在“解决方案资源管理器”中，选择要为其指定生成事件的项目  。
 
-2. 在“项目”菜单上，单击“属性”   。
+2. 在 **“项目”** 菜单上，单击 **“属性”** 。
 
 3. 选择“生成事件”选项卡  。
 
@@ -174,7 +174,7 @@ ms.locfileid: "76115135"
    <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
    ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [项目设计器的“生成事件”页 (C#)](../ide/reference/build-events-page-project-designer-csharp.md)
 - [预生成事件/生成后事件命令行对话框](../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md)

@@ -14,17 +14,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: e5eb8c320a3190121d95395f7b359aa9ed978408
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75597303"
 ---
 # <a name="toolbox-components-tab"></a>工具箱，“组件”选项卡
 
 显示可以添加到适用于 Windows 窗体的 Visual Basic 和 C# 设计器的组件。 除 Visual Studio 附带的 .NET 组件（如 <xref:System.Messaging.MessageQueue> 和 <xref:System.Diagnostics.EventLog> 组件）外，还可向此选项卡添加自己的组件或第三方组件。
 
-要显示此选项卡，请打开 Windows 窗体设计器。 选择“视图” > 工具箱”   。 在“工具箱”中，选择“组件”选项卡   。
+要显示此选项卡，请打开 Windows 窗体设计器。 选择“视图”**工具箱”**  >   。 在“工具箱”中，选择“组件”选项卡   。
 
 ## <a name="components"></a>组件
 
@@ -68,7 +68,7 @@ ms.locfileid: "75597303"
 
 创建 <xref:System.Diagnostics.PerformanceCounter> 组件实例，该实例可用于与 Windows 性能计数器进行交互，包括创建新类别和实例、从计数器读取值以及对计数器数据执行计算。
 
-**Process**
+**处理**
 
 创建 <xref:System.Diagnostics.Process> 组件实例，可用于停止、启动和操作与系统上的进程关联的数据。
 
@@ -85,9 +85,9 @@ ms.locfileid: "75597303"
 创建 <xref:System.Windows.Forms.Timer> 组件实例，该实例可用于向基于 Windows 的应用程序添加基于时间的功能。 有关详细信息，请参阅 [Timer 组件](/dotnet/framework/winforms/controls/timer-component-windows-forms)。
 
 > [!NOTE]
-> 此外，还有一个基于系统的 <xref:System.Timers.Timer>，可将其添加到“工具箱”。此 <xref:System.Timers.Timer> 针对服务器应用程序进行了优化，Windows 窗体 <xref:System.Windows.Forms.Timer> 最适合在 Windows 窗体上使用  。
+> 此外，还有一个基于系统的 <xref:System.Timers.Timer>，可将其添加到“工具箱”。此 **针对服务器应用程序进行了优化，Windows 窗体** 最适合在 Windows 窗体上使用<xref:System.Timers.Timer><xref:System.Windows.Forms.Timer>。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在 Windows 窗体上使用的控件](/dotnet/framework/winforms/controls/controls-to-use-on-windows-forms)
 - [“选择工具箱项”、“WPF 组件”](choose-toolbox-items-wpf-components.md)

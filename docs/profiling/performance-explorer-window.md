@@ -14,10 +14,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: a365892f606da90c608e43b7ccce73b902ec0e98
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74772434"
 ---
 # <a name="performance-explorer-window"></a>“性能资源管理器”窗口
@@ -50,7 +50,7 @@ ms.locfileid: "74772434"
 
 - **报告** - 显示为会话生成的探查器数据文件的名称。 右键单击“报告”  可添加现有报告或比较两个探查器数据文件。 右键单击报告名称可打开、删除或导出探查器数据文件。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [概述](../profiling/overviews-performance-tools.md)
 [配置性能会话](../profiling/configuring-performance-sessions.md)

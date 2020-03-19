@@ -10,15 +10,15 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 05efbba005a9455af3b9d2e8755b580a8af30d0a
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75584473"
 ---
 # <a name="how-to-add-context-parameters-to-a-load-test-run-setting"></a>如何：向负载测试运行设置中添加上下文参数
 
-在使用“新建负载测试向导”创建负载测试后，可以使用“负载测试编辑器”更改方案属性，以满足测试需求和目标   。
+在使用“新建负载测试向导”创建负载测试后，可以使用“负载测试编辑器”更改方案属性，以满足你的测试需求和目标。  
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
@@ -36,9 +36,9 @@ ms.locfileid: "75584473"
 
 此外，通过在不同的负载测试运行设置中使用相同的名称对一个上下文参数分配不同的值，可以使用不同的环境运行负载测试：
 
-- 企业暂存 Web 服务器运行设置：名为 `WebServer1=http://CorporateStagingWebServer` 的上下文参数
+- 公司临时 Web 服务器运行设置：名为 `WebServer1=http://CorporateStagingWebServer` 的上下文参数
 
-- 企业生产 Web 服务器运行设置：名为 `WebServer1=http://CorporateProductionWebServer` 的上下文参数
+- 公司生产 Web 服务器运行设置：名为 `WebServer1=http://CorporateProductionWebServer` 的上下文参数
 
   **从命令行更改运行设置**
 
@@ -60,16 +60,16 @@ ms.locfileid: "75584473"
 
      一个新上下文参数将添加到负载测试树中“运行设置”文件夹的“上下文参数”文件夹   。
 
-     \- 或 -
+     或
 
      如果运行设置已经包含“上下文参数”文件夹，则可以右键单击该文件夹，然后选择“添加上下文参数”   。
 
-4. 在“属性”窗口中，根据需要更改“名称”的值（例如，WebServer1）   。 在“属性”窗口中，将“值”更改为要使用的参数（例如 `http://CorporateStagingWebServer`）   。
+4. 在“属性”窗口中，根据需要更改“名称”的值（例如，WebServer1）   。 在“属性”窗口中，将“值”更改为要使用的参数（例如 **）**  `http://CorporateStagingWebServer`。
 
-5. （可选）重复步骤 3 至 5，并对“值”属性使用其他字符串（例如 `http://CorporateProductionWebServer`）  。
+5. （可选）重复步骤 3 至 5，并对“值”属性使用其他字符串（例如 **）** `http://CorporateProductionWebServer`。
 
 6. 选择你希望哪些运行设置处于活动状态。 打开运行设置上的快捷菜单并选择“设置为活动的”  。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [配置负载测试运行设置](../test/configure-load-test-run-settings.md)

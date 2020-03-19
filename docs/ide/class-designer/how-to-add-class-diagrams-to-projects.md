@@ -1,5 +1,5 @@
 ---
-title: 如何：向项目添加类图（类设计器）
+title: 如何：向项目中添加类图（类设计器）
 ms.date: 05/08/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 87a6c1e996d820724138b6bf38c6440193a4c26b
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75588832"
 ---
 # <a name="how-to-add-class-diagrams-to-projects"></a>如何：向项目添加类图
@@ -28,7 +28,7 @@ ms.locfileid: "75588832"
 
 如果尚未安装“类设计器”组件，请按照以下步骤进行安装  。
 
-1. 从 Windows 开始菜单中，或通过从 Visual Studio 中的菜单栏中选择“工具”   > “获取工具和功能”  ，打开“Visual Studio 安装程序”  。
+1. 从 Windows 开始菜单中，或通过从 Visual Studio 中的菜单栏中选择“工具”  **“获取工具和功能”**  > ，打开“Visual Studio 安装程序”  。
 
    “Visual Studio 安装程序”  随即打开。
 
@@ -42,7 +42,7 @@ ms.locfileid: "75588832"
 
 ## <a name="add-a-blank-class-diagram-to-a-project"></a>向项目中添加空白类图
 
-1. 在“解决方案资源管理器”  中，右键单击项目节点，并选择“添加”   > “新项”  。 或按 Ctrl+Shift+A。   
+1. 在“解决方案资源管理器”  中，右键单击项目节点，并选择“添加”   > “新项”  。 或按 Ctrl**Shift**A。+  + 
 
    “添加新项”  对话框随即打开。
 
@@ -59,7 +59,7 @@ ms.locfileid: "75588832"
 
 在“解决方案资源管理器”  中，打开类文件上下文菜单（右键单击），然后选择“查看类图”  。
 
-\- 或 -
+或
 
 在“类视图”  中，打开命名空间或类型上下文菜单，然后选择“查看类图”  。
 
@@ -75,7 +75,7 @@ ms.locfileid: "75588832"
 > [!NOTE]
 > 类设计器在 .NET Core 项目中不可用。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [如何：使用类设计器创建类型](how-to-create-types.md)
 - [如何：查看现有类型](how-to-view-existing-types.md)

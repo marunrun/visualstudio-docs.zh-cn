@@ -14,10 +14,10 @@ helpviewer_keywords:
 - template tagging, updating
 - template tags, updating
 ms.openlocfilehash: 37fa5449847eb4c093475df11a07decb31168f1f
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "73189541"
 ---
 # <a name="add-tags-to-project-templates"></a>向项目模板添加标签
@@ -93,7 +93,7 @@ Visual Studio 提供了一系列内置标签。 添加内置标签时，标签�
 
 以下列表显示在 Visual Studio 中可用的内置标签。 对应的值将显示在括号中。
 
-| 语言 | Platform | 项目类型 |
+| 语言 | 平台 | 项目类型 |
 | -- | -- | -- |
 | C++ (`cpp`) | Android (`android`) | 云 (`cloud`) |
 | C# (`csharp`) | Azure (`azure`) | 控制台 (`console`) |
@@ -145,7 +145,7 @@ Visual Studio 提供了一系列内置标签。 添加内置标签时，标签�
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
 - [创建项目和项模板](creating-project-and-item-templates.md)

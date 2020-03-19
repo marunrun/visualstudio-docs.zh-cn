@@ -8,17 +8,17 @@ ms.workload:
 - multiple
 author: corob-msft
 ms.openlocfilehash: 8a71b6d406b7507930a5d1a7ce593a296220d5a6
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77278650"
 ---
 # <a name="microsoftvisualstudiotesttoolscppunittestframework-api-reference"></a>Microsoft.VisualStudio.TestTools.CppUnitTestFramework API 参考
 
 本主题列出了 `Microsoft::VisualStudio::CppUnitTestFramework` 命名空间的公共成员。 使用这些 API 可编写基于 Microsoft 本机单元测试框架的 C++ 单元测试。 本主题末尾有一个[用法示例](#example)。
 
-标头和 lib 文件位于 \<Visual Studio 安装文件夹>\VC\Auxiliary\VS\UnitTest  下。
+标头和 lib 文件位于 *Visual Studio 安装文件夹>\VC\Auxiliary\VS\UnitTest\<* 下。
 
 头文件和 lib 路径会在本机测试项目中自动配置。
 
@@ -221,31 +221,31 @@ END_TEST_MODULE_ATTRIBUTE()
 TEST_OWNER(ownerAlias)
 ```
 
-定义一个具有名称 `Owner` 和属性值 ownerAlias  的 `TEST_METHOD_ATTRIBUTE`。
+定义一个具有名称 `TEST_METHOD_ATTRIBUTE` 和属性值 ownerAlias`Owner`*的*。
 
 ```cpp
 TEST_DESCRIPTION(description)
 ```
 
-定义一个具有名称 `Description` 和属性值 description  的 `TEST_METHOD_ATTRIBUTE`。
+定义一个具有名称 `TEST_METHOD_ATTRIBUTE` 和属性值 description`Description`*的*。
 
 ```cpp
 TEST_PRIORITY(priority)
 ```
 
-定义一个具有名称 `Priority` 和属性值 priority  的 `TEST_METHOD_ATTRIBUTE`。
+定义一个具有名称 `TEST_METHOD_ATTRIBUTE` 和属性值 priority`Priority`*的*。
 
 ```cpp
 TEST_WORKITEM(workitem)
 ```
 
-定义一个具有名称 `WorkItem` 和属性值 workItem  的 `TEST_METHOD_ATTRIBUTE`。
+定义一个具有名称 `TEST_METHOD_ATTRIBUTE` 和属性值 workItem`WorkItem`*的*。
 
 ```cpp
 TEST_IGNORE()
 ```
 
-定义一个具有名称 `Ignore` 和属性值 `true` 的 `TEST_METHOD_ATTRIBUTE`。
+定义一个具有名称 `TEST_METHOD_ATTRIBUTE` 和属性值 `Ignore` 的 `true`。
 
 ## <a name="cppUnitTestAssert_h"></a> CppUnitTestAssert.h
 
@@ -638,7 +638,7 @@ public:
 };
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [单元测试代码](../test/unit-test-your-code.md)
 - [编写适用于 C/C++ 的单元测试](writing-unit-tests-for-c-cpp.md)

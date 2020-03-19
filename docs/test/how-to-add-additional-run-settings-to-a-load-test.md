@@ -10,13 +10,13 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: adcb50d2c6800c5ce64ab2b7cf16ce9d2a25aaaa
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75584499"
 ---
-# <a name="how-to-add-additional-run-settings-to-a-load-test"></a>如何：向负载测试添加额外的运行设置
+# <a name="how-to-add-additional-run-settings-to-a-load-test"></a>如何：向负载测试中添加额外的运行设置
 
 负载测试的运行设置将确定各种其他设置， 包括测试持续时间、结果集详细程度以及测试运行时收集的计数器集。 可以为每个负载测试创建和存储多个运行设置，然后在运行测试时选择一个要使用的特定设置。 使用“新建负载测试向导”创建负载测试时，将向负载测试添加初始运行设置。 
 
@@ -34,20 +34,20 @@ ms.locfileid: "75584499"
 
      将一个新的运行设置添加到“运行设置”文件夹中。 
 
-4. 在“视图”菜单上，选择“属性”窗口。  
+4. 在“视图”菜单上，选择“属性”窗口   。
 
      此时将显示“属性”窗口，其中包含了所选运行设置的属性。 
 
-5. 在“属性”窗口中，使用“名称”属性文本框为新运行设置指定一个名称，该名称描述此运行设置的目的（例如“Run Setting:    Five minute run”）。
+5. 在“属性”窗口中，使用“名称”属性文本框为新运行设置指定一个名称，该名称描述此运行设置的目的（例如 Run Setting: Five minute run）。   
 
-6. 使用“属性窗口”更改运行设置  。 例如，将运行持续时间更改为“00:05:00”以使测试运行五分钟。 
+6. 使用“属性窗口”更改运行设置  。 例如，将运行持续时间更改为“00:05:00”以使测试运行五分钟  。
 
     > [!NOTE]
     > 有关运行设置属性及其说明的完整列表，请参阅[负载测试运行设置属性](../test/load-test-run-settings-properties.md)。
 
      现在可以通过以下方式指定您希望使用已添加的运行设置：将其设置为“活动”。 有关详细信息，请参阅[如何：为负载测试选择活动运行设置](../test/how-to-select-the-active-run-setting-for-a-load-test.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [配置负载测试运行设置](../test/configure-load-test-run-settings.md)
 - [为负载测试中的计算机指定计数器集和阈值规则](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md)

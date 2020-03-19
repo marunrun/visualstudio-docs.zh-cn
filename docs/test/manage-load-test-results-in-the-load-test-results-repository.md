@@ -12,10 +12,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: bd0562a6cceeb50d43222a7850de11d52b0587cf
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75584421"
 ---
 # <a name="manage-load-test-results-in-the-load-test-results-repository"></a>管理“负载测试结果存储库”中的负载测试结果
@@ -45,10 +45,10 @@ Visual Studio Enterprise 提供命名的计数器集，用于基于某种技术�
 
 |任务|关联主题|
 |-|-----------------------|
-|**设置负载测试结果存储库：** 可在 SQL 数据库中设置负载测试结果存储库。 **注意：** 在安装测试控制器时也可创建负载测试储存库。 有关详细信息，请参阅[安装和配置测试代理](../test/lab-management/install-configure-test-agents.md)。||
-|**选择和查看结果存储库：** 可以选择特定结果储存库。 并不局限于使用本地结果存储区。 通常，负载测试是在一组远程代理计算机上运行。 代理或本地计算机生成的测试结果可保存到任何已创建负载测试结果存储区的 SQL 服务器中。 在这两种情况下，都必须使用“管理测试控制器”窗口标识负载测试结果的存储区  。|-   [如何：选择负载测试结果存储库](../test/how-to-select-a-load-test-results-repository.md)<br />-   [如何：访问负载测试结果进行分析](../test/how-to-access-load-test-results-for-analysis.md)|
-|**从存储库中删除负载测试结果：** 可以使用“打开和管理负载测试结果”对话框，从“负载测试编辑器”中删除负载测试结果   。|-   [如何：从存储库删除负载测试结果](../test/how-to-delete-load-test-results-from-a-repository.md)|
-|**将结果导入及导出储存库：** 可在“负载测试编辑器”中导入和导出负载测试结果  。|-   [如何：将负载测试结果导入存储库中](../test/how-to-import-load-test-results-into-a-repository.md)<br />-   [如何：从存储库导出负载测试结果](../test/how-to-export-load-test-results-from-a-repository.md)|
+|**设置负载测试结果存储库：** 可在 SQL 数据库中设置负载测试结果存储库。 **注意：** 在安装测试控制器时也可创建负载测试存储库。 有关详细信息，请参阅[安装和配置测试代理](../test/lab-management/install-configure-test-agents.md)。||
+|**选择并查看结果存储库：** 可选择一个特定结果存储库。 并不局限于使用本地结果存储区。 通常，负载测试是在一组远程代理计算机上运行。 代理或本地计算机生成的测试结果可保存到任何已创建负载测试结果存储区的 SQL 服务器中。 在这两种情况下，都必须使用“管理测试控制器”窗口标识负载测试结果的存储区  。|-   [如何：选择负载测试结果存储库](../test/how-to-select-a-load-test-results-repository.md)<br />-   [如何：访问负载测试结果进行分析](../test/how-to-access-load-test-results-for-analysis.md)|
+|**从存储库中删除负载测试结果：** 可以使用“打开和管理负载测试结果”对话框从“负载测试编辑器”中删除负载测试结果   。|-   [如何：从存储库中删除负载测试结果](../test/how-to-delete-load-test-results-from-a-repository.md)|
+|**将结果导入和导出存储库：** 可在“负载测试编辑器”中导入和导出负载测试结果  。|-   [如何：将负载测试结果导入存储库中](../test/how-to-import-load-test-results-into-a-repository.md)<br />-   [如何：从存储库导出负载测试结果](../test/how-to-export-load-test-results-from-a-repository.md)|
 
 ## <a name="related-tasks"></a>相关任务
 
@@ -56,7 +56,7 @@ Visual Studio Enterprise 提供命名的计数器集，用于基于某种技术�
 
 可以使用负载测试分析器查看正在运行的负载测试和已完成的负载测试的结果  。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [分析负载测试结果](../test/analyze-load-test-results-using-the-load-test-analyzer.md)
 - [如何：访问负载测试结果进行分析](../test/how-to-access-load-test-results-for-analysis.md)

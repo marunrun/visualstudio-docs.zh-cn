@@ -17,14 +17,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: cb855cbed67bffc5ff2fb63b1785c577dd9fea25
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75570344"
 ---
 # <a name="command-window"></a>“命令”窗口
-“命令”窗口用于直接在 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 集成开发环境 (IDE) 中执行命令或别名  。 可以执行菜单命令和不在任何菜单上出现的命令。 若要显示“命令”窗口，请在“视图”菜单中选择“其他窗口”，然后选择“命令窗口”     。
+“命令”窗口用于直接在  **集成开发环境 (IDE) 中执行命令或别名**[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]。 可以执行菜单命令和不在任何菜单上出现的命令。 若要显示“命令”窗口，请在“视图”菜单中选择“其他窗口”，然后选择“命令窗口”     。
 
 ## <a name="displaying-the-values-of-variables"></a>显示变量的值
 若要检查变量 `varA` 的值，请使用 [Print 命令](../../ide/reference/print-command.md)：
@@ -69,7 +69,7 @@ ms.locfileid: "75570344"
 
 在“命令”窗口中，将等号 (=) 解释为比较运算符  。 不可以在“命令”窗口中使用赋值运算符  。 例如，如果变量 `varA` 和 `varB` 的值不同，则命令 `>Debug.EvaluateStatement(varA=varB)` 返回 `False` 值。
 
-与此相反，在“即时”窗口中，将等号 (=) 解释为赋值运算符  。 例如，命令 `>Debug.EvaluateStatement(varA=varB)` 将变量 `varB` 的值赋给变量 `varA`。
+与此相反，在“即时”窗口中，将等号 (=) 解释为赋值运算符  。 例如，命令 `>Debug.EvaluateStatement(varA=varB)` 将变量 `varA` 的值赋给变量 `varB`。
 
 ## <a name="parameters-switches-and-values"></a>参数、开关和值
 某些 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 命令具有必选和可选的参数、开关和值。 处理此类命令时，会应用某些规则。 下面是一个用来阐明术语的复杂命令示例。
@@ -107,9 +107,9 @@ Edit.ReplaceInFiles /case /pattern:regex var[1-3]+ oldpar
 插入符号在引号内或引号外的作用相同。 如果插入符号是行的最后一个字符，则忽略不计。 此处显示的示例演示如何搜索模式“^t”。
 
 ## <a name="use-quotes-for-path-names-with-spaces"></a>对带有空格的路径名称使用引号
-例如，如果要打开具有包含空格的路径的文件，必须在包含空格的路径或路径段两边添加双引号：C:\\"Program Files" 或 "C:\Program Files"   。
+例如，如果要打开的文件的路径中含有空格，必须在包含空格的路径或路径段两边添加双引号：C: **"Program Files" 或 "C:\Program Files"\\**  。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Studio Command Aliases](../../ide/reference/visual-studio-command-aliases.md)
 - [Visual Studio 命令](../../ide/reference/visual-studio-commands.md)

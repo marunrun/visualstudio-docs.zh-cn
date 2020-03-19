@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - data-science
 ms.openlocfilehash: 15b8a91c0b29b71b85ee5f82dc3b8d662c80549e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62581158"
 ---
 # <a name="welcome-to-r-tools-for-visual-studio"></a>欢迎使用针对 Visual Studio 的 R 工具
@@ -27,7 +27,7 @@ ms.locfileid: "62581158"
 - [如何安装针对 Visual Studio 的 R 工具](installing-r-tools-for-visual-studio.md)
 - [在 GitHib 上提交和浏览 bug 以及功能请求](https://github.com/Microsoft/RTVS/issues)
 - [浏览和编写源代码](https://github.com/Microsoft/RTVS/blob/master/LICENSE)
-- 若要通过 Github（首选）之外的途径发送反馈，请使用 Visual Studio 中的“R 工具”>“反馈”菜单。
+- 若要通过 Github（首选）之外的途径发送反馈，请使用 Visual Studio 中的“R 工具”>“反馈”菜单  。
 
 ## <a name="microsoft-r-distributions"></a>Microsoft R 分发
 

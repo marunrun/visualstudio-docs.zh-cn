@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 620e55938a9c96393d8cd7de6f238d3f98715d29
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75596679"
 ---
 # <a name="replace-command"></a>Replace 命令
@@ -31,7 +31,7 @@ Edit.Replace findwhat replacewith [/all] [/case]
 [/wild|/regex] [/word]
 ```
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
 `findwhat`
 
 必需。 要匹配的文本。
@@ -94,13 +94,13 @@ Edit.Replace findwhat replacewith [/all] [/case]
 可选。 只搜索全字。
 
 ## <a name="example"></a>示例
-此示例用所有打开文档中的 `btnSubmit` 替换 `btnSend`。
+此示例用所有打开文档中的 `btnSend` 替换 `btnSubmit`。
 
 ```
 >Edit.Replace btnSend btnSubmit /open
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [查找和替换文本](../../ide/finding-and-replacing-text.md)
 - [“命令”窗口](../../ide/reference/command-window.md)

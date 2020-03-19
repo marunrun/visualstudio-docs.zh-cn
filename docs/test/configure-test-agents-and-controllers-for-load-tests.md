@@ -8,10 +8,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: b8824e1836d8a49de91cf0e3b9cccf2e85a7de18
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75597342"
 ---
 # <a name="overview-of-test-agents-and-test-controllers-for-running-load-tests"></a>用于运行负载测试的测试代理和测试控制器的概述
@@ -37,7 +37,7 @@ Visual Studio 可以使用物理计算机或虚拟机为应用生成模拟负载
 
 - 通过将其他测试代理添加到测试控制器增加负载生成的功能。
 
-- 在相同或不同计算机上灵活安装客户端、测试控制器和测试代理软件。 例如：
+- 在相同或不同计算机上灵活安装客户端、测试控制器和测试代理软件。 例如:
 
    **本地配置：**
 
@@ -47,7 +47,7 @@ Visual Studio 可以使用物理计算机或虚拟机为应用生成模拟负载
 
     **典型远程配置：**
 
-  - Machine1 and 2：Visual Studio（多名测试人员可以使用同一个控制器）。
+  - Machine1 和 Machine2：Visual Studio（多名测试人员可以使用同一个控制器）。
 
   - Machine3：控制器（也可安装代理）。
 
@@ -89,6 +89,6 @@ Visual Studio 可以使用物理计算机或虚拟机为应用生成模拟负载
 
 安装 Test Controller 以及一个或多个代理后，可以在负载测试的测试设置中指定是否对 Test Controller 使用远程执行。 此外，您可以指定在测试设置中与代理相关联的角色一起使用的数据和诊断适配器。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [安装和配置测试代理](../test/lab-management/install-configure-test-agents.md)

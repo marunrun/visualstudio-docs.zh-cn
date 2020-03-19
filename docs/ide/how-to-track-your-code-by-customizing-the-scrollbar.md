@@ -8,13 +8,13 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 22436c221813ec4c3701d208fc74a96b403fff9c
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75591393"
 ---
-# <a name="how-to-customize-the-scroll-bar"></a>如何：自定义滚动条
+# <a name="how-to-customize-the-scroll-bar"></a>操作说明：自定义滚动条
 
 处理很长的代码文件时，可能很难跟踪所有代码在文件中的位置。 可自定义代码编辑器的滚动条，以了解代码的整体使用情况。
 
@@ -22,7 +22,7 @@ ms.locfileid: "75591393"
 
 可选择滚动条是否显示注释（如代码更改、断点、书签、错误和插入点位置）。
 
-   1. 依次选择“工具”   > “选项”   > “文本编辑器”   > “所有语言”   > “滚动条”  ，以打开“滚动条”  选项页。
+   1. 依次选择“工具”  **“选项”**  >  **“文本编辑器”**  >  **“所有语言”**  >  **“滚动条”**  > ，以打开“滚动条”  选项页。
 
    2. 依次选择“在垂直滚动条上方显示注释”  和所需的注释。 可选择下列注释：
 
@@ -67,6 +67,6 @@ ms.locfileid: "75591393"
 
 ![显示工具提示的 Visual Studio 滚动条](../ide/media/enhancedscrollbarsearchtooltip.png)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [代码编辑器功能](../ide/writing-code-in-the-code-and-text-editor.md)

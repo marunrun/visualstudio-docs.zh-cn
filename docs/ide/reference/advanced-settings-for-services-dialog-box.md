@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 967e99102f3b88e82a5466e7ce8d2cac2412d286
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75585673"
 ---
 # <a name="advanced-settings-for-services-dialog-box"></a>“高级服务设置”对话框
@@ -42,7 +42,7 @@ ms.locfileid: "75585673"
 
  **使用自定义连接字符串**指定客户端服务提供程序是否将使用自定义数据存储进行本地缓存。 默认情况下，服务提供商将使用本地文件系统进行缓存。 选中此选项将自动使用默认连接字符串填充文本框。 可以保留默认连接字符串以自动生成和使用 SQL Server Compact Edition 数据库，或者可以为现有 SQL Server 数据库指定连接字符串。 有关详细信息，请参阅[如何：配置客户端应用程序服务](/dotnet/framework/common-client-technologies/how-to-configure-client-application-services)。 默认情况下清除此选项。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [客户端应用程序服务](/dotnet/framework/common-client-technologies/client-application-services)
 - [“项目设计器”->“服务”页](../../ide/reference/services-page-project-designer.md)

@@ -14,10 +14,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 64f6a45b3a5cc49cd541ceb905356093ea4ec221
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75589222"
 ---
 # <a name="formatting-conventions"></a>格式设置约定
@@ -34,7 +34,7 @@ Visual Studio 的 EditorConfig 适用的格式设置约定划分为以下这些�
 
 `rule_name = value`
 
-对于许多规则，可为 `value` 指定 `true`（以此样式为首选项）或 `false`（不以此样式为首选项）。 对于其他规则，可指定值（如 `flush_left` 或 `before_and_after`）来说明在什么时间以及在什么位置应用此规则。 不需要指定严重性。
+对于许多规则，可为 `true` 指定 `false`（以此样式为首选项）或 `value`（不以此样式为首选项）。 对于其他规则，可指定值（如 `flush_left` 或 `before_and_after`）来说明在什么时间以及在什么位置应用此规则。 不需要指定严重性。
 
 ## <a name="net-formatting-settings"></a>.NET 格式设置
 
@@ -1210,7 +1210,7 @@ public int MyProperty
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [语言约定](editorconfig-language-conventions.md)
 - [命名约定](editorconfig-naming-conventions.md)

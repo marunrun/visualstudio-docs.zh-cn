@@ -12,11 +12,11 @@ dev_langs:
 ms.workload:
 - dotnet
 ms.openlocfilehash: da164414cfcca9631eaf59b5e2f6044e70ac9cc5
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75594859"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79306841"
 ---
 # <a name="welcome-to-the-visual-studio-ide--c"></a>欢迎使用 Visual Studio IDE | C\#
 
@@ -26,7 +26,7 @@ ms.locfileid: "75594859"
 
 接下来，我们将把 Visual Studio 配置为，使用可满足 C# 开发人员需求的环境设置。
 
-1. 在菜单栏上，选择“工具” > “导入和导出设置”   。
+1. 在菜单栏上，选择“工具” **“导入和导出设置”**  >   。
 
 2. 在“导入和导出设置向导”  中，依次选择第一页上的“重置所有设置”  和“下一步”  。
 
@@ -48,7 +48,7 @@ ms.locfileid: "75594859"
 > [!div class="nextstepaction"]
 > [了解项目和解决方案](../tutorial-projects-solutions.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - 发现[更多 Visual Studio 功能](../../ide/advanced-feature-overview.md)
 - 访问 [visualstudio.microsoft.com](https://visualstudio.microsoft.com/vs/)

@@ -10,10 +10,10 @@ ms.workload:
 - dotnet
 monikerRange: vs-2017
 ms.openlocfilehash: 4b5cf62dadc38802e477c7588416b4003304e852
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75584577"
 ---
 # <a name="target-older-versions-of-net-f"></a>面向 .NET 的较旧版本 (F#)
@@ -56,7 +56,7 @@ ms.locfileid: "75584577"
 
 请按照[修复 Visual Studio 的步骤](../install/repair-visual-studio.md)执行操作。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [F# 指南 (.NET Framework)](/dotnet/fsharp/)
 - [Visual Studio 中的 F#](fsharp-visual-studio.md)

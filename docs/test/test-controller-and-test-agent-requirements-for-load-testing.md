@@ -10,10 +10,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 39b174b0b134fdfdf26570565aa6aa756ba43c92
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75588637"
 ---
 # <a name="test-controller-and-test-agent-requirements-for-load-testing"></a>负载测试对测试控制器和测试代理的要求
@@ -30,7 +30,7 @@ ms.locfileid: "75588637"
 
 下表演示对部署测试控制器和测试代理建议的硬件要求。
 
-|**配置**|**组件**|**CPU**|**HD**|**内存**|
+|**配置**|组件 |**CPU**|**HD**|**内存**|
 |-|-------------------|-|------------|-|
 |少于 500 个虚拟用户|测试代理|2.6 GHz|10 GB|2 GB|
 |少于 1000 个虚拟用户|测试代理|双处理器，2.6 GHz|10 GB|2 GB|
@@ -57,8 +57,8 @@ ms.locfileid: "75588637"
 
 ## <a name="monitor-agent-resources"></a>监视代理资源
 
-可以通过在测试期间观察执行和扩展的 QTAgent\*.exe 进程来监视代理计算机以确定它们的资源需求  。 QTAgent\*.exe 进程上最常见的瓶颈是 CPU 使用率。  如果 CPU 使用率始终在 95% 以上，则表示该代理负载较重。 下一个常见瓶颈是内存使用量。 对于要求高的测试，监视这些资源可帮助确定是否应该增加计算机资源或以不同方式分配测试。
+可以通过在测试期间观察执行和扩展的 QTAgent *.exe 进程来监视代理计算机以确定它们的资源需求\** 。 QTAgent *.exe 进程上最常见的瓶颈是 CPU 使用率。 \** 如果 CPU 使用率始终在 95% 以上，则表示该代理负载较重。 下一个常见瓶颈是内存使用量。 对于要求高的测试，监视这些资源可帮助确定是否应该增加计算机资源或以不同方式分配测试。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [安装和配置测试代理](../test/lab-management/install-configure-test-agents.md)

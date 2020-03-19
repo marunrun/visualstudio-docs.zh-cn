@@ -13,10 +13,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 18cc473f517e1f2eb03b657a365a33e4e37ff23f
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74774158"
 ---
 # <a name="instrumentation-method-data-views"></a>检测方法数据视图
@@ -27,7 +27,7 @@ ms.locfileid: "74774158"
 
  列出使用时间最长的函数和大部分时间单独工作的函数。
 
-- [“调用关系树”视图](../profiling/call-tree-view-instrumentation-data.md)
+- [“调用树”视图](../profiling/call-tree-view-instrumentation-data.md)
 
  显示层次结构树中各个函数的执行路径。
 
@@ -43,7 +43,7 @@ ms.locfileid: "74774158"
 
  按函数列出分析数据。
 
-## <a name="reference"></a>参考
+## <a name="reference"></a>引用
 - [“函数详细信息”视图](../profiling/function-details-view.md)
 
  显示所选函数和调用所选函数及被所选函数调用的函数之间的关系图形图表。
@@ -65,5 +65,5 @@ ms.locfileid: "74774158"
 
  有关使用线程争用方法生成的探查器数据文件的视图和报告的参考信息。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [了解检测数据值](../profiling/understanding-instrumentation-data-values.md)

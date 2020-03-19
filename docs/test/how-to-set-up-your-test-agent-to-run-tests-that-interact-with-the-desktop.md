@@ -9,10 +9,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: f4ef2d589e75c50a6cecb5364d5b458cffdfd145
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75588962"
 ---
 # <a name="how-to-set-up-your-test-agent-to-run-tests-that-interact-with-the-desktop"></a>如何：设置测试代理以运行与桌面交互的测试
@@ -36,7 +36,7 @@ ms.locfileid: "75588962"
 
 ## <a name="to-set-up-an-agent-to-run-as-a-process"></a>将代理设置为作为进程运行
 
-1. 若要将已安装的测试代理配置为作为进程运行，请选择“开始” > “Test Agent 配置工具”。  
+1. 若要将已安装的测试代理配置为作为进程运行，请选择“开始” **“Test Agent 配置工具”。**  >  
 
    “配置测试代理”对话框随即显示  。
 
@@ -71,10 +71,10 @@ ms.locfileid: "75588962"
 7. 若要关闭“配置摘要”对话框中，请选择“关闭”   。 然后再次选择“关闭”以关闭“Test Agent 配置工具”   。
 
    > [!NOTE]
-   > 在该计算机上有一个针对作为进程运行的测试代理而运行的通知区域图标。 它显示测试代理的状态。 如果代理作为使用此工具的进程运行，你可以启动、停止或重新启动代理。 要在测试代理未运行时将其作为进程启动，请依次选择“开始” > “Visual Studio” > “Microsoft Visual Studio Test Agent”    。
+   > 在该计算机上有一个针对作为进程运行的测试代理而运行的通知区域图标。 它显示测试代理的状态。 如果代理作为使用此工具的进程运行，你可以启动、停止或重新启动代理。 要在测试代理未运行时将其作为进程启动，请依次选择“开始” **“Visual Studio”** “Microsoft Visual Studio Test Agent” >    >   。
 
    如果向 Team Foundation Server 注册了此测试代理的测试控制器，则作为交互进程运行的测试代理的状态将显示在 Microsoft 测试管理器的“实验室中心”中的“控制器”视图中   。 如果列出时前面带有星号符号，则指示它正在作为交互进程运行。 要重启此测试代理，必须使用在计算机上针对测试代理而非“控制器”视图运行的工具  。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [安装和配置测试代理](../test/lab-management/install-configure-test-agents.md)

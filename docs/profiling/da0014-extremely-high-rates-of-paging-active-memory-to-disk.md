@@ -15,10 +15,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: e068771ba0fcc9b044ba7ff5243a75ceb3161e03
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74779401"
 ---
 # <a name="da0014-extremely-high-rates-of-paging-active-memory-to-disk"></a>DA0014：以分页方式将活动内存移到磁盘的发生率极高
@@ -27,7 +27,7 @@ ms.locfileid: "74779401"
 |-|-|
 |规则 ID|DA0014|
 |类别|内存和分页|
-|分析方法|全部|
+|分析方法|All|
 |消息|以分页方式将活动内存移到磁盘的发生率极高。 应用程序可能受内存限制。|
 |规则类型|警告|
 

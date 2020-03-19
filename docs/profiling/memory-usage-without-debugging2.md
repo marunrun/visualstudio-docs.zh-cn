@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: eaf853cd19a44af4cb8510fde11da95bfa7de5c1
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77578344"
 ---
 # <a name="analyze-memory-usage-without-the-debugger"></a>分析不调试的内存使用情况
@@ -129,7 +129,7 @@ ms.locfileid: "77578344"
 |||
 |-|-|
 |“对象类型” |类型或对象实例的名称。|
-|“计数” |类型的对象实例数。 对于实例，“计数”始终为 1  。|
+|**计数**|类型的对象实例数。 对于实例，“计数”始终为 1  。|
 |“大小(字节)” |对于类型，快照中所有类型实例的大小都小于实例中包含的对象的大小。<br /><br /> 对于实例，对象的大小小于实例中包含的对象大小。 |
 |“非独占大小(字节)” |类型实例的大小或单个实例的大小，其中包括所含对象的大小。|
 |**模块**|包含此对象的模块。|
@@ -175,7 +175,7 @@ ms.locfileid: "77578344"
 |||
 |-|-|
 |“对象类型” |类型或对象实例的名称。|
-|“计数” |主要快照中的类型实例的数量。 对于实例，“计数”  始终为 1。|
+|**计数**|主要快照中的类型实例的数量。 对于实例，“计数”  始终为 1。|
 |“计数差异” |对于类型，则为主要快照与上一个快照之间的类型实例数的差异。 对于实例，字段是空白的。|
 |“大小(字节)” |主快照中对象的大小小于对象中包含的对象的大小。 对于类型，“大小(字节)”  和“非独占大小(字节)”  为类型实例的总大小。|
 |“总大小差异(字节)” |对于类型，主快照和上一个快照之间的类型实例总大小的差异小于实例中包含的对象的大小。 对于实例，字段是空白的。|
@@ -210,7 +210,7 @@ ms.locfileid: "77578344"
 |“非独占大小差异(字节)” |对于类型，主快照和上一个快照之间的所有类型实例大小的差异，其中包括对象中包含的对象的大小。|
 |**模块**|包含此对象的模块。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [JavaScript 内存](../profiling/javascript-memory.md)
 - [使用 Visual Studio 分析](../profiling/index.yml)
 - [首先了解分析工具](../profiling/profiling-feature-tour.md)

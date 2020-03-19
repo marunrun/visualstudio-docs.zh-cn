@@ -1,5 +1,5 @@
 ---
-title: 输出窗口
+title: “输出”窗口
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,17 +17,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: be028af8ab9f458c1fadad6f8b2fcbd6aaa49a04
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75567978"
 ---
 # <a name="output-window"></a>“输出”窗口
 
 “输出”  窗口在集成开发环境 (IDE) 中显示各种功能的状态消息。 若要打开“输出”  窗口，请选择“视图”   > “输出”  （或按 Ctrl  +Alt  +O  ）。
 
-## <a name="toolbar"></a>Toolbar
+## <a name="toolbar"></a>ToolBar
 
 以下控件显示在“输出”窗口的工具栏中  。
 
@@ -55,7 +55,7 @@ ms.locfileid: "75567978"
 
 在“输出”  窗格中启用和禁用“自动换行”功能。 启用“自动换行”后，在下一行显示超出查看区域的较长条目中的文本。
 
-## <a name="output-pane"></a>“输出”窗格
+## <a name="output-pane"></a>输出窗格
 
 在“显示输出来源”  列表中选择的“输出”  窗格显示指定源的输出。
 
@@ -65,7 +65,7 @@ ms.locfileid: "75567978"
 
 在[命令窗口](../../ide/reference/command-window.md)中调用的某些 IDE 功能和命令会将其输出传送到“输出”  窗口。     在[管理外部工具中](../../ide/managing-external-tools.md)选择“使用输出窗口”选项时，外部工具的输出（如 .bat 和 .com 文件，通常显示在命令窗口中）会路由到“输出”窗格。 许多其他类型的消息也可以显示在“输出”  窗格中。 例如，根据目标数据库检查存储过程中的 Transact-SQL 语法时，检查结果将显示在“输出”  窗口中。
 
-也可以编写自己的应用程序，使其在运行时向“输出”  窗格写入诊断消息。 要执行此操作，请在 .NET API 的 <xref:System.Diagnostics> 命名空间中使用 <xref:System.Diagnostics.Debug> 类或 <xref:System.Diagnostics.Trace> 类的成员。 生成解决方案或项目的“调试”配置时，<xref:System.Diagnostics.Debug> 类的成员显示输出；生成“调试”或“发布”配置时，<xref:System.Diagnostics.Trace> 类的成员显示输出。 有关详细信息，请参阅[“输出”窗口中的诊断消息](../../debugger/diagnostic-messages-in-the-output-window.md)。
+也可以编写自己的应用程序，使其在运行时向“输出”  窗格写入诊断消息。 要执行此操作，请在 .NET API 的 <xref:System.Diagnostics.Debug> 命名空间中使用 <xref:System.Diagnostics.Trace> 类或 <xref:System.Diagnostics> 类的成员。 生成解决方案或项目的“调试”配置时，<xref:System.Diagnostics.Debug> 类的成员显示输出；生成“调试”或“发布”配置时，<xref:System.Diagnostics.Trace> 类的成员显示输出。 有关详细信息，请参阅[“输出”窗口中的诊断消息](../../debugger/diagnostic-messages-in-the-output-window.md)。
 
 在 C++ 中，可创建自定义生成步骤和生成事件，“输出”窗格中对其警告和错误在进行显示和计数  。 在输出行按 F1，可以显示相应的帮助主题  。 有关详细信息，请参阅[设置自定义生成步骤输出的格式](/cpp/build/formatting-the-output-of-a-custom-build-step-or-build-event)。
 
@@ -73,7 +73,7 @@ ms.locfileid: "75567978"
 
 如果在“输出”窗口中使用自动滚动，随后使用鼠标或箭头键进行导航，则自动滚动停止  。 若要恢复自动滚动，请按 Ctrl  +End  。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [“输出”窗口中的诊断消息](../../debugger/diagnostic-messages-in-the-output-window.md)
 - [如何：控制“输出”窗口](https://msdn.microsoft.com/Library/91aebd15-8854-4a7a-9f7d-57376fb4e858)

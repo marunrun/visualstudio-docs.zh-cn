@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: db39850350f99e6c046996f6408973cbc6543868
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75594222"
 ---
 # <a name="use-the-task-list"></a>使用任务列表
@@ -32,7 +32,7 @@ ms.locfileid: "75594222"
 
 当“任务列表”  打开后，它将显示在应用程序窗口的底部。
 
-若要打开“任务列表”  ，请选择“视图”   > “任务列表”  ，或从键盘按 Ctrl  +\\  、T  。
+若要打开“任务列表”  ，请选择“视图”   > “任务列表”  ，或从键盘按 Ctrl  + **\\** 、T  。
 
 ![“任务列表”窗口](../ide/media/vs2015_task_list.png)
 
@@ -73,7 +73,7 @@ Visual Studio 2015 中已删除用户任务功能。 若打开的解决方案具
 
 创建自定义令牌：
 
-1. 在 **“工具”** 菜单上，选择 **“选项”** 。
+1. 在“**工具**”菜单上，选择“**选项**”。
 
 2. 打开 **“环境”** 文件夹，然后选择 **“任务列表”** 。
 
@@ -104,11 +104,11 @@ Visual Studio 2015 中已删除用户任务功能。 若打开的解决方案具
 
 ### <a name="create-a-shortcut"></a>创建快捷方式
 
-若要创建快捷方式，请将指针插入到代码中你想要放置快捷方式的位置。 选择“编辑” > “书签” > “添加任务列表快捷方式”或按 Ctrl+K，Ctrl+H        。
+若要创建快捷方式，请将指针插入到代码中你想要放置快捷方式的位置。 选择“编辑” **“书签”** “添加任务列表快捷方式”或按 Ctrl > K，Ctrl**H** >    +   +  。
 
 若要在代码中浏览快捷方式，在列表中选择一个快捷方式，然后从快捷菜单中选择“下一任务”  或“上一任务”  。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [“选项”对话框 ->“环境”->“任务列表”](../ide/reference/task-list-environment-options-dialog-box.md)
 - [任务注释 (Visual Studio for Mac)](/visualstudio/mac/task-comments)

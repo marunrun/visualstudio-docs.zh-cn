@@ -1,5 +1,5 @@
 ---
-title: 如何：直观显示集合关联（类设计器）
+title: 如何：可视化集合关联（类设计器）
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -16,13 +16,13 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 7ba237b9c763421287e3878a6a98f59032bfd092
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75590769"
 ---
-# <a name="how-to-visualize-a-collection-association-in-class-designer"></a>如何：直观显示类设计器中的集合关联
+# <a name="how-to-visualize-a-collection-association-in-class-designer"></a>如何：在类设计器中可视化集合关联
 
 属于其他类型的集合的属性和字段可在类图上作为集合关联显示。 普通关联可将字段或属性显示为行，此行将拥有的类链接到字段的类型，与此不同，集合关联作为行显示，此行将拥有的类链接到已收集的类型。
 
@@ -36,7 +36,7 @@ ms.locfileid: "75590769"
 
 此属性或字段将显示为链接到已收集类型的关联行。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [如何：创建类型之间的关联](how-to-create-associations-between-types.md)
 - [设计类和类型](designing-and-viewing-classes-and-types.md)

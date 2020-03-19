@@ -16,10 +16,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 0a20c5e3f30a6d006175e78fc70dab79d0b9bf8a
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75591276"
 ---
 # <a name="analyzing-threshold-rule-violations-in-load-tests-using-the-load-test-analyzer"></a>使用负载测试分析器分析负载测试中的阈值规则冲突
@@ -34,10 +34,10 @@ ms.locfileid: "75591276"
 
 阈值冲突表显示前 1,000 个冲突。 下面举例说明了一个表：
 
-|列|描述|默认情况下可见|
+|列|说明|默认情况下可见|
 |-|-|-|
 |时间|负载测试过程中发生冲突的时间。|是|
-|计算机|发生冲突的测试计算机的名称。 **注意：** 在远程测试机组 (Rig) 上运行负载测试时，这一项很重要。|是|
+|Computer|发生冲突的测试计算机的名称。 **注意：** 在远程测试机组上运行负载测试时，这一项很重要。|是|
 |类别|发生冲突的性能计数器的类别。|是|
 |计数器|发生冲突的性能计数器的名称。|是|
 |实例|发生冲突的性能计数器实例。|是|
@@ -74,7 +74,7 @@ ms.locfileid: "75591276"
 
 有关详细信息，请参阅[在关系图视图中分析负载测试结果](../test/analyze-load-test-results-in-the-graphs-view.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [为负载测试中的计算机指定计数器集和阈值规则](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md)
 - [分析负载测试结果](../test/analyze-load-test-results-using-the-load-test-analyzer.md)

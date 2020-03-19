@@ -8,10 +8,10 @@ ms.workload:
 - multiple
 author: mikejo5000
 ms.openlocfilehash: b70e26adc7c0c9a8dc409d9b4b971b233418b8e1
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75594274"
 ---
 # <a name="install-unit-test-frameworks"></a>安装单元测试框架
@@ -38,7 +38,7 @@ Visual Studio 解决方案可以包含使用不同框架和面向不同语言的
 
 ### <a name="to-update-to-the-latest-stable-test-adapter-version"></a>更新到最新版本的稳定测试适配器
 
-1. 导航到“工具” > “NuGet 包管理器” > “管理解决方案的 NuGet 包”，打开解决方案的 Nuget 包管理器    。
+1. 导航到“工具” **“NuGet 包管理器”** “管理解决方案的 NuGet 包”，打开解决方案的 Nuget 包管理器 >    >   。
 
 2. 单击“更新”选项卡，并搜索已安装的 MSTest、NUnit 或 xUnit 测试适配器  。
 
@@ -48,6 +48,6 @@ Visual Studio 解决方案可以包含使用不同框架和面向不同语言的
 
    ![升级测试适配器](media/install-adapter-upgrade.png)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [单元测试代码](../test/unit-test-your-code.md)

@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a96cdc7ae4edc7ea7193d5b95dfc73fa1747c1fb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62970104"
 ---
 # <a name="empty-timeline-segment"></a>空时间线分段
@@ -30,6 +30,6 @@ ms.locfileid: "62970104"
 
 - 对于标记通道，这意味着未生成任何标记。
 
-## <a name="see-also"></a>请参阅
-- [线程视图](../profiling/threads-view-parallel-performance.md)
+## <a name="see-also"></a>另请参阅
+- [“线程”视图](../profiling/threads-view-parallel-performance.md)
 - [缩放控件（线程视图）](../profiling/zoom-control-threads-view.md)

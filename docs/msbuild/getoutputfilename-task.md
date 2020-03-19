@@ -18,10 +18,10 @@ ms.author: ghogen
 ms.workload:
 - multiple
 ms.openlocfilehash: d66a7be3751e74ff75787ef194f90da1dcd1d3ce
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75593286"
 ---
 # <a name="getoutputfilename-task"></a>GetOutputFileName 任务
@@ -32,13 +32,13 @@ ms.locfileid: "75593286"
 
 下表显示 GetOutputFileName  任务的参数。
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
 |**OutputExtension**|必需的 **String** 参数。|
 |**OutputFile**|可选的 string  输出参数。|
 |**OutputPath**|可选的 string  参数。|
 |SourceFile |必需的 **String** 参数。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [任务参考](../msbuild/msbuild-task-reference.md)

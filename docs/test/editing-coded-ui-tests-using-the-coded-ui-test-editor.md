@@ -12,10 +12,10 @@ ms.workload:
 - multiple
 author: mikejo5000
 ms.openlocfilehash: 1e861c31fa2959c3bace008af7937f6686b2705f
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75589651"
 ---
 # <a name="edit-coded-ui-tests-using-the-coded-ui-test-editor"></a>使用编码的 UI 测试编辑器编辑编码的 UI 测试
@@ -24,7 +24,7 @@ ms.locfileid: "75589651"
 
 [!INCLUDE [coded-ui-test-deprecation](includes/coded-ui-test-deprecation.md)]
 
-**要求**
+**惠?**
 
 - Visual Studio Enterprise
 - 编码的 UI 测试组件
@@ -35,7 +35,7 @@ ms.locfileid: "75589651"
 
 ![UI 测试编辑器](../test/media/uitesteditor.png)
 
-1. “[查找](../ide/finding-and-replacing-text.md)”有助于查找 UI 操作和控件。
+1. [查找](../ide/finding-and-replacing-text.md) 帮助查找 UI 操作和控件。
 
 2. **删除** 可删除不想要的 UI 操作。
 
@@ -74,7 +74,7 @@ ms.locfileid: "75589651"
 
 若要修改 UI 操作的属性，在 **“UI 操作”** 窗格中，展开包含你想要为其编辑属性的 UI 操作的测试方法，选择 UI 操作，然后通过“属性”窗口修改属性。
 
-例如，如果服务器不可用，并且 UI 操作与指示“转到网页 '<http://Contoso1/default.aspx>'”  的 Web 浏览器关联，则可以将 URL 更改为 `'http://Contoso2/default.aspx'`。
+例如，如果服务器不可用，并且 UI 操作与指示“转到网页 ' **'”<http://Contoso1/default.aspx>** 的 Web 浏览器关联，则可以将 URL 更改为 `'http://Contoso2/default.aspx'`。
 
 ![控件属性](../test/media/codeduitestcontrolprop.png)
 
@@ -88,7 +88,7 @@ ms.locfileid: "75589651"
 
 - 如果未显示“属性”窗口，请在按 Enter 的同时按住 Alt，或者按 F4     。
 
-- 若要撤消所做的属性更改，请选择“编辑”菜单中的“撤消”或按 Ctrl+Z     。
+- 若要撤消所做的属性更改，请选择“编辑”菜单中的“撤消”或按 Ctrl**Z**   +  。
 
 - 可以使用编码的 UI 测试编辑器工具栏中的“查找”  按钮打开 Visual Studio 中的“查找和替换”  工具。 然后可以使用“查找”  控件查找编码的 UI 测试编辑器中的 UI 操作。 例如，可以尝试查找“单击‘登录’按钮”。 这在大型测试中十分有用。 不能使用编码的 UI 测试编辑器中“查找和替换”  工具中的替换功能。 有关详细信息，请参阅[查找和替换文本](../ide/finding-and-replacing-text.md)中的“查找控件”。
 
@@ -121,11 +121,11 @@ ms.locfileid: "75589651"
 
 ### <a name="tips"></a>提示
 
-- 若要撤消拆分，请选择“编辑”菜单中的“撤消”或按 Ctrl+Z     。
+- 若要撤消拆分，请选择“编辑”菜单中的“撤消”或按 Ctrl**Z**   +  。
 
 - 你可以重命名新方法。 在“UI 操作”  窗格中选择它，然后选择编码的 UI 测试编辑器工具栏中的“重命名”  按钮。
 
-   \- 或 -
+   或
 
    打开新测试方法的快捷菜单，并选择“重命名”  。
 
@@ -144,7 +144,7 @@ ms.locfileid: "75589651"
 
 ### <a name="tips"></a>提示
 
-若要撤消移动，请选择“编辑”菜单中的“撤消”或按 Ctrl+Z     。 但是，随后必须手动从“UIMap.cs”  或“UIMap.vb ”  文件删除该代码。
+若要撤消移动，请选择“编辑”菜单中的“撤消”或按 Ctrl**Z**   +  。 但是，随后必须手动从“UIMap.cs”  或“UIMap.vb ”  文件删除该代码。
 
 ## <a name="locate-a-ui-control-in-the-application-under-test"></a>在受测应用程序中查找 UI 控件
 
@@ -190,7 +190,7 @@ ms.locfileid: "75589651"
 
 如果需要确保特定控件在 UI 操作之前可用，应考虑使用相应的 uitestcontrol.waitforcontrolxxx () 方法将自定义代码添加到你的测试方法。 有关详细信息，请参阅[播放期间让编码的 UI 测试等待特定事件](../test/making-coded-ui-tests-wait-for-specific-events-during-playback.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用 UI 自动化来测试代码](../test/use-ui-automation-to-test-your-code.md)
 - [创建编码的 UI 测试](../test/use-ui-automation-to-test-your-code.md)

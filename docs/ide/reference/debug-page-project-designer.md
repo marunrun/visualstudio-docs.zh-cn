@@ -15,17 +15,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a2c3e7813e5e07a0fbb8f4ebf5838c883faa0fb8
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75595717"
 ---
 # <a name="debug-page-project-designer"></a>“项目设计器”->“调试”页
 
 使用项目设计器的“调试”页为 Visual Basic 或 C# 项目中的调试行为设置属性   。
 
-要访问“调试”页，请在解决方案资源管理器中选择项目节点   。 在“项目”菜单上，选择“\<项目名称”>“属性”   。 当项目设计器出现时，请单击“调试”选项卡   。
+要访问“调试”页，请在解决方案资源管理器中选择项目节点   。 在“项目”菜单上，选择“**项目名称”>“属性”** **\<** 。 当项目设计器出现时，请单击“调试”选项卡   。
 
 > [!NOTE]
 > 本主题不适用于 UWP 应用。 有关 UWP 应用，请参阅[启动调试会话 (VB、C#、C++ 和 XAML)](../../debugger/start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml.md)。
@@ -44,7 +44,7 @@ ms.locfileid: "75595717"
 
 ## <a name="start-action"></a>启动操作
 
-“启动操作”指示应用程序调试时要启动的项：项目、自定义程序、URL 或不启动任何项  。 默认情况下，此选项设置为“启动项目”  。 “调试”页上的“启动操作”设置确定 `StartAction` 属性的值   。
+“启动操作”指示应用程序调试时要启动的项：项目、自定义程序、URL 或不启动任何项  。 默认情况下，此选项设置为“启动项目”  。 “调试”页上的“启动操作”设置确定  **属性的值**  `StartAction`。
 
 **启动项目**
 
@@ -82,10 +82,10 @@ ms.locfileid: "75595717"
 
 选中或清除此复选框，从 Visual Basic 应用程序启用或禁用 SQL 过程调试。 默认情况下清除此复选框。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [初探调试器](../../debugger/debugger-feature-tour.md)
 - [C# 调试配置的项目设置](../../debugger/project-settings-for-csharp-debug-configurations.md)
 - [Visual Basic 调试配置的项目设置](../../debugger/project-settings-for-a-visual-basic-debug-configuration.md)
-- [如何：使用受限权限调试 ClickOnce 应用程序](../../deployment/how-to-debug-a-clickonce-application-with-restricted-permissions.md)
+- [如何：使用受限权限对 ClickOnce 应用程序进行调试](../../deployment/how-to-debug-a-clickonce-application-with-restricted-permissions.md)
 - [如何：创建和编辑配置](../../ide/how-to-create-and-edit-configurations.md)

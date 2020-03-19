@@ -8,10 +8,10 @@ ms.workload:
 - multiple
 author: mikejo5000
 ms.openlocfilehash: 313083090c94c94f4e196e87f3bf6cf6df36e118
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75565248"
 ---
 # <a name="create-a-unit-test-project"></a>创建单元测试项目
@@ -23,7 +23,7 @@ ms.locfileid: "75565248"
 
 ## <a name="to-create-a-unit-test-project"></a>创建单元测试项目
 
-1. 在“文件”菜单上，选择“新建” > “项目”，或按 Ctrl+Shift+N       。
+1. 在“文件”菜单上，选择“新建” **“项目”，或按 Ctrl**Shift**N** >    +  +  。
 
 ::: moniker range="vs-2017"
 

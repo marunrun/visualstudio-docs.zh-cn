@@ -13,10 +13,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 7ead219ddf482af5917842118d386c6fefe67973
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74772709"
 ---
 # <a name="modules-view---sampling-data"></a>“模块”视图 - 采样数据
@@ -41,7 +41,7 @@ ms.locfileid: "74772709"
 |**独占样本数**|-   对于函数，是在其中直接执行此函数的调用堆栈样本的数量；即，在其中此函数处于调用堆栈顶部的样本的数量。<br />-   对于模块，是此模块中函数的独占样本之和。<br />-   对于行或指令，是在其中执行此行或指令的样本的数量。|
 |**独占样本数百分比**|-    对于函数或模块，是分析运行期间属于此函数或模块的独占样本的所有样本数的百分比。<br />-   对于行或指令，是分析运行期间在其中执行此行或指令的所有样本数的百分比。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [“模块”视图 - 采样](../profiling/modules-view-dotnet-memory-sampling-data.md)
 - [“模块”视图 - 检测](../profiling/modules-view-dotnet-memory-instrumentation-data.md)
 - [“模块”视图](../profiling/modules-view-instrumentation-data.md)

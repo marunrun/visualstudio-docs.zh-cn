@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 5fe9f052c10f31c4db0f8bf09f273be5814ff732
-ms.sourcegitcommit: 3ed59ce39692124fe61c484df4348c0b9abee9b9
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "78263131"
 ---
 # <a name="walkthrough-create-an-msbuild-project-file-from-scratch"></a>演练：从头开始创建 MSBuild 项目文件
@@ -51,9 +51,9 @@ ms.locfileid: "78263131"
 
  本部分演示如何使用文本编辑器创建最小的 C# 应用程序源文件。
 
-1. 在命令提示符下，浏览到要在其中创建应用程序的文件夹，例如，\My Documents\\  或 \Desktop\\  。
+1. 在命令提示符下，浏览到要在其中创建应用程序的文件夹，例如，\My Documents *\\* 或 \Desktop *\\* 。
 
-2. 键入“md HelloWorld”  创建名为“\HelloWorld\\”  的子文件夹。
+2. 键入“md HelloWorld”  创建名为“\HelloWorld *”\\* 的子文件夹。
 
 3. 键入 **cd HelloWorld** 切换到该新文件夹。
 
@@ -219,7 +219,7 @@ Build 目标中的任务按顺序执行。 在本例中，Visual C# 编译器 `C
 
      这将指示 Visual C# 编译器生成由 `AssemblyName` 属性命名的程序集，并将其放在由 `OutputPath` 属性命名的文件夹中。
 
-5. 保存更改。
+5. 保存所做更改。
 
 你的项目文件现在应类似于以下代码：
 
@@ -240,7 +240,7 @@ Build 目标中的任务按顺序执行。 在本例中，Visual C# 编译器 `C
 ```
 
 > [!NOTE]
-> 在 `OutputPath` 元素中指定文件夹名称时，建议在文件夹名称的末尾添加反斜杠 (\\) 路径分隔符，而不是将其添加到 `Csc` 任务的 `OutputAssembly` 属性中。 因此，
+> 在 \\ 元素中指定文件夹名称时，建议在文件夹名称的末尾添加反斜杠 (`OutputPath`) 路径分隔符，而不是将其添加到 `OutputAssembly` 任务的 `Csc` 属性中。 因此，
 >
 > `<OutputPath>Bin\</OutputPath>`
 >
@@ -258,9 +258,9 @@ Build 目标中的任务按顺序执行。 在本例中，Visual C# 编译器 `C
 
 1. 在命令提示符处，键入 msbuild helloworld.csproj -t:Build  。
 
-     这将创建“\Bin\\”  文件夹，然后调用 Visual C# 编译器创建 MSBuildSample  应用程序，并将其放在“\Bin\\”  文件夹中。
+     这将创建“\Bin *”\\* 文件夹，然后调用 Visual C# 编译器创建 MSBuildSample  应用程序，并将其放在“\Bin *”\\* 文件夹中。
 
-2. 要验证是否已创建“\Bin\\”  文件夹，以及该文件夹是否包含 MSBuildSample  应用程序，请键入“dir Bin”  。
+2. 要验证是否已创建“\Bin *”\\* 文件夹，以及该文件夹是否包含 MSBuildSample  应用程序，请键入“dir Bin”  。
 
 3. 键入 **Bin\MSBuildSample** 测试应用程序。
 
@@ -335,9 +335,9 @@ Build 目标中的任务按顺序执行。 在本例中，Visual C# 编译器 `C
 
 1. 在命令提示符处，键入msbuild helloworld.csproj -p:AssemblyName=Greetings  。
 
-     由于未使用 -t  开关显式设置目标，因此 MSBuild 运行默认 Build 目标。 -p  开关替代 `AssemblyName` 属性，并为它指定新值 `Greetings`。 这将导致在“\Bin\\”  文件夹中创建一个新应用程序 Greetings.exe  。
+     由于未使用 -t  开关显式设置目标，因此 MSBuild 运行默认 Build 目标。 -p  开关替代 `AssemblyName` 属性，并为它指定新值 `Greetings`。 这将导致在“\Bin *”* *文件夹中创建一个新应用程序 Greetings.exe\\* 。
 
-2. 要验证“\Bin\\”  文件夹是否同时包含 MSBuildSample  应用程序和新的 Greetings  应用程序，请键入“dir Bin”  。
+2. 要验证“\Bin *”\\* 文件夹是否同时包含 MSBuildSample  应用程序和新的 Greetings  应用程序，请键入“dir Bin”  。
 
 3. 键入 **Bin\Greetings** 测试 Greetings 应用程序。
 
@@ -351,13 +351,13 @@ Build 目标中的任务按顺序执行。 在本例中，Visual C# 编译器 `C
 
      这将运行 Clean 任务，以删除具有指定 **AssemblyName** 属性值 `Greetings` 的应用程序。
 
-6. 要验证“\Bin\\”  文件夹现在是否为空，请键入“dir Bin”  。
+6. 要验证“\Bin *”\\* 文件夹现在是否为空，请键入“dir Bin”  。
 
 7. 键入 **msbuild**。
 
-     尽管未指定项目文件，但 MSBuild 会生成 helloworld.csproj  文件，因为当前文件夹中只有一个项目文件。 这将导致在“\Bin\\”  文件夹中创建 MSBuildSample  应用程序。
+     尽管未指定项目文件，但 MSBuild 会生成 helloworld.csproj  文件，因为当前文件夹中只有一个项目文件。 这将导致在“\Bin *”* *文件夹中创建 MSBuildSample\\* 应用程序。
 
-     要验证“\Bin\\”  文件夹是否包含 MSBuildSample  应用程序，请键入“dir Bin”  。
+     要验证“\Bin *”\\* 文件夹是否包含 MSBuildSample  应用程序，请键入“dir Bin”  。
 
 ## <a name="build-incrementally"></a>增量生成
 
@@ -476,7 +476,7 @@ Build 目标中的任务按顺序执行。 在本例中，Visual C# 编译器 `C
 
  Visual Studio 能够自动执行本演练中演示的大部分工作。 若要了解如何使用 Visual Studio 来创建、编辑、生成和测试 MSBuild 项目文件，请参阅[演练：使用 MSBuild](../msbuild/walkthrough-using-msbuild.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [MSBuild 概述](../msbuild/msbuild.md)
 - [MSBuild 参考](../msbuild/msbuild-reference.md)

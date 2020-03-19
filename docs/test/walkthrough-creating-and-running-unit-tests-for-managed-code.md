@@ -13,16 +13,18 @@ manager: jillfra
 ms.workload:
 - dotnet
 author: mikejo5000
-ms.openlocfilehash: b1ec115dd960799a1242a0d60bd793d671facb18
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 4d5878e2c5950e45f65f8d56efdf53cd7b2e89ea
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75590704"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79094676"
 ---
 # <a name="walkthrough-create-and-run-unit-tests-for-managed-code"></a>演练：创建并运行托管代码的单元测试
 
 本文将使用托管代码的 Microsoft 单元测试框架和 Visual Studio 测试资源管理器引导你逐步完成一系列单元测试的创建、运行和自定义  。 你将从正处于开发过程中的 C# 项目开始，创建执行该项目代码的测试，运行测试并检查结果。 然后，更改项目代码并重新运行测试。
+
+
 
 ## <a name="create-a-project-to-test"></a>创建一个项目进行测试
 
@@ -143,7 +145,7 @@ ms.locfileid: "75590704"
 1. 在“文件”  菜单上，选择“添加”   > “新建项目”  。
 
    > [!TIP]
-   > 也可以右键单击“解决方案资源管理器”中的解决方案，然后依次选择“添加” > “新建项目”    。
+   > 也可以右键单击“解决方案资源管理器”中的解决方案，然后依次选择“添加” **“新建项目”**   >   。
 
 ::: moniker range="vs-2017"
 
@@ -235,7 +237,7 @@ using BankAccountNS;
 
 ## <a name="create-the-first-test-method"></a>创建第一个测试方法
 
-在此过程中，编写单元测试方法以验证 `BankAccount` 类的 `Debit` 方法的行为。
+在此过程中，编写单元测试方法以验证 `Debit` 类的 `BankAccount` 方法的行为。
 
 至少需要检查三种行为：
 
@@ -287,7 +289,7 @@ public void Debit_WithValidAmount_UpdatesBalance()
 
 1. 在 **“生成”** 菜单上，选择 **“生成解决方案”** 。
 
-2. 如果未打开“测试资源管理器”，通过在顶部菜单栏中选择“测试” > “Windows” > “测试资源管理器”将其打开     。
+2. 如果未打开“测试资源管理器”，通过在顶部菜单栏中选择“测试” **“Windows”** “测试资源管理器”将其打开   >    >   。
 
 3. 选择 **“全部运行”** 以运行测试。
 
@@ -433,7 +435,7 @@ public void Debit_WhenAmountIsMoreThanBalance_ShouldThrowArgumentOutOfRange()
 
 这是测试方法中的一个 bug。 要解决该问题，在测试方法末尾添加 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.Fail%2A> 断言，处理未引发异常的情况。
 
-重新运行测试表明，如果捕获到正确的异常，测试现将失败  。 `catch` 块捕获到该异常，但该方法继续执行，并在新的 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.Fail%2A> 断言处失败。 要解决此问题，在 `catch` 块中的 `StringAssert` 后添加 `return` 语句。 重新运行测试可确认已解决此问题。 `Debit_WhenAmountIsMoreThanBalance_ShouldThrowArgumentOutOfRange` 的最终版本如下：
+重新运行测试表明，如果捕获到正确的异常，测试现将失败  。 `catch` 块捕获到该异常，但该方法继续执行，并在新的 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.Fail%2A> 断言处失败。 要解决此问题，在 `return` 块中的 `StringAssert` 后添加 `catch` 语句。 重新运行测试可确认已解决此问题。 `Debit_WhenAmountIsMoreThanBalance_ShouldThrowArgumentOutOfRange` 的最终版本如下：
 
 ```csharp
 [TestMethod]
@@ -460,13 +462,13 @@ public void Debit_WhenAmountIsMoreThanBalance_ShouldThrowArgumentOutOfRange()
 }
 ```
 
-### <a name="conclusion"></a>结束语
+### <a name="conclusion"></a>结论
 
 通过改进测试代码，可使测试方法更可靠并提供更多信息。 但更重要的是，被测代码也得到改进。
 
 > [!TIP]
 > 此演练使用用于托管代码的 Microsoft 单元测试框架。 “测试资源管理器”还可以在具有“测试资源管理器”适配器的第三方单元测试框架中运行测试   。 有关详细信息，请参阅[安装第三方单元测试框架](../test/install-third-party-unit-test-frameworks.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 有关如何从命令行运行测试的信息，请参阅 [VSTest.Console.exe 命令行选项](vstest-console-options.md)。

@@ -17,10 +17,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 0b932d5f9e4a178c94f3e490c66cec64648ce4f6
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74773330"
 ---
 # <a name="call-tree-view"></a>“调用关系树”视图
@@ -34,7 +34,7 @@ ms.locfileid: "74773330"
 
  可以自定义“调用树”视图来添加或删除列。 右键单击“列名称标题栏”  ，然后选择“添加/删除列”  。
 
- 通过限制显示的数据量，可配置“调用树”视图进行降噪。 通过使用降噪，性能问题在视图中就变得更为显著。 当性能问题易于区分时，分析就变得较为轻松了。 有关详细信息，请参阅[如何：在报表视图中配置降噪](../profiling/how-to-configure-noise-reduction-in-report-views.md)。
+ 通过限制显示的数据量，可配置“调用树”视图进行降噪。 通过使用降噪，性能问题在视图中就变得更为显著。 当性能问题易于区分时，分析就变得较为轻松了。 有关详细信息，请参阅[如何：在报告视图中配置降噪](../profiling/how-to-configure-noise-reduction-in-report-views.md)。
 
 > [!NOTE]
 > 如果将降噪配置为在启用时显示警告，则将在报告中显示信息栏。
@@ -49,7 +49,7 @@ ms.locfileid: "74773330"
 
 - [“调用树”视图](../profiling/call-tree-view-contention-data.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [性能报告视图](../profiling/performance-report-views.md)
 - [了解检测数据值](../profiling/understanding-instrumentation-data-values.md)
 - [了解采样数据值](../profiling/understanding-sampling-data-values.md)

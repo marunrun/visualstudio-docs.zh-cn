@@ -14,13 +14,13 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 9f706acfbaee7c6170f74bc655f9172ff6bdd3b4
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75592264"
 ---
-# <a name="how-to-change-between-member-notation-and-association-notation-in-class-designer"></a>如何：在类设计器中的成员表示法与关联表示法之间转换
+# <a name="how-to-change-between-member-notation-and-association-notation-in-class-designer"></a>如何：在类设计器中在成员表示法与关联表示法之间转换
 
 在“类设计器”中，可以更改类图表示两种类型（从成员表示法到关联表示法）之间的关联关系的方式，反之亦然  。 通常，显示为关联行的成员可提供类型关联方式的有用可视化。
 
@@ -42,7 +42,7 @@ ms.locfileid: "75592264"
 
 在类图中，右键单击关联行，然后根据情况选择“显示为属性”  或“显示为字段”  。 关联行将消失，并且属性将显示在类图上类型形状内的相应隔离舱中。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [如何：创建类型之间的继承](how-to-create-inheritance-between-types.md)
 - [如何：查看类型之间的继承](how-to-view-inheritance-between-types.md)

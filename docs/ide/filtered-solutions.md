@@ -11,10 +11,10 @@ ms.author: stsu
 manager: jillfra
 monikerRange: '>= vs-2019'
 ms.openlocfilehash: 4c44d267ef5686d04e9549601e05866aabbfb62d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "72650842"
 ---
 # <a name="filtered-solutions-in-visual-studio"></a>Visual Studio 中筛选的解决方案
@@ -37,7 +37,7 @@ ms.locfileid: "72650842"
 
 若要使用“打开项目”  对话框打开一个解决方案而不加载它的任何项目，请执行以下操作：
 
-1. 在菜单栏上，依次选择“文件” > “打开” > “项目/解决方案”    。
+1. 在菜单栏上，依次选择“文件” **“打开”** “项目/解决方案” >    >   。
 
 2. 在“打开项目”对话框中，  选择解决方案，然后选择“不加载项目”  。
 
@@ -102,7 +102,7 @@ devenv /donotloadprojects MySln.sln
 
 ![在 Visual Studio 中打开最近文件](media/filtered-solutions/open-recent.png)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在解决方案资源管理器中自定义文件嵌套](file-nesting-solution-explorer.md)
 - [优化 Visual Studio 性能](optimize-visual-studio-performance.md)

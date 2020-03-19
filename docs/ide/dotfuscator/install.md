@@ -23,10 +23,10 @@ author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.openlocfilehash: bb659976126713a11594ad1b4aeb536510744c38
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75596809"
 ---
 # <a name="install-dotfuscator-community"></a>安装 Dotfuscator Community
@@ -95,7 +95,7 @@ Dotfuscator Community 现在是 Visual Studio 的可选组件。
 
 然后可将 Dotfuscator Community 作为 Visual Studio 的单个组件进行安装：
 
-1. 选择“各个组件”  选项卡。
+1. 选择“各个组件”选项卡  。
 2. 在“代码工具”  下，勾选“PreEmptive Protection - Dotfuscator”  项。<br/> <br/> ![单个组件](media/install_individually_12.png) <br/> <br/>
 3. “PreEmptive Protection - Dotfuscator”  显示在“摘要”  面板的“各个组件”  部分下。 <br/> <br/> ![摘要窗格](media/install_individually_3.png) <br/> <br/>
 4. 根据环境需要进一步配置任何安装设置。
@@ -103,7 +103,7 @@ Dotfuscator Community 现在是 Visual Studio 的可选组件。
 
 安装完成后即可开始使用 Dotfuscator Community。 有关详细信息，请参阅[完整 Dotfuscator Community 用户指南的“入门”页][get-started]。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [完整 Dotfuscator Community 用户指南中的本主题](https://www.preemptive.com/dotfuscator/ce/docs/help/)
 

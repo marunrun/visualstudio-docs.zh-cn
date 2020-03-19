@@ -13,10 +13,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: ec0f211db3d9906d83d9bcf7c7a0ab79ec3e1b7f
-ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/22/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77557830"
 ---
 # <a name="how-to-install-the-stand-alone-profiler"></a>如何：安装独立探查器
@@ -41,7 +41,7 @@ ms.locfileid: "77557830"
    > [!NOTE]
    > 如果显示 vsinstr.exe 的用法信息，则表明安装无误。 如果看见一条错误信息，该消息指出找不到 vsinstr.exe 或它的依赖项，请确保已经按步骤 2 中的说明正确设置了路径。
 
-4. 通过将 _NT_SYMBOL_PATH 变量设置为 symsrv\*symsrv.dll\*c:\localcache\*https://msdl.microsoft.com/download/symbols 来设置符号服务器  
+4. 通过将 _NT_SYMBOL_PATH 变量设置为 symsrv**symsrv.dll**c:\localcache **\* 来设置符号服务器\*\*https://msdl.microsoft.com/download/symbols**
 
 5. 使用系统环境变量设置符号服务器后，请在新的命令提示符处运行命令行探查器工具。 这将使新环境变量生效。 在命令提示符窗口中，键入以下命令：
 
@@ -52,8 +52,8 @@ ms.locfileid: "77557830"
 
 6. 使用 [VSPerfReport](../profiling/vsperfreport.md) 工具将符号串行化到分析数据 (.vsp) 文件中。 使用 VSPerfReport /summary:all /packsymbols  开关。 如果数据文件中未插入符号，请确保设置了 _NT_SYMBOL_PATH 环境变量。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [通过命令行分析](../profiling/using-the-profiling-tools-from-the-command-line.md)
-- [演练：使用检测进行命令行分析](command-line-profiling-of-stand-alone-applications.md)
+- [演练：通过命令行执行检测分析](command-line-profiling-of-stand-alone-applications.md)
 - [如何：引用 Windows 符号信息](../profiling/how-to-reference-windows-symbol-information.md)
 - [VSPerfReport](../profiling/vsperfreport.md)

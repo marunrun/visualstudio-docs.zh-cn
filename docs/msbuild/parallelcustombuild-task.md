@@ -18,10 +18,10 @@ ms.author: corob
 ms.workload:
 - multiple
 ms.openlocfilehash: 0d8a171d393f629d0b6ab3a7fc61ad37862b0da1
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77279264"
 ---
 # <a name="parallelcustombuild-task"></a>ParallelCustomBuild 任务
@@ -32,13 +32,13 @@ ms.locfileid: "77279264"
 
 下表介绍了 ParallelCustomBuild  任务的参数。
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
 |**BreakOnFirstFailure**|可选的 bool  参数。|
 |**MaxItemsInBatch**|可选 **int** 参数。|
 |**MaxProcesses**|可选 **int** 参数。|
 |**Sources**|必需的 **ITaskItem[]** 参数。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [任务参考](../msbuild/msbuild-task-reference.md)

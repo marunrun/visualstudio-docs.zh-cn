@@ -10,11 +10,11 @@ ms.workload:
 - multiple
 author: mikejo5000
 ms.openlocfilehash: 5010761213cf79756cf8da3d2fffe60dd0b61efd
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75591562"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79306985"
 ---
 # <a name="static-helper-classes"></a>静态帮助程序类
 
@@ -32,7 +32,7 @@ IntelliTest 提供了一套静态帮助程序类，可供创作[参数化单元�
 <a name="pexassume"></a>
 ## <a name="pexassume"></a>PexAssume
 
-表示假设的静态类，例如[参数化单元测试](test-generation.md#parameterized-unit-testing)中的[前置条件](test-generation.md#precondition)。 此类的方法可用于筛除不需要的测试输入。
+表示假设的静态类，例如[参数化单元测试](test-generation.md#precondition)中的[前置条件](test-generation.md#parameterized-unit-testing)。 此类的方法可用于筛除不需要的测试输入。
 
 如果假设的条件不适用于某些测试输入，则会引发 PexAssumeFailedException  。 这将导致在无提示的情况下忽略该测试。
 
@@ -64,7 +64,7 @@ PexAssume  还包含专用的嵌套类，用于对字符串、数组和集合进
 <a name="pexassert"></a>
 ## <a name="pexassert"></a>PexAssert
 
-表示断言的静态类，例如[参数化单元测试](test-generation.md#parameterized-unit-testing)中的[后置条件](test-generation.md#postcondition)。
+表示断言的静态类，例如[参数化单元测试](test-generation.md#postcondition)中的[后置条件](test-generation.md#parameterized-unit-testing)。
 
 如果断言的条件不适用于某些测试输入，则会引发 PexAssertFailedException，这将导致测试失败  。
 
@@ -170,6 +170,6 @@ public static void AreElementsNotNull<T>(T[] value)
 }
 ```
 
-## <a name="got-feedback"></a>是否获得反馈？
+## <a name="got-feedback"></a>有反馈？
 
 在[开发人员社区](https://developercommunity.visualstudio.com/content/idea/post.html?space=8)上发布想法和功能请求。

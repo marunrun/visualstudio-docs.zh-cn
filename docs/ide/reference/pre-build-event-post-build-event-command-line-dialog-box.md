@@ -35,10 +35,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 38712c25718670ea15324e3daf6fadc138cb08a6
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75567913"
 ---
 # <a name="pre-build-eventpost-build-event-command-line-dialog-box"></a>生成前事件/生成后事件命令行对话框
@@ -57,7 +57,7 @@ ms.locfileid: "75567913"
 > [!NOTE]
 > 在运行 .bat 文件的所有生成后命令之前添加 `call` 语句。 例如，`call C:\MyFile.bat` 或 `call C:\MyFile.bat call C:\MyFile2.bat`。
 
-宏 
+**宏**
 
 展开编辑框，显示要插入命令行编辑框的宏列表。
 
@@ -73,7 +73,7 @@ ms.locfileid: "75567913"
 
 可以使用任何宏来指定文件位置，或在存在多种选择的情况下获取输入文件的实际名称。 这些宏不区分大小写。
 
-|宏|描述|
+|宏|说明|
 |-----------|-----------------|
 |`$(ConfigurationName)`|当前项目配置的名称，例如，“调试”。|
 |`$(OutDir)`|相对于项目目录的输出文件目录的路径。 这解析为输出目录属性的值。 它包括尾随反斜杠“\\”。|
@@ -95,7 +95,7 @@ ms.locfileid: "75567913"
 |`$(TargetFileName)`|生成的主输出文件的文件名称（使用基名称和文件扩展名进行定义）。|
 |`$(TargetExt)`|生成的主输出文件的文件扩展名。 文件扩展名之前包括“.”。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在 Visual Studio 中指定自定义生成事件](../../ide/specifying-custom-build-events-in-visual-studio.md)
 - [“项目设计器”->“生成事件”页 (C#)](../../ide/reference/build-events-page-project-designer-csharp.md)

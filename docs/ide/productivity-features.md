@@ -8,10 +8,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: fd85565ee573015737ab815258914bec89ab9369
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75596978"
 ---
 # <a name="productivity-tips-for-visual-studio"></a>提高 Visual Studio 使用效率的提示
@@ -24,7 +24,7 @@ ms.locfileid: "75596978"
 
 使用以下功能快速编写代码。
 
-- **使用便捷命令**。 Visual Studio 提供各种有助于更快速完成常见编辑任务的命令。 例如，选择一个命令，即可轻松复制代码行，而无需复制它、重新定位光标并粘贴它。 依次选择“编辑”   > “复制”  ，或按 Ctrl  +E  、V  。 此外，还可以通过选择“编辑” > “高级” > “展开选定内容”或“编辑” > “高级” > “合拢选定内容”，或按“Shift”+“Alt”+“=”或“Shift”+“Alt”+“-”，快速展开或合拢选定文本内容             。
+- **使用便捷命令**。 Visual Studio 提供各种有助于更快速完成常见编辑任务的命令。 例如，选择一个命令，即可轻松复制代码行，而无需复制它、重新定位光标并粘贴它。 依次选择“编辑”   > “复制”  ，或按 Ctrl  +E  、V  。 此外，还可以通过选择“编辑” **“高级”** “展开选定内容”或“编辑” > “高级” **“合拢选定内容”，或按“Shift”** “Alt” > “ **”或“Shift”** “Alt” **“** ”，快速展开或合拢选定文本内容 >    >    +  + **=**  +  + **-** 。
 
 - **使用 IntelliSense**。 在编辑器中输入代码时，将会显示 IntelliSense 信息，如列表成员、参数信息、快速信息，签名帮助和完整单词。 这些功能支持文本的模糊匹配；例如，列表成员的结果列表不仅包括以您输入的字符开头的条目，还包括在名称的任何位置包含字符组合的条目。 有关详细信息，请参阅[使用 IntelliSense](../ide/using-intellisense.md)。
 
@@ -82,7 +82,7 @@ ms.locfileid: "75596978"
 
    ::: moniker-end
 
-   按 Ctrl+Q   可直接跳转至搜索框。
+   按 Ctrl**Q**+  可直接跳转至搜索框。
 
 ## <a name="debug-code"></a>调试代码
 
@@ -94,7 +94,7 @@ ms.locfileid: "75596978"
 
 - **设置临时断点**。 你可以在当前代码行中创建一个临时断点，同时启动调试器。 点击该行代码时，调试器进入中断模式。 有关详细信息，请参阅[使用调试器浏览代码](../debugger/navigating-through-code-with-the-debugger.md)。
 
-    若要使用此功能，请选择 Ctrl+F10 键，或打开要中断的代码行的快捷菜单，然后选择“运行到游标处”。   
+    若要使用此功能，请选择 Ctrl**F10 键，或打开要中断的代码行的快捷菜单，然后选择“运行到游标处”。** +  
 
 - **在调试过程中移动执行点**。 你可以将当前执行点移至代码的其他部分，然后从该点重新开始调试。 如果要调试一部分代码而不想重新创建到达这部分代码所需的所有步骤，此方法相当有效。 有关详细信息，请参阅[使用调试器浏览代码](../debugger/navigating-through-code-with-the-debugger.md)。
 
@@ -104,7 +104,7 @@ ms.locfileid: "75596978"
 
      若要添加数据提示，调试器必须处于中断模式。 将光标放在该变量上，然后在显示的数据提示中选择固定按钮。 调试停止时，源文件中包含该变量的代码行的旁边会显示蓝色图钉图标。 如果您指向蓝色图钉，则会显示最新调试会话中的变量的值。
 
-- **清除即时窗口**。 可在设计时输入 `>cls` 或 `>Edit.ClearAll` 来清除[即时窗口](../ide/reference/immediate-window.md)的内容
+- **清除即时窗口**。 可在设计时输入 [ 或 ](../ide/reference/immediate-window.md) 来清除`>cls`即时窗口`>Edit.ClearAll`的内容
 
      有关其他命令的详细信息，请参阅 [Visual Studio 命令别名](../ide/reference/visual-studio-command-aliases.md)。
 
@@ -138,12 +138,12 @@ ms.locfileid: "75596978"
 
    还可以通过创建“解决方案资源管理器”的另一个实例并将其移至其他监视器，以便更轻松地管理文件。  若要创建“解决方案资源管理器”的另一个实例，请打开“解决方案资源管理器”中的快捷菜单，然后选择“新建解决方案资源管理器视图”。   
 
-- **自定义在 Visual Studio 中显示的字体**。 可更改 IDE 中文本所使用的字体、字号和颜色。 例如，你可以自定义编辑器中特定代码元素的颜色以及工具窗口或整个 IDE 中的字体。 有关详细信息，请参阅[如何：更改字体和颜色](../ide/how-to-change-fonts-and-colors-in-visual-studio.md)以及[如何：更改编辑器中的字体和颜色](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md)。
+- **自定义在 Visual Studio 中显示的字体**。 可更改 IDE 中文本所使用的字体、字号和颜色。 例如，你可以自定义编辑器中特定代码元素的颜色以及工具窗口或整个 IDE 中的字体。 有关详细信息，请参阅[如何：更改字体和颜色](../ide/how-to-change-fonts-and-colors-in-visual-studio.md)和[如何：在编辑器中更改字体和颜色](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Studio 提示和技巧博客文章](https://devblogs.microsoft.com/visualstudio/visual-studio-tips-and-tricks/)
 - [常用命令的默认键盘快捷键](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md)
 - [如何：自定义菜单和工具栏](../ide/how-to-customize-menus-and-toolbars-in-visual-studio.md)
-- [演练：创建简单的应用程序](../get-started/csharp/tutorial-wpf.md)
+- [演练：创建简单应用程序](../get-started/csharp/tutorial-wpf.md)
 - [辅助功能提示和技巧](../ide/reference/accessibility-tips-and-tricks.md)

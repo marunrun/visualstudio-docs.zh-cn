@@ -9,17 +9,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 866f91303c224f8330a4d2be76f3d29331fcb346
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75589911"
 ---
 # <a name="walkthrough-create-a-realistic-3d-billiard-ball"></a>演练：创建真实的三维台球
 
 本演练演示如何使用 Visual Studio 中的着色器设计器和图像编辑器创建真实的三维台球。 将几项着色技术与合适的纹理资源合并，实现台球的三维效果。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 需以下组件和技能来完成本演练：
 
@@ -99,7 +99,7 @@ ms.locfileid: "75589911"
 
 - 或者也可通过配置着色器图的 MaterialDiffuse  属性来调整照明的呈现方式。 若要访问着色器图的属性，请选择设计表面的空白区域，然后在“属性”  窗口中找到要访问的属性。
 
-有关如何在着色器中应用 Lambert 光照的详细信息，请参阅[如何：创建基本 Lambert 着色器](../designers/how-to-create-a-basic-lambert-shader.md)。
+有关如何在着色器中应用朗伯照明的详细信息，请参阅[如何：创建基本 Lambert 着色器](../designers/how-to-create-a-basic-lambert-shader.md)。
 
 使用朗伯照明后，台球应如下所示：
 
@@ -121,7 +121,7 @@ ms.locfileid: "75589911"
 
 2. 或者也可配置着色器图的反射属性（“MaterialSpecular”  和“MaterialSpecularPower”  ），调整反射高光的呈现方式。 若要访问着色器图的属性，请选择设计表面的空白区域，然后在“属性”  窗口中找到要访问的属性。
 
-   有关如何在着色器中应用镜面高光的详细信息，请参阅[如何：创建基本 Phong 着色器](../designers/how-to-create-a-basic-phong-shader.md)。
+   有关如何在着色器中应用反射高光的详细信息，请参阅[如何：创建基本 Phong 着色器](../designers/how-to-create-a-basic-phong-shader.md)。
 
    应用反射照明后，台球应如下所示：
 
@@ -161,15 +161,15 @@ ms.locfileid: "75589911"
 
 ### <a name="to-assemble-a-cube-map-by-using-the-directx-texture-tool"></a>使用 DirectX 纹理工具组合立方体贴图
 
-1. 在 DirectX 纹理工具中的主菜单上，选择“文件” > “新建纹理”   。 随机显示“新建纹理”对话框  。
+1. 在 DirectX 纹理工具中的主菜单上，选择“文件” **“新建纹理”**  >   。 随机显示“新建纹理”对话框  。
 
 2. 在“纹理类型”  组中，选择“立方体贴图纹理”  。
 
 3. 在“维度”  组中，输入正确的“宽度”  和“高度”  值，然后选择“确定”  。 随机显示新的纹理文档。 默认情况下，第一个在纹理文档中显示的纹理对应于“正 X”  立方体面。
 
-4. 将为纹理立方体侧面创建的纹理加载到立方体面。 在主菜单中，选择“文件” > “打开到此立方体贴图面”，选择为立方体侧面创建的纹理，然后选择“打开”    。
+4. 将为纹理立方体侧面创建的纹理加载到立方体面。 在主菜单中，选择“文件” **“打开到此立方体贴图面”，选择为立方体侧面创建的纹理，然后选择“打开”**  >    。
 
-5. 为“负 X”  、“正 Z”  和“负 Z”  立方体面重复步骤 4。 若要执行此操作，必须查看想要加载的面。 若要查看其他立方体贴图面，请在主菜单上选择“查看” > “立方体贴图面”，然后选择要查看的面   。
+5. 为“负 X”  、“正 Z”  和“负 Z”  立方体面重复步骤 4。 若要执行此操作，必须查看想要加载的面。 若要查看其他立方体贴图面，请在主菜单上选择“查看” **“立方体贴图面”，然后选择要查看的面** >   。
 
 6. 对于“正 Y”  立方体面，请加载为纹理立方体顶部创建的纹理。
 
@@ -207,10 +207,10 @@ ms.locfileid: "75589911"
 
    在此最终图像中，请注意为创建逼真台球组合所添加效果的方式。 形状、纹理和照明构造三维物体的基本外观，反射高光和反射使得台球更加有趣，使其与环境融为一体。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [如何：导出着色器](../designers/how-to-export-a-shader.md)
-- [如何：向三维模型应用着色器](../designers/how-to-apply-a-shader-to-a-3-d-model.md)
+- [如何：向 3D 模型应用着色器](../designers/how-to-apply-a-shader-to-a-3-d-model.md)
 - [着色器设计器](../designers/shader-designer.md)
 - [图像编辑器](../designers/image-editor.md)
 - [着色器设计器节点](../designers/shader-designer-nodes.md)

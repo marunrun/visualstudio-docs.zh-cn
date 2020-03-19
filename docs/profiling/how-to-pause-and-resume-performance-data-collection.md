@@ -12,10 +12,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 3b6190dbc4545836e5fa7ea1b1ff6c5bfc3b2403
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74778786"
 ---
 # <a name="how-to-pause-and-resume-performance-data-collection"></a>如何：暂停和恢复性能数据收集
@@ -38,6 +38,6 @@ ms.locfileid: "74778786"
 
   - 选择“停止分析”可结束分析会话并生成报告  。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [控制数据收集](../profiling/controlling-data-collection.md)
-- [如何：启动和结束性能数据收集](../profiling/how-to-start-and-end-performance-data-collection.md)
+- [如何：启动和停止性能数据收集](../profiling/how-to-start-and-end-performance-data-collection.md)

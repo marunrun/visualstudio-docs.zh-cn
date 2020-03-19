@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: c65be2b5afe91f9ee20a5eecde57d790a0cbcb2c
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75590392"
 ---
 # <a name="design-and-view-classes-and-types-with-class-designer"></a>使用类设计器设计和查看类和类型
@@ -33,7 +33,7 @@ ms.locfileid: "75590392"
 
 - **可视化**：通过在图上查看项目中的类来了解项目结构。 自定义图表，以便将重点放在你最关注的项目详细信息上。 保存图表以供将来演示或存档使用。
 
-- **重构**：重写方法、重命名标识符、重构参数和实现接口和抽象类。
+- **重构**：重写方法、重命名标识符、重构参数以及实现接口和抽象类。
 
 ## <a name="view-types-and-relationships"></a>查看类型和关系
 
@@ -48,14 +48,14 @@ ms.locfileid: "75590392"
 
 展示项目信息的第一步是创建一个可显示要展示的内容的类图。 有关详细信息，请参阅[添加类图](how-to-add-class-diagrams-to-projects.md)。 你可以为项目创建多个类图，可用于显示项目的不同视图、选定的项目类型子集或选定的类型成员子集。
 
-除了定义类图显示的内容，还可以更改信息的呈现方式的；有关详细信息，请参阅[如何：自定义类图](how-to-customize-class-diagrams.md)。
+除了定义每个类图显示的内容，还可以更改信息的呈现方式；有关详细信息，请参阅[如何：自定义类图](how-to-customize-class-diagrams.md)。
 
 在对一个或多个类图进行微调之后，你可以将它们复制到 Microsoft Office 文档中并打印出来，或是将它们作为图像文件导出。 有关详细信息，请参阅[如何：将类图元素复制到 Microsoft Office 文档](how-to-copy-class-diagram-elements-to-a-microsoft-office-document.md)、[如何：打印类图](how-to-print-class-diagrams.md)以及[如何：将类图作为图像导出](how-to-export-class-diagrams-as-images.md)。
 
 > [!NOTE]
 > 类设计器不会跟踪源文件的位置，因此更改项目结构或移动项目中的源文件就可能导致类设计器无法继续对类型进行跟踪，尤其是 typedef 的源类型、基类或关联类型。 可能会收到错误，如“类设计器无法显示此类型”  。 如果收到错误，要将修改过的或被重新定位的源代码再次拖到类图中以重新显示。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [代码编辑器功能](../writing-code-in-the-code-and-text-editor.md)
 - [映射解决方案中的依赖项](../../modeling/map-dependencies-across-your-solutions.md)

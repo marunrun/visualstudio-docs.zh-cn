@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: fda60ffb97ecb44bd4a881cb42e4d9199cc958b8
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "76115344"
 ---
 # <a name="specify-custom-build-events-in-visual-studio"></a>在 Visual Studio 中指定自定义生成事件
@@ -55,9 +55,9 @@ ms.locfileid: "76115344"
   > [!NOTE]
   > 以上代码中的 `%I` 在批处理脚本中应是 `%%I`。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [编译和生成](../ide/compiling-and-building-in-visual-studio.md)
 - [预生成事件/生成后事件命令行对话框](../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md)
 - [MSBuild 特殊字符](../msbuild/msbuild-special-characters.md)
-- [演练：构建应用程序](../ide/walkthrough-building-an-application.md)
+- [演练：生成应用程序](../ide/walkthrough-building-an-application.md)

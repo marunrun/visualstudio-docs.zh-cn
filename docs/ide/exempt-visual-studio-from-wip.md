@@ -8,10 +8,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 8b4eb454f641b5bef7273464d605fb194f650790
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75588559"
 ---
 # <a name="configure-visual-studio-as-a-wip-exempt-app"></a>将 Visual Studio 配置为 WIP 免除应用
@@ -34,6 +34,6 @@ ms.locfileid: "75588559"
 
 若要指定 Visual Studio 可以在网络上访问的企业数据位置，请按照[定义受保护的应用可以在何处查找和发送企业数据的步骤](/windows/security/information-protection/windows-information-protection/create-wip-policy-using-intune-azure#choose-where-apps-can-access-enterprise-data)执行操作。 若要防止 Windows 阻止通过 IP 地址连接到云资源，请确保在设置中添加 /AppCompat/ 字符串\*\*。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用 WIP 的应用的行为](/windows/security/information-protection/windows-information-protection/app-behavior-with-wip)

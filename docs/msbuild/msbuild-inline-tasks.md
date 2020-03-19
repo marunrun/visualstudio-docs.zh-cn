@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: e68f2bdf0559dc2bea6bd349dbf5f9bedca3671e
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77633312"
 ---
 # <a name="msbuild-inline-tasks"></a>MSBuild 内联任务
@@ -69,7 +69,7 @@ ms.locfileid: "77633312"
 > [!NOTE]
 > 由 `Task` 元素包含的元素均特定于任务工厂，在本例中，即代码任务工厂。
 
-### <a name="code-element"></a>代码元素
+### <a name="code-element"></a>Code 元素
 
  最后一个出现在 `Task`元素内的子元素是 `Code` 元素。 `Code` 元素包含或定位你想要编译到任务中的代码。 放置于 `Code` 元素中的内容具体取决于你希望如何编写任务。
 
@@ -79,16 +79,16 @@ ms.locfileid: "77633312"
 
 - 如果 `Type` 的值为 `Class`，则 `Code` 元素将包含派生自 <xref:Microsoft.Build.Framework.ITask> 接口的类的代码。
 
-- 如果 `Type` 的值为 `Method`，则代码将定义 <xref:Microsoft.Build.Framework.ITask> 接口的 `Execute` 方法的替代。
+- 如果 `Type` 的值为 `Method`，则代码将定义 `Execute` 接口的 <xref:Microsoft.Build.Framework.ITask> 方法的替代。
 
 - 如果 `Type` 的值为 `Fragment`，则代码将定义 `Execute` 方法的内容，但不定义签名和 `return` 语句。
 
 通常，该代码本身会出现在 `<![CDATA[` 标记和 `]]>` 标记之间。 由于代码位于 CDATA 部分中，因此你不必担心转义保留字符（例如，“\<”或“>”）。
 
-或者，可以使用 `Code` 元素的 `Source` 属性来指定包含任务代码的文件的位置。 源文件中的代码的类型必须为由 `Type` 属性所指定的类型。 如果存在 `Source` 属性，则 `Type` 的默认值为 `Class`。 如果 `Source` 不存在，则默认值为 `Fragment`。
+或者，可以使用 `Source` 元素的 `Code` 属性来指定包含任务代码的文件的位置。 源文件中的代码的类型必须为由 `Type` 属性所指定的类型。 如果存在 `Source` 属性，则 `Type` 的默认值为 `Class`。 如果 `Source` 不存在，则默认值为 `Fragment`。
 
 > [!NOTE]
-> 当在源文件中定义任务类时，类名必须符合对应的 [UsingTask](../msbuild/usingtask-element-msbuild.md) 元素的 `TaskName` 属性。
+> 当在源文件中定义任务类时，类名必须符合对应的 `TaskName`UsingTask[ 元素的 ](../msbuild/usingtask-element-msbuild.md) 属性。
 
 ## <a name="helloworld"></a>HelloWorld
 
@@ -164,7 +164,7 @@ Log.LogError("Hello, world!");
 
 - `Tally` 是输出参数，其类型为 System.Int32。
 
-如果 `Code` 元素具有 `Fragment` 或 `Method` 的 `Type` 特性，则将自动为每个参数创建属性。 否则，属性必须在源代码中显示声明，并且必须与其参数定义完全匹配。
+如果 `Code` 元素具有 `Type` 或 `Fragment` 的 `Method` 特性，则将自动为每个参数创建属性。 否则，属性必须在源代码中显示声明，并且必须与其参数定义完全匹配。
 
 ## <a name="example"></a>示例
 
@@ -195,7 +195,7 @@ File.WriteAllText(Path, content);
 </Project>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [任务](../msbuild/msbuild-tasks.md)
 - [演练：创建内联任务](../msbuild/walkthrough-creating-an-inline-task.md)

@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: d4fafaf9356d8862808e1ac6ad125207d71769b5
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75590873"
 ---
 # <a name="add-visual-studio-editor-support-for-other-languages"></a>为其他语言添加 Visual Studio 编辑器支持
@@ -74,20 +74,20 @@ Visual Studio 通过 [TextMate 语法](https://manual.macromates.com/en/language
 
 如适用，请在此基路径下添加下列文件夹：
 
-|文件夹名|描述|
+|文件夹名|说明|
 |-----------------|-----------------|
 |\\ *\<language name>*|语言文件夹。 用语言的名称替换 *\<language name>* 。 例如， *\Matlab*。|
 |*\Syntaxes*|语法文件夹。 包含语言的 .json 语法文件，如 Matlab.json   。|
 |*\Snippets*|代码段文件夹。 包含语言的代码段。|
 
-在 Windows 中，%userprofile% 解析为路径 c:\Users\\\<user name>   。 如果系统上不存在“Extensions”  文件夹，则需要创建它。 如果该文件夹已存在，它将被隐藏。
+在 Windows 中，%userprofile% 解析为路径 c:\Users  user name> *\\\<* 。 如果系统上不存在“Extensions”  文件夹，则需要创建它。 如果该文件夹已存在，它将被隐藏。
 
 > [!TIP]
 > 如果在编辑器中打开了任何文件，则需要在添加 TextMate 语法之后关闭并重新打开它们，以查看语法高亮显示。
 
 有关如何创建 TextMate 语法的详细信息，请参阅 [TextMate - 语言语法简介](https://developmentality.wordpress.com/2011/02/08/textmate-introduction-to-language-grammars/)和[如何创建 Textmate 包的语言语法和自定义主题说明](https://benparizek.com/notebook/notes-on-how-to-create-a-language-grammar-and-custom-theme-for-a-textmate-bundle)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [添加语言服务器协议扩展](../extensibility/adding-an-lsp-extension.md)
 - [演练：创建代码片段](../ide/walkthrough-creating-a-code-snippet.md)

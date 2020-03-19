@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: c7df85c429794d61028d5304108d289dfe9bf496
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75594235"
 ---
 # <a name="code-snippet-functions"></a>代码片段函数
@@ -27,7 +27,7 @@ ms.locfileid: "75594235"
 
 下表介绍可与代码片段中的 `Function` 元素一起使用的函数。
 
-|函数|描述|语言|
+|函数|说明|语言|
 |--------------|-----------------|--------------|
 |`GenerateSwitchCases(EnumerationLiteral)`|为 `EnumerationLiteral` 参数指定的枚举成员生成一个switch 语句和一组 case 语句。 `EnumerationLiteral` 参数必须是枚举文本的引用或是枚举类型。|C#|
 |`ClassName()`|返回包含插入的代码片段的类的名称。|C#|
@@ -35,7 +35,7 @@ ms.locfileid: "75594235"
 
 ## <a name="generateswitchcases-example"></a>GenerateSwitchCases 示例
 
-下面的示例演示了如何使用 `GenerateSwitchCases` 函数。 在插入此代码片段并将枚举输入到 `$switch_on$` 文本中时，`$cases$` 文本为枚举中的每个值生成一个 `case` 语句。
+以下示例演示如何使用 `GenerateSwitchCases` 函数。 在插入此代码片段并将枚举输入到 `$switch_on$` 文本中时，`$cases$` 文本为枚举中的每个值生成一个 `case` 语句。
 
 ```xml
 <CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
@@ -77,7 +77,7 @@ ms.locfileid: "75594235"
 
 ## <a name="classname-example"></a>ClassName 示例
 
-下面的示例演示了如何使用 `ClassName` 函数。 在插入此代码片段时，`$classname$` 文本会替换为代码文件中该位置的封闭类的名称。
+以下示例演示如何使用 `ClassName` 函数。 在插入此代码片段时，`$classname$` 文本会替换为代码文件中该位置的封闭类的名称。
 
 ```xml
 <CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
@@ -155,7 +155,7 @@ ms.locfileid: "75594235"
 </CodeSnippets>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Function 元素](../ide/code-snippets-schema-reference.md#function-element)
 - [代码片段架构参考](../ide/code-snippets-schema-reference.md)

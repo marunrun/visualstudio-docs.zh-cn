@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: f4c55204983f9e7a546867621ec21070c8d69645
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75590158"
 ---
 # <a name="how-to-customize-class-diagrams"></a>如何：自定义类图
@@ -37,7 +37,7 @@ ms.locfileid: "75590158"
 
 2. 在“类设计器”工具栏中，单击“放大”或“缩小”按钮以更改设计器图面的缩放级别    。
 
-     or
+     或
 
      指定特定的缩放值。 可以使用“缩放”  下拉列表进行选择或键入有效的缩放级别（有效范围介于 10% 到 400% 之间）。
 
@@ -125,7 +125,7 @@ ms.locfileid: "75590158"
 
      此时即会从关系图中移除形状，并从项目中删除形状的基础代码。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [如何：在成员表示法与关联表示法之间转换](how-to-change-between-member-notation-and-association-notation.md)
 - [如何：查看现有类型](how-to-view-existing-types.md)

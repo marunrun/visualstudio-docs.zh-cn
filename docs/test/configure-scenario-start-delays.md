@@ -9,10 +9,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: f962306462538717df694d3bc47719fe31b1e1fe
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "76111475"
 ---
 # <a name="configure-scenario-start-delays-in-load-tests"></a>配置负载测试中的方案启动延迟
@@ -47,7 +47,7 @@ ms.locfileid: "76111475"
 
 2. 在负载测试树的“方案”文件夹中，选择要为其指定延迟开始时间的方案节点  。
 
-3. 在“视图”菜单上选择“属性窗口”   。
+3. 在“视图”菜单上选择“属性”窗口。  
 
      该方案的类别和属性将显示在“属性”窗口中  。
 
@@ -56,7 +56,7 @@ ms.locfileid: "76111475"
     > [!NOTE]
     > 如果方案的“预热过程中禁用”属性值设置为“True”，则在预热期结束后将应用“延迟开始时间”属性时间值    。 使用“预热过程中禁用”方案属性可控制在预热中包含哪些方案  。
 
-5. 更改属性后，在“文件”菜单上选择“保存”   。 然后，可使用新的“延迟开始时间”值运行负载测试  。
+5. 更改属性后，在“文件”菜单上选择“保存”。   然后，可使用新的“延迟开始时间”值运行负载测试  。
 
 ## <a name="enable-and-disable-whether-a-scenario-runs-during-the-warm-up-period"></a>启用和禁用是否在预热期内运行方案
 
@@ -71,19 +71,19 @@ ms.locfileid: "76111475"
 
 1. 打开一个负载测试。
 
-     “负载测试编辑器”随即显示  。 其中显示负载测试树。
+     此时将显示“负载测试编辑器”  。 其中显示负载测试树。
 
 2. 在负载测试树的“方案”  文件夹中，选择要为其更改启动行为的方案节点。
 
-3. 在“视图”菜单上选择“属性窗口”   。
+3. 在“视图”菜单上选择“属性”窗口。  
 
      该方案的类别和属性将显示在“属性”  窗口中。
 
      在“预热过程中禁用”属性中，选择“True”或“False”    。
 
-4. 更改完此属性后，请选择“文件”菜单上的“保存”   。 然后即可使用新的“预热过程中禁用”值运行负载测试  。
+4. 更改完此属性后，请选择“文件”菜单上的“保存”。   然后即可使用新的“预热过程中禁用”值运行负载测试  。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [编辑负载测试方案](../test/edit-load-test-scenarios.md)
 - [为负载测试配置测试代理和测试控制器](../test/configure-test-agents-and-controllers-for-load-tests.md)

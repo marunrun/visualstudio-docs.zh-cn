@@ -12,10 +12,10 @@ ms.author: ghogen
 ms.workload:
 - multiple
 ms.openlocfilehash: 8a4272f7800e0532c0674fe7117e839cb16557d5
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75594924"
 ---
 # <a name="trackedvctooltask-base-class"></a>TrackedVCToolTask 基类
@@ -26,7 +26,7 @@ ms.locfileid: "75594924"
 
 下表介绍了 TrackedVCToolTask  基类的参数。
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
 |**DeleteOutputOnExecute**|可选的 bool  参数。|
 |**EnableExecuteTool**|可选的 bool  参数。|
@@ -48,7 +48,7 @@ ms.locfileid: "75594924"
 |**TrackerFrameworkPath**|可选的 string  参数。|
 |**TrackerSdkPath**|可选的 string  参数。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [任务参考](../msbuild/msbuild-task-reference.md)<br/>
 [任务](../msbuild/msbuild-tasks.md)

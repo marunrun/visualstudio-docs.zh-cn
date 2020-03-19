@@ -12,10 +12,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: acb08edf74d3ca35a2449f588976681d679caeb4
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "76115187"
 ---
 # <a name="how-to-add-and-delete-counters-on-graphs-in-load-test-results"></a>如何：在负载测试结果中的关系图上添加和删除计数器
@@ -41,13 +41,13 @@ ms.locfileid: "76115187"
 
 **包括计时详细信息以收集百分比数据的注意事项**
 
-负载测试编辑器的运行设置中有一个名为“计时详细信息存储”的属性  。 如果启用了“计时详细信息存储”属性，则在负载测试过程中执行各个测试、事务和页所需的时间都将存储在负载测试结果存储库中  。 这使得 90% 和 95% 的数据显示在“负载测试分析器”  的“测试”、“事务”和“页”表中。
+负载测试编辑器的运行设置中有一个名为“计时详细信息存储”的属性。  如果启用了“计时详细信息存储”属性，则在负载测试过程中执行各个测试、事务和页所需的时间都将存储在负载测试结果储存库中  。 这使得 90% 和 95% 的数据显示在“负载测试分析器”  的“测试”、“事务”和“页”表中。
 
-可通过两种方法来启用运行设置属性中的“计时详细信息存储”属性：“StatisticsOnly”和“AllIndividualDetails”    。 无论采用哪个选项，所有单个测试、页和事务均会计时，且根据单个计时数据来计算百分比数据。 它们的区别是，使用“StatisticsOnly”选项时，在计算完百分比数据之后，将立即从存储库中删除单个计时数据  。 删除数据可以减少使用计时详细信息时储存库中所需的空间量。 但是，高级用户可能需要使用 SQL 工具以其他方式来处理计时详细信息数据。 如果是这样，则应使用“AllIndividualDetails”选项，以便计时详细信息数据可用于该处理。  此外，如果将属性设置为“AllIndividualDetails”  ，则可以在负载测试运行结束后，使用“负载测试分析器”  中的“虚拟用户活动”  图来分析虚拟用户活动。 有关详细信息，请参阅[在“详细信息”视图中分析虚拟用户活动](../test/analyze-load-test-virtual-user-activity-in-the-details-view.md)。
+可通过两种方法来启用运行设置属性中的“计时详细信息存储”属性：“StatisticsOnly”和“AllIndividualDetails”    。 无论采用哪个选项，所有单个测试、页和事务均会计时，且根据单个计时数据来计算百分比数据。 它们的区别是，使用“StatisticsOnly”选项时，在计算完百分比数据之后，将立即从储存库中删除单个计时数据  。 删除数据可以减少使用计时详细信息时储存库中所需的空间量。 但是，高级用户可能需要使用 SQL 工具以其他方式来处理计时详细信息数据。 如果是这样，则应使用“AllIndividualDetails”选项，以便计时详细信息数据可用于该处理。  此外，如果将属性设置为“AllIndividualDetails”  ，则可以在负载测试运行结束后，使用“负载测试分析器”  中的“虚拟用户活动”  图来分析虚拟用户活动。 有关详细信息，请参阅[在“详细信息”视图中分析虚拟用户活动](../test/analyze-load-test-virtual-user-activity-in-the-details-view.md)。
 
 负载测试结果储存库中存储计时详细信息数据所需的空间可能会非常大，尤其是对于运行时间较长的负载测试。 另外，在负载测试结束时将此数据存储到负载测试结果储存库中所需的时间也较长，因为在负载测试完成执行之前此数据一直存储在负载测试代理上。 负载测试完成时，数据将存储到储存库中。 默认情况下，将启用“计时详细信息存储”属性  。 如果这对测试环境来说有问题，则可能需要将“计时详细信息存储”设置为“无”   。
 
-有关详细信息，请参阅[如何：指定计时详细信息存储属性](../test/how-to-specify-the-timing-details-storage-property-for-a-load-test.md)。
+有关详细信息，请参阅[如何：指定“计时详细信息存储”属性](../test/how-to-specify-the-timing-details-storage-property-for-a-load-test.md)。
 
 ## <a name="to-display-a-particular-performance-counter-on-a-load-test-graph"></a>在负载测试关系图上显示特定性能计数器
 
@@ -82,7 +82,7 @@ ms.locfileid: "76115187"
     > [!NOTE]
     > 也可以使用“在图例上添加计数器”命令选择将性能计数器放置在图例上而不是放置在关系图上  。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在关系图视图中分析负载测试结果](../test/analyze-load-test-results-in-the-graphs-view.md)
-- [如何：创建自定义图形](../test/how-to-create-custom-graphs-in-load-test-results.md)
+- [如何：创建自定义关系图](../test/how-to-create-custom-graphs-in-load-test-results.md)

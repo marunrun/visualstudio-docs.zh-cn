@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: c6862493de844ad8108009a2103752122114ae6c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62553040"
 ---
 # <a name="cores-view-zoom-tool"></a>内核视图缩放工具
@@ -26,7 +26,7 @@ ms.locfileid: "62553040"
 
 - 放大：通过拖动在时间线视图中选择一个区域。 释放鼠标按钮后，时间线视图会放大选定的范围。
 
-- 放大和缩小：将鼠标悬停在时间线上，然后按 Ctrl 并移动鼠标滚轮。
+- 放大和缩小：将鼠标悬停在时间线上，然后按 Ctrl 并移动鼠标滚轮  。
 
-## <a name="see-also"></a>请参阅
-- [内核视图](../profiling/cores-view.md)
+## <a name="see-also"></a>另请参阅
+- [“核心”视图](../profiling/cores-view.md)

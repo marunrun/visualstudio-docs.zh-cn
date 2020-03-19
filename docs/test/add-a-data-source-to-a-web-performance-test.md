@@ -10,10 +10,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 7c7f947be01500b0d45b81d404206722ac71084a
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75565404"
 ---
 # <a name="add-a-data-source-to-a-web-performance-test"></a>将数据源添加到 Web 性能测试
@@ -158,7 +158,7 @@ ms.locfileid: "75565404"
 
 ### <a name="q-what-databases-can-i-use-as-a-data-source"></a>问：可将什么数据库用作数据源？
 
-**答：** 可以使用：
+答：可以使用  ：
 
 - Microsoft SQL Azure。
 
@@ -174,7 +174,7 @@ ms.locfileid: "75565404"
 
 ### <a name="q-how-do-i-use-a-comma-separated-value-csv-text-file-as-a-data-source"></a>问：如何将逗号分隔的值 (CSV) 文本文件用作数据源？
 
-**答：** 操作方法如下：
+答：  操作方法如下：
 
 1. 创建一个文件夹来组织项目数据库项目并添加一个项。
 
@@ -198,7 +198,7 @@ ms.locfileid: "75565404"
 
 ### <a name="q-what-if-my-existing-csv-file-does-not-contain-column-headers"></a>问：如果我的现有 CSV 文件不包含列标头，该怎么办？
 
-**答：** 如果不能添加列标头，则可以使用架构说明文件将 CSV 文件视为数据库。
+答：如果不能添加列标头，则可以使用架构说明文件将 CSV 文件视为数据库  。
 
 1. 添加名为 schema.ini 的新文本文件  。
 
@@ -281,7 +281,7 @@ ms.locfileid: "75565404"
 
 ### <a name="q-can-i-add-data-binding-to-a-web-service-request-that-uses-soap"></a>问：我是否能将数据绑定添加到使用 SOAP 的 Web 服务请求？
 
-**答：** 可以，必须手动更改 SOAP XML。
+答：可以，必须手动更改 SOAP XML  。
 
 1. 选择请求树中的 Web 服务请求，并在“属性”窗口中，选择 String Body 属性中的省略号 (…)。
 

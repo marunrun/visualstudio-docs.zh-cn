@@ -11,10 +11,10 @@ ms.workload:
 - multiple
 author: mikejo5000
 ms.openlocfilehash: 2158c889aefc85c908aa9ee42d45858fd11d557e
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75590808"
 ---
 # <a name="unit-tests-for-generic-methods"></a>泛型方法的单元测试
@@ -160,7 +160,7 @@ namespace ClassLibrary2
 
 在此示例中，泛型类型参数 `T` 具有约束 `where T : Employee`。 测试方法中未满足此约束。 因此，`DataTest()` 方法包含一个断言语句，提醒你要求提供已置于 `T` 上的类型约束。 此断言语句的消息如下所示：`("No appropriate type parameter is found to satisfies the type constraint(s) of T. " + "Please call DataTestHelper<T>() with appropriate type parameters.");`
 
-换而言之，当从测试方法 `DataTest()` 调用 `DataTestHelper<T>()` 方法时，必须传递 `Employee` 类型的参数或从 `Employee` 派生的类。
+换而言之，当从测试方法 `DataTestHelper<T>()` 调用 `DataTest()` 方法时，必须传递 `Employee` 类型的参数或从 `Employee` 派生的类。
 
 ```csharp
 using ClassLibrary2;
@@ -194,6 +194,6 @@ namespace TestProject1
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [单元测试代码](../test/unit-test-your-code.md)

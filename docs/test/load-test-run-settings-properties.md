@@ -9,10 +9,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 8898a474888ce9efbf4c91a5251bf8fe7036fe5f
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75584460"
 ---
 # <a name="load-test-run-settings-properties"></a>负载测试运行设置属性
@@ -29,7 +29,7 @@ ms.locfileid: "75584460"
 
 |Property|定义|
 |-|----------------|
-|**说明**|对运行设置的说明。|
+|**描述**|对运行设置的说明。|
 |每种类型的最大错误数 |为负载测试保存的每种类型的最大错误数。<br /><br /> 如果需要，可以增大此数字，但这样还会增加负载测试结果的大小和处理时间。|
 |已报告请求 URL 的最大数量 |在此负载测试中报告其结果的唯一 Web 性能测试请求 URL 的最大数量。<br /><br /> 如果需要，可以增大此数字，但这样还会增加负载测试结果的大小和处理时间。|
 |最大阈值冲突数 |为此负载测试保存的最大阈值冲突数。<br /><br /> 如果需要，可以增大此数字，但这样还会增加负载测试结果的大小和处理时间。|
@@ -52,7 +52,7 @@ ms.locfileid: "75584460"
 |Property|定义|
 |-|----------------|
 |存储类型 |存储在负载测试中获得的性能计数器的方式。 提供了以下选项：<br /><br /> -   “数据库”- 需要具有“负载测试结果存储区”的 SQL 数据库   。<br />-   无  。|
-|计时详细信息存储 |用于确定要在“负载测试结果存储区”中存储哪些详细信息  。 三个值可用：<br /><br /> -   “AllIndividualDetails”- 在“负载测试结果存储区”中收集并存储在负载测试期间运行或发出的每个测试、事务和页的单个计时值   。 如果要在负载测试分析器中使用“虚拟用户活动图”，则必须使用此值   。<br />     有关详细信息，请参阅[在“详细信息”视图中分析虚拟用户活动](../test/analyze-load-test-virtual-user-activity-in-the-details-view.md)。<br />-   “None”- 不收集任何单个计时值  。 这是 Visual Studio 2013 Update 4 及更高版本的默认值。<br />-   “StatisticsOnly”- 在“负载测试结果存储区”中只收集并存储统计信息，而不是在负载测试期间执行或发出的每个测试、事务和页的单个计时值   。<br /><br /> 有关详细信息，请参阅[如何：指定计时详细信息存储属性](../test/how-to-specify-the-timing-details-storage-property-for-a-load-test.md)。|
+|计时详细信息存储 |用于确定要在“负载测试结果存储区”中存储哪些详细信息  。 三个值可用：<br /><br /> -   “AllIndividualDetails”- 在“负载测试结果存储区”中收集并存储在负载测试期间运行或发出的每个测试、事务和页的单个计时值   。 如果要在负载测试分析器中使用“虚拟用户活动图”，则必须使用此值   。<br />     有关详细信息，请参阅[在“详细信息”视图中分析虚拟用户活动](../test/analyze-load-test-virtual-user-activity-in-the-details-view.md)。<br />-   “None”- 不收集任何单个计时值  。 这是 Visual Studio 2013 Update 4 及更高版本的默认值。<br />-   “StatisticsOnly”- 在“负载测试结果存储区”中只收集并存储统计信息，而不是在负载测试期间执行或发出的每个测试、事务和页的单个计时值   。<br /><br /> 有关详细信息，请参阅[如何：指定“计时详细信息存储”属性](../test/how-to-specify-the-timing-details-storage-property-for-a-load-test.md)。|
 
 ## <a name="sql-tracing-properties"></a>SQL 跟踪属性
 
@@ -70,7 +70,7 @@ ms.locfileid: "75584460"
 |测试迭代 |指定在完成负载测试之前要运行的单个测试的总数。 只有当“使用测试迭代”属性为 `True` 时，才应用此属性。|
 |使用测试迭代 |如果“使用测试迭代”为 `True`，负载测试将一直运行，直到负载测试中已完成单个测试的总数达到“测试迭代”属性指定的数量为止。 在这种情况下，将忽略基于时间的设置，包括“预热持续时间”、“运行持续时间”和“冷却持续时间”。 如果“使用测试迭代”为 `False`，将应用所有计时设置，而忽略“测试迭代”。|
 
-有关详细信息，请参阅[如何：在运行设置中指定测试迭代次数](../test/how-to-specify-the-number-of-test-iterations-in-a-load-test.md)。
+有关详细信息，请参阅[如何：在运行设置中指定测试迭代数](../test/how-to-specify-the-number-of-test-iterations-in-a-load-test.md)。
 
 ## <a name="timing-properties"></a>执行时间属性
 
@@ -90,7 +90,7 @@ ms.locfileid: "75584460"
 
 ## <a name="change-run-setting-properties"></a>更改运行设置属性
 
-可以向具有不同属性设置的负载测试中添加更多的运行设置，以便能够在不同条件下运行负载测试。 例如，可以添加新测试设置，并使用一个不同的采样率，或指定一个较长的运行持续时间。 一次只能使用一个运行设置，并且必须通过将要使用的运行设置标记为活动来指定该运行设置。 有关示例，请参见 [如何：为负载测试选择活动运行设置](../test/how-to-select-the-active-run-setting-for-a-load-test.md)。
+可以向具有不同属性设置的负载测试中添加更多的运行设置，以便能够在不同条件下运行负载测试。 例如，可以添加新测试设置，并使用一个不同的采样率，或指定一个较长的运行持续时间。 一次只能使用一个运行设置，并且必须通过将要使用的运行设置标记为活动来指定该运行设置。 有关示例，请参阅[如何：为负载测试选择活动运行设置](../test/how-to-select-the-active-run-setting-for-a-load-test.md)。
 
 要更改运行设置，请执行以下操作：
 
@@ -104,7 +104,7 @@ ms.locfileid: "75584460"
 
      随即出现“属性窗口”，其中显示了所选运行设置的属性  。
 
-5. 使用“属性窗口”更改运行设置  。 例如，将运行持续时间更改为“00:05:00”以使测试运行五分钟。 
+5. 使用“属性窗口”更改运行设置  。 例如，将运行持续时间更改为“00:05:00”以使测试运行五分钟  。
 
     > [!NOTE]
     > 有关运行设置属性及其说明的完整列表，请参阅[负载测试运行设置属性](../test/load-test-run-settings-properties.md)。
@@ -114,6 +114,6 @@ ms.locfileid: "75584460"
 > [!NOTE]
 > 计数器集映射也是运行设置的一部分。 有关详细信息，请参阅[为负载测试中的计算机指定计数器集和阈值规则](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [配置负载测试运行设置](../test/configure-load-test-run-settings.md)

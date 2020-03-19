@@ -11,10 +11,10 @@ dev_langs:
 ms.workload:
 - multiple
 ms.openlocfilehash: 2ce8ce85e027a7ed7f78d0da1f68f328c1ca103d
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75596952"
 ---
 # <a name="quick-actions"></a>快速操作
@@ -62,13 +62,13 @@ ms.locfileid: "75596952"
 
 - 将插入点（光标）移到相应的代码行时，显示在编辑器的左边距中
 
-还可按 Ctrl+   。 可在行的任意位置查看可用快速操作和重构的列表。
+还可按 Ctrl  +  。 可在行的任意位置查看可用快速操作和重构的列表。
 
 若要查看可能的修补程序，请选择灯泡旁边的下箭头或“显示可能的修补程序”  链接。 此时会显示可用的“快速操作”列表。
 
 ![灯泡已展开](../ide/media/vs2015_lightbulb_hover_expanded.png)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Studio 中的代码生成](../ide/code-generation-in-visual-studio.md)
 - [常见快速操作](../ide/common-quick-actions.md)

@@ -13,55 +13,49 @@ metadata:
   ms.prod: visual-studio-windows
   ms.technology: vs-acquisition
   dev_langs:
-  - VB
-  ms.openlocfilehash: 3462f85ea571e163617c6c5f315a28c98342acab
-  ms.sourcegitcommit: 8530d15aa72fe058ee3a3b4714c36b8638f8b494
-  ms.translationtype: HT
-  ms.contentlocale: zh-CN
-  ms.lasthandoff: 11/19/2019
-  ms.locfileid: "74188620"
+    - VB
 landingContent:
-- title: 入门
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: 安装 Visual Studio
-      url: ../../install/install-visual-studio.md
-  - linkListType: get-started
-    links:
-    - text: 启动引导式教程
-      url: visual-studio-ide.md
-  - linkListType: quickstart
-    links:
-    - text: 创建“Hello World”控制台应用
-      url: ../../ide/quickstart-visual-basic-console.md
-- title: 创建 Visual Basic 应用
-  linkLists:
-  - linkListType: tutorial
-    links:
-    - text: 创建控制台应用
-      url: tutorial-console.md
-    - text: 创建 Windows 桌面应用
-      url: tutorial-wpf.md
-    - text: 创建 Windows 窗体应用程序
-      url: ../../ide/create-a-visual-basic-winform-in-visual-studio.md
-    - text: 了解 Visual Basic 语言
-      url: /dotnet/visual-basic/developing-apps/programming/
-- title: 学习 Visual Studio
-  linkLists:
-  - linkListType: tutorial
-    links:
-    - text: 从存储库打开代码
-      url: ../tutorial-open-project-from-repo.md
-    - text: 编写和编辑代码
-      url: tutorial-editor.md
-    - text: 编译和生成
-      url: ../../ide/compiling-and-building-in-visual-studio.md
-    - text: 调试代码
-      url: ../csharp/tutorial-debugger.md
-    - text: 测试代码
-      url: ../../test/getting-started-with-unit-testing.md
-  - linkListType: how-to-guide
-    links:
-    - text: 访问数据
-      url: ../../data-tools/create-a-sql-database-by-using-a-designer.md
+  - title: 入门
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: 安装 Visual Studio
+            url: ../../install/install-visual-studio.md
+      - linkListType: get-started
+        links:
+          - text: 启动引导式教程
+            url: visual-studio-ide.md
+      - linkListType: quickstart
+        links:
+          - text: 创建“Hello World”控制台应用
+            url: ../../ide/quickstart-visual-basic-console.md
+  - title: 创建 Visual Basic 应用
+    linkLists:
+      - linkListType: tutorial
+        links:
+          - text: 创建控制台应用
+            url: tutorial-console.md
+          - text: 创建 Windows 桌面应用
+            url: tutorial-wpf.md
+          - text: 创建 Windows 窗体应用程序
+            url: ../../ide/create-a-visual-basic-winform-in-visual-studio.md
+          - text: 了解 Visual Basic 语言
+            url: /dotnet/visual-basic/developing-apps/programming/
+  - title: 学习 Visual Studio
+    linkLists:
+      - linkListType: tutorial
+        links:
+          - text: 从存储库打开代码
+            url: ../tutorial-open-project-from-repo.md
+          - text: 编写和编辑代码
+            url: tutorial-editor.md
+          - text: 编译和生成
+            url: ../../ide/compiling-and-building-in-visual-studio.md
+          - text: 调试代码
+            url: ../csharp/tutorial-debugger.md
+          - text: 测试代码
+            url: ../../test/getting-started-with-unit-testing.md
+      - linkListType: how-to-guide
+        links:
+          - text: 访问数据
+            url: ../../data-tools/create-a-sql-database-by-using-a-designer.md

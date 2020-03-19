@@ -1,20 +1,21 @@
 ---
 title: 将变量声明移动到引用附近
-ms.date: 01/26/2018
+ms.date: 03/10/2020
 ms.topic: reference
-author: TerryGLee
-ms.author: tglee
+author: mikadumont
+ms.author: midumont
 manager: jillfra
 dev_langs:
 - CSharp
+- VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 35735009a5b813ca29159f276fe2d5abb734be0e
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 1339f4a9d151ef41d9a35c5aac0a96f220a297b3
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75585279"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79093994"
 ---
 # <a name="move-declaration-near-reference-refactoring"></a>将变量声明移动到引用附近
 
@@ -22,11 +23,13 @@ ms.locfileid: "75585279"
 
 - C#
 
-**功能：** 将变量声明移至靠近其用法的位置。
+- Visual Basic
 
-**使用时机：** 具有可存在于较窄范围中的变量声明时。
+功能：  将变量声明移至靠近其用法的位置。
 
-操作原因：  可以将其保留不变，但这可能会导致可读性问题或信息隐藏。 可以进行重构，以提高可读性。
+时机：  具有可存在于较窄范围中的变量声明时。
+
+原因：  可以将其保留不变，但这可能会导致可读性问题或信息隐藏。 可以进行重构，以提高可读性。
 
 ## <a name="how-to"></a>操作说明
 
@@ -41,7 +44,7 @@ ms.locfileid: "75585279"
 
 1. 对更改感到满意时，按 Enter  或单击菜单中的修复，即可提交所做的更改。
 
-示例：
+例如：
 
 ```csharp
 // Before
@@ -62,7 +65,7 @@ if (condition)
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [重构](../refactoring-in-visual-studio.md)
 - [预览更改](../../ide/preview-changes.md)

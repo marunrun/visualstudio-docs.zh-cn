@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: f756d432d9ff4d3824c1f1165c63710e4d10c2e9
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75594885"
 ---
 # <a name="obtain-build-logs-with-msbuild"></a>用 MSBuild 获取生成日志
@@ -47,7 +47,7 @@ msbuild MyProject.proj -t:go -v:diag
 
 下表显示日志详细级别（列值）如何影响记录的消息类型（行值）。
 
-|                                       | Quiet | 最低 | 普通 | 详细 | 诊断 |
+|                                       | Quiet | 最低 | 一般 | 详细 | 诊断 |
 |---------------------------------------|:-----:|:-------:|:------:|:--------:|:----------:|
 | 错误                                |   ✅   |    ✅    |    ✅   |     ✅    |      ✅     |
 | 警告                              |   ✅   |    ✅    |    ✅   |     ✅    |      ✅     |
@@ -102,7 +102,7 @@ msbuild MyProject.proj -t:go -fl1 -fl2 -fl3 -flp2:logfile=JustErrors.log;errorso
 
  在 MSBuild 命令行中，可使用 -logger  开关指定自定义记录器。 还可使用 -noconsolelogger  开关，禁用默认控制台记录器。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:Microsoft.Build.Framework.LoggerVerbosity>
 - [生成记录器](../msbuild/build-loggers.md)

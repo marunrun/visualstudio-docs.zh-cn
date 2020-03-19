@@ -1,20 +1,21 @@
 ---
 title: “删除无法访问的代码”重构
-ms.date: 01/26/2018
+ms.date: 03/10/2020
 ms.topic: reference
-author: TerryGLee
-ms.author: tglee
+author: mikadumont
+ms.author: midumont
 manager: jillfra
 dev_langs:
 - CSharp
+- VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 62002e78513ecb6ebaefd8130255471d6ba93d0c
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: cd827870f07fb3161674d287d20f266942e61afe
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75565482"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79093986"
 ---
 # <a name="remove-unreachable-code-refactoring"></a>“删除无法访问的代码”重构
 
@@ -22,11 +23,13 @@ ms.locfileid: "75565482"
 
 - C#
 
-**功能：** 删除永远不执行的代码。
+- Visual Basic
 
-**使用时机：** 程序无法访问代码片段，使得该代码片段没有存在的必要性时。
+ 功能：删除永远不执行的代码
 
-操作原因：  通过删除永远不会执行的多余代码来提高可读性和可维护性。
+ 时机：程序无法访问代码片段，使得该代码片段没有存在的必要性时。
+
+ 原因：通过删除永远不会执行的多余代码来提高可读性和可维护性。
 
 ## <a name="how-to"></a>操作说明
 
@@ -43,7 +46,7 @@ ms.locfileid: "75565482"
 
 1. 对更改感到满意时，按 Enter  或单击菜单中的修复，即可提交所做的更改。
 
-示例：
+例如：
 
 ```csharp
 // Before
@@ -62,7 +65,7 @@ private void Method()
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [重构](../refactoring-in-visual-studio.md)
 - [预览更改](../../ide/preview-changes.md)

@@ -1,6 +1,6 @@
 ---
 title: 安装或升级问题疑难解答
-description: 有时，你难免遇到一些问题。 如果 Visual Studio 安装或升级失败，可在此页寻求帮助。
+description: 有时也会遇到问题。 如果 Visual Studio 安装或升级失败，可在此页寻求帮助。
 ms.date: 09/13/2019
 ms.custom: seodec18
 ms.topic: troubleshooting
@@ -16,10 +16,10 @@ ms.workload:
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.openlocfilehash: 9dfdf504378dafd7d71288cae1927dd8d6bb9e56
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "76114994"
 ---
 # <a name="troubleshoot-visual-studio-installation-and-upgrade-issues"></a>Visual Studio 安装和升级问题疑难解答
@@ -134,7 +134,7 @@ Visual Studio 安装程序引导程序是最轻型的可执行文件，用于安
 1. [下载工具](https://www.microsoft.com/download/details.aspx?id=12493)。
 2. 打开管理命令提示符。
 3. 从工具保存目录运行 `Collect.exe`。
-4. 在 `%TEMP%` 目录中查找生成的 `vslogs.zip` 文件，例如，`C:\Users\YourName\AppData\Local\Temp\vslogs.zip`。
+4. 在 `vslogs.zip` 目录中查找生成的 `%TEMP%` 文件，例如，`C:\Users\YourName\AppData\Local\Temp\vslogs.zip`。
 
 > [!NOTE]
 > 工具必须在安装失败时使用的同一用户帐户下运行。 若要从其他用户帐户运行工具，请设置 `–user:<name>` 选项，以指定安装失败时使用的用户帐户。 有关其他选项和使用情况信息，请通过管理员命令提示符运行 `Collect.exe -?` 获取。
@@ -143,7 +143,7 @@ Visual Studio 安装程序引导程序是最轻型的可执行文件，用于安
 
 如果本疑难解答指南中列出的解决方案无法帮助你成功安装或升级 Visual Studio，请使用我们的[**实时聊天**](https://visualstudio.microsoft.com/vs/support/#talktous)支持选项（仅英语）以获取进一步的帮助。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 * [删除 Visual Studio](remove-visual-studio.md)
 * [在防火墙或代理服务器后面安装和使用 Visual Studio 和 Azure 服务](install-and-use-visual-studio-behind-a-firewall-or-proxy-server.md)

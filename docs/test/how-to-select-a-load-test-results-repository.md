@@ -1,5 +1,5 @@
 ---
-title: 如何：选择负载测试结果存储库
+title: 如何：选择负载测试结果储存库
 ms.date: 10/19/2016
 ms.topic: conceptual
 f1_keywords:
@@ -16,10 +16,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 513dd884f65e041e7ad90dda1483633fec57e100
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75589001"
 ---
 # <a name="how-to-select-a-load-test-results-repository"></a>如何：选择负载测试结果存储库
@@ -40,7 +40,7 @@ ms.locfileid: "75589001"
 
 3. 在“负载测试测结果存储区”中单击“(…)”，以显示“连接属性”对话框    。
 
-4. 在“服务器名称”中，键入在其中运行 `LoadTest` 脚本的服务器的名称  。
+4. 在“服务器名称”中，键入在其中运行  **脚本的服务器的名称**`LoadTest`。
 
     > [!TIP]
     > 如果在本地计算机上将 SQL Express 用于负载测试存储，请输入 \<计算机名>\sqlexpress（例如，MyComputer\sqlexpress）  。
@@ -53,7 +53,7 @@ ms.locfileid: "75589001"
 
 8. 在“管理测试控制器”对话框中，选择“关闭”   。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [管理负载测试结果存储库中的负载测试结果](../test/manage-load-test-results-in-the-load-test-results-repository.md)
 - [测试控制器和测试代理](configure-test-agents-and-controllers-for-load-tests.md)

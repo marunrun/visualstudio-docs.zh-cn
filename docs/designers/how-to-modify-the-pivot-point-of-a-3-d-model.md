@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 114beda700359eb5cdbfd4db12c18e442b8894f2
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75589937"
 ---
 # <a name="how-to-modify-the-pivot-point-of-a-3d-model"></a>如何：修改三维模型的透视点
@@ -42,7 +42,7 @@ ms.locfileid: "75589937"
 
 ![具有已修改透视点的建筑模型](../designers/media/digit-modified-model.png)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [如何：创建基本三维模型](../designers/how-to-create-a-basic-3-d-model.md)
+- [如何：创建基本 3D 模型](../designers/how-to-create-a-basic-3-d-model.md)
 - [模型编辑器](../designers/model-editor.md)

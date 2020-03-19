@@ -13,10 +13,10 @@ dev_langs:
 ms.workload:
 - nodejs
 ms.openlocfilehash: af781f5735a3539d8b0e2d098bb9252bc60193fc
-ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "70180265"
 ---
 # <a name="create-a-vuejs-application-using-nodejs-tools-for-visual-studio"></a>使用针对 Visual Studio 的 Node.js 工具创建 Vue.js 应用程序
@@ -29,7 +29,7 @@ Visual Studio 中有以下新功能支持 Vue.js 应用程序开发：
 * 在 .vue 文件上识别 `lang` 属性 
 * Vue.js 项目和文件模板
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>必备条件
 
 * 必须安装 Visual Studio 2017 版本 15.8 或更高版本，且有“Node.js 开发”工作负载  。
 
@@ -71,13 +71,13 @@ Vue.js 提供官方 CLI，快速搭建项目基架。 如果想要使用 CLI 创
 1. 打开 Visual Studio 并创建一个新项目。
 
     ::: moniker range=">=vs-2019"
-    按 Esc 关闭启动窗口  。 键入 Ctrl+Q 以打开搜索框，键入“asp.net”，然后选择“创建新的 ASP.NET Core Web 应用程序”    。 在出现的对话框中，键入名称“client-app”，然后选择“创建”   。
+    按 Esc  关闭启动窗口。 键入 Ctrl+Q 以打开搜索框，键入“asp.net”，然后选择“创建新的 ASP.NET Core Web 应用程序”    。 在出现的对话框中，键入名称“client-app”，然后选择“创建”   。
     ::: moniker-end
     ::: moniker range="vs-2017"
-    在顶部菜单栏，依次选择“文件”   > “新建”   > “项目”  。 在“新建项目”对话框的左侧窗格中，展开“Visual C#”，然后选择“Web”    。 在中间窗格中，选择“ASP.NET Core Web 应用程序”，键入名称“client-app”，然后选择“确定”    。
+    从顶部菜单栏中选择“文件”   > “新建”   > “项目”  。 在“新建项目”对话框的左侧窗格中，展开“Visual C#”，然后选择“Web”    。 在中间窗格中，选择“ASP.NET Core Web 应用程序”，键入名称“client-app”，然后选择“确定”    。
     ::: moniker-end
 
-    如果没有看到“ASP.NET Core Web 应用程序”项目模板，则必须先安装“ASP.NET 和 Web 开发”工作负载和“.NET Core”开发工作负载    。 若要安装工作负载，单击“新建项目”对话框左窗格中的“打开 Visual Studio 安装程序”链接（选择“文件” > “新建” > “项目”）      。 Visual Studio 安装程序启动。 选择所需工作负载。
+    如果没有看到“ASP.NET Core Web 应用程序”项目模板，则必须先安装“ASP.NET 和 Web 开发”工作负载和“.NET Core”开发工作负载    。 若要安装工作负载，单击“新建项目”对话框左窗格中的“打开 Visual Studio 安装程序”链接（选择“文件” **“新建”** “项目”）    >    >   。 Visual Studio 安装程序启动。 选择所需工作负载。
 
 1. 选择“空”，然后单击“确定”   。
 
@@ -107,7 +107,7 @@ Vue.js 提供官方 CLI，快速搭建项目基架。 如果想要使用 CLI 创
 
 #### <a name="modify-the-webpack-configuration-to-output-the-built-files-to-wwwroot"></a>修改 webpack 配置将生成的文件输出到 wwwroot
 
-* 打开文件 ./client-app/config/index.js，并将 `build.index` 和 `build.assetsRoot` 更改为 wwwroot 路径  ：
+* 打开文件 ./client-app/config/index.js，并将 *和* 更改为 wwwroot 路径`build.index``build.assetsRoot`：
 
     ```js
     // Template for index.html
@@ -119,9 +119,9 @@ Vue.js 提供官方 CLI，快速搭建项目基架。 如果想要使用 CLI 创
 
 #### <a name="indicate-the-project-to-build-the-client-app-each-time-that-a-build-is-triggered"></a>每次触发生成时，指示项目生成客户端应用
 
-1. 在 Visual Studio 中，转到“项目” > “属性” > “生成事件”    。
+1. 在 Visual Studio 中，转到“项目” **“属性”** “生成事件” >    >   。
 
-1. 在“预生成事件命令行”上，键入 `npm --prefix ./client-app run build`  。
+1. 在“预生成事件命令行”上，键入  `npm --prefix ./client-app run build`。
 
 #### <a name="configure-webpacks-output-module-names"></a>配置 webpack 的输出模块名称
 
@@ -146,7 +146,7 @@ Vue.js 提供官方 CLI，快速搭建项目基架。 如果想要使用 CLI 创
 
 #### <a name="configure-a-vuejs-project-for-typescript"></a>为 TypeScript 配置 Vue.js 项目
 
-1. 打开文件 ./client-app/tsconfig.json，并将 `noEmit:true` 添加到编译器选项  。
+1. 打开文件 ./client-app/tsconfig.json，并将  *添加到编译器选项*`noEmit:true`。
 
     通过设置此选项，可以避免每次在 Visual Studio 中生成时干扰项目。
 
@@ -196,7 +196,7 @@ cd ../
 
 * 使用 vue-cli 3.0 时，无法在项目属性上将命令 `npm run build` 作为预生成的事件运行。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Vue 入门指南](https://vuejs.org/v2/guide)。
 - [Vue CLI 项目](https://github.com/vuejs/vue-cli)。

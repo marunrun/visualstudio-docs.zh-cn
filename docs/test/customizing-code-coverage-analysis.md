@@ -8,10 +8,10 @@ ms.workload:
 - multiple
 author: mikejo5000
 ms.openlocfilehash: bce7a6b9369f33e6fa5248821f58d9903172415c
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75918653"
 ---
 # <a name="customize-code-coverage-analysis"></a>自定义代码覆盖率分析
@@ -28,13 +28,13 @@ ms.locfileid: "75918653"
 
 若要自定义代码覆盖率，请执行以下步骤：
 
-1. 将运行设置文件添加到解决方案中。 在“解决方案资源管理器”的解决方案快捷菜单上，依次选择“添加” > “新建项”和“XML 文件”     。 保存带有类似于 CodeCoverage.runsettings 的名称的文件  。
+1. 将运行设置文件添加到解决方案中。 在“解决方案资源管理器”的解决方案快捷菜单上，依次选择“添加” **“新建项”和“XML 文件”**   >    。 保存带有类似于 CodeCoverage.runsettings 的名称的文件  。
 
 2. 添加本文结尾处示例文件中的内容，然后按需进行自定义，如以下章节所述。
 
 ::: moniker range="vs-2017"
 
-3. 若要选择运行设置文件，在“测试”菜单上，选择“测试设置” > “选择测试设置文件”    。 若要指定运行设置文件以从命令行中运行测试，请参阅[配置单元测试](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md#command-line)。
+3. 若要选择运行设置文件，在“测试”菜单上，选择“测试设置” **“选择测试设置文件”**   >   。 若要指定运行设置文件以从命令行中运行测试，请参阅[配置单元测试](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md#command-line)。
 
 ::: moniker-end
 
@@ -112,13 +112,13 @@ ms.locfileid: "75918653"
 | PublicKeyToken | 按公钥标记匹配签名程序集。 |
 | 源 | 按在其中定义元素的源文件的路径名称匹配元素。 |
 | 特性 | 匹配具有指定特性的元素。 指定属性的完整名称，例如 `<Attribute>^System\.Diagnostics\.DebuggerHiddenAttribute$</Attribute>`。<br/><br/>如果排除 <xref:System.Runtime.CompilerServices.CompilerGeneratedAttribute> 属性，将从代码覆盖率分析中排除使用语言功能（如 `async`、`await`、`yield return` 和自动实现的属性）的代码。 要排除真正生成的代码，只需排除 <xref:System.CodeDom.Compiler.GeneratedCodeAttribute> 属性。 |
-| 函数 | 按完全限定的名称匹配过程、函数或方法，包括参数列表。 还可以使用[正则表达式](#regular-expressions)来匹配部分名称。<br/><br/>示例：<br/><br/>`Fabrikam.Math.LocalMath.SquareRoot(double);` (C#)<br/><br/>`Fabrikam::Math::LocalMath::SquareRoot(double)` (C++) |
+| 函数 | 按完全限定的名称匹配过程、函数或方法，包括参数列表。 还可以使用[正则表达式](#regular-expressions)来匹配部分名称。<br/><br/>例如：<br/><br/>`Fabrikam.Math.LocalMath.SquareRoot(double);` (C#)<br/><br/>`Fabrikam::Math::LocalMath::SquareRoot(double)` (C++) |
 
 ### <a name="regular-expressions"></a>正则表达式
 
-Include 和 exclude 节点使用正则表达式，它们与通配符不同。 所有匹配项都不区分大小写。 下面是一些示例：
+Include 和 exclude 节点使用正则表达式，它们与通配符不同。 所有匹配项都不区分大小写。 一些示例如下：
 
--  .\* 与任意字符组成的字符串匹配
+- **\*.** 与任意字符组成的字符串匹配
 
 - **\\.** 与句点“.”匹配
 
@@ -288,7 +288,7 @@ Included items must then not match any entries in the exclude list to remain inc
 </RunSettings>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用运行设置文件配置单元测试](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md)
 - [使用代码覆盖率确定所测试的代码量](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)

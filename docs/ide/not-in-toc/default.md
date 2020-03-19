@@ -10,10 +10,10 @@ manager: jillfra
 author: TerryGLee
 ms.author: tglee
 ms.openlocfilehash: 48c93cf8abeb573a3a75e6825a8400355c133f2b
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75597004"
 ---
 # <a name="f1-help"></a>F1 帮助
@@ -24,7 +24,7 @@ ms.locfileid: "75597004"
 
 若要按 F1 以寻求关键字或 API 名称方面的帮助，请务必先将光标放在相应单词内部或右侧（紧挨着它），再按 F1  。 如果仍然无法使用，请从[有用的链接](#useful-links)列表中进行选择，或在 https://docs.microsoft.com 上进行搜索。
 
-## <a name="useful-links"></a>有用的链接
+## <a name="useful-links"></a>有用链接
 
 - 在 [.NET API 浏览器](/dotnet/api/)中搜索参考文档。
 - 有关 C# 帮助，请参阅 [C# 指南](/dotnet/csharp/index)。

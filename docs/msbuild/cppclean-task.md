@@ -20,10 +20,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 331a96c7cd67b933e521e3fe5f2d7a909ffa5d03
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77634339"
 ---
 # <a name="cppclean-task"></a>CPPClean 任务
@@ -34,7 +34,7 @@ ms.locfileid: "77634339"
 
  下表描述了 CPPClean 任务的参数  。
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
 |DeletedFiles |可选 `ITaskItem[]` 输出参数。<br /><br /> 定义可由任务使用和发出的 MSBuild 输出文件项的数组。|
 |DoDelete |可选 **Boolean** 参数。<br /><br /> 如果为 `true`，则清除临时生成文件。|
@@ -42,6 +42,6 @@ ms.locfileid: "77634339"
 |FilesExcludedFromClean |可选 `String` 参数。<br /><br /> 指定不会清除的文件的列表（以分号分隔）。|
 |FoldersToClean |必选 `String` 参数。<br /><br /> 指定要清除的目录的列表（以分号分隔）。 可指定完整路径或相对路径，并且路径可包含通配符 (*)。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [任务参考](../msbuild/msbuild-task-reference.md)
