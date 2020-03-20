@@ -11,10 +11,10 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: 089be3e6f28a939979f6bd97097ea7558824b493
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "62429741"
 ---
 # <a name="quickstart-create-a-python-project-from-a-template-in-visual-studio"></a>快速入门：从 Visual Studio 中的模板创建 Python 项目
@@ -85,14 +85,14 @@ Visual Studio 还提供各种文件或项模板，用于快速创建 Python 类�
 
 **问：我还能使用 Cookiecutter 模板吗？**
 
-**答**：可以！ 事实上，Visual Studio 提供与 Cookiecutter 的直接集成（详情请参阅[快速入门：使用 Cookiecutter 模板创建项目](../python/quickstart-04-python-in-visual-studio-project-from-cookiecutter.md)）。
+**答**：能！ 事实上，Visual Studio 提供与 Cookiecutter 的直接集成（详情请参阅[快速入门：使用 Cookiecutter 模板创建项目](../python/quickstart-04-python-in-visual-studio-project-from-cookiecutter.md)）。
 
 ## <a name="next-steps"></a>后续步骤
 
 > [!div class="nextstepaction"]
 > [教程：在 Visual Studio 中使用 Python](tutorial-working-with-python-in-visual-studio-step-01-create-project.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [手动标识现有的 Python 解释器](managing-python-environments-in-visual-studio.md#manually-identify-an-existing-environment)
 - [在 Visual Studio 2015 及更早版本中安装 Python 支持](installing-python-support-in-visual-studio.md)

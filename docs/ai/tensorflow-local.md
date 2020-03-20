@@ -11,10 +11,10 @@ ms.devlang: python
 ms.workload:
 - multiple
 ms.openlocfilehash: 43ce126baeb96efcaab3c40bac912274ee1cd8c7
-ms.sourcegitcommit: 57bc1c3887838d707c13feff72a677b3bad3be4b
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "72777435"
 ---
 # <a name="train-a-tensorflow-model-locally"></a>在本地训练 TensorFlow 模型
@@ -43,17 +43,17 @@ C:\>pip.exe install tensorflow
 
 ## <a name="open-solution-and-train-model"></a>打开解决方案并训练模型
 
-- 启动 Visual Studio，选择“文件”>“打开”>“项目/解决方案”  。
+- 启动 Visual Studio，选择“文件”>“打开”>“项目/解决方案”。
 
-- 在下载的示例存储库中选择 Tensorflow Examples 文件夹，然后打开 TensorflowExamples.sln 文件   。
+- 在下载的示例存储库中选择 Tensorflow Examples 文件夹，然后打开 TensorflowExamples.sln 文件。
 
    ![打开项目](media/tensorflow-local/open-project.png)
 
    ![打开解决方案](media/tensorflow-local/open-solution.png)
 
-- 在“解决方案资源管理器”中找到 MNIST 项目，右键单击并选择“设为启动项目”   。
+- 在“解决方案资源管理器”中找到 MNIST 项目，右键单击并选择“设为启动项目”。
 
-- 单击“开始”  。
+- 单击“开始” 。
 
 - 输出会在控制台中进行打印。
 

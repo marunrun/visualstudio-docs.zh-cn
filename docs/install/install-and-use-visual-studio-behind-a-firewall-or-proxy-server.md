@@ -18,19 +18,19 @@ ms.workload:
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.openlocfilehash: 44ffc778d398c2f9a1cfaf026d2364ee1dc27f9b
-ms.sourcegitcommit: ea5e02720d71185f8e27fbea205024371b0c7ceb
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77544533"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79307237"
 ---
 # <a name="install-and-use-visual-studio-and-azure-services-behind-a-firewall-or-proxy-server"></a>在防火墙或代理服务器后面安装和使用 Visual Studio 和 Azure 服务
 
 如果你或贵组织使用防火墙或代理服务器等安全措施，则会有可能需要将其添加到“允许列表”的域 URL，以及可能需要打开的端口和协议，以便在安装和使用 Visual Studio 以及 Azure 服务时获得最佳体验。
 
-* **[安装 Visual Studio](#install-visual-studio)**：这些表包括要添加到允许列表的域 URL，以便你可访问所需的所有组件和工作负载。
+* **[安装 Visual Studio](#install-visual-studio)** ：这些表包括要添加到允许列表的域 URL，以便你可访问所需的所有组件和工作负载。
 
-* **[使用 Visual Studio 和 Azure 服务](#use-visual-studio-and-azure-services)**：此表包括要添加到允许列表的域 URL 以及要打开的端口和协议，以便你可访问所需的所有功能和服务。
+* **[使用 Visual Studio 和 Azure 服务](#use-visual-studio-and-azure-services)** ：此表包括要添加到允许列表的域 URL 以及要打开的端口和协议，以便你可访问所需的所有功能和服务。
 
 > [!NOTE]
 > 本文针对 Windows 上的 Visual Studio 编写，但部分信息也适用于在防火墙或代理服务器后[安装 Visual Studio for Mac](/visualstudio/mac/install-behind-a-firewall-or-proxy-server)。
@@ -127,7 +127,7 @@ ms.locfileid: "77544533"
 | 快照 <br>调试器 | 1. go.microsoft.com <br>2. management.azure.com <br> 3. &#42;.azurewebsites.net <br> 4. &#42;.scm.azurewebsites.net<br>5. api.nuget.org/v3/index.json <br>6.远程服务/服务器 IP 地址/FQDN | 1. https/443 <br>2. https/443  <br>3. http/80 <br>4. https/443 <br>5. https/443 <br>6.Concord/<br> 4022（Visual Studio 从属版本） | 1.查询 .json 文件的应用服务 SKU 大小 <br>2.各种 Azure RM 调用 <br>3.站点预热调用渠道  <br>4.客户的目标应用服务 Kudu 终结点 <br>5.查询 nuget.org 中发布的站点扩展版本 <br>6.[远程调试](../debugger/remote-debugging.md) |
 | Azure 流分析 <br><br>HDInsight | Management.azure.com | https/443 | 用于查看、提交、运行和管理 ASA 作业 <br><br> 用于浏览 HDI 群集，以及提交、诊断和调试 HDI 作业 |
 | Azure Data Lake | &#42;.azuredatalakestore.net <br>&#42;.azuredatalakeanalytics.net | https/443 | 用于编译、提交、查看、诊断和调试作业；用于浏览 ADLS 文件；用于上传和下载文件 |
-| 打包服务 | [account].visualstudio.com <br/> [account].\*.visualstudio.com <br/> \*.blob.core.windows.net <br/> registry.npmjs.org </br> nodejs.org <br/> dist.nuget.org <br/> nuget.org | https/443 | 仅特定生成任务方案（例如：NuGet 工具安装程序、节点工具安装程序）或者打算将公共上游与源结合使用时才需使用 \*.npmjs.org、\*.nuget.org 和 \*.nodejs.org。 要使用打包服务的核心功能，还需具备其他三个域。 |
+| 打包服务 | [account].visualstudio.com <br/> [account].\*.visualstudio.com <br/> \*.blob.core.windows.net <br/> registry.npmjs.org </br> nodejs.org <br/> dist.nuget.org <br/> nuget.org | https/443 | 仅特定生成任务方案（例如：NuGet 工具安装程序、节点工具安装程序）或者打算将公共上游与源结合使用时才需使用 .npmjs.org、.nuget.org 和 .nodejs.org。 要使用打包服务的核心功能，还需具备其他三个域。 |
 | Azure DevOps Services | \*.vsassets.io <br/> static2.sharepointonline.com <br/> dev.azure.com | | 用于连接 Azure DevOps Services |
 | 开发人员社区 | sendvsfeedback2.azurewebsites.net/api | https/443 | 用于调用开发者社区反馈工具 API（我的问题、搜索、投票、评论、提交、上传、恢复） |
 | Intellicode | \*.intellicode.vsengsaas.visualstudio.com | https/443 | 用于调用 Intellicode API |
@@ -147,7 +147,7 @@ ms.locfileid: "77544533"
 
 ## <a name="get-support"></a>获取支持
 
-对于安装相关问题，我们提供[实时聊天](https://visualstudio.microsoft.com/vs/support/#talktous)（仅限英语）支持选项。
+对于安装相关问题，我们提供[实时聊天  ](https://visualstudio.microsoft.com/vs/support/#talktous)（仅限英语）支持选项。
 
 下面是另外几个支持选项：
 

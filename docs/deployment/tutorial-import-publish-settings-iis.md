@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 8e0c7309f52fbc8056f09e5a59afcfdefaa8d0bf
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "65680142"
 ---
 # <a name="publish-an-application-to-iis-by-importing-publish-settings-in-visual-studio"></a>通过在 Visual Studio 中导入发布设置将应用程序发布到 IIS
@@ -31,10 +31,10 @@ ms.locfileid: "65680142"
 > * 将发布设置文件导入 Visual Studio
 > * 将应用部署到 IIS
 
-发布设置文件 (\*.publishsettings) 与在 Visual Studio 中创建的发布配置文件 (\*.pubxml) 不同。 发布设置文件由 IIS 或 Azure 应用服务创建，或者可手动创建，然后可将其导入 Visual Studio。
+发布设置文件 (*.publishsettings) 与在 Visual Studio 中创建的发布配置文件 (\*.pubxml) 不同**\**。 发布设置文件由 IIS 或 Azure 应用服务创建，或者可手动创建，然后可将其导入 Visual Studio。
 
 > [!NOTE]
-> 若只需要将 Visual Studio 发布配置文件（\*.pubxml 文件）从一个 Visual Studio 安装复制到另一个，则对于托管项目类型可以在 \\<projectname\>\Properties\PublishProfiles 文件夹中查找发布配置文件 \<profilename\>.pubxml。 对于网站则在 \App_Data 文件夹下进行查找。 发布配置文件是 MSBuild XML 文件。
+> 若只需要将 Visual Studio 发布配置文件（\*.pubxml 文件）从一个 Visual Studio 安装复制到另一个，则对于托管项目类型可以在 *<projectname\<\Properties\PublishProfiles 文件夹中查找发布配置文件 \>profilename*.pubxml*\\\>*。 对于网站则在 \App_Data 文件夹下进行查找。 发布配置文件是 MSBuild XML 文件。
 
 ## <a name="prerequisites"></a>系统必备
 
@@ -52,7 +52,7 @@ ms.locfileid: "65680142"
     如果尚未安装 Visual Studio，请转到  [Visual Studio 下载](https://visualstudio.microsoft.com/downloads/) 页免费安装。
 ::: moniker-end
 
-* 服务器上必须运行 Windows Server 2012 或 Windows Server 2016，并且必须正确安装 [IIS Web 服务器角色](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)（需要生成发布设置文件 (\*.publishsettings)）。 该服务器上还必须安装 ASP.NET 4.5 或 ASP.NET Core。 若要安装 ASP.NET 4.5，请参阅[使用 ASP.NET 3.5 和 ASP.NET 4.5 的 IIS 8.0](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)。 若要安装 ASP.NET Core，请参阅 [使用 IIS 在 Windows 上托管 ASP.NET Core](/aspnet/core/publishing/iis?tabs=aspnetcore2x#iis-configuration)。
+* 服务器上必须运行 Windows Server 2012 或 Windows Server 2016，并且必须正确安装 [IIS Web 服务器角色](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)（需要生成发布设置文件 (*.publishsettings)）\**。 该服务器上还必须安装 ASP.NET 4.5 或 ASP.NET Core。 若要安装 ASP.NET 4.5，请参阅[使用 ASP.NET 3.5 和 ASP.NET 4.5 的 IIS 8.0](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)。 若要安装 ASP.NET Core，请参阅 [使用 IIS 在 Windows 上托管 ASP.NET Core](/aspnet/core/publishing/iis?tabs=aspnetcore2x#iis-configuration)。
 
 ## <a name="create-a-new-aspnet-project-in-visual-studio"></a>在 Visual Studio 中新建 ASP.NET 项目
 
@@ -70,7 +70,7 @@ ms.locfileid: "65680142"
 
     Visual Studio 随即创建项目。
 
-1. 选择“生成” > “生成解决方案”以生成项目。
+1. 选择“生成”**“生成解决方案”以生成项目** > 。
 
 ## <a name="install-and-configure-web-deploy-on-windows-server"></a>在 Windows Server 上安装和配置 Web 部署
 

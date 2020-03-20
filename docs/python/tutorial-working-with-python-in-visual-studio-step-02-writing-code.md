@@ -12,10 +12,10 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: fda68b9e5bffbd1afab3389a0d8d624312a8de3f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "62429999"
 ---
 # <a name="step-2-write-and-run-code"></a>步骤 2：编写并运行代码
@@ -30,7 +30,7 @@ ms.locfileid: "62429999"
 
     ![IntelliSense 自动完成弹出窗口](media/vs-getting-started-python-04-IntelliSense1b.png)
 
-1. IntelliSense 根据正在使用的语句、正在调用的函数等显示不同的信息。 使用 `print` 函数时，在 `print` 后面键入 `(` 表示函数调用将显示该函数的完整使用情况信息。 IntelliSense 弹出窗口还用粗体显示当前参数（如此处所示的 **value**）：
+1. IntelliSense 根据正在使用的语句、正在调用的函数等显示不同的信息。 使用 `print` 函数时，在 `(` 后面键入 `print` 表示函数调用将显示该函数的完整使用情况信息。 IntelliSense 弹出窗口还用粗体显示当前参数（如此处所示的 **value**）：
 
     ![某函数的 IntelliSense 自动完成弹出窗口](media/vs-getting-started-python-05-IntelliSense2b.png)
 

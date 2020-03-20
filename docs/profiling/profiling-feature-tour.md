@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 8e4868899af67ebeb25ae508cbe7e5b0c83137bf
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77578080"
 ---
 # <a name="quickstart-first-look-at-profiling-tools"></a>快速入门：首先了解分析工具
@@ -81,13 +81,13 @@ CPU 使用率工具很适合用于开始分析应用的性能。 它将向你详
 
 ![分析简介性能提示](../profiling/media/prof-tour-perf-tips.png "分析简介性能提示")
 
-## <a name="post_mortem"></a>不使用调试器分析发行版本
+## <a name="profile-release-builds-without-the-debugger"></a><a name="post_mortem"></a>不使用调试器分析发行版本
 
 CPU 使用率和内存使用量等分析工具可与调试器配合使用（见前文），你也可事后使用性能探查器运行分析工具，其的是就发行版本进行分析。 在性能探查器中，可以在应用仍在运行时收集诊断信息，然后在应用停止后检查收集的信息。 有关这些不同方法的详细信息，请参阅[运行带或不带调试器的分析工具](../profiling/running-profiling-tools-with-or-without-the-debugger.md)。 在性能探查器中也可以使用其他工具（如 [.NET 对象分配工具](../profiling/dotnet-alloc-tool.md)）。
 
 ![性能探查器](../profiling/media/prof-tour-performance-profiler.png "性能探查器")
 
-选择“调试” > “性能探查器”以打开性能探查器。
+选择“调试”**“性能探查器”以打开性能探查器** > 。
 
 该窗口使你能够在某些应用场景中选择多个分析工具。 CPU 使用率等工具可提供在分析中有所帮助的补充性数据。 还可以使用[命令行探查器](../profiling/profile-apps-from-command-line.md)以启用涉及多个分析工具的方案。
 
@@ -140,7 +140,7 @@ JavaScript 内存工具类似于适用于其他应用类型的内存使用量工
 
 ![网络使用情况分析工具](../profiling/media/prof-tour-network-usage.png "诊断网络使用情况")
 
-在摘要视图中选择一个操作，查看更多详细信息。
+选择摘要视图中的操作以查看更多详细信息。
 
 ![网络使用情况工具中的详细信息](../profiling/media/prof-tour-network-usage-details.png "诊断网络使用情况详细信息")
 
@@ -154,7 +154,7 @@ JavaScript 内存工具类似于适用于其他应用类型的内存使用量工
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
-在 Visual Studio 2019 中，旧的性能资源管理器和相关分析工具（如性能向导）已折叠到性能探查器中，可以使用“调试” > “性能探查器”来打开它们。 在性能探查器中，可用的诊断工具取决于所选目标和当前打开的启动项目。 CPU 使用情况工具提供先前在性能向导中支持的采样功能。 检测工具提供性能向导中的检测分析功能（用于精确调用计数和持续时间）。 其他内存工具也将出现在性能探查器中。
+在 Visual Studio 2019 中，旧的性能资源管理器和相关分析工具（如性能向导）已折叠到性能探查器中，可以使用“调试”**“性能探查器”来打开它们** > 。 在性能探查器中，可用的诊断工具取决于所选目标和当前打开的启动项目。 CPU 使用情况工具提供先前在性能向导中支持的采样功能。 检测工具提供性能向导中的检测分析功能（用于精确调用计数和持续时间）。 其他内存工具也将出现在性能探查器中。
 ::: moniker-end
 
 ![性能资源管理器工具](../profiling/media/prof-tour-performance-explorer.png "性能资源管理器")
@@ -169,10 +169,10 @@ JavaScript 内存工具类似于适用于其他应用类型的内存使用量工
 |[CPU 使用率](../profiling/cpu-usage.md)|是|是|是|
 |[内存使用率](../profiling/memory-usage.md)|是|是|是|
 |[.NET 对象分配](../profiling/dotnet-alloc-tool.md)|是（仅用于 .NET）|是|是|
-|[GPU 使用情况](/visualstudio/debugger/graphics/gpu-usage)|是|是|否|
-|[应用程序时间线](../profiling/application-timeline.md)|是|是|否|
+|[GPU 使用情况](/visualstudio/debugger/graphics/gpu-usage)|是|是|no|
+|[应用程序时间线](../profiling/application-timeline.md)|是|是|no|
 |[性能提示](../profiling/perftips.md)|是|XAML 适用，HTML 不适用|是|
-|[性能资源管理器](../profiling/performance-explorer.md)|是|否|是|
+|[性能资源管理器](../profiling/performance-explorer.md)|是|no|是|
 |[IntelliTrace](../debugger/intellitrace.md)|仅适用于带有 Visual Studio Enterprise 的 .NET|仅适用于带有 Visual Studio Enterprise 的 .NET|仅适用于带有 Visual Studio Enterprise 的 .NET|
 ::: moniker-end
 
@@ -181,16 +181,16 @@ JavaScript 内存工具类似于适用于其他应用类型的内存使用量工
 |----------------------|---------------------|-------------|-------------|
 |[CPU 使用率](../profiling/cpu-usage.md)|是|是|是|
 |[内存使用率](../profiling/memory-usage.md)|是|是|是|
-|[GPU 使用情况](/visualstudio/debugger/graphics/gpu-usage)|是|是|否|
-|[应用程序时间线](../profiling/application-timeline.md)|是|是|否|
+|[GPU 使用情况](/visualstudio/debugger/graphics/gpu-usage)|是|是|no|
+|[应用程序时间线](../profiling/application-timeline.md)|是|是|no|
 |[性能提示](../profiling/perftips.md)|是|XAML 适用，HTML 不适用|是|
-|[性能资源管理器](../profiling/performance-explorer.md)|是|否|是|
+|[性能资源管理器](../profiling/performance-explorer.md)|是|no|是|
 |[IntelliTrace](../debugger/intellitrace.md)|仅适用于带有 Visual Studio Enterprise 的 .NET|仅适用于带有 Visual Studio Enterprise 的 .NET|仅适用于带有 Visual Studio Enterprise 的 .NET|
-|[网络使用情况](../profiling/network-usage.md)|否|是|否|
-|[HTML UI responsiveness](../profiling/html-ui-responsiveness.md)|否|HTML 适用，XAML 不适用|否|
-|[JavaScript 内存](../profiling/javascript-memory.md)|否|HTML 适用，XAML 不适用|否|
+|[网络使用情况](../profiling/network-usage.md)|no|是|no|
+|[HTML UI responsiveness](../profiling/html-ui-responsiveness.md)|no|HTML 适用，XAML 不适用|no|
+|[“JavaScript 内存”](../profiling/javascript-memory.md)|no|HTML 适用，XAML 不适用|no|
 ::: moniker-end
 
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [在 Visual Studio 中进行调试](../debugger/debugger-feature-tour.md)
