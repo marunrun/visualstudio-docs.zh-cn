@@ -14,10 +14,10 @@ dev_langs:
 ms.workload:
 - multiple
 ms.openlocfilehash: 8be3edaaab970dab7ef41bd8bce75c84bac54a2e
-ms.sourcegitcommit: 13decf878b33fc0c5d665a88067170c2861b261b
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "71681578"
 ---
 # <a name="create-a-windows-forms-app-in-visual-studio-with-visual-basic"></a>在 Visual Studio 中使用 Visual Basic 创建 Windows 窗体应用
@@ -47,11 +47,11 @@ ms.locfileid: "71681578"
 
 1. 打开 Visual Studio 2017。
 
-1. 从顶部菜单栏中选择“文件”  >“新建”  >“项目”  。
+1. 从顶部菜单栏中选择“文件”>“新建”>“项目”    。
 
 1. 在“新建项目”对话框左侧的窗格中，展开“Visual Basic”，然后选择“Windows 桌面”    。 在中间窗格中，选择“Windows 窗体应用(.NET Framework)”  。 随后将文件命名为 `HelloWorld`。
 
-     如果没有看到“Windows 窗体应用(.NET Framework)”项目模板，则取消“新建项目”对话框，然后在顶部菜单栏中依次选择“工具” > “获取工具和功能”     。 Visual Studio 安装程序启动。 选择“.NET 桌面开发”工作负载，然后选择“修改”   。
+     如果没有看到“Windows 窗体应用(.NET Framework)”  项目模板，则取消“新建项目”  对话框，然后在顶部菜单栏中依次选择“工具”   > “获取工具和功能”  。 Visual Studio 安装程序启动。 选择“.NET 桌面开发”工作负载，然后选择“修改”   。
 
      ![Visual Studio 安装程序中的 .NET Core 开发工作负载](../ide/media/install-dot-net-desktop-env.png)
 

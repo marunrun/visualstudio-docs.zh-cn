@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - aspnet
 ms.openlocfilehash: 367d789513e8ac220566cb4e451bcea015ec5a2a
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77275080"
 ---
 # <a name="quickstart-analyze-cpu-usage-data-in-visual-studio-aspnet-core"></a>快速入门：在 Visual Studio 中分析 CPU 使用率数据 (ASP.NET Core)
