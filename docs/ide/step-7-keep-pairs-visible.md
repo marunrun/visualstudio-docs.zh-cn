@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: eeca594849625b548857a23b9d5c8e278dcdf07c
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2020
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "77579290"
 ---
 # <a name="step-7-keep-pairs-visible"></a>步骤 7：保持对可见
@@ -57,15 +57,15 @@ ms.locfileid: "77579290"
     firstClicked = null;
     ```
 
-     这两个语句中的第一句检查两个图标是否相同。 因为要比较两个值，所以 C# 程序使用 `==` 相等运算符。 第二个语句实际上更改值（称为“赋值”），将 `firstClicked` 引用变量设置为等于 `null` 以重置它。 这就是使用 `=` 赋值运算符的原因。 C# 使用 `=` 设置值，使用 `==` 比较值。 Visual Basic 使用 `=` 进行变量赋值和比较。
+     这两个语句中的第一句检查两个图标是否相同。 因为要比较两个值，所以 C# 程序使用 `==` 相等运算符。 第二个语句实际上更改值（称为“赋值”  ），将 `firstClicked` 引用变量设置为等于 `null` 以重置它。 这就是使用 `=` 赋值运算符的原因。 C# 使用 `=` 设置值，使用 `==` 比较值。 Visual Basic 使用 `=` 进行变量赋值和比较。
 
 2. 保存并运行程序，然后开始选择窗体上的图标。 如果选择的是不匹配的对，则将触发计时器的 Tick 事件，两个图标都会消失。 如果选择的是匹配的对，则将执行新的 `if` 语句，而 return 语句会使方法跳过启动计时器的代码，因此图标保持可见，如下图所示。
 
      ![在本教程中创建的游戏](../ide/media/express_finishedgame.png)<br/>
-具有可见图标对的匹配游戏
+具有可见图标对的匹配游戏 
 
 ## <a name="to-continue-or-review"></a>继续或查看
 
-- 要转到下一个教程步骤，请参阅[步骤 8：添加验证玩家是否获胜的方法](../ide/step-8-add-a-method-to-verify-whether-the-player-won.md)。
+- 要转到下一个教程步骤，请参阅[步骤 8：  添加验证玩家是否获胜的方法](../ide/step-8-add-a-method-to-verify-whether-the-player-won.md)。
 
 - 要返回上一个教程步骤，请参阅[步骤 6：添加计时器](../ide/step-6-add-a-timer.md)。
