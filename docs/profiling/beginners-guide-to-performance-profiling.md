@@ -18,10 +18,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: f5dd3b1dc758a9b4f7634d4b6e73ab294289d6cd
-ms.sourcegitcommit: 53bc4c11b82882ab658e34c65ae374060f823531
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "71128294"
 ---
 # <a name="measure-application-performance-by-analyzing-cpu-usage"></a>通过分析 CPU 使用情况衡量应用程序性能
@@ -88,7 +88,7 @@ ms.locfileid: "71128294"
 
      CPU 使用率工具在“CPU 使用率”  选项卡中显示报表。
 
-     ![诊断工具“ CPU 使用率”选项卡](../profiling/media/diag-tools-cpu-usage-tab.png "DiagToolsCPUUsageTab")
+     ![诊断工具“CPU 使用率”选项卡](../profiling/media/diag-tools-cpu-usage-tab.png "DiagToolsCPUUsageTab")
 
 9. 如果想要选择要分析的更具体的代码区域，请在 CPU 时间轴中选择一个区域（它必须是显示分析数据的区域）。
 
@@ -102,7 +102,7 @@ ms.locfileid: "71128294"
 
 1. 在函数列表中，检查执行大部分工作的函数。
 
-    ![诊断工具 CPU 使用率函数列表](../profiling/media/diag-tools-cpu-usage-function-list.png "DiagToolsCPUUsageFunctionList")
+    ![诊断工具“CPU 使用率”函数列表](../profiling/media/diag-tools-cpu-usage-function-list.png "DiagToolsCPUUsageFunctionList")
 
     > [!TIP]
     > 函数将按执行工作量从多到少排列（不按调用顺序）。 这有助于快速标识运行时间最长的函数。
@@ -111,7 +111,7 @@ ms.locfileid: "71128294"
 
     双击该函数时，将在左侧窗格中打开“调用方/被调用方”  视图。
 
-    ![诊断工具调用方和被调用方视图](../profiling/media/diag-tools-caller-callee.png "DiagToolsCallerCallee")
+    ![诊断工具“调用方和被调用方”视图](../profiling/media/diag-tools-caller-callee.png "DiagToolsCallerCallee")
 
     在此视图中，所选函数显示在标题和“当前函数”  框中（本例中为 GetNumber）。 调用当前函数的函数显示在“调用函数”  左下方，当前函数调用的任何函数均显示在右侧的“被调用函数”  框中。 （可选择其中一个框来更改当前函数。）
 
@@ -126,18 +126,18 @@ ms.locfileid: "71128294"
     图中每个带编号的区域都与过程中的一个步骤相关。
 
     ::: moniker range=">=vs-2019"
-    ![诊断工具调用关系树](../profiling/media/vs-2019/diag-tools-call-tree.png "DiagToolsCallTree")
+    ![“诊断工具”调用树](../profiling/media/vs-2019/diag-tools-call-tree.png "DiagToolsCallTree")
     ::: moniker-end
     ::: moniker range="vs-2017"
-    ![诊断工具调用关系树](../profiling/media/diag-tools-call-tree.png "DiagToolsCallTree")
+    ![“诊断工具”调用树](../profiling/media/diag-tools-call-tree.png "DiagToolsCallTree")
     ::: moniker-end
 
     |||
     |-|-|
-    |![第 1 步](../profiling/media/ProcGuid_1.png "ProcGuid_1")|CPU 使用量调用关系树中的顶级节点是一个伪节点|
-    |![第 2 步](../profiling/media/ProcGuid_2.png "ProcGuid_2")|在大多数应用中，当禁用 [“显示外部代码”](#view-external-code) 选项时，二级节点是 **[外部代码]** 节点，该节点包含系统和框架代码，它可以启动和停止应用、绘制 UI、控制线程计划以及向应用提供其他低级服务。|
-    |![第 3 步](../profiling/media/ProcGuid_3.png "ProcGuid_3")|二级节点的子级为用户代码方法和异步例程，它们由二级系统和框架代码进行调用或创建。|
-    |![第 4 步](../profiling/media/ProcGuid_4.png "ProcGuid_4")|方法的子节点仅包含用于父方法调用的数据。 禁用“显示外部代码”  后，应用方法只能包含 **[外部代码]** 节点。|
+    |![步骤 1](../profiling/media/ProcGuid_1.png "ProcGuid_1")|CPU 使用量调用关系树中的顶级节点是一个伪节点|
+    |![步骤 2](../profiling/media/ProcGuid_2.png "ProcGuid_2")|在大多数应用中，当禁用 [“显示外部代码”](#view-external-code) 选项时，二级节点是 **[外部代码]** 节点，该节点包含系统和框架代码，它可以启动和停止应用、绘制 UI、控制线程计划以及向应用提供其他低级服务。|
+    |![步骤 3](../profiling/media/ProcGuid_3.png "ProcGuid_3")|二级节点的子级为用户代码方法和异步例程，它们由二级系统和框架代码进行调用或创建。|
+    |![步骤 4](../profiling/media/ProcGuid_4.png "ProcGuid_4")|方法的子节点仅包含用于父方法调用的数据。 禁用“显示外部代码”  后，应用方法只能包含 **[外部代码]** 节点。|
 
     下面是列值的详细信息：
 
@@ -150,7 +150,7 @@ ms.locfileid: "71128294"
     ::: moniker range=">=vs-2019"
     要查看调用树视图中使用最高 CPU 百分比的函数调用，请单击“展开热路径”  。
 
-    ![诊断工具热路径](../profiling/media/vs-2019/diag-tools-hot-path.png "DiagToolsHotPath")
+    ![“诊断工具”热路径](../profiling/media/vs-2019/diag-tools-hot-path.png "DiagToolsHotPath")
     ::: moniker-end
 
     > [!NOTE]

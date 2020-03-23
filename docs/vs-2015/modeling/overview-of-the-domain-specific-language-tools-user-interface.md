@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 3bffb1f7fe6449f078c21c14b0a070cbd23db539
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "72652128"
 ---
 # <a name="overview-of-the-domain-specific-language-tools-user-interface"></a>域特定语言工具用户界面的概述
@@ -51,4 +51,4 @@ ms.locfileid: "72652128"
 |形状映射|形状映射以线的形式在域模型关系图中显示，用于将形状链接到它显示的域类，或者将连接符链接到它显示的域关系。|
 
 ## <a name="see-also"></a>另请参阅
- [特定于域的语言工具的概述](../modeling/overview-of-domain-specific-language-tools.md)[特定于域的语言工具术语表](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)[自定义和扩展特定于域的语言](../modeling/customizing-and-extending-a-domain-specific-language.md)
+ [特定于域的语言工具的概述](../modeling/overview-of-domain-specific-language-tools.md) [特定于域的语言工具术语表](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa) [自定义和扩展特定于域的语言](../modeling/customizing-and-extending-a-domain-specific-language.md)

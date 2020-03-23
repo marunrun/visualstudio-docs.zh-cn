@@ -7,10 +7,10 @@ ms.date: 03/02/2020
 ms.topic: conceptual
 description: 了解有关所选 Visual Studio 订阅中包含的可用 CAST Highlight 权益
 ms.openlocfilehash: 7b06800bd53e2843015f3f3509a4a2c7e0eae671
-ms.sourcegitcommit: c98e0ccf236765b44e47095ee52836cb012e3854
+ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/03/2020
+ms.lasthandoff: 03/21/2020
 ms.locfileid: "78257171"
 ---
 # <a name="the-cast-highlight-benefit-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 CAST Highlight 权益
@@ -48,17 +48,17 @@ ms.locfileid: "78257171"
    > 我们目前正在审核你的激活和访问 CAST Highlight 的请求。  你将在 48 小时内收到我的回复。
    >
    > 诚挚问候  
-   > Greg 
+   > *Greg*
 
 在请求获得批准后，将收到第二封确认成功创建帐户的电子邮件，并要求你单击激活链接以完成激活过程。
 
    > 我们已成功验证并验证了你访问 CAST Highlight 的请求。  欢迎使用体验！
    >
-   > 需要进行最后的步骤以完成激活。你将收到来自 noreply@casthighlight.com 的电子邮件，其中包含激活链接。如果看不到电子邮件，请检查垃圾邮件箱。 
+   > 需要进行最后的步骤以完成激活。你将收到来自 noreply@casthighlight.com 的电子邮件，其中包含激活链接。如果看不到电子邮件，请检查垃圾邮件箱。
    >
-   > *请单击电子邮件中提供的激活链接并完成激活过程。*
+   > 请单击电子邮件中提供的激活链接并完成激活过程。 
    >
-   > *激活后，你将有 30 天的时间访问 CAST Highlight 平台，并且最多可以载入 5 个应用程序。请注意，这是仅适用于 Microsoft Visual Studio Enterprise 客户的独家优惠。*
+   > 激活后，你将有 30 天的时间访问 CAST Highlight 平台，并且最多可以载入 5 个应用程序。  请注意，这是仅适用于 Microsoft Visual Studio Enterprise 客户的独家优惠。
    >
    > 我将与你保持联系，以确保一切顺利。  与此同时，这里有一些内容有助于入门：
    >
@@ -68,7 +68,7 @@ ms.locfileid: "78257171"
    > - 视频教程 - [载入应用](https://www.youtube.com/watch?v=x-7Dsn3Rmw4)
    >
    > 诚挚问候  
-   > Greg 
+   > *Greg*
 
    > [!NOTE]
    > 请务必单击你收到的电子邮件中的激活链接。  否则，你将无法访问 CAST Highlight 订阅。 如果未在收件箱中看到电子邮件，请务必检查垃圾邮件文件夹。

@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 83d444cb5e3345d79ca6e1422982c0ecd37e4287
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "67825524"
 ---
 # <a name="inspect-previous-app-states-using-intellitrace-step-back-in-visual-studio-visual-studio-enterprise"></a>在 Visual Studio (Visual Studio Enterprise) 中，使用 IntelliTrace 单步后退来检查旧应用状态
@@ -57,7 +57,7 @@ IntelliTrace 后退会在每个断点处及调试器步骤事件发生时自动�
 
     快照功能可用的事件旁边会显示照相机图标。
 
-    ![带有快照的“事件”选项卡](../debugger/media/intellitrace-events-tab-with-snapshots.png "带有断点处和步骤执行时拍摄的快照的“事件”选项卡")
+    ![带快照的事件选项卡](../debugger/media/intellitrace-events-tab-with-snapshots.png "带有断点处和步骤执行时拍摄的快照的“事件”选项卡")
 
     由于性能原因，单步执行过快时不拍摄快照。 如果该步骤旁没有显示照相机图标，请尝试将单步执行速度放慢。
 
@@ -67,7 +67,7 @@ IntelliTrace 后退会在每个断点处及调试器步骤事件发生时自动�
 
     这些按钮用于浏览“诊断工具”窗口中“事件”选项卡上显示的事件   。 后退或前进到某个事件会自动激活所选事件的[历史调试](../debugger/historical-debugging.md)。
 
-    ![“后退”和“前进”按钮](../debugger/media/intellitrace-step-back-icons-description.png "Step Backward and Step Forward buttons")
+    ![“后退”和“前进”按钮](../debugger/media/intellitrace-step-back-icons-description.png "“后退”和“前进”按钮")
 
     后退或前进时，Visual Studio 进入历史调试模式。 在此模式下，调试器上下文将切换到记录所选事件时的时间。 Visual Studio 还将指针移动到源窗口中的相应代码行。
 
@@ -75,17 +75,17 @@ IntelliTrace 后退会在每个断点处及调试器步骤事件发生时自动�
 
     因此，举例来说，如果命中断点并执行步骤 (F10)，则“后退”按钮将在断点对应的代码行上将 Visual Studio 置于历史模式   。
 
-    ![在带有快照的事件上激活历史模式](../debugger/media/intellitrace-historical-mode-with-snapshot.png "在带有快照的事件上激活历史模式")
+    ![在带快照的事件上激活历史模式](../debugger/media/intellitrace-historical-mode-with-snapshot.png "在带快照的事件上激活历史模式")
 
 2. 若要返回到实时执行，请在信息栏中选择“继续”(F5) 或单击“返回实时调试”链接   。
 
 3. 还可以从“事件”选项卡查看快照  。若要执行此操作，请选择带有快照的事件，然后单击“激活历史调试”  。
 
-    ![事件上的“激活历史调试”](../debugger/media/intellitrace-activate-historical-debugging.png "Activate Historical Debugging on an event")
+    ![在事件上激活历史调试](../debugger/media/intellitrace-activate-historical-debugging.png "在事件上激活历史调试")
 
     与“设置下一语句”命令不同，查看快照不会重新运行代码；它提供在过去发生的某个时间点的应用程序状态的静态视图  。
 
-    ![IntelliTrace 后退的概述](../debugger/media/intellitrace-step-back-overview.png "Overview of IntelliTrace Step-back")
+    ![IntelliTrace 后退的概述](../debugger/media/intellitrace-step-back-overview.png "IntelliTrace 后退的概述")
 
     若要了解有关如何在 Visual Studio 中检查变量的详细信息，请参阅[初探调试器](../debugger/debugger-feature-tour.md)
 
