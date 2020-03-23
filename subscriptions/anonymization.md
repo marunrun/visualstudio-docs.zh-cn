@@ -6,12 +6,12 @@ manager: lank
 ms.date: 02/20/2020
 ms.topic: conceptual
 description: 了解订阅访问丢失时订阅者数据的匿名方式。
-ms.openlocfilehash: f3a35448dd0befbbb91f1657dd62b2b99ff37a2a
-ms.sourcegitcommit: 3c105990656cd509062ce60e52e776c794f6305d
+ms.openlocfilehash: 439e53b1c67fde0fbda0666652e29bf396abfee2
+ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77520834"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "78894409"
 ---
 # <a name="anonymization-of-visual-studio-subscriber-information"></a>Visual Studio 订阅者信息匿名化
 当发生阻止订阅者使用订阅的事件时，例如订阅到期或删除订阅者的登录帐户，用户的个人信息（如姓名和登录帐户）基本上被扰乱以使其无法使用。  这样做是为了保护订阅者的个人信息。
@@ -41,11 +41,13 @@ ms.locfileid: "77520834"
 - 部署单一标识管理系统（MSA 或AAD），但不能同时部署这两者。  
 - 通过租户关联 AAD 和 MSA 标识。 
 
-## <a name="next-steps"></a>后续步骤
-通过[链接 MSA 和 AAD 标识](https://docs.microsoft.com/azure/active-directory/b2b/add-users-administrator)了解如何防止匿名。
-
 ## <a name="see-also"></a>请参阅
 - [Visual Studio 文档](https://docs.microsoft.com/visualstudio/)
 - [Azure DevOps 文档](https://docs.microsoft.com/azure/devops/)
 - [Azure 文档](https://docs.microsoft.com/azure/)
 - [Microsoft 365 文档](https://docs.microsoft.com/microsoft-365/)
+
+## <a name="next-steps"></a>后续步骤
+通过[链接 MSA 和 AAD 标识](https://docs.microsoft.com/azure/active-directory/b2b/add-users-administrator)了解如何防止匿名。
+
+

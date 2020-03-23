@@ -7,10 +7,10 @@ ms.date: 03/02/2020
 ms.topic: conceptual
 description: 了解管理员如何将许可证分配给订阅者
 ms.openlocfilehash: 3d444f930d1fab166d437911b5609caf75cad09e
-ms.sourcegitcommit: 3ed59ce39692124fe61c484df4348c0b9abee9b9
+ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2020
+ms.lasthandoff: 03/21/2020
 ms.locfileid: "78263301"
 ---
 # <a name="assign-licenses-in-the-visual-studio-subscriptions-administration-portal"></a>在 Visual Studio 订阅管理门户中分配许可证
@@ -18,7 +18,7 @@ ms.locfileid: "78263301"
 
 对于用户组，你可以选择分配订阅的方式。  
 - 可以一次分配一个订阅。
-- 也可以使用[“批量添加”](assign-license-bulk.md)功能快速轻松地上传订阅者列表及其订阅信息。
+- 也可以使用 [批量添加](assign-license-bulk.md)功能快速轻松地上传订阅者列表及其订阅信息。
 - 如果你的组织使用 Microsoft Azure Active Directory (Azure AD)，则可以使用 Azure AD 组将订阅分配给用户组。  （此功能正在分阶段部署，你的组织可能无法立即使用。）
 
 
