@@ -1,5 +1,5 @@
 ---
-title: 注册和注销 Vspackage |Microsoft Docs
+title: 注册和取消注册 VS 包 |微软文档
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,19 +12,19 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 701700ba9d5c6db1e5858a2419e1b2c0fa950ae5
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.sourcegitcommit: 95f26af1da51d4c83ae78adcb7372b32364d8a2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66334295"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79301583"
 ---
-# <a name="register-and-unregister-vspackages"></a>注册和注销 Vspackage
-特性用于注册 VSPackage，但
+# <a name="register-and-unregister-vspackages"></a>注册和取消注册 VS 包
+您可以使用属性注册 VSPackage，但
 
-## <a name="register-a-vspackage"></a>注册 VSPackage
- 属性可用于控制托管的 Vspackage 的注册。 中包含的所有注册信息 *.pkgdef*文件。 基于文件的注册的详细信息，请参阅[CreatePkgDef 实用工具](../extensibility/internals/createpkgdef-utility.md)。
+## <a name="register-a-vspackage"></a>注册 VS 包
+ 您可以使用属性来控制托管 VSPackages 的注册。 所有注册信息都包含在 *.pkgdef*文件中。 有关基于文件的注册的详细信息，请参阅[CreatePkgDef 实用程序](../extensibility/internals/createpkgdef-utility.md)。
 
- 下面的代码演示如何使用标准注册特性注册你的 VSPackage。
+ 以下代码演示如何使用标准注册属性来注册 VSPackage。
 
 ```csharp
 [PackageRegistration(UseManagedResourcesOnly = true)]
@@ -36,15 +36,15 @@ public sealed class BasicPackage : Package
 ```
 
 ## <a name="unregister-an-extension"></a>注销扩展
- 如果你已尝试过很多不同的 Vspackage 使用，并想要从实验实例中删除它们，可以只需运行**重置**命令。 寻找**重置 Visual Studio 实验实例**在主页上的计算机，或从命令行运行以下命令：
+ 如果您一直在试验许多不同的 VSPackages，并希望从实验实例中删除它们，则可以运行 **"重置"** 命令。 在计算机的起始页上查找**重置可视化工作室实验实例**，或从命令行运行此命令：
 
 ```cmd
 <location of Visual Studio 2015 install>\"Microsoft Visual Studio 14.0\VSSDK\VisualStudioIntegration\Tools\Bin\CreateExpInstance.exe" /Reset /VSInstance=14.0 /RootSuffix=Exp
 ```
 
- 如果你想要卸载已在您的 Visual Studio 的开发实例安装的扩展，请转到**工具** > **扩展和更新**，查找扩展，然后单击**卸载**。
+ 如果要卸载在 Visual Studio 的开发实例上安装的扩展，请转到 **"工具** > **扩展"和"更新**"，查找扩展，然后单击"**卸载**"。
 
- 如果出于某种原因这两个方法成功如何卸载该扩展，则可按如下所示注销 VSPackage 程序集从命令行：
+ 如果由于某种原因，这些方法都无法成功卸载扩展，则可以从命令行中取消注册 VSPackage 程序集，如下所示：
 
 ```cmd
 <location of Visual Studio 2015 install>\"Microsoft Visual Studio 14.0\VSSDK\VisualStudioIntegration\Tools\Bin\regpkg" /unregister <pathToVSPackage assembly>
@@ -52,13 +52,13 @@ public sealed class BasicPackage : Package
 
 <a name="using-a-custom-registration-attribute-to-register-an-extension"></a>
 
-## <a name="use-a-custom-registration-attribute-to-register-an-extension"></a>使用自定义注册特性注册扩展
+## <a name="use-a-custom-registration-attribute-to-register-an-extension"></a>使用自定义注册属性注册扩展
 
-在某些情况下可能需要创建新的注册属性为扩展插件。 若要添加新的注册表项或将新值添加到现有的密钥，可以使用注册属性。 新的属性必须派生自<xref:Microsoft.VisualStudio.Shell.RegistrationAttribute>，并且必须重写<xref:Microsoft.VisualStudio.Shell.RegistrationAttribute.Register%2A>和<xref:Microsoft.VisualStudio.Shell.RegistrationAttribute.Unregister%2A>方法。
+在某些情况下，您可能需要为扩展创建新的注册属性。 可以使用注册属性添加新注册表项或向现有键添加新值。 新属性必须派生自<xref:Microsoft.VisualStudio.Shell.RegistrationAttribute>，并且必须重写<xref:Microsoft.VisualStudio.Shell.RegistrationAttribute.Register%2A>和 方法<xref:Microsoft.VisualStudio.Shell.RegistrationAttribute.Unregister%2A>。
 
 ### <a name="create-a-custom-attribute"></a>创建自定义属性
 
-下面的代码演示如何创建新的注册属性。
+以下代码演示如何创建新的注册属性。
 
 ```csharp
 [AttributeUsage(AttributeTargets.Class, Inherited = true, AllowMultiple = false)]
@@ -67,11 +67,11 @@ public class CustomRegistrationAttribute : RegistrationAttribute
 }
 ```
 
- <xref:System.AttributeUsageAttribute>属性类中用于指定该属性相关，是否可以在一次以上，和是否可以继承的程序元素 （类、 方法等）。
+ <xref:System.AttributeUsageAttribute>用于属性类，以指定属性相关的程序元素（类、方法等），是否可以多次使用该元素，以及是否可以继承该元素。
 
 ### <a name="create-a-registry-key"></a>创建注册表项
 
-在下面的代码中，创建自定义特性**自定义**子项下为其注册的 VSPackage 的键。
+在以下代码中，自定义属性在正在注册的 VSPackage 的密钥下创建**自定义**子键。
 
 ```csharp
 public override void Register(RegistrationAttribute.RegistrationContext context)
@@ -95,9 +95,9 @@ public override void Unregister(RegistrationContext context)
 }
 ```
 
-### <a name="create-a-new-value-under-an-existing-registry-key"></a>创建现有的注册表项下的新值
+### <a name="create-a-new-value-under-an-existing-registry-key"></a>在现有注册表项下创建新值
 
-可以将自定义值添加到现有密钥。 下面的代码演示如何将新值添加到 VSPackage 注册密钥。
+您可以将自定义值添加到现有键。 以下代码演示如何向 VSPackage 注册密钥添加新值。
 
 ```csharp
 public override void Register(RegistrationAttribute.RegistrationContext context)
@@ -121,5 +121,5 @@ public override void Unregister(RegistrationContext context)
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [VSPackage](../extensibility/internals/vspackages.md)
