@@ -56,7 +56,7 @@
               href: parallel-activity-designer.md
             - name: ParallelForEach\<T>
               href: parallelforeach-t-activity-designer.md
-            - name: Pick
+            - name: 选取
               href: pick-activity-designer.md
             - name: PickBranch
               href: pickbranch-activity-designer.md
@@ -80,17 +80,17 @@
           items:
             - name: 状态机
               href: state-machine-activity-designers.md
-            - name: StateMachine
+            - name: 状态机
               href: statemachine-activity-designer.md
             - name: 状态
               href: state-activity-designer.md
             - name: FinalState
               href: finalstate-activity-designer.md
-            - name: 切换
+            - name: Transition
               href: transition-activity-designer.md
-        - name: 消息
+        - name: 消息传递
           items:
-            - name: 消息
+            - name: 消息传递
               href: messaging-activity-designers.md
             - name: CorrelationScope
               href: correlationscope-activity-designer.md
@@ -100,7 +100,7 @@
               href: receive-activity-designer.md
             - name: ReceiveAndSendReply
               href: receiveandsendreply-template-designer.md
-            - name: 发送
+            - name: Send
               href: send-activity-designer.md
             - name: SendAndReceiveReply
               href: sendandreceivereply-template-designer.md
@@ -110,7 +110,7 @@
           items:
             - name: 运行时
               href: runtime-activity-designers.md
-            - name: 保留
+            - name: 持久
               href: persist-activity-designer.md
             - name: TerminateWorkflow
               href: terminateworkflow-activity-designer.md
@@ -118,7 +118,7 @@
           items:
             - name: 基元
               href: primitives-activity-designers.md
-            - name: Assign
+            - name: 分配
               href: assign-activity-designer.md
             - name: 延迟
               href: delay-activity-designer.md
@@ -138,7 +138,7 @@
               href: compensableactivity-activity-designer.md
             - name: Compensate
               href: compensate-activity-designer.md
-            - name: Confirm
+            - name: 确认
               href: confirm-activity-designer.md
             - name: TransactionScope
               href: transactionscope-activity-designer.md
@@ -204,7 +204,7 @@
           href: system-activities-tab-choose-toolbox-items-dialog-box.md
         - name: 工作流设计器 Shell 功能
           href: workflow-designer-shell-features.md
-        - name: 键盘快捷键
+        - name: 键盘快捷方式
           href: keyboard-shortcuts-in-the-workflow-designer.md
         - name: 错误消息
           href: error-messages-in-workflow-designer.md

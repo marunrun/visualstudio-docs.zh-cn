@@ -1,6 +1,6 @@
-- name: Visual Studio Tools for AI
+- name: 用于 AI 的 Visual Studio Tools
   items:
-    - name: Visual Studio Tools for AI
+    - name: 用于 AI 的 Visual Studio Tools
       href: index.yml
     - name: 概述
       href: about-ai-tools.md
@@ -14,9 +14,9 @@
       items:
         - name: TensorFlow + Azure 深入学习 VM
           href: tensorflow-vm.md
-    - name: 操作指南
+    - name: 操作方法指南
       items:
-        - name: 创建项目
+        - name: 创建一个项目
           items:
             - name: 通过示例库创建项目
               href: create-project-gallery.md
@@ -26,7 +26,7 @@
               href: create-project.md
             - name: 通过 GitHub 存储库创建项目
               href: create-project-repo.md
-        - name: 为模型定型
+        - name: 训练模型
           href: train-model.md
         - name: 查看作业详细信息
           href: job-details.md

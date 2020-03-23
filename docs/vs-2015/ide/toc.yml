@@ -186,7 +186,7 @@
           href: encodings-and-line-breaks.md
         - name: 大纲显示
           href: outlining.md
-        - name: 重构
+        - name: Refactoring
           href: refactoring-in-visual-studio.md
         - name: 工作效率提示
           items:
@@ -272,9 +272,9 @@
           href: how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12.md
         - name: 使用电灯泡执行快速操作
           href: perform-quick-actions-with-light-bulbs.md
-        - name: 代码段
+        - name: 代码片段
           items:
-            - name: 代码段
+            - name: 代码片段
               href: code-snippets.md
             - name: 创建代码片段
               href: walkthrough-creating-a-code-snippet.md
@@ -486,7 +486,7 @@
       href: ../deployment/deploying-applications-services-and-components.md
     - name: Visual Studio IDE 64 位支持
       href: visual-studio-ide-64-bit-support.md
-    - name: Visual Studio 示例
+    - name: Visual Studio Samples
       href: visual-studio-samples.md
     - name: 用户帐户和更新
       items:
@@ -494,7 +494,7 @@
           href: user-accounts-and-updates.md
         - name: 登录 Visual Studio
           href: signing-in-to-visual-studio.md
-        - name: 使用多个用户帐户
+        - name: Work with multiple user accounts
           href: work-with-multiple-user-accounts.md
         - name: 如何解锁 Visual Studio
           href: how-to-unlock-visual-studio.md
@@ -528,7 +528,7 @@
           href: user-permissions-and-visual-studio.md
         - name: 安全参考书目
           href: security-bibliography.md
-    - name: Visual Studio 示例
+    - name: Visual Studio Samples
       href: visual-studio-samples.md
     - name: Microsoft Help Viewer
       items:
@@ -706,7 +706,7 @@
                   href: reference/options-text-editor-all-languages-tabs.md
                 - name: 选项，文本编辑器，基本 (Visual Basic)
                   href: reference/options-text-editor-basic-visual-basic.md
-                - name: 选项，文本编辑器，C/C++，格式
+                - name: 选项，文本编辑器，C/C++，格式设置
                   href: reference/options-text-editor-c-cpp-formatting.md
                 - name: 选项，文本编辑器，C/C++，高级
                   href: reference/options-text-editor-c-cpp-advanced.md
@@ -718,7 +718,7 @@
                   href: reference/options-text-editor-csharp-advanced.md
                 - name: '选项，文本编辑器，C#，IntelliSense'
                   href: reference/options-text-editor-csharp-intellisense.md
-                - name: 选项，文本编辑器，JavaScript，格式
+                - name: 'Options, Text Editor, JavaScript, Formatting'
                   href: reference/options-text-editor-javascript-formatting.md
                 - name: 选项，文本编辑器，JavaScript，IntelliSense
                   href: reference/options-text-editor-javascript-intellisense.md
@@ -808,7 +808,7 @@
                   href: reference/options-dialog-box-projects-and-solutions-web-projects.md
             - name: 属性页，JavaScript
               href: reference/property-pages-javascript.md
-            - name: 属性窗口
+            - name: “属性”窗口
               href: reference/properties-window.md
             - name: 工具箱
               items:
@@ -890,11 +890,11 @@
               href: reference/alias-command.md
             - name: “计算语句”命令
               href: reference/evaluate-statement-command.md
-            - name: “查找”命令
+            - name: 查找命令
               href: reference/find-command.md
             - name: “在文件中查找”命令
               href: reference/find-in-files-command.md
-            - name: “转到”命令
+            - name: Go To 命令
               href: reference/go-to-command.md
             - name: “导入和导出设置”命令
               href: reference/import-and-export-settings-command.md
@@ -958,9 +958,9 @@
           href: ../msbuild/msbuild.md
         - name: 用于排除 IDE 错误的资源
           href: reference/resources-for-troubleshooting-integrated-development-environment-errors.md
-        - name: 为残疾人士提供的辅助功能
+        - name: 为残障人士提供的辅助功能
           items:
-            - name: 为残疾人士提供的辅助功能
+            - name: 为残障人士提供的辅助功能
               href: reference/accessibility-for-people-with-disabilities.md
             - name: Visual Studio 的辅助功能
               items:

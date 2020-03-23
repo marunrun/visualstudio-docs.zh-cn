@@ -7,10 +7,10 @@ ms.date: 11/13/2019
 ms.topic: conceptual
 description: 了解有关 Visual Studio 订阅中包含的接待聊天室权益。
 ms.openlocfilehash: 83fdb9a21528e00db1ef8652846c6b852c5c6067
-ms.sourcegitcommit: ca3bb6db949f5e405f6ffe1afa5f430662c1173f
+ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2019
+ms.lasthandoff: 03/21/2020
 ms.locfileid: "74099577"
 ---
 # <a name="concierge-chat-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的接待聊天室
@@ -48,7 +48,7 @@ ms.locfileid: "74099577"
 <sup>1</sup>  *包括：限制转售 (NFR)、Visual Studio 行业合作伙伴 (VSIP)、Microsoft 认证培训师、BizSpark。不包括：FTE、最有价值专家 (MVP)、区域总监 (RD)、Microsoft 合作伙伴网络 (MPN)、Imagine。*
 
 > [!NOTE]
-> Microsoft 不再在云订阅中提供 Visual Studio Professional 年度订阅和 Visual Studio Enterprise 年度订阅。 现有客户体验以及续订、增加、减少或取消订阅的能力不会发生变化。 我们鼓励新客户访问 [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) 以浏览购买 Visual Studio 的不同选项。
+> Microsoft 不再在云订阅中提供 Visual Studio Professional 年度订阅和 Visual Studio Enterprise 年度订阅。 现有客户体验以及续订、增加、减少或取消订阅的能力不会发生变化。 建议新客户访问 [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/)，查看各 Visual Studio 购买选项。
 
 无法确定正在使用哪些订阅？  连接到 [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs)，查看分配给电子邮件地址的所有订阅。 如果没有看到所有订阅，则可能是有一个或多个订阅分配给了不同的电子邮件地址。  你需要使用其他电子邮件地址登录来查看那些订阅。
 

@@ -6,12 +6,12 @@ manager: lank
 ms.date: 02/17/2020
 ms.topic: conceptual
 description: 了解新的 Visual Studio + GitHub 套餐
-ms.openlocfilehash: 5ae209bc0f6b3dcef99f15abd2cfb67d65f655d0
-ms.sourcegitcommit: 374f5ec9a5fa18a6d4533fa2b797aa211f186755
+ms.openlocfilehash: f8cfe09d6c9dc7608684ccf80238db4ac066fc20
+ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77476750"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "78894381"
 ---
 # <a name="introducing-visual-studio-subscriptions-with-github-enterprise"></a>带有 GitHub Enterprise 的 Visual Studio 订阅简介  
 
@@ -77,12 +77,14 @@ ms.locfileid: "77476750"
 - 对有关 Visual Studio IDE、Azure DevOps Services 或其他 Visual Studio 产品或服务有疑问？  请访问 [Visual Studio 支持](https://visualstudio.microsoft.com/support/)。
 - 获取 GitHub Enterprise 的[技术支持](https://support.microsoft.com/en-us/supportforbusiness/productselection?sapId=b77fe80f-5417-80bd-4b2a-275cf0018c24)。   
 
-## <a name="next-steps"></a>后续步骤
-如果你刚接触 GitHub，请查看 [GitHub 学习实验室](https://lab.github.com/)，它将带你了解一系列有趣又实用的项目，在整个过程中还会分享有用的反馈。
-
 ## <a name="see-also"></a>请参阅
 - [Visual Studio 文档](https://docs.microsoft.com/visualstudio/)
 - [Azure DevOps 文档](https://docs.microsoft.com/azure/devops/)
 - [Azure 文档](https://docs.microsoft.com/azure/)
 - [Microsoft 365 文档](https://docs.microsoft.com/microsoft-365/)
+
+## <a name="next-steps"></a>后续步骤
+如果你刚接触 GitHub，请查看 [GitHub 学习实验室](https://lab.github.com/)，它将带你了解一系列有趣又实用的项目，在整个过程中还会分享有用的反馈。
+
+
 

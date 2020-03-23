@@ -6,17 +6,17 @@ author: heiligerdankgesang
 ms.author: dominicn
 ms.assetid: 48E06A61-7294-4EC8-A09D-1763C32AD910
 ms.openlocfilehash: 2877f50528c5f93d6f764cc0dbde12a5bdf06a49
-ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/24/2020
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "77567967"
 ---
 # <a name="default-keyboard-shortcuts-in-visual-studio-for-mac"></a>Visual Studio for Mac 中的默认键盘快捷键
 
 有关键盘辅助功能的信息，请参阅[如何：使用键盘导航](~/accessibility-keyboard.md)。
 
-可以通过使用相应的键盘快捷键来访问 Visual Studio for Mac 中的各种命令。 本文档列出了 Visual Studio for Mac 键绑定方案的默认快捷键。 有关如何更改键绑定方案的详细信息，请参阅[自定义 IDE](~/customizing-the-ide.md#key-bindings)。 另外，还可以使用 Visual Studio for Mac > “首选项”菜单项并选择“首选项”窗口中的“环境” > “键绑定”来自定义命令的快捷键。
+可以通过使用相应的键盘快捷键来访问 Visual Studio for Mac 中的各种命令。 本文档列出了 Visual Studio for Mac 键绑定方案的默认快捷键  。 有关如何更改键绑定方案的详细信息，请参阅[自定义 IDE](~/customizing-the-ide.md#key-bindings)。 另外，还可以使用 Visual Studio for Mac   > “首选项”  菜单项并选择“首选项”  窗口中的“环境”   > “键绑定”  来自定义命令的快捷键。
 
 > [!TIP]
 > 使用 macOS 中常用的符号将显示本文档中显示的键盘快捷键和 Visual Studio for Mac 中的键绑定首选项。 如果你不确定符号，请查看 [macOS 键符号查找表](#macos-key-symbols-lookup)。
@@ -43,7 +43,7 @@ ms.locfileid: "77567967"
 
 |命令|键盘快捷键|
 |-|-|
-|启用或禁用断点|**⌥⌘/**、**⌘F9**|
+|启用或禁用断点|**⌥⌘/** 、**⌘F9**|
 |暂停|**⌥⌘P**、**⌥⌘L5**|
 |删除所有断点|**⇧⌘F9**|
 |运行到光标处|**⌘F10**|
@@ -52,7 +52,7 @@ ms.locfileid: "77567967"
 |逐语句|**⇧⌘I**、**⌘F11**|
 |跳出|**⇧⌘U**、**⇧⌘F11**|
 |逐过程|**⇧⌘O**、**F10**|
-|切换断点|**⌘\\**、**F9**|
+|切换断点|**⌘\\** 、**F9**|
 |查看断点|**⌥⌘B**|
 
 ## <a name="designer"></a>Designer
@@ -232,8 +232,8 @@ ms.locfileid: "77567967"
 |显示下一个|**⌥⌘↓**、**F8**|
 |显示上一个|**⌥⌘↑**、**⇧F8**|
 |两个编辑器列|**⌥⌘2**|
-|放大|**⌘+**、**⌘=**|
-|缩小|**⌘-**、**⌘_**|
+|放大|**⌘+** 、**⌘=**|
+|缩小|**⌘-** 、**⌘_**|
 
 ## <a name="window"></a>窗口
 
@@ -251,8 +251,8 @@ ms.locfileid: "77567967"
 |隐藏其他|**⌥⌘H**|
 |隐藏 Visual Studio|**⌘H**|
 |最小化|**⌘M**|
-|下一个文档|**⌘}**、**⌘F6**|
-|上一个文档|**⌘{**、**⇧⌘F6**|
+|下一个文档|**⌘}** 、**⌘F6**|
+|上一个文档|**⌘{** 、**⇧⌘F6**|
 |切换到下一个文档|**⌃⇥**|
 |切换到下一个窗口|**⌃⌥⇥**|
 |切换到上一个文档|**⌃⇧⇥**|
@@ -275,7 +275,7 @@ ms.locfileid: "77567967"
 |↖|**Home**|
 |↘|**End**|
 |␣|**空格键**|
-|⇥|Tab|
+|⇥|Tab |
 
 ## <a name="see-also"></a>请参阅
 

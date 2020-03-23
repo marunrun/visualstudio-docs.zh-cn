@@ -3,15 +3,15 @@ title: 使用产品密钥 | Microsoft 文档
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 07/20/2019
+ms.date: 03/09/2020
 ms.topic: conceptual
 description: 了解如何获取和管理 Visual Studio 订阅中的产品密钥。
-ms.openlocfilehash: 35dee0a03aa50e40b60d4207dcd6e830c9c27383
-ms.sourcegitcommit: 485881e6ba872c7b28a7b17ceaede845e5bea4fe
+ms.openlocfilehash: 3cd4992a89f5cdd12e85d83e3ac8b525bd2fe7d4
+ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68377685"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "78947128"
 ---
 # <a name="using-product-keys-in-visual-studio-subscriptions"></a>使用 Visual Studio 订阅中的产品密钥
 
@@ -36,7 +36,7 @@ Microsoft 致力于维护 Visual Studio 订阅计划的完整性以及该计划�
 
 除 Visual Studio Professional (MPN) 的每日密钥索取上限为 7 个以外，所有 Visual Studio 订阅（包括通过 MPN、BizSpark、MCT 软件与服务和 MCT 提供的订阅）的每日密钥索取上限都是 10 个。
 
-注意:密钥索取上限可能更改。 请在此处查看最新的索取上限。
+注意：密钥索取上限可能更改。 请在此处查看最新的索取上限。
 
 如果 24 小时内索取的密钥数量已达到订阅所允许的最大数量，那么将会看到错误提示，告知你已达到索取上限。 限制每隔 24 小时重置一次，从太平洋时间的凌晨 12:01 开始。
 
@@ -59,7 +59,7 @@ Microsoft 致力于维护 Visual Studio 订阅计划的完整性以及该计划�
 
 ### <a name="product-key-types"></a>产品密钥类型
 
-|    密钥类型           |    说明                                                                                                                                                                                                           |
+|    键类型           |    描述                                                                                                                                                                                                           |
 |-------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    不适用                    |    安装此产品不需要密钥。                                                       |
 |    零售                     |    零售密钥允许多次激活，适用于产品的零售版本。 在许多情况下，每个密钥允许激活 10 次，不过在同一台计算机中通常允许激活更多次。                                                       |
@@ -74,6 +74,12 @@ Microsoft 致力于维护 Visual Studio 订阅计划的完整性以及该计划�
 |
 
 可从产品的下载页索取密钥，或者在[“产品密钥”](https://my.visualstudio.com/productkeys)页上搜索所需的密钥。
+
+## <a name="see-also"></a>请参阅
+- [Visual Studio 文档](https://docs.microsoft.com/visualstudio/)
+- [Azure DevOps 文档](https://docs.microsoft.com/azure/devops/)
+- [Azure 文档](https://docs.microsoft.com/azure/)
+- [Microsoft 365 文档](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>后续步骤
 要声明密钥，请访问 https://my.visualstudio.com/productkeys 。  

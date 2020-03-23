@@ -10,15 +10,15 @@ ms.workload:
 - multiple
 author: mikejo5000
 ms.openlocfilehash: b1c40412da096db63da87e04711cdc1a95b5cc84
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/21/2020
 ms.locfileid: "75591614"
 ---
 # <a name="intellitest-reference-manual"></a>IntelliTest 参考手册
 
-## <a name="contents"></a>内容
+## <a name="contents"></a>目录
 
 * **[IntelliTest 概述](introduction.md)**
   - [IntelliTest 的 Hello World](introduction.md#the-hello-world-of-intellitest)
@@ -123,6 +123,6 @@ ms.locfileid: "75591614"
   - [观察到调用不匹配](warnings-and-errors.md#observed-call-mismatch)
   - [存储在静态字段中的值](warnings-and-errors.md#value-static-field)
 
-## <a name="got-feedback"></a>是否获得反馈？
+## <a name="got-feedback"></a>有反馈？
 
 在[开发人员社区](https://developercommunity.visualstudio.com/content/idea/post.html?space=8)上发布想法和功能请求。

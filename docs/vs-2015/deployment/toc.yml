@@ -26,7 +26,7 @@
               href: securing-clickonce-applications.md
             - name: ClickOnce 和 Authenticode
               href: clickonce-and-authenticode.md
-            - name: 受信任的应用程序部署概述
+            - name: Trusted Application Deployment Overview
               href: trusted-application-deployment-overview.md
             - name: ClickOnce 应用程序的代码访问安全性
               href: code-access-security-for-clickonce-applications.md

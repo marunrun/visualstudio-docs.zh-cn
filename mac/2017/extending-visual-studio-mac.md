@@ -7,10 +7,10 @@ ms.date: 04/14/2017
 ms.technology: vs-ide-sdk
 ms.assetid: D5245AB0-8404-426B-B538-F49125E672B2
 ms.openlocfilehash: 29c5bb9c45ae8d859316bd9c63eec10a6a425571
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "75851957"
 ---
 # <a name="extending-visual-studio-for-mac"></a>扩展 Visual Studio for Mac
@@ -96,7 +96,7 @@ Visual Studio for Mac 包含一组被称为“扩展包”的模块  。 可使�
 </Extension>
 ```
 
-命令项将其 ID 属性中指定的命令放入菜单中。 该命令项扩展 `/MonoDevelop/Ide/MainMenu/Edit` 扩展点，使该命令的标签显示在“编辑菜单”中  。 请注意，命令项中的“ID”对应于命令节点 `InsertDate` 的 ID  。 如果移除命令项，“编辑菜单”中的“插入日期”选项将消失  。
+命令项将其 ID 属性中指定的命令放入菜单中。 该命令项扩展 `/MonoDevelop/Ide/MainMenu/Edit` 扩展点，使该命令的标签显示在“编辑菜单”中  。 请注意，命令项中的“ID”对应于命令节点  **的 ID**`InsertDate`。 如果移除命令项，“编辑菜单”中的“插入日期”选项将消失  。
 
 ### <a name="command-handlers"></a>命令处理程序
 
@@ -155,7 +155,7 @@ public enum DateInserterCommands
 * 目标框架
 * 目标运行时
 * VCS 后端
-* 重构
+* Refactoring
 * 执行处理程序
 * 语法突出显示
 
@@ -164,6 +164,6 @@ public enum DateInserterCommands
 > [!NOTE]
 > 我们正在致力于改善针对 Visual Studio for Mac 的扩展性方案。 若要创建扩展，并需要其他帮助或信息，或希望提供反馈，请填写 [Visual Studio for Mac 扩展创建](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR3YufGX_azhFl7MkrQO9i9JUNVMyMklVVlAzQVdURDg2NjQxTFRBVTJURC4u)表单。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [开发 Visual Studio 扩展 (Windows)](/visualstudio/extensibility/starting-to-develop-visual-studio-extensions)

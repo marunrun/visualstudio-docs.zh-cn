@@ -7,10 +7,10 @@ ms.date: 07/20/2019
 ms.topic: conceptual
 description: 了解订阅管理员的职责。
 ms.openlocfilehash: 1faa257278d1a477720d73271c6487d5d1618d8e
-ms.sourcegitcommit: 9eff8371b7a79a637ebb6850f775dd3eed343d8b
+ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/03/2020
+ms.lasthandoff: 03/21/2020
 ms.locfileid: "78235153"
 ---
 # <a name="overview-of-administrator-responsibilities"></a>管理员职责概述
@@ -35,7 +35,7 @@ Visual Studio 管理员有四大职责：
 | 许可证重新分配                     | 用户离开团队且不再需要许可证时，你可以在 90 天后重新分配该许可证。 重新分配许可证时，已在使用的任何产品密钥仍可用但不会被替换。 组织若具有企业协议 (EA)，将重置供原始用户使用的任何权益（如 Pluralsight 培训）。                                                                                                                                                                                                                                                 |
 | 最终用户特例                  | 在软件开发项目末期，最终用户通常会检查应用程序，确定其是否符合必要的发布条件。 此过程称为用户验收测试 (UAT)。 业务发起人或产品经理等团队成员可以充当最终用户代理。 没有 Visual Studio 订阅的最终用户如果以其他符合所有 Visual Studio 许可条款的方式使用软件，则可访问软件进行 UAT。 仅在极少数情况下，一些主要职责是设计、开发或测试软件的人员也有资格充当“最终用户”。 |
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [Visual Studio 文档](https://docs.microsoft.com/visualstudio/)
 - [Azure DevOps 文档](https://docs.microsoft.com/azure/devops/)
 - [Azure 文档](https://docs.microsoft.com/azure/)

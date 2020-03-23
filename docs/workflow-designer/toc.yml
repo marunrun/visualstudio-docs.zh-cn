@@ -18,7 +18,7 @@
   href: how-to-use-the-imports-designer.md
 - name: 使用痕迹导航
   href: how-to-use-breadcrumb-navigation.md
-- name: 进行搜索
+- name: 使用搜索
   href: how-to-use-search-in-the-workflow-designer.md
 - name: 定义和使用活动委托
   href: how-to-define-and-consume-activity-delegates-in-the-workflow-designer.md
@@ -194,7 +194,7 @@
       href: system-activities-tab-choose-toolbox-items-dialog-box.md
     - name: 工作流设计器 Shell 功能
       href: workflow-designer-shell-features.md
-    - name: 键盘快捷键
+    - name: 键盘快捷方式
       href: keyboard-shortcuts-in-the-workflow-designer.md
     - name: 错误消息
       href: error-messages-in-workflow-designer.md

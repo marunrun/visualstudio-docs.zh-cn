@@ -11,64 +11,70 @@ metadata:
   author: jillre
   ms.author: jillfra
   ms.date: 09/24/2019
+  ms.openlocfilehash: 0db1718cbb1a43a2ebacafbdaac0ba0667b28dda
+  ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+  ms.translationtype: HT
+  ms.contentlocale: zh-CN
+  ms.lasthandoff: 03/21/2020
+  ms.locfileid: "74316425"
 landingContent:
-  - title: 入门
-    linkLists:
-      - linkListType: download
-        links:
-          - text: 下载 Visual Studio
-            url: 'https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=navigation+cta&utm_content=download+vs2019'
-      - linkListType: get-started
-        links:
-          - text: 安装 Visual Studio
-            url: ../install/install-visual-studio.md
-      - linkListType: overview
-        links:
-          - text: Visual Studio 概述
-            url: ../get-started/visual-studio-ide.md
-  - title: 使用 Visual Studio
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: 使用代码编辑器
-            url: ../get-started/tutorial-editor.md
-          - text: 编译和生成
-            url: ../ide/compiling-and-building-in-visual-studio.md
-          - text: 调试代码
-            url: ../debugger/debugger-feature-tour.md
-          - text: 编写测试
-            url: ../test/getting-started-with-unit-testing.md
-          - text: 分析代码质量
-            url: ../code-quality/roslyn-analyzers-overview.md
-          - text: 发布 Web 网站
-            url: ../deployment/quickstart-deploy-to-a-web-site.md
-          - text: 访问数据
-            url: ../data-tools/create-a-simple-data-application-by-using-adonet.md
-          - text: 个性化 IDE
-            url: ../ide/quickstart-personalize-the-ide.md
-          - text: 提高生产力的功能
-            url: ../ide/productivity-features.md
-  - title: 用你的语言进行开发
-    linkLists:
-      - linkListType: tutorial
-        links:
-          - text: 'C#'
-            url: ../get-started/csharp/tutorial-console.md
-          - text: C++
-            url: /cpp/get-started/tutorial-console-cpp
-          - text: Visual Basic
-            url: ../get-started/visual-basic/tutorial-console.md
-          - text: Python
-            url: ../python/tutorial-working-with-python-in-visual-studio-step-00-installation.md
-          - text: JavaScript
-            url: /visualstudio/javascript/tutorial-nodejs
-          - text: 'F#'
-            url: /dotnet/fsharp/get-started/get-started-visual-studio
-  - title: 了解新增功能
-    linkLists:
-      - linkListType: whats-new
-        links:
-          - text: Visual Studio 2019 中的新增功能
-            url: ../ide/whats-new-visual-studio-2019.md
-          - text: Visual Studio 2017 中的新增功能
-            url: ../ide/whats-new-visual-studio-2017.md
+- title: 入门
+  linkLists:
+  - linkListType: download
+    links:
+    - text: 下载 Visual Studio
+      url: https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=navigation+cta&utm_content=download+vs2019
+  - linkListType: get-started
+    links:
+    - text: 安装 Visual Studio
+      url: ../install/install-visual-studio.md
+  - linkListType: overview
+    links:
+    - text: Visual Studio 概述
+      url: ../get-started/visual-studio-ide.md
+- title: 使用 Visual Studio
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: 使用代码编辑器
+      url: ../get-started/tutorial-editor.md
+    - text: 编译和生成
+      url: ../ide/compiling-and-building-in-visual-studio.md
+    - text: 调试代码
+      url: ../debugger/debugger-feature-tour.md
+    - text: 编写测试
+      url: ../test/getting-started-with-unit-testing.md
+    - text: 分析代码质量
+      url: ../code-quality/roslyn-analyzers-overview.md
+    - text: 发布 Web 网站
+      url: ../deployment/quickstart-deploy-to-a-web-site.md
+    - text: 访问数据
+      url: ../data-tools/create-a-simple-data-application-by-using-adonet.md
+    - text: 个性化 IDE
+      url: ../ide/quickstart-personalize-the-ide.md
+    - text: 提高生产力的功能
+      url: ../ide/productivity-features.md
+- title: 用你的语言进行开发
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: C#
+      url: ../get-started/csharp/tutorial-console.md
+    - text: C++
+      url: /cpp/get-started/tutorial-console-cpp
+    - text: Visual Basic
+      url: ../get-started/visual-basic/tutorial-console.md
+    - text: Python
+      url: ../python/tutorial-working-with-python-in-visual-studio-step-00-installation.md
+    - text: JavaScript
+      url: /visualstudio/javascript/tutorial-nodejs
+    - text: F#
+      url: /dotnet/fsharp/get-started/get-started-visual-studio
+- title: 了解新增功能
+  linkLists:
+  - linkListType: whats-new
+    links:
+    - text: Visual Studio 2019 中的新增功能
+      url: ../ide/whats-new-visual-studio-2019.md
+    - text: Visual Studio 2017 中的新增功能
+      url: ../ide/whats-new-visual-studio-2017.md

@@ -5,10 +5,10 @@ author: cobey
 ms.author: cobey
 ms.date: 08/16/2019
 ms.openlocfilehash: 07ef1d6292e4ac88ca616d0f35e3fd831cacc649
-ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "75405811"
 ---
 # <a name="intellisense"></a>IntelliSense
@@ -23,21 +23,21 @@ IntelliSense 提供了多种功能，有助于增强编写和编辑代码的体�
 
 完成窗口还支持按类型筛选包含的完成。 例如，可以将列表成员限制为仅表示类或委托等类型。 可以通过单击表示将筛选的类型的特定图标，或通过与给定类型对应的键盘快捷方式来启用此筛选过程。 位于完成窗口底部的图标如下：
 
-| 图标                         | “属性”          | 关键字    | 热键 |
+| 图标                         | 名称          | 关键字    | 热键 |
 | -----------------------------|---------------| -----------|--------|
 | ![类图标](media/classes-icon.png)  | class         | `class`    |  ⌥C
-| ![“常量”图标](media/constant-icon.png) | constant      | `const`    |  ⌥O
+| ![“常量”图标](media/constant-icon.png) | 常量      | `const`    |  ⌥O
 | ![委托图标](media/delegate-icon.png) | 委托      | `delegate` |  ⌥D
-| ![枚举图标](media/enums-icon.png)    | enum          | `enum`     |  ⌥E
-| ![事件图标](media/event-icon.png)    | 事件         |            |  ⌥V
-| ![“字段”图标](media/fields-icon.png)   | Field — 字段         |            |  ⌥F
-| ![接口图标](media/interface-icon.png)| interface     | `interface`|  ⌥I
-| ![关键字图标](media/keyword-icon.png)  | keyword       |            |  ⌥K
-| ![方法图标](media/method-icon.png)   | 方法        |            |  ⌥M
-| ![命名空间图标](media/namespace-icon.png)| namespace     | `namespace`|  ⌥N
+| ![枚举图标](media/enums-icon.png)    | 枚举          | `enum`     |  ⌥E
+| ![事件图标](media/event-icon.png)    | event         |            |  ⌥V
+| ![“字段”图标](media/fields-icon.png)   | 字段         |            |  ⌥F
+| ![接口图标](media/interface-icon.png)| 接口     | `interface`|  ⌥I
+| ![关键字图标](media/keyword-icon.png)  | 关键字 (keyword)       |            |  ⌥K
+| ![方法图标](media/method-icon.png)   | method        |            |  ⌥M
+| ![命名空间图标](media/namespace-icon.png)| 命名空间     | `namespace`|  ⌥N
 | ![属性图标](media/props-icon.png)    | 属性      |            |  ⌥P
-| ![代码片段图标](media/snippet-icon.png)  | 代码片段       | `class`    |  ⌥S
-| ![结构图标](media/struct-icon.png)   | 结构     | `struct`   |  ⌥S
+| ![代码片段图标](media/snippet-icon.png)  | 片段       | `class`    |  ⌥S
+| ![结构图标](media/struct-icon.png)   | structure     | `struct`   |  ⌥S
 
 通过单击任何图标，或者按下相应的热键，完成列表将仅限于由筛选集定义的类型。  
 
@@ -58,7 +58,7 @@ IntelliSense 的另一个功能是能够在适当的位置提供参数列表。 
 
 也可通过键入 `control-shift-space` 手动触发参数窗口的外观。 插入符号位于对参数列表有效的位置时，参数列表将出现在插入符号位置附近。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [快速操作（Windows 上的 Visual Studio）](/visualstudio/ide/quick-actions)
 - [重构代码（Windows 上的 Visual Studio）](/visualstudio/ide/refactoring-in-visual-studio)

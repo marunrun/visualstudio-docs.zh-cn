@@ -3,15 +3,15 @@ title: 提供给 Microsoft 合作伙伴网络 (MPN) 中的合作伙伴的 Visual
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 07/28/2019
+ms.date: 03/09/2020
 ms.topic: conceptual
 description: 有关在 MPN 中提供的订阅、应用的规则以及提供的订阅数的详细信息。
-ms.openlocfilehash: 1a103f76b56df72b5829f9ce87f587070519726e
-ms.sourcegitcommit: e3c3d2b185b689c5e32ab4e595abc1ac60b6b9a8
+ms.openlocfilehash: ddafa2daef34d4a23de448235ffa186c1bb27319
+ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2020
-ms.locfileid: "76281693"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "78947044"
 ---
 # <a name="visual-studio-subscriptions-offered-to-partners-in-the-microsoft-partner-network-mpn"></a>提供给 Microsoft 合作伙伴网络 (MPN) 中的合作伙伴的 Visual Studio 订阅
 
@@ -29,7 +29,7 @@ ms.locfileid: "76281693"
 
 ### <a name="additional-visual-studio-benefit-for-select-competencies"></a>选定资格的其他 Visual Studio 权益
 
-| 资格                                  | 白银资格可获得的额外订阅数  | 黄金资格可获得的额外订阅数  |
+| 资质                                  | 白银资格可获得的额外订阅数  | 黄金资格可获得的额外订阅数  |
 |---------------------------------------------|-----------------------------------------------------------|---------------------------------------------------------|
 | 应用程序开发                     | 5 个 Visual Studio Enterprise 订阅                  | 25 个 Visual Studio Enterprise 订阅               |
 | 云客户关系管理      | 5 个 Visual Studio Enterprise 订阅                  | 25 个 Visual Studio Enterprise 订阅               |
@@ -74,6 +74,13 @@ MPN 规则规定，作为计划权益提供的所有软件只能在内部使用�
 - [MPN 计划管理员指南](https://assets.microsoft.com/en-us/Program-Administrator-Guide-to-Software-and-Online-Services-Benefits_1.pdf) - 包含有关如何为 MPN 员工分配 Visual Studio 订阅的说明。
 - [为 MPN 员工分配 Visual Studio 订阅](manage-mpn-subscriptions.md)
 - [使用条款](https://www.microsoft.com/useterms/) - 通过 MPN 提供的 Visual Studio 订阅应遵循 Visual Studio 订阅不得转售 (NFR) EULA。
+
+
+## <a name="see-also"></a>另请参阅
+- [Visual Studio 文档](https://docs.microsoft.com/visualstudio/)
+- [Azure DevOps 文档](https://docs.microsoft.com/azure/devops/)
+- [Azure 文档](https://docs.microsoft.com/azure/)
+- [Microsoft 365 文档](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>后续步骤
 

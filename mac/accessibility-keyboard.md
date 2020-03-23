@@ -6,10 +6,10 @@ ms.author: dominicn
 ms.date: 09/23/2019
 ms.assetid: EF574E49-0465-4973-BE67-286DA20B8836
 ms.openlocfilehash: 74c3fddad7c7db8f5f190dcc94f08a36ddf3cd54
-ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "74985090"
 ---
 # <a name="keyboard-navigation-in-visual-studio-for-mac"></a>Visual Studio for Mac 中的键盘导航
@@ -36,14 +36,14 @@ Visual Studio for Mac 具有用于执行各种任务的一系列键盘快捷方�
 
 1. 选择“键绑定”  ，然后键入键组合。
 
-1. 选择“应用”  。
+1. 选择“应用”。 
 
 > [!TIP]
 > 如果你熟悉其他常见键盘快捷方式（例如，Windows 中的 Visual Studio），则可以从键绑定方案列表中进行选择，以最好地满足你的需求。
 
 ## <a name="useful-keyboard-shortcuts"></a>有用的键盘快捷方式
 
-|功能         |说明                                   |快捷键         |
+|Feature         |说明                                   |快捷方式         |
 |----------------|----------------------------------------------|-----------------|
 |导航 UI   |在 UI 的所有元素之间移动。               |**⇥** **⇧⇥**    |
 |交互        |选择当前焦点对应的控件。         |**␣**            |

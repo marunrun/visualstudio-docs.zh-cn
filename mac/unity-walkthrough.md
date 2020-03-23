@@ -7,10 +7,10 @@ ms.date: 05/20/2019
 ms.technology: vs-ide-general
 ms.assetid: D07FA43B-9D18-4DFA-8343-CD538FAD84DB
 ms.openlocfilehash: c25df777a9af10859c70741a78c880a57c6f5b8e
-ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "74984793"
 ---
 # <a name="getting-started-building-games-with-unity-in-visual-studio-for-mac"></a>在 Visual Studio for Mac 中开始使用 Unity 生成游戏
@@ -24,7 +24,7 @@ Visual Studio for Mac Tools for Unity 是免费扩展，随 Visual Studio for Ma
 > [!div class="checklist"]
 > * 了解如何使用 Visual Studio for Mac 进行 Unity 开发
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 - Visual Studio for Mac ([https://www.visualstudio.com/vs/mac](https://www.visualstudio.com/vs/visual-studio-mac))
 - Unity 5.6.1 Personal Edition 或更高版本（[https://store.unity.com](https://store.unity.com/)，需要 unity.com 帐户才能运行）

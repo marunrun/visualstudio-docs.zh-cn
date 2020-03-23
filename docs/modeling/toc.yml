@@ -36,7 +36,7 @@
       href: create-models-for-your-app.md
     - name: 依赖项关系图：参考
       href: layer-diagrams-reference.md
-    - name: 依赖项关系图：准则
+    - name: 依赖项关系图：指南
       href: layer-diagrams-guidelines.md
     - name: 共享模型
       items:
@@ -223,7 +223,7 @@
           href: using-visual-studio-modelbus-in-a-text-template.md
         - name: 演练：调试访问模型的文本模板
           href: walkthrough-debugging-a-text-template-that-accesses-a-model.md
-        - name: 演练：将主机连接到所生成的指令处理器
+        - name: 演练：将主机连接到生成的指令处理器
           href: walkthrough-connecting-a-host-to-a-generated-directive-processor.md
         - name: DslTextTransform 命令
           href: the-dsltexttransform-command.md

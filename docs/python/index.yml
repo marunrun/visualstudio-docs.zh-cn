@@ -11,42 +11,48 @@ metadata:
   author: JoshuaPartlow
   ms.author: joshuapa
   ms.date: 09/23/2019
+  ms.openlocfilehash: e85bdedfc91c949213528718d147a7f1890964ce
+  ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+  ms.translationtype: HT
+  ms.contentlocale: zh-CN
+  ms.lasthandoff: 03/21/2020
+  ms.locfileid: "71322474"
 landingContent:
-  - title: 关于 Visual Studio 中的 Python 支持
-    linkLists:
-      - linkListType: overview
-        links:
-          - text: Python 支持概述
-            url: overview-of-python-tools-for-visual-studio.md
-          - text: 学习 Visual Studio IDE 教程
-            url: visual-studio-ide.md
-  - title: Python 入门
-    linkLists:
-      - linkListType: get-started
-        links:
-          - text: 在 Visual Studio 中安装 Python 支持
-            url: installing-python-support-in-visual-studio.md
-          - text: 编写和编辑代码
-            url: editing-python-code-in-visual-studio.md
-          - text: 调试代码
-            url: debugging-python-in-visual-studio.md
-          - text: 编写和运行测试
-            url: unit-testing-python-in-visual-studio.md
-          - text: 使用交互式 REPL
-            url: python-interactive-repl-in-visual-studio.md
-          - text: 管理 Python 环境
-            url: managing-python-environments-in-visual-studio.md
-          - text: 编写 Python 的 C/C++ 扩展
-            url: working-with-c-cpp-python-in-visual-studio.md
-      - linkListType: tutorial
-        links:
-          - text: 在 Visual Studio 中使用 Python
-            url: tutorial-working-with-python-in-visual-studio-step-00-installation.md
-  - title: Web 开发入门
-    linkLists:
-      - linkListType: tutorial
-        links:
-          - text: 使用 Django 框架创建 web 应用
-            url: learn-django-in-visual-studio-step-01-project-and-solution.md
-          - text: 使用 Flask 框架创建 web 应用
-            url: learn-flask-visual-studio-step-01-project-solution.md
+- title: 关于 Visual Studio 中的 Python 支持
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Python 支持概述
+      url: overview-of-python-tools-for-visual-studio.md
+    - text: 学习 Visual Studio IDE 教程
+      url: visual-studio-ide.md
+- title: Python 入门
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: 在 Visual Studio 中安装 Python 支持
+      url: installing-python-support-in-visual-studio.md
+    - text: 编写和编辑代码
+      url: editing-python-code-in-visual-studio.md
+    - text: 调试代码
+      url: debugging-python-in-visual-studio.md
+    - text: 编写和运行测试
+      url: unit-testing-python-in-visual-studio.md
+    - text: 使用交互式 REPL
+      url: python-interactive-repl-in-visual-studio.md
+    - text: 管理 Python 环境
+      url: managing-python-environments-in-visual-studio.md
+    - text: 编写 Python 的 C/C++ 扩展
+      url: working-with-c-cpp-python-in-visual-studio.md
+  - linkListType: tutorial
+    links:
+    - text: 在 Visual Studio 中使用 Python
+      url: tutorial-working-with-python-in-visual-studio-step-00-installation.md
+- title: Web 开发入门
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: 使用 Django 框架创建 web 应用
+      url: learn-django-in-visual-studio-step-01-project-and-solution.md
+    - text: 使用 Flask 框架创建 web 应用
+      url: learn-flask-visual-studio-step-01-project-solution.md

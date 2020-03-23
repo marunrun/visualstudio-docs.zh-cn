@@ -7,10 +7,10 @@ ms.date: 03/03/2020
 ms.topic: conceptual
 description: 了解管理员如何处理过期的 Visual Studio 订阅
 ms.openlocfilehash: 4871e6dde340c462d01a1dec58b5687233c56702
-ms.sourcegitcommit: 3ed59ce39692124fe61c484df4348c0b9abee9b9
+ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2020
+ms.lasthandoff: 03/21/2020
 ms.locfileid: "78263196"
 ---
 # <a name="expired-subscriptions"></a>过期订阅
@@ -22,7 +22,7 @@ ms.locfileid: "78263196"
 
 你的经销商或 Microsoft 经销商会指导你完成续订或购买附加订阅的过程。 下订单或续订合约后，新订阅随即可用，并且可以[分配给订阅者](assign-license.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [Visual Studio 文档](https://docs.microsoft.com/visualstudio/)
 - [Azure DevOps 文档](https://docs.microsoft.com/azure/devops/)
 - [Azure 文档](https://docs.microsoft.com/azure/)

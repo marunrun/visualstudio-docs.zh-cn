@@ -122,9 +122,9 @@
           href: processes.md
         - name: 程序节点
           href: program-nodes.md
-        - name: Programs
+        - name: 程序
           href: programs.md
-        - name: 线程
+        - name: 线程数
           href: threads.md
         - name: 堆栈帧
           href: stack-frames.md
@@ -148,7 +148,7 @@
       items:
         - name: 调试任务
           href: debugging-tasks.md
-        - name: 安全性问题
+        - name: 安全问题
           href: security-issues.md
         - name: 启动程序
           items:

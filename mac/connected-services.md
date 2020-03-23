@@ -6,10 +6,10 @@ author: sayedihashimi
 ms.author: sayedha
 ms.date: 11/06/2018
 ms.openlocfilehash: 34a4344be0e48d41829a7bf7df660a91d4f897b6
-ms.sourcegitcommit: 7fbfb2a1d43ce72545096c635df2b04496b0be71
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "67693086"
 ---
 # <a name="connected-services-walkthrough"></a>“连接的服务”演练
@@ -21,12 +21,12 @@ ms.locfileid: "67693086"
 1. 首先双击解决方案中的“连接服务”节点，随即出现“服务库”   。
   这是一个列表，其中列出了适用于该应用程序类型的所有可用服务。 通过单击选择服务（例如“Azure App Service 的移动后端”）  。
 
-    [![Visual Studio for Mac 中的“连接的服务”节点](media/connected-services-image001-sml.png "Visual Studio for Mac 中的“连接的服务”节点")](media/connected-services-image001.png#lightbox)
+    [![Visual Studio for Mac 中连接的服务节点](media/connected-services-image001-sml.png "Visual Studio for Mac 中连接的服务节点")](media/connected-services-image001.png#lightbox)
 
 2. 服务详细信息页面包含服务描述和要安装的依赖项。
   单击“添加”按钮，将依赖项添加到应用  ：
 
-    [![Azure 的移动后端](media/connected-services-image002-sml.png "Azure 的移动后端")](media/connected-services-image002.png#lightbox)
+    [![使用 Azure 的移动后端](media/connected-services-image002-sml.png "使用 Azure 的移动后端")](media/connected-services-image002.png#lightbox)
 
 3. 依赖项需要添加到 PCL 和特定于平台的项目才能工作。
   选择复选框，将服务添加到会（直接或间接）引用它的每个项目：
@@ -36,7 +36,7 @@ ms.locfileid: "67693086"
 4. 在 NuGet 包的“许可证接受”对话框上选择“接受”   。
   可能需要接受两个对话框：一个用于 MobileClient 和依赖项，另一个用于 SQLiteStore，这是脱机数据同步所必需的：
 
-    [![接受许可证协议](media/connected-services-image004-sml.png "接受许可证协议")](media/connected-services-image004.png#lightbox)
+    [![接受许可协议](media/connected-services-image004-sml.png "接受许可协议")](media/connected-services-image004.png#lightbox)
 
     ![“许可证接受”窗口](media/connected-services-image005.png "“许可证接受”窗口")
 
@@ -52,7 +52,7 @@ ms.locfileid: "67693086"
 7. 将 `MobileServiceClient` 的模板代码复制到 PCL。 文件位置并不重要，只要只有这一个实例即可。
   建议的方法是创建一个 `AzureService` 类，用于处理所有 Azure 交互并使用 `MobileServiceClient`：
 
-    ![将 config 代码复制到应用](media/connected-services-image007.png "将 config 代码复制到应用")
+    ![将配置代码复制到应用](media/connected-services-image007.png "将配置代码复制到应用")
 
 8. 按照“后续步骤”中的文档说明，将数据、脱机同步、身份验证和推送通知添加到应用  ：
 
@@ -72,6 +72,6 @@ ms.locfileid: "67693086"
 
 访问[移动应用文档](/azure/app-service-mobile/)，获取详细信息。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [连接服务（Windows 上的 Visual Studio）](/visualstudio/azure/vs-azure-tools-connected-services-storage)

@@ -7,10 +7,10 @@ ms.date: 07/28/2019
 ms.topic: conceptual
 description: 有关云解决方案提供商如何为客户购买和管理 Visual Studio 云订阅的信息。
 ms.openlocfilehash: 7cc5a04a26a3120d88a931dde47c3b249c082791
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 03/21/2020
 ms.locfileid: "75851402"
 ---
 # <a name="buy-and-manage-visual-studio-cloud-subscriptions-for-your-customers"></a>为客户购买和管理 Visual Studio 云订阅
@@ -19,12 +19,12 @@ ms.locfileid: "75851402"
 [比较云订阅选项](https://visualstudio.microsoft.com/vs/pricing)
 
 > [!NOTE]
-> Microsoft 不再在云订阅中提供 Visual Studio Professional 年度订阅和 Visual Studio Enterprise 年度订阅。 现有客户体验以及续订、增加、减少或取消订阅的能力不会发生变化。 建议新客户访问 [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/)，查看各 Visual Studio 购买选项。
+> Microsoft 不再在云订阅中提供 Visual Studio Professional 年度订阅和 Visual Studio Enterprise 年度订阅。 现有客户体验以及续订、增加、减少或取消订阅的能力不会发生变化。 我们鼓励新客户访问 [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) 以浏览购买 Visual Studio 的不同选项。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 必须先在合作伙伴中心设置客户租户，并为此租户创建 Azure 订阅。
 
-[了解更多信息](/azure/devops/organizations/billing/csp/set-up-csp-customer)
+[了解详细信息](/azure/devops/organizations/billing/csp/set-up-csp-customer)
 
 ## <a name="who-can-buy-visual-studio-subscriptions"></a>谁可以购买 Visual Studio 订阅？
 拥有 Azure 订阅[所有者或参与者访问权限](https://na01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fvsts%2Forganizations%2Fbilling%2Fadd-backup-billing-managers%3Fview%3Dvsts%2520%2520sa&data=02%7C01%7C%7Cb9e717e8abff47b0cd7e08d618edd860%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636723807145220358&sdata=aIaamEXHhx94KCYVY%2FFibqFzNBEqKPntpql867xAMgU%3D&reserved=0)的任何人都可以购买 Visual Studio 订阅。
@@ -68,15 +68,15 @@ ms.locfileid: "75851402"
 
 下面解释了在此电子表格中看到的内容：
 
-| 计量类别    |   “属性”                 |  单位                                |           这是什么                          |
+| 计量器类别    |   名称                 |  单位                                |           这是什么                          |
 |-------------------|------------------------|---------------------------------------|-------------------------------------------------|
-| Visual Studio     | 企业             |  订阅                         | Visual Studio Enterprise 月度订阅   |
-| Visual Studio     | Professional           |  订阅                         | Visual Studio Professional 月度订阅 |
+| Visual Studio     | Enterprise             |  订阅                         | Visual Studio Enterprise 月度订阅   |
+| Visual Studio     | 专业版           |  订阅                         | Visual Studio Professional 月度订阅 |
 
 我们为每月（为给定客户）购买的每种 Visual Studio 订阅的第 6 个单位提供 5% 的折扣。 因此，每个订阅会显示两行选项。 一行显示“最小值”为 0，应该将其理解为第 1 至 5 个单位的基准价格。 另一行显示“最小值”为 5，这是适用于第 6 个及以上单位的 5% 折扣价格。
 
 ## <a name="frequently-asked-questions"></a>常见问题
-### <a name="q-how-are-monthly-cloud-subscription-charges-processed"></a>问：“月度”云订阅是如何收费的  ？
+### <a name="q-how-are-monthly-cloud-subscription-charges-processed"></a>问：月度云订阅是如何收费的  ？
 答：在第一次购买时，我们会根据当月的剩余天数按比例收费。 例如，如果在 4 月 15 日购买了 10 个 Visual Studio Professional 月度云订阅，则只收取 5 个单位的费用，因为 30 天月份还剩 15 天（或者说 50%），我们会按照 50% 的比例收费。 在 5 月的第一天以及此后的每个月，对全部 10 个单位收费，直到取消。
 
 当在之后增加付款订阅数量时，我们同样会根据当月的剩余天数按比例对新增单位计费。 因此，如果在 5 月 10 日再购买 1 个 Visual Studio Professional 月度云订阅，则收取大约 0.677 个单位（距离 5 月 31 日还剩余 21 天）的费用。
@@ -89,7 +89,7 @@ ms.locfileid: "75851402"
 对于年度云订阅，取消在最初购买日 12 个月后的次月第一天生效，或在上一次年度续订收费后的 12 个月后生效。 例如，如果在 2018 年 1 月 3 日购买了 Visual Studio Enterprise 年度云订阅，那么它会保持活动状态，直到 2019 年 2 月 1 日自动续订一年。 如果在 2020 年 2 月 1 日之前的任何时间取消订阅，则订阅于 2020 年 2 月 1 日到期。 对于年度云订阅取消后的剩余部分，不会进行退款。
 
 ### <a name="q-what-kind-of-volume-discounts-are-available-for-visual-studio-subscriptions"></a>问：Visual Studio 订阅支持哪些类型的批量折扣？
-答：“每种“订阅的第 6 个订阅及所有后续订阅可享受 5% 的折扣  ：
+答：每种订阅的第 6 个订阅及所有后续订阅可享受 5% 的折扣  ：
 - Visual Studio Professional 月度
 - Visual Studio Enterprise 月度
 
@@ -103,5 +103,5 @@ ms.locfileid: "75851402"
 答：否，Visual Studio 订阅的价格是固定的。 新订阅和继续订阅的价格相同。
 
 ### <a name="q-are-there-azure-devtest-pricing-options-for-csps"></a>问：有适用于 CSP 的 Azure 开发/测试定价选项吗？
-答：暂时没有。 客户可以使用 [Azure 开发/测试定价](https://azure.microsoft.com/pricing/dev-test/)，但目前没有专门适用于 CSP 的任何内容。
+答：目前没有。 客户可以使用 [Azure 开发/测试定价](https://azure.microsoft.com/pricing/dev-test/)，但目前没有专门适用于 CSP 的任何内容。
 

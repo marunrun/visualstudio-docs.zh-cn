@@ -7,10 +7,10 @@ ms.date: 05/06/2018
 ms.technology: vs-ide-install
 ms.assetid: 25CD47A4-5B32-4734-8EF3-E24A02AABF29
 ms.openlocfilehash: 85e66711c8bfe65319bf6af90ce0452478c4b7f8
-ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "74983467"
 ---
 # <a name="introduction-to-azure-functions"></a>Azure Functions 简介
@@ -95,7 +95,7 @@ Visual Studio for Mac 使用包含的默认函数创建 .NET Standard 项目。 
 3. 从“发布到 Azure 应用服务”对话框，可选择现有应用服务，也可通过单击“新建”来创建新服务   。
 4. 在“创建新的应用服务”对话框中，输入设置  ：![发布到 Azure 菜单选项](media/azure-functions-image7.png)
 
-    |设置  |说明  |
+    |设置  |描述  |
     |---------|---------|
     |**应用服务名称**|用于标识新函数应用的全局唯一名称。|
     |**订阅**|要使用的 Azure 订阅。|

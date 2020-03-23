@@ -3,15 +3,15 @@ title: 使用 GitHub 帐户登录到 Visual Studio 订阅 | Microsoft Docs
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 07/11/2019
+ms.date: 03/09/2020
 ms.topic: conceptual
 description: 了解如何使用 GitHub 帐户登录到 Visual Studio 订阅。
-ms.openlocfilehash: ffafd3821112a62ec1f86666f8c0fe6571bbb335
-ms.sourcegitcommit: 9a66f1c31cc9eba0b5231af72da1d18761a9c56a
+ms.openlocfilehash: a0a2f69ab3cbab3fdf6c35d9407a59a7c7d49eb1
+ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75944198"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "78947080"
 ---
 # <a name="signing-in-to-visual-studio-subscriptions-with-your-github-account"></a>使用 GitHub 帐户登录到 Visual Studio 订阅 
 
@@ -62,6 +62,12 @@ ms.locfileid: "75944198"
 
 #### <a name="q--i-try-to-use-my-github-account-to-sign-in-but-im-prompted-that-i-already-have-a-microsoft-identity-that-i-should-use-instead--whats-happening"></a>问：我尝试使用我的 GitHub 帐户登录，但系统提示我已经拥有一个 Microsoft 标识，我应该改用该标识。  发生了什么情况？
 答：如果你的 GitHub 帐户具有 Azure Active Directory 电子邮件地址，则表示你已拥有可以使用 GitHub 代码访问 Azure 并运行 CI 管道的 Microsoft 标识。 使用该帐户可确保你的 Azure 资源和生成管道保留在组织边界内。 但如果你正在从事个人工作，我们建议在 GitHub 帐户中添加个人电子邮件地址，这样你始终可以访问该帐户。 执行此操作后，请尝试再次登录，并在系统提示你登录工作或学校帐户时选择“使用其他电子邮件地址”  。 这将让你使用该个人电子邮件地址创建新的 Microsoft 帐户。
+
+## <a name="see-also"></a>请参阅
+- [Visual Studio 文档](https://docs.microsoft.com/visualstudio/)
+- [Azure DevOps 文档](https://docs.microsoft.com/azure/devops/)
+- [Azure 文档](https://docs.microsoft.com/azure/)
+- [Microsoft 365 文档](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>后续步骤
 成功登录到订阅门户后，建议访问 https://my.visualstudio.com/benefits 上的“权益”页，并浏览适合你的强大工具、服务和产品。  

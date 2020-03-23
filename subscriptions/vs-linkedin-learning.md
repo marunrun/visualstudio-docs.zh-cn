@@ -7,10 +7,10 @@ ms.date: 02/12/2020
 ms.topic: conceptual
 description: 了解有关所选 Visual Studio 订阅中包含的作为 LinkedIn Premium 订阅一部分的 LinkedIn Learning 权益。
 ms.openlocfilehash: f6c5206055835605ae529f1f07159611bcd6bf7d
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2020
+ms.lasthandoff: 03/21/2020
 ms.locfileid: "77278848"
 ---
 # <a name="the-linkedin-learning-benefit-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 LinkedIn Learning 权益

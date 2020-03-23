@@ -7,10 +7,10 @@ author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 10/23/2018
 ms.openlocfilehash: 738c5277ca6a669a834635f5c626e0cbabd7a7ef
-ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "74984938"
 ---
 # <a name="install-and-use-visual-studio-for-mac-behind-a-firewall-or-proxy-server"></a>在防火墙或代理服务器后面安装和使用 Visual Studio for Mac

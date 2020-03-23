@@ -7,10 +7,10 @@ ms.date: 03/02/2020
 ms.topic: conceptual
 description: 了解管理员跟踪用户分配和处理订单的职责。
 ms.openlocfilehash: c7dc2b55b3e9d1d1aea6b2712dbeb96316f48e7a
-ms.sourcegitcommit: 9eff8371b7a79a637ebb6850f775dd3eed343d8b
+ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/03/2020
+ms.lasthandoff: 03/21/2020
 ms.locfileid: "78235220"
 ---
 # <a name="track-user-assignment-and-process-orders"></a>跟踪用户分配和处理订单
@@ -28,7 +28,7 @@ Visual Studio 订阅管理员需要跟踪 Visual Studio 使用情况，并按批
 - Visual Studio 订阅管理员可以自初始分配之日起的 90 天后，将一个订阅者的订阅重新分配给另一个订阅者。 
     > [!NOTE]
     > 为避免人为提高最大用量，在执行此操作时应始终先删除现有订阅，然后再添加新订阅。 
-- 为帮助你监视组织的最大用量，Visual Studio [订阅管理门户](https://manage.visualstudio.com)中提供[最大用量](maximum-usage.md)报告。 
+- 为帮助你监视组织的最大用量，Visual Studio [订阅管理门户](maximum-usage.md)中提供[最大用量](https://manage.visualstudio.com)报告。 
 
 ## <a name="monthly-subscriptions-open-license-or-open-value"></a>月度订阅、开放式许可或开放式价值
 你可能会通过“开放许可”和“开放式价值”等程序分配订阅，或者每月通过 Visual Studio Marketplace 来分配订阅。 如果是这样，则必须在用户（员工或外部承包商）开始与 Visual Studio 授权软件交互的当月处理附加用户订单。
@@ -36,7 +36,7 @@ Visual Studio 订阅管理员需要跟踪 Visual Studio 使用情况，并按批
 ## <a name="enterprise-mpsa-and-select-agreements"></a>企业协议、MPSA 和 Select 协议
 Microsoft 企业协议 (EA)、MPSA 和 Select Plus 协议允许你随时间推移灵活地使用和授权 Visual Studio 软件。 Visual Studio 管理员必须制定年度校准订单，使软件许可证数量在协议期间达到规定的最大使用量。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [Visual Studio 文档](https://docs.microsoft.com/visualstudio/)
 - [Azure DevOps 文档](https://docs.microsoft.com/azure/devops/)
 - [Azure 文档](https://docs.microsoft.com/azure/)

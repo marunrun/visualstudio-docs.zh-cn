@@ -7,10 +7,10 @@ ms.date: 07/28/2019
 ms.topic: conceptual
 description: 按月或按年租赁 Visual Studio Professional 或 Visual Studio Enterprise，无需任何长期协定。
 ms.openlocfilehash: c31a6cb89d34456678c82ce683535005f581376d
-ms.sourcegitcommit: dc12a7cb66124596089f01d3e939027ae562ede9
+ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 03/21/2020
 ms.locfileid: "71962953"
 ---
 # <a name="buy-visual-studio-professional-and-visual-studio-enterprise-cloud-subscriptions"></a>购买 Visual Studio Professional 和 Visual Studio Enterprise 云订阅
@@ -59,7 +59,7 @@ ms.locfileid: "71962953"
 > [!div class="mx-imgBorder"]
 > ![查看订阅](_img/buy-vs-subscriptions/assign-subscriptions.png)
 
-## <a name="manage-subscriptions"></a>取消续订已购买的云订阅
+## <a name="cancel-renewals-of-cloud-subscriptions-youve-purchased"></a><a name="manage-subscriptions"></a>取消续订已购买的云订阅
 
 * 若要更改已购买的订阅数，请执行以下操作：
 

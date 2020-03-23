@@ -7,17 +7,17 @@ ms.date: 12/13/2019
 ms.technology: vs-ide-debug
 ms.assetid: BB7A084D-9AC2-48B5-8076-6C8518796BBA
 ms.openlocfilehash: 8a12880c25e980d668351ef4c24ced1e479577d4
-ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "75397930"
 ---
 # <a name="debugging-with-visual-studio-for-mac"></a>使用 Visual Studio for Mac 调试
 
 Visual Studio for Mac 提供支持 .Net Core、.NET Framework、Unity 和 Xamarin 应用程序的调试器。
 
-Visual Studio for Mac 使用 [Mono 软调试器](https://www.mono-project.com/docs/advanced/runtime/docs/soft-debugger/)，该调试器在 Mono 运行时中实施，以便 Visual Studio for Mac 跨所有平台调试托管代码  。
+Visual Studio for Mac 使用 [Mono 软调试器 *，该调试器在 Mono 运行时中实施，以便 Visual Studio for Mac 跨所有平台调试托管代码*](https://www.mono-project.com/docs/advanced/runtime/docs/soft-debugger/)。
 
 ## <a name="the-debugger"></a>调试器
 
@@ -43,7 +43,7 @@ Visual Studio for Mac 使用 Mono 软调试器来调试所有 Xamarin 应用程�
 
 ![断点列表](media/debugging-image0a.png)
 
-## <a name="start-debugging"></a>“启动调试”
+## <a name="start-debugging"></a>开始调试
 
 若要开始调试，请选择目标浏览器、设备或模拟器/仿真器：
 
@@ -97,6 +97,6 @@ Xamarin 产品随附用于 Mono 类库的源代码，可使用此代码在调试
 
 ![“单步执行外部代码”选项](media/debugging-image8.png)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在 Visual Studio 中进行调试 (Windows)](/visualstudio/debugger/)

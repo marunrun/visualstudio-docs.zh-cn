@@ -7,10 +7,10 @@ ms.date: 07/19/2019
 ms.topic: conceptual
 description: 如何为 Visual Studio 订阅添加用于登录 Azure DevOps 和 Azure 的备用标识
 ms.openlocfilehash: e19774f2314280b2e5a995a7d83336f1403682a4
-ms.sourcegitcommit: bcdab788085bd9931d73883fe70cd5831317dca2
+ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 03/21/2020
 ms.locfileid: "72816554"
 ---
 # <a name="identities-for-visual-studio-subscribers"></a>Visual Studio 订阅者标识
@@ -44,7 +44,7 @@ ms.locfileid: "72816554"
 
 此时，备用帐户已添加到 Visual Studio 订阅中，可使用两个标识享受需要使用备用帐户登录的订阅权益（IDE、Azure DevOps 和 Azure）。
 
-## <a name="faq"></a>FAQ
+## <a name="faq"></a>常见问题解答
 
 ### <a name="q--why-doesnt-azure-devops-recognize-me-as-a-visual-studio-subscriber"></a>问：为什么 Azure DevOps 未将我识别为 Visual Studio 订阅者？
 

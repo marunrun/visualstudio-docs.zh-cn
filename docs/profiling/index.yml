@@ -9,48 +9,54 @@ metadata:
   ms.author: mikejo
   manager: jillfra
   ms.date: 10/30/2019
+  ms.openlocfilehash: 94bbe9a81a38b255eba6cc6b15812743328a0f27
+  ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+  ms.translationtype: HT
+  ms.contentlocale: zh-CN
+  ms.lasthandoff: 03/21/2020
+  ms.locfileid: "79549919"
 landingContent:
-  - title: 关于分析
-    linkLists:
-      - linkListType: overview
-        links:
-          - text: 首先了解分析工具
-            url: profiling-feature-tour.md
-      - linkListType: concept
-        links:
-          - text: 运行分析工具的方法
-            url: running-profiling-tools-with-or-without-the-debugger.md
-  - title: 入门
-    linkLists:
-      - linkListType: quickstart
-        links:
-          - text: '分析 CPU 使用情况（C#、Visual Basic）'
-            url: quickstart-cpu-usage-managed.md
-          - text: 分析 CPU 使用情况 (C++)
-            url: quickstart-cpu-usage-native.md
-          - text: 分析 CPU 使用情况 (ASP.NET)
-            url: quickstart-cpu-usage-aspnet.md
-      - linkListType: tutorial
-        links:
-          - text: 开始分析 CPU 使用情况
-            url: beginners-guide-to-performance-profiling.md
-          - text: 开始度量内存使用情况
-            url: memory-usage.md
-  - title: 更多性能工具
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: 从命令行测量 CPU 使用率
-            url: profile-apps-from-command-line.md
-          - text: 衡量 .NET 对象的内存使用情况
-            url: dotnet-alloc-tool.md
-          - text: 性能提示
-            url: perftips.md
-          - text: 分析资源消耗情况 (XAML)
-            url: application-timeline.md
-          - text: 分析 GPU 使用情况 (Direct3D)
-            url: gpu-usage.md
-          - text: 分析网络使用情况 (UWP)
-            url: network-usage.md
-          - text: 分析能量使用情况 (UWP)
-            url: analyze-energy-use-in-store-apps.md
+- title: 关于分析
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 首先了解分析工具
+      url: profiling-feature-tour.md
+  - linkListType: concept
+    links:
+    - text: 运行分析工具的方法
+      url: running-profiling-tools-with-or-without-the-debugger.md
+- title: 入门
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: 分析 CPU 使用情况（C#、Visual Basic）
+      url: quickstart-cpu-usage-managed.md
+    - text: 分析 CPU 使用情况 (C++)
+      url: quickstart-cpu-usage-native.md
+    - text: 分析 CPU 使用情况 (ASP.NET)
+      url: quickstart-cpu-usage-aspnet.md
+  - linkListType: tutorial
+    links:
+    - text: 开始分析 CPU 使用情况
+      url: beginners-guide-to-performance-profiling.md
+    - text: 开始度量内存使用情况
+      url: memory-usage.md
+- title: 更多性能工具
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: 性能提示
+      url: perftips.md
+    - text: 从命令行测量 CPU 使用率
+      url: profile-apps-from-command-line.md
+    - text: 衡量 .NET 对象的内存使用情况
+      url: dotnet-alloc-tool.md
+    - text: 分析资源消耗情况 (XAML)
+      url: application-timeline.md
+    - text: 分析 GPU 使用情况 (Direct3D)
+      url: gpu-usage.md
+    - text: 分析网络使用情况 (UWP)
+      url: network-usage.md
+    - text: 分析能量使用情况 (UWP)
+      url: analyze-energy-use-in-store-apps.md

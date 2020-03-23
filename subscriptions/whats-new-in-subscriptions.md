@@ -8,10 +8,10 @@ author: evanwindom
 ms.author: lank
 manager: lank
 ms.openlocfilehash: b78126d44922fefebbb86bad24788ba6a28e8e04
-ms.sourcegitcommit: 8a699df154464387f327691dce507d7c3d0e2aab
+ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
+ms.lasthandoff: 03/21/2020
 ms.locfileid: "70060404"
 ---
 # <a name="what39s-new-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的新增功能
@@ -39,7 +39,7 @@ GitHub Enterprise 随 Visual Studio Enterprise 订阅和 Visual Studio Professio
 
 ## <a name="2019-q1-january-march"></a>2019 年第 1 季度（1 月 - 3 月）
 
-### <a name="maximum-usage-added-to-subscriptions-administration-portalhttpsmanagevisualstudiocom"></a>已将最大使用率添加到[订阅管理门户](https://manage.visualstudio.com)
+### <a name="maximum-usage-added-to-subscriptions-administration-portal"></a>已将最大使用率添加到[订阅管理门户](https://manage.visualstudio.com)
 Visual Studio 订阅管理门户中的新功能有助于跟踪已购买和分配的订阅数量，并确定在过去一年和整个协议期间分配的每个级别的峰值订阅数。 这可以帮助你了解当前的订阅使用情况和未来的购买计划。 
 
   > [!div class="mx-imgBorder"]

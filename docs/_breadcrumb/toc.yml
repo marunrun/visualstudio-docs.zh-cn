@@ -45,7 +45,7 @@
                 - name: 分析
                   tocHref: /visualstudio/profiling/
                   topicHref: /visualstudio/profiling/index
-                - name: 正在测试
+                - name: 测试
                   tocHref: /visualstudio/test/
                   topicHref: /visualstudio/test/improve-code-quality
                 - name: 工作流设计器

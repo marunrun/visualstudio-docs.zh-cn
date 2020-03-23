@@ -3,24 +3,24 @@ title: 登录 Visual Studio 订阅时遇到的问题 | Microsoft Docs
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 07/19/2019
+ms.date: 03/11/2020
 ms.topic: conceptual
 description: 了解登录 Visual Studio 订阅时可能出现的问题
-ms.openlocfilehash: dea81a57501f791ba9d40a95c5305f9aedcc3b49
-ms.sourcegitcommit: 49ebf69986713e440fd138fb949f1c0f47223f23
+ms.openlocfilehash: 8175a1d8d2c79aecad25952eebdf734e0a9d29d2
+ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74706855"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "79509013"
 ---
 # <a name="issues-signing-in-to-visual-studio-subscriptions"></a>登录 Visual Studio 订阅时遇到的问题
 若要使用 Visual Studio 订阅，必须先登录。  根据订阅，你可能已使用 Microsoft 帐户 (MSA) 或 Azure Active Directory (AAD) 标识进行设置。  本文讨论了在登录订阅时可能遇到的一些问题。
 
 ## <a name="microsoft-accounts-msa-cannot-be-created-using-workschool-email-addresses"></a>无法使用工作/学校电子邮件地址创建 Microsoft 帐户 (MSA)
-在 Azure AD 中配置电子邮件域时，不再允许使用工作/学校电子邮件地址创建新的个人 Microsoft 帐户 (MSA)。 这意味着什么？ 如果你的组织在使用 Microsoft 365 的 Office 365 或其他业务服务时依赖于 Azure AD，且你已向 Azure AD 租户添加了域名，则用户将无法再使用你域中的电子邮件地址创建新的个人 Microsoft 帐户。
+在 Azure AD 中配置电子邮件域时，不再允许使用工作/学校电子邮件地址创建新的个人 Microsoft 帐户 (MSA)。 这是什么意思呢？ 如果你的组织在使用 Microsoft 365 的 Office 365 或其他业务服务时依赖于 Azure AD，且你已向 Azure AD 租户添加了域名，则用户将无法再使用你域中的电子邮件地址创建新的个人 Microsoft 帐户。
 
 ### <a name="why-was-this-change-made"></a>为什么要进行此更改？
-将工作地址作为用户名的个人 Microsoft 帐户会出现许多最终用户和 IT 部门的问题。 例如:
+将工作地址作为用户名的个人 Microsoft 帐户会出现许多最终用户和 IT 部门的问题。 例如：
 - 用户可能会认为他们的个人 Microsoft 帐户符合业务要求，并且当他们将业务文档保存到 OneDrive 中时，也是满足符合性的
 - 离开组织的用户通常会失去对其工作电子邮件地址的访问权限。 当他们这样做时，如果忘记密码，则可能无法找回他们的个人 Microsoft 帐户。 另一方面，IT 部门可以重置密码并进入前雇员的个人帐户。
 - IT 部门对帐户所有权和安全性有一种错觉。 但用户只需将代码往返到工作电子邮件地址一次，则可以在将来随时重命名其帐户。
@@ -61,6 +61,12 @@ ms.locfileid: "74706855"
 
 ### <a name="what-options-do-i-have"></a>我有哪些选择？
 从订阅者的角度来看，首先与管理员配合来了解贵公司的标识配置非常重要。 如有必要，管理员必须从其管理门户更新你的帐户设置，或者你需要使用公司电子邮件地址创建 Microsoft 帐户 (MSA)。 在采取措施创建 MSA 之前，请先与你的管理员讨论采取此操作的任何策略或问题。 
+
+## <a name="see-also"></a>另请参阅
+- [Visual Studio 文档](https://docs.microsoft.com/visualstudio/)
+- [Azure DevOps 文档](https://docs.microsoft.com/azure/devops/)
+- [Azure 文档](https://docs.microsoft.com/azure/)
+- [Microsoft 365 文档](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>后续步骤
 - 了解如何在 AAD 中[关联 MSA 和 AAD 帐户](/azure/active-directory/b2b/add-users-administrator)。

@@ -7,10 +7,10 @@ ms.date: 03/03/2020
 ms.topic: conceptual
 description: 了解管理员如何编辑订阅分配。
 ms.openlocfilehash: cd4bb40599ff242e20ba0e38fb561bde7d3f1823
-ms.sourcegitcommit: 3ed59ce39692124fe61c484df4348c0b9abee9b9
+ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2020
+ms.lasthandoff: 03/21/2020
 ms.locfileid: "78263263"
 ---
 # <a name="edit-visual-studio-subscription-assignments"></a>编辑 Visual Studio 订阅分配

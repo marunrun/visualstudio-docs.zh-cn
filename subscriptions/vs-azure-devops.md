@@ -7,11 +7,11 @@ ms.date: 07/30/2019
 ms.topic: conceptual
 description: 了解如何以 Visual Studio 订阅者身份使用 Azure DevOps。
 ms.openlocfilehash: 9b4c616c870f0834b6974d59540035687b32fc12
-ms.sourcegitcommit: 3a19319e2599bd193fb2ca32020ca53942974bfd
+ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73983694"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "79306739"
 ---
 # <a name="azure-devops-benefits-for-visual-studio-subscribers"></a>Visual Studio 订阅者的 Azure DevOps 权益
 作为权益，有效 Visual Studio 订阅者可使用订阅随附的一系列 Azure DevOps 功能。 可以在所属的每个 Azure DevOps 组织中使用这些相同的功能，无论你是创建了组织，还是被其他人添加到组织中。
@@ -32,11 +32,11 @@ ms.locfileid: "73983694"
 | MSDN 平台（标准）                                          | VL、零售                                              | Azure Boards 和 Azure Repos（基础版）、Azure Test Plans                                              |  是          |
 ||
 
-<sup>1</sup>  包括：*不得转售 (NFR)、最有价值专家 (MVP)、区域总监 (RD)、Visual Studio 行业合作伙伴 (VSIP)、Microsoft 合作伙伴网络 (Enterprise)、BizSpark、MCT 软件和服务开发人员、FTE。不包括：MCT 软件和服务、Imagine  。
+<sup>1</sup>  *包括：不得转售 (NFR)、最有价值专家 (MVP)、区域总监 (RD)、Visual Studio 行业合作伙伴 (VSIP)、Microsoft 合作伙伴网络 (Enterprise)、BizSpark、MCT 软件和服务开发人员、FTE。不包括：MCT 软件和服务、Imagine*。
 
 
 > [!NOTE]
-> Microsoft 不再在云订阅中提供 Visual Studio Professional 年度订阅和 Visual Studio Enterprise 年度订阅。 现有客户体验以及续订、增加、减少或取消订阅的能力不会发生变化。 我们鼓励新客户访问 [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) 以浏览购买 Visual Studio 的不同选项。
+> Microsoft 不再在云订阅中提供 Visual Studio Professional 年度订阅和 Visual Studio Enterprise 年度订阅。 现有客户体验以及续订、增加、减少或取消订阅的能力不会发生变化。 建议新客户访问 [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/)，查看各 Visual Studio 购买选项。
 
 无法确定正在使用哪些订阅？  连接到 [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs)，查看分配给自己的所有订阅。
 如果没有看到所有订阅，则可能是有一个或多个订阅分配给了不同的电子邮件地址。  你需要使用其他电子邮件地址登录来查看那些订阅。

@@ -6,10 +6,10 @@ ms.author: dominicn
 ms.date: 05/23/2019
 ms.assetid: 5880BB10-0A12-47E2-8A82-7A2D59C4D579
 ms.openlocfilehash: 10fcb52a8e1311f3e8128361ee835f6ddcb3670d
-ms.sourcegitcommit: 0d8488329263cc0743a89d43f6de863028e982ff
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/06/2020
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "75678871"
 ---
 # <a name="create-a-new-project"></a>创建新项目
@@ -51,6 +51,6 @@ ms.locfileid: "75678871"
 
 选择添加现有项目，你将能浏览计算机上的现有项目并将其添加到解决方案。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [创建解决方案和项目（Windows 上的 Visual Studio）](/visualstudio/ide/creating-solutions-and-projects)

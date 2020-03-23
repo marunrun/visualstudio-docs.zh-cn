@@ -26,7 +26,7 @@
           href: edit-and-refresh.md
         - name: 部署到容器注册表
           href: hosting-web-apps-in-docker.md
-        - name: 部署到 Azure App Service
+        - name: 部署到 Azure 应用服务
           href: deploy-app-service.md
         - name: 部署到 Docker Hub
           href: deploy-docker-hub.md
@@ -38,7 +38,7 @@
       items:
         - name: Visual Studio 如何构建容器化应用
           href: container-build.md
-    - name: 疑难解答
+    - name: 故障排除
       href: troubleshooting-docker-errors.md
     - name: 参考
       items:

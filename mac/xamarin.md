@@ -6,10 +6,10 @@ ms.author: johmil
 ms.date: 06/18/2019
 ms.assetid: 339F6051-5F90-48DC-8237-EBBC8A03A32B
 ms.openlocfilehash: 31fb7fa4c2a87820285809d24b98fe8e59a6be01
-ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "73714478"
 ---
 # <a name="xamarin-mobile-app-development"></a>Xamarin 移动应用开发
@@ -57,7 +57,7 @@ Xamarin 提供本机 Mac API 绑定，让用户能够创建美观的 Mac 应用�
 
 Xamarin Profiler 有三个可用于分析的仪表。 [Xamarin Profiler 简介](/xamarin/tools/profiler/index?tabs=macos)指南介绍了这些仪表的度量值以及它们分析应用程序的方式，并阐明了每个屏幕上显示的数据的含义。
 
-### <a name="inspector"></a>检查器
+### <a name="inspector"></a>Inspector
 
 Xamarin Inspector 提供一个具有用户工具的交互式 C# 控制台。 它可在检查实时应用程序时用作调试或诊断辅助，还可用作教学工具、文档工具或实验工具。
 
