@@ -21,16 +21,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c45f22011c32378af0690c9aee226877faf903bd
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.openlocfilehash: bb0e1feee1f7e1d271dd436a1879731354cbd8bb
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77634456"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "78865331"
 ---
 # <a name="cl-task"></a>CL 任务
 
-包装 Microsof C++ 编译器工具，cl.exe  。 编译器生成可执行 (.exe) 文件、动态链接库 (.dll) 文件或者代码模块 (.netmodule) 文件    。 有关详细信息，请参阅[编译器选项](/cpp/build/reference/compiler-options)。
+包装 Microsof C++ 编译器工具，cl.exe  。 编译器生成可执行 (.exe) 文件、动态链接库 (.dll) 文件或者代码模块 (.netmodule) 文件    。 有关详细信息，请参阅[编译器选项](/cpp/build/reference/compiler-options)、[从命令行使用 MSBuild ](/cpp/build/msbuild-visual-cpp)和[使用命令行中的 Microsoft C++ 工具集](/cpp/build/building-on-the-command-line)。
 
 ## <a name="parameters"></a>参数
 

@@ -11,10 +11,10 @@ monikerRange: vs-2017
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 96d4a812fd98dbd0f58a8012a61cdaef96db3a8b
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74779098"
 ---
 # <a name="how-to-attach-the-profiler-to-a-native-stand-alone-application-and-collect-application-statistics-by-using-the-command-line"></a>如何：将探查器附加到本机独立应用程序，并使用命令行收集应用程序统计信息
@@ -44,7 +44,7 @@ ms.locfileid: "74779098"
 
      可以将以下任意选项与 **/start:sample** 选项一起使用。
 
-   | 选项 | 说明 |
+   | 选项 | 描述 |
    | - | - |
    | [/user](../profiling/user-vsperfcmd.md) **:** [`Domain` **\\** ]`UserName` | 指定拥有所分析进程的帐户的域和用户名。 仅当运行进程的用户不是已登录用户时，才需要此选项。 进程所有者在 Windows 任务管理器的“进程”选项卡上的“用户名”列中列出。 |
    | [/crosssession](../profiling/crosssession.md) | 启用其他会话中的进程分析。 如果 ASP.NET 应用程序在其他会话中运行，则需要此选项。 会话标识符在 Windows 任务管理器的“进程”选项卡上的“会话 ID”列中列出。 可以将 **/CS** 指定为 **/crosssession** 的缩写。 |
@@ -60,7 +60,7 @@ ms.locfileid: "74779098"
 
     默认情况下，性能数据为每 10,000,000 个非暂停处理器时钟周期采样一次。 在 1GH 处理器上，每秒约为 100 次。 可以指定以下选项之一，更改时钟周期间隔或指定不同的采样事件。
 
-   |样本事件|说明|
+   |样本事件|描述|
    |------------------|-----------------|
    |[/timer](../profiling/timer.md) **:** `Interval`|将采样间隔更改为 `Interval` 所指定的非暂停时钟周期数目。|
    |[/pf](../profiling/pf.md)[ **:** `Interval`]|将采样事件更改为页面错误。 如果已指定 `Interval`，则会设置样本之间的页面错误数目。 默认值为 10。|
@@ -74,7 +74,7 @@ ms.locfileid: "74779098"
 
 - 以下 **VSPerfCmd** 选项对可启动和停止数据收集。 在单独的命令行上指定每个选项。 可多次打开和关闭数据收集。
 
-    |选项|说明|
+    |选项|描述|
     |------------|-----------------|
     |[/globalon /globaloff](../profiling/globalon-and-globaloff.md)|启动 ( **/globalon**) 或停止 ( **/globaloff**) 所有进程的数据收集。|
     |[/processon](../profiling/processon-and-processoff.md) **:** `PID` [/processoff](../profiling/processon-and-processoff.md) **:** `PID`|对由 `PID` 指定的进程，启动 ( **/processon**) 或停止 ( **/processoff**) 数据集合。|
@@ -89,13 +89,13 @@ ms.locfileid: "74779098"
 
     - 键入 **VSPerfCmd /detach**
 
-         -或-
+         \- 或 -
 
     - 关闭目标应用程序。
 
 2. 关闭探查器。 类型：
 
-     **VSPerfCmd** [/shutdown](../profiling/shutdown.md)
+     **VSPerfCmd**  [/shutdown](../profiling/shutdown.md)
 
 3. （可选）清除分析环境变量。 类型：
 

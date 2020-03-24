@@ -16,12 +16,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 59bc42bd438d80bbaf0ff45cd1c95447961cd437
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.openlocfilehash: c5a76bf033fa3eb85f0626478b965285f32e5fb6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77630621"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79094672"
 ---
 # <a name="xmlpeek-task"></a>XmlPeek 任务
 
@@ -42,6 +42,37 @@ ms.locfileid: "77630621"
 ## <a name="remarks"></a>备注
 
  除了具有表中列出的参数外，此任务还将从本身继承自 <xref:Microsoft.Build.Utilities.Task> 类的 <xref:Microsoft.Build.Tasks.TaskExtension> 类继承参数。 有关这些其他参数的列表及其说明的信息，请参阅 [TaskExtension 基类](../msbuild/taskextension-base-class.md)。
+
+
+
+## <a name="example"></a>示例
+
+下面是一个要读取的 XML 文件 `settings.config` 示例：
+
+```xml
+<appSettings>
+  <add key="ProjectFolder" value="S1" />
+</appSettings>
+```
+
+在此示例中，如果要读取 `value`，请使用如下所示的代码：
+
+```xml
+<Target Name="BeforeBuild">
+    <XmlPeek XmlInputPath="settings.config" Query="appSettings/add[@key='ProjectFolder']/@value">
+        <Output TaskParameter="Result" ItemName="value" />
+    </XmlPeek>
+    <Message Text="Using project folder @(value)." Importance="high" />
+    <PropertyGroup>
+        <ProjectFolder>@(value)</ProjectFolder>
+    </PropertyGroup>
+    <ItemGroup>
+        <Compile Include="Projects\$(ProjectFolder)\Controls\Control1.ascx.cs">
+            <SubType>ASPXCodeBehind</SubType>
+        </Compile>
+    </ItemGroup>
+</Target>
+```
 
 ## <a name="see-also"></a>请参阅
 

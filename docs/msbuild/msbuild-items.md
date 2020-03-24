@@ -11,12 +11,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ac7ea464695faeaf6651f645a39ce2b41d255108
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.openlocfilehash: c7c41539ec50cb166dfe60690a4722992b29a47a
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77633299"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79093967"
 ---
 # <a name="msbuild-items"></a>MSBuild 项
 
@@ -44,6 +44,8 @@ MSBuild 项是生成系统的输入，通常表示文件（文件在 `Include` �
     <Compile Include = "file1.cs;file2.cs"/>
 </ItemGroup>
 ```
+
+`Include` 属性是相对于项目文件的文件夹 $(MSBuildProjectPath) 解释的路径，即使该项目位于导入的文件（如 .targets 文件）中  。
 
 ## <a name="create-items-during-execution"></a>在执行过程中创建项
 
@@ -122,7 +124,7 @@ MSBuild 项是生成系统的输入，通常表示文件（文件在 `Include` �
 
  项可以有零个或零个以上的元数据值。 可随时更改元数据值。 如果将元数据设置为空值，则可有效将其从生成中删除。
 
-### <a name="BKMK_ReferencingItemMetadata"></a>在项目文件中引用项元数据
+### <a name="reference-item-metadata-in-a-project-file"></a><a name="BKMK_ReferencingItemMetadata"></a>在项目文件中引用项元数据
 
  可使用语法 %(\<ItemMetadataName>)，在整个项目中引用项元数据。 如果存在不明确性，则可使用项类型的名称来限定引用。 例如，可指定 %(\<ItemType.ItemMetaDataName>)。以下示例使用 Display 元数据对 Message 任务进行批处理。 若要深入了解如何使用项元数据进行批处理，请参阅[任务批处理中的项元数据](../msbuild/item-metadata-in-task-batching.md)。
 
@@ -142,11 +144,11 @@ MSBuild 项是生成系统的输入，通常表示文件（文件在 `Include` �
 </Project>
 ```
 
-### <a name="BKMK_WellKnownItemMetadata"></a>常见项元数据
+### <a name="well-known-item-metadata"></a><a name="BKMK_WellKnownItemMetadata"></a>常见项元数据
 
  向项类型添加项时，会向该项分配一些常见元数据。 例如，所有项都具有常见元数据 %(\<Filename>)，其值是项的文件名（不带扩展名）。 有关详细信息，请参阅[常见项元数据](../msbuild/msbuild-well-known-item-metadata.md)。
 
-### <a name="BKMK_Transforming"></a>使用元数据转换项类型
+### <a name="transform-item-types-by-using-metadata"></a><a name="BKMK_Transforming"></a>使用元数据转换项类型
 
  通过使用元数据，可将项列表转换为新的项列表。 例如，可使用 `@(CppFiles -> '%(Filename).obj')` 表达式将含有表示 .cpp 文件的项的项类型 `CppFiles` 转换为相应的 .obj 文件列表   。
 
@@ -189,7 +191,7 @@ MSBuild 项是生成系统的输入，通常表示文件（文件在 `Include` �
 
  从 .NET Framework 3.5 起，`Target` 元素可能会包含 [ItemGroup](../msbuild/itemgroup-element-msbuild.md) 元素，后者可能会包含项元素。 为 `Target` 中 `ItemGroup` 内的项指定此部分中属性时，该属性有效。
 
-### <a name="BKMK_RemoveAttribute"></a>删除属性
+### <a name="remove-attribute"></a><a name="BKMK_RemoveAttribute"></a>删除属性
 
  `Remove` 属性从项类型中删除特定项（文件）。 此属性是在 .NET Framework 3.5 中推出的（仅限内部目标）。 从 MSBuild 15.0 开始，同时支持内部和外部目标。
 
@@ -203,7 +205,7 @@ MSBuild 项是生成系统的输入，通常表示文件（文件在 `Include` �
 </Target>
 ```
 
-### <a name="BKMK_KeepMetadata"></a>KeepMetadata 属性
+### <a name="keepmetadata-attribute"></a><a name="BKMK_KeepMetadata"></a>KeepMetadata 属性
 
  如果项在目标中生成，则项元素中会包含 `KeepMetadata` 属性。 如果指定了此属性，则只会将在由分号分隔的名称列表中指定的元数据从源项传输到目标项。 若此属性为空值，相当于不进行指定。 `KeepMetadata` 属性是在 .NET Framework 4.5 中引入的。
 
@@ -246,7 +248,7 @@ Output:
 -->
 ```
 
-### <a name="BKMK_RemoveMetadata"></a>RemoveMetadata 属性
+### <a name="removemetadata-attribute"></a><a name="BKMK_RemoveMetadata"></a>RemoveMetadata 属性
 
  如果项在目标中生成，则项元素中会包含 `RemoveMetadata` 属性。 如果指定了此属性，则除包含在由分号分隔的名称列表中的元数据外，会将所有元数据从源项传输到目标项。 若此属性为空值，相当于不进行指定。 `RemoveMetadata` 属性是在 .NET Framework 4.5 中引入的。
 
@@ -296,7 +298,7 @@ Output:
 -->
 ```
 
-### <a name="BKMK_KeepDuplicates"></a>KeepDuplicates 属性
+### <a name="keepduplicates-attribute"></a><a name="BKMK_KeepDuplicates"></a>KeepDuplicates 属性
 
  如果项在目标中生成，则项元素中会包含 `KeepDuplicates` 属性。 `KeepDuplicates` 是一个 `Boolean` 属性，当项是现有项的完全相同的副本时，该属性可指定是否应将该项添加到目标组中。
 

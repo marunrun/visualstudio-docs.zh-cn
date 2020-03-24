@@ -10,10 +10,10 @@ monikerRange: vs-2017
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 705e55363f4f8657da20fe66cd4369188f133cdb
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74776603"
 ---
 # <a name="how-to-attach-the-profiler-to-a-native-service-to-collect-concurrency-data-by-using-the-command-line"></a>如何：将探查器附加到本机服务，以使用命令行收集并发数据
@@ -45,7 +45,7 @@ ms.locfileid: "74776603"
    > [!NOTE]
    > 大多数服务都需要 **/user** 和 **/crosssession** 选项。
 
-   | 选项 | 说明 |
+   | 选项 | 描述 |
    | - | - |
    | [/user](../profiling/user-vsperfcmd.md) **:** [`Domain\`]`UserName` | 指定要向探查器授予访问权限的帐户的可选域和用户名。 |
    | [/crosssession](../profiling/crosssession.md) | 启用其他登录会话中的进程分析。 |
@@ -66,7 +66,7 @@ ms.locfileid: "74776603"
 
 - 下表中的选项对可启动和停止数据收集。 在单独的命令行上指定每个选项。 可多次打开和关闭数据收集。
 
-    |选项|说明|
+    |选项|描述|
     |------------|-----------------|
     |[/globalon /globaloff](../profiling/globalon-and-globaloff.md)|启动 ( **/globalon**) 或停止 ( **/globaloff**) 所有进程的数据收集。|
     |[/processon](../profiling/processon-and-processoff.md) **:** `PID` [/processoff](../profiling/processon-and-processoff.md) **:** `PID`|启动 ( **/processon**) 或停止 ( **/processoff**) 由进程 ID (`PID`) 指定的进程的数据收集。|
@@ -83,4 +83,4 @@ ms.locfileid: "74776603"
 
 2. 在命令提示符下键入以下命令以关闭探查器：
 
-     **VSPerfCmd** [/shutdown](../profiling/shutdown.md)
+     **VSPerfCmd**  [/shutdown](../profiling/shutdown.md)

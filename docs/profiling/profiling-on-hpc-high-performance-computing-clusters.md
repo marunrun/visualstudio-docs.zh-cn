@@ -21,17 +21,17 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: f2d3949194dedab6d7e7ea2faa1aea304d889bc4
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74772115"
 ---
 # <a name="profile-on-hpc-high-performance-computing-clusters"></a>对 HPC（高性能计算）群集进行分析
 
 可以使用 Visual Studio 分析工具的采样方法对 Microsoft Windows HPC 群集的计算节点进行分析。 有关 HPC 的详细信息，请参阅 Microsoft 网站上的 [Windows HPC](https://azure.microsoft.com/solutions/big-compute/)。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 若要对 HPC 计算节点进行分析，必须执行以下操作：
 
@@ -45,11 +45,11 @@ ms.locfileid: "74772115"
 
 2. 在单独的命令提示符处输入以下命令：
 
-    1. `clusrun /all /scheduler:` *%HeadNode% %FxPath%* `/q /norestart`
+    1. `clusrun /all /scheduler:` %HeadNode% %FxPath% `/q /norestart` 
 
-    2. `clusrun /all /scheduler:` *%HeadNode%* `shutdown /r /t 0 /d u:4:2 /c "Microsoft .NET Framework install required restart"`
+    2. `clusrun /all /scheduler:` %HeadNode% `shutdown /r /t 0 /d u:4:2 /c "Microsoft .NET Framework install required restart"` 
 
-    3. `clusrun /all /scheduler:` *%HeadNode% %ProfilerPath%* `/q /norestart`
+    3. `clusrun /all /scheduler:` %HeadNode% %ProfilerPath% `/q /norestart` 
 
 | | |
 |------------------| - |
@@ -125,7 +125,7 @@ ms.locfileid: "74772115"
 
 ### <a name="hpc-launch-properties"></a>HPC 启动属性
 
-|属性|说明|
+|Property|描述|
 |--------------|-----------------|
 |**头节点**|指定在分析运行中充当 HPC 头节点的计算机。|
 |**进程数**|指定要在分析的应用程序中运行的应用程序实例数。|
@@ -136,7 +136,7 @@ ms.locfileid: "74772115"
 
 ### <a name="advanced-properties"></a>高级属性
 
-| 属性 | 说明 |
+| Property | 描述 |
 |---------------------------------------| - |
 | **项目名称** | 当前 [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] 项目或解决方案的名称。 |
 | **探查器停止时进行清理** | 为 true 时，删除已部署到执行目录的二进制文件。 在此步骤中不会删除用户程序创建的文件和目录。 如果执行目录和部署目录是由 IDE 创建的，则 IDE 会尝试删除它们，但是如果它们包含不是由 IDE 部署的文件，则 IDE 不会执行此操作。 |

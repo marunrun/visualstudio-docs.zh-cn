@@ -22,12 +22,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8c9a51fe097eb110e44b3f4bd932a26f4efb6ea6
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.openlocfilehash: 5ceb23d34fab92fe0056f9bd82b9d9c63967dc4c
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77630634"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79094573"
 ---
 # <a name="zipdirectory-task"></a>ZipDirectory 任务
 
@@ -52,7 +52,7 @@ ms.locfileid: "77630634"
 
 ## <a name="example"></a>示例
 
- 以下示例在生成项目后基于输出目录创建 .zip 存档。 
+ 以下示例（如果用作导入的 .targets 文件）在生成项目后基于输出目录创建 .zip 存档   。 `$(OutputPath)` 属性通常在 MSBuild 项目文件中定义，因此导入以下文件的项目文件将生成 `output.zip` 的 zip 存档：
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">

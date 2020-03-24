@@ -10,10 +10,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: d0328e04067770f8837d10d532abb67d16c65e50
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74776422"
 ---
 # <a name="how-to-create-a-profiler-comparison-report-from-a-command-prompt"></a>如何：通过命令提示符创建探查器比较报告
@@ -29,8 +29,8 @@ ms.locfileid: "74776422"
 
  可以向 VSPerfReport /diff  命令行添加下表中的选项。
 
-|选项|说明|
+|选项|描述|
 |------------|-----------------|
 |DiffThreshold:  [Value  ]|如果差异低于此百分比阀值，则忽略该差异。 此外，不会显示值低于此阈值的新数据。|
-|**DiffTable：**  *TableName*|使用此表比较文件。 默认使用函数表。 指定 VSPerfReport /querydifftables  中列出的标识符。|
-|**DiffColumn：**  *ColumnName*|使用此列对值进行比较。 默认情况下，使用独占样本百分比列。 指定 VSPerfReport /querydifftables  中列出的标识符。|
+|**DiffTable：** *TableName*|使用此表比较文件。 默认使用函数表。 指定 VSPerfReport /querydifftables  中列出的标识符。|
+|**DiffColumn：** *ColumnName*|使用此列对值进行比较。 默认情况下，使用独占样本百分比列。 指定 VSPerfReport /querydifftables  中列出的标识符。|

@@ -18,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2d977892956c90fd88ff913b9c9300b0176323a4
-ms.sourcegitcommit: 3ed59ce39692124fe61c484df4348c0b9abee9b9
+ms.openlocfilehash: 22d61fe30e9eb68697f073ca0bcfbcc515e513dd
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78263118"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79431444"
 ---
 # <a name="usingtask-element-msbuild"></a>UsingTask 元素 (MSBuild)
 
@@ -78,6 +78,8 @@ ms.locfileid: "78263118"
 > 如果 `UsingTask` 元素来自使用 MSBuild 引擎进行全局注册的某个 .tasks  文件，则项目级属性和项没有意义。 项目级值对于 MSBuild 而言不是全局性的。
 
  在 MSBuild 4.0 中，可以从 .overridetask  文件加载 using 任务。
+
+第一次使用 `Task` 时，将加载包含自定义任务的程序集。
 
 ## <a name="example"></a>示例
 

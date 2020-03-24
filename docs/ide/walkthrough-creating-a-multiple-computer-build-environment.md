@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 11b158854a0026de28cb2fb0a582bbaf764eeaa4
-ms.sourcegitcommit: 85d66dc9fea3fa49018263064876b15aeb6f9584
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "68461541"
 ---
 # <a name="walkthrough-create-a-multiple-computer-build-environment"></a>演练：创建多计算机生成环境
@@ -42,7 +42,7 @@ ms.locfileid: "68461541"
 - UWP 应用。 若要生成 UWP 应用，必须在生成计算机上安装 Visual Studio。
 - 面向 .NET Framework 4 或更早版本的桌面应用程序。 若要生成这些类型的应用程序，您必须在生成计算机上安装 Visual Studio 或 .NET 引用程序集和工具（通过 Windows 7.1 SDK）。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 已安装 .NET 桌面开发工作负载的 Visual Studio。 
 
@@ -287,7 +287,7 @@ ms.locfileid: "68461541"
 
    - %windir%\Microsoft.NET\Framework64\v4.0.30319
 
-## <a name="a-nameinstall-msbuild-to-gac--install-msbuild-assemblies-to-the-global-assembly-cache-gac-on-the-build-computer"></a><a name="install-msbuild-to-gac" /> 将 MSBuild 程序集安装到生成计算机上的全局程序集缓存 (GAC)
+## <a name="install-msbuild-assemblies-to-the-global-assembly-cache-gac-on-the-build-computer"></a><a name="install-msbuild-to-gac" /> 将 MSBuild 程序集安装到生成计算机上的全局程序集缓存 (GAC)
 
 MSBuild 需要在生成计算机的 GAC 上安装一些附加程序集。
 
@@ -339,7 +339,7 @@ MSBuild 需要在生成计算机的 GAC 上安装一些附加程序集。
 
          AssemblyName="Microsoft.Build.CppTasks.Common.v110, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" 的每个实例
 
-         更改为
+         实例部署到 Windows Azure 虚拟机 (VM) 中的
 
          AssemblyFile="$(VCTargetsPath11)Microsoft.Build.CppTasks.Common.v110.dll"。
 
@@ -349,7 +349,7 @@ MSBuild 需要在生成计算机的 GAC 上安装一些附加程序集。
 
          AssemblyName="Microsoft.Build.CppTasks.Common.v110, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" 的每个实例
 
-         更改为
+         实例部署到 Windows Azure 虚拟机 (VM) 中的
 
          AssemblyFile="$(VCTargetsPath11)Microsoft.Build.CppTasks.Common.v110.dll"。
 

@@ -10,12 +10,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0b3fcea8d073b4c40685d41b7432f1e24662a7ad
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.openlocfilehash: 3e0693b6630f1b4c6a9494a77e223cca23c6dc10
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77633182"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79093610"
 ---
 # <a name="msbuild-targets"></a>MSBuild 目标
 
@@ -42,7 +42,7 @@ ms.locfileid: "77633182"
 </Target>
 ```
 
- 如果 AfterBuild 执行，则仅显示“第二个匹配项”。
+ 如果 `AfterBuild` 执行，则它仅显示“第二次出现”，因为 `AfterBuild` 的第二个定义隐藏了第一个定义。
 
  MSBuild 依赖于导入顺序，目标的最后一个定义是使用的定义。
 

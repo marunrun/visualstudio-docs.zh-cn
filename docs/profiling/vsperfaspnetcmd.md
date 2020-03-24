@@ -13,10 +13,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 8c9bf465b4da7f305e97a18099a7e27db8eab6b4
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74778006"
 ---
 # <a name="vsperfaspnetcmd"></a>VSPerfASPNetCmd
@@ -27,16 +27,16 @@ ms.locfileid: "74778006"
 
 ## <a name="options"></a>选项
 
-|选项|说明|
+|选项|描述|
 |------------|-----------------|
 |**/Sample** 或 **/s**|使用采样方法分析网站。 **/Sample** 是默认方法。 /Sample 不能与 **/Trace** 一起使用。|
 |**/Trace** 或 **/t**|使用检测方法分析网站。 /Trace 不能与 **/Sample** 一起使用。|
 |**/Memory**[ **:** `Type`] 或 **/m**[ **:** {**a**&#124;**l**}]|分析内存分配，还可以选择分析对象生存期（垃圾回收）。 **/Memory** 可用于采样或检测方法。<br /><br /> *Type* 可以是下列类型之一：<br /><br /> -   **allocation**（或 **a**）只收集内存分配数据。<br />-   **lifetime**（或 **l**）同时收集内存分配数据和对象生存期数据。<br /><br /> 默认的 `Type` 是 **allocation**。|
 |**/Tip** 或 **/i**|将详细的 ASP.NET 请求和 ADO.NET 调用信息添加到分析数据。 **/Tip** 可用于采样或检测方法，还可与 **/Memory** 选项一起使用。|
-|**/Output:** `File` 或 **/o:** `File`|指定分析数据 (.vsp) 文件的路径和文件名  。|
+|**/Output:** `File` or   **/o:** `File`|指定分析数据 (.vsp) 文件的路径和文件名  。|
 |**/NoWait** 或 **/n**|立即返回命令提示符，以便在命令提示符窗口中使用其他命令。 必须在单独的命令行上键入 **VSPerfASPNETCmd /Shutdown**，以关闭分析。|
 |**/PackSymbols**[:{**on**&#124;**off**} 或 **/p**[:{**on**&#124;**off**}|在分析数据 (.vsp) 文件中嵌入符号（函数和参数名称等）  。|
-|**/Shutdown:** `Website` 或 **/d:** `Website`|关闭分析。 在使用 **/NoWait** 选项启动分析后，或探查器意外结束时，在命令行上将其作为唯一选项使用。 指定与在原始 **VSPerfASPNETCmd** 命令中使用的 URL 相同的 URL。|
+|**/Shutdown:** `Website`or   **/d:** `Website`|关闭分析。 在使用 **/NoWait** 选项启动分析后，或探查器意外结束时，在命令行上将其作为唯一选项使用。 指定与在原始 **VSPerfASPNETCmd** 命令中使用的 URL 相同的 URL。|
 |`Website`|要分析的网站的 URL。|
 
 ## <a name="see-also"></a>请参阅

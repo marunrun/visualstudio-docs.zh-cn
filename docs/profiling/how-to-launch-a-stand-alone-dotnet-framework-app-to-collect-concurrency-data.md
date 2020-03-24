@@ -10,10 +10,10 @@ monikerRange: vs-2017
 ms.workload:
 - dotnet
 ms.openlocfilehash: 4a52c65f8a53d62edde42c26fafef9940046ba5d
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74775387"
 ---
 # <a name="how-to-launch-a-stand-alone-net-framework-application-with-the-profiler-to-collect-concurrency-data-by-using-the-command-line"></a>如何：使用探查器启动独立 .NET Framework 应用程序，并通过命令行收集并发数据
@@ -33,7 +33,7 @@ ms.locfileid: "74775387"
 
 2. 启动探查器。 类型：
 
-    [VSPerfCmd](../profiling/vsperfcmd.md) /start:concurrency  [,  {ResourceOnly  &#124;ThreadOnly  }] /output:  `OutputFile` [`Options`]
+    [VSPerfCmd](../profiling/vsperfcmd.md) **/start:concurrency**[ **,** {**ResourceOnly**&#124;**ThreadOnly**}] **/output:** `OutputFile` [`Options`]
 
    - [/start](../profiling/start.md) 选项可初始化探查器。
 
@@ -47,7 +47,7 @@ ms.locfileid: "74775387"
 
      可以将以下任意选项与 **/start:concurrency** 选项一起使用。
 
-   | 选项 | 说明 |
+   | 选项 | 描述 |
    | - | - |
    | [/user](../profiling/user-vsperfcmd.md) **:** [`domain\`]`username` | 指定要向探查器授予访问权限的帐户的可选域和用户名。 |
    | [/crosssession](../profiling/crosssession.md) | 启用其他登录会话中的进程分析。 |
@@ -57,11 +57,11 @@ ms.locfileid: "74775387"
 
 3. 启动目标应用程序。 类型：
 
-    VSPerfCmd   [/launch](../profiling/launch.md) :  `AppName` [`Options`] [`Sample Event`]
+    **VSPerfCmd**  [/launch](../profiling/launch.md) **:** `AppName` [`Options`] [`Sample Event`]
 
     可以将以下任意选项与 **/launch** 选项一起使用。
 
-   |选项|说明|
+   |选项|描述|
    |------------|-----------------|
    |[/args](../profiling/args.md) **:** `Arguments`|指定一个字符串，其中包含要传递给目标应用程序的命令行参数。|
    |[/console](../profiling/console.md)|在另一个窗口中启动目标命令行应用程序。|
@@ -74,7 +74,7 @@ ms.locfileid: "74775387"
 
 1. 以下 VSPerfCmd.exe 选项对可启动和停止数据收集  。 在单独的命令行上指定每个选项。 可多次打开和关闭数据收集。
 
-    |选项|说明|
+    |选项|描述|
     |------------|-----------------|
     |[/globalon /globaloff](../profiling/globalon-and-globaloff.md)|启动 ( **/globalon**) 或停止 ( **/globaloff**) 所有进程的数据收集。|
     |[/processon](../profiling/processon-and-processoff.md) **:** `PID` [/processoff](../profiling/processon-and-processoff.md) **:** `PID`|启动 ( **/processon**) 或停止 ( **/processoff**) 由进程 ID (`PID`) 指定的进程的数据收集。|
@@ -89,13 +89,13 @@ ms.locfileid: "74775387"
 
     - 关闭目标应用程序。
 
-         -或-
+         \- 或 -
 
     - 键入 **VSPerfCmd /detach**
 
 2. 关闭探查器
 
-     **VSPerfCmd** [/shutdown](../profiling/shutdown.md)
+     **VSPerfCmd**  [/shutdown](../profiling/shutdown.md)
 
 ## <a name="see-also"></a>请参阅
 - [收集并发数据](../profiling/collecting-concurrency-data-for-stand-alone-applications.md)

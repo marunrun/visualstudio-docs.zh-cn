@@ -18,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 044c531432de987fc7f3d34ce5344ad0374bcd00
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.openlocfilehash: 7d9e66934015c7c4a57c7d7c6911b9ebe02ac536
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77633741"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79094495"
 ---
 # <a name="import-element-msbuild"></a>Import 元素 (MSBuild)
 
@@ -67,7 +67,7 @@ ms.locfileid: "77633741"
 
  按照约定，共享导入项目文件会保存为 .targets  文件，但它们是标准 MSBuild 项目文件。 MSBuild 不会阻止导入具有不同文件扩展名的项目，但是我们建议使用 .targets  扩展名以保持一致性。
 
- 导入项目中的相对路径会相对于导入项目的目录进行解释。 因此，如果项目文件导入位于不同位置的多个项目文件中，则导入项目文件中的相对路径对于每个导入项目会以不同方式进行解释。
+ 导入项目中的相对路径会相对于导入项目的目录进行解释。（此段落后面介绍的一些例外情况除外）。 因此，如果项目文件导入位于不同位置的多个项目文件中，则导入项目文件中的相对路径对于每个导入项目会以不同方式进行解释。 有两种例外情况。 一个例外是，在 `Import` 元素中，路径始终相对于包含 `Import` 元素的项目进行解释。 另一个例外是，`UsingTask` 始终解释 `AssemblyFile` 属性相对于包含 `UsingTask` 元素的文件的相对路径。
 
  与导入项目中引用的项目文件相关的所有 MSBuild 保留属性（例如，`MSBuildProjectDirectory` 和 `MSBuildProjectFile`）都会基于导入项目文件进行赋值。
 

@@ -18,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2c570a5a783133f9422dc434d0ef460b9ca7510e
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.openlocfilehash: 264ff3a5e64b756020648e888f7817e12702659f
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77633481"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "78865357"
 ---
 # <a name="message-task"></a>Message 任务
 
@@ -44,7 +44,7 @@ ms.locfileid: "77633481"
 
  如果 `Condition` 参数的计算结果为 `true`，则将会记录 `Text` 参数值，并继续执行生成。 如果 `Condition` 参数不存在，则将记录消息文本。 有关日志记录的详细信息，请参阅[获取生成日志](../msbuild/obtaining-build-logs-with-msbuild.md)。
 
- 默认情况下，该消息将发送到 MSBuild 控制台记录器。 通过设置 <xref:Microsoft.Build.Tasks.TaskExtension.Log%2A> 参数可以对此进行更改。 记录器解释 `Importance` 参数。 通常，当记录器详细级别设置为 <xref:Microsoft.Build.Framework.LoggerVerbosity>`Minimal` 或更高时，将发送设置为 `high` 的消息。 当记录器详细级别设置为 <xref:Microsoft.Build.Framework.LoggerVerbosity>`Detailed` 时，将发送设置为 `low` 的消息。
+ 默认情况下，消息将发送到所有已注册的记录器。 记录器解释 `Importance` 参数。 通常，当记录器详细级别设置为 <xref:Microsoft.Build.Framework.LoggerVerbosity> `Minimal` 时，将发送设置为 `high` 的消息。 或更高版本。 当记录器详细级别设置为 <xref:Microsoft.Build.Framework.LoggerVerbosity> `Detailed` 时，将发送设置为 `low` 的消息。
 
  除上面列出的参数外，此任务还从 <xref:Microsoft.Build.Tasks.TaskExtension> 类继承参数，后者自身继承自 <xref:Microsoft.Build.Utilities.Task> 类。 有关这些其他参数的列表及其说明的信息，请参阅 [TaskExtension 基类](../msbuild/taskextension-base-class.md)。
 

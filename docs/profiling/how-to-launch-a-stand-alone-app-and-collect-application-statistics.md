@@ -10,10 +10,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: fb6228592115091dc538dbe59c227a180e75aa10
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74775408"
 ---
 # <a name="how-to-launch-a-stand-alone-application-with-the-profiler-and-collect-application-statistics-by-using-the-command-line"></a>如何：使用探查器启动独立应用程序，并通过命令行收集应用程序统计信息
@@ -50,7 +50,7 @@ ms.locfileid: "74775408"
 
      可以将以下任意选项与 **/start:sample** 选项一起使用。
 
-   | 选项 | 说明 |
+   | 选项 | 描述 |
    | - | - |
    | [/wincounter](../profiling/wincounter.md) **:** `WinCounterPath` | 指定要在分析期间收集的 Windows 性能计数器。 |
    | [/automark](../profiling/automark.md) **:** `Interval` | 仅与 **/wincounter** 一起使用。 指定两次 Windows 性能计数器收集事件相隔的毫秒数。 默认值为 500 毫秒。 |
@@ -60,14 +60,14 @@ ms.locfileid: "74775408"
 
     可以将以下一个或多个选项与 **/launch** 选项一起使用。
 
-   |选项|说明|
+   |选项|描述|
    |------------|-----------------|
    |[/args](../profiling/args.md) **:** `Arguments`|指定一个字符串，其中包含要传递给目标应用程序的命令行参数。|
    |[/console](../profiling/console.md)|在另一个窗口中启动目标命令行应用程序。|
 
     默认情况下，性能数据为每 10,000,000 个非暂停处理器时钟周期采样一次。 在 1GHz 的处理器上，大约每 10 秒钟一次。 可以指定以下选项之一，更改时钟周期间隔或指定不同的采样事件。
 
-   |样本事件|说明|
+   |样本事件|描述|
    |------------------|-----------------|
    |[/timer](../profiling/timer.md) **:** `Interval`|将采样间隔更改为 `Interval` 所指定的非暂停时钟周期数目。|
    |[/pf](../profiling/pf.md)[ **:** `Interval`]|将采样事件更改为页面错误。 如果已指定 `Interval`，则会设置样本之间的页面错误数目。 默认值为 10。|
@@ -81,7 +81,7 @@ ms.locfileid: "74775408"
 
 - 以下选项对可启动和停止数据收集。 在单独的命令行上指定每个选项。 可多次打开和关闭数据收集。
 
-    |选项|说明|
+    |选项|描述|
     |------------|-----------------|
     |[/globalon /globaloff](../profiling/globalon-and-globaloff.md)|启动 ( **/globalon**) 或停止 ( **/globaloff**) 所有进程的数据收集。|
     |[/processon](../profiling/processon-and-processoff.md) **:** `PID`  [/processoff](../profiling/processon-and-processoff.md) **:** `PID`|启动 ( **/processon**) 或停止 ( **/processoff**) 由进程 ID (`PID`) 指定的进程的数据收集。|
@@ -96,13 +96,13 @@ ms.locfileid: "74775408"
 
     - 关闭目标应用程序。
 
-         -或-
+         \- 或 -
 
     - 键入 **VSPerfCmd /detach**
 
 2. 关闭探查器。 类型：
 
-     **VSPerfCmd** [/shutdown](../profiling/shutdown.md)
+     **VSPerfCmd**  [/shutdown](../profiling/shutdown.md)
 
 ## <a name="see-also"></a>请参阅
 - [分析独立应用程序](../profiling/command-line-profiling-of-stand-alone-applications.md)

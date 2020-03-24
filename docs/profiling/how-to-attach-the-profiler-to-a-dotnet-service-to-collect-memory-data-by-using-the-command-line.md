@@ -11,10 +11,10 @@ monikerRange: vs-2017
 ms.workload:
 - dotnet
 ms.openlocfilehash: 94ea4f38ccebc1015419e2254b06033fa17a09a8
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74777013"
 ---
 # <a name="how-to-attach-the-profiler-to-a-net-service-to-collect-memory-data-by-using-the-command-line"></a>如何：将探查器附加到 .NET 服务，以使用命令行收集内存数据
@@ -71,7 +71,7 @@ ms.locfileid: "74777013"
    > [!NOTE]
    > **/User** 和 **/crosssession** 选项通常为服务所需选项。
 
-   | 选项 | 说明 |
+   | 选项 | 描述 |
    | - | - |
    | [/user](../profiling/user-vsperfcmd.md) **:** [`Domain` **\\** ]`UserName` | 指定拥有进程的帐户的域和用户名。 在进程以已登录用户外的用户身份运行时才需要此选项。 进程所有者在 Windows 任务管理器的“进程”选项卡上的“用户名”列中列出。 |
    | [/crosssession](../profiling/crosssession.md) | 启用其他登录会话中的进程分析。 如果 ASP.NET 应用程序在其他会话中运行，则需要此选项。 会话 ID 在 Windows 任务管理器的“进程”选项卡上的“会话 ID”列中列出。 可以将 **/CS** 指定为 **/crosssession** 的缩写。 |
@@ -87,7 +87,7 @@ ms.locfileid: "74777013"
 
    - 指定服务的进程 ID 或进程名称。 可以在 Windows 任务管理器中查看所有运行中的进程的进程 ID 和名称。
 
-   - **targetclr:** `Version` 指定应用程序中加载运行时的多个版本时要分析的公共语言运行时 (CLR) 的版本。 可选。
+   - targetclr: `Version` 指定应用程序中加载运行时的多个版本时要分析的公共语言运行时 (CLR) 的版本  。 可选。
 
 ## <a name="control-data-collection"></a>控制数据收集
  服务运行时，可使用 VSPerfCmd.exe  选项停止或开始将数据写入到探查器数据文件。 通过控制数据收集，可以针对程序执行的特定部分（如启动或关闭应用程序）进行数据收集。
@@ -96,14 +96,14 @@ ms.locfileid: "74777013"
 
 - 以下 **VSPerfCmd** 选项对可启动和停止数据收集。 在单独的命令行上指定每个选项。 可多次打开和关闭数据收集。
 
-    |选项|说明|
+    |选项|描述|
     |------------|-----------------|
     |[/globalon /globaloff](../profiling/globalon-and-globaloff.md)|启动 ( **/globalon**) 或停止 ( **/globaloff**) 所有进程的数据收集。|
     |[/processon](../profiling/processon-and-processoff.md) **:** `PID` [/processoff](../profiling/processon-and-processoff.md) **:** `PID`|启动 ( **/processon**) 或停止 ( **/processoff**) 由进程 ID (`PID`) 指定的进程的数据收集。|
     |**/attach:** {`PID`&#124;`ProcName`} [/detach](../profiling/detach.md)[:{`PID`&#124;`ProcName`}]|**/attach** 将启动由进程 ID 或进程名称指定的进程的数据收集。 **/detach** 将停止指定进程或所有进程（未指定特定进程时）的数据收集。|
 
 ## <a name="end-the-profiling-session"></a>结束分析会话
- 若要结束分析会话，探查器不得再收集数据。 可通过停止服务或调用 VSPerfCmd /detach  选项，停止从使用采样方法分析的应用程序收集数据。 然后，调用 VSPerfCmd  [/shutdown](../profiling/shutdown.md) 选项关闭探查器和分析数据文件。 **VSPerfClrEnv /globaloff** 命令可清除分析环境变量，但在重新启动计算机前不会重置系统配置。
+ 若要结束分析会话，探查器不得再收集数据。 可通过停止服务或调用 VSPerfCmd /detach  选项，停止从使用采样方法分析的应用程序收集数据。 然后，调用 VSPerfCmd [/shutdown](../profiling/shutdown.md) 选项关闭探查器和分析数据文件  。 **VSPerfClrEnv /globaloff** 命令可清除分析环境变量，但在重新启动计算机前不会重置系统配置。
 
 #### <a name="to-end-a-profiling-session"></a>结束分析会话
 
@@ -111,7 +111,7 @@ ms.locfileid: "74777013"
 
     - 停止服务。
 
-         -或-
+         \- 或 -
 
     - 键入 **VSPerfCmd /detach**
 

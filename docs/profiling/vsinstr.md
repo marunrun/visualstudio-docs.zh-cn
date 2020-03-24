@@ -19,10 +19,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 386d81d14996547670944ce1b4911233eb9c8955
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74779917"
 ---
 # <a name="vsinstr"></a>VSInstr
@@ -34,7 +34,7 @@ VSInstr [/U] filename [/options]
 
  下表描述了 VSInstr 工具选项：
 
-|选项|说明|
+|选项|描述|
 |-------------|-----------------|
 |**Help** 或 **?**|显示帮助。|
 |**U**|以 Unicode 形式写入重定向的控制台输出。 它必须是指定的第一个选项。|

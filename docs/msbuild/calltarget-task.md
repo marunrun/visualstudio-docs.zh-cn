@@ -16,12 +16,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 831153a734fa88c045f7b8397db0a033e53862c7
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.openlocfilehash: 26d29c236b89172ab6dc456be97016b98f2cae19
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77634482"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79094559"
 ---
 # <a name="calltarget-task"></a>CallTarget 任务
 
@@ -43,6 +43,8 @@ ms.locfileid: "77634482"
  如果 `Targets` 中指定的目标失败，`RunEachTargetSeparately` 为 `true`，则该任务会继续生成剩余目标。
 
  如果要生成默认目标，请使用 [MSBuild 任务](../msbuild/msbuild-task.md)，并将 `Projects` 参数设置为等于 `$(MSBuildProjectFile)`。
+
+使用 `CallTarget` 时，MSBuild 在新作用域中评估调用目标，而不是从其调用的相同作用域中评估。 这意味着调用目标中的任何项和属性更改对调用目标均不可见。  若要将信息传递给调用目标，请使用 `TargetOutputs` 的 output 参数。
 
  除上面列出的参数外，此任务还从 <xref:Microsoft.Build.Tasks.TaskExtension> 类继承参数，后者自身继承自 <xref:Microsoft.Build.Utilities.Task> 类。 有关这些其他参数的列表及其说明的信息，请参阅 [TaskExtension 基类](../msbuild/taskextension-base-class.md)。
 
