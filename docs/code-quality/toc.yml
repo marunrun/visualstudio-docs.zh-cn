@@ -14,10 +14,12 @@
           href: install-roslyn-analyzers.md
         - name: 配置源代码分析器
           href: use-roslyn-analyzers.md
+        - name: 实时代码分析范围
+          href: configure-live-code-analysis-scope-managed-code.md
+        - name: 手动运行代码分析
+          href: how-to-run-code-analysis-manually-for-managed-code.md
         - name: 禁用代码分析
           href: disable-code-analysis.md
-        - name: 启用完整解决方案分析
-          href: how-to-enable-and-disable-full-solution-analysis-for-managed-code.md
         - name: FAQ
           href: analyzers-faq.md
         - name: FxCop 分析器
@@ -50,7 +52,7 @@
         - name: 迁移到 FxCop 分析器
           href: migrate-from-legacy-analysis-to-fxcop-analyzers.md
         - name: 手动运行旧版分析
-          href: how-to-run-code-analysis-manually-for-managed-code.md
+          href: how-to-run-legacy-code-analysis-manually-for-managed-code.md
         - name: Configuration
           items:
             - name: 配置旧版分析
