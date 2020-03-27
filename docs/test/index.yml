@@ -1,0 +1,64 @@
+### YamlMime:Landing
+title: Visual Studio 中的测试工具
+summary: Visual Studio 测试工具可帮助你和你的团队达到并保持高标准的代码卓越性。
+metadata:
+  title: Visual Studio 中的测试工具
+  description: 了解如何使用功能 Visual Studio 来测试代码。
+  ms.topic: landing-page
+  author: mikejo5000
+  ms.author: mikejo
+  manager: jillfra
+  ms.date: 03/23/2020
+  ms.openlocfilehash: cb29c5219cb3ad73cf8a3efeecaf344c7af81968
+  ms.sourcegitcommit: ee12b14f306ad8f49b77b08d3a16d9f54426e7ca
+  ms.translationtype: HT
+  ms.contentlocale: zh-CN
+  ms.lasthandoff: 03/25/2020
+  ms.locfileid: "80256400"
+landingContent:
+- title: 关于测试工具
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 先了解测试工具
+      url: improve-code-quality.md
+    - text: 单元测试工具概述
+      url: unit-test-your-code.md
+    - text: Live Unit Testing 概述
+      url: live-unit-testing-intro.md
+- title: 单元测试
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: 单元测试入门
+      url: getting-started-with-unit-testing.md
+    - text: 创建并运行托管代码的单元测试
+      url: walkthrough-creating-and-running-unit-tests-for-managed-code.md
+    - text: 使用测试资源管理器运行单元测试
+      url: run-unit-tests-with-test-explorer.md
+    - text: Live Unit Testing 入门
+      url: live-unit-testing-start.md
+    - text: 生成单元测试 (IntelliTest)
+      url: generate-unit-tests-for-your-code-with-intellitest.md
+- title: 更多测试工具
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: 代码覆盖 - 确定要测试多少代码
+      url: using-code-coverage-to-determine-how-much-code-is-being-tested.md
+    - text: Micorosft Fakes - 隔离正在测试中的代码
+      url: isolating-code-under-test-with-microsoft-fakes.md
+    - text: 编码的 UI（已弃用）
+      url: use-ui-automation-to-test-your-code.md
+    - text: 负载测试（已弃用）
+      url: quickstart-create-a-load-test-project.md
+- title: 相关工具 (Azure DevOps)
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: 探索和手动测试 (Azure Test Plans)
+      url: /azure/devops/test/overview?view=azure-devops
+    - text: 负载测试 (Azure Test Plans)
+      url: /azure/devops/test/load-test/getting-started-with-performance-testing?view=azure-devops
+    - text: 持续测试 (Azure Pipelines)
+      url: /azure/devops/pipelines/?view=azure-devops
