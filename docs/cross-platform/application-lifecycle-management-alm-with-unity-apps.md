@@ -9,12 +9,12 @@ ms.author: crdun
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: 5a1c449a77e3000205ee81f5414949743b6035c4
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 17bdd86829da199e01a527aa382b8ed3bdfade17
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77272274"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80232948"
 ---
 # <a name="devops-with-unity-apps"></a>适用于 Unity 应用的 DevOps
 
@@ -93,7 +93,7 @@ Visual Studio、Azure DevOps Services 和 Team Foundation Server 提供了各种
 |手动测试|是||
 |测试管理器（记录和播放测试）|仅限 Windows 设备和 Android 模拟器||
 |代码覆盖率|n/a|Unity 内进行单元测试时以及不是 Visual Studio 时不适用，请参阅下文。|
-|[单元测试代码](../test/unit-test-your-code.md)|在 Unity 中，但不在 Visual Studio 中|Unity 提供了自己的单元测试框架作为 [Unity 测试工具](https://www.assetstore.unity3d.com/en/#!/content/13802)（Unity 资产商店）的一部分。 单元测试结果在 Unity 中报告，将不会出现在 Visual Studio 内。|
+|[单元测试代码](../test/unit-test-your-code.md)|在 Unity 中，但不在 Visual Studio 中|Unity 提供了自己的单元测试框架作为 [Unity 测试工具](https://assetstore.unity.com/packages/tools/utilities/unity-test-tools-13802)（Unity 资产商店）的一部分。 单元测试结果在 Unity 中报告，将不会出现在 Visual Studio 内。|
 |[使用 UI 自动化来测试代码](../test/use-ui-automation-to-test-your-code.md)|否|编码的 UI 测试依赖于应用 UI 中可读取的控件；Unity 应用在本质上都是图形，因此编码的 UI 测试工具无法读取其内容。|
 
 ## <a name="improve-code-quality"></a>提高代码质量
@@ -124,4 +124,4 @@ Visual Studio、Azure DevOps Services 和 Team Foundation Server 提供了各种
 
 |功能|通过 Unity 提供支持|其他注释|
 |-------------|--------------------------|-------------------------|
-|故障分析、遥测和 beta 版本分发|是|HockeyApp 主要用于处理 beta 版本分布和获取故障报告。<br /><br /> 对于 C# 脚本中的遥测，可以使用任何分析框架，前提是它运行在 Unity 使用的 .NET 版本上。 但是，这仅允许在游戏脚本内进行分析，而无法深入到 Unity 引擎内部。 目前，没有任何适用于 Application Insights 的插件，但有适用于其他分析解决方案的插件，例如 [Unity Analytics](https://www.assetstore.unity3d.com/en/#!/content/28120)和 [Google Analytics](https://github.com/googleanalytics/google-analytics-plugin-for-unity)。 当然，Unity Analytics 等服务由于理解 Unity 项目的本质，可提供比一般框架有意义的多的分析。|
+|故障分析、遥测和 beta 版本分发|是|HockeyApp 主要用于处理 beta 版本分布和获取故障报告。<br /><br /> 对于 C# 脚本中的遥测，可以使用任何分析框架，前提是它运行在 Unity 使用的 .NET 版本上。 但是，这仅允许在游戏脚本内进行分析，而无法深入到 Unity 引擎内部。 目前，没有任何适用于 Application Insights 的插件，但有适用于其他分析解决方案的插件，例如 [Unity Analytics](https://assetstore.unity.com/packages/add-ons/services/analytics/unity-analytics-28120)和 [Google Analytics](https://github.com/googleanalytics/google-analytics-plugin-for-unity)。 当然，Unity Analytics 等服务由于理解 Unity 项目的本质，可提供比一般框架有意义的多的分析。|

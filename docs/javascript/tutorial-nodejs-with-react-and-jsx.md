@@ -12,12 +12,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: f60cd71f1dda4e401acef1db9ccd8c5a0be2b961
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 55086c473929158f50f05db790cf5842f1b696db
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "78235088"
+ms.lasthandoff: 03/20/2020
+ms.locfileid: "79550030"
 ---
 # <a name="tutorial-create-a-nodejs-and-react-app-in-visual-studio"></a>教程：在 Visual Studio 中创建 Node.js 和 React 应用
 
@@ -405,10 +405,6 @@ webpack 绑定 JavaScript 文件，使其可以在浏览器中运行。 它还�
 
    ::: moniker range=">=vs-2019"
    对于 Microsoft Edge (Chromium)，还需要关闭所有 Chrome 实例。 由于两个浏览器共享 chromium 基本代码，因此可获得最佳结果。
-   ::: moniker-end
-
-   ::: moniker range=">=vs-2019"
-   对于 Microsoft Edge (Chromium)，还需要关闭所有 Chrome 实例。 由于两个浏览器都使用 chromium 基本代码，因此可获得最佳结果。
    ::: moniker-end
 
 2. 启动浏览器并启用调试。

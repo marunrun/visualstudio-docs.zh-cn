@@ -3,15 +3,16 @@ title: 管理门户中的超级管理员和管理员角色
 author: evanwindom
 ms.author: lank
 manager: lank
+ms.assetid: 6601c395-f778-48c1-ab76-cf454b9193e4
 ms.date: 03/02/2020
 ms.topic: conceptual
 description: 了解超级管理员和管理员角色以及如何分配管理员。
-ms.openlocfilehash: ef0ba479c099bf1e34fe871386984297b130ffd6
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: ce76a2aaf970926d171086e65ba2d364e1526d61
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "78234812"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80232744"
 ---
 # <a name="super-admins-and-administrators-for-visual-studio-subscription-agreements"></a>Visual Studio 订阅协议的超级管理员和管理员
 

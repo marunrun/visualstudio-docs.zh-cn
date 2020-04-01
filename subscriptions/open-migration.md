@@ -3,15 +3,16 @@ title: 为客户管理 Visual Studio 订阅的合作伙伴 | Microsoft Docs
 author: evanwindom
 ms.author: lank
 manager: lank
+ms.assetid: 6866dfab-c4fa-428e-bb0d-7b202c81f770
 ms.date: 03/09/2020
 ms.topic: conceptual
 description: 了解合作伙伴如何为其客户管理 Visual Studio 订阅。
-ms.openlocfilehash: 53f19b76d79bb7f2e6246c9f5b2866bbf9262dfe
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: bf1fe706a0e1ee0b027e465c0bfaa8c0d326ee99
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "78947073"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80232297"
 ---
 # <a name="partners-managing-subscriptions-on-behalf-of-customers"></a>合作伙伴代表客户管理订阅
 要管理 [Visual Studio 订阅管理门户](https://manage.visualstudio.com)中的订阅，需要执行某些步骤。 该进程为：
@@ -50,7 +51,7 @@ ms.locfileid: "78947073"
 > 客户将收到通知电子邮件，告知他们已将合作伙伴添加到 Open License 中。 他们可选择删除合作伙伴的访问权限。
 
 ## <a name="resources"></a>资源
-- [Visual Studio 许可白皮书](https://visualstudio.microsoft.com/wp-content/uploads/2019/06/Visual-Studio-Licensing-Whitepaper-May-2019.pdf)
+- [Visual Studio 许可白皮书](https://aka.ms/vslicensing)
 - [Visual Studio 管理和订阅支持](https://visualstudio.microsoft.com/support/support-overview-vs)
 - [批量许可条款](https://www.microsoft.com/licensing/product-licensing/products.aspx)
 
