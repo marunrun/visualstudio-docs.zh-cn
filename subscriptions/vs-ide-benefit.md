@@ -1,17 +1,18 @@
 ---
 title: Visual Studio 订阅中的 Visual Studio IDE 权益 | Microsoft 文档
 author: evanwindom
-ms.author: lank
+ms.author: v-evwin
 manager: lank
-ms.date: 11/14/2019
+ms.assetid: c4b13464-76be-40f1-ad60-ed79ee264b12
+ms.date: 03/25/2020
 ms.topic: conceptual
 description: 了解如何下载并安装包含在 Visual Studio 订阅中的 Visual Studio IDE。
-ms.openlocfilehash: fd140dfe1853e6799a960fd8e251a566954bf143
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: 154e5449603a8a92d2c2a52887fc4631b8dd0ab9
+ms.sourcegitcommit: dfa9476b69851c28b684ece66980bee735fef8fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "74491586"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80273967"
 ---
 # <a name="the-visual-studio-2019-benefit"></a>Visual Studio 2019 权益
 
@@ -68,7 +69,7 @@ ms.locfileid: "74491586"
 | Visual Studio Test Professional（标准）                         | VL、零售                                              | 可用                                             |  是         |
 | MSDN 平台（标准）                                          | VL、零售                                              | 不可用                                              |  不可用          |
 
-<sup>1</sup>  *包括：不得转售 (NFR)、Visual Studio 行业合作伙伴 (VSIP)、Microsoft 合作伙伴网络 (MPN)、FTE、MCT 软件和服务开发人员、BizSpark、Imagine、最有价值专家 (MVP)、区域总监 (RD)。不包括：MCT 软件和服务*。
+<sup>1</sup>  包括：不得转售 (NFR)、Visual Studio 行业合作伙伴 (VSIP)、Microsoft 合作伙伴网络 (MPN)、FTE、MCT 软件和服务开发人员、BizSpark、Imagine、最有价值专家 (MVP)、区域总监 (RD)。不包括：MCT 软件和服务。
 
 > [!NOTE]
 > Microsoft 不再在云订阅中提供 Visual Studio Professional 年度订阅和 Visual Studio Enterprise 年度订阅。 现有客户体验以及续订、增加、减少或取消订阅的能力不会发生变化。 建议新客户访问 [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/)，查看各 Visual Studio 购买选项。
@@ -80,6 +81,12 @@ ms.locfileid: "74491586"
   - 技术支持：[https://visualstudio.microsoft.com/support/](https://visualstudio.microsoft.com/support/)
   - [文档](/visualstudio/)
 - 有关 Visual Studio 订阅的销售、订阅、帐户和账单的帮助，请与 Visual Studio [订阅支持](https://visualstudio.microsoft.com/subscriptions/support/)联系。
+
+## <a name="see-also"></a>请参阅
+- [Visual Studio 文档](https://docs.microsoft.com/visualstudio/)
+- [Azure DevOps 文档](https://docs.microsoft.com/azure/devops/)
+- [Azure 文档](https://docs.microsoft.com/azure/)
+- [Microsoft 365 文档](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>后续步骤
 安装 Visual Studio 后，请不要忘记激活以下其他重要权益：

@@ -329,6 +329,8 @@
                   href: ide/reference/generate-constructor.md
                 - name: 生成解构函数
                   href: ide/reference/generate-deconstructor.md
+                - name: 添加显式强制转换
+                  href: ide/reference/add-explicit-cast.md
                 - name: 将参数添加到方法
                   href: ide/reference/add-parameter.md
                 - name: 生成参数
@@ -360,6 +362,8 @@
                   href: ide/reference/convert-anonymous-type-to-class.md
                 - name: 将匿名类型转换为元组
                   href: ide/reference/convert-anonymous-type-to-tuple.md
+                - name: 在自动属性和完整属性之间转换
+                  href: ide/reference/convert-between-auto-property-and-full-property.md
                 - name: 在 for 循环和 foreach 语句之间进行转换
                   href: ide/reference/convert-for-loop-to-foreach.md
                 - name: 在 Get 方法和属性之间进行转换
