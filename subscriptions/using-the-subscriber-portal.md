@@ -1,17 +1,18 @@
 ---
 title: 使用订阅者门户 - https://my.visualstudio.com | Microsoft Docs
 author: evanwindom
-ms.author: lank
+ms.author: v-evwin
 manager: lank
+ms.assetid: 8470f035-2a82-4052-9a12-6f24ce796861
 ms.date: 07/19/2019
 ms.topic: conceptual
 description: 了解 Visual Studio 订阅门户为你提供的所有权益
-ms.openlocfilehash: 13266e018f122ae2b890e8c92bff71ce3016de75
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: 5403880dc5a2ac62cd23800cea5acacd2766bc6f
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "75546221"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80232190"
 ---
 # <a name="using-the-subscriber-portal---myvisualstudiocom"></a>使用订阅者门户 - my.visualstudio.com
 
@@ -21,8 +22,8 @@ Visual Studio 订阅门户 [https://my.visualstudio.com](https://my.visualstudio
 
 门户分为六页。  每一页均提供了对订阅中包含的不同产品或服务的访问权限。  这六页分别为权益、下载、产品密钥、订阅、支持和市场。
 
-## <a name="benefits"></a>[优点](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)
-随附订阅的工具和服务在“权益”页上以“磁贴”形式显示。  并非所有订阅都包含所有权益。 磁贴分为三个类别：工具、专业开发和支持。  
+## <a name="benefits"></a>[权益](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)
+随附订阅的工具和服务在“权益”页上以“磁贴”形式显示。  并非所有订阅都包含所有权益。 磁贴分为三类：工具、专业开发和支持。  
 
 ### <a name="tools"></a>工具
 “工具”类别中包含核心开发工具，如 Visual Studio IDE、Azure DevOps 和合作伙伴提供的工具。  此外，还会看到 Azure 和 Visual Studio App Center 等服务。
@@ -51,6 +52,12 @@ Visual Studio 订阅门户 [https://my.visualstudio.com](https://my.visualstudio
 ## <a name="marketplace"></a>[市场](https://marketplace.visualstudio.com/)
 
 需要续订 Visual Studio 云订阅？  想要下载 Visual Studio 系列产品的最新扩展？  市场有助于用户查找增强 Azure DevOps、Azure DevOps Server 和 Visual Studio Code 的扩展、工具和服务。 甚至可以成为发布者，在市场上发布你自己的扩展。
+
+## <a name="see-also"></a>请参阅
+- [Visual Studio 文档](https://docs.microsoft.com/visualstudio/)
+- [Azure DevOps 文档](https://docs.microsoft.com/azure/devops/)
+- [Azure 文档](https://docs.microsoft.com/azure/)
+- [Microsoft 365 文档](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>后续步骤
 在 [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) 登录门户网站，查看你的权益。  还可以了解有关使用 [Microsoft 帐户](sign-in-msa.md) (MSA)、[工作或学校帐户](sign-in-work.md)，甚至是 [GitHub 帐户](sign-in-github.md)登录门户网站的详细信息。 

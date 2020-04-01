@@ -3,15 +3,16 @@ title: Microsoft Azure 权益 | Microsoft Docs
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 07/29/2019
+ms.assetid: 872c5746-5357-4764-949b-aa525a0adf1a
+ms.date: 03/18/2020
 ms.topic: conceptual
 description: 了解如何激活 Visual Studio 订阅中包含的 Azure 开发测试个人额度权益。
-ms.openlocfilehash: 01c31d96b7ee3e696f941725bbcb314c5f0e0e60
-ms.sourcegitcommit: 7b07e7b5e06e2e13f622445c568b78a284e1a40d
+ms.openlocfilehash: 8cf79c9f4ce9230195e2fdbf551320c3532ad42d
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2020
-ms.locfileid: "76542667"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80232027"
 ---
 # <a name="use-microsoft-azure-in-visual-studio-subscriptions"></a>在 Visual Studio 订阅中使用 Microsoft Azure
 Visual Studio 订阅者无需额外付费即可使用 Microsoft Azure。  通过[每月 Azure 开发测试个人额度](https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/)，可将 Azure 用作开发/测试的个人沙盒。  你可以预配虚拟机、云服务和其他 Azure 资源。  信用额度因订阅级别而异。
@@ -91,9 +92,7 @@ Visual Studio 订阅者无需额外付费即可使用 Microsoft Azure。  通过
 
 如果团队和组织中的某人代表你购买了订阅，请联系组织的 Visual Studio 管理员并请求一个 Visual Studio 订阅以获取所需的 Azure 开发测试个人额度。   请求管理员将新订阅分配到以前订阅分配到的同一个用户 ID，以免担心传输 Azure 订阅的问题。
 
-如果直接购买了订阅，请执行以下任一操作：
-1. 通过 Visual Studio Marketplace 购买年度 Visual Studio [Enterprise](https://marketplace.visualstudio.com/items?itemName=ms.vs-enterprise-annual) 或 [Professional](https://marketplace.visualstudio.com/items?itemName=ms.vs-professional-annual) 云订阅。
-2. 通过 [Microsoft Store](https://www.microsoft.com/en-us/search/result.aspx?q=visual+studio+subscription) 利用 50% 或更高的折扣力度续订当前订阅。
+如果你可直接购买订阅，请通过 [Microsoft Store](https://www.microsoft.com/en-us/search/result.aspx?q=visual+studio+subscription) 续订当前订阅以享受折扣。
 
 比较所有的[订阅及其权益](https://visualstudio.microsoft.com/vs/pricing/)。
 
@@ -113,6 +112,12 @@ Visual Studio 订阅者无需额外付费即可使用 Microsoft Azure。  通过
   - [Azure 提示与技巧](https://microsoft.github.io/AzureTipsAndTricks/ "Azure 提示与技巧") 
 - 有关 Visual Studio 订阅的销售、订阅、帐户和账单的帮助，请与 Visual Studio [订阅支持](https://visualstudio.microsoft.com/subscriptions/support/)联系。
 - 对有关 Visual Studio IDE、Azure DevOps Services 或其他 Visual Studio 产品或服务有疑问？  请访问 [Visual Studio 支持](https://visualstudio.microsoft.com/support/)。
+
+## <a name="see-also"></a>请参阅
+- [Visual Studio 文档](https://docs.microsoft.com/visualstudio/)
+- [Azure DevOps 文档](https://docs.microsoft.com/azure/devops/)
+- [Azure 文档](https://docs.microsoft.com/azure/)
+- [Microsoft 365 文档](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>后续步骤
 有关 Microsoft 工具和服务的详细信息，请查看针对以下内容的相关文档：

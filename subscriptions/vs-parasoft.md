@@ -1,17 +1,18 @@
 ---
 title: Parasoft Virtualize/SOAtest Professional 桌面权益 | Microsoft 文档
 author: evanwindom
-ms.author: lank
+ms.author: v-evwin
 manager: lank
-ms.date: 11/18/2019
+ms.assetid: 00c1f300-d04e-4695-815e-775ffbf0f931
+ms.date: 03/26/2020
 ms.topic: conceptual
 description: 了解如何激活 Visual Studio 订阅中包含的 Parasoft Virtualize/SOA Test Professional 订阅。
-ms.openlocfilehash: 036b265f9ca1accc7027477abfc27ce4e66c4033
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: 5f6673ecd3721232feb727ceda2c399e2ee12348
+ms.sourcegitcommit: 104d75ade6f48538620743d1c836fb26bdd0ade5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "74161938"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80301899"
 ---
 # <a name="parasoft-virtualizesoatest-professional-desktop-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 Parasoft Virtualize/SOAtest Professional 桌面
 
@@ -92,6 +93,12 @@ ms.locfileid: "74161938"
   - Parasoft 资源中心： https://www.parasoft.com/resources/
 - 有关 Visual Studio 订阅的销售、订阅、帐户和账单的帮助，请与 Visual Studio [订阅支持](https://visualstudio.microsoft.com/subscriptions/support/)联系。
 - 对有关 Visual Studio IDE、Azure DevOps Services 或其他 Visual Studio 产品或服务有疑问？  请访问 [Visual Studio 支持](https://visualstudio.microsoft.com/support/)。
+
+## <a name="see-also"></a>请参阅
+- [Visual Studio 文档](https://docs.microsoft.com/visualstudio/)
+- [Azure DevOps 文档](https://docs.microsoft.com/azure/devops/)
+- [Azure 文档](https://docs.microsoft.com/azure/)
+- [Microsoft 365 文档](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>后续步骤
 通过激活 [Azure 开发测试个人额度](vs-azure.md)来充分利用你自己的开发沙盒。 

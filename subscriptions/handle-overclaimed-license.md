@@ -3,24 +3,29 @@ title: 处理超额分配的许可证 | Microsoft Docs
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 07/24/2019
+ms.assetid: a747100c-6f08-41a4-aaad-05099741742b
+ms.date: 03/03/2020
 ms.topic: conceptual
 description: 了解管理员如何解决超额分配的订阅
-ms.openlocfilehash: 924f6fb2c513d70aefd28c1d4ff18d1af62178c2
-ms.sourcegitcommit: ce1ab8a25c66a83e60eab80ed8e1596fe66dd85c
+ms.openlocfilehash: a4cdab7d4e6e5925bab3d4dc7c800dc33ef6d713
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68605506"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80232452"
 ---
 # <a name="overallocated-subscriptions"></a>过度分配的订阅
-有时，添加订阅者后，订单发生变化，这可能会导致已分配的订阅数量超过公司拥有的许可证数量。 这称为“超额分配”。  发生这种情况时，“订阅者”选项卡会显示警报，并为你提供有关超额分配了多少订阅的详细信息。
+有时，添加订阅者后，订单发生变化，这可能会导致已分配的订阅数量超过公司拥有的许可证数量。 这称为“超额分配”。  
+
+要查看你的订阅分配情况，请单击左侧的顶部图标，打开分配窗格。  
 
 > [!NOTE]
 > 开放式许可证计划不允许出现超额分配。  另外，其他程序可能会在门户中以不同方式显示此信息。
 >
 > [!div class="mx-imgBorder"]
 > ![透支订阅通知](_img/over-claimed/over-claimed-alert.png)
+
+请注意，显示项使用经过哈希处理的条形来表示超额分配的订阅。  所有订阅类型中的超额分配数都包含在顶部的“概述”部分，而每个订阅级别还会显示它自己的分配状态。  
 
 ## <a name="resolve-overallocated-subscriptions"></a>解决超额分配的订阅
 有多种方法可解决超额分配：
@@ -35,6 +40,12 @@ ms.locfileid: "68605506"
 > 如果 Visual Studio 订阅管理员分配了带有 GitHub Enterprise 的 Visual Studio 订阅，且从未购买过这些订阅，则它们将对组织中的 GitHub Enterprise 管理员不可见。 要确保 GitHub Enterprise 订阅可见，应在首次分配订阅时至少购买一个带 GitHub Enterprise 的 Visual Studio Professional 订阅或带 GitHub Enterprise 的 Visual Studio Enterprise 订阅  。
 >
 > 由客户负责确保在管理门户中针对所分配的每个 GitHub 订阅都分配了一个对应的带 GitHub 的 Visual Studio 订阅，从而保证符合此订阅的许可要求。
+
+## <a name="see-also"></a>请参阅
+- [Visual Studio 文档](https://docs.microsoft.com/visualstudio/)
+- [Azure DevOps 文档](https://docs.microsoft.com/azure/devops/)
+- [Azure 文档](https://docs.microsoft.com/azure/)
+- [Microsoft 365 文档](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>后续步骤
 - 详细了解如何管理[带有 GitHub Enterprise 的 Visual Studio 订阅](assign-github.md)。

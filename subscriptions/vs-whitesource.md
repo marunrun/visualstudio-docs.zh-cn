@@ -1,17 +1,18 @@
 ---
 title: WhiteSource Bolt 权益 | Microsoft 文档
 author: evanwindom
-ms.author: lank
+ms.author: v-evwin
 manager: lank
-ms.date: 01/06/2020
+ms.assetid: 5e5d3f1a-533d-42eb-960e-01bb6bc7ca16
+ms.date: 03/26/2020
 ms.topic: conceptual
 description: 了解如何激活 Visual Studio 订阅中包含的 WhiteSource Bolt 订阅。
-ms.openlocfilehash: edfc4c01908a6ce3bf5466a812ab7cf2608a62f7
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: 00a146d7bf65124b7f4c9e34fadc4afc2d3205c8
+ms.sourcegitcommit: 104d75ade6f48538620743d1c836fb26bdd0ade5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "76114319"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80301894"
 ---
 # <a name="whitesource-bolt-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 WhiteSource Bolt
 
@@ -60,14 +61,14 @@ ms.locfileid: "76114319"
 - 有关 Visual Studio 订阅的销售、订阅、帐户和账单的帮助，请与 Visual Studio [订阅支持](https://visualstudio.microsoft.com/subscriptions/support/)联系。
 - 对有关 Visual Studio IDE、Azure DevOps Services 或其他 Visual Studio 产品或服务有疑问？  请访问 [Visual Studio 支持](https://visualstudio.microsoft.com/support/)。
 
+## <a name="see-also"></a>请参阅
+- [Visual Studio 文档](https://docs.microsoft.com/visualstudio/)
+- [Azure DevOps 文档](https://docs.microsoft.com/azure/devops/)
+- [Azure 文档](https://docs.microsoft.com/azure/)
+- [Microsoft 365 文档](https://docs.microsoft.com/microsoft-365/)
+
 ## <a name="next-steps"></a>后续步骤
 请务必激活这些重要权益以充分利用 Visual Studio 订阅：
 - [Visual Studio](vs-ide-benefit.md)
 - [Azure DevOps](vs-azure-devops.md)
 - [Azure 开发测试个人额度](vs-azure.md)
-
-## <a name="see-also"></a>请参阅
-- [Visual Studio 文档](/visualstudio/)
-- [Azure DevOps 文档](/azure/devops/)
-- [Azure 文档](/azure/)
-- [Microsoft 365 文档](/microsoft-365/)

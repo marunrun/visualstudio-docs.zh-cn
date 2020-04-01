@@ -3,15 +3,16 @@ title: 使用产品密钥通过终端服务支持 Internet 演示 | Microsoft Do
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 07/19/2019
+ms.assetid: 1c5ede60-cb5a-4d5f-a6a2-a1f536f6c4ad
+ms.date: 03/09/2020
 ms.topic: conceptual
 description: 了解如何使用产品密钥通过终端服务支持 Internet 演示并启用 RDS 访问
-ms.openlocfilehash: 19faa64b7eeaebc1b92ca965f686795b31e00e7e
-ms.sourcegitcommit: 9fc8b144d4ed1c46aba87c0b7e1d24454e0eea9d
+ms.openlocfilehash: 2d5f23f0d161ee9f50569e0ff7f8ce585c8c49ff
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68493383"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80232431"
 ---
 # <a name="internet-demonstrations-via-terminal-services"></a>通过终端服务访问 Internet 演示
 凭借 Visual Studio 订阅，可允许最终用户使用终端服务（Windows Server 2003 或 Windows Server 2008）或远程桌面服务（Windows Server 2008 R2 或更高版本）访问你的程序的 Internet 演示。 使用这种方式，多达 200 位匿名用户可同时访问你的演示。 你的演示不得使用生产数据。 Visual Studio 订阅者可以向最终用户演示其应用程序。 在软件是通过 Visual Studio 订阅授权的情况下，未购买 Visual Studio 订阅的最终用户只能通过使用终端服务 (TS) 或远程桌面服务 (RDS) 的此 Internet 与演示应用程序交互。
@@ -33,6 +34,13 @@ Visual Studio 订阅者可以输入[订阅门户](https://my.visualstudio.com?wt
 - 必须使用 Internet 连接。
 - 若要进行应用程序演示，最多可以使用 200 个并发用户连接。
 - Visual Studio 订阅者必须获得启用用户连接所需的产品密钥。
+
+## <a name="see-also"></a>请参阅
+- [Windows Server 文档](https://docs.microsoft.com/windows-server/)
+- [Visual Studio 文档](https://docs.microsoft.com/visualstudio/)
+- [Azure DevOps 文档](https://docs.microsoft.com/azure/devops/)
+- [Azure 文档](https://docs.microsoft.com/azure/)
+- [Microsoft 365 文档](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>后续步骤
 如果需要有关部署 RDS 的指南，请查看位于 https://techcommunity.microsoft.com/t5/Ask-The-Performance-Team/bg-p/AskPerf 的远程桌面服务 (RDS) 2012 会话部署的多部分博客系列  。 

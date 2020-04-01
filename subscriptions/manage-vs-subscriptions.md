@@ -3,15 +3,16 @@ title: 管理 Visual Studio 订阅
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 07/17/2019
+ms.assetid: 196c6d04-9a33-47d5-b0f1-038e7c3a7ac9
+ms.date: 03/09/2020
 ms.topic: conceptual
 description: 了解如何充分利用 Visual Studio 订阅
-ms.openlocfilehash: a8a58cd3fca2443ca84db712cbd2a356351d4499
-ms.sourcegitcommit: 49ebf69986713e440fd138fb949f1c0f47223f23
+ms.openlocfilehash: 8790897f0e5169aebc020035b4c8c1d5749c230e
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74706973"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80232362"
 ---
 # <a name="managing-subscriptions"></a>管理订阅
 
@@ -112,3 +113,17 @@ Visual Studio 订阅门户将所有 Visual Studio 订阅和程序汇集到一个
 > [!NOTE]
 > - 如果选择关闭 Microsoft 帐户或 Azure AD，将立即匿名处理你的个人数据。
 > - 如果有活动订阅，我们不会完全删除你的所有个人数据。
+
+## <a name="see-also"></a>请参阅
+- [Visual Studio 文档](https://docs.microsoft.com/visualstudio/)
+- [Azure DevOps 文档](https://docs.microsoft.com/azure/devops/)
+- [Azure 文档](https://docs.microsoft.com/azure/)
+- [Microsoft 365 文档](https://docs.microsoft.com/microsoft-365/)
+
+## <a name="next-steps"></a>后续步骤
+你是否在为你的组织管理订阅？  请详细了解如何管理 Visual Studio 订阅：
+- [分配单个订阅](assign-license.md)
+- [分配多个订阅](assign-license-bulk.md)
+- [编辑订阅](edit-license.md)
+- [删除订阅](delete-license.md)
+- [确定最大使用量](maximum-usage.md)
