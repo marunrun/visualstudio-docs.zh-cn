@@ -1,17 +1,18 @@
 ---
 title: Visual Studio 订阅中的 Pluralsight 权益 | Microsoft Docs
 author: evanwindom
-ms.author: lank
+ms.author: v-evwin
 manager: lank
-ms.date: 11/18/2019
+ms.assetid: bc8b526c-2fed-4ac8-aaa2-73d2495256fd
+ms.date: 03/26/2020
 ms.topic: conceptual
 description: 了解有关所选的 Visual Studio 订阅中随附的 Pluralsight 培训订阅。
-ms.openlocfilehash: f76db59053451ca58890ec055295758add482725
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: 71af6f269fe84ef633215dcb526b89dffe8481a0
+ms.sourcegitcommit: 104d75ade6f48538620743d1c836fb26bdd0ade5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "77192411"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80301877"
 ---
 # <a name="pluralsight-training-benefits-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 Pluralsight 培训权益
 
@@ -96,6 +97,12 @@ ms.locfileid: "77192411"
 - [Pluralsight 帮助中心](https://help.pluralsight.com/help)可以在参加 Pluralsight 课程或使用 Pluralsight 网站方面提供帮助。
 - 有关 Visual Studio 订阅的销售、订阅、帐户和账单的帮助，请与 Visual Studio [订阅支持](https://visualstudio.microsoft.com/subscriptions/support/)联系。
 - 对有关 Visual Studio IDE、Azure DevOps Services 或其他 Visual Studio 产品或服务有疑问？  请访问 [Visual Studio 支持](https://visualstudio.microsoft.com/support/)。
+
+## <a name="see-also"></a>请参阅
+- [Visual Studio 文档](https://docs.microsoft.com/visualstudio/)
+- [Azure DevOps 文档](https://docs.microsoft.com/azure/devops/)
+- [Azure 文档](https://docs.microsoft.com/azure/)
+- [Microsoft 365 文档](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>后续步骤
 创建帐户后，就可以开始培训了。  请访问 [https://www.pluralsight.com](https://www.pluralsight.com) 并点击页面右上角的“登录”以开始新课程，或返回正在进行的课程  。

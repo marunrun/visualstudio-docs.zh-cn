@@ -1,17 +1,18 @@
 ---
 title: Visual Studio 订阅中的 Windows 开发者帐户权益 | Microsoft 文档
 author: evanwindom
-ms.author: lank
+ms.author: v-evwin
 manager: lank
-ms.date: 11/18/2019
+ms.assetid: 588480a3-8806-4ea5-9915-c25974770069
+ms.date: 03/26/2020
 ms.topic: conceptual
 description: 了解有关 Visual Studio 订阅中包含的 Windows 开发者帐户。
-ms.openlocfilehash: 7ba77979c47d61cd230351a352d85baa7c1eae9a
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: 795eccdf72fad7df760d709b44351444b6dea424
+ms.sourcegitcommit: 104d75ade6f48538620743d1c836fb26bdd0ade5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "74491280"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80301852"
 ---
 # <a name="windows-developer-account-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 Windows 开发者帐户
 通过所选 Visual Studio 订阅包含的 Windows 开发者帐户，可以将免费和付费的 Windows 应用提交到 Windows 应用商店。
@@ -51,7 +52,7 @@ ms.locfileid: "74491280"
 | Visual Studio Enterprise、Visual Studio Professional（月度云） | Azure                                       | 不可用                                                           |NA|
 ||
 
-<sup>1</sup>  *包括：限制转售 (NFR)、FTE、Visual Studio 行业合作伙伴 (VSIP)、BizSpark、MCT 软件和服务开发人员。不包括：Microsoft 合作伙伴网络 (MPN)、Imagine、最有价值专家 (MVP)、区域总监 (RD)、MCT 软件和服务。*
+<sup>1</sup>  包括：限制转售 (NFR)、FTE、Visual Studio 行业合作伙伴 (VSIP)、BizSpark、MCT 软件和服务开发人员。不包括：Microsoft 合作伙伴网络 (MPN)、Imagine、最有价值专家 (MVP)、区域总监 (RD)、MCT 软件和服务。
 
 > [!NOTE]
 > Microsoft 不再在云订阅中提供 Visual Studio Professional 年度订阅和 Visual Studio Enterprise 年度订阅。 现有客户体验以及续订、增加、减少或取消订阅的能力不会发生变化。 建议新客户访问 [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/)，查看各 Visual Studio 购买选项。
@@ -63,6 +64,12 @@ ms.locfileid: "74491280"
 - [Windows 开发](/windows/)
 - 有关 Visual Studio 订阅的销售、订阅、帐户和账单的帮助，请与 Visual Studio [订阅支持](https://visualstudio.microsoft.com/subscriptions/support/)联系。
 - 对有关 Visual Studio IDE、Azure DevOps Services 或其他 Visual Studio 产品或服务有疑问？  请访问 [Visual Studio 支持](https://visualstudio.microsoft.com/support/)。
+
+## <a name="see-also"></a>请参阅
+- [Visual Studio 文档](https://docs.microsoft.com/visualstudio/)
+- [Azure DevOps 文档](https://docs.microsoft.com/azure/devops/)
+- [Azure 文档](https://docs.microsoft.com/azure/)
+- [Microsoft 365 文档](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>后续步骤
 请务必激活这些重要权益以充分利用 Visual Studio 订阅：
