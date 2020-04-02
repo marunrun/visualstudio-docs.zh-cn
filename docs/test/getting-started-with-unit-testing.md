@@ -140,7 +140,7 @@ ms.locfileid: "78289849"
 
 ## <a name="run-unit-tests"></a>运行单元测试
 
-1. 打开“测试资源管理器”。[](../test/run-unit-tests-with-test-explorer.md)
+1. 打开[测试资源管理器](../test/run-unit-tests-with-test-explorer.md)。
 
    ::: moniker range=">=vs-2019"
    若要打开测试资源管理器，请选择顶部菜单栏中的“测试”>“测试资源管理器”   。
