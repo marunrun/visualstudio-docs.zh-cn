@@ -40,6 +40,7 @@
 #### [Visual Studio IDE](vs-ide-benefit.md)
 #### [WhiteSource Bolt](vs-whitesource.md)
 #### [Windows 开发人员帐户](vs-windows-dev.md)
+#### [Windows 虚拟桌面](vs-windows-virtual-desktop.md)
 ### 专业开发
 #### [MSDN 杂志](vs-code-magazine.md)
 #### [DataCamp](vs-datacamp.md)
