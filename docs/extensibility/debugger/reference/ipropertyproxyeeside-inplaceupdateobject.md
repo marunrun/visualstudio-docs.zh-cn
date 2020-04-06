@@ -1,5 +1,5 @@
 ---
-title: IPropertyProxyEESide::InPlaceUpdateObject |Microsoft Docs
+title: IProperty 代理边：原位更新对象 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IPropertyProxyEESide::InPlaceUpdateObject
 ms.assetid: abf89411-1853-4f23-b244-d5e0afa197b1
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 6ce2826aa0bd75638d6f5ee8086cbcce96517ce7
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 79167b0f7e8094fabf80bb9b2d83c94ac874aa31
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66329424"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80714894"
 ---
 # <a name="ipropertyproxyeesideinplaceupdateobject"></a>IPropertyProxyEESide::InPlaceUpdateObject
-使用给定的数据对象中更新对象的数据，并返回新的数据对象，表示对象的新数据。
+使用给定的数据对象更新对象的数据，并返回表示对象新数据的新数据对象。
 
 ## <a name="syntax"></a>语法
 
@@ -43,20 +43,20 @@ int InPlaceUpdateObject(
 
 ## <a name="parameters"></a>参数
 `dataIn`\
-[in][IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md)对象，其中包含新数据。
+[在]包含新[数据的 IEEData 存储](../../../extensibility/debugger/reference/ieedatastorage.md)对象。
 
 `dataOut`\
-[out]返回一个新`IEEDataStorage`对象，其中包含被替换的数据。
+[出]返回包含替换`IEEDataStorage`数据的新对象。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，返回`S_OK`;否则，返回错误代码。
 
 ## <a name="remarks"></a>备注
- 此方法实际上更新对象的数据。 在返回的数据[IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md)对象不需要为在传入的数据相同`IEEDataStorage`对象，但返回的对象必须反映该属性的当前值。
+ 此方法实际上更新对象的数据。 返回的[IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md)对象中的数据不需要与传入`IEEDataStorage`对象中的数据相同，但返回的对象必须反映属性的当前值。
 
- EE 通常没有实现传入的数据对象。 但是，此方法返回的对象始终通过 EE，它允许 EE 实现实现`IEEDataStorage`上任何类所需的接口。
+ 传入数据对象通常不由 EE 实现。 但是，此方法返回的对象始终由 EE 实现，它允许 EE 在所需的任何类上`IEEDataStorage`实现接口。
 
- [CreateReplacementObject](../../../extensibility/debugger/reference/ipropertyproxyeeside-createreplacementobject.md)方法创建基于传入的数据对象的数据对象，但不会影响该属性的原始数据。
+ [Create替换对象](../../../extensibility/debugger/reference/ipropertyproxyeeside-createreplacementobject.md)方法基于传入数据对象创建数据对象，但不会影响属性的原始数据。
 
 ## <a name="see-also"></a>请参阅
 - [IPropertyProxyEESide](../../../extensibility/debugger/reference/ipropertyproxyeeside.md)

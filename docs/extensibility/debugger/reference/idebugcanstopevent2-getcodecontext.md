@@ -1,5 +1,5 @@
 ---
-title: IDebugCanStopEvent2::GetCodeContext | Microsoft Docs
+title: IDebugCanStopevent2：：获取代码上下文 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugCanStopEvent2::GetCodeContext
 ms.assetid: eecf08b6-f9b7-4358-941b-3a448a92ac62
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 3f5b43a685bcaadccdac1d12ffce2df578a842ee
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 94c129d7d50bc747291d8a178d73c06655e65414
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66350094"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80734562"
 ---
 # <a name="idebugcanstopevent2getcodecontext"></a>IDebugCanStopEvent2::GetCodeContext
-获取用于描述此事件的位置的代码上下文。
+获取描述此事件位置的代码上下文。
 
 ## <a name="syntax"></a>语法
 
@@ -41,15 +41,15 @@ int GetCodeContext( 
 
 ## <a name="parameters"></a>参数
 `ppCodeContext`\
-[out]返回[IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md)对象，表示当前的代码位置。
+[出]返回表示当前代码位置的[IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md)对象。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，返回`S_OK`;否则，返回错误代码。
 
 ## <a name="remarks"></a>备注
- 为大多数运行时体系结构，代码上下文可以认为的在程序的执行流中，指向特定指令的地址。
+ 对于大多数运行时体系结构，可以将代码上下文视为程序执行流中的地址，指向特定指令。
 
- 若要获取的文档上下文，这是面向源代码的行，调用[GetDocumentContext](../../../extensibility/debugger/reference/idebugcanstopevent2-getdocumentcontext.md)方法。
+ 要获取面向源代码行的文档上下文，请调用[GetDocumentContext](../../../extensibility/debugger/reference/idebugcanstopevent2-getdocumentcontext.md)方法。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugCanStopEvent2](../../../extensibility/debugger/reference/idebugcanstopevent2.md)

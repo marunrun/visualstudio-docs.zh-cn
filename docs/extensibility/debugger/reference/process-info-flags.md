@@ -1,27 +1,27 @@
 ---
-title: PROCESS_INFO_FLAGS | Microsoft Docs
+title: PROCESS_INFO_FLAGS |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - PROCESS_INFO_FLAGS
 helpviewer_keywords:
 - PROCESS_INFO_FLAGS enumeration
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e0694d83409a492a1d950a17ac5e2298ba9b8578
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 36c4cbbe17a109eacd69b76500e8c10d21d2d554
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66309391"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80713955"
 ---
-# <a name="processinfoflags"></a>PROCESS_INFO_FLAGS
+# <a name="process_info_flags"></a>PROCESS_INFO_FLAGS
 
 描述或指定进程的属性。
 
@@ -49,30 +49,30 @@ enum enum_PROCESS_INFO_FLAGS { 
 ## <a name="fields"></a>字段
 
 `PIFLAG_SYSTEM_PROCESS`\
-指示该过程是一个系统进程。
+指示该过程是系统进程。
 
 `PIFLAG_DEBUGGER_ATTACHED`\
-指示由调试器调试该进程。 可能会[!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]调试器，也可能是一些其他调试器，例如，WinDbg。
+指示调试器正在调试进程。 它可能是调试[!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]器，或者可能是其他调试器，例如 WinDbg。
 
 `PIFLAG_PROCESS_STOPPED`\
-指示该进程已停止。 有效才`PIFLAG_DEBUGGER_ATTACHED`还指定了。 可在 Visual Studio 2005 和更高版本。
+指示进程已停止。 仅在也指定`PIFLAG_DEBUGGER_ATTACHED`时有效。 可在 Visual Studio 2005 及更高版本提供。
 
 `PIFLAG_PROCESS_RUNNING`\
-指示进程正在运行。 有效才`PIFLAG_DEBUGGER_ATTACHED`还指定了。 可在 Visual Studio 2005 和更高版本。
+指示进程正在运行。 仅在也指定`PIFLAG_DEBUGGER_ATTACHED`时有效。 可在 Visual Studio 2005 及更高版本提供。
 
 ## <a name="remarks"></a>备注
 
-用于`Flags`的成员[PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md)结构。
+用于[PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md)结构`Flags`的成员。
 
-可能的按位组合这些标志`OR`。
+这些标志可以稍微结合`OR`。
 
 ## <a name="requirements"></a>要求
 
-标头： msdbg.h
+标题： msdbg.h
 
-命名空间:Microsoft.VisualStudio.Debugger.Interop
+命名空间：微软.VisualStudio.调试器.互通
 
-程序集：Microsoft.VisualStudio.Debugger.Interop.dll
+程序集：微软.VisualStudio.调试器.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 

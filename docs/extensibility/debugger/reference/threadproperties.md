@@ -1,5 +1,5 @@
 ---
-title: THREADPROPERTIES |Microsoft Docs
+title: 线程属性 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - THREADPROPERTIES structure
 ms.assetid: 7d397207-db03-4ec0-9f79-3794056ed89f
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a0e39102fa66c04a15042ffd82086ac66d3058ca
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: bd0ed4e33b1f8e0e905f3c88493c9f513c177fbc
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66316174"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80713420"
 ---
 # <a name="threadproperties"></a>THREADPROPERTIES
-介绍在线程的属性。
+描述线程的属性。
 
 ## <a name="syntax"></a>语法
 
@@ -53,35 +53,35 @@ public struct THREADPROPERTIES { 
 
 ## <a name="members"></a>成员
  `dwFields`\
- 中的标志的组合[THREADPROPERTY_FIELDS](../../../extensibility/debugger/reference/threadproperty-fields.md)描述此结构中的哪些字段有效的枚举。
+ [THREADPROPERTY_FIELDS](../../../extensibility/debugger/reference/threadproperty-fields.md)枚举中的标志的组合，描述此结构中的哪些字段有效。
 
  `dwThreadId`\
- 线程 id。
+ 线程 ID。
 
  `dwSuspendCount`\
- 在线程挂起计数。
+ 线程挂起计数。
 
  `dwThreadState`\
- 中的值[THREADSTATE](../../../extensibility/debugger/reference/threadstate.md)枚举，指示操作系统线程的状态。
+ [来自 THREADSTATE](../../../extensibility/debugger/reference/threadstate.md)枚举的值，指示操作线程的状态。
 
  `bstrPriority`\
- 一个字符串，指定线程的优先级。例如，"高于正常"、"Normal"或者"时间关键"。
+ 指定线程优先级的字符串;字符串例如，"高于正常"、"正常"或"时间关键"。
 
  `bstName`\
  线程名称。
 
  `bstrLocation`\
- 线程位置 （通常最顶层的堆栈帧），通常都表示为当前暂停执行方法的名称。
+ 线程位置（通常是最顶层堆栈帧）通常表示为当前停止执行的方法的名称。
 
 ## <a name="remarks"></a>备注
- 此结构通过调用来填充[GetThreadProperties](../../../extensibility/debugger/reference/idebugthread2-getthreadproperties.md)方法。 因此返回的信息通常用于填充**线程**窗口。
+ 此结构由对[GetThreadProperties](../../../extensibility/debugger/reference/idebugthread2-getthreadproperties.md)方法的调用填充。 返回的信息通常用于填充 **"线程"** 窗口。
 
 ## <a name="requirements"></a>要求
- 标头： msdbg.h
+ 标题： msdbg.h
 
- 命名空间:Microsoft.VisualStudio.Debugger.Interop
+ 命名空间：微软.VisualStudio.调试器.互通
 
- 程序集：Microsoft.VisualStudio.Debugger.Interop.dll
+ 程序集：微软.VisualStudio.调试器.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [结构和联合](../../../extensibility/debugger/reference/structures-and-unions.md)

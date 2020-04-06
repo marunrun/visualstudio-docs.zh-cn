@@ -1,5 +1,5 @@
 ---
-title: IDebugExpression2::EvaluateAsync | Microsoft Docs
+title: IDebugExpression2：：评估同步 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugExpression2::EvaluateAsync
 ms.assetid: 848fe6cb-0759-42f2-890b-d2b551c527d6
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: dd5c0c6c056dc72f3db49a9d666d6f2ba6295791
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 2cd1eba56f8e3c5a1a779acc3330790e9ba2bc96
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66326017"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80729751"
 ---
 # <a name="idebugexpression2evaluateasync"></a>IDebugExpression2::EvaluateAsync
-此方法以异步方式计算的表达式。
+此方法异步计算表达式。
 
 ## <a name="syntax"></a>语法
 
@@ -43,23 +43,23 @@ int EvaluateAsync(
 
 ## <a name="parameters"></a>参数
 `dwFlags`\
-[in]中的标志的组合[EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md)控制表达式求值的枚举。
+[在][EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md)枚举中的标志的组合，用于控制表达式计算。
 
 `pExprCallback`\
-[in]此参数始终是一个 null 值。
+[在]此参数始终为空值。
 
 ## <a name="return-value"></a>返回值
-如果成功，则返回`S_OK`; 否则返回错误代码。 典型的错误代码是：
+如果成功，返回`S_OK`;否则返回错误代码。 典型的错误代码是：
 
-|Error|描述|
+|错误|描述|
 |-----------|-----------------|
-|E_EVALUATE_BUSY_WITH_EVALUATION|当前正在计算另一个表达式，并且不支持同时表达式计算。|
+|E_EVALUATE_BUSY_WITH_EVALUATION|目前正在计算另一个表达式，并且不支持同时计算表达式。|
 
 ## <a name="remarks"></a>备注
-此方法应返回立即启动后将其表达式计算。 当已成功计算表达式时， [IDebugExpressionEvaluationCompleteEvent2](../../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2.md)必须发送到[IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)事件回调提供通过[附加](../../../extensibility/debugger/reference/idebugprogram2-attach.md)或[附加](../../../extensibility/debugger/reference/idebugengine2-attach.md)。
+此方法应在开始表达式计算后立即返回。 成功计算表达式后，必须将[IDebugExpressionExpression 评估完成事件2](../../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2.md)发送到[IDebugEvent 回调2](../../../extensibility/debugger/reference/idebugeventcallback2.md)事件回调，通过[附加](../../../extensibility/debugger/reference/idebugprogram2-attach.md)或[附加](../../../extensibility/debugger/reference/idebugengine2-attach.md)提供。
 
 ## <a name="example"></a>示例
-下面的示例演示如何实现此方法对于简单`CExpression`对象，它实现[IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md)接口。
+下面的示例演示如何实现[IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md)接口的简单`CExpression`对象实现此方法。
 
 ```cpp
 HRESULT CExpression::EvaluateAsync(EVALFLAGS dwFlags,

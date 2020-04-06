@@ -1,5 +1,5 @@
 ---
-title: IDebugParsedExpression::EvaluateSync | Microsoft Docs
+title: IDebugsers表达式：：评估同步 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugParsedExpression::EvaluateSync method
 ms.assetid: 0ea04cfa-de87-4b6c-897e-4572c1a28942
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: aac58831224a6bebadd625dad72177f2aec3fc76
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 1f00b209ff5f91d160e89f5f55ad966fbe9e6414
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66311816"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80726009"
 ---
 # <a name="idebugparsedexpressionevaluatesync"></a>IDebugParsedExpression::EvaluateSync
-此方法分析的表达式的计算结果并根据需要将结果转换为另一种数据类型。
+此方法计算解析的表达式，并选择性地将结果转换为另一种数据类型。
 
 ## <a name="syntax"></a>语法
 
@@ -53,31 +53,31 @@ int EvaluateSync(
 
 ## <a name="parameters"></a>参数
 `dwEvalFlags`\
-[in]组合[EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md)控制如何计算该表达式的常量。
+[在][EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md)常量的组合，用于控制表达式的计算方式。
 
 `dwTimeout`\
-[in]指定以毫秒为单位，此方法返回前等待的最长时间。 使用`INFINITE`无限期等待。
+[在]指定从此方法返回之前等待的最大时间（以毫秒为单位）。 用于`INFINITE`无限期等待。
 
 `pSymbolProvider`\
-[in]符号提供程序，以表示[IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)接口。
+[在]符号提供程序，表示为[IDebugSymbol 提供程序](../../../extensibility/debugger/reference/idebugsymbolprovider.md)接口。
 
 `pAddress`\
-[in]在方法中，以表示当前执行位置[IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md)接口。
+[在]方法中的当前执行位置，表示为[IDebugAddress 接口](../../../extensibility/debugger/reference/idebugaddress.md)。
 
 `pBinder`\
-[in]联编程序，以表示[IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md)接口。
+[在]活页夹，表示为[IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md)接口。
 
 `bstrResultType`\
-[in]应转换结果的类型。 此参数可以为 null 值。
+[在]结果应强制转换为的类型。 此参数可以是 null 值。
 
 `ppResult`\
-[out]返回[IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)表示计算的结果的接口。
+[出]返回表示评估结果的[IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)接口。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，返回`S_OK`;否则，返回错误代码。
 
 ## <a name="remarks"></a>备注
- 由给定表达式的计算上下文`pAddress`，从而无法确定包含方法，然后使用语言范围规则来确定在表达式中的符号的值。
+ 表达式计算上下文由 提供`pAddress`，这样就可以确定包含方法，然后使用语言范围规则来确定表达式中符号的值。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)

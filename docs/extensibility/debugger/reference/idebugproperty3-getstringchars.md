@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty3::GetStringChars |Microsoft Docs
+title: IDebug属性3：：获取字符串字符 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProperty3::GetStringChars
 ms.assetid: 832c37f3-85cb-4227-8ab2-f27a80eafe90
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 16d352ae5397d786c5d77f56a513e9ae2db2d7b3
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 693a29bc30ef206428713ace36275389de1b7f0a
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66348831"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80721080"
 ---
 # <a name="idebugproperty3getstringchars"></a>IDebugProperty3::GetStringChars
-检索与此属性关联的字符串并将其存储在用户提供的缓冲区。
+检索与此属性关联的字符串，并将其存储在用户提供的缓冲区中。
 
 ## <a name="syntax"></a>语法
 
@@ -45,24 +45,24 @@ int GetStringChars(
 
 ## <a name="parameters"></a>参数
 `buflen`\
-[in]用户提供缓冲区可容纳最大字符数。
+[在]用户提供的缓冲区可以保留的最大字符数。
 
 `rgString`\
-[out]返回的字符串。
+[出]返回字符串。
 
- [C++仅]，`rgString`指向该缓冲区用于接收字符串的 Unicode 字符的指针。 此缓冲区必须至少为`buflen`中大小的字符 （而非字节）。
+ [C++仅`rgString`]，是指向接收字符串 Unicode 字符的缓冲区的指针。 此缓冲区的大小必须至少`buflen`为字符（而不是字节）。
 
 `pceltFetched`\
-[out]其中返回的实际存储在缓冲区中的字符数。 (可以是`NULL`在C++。)
+[出]返回缓冲区中实际存储的字符数。 （可在`NULL`C++。
 
 ## <a name="return-value"></a>返回值
-如果成功，则返回`S_OK`; 否则返回错误代码。
+如果成功，返回`S_OK`;否则返回错误代码。
 
 ## <a name="remarks"></a>备注
-在C++，必须格外小心以确保缓冲区至少`buflen`Unicode 字符。 请注意，Unicode 字符 2 个字节长。
+在C++时，必须注意确保缓冲区至少`buflen`为 Unicode 字符长。 请注意，Unicode 字符长 2 字节。
 
 > [!NOTE]
-> 在C++，则返回的字符串不包括终止 null 字符。 如果给定，`pceltFetched`将在字符串中指定的字符数。
+> 在C++，返回的字符串不包括终止空字符。 如果给定，`pceltFetched`将指定字符串中的字符数。
 
 ## <a name="example"></a>示例
 

@@ -1,5 +1,5 @@
 ---
-title: 如何：使用对象管理器注册库 |Microsoft Docs
+title: 如何：向对象管理器注册库 |微软文档
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,36 +9,36 @@ helpviewer_keywords:
 - IVsObjectManager2 interface, registering library with object manager
 - libraries, symbol-browsing tools
 ms.assetid: f124dd05-cb0f-44ad-bb2a-7c0b34ef4038
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7481b9710237bcd1e624b07f8985b5708f271bef
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 4bd1032d2ba67a0c0f3338560a80038ed3215531
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66312055"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80707945"
 ---
-# <a name="how-to-register-a-library-with-the-object-manager"></a>如何：与对象管理器注册库
-符号浏览工具，如**类视图**，**对象浏览器**，**调用浏览器**并**查找符号结果**，可以查看在项目中或在外部组件的符号。 符号包括命名空间、 类、 接口、 方法和其他语言元素。 库跟踪这些符号和公开到[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]对象管理器填充的数据的工具。
+# <a name="how-to-register-a-library-with-the-object-manager"></a>如何：向对象管理器注册库
+符号浏览工具（如**类视图**、**对象浏览器**、**调用浏览器**和**查找符号结果**）使您能够查看项目或外部组件中的符号。 这些符号包括命名空间、类、接口、方法和其他语言元素。 库跟踪这些符号，并将其公开给使用数据填充工具[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]的对象管理器。
 
- 对象管理器跟踪的所有可用的库。 每个库必须注册对象管理器，在符号浏览工具提供符号之前。
+ 对象管理器跟踪所有可用的库。 在提供符号浏览工具的符号之前，每个库都必须向对象管理器注册。
 
- 通常情况下，当加载 VSPackage 时注册库。 但是，它可以在另一个时根据需要。 当 VSPackage 关闭时注销库。
+ 通常，在 VSPackage 加载时注册库。 但是，可以根据需要在另一时间完成。 当 VSPackage 关闭时，您将取消注册库。
 
- 若要注册一个库，请使用<xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.RegisterLibrary%2A>方法。 对于托管的代码库，使用<xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.RegisterSimpleLibrary%2A>方法。
+ 要注册库，请使用 方法<xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.RegisterLibrary%2A>。 对于托管代码库，请使用 方法<xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.RegisterSimpleLibrary%2A>。
 
- 若要取消注册一个库，请使用<xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.UnregisterLibrary%2A>方法。
+ 要取消注册库，请使用 方法<xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.UnregisterLibrary%2A>。
 
- 若要获取对对象管理器，引用<xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2>，传递<xref:Microsoft.VisualStudio.Shell.Interop.SVsObjectManager>服务 ID 到`GetService`方法。
+ 要获取对对象管理器的引用，<xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2>将<xref:Microsoft.VisualStudio.Shell.Interop.SVsObjectManager>服务 ID 传递给`GetService`方法。
 
-## <a name="register-and-unregister-a-library-with-the-object-manager"></a>注册和注销对象管理器库
+## <a name="register-and-unregister-a-library-with-the-object-manager"></a>向对象管理器注册和取消注册库
 
-### <a name="to-register-a-library-with-the-object-manager"></a>若要向对象管理器注册库
+### <a name="to-register-a-library-with-the-object-manager"></a>向对象管理器注册库
 
-1. 创建一个库。
+1. 创建库。
 
     ```vb
     Private m_CallBrowserLibrary As CallBrowser.Library = Nothing
@@ -55,7 +55,7 @@ ms.locfileid: "66312055"
 
     ```
 
-2. 获取对的对象的引用<xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2>类型并调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.RegisterSimpleLibrary%2A>方法。
+2. 获取对<xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2>类型对象的引用，并调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.RegisterSimpleLibrary%2A>方法。
 
     ```vb
     Private Sub RegisterLibrary()
@@ -109,9 +109,9 @@ ms.locfileid: "66312055"
 
     ```
 
-### <a name="to-unregister-a-library-with-the-object-manager"></a>若要注销的对象管理器库
+### <a name="to-unregister-a-library-with-the-object-manager"></a>向对象管理器取消注册库
 
-1. 获取对的对象的引用<xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2>类型并调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.UnregisterLibrary%2A>方法。
+1. 获取对<xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2>类型对象的引用，并调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.UnregisterLibrary%2A>方法。
 
     ```vb
     Private Sub UnregisterLibrary()
@@ -165,6 +165,6 @@ ms.locfileid: "66312055"
     ```
 
 ## <a name="see-also"></a>请参阅
-- [旧版语言服务扩展性](../../extensibility/internals/legacy-language-service-extensibility.md)
+- [传统语言服务可扩展性](../../extensibility/internals/legacy-language-service-extensibility.md)
 - [支持符号浏览工具](../../extensibility/internals/supporting-symbol-browsing-tools.md)
-- [如何：公开库提供对对象管理器的符号列表](../../extensibility/internals/how-to-expose-lists-of-symbols-provided-by-the-library-to-the-object-manager.md)
+- [如何：向对象管理器公开库提供的符号列表](../../extensibility/internals/how-to-expose-lists-of-symbols-provided-by-the-library-to-the-object-manager.md)

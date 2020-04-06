@@ -1,28 +1,28 @@
 ---
-title: IDebugComPlusSymbolProvider::LoadSymbolsFromStream | Microsoft Docs
+title: IDebugComPlus符号提供商：：从流加载符号 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IDebugComPlusSymbolProvider::LoadSymbolsFromStream
 - LoadSymbolsFromStream
 ms.assetid: 1de272f0-24f4-4548-8b70-a205cddd4727
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 10b7eb21bd075e27aebb2b96e07b88363bc0f862
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: d208f8ce04e884c9dfb3b8b272271e686e3b2762
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66352790"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80733622"
 ---
 # <a name="idebugcomplussymbolproviderloadsymbolsfromstream"></a>IDebugComPlusSymbolProvider::LoadSymbolsFromStream
-加载调试符号提供数据流。
+加载给定数据流的调试符号。
 
 ## <a name="syntax"></a>语法
 
@@ -48,25 +48,25 @@ int LoadSymbolsFromStream(
 
 ## <a name="parameters"></a>参数
 `ulAppDomainID`\
-[in]应用程序域的标识符。
+[在]应用程序域的标识符。
 
 `guidModule`\
-[in]该模块的唯一标识符。
+[在]模块的唯一标识符。
 
 `baseAddress`\
-[in]基本的内存地址。
+[在]基本内存地址。
 
 `pUnkMetadataImport`\
-[in]包含符号元数据的对象。
+[在]包含符号元数据的对象。
 
 `pStream`\
-[in]包含的符号的数据流。
+[在]包含符号的数据流。
 
 ## <a name="return-value"></a>返回值
-如果成功，则返回`S_OK`; 否则为返回错误代码。
+如果成功，返回`S_OK`;否则，返回错误代码。
 
 ## <a name="example"></a>示例
-下面的示例演示如何实现此方法对于**CDebugSymbolProvider**对象，它公开[IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)接口。 方法调用[LoadSymbolsFromStreamWithCorModule](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2-loadsymbolsfromstreamwithcormodule.md)方法。
+下面的示例演示如何为公开[IDebugComPlusSymbol提供程序](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)接口的**CDebugSymbol提供程序**对象实现此方法。 该方法调用[来自流与科模块的加载符号](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2-loadsymbolsfromstreamwithcormodule.md)方法。
 
 ```cpp
 HRESULT CDebugSymbolProvider::LoadSymbolsFromStream(
