@@ -1,5 +1,5 @@
 ---
-title: IDebugObject2 | Microsoft Docs
+title: IDebugObject2 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugObject2 interface
 ms.assetid: ef640967-8adb-4793-994d-ae1736510891
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d3f027fd08c38433d5f1357e56d90df96e223854
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: e468b5a282ffb5466d57a3c9b1a37aa3ae8643ed
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66317252"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80726072"
 ---
 # <a name="idebugobject2"></a>IDebugObject2
 > [!IMPORTANT]
-> 在 Visual Studio 2015 中，这种方式实现表达式计算器已弃用。 有关实现 CLR 表达式计算器的信息，请参阅[CLR 表达式计算器](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators)并[托管表达式计算器示例](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)。
+> 在 Visual Studio 2015 中，这种实现表达式赋值器的方式被弃用。 有关实现 CLR 表达式赋值器的信息，请参阅[CLR 表达式赋值器](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators)和[托管表达式赋值器示例](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)。
 
- 此接口提供的对象有关的其他信息。
+ 此接口提供有关对象的其他信息。
 
 ## <a name="syntax"></a>语法
 
@@ -31,37 +31,37 @@ ms.locfileid: "66317252"
 IDebugObject2 : IDebugObject
 ```
 
-## <a name="notes-for-implementers"></a>实施者的说明
- 表达式计算器实现此接口以提供支持的别名和访问对象有关的信息。
+## <a name="notes-for-implementers"></a>实施者说明
+ 表达式赋值器实现此接口，以支持别名和对对象信息的访问。
 
-## <a name="notes-for-callers"></a>调用方的说明
- [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)接口可以获取此接口通过[QueryInterface](/cpp/atl/queryinterface)。 此外， [GetObject](../../../extensibility/debugger/reference/idebugalias-getobject.md)返回此接口。
+## <a name="notes-for-callers"></a>呼叫者备注
+ [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)接口可以使用[查询接口](/cpp/atl/queryinterface)获取此接口。 此外[，GetObject](../../../extensibility/debugger/reference/idebugalias-getobject.md)返回此接口。
 
-## <a name="methods-in-vtable-order"></a>Vtable 顺序中的方法
- 除了上的方法[IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)接口，`IDebugObject2`接口实现了以下：
+## <a name="methods-in-vtable-order"></a>按 Vtable 顺序排列的方法
+ 除了[IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)接口上的方法外，`IDebugObject2`该接口还实现了以下功能：
 
 |方法|描述|
 |------------|-----------------|
-|[GetBackingFieldForProperty](../../../extensibility/debugger/reference/idebugobject2-getbackingfieldforproperty.md)|获取字段或变量 （如果有），可能会支持此对象表示的属性。|
-|[GetICorDebugValue](../../../extensibility/debugger/reference/idebugobject2-geticordebugvalue.md)|获取表示此对象的值的托管的代码对象。|
-|[CreateAlias](../../../extensibility/debugger/reference/idebugobject2-createalias.md)|创建此对象的唯一 ID，或返回现有别名。|
-|[GetAlias](../../../extensibility/debugger/reference/idebugobject2-getalias.md)|如果有，获取与此对象相关联的别名。|
+|[GetBackingFieldForProperty](../../../extensibility/debugger/reference/idebugobject2-getbackingfieldforproperty.md)|获取可能支持此对象表示的属性的字段或变量（如果有）。|
+|[GetICorDebugValue](../../../extensibility/debugger/reference/idebugobject2-geticordebugvalue.md)|获取表示此对象值的托管代码对象。|
+|[CreateAlias](../../../extensibility/debugger/reference/idebugobject2-createalias.md)|为此对象创建唯一 ID 或返回现有别名。|
+|[获取别名](../../../extensibility/debugger/reference/idebugobject2-getalias.md)|获取与此对象关联的别名（如果有）。|
 |[GetField](../../../extensibility/debugger/reference/idebugobject2-getfield.md)|获取此对象的类型。|
 |[IsUserData](../../../extensibility/debugger/reference/idebugobject2-isuserdata.md)|确定此对象是否表示用户数据。|
-|[IsEncOutdated](../../../extensibility/debugger/reference/idebugobject2-isencoutdated.md)|确定是否编辑并继续状态将不再有效。<br /><br /> 自定义表达式计算器不实现此方法 (它应始终返回`E_NOTIMPL`)。|
+|[IsEncOutdated](../../../extensibility/debugger/reference/idebugobject2-isencoutdated.md)|确定"编辑"和"继续"状态是否不再有效。<br /><br /> 自定义表达式赋值器不实现此方法（应始终返回`E_NOTIMPL`）。|
 
 ## <a name="remarks"></a>备注
- 请参阅[IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md)有关别名的讨论。
+ 有关别名的讨论，请参阅[IDebugAlias。](../../../extensibility/debugger/reference/idebugalias.md)
 
 ## <a name="requirements"></a>要求
- 标头： ee.h
+ 标题： ee.h
 
- 命名空间:Microsoft.VisualStudio.Debugger.Interop
+ 命名空间：微软.VisualStudio.调试器.互通
 
- 程序集：Microsoft.VisualStudio.Debugger.Interop.dll
+ 程序集：微软.VisualStudio.调试器.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [表达式计算接口](../../../extensibility/debugger/reference/expression-evaluation-interfaces.md)
 - [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)
 - [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md)
-- [GetObject](../../../extensibility/debugger/reference/idebugalias-getobject.md)
+- [获取对象](../../../extensibility/debugger/reference/idebugalias-getobject.md)

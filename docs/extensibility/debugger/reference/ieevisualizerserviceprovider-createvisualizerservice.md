@@ -1,5 +1,5 @@
 ---
-title: IEEVisualizerServiceProvider::CreateVisualizerService | Microsoft Docs
+title: IEE可视化服务提供商：：创建可视化服务 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IEEVisualizerServiceProvider::CreateVisualizerService method
 ms.assetid: f366f7c9-358d-46c8-993f-32ff86539833
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 20a8180283e596eeb9dd4ee1391e6e8fe6666829
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: e05677122b7d4e4eb025a9382ede1509374de894
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66310165"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80717918"
 ---
 # <a name="ieevisualizerserviceprovidercreatevisualizerservice"></a>IEEVisualizerServiceProvider::CreateVisualizerService
 此方法创建可视化工具服务。
@@ -49,25 +49,25 @@ int CreateVisualizerService(
 
 ## <a name="parameters"></a>参数
 `binder`\
-[in][IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md)对象传递给[EvaluateSync](../../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md)。
+[在][IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md)对象传递给[评估同步](../../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md)。
 
 `pSymProv`\
-[in][IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)对象传递给`IDebugParsedExpression::EvaluateSync`。
+[在]传递给 的[IDebugSymbol](../../../extensibility/debugger/reference/idebugsymbolprovider.md) `IDebugParsedExpression::EvaluateSync`提供程序对象。
 
 `pAddress`\
-[in][IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md)对象传递给`IDebugParsedExression::EvaluateSync`。
+[在]传递给[的 IDebug](../../../extensibility/debugger/reference/idebugaddress.md) `IDebugParsedExression::EvaluateSync`地址对象。
 
 `dataProvider`\
-[in]一个对象，实现[IEEVisualizerDataProvider](../../../extensibility/debugger/reference/ieevisualizerdataprovider.md)接口 （由表达式计算器提供）。
+[在]实现[IEEVisualizerDataProvider 接口](../../../extensibility/debugger/reference/ieevisualizerdataprovider.md)的对象（由表达式赋值器提供）。
 
 `ppService`\
-[out]已创建的服务。
+[出]创建的服务。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，返回`S_OK`;否则，返回错误代码。
 
 ## <a name="remarks"></a>备注
- `binder`， `pSymProv`，并`pAddress`参数已传递给`IDebugParsedExpression::EvaluateSync`方法。 `CreateVisualizerService` 是仅从调用`IDebugParsedExpression::EvaluateSync`作为类型可视化工具的表达式计算器支持的一部分。
+ 和`binder``pSymProv``pAddress`参数都传递给方法`IDebugParsedExpression::EvaluateSync`。 `CreateVisualizerService`仅从`IDebugParsedExpression::EvaluateSync`表达式评估器对类型可视化器的支持调用。
 
 ## <a name="see-also"></a>请参阅
 - [IEEVisualizerServiceProvider](../../../extensibility/debugger/reference/ieevisualizerserviceprovider.md)

@@ -1,5 +1,5 @@
 ---
-title: Assembly 元素 （Visual Studio 模板向导扩展） |Microsoft Docs
+title: 程序集元素（可视化工作室模板向导扩展） |微软文档
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -9,22 +9,22 @@ helpviewer_keywords:
 - Assembly element [Visual Studio Template Wizard Extension]
 - <Assembly> element [Visual Studio Template Wizard Extension]
 ms.assetid: 0c3dc280-1753-4ea2-a13c-d31d13b935b2
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 68fb795005f1f653893147f7013117112f803211
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 43f5adb8abc17f0509fb58263f307e5051af85dc
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66352223"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80740061"
 ---
-# <a name="assembly-element-visual-studio-template-wizard-extension"></a>Assembly 元素 （Visual Studio 模板向导扩展）
-指定的名称或实现的程序集的强名称`IWizard`接口。
+# <a name="assembly-element-visual-studio-template-wizard-extension"></a>程序集元素（可视化工作室模板向导扩展）
+指定实现`IWizard`接口的程序集的名称或强名称。
 
- \<VSTemplate > \<WizardExtension >\<程序集 >
+ \<VStemplate>\<向导扩展>\<程序集>
 
 ## <a name="syntax"></a>语法
 
@@ -50,13 +50,13 @@ ms.locfileid: "66352223"
 ## <a name="text-value"></a>文本值
  需要一个文本值。
 
- 此文本指定实现的程序集`IWizard`接口。 此程序集名称必须指定为完整的程序集名称。 例如 `MyAssembly, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11dd0a3a, Custom = null`。
+ 此文本指定实现接口的`IWizard`程序集。 必须指定此程序集名称为完整程序集名称。 例如，`MyAssembly, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11dd0a3a, Custom = null` 。
 
 ## <a name="remarks"></a>备注
  `Assembly` 是 `WizardExtension` 的必需子元素。
 
 ## <a name="example"></a>示例
- 下面的示例演示的标准项目模板的元数据[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]Windows 应用程序。
+ 下面的示例演示了[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]Windows 应用程序的标准项目模板的元数据。
 
 ```xml
 <VSTemplate Version="3.0.0" Type="Item"
@@ -88,6 +88,6 @@ ms.locfileid: "66352223"
 
 ## <a name="see-also"></a>请参阅
 
-- [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
+- [可视化工作室模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
 - [创建项目和项模板](../ide/creating-project-and-item-templates.md)
-- [如何：使用向导来处理项目模板](../extensibility/how-to-use-wizards-with-project-templates.md)
+- [如何：将向导与项目模板一起使用](../extensibility/how-to-use-wizards-with-project-templates.md)

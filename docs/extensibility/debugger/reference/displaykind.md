@@ -1,27 +1,27 @@
 ---
-title: DisplayKind |Microsoft Docs
+title: 显示金德 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - DisplayKind enumeration
 ms.assetid: 940968c5-6065-4bda-8ee6-c31597db4d71
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 8c15726a3725b756e646e73804643f6b1ab36374
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: f7634ae3ee03b7e577f0621ffc263e4d45bfe194
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66318269"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80737261"
 ---
 # <a name="displaykind"></a>DisplayKind
-枚举表示类型的信息，以便让从有效值[IDebugField](../../../extensibility/debugger/reference/idebugfield.md)对象，并向用户显示。
+枚举表示要从[IDebugField](../../../extensibility/debugger/reference/idebugfield.md)对象获取的信息类型并显示给用户的有效值。
 
 ## <a name="syntax"></a>语法
 
@@ -55,11 +55,11 @@ public enum enum_DisplayKind
 字段的类型。
 
 ## <a name="requirements"></a>要求
-标头：Ee.h
+标题： Ee.h
 
-命名空间:Microsoft.VisualStudio.Debugger.Interop
+命名空间：微软.VisualStudio.调试器.互通
 
-程序集：Microsoft.VisualStudio.Debugger.Interop.dll
+程序集：微软.VisualStudio.调试器.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [枚举](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

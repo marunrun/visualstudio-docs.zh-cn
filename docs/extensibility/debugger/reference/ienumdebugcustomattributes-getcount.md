@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugCustomAttributes::GetCount |Microsoft Docs
+title: IEnum调试自定义属性：：获取计数 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IEnumDebugCustomAttributes::GetCount
 ms.assetid: fafe826f-4ebf-4572-b2a3-d5dd2916c12f
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: cfa138b31d78ad9035ba3ff2bd752d2f27243630
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 5c06ddf3d87c88003ad227edfbe3437a342667b2
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66324356"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80717252"
 ---
 # <a name="ienumdebugcustomattributesgetcount"></a>IEnumDebugCustomAttributes::GetCount
-获取一个枚举器中的自定义属性的数目。
+获取枚举器中的自定义属性数。
 
 ## <a name="syntax"></a>语法
 
@@ -41,13 +41,13 @@ int GetCount(
 
 ## <a name="parameters"></a>参数
 `pcelt`\
-[out]枚举中返回元素的数。
+[出]返回枚举中的元素数。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，返回`S_OK`;否则，返回错误代码。
 
 ## <a name="remarks"></a>备注
- 此方法不是惯用的 COM 枚举接口，只有指定的一部分`Next`， `Clone`， `Skip`，和`Reset`需要实现。
+ 此方法不是习惯性 COM 枚举接口的一部分，该接口指定`Next`仅`Clone`实现`Skip`、`Reset`和 需要实现。
 
 ## <a name="see-also"></a>请参阅
 - [IEnumDebugCustomAttributes](../../../extensibility/debugger/reference/ienumdebugcustomattributes.md)

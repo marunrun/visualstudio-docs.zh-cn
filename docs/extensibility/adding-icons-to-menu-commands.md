@@ -1,5 +1,5 @@
 ---
-title: 将图标添加到菜单命令 |Microsoft Docs
+title: 向菜单命令添加图标 |微软文档
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,44 +7,44 @@ helpviewer_keywords:
 - toolbars [Visual Studio], adding icons to commands
 - commands [Visual Studio], adding icons
 ms.assetid: 362a0c7e-5729-4297-a83f-1aba1a37fd44
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d1c54ee6b448e5830b478f10029a0d2d958e7699
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: f4b71f981472451766f526cf62e975e571cf46da
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66352364"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80740154"
 ---
-# <a name="add-icons-to-menu-commands"></a>将图标添加到菜单命令
-命令可出现在菜单和工具栏。 在工具栏上很常见的命令将使用只是一个图标 （为节省空间） 时菜单上显示命令通常显示带图标和文本。
+# <a name="add-icons-to-menu-commands"></a>向菜单命令添加图标
+命令可以同时出现在菜单和工具栏上。 在工具栏上，通常只显示一个图标（以节省空间）的命令，而在菜单上，命令通常同时显示一个图标和文本。
 
- 图标是 16 像素宽乘 16 像素高和可以是 8 位颜色深度 （256 色） 或 32 位颜色深度 （真彩色）。 首选 32 位颜色图标。 通常在单个位图中的单个水平行中排列图标，尽管允许多个位图。 在中声明此位图 *.vsct*文件和单个图标位图中可用。 请参阅参考[Bitmaps 元素](../extensibility/bitmaps-element.md)的更多详细信息。
+ 图标宽 16 像素 x 16 像素高，可以是 8 位颜色深度（256 种颜色）或 32 位颜色深度（真色）。 32 位颜色图标优先。 图标通常排列在单个位图中的单个水平行中，尽管允许多个位图。 此位图在 *.vsct*文件中声明，以及位图中可用的单个图标。 有关详细信息，请参阅[Bitmap 元素](../extensibility/bitmaps-element.md)的引用。
 
-## <a name="add-an-icon-to-a-command"></a>将图标添加到命令
- 以下过程假设你拥有现有 VSPackage 项目与菜单命令。 若要了解如何执行此操作，请参阅[与菜单命令创建扩展](../extensibility/creating-an-extension-with-a-menu-command.md)。
+## <a name="add-an-icon-to-a-command"></a>向命令添加图标
+ 以下过程假定您具有具有菜单命令的现有 VSPackage 项目。 要了解如何执行此操作，请参阅[使用菜单命令创建扩展](../extensibility/creating-an-extension-with-a-menu-command.md)。
 
-1. 使用的颜色深度为 32 位创建位图。 图标始终是 16 x 16，因此此位图必须为 16 像素高和宽为 16 像素的倍数。
+1. 创建颜色深度为 32 位的位图。 图标始终为 16 x 16，因此此位图必须高 16 像素，并且倍数为 16 像素宽。
 
-     每个图标放置在单个行中彼此位图上。 使用 alpha 通道来指示位置中的每个图标的透明度。
+     每个图标都放在一行的位图上。 使用 alpha 通道指示每个图标中的透明度位置。
 
-     如果使用 8 位颜色深度，使用洋红`RGB(255,0,255)`的透明度。 但是，最好是 32 位颜色图标。
+     如果使用 8 位颜色深度，请使用品红色`RGB(255,0,255)`作为透明度。 但是，32 位颜色图标是首选。
 
-2. 将图标文件复制到*资源*目录 VSPackage 项目中。 在中**解决方案资源管理器**，将图标添加到项目。 (选择**资源**，并在上下文菜单中单击**添加**，然后**现有项**，并选择图标文件。)
+2. 将图标文件复制到 VSPackage 项目中的 *"资源"* 目录。 在**解决方案资源管理器**中，将图标添加到项目中。 （选择 **"资源**"，并在上下文菜单上单击"**添加**"，然后"**添加现有项目**"，然后选择图标文件。
 
-3. 打开 *.vsct*在编辑器中的文件。
+3. 打开编辑器中的 *.vsct*文件。
 
-4. 添加`GuidSymbol`具有的名称元素**testIcon**。 创建 GUID (**工具** > **创建 GUID**，然后选择**注册表格式**然后单击**复制**) 并将其粘贴到`value`属性。 结果应如下所示：
+4. 添加名称`GuidSymbol`为**testIcon**的元素。 创建 GUID（**工具** > **创建 GUID**，然后选择**注册表格式**，然后单击 **"复制**"），并将其粘贴`value`到属性中。 结果应如下所示：
 
     ```xml
     <!-- Create your own GUID -->
     <GuidSymbol name="testIcon" value="{00000000-0000-0000-0000-0000}">
     ```
 
-5. 添加`<IDSymbol>`图标。 `name`属性是图标的 ID 和`value`指示上条带，其位置。 如果只是一个图标，将添加 1。 结果应如下所示：
+5. 为图标`<IDSymbol>`添加 a。 属性`name`是图标的 ID，指示`value`其在条带上的位置（如果有）。 如果只有一个图标，则添加 1。 结果应如下所示：
 
     ```xml
     <!-- Create your own GUID -->
@@ -53,13 +53,13 @@ ms.locfileid: "66352364"
     </GuidSymbol>
     ```
 
-6. 创建`<Bitmap>`中`<Bitmaps>`一部分 *.vsct*文件来表示包含图标的位图。
+6. 在`<Bitmap>``<Bitmaps>`*.vsct*文件部分中创建 一个，以表示包含图标的位图。
 
-    - 设置`guid`值的名称与`<GuidSymbol>`在上一步中创建的元素。
+    - 将`guid`值设置为在上一步骤中`<GuidSymbol>`创建的元素的名称。
 
-    - 设置`href`位图文件的相对路径的值 (在这种情况下**资源\\< 图标文件名\>** 。
+    - 将`href`值设置为位图文件的相对路径（在本例中 **，资源\\<\>图标文件名**。
 
-    - 设置`usedList`IDSymbol 前面创建的值。 此属性指定要在 VSPackage 中使用的图标的以逗号分隔列表。 不在列表的图标是排除窗体编译。
+    - 将`usedList`该值设置为您之前创建的 IDSymbol。 此属性指定要在 VSPackage 中使用的图标的逗号分隔列表。 列表中未显示的图标将排除表单编译。
 
          位图块应如下所示：
 
@@ -67,7 +67,7 @@ ms.locfileid: "66352364"
         <Bitmap guid="testIcon" href="Resources\<icon file name>" usedList="testIcon1"/>
         ```
 
-7. 中的现有`<Button>`元素中，设置`Icon`到前面创建的 GUIDSymbol 和 IDSymbol 值的元素。 下面是使用这些值的 Button 元素示例：
+7. 在现有`<Button>`元素中，将`Icon`元素设置为您之前创建的 GUIDSymbol 和 IDSymbol 值。 下面是具有这些值的 Button 元素的示例：
 
     ```xml
     <Button guid="guidAddIconCmdSet" id="cmdidMyCommand" priority="0x0100" type="Button">
@@ -79,8 +79,8 @@ ms.locfileid: "66352364"
     </Button>
     ```
 
-8. 测试您的图标。 生成项目并启动调试。 在实验实例中，找到的命令。 它应显示该图标已添加。
+8. 测试图标。 生成项目并启动调试。 在实验实例中，找到命令。 它应显示您添加的图标。
 
 ## <a name="see-also"></a>请参阅
 - [扩展菜单和命令](../extensibility/extending-menus-and-commands.md)
-- [VSCT XML 架构参考](../extensibility/vsct-xml-schema-reference.md)
+- [VSCT XML 架构引用](../extensibility/vsct-xml-schema-reference.md)

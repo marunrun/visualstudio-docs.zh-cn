@@ -1,5 +1,5 @@
 ---
-title: IDebugThread2::EnumFrameInfo | Microsoft Docs
+title: IDebugThread2：：枚举信息 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugThread2::EnumFrameInfo
 ms.assetid: 17914a71-10ea-4b6f-8982-e364f87dca53
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: fad77ca1d649e7ffdda02c7145dc11666619f232
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 8bd3c6d46a577930cc7a2b87c85cd82a55f8cf66
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66320318"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80718863"
 ---
 # <a name="idebugthread2enumframeinfo"></a>IDebugThread2::EnumFrameInfo
 检索此线程的堆栈帧的列表。
@@ -45,19 +45,19 @@ int EnumFrameInfo ( 
 
 ## <a name="parameters"></a>参数
 `dwFieldSpec`\
-[in]中的标志的组合[FRAMEINFO_FLAGS](../../../extensibility/debugger/reference/frameinfo-flags.md)枚举，用于指定的哪些字段[FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md)结构是要填写。指定`FIF_FUNCNAME_FORMAT`标志设置为一个字符串的格式的函数名称。
+[在][FRAMEINFO_FLAGS](../../../extensibility/debugger/reference/frameinfo-flags.md)枚举中的标志的组合，指定要填充[FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md)结构的字段。指定标志`FIF_FUNCNAME_FORMAT`以将函数名称格式化为单个字符串。
 
 `nRadix`\
-[in]设置格式的枚举数中的数字信息时使用的基数。
+[在]用于格式化枚举器中的数字信息的 Radix。
 
 `ppEnum`\
-[out]返回[IEnumDebugFrameInfo2](../../../extensibility/debugger/reference/ienumdebugframeinfo2.md)对象，其中包含一系列[FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md)结构描述的堆栈帧。
+[出]返回[IEnumDebugFrameInfo2](../../../extensibility/debugger/reference/ienumdebugframeinfo2.md)对象，该对象包含描述堆栈帧的[FRAME 信息](../../../extensibility/debugger/reference/frameinfo.md)结构列表。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，返回`S_OK`;否则，返回错误代码。
 
 ## <a name="remarks"></a>备注
- 使用第一次枚举的当前帧和上一次枚举的最早帧中顺序，列举了线程的帧。
+ 线程的帧按顺序枚举，当前帧首先枚举，最旧帧最后枚举。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)

@@ -1,5 +1,5 @@
 ---
-title: 断点错误 |Microsoft Docs
+title: 断点错误 |微软文档
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,30 +7,30 @@ helpviewer_keywords:
 - debugging [Debugging SDK], breakpoint errors
 - errors [Debugging SDK]
 ms.assetid: 79221c6b-a924-4c8e-a778-e312e4e0c0c8
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 31eabde4ae19ae7342188a5d2a16374b9c94afc0
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 0766792f19faf7c1933c6576ab41f65ec1b31ae9
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66332547"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80739215"
 ---
 # <a name="breakpoint-errors"></a>断点错误
-以下介绍的过程，当尝试绑定到代码断点，但会失败。
+当断点尝试绑定到代码但失败时，下面描述了该过程。
 
-## <a name="troubleshoot-a-breakpoint-error"></a>断点错误进行故障排除
+## <a name="troubleshoot-a-breakpoint-error"></a>排除断点错误
 
-1. 调试引擎 (DE) 将发送[IDebugBreakpointErrorEvent2](../../extensibility/debugger/reference/idebugbreakpointerrorevent2.md)会话调试管理器 (SDM)。
+1. 调试引擎 （DE） 向会话调试管理器 （SDM） 发送[IDebugBreakpointErrorEvent2。](../../extensibility/debugger/reference/idebugbreakpointerrorevent2.md)
 
-2. SDM 调用[IDebugBreakpointErrorEvent2::GetErrorBreakpoint](../../extensibility/debugger/reference/idebugbreakpointerrorevent2-geterrorbreakpoint.md) (IDebugErrorBreakpoint2 * * `ppErrorBP`) 若要获取错误断点。
+2. SDM 调用[IDebugBreakpointErrorEvent2：：获取错误断点](../../extensibility/debugger/reference/idebugbreakpointerrorevent2-geterrorbreakpoint.md)（IDebugErrorBreakpoint2+）`ppErrorBP`以获取错误断点。
 
-3. SDM 调用[IDebugErrorBreakpoint2::GetPendingBreakpoint](../../extensibility/debugger/reference/idebugerrorbreakpoint2-getpendingbreakpoint.md)获取挂起断点错误断点的起源。
+3. SDM 调用[IDebugError 断点2：：获取待定断点](../../extensibility/debugger/reference/idebugerrorbreakpoint2-getpendingbreakpoint.md)以获取错误断点源自的挂起断点。
 
-4. SDM 调用[IDebugErrorBreakpoint2::GetBreakpointResolution](../../extensibility/debugger/reference/idebugerrorbreakpoint2-getbreakpointresolution.md)获取错误断点绑定失败的原因的原因。
+4. SDM 调用[IDebugErrorBreakpoint2：：获取断点解析](../../extensibility/debugger/reference/idebugerrorbreakpoint2-getbreakpointresolution.md)，以获取有关错误断点未能绑定的原因。
 
 ## <a name="see-also"></a>请参阅
 - [调用调试器事件](../../extensibility/debugger/calling-debugger-events.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugCustomAttributeQuery2 | Microsoft Docs
+title: IDebug自定义属性查询2 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - IDebugCustomAttributeQuery interface
 - IDebugCustomAttributeQuery2 interface
 ms.assetid: 7cfa23e4-a05a-47a3-af6c-bd40c655014b
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 00220574ac9c16bdab9abd64adde1877ee0fd9f2
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 6fe3969002c64ab361de76012c432e2bb5c61b5c
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66335805"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80732486"
 ---
 # <a name="idebugcustomattributequery2"></a>IDebugCustomAttributeQuery2
-确定存在此字段的自定义属性，并且如果存在，将返回属性信息。
+确定此字段的自定义属性的存在，如果存在，则返回属性信息。
 
 ## <a name="syntax"></a>语法
 
@@ -29,35 +29,35 @@ ms.locfileid: "66335805"
 IDebugCustomAttributeQuery2 : IDebugCustomAttributeQuery
 ```
 
-## <a name="notes-for-implementers"></a>实施者的说明
- 符号提供程序实现此接口上实现的相同对象[IDebugField](../../../extensibility/debugger/reference/idebugfield.md)以支持自定义属性。
+## <a name="notes-for-implementers"></a>实施者说明
+ 符号提供程序在实现[IDebugField](../../../extensibility/debugger/reference/idebugfield.md)的同一对象上实现此接口，以支持自定义属性。
 
-## <a name="notes-for-callers"></a>调用方的说明
- 使用[QueryInterface](/cpp/atl/queryinterface)若要获取此接口从[IDebugField](../../../extensibility/debugger/reference/idebugfield.md)接口。
+## <a name="notes-for-callers"></a>呼叫者备注
+ 使用[查询接口](/cpp/atl/queryinterface)从[IDebugField](../../../extensibility/debugger/reference/idebugfield.md)接口获取此接口。
 
 ## <a name="methods-in-vtable-order"></a>Vtable 顺序中的方法
- 下表显示的方法**IDebugCustomAttributeQuery**接口。
+ 下表显示了**IDebugCustom属性查询**接口的方法。
 
 |方法|描述|
 |------------|-----------------|
-|[IsCustomAttributeDefined](../../../extensibility/debugger/reference/idebugcustomattributequery2-iscustomattributedefined.md)|确定名称是否存在自定义属性。|
-|[GetCustomAttributeByName](../../../extensibility/debugger/reference/idebugcustomattributequery2-getcustomattributebyname.md)|获取给定的自定义特性的属性信息。|
+|[IsCustomAttributeDefined](../../../extensibility/debugger/reference/idebugcustomattributequery2-iscustomattributedefined.md)|确定自定义属性是否存在名称。|
+|[GetCustomAttributeByName](../../../extensibility/debugger/reference/idebugcustomattributequery2-getcustomattributebyname.md)|获取给定自定义属性的属性信息。|
 
- 除了**IDebugCustomAttributeQuery**方法，`IDebugCustomAttributeQuery2`实现以下方法：
+ 除了**IDebugCustom属性查询**方法之外，`IDebugCustomAttributeQuery2`实现以下方法：
 
 |方法|描述|
 |------------|-----------------|
 |[EnumCustomAttributes](../../../extensibility/debugger/reference/idebugcustomattributequery2-enumcustomattributes.md)|获取附加到此字段的所有自定义属性的枚举器。|
 
 ## <a name="remarks"></a>备注
- [IEnumDebugCustomAttributes](../../../extensibility/debugger/reference/ienumdebugcustomattributes.md)方法可返回为此字段定义的所有自定义属性的枚举器。
+ [IEnumDebugCustomAttributes](../../../extensibility/debugger/reference/ienumdebugcustomattributes.md)方法可以为此字段定义的所有自定义属性返回枚举器。
 
 ## <a name="requirements"></a>要求
- 标头： sh.h
+ 标题： sh.h
 
- 命名空间:Microsoft.VisualStudio.Debugger.Interop
+ 命名空间：微软.VisualStudio.调试器.互通
 
- 程序集：Microsoft.VisualStudio.Debugger.Interop.dll
+ 程序集：微软.VisualStudio.调试器.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [符号提供程序接口](../../../extensibility/debugger/reference/symbol-provider-interfaces.md)

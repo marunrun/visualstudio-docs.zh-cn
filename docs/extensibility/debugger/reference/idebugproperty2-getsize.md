@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty2::GetSize |Microsoft Docs
+title: IDebug属性2：：获取大小 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProperty2::GetSize
 ms.assetid: 0deb8ec5-d6fb-4622-bb14-0c46b9459cc6
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: b76a6a563a4a9ecd63c81c897a1ba21b3a977b80
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 3f57a742bae0217493d8869b257e4a17839e4e14
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66314660"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80721332"
 ---
 # <a name="idebugproperty2getsize"></a>IDebugProperty2::GetSize
-获取的大小，以字节为单位的属性值。
+获取属性值的大小（以字节为单位）。
 
 ## <a name="syntax"></a>语法
 
@@ -41,10 +41,10 @@ int GetSize ( 
 
 ## <a name="parameters"></a>参数
 `pdwSize`\
-[out]返回的大小，以字节为单位的属性值。
+[出]返回属性值的大小（以字节为单位）。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则返回错误代码。 返回`S_GETSIZE_NO_SIZE`如果属性没有大小。
+ 如果成功，返回`S_OK`;否则返回错误代码。 如果`S_GETSIZE_NO_SIZE`属性没有大小，则返回。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)

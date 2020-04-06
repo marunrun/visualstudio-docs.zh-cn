@@ -1,5 +1,5 @@
 ---
-title: IDebugEventCallback2::Event | Microsoft Docs
+title: IDebugEvent回拨2：：事件 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugEventCallback2::Event
 ms.assetid: e5a3345b-d460-4e40-8f5b-3111c56a2ed9
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 5def4a2bf9ae748fee9563b7845807ba1b0acd71
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 0b60c09b21d531326e343dddd2f1cc69cfb0e5d2
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66327569"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80729898"
 ---
 # <a name="idebugeventcallback2event"></a>IDebugEventCallback2::Event
-发送通知的调试事件。
+发送调试事件通知。
 
 ## <a name="syntax"></a>语法
 
@@ -53,33 +53,33 @@ int Event( 
 
 ## <a name="parameters"></a>参数
 `pEngine`\
-[in][IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)对象，表示发送此事件的调试引擎 (DE)。 DE 需要填写此参数。
+[在]表示发送此事件的调试引擎 （DE） 的[IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)对象。 需要 DE 来填写此参数。
 
 `pProcess`\
-[in][IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)表示的过程时发生该事件的对象。 此参数由会话调试管理器 (SDM) 填充。 DE 始终将传递此参数的 null 值。
+[在][IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)对象，表示事件发生的进程。 此参数由会话调试管理器 （SDM） 填充。 DE 始终传递此参数的 null 值。
 
 `pProgram`\
-[in][IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)表示的程序发生此事件的对象。 对于大多数事件，此参数不是 null 值。
+[在][IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)对象，表示发生此事件的程序。 对于大多数事件，此参数不是 null 值。
 
 `pThread`\
-[in][IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)对象，表示发生此事件的线程。 停止事件，此参数不能为 null 值，从此参数获取的堆栈帧。
+[在][IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)对象，表示发生此事件的线程。 对于停止事件，此参数不能为空值，因为堆栈帧是从此参数获取的。
 
 `pEvent`\
-[in][IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)表示调试事件的对象。
+[在]表示调试事件的[IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)对象。
 
 `riidEvent`\
-[in]GUID，用于标识哪个事件接口，以获取从`pEvent`参数。
+[在]GUID，用于标识要从`pEvent`参数获取的事件接口。
 
 `dwAttrib`\
-[in]中的标志的组合[EVENTATTRIBUTES](../../../extensibility/debugger/reference/eventattributes.md)枚举。
+[在][事件属性](../../../extensibility/debugger/reference/eventattributes.md)枚举中标志的组合。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，返回`S_OK`;否则，返回错误代码。
 
 ## <a name="remarks"></a>备注
- 调用此方法时`dwAttrib`参数必须与从返回的值匹配[GetAttributes](../../../extensibility/debugger/reference/idebugevent2-getattributes.md)方法，如对事件对象调用中传递`pEvent`参数。
+ 调用此方法时，`dwAttrib`参数必须与从[GetAttributes](../../../extensibility/debugger/reference/idebugevent2-getattributes.md)方法返回的值匹配，因为在`pEvent`参数中传递的事件对象上调用了该值。
 
- 以异步方式，而不考虑事件本身是否是异步发布所有调试事件。 DE 调用此方法时，返回值不指示是否在事件处理，仅是否收到事件。 事实上，在大多数情况下，该事件尚未处理此方法返回时。
+ 所有调试事件都是异步发布的，无论事件本身是否是异步的。 当 DE 调用此方法时，返回值不指示事件是否已处理，仅指示是否接收了事件。 事实上，在大多数情况下，当此方法返回时，事件尚未处理。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)

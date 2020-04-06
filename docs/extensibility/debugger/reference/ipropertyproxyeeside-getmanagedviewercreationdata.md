@@ -1,5 +1,5 @@
 ---
-title: IPropertyProxyEESide::GetManagedViewerCreationData |Microsoft Docs
+title: IPropertyProxyEEside：获取托管查看器创建数据 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IPropertyProxyEESide::GetManagedViewerCreationData
 ms.assetid: c4eb4d60-8816-4d52-bc8d-dffd4f066499
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 435f6924948ab1273abbded633bcce757b57d9b3
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 2e72922b348c8744f10037e199e93f735ff4be8e
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66329517"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80714967"
 ---
 # <a name="ipropertyproxyeesidegetmanagedviewercreationdata"></a>IPropertyProxyEESide::GetManagedViewerCreationData
-为了实例化该查看器中检索有关此属性类型的查看器的信息。
+检索有关此属性类型的查看器的信息，以便实例化该查看器。
 
 ## <a name="syntax"></a>语法
 
@@ -51,28 +51,28 @@ int GetManagedViewerCreationData(
 
 ## <a name="parameters"></a>参数
 `assemName`\
-[out]返回包含此对象的程序集的名称。
+[出]返回保存此对象的程序集的名称。
 
 `assemBytes`\
-[out]返回[IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md)对象，其中包含此对象 （如果不可用的任何字节，这是一个 null 值） 的程序集字节。
+[出]返回包含此对象的程序集字节的[IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md)对象（如果没有可用的字节，则为空值）。
 
 `assemPdb`\
-[out]返回`IEEDataStorage`对象包含的符号存储此对象的信息 （如果没有符号存储区可用，这是一个 null 值）。
+[出]返回包含`IEEDataStorage`此对象符号存储信息的对象（如果没有可用的符号存储，则为空值）。
 
 `className`\
-[out]返回包含此对象的类名称。
+[出]返回包含此对象的类名称。
 
 `alr`\
-[out]返回一个值从[ASSEMBLYLOCRESOLUTION](../../../extensibility/debugger/reference/assemblylocresolution.md)枚举，指示程序集的位置。
+[出]从["装配"](../../../extensibility/debugger/reference/assemblylocresolution.md)枚举中返回一个值，指示程序集的位置。
 
 `replacementOk`\
-[out]返回非零值 (`TRUE`) 可以更改此对象的值; 如果为零 (`FALSE`) 如果对象是只读的。
+[出]如果可以更改此`TRUE`对象的值，则返回非零 （ ）， 如果可以更改此对象的值。如果对象`FALSE`是只读的，则为零 （ ）。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，返回`S_OK`;否则，返回错误代码。
 
 ## <a name="remarks"></a>备注
- 类型可视化工具使用此方法来实例化托管的查看器。
+ 此方法由类型可视化器用于实例化托管查看器。
 
 ## <a name="see-also"></a>请参阅
 - [IPropertyProxyEESide](../../../extensibility/debugger/reference/ipropertyproxyeeside.md)

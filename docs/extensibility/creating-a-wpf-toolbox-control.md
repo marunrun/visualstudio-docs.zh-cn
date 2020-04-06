@@ -1,5 +1,5 @@
 ---
-title: 创建 WPF 工具箱控件 |Microsoft Docs
+title: 创建 WPF 工具箱控件 |微软文档
 ms.date: 3/16/2019
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,43 +7,43 @@ helpviewer_keywords:
 - toolbox
 - wpf
 ms.assetid: 9cc34db9-b0d1-4951-a02f-7537fbbb51ad
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: fc124c767ac9a84e62c17fb868e1dc114642f884
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: c1400efb0095760bf1cee302dd33dcf6ebb90152
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66349031"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80739566"
 ---
 # <a name="create-a-wpf-toolbox-control"></a>创建 WPF 工具箱控件
 
-WPF (Windows Presentation Framework) 工具箱控件模板允许你创建的自动添加到 WPF 控件**工具箱**时安装该扩展。 本演练演示如何使用模板创建**工具箱**可以分发给其他用户的控件。
+通过 WPF（Windows 演示框架）工具箱控制模板，您可以创建在安装扩展名时自动添加到**工具箱**中的 WPF 控件。 本演练演示如何使用模板创建可分发给其他用户**的工具箱**控件。
 
-从 Visual Studio 2015 开始，您并不安装 Visual Studio SDK 从下载中心获得。 它是作为 Visual Studio 安装程序中的可选功能包含在内。 此外可以在以后安装 VS SDK。 有关详细信息，请参阅[安装 Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md)。
+从 Visual Studio 2015 开始，您不会从下载中心安装 Visual Studio SDK。 它作为可选功能包含在可视化工作室设置中。 以后还可以安装 VS SDK。 有关详细信息，请参阅[安装可视化工作室 SDK](../extensibility/installing-the-visual-studio-sdk.md)。
 
 ## <a name="create-the-toolbox-control"></a>创建工具箱控件
 
-### <a name="create-an-extension-with-a-wpf-toolbox-control"></a>使用 WPF 工具箱控件创建的扩展
+### <a name="create-an-extension-with-a-wpf-toolbox-control"></a>使用 WPF 工具箱控件创建扩展
 
-1. 创建一个名为的 VSIX 项目`MyToolboxControl`。 您可以发现中的 VSIX 项目模板**新的项目**通过搜索"vsix"对话框。
+1. 创建名为 的`MyToolboxControl`VSIX 项目。 您可以通过搜索"vsix"在 **"新项目**"对话框中找到 VSIX 项目模板。
 
-2. 项目打开后，添加**WPF 工具箱控件**项模板名为`MyToolboxControl`。 在中**解决方案资源管理器**，右键单击项目节点并选择**添加** > **新项**。 在中**添加新项**对话框中，转到**Visual C#**  > **扩展性**，然后选择**WPF 工具箱控件**。 在中**名称**在窗口底部字段中，将命令文件名称更改为*MyToolboxControl.cs*。
+2. 打开项目时，添加名为`MyToolboxControl`**的 WPF 工具箱控制**项模板。 在**解决方案资源管理器**中，右键单击项目节点并选择"**添加新** > **项**"。 在 **"添加新项目"** 对话框中，转到**可视化 C#** > **可扩展性**并选择**WPF 工具箱控件**。 在窗口底部的 **"名称"** 字段中，将命令文件名更改为*MyToolboxControl.cs*。
 
-    解决方案现在包含一个用户控件， `ProvideToolboxControlAttribute` <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute>添加到控件**工具箱**，和一个**Microsoft.VisualStudio.ToolboxControl**资产的 VSIX 清单中的项 部署。
+    该解决方案现在包含一个用户控件，一`ProvideToolboxControlAttribute`<xref:Microsoft.VisualStudio.Shell.RegistrationAttribute>个将控件添加到**工具箱**，以及**Microsoft.VisualStudio.Toolbox 控制**资产条目，用于部署。
 
-#### <a name="to-create-the-control-ui"></a>若要创建 UI 控件
+#### <a name="to-create-the-control-ui"></a>创建控件 UI
 
-1. 打开*MyToolboxControl.xaml*在设计器中。
+1. 在设计器中打开*MyToolboxControl.xaml。*
 
     此设计器显示包含 <xref:System.Windows.Controls.Button> 控件的 <xref:System.Windows.Controls.Grid> 控件。
 
-2. 排列网格布局。 当选择<xref:System.Windows.Controls.Grid>控制，蓝色的控件条显示在网格的顶部和左侧边缘上。 您可以添加到网格的行和列，方法是单击标题栏。
+2. 排列网格布局。 选择<xref:System.Windows.Controls.Grid>控件时，蓝色控制栏将显示在网格的顶部和左边缘。 您可以通过单击条形来向网格添加行和列。
 
-3. 向网格添加子控件。 可以将其从拖来定位子控件**工具箱**部分的网格中，或通过设置其`Grid.Row`和`Grid.Column`XAML 中的属性。 下面的示例将两个标签添加在顶部行的网格中，然后第二行上的按钮。
+3. 将子控件添加到网格。 可以通过将子控件从**工具箱**拖动到网格的一部分，或者通过在 XAML 中设置其`Grid.Row`和`Grid.Column`属性来定位子控件。 下面的示例在网格的顶行上添加两个标签，在第二行上添加一个按钮。
 
     ```xaml
     <Grid>
@@ -55,13 +55,13 @@ WPF (Windows Presentation Framework) 工具箱控件模板允许你创建的自�
 
 ## <a name="renaming-the-control"></a>重命名控件
 
- 默认情况下，您的控件将出现在**工具箱**作为**MyToolboxControl**中名为的组**MyToolboxControl.MyToolboxControl**。 您可以更改这些名称在*MyToolboxControl.xaml.cs*文件。
+ 默认情况下，您的控件将显示在名为**MyToolboxControl.MyToolbox 控制**组中的 **"我的工具箱控制"工具箱中**。 **Toolbox** 您可以在*MyToolboxControl.xaml.cs*文件中更改这些名称。
 
-1. 打开*MyToolboxControl.xaml.cs*在代码视图中。
+1. 在代码视图中打开*MyToolboxControl.xaml.cs。*
 
-2. 查找`MyToolboxControl`类，并将它重命名为 TestControl。 (若要执行此操作的最快方法是重命名类，然后选择**重命名**从上下文菜单，然后完成步骤。 (有关详细信息**重命名**命令，请参阅[重命名重构 (C# 中)](../ide/reference/rename.md)。)
+2. 查找类`MyToolboxControl`并将其重命名为测试控制。 （执行此操作的最快方法是重命名类，然后从上下文菜单中选择 **"重命名**"并完成这些步骤。 （有关**重命名**命令的详细信息，请参阅[重命名重构 （C#）](../ide/reference/rename.md)。
 
-3. 转到`ProvideToolboxControl`属性，更改到的第一个参数的值**测试**。 这是将包含中的控件的组的名称**工具箱**。
+3. 转到 属性`ProvideToolboxControl`并将第一个参数的值更改为 **"测试**"。 这是将在**工具箱**中包含控件的组的名称。
 
     生成的代码应如下所示：
 
@@ -76,28 +76,28 @@ WPF (Windows Presentation Framework) 工具箱控件模板允许你创建的自�
     }
     ```
 
-## <a name="build-test-and-deployment"></a>生成、 测试和部署
+## <a name="build-test-and-deployment"></a>生成、测试和部署
 
- 当调试项目时，您应发现中安装此控件**工具箱**的 Visual Studio 的实验实例。
+ 调试项目时，应找到安装在 Visual Studio 实验实例**工具箱**中的控件。
 
 ### <a name="to-build-and-test-the-control"></a>生成并测试控件
 
-1. 重新生成项目并启动调试。
+1. 重建项目并开始调试。
 
-2. 在 Visual Studio 的新实例中，创建 WPF 应用程序项目。 请确保在 XAML 设计器处于打开状态。
+2. 在 Visual Studio 的新实例中，创建 WPF 应用程序项目。 确保 XAML 设计器处于打开状态。
 
-3. 在“工具箱”  中查找控件，并将其拖动到设计图面上。
+3. 在“工具箱” **** 中查找控件，并将其拖动到设计图面上。
 
 4. 开始调试 WPF 应用程序。
 
-5. 验证显示控件。
+5. 验证控件是否出现。
 
 ### <a name="to-deploy-the-control"></a>部署控件
 
-1. 生成测试的项目后，可以找到 *.vsix*文件中 * \bin\debug\*项目文件夹中的。
+1. 生成测试项目后，您可以在项目的 _bin_调试\*文件夹中找到 *.vsix*文件。
 
-2. 可以通过双击而在本地计算机上安装 *.vsix*文件并按照安装过程。 若要卸载该控件，请转到**工具** > **扩展和更新**并查找控件扩展，然后单击**卸载**。
+2. 您可以通过双击 *.vsix*文件并遵循安装过程将其安装在本地计算机上。 要卸载控件，请转到 **"工具** > **扩展"和"更新"** 并查找控件扩展，然后单击"**卸载**"。
 
-3. 上传 *.vsix*文件到网络或网站。
+3. 将 *.vsix*文件上载到网络或网站。
 
-    如果您将文件上载到[Visual Studio Marketplace](https://marketplace.visualstudio.com/)网站，其他用户可以使用**工具** > **扩展和更新**在 Visual Studio 中查找联机控制并将其安装。
+    如果将文件上载到[可视化工作室应用商店](https://marketplace.visualstudio.com/)网站，其他用户可以使用 Visual Studio 中的**工具** > **扩展和更新**联机查找控件并安装它。

@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugCodeContexts2 | Microsoft Docs
+title: IEnumDebugCode_s______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IEnumDebugCodeContexts2
 ms.assetid: 72915146-215f-4c99-a034-131b2b474e0e
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: dae1261adca25162b5bb81cc3ae8b006ce7ef283
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 6917c44bb3ddc80513e7c45a6aa4ea0207fd46c9
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66350878"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80717279"
 ---
 # <a name="ienumdebugcodecontexts2"></a>IEnumDebugCodeContexts2
-此接口枚举与调试会话，或与特定的程序或文档关联的代码上下文。
+此接口枚举与调试会话或特定程序或文档关联的代码上下文。
 
 ## <a name="syntax"></a>语法
 
@@ -28,34 +28,34 @@ ms.locfileid: "66350878"
 IEnumDebugCodeContexts2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>实施者的说明
- 调试引擎 (DE) 实现此接口来表示在程序中，特定的文本位置的代码上下文的列表或特定文档上下文的代码上下文的列表。
+## <a name="notes-for-implementers"></a>实施者说明
+ 调试引擎 （DE） 实现此接口以表示程序中特定文本位置的代码上下文列表或特定文档上下文的代码上下文列表。
 
-## <a name="notes-for-callers"></a>调用方的说明
- 调用[EnumCodeContexts](../../../extensibility/debugger/reference/idebugprogram2-enumcodecontexts.md)若要获取此界面表示程序的源文档中的特定文本位置的代码上下文的列表。
+## <a name="notes-for-callers"></a>呼叫者备注
+ 调用[EnumCodeContext](../../../extensibility/debugger/reference/idebugprogram2-enumcodecontexts.md)以获取此接口，该接口表示程序源文档中特定文本位置的代码上下文列表。
 
- 调用[EnumCodeContexts](../../../extensibility/debugger/reference/idebugdocumentcontext2-enumcodecontexts.md)获取此接口表示一组特定的源文档中的所有代码上下文。
+ 调用[EnumCodeContext](../../../extensibility/debugger/reference/idebugdocumentcontext2-enumcodecontexts.md)以获取此接口，以表示特定源文档中所有代码上下文的列表。
 
 ## <a name="methods-in-vtable-order"></a>Vtable 顺序中的方法
- 下表显示的方法`IEnumDebugCodeContexts2`。
+ 下表显示了 的方法`IEnumDebugCodeContexts2`。
 
 |方法|描述|
 |------------|-----------------|
-|[下一页](../../../extensibility/debugger/reference/ienumdebugcodecontexts2-next.md)|检索指定的数目的枚举序列中的代码上下文。|
-|[Skip](../../../extensibility/debugger/reference/ienumdebugcodecontexts2-skip.md)|跳过枚举序列中的代码上下文的指定的数目。|
-|[Reset](../../../extensibility/debugger/reference/ienumdebugcodecontexts2-reset.md)|将枚举序列重置到开头。|
-|[Clone](../../../extensibility/debugger/reference/ienumdebugcodecontexts2-clone.md)|创建一个包含当前枚举数形式的相同枚举状态的枚举器。|
-|[GetCount](../../../extensibility/debugger/reference/ienumdebugcodecontexts2-getcount.md)|获取一个枚举器中的代码上下文的数目。|
+|[下一步](../../../extensibility/debugger/reference/ienumdebugcodecontexts2-next.md)|检索枚举序列中指定数量的代码上下文。|
+|[跳](../../../extensibility/debugger/reference/ienumdebugcodecontexts2-skip.md)|在枚举序列中跳过指定数量的代码上下文。|
+|[重置](../../../extensibility/debugger/reference/ienumdebugcodecontexts2-reset.md)|将枚举序列重置为开头。|
+|[克隆](../../../extensibility/debugger/reference/ienumdebugcodecontexts2-clone.md)|创建与当前枚举器相同的枚举状态的枚举器。|
+|[GetCount](../../../extensibility/debugger/reference/ienumdebugcodecontexts2-getcount.md)|获取枚举器中的代码上下文数。|
 
 ## <a name="remarks"></a>备注
- Visual Studio 调用[EnumCodeContexts](../../../extensibility/debugger/reference/idebugprogram2-enumcodecontexts.md)来填充的列表的代码上下文中的用户可以选择从时设置的下一个语句或显示源文件的反汇编。 多个代码上下文可以发生，例如，如果有多个实例的C++的样式模板。
+ Visual Studio 调用[EnumCodeContexts](../../../extensibility/debugger/reference/idebugprogram2-enumcodecontexts.md)来填充用户在设置下一个语句或显示源文件的拆解时可以选择的代码上下文列表。 例如，当C++模板有多个实例时，可能会发生多个代码上下文。
 
 ## <a name="requirements"></a>要求
- 标头： msdbg.h
+ 标题： msdbg.h
 
- 命名空间:Microsoft.VisualStudio.Debugger.Interop
+ 命名空间：微软.VisualStudio.调试器.互通
 
- 程序集：Microsoft.VisualStudio.Debugger.Interop.dll
+ 程序集：微软.VisualStudio.调试器.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [核心接口](../../../extensibility/debugger/reference/core-interfaces.md)

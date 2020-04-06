@@ -1,28 +1,28 @@
 ---
-title: IDebugGenericFieldDefinition::ConstructInstantiation | Microsoft Docs
+title: IDebugGeneric字段定义：：构造即时性 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - ConstructInstantiation
 - IDebugGenericFieldDefinition::ConstructInstantiation
 ms.assetid: ef8ae261-a98b-4dc2-93b3-7c5191818ba2
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 89f7ecfc79cc2a4279a8ca0fccfc527ef63e603b
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 352018e50b955ed414af974bc21b62775fd55f53
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66313210"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80728260"
 ---
 # <a name="idebuggenericfielddefinitionconstructinstantiation"></a>IDebugGenericFieldDefinition::ConstructInstantiation
-构造给定类型的参数数组的字段实例。
+构造给定类型参数数组的字段实例。
 
 ## <a name="syntax"></a>语法
 
@@ -44,19 +44,19 @@ int ConstructInstantiation(
 
 ## <a name="parameters"></a>参数
 `cArgs`\
-[in]中的参数数目`ppArgs`数组。
+[在]数组中的`ppArgs`参数数。
 
 `ppArgs`\
-[in]包含的类型参数的数组。 类型参数必须为封闭的类型 （非泛型或完全实例化泛型）。
+[在]包含类型参数的数组。 类型参数必须是闭合类型（非泛型或完全实例化泛型）。
 
 `ppConstructedField`\
-[out]返回[IDebugField](../../../extensibility/debugger/reference/idebugfield.md)接口，表示新字段。
+[出]返回表示新字段的[IDebugField](../../../extensibility/debugger/reference/idebugfield.md)接口。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，返回`S_OK`;否则，返回错误代码。
 
 ## <a name="remarks"></a>备注
- 不会检查约束。
+ 未检查约束。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugGenericFieldDefinition](../../../extensibility/debugger/reference/idebuggenericfielddefinition.md)

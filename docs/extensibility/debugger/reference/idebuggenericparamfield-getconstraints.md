@@ -1,28 +1,28 @@
 ---
-title: IDebugGenericParamField::GetConstraints |Microsoft Docs
+title: IDebugGenericParamField：获取约束 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IDebugGenericParamField::GetConstraints
 - GetConstraints
 ms.assetid: 86a78b5a-ee0f-4999-a0ba-919d3dc7d969
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 0821b98250b26d6eafa5f1e02a3c2ef8c07562f7
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 8a078beaac1cf9ef0255ff7b8d0bcbc4f568fdb8
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66330416"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80728008"
 ---
 # <a name="idebuggenericparamfieldgetconstraints"></a>IDebugGenericParamField::GetConstraints
-检索与此泛型参数的约束。
+检索与此泛型参数关联的约束。
 
 ## <a name="syntax"></a>语法
 
@@ -44,19 +44,19 @@ int GetConstraints(
 
 ## <a name="parameters"></a>参数
 `cConstraints`\
-[in]约束的数目。
+[在]约束数。
 
 `ppConstraints`\
-[out]返回一个数组，其中包含与此字段关联的约束。
+[出]返回包含与此字段关联的约束的数组。
 
 `pcConstraints`\
-[in、 out]中的约束的数目`ppConstraints`数组。
+[进出]数组中`ppConstraints`的约束数。
 
 ## <a name="return-value"></a>返回值
-如果成功，则返回`S_OK`; 否则为返回错误代码。
+如果成功，返回`S_OK`;否则，返回错误代码。
 
 ## <a name="example"></a>示例
-下面的示例演示如何实现此方法对于**CDebugGenericParamFieldType**对象，它公开[IDebugGenericParamField](../../../extensibility/debugger/reference/idebuggenericparamfield.md)接口。
+下面的示例演示如何为公开[IDebugGenericParamField](../../../extensibility/debugger/reference/idebuggenericparamfield.md)接口的**CDebugGenericParamFieldType**对象实现此方法。
 
 ```cpp
 HRESULT CDebugGenericParamFieldType::GetConstraints(

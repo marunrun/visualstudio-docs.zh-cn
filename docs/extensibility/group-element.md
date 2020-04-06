@@ -1,22 +1,22 @@
 ---
-title: Group 元素 |Microsoft Docs
+title: 组元素 |微软文档
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - VSCT XML schema elements, Groups
 - Groups element (VSCT XML schema)
 ms.assetid: 69faee18-cbf4-470a-b952-c1919c583df8
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c3c1c4bedc5ff44f797e6b46e351dc3753362501
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 26479257511d74f122dd4064330f5b6a1e8dadd3
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66342359"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80711236"
 ---
 # <a name="group-element"></a>Group 元素
 定义 VSPackage 命令组。
@@ -36,23 +36,23 @@ ms.locfileid: "66342359"
 
 |特性|描述|
 |---------------|-----------------|
-|guid|必需。 GUID ID 的命令标识符的 GUID。|
-|id|必需。 GUID ID 的命令标识符的 ID。|
-|priority|可选。 一个数字值，该值指定的优先级。|
+|guid|必需。 GUID/ID 命令标识符的 GUID。|
+|id|必需。 GUID/ID 命令标识符的 ID。|
+|priority|可选。 指定优先级的数值。|
 |条件|可选。 请参阅[条件属性](../extensibility/vsct-xml-schema-conditional-attributes.md)。|
 
 ### <a name="child-elements"></a>子元素
 
 |元素|描述|
 |-------------|-----------------|
-|父级|可选。 按钮的父元素。|
-|批注|可选注释。|
+|Parent|可选。 按钮的父元素。|
+|Annotation|可选注释。|
 
 ### <a name="parent-elements"></a>父元素
 
 |元素|描述|
 |-------------|-----------------|
-|[Groups 元素](../extensibility/groups-element.md)|包含定义 VSPackage 的命令组的条目。|
+|[组元素](../extensibility/groups-element.md)|包含定义 VSPackage 的命令组的条目。|
 
 ## <a name="example"></a>示例
 
@@ -63,4 +63,4 @@ ms.locfileid: "66342359"
 ```
 
 ## <a name="see-also"></a>请参阅
-- [Visual Studio 命令表格 (.vsct) 文件](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [可视化工作室命令表 （.vsct） 文件](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
