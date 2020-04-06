@@ -1,5 +1,5 @@
 ---
-title: TEXT_POSITION | Microsoft Docs
+title: TEXT_POSITION |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - TEXT_POSITION structure
 ms.assetid: 6dcec574-a852-49fa-8c2e-2e71cbb5e3c6
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 7f53cb7a0dacc58a0d4a8109ea6dd3ca3ab710e1
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 1a36c585a09afbd1dec60e1d4399dca258399ae3
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66336300"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80713415"
 ---
-# <a name="textposition"></a>TEXT_POSITION
-描述在给定的文本中的行和列位置。
+# <a name="text_position"></a>TEXT_POSITION
+描述给定文本中的行和列位置。
 
 ## <a name="syntax"></a>语法
 
@@ -44,16 +44,16 @@ public struct TEXT_POSITION { 
 ## <a name="members"></a>成员
 
 `dwLine`\
-源文件中的行的索引。
+源文件中行的索引。
 
 `dwColumn`\
-行中的字符偏移量。
+字符偏移成行。
 
 ## <a name="remarks"></a>备注
 
-在使用此结构[CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md)并[DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md)结构。
+此结构用于[CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md)和[拆解数据](../../../extensibility/debugger/reference/disassemblydata.md)结构。
 
-通过以下方法调用填充此结构：
+此结构通过调用以下方法填充：
 
 - [GetStatementRange](../../../extensibility/debugger/reference/idebugdocumentcontext2-getstatementrange.md)
 
@@ -65,7 +65,7 @@ public struct TEXT_POSITION { 
 
 此结构作为参数传递给以下方法：
 
-- [GetText](../../../extensibility/debugger/reference/idebugdocumenttext2-gettext.md)
+- [获取文本](../../../extensibility/debugger/reference/idebugdocumenttext2-gettext.md)
 
 - [onInsertText](../../../extensibility/debugger/reference/idebugdocumenttextevents2-oninserttext.md)
 
@@ -77,11 +77,11 @@ public struct TEXT_POSITION { 
 
 ## <a name="requirements"></a>要求
 
- 标头： msdbg.h
+ 标题： msdbg.h
 
- 命名空间:Microsoft.VisualStudio.Debugger.Interop
+ 命名空间：微软.VisualStudio.调试器.互通
 
- 程序集：Microsoft.VisualStudio.Debugger.Interop.dll
+ 程序集：微软.VisualStudio.调试器.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 
@@ -90,7 +90,7 @@ public struct TEXT_POSITION { 
 - [GetSourceRange](../../../extensibility/debugger/reference/idebugdocumentcontext2-getsourcerange.md)
 - [GetRange](../../../extensibility/debugger/reference/idebugdocumentposition2-getrange.md)
 - [GetOffset](../../../extensibility/debugger/reference/idebugfunctionposition2-getoffset.md)
-- [GetText](../../../extensibility/debugger/reference/idebugdocumenttext2-gettext.md)
+- [获取文本](../../../extensibility/debugger/reference/idebugdocumenttext2-gettext.md)
 - [IDebugDocumentTextEvents2](../../../extensibility/debugger/reference/idebugdocumenttextevents2.md)
 - [CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md)
 - [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md)

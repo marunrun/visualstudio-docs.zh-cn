@@ -1,5 +1,5 @@
 ---
-title: EnableLocationBrowseButton 元素 （Visual Studio 模板） |Microsoft Docs
+title: 启用位置浏览按钮元素（视觉工作室模板） |微软文档
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -8,22 +8,22 @@ f1_keywords:
 helpviewer_keywords:
 - EnableLocationBrowseButton [Visual Studio project templates]
 ms.assetid: a12d10d8-af49-482a-af77-e084fd07a47d
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2be2f67d08fcac39d26f9a27f76ad8aff967440b
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 263157d5c6fefc208f28caa55475ba329a0d230f
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66334468"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80711978"
 ---
-# <a name="enablelocationbrowsebutton-element-visual-studio-templates"></a>EnableLocationBrowseButton 元素 （Visual Studio 模板）
-指定是否**浏览**按钮现已推出**新项目**对话框，以便用户可以轻松地修改保存新项目的默认目录。
+# <a name="enablelocationbrowsebutton-element-visual-studio-templates"></a>启用位置浏览按钮元素（可视化工作室模板）
+指定 **"浏览"** 按钮在 **"新项目**"对话框中是否可用，以便用户可以轻松地修改保存新项目的默认目录。
 
- \<VSTemplate> \<TemplateData> \<EnableLocationBrowseButton>
+ \<VS模板>\<模板数据>\<启用位置浏览按钮>
 
 ## <a name="syntax"></a>语法
 
@@ -44,20 +44,20 @@ ms.locfileid: "66334468"
 
 |元素|描述|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|必需的元素。<br /><br /> 将此模板分类并定义此模板在 **“新建项目”** 或 **“添加新项”** 对话框中的显示方式。|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|必需元素。<br /><br /> 将此模板分类并定义此模板在 **“新建项目”** 或 **“添加新项”** 对话框中的显示方式。|
 
 ## <a name="text-value"></a>文本值
  需要一个文本值。
 
- 文本必须是`true`或`false`，，该值指示是否显示**浏览**按钮**新项目**对话框。
+ 文本必须为 或`true``false`，指示是否在 **"新项目**"对话框上显示 **"浏览**"按钮。
 
 ## <a name="remarks"></a>备注
- `EnableLocationBrowseButton` 是可选元素。 默认值是`true`，其中显示**浏览**按钮**新项目**对话框。
+ `EnableLocationBrowseButton` 是可选元素。 默认值为`true`，在 **"新项目**"对话框中显示 **"浏览**"按钮。
 
- 在中**新的项目**对话框中，**位置**文本框中指定新的项目的保存位置的目录。 **浏览**按钮可帮助你通过显示来修改此目录**项目位置**对话框中，使您可以轻松地导航到另一个计算机上可用的目录，并然后选择为保存新项目的目录。
+ 在"**新项目**"对话框中，"**位置**"文本框指定保存新项目的目录。 **"浏览"** 按钮通过显示 **"项目位置**"对话框来帮助您修改此目录，该对话框使您能够轻松导航到计算机中可用的其他目录，然后选择该目录作为保存新项目的目录。
 
 ## <a name="example"></a>示例
- 下面的示例演示的元数据[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]Windows 应用程序。
+ 下面的示例演示了[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]Windows 应用程序的元数据。
 
 ```
 <VSTemplate Type="Project" Version="3.0.0"
@@ -85,5 +85,5 @@ ms.locfileid: "66334468"
 ```
 
 ## <a name="see-also"></a>请参阅
-- [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
+- [可视化工作室模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
 - [创建项目和项模板](../ide/creating-project-and-item-templates.md)

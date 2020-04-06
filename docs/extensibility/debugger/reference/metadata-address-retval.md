@@ -1,5 +1,5 @@
 ---
-title: METADATA_ADDRESS_RETVAL | Microsoft Docs
+title: METADATA_ADDRESS_RETVAL |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - METADATA_ADDRESS_RETVAL structure
 ms.assetid: 5b0ec0fb-84b3-4ce7-8e24-becf3d881d7d
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 2ff96d5ca9d292d9e2952b9a2e5e1f628b54d43b
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.openlocfilehash: f2437d10078eb623e063b3292d96ef9bb4a9cf64
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66746347"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80714277"
 ---
-# <a name="metadataaddressretval"></a>METADATA_ADDRESS_RETVAL
-此结构表示的方法或函数返回的值。
+# <a name="metadata_address_retval"></a>METADATA_ADDRESS_RETVAL
+此结构表示方法或函数的返回值。
 
 ## <a name="syntax"></a>语法
 
@@ -47,26 +47,26 @@ public struct METADATA_ADDRESS_RETVAL {
 
 ## <a name="members"></a>成员
  `tokMethod`\
- 此返回值是为该方法的 ID。
+ 此返回值所针对的方法的 ID。
 
  `dwCorType`\
- 返回值的基类型。 这是一个介于`CorElementType`.NET Framework SDK corhdr.h 文件中定义的枚举。
+ 返回值的基本类型。 这是 .NET 框架`CorElementType`SDK corhdr.h 文件中定义的枚举中的值。
 
  `dwSigSize`\
- 返回值签名的大小 (存储在`rgSig`)。
+ 返回值签名的大小（存储在 中`rgSig`）。
 
  `rgSig`\
- 构成签名的返回值的字节数组。
+ 组成返回值签名的字节数组。
 
 ## <a name="remarks"></a>备注
- 此结构是中的联合的一部分[DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md)结构时`dwKind`字段`DEBUG_ADDRESS_UNION`结构设置为`ADDRESS_KIND_RETVAL`(从值[ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md)枚举）。
+ 当`DEBUG_ADDRESS_UNION``ADDRESS_KIND_RETVAL`结构字段设置为[（ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md)枚举中[DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md)的值）时，`dwKind`此结构是DEBUG_ADDRESS_UNION结构中的联合的一部分。
 
 ## <a name="requirements"></a>要求
- 标头： sh.h
+ 标题： sh.h
 
- 命名空间:Microsoft.VisualStudio.Debugger.Interop
+ 命名空间：微软.VisualStudio.调试器.互通
 
- 程序集：Microsoft.VisualStudio.Debugger.Interop.dll
+ 程序集：微软.VisualStudio.调试器.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [结构和联合](../../../extensibility/debugger/reference/structures-and-unions.md)

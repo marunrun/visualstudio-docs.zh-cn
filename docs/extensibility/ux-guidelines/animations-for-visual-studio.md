@@ -1,128 +1,128 @@
 ---
-title: Visual Studio 的动画 |Microsoft Docs
+title: 视觉工作室动画 |微软文档
 ms.date: 04/26/2017
 ms.topic: conceptual
 ms.assetid: 446773a9-e6f7-4c0c-8dbc-9e303bf32eb1
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3f113bf8d9a77e8569126a6f0c7d96f1fe4f0eea
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: dc11eb7bab69728be5ceaa55143f56e93cd1fca4
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67825246"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80698610"
 ---
 # <a name="animations-for-visual-studio"></a>Visual Studio 的动画
 ## <a name="animation-fundamentals"></a>动画基础知识
 
-### <a name="animation-best-practices-in-visual-studio"></a>在 Visual Studio 中的动画最佳实践
-请遵循这些规则，以确保一致且易于动画样式在整个 Visual Studio IDE。
+### <a name="animation-best-practices-in-visual-studio"></a>可视化工作室中的动画最佳实践
+遵循这些规则，确保整个 Visual Studio IDE 的动画样式一致且用户友好。
 
-- **为选择性。** 限制为特定目的的动画。
+- **有选择性。** 将动画限制为用于特定目的的动画。
 
-- **计时和速度非常重要，** 以确保转换感觉快速和自然：
+- **时间和速度对于**确保过渡感觉快速自然非常重要：
 
-  - 半秒 （500 毫秒） 内完成动画的过渡。
+  - 在半秒（500 毫秒）内完成动画过渡。
 
-  - 将发生的频率的动画需要快速，它们不会中断用户的工作流。 观看动画在循环中的，调整计时，直到它感觉棒极了。
+  - 经常发生的动画需要足够快，这样它们就不会中断用户的工作流。 在循环中观看动画并调整计时，直到感觉正确为止。
 
-  - 因此快速或他们疑惑不解，它是难以理解，但不是速度很慢，它可用于一个耐心转换完成，不应为动画。
+  - 动画不应该那么快或不和谐，以至于很难理解，但不要那么慢，以至于它让人不耐烦地完成过渡。
 
-  - 使用变量计时强调重要性。 例如，导航时通过一系列在类图上的项，项之间的转换通过速度则速度下降，以专注于重要事项。
+  - 使用可变计时来强调重要性。 例如，在类图上导航一系列项目时，快速浏览项之间的转换，然后减慢速度以专注于重要项。
 
-- **通过逐步非线性缓动**从一个状态到另一个，使冷静和自然移动的了解。
+- 使用从一种状态到另一种状态**的渐进非线性缓动**，给人一种平静和自然运动的感觉。
 
-- 如果可能，请**悬停时的使用微动画**以指示在鼠标交互元素。
+- 如果可能，**请使用悬停上的精细动画**来指示鼠标下方的交互式元素。
 
-- 如果您非常依赖动画在您的功能，然后**提供一种方法要关闭它们**本地 （适用于所有功能） 中的一个选项作为**工具 > 选项**对话框。
+- 如果严重依赖要素中的动画，则**提供一种在**"**工具>选项**"对话框中将其在本地（针对所有要素）关闭的方法。
 
-- **只有一个动画应发生一次**和传达只是一条信息。 移动或尝试传递多个操作的多个对象可以是令人困惑。
+- **一次只能出现一个动画**，只传达一条信息。 多个对象移动或尝试传达多个内容可能会令人困惑。
 
-- **一个要点非常重要。** 在大多数情况下，动画不具有到需用户采取行动，以提供其用途。 细微计时、 序列化和行为中的更改可能会显著影响感知，并且可以使有效和无效动画之间的差异。
+- **微妙是很重要的。** 在大多数情况下，动画不需要要求用户注意来达到其目的。 时间、顺序和行为的细微变化可能会显著影响感知，并可以区分有效和无效的动画。
 
-- 当使用动画来吸引对某件事情，注意**确保，因此有必要中断用户**的思路。
+- 当使用动画来吸引对某物的注意时 **，请确保它值得打断用户的**思路。
 
-- **显示进度或状态时**通过动画：
+- 通过动画**显示进度或状态时**：
 
-  - 不再显示进度移动时的基础进程不前调。
+  - 当基础进程未前进时，停止显示进度移动。
 
-  - 确定进程区分开来不确定的进程。
+  - 区分不确定的流程和确定的进程。
 
-  - 请确保动画具有可识别的完成和失败状态。
+  - 确保动画具有可识别的完成和失败状态。
 
-  - 最小化效果动画显示状态并确保它们具有真正的价值，通过提供的实际应用中的其他信息的使用。 示例包括暂时性的状态更改和紧急情况
+  - 通过提供实际使用的其他信息，尽量减少显示状态的效果动画的使用，并确保它们具有实际价值。 示例包括瞬态状态更改和紧急情况
 
-#### <a name="animation-donts"></a>动画的注意事项：
+#### <a name="animation-donts"></a>动画不：
 
-- 不要使用小型移动 （在内存占用较小的移动）。 更喜欢淡并更改通过移动对象。
+- 不要使用小运动（在小尺寸内移动）。 首选淡入淡出和更改而不是移动的对象。
 
-- 不要使用较大的屏幕空间区域上发生的动画。 而不考虑大小，这种样式是动画的让人分散注意力到该用户。
+- 不要使用发生在大面积的屏幕空间的动画。 无论大小，这种动画样式都会分散用户的注意力。
 
-- 不要使用与该用户正在致力于提供的对象不相关或与之交互的动画。
+- 不要使用与用户当前关注的对象或与对象交互无关的动画。
 
-- 不要使用需要用户交互才能重置状态，从而强制用户响应以使其停止闪烁闪烁通知等的动画。 以任何方式与它们交互应足以消除它们。
+- 不要使用需要用户交互来重置状态的动画，例如强制用户响应闪烁的通知，以便停止闪烁。 以任何方式与他们互动应该足以解雇他们。
 
-这些最佳实践的应用程序的详细信息，请参阅[动画模式](../../extensibility/ux-guidelines/animations-for-visual-studio.md#BKMK_AnimationPatterns)。
+有关这些最佳实践的应用程序的详细信息，请参阅[动画模式](../../extensibility/ux-guidelines/animations-for-visual-studio.md#BKMK_AnimationPatterns)。
 
 ### <a name="animation-metrics"></a>动画指标
 
-- 系统应以可视方式响应用户操作以小于 10 毫秒为单位。
+- 系统应在 10 毫秒内对用户手势做出明显响应。
 
-- 经过动画处理的转换不会花费时间超过 500 毫秒才能完成。
+- 动画转换完成的时间不应超过 500 毫秒。
 
-- 若要补偿的转换，需要更长的时间的一种方法是分离到两个部分。 例如，动画的第一个部分可能是到容器 （最多 500 毫秒） 后跟内容淡入淡出空内容容器 （最多 500 毫秒）。
+- 补偿需要较长时间的过渡的一种方法是将其分为两部分。 例如，动画的第一部分可以是空内容容器（最多 500 毫秒），然后是内容淡入容器（最多 500 毫秒）。
 
-- 对于可以计算的加载时间、 决定进度指示器 （%完成进度指示器） 是首选。
+- 对于可以计算的加载时间，首选决定因素进度指示器（完成进度指标的百分比）。
 
-- 对于不能计算的加载时间、 游标或嵌入的旋转动画 （加载或工作指示符） 等忙碌状态指示器是适当。
+- 对于无法计算的加载时间，适合使用光标或嵌入式旋转动画（加载或工作指示器）等繁忙指示器。
 
-### <a name="animation-as-communicator"></a>作为 communicator 的动画
-在 Visual Studio UI 中，动画函数只能作为通信工具。  它用于通信的各种信息，如 UI （例如，一个菜单，打开或关闭时） 发生了结构变化。 动画可以帮助直观显示安装进度可视化等的复杂系统的依赖于时间的行为。 动画还可用来吸引注意力使用警报和通知。
+### <a name="animation-as-communicator"></a>动画作为传播者
+在可视化工作室 UI 中，动画仅作为通信工具运行。  它用于传达各种信息，如 UI 中的结构更改（例如，当菜单打开或关闭时）。 动画可以帮助可视化复杂系统的时间相关行为，如安装进度可视化。 动画还可用于通过警报和通知吸引注意力。
 
- UI 动画函数，通常在四种方法： 可视化、 吸引注意力、 模拟和响应时间/进度指示器。
+ UI 动画通常以四种方式运行：可视化、吸引注意力、模拟和响应时间/进度指示器。
 
 #### <a name="visualize"></a>可视化
-动画可以强调三维对象的性质，并使用户更轻松地可视化其空间的结构。 若要实现此目的，动画可能需要旋转一整圈中的对象缓慢，并且反复打开或将对象更接近和会略微增加其大小以强调滚动更新或焦点。
+动画可以强调对象的三维性质，使用户更容易可视化其空间结构。 为此，动画可能需要将对象旋转成一个完整的圆，缓慢地来回旋转，或者使对象更近，并稍微增加其大小以强调翻转或焦点。
 
-尽管三维对象可能会在移动与用户控件 （以编程方式或手动），在设计器应提前确定如何最适合进行动画处理提供了最佳了解对象的移动。 此动画可以进行编程，然后激活由用户通过将光标放置的对象，而用户控制移动需要用户若要了解如何操作对象。 将移动限制为单个轴或一次; 的方向可以缩放、 旋转，或转换，但不同时执行多个。
+尽管可以使用用户控件移动三维对象，但设计人员应提前（以编程或手动方式）确定如何最好地为运动设置动画，以便对对象进行最佳理解。 然后，用户可以通过将光标放在对象上来激活此编程动画，而用户控制的移动要求用户了解如何操作对象。 将移动限制为一次的单个轴或方向;缩放、旋转或平移，但同时执行多个操作。
 
-可视化类别包括的方面的数据、 关系、 状态、 结构、 序列和时间。
+可视化类别包括数据、关系、状态、结构、顺序和时间的各个方面。
 
 ##### <a name="data"></a>数据
-演示了复杂和变量信息：
+说明复杂和可变的信息：
 
-- 移动通过信息可视化效果，如图表和图形
+- 浏览图表和图形等信息可视化效果
 
-- 通过一系列单步执行、 指导的教程和分页
+- 单步执行序列、导游和分页
 
-- 调用详细信息，指向，和突出显示的特定信息
+- 调用详细信息、指向和突出显示特定信息
 
-- 覆盖详细信息和顶部具有焦点的元素的其他信息
+- 叠加焦点元素顶部的细节和其他信息
 
-- 到另一个结构或组织的表示形式变形
+- 从一个结构或组织表示形式转变为另一个结构或组织代表
 
-- 持续使用时间滑块、 慢走 shuttle 车轮和传输控件 （播放、 停止和暂停） 表示的更改
+- 使用时间滑块、慢跑和穿梭轮以及运输控制（播放、停止和暂停）表示随时间的变化
 
 ##### <a name="relationships"></a>关系
 
-- 说明项之间的相互或与给定项相关的项
+- 说明项目如何彼此关联，或哪些项目与给定项目相关
 
-- 显示层次结构和父-子链接或同级关系
+- 显示层次结构和父子或兄弟姐妹关系
 
-- 一个元素会生成另一个
+- 一个元素生成另一个元素
 
-- 一个元素到另一个元素最小化
+- 一个元素最小化到另一个元素
 
-- 已接入的到另一个元素
+- 一个元素被拴在另一个元素上
 
 ##### <a name="state"></a>状态
 
 - 内容更新
 
-- 用户焦点和选择内容
+- 用户焦点和选择
 
 - 进度
 
@@ -130,9 +130,9 @@ ms.locfileid: "67825246"
 
 ##### <a name="structure"></a>结构
 
-- 正在切换一个节点上的结构
+- 在一个节点上透视结构
 
-- 重定向
+- 调整方向
 
 - 最小化和最大化，或展开和折叠
 
@@ -140,116 +140,116 @@ ms.locfileid: "67825246"
 
 - 幻灯片放映序列
 
-- 逐一浏览图片
+- 翻阅图片
 
 ##### <a name="time"></a>时间
 
-- 显示随时间、 时间失效和截屏视频
+- 显示随时间推移、时间推移和截屏的更改
 
-- 将移动以放入回收站、 撤消和重做
+- 移动到垃圾、撤消和重做
 
-- 还原历史记录状态
+- 恢复历史状态
 
 #### <a name="attract-attention"></a>吸引注意力
-如果目标是要绘制为单个元素从多个用户的注意力，或更新的信息向用户发出警报，则动画可能比较合适。 例如，你的应用程序起始页可能会采用滑入到位，在页面加载后的开始按钮。
+如果目标是将用户的注意力吸引到多个元素中的单个元素，或提醒用户更新信息，则动画可能是合适的。 例如，应用程序起始页可能使用"入门"按钮，该按钮在页面加载后滑入到位。
 
-通常，在屏幕上的最后一个移动元素方面吸引用户的注意力。  在动画元素的一系列，将用户的注意力将遵循的最后一个移动对象。
+通常，屏幕上的最后一个移动元素会吸引用户的注意。  在一系列动画元素中，用户的注意力将跟随最后一个移动对象。
 
 ##### <a name="alert"></a>警报
 
-- 警报用户、 引起注意，显示进度
+- 提醒用户，引起注意，显示进度
 
-- 显示的执行某些操作正在正确或不正确或显示进度或正在进行的更改
+- 显示某些操作执行正确或不正确，或显示进度或进度更改
 
-- 在一个任务，如查找的详细联机信息或了解当前任务过程中提示用户
+- 在任务期间提示用户，例如联机查找更多信息或了解有关当前任务的信息
 
 ##### <a name="notifications"></a>通知
 
-- 用户的错误条件发出警报
+- 提醒用户有关错误条件
 
-- 中断用户，请参阅是否他们想要处理其他事项
+- 中断用户以查看他们是否想关注其他内容
 
-- 轻轻地通知的用户的进程已完成或发生更改，如下载完成后。
+- 轻轻地通知用户进程已完成或更改，例如下载完成时。
 
-#### <a name="simulate"></a>模拟
-此类别包含 physicality 和维数。
+#### <a name="simulate"></a>Simulate
+此类别涵盖物理性和维度性。
 
-- 说明对象来自何处或转到其中
+- 说明对象来自何处或它们去向何处
 
 - 展开和折叠或打开和关闭
 
-- 平移、 滚动和页面启用
+- 平移、滚动和页面翻页
 
-- 堆栈和 z 顺序
+- 堆叠和 z 排序
 
-- 轮播和可折叠面板
+- 旋转木马和手风琴
 
-- 翻转和旋转用户界面
+- 翻转和旋转 UI
 
-#### <a name="response-and-progress-indicators"></a>响应和进度指示器
-进度指示器等有几个值得注意的优点：
+#### <a name="response-and-progress-indicators"></a>反应和进度指标
+进度指标有几个显著的优势：
 
-- 这两个确定并不确定的进度指示器等我们发现的用户的系统未损坏，着手解决的问题。
+- 确定进度指标和不确定进度指示器都向用户保证系统尚未崩溃，并且正在处理该问题。
 
-- 确定指示器授予该用户的某种意义上，以及操作时的进展情况，以及获取更接近于完成的感觉。
+- 确定指标使用户了解操作的进展有多远，以及接近完成的感觉。
 
-## <a name="BKMK_AnimationPatterns"></a> 动画模式
+## <a name="animation-patterns"></a><a name="BKMK_AnimationPatterns"></a>动画模式
 
 ### <a name="overview"></a>概述
-在 Visual Studio 中的动画用于充当特定的功能会影响用户工作效率。 通常情况下，应为 Visual Studio 中的动画：
+Visual Studio 中的动画旨在在不妨碍用户工作效率的情况下提供特定功能。 通常，可视化工作室中的动画应该是：
 
-- 小型和非介入式
+- 小而不显眼
 
-- 自然而真实
+- 自然和现实
 
-- 微妙、 subdued
+- 微妙和柔和
 
-- 快速且高效
+- 快速高效
 
-- 放松、 不名匆忙之中
+- 放松，不匆忙
 
-此图显示了我们建议用于 Visual Studio 的多个动画样式。 最常使用任何动画或细微的动画像淡入 / 淡出。 有限的应用程序的移动动画一样进行扩展和收缩，X 和 Y 位置更改和旋转。
+此图显示了我们为 Visual Studio 推荐的动画样式。 没有动画或微妙的动画，如淡入淡出/淡出是最常用的。 运动动画（如扩展和收缩、X 和 Y 位置更改以及旋转）的应用有限。
 
-![Visual Studio 的建议动画样式](../../extensibility/ux-guidelines/media/1202-a_vsanimstyles.png "1202 a_VSAnimStyles")<br />Visual Studio 的建议动画样式
+![Visual Studio 的建议动画样式](../../extensibility/ux-guidelines/media/1202-a_vsanimstyles.png "1202-a_VSAnimStyles")<br />Visual Studio 的建议动画样式
 
-#### <a name="appear-and-disappear"></a>显示和隐藏
-使用此模式时，元素会从切换可见返回，而不转换动画和扩展视图。
+#### <a name="appear-and-disappear"></a>出现并消失
+使用此模式，元素从可见切换到视图外，无需过渡动画即可返回。
 
-![出现并消失动画](../../extensibility/ux-guidelines/media/1202-b_appearanddisappear.png "1202 b_AppearAndDisappear")<br />出现并消失动画
+![显示和消失动画](../../extensibility/ux-guidelines/media/1202-b_appearanddisappear.png "1202-b_AppearAndDisappear")<br />显示和消失动画
 
-##### <a name="correct-usage"></a>正确用法
-需要立即显示或消失，以便用户是将注意力集中既不挡住全新的 UI 元素。 此外，缓慢移动动画可能会被视为性能拖动，不会发生与出现和消失样式。
+##### <a name="correct-usage"></a>正确的用法
+需要立即显示或消失的新鲜 UI 元素，以便用户不会分心或受阻。 此外，慢动作动画可能被视为性能拖动，这在显示和消失样式中不会发生。
 
-##### <a name="incorrect-usage"></a>不正确的用法
-在其中用户界面出现突然用户完全不知道发生了什么情况，并将动画添加与上下文的理解将帮助的情况。
+##### <a name="incorrect-usage"></a>使用不正确
+UI 突然出现，用户不知道发生了什么，添加动画将有助于上下文理解。
 
 ##### <a name="animation-properties"></a>动画属性
-时间延迟通常是零秒。
+时间延迟通常为零秒。
 
 ##### <a name="examples"></a>示例
 - 自动隐藏工具窗口
 
-- 键盘激活编辑器 UI，例如 IntelliSense 和参数帮助
+- 键盘激活编辑器 UI，如智能感知和参数帮助
 
-- 展开折叠代码区域
+- 扩展和折叠代码区域
 
-#### <a name="fade-in-and-fade-out"></a>淡入和淡出
-UI 元素不可见 （0%不透明） 从使用此模式时，将转换为可见 （100%不透明），反之亦然。
+#### <a name="fade-in-and-fade-out"></a>淡入淡出
+使用此模式，UI 元素从不可见（0% 不公开性）转换为可见（100% 不公开性），反之亦然。
 
-![淡入和淡出动画](../../extensibility/ux-guidelines/media/1202-c_fadeinfadeout.png "1202 c_FadeInFadeOut")<br />淡入和淡出动画
+![淡入和淡出动画](../../extensibility/ux-guidelines/media/1202-c_fadeinfadeout.png "1202-c_FadeInFadeOut")<br />淡入和淡出动画
 
-##### <a name="correct-usage"></a>正确用法
-这是最常用建议 UI 动画。 它是添加感兴趣，而不中断流的细微效果。 在某些情况下，用户可能未意识到没有动画，其内平滑流和流动 UI 系统。
+##### <a name="correct-usage"></a>正确的用法
+这是最常推荐的 UI 动画。 这是一种微妙的效果，在不中断流量的情况下增加兴趣。 在某些情况下，用户甚至可能没有意识到有一个动画，感知一个平滑和流动的 UI 系统。
 
 ##### <a name="animation-properties"></a>动画属性
 
-- 从开始不透明度：淡入淡出的 100%的 0%
+- 开始不一用性：0%用于淡入，100%用于淡出
 
-- 停用不透明度：淡入淡出的 0%的 100%
+- 结束不成性：100%用于淡入，0%用于淡出
 
-- 持续时间：是独立 200 毫秒，100 毫秒时用作组合动画序列的一部分
+- 持续时间：独立 200 毫秒，用作组合动画序列的一部分时为 100 毫秒
 
-- 缓动样式：InOut 正弦值
+- 放松风格：因内
 
 ##### <a name="examples"></a>示例
 
@@ -257,152 +257,152 @@ UI 元素不可见 （0%不透明） 从使用此模式时，将转换为可见 
 
 - 菜单打开和关闭
 
-- 前景色和背景选项卡转换
+- 背景和前景选项卡过渡
 
-#### <a name="color-blend-from-a-to-b"></a>从 A 到 B 的颜色混合
-使用此模式时，UI 元素更改从一个颜色为颜色 b。
+#### <a name="color-blend-from-a-to-b"></a>颜色混合从 A 到 B
+使用此模式，UI 元素从颜色 A 更改为颜色 B。
 
-![颜色混合动画](../../extensibility/ux-guidelines/media/1202-d_colorblend.png "1202 d_ColorBlend")<br />颜色混合动画
+![颜色混合动画](../../extensibility/ux-guidelines/media/1202-d_colorblend.png "1202-d_ColorBlend")<br />颜色混合动画
 
-##### <a name="correct-usage"></a>正确用法
-为 UI 元素从一个上下文或状态到另一个更改颜色时的动画转换。
+##### <a name="correct-usage"></a>正确的用法
+当 UI 元素将颜色从一个上下文或状态更改为另一个上下文或状态时，作为动画过渡。
 
 ##### <a name="animation-properties"></a>动画属性
 
-- 开始颜色：特定于 UI
+- 起始颜色：特定于 UI
 
-- 结束色：特定于 UI
+- 结束颜色：特定于 UI
 
-- 持续时间：是独立 200 毫秒，100 毫秒时用作组合动画序列的一部分
+- 持续时间：独立 200 毫秒，用作组合动画序列的一部分时为 100 毫秒
 
-- 缓动样式：InOut 正弦值
+- 放松风格：因内
 
 ##### <a name="examples"></a>示例
 
-- 文档窗口状态转换 (处于活动状态，最后处于活动状态，以及处于非活动状态)
+- 文档窗口状态转换（活动、上次活动和非活动）
 
-- 工具窗口状态转换 （有针对性和失去焦点）
+- 工具窗口状态转换（聚焦和非焦点）
 
 #### <a name="expand-and-contract"></a>扩展和收缩
-使用此模式时，UI 元素在 X、 Y、 或两个方向上展开。
+使用此模式，UI 元素在 X、Y 或两个方向中展开。
 
-![扩展和收缩动画](../../extensibility/ux-guidelines/media/1202-e_expandcontract.png "1202 e_ExpandContract")<br />扩展和收缩动画
+![展开和收缩动画](../../extensibility/ux-guidelines/media/1202-e_expandcontract.png "1202-e_ExpandContract")<br />展开和收缩动画
 
-##### <a name="correct-usage"></a>正确用法
-为 UI 元素到另一个上下文从更改大小时的动画转换。
+##### <a name="correct-usage"></a>正确的用法
+当 UI 元素将大小从一个上下文更改为另一个上下文时，作为动画过渡。
 
 ##### <a name="animation-properties"></a>动画属性
 
-- 缩放 x: %或特定的尺寸 （以像素为单位）
+- X 比例：% 或特定尺寸（以像素为单位）
 
-- Y 小数位数: %或特定的尺寸 （以像素为单位）
+- Y 比例：% 或特定尺寸（以像素为单位）
 
-- 定位点位置： 通常左上角 （对于从左到右的语言） 或 （对于从右到左的语言） 的右上方
+- 锚点位置：一般左上角（从左到右语言）或右上方（对于从右到左的语言）
 
-- 持续时间：是独立 200 毫秒，100 毫秒时用作组合动画序列的一部分
+- 持续时间：独立 200 毫秒，用作组合动画序列的一部分时为 100 毫秒
 
 ##### <a name="examples"></a>示例
 
 - 体系结构资源管理器面板展开和折叠
 
-- Visual Studio 2017 起始页项目展开和折叠
+- 可视化工作室 2017 起始页项目展开和折叠
 
-#### <a name="x-y-position-change"></a>X，Y 位置更改
-使用此模式时，UI 元素更改和 / 或其 X 或 Y 位置。
+#### <a name="x-y-position-change"></a>X-Y 位置变化
+使用此模式，UI 元素将更改其 X 或 Y 位置或两者。
 
-![X，Y 位置更改动画](../../extensibility/ux-guidelines/media/1202-f_xypositionchange.png "1202 f_XYPositionChange")<br />X，Y 位置更改动画
+![X-Y 位置更改动画](../../extensibility/ux-guidelines/media/1202-f_xypositionchange.png "1202-f_XYPositionChange")<br />X-Y 位置更改动画
 
-##### <a name="correct-usage"></a>正确用法
-为 UI 元素到另一个上下文从更改位置时的动画转换。
+##### <a name="correct-usage"></a>正确的用法
+当 UI 元素将位置从一个上下文更改为另一个上下文时，作为动画过渡。
 
 ##### <a name="animation-properties"></a>动画属性
 
-- 从 X 和 Y 位置：特定于 UI
+- 启动 X 和 Y 位置：特定于 UI
 
 - 结束 X 和 Y 位置：特定于 UI
 
-- 运动路径： 无
+- 运动路径：无
 
-- 持续时间：是独立 200 毫秒，100 毫秒时用作组合动画序列的一部分
+- 持续时间：独立 200 毫秒，用作组合动画序列的一部分时为 100 毫秒
 
-- 缓动样式：InOut 正弦值
+- 放松风格：因内
 
 ##### <a name="example"></a>示例
 选项卡重新排序
 
 #### <a name="rotate"></a>旋转
-使用此模式时，将旋转的 UI 元素。
+使用此模式，UI 元素将旋转。
 
-![UI 元素旋转动画](../../extensibility/ux-guidelines/media/1202-g_rotate.png "1202 g_Rotate")<br />UI 元素旋转动画
+![UI 元素旋转动画](../../extensibility/ux-guidelines/media/1202-g_rotate.png "1202-g_Rotate")<br />UI 元素旋转动画
 
-##### <a name="correct-usage"></a>正确用法
-仅对不确定旋转进度指示器。
+##### <a name="correct-usage"></a>正确的用法
+仅适用于不确定的旋转进度指示器。
 
 ##### <a name="animation-properties"></a>动画属性
 
-- 旋转度数：360
+- 旋转程度： 360
 
-- 旋转中心： 中间的对象
+- 旋转中心：对象中间
 
-- 持续时间： 持续
+- 持续时间：连续
 
 ##### <a name="example"></a>示例
-不确定的进度指示器 （旋转）
+不确定进度指示器（旋转）
 
-### <a name="common-shell-ui-actions-and-recommended-animations"></a>常见 shell UI 操作和建议的动画
+### <a name="common-shell-ui-actions-and-recommended-animations"></a>常见的 shell UI 操作和建议的动画
 
-#### <a name="tab-open"></a>选项卡上打开
-![选项卡打开动画](../../extensibility/ux-guidelines/media/1202-h_tabopen.png "1202 h_TabOpen")<br />选项卡打开动画
+#### <a name="tab-open"></a>选项卡打开
+![选项卡打开动画](../../extensibility/ux-guidelines/media/1202-h_tabopen.png "1202-h_TabOpen")<br />选项卡打开动画
 
-- 样式： 显示
+- 样式：显示
 
-- 零秒持续时间：
+- 持续时间：零秒
 
-#### <a name="tab-close"></a>关闭选项卡
-![选项卡关闭动画](../../extensibility/ux-guidelines/media/1202-i_tabclose.png "1202 i_TabClose")<br />选项卡关闭动画
+#### <a name="tab-close"></a>选项卡关闭
+![选项卡关闭动画](../../extensibility/ux-guidelines/media/1202-i_tabclose.png "1202-i_TabClose")<br />选项卡关闭动画
 
-- 样式：X 位置更改
+- 样式：X 位置变化
 
-- 持续时间：200 毫秒
+- 持续时间： 200 毫秒
 
 #### <a name="tab-reorder"></a>选项卡重新排序
-![选项卡上的 Visual Studio 中的重新排序动画](../../extensibility/ux-guidelines/media/1202-j_tabreorder.png "1202 j_TabReorder")<br />选项卡重新排序动画
+![Visual Studio 中的选项卡重新排序动画](../../extensibility/ux-guidelines/media/1202-j_tabreorder.png "1202-j_TabReorder")<br />选项卡重新排序动画
 
-- 样式：X 位置更改
+- 样式：X 位置变化
 
-- 持续时间：200 毫秒
+- 持续时间： 200 毫秒
 
 #### <a name="close-floating-document"></a>关闭浮动文档
-![关闭浮动文档动画](../../extensibility/ux-guidelines/media/1202-k_closefloatingdocument.png "1202 k_CloseFloatingDocument")<br />关闭浮动文档动画
+![关闭浮动文档动画](../../extensibility/ux-guidelines/media/1202-k_closefloatingdocument.png "1202-k_CloseFloatingDocument")<br />关闭浮动文档动画
 
-- 样式： 显示
+- 样式：显示
 
-- 持续时间：200 毫秒
+- 持续时间： 200 毫秒
 
-#### <a name="window-state-transition"></a>窗口的状态转换
-![窗口状态过渡动画](../../extensibility/ux-guidelines/media/1202-l_windowstatetransition.png "1202 l_WindowStateTransition")<br />窗口状态过渡动画
+#### <a name="window-state-transition"></a>窗口状态转换
+![窗口状态过渡动画](../../extensibility/ux-guidelines/media/1202-l_windowstatetransition.png "1202-l_WindowStateTransition")<br />窗口状态过渡动画
 
-- Style： 若要与其他 windows 保持一致，让当前操作系统定义文档关闭动画。
+- 样式：要与其他窗口一致，让当前操作系统定义文档关闭动画。
 
-- 持续时间：200 毫秒
+- 持续时间： 200 毫秒
 
-#### <a name="menu-open"></a>打开菜单
-![菜单打开动画](../../extensibility/ux-guidelines/media/1202-m_menuopen.png "1202 m_MenuOpen")<br />菜单打开动画
+#### <a name="menu-open"></a>菜单打开
+![菜单打开动画](../../extensibility/ux-guidelines/media/1202-m_menuopen.png "1202-m_MenuOpen")<br />菜单打开动画
 
-- 样式： 淡入
+- 样式：淡入
 
-- 持续时间：200 毫秒
+- 持续时间： 200 毫秒
 
-#### <a name="menu-close"></a>关闭菜单
-![菜单关闭动画](../../extensibility/ux-guidelines/media/1202-n_menuclose.png "1202 n_MenuClose")<br />菜单关闭动画
+#### <a name="menu-close"></a>菜单关闭
+![菜单关闭动画](../../extensibility/ux-guidelines/media/1202-n_menuclose.png "1202-n_MenuClose")<br />菜单关闭动画
 
-- 样式： 淡出
+- 样式：淡出
 
-- 持续时间：200 毫秒
+- 持续时间： 200 毫秒
 
 #### <a name="auto-hide-tool-window-reveal"></a>自动隐藏工具窗口显示
-![自动隐藏工具窗口显示动画](../../extensibility/ux-guidelines/media/1202-o_autohidetoolwindowreveal.png "1202 o_AutoHideToolWindowReveal")<br />自动隐藏工具窗口显示动画
+![自动隐藏工具窗口显示动画](../../extensibility/ux-guidelines/media/1202-o_autohidetoolwindowreveal.png "1202-o_AutoHideToolWindowReveal")<br />自动隐藏工具窗口显示动画
 
-- 样式： 显示
+- 样式：显示
 
-- 零秒持续时间：
+- 持续时间：零秒

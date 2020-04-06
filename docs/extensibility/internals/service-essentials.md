@@ -5,17 +5,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - services, essentials
 ms.assetid: fbe84ad9-efe1-48b1-aba3-b50b90424d47
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8817ca48ff0a3f44a973986a173e647ce89c662c
-ms.sourcegitcommit: 95f26af1da51d4c83ae78adcb7372b32364d8a2b
+ms.openlocfilehash: 0e2947cb4cd6a347d8e010340f8689eb1907a28a
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79301631"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80705498"
 ---
 # <a name="service-essentials"></a>服务基础知识
 服务是两个 VSPackages 之间的协定。 一个 VS 包为另一个 VSPackage 提供了一组特定的接口。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]本身就是一个 VS 包的集合，它向其他 VS 包提供服务。
@@ -92,7 +92,7 @@ ms.locfileid: "79301631"
 
     此代码获取 SVActivityLog 服务并将其转换为 IVActivityLog 接口，该接口可用于写入活动日志。 有关示例，请参阅[：使用活动日志](../../extensibility/how-to-use-the-activity-log.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [可用服务的列表](../../extensibility/internals/list-of-available-services.md)
 - [使用并提供服务](../../extensibility/using-and-providing-services.md)

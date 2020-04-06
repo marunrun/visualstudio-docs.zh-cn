@@ -5,17 +5,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - VSCT files, creating
 ms.assetid: b955f51c-f9f9-49c3-a8e4-63b6eb0e0341
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c3155ff69db461e652b11ff6e8ec6d405000244f
-ms.sourcegitcommit: 95f26af1da51d4c83ae78adcb7372b32364d8a2b
+ms.openlocfilehash: a5a5f53ec87c9447af232e9d0528108ddbaea01a
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79301571"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80708111"
 ---
 # <a name="how-to-create-a-vsct-file"></a>如何：创建 .vsct 文件
 
@@ -148,7 +148,7 @@ ms.locfileid: "79301571"
 
      第一个参数值必须与在项目文件中`ResourceName`定义的属性的值匹配。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [作者 .vsct 文件](../../extensibility/internals/authoring-dot-vsct-files.md)
 - [可视化工作室命令表 （.vsct） 文件](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
 - [VSCT XML 架构引用](../../extensibility/vsct-xml-schema-reference.md)

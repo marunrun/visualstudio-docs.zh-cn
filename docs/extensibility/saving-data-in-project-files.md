@@ -1,5 +1,5 @@
 ---
-title: 在项目文件中保存数据 |Microsoft Docs
+title: 在项目文件中保存数据 |微软文档
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,32 +7,32 @@ helpviewer_keywords:
 - project files
 - project files, saving data
 ms.assetid: a3d4b15b-a91e-41ba-b235-e62632d11bc5
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 30d6652480318898e1528a6f2bb61b84621636d6
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 5fd6cfaa450bc268665ae0f58109c99002da6152
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75848744"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80701344"
 ---
 # <a name="save-data-in-project-files"></a>在项目文件中保存数据
-项目子类型可以保存并检索项目文件中特定于子类型的数据。 托管包框架（MPF）提供了两个接口来完成此任务：
+项目子类型可以在项目文件中保存和检索特定于子类型的数据。 托管包框架 （MPF） 提供了两个接口来完成此任务：
 
-- <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage> 接口允许从项目文件的**MSBuild**部分访问属性值。 每当用户需要加载或保存与生成相关的数据时，任何用户都可以调用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage> 提供的方法。
+- 该<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage>接口允许从项目文件的**MSBuild**部分访问属性值。 只要用户需要加载<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage>或保存生成相关数据，任何用户都可以调用所提供的方法。
 
-- <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment> 用于以自由格式的 XML 保存非生成相关数据。 每当 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 需要保留项目文件中与非生成相关的数据时，[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 都会调用 <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment> 提供的方法。
+- <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment>用于在自由格式 XML 中保留非生成相关数据。 只要需要在项目文件中<xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment>保留非生成相关数据，就会调用提供的方法。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]
 
-  有关如何持久保存生成和非生成相关数据的详细信息，请参阅在[MSBuild 项目文件中保存数据](../extensibility/internals/persisting-data-in-the-msbuild-project-file.md)。
+  有关如何保留生成和非生成相关数据的详细信息，请参阅[MSBuild 项目文件中的持久数据](../extensibility/internals/persisting-data-in-the-msbuild-project-file.md)。
 
-## <a name="save-and-retrieve-build-related-data"></a>保存并检索与生成相关的数据
+## <a name="save-and-retrieve-build-related-data"></a>保存和检索生成相关数据
 
 ### <a name="to-save-a-build-related-data-in-the-project-file"></a>在项目文件中保存与生成相关的数据
 
-- 调用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage.SetPropertyValue%2A> 方法以保存项目文件的完整路径。
+- 调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage.SetPropertyValue%2A>方法以保存项目文件的完整路径。
 
     ```
     private SpecializedProject project;
@@ -45,9 +45,9 @@ ms.locfileid: "75848744"
         (uint)_PersistStorageType.PST_PROJECT_FILE, newFullPath));
     ```
 
-### <a name="to-retrieve-build-related-data-from-the-project-file"></a>从项目文件中检索与生成相关的数据
+### <a name="to-retrieve-build-related-data-from-the-project-file"></a>从项目文件中检索生成相关数据
 
-- 调用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage.GetPropertyValue%2A> 方法来检索项目文件的完整路径。
+- 调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage.GetPropertyValue%2A>方法以检索项目文件的完整路径。
 
     ```
     private SpecializedProject project;
@@ -60,11 +60,11 @@ ms.locfileid: "75848744"
         (uint)_PersistStorageType.PST_PROJECT_FILE, out fullPath));
     ```
 
-## <a name="save-and-retrieve-non-build-related-data"></a>保存并检索非生成相关数据
+## <a name="save-and-retrieve-non-build-related-data"></a>保存和检索非生成相关数据
 
-### <a name="to-save-non-build-related-data-in-the-project-file"></a>将非生成相关数据保存在项目文件中
+### <a name="to-save-non-build-related-data-in-the-project-file"></a>在项目文件中保存非生成相关数据
 
-1. 实现 <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment.IsFragmentDirty%2A> 方法，以确定 XML 片段自上次保存到其当前文件后是否已更改。
+1. 实现该方法<xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment.IsFragmentDirty%2A>以确定自上次保存到其当前文件以来 XML 片段是否已更改。
 
     ```
     public int IsFragmentDirty(uint storage, out int pfDirty)
@@ -94,7 +94,7 @@ ms.locfileid: "75848744"
     }
     ```
 
-2. 实现 <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment.Save%2A> 方法，将 XML 数据保存到项目文件中。
+2. 实现在<xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment.Save%2A>项目文件中保存 XML 数据的方法。
 
     ```
     public int Save(ref Guid guidFlavor, uint storage, out string pbstrXMLFragment, int fClearDirty)
@@ -143,9 +143,9 @@ ms.locfileid: "75848744"
     }
     ```
 
-### <a name="to-retrieve-non-build-related-data-in-the-project-file"></a>在项目文件中检索与非生成相关的数据
+### <a name="to-retrieve-non-build-related-data-in-the-project-file"></a>在项目文件中检索非生成相关数据
 
-1. 实现 <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment.InitNew%2A> 方法来初始化项目扩展属性和其他与生成无关的数据。 如果项目文件中不存在 XML 配置数据，则调用此方法。
+1. 实现初始<xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment.InitNew%2A>化项目扩展属性和其他与生成无关的数据的方法。 如果项目文件中不存在 XML 配置数据，则调用此方法。
 
     ```
     public int InitNew(ref Guid guidFlavor, uint storage)
@@ -161,7 +161,7 @@ ms.locfileid: "75848744"
         return VSConstants.S_OK;
     ```
 
-2. 实现 <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment.Load%2A> 方法以从项目文件加载 XML 数据。
+2. 实现从<xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment.Load%2A>项目文件加载 XML 数据的方法。
 
     ```
     public int Load(ref Guid guidFlavor, uint storage, string pszXMLFragment)
@@ -206,7 +206,7 @@ ms.locfileid: "75848744"
     ```
 
 > [!NOTE]
-> 本主题中提供的所有代码示例都是[VSSDK 示例](https://github.com/Microsoft/VSSDK-Extensibility-Samples)中更大示例的一部分。
+> 本主题提供的所有代码示例都是[VSSDK 示例中](https://github.com/Microsoft/VSSDK-Extensibility-Samples)较大示例的一部分。
 
-## <a name="see-also"></a>另请参阅
-- [在 MSBuild 项目文件中保存数据](../extensibility/internals/persisting-data-in-the-msbuild-project-file.md)
+## <a name="see-also"></a>请参阅
+- [MSBuild 项目文件中的持久数据](../extensibility/internals/persisting-data-in-the-msbuild-project-file.md)
