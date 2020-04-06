@@ -1,5 +1,5 @@
 ---
-title: IDebugPendingBreakpoint2::SetCondition | Microsoft Docs
+title: IDebug 待定断点2：：设置条件 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -8,23 +8,23 @@ helpviewer_keywords:
 - SetCondition method
 - IDebugPendingBreakpoint2::SetCondition method
 ms.assetid: 0534224f-654f-4862-bc4d-a9a81a5f8899
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 1a71e22d118b64e15bb9da15b2f9152a90440f1a
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 4683d944f2489b8b21ff545c86e3d867283d644a
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66347654"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80725719"
 ---
 # <a name="idebugpendingbreakpoint2setcondition"></a>IDebugPendingBreakpoint2::SetCondition
-设置或更改关联挂起断点的条件。
+设置或更改与挂起断点关联的条件。
 
 ## <a name="syntax"></a>语法
 
@@ -42,13 +42,13 @@ int SetCondition( 
 
 ## <a name="parameters"></a>参数
 `bpCondition`\
-[in]一个[BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md)结构，它指定要设置的条件。
+[在]指定要设置的条件[BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md)结构。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，返回`S_OK`;否则，返回错误代码。
 
 ## <a name="remarks"></a>备注
- 以前挂起断点有关联任何条件会丢失。 从该绑定挂起断点的所有断点都调用以将其条件设置中指定的值为`bpCondition`参数。
+ 以前与挂起的断点关联的任何条件都将丢失。 调用来自此挂起断点的所有断点，将其条件设置为`bpCondition`参数中指定的值。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)

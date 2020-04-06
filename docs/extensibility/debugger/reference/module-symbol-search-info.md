@@ -1,5 +1,5 @@
 ---
-title: MODULE_SYMBOL_SEARCH_INFO | Microsoft Docs
+title: MODULE_SYMBOL_SEARCH_INFO |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - MODULE_SYMBOL_SEARCH_INFO structure
 ms.assetid: 432aff03-08a5-4c5a-b2d5-e212090fc70a
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c521ebe321813013b83a951d4d2aa5f60fd1646d
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 5f15587759c4f665d1593d1298c47459a0e64aac
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66346619"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80714240"
 ---
-# <a name="modulesymbolsearchinfo"></a>MODULE_SYMBOL_SEARCH_INFO
+# <a name="module_symbol_search_info"></a>MODULE_SYMBOL_SEARCH_INFO
 
 包含有关已搜索的符号搜索路径的状态信息。
 
@@ -46,22 +46,22 @@ public struct MODULE_SYMBOL_SEARCH_INFO {
 ## <a name="members"></a>成员
 
 `dwValidFields`\
-中的标志的组合[SYMBOL_SEARCH_INFO_FIELDS](../../../extensibility/debugger/reference/symbol-search-info-fields.md)枚举，它指定此结构中所述的搜索信息的类型。
+[SYMBOL_SEARCH_INFO_FIELDS](../../../extensibility/debugger/reference/symbol-search-info-fields.md)枚举中的标志的组合，指定此结构中描述的搜索信息类型。
 
 `bstrVerboseSearchInfo`\
-搜索路径和结果连接成单个字符串。
+搜索路径和结果串联到单个字符串中。
 
 ## <a name="remarks"></a>备注
 
-此结构从调用返回[GetSymbolInfo](../../../extensibility/debugger/reference/idebugmodule3-getsymbolinfo.md)方法。
+此结构从对[GetSymbolInfo](../../../extensibility/debugger/reference/idebugmodule3-getsymbolinfo.md)方法的调用返回。
 
-如果`bstrVerboseSearchInfo`字段不为空，则它包含搜索路径和该搜索的结果的列表。 列表格式与跟省略号 （"..."） 后, 跟结果的路径。 如果有多个路径结果对，然后由"\r\n"（回车符-/ 换行） 对分隔每个对。 该模式如下所示：
+如果`bstrVerboseSearchInfo`该字段不为空，则它包含搜索的路径列表和该搜索的结果。 列表的格式采用路径，后跟省略号 （"..."），后跟结果。 如果有多个路径结果对，则每对由一对"\r\n"（回车/换行）对分隔。 模式如下所示：
 
-\<path>...\<result>\r\n\<path>...\<result>\r\n\<path>...\<result>
+\<路径>...\<结果>\r\n\<路径>...\<结果>\r\n\<路径>...\<结果>
 
-请注意，最后一项没有 \r\n 序列。
+请注意，最后一个条目没有 \r\n 序列。
 
-下面是可能发生`bstrVerboseSearchInfo`已发送到标准输出的字符串。
+下面是已发送到标准`bstrVerboseSearchInfo`出的可能的字符串。
 
 `c:\symbols\user32.pdb... File not found.`
 
@@ -71,11 +71,11 @@ public struct MODULE_SYMBOL_SEARCH_INFO {
 
 ## <a name="requirements"></a>要求
 
-标头： msdbg.h
+标题： msdbg.h
 
-命名空间:Microsoft.VisualStudio.Debugger.Interop
+命名空间：微软.VisualStudio.调试器.互通
 
-程序集：Microsoft.VisualStudio.Debugger.Interop.dll
+程序集：微软.VisualStudio.调试器.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 

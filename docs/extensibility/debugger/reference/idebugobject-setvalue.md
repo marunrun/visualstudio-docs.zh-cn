@@ -1,5 +1,5 @@
 ---
-title: IDebugObject::SetValue | Microsoft Docs
+title: IDebugObject：设置值 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugObject::SetValue method
 ms.assetid: d652e09c-cdc1-4519-8116-d7c743f5679b
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a9c6590c45027eb3dce28e2dbac182a967e87d59
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 9e4652eb3c77a1871063dfa71b464fb1f7c43f94
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66318949"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80726366"
 ---
 # <a name="idebugobjectsetvalue"></a>IDebugObject::SetValue
-设置对象的值从一系列连续的字节数。
+设置连续字节序列中对象的值。
 
 ## <a name="syntax"></a>语法
 
@@ -43,16 +43,16 @@ int SetValue(
 
 ## <a name="parameters"></a>参数
 `pValue`\
-[in]一个表示新值的字节数组。
+[在]表示新值的字节数组。
 
 `nSize`\
-[in]以字节为单位的值的大小。
+[在]值的大小（以字节为单位）。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回 S_OK;否则，返回错误代码。
+ 如果成功，返回S_OK;否则，返回错误代码。
 
 ## <a name="remarks"></a>备注
- 数组中的值复制到此[IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)对象，并将任何现有值替换。 新值的大小可大于或小于现有值。 这`IDebugObject`不能为 null 引用。
+ 数组中的值将复制到此[IDebugObject 对象](../../../extensibility/debugger/reference/idebugobject.md)中，替换任何现有值。 新值的大小可以大于或小于现有值。 这`IDebugObject`不能为空引用。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)

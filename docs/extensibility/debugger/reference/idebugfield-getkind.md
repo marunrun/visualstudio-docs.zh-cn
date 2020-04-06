@@ -1,5 +1,5 @@
 ---
-title: IDebugField::GetKind |Microsoft Docs
+title: IDebugField：获取金德 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugField::GetKind method
 ms.assetid: e7c9c60a-8e55-4ecc-aa63-0c814a1e92cc
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: d99c7d1bed9f5afe844539c9a9ccab11f43a8002
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 807b4ecab517e151c87bfc5daab3e94a1e7d5f22
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66333171"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80728817"
 ---
 # <a name="idebugfieldgetkind"></a>IDebugField::GetKind
-此方法获取字段的类型。
+此方法获取字段类型。
 
 ## <a name="syntax"></a>语法
 
@@ -41,10 +41,10 @@ int GetKind(
 
 ## <a name="parameters"></a>参数
 `pdwKind`\
-[out]返回的字段类型的组合[FIELD_KIND](../../../extensibility/debugger/reference/field-kind.md)常量。
+[出]将字段类型作为[FIELD_KIND](../../../extensibility/debugger/reference/field-kind.md)常量的组合返回。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，返回`S_OK`;否则，返回错误代码。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

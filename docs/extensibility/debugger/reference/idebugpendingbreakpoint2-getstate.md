@@ -1,5 +1,5 @@
 ---
-title: IDebugPendingBreakpoint2::GetState | Microsoft Docs
+title: IDebug 待定突破点2：：获取状态 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - GetState method
 - IDebugPendingBreakpoint2::GetState method
 ms.assetid: e88d543f-2e83-4ba7-86ca-f874e39955ff
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 84ee5c48a74fa9ed707cc55be3cbc1ab49940552
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 4ad65ff6fcebb18ac1b8852c08195e9a8b062749
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66347775"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80725752"
 ---
 # <a name="idebugpendingbreakpoint2getstate"></a>IDebugPendingBreakpoint2::GetState
 获取挂起断点的状态。
@@ -42,10 +42,10 @@ int GetState( 
 
 ## <a name="parameters"></a>参数
 `pState`\
-[in、 out]一个[PENDING_BP_STATE_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md)填充说明此挂起断点的结构。
+[进出]PENDING_BP_STATE_INFO[结构，](../../../extensibility/debugger/reference/pending-bp-state-info.md)该结构填写了此挂起的断点说明。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，返回`S_OK`;否则，返回错误代码。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)

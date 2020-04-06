@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty2::GetMemoryBytes | Microsoft Docs
+title: IDebug属性2：：获取内存字节 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProperty2::GetMemoryBytes
 ms.assetid: b32042ed-7a06-4b4a-99ef-fe03b0aa61cc
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e6d6c689f704c91e36762db7405e3e28ee6829bf
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 7d13fa3821a6d7bf861cd160a5588d0788b92243
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66343097"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80721476"
 ---
 # <a name="idebugproperty2getmemorybytes"></a>IDebugProperty2::GetMemoryBytes
-获取构成的一个属性的值的内存字节数。
+获取构成属性值的内存字节。
 
 ## <a name="syntax"></a>语法
 
@@ -41,10 +41,10 @@ int GetMemoryBytes ( 
 
 ## <a name="parameters"></a>参数
 `ppMemoryBytes`\
-[out]返回[IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md)可用于检索包含属性的值的内存的对象。
+[出]返回可用于检索包含属性值的内存的[IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md)对象。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则返回错误代码。 返回`S_GETMEMORYBYTES_NO_MEMORY_BYTES`如果检索没有内存字节数。
+ 如果成功，返回`S_OK`;否则返回错误代码。 如果没有`S_GETMEMORYBYTES_NO_MEMORY_BYTES`要检索的内存字节，则返回。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugEvent2::GetAttributes |Microsoft Docs
+title: IDebugEvent2：：获取属性 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugEvent2::GetAttributes
 ms.assetid: 2ac5b5fb-da17-43f7-811a-313f677e60d7
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 3f85cccb01a31232cccc39e44fae7accbfa4f954
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: ffc3fc1b7988401611190fdf09e8041bf0dc5b1a
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66327591"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80729953"
 ---
 # <a name="idebugevent2getattributes"></a>IDebugEvent2::GetAttributes
-获取此调试事件的特性。
+获取此调试事件的属性。
 
 ## <a name="syntax"></a>语法
 
@@ -41,13 +41,13 @@ int GetAttribute( 
 
 ## <a name="parameters"></a>参数
 `pdwAttrib`\
-[out]中的标志的组合[EVENTATTRIBUTES](../../../extensibility/debugger/reference/eventattributes.md)枚举。
+[出][事件属性](../../../extensibility/debugger/reference/eventattributes.md)枚举中标志的组合。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，返回`S_OK`;否则，返回错误代码。
 
 ## <a name="remarks"></a>备注
- [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)接口是普遍适用于所有事件。 此方法描述类型的事件;例如，是同步还是异步事件并将它停止事件。
+ [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)接口是所有事件所共有的。 此方法描述事件的类型;例如，事件是同步事件或异步事件，它是停止事件。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)

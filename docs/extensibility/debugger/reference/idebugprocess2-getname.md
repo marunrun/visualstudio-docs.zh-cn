@@ -1,5 +1,5 @@
 ---
-title: IDebugProcess2::GetName | Microsoft Docs
+title: IDebugProcess2：：获取名称 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProcess2::GetName
 ms.assetid: a2f66ab5-53e5-4cdc-a1b5-3b8afa8ee646
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: d869f041bee3d187e4cd980328819505e667114e
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 68026ed56aabd08f93588277c8d2b44e13604974
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66339021"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80723965"
 ---
 # <a name="idebugprocess2getname"></a>IDebugProcess2::GetName
-获取标题、 友好名称或进程的文件名称。
+获取进程的标题、友好名称或文件名。
 
 ## <a name="syntax"></a>语法
 
@@ -43,13 +43,13 @@ int GetName( 
 
 ## <a name="parameters"></a>参数
 `gnType`\
-[in]中的值[GETNAME_TYPE](../../../extensibility/debugger/reference/getname-type.md)枚举，用于指定哪种类型的名称返回。
+[在][GETNAME_TYPE](../../../extensibility/debugger/reference/getname-type.md)枚举中指定要返回的名称类型的值。
 
 `pbstrName`\
-[out]返回进程的名称。
+[出]返回进程的名称。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，返回`S_OK`;否则，返回错误代码。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)

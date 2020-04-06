@@ -1,5 +1,5 @@
 ---
-title: IDebugMethodField::EnumLocals |Microsoft Docs
+title: IDebugMethodfield：：枚举本地人 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugMethodField::EnumLocals method
 ms.assetid: b0456a6d-2b96-49e2-a871-516571b4f6a5
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: bd4e2ffcaa66af58d3cc7ab57420de32d77eec92
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 08872160860d0d442f9807705dea70190dff9b28
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66346774"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80727201"
 ---
 # <a name="idebugmethodfieldenumlocals"></a>IDebugMethodField::EnumLocals
-创建所选的方法的局部变量的枚举器。
+为方法的选定局部变量创建枚举器。
 
 ## <a name="syntax"></a>语法
 
@@ -43,18 +43,18 @@ int EnumLocals(
 
 ## <a name="parameters"></a>参数
 `pAddress`\
-[in][IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md)对象，表示选择的上下文或从其获取局部变量的作用域的调试地址。
+[在][IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md)对象，表示选择从中获取局部变量的上下文或作用域的调试地址。
 
 `ppLocals`\
-[out]返回[IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)对象，表示局部变量的列表; 否则，返回 null 值，如果不有任何局部变量。
+[出]返回表示局部变量列表的[IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)对象;否则，如果没有局部变量，则返回 null 值。
 
 ## <a name="return-value"></a>返回值
-如果成功，则返回 S_OK 或如果没有局部变量，则返回 S_FALSE。 否则，返回错误代码。
+如果成功，则返回S_OK或返回S_FALSE如果没有局部变量。 否则，返回错误代码。
 
 ## <a name="remarks"></a>备注
-将枚举中仅包含给定的调试地址块中定义的变量。 如果需要包括任何编译器生成的局部变量的所有局部变量，调用[EnumAllLocals](../../../extensibility/debugger/reference/idebugmethodfield-enumalllocals.md)方法。
+仅枚举在包含给定调试地址的块中定义的变量。 如果需要所有局部变量（包括任何编译器生成的局部变量），请调用[EnumAllLocals](../../../extensibility/debugger/reference/idebugmethodfield-enumalllocals.md)方法。
 
-一种方法可以包含多个作用域的上下文或块。 例如，以下精心设计的方法包含三个作用域、 两个内部块和方法主体本身。
+方法可以包含多个范围上下文或块。 例如，以下精心设计的方法包含三个作用域，两个内部块和方法体本身。
 
 ```csharp
 public void func(int index)
@@ -74,7 +74,7 @@ public void func(int index)
 }
 ```
 
-[IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)对象表示`func`方法本身。 调用`EnumLocals`方法替换[IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md)设置为`Inner Scope 1`地址返回一个枚举，其中包含`temp1`变量，例如。
+[IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)对象表示`func`方法本身。 例如，`EnumLocals`使用[IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md)设置为`Inner Scope 1`地址调用方法将返回包含变量的`temp1`枚举。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)

@@ -1,26 +1,26 @@
 ---
-title: IDE Guid |Microsoft Docs
+title: IDE GUIDs |微软文档
 ms.date: 03/22/2018
 ms.topic: conceptual
 helpviewer_keywords:
 - GUIDs, integrated development environment
 - IDE, GUIDs
 ms.assetid: d31a0f97-b7be-4fb5-a942-8ba4527bc068
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: da2cdd5a292de0413845da0ce2d7e8b4678cf895
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 41f9931b8e36dcb363624ecbc67e186bd3f5f71c
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66311172"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80710490"
 ---
 # <a name="ide-guids"></a>IDE GUID
 
-<xref:Microsoft.VisualStudio.VSConstants>类发布的集成的开发环境 (IDE) 的某些部分 Guid 下, 表中列出。
+该<xref:Microsoft.VisualStudio.VSConstants>类发布下表中列出的集成开发环境 （IDE） 的某些部分的 GUID。
 
 ## <a name="core-systems"></a>核心系统
 
@@ -35,16 +35,16 @@ ms.locfileid: "66311172"
 |<xref:Microsoft.VisualStudio.VSConstants.VsEditorFactoryGuid.HtmlEditor_guid>|C76D83F8-A489-11D0-8195-00A0C91BBEE3|
 |<xref:Microsoft.VisualStudio.VSConstants.VsEditorFactoryGuid.TextEditor_guid>|8B382828-6202-11d1-8870-0000F87579D2|
 
-## <a name="broadly-visible-components"></a>广泛可见组件
+## <a name="broadly-visible-components"></a>广泛可见的组件
 
 |返回的常量|GUID|
 |--------------|----------|
 |<xref:Microsoft.VisualStudio.VSConstants.CLSID.VsUIHierarchyWindow_guid>|7D960B07-7AF8-11D0-8E5E-00A0C911005A|
 |<xref:Microsoft.VisualStudio.VSConstants.VsEditorFactoryGuid.ExternalEditor_guid>|8137C9E8-35FE-4AF2-87B0-DE3C45F395FD|
-|Microsoft.VisualStudio.VSConstants.SID_SUIHostCommandDispatcher|e69cd190-1276-11d1-9f64-00a0c911004f|
-|Microsoft.VisualStudio.VSConstants.SID_SVsGeneralOutputWindowPane|65482c72-defa-41b7-902c-11c091889c83|
+|微软.VisualStudio.VSConstants.SID_SUIHostCommandDispatcher|e69cd190-1276-11d1-9f64-00a0c911004f|
+|微软.VisualStudio.VSConstants.SID_SVsGeneralOutputWindowPane|65482c72-defa-41b7-902c-11c091889c83|
 
-## <a name="files-virtual-and-physical-folders-and-subprojects"></a>文件、 虚拟和物理文件夹和子项目
+## <a name="files-virtual-and-physical-folders-and-subprojects"></a>文件、虚拟和物理文件夹以及子项目
 
 |返回的常量|GUID|
 |--------------|----------|
@@ -69,7 +69,7 @@ ms.locfileid: "66311172"
 |<xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.SolutionHasMultipleProjects_guid>|93694fa0-0397-11d1-9f4e-00a0c911004f|
 |<xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.SolutionHasSingleProject_guid>|adfc4e66-0397-11d1-9f4e-00a0c911004f|
 
-## <a name="output-pane"></a>“输出”窗格
+## <a name="output-pane"></a>输出窗格
 
 |返回的常量|GUID|
 |--------------|----------|
@@ -78,22 +78,22 @@ ms.locfileid: "66311172"
 |<xref:Microsoft.VisualStudio.VSConstants.OutputWindowPaneGuid.GeneralPane_guid>|3C24D581-5591-4884-A571-9FE89915CD64|
 |<xref:Microsoft.VisualStudio.VSConstants.OutputWindowPaneGuid.SortedBuildOutputPane_guid>|2032B126-7C8D-48AD-8026-0E0348004FC0|
 |<xref:Microsoft.VisualStudio.VSConstants.OutputWindowPaneGuid.StoreValidationPane_guid>|54065C74-1B11-4249-9EA7-5540D1A6D528|
-|Microsoft.VisualStudio.VSConstants.SID_SVsGeneralOutputWindowPane|65482c72-defa-41b7-902c-11c091889c83|
+|微软.VisualStudio.VSConstants.SID_SVsGeneralOutputWindowPane|65482c72-defa-41b7-902c-11c091889c83|
 
-## <a name="command-sets-and-properties"></a>命令组和属性
+## <a name="command-sets-and-properties"></a>命令集和属性
 
 |返回的常量|GUID|
 |--------------|----------|
-|Microsoft.VisualStudio.VSConstants.GUID_VSStandardCommandSet97|5EFC7975-14BC-11CF-9B2B-00AA00573819|
-|Microsoft.VisualStudio.VSConstants.GUID_VsUIHierarchyWindowCmds>|60481700-078b-11d1-aaf8-00a0c9055a90|
+|微软.VisualStudio.VSConstants.GUID_VSStandardCommandSet97|5EFC7975-14BC-11CF-9B2B-00AA00573819|
+|微软.VisualStudio.VSConstants.GUID_VsUIHierarchyWindowCmds>|60481700-078b-11d1-aaf8-00a0c9055a90|
 
 ## <a name="iunknown"></a>IUnknown
 
 |返回的常量|GUID|
 |--------------|----------|
-|<xref:Microsoft.VisualStudio.VSConstants.IID_IUnknown>|00000000-0000-0000-C000-000000000046|
+|<xref:Microsoft.VisualStudio.VSConstants.IID_IUnknown>|0000000-0000-0000-C000-00000000046|
 
-## <a name="task-list-guids"></a>任务列表的 Guid
+## <a name="task-list-guids"></a>任务列表 GUID
 
 |返回的常量|GUID|
 |--------------|----------|
@@ -109,24 +109,24 @@ ms.locfileid: "66311172"
 |<xref:Microsoft.VisualStudio.VSConstants.CLSID.VsTaskList_guid>|BC5955D5-aa0d-11d0-a8c5-00a0c921a4d2|
 |<xref:Microsoft.VisualStudio.VSConstants.VsPackageGuid.VsTaskListPackage_guid>|4A9B7E50-aa16-11d0-a8c5-00a0c921a4d2|
 
-## <a name="component-selector-page-guids"></a>组件选择器页的 Guid
+## <a name="component-selector-page-guids"></a>组件选择器页面 GUID
 
 |常量|GUID|
 |---------------|----------|
-|Microsoft.VisualStudio.VSConstants.GUID_COMClassicPage|9A341D96-5A64-11d3-BFF9-00C04F990235|
-|Microsoft.VisualStudio.VSConstants.GUID_COMPlusPage|9A341D95-5A64-11d3-BFF9-00C04F990235|
-|Microsoft.VisualStudio.VSConstants.GUID_SolutionPage|9A341D97-5A64-11d3-BFF9-00C04F990235|
+|微软.VisualStudio.VSConstants.GUID_COMClassicPage|9A341D96-5A64-11d3-BFF9-00C04F990235|
+|微软.VisualStudio.VSConstants.GUID_COMPlusPage|9A341D95-5A64-11d3-BFF9-00C04F990235|
+|微软.VisualStudio.VSConstants.GUID_SolutionPage|9A341D97-5A64-11d3-BFF9-00C04F990235|
 
-## <a name="miscellaneous-shell-guids"></a>杂项命令行程序 Guid
+## <a name="miscellaneous-shell-guids"></a>杂项外壳 GUID
 
 |常量|GUID|
 |---------------|----------|
 |<xref:Microsoft.VisualStudio.VSConstants.CLSID.VsCfgProviderEventsHelper_guid>|99913f1f-1ee3-11d1-8a6e-00c04f682e21|
 |<xref:Microsoft.VisualStudio.VSConstants.VsPackageGuid.VsDocOutlinePackage_guid>|21af45b0-ffa5-11d0-b63f-00a0c922e851|
-|Microsoft.VisualStudio.VSConstants.SID_SVsToolboxActiveXDataProvider|35222106-bb44-11d0-8c46-00c04fc2aae2|
+|微软.VisualStudio.VSConstants.SID_SVsToolboxActiveXDataProvider|35222106-bb44-11d0-8c46-00c04fc2aae2|
 
 ## <a name="see-also"></a>请参阅
 
-- [在托管代码中的 COM 常量](../extensibility/com-constants-in-managed-code.md)
+- [托管代码中的 COM 常量](../extensibility/com-constants-in-managed-code.md)
 - [IDE 常量](../extensibility/ide-constants.md)
-- [用于扩展项目的系统 IDE 定义的命令](../extensibility/internals/ide-defined-commands-for-extending-project-systems.md)
+- [用于扩展项目的 ystems 的 IDE 定义命令](../extensibility/internals/ide-defined-commands-for-extending-project-systems.md)

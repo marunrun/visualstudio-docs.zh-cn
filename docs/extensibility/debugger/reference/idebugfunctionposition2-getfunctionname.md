@@ -1,5 +1,5 @@
 ---
-title: IDebugFunctionPosition2::GetFunctionName |Microsoft Docs
+title: IDebug功能位置2：：获取功能名称 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugFunctionPosition2::GetFunctionName
 ms.assetid: eb7a348e-a7f5-4f25-be68-80482d5482a8
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a3bef8ebf82786212552421ebb608e26a6708623
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 771dbe369154200805fb9d344dd5b457353e34dd
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66313347"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80728422"
 ---
 # <a name="idebugfunctionposition2getfunctionname"></a>IDebugFunctionPosition2::GetFunctionName
-获取指向此位置的函数的名称。
+获取此位置指向的函数的名称。
 
 ## <a name="syntax"></a>语法
 
@@ -41,10 +41,10 @@ int GetFunctionName(
 
 ## <a name="parameters"></a>参数
 `pbstrFunctionName`\
-[out]返回的函数的名称。
+[出]返回函数的名称。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，返回`S_OK`;否则，返回错误代码。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugFunctionPosition2](../../../extensibility/debugger/reference/idebugfunctionposition2.md)

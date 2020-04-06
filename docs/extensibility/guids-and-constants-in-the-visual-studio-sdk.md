@@ -1,32 +1,32 @@
 ---
-title: Guid 和常量放在 Visual Studio SDK |Microsoft Docs
+title: 可视化工作室 SDK 中的 GUID 和常量 |微软文档
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - constants, Visual Studio SDK
 - GUIDs, Visual Studio SDK
 ms.assetid: 438c1079-0747-4995-ae7a-32aa399c96f5
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 77674faa43ce687fcd3df4412437ecb5cda10dd5
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: ecb443f3b5d6dd7b45d8dd77a8739b12b8891832
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66342242"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80711135"
 ---
-# <a name="guids-and-constants-in-the-visual-studio-sdk"></a>Guid 和常量放在 Visual Studio SDK
-<xref:Microsoft.VisualStudio.VSConstants>类提供对选定的环境 Guid 和常量的访问。
+# <a name="guids-and-constants-in-the-visual-studio-sdk"></a>可视化工作室 SDK 中的 GUID 和常量
+该<xref:Microsoft.VisualStudio.VSConstants>类提供对环境 GUID 和常量的选择的访问。
 
-## <a name="in-this-section"></a>本节内容
-- [IDE Guid](../extensibility/ide-guids.md)列出了由提供的 Guid <xref:Microsoft.VisualStudio.VSConstants>。
+## <a name="in-this-section"></a>在本节中
+- [IDE GUIDs](../extensibility/ide-guids.md)列出 提供的<xref:Microsoft.VisualStudio.VSConstants>GUID。
 
-- [IDE 常量](../extensibility/ide-constants.md)列出了 SDK 常量提供<xref:Microsoft.VisualStudio.VSConstants>。
+- [IDE 常量](../extensibility/ide-constants.md)列出 提供的<xref:Microsoft.VisualStudio.VSConstants>SDK 常量。
 
 ## <a name="related-sections"></a>相关章节
-- [在托管代码中的 COM 常量](../extensibility/com-constants-in-managed-code.md)列表标准的 COM 常量可用于托管代码从托管包框架 (MPF)。
+- [托管代码中的 COM 常量](../extensibility/com-constants-in-managed-code.md)列出可从托管包框架 （MPF） 向托管代码提供的标准 COM 常量。
 
-- [IDE 定义的命令，用于扩展项目系统](../extensibility/internals/ide-defined-commands-for-extending-project-systems.md)列出了不同类型的命令项用于扩展项目系统。
+- [用于扩展项目系统的 IDE 定义命令](../extensibility/internals/ide-defined-commands-for-extending-project-systems.md)列出用于扩展项目系统的不同类型的命令项。

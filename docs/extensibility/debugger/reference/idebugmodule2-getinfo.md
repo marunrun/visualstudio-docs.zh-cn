@@ -1,5 +1,5 @@
 ---
-title: IDebugModule2::GetInfo | Microsoft Docs
+title: IDebugModule2：：获取信息 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - GetInfo method
 - IDebugModule2::GetInfo method
 ms.assetid: de337e66-294f-4ac9-b21e-71fac7418e36
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 1fe5060f66c56a033fb0bdcc8ae7dee368d2824e
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: c68c583702d7def5a7bff3ee40a9b8b2c537bb31
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66323967"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80726960"
 ---
 # <a name="idebugmodule2getinfo"></a>IDebugModule2::GetInfo
 获取有关此模块的信息。
@@ -44,16 +44,16 @@ int GetInfo( 
 
 ## <a name="parameters"></a>参数
 `dwFields`\
-[in]中的标志的组合[MODULE_INFO_FIELDS](../../../extensibility/debugger/reference/module-info-fields.md)枚举，用于指定的哪些字段`pInfo`要填写。
+[在][MODULE_INFO_FIELDS](../../../extensibility/debugger/reference/module-info-fields.md)枚举中的标志的组合，用于指定要填写的`pInfo`字段。
 
 `pInfo`\
-[in、 out]一个[MODULE_INFO](../../../extensibility/debugger/reference/module-info.md)使用模块的说明填充的结构。
+[进出]填充模块说明的[MODULE_INFO](../../../extensibility/debugger/reference/module-info.md)结构。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，返回`S_OK`;否则，返回错误代码。
 
 ## <a name="remarks"></a>备注
- [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md)结构中包含的模块中显示的名称**模块**窗口。
+ [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md)结构包含"**模块"** 窗口中显示的模块的名称。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugModule2](../../../extensibility/debugger/reference/idebugmodule2.md)
