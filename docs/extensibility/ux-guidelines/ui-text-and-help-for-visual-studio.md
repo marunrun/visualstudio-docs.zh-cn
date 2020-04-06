@@ -3,17 +3,17 @@ title: 可视化工作室的 UI 文本和帮助 |微软文档
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: e8747d07-6c90-46cc-b425-55b589f7e9e4
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c0477a0e1994e9c3b94df13ace4c1f3b4df51039
-ms.sourcegitcommit: 95f26af1da51d4c83ae78adcb7372b32364d8a2b
+ms.openlocfilehash: b3247aeaa702b59722471c7d28e98957f04f3e07
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79301535"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80698299"
 ---
 # <a name="ui-text-and-help-for-visual-studio"></a>Visual Studio 的 UI 文本和帮助
 ## <a name="ui-text-and-terminology"></a><a name="BKMK_UITextAndTerminology"></a>UI 文本和术语
@@ -162,7 +162,7 @@ ms.locfileid: "79301535"
 |添加/删除|无损。 从列表中添加或删除内容时使用。|TFS 连接管理器服务器列表对话框是添加/删除的示例。|
 |删除|破坏性。 仅当要删除的元素将被永久丢弃或从磁盘中删除时，才使用。|如果结果从磁盘中删除文件，则"删除"通常需要提示。|
 
-## <a name="error-messages"></a>错误消息
+## <a name="error-messages"></a>Error messages
 
 ### <a name="overview"></a>概述
  会发生错误。 设置用户可以做什么的限制是防止可避免错误消息的明智第一步。 但是，当发生错误时，编写良好的错误消息可以很好地缓解问题。 错误消息可以说是用户看到的最重要通知类型之一，因为它们是同步的，并且指示需要解决的问题。 编写不良的错误消息使用户自行决定错误的原因和任何可能的解决方案。
@@ -272,7 +272,7 @@ ms.locfileid: "79301535"
 
 - **UI 帮助按钮**（已弃用）。 标题栏中允许访问相关 F1 帮助主题的可见指示器。
 
-### <a name="text"></a>文本
+### <a name="text"></a>Text
 
 #### <a name="instructional-and-supplemental-text-in-dialogs"></a>对话框中的教学和补充文本
  在支持复杂任务的对话框中，可能需要在 UI 中（通常在对话框顶部或复杂控件附近）提供指令文本。 有关书写样式的详细信息，请参阅[UI 文本和术语](../../extensibility/ux-guidelines/ui-text-and-help-for-visual-studio.md#BKMK_UITextAndTerminology)。
@@ -420,7 +420,7 @@ public class HelpForm : Form
 }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [Visual Studio 的字体和格式](../../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md)
 - [Visual Studio 的布局](../../extensibility/ux-guidelines/layout-for-visual-studio.md)
 - [Visual Studio 的通知和进度](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md)

@@ -1,27 +1,27 @@
 ---
-title: 使用自动化模型 |Microsoft Docs
+title: 使用自动化模型 |微软文档
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - automation [Visual Studio SDK], automation model
 ms.assetid: 0c7f7889-fbfb-4b19-804f-b742138baecd
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4f1e1479232a684758359de7527f0c2fc9990cc7
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 2b9d7bd789a41f7a5e801552ca07f9f228921867
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72722095"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80704223"
 ---
 # <a name="using-the-automation-model"></a>使用自动化模型
-将 VSPackage 连接到自动化后，可以通过对 <xref:EnvDTE._DTE> 对象调用 <xref:EnvDTE.DTEClass.GetObject%2A> 方法，并传递表示要检索的对象的字符串来获取属性和方法。
+将 VSPackage 连接到自动化后，可以通过调用<xref:EnvDTE.DTEClass.GetObject%2A><xref:EnvDTE._DTE>对象上的方法来获取属性和方法，传递表示要检索的对象的字符串。
 
 ## <a name="obtaining-project-objects"></a>获取项目对象
- 下面是两个显示自动化使用者如何获取项目自动化对象的代码示例。 有关如何获取 DTE 对象的信息，请参阅[如何：获取对 dte 和 DTE2 对象的引用](https://msdn.microsoft.com/Library/c92e3c8e-82e6-4a67-85da-e43c50ffd8e4)。
+ 下面是两个代码示例，它们显示了自动化使用者如何获取项目自动化对象。 有关如何获取 DTE 对象的信息，请参阅[如何：获取对 DTE 和 DTE2 对象的引用](https://msdn.microsoft.com/Library/c92e3c8e-82e6-4a67-85da-e43c50ffd8e4)。
 
 ```vb
 Sub DoAutomation()
@@ -43,9 +43,9 @@ void DoAutomation(void)
 
 ```
 
- 此时，您可以使用属于特定 VSPackage 的标准项目对象来向下移动层次结构模型。
+ 此时，您可以使用作为特定 VSPackage 一部分的标准项目对象向下移动层次结构模型。
 
- 下面的代码示例演示如何获取作为自定义项目类型的属性的自定义对象：
+ 以下代码示例演示如何获取自定义项目类型的属性的自定义对象：
 
 ```vb
 Dim MyPrj As Project
@@ -58,7 +58,7 @@ objMyObject = MyPrj.Object 'You call .Object to get to special Project
 objMyObject.MySpecialMethodOrProperty
 ```
 
- 下面的代码列出了 "**工具**" 菜单上 "[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 环境**常规**" 选项中的所有属性的名称：
+ 以下代码列出了[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]**"工具**"菜单上的环境 **"常规"** 选项中的所有属性的名称：
 
 ```vb
 dim objDTE

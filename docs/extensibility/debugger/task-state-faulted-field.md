@@ -1,30 +1,30 @@
 ---
-title: TASK_STATE_FAULTED 字段 |Microsoft Docs
+title: TASK_STATE_FAULTED字段 |微软文档
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - TASK_STATE_FAULTED field, Task class [.NET Framework debug engines]
 ms.assetid: ced826ae-09a9-4acf-af00-a2343d396bb8
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f8ae3c654518ec051d3f4d1fd0eeb43b4ef5e710
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 1c9bd5b9ec57e652dd7a57ee3434a2525eeeedbe
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66348365"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80712680"
 ---
-# <a name="taskstatefaulted-field"></a>TASK_STATE_FAULTED 字段
+# <a name="task_state_faulted-field"></a>TASK_STATE_FAULTED字段
 由于未处理异常的原因而完成的任务。
 
- **Namespace**：<xref:System.Threading.Tasks?displayProperty=fullName>
+ **命名空间：**<xref:System.Threading.Tasks?displayProperty=fullName>
 
- **程序集：** mscorlib (在*mscorlib.dll*)
+ **程序集**：mscorlib（在*mscorlib.dll*中）
 
- 无法从.NET Framework 来访问此内部成员，因为以下语法提供通用中间语言 (CIL)。
+ 由于您无法从 .NET 框架访问此内部成员，因此在通用中间语言 （CIL） 中提供了以下语法。
 
 ## <a name="syntax"></a>语法
 
@@ -33,7 +33,7 @@ ms.locfileid: "66348365"
 ```
 
 ## <a name="remarks"></a>备注
- 如果[m_stateFlags](../../extensibility/debugger/m-stateflags-field.md)字段包含此值，<xref:System.Threading.Tasks.Task.Status%2A>属性返回<xref:System.Threading.Tasks.TaskStatus?displayProperty=fullName>。
+ 如果[m_stateFlags](../../extensibility/debugger/m-stateflags-field.md)字段包含此值，则<xref:System.Threading.Tasks.Task.Status%2A>属性将返回<xref:System.Threading.Tasks.TaskStatus?displayProperty=fullName>。
 
 ## <a name="see-also"></a>请参阅
 - [Task 类](../../extensibility/debugger/task-class-internal-members.md)

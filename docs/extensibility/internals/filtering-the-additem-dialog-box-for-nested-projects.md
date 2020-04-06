@@ -1,36 +1,36 @@
 ---
-title: 筛选嵌套项目的 AddItem 对话框 |Microsoft Docs
+title: 筛选嵌套项目的"添加项目"对话框 |微软文档
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - filtering, nested projects
 - nested projects, AddItem dialog box filtering
 ms.assetid: 5b3e352e-7f18-4f66-be16-b0ad55637ce5
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: bc3ff1f85e8c8c71bf8ef16e6fe0c89bf3613f4d
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 2bc97b6041f4844ff71fe1d38a7103e1219888be
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66328953"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80708382"
 ---
-# <a name="filter-the-additem-dialog-box-for-nested-projects"></a>筛选嵌套项目的 AddItem 对话框
-当显示**AddItem**嵌套项目，父项目对话框可以控制在对话框中显示的项。
+# <a name="filter-the-additem-dialog-box-for-nested-projects"></a>筛选嵌套项目的"添加项目"对话框
+当您为嵌套项目显示 **"添加项目"** 对话框时，父项目可以控制对话框中显示的项目。
 
- <xref:Microsoft.VisualStudio.Shell.Interop.IVsFilterAddProjectItemDlg2>接口，可以筛选将中的节点**AddItem**对话框。 当子项目显示**AddItem**对话框中，可以实现父`IVsFilterAddProjectItemDlg`本应显示的子项目中的接口和筛选器项。
+ 该<xref:Microsoft.VisualStudio.Shell.Interop.IVsFilterAddProjectItemDlg2>接口允许您筛选将在 **"添加项目"** 对话框中的节点。 当子项目显示 **"添加项目**"对话框时，父项可以实现`IVsFilterAddProjectItemDlg`接口和筛选器项，否则这些项将显示在子项的项目中。
 
- 当按下特定父项目的函数进行分组的项目时，您可以实现`IVsFilterAddProjectItemDlg`当用户选择**添加项目项**中嵌套项目的快捷菜单上。 实现`IvsFilterAddProjectItemDlg displays`仅项目项或文件特定于该组。 即使它们存储在同一目录中的其他组的项目项被筛选出对话框的。
+ 当项目按特定父项目下的函数分组时，可以在用户选择嵌套`IVsFilterAddProjectItemDlg`项目中的快捷菜单上**添加项目项**时实现。 仅`IvsFilterAddProjectItemDlg displays`实现特定于该组的项目项或文件。 其他组的项目项从对话框中筛选出来，即使它们存储在同一目录中也是如此。
 
- 当用户在打开**AddItem**对话框中的子级的父项目的实现`IVsFilterAddProjectItemDlg`接口调用。
+ 当用户为子级打开 **"添加项目**"对话框时，将调用父项目的`IVsFilterAddProjectItemDlg`接口实现。
 
- `IVsFilterAddProjectItemDlg`接口还可以实现按类别筛选。 有关详细信息，请参阅[将项添加到添加新项对话框中](../../extensibility/internals/adding-items-to-the-add-new-item-dialog-boxes.md)并[注册项目和项模板](../../extensibility/internals/registering-project-and-item-templates.md)。
+ 接口`IVsFilterAddProjectItemDlg`还可以按类别实现筛选。 有关详细信息，请参阅[将项目添加到"添加新项目"对话框](../../extensibility/internals/adding-items-to-the-add-new-item-dialog-boxes.md)和[注册项目和项目模板](../../extensibility/internals/registering-project-and-item-templates.md)。
 
 ## <a name="see-also"></a>请参阅
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsFilterAddProjectItemDlg2>
-- [将项目添加到添加新项对话框](../../extensibility/internals/adding-items-to-the-add-new-item-dialog-boxes.md)
-- [注册项目和项模板](../../extensibility/internals/registering-project-and-item-templates.md)
+- [将项目添加到"添加新项目"对话框](../../extensibility/internals/adding-items-to-the-add-new-item-dialog-boxes.md)
+- [注册项目和项目模板](../../extensibility/internals/registering-project-and-item-templates.md)
 - [嵌套项目](../../extensibility/internals/nesting-projects.md)

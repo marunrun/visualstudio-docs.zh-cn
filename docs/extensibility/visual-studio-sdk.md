@@ -1,5 +1,5 @@
 ---
-title: Visual Studio SDK |Microsoft Docs
+title: 视觉工作室 SDK |微软文档
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -9,75 +9,75 @@ helpviewer_keywords:
 - VS SDK (see Visual Studio SDK)
 - Visual Studio, SDK
 ms.assetid: 1f7c348a-114c-4243-b392-3531e9c9c6fd
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5949a651c99c0ce45f963b5f2042cdfe6cb40b87
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 56f772d7d27f11318cdeb0bf365373d5f7c1294b
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75848580"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80698079"
 ---
 # <a name="visual-studio-sdk"></a>Visual Studio SDK
-Visual Studio SDK 可帮助你扩展 Visual Studio 的功能，或将新功能集成到 Visual Studio 中。 可以将扩展分发给其他用户以及 Visual Studio Marketplace。 以下是一些扩展 Visual Studio 的方式：
+Visual Studio SDK 可帮助您扩展视觉工作室功能或将新功能集成到可视化工作室中。 您可以将扩展分发给其他用户以及可视化工作室应用商店。 以下是一些扩展 Visual Studio 的方式：
 
-- 向 IDE 添加命令、按钮、菜单和其他 UI 元素
+- 将命令、按钮、菜单和其他 UI 元素添加到 IDE
 
-- 添加工具窗口以实现新功能
+- 为新功能添加工具窗口
 
-- 扩展给定语言的 IntelliSense，或为新的编程语言提供 IntelliSense
+- 扩展给定语言的 IntelliSense，或为新编程语言提供 IntelliSense
 
-- 使用轻型电灯泡提供帮助开发人员编写更好代码的提示和建议
+- 使用灯泡提供提示和建议，帮助开发人员编写更好的代码
 
-- 启用新语言支持
+- 启用对新语言的支持
 
 - 添加自定义项目类型
 
-- 通过 Visual Studio Marketplace 与数百万个开发人员联系
+- 通过可视化工作室市场覆盖数百万开发人员
 
-  如果你之前从未编写过 Visual Studio 扩展，则应在[开始开发 Visual studio 扩展](../extensibility/starting-to-develop-visual-studio-extensions.md)时找到有关这些功能的详细信息。
+  如果您以前从未编写过 Visual Studio 扩展，您应该找到有关这些功能的更多信息，并在[开始开发 Visual Studio 扩展](../extensibility/starting-to-develop-visual-studio-extensions.md)。
 
 ## <a name="install-the-visual-studio-sdk"></a>安装 Visual Studio SDK
- Visual Studio SDK 是 Visual Studio 安装程序中的一项可选功能。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅[安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
+ 可视化工作室 SDK 是可视化工作室设置中的可选功能。 以后还可以安装 VS SDK。 有关详细信息，请参阅[安装可视化工作室 SDK](../extensibility/installing-the-visual-studio-sdk.md)。
 
-## <a name="whats-new-in-the-visual-studio-2017-sdk"></a>Visual Studio 2017 SDK 的新增功能
- Visual Studio SDK 具有一些新功能，如 VSIX v3 格式以及重大更改，这可能要求你更新扩展。 有关详细信息，请参阅[Visual Studio 2017 SDK 的新增功能](../extensibility/what-s-new-in-the-visual-studio-2017-sdk.md)。
+## <a name="whats-new-in-the-visual-studio-2017-sdk"></a>视觉工作室 2017 SDK 中的新增功能
+ Visual Studio SDK 具有一些新功能，如 VSIX v3 格式以及重大更改，这可能需要您更新扩展。 有关详细信息，请参阅[Visual Studio 2017 SDK 中的新增功能](../extensibility/what-s-new-in-the-visual-studio-2017-sdk.md)。
 
-## <a name="visual-studio-user-experience-guidelines"></a>Visual Studio 用户体验指南
- 获取有关在[Visual Studio 用户体验指南](../extensibility/ux-guidelines/visual-studio-user-experience-guidelines.md)中设计扩展 UI 的极佳技巧。
+## <a name="visual-studio-user-experience-guidelines"></a>可视化工作室用户体验指南
+ 在[Visual Studio 用户体验指南](../extensibility/ux-guidelines/visual-studio-user-experience-guidelines.md)中获取为扩展设计 UI 的提示。
 
- 你还可以了解如何在高 DPI 设备上提供扩展，并显示[地址 DPI 问题](../extensibility/addressing-dpi-issues2.md)一文。
+ 您还可以了解如何通过["地址 DPI 问题](../extensibility/addressing-dpi-issues2.md)"一文在高 DPI 设备上使扩展看起来很棒。
 
- 利用[映像服务和目录](../extensibility/image-service-and-catalog.md)获得极佳的图像管理，并提供高 DPI 和主题的支持。
+ 利用[图像服务和目录](../extensibility/image-service-and-catalog.md)，对高 DPI 和问题进行出色的图像管理和支持。
 
-## <a name="find-and-install-existing-visual-studio-extensions"></a>查找并安装现有的 Visual Studio 扩展
- 可以在 "**工具**" 菜单上的 "**扩展和更新**" 对话框中找到 Visual Studio 扩展。 有关详细信息，请参阅[查找和使用 Visual Studio 扩展](../ide/finding-and-using-visual-studio-extensions.md)。 你还可以在[Visual Studio Marketplace](https://marketplace.visualstudio.com/)中找到扩展
+## <a name="find-and-install-existing-visual-studio-extensions"></a>查找并安装现有的可视化工作室扩展
+ 您可以在 **"工具**"菜单上的"**扩展和更新**"对话框中找到可视化工作室扩展。 有关详细信息，请参阅[查找和使用可视化工作室扩展](../ide/finding-and-using-visual-studio-extensions.md)。 您还可以在[可视化工作室市场](https://marketplace.visualstudio.com/)中找到扩展
 
-## <a name="visual-studio-sdk-reference"></a>Visual Studio SDK 参考
- 可在[Visual STUDIO Sdk 参考](../extensibility/visual-studio-sdk-reference.md)中找到 VISUAL STUDIO sdk API 参考。
+## <a name="visual-studio-sdk-reference"></a>可视化工作室 SDK 参考
+ 您可以在[可视化工作室 SDK 参考](../extensibility/visual-studio-sdk-reference.md)中找到可视化工作室 SDK API 参考。
 
-## <a name="visual-studio-sdk-samples"></a>Visual Studio SDK 示例
- 可在 GitHub 上的[Visual Studio 示例](https://github.com/Microsoft/VSSDK-Extensibility-Samples)中找到 VS SDK 扩展的开源示例。 此 GitHub 存储库包含说明 Visual Studio 中各种可扩展功能的示例。
+## <a name="visual-studio-sdk-samples"></a>可视化工作室 SDK 示例
+ 您可以在[Visual Studio 示例](https://github.com/Microsoft/VSSDK-Extensibility-Samples)的 GitHub 上找到 VS SDK 扩展的开源示例。 此 GitHub 存储库包含示例，这些示例说明了 Visual Studio 中的各种可扩展功能。
 
-## <a name="other-visual-studio-sdk-resources"></a>其他 Visual Studio SDK 资源
- 如果对 VSSDK 有疑问或想要分享开发扩展的经验，可以使用[Visual Studio 扩展性论坛](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vsx)或[ExtendVS Gitter Chatroom](https://gitter.im/Microsoft/extendvs)。
+## <a name="other-visual-studio-sdk-resources"></a>其他可视化工作室 SDK 资源
+ 如果您对 VSSDK 有疑问，或者想要分享开发扩展的经验，您可以使用[可视化工作室扩展性论坛](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vsx)或[ExtendVS Gitter 聊天室](https://gitter.im/Microsoft/extendvs)。
 
- 可以在[VSX Arcana 博客](https://blogs.msdn.microsoft.com/vsx/)和 Microsoft mvp 编写的大量博客中找到详细信息：
+ 您可以在[VSX Arcana 博客](https://blogs.msdn.microsoft.com/vsx/)和 Microsoft MVP 撰写的许多博客中找到更多信息：
 
-- [最喜爱的 Visual Studio 扩展](https://scottdorman.blog/2014/10/05/favorite-visual-studio-extensions/)
+- [最喜欢的视觉工作室扩展](https://scottdorman.blog/2014/10/05/favorite-visual-studio-extensions/)
 
-- [Visual Studio 扩展性](http://www.visualstudioextensibility.com/overview/vs/)
+- [视觉工作室可扩展性](http://www.visualstudioextensibility.com/overview/vs/)
 
-- [扩展 Visual Studio](https://blog.slaks.net/2013-10-18/extending-visual-studio-part-1-getting-started/)
+- [扩展视觉工作室](https://blog.slaks.net/2013-10-18/extending-visual-studio-part-1-getting-started/)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [使用菜单命令创建扩展](../extensibility/creating-an-extension-with-a-menu-command.md)
 - [如何：将扩展性项目迁移到 Visual Studio 2017](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md)
-- [常见问题解答：将外接程序转换为 VSPackage 扩展](/visualstudio/extensibility/faq-converting-add-ins-to-vspackage-extensions?view=vs-2015)
+- [常见问题解答：将加载项转换为 VSPackage 扩展](/visualstudio/extensibility/faq-converting-add-ins-to-vspackage-extensions?view=vs-2015)
 - [在托管代码中管理多个线程](../extensibility/managing-multiple-threads-in-managed-code.md)
 - [扩展菜单和命令](../extensibility/extending-menus-and-commands.md)
 - [将命令添加到工具栏](../extensibility/adding-commands-to-toolbars.md)
@@ -85,13 +85,13 @@ Visual Studio SDK 可帮助你扩展 Visual Studio 的功能，或将新功能�
 - [编辑器和语言服务扩展](../extensibility/editor-and-language-service-extensions.md)
 - [扩展项目](../extensibility/extending-projects.md)
 - [扩展用户设置和选项](../extensibility/extending-user-settings-and-options.md)
-- [创建自定义项目和项模板](../extensibility/creating-custom-project-and-item-templates.md)
+- [创建自定义项目和项目模板](../extensibility/creating-custom-project-and-item-templates.md)
 - [扩展属性和属性窗口](../extensibility/extending-properties-and-the-property-window.md)
-- [扩展 Visual Studio 的其他部分](../extensibility/extending-other-parts-of-visual-studio.md)
+- [扩展视觉工作室的其他部分](../extensibility/extending-other-parts-of-visual-studio.md)
 - [使用和提供服务](../extensibility/using-and-providing-services.md)
-- [管理 Vspackage](../extensibility/managing-vspackages.md)
-- [Visual Studio 独立 shell](https://visualstudio.microsoft.com/vs/older-downloads/isolated-shell/)
-- [提供 Visual Studio 扩展](../extensibility/shipping-visual-studio-extensions.md)
-- [Visual Studio SDK 内](../extensibility/internals/inside-the-visual-studio-sdk.md)
+- [管理 VSPackage](../extensibility/managing-vspackages.md)
+- [可视化工作室隔离外壳](https://visualstudio.microsoft.com/vs/older-downloads/isolated-shell/)
+- [船舶视觉工作室扩展](../extensibility/shipping-visual-studio-extensions.md)
+- [深入探究 Visual Studio SDK](../extensibility/internals/inside-the-visual-studio-sdk.md)
 - [支持 Visual Studio SDK](../extensibility/support-for-the-visual-studio-sdk.md)
-- [Visual Studio SDK 参考](../extensibility/visual-studio-sdk-reference.md)
+- [可视化工作室 SDK 参考](../extensibility/visual-studio-sdk-reference.md)

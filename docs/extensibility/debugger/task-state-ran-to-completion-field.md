@@ -1,30 +1,30 @@
 ---
-title: TASK_STATE_RAN_TO_COMPLETION 字段 |Microsoft Docs
+title: TASK_STATE_RAN_TO_COMPLETION字段 |微软文档
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - TASK_STATE_RAN_TO_COMPLETION field, Task class [.NET Framework debug engines]
 ms.assetid: 0f4830af-fe0c-4141-b768-817f4e426b8c
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6a7108a9f17ee308c781e652fddc2c0fc6277e1d
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 4a898ff09ff45ae77da91e54ba22351e9f70978d
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66331430"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80712627"
 ---
-# <a name="taskstaterantocompletion-field"></a>TASK_STATE_RAN_TO_COMPLETION 字段
+# <a name="task_state_ran_to_completion-field"></a>TASK_STATE_RAN_TO_COMPLETION字段
 已成功完成执行的任务。
 
- **Namespace**：<xref:System.Threading.Tasks?displayProperty=fullName>
+ **命名空间：**<xref:System.Threading.Tasks?displayProperty=fullName>
 
- **程序集：** mscorlib (在*mscorlib.dll*)
+ **程序集**：mscorlib（在*mscorlib.dll*中）
 
- 无法从.NET Framework 来访问此内部成员，因为以下语法提供通用中间语言 (CIL)。
+ 由于您无法从 .NET 框架访问此内部成员，因此在通用中间语言 （CIL） 中提供了以下语法。
 
 ## <a name="syntax"></a>语法
 
@@ -33,7 +33,7 @@ ms.locfileid: "66331430"
 ```
 
 ## <a name="remarks"></a>备注
- 如果[m_stateFlags](../../extensibility/debugger/m-stateflags-field.md)字段包含此值，<xref:System.Threading.Tasks.Task.Status%2A>属性返回<xref:System.Threading.Tasks.TaskStatus?displayProperty=fullName>。
+ 如果[m_stateFlags](../../extensibility/debugger/m-stateflags-field.md)字段包含此值，则<xref:System.Threading.Tasks.Task.Status%2A>属性将返回<xref:System.Threading.Tasks.TaskStatus?displayProperty=fullName>。
 
 ## <a name="see-also"></a>请参阅
 - [Task 类](../../extensibility/debugger/task-class-internal-members.md)

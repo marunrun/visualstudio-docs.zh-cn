@@ -1,5 +1,5 @@
 ---
-title: 项目元素 （Visual Studio 模板） |Microsoft Docs
+title: 项目元素（可视化工作室模板） |微软文档
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -9,22 +9,22 @@ helpviewer_keywords:
 - Project element [Visual Studio Templates]
 - <Project> element [Visual Studio Templates]
 ms.assetid: 1da15ea6-26e2-462b-a03e-584ef4996579
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 843ba7935dbddb95c9a3043deff534db9157f15b
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 335a1e4efa62f07e10bb24b9971627d24bb13273
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66336052"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80702002"
 ---
-# <a name="project-element-visual-studio-templates"></a>Project 元素 （Visual Studio 模板）
-指定的文件或目录将添加到项目。
+# <a name="project-element-visual-studio-templates"></a>项目元素（可视化工作室模板）
+指定要添加到项目的文件或目录。
 
- \<VSTemplate> \<TemplateContent> \<Project>
+ \<VStemplate \<>模板内容\<>项目>
 
 ## <a name="syntax"></a>语法
 
@@ -45,35 +45,35 @@ ms.locfileid: "66336052"
 
 |特性|描述|
 |---------------|-----------------|
-|`File`|必需的特性。<br /><br /> 在模板中指定的项目文件的名称 *.zip*文件。|
-|`ReplaceParameters`|可选特性。<br /><br /> 一个布尔值，该值指定项目文件是否可以从模板创建项目时，必须将其替换的参数值。 默认值是 `false`。|
-|`TargetFileName`|可选特性。<br /><br /> 从模板创建项目时，请指定项目文件的名称。|
-|`IgnoreProjectParameter`|可选特性。<br /><br /> 指定是否应将项目添加到当前解决方案。 如果自定义参数的值"$*myCustomParameter*$"存在在参数替换文件中，项目已创建但不是作为当前打开的解决方案的一部分添加。|
+|`File`|必需的特性。<br /><br /> 在模板 *.zip*文件中指定项目文件的名称。|
+|`ReplaceParameters`|可选特性。<br /><br /> 布尔值，用于指定项目文件是否具有从模板创建项目时必须替换的参数值。 默认值为 `false`。|
+|`TargetFileName`|可选特性。<br /><br /> 指定从模板创建项目时的项目文件的名称。|
+|`IgnoreProjectParameter`|可选特性。<br /><br /> 指定是否应将项目添加到当前解决方案。 如果自定义参数的值 *"$myCustom 参数*$"存在于参数替换文件中，则项目将创建，但不会作为当前打开的解决方案的一部分添加。|
 
 ### <a name="child-elements"></a>子元素
 
 |元素|描述|
 |-------------|-----------------|
 |[文件夹](../extensibility/folder-element-visual-studio-project-templates.md)|可选元素。<br /><br /> 指定要添加到项目的文件夹。|
-|[ProjectItem](../extensibility/projectitem-element-visual-studio-project-templates.md)|可选元素。<br /><br /> 指定要向项目中添加的文件。|
+|[ProjectItem](../extensibility/projectitem-element-visual-studio-project-templates.md)|可选元素。<br /><br /> 指定要添加到项目的文件。|
 
 ### <a name="parent-elements"></a>父元素
 
 |元素|描述|
 |-------------|-----------------|
-|[TemplateContent](../extensibility/templatecontent-element-visual-studio-templates.md)|必需的元素。|
+|[模板内容](../extensibility/templatecontent-element-visual-studio-templates.md)|必需元素。|
 
 ## <a name="remarks"></a>备注
  `Project` 是 `TemplateContent` 的可选子元素。
 
- `Project`元素是用于指定一个项目，因此，仅在项目模板中有效。
+ 该`Project`元素用于指定项目，因此仅在项目模板中有效。
 
- `Project` 元素可以具有[文件夹](../extensibility/folder-element-visual-studio-project-templates.md)子元素或[ProjectItem](../extensibility/projectitem-element-visual-studio-project-templates.md)子元素中，但不是这两者的混合`Folder`和`ProjectItem`子元素。
+ `Project`元素可以具有[文件夹](../extensibility/folder-element-visual-studio-project-templates.md)子元素或[ProjectItem](../extensibility/projectitem-element-visual-studio-project-templates.md)子元素，但不能混合两个`Folder`子`ProjectItem`元素和子元素。
 
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 会自动重命名基于用户输入的名称的项目文件名称**新的项目**对话框。 使用`TargetFileName`属性如果您想要提供有关使用模板创建的项目文件的备用文件名称。
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]根据用户在 **"新项目**"对话框中输入的名称自动重命名项目文件名。 如果要为`TargetFileName`使用模板创建的项目文件提供备用文件名，请使用 该属性。
 
 ## <a name="example"></a>示例
- 下面的示例演示用于的项目模板的元数据[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]应用程序。
+ 下面的示例显示了[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]应用程序的项目模板的元数据。
 
 ```
 <VSTemplate Type="Project" Version="3.0.0"
@@ -100,7 +100,7 @@ ms.locfileid: "66336052"
 ```
 
 ## <a name="see-also"></a>请参阅
-- [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
+- [可视化工作室模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
 - [创建项目和项模板](../ide/creating-project-and-item-templates.md)
-- [ProjectItem 元素 （Visual Studio 项目模板）](../extensibility/projectitem-element-visual-studio-project-templates.md)
-- [Folder 元素 （Visual Studio 项目模板）](../extensibility/folder-element-visual-studio-project-templates.md)
+- [项目项目元素（可视化工作室项目模板）](../extensibility/projectitem-element-visual-studio-project-templates.md)
+- [文件夹元素（可视化工作室项目模板）](../extensibility/folder-element-visual-studio-project-templates.md)

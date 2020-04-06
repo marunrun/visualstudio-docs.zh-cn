@@ -1,5 +1,5 @@
 ---
-title: RequiredFrameworkVersion 元素 （Visual Studio 模板） |Microsoft Docs
+title: 必需框架版本元素（可视化工作室模板） |微软文档
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -7,26 +7,26 @@ helpviewer_keywords:
 - <RequiredFrameworkVersion> (Visual Studio Templates)
 - RequiredFrameworkVersion (Visual Studio Templates)
 ms.assetid: 08a4f609-51a5-4723-b89f-99277fb18871
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0550fc1d286c04c61a1c0b2503326a002fde729e
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.openlocfilehash: 060ebc0633de67d93257e24c2dff24d2aa0970da
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66744754"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80701503"
 ---
-# <a name="requiredframeworkversion-element-visual-studio-templates"></a>RequiredFrameworkVersion 元素 （Visual Studio 模板）
+# <a name="requiredframeworkversion-element-visual-studio-templates"></a>必需框架版本元素（可视化工作室模板）
 
-指定模板所需的.NET framework 的最低版本。 它会导致**目标框架版本**下拉列表中显示**新项目**对话框。 `RequiredFrameworkVersion`元素还确定可用的下拉列表中的最小值。
+指定模板所需的 .NET 框架的最小版本。 它会导致"**新项目**"对话框中显示 **"目标框架版本**"下拉列表。 该`RequiredFrameworkVersion`元素还确定下拉列表中可用的最低值。
 
 > [!IMPORTANT]
-> 在 Visual Studio 2017 版本 15.6 版中，启动**目标框架版本**下拉列表中不再是中的显示模板的筛选器**模板**一部分**新项目**对话框。 相反，在下拉列表中的函数作为所选模板的 framework 选取器。
+> 从 Visual Studio 2017 版本 15.6 开始，**目标框架版本**下拉列表不再是 **"新项目"** 对话框"**模板**"部分中显示模板的筛选器。 相反，下拉列表充当所选模板的框架选取器。
 
- \<VSTemplate> \<TemplateData> \<RequiredFrameworkVersion>
+ \<>\<模板>\<需要框架版本>
 
 ## <a name="syntax"></a>语法
 
@@ -47,20 +47,20 @@ ms.locfileid: "66744754"
 
 |元素|描述|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|必需的元素。<br /><br /> 此模板分类并定义如何显示在**新的项目**或**添加新项**对话框。|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|必需元素。<br /><br /> 对模板进行分类，并定义如何在 **"新项目**"或"**添加新项目**"对话框中显示模板。|
 
 ## <a name="text-value"></a>文本值
  需要一个文本值。
 
- 文本必须为.NET Framework 所需的模板的最低版本号。
+ 文本必须是模板所需的 .NET 框架的最低版本号。
 
 ## <a name="remarks"></a>备注
 
-`RequiredFrameworkVersion` 是可选元素。 模板支持特定的最低版本 （和更高版本，如果有），才使用此元素的.NET framework。 如果指定`RequiredFrameworkVersion`元素和模板不支持特定的最小版本的.NET Framework**目标框架版本**下拉列表中显示时不适用。
+`RequiredFrameworkVersion` 是可选元素。 仅当模板支持 .NET Framework 的特定最小版本（以及更高版本（如果有）时，才使用此元素。 如果指定`RequiredFrameworkVersion`元素，并且模板不支持 .NET 框架的特定最小版本，**则目标框架版本**下拉列表将在不适用时显示。
 
 ## <a name="example"></a>示例
 
-下面的示例演示一种标准的元数据[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]类模板。
+下面的示例说明了标准[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]类模板的元数据。
 
 ```xml
 <VSTemplate Type="Item" Version="3.0.0"
@@ -80,10 +80,10 @@ ms.locfileid: "66744754"
 </VSTemplate>
 ```
 
-在此示例中，通过该模板后，所需的.NET framework 的最低版本由`RequiredFrameworkVersion`，为 3.0。 使用此模板创建的项目可以从 3.0 开始的.NET Framework 版本为目标。
+在此示例中，模板（由 表示）`RequiredFrameworkVersion`所需的 .NET 框架的最小版本为 3.0。 使用此模板创建的项目可以定位 .NET 框架版本，从 3.0 开始。
 
 ## <a name="see-also"></a>请参阅
 
-- [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
+- [可视化工作室模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
 - [创建项目和项模板](../ide/creating-project-and-item-templates.md)
-- [Framework 目标概述](../ide/visual-studio-multi-targeting-overview.md)
+- [Framework 定位概述](../ide/visual-studio-multi-targeting-overview.md)

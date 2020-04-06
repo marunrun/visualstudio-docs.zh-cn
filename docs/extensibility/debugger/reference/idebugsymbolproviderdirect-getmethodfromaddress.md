@@ -1,28 +1,28 @@
 ---
-title: IDebugSymbolProviderDirect::GetMethodFromAddress |Microsoft Docs
+title: IDebugSymbol 提供程序直接：：从地址获取方法 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IDebugSymbolProviderDirect::GetMethodFromAddress
 - GetMethodFromAddress
 ms.assetid: 33ffd197-1221-41bc-a9f6-f133ebdcb783
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 89a110886837c793d45842db6ed80690626dd9d6
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 4a062056f4a61521966417e9923a17f6d85b991a
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66335168"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80718933"
 ---
 # <a name="idebugsymbolproviderdirectgetmethodfromaddress"></a>IDebugSymbolProviderDirect::GetMethodFromAddress
-检索有关指定的调试地址处的方法的信息。
+在指定的调试地址检索有关方法的信息。
 
 ## <a name="syntax"></a>语法
 
@@ -52,28 +52,28 @@ int GetMethodFromAddress(
 
 ## <a name="parameters"></a>参数
 `pAddress`\
-[in]调试由表示的地址[IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md)接口。
+[在]由[IDebug 地址](../../../extensibility/debugger/reference/idebugaddress.md)接口表示的调试地址。
 
 `pGuid`\
-[out]该模块的唯一标识符。
+[出]模块的唯一标识符。
 
 `pAppID`\
-[out]应用程序域的标识符。
+[出]应用程序域的标识符。
 
 `pTokenClass`\
-[out]令牌，它表示包含类。
+[出]表示包含类的令牌。
 
 `pTokenMethod`\
-[out]标记，表示该模块。
+[出]表示模块的令牌。
 
 `pdwOffset`\
-[out]以字节为单位从开头的偏移量`pAddress`参数。
+[出]`pAddress`参数开头的偏移量（以字节为单位）。
 
 `pdwVersion`\
-[out]该方法的版本号。
+[出]方法的版本号。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，返回`S_OK`;否则，返回错误代码。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugSymbolProviderDirect](../../../extensibility/debugger/reference/idebugsymbolproviderdirect.md)

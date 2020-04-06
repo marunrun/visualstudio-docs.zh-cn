@@ -1,40 +1,40 @@
 ---
-title: VSPackage 结构 (源代码管理 VSPackage) |Microsoft Docs
+title: VS 包结构（源控制 VS 包） |微软文档
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - VSPackages, structure
 - source control packages, VSPackage overview
 ms.assetid: 92722be7-b397-48c3-a7a7-0b931a341961
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d609efe52955dba53b8c8890a6fcb44bb7f3f352
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: b3f09b189e1e4b47187586e66c74315ee32495c8
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66332742"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80703808"
 ---
 # <a name="vspackage-structure-source-control-vspackage"></a>VSPackage 结构（源代码管理 VSPackage）
 
-源控件包 SDK 提供了用于创建 VSPackage 的准则允许源控件实施者，可以将他或她的源代码管理功能与 Visual Studio 环境相集成。 VSPackage 是由 Visual Studio 集成的开发环境 (IDE) 基于由其注册表项中的包播发的服务通常加载按需的 COM 组件。 每个 VSPackage 必须实现<xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage>。 VSPackage 通常使用由 Visual Studio IDE 提供服务，并提供其自己的某些服务。
+源代码管理包 SDK 提供了创建 VSPackage 的指南，该集成了源代码管理实施者将其源代码管理功能与 Visual Studio 环境集成。 VSPackage 是一个 COM 组件，通常由 Visual Studio 集成开发环境 （IDE） 按需加载，该组件基于包在其注册表条目中通告的服务。 每个 VS 包<xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage>都必须实现 。 VSPackage 通常使用 Visual Studio IDE 提供的服务，并提供其自己的某些服务。
 
-VSPackage 声明其菜单项，并建立通过.vsct 文件的默认项状态。 Visual Studio IDE 菜单项显示在此状态，直到加载 VSPackage。 随后，VSPackage 的实现的<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A>调用方法来启用或禁用菜单项。
+VSPackage 声明其菜单项并通过 .vsct 文件建立默认项状态。 Visual Studio IDE 显示处于此状态的菜单项，直到加载 VSPackage。 随后，VSPackage 的方法的<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A>实现被调用以启用或禁用菜单项。
 
-## <a name="source-control-package-characteristics"></a>源控件的封装特性
+## <a name="source-control-package-characteristics"></a>源代码管理包特性
 
-源代码管理 VSPackage 深入地集成到 Visual Studio。 VSPackage 语义包括：
+源代码管理 VSPackage 深度集成到可视化工作室中。 VSPackage 语义包括：
 
-- 由于正在 VSPackage 实现的接口 (`IVsPackage`接口)
+- 通过 VSPackage（`IVsPackage`接口）实现接口
 
-- UI 命令实现 (.vsct 文件和实现<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>接口)
+- UI 命令实现（.vsct 文件和接口实现<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>）
 
-- 使用 Visual Studio VSPackage 的注册。
+- 在视觉工作室注册 VS 包。
 
-源代码管理 VSPackage 必须与这些其他 Visual Studio 实体通信：
+源代码管理 VSPackage 必须与以下其他 Visual Studio 实体通信：
 
 - 项目
 
@@ -44,9 +44,9 @@ VSPackage 声明其菜单项，并建立通过.vsct 文件的默认项状态。 
 
 - Windows
 
-- 运行文档表
+- 正在运行的文档表
 
-### <a name="visual-studio-environment-services-that-may-be-consumed"></a>可能使用的 visual Studio 环境服务
+### <a name="visual-studio-environment-services-that-may-be-consumed"></a>可能使用的视觉工作室环境服务
 
 <xref:Microsoft.VisualStudio.Shell.Interop.SVsShell>
 
@@ -54,7 +54,7 @@ VSPackage 声明其菜单项，并建立通过.vsct 文件的默认项状态。 
 
 <xref:Microsoft.VisualStudio.Shell.Interop.SVsSolution>
 
-SVsRegisterScciProvider 服务
+SV注册供应商服务
 
 <xref:Microsoft.VisualStudio.Shell.Interop.SVsQueryEditQuerySave>
 
@@ -62,15 +62,15 @@ SVsRegisterScciProvider 服务
 
 <xref:Microsoft.VisualStudio.Shell.Interop.SVsSccManager>
 
-### <a name="vsip-interfaces-implemented-and-called"></a>VSIP 接口实现和调用
+### <a name="vsip-interfaces-implemented-and-called"></a>实现和调用的 VSIP 接口
 
-源代码管理包是 VSPackage，并因此它可直接与其他 Vspackage 的已注册到 Visual Studio 交互。 为了提供全套的源代码管理功能，源代码管理 VSPackage 可以处理提供的项目或 shell 接口。
+源代码管理包是 VSPackage，因此可以直接与在 Visual Studio 注册的其他 VSPackage 进行交互。 为了提供源控制功能的全部范围，源代码管理 VSPackage 可以处理项目或 shell 提供的接口。
 
-在 Visual Studio 中的每个项目必须实现<xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3>若要识别为 Visual Studio IDE 中的项目。 但是，此接口不专用足够用于源代码管理。 应为源下的项目控件实现<xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProject2>。 若要查询对其内容的项目，并将该标志符号和绑定信息 （所需的信息的服务器位置和下一个项目的磁盘位置之间建立连接，使用此接口由源代码管理 VSPackage源代码管理）。
+可视化工作室中的每个项目都必须实现<xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3>才能在可视化工作室 IDE 中识别为项目。 但是，此接口对于源代码管理来说不够专业。 预期受源代码管理的项目实现<xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProject2>。 源代码管理 VSPackage 使用此接口查询项目的内容，并为其提供字形和绑定信息（在服务器位置和受源代码控制的项目的磁盘位置之间建立连接所需的信息）。
 
-源代码管理 VSPackage 实现<xref:Microsoft.VisualStudio.Shell.Interop.IVsSccManager2>，这反过来允许项目进行源代码管理中注册自身和检索其状态的标志符号。
+源代码管理 VSPackage<xref:Microsoft.VisualStudio.Shell.Interop.IVsSccManager2>实现 ，这反过来又允许项目注册自己进行源代码管理并检索其状态字形。
 
-源代码管理 VSPackage 必须考虑的接口的完整列表，请参阅[相关服务和界面](../../extensibility/internals/related-services-and-interfaces-source-control-vspackage.md)。
+有关源代码管理 VSPackage 必须考虑的接口的完整列表，请参阅[相关服务和接口](../../extensibility/internals/related-services-and-interfaces-source-control-vspackage.md)。
 
 ## <a name="see-also"></a>请参阅
 

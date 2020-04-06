@@ -1,5 +1,5 @@
 ---
-title: KeyBindings 元素 |Microsoft Docs
+title: 键绑定元素 |微软文档
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - VSCT XML schema elements, KeyBindings
 - KeyBindings element (VSCT XML schema)
 ms.assetid: 26a15d5c-ddea-4977-af7f-d795ff09c7ad
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d970497dd8f80d66bdbdac8809103582104a2636
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: df1720286007d8f6acf073c21f5b2dcc8486782c
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66352582"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80703127"
 ---
-# <a name="keybindings-element"></a>KeyBindings 元素
-键绑定元素进行分组键绑定元素和其他键绑定分组。
+# <a name="keybindings-element"></a>键绑定元素
+键绑定元素对键绑定元素和其他键绑定分组进行分组。
 
 ## <a name="syntax"></a>语法
 
@@ -45,14 +45,14 @@ ms.locfileid: "66352582"
 
 |元素|描述|
 |-------------|-----------------|
-|[KeyBinding 元素](../extensibility/keybinding-element.md)|指定的命令的键盘快捷方式。|
-|[KeyBindings](../extensibility/keybindings-element.md)|键绑定元素进行分组和其他键绑定分组。|
+|[键绑定元素](../extensibility/keybinding-element.md)|指定命令的键盘快捷键。|
+|[键绑定](../extensibility/keybindings-element.md)|对键绑定元素和其他键绑定分组进行分组。|
 
 ### <a name="parent-elements"></a>父元素
 
 |元素|描述|
 |-------------|-----------------|
-|[CommandTable 元素](../extensibility/commandtable-element.md)|定义表示命令的所有元素。|
+|[命令表元素](../extensibility/commandtable-element.md)|定义表示命令的所有元素。|
 
 ## <a name="example"></a>示例
 
@@ -66,5 +66,5 @@ ms.locfileid: "66352582"
 ```
 
 ## <a name="see-also"></a>请参阅
-- [KeyBinding 元素](../extensibility/keybinding-element.md)
-- [Visual Studio 命令表格 (.vsct) 文件](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [键绑定元素](../extensibility/keybinding-element.md)
+- [可视化工作室命令表 （.vsct） 文件](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

@@ -1,5 +1,5 @@
 ---
-title: 什么是 Visual Studio 2015 sdk 的源代码管理中的新增功能 |Microsoft Docs
+title: 视觉工作室 2015 SDK 中的源代码控制新增功能 |微软文档
 titleSuffix: ''
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -7,43 +7,43 @@ helpviewer_keywords:
 - what's new [Visual Studio SDK], source control
 - source control [Visual Studio SDK], what's new
 ms.assetid: bcf85418-18fb-4824-9dae-d14bf3d56a77
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e12776c21d345d60992eeff4963498bcd7d56678
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: f90ae3e1d327b10e99713ad28aa2d5a06c0be34b
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66323252"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80703400"
 ---
-# <a name="whats-new-in-source-control-for-the-visual-studio-2015-sdk"></a>什么是 Visual Studio 2015 SDK 的源代码管理中的新增功能
+# <a name="whats-new-in-source-control-for-the-visual-studio-2015-sdk"></a>可视化工作室 2015 SDK 的源代码管理新增功能
 
-在[!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]，可以通过实现源代码管理 VSPackage 提供深度集成的源代码控制解决方案。 本部分介绍的源代码管理 Vspackage 功能并提供实现步骤的概述。
+在[!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]中，可以通过实现源代码管理 VSPackage 提供深度集成的源代码管理解决方案。 本节介绍源代码管理 VS包的功能，并提供实现步骤的概述。
 
-## <a name="the-source-control-vspackage"></a>源代码管理 VSPackage
+## <a name="the-source-control-vspackage"></a>源代码管理 VS 包
 
-Visual Studio 支持两种类型的源代码管理解决方案。 在所有版本的 Visual Studio 中，仍可以集成源控件插件 API 基于插件。 您还可以创建用于提供深度集成的源代码管理 VSPackage[!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]路径适用于要求高的复杂程度和自主性的源代码管理解决方案。
+Visual Studio 支持两种类型的源代码管理解决方案。 在所有版本的 Visual Studio 中，您仍然可以集成基于源代码管理插件 API 的插件。 您还可以为源代码管理创建 VSPackage，该路径提供深度集成路径，[!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]适用于需要高度复杂和自主的源代码管理解决方案。
 
-VSPackage 可以将几乎所有类型的功能都添加到 Visual Studio。 源代码管理 VSPackage 提供完整的源代码控制功能的 Visual Studio 中，从到与源代码管理系统的后端通信的用户显示的 UI。
+VSPackage 几乎可以向 Visual Studio 添加任何类型的功能。 源代码管理 VSPackage 为 Visual Studio 提供了完整的源代码管理功能，从向用户呈现的 UI 到与源代码管理系统的后端通信。
 
-实现源代码管理 VSPackage 需要一个"全或无"的策略。 源代码管理 VSPackage 的创建者必须投入大量的精力实现大量的源代码控制接口和新 UI 元素 （对话框、 菜单和工具栏） 以覆盖整个源控件功能及介面集成所需的任何包已成功使用 Visual Studio。
+实现源代码管理 VSPackage 需要"全无"策略。 源代码管理 VSPackage 的创建者必须投入大量精力来实现许多源代码管理接口和新的 UI 元素（对话框、菜单和工具栏），以涵盖整个源代码管理功能，以及任何包成功与 Visual Studio 集成所需的接口。
 
-以下步骤为提供所需实现源代码管理包的一般概述。 有关详细信息，请参阅[创建源代码管理 VSPackage](../../extensibility/internals/creating-a-source-control-vspackage.md)。
+以下步骤概述了实现源代码管理包所需的内容。 有关详细信息，请参阅[创建源代码管理 VS 包](../../extensibility/internals/creating-a-source-control-vspackage.md)。
 
-1. 创建提供专用源控制服务的 VSPackage。
+1. 创建提供专用源代码管理服务的 VSPackage。
 
-2. 在 Visual Studio 提供的源控件相关服务实现接口 (例如，<xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2>和<xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProvider>接口)。
+2. 在 Visual Studio 提供的源代码管理相关服务中实现<xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2><xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProvider>接口（例如，和接口）。
 
-3. 注册您的源代码管理 VSPackage。
+3. 注册源代码管理 VSPackage。
 
-4. 实现所有的源代码管理 UI，包括菜单项、 对话框、 工具栏和上下文菜单。
+4. 实现所有源代码管理 UI，包括菜单项、对话框、工具栏和上下文菜单。
 
-5. 所有源控件相关的事件都传递给您的源代码管理 VSackage 时它处于活动状态，并且必须由你的 VSPackage。
+5. 所有与源代码管理相关的事件在激活时都会传递到源代码管理 VSackage，并且必须由您的 VSPackage 处理。
 
-6. 您的源代码管理 VSPackage 必须侦听事件，例如那些实现<xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3>接口以及跟踪项目文档 (TPD) 的事件 (由实现<xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocuments2>接口) 并采取必要措施。
+6. 源代码管理 VSPackage 必须侦听事件，例如实现<xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3>接口的事件以及跟踪项目文档 （TPD） 事件（由<xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocuments2>接口实现），并采取必要的操作。
 
 ## <a name="see-also"></a>请参阅
 

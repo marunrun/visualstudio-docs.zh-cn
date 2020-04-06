@@ -1,5 +1,5 @@
 ---
-title: LocationFieldMRUPrefix 元素 （Visual Studio 模板） |Microsoft Docs
+title: 位置字段MRUPrefix元素（视觉工作室模板） |微软文档
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -9,20 +9,20 @@ helpviewer_keywords:
 - <LocationFieldMRUPrefix> element [Visual Studio Templates]
 - LocationFieldMRUPrefix element [Visual Studio Templates]
 ms.assetid: 03443691-9eb5-46f4-9169-cc2552a04bcb
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1d817f688ffeebecf1655fe10aa58efa664135c8
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: ce86eecbab8c31f16ece4628eff28dc40416a0a9
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66309082"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80702815"
 ---
-# <a name="locationfieldmruprefix-element-visual-studio-templates"></a>LocationFieldMRUPrefix 元素 （Visual Studio 模板）
-指定中的最近使用 (过的 MRU) 路径**新的项目**并**添加新项**对话框。
+# <a name="locationfieldmruprefix-element-visual-studio-templates"></a>位置字段MRUPrefix元素（可视化工作室模板）
+在 **"新项目**"和 **"添加新项目"** 对话框中指定最近使用的 （MRU） 路径。
 
 ## <a name="syntax"></a>语法
 
@@ -46,8 +46,8 @@ ms.locfileid: "66309082"
 |[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|将此模板分类并定义此模板在 **“新建项目”** 或 **“添加新项”** 对话框中的显示方式。|
 
 ## <a name="remarks"></a>备注
- 此元素应仅用于通过生成的模板[!INCLUDE[vsipprvsip](../extensibility/includes/vsipprvsip_md.md)]。
+ 此元素应仅用于通过 生成的模板[!INCLUDE[vsipprvsip](../extensibility/includes/vsipprvsip_md.md)]。
 
 ## <a name="see-also"></a>请参阅
-- [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
+- [可视化工作室模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
 - [创建项目和项模板](../ide/creating-project-and-item-templates.md)

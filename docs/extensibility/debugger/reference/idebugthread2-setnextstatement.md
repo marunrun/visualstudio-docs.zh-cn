@@ -1,5 +1,5 @@
 ---
-title: IDebugThread2::SetNextStatement |Microsoft Docs
+title: IDebugThread2：：设置下一个语句 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugThread2::SetNextStatement
 ms.assetid: 9e2834dd-4ecf-45af-8e6c-f9318ebdac06
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 87a5ba19eed0c0ee4d78feeb755b50db428d77d9
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 4b390e5c021fa069ae3fb09eef1978caaf9cc8ed
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66320091"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80718647"
 ---
 # <a name="idebugthread2setnextstatement"></a>IDebugThread2::SetNextStatement
-将当前指令指针设置为给定的代码上下文。
+将当前指令指针设置到给定的代码上下文。
 
 ## <a name="syntax"></a>语法
 
@@ -43,22 +43,22 @@ int SetNextStatement ( 
 
 ## <a name="parameters"></a>参数
 `pStackFrame`\
-保留供将来使用;设置为 null 值。
+保留供将来使用;设置为空值。
 
 `pCodeContext`\
-[in][IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md)对象，描述要执行的代码位置和其上下文。
+[在][IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md)对象，用于描述即将执行的代码位置及其上下文。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。 下表显示了其他可能的值。
+ 如果成功，返回`S_OK`;否则，返回错误代码。 下表显示了其他可能的值。
 
-|值|描述|
+|值|说明|
 |-----------|-----------------|
-|E_CANNOT_SET_NEXT_STATEMENT_ON_NONLEAF_FRAME|下一条语句不能为帧堆栈上更深入的堆栈帧中。|
-|E_CANNOT_SETIP_TO_DIFFERENT_FUNCTION|下一条语句不是堆栈中任何帧与相关联。|
-|E_CANNOT_SET_NEXT_STATEMENT_ON_EXCEPTION|某些调试引擎不能设置在出现异常之后的下一个语句。|
+|E_CANNOT_SET_NEXT_STATEMENT_ON_NONLEAF_FRAME|下一个语句不能位于帧堆栈的更深的堆栈框架中。|
+|E_CANNOT_SETIP_TO_DIFFERENT_FUNCTION|下一个语句不与堆栈中的任何帧相关联。|
+|E_CANNOT_SET_NEXT_STATEMENT_ON_EXCEPTION|某些调试引擎无法在异常之后设置下一个语句。|
 
 ## <a name="remarks"></a>备注
- 指令指针指示的下一步的指令或语句，以执行。 若要重试源代码的行，或若要强制执行以继续在另一个函数，例如，使用此方法。
+ 指令指针指示要执行的下一个指令或语句。 此方法用于重试一行源代码或强制执行以在另一个函数中继续执行，例如。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)

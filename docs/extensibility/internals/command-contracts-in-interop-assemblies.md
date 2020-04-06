@@ -1,33 +1,33 @@
 ---
-title: 命令中互操作程序集的协定 |Microsoft Docs
+title: 互通程序集中的命令协定 |微软文档
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - command handling with interop assemblies, command contracts
 - interop assemblies, command contracts
 ms.assetid: 57245708-f539-42dc-8963-2754a48f0189
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 80da2b521b151dfb88b80eb7ea96d88ef7b4d264
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 4f20a4f479d62cd1b64c3b13ff6e1a949656a668
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66351664"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80709686"
 ---
-# <a name="command-contracts-in-interop-assemblies"></a>互操作程序集中的命令协定
-处理命令的基本协定<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>接口是环境调用<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A>方法以确定是否支持该命令，如果它受支持，以确定其状态和文本。 然后，环境调用<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A>方法以执行该命令。
+# <a name="command-contracts-in-interop-assemblies"></a>互通程序集中的命令协定
+通过<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>接口处理命令的基本协定是，环境调用<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A>方法以确定该命令是否受支持，如果支持该命令，则确定其状态和文本。 然后，环境调用<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A>方法执行命令。
 
- <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A>方法会处理相同的所有命令。 进一步的通信，如果 （例如，使用下拉列表中），需要由调用<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A>使用适当的参数的方法。 这些参数的解释取决于指定的命令。
+ <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A>该方法对所有命令的处理方式相同。 如果需要，通过使用适当的参数调用<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A>方法来管理进一步的通信（例如，使用下拉列表）。 这些参数的解释取决于指定的命令。
 
- 如果命令目标的输出参数中返回值，调用方负责始终释放所有已分配的资源。 由于此参数是一个变体，则清除该变体将释放的资源。
+ 如果命令目标返回输出参数中的值，则调用方始终负责释放已分配的任何资源。 由于此参数是变体，因此清除变体将释放资源。
 
- 在命令必须在其中在层次结构窗口操作的情况下<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy>必须使用接口。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy>接口具有与类似的方法类似的协定：<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.QueryStatusCommand%2A>和<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.ExecCommand%2A>。
+ 如果命令必须在层次结构窗口中运行，<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy>则必须使用接口。 接口<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy>具有类似的协定，其方法相似：<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.QueryStatusCommand%2A>和<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.ExecCommand%2A>。
 
 ## <a name="see-also"></a>请参阅
-- [Vspackage 如何添加用户界面元素](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)
-- [Vspackage 中的命令传送](../../extensibility/internals/command-routing-in-vspackages.md)
+- [VS包如何添加用户界面元素](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)
+- [VS 包中的命令路由](../../extensibility/internals/command-routing-in-vspackages.md)
 - [命令实现](../../extensibility/internals/command-implementation.md)

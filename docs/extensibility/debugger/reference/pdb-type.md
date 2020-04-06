@@ -1,5 +1,5 @@
 ---
-title: PDB_TYPE | Microsoft Docs
+title: PDB_TYPE |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,24 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - PDB_TYPE structure
 ms.assetid: 1c1bb772-77d6-4870-90b2-fd9247d0004e
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 3121106b84111d20bf2915c0f9398fa92807cfd9
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 1f736d7d9b190fc46945e2f4f7c309b88c3e851f
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66349902"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80714108"
 ---
-# <a name="pdbtype"></a>PDB_TYPE
+# <a name="pdb_type"></a>PDB_TYPE
 
-此结构指定来自 PDB 符号字段类型有关的信息。
+此结构指定有关从 PDB 符号获取的字段类型的信息。
 
 ## <a name="syntax"></a>语法
 
@@ -47,25 +47,25 @@ public struct PDB_TYPE {
 ## <a name="members"></a>成员
 
 `ulAppDomainID`\
-符号所来自的应用程序 ID。 这用于唯一标识应用程序的实例。
+符号来自的应用程序的 ID。 这用于唯一标识应用程序的实例。
 
 `guidModule`\
 包含此字段的模块的 GUID。
 
 `symid`\
-对应于此字段的符号 ID。
+对应于此字段的符号的 ID。
 
 ## <a name="remarks"></a>备注
 
-此结构显示为中的联合的一部分[TYPE_INFO](../../../extensibility/debugger/reference/type-info.md)结构时`dwKind`字段`TYPE_INFO`结构设置为`TYPE_KIND_PDB`(从值[dwTYPE_KIND](../../../extensibility/debugger/reference/dwtype-kind.md)枚举）。
+当`TYPE_INFO``TYPE_KIND_PDB`结构字段设置为[（dwTYPE_KIND](../../../extensibility/debugger/reference/dwtype-kind.md)枚举中的值[TYPE_INFO](../../../extensibility/debugger/reference/type-info.md)）时，`dwKind`此结构在TYPE_INFO结构中显示为联合的一部分。
 
 ## <a name="requirements"></a>要求
 
-标头： sh.h
+标题： sh.h
 
-命名空间:Microsoft.VisualStudio.Debugger.Interop
+命名空间：微软.VisualStudio.调试器.互通
 
-程序集：Microsoft.VisualStudio.Debugger.Interop.dll
+程序集：微软.VisualStudio.调试器.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 

@@ -3,17 +3,17 @@ title: 视觉工作室的图像和图标 |微软文档
 ms.date: 04/26/2017
 ms.topic: conceptual
 ms.assetid: f410325e-9cf2-4f39-b6d7-b672121c2691
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1e449fb30bd95319a46d1db50da63778f6800a70
-ms.sourcegitcommit: 95f26af1da51d4c83ae78adcb7372b32364d8a2b
+ms.openlocfilehash: dfef803d2bffb19cc54974465c7892b4d68ff3d6
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79301595"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80699054"
 ---
 # <a name="images-and-icons-for-visual-studio"></a>Visual Studio 的图像和图标
 ## <a name="image-use-in-visual-studio"></a><a name="BKMK_ImageUseInVisualStudio"></a>视觉工作室中的图像使用
@@ -423,8 +423,8 @@ ms.locfileid: "79301595"
 
 |摩纳哥||||
 |------------|-|-|-|
-|![“Monaco 文件”图标](../../extensibility/ux-guidelines/media/0405-57_monacofiles.png "0405-57_MonacoFiles")<br />文件|!["Monaco Git" 图标](../../extensibility/ux-guidelines/media/0405-58_monacogit.png "0405-58_MonacoGit")<br />Git|![“Monaco 搜索”图标](../../extensibility/ux-guidelines/media/0405-59_monacosearch.png "0405-59_MonacoSearch")<br />搜索|![“Monaco 文本”图标](../../extensibility/ux-guidelines/media/0405-60_monacotext.png "0405-60_MonacoText")<br />文本|
+|![“Monaco 文件”图标](../../extensibility/ux-guidelines/media/0405-57_monacofiles.png "0405-57_MonacoFiles")<br />文件|!["Monaco Git" 图标](../../extensibility/ux-guidelines/media/0405-58_monacogit.png "0405-58_MonacoGit")<br />Git|![“Monaco 搜索”图标](../../extensibility/ux-guidelines/media/0405-59_monacosearch.png "0405-59_MonacoSearch")<br />搜索|![“Monaco 文本”图标](../../extensibility/ux-guidelines/media/0405-60_monacotext.png "0405-60_MonacoText")<br />Text|
 
 |F12|||
 |---------|-|-|
-|![“F12 整齐代码”图标](../../extensibility/ux-guidelines/media/0405-61_f12prettycode.png "0405-61_F12PrettyCode")<br />漂亮的代码|![“F12 警告”图标](../../extensibility/ux-guidelines/media/0405-62_f12warning.png "0405-62_F12Warning")<br />警告|![“F12 模拟”图标](../../extensibility/ux-guidelines/media/0405-63_f12emulate.png "0405-63_F12Emulate")<br />模仿|
+|![“F12 整齐代码”图标](../../extensibility/ux-guidelines/media/0405-61_f12prettycode.png "0405-61_F12PrettyCode")<br />漂亮的代码|![“F12 警告”图标](../../extensibility/ux-guidelines/media/0405-62_f12warning.png "0405-62_F12Warning")<br />警告|![“F12 模拟”图标](../../extensibility/ux-guidelines/media/0405-63_f12emulate.png "0405-63_F12Emulate")<br />模拟|

@@ -1,25 +1,25 @@
 ---
-title: Icon 元素 |Microsoft Docs
+title: 图标元素 |微软文档
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - VSCT XML schema elements, Icon
 - Icon element (VSCT XML schema)
 ms.assetid: 73c58fe3-d53c-4f4e-b025-29567c6cbb7c
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: dd56391084788729c0f8439728f9afffd59da946
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: cf4f8a69e565620007fba4b9970ce96bb1513995
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66311243"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80710511"
 ---
-# <a name="icon-element"></a>Icon 元素
-图标标记的 guid 属性是定义位图的 guid。 `id`属性选择槽中的位图条。 此元素为可选元素。 如果此元素不包含的值**guidOfficeIcon:msotcidNoIcon**将隐式。
+# <a name="icon-element"></a>图标元素
+图标标记的 guid 属性是已定义的位图的 guid。 属性`id`选择位图条中的槽。 此元素为可选元素。 如果未包含此元素，则隐含了**guidOfficeIcon：msotcidNoIcon**的值。
 
 ## <a name="syntax"></a>语法
 
@@ -34,8 +34,8 @@ ms.locfileid: "66311243"
 
 |特性|描述|
 |---------------|-----------------|
-|guid|必需。 定义位图的 guid。|
-|id|必需。 选择槽中的位图条。|
+|guid|必需。 已定义的位图的 guid。|
+|id|必需。 选择位图条中的插槽。|
 
 ### <a name="child-elements"></a>子元素
 
@@ -47,7 +47,7 @@ ms.locfileid: "66311243"
 
 |元素|描述|
 |-------------|-----------------|
-|[Buttons 元素](../extensibility/buttons-element.md)||
+|[按钮元素](../extensibility/buttons-element.md)||
 
 ## <a name="see-also"></a>请参阅
-- [Visual Studio 命令表格 (.vsct) 文件](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [可视化工作室命令表 （.vsct） 文件](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

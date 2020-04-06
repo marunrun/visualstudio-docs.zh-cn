@@ -1,5 +1,5 @@
 ---
-title: SccOpenProject 函数 |Microsoft Docs
+title: SccOpen项目功能 |微软文档
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - SccOpenProject function
 ms.assetid: d609510b-660a-46d7-b93d-2406df20434d
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a6aa4a715f8d1b87aa831f6a315f07a19e5d4f46
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: fbf566e593bb1ddbc31c70de1570d746a14fbdcf
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72721051"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80700573"
 ---
 # <a name="sccopenproject-function"></a>SccOpenProject 函数
-此函数打开现有源代码管理项目或创建一个新项目。
+此函数将打开现有源代码管理项目或创建新的源代码管理项目。
 
 ## <a name="syntax"></a>语法
 
@@ -41,78 +41,78 @@ SCCRTN SccOpenProject (
 #### <a name="parameters"></a>参数
  pvContext
 
-中源代码管理插件上下文结构。
+[在]源代码管理插件上下文结构。
 
- hWnd
+ hwnd
 
-中IDE 窗口的句柄，源代码管理插件可将其用作它所提供的所有对话框的父级。
+[在]源控件插件可以用作它提供的任何对话框的父级的 IDE 窗口句柄。
 
  lpUser
 
-[in，out]用户的名称（不能超过 SCC_USER_SIZE，包括 NULL 终止符）。
+[进出]用户的名称（不超过SCC_USER_SIZE，包括 NULL 终止符）。
 
  lpProjName
 
-中标识项目名称的字符串。
+[在]标识项目名称的字符串。
 
  lpLocalProjPath
 
-中项目的工作文件夹的路径。
+[在]项目工作文件夹的路径。
 
  lpAuxProjPath
 
-[in，out]标识项目的可选辅助字符串（不能超过 SCC_AUXPATH_SIZE，包括 NULL 终止符）。
+[进出]标识项目的可选辅助字符串（不超过SCC_AUXPATH_SIZE，包括 NULL 终止符）。
 
  lpComment
 
-中为正在创建的新项目添加注释。
+[在]注释正在创建的新项目。
 
  lpTextOutProc
 
-中用于显示源代码管理插件文本输出的可选回调函数。
+[在]用于显示源控件插件的文本输出的可选回调功能。
 
  dwFlags
 
-中指示当项目对于源代码管理插件未知时是否需要创建一个新项目。 值可以是 `SCC_OP_CREATEIFNEW` 和 `SCC_OP_SILENTOPEN.` 的组合
+[在]如果源控制插件不知道项目，则指示是否需要创建新项目。 值可以是`SCC_OP_CREATEIFNEW`和`SCC_OP_SILENTOPEN.`
 
 ## <a name="return-value"></a>返回值
  此函数的源代码管理插件实现应返回以下值之一：
 
-|“值”|描述|
+|值|说明|
 |-----------|-----------------|
-|SCC_OK|打开项目成功。|
-|SCC_E_INITIALIZEFAILED|项目无法初始化。|
+|SCC_OK|成功打开项目。|
+|SCC_E_INITIALIZEFAILED|无法初始化项目。|
 |SCC_E_INVALIDUSER|用户无法登录到源代码管理系统。|
-|SCC_E_COULDNOTCREATEPROJECT|在调用之前，该项目不存在; 已设置 `SCC_OPT_CREATEIFNEW` 标志，但无法创建项目。|
-|SCC_E_PROJSYNTAXERR|项目语法无效。|
-|SCC_E_UNKNOWNPROJECT|项目对于源代码管理插件是未知的，未设置 `SCC_OPT_CREATEIFNEW` 标志。|
-|SCC_E_INVALIDFILEPATH|文件路径无效或不可用。|
+|SCC_E_COULDNOTCREATEPROJECT|项目在调用之前不存在;因此，该项目在调用之前不存在。 已`SCC_OPT_CREATEIFNEW`设置标志，但无法创建项目。|
+|SCC_E_PROJSYNTAXERR|无效的项目语法。|
+|SCC_E_UNKNOWNPROJECT|源控件插件不知道该项目，`SCC_OPT_CREATEIFNEW`并且未设置标志。|
+|SCC_E_INVALIDFILEPATH|无效或无法使用的文件路径。|
 |SCC_E_NOTAUTHORIZED|不允许用户执行此操作。|
-|SCC_E_ACCESSFAILURE|访问源代码管理系统时出现问题，可能是由于网络或争用问题导致的。 建议重试。|
-|SCC_E_NONSPECFICERROR|不特定的失败;源代码管理系统未初始化。|
+|SCC_E_ACCESSFAILURE|访问源代码管理系统时出现问题，可能是由于网络或争用问题。 建议重试。|
+|SCC_E_NONSPECFICERROR|非特异性故障;源控制系统未初始化。|
 
 ## <a name="remarks"></a>备注
- IDE 可能会传入用户名（`lpUser`），也可能只是传入指向空字符串的指针。 如果存在用户名，则源代码管理插件应该使用该用户名作为默认值。 但是，如果未传递任何名称，或者登录失败，则该插件应该提示用户登录，并将在收到有效的登录 `.` 时返回 `lpUser` 中的有效名称，因为该插件可能会更改用户名字符串，IDE 将始终分配大小为的缓冲区（`SCC_USER_LEN` + 1 或 SCC_USER_SIZE，其中包含 null 终止符的空间）。
+ IDE 可能传递用户名 （`lpUser`），也可以简单地将指针传递到空字符串。 如果存在用户名，源代码管理插件应将其用作默认值。 但是，如果未传递名称，或者登录失败，并且给定名称失败，插件应提示用户登录，并在收到有效登录`lpUser``.`时返回有效名称，因为插件可能会更改用户名字符串，IDE 将始终分配大小缓冲区（+1`SCC_USER_LEN`或SCC_USER_SIZE，其中包括空终止符的空间）。
 
 > [!NOTE]
-> IDE 可能需要执行的第一个操作可能是调用 `SccOpenProject` 函数或[SccGetProjPath](../extensibility/sccgetprojpath-function.md)。 出于此原因，它们都具有相同的 `lpUser` 参数。
+> IDE 可能需要执行的第一个操作可能是对`SccOpenProject`函数或[SccGetProjPath](../extensibility/sccgetprojpath-function.md)的调用。 因此，它们都有相同的`lpUser`参数。
 
- `lpAuxProjPath` 和 `lpProjName` 从解决方案文件中读取，或从对 `SccGetProjPath` 函数的调用返回。 这些参数包含源代码管理插件与项目关联的字符串，仅对插件有意义。 如果解决方案文件中没有此类字符串，并且未提示用户浏览（这会通过 `SccGetProjPath` 函数返回一个字符串），IDE 将同时传递 `lpAuxProjPath` 和 `lpProjName` 的空字符串，并期望插件在第is 函数返回。
+ `lpAuxProjPath`并从`lpProjName`解决方案文件中读取，或者从调用函数`SccGetProjPath`返回它们。 这些参数包含源代码管理插件与项目关联字符串，并且仅对插件有意义。 如果解决方案文件中没有此类字符串，并且未提示用户浏览（这将通过`SccGetProjPath`函数返回字符串），则 IDE 将传递 和`lpAuxProjPath``lpProjName`的空字符串，并期望此函数返回时插件会更新这些值。
 
- `lpTextOutProc` 是指向 IDE 为源代码管理插件提供的回调函数的指针，用于显示命令结果输出。 [LPTEXTOUTPROC](../extensibility/lptextoutproc.md)中详细介绍了此回调函数。
-
-> [!NOTE]
-> 如果源代码管理插件打算利用此方法，则必须在[SccInitialize](../extensibility/sccinitialize-function.md)中设置 `SCC_CAP_TEXTOUT` 标志。 如果未设置该标志，或者如果 IDE 不支持此功能，则将 `NULL` `lpTextOutProc`。
-
- @No__t_0 参数控制正在打开的项目当前不存在的结果。 它包含两个 bitflags、`SCC_OP_CREATEIFNEW` 和 `SCC_OP_SILENTOPEN`。 如果要打开的项目已存在，则该函数只会打开项目并返回 `SCC_OK`。 如果项目不存在并且 `SCC_OP_CREATEIFNEW` 标志为 on，则源代码管理插件可以在源代码管理系统中创建项目，打开该项目，然后返回 `SCC_OK`。 如果该项目不存在，并且 `SCC_OP_CREATEIFNEW` 标志为 off，则该插件随后应检查 `SCC_OP_SILENTOPEN` 标志。 如果该标志未打开，则插件可能会提示用户输入项目名称。 如果启用该标志，则该插件应该只返回 `SCC_E_UNKNOWNPROJECT`。
-
-## <a name="calling-order"></a>调用顺序
- 在正常事件的过程中，将首先调用[SccInitialize](../extensibility/sccinitialize-function.md)以打开源代码管理会话。 会话可能包含对 `SccOpenProject` 的调用，后跟其他源代码管理插件 API 函数调用，并将通过调用[SccCloseProject](../extensibility/scccloseproject-function.md)而终止。 此类会话可能会在调用[SccUninitialize](../extensibility/sccuninitialize-function.md)之前重复多次。
-
- 如果源代码管理插件在 `SccInitialize` 中设置 `SCC_CAP_REENTRANT` 位，则上述会话序列可能会并行重复多次。 不同 `pvContext` 结构跟踪不同会话，其中每个 `pvContext` 一次与一个打开的项目相关联。 根据 `pvContext` 参数，该插件可以确定在任何特定调用中引用的项目。 如果未设置功能位 `SCC_CAP_REENTRANT`，则 nonreentrant 源代码管理插件在处理多个项目的能力方面受到限制。
+ `lpTextOutProc`是 IDE 为显示命令结果输出而向源代码管理插件提供的回调函数的指针。 此回调函数在[LPTEXTOUTPROC 中](../extensibility/lptextoutproc.md)进行了详细介绍。
 
 > [!NOTE]
-> 源代码管理插件 API 1.1 版中引入了 `SCC_CAP_REENTRANT` 位。 在版本1.0 中未设置或已忽略，并且假定所有版本1.0 源代码管理插件都是 nonreentrant。
+> 如果源代码管理插件打算利用这一点，它必须在[Scc 初始化](../extensibility/sccinitialize-function.md)中`SCC_CAP_TEXTOUT`设置了标志。 如果未设置该标志，或者 IDE 不支持此功能，`lpTextOutProc`则将为`NULL`。
+
+ 如果`dwFlags`当前未打开的项目不存在，参数将控制结果。 它由两个位标志`SCC_OP_CREATEIFNEW`和`SCC_OP_SILENTOPEN`组成。 如果打开的项目已存在，则函数只需打开项目并返回`SCC_OK`。 如果项目不存在，并且`SCC_OP_CREATEIFNEW`标志处于打开状态，源代码管理插件可以在源代码管理系统中创建项目，打开它，然后返回`SCC_OK`。 如果项目不存在，并且`SCC_OP_CREATEIFNEW`标志已关闭，则插件应检查该`SCC_OP_SILENTOPEN`标志。 如果该标志未打开，插件可能会提示用户输入项目名称。 如果该标志处于打开，插件应仅返回`SCC_E_UNKNOWNPROJECT`。
+
+## <a name="calling-order"></a>调用订单
+ 在正常事件过程中，将首先调用[Scc 初始化](../extensibility/sccinitialize-function.md)以打开源代码管理会话。 会话可以包含对 的`SccOpenProject`调用，然后是其他源代码管理插件 API 函数调用，并且将随着对[SccCloseProject](../extensibility/scccloseproject-function.md)的调用而终止。 在调用[SccUn初始化](../extensibility/sccuninitialize-function.md)之前，可以重复多次此类会话。
+
+ 如果源代码管理插件将`SCC_CAP_REENTRANT`位设置在`SccInitialize`中，则上述会话序列可能会并行重复多次。 不同的`pvContext`结构跟踪不同的会话，其中每个`pvContext`会话一次与一个打开的项目相关联。 根据参数`pvContext`，插件可以确定任何特定调用中引用哪个项目。 如果未设置功能位`SCC_CAP_REENTRANT`，则非重新进入源控制插件处理多个项目的能力受到限制。
+
+> [!NOTE]
+> 该`SCC_CAP_REENTRANT`位是在源代码管理插件 API 的 1.1 版中引入的。 它在版本 1.0 中未设置或被忽略，并且所有版本 1.0 源代码管理插件都假定为非重新进入。
 
 ## <a name="see-also"></a>请参阅
 - [源代码管理插件 API 函数](../extensibility/source-control-plug-in-api-functions.md)

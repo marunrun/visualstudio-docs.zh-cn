@@ -1,52 +1,52 @@
 ---
-title: 组件管理 |Microsoft Docs
+title: 组件管理 |微软文档
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - installation [Visual Studio SDK], components
 - installation [Visual Studio SDK], file management
 ms.assetid: 029bffa2-6841-4caa-a41a-442467e1aedc
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 477079cdb0349b2299b5cb829770800a4930958d
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: b5dcac9fb14a83021b852be2c52436fcdca84bf5
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66310019"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80709326"
 ---
 # <a name="component-management"></a>组件管理
-Windows 安装程序中的任务的单位称为 （有时称为 WICs 或只是组件） 的 Windows 安装程序组件。 一个 GUID 标识每个 WIC，它是安装和引用计数对于使用 Windows 安装程序安装的基本单位。
+Windows 安装程序中的任务单元称为 Windows 安装程序组件（有时称为 WIC 或只是组件）。 GUID 标识每个 WIC，这是使用 Windows 安装程序的安装和引用计数的基本单元。
 
- 虽然可以使用多个产品创建 VSPackage 安装程序，我们假定使用 Windows 安装程序 ( *.msi*) 文件。 在创建您的安装程序时，必须正确地管理文件部署，以便正确引用计数在任何时候进行。 因此，您产品的不同版本将不会干扰或中断彼此中混合使用安装和卸载方案。
+ 尽管可以使用多个产品创建 VSPackage 安装程序，但此讨论假定使用 Windows 安装程序 *（.msi*） 文件。 创建安装程序时，必须正确管理文件部署，以便随时进行正确的引用计数。 因此，在安装和卸载混合方案中，产品的不同版本不会相互干扰或破裂。
 
- 在 Windows 安装程序中，引用计数在组件级别进行。 必须小心地组织资源-文件、 注册表项等 — 为组件。 有其他级别的组织，如模块、 功能和产品 — 在不同情况下，可以帮助。 有关详细信息，请参阅[Windows Installer 基本知识](../../extensibility/internals/windows-installer-basics.md)。
+ 在 Windows 安装程序中，引用计数发生在组件级别。 您必须仔细将资源（文件、注册表项等）组织到组件中。 还有其他级别的组织（如模块、功能和产品）可以在不同方案中提供帮助。 有关详细信息，请参阅[Windows 安装程序基础知识](../../extensibility/internals/windows-installer-basics.md)。
 
-## <a name="guidelines-of-authoring-setup-for-side-by-side-installation"></a>创作的并行安装的安装程序的指导原则
+## <a name="guidelines-of-authoring-setup-for-side-by-side-installation"></a>并行安装的创作设置指南
 
-- 作者文件和注册表项在版本间共享到他们自己的组件。
+- 创作在版本之间共享的文件和注册表项到其自己的组件中。
 
-     这样做使您可以轻松地在下一版本中使用它们。 例如，全局，注册类型库的文件扩展名，其他项中注册**HKEY_CLASSES_ROOT**，依次类推。
+     这样做允许您在下一版本中轻松使用它们。 例如，键入全局注册的库、文件扩展名、**在HKEY_CLASSES_ROOT**中注册的其他项目等。
 
-- 分组到单独的合并模块中的共享的组件。
+- 将共享组件分组到单独的合并模块中。
 
-     此策略可以帮助您编写正确地为下一步的并行安装。
+     此策略可帮助您正确创作并行安装。
 
-- 跨版本使用相同的 Windows Installer 组件安装共享的文件和注册表项。
+- 跨版本使用相同的 Windows 安装程序组件安装共享文件和注册表项。
 
-     如果使用不同的组件，则会卸载文件和注册表项时卸载一个版本控制的 VSPackage，但仍安装另一个 VSPackage。
+     如果使用其他组件，则在卸载一个版本化的 VSPackage 但仍安装另一个 VSPackage 时，将卸载文件和注册表项。
 
-- 不要混合在同一组件中的进行版本控制和共享项。
+- 不要在同一组件中混合版本控制项目和共享项目。
 
-     执行此操作会导致无法安装到全局位置和版本控制隔离的位置的项的共享的项。
+     这样，就无法将共享项目安装到全局位置，并将项目版本控制到隔离位置。
 
-- 没有共享的注册表项指向版本控制文件。
+- 没有指向版本化文件的共享注册表项。
 
-     如果这样做，安装另一个版本控制的 VSPackage 时，将被覆盖的共享的密钥。 删除第二个版本后，该密钥指向该文件是消失了。
+     如果这样做，则在安装另一个版本化的 VSPackage 时，共享密钥将被覆盖。 删除第二个版本后，键指向的文件将消失。
 
 ## <a name="see-also"></a>请参阅
-- [共享和版本控制的 Vspackage 之间进行选择](../../extensibility/choosing-between-shared-and-versioned-vspackages.md)
-- [VSPackage 安装方案](../../extensibility/internals/vspackage-setup-scenarios.md)
+- [在共享和版本化 VS 包之间进行选择](../../extensibility/choosing-between-shared-and-versioned-vspackages.md)
+- [VS包设置方案](../../extensibility/internals/vspackage-setup-scenarios.md)

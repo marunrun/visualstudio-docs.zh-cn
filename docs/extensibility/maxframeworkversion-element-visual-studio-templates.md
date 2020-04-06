@@ -1,5 +1,5 @@
 ---
-title: MaxFrameworkVersion 元素 （Visual Studio 模板） |Microsoft Docs
+title: 最大框架版本元素（可视化工作室模板） |微软文档
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -7,26 +7,26 @@ helpviewer_keywords:
 - <MaxFrameworkVersion> Element (Visual Studio Templates)
 - MaxFrameworkVersion Element (Visual Studio Templates)
 ms.assetid: f732a9d3-fc29-405b-9298-01ea83fc58b8
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0a00e174e3454dcb054c13252ef699a7cbc87df8
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 9c3acf9c40499417fe180ce470224824cc89a113
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66318598"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80702621"
 ---
-# <a name="maxframeworkversion-element-visual-studio-templates"></a>MaxFrameworkVersion 元素 （Visual Studio 模板）
+# <a name="maxframeworkversion-element-visual-studio-templates"></a>最大框架版本元素（可视化工作室模板）
 
-指定模板所需的.NET framework 的最大版本。 它确定在可用的最大值**目标框架版本**下拉列表中的**新项目**对话框。 为了使用户能够选择的框架版本，还必须指定[RequiredFrameworkVersion](../extensibility/requiredframeworkversion-element-visual-studio-templates.md)作为模板的最低.NET Framework 版本。
+指定模板所需的 .NET 框架的最大版本。 它确定 **"新项目****"对话框的目标框架版本**下拉列表中可用的最高值。 为了使用户能够选择框架版本，还必须将["必需框架版本"](../extensibility/requiredframeworkversion-element-visual-studio-templates.md)指定为模板的最低 .NET 框架版本。
 
 > [!IMPORTANT]
-> 在 Visual Studio 2017 版本 15.6 版中，启动**目标框架版本**下拉列表中不再是中的显示模板的筛选器**模板**一部分**新项目**对话框。 相反，**目标框架版本**用作所选模板的 framework 选取器下拉列表。
+> 从 Visual Studio 2017 版本 15.6 开始，**目标框架版本**下拉列表不再是 **"新项目"** 对话框"**模板**"部分中显示模板的筛选器。 相反，**目标框架版本**下拉列表功能为所选模板的框架选取器。
 
- \<VSTemplate> \<TemplateData> \<MaxFrameworkVersion>
+ \<模板>\<模板数据>\<最大框架版本>
 
 ## <a name="syntax"></a>语法
 
@@ -47,20 +47,20 @@ ms.locfileid: "66318598"
 
 |元素|描述|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|必需的元素。<br /><br /> 此模板分类并定义如何显示在**新的项目**或**添加新项**对话框。|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|必需元素。<br /><br /> 对模板进行分类，并定义如何在 **"新项目**"或"**添加新项目**"对话框中显示模板。|
 
 ## <a name="text-value"></a>文本值
  需要一个文本值。
 
- 此文本必须由模板允许的.NET framework 的最高版本号。
+ 文本必须是模板允许的 .NET 框架的最高版本号。
 
 ## <a name="remarks"></a>备注
 
-`MaxFrameworkVersion` 是可选元素。 `MaxFrameworkVersion`应忽略元素，除非它是必需的以免无意中限制模板支持.NET Framework 版本。 它应该也省略如果.NET Framework 不是适用于该模板。
+`MaxFrameworkVersion` 是可选元素。 除非`MaxFrameworkVersion`需要，否则应省略该元素，以免无意中限制模板支持的 .NET Framework 版本范围。 如果 .NET 框架不适用于模板，也应省略它。
 
 ## <a name="example"></a>示例
 
-下面的示例演示一种标准的元数据[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]类模板。
+下面的示例说明了标准[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]类模板的元数据。
 
 ```xml
 <VSTemplate Type="Item" Version="3.0.0"
@@ -80,9 +80,9 @@ ms.locfileid: "66318598"
 </VSTemplate>
 ```
 
-在此示例中，最高版本的.NET framework 的所需的模板，以表示`MaxFrameworkVersion`，是 4.7.1。 使用此模板创建的项目可面向.NET Framework 4.7.1 它之前的版本。
+在此示例中，模板（由 表示）`MaxFrameworkVersion`所需的 .NET 框架的最大版本为 4.7.1。 使用此模板创建的项目可以定位 .NET 框架版本，最多 4.7.1。
 
 ## <a name="see-also"></a>请参阅
 
-- [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
+- [可视化工作室模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
 - [创建项目和项模板](../ide/creating-project-and-item-templates.md)

@@ -3,17 +3,17 @@ title: 可视化工作室的字体和格式 |微软文档
 ms.date: 04/26/2017
 ms.topic: conceptual
 ms.assetid: c3c3df69-83b4-4fd0-b5b1-e18c33f39376
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8634ab15a10b59fc21de390e0633d6d91793616d
-ms.sourcegitcommit: 95f26af1da51d4c83ae78adcb7372b32364d8a2b
+ms.openlocfilehash: bf1550026fb5c9d9395d931f21d48bc4739ea8c3
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79301541"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80698581"
 ---
 # <a name="fonts-and-formatting-for-visual-studio"></a>Visual Studio 的字体和格式
 ## <a name="the-environment-font"></a><a name="BKMK_TheEnvironmentFont"></a>环境字体
@@ -481,7 +481,7 @@ protected static void SetFontStyles(Control topControl, Control parent, Font ref
 
 - 带粗体环境字体文本应遵循默认行高度间距和填充。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [MSDN： 字体 （窗口）](/windows/desktop/uxguide/vis-fonts)
 - [MSDN：用户界面文本（窗口）](/windows/desktop/uxguide/text-ui)
