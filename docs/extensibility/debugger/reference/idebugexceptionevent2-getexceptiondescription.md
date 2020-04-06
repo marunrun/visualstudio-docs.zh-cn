@@ -1,5 +1,5 @@
 ---
-title: IDebugExceptionEvent2::GetExceptionDescription | Microsoft Docs
+title: IDebugexceptionevent2：：获取异常描述 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugExceptionEvent2::GetExceptionDescription
 ms.assetid: d07d458f-5729-47e4-9b77-1bd59c61a75a
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: cc13184328ce3a7cf09e6df20ee62162cb108b5b
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 7a6ea64540eaeef5ec258bc54b118b3a0600584c
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66310544"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80729845"
 ---
 # <a name="idebugexceptionevent2getexceptiondescription"></a>IDebugExceptionEvent2::GetExceptionDescription
-获取可显示异常的说明。
+获取异常的可显示说明。
 
 ## <a name="syntax"></a>语法
 
@@ -41,13 +41,13 @@ int GetExceptionDescription( 
 
 ## <a name="parameters"></a>参数
 `pbstrDescription`\
-[out]返回可显示异常的说明。
+[出]返回异常的可显示说明。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，返回`S_OK`;否则，返回错误代码。
 
 ## <a name="remarks"></a>备注
- 此方法返回的字符串通常是异常的名称和中所示**输出**窗口时出现异常。
+ 从此方法返回的字符串通常是异常的名称，当发生异常时显示在 **"输出"** 窗口中。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugExceptionEvent2](../../../extensibility/debugger/reference/idebugexceptionevent2.md)

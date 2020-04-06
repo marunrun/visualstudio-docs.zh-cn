@@ -1,28 +1,28 @@
 ---
-title: IDebugExpressionEvaluator2::GetService | Microsoft Docs
+title: IDebug表达式评估器2：：获取服务 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IDebugExpressionEvaluator2::GetService
 - GetService
 ms.assetid: f8988a9e-9d18-42af-84a7-55f41e9adf63
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 42a4027b4153f262eb8164a915f229f04c7cbed4
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: c5428606ad54c7938037c3ffecf04f1cfe41787c
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66325555"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80729346"
 ---
 # <a name="idebugexpressionevaluator2getservice"></a>IDebugExpressionEvaluator2::GetService
-检索服务对象给出它的唯一标识符。
+检索给定其唯一标识符的服务对象。
 
 ## <a name="syntax"></a>语法
 
@@ -42,16 +42,16 @@ int GetService (
 
 ## <a name="parameters"></a>参数
 `uid`\
-[in]要检索的服务的唯一标识符。
+[在]要检索的服务的唯一标识符。
 
 `ppService`\
-[out]返回一个对象，表示该服务。
+[出]返回表示服务的对象。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，返回`S_OK`;否则，返回错误代码。
 
 ## <a name="remarks"></a>备注
- 这可供第三方表达式计算器才能获取另一个表达式计算器中的服务。 例如，此方法无法用于从默认表达式计算器获取可视化工具服务接口。 第三方表达式计算器不太可能需要实现此接口。
+ 第三方表达式赋值器可以使用这一功能从另一个表达式赋值器获取服务。 例如，此方法可用于从默认表达式赋值器获取可视化器服务的接口。 第三方表达式评估器不太可能需要实现此接口。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugExpressionEvaluator2](../../../extensibility/debugger/reference/idebugexpressionevaluator2.md)

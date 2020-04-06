@@ -1,25 +1,25 @@
 ---
-title: Bitmaps 元素 |Microsoft Docs
+title: 位图元素 |微软文档
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - VSCT XML schema elements, Bitmaps
 - Bitmaps element (VSCT XML schema)
 ms.assetid: 74652e1b-fcfa-421b-aa9f-fbc081d3b476
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 00486f4edd68d2cc5e158d567a28f78ef12f8cd1
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 85310923134a6db59f1b6a3a15ac4b96a127e239
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66333403"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80739987"
 ---
-# <a name="bitmaps-element"></a>Bitmaps 元素
-组[位图元素](../extensibility/bitmap-element.md)元素。
+# <a name="bitmaps-element"></a>位图元素
+对[位图元素](../extensibility/bitmap-element.md)元素。
 
 ## <a name="syntax"></a>语法
 
@@ -43,14 +43,14 @@ ms.locfileid: "66333403"
 
 |元素|描述|
 |-------------|-----------------|
-|[Bitmaps 元素](../extensibility/bitmaps-element.md)|位图元素进行分组。|
-|[Bitmap 元素](../extensibility/bitmap-element.md)|定义位图。|
+|[位图元素](../extensibility/bitmaps-element.md)|对位图元素。|
+|[位图元素](../extensibility/bitmap-element.md)|定义位图。|
 
 ### <a name="parent-elements"></a>父元素
 
 |元素|描述|
 |-------------|-----------------|
-|[Commands 元素](../extensibility/commands-element.md)|表示 VSPackage 工具栏上的命令的集合。|
+|[命令元素](../extensibility/commands-element.md)|表示 VSPackage 工具栏上的命令集合。|
 
 ## <a name="example"></a>示例
 
@@ -63,5 +63,5 @@ ms.locfileid: "66333403"
 ```
 
 ## <a name="see-also"></a>请参阅
-- [Vspackage 如何添加用户界面元素](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
-- [命令、 菜单和工具栏](../extensibility/internals/commands-menus-and-toolbars.md)
+- [VS包如何添加用户界面元素](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
+- [命令、菜单和工具栏](../extensibility/internals/commands-menus-and-toolbars.md)

@@ -1,5 +1,5 @@
 ---
-title: EncUnavailableReason |Microsoft Docs
+title: Enc不可用原因 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - EncUnavailableReason enumeration
 ms.assetid: c10aa4c0-d7e0-4de1-b8ff-7e050985eb12
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 7db94a181d87791edb242d69b461f90c42a5e080
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 28863549ab3eac96322530bc85c52697f20448c8
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66318159"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80737171"
 ---
 # <a name="encunavailablereason"></a>EncUnavailableReason
-`This is for internal use only!` 表示原因，**编辑并继续**不可用。
+`This is for internal use only!`表示 **"编辑"和"继续"** 不可用的原因。
 
 ## <a name="syntax"></a>语法
 
@@ -54,35 +54,35 @@ public enum EncUnavailableReason {
 
 ## <a name="fields"></a>字段
 `ENCUN_NONE`\
-编辑并继续不可用的原因没有特定原因。
+没有"编辑并继续"不可用的具体原因。
 
 `ENCUN_INTEROP`\
-编辑并继续的互操作调用期间不可用。
+在互操作呼叫期间，编辑和继续不可用。
 
 `ENCUN_SQLCLR`\
-编辑并继续在使用公共语言运行时 (CLR) 的 SQL 过程调用期间不可用。
+在使用通用语言运行时 （CLR） 的 SQL 过程调用期间，编辑和继续不可用。
 
 `ENCUN_MINIDUMP`\
-编辑并继续处理小型转储时不可用。
+处理小型转储时，编辑和继续不可用。
 
 `ENCUN_EMBEDDED`\
-处理嵌入的代码时，编辑并继续不可用。
+处理嵌入的代码时，编辑和继续不可用。
 
 `ENCUN_ATTACH`\
-编辑并继续就不可用会话已附加到，因为不会启动的调试器。
+编辑和继续不可用，因为会话已附加到调试器，而不是由调试器启动。
 
 `ENCUN_WIN64`\
-编辑并继续处理 64 位 Windows 代码时不可用。
+在处理 64 位 Windows 代码时，编辑和继续不可用。
 
 ## <a name="remarks"></a>备注
-此枚举仅适用于内部使用通过[!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]。 [GetENCAvailableState](../../../extensibility/debugger/reference/idebugprocess3-getencavailablestate.md)并[DisableENC](../../../extensibility/debugger/reference/idebugprocess3-disableenc.md)由自定义端口提供程序实现的方法应始终返回`E_NOTIMPL`。
+此枚举仅供[!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]内部使用。 自定义端口供应商实现的[GetENC 可用状态](../../../extensibility/debugger/reference/idebugprocess3-getencavailablestate.md)和[禁用 ENC](../../../extensibility/debugger/reference/idebugprocess3-disableenc.md)方法应始终返回`E_NOTIMPL`。
 
 ## <a name="requirements"></a>要求
-标头： msdbg.idl
+标题： msdbg.idl
 
-命名空间:Microsoft.VisualStudio.Debugger.Interop
+命名空间：微软.VisualStudio.调试器.互通
 
-程序集：Microsoft.VisualStudio.Debugger.Interop.dll
+程序集：微软.VisualStudio.调试器.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [枚举](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

@@ -1,5 +1,5 @@
 ---
-title: BPREQI_FIELDS | Microsoft Docs
+title: BPREQI_FIELDS |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BPREQI_FIELDS enumeration
 ms.assetid: 679e771e-4a79-484e-af37-f962ef4aa245
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 757b8bfeeed2a7d75f3a0b4203b80b464e5b39fa
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 4c0e10b6c253c61a9e68e0cf161201f7d2520ae6
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66350512"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80737749"
 ---
-# <a name="bpreqifields"></a>BPREQI_FIELDS
-指定要检索有关断点请求的信息。
+# <a name="bpreqi_fields"></a>BPREQI_FIELDS
+指定要检索的关于断点请求的信息。
 
 ## <a name="syntax"></a>语法
 
@@ -68,60 +68,60 @@ public enum enum_BPREQI_FIELDS {
 
 ## <a name="fields"></a>字段
 `BPREQI_BPLOCATION`\
-初始化/用`bpLocation`（断点位置） 的字段[BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md)或[BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md)结构。
+初始化/使用`bpLocation`[BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md)或[BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md)结构的（断点位置）字段。
 
 `BPREQI_LANGUAGE`\
-初始化/用`guidLanguage`字段`BP_REQUEST_INFO`或`BP_REQUEST_INFO2`结构。
+初始化/使用`guidLanguage``BP_REQUEST_INFO`或`BP_REQUEST_INFO2`结构的字段。
 
 `BPREQI_PROGRAM`\
-初始化/用`pProgram`字段`BP_REQUEST_INFO`或`BP_REQUEST_INFO2`结构。
+初始化/使用`pProgram``BP_REQUEST_INFO`或`BP_REQUEST_INFO2`结构的字段。
 
 `BPREQI_PROGRAMNAME`\
-初始化/用`bstrProgramName`字段`BP_REQUEST_INFO`或`BP_REQUEST_INFO2`结构。
+初始化/使用`bstrProgramName``BP_REQUEST_INFO`或`BP_REQUEST_INFO2`结构的字段。
 
 `BPREQI_THREAD`\
-初始化/用`pThread`字段`BP_REQUEST_INFO`或`BP_REQUEST_INFO2`结构。
+初始化/使用`pThread``BP_REQUEST_INFO`或`BP_REQUEST_INFO2`结构的字段。
 
 `BPREQI_THREADNAME`\
-初始化/用`bstrThreadName`字段`BP_REQUEST_INFO`或`BP_REQUEST_INFO2`结构。
+初始化/使用`bstrThreadName``BP_REQUEST_INFO`或`BP_REQUEST_INFO2`结构的字段。
 
 `BPREQI_PASSCOUNT`\
-初始化/用`bpPassCount`字段`BP_REQUEST_INFO`或`BP_REQUEST_INFO2`结构。
+初始化/使用`bpPassCount``BP_REQUEST_INFO`或`BP_REQUEST_INFO2`结构的字段。
 
 `BPREQI_CONDITION`\
-初始化/用`bpCondition`（断点条件） 字段`BP_REQUEST_INFO`或`BP_REQUEST_INFO2`结构。
+初始化/使用`bpCondition``BP_REQUEST_INFO`或`BP_REQUEST_INFO2`结构的（断点条件）字段。
 
 `BPREQI_FLAGS`\
-初始化/用`dwFlags`字段`BP_REQUEST_INFO`或`BP_REQUEST_INFO2`结构。
+初始化/使用`dwFlags``BP_REQUEST_INFO`或`BP_REQUEST_INFO2`结构的字段。
 
 `BPREQI_ALLOLDFIELDS`\
-初始化/使用的所有字段的`BP_REQUEST_INFO`结构。
+初始化/使用`BP_REQUEST_INFO`结构的所有字段。
 
 `BPREQI_VENDOR`\
-初始化/用`guidVendor`字段的`BP_REQUEST_INFO2`结构。
+初始化/使用结构`guidVendor`字段`BP_REQUEST_INFO2`。
 
 `BPREQI_CONSTRAINT`\
-初始化/用`bstrConstraint`字段的`BP_REQUEST_INFO2`结构。
+初始化/使用结构`bstrConstraint`字段`BP_REQUEST_INFO2`。
 
 `BPREQI_TRACEPOINT`\
-初始化/用`bstrTracepoint`字段的`BP_REQUEST_INFO2`结构。
+初始化/使用结构`bstrTracepoint`字段`BP_REQUEST_INFO2`。
 
 `BPREQI_ALLFIELDS`\
-指定的所有字段`BP_REQUEST_INFO2`结构。
+指定`BP_REQUEST_INFO2`结构的所有字段。
 
 ## <a name="remarks"></a>备注
-作为参数传递[GetRequestInfo](../../../extensibility/debugger/reference/idebugbreakpointrequest2-getrequestinfo.md)并[BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md)方法，以指定的哪些字段[BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md)和[BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md)结构是否进行初始化。
+作为参数传递给[GetRequestInfo，](../../../extensibility/debugger/reference/idebugbreakpointrequest2-getrequestinfo.md)[并BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md)方法指定要初始化[BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md)和[BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md)结构的字段。
 
-这些标志还用于指示哪些字段`BP_REQUEST_INFO`和`BP_REQUEST_INFO2`结构已使用且有效时返回的每个结构。
+这些标志还用于指示返回每个结构时使用`BP_REQUEST_INFO`和`BP_REQUEST_INFO2`结构的字段并有效。
 
-可能的按位组合这些值`OR`。
+这些值可以稍微结合`OR`。
 
 ## <a name="requirements"></a>要求
-标头： msdbg.h
+标题： msdbg.h
 
-命名空间:Microsoft.VisualStudio.Debugger.Interop
+命名空间：微软.VisualStudio.调试器.互通
 
-程序集：Microsoft.VisualStudio.Debugger.Interop.dll
+程序集：微软.VisualStudio.调试器.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [枚举](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

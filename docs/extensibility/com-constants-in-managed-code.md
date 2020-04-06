@@ -1,24 +1,24 @@
 ---
-title: 在托管代码中的 COM 常量 |Microsoft Docs
+title: 托管代码中的 COM 常量 |微软文档
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - managed VSPackages, COM constants and macros
 ms.assetid: b6663608-b049-44b0-a75b-080fdc5faafc
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d855142ad51f5433fbf0053cfbcfc1d8bef8871d
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 919d000e44b90e975543f8aa6419968a40149adf
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66350714"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80739824"
 ---
-# <a name="com-constants-in-managed-code"></a>在托管代码中的 COM 常量
-托管包框架 (MPF) 使一些标准的 COM 常量可用于托管代码。 供你参考下面列出了这些常量。
+# <a name="com-constants-in-managed-code"></a>托管代码中的 COM 常量
+托管包框架 （MPF） 使一些标准 COM 常量可用于托管代码。 下面列出了这些常量，供参考。
 
 ## <a name="boolean-hresult-values"></a>布尔 HRESULT 值
  <xref:Microsoft.VisualStudio.VSConstants.S_FALSE>

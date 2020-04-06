@@ -1,5 +1,5 @@
 ---
-title: IDebugCustomAttribute::GetParentField |Microsoft Docs
+title: IDebug自定义属性：：获取父项 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugCustomAttribute::GetParentField
 ms.assetid: bcdfdf37-bfcf-4988-a7b8-4c731d0af1b0
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 6a99310520109dad6a1b8084405119e0a106ad89
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 1fae84a4d02438335aea00c50dd9b89520d08bae
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66350048"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80732699"
 ---
 # <a name="idebugcustomattributegetparentfield"></a>IDebugCustomAttribute::GetParentField
-获取自定义特性附加到的字段。
+获取附加到自定义属性的字段。
 
 ## <a name="syntax"></a>语法
 
@@ -41,13 +41,13 @@ int GetParentField(
 
 ## <a name="parameters"></a>参数
 `ppField`\
-[out]返回[IDebugField](../../../extensibility/debugger/reference/idebugfield.md)对象，表示自定义特性附加到的字段。
+[出]返回表示自定义属性附加到的字段的[IDebugField](../../../extensibility/debugger/reference/idebugfield.md)对象。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回 S_OK;否则，返回错误代码。
+ 如果成功，返回S_OK;否则，返回错误代码。
 
 ## <a name="remarks"></a>备注
- 调用[GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md)方法返回[IDebugField](../../../extensibility/debugger/reference/idebugfield.md)要确定哪些类型的字段的父对象。
+ 在返回的[IDebugField](../../../extensibility/debugger/reference/idebugfield.md)对象上调用[GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md)方法，以确定父级字段类型。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugCustomAttribute](../../../extensibility/debugger/reference/idebugcustomattribute.md)

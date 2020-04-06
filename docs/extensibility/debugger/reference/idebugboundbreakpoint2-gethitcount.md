@@ -1,5 +1,5 @@
 ---
-title: IDebugBoundBreakpoint2::GetHitCount | Microsoft Docs
+title: IDebugBound突破点2：：获取HitCount |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -8,23 +8,23 @@ helpviewer_keywords:
 - GetHitCount method
 - IDebugBoundBreakpoint2::GetHitCount method
 ms.assetid: 23481f37-047c-41d2-8286-4da1f4084961
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 3a46baa5b48173df5a89dde8e683c875ef536a38
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: c821470cc81c1f4c495f6d71565d79cc9745f65d
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66320426"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80735515"
 ---
 # <a name="idebugboundbreakpoint2gethitcount"></a>IDebugBoundBreakpoint2::GetHitCount
-获取此绑定断点的当前命中的计数。
+获取此绑定断点的当前命中计数。
 
 ## <a name="syntax"></a>语法
 
@@ -42,13 +42,13 @@ int GetHitCount( 
 
 ## <a name="parameters"></a>参数
 `pdwHitCount`\
-[out]返回命中的次数。
+[出]返回命中计数。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。 返回`E_BP_DELETED`如果绑定的断点对象的状态设置为`BPS_DELETED`(属于[BP_STATE](../../../extensibility/debugger/reference/bp-state.md)枚举)。
+ 如果成功，返回`S_OK`;否则，返回错误代码。 如果`E_BP_DELETED`绑定断点对象的状态设置为`BPS_DELETED`[（BP_STATE](../../../extensibility/debugger/reference/bp-state.md)枚举的一部分），则返回。
 
 ## <a name="remarks"></a>备注
- 命中的计数是在会话的当前运行期间已触发此断点的次数。
+ 命中计数是此断点在当前会话运行期间触发的次数。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md)

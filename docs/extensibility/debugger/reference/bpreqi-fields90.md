@@ -1,27 +1,27 @@
 ---
-title: BPREQI_FIELDS90 | Microsoft Docs
+title: BPREQI_FIELDS90 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - BPREQI_FIELDS90 enumeration
 ms.assetid: bf6f7efc-39f2-46a2-906d-c3647bf89995
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 3f4d6df181ac15746202ae9f67e7b8874848e8f3
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: ea46939118ec48490280d6a85cc84e144d320d4e
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66350544"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80737735"
 ---
-# <a name="bpreqifields90"></a>BPREQI_FIELDS90
-枚举指定断点请求有关的信息要检索的有效值。 此枚举扩展[BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md)枚举。
+# <a name="bpreqi_fields90"></a>BPREQI_FIELDS90
+枚举指定要检索的关于断点请求的信息的有效值。 此枚举扩展了[BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md)枚举。
 
 ## <a name="syntax"></a>语法
 
@@ -78,56 +78,56 @@ public enum enum_BPREQI_FIELDS90
 
 ## <a name="fields"></a>字段
 `BPREQI90_BPLOCATION`\
-初始化或使用`bpLocation`（断点位置） 的字段[BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md)或[BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md)结构。
+初始化或使用[BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md)或`bpLocation`[BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md)结构的（断点位置）字段。
 
 `BPREQI90_LANGUAGE`\
-初始化或使用`guidLanguage`字段`BP_REQUEST_INFO`或`BP_REQUEST_INFO2`结构。
+初始化或使用`guidLanguage``BP_REQUEST_INFO`或`BP_REQUEST_INFO2`结构的字段。
 
 `BPREQI90_PROGRAM`\
-初始化或使用`pProgram`字段`BP_REQUEST_INFO`或`BP_REQUEST_INFO2`结构。
+初始化或使用`pProgram``BP_REQUEST_INFO`或`BP_REQUEST_INFO2`结构的字段。
 
 `BPREQI90_PROGRAMNAME`\
-初始化或使用`bstrProgramName`字段`BP_REQUEST_INFO`或`BP_REQUEST_INFO2`结构。
+初始化或使用`bstrProgramName``BP_REQUEST_INFO`或`BP_REQUEST_INFO2`结构的字段。
 
 `BPREQI90_THREAD`\
-初始化或使用`pThread`字段`BP_REQUEST_INFO`或`BP_REQUEST_INFO2`结构。
+初始化或使用`pThread``BP_REQUEST_INFO`或`BP_REQUEST_INFO2`结构的字段。
 
 `BPREQI90_THREADNAME`\
-初始化或使用`bstrThreadName`字段`BP_REQUEST_INFO`或`BP_REQUEST_INFO2`结构。
+初始化或使用`bstrThreadName``BP_REQUEST_INFO`或`BP_REQUEST_INFO2`结构的字段。
 
 `BPREQI90_PASSCOUNT`\
-初始化或使用`bpPassCount`字段`BP_REQUEST_INFO`或`BP_REQUEST_INFO2`结构。
+初始化或使用`bpPassCount``BP_REQUEST_INFO`或`BP_REQUEST_INFO2`结构的字段。
 
 `BPREQI90_CONDITION`\
-初始化或使用`bpCondition`（断点条件） 字段`BP_REQUEST_INFO`或`BP_REQUEST_INFO2`结构。
+初始化或使用`bpCondition``BP_REQUEST_INFO`或`BP_REQUEST_INFO2`结构的（断点条件）字段。
 
 `BPREQI90_FLAGS`\
-初始化或使用`dwFlags`字段`BP_REQUEST_INFO`或`BP_REQUEST_INFO2`结构。
+初始化或使用`dwFlags``BP_REQUEST_INFO`或`BP_REQUEST_INFO2`结构的字段。
 
 `BPREQI90_ALLOLDFIELDS`\
-初始化或使用的所有字段的`BP_REQUEST_INFO`结构。
+初始化或使用`BP_REQUEST_INFO`结构的所有字段。
 
 `BPREQI90_VENDOR`\
-初始化或使用`guidVendor`字段的`BP_REQUEST_INFO2`结构。
+初始化或使用结构`guidVendor`字段。 `BP_REQUEST_INFO2`
 
 `BPREQI90_CONSTRAINT`\
-初始化或使用`bstrConstraint`字段的`BP_REQUEST_INFO2`结构。
+初始化或使用结构`bstrConstraint`字段。 `BP_REQUEST_INFO2`
 
 `BPREQI90_TRACEPOINT`\
-初始化或使用`bstrTracepoint`字段的`BP_REQUEST_INFO2`结构。
+初始化或使用结构`bstrTracepoint`字段。 `BP_REQUEST_INFO2`
 
 `BPREQI90_MACROTRACEPOINT`\
-初始化或使用`bstrMacroTracepoint`字段的`BP_REQUEST_INFO2`结构。 BPREQI_ALLFIELDS 不包括此字段。
+初始化或使用结构`bstrMacroTracepoint`字段。 `BP_REQUEST_INFO2` BPREQI_ALLFIELDS不包括此字段。
 
 `BPREQI90_ALLFIELDS`\
-指定的所有字段`BP_REQUEST_INFO2`结构。
+指定`BP_REQUEST_INFO2`结构的所有字段。
 
 ## <a name="requirements"></a>要求
-标头：Msdbg90.h
+标题： Msdbg90.h
 
-命名空间:Microsoft.VisualStudio.Debugger.Interop
+命名空间：微软.VisualStudio.调试器.互通
 
-程序集：Microsoft.VisualStudio.Debugger.Interop.dll
+程序集：微软.VisualStudio.调试器.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [枚举](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

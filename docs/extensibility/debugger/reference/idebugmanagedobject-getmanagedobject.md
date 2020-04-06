@@ -1,5 +1,5 @@
 ---
-title: IDebugManagedObject::GetManagedObject | Microsoft Docs
+title: IDebug托管对象：获取托管对象 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugManagedObject::GetManagedObject method
 ms.assetid: 6abe1402-6aad-41e6-8ec1-ae12d5945992
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 75e0367aaddb28e2af2703904fd77b4e4f9f6322
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: b7080760b174c51d62c44cd2757944948e0104ca
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66349395"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80727736"
 ---
 # <a name="idebugmanagedobjectgetmanagedobject"></a>IDebugManagedObject::GetManagedObject
-返回表示托管的对象的接口。
+返回表示托管对象的接口。
 
 ## <a name="syntax"></a>语法
 
@@ -41,13 +41,13 @@ int GetManagedObject(
 
 ## <a name="parameters"></a>参数
 `ppManagedObject`\
-[out]返回表示托管的对象的接口。
+[出]返回表示托管对象的接口。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回 S_OK;否则，返回错误代码。
+ 如果成功，返回S_OK;否则，返回错误代码。
 
 ## <a name="remarks"></a>备注
- 此方法返回的接口可以查询由托管类，允许其调用的方法实现任何接口。
+ 可以查询从此方法返回的接口，以便查询托管类实现的任何接口，从而允许调用其方法。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugManagedObject](../../../extensibility/debugger/reference/idebugmanagedobject.md)

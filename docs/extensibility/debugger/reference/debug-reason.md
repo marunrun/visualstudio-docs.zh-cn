@@ -1,5 +1,5 @@
 ---
-title: DEBUG_REASON | Microsoft Docs
+title: DEBUG_REASON |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - DEBUG_REASON enumeration
 ms.assetid: ad2ee898-8648-4671-9078-d32873862346
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 0502ab10398d37bcafee5316ba7e7566dbab4e01
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 59954ea7e89390a5e35dbe0bfb0412da1aabc80f
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66346168"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80737421"
 ---
-# <a name="debugreason"></a>DEBUG_REASON
-指定用于调试启动进程时为什么。
+# <a name="debug_reason"></a>DEBUG_REASON
+指定启动进程以进行调试的原因。
 
 ## <a name="syntax"></a>语法
 
@@ -50,29 +50,29 @@ public enum enum_DEBUG_REASON {
 
 ## <a name="fields"></a>字段
 `DEBUG_REASON_ERROR`\
-发生了非特定错误 （这用作默认条件时没有其他原因，调整）。
+发生非特定错误（当其他原因均不合适时，这用作默认条件）。
 
 `DEBUG_REASON_USER_LAUNCHED`\
-该过程是在用户的请求时启动的。
+该过程是应用户请求启动的。
 
 `DEBUG_REASON_USER_ATTACHED`\
-已在运行的进程已附加到用户。
+已运行的进程由用户附加到。
 
 `DEBUG_REASON_AUTO_ATTACHED`\
-程序启动时，该过程是自动附加到。
+该过程在启动时自动附加到。
 
 `DEBUG_REASON_CAUSALITY`\
-由于已启动进程*中实时*(JIT) 调试事件。
+该过程是由于实时 （JIT） 调试事件而启动*的*。
 
 ## <a name="remarks"></a>备注
-返回从[GetDebugReason](../../../extensibility/debugger/reference/idebugprocess3-getdebugreason.md)方法。
+从[GetDebugAthe 方法](../../../extensibility/debugger/reference/idebugprocess3-getdebugreason.md)返回。
 
 ## <a name="requirements"></a>要求
-标头： msdbg.h
+标题： msdbg.h
 
-命名空间:Microsoft.VisualStudio.Debugger.Interop
+命名空间：微软.VisualStudio.调试器.互通
 
-程序集：Microsoft.VisualStudio.Debugger.Interop.dll
+程序集：微软.VisualStudio.调试器.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [枚举](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

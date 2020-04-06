@@ -1,28 +1,28 @@
 ---
-title: AppliesTo 元素 （Visual Studio 模板） |Microsoft Docs
+title: 应用于元素（视觉工作室模板） |微软文档
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
 ms.assetid: 8fb1334b-d78c-405f-98b4-786e9f6b58d7
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 33288876d1a9101d96d4d2c0c0c7beb5e6f1ac72
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 39b5ee1e3cad0b4d8ddbe0fc2dfa1c2d478ec063
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66352244"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80740072"
 ---
-# <a name="appliesto-element-visual-studio-templates"></a>AppliesTo 元素 （Visual Studio 模板）
+# <a name="appliesto-element-visual-studio-templates"></a>应用于元素（可视化工作室模板）
 
-指定一个可选表达式以匹配一个或多个功能 (请参阅<xref:Microsoft.VisualStudio.Shell.Interop.VsProjectCapabilityExpressionMatcher>)。 项目类型通过作为属性层次结构将功能公开[__VSHPROPID5。VSHPROPID_ProjectCapabilities](<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID5.VSHPROPID_ProjectCapabilities>)。 这使得具有公共适用功能的多个项目类型可以共享此模板。
+指定可选表达式以匹配一个或多个功能（请参阅<xref:Microsoft.VisualStudio.Shell.Interop.VsProjectCapabilityExpressionMatcher>）。 功能通过层次结构通过层次结构公开功能，作为属性[__VSHPROPID5。VSHPROPID_ProjectCapabilities](<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID5.VSHPROPID_ProjectCapabilities>)。 这使得具有公共适用功能的多个项目类型可以共享此模板。
 
 此元素为可选元素。 一个模板文件中最多只能包含一个实例。 根据当前选择的活动项目的功能，此元素仅启用一个项模板以在适用时选择使用。 此元素无法用于设置不适用的项模板。 如果缺少 `AppliesTo` 或表达式未成功选择使用，则 `TemplateID` 或 `TemplateGroupID` 将用于使模板可用，如使用产品的早期版本一样。
 
-在 Visual Studio 2013 Update 2 中引入。 若要引用正确的版本，请参阅[引用程序集提供的 Visual Studio 2013 SDK 更新 2](/previous-versions/dn632168(v=vs.120))。
+在 Visual Studio 2013 Update 2 中引入。 要引用正确的版本，请参阅[Visual Studio 2013 SDK 更新 2 中提供的引用程序集](/previous-versions/dn632168(v=vs.120))。
 
 ```xml
 <VSTemplate>
@@ -60,11 +60,11 @@ ms.locfileid: "66352244"
 
 有效表达式语法按以下方式定义：
 
-- 功能表达式，如"(visual c &#124; CSharp) + (MSTest &#124; NUnit)"。
+- 功能表达式，如"（VisualC &#124; CSharp） = （MSTest &#124; NUnit）"。
 
-- "&#124;"是或运算符。
+- "&#124;"是 OR 运算符。
 
-- "&"和"+"字符均为 AND 运算符。
+- "&"和"+"字符都是 AND 运算符。
 
 - “!”字符是 NOT 运算符。
 
@@ -72,11 +72,11 @@ ms.locfileid: "66352244"
 
 - null 或空表达式作为匹配计算。
 
-- 项目功能可以是除以下保留字符之外的任何字符:"':;,+-*/\\！ ~&#124;和 %$@^() ={}[] <>？ \t\b\n\r
+- 项目功能可以是除这些保留字符之外的任何字符："'：;*--/！]\\{}&#124;&%$_（））]*<>？ \t\b\n\r
 
 ## <a name="example"></a>示例
 
-下面的示例演示三个不同模板。 `Template1` 适用于所有 C# 项目类型或支持 `WindowsAppContainer` 功能的任何其他项目类型。 `Template2` 适用于所有类型的 C# 项目。 `Template3` 适用于 `WindowsAppContainer` 项目以外的 C# 项目。
+下面的示例演示三个不同模板。 `Template1`应用于所有 C# 项目类型或支持该`WindowsAppContainer`功能的任何其他项目类型。 `Template2`适用于所有任何类型的 C# 项目。 `Template3` 适用于 `WindowsAppContainer` 项目以外的 C# 项目。
 
 ```xml
 <!--  Template 1 -->
@@ -106,5 +106,5 @@ ms.locfileid: "66352244"
 
 ## <a name="see-also"></a>请参阅
 
-- [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
+- [可视化工作室模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
 - [创建项目和项模板](../ide/creating-project-and-item-templates.md)

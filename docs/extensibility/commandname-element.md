@@ -1,25 +1,25 @@
 ---
-title: CommandName 元素 |Microsoft Docs
+title: 命令名称元素 |微软文档
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - CommandName element (VSCT XML schema)
 - VSCT XML schema elements, CommandName
 ms.assetid: a338b767-aa7e-4536-9908-e19a50ab60ac
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4b792e7bbe1efaa1158cc517cd96494049e2b9e2
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 8152942d015e21b1b80f735fd921a5ddde3674d5
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66337259"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80739746"
 ---
-# <a name="commandname-element"></a>CommandName 元素
-`CommandName`元素指定的键盘类别中显示的文本**选项**对话框中，然后在**命令**列表中**自定义**对话框框。
+# <a name="commandname-element"></a>命令名称元素
+该`CommandName`元素指定"**选项**"对话框中的键盘类别中以及 **"自定义"** 对话框中的 **"命令"** 列表中显示的文本。
 
 ## <a name="syntax"></a>语法
 
@@ -40,7 +40,7 @@ ms.locfileid: "66337259"
 
 |元素|描述|
 |-------------|-----------------|
-|[Strings 元素](../extensibility/strings-element.md)|文本元素，如分组`ButtonText`和`CommandName`。|
+|[字符串元素](../extensibility/strings-element.md)|对文本元素（如`ButtonText`和`CommandName`）|
 
 ## <a name="see-also"></a>请参阅
-- [Visual Studio 命令表格 (.vsct) 文件](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [可视化工作室命令表 （.vsct） 文件](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

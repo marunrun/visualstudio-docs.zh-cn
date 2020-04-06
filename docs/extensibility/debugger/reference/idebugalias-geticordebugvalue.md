@@ -1,5 +1,5 @@
 ---
-title: IDebugAlias::GetICorDebugValue | Microsoft Docs
+title: IDebugAlias：获取ICordebug值 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugAlias::GetICorDebugValue method
 ms.assetid: b9eb39ee-84af-4ace-9cfe-236b3d48aff5
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: f8ef27f9af5626b716339281c010c62c2515fb8b
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.openlocfilehash: fd01785fee7ce65296bac940fb19819415139d53
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66746843"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80736475"
 ---
 # <a name="idebugaliasgeticordebugvalue"></a>IDebugAlias::GetICorDebugValue
-检索表示与此别名关联的值的托管的代码接口。
+检索表示与此别名关联的值的托管代码接口。
 
 ## <a name="syntax"></a>语法
 
@@ -41,13 +41,13 @@ int GetICorDebugValue(
 
 ## <a name="parameters"></a>参数
 `ppUnk`\
-[out]`IUnknown`接口，表示与此别名关联的值。 此接口可以查询有关`ICorDebugValue`接口。
+[出]`IUnknown`表示与此别名关联的值的接口。 可以查询接口的此`ICorDebugValue`接口。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回 S_OK;否则，返回错误代码。
+ 如果成功，返回S_OK;否则，返回错误代码。
 
 ## <a name="remarks"></a>备注
- 此方法仅适用于托管值 (`ICorDebugValue`是一个接口在.NET Framework 中可用，并且在 cordebug.idl 文件中的.NET Framework SDK 中定义)。
+ 此方法仅适用于托管值（`ICorDebugValue`是 .NET 框架中可用的接口，并在 cordebug.idl 文件中的 .NET 框架 SDK 中定义）。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugDisassemblyStream2::Read |Microsoft Docs
+title: IDebugdisassemblystream2：：阅读 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugDisassemblyStream2::Read
 ms.assetid: 7db5f6bb-73ee-45bc-b187-c1b6aa2dfdd5
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c74ed1de1d12cc7384ee8f7d27dad910c7b9c9d5
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 4a4f5c0250405c2e2a0314b52c4cbc64d749fc0a
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66310357"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80732091"
 ---
 # <a name="idebugdisassemblystream2read"></a>IDebugDisassemblyStream2::Read
-读取从当前位置反汇编流中的说明。
+读取从拆解流中的当前位置开始的指令。
 
 ## <a name="syntax"></a>语法
 
@@ -47,26 +47,26 @@ int Read( 
 
 ## <a name="parameters"></a>参数
 `dwInstructions`\
-[in]要拆装的指令数。 此值也是最大长度`prgDisassembly`数组。
+[在]要拆卸的说明数。 此值也是`prgDisassembly`数组的最大长度。
 
 `dwFields`\
-[in]中的标志的组合[DISASSEMBLY_STREAM_FIELDS](../../../extensibility/debugger/reference/disassembly-stream-fields.md)枚举，用于指示哪些字段的`prgDisassembly`要填写。
+[在][DISASSEMBLY_STREAM_FIELDS](../../../extensibility/debugger/reference/disassembly-stream-fields.md)枚举中的标志的组合，指示要填写的`prgDisassembly`字段。
 
 `pdwInstructionsRead`\
-[out]返回实际拆装的指令的数。
+[出]返回实际拆解的说明数。
 
 `prgDisassembly`\
-[out]一个数组[DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md)填充反汇编代码，每个已拆装的指令的一个结构的结构。 此数组的长度由`dwInstructions`参数。
+[出]一系列用拆解代码填充[的拆解数据](../../../extensibility/debugger/reference/disassemblydata.md)结构，每个拆解指令一个结构。 此数组的长度由`dwInstructions`参数决定。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，返回`S_OK`;否则，返回错误代码。
 
 ## <a name="remarks"></a>备注
- 可以通过调用获取当前作用域中时所提供的说明的最大数目[GetSize](../../../extensibility/debugger/reference/idebugdisassemblystream2-getsize.md)方法。
+ 可通过调用[GetSize](../../../extensibility/debugger/reference/idebugdisassemblystream2-getsize.md)方法获取当前作用域中可用的最大指令数。
 
- 可以通过调用更改的当前位置读取下一个指令是所在[Seek](../../../extensibility/debugger/reference/idebugdisassemblystream2-seek.md)方法。
+ 可以通过调用[Seek](../../../extensibility/debugger/reference/idebugdisassemblystream2-seek.md)方法更改读取下一个指令的当前位置。
 
- `DSF_OPERANDS_SYMBOLS`标志可添加到`DSF_OPERANDS`标记中`dwFields`参数以指示应在拆装说明时使用的符号名称。
+ 可以将`DSF_OPERANDS_SYMBOLS`标志添加到参数中`DSF_OPERANDS`的标志中`dwFields`，以指示在拆解指令时应使用符号名称。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugDisassemblyStream2](../../../extensibility/debugger/reference/idebugdisassemblystream2.md)
