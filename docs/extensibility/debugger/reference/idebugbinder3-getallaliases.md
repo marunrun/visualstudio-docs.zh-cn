@@ -1,5 +1,5 @@
 ---
-title: IDebugBinder3::GetAllAliases | Microsoft Docs
+title: IDebugBinder3：：获取所有别名 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugBinder3::GetAllAliases method
 ms.assetid: 1f9ab2ee-2ab3-4a61-8b99-95dd7fdf3511
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 51f45c64c0e1927e23052de08367c9699fda4cb9
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 2d512fa6eb7529e11c766d7c173b318aa6f8f2f5
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66327166"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80735819"
 ---
 # <a name="idebugbinder3getallaliases"></a>IDebugBinder3::GetAllAliases
-此方法从该程序检索别名的列表。
+此方法从程序中检索别名列表。
 
 ## <a name="syntax"></a>语法
 
@@ -45,16 +45,16 @@ int GetAllAliases(
 
 ## <a name="parameters"></a>参数
 `uRequest`\
-[in]若要返回的别名的最大数目 (指定传递到的数组的长度`ppAliases`)。
+[在]要返回的最大别名数（指定传递到`ppAliases`的数组的长度。
 
 `ppAliases`\
-[in、 out]使用别名填充数组 (如果这是一个 null 值和`uRequest`为 0，则将返回的别名可返回计数`puFetched`)。
+[进出]要用别名填充的数组（如果这是空值，为`uRequest`0，则可以返回的别名计数将由 返回`puFetched`返回。
 
 `puFetched`\
-[out]返回获取的别名数目。
+[出]返回获得的别名数。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，返回`S_OK`;否则，返回错误代码。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md)
