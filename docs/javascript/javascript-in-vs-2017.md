@@ -10,23 +10,23 @@ dev_langs:
 ms.assetid: 74dca14c-5071-416f-a92b-d09f95e3dfb8
 caps.latest.revision: 1
 author: bowdenk7
-ms.author: wilkelly
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 2a0d3657843dcf282e5c9aab8609efe5f9611965
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 75b2a336cf9a229b4834b68e0f7bed5d6b1174f4
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "78234951"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233068"
 ---
 # <a name="javascript-in-visual-studio-2017"></a>Visual Studio 2017 中的 JavaScript
 
 JavaScript 是 Visual Studio 中的一级语言。 当你在 Visual Studio IDE 中编写 JavaScript 代码时，你可以使用该标准编辑帮助（代码片段，IntelliSense 等等）的大部分或全部。 对于许多应用程序类型和服务，可以编写 JavaScript 代码。
 
 > [!NOTE]
-> 我们汇集了整个社区的力量，将所有 Microsoft JavaScript API 参考（超过 500 页）从 docs.microsoft.com 重定向到其 MDN 对应位置，以使 [MDN Web 文档](https://developer.mozilla.org/en-US/)成为 Web 的一站式首要开发资源。 有关详细信息，请参阅此[公告](https://blogs.windows.com/msedgedev/2018/06/26/chakra-docs-mdn-web-docs/)。
+> 我们汇集了整个社区的力量，将所有 Microsoft 的 JavaScript API 参考（超过 500 页）从 docs.microsoft.com 重定向到其 MDN 对应位置，以使 [MDN Web 文档](https://developer.mozilla.org/en-US/)成为 Web 的一站式首要开发资源。 有关详细信息，请参阅此[公告](https://blogs.windows.com/msedgedev/2018/06/26/chakra-docs-mdn-web-docs/)。
 
-## 对 ECMAScript 2015 (ES6) 和更高版本的 <a name="ES6"></a> 支持
+## <a name="support-for-ecmascript-2015-es6-and-beyond"></a>对 ECMAScript 2015 (ES6) 和更高版本的 <a name="ES6"></a> 支持
 
 Visual Studio 现在支持 ECMAScript 语言更新（例如 ECMAScript 2015/2016）的语法。
 
@@ -51,14 +51,14 @@ TypeScript 的主要功能之一是可以将 ES6+ 代码转译为 ES5 或 ES3，
 
 Tsconfig 文件的必需设置如下：
 
-- `allowJs`：必须将此值设置为 `true` 才能识别 JavaScript 文件。 默认值为 `false`，因为 TypeScript 编译为 JavaScript，并且编译器不应包含刚刚编译的文件。
-- `outDir`：应将此值设置为未包含在项目中的位置，从而不会检测到已发出的 JavaScript 文件，然后将其包含在项目中（请参阅 `exclude`）。
-- `module`：如果使用模块，此设置将告知编译器发出的代码应使用哪种模块格式，例如用于节点或捆绑程序的 `commonjs`（如 Browserify）。
-- `exclude`：此设置指明不包括在项目中的文件夹。
+- `allowJs`：必须将此值设置为 `true`，才能识别 JavaScript 文件。 默认值为 `false`，因为 TypeScript 编译为 JavaScript，并且编译器不应包含刚刚编译的文件。
+- `outDir`：应将此值设置为未包含在项目中的位置，这样就不会检测已发出 JavaScript 文件并将文件添加到项目中（请参阅 `exclude`）。
+- `module`：如果使用的是模块，此设置会指示编译器已发出代码应使用哪种模块格式（例如，用于节点的 `commonjs`，或 Browserify 等捆绑程序）。
+- `exclude`：此设置指明不要在项目中添加的文件夹。
 应向此设置添加输出位置和非项目文件夹（如 `node_modules` 或 `temp`）。
-- `enableAutoDiscovery`：此设置按上面所述启用定义文件的自动检测和下载功能。
-- `compileOnSave`：此设置会告知编译器是否应该在 Visual Studio 中保存源文件时进行重新编译。
-- `typeAcquisition`：这组设置控制自动类型获取的行为（[本部分](/visualstudio/ide/javascript-intellisense#Auto)中会有进一步的说明）
+- `enableAutoDiscovery`：此设置按上面所述启用自动检测和下载定义文件。
+- `compileOnSave`：此设置指示编译器是否只要在 Visual Studio 中保存源文件时就应重新编译。
+- `typeAcquisition`：这组设置控制自动类型获取的行为（[这一部分](/visualstudio/ide/javascript-intellisense#Auto)进一步说明了这一点）
 
 为了将 JavaScript 文件转换为 CommonJS 模块并将其放置在 `./out` 文件夹中，可以使用以下 `tsconfig.json` 文件：
 
@@ -118,7 +118,7 @@ exports.default = Subscription_1.Subscription;
 
 [!include[vs_dev15](../../docs/misc/includes/vs_dev15_md.md)] 中的 JavaScript IntelliSense 现将显示有关参数和成员列表的详细信息。 此新信息由 TypeScript 语言服务提供，该服务在后台使用静态分析来更好地了解使用者的代码。 可以在[此处](/visualstudio/ide/javascript-intellisense/)阅读有关新的 IntelliSense 体验及其工作原理的详细信息。
 
-## <a name="JSX"></a>JSX 语法支持
+## <a name="jsx-syntax-support"></a><a name="JSX"></a>JSX 语法支持
 
 [!include[vs_dev15](../../docs/misc/includes/vs_dev15_md.md)] 中的 JavaScript 提供丰富的 JSX 语法支持。 JSX 是允许在 JavaScript 文件中使用 HTML 标记的语法集。
 
@@ -128,7 +128,7 @@ exports.default = Subscription_1.Subscription;
 ![JSX 语法](../javascript/media/js-react.png)
 
 > [!NOTE]
-> 若要将 JSX 语法转换为 React 调用，必须将 `"jsx": "react"` 设置添加到 `compilerOptions` 文件中的 `tsconfig.json`。
+> 若要将 JSX 语法转换为 React 调用，必须将 `"jsx": "react"` 设置添加到 `tsconfig.json` 文件中的 `compilerOptions`。
 
 在生成时在 `./out/app.js' 处创建的 JavaScript 文件包含代码：
 
@@ -253,14 +253,14 @@ XML 文档注释（有时称为 VSDoc）以前可用于修饰包含额外可强�
 以前，可以创建 [IntelliSense 扩展](https://msdn.microsoft.com/library/hh874692.aspx)，通过此扩展可以为第三方库添加自定义完成结果。
 这些扩展难以编写并且安装和引用它们也很繁琐，因此，以后的新语言服务不再支持这些文件。
 作为更简单的替代方法，可以编写 TypeScript 定义文件，来提供与旧版 `.intellisense.js` 扩展相同的 IntelliSense 优势。
-可以在`.d.ts`此处[了解有关声明 (](http://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html)) 文件创作的详细信息。
+可以在[此处](http://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html)了解有关声明 (`.d.ts`) 文件创作的详细信息。
 
 ### <a name="unsupported-patterns"></a>不支持的模式
 
 由于新语言服务由静态分析（而不是执行引擎）提供支持（请阅读[此问题](https://github.com/Microsoft/TypeScript/issues/4789)获取有关差异的信息），因此，存在几种无法再检测到的 JavaScript 模式。
 最常见的模式是“expando”模式。
 当前语言服务无法向在声明后附加属性的对象提供 IntelliSense。
-例如:
+例如：
 
 ```js
 var obj = {};

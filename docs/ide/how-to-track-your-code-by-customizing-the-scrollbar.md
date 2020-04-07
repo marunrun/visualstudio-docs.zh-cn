@@ -1,20 +1,20 @@
 ---
 title: 滚动条的地图模式和滚动条模式
-ms.date: 09/25/2018
+ms.date: 03/20/2020
 ms.topic: conceptual
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 22436c221813ec4c3701d208fc74a96b403fff9c
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: c66cda1b90d11a44f744faf0012a3e41212d33dd
+ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75591393"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "79988564"
 ---
-# <a name="how-to-customize-the-scroll-bar"></a>操作说明：自定义滚动条
+# <a name="how-to-customize-the-scroll-bar"></a>如何：自定义滚动条
 
 处理很长的代码文件时，可能很难跟踪所有代码在文件中的位置。 可自定义代码编辑器的滚动条，以了解代码的整体使用情况。
 
@@ -22,7 +22,7 @@ ms.locfileid: "75591393"
 
 可选择滚动条是否显示注释（如代码更改、断点、书签、错误和插入点位置）。
 
-   1. 依次选择“工具”  **“选项”**  >  **“文本编辑器”**  >  **“所有语言”**  >  **“滚动条”**  > ，以打开“滚动条”  选项页。
+   1. 依次选择“工具”   > “选项”   > “文本编辑器”   > “所有语言”   > “滚动条”  ，以打开“滚动条”  选项页。
 
    2. 依次选择“在垂直滚动条上方显示注释”  和所需的注释。 可选择下列注释：
 
@@ -54,7 +54,7 @@ ms.locfileid: "75591393"
 
 ### <a name="map-mode"></a>地图模式
 
-当你在地图模式  下单击滚动条上的某个位置后，光标会跳到文件中的相应位置，而不只是向上或向下滚动页面。 代码行以缩图形式显示在滚动条上。 可选择地图列的宽度，具体方法是在“源代码概述”  中设置值。 若要在将指针悬停在地图之上时放大预览代码，请选择“显示预览工具提示”  选项。 折叠区域进行了不同的阴影化处理，双击阴影即可展开此类区域。
+“地图模式”在滚动条上以缩图形式显示代码行  。 可选择地图列的宽度，具体方法是在“源代码概述”  中设置值。 若要在将指针悬停在地图之上时放大预览代码，请选择“显示预览工具提示”  选项。 折叠区域进行了不同的阴影化处理，双击阴影即可展开此类区域。
 
 > [!TIP]
 > 在地图模式下，可禁用代码缩图，具体方法是将“源代码概述”  设置为“关”  。 如果已选择“显示预览工具提示”  ，仍可在将指针悬停在滚动条之上时预览相应位置的代码，并且在你单击滚动条后光标仍会跳到文件中的相应位置。
@@ -67,6 +67,9 @@ ms.locfileid: "75591393"
 
 ![显示工具提示的 Visual Studio 滚动条](../ide/media/enhancedscrollbarsearchtooltip.png)
 
-## <a name="see-also"></a>另请参阅
+> [!TIP]
+> 要更改地图模式中显示的颜色，请选择“工具” > “选项” > “环境” > “字体和颜色”     。 接下来，在“显示项”中，选择前面带有“概述”的所有项，进行所需的颜色更改，然后选择“确定”   。
+
+## <a name="see-also"></a>请参阅
 
 - [代码编辑器功能](../ide/writing-code-in-the-code-and-text-editor.md)

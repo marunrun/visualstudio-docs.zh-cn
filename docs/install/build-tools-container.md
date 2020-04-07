@@ -2,7 +2,7 @@
 title: 将 Visual Studio 生成工具安装到容器
 titleSuffix: ''
 description: 了解如何将 Visual Studio 生成工具安装到 Windows 容器，以支持持续集成和持续交付 (CI/CD) 工作流。
-ms.date: 07/03/2019
+ms.date: 03/25/2020
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: d5c038e2-e70d-411e-950c-8a54917b578a
@@ -13,12 +13,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 53049d37f23a72adb337cdad629f4c689c83707e
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 61ec972bd5e361c4417e49092de5976000a6da5f
+ms.sourcegitcommit: dfa9476b69851c28b684ece66980bee735fef8fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "76114608"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80273889"
 ---
 # <a name="install-build-tools-into-a-container"></a>将生成工具安装到容器
 
@@ -71,22 +71,24 @@ ms.locfileid: "76114608"
    # Download the Build Tools bootstrapper.
    ADD https://aka.ms/vs/15/release/vs_buildtools.exe C:\TEMP\vs_buildtools.exe
 
-   # Install Build Tools excluding workloads and components with known issues.
+   # Install Build Tools with the Microsoft.VisualStudio.Workload.AzureBuildTools workload, excluding workloads and components with known issues.
    RUN C:\TEMP\vs_buildtools.exe --quiet --wait --norestart --nocache `
        --installPath C:\BuildTools `
-       --all `
+       --add Microsoft.VisualStudio.Workload.AzureBuildTools `
        --remove Microsoft.VisualStudio.Component.Windows10SDK.10240 `
        --remove Microsoft.VisualStudio.Component.Windows10SDK.10586 `
        --remove Microsoft.VisualStudio.Component.Windows10SDK.14393 `
        --remove Microsoft.VisualStudio.Component.Windows81SDK `
     || IF "%ERRORLEVEL%"=="3010" EXIT 0
 
-   # Start developer command prompt with any other commands specified.
-   ENTRYPOINT C:\BuildTools\Common7\Tools\VsDevCmd.bat &&
-
-   # Default to PowerShell if no other command specified.
-   CMD ["powershell.exe", "-NoLogo", "-ExecutionPolicy", "Bypass"]
+   # Define the entry point for the Docker container.
+   # This entry point starts the developer command prompt and launches the PowerShell shell.
+   ENTRYPOINT ["C:\\BuildTools\\Common7\\Tools\\VsDevCmd.bat", "&&", "powershell.exe", "-NoLogo", "-ExecutionPolicy", "Bypass"]
    ```
+
+   > [!TIP]
+   > 有关工作负载和组件的列表，请参阅 [Visual Studio 生成工具组件目录](workload-component-id-vs-build-tools.md)。
+   >
 
    > [!WARNING]
    > 如果映像直接基于 microsoft/windowsservercore 或 mcr.microsoft.com/windows/servercore（请参阅 [Microsoft 将联合容器目录](https://azure.microsoft.com/blog/microsoft-syndicates-container-catalog/)），可能无法正确安装 .NET Framework，且不会指示任何安装错误。 安装完成后，可能无法运行托管代码。 相反，可使映像以 [microsoft/dotnet-framework:4.7.2](https://hub.docker.com/r/microsoft/dotnet-framework) 或更高版本为基础。 另请注意，标记为 4.7.2 或更高版本的映像可能使用 PowerShell 作为默认 `SHELL`，这将导致 `RUN` 和 `ENTRYPOINT` 指令失败。
@@ -94,7 +96,7 @@ ms.locfileid: "76114608"
    > Visual Studio 2017 版本 15.8 或更高版本（任何产品）无法在 mcr.microsoft.com/windows/servercore:1809 或更高版本上正常安装。 不显示任何错误信息。
    >
    > 请参阅 [Windows 容器版本兼容性](/virtualization/windowscontainers/deploy-containers/version-compatibility)，以了解哪些主机操作系统版本支持哪些容器操作系统版本，并请参阅[容器的已知问题](build-tools-container-issues.md)了解已知问题。
-
+   
    ::: moniker-end
 
    ::: moniker range="vs-2019"
@@ -111,22 +113,24 @@ ms.locfileid: "76114608"
    # Download the Build Tools bootstrapper.
    ADD https://aka.ms/vs/16/release/vs_buildtools.exe C:\TEMP\vs_buildtools.exe
 
-   # Install Build Tools excluding workloads and components with known issues.
+   # Install Build Tools with the Microsoft.VisualStudio.Workload.AzureBuildTools workload, excluding workloads and components with known issues.
    RUN C:\TEMP\vs_buildtools.exe --quiet --wait --norestart --nocache `
        --installPath C:\BuildTools `
-       --all `
+       --add Microsoft.VisualStudio.Workload.AzureBuildTools `
        --remove Microsoft.VisualStudio.Component.Windows10SDK.10240 `
        --remove Microsoft.VisualStudio.Component.Windows10SDK.10586 `
        --remove Microsoft.VisualStudio.Component.Windows10SDK.14393 `
        --remove Microsoft.VisualStudio.Component.Windows81SDK `
     || IF "%ERRORLEVEL%"=="3010" EXIT 0
 
-   # Start developer command prompt with any other commands specified.
-   ENTRYPOINT C:\BuildTools\Common7\Tools\VsDevCmd.bat &&
-
-   # Default to PowerShell if no other command specified.
-   CMD ["powershell.exe", "-NoLogo", "-ExecutionPolicy", "Bypass"]
+   # Define the entry point for the docker container.
+   # This entry point starts the developer command prompt and launches the PowerShell shell.
+   ENTRYPOINT ["C:\\BuildTools\\Common7\\Tools\\VsDevCmd.bat", "&&", "powershell.exe", "-NoLogo", "-ExecutionPolicy", "Bypass"]
    ```
+
+   > [!TIP]
+   > 有关工作负载和组件的列表，请参阅 [Visual Studio 生成工具组件目录](workload-component-id-vs-build-tools.md)。
+   >
 
    > [!WARNING]
    > 如果映像直接基于 microsoft/windowsservercore，可能无法正确安装 .NET Framework，且不会指示任何安装错误。 安装完成后，可能无法运行托管代码。 相反，可使映像以 [microsoft/dotnet-framework:4.8](https://hub.docker.com/r/microsoft/dotnet-framework) 或更高版本为基础。 另请注意，标记为 4.8 或更高版本的映像可能使用 PowerShell 作为默认 `SHELL`，这将导致 `RUN` 和 `ENTRYPOINT` 指令失败。
@@ -190,9 +194,18 @@ ms.locfileid: "76114608"
 
 若要将此映像用于 CI/CD 工作流，可以将它发布到自己的 [Azure 容器注册表](https://azure.microsoft.com/services/container-registry)或其他内部 [Docker 注册表](https://docs.docker.com/registry/deploying)，这样服务器只需拉取它即可。
 
+   > [!NOTE]
+   > 如果 Docker 容器无法启动，则可能出现了 Visual Studio 安装问题。 可以更新 Dockerfile 以删除调用 Visual Studio 批处理命令的步骤。 这样，可以启动 Docker 容器并读取安装错误日志。
+   >
+   > 在 Dockerfile 文件中，删除 `ENTRYPOINT` 命令中的 `C:\\BuildTools\\Common7\\Tools\\VsDevCmd.bat` 和 `&&` 参数。 现在，该命令应为 `ENTRYPOINT ["powershell.exe", "-NoLogo", "-ExecutionPolicy", "Bypass"]`。 接下来，重新生成 Dockerfile 并执行 `run` 命令以访问容器文件。 要找到安装错误日志，请转到 `$env:TEMP` 目录并找到 `dd_setup_<timestamp>_errors.log` 文件。
+   >
+   > 确定安装问题并进行修复后，可以将 `C:\\BuildTools\\Common7\\Tools\\VsDevCmd.bat` 和 `&&` 参数添加回 `ENTRYPOINT` 命令并重新生成 Dockerfile。
+   >
+   > 有关详细信息，请参阅[容器的已知问题](build-tools-container-issues.md)。
+
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 * [容器的高级示例](advanced-build-tools-container.md)
 * [容器的已知问题](build-tools-container-issues.md)

@@ -1,6 +1,6 @@
 ---
 title: Visual Studio 2019 中的 JavaScript 和 TypeScript
-ms.date: 03/27/2019
+ms.date: 03/16/2020
 ms.technology: vs-javascript
 ms.topic: conceptual
 dev_langs:
@@ -11,12 +11,12 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 monikerRange: '>= vs-2019'
-ms.openlocfilehash: 3412e1d27a365a6c6302c56ada865f33a436b639
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: df4630182e89dad08360794057bda856ff4d677b
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "72888624"
+ms.lasthandoff: 03/20/2020
+ms.locfileid: "79549951"
 ---
 # <a name="javascript-and-typescript-in-visual-studio-2019"></a>Visual Studio 2019 中的 JavaScript 和 TypeScript
 
@@ -35,10 +35,38 @@ Visual Studio 2019 中的 JavaScript 体验由提供 TypeScript 支持的相同�
 Visual Studio 2019 提供了若干选项，用于将 TypeScript 编译集成到项目中：
 
 * [TypeScript NuGet 包](https://www.nuget.org/packages/Microsoft.TypeScript.MSBuild)。 当 TypeScript 3.2 或更高版本的 NuGet 包安装到项目中时，将在编辑器中加载相应版本的 TypeScript 语言服务。
-* TypeScript SDK（在 Visual Studio 安装程序中默认提供），以及 [VS Marketplace](https://marketplace.visualstudio.com/items?itemName=TypeScriptTeam.typescript-331-vs2017) 中提供的独立 SDK 下载。
 * [TypeScript npm 包](https://www.npmjs.com/package/typescript)。 当 TypeScript 2.1 或更高版本的 npm 包安装到项目中时，将在编辑器中加载相应版本的 TypeScript 语言服务。
+* TypeScript SDK（在 Visual Studio 安装程序中默认提供），以及 [VS Marketplace](https://marketplace.visualstudio.com/items?itemName=TypeScriptTeam.typescript-331-vs2017) 中提供的独立 SDK 下载。
 
 对于在 Visual Studio 2019 中开发的项目，我们建议使用 TypeScript NuGet 和 npm 包，以实现跨不同平台和环境的更高可移植性。
+
+NuGet 包的一个常见用法是使用 .NET Core CLI 编译 TypeScript。 除非手动编辑项目文件以从 TypeScript SDK 安装导入生成目标，否则 NuGet 包是使用 .NET Core CLI 命令（如 `dotnet build` 和 `dotnet publish`）启用 TypeScript 编译的唯一方法。
+
+## <a name="remove-default-imports-aspnet-core-projects"></a>删除默认导入（ASP.NET Core 项目）
+
+在使用[非 SDK 样式格式](https://docs.microsoft.com/nuget/resources/check-project-format)的旧项目中，可能需要删除某些项目文件元素。
+
+如果使用 NuGet 包为项目提供 MSBuild 支持，则项目文件不得导入 `Microsoft.TypeScript.Default.props` 或 `Microsoft.TypeScript.targets`。 这些文件是通过 NuGet 包导入的，因此单独添加它们可能会导致意外的行为。
+
+1. 右键单击项目，然后选择“卸载项目”  。
+
+1. 右键单击项目，然后选择“编辑\<项目文件名\>”  。
+
+   随即打开项目文件。
+
+1. 删除对 `Microsoft.TypeScript.Default.props` 和 `Microsoft.TypeScript.targets` 的引用。
+
+   要删除的导入如下所示：
+
+   ```xml
+   <Import
+      Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props"
+      Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+
+   <Import
+      Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets"
+      Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+   ```
 
 ## <a name="projects"></a>项目
 

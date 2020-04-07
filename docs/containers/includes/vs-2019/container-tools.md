@@ -7,12 +7,12 @@ ms.date: 02/01/2019
 ms.prod: visual-studio-dev16
 ms.technology: vs-azure
 ms.topic: include
-ms.openlocfilehash: 3869cf025b4ed0e744a7fea929aac38acb7dd816
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: bd9ac1bda9cb5f5d9cc5d84248200434426307c8
+ms.sourcegitcommit: ce3d0728ec1063ab548dac71c8eaf26d20450acc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "76922990"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80501931"
 ---
 使用 Visual Studio，可以轻松地生成、调试和运行容器化的 .NET、ASP.NET 和 ASP.NET Core 应用并将其发布到 Azure 容器注册表 (ACR)、Docker Hub、Azure 应用服务或你自己的容器注册表。 本文介绍如何将 ASP.NET Core 应用发布到 ACR。
 
@@ -74,6 +74,9 @@ ENTRYPOINT ["dotnet", "HelloDockerTools.dll"]
 在工具栏的调试下拉列表中选择“Docker”  ，然后开始调试应用。 你可能会看到提示信任证书的消息；选择信任证书以继续。
 
 “输出”  窗口中的“容器工具”  选项显示正在进行的操作。 第一次时，可能需要一些时间来下载基本映像，但在后续运行时速度要快得多。
+
+>[!NOTE]
+> 如果需要更改用于调试的端口，可以在 launchSettings.json 文件中执行此操作  。 请参阅[容器启动设置](../../container-launch-settings.md)。
 
 ## <a name="containers-window"></a>容器窗口
 

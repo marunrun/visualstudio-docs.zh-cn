@@ -1,7 +1,7 @@
 ---
 title: 更改日志（Visual Studio Tools for Unity、Windows）| Microsoft Docs
 ms.custom: ''
-ms.date: 12/02/2019
+ms.date: 3/23/2019
 ms.technology: vs-unity-tools
 ms.topic: conceptual
 ms.assetid: ea490b7e-fc0d-44b1-858a-a725ce20e396
@@ -10,16 +10,66 @@ ms.author: johmil
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: 0e1810f452f48c95e0c4e8117820be3598b0f139
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 0b1d735cd05f79eaabd00a575a6c050b37ce2d16
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74706788"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80232825"
 ---
 # <a name="change-log-visual-studio-tools-for-unity-windows"></a>更改日志（Visual Studio Tools for Unity、Windows）
 
 Visual Studio Tools for Unity 更改日志。
+
+## <a name="4510"></a>4.5.1.0
+
+发布日期：2020 年 3 月 16 日
+
+### <a name="new-features"></a>新增功能
+
+- **集成：**
+
+  - 添加了针对 [`IDE0051`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/USP0008.md) 的抑制器。 与 Invoke、InvokeRepeating、StartCoroutine 或 StopCoroutine 一起使用的专用方法不应标记为未使用。
+
+### <a name="bug-fixes"></a>Bug 修复
+
+- **集成：**
+
+  - 修复了 OnDrawGizmos/OnDrawGizmosSelected 文档
+
+- **评估版：**
+
+  - 修复了 Lambda 参数检查。
+
+## <a name="4501"></a>4.5.0.1
+
+发布日期：2020 年 2 月 19 日
+
+### <a name="bug-fixes"></a>Bug 修复
+
+- **集成：**
+
+  - 修复了针对错误的消息签名的 [`UNT0006`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/UNT0006.md) 诊断检查。 当检查具有多个继承级别的类型时，此诊断可能会失败，并显示以下消息：`warning AD0001: Analyzer 'Microsoft.Unity.Analyzers.MessageSignatureAnalyzer' threw an exception of type 'System.ArgumentException' with message 'An item with the same key has already been added`。
+
+## <a name="4500"></a>4.5.0.0
+
+发布日期：2020 年 1 月 22 日
+
+### <a name="new-features"></a>新增功能
+
+- **集成：**
+
+  - 添加了对 HLS 文件的支持。
+  
+  - 添加了针对 [`IDE0051`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/USP0006.md) 的抑制器。 具有 `SerializeField` 属性的专用字段不应标记为未使用。
+  
+  - 添加了针对 [`CS0649`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/USP0007.md) 的抑制器。 具有 `SerializeField` 属性的字段不应标记为未分配。  
+
+### <a name="bug-fixes"></a>Bug 修复
+
+- **集成：**
+
+  - 修复了项目生成问题（无法始终正确找到 `GenerateTargetFrameworkMonikerAttribute` 目标）
 
 ## <a name="4420"></a>4.4.2.0
 
@@ -49,7 +99,7 @@ Visual Studio Tools for Unity 更改日志。
 
 - **集成：**
 
-  - 使用高级二进制和 invocation 表达式修复了标签比较分析器 `UNT0002`。
+  - 使用高级二进制和 invocation 表达式修复了标签比较分析器 [`UNT0002`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/UNT0002.md)。
 
 ### <a name="deprecated-features"></a>弃用的功能
 
@@ -65,7 +115,7 @@ Visual Studio Tools for Unity 更改日志。
 
 - **集成：**
 
-  - 为所有 Unity 消息的 `IDE0060`（未使用的参数）添加了抑制器。
+  - 为所有 Unity 消息的 [`IDE0060`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/USP0005.md)（未使用的参数）添加了抑制器。
   
   - 为标有 `TooltipAttribute` 的字段添加了快速工具提示。 （这也适用于使用此字段的简单 get 访问器）。
 
@@ -88,21 +138,21 @@ Visual Studio Tools for Unity 更改日志。
 - **集成：**
 
   - 通过添加特定于 Unity 的新诊断，深化了 Visual Studio 对 Unity 项目的理解。 还通过取消不适用于 Unity 项目的一般 C# 诊断，使 IDE 更智能。 例如，IDE 不会显示将检查器变量更改为 `readonly` 的快速修复，因此这会阻止你修改 Unity 编辑器中的变量。
-    - `UNT0001`：即使 Unity 消息为空，运行时也会调用它们，请勿声明它们，以避免 Unity 运行时进行不必要的处理。
-    - `UNT0002`：使用字符串相等比较标记的速度比内置的 CompareTag 方法慢。
-    - `UNT0003`：为了获得类型安全性，最好使用 GetComponent 的通用形式。
-    - `UNT0004`：更新消息依赖于帧速率，应使用 Time.deltaTime 而不是 Time.fixedDeltaTime。
-    - `UNT0005`：固定更新消息与帧速率无关，应使用 Time.fixedDeltaTime 而不是 Time.deltaTime。
-    - `UNT0006`：检测到此 Unity 消息的方法签名不正确。
-    - `UNT0007`：Unity 重写与 null 合并不兼容的 Unity 对象的 null 比较运算符。
-    - `UNT0008`：Unity 重写与 null 传播不兼容的 Unity 对象的 null 比较运算符。
-    - `UNT0009`：将 InitializeOnLoad 特性应用于类时，需要提供静态构造函数。 InitializeOnLoad 特性可确保在编辑器启动时调用该函数。
-    - `UNT0010`：应只使用 AddComponent() 创建 MonoBehaviours。 MonoBehaviour 是一个组件，需要附加到 GameObject。
-    - `UNT0011`：应只使用 CreateInstance() 创建 ScriptableObject。 ScriptableObject 需要由 Unity 引擎创建，才能处理 Unity 消息方法。
-    - `USP0001` 对于 `IDE0029`：Unity 对象不应使用 Null 合并。
-    - `USP0002` 对于 `IDE0031`：Unity 对象不应使用 Null 传播。
-    - `USP0003` 对于 `IDE0051`：Unity 消息由 Unity 运行时调用。
-    - `USP0004` 对于 `IDE0044`：不应将具有 SerializeField 特性的字段设为只读。
+    - [`UNT0001`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/UNT0001.md)：即使 Unity 消息为空，运行时也会调用它们，请勿声明它们，以避免 Unity 运行时进行不必要的处理。
+    - [`UNT0002`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/UNT0002.md)：使用字符串相等比较标记的速度比内置的 CompareTag 方法慢。
+    - [`UNT0003`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/UNT0003.md)：为了获得类型安全性，最好使用 GetComponent 的通用形式。
+    - [`UNT0004`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/UNT0004.md)：更新消息依赖于帧速率，应使用 Time.deltaTime 而不是 Time.fixedDeltaTime。
+    - [`UNT0005`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/UNT0005.md)：固定更新消息与帧速率无关，应使用 Time.fixedDeltaTime 而不是 Time.deltaTime。
+    - [`UNT0006`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/UNT0006.md)：检测到此 Unity 消息的方法签名不正确。
+    - [`UNT0007`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/UNT0007.md)：Unity 重写与 null 合并不兼容的 Unity 对象的 null 比较运算符。
+    - [`UNT0008`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/UNT0008.md)：Unity 重写与 null 传播不兼容的 Unity 对象的 null 比较运算符。
+    - [`UNT0009`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/UNT0009.md)：将 InitializeOnLoad 特性应用于类时，需要提供静态构造函数。 InitializeOnLoad 特性可确保在编辑器启动时调用该函数。
+    - [`UNT0010`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/UNT0010.md)：应只使用 AddComponent() 创建 MonoBehaviours。 MonoBehaviour 是一个组件，需要附加到 GameObject。
+    - [`UNT0011`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/UNT0011.md)：应只使用 CreateInstance() 创建 ScriptableObject。 ScriptableObject 需要由 Unity 引擎创建，才能处理 Unity 消息方法。
+    - 针对 `IDE0029` 的 [`USP0001`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/USP0001.md)：Unity 对象不应使用 Null 合并。
+    - 针对 `IDE0031` 的 [`USP0002`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/USP0002.md)：Unity 对象不应使用 Null 传播。
+    - 针对 `IDE0051` 的 [`USP0003`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/USP0003.md)：Unity 消息由 Unity 运行时调用。
+    - 针对 `IDE0044` 的 [`USP0004`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/USP0004.md)：不应将具有 SerializeField 特性的字段设为只读。
 
 ## <a name="4310"></a>4.3.1.0
 

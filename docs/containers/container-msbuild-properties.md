@@ -6,12 +6,12 @@ ms.author: ghogen
 ms.date: 06/06/2019
 ms.technology: vs-azure
 ms.topic: conceptual
-ms.openlocfilehash: 987d358abcccadf36d15593722ff55ba4b879d03
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 3caa8a76f461515c0d2265590383861b6e10d0a1
+ms.sourcegitcommit: ce3d0728ec1063ab548dac71c8eaf26d20450acc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "71950690"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80472663"
 ---
 # <a name="container-tools-build-properties"></a>容器工具生成属性
 
@@ -41,7 +41,7 @@ ms.locfileid: "71950690"
 | DockerImageLabels | 应用于 Docker 映像的默认标签集。 | com.microsoft.created-by=visual-studio;com.microsoft.visual-studio.project-name=$(MSBuildProjectName) |1.5.4 或更高版本|
 | DockerFastModeProjectMountDirectory|在“快速模式”中，此属性控制将项目输出目录批量安装到运行容器的位置  。|C:\app (Windows) 或 /app (Linux)|1.9.2 或更高版本|
 | DockerfileBuildArguments | 传递给 Docker 生成命令的其他参数。 | 不适用。 |1.0.1872750 或更高版本|
-| DockerfileContext | 生成 Docker 映像时使用的默认上下文。 | 由 Visual Studio 设置。 |1.0.1872750 或更高版本|
+| DockerfileContext | 生成 Docker 映像时使用的默认上下文，作为相对于 Dockerfile 的路径。 | 由 Visual Studio 设置。 |1.0.1872750 或更高版本|
 | DockerfileFastModeStage | 在调试模式下生成图像时要使用的 Dockerfile 阶段（即目标）。 | 在 Dockerfile 中找到的第一阶段（基本） |
 | DockerfileFile | 描述用于生成/运行项目容器的默认 Dockerfile。 此属性也可以是路径。 | Dockerfile |1.0.1872750 或更高版本|
 | DockerfileRunArguments | 传递给 Docker 运行命令的其他参数。 | 不适用。 |1.0.1872750 或更高版本|

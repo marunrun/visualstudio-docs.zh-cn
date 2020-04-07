@@ -1,6 +1,6 @@
 ---
 title: 演练：创建代码片段
-ms.date: 06/10/2019
+ms.date: 03/31/2020
 ms.topic: conceptual
 helpviewer_keywords:
 - code snippets, creating
@@ -17,16 +17,16 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: adb0415e926bba9a1809c77f0f35b43d78263f43
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 1bfadb4b8d1836d131b669ea43f28f522f3fbd8b
+ms.sourcegitcommit: ce3d0728ec1063ab548dac71c8eaf26d20450acc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75597290"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80472810"
 ---
 # <a name="walkthrough-create-a-code-snippet"></a>演练：创建代码片段
 
-只需几步操作即可创建代码片段。 你需要做的就是创建一个 XML 文件，填写适当的元素，并向其中添加代码。 可以选择使用替换参数和项目引用。 在“代码片段管理器”（“工具” **“代码片段管理器”）中使用“导入”按钮向 Visual Studio 的安装导入代码片段**    >   。
+只需几步操作即可创建代码片段。 你需要做的就是创建一个 XML 文件，填写适当的元素，并向其中添加代码。 可以选择使用替换参数和项目引用。 在“代码片段管理器”（“工具” > “代码片段管理器”）中使用“导入”按钮向 Visual Studio 的安装导入代码片段     。
 
 ## <a name="snippet-template"></a>代码片段模板
 
@@ -54,10 +54,10 @@ ms.locfileid: "75597290"
 
 2. 在 Title 元素中填写代码片段的标题  。 使用标题 Square Root  。
 
-3. 在 Code  元素的“语言”  属性中填写代码片段的语言。 对于 C#，使用 CSharp，对于 Visual Basic，使用 VB   。
+3. 在 Code  元素的“语言”  属性中填写代码片段的语言。 对于 C#，使用 CSharp；对于 Visual Basic，使用 VB；对于 C++，使用 CPP    。
 
    > [!TIP]
-   > 要查看所有可用语言值，请浏览[代码片段架构引用](code-snippets-schema-reference.md#attributes)页上的[代码元素属性部分](code-snippets-schema-reference.md)。
+   > 要查看所有可用语言值，请浏览[代码片段架构引用](code-snippets-schema-reference.md)页上的[代码元素属性部分](code-snippets-schema-reference.md#attributes)。
 
 4. 在 Code 元素中的 CDATA 部分内添加代码片段   。
 
@@ -84,7 +84,7 @@ ms.locfileid: "75597290"
 
 ## <a name="import-a-code-snippet"></a>导入代码片段
 
-1. 可以使用“代码片段管理器”将代码片段导入到 Visual Studio 安装  。 通过选择“工具” **“代码片段管理器”打开它** >   。
+1. 可以使用“代码片段管理器”将代码片段导入到 Visual Studio 安装  。 通过选择“工具” > “代码片段管理器”打开它   。
 
 2. 单击“导入”按钮  。
 
@@ -108,7 +108,7 @@ ms.locfileid: "75597290"
 
    ::: moniker-end
 
-6. 通过打开 C# 或 Visual Basic 项目来测试代码片段。 在编辑器中打开一个代码文件之后，依次选择右键单击菜单中的“代码片段” **“插入代码片段”，再选择“我的代码片段”**  >    。 应看到一个名为 Square Root 的代码片段  。 双击该选项。
+6. 通过打开 C# 或 Visual Basic 项目来测试代码片段。 在编辑器中打开一个代码文件之后，依次选择右键单击菜单中的“代码片段” > “插入代码片段”，再选择“我的代码片段”    。 应看到一个名为 Square Root 的代码片段  。 双击该选项。
 
    该代码片段代码已插入代码文件中。
 
@@ -116,13 +116,13 @@ ms.locfileid: "75597290"
 
 ::: moniker range="vs-2017"
 
-1. 在“代码片段管理器”中查看“说明”字段时，可以获得有关代码片段的详细信息。 快捷方式是用户为插入代码片段而键入的标记。 通过打开文件 %USERPROFILE%\Documents\Visual Studio 2017\Code Snippets *[Visual C# 或 Visual Basic]\My Code Snippet\SquareRoot.snippet，编辑已添加的代码片段\\* 。
+1. 在“代码片段管理器”中查看“说明”字段时，可以获得有关代码片段的详细信息。 快捷方式是用户为插入代码片段而键入的标记。 通过打开文件 %USERPROFILE%\Documents\Visual Studio 2017\Code Snippets\\[Visual C# 或 Visual Basic]\My Code Snippet\SquareRoot.snippet，编辑已添加的代码片段  。
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-1. 在“代码片段管理器”中查看“说明”字段时，可以获得有关代码片段的详细信息。 快捷方式是用户为插入代码片段而键入的标记。 通过打开文件 %USERPROFILE%\Documents\Visual Studio 2019\Code Snippets *[Visual C# 或 Visual Basic]\My Code Snippet\SquareRoot.snippet，编辑已添加的代码片段\\* 。
+1. 在“代码片段管理器”中查看“说明”字段时，可以获得有关代码片段的详细信息。 快捷方式是用户为插入代码片段而键入的标记。 通过打开文件 %USERPROFILE%\Documents\Visual Studio 2019\Code Snippets\\[Visual C# 或 Visual Basic]\My Code Snippet\SquareRoot.snippet，编辑已添加的代码片段  。
 
 ::: moniker-end
 
@@ -202,7 +202,7 @@ ms.locfileid: "75597290"
 
 ## <a name="import-a-namespace"></a>导入命名空间
 
-可通过包含 `using`Imports 元素`Imports`，使用代码片段添加 [ 指令 (C#) 或 ](code-snippets-schema-reference.md#imports-element) 语句 (Visual Basic)。 对于 .NET Framework 项目，还可以通过使用 [References 元素](code-snippets-schema-reference.md#references-element)将引用添加到项目。
+可通过包含 [Imports 元素](code-snippets-schema-reference.md#imports-element)，使用代码片段添加 `using` 指令 (C#) 或 `Imports` 语句 (Visual Basic)。 对于 .NET Framework 项目，还可以通过使用 [References 元素](code-snippets-schema-reference.md#references-element)将引用添加到项目。
 
 以下 XML 显示在 System.IO 命名空间中使用 `File.Exists` 方法的代码片段，因此可定义 Imports 元素，以导入 System.IO 命名空间  。
 
@@ -228,6 +228,6 @@ ms.locfileid: "75597290"
 </CodeSnippets>
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [代码片段架构参考](../ide/code-snippets-schema-reference.md)

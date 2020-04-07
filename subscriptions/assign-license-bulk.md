@@ -7,12 +7,12 @@ ms.assetid: c2853359-18fd-4be4-97a6-02230c862f92
 ms.date: 03/02/2020
 ms.topic: conceptual
 description: 了解管理员如何使用批量添加功能或 Microsoft Azure Active Directory 组将许可证分配给多个订阅者
-ms.openlocfilehash: 3a4a6c400a17d52cdd67391a45ba088cdbb7af01
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: 5a1327e497a48b6173afd4a7ad095dfcabacd098
+ms.sourcegitcommit: dfa9476b69851c28b684ece66980bee735fef8fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "79988487"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80274058"
 ---
 # <a name="assign-subscriptions-to-multiple-users"></a>将订阅分配给多个用户
 你可以在订阅管理门户中一次添加一个多个用户，也可以采用大用户组形式添加。  要添加各个用户，请参阅[添加单个用户](assign-license.md)。
@@ -20,18 +20,18 @@ ms.locfileid: "79988487"
 若要添加大批量用户，可以使用批量添加功能，或者，如果你的组织使用的是 Microsoft Azure Active Directory (Azure AD)，则可以使用 Azure AD 组。 本文将介绍这两种方法的具体过程。 
 
 ## <a name="use-bulk-add-to-assign-subscriptions"></a>使用批量添加功能分配订阅
-1. 登录 Visual Studio 订阅管理门户，网址： https://manage.visualstudio.com。
+1. 登录 Visual Studio 订阅管理门户，网址： https://manage.visualstudio.com 。
 
-2. 若要一次添加多个订阅者，请导航到“管理订阅者”选项卡。选择“添加”选项卡，然后选择下拉列表中的“批量添加”。  
+2. 若要一次添加多个订阅者，请导航到“管理订阅者”选项卡  。选择“添加”  选项卡，然后选择下拉列表中的“批量添加”  。  
 
-2. 批量添加功能会使用 Microsoft Excel 模板上传订阅者信息。 在“上传多个订阅者”对话框中，单击“下载”下载模板。
+2. 批量添加功能会使用 Microsoft Excel 模板上传订阅者信息。 在“上传多个订阅者”对话框中，单击“下载”下载模板  。
    > [!div class="mx-imgBorder"]
    > ![下载 Excel 模板以上传多个订阅者](media/download-template-upload-subscribers.png)
    >
    > [!NOTE]
    > 请务必下载本模板的最新版本。 如果使用旧版本，批量上传可能会失败。
 
-3. 在 Excel 电子表格的字段中，填写想要为其分配订阅的个人的信息。 （“引用”是可选字段。）完成后将文件保存在本地。
+3. 在 Excel 电子表格的字段中，填写想要为其分配订阅的个人的信息。 （“引用”是可选字段。  ）完成后将文件保存在本地。
 
    为顺利地完成上传，请查看以下最佳做法：
 
@@ -39,13 +39,13 @@ ms.locfileid: "79988487"
     - 删除表单域前后的空格。
     - 确保用户名在名字和姓氏两部分之间不含额外空格（例如，用户姓名为两部分的“Maggie May”，则应输成“MaggieMay”，因为系统不会删减额外空格）。
     - 确保填写所有必填字段。 
-    - 检查“错误消息”列。  如果列出了任何错误，请先修复这些错误，然后再尝试上传文件。 
+    - 检查“错误消息”列  。  如果列出了任何错误，请先修复这些错误，然后再尝试上传文件。 
 
-4. 返回到 Visual Studio 订阅管理门户。 在“上传多个订阅者”对话框中，单击“浏览”。
+4. 返回到 Visual Studio 订阅管理门户。 在“上传多个订阅者”对话框中，单击“浏览”   。
    > [!div class="mx-imgBorder"]
    > ![浏览到之前保存的模板以上传多个订阅者](media/bulk-add-browse-saved-template.png)
 
-5. 导航到之前保存的 Excel 文件，然后单击“确定”。
+5. 导航到之前保存的 Excel 文件，然后单击“确定”  。
    > [!div class="mx-imgBorder"]
    > ![上传 Excel 模板以上传多个订阅者](media/bulk-upload-subscribers.png)
 
@@ -57,10 +57,10 @@ ms.locfileid: "79988487"
 
    如果失败，请按照以下步骤操作：
    1. 打开你创建的 Excel 文件、更正问题，然后保存文件。
-   0. 返回到管理门户，再选择“添加”。
-   0. 选择“批量添加”。
-   0. 由于你已保存 Excel 文件，因此无需下载模板。  单击“浏览”，找到刚才保存的文件，然后单击“打开”。
-   0. 单击 **“确定”**。
+   0. 返回到管理门户，再选择“添加”  。
+   0. 选择“批量添加”  。
+   0. 由于你已保存 Excel 文件，因此无需下载模板。  单击“浏览”，找到刚才保存的文件，然后单击“打开”   。
+   0. 单击 **“确定”** 。
 
 
     上传成功后，系统会显示订阅者列表和一条确认消息。
@@ -85,9 +85,9 @@ ms.locfileid: "79988487"
 
 1. 登录 Visual Studio 订阅管理门户，网址：[https://manage.visualstudio.com](https://manage.visualstudio.com)。
 
-2. 若要一次添加多个订阅者，请导航到“管理订阅者”选项卡。
+2. 若要一次添加多个订阅者，请导航到“管理订阅者”选项卡  。
 
-3. 选择“添加”选项卡，然后选择下拉列表中的“Azure Active Directory 组”。  
+3. 选择“添加”  选项卡，然后选择下拉列表中的“Azure Active Directory 组”  。  
 
    > [!div class="mx-imgBorder"]
    > ![使用 Azure AD 选择批量添加](_img/assign-license-bulk/bulk-add-aad.png)
@@ -99,11 +99,15 @@ ms.locfileid: "79988487"
    > [!div class="mx-imgBorder"]
    > ![使用 Azure AD 选择批量添加](_img/assign-license-bulk/bulk-add-aad-details.png)
 
-6. 单击“添加”，然后单击“确认”。 
+6. 单击“添加”  ，然后单击“确认”  。 
 
 7. 若要查看添加的组，请滚动到用户列表的底部。  
 
-8. 选择“查看订阅者”以显示组的成员。 可以查看有关组中订阅者的详细信息，但不能对订阅者或对分配给他们的订阅进行任何编辑。    
+8. 选择“查看订阅者”  以显示组的成员。 可以查看有关组中订阅者的详细信息，但不能对订阅者或对分配给他们的订阅进行任何编辑。    
+
+> [!NOTE]
+> 如果已单独为用户（这些用户随后将作为 Azure AD 组的一部分进行添加）分配了订阅，则这些用户将添加到组中，并且不再单独列出。 但是，如果单个订阅对应于不同的订阅级别，则他们将拥有两个订阅。  示例：如果用户有一个单独的 Visual Studio Professional 订阅，并且他们是组的成员，该组已分配有 Visual Studio Enterprise 订阅，则他们将同时拥有这两个订阅。  
+
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4rvvW]
 

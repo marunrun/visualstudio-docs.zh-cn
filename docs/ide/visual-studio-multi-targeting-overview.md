@@ -1,6 +1,6 @@
 ---
 title: .NET 目标框架
-ms.date: 02/06/2018
+ms.date: 03/31/2020
 ms.topic: conceptual
 helpviewer_keywords:
 - targeting .NET Framework [Visual Studio]
@@ -11,20 +11,18 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: ec81b38ab68c327f25c9f94b6329a700e2662383
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 48d770f5d88e19c749c1a1e657c369089d4c7afb
+ms.sourcegitcommit: ce3d0728ec1063ab548dac71c8eaf26d20450acc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79307327"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80472731"
 ---
 # <a name="framework-targeting-overview"></a>框架定位概述
 
 在 Visual Studio 中，可以指定希望项目面向的 .NET 版本。 框架定位有助于确保应用程序仅使用指定框架版本中可用的功能。 对于在另一台计算机上运行的 .NET Framework 应用，应用程序面向的 Framework 版本必须与计算机上安装的 Framework 版本兼容。
 
-Visual Studio 解决方案可以包含针对不同 .NET 版本的项目。
-
-有关目标框架的详细信息，请参阅[目标框架](/dotnet/standard/frameworks)。
+Visual Studio 解决方案可以包含针对不同 .NET 版本的项目。  但是，请注意，仅可针对单个 .NET 版本进行生成，可以使用单个生成的引用条件，也可以递归方式针对每个版本生成不同的二进制文件。  有关目标框架的详细信息，请参阅[目标框架](/dotnet/standard/frameworks)。
 
 > [!TIP]
 > 你还可以针对不同平台确定目标应用程序。 有关详细信息，请参阅[多定向](../msbuild/msbuild-multitargeting-overview.md)。

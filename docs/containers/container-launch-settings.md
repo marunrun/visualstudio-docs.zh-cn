@@ -6,12 +6,12 @@ ms.author: ghogen
 ms.date: 08/15/2019
 ms.technology: vs-azure
 ms.topic: conceptual
-ms.openlocfilehash: 1c9786c29573da3b0149a9ec6578f2ce58c4de9f
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 63cf881fdedf9608d5cb773bbcb6b969a0f51624
+ms.sourcegitcommit: ce3d0728ec1063ab548dac71c8eaf26d20450acc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "76542589"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80472644"
 ---
 # <a name="container-tools-launch-settings"></a>容器工具启动设置
 
@@ -61,7 +61,7 @@ commandName 设置确定此部分是否适用于容器工具。 下表显示了�
 
 | 设置名         | 示例                                               | 描述                                                                                                             |
 | -------------------- | ----------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| commandLineArgs      | "commandLineArgs": "--mysetting myvalue"              | 在容器中启动项目时使用这些命令行参数。                                     |
+| commandLineArgs      | "commandLineArgs": "--mysetting myvalue"              | 在容器中启动项目时使用这些命令行参数来启动应用。                                     |
 | environmentVariables | "environmentVariables": {                             | 在容器中启动时，这些环境变量值将传递给该过程。                       |
 |                      | "ASPNETCORE_URLS": "https://+:443; http://+:80",       |                                                                                                                         |
 |                      | "ASPNETCORE_HTTPS_PORT":"44381"                      |                                                                                                                         |

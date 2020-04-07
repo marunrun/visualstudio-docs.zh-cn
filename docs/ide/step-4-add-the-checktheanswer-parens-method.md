@@ -13,12 +13,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: def01817fbd42a0da1a0392e00ba9ccff6876470
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: 199cee66013392a253139abf8ef1b88b502abac2
+ms.sourcegitcommit: ce3d0728ec1063ab548dac71c8eaf26d20450acc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "77579845"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80472614"
 ---
 # <a name="step-4-add-the-checktheanswer-method"></a>步骤 4：添加 CheckTheAnswer() 方法
 
@@ -32,7 +32,7 @@ ms.locfileid: "77579845"
 > [!NOTE]
 > 如果您一直使用 Visual Basic 学习本教程，则将使用 `Function` 关键字而不是一般的 `Sub` 关键字，因为此方法将返回一个值。 真的很简单：sub 不会返回值，但函数会返回值。
 
-1. 添加 `CheckTheAnswer()` 方法。
+1. 添加 `CheckTheAnswer()` 方法。 此方法应与你创建的其他方法（如 `StartTheQuiz()`）保持一致。
 
      当调用此方法时，它将 addend1 和 addend2 的值相加，然后将结果与 sum <xref:System.Windows.Forms.NumericUpDown> 控件的值进行比较。 如果二者相等，则此方法将返回值 `true`。 否则，此方法将返回值 `false`。 你的代码应类似以下内容。
 
@@ -43,7 +43,7 @@ ms.locfileid: "77579845"
 
      接下来，将计时器 <xref:System.Windows.Forms.Timer.Tick> 事件处理程序方法中的代码更新为调用新方法 `CheckTheAnswer()`，从而检查答案。
 
-2. 将下面的代码添加到 `if else` 语句。
+2. 将以下代码添加到 `Timer1_Tick()` 方法中的 `if else` 语句，使计时器在用户获得正确答案时停止。
 
      [!code-vb[VbExpressTutorial3Step4#10](../ide/codesnippet/VisualBasic/step-4-add-the-checktheanswer-parens-method_2.vb)]
      [!code-csharp[VbExpressTutorial3Step4#10](../ide/codesnippet/CSharp/step-4-add-the-checktheanswer-parens-method_2.cs)]
