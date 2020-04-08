@@ -30,17 +30,17 @@ ms.locfileid: "77634443"
  以下是所有通用项目项的列表。
 以下是所有通用项目项的列表。
 
-### <a name="reference"></a>参考
+### <a name="reference"></a>Reference
 
  表示项目中的程序集（托管）引用。
 
 |项元数据名称|描述|
 |---------------|-----------------|
 |HintPath|可选的字符串。 程序集的相对或绝对路径。|
-|“属性”|可选的字符串。 程序集的显示名称，例如“System.Windows.Forms”。|
+|Name|可选的字符串。 程序集的显示名称，例如“System.Windows.Forms”。|
 |FusionName|可选的字符串。 指定项的简单或强合成名称。<br /><br /> 此特性存在时，可以节省时间，因为程序集文件不必打开即可获取合成名称。|
 |SpecificVersion|可选的布尔值。 指定是否应仅引用合成名称中的版本。|
-|别名|可选的字符串。 引用的任何别名。|
+|Aliases|可选的字符串。 引用的任何别名。|
 |Private|可选的布尔值。 指定是否应将引用复制到输出文件夹。 此特性与 Visual Studio IDE 中的引用的“复制本地”  属性相匹配。|
 
 ### <a name="comreference"></a>COMReference
@@ -49,8 +49,8 @@ ms.locfileid: "77634443"
 
 |项元数据名称|描述|
 |---------------|-----------------|
-|“属性”|可选的字符串。 组件的显示名称。|
-|GUID|必选字符串。 组件的 GUID，形式为 {12345678-1234-1234-1234-1234567891234}。|
+|Name|可选的字符串。 组件的显示名称。|
+|Guid|必选字符串。 组件的 GUID，形式为 {12345678-1234-1234-1234-1234567891234}。|
 |VersionMajor|必选字符串。 组件版本号的主要部分。 例如，如果完整版本号是“5.46”，则显示“5”。|
 |VersionMinor|必选字符串。 组件版本号的次要部分。 例如，如果完整版本号是“5.46”，则显示“46”。|
 |LCID|可选的字符串。 组件的 LocaleID。|
@@ -71,7 +71,7 @@ ms.locfileid: "77634443"
 
 |项元数据名称|描述|
 |---------------|-----------------|
-|“属性”|必选字符串。 清单文件基名称。|
+|Name|必选字符串。 清单文件基名称。|
 |HintPath|必选字符串。 清单文件的相对路径。|
 
 ### <a name="projectreference"></a>ProjectReference
@@ -80,8 +80,8 @@ ms.locfileid: "77634443"
 
 |项元数据名称|描述|
 |---------------|-----------------|
-|“属性”|可选的字符串。 引用的显示名称。|
-|项目|可选的字符串。 引用的 GUID，形式为 {12345678-1234-1234-1234-1234567891234}。|
+|Name|可选的字符串。 引用的显示名称。|
+|Project|可选的字符串。 引用的 GUID，形式为 {12345678-1234-1234-1234-1234567891234}。|
 |Package|可选的字符串。 所引用的项目文件的路径。|
 |ReferenceOutputAssembly|可选的布尔值。 如果设置为 `false`，则不包括引用项目的输出作为此项目的[引用](#reference)，但仍可确保在此项目之前生成其他项目。 默认为 `true`。|
 
@@ -93,8 +93,8 @@ ms.locfileid: "77634443"
 |-----------------------| - |
 | DependentUpon | 可选的字符串。 指定该文件正确编译所依赖的文件。 |
 | AutoGen | 可选的布尔值。 指示是否已由 Visual Studio 集成开发环境 (IDE) 为项目生成了文件。 |
-| 链接 | 可选的字符串。 文件在物理上处于项目文件的影响范围之外时要显示的符号路径。 |
-| 可见 | 可选的布尔值。 指示是否要在 Visual Studio 中的“解决方案资源管理器”  中显示文件。 |
+| Link | 可选的字符串。 文件在物理上处于项目文件的影响范围之外时要显示的符号路径。 |
+| Visible | 可选的布尔值。 指示是否要在 Visual Studio 中的“解决方案资源管理器”中显示文件。 |
 | CopyToOutputDirectory | 可选的字符串。 确定是否将文件复制到输出目录。 值为：<br /><br /> 1.Never<br />2.Always<br />3.PreserveNewest |
 
 ### <a name="embeddedresource"></a>EmbeddedResource
@@ -107,12 +107,12 @@ ms.locfileid: "77634443"
 | Generator | 必选字符串。 在此项上运行的任何文件生成器的名称。 |
 | LastGenOutput | 必选字符串。 在此项上运行的任何文件生成器创建的文件的名称。 |
 | CustomToolNamespace | 必选字符串。 在此项上运行的任何文件生成器应在其中创建代码的命名空间。 |
-| 链接 | 可选的字符串。 如果文件在物理上处于项目的影响范围之外，则显示符号路径。 |
-| 可见 | 可选的布尔值。 指示是否要在 Visual Studio 中的“解决方案资源管理器”  中显示文件。 |
+| Link | 可选的字符串。 如果文件在物理上处于项目的影响范围之外，则显示符号路径。 |
+| Visible | 可选的布尔值。 指示是否要在 Visual Studio 中的“解决方案资源管理器”  中显示文件。 |
 | CopyToOutputDirectory | 可选的字符串。 确定是否将文件复制到输出目录。 值为：<br /><br /> 1.Never<br />2.Always<br />3.PreserveNewest |
 | LogicalName | 必选字符串。 嵌入资源的逻辑名称。 |
 
-### <a name="content"></a>内容
+### <a name="content"></a>Content
 
  表示不会编译到项目中，但可能会嵌入到其中或随其一起发布的文件。
 
@@ -122,10 +122,10 @@ ms.locfileid: "77634443"
 | Generator | 必选字符串。 在此项上运行的任何文件生成器的名称。 |
 | LastGenOutput | 必选字符串。 在此项上运行的任何文件生成器创建的文件的名称。 |
 | CustomToolNamespace | 必选字符串。 在此项上运行的任何文件生成器应在其中创建代码的命名空间。 |
-| 链接 | 可选的字符串。 文件在物理上处于项目的影响范围之外时要显示的符号路径。 |
+| Link | 可选的字符串。 文件在物理上处于项目的影响范围之外时要显示的符号路径。 |
 | PublishState | 必选字符串。 内容的发布状态，为以下任一项：<br /><br /> -   默认<br />-   已包括<br />-   已排除<br />-   数据文件<br />-   必备组件 |
 | IsAssembly | 可选的布尔值。 指定文件是否为程序集。 |
-| 可见 | 可选的布尔值。 指示是否要在 Visual Studio 中的“解决方案资源管理器”  中显示文件。 |
+| Visible | 可选的布尔值。 指示是否要在 Visual Studio 中的“解决方案资源管理器”  中显示文件。 |
 | CopyToOutputDirectory | 可选的字符串。 确定是否将文件复制到输出目录。 值为：<br /><br /> 1.Never<br />2.Always<br />3.PreserveNewest |
 
 ### <a name="none"></a>None
@@ -138,8 +138,8 @@ ms.locfileid: "77634443"
 | Generator | 必选字符串。 在此项上运行的任何文件生成器的名称。 |
 | LastGenOutput | 必选字符串。 在此项上运行的任何文件生成器创建的文件的名称。 |
 | CustomToolNamespace | 必选字符串。 在此项上运行的任何文件生成器应在其中创建代码的命名空间。 |
-| 链接 | 可选的字符串。 文件在物理上处于项目的影响范围之外时要显示的符号路径。 |
-| 可见 | 可选的布尔值。 指示是否要在 Visual Studio 中的“解决方案资源管理器”  中显示文件。 |
+| Link | 可选的字符串。 文件在物理上处于项目的影响范围之外时要显示的符号路径。 |
+| Visible | 可选的布尔值。 指示是否要在 Visual Studio 中的“解决方案资源管理器”  中显示文件。 |
 | CopyToOutputDirectory | 可选的字符串。 确定是否将文件复制到输出目录。 值为：<br /><br /> 1.Never<br />2.Always<br />3.PreserveNewest |
 
 ### <a name="assemblymetadata"></a>AssemblyMetadata
@@ -148,8 +148,8 @@ ms.locfileid: "77634443"
 
 | 项元数据名称 | 描述 |
 |-----------------------| - |
-| 包括 | 成为 `AssemblyMetadataAttribute` 特性构造函数中的第一个参数（键）。 |
-| “值” | 必选字符串。 成为 `AssemblyMetadataAttribute` 特性构造函数中的第二个参数（值）。 |
+| Include | 成为 `AssemblyMetadataAttribute` 特性构造函数中的第一个参数（键）。 |
+| Value | 必选字符串。 成为 `AssemblyMetadataAttribute` 特性构造函数中的第二个参数（值）。 |
 
 > [!NOTE]
 > 这仅适用于使用 .NET Core SDK 的项目。
@@ -162,7 +162,7 @@ ms.locfileid: "77634443"
 
  表示要导入的 FxCop 项目。
 
-### <a name="import"></a>导入
+### <a name="import"></a>Import
 
  表示应由 Visual Basic 编译器导入其命名空间的程序集。
 
