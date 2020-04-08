@@ -1,5 +1,5 @@
 ---
-title: 任务写入 | Microsoft Docs
+title: 编写任务 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,7 +19,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 02/26/2020
 ms.locfileid: "77631831"
 ---
-# <a name="task-writing"></a>任务写入
+# <a name="task-writing"></a>编写任务
 
 任务提供在生成过程中运行的代码。 任务包含在目标中。 MSBuild 附带一个典型任务库，你也可以创建自己的任务。 有关 MSBuild 附带的任务库的详细信息，请参阅[任务参考](../msbuild/msbuild-task-reference.md)。
 
