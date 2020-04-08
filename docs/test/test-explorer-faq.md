@@ -15,10 +15,10 @@ ms.workload:
 author: kendrahavens
 manager: jillfra
 ms.openlocfilehash: cec8ea3ea091ab1ea65bcad2bd4cca139fd74042
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75846812"
 ---
 # <a name="visual-studio-test-explorer-faq"></a>Visual Studio 测试资源管理器常见问题解答
@@ -113,7 +113,7 @@ Visual Studio 2017 版本 15.7 已删除“测试资源管理器”搜索框中�
 
 Visual Studio 2019 中不再出现一些与测试相关的 API。  进行了哪些更改？
 
-在 Visual Studio 2019 中，将删除以前标记为公开但从未正式记录过的某些测试窗口 API。 它们在 Visual Studio 2017 中被标记为“弃用”，提前通告扩展维护人员。 据我们所知，很少有扩展找过这些 API 并依赖于它们。 它们包括 `IGroupByProvider`、`IGroupByProvider<T>`、`KeyComparer`、`ISearchFilter`、`ISearchFilterToken`、`ISearchToken` 和 `SearchFilterTokenType`。 若此更改影响了你的扩展，请在[开发者社区](https://developercommunity.visualstudio.com)上提交一个 bug 告知我们。
+在 Visual Studio 2019 中，将删除以前标记为公开但从未正式记录过的某些测试窗口 API。 它们在 Visual Studio 2017 中被标记为“弃用”，提前通告扩展维护人员。 据我们所知，很少有扩展找过这些 API 并依赖于它们。 它们包括 `IGroupByProvider`、 `IGroupByProvider<T>`、 `KeyComparer`、`ISearchFilter`、 `ISearchFilterToken`、 `ISearchToken` 和 `SearchFilterTokenType`。 若此更改影响了你的扩展，请在[开发者社区](https://developercommunity.visualstudio.com)上提交一个 bug 告知我们。
 
 ## <a name="test-adapter-nuget-reference"></a>测试适配器 NuGet 引用
 

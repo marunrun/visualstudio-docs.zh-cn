@@ -1,17 +1,18 @@
 ---
 title: Visual Studio 订阅中的 CODE 杂志权益 | Microsoft 文档
 author: evanwindom
-ms.author: lank
+ms.author: v-evwin
 manager: lank
-ms.date: 10/13/2019
+ms.assetid: e5768153-2758-46d3-a323-3272def213ee
+ms.date: 03/25/2020
 ms.topic: conceptual
 description: 了解有关 Visual Studio 订阅中包含的 CODE 杂志权益。
-ms.openlocfilehash: 341e21d3411afdd8402d223b455f60bcf39a4a40
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: f3b8c7c10cc8995e05b0e0da7da5e85226e131a3
+ms.sourcegitcommit: dfa9476b69851c28b684ece66980bee735fef8fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "74491653"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80274006"
 ---
 # <a name="code-magazine-included-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 CODE 杂志权益
 
@@ -56,7 +57,7 @@ CODE 杂志是领先的独立软件开发人员杂志，涵盖所有平台中的
 | MSDN 平台（标准）                                          | VL、零售                                              | 可用                                              |  否          |
 | Visual Studio Enterprise、Visual Studio Professional（月度云） | Azure | 不可用 | 不可用 |
 
-<sup>1</sup>  *包括：限制转售 (NFR)、Visual Studio 行业合作伙伴 (VSIP)、FTE、BizSpark、Imagine Premium。不包括：Microsoft 合作伙伴网络 (MPN)、最有价值专家 (MVP)、区域主管 (RD)、MCT 软件和服务开发人员、MCT 软件和服务、Imagine。*
+<sup>1</sup>  包括：限制转售 (NFR)、Visual Studio 行业合作伙伴 (VSIP)、FTE、BizSpark、Imagine Premium。不包括：Microsoft 合作伙伴网络 (MPN)、最有价值专家 (MVP)、区域主管 (RD)、MCT 软件和服务开发人员、MCT 软件和服务、Imagine。
 
 > [!NOTE]
 > Microsoft 不再在云订阅中提供 Visual Studio Professional 年度订阅和 Visual Studio Enterprise 年度订阅。 现有客户体验以及续订、增加、减少或取消订阅的能力不会发生变化。 建议新客户访问 [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/)，查看各 Visual Studio 购买选项。
@@ -74,6 +75,12 @@ CODE 杂志是领先的独立软件开发人员杂志，涵盖所有平台中的
 - 你对 CODE 杂志订阅有疑问吗？  请通过电子邮件或电话，或者提交在线支持请求，联系 [CODE 杂志](https://www.codemag.com/contact)。
 - 有关 Visual Studio 订阅的销售、订阅、帐户和账单的帮助，请与 Visual Studio [订阅支持](https://visualstudio.microsoft.com/subscriptions/support/)联系。
 - 对有关 Visual Studio IDE、Azure DevOps Services 或其他 Visual Studio 产品或服务有疑问？  请访问 [Visual Studio 支持](https://visualstudio.microsoft.com/support/)。
+
+## <a name="see-also"></a>请参阅
+- [Visual Studio 文档](https://docs.microsoft.com/visualstudio/)
+- [Azure DevOps 文档](https://docs.microsoft.com/azure/devops/)
+- [Azure 文档](https://docs.microsoft.com/azure/)
+- [Microsoft 365 文档](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>后续步骤
 查看订阅中包含的其他权益。 请访问 [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)。
