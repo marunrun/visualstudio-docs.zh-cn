@@ -1,17 +1,18 @@
 ---
 title: Visual Studio 订阅中的 Azure 社区支持权益 | Microsoft Docs
 author: evanwindom
-ms.author: lank
+ms.author: v-evwin
 manager: lank
+ms.assetid: c15f7e18-b280-4902-a60d-2c2598653207
 ms.date: 07/29/2019
 ms.topic: conceptual
 description: 了解有关所选 Visual Studio 订阅中包含的 Azure 社区支持权益。
-ms.openlocfilehash: 32a1c962e238bfc5ab8083ff643a99a77b699925
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: ab5c6c7a1243843bd522ed33dab6a37c57a8f2fe
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "73983754"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80232101"
 ---
 # <a name="azure-community-support-forum-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 Azure 社区支持论坛
 在选定的支持论坛中通过 Azure 社区直接从 Azure 团队获得帮助。  Azure 社区权益提供访问专注于 Azure 相关主题的一系列论坛的权限。
@@ -57,7 +58,7 @@ Azure 社区权益的可用性取决于订阅级别，如下所示：
 |                                       MSDN 平台（标准）                                       |    VL、零售     |   一年    |    是     |
 | Visual Studio Enterprise（月度云）、Visual Studio Professional（月度云）、NFR<sup>1</sup> |        全部        | 不可用 |     否     |
 
-<sup>1</sup>  *包括：* 不得转售 (NFR)、Microsoft FTE、最有价值专家 (MVP)、区域总监 (RD)、Visual Studio 行业合作伙伴 (VSIP)、BizSpark、Imagine、Microsoft 认证培训师 (MCT)
+<sup>1</sup>  包括：  不得转售 (NFR)、Microsoft FTE、最有价值专家 (MVP)、区域总监 (RD)、Visual Studio 行业合作伙伴 (VSIP)、BizSpark、Imagine、Microsoft 认证培训师 (MCT)
 
 > [!NOTE]
 > Microsoft 不再在云订阅中提供 Visual Studio Professional 年度订阅和 Visual Studio Enterprise 年度订阅。 现有客户体验以及续订、增加、减少或取消订阅的能力不会发生变化。 建议新客户访问 [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/)，查看各 Visual Studio 购买选项。
@@ -69,6 +70,12 @@ Azure 社区权益的可用性取决于订阅级别，如下所示：
 - [Azure 文档](/azure/)。
 - 需要有关 Visual Studio 订阅的销售、订阅、帐户和计费方面的帮助？  请联系 Visual Studio [订阅支持团队](https://visualstudio.microsoft.com/subscriptions/support/)。
 - 对有关 Visual Studio IDE、Azure DevOps Services 或其他 Visual Studio 产品或服务有疑问？  请访问 [Visual Studio 支持](https://visualstudio.microsoft.com/support/)。
+
+## <a name="see-also"></a>请参阅
+- [Visual Studio 文档](https://docs.microsoft.com/visualstudio/)
+- [Azure DevOps 文档](https://docs.microsoft.com/azure/devops/)
+- [Azure 文档](https://docs.microsoft.com/azure/)
+- [Microsoft 365 文档](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>后续步骤
 你知道吗？许多 Visual Studio 订阅都附带 Azure 开发测试个人额度。  了解如何[激活](vs-azure.md)你的权益。
