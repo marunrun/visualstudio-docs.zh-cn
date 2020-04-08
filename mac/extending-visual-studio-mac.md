@@ -6,12 +6,12 @@ ms.author: dominicn
 ms.date: 12/20/2019
 ms.technology: vs-ide-sdk
 ms.assetid: D5245AB0-8404-426B-B538-F49125E672B2
-ms.openlocfilehash: 30826f68be1ef2f29940c8f9c95b2b79435e0a2a
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: dd4db2502c65e9330bde5f475fc97b2e86a49e4a
+ms.sourcegitcommit: 054815dc9821c3ea219ae6f31ebd9cd2dc8f6af5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "75852040"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80544031"
 ---
 # <a name="extending-visual-studio-for-mac"></a>扩展 Visual Studio for Mac
 
@@ -161,7 +161,7 @@ public enum DateInserterCommands
 
 ## <a name="extending-the-new-editor"></a>扩展新编辑器
 
-Visual Studio for Mac [引入新的本机 Cocoa 文本编辑器 UI](https://docs.microsoft.com/visualstudio/releasenotes/vs2019-mac-relnotes#RTW)，它基于 Windows 上的 Visual Studio 的相同编辑器层而构建。
+Visual Studio for Mac [引入新的本机 Cocoa 文本编辑器 UI](https://docs.microsoft.com/visualstudio/releasenotes/vs2019-mac-relnotes)，它基于 Windows 上的 Visual Studio 的相同编辑器层而构建。
 
 在 Visual Studio 和 Visual Studio for Mac 之间共享编辑器的诸多好处之一是，可以采用针对 Visual Studio 编辑器的代码以在 Visual Studio for Mac 上运行。
 

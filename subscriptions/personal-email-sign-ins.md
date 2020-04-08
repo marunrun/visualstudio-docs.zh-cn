@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: lank
 manager: lank
 ms.assetid: 3f4b0528-03f0-4a02-b3c3-a39292a9bbe1
-ms.date: 03/17/2020
+ms.date: 04/07/2020
 ms.topic: conceptual
 description: Visual Studio 订阅 – 为什么我会在我的订阅者中看到 Hotmail 或 Gmail 地址？
-ms.openlocfilehash: 7cd6a4761efb7dcad7568bd0a95ba33141407055
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: e926caa8aef5a655b1f09ab8d6dbab1d70946827
+ms.sourcegitcommit: 1f7aed335c48215dff5c151f76f22e3f10e8b564
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "79550340"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80808340"
 ---
 # <a name="visual-studio-subscriptions--why-do-i-see-personal-accounts-for-my-subscribers"></a>Visual Studio 订阅 - 我为什么会看到我的订阅者的个人帐户？
 随着公司从批量许可服务中心 (VLSC) 迁移到新的 Visual Studio [订阅管理门户](https://manage.visualstudio.com)，管理员惊奇地发现某些订阅者的“登录电子邮件地址”显示 Hotmail 或 Outlook 等个人电子邮件地址。  有关详细信息，请观看[此视频](https://www.youtube.com/watch?v=J61EYaVN-dQ&list=PLReL099Y5nReJhZ6o8CQFPSBgzGCHX99_&index=6)。
@@ -28,6 +28,9 @@ ms.locfileid: "79550340"
 > [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) 上的新式订阅者体验同时支持工作/学校标识类型和 Microsoft 帐户 (MSA) 标识类型。
 
 ## <a name="solution"></a>解决方案
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4th6B]
+
 要解决此问题，只需选择“连接电子邮件”按钮，然后系统会尝试根据匹配姓氏和名字，将具有 MSA 的帐户与你组织的 Azure Active Directory (Azure AD) 中的现有用户相匹配。 如果出现错误，你可单击任何匹配项右侧的 X，删除该匹配项。  
 
 > [!div class="mx-imgBorder"]

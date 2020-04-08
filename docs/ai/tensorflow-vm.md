@@ -2,20 +2,21 @@
 title: 在云中运行 TensorFlow 模型
 description: 在 Azure 深入学习 VM 中运行 tensorflow 模型
 keywords: ai, visual studio, 深入学习虚拟机
-author: lisawong19
-ms.author: liwong
-manager: routlaw
+author: jillre
+ms.author: jillfra
+manager: jillfra
+monikerRange: vs-2017
 ms.date: 11/13/2017
 ms.topic: tutorial
 ms.devlang: python
 ms.workload:
 - multiple
-ms.openlocfilehash: 9cb06220c99abb86c24808f6831cf98280133f2e
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: 6cd833a687591ba4f49e785746381f9a5d738f5e
+ms.sourcegitcommit: 9c1cecaff4d9955276eee7865b78d47679dd1e2a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "75915828"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80638756"
 ---
 # <a name="train-a-tensorflow-model-in-the-cloud"></a>在云中训练 TensorFlow 模型
 
