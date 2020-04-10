@@ -1,6 +1,6 @@
 ---
 title: 运行带或不带调试器的分析工具 | Microsoft Docs
-ms.date: 11/04/2018
+ms.date: 04/02/2020
 ms.topic: conceptual
 ms.assetid: 3fcdccad-c1bd-4c67-bcec-bf33a8fb5d63
 author: mikejo5000
@@ -8,12 +8,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 273dc6770f2928ed65d6a473b7f1986bc353687e
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: cf544b3bec9b492f1d1669549ba5501a52f7d5f2
+ms.sourcegitcommit: 9c1cecaff4d9955276eee7865b78d47679dd1e2a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62999480"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80638806"
 ---
 # <a name="run-profiling-tools-with-or-without-the-debugger"></a>运行带/不带调试器的分析工具
 
@@ -33,23 +33,21 @@ Visual Studio 提供了性能测量值和分析工具选择。 某些工具（�
 - 调试器本身会更改性能时间，因为它会执行截获异常和模块加载事件等必要的调试操作。
 - “性能探查器”工具中的发布版本性能数字是最精准的  。 调试器集成的工具结果对于与其他调试相关的度量值进行比较非常有用。
 
+对于 CPU 使用情况，可以使用命令行工具在远程计算机上运行该工具。
+
 ## <a name="collect-profiling-data-while-debugging"></a><a name="BKMK_Quick_start__Collect_diagnostic_data"></a> 在调试期间收集分析数据
 
 通过选择“调试” > “开始调试”或按 F5 在 Visual Studio 中开始调试时，默认情况下会出现“诊断工具”窗口     。 要手动打开该窗口，请选择“调试” > “Windows” > “显示诊断工具”    。 “诊断工具”窗口显示有关事件、进程内存和 CPU 使用情况的信息  。
 
 ![诊断工具](../profiling/media/diagnostictools-update1.png "诊断工具")
 
-- 使用工具栏中的“设置”图标以选择是否要查看“内存使用情况”、“UI 分析”以及“CPU 使用情况”     。
+- 使用工具栏中的“设置”图标以选择是查看“内存使用情况”还是“CPU 使用情况”    。
 
 - 在“设置”下拉列表中选择“设置”，打开“诊断工具属性页”，其中包含更多选项    。
 
 - 如果运行的是 Visual Studio Enterprise，则可以在 Visual Studio“工具” > “选项” > “IntelliTrace”下启用或禁用 IntelliTrace    。
 
 当停止调试时，诊断会话结束。
-
-此外，还可查看“诊断工具”以获取远程调试目标  。 对于远程调试和分析，必须在远程目标上安装并运行 Visual Studio 远程调试程序。
-- 有关远程调试和分析桌面应用程序项目的信息，请参阅[远程调试](../debugger/remote-debugging.md)。
-- 有关远程调试和分析 UWP 应用的信息，请参阅[在远程计算机上调试 UWP 应用](../debugger/run-windows-store-apps-on-a-remote-machine.md)。
 
 ### <a name="the-events-tab"></a>“事件”选项卡
 
@@ -69,7 +67,9 @@ Visual Studio 提供了性能测量值和分析工具选择。 某些工具（�
 
 要在不进行调试的情况下收集性能数据，可以运行“性能探查器”工具  。 某些分析工具需要管理员权限才能运行。 启动诊断会话时，你可以以管理员身份打开 Visual Studio，也可以以管理员身份运行工具。
 
-1. 在 Visual Studio 中打开项目后，选择“调试” > “性能探查器”，或按 Alt+F2     。
+1. 在 Visual Studio 中打开一个项目后，将解决方案配置设置为“发布”，然后选择“本地 Windows 调试器”（或“本地计算机”）作为部署目标    。
+
+1. 选择“调试” > “性能探查器”，或按 Alt+F2     。
 
 1. 在诊断启动页面上，选择一个或多个要运行的工具。 将仅显示适用于项目类型、操作系统和编程语言的工具。 选择“显示所有工具”也可查看此诊断会话禁用的工具  。 对于 C# UWP 应用，选项设置如下：
 
@@ -103,13 +103,20 @@ Visual Studio 提供了性能测量值和分析工具选择。 某些工具（�
 
 ## <a name="run-diagnostic-sessions-on-installed-or-running-apps"></a>在已安装或正在运行的应用上运行诊断会话
 
- 除了从 Visual Studio 项目启动应用以外，还可以在备用目标上运行诊断会话。 例如，你可能需要诊断有关从 Windows 应用商店安装的应用的性能问题。
+除了从 Visual Studio 项目启动应用以外，还可以在备用目标上运行诊断会话。 例如，你可能需要诊断有关从 Windows 应用商店安装的应用的性能问题。 在“性能探查器”中，从“更改目标”下的下拉列表中进行选择  。
 
- ![选择诊断工具分析目标](../profiling/media/pdhub_chooseanalysistarget.png "PDHUB_ChooseAnalysisTarget")
+![选择诊断工具分析目标](../profiling/media/pdhub_chooseanalysistarget.png "PDHUB_ChooseAnalysisTarget")
 
- 可以启动已安装的应用，也可以将诊断工具附加到已在运行的应用和进程。 选择“正在运行的应用”或“已安装的应用”时，可以从发现指定部署目标上的应用的列表中选择应用   。 此目标可以是本地或远程计算机。
+可以启动已安装的应用，也可以将诊断工具附加到已在运行的应用和进程。
 
- ![选择要诊断的正在运行或已安装的应用](../profiling/media/pdhub_selectrunningapp.png "PDHUB_SelectRunningApp")
+如果选择“可执行文件”作为分析目标，则可以在本地或远程计算机上输入 .exe 的路径   。 在任一情况下，.exe 都在本地运行  。 但是，我们建议通过在 Visual Studio 中打开解决方案来分析应用。
+
+对于 UWP 应用，选择“正在运行的应用”或“已安装的应用”时，可以从发现指定部署目标上的应用的列表中选择应用   。 此目标可以是本地或远程计算机。 若要分析远程计算机上的 UWP 应用，需要在“远程连接”对话框中选择“通用(未加密的协议)”   。
+
+![选择要诊断的正在运行或已安装的应用](../profiling/media/pdhub_selectrunningapp.png "PDHUB_SelectRunningApp")
+
+> [!NOTE]
+> 对于需要远程使用分析工具的其他方案，请参阅[从命令行测量应用程序性能](../profiling/profile-apps-from-command-line.md)。 可以对 CPU 使用情况使用命令行工具，还可使用 .NET 对象分配工具。
 
 ## <a name="see-also"></a>请参阅
 

@@ -17,16 +17,16 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f5dd3b1dc758a9b4f7634d4b6e73ab294289d6cd
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 5134e17c26ffd7b34c0277c571173ba03d758bee
+ms.sourcegitcommit: 9c1cecaff4d9955276eee7865b78d47679dd1e2a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "71128294"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80638786"
 ---
 # <a name="measure-application-performance-by-analyzing-cpu-usage"></a>通过分析 CPU 使用情况衡量应用程序性能
 
-可使用 Visual Studio 分析工具来分析应用程序中的性能问题。 此过程演示如何使用诊断工具的“CPU 使用率”  选项卡获取应用的性能数据。
+可使用 Visual Studio 分析工具来分析应用程序中的性能问题。 本文演示如何使用诊断工具的“CPU 使用情况”  选项卡获取应用的性能数据。
 
 调试中断时，**CPU 使用率**工具收集有关应用程序中正在执行的函数的信息。 该工具将列出执行工作的函数，并提供时间线图，可专用于采样会话的特定部分。
 
@@ -35,7 +35,7 @@ ms.locfileid: "71128294"
 > [!Important]
 > Visual Studio 中的 .NET 开发（包括 ASP.NET、和本机 /C++ 开发）支持此诊断工具。
 
-本文讨论在常规调试工作流中分析 CPU 使用情况。 还可以在不附加调试程序的情况下，或通过定目标到正在运行的应用来分析 CPU 使用率。有关详细信息，请参阅[在使用或不使用调试程序的情况下运行分析工具](../profiling/running-profiling-tools-with-or-without-the-debugger.md)中的[在不使用调试程序的情况下收集分析数据](../profiling/running-profiling-tools-with-or-without-the-debugger.md#collect-profiling-data-without-debugging)。
+本文讨论在常规调试工作流中分析 CPU 使用情况。 还可以在没有附加调试器的情况下或以正在运行的应用为目标来分析 CPU 使用情况。 有关详细信息，请参阅[运行带或不带调试器的分析工具](../profiling/running-profiling-tools-with-or-without-the-debugger.md)。 借助另一个分析工具 [PerfTips](../profiling/perftips.md)，可以单步执行代码并确定完成特定函数或代码块所用的时间。
 
 可 Windows 7 及更高版本中使用不带调试器的分析工具。 要运行带调试器的分析工具（“诊断工具”窗口），需具备 Windows 8 及更高版本  。
 
@@ -51,8 +51,7 @@ ms.locfileid: "71128294"
 
 2. 在函数末尾或想要分析的代码区域中设置第二个断点。
 
-    > [!TIP]
-    > 通过设置两个断点，可将数据收集限制到想要分析的代码部分。
+    通过设置两个断点，可将数据收集限制到想要分析的代码部分。
 
 3. 将自动显示 **“诊断工具”** 窗口，除非你已将其关闭。 若要再次显示该窗口，请依次单击“调试”   > “Windows”   > “显示诊断工具”  。
 
@@ -95,6 +94,9 @@ ms.locfileid: "71128294"
      ![诊断工具选择时间段](../profiling/media/diag-tools-select-time-segment.png "DiagToolsSelectTimeSegment")
 
      现在可以开始分析数据。
+
+     > [!TIP]
+     >  尝试确定性能问题时，需要获取多个度量值。 性能在运行间自然变化，并且由于加载 Dll、JIT 编译方法和初始化缓存等一次性的初始化工作，代码路径在首次运行时的执行速度通常较缓慢。 通过获取多个度量值，你可以更好地了解所显示指标的范围和中值，从而可比较首次与稳定状态下代码区域的性能。
 
 ## <a name="step-2-analyze-cpu-usage-data"></a>步骤 2：分析 CPU 使用量数据
 

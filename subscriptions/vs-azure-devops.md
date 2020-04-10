@@ -1,17 +1,18 @@
 ---
 title: Visual Studio 订阅者的 Azure DevOps 权益 | Microsoft Docs
 author: evanwindom
-ms.author: lank
+ms.author: v-evwin
 manager: lank
-ms.date: 07/30/2019
+ms.assetid: fe826200-9600-4b29-a64e-0d66ba3caf3d
+ms.date: 03/24/2020
 ms.topic: conceptual
 description: 了解如何以 Visual Studio 订阅者身份使用 Azure DevOps。
-ms.openlocfilehash: 9b4c616c870f0834b6974d59540035687b32fc12
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: 11bd1262e72042b01c2514edc3bc3158325b9417
+ms.sourcegitcommit: 67dd2aedfe9752afaec9625ed3056fa03bd2699e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "79306739"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80607172"
 ---
 # <a name="azure-devops-benefits-for-visual-studio-subscribers"></a>Visual Studio 订阅者的 Azure DevOps 权益
 作为权益，有效 Visual Studio 订阅者可使用订阅随附的一系列 Azure DevOps 功能。 可以在所属的每个 Azure DevOps 组织中使用这些相同的功能，无论你是创建了组织，还是被其他人添加到组织中。
@@ -32,7 +33,7 @@ ms.locfileid: "79306739"
 | MSDN 平台（标准）                                          | VL、零售                                              | Azure Boards 和 Azure Repos（基础版）、Azure Test Plans                                              |  是          |
 ||
 
-<sup>1</sup>  *包括：不得转售 (NFR)、最有价值专家 (MVP)、区域总监 (RD)、Visual Studio 行业合作伙伴 (VSIP)、Microsoft 合作伙伴网络 (Enterprise)、BizSpark、MCT 软件和服务开发人员、FTE。不包括：MCT 软件和服务、Imagine*。
+<sup>1</sup>  包括：*不得转售 (NFR)、最有价值专家 (MVP)、区域总监 (RD)、Visual Studio 行业合作伙伴 (VSIP)、Microsoft 合作伙伴网络 (Enterprise)、BizSpark、MCT 软件和服务开发人员、FTE。不包括：MCT 软件和服务、Imagine  。
 
 
 > [!NOTE]
@@ -46,9 +47,15 @@ ms.locfileid: "79306739"
 - 对有关 Visual Studio IDE、Azure DevOps 或其他 Visual Studio 产品或服务有疑问？  请访问 [Visual Studio 支持](https://visualstudio.microsoft.com/support/)。
 - [Azure DevOps 文档](/azure/devops/)。
 
+## <a name="see-also"></a>请参阅
+- [Visual Studio 文档](https://docs.microsoft.com/visualstudio/)
+- [Azure DevOps 文档](https://docs.microsoft.com/azure/devops/)
+- [Azure 文档](https://docs.microsoft.com/azure/)
+- [Microsoft 365 文档](https://docs.microsoft.com/microsoft-365/)
+
 ## <a name="next-steps"></a>后续步骤
 详细了解 Azure DevOps 功能：
-- [Azure Boards 和 Azure Repos（基础版）](https://azure.microsoft.com/services/devops/compare-features/)
+- [Azure Boards 和 Azure Repos（基本计划）](https://azure.microsoft.com/services/devops/compare-features/)
 - [Azure Test Plans](https://marketplace.visualstudio.com/items?itemName=ms.vss-testmanager-web)
 - [Azure Artifacts](https://marketplace.visualstudio.com/items?itemName=ms.feed)
 

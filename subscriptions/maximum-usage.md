@@ -4,18 +4,21 @@ author: evanwindom
 ms.author: lank
 manager: lank
 ms.assetid: c473b01f-2dfe-4cc2-ad29-bb5e2a268123
-ms.date: 03/03/2020
+ms.date: 04/07/2020
 ms.topic: conceptual
 description: 了解如何在管理门户中查看分配的最大订阅数
-ms.openlocfilehash: 3f62c251262bc16f8f214c6f7bcc22674c7430b2
-ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
+ms.openlocfilehash: 0fe9dbe494867c99ba62bcb5f56c372da7ac50aa
+ms.sourcegitcommit: 1f7aed335c48215dff5c151f76f22e3f10e8b564
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80232267"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80808347"
 ---
 # <a name="use-the-maximum-usage-feature-to-track-the-number-of-assigned-subscriptions"></a>使用最大用量功能跟踪分配的订阅数
 Visual Studio 订阅管理门户中的新功能有助于跟踪已购买和分配的订阅数量，并确定在过去一年和整个协议期间分配的每个级别的峰值订阅数。 
+
+## <a name="maximum-usage-overview"></a>最大用量概述
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4tdQK] 
 
 ## <a name="view-your-maximum-usage"></a>查看最大用量
 查看为任何协议和订阅级别分配的峰值订阅数：

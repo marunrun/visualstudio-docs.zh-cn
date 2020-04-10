@@ -6,12 +6,12 @@ ms.author: dominicn
 ms.date: 07/13/2017
 ms.assetid: 6E8B0C90-33D6-4546-8207-CE0787584565
 ms.custom: video
-ms.openlocfilehash: b1e29e4df6ea31d99a99590f3e56ed6feac791e1
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: 5f1a617c5562c4f95fec94ae449f48b681fcb7ef
+ms.sourcegitcommit: 054815dc9821c3ea219ae6f31ebd9cd2dc8f6af5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "74984894"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80543749"
 ---
 # <a name="getting-started-with-aspnet-core"></a>ASP.NET Core 入门
 
@@ -29,7 +29,7 @@ ms.locfileid: "74984894"
 
 这将显示“新建项目”对话框，可通过它选择模板创建应用程序。
 
-许多项目都提供有预建模板，方便快速开始创建 ASP.NET Core 应用程序。 其中包括：
+许多项目都提供有预建模板，方便快速开始创建 ASP.NET Core 应用程序。 这些是：
 
 - “.NET Core”>“ASP.NET Core 空 Web 应用程序” 
 - “.NET Core”>“ASP.NET Core Web 应用” 
@@ -42,7 +42,7 @@ ms.locfileid: "74984894"
 
 ![新 ASP.NET Core 空项目视图](media/asp-net-core-image4.png)
 
-ASP.NET Core 空 Web 应用程序将通过两个默认文件（“Program.cs”和“Startup.cs”）创建一个 Web 应用。后面将对这两个文件进行说明   。 它还将创建一个依赖项文件夹，该文件夹包含项目的 NuGet 包依赖项，如 ASP.NET Core、.NET Core 框架和生成该项目的 MSBuild 目标：
+ASP.NET Core 空 Web 应用程序将通过以下两个默认文件创建一个 Web 应用程序：Program.cs  和 Startup.cs  ，后面将对这两个文件进行说明。 它还将创建一个依赖项文件夹，该文件夹包含项目的 NuGet 包依赖项，如 ASP.NET Core、.NET Core 框架和生成该项目的 MSBuild 目标：
 
 ![显示依赖项的 Solution Pad](media/asp-net-core-image12.png)
 
@@ -68,14 +68,14 @@ ASP.NET Core 应用将通过 [`WebHostBuilder`](/aspnet/core/fundamentals/hostin
 
 * `UseKestrel`：指定应用将使用的 Kestrel 服务器
 * `UseContentRoot(Directory.GetCurrentDirectory())`：从 Web 项目的根文件夹启动应用时，使用此文件夹作为应用的内容根
-* `.UseIISIntegration()`：指定应用程序应使用 IIS。 要在 ASP.NET Core 中使用 IIS，需要指定 `UseKestrel` 和 `UseIISIntegration`。
+* `.UseIISIntegration()`：指定应用应使用 IIS。 要在 ASP.NET Core 中使用 IIS，需要指定 `UseKestrel` 和 `UseIISIntegration`。
 * `.UseStartup<Startup>()`：指定启动类。
 
   生成并运行方法将生成 IWebHost，用于托管应用并使其开始侦听传入的 HTTP 请求。
 
 ### <a name="startupcs"></a>Startup.cs
 
-可在 `UseStartup()` 上的 `WebHostBuilder` 方法中指定应用的 Startup 类。 在此类中，可指定请求处理管道和配置任何服务。
+可在 `WebHostBuilder` 上的 `UseStartup()` 方法中指定应用的 Startup 类。 在此类中，可指定请求处理管道和配置任何服务。
 
 在项目中打开并检查“Startup.cs”文件  ：
 
@@ -112,7 +112,7 @@ Startup 类必须始终遵守以下规则：
 
 通过 `Configure` 可使用 [Middleware](/aspnet/core/fundamentals/middleware) 撰写请求管道。 将在 ASP.NET 应用程序管道中使用这些组件，用于处理请求和响应。 HTTP 管道包含大量按顺序调用的请求委托。 每个委托可选择处理请求本身，或将其传递给下一个委托。
 
-可通过在 `Run` 上使用 `Map`、`Use` 和 `IApplicationBuilder` 方法配置委托。但 `Run` 方法不会调用下一个委托，应始终用于管道末尾。
+可通过在 `IApplicationBuilder` 上使用 `Run`、`Map` 和 `Use` 方法配置委托。但 `Run` 方法不会调用下一个委托，应始终用于管道末尾。
 
 预建模板的 `Configure` 方法有数种作用。 首先，它会配置开发中使用的意外处理页面。 其次，它会向请求网页发送响应，内容为简单的“Hello World”。
 
@@ -220,7 +220,7 @@ ASP.NET Core 应用使用模型视图控制器 (MVC) 设计模式，来为应用
 
     ![通过参数在浏览器中运行应用](media/asp-net-core-image10.png)
 
-## <a name="troubleshooting"></a>故障排除
+## <a name="troubleshooting"></a>疑难解答
 
 若要在 Mac OS 10.11 (El Capitan) 或更高版本上安装 .NET Core，请执行以下操作：
 
@@ -234,7 +234,7 @@ ASP.NET Core 应用使用模型视图控制器 (MVC) 设计模式，来为应用
 
 本指南介绍了 ASP.NET Core。 介绍了它是什么，何时使用，并提供了在 Visual Studio for Mac 中使用它的信息。
 有关后续步骤的详细信息，请参阅以下指南：
-- [ASP.NET Core ](/aspnet/core/#build-web-apis-and-web-ui-using-aspnet-core-mvc) 文档。
+- [ASP.NET Core ](/aspnet/core/) 文档。
 - [Creating Backend Services for Native Mobile Applications（为本地移动应用程序创建后端服务）](/aspnet/core/mobile/native-mobile-backend)，介绍了如何使用 ASP.NET Core 为 Xamarin.Forms 应用生成 REST 服务。
 - [ASP.NET Core 动手实验](https://github.com/Microsoft/vs4mac-labs/tree/master/Web/Getting-Started)。
 

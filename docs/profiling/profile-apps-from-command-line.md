@@ -14,12 +14,12 @@ manager: jillfra
 monikerRange: '>= vs-2019'
 ms.workload:
 - multiple
-ms.openlocfilehash: c109e2ae1db28f8e08ed7c34a7ee0871a6efe670
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 18850a6e365988abd33b7e2e2a3972ba5cb0a91a
+ms.sourcegitcommit: 9c1cecaff4d9955276eee7865b78d47679dd1e2a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77558122"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80638694"
 ---
 # <a name="measure-application-performance-from-the-command-line"></a>从命令行测量应用程序性能
 
@@ -27,11 +27,13 @@ ms.locfileid: "77558122"
 
 在本文所述的示例中，收集 Microsoft Notepad 的性能信息，但可以使用相同的方法来分析任何进程。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
-* Visual Studio 2019 预览版 3 或更高版本
+* Visual Studio 2019 或更高版本
 
 * 熟悉命令行工具
+
+* 若要在未安装 Visual Studio 的远程计算机上收集性能信息，请在此远程计算机上安装[用于 Visual Studio 的性能工具](https://visualstudio.microsoft.com/downloads#performance-tools-for-visual-studio-2019)。 工具版本必须与 Visual Studio 版本匹配。
 
 ## <a name="collect-performance-data"></a>收集性能数据
 
@@ -65,7 +67,7 @@ ms.locfileid: "77558122"
 
 1. 转到上一个命令的文件输出，并在 Visual Studio 中打开它以检查收集的信息。
 
-## <a name="config_file"></a> 代理配置文件
+## <a name="agent-configuration-files"></a><a name="config_file"></a> 代理配置文件
 
 集合代理是可互换的组件，可根据要测量的内容收集不同类型的数据。
 

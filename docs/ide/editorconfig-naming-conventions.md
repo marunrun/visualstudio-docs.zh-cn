@@ -1,21 +1,21 @@
 ---
 title: EditorConfig 文件适用的 .NET 命名约定
-ms.date: 08/07/2019
+ms.date: 03/31/2020
 ms.topic: reference
 helpviewer_keywords:
 - naming conventions [EditorConfig]
 - EditorConfig naming conventions
-author: TerryGLee
-ms.author: tglee
+author: mikadumont
+ms.author: midumont
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b5c4115f4d63456e105fb4a6770fd1650938770d
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: d4864cc20813bc57b35e315a3b415cb6902e6361
+ms.sourcegitcommit: 054815dc9821c3ea219ae6f31ebd9cd2dc8f6af5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75588598"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80543995"
 ---
 # <a name="net-naming-conventions-for-editorconfig"></a>EditorConfig 适用的 .NET 命名约定
 
@@ -23,7 +23,7 @@ ms.locfileid: "75588598"
 
 对于每个命名约定，必须使用下面介绍的属性指定适用的符号、命名样式和实施约定的严重性。 属性的顺序并不重要。
 
-首先，为命名规则选择一个标题，该标题可用于完全描述规则所需的每个属性。 例如，`public_members_must_be_capitalized` 是一个良好的描述性命名规则名称。 此页面将引用所选标题作为以下部分中的 <namingRuleTitle **\>** 。
+首先，为命名规则选择一个标题，该标题可用于完全描述规则所需的每个属性。 例如，`public_members_must_be_capitalized` 是一个良好的描述性命名规则名称。 此页面将引用所选标题作为以下部分中的 <namingRuleTitle\>  。
 
 ## <a name="symbols"></a>符号
 
@@ -31,7 +31,7 @@ ms.locfileid: "75588598"
 
 `dotnet_naming_rule.<namingRuleTitle>.symbols = <symbolTitle>`
 
-通过将 <symbolTitle **替换为描述性标题（如 \>），为该组符号提供名称**`public_symbols`。 将在三个属性名称中使用 <symbolTitle **，这三个属性用于介绍应用规则的符号（符号种类、可访问性级别和修饰符）\>** 。
+通过将 <symbolTitle\> 替换为描述性标题（如 `public_symbols`），为该组符号提供名称  。 将在三个属性名称中使用 <symbolTitle\>，这三个属性用于介绍应用规则的符号（符号种类、可访问性级别和修饰符）  。
 
 ### <a name="kinds-of-symbols"></a>符号种类
 
@@ -42,20 +42,23 @@ ms.locfileid: "75588598"
 以下列表显示了允许的值，可通过以逗号分隔值来指定多个值。
 
 - \*（使用此值可指定所有符号）
-- 命名空间
+- namespace
 - class
 - struct
 - interface
 - enum
-- 属性
-- 方法
-- Field — 字段
-- Event — 事件
-- 委托
-- 参数 (parameter)
+- property
+- method
+- field
+- event
+- delegate
+- parameter
 - type_parameter
-- 本地
+- local
 - local_function
+
+> [!NOTE] 
+> 目前不支持元组成员。
 
 ### <a name="accessibility-levels-of-symbols"></a>符号的可访问性级别
 
@@ -72,9 +75,9 @@ ms.locfileid: "75588598"
 - protected
 - protected\_internal 或 protected_friend
 - private\_protected
-- 本地
+- local
 
-   `local` 辅助功能级别适用于方法中定义的符号。 对于无法在代码中指定辅助功能的符号，定义命名约定非常有用。 例如，如果在常量命名约定 (`applicable_accessibilities = local`) 上指定 `required_modifiers = const`，则该规则只适用于方法中定义的常量，而不适用于类型中定义的常量。
+   `local` 辅助功能级别适用于方法中定义的符号。 对于无法在代码中指定辅助功能的符号，定义命名约定非常有用。 例如，如果在常量命名约定 (`required_modifiers = const`) 上指定 `applicable_accessibilities = local`，则该规则只适用于方法中定义的常量，而不适用于类型中定义的常量。
 
    ```csharp
    class TypeName
@@ -107,10 +110,10 @@ ms.locfileid: "75588598"
    > [!NOTE]
    > 如果 `static` 或 `shared` 符号有命名规则，此规则也适用于 `const` 符号，因为它们是隐式静态的。 如果不希望将 `static` 命名规则应用于 `const` 符号，请为 `const` 符号单独创建命名规则。
 
-命名规则与具有  *中指定的所有修饰符的签名匹配*`required_modifiers`。 如果忽略此属性，则使用一个空列表的默认值，即无需特定修饰符即可匹配。 这意味着符号的修饰符不会影响是否应用此规则。
+命名规则与具有 `required_modifiers` 中指定的所有修饰符的签名匹配  。 如果忽略此属性，则使用一个空列表的默认值，即无需特定修饰符即可匹配。 这意味着符号的修饰符不会影响是否应用此规则。
 
 > [!TIP]
-> 请勿为 `*` 指定 `required_modifiers` 值。 相反，只需省略 `required_modifiers` 属性，命名规则将适用于任何类型的修饰符。
+> 请勿为 `required_modifiers` 指定 `*` 值。 相反，只需省略 `required_modifiers` 属性，命名规则将适用于任何类型的修饰符。
 
 ## <a name="style"></a>样式
 
@@ -118,7 +121,7 @@ ms.locfileid: "75588598"
 
 `dotnet_naming_rule.<namingRuleTitle>.style = <styleTitle>`
 
-通过将 <styleTitle **值替换为描述性标题（如 \>），为样式提供名称**`first_word_upper_case_style`。 将在描述命名样式（前缀、后缀、文字分隔符和大写）的属性名称中使用 <styleTitle **值\>** 。 使用其中一个或多个属性描述样式。
+通过将 <styleTitle\> 值替换为描述性标题（如 `first_word_upper_case_style`），为样式提供名称  。 将在描述命名样式（前缀、后缀、文字分隔符和大写）的属性名称中使用 <styleTitle\> 值  。 使用其中一个或多个属性描述样式。
 
 ### <a name="require-a-prefix"></a>需要前缀
 
@@ -155,7 +158,7 @@ ms.locfileid: "75588598"
 > [!NOTE]
 > 必须在命名样式中指定大写样式，否则会忽略命名样式。
 
-## <a name="severity"></a>严重性
+## <a name="severity"></a>Severity
 
 要描述命名规则冲突的严重性，请按照以下格式指定一个属性：
 
@@ -163,11 +166,11 @@ ms.locfileid: "75588598"
 
 下表显示允许的严重性值及其含义：
 
-严重性 | 效果
+Severity | 效果
 ------------ | -------------
-none | 完全禁止显示规则。
+无 | 完全禁止显示规则。
 重构或无提示 | 如未遵循此样式，则不会向用户显示任何内容，但自动生成的代码会遵循此样式。
-建议 | 如未遵循此样式，则会以建议形式向用户显示此样式（如前两个字符下带点）。 编译时无任何效果。
+建议 | 如未遵循此样式，则会以建议形式向用户显示此样式（如前两个字符下带点）。 这在编译时没有影响。
 warning | 如未遵循此样式，“错误列表”中会显示编译器警告  。
 error | 如未遵循此样式，“错误列表”中会显示编译器错误  。
 
@@ -230,7 +233,7 @@ dotnet_naming_rule.public_members_must_be_capitalized.severity = warning
 
 ![命名规则警告](media/editorconfig-naming-rule-warning.png)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [语言约定](editorconfig-language-conventions.md)
 - [格式设置约定](editorconfig-formatting-conventions.md)

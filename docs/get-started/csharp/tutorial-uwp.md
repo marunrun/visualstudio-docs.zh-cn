@@ -14,12 +14,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: 8be56581374aefbef41a5173836d1189cceff290
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: cb559bc21b70b66d64bc44fb4269c97304dd81c3
+ms.sourcegitcommit: 054815dc9821c3ea219ae6f31ebd9cd2dc8f6af5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "77579996"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80543931"
 ---
 # <a name="tutorial-create-your-first-universal-windows-platform-application-in-visual-studio-with-xaml-and-c35"></a>教程：在 Visual Studio 中使用 XAML 和 C&#35 创建第一个通用 Windows 平台应用程序；
 
@@ -42,6 +42,9 @@ ms.locfileid: "77579996"
 1. 从顶部菜单栏中选择“文件”>“新建”>“项目”    。
 
 1. 在“新建项目”对话框的左侧窗格中，展开“Visual C#”，然后选择“Windows 通用”    。 在中间窗格中，选择“空白应用(通用 Windows)”  。 随后将项目命名为 HelloWorld，并选择“确定”   。
+
+   > [!NOTE]
+   > 请确保源项目的位置位于新技术文件系统 (NTFS) 格式化驱动器上，如操作系统 (OS) 驱动器  。 否则，生成和运行项目时可能会遇到问题。 
 
    ![Visual Studio IDE 中“新建项目”对话框中的 Windows 通用项目模板](media/new-project-csharp-uwp-helloworld.png)
 

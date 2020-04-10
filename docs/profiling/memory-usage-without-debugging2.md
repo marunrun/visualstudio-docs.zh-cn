@@ -1,7 +1,7 @@
 ---
 title: 分析不调试的内存使用情况 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/15/2018
+ms.date: 04/02/2020
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -13,28 +13,32 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: eaf853cd19a44af4cb8510fde11da95bfa7de5c1
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 5af369669245bca9c5de74566dd8594164acf8bb
+ms.sourcegitcommit: 9c1cecaff4d9955276eee7865b78d47679dd1e2a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77578344"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80638830"
 ---
 # <a name="analyze-memory-usage-without-the-debugger"></a>分析不调试的内存使用情况
 
 “内存使用情况”工具监视应用的内存使用情况  。 可以使用该工具来研究在 Visual Studio 中正在积极开发的场景的实时内存效果。 可以获取应用内存状态的详细情况快照，并比较快照以找出内存问题的根本原因。
 
-“内存使用情况”工具在带或不带调试器的情况下都可以运行  。 以下说明介绍如何在 Visual Studio“性能探查器”中使用不带调试器的“内存使用情况”工具   。
+“内存使用情况”工具在[带或不带调试器](../profiling/running-profiling-tools-with-or-without-the-debugger.md)的情况下都可以运行  。 本文介绍如何在 Visual Studio“性能探查器”中使用不带调试器的“内存使用情况”工具   。
 
 ## <a name="memory-usage-diagnostic-sessions"></a>内存使用情况诊断会话
 
 **启动内存使用情况诊断对话：**
 
-1. 请在 Visual Studio 中打开 C# 通用 Windows 平台 (UWP) 项目。
+1. 在 Visual Studio 中打开项目。
+
+   “内存使用情况”工具支持 .NET、ASP.NET、本机或混合模式（.NET 和本机）应用。
+
+1. 在“调试”菜单中，将解决方案配置设置为“发布”，然后选择“本地 Windows 调试器”（或“本地计算机”）作为部署目标    。
 
 1. 在菜单栏上，选择“调试”   > “性能探查器”  。
 
-1. 选择“内存使用情况”，然后选择“启动”   。
+1. 在“可用工具”下，选择“内存使用情况”，然后选择“启动”    。
 
    ![启动内存使用量诊断会话](../profiling/media/memuse_start_diagnosticssession.png "启动内存使用量诊断会话")
 
@@ -52,7 +56,7 @@ ms.locfileid: "77578344"
 
 要收集快照，请在要捕获内存数据时选择“拍摄快照”  。
 
-### <a name="BKMK_Close_a_monitoring_session"></a> 关闭诊断会话
+### <a name="close-the-diagnostic-session"></a><a name="BKMK_Close_a_monitoring_session"></a> 关闭诊断会话
 
 若要在不创建报告的情况下监视会话，只需关闭诊断窗口。 要在完成收集或拍摄快照后生成报表，请选择“停止收集”  。
 
@@ -64,7 +68,7 @@ ms.locfileid: "77578344"
 
 ![内存使用量概述页](../profiling/media/memuse__reportoverview1.png "内存使用量概述页")
 
-### <a name="BKMK_Memory_Usage_snapshot_views"></a> 内存使用情况快照
+### <a name="memory-usage-snapshots"></a><a name="BKMK_Memory_Usage_snapshot_views"></a> 内存使用情况快照
 
 “快照”窗格中的数字显示每个快照拍摄时内存中的字节和对象，以及快照和上一个快照之间的差异  。
 
@@ -89,17 +93,17 @@ ms.locfileid: "77578344"
 
 如果“对象类型”是蓝色，则可以在单独的窗口中选择它以导航到源代码中的对象  。
 
-无法识别或无法理解的代码中涉及的类型可能是 .NET Framework、操作系统或编译器对象。 如果这些对象涉及对象的所有权链，则“内存使用情况”工具会显示这些对象  。
+无法识别或无法理解的代码中涉及的类型可能是 .NET、操作系统或编译器对象。 如果这些对象涉及对象的所有权链，则“内存使用情况”工具会显示这些对象  。
 
 在快照报表中：
 
 - “托管堆”树在报表中显示类型和实例  。 通过选择类型或实例，可以显示选定项的**根路径**和**引用的对象**树。
 
-- “根的路径”树显示引用类型或实例的对象链  。 .NET Framework 垃圾回收器仅在释放对某个对象的所有引用后清理该对象的内存。
+- “根的路径”树显示引用类型或实例的对象链  。 .NET 垃圾回收器仅在释放对某个对象的所有引用后清理该对象的内存。
 
 - “引用类型”或“引用对象”树显示所选类型或实例引用的对象   。
 
-### <a name="BKMK_Report_tree_filters_"></a>报告树筛选器
+### <a name="report-tree-filters"></a><a name="BKMK_Report_tree_filters_"></a>报告树筛选器
 
 应用中的许多类型对应用程序开发人员来说并不是很有趣。 快照报表筛选器可以将大多数这些类型隐藏在“托管堆”和“根的路径”树的路径中   。
 
@@ -119,7 +123,7 @@ ms.locfileid: "77578344"
 
 这两个链接都会打开同一个报表。 唯一的区别是“托管堆”树的起始排序顺序不同  。 大小链接按“非独占大小(字节)”列对报表进行排序  。 对象链接按“计数”列对报表进行排序  。 可以在报表打开后更改排序列或顺序。
 
-### <a name="BKMK_Managed_Heap_tree__Snapshot_details_"></a>托管堆树（快照详细信息报表）
+### <a name="managed-heap-tree-snapshot-details-reports"></a><a name="BKMK_Managed_Heap_tree__Snapshot_details_"></a>托管堆树（快照详细信息报表）
  **托管堆**树列出了内存中保存的对象类型。 可以展开类型名称以查看十大类型示例（按大小排列）。 通过选择类型或实例，以显示选定项的“根的路径”和“引用对象”树   。
 
  ![托管堆树](../profiling/media/memuse__snapshotdetails_managedheaptree.png "托管堆树")
@@ -129,19 +133,19 @@ ms.locfileid: "77578344"
 |||
 |-|-|
 |“对象类型” |类型或对象实例的名称。|
-|**计数**|类型的对象实例数。 对于实例，“计数”始终为 1  。|
+|“计数” |类型的对象实例数。 对于实例，“计数”始终为 1  。|
 |“大小(字节)” |对于类型，快照中所有类型实例的大小都小于实例中包含的对象的大小。<br /><br /> 对于实例，对象的大小小于实例中包含的对象大小。 |
 |“非独占大小(字节)” |类型实例的大小或单个实例的大小，其中包括所含对象的大小。|
 |**模块**|包含此对象的模块。|
 
-### <a name="BKMK_Paths_to_Root_tree__Snapshot_details_"></a> 根的路径树（快照详细信息报表）
-“根的路径”树显示引用类型或实例的对象链  。 .NET Framework 垃圾回收器仅在释放对某个对象的所有引用后清理该对象的内存。
+### <a name="paths-to-root-tree-snapshot-details-reports"></a><a name="BKMK_Paths_to_Root_tree__Snapshot_details_"></a> 根的路径树（快照详细信息报表）
+“根的路径”树显示引用类型或实例的对象链  。 .NET 垃圾回收器仅在释放对某个对象的所有引用后清理该对象的内存。
 
 对于“根的路径”树中的类型，持有对该类型的引用的对象的数量将出现在“引用计数”列中   。
 
 ![类型的根树的路径](../profiling/media/memuse_snapshotdetails_type_pathstoroottree.png "类型的根树的路径")
 
-### <a name="BKMK_Referenced_Objects_tree__Snapshot_details_"></a> 引用类型或引用对象树（快照详细信息报表）
+### <a name="referenced-types-or-referenced-objects-tree-snapshot-details-reports"></a><a name="BKMK_Referenced_Objects_tree__Snapshot_details_"></a> 引用类型或引用对象树（快照详细信息报表）
 “引用类型”或“引用对象”树显示所选类型或实例引用的对象   。
 
 ![实例的引用对象树](../profiling/media/memuse_snapshotdetails_referencedobjects_instance.png "实例的引用对象树")
@@ -164,7 +168,7 @@ ms.locfileid: "77578344"
 
  ![快照窗格中指向差异报表的链接](../profiling/media/memuse_snapshotview_snapshotdifflinks.png "快照窗格中指向差异报表的链接")
 
-### <a name="BKMK_Managed_Heap_tree__Snapshot_diff_"></a>托管堆树（快照差异报表）
+### <a name="managed-heap-tree-snapshot-diff-reports"></a><a name="BKMK_Managed_Heap_tree__Snapshot_diff_"></a>托管堆树（快照差异报表）
 
  **托管堆**树列出了内存中保存的对象类型。 你可以展开类型名称以查看十大类型示例（按大小排列）。 通过选择类型或实例，以显示选定项的“根的路径”和“引用对象”树   。
 
@@ -175,7 +179,7 @@ ms.locfileid: "77578344"
 |||
 |-|-|
 |“对象类型” |类型或对象实例的名称。|
-|**计数**|主要快照中的类型实例的数量。 对于实例，“计数”  始终为 1。|
+|“计数” |主要快照中的类型实例的数量。 对于实例，“计数”  始终为 1。|
 |“计数差异” |对于类型，则为主要快照与上一个快照之间的类型实例数的差异。 对于实例，字段是空白的。|
 |“大小(字节)” |主快照中对象的大小小于对象中包含的对象的大小。 对于类型，“大小(字节)”  和“非独占大小(字节)”  为类型实例的总大小。|
 |“总大小差异(字节)” |对于类型，主快照和上一个快照之间的类型实例总大小的差异小于实例中包含的对象的大小。 对于实例，字段是空白的。|
@@ -183,15 +187,15 @@ ms.locfileid: "77578344"
 |“非独占大小差异(字节)” |对于类型，主快照和上一个快照之间的所有类型实例大小的差异，其中包括对象中包含的对象的大小。 对于实例，字段是空白的。|
 |**模块**|包含此对象的模块。|
 
-### <a name="BKMK_Paths_to_Root_tree__Snapshot_diff_"></a> 根的路径树（快照差异报表）
+### <a name="paths-to-root-tree-snapshot-diff-reports"></a><a name="BKMK_Paths_to_Root_tree__Snapshot_diff_"></a> 根的路径树（快照差异报表）
 
-“根的路径”树显示引用类型或实例的对象链  。 .NET Framework 垃圾回收器仅在释放对某个对象的所有引用后清理该对象的内存。
+“根的路径”树显示引用类型或实例的对象链  。 .NET 垃圾回收器仅在释放对某个对象的所有引用后清理该对象的内存。
 
 对于“根的路径”树中的类型，持有对该类型的引用的对象的数量将出现在“引用计数”列中   。 上一个快照的差异计数显示在“引用差异”列  。
 
  ![差异报表中指向根树的路径](../profiling/media/memuse_snapshotdiff_pathstoroot_instance_all.png "差异报表中指向根树的路径")
 
-### <a name="BKMK_Referenced_Objects_tree__Snapshot_diff_"></a> 引用类型或引用对象树（快照差异报表）
+### <a name="referenced-types-or-referenced-objects-tree-snapshot-diff-reports"></a><a name="BKMK_Referenced_Objects_tree__Snapshot_diff_"></a> 引用类型或引用对象树（快照差异报表）
 
 “引用类型”或“引用对象”树显示所选类型或实例引用的对象   。
 
@@ -210,7 +214,7 @@ ms.locfileid: "77578344"
 |“非独占大小差异(字节)” |对于类型，主快照和上一个快照之间的所有类型实例大小的差异，其中包括对象中包含的对象的大小。|
 |**模块**|包含此对象的模块。|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [JavaScript 内存](../profiling/javascript-memory.md)
 - [使用 Visual Studio 分析](../profiling/index.yml)
 - [首先了解分析工具](../profiling/profiling-feature-tour.md)

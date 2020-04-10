@@ -1,7 +1,7 @@
 ---
 title: 分析 CPU 使用率 | Microsoft Docs
 ms.custom: seodec18
-ms.date: 11/04/2018
+ms.date: 04/02/2020
 ms.topic: conceptual
 ms.assetid: 7501a20d-04a1-480f-a69c-201524aa709d
 author: mikejo5000
@@ -9,18 +9,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 351247f50560896d53267fcf8d7f4a66a81b9461
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 88272af1733dbbaf7f46743388a8ecb6522e9f1a
+ms.sourcegitcommit: 9c1cecaff4d9955276eee7865b78d47679dd1e2a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62553433"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80638839"
 ---
 # <a name="analyze-cpu-usage"></a>分析 CPU 使用情况
 
 开始调查应用中的性能问题的好方法之一是了解其 CPU 使用情况。 “CPU 使用情况”性能工具显示 C++、C#/Visual Basic 以及 JavaScript 应用中执行代码所花费的 CPU 时间和百分比  。
 
-“CPU 使用情况”工具可以在打开的 Visual Studio 项目、在已安装的 Microsoft Store 应用上运行，也可以附加到正在运行的应用或进程  。 可以在本地或远程计算机运行该工具，也可以在模拟器或仿真器上运行该工具。 有关详细信息，请参阅[运行带或不带调试器的分析工具](../profiling/running-profiling-tools-with-or-without-the-debugger.md)。
+“CPU 使用情况”工具可以在打开的 Visual Studio 项目、在已安装的 Microsoft Store 应用上运行，也可以附加到正在运行的应用或进程  。 有关详细信息，请参阅[运行带或不带调试器的分析工具](../profiling/running-profiling-tools-with-or-without-the-debugger.md)。
 
 无论是否进行调试，都可以运行“CPU 使用情况”工具  。 在调试器中，可以打开和关闭 CPU 分析，并查看 CPU 使用情况的每个细分功能。 可以在暂停执行时（例如在断点处）查看 CPU 使用情况结果。
 
@@ -33,7 +33,7 @@ ms.locfileid: "62553433"
 
 ## <a name="collect-cpu-usage-data"></a>收集 CPU 使用量数据
 
-1. 在 Visual Studio 项目中，将解决方案配置设置为“发布”，然后选择“本地计算机”作为部署目标   。
+1. 在 Visual Studio 项目中，将解决方案配置设置为“发布”，然后选择“本地 Windows 调试器”（或“本地计算机”）作为部署目标    。
 
     ![选择“版本”和“本地计算机”](../profiling/media/cpuuse_selectreleaselocalmachine.png "选择“版本”和“本地计算机”")
 
