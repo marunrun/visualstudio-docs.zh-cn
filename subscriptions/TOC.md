@@ -75,7 +75,6 @@
 ### [超级管理员和管理人员](admin-roles.md)
 ### [设置协议首选项](admin-prefs.md)
 ### [概述](using-admin-portal.md)
-### [视频教程：使用管理门户](https://www.youtube.com/watch?v=XG-E-IDjA-w&list=PLReL099Y5nReJhZ6o8CQFPSBgzGCHX99_&index=3&t=0s)
 ### 分配订阅
 #### [添加单用户](assign-license.md)
 #### [添加多个用户](assign-license-bulk.md)
