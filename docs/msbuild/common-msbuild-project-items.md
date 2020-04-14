@@ -71,7 +71,7 @@ ms.locfileid: "77634443"
 
 |项元数据名称|描述|
 |---------------|-----------------|
-|Name|必选字符串。 清单文件基名称。|
+|Name|必选字符串。清单文件的基名称。|
 |HintPath|必选字符串。 清单文件的相对路径。|
 
 ### <a name="projectreference"></a>ProjectReference
@@ -108,7 +108,7 @@ ms.locfileid: "77634443"
 | LastGenOutput | 必选字符串。 在此项上运行的任何文件生成器创建的文件的名称。 |
 | CustomToolNamespace | 必选字符串。 在此项上运行的任何文件生成器应在其中创建代码的命名空间。 |
 | Link | 可选的字符串。 如果文件在物理上处于项目的影响范围之外，则显示符号路径。 |
-| Visible | 可选的布尔值。 指示是否要在 Visual Studio 中的“解决方案资源管理器”  中显示文件。 |
+| Visible | 可选的布尔值。指示是否要在 Visual Studio 中的“解决方案资源管理器”中显示文件。|
 | CopyToOutputDirectory | 可选的字符串。 确定是否将文件复制到输出目录。 值为：<br /><br /> 1.Never<br />2.Always<br />3.PreserveNewest |
 | LogicalName | 必选字符串。 嵌入资源的逻辑名称。 |
 
@@ -125,7 +125,7 @@ ms.locfileid: "77634443"
 | Link | 可选的字符串。 文件在物理上处于项目的影响范围之外时要显示的符号路径。 |
 | PublishState | 必选字符串。 内容的发布状态，为以下任一项：<br /><br /> -   默认<br />-   已包括<br />-   已排除<br />-   数据文件<br />-   必备组件 |
 | IsAssembly | 可选的布尔值。 指定文件是否为程序集。 |
-| Visible | 可选的布尔值。 指示是否要在 Visual Studio 中的“解决方案资源管理器”  中显示文件。 |
+| Visible | 可选的布尔值。指示是否要在 Visual Studio 中的“解决方案资源管理器”中显示文件。|
 | CopyToOutputDirectory | 可选的字符串。 确定是否将文件复制到输出目录。 值为：<br /><br /> 1.Never<br />2.Always<br />3.PreserveNewest |
 
 ### <a name="none"></a>None
@@ -139,7 +139,7 @@ ms.locfileid: "77634443"
 | LastGenOutput | 必选字符串。 在此项上运行的任何文件生成器创建的文件的名称。 |
 | CustomToolNamespace | 必选字符串。 在此项上运行的任何文件生成器应在其中创建代码的命名空间。 |
 | Link | 可选的字符串。 文件在物理上处于项目的影响范围之外时要显示的符号路径。 |
-| Visible | 可选的布尔值。 指示是否要在 Visual Studio 中的“解决方案资源管理器”  中显示文件。 |
+| Visible | 可选的布尔值。指示是否要在 Visual Studio 中的“解决方案资源管理器”中显示文件。|
 | CopyToOutputDirectory | 可选的字符串。 确定是否将文件复制到输出目录。 值为：<br /><br /> 1.Never<br />2.Always<br />3.PreserveNewest |
 
 ### <a name="assemblymetadata"></a>AssemblyMetadata
