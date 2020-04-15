@@ -1,7 +1,7 @@
 ---
 title: 使用 Visual Studio 调试器附加到正在运行的进程 | Microsoft Docs
 ms.custom: seodec18
-ms.date: 04/08/2019
+ms.date: 04/14/2020
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.processes.attach
@@ -28,12 +28,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b5305be7615e426d7792d8dd3fefb2579e2ab6be
-ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
+ms.openlocfilehash: 075f5b0df703e31ea265085f422567a4fb5298a4
+ms.sourcegitcommit: cc58ca7ceae783b972ca25af69f17c9f92a29fc2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80233028"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81385484"
 ---
 # <a name="attach-to-running-processes-with-the-visual-studio-debugger"></a>使用 Visual Studio 调试器附加到运行的进程
 你可将 Visual Studio 调试器附加到正在本地或远程计算机上运行的进程上。 进程运行后，选择 **"调试** > **附加到进程"** 或在可视化工作室中按**Ctrl**+**Alt**+**P，** 并使用 **"附加到进程"** 对话框将调试器附加到进程。
@@ -73,10 +73,10 @@ ms.locfileid: "80233028"
 3. 在“附加到”字段中，确保已列出计划调试的代码类型****。 默认的“自动”设置适用于大多数应用类型****。
 
    要手动选择代码类型：
-   1. 单击“选择”。
+   1. 单击“选择”  。
    1. 在“选择代码类型”对话框中，选择“调试这些代码类型”********。
    1. 选择要调试的代码类型。
-   1. 选择“确定”。
+   1. 选择“确定”  。
 
 4. 选择“附加”。****
 
@@ -137,10 +137,10 @@ ms.locfileid: "80233028"
 5. 在“附加到”字段中，确保已列出计划调试的代码类型****。 默认的“自动”设置适用于大多数应用类型****。
 
    要手动选择代码类型：
-   1. 单击“选择”。
+   1. 单击“选择”  。
    1. 在“选择代码类型”对话框中，选择“调试这些代码类型”********。
    1. 选择要调试的代码类型。
-   1. 选择“确定”。
+   1. 选择“确定”  。
 
 6. 选择“附加”。****
 
@@ -253,15 +253,15 @@ ms.locfileid: "80233028"
 
 为使调试器附加到用 C++ 编写的代码，该代码需要发出 `DebuggableAttribute`。 可通过链接 [/ASSEMBLYDEBUG](/cpp/build/reference/assemblydebug-add-debuggableattribute) 链接器选项将它自动添加到代码中。
 
-对于客户端脚本调试，必须在浏览器中启用脚本调试。 要在 Chrome 上调试客户端脚本，请选择**Web 工具包**作为代码类型，并且根据您的应用类型，您可能需要关闭所有 Chrome 实例并在调试模式下启动浏览器（从命令行键入`chrome.exe --remote-debugging-port=9222`）。
+对于客户端脚本调试，必须在浏览器中启用脚本调试。 要在 Chrome 上调试客户端脚本，请选择**JavaScript（Chrome）** 或**JavaScript（微软边缘 - 铬）** 作为代码类型，并且根据您的应用类型，您可能需要关闭所有 Chrome 实例并在调试模式下启动浏览器（从命令行键入`chrome.exe --remote-debugging-port=9222`）。 在早期版本的 Visual Studio 中，Chrome 的脚本调试器是**Web 工具包**。
 
 要快速选择要附加到的视觉工作室中的正在运行的进程，请在"视觉工作室"中键入**Ctrl**+**Alt**+**P，** 然后键入进程名称的第一个字母。
 
-|方案|调试方法|进程名称|备注和链接|
+|场景|调试方法|进程名称|备注和链接|
 |-|-|-|-|
 |iIS 服务器上的远程调试ASP.NET 4 或 4.5|使用远程工具并**附加到流程**|*w3wp.exe*|请参阅[远程 IIS 计算机上的远程调试ASP.NET](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md)|
-|IIS 服务器上的远程调试ASP.NET核心|使用远程工具并**附加到流程**|*点net.exe*或*应用程序名称.exe*|有关应用部署，请参阅[发布到 IIS](https://docs.asp.net/en/latest/publishing/iis.html)。 有关调试，请参阅[远程 IIS 计算机上的远程调试ASP.NET核心](../debugger/remote-debugging-aspnet-on-a-remote-iis-computer.md)|
-|调试本地 IIS 服务器上的客户端脚本，用于受支持的应用类型 |使用**附加到流程**|*chrome.exe，**微软EdgeCP.exe，* 或*iexplore.exe*|必须启用脚本调试。 对于 Chrome，您还必须在调试模式下运行 Chrome，并在 **"附加到**"字段中选择**Webkit 代码**。|
+|IIS 服务器上的远程调试ASP.NET核心|使用远程工具并**附加到流程**|*w3wp.exe*或*dotnet.exe*|从 .NET Core 3 开始 *，w3wp.exe*进程用于默认[的应用内托管模型](/aspnet/core/host-and-deploy/aspnet-core-module?view=aspnetcore-3.1#hosting-models)。 有关应用部署，请参阅[发布到 IIS](/aspnet/core/host-and-deploy/iis/)。 有关详细信息，请参阅[远程 IIS 计算机上的远程调试ASP.NET酷睿](../debugger/remote-debugging-aspnet-on-a-remote-iis-computer.md#BKMK_attach)|
+|调试本地 IIS 服务器上的客户端脚本，用于受支持的应用类型 |使用**附加到流程**|*chrome.exe，**微软EdgeCP.exe，* 或*iexplore.exe*|必须启用脚本调试。 对于 Chrome，您还必须在调试模式下运行 Chrome（`chrome.exe --remote-debugging-port=9222`从命令行键入），并在 **"附加到**"字段中选择**JavaScript（Chrome）。**|
 |在本地计算机上调试 C#、可视基础或C++应用|使用标准调试 （**F5**） 或**附加到进程**|*\<应用程序名称>.exe*|在大多数情况下，使用标准调试而不是**附加到进程**。|
 |远程调试 Windows 桌面应用|远程工具|空值| 请参阅[远程调试 C# 或可视化基本应用](../debugger/remote-debugging-csharp.md)或[远程调试C++应用](../debugger/remote-debugging-cpp.md)|
 |调试 .NET Linux 上的内核|使用**附加到流程**|*dotnet.exe*|要使用 SSH，请参阅[使用 SSH 在 Linux 上运行的远程调试 .NET 内核](../debugger/remote-debugging-dotnet-core-linux-with-ssh.md)。 |
@@ -301,13 +301,13 @@ ms.locfileid: "80233028"
 
     3. 在 **“选择代码类型”** 对话框中，选择 **“调试以下代码类型”** 和未能附加的代码类型。 取消选择其他代码类型。
 
-    4. 选择“确定”。
+    4. 选择“确定”  。
 
     5. 在"**附加到进程"** 对话框中，选择 **"附加**"。
 
     此时，附加将彻底失败，并且你将收到一条特定的错误消息。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [调试多个进程](../debugger/debug-multiple-processes.md)
 - [及时调试](../debugger/just-in-time-debugging-in-visual-studio.md)
