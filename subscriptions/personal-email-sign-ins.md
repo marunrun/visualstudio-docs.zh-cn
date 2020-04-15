@@ -4,18 +4,18 @@ author: evanwindom
 ms.author: lank
 manager: lank
 ms.assetid: 3f4b0528-03f0-4a02-b3c3-a39292a9bbe1
-ms.date: 04/07/2020
+ms.date: 04/10/2020
 ms.topic: conceptual
 description: Visual Studio 订阅 – 为什么我会在我的订阅者中看到 Hotmail 或 Gmail 地址？
-ms.openlocfilehash: e926caa8aef5a655b1f09ab8d6dbab1d70946827
-ms.sourcegitcommit: 1f7aed335c48215dff5c151f76f22e3f10e8b564
+ms.openlocfilehash: 44b18bd46d55349fae5a3ece03cee9fe93240148
+ms.sourcegitcommit: 316dd2182dd56b0cbde49f0cd82e9f75baa2530f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80808340"
+ms.lasthandoff: 04/12/2020
+ms.locfileid: "81223679"
 ---
 # <a name="visual-studio-subscriptions--why-do-i-see-personal-accounts-for-my-subscribers"></a>Visual Studio 订阅 - 我为什么会看到我的订阅者的个人帐户？
-随着公司从批量许可服务中心 (VLSC) 迁移到新的 Visual Studio [订阅管理门户](https://manage.visualstudio.com)，管理员惊奇地发现某些订阅者的“登录电子邮件地址”显示 Hotmail 或 Outlook 等个人电子邮件地址。  有关详细信息，请观看[此视频](https://www.youtube.com/watch?v=J61EYaVN-dQ&list=PLReL099Y5nReJhZ6o8CQFPSBgzGCHX99_&index=6)。
+随着公司从批量许可服务中心 (VLSC) 迁移到新的 Visual Studio [订阅管理门户](https://manage.visualstudio.com)，管理员惊奇地发现某些订阅者的“登录电子邮件地址”显示 Hotmail 或 Outlook 等个人电子邮件地址。  
 
 ## <a name="cause"></a>原因
 由于登录进程与旧版 MSDN 订阅者体验相关联，因此会出现这种情况。 用户在没有修改的情况下从批量许可服务中心 (VLSC) 迁移到了 Visual Studio 订阅管理门户。 管理员可能没有意识到，用户一直在使用个人帐户来访问他们的订阅权益。 在 Visual Studio 订阅者迁移之前（已于 2016 年完成迁移），要成功使用 Visual Studio 订阅需执行以下两个操作：
@@ -31,12 +31,12 @@ ms.locfileid: "80808340"
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4th6B]
 
-要解决此问题，只需选择“连接电子邮件”按钮，然后系统会尝试根据匹配姓氏和名字，将具有 MSA 的帐户与你组织的 Azure Active Directory (Azure AD) 中的现有用户相匹配。 如果出现错误，你可单击任何匹配项右侧的 X，删除该匹配项。  
+要解决此问题，只需选择“连接电子邮件”按钮，然后系统会尝试根据匹配姓氏和名字，将具有 MSA 的帐户与你组织的 Azure Active Directory (Azure AD) 中的现有用户相匹配  。 如果出现错误，你可单击任何匹配项右侧的 X，删除该匹配项  。  
 
 > [!div class="mx-imgBorder"]
 > ![“连接电子邮件”按钮](_img/connect-emails/connect-emails-button.png)
 
-你还可使用“搜索目录”来更正问题或填入来自 Azure AD 的缺失信息。 如果所有匹配看起来都正确，你可选中“选择所有匹配的订阅者”，而不是一次选择一人。  
+你还可使用“搜索目录”来更正问题或填入来自 Azure AD 的缺失信息  。 如果所有匹配看起来都正确，你可选中“选择所有匹配的订阅者”，而不是一次选择一人。  
 
 > [!div class="mx-imgBorder"]
 > ![“连接电子邮件”弹出式菜单](_img/connect-emails/connect-emails-flyout.png)

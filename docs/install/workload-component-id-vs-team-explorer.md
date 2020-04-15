@@ -15,12 +15,13 @@ helpviewer_keywords:
 ms.assetid: c6ef9a3b-d13d-49b4-9faa-51fa06b21e1f
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: b7441802537a14efb56bbde852ab237de7329de1
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+open_to_public_contributors: false
+ms.openlocfilehash: 2cc621e934b172b1eb253a5990d5f3e950f0a5ee
+ms.sourcegitcommit: 22deb247ad951e4971f27fdab413b158415d0584
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79437561"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81276365"
 ---
 # <a name="visual-studio-team-explorer-component-directory"></a>Visual Studio 团队资源管理器组件目录
 
@@ -44,7 +45,7 @@ ms.locfileid: "79437561"
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 * [Visual Studio 工作负荷和组件 ID](workload-and-component-ids.md)
 * [Visual Studio 管理员指南](visual-studio-administrator-guide.md)
