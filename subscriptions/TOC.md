@@ -2,7 +2,7 @@
 # [新增功能](whats-new-in-subscriptions.md)
 # 订阅
 ## 购买订阅
-### [零售](https://visualstudio.microsoft.com/vs/pricing)
+### [零售](buy-activate-retail.md)
 ### 云 
 #### [概述](vscloud-overview.md)
 #### [账单常见问题解答](vscloud-billing-faq.md)
@@ -13,7 +13,6 @@
 #### [管理面向 MPN 的订阅](manage-mpn-subscriptions.md)
 ### [启动 Microsoft](program-startups.md)
 ## 登录 
-### [激活零售订阅](activate-store-subscriptions.md)
 ### [使用 Microsoft 帐户登录](sign-in-msa.md)
 ### [使用工作或学校帐户登录](sign-in-work.md)
 ### [使用 GitHub 登录](sign-in-github.md)
