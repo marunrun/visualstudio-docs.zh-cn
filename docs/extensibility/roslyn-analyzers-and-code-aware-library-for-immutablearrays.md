@@ -8,12 +8,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7d6b26d27c77ecb578d8eef0807c35b8efb8581a
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: 2076bc9fe3cabbfef8d3f3fb0248724835fa83f5
+ms.sourcegitcommit: 7b60e81414a82c6d34f6de1a1f56115c9cd26943
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80701393"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81444565"
 ---
 # <a name="roslyn-analyzers-and-code-aware-library-for-immutablearrays"></a>用于不可改变阵列的 Roslyn 分析仪和代码感知库
 
@@ -312,4 +312,4 @@ private async Task<Document> ChangeToImmutableArrayEmpty(
 * [GitHub 上已完成的代码](https://github.com/DustinCampbell/CoreFxAnalyzers/tree/master/Source/CoreFxAnalyzers)
 * [GitHub 的几个示例，分为三种分析器](https://github.com/dotnet/roslyn/blob/master/docs/analyzers/Analyzer%20Samples.md)
 * [GitHub OSS 网站上的其他文档](https://github.com/dotnet/roslyn/tree/master/docs/analyzers)
-* [在 GitHub 上使用 Roslyn 分析器实现的 FxCop 规则](https://github.com/dotnet/roslyn/tree/master/src/Diagnostics/FxCop)
+* [在 GitHub 上使用 Roslyn 分析器实现的 FxCop 规则](https://github.com/dotnet/roslyn/tree/master/src/Features/Core/Portable/Diagnostics/Analyzers)

@@ -18,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 876781cb6967f5d10dddccd54a46e218170445ab
-ms.sourcegitcommit: 92361aac3665a934faa081e1d1ea89a067b01c5b
+ms.openlocfilehash: 46bfa808cbf99e942d7aadd2802f51eecfcefae8
+ms.sourcegitcommit: 7b60e81414a82c6d34f6de1a1f56115c9cd26943
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79432197"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81444901"
 ---
 # <a name="deploying-a-visual-studio-tools-for-office-solution-using-windows-installer"></a>使用 Windows 安装程序部署用于办公室解决方案的可视化工作室工具
 
@@ -122,7 +122,7 @@ Microsoft Office 使用注册表项查找和加载加载加载加载项。这些
 ::: moniker-end
 ::: moniker range="=vs-2019"
 3. 在"**添加新项目**"对话框中，选择 **"设置项目"** 模板。
-4. 单击“下一步”****。
+4. 单击“下一步”。 
 ::: moniker-end
 
 5. 在 **"名称**"框中，键入**OfficeAddInsetup**。
@@ -593,7 +593,7 @@ s
 ## <a name="about-the-authors"></a>关于作者
 
 Wouter van Vugt 是 Microsoft MVP，拥有 Office 开放 XML 技术，是专注于创建具有 SharePoint、Microsoft Office 和相关 .NET 技术的 Office 业务应用程序 （OBA） 的独立顾问。
-沃特是开发商社区网站（如[OpenXmlDeveloper.org](http://openxmldeveloper.org/)和[MSDN）](/previous-versions/office/developer/office-2007/bb879915(v=office.12))的频繁贡献者。 他发表了几篇白皮书和文章，以及一本在线文章，名为"打开 XML：解释电子书"。
-Wouter 是 Code-Counsel 的创始人，这家荷兰公司专注于通过各种渠道提供尖端技术内容。 你可以通过阅读他的博客和访问[代码顾问网站](http://www.code-counsel.net/)来了解更多关于伍特的信息。
+沃特是开发者社区网站（如[MSDN）](/previous-versions/office/developer/office-2007/bb879915(v=office.12))的频繁贡献者。 他发表了几篇白皮书和文章，以及一本在线文章，名为"打开 XML：解释电子书"。
+Wouter 是 Code-Counsel 的创始人，这家荷兰公司专注于通过各种渠道提供尖端技术内容。 你可以通过阅读他的博客来了解更多关于伍特的信息。
 
 泰德·帕蒂森是 SharePoint MVP、作者、培训师和泰德·帕蒂森集团的创始人。 2005 年秋季，Ted 被 Microsoft 的开发人员平台福音组聘用，为 Windows SharePoint 服务 3.0 和 Microsoft Office SharePoint Server 2007 撰写了 Ascend 开发人员培训课程。 从那时起，Ted 一直专注于对专业开发人员进行 SharePoint 2007 技术教育。 Ted 为 Microsoft 出版社撰写了一本名为《Windows SharePoint 服务 3.0》的书，该书重点介绍了如何使用 SharePoint 作为构建业务解决方案的开发平台。 Ted 还为 MSDN 杂志撰写了一个标题为"办公空间"的面向开发人员的专栏。

@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d509292bc3c7a909289abf0c73babccfead31532
-ms.sourcegitcommit: cc58ca7ceae783b972ca25af69f17c9f92a29fc2
+ms.openlocfilehash: d6173d6b3525a1bd723bc859d34b889b3796d295
+ms.sourcegitcommit: c3b92a9912a5816f16c6059d1738dbc833851346
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/15/2020
-ms.locfileid: "81385399"
+ms.locfileid: "81397371"
 ---
 # <a name="unable-to-connect-to-the-microsoft-visual-studio-remote-debugging-monitor"></a>Unable to Connect to the Microsoft Visual Studio Remote Debugging Monitor
 由于远程调试监视器未在远程计算机上正确设置，或者由于网络问题或存在防火墙，无法访问远程计算机，因此可能会出现此消息。
@@ -34,6 +34,7 @@ ms.locfileid: "81385399"
 
 - [调试器无法连接到远程计算机。调试器无法解析指定的计算机名称](#cannot_connect)
 - [远程调试器拒绝了连接请求](#rejected)
+- [与远程终结点的连接已终止](#connection_terminated)
 - [对内存位置的无效访问](#invalid_access)
 - [远程计算机上没有按指定名称运行的服务器](#no_server)
 - [请求的名称有效，但未找到请求类型的数据](#valid_name)
@@ -67,17 +68,19 @@ ms.locfileid: "81385399"
 
 如果这些值正确，并且消息提到 Windows**身份验证**模式，请检查远程调试器是否处于正确的身份验证模式（**工具>选项**）。
 
-## <a name="the-connection-with-the-remote-endpoint-was-terminated"></a><a name="connection_terminated"></a>与远程终结点的连接已终止
+## <a name="connection-with-the-remote-endpoint-was-terminated"></a><a name="connection_terminated"></a>与远程终结点的连接已终止
 
 如果要调试 Azure 应用服务应用，请尝试使用云资源管理器或服务器资源管理器中的[附加调试器](../debugger/remote-debugging-azure.md#remote_debug_azure_app_service)命令，而不是**附加到进程**。
 
 如果使用 **"附加到进程"** 来调试：
 
-1. 在 **"附加到进程**"对话框或项目属性中，请确保远程计算机名称和端口号与远程调试器窗口中显示的名称和端口号匹配。 如果不正确，请修复并重试。
+- 在 **"附加到进程**"对话框或项目属性中，请确保远程计算机名称和端口号与远程调试器窗口中显示的名称和端口号匹配。 如果不正确，请修复并重试。
 
-2. 请查看服务器上的应用程序日志（Windows 上的事件查看器），以获取更多详细信息以帮助解决问题。
+- 如果尝试使用主机名进行连接，请尝试改用 IP 地址。
 
-3. 否则，请尝试重新启动具有管理员权限的可视化工作室，然后重试。
+- 请查看服务器上的应用程序日志（Windows 上的事件查看器），以获取更多详细信息以帮助解决问题。
+
+- 否则，请尝试重新启动具有管理员权限的可视化工作室，然后重试。
 
 ## <a name="invalid-access-to-memory-location"></a><a name="invalid_access"></a>对内存位置的无效访问
 
@@ -176,5 +179,5 @@ ms.locfileid: "81385399"
 ## <a name="more-help"></a>更多帮助
  要获得更多远程调试器帮助，打开远程调试器的帮助页（**帮助>** 远程调试器中的使用情况）。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [远程调试](../debugger/remote-debugging.md)

@@ -11,12 +11,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4056e4dedf06ffe86755bf946c77032d6f6782dd
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: afd1d79d7f1846e60386d2a9478466bf7eae72e4
+ms.sourcegitcommit: 7b60e81414a82c6d34f6de1a1f56115c9cd26943
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80702043"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81444643"
 ---
 # <a name="private-galleries"></a>私人画廊
 通过将控件、模板和工具发布到组织 Intranet 上的*专用库*，可以共享这些控件、模板和工具，如下所示：
@@ -32,7 +32,7 @@ ms.locfileid: "80702043"
 
 ### <a name="to-add-a-private-gallery-to-extensions-and-updates"></a>将专用库添加到扩展和更新
 
-1. 在菜单栏上，选择 **"工具** > **选项**"。
+1. 在菜单栏上，依次选择“工具” > “选项”   。
 
 2. 在 **"环境"** 节点中，选择 **"扩展"和"更新**"。
 
@@ -42,9 +42,9 @@ ms.locfileid: "80702043"
 
 5. 在**URL**字段中，输入托管专用库的 Atom 源或 SharePoint 站点的 URL。
 
-    1. 如果主机是连接到专用库的 Atom 源，则 URL 将类似于此 URL： http://www.mywebsite/mygallery/atom.xml。  此 URL 可以引用文件或网络路径。
+    1. 如果主机是连接到专用库的 Atom 源，则 URL 将类似于此 URL： `http://www.mywebsite/mygallery/atom.xml`。  此 URL 可以引用文件或网络路径。
 
-    2. 如果主机是 SharePoint 站点，则 URL 将类似于此http://mysharepoint/sites/mygallery/forms/AllItems.aspx站点： 。
+    2. 如果主机是 SharePoint 站点，则 URL 将类似于此`http://mysharepoint/sites/mygallery/forms/AllItems.aspx`站点： 。
 
 ### <a name="manage-private-galleries"></a>管理私人画廊
  管理员可以通过修改每台计算机上的系统注册表，同时使专用库可供多台计算机使用。 为此，请创建一个 *.pkgdef*文件，描述新的注册表项及其值。  此文件的格式如下。
