@@ -11,12 +11,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 416926742da427ba7ff18c6fa07de6477361cfa3
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: 260bc6ff6eb2d0bfbf0b9abd19062892c358728a
+ms.sourcegitcommit: b4e0cc76d94fe8cf6d238c4cc09512d17131a195
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "78235075"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81224519"
 ---
 # <a name="tutorial-create-a-nodejs-and-express-app-in-visual-studio"></a>教程：在 Visual Studio 中创建 Node.js 和 Express 应用
 
@@ -56,7 +56,7 @@ Npm 是 Node.js 的默认包管理器。 包管理器使程序员更容易发布
 
 ### <a name="what-is-express"></a>Express 是什么？
 
-Express 是一个 Web 应用程序框架，用作 Node.js 构建 Web 应用程序的服务器框架。 Express 允许使用不同的前端框架来创建 UI，例如 Pug（以前称为 Jade）。 本教程中使用了 Pug。
+Express 是一个 Web 应用程序框架，用作 Node.js 构建 Web 应用程序的服务器框架。 使用 Express，你可以选择不同的前端框架来创建 UI，例如 Pug（以前称为 Jade）。 本教程中使用了 Pug。
 
 ## <a name="prerequisites"></a>先决条件
 
@@ -119,7 +119,7 @@ Visual Studio 管理项目中的单个应用程序的文件  。 该项目包括
 
 ## <a name="add-some-code"></a>添加一些代码
 
-该应用程序将 Pug 用于前端 JavaScript 框架。 Pug 使用编译为 HTML 的简单标记代码。 （将 Pug 设置为 app.js 中的视图引擎  。 在 app.js 中设置视图引擎的代码是 `app.set('view engine', 'pug');`  。）
+该应用程序将 Pug 用于前端 JavaScript 框架。 Pug 使用编译为 HTML 的简单标记代码。 （将 Pug 设置为 app.js 中的视图引擎  。 在 app.js 中设置视图引擎的代码是 `app.set('view engine', 'pug');` 。）
 
 1. 在解决方案资源管理器（右窗格）中，打开“视图”文件夹，然后打开 index.pug  。
 

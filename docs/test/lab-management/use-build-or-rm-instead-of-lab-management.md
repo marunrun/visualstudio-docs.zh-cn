@@ -9,16 +9,19 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: bd6e9b2d9ea408e451b7032a00c3c96fb0ef2b58
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: ca762c103ab5b3d3e94b3117dd9570787562b002
+ms.sourcegitcommit: 5d1b2895d3a249c6bea30eb12b0ad7c0f0862d85
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75566821"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80880125"
 ---
 # <a name="use-azure-test-plans-instead-of-lab-management-for-automated-testing"></a>使用 Azure Test Plans 代替实验室管理工具版进行自动测试
 
 如果使用 Microsoft 测试管理器和实验室管理工具版进行自动测试或生成-部署-测试自动化，请参阅本主题，本主题介绍了如何使用 Azure Pipelines 和 Team Foundation Server (TFS) 中的[生成和发布](/azure/devops/pipelines/index?view=vsts)功能实现相同的目的。
+
+> [!NOTE]
+> Microsoft 测试管理器已在 Visual Studio 2017 中弃用，并已从 Visual Studio 2019 中删除。
 
 ## <a name="build-deploy-test-automation"></a>生成-部署-测试自动化
 
