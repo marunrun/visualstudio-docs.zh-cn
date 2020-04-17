@@ -7,12 +7,12 @@ ms.assetid: c2853359-18fd-4be4-97a6-02230c862f92
 ms.date: 03/02/2020
 ms.topic: conceptual
 description: 了解管理员如何使用批量添加功能或 Microsoft Azure Active Directory 组将许可证分配给多个订阅者
-ms.openlocfilehash: 5a1327e497a48b6173afd4a7ad095dfcabacd098
-ms.sourcegitcommit: dfa9476b69851c28b684ece66980bee735fef8fd
+ms.openlocfilehash: a7742049cdda2568504e54d2c83259bb4a262819
+ms.sourcegitcommit: cc58ca7ceae783b972ca25af69f17c9f92a29fc2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80274058"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81385511"
 ---
 # <a name="assign-subscriptions-to-multiple-users"></a>将订阅分配给多个用户
 你可以在订阅管理门户中一次添加一个多个用户，也可以采用大用户组形式添加。  要添加各个用户，请参阅[添加单个用户](assign-license.md)。
@@ -73,14 +73,12 @@ ms.locfileid: "80274058"
 
 > [!IMPORTANT]
 >
-> 将分阶段实现对 Azure AD 组的使用。  你可能不会立即看到为你的协议启用的功能。
->
 > 以下限制适用于使用 Azure AD 组添加订阅者的情况：
 > - 组必须至少包含一个成员。  不支持空组。
-> - 组中的用户数必须少于 1000 个 
-> - 所有用户都必须处于组的顶层。  不支持嵌套组
-> - 仅支持受信任协议
-> - 组的所有成员都必须具有与其 Azure AD 帐户关联的电子邮件地址
+> - 组中的用户数必须少于 1,000 个。 
+> - 所有用户都必须处于组的顶层。  不支持嵌套组。
+> - 仅支持受信任协议。
+> - 组的所有成员都必须具有与其 Azure AD 帐户关联的电子邮件地址。
 > - 对于使用 Azure AD 组添加的订阅，不支持对通知使用不同的电子邮件地址。  
 
 1. 登录 Visual Studio 订阅管理门户，网址：[https://manage.visualstudio.com](https://manage.visualstudio.com)。
@@ -108,6 +106,7 @@ ms.locfileid: "80274058"
 > [!NOTE]
 > 如果已单独为用户（这些用户随后将作为 Azure AD 组的一部分进行添加）分配了订阅，则这些用户将添加到组中，并且不再单独列出。 但是，如果单个订阅对应于不同的订阅级别，则他们将拥有两个订阅。  示例：如果用户有一个单独的 Visual Studio Professional 订阅，并且他们是组的成员，该组已分配有 Visual Studio Enterprise 订阅，则他们将同时拥有这两个订阅。  
 
+<br>
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4rvvW]
 

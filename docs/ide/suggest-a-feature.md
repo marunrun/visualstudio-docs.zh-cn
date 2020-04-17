@@ -3,21 +3,21 @@ title: 功能建议
 description: 介绍了什么是开发人员社区中的功能建议、如何提出功能建议，以及 Microsoft 如何在 Visual Studio 路线图中采纳功能建议。
 ms.date: 12/17/2018
 ms.topic: conceptual
-author: seaniyer
-ms.author: seiyer
+author: madskristensen
+ms.author: madsk
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3af6d0b7b9f211fb9d0aa0a4b9a96b618081b89e
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: bbe6992bd48cfe28dfe3df20f5540aca76390bf1
+ms.sourcegitcommit: 22deb247ad951e4971f27fdab413b158415d0584
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74853511"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81276483"
 ---
 # <a name="suggest-a-feature-for-visual-studio"></a>建议 Visual Studio 功能
 
-[Visual Studio 开发人员社区](https://developercommunity.visualstudio.com)除了提供当前的问题报告功能，还引入了全新的功能建议体验。 这是一种可用来直接参与 Visual Studio 工程工作流的新方式。
+[Visual Studio 开发人员社区](https://developercommunity.visualstudio.com)除了提供当前的问题报告功能，还引入了全新的功能建议体验。 通过这种新方法，你可以直接参与 Visual Studio 的工程工作流。
 
 ![开发者社区中的“功能建议”按钮](media/suggest-a-feature/suggest-feature-button.png)
 
@@ -83,7 +83,7 @@ User Voice 网站设为只读模式。 可以根据需要查看上下文，但�
 
 ![开发人员社区中功能建议的“已关闭 - 信息不足”状态](../ide/media/SuggestStates/ClosedNotEnoughInfo.jpg)
 
-“已关闭 - 信息不足”  表示经过多次尝试后，我们获得的信息仍不足，无法全面了解你的功能建议。 我们不得不关闭新功能建议，因为在此阶段无法进一步采取任何措施。
+“已关闭 - 信息不足”表示经过多次尝试后，我们获得的信息仍不足，无法全面了解你的功能建议  。 我们不得不关闭新功能建议，因为在此阶段无法进一步采取任何措施。
 
 找到了所需的信息后，该怎么办？ 找到其他信息后，可发出重新激活票证的请求。
 
@@ -103,7 +103,7 @@ User Voice 网站设为只读模式。 可以根据需要查看上下文，但�
 
 ## <a name="faq"></a>FAQ
 
-### <a name="why-cant-i-see-my-user-voice-idea-in-developer-community"></a>为什么在开发人员社区中看不到我的 UserVoice 功能建议？
+### <a name="why-cant-i-see-my-user-voice-idea-in-developer-community"></a>为什么在开发者社区中看不到我的 UserVoice 功能建议？
 
 我们已根据功能建议对更广泛社区造成的影响力和产品路线图优先级，将旧版 UserVoice 论坛中的新功能建议迁移到开发人员社区中。 如果你认为我们漏迁移了你的功能建议，请将它作为新功能建议添加到开发人员社区中。
 

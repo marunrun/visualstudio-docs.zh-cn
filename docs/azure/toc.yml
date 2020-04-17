@@ -1,7 +1,7 @@
 - name: 利用 Visual Studio 开发 Azure
   href: index.yml
   expanded: true
-- name: 部署到 Azure 应用服务
+- name: 部署到 Azure App Service
   expanded: true
   items:
     - name: 将 ASP.NET Core 应用部署到 Azure
@@ -23,16 +23,6 @@
       href: /azure/key-vault/vs-key-vault-add-connected-service?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json
     - name: 添加 Azure Active Directory (AD)
       href: /azure/active-directory/develop/vs-active-directory-add-connected-service?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json
-    - name: 添加认知服务
-      items:
-        - name: 文本分析
-          href: /azure/cognitive-services/text-analytics/vs-text-connected-service?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json
-        - name: 必应搜索
-          href: /azure/cognitive-services/bing-news-search/vs-bing-news-search-add-connected-service?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json
-        - name: 面部识别
-          href: /azure/cognitive-services/face/vs-face-connected-service?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json
-        - name: 计算机视觉
-          href: /azure/cognitive-services/computer-vision/vs-computer-vision-connected-service?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json
 - name: Azure 云服务开发
   expanded: false
   items:
@@ -94,7 +84,7 @@
           href: vs-azure-tools-setting-up-named-authentication-credentials.md
     - name: 使用 Azure 存储
       items:
-        - name: 存储资源管理器入门
+        - name: 开始使用存储资源管理器
           href: /azure/vs-azure-tools-storage-manage-with-storage-explorer?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json
         - name: 在 Visual Studio 中配置和使用存储模拟器
           href: /azure/vs-azure-tools-storage-emulator-using?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json
@@ -108,7 +98,7 @@
           href: /azure/vs-azure-tools-storage-explorer-relnotes?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json
         - name: 存储资源管理器可访问性
           href: /azure/vs-azure-tools-storage-explorer-accessibility?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json
-- name: 云资源管理器
+- name: Cloud Explorer
   items:
     - name: 使用服务器资源管理器浏览和管理存储资源
       href: vs-azure-tools-storage-resources-server-explorer-browse-manage.md

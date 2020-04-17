@@ -1335,6 +1335,8 @@
           href: ide/user-permissions-and-visual-studio.md
         - name: Windows 信息保护 (WIP)
           href: ide/exempt-visual-studio-from-wip.md
+        - name: 联邦信息处理标准 (FIPS)
+          href: ide/fips-support-visual-studio.md
     - name: 双向语言输入
       href: ide/use-bidirectional-languages.md
     - name: Microsoft Help Viewer

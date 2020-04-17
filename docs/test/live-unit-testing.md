@@ -1,6 +1,6 @@
 ---
 title: Live Unit Testing
-ms.date: 03/07/2017
+ms.date: 04/07/2020
 ms.topic: conceptual
 helpviewer_keywords:
 - Live Unit Testing
@@ -8,12 +8,12 @@ author: mikejo5000
 ms.author: mikejo
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1e1a0ec1fd6f2fbdf4f016b1d22db5a6929b5e24
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 34200e8719ef25de3c54c612b967cf3d4f9bab85
+ms.sourcegitcommit: 316dd2182dd56b0cbde49f0cd82e9f75baa2530f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75851435"
+ms.lasthandoff: 04/12/2020
+ms.locfileid: "81223693"
 ---
 # <a name="how-to-configure-and-use-live-unit-testing"></a>如何配置和使用 Live Unit Testing
 
@@ -130,12 +130,13 @@ Live Unit Testing 适用于下表中列出的三个常用的单元测试框架�
 
 例如，上图中的测试未通过原因是，在测试方法中错误地认为非字母字符在传递到 <xref:System.Char.IsLower%2A?displayProperty=fullName> 方法时返回 `true`。 更正测试方法后，所有测试都应该通过。 无需暂停或停止 Live Unit Testing。
 
+::: moniker range="vs-2017"
 ## <a name="test-explorer"></a>测试资源管理器
 
 测试资源管理器  具有可供运行和调试测试以及分析测试结果的界面。 Live Unit Testing 与**测试资源管理器**集成。 当 Live Unit Testing 未启用或已停止时，**测试资源管理器**将显示上次运行测试时的单元测试状态。 源代码更改需要重新运行测试。 与此相反，启用 Live Unit Testing 后，**测试资源管理器**中的单元测试状态将立即更新。 你不必显式运行单元测试。
 
 > [!TIP]
-> 可在顶级 Visual Studio 菜单中依次选择“测试” > “Windows” > “测试资源管理器”，打开测试资源管理器     。
+> 可在 Visual Studio 顶层菜单中依次选择“测试” > “Windows” > “测试资源管理器”，打开 Live Unit Testing     。
 
 可能会注意到，在“测试资源管理器”  窗口中，一些测试已淡化。例如，如果在打开以前保存的项目后启用 Live Unit Testing，“测试资源管理器”  窗口淡化了所有测试（未通过测试外除外），如下图所示。 在这种情况下，Live Unit Testing 已重新运行未通过测试，但未重新运行成功测试。 这是因为 Live Unit Testing 的持久化数据指示自上次成功运行测试以来没有任何更改。
 
@@ -148,6 +149,28 @@ Live Unit Testing 自动运行、更新测试结果与通过“测试资源管�
 - 从测试资源管理器窗口运行或调试测试将运行常规二进制文件，而 Live Unit Testing 运行已检测二进制文件。
 - Live Unit Testing 不会新建应用程序域来运行测试，而是通过默认域运行测试。 从**测试资源管理器**窗口运行的测试确实会创建新的应用程序域。
 - Live Unit Testing 按顺序运行每个测试程序集中的测试。 在“测试资源管理器”窗口中，可以选择并行运行多个测试  。
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+## <a name="live-unit-testing-window"></a>Live Unit Testing 窗口
+
+Live Unit Testing 类似于测试资源管理器，具有可供运行和调试测试以及分析测试结果的界面   。 启用 Live Unit Testing 后，测试资源管理器中的单元测试状态将立即更新  。 你不必显式运行单元测试。 当 Live Unit Testing 未启用或已停止时，Live Unit Testing 将显示上次运行测试时的单元测试状态  。 重启 Live Unit Testing 后，需要更改源代码才能重新运行测试。
+
+> [!TIP]
+> 通过从 Visual Studio 顶层菜单中依次选择“测试” > “Live Unit Testing” > “启动”来启动 Live Unit Testing    。 你还可以通过使用“视图” > “其他窗口” > “Live Unit Testing 窗口”来打开 Live Unit Testing     。
+
+你可能会注意到，在 Live Unit Testing 窗口中，一些测试呈灰显状态  。例如，停止并重启 Live Unit Testing 时，Live Unit Testing 窗口中的所有测试都呈灰显状态，如下图所示  。 灰显的测试结果表明测试不是最新 Live Unit Test 运行的一部分。 仅在检测到这些测试或其依赖项发生更改时才会运行它们。 如果没有更改，将避免不必要地运行测试。 在这种情况下，灰显的测试结果虽然不是最新运行的一部分，但仍然是“最新的”。
+
+![在测试资源管理器中让测试呈灰显状态](media/vs-2019/lut-test-explorer.png)
+
+你可以通过更改代码来重新运行任何灰显的测试。
+
+Live Unit Testing 自动运行、更新测试结果与通过“测试资源管理器”  显式运行测试结果有所不同。 区别包括：
+
+- 从测试资源管理器窗口运行或调试测试将运行常规二进制文件，而 Live Unit Testing 运行已检测二进制文件。
+- Live Unit Testing 不会新建应用程序域来运行测试，而是通过默认域运行测试。 从**测试资源管理器**窗口运行的测试确实会创建新的应用程序域。
+- Live Unit Testing 按顺序运行每个测试程序集中的测试。 在“测试资源管理器”窗口中，可以选择并行运行多个测试  。
+::: moniker-end
 
 ## <a name="large-solutions"></a>大型解决方案
 

@@ -8,12 +8,12 @@ ms.assetid: bd7ad36c-54cb-4d2a-9aea-9d10ad98d7ba
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: f196c3850c9413a7c68fd1fe67af50273915f249
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 5b198d8d3e9156b8a38325034bf19ce96b742d9e
+ms.sourcegitcommit: 5d1b2895d3a249c6bea30eb12b0ad7c0f0862d85
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75589170"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80880151"
 ---
 # <a name="how-to-create-a-diagnostic-data-adapter"></a>如何：创建诊断数据适配器
 
@@ -23,7 +23,7 @@ ms.locfileid: "75589170"
 
 可以创建一个诊断数据适配器，它会影响在其上运行测试的计算机，或用于运行受测应用程序的环境中包含的计算机。 例如，该诊断数据适配器在运行测试的测试计算机上收集文件，或在充当应用程序的 Web 服务器角色的计算机上收集文件。
 
-可以为诊断数据适配器指定一个友好名称，使用 Microsoft 测试管理器或 Visual Studio 创建测试设置时会显示该名称。 利用测试设置可以定义在运行测试时，哪个计算机角色将在环境中运行特定诊断数据适配器。 也可以在创建测试设置时配置诊断数据适配器。 例如，可以创建用于从 Web 服务器收集自定义日志的诊断数据适配器。 在创建测试设置时，可以选择在执行此 Web 服务器角色的一台或多台计算机上运行此诊断数据适配器，并且可以修改测试设置的配置以便仅收集已创建的最后三个日志。 有关测试设置的详细信息，请参阅[使用测试设置收集诊断信息](../test/collect-diagnostic-information-using-test-settings.md)。
+你可为诊断数据适配器指定一个易记名称，使用 Visual Studio 或 Microsoft 测试管理器（在 Visual Studio 2017 中已弃用）创建测试设置时会显示该名称。 利用测试设置可以定义在运行测试时，哪个计算机角色将在环境中运行特定诊断数据适配器。 也可以在创建测试设置时配置诊断数据适配器。 例如，可以创建用于从 Web 服务器收集自定义日志的诊断数据适配器。 在创建测试设置时，可以选择在执行此 Web 服务器角色的一台或多台计算机上运行此诊断数据适配器，并且可以修改测试设置的配置以便仅收集已创建的最后三个日志。 有关测试设置的详细信息，请参阅[使用测试设置收集诊断信息](../test/collect-diagnostic-information-using-test-settings.md)。
 
 运行测试时将引发事件，这使诊断数据适配器可以在测试中的该点执行任务。
 
@@ -32,7 +32,7 @@ ms.locfileid: "75589170"
 
 下面是创建诊断数据适配器时可以使用的关键事件的部分列表。 有关诊断数据适配器事件的完整列表，请参见 <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents> 抽象类。
 
-|ㄆン|说明|
+|事件|描述|
 |-|-----------------|
 |<xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents.SessionStart>|开始测试运行|
 |<xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents.SessionEnd>|结束测试运行|
@@ -210,7 +210,7 @@ ms.locfileid: "75589170"
 
      可以将这些文件附加到测试结果。 如果根据这些测试结果创建 Bug，或者在使用[!INCLUDE[mtrlong](../test/includes/mtrlong_md.md)]时，这些文件也会附加到 Bug。
 
-     如果要使用自己的编辑器来收集要在测试设置中使用的数据，请参阅[如何：为诊断数据适配器创建自定义数据编辑器](../test/quickstart-create-a-load-test-project.md)。
+     如果您要使用自己的编辑器来收集要在测试设置中使用的数据，请参见[如何：为诊断数据适配器创建自定义数据编辑器](../test/quickstart-create-a-load-test-project.md)。
 
 11. 要在测试完成时根据用户在测试设置中所做配置收集日志文件，则必须创建一个 App.config 文件并将其添加至解决方案  。 此文件具有以下格式，并且必须包含供诊断数据适配器进行识别的 URI。 将“Company/ProductName/Version”替换为实际值。
 
@@ -243,19 +243,19 @@ ms.locfileid: "75589170"
     > [!NOTE]
     > 默认配置元素可以包含您需要的任何数据。 如果用户未在测试设置中配置诊断数据适配器，则在执行诊断数据适配器时将向其传递默认数据。 由于您添加到 `<DefaultConfigurations>` 部分的 XML 不可能属于已声明架构的一部分，因此可以忽略它生成的任何 XML 错误。
     >
-    > 在基于安装目录的以下路径中，还存在其他配置文件示例：Program Files\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssemblies\DataCollectors  。
+    > 在基于安装目录的以下路径中，还存在其他配置文件示例：*Program Files\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssemblies\DataCollectors*。
 
      有关如何在运行测试时配置测试设置以使用环境的详细信息，请参阅[在手动测试中收集诊断数据 (Azure Test Plans)](/azure/devops/test/mtm/collect-more-diagnostic-data-in-manual-tests?view=vsts)。
 
-     有关安装配置文件的详细信息，请参阅[如何：安装自定义诊断数据适配器](../test/quickstart-create-a-load-test-project.md)
+     有关安装配置文件的更多信息，请参见[如何：安装自定义诊断数据适配器](../test/quickstart-create-a-load-test-project.md)
 
 12. 生成解决方案以创建诊断数据适配器程序集。
 
-13. 有关安装自定义编辑器的详细信息，请参阅[如何：安装自定义诊断数据适配器](../test/quickstart-create-a-load-test-project.md)。
+13. 有关安装自定义编辑器的信息，请参见[如何：安装自定义诊断数据适配器](../test/quickstart-create-a-load-test-project.md)。
 
 14. 有关如何在运行测试时配置测试设置以使用环境的详细信息，请参阅[在手动测试中收集诊断数据 (Azure Test Plans)](/azure/devops/test/mtm/collect-more-diagnostic-data-in-manual-tests?view=vsts)。
 
-15. 若要选择诊断数据适配器，必须先选择现有的测试设置，或从 Microsoft 测试管理器或 Visual Studio 中创建一个新测试设置。 该适配器将显示在测试设置的“数据和诊断”选项卡上，并具有你指派给该类的友好名称  。
+15. 要选择诊断数据适配器，必须先选择现有的测试设置，或者从 Visual Studio 或 Microsoft 测试管理器（在 Visual Studio 2017 中已弃用）中创建一个新的测试设置。 该适配器将显示在测试设置的“数据和诊断”选项卡上，并具有你指派给该类的友好名称  。
 
 16. 将这些测试设置设置为活动状态。 有关测试设置的详细信息，请参阅[使用测试设置收集诊断信息](../test/collect-diagnostic-information-using-test-settings.md)。
 
@@ -263,7 +263,7 @@ ms.locfileid: "75589170"
 
     您指定的数据文件将被附加到测试结果中。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectorConfigurationEditorAttribute>
 - <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents>

@@ -8,21 +8,28 @@ ms.assetid: 3a94dd07-6d17-402c-ae8f-7947143755c9
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: f4ef2d589e75c50a6cecb5364d5b458cffdfd145
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: dc00598595ee3e3d958562682900bde9aad2a353
+ms.sourcegitcommit: 5d1b2895d3a249c6bea30eb12b0ad7c0f0862d85
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75588962"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80880177"
 ---
 # <a name="how-to-set-up-your-test-agent-to-run-tests-that-interact-with-the-desktop"></a>如何：设置测试代理以运行与桌面交互的测试
 
+::: moniker range="vs-2017"
 如果要运行的自动测试将与桌面交互，必须将代理设置为作为进程而非服务运行。 例如，如果想要使用测试控制器和测试代理远程运行编码的 UI 测试，或者想要运行测试并在运行测试时捕获视频录制，则必须将代理设置为作为进程运行。 使用 Visual Studio 将代理分配给测试设置中的角色时，或者使用 Microsoft 测试管理器将代理分配给环境中的角色时，对于分配给必须与桌面交互的角色的任何代理，必须为其更改设置。
+::: moniker-end
+::: moniker range=">=vs-2019"
+如果要运行的自动测试将与桌面交互，必须将代理设置为作为进程而非服务运行。 例如，如果想要使用测试控制器和测试代理远程运行编码的 UI 测试，或者想要运行测试并在运行测试时捕获视频录制，则必须将代理设置为作为进程运行。 使用 Visual Studio 将代理分配给测试设置中的角色时，对于分配给要与桌面进行交互的角色的任何代理，必须更改相应的设置。
+::: moniker-end
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
+::: moniker range="vs-2017"
 > [!WARNING]
 > 如果使用 Microsoft 测试管理器设置实验室环境，则会安装测试代理。 可在“环境创建向导”中指定要配置某个角色以运行编码的 UI 测试  。
+:::moniker-end
 
 > [!IMPORTANT]
 > 如果计算机正在运行代理，而您想要针对该代理运行编码的 UI 测试，则不能锁定该计算机，或者该计算机不能具有活动的屏幕保护程序。
@@ -36,7 +43,7 @@ ms.locfileid: "75588962"
 
 ## <a name="to-set-up-an-agent-to-run-as-a-process"></a>将代理设置为作为进程运行
 
-1. 若要将已安装的测试代理配置为作为进程运行，请选择“开始” **“Test Agent 配置工具”。**  >  
+1. 若要将已安装的测试代理配置为作为进程运行，请选择“开始” > “Test Agent 配置工具”。  
 
    “配置测试代理”对话框随即显示  。
 
@@ -71,10 +78,12 @@ ms.locfileid: "75588962"
 7. 若要关闭“配置摘要”对话框中，请选择“关闭”   。 然后再次选择“关闭”以关闭“Test Agent 配置工具”   。
 
    > [!NOTE]
-   > 在该计算机上有一个针对作为进程运行的测试代理而运行的通知区域图标。 它显示测试代理的状态。 如果代理作为使用此工具的进程运行，你可以启动、停止或重新启动代理。 要在测试代理未运行时将其作为进程启动，请依次选择“开始” **“Visual Studio”** “Microsoft Visual Studio Test Agent” >    >   。
+   > 在该计算机上有一个针对作为进程运行的测试代理而运行的通知区域图标。 它显示测试代理的状态。 如果代理作为使用此工具的进程运行，你可以启动、停止或重新启动代理。 要在测试代理未运行时将其作为进程启动，请依次选择“开始” > “Visual Studio” > “Microsoft Visual Studio Test Agent”    。
 
+   ::: moniker range="vs-2017"
    如果向 Team Foundation Server 注册了此测试代理的测试控制器，则作为交互进程运行的测试代理的状态将显示在 Microsoft 测试管理器的“实验室中心”中的“控制器”视图中   。 如果列出时前面带有星号符号，则指示它正在作为交互进程运行。 要重启此测试代理，必须使用在计算机上针对测试代理而非“控制器”视图运行的工具  。
+   ::: moniker-end
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [安装和配置测试代理](../test/lab-management/install-configure-test-agents.md)
