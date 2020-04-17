@@ -4,17 +4,17 @@ description: 了解如何使用 Visual Studio 设置和配置 Azure 云服务的
 author: ghogen
 manager: jillfra
 assetId: d397ef87-64e5-401a-aad5-7f83f1022e16
-ms.custom: seodec18
+ms.custom: vs-azure
 ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 03/21/2017
 ms.author: ghogen
-ms.openlocfilehash: ded315917fb0e40159aed327ed98f747bb31c4b1
-ms.sourcegitcommit: 95f26af1da51d4c83ae78adcb7372b32364d8a2b
+ms.openlocfilehash: a01a1fb182fc9d45e4e08dcd9acb8e0ec734f098
+ms.sourcegitcommit: 59a8732dc563242590f7c6ccf4ced6c6d195533c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79300953"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81489722"
 ---
 # <a name="configure-azure-cloud-service-roles-with-visual-studio"></a>使用 Visual Studio 配置 Azure 云服务角色
 一个 Azure 云服务可以有一个辅助角色或 Web 角色。 对于每个角色，需要定义该角色的设置方式，并配置该角色的运行方式。 若要详细了解云服务中的角色，请观看视频 [Introduction to Azure Cloud Services](https://channel9.msdn.com/Series/Windows-Azure-Cloud-Services-Tutorials/Introduction-to-Windows-Azure-Cloud-Services)（Azure 云服务简介）。
@@ -112,8 +112,8 @@ ms.locfileid: "79300953"
 
 1. 在“创建存储连接字符串”对话框中，为“连接方式”选择一个选项。******** 然后，遵照所选选项的说明操作：
 
-    - **Microsoft Azure 存储模拟器** - 如果选择此选项，对话框中的剩余设置会被禁用，因为这些设置仅适用于 Azure。 选择“确定”。
-    - **订阅** - 如果选择此选项，请使用下拉列表选择并登录到 Microsoft 帐户，或添加 Microsoft 帐户。 选择 Azure 订阅和 Azure 存储帐户。 选择“确定”。
+    - **Microsoft Azure 存储模拟器** - 如果选择此选项，对话框中的剩余设置会被禁用，因为这些设置仅适用于 Azure。 选择“确定”  。
+    - **订阅** - 如果选择此选项，请使用下拉列表选择并登录到 Microsoft 帐户，或添加 Microsoft 帐户。 选择 Azure 订阅和 Azure 存储帐户。 选择“确定”  。
     - **手动输入的凭据** - 输入存储帐户名称，以及主密钥或辅助密钥。 选择**连接**选项（建议在大多数情况下使用 HTTPS）。选择 **"确定**"。
 
 1. 要删除某个连接字符串，请选择该连接字符串，并选择“删除设置”。****
