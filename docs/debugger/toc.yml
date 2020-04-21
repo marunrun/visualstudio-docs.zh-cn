@@ -447,7 +447,7 @@
             - name: 在调试时检查 XAML 属性
               href: inspect-xaml-properties-while-debugging.md
             - name: 编写和调试正在运行的 XAML 代码
-              href: xaml-hot-reload.md
+              href: ../xaml-tools/xaml-hot-reload.md
             - name: 在 Blend 中调试 XAML
               href: ../xaml-tools/debug-xaml-in-blend.md?toc=/visualstudio/debugger/toc.json
             - name: HTML 和 CSS
@@ -507,7 +507,7 @@
                 - name: 在调试时检查 XAML 属性
                   href: inspect-xaml-properties-while-debugging.md
                 - name: 编写和调试正在运行的 XAML 代码
-                  href: xaml-hot-reload.md
+                  href: ../xaml-tools/xaml-hot-reload.md
                 - name: 使用 WPF 树可视化工具
                   href: how-to-use-the-wpf-tree-visualizer.md
                 - name: 显示 WPF 跟踪信息

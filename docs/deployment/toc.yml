@@ -94,8 +94,6 @@
               href: how-to-set-a-security-zone-for-a-clickonce-application.md
             - name: 设置 ClickOnce 应用程序的自定义权限
               href: how-to-set-custom-permissions-for-a-clickonce-application.md
-            - name: 使用受限权限调试 ClickOnce 应用程序
-              href: how-to-debug-a-clickonce-application-with-restricted-permissions.md
             - name: 向客户端计算机添加受信任的发布者
               href: how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications.md
             - name: 对应用程序清单和部署清单重新签名
