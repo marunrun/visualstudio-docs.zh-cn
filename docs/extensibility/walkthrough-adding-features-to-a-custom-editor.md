@@ -10,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b145dd4d82887122009553afd883abb6cade849e
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: 65ef0edf76780ba7c8b6f5d9347195c286bec466
+ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80697790"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81649848"
 ---
 # <a name="walkthrough-add-features-to-a-custom-editor"></a>演练：向自定义编辑器添加功能
 创建自定义编辑器后，可以向其添加更多功能。
@@ -34,7 +34,7 @@ ms.locfileid: "80697790"
 
 3. 通过设置<xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory>接口实现编辑器工厂。
 
-     有关详细信息，请参阅[编辑器工厂](../extensibility/editor-factories.md)。
+     有关详细信息，请参阅[编辑器工厂](/visualstudio/extensibility/editor-factories?view=vs-2015)。
 
 4. 确定是希望编辑器使用就地激活还是简化嵌入来管理文档视图对象窗口。
 
@@ -152,6 +152,6 @@ ms.locfileid: "80697790"
 
   - `Window.Object`
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [为自动化模型做出贡献](../extensibility/internals/contributing-to-the-automation-model.md)

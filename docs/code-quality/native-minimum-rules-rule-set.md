@@ -8,20 +8,20 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 55eb9948aba4579b58bb3c24580fe9ec16079812
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: e8abf4d4c5d2158ab4a3c9deeb11ab93e31b4cc3
+ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75587285"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81649337"
 ---
 # <a name="native-minimum-rules-rule-set"></a>“本机最少量规则”规则集
 
-Microsoft 本机最小规则重点关注本机代码中的最关键问题，包括潜在的安全漏洞和应用程序崩溃。
+Microsoft 本机最小规则侧重于本机代码中最关键的问题，包括潜在的安全漏洞和应用程序崩溃。
 
-在您为本机项目创建的任何自定义规则集中包含此规则集。
+在为本机项目创建的任何自定义规则集中包括此规则集。
 
-|规则|描述|
+|规则|说明|
 |----------|-----------------|
 |[C6001](../code-quality/c6001.md)|使用未初始化的内存|
 |[C6011](../code-quality/c6011.md)|取消引用 Null 指针|
@@ -92,18 +92,18 @@ Microsoft 本机最小规则重点关注本机代码中的最关键问题，包�
 |[C28182](../code-quality/c28182.md)|取消引用 NULL 指针。 该指针包含与另一指针相同的 NULL 值。|
 |[C28202](../code-quality/c28202.md)|非法引用非静态成员|
 |[C28203](../code-quality/c28203.md)|对类成员的不明确的引用。|
-|[C28205](../code-quality/c28205.md)|\_在非法上下文中使用的\_失败\_ 或 \_\_|
+|[C28205](../code-quality/c28205.md)|\_在\_非法\_上下文中\_使用\_的成功或失败|
 |[C28206](../code-quality/c28206.md)|若左操作数指向结构，则使用“->”|
 |[C28207](../code-quality/c28207.md)|若左操作数是一个结构，则使用“.”|
 |[C28210](../code-quality/c28210.md)|__on_failure 上下文的批注不得位于显式的 pre 上下文中|
 |[C28211](../code-quality/c28211.md)|SAL_context 所需的静态上下文名称|
 |[C28212](../code-quality/c28212.md)|批注所需的指针表达式|
-|[C28213](../code-quality/c28213.md)|\_使用\_decl\_批注\_ 批注必须用于引用，而无需修改以前的声明。|
+|[C28213](../code-quality/c28213.md)|\_使用\_del\_注释\_注释必须用于引用，无需修改，以前的声明。|
 |[C28214](../code-quality/c28214.md)|特性参数的名称必须为 p1...p9|
 |[C28215](../code-quality/c28215.md)|不能将 typefix 应用于已包含 typefix 的参数|
 |[C28216](../code-quality/c28216.md)|checkReturn 批注仅应用于特定函数参数的后置条件。|
 |[C28217](../code-quality/c28217.md)|对于函数，批注的参数数目与在文件中找到的数目不匹配|
-|[C28218](../code-quality/c28218.md)|对于函数参数，批注的参数与在文件中找到的参数不匹配|
+|[C28218](../code-quality/c28218.md)|对于函数参数，注释的参数与在文件中找到的参数不匹配|
 |[C28219](../code-quality/c28219.md)|批注中的批注参数所需的枚举成员|
 |[C28220](../code-quality/c28220.md)|批注中的批注参数所需的整数表达式|
 |[C28221](../code-quality/c28221.md)|批注中的参数所需的字符串表达式|
@@ -140,7 +140,7 @@ Microsoft 本机最小规则重点关注本机代码中的最关键问题，包�
 |[C28267](../code-quality/c28267.md)|在函数中找到了批注的语法错误。|
 |[C28272](../code-quality/c28272.md)|在检查参数时，函数的批注与函数声明不一致|
 |[C28273](../code-quality/c28273.md)|对于函数，线索与函数声明不一致|
-|[C28275](../code-quality/c28275.md)|用于 \_宏的参数\_值\_ 为 null|
+|[C28275](../code-quality/c28275.md)|宏\_\_值\_的参数为空|
 |[C28279](../code-quality/c28279.md)|对于符号，已找到“起始”符号，但没有匹配的“结束”符号|
 |[C28280](../code-quality/c28280.md)|对于符号，已找到“结束”符号，但没有匹配的“起始”符号|
 |[C28282](../code-quality/c28282.md)|格式字符串必须位于前置条件中|
@@ -158,4 +158,4 @@ Microsoft 本机最小规则重点关注本机代码中的最关键问题，包�
 |[C28304](../code-quality/c28304.md)|发现未正确放置的 \_Notref\_ 运算符被应用到令牌。|
 |[C28305](../code-quality/c28305.md)|在分析标记时发现错误。|
 |[C28350](../code-quality/c28350.md)|批注介绍了无条件适用的情形。|
-|[C28351](../code-quality/c28351.md)|批注介绍了在条件中无法使用动态值（变量）的位置。|
+|[C28351](/cpp/code-quality/c28351)|批注介绍了在条件中无法使用动态值（变量）的位置。|

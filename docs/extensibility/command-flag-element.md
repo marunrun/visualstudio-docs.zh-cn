@@ -11,12 +11,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7173bc1ebc5507eadf319c0374f4c878dea62857
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: 84138a69dbb42fc349c12276fd7cca4b593e4d47
+ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80739777"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81649367"
 ---
 # <a name="command-flag-eelement"></a>命令标志 Eelement
 修改其父元素。
@@ -30,12 +30,12 @@ ms.locfileid: "80739777"
 ## <a name="attributes-and-elements"></a>特性和元素
  以下部分介绍有效的元素值。
 
-### <a name="attributes"></a>特性
+### <a name="attributes"></a>属性
  无。
 
 ### <a name="child-elements"></a>子元素
 
-|值|说明|
+|“值”|说明|
 |-----------|-----------------|
 |允许帕姆斯|指示用户可以在**命令窗口中输入**命令参数，当他们键入命令的规范名称时。<br /><br /> 有效期：`Button`|
 |始终创建|即使菜单没有组或按钮，也会创建菜单。<br /><br /> 有效期：`Menu`|
@@ -60,7 +60,6 @@ ms.locfileid: "80739777"
 |PostExec|使命令不阻塞。 开发环境将延迟执行，直到完成所有预处理查询。<br /><br /> 有效期：`Button`|
 |路由到文档|该命令路由到活动文档。<br /><br /> 有效期：`Button`|
 |水平拉伸|设置此标志时，宽度将成为组合框的最小宽度，如果工具栏上有空间，组合框将拉伸以填充可用空间。 仅当工具栏水平停靠时，并且工具栏上只有一个组合框可以使用标志（除第一个组合框外，所有组合框上都忽略该标志），才会发生这种情况。<br /><br /> 有效期：`Combo`|
-|文本菜单使用按钮|对`ButtonText`菜单使用该字段。 默认字段是`MenuText`指定字段。<br /><br /> 有效期：`Button`|
 |文本更改|命令或菜单文本可以在运行时更改，通常通过 方法`QueryStatus`。<br /><br /> 适用于： `Button`， ，`Menu`|
 |文本更改按钮|有效期：`Button`|
 |文本 Isanchor 命令|对于菜单控制器，菜单的文本取自默认（锚点）命令。 锚点命令是选择或锁定的最后一个命令。 如果未设置此标志，菜单控制器将使用其自己的`MenuText`字段。 但是，单击菜单控制器仍启用该控制器的最后一个选定命令。<br /><br /> 我们建议您将此标志与`TextChanges`标志合并。<br /><br /> 此标志仅适用于类型菜单控制器或菜单控制器锁定的菜单。<br /><br /> 有效期：`Menu`|
@@ -70,10 +69,10 @@ ms.locfileid: "80739777"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
 |[按钮元素](../extensibility/buttons-element.md)|为 Button[元素元素](../extensibility/button-element.md)提供组。|
 |[菜单元素](../extensibility/menus-element.md)|定义 VSPackage 实现的所有菜单。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [可视化工作室命令表 （.Vsct） 文件](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
