@@ -10,12 +10,12 @@ ms.author: johmil
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: 5a0595fdf7331c8b2825c6092b5b29a19974887b
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: d1bca9bed18de822de71ca441387adeaefc65ec3
+ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79306955"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81649394"
 ---
 # <a name="use-visual-studio-tools-for-unity"></a>使用 Visual Studio Tools for Unity
 
@@ -202,7 +202,7 @@ Visual Studio Tools for Unity 让你可以使用 Visual Studio 功能强大的�
 
    需要调试 PDB 文件（因为它们包含 DLL 的调试符号），并将 DLL 代码映射到其源代码形式。 如果面向旧版运行时，Visual Studio Tools for Unity 将使用来自 DLL 和 PDB 的信息来创建一个 DLL.MDB 文件，此文件是旧版 Unity 脚本引擎所使用的调试符号格式。 如果面向新版运行时并使用可移植 PDB，Visual Studio Tools for Unity 将不会尝试执行任何符号转换，因为新版 Unity 运行时能够在本机使用可移植 PDB。
 
-   有关 PDB 生成的详细信息，请访问[此处](/visualstudio/debugger/how-to-set-debug-and-release-configurations)。 如果面向新版运行时，请确保将“调试信息”设置为“可移植”，以便正确生成可移植 PDB。 如果面向旧版运行时，则需要使用“完整”。
+   有关 PDB 生成的详细信息，请访问[此处](../debugger/how-to-set-debug-and-release-configurations.md)。 如果面向新版运行时，请确保将“调试信息”设置为“可移植”，以便正确生成可移植 PDB。 如果面向旧版运行时，则需要使用“完整”。
 
 4. 调试代码。 现在可以同时调试 DLL 源代码以及 Unity 项目的源代码，并使用所有熟悉的调试功能，如断点和单步调试代码。
 

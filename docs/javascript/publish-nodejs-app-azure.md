@@ -11,12 +11,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: c304aca5171e1addab9a941105f11fb534eaa5ff
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: d75bb4f5274201b7cf745ff8c7c6f27b869855c3
+ms.sourcegitcommit: 7b60e81414a82c6d34f6de1a1f56115c9cd26943
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "74474014"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81445007"
 ---
 # <a name="publish-a-nodejs-application-to-azure-linux-app-service"></a>将 Node.js 应用程序发布到 Azure（Linux 应用服务）
 
@@ -173,7 +173,7 @@ Linux 应用服务部署 Linux Docker 容器来运行 Node.js 应用程序（不
 ## <a name="troubleshooting"></a>疑难解答
 
 * 如果 node.exe 进程发生故障（也就是说出现未处理的异常），容器将重新启动。
-* 容器启动时，它通过各种试探法来找出如何启动 Node.js 进程。 可在 [generateStartupCommand.js](https://github.com/Azure-App-Service/node/blob/master/8.9.4/startup/generateStartupCommand.js) 看到实现的详细信息。
+* 容器启动时，它通过各种试探法来找出如何启动 Node.js 进程。 可在 [generateStartupCommand.js](https://github.com/Azure/app-service-builtin-images/blob/master/node/8.9.4/startup/generateStartupCommand.js) 看到实现的详细信息。
 * 可以通过 SSH 连接到正在运行的容器进行调查。 这可以通过 Azure 门户轻松实现。 选择应用服务，向下滚动工具列表直至“开发工具”部分下的“SSH”。
 * 若要帮助进行故障排除，请转到应用服务的“诊断日志”设置，并将“Docker 容器日志记录”设置从“关”改为“文件系统”。 日志创建在 /home/LogFiles/_docker.log* 中，并且可以通过 SSH 或 FTP 在框上进行访问。
 * 可向站点分配自定义域名，而不是默认分配的 *.azurewebsites.net URL。 有关更多详细信息，请参阅主题[映射自定义域](/azure/app-service/app-service-web-tutorial-custom-domain)。

@@ -7,12 +7,12 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: a3aee4945b4a3b41a7f6ec532268c2c19f549d0a
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 5fdb0cc217062190e02e70b6361c8a3a2aa2f935
+ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79306913"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81648529"
 ---
 # <a name="create-portable-custom-editor-settings-with-editorconfig"></a>使用 EditorConfig 创建可移植的自定义编辑器设置
 
@@ -104,7 +104,7 @@ Visual Studio 中的编辑器支持 [EditorConfig 属性](https://editorconfig.o
 
 - 用于 Visual Studio 的 IntelliCode 的[代码推断功能](/visualstudio/intellicode/code-style-inference)通过现有代码推断代码样式。 然后它将使用已定义的代码样式首选项创建非空的 EditorConfig 文件。
 
-- 自 Visual Studio 2019 起，可以通过“工具” > “选项”[基于代码样式设置生成 EditorConfig 文件](/visualstudio/ide/code-styles-and-code-cleanup#code-styles-in-editorconfig-files)。  
+- 自 Visual Studio 2019 起，可以通过“工具” > “选项”[基于代码样式设置生成 EditorConfig 文件](code-styles-and-code-cleanup.md#code-styles-in-editorconfig-files)。  
 
 ## <a name="file-hierarchy-and-precedence"></a>文件层次结构和优先级
 

@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: 5bba2205-d32f-413d-9b58-724a24993842
-ms.date: 03/25/2020
+ms.date: 04/17/2020
 ms.topic: conceptual
 description: 了解有关所选 Visual Studio 订阅中包含的作为 LinkedIn Premium 订阅一部分的 LinkedIn Learning 权益。
-ms.openlocfilehash: 57744c21123188448048b469aa06153cf81a949f
-ms.sourcegitcommit: dfa9476b69851c28b684ece66980bee735fef8fd
+ms.openlocfilehash: a0b837ce4a86b48acb690030c1a96064b336cd61
+ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80273954"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81649532"
 ---
 # <a name="the-linkedin-learning-benefit-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 LinkedIn Learning 权益
 
@@ -27,7 +27,7 @@ ms.locfileid: "80273954"
 
 2. 在教育类别中找到 LinkedIn 学习磁贴，然后单击“获取代码”  链接。
    > [!div class="mx-imgBorder"]
-   > ![LinkedIn Learning：权益磁贴](_img/vs-linkedin/vs-linkedin-3-month-tile.png)
+   > ![LinkedIn Learning：权益磁贴](_img/vs-linkedin/vs-linkedin-6-month-tile.png)
 
 3. 如果你已拥有 LinkedIn 帐户并且已自动登录，则会立即进入 LinkedIn 学习权益激活页。  如果你拥有 LinkedIn 帐户但是未自动登录，则只需输入用户名和密码，然后单击“登录”  。  请跳到[此步骤](#activate-your-offer)以激活产品/服务。
 

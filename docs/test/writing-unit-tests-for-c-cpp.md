@@ -8,12 +8,12 @@ manager: markl
 ms.workload:
 - cplusplus
 author: corob-msft
-ms.openlocfilehash: 354ccad121884c99541057a2e0e0a47d9d2a4341
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 0eaf41dc0bf3e21dfbf4018261844181d594f0d5
+ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "78937558"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81649605"
 ---
 # <a name="write-unit-tests-for-cc-in-visual-studio"></a>在 Visual Studio 中编写 C/C++ 单元测试
 
@@ -79,7 +79,7 @@ C++ 单元测试项目支持 [CodeLens](../ide/find-code-changes-and-other-histo
 
 ### <a name="link-to-object-or-library-files"></a>将测试与对象或库文件相关联
 
-如果测试代码没有导出要测试的函数，可以将输出的 .obj 或 .lib 文件添加到测试项目的依赖项中。 有关详细信息，请参阅[将测试与对象或库文件相关联](/visualstudio/test/how-to-use-microsoft-test-framework-for-cpp#object_files)。
+如果测试代码没有导出要测试的函数，可以将输出的 .obj 或 .lib 文件添加到测试项目的依赖项中。 有关详细信息，请参阅[将测试与对象或库文件相关联](how-to-use-microsoft-test-framework-for-cpp.md#object_files)。
 
 ### <a name="add-include-directives-for-header-files"></a>为头文件添加 #include 指令
 
