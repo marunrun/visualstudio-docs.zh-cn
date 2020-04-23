@@ -1,5 +1,5 @@
 ---
-title: 升级自定义项目 |Microsoft Docs
+title: 升级自定义项目 |微软文档
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: devlang-csharp
@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: 262ada44-7689-44d8-bacb-9c6d33834d4e
 caps.latest.revision: 11
 manager: jillfra
-ms.openlocfilehash: 5046a35cbc681ede4aff85023feeccd71a61b5b2
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: c91013e7d5650e82fd9e5f6e39e28c4609e4fbfe
+ms.sourcegitcommit: c1339f64fbeee6f17bf80fedea81afc8dac40dc0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65693829"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82037202"
 ---
 # <a name="upgrading-custom-projects"></a>升级自定义项目
-如果你更改保留在产品的不同 Visual Studio 版本之间的项目文件中的信息，则你需要支持将项目文件从旧版本升级到新版本。 若要支持升级，您可以参与**Visual Studio 转换向导**，实现<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory>接口。 此接口包含可用于复制升级的唯一机制。 项目的升级作为解决方案打开的一部分而发生。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory> 接口由项目工厂实现或至少应从项目工厂获得。  
+如果你更改保留在产品的不同 Visual Studio 版本之间的项目文件中的信息，则你需要支持将项目文件从旧版本升级到新版本。 要支持升级，允许您参与**可视化工作室转换向导**，实现<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory>该接口。 此接口包含可用于复制升级的唯一机制。 项目的升级作为解决方案打开的一部分而发生。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory> 接口由项目工厂实现或至少应从项目工厂获得。  
   
  仍支持使用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade> 接口的旧机制，但该机制将会把项目系统作为项目打开的一部分进行概念上的升级。 因此即使调用或实现了 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory> 接口，<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade> 接口仍由 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 环境调用。 此方法允许你使用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory> 来实现复制、仅规划升级的部分并通过 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade> 接口委派要就地（可能在新位置）完成的剩余工作。  
   
- 有关示例实现<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade>，请参阅[VSSDK 示例](../misc/vssdk-samples.md)。  
+ 有关 的<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade>实现示例，请参阅[VSSDK 示例](../misc/vssdk-samples.md)。  
   
  项目升级时出现下列情况：  
   
@@ -56,11 +56,11 @@ ms.locfileid: "65693829"
 6. <xref:Microsoft.VisualStudio.Shell.Interop.IVsFileUpgrade> 接口用于实现需作为项目升级一部分而发生的任何类型的文件升级。 此接口不从 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory> 调用，但会将其作为一种机制用来对属于项目系统、但主项目系统可能不会直接感知到的文件进行升级。 例如，如果编译器相关文件和属性未由处理项目系统其余部分的同一开发团队处理，则可能会发生这种情况。  
   
 ## <a name="ivsprojectupgrade-implementation"></a>IVsProjectUpgrade 实现  
- 如果项目系统实现<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade>仅，它不能参与**Visual Studio 转换向导**。 但即使你实现 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory> 接口，仍可将文件升级委派到 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade> 实现。  
+ 如果项目系统仅实现<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade>，则无法参与**可视化工作室转换向导**。 但即使你实现 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory> 接口，仍可将文件升级委派到 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade> 实现。  
   
 #### <a name="to-implement-ivsprojectupgrade"></a>实现 IVsProjectUpgrade  
   
-1. 用户尝试打开一个项目时，<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade.UpgradeProject%2A> 方法将由环境在项目打开后、在项目上执行任何其他用户操作前调用。 如果已提示用户升级解决方案，则 <xref:Microsoft.VisualStudio.Shell.Interop.__VSUPGRADEPROJFLAGS> 标志将传入 `grfUpgradeFlags` 参数。 如果用户打开的项目直接，此类通过使用**添加现有项目**命令，则<xref:Microsoft.VisualStudio.Shell.Interop.__VSUPGRADEPROJFLAGS>标志不会传递并需要提示用户升级项目。  
+1. 用户尝试打开一个项目时，<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade.UpgradeProject%2A> 方法将由环境在项目打开后、在项目上执行任何其他用户操作前调用。 如果已提示用户升级解决方案，则 <xref:Microsoft.VisualStudio.Shell.Interop.__VSUPGRADEPROJFLAGS> 标志将传入 `grfUpgradeFlags` 参数。 如果用户直接打开项目（例如使用 **"添加现有项目"** 命令），则不会传递<xref:Microsoft.VisualStudio.Shell.Interop.__VSUPGRADEPROJFLAGS>标志，并且项目需要提示用户升级。  
   
 2. 在响应 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade.UpgradeProject%2A> 调用时，该项目必须评估是否升级该项目文件。 如果项目不需要将项目类型升级到新版本，则可以只返回 <xref:Microsoft.VisualStudio.VSConstants.S_OK> 标志。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "65693829"
   
 - 如果你处理自己的项目重载，则环境将调用你的 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem2.ReloadItem%2A> (VSITEMID_ROOT) 实现。 当你收到此调用时，请重新加载项目的第一个实例 (Project1) 并继续升级项目文件。 如果你为 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A> (<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID>) 返回 `true`，则环境知道你将处理自己的项目重载。  
   
-- 如果你不处理自己的项目重载，则需为 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A> (<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID>) 返回 `false`。 在这种情况下前, <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QueryEditFiles%2A>([QEF_ForceEdit_NoPrompting](assetId:///T:Microsoft.VisualStudio.Shell.Interop.tagVSQueryEditFlags?qualifyHint=False&autoUpgrade=True)， [QEF_DisallowInMemoryEdits](assetId:///T:Microsoft.VisualStudio.Shell.Interop.tagVSQueryEditFlags?qualifyHint=False&autoUpgrade=True)，) 返回时，环境将创建另一个新项目，如 Project2，实例作为如下所示：  
+- 如果你不处理自己的项目重载，则需为 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A> (<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID>) 返回 `false`。 在这种情况下，在返回<xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QueryEditFiles%2A>[（QEF_ForceEdit_NoPrompting，QEF_DisallowInMemoryEdits](/dotnet/api/microsoft.visualstudio.shell.interop.tagvsqueryeditflags)）之前，环境将创建另一个新的项目实例，例如 Project2，如下所示： [QEF_DisallowInMemoryEdits](/dotnet/api/microsoft.visualstudio.shell.interop.tagvsqueryeditflags)  
   
   1. 环境在你的第一个项目对象 Project1 上调用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.Close%2A>，因此使此对象处于非活动状态。  
   
@@ -109,7 +109,7 @@ ms.locfileid: "65693829"
   4. 环境第二次调用 `IVsProjectUpgrade::UpgradeProject` 以确定是否应升级项目对象。 但是，此调用在项目的第二个新实例 Project2 上进行。 这就是在解决方案中打开的项目。  
   
       > [!NOTE]
-      > 如果第一个项目实例 Project1 处于非活动状态，则你必须从对 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade.UpgradeProject%2A> 实现的首次调用中返回 <xref:Microsoft.VisualStudio.VSConstants.S_OK>。 请参阅[基本项目](https://msdn.microsoft.com/385fd2a3-d9f1-4808-87c2-a3f05a91fc36)的实现`IVsProjectUpgrade::UpgradeProject`。  
+      > 如果第一个项目实例 Project1 处于非活动状态，则你必须从对 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade.UpgradeProject%2A> 实现的首次调用中返回 <xref:Microsoft.VisualStudio.VSConstants.S_OK>。 有关 的`IVsProjectUpgrade::UpgradeProject`实现，请参阅[基本项目](https://msdn.microsoft.com/385fd2a3-d9f1-4808-87c2-a3f05a91fc36)。  
   
   5. 调用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QueryEditFiles%2A> 并为 `rgfQueryEdit` 参数传入 <xref:Microsoft.VisualStudio.Shell.Interop.tagVSQueryEditFlags> 值。  
   
@@ -117,7 +117,7 @@ ms.locfileid: "65693829"
   
   如果不能升级，请从 `IVsProjectUpgrade::UpgradeProject` 返回 <xref:Microsoft.VisualStudio.Shell.Interop.VSErrorCodes>。 如果不需要升级或你选择不升级，请将 `IVsProjectUpgrade::UpgradeProject` 调用视作不执行任何操作。 如果返回 <xref:Microsoft.VisualStudio.Shell.Interop.VSErrorCodes>，则向项目的解决方案添加占位符节点。  
   
-## <a name="see-also"></a>请参阅  
- [Visual Studio 转换向导](https://msdn.microsoft.com/4acfd30e-c192-4184-a86f-2da5e4c3d83c)   
+## <a name="see-also"></a>另请参阅  
+ [可视化工作室转换向导](https://msdn.microsoft.com/4acfd30e-c192-4184-a86f-2da5e4c3d83c)   
  [升级项目项](../misc/upgrading-project-items.md)   
  [项目](../extensibility/internals/projects.md)
