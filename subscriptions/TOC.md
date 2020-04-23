@@ -77,6 +77,7 @@
 ### 分配订阅
 #### [添加单用户](assign-license.md)
 #### [添加多个用户](assign-license-bulk.md)
+#### [分配特定订阅](assign-guid.md)
 ### [编辑订阅](edit-license.md)
 ### [删除订阅](delete-license.md)
 ### [搜索订阅](search-license.md)
