@@ -12,19 +12,19 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f456a35f4a65438df5229492beb1f3e142e38f05
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 0f49925211247e346ac3203de20a97496c54295d
+ms.sourcegitcommit: 7b60e81414a82c6d34f6de1a1f56115c9cd26943
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79508935"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81444799"
 ---
 # <a name="how-to-manage-word-wrap-in-the-editor"></a>如何：在编辑器中管理自动换行
 
 可以设置和清除“自动换行”选项  。 如果设置了此选项，较长行中超出代码编辑器窗口当前宽度的部分将在下一行显示。 如果清除了此选项，例如，为方便使用行号，则可以向右滚动查看较长行的末尾。
 
 > [!NOTE]
-> 本主题仅适用于 Windows 上的 Visual Studio。 Visual Studio for Mac 目前不支持自动换行。
+> 本主题适用于 Visual Studio  Windows 版。 有关 Visual Studio for Mac，请参阅[源编辑器：自动换行](/visualstudio/mac/source-editor#word-wrap)。
 
 ## <a name="to-set-word-wrap-preferences"></a>设置换行首选项
 
@@ -52,6 +52,6 @@ ms.locfileid: "79508935"
 * [三次单击不会选择整行](https://developercommunity.visualstudio.com/content/problem/268989/triple-click-doesnt-select-whole-line-when-word-wr.html)
 * [按两次 End 键不会将光标移动到行尾](https://developercommunity.visualstudio.com/content/problem/138274/pressing-end-key-twice-should-move-cursor-to-end-o.html)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [代码编辑器功能](../../ide/writing-code-in-the-code-and-text-editor.md)

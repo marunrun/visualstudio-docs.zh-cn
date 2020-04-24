@@ -10,12 +10,12 @@ manager: jillfra
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: cbb06ac800fd21e2354b04fb2e7e46306da7ed72
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: 649f933c3d0fc2962ed0f7efc2ab09449bdd72ba
+ms.sourcegitcommit: 7b60e81414a82c6d34f6de1a1f56115c9cd26943
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "70180343"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81444942"
 ---
 # <a name="quickstart-create-your-first-python-web-app-using-visual-studio"></a>快速入门：使用 Visual Studio 创建第一个 Python Web 应用
 
@@ -182,7 +182,7 @@ Python 中的 Web 应用几乎总是使用众多可用 Python 库中的一个来
 
 3.  依次选择“调试”和“开始执行(不调试)”  (Ctrl+F5  )，这会将更改保存至文件并运行应用。
 
-4. 命令窗口中会显示消息“* 在 <https://localhost:4449/> 中运行”，随即打开指向 `localhost:4449` 的浏览器窗口应，显示“Hello, Python!”消息 状态为 200 的命令窗口中还显示 GET 请求。
+4. 命令窗口中会显示消息“在 https:\//localhost:4449 中运行”，并且浏览器窗口应打开至 `localhost:4449`，可在其中看到消息“Hello, Python!”  状态为 200 的命令窗口中还显示 GET 请求。
 
     如果浏览器未自动打开，请启动所选的浏览器并导航到 `localhost:4449`。
 

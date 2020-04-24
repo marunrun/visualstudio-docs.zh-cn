@@ -1,7 +1,7 @@
 ---
 title: 创建 Node.js 和 Express 应用
 description: 在本教程中，使用 Visual Studio 的 Node.js 工具创建应用
-ms.date: 09/24/2018
+ms.date: 04/20/2020
 ms.topic: tutorial
 ms.devlang: javascript
 author: mikejo5000
@@ -11,12 +11,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 260bc6ff6eb2d0bfbf0b9abd19062892c358728a
-ms.sourcegitcommit: b4e0cc76d94fe8cf6d238c4cc09512d17131a195
+ms.openlocfilehash: 3d91f20dec22379d79b5f295fccf49aae0733a24
+ms.sourcegitcommit: 5c804c42d24d35dcf2ba195aba9ce07031743f62
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81224519"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81744885"
 ---
 # <a name="tutorial-create-a-nodejs-and-express-app-in-visual-studio"></a>教程：在 Visual Studio 中创建 Node.js 和 Express 应用
 
@@ -109,13 +109,13 @@ Visual Studio 管理项目中的单个应用程序的文件  。 该项目包括
 
     (3) Npm 节点显示任何已安装的 npm 包。 可右键单击 npm 节点以使用对话框搜索并安装 npm 包，也可使用 package.json 中的设置来安装和更新包，并右键单击 npm 节点中的选项  。
 
-    (4) package.json 是 npm 用于管理本地安装包的包依赖关系和包版本的文件  。 有关此文件的详细信息，请参阅 [package.json 配置](../javascript/configure-packages-with-package-json.md)
+    (4) package.json 是 npm 用于管理本地安装包的包依赖关系和包版本的文件  。 有关详细信息，请参阅[管理 npm 包](../javascript/npm-package-management.md)。
 
     (5) 项目文件（例如 app.js）显示在项目节点下  。 app.js 是项目启动文件，因此它以粗体形式显示   。 可设置启动文件，方法是右键单击项目中的文件并选择“设置为 Node.js 启动文件”  。
 
 1. 打开“npm”节点，确保其中存在所有必需的 npm 包  。
 
-    如果缺少任何包（感叹号图标），可右键单击“npm”节点并选择“安装缺少的 npm 包”   。
+    如果缺少任何包（感叹号图标），可右键单击“npm”节点并选择“安装 npm 包”   。
 
 ## <a name="add-some-code"></a>添加一些代码
 
@@ -194,7 +194,7 @@ IntelliSense 是一款可帮助编写代码的 Visual Studio 工具。
 
     此消息的最后一行告诉你，JavaScript 解释器需要一个逗号 (`,`)。
 
-1. 在下方的窗格中，单击“错误列表”选项卡  。
+1. 在下面的窗格中，单击“错误列表”选项卡，然后为报告的问题类型选择“生成 + IntelliSense”   。
 
     可看到警告和描述，以及文件名和行号。
 
@@ -218,7 +218,7 @@ IntelliSense 是一款可帮助编写代码的 Visual Studio 工具。
 
 ## <a name="run-the-application"></a>运行此应用程序
 
-1. 在“调试”工具栏中选择调试目标，例如 Microsoft Edge 或 Chrome。
+1. 在“调试”工具栏中选择调试目标，例如“Web 服务器(Google Chrome)”或“Web 服务器(Microsoft Edge)”   。
 
     ::: moniker range=">=vs-2019"
     ![选择调试目标](../javascript/media/vs-2019/tutorial-nodejs-deploy-target.png)

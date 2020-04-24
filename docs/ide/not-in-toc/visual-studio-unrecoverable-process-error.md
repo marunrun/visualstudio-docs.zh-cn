@@ -10,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d1879be46498d851eec0fbfce71b2328bdfc9afb
-ms.sourcegitcommit: b4e0cc76d94fe8cf6d238c4cc09512d17131a195
+ms.openlocfilehash: c30ac5950ca9bf775b05e9f77867c119b7c7565d
+ms.sourcegitcommit: eef26de3d7a5c971baedbecf3b4941fb683ddb2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81224435"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81544336"
 ---
 # <a name="visual-studio-unrecoverable-process-error"></a>Visual Studio 无法恢复的处理器错误
 
@@ -33,7 +33,9 @@ Visual Studio 使用多个进程外的进程来运行必需的后台任务，如
 
 - Microsoft.Alm.Shared.Remoting.RemoteContainer.dll
 - Microsoft.CodeAnalysis.LiveUnitTesting.EntryPoint
+- MSBuild.exe
 - PerfWatson2.exe
+- ScriptedSandbox64.exe
 - ServiceHub.Host.CLR.x86.exe
 - ServiceHub.Host.Node.x86.exe
 - ServiceHub.IdentityHost.exe
@@ -41,6 +43,9 @@ Visual Studio 使用多个进程外的进程来运行必需的后台任务，如
 - ServiceHub.RoslynCodeAnalysisService32.exe
 - ServiceHub.SettingsHost.exe
 - ServiceHub.VSDetouredHost.exe
+- VBCSCompiler.exe
+- VsHub.exe
+- vstest.discoveryengine.x86.exe
 - WaAppAgent.exe
 - WindowsAzureGuestAgent.exe
 - WindowsAzureTelemetryService.exe

@@ -11,12 +11,12 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 monikerRange: '>= vs-2019'
-ms.openlocfilehash: df4630182e89dad08360794057bda856ff4d677b
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: 199a27dbfef2b7297563e87d973137e2acd9c745
+ms.sourcegitcommit: eef26de3d7a5c971baedbecf3b4941fb683ddb2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "79549951"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81544284"
 ---
 # <a name="javascript-and-typescript-in-visual-studio-2019"></a>Visual Studio 2019 中的 JavaScript 和 TypeScript
 
@@ -38,7 +38,8 @@ Visual Studio 2019 提供了若干选项，用于将 TypeScript 编译集成到�
 * [TypeScript npm 包](https://www.npmjs.com/package/typescript)。 当 TypeScript 2.1 或更高版本的 npm 包安装到项目中时，将在编辑器中加载相应版本的 TypeScript 语言服务。
 * TypeScript SDK（在 Visual Studio 安装程序中默认提供），以及 [VS Marketplace](https://marketplace.visualstudio.com/items?itemName=TypeScriptTeam.typescript-331-vs2017) 中提供的独立 SDK 下载。
 
-对于在 Visual Studio 2019 中开发的项目，我们建议使用 TypeScript NuGet 和 npm 包，以实现跨不同平台和环境的更高可移植性。
+> [!TIP]
+> 对于使用 Visual Studio 2019 开发的项目，我们鼓励你使用 TypeScript NuGet 或 TypeScript npm 包，以实现跨不同平台和环境的更高可移植性。
 
 NuGet 包的一个常见用法是使用 .NET Core CLI 编译 TypeScript。 除非手动编辑项目文件以从 TypeScript SDK 安装导入生成目标，否则 NuGet 包是使用 .NET Core CLI 命令（如 `dotnet build` 和 `dotnet publish`）启用 TypeScript 编译的唯一方法。
 

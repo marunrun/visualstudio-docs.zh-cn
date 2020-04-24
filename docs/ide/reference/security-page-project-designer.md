@@ -14,12 +14,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1834713ad114ab8a86e314bbe052f4873b308956
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 272d37ef9e73aa5dd0d10ca0210b18a945f993fd
+ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75593572"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81649825"
 ---
 # <a name="security-page-project-designer"></a>”项目设计器“ ->“安全”页
 
@@ -36,7 +36,7 @@ ms.locfileid: "75593572"
 > [!NOTE]
 > 使用“发布”向导发布应用程序时，会自动启用此选项  。
 
-选中此选项后，可以从以下两个单选按钮中选择一个：“这是完全信任的应用程序”或“这是部分信任的应用程序”   。
+选择此选项时，可以选择以下两个单选按钮之一：“这是完全信任应用程序”或“这是部分信任应用程序”   。
 
 对于 WPF Web 浏览器应用程序项目，默认选择此选项。
 
@@ -72,15 +72,15 @@ ms.locfileid: "75593572"
 
 打开[“高级安全设置”对话框](../../ide/reference/advanced-security-settings-dialog-box.md)，该对话框用于为调试应用程序的设置配置受限权限。 在调试过程中会检查这些设置，权限异常表示应用程序需要的权限可能超过了区域中定义的权限。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - <xref:System.Security.Permissions.WebBrowserPermission>
 - <xref:System.Security.Permissions.MediaPermission>
 - [ClickOnce 应用程序的代码访问安全性](../../deployment/code-access-security-for-clickonce-applications.md)
 - [如何：启用 ClickOnce 安全设置](../../deployment/how-to-enable-clickonce-security-settings.md)
-- [如何：为 ClickOnce 应用程序设置安全区域](../../deployment/how-to-set-a-security-zone-for-a-clickonce-application.md)
+- [如何：设置 ClickOnce 应用程序的安全区域](../../deployment/how-to-set-a-security-zone-for-a-clickonce-application.md)
 - [如何：设置 ClickOnce 应用程序的自定义权限](../../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md)
-- [如何：使用受限权限对 ClickOnce 应用程序进行调试](../../deployment/how-to-debug-a-clickonce-application-with-restricted-permissions.md)
+- [保护 ClickOnce 应用](../../deployment/securing-clickonce-applications.md)
 - [ClickOnce 安全和部署](../../deployment/clickonce-security-and-deployment.md)
 - [项目属性引用](../../ide/reference/project-properties-reference.md)
 - [“高级安全设置”对话框](../../ide/reference/advanced-security-settings-dialog-box.md)

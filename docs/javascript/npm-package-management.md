@@ -2,7 +2,7 @@
 title: 管理 npm 包
 description: Visual Studio 可帮助你使用 Node.js 包管理器 (npm) 来管理包
 ms.custom: seodec18
-ms.date: 03/12/2020
+ms.date: 04/16/2020
 ms.topic: conceptual
 ms.devlang: javascript
 author: mikejo5000
@@ -12,12 +12,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: dba657d30eedef26337c708e7ede6c5ab85ed4cc
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: 0b4b699c01522878d83e59aadb2c6a54e9d7517f
+ms.sourcegitcommit: a7f781d5a089e6aab6b073a07f3d4d2967af8aa6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "79549966"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81760176"
 ---
 # <a name="manage-npm-packages-in-visual-studio"></a>在 Visual Studio 中管理 npm 包
 
@@ -31,30 +31,34 @@ Visual Studio 与 npm 的集成因项目类型而异。
 > [!Important]
 > npm 在项目根目录中需要 node_modules 文件夹和 package.json   。 如果应用的文件夹结构不同，并且希望使用 Visual Studio 来管理 npm 包，则可以修改文件夹结构。
 
-> [!NOTE]
-> 对于现有的 Node.js 项目，请使用“基于现有 Node.js 代码”解决方案模板来在项目中启用 npm  。
-
 ## <a name="nodejs-projects"></a>Node.js 项目
 
-对于 Node.js 项目，请使用以下方法之一：
+对于 Node.js 项目，可以执行下列任务：
 * [从解决方案资源管理器安装包](#npmInstallWindow)
 * [从解决方案资源管理器管理安装的包](#solutionExplorer)
 * [在 Node.js 交互式窗口中使用 `.npm` 命令](#interactive)
 
 这些功能协同工作，并与项目系统和项目中的 package.json  文件同步。
 
+### <a name="prerequisites"></a>先决条件
+
+需要安装“Node.js 开发”工作负载和 Node.js 运行时，以便将 npm 支持添加到项目  。 有关详细步骤，请参阅[创建 Node.js 项目](/visualstudio/ide/quickstart-nodejs?toc=/visualstudio/javascript/toc.json)。
+
+> [!NOTE]
+> 对于现有的 Node.js 项目，请使用“基于现有 Node.js 代码”解决方案模板或 [Open folder (Node.js)](../javascript/develop-javascript-code-without-solutions-projects.md) 项目类型来在项目中启用 npm  。
+
 ### <a name="install-packages-from-solution-explorer-nodejs"></a><a name="npmInstallWindow"></a>从解决方案资源管理器安装包 (Node.js)
 
 对于 Node.js 项目，安装 npm 包的最简单方法是通过 npm 包安装窗口。 若要访问此窗口，右键单击项目中的“npm”节点并选择“安装新的 npm 包”   。
 
-![从解决方案资源管理器安装新的 npm 包](../javascript/media/solution-explorer-install-package.png)
+:::image type="content" source="../javascript/media/solution-explorer-install-package.png" alt-text="从解决方案资源管理器安装新的 npm 包" border="true":::
 
 在此窗口中可以搜索包、指定选项并安装。
 
 ![搜索 npm 包](../javascript/media/search-package.png)
 
 * 依赖项类型 - 在“标准”、“开发”和“可选”包间进行选择     。 “标准”指定包是一个运行时依赖项，而“开发”指定只在开发过程中需要包。
-* 添加到 package.json  - 此选项已弃用
+* **添加到 package.json** - 建议。 此可配置选项已被弃用。
 * 所选版本  - 选择你想要安装的包版本。
 * 其他 npm 参数  - 指定其他标准参数。 例如，可以输入版本值（如 `@~0.8`），安装版本列表中不可用的特定版本。
 
@@ -77,10 +81,28 @@ npm 包显示在解决方案资源管理器中。 “npm”节点下的条目模
 * ![无关包](../javascript/media/extraneous-npm.png) - 已安装但未显式列在 package.json 中
 * ![缺失的包](../javascript/media/missing-npm.png) - 未安装，但列在 package.json 中
 
+::: moniker range=">=vs-2019"
+右键单击 npm 节点，执行以下操作之一  ：
+
+* **安装新的 npm 包** 打开 UI 以安装新的包。
+* **安装 npm 包** 运行 npm 安装命令以安装 package.json 中列出的所有包  。 （运行 `npm install`。）
+* **更新 npm 包** 根据 package.json 指定的 SemVer 范围，将包更新到最新版本  。 （运行 `npm update --save`。）。 通常使用“~”或“^”指定 SemVer 范围。 有关详细信息，请参阅 [package.json 配置](../javascript/configure-packages-with-package-json.md)。
+
+右键单击包节点，执行以下操作之一：
+
+* **安装 npm 包** 运行 npm 安装命令以安装 package.json 中列出的所有包版本  。 （运行 `npm install`。）
+* **更新 npm 包** 根据 package.json 指定的 SemVer 范围，将包更新到最新版本  。 （运行 `npm update --save`。）通常使用“~”或“^”指定 SemVer 范围。
+* **卸载 npm 包** 卸载包并将其从 package.json 中删除（运行 `npm uninstall --save`。） 
+::: moniker-end
+::: moniker range="vs-2017"
 右键单击包节点或“npm”  节点，执行以下操作之一：
 * 安装 package.json 中列出的缺失的包  
-* 将包更新到最新版本 
+* 将 npm 包更新到最新版本 
 * 卸载包  ，并从 package.json  中删除
+::: moniker-end
+
+>[!NOTE]
+> 若要帮助解决 npm 包的问题，请参阅[疑难解答](#troubleshooting-npm-packages)。
 
 ### <a name="use-the-npm-command-in-the-nodejs-interactive-window-nodejs"></a><a name="interactive"></a>在 Node.js 交互式窗口中使用 .npm 命令 (Node.js)
 
@@ -108,11 +130,17 @@ npm 包显示在解决方案资源管理器中。 “npm”节点下的条目模
 
 ### <a name="add-npm-support-to-a-project-aspnet-core"></a><a name="npmAdd"></a>向项目添加 npm 支持 (ASP.NET Core)
 
-如果项目尚未包含 package.json  文件，则可以通过将 package.json 文件添加到该项目来添加一个启用 npm 支持。
+如果你的项目尚未包含 package.json 文件，则可以为其添加一个 package.json 文件以启用 npm 支持   。
 
-1. 要添加文件，请右键单击解决方案资源管理器中的项目，然后选择“添加” > “新项”   。 选择“npm 配置文件”，使用默认名称，然后单击“添加”   。
+1. 如果你尚未安装 Node.js，建议从 [Node.js](https://nodejs.org/en/download/) 网站安装 LTS 版本，以实现与外部框架和库的最佳兼容性。
+
+   npm 需要 Node.js。
+
+1. 若要添加 package.json 文件，请右键单击解决方案资源管理器中的项目，然后选择“添加” > “新项”    。 选择“npm 配置文件”，使用默认名称，然后单击“添加”   。
 
    ![将 package.json 添加到项目](../javascript/media/npm-add-package-json.png)
+
+   如果看不到列出的 npm 配置文件，则不会安装 Node.js 开发工具。 可以使用 Visual Studio 安装程序添加“Node.js 开发”工作负载  。 然后重复执行上一步骤。
 
 1. 在 package.json 的 `dependencies` 或 `devDependencies` 部分中添加一个或多个 npm 包  。 例如，可以向文件添加以下内容：
 
@@ -126,7 +154,7 @@ npm 包显示在解决方案资源管理器中。 “npm”节点下的条目模
 保存文件时，Visual Studio 会将包添加到解决方案资源管理器中的“依赖项/npm”节点下  。 如果未显示该节点，请右键单击“package.json”并选择“还原包”   。
 
 >[!NOTE]
-> 在某些情况下，解决方案资源管理器可能会指示由于[此处](https://github.com/aspnet/Tooling/issues/479)所述的已知问题，npm 包与 package.json 不同步  。 例如，在安装包时，可能会显示为未安装。 在大多数情况下，可以通过删除 package.json，重启 Visual Studio 并重新添加 package.json 文件来更新解决方案资源管理器，如本文前面所述   。
+> 在某些情况下，解决方案资源管理器可能无法正确显示已安装 npm 包的状态。 有关详细信息，请参阅[疑难解答](#troubleshooting-npm-packages)。
 
 ### <a name="install-packages-using-packagejson-aspnet-core"></a><a name="npmInstallPackage"></a>使用 package.json 安装包 (ASP.NET Core)
 
@@ -136,11 +164,21 @@ npm 包显示在解决方案资源管理器中。 “npm”节点下的条目模
 
 package.json 中的 IntelliSense 可帮助选择特定版本的 npm 包  。
 
-![搜索 npm 包](../javascript/media/npm-add-package-intellisense.png)
+:::image type="content" source="../javascript/media/npm-add-package-intellisense.png" alt-text="选择 npm 包版本" border="true":::
 
 保存文件时，Visual Studio 会将包添加到解决方案资源管理器中的“依赖项/npm”节点下  。 如果未显示该节点，请右键单击“package.json”并选择“还原包”   。
 
 安装包可能需要几分钟的时间。 通过在“输出”窗口中切换到“npm”输出来查看包的安装进度   。
 
 ![npm 输出](../javascript/media/npm-output.png)
+
+## <a name="troubleshooting-npm-packages"></a>npm 包疑难解答
+
+* npm 需要 Node.js。如果你尚未安装 Node.js，建议从 [Node.js](https://nodejs.org/en/download/) 网站安装 LTS 版本，以实现与外部框架和库的最佳兼容性。
+
+* 对于 Node.js 项目，必须为 npm 支持安装“Node.js 开发”工作负载  。
+
+* 在某些情况下，由于[此处](https://github.com/aspnet/Tooling/issues/479)所述的已知问题，解决方案资源管理器可能无法正确显示已安装 npm 包的状态。 例如，在安装包时，可能会显示为未安装。 在大多数情况下，可以通过删除 package.json，重启 Visual Studio 并重新添加 package.json 文件来更新解决方案资源管理器，如本文前面所述   。 也可在安装包时使用“npm 输出”窗口来验证安装状态。
+
+* 如果在生成应用或转译 TypeScript 代码时看到任何错误，请检查 npm 包是否由于潜在错误源而不兼容。 若要帮助识别错误，请在安装包时检查“npm 输出”窗口，如本文前面所述。 例如，如果所使用的一个或多个 npm 包版本是已弃用的版本，并导致发生错误，则可能需要安装较新版本以消除错误。 有关使用 package.json  控制 npm 包版本的信息，请参阅 [package.json 配置](../javascript/configure-packages-with-package-json.md)。
 

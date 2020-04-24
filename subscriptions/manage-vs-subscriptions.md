@@ -7,12 +7,12 @@ ms.assetid: 196c6d04-9a33-47d5-b0f1-038e7c3a7ac9
 ms.date: 03/09/2020
 ms.topic: conceptual
 description: 了解如何充分利用 Visual Studio 订阅
-ms.openlocfilehash: 8790897f0e5169aebc020035b4c8c1d5749c230e
-ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
+ms.openlocfilehash: 7d883092372d58f4a5bcc787daed0a99124a1704
+ms.sourcegitcommit: 7b60e81414a82c6d34f6de1a1f56115c9cd26943
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80232362"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81444865"
 ---
 # <a name="managing-subscriptions"></a>管理订阅
 
@@ -52,7 +52,6 @@ Visual Studio 订阅门户将所有 Visual Studio 订阅和程序汇集到一个
 **通过计划获得的订阅：** 如果通过计划获得订阅，则该订阅与你在计划中的参与状况关联。 请联系计划联系人，了解其他信息。
 
 - [Imagine](https://imagine.microsoft.com/about)
-- [BizSpark](https://bizspark.microsoft.com/About/Offers)
 - [Microsoft 合作伙伴网络](https://partner.microsoft.com)
 - [Microsoft 认证培训师](https://www.microsoft.com/learning/mct-certification.aspx)
 
@@ -106,7 +105,7 @@ Visual Studio 订阅门户将所有 Visual Studio 订阅和程序汇集到一个
 |    批量许可服务中心 (VLSC)              |    180          |
 |    Microsoft 产品和服务协议 (MPSA)    |    180          |
 |    Visual Studio 云订阅                   |    180          |
-|    程序（如 MCT、BizSpark、MPN、Imagine）          |    180          |
+|    程序（如 MCT、MPN、Imagine）          |    180          |
 |    限制转售（如 MVP、MSP）                      |    180          |
 |    DevEssentials                                       |    30           |
 

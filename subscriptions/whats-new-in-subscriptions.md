@@ -8,12 +8,12 @@ author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: 2dc938b5-37e9-4dfc-8676-5d0a91d366ab
-ms.openlocfilehash: 435185a628dbf256802ae36dae45eac60d304a54
-ms.sourcegitcommit: 054815dc9821c3ea219ae6f31ebd9cd2dc8f6af5
+ms.openlocfilehash: c19bb72a7d5262c5d0864d12d44266c8ef016acf
+ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80544055"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81649666"
 ---
 # <a name="what39s-new-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的新增功能
 
@@ -39,6 +39,23 @@ ms.locfileid: "80544055"
 我们非常高兴地宣布，我们的合作伙伴提供了权益扩展，CAST Highlight。 
 - Visual Studio Enterprise 订阅中包含的权益长度已延长到六个月。  
 - Visual Studio Professional 订阅者现在可以接收订阅，使其能够在三个月内评估单个应用程序。 
+
+## <a name="2020-q2-april-june"></a>2020 年第 2 季度（4 月 - 6 月）
+
+### <a name="visual-studio-subscriptions-portal"></a>Visual Studio 订阅门户
+
+Visual Studio 订阅门户的外观和易用性发生了重大变化。  
+
+- 权益磁贴已调整大小，并且都显示在窗口中，因此无需向左或向右滚动即可查看给定类别中的所有磁贴。 
+- 你可以选择显示所有可用权益，或使用类别选取器仅显示一个类别。
+   > [!div class="mx-imgBorder"]
+   > ![新的权益类别选取器](_img/whats-new/whats-new-category-picker.png)
+- 我们还将订阅选取器从窗口的右上角移动到了更易于访问的位置。
+   > [!div class="mx-imgBorder"]
+   > ![新的订阅选取器](_img/whats-new/whats-new-sub-picker.png)
+- 我们在权益列表顶部添加了“特别推荐的权益”，以标注出新的或受欢迎的权益。  
+   > [!div class="mx-imgBorder"]
+   > ![新的特别推荐的权益](_img/whats-new/whats-new-featured.png)
 
 ## <a name="next-steps"></a>后续步骤
 - 查看新的[订阅管理门户](https://manage.visualstudio.com) UI 及其新功能
