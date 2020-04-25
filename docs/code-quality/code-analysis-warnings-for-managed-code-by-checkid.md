@@ -106,6 +106,7 @@ f1_keywords:
 - CA1505
 - CA1506
 - CA1507
+- CA1508
 - CA1600
 - CA1601
 - CA1700
@@ -265,12 +266,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 83ed654a6e0795e5930580f9d13198631b5d695e
-ms.sourcegitcommit: 5ab22b8601db9c420691f8e57abe140e837aa720
+ms.openlocfilehash: d4f532baf1434ea318a86ce2cb2fc717fff98623
+ms.sourcegitcommit: dab57cebd484228e6f0cf7ab1b9685c575410c06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82109489"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82153011"
 ---
 # <a name="code-analysis-warnings-for-managed-code-by-checkid"></a>托管代码的代码分析警告（按 CheckId）
 
@@ -375,7 +376,9 @@ ms.locfileid: "82109489"
 | CA1502 | [CA1502：避免过度复杂](../code-quality/ca1502.md) | 此规则通过方法来测量线性独立的路径的数量，该数量是由条件分支的数量和复杂度决定的。 |
 | CA1504 | [CA1504：检查令人误解的字段名](../code-quality/ca1504.md) | 实例字段的名称以“s_”开头，或者 static（在 Visual Basic 中为 Shared）字段的名称以“m_”开头。 |
 | CA1505 | [CA1505：避免编写无法维护的代码](../code-quality/ca1505.md) | 类型或方法具有较低的可维护性索引值。 如果可维护性指数较低，则表示类型或方法可能难以维护，最好重新进行设计。 |
-| CA1506 |[CA1506：避免过度类耦合](../code-quality/ca1506.md) | 此规则通过计算类型或方法包含的唯一类型引用的个数来衡量类耦合。 |
+| CA1506 | [CA1506：避免过度类耦合](../code-quality/ca1506.md) | 此规则通过计算类型或方法包含的唯一类型引用的个数来衡量类耦合。 |
+| CA1507 | [CA1507：使用 nameof 替换字符串](../code-quality/ca1507.md) | 字符串文本用作参数，可在其中使用`nameof`表达式。 |
+| CA1508 | [CA1508：避免死条件代码](../code-quality/ca1508.md) | 方法具有始终计算为`true`或`false`在运行时的条件代码。 这会导致条件的`false`分支中的代码停滞。 |
 | CA1600 | [CA1600：不要使用 Idle 进程优先级](../code-quality/ca1600.md) | 不要将进程优先级设置为 Idle。 具有 System.Diagnostics.ProcessPriorityClass.Idle 优先级的进程将在 CPU 本应处于空闲状态时占用它，从而阻止进入待机状态。 |
 | CA1601 | [CA1601：不要使用阻止电源状态更改的计时器](../code-quality/ca1601.md) | 频率较高的定期活动会使 CPU 处于繁忙状态，并且会干扰具有节能功能（关闭显示器和硬盘）的空闲计时器。 |
 | CA1700 | [CA1700：不要命名“Reserved”枚举值](../code-quality/ca1700.md) | 此规则假定当前不使用名称中包含“reserved”的枚举成员，而是将其作为一个占位符，以在将来的版本中重命名或移除它。 重命名或移除成员是一项重大更改。 |
