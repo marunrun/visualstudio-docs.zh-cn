@@ -10,24 +10,24 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: c6328678365da0f8292360e51f35b4a2ec0133f2
-ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
+ms.openlocfilehash: 8fa572c3db3726bd1a8518990e1adfdba3c09269
+ms.sourcegitcommit: 93859158465eab3423a0c0435f06490f0a456a57
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81649350"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82167405"
 ---
 # <a name="fxcop-rule-port-status"></a>Fxcop 规则端口状态
 
-如果您以前在 Visual Studio 中使用静态代码分析，您可能想知道这些规则中的哪些在当前实现中作为[FxCop 分析器](install-fxcop-analyzers.md)可用。 此页列出了移植的规则以及尚未移植的规则，以及是否有移植这些规则的计划。
+如果以前在 Visual Studio 中使用了静态代码分析，则可能想知道哪些规则在当前实现中作为[FxCop 分析器](install-fxcop-analyzers.md)提供。 此页列出了已移植的规则以及尚未移植的规则，以及是否有计划对它们进行端口。
 
 ## <a name="ported-rules"></a>移植的规则
 
-roslyn-Analyzer repo 中的[自动生成文档页](https://github.com/dotnet/roslyn-analyzers/blob/master/src/Microsoft.CodeAnalysis.FxCopAnalyzers/Microsoft.CodeAnalysis.FxCopAnalyzers.md)包含已移植到 FxCop 分析器的最新规则列表。 该页还具有其他信息，例如默认情况下是否启用了规则，以及它是否具有关联的*代码修复程序*。 （[代码修复](../ide/quick-actions.md)是 Visual Studio 中的灯泡图标菜单中提供的一键式修复。
+Roslyn 存储库中自动[生成的文档页面](https://github.com/dotnet/roslyn-analyzers/blob/master/src/Microsoft.CodeAnalysis.FxCopAnalyzers/Microsoft.CodeAnalysis.FxCopAnalyzers.md)具有已移植到 FxCop 分析器的最新规则列表。 该页还包含其他信息，例如是否默认启用规则，以及是否有关联的*代码修复*。 （[代码修复](../ide/quick-actions.md)是 Visual Studio 的灯泡图标菜单中提供的一次单击的修复程序。）
 
-截至本页日期，已移植到[FxCop 分析器](install-fxcop-analyzers.md)的 FxCop 规则列表包括：
+截止到此页上的日期，已移植到[fxcop 分析器](install-fxcop-analyzers.md)的 fxcop 规则列表包括：
 
-规则 ID | 标题
+规则 ID | Title
 --------|---------
 [CA1000](ca1000-do-not-declare-static-members-on-generic-types.md) | 不要在泛型类型中声明静态成员
 [CA1001](ca1001-types-that-own-disposable-fields-should-be-disposable.md) | 具有可释放字段的类型应该是可释放的
@@ -35,9 +35,9 @@ roslyn-Analyzer repo 中的[自动生成文档页](https://github.com/dotnet/ros
 [CA1008](ca1008-enums-should-have-zero-value.md) | 枚举应具有零值
 [CA1010](ca1010-collections-should-implement-generic-interface.md) | 集合应实现泛型接口
 [CA1012](ca1012-abstract-types-should-not-have-constructors.md) | 抽象类型不应具有构造函数
-[CA1014](ca1014-mark-assemblies-with-clscompliantattribute.md) | 使用 CLS 符合标记程序集
-[CA1016](ca1016-mark-assemblies-with-assemblyversionattribute.md) | 使用程序集版本标记程序集
-[CA1017](ca1017-mark-assemblies-with-comvisibleattribute.md) | 使用"可分割"标记程序集
+[CA1014](ca1014-mark-assemblies-with-clscompliantattribute.md) | 用 CLSCompliant 标记程序集
+[CA1016](ca1016-mark-assemblies-with-assemblyversionattribute.md) | 用程序集版本标记程序集
+[CA1017](ca1017-mark-assemblies-with-comvisibleattribute.md) | 用 ComVisible 标记程序集
 [CA1018](ca1018-mark-attributes-with-attributeusageattribute.md) | 用 AttributeUsageAttribute 标记特性
 [CA1019](ca1019-define-accessors-for-attribute-arguments.md) | 定义特性参数的访问器
 [CA1021](ca1021.md) | 避免使用 out 参数
@@ -52,24 +52,24 @@ roslyn-Analyzer repo 中的[自动生成文档页](https://github.com/dotnet/ros
 [CA1036](ca1036-override-methods-on-comparable-types.md) | 重写可比较类型中的方法
 [CA1040](ca1040-avoid-empty-interfaces.md) | 避免使用空接口
 [CA1041](ca1041-provide-obsoleteattribute-message.md) | 提供 ObsoleteAttribute 消息
-[CA1043](ca1043-use-integral-or-string-argument-for-indexers.md) | 对索引器使用积分或字符串参数
+[CA1043](ca1043-use-integral-or-string-argument-for-indexers.md) | 将整型或字符串参数用于索引器
 [CA1044](ca1044-properties-should-not-be-write-only.md) | 属性不应是只写的
 [CA1050](ca1050-declare-types-in-namespaces.md) | 在命名空间中声明类型
 [CA1051](ca1051-do-not-declare-visible-instance-fields.md) | 不要声明可见实例字段
-[CA1052](ca1052-static-holder-types-should-be-sealed.md) | 静态支架类型应为静态或不可继承
-[CA1053](ca1053-static-holder-types-should-not-have-constructors.md) | 静态支架类型不应具有构造函数（CA1053 是 FXCop 分析仪[CA1052](ca1052-static-holder-types-should-be-sealed.md)的一部分）
-[CA1054](ca1054-uri-parameters-should-not-be-strings.md) | Uri 参数不应是字符串
+[CA1052](ca1052-static-holder-types-should-be-sealed.md) | 静态容器类型应为 static 或 NotInheritable
+[CA1053](ca1053-static-holder-types-should-not-have-constructors.md) | 静态容器类型不应具有构造函数（CA1053 是用于 FxCop 分析器的[CA1052](ca1052-static-holder-types-should-be-sealed.md)的一部分）
+[CA1054](ca1054-uri-parameters-should-not-be-strings.md) | Uri 参数不应为字符串
 [CA1055](ca1055-uri-return-values-should-not-be-strings.md) | Uri 返回值不应是字符串
 [CA1056](ca1056-uri-properties-should-not-be-strings.md) | Uri 属性不应是字符串
 [CA1058](ca1058-types-should-not-extend-certain-base-types.md) | 类型不应扩展某些基类型
 [CA1060](ca1060-move-p-invokes-to-nativemethods-class.md) | 将 pinvoke 移动到本机方法类
 [CA1061](ca1061-do-not-hide-base-class-methods.md) | 不要隐藏基类方法
 [CA1062](ca1062-validate-arguments-of-public-methods.md) | 验证公共方法的参数
-[CA1063](ca1063-implement-idisposable-correctly.md) | 正确实现 I 一次性
+[CA1063](ca1063-implement-idisposable-correctly.md) | 正确实现 IDisposable
 [CA1064](ca1064-exceptions-should-be-public.md) | 异常应该是公共的
 [CA1065](ca1065-do-not-raise-exceptions-in-unexpected-locations.md) | 不要在意外的位置引发异常
-CA1066 | 类型{0}应实现 IEqua\<可 T>，因为它重写等于
-CA1067 | 在实现可 iequa0t\<时，重写对象。相等（对象）>
+CA1066 | 类型{0}应实现 IEquatable\<T> 因为它重写 Equals
+CA1067 | 实现 IEquatable\<T 时重写对象 Equals （对象）>
 [CA1068](ca1068.md) | CancellationToken 参数必须最后出现
 CA1200 | 不要使用带前缀的 cref 标记
 [CA1303](ca1303-do-not-pass-literals-as-localized-parameters.md) | 请不要将文本作为本地化参数传递
@@ -77,15 +77,15 @@ CA1200 | 不要使用带前缀的 cref 标记
 [CA1305](ca1305-specify-iformatprovider.md) | 指定 IFormatProvider
 [CA1307](ca1307-specify-stringcomparison.md) | 指定 StringComparison
 [CA1308](ca1308-normalize-strings-to-uppercase.md) | 将字符串规范化为大写
-[CA1309](ca1309-use-ordinal-stringcomparison.md) | 使用带形字符串比较
+[CA1309](ca1309-use-ordinal-stringcomparison.md) | 使用序号字符串比较
 [CA1401](ca1401-p-invokes-should-not-be-visible.md) | P/Invokes 应该是不可见的
 [CA1501](ca1501-avoid-excessive-inheritance.md) | 避免过度继承
 [CA1502](ca1502-avoid-excessive-complexity.md) | 避免过度复杂
 [CA1505](ca1505-avoid-unmaintainable-code.md) | 避免使用无法维护的代码
 [CA1506](ca1506-avoid-excessive-class-coupling.md) | 避免过度类耦合度
-[CA1507](ca1507.md) | 使用 名称表示符号名称
+[CA1507](ca1507.md) | 使用 nameof 表示符号名称
 CA1508 | 避免死条件代码
-CA1509 | 代码指标规则规范文件中的无效条目
+CA1509 | 代码度量规则规范文件中的条目无效
 [CA1707](ca1707-identifiers-should-not-contain-underscores.md) | 标识符不应包含下划线
 [CA1708](ca1708-identifiers-should-differ-by-more-than-case.md) | 标识符应以大小写之外的差别进行区分
 [CA1710](ca1710-identifiers-should-have-correct-suffix.md) | 标识符应具有正确的后缀
@@ -97,36 +97,34 @@ CA1509 | 代码指标规则规范文件中的无效条目
 [CA1717](ca1717-only-flagsattribute-enums-should-have-plural-names.md) | 只有 FlagsAttribute 枚举应采用复数形式的名称
 [CA1720](ca1720-identifiers-should-not-contain-type-names.md) | 标识符包含类型名称
 [CA1721](ca1721-property-names-should-not-match-get-methods.md) | 属性名不应与 get 方法冲突
-[CA1724](ca1724-type-names-should-not-match-namespaces.md) | 类型名称不应与命名空间匹配
+[CA1724](ca1724-type-names-should-not-match-namespaces.md) | 类型名不应与命名空间匹配
 [CA1725](ca1725-parameter-names-should-match-base-declaration.md) | 参数名应与基方法中的声明保持一致
 [CA1801](ca1801.md) | 检查未使用的参数
-[CA1802](ca1802.md) | 在适当情况下使用文本
+[CA1802](ca1802.md) | 在适当的位置使用文本
 [CA1806](ca1806.md) | 不要忽略方法结果
 [CA1810](ca1810.md) | 以内联方式初始化引用类型的静态字段
 [CA1812](ca1812.md) | 避免未实例化的内部类
 [CA1813](ca1813.md) | 避免使用非密封特性
 [CA1814](ca1814.md) | 与多维数组相比，首选使用交错数组
 [CA1815](ca1815.md) | 重写值类型上的 Equals 和相等运算符
-[CA1816](ca1816.md) | 处置方法应调用"抑制终结"
+[CA1816](ca1816.md) | Dispose 方法应调用 Gc.suppressfinalize
 [CA1819](ca1819.md) | 属性不应返回数组
 [CA1820](ca1820.md) | 使用字符串长度测试是否有空字符串
-[CA1821](ca1821.md) | 删除空终结器
+[CA1821](ca1821.md) | 移除空终结器
 [CA1822](ca1822.md) | 将成员标记为 static
 [CA1823](ca1823.md) | 避免未使用的私有字段
 [CA1824](ca1824.md) | 用 NeutralResourcesLanguageAttribute 标记程序集
-CA1825 | 避免零长度数组分配。
-CA1826 | 请勿在可索引集合上使用枚举方法。 而是直接使用集合
 [CA2000](ca2000.md) | 丢失范围之前释放对象
 [CA2002](ca2002.md) | 不要锁定具有弱标识的对象
-[CA2007](ca2007.md) | 考虑在等待的任务上调用配置Await
-CA2008 | 在未传递任务计划程序的情况下不要创建任务
-CA2009 | 不要在不可改变的集合值上调用"不可改变集合"
-CA2010 | 始终使用使用标记为 PreserveSigAttribute 的方法返回的值
+[CA2007](ca2007.md) | 考虑在等待的任务上调用 ConfigureAwait
+CA2008 | 不要在不传递 TaskScheduler 的情况下创建任务
+CA2009 | 不要对 ImmutableCollection 值调用 ToImmutableCollection
+CA2010 | 始终使用由 PreserveSigAttribute 标记的方法返回的值
 [CA2100](ca2100.md) | 检查 SQL 查询是否存在安全漏洞
 [CA2101](ca2101.md) | 指定对 P/Invoke 字符串参数进行封送处理
 [CA2119](ca2119.md) | 密封满足私有接口的方法
-[CA2153](ca2153.md) | 不捕获损坏的状态异常
-[CA2200](ca2200.md) | 重新引发以保留堆栈详细信息。
+[CA2153](ca2153.md) | 请勿捕获损坏状态异常
+[CA2200](ca2200.md) | 再次引发以保留堆栈详细信息。
 [CA2201](ca2201.md) | 不要引发保留的异常类型
 [CA2207](ca2207.md) | 以内联方式初始化值类型的静态字段
 [CA2208](ca2208.md) | 正确实例化参数异常
@@ -136,20 +134,20 @@ CA2010 | 始终使用使用标记为 PreserveSigAttribute 的方法返回的值
 [CA2216](ca2216.md) | 可释放类型应声明终结器
 [CA2217](ca2217.md) | 不要使用 FlagsAttribute 标记枚举
 [CA2218](ca2218.md) | 重写 Equals 时重写 GetHashCode
-[CA2219](ca2219.md) | 不要在 finally 子句中引发异常
-[CA2224](ca2224.md) | 重载运算符等于的覆盖等于
+[CA2219](ca2219.md) | 不在 finally 子句中引发异常
+[CA2224](ca2224.md) | 重载运算符等于时重写 Equals
 [CA2225](ca2225.md) | 运算符重载具有命名的备用项
 [CA2226](ca2226.md) | 运算符应有对称重载
 [CA2227](ca2227.md) | 集合属性应为只读
 [CA2229](ca2229.md) | 实现序列化构造函数
-[CA2231](ca2231.md) | 过载运算符等于重写值类型 等于
+[CA2231](ca2231.md) | 重写值类型等于时重载相等运算符
 [CA2234](ca2234.md) | 传递系统 uri 对象而不是字符串
 [CA2235](ca2235.md) | 标记所有不可序列化的字段
 [CA2237](ca2237.md) | 用 serializable 标记 ISerializable 类型
 [CA2241](ca2241.md) | 为格式化方法提供正确的参数
 [CA2242](ca2242.md) | 正确测试 NaN
 [CA2243](ca2243.md) | 特性字符串文本应正确分析
-CA2244 | 不要重复索引元素初始化
+CA2244 | 不复制索引元素初始化
 [CA2300](ca2300.md) | 请勿使用不安全的反序列化程序 BinaryFormatte
 [CA2301](ca2301.md) | 在未先设置 BinaryFormatter.Binder 的情况下，请不要调用 BinaryFormatter.Deserialize
 [CA2302](ca2302.md) | 在调用 BinaryFormatter.Deserialize 之前，确保设置 BinaryFormatter.Binder
@@ -175,41 +173,41 @@ CA2244 | 不要重复索引元素初始化
 CA3061 | 不按 URL 添加架构
 [CA3075](ca3075.md) | XML 中不安全的 DTD 处理
 [CA3076](ca3076.md) | 不安全的 XSLT 脚本处理。
-[CA3077](ca3077.md) | API 设计、XmlDocument 和 XmlTextReader 中的不安全处理
-[CA3147](ca3147.md) | 使用验证防伪令牌标记动词处理程序
+[CA3077](ca3077.md) | API 设计、Xml 中和 XmlTextReader 中的不安全处理
+[CA3147](ca3147.md) | 用 Validate 防伪标记标记谓词处理程序
 [CA5350](ca5350.md) | 请勿使用弱加密算法
-[CA5351](ca5351.md) | 不使用损坏的加密算法
+[CA5351](ca5351.md) | 不要使用损坏的加密算法
 CA5358 | 请勿使用不安全的密码模式
 CA5359 | 不禁用证书验证
-CA5360 | 在反序列化中不要调用危险方法
-CA5361 | 不要禁用强加密的 S通道使用
-CA5362 | 不要在可序列化类中引用自我
+CA5360 | 不要在反序列化中调用危险方法
+CA5361 | 不要禁止 SChannel 使用强加密
+CA5362 | 不要在可序列化类中引用 Self
 CA5363 | 不禁用请求验证
-CA5364 | 不使用已弃用的安全协议
-CA5365 | 不禁用 HTTP 标头检查
+CA5364 | 不要使用已弃用的安全协议
+CA5365 | 不禁用 HTTP 头检查
 CA5366 | 将 XmlReader 用于数据集读取 Xml
-CA5367 | 不使用指针字段序列化类型
-CA5368 | 为从页面派生的类设置视图状态用户密钥
+CA5367 | 不要将类型与指针字段序列化
+CA5368 | 为从页面派生的类设置 ViewStateUserKey
 CA5369 | 使用 XmlReader 进行反序列化
 CA5370 | 使用 XmlReader 验证读取器
 CA5371 | 使用 XmlReader 进行架构读取
 CA5372 | 将 XmlReader 用于 XPathDocument
 CA5373 | 请勿使用已过时的密钥派生功能
-CA5374 | 请勿使用 Xsl 转换
-CA5375 | 不使用帐户共享访问签名
-CA5376 | 仅使用共享访问协议
-CA5377 | 使用容器级访问策略
+CA5374 | 不使用 XslTransform
+CA5375 | 不要使用帐户共享访问签名
+CA5376 | 使用 SharedAccessProtocol HttpsOnly
+CA5377 | 使用容器级别访问策略
 CA5378 | 不禁用 ServicePointManagerSecurityProtocols
-CA5379 | 不使用弱键派生函数算法
+CA5379 | 不要使用弱密钥派生函数算法
 CA9999 | 分析器版本不匹配
 
-## <a name="unported-rules"></a>未移植规则
+## <a name="unported-rules"></a>Unported 规则
 
-尚未移植到[FxCop 分析器](install-fxcop-analyzers.md)的规则集包括尚未移植但仍[可能移植](#rules-that-may-be-ported)的规则，以及已弃用且[不会移植](#deprecated-rules)的规则。
+尚未移植到[FxCop 分析器](install-fxcop-analyzers.md)的规则集包括尚未但仍[可移植](#rules-that-may-be-ported)的规则，以及不推荐使用且[不会移植](#deprecated-rules)的规则。
 
 ### <a name="rules-that-may-be-ported"></a>可移植的规则
 
-以下 FxCop 旧版分析规则尚未作为分析器实现，但仍可能仍然存在。 这可能是由于阻塞技术原因，或者仅仅是规则优先级较低。 有关每个规则的移植状态的详细信息，请单击 **"跟踪问题"** 列中的链接。
+以下 FxCop 旧分析规则尚未实现为分析器，但仍可能是。 这可能是由于技术原因导致的，或者只是规则的优先级较低。 有关每个规则的移植状态的详细信息，请单击 "**跟踪问题**" 列中的链接。
 
 规则 ID | 跟踪问题
 --- | ---
@@ -270,9 +268,9 @@ CA9999 | 分析器版本不匹配
 [CA2239](ca2239.md) | [https://github.com/dotnet/roslyn-analyzers/issues/550](https://github.com/dotnet/roslyn-analyzers/issues/550)
 [CA2240](ca2240.md) | [https://github.com/dotnet/roslyn-analyzers/issues/551](https://github.com/dotnet/roslyn-analyzers/issues/551)
 
-### <a name="deprecated-rules"></a>已弃用的规则
+### <a name="deprecated-rules"></a>弃用的规则
 
-以下 FxCop 旧版分析规则被弃用，不会作为分析器实现。 有关详细信息，您可以在[roslyn 分析器 GitHub 问题页上](https://github.com/dotnet/roslyn-analyzers/issues?utf8=%E2%9C%93&q=is:issue+label:FxCop-Port)按规则 ID（例如**CA1009）** 进行搜索。
+以下 FxCop 旧分析规则已弃用，不能作为分析器实现。 有关详细信息，可以在[roslyn-分析器 GitHub 问题页](https://github.com/dotnet/roslyn-analyzers/issues?utf8=%E2%9C%93&q=is:issue+label:FxCop-Port)上按规则 ID （例如**CA1009**）进行搜索。
 
 - [CA1009](ca1009-declare-event-handlers-correctly.md)
 - [CA1020](ca1020-avoid-namespaces-with-few-types.md)
@@ -347,4 +345,4 @@ CA9999 | 分析器版本不匹配
 
 ## <a name="see-also"></a>另请参阅
 
-- [微软.代码分析.FxCopAnalyzer规则](https://github.com/dotnet/roslyn-analyzers/blob/master/src/Microsoft.CodeAnalysis.FxCopAnalyzers/Microsoft.CodeAnalysis.FxCopAnalyzers.md)
+- [CodeAnalysis. FxCopAnalyzers 规则](https://github.com/dotnet/roslyn-analyzers/blob/master/src/Microsoft.CodeAnalysis.FxCopAnalyzers/Microsoft.CodeAnalysis.FxCopAnalyzers.md)
