@@ -332,6 +332,10 @@
                   href: ca1064.md
                 - name: 'CA1065:不要在意外的位置引发异常'
                   href: ca1065.md
+                - name: CA1066：重写 Equals 时实现 IEquatable
+                  href: ca1066.md
+                - name: CA1067：实现 IEquatable 时重写 Equals
+                  href: ca1067.md
                 - name: 'CA1068:CancellationToken 参数必须最后出现'
                   href: ca1068.md
                 - name: 'CA2210:程序集应具有有效的强名称'
@@ -426,6 +430,8 @@
                   href: ca1506.md
                 - name: CA1507：使用 nameof 代替字符串
                   href: ca1507.md
+                - name: CA1508：避免死条件代码
+                  href: ca1508.md
             - name: 移动性警告
               items:
                 - name: 概述
