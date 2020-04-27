@@ -116,8 +116,8 @@ Visual Studio 提供了实用的代码片段，可用于快速方便地生成常
 
    ![“添加注释”按钮](media/tutorial-comment-out.png)
 
-   C# 注释字符 `//` 被添加到了被选中行的开始处，从而注释掉这些行。
-
+ 选中的每行的开始处添加了 C# 注释字符 `//`，作用是要注释掉这些行。
+ 
 ## <a name="collapse-code-blocks"></a>折叠代码块
 
 我们不想看到生成的 `Class1` 的空[构造函数](/dotnet/csharp/programming-guide/classes-and-structs/constructors)，所以为了让代码更整洁，我们将其折叠。 在构造函数第一行的边距中选择内部带有减号的小灰色框。 如果使用的是键盘，也可将光标置于构造函数代码中的任意位置，然后按 Ctrl+M、Ctrl+M     。
@@ -140,7 +140,7 @@ Visual Studio 提供了实用的代码片段，可用于快速方便地生成常
 
 ## <a name="use-intellisense-to-complete-words"></a>使用 IntelliSense 完成单词
 
-编写代码时，[IntelliSense](../ide/using-intellisense.md) 是非常有用的功能。 它可显示某个类型的可用成员信息，或某个方法中不同重载的参数详情。 它还可以在你输入足以消除歧义的字符后自动补全单词。 接下来试试添加代码行，将有序字符串呈现到控制台窗口，也就是程序输出的标准位置。
+编写代码时，[IntelliSense](../ide/using-intellisense.md) 是非常有用的功能。 它可显示某个类型的可用成员信息，或某个方法中不同重载的参数详情。 它还可以在你输入足以消除歧义的字符量后自动补全单词。 接下来试试添加一行代码，将有序字符串呈现到控制台窗口，也就是程序的标准输出位置。
 
 1. 在 `query` 变量下，键入以下代码：
 
@@ -154,7 +154,7 @@ Visual Studio 提供了实用的代码片段，可用于快速方便地生成常
 
 1. 若要使用 IntelliSense 文字自动完成功能插入单词 `query` 的剩余部分，请按 Tab  。
 
-1. 完成后，代码块如以下代码所示。 你甚至可以通过输入 `cw`，然后按 Tab 两次来生成 `Console.WriteLine` 代码，以再次练习使用代码片段。
+1. 完成后，代码块如以下代码所示。 你甚至可以通过输入 `cw`，然后按 Tab 两次生成 `Console.WriteLine` 代码，再次练习使用代码片段。
 
    ```csharp
    foreach (string str in query)
