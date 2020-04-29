@@ -16,12 +16,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f44ce4736900fde35716ca3ec9dabb2d55c6df51
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: b69afc20d15802ad79b201ca38e2d69f1d473b1e
+ms.sourcegitcommit: 0b8497b720eb06bed8ce2194731177161b65eb84
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75588377"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82072486"
 ---
 # <a name="xmlpoke-task"></a>XmlPoke 任务
 
@@ -55,7 +55,7 @@ ms.locfileid: "75588377"
 </Package>
 ```
 
-在此示例中，如果要修改 `/Package/mp:PhoneIdentity/PhonePublisherId`，请使用
+在此示例中，如果要修改 `/Package/mp:PhoneIdentity/PhoneProductId`，请使用
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">

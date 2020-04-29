@@ -18,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2a1710336ebc73be707e962733e37376b5689e10
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 30f1a45c384495ccd02c624ea42f91a4379226df
+ms.sourcegitcommit: 93859158465eab3423a0c0435f06490f0a456a57
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77631232"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82167444"
 ---
 # <a name="vbc-task"></a>Vbc 任务
 
@@ -89,9 +89,7 @@ ms.locfileid: "77631232"
 | `Win32Icon` | 可选 `String` 参数。<br /><br /> 在程序集中插入 .ico 文件，为输出文件赋予其在“文件资源管理器”中所需的外观  。  此参数对应于 vbc.exe 编译器的 [-win32icon](/dotnet/visual-basic/reference/command-line-compiler/win32icon) 开关  。 |
 | `Win32Resources` | 可选 `String` 参数。<br /><br /> 在输出文件中插入 Win32 资源 (.res) 文件  。 此参数对应于 vbc.exe 编译器的 [-win32resource](/dotnet/visual-basic/reference/command-line-compiler/win32resource) 开关  。 |
 
-## <a name="remarks"></a>备注
-
- 除上面列出的参数外，此任务还从 <xref:Microsoft.Build.Tasks.ToolTaskExtension> 类继承参数，后者自身继承自 <xref:Microsoft.Build.Utilities.ToolTask> 类。 有关这些其他参数的列表及其说明，请参阅 [ToolTaskExtension 基类](../msbuild/tooltaskextension-base-class.md)。
+[!INCLUDE [ToolTaskExtension arguments](includes/tooltaskextension-base-params.md)]
 
 ## <a name="example"></a>示例
 

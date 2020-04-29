@@ -537,6 +537,14 @@
                   href: ca1824.md
                 - name: 'CA1825:避免数组分配长度为零'
                   href: ca1825.md
+                - name: 'CA1826:使用属性，而不是 Linq Enumerable 方法'
+                  href: ca1826.md
+                - name: 'CA1827:如果可以使用 Any，请勿使用 Count/LongCount'
+                  href: ca1827.md
+                - name: 'CA1828:如果可以使用 AnyAsync，请勿使用 CountAsync/LongCountAsync'
+                  href: ca1828.md
+                - name: 'CA1829:使用 Length/Count 属性，而不是 Enumerable.Count 方法'
+                  href: ca1829.md
             - name: 可移植性警告
               items:
                 - name: 概述

@@ -18,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3c88e5aaef9262d320cdf61564078246dee46b10
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 6f77a2ab5bfa137ffbab13f92b15707f73c7869e
+ms.sourcegitcommit: 93859158465eab3423a0c0435f06490f0a456a57
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77634261"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82167418"
 ---
 # <a name="csc-task"></a>Csc 任务
 
@@ -82,9 +82,7 @@ ms.locfileid: "77634261"
 | `Win32Manifest` | 可选 `String` 参数。<br /><br /> 指定要包含的 Win32 清单。 |
 | `Win32Resource` | 可选 `String` 参数。<br /><br /> 在输出文件中插入 Win32 资源 (.res) 文件  。 有关详细信息，请参阅 [-win32res（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/win32res-compiler-option)。 |
 
-## <a name="remarks"></a>备注
-
-除上面列出的参数外，此任务还从 `Microsoft.Build.Tasks.ManagedCompiler` 类继承参数，该类继承自 <xref:Microsoft.Build.Tasks.ToolTaskExtension> 类（它自身继承自 <xref:Microsoft.Build.Utilities.ToolTask> 类）。 有关这些其他参数的列表及其说明，请参阅 [ToolTaskExtension 基类](../msbuild/tooltaskextension-base-class.md)。
+[!INCLUDE [ToolTaskExtension arguments](includes/tooltaskextension-base-params.md)]
 
 ## <a name="example"></a>示例
 
