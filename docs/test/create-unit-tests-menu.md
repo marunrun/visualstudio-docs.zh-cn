@@ -1,6 +1,6 @@
 ---
 title: 创建单元测试方法存根
-ms.date: 04/01/2019
+ms.date: 04/24/2020
 ms.topic: conceptual
 helpviewer_keywords:
 - unit testing, create unit tests
@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3eb001d2022bb57981f21fd99c051c54aeb08301
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 9b9c0d2bfba0a55ef0362f031bfa32e986a05a10
+ms.sourcegitcommit: dab57cebd484228e6f0cf7ab1b9685c575410c06
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75844320"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82152994"
 ---
 # <a name="create-unit-test-method-stubs-with-the-create-unit-tests-command"></a>使用“创建单元测试”命令创建单元测试方法存根
 
@@ -22,11 +22,11 @@ ms.locfileid: "75844320"
 
 ::: moniker range="vs-2017"
 > [!NOTE]
-> “创建单元测试”菜单命令仅适用于面向 .NET Framework（但不是 .NET Core）的托管代码  。
+> “创建单元测试”菜单命令仅适用于面向 .NET Framework（但不是 .NET Core）的 C# 代码  。
 ::: moniker-end
 ::: moniker range=">=vs-2019"
 > [!NOTE]
-> “创建单元测试”菜单命令仅适用于托管代码  。
+> “创建单元测试”菜单命令仅适用于 C# 代码  。
 ::: moniker-end
 
 “创建单元测试”菜单命令可扩展，并可用于为 MSTest、MSTest V2、NUnit 和 xUnit 生成测试  。
@@ -56,7 +56,7 @@ ms.locfileid: "75844320"
 
 但此功能同样适用于以下情况：开发人员在开始时编写代码，然后使用该代码启动单元测试。 在编码流程中，开发人员可能想要为特定的一段代码快速创建一个单元测试方法存根（包含合适的测试类和合适的测试项目）。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [使用“创建单元测试”创建单元测试方法存根](https://devblogs.microsoft.com/devops/creating-unit-test-method-stubs-with-create-unit-tests/)
 - [单元测试博客文章](https://devblogs.microsoft.com/devops/?s=unit+testing)

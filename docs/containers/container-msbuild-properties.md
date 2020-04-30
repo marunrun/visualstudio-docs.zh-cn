@@ -6,12 +6,12 @@ ms.author: ghogen
 ms.date: 06/06/2019
 ms.technology: vs-azure
 ms.topic: conceptual
-ms.openlocfilehash: 3caa8a76f461515c0d2265590383861b6e10d0a1
-ms.sourcegitcommit: ce3d0728ec1063ab548dac71c8eaf26d20450acc
+ms.openlocfilehash: 1b23d918621d79756fd77a1dd9b98009b2769ed3
+ms.sourcegitcommit: 596f92fcc84e6f4494178863a66aed85afe0bb08
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80472663"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82189486"
 ---
 # <a name="container-tools-build-properties"></a>容器工具生成属性
 
@@ -40,13 +40,41 @@ ms.locfileid: "80472663"
 | DockerDefaultTargetOS | 生成 Docker 映像时使用的默认目标操作系统。 | 由 Visual Studio 设置。 |1.0.1985401 或更高版本|
 | DockerImageLabels | 应用于 Docker 映像的默认标签集。 | com.microsoft.created-by=visual-studio;com.microsoft.visual-studio.project-name=$(MSBuildProjectName) |1.5.4 或更高版本|
 | DockerFastModeProjectMountDirectory|在“快速模式”中，此属性控制将项目输出目录批量安装到运行容器的位置  。|C:\app (Windows) 或 /app (Linux)|1.9.2 或更高版本|
-| DockerfileBuildArguments | 传递给 Docker 生成命令的其他参数。 | 不适用。 |1.0.1872750 或更高版本|
+| DockerfileBuildArguments | 传递给 [Docker build](https://docs.docker.com/engine/reference/commandline/build/) 命令的其他参数。 | 不适用。 |1.0.1872750 或更高版本|
 | DockerfileContext | 生成 Docker 映像时使用的默认上下文，作为相对于 Dockerfile 的路径。 | 由 Visual Studio 设置。 |1.0.1872750 或更高版本|
 | DockerfileFastModeStage | 在调试模式下生成图像时要使用的 Dockerfile 阶段（即目标）。 | 在 Dockerfile 中找到的第一阶段（基本） |
 | DockerfileFile | 描述用于生成/运行项目容器的默认 Dockerfile。 此属性也可以是路径。 | Dockerfile |1.0.1872750 或更高版本|
-| DockerfileRunArguments | 传递给 Docker 运行命令的其他参数。 | 不适用。 |1.0.1872750 或更高版本|
+| DockerfileRunArguments | 传递给 [Docker run](https://docs.docker.com/engine/reference/commandline/run/) 命令的其他参数。 | 不适用。 |1.0.1872750 或更高版本|
 | DockerfileRunEnvironmentFiles | Docker 运行过程中应用的以分号分隔的环境文件列表。 | 不适用。 |1.0.1872750 或更高版本|
 | DockerfileTag | 生成 Docker 映像时使用的标记。 在调试过程中，将“:dev”追加到标记中。 | 使用以下规则去除非字母数字字符后的程序集名称： <br/> 如果生成的标记全部为数值，则将“image”作为前缀插入（例如 image2314） <br/> 如果生成的标记为空字符串，则将“image”用作标记。 |1.0.1872750 或更高版本|
+
+## <a name="example"></a>示例
+
+以下项目文件显示了以上部分设置的示例。
+
+```xml
+ <Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>feae72bf-2368-4487-b6c6-546c19338cb1</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <!-- In CI/CD scenarios, you might need to change the context. By default, Visual Studio uses the
+         folder above the Dockerfile. The path is relative to the Dockerfile, so here the context is
+         set to the same folder as the Dockerfile. -->
+    <DockerfileContext>.</DockerfileContext>
+    <!-- Set `docker run` arguments to mount a volume -->
+    <DockerfileRunArguments>-v $(pwd)/host-folder:/container-folder:ro</DockerfileRunArguments>
+    <!-- Set `docker build` arguments to add a custom tag -->
+    <DockerfileBuildArguments>-t contoso/front-end:v2.0</DockerfileBuildArguments>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.6" />
+  </ItemGroup>
+
+</Project>
+```
 
 ## <a name="next-steps"></a>后续步骤
 

@@ -10,12 +10,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c3e3f0ec3938136370daf15954d8c13da5905ba4
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 310fa3b6795a5e340dcd9c7fa40cb27807c132ba
+ms.sourcegitcommit: 0b8497b720eb06bed8ce2194731177161b65eb84
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77631076"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82072536"
 ---
 # <a name="walkthrough-use-msbuild"></a>演练：使用 MSBuild
 
@@ -38,14 +38,14 @@ MSBuild 是 Microsoft 和 Visual Studio 的生成平台。 本演练介绍 MSBui
 1. 打开 Visual Studio 并创建一个项目。
 
     ::: moniker range=">=vs-2019"
-    按 Esc  关闭启动窗口。 键入 Ctrl + Q  打开搜索框，键入“winforms”  ，然后选择“创建一个新的 Windows 窗体应用程序(.NET Framework)”  。 在出现的对话框中，选择“创建”  。
+    按 Esc 关闭启动窗口  。 键入 Ctrl + Q  打开搜索框，键入“winforms”  ，然后选择“创建一个新的 Windows 窗体应用程序(.NET Framework)”  。 在出现的对话框中，选择“创建”  。
 
-    在“名称”框中键入 **。** `BuildApp` 输入解决方案的“位置”  ，例如 D: *\\* 。 接受“解决方案”  、“解决方案名称”  (BuildApp  )，以及“框架”  的默认值。
+    在“名称”  框中键入 `BuildApp`。 输入解决方案的“位置”  ，例如 D:\\  。 接受“解决方案”  、“解决方案名称”  (BuildApp  )，以及“框架”  的默认值。
     ::: moniker-end
     ::: moniker range="vs-2017"
     从顶部菜单栏中选择“文件”   > “新建”   > “项目”  。 在“新建项目”  对话框的左侧窗格中，展开“Visual C#”   > “Windows 桌面”  ，然后选择“Windows 窗体应用(.NET Framework)”  。 然后选择“确定”  。
 
-    在“名称”框中键入 **。** `BuildApp` 输入解决方案的“位置”  ，例如 D: *\\* 。 接受“创建解决方案目录”  （已选）、“添加到源代码管理”  （未选）和“解决方案名称”  (BuildApp  ) 的默认值。
+    在“名称”  框中键入 `BuildApp`。 输入解决方案的“位置”  ，例如 D:\\  。 接受“创建解决方案目录”  （已选）、“添加到源代码管理”  （未选）和“解决方案名称”  (BuildApp  ) 的默认值。
     ::: moniker-end
 
 1. 单击“确定”  或“创建”  以创建项目文件。
@@ -58,13 +58,14 @@ MSBuild 是 Microsoft 和 Visual Studio 的生成平台。 本演练介绍 MSBui
 
 1. 在“解决方案资源管理器”  中，单击项目节点“BuildApp”  。
 
-2. 请注意，在“属性”  浏览器中，“项目文件”  属性是“BuildApp.csproj”  。 所有项目文件名称中都带有后缀“proj”  。 如果创建了 Visual Basic 项目，则项目文件名称将为“BuildApp.vbproj”  。
+1. 请注意，在“属性”  浏览器中，“项目文件”  属性是“BuildApp.csproj”  。 所有项目文件名称中都带有后缀“proj”  。 如果创建了 Visual Basic 项目，则项目文件名称将为“BuildApp.vbproj”  。
 
-3. 右键单击项目节点，然后单击“卸载项目”  。
-
-4. 再次右键单击项目节点，然后单击“编辑 BuildApp.csproj”  。
+1. 再次右键单击项目节点，然后单击“编辑 BuildApp.csproj”  。 
 
      该项目文件出现在代码编辑器中。
+
+>[!NOTE]
+> 对于某些项目类型（例如 C++），需要卸载项目（右键单击项目文件，然后选择“卸载项目”）才能打开和编辑项目文件  。
 
 ## <a name="targets-and-tasks"></a>目标和任务
 
@@ -75,13 +76,20 @@ MSBuild 是 Microsoft 和 Visual Studio 的生成平台。 本演练介绍 MSBui
 <Project ToolsVersion="15.0"  xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 ```
 
-必须在 Project 元素中指定 xmlns 命名空间。 如果新项目中存在 `ToolsVersion`，则必须为“15.0”。
+较新的 .NET Core （SDK 样式）项目具有 `Sdk` 特性。
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+```
+
+如果项目不是 SDK 样式项目，则必须在 Project 元素中指定 xmlns 命名空间。 如果新项目中存在 `ToolsVersion`，则必须为“15.0”。
 
 生成应用程序的工作由 [Target](../msbuild/target-element-msbuild.md) 和 [Task](../msbuild/task-element-msbuild.md) 元素完成。
 
 - 任务是工作的最小单位，换言之，它是生成的“原子”。 任务是可单独执行的组件，具有输入和输出。 目前尚没有在项目文件中引用或定义的任务。 以下各部分介绍如何将项目添加到项目文件。 有关详细信息，请参阅[任务](../msbuild/msbuild-tasks.md)主题。
 
 - 目标是任务的已命名序列。 有关详细信息，请参阅[目标](../msbuild/msbuild-targets.md)主题。
+- [它可以是一个已命名的任务序列，但实际上，它表示要生成或完成的内容，因此应以面向目标的方式进行定义]
 
 默认目标不是在项目文件中定义的。 而是在导入的项目中指定的。 [Import](../msbuild/import-element-msbuild.md) 元素可指定导入的项目。 例如在 C# 项目中，默认目标是从“Microsoft.CSharp.targets”  文件中导入的。
 
@@ -91,8 +99,7 @@ MSBuild 是 Microsoft 和 Visual Studio 的生成平台。 本演练介绍 MSBui
 
 无论是否使用导入的文件，都会将其有效插入项目文件。
 
-> [!NOTE]
-> 某些项目类型（如 .NET Core）将简化后的架构用于 `Sdk` 属性，而不是 `ToolsVersion`。 这些项目具有隐式导入项和不同的默认属性值。
+在 SDK 样式的项目中，不会显示此 Import 元素，因为 SDK 特性会导致此文件被隐式导入。
 
 MSBuild 跟踪生成的目标，并保证每个目标生成次数不超过一次。
 
@@ -109,7 +116,7 @@ MSBuild 跟踪生成的目标，并保证每个目标生成次数不超过一次
     </Target>
     ```
 
-     这将创建名为 HelloWorld 的目标。 请注意，编辑项目文件时会拥有 IntelliSense 支持。
+    这将创建名为 HelloWorld 的目标。 请注意，编辑项目文件时会拥有 IntelliSense 支持。
 
 2. 将行添加到 HelloWorld 目标，以便生成如下所示的结果：
 
@@ -123,26 +130,28 @@ MSBuild 跟踪生成的目标，并保证每个目标生成次数不超过一次
 
 Message 任务是 MSBuild 所附带的许多任务之一。 有关可用任务的完整列表以及用法信息，请参阅[任务参考](../msbuild/msbuild-task-reference.md)。
 
-Message 任务将文本属性的字符串值作为输入并显示在输出设备上。 HelloWorld 目标执行 Message 任务两次：第一次显示“Hello”，第二次显示“World”。
+Message 任务将文本属性的字符串值作为输入并显示在输出设备上（或者如果适用，将其写入一个或多个日志）。 HelloWorld 目标执行 Message 任务两次：第一次显示“Hello”，第二次显示“World”。
 
 ## <a name="build-the-target"></a>生成目标
 
- 从 Visual Studio 的“开发人员命令提示符”运行 MSBuild，生成上面定义的 HelloWorld 目标  。 使用 -target 或 -t 命令行开关选择目标。
+如果尝试从 Visual Studio 生成此项目，则不会生成定义的目标。 这是因为 Visual Studio 选择了默认目标，该目标仍是导入的 .targets 文件中的目标  。
+
+从 Visual Studio 的“开发人员命令提示符”运行 MSBuild，生成上面定义的 HelloWorld 目标  。 使用 -target 或 -t 命令行开关选择目标。
 
 > [!NOTE]
 > 以下各部分将“开发人员命令提示”称为“命令窗口”   。
 
-**生成目标**
+**生成目标：**
 
 1. 打开“命令窗口”  。
 
    (Windows 10) 在任务栏的搜索框中，开始键入工具的名称，例如 `dev` 或 `developer command prompt`。 然后显示一个列表，其中包含与搜索模式匹配的已安装应用。
 
-   如需手动查找，可在“<visualstudio installation folder  version>\Common7\Tools”文件夹中查找 LaunchDevCmd.bat 文件 *\>\<* 。
+   如需手动查找，可在“<visualstudio installation folder\>\<version>\Common7\Tools”文件夹中查找 LaunchDevCmd.bat 文件   。
 
 2. 从命令窗口导航到包含项目文件的文件夹，此例中为 D:\BuildApp\BuildApp  。
 
-3. 使用命令开关 -t:HelloWorld 运行 msbuild。 这将选择并生成 HelloWorld 目标：
+3. 使用命令开关 `-t:HelloWorld` 运行 msbuild。 这将选择并生成 HelloWorld 目标：
 
     ```cmd
     msbuild buildapp.csproj -t:HelloWorld
@@ -150,7 +159,7 @@ Message 任务将文本属性的字符串值作为输入并显示在输出设备
 
 4. 在“命令窗口”  检查输出。 应看到两行“Hello”和“World”：
 
-    ```
+    ```output
     Hello
     World
     ```
@@ -178,10 +187,10 @@ Message 任务将文本属性的字符串值作为输入并显示在输出设备
  所有属性都是 PropertyGroup 元素的子元素。 属性的名称是子元素的名称，属性的值是子元素的文本元素。 例如，应用于对象的
 
 ```xml
-<TargetFrameworkVersion>v15.0</TargetFrameworkVersion>
+<TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
 ```
 
- 定义名为 TargetFrameworkVersion 的属性，并为其指定字符串值“v15.0”。
+ 定义名为 TargetFrameworkVersion 的属性，并为其指定字符串值“v4.5”。
 
  可能会随时重新定义生成属性。 如果
 
@@ -193,13 +202,13 @@ Message 任务将文本属性的字符串值作为输入并显示在输出设备
 
 ## <a name="examine-a-property-value"></a>检查属性值
 
- 若要获取属性值，请使用以下语法，其中 PropertyName 是属性的名称：
+ 若要获取属性值，请使用以下语法，其中 `PropertyName` 是属性的名称：
 
 ```xml
 $(PropertyName)
 ```
 
- 使用此语法可检查项目文件中的一些属性。
+使用此语法可检查项目文件中的一些属性。
 
 **检查属性值**
 
@@ -212,19 +221,19 @@ $(PropertyName)
     </Target>
     ```
 
-2. 保存项目文件。
+1. 保存项目文件。
 
-3. 在“命令窗口”  输入并执行此行：
+1. 在“命令窗口”  输入并执行此行：
 
     ```cmd
     msbuild buildapp.csproj -t:HelloWorld
     ```
 
-4. 检查输出。 应看到这两行（.NET Framework 版本可能不同）：
+1. 检查输出。 应看到这两行（.NET Framework 版本可能不同）：
 
     ::: moniker range=">=vs-2019"
 
-    ```
+    ```output
     Configuration is Debug
     MSBuildToolsPath is C:\Program Files (x86)\Microsoft Visual Studio\2019\<Visual Studio SKU>\MSBuild\15.0\Bin
     ```
@@ -232,41 +241,38 @@ $(PropertyName)
     ::: moniker-end
     ::: moniker range="vs-2017"
 
-    ```
+    ```output
     Configuration is Debug
     MSBuildToolsPath is C:\Program Files (x86)\Microsoft Visual Studio\2017\<Visual Studio SKU>\MSBuild\15.0\Bin
     ```
 
     ::: moniker-end
 
-> [!NOTE]
-> 如果未看到这两行，则可能是忘记将项目文件保存到代码编辑器中。 请保存文件并重试。
-
 ### <a name="conditional-properties"></a>条件属性
 
- 许多属性（如配置）都是按条件进行定义的，也就是说，条件属性出现在 property 元素中。 仅当条件评估结果为“true”时才定义或重新定义条件属性。 请注意，会向未定义的属性给定空字符串的默认值。 例如，应用于对象的
+许多属性（如 `Configuration`）都是按条件进行定义的，也就是说，`Condition` 属性出现在 property 元素中。 仅当条件评估结果为“true”时才定义或重新定义条件属性。 请注意，会向未定义的属性给定空字符串的默认值。 例如，应用于对象的
 
 ```xml
 <Configuration   Condition=" '$(Configuration)' == '' ">Debug</Configuration>
 ```
 
- 表示“如果尚未定义配置属性，请定义该属性并为其指定‘Debug’值”。
+表示“如果尚未定义配置属性，请定义该属性并为其指定‘Debug’值”。
 
- 几乎所有 MSBuild 元素都可以具有条件属性。 有关使用条件属性的详细讨论，请参阅[条件](../msbuild/msbuild-conditions.md)。
+几乎所有 MSBuild 元素都可以具有条件属性。 有关使用条件属性的详细讨论，请参阅[条件](../msbuild/msbuild-conditions.md)。
 
 ### <a name="reserved-properties"></a>预留属性
 
- MSBuild 保留了一些属性名称，用于存储有关项目文件和 MSBuild 二进制文件的信息。 MSBuildToolsPath 就是保留属性的一个示例。 与其他属性一样，可使用 $ 符号引用保留属性。 有关详细信息，请参阅[如何：引用项目文件的名称或位置](../msbuild/how-to-reference-the-name-or-location-of-the-project-file.md)和 [MSBuild 保留和常见属性](../msbuild/msbuild-reserved-and-well-known-properties.md)。
+MSBuild 保留了一些属性名称，用于存储有关项目文件和 MSBuild 二进制文件的信息。 MSBuildToolsPath 就是保留属性的一个示例。 与其他属性一样，可使用 $ 符号引用保留属性。 有关详细信息，请参阅[如何：引用项目文件的名称或位置](../msbuild/how-to-reference-the-name-or-location-of-the-project-file.md)和 [MSBuild 保留和常见属性](../msbuild/msbuild-reserved-and-well-known-properties.md)。
 
 ### <a name="environment-variables"></a>环境变量
 
- 可使用与生成属性相同的方式引用项目文件中的环境变量。 例如，若要使用项目文件中的 PATH 环境变量，可使用 $(Path)。 如果项目包含与环境变量具有相同名称的属性定义，则项目中的属性将替代环境变量的值。 有关详细信息，请参阅[如何：在生成中使用环境变量](../msbuild/how-to-use-environment-variables-in-a-build.md)。
+可使用与生成属性相同的方式引用项目文件中的环境变量。 例如，若要使用项目文件中的 PATH 环境变量，可使用 $(Path)。 如果项目包含与环境变量具有相同名称的属性定义，则项目中的属性将替代环境变量的值。 有关详细信息，请参阅[如何：在生成中使用环境变量](../msbuild/how-to-use-environment-variables-in-a-build.md)。
 
 ## <a name="set-properties-from-the-command-line"></a>从命令行设置属性
 
- 可使用 -property 或 -p 命令行开关在命令行中定义属性。 从命令行接收的属性值将替代在项目文件和环境变量中设置的属性值。
+可使用 -property 或 -p 命令行开关在命令行中定义属性。 从命令行接收的属性值将替代在项目文件和环境变量中设置的属性值。
 
-**在命令行中设置属性值**
+**在命令行中设置属性值：**
 
 1. 在“命令窗口”  输入并执行此行：
 
@@ -274,9 +280,9 @@ $(PropertyName)
     msbuild buildapp.csproj -t:HelloWorld -p:Configuration=Release
     ```
 
-2. 检查输出。 应看到此行：
+1. 检查输出。 应看到此行：
 
-    ```
+    ```output
     Configuration is Release.
     ```
 
@@ -284,11 +290,11 @@ MSBuild 创建配置属性并赋予其“发布”值。
 
 ## <a name="special-characters"></a>特殊字符
 
- 某些字符在 MSBuild 项目文件中具有特殊意义。 这些字符的示例包括分号 (;) 和星号 (*)。 若要将这些特殊字符用作项目文件中的文本，必须使用语法 %\<xx> 对它们进行指定，其中 \<xx> 表示字符的 ASCII 十六进制值。
+某些字符在 MSBuild 项目文件中具有特殊意义。 这些字符的示例包括分号 (;) 和星号 (*)。 若要将这些特殊字符用作项目文件中的文本，必须使用语法 %\<xx> 对它们进行指定，其中 \<xx> 表示字符的 ASCII 十六进制值。
 
- 更改 Message 任务以显示具有特殊字符的配置属性的值，使其更易读。
+更改 Message 任务以显示具有特殊字符的配置属性的值，使其更易读。
 
-**在 Message 任务中使用特殊字符**
+**在 Message 任务中使用特殊字符：**
 
 1. 从代码编辑器中使用此行替换这两个 Message 任务：
 
@@ -296,17 +302,17 @@ MSBuild 创建配置属性并赋予其“发布”值。
     <Message Text="%24(Configuration) is %22$(Configuration)%22" />
     ```
 
-2. 保存项目文件。
+1. 保存项目文件。
 
-3. 在“命令窗口”  输入并执行此行：
+1. 在“命令窗口”  输入并执行此行：
 
     ```cmd
     msbuild buildapp.csproj -t:HelloWorld
     ```
 
-4. 检查输出。 应看到此行：
+1. 检查输出。 应看到此行：
 
-    ```
+    ```output
     $(Configuration) is "Debug"
     ```
 
@@ -314,9 +320,9 @@ MSBuild 创建配置属性并赋予其“发布”值。
 
 ## <a name="build-items"></a>生成项
 
- 项是一段信息，通常是文件名，用作生成系统的输入。 例如，表示源文件的项集合可能会传递到名为“Compile”的任务，以将它们编译为程序集。
+项是一段信息，通常是文件名，用作生成系统的输入。 例如，表示源文件的项集合可能会传递到名为“Compile”的任务，以将它们编译为程序集。
 
- 所有项都是 ItemGroup 元素的子元素。 项名称是子元素的名称，项值是子元素的包含属性的值。 具有相同名称的项值将收集到该名称的项类型中。  例如，应用于对象的
+所有项都是 ItemGroup 元素的子元素。 项名称是子元素的名称，项值是子元素的包含属性的值。 具有相同名称的项值将收集到该名称的项类型中。  例如，应用于对象的
 
 ```xml
 <ItemGroup>
@@ -325,9 +331,9 @@ MSBuild 创建配置属性并赋予其“发布”值。
 </ItemGroup>
 ```
 
- 定义包含两个项的项组。 项类型编译有两个值：“Program.cs”  和“Properties\AssemblyInfo.cs”  。
+定义包含两个项的项组。 项类型编译有两个值：Program.cs 和 Properties\AssemblyInfo.cs   。
 
- 以下代码通过在一个 Include 属性中声明两个文件（用分号分隔）来创建相同的项类型。
+以下代码通过在一个 Include 属性中声明两个文件（用分号分隔）来创建相同的项类型。
 
 ```xml
 <ItemGroup>
@@ -338,7 +344,7 @@ MSBuild 创建配置属性并赋予其“发布”值。
 有关详细信息，请参阅[项](../msbuild/msbuild-items.md)。
 
 > [!NOTE]
-> 文件路径相对于包含 MSBuild 项目文件的文件夹。
+> 文件路径是包含 MSBuild 项目文件的文件夹的相对路径，即使项目文件是导入的项目文件也是如此。 但存在一些例外情况，例如，在使用 [Import](import-element-msbuild.md) 和 [UsingTask](usingtask-element-msbuild.md) 元素时。
 
 ## <a name="examine-item-type-values"></a>检查项类型值
 
@@ -348,9 +354,9 @@ MSBuild 创建配置属性并赋予其“发布”值。
 @(ItemType)
 ```
 
- 使用此语法可检查项目文件中的编译项类型。
+使用此语法可检查项目文件中的编译项类型。
 
-**检查项类型值**
+**检查项类型值：**
 
 1. 从代码编辑器中使用以下代码替换 HelloWorld 目标任务：
 
@@ -360,15 +366,15 @@ MSBuild 创建配置属性并赋予其“发布”值。
     </Target>
     ```
 
-2. 保存项目文件。
+1. 保存项目文件。
 
-3. 在“命令窗口”  输入并执行此行：
+1. 在“命令窗口”  输入并执行此行：
 
     ```cmd
     msbuild buildapp.csproj -t:HelloWorld
     ```
 
-4. 检查输出。 应看到这一长行：
+1. 检查输出。 应看到这一长行：
 
     ```
     Compile item type contains Form1.cs;Form1.Designer.cs;Program.cs;Properties\AssemblyInfo.cs;Properties\Resources.Designer.cs;Properties\Settings.Designer.cs
@@ -425,7 +431,7 @@ MSBuild 创建配置属性并赋予其“发布”值。
 <Photos Include="images\**\*.jpeg" />
 ```
 
- 将“图片”  文件夹和其所有子文件夹中所有文件扩展名为“.jpeg”  的文件添加到照片项类型。 若要了解更多示例，请参阅[如何：选择要生成的文件](../msbuild/how-to-select-the-files-to-build.md)。
+ 将“图片”  文件夹和其所有子文件夹中所有文件扩展名为“.jpeg”  的文件添加到照片项类型。 有关更多示例，请参见[如何：选择要生成的文件](../msbuild/how-to-select-the-files-to-build.md)。
 
  注意，项在声明时会被添加到项类型。 例如，应用于对象的
 
@@ -446,7 +452,7 @@ MSBuild 创建配置属性并赋予其“发布”值。
 <Compile Include="*.cs" Exclude="*Designer*">
 ```
 
- 将所有文件扩展名为“.cs”  的文件添加到编译项类型，除了名称中包含字符串“Designer”  的文件。 若要了解更多示例，请参阅[如何：从生成中排除文件](../msbuild/how-to-exclude-files-from-the-build.md)。
+ 将所有文件扩展名为“.cs”  的文件添加到编译项类型，除了名称中包含字符串“Designer”  的文件。 有关更多示例，请参见[如何：从生成中排除文件](../msbuild/how-to-exclude-files-from-the-build.md)。
 
 Exclude 属性只会影响由 Include 属性添加的项（这两个属性均位于项元素中）。 例如，应用于对象的
 
@@ -507,7 +513,7 @@ Exclude 属性只会影响由 Include 属性添加的项（这两个属性均位
 %(ItemType.MetaDataName)
 ```
 
-**检查项元数据**
+**检查项元数据：**
 
 1. 从代码编辑器中使用此行替换 Message 任务：
 
@@ -525,7 +531,7 @@ Exclude 属性只会影响由 Include 属性添加的项（这两个属性均位
 
 4. 检查输出。 应看到这些行：
 
-    ```
+    ```output
     Compile.DependentUpon:
     Compile.DependentUpon: Form1.cs
     Compile.DependentUpon: Resources.resx
@@ -538,7 +544,7 @@ Exclude 属性只会影响由 Include 属性添加的项（这两个属性均位
 
  无论何时向项列表添加项时，都会向该项分配一些常见元数据。 例如，%(Filename) 会返回任何项的文件名。 若要了解完整的常见元数据列表，请参阅[常见项元数据](../msbuild/msbuild-well-known-item-metadata.md)。
 
-**检查常见元数据**
+**检查常见元数据：**
 
 1. 从代码编辑器中使用此行替换 Message 任务：
 
@@ -556,7 +562,7 @@ Exclude 属性只会影响由 Include 属性添加的项（这两个属性均位
 
 4. 检查输出。 应看到这些行：
 
-    ```
+    ```output
     Compile Filename: Form1
     Compile Filename: Form1.Designer
     Compile Filename: Program
@@ -577,7 +583,7 @@ Exclude 属性只会影响由 Include 属性添加的项（这两个属性均位
 
 例如，可使用表达式 `@(SourceFiles -> '%(Filename).obj')` 将源文件的项列表转换为对象文件的集合。 有关详细信息，请参阅[转换](../msbuild/msbuild-transforms.md)。
 
-**使用元数据转换项**
+**使用元数据转换项：**
 
 1. 从代码编辑器中使用此行替换 Message 任务：
 
@@ -595,17 +601,17 @@ Exclude 属性只会影响由 Include 属性添加的项（这两个属性均位
 
 4. 检查输出。 应看到此行：
 
-    ```
+    ```output
     Backup files: Form1.bak;Form1.Designer.bak;Program.bak;AssemblyInfo.bak;Resources.Designer.bak;Settings.Designer.bak
     ```
 
 请注意，此语法中表示的元数据不会造成批处理。
 
-## <a name="whats-next"></a>后续步骤
+## <a name="next-steps"></a>后续步骤
 
- 要了解如何一步步创建简单项目文件，请尝试[演练：从头开始创建 MSBuild 项目文件](../msbuild/walkthrough-creating-an-msbuild-project-file-from-scratch.md)中的步骤。
+ 要了解如何一步步创建简单项目文件，请尝试[演练：从头开始创建 MSBuild 项目文件](../msbuild/walkthrough-creating-an-msbuild-project-file-from-scratch.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [MSBuild 概述](../msbuild/msbuild.md)
 - [MSBuild 参考](../msbuild/msbuild-reference.md)
