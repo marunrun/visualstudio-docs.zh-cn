@@ -13,12 +13,12 @@ caps.latest.revision: 17
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 414b5ea6a6cf6bf0277ad8d2df51b20c39f558e1
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 128de95d347fece01c9177057346b00e412e1e6f
+ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75852168"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82586638"
 ---
 # <a name="common-patterns-for-poorly-behaved-multithreaded-applications"></a>性能不佳的多线程应用程序的常见模式
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -26,13 +26,13 @@ ms.locfileid: "75852168"
 并发可视化工具可帮助开发者将多线程应用程序的行为可视化。 此工具包含性能不佳的多线程应用程序的常见模式库。 该库包括通过工具公开的典型、可识别的视觉对象模式，以及每种模式所表示的行为的解释，该行为可能造成的结果以及解决它最常用的方法。  
   
 ## <a name="lock-contention-and-serialized-execution"></a>锁争用和序列化执行  
- ![导致序列化执行的锁争用](../profiling/media/lockcontention-serialized.png "LockContention_Serialized")  
+ ![锁争用导致顺序执行](../profiling/media/lockcontention-serialized.png "LockContention_Serialized")  
   
  有时，即使并行化应用程序有多个线程，并且计算机有足够数量的逻辑内核，它仍会顽固地继续串行执行。 第一个症状是较差的多线程性能，甚至可能比串行实现要稍慢。 在“线程”视图中，看不到并行运行的多个线程；相反，将看到在任何时候都只有一个线程运行。 在这种情况下，如果单击线程中的同步段，则可以看到被阻塞线程的调用堆栈（阻塞调用堆栈）和删除阻塞条件的线程（取消阻塞调用堆栈）。 此外，如果正在分析的进程中发生取消阻塞调用堆栈，将显示线程就绪连接符。 从这点上看，可以在阻塞和取消阻塞调用堆栈中导航到代码，以进一步调查造成序列化的原因。  
   
  如下图所示，并发可视化工具还可在 CPU 使用率视图中公开此症状，其中，尽管存在多个线程，但该应用程序只使用一个逻辑核心。  
   
- 有关详细信息，请参阅 MSDN 博客网站上 Hazim Shafi 的 [Windows 的并行性能工具](https://blogs.msdn.com/hshafi)博客中的“性能模式 1：识别锁争用”。  
+ 有关详细信息，请参阅 MSDN 博客网站上的上 hazim Shafi 的 " [Windows 博客并行性能工具](https://docs.microsoft.com/archive/blogs/hshafi/)" 中的 "性能模式1：标识锁争用"。  
   
  ![锁争用](../profiling/media/lockcontention-2.png "LockContention_2")  
   
@@ -57,7 +57,7 @@ ms.locfileid: "75852168"
 - 评估进程如何确定在此工作阶段期间要执行的线程的合适数量。 如果进程直接计算活动的并行线程数，请考虑修改算法以更好地在系统上占用可用的逻辑内核数。 如果使用并发运行时、任务并行库或 PLINQ，这些库将执行计算线程数的工作。  
   
 ## <a name="inefficient-io"></a>I/O 效率低  
- ![&#47;I/o 效率低下](../profiling/media/inefficient-io.png "Inefficient_IO")  
+ ![&#47;O 效率低下](../profiling/media/inefficient-io.png "Inefficient_IO")  
   
  过度使用或误用 I/O 是导致应用程序效率低下的常见原因。 请参考上图。 可见时间线分析显示 I/O 使用了 42%的可见线程时间。 时间线显示大量 I/O，这指示 I/O 频繁地阻塞被分析应用程序。 若要深入了解 I/O 类型和程序被阻塞的位置，请放大存在问题的区域，检查可见时间线分析，然后单击特定 I/O 块以查看当前的调用堆栈。  
   
@@ -66,5 +66,5 @@ ms.locfileid: "75852168"
   
  当应用程序要求以先到先得的顺序锁定和锁定处的到达率高于获取率时将发生锁保护。 这两个条件的组合会导致要求锁开始进行备份。 解决此问题的一种方法是使用“不公平”锁或使用授予第一个线程访问权限的锁，以在未锁定状态中找到查找它们。 上图显示了此保护行为。 若要解决此问题，请尝试减少同步对象的争用并尝试使用不公平锁。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [线程视图](../profiling/threads-view-parallel-performance.md)

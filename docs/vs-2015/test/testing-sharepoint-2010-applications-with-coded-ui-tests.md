@@ -8,26 +8,26 @@ ms.assetid: 51b53778-469c-4cc9-854c-4e4992d6389b
 caps.latest.revision: 32
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: b44e921a8e1ba13d3f0786d4633f942f94f3eaaa
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 0ec4c0a9594202b6755500d683c426238264aec3
+ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75851277"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82586980"
 ---
 # <a name="testing-sharepoint-2010-applications-with-coded-ui-tests"></a>使用编码的 UI 测试来测试 SharePoint 2010 应用程序
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 通过在 SharePoint 应用程序中包含编码的 UI 测试，您可以验证整个应用程序（包括其 UI 控件）是否正常工作。 编码的 UI 测试还可以验证 UI 中的值和逻辑。
 
- **惠?**
+ **要求**
 
 - Visual Studio Enterprise
 
 ## <a name="what-else-should-i-know-about-coded-ui-tests"></a>还应当编码的 UI 测试了解什么?
  若要详细了解使用编码的 UI 测试的相关好处，请参阅[使用 UI 自动化来测试代码](../test/use-ui-automation-to-test-your-code.md)和[使用 Visual Studio 2012 测试持续交付 - 第 5 章：实现系统测试的自动化](https://msdn.microsoft.com/library/jj159335.aspx)。
 
- **备注**
+ **说明**
 
 - ![先决条件](../test/media/prereq.png "Prereq")只有 SharePoint 2010 支持对 SharePoint 应用程序进行编码的 UI 测试。
 
@@ -137,11 +137,11 @@ uiGridKeyboardInputEdit.Text=value;
 
  [编码的 UI 测试的内容索引](https://blogs.msdn.microsoft.com/mathew_aniyan/2013/02/18/content-index-for-coded-ui-test/)
 
-### <a name="guidance"></a>指导
- [使用 Visual Studio 2012 测试持续交付 - 第 5 章：实现系统测试的自动化](https://msdn.microsoft.com/library/jj159335.aspx)
+### <a name="guidance"></a>指南
+ [通过 Visual Studio 2012 对持续交付进行测试-第5章：实现系统测试的自动化](https://msdn.microsoft.com/library/jj159335.aspx)
 
 ### <a name="forum"></a>论坛
- [Visual Studio ALM + Team Foundation Server 博客](https://blogs.msdn.com/b/visualstudioalm/)
+ [Visual Studio ALM + Team Foundation Server 博客](https://devblogs.microsoft.com/devops/welcome-to-the-visual-studio-alm-team-foundation-server-blog/)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [使用 UI 自动化来测试代码](../test/use-ui-automation-to-test-your-code.md) [Web 性能和负载测试 SharePoint 2010 和2013应用程序](https://msdn.microsoft.com/library/20c2e469-0e4e-4296-a739-c0e8fff36e54)[创建 sharepoint 解决方案](https://msdn.microsoft.com/library/4bfb1e59-97c9-4594-93f8-3068b4eb9631)[验证和调试 sharepoint 代码](https://msdn.microsoft.com/library/b5f3bce2-6a51-41b1-a292-9e384bae420c)[生成和调试 sharepoint 解决方案](https://msdn.microsoft.com/library/c9e7c9ab-4eb3-40cd-a9b9-6c2a896f70ae)[分析 sharepoint 应用程序的性能](https://msdn.microsoft.com/library/61ae02e7-3f37-4230-bae1-54a498c2fae8)

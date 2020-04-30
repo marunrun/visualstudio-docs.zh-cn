@@ -9,12 +9,12 @@ caps.latest.revision: 8
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: d1c63b866b35ef9b029364002360d29fa72f2b9b
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: 490c10f072ba57f27410ecb1cdca681469692de5
+ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75918974"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82586711"
 ---
 # <a name="using-the-microsoft-monitoring-agent"></a>使用 Microsoft Monitoring Agent
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -30,30 +30,30 @@ ms.locfileid: "75918974"
   
  开始前，请检查版本及已部署代码的源和符号是否相匹配。 开始调试并浏览 IntelliTrace 日志中的诊断事件时，这可助你直接转向相应的应用程序代码。 [设置版本](../debugger/diagnose-problems-after-deployment.md) 以便 Visual Studio 可自动查找并打开匹配已部署代码的源。  
   
-1. [步骤 1：设置 Microsoft 监视代理](#SetUpMonitoring)  
+1. [步骤1：设置 Microsoft Monitoring Agent](#SetUpMonitoring)  
   
 2. [步骤 2：开始监视你的应用程序](#MonitorEvents)  
   
-3. [步骤 3：保存已记录的事件](#SaveEvents)  
+3. [步骤3：保存记录的事件](#SaveEvents)  
   
-## <a name="SetUpMonitoring"></a> 步骤 1：设置 Microsoft 监视代理  
+## <a name="step-1-set-up-microsoft-monitoring-agent"></a><a name="SetUpMonitoring"></a> 步骤 1：设置 Microsoft 监视代理  
  设置 Web 服务器上的独立代理，以便在不更改应用程序的前提下实施本地监视。 如果你使用 System Center 2012，请参阅 [安装 Microsoft 监视代理](https://technet.microsoft.com/library/dn465156.aspx)。  
   
-### <a name="SetUpStandaloneMMA"></a> 设置独立代理  
+### <a name="set-up-the-standalone-agent"></a><a name="SetUpStandaloneMMA"></a> 设置独立代理  
   
-1. 确保：  
+1. 请确保：  
   
     - Web 服务器正在运行 [Internet Information Services (IIS) 的支持版本](https://technet.microsoft.com/library/dn465154.aspx)。  
   
     - 你的 Web 服务器包含 .NET Framework 3.5、4 或 4.5。  
   
-    - 你的 Web 服务器正运行 Windows PowerShell 3.0 或更新版本。 [问：Windows PowerShell 2.0 版本可用吗？](#PowerShell2)  
+    - 你的 Web 服务器正运行 Windows PowerShell 3.0 或更新版本。 [问：如果我有 Windows PowerShell 2.0，该怎么办？](#PowerShell2)  
   
     - 你拥有 Web 服务器的管理员权限，可在开始监视时运行 PowerShell 命令并回收应用程序池。  
   
     - 你已卸载所有早期版本的 Microsoft 监视代理。  
   
-2. 从 Microsoft 下载中心[下载免费的 Microsoft 监视代理](https://go.microsoft.com/fwlink/?LinkID=309771)（32 位版本“” 或 64 位版本“”）至你的 Web 服务器。  
+2. 从 Microsoft 下载中心[下载免费的 Microsoft 监视代理](https://go.microsoft.com/fwlink/?LinkID=309771)（32 位版本“” **** 或 64 位版本“” ****）至你的 Web 服务器。  
   
 3. 运行已下载的可执行文件以启动安装向导。  
   
@@ -66,12 +66,12 @@ ms.locfileid: "75918974"
   
 5. 要运行详细的函数级监视或要监视 SharePoint 应用程序，需授予托管 Web 应用或 SharePoint 应用程序的应用程序池对 IntelliTrace 日志目录的读写权限。 [问：如何设置访问应用程序池的权限？](#FullPermissionsITLog)  
   
-### <a name="q--a"></a>问题解答  
+### <a name="q--a"></a>问与答  
   
-#### <a name="PowerShell2"></a> 问：Windows PowerShell 2.0 版本可用吗？  
+#### <a name="q-what-if-i-have-windows-powershell-20"></a><a name="PowerShell2"></a> 问：Windows PowerShell 2.0 版本可用吗？  
  **答：** 我们强烈建议你使用 PowerShell 3.0。 否则，每次运行 PowerShell 时都必须导入 Microsoft 监视代理 PowerShell cmdlet。 此外，你将无法访问已下载的帮助内容。  
   
-1. 以管理员身份打开“Windows PowerShell” 或“Windows PowerShell ISE” 命令提示符窗口。  
+1. 以管理员身份打开“Windows PowerShell” **** 或“Windows PowerShell ISE” **** 命令提示符窗口。  
   
 2. 从默认安装位置导入 Microsoft 监视代理 PowerShell 模块：  
   
@@ -79,41 +79,41 @@ ms.locfileid: "75918974"
   
 3. [请访问 TechNet](https://technet.microsoft.com/systemcenter/default) 以获取最新的帮助内容。  
   
-#### <a name="FullPermissionsITLog"></a> 问：如何设置访问应用程序池的权限？  
+#### <a name="q-how-do-i-set-up-permissions-for-the-application-pool"></a><a name="FullPermissionsITLog"></a>问：如何实现设置应用程序池的权限吗？  
  **答：** 使用 Windows **icacls** 命令或使用 Windows 资源管理器（或文件资源管理器）。 例如：  
   
 - 要使用 Windows **icacls** 命令设置权限，请：  
   
-  - 对于“DefaultAppPool” 应用程序池中的 Web 应用：  
+  - 对于**DefaultAppPool**应用程序池中的 web 应用：  
   
      `icacls "C:\IntelliTraceLogs" /grant "IIS APPPOOL\DefaultAppPool":RX`  
   
-  - 对于“SharePoint - 80” 应用程序池中的一个 SharePoint 应用程序：  
+  - 对于“SharePoint - 80” **** 应用程序池中的一个 SharePoint 应用程序：  
   
      `icacls "C:\IntelliTraceLogs" /grant "IIS APPPOOL\SharePoint - 80":RX`  
   
-    或  
+    -或-  
   
 - 要设置 Windows 资源管理器（或文件资源管理器）的权限，请：  
   
-  1. 打开 IntelliTrace 日志目录中的“属性” 。  
+  1. 打开 IntelliTrace 日志目录中的“属性” **** 。  
   
-  2. 在“安全” 选项卡上，选择“编辑”，然后单击“添加”。  
+  2. 在“安全” **** 选项卡上，选择“编辑” ****，然后单击“添加” ****。  
   
-  3. 确保“内置安全主体” 出现在“选择此对象类型” 框中。 如果“内置安全主体”未在那里出现，请选择“对象类型” 进行添加。  
+  3. 确保“内置安全主体” **** 出现在“选择此对象类型” **** 框中。 如果“内置安全主体”未在那里出现，请选择“对象类型” **** 进行添加。  
   
-  4. 确保本地计算机出现在“从此处” 框中。 如果本地计算机未在那里出现，请选择“位置” 进行更改。  
+  4. 确保本地计算机出现在“从此处” **** 框中。 如果本地计算机未在那里出现，请选择“位置” **** 进行更改。  
   
-  5. 在“输入要选择的对象名称” 框中，添加 Web 应用或 SharePoint 应用程序的应用程序池。  
+  5. 在 "**输入要选择的对象名称**" 框中，添加 web 应用或 SharePoint 应用程序的应用程序池。  
   
-  6. 选择“检查名称” 来解析名称。 选择 **“确定”** 。  
+  6. 选择“检查名称” **** 来解析名称。 选择“确定”  。  
   
-  7. 确保应用程序池拥有“读取和执行”权限。  
+  7. 确保应用程序池拥有“读取和执行”权限****。  
   
-## <a name="MonitorEvents"></a> 步骤 2：开始监视你的应用程序  
+## <a name="step-2-start-monitoring-your-app"></a><a name="MonitorEvents"></a>步骤2：开始监视你的应用  
  使用 Windows PowerShell [Start-WebApplicationMonitoring](https://technet.microsoft.com/library/dn472749(v=sc.20).aspx) 命令开始监视应用。 如果你使用 System Center 2012，请参阅 [使用 Microsoft 监视代理监视 Web 应用程序](https://technet.microsoft.com/library/dn465157.aspx)。  
   
-1. 在 Web 服务器上，以管理员身份打开“Windows PowerShell” 或“Windows PowerShell ISE” 命令提示符窗口。  
+1. 在 Web 服务器上，以管理员身份打开“Windows PowerShell” **** 或“Windows PowerShell ISE” **** 命令提示符窗口。  
   
      ![以管理员身份打开 Windows PowerShell](../debugger/media/ffr-powershellrunadmin.png "FFR_PowerShellRunAdmin")  
   
@@ -121,7 +121,7 @@ ms.locfileid: "75918974"
   
      以下是短语法：  
   
-     **Stop-webapplicationmonitoring** *"\<appName >"* *\<monitoringMode >* *"\<outputPath >"* *\<UInt32 >* *"\<collectionPlanPathAndFileName >"*  
+     **Stop-webapplicationmonitoring** *"\<appName>"* * \<monitoringMode>* *\<"outputPath>"* * \<UInt32>* *"\<collectionPlanPathAndFileName>"*  
   
      以下是只使用了 Web 应用名和轻型 **Monitor** 模式的示例：  
   
@@ -133,23 +133,23 @@ ms.locfileid: "75918974"
   
      开始监视后，你可能会看到 Microsoft 监视代理在应用重启时会暂停。  
   
-     ![通过 MMA 确认开始监视](../debugger/media/ffr-powershellstartmonitoringconfirmation.png "FFR_PowerShellStartMonitoringConfirmation")  
+     ![使用 MMA 确认启动监视](../debugger/media/ffr-powershellstartmonitoringconfirmation.png "FFR_PowerShellStartMonitoringConfirmation")  
   
     |||  
     |-|-|  
-    |*"\<appName>"*|指定 IIS 中的网站路径及 Web 应用名。 如果愿意，你也可以加入 IIS 路径。<br /><br /> *"\<IISWebsiteName>\\<IISWebAppName\>"*<br /><br /> 或<br /><br /> **"IIS： \ sites** *\\< IISWebsiteName\>\\< IISWebAppName\>"*<br /><br /> 你可在 IIS 管理器中找到此路径。 例如：<br /><br /> ![IIS 网站和 web 应用的路径](../debugger/media/ffr-iismanager.png "FFR_IISManager")<br /><br /> 你还可以使用 [Get-WebSite](https://technet.microsoft.com/library/ee807832.aspx) 和 [Get WebApplication](https://technet.microsoft.com/library/ee790554.aspx) 命令。|  
+    |*"\<appName>"*|指定 IIS 中的网站路径及 Web 应用名。 如果愿意，你也可以加入 IIS 路径。<br /><br /> *"\<IISWebsiteName>\\<IISWebAppName\>"*<br /><br /> -或-<br /><br /> **"IIS： \ sites** * \\<IISWebsiteName\> \\<IISWebAppName\>"*<br /><br /> 你可在 IIS 管理器中找到此路径。 例如：<br /><br /> ![指向 IIS 网站和 Web 应用程序的路径](../debugger/media/ffr-iismanager.png "FFR_IISManager")<br /><br /> 你还可以使用 [Get-WebSite](https://technet.microsoft.com/library/ee807832.aspx) 和 [Get WebApplication](https://technet.microsoft.com/library/ee790554.aspx) 命令。|  
     |*\<monitoringMode>*|指定监视模式：<br /><br /> <ul><li>**Monitor**：记录异常事件及性能事件相关的全部细节（包含最小的细节）。 该模式使用默认的收集计划。</li><li>**Trace**：通过使用指定的收集计划来记录函数级细节或监视 SharePoint 2010 和 SharePoint 2013 应用程序。 该模式可能导致应用的运行速度更慢。<br /><br /> <ul><li>[问：如何设置访问应用程序池的权限？](#FullPermissionsITLog)</li><li>[问：如何在应用速度不减的前提下获取最多的数据？](#Minimizing)</li></ul><br />     该示例记录一个托管在 SharePoint 站点上的 SharePoint 应用的事件：<br /><br />     **开始-Stop-webapplicationmonitoring "FabrikamSharePointSite\FabrikamSharePointApp" Trace "C:\Program Files\Microsoft Monitoring Agent\Agent\IntelliTraceCollector\ collection_plan" "C:\IntelliTraceLogs"**</li><li>**Custom**：通过使用指定的自定义收集计划来记录自定义细节。 如果在开始监视后修改收集计划，则必须重启监视。</li></ul>|  
     |*"\<outputPath>"*|指定存储 IntelliTrace 日志的目录完整路径。 确保在开始监视前已创建此目录。|  
     |*\<UInt32>*|指定 IntelliTrace 日志的上限大小。 IntelliTrace 日志的默认上限大小为 250 MB。<br /><br /> 日志达到此上限时，代理会覆盖最早的项以便为更多的项让出空间。 要更改此上限，可在收集计划中使用 **-MaximumFileSizeInMegabytes** 选项或修改 `MaximumLogFileSize` 属性。|  
-    |*"\<collectionPlanPathAndFileName>"*|指定收集计划的完整路径或相对路径及文件名。 该计划是一个配置代理设置的 .xml 文件。<br /><br /> 这些计划包含在代理中并与 Web 应用和 SharePoint 应用程序兼容：<br /><br /> -   **collection_plan.ASP.NET.default.xml**<br />     仅收集事件，包括异常、性能事件、数据库调用及 Web 服务器请求。<br />-   **collection_plan.ASP.NET.trace.xml**<br />     收集默认收集计划中的函数集调用及所有数据。 该计划非常适合进行详细分析，但可能使你的应用速度变慢。<br /><br /> 可在代理的子文件夹中找到这些计划的本地版本。 为避免应用速度变慢，你也可以 [自定义这些计划或创建自己的计划](https://blogs.msdn.com/b/visualstudioalm/archive/2011/09/15/modifying-an-intellitrace-collection-plan-for-the-stand-alone-collector.aspx) 。 将所有自定义计划放在代理所处的同一安全位置。<br /><br /> [问：如何在应用速度不减的前提下获取最多的数据？](#Minimizing)|  
+    |*"\<collectionPlanPathAndFileName>"*|指定收集计划的完整路径或相对路径及文件名。 该计划是一个配置代理设置的 .xml 文件。<br /><br /> 这些计划包含在代理中并与 Web 应用和 SharePoint 应用程序兼容：<br /><br /> -   **collection_plan.ASP.NET.default.xml**<br />     仅收集事件，包括异常、性能事件、数据库调用及 Web 服务器请求。<br />-   **collection_plan.ASP.NET.trace.xml**<br />     收集默认收集计划中的函数集调用及所有数据。 该计划非常适合进行详细分析，但可能使你的应用速度变慢。<br /><br /> 可在代理的子文件夹中找到这些计划的本地版本。 为避免应用速度变慢，你也可以 [自定义这些计划或创建自己的计划](https://devblogs.microsoft.com/devops/modifying-an-intellitrace-collection-plan-for-the-stand-alone-collector/) 。 将所有自定义计划放在代理所处的同一安全位置。<br /><br /> [问：如何在应用速度不减的前提下获取最多的数据？](#Minimizing)|  
   
-     要了解完整语法及其他示例的更多信息，请运行 **get-help Start-WebApplicationMonitoring –detailed** 命令或 **get-help Start-WebApplicationMonitoring –examples** 命令。  
+     有关完整语法和其他示例的详细信息，请运行**Get-help stop-webapplicationmonitoring-详细**命令或**get-help stop-webapplicationmonitoring –示例**命令。  
   
 3. 要查看所有已监视 Web 应用的状态，请运行 [Get-WebApplicationMonitoringStatus](https://technet.microsoft.com/library/dn472751(v=sc.20).aspx) 命令。  
   
-### <a name="q--a"></a>问题解答  
+### <a name="q--a"></a>问与答  
   
-#### <a name="Minimizing"></a> 问：如何在应用速度不减的前提下获取最多的数据？  
+#### <a name="q-how-do-i-get-the-most-data-without-slowing-down-my-app"></a><a name="Minimizing"></a>问：如何实现获取最多的数据，但不降低应用程序的速度？  
  **答：** Microsoft 监视代理可收集大量数据并且会影响应用的性能，具体取决于你选择收集的数据及收集方式。 以下是在应用速度不减的前提下获取最多的数据的一些方法：  
   
 - 针对 Web 应用和 SharePoint 应用程序，代理会记录共享指定应用程序池的各应用的数据。 虽然你能限制一个单应用的模块的收集，但这可能使任何共享同一应用程序池的应用速度变慢。 要避免使其他应用速度变慢，请将各应用托管在各自的应用程序池中。  
@@ -172,7 +172,7 @@ ms.locfileid: "75918974"
   
    这可减少应用启动、运行时代理收集的方法调用信息及其他检测数据的数量。 调试并检查函数调用接收及返回的值时，该数据有助于你单步调试代码。  
   
-  1. 打开收集计划。 查找 `<ModuleList>` 元素。  
+  1. 打开收集计划。 找到 `<ModuleList>` 元素。  
   
   2. 在 `<ModuleList>`中，将 `isExclusionList` 属性设为 `false`。  
   
@@ -230,7 +230,7 @@ ms.locfileid: "75918974"
   
   代理只记录 `id`方法返回的 `Employee.Id`、 `Employee.Name` 、 `Employee` 和 `AlterEmployee` 对象的值。 然而，除记录 `Address` 对象是否为空以外，代理不会收集有关该对象的其他信息。 代理也不会记录 `AlterEmployee` 方法中局部变量相关的数据，除非其他方法将这些局部变量用作参数，记录为方法参数。  
   
-## <a name="SaveEvents"></a> 步骤 3：保存已记录的事件  
+## <a name="step-3-save-recorded-events"></a><a name="SaveEvents"></a> 步骤 3：保存已记录的事件  
  发现错误或性能问题时，将已记录的事件保存为 IntelliTrace 日志。 代理只在记录事件的情况下会创建日志。 如果你使用 System Center 2012，请参阅 [使用 Microsoft 监视代理监视 Web 应用程序](https://technet.microsoft.com/library/dn465157.aspx)。  
   
 ### <a name="save-recorded-events-but-continue-monitoring"></a>保存已记录的事件，但继续监视  
@@ -240,28 +240,28 @@ ms.locfileid: "75918974"
   
 2. 运行 [Checkpoint-WebApplicationMonitoring](https://technet.microsoft.com/library/dn472750(v=sc.20).aspx) 命令以保存 IntelliTrace 日志快照：  
   
-    **检查点-stop-webapplicationmonitoring** *"\<IISWebsiteName >\\< IISWebAppName\>"*  
+    **检查点-stop-webapplicationmonitoring** *"\<IISWebsiteName \\><\>IISWebAppName"*  
   
     \- 或 -  
   
-    **检查点-stop-webapplicationmonitoring "IIS： \ sites** *\\< IISWebsiteName\>\\< IISWebAppName\>"*  
+    **Stop-webapplicationmonitoring "IIS： \ sites** * \\<IISWebsiteName\> \\<IISWebAppName\>" 的检查点*  
   
     例如：  
   
     **PS C:\\>Checkpoint-WebApplicationMonitoring "Fabrikam\FabrikamFiber.Web"**  
   
-    或  
+    -或-  
   
     **PS C:>Checkpoint-WebApplicationMonitoring "IIS:sitesFabrikamFabrikamFiber.Web"**  
   
-    要了解更多信息，请运行 **get-help Checkpoint-WebApplicationMonitoring –detailed** 命令或 **get-help Checkpoint-WebApplicationMonitoring –examples** 命令。  
+    有关详细信息，请运行**Get-help stop-webapplicationmonitoring-详细**命令或**get-help stop-webapplicationmonitoring –示例**命令。  
   
 3. 将日志复制到一个安全的共享文件夹中，随后从装有 Visual Studio Enterprise （但不是 Professional 或 Community 版本）的计算机打开该日志。  
   
    > [!IMPORTANT]
    > 共享 IntelliTrace 日志时务必小心，因为这些日志中可能包含个人数据及敏感数据。 确保可访问这些日志的所有人拥有查看相应数据的权限。 查看你所在公司的隐私政策。  
   
-   **下一步：** [诊断 Visual Studio Enterprise 中记录的事件](../debugger/diagnose-problems-after-deployment.md#InvestigateEvents)  
+   **下一步：** [在 Visual Studio Enterprise 中诊断已记录的事件](../debugger/diagnose-problems-after-deployment.md#InvestigateEvents)  
   
 ### <a name="save-recorded-events-and-stop-monitoring"></a>保存已记录的事件并停止监视  
  如果复制特定问题时你只想获取诊断信息，请执行这些步骤。 这将重启你的 Web 服务器上的所有 Web 应用。  
@@ -270,11 +270,11 @@ ms.locfileid: "75918974"
   
 2. 运行 [Stop-WebApplicationMonitoring](https://technet.microsoft.com/library/dn472753(v=sc.20).aspx) 命令以创建 IntelliTrace 日志并停止监视特定的 Web 应用：  
   
-    **Stop-webapplicationmonitoring** *"\<IISWebsiteName >\\< IISWebAppName\>"*  
+    **Stop-webapplicationmonitoring** *"\<IISWebsiteName>\\<IISWebAppName"\>*  
   
     \- 或 -  
   
-    **Stop-webapplicationmonitoring "IIS： \ sites** *\\< IISWebsiteName\>\\< IISWebAppName\>"*  
+    **Stop-webapplicationmonitoring "IIS： \ sites** * \\<IISWebsiteName\> \\<IISWebAppName\>"*  
   
     或停止监视所有 Web 应用：  
   
@@ -288,20 +288,20 @@ ms.locfileid: "75918974"
   
     **PS C:\\>Stop-WebApplicationMonitoring "IIS:\sites\Fabrikam\FabrikamFiber.Web"**  
   
-    要了解更多信息，请运行 **get-help Stop-WebApplicationMonitoring –detailed** 命令或 **get-help Stop-WebApplicationMonitoring –examples** 命令。  
+    有关详细信息，请运行**Get-help stop-webapplicationmonitoring-详细**命令或**get-help stop-webapplicationmonitoring –示例**命令。  
   
 3. 将日志复制到一个安全的共享文件夹中，随后从装有 Visual Studio Enterprise 的计算机打开该日志。  
   
-   **下一步：** [诊断 Visual Studio Enterprise 中记录的事件](../debugger/diagnose-problems-after-deployment.md#InvestigateEvents)  
+   **下一步：** [在 Visual Studio Enterprise 中诊断已记录的事件](../debugger/diagnose-problems-after-deployment.md#InvestigateEvents)  
   
-## <a name="q--a"></a>问题解答  
+## <a name="q--a"></a>问与答  
   
 ### <a name="q-where-can-i-get-more-information"></a>问：在何处可以获取详细信息？  
   
 #### <a name="blogs"></a>博客  
  [Microsoft 监视代理简介](https://devblogs.microsoft.com/devops/introducing-microsoft-monitoring-agent-2/)  
   
- [优化生产服务器上的 IntelliTrace 收集](https://blogs.msdn.com/b/visualstudioalm/archive/2012/05/18/optimizing-intellitrace-collection-on-production-server.aspx)  
+ [优化生产服务器上的 IntelliTrace 收集](https://devblogs.microsoft.com/devops/optimizing-intellitrace-collection-on-production-server/)  
   
 #### <a name="forums"></a>论坛  
  [Visual Studio 诊断](https://social.msdn.microsoft.com/Forums/vsdebug)

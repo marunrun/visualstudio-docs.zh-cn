@@ -107,6 +107,7 @@ f1_keywords:
 - CA1506
 - CA1507
 - CA1508
+- CA1509
 - CA1600
 - CA1601
 - CA1700
@@ -172,6 +173,7 @@ f1_keywords:
 - CA2004
 - CA2006
 - CA2007
+- CA2009
 - CA2100
 - CA2101
 - CA2102
@@ -270,20 +272,19 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 554de8df2d05d0ae4f248762891dd0cec543e5a9
-ms.sourcegitcommit: 93859158465eab3423a0c0435f06490f0a456a57
+ms.openlocfilehash: 4b4b0929830f825b2c1f7fd568620a3f743308f4
+ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82167379"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82586295"
 ---
 # <a name="code-analysis-warnings-for-managed-code-by-checkid"></a>托管代码的代码分析警告（按 CheckId）
 
 下表列出了托管代码的代码分析警告，按警告的 CheckId 标识符排列。
 
-| CheckId | 警告 | 说明 |
+| CheckId | 警告 | 描述 |
 |---------| - | - |
-| CA2007 | [CA2007：不直接等待任务](ca2007.md) | 异步方法会[awaits](/dotnet/csharp/language-reference/keywords/await) <xref:System.Threading.Tasks.Task>直接等待。 当异步方法<xref:System.Threading.Tasks.Task>直接等待时，延续将在创建任务的同一线程中发生。 此行为在性能方面可能会很大，并且可能会在 UI 线程上导致死锁。 请考虑<xref:System.Threading.Tasks.Task.ConfigureAwait(System.Boolean)?displayProperty=nameWithType>调用以通知你的继续符。 |
 | CA1000 | [CA1000:不要在泛型类型中声明静态成员](../code-quality/ca1000.md) | 调用泛型类型的静态成员时，必须指定该类型的类型参数。 当调用不支持推理的泛型实例成员时，必须指定该成员的类型参数。 在上述两种情况下，用于指定类型自变量的语法不同，但很容易混淆。 |
 | CA1001 | [CA1001:具有可释放字段的类型应该是可释放的](../code-quality/ca1001.md) | 一个类声明并实现 System.IDisposable 类型的实例字段，但该类不实现 IDisposable。 声明 IDisposable 字段的类间接拥有非托管资源，并且应该实现 IDisposable 接口。 |
 | CA1002 | [CA1002:不要公开泛型列表](../code-quality/ca1002.md) | < \<（T>） >）的泛型集合是设计为性能的泛型集合，而不是继承。 因此，List 不包含任何虚拟成员。 应改为公开针对继承设计的泛型集合。 |
@@ -383,6 +384,7 @@ ms.locfileid: "82167379"
 | CA1506 | [CA1506:避免过度类耦合度](../code-quality/ca1506.md) | 此规则通过计算类型或方法包含的唯一类型引用的个数来衡量类耦合。 |
 | CA1507 | [CA1507：使用 nameof 代替字符串](../code-quality/ca1507.md) | 字符串文本用作参数，可在其中使用`nameof`表达式。 |
 | CA1508 | [CA1508：避免死条件代码](../code-quality/ca1508.md) | 方法具有始终计算为`true`或`false`在运行时的条件代码。 这会导致条件的`false`分支中的代码停滞。 |
+| CA1509 | [CA1509：代码度量值配置文件中的条目无效](../code-quality/ca1509.md) | 代码度量规则（如[CA1501](ca1501.md)、 [CA1502](ca1502.md)、 [CA1505](ca1505.md)和[CA1506](ca1506.md)）提供了名为`CodeMetricsConfig.txt`的配置文件，该文件具有无效条目。 |
 | CA1600 | [CA1600:不要使用 Idle 进程优先级](../code-quality/ca1600.md) | 不要将进程优先级设置为 Idle。 具有 System.Diagnostics.ProcessPriorityClass.Idle 优先级的进程将在 CPU 本应处于空闲状态时占用它，从而阻止进入待机状态。 |
 | CA1601 | [CA1601:不要使用阻止电源状态更改的计时器](../code-quality/ca1601.md) | 频率较高的定期活动会使 CPU 处于繁忙状态，并且会干扰具有节能功能（关闭显示器和硬盘）的空闲计时器。 |
 | CA1700 | [CA1700:不要命名“Reserved”枚举值](../code-quality/ca1700.md) | 此规则假定当前不使用名称中包含“reserved”的枚举成员，而是将其作为一个占位符，以在将来的版本中重命名或移除它。 重命名或移除成员是一项重大更改。 |
@@ -428,10 +430,10 @@ ms.locfileid: "82167379"
 | CA1823 | [CA1823:避免未使用的私有字段](../code-quality/ca1823.md) | 检测到程序集内有似乎未访问过的私有字段。 |
 | CA1824 |[CA1824:用 NeutralResourcesLanguageAttribute 标记程序集](../code-quality/ca1824.md) | NeutralResourcesLanguage 属性通知资源管理器，该语言用于显示程序集的非特定区域性的资源。 这将改进所加载的第一个资源的查找性能，并缩小工作集。 |
 | CA1825 |[CA1825:避免数组分配长度为零](../code-quality/ca1825.md) | 初始化长度为零的数组将导致不必要的内存分配。 相反，请通过调用<xref:System.Array.Empty%2A?displayProperty=nameWithType>来使用静态分配的空数组实例。 内存分配在此方法的所有调用之间共享。 |
-| CA1826 |[CA1826：使用属性，而不是 Linq 可枚举方法](../code-quality/ca1826.md) | <xref:System.Linq.Enumerable>LINQ 方法用于支持等效且更有效的属性的类型。 |
-| CA1827 |[CA1827：在可使用 Any 时不使用 Count/LongCount](../code-quality/ca1827.md) | <xref:System.Linq.Enumerable.Count%2A><xref:System.Linq.Enumerable.LongCount%2A>使用方法，其中<xref:System.Linq.Enumerable.Any%2A>方法会更有效。 |
-| CA1828 |[CA1828：在可使用 AnyAsync 时，请勿使用 CountAsync/LongCountAsync](../code-quality/ca1828.md) | <xref:Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.CountAsync%2A><xref:Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.LongCountAsync%2A>使用方法，其中<xref:Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.AnyAsync%2A>方法会更有效。 |
-| CA1829 |[CA1829：使用 Length/Count 属性，而不是可枚举的 Count 方法](../code-quality/ca1829.md) | <xref:System.Linq.Enumerable.Count%2A>LINQ 方法用于支持等效的、更有效`Length`的或`Count`属性的类型。 |
+| CA1826 |[CA1826:使用属性，而不是 Linq Enumerable 方法](../code-quality/ca1826.md) | <xref:System.Linq.Enumerable>LINQ 方法用于支持等效且更有效的属性的类型。 |
+| CA1827 |[CA1827:如果可以使用 Any，请勿使用 Count/LongCount](../code-quality/ca1827.md) | <xref:System.Linq.Enumerable.Count%2A><xref:System.Linq.Enumerable.LongCount%2A>使用方法，其中<xref:System.Linq.Enumerable.Any%2A>方法会更有效。 |
+| CA1828 |[CA1828:如果可以使用 AnyAsync，请勿使用 CountAsync/LongCountAsync](../code-quality/ca1828.md) | <xref:Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.CountAsync%2A><xref:Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.LongCountAsync%2A>使用方法，其中<xref:Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.AnyAsync%2A>方法会更有效。 |
+| CA1829 |[CA1829:使用 Length/Count 属性，而不是 Enumerable.Count 方法](../code-quality/ca1829.md) | <xref:System.Linq.Enumerable.Count%2A>LINQ 方法用于支持等效的、更有效`Length`的或`Count`属性的类型。 |
 | CA1900 | [CA1900:值类型字段应为可移植字段](../code-quality/ca1900.md) | 此规则对以下项进行检查：当用显式布局声明的结构封送到 64 位操作系统上的非托管代码时，是否正确对齐。 |
 | CA1901 | [CA1901： P/Invoke 声明应为可移植声明](../code-quality/ca1901.md) | 此规则计算 P/Invoke 的每个参数和返回值的大小，还验证它们在封送到 32 位和 64 位操作系统上的非托管代码时参数的大小是否正确。 |
 | CA1903 | [CA1903:仅使用目标框架中的 API](../code-quality/ca1903.md) | 一个成员或类型使用了某个 Service Pack 中引入的成员或类型，该 Service Pack 没有与项目的目标框架一起包括。 |
@@ -441,6 +443,8 @@ ms.locfileid: "82167379"
 | CA2003 |[CA2003:不要将纤程视为线程](../code-quality/ca2003.md) | 托管线程被视为 [!INCLUDE[TLA2#tla_win32](../code-quality/includes/tla2sharptla_win32_md.md)] 线程。 |
 | CA2004 | [CA2004:移除对 GC.KeepAlive 的调用](../code-quality/ca2004.md) | 如果转换为使用 SafeHandle，请移除所有对 GC.KeepAlive (object) 的调用。 在这种情况下，类不必调用 GC.KeepAlive。 这将假定它们没有终结器，而只是依赖 SafeHandle 来为它们完成 OS 句柄。 |
 | CA2006 | [CA2006:使用 SafeHandle 封装本机资源](../code-quality/ca2006.md) | 在托管代码中使用 IntPtr 可能意味着潜在的安全性和可靠性方面的问题。 必须检查所有使用 IntPtr 之处，以确定是否需要在该处使用 SafeHandle 或类似的技术。 |
+| CA2007 | [CA2007：不直接等待任务](ca2007.md) | 异步方法会[awaits](/dotnet/csharp/language-reference/keywords/await) <xref:System.Threading.Tasks.Task>直接等待。 当异步方法<xref:System.Threading.Tasks.Task>直接等待时，延续将在创建任务的同一线程中发生。 此行为在性能方面可能会很大，并且可能会在 UI 线程上导致死锁。 请考虑<xref:System.Threading.Tasks.Task.ConfigureAwait(System.Boolean)?displayProperty=nameWithType>调用以通知你的继续符。 |
+| CA2009 | [CA2009：不要对 ImmutableCollection 值调用 ToImmutableCollection](ca2009.md) | `ToImmutable`不必要地对命名空间中<xref:System.Collections.Immutable>的不可变集合调用方法。 |
 | CA2100 | [CA2100:检查 SQL 查询是否存在安全漏洞](../code-quality/ca2100.md) | 一个方法使用按该方法的字符串参数生成的字符串设置 System.Data.IDbCommand.CommandText 属性。 此规则假定字符串参数中包含用户输入。 基于用户输入生成的 SQL 命令字符串易于受到 SQL 注入式攻击。 |
 | CA2101 |[CA2101：为 P/Invoke 字符串参数指定封送处理](../code-quality/ca2101.md) | 某平台调用成员允许部分受信任的调用方，具有一个字符串参数，并且不显式封送该字符串。 这可能导致潜在的安全漏洞。 |
 | CA2102 | [CA2102:在常规处理程序中捕捉非 CLSCompliant 异常](../code-quality/ca2102.md) | 程序集中未用 RuntimeCompatibilityAttribute 标记或用 RuntimeCompatibility(WrapNonExceptionThrows = false) 标记的某个成员包含一个处理 System.Exception 的 catch 块，而不包含紧跟其后的一般 catch 块。 |

@@ -11,12 +11,12 @@ caps.latest.revision: 31
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 5952a65881a84ab131703db630f5f3b257683e45
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 4db3506ca21289c8ffda8582337cd8027a261438
+ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75852184"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82586359"
 ---
 # <a name="use-models-in-your-development-process"></a>在你的开发过程中使用模型
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -128,14 +128,14 @@ ms.locfileid: "75852184"
 |设计模式<br /><br /> 在设计的所有部分中使用的解决设计问题的约定和方法|-UML 类图描述模式的结构<br />-序列图或活动图显示交互和算法|
 |代码分析<br /><br /> 可以从代码生成多种类型的关系图。|-序列图显示代码中的对象之间的交互。<br />-层关系图显示类之间的依赖关系。 可以验证更新后的代码对层关系图的有效性。<br />-类关系图显示代码中的类。|
 
-## <a name="external-resources"></a>外部資源
+## <a name="external-resources"></a>外部资源
 
-|**类别**|**Links**|
+|**类别**|**链接**|
 |------------------|---------------|
 |**视频**|![链接到视频](../data-tools/media/playvideo.gif "PlayVideo") [MSDN 如何实现视频：如何创建和使用 UML 模型和关系图（Visual Studio 2010 旗舰版）](https://msdn.microsoft.com/vstudio/gg418384)<br /><br /> ![视频](../data-tools/media/playvideo.gif "PlayVideo")[通道9： UML 与 Visual Studio 2010 的](https://channel9.msdn.com/posts/clinted/UML-with-VS-2010-Part-1-Brainstorming-a-Project/)链接<br /><br /> ![链接到视频](../data-tools/media/playvideo.gif "PlayVideo") [MSDN 如何实现系列： UML 工具和扩展性（Visual Studio 2010 旗舰版）](https://msdn.microsoft.com/vstudio/ff859492)|
 |**论坛**|-   [Visual Studio 可视化和建模工具](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vsarch)<br />-   [Visual Studio 可视化和建模 SDK（DSL 工具）](https://social.msdn.microsoft.com/Forums/home?forum=dslvsarchx)|
-|**Blogs**|[Visual Studio ALM + Team Foundation Server 博客](https://blogs.msdn.com/b/visualstudioalm)|
+|**博客**|[Visual Studio ALM + Team Foundation Server 博客](https://devblogs.microsoft.com/devops/welcome-to-the-visual-studio-alm-team-foundation-server-blog/)|
 |**技术文章和日志**|[MSDN 体系结构中心](https://msdn.microsoft.com/architecture/default.aspx)<br /><br /> [Visual Studio 体系结构工具指南](../modeling/visual-studio-architecture-tooling-guidance.md)|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [在敏捷开发中使用模型](https://msdn.microsoft.com/592ac27c-3d3e-454a-9c38-b76658ed137f)[创建应用模型的](../modeling/create-models-for-your-app.md)[模型用户需求](../modeling/model-user-requirements.md)[模型应用的体系结构](../modeling/model-your-app-s-architecture.md)[从模型结构开发测试](../modeling/develop-tests-from-a-model.md)[建模解决方案](../modeling/structure-your-modeling-solution.md)
