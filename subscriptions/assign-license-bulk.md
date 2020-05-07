@@ -7,12 +7,12 @@ ms.assetid: c2853359-18fd-4be4-97a6-02230c862f92
 ms.date: 03/02/2020
 ms.topic: conceptual
 description: 了解管理员如何使用批量添加功能或 Microsoft Azure Active Directory 组将许可证分配给多个订阅者
-ms.openlocfilehash: a7742049cdda2568504e54d2c83259bb4a262819
-ms.sourcegitcommit: cc58ca7ceae783b972ca25af69f17c9f92a29fc2
+ms.openlocfilehash: 7fb9987b0d25da1be8a01f0cef82e019c20460d1
+ms.sourcegitcommit: 1b7412f1a5b039b2b294c6001013f399ea7aa5bc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81385511"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82564181"
 ---
 # <a name="assign-subscriptions-to-multiple-users"></a>将订阅分配给多个用户
 你可以在订阅管理门户中一次添加一个多个用户，也可以采用大用户组形式添加。  要添加各个用户，请参阅[添加单个用户](assign-license.md)。
@@ -108,7 +108,7 @@ ms.locfileid: "81385511"
 
 <br>
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4rvvW]
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4vxNq]
 
 ## <a name="frequently-asked-questions"></a>常见问题
 ### <a name="q-can-i-choose-multiple-subscription-levels-to-be-assigned-within-an-azure-ad-group"></a>问：能否选择要在 Azure AD 组内分配的多个订阅级别？ 

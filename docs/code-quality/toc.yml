@@ -432,6 +432,8 @@
                   href: ca1507.md
                 - name: CA1508：避免死条件代码
                   href: ca1508.md
+                - name: CA1509：代码度量配置文件中的条目无效
+                  href: ca1509.md
             - name: 移动性警告
               items:
                 - name: 概述
@@ -575,6 +577,8 @@
                   href: ca2006.md
                 - name: CA2007：不直接等待任务
                   href: ca2007.md
+                - name: CA2009：请勿对 ImmutableCollection 值调用 ToImmutableCollection
+                  href: ca2009.md
             - name: 安全警告
               items:
                 - name: 概述

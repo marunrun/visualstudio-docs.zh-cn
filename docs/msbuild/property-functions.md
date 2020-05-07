@@ -10,12 +10,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bb4c44b4e642ff1137df7f0afe02502224060a64
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: c5f1d34a6d21e6d4f413275ee21651feb7ec3dec
+ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79307189"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82586685"
 ---
 # <a name="property-functions"></a>属性函数
 
@@ -339,6 +339,10 @@ Output:
   Value2 = b
 -->
 ```
+
+## <a name="msbuild-condition-functions"></a>MSBuild 条件函数
+
+函数 `Exists` 和 `HasTrailingSlash` 不是属性函数。 它们可与 `Condition` 属性一起使用。 请参阅 [MSBuild 条件](msbuild-conditions.md)。
 
 ## <a name="see-also"></a>请参阅
 

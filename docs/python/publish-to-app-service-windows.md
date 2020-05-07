@@ -11,12 +11,12 @@ ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: cf9125476a4fdc369cc22034e081f2151020f064
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: c8e7c040fb4d6df507ed5721407655accf067fb9
+ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62784613"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82586575"
 ---
 # <a name="publishing-to-azure-app-service-on-windows"></a>发布到 Windows 上的 Azure 应用服务
 
@@ -63,7 +63,7 @@ Visual Studio 2017 及更高版本与 Visual Studio 2015 的发布过程有所�
 
 在没有 Azure 订阅的情况下创建临时 App Service，如下所示：
 
-1. 打开浏览器浏览 [try.azurewebsites.net](https://try.azurewebsites.net)。
+1. 将浏览器打开至 [https://azure.microsoft.com/try/app-service/web/](https://azure.microsoft.com/try/app-service/web/)。
 1. 选择“Web 应用”  应用类型，然后选择“下一步”  。
 1. 依次选择“空站点”  、“创建”  。
 1. 使用所选社交登录名登录，不久后站点会在所显示的 URL 处准备就绪。

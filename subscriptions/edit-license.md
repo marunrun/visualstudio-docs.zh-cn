@@ -7,12 +7,12 @@ ms.assetid: 97ac8e4d-7a03-42f8-98cb-15bcaa90ef65
 ms.date: 03/03/2020
 ms.topic: conceptual
 description: 了解管理员如何编辑订阅分配。
-ms.openlocfilehash: d145d556467b4eecec787fe409b4faa45945bec0
-ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
+ms.openlocfilehash: a0f72bf6a6561060fd4eddcf2fc11f0f4cf97f15
+ms.sourcegitcommit: 1b7412f1a5b039b2b294c6001013f399ea7aa5bc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80232557"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82564220"
 ---
 # <a name="edit-visual-studio-subscription-assignments"></a>编辑 Visual Studio 订阅分配
 作为订阅管理员，可以更改分配给组织内个人的订阅。  本文讨论可以进行更改的类型并提供必要的步骤。
@@ -30,7 +30,13 @@ ms.locfileid: "80232557"
 可以更新订阅者的名字、姓氏、订阅级别、电子邮件地址、国家/地区、语言、下载和引用字段。 编辑订阅者的信息，然后单击“保存”  。
 
 ## <a name="edit-multiple-subscribers-using-bulk-edit"></a>使用批量编辑对多个订阅者进行编辑
+
+
 可使用批量编辑进程一次编辑多个订阅者。 此功能主要用于正在更改公司电子邮件地址的组织，或者决定对下载进行限制的组织。
+
+<br>
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4vkAF]
 
    > [!IMPORTANT]
    > 订阅级别（即 Enterprise、Professional 等）和订阅 GUID 无法使用批量编辑进行更改。  如果需要向用户分配特定的订阅 GUID，请使用通过选择订阅 ID 添加用户的过程。 如果尝试上传批量编辑模板中的这些更改项，上传将失败。
