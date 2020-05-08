@@ -10,13 +10,13 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 41a71a69c916bf2fff30b2dee8784d5d9997436b
 ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62896349"
 ---
 # <a name="addmessage"></a>AddMessage
-将自定义消息添加到图形诊断 HUD（提醒显示）。
+将自定义消息添加到图形诊断 HUD（提醒显示）  。
 
 ## <a name="syntax"></a>语法
 
