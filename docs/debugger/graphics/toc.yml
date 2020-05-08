@@ -58,13 +58,13 @@
       href: walkthrough-missing-objects-due-to-device-state.md
     - name: 演练：因顶点着色而缺少对象
       href: walkthrough-missing-objects-due-to-vertex-shading.md
-    - name: 演练：因管线误配置而缺少对象
+    - name: 演练：因管道误配置而缺少对象
       href: walkthrough-missing-objects-due-to-misconfigured-pipeline.md
     - name: 演练：调试因着色引起的呈现错误
       href: walkthrough-debugging-rendering-errors-due-to-shading.md
     - name: 演练：使用图形诊断来调试计算着色器
       href: walkthrough-using-graphics-diagnostics-to-debug-a-compute-shader.md
-    - name: 如何：更改图形诊断播放机
+    - name: 如何：更改图形诊断播放计算机
       href: how-to-change-the-graphics-diagnostics-playback-machine.md
 - name: 引用（编程捕获）
   items:
