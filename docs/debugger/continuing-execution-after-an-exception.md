@@ -1,4 +1,4 @@
----
+﻿---
 title: 在出现异常后继续执行 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual

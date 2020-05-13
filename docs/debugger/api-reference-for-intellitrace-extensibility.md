@@ -1,4 +1,4 @@
----
+﻿---
 title: IntelliTrace 扩展性的 API 参考 |Microsoft Docs
 ms.date: 11/07/2018
 ms.topic: conceptual

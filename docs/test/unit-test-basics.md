@@ -63,7 +63,7 @@ ms.locfileid: "75846934"
 
 - CheckingAccount.cs 包含 `CheckingAccount` 类，该类实现支票帐户的 `IAccount` 接口  。
 
-我们根据经验可知，从支票帐户中取款必须要确保提取的金额小于帐户余额。 因此我们用检查这种情况的一种方法来重写 `IAccount.Withdraw` 中的 `CheckingAccount` 方法。 该方法可能如下所示：
+我们根据经验可知，从支票帐户中取款必须要确保提取的金额小于帐户余额。 因此我们用检查这种情况的一种方法来重写 `CheckingAccount` 中的 `IAccount.Withdraw` 方法。 该方法可能如下所示：
 
 ```csharp
 public void Withdraw(double amount)

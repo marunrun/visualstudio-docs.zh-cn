@@ -116,8 +116,8 @@ Visual Studio 提供了实用的代码片段，可用于快速方便地生成常
 
    ![“添加注释”按钮](media/tutorial-comment-out.png)
 
-   C# 注释字符 `//` 添加到了每个所选行的开始处，从而为代码添加注释。
-
+ 选中的每行的开始处添加了 C# 注释字符 `//`，作用是要注释掉这些行。
+ 
 ## <a name="collapse-code-blocks"></a>折叠代码块
 
 我们不想看到生成的 `Class1` 的空[构造函数](/dotnet/csharp/programming-guide/classes-and-structs/constructors)，所以为了让代码更整洁，我们将其折叠。 在构造函数第一行的边距中选择内部带有减号的小灰色框。 如果使用的是键盘，也可将光标置于构造函数代码中的任意位置，然后按 Ctrl+M、Ctrl+M     。
@@ -140,9 +140,9 @@ Visual Studio 提供了实用的代码片段，可用于快速方便地生成常
 
 ## <a name="use-intellisense-to-complete-words"></a>使用 IntelliSense 完成单词
 
-编写代码时，[IntelliSense](../ide/using-intellisense.md) 是非常宝贵的资源。 它可显示某个类型的可用成员信息，或某个方法不同重载的参数详情。 还可用于完成单词，从而在输入大量字符后消除字符带来的歧义。 添加代码行，将有序字符串呈现到控制台窗口，这是程序输出的标准位置。
+编写代码时，[IntelliSense](../ide/using-intellisense.md) 是非常有用的功能。 它可显示某个类型的可用成员信息，或某个方法中不同重载的参数详情。 它还可以在你输入足以消除歧义的字符量后自动补全单词。 接下来试试添加一行代码，将有序字符串呈现到控制台窗口，也就是程序的标准输出位置。
 
-1. 在 `query` 变量下，开始键入以下代码：
+1. 在 `query` 变量下，键入以下代码：
 
    ```csharp
    foreach (string str in qu
@@ -154,7 +154,7 @@ Visual Studio 提供了实用的代码片段，可用于快速方便地生成常
 
 1. 若要使用 IntelliSense 文字自动完成功能插入单词 `query` 的剩余部分，请按 Tab  。
 
-1. 完成后，代码块如以下代码所示。 你甚至可以通过输入 `cw`，然后按 Tab 两次来生成 `Console.WriteLine` 代码，再次练习使用代码片段  。
+1. 完成后，代码块如以下代码所示。 你甚至可以通过输入 `cw`，然后按 Tab 两次生成 `Console.WriteLine` 代码，再次练习使用代码片段。
 
    ```csharp
    foreach (string str in query)
@@ -165,7 +165,7 @@ Visual Studio 提供了实用的代码片段，可用于快速方便地生成常
 
 ## <a name="refactor-a-name"></a>重构名称
 
-没有谁能一次就得到正确的代码，代码中可能必须要更改的一项内容是变量或方法的名称。 我们来试试 Visual Studio 的[重构](../ide/refactoring-in-visual-studio.md)功能，将 `_words` 变量重命名为 `words`。
+没人可以一下子写出正确的代码，有时候可能不得不更改代码中的变量名或方法名。 我们来试试 Visual Studio 的[重构](../ide/refactoring-in-visual-studio.md)功能，将 `_words` 变量重命名为 `words`。
 
 1. 将光标置于 `_words` 变量的定义上，然后从右键菜单或上下文菜单中选择“重命名”，或按 Ctrl+R，Ctrl+R      。
 

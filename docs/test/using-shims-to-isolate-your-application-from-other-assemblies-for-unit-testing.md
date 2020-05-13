@@ -1,4 +1,4 @@
----
+﻿---
 title: 使用填充码隔离应用程序以进行单元测试
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -519,7 +519,7 @@ System.Fakes.ShimEnvironment.GetCommandLineArgsGet = ...
 
 ## <a name="limitations"></a>限制
 
-垫片无法用于 .NET 基类库 **mscorlib** 和 **System** 中的所有类型。
+填充码无法用于 .NET 基类库 mscorlib 和 System 中的所有类型。
 
 ## <a name="see-also"></a>另请参阅
 
