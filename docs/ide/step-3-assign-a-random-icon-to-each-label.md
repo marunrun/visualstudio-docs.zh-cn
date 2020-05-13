@@ -1,6 +1,6 @@
 ---
 title: 步骤 3：向每个标签分配一个随机图标
-ms.date: 11/04/2016
+ms.date: 03/21/2020
 ms.topic: tutorial
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
@@ -13,12 +13,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 366f6d7a07d2f30b5b8110fb7dae7a2311fcce23
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.openlocfilehash: 627b798827cd0b966d1f34336c7e1119841f9d4a
+ms.sourcegitcommit: ce3d0728ec1063ab548dac71c8eaf26d20450acc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77579393"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80472625"
 ---
 # <a name="step-3-assign-a-random-icon-to-each-label"></a>步骤 3：向每个标签分配一个随机图标
 
@@ -44,7 +44,7 @@ ms.locfileid: "77579393"
     > [!NOTE]
     > 其中使用了名称“iconLabel”和“control”，是因为它们具有描述性。 你可以将这些名称替换为任何名称，代码的运行将完全相同（只要你更改循环内每个语句中的名称）。
 
-     `AssignIconsToSquares()` 方法将迭代 TableLayoutPanel 中的每个标签控件，并对每个控件执行相同的语句。 这些语句从你在[步骤 2：添加 Random 对象和图标列表](../ide/step-2-add-a-random-object-and-a-list-of-icons.md)中添加的列表拉取随机图标。 （这就是该列表中每个图标都有两个的原因，因此将向随机 Label 控件分配一对图标。）
+     `AssignIconsToSquares()` 方法将迭代 TableLayoutPanel 中的每个标签控件，并对每个控件执行相同的语句。 这些语句从你在[步骤 2：添加 Random 对象和图标列表](../ide/step-2-add-a-random-object-and-a-list-of-icons.md)中添加的列表拉取随机图标。 提醒一下，这些图标中的每个图标都是采用 Webdings 字体的字母，这就是在此方法中将它们表示为文本的原因。 在该列表中每个图标都有两个，以便向随机 Label 控件分配一对图标。
 
      更加仔细地观察 `foreach` 或 `For Each` 循环中运行的代码。 此代码将在此处重现。
 
@@ -67,17 +67,14 @@ ms.locfileid: "77579393"
     End Sub
     ```
 
-4. 保存并运行程序。 它应该显示一个窗体，其中每个标签都分配了随机图标。
+4. 保存并运行程序。 它应该显示一个窗体，其中每个标签都分配了随机图标。 
 
-5. 关闭程序，然后重新运行。 请注意，每个标签都分配了不同的图标，如下图所示。
+5. 关闭程序，然后重新运行。 请注意，每个标签都分配了不同的图标，如下图所示。 
 
      ![具有随机图标的匹配游戏](../ide/media/express_tut4step3.png)<br/>
 *具有随机图标的匹配游戏*
 
      你没有隐藏这些图标，所以现在可以看到。 若要向玩家隐藏图标，可以将每个标签的“ForeColor”  属性设置为与“BackColor”  属性相同的颜色。
-
-    > [!TIP]
-    > 隐藏标签等控件的另一种方法是，将其“Visible”  属性设置为“false”  。
 
 6. 若要隐藏图标，请停止程序并删除 `For Each` 循环内代码注释行上的注释标记。
 

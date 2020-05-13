@@ -1,5 +1,5 @@
 ---
-title: IDebugThread2::Suspend | Microsoft Docs
+title: IDebugThread2：暂停 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugThread2::Suspend
 ms.assetid: 1e20be85-aa12-48de-bb83-0bf0976e99ae
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: dc3abcc00d99e82a4af2e3886310772e47127274
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 74a7dd5dc69effbd46986eff963de3e740d9aa8e
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66320010"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80718637"
 ---
 # <a name="idebugthread2suspend"></a>IDebugThread2::Suspend
-将线程挂起。
+挂起线程。
 
 ## <a name="syntax"></a>语法
 
@@ -41,16 +41,16 @@ HRESULT Suspend ( 
 
 ## <a name="parameters"></a>参数
 `pdwSuspendCount`\
-[out]挂起操作完成后返回的挂起计数。
+[出]在挂起操作后返回挂起计数。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，返回`S_OK`;否则，返回错误代码。
 
 ## <a name="remarks"></a>备注
- 每次调用此方法递增的挂起计数大于 0。 此挂起计数显示在**线程**调试窗口。
+ 对此方法的每个调用都会将挂起计数增加到 0 以上。 此挂起计数显示在**线程**调试窗口中。
 
- 对于每次调用此方法，必须稍后调用[Resume](../../../extensibility/debugger/reference/idebugthread2-resume.md)方法。
+ 对于对此方法的每个调用，以后必须调用[Resume](../../../extensibility/debugger/reference/idebugthread2-resume.md)方法。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)
-- [Resume](../../../extensibility/debugger/reference/idebugthread2-resume.md)
+- [恢复](../../../extensibility/debugger/reference/idebugthread2-resume.md)

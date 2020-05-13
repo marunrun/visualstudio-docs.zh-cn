@@ -35,11 +35,11 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a6a8ee96834fc20186ba6719a7c4f377fea45d6b
-ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
+ms.sourcegitcommit: 95f26af1da51d4c83ae78adcb7372b32364d8a2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78409205"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79301025"
 ---
 # <a name="use-breakpoints-in-the-visual-studio-debugger"></a>在 Visual Studio 调试器中使用断点
 
@@ -48,7 +48,7 @@ ms.locfileid: "78409205"
 > [!NOTE]
 > 如果知道要解决的任务或问题，但想要了解应使用哪种断点，请参见[查找调试任务](../debugger/find-your-debugging-task.md#pause-running-code)。
 
-## <a name="BKMK_Overview"></a> 在源代码中设置断点
+## <a name="set-breakpoints-in-source-code"></a><a name="BKMK_Overview"></a> 在源代码中设置断点
 
 可以在任意可执行代码行上设置断点。 例如，在下面的 C# 代码中，可以在变量声明、`for` 循环或 `for` 循环内的任何代码上设置断点。 不能在命名空间、类声明或方法签名上设置断点。
 
@@ -74,7 +74,7 @@ ms.locfileid: "78409205"
 
 - 设置条件和操作，添加和编辑标签，或通过右键单击断点并选择适当的命令导出断点，或将鼠标悬停在断点上并选择“设置”图标  。
 
-## <a name="BKMK_Print_to_the_Output_window_with_tracepoints"></a>断点操作和跟踪点
+## <a name="breakpoint-actions-and-tracepoints"></a><a name="BKMK_Print_to_the_Output_window_with_tracepoints"></a>断点操作和跟踪点
 
 “跟踪点”是将消息打印到“输出”窗口的断点   。 跟踪点的作用像这种编程语言中的一个临时跟踪语句，且不会暂停代码的执行。 通过在“断点设置”窗口中设置特殊操作，可以创建跟踪点  。 有关详细说明，请参阅[在 Visual Studio 调试器中使用跟踪点](../debugger/using-tracepoints.md)。
 
@@ -164,7 +164,7 @@ ms.locfileid: "78409205"
 
 将字符串值放在双引号内。 可以使用 `&` (AND)、 `||` (OR)、 `!` (NOT) 和括号合并子句。
 
-## <a name="BKMK_Set_a_breakpoint_in_a_source_file"></a> 设置函数断点
+## <a name="set-function-breakpoints"></a><a name="BKMK_Set_a_breakpoint_in_a_source_file"></a> 设置函数断点
 
 可以在调用函数时中断执行。 例如，当你知道函数名但不知道其位置时，这很有用。 如果多个函数（例如重载函数或不同项目中的函数）具有相同的名称，而你想要将其全部中断，这也很有用。
 
@@ -217,7 +217,7 @@ ms.locfileid: "78409205"
 
 ::: moniker range=">= vs-2019"
 
-## <a name="BKMK_set_a_data_breakpoint_managed"></a>设置数据断点（.NET Core 3.0 或更高版本）
+## <a name="set-data-breakpoints-net-core-30-or-higher"></a><a name="BKMK_set_a_data_breakpoint_managed"></a>设置数据断点（.NET Core 3.0 或更高版本）
 
 当特定对象的属性更改时，数据断点中断执行。
 
@@ -238,7 +238,7 @@ ms.locfileid: "78409205"
 
 ::: moniker-end
 
-## <a name="BKMK_set_a_data_breakpoint_native_cplusplus"></a>设置数据断点（仅限本机 C++）
+## <a name="set-data-breakpoints-native-c-only"></a><a name="BKMK_set_a_data_breakpoint_native_cplusplus"></a>设置数据断点（仅限本机 C++）
 
  数据断点在存储在指定内存地址中的值更改时中断执行。 如果只读取但不更改该值，则执行不会中断。
 
@@ -263,7 +263,7 @@ ms.locfileid: "78409205"
 >
 > - 如果在局部变量上设置数据断点，则断点在函数结束时仍处于启用状态，但内存地址不再适用，因此断点的行为不可预测。 如果在局部变量上设置了数据断点，则应在函数结束前删除或禁用该断点。
 
-## <a name="BKMK_Specify_advanced_properties_of_a_breakpoint_"></a>在“断点”窗口中管理断点
+## <a name="manage-breakpoints-in-the-breakpoints-window"></a><a name="BKMK_Specify_advanced_properties_of_a_breakpoint_"></a>在“断点”窗口中管理断点
 
  可以使用“断点”窗口查看和管理解决方案中的所有断点  。 在大型解决方案中，或者在断点非常重要的复杂调试方案中，这一集中位置尤为有用。
 
@@ -275,7 +275,7 @@ ms.locfileid: "78409205"
 
 若要选择要在“断点”窗口中显示的列，请选择“显示列”   。 选择列标题以按该列对断点列表进行排序。
 
-### <a name="BKMK_Set_a_breakpoint_at_a_function_return_in_the_Call_Stack_window"></a> 断点标签
+### <a name="breakpoint-labels"></a><a name="BKMK_Set_a_breakpoint_at_a_function_return_in_the_Call_Stack_window"></a> 断点标签
 可以使用标签对“断点”窗口中的断点列表进行排序和筛选  。
 
 1. 若要向断点添加标签，请在源代码或“断点”窗口中右键单击断点，然后选择“编辑标签”   。 添加新标签或选择现有标签，然后选择“确定”  。
@@ -289,7 +289,7 @@ ms.locfileid: "78409205"
 - 若要导出所有断点，请取消选中所有框并将“搜索”字段留空  。 选择“导出与当前搜索条件匹配的所有断点”图标，然后保存文件  。
 - 若要导入断点，请在“断点”窗口中选择“从文件导入断点”图标，导航到 XML 文件位置，然后选择“打开”    。
 
-## <a name="BKMK_Set_a_breakpoint_from_debugger_windows"></a> 从调试器窗口设置断点
+## <a name="set-breakpoints-from-debugger-windows"></a><a name="BKMK_Set_a_breakpoint_from_debugger_windows"></a> 从调试器窗口设置断点
 
 还可以从“调用堆栈”和“反汇编”调试器窗口设置断点   。
 

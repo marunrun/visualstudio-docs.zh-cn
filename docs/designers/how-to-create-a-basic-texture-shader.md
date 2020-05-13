@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: ac74155b8de4669d959d9b14e9be20ada2ec51d9
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75589469"
 ---
 # <a name="how-to-create-a-basic-texture-shader"></a>如何：创建基本纹理着色器
@@ -27,7 +27,7 @@ ms.locfileid: "75589469"
 
 1. 创建要使用的 DGSL 着色器。 若要了解如何向项目添加 DGSL 着色器，请参阅[着色器设计器](../designers/shader-designer.md)中的“入门”部分。
 
-2. 删除“点颜色”  节点。 在“选择”模式下，选择“点颜色”节点，然后在菜单栏上选择“编辑” > “删除”     。 这为在下一步中添加的节点腾出空间。
+2. 删除“点颜色”  节点。 在“选择”模式下，选择“点颜色”节点，然后在菜单栏上选择“编辑” **“删除”**    >   。 这为在下一步中添加的节点腾出空间。
 
 3. 将“纹理样本”  节点添加到关系图。 在“工具箱”  中的“纹理”  下选择“纹理样本”  ，然后将其移到设计图面。
 
@@ -50,9 +50,9 @@ ms.locfileid: "75589469"
 
 某些形状可能会增强某些着色器的预览效果。 若要深入了解如何在着色器设计器中预览着色器，请参阅[着色器设计器](../designers/shader-designer.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [如何：向三维模型应用着色器](../designers/how-to-apply-a-shader-to-a-3-d-model.md)
+- [如何：向 3D 模型应用着色器](../designers/how-to-apply-a-shader-to-a-3-d-model.md)
 - [图像编辑器](../designers/image-editor.md)
 - [着色器设计器](../designers/shader-designer.md)
 - [着色器设计器节点](../designers/shader-designer-nodes.md)

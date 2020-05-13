@@ -1,27 +1,27 @@
 ---
-title: BP_FLAGS90 | Microsoft Docs
+title: BP_FLAGS90 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - BP_FLAGS90 enumeration
 ms.assetid: 3e5a06c5-fb30-4b8a-b2d5-4a0570fc80bd
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 5c423b8ecf0e4591913be5ef875057a947f42614
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 5628af4a6e5c4deae3de02340e882bd2605e22d3
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66319158"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80738046"
 ---
-# <a name="bpflags90"></a>BP_FLAGS90
-枚举有效的可选标志值。 可选标志可能用于设置断点时指定的其他信息。 此枚举扩展[BP_FLAGS](../../../extensibility/debugger/reference/bp-flags.md)枚举。
+# <a name="bp_flags90"></a>BP_FLAGS90
+枚举可选标志的有效值。 设置断点时，可选标志可用于指定其他信息。 此枚举扩展了[BP_FLAGS](../../../extensibility/debugger/reference/bp-flags.md)枚举。
 
 ## <a name="syntax"></a>语法
 
@@ -54,23 +54,23 @@ public enum enum_BP_FLAGS90
 
 ## <a name="fields"></a>字段
 `BP90_FLAG_NONE`\
-不指定任何断点标志。
+指定无断点标志。
 
 `BP90_FLAG_MAP_DOCPOSITION`\
-指定调试引擎 (DE) 应使用的文档位置的映射断点。 这是仅适用于面向脚本的源代码文件，如 Active Server Pages (ASP) 中设置断点。
+指定调试引擎 （DE） 应使用文档位置映射断点。 这仅适用于在面向脚本的源文件中设置的断点，如活动服务器页 （ASP）。
 
 `BP90_FLAG_DONT_STOP`\
-指定调试引擎中，应处理断点，但调试引擎最终应不停止进行控制。即[IDebugBreakpointEvent2](../../../extensibility/debugger/reference/idebugbreakpointevent2.md)不应发送事件对象。 此标志用于主要与跟踪点一起使用。
+指定断点应由调试引擎处理，但调试引擎最终不应停止;也就是说，不应发送[IDebugBreakpointEvent2](../../../extensibility/debugger/reference/idebugbreakpointevent2.md)事件对象。 此标志设计主要用于跟踪点。
 
 `BP90_FLAG_TRACEPOINT_CONTINUE`\
-由本机调试引擎使用，以确定是否应该清除单步执行状态。 它不同于 BP90_FLAG_DONT_STOP 因为如果跟踪点执行宏，则不设置 BP90_FLAG_DONT_STOP。
+本机调试引擎用于确定是否应清除步进状态。 它与BP90_FLAG_DONT_STOP不同，因为如果跟踪点执行宏，则不设置BP90_FLAG_DONT_STOP。
 
 ## <a name="requirements"></a>要求
-标头：Msdbg90.h
+标题： Msdbg90.h
 
-命名空间:Microsoft.VisualStudio.Debugger.Interop
+命名空间：微软.VisualStudio.调试器.互通
 
-程序集：Microsoft.VisualStudio.Debugger.Interop.dll
+程序集：微软.VisualStudio.调试器.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [枚举](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

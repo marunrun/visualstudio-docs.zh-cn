@@ -1,7 +1,7 @@
 ---
 title: 创建 Node.js 和 Express 应用
 description: 在本教程中，使用 Visual Studio 的 Node.js 工具创建应用
-ms.date: 09/24/2018
+ms.date: 04/20/2020
 ms.topic: tutorial
 ms.devlang: javascript
 author: mikejo5000
@@ -11,12 +11,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 416926742da427ba7ff18c6fa07de6477361cfa3
-ms.sourcegitcommit: 9eff8371b7a79a637ebb6850f775dd3eed343d8b
+ms.openlocfilehash: 3d91f20dec22379d79b5f295fccf49aae0733a24
+ms.sourcegitcommit: 5c804c42d24d35dcf2ba195aba9ce07031743f62
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78235075"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81744885"
 ---
 # <a name="tutorial-create-a-nodejs-and-express-app-in-visual-studio"></a>教程：在 Visual Studio 中创建 Node.js 和 Express 应用
 
@@ -56,7 +56,7 @@ Npm 是 Node.js 的默认包管理器。 包管理器使程序员更容易发布
 
 ### <a name="what-is-express"></a>Express 是什么？
 
-Express 是一个 Web 应用程序框架，用作 Node.js 构建 Web 应用程序的服务器框架。 Express 允许使用不同的前端框架来创建 UI，例如 Pug（以前称为 Jade）。 本教程中使用了 Pug。
+Express 是一个 Web 应用程序框架，用作 Node.js 构建 Web 应用程序的服务器框架。 使用 Express，你可以选择不同的前端框架来创建 UI，例如 Pug（以前称为 Jade）。 本教程中使用了 Pug。
 
 ## <a name="prerequisites"></a>先决条件
 
@@ -109,17 +109,17 @@ Visual Studio 管理项目中的单个应用程序的文件  。 该项目包括
 
     (3) Npm 节点显示任何已安装的 npm 包。 可右键单击 npm 节点以使用对话框搜索并安装 npm 包，也可使用 package.json 中的设置来安装和更新包，并右键单击 npm 节点中的选项  。
 
-    (4) package.json 是 npm 用于管理本地安装包的包依赖关系和包版本的文件  。 有关此文件的详细信息，请参阅 [package.json 配置](../javascript/configure-packages-with-package-json.md)
+    (4) package.json 是 npm 用于管理本地安装包的包依赖关系和包版本的文件  。 有关详细信息，请参阅[管理 npm 包](../javascript/npm-package-management.md)。
 
     (5) 项目文件（例如 app.js）显示在项目节点下  。 app.js 是项目启动文件，因此它以粗体形式显示   。 可设置启动文件，方法是右键单击项目中的文件并选择“设置为 Node.js 启动文件”  。
 
 1. 打开“npm”节点，确保其中存在所有必需的 npm 包  。
 
-    如果缺少任何包（感叹号图标），可右键单击“npm”节点并选择“安装缺少的 npm 包”   。
+    如果缺少任何包（感叹号图标），可右键单击“npm”节点并选择“安装 npm 包”   。
 
 ## <a name="add-some-code"></a>添加一些代码
 
-该应用程序将 Pug 用于前端 JavaScript 框架。 Pug 使用编译为 HTML 的简单标记代码。 （将 Pug 设置为 app.js 中的视图引擎  。 在 app.js 中设置视图引擎的代码是 `app.set('view engine', 'pug');`  。）
+该应用程序将 Pug 用于前端 JavaScript 框架。 Pug 使用编译为 HTML 的简单标记代码。 （将 Pug 设置为 app.js 中的视图引擎  。 在 app.js 中设置视图引擎的代码是 `app.set('view engine', 'pug');` 。）
 
 1. 在解决方案资源管理器（右窗格）中，打开“视图”文件夹，然后打开 index.pug  。
 
@@ -194,7 +194,7 @@ IntelliSense 是一款可帮助编写代码的 Visual Studio 工具。
 
     此消息的最后一行告诉你，JavaScript 解释器需要一个逗号 (`,`)。
 
-1. 在下方的窗格中，单击“错误列表”选项卡  。
+1. 在下面的窗格中，单击“错误列表”选项卡，然后为报告的问题类型选择“生成 + IntelliSense”   。
 
     可看到警告和描述，以及文件名和行号。
 
@@ -218,7 +218,7 @@ IntelliSense 是一款可帮助编写代码的 Visual Studio 工具。
 
 ## <a name="run-the-application"></a>运行此应用程序
 
-1. 在“调试”工具栏中选择调试目标，例如 Microsoft Edge 或 Chrome。
+1. 在“调试”工具栏中选择调试目标，例如“Web 服务器(Google Chrome)”或“Web 服务器(Microsoft Edge)”   。
 
     ::: moniker range=">=vs-2019"
     ![选择调试目标](../javascript/media/vs-2019/tutorial-nodejs-deploy-target.png)

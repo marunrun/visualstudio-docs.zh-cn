@@ -1,28 +1,28 @@
 ---
-title: IDebugModOpt::GetModOpts | Microsoft Docs
+title: IDebugModOpt：：获取ModOpts |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IDebugModOpt::GetModOpts
 - GetModOpts
 ms.assetid: cb513fa9-d521-4a65-b968-f55f53a368df
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: f5ebced053b80af8dce81d41e6614e89e4ffbf3a
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 5ab870db3ae3517b60bebd4815e4530f6035b327
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66324013"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80727046"
 ---
 # <a name="idebugmodoptgetmodopts"></a>IDebugModOpt::GetModOpts
-检索一组可选的修饰符。
+检索可选修改器的列表。
 
 ## <a name="syntax"></a>语法
 
@@ -44,16 +44,16 @@ int GetModOpts(
 
 ## <a name="parameters"></a>参数
 `celt`\
-[in]要返回的元素数。
+[在]要返回的元素数。
 
 `rgelt`\
-[out]返回一个数组，其中包含的选项。
+[出]返回包含选项的数组。
 
 `pceltFetched`\
-[in、 out]在返回的元素数目`rgelt`数组。
+[进出]数组中`rgelt`返回的元素数。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，返回`S_OK`;否则，返回错误代码。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugModOpt](../../../extensibility/debugger/reference/idebugmodopt.md)

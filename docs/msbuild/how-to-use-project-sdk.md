@@ -1,5 +1,5 @@
 ---
-title: 如何：引用 MSBuild 项目 SDK | Microsoft Docs
+title: 如何：引用 MSBuild 项目 SDK | Microsoft 文档
 ms.date: 01/25/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,10 +10,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 74ccc29417cdee7a9f93c39509c0f7d06a5c72ff
-ms.sourcegitcommit: 8cbced0fb46959a3a2494852df1e41db1177a26c
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "76826466"
 ---
 # <a name="how-to-use-msbuild-project-sdks"></a>如何：使用 MSBuild 项目 SDK
@@ -48,7 +48,7 @@ MSBuild 15.0 引入了“项目 SDK”的概念，它可让你更轻松地使用
 
 可通过三种方法引用项目 SDK：
 
-- 使用 `<Project/>` 元素的 `Sdk` 属性：
+- 使用 `Sdk` 元素的 `<Project/>` 属性：
 
     ```xml
     <Project Sdk="My.Custom.Sdk">
@@ -126,7 +126,7 @@ MSBuild 15.0 引入了“项目 SDK”的概念，它可让你更轻松地使用
 
 在生成期间，只能使用每个项目 SDK 的一个版本。 如果你引用同一项目 SDK 的两个不同版本，MSBuild 会发出警告。 如果在 global.json 文件中指定了版本，则不建议在项目中指定版本   。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [MSBuild 概念](../msbuild/msbuild-concepts.md)
 - [自定义生成](../msbuild/customize-your-build.md)

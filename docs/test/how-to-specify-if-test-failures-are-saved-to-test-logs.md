@@ -10,10 +10,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 6b47010a68520379afd8e0d969fa99169cb1ff0b
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75588949"
 ---
 # <a name="how-to-specify-if-test-failures-are-saved-to-test-logs-using-the-load-test-editor"></a>如何：指定是否使用负载测试编辑器将测试失败保存到测试日志中
@@ -29,21 +29,21 @@ ms.locfileid: "75588949"
 
 1. 打开一个负载测试。
 
-     “负载测试编辑器”随即显示  。 其中显示负载测试树。
+     此时将显示“负载测试编辑器”  。 其中显示负载测试树。
 
 2. 在负载测试树的“运行设置”文件夹中，选择要为其指定最大测试迭代数的运行设置节点  。
 
-3. 在“视图”菜单上选择“属性窗口”   。
+3. 在“视图”菜单上选择“属性”窗口。  
 
      该运行设置类别和属性将显示在“属性”窗口中  。
 
 4. 在“测试未通过时保存日志”属性中，选择 True 或 False 以指定当方案中的测试未通过时是否希望保存测试日志    。
 
-     更改完此属性后，请选择“文件”菜单上的“保存”   。
+     更改完此属性后，请选择“文件”菜单上的“保存”。  
 
      可以使用负载测试分析器的表视图来查看保存在日志中的数据。 有关详细信息，请参阅[在表视图中分析负载测试结果和错误](../test/analyze-load-test-results-and-errors-in-the-tables-view.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [编辑负载测试方案](../test/edit-load-test-scenarios.md)
 - [演练：创建和运行负载测试](../test/walkthrough-create-and-run-a-load-test.md)

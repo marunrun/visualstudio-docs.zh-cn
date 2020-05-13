@@ -1,31 +1,31 @@
 ---
-title: 如何：管理多个线程在托管代码 |Microsoft Docs
+title: 如何：在托管代码中管理多个线程 |微软文档
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 59730063-cc29-4dae-baff-2234ad8d0c8f
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 307ee61380b137cc7426c641a85844934ff0377a
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: ceaa0af4f57fe374cf9cf4b2dd8b4f40af74a852
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66340602"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80702784"
 ---
-# <a name="how-to-manage-multiple-threads-in-managed-code"></a>如何：管理在托管代码中的多个线程
-如果你有托管的 VSPackage 扩展的调用异步方法或已在 Visual Studio UI 线程以外的线程执行的操作，应遵循下面给出的准则。 因为它不需要等待上另一个线程完成的工作，可以使 UI 线程保持响应状态。 您可以使代码更加有效，因为您不需要额外的线程占用的堆栈空间，并且您可以使其更可靠、 更易于调试，因为避免死锁和挂起。
+# <a name="how-to-manage-multiple-threads-in-managed-code"></a>如何：在托管代码中管理多个线程
+如果您有一个托管 VSPackage 扩展调用异步方法，或者具有在 Visual Studio UI 线程以外的线程上执行的操作，则应遵循下面给出的准则。 您可以保持 UI 线程的响应速度，因为它不需要等待另一个线程的工作完成。 您可以提高代码的效率，因为您没有占用堆栈空间的额外线程，并且您可以使其更可靠且更易于调试，因为可以避免死锁和挂起。
 
- 一般情况下，可以从 UI 线程切换到不同的线程，反之亦然。 方法返回时，当前线程是从其它最初调用的线程。
+ 通常，可以从 UI 线程切换到其他线程，反之亦然。 当方法返回时，当前线程是最初调用它的线程。
 
 > [!IMPORTANT]
-> 以下指导原则使用中的 Api<xref:Microsoft.VisualStudio.Threading>命名空间，具体而言，<xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory>类。 此命名空间中的 Api 是中的新增功能[!INCLUDE[vs_dev12](../extensibility/includes/vs_dev12_md.md)]。 可以获取的实例<xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory>从<xref:Microsoft.VisualStudio.Shell.ThreadHelper>属性`ThreadHelper.JoinableTaskFactory`。
+> 以下准则在<xref:Microsoft.VisualStudio.Threading>命名空间中使用 API，特别是<xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory>类。 此命名空间中的 API 在 中[!INCLUDE[vs_dev12](../extensibility/includes/vs_dev12_md.md)]是新的。 可以从<xref:Microsoft.VisualStudio.Shell.ThreadHelper>属性`ThreadHelper.JoinableTaskFactory`获取 的<xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory>实例。
 
 ## <a name="switch-from-the-ui-thread-to-a-background-thread"></a>从 UI 线程切换到后台线程
 
-1. 如果你是在 UI 线程上和你想要执行异步操作在后台线程，使用上的`Task.Run()`:
+1. 如果位于 UI 线程上，并且想要在后台线程上执行异步工作，请使用`Task.Run()`：
 
     ```csharp
     await Task.Run(async delegate{
@@ -35,7 +35,7 @@ ms.locfileid: "66340602"
 
     ```
 
-2. 如果您是在 UI 线程上，并且你想要以同步方式阻止后台线程，使用上执行工作时<xref:System.Threading.Tasks.TaskScheduler>属性`TaskScheduler.Default`内<xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory.Run%2A>:
+2. 如果位于 UI 线程上，并且希望在对后台线程执行工作时同步阻止，请使用<xref:System.Threading.Tasks.TaskScheduler>`TaskScheduler.Default`<xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory.Run%2A>
 
     ```csharp
     // using Microsoft.VisualStudio.Threading;
@@ -49,16 +49,16 @@ ms.locfileid: "66340602"
 
 ## <a name="switch-from-a-background-thread-to-the-ui-thread"></a>从后台线程切换到 UI 线程
 
-1. 如果你是在后台线程上和你想要在 UI 线程，使用上实现某些<xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory.SwitchToMainThreadAsync%2A>:
+1. 如果您位于后台线程上，并且想在 UI 线程上执行某些操作，请使用 ： <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory.SwitchToMainThreadAsync%2A>
 
     ```csharp
     // Switch to main thread
     await ThreadHelper.JoinableTaskFactory.SwitchToMainThreadAsync();
     ```
 
-     可以使用<xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory.SwitchToMainThreadAsync%2A>方法才能切换到 UI 线程。 此方法将消息发布到与当前的异步方法，继续符的 UI 线程，并且还可与设置正确的优先级并避免死锁的线程框架的其余部分通信。
+     可以使用 方法<xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory.SwitchToMainThreadAsync%2A>切换到 UI 线程。 此方法将消息发布到 UI 线程，并延续当前异步方法，并与线程框架的其余部分通信，以设置正确的优先级并避免死锁。
 
-     如果您不能进行异步后台线程方法不是异步，仍可以使用`await`语法来包装你的工作与通过切换到 UI 线程<xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory.Run%2A>，如下例所示：
+     如果后台线程方法不是异步的，并且无法使其成为异步，则仍可以使用`await`语法通过用<xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory.Run%2A>包装工作切换到 UI 线程，如以下示例所示：
 
     ```csharp
     ThreadHelper.JoinableTaskFactory.Run(async delegate {

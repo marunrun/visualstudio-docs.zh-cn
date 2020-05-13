@@ -12,19 +12,18 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e008e3181cd7c633179f35e7639265a2495fafe2
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.openlocfilehash: 7656237be5cf7906293a294885cfa3e6c8bd4e36
+ms.sourcegitcommit: 0b8497b720eb06bed8ce2194731177161b65eb84
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77633793"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82072523"
 ---
 # <a name="how-to-specify-which-target-to-build-first"></a>如何：指定首先生成的目标
 
-项目文件可以包含一个或多个用于定义如何生成项目的 `Target` 元素。 Microsoft 生成引擎 (MSBuild) 生成它找到的第一个项目以及所有依赖项，除非项目文件包含 `DefaultTargets` 属性、`InitialTargets` 属性，或目标是在命令行中使用 -target  开关进行指定。
+项目文件可以包含一个或多个用于定义如何生成项目的 `Target` 元素。 Microsoft 生成引擎 (MSBuild) 生成它找到的第一个目标以及所有依赖项，除非项目文件包含 `DefaultTargets` 属性、`InitialTargets` 属性，或目标是在命令行中使用 -target  开关进行指定。
 ## <a name="use-the-initialtargets-attribute"></a>使用 InitialTargets 属性
 
- `Project` 元素的 `InitialTargets` 属性指定将首先运行的目标，即使在命令行或 `DefaultTargets` 属性中指定了目标。
 `Project` 元素的 `InitialTargets` 属性指定将首先运行的目标，即使在命令行或 `DefaultTargets` 属性中指定了目标。
 
 #### <a name="to-specify-one-initial-target"></a>指定一个初始目标

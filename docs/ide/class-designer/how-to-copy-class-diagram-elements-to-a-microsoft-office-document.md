@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: d2d08b45d913270bdc43c01b0baf92abc3589927
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75592238"
 ---
 # <a name="how-to-copy-class-diagram-elements-to-a-microsoft-office-document"></a>如何：将类图元素复制到 Microsoft Office 文档
@@ -40,7 +40,7 @@ ms.locfileid: "75592238"
 
 还可以选择“复制”  而不是“复制图像”  。 “复制”  将图像复制为常规位图。 “复制图像”  将图像复制为大多数 Office 应用程序的显示效果会更好的基于矢量的图像。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [如何：打印类图](how-to-print-class-diagrams.md)
 - [如何：将类图作为图像导出](how-to-export-class-diagrams-as-images.md)

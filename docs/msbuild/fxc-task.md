@@ -18,10 +18,10 @@ ms.author: corob
 ms.workload:
 - multiple
 ms.openlocfilehash: 67958a1a1ebb2ff382d0896e2fbaec6105c0c785
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77279284"
 ---
 # <a name="fxc-task"></a>FXC 任务
@@ -32,7 +32,7 @@ ms.locfileid: "77279284"
 
 下表介绍了 FXC 任务的参数  。
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
 |**AdditionalIncludeDirectories**|可选的 string[]  参数。<br/><br/>指定一个或多个要添加到包含路径中的目录；存在多个目录时，请用分号分隔。<br/><br/>请使用 `/I[path]`。|
 |**AdditionalOptions**|可选的 string  参数。|
@@ -59,6 +59,6 @@ ms.locfileid: "77279284"
 |**TreatWarningAsError**|可选的 bool  参数。<br/><br/>将所有编译器警告视为错误。<br/><br/>对于新项目，最好在所有编译中使用 `/WX`；对所有警告进行解析可确保将可能难以发现的代码缺陷减至最少。|
 |**VariableName**|可选的 string  参数。<br/><br/>为头文件中的变量名称指定名称。<br/><br/>请使用 `/Vn [name]`。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [任务参考](../msbuild/msbuild-task-reference.md)

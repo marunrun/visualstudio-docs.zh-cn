@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 6b9b61d25d0a08763d55dcfb5d5ddb245471effc
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "76113783"
 ---
 # <a name="code-analysis-project-designer"></a>“项目设计器”->“代码分析”
@@ -62,8 +62,8 @@ ms.locfileid: "76113783"
 用法规则\
 启用或禁用用法规则。 还可以通过展开此项来启用或禁用单个规则。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [托管代码的代码分析警告](../../code-quality/code-analysis-for-managed-code-warnings.md)
 - [托管代码的代码分析概述](../../code-quality/code-analysis-for-managed-code-overview.md)
-- [演练：分析托管代码的代码缺陷](../../code-quality/walkthrough-analyzing-managed-code-for-code-defects.md)
+- [演练：对托管代码进行代码缺陷分析](../../code-quality/walkthrough-analyzing-managed-code-for-code-defects.md)

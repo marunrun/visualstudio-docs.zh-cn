@@ -1,36 +1,36 @@
 ---
-title: 公开项目对象 |Microsoft Docs
+title: 公开项目对象 |微软文档
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - project objects, exposing
 - extensibility, project objects
 ms.assetid: 5bb24967-434a-4ef4-87a0-2f3250c9e22d
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9076a430f9c725332d2097ce7148218d1000a30e
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 81446fa582524872b03199ae707f658776787961
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66332255"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80708475"
 ---
 # <a name="expose-project-objects"></a>公开项目对象
 
-自定义项目类型可以提供自动化对象，以允许使用自动化接口项目的访问权限。 每个项目类型需要提供标准<xref:EnvDTE.Project>自动化对象，从访问<xref:EnvDTE.Solution>，其中包含在 IDE 中打开的所有项目的集合。 应在项目中每个项由公开<xref:EnvDTE.ProjectItem>对象使用访问`Project.ProjectItems`。 除了这些标准自动化对象，可以选择项目以提供特定于项目的自动化对象。
+自定义项目类型可以提供自动化对象，以便允许使用自动化接口访问项目。 每个项目类型都应提供从<xref:EnvDTE.Project><xref:EnvDTE.Solution>访问的标准自动化对象，该对象包含 IDE 中打开的所有项目的集合。 项目中的每个项都应被访问<xref:EnvDTE.ProjectItem>`Project.ProjectItems`的对象公开。 除了这些标准自动化对象之外，项目还可以选择提供特定于项目的自动化对象。
 
-可以创建自定义根级别的自动化对象可以访问从根 DTE 对象使用后期绑定`DTE.<customObjectName>`或`DTE.GetObject("<customObjectName>")`。 例如，VisualC++创建C++特定于项目的项目集合调用*VCProjects*可使用访问`DTE.VCProjects`或`DTE.GetObject("VCProjects")`。 此外可以创建`Project.Object`，这是唯一的项目类型， `Project.CodeModel`，这能查询其派生程度最高的对象，和一个`ProjectItem`，这会公开`ProjectItem.Object`和`ProjectItem.FileCodeModel`。
+您可以创建自定义根级自动化对象，可以使用 或`DTE.<customObjectName>``DTE.GetObject("<customObjectName>")`从根 DTE 对象访问后期绑定对象。 例如，Visual C++创建一个名为*VCProjects*的项目C++项目集合，您可以使用`DTE.VCProjects`或`DTE.GetObject("VCProjects")`进行访问。 还可以创建一个`Project.Object`对于项目类型是唯一的`Project.CodeModel`，可以查询其最派生的对象 ， 以及 公开`ProjectItem``ProjectItem.Object`和`ProjectItem.FileCodeModel`的 。
 
-它是公开的自定义的特定于项目的项目集合的项目的通用约定。 例如，[!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)]创建C++，然后就可以访问使用特定的项目集合`DTE.VCProjects`或`DTE.GetObject("VCProjects")`。 此外可以创建`Project.Object`，这是唯一的项目类型， `Project.CodeModel`，其派生程度最高的对象，这能查询`ProjectItem`，这会公开`ProjectItem.Object`，和一个`ProjectItem.FileCodeModel`。
+它是项目公开自定义、特定于项目的项目集合的常见约定。 例如，[!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)]创建C++特定的项目集合，然后可以使用`DTE.VCProjects`或`DTE.GetObject("VCProjects")`进行访问。 还可以创建一个`Project.Object`对于项目类型是唯一的`Project.CodeModel`，可以查询其最派生的对象 ， 公开`ProjectItem``ProjectItem.Object`的 和 。 `ProjectItem.FileCodeModel`
 
-## <a name="to-contribute-a-vspackage-specific-object-for-a-project"></a>若要参与项目的特定于 VSPackage 的对象
+## <a name="to-contribute-a-vspackage-specific-object-for-a-project"></a>为项目贡献特定于 VSPackage 的对象
 
-1. 添加到相应的键 *.pkgdef*你的 VSPackage 的文件。
+1. 将适当的键添加到 VSPackage 的 *.pkgdef*文件。
 
-     例如，以下是 *.pkgdef*设置C++语言项目：
+     例如，以下是C++语言项目的 *.pkgdef*设置：
 
     ```
     [$RootKey$\Packages\{F1C25864-3097-11D2-A5C5-00C04F7968B4}\Automation]
@@ -39,7 +39,7 @@ ms.locfileid: "66332255"
     "VCProjectEngineEventsObject"=""
     ```
 
-2. 实现中的代码<xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetAutomationObject%2A>方法，如以下示例所示。
+2. 在方法中实现代码<xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetAutomationObject%2A>，如以下示例所示。
 
     ```cpp
     STDMETHODIMP CVsPackage::GetAutomationObject(
@@ -69,7 +69,7 @@ ms.locfileid: "66332255"
     }
     ```
 
-     在代码中，`g_wszAutomationProjects`是项目集合的名称。 `GetAutomationProjects`方法创建对象，它实现`Projects`接口，并返回`IDispatch`对调用对象，如下面的代码示例中所示的指针。
+     在代码中，`g_wszAutomationProjects`是项目集合的名称。 该方法`GetAutomationProjects`创建一个实现`Projects`接口并返回指向调用对象的`IDispatch`指针的对象，如下代码示例所示。
 
     ```cpp
     HRESULT CVsPackage::GetAutomationProjects(/* [out] */ IDispatch ** ppIDispatch)
@@ -87,9 +87,9 @@ ms.locfileid: "66332255"
     }
     ```
 
-     选择您的自动化对象的唯一名称。 不可预测，名称冲突，冲突会导致冲突的对象名称以任意如果，则引发多个项目类型使用相同的名称。 应包含你公司的名称或自动化对象的名称及其产品名称的一些独特之处。
+     为自动化对象选择唯一名称。 名称冲突不可预测，如果多个项目类型使用相同的名称，冲突会导致任意抛出冲突的对象名称。 您应该在自动化对象的名称中包括公司名称或其产品名称的某些独特方面。
 
-     自定义`Projects`集合对象是您项目的自动化模型的其余部分的便捷入口点。 项目对象也是可从访问<xref:EnvDTE.Solution>项目集合。 创建相应的代码和注册表条目，它们提供与使用者后`Projects`对象集合，您的实现必须提供剩余的项目模型的标准对象。 有关详细信息，请参阅[项目建模](../../extensibility/internals/project-modeling.md)。
+     自定义`Projects`集合对象是项目自动化模型其余部分的方便入口点。 项目对象还可以从<xref:EnvDTE.Solution>项目集合访问。 创建向使用者提供`Projects`集合对象的相应代码和注册表项后，实现必须为项目模型提供剩余的标准对象。 有关详细信息，请参阅[项目建模](../../extensibility/internals/project-modeling.md)。
 
 ## <a name="see-also"></a>请参阅
 

@@ -10,10 +10,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: c58dd4f6e6a0c8fe1bd468053bf18c3635b1ee9d
-ms.sourcegitcommit: 1efb6b219ade7c35068b79fbdc573a8771ac608d
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "78169373"
 ---
 # <a name="walkthrough-using-the-virtual-user-activity-chart-to-isolate-issues"></a>演练：使用虚拟用户活动图隔离问题
@@ -24,7 +24,7 @@ ms.locfileid: "78169373"
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 - Visual Studio Enterprise
 
@@ -89,7 +89,7 @@ ms.locfileid: "78169373"
 
     - **Network**
 
-    - **开始时间**
+    - **Start Time**
 
     - **持续时间**
 
@@ -103,10 +103,10 @@ ms.locfileid: "78169373"
 
      可使用“详细信息图例”和“筛选结果”面板中的各种设置来帮助隔离性能问题和负载测试中的错误   。 使用这些设置和“缩放到时间段”工具，可查看虚拟用户数据在“虚拟用户活动图”中的显示方式   。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在详细信息视图中分析虚拟用户活动](../test/analyze-load-test-virtual-user-activity-in-the-details-view.md)
 - [测试控制器和测试代理](configure-test-agents-and-controllers-for-load-tests.md)
-- [如何：为分发的负载测试创建测试设置](../test/how-to-create-a-test-setting-for-a-distributed-load-test.md)
+- [如何：为分布式负载测试创建测试设置](../test/how-to-create-a-test-setting-for-a-distributed-load-test.md)
 - [安装和配置测试代理](../test/lab-management/install-configure-test-agents.md)
 - [使用测试设置收集诊断信息](../test/collect-diagnostic-information-using-test-settings.md)

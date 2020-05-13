@@ -8,10 +8,10 @@ ms.technology: vs-ide-install
 ms.assetid: 22B1F2CD-32AE-464D-80AC-C8AB4786B015
 ms.custom: video
 ms.openlocfilehash: dfc9f7469f5954aaac56b5d45bb5ae722110dfcc
-ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "74984911"
 ---
 # <a name="install-visual-studio-2017-for-mac"></a>安装 Visual Studio 2017 for Mac
@@ -61,9 +61,9 @@ ms.locfileid: "74984911"
 
    * **使用 Xamarin 的应用**：
       - Xamarin.Forms - 选择“Android”  和“iOS”  平台。
-      - 仅限 iOS - 选择“iOS”  平台（请注意，需要安装 [Xcode](https://developer.apple.com/xcode/)  ）。
+      - 仅限 iOS - 选择“iOS”  平台（请注意，需要安装 [Xcode  ](https://developer.apple.com/xcode/)）。
       - 仅限 Android - 选择“Android”  平台（请注意，还应选择相关依赖项）。
-      - 仅限 Mac - 选择“macOS”  平台（请注意，需要安装 [Xcode](https://developer.apple.com/xcode/)  ）。
+      - 仅限 Mac - 选择“macOS”  平台（请注意，需要安装 [Xcode  ](https://developer.apple.com/xcode/)）。
       - 完全跨平台的 Xamarin 应用 - 选择“Android”  、“iOS”  和“macOS”  平台。
    * **.NET Core 应用程序** - 选择“.NET Core”  平台。
    * **ASP.NET Core Web 应用程序** - 选择“.NET Core”  平台。
@@ -108,7 +108,7 @@ ms.locfileid: "74984911"
 
 ### <a name="ios"></a>iOS
 
-1. [Hello，iOS](https://developer.xamarin.com/guides/ios/getting_started/hello,_iOS/)
+1. [了解 iOS](https://developer.xamarin.com/guides/ios/getting_started/hello,_iOS/)
 2. [设备预配](https://developer.xamarin.com/guides/ios/getting_started/installation/device_provisioning)（以在设备上运行应用程序）。
 
 ### <a name="android"></a>Android
@@ -125,6 +125,6 @@ ms.locfileid: "74984911"
 
 > [!Video https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Visual-Studio-for-Mac-Acquisition/player]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [安装 Visual Studio 2017 (Windows)](/visualstudio/install/install-visual-studio)

@@ -1,7 +1,7 @@
 ---
 title: 创建基于网络的安装
 description: 了解如何创建用于在企业中部署 Visual Studio 的网络安装点。
-ms.date: 10/29/2019
+ms.date: 03/27/2020
 ms.custom: seodec18
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: bc31b6c5286e5d02d5fd6d4da441a001f190de90
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.openlocfilehash: 1f9c1ffc0252f0fcd92f026c876adfc8ad694c41
+ms.sourcegitcommit: 273b657e115c1756adb84e0e56b6f2c709bcee76
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76115372"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80759727"
 ---
 # <a name="create-a-network-installation-of-visual-studio"></a>创建 Visual Studio 的网络安装
 
@@ -237,8 +237,11 @@ vs_enterprise.exe --layout c:\VSLayout --all
 
 从布局安装时，安装内容将从布局中获取。 但是，如果选择不在布局中的组件，则会从 Internet 获取它。  要阻止 Visual Studio 安装程序下载布局中缺少的任何内容，请使用 `--noWeb` 选项。 如果使用 `--noWeb`，但布局中缺少要安装的选定内容，安装就会失败。
 
+> [!TIP]
+> 如果要从未连接 Internet 的计算机上的脱机源进行安装，请指定 `--noWeb` 和 `--noUpdateInstaller` 选项。 前者科阻止下载更新的工作负载、组件等。 后者可阻止安装程序通过 Web 进行自我更新。
+
 > [!IMPORTANT]
-> `--noWeb` 选项不会阻止 Visual Studio 安装程序检查更新。 有关详细信息，请参阅[控制对基于网络的 Visual Studio 部署的更新](controlling-updates-to-visual-studio-deployments.md)页。
+> `--noWeb` 选项不会阻止已连接 Internet 的计算机上的 Visual Studio 安装程序检查更新。 有关详细信息，请参阅[控制对基于网络的 Visual Studio 部署的更新](controlling-updates-to-visual-studio-deployments.md)页。
 
 ### <a name="error-codes"></a>错误代码
 
@@ -280,7 +283,7 @@ vs_enterprise.exe --layout c:\VSLayout --all
 
 如果脱机安装遇到问题，请告知我们。 告知我们的最好方式是使用[报告问题](../ide/how-to-report-a-problem-with-visual-studio.md)工具。 使用此工具时，可发送我们诊断和修复问题所需的遥测数据和日志。
 
-对于安装相关问题，我们还提供[实时聊天  ](https://visualstudio.microsoft.com/vs/support/#talktous)（仅限英语）支持选项。
+对于安装相关问题，我们还提供[安装聊天](https://visualstudio.microsoft.com/vs/support/#talktous)（仅限英语）支持选项  。
 
 我们还提供其他支持选项。 若要查看列表，请参阅[反馈](../ide/feedback-options.md)页面。
 
@@ -294,3 +297,4 @@ vs_enterprise.exe --layout c:\VSLayout --all
 - [在维修基线上更新 Visual Studio](update-servicing-baseline.md)
 - [使用命令行参数安装 Visual Studio](use-command-line-parameters-to-install-visual-studio.md)
 - [Visual Studio 工作负荷和组件 ID](workload-and-component-ids.md)
+- [安装 Visual Studio 脱机安装所需的证书](install-certificates-for-visual-studio-offline.md)

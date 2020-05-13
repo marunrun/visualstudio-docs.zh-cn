@@ -1,5 +1,5 @@
 ---
-title: BP_PASSCOUNT | Microsoft Docs
+title: BP_PASSCOUNT |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BP_PASSCOUNT structure
 ms.assetid: 791ac175-b897-4c70-873e-240da7e0ac89
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 3fd1ab73a20b319af6c9464062113f4e8f2d64fa
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 0e3177ff093aea9a6f52465bd606b22883249d6b
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66353009"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80737912"
 ---
-# <a name="bppasscount"></a>BP_PASSCOUNT
-描述在其触发条件断点的计数和条件。
+# <a name="bp_passcount"></a>BP_PASSCOUNT
+描述触发条件断点的计数和条件。
 
 ## <a name="syntax"></a>语法
 
@@ -43,22 +43,22 @@ public struct BP_PASSCOUNT {
 
 ## <a name="members"></a>成员
 `dwPassCount`\
-将跳过该断点之前触发它的时间数。
+触发断点之前通过断点的次数。
 
 `stylePassCount`\
-中的值[BP_PASSCOUNT_STYLE](../../../extensibility/debugger/reference/bp-passcount-style.md)枚举，用于指定断点的样式通过次数。
+BP_PASSCOUNT_STYLE[枚举中](../../../extensibility/debugger/reference/bp-passcount-style.md)指定断点通过计数样式的值。
 
 ## <a name="remarks"></a>备注
-此结构是的成员[BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md)结构。
+此结构是[BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md)结构的成员。
 
-此结构还作为参数传递[SetPassCount](../../../extensibility/debugger/reference/idebugboundbreakpoint2-setpasscount.md)并[SetPassCount](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-setpasscount.md)方法。
+此结构也作为参数传递给[SetPassCount](../../../extensibility/debugger/reference/idebugboundbreakpoint2-setpasscount.md)和[SetPassCount](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-setpasscount.md)方法。
 
 ## <a name="requirements"></a>要求
-标头： msdbg.h
+标题： msdbg.h
 
-命名空间:Microsoft.VisualStudio.Debugger.Interop
+命名空间：微软.VisualStudio.调试器.互通
 
-程序集：Microsoft.VisualStudio.Debugger.Interop.dll
+程序集：微软.VisualStudio.调试器.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [结构和联合](../../../extensibility/debugger/reference/structures-and-unions.md)

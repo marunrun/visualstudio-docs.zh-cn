@@ -1,5 +1,5 @@
 ---
-title: OPTNAMECHANGEPFN | Microsoft Docs
+title: OPTNAMECHANGEPFN |微软文档
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - OPTNAMECHANGEPFN callback function
 ms.assetid: 147303f3-c7f1-438a-81b7-db891ea3d076
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a6107f48f4680cef9cbb825f4d760f3f0bac1ec1
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 603bd08c1ec3832bf732e0b33101076738d009e3
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66336230"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80702252"
 ---
 # <a name="optnamechangepfn"></a>OPTNAMECHANGEPFN
-这是对的调用中指定的回调函数[SccSetOption](../extensibility/sccsetoption-function.md) (使用选项`SCC_OPT_NAMECHANGEPFN`)，用于告知名称所做的更改源代码管理插件返回到 IDE。
+这是一个回调函数，在调用[SccSetOption（](../extensibility/sccsetoption-function.md)使用选项`SCC_OPT_NAMECHANGEPFN`）中指定，用于将源代码管理插件所做的名称更改传回 IDE。
 
 ## <a name="signature"></a>签名
 
@@ -35,24 +35,24 @@ typedef void (*OPTNAMECHANGEPFN)(
 ## <a name="parameters"></a>参数
  pvCallerData
 
-[in]对上一个调用中指定的用户值[SccSetOption](../extensibility/sccsetoption-function.md) (使用选项`SCC_OPT_USERDATA`)。
+[在]在以前调用[SccSetOption](../extensibility/sccsetoption-function.md)时指定的用户值（使用`SCC_OPT_USERDATA`选项 ）。
 
- pszOldName
+ pszOld名称
 
-[in]原始文件的名称。
+[在]文件的原始名称。
 
- pszNewName
+ psnewName
 
-[in]文件的名称已重命名为。
+[在]文件重命名为的名称。
 
 ## <a name="return-value"></a>返回值
  无。
 
 ## <a name="remarks"></a>备注
- 如果在源代码管理操作期间重命名文件，源代码管理插件可以通知有关通过此回调的名称更改 IDE。
+ 如果在源代码管理操作期间重命名了文件，源代码管理插件可以通过此回调通知 IDE有关名称更改。
 
- 如果 IDE 不支持此回调，它将不会调用[SccSetOption](../extensibility/sccsetoption-function.md)指定它。 如果该插件不支持此回调，它将返回`SCC_E_OPNOTSUPPORTED`从`SccSetOption`时 IDE 会尝试设置回调的功能。
+ 如果 IDE 不支持此回调，则不会调用[SccSetOption](../extensibility/sccsetoption-function.md)来指定它。 如果插件不支持此回调，则当 IDE 尝试设置回调时`SCC_E_OPNOTSUPPORTED`，它将`SccSetOption`从函数返回。
 
 ## <a name="see-also"></a>请参阅
-- [通过 IDE 实现的回调函数](../extensibility/callback-functions-implemented-by-the-ide.md)
+- [IDE 实现的回调功能](../extensibility/callback-functions-implemented-by-the-ide.md)
 - [SccSetOption](../extensibility/sccsetoption-function.md)

@@ -15,10 +15,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 2d1f7e912ed5960c52e3f0bfa40fe9b87e91a2e6
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74778695"
 ---
 # <a name="how-to-specify-additional-instrumentation-options"></a>如何：指定其他检测选项
@@ -40,7 +40,7 @@ ms.locfileid: "74778695"
 
 4. 单击 **“确定”** 。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [配置性能会话](../profiling/configuring-performance-sessions.md)
 [来自命令行的配置文件](../profiling/using-the-profiling-tools-from-the-command-line.md)

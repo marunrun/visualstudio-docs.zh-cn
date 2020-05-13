@@ -1,47 +1,47 @@
 ---
-title: 用于输出的项目配置 |Microsoft Docs
+title: 输出项目配置 |微软文档
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - project configurations, output
 ms.assetid: a4517f73-45af-4745-9d7f-9fddf887b636
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8b6337d82e51cf728d69f7aabb46e9d4444ec564
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 78b95457af4c5d806fdfcc20f49ac4e82df36488
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72725884"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80706673"
 ---
 # <a name="project-configuration-for-output"></a>用于输出的项目配置
-每个配置都可以支持生成可执行文件或资源文件等输出项的一组生成过程。 这些输出项专用于用户，并且可放置在链接相关类型的输出（如可执行文件（.exe、.dll、.lib）和源文件（.idl、.h 文件）的组中。
+每个配置都可以支持一组生成进程，这些生成进程生成输出项（如可执行文件或资源文件）。 这些输出项是用户专用的，可以放置在链接相关输出类型的组中，如可执行文件（.exe、.dll、.lib）和源文件（.idl、.h 文件）。
 
- 可以通过 <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutput2> 方法提供输出项，并使用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsEnumOutputs> 方法进行枚举。 如果要对输出项进行分组，则项目还应实现 <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputGroup> 接口。
+ 输出项可以通过这些方法提供，<xref:Microsoft.VisualStudio.Shell.Interop.IVsOutput2>并随<xref:Microsoft.VisualStudio.Shell.Interop.IVsEnumOutputs>这些方法枚举。 如果要对输出项进行分组，项目还应实现接口<xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputGroup>。
 
- 通过实现 `IVsOutputGroup` 开发的构造允许项目根据使用情况对输出进行分组。 例如，DLL 可能与程序数据库（PDB）组合在一起。
+ 通过实现`IVsOutputGroup`开发的构造允许项目根据使用情况对输出进行分组。 例如，DLL 可能与其程序数据库 （PDB） 进行分组。
 
 > [!NOTE]
-> PDB 文件包含调试信息，并且在生成 .dll 或 .exe 时指定了 "生成调试信息" 选项时创建。 通常只为调试项目配置生成 .pdb 文件。
+> PDB 文件包含调试信息，并在生成 .dll 或 .exe 时指定"生成调试信息"选项时创建该文件。 .pdb 文件通常仅用于调试项目配置。
 
- 项目必须为其支持的每个配置返回相同数量的组，即使组中包含的输出数可能因配置而异。 例如，project Matt 的 DLL 可能在调试配置中包含 mattd 和 mattd，但在零售配置中只包含 Matt。
+ 项目必须为其支持的每个配置返回相同数量的组，即使组中包含的输出数可能因配置而异。 例如，项目 Matt 的 DLL 可能包括调试配置中的 mattd.dll 和 mattd.pdb，但在零售配置中仅包括 matt.dll。
 
- 这些组的标识符信息（如规范名称、显示名称和组信息）在项目中的配置和配置中也有相同的标识符信息。 即使配置发生更改，也可以通过此一致性进行部署和打包操作。
+ 从项目中的配置到配置，这些组还具有相同的标识符信息，如规范名称、显示名称和组信息。 这种一致性允许部署和打包继续运行，即使配置发生变化也是如此。
 
- 组还可以有一个密钥输出，它允许打包快捷方式指向一些有意义的内容。 在给定的配置中，任何组都可能为空，因此不应对组的大小进行任何假设。 任何配置中的每个组的大小（输出数）可以不同于同一配置中其他组的大小。 它还可以与另一配置中相同组的大小不同。
+ 组还可以具有密钥输出，允许打包快捷方式指向有意义的内容。 给定配置中的任何组可能为空，因此不应对组的大小进行假设。 任何配置中每个组的大小（输出数）可能不同于同一配置中另一个组的大小。 它也可能与另一个配置中同一组的大小不同。
 
- ![输出组图](../../extensibility/internals/media/vsoutputgroups.gif "vsOutputGroups")输出组
+ ![输出组图形](../../extensibility/internals/media/vsoutputgroups.gif "vs 输出组")输出组
 
- @No__t_0 接口的主要用途是提供对生成、部署和调试管理对象的访问，并允许项目自由地对输出进行分组。 有关使用此接口的详细信息，请参阅[项目配置对象](../../extensibility/internals/project-configuration-object.md)。
+ <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg>接口的主要用途是提供生成、部署和调试管理对象的访问，并允许项目自由分组输出。 有关使用此接口的详细信息，请参阅[项目配置对象](../../extensibility/internals/project-configuration-object.md)。
 
- 在前面的关系图中，"生成组" 在配置（"bD" 或 ".exe"）上有一个密钥输出，因此，用户可以创建一个快捷方式来构建，知道无论部署的配置如何，快捷方式都可以正常工作。 组源没有密钥输出，因此用户无法创建它的快捷方式。 如果生成的调试组具有密钥输出，但生成的零售组不是，则不是正确实现。 接下来，如果有任何配置具有不包含任何输出的组，并且由于没有密钥文件，则具有包含输出的该组的其他配置不能包含密钥文件。 安装程序编辑器假定组的规范名称和显示名称以及密钥文件的存在，不会根据配置进行更改。
+ 在上图中，Group Built 具有跨配置（bD.exe 或 b.exe）的关键输出，因此用户可以创建"已建"快捷方式，并且知道无论部署的配置如何，快捷方式都工作。 组源没有密钥输出，因此用户无法创建其快捷方式。 如果调试组"构建"具有密钥输出，但零售组生成没有，则这将是不正确的实现。 因此，如果任何配置具有不包含输出的组，因此没有密钥文件，则具有该组包含输出的其他配置不能具有密钥文件。 安装程序编辑器假定规范名称和组显示名称，加上密钥文件的存在，不会根据配置进行更改。
 
- 请注意，如果项目有不想打包或部署的 `IVsOutputGroup`，则必须将该输出放入组中。 仍可通过实现 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg.EnumOutputs%2A> 方法来正常枚举输出，该方法将返回配置的所有输出，而不考虑分组。
+ 请注意，如果项目具有它不想`IVsOutputGroup`打包或部署的 a，则不将该输出放在组中就足够了。 通过实现返回配置的所有输出<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg.EnumOutputs%2A>的方法，无论分组如何，仍可以正常枚举输出。
 
- 有关详细信息，请参阅[用于项目的 MPF](https://github.com/tunnelvisionlabs/MPFProj10)上的自定义项目示例中的 `IVsOutputGroup` 实现。
+ 有关详细信息，请参阅[项目 MPF](https://github.com/tunnelvisionlabs/MPFProj10)`IVsOutputGroup`的自定义项目示例中的实现。
 
 ## <a name="see-also"></a>请参阅
 - [管理配置选项](../../extensibility/internals/managing-configuration-options.md)

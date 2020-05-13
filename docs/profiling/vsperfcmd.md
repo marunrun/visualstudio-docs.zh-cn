@@ -16,10 +16,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 53378c3d210ef9666df251d68a3eec570f8caa2f
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74777993"
 ---
 # <a name="vsperfcmd"></a>VSPerfCmd
@@ -31,7 +31,7 @@ VSPerfCmd [/U] [/options]
 
  下表描述了 VSPerfCmd.exe  工具选项。
 
-|选项|说明|
+|选项|描述|
 |------------|-----------------|
 |**U**|以 Unicode 形式写入重定向的控制台输出。 必须是指定的第一个选项。|
 |[Start](../profiling/start.md) **:** `mode`|在指定模式下启动分析服务。|
@@ -42,7 +42,7 @@ VSPerfCmd [/U] [/options]
 |[Counter](../profiling/counter.md) **:** `cfg`|使用示例分析方法时，指定 CPU 计数器和事件数，以用作采样间隔。 只能对一个计数器值进行采样。<br /><br /> 使用检测分析方法时，指定要在每个检测点收集的 CPU 计数器。 仅与 Start:  `Trace`、Attach  或 Launch  一起使用。|
 |[QueryCounters](../profiling/querycounters.md)|显示当前计算机的有效 CPU 计数器列表。|
 |[WinCounter](../profiling/wincounter.md) **:** *path*|指定要与配置文件标记数据一起包括的 Windows 性能计数器事件。 仅与 Start  一起使用。|
-|[AutoMark](../profiling/automark.md) : n  |指定 Windows 性能计数器数据收集事件之间的时间间隔（以毫秒为单位）。 与 WinCounter  一起使用。|
+|[AutoMark](../profiling/automark.md) **:** *n*|指定 Windows 性能计数器数据收集事件之间的时间间隔（以毫秒为单位）。 与 WinCounter  一起使用。|
 |[Events](../profiling/events-vsperfcmd.md) **:** `option`|控制指定的 Windows 事件跟踪 (ETW) 事件的集合。 将 ETW 数据收集到不是分析数据 (.vsp) 文件的 .itl 文件中   。|
 |[状态](../profiling/status.md)|显示探查器状态、当前正在分析的进程的信息以及有权控制探查器的帐户信息。|
 |[Shutdown](../profiling/shutdown.md)[ **:** `n`]|关闭分析数据文件并关闭探查器。|
@@ -50,26 +50,26 @@ VSPerfCmd [/U] [/options]
 |[GlobalOff](../profiling/globalon-and-globaloff.md)|停止所有数据收集，但不结束分析会话。|
 |[ProcessOn](../profiling/processon-and-processoff.md) **:** `pid`|在通过调用 VSPerfCmdProcessOff  暂停分析后，恢复指定进程的数据收集。|
 |[ProcessOff](../profiling/processon-and-processoff.md) **:** `pid`|停止指定进程的数据收集。|
-|[ThreadOn 和 ThreadOff](../profiling/threadon-and-threadoff.md) **:** *tid*|在通过调用 VSPerfCmdThreadOff  暂停分析后，恢复对指定进程的分析。 仅在使用检测方法进行分析时使用 ThreadOn  。|
-|[ThreadOn 和 ThreadOff](../profiling/threadon-and-threadoff.md) **:** *tid*|暂停对指定线程的分析。 仅在使用检测方法进行分析时使用“ThreadOff”  。|
-|[Mark](../profiling/mark.md) **：** MarkNum[,MarkText]    |使用可选文本将一个标记插入到分析数据文件中。|
+|[ThreadOn and ThreadOff](../profiling/threadon-and-threadoff.md) **:** *tid*|在通过调用 VSPerfCmdThreadOff  暂停分析后，恢复对指定进程的分析。 仅在使用检测方法进行分析时使用 ThreadOn  。|
+|[ThreadOn and ThreadOff](../profiling/threadon-and-threadoff.md) **:** *tid*|暂停对指定线程的分析。 仅在使用检测方法进行分析时使用“ThreadOff”  。|
+|[Mark](../profiling/mark.md) **:** MarkNum[,MarkText]    |使用可选文本将一个标记插入到分析数据文件中。|
 
 ## <a name="sample-method-options"></a>示例方法选项
  只有在使用采样分析方法时才能使用以下选项。
 
-|选项|说明|
+|选项|描述|
 |------------|-----------------|
-|[启动](../profiling/launch.md) **：** 可执行文件 |启动指定的应用程序并开始分析。|
-|[参数](../profiling/args.md) **：** 参数 |指定要传递到已启动应用程序的命令行参数。|
+|[Launch](../profiling/launch.md) **:** 可执行文件 |启动指定的应用程序并开始分析。|
+|[Args](../profiling/args.md) **:** 参数 |指定要传递到已启动应用程序的命令行参数。|
 |[控制台](../profiling/console.md)|在新的命令提示符窗口中启动指定命令。|
-|[附加](../profiling/attach.md) **：** PID[,PID]   |开始分析指定进程。 进程可由进程 ID 或进程名称标识。|
+|[Attach](../profiling/attach.md) **:** PID[,PID]   |开始分析指定进程。 进程可由进程 ID 或进程名称标识。|
 |[Detach](../profiling/detach.md)[ **:** _PID_[,_PID_]]|停止分析指定进程。 进程可由进程 ID 或进程名称标识。 如果未指定进程，将停止所有进程分析。|
 |[GC](../profiling/gc-vsperfcmd.md)[ **:** {**Allocation**`&#124;`**Lifetime**}]|收集 .NET 内存分配数据和对象生存期数据。 仅与 VSPerfCmdLaunch  选项一起使用。|
 
 ### <a name="sample-interval-options"></a>示例间隔选项
  以下选项指定采样间隔的类型和持续时间。 默认值为 Timer  。 还可以使用 Counter  选项将 CPU 计数器指定为间隔。 这些选项只能通过 Launch  或分析会话的第一个 Attach  指定。
 
-|选项|说明|
+|选项|描述|
 |------------|-----------------|
 |[PF](../profiling/pf.md)[ **:** _n_]|有关每个第 n 个页面错误的示例（默认值=10）。|
 |[Sys](../profiling/sys-vsperfcmd.md)[ **:** _n_]|有关每个第 n 个系统调用的示例（默认值=10）。|
@@ -80,7 +80,7 @@ VSPerfCmd [/U] [/options]
 
  必须在使用管理凭据运行的命令提示符下执行 Admin 选项。
 
-|选项|说明|
+|选项|描述|
 |------------|-----------------|
 |**Admin:Security**, \<**ALLOW&#124;DENY**>, *Right*[ *Right*], \<*User*&#124;*Group*>|允许或拒绝指定用户或组访问分析服务。<br /><br /> `Right` 可以是：<br /><br /> CrossSession - 允许用户访问此服务以执行跨会话分析。<br /><br /> SampleProfiling - 允许用户访问此驱动程序，以启用采样分析。 此外，用于在跟踪分析期间访问内核转换信息。<br /><br /> FullAccess - 允许用户访问 CrossSession 和 SampleProfiling。|
 |**Admin:Security, List**|列出分析服务的当前状态并列出用户权限。|

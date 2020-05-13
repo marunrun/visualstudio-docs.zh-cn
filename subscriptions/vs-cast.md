@@ -1,17 +1,18 @@
 ---
 title: Visual Studio 订阅中的 CAST Highlight 权益 | Microsoft Docs
 author: evanwindom
-ms.author: lank
+ms.author: v-evwin
 manager: lank
+ms.assetid: 92e8957f-c690-46bd-a812-3efd06a2bc6b
 ms.date: 03/02/2020
 ms.topic: conceptual
 description: 了解有关所选 Visual Studio 订阅中包含的可用 CAST Highlight 权益
-ms.openlocfilehash: 7b06800bd53e2843015f3f3509a4a2c7e0eae671
-ms.sourcegitcommit: c98e0ccf236765b44e47095ee52836cb012e3854
+ms.openlocfilehash: f3f21a29e8ad710471eddadfbd5c98677db3098e
+ms.sourcegitcommit: dfa9476b69851c28b684ece66980bee735fef8fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78257171"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80274019"
 ---
 # <a name="the-cast-highlight-benefit-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 CAST Highlight 权益
 迁移到云时，开发者需要对其软件具有深入的了解。 借助 CAST Highlight，Visual Studio 订阅者可以快速扫描其应用程序源代码，以确定其应用程序的云就绪状态，以便迁移到 Azure 并在迁移期间和迁移后监控其应用的进度。
@@ -48,17 +49,17 @@ ms.locfileid: "78257171"
    > 我们目前正在审核你的激活和访问 CAST Highlight 的请求。  你将在 48 小时内收到我的回复。
    >
    > 诚挚问候  
-   > Greg 
+   > *Greg*
 
 在请求获得批准后，将收到第二封确认成功创建帐户的电子邮件，并要求你单击激活链接以完成激活过程。
 
    > 我们已成功验证并验证了你访问 CAST Highlight 的请求。  欢迎使用体验！
    >
-   > 需要进行最后的步骤以完成激活。你将收到来自 noreply@casthighlight.com 的电子邮件，其中包含激活链接。如果看不到电子邮件，请检查垃圾邮件箱。 
+   > 需要进行最后的步骤以完成激活。你将收到来自 noreply@casthighlight.com 的电子邮件，其中包含激活链接。如果看不到电子邮件，请检查垃圾邮件箱。
    >
-   > *请单击电子邮件中提供的激活链接并完成激活过程。*
+   > 请单击电子邮件中提供的激活链接并完成激活过程。 
    >
-   > *激活后，你将有 30 天的时间访问 CAST Highlight 平台，并且最多可以载入 5 个应用程序。请注意，这是仅适用于 Microsoft Visual Studio Enterprise 客户的独家优惠。*
+   > 激活后，你将有 30 天的时间访问 CAST Highlight 平台，并且最多可以载入 5 个应用程序。  请注意，这是仅适用于 Microsoft Visual Studio Enterprise 客户的独家优惠。
    >
    > 我将与你保持联系，以确保一切顺利。  与此同时，这里有一些内容有助于入门：
    >
@@ -68,7 +69,7 @@ ms.locfileid: "78257171"
    > - 视频教程 - [载入应用](https://www.youtube.com/watch?v=x-7Dsn3Rmw4)
    >
    > 诚挚问候  
-   > Greg 
+   > *Greg*
 
    > [!NOTE]
    > 请务必单击你收到的电子邮件中的激活链接。  否则，你将无法访问 CAST Highlight 订阅。 如果未在收件箱中看到电子邮件，请务必检查垃圾邮件文件夹。

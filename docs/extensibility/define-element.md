@@ -1,25 +1,25 @@
 ---
-title: 定义元素 |Microsoft Docs
+title: 定义元素 |微软文档
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - VSCT XML schema elements, Define
 - Define element (VSCT XML schema)
 ms.assetid: 5aee74e3-de41-4dc6-9618-93e158af56dd
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d82bd5050955f69e23c71569a13ac1a5d428aef2
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: fc09de1d822f41b25397c7a56c7cce4449a9e551
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66348134"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80712276"
 ---
 # <a name="define-element"></a>定义元素
-定义的符号名称和值对。 此符号可以评估的条件属性。 有关详细信息，请参阅[条件属性](../extensibility/vsct-xml-schema-conditional-attributes.md)。 另请参阅[Symbols 元素](../extensibility/symbols-element.md)。
+定义符号名称和值对。 此符号可以通过条件属性计算。 有关详细信息，请参阅[条件属性](../extensibility/vsct-xml-schema-conditional-attributes.md)。 另请参阅[符号元素](../extensibility/symbols-element.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -34,8 +34,8 @@ ms.locfileid: "66348134"
 
 |特性|描述|
 |---------------|-----------------|
-|name|必需。 符号名称：<br /><br /> name="Mode"|
-|值|必需。 符号的值：<br /><br /> value="Standard"|
+|name|必需。 符号的名称：<br /><br /> 名称="模式"|
+|值|必需。 符号的值：<br /><br /> 值="标准"|
 |条件|可选。 有关详细信息，请参阅[条件属性](../extensibility/vsct-xml-schema-conditional-attributes.md)。|
 
 ### <a name="child-elements"></a>子元素
@@ -45,7 +45,7 @@ ms.locfileid: "66348134"
 
 |元素|描述|
 |-------------|-----------------|
-|[CommandTable 元素](../extensibility/commandtable-element.md)|定义表示命令的 VSPackage 提供对集成的开发环境 (IDE) 的所有元素。 例如，菜单项、 菜单、 工具栏和组合框。|
+|[命令表元素](../extensibility/commandtable-element.md)|定义表示 VS 包向集成开发环境 （IDE） 提供的命令的所有元素。 例如，菜单项、菜单、工具栏和组合框。|
 
 ## <a name="example"></a>示例
 
@@ -55,4 +55,4 @@ ms.locfileid: "66348134"
 ```
 
 ## <a name="see-also"></a>请参阅
-- [Visual Studio 命令表格 (.vsct) 文件](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [可视化工作室命令表 （.vsct） 文件](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

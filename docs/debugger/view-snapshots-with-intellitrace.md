@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 767181ce917e4cbef69001e07a018e20c89a01f8
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "65676438"
 ---
 # <a name="view-snapshots-with-intellitrace-step-back-visual-studio-enterprise-c-visual-basic-c"></a>使用 IntelliTrace 单步后退来查看快照 (Visual Studio Enterprise)（C#、Visual Basic、C++）
@@ -23,6 +23,6 @@ IntelliTrace 后退会在每个断点处及调试器步骤事件发生时自动�
 
 可以通过使用调试工具栏中的“后退”和前进”按钮浏览和查看快照。 这些按钮用于浏览“诊断工具”窗口中“事件”选项卡上显示的事件。
 
-![“后退”和“前进”按钮](../debugger/media/intellitrace-step-back-icons-description.png  "Step Backward and Forward buttons")
+![“后退”和“前进”按钮](../debugger/media/intellitrace-step-back-icons-description.png  "“后退”和“前进”按钮")
 
 有关详细信息，请参阅[使用 IntelliTrace 检查上一应用状态](../debugger/view-historical-application-state.md)。

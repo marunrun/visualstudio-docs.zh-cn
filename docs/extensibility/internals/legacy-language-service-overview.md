@@ -1,26 +1,26 @@
 ---
-title: 旧版语言服务概述 |Microsoft Docs
+title: 传统语言服务概述 |微软文档
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - language services [managed package framework], about language services
 ms.assetid: bb44e27b-d228-463c-b2cf-cd5c24c7c1b5
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8dfec9cc8b57dfb12b3977cc04e2e62ecc0dea96
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: aed653ec200063e72434fc758c7920e6caabafe1
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72726868"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80707362"
 ---
 # <a name="legacy-language-service-overview"></a>旧版语言服务概述
-语言服务提供编辑器支持，使你能够实现某些 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 功能。 托管包框架（MPF）语言服务类为常用功能提供完全支持，并为其他功能提供部分支持。
+语言服务提供编辑器支持，使您能够实现某些[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]功能。 托管包框架 （MPF） 语言服务类提供对常用功能的完全支持，并支持其他功能。
 
-## <a name="fully-supported-features-in-the-mpf"></a>MPF 中完全受支持的功能
+## <a name="fully-supported-features-in-the-mpf"></a>强积金中完全支持的功能
  MPF 语言服务类支持以下功能：
 
 - 语法突出显示
@@ -37,25 +37,25 @@ ms.locfileid: "72726868"
 
 - IntelliSense 参数信息
 
-- IntelliSense 快速信息
+- 感知快速信息
 
-- IntelliSense 成员完成
+- IntelliSense 会员完成
 
-- IntelliSense word 完成
+- IntelliSense 字完成
 
-## <a name="partially-supported-features-in-the-mpf"></a>MPF 中部分支持的功能
- MPF 仅提供对以下功能的部分支持。 这意味着必须实现由 MPF 调用的方法。
+## <a name="partially-supported-features-in-the-mpf"></a>强积金中部分支持的功能
+ MPF 仅对以下功能提供部分支持。 这意味着您必须实现 MPF 调用的方法。
 
 - 重新格式化代码。 提供实现重新格式化的代码。
 
-- 通过标识有效的代码范围来验证断点。 提供标识代码跨越的代码。
+- 通过标识有效的代码范围验证断点。 提供标识代码范围的代码。
 
-- 支持**调试器的**"自动" 窗口用于显示变量。 提供用于确定要在窗口中显示的内容的代码。
+- 支持调试器**自动**窗口以显示变量。 提供确定在窗口中显示内容的代码。
 
-- 支持**导航栏**用于类型和成员之间的快速导航。 您可以实现并返回一个帮助器类，用于填充**导航栏**组合框中的列表。
+- 支持**导航栏**，用于类型和成员之间的快速导航。 实现并返回一个帮助程序类，该类填充**导航栏**组合框中的列表。
 
 ## <a name="implementation"></a>实现
- 必须完成几个步骤才能实现语言服务本身，以及你想要为你的语言提供支持的语言服务功能。 以下主题介绍了这些步骤：
+ 您必须完成几个步骤，以实现语言服务本身和要支持的语言服务功能。 这些步骤在以下主题中讨论：
 
 - [实现旧版语言服务](../../extensibility/internals/implementing-a-legacy-language-service2.md)
 

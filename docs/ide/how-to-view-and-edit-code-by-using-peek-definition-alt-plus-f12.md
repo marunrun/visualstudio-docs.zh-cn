@@ -8,13 +8,13 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 9eac5c8c47c208f39f74f542fbbff89c8340a93f
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75591341"
 ---
-# <a name="how-to-view-and-edit-code-by-using-peek-definition-altf12"></a>如何：使用“查看定义”(Alt+F12) 查看和编辑代码
+# <a name="how-to-view-and-edit-code-by-using-peek-definition-altf12"></a>如何：使用“查看定义”查看和编辑代码 (Alt+F12)
 
 可使用“查看定义”命令来查看和编辑代码，而无需离开正在编写的代码  。 “查看定义”和“转到定义”显示相同的信息，但“查看定义”在弹出窗口中显示，而“转到定义”在单独的代码窗口中显示代码     。 “转到定义”将导致上下文（即活动的代码窗口、当前行和光标位置）切换到定义代码窗口  。 使用“速览定义”时，无需离开原始代码文件就能查看和编辑定义，还能在定义文件内部到处移动  。
 
@@ -26,7 +26,7 @@ ms.locfileid: "75591341"
 
 1. 若要速览定义，可以在右键单击菜单中对要浏览的类型或成员选择“速览定义”  。 如果启用该选项，还可以按“Ctrl”（或另一个修饰符）并单击成员名称来使用鼠标快速查看定义  。 或者在键盘上按 Alt  +F12  。
 
-     本插图显示了名为 `Print()` 的方法的“查看定义”窗口  ：
+     本插图显示了名为  **的方法的“查看定义”窗口**`Print()`：
 
      ![“查看”窗口](../ide/media/peekwindow.png)
 
@@ -70,19 +70,19 @@ ms.locfileid: "75591341"
 
 可在“查看定义”窗口中使用下列键盘快捷方式  ：
 
-|功能|键盘快捷键|
+|功能|键盘快捷方式|
 |-------------------|:-----------------------:|
-|打开定义窗口|Alt+F12  |
-|关闭定义窗口|**Esc**|
-|将定义窗口提升为一个常规文档选项卡|Shift+Alt+Home   |
+|打开定义窗口|Alt**F12**+ |
+|关闭定义窗口|Esc |
+|将定义窗口提升为一个常规文档选项卡|Shift**Alt**Home+  + |
 |在定义窗口间导航|**Ctrl**+**Alt**+ **-** 和 **Ctrl**+**Alt**+ **=**|
 |在多个结果间导航|**F8** 和 **Shift**+**F8**|
-|在代码编辑器窗口和定义窗口之间切换|Shift+Esc  |
+|在代码编辑器窗口和定义窗口之间切换|Shift**Esc**+ |
 
 > [!NOTE]
 > 也可使用在 Visual Studio 其他位置所用的键盘快捷方式在“查看定义”窗口中编辑代码  。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [导航代码](../ide/navigating-code.md)
 - [转到定义和速览定义](../ide/go-to-and-peek-definition.md)

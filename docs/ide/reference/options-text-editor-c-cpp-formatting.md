@@ -1,5 +1,5 @@
 ---
-title: 选项，文本编辑器，C/C++，格式
+title: 选项，文本编辑器，C/C++，格式设置
 ms.date: 04/30/2018
 ms.topic: reference
 f1_keywords:
@@ -17,13 +17,13 @@ manager: markl
 ms.workload:
 - cplusplus
 ms.openlocfilehash: d7a6029058ab0bc02a623df0e1733eb8548102d5
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75596250"
 ---
-# <a name="options-text-editor-cc-formatting"></a>选项，文本编辑器，C/C++，格式
+# <a name="options-text-editor-cc-formatting"></a>选项，文本编辑器，C/C++，格式设置
 
 使用 C 或 C++ 进行编程时，请使用以下属性页更改代码编辑器的默认行为。
 
@@ -34,7 +34,7 @@ ms.locfileid: "75596250"
 > [!NOTE]
 > 以下说明中的某些 Visual Studio 用户界面元素在计算机上出现的名称或位置可能会不同。 这些元素取决于你所使用的 Visual Studio 版本和你所使用的设置。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](../../ide/personalizing-the-visual-studio-ide.md)。
 
-## <a name="general-page"></a>常规页
+## <a name="general-page"></a>“常规”页
 
 此页面有一些选项，可用于在键入语句和块时设置其格式。
 
@@ -62,7 +62,7 @@ ms.locfileid: "75596250"
 
 这些页面支持各种格式自定义；但如果启用了 ClangFormat，则忽略这些页面。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [“选项”对话框 ->“环境”->“常规”](../../ide/reference/general-environment-options-dialog-box.md)
 - [使用 IntelliSense](../../ide/using-intellisense.md)

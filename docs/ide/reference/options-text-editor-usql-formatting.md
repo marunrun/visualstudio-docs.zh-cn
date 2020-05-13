@@ -14,15 +14,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 200ec41a1295178f1127d10053985384a7813158
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75568264"
 ---
 # <a name="options-text-editor-u-sql-formatting"></a>“选项”>“文本编辑器”>“U-SQL”>“格式化”
 
-通过“格式设置”选项页面，可在代码编辑器中设定代码格式设置选项  。 要访问此选项页，请选择“工具” > 选项”   。 在“选项”  对话框中，依次选择“文本编辑器”   > “U-SQL”   > “格式化”  。
+通过“格式设置”选项页面，可在代码编辑器中设定代码格式设置选项  。 要访问此选项页，请选择“工具”**选项”**  >   。 在“选项”  对话框中，依次选择“文本编辑器”   > “U-SQL”   > “格式化”  。
 
 ## <a name="general-page"></a>常规页
 
@@ -49,6 +49,6 @@ ms.locfileid: "75568264"
 - 在选中“在粘贴后自动格式化”  的情况下将代码粘贴到文件中时
 - 当手动键入要格式化的代码块时
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [“选项”对话框 ->“环境”->“常规”](../../ide/reference/general-environment-options-dialog-box.md)

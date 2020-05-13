@@ -1,99 +1,99 @@
 ---
-title: Visual Studio 模板清单架构参考 |Microsoft Docs
+title: 可视化工作室模板清单架构参考 |微软文档
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: bc7d0a81-0df5-41a9-a912-1b30e5da1d13
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 52a421986e076d2badc6dc7eb76247d243da155b
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: dbe46851d9df85569be796b4147217bd7db450ed
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66323028"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80697986"
 ---
-# <a name="visual-studio-template-manifest-schema-reference"></a>Visual Studio 模板清单架构参考
-此架构描述了 Visual Studio 模板清单的格式 ( *.vstman*) 生成的 Visual Studio 项目或项模板的文件。 位置和有关模板的其他相关信息，还介绍了架构。
+# <a name="visual-studio-template-manifest-schema-reference"></a>可视化工作室模板清单架构参考
+此架构描述为 Visual Studio 项目或项目模板生成的可视化工作室模板清单 *（.vstman*） 文件的格式。 架构还描述了该模板的位置和其他相关信息。
 
- :由于没有单独的项目和项目模板目录，清单应该永远不会同时有的项和项目模板。
+ ：因为有单独的项目和项目模板目录，因此清单不应混合使用物料和项目模板。
 
 > [!IMPORTANT]
-> 此清单是从 Visual Studio 2017 开始，提供。
+> 此清单可从 Visual Studio 2017 开始使用。
 
-## <a name="vstemplatemanifest-element"></a>VSTemplateManifest 元素
+## <a name="vstemplatemanifest-element"></a>VSTemplate清单元素
  清单的根元素。
 
 ### <a name="attributes"></a>特性
 
-- **版本**：一个表示模板清单的版本字符串。 必需。
+- **版本**：表示模板清单版本的字符串。 必需。
 
-- **区域设置**:表示区域设置或区域设置的模板清单的字符串。 区域设置值适用于所有模板。 必须将每个区域使用单独的清单。 可选。
+- **区域设置**：表示模板清单区域设置或区域设置的字符串。 区域设置值适用于所有模板。 您必须为每个区域设置使用单独的清单。 可选。
 
 ### <a name="child-elements"></a>子元素
 
-- **VSTemplateContainer**可选。
+- **VSTemplate 容器**选。
 
-- **VSTemplateDir**可选。
+- **VSTemplateDir**选。
 
 ### <a name="parent-element"></a>父元素
  无。
 
-## <a name="vstemplatecontainer"></a>VSTemplateContainer
- 模板容器的清单元素。 清单都有针对它定义了每个模板的一个模板容器。
+## <a name="vstemplatecontainer"></a>VSTemplate 容器
+ 模板清单元素的容器。 清单为其定义的每个模板有一个模板容器。
 
 ### <a name="attributes"></a>特性
- **VSTemplateType**:一个字符串值，指定模板类型 (`"Project"`， `"Item"`，或`"ProjectGroup"`)。 必需
+ **VSTemplate 类型**：指定模板类型 （`"Project"`或`"Item"``"ProjectGroup"`的字符串值）。 必选
 
 ### <a name="child-elements"></a>子元素
 
-- **RelativePathOnDisk**:磁盘上的模板文件的相对路径。 此位置还定义模板的放置在模板树中所示**新的项目**或**新项**对话框。 有关模板部署为一个目录和单个文件，此路径是指包含模板文件的目录。 有关模板部署为 *.zip*文件，此路径应为路径 *.zip*文件。
+- **相对路径磁盘**：磁盘上模板文件的相对路径。 此位置还定义模板在"**新项目**"或"**新项目**"对话框中显示的模板树中的位置。 对于作为目录和单个文件部署的模板，此路径引用包含模板文件的目录。 对于作为 *.zip*文件部署的模板，此路径应该是 *.zip*文件的路径。
 
-- **VSTemplateHeader:一个[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)描述该标头的元素。
+- *VSTemplate 标题：描述标头的[模板数据](../extensibility/templatedata-element-visual-studio-templates.md)元素。
 
 ### <a name="parent-element"></a>父元素
- **VSTemplateManifest**
+ **VSTemplate清单**
 
 ## <a name="vstemplatedir"></a>VSTemplateDir
- 介绍模板所在的目录。 清单可以包含多个**VSTemplateDir**条目提供本地化的名称和排序顺序的目录，以控制它们在模板类别树中的外观。
+ 描述模板所在的目录。 清单可以包含多个**VSTemplateDir**条目，以提供本地化的名称和排序，以便目录控制其在模板类别树中的外观。
 
- 由于其设计**VSTemplateDir**条目应仅在非区域设置指定的清单中出现。
+ 由于其设计 **，VSTemplateDir**条目应只出现在非区域设置指定的清单中。
 
 ### <a name="attributes"></a>特性
  无。
 
 ### <a name="child-elements"></a>子元素
 
-- **RelativePath**:模板的路径。 可能每个路径，只有一个条目，因此第一个获胜的所有清单。
+- **相对路径**：模板的路径。 每个路径只能有一个条目，因此第一个条目将赢得所有清单。
 
-- **LocalizedName**:一个**NameDescriptionIcon**元素，它指定本地化的名称。 可选。
+- **本地化名称**：指定本地化名称**的名称描述元素**。 可选。
 
-- **SortOrder**:一个字符串，指定排序顺序。 可选。
+- **排序顺序**：指定排序顺序的字符串。 可选。
 
-- **ParentFolderOverrideName**:重写的父文件夹的名称。 可选。 此元素具有**名称**特性，它是一个字符串值，指定的名称。
+- **父文件夹覆盖名称**：父文件夹的重写名称。 可选。 此元素具有**Name**属性，该属性是指定名称的字符串值。
 
 ### <a name="parent-element"></a>父元素
- **VSTemplateManifest**
+ **VSTemplate清单**
 
-## <a name="namedescriptionicon"></a>NameDescriptionIcon
- 指定的名称和描述，可能是已本地化的模板。 请参阅**LocalizedName**上面。
+## <a name="namedescriptionicon"></a>名称描述图标
+ 指定名称和说明，可能用于本地化模板。 请参阅上面**的本地化名称**。
 
 ### <a name="attributes"></a>特性
 
-- **包**:一个字符串值，该值指定的包。 可选。
+- **包**：指定包的字符串值。 可选。
 
-- **ID**:一个字符串值，指定该 id。 可选。
+- **ID**：指定 ID 的字符串值。 可选。
 
 ### <a name="child-elements"></a>子元素
  无。
 
 ### <a name="parent-element"></a>父元素
- **LocalizedName**
+ **本地化名称**
 
 ## <a name="examples"></a>示例
- 下面的代码是项目模板的示例 *.vstman*文件。
+ 以下代码是项目模板 *.vstman*文件的示例。
 
 ```xml
 <VSTemplateManifest Version="1.0" Locale="1033" xmlns="http://schemas.microsoft.com/developer/vstemplatemanifest/2015">
@@ -119,7 +119,7 @@ ms.locfileid: "66323028"
 
 ```
 
- 下面的代码是项模板的示例 *.vstman*文件。
+ 以下代码是项模板 *.vstman*文件的示例。
 
 ```xml
 <VSTemplateManifest Version="1.0" Locale="1033" xmlns="http://schemas.microsoft.com/developer/vstemplatemanifest/2015">

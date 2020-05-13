@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: f9c6934c816574796d59f978c3d2f37f590cf578
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75565118"
 ---
 # <a name="develop-globalized-and-localized-apps"></a>开发全球化和本地化应用
@@ -48,7 +48,7 @@ Visual Studio 利用 [.NET](/dotnet/standard/globalization-localization/) 中内
 > [!NOTE]
 > 控制台应用不包括对双向语言的文本支持。 这是 Windows 与控制台应用程序搭配使用方式的结果。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [对 Visual Studio 中双向语言的支持](use-bidirectional-languages.md)
 - [全球化和本地化 .NET 应用](/dotnet/standard/globalization-localization/)

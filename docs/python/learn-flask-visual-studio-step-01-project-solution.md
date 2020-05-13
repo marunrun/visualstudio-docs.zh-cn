@@ -12,11 +12,11 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: 7707d993ac5fb6f73060d0f862c828e67c833872
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985202"
+ms.lasthandoff: 03/20/2020
+ms.locfileid: "79300881"
 ---
 # <a name="tutorial-get-started-with-the-flask-web-framework-in-visual-studio"></a>教程：在 Visual Studio 中开始使用 Flask Web 框架
 
@@ -50,7 +50,7 @@ Visual Studio for Mac 当前不支持 Python 开发。 在 Mac 和 Linux 上，�
 
 ## <a name="step-1-1-create-a-visual-studio-project-and-solution"></a>步骤 1-1：创建 Visual Studio 项目和解决方案
 
-1. 在 Visual Studio 中，选择“文件” > “新建” > “项目”，搜索“Flask”，然后选择“空白 Flask Web 项目”模板     。 （还可以在左侧列表的“Python”   > “Web”  中找到模板。）
+1. 在 Visual Studio 中，选择“文件” **“新建”** “项目”，搜索“Flask”，然后选择“空白 Flask Web 项目”模板 >    >    。 （还可以在左侧列表的“Python”   > “Web”  中找到模板。）
 
     ![Visual Studio 中“空白 Flask Web 项目”的新建项目对话框](media/flask/step01-new-blank-project.png)
 
@@ -59,8 +59,8 @@ Visual Studio for Mac 当前不支持 Python 开发。 在 Mac 和 Linux 上，�
     - **名称**：将 Visual Studio 项目的名称设置为“BasicProject”  。 此名称还用于 Flask 项目。
     -  位置：指定要在其中创建 Visual Studio 解决方案和项目的位置。
     - **解决方案名称**：设置为“LearningFlask”，适用于本教程中作为多个项目的容器的解决方案  。
-    - **创建解决方案的目录**：保留设置（默认值）。
-    - **新建 Git 存储库**：选择此选项（默认情况下会清除该选项），以便在 Visual Studio 创建解决方案时创建本地 Git 存储库。 如果未看到此选项，请运行 Visual Studio 安装程序并在“代码工具”下的“单个组件”选项卡上添加“适用于 Windows 的 Git”和“适用于 Visual Studio 的 GitHub 扩展”     。
+    -  为解决方案创建目录：保留设置（默认设置）。
+    -  创建新的 Git 存储库：选择此选项（默认情况下会清除该选项），以便在 Visual Studio 创建解决方案时创建本地 Git 存储库。 如果未看到此选项，请运行 Visual Studio 安装程序并在“代码工具”下的“单个组件”选项卡上添加“适用于 Windows 的 Git”和“适用于 Visual Studio 的 GitHub 扩展”     。
 
 1. 稍后 Visual Studio 会显示一个对话框，提示“此项目需要外部包”（如下所示）  。 显示此对话框是因为该模板包含引用最新 Flask 1.x 包的 requirements.txt 文件  。 （选择“显示所需包”  查看确切的依赖项。）
 
@@ -106,11 +106,11 @@ Visual Studio for Mac 当前不支持 Python 开发。 在 Mac 和 Linux 上，�
 
 答：首先，从一开始就使用源代码管理，特别是如果同时还使用远程存储库，就可以提供项目的常规异地备份。 与在本地文件系统上维护项目不同，源代码管理还提供了完整的更改历史记录，用户可以轻松地将单个文件或整个项目还原到以前的状态。 此更改历史记录有助于确定回归的原因（测试失败）。 此外，如果多个人员执行一个项目，则源代码管理必不可少，因为它管理重写并提供冲突解决方案。 最后，源代码管理从根本上来说是一种自动化形式，它为自动化构建、测试和发布管理提供充分准备。 这实际上是将 DevOps 用于项目的第一步，而且由于入门门槛非常低，因此没有理由不从一开始就使用源代码管理。
 
-有关源控制作为自动化的进一步讨论，请参阅[真相的来源：DevOps 中存储库的作用](https://msdn.microsoft.com/magazine/mt763232)，这是 MSDN 杂志中为移动应用编写的一篇文章，也适用于 Web 应用。
+关于自动化形式的源代码管理的进一步讨论，请参阅 [The Source of Truth: The Role of Repositories in DevOps](https://msdn.microsoft.com/magazine/mt763232)（真相之源：DevOps 中的存储库角色），这是 MSDN Magazine 上专为移动应用编写的一篇文章，同样适用于 Web 应用。
 
 ### <a name="question-can-i-prevent-visual-studio-from-auto-committing-a-new-project"></a>问：我能否阻止 Visual Studio 自动提交新项目？
 
-答：可以。 若要禁用自动提交，请转到“团队资源管理器”  中的“设置”  页，选择“Git”   > “全局设置”  ，清除标记为“合并后默认提交更改”  的选项，然后选择“更新”  。
+答：能。 若要禁用自动提交，请转到“团队资源管理器”  中的“设置”  页，选择“Git”   > “全局设置”  ，清除标记为“合并后默认提交更改”  的选项，然后选择“更新”  。
 
 ## <a name="step-1-3-create-the-virtual-environment-and-exclude-it-from-source-control"></a>步骤 1-3：创建虚拟环境并从源代码管理中将其排除
 
@@ -146,9 +146,9 @@ Visual Studio for Mac 当前不支持 Python 开发。 在 Mac 和 Linux 上，�
 
 ### <a name="question-how-do-i-remove-a-virtual-environment-thats-already-committed-to-source-control"></a>问：如何删除已经提交给源代码管理的虚拟环境？
 
-答：首先，编辑 .gitignore 文件以排除文件夹：在末尾找到带注释 `# Python Tools for Visual Studio (PTVS)` 的部分，并为虚拟环境文件夹添加一个新行，如 `/BasicProject/env`  。 （由于 Visual Studio 不会显示“解决方案资源管理器”  中的文件，请使用“文件”   > “打开”   > “文件”  菜单命令直接打开它。 也可以从团队资源管理器打开文件：在“设置”页上，选择“存储库设置”，转到“忽略和属性文件”部分，然后选择 .gitignore 旁的“编辑”链接。       ）
+答：首先，编辑 .gitignore 文件以排除文件夹：在末尾找到带注释 *的部分，并为虚拟环境文件夹添加一个新行，如*`# Python Tools for Visual Studio (PTVS)``/BasicProject/env`。 （由于 Visual Studio 不会显示“解决方案资源管理器”  中的文件，请使用“文件”   > “打开”   > “文件”  菜单命令直接打开它。 也可以从团队资源管理器打开文件：在“设置”页上，选择“存储库设置”，转到“忽略和属性文件”部分，然后选择 .gitignore 旁的“编辑”链接。       ）
 
-接下来，打开命令窗口，导航到包含虚拟环境文件夹（如 env）的文件夹（如 BasicProject），然后运行 `git rm -r env`   。 然后从命令行 (`git commit -m 'Remove venv'`) 提交这些更改，或从“团队资源管理器”  的“更改”  页进行提交。
+接下来，打开命令窗口，导航到包含虚拟环境文件夹（如 env）的文件夹（如 BasicProject），然后运行   `git rm -r env`。 然后从命令行 (`git commit -m 'Remove venv'`) 提交这些更改，或从“团队资源管理器”  的“更改”  页进行提交。
 
 ## <a name="step-1-4-examine-the-boilerplate-code"></a>步骤 1-4：检查样本代码
 
@@ -224,11 +224,11 @@ def hello(name, msg):
 
 ### <a name="question-can-visual-studio-generate-a-requirementstxt-file-from-a-virtual-environment-after-i-install-other-packages"></a>问：在我安装其他包后，Visual Studio 能否从虚拟环境生成 requirements.txt 文件？
 
-答：可以。 展开“Python 环境”  节点，右键单击虚拟环境，并选择“生成 requirements.txt”  命令。 在修改环境，并将对 requirements.txt 所做的更改连同依赖于该环境的任何其他代码更改提交给源代码管理时，建议定期使用此命令  。 如果在生成服务器上设置持续集成，应该在修改环境时生成文件并提交更改。
+答：能。 展开“Python 环境”  节点，右键单击虚拟环境，并选择“生成 requirements.txt”  命令。 在修改环境，并将对 requirements.txt 所做的更改连同依赖于该环境的任何其他代码更改提交给源代码管理时，建议定期使用此命令  。 如果在生成服务器上设置持续集成，应该在修改环境时生成文件并提交更改。
 
-## <a name="step-1-5-run-the-project"></a>步骤 1-5：运行该项目
+## <a name="step-1-5-run-the-project"></a>步骤 1-5：运行项目
 
-1. 在 Visual Studio 中，选择“调试” > “启动调试”(F5) 或使用工具栏上的“Web 服务器”按钮（所看到的浏览器可能会有所不同）     ：
+1. 在 Visual Studio 中，选择“调试” **“启动调试”(F5) 或使用工具栏上的“Web 服务器”按钮（所看到的浏览器可能会有所不同）**  >     ：
 
     ![Visual Studio 中的运行 Web 服务器工具栏按钮](media/tutorials-common/run-web-server-toolbar-button.png)
 
@@ -242,7 +242,7 @@ def hello(name, msg):
 
 ### <a name="question-whats-the-difference-between-using-the-debug-menu-commands-and-the-server-commands-on-the-projects-python-submenu"></a>问：在项目 Python 子菜单中使用“调试”菜单命令和服务器命令有何区别？
 
-答：除了“调试”菜单命令和工具栏按钮之外，还可以使用项目上下文菜单上的“Python” > “运行服务器”或“Python” > “运行调试服务器”命令来启动服务器      。 这两个命令都会打开一个控制台窗口，可以在其中看到运行服务器的本地 URL (localhost:port)。 但是，必须使用该 URL 手动打开浏览器，并且运行调试服务器不会自动启动 Visual Studio 调试器。 如果需要，稍后可以使用“调试”   > “附加到进程”  命令，将调试器附加到正在运行的进程。
+答：除了“调试”  菜单命令和工具栏按钮之外，还可以使用项目上下文菜单上的“Python”   > “运行服务器”  或“Python”   > “运行调试服务器”  命令来启动服务器。 这两个命令都会打开一个控制台窗口，可以在其中看到运行服务器的本地 URL (localhost:port)。 但是，必须使用该 URL 手动打开浏览器，并且运行调试服务器不会自动启动 Visual Studio 调试器。 如果需要，稍后可以使用“调试”   > “附加到进程”  命令，将调试器附加到正在运行的进程。
 
 ## <a name="next-steps"></a>后续步骤
 

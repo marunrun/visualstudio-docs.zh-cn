@@ -1,7 +1,7 @@
 ---
 title: 安装或升级问题疑难解答
 description: 有时，你难免遇到一些问题。 如果 Visual Studio 安装或升级失败，可在此页寻求帮助。
-ms.date: 09/13/2019
+ms.date: 03/23/2020
 ms.custom: seodec18
 ms.topic: troubleshooting
 helpviewer_keywords:
@@ -15,17 +15,17 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 9dfdf504378dafd7d71288cae1927dd8d6bb9e56
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.openlocfilehash: 97cc0dd72b54795342d8c4f66a90bbd1ae4a7272
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76114994"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233113"
 ---
 # <a name="troubleshoot-visual-studio-installation-and-upgrade-issues"></a>Visual Studio 安装和升级问题疑难解答
 
 > [!IMPORTANT]
-> 安装时遇到问题？ 我们可以为你提供帮助。 我们提供[**实时聊天**](https://visualstudio.microsoft.com/vs/support/#talktous)（仅英语）支持选项。
+> 安装时遇到问题？ 我们可以为你提供帮助。 我们提供[安装聊天](https://visualstudio.microsoft.com/vs/support/#talktous)（仅英语）支持选项  。
 
 本疑难解答指南包含可解决大多数安装问题的分步说明。
 

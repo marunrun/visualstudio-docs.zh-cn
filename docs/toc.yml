@@ -329,8 +329,12 @@
                   href: ide/reference/generate-constructor.md
                 - name: 生成解构函数
                   href: ide/reference/generate-deconstructor.md
+                - name: 添加显式强制转换
+                  href: ide/reference/add-explicit-cast.md
                 - name: 将参数添加到方法
                   href: ide/reference/add-parameter.md
+                - name: 生成参数
+                  href: ide/reference/generate-parameter.md
                 - name: 从构造函数生成私有字段
                   href: ide/reference/generate-private-field-from-constructor.md
                 - name: 生成替代
@@ -350,12 +354,16 @@
                 - name: 概述
                   displayName: refactoring
                   href: ide/refactoring-in-visual-studio.md
+                - name: 为所有参数添加 null 检查
+                  href: ide\reference\add-null-checks-for-parameters.md
                 - name: 更改方法签名
                   href: ide/reference/change-method-signature.md
                 - name: 将匿名类型转换为类
                   href: ide/reference/convert-anonymous-type-to-class.md
                 - name: 将匿名类型转换为元组
                   href: ide/reference/convert-anonymous-type-to-tuple.md
+                - name: 在自动属性和完整属性之间转换
+                  href: ide/reference/convert-between-auto-property-and-full-property.md
                 - name: 在 for 循环和 foreach 语句之间进行转换
                   href: ide/reference/convert-for-loop-to-foreach.md
                 - name: 在 Get 方法和属性之间进行转换
@@ -378,8 +386,6 @@
                   href: ide/reference/extract-method.md
                 - name: 提取本地函数
                   href: ide/reference/extract-local-function.md
-                - name: 生成参数
-                  href: ide/reference/generate-parameter.md
                 - name: 内联临时变量
                   href: ide/reference/inline-temporary-variable.md
                 - name: IntelliSense 完成未导入类型
@@ -1329,6 +1335,8 @@
           href: ide/user-permissions-and-visual-studio.md
         - name: Windows 信息保护 (WIP)
           href: ide/exempt-visual-studio-from-wip.md
+        - name: 联邦信息处理标准 (FIPS)
+          href: ide/fips-support-visual-studio.md
     - name: 双向语言输入
       href: ide/use-bidirectional-languages.md
     - name: Microsoft Help Viewer

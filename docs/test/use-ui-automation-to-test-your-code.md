@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f3bd667579d9ff0645e7dd2753278257a9796709
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: f333cc3409056739cef7c378d9815f10439ab37e
+ms.sourcegitcommit: 5d1b2895d3a249c6bea30eb12b0ad7c0f0862d85
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75585634"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80880359"
 ---
 # <a name="use-coded-ui-test-to-test-your-code"></a>使用编码的 UI 测试来测试代码
 
@@ -435,7 +435,12 @@ myWinCheckBox.Checked = true;
 
 ## <a name="whats-next"></a>后续步骤
 
+::: moniker range="vs-2017"
 **运行编码的 UI 测试的其他选项：** 可直接从 Visual Studio 运行编码的 UI 测试，如本主题前面所述。 此外，可以在 Microsoft 测试管理器中或使用 Azure Pipelines 运行自动 UI 测试。 与其他自动测试不同，当编码的 UI 测试为自动时，在运行时它们必须与桌面进行交互。
+::: moniker-end
+::: moniker range=">=vs-2019"
+**运行编码的 UI 测试的其他选项：** 可直接从 Visual Studio 运行编码的 UI 测试，如本主题前面所述。 此外，你可以使用 Azure Pipelines 运行自动 UI 测试。 与其他自动测试不同，当编码的 UI 测试为自动时，在运行时它们必须与桌面进行交互。
+::: moniker-end
 
 - [使用测试资源管理器运行单元测试](../test/run-unit-tests-with-test-explorer.md)
 
@@ -449,7 +454,7 @@ myWinCheckBox.Checked = true;
 
 - [扩展编码的 UI 测试和操作录制](../test/extending-coded-ui-tests-and-action-recordings-to-support-microsoft-excel.md)
 
-编码的 UI 测试通常用于自动化手动测试。 有关手动测试的详细信息，请参阅[使用 Microsoft 测试管理器运行手动测试](/azure/devops/test/mtm/run-manual-tests-with-microsoft-test-manager?view=vsts)。 有关自动测试的详细信息，请参阅 [Visual Studio 中的测试工具](../test/improve-code-quality.md)。
+编码的 UI 测试通常用于自动化手动测试。 有关自动测试的详细信息，请参阅 [Visual Studio 中的测试工具](../test/improve-code-quality.md)。
 
 ## <a name="see-also"></a>请参阅
 

@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 04b109bfa5741a5d4349f2d503bd1c821e19029d
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75588702"
 ---
 # <a name="how-to-view-existing-types-in-class-designer"></a>如何：在类设计器中查看现有类型
@@ -27,7 +27,7 @@ ms.locfileid: "75588702"
 
 你可以查看本地类型和引用类型。 本地类型存在于当前打开的项目中，是可读/写的。 被引用的类型存在于其他项目中或被引用程序集中，是只读的。
 
-若要在类图上设计新类型，请参阅[如何：使用类设计器创建类型](how-to-create-types.md)。
+若要设计类图上的新类型，请参阅[如何：使用类设计器创建类型](how-to-create-types.md)。
 
 ## <a name="to-see-types-in-a-project-on-a-class-diagram"></a>在类图上查看项目中的类型
 
@@ -61,7 +61,7 @@ ms.locfileid: "75588702"
 
 在“解决方案资源管理器”或“类视图”中，右键单击该项目并选择“视图”，然后选择“查看类图”     。 即会创建一个自动填充的类图。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [如何：查看类型之间的继承](how-to-view-inheritance-between-types.md)
 - [如何：自定义类图](how-to-customize-class-diagrams.md)

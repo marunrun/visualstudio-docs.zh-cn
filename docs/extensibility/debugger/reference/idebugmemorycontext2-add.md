@@ -1,5 +1,5 @@
 ---
-title: IDebugMemoryContext2::Add | Microsoft Docs
+title: IDebug内存上下文2：：添加 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -8,23 +8,23 @@ helpviewer_keywords:
 - IDebugMemoryContext2::Add method
 - Add method
 ms.assetid: 3c47e646-ce9e-4dd3-8f1a-6dbd3827d407
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c1cafbf22e51f867948491e2925c085bd387ea84
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: a21fa2ec6d48bb1d6bf17bbc0d2ebf0d90a25a9f
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66347091"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80727480"
 ---
 # <a name="idebugmemorycontext2add"></a>IDebugMemoryContext2::Add
-将指定的值添加到当前上下文，并返回新的上下文。
+将指定的值添加到当前上下文并返回新上下文。
 
 ## <a name="syntax"></a>语法
 
@@ -44,18 +44,18 @@ int Add(
 
 ## <a name="parameters"></a>参数
 `dwCount`\
-[in]要添加到当前上下文的值。
+[在]要添加到当前上下文的值。
 
 `ppMemCxt`\
-[out]返回一个新[IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)对象。
+[出]返回新的[IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)对象。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，返回`S_OK`;否则，返回错误代码。
 
 ## <a name="remarks"></a>备注
- 内存上下文是一个地址，因此将值添加到地址生成需要新的上下文接口的新地址。
+ 内存上下文是地址，因此向地址添加值会产生需要新上下文接口的新地址。
 
- 即使生成的地址是与此上下文关联的内存空间外，此方法必须始终会生成一个新的上下文。 唯一的例外是，如果可以为新的上下文不分配任何内存或`ppMemCxt`为空值 （这是错误）。
+ 此方法必须始终生成新上下文，即使生成的地址位于与此上下文关联的内存空间之外也是如此。 唯一的例外是，如果无法为新上下文分配内存，或者是否`ppMemCxt`为空值（这是一个错误）。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)

@@ -8,10 +8,10 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: 6720421fd5188688214665d85de682542b1c1357
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75595860"
 ---
 # <a name="add-a-parameter-to-a-method-using-a-quick-action"></a>使用快速操作向方法添加参数
@@ -22,11 +22,11 @@ ms.locfileid: "75595860"
 
 - Visual Basic
 
-**功能：** 便于用户根据使用情况，自动向方法添加参数。
+**用途：** 便于用户根据使用情况，自动向方法添加参数。
 
-**使用时机：** 需要向方法添加参数，并希望以适当方式自动声明它。
+**适用情况：** 需要向方法添加参数，并希望以适当方式自动声明它。
 
-操作原因：  虽然可以在调用方法前向方法声明添加参数，但此功能可根据方法调用自动添加参数。
+**原因：** 虽然可以在调用方法前向方法声明添加参数，但此功能可根据方法调用自动添加参数。
 
 ## <a name="how-to-use-it"></a>使用方法
 
@@ -46,6 +46,6 @@ ms.locfileid: "75595860"
 > [!NOTE]
 > 如果对相应方法有其他调用，可能会在使用此快速操作后看到错误消息，因为其他调用没有为新添加的形参指定实参。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [向构造函数添加参数](generate-constructor.md#addparameter)

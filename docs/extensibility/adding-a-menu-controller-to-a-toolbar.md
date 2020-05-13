@@ -1,5 +1,5 @@
 ---
-title: 将菜单控制器添加到工具栏 |Microsoft Docs
+title: 将菜单控制器添加到工具栏 |微软文档
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,39 +7,39 @@ helpviewer_keywords:
 - menus, adding menu controllers to toolbars
 - menu controllers, adding to toolbars
 ms.assetid: 6af9b0b4-037f-404c-bb40-aaa1970768ea
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: eaa53a9bf8d33ad145d75bdb2d72e6820f806711
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: d4dcb9e51f6633476a8f0eadea30da513e5ef760
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66349800"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80740328"
 ---
 # <a name="add-a-menu-controller-to-a-toolbar"></a>将菜单控制器添加到工具栏
-本演练基于[将工具栏添加到工具窗口](../extensibility/adding-a-toolbar-to-a-tool-window.md)演练，并演示如何将菜单控制器添加到工具窗口工具栏。 如下所示的步骤还可应用于在中创建工具栏[将工具栏添加](../extensibility/adding-a-toolbar.md)演练。
+本演练基于"[将工具栏添加到工具窗口](../extensibility/adding-a-toolbar-to-a-tool-window.md)演练"为基础，演示如何向工具窗口工具栏添加菜单控制器。 此处显示的步骤也可以应用于在["添加工具栏](../extensibility/adding-a-toolbar.md)演练"中创建的工具栏。
 
-菜单控制器是拆分控件。 左侧和右侧的菜单控制器显示上次使用的命令，并可以通过单击运行它。 右侧的菜单控制器是一个箭头，单击，将打开的其他命令的列表。 当单击上列表中，命令运行的命令，它取代了左侧和右侧的菜单控制器上的命令。 在这种方式，菜单控制器运行，类似于始终显示列表中的上次使用的命令的命令按钮。
+菜单控制器是拆分控件。 菜单控制器的左侧显示最后使用的命令，您可以通过单击该命令来运行它。 菜单控制器的右侧是一个箭头，单击时，将打开其他命令的列表。 单击列表中的命令时，该命令将运行，并替换菜单控制器左侧的命令。 这样，菜单控制器的操作就像一个命令按钮，该按钮始终显示列表中最后使用的命令。
 
-菜单控制器可以出现在菜单上，但它们最常使用工具栏上。
+菜单控制器可以出现在菜单上，但它们最常用于工具栏。
 
-## <a name="prerequisites"></a>系统必备
-从 Visual Studio 2015 开始，您并不安装 Visual Studio SDK 从下载中心获得。 它是作为 Visual Studio 安装程序中的可选功能包含在内。 此外可以在以后安装 VS SDK。 有关详细信息，请参阅[安装 Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md)。
+## <a name="prerequisites"></a>先决条件
+从 Visual Studio 2015 开始，您不会从下载中心安装 Visual Studio SDK。 它作为可选功能包含在可视化工作室设置中。 以后还可以安装 VS SDK。 有关详细信息，请参阅[安装可视化工作室 SDK](../extensibility/installing-the-visual-studio-sdk.md)。
 
 ## <a name="create-a-menu-controller"></a>创建菜单控制器
 
-1. 请按照中所述的过程[将工具栏添加到工具窗口](../extensibility/adding-a-toolbar-to-a-tool-window.md)若要创建一个工具窗口，有一个工具栏。
+1. 按照将[工具栏添加到工具窗口](../extensibility/adding-a-toolbar-to-a-tool-window.md)中描述的过程来创建具有工具栏的工具窗口。
 
-2. 在中*TWTestCommandPackage.vsct*，请转到符号部分。 在名为的 GuidSymbol 元素**guidTWTestCommandPackageCmdSet**，声明菜单控制器、 菜单控制器组和三个菜单项。
+2. 在*TWTest命令包.vsct 中*，转到符号部分。 在名为**guidTWTestCommandPackageCmdSet**的 GuidSymbol 元素中，声明菜单控制器、菜单控制器组和三个菜单项。
 
     ```xml
     <IDSymbol name="TestMenuController" value="0x1300" /><IDSymbol name="TestMenuControllerGroup" value="0x1060" /><IDSymbol name="cmdidMCItem1" value="0x0130" /><IDSymbol name="cmdidMCItem2" value="0x0131" /><IDSymbol name="cmdidMCItem3" value="0x0132" />
     ```
 
-3. 菜单部分中的最后一个菜单项之后, 定义为菜单的菜单控制器。
+3. 在"菜单"部分中，在最后一个菜单条目之后，将菜单控制器定义为菜单。
 
     ```xml
     <Menu guid="guidTWTestCommandPackageCmdSet" id="TestMenuController" priority="0x0100" type="MenuController">
@@ -54,9 +54,9 @@ ms.locfileid: "66349800"
     </Menu>
     ```
 
-    `TextChanges`和`TextIsAnchorCommand`标志必须为包括在内，以启用菜单控制器，以反映所选的最后一个命令。
+    必须`TextChanges`包含`TextIsAnchorCommand`和 标志才能使菜单控制器反映最后一个选定的命令。
 
-4. 在组部分，最后一个组条目后, 添加菜单控制器组。
+4. 在最后一个组条目之后的"组"部分中，添加菜单控制器组。
 
     ```xml
     <Group guid="guidTWTestCommandPackageCmdSet" id="TestMenuControllerGroup" priority="0x000">
@@ -64,9 +64,9 @@ ms.locfileid: "66349800"
     </Group>
     ```
 
-    通过设置与父菜单控制器，此组中置于任何命令显示在菜单控制器。 `priority`省略属性，其中将其设置为默认值 0，因为它是菜单控制器上的唯一组。
+    通过将菜单控制器设置为父级，在此组中放置的任何命令都会显示在菜单控制器中。 省略`priority`该属性，该属性将其设置为默认值 0，因为它是菜单控制器上的唯一组。
 
-5. 在按钮部分中之后的最后一个按钮条目中，, 为每个菜单项添加一个按钮元素。
+5. 在最后一个按钮条目之后，在"按钮"部分中，为每个菜单项添加一个按钮元素。
 
     ```xml
     <Button guid="guidTWTestCommandPackageCmdSet" id="cmdidMCItem1" priority="0x0000" type="Button">
@@ -98,19 +98,19 @@ ms.locfileid: "66349800"
     </Button>
     ```
 
-6. 此时，您可以查看菜单控制器。 生成项目并启动调试。 应会看到的实验实例。
+6. 此时，您可以查看菜单控制器。 生成项目并启动调试。 您应该会看到实验实例。
 
-   1. 上**视图 / 其他 Windows**菜单中，打开**测试 ToolWindow**。
+   1. 在 **"查看/其他窗口"** 菜单上，打开 **"测试工具窗口**"。
 
-   2. 在工具窗口的工具栏上显示菜单控制器。
+   2. 菜单控制器将显示在工具窗口中的工具栏上。
 
-   3. 单击以查看可能的三个命令的菜单控制器右侧的箭头。
+   3. 单击菜单控制器右侧的箭头以查看三个可能的命令。
 
-      请注意，当您单击的命令，菜单控制器的标题更改以显示该命令。 在下一部分中，我们将添加代码以激活这些命令。
+      请注意，当您单击命令时，菜单控制器的标题将更改以显示该命令。 在下一节中，我们将添加代码来激活这些命令。
 
 ## <a name="implement-the-menu-controller-commands"></a>实现菜单控制器命令
 
-1. 在中*TWTestCommandPackageGuids.cs*，现有的命令 Id 后添加三个菜单项的命令 Id。
+1. 在*TWTestCommandPackageGuids.cs*中，在现有命令指示后为三个菜单项添加命令。"选项"。
 
     ```csharp
     public const int cmdidMCItem1 = 0x130;
@@ -118,13 +118,13 @@ ms.locfileid: "66349800"
     public const int cmdidMCItem3 = 0x132;
     ```
 
-2. 在中*TWTestCommand.cs*，在顶部添加以下代码`TWTestCommand`类。
+2. 在*TWTestCommand.cs*中，在`TWTestCommand`类的顶部添加以下代码。
 
     ```csharp
     private int currentMCCommand; // The currently selected menu controller command
     ```
 
-3. TWTestCommand 构造函数，在最后一个调用中`AddCommand`方法中，添加代码以将每个命令通过同一处理程序的事件路由。
+3. 在 TWTestCommand 构造函数中，在上次调用`AddCommand`方法后，添加代码以通过相同的处理程序路由每个命令的事件。
 
     ```csharp
     for (int i = TWTestCommandPackageGuids.cmdidMCItem1; i <=
@@ -145,7 +145,7 @@ ms.locfileid: "66349800"
     }
     ```
 
-4. 添加到事件处理程序**TWTestCommand**类，以将标记为已检查所选的命令。
+4. 将事件处理程序添加到**TWTestCommand**类，将所选命令标记为已选中。
 
     ```csharp
     private void OnMCItemQueryStatus(object sender, EventArgs e)
@@ -158,7 +158,7 @@ ms.locfileid: "66349800"
     }
     ```
 
-5. 添加的事件处理程序显示一个 MessageBox，当用户选择菜单控制器上的命令：
+5. 添加在用户选择菜单控制器上的命令时显示 MessageBox 的事件处理程序：
 
     ```csharp
     private void OnMCItemClicked(object sender, EventArgs e)
@@ -210,18 +210,18 @@ ms.locfileid: "66349800"
 
 ## <a name="testing-the-menu-controller"></a>测试菜单控制器
 
-1. 生成项目并启动调试。 应会看到的实验实例。
+1. 生成项目并启动调试。 您应该会看到实验实例。
 
-2. 打开**测试 ToolWindow**上**视图 / 其他 Windows**菜单。
+2. 在 **"查看/其他窗口"** 菜单上打开**测试工具窗口**。
 
-    菜单控制器中的工具窗口的工具栏中将出现并显示**MC 项 1**。
+    菜单控制器显示在工具窗口中的工具栏中，并显示 MC**项目 1**。
 
 3. 单击箭头左侧的菜单控制器按钮。
 
-    应会看到三个项，其中第一个已选中，并有其图标周围突出显示的框。 单击**MC 项 3**。
+    您应该会看到三个项目，其中第一个项目被选中，并在其图标周围有一个突出显示框。 单击**MC 项目 3**。
 
-    与消息会出现一个对话框**选择菜单控制器项 3**。 请注意，该消息对应于菜单控制器按钮上的文本。 菜单控制器按钮现在将显示**MC 项 3**。
+    将显示一个对话框，其中包含 **"您选择菜单控制器项目 3**"。 请注意，该消息对应于菜单控制器按钮上的文本。 菜单控制器按钮现在显示**MC 项目 3**。
 
 ## <a name="see-also"></a>请参阅
-- [将工具栏添加到工具窗口](../extensibility/adding-a-toolbar-to-a-tool-window.md)
+- [向工具窗口添加工具栏](../extensibility/adding-a-toolbar-to-a-tool-window.md)
 - [添加工具栏](../extensibility/adding-a-toolbar.md)

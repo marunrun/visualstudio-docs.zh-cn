@@ -11,10 +11,10 @@ dev_langs:
 ms.workload:
 - dotnet
 ms.openlocfilehash: 031fbe22ec61837d489df7a6af923ef0cd2454c7
-ms.sourcegitcommit: 260d093d2287ba791f28bdc7103493beabf80b2e
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77519325"
 ---
 # <a name="extract-local-function-refactoring"></a>提取本地函数重构
@@ -27,15 +27,15 @@ ms.locfileid: "77519325"
 
 **使用时机：** 需要从本地函数调用某些方法中现有的代码片段时。
 
-操作原因：可以复制/粘贴该代码，但这样会导致重复。 更好的解决方案是将此片段重构为其自己的本地函数。
+操作原因：  可以复制/粘贴该代码，但这样会导致重复。 更好的解决方案是将此片段重构为其自己的本地函数。
 
 ## <a name="how-to"></a>操作说明
 
 1. 突出显示要提取的代码。
 
-2. 按“Ctrl”+**。** 触发“快速操作和重构”菜单。 
+2. 按“Ctrl”  + **。** 触发“快速操作和重构”  菜单。 
 
-3. 选择“提取本地函数”。
+3. 选择“提取本地函数”  。
 
     ![提取本地函数](media/extract-local-function.png)
 

@@ -16,12 +16,13 @@ ms.assetid: a3c0cc76-e3ce-435c-a1af-a6318b5a4dbe
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 monikerRange: vs-2017
-ms.openlocfilehash: 3db18da6e09b3206d81f5600d54700f912a411e8
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+open_to_public_contributors: false
+ms.openlocfilehash: 1e24f90f24921bee9a6132ccc047c0b9da37fc90
+ms.sourcegitcommit: 22deb247ad951e4971f27fdab413b158415d0584
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76113905"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81276287"
 ---
 # <a name="visual-studio-desktop-express-component-directory"></a>Visual Studio Desktop Express 组件目录
 
@@ -42,11 +43,11 @@ ms.locfileid: "76113905"
 
 **ID：** Microsoft.VisualStudio.Workload.WDExpress
 
-**描述：** 通过语法感知代码编辑、源代码管理和工作项管理，生成原生和托管应用，如 WPF、WinForms 和 Win32。 现已支持 C#、Visual Basic 和 Visual C++。
+**说明：** 通过语法感知代码编辑、源代码管理和工作项管理，生成原生和托管应用，如 WPF、WinForms 和 Win32。 现已支持 C#、Visual Basic 和 Visual C++。
 
 ### <a name="components-included-by-this-workload"></a>此工作负载所包含的组件
 
-组件 ID | “属性” | Version | 依赖项类型
+组件 ID | 名称 | Version | 依赖项类型
 --- | --- | --- | ---
 Microsoft.Component.ClickOnce | ClickOnce 发布 | 15.8.27825.0 | 必需
 Microsoft.Component.HelpViewer | 帮助查看器 | 15.6.27323.2 | 必需
@@ -87,13 +88,13 @@ Microsoft.VisualStudio.Component.Windows10SDK.17134 | Windows 10 SDK (10.0.17134
 
 这些组件不随附于任何工作负载，但可选择作为单个组件。
 
-组件 ID | “属性” | Version
+组件 ID | 名称 | Version
 --- | --- | ---
-n/a | 不可用 | n/a
+n/a | n/a | n/a
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 * [Visual Studio 工作负荷和组件 ID](workload-and-component-ids.md)
 * [Visual Studio 管理员指南](visual-studio-administrator-guide.md)

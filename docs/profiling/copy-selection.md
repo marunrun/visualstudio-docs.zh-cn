@@ -13,14 +13,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: ea96fe521afe713b1eafd59390047bfdb427f6fe
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62553222"
 ---
 # <a name="copy-selection"></a>复制选择
-若要从“报告”选项卡复制整个调用堆栈，请单击“复制”。 然后，可以在任何支持该操作的程序中粘贴该调用堆栈。
+若要从“报告”选项卡复制整个调用堆栈，请单击“复制”  。 然后，可以在任何支持该操作的程序中粘贴该调用堆栈。
 
-## <a name="see-also"></a>请参阅
-- [线程视图](../profiling/threads-view-parallel-performance.md)
+## <a name="see-also"></a>另请参阅
+- [“线程”视图](../profiling/threads-view-parallel-performance.md)

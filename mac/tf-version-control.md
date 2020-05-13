@@ -7,10 +7,10 @@ ms.date: 09/02/2019
 ms.technology: vs-ide-general
 ms.assetid: 52D3D26A-4D01-4FD1-AAA1-AE7D7BD39746
 ms.openlocfilehash: e56aec03aabe818731c65acb30eafcc18f170ac3
-ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "73714514"
 ---
 # <a name="does-visual-studio-for-mac-support-team-foundation-version-control"></a>Visual Studio for Mac 是否支持 Team Foundation 版本控制？
@@ -32,11 +32,11 @@ Git 在 Visual Studio for Mac 中受支持，并且是托管在 Team Foundation 
 * 选项 1. [对于图形化 UI，请使用 Visual Studio Code 和 Azure Repos 扩展](#use-visual-studio-code-and-the-azure-repos-extension)
 * 选项 2. [使用 Team Explorer Everywhere 命令行客户端 (TEE-CLC) 连接到存储库](#connecting-using-the-team-explorer-everywhere-command-line-client)
 
-### 选项 1. <a id="use-visual-studio-code-and-the-azure-repos-extension"></a> 使用 Visual Studio Code 和 Azure Repos 扩展
+### <a name="option-1--use-visual-studio-code-and-the-azure-repos-extension"></a>选项 1. <a id="use-visual-studio-code-and-the-azure-repos-extension"></a> 使用 Visual Studio Code 和 Azure Repos 扩展
 
 如果要使用图形界面来管理版本控制中的文件，面向 Visual Studio Code 的 Azure Repos 扩展将提供来自 Microsoft 的支持的解决方案。 若要开始，请下载 [Visual Studio Code](https://code.visualstudio.com)，然后了解如何[配置 Azure Repos 扩展](https://marketplace.visualstudio.com/items?itemName=ms-vsts.team)。
 
-### 选项 2. <a id="connecting-using-the-team-explorer-everywhere-command-line-client"></a> 使用 Team Explorer Everywhere 命令行客户端进行连接
+### <a name="option-2--connecting-using-the-team-explorer-everywhere-command-line-client"></a>选项 2. <a id="connecting-using-the-team-explorer-everywhere-command-line-client"></a> 使用 Team Explorer Everywhere 命令行客户端进行连接
 
 > [!IMPORTANT]
 > 根据 Team Explorer Everywhere README 的说明，此项目[不再维护](https://github.com/microsoft/team-explorer-everywhere)。
@@ -106,6 +106,6 @@ tf checkin -comment:"Replaced 'Northwand' typos with the correct word Northwind"
 
 `tf help`
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用 Visual Studio 开发和共享 TFVC 中的代码 (Windows)](/azure/devops/repos/tfvc/share-your-code-in-tfvc-vs)

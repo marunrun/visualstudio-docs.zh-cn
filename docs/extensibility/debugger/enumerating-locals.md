@@ -1,47 +1,47 @@
 ---
-title: 枚举局部 |Microsoft Docs
+title: 枚举局部变量 |微软文档
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - debugging [Debugging SDK], enumerating locals
 - expression evaluation, enumerating locals
 ms.assetid: 254a88e7-d3a7-447a-bd0c-8985e73d85cf
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 32700d32b65503cf696b180793e0d9d471571b0a
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 540c062d3d4f73a5468b39629fc277e6fd10df7d
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66315462"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80738869"
 ---
 # <a name="enumerate-locals"></a>枚举局部变量
 > [!IMPORTANT]
-> 在 Visual Studio 2015 中，这种方式实现表达式计算器已弃用。 有关实现 CLR 表达式计算器的信息，请参阅[CLR 表达式计算器](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators)并[托管表达式计算器示例](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)。
+> 在 Visual Studio 2015 中，这种实现表达式赋值器的方式被弃用。 有关实现 CLR 表达式赋值器的信息，请参阅[CLR 表达式赋值器](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators)和[托管表达式赋值器示例](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)。
 
-Visual Studio 何时可以来填充**局部变量**窗口中，它将调用[EnumChildren](../../extensibility/debugger/reference/idebugproperty2-enumchildren.md)上[IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md)从返回的对象[GetMethodProperty](../../extensibility/debugger/reference/idebugexpressionevaluator-getmethodproperty.md) (请参阅[实现 GetMethodProperty](../../extensibility/debugger/implementing-getmethodproperty.md))。 `IDebugProperty2::EnumChildren` 返回[IEnumDebugPropertyInfo2](../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md)对象。
+当 Visual Studio 准备好填充**局部变量**窗口时，它将调用从[GetMethodProperty](../../extensibility/debugger/reference/idebugexpressionevaluator-getmethodproperty.md)返回的[IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md)对象上的[枚举子](../../extensibility/debugger/reference/idebugproperty2-enumchildren.md)（请参阅[实现 GetMethod 属性](../../extensibility/debugger/implementing-getmethodproperty.md)）。 `IDebugProperty2::EnumChildren`返回[IEnumDebug属性信息2](../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md)对象。
 
-实现`IDebugProperty2::EnumChildren`执行下列任务：
+实现`IDebugProperty2::EnumChildren`执行以下任务：
 
-1. 可确保这表示一种方法。
+1. 确保这表示一个方法。
 
-2. 使用`guidFilter`参数以确定哪种方法要对其调用[IDebugMethodField](../../extensibility/debugger/reference/idebugmethodfield.md)对象。 如果`guidFilter`等于：
+2. 使用`guidFilter`参数确定在[IDebugMethodField](../../extensibility/debugger/reference/idebugmethodfield.md)对象上调用的方法。 如果`guidFilter`等于：
 
-    1. `guidFilterLocals`调用[EnumLocals](../../extensibility/debugger/reference/idebugmethodfield-enumlocals.md)来获取[IEnumDebugFields](../../extensibility/debugger/reference/ienumdebugfields.md)对象。
+    1. `guidFilterLocals`，调用[枚举本地变量](../../extensibility/debugger/reference/idebugmethodfield-enumlocals.md)以获取[IEnumDebugFields](../../extensibility/debugger/reference/ienumdebugfields.md)对象。
 
-    2. `guidFilterArgs`调用[EnumArguments](../../extensibility/debugger/reference/idebugmethodfield-enumarguments.md)若要获取`IEnumDebugFields`对象。
+    2. `guidFilterArgs`，调用[Enum 参数](../../extensibility/debugger/reference/idebugmethodfield-enumarguments.md)以获取`IEnumDebugFields`对象。
 
-    3. `guidFilterLocalsPlusArgs`从结果进行组合的枚举合成`IDebugMethodField::EnumLocals`和`IDebugMethodField::EnumArguments`。 类表示此合成`CEnumMethodField`。
+    3. `guidFilterLocalsPlusArgs`，合成一个枚举，该枚举将`IDebugMethodField::EnumLocals``IDebugMethodField::EnumArguments`和 中的结果合并在一起。 此合成由类`CEnumMethodField`表示。
 
-3. 实例化一个类 (称为`CEnumPropertyInfo`在此示例中)，它实现`IEnumDebugPropertyInfo2`接口并包含`IEnumDebugFields`对象。
+3. 实例化实现`IEnumDebugPropertyInfo2`接口并包含`IEnumDebugFields`对象的类`CEnumPropertyInfo`（在此示例中称为）。
 
-4. 返回`IEnumDebugProperty2Info2`接口从`CEnumPropertyInfo`对象。
+4. 从`IEnumDebugProperty2Info2``CEnumPropertyInfo`对象返回接口。
 
 ## <a name="managed-code"></a>托管代码
-此示例演示一种实现`IDebugProperty2::EnumChildren`在托管代码中。
+此示例显示了托管代码中的`IDebugProperty2::EnumChildren`实现。
 
 ```csharp
 namespace EEMC
@@ -119,8 +119,8 @@ namespace EEMC
 }
 ```
 
-## <a name="unmanaged-code"></a>非托管的代码
- 此示例演示一种实现`IDebugProperty2::EnumChildren`非托管代码中。
+## <a name="unmanaged-code"></a>非托管代码
+ 此示例显示了非托管代码中的`IDebugProperty2::EnumChildren`实现。
 
 ```cpp
 STDMETHODIMP CFieldProperty::EnumChildren(
@@ -246,6 +246,6 @@ STDMETHODIMP CFieldProperty::EnumChildren(
 ```
 
 ## <a name="see-also"></a>请参阅
-- [局部的实现示例](../../extensibility/debugger/sample-implementation-of-locals.md)
-- [实现 GetMethodProperty](../../extensibility/debugger/implementing-getmethodproperty.md)
+- [局部变量的样本实现](../../extensibility/debugger/sample-implementation-of-locals.md)
+- [实现 GetMethod 属性](../../extensibility/debugger/implementing-getmethodproperty.md)
 - [评估上下文](../../extensibility/debugger/evaluation-context.md)

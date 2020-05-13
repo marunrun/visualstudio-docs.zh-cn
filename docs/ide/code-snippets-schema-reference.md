@@ -1,6 +1,6 @@
 ---
 title: 代码片段架构参考
-ms.date: 02/25/2019
+ms.date: 03/31/2020
 ms.topic: reference
 helpviewer_keywords:
 - schema reference [Visual Studio]
@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 22f84fbe5188e74acbf24256444ad11dd9c64347
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 867aac31f1515136e3aa9f0a6f171ec425d90cf7
+ms.sourcegitcommit: ce3d0728ec1063ab548dac71c8eaf26d20450acc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75585426"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80472792"
 ---
 # <a name="code-snippets-schema-reference"></a>代码片段架构参考
 
@@ -235,7 +235,7 @@ $selected$ is a great color. I love $selected$.
 指定当 Visual Studio 中的文本或对象收到焦点时要执行的函数。
 
 > [!NOTE]
-> 仅 C# 代码片段中支持 `Function` 元素。
+> 并非所有语言都支持 `function` 元素。 有关可用的函数，请参阅特定于语言的文档。
 
 ```xml
 <Function>

@@ -7,12 +7,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: corob-msft
-ms.openlocfilehash: 8a71b6d406b7507930a5d1a7ce593a296220d5a6
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+ms.openlocfilehash: 16ea629312237dd859e9eb1aad21b9b219de7229
+ms.sourcegitcommit: 5ab22b8601db9c420691f8e57abe140e837aa720
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2020
-ms.locfileid: "77278650"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82109424"
 ---
 # <a name="microsoftvisualstudiotesttoolscppunittestframework-api-reference"></a>Microsoft.VisualStudio.TestTools.CppUnitTestFramework API 参考
 
@@ -22,7 +22,7 @@ ms.locfileid: "77278650"
 
 头文件和 lib 路径会在本机测试项目中自动配置。
 
-## <a name="In_this_topic"></a> 在本主题中
+## <a name="in-this-topic"></a><a name="In_this_topic"></a> 在本主题中
 
 [CppUnitTest.h](#cppUnitTest_h)
 
@@ -94,9 +94,9 @@ ms.locfileid: "77278650"
 
   - [用法示例](#example)
 
-## <a name="cppUnitTest_h"></a> CppUnitTest.h
+## <a name="cppunittesth"></a><a name="cppUnitTest_h"></a> CppUnitTest.h
 
-### <a name="create_test_classes_and_methods"></a> 创建测试类和方法
+### <a name="create-test-classes-and-methods"></a><a name="create_test_classes_and_methods"></a> 创建测试类和方法
 
 ```cpp
 TEST_CLASS(className)
@@ -113,9 +113,9 @@ TEST_METHOD(methodName)
 
 将 methodName  定义为测试方法。 `TEST_METHOD` 必须在该方法的类的范围内声明。
 
-### <a name="Initialize_and_cleanup"></a> 初始化和清理
+### <a name="initialize-and-cleanup"></a><a name="Initialize_and_cleanup"></a> 初始化和清理
 
-#### <a name="test_methods"></a> 测试方法
+#### <a name="test-methods"></a><a name="test_methods"></a> 测试方法
 
 ```cpp
 TEST_METHOD_INITIALIZE(methodName)
@@ -135,7 +135,7 @@ TEST_METHOD_CLEANUP(methodName)
 
 将 methodName  定义为在运行每个测试方法之后运行的方法。 `TEST_METHOD_CLEANUP` 只能在测试类中定义一次，且必须在测试类的范围内定义。
 
-#### <a name="test_classes"></a> 测试类
+#### <a name="test-classes"></a><a name="test_classes"></a> 测试类
 
 ```cpp
 TEST_CLASS_INITIALIZE(methodName)
@@ -155,7 +155,7 @@ TEST_CLASS_CLEANUP(methodName)
 
 将 methodName  定义为在创建每个测试方法之后运行的方法。 `TEST_CLASS_CLEANUP` 只能在测试类中定义一次，且必须在测试类的范围内定义。
 
-#### <a name="test_modules"></a> 测试模块
+#### <a name="test-modules"></a><a name="test_modules"></a> 测试模块
 
 ```cpp
 TEST_MODULE_INITIALIZE(methodName)
@@ -172,9 +172,9 @@ TEST_MODULE_CLEANUP(methodName)
 
 定义在卸载模块时运行的方法 methodName  。 `TEST_MODULE_CLEANUP` 只能在测试模块中定义一次，且必须在命名空间范围内声明。
 
-### <a name="create_test_attributes"></a> 创建测试属性
+### <a name="create-test-attributes"></a><a name="create_test_attributes"></a> 创建测试属性
 
-#### <a name="test_method_attributes"></a> 测试方法属性
+#### <a name="test-method-attributes"></a><a name="test_method_attributes"></a> 测试方法属性
 
 ```cpp
 BEGIN_TEST_METHOD_ATTRIBUTE(testMethodName)
@@ -187,7 +187,7 @@ END_TEST_METHOD_ATTRIBUTE()
 
 `TEST_METHOD_ATTRIBUTE` 宏定义一个具有名称 attributeName  和值 attributeValue  的属性。
 
-#### <a name="test_class_attributes"></a> 测试类属性
+#### <a name="test-class-attributes"></a><a name="test_class_attributes"></a> 测试类属性
 
 ```cpp
 BEGIN_TEST_CLASS_ATTRIBUTE(testClassName)
@@ -200,7 +200,7 @@ END_TEST_CLASS_ATTRIBUTE()
 
 `TEST_CLASS_ATTRIBUTE` 宏定义一个具有名称 attributeName  和值 attributeValue  的属性。
 
-#### <a name="test_module_attributes"></a> 测试模块属性
+#### <a name="test-module-attributes"></a><a name="test_module_attributes"></a> 测试模块属性
 
 ```cpp
 BEGIN_TEST_MODULE_ATTRIBUTE(testModuleName)
@@ -213,7 +213,7 @@ END_TEST_MODULE_ATTRIBUTE()
 
 `TEST_MODULE_ATTRIBUTE` 宏定义一个具有名称 attributeName  和值 attributeValue  的属性。
 
-#### <a name="pre_defined_attributes"></a> 预定义属性
+#### <a name="pre-defined-attributes"></a><a name="pre_defined_attributes"></a> 预定义属性
 
 提供这些预定义的属性宏，以便为常见情况提供便利。 它们可以代替上述宏 `TEST_METHOD_ATTRIBUTE`。
 
@@ -247,11 +247,11 @@ TEST_IGNORE()
 
 定义一个具有名称 `Ignore` 和属性值 `true` 的 `TEST_METHOD_ATTRIBUTE`。
 
-## <a name="cppUnitTestAssert_h"></a> CppUnitTestAssert.h
+## <a name="cppunittestasserth"></a><a name="cppUnitTestAssert_h"></a> CppUnitTestAssert.h
 
-### <a name="general_asserts"></a> 常规断言
+### <a name="general-asserts"></a><a name="general_asserts"></a> 常规断言
 
-#### <a name="general_are_equal"></a> 相等
+#### <a name="are-equal"></a><a name="general_are_equal"></a> 相等
 验证两个对象是否相等
 
 ```cpp
@@ -307,7 +307,7 @@ static void Assert::AreEqual(
     const __LineInfo* pLineInfo = NULL)
 ```
 
-#### <a name="general_are_not_equal"></a> 不相等
+#### <a name="are-not-equal"></a><a name="general_are_not_equal"></a> 不相等
 验证两个双精度值是否不相等
 
 ```cpp
@@ -363,7 +363,7 @@ static void Assert::AreNotEqual(
     const __LineInfo* pLineInfo = NULL)
 ```
 
-#### <a name="general_are_same"></a> 相同
+#### <a name="are-same"></a><a name="general_are_same"></a> 相同
 验证两个引用是否引用相同对象实例（标识）。
 
 ```cpp
@@ -375,7 +375,7 @@ static void Assert::AreSame(
     const __LineInfo* pLineInfo = NULL)
 ```
 
-#### <a name="general_are_not_same"></a> 不相同
+#### <a name="are-not-same"></a><a name="general_are_not_same"></a> 不相同
 验证两个引用是否不引用相同对象实例（标识）。
 
 ```cpp
@@ -387,7 +387,7 @@ static void Assert::AreNotSame (
     const __LineInfo* pLineInfo = NULL)
 ```
 
-#### <a name="general_is_null"></a> 为 Null
+#### <a name="is-null"></a><a name="general_is_null"></a> 为 Null
 验证指针是否为 NULL。
 
 ```cpp
@@ -398,7 +398,7 @@ static void Assert::IsNull(
     const __LineInfo* pLineInfo = NULL)
 ```
 
-#### <a name="general_is_not_null"></a> 不为 Null
+#### <a name="is-not-null"></a><a name="general_is_not_null"></a> 不为 Null
 验证指针是否不为 NULL
 
 ```cpp
@@ -409,7 +409,7 @@ static void Assert::IsNotNull(
     const __LineInfo* pLineInfo = NULL)
 ```
 
-#### <a name="general_is_True"></a> 为 True
+#### <a name="is-true"></a><a name="general_is_True"></a> 为 True
 验证条件是否为 true
 
 ```cpp
@@ -419,7 +419,7 @@ static void Assert::IsTrue(
     const __LineInfo* pLineInfo = NULL)
 ```
 
-#### <a name="general_is_false"></a> 为 False
+#### <a name="is-false"></a><a name="general_is_false"></a> 为 False
 验证条件是否为 false
 
 ```cpp
@@ -429,7 +429,7 @@ static void Assert::IsFalse(
     const __LineInfo* pLineInfo = NULL)
 ```
 
-#### <a name="general_Fail"></a> 失败
+#### <a name="fail"></a><a name="general_Fail"></a> 失败
 强制测试用例结果为失败
 
 ```cpp
@@ -438,9 +438,9 @@ static void Assert::Fail(
     const __LineInfo* pLineInfo = NULL)
 ```
 
-### <a name="winrt_asserts"></a> Windows 运行时断言
+### <a name="windows-runtime-asserts"></a><a name="winrt_asserts"></a> Windows 运行时断言
 
-#### <a name="winrt_are_equal"></a> 相等
+#### <a name="are-equal"></a><a name="winrt_are_equal"></a> 相等
 验证两个 Windows 运行时指针是否相等。
 
 ```cpp
@@ -463,7 +463,7 @@ static void Assert::AreEqual(
     const __LineInfo* pLineInfo= nullptr)
 ```
 
-#### <a name="winrt_are_same"></a> 相同
+#### <a name="are-same"></a><a name="winrt_are_same"></a> 相同
 验证两个 Windows 运行时引用是否引用相同对象。
 
 ```cpp
@@ -475,7 +475,7 @@ static void Assert::AreSame(
     const __LineInfo* pLineInfo= nullptr)
 ```
 
-#### <a name="winrt_are_not_equal"></a> 不相等
+#### <a name="are-not-equal"></a><a name="winrt_are_not_equal"></a> 不相等
 验证两个 Windows 运行时指针是否不相等。
 
 ```cpp
@@ -498,7 +498,7 @@ static void Assert::AreNotEqual(
     const __LineInfo* pLineInfo= nullptr)
 ```
 
-#### <a name="winrt_are_not_same"></a> 不相同
+#### <a name="are-not-same"></a><a name="winrt_are_not_same"></a> 不相同
 验证两个 Windows 运行时引用是否不引用相同对象。
 
 ```cpp
@@ -510,7 +510,7 @@ static void Assert::AreNotSame(
     const __LineInfo* pLineInfo= nullptr)
 ```
 
-#### <a name="winrt_is_null"></a> 为 Null
+#### <a name="is-null"></a><a name="winrt_is_null"></a> 为 Null
 验证 Windows 运行时指针是否为 nullptr。
 
 ```cpp
@@ -521,7 +521,7 @@ static void Assert::IsNull(
     const __LineInfo* pLineInfo= nullptr)
 ```
 
-#### <a name="winrt_is_not_null"></a> 不为 Null
+#### <a name="is-not-null"></a><a name="winrt_is_not_null"></a> 不为 Null
 验证 Windows 运行时指针是否不为 nullptr。
 
 ```cpp
@@ -532,9 +532,9 @@ static void Assert::IsNotNull(
     const __LineInfo* pLineInfo= nullptr)
 ```
 
-### <a name="exception_asserts"></a> 异常断言
+### <a name="exception-asserts"></a><a name="exception_asserts"></a> 异常断言
 
-#### <a name="expect_exception"></a> 预期异常
+#### <a name="expect-exception"></a><a name="expect_exception"></a> 预期异常
 验证函数是否会引发异常：
 
 ```cpp
@@ -555,12 +555,12 @@ template<typename _EXPECTEDEXCEPTION, typename _RETURNTYPE>
     const __LineInfo* pLineInfo = NULL)
 ```
 
-## <a name="cppunittestlogger_h"></a> CppUnitTestLogger.h
+## <a name="cppunittestloggerh"></a><a name="cppunittestlogger_h"></a> CppUnitTestLogger.h
 
-### <a name="logger"></a> 记录器
+### <a name="logger"></a><a name="logger"></a> 记录器
 Logger 类包含要写入到输出窗口  的静态方法。
 
-### <a name="write_message"></a> 编写消息
+### <a name="write-message"></a><a name="write_message"></a> 编写消息
 将字符串写入到输出窗口 
 
 ```cpp
@@ -571,7 +571,7 @@ static void Logger::WriteMessage(const wchar_t* message)
 static void Logger::WriteMessage(const char* message)
 ```
 
-## <a name="example"></a> 示例
+## <a name="example"></a><a name="example"></a> 示例
 此代码是一个 VSCppUnit 用法示例。 它包含属性元数据、装置、具有断言的单元测试以及自定义日志记录的示例。
 
 ```cpp

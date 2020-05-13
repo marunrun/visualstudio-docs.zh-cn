@@ -1,5 +1,5 @@
 ---
-title: IDebugCoreServer3::EnableAutoAttach | Microsoft Docs
+title: IDebugCoreServer3：：启用自动连接 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugCoreServer3::EnableAutoAttach
 ms.assetid: 06aa633b-263b-4e08-8844-9a52d5120b94
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 9eb8beed7f32e9c6fb64212f73a41a35544259bb
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: d529bb80f79a3f2972e9349a2679bb528cc10463
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66326977"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80732912"
 ---
 # <a name="idebugcoreserver3enableautoattach"></a>IDebugCoreServer3::EnableAutoAttach
-使指定的调试引擎自动附加。
+启用指定调试引擎的自动连接。
 
 ## <a name="syntax"></a>语法
 
@@ -47,22 +47,22 @@ int EnableAutoAttach(
 
 ## <a name="parameters"></a>参数
 `rgguidSpecificEngines`\
-[in]Guid 的数组，每种调试引擎将标记为自动附加。
+[在]每个调试引擎的 GUID 数组，以标记为自动附加。
 
 `celtSpecificEngines`\
-[in]中指定的引擎数`rgguidSpecificEngines`。
+[在]中`rgguidSpecificEngines`指定的引擎数。
 
 `pszStartPageUrl`\
-[in]要使用自动附加时的起始 URL。
+[在]自动附加时要使用的起始 URL。
 
 `pbstrSessionID`\
-[out]已自动附加的会话 ID。
+[出]自动连接的会话的 ID。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则返回错误代码。 一个错误代码是`E_AUTO_ATTACH_NOT_REGISTERED`，指示尚未注册 auto-attach 类工厂。
+ 如果成功，返回`S_OK`;否则返回错误代码。 一个错误代码是`E_AUTO_ATTACH_NOT_REGISTERED`，它指示自动附加类工厂尚未注册。
 
 ## <a name="remarks"></a>备注
- 使用指定的 URL 关联的程序启动时，指定的调试引擎自动启动和附加。
+ 启动与指定 URL 关联的程序时，将自动启动并附加指定的调试引擎。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md)

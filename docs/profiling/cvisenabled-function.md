@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 92763e352d04d5aa3e88a68bad7adfcd05897027
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62945409"
 ---
 # <a name="cvisenabled-function"></a>CvIsEnabled 函数
@@ -48,7 +48,7 @@ HRESULT CvIsEnabledEx(
  如果提供程序当前已启用，则返回 S_OK。 如果提供程序当前已禁用，则返回 S_FALSE。 出现任何错误时返回错误代码。 使用 FAILED 宏检查错误条件，然后检查 S_OK/S_FALSE。
 
 ## <a name="requirements"></a>要求
- **标头：** cvmarkers.h
+ **Header:** cvmarkers.h 
 
 ## <a name="see-also"></a>请参阅
 - [C++ 库参考](../profiling/cpp-library-reference.md)

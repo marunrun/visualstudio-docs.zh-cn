@@ -9,10 +9,10 @@ ms.topic: article
 ms.date: 01/27/2020
 ms.author: ghogen
 ms.openlocfilehash: 6c1d56f788294826853ad441313597255308bb39
-ms.sourcegitcommit: b2fc9ac7d73c847508f6ed082bed026476bb3955
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/05/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77027293"
 ---
 # <a name="deploy-an-aspnet-core-container-to-azure-app-service-using-visual-studio"></a>使用 Visual Studio 将 ASP.NET Core 容器部署到 Azure 应用服务
@@ -21,7 +21,7 @@ ms.locfileid: "77027293"
 
 如果没有 Azure 订阅，请在开始之前创建一个[免费帐户](https://azure.microsoft.com/free/dotnet/?utm_source=acr-publish-doc&utm_medium=docs&utm_campaign=docs)。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 完成本教程：
 
@@ -94,7 +94,7 @@ ms.locfileid: "77027293"
 
 ## <a name="clean-up-resources"></a>清理资源
 
-若要删除与本教程相关联的所有 Azure 资源，请使用 [Azure 门户](https://portal.azure.com)删除相应的资源组。 若要查找与已发布 Web 应用程序相关联的资源组，请选择“查看” > “其他 Windows” > “Web 发布活动”，然后选择齿轮图标    。 此时会打开“发布”选项卡，其中包含资源组  。
+若要删除与本教程相关联的所有 Azure 资源，请使用 [Azure 门户](https://portal.azure.com)删除相应的资源组。 若要查找与已发布 Web 应用程序相关联的资源组，请选择“查看” **“其他 Windows”** “Web 发布活动”，然后选择齿轮图标 >    >   。 此时会打开“发布”选项卡，其中包含资源组  。
 
 在 Azure 门户中，选择“资源组”，选择要打开其详细信息页面的资源组  。 确认这是正确的资源组，然后选择“删除资源组”，键入名称，并选择“删除”   。
 
@@ -102,6 +102,6 @@ ms.locfileid: "77027293"
 
 详细了解 [Azure 应用服务 Linux](/azure/app-service/containers/app-service-linux-intro)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [部署到 Azure 容器注册表](hosting-web-apps-in-docker.md)

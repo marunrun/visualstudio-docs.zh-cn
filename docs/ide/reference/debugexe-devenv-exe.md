@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: aeae28288936b6723b53e826142a4888ad0bc8b4
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75570136"
 ---
 # <a name="debugexe-devenvexe"></a>/DebugExe (devenv.exe)
@@ -30,7 +30,7 @@ ms.locfileid: "75570136"
 devenv /DebugExe ExecutableFile
 ```
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
 
 - ExecutableFile 
 
@@ -48,6 +48,6 @@ ExecutableFile  参数后跟的任何字符串都作为参数传递到相应文�
 devenv /debugexe MyApplication.exe
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Devenv 命令行开关](../../ide/reference/devenv-command-line-switches.md)

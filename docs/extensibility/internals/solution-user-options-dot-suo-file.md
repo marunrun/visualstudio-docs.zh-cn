@@ -1,5 +1,5 @@
 ---
-title: 解决方案用户选项（.Suo）文件 |Microsoft Docs
+title: 解决方案用户选项 （.Suo） 文件 |微软文档
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,32 +9,32 @@ helpviewer_keywords:
 - solutions, user options
 - solution user options (.suo) file
 ms.assetid: 75258e0d-600d-4a3d-94f4-3d7ac12cb47c
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6f21e4a4a6530692709247e64b0d84aa7b06eb3a
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 9469663d3ac258e1c568778894d8584c68c13632
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72723802"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80705321"
 ---
 # <a name="solution-user-options-suo-file"></a>解决方案用户选项 (.Suo) 文件
-解决方案用户选项（.suo）文件包含每用户解决方案选项。 不应将此文件签入到源代码管理中。
+解决方案用户选项 （.suo） 文件包含每个用户的解决方案选项。 不应将此文件签入源代码控制。
 
- 解决方案用户选项（.suo）文件是以二进制格式存储的结构化存储或复合文件。 将用户信息保存到流，并将流的名称保存为密钥，该密钥将用于标识 .suo 文件中的信息。 解决方案用户选项文件用于存储用户首选项设置，当 Visual Studio 保存解决方案时，会自动创建该文件。
+ 解决方案用户选项 （.suo） 文件是以二进制格式存储的结构化存储或复合文件。 将用户信息保存到流中，其中流的名称是用于标识 .suo 文件中的信息的密钥。 解决方案用户选项文件用于存储用户首选项设置，并在 Visual Studio 保存解决方案时自动创建。
 
- 当环境打开 .suo 文件时，它会枚举当前加载的所有 Vspackage。 如果 VSPackage 实现 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionOpts> 接口，则环境将调用 VSPackage 上的 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionOpts.LoadUserOptions%2A> 方法，要求其从 .suo 文件加载其所有数据。
+ 当环境打开 .suo 文件时，它会枚举所有当前加载的 VS 包。 如果 VSPackage 实现了<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionOpts>接口，则环境调用 VSPackage 上<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionOpts.LoadUserOptions%2A>的方法，要求其从 .suo 文件加载其所有数据。
 
- VSPackage 负责了解它可能已写入 .suo 文件的流。 对于它编写的每个流，VSPackage 通过 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionPersistence.LoadPackageUserOpts%2A> 调用环境以加载由密钥标识的特定流，这是流的名称。 然后，环境回调到 VSPackage，以读取传递流名称的特定流和指向 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionPersistence.LoadPackageUserOpts%2A> 方法的 `IStream` 指针。
+ VSPackage 有责任知道它可能写入了 .suo 文件中的流。 对于它编写的每个流，VSPackage 通过<xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionPersistence.LoadPackageUserOpts%2A>加载由密钥（即流的名称）标识的特定流回环境。 然后，环境调用 VSPackage 读取传递流的名称和指向方法的`IStream`<xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionPersistence.LoadPackageUserOpts%2A>指针的特定流。
 
- 此时，将对 `LoadUserOptions` 进行另一次调用，以查看是否有必须读取 .suo 文件的另一个部分。 此过程将一直继续，直到该环境中的所有数据流都已读完并处理。
+ 此时，将发出另一个调用，`LoadUserOptions`以查看是否还有必须读取的 .suo 文件的另一个部分。 此过程将一直持续到环境读取和处理 .suo 文件中的所有数据流。
 
- 保存或关闭解决方案时，环境将使用指向 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionOpts.SaveUserOptions%2A> 方法的指针调用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionPersistence.SavePackageSolutionProps%2A> 方法。 包含要保存的二进制信息的 `IStream` 传递到 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionOpts.WriteUserOptions%2A> 方法，后者随后将该信息写入 .suo 文件并再次调用 `SaveUserOptions` 方法，以查看是否有另一个要写入到 .suo 文件的信息流。
+ 保存或关闭解决方案时，环境使用指向 方法的<xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionPersistence.SavePackageSolutionProps%2A><xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionOpts.SaveUserOptions%2A>指针调用方法。 `IStream`包含要保存的二进制信息将传递给<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionOpts.WriteUserOptions%2A>方法，该方法然后将信息写入 .suo 文件，然后再次调用`SaveUserOptions`该方法以查看是否有另一个信息流要写入 .suo 文件。
 
- 这两个方法（`SaveUserOptions` 和 `WriteUserOptions`）将以递归方式调用，以将每个要保存到 .suo 文件中的信息流，并传入指向 `IVsSolutionPersistence` 的指针。 它们以递归方式调用，以允许向 .suo 文件写入多个流。 通过这种方式，用户信息会随解决方案一起保留，并且保证在下一次打开解决方案时存在。
+ 这两种方法`SaveUserOptions`和`WriteUserOptions`调用，对于要保存到 .suo 文件的每个信息流，将指针传递到 。 `IVsSolutionPersistence` 它们被递归地调用，以允许将多个流写入 .suo 文件。 这样，用户信息将随解决方案一起保留，并保证在下次打开解决方案时会在那里。
 
 ## <a name="see-also"></a>请参阅
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionOpts>

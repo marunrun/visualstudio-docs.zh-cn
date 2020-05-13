@@ -10,14 +10,14 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 518f41557809cdeaaae9f9e1ac79e3797a854395
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74776961"
 ---
 # <a name="globalon-and-globaloff"></a>GlobalOn 和 GlobalOff
-VSPerfCmd.exe 的“GlobalOff” 和“GlobalOn”选项可暂停和继续命令行分析会话中所有进程和线程的分析    。
+“VSPerfCmd.exe”的“GlobalOff”和“GlobalOn”选项暂停和继续命令行分析会话中所有进程和线程的分析    。
 
  可以指定“GlobalOn”和“GlobalOff”作为 VSPerfCmd.exe 命令行中唯一的选项，也可在还包含“Start”、“Launch”或“Attach”选项的命令行中加入这两者       。
 
@@ -44,14 +44,14 @@ VSPerfCmd.exe {Launch:AppName|Attach:PID} /{GlobalOff|GlobalOn}[Options]
 ```
 
 #### <a name="parameters"></a>参数
- 无
+ None
 
 ## <a name="valid-options"></a>有效选项
  可以在还包含以下选项的命令行上指定“GlobalOn”  和“GlobalOff”  。
 
- **Start：** `Method` 初始化命令行探查器会话并设置指定的分析方法。
+ **Start:** `Method` 初始化命令行探查器会话并设置指定的分析方法。
 
- **Launch：** `AppName` 启动指定的应用程序并开始使用采样方法进行分析。
+ **Launch:** `AppName` 启动指定的应用程序并开始使用采样方法进行分析。
 
  **Attach：** `PID` 开始分析指定的进程。
 

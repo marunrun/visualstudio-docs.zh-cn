@@ -7,13 +7,13 @@ ms.date: 03/29/2019
 ms.assetid: C7782BF3-016F-4B41-8A81-85FC540A1A8F
 ms.custom: video
 ms.openlocfilehash: 5a87b87f3a14462daec1e069fe222164818d2a19
-ms.sourcegitcommit: 7fbfb2a1d43ce72545096c635df2b04496b0be71
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "67691287"
 ---
-# <a name="refactoring"></a>重构
+# <a name="refactoring"></a>Refactoring
 
 重构代码方法可重新排列、重构和阐明现有代码，同时确保代码总体行为保持不变。
 
@@ -42,12 +42,12 @@ Visual Studio for Mac 与 Roslyn（Microsoft 的开源 .NET 编译器平台）�
 * 应用重构（例如，内联临时变量）
 * 生成代码（例如，引入局部变量）
 
-可使用灯泡![灯泡图标](media/quick-actions-light-bulb-icon.png)或螺丝刀![螺丝刀图标](media/quick-actions-screwdriver-icon.png)图标，或当光标位于操作就绪的代码行上时按 Option (⌥)+Enter 来应用快速操作   。 如果出现指示错误的红色波形曲线，且 Visual Studio 有针对该错误的可用修复方法，会显示一个错误灯泡![错误灯泡图标](media/quick-actions-error-light-bulb-icon.png)。
+可使用灯泡![灯泡图标](media/quick-actions-light-bulb-icon.png)或螺丝刀![螺丝刀图标](media/quick-actions-screwdriver-icon.png)图标，或当光标位于操作就绪的代码行上时按 Option (⌥)**Enter 来应用快速操作**+  。 如果出现指示错误的红色波形曲线，且 Visual Studio 有针对该错误的可用修复方法，会显示一个错误灯泡![错误灯泡图标](media/quick-actions-error-light-bulb-icon.png)。
 
 第三方可针对任何语言提供自定义诊断和建议，例如随附 SDK 提供，同时根据这些规则，Visual Studio 电灯泡可能亮起。
 
 ### <a name="quick-action-icons"></a>快速操作图标
-当存在可用的快速操作时，会出现一个图标，指示可用的修复方法或重构的类型。 螺丝刀  ![螺丝刀图标](media/quick-actions-screwdriver-icon.png)图标仅指示存在可用于更改代码的操作，但不一定要使用它们。 黄色灯泡  ![灯泡图标](media/quick-actions-light-bulb-icon.png)图标指示存在应  执行的、用于改进代码的可用操作。 错误灯泡  ![错误灯泡图标](media/quick-actions-error-light-bulb-icon.png)图标指示存在可用于修复代码中的错误的操作。
+当存在可用的快速操作时，会出现一个图标，指示可用的修复方法或重构的类型。 螺丝刀  ![ 螺丝刀图标](media/quick-actions-screwdriver-icon.png)图标仅指示存在可用于更改代码的操作，但不一定要使用它们。 黄色灯泡  ![灯泡图标](media/quick-actions-light-bulb-icon.png)图标指示存在应  执行的、用于改进代码的可用操作。 错误灯泡  ![错误灯泡图标](media/quick-actions-error-light-bulb-icon.png)图标指示存在可用于修复代码中的错误的操作。
 
 ### <a name="to-see-a-light-bulb-or-screwdriver"></a>查看灯泡或螺丝刀
 
@@ -57,7 +57,7 @@ Visual Studio for Mac 与 Roslyn（Microsoft 的开源 .NET 编译器平台）�
 
 - 将脱字号移动到可使用快速操作的代码行时，编辑器左边距中会显示灯泡和螺丝刀。
 
-- 在行的任意位置按 Option (⌥)+Enter，可查看可用快速操作和重构的列表   。
+- 在行的任意位置按 Option (⌥)**Enter，可查看可用快速操作和重构的列表**+  。
 
 ![显示上下文项](media/refactoring-context-action.png)
 
@@ -93,7 +93,7 @@ Visual Studio for Mac 与 Roslyn（Microsoft 的开源 .NET 编译器平台）�
 
 > [!Video https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Visual-Studio-for-Mac-Refactoring-Code/player]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [快速操作（Windows 上的 Visual Studio）](/visualstudio/ide/quick-actions)
 - [重构代码（Windows 上的 Visual Studio）](/visualstudio/ide/refactoring-in-visual-studio)

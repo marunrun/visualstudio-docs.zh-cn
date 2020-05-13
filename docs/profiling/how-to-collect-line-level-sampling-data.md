@@ -12,13 +12,13 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: f64040c9180a152650de16b23276ab0e65cc9ead
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74776353"
 ---
-# <a name="how-to-collect-line-level-sampling-data"></a>如何：收集行级别采样数据
+# <a name="how-to-collect-line-level-sampling-data"></a>如何：收集行级采样数据
 行级采样是探查器确定占用大量处理器时间的函数在代码中的位置，如具有高独占样本的函数，处理器需要耗费大量时间。
 
 ## <a name="overview"></a>概述
@@ -56,6 +56,6 @@ ms.locfileid: "74776353"
 
 - 启动应用程序时，键入 **VSPerfCmd /lineoff \<其他参数>** 。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [配置性能会话](../profiling/configuring-performance-sessions.md)
 - [分析性能工具数据](../profiling/analyzing-performance-tools-data.md)

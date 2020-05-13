@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a5116d2487ca9f53c460e1cae8f362f3ff1bcdf8
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75565911"
 ---
 # <a name="troubleshoot-broken-references"></a>有关无效引用的疑难解答
@@ -88,6 +88,6 @@ ms.locfileid: "75565911"
 
 如果一个用户已添加对 COM 组件的引用，而第二个用户尝试在未安装此组件的计算机上运行代码，则第二个用户将收到引用已损坏的错误。 在第二台计算机上安装组件可更正此错误。 有关如何在项目中使用对 COM 组件的引用，请参阅 [.NET Framework 应用程序中的 COM 互操作性](/dotnet/visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [项目设计器 ->“引用”页 (Visual Basic)](../ide/reference/references-page-project-designer-visual-basic.md)

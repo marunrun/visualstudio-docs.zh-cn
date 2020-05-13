@@ -7,10 +7,10 @@ ms.date: 02/07/2019
 ms.assetid: 7DC64A52-AA41-4F3A-A8A1-8A20BCD81CC7
 ms.custom: video
 ms.openlocfilehash: 3d25fced1e9c9dd6431f4056b5b561f476eecb28
-ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "74984982"
 ---
 # <a name="visual-studio-2017-for-mac-tour"></a>Visual Studio 2017 for Mac 导览
@@ -94,9 +94,9 @@ NuGet 是 .NET 开发最常用的程序包管理器。 通过 Visual Studio 的 
 
 可在[在项目中包括 NuGet 包](/visualstudio/mac/nuget-walkthrough)一文中找到在应用程序中使用 NuGet 包的相关信息。
 
-## <a name="refactoring"></a>重构
+## <a name="refactoring"></a>Refactoring
 
-使用 Visual Studio for Mac，可通过以下两种实用方法来重构代码：上下文操作和源分析。 可在[重构](/visualstudio/mac/refactoring)一文中阅读更多相关信息。
+Visual Studio for Mac 提供用于重构代码的两种有用途径：上下文操作和源分析。 可在[重构](/visualstudio/mac/refactoring)一文中阅读更多相关信息。
 
 ## <a name="debugging"></a>调试
 
@@ -122,6 +122,6 @@ Visual Studio for Mac 与 Git 和 Subversion 源控件系统集成。 源控件�
 
 > [!Video https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Visual-Studio-for-Mac-Overview/player]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Studio IDE (Windows)](/visualstudio/ide/visual-studio-ide)

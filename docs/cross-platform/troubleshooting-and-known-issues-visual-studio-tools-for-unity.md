@@ -11,10 +11,10 @@ manager: crdun
 ms.workload:
 - unity
 ms.openlocfilehash: d6856ff73f9aab2325a31e164e7983a919097d46
-ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/28/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "66261117"
 ---
 # <a name="troubleshooting-and-known-issues-visual-studio-tools-for-unity"></a>疑难解答和已知问题 (Visual Studio Tools for Unity)
@@ -25,7 +25,7 @@ ms.locfileid: "66261117"
 
 ### <a name="confirm-editor-attaching-is-enabled"></a>确认已启用“编辑器连接”
 
-在 Unity 菜单中，选择“编辑”>“首选项”，然后选择“外部工具”选项卡。确定已启用“编辑器连接”复选框。 有关详细信息，请查阅 [Unity 首选项文档](https://docs.unity3d.com/Manual/Preferences.html)。
+在 Unity 菜单中，选择“编辑”>“首选项”，然后选择“外部工具”选项卡   。确定已启用“编辑器连接”复选框  。 有关详细信息，请查阅 [Unity 首选项文档](https://docs.unity3d.com/Manual/Preferences.html)。
 
 ### <a name="unable-to-attach"></a>无法附加
 
@@ -124,25 +124,25 @@ USB 调试速度非常快，Visual Studio Tools for Unity 现可检测 USB 设�
 
 ##### <a name="to-report-that-visual-studio-freezes-while-debugging-with-visual-studio-tools-for-unity"></a>报告使用 Visual Studio Tools for Unity 进行调试时 Visual Studio 会冻结
 
-在 Windows 上：
+在 Windows 上： 
 
 1. 打开 Visual Studio 的新实例。
 
-1. 打开“附加到进程”对话框。 在 Visual Studio 的新实例中的主菜单上，选择“调试” 、“附加到进程” 。
+1. 打开“附加到进程”对话框。 在 Visual Studio 的新实例中的主菜单上，选择“调试”  、“附加到进程”  。
 
 1. 将调试器附加到 Visual Studio 的已冻结的实例。 在“附加到进程”  对话框中，从“可用进程”  表中选择 Visual Studio 的已冻结实例，然后选择“附加”  按钮。
 
-1. 暂停调试器。 在 Visual Studio 的新实例中的主菜单上，依次选择“调试”、“全部中断”或只需按 Ctrl + Alt + Break 即可。
+1. 暂停调试器。 在 Visual Studio 的新实例中的主菜单上，依次选择“调试”、“全部中断”或只需按 Ctrl + Alt + Break 即可    。
 
-1. 创建线程转储。 在命令窗口中，输入以下命令并按 Enter：
+1. 创建线程转储。 在命令窗口中，输入以下命令并按 Enter  ：
 
     ```powershell
     Debug.ListCallStack /AllThreads /ShowExternalCode
     ```
 
-    你可能首先需要使“命令”  窗口可见。 在 Visual Studio 中的主菜单上，选择“视图” 、“其他窗口” 、“命令窗口” 。
+    你可能首先需要使“命令”  窗口可见。 在 Visual Studio 中的主菜单上，选择“视图”  、“其他窗口”  、“命令窗口”  。
 
-在 Mac 上：
+在 Mac 上： 
 
 1. 打开终端并获取 Visual Studio for Mac 的 PID：
 

@@ -10,10 +10,10 @@ author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.openlocfilehash: 480f583bb997a19bc84fcfbe6824c12a3c638784
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75591042"
 ---
 # <a name="how-to-locate-and-organize-project-and-item-templates"></a>如何：查找和组织项目和项模板
@@ -36,25 +36,25 @@ ms.locfileid: "75591042"
 
 ::: moniker range="vs-2017"
 
-- %ProgramFiles(x86)%\\Microsoft Visual Studio\\2017\\\<edition>\\Common7\IDE\ProjectTemplates\\<Language\>\\<Locale ID\> 
+- %ProgramFiles(x86)%*Microsoft Visual Studio\\2017\\\\edition>\<Common7\IDE\ProjectTemplates\\<Language\\\><Locale ID\\\>*
 
-- %ProgramFiles(x86)%\\Microsoft Visual Studio\\2017\\\<edition>\Common7\IDE\ItemTemplates\\<Language\>\\<Locale ID\> 
+- %ProgramFiles(x86)%*Microsoft Visual Studio\\2017\\\\edition>\Common7\IDE\ItemTemplates\<<Language\\\><Locale ID\\\>*
 
 例如，以下目录包含以英语 (LCID 1033) 表示的 Visual Basic 项模板：
 
-C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\Common7\\IDE\\ItemTemplates\\VisualBasic\\1033 
+C:*Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\Common7\\IDE\\ItemTemplates\\VisualBasic\\1033\\*
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-- %ProgramFiles(x86)%\\Microsoft Visual Studio\\2019\\\<edition>\\Common7\IDE\ProjectTemplates\\<Language\>\\<Locale ID\> 
+- %ProgramFiles(x86)%*Microsoft Visual Studio\\2019\\\\edition>\<Common7\IDE\ProjectTemplates\\<Language\\\><Locale ID\\\>*
 
-- %ProgramFiles(x86)%\\Microsoft Visual Studio\\2019\\\<edition>\Common7\IDE\ItemTemplates\\<Language\>\\<Locale ID\> 
+- %ProgramFiles(x86)%*Microsoft Visual Studio\\2019\\\\edition>\Common7\IDE\ItemTemplates\<<Language\\\><Locale ID\\\>*
 
 例如，以下目录包含以英语 (LCID 1033) 表示的 Visual Basic 项模板：
 
-C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Common7\\IDE\\ItemTemplates\\VisualBasic\\1033 
+C:*Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Common7\\IDE\\ItemTemplates\\VisualBasic\\1033\\*
 
 ::: moniker-end
 
@@ -87,7 +87,7 @@ C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Common7\\IDE\
 ::: moniker-end
 
 > [!TIP]
-> 可在“工具” > “选项” > “项目和解决方案” > “位置”中更改用户模板的已知位置     。
+> 可在“工具” **“选项”** “项目和解决方案” > “位置”中更改用户模板的已知位置   >    >   。
 
 ::: moniker range="vs-2017"
 
@@ -102,25 +102,25 @@ C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Common7\\IDE\
 
 1. 在用户项目模板目录中的编程语言文件夹中创建一个文件夹。 例如，要为 C# 项目模板创建“HelloWorld”类别，请创建以下目录  ：
 
-    -  \%USERPROFILE%\Documents\Visual Studio \<Version\>\Templates\ProjectTemplates\Visual C#\HelloWorld
+    - *\%\<USERPROFILE%\Documents\Visual Studio \>Version*\Templates\ProjectTemplates\Visual C#\HelloWorld
 
 1. 将此类别的所有模板放入新文件夹。
 
 1. 在“文件”  菜单上，选择“新建”  >“项目”  。
 
-   “HelloWorld”  类别出现在“已安装”  >“Visual C#”  下的“新建项目”  对话框中。
+   “HelloWorld”  类别出现在“已安装”  **“Visual C#”** >下的“新建项目”  对话框中。
 
 ### <a name="create-new-user-item-template-categories"></a>创建新的用户项模板类别
 
 1. 在用户项模板目录中的编程语言文件夹中创建一个文件夹。 例如，要为 C# 项模板创建“HelloWorld”类别，请创建以下目录  ：
 
-    -  \%USERPROFILE%\Documents\Visual Studio \<Version\>\Templates\ItemTemplates\Visual C#\HelloWorld
+    - *\%\<USERPROFILE%\Documents\Visual Studio \>Version*\Templates\ItemTemplates\Visual C#\HelloWorld
 
 1. 将此类别的所有模板放入新文件夹。
 
 1. 创建项目或打开现有项目。 然后，在“项目”菜单上选择“添加新项”   。
 
-   “HelloWorld”  类别出现在“已安装”  >“Visual C# 项”  下的“添加新项”  对话框中。
+   “HelloWorld”  类别出现在“已安装”  **“Visual C# 项”** >下的“添加新项”  对话框中。
 
 ### <a name="display-templates-in-parent-categories"></a>在父类别中显示模板
 
@@ -156,7 +156,7 @@ C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Common7\\IDE\
 
 ::: moniker-end
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [自定义模板](../ide/customizing-project-and-item-templates.md)
 - [Visual Studio 模板架构引用（扩展性）](../extensibility/visual-studio-template-schema-reference.md)

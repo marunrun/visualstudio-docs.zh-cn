@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugReferenceInfo2::Next |Microsoft Docs
+title: IEnumDebug参考信息2：：：下一个 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IEnumDebugReferenceInfo2::Next
 ms.assetid: 70b31a57-1701-4757-9e7e-63ec60a71b3c
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 0860210a2ed80374346268012ae98cf5704b4c7a
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 4bb10504b2dbe02856364baa0670a7c825ef80cd
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66322648"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80715323"
 ---
 # <a name="ienumdebugreferenceinfo2next"></a>IEnumDebugReferenceInfo2::Next
-枚举中返回下一组元素。
+从枚举返回下一组元素。
 
 ## <a name="syntax"></a>语法
 
@@ -45,16 +45,16 @@ int Next(
 
 ## <a name="parameters"></a>参数
 `celt`\
-[in]要检索的元素数。 此外可以指定的最大大小`rgelt`数组。
+[在]要检索的元素数。 还指定`rgelt`数组的最大大小。
 
 `rgelt`\
-[in、 out]数组[DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md)要填充的元素。
+[进出]要填充[DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md)元素的数组。
 
 `pceltFetched`\
-[out]返回中实际返回的元素数目`rgelt`。
+[出]返回 中`rgelt`实际返回的元素数。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回 `S_OK`。 返回`S_FALSE`如果无法返回请求的元素数少于; 否则，返回错误代码。
+ 如果成功，则返回 `S_OK`。 如果`S_FALSE`返回的元素数少于请求的元素数，则返回;否则，返回错误代码。
 
 ## <a name="see-also"></a>请参阅
 - [IEnumDebugReferenceInfo2](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2.md)

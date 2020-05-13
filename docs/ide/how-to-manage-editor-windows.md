@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 4af752c99c87bf470922db03bf5d4746151fa8f2
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75591016"
 ---
 # <a name="how-to-manage-editor-windows"></a>如何：管理编辑器窗口
@@ -54,7 +54,7 @@ ms.locfileid: "75591016"
 
    添加编辑器的制表符分隔的新实例。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [代码编辑器功能](../ide/writing-code-in-the-code-and-text-editor.md)
 - [自定义窗口布局](../ide/customizing-window-layouts-in-visual-studio.md)

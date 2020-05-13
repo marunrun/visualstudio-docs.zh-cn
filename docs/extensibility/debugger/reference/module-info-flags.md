@@ -1,5 +1,5 @@
 ---
-title: MODULE_INFO_FLAGS | Microsoft Docs
+title: MODULE_INFO_FLAGS |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - MODULE_INFO_FLAGS enumeration
 ms.assetid: e22d3723-b4d4-4524-8a2f-3adb55bbd273
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: d8cc60510e29cdf502b0a91b434966d1ea47860d
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 20a11488c32b4259105e346e7fa28fd706e48a48
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66346687"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80714234"
 ---
-# <a name="moduleinfoflags"></a>MODULE_INFO_FLAGS
-指定用于模块的符号的状态。
+# <a name="module_info_flags"></a>MODULE_INFO_FLAGS
+指定模块的符号状态。
 
 ## <a name="syntax"></a>语法
 
@@ -42,17 +42,17 @@ public enum enum_MODULE_INFO_FLAGS {
 
 ## <a name="fields"></a>字段
  `MIF_SYMBOLS_LOADED`\
- 至少一个组的符号已加载的模块 （否则加载任何符号）。
+ 模块至少加载了一组符号（否则未加载任何符号）。
 
 ## <a name="remarks"></a>备注
- 此值返回的[GetSymbolSearchInfo](../../../extensibility/debugger/reference/idebugsymbolsearchevent2-getsymbolsearchinfo.md)方法。
+ 此值由[GetSymbolSearch 搜索信息](../../../extensibility/debugger/reference/idebugsymbolsearchevent2-getsymbolsearchinfo.md)方法返回。
 
 ## <a name="requirements"></a>要求
- 标头： msdbg.h
+ 标题： msdbg.h
 
- 命名空间:Microsoft.VisualStudio.Debugger.Interop
+ 命名空间：微软.VisualStudio.调试器.互通
 
- 程序集：Microsoft.VisualStudio.Debugger.Interop.dll
+ 程序集：微软.VisualStudio.调试器.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [枚举](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

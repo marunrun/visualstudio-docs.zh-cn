@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 1e87f35778b8aec615410312c0eb7373d4e9969f
-ms.sourcegitcommit: 10d16e18c5f5e482c4c2856e6cacaad283463b65
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75775891"
 ---
 # <a name="developer-community-data-privacy"></a>开发人员社区数据隐私
@@ -85,7 +85,7 @@ ms.locfileid: "75775891"
   > ![报告问题 - 收集的日志摘要](media/report-a-problem-logs-collected.png)
 
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [如何报告 Visual Studio 的问题](how-to-report-a-problem-with-visual-studio.md)
 - [C++ 问题报表数据隐私](/cpp/how-to-report-a-problem-with-the-visual-cpp-toolset#reports-and-privacy)

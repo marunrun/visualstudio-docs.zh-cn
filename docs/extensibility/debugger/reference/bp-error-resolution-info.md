@@ -1,5 +1,5 @@
 ---
-title: BP_ERROR_RESOLUTION_INFO | Microsoft Docs
+title: BP_ERROR_RESOLUTION_INFO |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BP_ERROR_RESOLUTION_INFO structure
 ms.assetid: a6b83242-5728-4716-80f3-840c96d59c6c
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: dca7dcac5dc7ccf4d30d9b61165771ba464bbcf9
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: d48c4bc888db0ad8be6a0d6e98eeea2223a27e8a
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66351827"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80738084"
 ---
-# <a name="bperrorresolutioninfo"></a>BP_ERROR_RESOLUTION_INFO
-描述错误断点，包括位置、 程序和线程的解决方法。
+# <a name="bp_error_resolution_info"></a>BP_ERROR_RESOLUTION_INFO
+描述错误断点的分辨率，包括位置、程序和线程。
 
 ## <a name="syntax"></a>语法
 
@@ -51,32 +51,32 @@ public struct BP_ERROR_RESOLUTION_INFO {
 
 ## <a name="members"></a>成员
 `dwFields`\
-中值的组合[BPERESI_FIELDS](../../../extensibility/debugger/reference/bperesi-fields.md)枚举，它指定填充此结构的哪些字段。
+[BPERESI_FIELDS](../../../extensibility/debugger/reference/bperesi-fields.md)枚举中的值的组合，指定填充此结构的字段。
 
 `bpResLocation`\
-[BP_RESOLUTION_LOCATION](../../../extensibility/debugger/reference/bp-resolution-location.md) union，这将指定的断点解析位置。
+[BP_RESOLUTION_LOCATION](../../../extensibility/debugger/reference/bp-resolution-location.md)联合，它指定断点解析位置。
 
 `pProgram`\
-[IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)表示应用程序发生断点错误的对象。
+[IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)对象，表示发生断点错误的应用程序。
 
 `pThread`\
-[IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)对象，表示生成断点错误的应用程序正在其运行的线程。
+[IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)对象，表示生成断点错误的应用程序在其上运行的线程。
 
 `bstrMessage`\
-包含导致此错误解决方法的任何警告或错误消息的字符串。
+包含此错误解决方法引起的任何警告或错误消息的字符串。
 
 `dwType`\
-中的值[BP_ERROR_TYPE](../../../extensibility/debugger/reference/bp-error-type.md)枚举，用于指定断点错误类型。
+[BP_ERROR_TYPE](../../../extensibility/debugger/reference/bp-error-type.md)枚举中指定断点错误类型的值。
 
 ## <a name="remarks"></a>备注
-此结构返回从[GetResolutionInfo](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getresolutioninfo.md)方法。
+此结构从[GetResolutionInfo](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getresolutioninfo.md)方法返回。
 
 ## <a name="requirements"></a>要求
-标头： msdbg.h
+标题： msdbg.h
 
-命名空间:Microsoft.VisualStudio.Debugger.Interop
+命名空间：微软.VisualStudio.调试器.互通
 
-程序集：Microsoft.VisualStudio.Debugger.Interop.dll
+程序集：微软.VisualStudio.调试器.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [结构和联合](../../../extensibility/debugger/reference/structures-and-unions.md)

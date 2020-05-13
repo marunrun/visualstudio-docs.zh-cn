@@ -12,15 +12,15 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: 51723d22cd72de8333fca9b83c1643117a7413e5
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "72986216"
 ---
 # <a name="step-3-use-the-interactive-repl-window"></a>步骤 3：使用交互式 REPL 窗口
 
-**上一步：[编写并运行代码](tutorial-working-with-python-in-visual-studio-step-02-writing-code.md)**
+**上一步：[编写和运行代码](tutorial-working-with-python-in-visual-studio-step-02-writing-code.md)**
 
 适用于 Python 的 Visual Studio 交互窗口  提供丰富的“读取–求值–打印-循环”(REPL) 体验，极大地缩短了常用的“编辑-生成-调试”周期。 该交互  窗口提供 Python 命令行 REPL 体验的所有功能。 通过该窗口还可以非常轻松地与 Visual Studio 编辑器中的源文件交换代码，免去了使用命令行时的繁琐操作。
 
@@ -46,7 +46,7 @@ ms.locfileid: "72986216"
 
 1. 交互  窗口提供所有已输入内容的完整历史记录，并通过多行历史记录项改进了命令行 REPL。 例如，可以轻松地将 `f` 函数的整个定义重新调用为单个单元，并轻松地将名称更改为 `make_double`，而不用逐行重新创建函数。
 
-1. Visual Studio 可从编辑器窗口向交互  窗口发送多行代码。 此功能可用于维护源文件中的代码并将其选定部分轻松发送到交互  窗口。 然后就可以在快速 REPL 环境中使用此类代码片段，而不必运行整个程序。 若要查看此功能，应先将 PythonApplication1.py  文件中的 `for` 循环替换为以下代码：
+1. Visual Studio 可从编辑器窗口向交互  窗口发送多行代码。 此功能可用于维护源文件中的代码并将其选定部分轻松发送到交互  窗口。 然后就可以在快速 REPL 环境中使用此类代码片段，而不必运行整个程序。 若要查看此功能，应先将 PythonApplication1.py`for`*文件中的* 循环替换为以下代码：
 
     ```python
     # Create a string with spaces proportional to a cosine of x in degrees
@@ -54,12 +54,12 @@ ms.locfileid: "72986216"
         return ' ' * int(20 * cos(radians(x)) + 20) + 'o'
     ```
 
-1. 选择 .py 文件中的 `import`、`from` 和 `make_dot_string` 函数语句，单击鼠标右键，选择“发送到交互窗口”（或按 Ctrl+Enter）     。 代码片段会立即粘贴至交互  窗口并运行。 由于代码定义了一个函数，因此可通过数次调用它来快速测试该函数：
+1. 选择 .py 文件中的 `import`、`from` 和 `make_dot_string` 函数语句，单击鼠标右键，选择“发送到交互窗口”（或按 Ctrl*Enter）*   +  。 代码片段会立即粘贴至交互  窗口并运行。 由于代码定义了一个函数，因此可通过数次调用它来快速测试该函数：
 
     ![将代码发送到交互窗口并测试它](media/vs-getting-started-python-14-interactive4.png)
 
     > [!Tip]
-    > 如果在未  选择任何内容的情况下，在编辑器中使用 Ctrl  +Enter  ，则会在交互  窗口中运行当前代码行，并自动在下一行放置插入点。 利用此功能，通过反复按 Ctrl  +Enter  即可便捷地单步调试代码，仅使用 Python 命令行则无法做到这一点。 它还允许在不运行调试器的情况下单步调试代码，而且不必从头开始启动程序。
+    > 如果在未  选择任何内容的情况下，在编辑器中使用 Ctrl+  Enter  ，则会在交互  窗口中运行当前代码行，并自动在下一行放置插入点。 利用此功能，通过反复按 Ctrl  +Enter  即可便捷地单步调试代码，仅使用 Python 命令行则无法做到这一点。 它还允许在不运行调试器的情况下单步调试代码，而且不必从头开始启动程序。
 
 1. 还可以将任何源中的多行代码复制并粘贴到交互  窗口，比如下面的代码片段，使用 Python 命令行 REPL 则难以实现此操作。 粘贴后，交互  窗口会运行该代码，就像直接在窗口中键入的一样：
 

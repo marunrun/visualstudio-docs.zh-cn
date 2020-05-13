@@ -20,10 +20,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 754d2ceef776ab0dea2d8d51151d4170839173b9
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "76114698"
 ---
 # <a name="how-to-create-and-edit-configurations"></a>如何：创建和编辑配置
@@ -40,7 +40,7 @@ ms.locfileid: "76114698"
 若要打开“Configuration Manager”，请在“解决方案资源管理器”中，打开解决方案的快捷菜单，然后选择“Configuration Manager”    。
 
 > [!NOTE]
-> 如果快捷菜单上没有“配置管理器”命令，请查看菜单栏上的“生成”菜单   。 如果菜单栏上也没有，请依次选择“工具” > “选项”，然后在“选项”对话框的左侧窗格中依次展开“项目和解决方案” > “常规”，之后在右侧窗格中选中“显示高级生成配置”复选框       。
+> 如果快捷菜单上没有“配置管理器”命令，请查看菜单栏上的“生成”菜单   。 如果菜单栏上也没有，请依次选择“工具” **“选项”，然后在“选项”对话框的左侧窗格中依次展开“项目和解决方案”** “常规”，之后在右侧窗格中选中“显示高级生成配置”复选框 >      >    。
 
 在“配置管理器”对话框中，可以使用“活动解决方案配置”下拉列表选择解决方案级生成配置，修改现有配置或创建新的配置   。 可以使用“活动解决方案平台”下拉列表选择配置面向的平台、修改现有平台或添加新的平台  。 “项目上下文”窗格会列出解决方案中的项目  。 对于每个项目，可以选择项目特定的配置和平台、修改现有配置和平台、创建新配置或添加新平台。 使用解决方案级配置生成或部署解决方案时，还可以选择指示是否包含每个项目的复选框。
 
@@ -118,7 +118,7 @@ ms.locfileid: "76114698"
 
 3. 在“项目上下文”窗格中，对每个项目，选择所需“配置”和“平台”，并选择是否“生成”该项目以及是否进行“部署”      。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [了解生成配置](../ide/understanding-build-configurations.md)
 - [在 Visual Studio 中生成和清理项目和解决方案](../ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md)

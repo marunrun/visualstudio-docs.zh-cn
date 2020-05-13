@@ -5,16 +5,16 @@ author: ghogen
 manager: jillfra
 ms.assetid: ed48ee06-e2d2-4322-af22-07200fb16987
 ms.topic: conceptual
-ms.custom: seodec18
+ms.custom: vs-azure
 ms.workload: azure-vs
 ms.date: 11/11/2016
 ms.author: ghogen
-ms.openlocfilehash: e8bbf5cdf3843bbd1fafd3e8cdebec17932c3cc4
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: e42a746761b09e99e158ecef8e9054bc0049c03d
+ms.sourcegitcommit: 59a8732dc563242590f7c6ccf4ced6c6d195533c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72911791"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81489631"
 ---
 # <a name="optimizing-your-azure-code"></a>优化 Azure 代码
 对使用 Microsoft Azure 的应用程序进行编程时，应遵循某些编码做法，以免在云环境中应用程序的伸缩性、行为和性能出现问题。 Microsoft 提供了 Azure 代码分析工具，该工具可识别并确定部分常见问题并帮助你解决这些问题。 可以通过 NuGet 在 Visual Studio 中下载该工具。
@@ -23,7 +23,7 @@ ms.locfileid: "72911791"
 当 Azure 代码分析工具发现已知的影响性能的问题时，它使用以下规则来自动标记 Azure 代码。 检测到的问题显示为警告或编译器错误。 用于解决警告或错误的代码修复或建议通常通过灯泡图标提供。
 
 ## <a name="avoid-using-default-in-process-session-state-mode"></a>避免使用默认的（进程内）会话状态模式
-### <a name="id"></a>Id
+### <a name="id"></a>ID
 AP0000
 
 ### <a name="description"></a>描述
@@ -34,13 +34,13 @@ AP0000
 ### <a name="reason"></a>原因
 默认情况下，在 web.config 文件中指定的会话状态模式为进程内。 此外，如果配置文件中没有指定任何条目，会话状态模式默认为进程内。 进程内模式会话状态存储在 Web 服务器的内存中。 当重新启动某个实例或使用新实例来支持负载均衡或故障转移时，存储在 Web 服务器内存中的会话状态并不保存。 这种情况会导致应用程序无法在云上缩放。
 
-ASP.NET 会话状态支持多种不同的会话状态数据存储选项： InProc、StateServer、SQLServer、Custom 和 Off。 建议使用 Custom 模式在外部会话状态存储（例如，[适用于 Redis 的 Azure 会话状态提供程序](https://devblogs.microsoft.com/aspnet/announcing-asp-net-session-state-provider-for-redis-preview-release/)）中托管数据。
+ASP.NET 会话状态支持多种不同的会话状态数据存储选项：InProc、StateServer、SQLServer、Custom 和 Off。 建议使用 Custom 模式在外部会话状态存储（例如，[适用于 Redis 的 Azure 会话状态提供程序](https://devblogs.microsoft.com/aspnet/announcing-asp-net-session-state-provider-for-redis-preview-release/)）中托管数据。
 
 ### <a name="solution"></a>解决方案
 建议的解决方案之一是在托管缓存服务中存储会话状态。 了解如何使用[适用于 Redis 的 Azure 会话状态提供程序](https://devblogs.microsoft.com/aspnet/announcing-asp-net-session-state-provider-for-redis-preview-release/)来存储会话状态。 也可以在其他位置存储会话状态，以确保应用程序可在云上缩放。 若要详细了解替代解决方案，请阅读[会话状态模式](https://msdn.microsoft.com/library/ms178586)。
 
 ## <a name="run-method-should-not-be-async"></a>运行方法不应是异步的
-### <a name="id"></a>Id
+### <a name="id"></a>ID
 AP1000
 
 ### <a name="description"></a>描述
@@ -85,7 +85,7 @@ public async Task RunAsync()
 ```
 
 ## <a name="use-service-bus-shared-access-signature-authentication"></a>使用服务总线共享访问签名身份验证
-### <a name="id"></a>Id
+### <a name="id"></a>ID
 AP2000
 
 ### <a name="description"></a>描述
@@ -112,7 +112,7 @@ BrokeredMessage receivedMessage = sc.Receive();
 * 有关示例项目，请参阅[如何使用服务总线订阅的共享访问签名 (SAS) 身份验证](https://code.msdn.microsoft.com/windowsapps/Shared-Access-Signature-0a88adf8)
 
 ## <a name="consider-using-onmessage-method-to-avoid-receive-loop"></a>考虑使用 OnMessage 方法来避免“receive 循环”
-### <a name="id"></a>Id
+### <a name="id"></a>ID
 AP2002
 
 ### <a name="description"></a>描述
@@ -216,7 +216,7 @@ while (true)
 ```
 
 ## <a name="consider-using-asynchronous-service-bus-methods"></a>考虑使用异步服务总线方法
-### <a name="id"></a>Id
+### <a name="id"></a>ID
 AP2003
 
 ### <a name="description"></a>描述
@@ -233,7 +233,7 @@ AP2003
 若要提高 Azure 消息传送基础结构的性能，请参阅设计模式 [Asynchronous Messaging Primer](https://msdn.microsoft.com/library/dn589781.aspx)（异步消息传送入门）。
 
 ## <a name="consider-partitioning-service-bus-queues-and-topics"></a>考虑将对服务总线队列和主题进行分区
-### <a name="id"></a>Id
+### <a name="id"></a>ID
 AP2004
 
 ### <a name="description"></a>描述
@@ -258,7 +258,7 @@ ns.CreateTopic(td);
 有关详细信息，请参阅 [Partitioned Service Bus Queues and Topics | Microsoft Azure Blog](https://azure.microsoft.com/blog/2013/10/29/partitioned-service-bus-queues-and-topics/)（分区的服务总线队列和主题 | Microsoft Azure 博客）并检查 [Microsoft Azure Service Bus Partitioned Queue](https://code.msdn.microsoft.com/windowsazure/Service-Bus-Partitioned-7dfd3f1f)（Microsoft Azure 服务总线分区队列）示例。
 
 ## <a name="do-not-set-sharedaccessstarttime"></a>不要设置 SharedAccessStartTime
-### <a name="id"></a>Id
+### <a name="id"></a>ID
 AP3001
 
 ### <a name="description"></a>描述
@@ -290,7 +290,7 @@ blobPermissions.SharedAccessPolicies.Add("mypolicy", new SharedAccessBlobPolicy(
 ```
 
 ## <a name="shared-access-policy-expiry-time-must-be-more-than-five-minutes"></a>共享访问策略的过期时间必须超过五分钟
-### <a name="id"></a>Id
+### <a name="id"></a>ID
 AP3002
 
 ### <a name="description"></a>描述
@@ -340,7 +340,7 @@ blobPermissions.SharedAccessPolicies.Add("mypolicy", new SharedAccessBlobPolicy(
 有关详细信息，请参阅 [Create and Use a Shared Access Signature](https://msdn.microsoft.com/library/azure/jj721951.aspx)（创建和使用共享访问签名）。
 
 ## <a name="use-cloudconfigurationmanager"></a>使用 CloudConfigurationManager
-### <a name="id"></a>Id
+### <a name="id"></a>ID
 AP4000
 
 ### <a name="description"></a>描述
@@ -356,7 +356,7 @@ CloudConfigurationManager 读取适合应用程序环境使用的配置文件。
 ### <a name="solution"></a>解决方案
 重构代码以使用 [CloudConfigurationManager Class](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.cloudconfigurationmanager.aspx)。 Azure 代码分析工具针对此问题提供了代码修复。
 
-以下代码段演示了此问题的代码修复过程。 替换
+以下代码段演示了此问题的代码修复过程。 将
 
 `var settings = ConfigurationManager.AppSettings["mySettings"];`
 
@@ -377,7 +377,7 @@ CloudConfigurationManager 读取适合应用程序环境使用的配置文件。
 ```
 
 ## <a name="avoid-using-hard-coded-connection-strings"></a>避免使用硬编码的连接字符串
-### <a name="id"></a>Id
+### <a name="id"></a>ID
 AP4001
 
 ### <a name="description"></a>描述
@@ -395,10 +395,10 @@ AP4001
 * 对于 IIS 托管的 Web 应用程序，请使用 web.config 来存储连接字符串。
 * 对于 ASP.NET vNext 应用程序，请使用 configuration.json 来存储连接字符串。
 
-有关使用 web.config 或 app.config 等配置文件的相关信息，请参阅[ASP.NET Web 配置指南](/aspnet/web-forms/overview/deployment/visual-studio-web-deployment/web-config-transformations)。 有关 Azure 环境变量工作原理的信息，请参阅[Azure 网站：应用程序字符串和连接字符串的工作原理](https://azure.microsoft.com/blog/2013/07/17/windows-azure-web-sites-how-application-strings-and-connection-strings-work/)。 有关在源代码管理中存储连接字符串的信息，请参阅[避免将敏感信息（如连接字符串）放置在源代码存储库中存储的文件内](/aspnet/aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/source-control)。
+有关使用 web.config 或 app.config 等配置文件的相关信息，请参阅[ASP.NET Web 配置指南](/aspnet/web-forms/overview/deployment/visual-studio-web-deployment/web-config-transformations)。 有关 Azure 环境变量工作原理的信息，请参阅 [Azure Web Sites: How Application Strings and Connection Strings Work](https://azure.microsoft.com/blog/2013/07/17/windows-azure-web-sites-how-application-strings-and-connection-strings-work/)（Azure 网站：应用程序字符串和连接字符串的工作原理）。 有关在源代码管理中存储连接字符串的信息，请参阅[避免将敏感信息（如连接字符串）放置在源代码存储库中存储的文件内](/aspnet/aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/source-control)。
 
 ## <a name="use-diagnostics-configuration-file"></a>使用诊断配置文件
-### <a name="id"></a>Id
+### <a name="id"></a>ID
 AP5000
 
 ### <a name="description"></a>描述
@@ -415,15 +415,15 @@ AP5000
 使用诊断配置设计器将诊断设置移到诊断配置文件（SDK 2.5 和更高版本的 diagnostics.wadcfg 或 diagnostics.wadcfgx）。 此外，建议安装 [Azure SDK 2.5](https://social.msdn.microsoft.com/Forums/en-US/home) 并使用最新的诊断功能。
 
 1. 在要配置的角色的快捷菜单上，选择“属性”，并选择“配置”选项卡。
-2. 在“诊断”部分中，确保“启用诊断”复选框已选中。
-3. 选择“配置”按钮。
+2. 在 **“诊断”** 节中，确保 **“启用诊断”** 复选框已选中。
+3. 选择 **“配置”** 按钮。
 
    ![访问“启用诊断”选项](./media/vs-azure-tools-optimizing-azure-code-in-visual-studio/IC796660.png)
 
    有关详细信息，请参阅 [Configuring Diagnostics for Azure Cloud Services and Virtual Machines](vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines.md)（为 Azure 云服务和虚拟机配置诊断）。
 
 ## <a name="avoid-declaring-dbcontext-objects-as-static"></a>避免将 DbContext 对象声明为静态
-### <a name="id"></a>Id
+### <a name="id"></a>ID
 AP6000
 
 ### <a name="description"></a>描述

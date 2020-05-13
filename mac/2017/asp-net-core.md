@@ -6,12 +6,12 @@ ms.author: dominicn
 ms.date: 07/13/2017
 ms.assetid: 6E8B0C90-33D6-4546-8207-CE0787584565
 ms.custom: video
-ms.openlocfilehash: b1e29e4df6ea31d99a99590f3e56ed6feac791e1
-ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
+ms.openlocfilehash: 5f1a617c5562c4f95fec94ae449f48b681fcb7ef
+ms.sourcegitcommit: 054815dc9821c3ea219ae6f31ebd9cd2dc8f6af5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74984894"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80543749"
 ---
 # <a name="getting-started-with-aspnet-core"></a>ASP.NET Core 入门
 
@@ -234,7 +234,7 @@ ASP.NET Core 应用使用模型视图控制器 (MVC) 设计模式，来为应用
 
 本指南介绍了 ASP.NET Core。 介绍了它是什么，何时使用，并提供了在 Visual Studio for Mac 中使用它的信息。
 有关后续步骤的详细信息，请参阅以下指南：
-- [ASP.NET Core ](/aspnet/core/#build-web-apis-and-web-ui-using-aspnet-core-mvc) 文档。
+- [ASP.NET Core ](/aspnet/core/) 文档。
 - [Creating Backend Services for Native Mobile Applications（为本地移动应用程序创建后端服务）](/aspnet/core/mobile/native-mobile-backend)，介绍了如何使用 ASP.NET Core 为 Xamarin.Forms 应用生成 REST 服务。
 - [ASP.NET Core 动手实验](https://github.com/Microsoft/vs4mac-labs/tree/master/Web/Getting-Started)。
 

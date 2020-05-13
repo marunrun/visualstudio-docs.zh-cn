@@ -2,7 +2,7 @@
 title: Visual Studio 2019 中的新增功能
 titleSuffix: ''
 description: 了解 Visual Studio 2019 中的新增功能。
-ms.date: 12/10/2019
+ms.date: 03/16/2020
 helpviewer_keywords:
 - Visual Studio, what's new
 - what's new [Visual Studio]
@@ -15,16 +15,16 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 35891f081e19420374a1579e73c68d7b93930e54
-ms.sourcegitcommit: 00ba14d9c20224319a5e93dfc1e0d48d643a5fcd
+ms.openlocfilehash: bf251ade250a466cefe02db6f5cc709a0c18837b
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77125359"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79437741"
 ---
 # <a name="whats-new-in-visual-studio-2019"></a>Visual Studio 2019 中的新增功能
 
-已针对[版本 16.4](/visualstudio/releases/2019/release-notes/) 进行更新 
+已针对[版本 16.5](/visualstudio/releases/2019/release-notes/) 进行更新 
 
 >[!div class="button"]
 >[下载 Visual Studio 2019](https://visualstudio.microsoft.com/downloads)
@@ -206,7 +206,7 @@ Visual Studio 2019 中会默认安装此服务。
 
 ## <a name="whats-next"></a>后续步骤
 
-我们经常更新 Visual Studio 2019 的新功能，不断提升开发体验。 若要了解有关我们最新创新的详细信息，请查看 [Visual Studio 博客](https://devblogs.microsoft.com/visualstudio/)。 对于我们迄今为止在预览版中发布的内容记录，请参阅[预览发行说明](/visualstudio/releases/2019/release-notes-preview/)。
+我们经常更新 Visual Studio 2019 的新功能，不断提升开发体验。 若要了解有关我们最新创新的详细信息，请查看 [Visual Studio 博客](https://devblogs.microsoft.com/visualstudio/)。 对于我们迄今为止在预览版中发布的内容记录，请参阅[预览发行说明](/visualstudio/releases/2019/release-notes-preview/)。 有关接下来要发布的内容的列表，请参阅 [Visual Studio 路线图](/visualstudio/productinfo/vs-roadmap)。
 
 想要了解更多关于 Visual Studio 2019 的其他功能吗？ 请参阅 [Visual Studio 路线图](/visualstudio/productinfo/vs-roadmap/)。
 
@@ -221,7 +221,7 @@ Visual Studio 2019 中会默认安装此服务。
 ## <a name="see-also"></a>请参阅
 
 * [Visual Studio 2019 发行说明](/visualstudio/releases/2019/release-notes/)
-* [Visual Studio 2019 SDK 的新增功能](../extensibility/whats-new-visual-studio-2019-sdk.md)
 * [Visual Studio 2019 for Mac 发行说明](/visualstudio/releasenotes/vs2019-mac-relnotes/)
-* [Microsoft Build 2019 会议](https://www.microsoft.com/build)
-* [Microsoft Connect()；2018 会议](https://www.microsoft.com/connectevent)
+* [Visual Studio 2019 SDK 的新增功能](../extensibility/whats-new-visual-studio-2019-sdk.md)
+* [Microsoft Build 会议](https://www.microsoft.com/build)
+* [Microsoft Ignite 会议](https://www.microsoft.com/ignite)

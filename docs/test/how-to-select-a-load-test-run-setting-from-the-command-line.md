@@ -10,15 +10,15 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 760cf18062e607e9f9039c6cc5f4adf409134cb5
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75588988"
 ---
 # <a name="how-to-select-a-load-test-run-setting-to-use-from-the-command-line"></a>如何：从命令行选择要使用的负载测试运行设置
 
-负载测试包含运行设置，运行设置是会影响负载测试运行方式的属性  。 在“属性”  窗口中，运行设置按类别进行组织。 当负载测试运行时，它会使用当前设置为活动的运行设置。
+负载测试包含运行设置，运行设置是会影响负载测试运行方式的属性  。 在“属性”窗口中，运行设置按类别进行组织  。 当负载测试运行时，它会使用当前设置为活动的运行设置。
 
 如果负载测试只包含一个运行设置，则它始终为活动节点。 如果负载测试包含多个运行测试节点，则可以选择一个在从命令行运行负载测试时使用的节点。 请参阅[如何：向负载测试添加额外的运行设置](../test/how-to-add-additional-run-settings-to-a-load-test.md)。
 
@@ -34,7 +34,7 @@ ms.locfileid: "75588988"
 
     `mstest /testcontainer:loadtest1.loadtest`
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [配置负载测试运行设置](../test/configure-load-test-run-settings.md)
 - [为负载测试中的计算机指定计数器集和阈值规则](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md)

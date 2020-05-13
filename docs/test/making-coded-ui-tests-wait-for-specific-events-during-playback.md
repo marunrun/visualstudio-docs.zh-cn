@@ -8,10 +8,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 6e594a6aec3f9e3a9664c5eac829b27f96f12ea0
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75584447"
 ---
 # <a name="make-coded-ui-tests-wait-for-specific-events-during-playback"></a>播放期间让编码 UI 测试等待特定事件
@@ -20,7 +20,7 @@ ms.locfileid: "75584447"
 
 [!INCLUDE [coded-ui-test-deprecation](includes/coded-ui-test-deprecation.md)]
 
-**要求**
+**惠?**
 
 Visual Studio Enterprise
 
@@ -105,7 +105,7 @@ Playback.Wait() 采用 For 循环在较小区块中内部调用 Thread.Sleep()�
 > [!TIP]
 > 通过编码的 UI 测试编辑器，可轻松修改编码的 UI 测试。 使用编码的 UI 测试编辑器，可以查找、查看和编辑测试方法。 也可以在 UI 控件映射中编辑 UI 操作及其关联的控件。 有关详细信息，请参阅[使用编码的 UI 测试编辑器编辑编码的 UI 测试](../test/editing-coded-ui-tests-using-the-coded-ui-test-editor.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用 UI 自动化来测试代码](../test/use-ui-automation-to-test-your-code.md)
 - [创建编码的 UI 测试](../test/use-ui-automation-to-test-your-code.md)

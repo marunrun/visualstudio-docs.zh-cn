@@ -19,10 +19,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: cda81d37be0246c1181b4d82cbd17c3119b94437
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75568006"
 ---
 # <a name="out-devenvexe"></a>/Out (devenv.exe)
@@ -35,9 +35,9 @@ ms.locfileid: "75568006"
 devenv /Out FileName
 ```
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
 
-- FileName 
+- *FileName*
 
   必需。 用于在生成可执行文件时接收输出的文件的路径和文件名。
 
@@ -55,7 +55,7 @@ devenv /Out FileName
 devenv /run "%USERPROFILE%\source\repos\MySolution\MySolution.sln" /out "C:\MyErrorLog.txt"
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Devenv 命令行开关](../../ide/reference/devenv-command-line-switches.md)
 - [/Run (devenv.exe)](../../ide/reference/run-devenv-exe.md)

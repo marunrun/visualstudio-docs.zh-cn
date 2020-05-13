@@ -10,10 +10,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: b30aa723ea3014aec2bd05d4bd204b9427b3c218
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74779969"
 ---
 # <a name="use-profiling-methods-to-collect-performance-data-from-the-command-line"></a>使用分析方法通过命令行收集性能数据
@@ -74,7 +74,7 @@ ms.locfileid: "74779969"
 ## <a name="add-tier-interaction-data-to-a-profiling-run"></a>将层交互数据添加到分析运行
  若要将层交互数据添加到分析运行，需要使用命令行分析工具执行特定的步骤。 请参阅[收集层交互数据](../profiling/adding-tier-interaction-data-from-the-command-line.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [分析独立应用程序](../profiling/command-line-profiling-of-stand-alone-applications.md)
 - [分析 ASP.NET Web 应用程序](../profiling/command-line-profiling-of-aspnet-web-applications.md)
 - [分析服务](../profiling/command-line-profiling-of-services.md)

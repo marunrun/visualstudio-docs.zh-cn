@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 2d97ea90963f70d3a06c669f08473bab27fa08bd
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "68870330"
 ---
 # <a name="how-to-use-the-concurrency-visualizer-markers-sdk"></a>如何：使用并发可视化工具标记 SDK
@@ -70,7 +70,7 @@ ms.locfileid: "68870330"
 
 6. 启动当前项目以显示并发可视化工具。 在“线程”视图中，两个标记系列显示在其各自的通道中。 下图显示两个新范围。
 
-     ![具有 3 个自定义标记系列的并发可视化工具](../profiling/media/cvmarkerseriesnative.png "CvMarkerSeriesNative")
+     ![具有 3 个自定义标记序列的并发可视化工具](../profiling/media/cvmarkerseriesnative.png "CvMarkerSeriesNative")
 
 ### <a name="to-use-visual-basic-or-c"></a>使用 Visual Basic 或 C\#
 
@@ -164,7 +164,7 @@ ms.locfileid: "68870330"
 
 6. 启动当前项目以显示并发可视化工具。 在“线程”视图中，三个标记系列显示在其各自的通道中。 下图显示三个新范围。
 
-     ![具有 3 个自定义标记系列的并发可视化工具](../profiling/media/cvmarkerseriesmanaged.png "CvMarkerSeriesManaged")
+     ![具有 3 个自定义标记序列的并发可视化工具](../profiling/media/cvmarkerseriesmanaged.png "CvMarkerSeriesManaged")
 
 ## <a name="see-also"></a>请参阅
 - [并发可视化工具 SDK](../profiling/concurrency-visualizer-sdk.md)

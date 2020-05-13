@@ -20,7 +20,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: a8e3dda1b728cd631efe8a84913af3d5c475138d
 ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/22/2019
 ms.locfileid: "72728036"
@@ -28,7 +28,7 @@ ms.locfileid: "72728036"
 # <a name="where-can-i-look-up-win32-error-codes"></a>可以在哪里查阅 Win32 错误代码？
 默认系统安装的 INCLUDE 目录中的 WINERROR.H 包含 Win32 API 函数的错误代码定义。
 
- 可以通过在“监视”窗口或“快速监视”对话框中键入错误代码来查阅该代码。 例如:
+ 可以通过在“监视”窗口或“快速监视”对话框中键入错误代码来查阅该代码   。 例如：
 
 `0x80000004,hr`
 

@@ -10,19 +10,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ead738042b15c955aadb458c527253f3759b934e
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.openlocfilehash: 658302de187d6bbeab67dedaaa816709f00436ed
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77633221"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "78865370"
 ---
 # <a name="msbuild-inline-tasks-with-roslyncodetaskfactory"></a>使用 RoslynCodeTaskFactory 创建 MSBuild 内联任务
 
 RoslynCodeTaskFactory 与 [CodeTaskFactory](../msbuild/msbuild-inline-tasks.md) 类似，它使用跨平台的 Roslyn 编译器来生成内存中任务程序集用作内联任务。  RoslynCodeTaskFactory 任务面向的是 .NET Standard，它可用于 .NET Framework 和 .NET Core 运行时，还可用于 Linux 和 Mac 操作系统等其他平台。
 
 >[!NOTE]
->RoslynCodeTaskFactory 仅在 MSBuild 15.8 及更高版本中提供。
+>RoslynCodeTaskFactory 仅在 MSBuild 15.8 及更高版本中提供。 MSBuild 版本遵循 Visual Studio 版本，因此 RoslynCodeTaskFactory 在 Visual Studio 15.8 及更高版本版本中提供。
 
 ## <a name="the-structure-of-an-inline-task-with-roslyncodetaskfactory"></a>使用 RoslynCodeTaskFactory 的内联任务的结构
 
@@ -164,7 +164,7 @@ Log.LogError("Hello, world!");
 
 - `Tally` 是输出参数，其类型为 System.Int32。
 
-如果 `Code` 元素具有 `Fragment` 或 `Method` 的 `Type` 特性，则将自动为每个参数创建属性。 否则，属性必须在源代码中显示声明，并且必须与其参数定义完全匹配。
+如果 `Code` 元素具有 `Fragment` 或 `Method` 的 `Type` 特性，则将自动为每个参数创建属性。  在 RoslynCodeTaskFactory 中，如果 `Code` 元素具有 `Class` 的 `Type` 属性，则无需指定 `ParameterGroup`，因为它是从源代码中推断出来的（这一点不同于 `CodeTaskFactory`）。 否则，属性必须在源代码中显示声明，并且必须与其参数定义完全匹配。
 
 ## <a name="example"></a>示例
 

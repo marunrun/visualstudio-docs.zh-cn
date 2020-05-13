@@ -1,5 +1,5 @@
 ---
-title: DEBUG_CUSTOM_VIEWER | Microsoft Docs
+title: DEBUG_CUSTOM_VIEWER |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - DEBUG_CUSTOM_VIEWER structure
 ms.assetid: 8e0ef3f0-0107-48e8-a037-6e52b4c4ed9d
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 2ba4af7ef465a4d98f78eccc9f7dce7dd4fa43aa
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 3de9b8f7ef30cffbdd78399dc831060e413ba51b
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66346186"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80737543"
 ---
-# <a name="debugcustomviewer"></a>DEBUG_CUSTOM_VIEWER
-标识自定义查看器的结构或类型可视化工具。
+# <a name="debug_custom_viewer"></a>DEBUG_CUSTOM_VIEWER
+标识自定义查看器或类型可视化工具的结构。
 
 ## <a name="syntax"></a>语法
 
@@ -51,32 +51,32 @@ public struct DEBUG_CUSTOM_VIEWER {
 
 ## <a name="members"></a>成员
 `dwID`\
-一个 ID 来区分多个查看器或实现一个可视化工具`GUID`。
+一个 ID，用于区分由一个`GUID`实现的多个查看器或可视化工具。
 
 `bstrMenuName`\
-将出现在下拉列表菜单文本。
+下拉菜单中显示的文本。
 
 `bstrDescription`\
-如果未使用 （必须为 null 值） 的类型可视化工具的自定义查看器的说明。
+自定义查看器或类型可视化工具的说明（如果未使用，则必须是空值）。
 
 `guidLang`\
-提供的表达式计算器的语言。
+提供表达式赋值器的语言。
 
 `guidVendor`\
-提供的表达式计算器的供应商。
+提供表达式赋值器的供应商。
 
 `bstrMetric`\
-指标在其下的自定义查看器或类型可视化工具`CLSID`存储。
+存储自定义查看器或类型可视化工具`CLSID`的指标。
 
 ## <a name="remarks"></a>备注
-此结构的列表返回通过调用[GetCustomViewerList](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md)方法 (以及由此而[GetCustomViewerList](../../../extensibility/debugger/reference/ieevisualizerservice-getcustomviewerlist.md)方法)。
+此结构的列表通过调用[GetCustomViewerList](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md)方法（以及通过扩展[返回 GetCustomViewerList](../../../extensibility/debugger/reference/ieevisualizerservice-getcustomviewerlist.md)方法）返回。
 
 ## <a name="requirements"></a>要求
-标头： msdbg.h
+标题： msdbg.h
 
-命名空间:Microsoft.VisualStudio.Debugger.Interop
+命名空间：微软.VisualStudio.调试器.互通
 
-程序集：Microsoft.VisualStudio.Debugger.Interop.dll
+程序集：微软.VisualStudio.调试器.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [结构和联合](../../../extensibility/debugger/reference/structures-and-unions.md)

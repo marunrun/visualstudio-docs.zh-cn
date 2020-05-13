@@ -8,10 +8,10 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: 3c3a8f4eaf863fd8174ff70339fffc80141fc38d
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75569239"
 ---
 # <a name="generate-an-override-in-visual-studio"></a>在 Visual Studio 中生成方法重写
@@ -22,11 +22,11 @@ ms.locfileid: "75569239"
 
 - Visual Basic
 
-**功能：** 快速生成针对任意方法的代码，以从基类替代它。
+功能：  快速生成针对任意方法的代码，以从基类替代它。
 
-**使用时机：** 想要重写一个基类方法并自动生成签名时。
+ 时机：想要重写一个基类方法并自动生成签名时。
 
-操作原因：  可以自己编写方法签名，但此功能可自动生成签名。
+ 原因：可以自己编写方法签名，但此功能可自动生成签名。
 
 ## <a name="how-to"></a>操作说明
 
@@ -56,6 +56,6 @@ ms.locfileid: "75569239"
 
        ![重写结果 VB](media/override-result-vb.png)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [代码生成](../code-generation-in-visual-studio.md)

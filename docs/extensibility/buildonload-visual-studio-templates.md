@@ -1,5 +1,5 @@
 ---
-title: BuildOnLoad 属性和元素 （Visual Studio 模板）
+title: 生成加载属性和元素（可视化工作室模板）
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -9,21 +9,21 @@ helpviewer_keywords:
 - BuildOnLoad attribute [Visual Studio Templates]
 - BuildOnLoad element [Visual Studio Templates]
 ms.assetid: 950f5fc1-d041-4090-9a5c-60844768a4cc
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f32056aae3c860aee250248c606bbda4dbf9506c
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 3be4016822ccaaae2f1352f91ecc10f09273a889
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66321274"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80739946"
 ---
-# <a name="buildonload-attribute-and-element"></a>BuildOnLoad 属性和元素
+# <a name="buildonload-attribute-and-element"></a>生成加载属性和元素
 
-指定是否在创建后立即生成项目。 **BuildOnLoad**是属性和元素。
+指定是否在项目创建后立即生成项目。 **BuildOnLoad**既是一个属性，也是一个元素。
 
 元素层次结构：
 
@@ -47,15 +47,15 @@ ms.locfileid: "66321274"
 
 ## <a name="text-value"></a>文本值
 
-文本值为必填**BuildOnLoad**元素。 文本必须是`true`或`false`，该值指示是否在创建后立即生成项目。
+**生成加载**元素需要文本值。 文本必须为 或`true``false`，指示是否在创建项目后立即生成项目。
 
 ## <a name="remarks"></a>备注
 
-**BuildOnLoad**为可选属性。 默认值为 `false`。
+**生成加载**是一个可选属性。 默认值为 `false`。
 
 ## <a name="example"></a>示例
 
-下面的示例演示的元数据C#模板时**BuildOnLoad**用作元素：
+以下示例说明了当**BuildOnLoad**用作元素时 C# 模板的元数据：
 
 ```xml
 <VSTemplate Type="Project" Version="3.0.0"
@@ -84,7 +84,7 @@ ms.locfileid: "66321274"
 
 ## <a name="see-also"></a>请参阅
 
-- [BuildProjectOnload 元素](buildprojectonload-element-visual-studio-templates.md)
-- [TemplateContent 元素](../extensibility/templatecontent-element-visual-studio-templates.md)
+- [生成项目加载元素](buildprojectonload-element-visual-studio-templates.md)
+- [模板内容元素](../extensibility/templatecontent-element-visual-studio-templates.md)
 - [创建项目和项模板](../ide/creating-project-and-item-templates.md)
-- [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
+- [可视化工作室模板架构参考](../extensibility/visual-studio-template-schema-reference.md)

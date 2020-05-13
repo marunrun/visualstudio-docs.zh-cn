@@ -1,6 +1,6 @@
 ---
 title: 将单元测试作为 64 位进程运行
-ms.date: 11/04/2016
+ms.date: 03/10/2020
 ms.topic: conceptual
 helpviewer_keywords:
 - unit tests, creating
@@ -10,12 +10,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 67a614ed164b12070fe40f24cdba09a3051e36a5
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: d6c6839f8c4702d88d1022116231c6f22b5dbf21
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75566249"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79093916"
 ---
 # <a name="run-a-unit-test-as-a-64-bit-process"></a>将单元测试作为 64 位进程运行
 
@@ -23,14 +23,25 @@ ms.locfileid: "75566249"
 
 ## <a name="to-run-a-unit-test-as-a-64-bit-process"></a>将单元测试作为 64 位进程运行的具体步骤
 
-1. 如果代码或测试是以 32 位/x86 形式编译，但现在希望将它们作为 64 位进程运行，请将它们重新编译为“任何 CPU”  或“64 位”  。
+1. 如果代码或测试是以 32 位/x86 形式编译，但现在希望将它们作为 64 位进程运行，请将它们重新编译为“Any CPU”  。
+
+   ::: moniker range="vs-2017"
+   或者，在 Visual Studio 2017 中，还可以将项目编译为 64 位  。
+   ::: moniker-end
 
     > [!TIP]
     > 为了最大限度地提高灵活性，请使用“任何 CPU”  配置来编译测试项目。 然后，可以在 32 位和 64 位代理上运行。 使用“64 位”  配置编译测试项目毫无优势可言。
 
-2. 在 Visual Studio 菜单中，依次选择“测试”  、“设置”  和“处理器体系结构”  。 选择“x64”  ，将测试作为 64 位进程运行。
+2. 将单元测试设置为作为 64 位进程运行。
 
-   - 或 -
+   ::: moniker range=">=vs-2019"
+   在 Visual Studio 菜单中，选择“测试”，然后选择“AnyCPU 项目的处理器体系结构”   。 选择“x64”  ，将测试作为 64 位进程运行。
+   ::: moniker-end
+   ::: moniker range="vs-2017"
+   在 Visual Studio 菜单中，依次选择“测试”、“测试设置”和“处理器体系结构”    。 选择“x64”  ，将测试作为 64 位进程运行。
+   ::: moniker-end
+
+   \- 或 -
 
    在 .runsettings 文件中指定 `<TargetPlatform>x64</TargetPlatform>`  。 此方法的一个优点是可以在不同文件中指定设置组，并在不同设置之间快速切换。 您还可以在解决方案之间复制设置。 有关详细信息，请参阅[使用 .runsettings 文件配置单元测试](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md)。
 

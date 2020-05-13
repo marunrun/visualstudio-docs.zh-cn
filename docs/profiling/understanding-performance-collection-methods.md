@@ -13,10 +13,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: ad451c6146593713b02901ac43423c76174d0684
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74778084"
 ---
 # <a name="understand-performance-collection-methods"></a>了解性能收集方法
@@ -26,7 +26,7 @@ Visual Studio 分析工具提供了五种可以用于收集性能数据的方法
 > [!NOTE]
 > Windows 8 和 Windows Server 2012 中增强的安全功能需要以 Visual Studio 探查器在这些平台上收集数据的方式进行重大更改。 UWP 应用也需要新的收集技术。 请参阅 [Windows 8 和 Windows Server 2012 应用程序上的性能工具](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)。
 
-|方法|说明|
+|方法|描述|
 |------------|-----------------|
 |[采样](#sampling)|收集有关应用程序执行的工作的统计数据。|
 |[检测](#instrumentation)|收集有关每个函数调用的详细计时信息。|

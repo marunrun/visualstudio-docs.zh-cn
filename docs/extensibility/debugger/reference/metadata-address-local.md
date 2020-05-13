@@ -1,5 +1,5 @@
 ---
-title: METADATA_ADDRESS_LOCAL | Microsoft Docs
+title: METADATA_ADDRESS_LOCAL |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,24 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - METADATA_ADDRESS_LOCAL structure
 ms.assetid: 635f6bc5-c486-4e0e-83db-36f15e543843
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: f8500d7ad1e03e08fa852afe9b8b77e49562f355
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: e3adf9ca5f679c7a526f10b1ee6c91d50dac52d2
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66345625"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80714478"
 ---
-# <a name="metadataaddresslocal"></a>METADATA_ADDRESS_LOCAL
+# <a name="metadata_address_local"></a>METADATA_ADDRESS_LOCAL
 
-此结构表示范围 （通常是一个函数或方法） 内的本地变量的地址。
+此结构表示作用域（通常是函数或方法）中的局部变量的地址。
 
 ## <a name="syntax"></a>语法
 
@@ -47,22 +47,22 @@ public struct METADATA_ADDRESS_LOCAL {
 ## <a name="members"></a>成员
 
 `tokMethod`\
-方法或函数的 ID 本地变量为的一部分。
+本地变量的一部分的方法或函数的 ID。
 
-[C++]`_mdToken`是`typedef`适用于 32 位`int`。
+[C++]`_mdToken`是`typedef`32 位`int`的 。
 
 `pLocal`\
-标记此结构表示其地址。
+此结构表示的地址的令牌。
 
 `dwIndex`\
-可以是局部变量的方法或函数或一些其他值 （特定于语言的） 中的索引。
+可以是方法或函数中此局部变量的索引，也可以是其他一些值（特定于语言） 的索引。
 
 ## <a name="remarks"></a>备注
 
-此结构是中的联合的一部分[DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md)结构时`dwKind`字段`DEBUG_ADDRESS_UNION`结构设置为`ADDRESS_KIND_LOCAL`(从值[ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md)枚举）。
+当`DEBUG_ADDRESS_UNION``ADDRESS_KIND_LOCAL`结构字段设置为[（ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md)枚举中[DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md)的值）时，`dwKind`此结构是DEBUG_ADDRESS_UNION结构中的联合的一部分。
 
 > [!WARNING]
-> [C++仅]如果`pLocal`不为 null，则必须调用`Release`上标记的指针 (`addr`是中的字段[DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md)结构):
+> [仅C++]如果`pLocal`不是 null，则必须调用`Release`令牌指针（`addr`是[DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md)结构中的字段）：
 >
 > ```cpp
 > if (addr.dwKind == ADDRESS_KIND_METADATA_LOCAL && addr.addr.addrLocal.pLocal != NULL)
@@ -73,11 +73,11 @@ public struct METADATA_ADDRESS_LOCAL {
 
 ## <a name="requirements"></a>要求
 
-标头： sh.h
+标题： sh.h
 
-命名空间:Microsoft.VisualStudio.Debugger.Interop
+命名空间：微软.VisualStudio.调试器.互通
 
-程序集：Microsoft.VisualStudio.Debugger.Interop.dll
+程序集：微软.VisualStudio.调试器.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 

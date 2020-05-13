@@ -15,10 +15,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 202c30b1786e7e3ddb27583ddaeda9180d680b53
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74774882"
 ---
 # <a name="how-to-serialize-symbol-information"></a>如何：序列化符号信息
@@ -34,7 +34,7 @@ ms.locfileid: "74774882"
 
 3. 在“常规设置”下，选择“自动序列化符号信息”   。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [配置性能会话](../profiling/configuring-performance-sessions.md)
 - [如何：引用 Windows 符号信息](../profiling/how-to-reference-windows-symbol-information.md)
 - [如何：保存已分析的报告文件](/previous-versions/visualstudio/visual-studio-2010/bb763106\(v\=vs.100\))

@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 3b1beb2ccb6b3e3e2b74ed7deaf2f31443ee2466
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75569018"
 ---
 # <a name="how-to-use-the-keyboard-exclusively"></a>如何以独占方式使用键盘
@@ -43,9 +43,9 @@ ms.locfileid: "75569018"
 
 不使用鼠标，将工具箱上的控件添加到表单或设计器中：
 
-1. 在菜单栏上，依次选择“视图” > “工具箱”   。
+1. 在菜单栏上，依次选择“视图” **“工具箱”**  >   。
 
-2. 使用 Ctrl+向上键或 Ctrl+向下键，在“工具箱”选项卡的各部分间移动      。
+2. 使用 Ctrl**向上键或 Ctrl**向下键，在“工具箱”选项卡的各部分间移动+   +   。
 
 3. 使用向上键或向下键，在节中的控件间移动   。
 
@@ -55,7 +55,7 @@ ms.locfileid: "75569018"
 
 仅使用键盘，在对话框中的选项间移动并更改选项设置：
 
-1. 使用 Tab 或 Shift+Tab，在对话框中的控件间上下移动    。
+1. 使用 Tab 或 Shift**Tab，在对话框中的控件间上下移动**  +  。
 
 2. 更改选项设置：
 
@@ -63,17 +63,17 @@ ms.locfileid: "75569018"
 
    - 对于复选框，请按空格键选中或取消选中  。
 
-   - 对于下拉列表，请使用 Alt+向下键来显示项，然后使用向上键和向下键更改选定的项     。
+   - 对于下拉列表，请使用 Alt**向下键来显示项，然后使用向上键和向下键更改选定的项**+    。
 
    - 对于按钮，选择 Enter 可激活  。
 
-   - 对于网格，请使用箭头键来导航。 对于网格中的下拉列表，请使用 Shift+Alt+向下键来显示项，然后使用向上键和向下键更改选定的项      。
+   - 对于网格，请使用箭头键来导航。 对于网格中的下拉列表，请使用 Shift**Alt**向下键来显示项，然后使用向上键和向下键更改选定的项+  +    。
 
 ## <a name="navigate-between-windows-and-files"></a>在窗口和文件之间导航
 
-- 要在编辑器或设计器中的文件间移动，请选择 Ctrl+Tab 键盘快捷方式以显示 IDE 导航器，并选中“活动文件”    。 选择 Enter 键，导航到突出显示的文件  。
+- 要在编辑器或设计器中的文件间移动，请选择 Ctrl**Tab 键盘快捷方式以显示 IDE 导航器，并选中“活动文件”** +   。 选择 Enter 键，导航到突出显示的文件  。
 
-- 要在停靠的工具窗口间移动，请选择 Alt+F7 键盘快捷方式以显示 IDE 导航器，并选中“活动工具窗口”    。 选择 Enter 键，导航到突出显示的窗口  。
+- 要在停靠的工具窗口间移动，请选择 Alt**F7 键盘快捷方式以显示 IDE 导航器，并选中“活动工具窗口”** +   。 选择 Enter 键，导航到突出显示的窗口  。
 
 ## <a name="move-and-dock-tool-windows"></a>移动并停靠工具窗口
 
@@ -81,7 +81,7 @@ ms.locfileid: "75569018"
 
 2. 在“窗口”菜单上，选择“可停靠”选项   。
 
-3. 按 Alt+空格键，然后选择“移动”    。
+3. 按 Alt**空格键，然后选择“移动”** +   。
 
    随即显示停靠菱形引导标记。
 
@@ -97,7 +97,7 @@ ms.locfileid: "75569018"
 
    工具窗口随即进入新的停靠位置。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 * [标识并自定义键盘快捷键](../../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md)
 * [辅助功能提示和技巧](../../ide/reference/accessibility-tips-and-tricks.md)

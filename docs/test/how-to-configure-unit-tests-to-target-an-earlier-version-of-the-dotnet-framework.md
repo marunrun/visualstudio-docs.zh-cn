@@ -8,10 +8,10 @@ ms.workload:
 - dotnet
 author: mikejo5000
 ms.openlocfilehash: 32380ddc802d1421f39d4920073fc277876cfef4
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75596016"
 ---
 # <a name="how-to-configure-unit-tests-to-target-an-earlier-version-of-the-net-framework"></a>如何：配置单元测试以面向 .NET Framework 的早期版本
@@ -83,11 +83,11 @@ ms.locfileid: "75596016"
 
 2. 在“解决方案资源管理器”中，从新的 C++ 测试项目中选择“卸载项目”   。
 
-3. 在“解决方案资源管理器”中，选择已卸载的 C++ 测试项目，然后选择“编辑\<项目名称>.vcxproj”   。
+3. 在“解决方案资源管理器”中，选择已卸载的 C++ 测试项目，然后选择“编辑**项目名称>.vcxproj”** **\<** 。
 
    即可在编辑器中打开 .vcxproj 文件  。
 
-4. 在标记为`"Globals"`的 `PropertyGroup` 中将 `TargetFrameworkVersion` 设为版本 3.5 或更高版本。 不应指定客户端版本：
+4. 在标记为`TargetFrameworkVersion`的 `PropertyGroup` 中将 `"Globals"` 设为版本 3.5 或更高版本。 不应指定客户端版本：
 
     ```xml
     <PropertyGroup Label="Globals">
@@ -104,7 +104,7 @@ ms.locfileid: "75596016"
 
 6. 在“解决方案资源管理器”中，从新的 C++ 测试项目的右键单击菜单中选择“重载项目”   。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [创建 SharePoint 解决方案](../sharepoint/create-sharepoint-solutions.md)
 - [生成和调试 SharePoint 解决方案](../sharepoint/building-and-debugging-sharepoint-solutions.md)

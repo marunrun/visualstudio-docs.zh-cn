@@ -6,10 +6,10 @@ ms.author: dominicn
 ms.date: 05/06/2018
 ms.assetid: 17AB4F31-4921-4B4E-8D9D-95FB84294521
 ms.openlocfilehash: c612e1afab79e507838f8294b71d45348e8b5e46
-ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "74984789"
 ---
 # <a name="user-accounts"></a>用户帐户
@@ -18,7 +18,7 @@ ms.locfileid: "74984789"
 
 登录后，可以访问与用户帐户以及链接到该帐户的所有帐户关联的所有服务。 无论你在何处使用 Visual Studio，你的帐户设置都随你一起漫游。 你可以为单个用户配置对特定 Visual Studio 实例的权限级别。
 
-## <a name="in-this-section"></a>本节内容
+## <a name="in-this-section"></a>在本节中
 
 * [登录 Visual Studio for Mac](signing-in.md)
 * [启用订阅](enable-subscription.md)

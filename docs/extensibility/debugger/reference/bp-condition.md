@@ -1,5 +1,5 @@
 ---
-title: BP_CONDITION | Microsoft Docs
+title: BP_CONDITION |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BP_CONDITION structure
 ms.assetid: 407f87a3-2878-429b-8c65-b68feb36622a
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e20db594fcc00f641634bfaae8d5342d4b520d7f
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 88ed6b6468c5765c8f987c1f15f3e4e8ade9c8c6
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66337427"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80738100"
 ---
-# <a name="bpcondition"></a>BP_CONDITION
-描述触发断点的条件。
+# <a name="bp_condition"></a>BP_CONDITION
+描述断点触发的条件。
 
 ## <a name="syntax"></a>语法
 
@@ -49,31 +49,31 @@ public struct BP_CONDITION {
 
 ## <a name="members"></a>成员
 `pThread`\
-[IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)对象，表示包含断点的应用程序在活动线程。
+[IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)对象，表示包含断点的应用程序的活动线程。
 
 `styleCondition`\
-中的值[BP_COND_STYLE](../../../extensibility/debugger/reference/bp-cond-style.md)描述此断点条件的样式的枚举。
+描述此断点条件样式[的BP_COND_STYLE](../../../extensibility/debugger/reference/bp-cond-style.md)枚举中的值。
 
 `bstrContext`\
 断点的位置。
 
 `bstrCondition`\
-触发断点的条件。
+断点的触发条件。
 
 `nRadix`\
-用于评估任何数字信息的基数。
+用于评估任何数值信息的 Radix。
 
 ## <a name="remarks"></a>备注
-此结构是的成员[BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md)并[BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md)结构。
+此结构是[BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md)和[BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md)结构的成员。
 
-此结构还作为参数传递[SetCondition](../../../extensibility/debugger/reference/idebugboundbreakpoint2-setcondition.md)并[SetCondition](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-setcondition.md)方法。
+此结构也作为参数传递给[Set 条件和](../../../extensibility/debugger/reference/idebugboundbreakpoint2-setcondition.md)Set[条件](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-setcondition.md)方法。
 
 ## <a name="requirements"></a>要求
-标头： msdbg.h
+标题： msdbg.h
 
-命名空间:Microsoft.VisualStudio.Debugger.Interop
+命名空间：微软.VisualStudio.调试器.互通
 
-程序集：Microsoft.VisualStudio.Debugger.Interop.dll
+程序集：微软.VisualStudio.调试器.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [结构和联合](../../../extensibility/debugger/reference/structures-and-unions.md)

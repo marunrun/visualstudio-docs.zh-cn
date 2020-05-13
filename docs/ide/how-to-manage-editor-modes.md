@@ -25,10 +25,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 77f224a6e3a1b12ed17799ddf6a2fc5c23f5d4cc
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75591029"
 ---
 # <a name="how-to-manage-editor-modes"></a>如何：管理编辑器模式
@@ -36,7 +36,7 @@ ms.locfileid: "75591029"
 可在各种显示模式下显示 Visual Studio 代码编辑器。
 
 > [!NOTE]
-> 显示的对话框和菜单命令可能与本文中的描述不同，具体取决于现用的设置或版本。 若要更改设置，例如“常规”或“Visual C++”设置，请选择“工具” > “导入和导出设置”，再选择“重置所有设置”      。
+> 显示的对话框和菜单命令可能与本文中的描述不同，具体取决于现用的设置或版本。 若要更改设置，例如“常规”或“Visual C++”设置，请选择“工具” **“导入和导出设置”，再选择“重置所有设置”**    >    。
 
 ## <a name="enable-full-screen-mode"></a>启用全屏模式
 
@@ -54,14 +54,14 @@ ms.locfileid: "75591029"
 
 1. 从“工具”菜单中选择“选项”   。
 
-2. 展开“文本编辑器”文件夹，选择“所有语言”，全局设置此选项，或选择特定语言的文件夹   。 例如，若要仅在 Visual Basic 中启用行号，则选择“Basic” > “文本编辑器”节点   。
+2. 展开“文本编辑器”文件夹，选择“所有语言”，全局设置此选项，或选择特定语言的文件夹   。 例如，若要仅在 Visual Basic 中启用行号，则选择“Basic” **“文本编辑器”节点** >   。
 
 3. 选择“常规”选项，然后在“设置”下选择“启用虚空格”    。
 
     > [!NOTE]
     > “虚空格”在“列选择”模式下启用   。 如果未启用“虚空格”模式，插入点将从一行的末尾直接移动到下一行的第一个字符  。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在 Visual Studio 中自定义窗口布局](../ide/customizing-window-layouts-in-visual-studio.md)
 - [“选项”对话框 ->“环境”->“字体和颜色”](../ide/reference/fonts-and-colors-environment-options-dialog-box.md)

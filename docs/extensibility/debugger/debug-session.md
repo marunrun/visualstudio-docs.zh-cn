@@ -1,28 +1,28 @@
 ---
-title: 调试会话 |Microsoft Docs
+title: 调试会话 |微软文档
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - debugging [Debugging SDK], sessions
 ms.assetid: 18d82199-b2d4-47a9-924f-ab64faf60ca1
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8f539fe73263e6f58b96e63da1f766d372b11e57
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 664bcc4790d642ec5ea006cc42b3cf29885e9018
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66336519"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80739003"
 ---
 # <a name="debug-session"></a>调试会话
-在调试器体系结构，方面*会话*:
+在调试器体系结构方面，*会话*：
 
-- 是所有处理时，相关或不相关，已启动或连接到 IDE 的单个实例。
+- 是从 IDE 的单个实例启动或附加到的所有进程（相关或不相关的）集。
 
-- 由会话调试管理器 (SDM) 实现。 有关详细信息，请参阅[会话调试管理器](../../extensibility/debugger/session-debug-manager.md)。
+- 由会话调试管理器 （SDM） 实现。 有关详细信息，请参阅[会话调试管理器](../../extensibility/debugger/session-debug-manager.md)。
 
 ## <a name="see-also"></a>请参阅
 - [会话调试管理器](../../extensibility/debugger/session-debug-manager.md)

@@ -19,10 +19,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 0a286a84d01c6a49b32445106488688ba5b489be
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "76114551"
 ---
 # <a name="how-to-create-and-remove-project-dependencies"></a>如何：创建和删除项目依赖项
@@ -61,7 +61,7 @@ ms.locfileid: "76114551"
 
 4. 在“依赖对象”  字段中，清除不再属于此项目依赖项的任何其他项目的复选框。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在 Visual Studio 中生成和清理项目和解决方案](../ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md)
 - [编译和生成](../ide/compiling-and-building-in-visual-studio.md)

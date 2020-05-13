@@ -1,7 +1,7 @@
 ---
 title: 使用 TypeScript 创建 ASP.NET Core 应用
 description: 在本教程中，使用 ASP.NET Core 和 TypeScript 创建应用
-ms.date: 01/03/2020
+ms.date: 03/16/2020
 ms.topic: tutorial
 ms.devlang: javascript
 author: mikejo5000
@@ -11,12 +11,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 40011b035afdf4a04eb760d13c001e39d9c578c4
-ms.sourcegitcommit: 91a054beb6b3a16ed5140f9f829239ec31bbbec8
+ms.openlocfilehash: e212aec6d2d3aa7e20cb0ca08c9ea604f32bb08c
+ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75810578"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "79988551"
 ---
 # <a name="tutorial-create-an-aspnet-core-app-with-typescript-in-visual-studio"></a>教程：在 Visual Studio 中使用 TypeScript 创建 ASP.NET Core 应用
 
@@ -40,6 +40,7 @@ ms.locfileid: "75810578"
 > * 添加用于 TypeScript 支持的 NuGet 包
 > * 添加一些 TypeScript 代码
 > * 运行应用
+> * 使用 npm 添加第三方库
 
 ## <a name="prerequisites"></a>先决条件
 
@@ -58,6 +59,9 @@ ms.locfileid: "75810578"
 
 Visual Studio 管理项目中的单个应用程序的文件  。 该项目包括源代码、资源和配置文件。
 
+>[!NOTE]
+> 要从空的 ASP.NET Core 项目开始并添加 TypeScript 前端，请改为参阅[含 TypeScript 的 ASP.NET Core](https://www.typescriptlang.org/docs/handbook/asp-net-core.html)。
+
 在本教程中，将从一个包含 ASP.NET Core MVC 应用代码的简单项目开始。
 
 1. 打开 Visual Studio。
@@ -65,14 +69,16 @@ Visual Studio 管理项目中的单个应用程序的文件  。 该项目包括
 1. 创建新项目。
 
     ::: moniker range=">=vs-2019"
-    按 Esc 关闭启动窗口  。 键入 Ctrl+Q  以打开搜索框，键入“ASP.NET”  ，然后选择“ASP.NET Core Web 应用程序 - C#”  。 在出现的对话框中，选择“创建”  。
+    如果开始窗口未打开，请选择“文件” > “开始窗口”   。 在“开始”窗口上，选择“创建新项目”  。 在“语言”下拉列表中，选择“C#”  。 在搜索框中，键入 ASP.NET，然后选择“ASP.NET Core Web 应用”   。 选择“下一步”  。
+
+    键入项目的名称，然后选择“创建”  。
     ::: moniker-end
     ::: moniker range="vs-2017"
     从顶部菜单栏中选择“文件”   > “新建”   > “项目”  。 在“新建项目”对话框的左侧窗格中，展开“Visual C#”，然后选择“.NET Core”    。 在中间窗格中，选择“ASP.NET Core Web 应用程序 - C#”  ，然后选择“确定”  。
     ::: moniker-end
     如果未显示“ASP.NET Core Web 应用程序”  项目模板，必须添加“ASP.NET 和 Web 开发”  工作负载。 有关详细说明，请参阅[先决条件](#prerequisites)。
 
-1. 选择“创建”  之后，在对话框中选择“Web 应用程序(模型-视图-控制器)”  ，然后选择“创建”  。
+1. 在显示的对话框中，选择“Web 应用”之后，在选择“Web 应用(模型-视图-控制器)”，然后选择“创建”（或“确定”）    。
 
    ![选择 MVC 模板](../javascript/media/aspnet-core-ts-mvc-template.png)
 
@@ -211,6 +217,76 @@ Visual Studio 管理项目中的单个应用程序的文件  。 该项目包括
    你可能需要响应消息来启用脚本调试。
 
    应用程序在断点处暂停。 现在，可以检查变量并使用调试器功能。
+
+## <a name="add-typescript-support-for-a-third-party-library"></a>为第三方库添加 TypeScript 支持
+
+1. 按照 [npm 包管理](../javascript/npm-package-management.md#aspnet-core-projects)中的说明将 `package.json` 文件添加到项目。 此操作会向项目添加 npm 支持。
+
+   >[!NOTE]
+   > 对于 ASP.NET Core 项目，还可以使用[库管理器](https://docs.microsoft.com/aspnet/core/client-side/libman/?view=aspnetcore-3.1)或 yarn（而非 npm）来安装客户端 JavaScript 和 CSS 文件。
+
+1. 在此示例中，将 jQuery 的 TypeScript 定义文件添加到项目。 向 package.json 文件添加以下内容  。
+
+   ```json
+   "devDependencies": {
+      "@types/jquery": "3.3.33"
+   }
+   ```
+
+   此操作会为 jQuery 添加 TypeScript 支持。 MVC 项目模板中已包含 jQuery 库（在解决方案资源管理器中的 wwwroot/lib 下查看）。 如果使用其他模板，则可能还需要包含 jquery npm 包。
+
+1. 如果未安装解决方案资源管理器中的包，请右键单击 npm 节点，然后选择“还原包”  。
+
+   >[!NOTE]
+   > 在某些情况下，解决方案资源管理器可能会指示由于[此处](https://github.com/aspnet/Tooling/issues/479)所述的已知问题，npm 包与 package.json 不同步  。 例如，在安装包时，可能会显示为未安装。 在大多数情况下，可以通过删除 package.json，重启 Visual Studio 并重新添加 package.json 文件来更新解决方案资源管理器，如本文前面所述   。
+
+1. 在解决方案资源管理器中右键单击脚本文件夹，然后选择“添加” > “新项”   。
+
+1. 选择“TypeScript 文件”，键入 library.ts，然后选择“添加”    。
+
+1. 在 library.ts 中，添加以下代码  。
+
+   ```ts
+   var jqtest = {
+      showMsg: function (): void {
+         let v: any = jQuery.fn.jquery.toString();
+         let content: any = $("#ts-example-2")[0].innerHTML;
+         alert(content.toString());
+         $("#ts-example-2")[0].innerHTML = content + " " + v + "!!";
+      }
+   };
+
+   jqtest.showMsg();
+   ```
+
+   为简单起见，此代码使用 jQuery 显示消息和警报。
+
+   如果添加了 jQuery 的 TypeScript 类型定义，则在 jQuery 对象后面键入“.”时，可以获得针对 jQuery 对象的 IntelliSense 支持，如下所示。
+
+   ![jquery IntelliSense](../javascript/media/aspnet-core-ts-jquery-intellisense.png)
+
+1. 在 _Layout.cshtml 中，更新脚本引用以包含 `library.js`。
+
+   ```html
+   <script src="~/js/app.js"></script>
+   <script src="~/js/library.js"></script>
+   ```
+
+1. 在 Index.cshtml 中，将以下 HTML 代码添加到文件末尾。
+
+   ```html
+   <div>
+      <p id="ts-example-2">jQuery version is:</p>
+   </div>
+   ```
+
+1. 按 F5  （“调试”   > “启动调试”  ）来运行该应用程序。
+
+    应用将在浏览器中打开。
+
+    在警报中单击“确定”，以查看已更新为 jQuery 版本  **的页面为：** 3.3.1!! 的页面。
+
+    ![jquery 示例](../javascript/media/aspnet-core-ts-jquery-example.png)
 
 ## <a name="next-steps"></a>后续步骤
 

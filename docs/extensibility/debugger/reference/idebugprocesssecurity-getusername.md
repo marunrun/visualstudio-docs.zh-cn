@@ -1,27 +1,27 @@
 ---
-title: IDebugProcessSecurity::GetUserName |Microsoft Docs
+title: IDebugProcess 安全性：获取用户名 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IDebugProcessSecurity::GetUserName
 ms.assetid: c73c60ac-da6e-45ae-8f04-95353a24ca3e
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a42b67eb3fd308011bf725f8dd7e24a4d9ddca6f
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: ef00a0b7489c3e5cb709520546f3d3f26c8a4eba
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66311525"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80723258"
 ---
 # <a name="idebugprocesssecuritygetusername"></a>IDebugProcessSecurity::GetUserName
-从端口提供程序获取用户名称。
+从端口供应商获取用户名。
 
 ## <a name="syntax"></a>语法
 
@@ -39,13 +39,13 @@ int GetUserName (
 
 ## <a name="parameters"></a>参数
 `pbstrUserName`\
-[out]包含的用户名称的字符串。
+[出]包含用户名的字符串。
 
 ## <a name="return-value"></a>返回值
- 如果此方法成功，它将返回`S_OK`。 否则，它返回一个错误代码。
+ 如果该方法成功，则它会返回 `S_OK`。 否则，它将返回一个错误代码。
 
 ## <a name="remarks"></a>备注
- `GetUserName` 返回在显示的用户名**用户名**的列**附加到进程**对话框。 若要查看**附加到进程**对话框中，单击**附加到进程**上**工具**菜单中的[!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]集成的开发环境 (IDE)。
+ `GetUserName`返回"**附加到进程**"对话框的 **"用户名**"列中显示的用户名。 要查看"**附加到流程**"对话框，请单击[!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]集成开发环境 （IDE） 中的 **"工具**"菜单上的 **"附加到进程**"。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugProcessSecurity](../../../extensibility/debugger/reference/idebugprocesssecurity.md)

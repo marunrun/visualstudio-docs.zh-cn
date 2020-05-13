@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 7f62852550c161566832a7ab78d4058d1d14028f
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "72748720"
 ---
 # <a name="list-call-stack-command"></a>“列出调用堆栈”命令
@@ -33,7 +33,7 @@ Debug.ListCallStack [/Count:number] [/ShowTypes:yes|no]
 [/ShowExternalCode:yes|no] [Thread:n] [index]
 ```
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
 
 `index`\
 可选。 设置当前堆栈帧且不显示任何输出。
@@ -47,35 +47,35 @@ Debug.ListCallStack [/Count:number] [/ShowTypes:yes|no]
 
 /ShowTypes:`yes`|`no` [or] /T:`yes`|`no`
 
-可选。 指定是否显示参数类型。 默认值是 `yes`。
+可选。 指定是否显示参数类型。 默认值为 `yes`。
 
 /ShowNames:`yes``no` [or] /N:`yes``no`
 
-可选。 指定是否显示参数名称。 默认值是 `yes`。
+可选。 指定是否显示参数名称。 默认值为 `yes`。
 
 /ShowValues:`yes``no` [or] /V:`yes``no`
 
-可选。 指定是否显示参数值。 默认值是 `yes`。
+可选。 指定是否显示参数值。 默认值为 `yes`。
 
 /ShowModule:`yes``no` [or] /M:`yes``no`
 
-可选。 指定是否显示模块名称。 默认值是 `yes`。
+可选。 指定是否显示模块名称。 默认值为 `yes`。
 
 /ShowLineOffset:`yes``no` [or] /#:`yes``no`
 
-可选。 指定是否显示线偏移。 默认值是 `no`。
+可选。 指定是否显示线偏移。 默认值为 `no`。
 
 /ShowByteOffset:`yes``no` [or] /B:`yes``no`
 
-可选。 指定是否显示字节偏移。 默认值是 `no`。
+可选。 指定是否显示字节偏移。 默认值为 `no`。
 
 /ShowLanguage:`yes``no` [or] /L:`yes``no`
 
-可选。 指定是否显示语言。 默认值是 `no`。
+可选。 指定是否显示语言。 默认值为 `no`。
 
 /IncludeCallsAcrossThreads:`yes``no` [or] /I:`yes`|`no`
 
-可选。 指定是否包括对其他线程的调用或包括来自其他线程的调用。 默认值是 `no`。
+可选。 指定是否包括对其他线程的调用或包括来自其他线程的调用。 默认值为 `no`。
 
 /ShowExternalCode:`yes`|`no`
 
@@ -108,7 +108,7 @@ kb 2
 >Debug.CallStack /Count:4 /ShowTypes:yes
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [“列出反汇编”命令](../../ide/reference/list-disassembly-command.md)
 - [“列出线程”命令](../../ide/reference/list-threads-command.md)

@@ -13,10 +13,10 @@ f1_keywords:
 ms.workload:
 - multiple
 ms.openlocfilehash: 6495e8506e12c0c5e5f878a23c609fe53a401bde
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75596991"
 ---
 # <a name="optimize-visual-studio-performance"></a>优化 Visual Studio 性能
@@ -49,9 +49,9 @@ ms.locfileid: "75596991"
 
 ## <a name="help-us-improve"></a>帮助我们改进
 
-你的反馈有助于我们改进。 使用“报告问题”功能来“记录”跟踪并发送给我们  。 选择“快速启动”旁边的反馈图标，或从菜单栏中选择“帮助” > “发送反馈” > “报告问题”     。 有关详细信息，请参阅[如何报告 Visual Studio 的问题](../ide/how-to-report-a-problem-with-visual-studio.md)。
+你的反馈有助于我们改进。 使用“报告问题”功能来“记录”跟踪并发送给我们  。 选择“快速启动”旁边的反馈图标，或从菜单栏中选择“帮助” **“发送反馈”** “报告问题”   >    >   。 有关详细信息，请参阅[如何报告 Visual Studio 的问题](../ide/how-to-report-a-problem-with-visual-studio.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [性能提示和技巧](../ide/visual-studio-performance-tips-and-tricks.md)
 - [Visual Studio blog - Load solutions faster with Visual Studio 2017 version 15.6](https://devblogs.microsoft.com/visualstudio/load-solutions-faster-with-visual-studio-2017-version-15-6/)（Visual Studio 博客 - 使用 Visual Studio 2017 版本 15.6 更快地加载解决方案）

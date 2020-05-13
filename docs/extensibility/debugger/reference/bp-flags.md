@@ -1,5 +1,5 @@
 ---
-title: BP_FLAGS | Microsoft Docs
+title: BP_FLAGS |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BP_FLAGS enumeration
 ms.assetid: c45dfc74-5e7f-4f1e-a147-ab2a55dccbd0
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 31f5153c3a2d0b55829a7743840fe8a791f023d0
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 62626ff75a4545d89835d3136649191004291f8f
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66319227"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80738057"
 ---
-# <a name="bpflags"></a>BP_FLAGS
-提供了可用于设置一个断点时指定的附加信息的可选标志。
+# <a name="bp_flags"></a>BP_FLAGS
+提供可选标志，用于在设置断点时指定其他信息。
 
 ## <a name="syntax"></a>语法
 
@@ -46,25 +46,25 @@ public enum enum_BP_FLAGS {
 
 ## <a name="fields"></a>字段
 `BP_FLAG_NONE`\
-不指定任何断点标志。
+指定无断点标志。
 
 `BP_FLAG_MAP_DOCPOSITION`\
-指定调试引擎 (DE) 应映射使用的文档位置断点。 这是仅适用于面向脚本的源代码文件，如 Active Server Pages (ASP) 中设置断点。
+指定调试引擎 （DE） 应使用文档位置映射断点。 这仅适用于在面向脚本的源文件中设置的断点，如活动服务器页 （ASP）。
 
 `BP_FLAG_DONT_STOP`\
-指定调试引擎中，应处理断点，但是，调试引擎最终应接着往下看 (即[IDebugBreakpointEvent2](../../../extensibility/debugger/reference/idebugbreakpointevent2.md)事件对象不应在发送)。 此标志用于主要与跟踪点一起使用。
+指定断点应由调试引擎处理，但调试引擎最终不应停止于此（即，不应发送[IDebugBreakpointEvent2](../../../extensibility/debugger/reference/idebugbreakpointevent2.md)事件对象）。 此标志设计主要用于跟踪点。
 
 ## <a name="remarks"></a>备注
-用于`dwFlags`的成员[BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md)并[BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md)结构。
+用于`dwFlags`[BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md)和[BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md)结构的成员。
 
-可能的按位组合这些值`OR`。
+这些值可以稍微结合`OR`。
 
 ## <a name="requirements"></a>要求
-标头： msdbg.h
+标题： msdbg.h
 
-命名空间:Microsoft.VisualStudio.Debugger.Interop
+命名空间：微软.VisualStudio.调试器.互通
 
-程序集：Microsoft.VisualStudio.Debugger.Interop.dll
+程序集：微软.VisualStudio.调试器.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [枚举](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

@@ -7,15 +7,15 @@ ms.author: dominicn
 ms.date: 05/23/2019
 ms.assetid: 8254505D-D96E-48BD-8A5E-CF6A917897EA
 ms.openlocfilehash: 92e7a47f7ea2b931c0b923d10e115843d315d024
-ms.sourcegitcommit: cf8c0fef2b9690595e99ce3802586cdd55fd37c2
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "70107828"
 ---
 # <a name="projects-and-solutions-in-visual-studio-for-mac"></a>Visual Studio for Mac 中的项目和解决方案
 
-本文概述 Visual Studio for Mac 中的项目和解决方案概念   。
+本文概述 Visual Studio for Mac 中的项目和解决方案概念。
 
 > [!NOTE] 
 > 本主题适用于 Visual Studio for Mac。 对于 Windows 上的 Visual Studio，请参阅 [Visual Studio 中的项目和解决方案](/visualstudio/ide/solutions-and-projects-in-visual-studio)。
@@ -30,7 +30,7 @@ ms.locfileid: "70107828"
 
 ## <a name="solutions"></a>解决方案
 
-（  解决方案是将一个或多个相关项目分组到一起的容器。） 解决方案由格式唯一的文本文件（扩展名 `.sln`）描述；不应对其进行手动编辑。
+（解决方案是将一个或多个相关项目分组到一起的容器。） 解决方案由格式唯一的文本文件（扩展名 `.sln`）描述；不应对其进行手动编辑。
 
 ## <a name="managing-projects-in-the-solution-pad"></a>在 Solution Pad 中管理项目
 
@@ -38,10 +38,10 @@ ms.locfileid: "70107828"
 
 ![包含多个项目的示例解决方案](media/solution-example.png)
 
-通过双击项目或解决方案名称或右键单击并选择“选项”，可以同时管理项目和解决方案的属性  。
+通过双击项目或解决方案名称或右键单击并选择“选项”，可以同时管理项目和解决方案的属性。
 
 有关这些选项的详细信息，请参阅[管理解决方案和项目属性](managing-solutions-and-project-properties.md)一文。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Studio 中的解决方案和项目 (Windows)](/visualstudio/ide/solutions-and-projects-in-visual-studio)

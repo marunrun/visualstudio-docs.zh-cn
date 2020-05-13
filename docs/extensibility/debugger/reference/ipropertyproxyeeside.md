@@ -1,5 +1,5 @@
 ---
-title: IPropertyProxyEESide | Microsoft Docs
+title: IProperty代理Eeside |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IPropertyProxyEESide interface
 ms.assetid: cf227cf8-39d9-4758-8f7e-a697aebb1926
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f6528b146ad3128dd880e594b25ebb5df88bb8f2
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: c89cecbf22091a45e31c307c5b523ac8aa4c924e
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66353442"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80714860"
 ---
 # <a name="ipropertyproxyeeside"></a>IPropertyProxyEESide
-此接口提供方法以查看关联的对象上的数据。 此接口是支持的类型可视化工具的一部分。
+此接口提供查看关联对象上的数据的方法。 此接口是类型可视化器支持的一部分。
 
 ## <a name="syntax"></a>语法
 
@@ -28,33 +28,33 @@ ms.locfileid: "66353442"
 IPropertyProxyEESide : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>实施者的说明
- 表达式计算器实现此接口以支持类型可视化工具。
+## <a name="notes-for-implementers"></a>实施者说明
+ 表达式赋值器实现此接口以支持类型可视化器。
 
-## <a name="notes-for-callers"></a>调用方的说明
- 调用[GetPropertyProxy](../../../extensibility/debugger/reference/ipropertyproxyprovider-getpropertyproxy.md)若要获取此接口。 调用[QueryInterface](/cpp/atl/queryinterface)上[IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md)接口，以获得[IPropertyProxyProvider](../../../extensibility/debugger/reference/ipropertyproxyprovider.md)接口。
+## <a name="notes-for-callers"></a>呼叫者备注
+ 调用[GetPropertyProxy](../../../extensibility/debugger/reference/ipropertyproxyprovider-getpropertyproxy.md)以获取此接口。 在[IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md)接口上调用[查询接口](/cpp/atl/queryinterface)以获取[IPropertyProxy 提供程序接口](../../../extensibility/debugger/reference/ipropertyproxyprovider.md)。
 
-## <a name="methods-in-vtable-order"></a>Vtable 顺序中的方法
- 以下方法实现此接口：
+## <a name="methods-in-vtable-order"></a>按 Vtable 顺序排列的方法
+ 以下方法由此接口实现：
 
 |方法|描述|
 |------------|-----------------|
-|[InitSourceDataProvider](../../../extensibility/debugger/reference/ipropertyproxyeeside-initsourcedataprovider.md)|初始化数据源提供程序，以便可以访问该对象的数据。|
-|[GetManagedViewerCreationData](../../../extensibility/debugger/reference/ipropertyproxyeeside-getmanagedviewercreationdata.md)|检索有关对象的程序集的信息。|
+|[InitSourceDataProvider](../../../extensibility/debugger/reference/ipropertyproxyeeside-initsourcedataprovider.md)|初始化数据源提供程序，以便可以访问对象的数据。|
+|[GetManagedViewerCreationData](../../../extensibility/debugger/reference/ipropertyproxyeeside-getmanagedviewercreationdata.md)|检索有关对象程序集的信息。|
 |[GetInitialData](../../../extensibility/debugger/reference/ipropertyproxyeeside-getinitialdata.md)|获取对象的初始数据。|
-|[CreateReplacementObject](../../../extensibility/debugger/reference/ipropertyproxyeeside-createreplacementobject.md)|创建的现有数据存储的副本。|
-|[InPlaceUpdateObject](../../../extensibility/debugger/reference/ipropertyproxyeeside-inplaceupdateobject.md)|创建到现有的数据存储的引用。|
-|[ResolveAssemblyRef](../../../extensibility/debugger/reference/ipropertyproxyeeside-resolveassemblyref.md)|检索包含此对象的程序集的上下文中的特定程序集信息。|
+|[CreateReplacementObject](../../../extensibility/debugger/reference/ipropertyproxyeeside-createreplacementobject.md)|创建现有数据存储的副本。|
+|[InPlaceUpdateObject](../../../extensibility/debugger/reference/ipropertyproxyeeside-inplaceupdateobject.md)|创建对现有数据存储的引用。|
+|[ResolveAssemblyRef](../../../extensibility/debugger/reference/ipropertyproxyeeside-resolveassemblyref.md)|检索包含此对象的程序集上下文中的特定程序集的信息。|
 
 ## <a name="remarks"></a>备注
- 类型可视化工具使用此接口来访问此接口的一部分的对象与关联的值。 通过访问的数据[IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md)接口，它提供了数据的只读视图。
+ 类型可视化工具使用此接口访问与此接口所参与的对象关联的值。 数据通过[IEEDataStorage 接口](../../../extensibility/debugger/reference/ieedatastorage.md)进行访问，该接口提供数据的只读视图。
 
 ## <a name="requirements"></a>要求
- 标头： msdbg.h
+ 标题： msdbg.h
 
- 命名空间:Microsoft.VisualStudio.Debugger.Interop
+ 命名空间：微软.VisualStudio.调试器.互通
 
- 程序集：Microsoft.VisualStudio.Debugger.Interop.dll
+ 程序集：微软.VisualStudio.调试器.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [核心接口](../../../extensibility/debugger/reference/core-interfaces.md)

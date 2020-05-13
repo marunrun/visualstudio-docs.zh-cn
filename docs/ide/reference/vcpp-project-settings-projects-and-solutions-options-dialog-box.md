@@ -19,10 +19,10 @@ manager: markl
 ms.workload:
 - cplusplus
 ms.openlocfilehash: c7acd0d8f9c6d15f9f20c42f59c3bd5562884ac3
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "68918888"
 ---
 # <a name="vc-project-settings-projects-and-solutions-options-dialog-box"></a>“选项”对话框 ->“项目和解决方案”->“VC++ 项目设置”
@@ -41,7 +41,7 @@ ms.locfileid: "68918888"
 
   启用生成相应的生成日志文件。 此选项可生成位于项目的中间文件目录中的 BuildLog.htm。 每个新的生成文件都会覆盖上一 BuildLog.htm 文件。
 
- **否**
+ **是**
 
   禁用生成相应的生成日志文件。
 
@@ -51,7 +51,7 @@ ms.locfileid: "68918888"
 
 在生成日志文件中列出环境变量。 此选项指定在生成 C++ 项目期间，将所有环境变量回显到生成日志文件中。
 
- **否**
+ **是**
 
 不在生成日志文件中显示环境变量。
 
@@ -61,7 +61,7 @@ ms.locfileid: "68918888"
 
   启用生成计时。 如果选中，输出窗口中会发布生成完成所需的时间。 有关详细信息，请参阅[输出窗口](../../ide/reference/output-window.md)。
 
- **否**
+ **是**
 
 禁用生成计时。
 
@@ -97,11 +97,11 @@ ms.locfileid: "68918888"
 
 使 Visual Studio 能缓存项目数据，以便下次打开该项目时，它能直接加载缓存的数据，而无需通过项目文件重新对其计算。 使用缓存数据可显著缩短项目加载时间。
 
-**否**
+**是**
 
 不使用缓存的项目数据。 每次加载项目时分析项目文件。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [生成 C/C++ 程序](/cpp/build/projects-and-build-systems-cpp)
 - [C/C++ 生成参考](/cpp/build/reference/c-cpp-building-reference)

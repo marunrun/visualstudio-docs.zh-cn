@@ -1,5 +1,5 @@
 ---
-title: 使用多个用户帐户
+title: Work with multiple user accounts
 ms.date: 07/23/2019
 ms.topic: conceptual
 author: ornellaalt
@@ -8,13 +8,13 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 872089158b6e4dc0b55c26ad187e3b68d0501f26
-ms.sourcegitcommit: b2fc9ac7d73c847508f6ed082bed026476bb3955
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/05/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77027596"
 ---
-# <a name="work-with-multiple-user-accounts"></a>使用多个用户帐户
+# <a name="work-with-multiple-user-accounts"></a>Work with multiple user accounts
 
 如果有多个 Microsoft 帐户和/或单位或学校帐户，可将它们全部添加到 Visual Studio，以便可从任何帐户访问资源，而无需单独登录到这些帐户。 Azure、Application Insights、Azure DevOps 和 Office 365 服务都支持简化的登录体验。
 
@@ -33,7 +33,7 @@ ms.locfileid: "77027596"
 
 ### <a name="access-your-azure-account-in-server-explorer"></a>在服务器资源管理器中访问你的 Azure 帐户
 
-若要打开服务器资源管理器，请选择“查看” > “服务器资源管理器”   （或者，如果使用的是“常规”[环境设置](../ide/environment-settings.md)  ，请按 Ctrl+Alt+S）   。 展开“Azure”节点，注意它包含 Azure 帐户中可用的资源，该资源与用于登录 Visual Studio 的帐户相关联  。 它看上去类似于下图：
+若要打开服务器资源管理器，请选择“查看” **“服务器资源管理器”**  >   （或者，如果使用的是“常规”[环境设置](../ide/environment-settings.md)  ，请按 Ctrl+Alt**S）** +  。 展开“Azure”节点，注意它包含 Azure 帐户中可用的资源，该资源与用于登录 Visual Studio 的帐户相关联  。 它看上去类似于下图：
 
 ![展开了 Azure 节点的服务器资源管理器](../ide/media/work-with-multiple-user-accounts/server-explorer.png)
 
@@ -47,7 +47,7 @@ ms.locfileid: "77027596"
 
 1. 打开一个现有项目，或创建一个新项目。
 
-1. 选择“解决方案资源管理器”中的项目节点，然后右键单击并选择“添加” > “连接的服务”    。
+1. 选择“解决方案资源管理器”中的项目节点，然后右键单击并选择“添加” **“连接的服务”**   >   。
 
    随即出现“添加连接的服务”向导，其中显示与 Visual Studio 个性化账户相关联的 Azure 帐户中的服务列表  。 无需单独登录 Azure。 但是，第一次尝试从另一计算机访问其资源时，你需要登录到其他帐户。
 
@@ -75,7 +75,7 @@ Azure Active Directory (AAD) 支持 ASP.NET MVC web 应用中的最终用户单�
 
 ### <a name="access-your-azure-devops-organization"></a>访问 Azure DevOps 组织
 
-在主菜单中，选择“团队” > “管理连接”以打开“团队资源管理器 - 连接”窗口    。 选择“管理连接” > “连接到项目”   。 在“连接到项目”对话框中，从列表中选择一个项目（或选择“添加 TFS 服务器”并输入服务器的 URL）   。 选择 URL 后，无需重新输入凭据即可登录。
+在主菜单中，选择“团队” **“管理连接”以打开“团队资源管理器 - 连接”窗口** >    。 选择“管理连接” **“连接到项目”**  >   。 在“连接到项目”对话框中，从列表中选择一个项目（或选择“添加 TFS 服务器”并输入服务器的 URL）   。 选择 URL 后，无需重新输入凭据即可登录。
 
 有关详细信息，请参阅[连接到团队资源管理器中的项目](connect-team-project.md)。
 
@@ -83,7 +83,7 @@ Azure Active Directory (AAD) 支持 ASP.NET MVC web 应用中的最终用户单�
 
 若要将其他帐户添加到 Visual Studio：
 
-1. 选择“文件” > “帐户设置”   。
+1. 选择“文件” **“帐户设置”**  >   。
 
 1. 在“所有帐户”下，选择“添加帐户”   。
 
@@ -97,9 +97,9 @@ Azure Active Directory (AAD) 支持 ASP.NET MVC web 应用中的最终用户单�
 
 使用设备代码流登录：
 
-1. 打开“工具” > “选项” > “环境”下的 [“帐户”](reference/accounts-environment-options-dialog-box.md)页面，然后选择“在添加或重新验证帐户时启用设备代码流”      。 选择“确定”关闭选项页  。
+1. 打开“工具”[“选项” **“环境”下的** “帐户”](reference/accounts-environment-options-dialog-box.md)页面，然后选择“在添加或重新验证帐户时启用设备代码流”   >    >    。 选择“确定”关闭选项页  。
 
-1. 选择“文件” > “帐户设置”以打开帐户管理页面   。
+1. 选择“文件” **“帐户设置”以打开帐户管理页面** >   。
 
 1. 在“所有帐户”下，选择“添加帐户”   。
 
@@ -107,7 +107,7 @@ Azure Active Directory (AAD) 支持 ASP.NET MVC web 应用中的最终用户单�
 
    ![设备代码流 URL 和代码](media/work-with-multiple-user-accounts/device-login-code.png)
 
-1. 按“Ctrl+C”复制对话框文本，然后选择“确定”关闭对话框    。 将复制的文本粘贴到文本编辑器（如记事本）中。 这使得在下一步中复制代码更加容易。
+1. 按“Ctrl**C”复制对话框文本，然后选择“确定”关闭对话框**+   。 将复制的文本粘贴到文本编辑器（如记事本）中。 这使得在下一步中复制代码更加容易。
 
 1. 导航到机器或 web 浏览器上用于登录到 Visual Studio 的设备登录 URL，然后将复制的代码粘贴或输入到“代码”框中  。
 
@@ -125,7 +125,7 @@ Azure Active Directory (AAD) 支持 ASP.NET MVC web 应用中的最终用户单�
 
 1. 返回 Visual Studio 中的帐户管理页面，其中的“所有帐户”下列出了新添加的帐户  。 选择“关闭”  。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [登录 Visual Studio](signing-in-to-visual-studio.md)
 - [登录 Visual Studio for Mac](/visualstudio/mac/signing-in)

@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: c3ed24dce0779b9bc7ea9cfd7bedcaa5ca181c68
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "68926314"
 ---
 # <a name="blocking-time-profile-report"></a>阻塞时间分析报告
@@ -33,8 +33,8 @@ ms.locfileid: "68926314"
 
 |列名称|说明|
 |-----------------|-----------------|
-|**名称**|调用堆栈每个级别的函数的名称。|
-|**实例**|可见时间段内阻塞调用的实例数。|
+|**Name**|调用堆栈每个级别的函数的名称。|
+|**实例数**|可见时间段内阻塞调用的实例数。|
 |**非独占阻塞时间**|在上滚到此调用堆栈树级别的所有堆栈上所花费的总阻塞时间。 非独占数是此函数的独占阻塞时间及其所有子节点的独占阻塞时间的总和。|
 |**独占阻塞时间**|此函数处于最低调用堆栈级别期间所花费的总阻塞时间。 具有较高独占阻塞时间的唯一调用堆栈项可能是相关的函数。|
 |**API/Wait 类别**|仅对处于最低调用堆栈级别的函数显示。 如识别阻塞调用的签名，则将提供阻塞 API 的名称。 如果未识别签名，则提供内核所报告的信息。|
@@ -58,5 +58,5 @@ ms.locfileid: "68926314"
 ### <a name="ui-processing"></a>UI 处理
  UI 处理报表显示对在 UI 处理块上进行阻止的片段的调用，以及每个调用堆栈的合计阻塞时间。 有关详细信息，请参阅 [UI 处理时间](../profiling/ui-processing-time.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [“线程”视图](../profiling/threads-view-parallel-performance.md)

@@ -1,5 +1,5 @@
 ---
-title: SccDirQueryInfo 函数 |Microsoft Docs
+title: SccDirQuery信息功能 |微软文档
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - SccDirQueryInfo function
 ms.assetid: 459e2d99-573d-47c4-b834-6d82c5e14162
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e19b65ea4b3c4cd87b1f9d6a3db9e6f8ae64d16d
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 222b5d15a1e2bcd9bd3f27a5cd0e9904642d9786
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66332247"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80700955"
 ---
-# <a name="sccdirqueryinfo-function"></a>SccDirQueryInfo 函数
-此函数将检查以了解其当前状态的完全限定目录的列表。
+# <a name="sccdirqueryinfo-function"></a>SccDirQueryInfo 功能
+此函数检查完全限定的目录的列表，以检查其当前状态。
 
 ## <a name="syntax"></a>语法
 
@@ -36,37 +36,37 @@ LPLONG  lpStatus
 ### <a name="parameters"></a>参数
  pContext
 
-[in]源控制插件上下文结构。
+[在]源代码管理插件上下文结构。
 
  nDirs
 
-[in]选择要查询的目录数。
+[在]选择要查询的目录数。
 
- lpDirNames
+ lpDirnames
 
-[in]要查询的目录的完全限定路径的数组。
+[在]要查询的目录的完全限定路径的数组。
 
- lpStatus
+ lp状态
 
-[in、 out]源代码管理插件返回的状态标志的数组结构 (请参阅[目录状态代码](../extensibility/directory-status-code-enumerator.md)有关详细信息)。
+[进出]源代码管理插件的数组结构，用于返回状态标志（有关详细信息，请参阅[目录状态代码](../extensibility/directory-status-code-enumerator.md)）。
 
 ## <a name="return-value"></a>返回值
- 此函数的源控制插件实现应返回以下值之一：
+ 此函数的源代码管理插件实现应返回以下值之一：
 
-|值|描述|
+|值|说明|
 |-----------|-----------------|
-|SCC_OK|查询已成功。|
+|SCC_OK|查询成功。|
 |SCC_E_OPNOTSUPPORTED|源代码控制系统不支持此操作。|
-|SCC_E_ACCESSFAILURE|访问源代码管理系统，很可能是由于网络或争用问题时出现问题时。 建议重试。|
-|SCC_E_NONSPECIFICERROR<br /><br /> SCC_E_UNKNOWNERROR|非特定故障。|
+|SCC_E_ACCESSFAILURE|访问源代码管理系统时出现问题，可能是由于网络或争用问题。 建议重试。|
+|SCC_E_NONSPECIFICERROR<br /><br /> SCC_E_UNKNOWNERROR|非特异性故障。|
 
 ## <a name="remarks"></a>备注
- 该函数将填充返回数组中的位的位掩码`SCC_DIRSTATUS`系列 (请参阅[目录状态代码](../extensibility/directory-status-code-enumerator.md))，提供每个目录的一个条目。 由调用方分配状态数组。
+ 函数用`SCC_DIRSTATUS`来自族的位掩码填充返回数组（请参阅[目录状态代码](../extensibility/directory-status-code-enumerator.md)），每个目录都有一个条目。 状态数组由调用方分配。
 
- IDE 使用此函数之前目录已重命名，以检查是否该目录位于源控件下通过查询其是否具有相应的项目。 如果目录不受源代码管理中，IDE 可以向用户提供正确的警告。
+ IDE 在重命名目录之前使用此函数，通过查询目录是否具有相应的项目来检查该目录是否处于源代码管理之下。 如果目录不受源代码管理，IDE 可以向用户提供适当的警告。
 
 > [!NOTE]
-> 如果源代码管理插件选择实现一个或多个状态的值，则未实现的位应设置为零。
+> 如果源代码管理插件选择不实现一个或多个状态值，则应将未实现位设置为零。
 
 ## <a name="see-also"></a>请参阅
 - [源代码管理插件 API 功能](../extensibility/source-control-plug-in-api-functions.md)

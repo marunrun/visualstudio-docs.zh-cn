@@ -12,10 +12,10 @@ monikerRange: vs-2017
 ms.workload:
 - dotnet
 ms.openlocfilehash: 521c884a0a25d7fa975a4039e6ec3e36ff4dc020
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74778539"
 ---
 # <a name="modules-view---net-memory-instrumentation-data"></a>“模块”视图 - .NET 内存检测数据
@@ -98,7 +98,7 @@ ms.locfileid: "74778539"
 |**最长应用程序独占时间**|-   对于函数，是对此函数的调用的最长应用程序独占时间。<br />-   对于模块，是对此模块中函数的所有调用的最长应用程序独占时间。|
 |**最短应用程序独占时间**|-   对于函数，是对此模块或函数的调用的最短应用程序独占时间。<br />-   对于模块，是对此模块中函数的所有调用的最短应用程序独占时间。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [“模块”视图 - 采样](../profiling/modules-view-dotnet-memory-sampling-data.md)
 - [“模块”视图](../profiling/modules-view-instrumentation-data.md)
 - [“模块”视图](../profiling/modules-view-sampling-data.md)

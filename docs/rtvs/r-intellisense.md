@@ -9,15 +9,15 @@ manager: jillfra
 ms.workload:
 - data-science
 ms.openlocfilehash: 854f7d410e327ca92d0c5156d89bc21765e13cc7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62999108"
 ---
 # <a name="intellisense"></a>IntelliSense
 
-编写代码时，Visual Studio IntelliSense 能直观显示可调用函数、对象成员、函数参数和[代码片段](code-snippets-for-r.md)的相关信息。 它还会在你键入时显示可能的补全内容，并在按 Tab 或 Enter 键时进行补全（请参阅“高级”选项卡中的[“编辑器”选项](editing-r-code-in-visual-studio.md#editor-options)）。 编辑器和[交互窗口](interactive-repl-for-r-in-visual-studio.md)都支持 IntelliSense。
+编写代码时，Visual Studio IntelliSense 能直观显示可调用函数、对象成员、函数参数和[代码片段](code-snippets-for-r.md)的相关信息。 它还会在你键入时显示可能的补全内容，并在按 Tab 或 Enter 键时进行补全（请参阅“高级”选项卡中的[“编辑器”选项](editing-r-code-in-visual-studio.md#editor-options)）    。 编辑器和[交互窗口](interactive-repl-for-r-in-visual-studio.md)都支持 IntelliSense。
 
 ![显示函数签名的 IntelliSense](media/intellisense-function-signature.png)
 
@@ -25,22 +25,22 @@ ms.locfileid: "62999108"
 
 ![IntelliSense 自动补全菜单](media/intellisense-auto-complete-menu.png)
 
-按 Tab 键（或 Enter、空格键，具体取决于如何设置选项），在下拉列表中插入所选项。 可通过箭头键更改选择。
+按 Tab 键（或 Enter、空格键，具体取决于如何设置选项），在下拉列表中插入所选项    。 可通过箭头键更改选择。
 
 IntelliSense 还为 R 对象的成员提供建议：
 
 ![为对象成员提供的 IntelliSense 建议](media/intellisense-auto-complete-r-objects.png)
 
-按 Esc 消除所有菜单。 按 Ctrl+空格键可以再次恢复。
+按 Esc 消除所有菜单  。 按 Ctrl+空格键可以再次恢复   。
 
 为函数调用键入左括号 `(` 会同时插入右括号 `)`，然后弹出签名帮助，如前面所示：
 
 ![函数的 IntelliSense 签名帮助](media/intellisense-function-signature.png)
 
-同样，按 Esc 消除弹出框；按 Ctrl+Shift+空格键可再次出现函数签名。
+同样，按 Esc 消除弹出框；按 Ctrl+Shift+空格键可再次出现函数签名     。
 
 > [!Tip]
-> 如果参数帮助不显示其包含的文本，请按住 Ctrl 以显示参数帮助文本。
+> 如果参数帮助不显示其包含的文本，请按住 Ctrl 以显示参数帮助文本  。
 
 ## <a name="intellisense-for-user-defined-functions-and-variables"></a>适用于用户定义的函数和变量的 IntelliSense
 

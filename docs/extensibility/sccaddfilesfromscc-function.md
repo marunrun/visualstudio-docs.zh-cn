@@ -1,5 +1,5 @@
 ---
-title: SccAddFilesFromSCC 函数 |Microsoft Docs
+title: Sccadd文件从SCC功能 |微软文档
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - SccAddFilesFromSCC function
 ms.assetid: f21a3500-ade8-4dd8-8647-10e2179be9c1
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: cfe58c3eef4b09fccb5cd21b714e5987ae1e08aa
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 1d22527644edbf1697112f5cf8b73b8a3f72b774
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66333964"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80701290"
 ---
-# <a name="sccaddfilesfromscc-function"></a>SccAddFilesFromSCC 函数
-此函数将从源代码管理的文件的列表添加到当前打开的项目。
+# <a name="sccaddfilesfromscc-function"></a>SCC 函数中包含文件
+此函数将文件列表从源代码管理添加到当前打开的项目。
 
 ## <a name="syntax"></a>语法
 
@@ -41,49 +41,49 @@ SCCRTN SccAddFilesFromSCC(
 ### <a name="parameters"></a>参数
  pContext
 
-[in]源控件插件上下文指针。
+[在]源代码管理插件上下文指针。
 
- hWnd
+ hwnd
 
-[in]它提供了任何对话框，父级可以使用源代码管理插件，则 IDE 窗口的句柄。
+[在]源控件插件可以用作它提供的任何对话框的父级的 IDE 窗口句柄。
 
  lpUser
 
-[in、 out]（最多 SCC_USER_SIZE，包括 null 终止符) 用户名。
+[进出]用户名（最多SCC_USER_SIZE，包括空终止符）。
 
  lpAuxProjPath
 
-[in、 out]标识项目的辅助字符串 (最多`SCC_PRJPATH_`大小，包括 null 终止符)。
+[进出]标识项目的辅助字符串（最多`SCC_PRJPATH_`大小，包括空终止符）。
 
  cFiles
 
-[in]通过给定的文件数`lpFilePaths`。
+[在]提供`lpFilePaths`的文件数。
 
- lpFilePaths
+ lpFilePath
 
-[in、 out]要添加到当前项目的文件名的数组。
+[进出]要添加到当前项目的文件名数组。
 
- lpDestination
+ lp目标
 
-[in]目标路径文件的要写入的位置。
+[在]要写入文件的目标路径。
 
  lpComment
 
-[in]要应用于每个要添加的文件的注释。
+[在]要应用于要添加到的每个文件的注释。
 
- pbResults
+ pb 结果
 
-[in、 out]不设置为指示 （非零值或 TRUE） 的成功或失败的标志的数组 （0 或 FALSE） 的每个文件 (数组的大小必须至少为`cFiles`长)。
+[进出]设置为指示每个文件成功（非零或 TRUE）或失败（零或 FALSE）的标志数组（数组的大小必须至少`cFiles`为长）。
 
 ## <a name="return-value"></a>返回值
- 此函数的源控制插件实现应返回以下值之一：
+ 此函数的源代码管理插件实现应返回以下值之一：
 
-|值|描述|
+|值|说明|
 |-----------|-----------------|
 |SCC_E_PROJNOTOPEN|项目未打开。|
-|SCC_E_OPNOTPERFORMED|连接到与指定的相同的项目不是 `lpAuxProjPath.`|
-|SCC_E_NOTAUTHORIZED|未授权用户来更新数据库。|
-|SCC_E_NONSPECIFICERROR|未知的错误。|
+|SCC_E_OPNOTPERFORMED|连接与指定的项目不同`lpAuxProjPath.`|
+|SCC_E_NOTAUTHORIZED|用户无权更新数据库。|
+|SCC_E_NONSPECIFICERROR|未知错误。|
 |SCC_I_RELOADFILE|需要重新加载文件或项目。|
 
 ## <a name="see-also"></a>请参阅

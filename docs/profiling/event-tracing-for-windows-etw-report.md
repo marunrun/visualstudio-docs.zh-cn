@@ -13,10 +13,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 19412d184377637c29f34b2fe3ffd033f176b97c
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74779280"
 ---
 # <a name="event-tracing-for-windows-etw-report"></a>Windows 事件跟踪 (ETW) 报告
@@ -25,7 +25,7 @@ Windows 事件跟踪 (ETW) 报告列出 [!INCLUDE[vsprvs](../code-quality/includ
 > [!NOTE]
 > 不能在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 接口中显示 ETW 报告。
 
-- 要了解如何使用 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 接口中的分析工具收集 ETW，请参阅[如何：收集 Windows 事件跟踪 (ETW) 数据](../profiling/how-to-collect-event-tracing-for-windows-etw-data.md)。
+- 若要了解如何使用 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 接口中的分析工具收集 ETW，请参阅[如何：收集 Windows 事件跟踪 (ETW) 数据](../profiling/how-to-collect-event-tracing-for-windows-etw-data.md)。
 
 - 有关如何使用 [VSPerfCmd](../profiling/vsperfcmd.md) 命令行工具收集 ETW 数据的信息，请参阅[事件](../profiling/events-vsperfcmd.md)。
 
@@ -36,6 +36,6 @@ Windows 事件跟踪 (ETW) 报告列出 [!INCLUDE[vsprvs](../code-quality/includ
 |**时间戳**|标识事件发生的时间。|
 |**进程 ID**|标识生成事件的进程。|
 |**线程 ID**|标识生成事件的线程。|
-|**说明**|标识事件提供程序。|
-|**Type**|标识事件类型。|
-|**属性**|事件的属性。 每个事件都是一个括在括号内的以逗号分隔的名称/值对。|
+|**描述**|标识事件提供程序。|
+|类型 |标识事件类型。|
+|<bpt id="p1">**</bpt>Properties<ept id="p1">**</ept>|事件的属性。 每个事件都是一个括在括号内的以逗号分隔的名称/值对。|

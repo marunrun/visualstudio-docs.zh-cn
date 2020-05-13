@@ -18,10 +18,10 @@ ms.author: ghogen
 ms.workload:
 - multiple
 ms.openlocfilehash: d9e8b23492f23d39977b4eb26f8ee633b8463f27
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75565209"
 ---
 # <a name="multitooltask-task"></a>MultiToolTask 任务
@@ -32,7 +32,7 @@ ms.locfileid: "75565209"
 
 下表描述了 MultiToolTask  任务的参数。
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
 |**EnvironmentVariablesToSet**|可选的 string[]  参数。|
 |**SemaphoreProcCount**|可选的 string  参数。|
@@ -43,6 +43,6 @@ ms.locfileid: "75565209"
 |**TaskName**|必需的 **String** 参数。|
 |**TrackerLogDirectory**|必需的 **String** 参数。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [任务参考](../msbuild/msbuild-task-reference.md)

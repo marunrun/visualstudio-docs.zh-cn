@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 18e1722fcd6867ca5e8ae52e220ff0a3dd2a3b7f
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77633611"
 ---
 # <a name="itemmetadata-element-msbuild"></a>ItemMetadata 元素 (MSBuild)
@@ -41,7 +41,7 @@ ms.locfileid: "77633611"
 
 ### <a name="attributes"></a>特性
 
-|特性|描述|
+|特性|说明|
 |---------------|-----------------|
 |`Condition`|可选特性。<br /><br /> 要计算的条件。 有关详细信息，请参阅[条件](../msbuild/msbuild-conditions.md)。|
 
@@ -51,7 +51,7 @@ ms.locfileid: "77633611"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
 |[Item](../msbuild/item-element-msbuild.md)|为生成过程定义输入的用户定义元素。|
 
@@ -63,7 +63,7 @@ ms.locfileid: "77633611"
 
 ## <a name="example"></a>示例
 
- 下面的代码示例演示如何将具有值 `fr` 的 `Culture` 元数据添加到项 `CSFile`。
+ 下面的代码示例演示如何将具有值 `Culture` 的 `fr` 元数据添加到项 `CSFile`。
 
 ```xml
 <ItemGroup>
@@ -73,7 +73,7 @@ ms.locfileid: "77633611"
 </ItemGroup>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [项目文件架构参考](../msbuild/msbuild-project-file-schema-reference.md)
 - [项](../msbuild/msbuild-items.md)

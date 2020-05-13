@@ -1,24 +1,24 @@
 ---
 title: EditorConfig 适用的 .NET 语言约定
-ms.date: 09/23/2019
+ms.date: 03/31/2020
 ms.topic: reference
 dev_langs:
 - CSharp
 - VB
 helpviewer_keywords:
 - language code style rules [EditorConfig]
-author: TerryGLee
-ms.author: tglee
+author: mikadumont
+ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 471932f6a097879da194dc6bb4f18807f2323397
-ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
+ms.openlocfilehash: a3f80eb555ef11a1e0a462e93d4508e778bd987d
+ms.sourcegitcommit: 054815dc9821c3ea219ae6f31ebd9cd2dc8f6af5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78408507"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80544016"
 ---
 # <a name="language-conventions"></a>语言约定
 
@@ -94,7 +94,6 @@ Severity | 效果
   - dotnet\_style\_predefined\_type\_for\_member_access
 - [修饰符首选项](#normalize-modifiers)
   - dotnet\_style\_require\_accessibility_modifiers
-  - csharp\_preferred\_modifier_order
   - visual\_basic\_preferred\_modifier_order
   - dotnet\_style\_readonly\_field
 - [括号首选项](#parentheses-preferences)
@@ -109,15 +108,15 @@ Severity | 效果
   - dotnet\_style\_prefer\_inferred\_tuple_names
   - dotnet\_style\_prefer\_inferred\_anonymous\_type\_member_names
   - dotnet\_style\_prefer\_auto\_properties
-  - dotnet\_style\_prefer\_is\_null\_check\_over\_reference\_equality\_method
   - dotnet\_style\_prefer\_conditional\_expression\_over\_assignment
   - dotnet\_style\_prefer\_conditional\_expression\_over\_return
   - dotnet\_style\_prefer\_compound\_assignment
 - [“NULL”检查首选项](#null-checking-preferences)
   - dotnet\_style\_coalesce_expression
   - dotnet\_style\_null_propagation
+  - dotnet\_style\_prefer\_is\_null\_check\_over\_reference\_equality\_method
 
-### <a name="this-and-me"></a>“This.” 和“Me.” 限定符
+### <a name="this-and-me-qualifiers"></a><a name="this-and-me"></a>“This.” 和“Me.” 限定符
 
 此样式规则可应用于字段、属性、方法或事件。 值为“true”表示代码符号以 `this.` (C#) 或 `Me.` (Visual Basic) 开头为首选项  。 值为“false”表示码位元素不以 `this.` 或 `Me.` 开头为首选项   。
 
@@ -244,7 +243,7 @@ AddHandler Me.Elapsed, AddressOf Handler
 AddHandler Elapsed, AddressOf Handler
 ```
 
-### <a name="language-keywords"></a>语言关键字，而非类型引用的框架类型名称
+### <a name="language-keywords-instead-of-framework-type-names-for-type-references"></a><a name="language-keywords"></a>语言关键字，而非类型引用的框架类型名称
 
 此样式规则可应用到本地变量、方法参数和类成员，也可作为针对类型成员访问表达式的单独规则。 值为“true”  表示，如果类型中有用于表示类型的关键字，首选语言关键字（例如 `int` 或 `Integer`），而不是类型名称（例如 `Int32`）。 值为“false”代表类型名称为首选项，而非语言关键字  。
 
@@ -313,7 +312,7 @@ Dim local = Integer.MaxValue
 Dim local = Int32.MaxValue
 ```
 
-### <a name="normalize-modifiers"></a>修饰符首选项
+### <a name="modifier-preferences"></a><a name="normalize-modifiers"></a>修饰符首选项
 
 本部分中的样式规则与修饰符首选项相关，包括要求使用可访问性修饰符、指定所需的修饰符排序顺序以及要求使用只读修饰符。
 
@@ -407,6 +406,43 @@ class MyClass
 Public Class MyClass
     Private Shared ReadOnly daysInYear As Int = 365
 End Class
+```
+
+#### <a name="visual_basic_style_unused_value_expression_statement_preference"></a>visual_basic_style_unused_value_expression_statement_preference
+
+|||
+|-|-|
+| **规则名称** | visual_basic_style_unused_value_expression_statement_preference |
+| **规则 ID** | IDE0058 |
+| **适用的语言** | Visual Basic |
+| **值** | `unused_local_variable:silent` |
+| **Visual Studio 默认值** | `unused_local_variable:silent` |
+
+代码示例：
+
+```vb
+' visual_basic_style_unused_value_expression_statement_preference = unused_local_variable:silent
+
+Dim unused = Computation()
+```
+
+#### <a name="visual_basic_style_unused_value_assignment_preference"></a>visual_basic_style_unused_value_assignment_preference
+
+|||
+|-|-|
+| **规则名称** | visual_basic_style_unused_value_assignment_preference |
+| **规则 ID** | IDE0059 |
+| **适用的语言** | Visual Basic |
+| **值** | `unused_local_variable:silent` |
+| **Visual Studio 默认值** | `unused_local_variable:silent` |
+
+代码示例：
+
+```vb
+' visual_basic_style_unused_value_assignment_preference = unused_local_variable:suggestion
+
+Dim unused = Computation()
+Dim x = 1;
 ```
 
 #### <a name="dotnet_style_readonly_field"></a>dotnet_style_readonly_field
@@ -941,6 +977,7 @@ x = x + 1
 [*.{cs,vb}]
 dotnet_style_coalesce_expression = true:suggestion
 dotnet_style_null_propagation = true:suggestion
+dotnet_style_prefer_is_null_check_over_reference_equality_method = true:silent
 ```
 
 #### <a name="dotnet_style_coalesce_expression"></a>dotnet\_style\_coalesce_expression
@@ -1002,6 +1039,16 @@ Dim v = o?.ToString()
 Dim v = If(o Is Nothing, Nothing, o.ToString()) ' or
 Dim v = If(o IsNot Nothing, o.ToString(), Nothing)
 ```
+
+### <a name="dotnet_style_prefer_is_null_check_over_reference_equality_method"></a>dotnet\_style\_prefer\_is\_null\_check\_over\_reference\_equality\_method
+
+|||
+|-|-|
+| **规则名称** | dotnet_style_prefer_is_null_check_over_reference_equality_method |
+| **规则 ID** | IDE0041 |
+| **适用的语言** | C# 6.0+ 和 Visual Basic 14+ |
+| **值** | `true` - null 检查优于引用相等性方法<br /><br />`false` - 引用相等性方法优于 null 检查 |
+| **Visual Studio 默认值** | `true:silent` |
 
 ## <a name="net-code-quality-settings"></a>.NET 代码质量设置
 
@@ -1081,6 +1128,8 @@ End Function
 - [“NULL”检查首选项](#c-null-checking-preferences)
   - csharp\_style\_throw_expression
   - csharp\_style\_conditional\_delegate_call
+- [修饰符首选项](#normalize-modifiers)
+  - csharp\_preferred\_modifier_order
 - [代码块首选项](#code-block-preferences)
   - csharp\_prefer_braces
 - [未使用的值首选项](#unused-value-preferences)

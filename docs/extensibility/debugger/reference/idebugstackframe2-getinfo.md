@@ -1,5 +1,5 @@
 ---
-title: IDebugStackFrame2::GetInfo | Microsoft Docs
+title: IDebugStackFrame2：：获取信息 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugStackFrame2::GetInfo
 ms.assetid: 19c6870b-b94e-453c-bf19-82ce95b79d26
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ad560386991a0545510e1b74a140d17cc35fcbe3
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 09768fc58640d79a3b5628bafc16b2267f1f8a4c
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66352117"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80719723"
 ---
 # <a name="idebugstackframe2getinfo"></a>IDebugStackFrame2::GetInfo
 获取堆栈帧的说明。
@@ -45,16 +45,16 @@ int GetInfo ( 
 
 ## <a name="parameters"></a>参数
 `dwFieldSpec`\
-[in]中的标志的组合[FRAMEINFO_FLAGS](../../../extensibility/debugger/reference/frameinfo-flags.md)枚举，用于指定的哪些字段`pFrameInfo`参数是要填充。
+[在][FRAMEINFO_FLAGS](../../../extensibility/debugger/reference/frameinfo-flags.md)枚举中的标志的组合，用于指定要填充参数`pFrameInfo`的字段。
 
 `nRadix`\
-[in]用于格式化数值的任何信息的基数。
+[在]用于格式化任何数值信息的半径。
 
 `pFrameInfo`\
-[out]一个[FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md)堆栈帧的说明使用填充的结构。
+[出]用堆栈帧的说明填充的[FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md)结构。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，返回`S_OK`;否则，返回错误代码。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)

@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 793d730df3942608451e7dbc329819b98c451973
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "76113272"
 ---
 # <a name="how-to-create-and-modify-mip-levels"></a>如何：创建和修改 MIP 级别
@@ -25,7 +25,7 @@ ms.locfileid: "76113272"
 
 1. 如[如何：创建基本纹理](../designers/how-to-create-a-basic-texture.md)中所述，从基本纹理开始。 为了获得最佳结果，请指定宽度和高度为 2 的幂（例如，256、512、1024 等）的纹理。
 
-2. 生成 MIP 级别。 在“图像编辑器模式”工具栏上，依次选择“高级” > “工具” > “生成 Mip”     。
+2. 生成 MIP 级别。 在“图像编辑器模式”工具栏上，依次选择“高级” **“工具”** “生成 Mip”   >    >   。
 
      请注意，“转到下一 Mip 级别”  和“转到上一 Mip 级别”  按钮现在将出现在“图像编辑器模式”  工具栏上。 如果显示“属性”  窗口，则还可以注意到，只读属性“Mip 级别”  和“Mip 级别计数”  现在将出现在图像属性中。
 
@@ -41,6 +41,6 @@ ms.locfileid: "76113272"
 > [!NOTE]
 > 如果无需修改单个 MIP 级别的内容（可能会执行此操作以实现某些效果），建议在生成时从源纹理生成 mipmap。 这有助于确保 MIP 级别与源纹理保持同步，因为对某一 MIP 级别的修改不会自动传播到其他级别。 有关如何在生成时生成 mipmap 的详细信息，请参阅[如何：导出包含 Mipmap 的纹理](../designers/how-to-export-a-texture-that-contains-mipmaps.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [如何：创建基本纹理](../designers/how-to-create-a-basic-texture.md)

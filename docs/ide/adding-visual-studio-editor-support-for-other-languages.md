@@ -16,12 +16,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d4fafaf9356d8862808e1ac6ad125207d71769b5
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 955a968c52c963c8c6f0204f7687de2bd8482260
+ms.sourcegitcommit: c3b6af7367bef67a02c37404534229b935f713a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75590873"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80892770"
 ---
 # <a name="add-visual-studio-editor-support-for-other-languages"></a>为其他语言添加 Visual Studio 编辑器支持
 
@@ -92,3 +92,5 @@ Visual Studio 通过 [TextMate 语法](https://manual.macromates.com/en/language
 - [添加语言服务器协议扩展](../extensibility/adding-an-lsp-extension.md)
 - [演练：创建代码片段](../ide/walkthrough-creating-a-code-snippet.md)
 - [演练：显示语句完成](../extensibility/walkthrough-displaying-statement-completion.md)
+- [示例代码：TextMate 语法](https://github.com/microsoft/VSSDK-Extensibility-Samples/tree/master/TextmateGrammar)
+- [示例代码：自定义语言支持](https://github.com/microsoft/VSSDK-Extensibility-Samples/tree/master/Ook_Language_Integration)

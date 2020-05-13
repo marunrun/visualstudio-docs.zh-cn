@@ -33,12 +33,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ebe526bbac859777edb4c2c78c65a1cdbd27fc85
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: ed55d65555425b04749696b5510cfe799d2a1194
+ms.sourcegitcommit: ce3d0728ec1063ab548dac71c8eaf26d20450acc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75568407"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80472817"
 ---
 # <a name="options-dialog-box-text-editor--general"></a>“选项”对话框：“文本编辑器”\>“常规”
 
@@ -93,6 +93,10 @@ ms.locfileid: "75568407"
 ### <a name="show-structure-guide-lines"></a>显示结构参考线
 
 如果你选中此选项，与结构化代码块对齐的竖线就会在编辑器中显示，这样你就能轻松识别各个代码块了。
+
+### <a name="show-file-health-indicator"></a>显示文件运行状况指示器
+
+如果选择此选项，带有“代码清理”选项的文件运行状况指示器状态（错误、警告）栏将显示在编辑器的左下角。
 
 ## <a name="see-also"></a>请参阅
 

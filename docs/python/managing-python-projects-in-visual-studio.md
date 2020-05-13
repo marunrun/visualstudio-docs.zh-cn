@@ -11,11 +11,11 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: d50cbfbd517073544ebd172627d24bd7c3878fa5
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71254204"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79307147"
 ---
 # <a name="python-projects-in-visual-studio"></a>Visual Studio 中的 Python 项目
 
@@ -41,7 +41,7 @@ Visual Studio 提供多种 Python 项目模板用于快速设置多个应用程�
 
 |   |   |
 |---|---|
-| ![视频的摄像机图标](../install/media/video-icon.png "观看视频") | [深入了解：将源代码管理用于 Python 项目](https://youtu.be/Aq8eqApnugM)（youtube.com，8 分 55 秒）。 |
+| ![视频摄影机图标](../install/media/video-icon.png "观看视频") | [深入了解：将源代码管理用于 Python 项目](https://youtu.be/Aq8eqApnugM)（youtube.com，8 分 55 秒）。 |
 
 ## <a name="add-files-assign-a-startup-file-and-set-environments"></a>添加文件、分配启动文件和设置环境
 
@@ -77,7 +77,7 @@ Visual Studio 提供多种方法用于从零开始，或根据现有代码设置
 
 下表总结了 Visual Studio 2017 及更高版本中提供的模板（并非以前的所有版本都提供了这些模板）：
 
-| 模板 | 说明 |
+| 模板 | 描述 |
 | --- | --- |
 | [**根据现有 Python 代码**](#create-project-from-existing-files) | 从文件夹结构中的现有 Python 代码创建 Visual Studio 项目。  |
 | **Python 应用程序** | 新 Python 应用程序的基本项目结构具有一个空的源文件。 默认情况下，项目在默认全局环境的控制台解释器中运行，通过[分配其他环境](selecting-a-python-environment-for-a-project.md)可以更改环境。 |

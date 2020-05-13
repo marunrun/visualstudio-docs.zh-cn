@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: fe303f86b282e7e803dacc1dd8f4d3c1d6b72121
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75595808"
 ---
 # <a name="application-page-project-designer-visual-basic"></a>Application Page, Project Designer (Visual Basic)
@@ -47,7 +47,7 @@ ms.locfileid: "75595808"
 如果清除“根命名空间”  ，则可以在代码中指定项目的命名空间结构。
 
 > [!NOTE]
-> 如果在 [Namespace 语句](/dotnet/visual-basic/language-reference/statements/namespace-statement)中使用 `Global` 关键字，则可以在项目的根命名空间外部定义命名空间。 如果清除“根命名空间”  ，无需在 `Namespace` 语句中使用 `Global` 关键字，`Global` 便可成为顶级命名空间。 有关详细信息，请参阅 [Visual Basic 中的命名空间](/dotnet/visual-basic/programming-guide/program-structure/namespaces)中的“Namespace 语句中的 Global 关键字”。
+> 如果在 `Global`Namespace 语句[中使用 ](/dotnet/visual-basic/language-reference/statements/namespace-statement) 关键字，则可以在项目的根命名空间外部定义命名空间。 如果清除“根命名空间”  ，无需在 `Global` 语句中使用 `Global` 关键字，`Namespace` 便可成为顶级命名空间。 有关详细信息，请参阅 [Visual Basic 中的命名空间](/dotnet/visual-basic/programming-guide/program-structure/namespaces)中的“Namespace 语句中的 Global 关键字”。
 
 有关如何在代码中创建命名空间的信息，请参阅 [Namespace 语句](/dotnet/visual-basic/language-reference/statements/namespace-statement)。
 
@@ -94,7 +94,7 @@ ms.locfileid: "75595808"
 
 ### <a name="icon"></a>图标
 
-设置要用作程序图标的 .ico 文件。 选择“\<浏览...>”  以浏览现有图形。 有关详细信息，请参阅 [/win32icon](/dotnet/visual-basic/reference/command-line-compiler/win32icon)（或 [/win32icon（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/win32icon-compiler-option)）。 若要以编程方式访问此属性，请参阅 <xref:VSLangProj.ProjectProperties.ApplicationIcon%2A>。
+设置要用作程序图标的 .ico 文件。 选择“**浏览...>”\<** 以浏览现有图形。 有关详细信息，请参阅 [/win32icon](/dotnet/visual-basic/reference/command-line-compiler/win32icon)（或 [/win32icon（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/win32icon-compiler-option)）。 若要以编程方式访问此属性，请参阅 <xref:VSLangProj.ProjectProperties.ApplicationIcon%2A>。
 
 ### <a name="assembly-information"></a>程序集信息
 
@@ -106,7 +106,7 @@ ms.locfileid: "75595808"
 
 如果选中此复选框，应用程序会使用标准 `Sub Main`。 选中此复选框将启用“Windows 应用程序框架属性”  节中的功能，同时会要求选择启动窗体。
 
-如果清除此复选框，应用程序会使用“启动窗体”  中指定的自定义 `Sub Main`。 在此情况下，可以指定启动对象（方法或类中的自定义 `Sub Main`）或窗体。 与此同时，“Windows 应用程序框架属性”  节中的选项变为不可用。
+如果清除此复选框，应用程序会使用“启动窗体”`Sub Main`**中指定的自定义** 。 在此情况下，可以指定启动对象（方法或类中的自定义 `Sub Main`）或窗体。 与此同时，“Windows 应用程序框架属性”  节中的选项变为不可用。
 
 ### <a name="view-windows-settings"></a>查看 Windows 设置
 

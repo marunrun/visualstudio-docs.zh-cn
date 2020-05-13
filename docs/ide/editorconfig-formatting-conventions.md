@@ -1,24 +1,24 @@
 ---
 title: EditorConfig 适用的 .NET 格式设置约定
-ms.date: 07/17/2019
+ms.date: 04/02/2020
 ms.topic: reference
 dev_langs:
 - CSharp
 - VB
 helpviewer_keywords:
 - formatting conventions [EditorConfig]
-author: TerryGLee
-ms.author: tglee
+author: mikadumont
+ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 64f6a45b3a5cc49cd541ceb905356093ea4ec221
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 136744514e5e2e49ec92a443ac590eb5cc34418a
+ms.sourcegitcommit: c3b6af7367bef67a02c37404534229b935f713a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75589222"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80892757"
 ---
 # <a name="formatting-conventions"></a>格式设置约定
 
@@ -65,7 +65,6 @@ dotnet_separate_import_directive_groups = true
 | **适用的语言** | C# 和 Visual Basic |
 | **引入的版本** | Visual Studio 2017 版本 15.3 |
 | **值** | `true` - 按字母顺序对 System.* `using` 指令排序并将其置于其他 using 指令前面。<br /><br />`false` - 不将 System.* `using` 指令置于其他 `using` 指令前面。 |
-| **Visual Studio 默认值** | `true` |
 
 代码示例：
 
@@ -89,7 +88,6 @@ using System.Threading.Tasks;
 | **适用的语言** | C# 和 Visual Basic |
 | **引入的版本** | Visual Studio 2017 版本 15.5 |
 | **值** | `true` - 在 `using` 指令组之间放置一个空白行。<br /><br />`false` - 不在 `using` 指令组之间放置空白行。 |
-| **Visual Studio 默认值** | `false` |
 
 代码示例：
 
@@ -151,6 +149,8 @@ using Octokit;
 - [换行选项](#wrap-options)
   - csharp_preserve_single_line_statements
   - csharp_preserve_single_line_blocks
+- [sing 指令选项](#using-directive-options) 
+  - csharp_using_directive_placement
 
 ### <a name="new-line-options"></a>换行选项
 
@@ -180,7 +180,6 @@ csharp_new_line_between_query_expression_clauses = true
 | **适用的语言** | C# |
 | **引入的版本** | Visual Studio 2017 版本 15.3 |
 | **值** | `all` - 对于所有表达式，需要将大括号置于新行（“Allman”样式）。<br /><br />`none` - 对于所有表达式，需要将大括号置于同一行（“K&R”）。<br /><br />`accessors`、`anonymous_methods`、`anonymous_types`、`control_blocks`、`events`、`indexers`、`lambdas`、`local_functions`、`methods`、`object_collection_array_initializers`、`properties`、`types` - 对于指定的代码元素，需要将大括号置于新行（“Allman”样式）。 |
-| **Visual Studio 默认值** | `all` |
 
 代码示例：
 
@@ -210,7 +209,6 @@ void MyMethod() {
 | **适用的语言** | C# |
 | **引入的版本** | Visual Studio 2017 版本 15.3 |
 | **值** | `true` - 将 `else` 语句置于新行。<br /><br />`false` - 将 `else` 语句置于同一行。 |
-| **Visual Studio 默认值** | `true` |
 
 代码示例：
 
@@ -239,7 +237,6 @@ if (...) {
 | **适用的语言** | C# |
 | **引入的版本** | Visual Studio 2017 版本 15.3 |
 | **值** | `true` - 将 `catch` 语句置于新行。<br /><br />`false` - 将 `catch` 语句置于同一行。 |
-| **Visual Studio 默认值** | `true` |
 
 代码示例：
 
@@ -268,7 +265,6 @@ try {
 | **适用的语言** | C# |
 | **引入的版本** | Visual Studio 2017 版本 15.3 |
 | **值** | `true` - 需要将 `finally` 语句置于右大括号后的新行。<br /><br />`false` - 需要将 `finally` 语句置于右大括号所在的同一行。 |
-| **Visual Studio 默认值** | `true` |
 
 代码示例：
 
@@ -302,7 +298,6 @@ try {
 | **适用的语言** | C# |
 | **引入的版本** | Visual Studio 2017 版本 15.3 |
 | **值** | `true` - 需要将对象初始值设定项的成员置于单独的行<br /><br />`false` - 需要将对象初始值设定项的成员置于同一行 |
-| **Visual Studio 默认值** | `true` |
 
 代码示例：
 
@@ -329,7 +324,6 @@ var z = new B()
 | **适用的语言** | C# |
 | **引入的版本** | Visual Studio 2017 版本 15.3 |
 | **值** | `true` - 需要将匿名类型的成员置于单独的行<br /><br />`false` - 需要将匿名类型的成员置于同一行 |
-| **Visual Studio 默认值** | `true` |
 
 代码示例：
 
@@ -356,7 +350,6 @@ var z = new
 | **适用的语言** | C# |
 | **引入的版本** | Visual Studio 2017 版本 15.3 |
 | **值** | `true` - 要求将查询表达式子句的元素置于单独的行<br /><br />`false` - 要求将查询表达式子句的元素置于同一行 |
-| **Visual Studio 默认值** | `true` |
 
 代码示例：
 
@@ -396,7 +389,6 @@ csharp_indent_case_contents_when_block = true
 | **适用的语言** | C# |
 | **引入的版本** | Visual Studio 2017 版本 15.3 |
 | **值** | `true` - 缩进 `switch` case 内容<br /><br />`false` - 不缩进 `switch` case 内容 |
-| **Visual Studio 默认值** | `true` |
 
 - 如果此规则设置为“true”，则为 i。 
 - 如果此规则设置为“false”，则为 d。 
@@ -439,7 +431,6 @@ switch(c) {
 | **适用的语言** | C# |
 | **引入的版本** | Visual Studio 2017 版本 15.3 |
 | **值** | `true` - 缩进 `switch` 标签<br /><br />`false` - 不缩进 `switch` 标签 |
-| **Visual Studio 默认值** | `true` |
 
 代码示例：
 
@@ -479,7 +470,6 @@ default:
 | **适用的语言** | C# |
 | **引入的版本** | Visual Studio 2017 版本 15.3 |
 | **值** | `flush_left` - 标签置于最左侧的列<br /><br />`one_less_than_current` - 将标签置于比当前上下文少一个缩进的位置<br /><br />`no_change` - 将标签置于与当前上下文相同的缩进位置 |
-| **Visual Studio 默认值** | `no_change` |
 
 代码示例：
 
@@ -531,7 +521,6 @@ class C
 | **规则名称** | csharp_indent_block_contents |
 | **适用的语言** | C# |
 | **值** | `true` - <br /><br />`false` -  |
-| **Visual Studio 默认值** | `true` |
 
 代码示例：
 
@@ -556,7 +545,6 @@ Console.WriteLine("Hello");
 | **规则名称** | csharp_indent_braces |
 | **适用的语言** | C# |
 | **值** | `true` - <br /><br />`false` -  |
-| **Visual Studio 默认值** | `false` |
 
 代码示例：
 
@@ -581,7 +569,6 @@ static void Hello()
 | **规则名称** | csharp_indent_case_contents_when_block |
 | **适用的语言** | C# |
 | **值** | `true` - <br /><br />`false` -  |
-| **Visual Studio 默认值** | `true` |
 
 代码示例：
 
@@ -642,7 +629,6 @@ csharp_space_between_square_brackets = false
 | **适用的语言** | C# |
 | **引入的版本** | Visual Studio 2017 版本 15.3 |
 | **值** | `true` - 在强制转换和值之间放置空格字符<br /><br />`false` - 删除转换和值之间的空格 |
-| **Visual Studio 默认值** | `false` |
 
 代码示例：
 
@@ -662,7 +648,6 @@ int y = (int)x;
 | **适用的语言** | C# |
 | **引入的版本** | Visual Studio 2017 版本 15.3 |
 | **值** | `true` - 在控制流语句（如 `for` 循环）中的关键字后放置空格字符<br /><br />`false` - 删除控制流语句（如 `for` 循环）中的关键字后的空格 |
-| **Visual Studio 默认值** | `true` |
 
 代码示例：
 
@@ -682,7 +667,6 @@ for(int i;i<x;i++) { ... }
 | **适用的语言** | C# |
 | **引入的版本** | Visual Studio 2017 版本 15.3 |
 | **值** | `control_flow_statements` - 在控制流语句的括号之间放置空格<br /><br />`expressions` - 在表达式的括号之间放置空格<br /><br />`type_casts` - 在类型转换中的括号之间放置空格 |
-| **Visual Studio 默认值** | `false` |
 
 如果省略此规则或使用 `control_flow_statements`、`expressions` 或 `type_casts` 以外的值，则不会应用该设置。
 
@@ -707,7 +691,6 @@ int y = ( int )x;
 | **适用的语言** | C# |
 | **引入的版本** | Visual Studio 2017 15.7 版 |
 | **值** | `true` - 在类型声明中的基或接口冒号前放置空格字符<br /><br />`false` - 删除类型声明中基或接口冒号前的空格 |
-| **Visual Studio 默认值** | `true` |
 
 代码示例：
 
@@ -743,7 +726,6 @@ class C: I
 | **适用的语言** | C# |
 | **引入的版本** | Visual Studio 2017 15.7 版 |
 | **值** | `true` - 在类型声明中的基或接口冒号后放置空格字符<br /><br />`false` - 删除类型声明中基或接口冒号后的空格 |
-| **Visual Studio 默认值** | `true` |
 
 代码示例：
 
@@ -779,7 +761,6 @@ class C :I
 | **适用的语言** | C# |
 | **引入的版本** | Visual Studio 2017 15.7 版 |
 | **值** | `before_and_after` - 在二元运算符前后插入空格<br /><br />`none` - 删除二元运算符前后的空格<br /><br />`ignore` - 忽略二元运算符前后的空格 |
-| **Visual Studio 默认值** | `before_and_after` |
 
 如果省略此规则或使用 `before_and_after`、`none` 或 `ignore` 以外的值，则不会应用该设置。
 
@@ -804,7 +785,6 @@ return x  *  (x-y);
 | **适用的语言** | C# |
 | **引入的版本** | Visual Studio 2017 版本 15.3 |
 | **值** | `true` - 在方法声明参数列表的左括号之后和右括号之前放置空格字符<br /><br />`false` - 删除方法声明参数列表的左括号之后和右括号之前的空格字符 |
-| **Visual Studio 默认值** | `false` |
 
 代码示例：
 
@@ -824,7 +804,6 @@ void Bark(int x) { ... }
 | **适用的语言** | C# |
 | **引入的版本** | Visual Studio 2017 15.7 版 |
 | **值** | `true` - 在方法声明的空参数列表括号内插入空格<br /><br />`false` - 删除方法声明的空参数列表括号内的空格 |
-| **Visual Studio 默认值** | `false` |
 
 代码示例：
 
@@ -859,7 +838,6 @@ void Goo(int x)
 | **规则名称** | csharp_space_between_method_declaration_name_and_open_parenthesis |
 | **适用的语言** | C# |
 | **值** | `true` - 在方法声明中方法名称和左括号之间放置空格字符<br /><br />`false` - 删除方法声明中方法名称和左括号之间的空格字符 |
-| **Visual Studio 默认值** | `false` |
 
 代码示例：
 
@@ -879,7 +857,6 @@ void M() { }
 | **适用的语言** | C# |
 | **引入的版本** | Visual Studio 2017 版本 15.3 |
 | **值** | `true` - 在方法调用的左括号之后和右括号之前放置空格字符<br /><br />`false` - 删除方法调用的左括号之后和右括号之前的空格字符 |
-| **Visual Studio 默认值** | `false` |
 
 代码示例：
 
@@ -899,7 +876,6 @@ MyMethod(argument);
 | **适用的语言** | C# |
 | **引入的版本** | Visual Studio 2017 15.7 版 |
 | **值** | `true` - 在空参数列表的括号中插入空格<br /><br />`false` - 删除空参数列表括号内的空格 |
-| **Visual Studio 默认值** | `false` |
 
 代码示例：
 
@@ -935,7 +911,6 @@ void Goo(int x)
 | **适用的语言** | C# |
 | **引入的版本** | Visual Studio 2017 15.7 版 |
 | **值** | `true` - 在方法调用名称和左括号之间插入空格<br /><br />`false` - 删除方法调用名称和左括号之间的空格 |
-| **Visual Studio 默认值** | `false` |
 
 代码示例：
 
@@ -970,7 +945,6 @@ void Goo(int x)
 | **规则名称** | csharp_space_after_comma |
 | **适用的语言** | C# |
 | **值** | `true` - 在逗号后面插入空格<br /><br />`false` - 删除逗号后面的空格 |
-| **Visual Studio 默认值** | `true` |
 
 代码示例：
 
@@ -989,7 +963,6 @@ int[] x = new int[] { 1,2,3,4,5 }
 | **规则名称** | csharp_space_before_comma |
 | **适用的语言** | C# |
 | **值** | `true` - 在逗号前插入空格<br /><br />`false` - 删除逗号前的空格 |
-| **Visual Studio 默认值** | `false` |
 
 代码示例：
 
@@ -1008,7 +981,6 @@ int[] x = new int[] { 1, 2, 3, 4, 5 };
 | **规则名称** | csharp_space_after_dot |
 | **适用的语言** | C# |
 | **值** | `true` - 在点号后面插入空格<br /><br />`false` - 删除点号后面的空格 |
-| **Visual Studio 默认值** | `false` |
 
 代码示例：
 
@@ -1027,7 +999,6 @@ this.Goo();
 | **规则名称** | csharp_space_before_dot |
 | **适用的语言** | C# |
 | **值** | `true` - 在点前插入空格 <br /><br />`false` - 删除点前的空格 |
-| **Visual Studio 默认值** | `false` |
 
 代码示例：
 
@@ -1046,7 +1017,6 @@ this.Goo();
 | **规则名称** | csharp_space_after_semicolon_in_for_statement |
 | **适用的语言** | C# |
 | **值** | `true` - 在 `for` 语句中的每个分号后面插入空格<br /><br />`false` - 删除 `for` 语句中每个分号后的空格 |
-| **Visual Studio 默认值** | `true` |
 
 代码示例：
 
@@ -1065,7 +1035,6 @@ for (int i = 0;i < x.Length;i++)
 | **规则名称** | csharp_space_before_semicolon_in_for_statement |
 | **适用的语言** | C# |
 | **值** | `true` - 在 `for` 语句中的每个分号前插入空格 <br /><br />`false` - 删除 `for` 语句中每个分号前的空格 |
-| **Visual Studio 默认值** | `false` |
 
 代码示例：
 
@@ -1084,7 +1053,6 @@ for (int i = 0; i < x.Length; i++)
 | **规则名称** | csharp_space_around_declaration_statements |
 | **适用的语言** | C# |
 | **值** | `ignore` - 不删除声明语句中多余的空格字符<br /><br />`false` - 删除声明语句中多余的空格字符 |
-| **Visual Studio 默认值** | `false` |
 
 代码示例：
 
@@ -1103,7 +1071,6 @@ int x = 0;
 | **规则名称** | csharp_space_before_open_square_brackets |
 | **适用的语言** | C# |
 | **值** | `true` - 在左方括号 `[` 前插入空格 <br /><br />`false` - 删除左方括号 `[` 前的空格 |
-| **Visual Studio 默认值** | `false` |
 
 代码示例：
 
@@ -1122,7 +1089,6 @@ int[] numbers = new int[] { 1, 2, 3, 4, 5 };
 | **规则名称** | csharp_space_between_empty_square_brackets |
 | **适用的语言** | C# |
 | **值** | `true` - 在空方括号 `[ ]` 之间插入空格 <br /><br />`false` - 删除空方括号 `[]` 之间的空格 |
-| **Visual Studio 默认值** | `false` |
 
 代码示例：
 
@@ -1141,7 +1107,6 @@ int[] numbers = new int[] { 1, 2, 3, 4, 5 };
 | **规则名称** | csharp_space_between_square_brackets |
 | **适用的语言** | C# |
 | **值** | `true` - 在非空方括号 `[ 0 ]` 中插入空格字符 <br /><br />`false` - 删除非空方括号 `[0]` 中的空格字符 |
-| **Visual Studio 默认值** | `false` |
 
 代码示例：
 
@@ -1174,7 +1139,6 @@ csharp_preserve_single_line_blocks = true
 | **适用的语言** | C# |
 | **引入的版本** | Visual Studio 2017 版本 15.3 |
 | **值** | `true` - 将语句和成员声明保留在同一行上<br /><br />`false` - 将语句和成员声明保留在不同行上 |
-| **Visual Studio 默认值** | `true` |
 
 代码示例：
 
@@ -1195,7 +1159,6 @@ string name = "John";
 | **适用的语言** | C# |
 | **引入的版本** | Visual Studio 2017 版本 15.3 |
 | **值** | `true` - 将代码块保留在单个行上<br /><br />`false` - 将代码块保留在单独的行上 |
-| **Visual Studio 默认值** | `true` |
 
 代码示例：
 
@@ -1207,6 +1170,46 @@ public int Foo { get; set; }
 public int MyProperty
 {
     get; set;
+}
+```
+
+### <a name="using-directive-options"></a>using 指令选项
+
+此格式设置规则涉及到使用放置在命名空间内和外的 using 指令。
+
+.editorconfig 文件示例  ：
+
+```ini
+# 'using' directive preferences
+[*.cs]
+csharp_using_directive_placement = outside_namespace
+csharp_using_directive_placement = inside_namespace
+```
+
+#### <a name="csharp_using_directive_placement"></a>csharp_using_directive_placement
+
+|||
+|-|-|
+| **规则名称** | csharp_using_directive_placement |
+| **适用的语言** | C# |
+| **引入的版本** | Visual Studio 2019 版本 16.1 |
+| **值** | `outside_namespace` - 将 using 指令保留在命名空间之外<br /><br />`inside_namespace` - 将 using 指令保留在命名空间之内 |
+
+代码示例：
+
+```csharp
+// csharp_using_directive_placement = outside_namespace
+using System;
+
+namespace Conventions
+{
+
+}
+
+// csharp_using_directive_placement = inside_namespace
+namespace Conventions
+{
+    using System;
 }
 ```
 

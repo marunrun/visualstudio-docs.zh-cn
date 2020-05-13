@@ -1,5 +1,5 @@
 ---
-title: 如何：自定义报表视图列 | Microsoft Docs
+title: 如何：自定义报告视图列 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -15,13 +15,13 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 6a297e6bfbed5023db97cabd370679b0de6caaab
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74778968"
 ---
-# <a name="how-to-customize-report-view-columns"></a>如何：自定义报表视图列
+# <a name="how-to-customize-report-view-columns"></a>如何：自定义报告视图列
 Visual Studio Team System Development Edition 中的性能工具与集成开发环境 (IDE) 全面集成，旨在提供无缝的用户体验。 下表显示了可通过添加、删除和重新排列列自定义的视图：
 
 - [“模块”视图](../profiling/modules-view.md)
@@ -34,7 +34,7 @@ Visual Studio Team System Development Edition 中的性能工具与集成开发�
 
 - [“调用方/被调用方”视图](../profiling/caller-callee-view.md)
 
-- [“调用关系树”视图](../profiling/call-tree-view.md)
+- [“调用树”视图](../profiling/call-tree-view.md)
 
 - [“分配”视图](../profiling/dotnet-memory-allocations-view.md)
 

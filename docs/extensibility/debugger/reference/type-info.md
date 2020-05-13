@@ -1,5 +1,5 @@
 ---
-title: TYPE_INFO | Microsoft Docs
+title: TYPE_INFO |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - TYPE_INFO structure
 ms.assetid: d725cb68-a565-49d1-a16f-ff0445c587a0
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 86212a5ef6f417dae2ae345b1367e041c3cf9095
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 82796c1d82dc3ca77151abcec3e1dd6ce13ac59d
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66316131"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80713318"
 ---
-# <a name="typeinfo"></a>TYPE_INFO
-此结构指定各种类型的字段的类型有关的信息。
+# <a name="type_info"></a>TYPE_INFO
+此结构指定有关字段类型的各种信息。
 
 ## <a name="syntax"></a>语法
 
@@ -48,42 +48,42 @@ public struct TYPE_INFO {
 
 ## <a name="members"></a>成员
  `dwKind`\
- 中的值[dwTYPE_KIND](../../../extensibility/debugger/reference/dwtype-kind.md)枚举，它确定如何解释并集。
+ [dwTYPE_KIND](../../../extensibility/debugger/reference/dwtype-kind.md)枚举中确定如何解释联合的值。
 
  `type.typeMeta`\
- [C++仅]包含[METADATA_TYPE](../../../extensibility/debugger/reference/metadata-type.md)结构，如果`dwKind`是`TYPE_KIND_METADATA`。
+ [仅C++]如果`dwKind`是`TYPE_KIND_METADATA`，则包含[METADATA_TYPE](../../../extensibility/debugger/reference/metadata-type.md)结构。
 
  `type.typePdb`\
- [C++仅]包含[PDB_TYPE](../../../extensibility/debugger/reference/pdb-type.md)结构，如果`dwKind`是`TYPE_KIND_PDB`。
+ [仅C++]如果`dwKind`是`TYPE_KIND_PDB`，则包含[PDB_TYPE](../../../extensibility/debugger/reference/pdb-type.md)结构。
 
  `type.typeBuilt`\
- [C++仅]包含[BUILT_TYPE](../../../extensibility/debugger/reference/built-type.md)结构，如果`dwKind`是`TYPE_KIND_BUILT`。
+ [仅C++]如果`dwKind`是`TYPE_KIND_BUILT`，则包含[BUILT_TYPE](../../../extensibility/debugger/reference/built-type.md)结构。
 
  `type.unused`\
- 未使用空白值。
+ 未使用的填充。
 
  `type`\
  联合的名称。
 
  `unionmember`\
- [C#仅]封送到适当的结构类型基于`dwKind`。
+ [仅 C]将此情况编送到基于`dwKind`的相应结构类型。
 
 ## <a name="remarks"></a>备注
- 此结构传递给[GetTypeInfo](../../../extensibility/debugger/reference/idebugfield-gettypeinfo.md)填写其中的方法。 如何解释该结构的内容基于`dwKind`字段。
+ 此结构传递给填写该结构的[GetTypeInfo](../../../extensibility/debugger/reference/idebugfield-gettypeinfo.md)方法。 结构内容的解释方式基于字段`dwKind`。
 
 > [!NOTE]
-> [C++仅]如果`dwKind`等于`TYPE_KIND_BUILT`，然后才可释放基础[IDebugField](../../../extensibility/debugger/reference/idebugfield.md)对象时销毁`TYPE_INFO`结构。 可以通过调用 `typeInfo.type.typeBuilt.pUnderlyingField->Release()` 来完成此操作。
+> [仅C++]如果`dwKind`等于`TYPE_KIND_BUILT`，则在破坏`TYPE_INFO`结构时必须释放基础[IDebugField](../../../extensibility/debugger/reference/idebugfield.md)对象。 可以通过调用 `typeInfo.type.typeBuilt.pUnderlyingField->Release()` 来完成此操作。
 
- [C#仅]下表显示了如何解释`unionmember`每种类型的成员。 以下示例显示如何这是一种类型的类型。
+ [仅 C]下表显示了如何解释每种类型`unionmember`的成员。 该示例演示如何针对一种类型进行此操作。
 
-|`dwKind`|`unionmember` 解释为|
+|`dwKind`|`unionmember`解释为|
 |--------------|----------------------------------|
 |`TYPE_KIND_METADATA`|[METADATA_TYPE](../../../extensibility/debugger/reference/metadata-type.md)|
 |`TYPE_KIND_PDB`|[PDB_TYPE](../../../extensibility/debugger/reference/pdb-type.md)|
 |`TYPE_KIND_BUILT`|[BUILT_TYPE](../../../extensibility/debugger/reference/built-type.md)|
 
 ## <a name="example"></a>示例
- 此示例显示了如何解释`unionmember`的成员`TYPE_INFO`C# 中的结构。 此示例演示解释只有一种类型 (`TYPE_KIND_METADATA`)，但其他解释方式完全相同。
+ 此示例演示如何解释 C#`unionmember`中`TYPE_INFO`结构的成员。 此示例仅解释一种类型 （`TYPE_KIND_METADATA`），但其他类型的解释方式完全相同。
 
 ```csharp
 using System;
@@ -107,16 +107,16 @@ namespace MyPackage
 ```
 
 ## <a name="requirements"></a>要求
- 标头： sh.h
+ 标题： sh.h
 
- 命名空间:Microsoft.VisualStudio.Debugger.Interop
+ 命名空间：微软.VisualStudio.调试器.互通
 
- 程序集：Microsoft.VisualStudio.Debugger.Interop.dll
+ 程序集：微软.VisualStudio.调试器.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [结构和联合](../../../extensibility/debugger/reference/structures-and-unions.md)
 - [dwTYPE_KIND](../../../extensibility/debugger/reference/dwtype-kind.md)
-- [GetTypeInfo](../../../extensibility/debugger/reference/idebugfield-gettypeinfo.md)
+- [获取类型信息](../../../extensibility/debugger/reference/idebugfield-gettypeinfo.md)
 - [METADATA_TYPE](../../../extensibility/debugger/reference/metadata-type.md)
 - [PDB_TYPE](../../../extensibility/debugger/reference/pdb-type.md)
 - [BUILT_TYPE](../../../extensibility/debugger/reference/built-type.md)

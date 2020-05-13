@@ -1,5 +1,5 @@
 ---
-title: METADATA_ADDRESS_ARRAYELEM | Microsoft Docs
+title: METADATA_ADDRESS_ARRAYELEM |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,24 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - METADATA_ADDRESS_ARRAYELEM structure
 ms.assetid: 24321be5-7c17-4038-82a1-c20a2b68ff3c
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a0b5e24447c1f55242af6a6b549c5317f37818b2
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 67e39eb8b03dd6f75ac39155bd744e03084beb0b
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66339175"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80714555"
 ---
-# <a name="metadataaddressarrayelem"></a>METADATA_ADDRESS_ARRAYELEM
+# <a name="metadata_address_arrayelem"></a>METADATA_ADDRESS_ARRAYELEM
 
-此结构表示一个数组中的数组元素。
+此结构表示数组中的数组元素。
 
 ## <a name="syntax"></a>语法
 
@@ -45,22 +45,22 @@ public struct METADATA_ADDRESS_ARRAYELEM {
 ## <a name="members"></a>成员
 
 `tokMethod`\
-数组的 ID 此元素是的一部分。
+此元素的数组的 ID。
 
-[C++]`_mdToken`是`typedef`适用于 32 位`int`。
+[C++]`_mdToken`是`typedef`32 位`int`的 。
 
 `dwIndex`\
-此元素的数组中的索引。
+数组中此元素的索引。
 
 ## <a name="remarks"></a>备注
-此结构是中的联合的一部分[DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md)结构时`dwKind`字段`DEBUG_ADDRESS_UNION`结构设置为`ADDRESS_KIND_ARRAYELEM`(从值[ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md)枚举）。
+当`DEBUG_ADDRESS_UNION``ADDRESS_KIND_ARRAYELEM`结构字段设置为[（ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md)枚举中[DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md)的值）时，`dwKind`此结构是DEBUG_ADDRESS_UNION结构中的联合的一部分。
 
 ## <a name="requirements"></a>要求
-标头： sh.h
+标题： sh.h
 
-命名空间:Microsoft.VisualStudio.Debugger.Interop
+命名空间：微软.VisualStudio.调试器.互通
 
-程序集：Microsoft.VisualStudio.Debugger.Interop.dll
+程序集：微软.VisualStudio.调试器.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 

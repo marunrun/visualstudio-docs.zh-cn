@@ -94,10 +94,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: dc3b1524b97b68e54574badcb003e608924e476d
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75593611"
 ---
 # <a name="resources-for-troubleshooting-integrated-development-environment-errors"></a>用于排除集成开发环境错误的资源
@@ -121,7 +121,7 @@ ms.locfileid: "75593611"
 
 如果借助其他资源仍不能解决问题，则可以访问 [Microsoft 支持](https://support.microsoft.com/en-us)网站，与 Microsoft 支持服务联系。 若要了解所在区域中可用的产品支持，请参阅 [Visual Studio 反馈选项](../../ide/feedback-options.md)页面。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 * [与网络相关错误或代理错误的疑难解答](../../install/install-and-use-visual-studio-behind-a-firewall-or-proxy-server.md#troubleshoot-network-related-errors)
 * [疑难解答 (Visual Studio for Mac)](/visualstudio/mac/troubleshooting)

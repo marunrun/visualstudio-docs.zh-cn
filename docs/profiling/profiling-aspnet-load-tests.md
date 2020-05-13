@@ -10,10 +10,10 @@ monikerRange: vs-2017
 ms.workload:
 - aspnet
 ms.openlocfilehash: 0871be57934b8a970efbca413fae4d1e3d90a625
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74772128"
 ---
 # <a name="profile-aspnet-load-tests"></a>分析 ASP.NET 负载测试
@@ -23,7 +23,7 @@ ms.locfileid: "74772128"
 
 - [如何：在 Visual Studio 中使用测试设置为负载测试配置 ASP.NET 探查器](https://msdn.microsoft.com/Library/6832fe39-04d5-4d94-8a18-3e2730bad423)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [了解采样数据值](../profiling/understanding-sampling-data-values.md)
 - [使用性能规则来分析数据](../profiling/using-performance-rules-to-analyze-data.md)
 - [采样方法数据视图](../profiling/profiler-sampling-method-data-views.md)

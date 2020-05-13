@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 927031b4755644aeac553367a4f8a08faa0c0992
-ms.sourcegitcommit: 5421999c9ff05b3242d33e4b0465f8bc29c7c643
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75718631"
 ---
 # <a name="user-permissions-and-visual-studio"></a>用户权限与 Visual Studio
@@ -28,7 +28,7 @@ ms.locfileid: "75718631"
 
 可以以典型用户身份在 Visual Studio IDE 中执行几乎任何操作。 需要管理员权限才能完成以下任务：
 
-|区域|任务|更多相关信息|
+|区域|任务|更多信息|
 |----------|----------| - |
 |安装|安装或修改 Visual Studio。|[安装 Visual Studio](../install/install-visual-studio.md)，[修改 Visual Studio](../install/modify-visual-studio.md)|
 ||安装、更新或删除本地帮助内容。|[安装和管理本地帮助内容](../help-viewer/install-manage-local-content.md)|
@@ -73,7 +73,7 @@ ms.locfileid: "75718631"
 
 此外可以修改应用程序快捷方式，以便始终利用管理权限运行。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [移植、迁移和升级 Visual Studio 项目](../porting/port-migrate-and-upgrade-visual-studio-projects.md)
 - [安装 Visual Studio](../install/install-visual-studio.md)

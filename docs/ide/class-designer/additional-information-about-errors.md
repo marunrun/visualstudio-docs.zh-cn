@@ -29,10 +29,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: dc8b2c013a3e685a6071f4a12d63e3ca475051a0
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75596510"
 ---
 # <a name="class-designer-errors"></a>类设计器错误
@@ -46,6 +46,6 @@ ms.locfileid: "75596510"
 - [使用 Visual C++ 代码](working-with-visual-cpp-code.md)包括有关在类图中显示 C++ 的疑难解答信息。
 - [Visual Studio 类设计器论坛](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vsclassdesigner)提供一个有关“类设计器”问题的论坛  。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [设计和查看类和类型](designing-and-viewing-classes-and-types.md)

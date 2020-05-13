@@ -1,5 +1,5 @@
 ---
-title: IDebugClassField::EnumNestedClasses |Microsoft Docs
+title: IDebugClassField：：枚外类 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugClassField::EnumNestedClasses method
 ms.assetid: 2ba5ef0c-395e-4006-9e3c-9b06e1d711d0
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 75b963f7a342a9ce2b276cc03ea5dece9316ff6d
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 3e6ef918b55d8b311380264d688085b0d2803601
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66313125"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80734433"
 ---
 # <a name="idebugclassfieldenumnestedclasses"></a>IDebugClassField::EnumNestedClasses
-创建此类中嵌套的类的枚举器。
+为嵌套在此类中的类创建枚举器。
 
 ## <a name="syntax"></a>语法
 
@@ -41,15 +41,15 @@ int EnumNestedClasses(
 
 ## <a name="parameters"></a>参数
 `ppEnum`\
-[out]返回[IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)对象，表示的嵌套类的列表。 如果不有任何嵌套的类，则返回 null 值。
+[出]返回表示嵌套类列表的[IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)对象。 如果没有嵌套类，则返回 null 值。
 
 ## <a name="return-value"></a>返回值
-如果成功，则返回 S_OK 或如果没有嵌套的类，则返回 S_FALSE。 否则，返回错误代码。
+如果成功，则返回S_OK或返回S_FALSE如果没有嵌套类。 否则，返回错误代码。
 
 ## <a name="remarks"></a>备注
-枚举每个元素均[IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)描述嵌套的类的对象。
+枚举的每个元素都是描述嵌套类的[IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)对象。
 
-嵌套的类是在另一个类中定义的类。 例如：
+嵌套类是在另一个类中定义的类。 例如：
 
 ```
 class RootClass {
@@ -57,7 +57,7 @@ class RootClass {
 };
 ```
 
-[IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)枚举将包含一个对象，表示`NestedClass`类。
+[IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)枚举将包含一个表示`NestedClass`类的对象。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)

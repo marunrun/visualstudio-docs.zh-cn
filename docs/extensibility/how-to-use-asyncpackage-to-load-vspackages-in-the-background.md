@@ -1,63 +1,63 @@
 ---
-title: 如何：使用 AsyncPackage 加载 Vspackage 背景 |Microsoft Docs
+title: 如何：使用异步包在后台加载 VS 包 |微软文档
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: dedf0173-197e-4258-ae5a-807eb3abc952
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 ms.workload:
 - vssdk
-ms.openlocfilehash: 64514a6d43d580fbda142dfa65bb3a2d384dff4e
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 77690a1947f82f97c4aa12809a80ea61335d216d
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66324780"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80710620"
 ---
-# <a name="how-to-use-asyncpackage-to-load-vspackages-in-the-background"></a>如何：使用 AsyncPackage 在后台加载 Vspackage
-加载和初始化 VS 包可能会导致磁盘 I/O。 如果此类 I/O 在 UI 线程上发生的情况，它会导致响应能力问题。 若要解决此问题，Visual Studio 2015 引入了<xref:Microsoft.VisualStudio.Shell.AsyncPackage>类，使包加载在后台线程上的。
+# <a name="how-to-use-asyncpackage-to-load-vspackages-in-the-background"></a>如何：使用异步包在后台加载 VS 包
+加载和初始化 VS 包可能会导致磁盘 I/O。 如果此类 I/O 发生在 UI 线程上，则可能导致响应问题。 为了解决这个问题，Visual Studio 2015<xref:Microsoft.VisualStudio.Shell.AsyncPackage>引入了允许在后台线程上加载包的类。
 
-## <a name="create-an-asyncpackage"></a>创建 AsyncPackage
- 可以首先创建一个 VSIX 项目 (**文件** > **新建** > **项目** > **Visual C#**  > **扩展性** > **VSIX 项目**) 并将 VSPackage 添加到项目 (右键单击该项目并**添加** > **新项** >   **C#项** > **扩展性** >  **Visual Studio 包**)。 然后，可以创建你的服务，并将这些服务添加到您的包。
+## <a name="create-an-asyncpackage"></a>创建异步包
+ 您可以开始创建一个 VSIX 项目 （**Project** > **文件** > **新项目** > **可视化 C_** > 扩展**VSIX** > **项目**） 和向项目添加 VS 包 （右键单击项目并**添加新** > **项目** > **C# 项** > **扩展可视化** > **工作室包**）。 然后，您可以创建服务并将这些服务添加到包中。
 
-1. 派生从包<xref:Microsoft.VisualStudio.Shell.AsyncPackage>。
+1. 从<xref:Microsoft.VisualStudio.Shell.AsyncPackage>派生包。
 
-2. 如果你要提供的服务的查询可能会导致包加载：
+2. 如果您提供的服务的查询可能会导致加载您的包：
 
-    指示 Visual studio 包是安全的后台加载并用于选择加入此行为，你<xref:Microsoft.VisualStudio.Shell.PackageRegistrationAttribute>应设置**AllowsBackgroundLoading**属性设为 true 的特性构造函数中。
+    要向 Visual Studio 指示您的包对后台加载是安全的，并选择加入此行为，<xref:Microsoft.VisualStudio.Shell.PackageRegistrationAttribute>您应该在属性构造函数中将 **"允许后台加载**"属性设置为 true。
 
    ```csharp
    [PackageRegistration(UseManagedResourcesOnly = true, AllowsBackgroundLoading = true)]
 
    ```
 
-    若要指示 Visual Studio，则可以安全地实例化您的服务在后台线程上，应设置<xref:Microsoft.VisualStudio.Shell.ProvideServiceAttributeBase.IsAsyncQueryable%2A>属性设为 true 中<xref:Microsoft.VisualStudio.Shell.ProvideServiceAttribute>构造函数。
+    要向 Visual Studio 指示在后台线程上实例化服务是安全的，应在构造函数中<xref:Microsoft.VisualStudio.Shell.ProvideServiceAttributeBase.IsAsyncQueryable%2A><xref:Microsoft.VisualStudio.Shell.ProvideServiceAttribute>将属性设置为 true。
 
    ```csharp
    [ProvideService(typeof(SMyTestService), IsAsyncQueryable = true)]
 
    ```
 
-3. 如果要通过 UI 上下文加载，则应指定**PackageAutoLoadFlags.BackgroundLoad**为<xref:Microsoft.VisualStudio.Shell.ProvideAutoLoadAttribute>或作为包的自动加载项的值写入到标志的值 (0x2)。
+3. 如果通过 UI 上下文加载，则应将<xref:Microsoft.VisualStudio.Shell.ProvideAutoLoadAttribute>或 值 （0x2） 的 **"包自动加载Flags"** 指定到作为包自动加载条目的值编写的标志中的后台加载。
 
    ```csharp
    [ProvideAutoLoad(UIContextGuid, PackageAutoLoadFlags.BackgroundLoad)]
 
    ```
 
-4. 如果异步初始化可执行的操作，应重写<xref:Microsoft.VisualStudio.Shell.AsyncPackage.InitializeAsync%2A>。 删除`Initialize()`VSIX 模板提供的方法。 (`Initialize()`中的方法**AsyncPackage**都密封的)。 可以使用任一<xref:Microsoft.VisualStudio.Shell.AsyncPackage.AddService%2A>方法将异步服务添加到您的包。
+4. 如果要执行异步初始化工作，则应重写<xref:Microsoft.VisualStudio.Shell.AsyncPackage.InitializeAsync%2A>。 删除`Initialize()`VSIX 模板提供的方法。 （`Initialize()`**异步包**中的方法是密封的）。 可以使用任何<xref:Microsoft.VisualStudio.Shell.AsyncPackage.AddService%2A>方法向包添加异步服务。
 
-    注意：若要调用`base.InitializeAsync()`，可以更改为你的源代码：
+    注： 要`base.InitializeAsync()`调用 ，您可以将源代码更改为：
 
    ```csharp
    await base.InitializeAsync(cancellationToken, progress);
    ```
 
-5. 必须小心以免使 Rpc （远程过程调用） 通过异步初始化代码 (在**InitializeAsync**)。 可以在调用时<xref:Microsoft.VisualStudio.Shell.Package.GetService%2A>直接或间接。  当同步加载是必需的时 UI 线程将会阻止使用<xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory>。 默认阻止模型禁用 Rpc。 这意味着，如果您尝试使用 RPC 从异步任务，您将发生死锁，如果 UI 线程正在等待加载对包本身。 常规的替代方法是封送到 UI 线程代码，如果需要使用类似**可加入任务工厂**的<xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory.SwitchToMainThreadAsync%2A>或不使用 RPC 的其他一些机制。  不要使用**ThreadHelper.Generic.Invoke**或通常阻止调用线程正在等待获取对 UI 线程。
+5. 您必须注意不要从异步初始化代码（**初始化 Async**中）进行 RPC（远程过程调用）。 当您直接或间接调用<xref:Microsoft.VisualStudio.Shell.Package.GetService%2A>时，可能会发生这些情况。  当需要同步加载时，UI 线程将使用<xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory>阻止。 默认阻止模型禁用 RPC。 这意味着，如果您尝试使用来自异步任务的 RPC，如果 UI 线程本身正在等待加载包，则将死锁。 通常的替代方法是，如果需要，请使用可**加入任务工厂**<xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory.SwitchToMainThreadAsync%2A>或其他不使用 RPC 的机制将代码封送到 UI 线程。  不要使用**ThreadHelper.generic.Invoke 或**通常阻止等待到达 UI 线程的调用线程。
 
-    注意：应避免使用**GetService**或**QueryService**在你`InitializeAsync`方法。 如果您必须使用这些，您需要先切换到 UI 线程。 替代方法是使用<xref:Microsoft.VisualStudio.Shell.AsyncServiceProvider.GetServiceAsync%2A>从你**AsyncPackage** (通过它强制转换为<xref:Microsoft.VisualStudio.Shell.Interop.IAsyncServiceProvider>。)
+    注意：您应该避免在方法`InitializeAsync`中使用**获取服务**或**查询服务**。 如果必须使用这些线程，则需要首先切换到 UI 线程。 另一种方法是从<xref:Microsoft.VisualStudio.Shell.AsyncServiceProvider.GetServiceAsync%2A>**Async 包**中使用（将其强制转换到<xref:Microsoft.VisualStudio.Shell.Interop.IAsyncServiceProvider>。）
 
-   C#：创建 AsyncPackage:
+   C#： 创建异步包：
 
 ```csharp
 [PackageRegistration(UseManagedResourcesOnly = true, AllowsBackgroundLoading = true)]
@@ -72,29 +72,29 @@ public sealed class TestPackage : AsyncPackage
 }
 ```
 
-## <a name="convert-an-existing-vspackage-to-asyncpackage"></a>将现有的 VSPackage 转换为 AsyncPackage
- 大部分工作是创建一个新相同**AsyncPackage**。 执行步骤 1 至 5 更高版本。 此外需要额外的要小心，使用以下建议：
+## <a name="convert-an-existing-vspackage-to-asyncpackage"></a>将现有 VS 包转换为异步包
+ 大多数工作与创建新的**Async包**相同。 按照上面的步骤 1 到 5。 您还需要格外小心以下建议：
 
-1. 请记住删除`Initialize`必须在包中的重写。
+1. 请记住删除包中的`Initialize`重写。
 
-2. 避免死锁：可能有隐藏在代码中的 Rpc。 现在发生在后台线程上。 请确保，如果要进行 RPC (例如， **GetService**)，需要转到主线程 (1) 或 （2） 使用一个 API 的异步版本存在 (例如， **GetServiceAsync**).
+2. 避免死锁：代码中可能有隐藏的 RPC。 现在发生在后台线程上。 请确保，如果要进行 RPC（例如 **，GetService），** 则需要 （1） 切换到主线程，或者 （2） 如果存在 API 的异步版本（例如 **，GetServiceAsync）。**
 
-3. 请勿过于频繁地在线程之间切换。 尝试将本地化可以发生在后台线程来减少加载时间的工作。
+3. 请勿在线程之间切换过于频繁。 尝试本地化在后台线程中可能发生的工作，以减少加载时间。
 
-## <a name="querying-services-from-asyncpackage"></a>查询从 AsyncPackage 服务
- **AsyncPackage**可能或可能不会加载以异步方式具体取决于调用方。 例如，
+## <a name="querying-services-from-asyncpackage"></a>从异步包查询服务
+ **Async 包**可能加载，也可能不异步加载，具体取决于调用方。 例如，
 
-- 如果调用方调用**GetService**或**QueryService** (这两个同步 Api) 或
+- 如果呼叫者呼叫**获取服务**或**查询服务**（同时使用同步 API）或
 
-- 如果调用方调用**IVsShell::LoadPackage** (或**IVsShell5::LoadPackageWithContext**) 或
+- 如果调用方呼叫**IVsShell：加载包**（或**IVsShell5：：loadPackage 与上下文**） 或
 
-- 负载触发 UI 上下文，但未指定的 UI 上下文机制可以以异步方式加载您
+- 负载由 UI 上下文触发，但您没有指定 UI 上下文机制可以异步加载您
 
-  然后，您的包将以同步方式加载。
+  然后，您的包将同步加载。
 
-  包仍有机会 （在异步初始化阶段） 来完成工作出 UI 线程，尽管 UI 线程将阻止该工作完成。 如果调用方将使用**IAsyncServiceProvider**异步查询你的服务，然后加载和初始化将完成异步假定它们不立即阻止生成的任务对象上。
+  包仍然有机会（处于异步初始化阶段）从 UI 线程执行工作，尽管 UI 线程将被阻止完成该工作。 如果调用方使用**IAsyncServiceProvider**对服务进行异步查询，则加载和初始化将以异步方式完成，前提是它们不会立即阻止生成的任务对象。
 
-  C#：如何以异步方式查询服务：
+  C#：如何异步查询服务：
 
 ```csharp
 using Microsoft.VisualStudio.Shell;

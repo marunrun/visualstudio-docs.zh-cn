@@ -1,28 +1,28 @@
 ---
-title: IDebugExpressionEvaluator2::SetCallback | Microsoft Docs
+title: IDebug表达式评估器2：：设置回调 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IDebugExpressionEvaluator2::SetCallback
 - SetCallback
 ms.assetid: 31e3a99e-e784-44a3-8b19-cc5ef31ed546
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: f347b687066578d5572a89a6e057fd2cb3b79e0b
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 907fdaa928b3f84f6ff37490d5c54a9d48515053
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66325489"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80729343"
 ---
 # <a name="idebugexpressionevaluator2setcallback"></a>IDebugExpressionEvaluator2::SetCallback
-使表达式计算器 (EE) 来指定调试器引擎 (DE) 将用于读取指标设置的回调接口。
+使表达式赋值器 （EE） 指定调试器引擎 （DE） 将用于读取指标设置的回调接口。
 
 ## <a name="syntax"></a>语法
 
@@ -40,16 +40,16 @@ int SetCallback (
 
 ## <a name="parameters"></a>参数
 `pCallback`\
-[in]要用于设置回调的接口。
+[在]用于设置回调的接口。
 
 ## <a name="return-value"></a>返回值
-如果成功，则返回`S_OK`; 否则为返回错误代码。
+如果成功，返回`S_OK`;否则，返回错误代码。
 
 ## <a name="remarks"></a>备注
-此方法提供的表达式计算器可用于读取指标设置会话调试管理器的接口。 适用于远程调试上读取指标[!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]计算机。
+此方法提供会话调试管理器的接口，表达式评估器可以使用该接口读取指标设置。 在远程调试中读取[!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]计算机上的指标非常有用。
 
 ## <a name="example"></a>示例
-下面的示例演示如何实现此方法对于**CEE**对象，它公开[IDebugSettingsCallback2](../../../extensibility/debugger/reference/idebugsettingscallback2.md)接口。
+以下示例演示如何为公开[IDebugSettingsCallback2](../../../extensibility/debugger/reference/idebugsettingscallback2.md)接口的**CEE**对象实现此方法。
 
 ```cpp
 HRESULT CEE::SetCallback(IDebugSettingsCallback2* in_pCallback)

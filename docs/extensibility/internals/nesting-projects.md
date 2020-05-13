@@ -1,5 +1,5 @@
 ---
-title: 嵌套项目 |Microsoft Docs
+title: 嵌套项目 |微软文档
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,29 +8,29 @@ helpviewer_keywords:
 - projects [Visual Studio SDK], child projects
 - projects [Visual Studio SDK], nesting
 ms.assetid: 12cce037-9840-4761-845e-5abd5fb317b0
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f291a9c105c8207fb6721d32d4d0481e49dd4295
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 814780fa8e7e57a022a75b2e09115cfa55a1b8be
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72726422"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80707031"
 ---
 # <a name="nesting-projects"></a>嵌套项目
-使用 VS 包的企业应用程序开发人员可以使用*项目嵌套*在 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 中轻松地将相似类型的项目组合在一起。 例如，企业模板项目使用嵌套项目将项目分组到类别中。 业务外观项目、Web UI 项目等在一个类别中组合在一起。
+使用 VS 包的企业应用程序开发人员可以使用*项目嵌套*来方便地将类似类型的项目[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]分组在一起。 例如，企业模板项目使用嵌套项目将项目分组到类别中。 业务外观项目、Web UI 项目等被分组到一个类别中。
 
- 在此方案中，开发人员可以在每个父项目下嵌套的项目数没有限制，尽管开发人员可以通过编程方式提供限制。 这种类型的分组也可以是递归的，在这种情况下，与子项目属于同一类型的项目可以嵌套在子项目下，以成为作为父项的子项目的子项目。
+ 在这种情况下，开发人员可以嵌套在每个父项目下的项目数量没有限制，尽管开发人员可以以编程方式提供限制。 这种类型的分组也可以递归，在这种情况下，与子项目类型相同的项目可以嵌套在子项下，成为子项的子项，该子项目是父项的子项目。
 
- 项目嵌套不是 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 的固有部分。 您必须编写代码，以便在子项目中启用嵌套和子项目嵌套。 父项目是一种特殊的 VSPackage 或项目类型，使用其自己的 GUID 创建并注册，其中包含实现项目嵌套所需的代码。
+ 项目嵌套不是 的固有部分[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]。 您必须编写代码才能在子项目中启用嵌套和子项目嵌套。 父项目是使用其自己的 GUID 创建和注册的特殊的 VSPackage 或项目类型，其中包括实现项目嵌套所需的代码。
 
- 可以在[如何：实现嵌套项目](../../extensibility/internals/how-to-implement-nested-projects.md)中找到有关如何嵌套项目的示例。
+ 您可以在["如何：实现嵌套项目](../../extensibility/internals/how-to-implement-nested-projects.md)"中找到有关如何嵌套项目的示例。
 
 ## <a name="nested-projects-example"></a>嵌套项目示例
- ![嵌套项目解决方案](../../extensibility/internals/media/vsnestedprojects.gif "vsNestedProjects")嵌套项目示例
+ ![嵌套项目解决方案](../../extensibility/internals/media/vsnestedprojects.gif "vs 嵌套项目")嵌套项目示例
 
 ## <a name="see-also"></a>请参阅
 - [卸载和重新加载嵌套项目的注意事项](../../extensibility/internals/considerations-for-unloading-and-reloading-nested-projects.md)

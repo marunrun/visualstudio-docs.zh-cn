@@ -26,11 +26,11 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: b73a4660c9e0dad66ceb73c04852601765174264
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75594196"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79307279"
 ---
 # <a name="view-the-structure-of-code-using-different-tool-windows"></a>使用不同的工具窗口查看代码结构
 
@@ -224,6 +224,6 @@ ms.locfileid: "75594196"
 
 可以将“文档大纲”窗口与设计器视图（如 XAML 页面设计器或 Windows 窗体设计器）或 HTML 页面一起使用  。 此窗口在树视图中显示元素，以便你可以查看窗体或页面的逻辑结构，并查找深度嵌入或隐藏的控件。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [“类视图”和“对象浏览器”图标](../ide/class-view-and-object-browser-icons.md)

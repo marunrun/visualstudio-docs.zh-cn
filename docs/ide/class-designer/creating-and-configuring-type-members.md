@@ -30,17 +30,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: bfed51812b034d63f250a56548b88f09a98214fe
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75590405"
 ---
 # <a name="create-and-configure-type-members-in-class-designer"></a>在类设计器中创建和配置类型成员
 
 可以将以下成员添加到类图上的类型中并在“类详细信息”窗口中配置这些成员  ：
 
-|**Type**|**包含的成员**|
+|类型 |**包含的成员**|
 |--------------| - |
 |类|方法、属性（对于 C# 和 Visual Basic）、字段、事件（对于 C# 和 Visual Basic）、构造函数（方法）、析构函数（方法）和常数|
 |Enum|成员|
@@ -51,13 +51,13 @@ ms.locfileid: "75590405"
 |模块（仅限 VB）|方法、属性、字段、事件、构造函数和常量|
 
 > [!NOTE]
-> 通过使用自动实现的属性（仅限 C#），属性的 get 和 set 访问器不需要其他逻辑，因而属性声明更加简洁。 若要显示完全签名，请从“类图”菜单中选择“更改成员格式” > “显示完全签名”    。 有关自动实现的属性的详细信息，请参阅[自动实现的属性](/dotnet/csharp/programming-guide/classes-and-structs/auto-implemented-properties)。
+> 通过使用自动实现的属性（仅限 C#），属性的 get 和 set 访问器不需要其他逻辑，因而属性声明更加简洁。 若要显示完全签名，请从“类图”菜单中选择“更改成员格式” **“显示完全签名”**   >   。 有关自动实现的属性的详细信息，请参阅[自动实现的属性](/dotnet/csharp/programming-guide/classes-and-structs/auto-implemented-properties)。
 
 ## <a name="common-tasks"></a>常见任务
 
 |任务|支持内容|
 |----------| - |
-|**开始操作：** 创建并配置类型成员之前，必须打开“类详细信息”窗口  。|- [打开“类详细信息”窗口](creating-and-configuring-type-members.md#open-the-class-details-window)<br />- [“类详细信息”用法说明](creating-and-configuring-type-members.md#class-details-usage-notes)<br />- [显示只读信息](creating-and-configuring-type-members.md#display-of-read-only-information)<br />- [类图和“类详细信息”窗口中的键盘快捷方式和鼠标快捷方式](keyboard-and-mouse-shortcuts-in-the-class-diagram-and-class-details-window.md)|
+|**开始：** 创建并配置类型成员之前，必须打开“类详细信息”窗口  。|- [打开“类详细信息”窗口](creating-and-configuring-type-members.md#open-the-class-details-window)<br />- [“类详细信息”用法说明](creating-and-configuring-type-members.md#class-details-usage-notes)<br />- [显示只读信息](creating-and-configuring-type-members.md#display-of-read-only-information)<br />- [类图和“类详细信息”窗口中的键盘快捷方式和鼠标快捷方式](keyboard-and-mouse-shortcuts-in-the-class-diagram-and-class-details-window.md)|
 |**创建和修改类型成员：** 可以使用“类详细信息”窗口创建新成员、修改成员并向方法中添加参数  。|- [创建成员](creating-and-configuring-type-members.md#create-members)<br />- [修改类型成员](creating-and-configuring-type-members.md#modify-type-members)<br />- [向方法中添加参数](creating-and-configuring-type-members.md#add-parameters-to-methods)|
 
 ## <a name="open-the-class-details-window"></a>打开“类详细信息”窗口
@@ -98,7 +98,7 @@ ms.locfileid: "75590405"
 
      该类型获得焦点，其内容显示在“类详细信息”窗口中  。
 
-2. 在“类详细信息”窗口工具栏上单击顶部图标，再从下拉列表中选择“新建 \<成员>”   。
+2. 在“类详细信息”窗口工具栏上单击顶部图标，再从下拉列表中选择“新建 **成员>”** **\<** 。
 
      光标移至要添加的那类成员所对应行中的“名称”字段  。 例如，如果单击了“新建属性”，则光标将移至“类详细信息”窗口中“属性”区域的一个新行上    。
 
@@ -114,7 +114,7 @@ ms.locfileid: "75590405"
 
      该类型获得焦点，其内容显示在“类详细信息”窗口中  。
 
-2. 在“类详细信息”窗口中包含要添加的那类成员的部分中，单击“\<添加成员>”   。 例如，若要添加一个字段，请单击“\<添加字段>”  。
+2. 在“类详细信息”窗口中包含要添加的那类成员的部分中，单击“**添加成员>”** **\<** 。 例如，若要添加一个字段，请单击“**添加字段>”\<** 。
 
 3. 键入希望创建的成员的名称，再按 Enter。
 
@@ -155,7 +155,7 @@ ms.locfileid: "75590405"
 
 - **\<添加成员>**
 
-     “类详细信息”窗口中最后一行的“名称”单元格中包含文本“\<添加成员>”    。 如果单击此单元格，则可创建新成员。 有关详细信息，请参阅[创建成员](creating-and-configuring-type-members.md#create-members)。
+     “类详细信息”窗口中最后一行的“名称”单元格中包含文本“**添加成员>”** **\<**  。 如果单击此单元格，则可创建新成员。 有关详细信息，请参阅[创建成员](creating-and-configuring-type-members.md#create-members)。
 
 - “属性”窗口中的成员属性 
 
@@ -192,7 +192,7 @@ ms.locfileid: "75590405"
 
      如果“名称”列过窄而无法显示参数的完整名称，将光标指向参数名即可显示参数的名称  。
 
-- **Type**
+- 类型 
 
      “参数类型”单元格使用 IntelliSense，由此可选择当前项目或引用项目中列出的所有可用类型  。
 
@@ -206,9 +206,9 @@ ms.locfileid: "75590405"
 
 - **\<添加参数>**
 
-     成员的最后一个参数行的“名称”单元格中包含文本“<添加参数\>”   。 单击此单元格可创建新的参数。 有关详细信息，请参阅[向方法中添加参数](creating-and-configuring-type-members.md#add-parameters-to-methods)。
+     成员的最后一个参数行的“名称”单元格中包含文本“<添加参数 **”\>**  。 单击此单元格可创建新的参数。 有关详细信息，请参阅[向方法中添加参数](creating-and-configuring-type-members.md#add-parameters-to-methods)。
 
-“属性”窗口显示的参数属性与“类详细信息”窗口中显示的相同   ：“名称”、“类型”、“修饰符”、“摘要”以及“可选默认值”属性      。 在一个位置更改某个属性将使该属性的值在全局范围内得到更新，包括这个属性值在其他位置的显示。
+“属性”窗口中显示的参数属性与“类详细信息”窗口中显示的相同：“名称”、“类型”、“修饰符”、“摘要”以及“可选的默认值”属性        。 在一个位置更改某个属性将使该属性的值在全局范围内得到更新，包括这个属性值在其他位置的显示。
 
 > [!NOTE]
 > 若要向委托中添加参数，请参阅[创建成员](creating-and-configuring-type-members.md#create-members)。
@@ -224,9 +224,9 @@ ms.locfileid: "75590405"
 
 2. 在“类详细信息”窗口中，展开你要向其中添加参数的方法所在的行  。
 
-     此时将显示缩进的参数行，其中仅包含一对括号和文字“\<添加参数>”  。
+     此时将显示缩进的参数行，其中仅包含一对括号和文字“**添加参数>”\<** 。
 
-3. 单击“\<添加参数>”，键入新参数的名称，并按 Enter   。
+3. 单击“**添加参数>”，键入新参数的名称，并按 Enter\<**  。
 
      新参数随即添加到方法和方法的代码中。 它显示在“类详细信息”窗口和“属性”窗口中  。
 
@@ -240,9 +240,9 @@ ms.locfileid: "75590405"
 
 2. 在“类详细信息”窗口中，展开要向其中添加可选参数的方法所在的行  。
 
-     此时将显示缩进的参数行，其中仅包含一对括号和文字“\<添加参数>”  。
+     此时将显示缩进的参数行，其中仅包含一对括号和文字“**添加参数>”\<** 。
 
-3. 单击“\<添加参数>”，键入新参数的名称，并按 Enter   。
+3. 单击“**添加参数>”，键入新参数的名称，并按 Enter\<**  。
 
      新参数随即添加到方法和方法的代码中。 它显示在“类详细信息”窗口和“属性”窗口中  。
 
@@ -317,7 +317,7 @@ ms.locfileid: "75590405"
 
 无法使用类设计器或“类详细信息”窗口来编辑本机 C++ 代码；必须使用代码编辑器来编辑本机 C++ 代码  。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [查看类型和关系](designing-and-viewing-classes-and-types.md)
 - [重构类和类型](refactoring-classes-and-types.md)

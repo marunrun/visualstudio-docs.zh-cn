@@ -22,7 +22,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 79e55ec521de098a7ae0339c4460502dde3d482d
 ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/22/2019
 ms.locfileid: "72745788"
@@ -35,7 +35,7 @@ if ( nBlockUse == _CRT_BLOCK )
     return( TRUE );
 ```
 
-如果分配挂钩不忽略 `_CRT_BLOCK` 块，则在挂钩中调用的任何 C 运行时库函数都可能会使程序陷入无限循环。 例如，`printf` 执行内部分配。 如果挂钩代码调用 `printf`，则进行的分配会导致挂钩再次被调用，于是会再次调用 “printf”，如此这样，直到堆栈溢出。 如果需要报告 `_CRT_BLOCK` 分配操作，则避免该限制的一种方法是使用 Windows API 函数而不是 C 运行时函数进行格式化和输出。 Windows API 不使用 C 运行时库堆，因此不会让分配挂钩陷入无限循环。
+如果分配挂钩不忽略 `_CRT_BLOCK` 块，则在挂钩中调用的任何 C 运行时库函数都可能会使程序陷入无限循环。 例如，`printf` 执行内部分配。 如果挂钩代码调用 `printf`，则进行的分配会导致挂钩再次被调用，于是会再次调用 “printf”，如此这样，直到堆栈溢出  。 如果需要报告 `_CRT_BLOCK` 分配操作，则避免该限制的一种方法是使用 Windows API 函数而不是 C 运行时函数进行格式化和输出。 Windows API 不使用 C 运行时库堆，因此不会让分配挂钩陷入无限循环。
 
 如果检查运行时库源文件，则会看到默认的分配挂钩函数 **CrtDefaultAllocHook**（直接返回 **TRUE**）位于其自身的独立文件 DBGHOOK.C 中。 如果希望调用分配挂钩（即使分配是由在应用程序的 **main** 函数之前执行的运行时启动代码进行的），则可将此默认函数替换为你自己的一个函数，而不使用 [_CrtSetAllocHook](/cpp/c-runtime-library/reference/crtsetallochook)。
 

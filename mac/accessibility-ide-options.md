@@ -6,10 +6,10 @@ ms.author: dominicn
 ms.date: 09/23/2019
 ms.assetid: 87D22340-2BE6-40EE-ACFD-3CF1BA886175
 ms.openlocfilehash: aece4bec978b609dd1fd5f67d2562bd87f847a3a
-ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "74985117"
 ---
 # <a name="set-ide-accessibility-options"></a>设置 IDE 辅助功能选项
@@ -27,7 +27,7 @@ ms.locfileid: "74985117"
 
 ## <a name="change-the-content-font-and-size"></a>更改内容的字体和大小
 
-在 Visual Studio for Mac 中，可以自定义大多数面板内容的字体和大小。 操作方法如下：
+在 Visual Studio for Mac 中，可以自定义大多数面板内容的字体和大小。 以下是操作方法：
 
 1. 转到“Visual Studio (菜单)”   > “首选项... (&#8984;,)”  。
 

@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 23877f9b94b498d87a89ae8e657aa2fe52984953
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "72634929"
 ---
 # <a name="shader-designer-nodes"></a>着色器设计器节点
@@ -31,7 +31,7 @@ ms.locfileid: "72634929"
 
      标量值会复制到矢量中，该矢量大小与较大输入相同。 例如，当运算的最大输入是三元矢量时，标量输入 5.0 变为矢量 (5.0, 5.0, 5.0)，无论是什么运算，都是如此。
 
-- 如果较小类型是矢量，并且运算为乘法（\*、/、% 等），那么： 
+- 如果较小类型是矢量，并且运算为乘法（ **、/、% 等），那么：\***
 
      矢量的值复制到与较大输入大小相等的矢量的前导元素中，并将尾随元素设置为 1.0。 例如，矢量输入与四元矢量相乘时，矢量输入 (5.0, 5.0) 变为矢量 (5.0, 5.0, 1.0, 1.0)。 通过使用乘法标识 1.0 来保留输出的第三和第四元素。
 
@@ -41,7 +41,7 @@ ms.locfileid: "72634929"
 
 ## <a name="related-topics"></a>相关主题
 
-|Title|说明|
+|标题|说明|
 |-----------|-----------------|
 |[常量节点](../designers/constant-nodes.md)|介绍可在着色器计算中用来表示文本值和内插顶点状态信息的节点。 因为顶点状态是内插的，因此每个像素的顶点状态不同，每个像素着色器实例会接收不同版本的常量。|
 |[参数节点](../designers/parameter-nodes.md)|介绍可在着色器计算中用来表示照相机位置、材料属性、照明参数、时间和其他应用状态信息的节点。|

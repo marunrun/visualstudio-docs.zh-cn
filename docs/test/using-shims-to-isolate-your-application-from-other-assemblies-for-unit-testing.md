@@ -9,10 +9,10 @@ dev_langs:
 - CSharp
 - VB
 ms.openlocfilehash: 480283b4f86f28fdedfb38687682fcee4e67646e
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75585530"
 ---
 # <a name="use-shims-to-isolate-your-app-for-unit-testing"></a>使用填充码隔离应用以进行单元测试
@@ -23,7 +23,7 @@ ms.locfileid: "75585530"
 
 有关概述和“快速入门”指南，请参阅[使用 Microsoft Fakes 隔离受测代码](../test/isolating-code-under-test-with-microsoft-fakes.md)。
 
-**要求**
+**惠?**
 
 - Visual Studio Enterprise
 - .NET Framework 项目
@@ -31,7 +31,7 @@ ms.locfileid: "75585530"
 > [!NOTE]
 > 不支持 .NET Standard 项目。
 
-## <a name="example-the-y2k-bug"></a>示例：千年虫 bug
+## <a name="example-the-y2k-bug"></a>示例: 计算机 2000 年问题 Bug
 
 设想一种会在 2000 年 1 月 1 日引发异常的方法：
 
@@ -88,11 +88,11 @@ public void Y2kCheckerTest() {
 }
 ```
 
-正确释放每个填充码上下文至关重要。 根据经验，请调用 `using` 语句内的 `ShimsContext.Create`，以便确保清除已注册的填充码。 例如，您可能为某一测试方法注册了填充码，而且该方法会将 `DateTime.Now` 方法替换为始终返回 2000 年 1 月 1 日的委托。 如果忘记清除测试方法中的已注册填充码，则剩余的测试运行将始终返回 2000 年 1 月 1 日作为 `DateTime.Now` 值。 这可能会让人感到惊讶和困惑。
+正确释放每个填充码上下文至关重要。 根据经验，请调用 `ShimsContext.Create` 语句内的 `using`，以便确保清除已注册的填充码。 例如，您可能为某一测试方法注册了填充码，而且该方法会将 `DateTime.Now` 方法替换为始终返回 2000 年 1 月 1 日的委托。 如果忘记清除测试方法中的已注册填充码，则剩余的测试运行将始终返回 2000 年 1 月 1 日作为 `DateTime.Now` 值。 这可能会让人感到惊讶和困惑。
 
 ### <a name="write-a-test-with-shims"></a>编写包含填充码的测试
 
-在测试代码中，为要虚设的方法插入 *绕道*。 例如：
+在测试代码中，为要虚设的方法插入 *绕道*。 例如:
 
 ```csharp
 [TestClass]
@@ -521,8 +521,8 @@ System.Fakes.ShimEnvironment.GetCommandLineArgsGet = ...
 
 填充码无法用于 .NET 基类库 mscorlib 和 System 中的所有类型。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [通过 Microsoft Fakes 隔离受测代码](../test/isolating-code-under-test-with-microsoft-fakes.md)
 - [Peter Provost 的博客：Visual Studio 2012 填充码](http://www.peterprovost.org/blog/2012/04/25/visual-studio-11-fakes-part-2)
-- [视频（1 小时 16 分钟）：在 Visual Studio 2012 中使用 Fakes 测试不可测试的代码](https://channel9.msdn.com/Events/TechEd/Europe/2012/DEV411)
+- [视频（1 小时 16 分钟）：在 Visual Studio 2012 中使用 Fakes 测试不可测试代码](https://channel9.msdn.com/Events/TechEd/Europe/2012/DEV411)

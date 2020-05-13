@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 0f22c687f88c7736d5c088ebc28ff490c4c16b8f
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75591289"
 ---
 # <a name="manage-external-tools"></a>管理外部工具
@@ -47,7 +47,7 @@ ms.locfileid: "75591289"
 
 可以添加将在“工具”  菜单中显示的外部工具。
 
-1. 通过选择“工具” > “外部工具”，打开“外部工具”对话框    。
+1. 通过选择“工具” **“外部工具”，打开“外部工具”对话框**   >   。
 
 1. 单击  “添加”，然后填写信息。 例如，以下条目会导致 Windows 资源管理器在当前已在 Visual Studio 中打开的文件目录中打开  ：
 
@@ -61,7 +61,7 @@ ms.locfileid: "75591289"
 
 以下是在定义外部工具时可以使用的参数的完整列表：
 
-|“属性”|参数|描述|
+|名称|参数|说明|
 |----------|--------------|-----------------|
 |项路径|$(ItemPath)|当前文件的完整文件名（驱动器 + 路径 + 文件名）。|
 |项目录|$(ItemDir)|当前文件的目录（驱动器 + 路径）。|
@@ -83,6 +83,6 @@ ms.locfileid: "75591289"
 > [!NOTE]
 > IDE 状态栏会显示“当前行”和“当前列”变量，用于指示插入点在活动代码编辑器中的位置    。 “当前文本”变量返回在该位置选择的文本或代码  。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C/C++ 生成工具](/cpp/build/reference/c-cpp-build-tools)

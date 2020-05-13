@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b3ed82bd8ba3845541d7dce628f99fb78b62ab9f
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: ed7a36ad561daf87ec65db0f6c51c9dd7833eb9e
+ms.sourcegitcommit: ddd99f64a3f86508892a6d61e8a33c88fb911cc4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75595704"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82255565"
 ---
 # <a name="devenv-command-line-switches"></a>Devenv 命令行开关
 
@@ -72,6 +72,7 @@ ms.locfileid: "75595704"
 |[/LCID 或 /L](lcid-devenv-exe.md)|为 IDE 设置默认语言。 如果 Visual Studio 安装中不包括指定语言，此设置遭忽略。<br /><br /> `devenv /l 1033`|
 |[/Log](log-devenv-exe.md)|启动 Visual Studio 并将所有活动记录到日志文件中。<br /><br /> `devenv /log mylogfile.xml`|
 |[/NoSplash](nosplash-devenv-exe.md)|打开 IDE，而不显示初始屏幕。<br /><br /> `devenv /nosplash File1 File2`|
+|[/ResetSettings](resetsettings-devenv-exe.md)|还原 Visual Studio 默认设置。 可视需要将这些设置重置为指定的 `.vssettings` 文件。<br /><br /> `devenv /resetsettings mysettings.vssettings`|
 |[/Run 或 /R](run-devenv-exe.md)|编译并运行指定的解决方案。<br /><br /> `devenv /run mysln.sln`|
 |[/RunExit](runexit-devenv-exe.md)|编译并运行指定的解决方案，在运行该解决方案时最小化 IDE，并在解决方案完成运行后关闭 IDE。<br /><br /> `devenv /runexit mysln.sln`|
 |[/SafeMode](safemode-devenv-exe.md)|在安全模式下启动 Visual Studio。 此开关仅加载默认环境、默认服务以及第三方包的发布版。<br /><br /> 此开关不带参数。|
@@ -89,7 +90,6 @@ ms.locfileid: "75595704"
 |[/Project](project-devenv-exe.md)|要生成、清理或部署的项目。 仅当已提供 `/Build`、`/Rebuild`、`/Clean` 或 `/Deploy` 开关之后，才可使用此开关。<br /><br /> `devenv mysln.sln /build Debug /project proj1`|
 |[/ProjectConfig](projectconfig-devenv-exe.md)|指定要生成或部署的项目配置。 仅当已提供 `/Project` 开关之后，才可使用此开关。<br /><br /> `devenv mysln.sln /build Release /project proj1 /projectconfig Release`|
 |[/Rebuild](rebuild-devenv-exe.md)|根据指定解决方案的配置，清理并生成指定的解决方案或项目。<br /><br /> `devenv mysln.sln /rebuild`|
-|[/ResetSettings](resetsettings-devenv-exe.md)|还原 Visual Studio 默认设置。 可视需要将这些设置重置为指定的 `.vssettings` 文件。<br /><br /> `devenv /resetsettings mysettings.vssettings`|
 |[/Upgrade](upgrade-devenv-exe.md)|将指定的解决方案文件及其所有项目文件或指定的项目文件升级为这些文件的当前 Visual Studio 格式。<br /><br /> `devenv mysln.sln /upgrade`|
 
 ## <a name="see-also"></a>请参阅

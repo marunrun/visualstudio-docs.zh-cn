@@ -10,10 +10,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 906629eb24f6be097f3e24dfca3e6a231f42357f
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74778149"
 ---
 # <a name="threadon-and-threadoff"></a>ThreadOn 和 ThreadOff
@@ -44,7 +44,7 @@ VSPerfCmd.exe /{ThreadOff|ThreadOn}:TID [Options]
 ## <a name="valid-options"></a>有效选项
  可以在包含以下子命令的命令行上指定 **ThreadOn** 和 **ThreadOff**。
 
- **Start：** `Method` 初始化命令行分析会话并设置指定的分析方法。
+ **Start:** `Method` 初始化命令行分析会话并设置指定的分析方法。
 
  GlobalOff&#124;GlobalOn 停止或启动对命令行分析会话中所有进程的分析   。
 

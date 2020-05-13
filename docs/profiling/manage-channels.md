@@ -13,14 +13,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 0b1480bab2f52383a8ca3a5b0ac22fd56acb5e01
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63435632"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "64779251"
 ---
 # <a name="manage-channels"></a>管理通道
-在并发可视化工具的“线程视图”中，可以整理进程的各个通道，以便查看特定模式。 您可以将通道排序、上下移动，以及隐藏或显示这些通道。
+在并发可视化工具的“线程视图”中，可以整理进程的各个通道，以便查看特定模式  。 您可以将通道排序、上下移动，以及隐藏或显示这些通道。
 
 ## <a name="sort-by"></a>排序依据
  基于当前的缩放级别，您可以使用“排序依据”控件按不同的条件对线程排序。 在查找特定模式时，这特别有用。 您可以按照以下条件排序：
@@ -58,7 +58,7 @@ ms.locfileid: "63435632"
 ## <a name="group-markers-by-thread"></a>按线程对标记进行分组
  如果跟踪包含标记事件，则可以使用此命令，按照生成标记事件的线程对标记通道进行分组。  磁盘通道将被移动到列表的顶部，而 GPU 通道将被移动到底部。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [缩放控件（线程视图）](../profiling/zoom-control-threads-view.md)
 - [打开/关闭度量模式](../profiling/measure-mode-on-off.md)
-- [线程视图](../profiling/threads-view-parallel-performance.md)
+- [“线程”视图](../profiling/threads-view-parallel-performance.md)

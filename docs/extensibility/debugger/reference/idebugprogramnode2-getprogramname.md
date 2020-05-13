@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramNode2::GetProgramName | Microsoft Docs
+title: IDebug程序节点2：：获取程序名称 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProgramNode2::GetProgramName
 ms.assetid: 510c7f5d-48ff-4d9f-ad79-fbad9f15239d
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 9882bd1686498bd9d1afc27f3a7edb695226a2f7
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 9af930716725a62fff5ea3d1635b506b06b26086
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66351110"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80721996"
 ---
 # <a name="idebugprogramnode2getprogramname"></a>IDebugProgramNode2::GetProgramName
-获取该程序的名称。
+获取程序的名称。
 
 ## <a name="syntax"></a>语法
 
@@ -41,16 +41,16 @@ int GetProgramName (
 
 ## <a name="parameters"></a>参数
 `pbstrProgramName`\
-[out]返回的程序的名称。
+[出]返回程序的名称。
 
 ## <a name="return-value"></a>返回值
-如果成功，则返回`S_OK`; 否则为返回错误代码。
+如果成功，返回`S_OK`;否则，返回错误代码。
 
 ## <a name="remarks"></a>备注
-程序名称不与程序的路径相同的功能，但程序的名称可能是此类路径的一部分。
+程序的名称与程序的路径不同，尽管程序的名称可能是此类路径的一部分。
 
 ## <a name="example"></a>示例
-下面的示例演示如何实现此方法对于简单`CProgram`对象，它实现[IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)接口。 `MakeBstr`函数分配的 BSTR 作为指定的字符串副本。
+下面的示例演示如何实现[IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)接口`CProgram`的简单对象实现此方法。 该`MakeBstr`函数将指定字符串的副本分配为 BSTR。
 
 ```cpp
 HRESULT CProgram::GetProgramName(BSTR* pbstrProgramName) {

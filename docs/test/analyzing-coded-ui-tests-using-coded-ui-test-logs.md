@@ -8,10 +8,10 @@ ms.workload:
 - multiple
 author: mikejo5000
 ms.openlocfilehash: ec1025eaa53861fae2cf92395d8842854649fa8c
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75591211"
 ---
 # <a name="analyzing-coded-ui-tests-using-coded-ui-test-logs"></a>使用编码的 UI 测试日志分析编码的 UI 测试
@@ -26,9 +26,9 @@ ms.locfileid: "75591211"
 
 - 测试项目中不存在 App.config  文件：
 
-   1. 确定运行测试时启动了哪个 QTAgent\*.exe  进程。 一种方法是查看 Windows“任务管理器”  中的“详细信息”  选项卡。
+   1. 确定运行测试时启动了哪个 QTAgent *.exe\** 进程。 一种方法是查看 Windows“任务管理器”  中的“详细信息”  选项卡。
 
-   2. 从 %ProgramFiles(x86)%\Microsoft Visual Studio\\\<version>\\\<edition>\Common7\IDE  文件夹打开相应的 .config  文件。 例如，如果运行的进程是 QTAgent_40.exe  ，则打开 QTAgent_40.exe.config  。
+   2. 从 %ProgramFiles(x86)%\Microsoft Visual Studio  version> *\\edition>\Common7\IDE\<\\ 文件夹打开相应的 .config\<* 文件。 例如，如果运行的进程是 QTAgent_40.exe  ，则打开 QTAgent_40.exe.config  。
 
    2. 将 EqtTraceLevel  的值修改为所需的日志级别。
 
@@ -58,9 +58,9 @@ ms.locfileid: "75591211"
    Microsoft.VisualStudio.TestTools.UITesting.PlaybackSettings.LoggerOverrideState = HtmlLoggerState.AllActionSnapshot;
    ```
 
-## <a name="step-2-run-your-coded-ui-test-and-view-the-log"></a>步骤 2：运行编码的 UI 测试并查看日志
+## <a name="step-2-run-your-coded-ui-test-and-view-the-log"></a>步骤 2: 运行编码的 UI 测试并查看日志
 
-对 QTAgent\*.exe.config  文件就地运行编码的 UI 测试并对其进行修改时，可在“测试资源管理器”  结果中看到一条输出链接。 日志文件不仅在测试失败时生成，而且在跟踪级别设置为“详细”  时也会对成功的测试生成。
+对 QTAgent *.exe.config\** 文件就地运行编码的 UI 测试并对其进行修改时，可在“测试资源管理器”  结果中看到一条输出链接。 日志文件不仅在测试失败时生成，而且在跟踪级别设置为“详细”  时也会对成功的测试生成。
 
 1. 在“测试”菜单上，选择“窗口”，然后选择“测试资源管理器”    。
 
@@ -71,7 +71,7 @@ ms.locfileid: "75591211"
      自动测试会运行并指示它们是否通过。
 
     > [!TIP]
-    > 要查看测试资源管理器，请选择“测试” > “窗口”，然后选择“测试资源管理器”     。
+    > 要查看测试资源管理器，请选择“测试” **“窗口”，然后选择“测试资源管理器”**   >    。
 
 4. 在“测试资源管理器”结果中选择“输出”链接   。
 
@@ -87,7 +87,7 @@ ms.locfileid: "75591211"
 
      ![编码的 UI 测试日志文件](../test/media/cuit_htmlactionlog3.png)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用 UI 自动化来测试代码](../test/use-ui-automation-to-test-your-code.md)
 - [如何：通过 Microsoft Visual Studio 运行测试](https://msdn.microsoft.com/Library/1a1207a9-2a33-4a1e-a1e3-ddf0181b1046)

@@ -3,15 +3,16 @@ title: 使用工作或学校帐户登录到 Visual Studio 订阅 | Microsoft Doc
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 07/11/2019
+ms.assetid: f39a2672-c283-4755-93d3-31c7c7a032d0
+ms.date: 03/11/2020
 ms.topic: conceptual
 description: 了解如何使用工作或学校帐户登录到 Visual Studio 订阅。
-ms.openlocfilehash: fdad16a95c3686d738bd3ef77eb199549082b766
-ms.sourcegitcommit: 57866dd72fd0e15ce61128df70729b427a2d02eb
+ms.openlocfilehash: e1f80f88cf3a377cc6fcc8f8bef266ee59b90067
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68315338"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233219"
 ---
 # <a name="signing-in-to-visual-studio-subscriptions-with-your-work-or-school-account"></a>使用工作或学校帐户登录到 Visual Studio 订阅 
 
@@ -69,6 +70,12 @@ ms.locfileid: "68315338"
 2. 你有多个订阅与同一个电子邮件地址相关联。  要查看与你的电子邮件地址关联的所有订阅，请访问 https://my.visualstudio.com/subscriptions 并选择你希望使用的订阅。 
 
 如果仍有问题，可联系我们的[订阅支持](https://visualstudio.microsoft.com/subscriptions/support/)团队以获得帮助。  
+
+## <a name="see-also"></a>请参阅
+- [Visual Studio 文档](https://docs.microsoft.com/visualstudio/)
+- [Azure DevOps 文档](https://docs.microsoft.com/azure/devops/)
+- [Azure 文档](https://docs.microsoft.com/azure/)
+- [Microsoft 365 文档](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>后续步骤
 成功登录到订阅门户后，建议访问 https://my.visualstudio.com/benefits 上的“权益”页，并浏览适合你的强大工具、服务和产品。  

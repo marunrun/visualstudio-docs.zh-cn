@@ -3,15 +3,16 @@ title: Visual Studio + GitHub Enterprise 套餐 | Microsoft Docs
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 03/03/2020
+ms.assetid: f271d623-dcde-442a-865c-4dca5ad8a9c5
+ms.date: 03/17/2020
 ms.topic: conceptual
 description: 管理 Visual Studio + GitHub Enterprise 套餐中的订阅
-ms.openlocfilehash: e48b047862daa80452e1b2128dc74fee8bd1039e
-ms.sourcegitcommit: 3ed59ce39692124fe61c484df4348c0b9abee9b9
+ms.openlocfilehash: d7100c2b9cfdd12579419927fd0bf8885038048b
+ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78263326"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "79509000"
 ---
 # <a name="manage-visual-studio-subscriptions-with-github-enterprise"></a>管理带有 GitHub Enterprise 的 Visual Studio 订阅
 与 Microsoft 签订了企业协议 (EA) 的客户有资格购买新的订阅套餐，该套餐将 Visual Studio 标准订阅和 GitHub Enterprise 结合在了一起。 这是 Visual Studio 订阅者获取 GitHub Enterprise 的一种简单而实惠的方式。 
@@ -29,14 +30,14 @@ ms.locfileid: "78263326"
 - [过度分配](handle-overclaimed-license.md)
 
 > [!Important]
-> 如果 Visual Studio 订阅管理员分配了带有 GitHub Enterprise 的 Visual Studio 订阅，且从未购买过这些订阅，则它们将对组织中的 GitHub Enterprise 管理员不可见。 要确保 GitHub Enterprise 订阅可见，应在首次分配订阅时至少购买一个带 GitHub Enterprise 的 Visual Studio Professional 订阅或带 GitHub Enterprise 的 Visual Studio Enterprise 订阅  。  
+> 如果 Visual Studio 订阅管理员分配了带有 GitHub Enterprise 的 Visual Studio 订阅，且从未购买过这些订阅，则它们将对组织中的 GitHub Enterprise 管理员不可见。 要确保 GitHub Enterprise 订阅可见，应在首次分配订阅时至少购买一个带 GitHub Enterprise 的 Visual Studio Professional 订阅或带 GitHub Enterprise 的 Visual Studio Enterprise 订阅。  
 >
 > 由客户负责确保在 Visual Studio 订阅管理门户中针对所分配的每个 GitHub 订阅都分配了一个对应的带 GitHub 的 Visual Studio 订阅，从而保证符合此订阅的许可要求。
 
 ## <a name="manage-github-enterprise-subscriptions"></a>管理 GitHub Enterprise 订阅
 购买 GitHub Enterprise 订阅时，GitHub 会与客户合作，帮助他们创建和配置将访问 GitHub 和确定管理员的组织。  这些管理员之后会收到一则通知，其中指出已将其设置为管理员。  
 
-此过程更为复杂，因此在购买订阅后，可能需要数天时间才能完全设置好组织和管理员。
+这个过程更复杂，因此在购买订阅后，可能需要数天时间才能完全设置好组织和管理员。
 
 GitHub 可作为基于云的 GitHub.com 提供，也可提供为本地 GitHub Enterprise Server。  这两种版本的管理过程有所不同。  GitHub 提供了各种帮助主题和管理员指南来帮助你管理 GitHub Enterprise 订阅。  我们提供了下述精选主题的链接。  
 

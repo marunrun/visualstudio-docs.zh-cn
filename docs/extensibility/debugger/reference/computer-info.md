@@ -1,27 +1,27 @@
 ---
-title: COMPUTER_INFO |Microsoft Docs
+title: COMPUTER_INFO |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - COMPUTER_INFO structure
 ms.assetid: 943085b2-f165-462d-9a4e-2086f0cdfff4
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 55d3eb6c321875b479d8df597b963fc3ac30db12
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 27794dff51646b72dbbfda81ead02e5206ade78b
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66346575"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80737656"
 ---
-# <a name="computerinfo"></a>COMPUTER_INFO
-描述在其运行调试器的计算机。
+# <a name="computer_info"></a>COMPUTER_INFO
+描述运行调试器的计算机。
 
 ## <a name="syntax"></a>语法
 
@@ -45,7 +45,7 @@ public struct COMPUTER_INFO
 
 ## <a name="members"></a>成员
 `wProcessorArchitecture`\
-标识微处理器体系的结构。
+标识微处理器的体系结构。
 
 `wSuiteMask`\
 标识套件掩码。
@@ -54,15 +54,15 @@ public struct COMPUTER_INFO
 操作系统版本号。
 
 ## <a name="remarks"></a>备注
-返回此结构[GetComputerInfo](../../../extensibility/debugger/reference/idebugwindowscomputerport2-getcomputerinfo.md)方法。
+此结构由[GetComputerInfo](../../../extensibility/debugger/reference/idebugwindowscomputerport2-getcomputerinfo.md)方法返回。
 
 ## <a name="requirements"></a>要求
-标头：Msdbg.h
+标题： Msdbg.h
 
-命名空间:Microsoft.VisualStudio.Debugger.Interop
+命名空间：微软.VisualStudio.调试器.互通
 
-程序集：Microsoft.VisualStudio.Debugger.Interop.dll
+程序集：微软.VisualStudio.调试器.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [结构和联合](../../../extensibility/debugger/reference/structures-and-unions.md)
-- [GetComputerInfo](../../../extensibility/debugger/reference/idebugwindowscomputerport2-getcomputerinfo.md)
+- [获取计算机信息](../../../extensibility/debugger/reference/idebugwindowscomputerport2-getcomputerinfo.md)

@@ -16,10 +16,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 25dbb0beb600f7f043ae006e09ac48b9b64d613b
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74773976"
 ---
 # <a name="lines-view"></a>“行”视图
@@ -43,7 +43,7 @@ ms.locfileid: "74773976"
 
 - 该语句的结束源代码行中的字符。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [“行”视图](../profiling/lines-view-sampling-data.md)
 - [“行”视图 - 采样](../profiling/lines-view-dotnet-memory-sampling-data.md)
 - [“行”视图](../profiling/lines-view-contention-data.md)

@@ -8,10 +8,10 @@ author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.openlocfilehash: 62004c5c96fa708f98ab49f4810ec2fc1c38eadc
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75594716"
 ---
 # <a name="how-to-create-item-templates"></a>如何：创建项模板
@@ -36,13 +36,13 @@ ms.locfileid: "75594716"
 
 1. 在“选择模板选项”页上，输入模板的名称和可选说明、图标和预览图像，然后选择“完成”   。
 
-    将模板文件添加到 .zip 文件中，并复制到在向导中指定的目录  。 默认位置是 %USERPROFILE%\Documents\Visual Studio \<version\>\My Exported Templates  。
+    将模板文件添加到 .zip 文件中，并复制到在向导中指定的目录  。 默认位置是 %USERPROFILE%\Documents\Visual Studio *version\<\My Exported Templates\>* 。
 
-1. 如果未在“导出模板向导”中选择“自动将模板导入 Visual Studio”选项，则找到已导出的模板   。 然后，将其复制到用户项模板目录中。 默认位置是 %USERPROFILE%\Documents\Visual Studio \<version\>\Templates\ItemTemplates  。
+1. 如果未在“导出模板向导”中选择“自动将模板导入 Visual Studio”选项，则找到已导出的模板   。 然后，将其复制到用户项模板目录中。 默认位置是 %USERPROFILE%\Documents\Visual Studio *version\<\Templates\ItemTemplates\>* 。
 
 1. 关闭 Visual Studio，然后重新打开它。
 
-1. 创建一个新项目，或打开现有项目，然后选择“项目” > “添加新项”或按 Ctrl+Shift+A      。
+1. 创建一个新项目，或打开现有项目，然后选择“项目” **“添加新项”或按 Ctrl**Shift > A   +  +  。
 
    项模板显示在“添加新项”对话框中  。 如果在“导出模板向导”中添加了说明，则说明会显示在对话框的右侧  。
 
@@ -74,7 +74,7 @@ ms.locfileid: "75594716"
 
 1. 在项模板的 .vstemplate 文件中找到 `ProjectType` 元素  。
 
-1. 在 `ProjectType` 元素之后添加一个 [ProjectSubType](../extensibility/projectsubtype-element-visual-studio-templates.md) 元素。
+1. 在 [ 元素之后添加一个 ](../extensibility/projectsubtype-element-visual-studio-templates.md)ProjectSubType`ProjectType` 元素。
 
 1. 将该元素的文本值设置为下列值之一：
 
@@ -111,7 +111,7 @@ ms.locfileid: "75594716"
 
 2. 修改项目项，直到可以将它另存为一个模板。
 
-3. 修改代码文件以指示应进行参数替换的位置。 有关参数替换的详细信息，请参阅[如何：替换模板中的参数。](../ide/how-to-substitute-parameters-in-a-template.md)
+3. 修改代码文件以指示应进行参数替换的位置。 有关参数替换的详细信息，请参阅[如何：替换模板中的参数](../ide/how-to-substitute-parameters-in-a-template.md)。
 
 4. 创建 XML 文件，并将其与 .vstemplate 文件扩展名保存在与项目文件相同的目录中  。
 
@@ -119,7 +119,7 @@ ms.locfileid: "75594716"
 
 6. 保存 .vstemplate 文件并将其关闭  。
 
-7. 在**个Windows资源管理器**中，选择要包含在模板中的文件。 右键单击所选文件，然后选择“发送至” > “压缩的文件夹（zip 格式）”   。 所选的文件将压缩到一个 .zip 文件中  。
+7. 在**个Windows资源管理器**中，选择要包含在模板中的文件。 右键单击所选文件，然后选择“发送至” **“压缩的文件夹（zip 格式）”**  >   。 所选的文件将压缩到一个 .zip 文件中  。
 
 ::: moniker range="vs-2017"
 
@@ -133,7 +133,7 @@ ms.locfileid: "75594716"
 
 ::: moniker-end
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [创建项目和项模板](../ide/creating-project-and-item-templates.md)
 - [如何：创建多文件项模板](../ide/how-to-create-multi-file-item-templates.md)

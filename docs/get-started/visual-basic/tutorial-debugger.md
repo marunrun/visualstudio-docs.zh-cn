@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 84ed0de3542822597c64e0866c04f719ed6c2ab7
-ms.sourcegitcommit: b2fc9ac7d73c847508f6ed082bed026476bb3955
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/05/2020
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "77027233"
 ---
 # <a name="tutorial-learn-to-debug-visual-basic-code-using-visual-studio"></a>教程：学习使用 Visual Studio 调试 Visual Basic 代码
@@ -244,7 +244,7 @@ ms.locfileid: "77027233"
 
 1. 接下来，将鼠标悬停在 `name` 变量上，会看到其当前值为空字符串。
 
-1. 多按几次 F5（或“调试” > “继续”），通过 `For` 循环执行多次循环访问，再在断点处暂停，每次都将鼠标悬停在 `name` 变量上检查其值    。
+1. 多按几次 F5（或“调试” > “继续”），通过 `For` 循环执行多次循环访问，再次在断点处暂停，每次都将鼠标悬停在 `name` 变量上以检查其值    。
 
      ![查看数据提示](../visual-basic/media/get-started-data-tip-vb.png "查看数据提示")
 

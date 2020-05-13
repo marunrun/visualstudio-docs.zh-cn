@@ -19,10 +19,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 3fdc6c6ccd58bcc83cc37ff3a9f7888af837ed6e
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75595197"
 ---
 # <a name="resolvecomreference-task"></a>ResolveComReference 任务
@@ -33,7 +33,7 @@ ms.locfileid: "75595197"
 
  下表描述了 `ResolveCOMReference` 任务的参数。
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
 |`DelaySign`|可选 `Boolean` 参数。<br /><br /> 如果为 `true`，任务会在程序集中放入公钥。 如果为 `false`，任务会对程序集进行完全签名。|
 |`EnvironmentVariables`|可选 `String[]` 参数。<br /><br /> 环境变量对的数组（使用等号分隔）。 这些变量会传递给生成的 tlbimp.exe 和 aximp.exe 以及常规环境块，或有选择地重写常规环境块。  |
@@ -57,23 +57,23 @@ ms.locfileid: "75595197"
 
  下表介绍了传递给 `TypeLibNames` 参数的项可用的项元数据。
 
-|元数据|描述|
+|元数据|说明|
 |--------------|-----------------|
 |`GUID`|所需的项元数据。<br /><br /> 类型库的 GUID。 如果未指定此项元数据，则任务失败。|
 |`VersionMajor`|所需的项元数据。<br /><br /> 类型库的主版本。 如果未指定此项元数据，则任务失败。|
 |`VersionMinor`|所需的项元数据。<br /><br /> 类型库的次版本。 如果未指定此项元数据，则任务失败。|
 |`EmbedInteropTypes`|可选的 `Boolean` 元数据。<br /><br />  如果为 `true`，则将此引用中的互操作类型直接嵌入到程序集中，而不是生成互操作 DLL。|
 |`LocaleIdentifier`|可选项元数据。<br /><br /> 类型库的区域设置标识符（或 LCID）。 被指定为 32 位值，可标识用户、区域或应用程序首选的人类语言。 如果未指定此项元数据，任务将使用默认区域设置标识符“0”。|
-|`WrapperTool`|可选项元数据。<br /><br /> 指定用于生成此类型库的程序集包装器的包装工具。 如果未指定此项元数据，任务将使用默认包装工具“tlbimp”。 可供类型库使用且区分大小写的选项有：<br /><br /> -   `Primary`：如果希望使用已为 COM 组件生成的主互操作程序集，请使用此包装工具。 使用此包装工具时，请勿指定包装器输出目录，否则任务会失败。<br />-   `TLBImp`：如果希望为 COM 组件生成互操作程序集，请使用此包装工具。<br />-   `AXImp`：如果希望为 ActiveX 控件生成互操作程序集，请使用此包装工具。|
+|`WrapperTool`|可选项元数据。<br /><br /> 指定用于生成此类型库的程序集包装器的包装工具。 如果未指定此项元数据，任务将使用默认包装工具“tlbimp”。 可供类型库使用且区分大小写的选项有：<br /><br /> -   `Primary`：如果希望使用 COM 组件已经生成的主互操作程序集，请使用此包装工具。 使用此包装工具时，请勿指定包装器输出目录，否则任务会失败。<br />-   `TLBImp`：如果希望为 COM 组件生成互操作程序集，请使用此包装工具。<br />-   `AXImp`：如果希望为 ActiveX 控件生成互操作程序集，请使用此包装工具。|
 
 ## <a name="typelibfiles-item-metadata"></a>TypeLibFiles 项元数据
 
  下表介绍了传递给 `TypeLibFiles` 参数的项可用的项元数据。
 
-|元数据|描述|
+|元数据|说明|
 |--------------|-----------------|
 |`EmbedInteropTypes`|可选 `Boolean` 参数。<br /><br />  如果为 `true`，则将此引用中的互操作类型直接嵌入到程序集中，而不是生成互操作 DLL。|
-|`WrapperTool`|可选项元数据。<br /><br /> 指定用于生成此类型库的程序集包装器的包装工具。 如果未指定此项元数据，任务将使用默认包装工具“tlbimp”。 可供类型库使用且区分大小写的选项有：<br /><br /> -   `Primary`：如果希望使用已为 COM 组件生成的主互操作程序集，请使用此包装工具。 使用此包装工具时，请勿指定包装器输出目录，否则任务会失败。<br />-   `TLBImp`：如果希望为 COM 组件生成互操作程序集，请使用此包装工具。<br />-   `AXImp`：如果希望为 ActiveX 控件生成互操作程序集，请使用此包装工具。|
+|`WrapperTool`|可选项元数据。<br /><br /> 指定用于生成此类型库的程序集包装器的包装工具。 如果未指定此项元数据，任务将使用默认包装工具“tlbimp”。 可供类型库使用且区分大小写的选项有：<br /><br /> -   `Primary`：如果希望使用 COM 组件已经生成的主互操作程序集，请使用此包装工具。 使用此包装工具时，请勿指定包装器输出目录，否则任务会失败。<br />-   `TLBImp`：如果希望为 COM 组件生成互操作程序集，请使用此包装工具。<br />-   `AXImp`：如果希望为 ActiveX 控件生成互操作程序集，请使用此包装工具。|
 
 > [!NOTE]
 > 为类型库提供的唯一标识符信息越多，任务能解析磁盘上正确文件的可能性就越大。
@@ -84,7 +84,7 @@ ms.locfileid: "75595197"
 
 不需要在计算机上注册 COM DLL 来使此任务正常工作。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [任务](../msbuild/msbuild-tasks.md)
 - [任务参考](../msbuild/msbuild-task-reference.md)

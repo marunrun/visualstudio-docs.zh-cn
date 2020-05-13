@@ -10,10 +10,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 1455c67c3cb6d8dc99aeab91a7bfa63cce009c51
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75590795"
 ---
 # <a name="use-the-graphs-view-legend-to-analyze-load-tests"></a>使用关系图视图图例分析负载测试
@@ -33,11 +33,11 @@ ms.locfileid: "75590795"
     > [!NOTE]
     > 可以通过将范围锁定为特定值来关闭自动范围值调整。 当范围锁定后，超过该范围的任何值都会在关系图顶部显示为指定的最大值。 使用“绘图选项”对话框可将范围锁定为特定值  。
 
-- **计数器：** 四个分别名为“计数器”、“实例”、“类别”和“计算机”的列一起唯一地标识性能计数器     。
+- 计数器：四个分别名为“计数器”、“实例”、“类别”和“计算机”的列一起唯一地标识性能计数器      。
 
 - **颜色：** “颜色”列显示性能计数器的绘制线条的颜色和线型  。 使用“绘图选项”对话框，可以更改关系图上性能计数器的颜色或线型  。 可以从图例的快捷菜单访问“绘图选项”对话框  。
 
-- **统计信息：** “最小”、“最大”、“平均”和“最新”列数显示了性能计数器的相应统计信息     。 这些值对应于在关系图的可见区域上显示的数据。 例如，如果放大运行的某个区域，则图例统计信息将仅反映缩放区域的值。 “最后一个”列是性能计数器针对最近完成的采样间隔的值。
+- **统计信息：** “最小值”、“最大值”、“平均值”和“最后一个”列显示了性能计数器的各项统计信息     。 这些值对应于在关系图的可见区域上显示的数据。 例如，如果放大运行的某个区域，则图例统计信息将仅反映缩放区域的值。 “最后一个”列是性能计数器针对最近完成的采样间隔的值。
 
     > [!NOTE]
     > 当负载测试正在运行时，“最后一个”列才会显示在负载测试分析器的图例中。
@@ -57,7 +57,7 @@ ms.locfileid: "75590795"
 > [!TIP]
 > 可以使用负载测试分析器工具栏中的“关系图选项下拉列表”按钮，然后选择“显示图例”以显示或隐藏与关系图视图关联的“图例”面板     。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [如何：放大关系图的区域](../test/how-to-zoom-in-on-a-region-of-the-graph-in-load-test-results.md)
 - [在关系图视图中分析负载测试结果](../test/analyze-load-test-results-in-the-graphs-view.md)

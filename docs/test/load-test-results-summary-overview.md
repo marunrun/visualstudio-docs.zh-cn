@@ -15,10 +15,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 7df3324c2182c376cb9547a4192fca3e601b3dd5
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75584486"
 ---
 # <a name="load-test-results-summary-overview"></a>负载测试结果摘要概述
@@ -37,11 +37,11 @@ ms.locfileid: "75584486"
 
 - 整体结果
 
-- 关键统计信息：最慢的前 5 个页面
+- 关键统计信息: 最慢的 5 个页面
 
-- 关键统计信息：最慢的前 5 个测试
+- 关键统计信息: 最慢的 5 个测试
 
-- 关键统计信息：最慢的前 5 个 SQL 操作
+- 关键统计信息: 最慢的 5 个 SQL 操作
 
     > [!NOTE]
     > 只有在负载测试中启用了 SQL 跟踪的情况下，才会显示“SQL 操作”一节。
@@ -68,19 +68,19 @@ ms.locfileid: "75584486"
 
 “整体结果”一节包含测试的摘要结果，包括每秒钟的请求数、失败请求的总数、平均响应时间以及平均页面时间。
 
-## <a name="key-statistic-top-5-slowest-pages"></a>关键统计信息：最慢的前 5 个页面
+## <a name="key-statistic-top-5-slowest-pages"></a>关键统计信息: 最慢的 5 个页面
 
 “最慢的页面”一节包含负载测试中最慢的 5 个页面。 此节显示每个页面的 URL 和平均页面加载时间。 这些页面按降序列出。 可选择某个页面的 URL 以打开“页”表和查看该页面的更多详细信息  。 有关详细信息，请参阅[如何：查看网页响应](../test/how-to-view-web-page-response-time-in-a-load-test.md)。
 
 “95% 页面时间(秒)”的百分比值报告，95% 的页面在此时间内完成（以秒为单位）  。
 
-## <a name="key-statistic-top-5-slowest-tests"></a>关键统计信息：最慢的前 5 个测试
+## <a name="key-statistic-top-5-slowest-tests"></a>关键统计信息: 最慢的 5 个测试
 
 “最慢的测试”一节包含负载测试中最慢的 5 个测试。 此节显示每个测试的测试名称和平均测试时间。 这些测试按降序列出。 可选择某个测试的名称以打开“测试”表和查看该测试的更多详细信息  。 有关详细信息，请参阅[在表视图中分析负载测试结果和错误](../test/analyze-load-test-results-and-errors-in-the-tables-view.md)。
 
 “95% 测试时间(秒)”的百分比值报告，95% 的测试在此时间内完成（以秒为单位）  。
 
-## <a name="key-statistic-top-5-slowest-sql-operations"></a>关键统计信息：最慢的前 5 个 SQL 操作
+## <a name="key-statistic-top-5-slowest-sql-operations"></a>关键统计信息: 最慢的 5 个 SQL 操作
 
 如果在负载测试中启用了 SQL 跟踪，“最慢的查询”一节将包含负载测试中最慢的 5 个查询。 此节显示每个测试的操作名称和持续时间。 持续时间以微秒 (SQL Server 2005) 或毫秒（SQL Server 2000 和更低版本）显示。 这些测试按持续时间以降序列出。 可选择某个操作的名称以打开“SQL 跟踪”表，并查看该操作的更多详细信息  。 有关详细信息，请参阅 [SQL 跟踪数据表](../test/analyze-load-test-results-and-errors-in-the-tables-view.md#the-sql-trace-data-table)。
 
@@ -136,7 +136,7 @@ ms.locfileid: "75584486"
 
 通过选择负载测试摘要上的快捷菜单中的“打印”，可以打印该负载测试摘要  。 通过选择负载测试摘要上的快捷菜单中的“打印预览”，可以预览打印内容  。 还可以直接从预览屏幕上进行打印。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [分析阈值规则冲突](../test/analyze-threshold-rule-violations-in-load-tests.md)
 - [分析负载测试结果](../test/analyze-load-test-results-using-the-load-test-analyzer.md)

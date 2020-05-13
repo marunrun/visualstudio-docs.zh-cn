@@ -15,10 +15,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 28bbd4b584d679c03c58ba8532ced3f28f16d6aa
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74774908"
 ---
 # <a name="how-to-reference-windows-symbol-information"></a>如何：引用 Windows 符号信息
@@ -27,7 +27,7 @@ Visual Studio 分析工具使用符号 (.pdb) 文件来解析符号名称，例�
 > [!NOTE]
 > 此设置不会影响现有报告。 只有在指定符号服务器以后创建的报告才会有符号信息。
 
- 有关详细信息，请参阅[指定符号 (.pdb) 和源文件](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)  。
+ 有关详细信息，请参阅[指定符号 (.pdb) 和源文件  ](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)。
 
 ### <a name="to-use-the-microsoft-symbol-server"></a>使用 Microsoft 符号服务器
 
@@ -47,6 +47,6 @@ Visual Studio 分析工具使用符号 (.pdb) 文件来解析符号名称，例�
 
      还可以单击省略号按钮（“...”），然后从“浏览文件夹”对话框中选择一个目录   。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [配置性能会话](../profiling/configuring-performance-sessions.md)
-- [如何：串行化符号信息](../profiling/how-to-serialize-symbol-information.md)
+- [如何：序列化符号信息](../profiling/how-to-serialize-symbol-information.md)

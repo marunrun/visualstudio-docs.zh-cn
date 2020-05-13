@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: e09526930bf98141ae4f9d4d204b20383763c208
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62552871"
 ---
 # <a name="cpu-utilization-graph"></a>CPU 使用率图
@@ -32,6 +32,6 @@ CPU 使用率图显示一段时间内应用中的使用程度。 X 轴表示跟�
 
 - 白色表示系统上未使用逻辑内核的可用性。 如果可以找到更多的并行机会，这些核心则可用于你的进程。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [使用率视图](../profiling/utilization-view.md)
-- [CPU 平均使用率](../profiling/average-cpu-utilization.md)
+- [CPU 平均利用率](../profiling/average-cpu-utilization.md)

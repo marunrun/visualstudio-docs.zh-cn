@@ -13,10 +13,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 81071a44b51b1441782b25741126873fc720ed7b
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74779878"
 ---
 # <a name="walkthrough-using-profiler-apis"></a>演练：使用探查器 API
@@ -37,7 +37,7 @@ ms.locfileid: "74779878"
 
  对于托管代码，探查器 API 位于 Microsoft.VisualStudio.Profiler.dll 中  。 此 DLL 位于 Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools 目录  。 对于 64 位应用，文件夹为 Microsoft Visual Studio\Shared\Common\VSPerfCollectionTools\x64  。 有关详细信息，请参阅[探查器](/previous-versions/ms242704(v=vs.140))。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>必备条件
  本演练假定用户选择的开发环境配置为支持调试和采样。 以下主题概述了这些系统必备：
 
 - [如何：选择收集方法](../profiling/how-to-choose-collection-methods.md)
@@ -152,21 +152,21 @@ DataCollection.CurrentId);
 
      **VsPerfCLREnv /traceon**
 
-3. 键入以下命令：**VSInstr\<filename>.exe**
+3. 键入下面的命令：VSInstr **filename>.exe\<**
 
-4. 键入以下命令：**VSPerfCmd /start:trace /output:\<filename>.vsp**
+4. 键入下面的命令：VSPerfCmd /start:trace /output:**filename>.vsp\<**
 
-5. 键入以下命令：**VSPerfCmd /globaloff**
+5. 键入下面的命令：VSPerfCmd /globaloff 
 
 6. 执行程序。
 
-7. 键入以下命令：**VSPerfCmd /shutdown**
+7. 键入下面的命令：VSPerfCmd /shutdown 
 
-8. 键入以下命令：**VSPerfReport /calltrace:\<>.vsp**
+8. 键入下面的命令：VSPerfReport /calltrace:**filename>.vsp\<**
 
      当前目录中即会创建一个 .csv 文件，该文件包含得到的性能数据  。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [探查器](/previous-versions/ms242704(v=vs.140))
 - [Visual Studio 探查器 API 参考（本机）](../profiling/visual-studio-profiler-api-reference-native.md)

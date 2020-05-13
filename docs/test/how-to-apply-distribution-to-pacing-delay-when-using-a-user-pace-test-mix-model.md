@@ -9,10 +9,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 953c1ac4cb6e0f87d2a36080cc751ea26f66d63e
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "76114489"
 ---
 # <a name="how-to-apply-distribution-to-pacing-delay-for-a-user-pace-test-mix-model"></a>如何：用户节奏测试组合模型的对节奏延迟应用分布
@@ -28,11 +28,11 @@ ms.locfileid: "76114489"
 
 “对节奏延迟应用分布”的值可以设置为 true 或 false  ：
 
-- **True**：方案应用“编辑测试组合”对话框的“每个用户每小时的测试数”列中的值指定的常规统计分布延迟   。 有关详细信息，请参阅[编辑文本组合模型以指定运行测试的虚拟用户的概率](../test/edit-test-mix-models-to-specify-the-probability-of-a-virtual-user-running-a-test.md)。
+-  True：方案应用“编辑测试组合”  对话框的“每个用户每小时的测试数”  列中的值指定的常规统计分布延迟。 有关详细信息，请参阅[编辑文本组合模型以指定运行测试的虚拟用户的概率](../test/edit-test-mix-models-to-specify-the-probability-of-a-virtual-user-running-a-test.md)。
 
      例如，假定你将测试的“编辑测试组合”  对话框中的“每个用户每小时的测试数”  值设置为每小时 2 个测试。 如果“对节奏延迟应用分布”属性设置为“True”，则会将常规统计分布应用于测试之间的等待时间   。 用户每小时仍将运行 2 个测试，但是两次测试之间不一定要有 30 分钟的延迟。 第一个测试可以在 4 分钟后运行，第二个测试可以在 45 分钟后运行。
 
-- **False**：测试以你为“编辑测试组合”对话框的“每个用户每小时的测试数”列中的值指定的节奏运行   。 有关详细信息，请参阅[编辑文本组合模型以指定运行测试的虚拟用户的概率](../test/edit-test-mix-models-to-specify-the-probability-of-a-virtual-user-running-a-test.md)。
+- False  ：测试以你为“编辑测试组合”  对话框的“每个用户每小时的测试数”  列中的值指定的节奏运行。 有关详细信息，请参阅[编辑文本组合模型以指定运行测试的虚拟用户的概率](../test/edit-test-mix-models-to-specify-the-probability-of-a-virtual-user-running-a-test.md)。
 
      例如，假定你将测试的“编辑测试组合”  对话框中的“每个用户每小时的测试数”  值设置为每小时 2 个测试。 如果“对节奏延迟应用分布”属性设置为“False”，则测试运行时没有机动时间   。 测试的运行间隔将为 30 分钟。 这样可以确保每小时执行 2 个测试。
 
@@ -40,11 +40,11 @@ ms.locfileid: "76114489"
 
 1. 打开一个负载测试。
 
-   “负载测试编辑器”随即显示  。 其中显示负载测试树。
+   此时将显示“负载测试编辑器”  。 其中显示负载测试树。
 
 2. 在负载测试树的“方案”  文件夹中，选择要应用节奏分布的方案节点。
 
-3. 在“视图”菜单上选择“属性窗口”   。
+3. 在“视图”菜单上选择“属性”窗口。  
 
    该方案的类别和属性将显示在“属性”窗口中  。
 
@@ -52,7 +52,7 @@ ms.locfileid: "76114489"
 
 5. 选择“文件”   > “保存”  。 现在，可以使用新的“对节奏延迟应用分布”值运行负载测试  。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [编辑负载测试方案](../test/edit-load-test-scenarios.md)
 - [演练：创建和运行负载测试](../test/walkthrough-create-and-run-a-load-test.md)

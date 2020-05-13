@@ -840,9 +840,9 @@
               href: popdirlistfunc.md
             - name: OPTNAMECHANGEPFN
               href: optnamechangepfn.md
-        - name: 枚举数
+        - name: 枚举器
           items:
-            - name: 枚举数
+            - name: 枚举器
               href: enumerators.md
             - name: 命令代码
               href: command-code-enumerator.md
@@ -866,7 +866,7 @@
           href: best-practices-for-implementing-a-source-control-plug-in.md
         - name: 字符串长度限制
           href: restrictions-on-string-lengths.md
-        - name: 词汇表
+        - name: 术语表
           href: source-control-plug-in-glossary.md
         - name: 关闭源代码管理插件的兼容性警告
           href: how-to-turn-off-compatibility-warnings-for-source-control-plug-ins.md
@@ -892,7 +892,7 @@
           href: vstextbuffer-object.md
         - name: VSTextView 对象
           href: vstextview-object.md
-    - name: 词汇表
+    - name: 术语表
       href: visual-studio-sdk-glossary.md
 - name: 创建软件开发工具包
   items:

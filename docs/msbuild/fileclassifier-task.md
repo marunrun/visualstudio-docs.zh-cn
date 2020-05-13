@@ -18,10 +18,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 46ed1b1f94cd2ef23ff0704912cb2a2194ba7dab
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77634183"
 ---
 # <a name="fileclassifier-task"></a>FileClassifier 任务
@@ -30,7 +30,7 @@ ms.locfileid: "77634183"
 
 ## <a name="task-parameters"></a>任务参数
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
 |`CLREmbeddedResource`|未使用。|
 |`CLRResourceFiles`|未使用。|
@@ -66,7 +66,7 @@ ms.locfileid: "77634183"
 </Project>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [WPF MSBuild 参考](../msbuild/wpf-msbuild-reference.md)
 - [任务参考](../msbuild/wpf-msbuild-task-reference.md)

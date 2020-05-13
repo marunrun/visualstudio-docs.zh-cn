@@ -1,44 +1,44 @@
 ---
-title: 服务 Essentials |Microsoft Docs
+title: 服务要点 |微软文档
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - services, essentials
 ms.assetid: fbe84ad9-efe1-48b1-aba3-b50b90424d47
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8817ca48ff0a3f44a973986a173e647ce89c662c
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 0e2947cb4cd6a347d8e010340f8689eb1907a28a
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66318686"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80705498"
 ---
 # <a name="service-essentials"></a>服务基础知识
-服务是两个 Vspackage 之间的协定。 一个 VSPackage 提供一组特定的另一个 VSPackage 来使用的接口。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 本身就是向其他 Vspackage 提供服务的 Vspackage 的集合。
+服务是两个 VSPackages 之间的协定。 一个 VS 包为另一个 VSPackage 提供了一组特定的接口。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]本身就是一个 VS 包的集合，它向其他 VS 包提供服务。
 
- 例如，SVsActivityLog 服务可用于获取 IVsActivityLog 接口，它可用于写入活动日志。 有关详细信息，请参阅[如何：使用活动日志](../../extensibility/how-to-use-the-activity-log.md)。
+ 例如，可以使用 SVActivityLog 服务获取 IVActivityLog 接口，您可以使用该接口写入活动日志。 有关详细信息，请参阅[：使用活动日志](../../extensibility/how-to-use-the-activity-log.md)。
 
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 此外提供了一些内置的服务未注册。 Vspackage 可以通过提供服务重写替换内置或其他服务。 只有一个服务重写被允许的任何服务。
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]还提供一些未注册的内置服务。 VS包可以通过提供服务覆盖来替换内置服务或其他服务。 任何服务只允许一个服务覆盖。
 
- 服务的任何可发现性。 因此，您必须知道服务标识符 (SID) 的一项服务，你想要使用，并且您必须知道它提供了哪些接口。 该服务的参考文档提供了此信息。
+ 服务没有可发现性。 因此，您必须知道要使用的服务的服务标识符 （SID），并且必须知道它提供的接口。 服务的参考文档提供此信息。
 
-- 提供服务的 Vspackage 称为服务提供商。
+- 提供服务的 VS 包称为服务提供商。
 
-- 提供给其他 Vspackage 的服务称为全局服务。
+- 提供给其他 VSPackages 的服务称为全局服务。
 
-- 仅适用于 VSPackage 实现它们，或到它创建任何对象，称为本地服务的服务。
+- 仅对实现它们的 VSPackage 或其创建的任何对象可用的服务称为本地服务。
 
-- 替换内置的服务或由其他包，提供服务的服务称为服务重写。
+- 替换其他包提供的内置服务或服务的服务称为服务覆盖。
 
-- 按需加载服务或服务重写，它提供的服务请求的另一个 VSPackage 时，它是加载的服务提供程序。
+- 服务或服务覆盖将按需加载，也就是说，当服务提供程序由另一个 VSPackage 请求时加载它。
 
-- 若要支持按需加载，服务提供程序注册其全球服务和[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]。 有关详细信息，请参阅[如何：提供的服务](../../extensibility/how-to-provide-a-service.md)。
+- 为了支持按需加载，服务提供商将其全局服务注册到[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]。 有关详细信息，请参阅[如何：提供服务](../../extensibility/how-to-provide-a-service.md)。
 
-- 获取服务后，使用[QueryInterface](/cpp/atl/queryinterface) （非托管代码） 或强制转换 （托管代码） 来获取所需的接口，例如：
+- 获取服务后，请使用[查询接口](/cpp/atl/queryinterface)（非托管代码）或强制转换（托管代码）来获取所需的接口，例如：
 
   ```vb
   TryCast(GetService(GetType(SVsActivityLog)), IVsActivityLog)
@@ -48,35 +48,35 @@ ms.locfileid: "66318686"
   GetService(typeof(SVsActivityLog)) as IVsActivityLog;
   ```
 
-- 托管的代码引用由其类型的服务，而非托管的代码引用的服务的 GUID。
+- 托管代码按服务类型引用服务，而非托管代码按其 GUID 引用服务。
 
-- 当[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]VSPackage 的加载，将其传递服务提供商到 VSPackage 以使 VSPackage 能够访问全球服务。 这称为"选址"VSPackage。
+- 加载[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]VSPackage 时，它会将服务提供商传递到 VSPackage，以便 VSPackage 访问全局服务。 这称为 VSPackage 的"坐"。
 
-- Vspackage 可以是服务提供商为他们创建的对象。 例如，窗体可能会将颜色服务的请求发送到其帧中，可能会向其传递请求[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]。
+- VS包可以是它们创建的对象的服务提供商。 例如，窗体可能会向其框架发送颜色服务的请求，这可能会将请求传递给[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]。
 
-- 深度嵌套，或根本没有就位的托管的对象可以调用<xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A>直接访问全球服务。
+- 深度嵌套或根本不停靠的托管对象可能要求<xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A>直接访问全局服务。
 
 <a name="how-to-use-getglobalservice"></a>
 
-## <a name="use-getglobalservice"></a>使用 GetGlobalService
+## <a name="use-getglobalservice"></a>使用获取全球服务
 
-有时您可能需要从工具窗口中获得的服务或控制已没有已就位，否则使用并不了解所需的服务的服务提供商确定位置的容器。 例如，你可能想要写入活动日志从控件中。 有关这些及其他方案的详细信息，请参阅[如何：排查服务问题](../../extensibility/how-to-troubleshoot-services.md)。
+有时，您可能需要从尚未设置的工具窗口或控件容器获取服务，或者已使用不知道所需服务的服务提供商。 例如，您可能希望从控件内写入活动日志。 有关这些方案和其他方案的详细信息，请参阅[如何：故障排除服务](../../extensibility/how-to-troubleshoot-services.md)。
 
-你可以通过调用静态获取大多数 Visual Studio 服务<xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A>方法。
+您可以通过调用静态<xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A>方法获得大多数 Visual Studio 服务。
 
-<xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> 依赖于缓存服务上放置任何 VSPackage 派生自包第一次进行初始化的提供程序。 必须保证，这种情况满足，否则为 null 的服务做好准备。
+<xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A>依赖于缓存的服务提供商，该提供程序在首次初始化从包派生的任何 VSPackage 时进行定位。 您必须保证满足此条件，否则必须为 null 服务做好准备。
 
-幸运的是，<xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A>大多数情况下正常工作。
+幸运的是，<xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A>大多数时候工作正常。
 
-- 如果 VSPackage 提供的服务才知道另一个 VSPackage，VSPackage 请求该服务是就位之前提供此服务已加载的 VSPackage。
+- 如果 VSPackage 提供仅对另一个 VSPackage 已知的服务，则在加载提供服务的 VSPackage 之前，将站点上请求该服务的 VS 包。
 
-- 如果 VSPackage 创建工具窗口，则 VSPackage 确定创建工具窗口之前位置。
+- 如果工具窗口由 VSPackage 创建，则在创建工具窗口之前将设置 VSPackage。
 
-- 如果控件容器托管的 VSPackage 创建工具窗口，则 VSPackage 确定之前创建的控件容器位置。
+- 如果控制容器由 VSPackage 创建的工具窗口承载，则在创建控件容器之前将 VSPackage 设址。
 
-### <a name="to-get-a-service-from-within-a-tool-window-or-control-container"></a>若要获取从工具窗口或控件容器中的服务
+### <a name="to-get-a-service-from-within-a-tool-window-or-control-container"></a>从工具窗口或控件容器内获取服务
 
-- 在构造函数、 工具窗口或控件容器中插入此代码：
+- 在构造函数、工具窗口或控件容器中插入此代码：
 
     ```csharp
     IVsActivityLog log = Package.GetGlobalService(typeof(SVsActivityLog)) as IVsActivityLog;
@@ -90,7 +90,7 @@ ms.locfileid: "66318686"
     End If
     ```
 
-    此代码获取 SVsActivityLog 服务，并将其转换为 IVsActivityLog 接口，它可用于写入活动日志。 有关示例，请参见 [如何：使用活动日志](../../extensibility/how-to-use-the-activity-log.md)。
+    此代码获取 SVActivityLog 服务并将其转换为 IVActivityLog 接口，该接口可用于写入活动日志。 有关示例，请参阅[：使用活动日志](../../extensibility/how-to-use-the-activity-log.md)。
 
 ## <a name="see-also"></a>请参阅
 

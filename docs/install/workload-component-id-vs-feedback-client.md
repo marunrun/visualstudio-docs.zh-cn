@@ -16,12 +16,13 @@ ms.assetid: 7392a100-100c-458c-9394-828695109015
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 monikerRange: vs-2017
-ms.openlocfilehash: 5cba73bd7ea3e0251174ea7a702cd80509fbd954
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+open_to_public_contributors: false
+ms.openlocfilehash: fe4eec389389622f0d87d30edbbd46d7c5b53d80
+ms.sourcegitcommit: 22deb247ad951e4971f27fdab413b158415d0584
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76113844"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81276300"
 ---
 # <a name="visual-studio-feedback-client-component-directory"></a>Visual Studio Feedback Client 组件目录
 
@@ -40,13 +41,13 @@ ms.locfileid: "76113844"
 
 ## <a name="feedback-client"></a>Feedback Client
 
-**ID：** Microsoft.VisualStudio.Workload.FeedbackClient
+**ID:** Microsoft.VisualStudio.Workload.FeedbackClient
 
-**描述：** 利益干系人可以使用 Feedback Client 提供有关 Azure DevOps Services 或者 Team Foundation Server 的大量反馈。
+**说明：** 利益干系人可以使用 Feedback Client 提供有关 Azure DevOps Services 或者 Team Foundation Server 的大量反馈。
 
 ### <a name="components-included-by-this-workload"></a>此工作负载所包含的组件
 
-组件 ID | “属性” | Version | 依赖项类型
+组件 ID | 名称 | Version | 依赖项类型
 --- | --- | --- | ---
 Microsoft.VisualStudio.Component.TestTools.FeedbackClient | Microsoft Feedback Client | 15.6.27406.0 | 必需
 
@@ -54,13 +55,13 @@ Microsoft.VisualStudio.Component.TestTools.FeedbackClient | Microsoft Feedback C
 
 这些组件不随附于任何工作负载，但可选择作为单个组件。
 
-组件 ID | “属性” | Version
+组件 ID | 名称 | Version
 --- | --- | ---
-n/a | 不可用 | n/a
+n/a | n/a | n/a
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 * [Visual Studio 工作负荷和组件 ID](workload-and-component-ids.md)
 * [Visual Studio 管理员指南](visual-studio-administrator-guide.md)

@@ -18,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6861fee8691c32415111347ab673f9e48bfb9e11
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.openlocfilehash: 5c7964c6654d1f6996d1acc44542e3a7bf093a52
+ms.sourcegitcommit: 93859158465eab3423a0c0435f06490f0a456a57
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77634586"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82167450"
 ---
 # <a name="al-assembly-linker-task"></a>AL（程序集链接器）任务
 
@@ -70,9 +70,7 @@ AL 任务包装 AL.exe  （一种随 Windows 软件开发工具包 (SDK) 一起�
 | `Win32Icon` | 可选 `String` 参数。<br /><br /> 在程序集中插入 .ico 文件  。 .ico 文件在文件资源管理器中赋予输出文件所需的外观  。 此参数对应于 [Al.exe（程序集链接器）](/dotnet/framework/tools/al-exe-assembly-linker)中的 `/win32icon` 选项。 |
 | `Win32Resource` | 可选 `String` 参数。<br /><br /> 在输出文件中插入 Win32 资源（.res 文件）  。 有关详细信息，请参阅 [Al.exe（程序集链接器）](/dotnet/framework/tools/al-exe-assembly-linker)中 `/win32res` 选项的文档。 |
 
-## <a name="remarks"></a>备注
-
- 除上面列出的参数外，此任务还从 <xref:Microsoft.Build.Tasks.ToolTaskExtension> 类继承参数，后者自身继承自 <xref:Microsoft.Build.Utilities.ToolTask> 类。 有关这些其他参数的列表及其说明，请参阅 [ToolTaskExtension 基类](../msbuild/tooltaskextension-base-class.md)。
+[!INCLUDE [ToolTaskExtension arguments](includes/tooltaskextension-base-params.md)]
 
 ## <a name="example"></a>示例
 

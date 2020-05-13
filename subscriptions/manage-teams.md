@@ -3,15 +3,16 @@ title: 管理大型团队和外部承包商 | Visual Studio Marketplace
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 07/23/2019
+ms.assetid: 3fc57f5f-2446-4774-9f8f-98ea1340f6b2
+ms.date: 03/09/2020
 ms.topic: conceptual
 description: 了解管理员管理大型团队和外部承包商订阅的职责。
-ms.openlocfilehash: 379bb6b868d40a332d563a33f3a30a575aa235b7
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 9753c7a69b5334abd0e4ccb299ece3a5403517bc
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75850051"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80232319"
 ---
 # <a name="large-teams-and-external-contractors"></a>大型团队和外部承包商
 Visual Studio 订阅管理员负责确保与 Visual Studio 授权软件交互的每个用户都获得自己的 Visual Studio 订阅的适当授权。
@@ -32,6 +33,12 @@ Visual Studio 订阅管理员负责确保与 Visual Studio 授权软件交互的
 - [Visual Studio 授权白皮书](https://visualstudio.microsoft.com/wp-content/uploads/2019/06/Visual-Studio-Licensing-Whitepaper-May-2019.pdf)
 - [Visual Studio 管理和订阅支持](https://visualstudio.microsoft.com/support/support-overview-vs)
 - [批量许可条款](https://www.microsoft.com/licensing/product-licensing/products.aspx)
+
+## <a name="see-also"></a>另请参阅
+- [Visual Studio 文档](https://docs.microsoft.com/visualstudio/)
+- [Azure DevOps 文档](https://docs.microsoft.com/azure/devops/)
+- [Azure 文档](https://docs.microsoft.com/azure/)
+- [Microsoft 365 文档](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>后续步骤
 详细了解管理员的职责：

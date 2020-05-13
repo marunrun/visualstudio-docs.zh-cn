@@ -12,10 +12,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 64ce566369f2c60a52e9026e8f92fc30836d523c
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75594755"
 ---
 # <a name="how-to-specify-timeout-periods-for-test-controllers-and-test-agents"></a>如何：为测试控制器和测试代理指定超时周期
@@ -26,23 +26,23 @@ ms.locfileid: "75594755"
 
 若要编辑测试控制器或测试代理的各种超时设置，请使用表中的键名和值来修改以下配置文件：
 
-- 测试控制器：*QTController.exe.config*
+- 测试控制器：QTController.exe.config 
 
-    |项名称|描述|“值”|
+    |项名称|说明|“值”|
     |-|-----------------|-|
     |AgentConnectionTimeoutInSeconds|认为连接丢失前等待代理 ping 请求的秒数。|“n”秒。|
     |AgentSyncTimeoutInSeconds|开始同步测试运行时，中止运行前等待所有代理同步的秒数。|“n”秒。|
-    |AgentInitializeTimeout|中止测试运行前，在测试运行开始时等待所有代理及其数据收集器进行初始化的秒数。 如果使用数据收集器，则此值应相当大。|“n”秒。 默认：“120”（2 分钟）。|
-    |AgentCleanupTimeout|完成测试运行前，等待所有代理及其数据收集器进行清理的秒数。 如果使用数据收集器，则此值应相当大。|“n”秒。 默认：“120”（2 分钟）。|
+    |AgentInitializeTimeout|中止测试运行前，在测试运行开始时等待所有代理及其数据收集器进行初始化的秒数。 如果使用数据收集器，则此值应相当大。|“n”秒。 默认值：“120”（两分钟）。|
+    |AgentCleanupTimeout|完成测试运行前，等待所有代理及其数据收集器进行清理的秒数。 如果使用数据收集器，则此值应相当大。|“n”秒。 默认值：“120”（两分钟）。|
 
-- 测试代理：*QTAgentService.exe.config*
+- 测试代理：QTAgentService.exe.config 
 
-    |项名称|描述|“值”|
+    |项名称|说明|“值”|
     |-|-----------------|-|
-    |ControllerConnectionPeriodInSeconds|连接控制器尝试之间的秒数。|“n”秒。 默认：“30”（三十秒）。|
-    |RemotingTimeoutSeconds|远程处理调用可以持续的最长时间（以秒为单位）。|“n”秒。 默认：“600”（10 分钟）。|
-    |StopTestRunCallTimeoutInSeconds|等待用于停止测试运行的调用的秒数。|“n”秒。 默认：“120”（2 分钟）。|
-    |GetCollectorDataTimeout|等待数据收集器的秒数。|“n”秒。 默认：“300”（5 分钟）。|
+    |ControllerConnectionPeriodInSeconds|连接控制器尝试之间的秒数。|“n”秒。 默认值：“30”（三十秒）。|
+    |RemotingTimeoutSeconds|远程处理调用可以持续的最长时间（以秒为单位）。|“n”秒。 默认值：“600”（十分钟）。|
+    |StopTestRunCallTimeoutInSeconds|等待用于停止测试运行的调用的秒数。|“n”秒。 默认值：“120”（两分钟）。|
+    |GetCollectorDataTimeout|等待数据收集器的秒数。|“n”秒。 默认值：“300”（五分钟）。|
 
 ## <a name="to-specify-agent-timeout-options-for-a-test-controller"></a>指定测试控制器的代理超时选项
 
@@ -68,7 +68,7 @@ ms.locfileid: "75594755"
     <add key="AgentConnectionTimeoutInSeconds" value="180"/>
     ```
 
-    \- 或 -
+    或
 
     添加其他键并指定超时值。 例如，可以在 `AgentInitializeTimeout` 节中添加 `<appSettings>` 键并指定五分钟的值：
 
@@ -102,7 +102,7 @@ ms.locfileid: "75594755"
     <add key="ControllerConnectionPeriodInSeconds" value="60"/>
     ```
 
-    \- 或 -
+    或
 
     添加其他键并指定超时值。 例如，可以在 `RemotingTimeoutSeconds` 节中添加 `<appSettings>` 键并指定十五分钟的值：
 
@@ -112,7 +112,7 @@ ms.locfileid: "75594755"
     </appSettings>
     ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [安装和配置测试代理](../test/lab-management/install-configure-test-agents.md)
 - [修改负载测试记录设置](../test/modify-load-test-logging-settings.md)

@@ -14,12 +14,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cca0c55951d4928347528814d043bb8a7c55be9a
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.openlocfilehash: f6a465a752282f4a0dc00f3fb294ade4169bb19b
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77633845"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79093941"
 ---
 # <a name="how-to-extend-the-visual-studio-build-process"></a>如何：扩展 Visual Studio 生成过程
 
@@ -28,7 +28,6 @@ Visual Studio 生成过程由导入到项目文件中的一系列 MSBuild .targe
 - 重写公共目标中定义的特定预定义目标（Microsoft.Common.targets 或其导入的文件）  。
 
 - 重写公共目标中定义的“DependsOn”属性。
-## <a name="override-predefined-targets"></a>重写预定义目标
 
 ## <a name="override-predefined-targets"></a>重写预定义目标
 
@@ -69,6 +68,45 @@ Visual Studio 生成过程由导入到项目文件中的一系列 MSBuild .targe
 |`BeforePublish`，`AfterPublish`|插入到这些目标之一中的任务，在调用内核发布功能之前或之后运行。|
 |`BeforeResolveReferences`，`AfterResolveReferences`|插入到这些目标之一中的任务，在解析程序集引用之前或之后运行。|
 |`BeforeResGen`，`AfterResGen`|插入到这些目标之一中的任务，在生成资源之前或之后运行。|
+
+## <a name="example-aftertargets-and-beforetargets"></a>示例：AfterTargets 和 BeforeTargets
+
+下面的示例演示如何使用 `AfterTargets` 属性添加对输出文件执行某些操作的自定义目标。 在这种情况下，它会将输出文件复制到“CustomOutput”的新文件夹中  。  该示例还演示如何使用 `BeforeTargets` 属性并指定自定义清理操作在目标 `CoreClean` 之前运行，用 `CustomClean` 目标清理由自定义生成操作创建的文件。
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+<PropertyGroup>
+   <TargetFramework>netcoreapp3.1</TargetFramework>
+   <_OutputCopyLocation>$(OutputPath)..\..\CustomOutput\</_OutputCopyLocation>
+</PropertyGroup>
+
+<Target Name="CustomAfterBuild" AfterTargets="Build">
+  <ItemGroup>
+    <_FilesToCopy Include="$(OutputPath)**\*"/>
+  </ItemGroup>
+  <Message Text="_FilesToCopy: @(_FilesToCopy)" Importance="high"/>
+
+  <Message Text="DestFiles:
+      @(_FilesToCopy->'$(_OutputCopyLocation)%(RecursiveDir)%(Filename)%(Extension)')"/>
+
+  <Copy SourceFiles="@(_FilesToCopy)"
+        DestinationFiles=
+        "@(_FilesToCopy->'$(_OutputCopyLocation)%(RecursiveDir)%(Filename)%(Extension)')"/>
+  </Target>
+
+  <Target Name="CustomClean" BeforeTargets="CoreClean">
+    <Message Text="Inside Custom Clean" Importance="high"/>
+    <ItemGroup>
+      <_CustomFilesToDelete Include="$(_OutputCopyLocation)**\*"/>
+    </ItemGroup>
+    <Delete Files='@(_CustomFilesToDelete)'/>
+  </Target>
+</Project>
+```
+
+> [!WARNING]
+> 请确保使用其他名称，该名称要与上一节中表中列出的预定义目标不同（例如，我们在此处命名自定义生成目标 `CustomAfterBuild`，而不是 `AfterBuild`），因为这些预定义的目标会被 SDK 导入覆盖，SDK 导入也定义这些目标。 你看不到覆盖这些目标的目标文件的导入，但在使用引用 SDK 的 `Sdk` 属性方法时，该文件将隐式添加到项目文件的末尾。
 
 ## <a name="override-dependson-properties"></a>重写 DependsOn 属性
 
@@ -130,6 +168,60 @@ Visual Studio 生成过程由导入到项目文件中的一系列 MSBuild .targe
 |`BuildDependsOn`|在要在整个生成过程之前或之后插入自定义目标的情况下，要重写的属性。|
 |`CleanDependsOn`|在要从自定义生成过程中清理输出的情况下，要重写的属性。|
 |`CompileDependsOn`|在要在编译步骤之前或之后插入自定义过程的情况下，要重写的属性。|
+
+## <a name="example-builddependson-and-cleandependson"></a>示例：BuildDependsOn and CleanDependsOn
+
+下面的示例类似于 `BeforeTargets` 和 `AfterTargets` 示例，但演示了如何实现类似的功能。 它通过使用 `BuildDependsOn` 来添加你自己的任务 `CustomAfterBuild` 以在生成后复制输出文件，并使用 `CleanDependsOn` 添加相应的 `CustomClean` 任务，从而扩展生成。  
+
+在此示例中，这是一个 SDK 样式项目。 如本文前面有关 SDK 样式项目的注释中所述，必须使用手动导入方法，而不是 Visual Studio 生成项目文件时使用的 `Sdk` 属性。
+
+```xml
+<Project>
+<Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk" />
+
+<PropertyGroup>
+   <TargetFramework>netcoreapp3.1</TargetFramework>
+</PropertyGroup>
+
+<Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
+
+<PropertyGroup>
+   <BuildDependsOn>
+      $(BuildDependsOn);CustomAfterBuild
+    </BuildDependsOn>
+
+    <CleanDependsOn>
+      $(CleanDependsOn);CustomClean
+    </CleanDependsOn>
+
+    <_OutputCopyLocation>$(OutputPath)..\..\CustomOutput\</_OutputCopyLocation>
+  </PropertyGroup>
+
+<Target Name="CustomAfterBuild">
+  <ItemGroup>
+    <_FilesToCopy Include="$(OutputPath)**\*"/>
+  </ItemGroup>
+  <Message Text="_FilesToCopy: @(_FilesToCopy)" Importance="high"/>
+
+  <Message Text="DestFiles:
+      @(_FilesToCopy->'$(_OutputCopyLocation)%(RecursiveDir)%(Filename)%(Extension)')"/>
+
+  <Copy SourceFiles="@(_FilesToCopy)"
+        DestinationFiles=
+        "@(_FilesToCopy->'$(_OutputCopyLocation)%(RecursiveDir)%(Filename)%(Extension)')"/>
+  </Target>
+
+  <Target Name="CustomClean">
+    <Message Text="Inside Custom Clean" Importance="high"/>
+    <ItemGroup>
+      <_CustomFilesToDelete Include="$(_OutputCopyLocation)**\*"/>
+    </ItemGroup>
+    <Delete Files='@(_CustomFilesToDelete)'/>
+  </Target>
+</Project>
+```
+
+元素的顺序非常重要。 导入标准 SDK 目标文件后，必须出现 `BuildDependsOn` 和 `CleanDependsOn` 元素。
 
 ## <a name="see-also"></a>请参阅
 

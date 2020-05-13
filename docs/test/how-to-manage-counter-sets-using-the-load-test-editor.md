@@ -14,20 +14,20 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 224ac14a0d670648f8047a82a8abef0c2b7b2654
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "76113422"
 ---
 # <a name="how-to-manage-counter-sets-using-the-load-test-editor"></a>如何：使用负载测试编辑器管理计数器集
 
-使用“新建负载测试向导”创建负载测试时，需添加一个初始计数器集。  该计数器集为您的负载测试提供了一组预定义计数器集。
+在使用“新建负载测试向导”创建负载测试时，需添加一个初始计数器集  。 该计数器集为您的负载测试提供了一组预定义计数器集。
 
 > [!NOTE]
 > 如果负载测试分布在多台远程计算机之间，则会将控制器和代理计数器映射到控制器和代理计数器集中。 有关如何在负载测试中使用远程计算机的详细信息，请参阅[测试控制器和测试代理](configure-test-agents-and-controllers-for-load-tests.md)。
 
-管理计数器集包括选择要从中收集性能数据的计算机集，指定从各个计算机收集数据的计数器集。 在“负载测试编辑器”中管理计数器。 
+管理计数器集包括选择要从中收集性能数据的计算机集，指定从各个计算机收集数据的计数器集。 在“负载测试编辑器”中管理计数器  。
 
 ![管理计数器集](../test/media/loadtestmanagecountersets.png)
 
@@ -60,7 +60,7 @@ ms.locfileid: "76113422"
 
 6. 选择 **“确定”** 。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [测试控制器和测试代理](configure-test-agents-and-controllers-for-load-tests.md)
 - [为负载测试中的计算机指定计数器集和阈值规则](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md)

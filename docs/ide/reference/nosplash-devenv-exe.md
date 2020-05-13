@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 9a1e8118faa743398271fb282a2603aab5fcd76b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62950663"
 ---
 # <a name="nosplash-devenvexe"></a>/NoSplash (devenv.exe)
@@ -29,13 +29,13 @@ ms.locfileid: "62950663"
 devenv /NoSplash [File1[ FileN]...]
 ```
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
 
-- File1
+- File1 
 
-  可选。 要在现有 Visual Studio 实例中打开的文件。 如果没有 Visual Studio 实例，便会新建包含简化窗口布局的实例，且工具会在新实例中打开 File1。
+  可选。 要在现有 Visual Studio 实例中打开的文件。 如果没有 Visual Studio 实例，便会新建包含简化窗口布局的实例，且工具会在新实例中打开 File1  。
 
-- FileN
+- FileN 
 
   可选。 要在现有 Visual Studio 实例中打开的一个或多个其他文件。
 
@@ -57,7 +57,7 @@ devenv /nosplash /run MySolution.sln
 devenv /nosplash /debugexe MySolution.exe
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Devenv 命令行开关](../../ide/reference/devenv-command-line-switches.md)
 - [适用于 VSPackage 开发的 Devenv 命令行开关](../../extensibility/devenv-command-line-switches-for-vspackage-development.md)

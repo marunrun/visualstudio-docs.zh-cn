@@ -1,5 +1,5 @@
 ---
-title: MODULE_INFO | Microsoft Docs
+title: MODULE_INFO |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - MODULE_INFO structure
 ms.assetid: f2e06180-1ab3-4eb5-a428-7994cceb61b6
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: db67710fd7ee71cddf1e7dbee030cb208a1de86c
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 59ab4d0bb2a7aaa4b08f616ea0a99be85b521bb0
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66339113"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80714312"
 ---
-# <a name="moduleinfo"></a>MODULE_INFO
-描述为特定模块 （DLL、 exe 文件或程序集）。
+# <a name="module_info"></a>MODULE_INFO
+描述特定模块（DLL、EXE 或程序集）。
 
 ## <a name="syntax"></a>语法
 
@@ -63,25 +63,25 @@ public struct MODULE_INFO { 
 
 ## <a name="members"></a>成员
  `dwValidFields`\
- 中的标志的组合[MODULE_INFO_FIELDS](../../../extensibility/debugger/reference/module-info-fields.md)枚举，用于指定哪些字段填写。
+ [MODULE_INFO_FIELDS](../../../extensibility/debugger/reference/module-info-fields.md)枚举中的标志的组合，用于指定填写哪些字段。
 
  `m_bstrName`\
  模块名。
 
  `m_bstrUrl`\
- 模块的 URL。
+ 模块 URL。
 
  `m_bstrVersion`\
  模块版本。
 
  `m_bstrDebugMessage`\
- 可选的消息有关该模块，例如，"无法加载符号。"
+ 有关模块的可选消息，例如，"无法加载符号"。
 
  `m_addrLoadAddress`\
  模块加载地址。
 
  `m_addrPreferredLoadAddress`\
- 模块的首选的加载地址。
+ 模块的首选负载地址。
 
  `m_dwSize`\
  模块大小。
@@ -93,22 +93,22 @@ public struct MODULE_INFO { 
  上次修改符号文件的时间。
 
  `m_bstrUrlSymbolLocation`\
- 符号文件的位置 (例如，"。\\") 指定模块中。 用作起始位置到查找符号的模块。
+ 符号文件的位置（例如，"."）\\在模块中指定。 用作查找模块符号的起始位置。
 
  `m_dwModuleFlags`\
- 中的标志的组合[MODULE_FLAGS](../../../extensibility/debugger/reference/module-flags.md)枚举，用于描述该模块。
+ 描述模块[MODULE_FLAGS](../../../extensibility/debugger/reference/module-flags.md)枚举的标志的组合。
 
 ## <a name="remarks"></a>备注
- 此结构传递给[GetInfo](../../../extensibility/debugger/reference/idebugmodule2-getinfo.md)填写其中的方法。
+ 此结构传递给填写它的[GetInfo](../../../extensibility/debugger/reference/idebugmodule2-getinfo.md)方法。
 
- 此结构对应于中列出的每个模块**模块**窗口。
+ 此结构对应于 **"模块"** 窗口中列出的每个模块。
 
 ## <a name="requirements"></a>要求
- 标头： msdbg.h
+ 标题： msdbg.h
 
- 命名空间:Microsoft.VisualStudio.Debugger.Interop
+ 命名空间：微软.VisualStudio.调试器.互通
 
- 程序集：Microsoft.VisualStudio.Debugger.Interop.dll
+ 程序集：微软.VisualStudio.调试器.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [结构和联合](../../../extensibility/debugger/reference/structures-and-unions.md)

@@ -1,5 +1,5 @@
 ---
-title: AD_PROCESS_ID | Microsoft Docs
+title: AD_PROCESS_ID |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - AD_PROCESS_ID union
 ms.assetid: 4cb40d12-2e92-4f09-83f4-689928bd65b3
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 1893b78063e045f341af246fc0ef2c0f2ad1538e
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 96a834725f1cf5b14f12a4c1554e67477768ef23
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66351414"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80738163"
 ---
-# <a name="adprocessid"></a>AD_PROCESS_ID
-指定的进程 ID，这可能是系统 ID 或 GUID。
+# <a name="ad_process_id"></a>AD_PROCESS_ID
+指定进程 ID，可以是系统 ID 或 GUID。
 
 ## <a name="syntax"></a>语法
 
@@ -49,15 +49,15 @@ public struct AD_PROCESS_ID {
 
 ## <a name="members"></a>成员
 `ProcessIdType`\
-中的值[AD_PROCESS_ID_TYPE](../../../extensibility/debugger/reference/ad-process-id-type.md)枚举，它指定如何解释`ProcessId`union （或者，对于托管代码，该结构的成员才能访问）。
+[AD_PROCESS_ID_TYPE](../../../extensibility/debugger/reference/ad-process-id-type.md)枚举中的值，用于解释如何解释`ProcessId`联合（或者对于托管代码，该结构要访问的哪个成员）。
 
 `dwProcessId`\
-从系统值形式的进程 ID。
+进程 ID 作为来自系统的值。
 
 `guidProcessId`\
-以 GUID 形式表示的进程 ID。
+进程 ID 作为 GUID。
 
-dwUnused 填充。
+dwunused 填充。
 
 ## <a name="remarks"></a>备注
 此结构传递给以下方法：
@@ -68,24 +68,24 @@ dwUnused 填充。
 
 - [GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md)
 
-- [GetProcess](../../../extensibility/debugger/reference/idebugport2-getprocess.md)
+- [获取过程](../../../extensibility/debugger/reference/idebugport2-getprocess.md)
 
-及返回的以下方法：
+并从以下方法返回：
 
 - [GetPhysicalProcessId](../../../extensibility/debugger/reference/idebugprocess2-getphysicalprocessid.md)
 
 - [GetHostId](../../../extensibility/debugger/reference/idebugprogramhost2-gethostid.md)
 
 ## <a name="requirements"></a>要求
-标头： msdbg.h
+标题： msdbg.h
 
-命名空间:Microsoft.VisualStudio.Debugger.Interop
+命名空间：微软.VisualStudio.调试器.互通
 
-程序集：Microsoft.VisualStudio.Debugger.Interop.dll
+程序集：微软.VisualStudio.调试器.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [结构和联合](../../../extensibility/debugger/reference/structures-and-unions.md)
-- [GetProcess](../../../extensibility/debugger/reference/idebugport2-getprocess.md)
+- [获取过程](../../../extensibility/debugger/reference/idebugport2-getprocess.md)
 - [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md)
 - [AD_PROCESS_ID_TYPE](../../../extensibility/debugger/reference/ad-process-id-type.md)
 - [GetPhysicalProcessId](../../../extensibility/debugger/reference/idebugprocess2-getphysicalprocessid.md)

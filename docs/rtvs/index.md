@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - data-science
 ms.openlocfilehash: 1132a7a0363e2d508d6eff1026192aad3407fca4
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 03/21/2020
 ms.locfileid: "73189250"
 ---
 # <a name="work-with-r-in-visual-studio"></a>在 Visual Studio 中使用 R
@@ -31,7 +31,7 @@ R 是用于统计计算和图形的高度可扩展语言和环境。 它是使�
 
 然后，单击下面的链接，详细了解与 R 相关的功能，以及 Visual Studio 本身的常规功能。
 
-| 功能 | 说明 | Visual Studio 常规文档 |
+| 功能 | 描述 | Visual Studio 常规文档 |
 | --- | --- | --- |
 | [Visual Studio 项目系统](r-projects-in-visual-studio.md) | 利用方便使用的结构整理和管理相关文件，并利用实用项目模板，如 R 代码、R 文档、R Markdown、SQL 查询和存储过程。 此外，还可以使用[包管理器](r-package-manager-in-visual-studio.md)和 [SQL Server 集成](integrating-sql-server-with-r.md)。  | [Visual Studio 中的解决方案和项目](../ide/solutions-and-projects-in-visual-studio.md) |
 | [工作区](r-workspaces-in-visual-studio.md) | RTVS 可以绑定到本地和远程工作区，以便使用较小的数据集在本地开发 R 代码，然后在基于云且功能更强大的计算机上使用较大的数据集运行此代码。 | n/a |

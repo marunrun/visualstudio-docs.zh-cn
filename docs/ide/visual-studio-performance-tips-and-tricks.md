@@ -8,11 +8,11 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: e3cd7fe9781048f6612ff6bd81c0bf0cbc00a30b
-ms.sourcegitcommit: 9a66f1c31cc9eba0b5231af72da1d18761a9c56a
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75944210"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79307249"
 ---
 # <a name="visual-studio-performance-tips-and-tricks"></a>Visual Studio 性能提示和技巧
 
@@ -33,17 +33,17 @@ Visual Studio 会自动重新打开上一个会话中处于打开状态的文档
 
 当自动文档还原导致解决方案加载速度明显变慢时，Visual Studio 会以黄色显示栏通知。 可按照以下步骤禁用自动文件重新打开：
 
-1. 选择“工具” > “选项”，打开“选项”对话框    。
+1. 选择“工具” **“选项”，打开“选项”对话框** >    。
 
-1. 在“项目和解决方案” > “常规”页面上，取消选中“重新打开解决方案加载文档”    。
+1. 在“项目和解决方案” **“常规”页面上，取消选中“重新打开解决方案加载文档”**  >    。
 
 如果禁止自动还原文件，可使用任一[转到](../ide/go-to.md)命令快速导航到要打开的文件：
 
-- 对于常规“转到”功能，请选择“编辑” > 转到” > 转到所有”（或按 Ctrl+T）       。
+- 对于常规“转到”功能，请选择“编辑”**转到”** 转到所有”（或按 Ctrl**T）**  >    >    +  。
 
-- 可使用“编辑” > “转到” > “转到上次编辑的位置”（或按“Ctrl”+“Shift”+“Backspace”）跳转到解决方案中上次编辑的位置       。
+- 可使用“编辑” **“转到”** “转到上次编辑的位置”（或按“Ctrl” > “Shift” **“Backspace”）跳转到解决方案中上次编辑的位置** >    +  +  。
 
-- 使用“转到最近使用的文件”，查看解决方案中最近访问的文件的列表  。 选择“编辑” > “转到” > “转到最近使用的文件”（或按 Ctrl+1、Ctrl +R）        。
+- 使用“转到最近使用的文件”，查看解决方案中最近访问的文件的列表  。 选择“编辑” **“转到”** “转到最近使用的文件”（或按 Ctrl > 1、Ctrl **R）**  >    +   +  。
 
 ## <a name="configure-debugging-options"></a>配置调试选项
 
@@ -88,7 +88,7 @@ Visual Studio 会自动重新打开上一个会话中处于打开状态的文档
 
     Visual Studio 对整个解决方案执行分析，以在调用生成前提供关于错误的丰富体验。 此功能可用于尽快速识别错误。 但是，对于大型解决方案，这一功能可能会占用大量内存资源。 如果遇到内存不足或类似问题，可以禁用此体验并释放这些资源。 默认情况下，Visual Basic 启用此选项，而 C# 禁用此选项。
 
-    若要禁用“完整解决方案分析”，请选择“工具” > “选项” > “文本编辑器”，替换选择“Visual Basic”或“C#”       。 选择“高级”，并取消选中“启用完整解决方案分析”   。
+    若要禁用“完整解决方案分析”，请选择“工具” **“选项”** “文本编辑器”，替换选择“Visual Basic”或“C#”   >    >     。 选择“高级”，并取消选中“启用完整解决方案分析”   。
 
 - **禁用 CodeLens**
 
@@ -131,13 +131,13 @@ Visual Studio 会自动重新打开上一个会话中处于打开状态的文档
 
 CLR 使用垃圾回收内存管理系统。 在此系统中，内存有时会被不再需要的对象占用。 这一状态是临时的，垃圾回收器会基于其性能和资源使用情况试探法释放此内存。 可通过在 Visual Studio 中使用热键强制 CLR 回收任何未使用的内存。 如果有大量垃圾等待回收并已强制垃圾回收，可在“任务管理器”  中看到 devenv.exe  进程的内存使用率降低。 很少需要使用此方法。 但是，在完成一个资源占用较高的操作（如完整生成、调试会话或解决方案打开事件）后，此方法有助于确定进程实际在使用的内存量。 由于 Visual Studio 属于混合型（托管和本机），因此本机分配器和垃圾回收器有时可能会竞争有限的内存资源。 在内存使用率较高的情况下，这可能有助于强制垃圾回收器运行。
 
-要强制垃圾回收，请使用热键：Ctrl+Alt+Shift+F12，Ctrl+Alt+Shift+F12（按两次）         。
+要强制垃圾回收，请使用热键：Ctrl**Alt**Shift+F12、Ctrl**Alt**Shift+F12（按两次）  +   +  +  +  。
 
 如果强制垃圾回收确实可让方案正常工作，请通过 Visual Studio 反馈工具提交报告，因为这一行为可能是一个 Bug。
 
 有关 CLR 垃圾回收器的详细描述，请参阅[垃圾回收的基本原理](/dotnet/standard/garbage-collection/fundamentals)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [优化 Visual Studio 性能](../ide/optimize-visual-studio-performance.md)
 - [更快加载解决方案（Visual Studio 博客）](https://devblogs.microsoft.com/visualstudio/load-solutions-faster-with-visual-studio-2017-version-15-6/)

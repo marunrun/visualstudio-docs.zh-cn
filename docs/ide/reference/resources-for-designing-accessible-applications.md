@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: f8ac7beac67a2f1d0010ee64ae7af31108d7ec3b
-ms.sourcegitcommit: cf8c0fef2b9690595e99ce3802586cdd55fd37c2
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "70107838"
 ---
 # <a name="resources-for-designing-accessible-applications"></a>用于设计易于访问的应用程序的资源
@@ -40,7 +40,7 @@ ms.locfileid: "70107838"
 
 ## <a name="windows-applications"></a>Windows 应用程序
 
-* **[演练：创建基于 Windows 的可访问应用程序](/dotnet/framework/winforms/advanced/walkthrough-creating-an-accessible-windows-based-application)** 本文提供分步说明，阐释如何在示例 Windows 应用程序中包含针对“Windows 认证”徽标的五个辅助功能要求。
+* **[演练：创建可访问的基于 Windows 的应用程序](/dotnet/framework/winforms/advanced/walkthrough-creating-an-accessible-windows-based-application)** ：本文提供用于在示例 Windows 应用程序中包含针对 Certified for Windows 徽标的五个辅助功能需求的分步说明。
 
 * **键盘用户界面设计的准则** 此技术文章介绍如何设计用户可以从键盘导航的 Windows 应用程序。 有关详细信息，请参阅[键盘用户界面设计的准则](/previous-versions/windows/desktop/dnacc/guidelines-for-keyboard-user-interface-design)。
 
@@ -48,7 +48,7 @@ ms.locfileid: "70107838"
 
 ## <a name="websites"></a>网站
 
-- [演练：使用图像控件、菜单控件以及 AutoPostBack 的辅助功能准则](https://msdn.microsoft.com/Library/ff7b5021-48b3-46bf-921f-9fe1e0e32202) 本文提供分步说明，阐释如何在示例网页中包含可访问控件。 还提供针对 Web 的一些辅助功能设计提示。
+- [演练：使用图像控件、菜单控件以及 AutoPostBack 的辅助功能准则](https://msdn.microsoft.com/Library/ff7b5021-48b3-46bf-921f-9fe1e0e32202) 本文提供用于在示例网页中包含可访问控件的分步说明。 还提供针对 Web 的一些辅助功能设计提示。
 
 - **使用 DHTML 创建可访问网页** 此技术文章列出了可访问的 HTML 4.0 元素以及可访问 Web 设计提示。 有关详细信息，请参阅[使用 DHTML 创建可访问的网页](https://msdn.microsoft.com/library/ms528445.aspx)。
 
@@ -56,7 +56,7 @@ ms.locfileid: "70107838"
 
 - **万维网联合会 (W3C) 的 Web 辅助功能计划** 此网站为可访问网站开发提供准则和技术。 有关详细信息，请参阅 [https://www.w3.org/WAI/GL/](https://www.w3.org/WAI/GL/)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 * [Visual Studio 的辅助功能](../../ide/reference/accessibility-features-of-visual-studio.md)
 * [Visual Studio for Mac 的辅助功能](/visualstudio/mac/accessibility/)

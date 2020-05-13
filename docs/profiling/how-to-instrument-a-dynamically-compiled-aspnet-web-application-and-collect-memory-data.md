@@ -10,10 +10,10 @@ monikerRange: vs-2017
 ms.workload:
 - aspnet
 ms.openlocfilehash: 3378a45ebace942bb8696f2f67962365b5f57796
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74778877"
 ---
 # <a name="how-to-instrument-a-dynamically-compiled-aspnet-web-application-and-collect-memory-data-by-using-the-profiler-command-line"></a>如何：使用探查器命令行检测动态编译的 ASP.NET web 应用程序，并收集内存数据
@@ -40,7 +40,7 @@ ms.locfileid: "74778877"
 
      VSPerfClrEnv /globaltraceon 
 
-     -或-
+     \- 或 -
 
      VSPerfClrEnv /globaltracegclife 
 
@@ -56,7 +56,7 @@ ms.locfileid: "74778877"
 
 1. 启动探查器。 类型：
 
-    VSPerfCmd [/start](../profiling/start.md) :trace [/output](../profiling/output.md) : `OutputFile` [`Options`    ]
+    **VSPerfCmd** [/start](../profiling/start.md) **:trace** [/output](../profiling/output.md) **:** `OutputFile` [`Options`]
 
    - **/start:trace** 选项初始化探查器。
 
@@ -67,7 +67,7 @@ ms.locfileid: "74778877"
    > [!NOTE]
    > **/user** 和 **/crosssession** 选项通常为 ASP.NET 应用程序所需选项。
 
-   | 选项 | 说明 |
+   | 选项 | 描述 |
    | - | - |
    | [/user](../profiling/user-vsperfcmd.md) **:** [`Domain` **\\** ]`UserName` | 指定拥有 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 工作进程的帐户的可选域和用户名。 在进程以已登录用户外的用户身份运行时才需要此选项。 名称位于 Windows 任务管理器“进程”选项卡上的“用户名”列中   。 |
    | [/crosssession](../profiling/crosssession.md) | 启用其他会话中的进程分析。 如果应用程序在其他会话中运行，则需要此选项。 会话 ID 位于 Windows 任务管理器的“进程”选项卡上的“会话 ID”列中   。 可以将 **/CS** 指定为 **/crosssession** 的缩写。 |
@@ -86,7 +86,7 @@ ms.locfileid: "74778877"
 
 - 以下选项对可启动和停止数据收集。 在单独的命令行上指定每个选项。 可多次打开和关闭数据收集。
 
-    |选项|说明|
+    |选项|描述|
     |------------|-----------------|
     |[/globalon /globaloff](../profiling/globalon-and-globaloff.md)|启动 ( **/globalon**) 或停止 ( **/globaloff**) 所有进程的数据收集。|
     |[/processon](../profiling/processon-and-processoff.md) **:** `PID` [/processoff](../profiling/processon-and-processoff.md) **:** `PID`|启动 ( **/processon**) 或停止 ( **/processoff**) 由进程 ID (`PID`) 指定的进程的数据收集。|
@@ -107,7 +107,7 @@ ms.locfileid: "74778877"
 
 3. 关闭探查器。 类型：
 
-    VSPerfCmd [/shutdown](../profiling/shutdown.md) 
+    **VSPerfCmd** [/shutdown](../profiling/shutdown.md)
 
 4. 重启 IIS。 类型：
 

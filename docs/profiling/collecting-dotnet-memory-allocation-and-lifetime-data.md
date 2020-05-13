@@ -12,10 +12,10 @@ monikerRange: vs-2017
 ms.workload:
 - dotnet
 ms.openlocfilehash: 6a8c5d431b7be54c4c5bc1a1c37619deb67de751
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74779579"
 ---
 # <a name="collect-net-memory-allocation-and-lifetime-data"></a>收集 .NET 内存分配和生存期数据
@@ -46,7 +46,7 @@ Visual Studio 分析工具支持收集 .NET 内存分配和对象生存期数据
 
 1. 在“性能资源管理器”  中，右键单击性能会话，然后单击“属性”  。
 
-2. 在“性能会话”  “属性页”  对话框上，单击“常规”  选项卡，并选中“收集 .NET 对象分配信息”  复选框。
+2. 在“性能会话”的“属性页”对话框上，单击“常规”选项卡，并选中“收集 .NET 对象分配信息”复选框     。
 
 3. 若要收集 .NET 对象生存期数据，请选择“同时收集 .NET 对象生存期信息”  复选框。
 

@@ -1,5 +1,5 @@
 ---
-title: SolutionFolder 元素（Visual Studio 模板） |Microsoft Docs
+title: 解决方案文件夹元素（可视化工作室模板） |微软文档
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -9,22 +9,22 @@ helpviewer_keywords:
 - <SolutionFolder> element [Visual Studio Templates]
 - SolutionFolder element [Visual Studio Templates]
 ms.assetid: 963f0398-fb50-4d8e-879d-d48f8b7c6d80
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 09ef2e0ff20f8c9f7146e3fa71cbce07b169077f
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 3262a5dcc0f226a0ac1b3aa08219fb89dbf70e83
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72720002"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80700000"
 ---
 # <a name="solutionfolder-element-visual-studio-templates"></a>SolutionFolder 元素（Visual Studio 模板）
 对多项目模板中的项目进行分组。
 
- \<VSTemplate > \<TemplateContent > \<ProjectCollection > \<SolutionFolder >
+ \<模板>\<模板内容>\<项目集合>\<解决方案文件夹>
 
 ## <a name="syntax"></a>语法
 
@@ -97,5 +97,5 @@ ms.locfileid: "72720002"
 
 ## <a name="see-also"></a>请参阅
 - [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
-- [创建项目和项模板](../ide/creating-project-and-item-templates.md)
+- [创建项目和项目模板](../ide/creating-project-and-item-templates.md)
 - [如何：创建多项目模板](../ide/how-to-create-multi-project-templates.md)

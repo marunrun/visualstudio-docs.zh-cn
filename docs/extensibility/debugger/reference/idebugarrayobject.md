@@ -1,5 +1,5 @@
 ---
-title: IDebugArrayObject | Microsoft Docs
+title: IDebugarray对象 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugArrayObject method
 ms.assetid: a1c8e77e-dee1-4748-a516-6ab032a8f54f
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: be1f65e3814cbd88d32a63169234a42f76db4e6d
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 709273b89d89759163acb725220d1092d33ad72f
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66337589"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80736210"
 ---
 # <a name="idebugarrayobject"></a>IDebugArrayObject
 > [!IMPORTANT]
-> 在 Visual Studio 2015 中，这种方式实现表达式计算器已弃用。 有关实现 CLR 表达式计算器的信息，请参阅[CLR 表达式计算器](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators)并[托管表达式计算器示例](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)。
+> 在 Visual Studio 2015 中，这种实现表达式赋值器的方式被弃用。 有关实现 CLR 表达式赋值器的信息，请参阅[CLR 表达式赋值器](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators)和[托管表达式赋值器示例](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)。
 
- 此接口表示一个数组对象。
+ 此接口表示数组对象。
 
 ## <a name="syntax"></a>语法
 
@@ -31,32 +31,32 @@ ms.locfileid: "66337589"
 IDebugArrayObject : IDebugObject
 ```
 
-## <a name="notes-for-implementers"></a>实施者的说明
- 表达式计算器实现此接口来表示一个数组。
+## <a name="notes-for-implementers"></a>实施者说明
+ 表达式赋值器实现此接口以表示数组。
 
-## <a name="notes-for-callers"></a>调用方的说明
- [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)接口可以获取此接口通过[QueryInterface](/cpp/atl/queryinterface)如果该对象表示一个数组。
+## <a name="notes-for-callers"></a>呼叫者备注
+ 如果对象表示数组，[则 IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)接口可以使用[查询接口](/cpp/atl/queryinterface)获取此接口。
 
 ## <a name="methods-in-vtable-order"></a>Vtable 顺序中的方法
- 除了上的方法`IDebugObject`接口，以下方法的实现基于`IDebugArrayObject`接口。
+ 除了`IDebugObject`接口上的方法外，在`IDebugArrayObject`接口上实现了以下方法。
 
 |方法|描述|
 |------------|-----------------|
 |[GetCount](../../../extensibility/debugger/reference/idebugarrayobject-getcount.md)|获取数组中元素的计数。|
 |[GetElement](../../../extensibility/debugger/reference/idebugarrayobject-getelement.md)|获取数组的元素。|
 |[GetElements](../../../extensibility/debugger/reference/idebugarrayobject-getelements.md)|获取数组的所有元素。|
-|[GetRank](../../../extensibility/debugger/reference/idebugarrayobject-getrank.md)|获取数组的秩。|
-|[GetDimensions](../../../extensibility/debugger/reference/idebugarrayobject-getdimensions.md)|获取数组的维数。|
+|[GetRank](../../../extensibility/debugger/reference/idebugarrayobject-getrank.md)|获取数组的排名。|
+|[GetDimensions](../../../extensibility/debugger/reference/idebugarrayobject-getdimensions.md)|获取数组的尺寸。|
 
 ## <a name="remarks"></a>备注
- 表达式计算器使用此接口来表示分析树中的数组。
+ 表达式赋值器使用此接口表示解析树中的数组。
 
 ## <a name="requirements"></a>要求
- 标头： ee.h
+ 标题： ee.h
 
- 命名空间:Microsoft.VisualStudio.Debugger.Interop
+ 命名空间：微软.VisualStudio.调试器.互通
 
- 程序集：Microsoft.VisualStudio.Debugger.Interop.dll
+ 程序集：微软.VisualStudio.调试器.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugPendingBreakpoint2::Bind | Microsoft Docs
+title: IDebug 待定断点2：：绑定 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -8,23 +8,23 @@ helpviewer_keywords:
 - Bind method
 - IDebugPendingBreakpoint2::Bind method
 ms.assetid: 46e3f307-219d-40cd-a929-d41399c60ecf
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 2ba30628c426bd7031d750838491f9bcc70c14a9
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 83d48e8df847620716b0f581be65ded48e2e5a13
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66350740"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80725984"
 ---
 # <a name="idebugpendingbreakpoint2bind"></a>IDebugPendingBreakpoint2::Bind
-将此挂起断点绑定到一个或多个代码位置。
+将此挂起的断点绑定到一个或多个代码位置。
 
 ## <a name="syntax"></a>语法
 
@@ -39,12 +39,12 @@ int Bind();
 ```
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。 返回`E_BP_DELETED`如果断点已被删除。
+ 如果成功，返回`S_OK`;否则，返回错误代码。 如果`E_BP_DELETED`断点已被删除，则返回。
 
 ## <a name="remarks"></a>备注
- 调用此方法时，调试引擎 (DE) 应尝试将此挂起断点绑定到匹配的所有代码位置。
+ 调用此方法时，调试引擎 （DE） 应尝试将此挂起的断点绑定到匹配的所有代码位置。
 
- 此方法返回后，调用方需要等待调用的事件，该值指示挂起断点绑定或处于错误，然后假定[EnumBoundBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumboundbreakpoints.md)或[EnumErrorBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumerrorbreakpoints.md).methods 将分别枚举所有的绑定的或错误断点。
+ 此方法返回后，调用方需要等待指示挂起断点已绑定或出错的事件，然后再假定对[EnumBoundBreakpoint 或](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumboundbreakpoints.md) [EnumErrorBreakpoint](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumerrorbreakpoints.md).方法的调用将分别枚举所有绑定或错误断点。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)

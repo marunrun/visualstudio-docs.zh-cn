@@ -10,12 +10,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e68f2bdf0559dc2bea6bd349dbf5f9bedca3671e
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.openlocfilehash: ab46aef69bd6356eda0925c492a029b43cc57295
+ms.sourcegitcommit: 98421670ed0b8170aaa32d3d6f8681298f401a1d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77633312"
+ms.lasthandoff: 04/18/2020
+ms.locfileid: "81638035"
 ---
 # <a name="msbuild-inline-tasks"></a>MSBuild 内联任务
 
@@ -52,7 +52,7 @@ ms.locfileid: "77633312"
 
 - `TaskFactory` 属性命名实现内联任务工厂的类。
 
-- `AssemblyFile` 属性提供内联任务工厂的位置。 或者，可以使用 `AssemblyName` 属性来指定内联任务工厂类的完全限定的名称，它通常位于全局程序集缓存 (GAC) 中。
+- `AssemblyFile` 属性提供内联任务工厂的位置。 或者，可以使用 `AssemblyName` 属性来指定内联任务工厂类的完全限定的名称，该类通常位于 `$(MSBuildToolsPath)\Microsoft.Build.Tasks.Core.dll` 中。
 
 `DoNothing` 任务的其余元素为空，用于说明内联任务的顺序和结构。 本主题后面部分将提供更为全面的示例。
 

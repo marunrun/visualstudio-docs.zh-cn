@@ -1,6 +1,6 @@
 ---
 title: 步骤 6：添加计时器
-ms.date: 11/04/2016
+ms.date: 03/31/2020
 ms.topic: tutorial
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
@@ -13,12 +13,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 23d050df688d4d1efec75245e6f48d748464170c
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.openlocfilehash: 0473ab07155e0f132e8e6207361e409b804257f2
+ms.sourcegitcommit: ce3d0728ec1063ab548dac71c8eaf26d20450acc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77579324"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80472768"
 ---
 # <a name="step-6-add-a-timer"></a>步骤 6：添加计时器
 接下来，要向匹配游戏中添加 <xref:System.Windows.Forms.Timer> 控件。 计时器等待指定的毫秒数后，触发一个称为“Tick”  的事件。 这对于启动操作或定时重复操作很有用。 在本例中，你将使用一个计时器，让玩家开始选择两个图标，而如果图标不匹配，则在短暂时间后再次隐藏这两个图标。
@@ -48,12 +48,12 @@ ms.locfileid: "77579324"
     > [!NOTE]
     > Timer 对象具有 `Start()` 方法和 `Stop()` 方法，分别用以启动和停止计时器。 如果你在“属性”  窗口中将计时器的“Enabled”  属性设置为“True”  ，则只要程序开始运行，计时器就会开始计时。 但是，如果将该属性保留设置为“False”  ，则在调用计时器的 `Start()` 方法之前，计时器不会开始计时。 通常，计时器会使用 **Interval** 属性确定在计时周期之间等待的毫秒数，从而反复触发其 Tick 事件。 您可能已经注意到在 Tick 事件中调用计时器的 `Stop()` 方法的方式。 这会将计时器置于“单触发模式”  ，意味着调用 `Start()` 方法时，计时器会等待指定的间隔时间，触发单个 Tick 事件，然后停止。
 
-4. 若要查看正在使用的新计时器，请转至代码编辑器，将以下代码添加到 `label_Click()` 事件处理程序方法的顶部和底部。 （你要将 `if` 语句添加到顶部，将三个语句添加到底部；该方法的其余部分保持相同。）
+4. 若要查看正在使用的新计时器，请转至代码编辑器，将以下代码添加到 `label_Click()` 事件处理程序方法的顶部和底部。 （将两个 `if` 语句添加到顶部，将三个语句添加到底部；该方法的其余部分保持相同。）
 
      [!code-csharp[VbExpressTutorial4Step6#8](../ide/codesnippet/CSharp/step-6-add-a-timer_2.cs)]
      [!code-vb[VbExpressTutorial4Step6#8](../ide/codesnippet/VisualBasic/step-6-add-a-timer_2.vb)]
 
-     该方法顶部的代码通过检查 **Enabled** 属性的值来检查计时器是否已启动。 这样，如果玩家选择第一个和第二个 Label 控件，且计时器启动，则选择第三个控件将不会执行任何操作。
+     该方法顶部的代码通过检查 **Enabled** 属性的值来检查计时器是否已启动。 这样，如果玩家选择第一个和第二个 Label 控件，且计时器启动，则选择第三个控件将不会执行任何操作。 此外，它还可以防止玩家在游戏准备再次第一次单击之前进行第三次快速单击。 
 
      该方法底部的代码将 `secondClicked` 引用变量设置为跟踪玩家选择的第二个 Label 控件，然后将该标签的图标颜色设置为黑色以使其可见。 然后，它在单触发模式下启动计时器，以便在等待 750 毫秒后触发单个 Tick 事件。 计时器的 Tick 事件处理程序会隐藏这两个图标，并重置 `firstClicked` 和 `secondClicked` 引用变量，以便窗体准备就绪供玩家选择另一对图标。
 
@@ -63,6 +63,6 @@ ms.locfileid: "77579324"
 
 ## <a name="to-continue-or-review"></a>继续或查看
 
-- 要转到下一个教程步骤，请参阅 **[步骤 7：保持对可见](../ide/step-7-keep-pairs-visible.md)** 。
+- 要转到下一个教程步骤，请参阅[步骤 7：保持对可见  。
 
 - 要返回上一个教程步骤，请参阅[步骤 5：添加标签引用](../ide/step-5-add-label-references.md)。

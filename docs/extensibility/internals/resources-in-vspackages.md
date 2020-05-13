@@ -1,5 +1,5 @@
 ---
-title: Vspackage 中的资源 |Microsoft Docs
+title: VS 包中的资源 |微软文档
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - resources, managed VSPackages
 - VSPackages, managed resources
 ms.assetid: cc8c17a6-b190-4856-b001-0c1104f104b2
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 07e1e19f802203b9770764330ea894b7d0eb98b8
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 493e9834e3d7cf6d82cebb8dd93d5369678c7be0
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72724160"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80705606"
 ---
 # <a name="resources-in-vspackages"></a>VSPackage 中的资源
-可以将本地化的资源嵌入到本机附属 UI Dll、托管的附属 Dll 或托管的 VSPackage 本身中。
+您可以将本地化资源嵌入到本机卫星 UI DLL、托管卫星 DLL 或托管 VSPackage 本身中。
 
- 无法在 Vspackage 中嵌入某些资源。 可以嵌入以下托管类型：
+ 某些资源不能嵌入到 VSPackages 中。 可以嵌入以下托管类型：
 
 - 字符串
 
@@ -30,22 +30,22 @@ ms.locfileid: "72724160"
 
 - 工具窗口图标
 
-- 编译的命令表输出（CTO）文件
+- 编译的命令表输出 （CTO） 文件
 
 - CTO 位图
 
 - 命令行帮助
 
-- "关于" 对话框数据
+- 关于对话框数据
 
-  按资源 ID 选择管理包中的资源。 异常是 CTO 文件，必须将其命名为 CTMENU。 CTO 文件必须作为 `byte[]` 出现在资源表中。 所有其他资源项都按类型进行标识。
+  托管包中的资源由资源 ID 选择。 CTO 文件是一个例外，该文件必须命名为 CTMENU。 CTO 文件必须在资源表中显示为`byte[]`。 所有其他资源项均按类型标识。
 
-  您可以使用 <xref:Microsoft.VisualStudio.Shell.PackageRegistrationAttribute> 特性指示 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 托管资源可用。
+  可以使用 该<xref:Microsoft.VisualStudio.Shell.PackageRegistrationAttribute>属性指示[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]该托管资源可用。
 
   [!code-csharp[VSSDKResources#1](../../extensibility/internals/codesnippet/CSharp/resources-in-vspackages_1.cs)]
   [!code-vb[VSSDKResources#1](../../extensibility/internals/codesnippet/VisualBasic/resources-in-vspackages_1.vb)]
 
-  以这种方式设置 <xref:Microsoft.VisualStudio.Shell.PackageRegistrationAttribute> 表示 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 应在搜索资源时忽略非托管的附属 Dll，例如，通过使用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsShell.LoadPackageString%2A>。 如果 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 遇到两个或更多具有相同资源 ID 的资源，它将使用它找到的第一个资源。
+  以这种方式<xref:Microsoft.VisualStudio.Shell.PackageRegistrationAttribute>设置指示在[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]搜索资源时应忽略非托管的卫星 DLL，例如，通过使用<xref:Microsoft.VisualStudio.Shell.Interop.IVsShell.LoadPackageString%2A>。 如果[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]遇到两个或多个具有相同资源 ID 的资源，则使用它找到的第一个资源。
 
 ## <a name="example"></a>示例
  下面的示例是工具窗口图标的托管表示形式。
@@ -64,7 +64,7 @@ type="System.Resources.ResXFileRef,System.Windows.Forms">
 </data>
 ```
 
- 下面的示例演示如何嵌入 CTO 字节数组，该数组必须命名为 CTMENU。
+ 下面的示例演示如何嵌入必须命名为 CTMENU 的 CTO 字节数组。
 
 ```
 <data name="CTMENU"
@@ -80,11 +80,11 @@ type="System.Resources.ResXFileRef,System.Windows.Forms">
 </data>
 ```
 
-## <a name="implementation-notes"></a>实现注释
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 尽可能延迟加载 Vspackage。 在 VSPackage 中嵌入 CTO 文件的结果是，在安装过程中，[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 必须在内存中加载所有此类 Vspackage，这是在生成合并的命令表时。 可以通过检查元数据（无需在 VSPackage 中运行代码），从 VSPackage 中提取资源。 此时 VSPackage 未初始化，因此性能损失很小。
+## <a name="implementation-notes"></a>实现说明
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]尽可能延迟 VSPackages 的加载。 在 VSPackage 中嵌入 CTO 文件的结果是在安装程序[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]期间（即生成合并的命令表）期间，必须在内存中加载所有此类 VS 包。 无需在 VSPackage 中运行代码即可从 VSPackage 中提取资源。 VSPackage 此时未初始化，因此性能损失最小。
 
- 如果 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 在设置后从 VSPackage 请求资源，则可能已加载并初始化该程序包，因此性能损失会降至最低。
+ 在[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]安装程序后从 VSPackage 请求资源时，该包可能已加载和初始化，因此性能损失最小。
 
 ## <a name="see-also"></a>请参阅
 - [管理 VSPackages](../../extensibility/managing-vspackages.md)
-- [MFC 应用程序中已本地化的资源：附属 DLL](/cpp/build/localized-resources-in-mfc-applications-satellite-dlls)
+- [MFC 应用程序中的本地化资源：附属 DLL](/cpp/build/localized-resources-in-mfc-applications-satellite-dlls)

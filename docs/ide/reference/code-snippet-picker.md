@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: bb03da430f43bbfd5c7398c147560a9c823f8811
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75570487"
 ---
 # <a name="code-snippet-picker"></a>代码段选择器
@@ -42,7 +42,7 @@ Visual Studio 代码编辑器提供一种代码片段选择器，让你单击几
 
 - SQL：在代码编辑器中所需的位置处右击，以显示快捷菜单，然后单击“插入片段”  。
 
-在大多数 Visual Studio 开发语言中，可使用“代码片段管理器”将文件夹添加到文件夹列表，代码片段选择器会在该列表中扫描 XML 片段文件   。 也可以创建自己的片段添加到该列表。 有关详细信息，请参见[演练：创建代码片段](../../ide/walkthrough-creating-a-code-snippet.md)。
+在大多数 Visual Studio 开发语言中，可使用“代码片段管理器”将文件夹添加到文件夹列表，代码片段选择器会在该列表中扫描 XML 片段文件   。 也可以创建自己的片段添加到该列表。 详情请参阅[演练：创建代码片段](../../ide/walkthrough-creating-a-code-snippet.md)。
 
 ## <a name="uielement-list"></a>UIElement 列表
 
@@ -54,7 +54,7 @@ Visual Studio 代码编辑器提供一种代码片段选择器，让你单击几
 
 可以插入的代码片段的列表，或包含代码片段的文件夹的列表。 若要插入片段或展开文件夹，请选择所需的项，然后按 Enter。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [有关使用代码片段的最佳做法](../../ide/best-practices-for-using-code-snippets.md)
 - [Visual Basic IntelliSense 代码段](/dotnet/visual-basic/developing-apps/using-ide/intellisense-code-snippets)

@@ -15,10 +15,10 @@ monikerRange: vs-2017
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 89dadc3213620b668160752e919679cccead90bc
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74778019"
 ---
 # <a name="visual-studio-profiler-api-reference-native"></a>Visual Studio 探查器 API 参考（本机）
@@ -46,7 +46,7 @@ Visual Studio 探查器 API 允许你以编程方式控制收集的数据量，�
 
 [PROFILE_CURRENTID](../profiling/profile-currentid.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [分析工具 API](../profiling/profiling-tools-apis.md)
 - [演练：使用探查器 API](../profiling/walkthrough-using-profiler-apis.md)

@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: b80427999ad841c493e61cd704b64435f81c3914
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75565599"
 ---
 # <a name="references-page-project-designer-visual-basic"></a>项目设计器 ->“引用”页 (Visual Basic)
@@ -68,7 +68,7 @@ ms.locfileid: "75565599"
 
 可以在此框中键入自己的命名空间，并单击“添加用户导入”，将其添加到命名空间列表  。
 
-可以为用户导入的命名空间创建别名。 为此，可以使用“别名=命名空间”的格式输入别名和命名空间   。 使用长命名空间时此格式十分有用，例如：`Http= MyOrg.ObjectLib.Internet.WebRequestMethods.Http`。
+可以为用户导入的命名空间创建别名。 为此，可以使用“别名*命名空间”的格式输入别名和命名空间*=  。 使用长命名空间时此格式十分有用，例如：`Http= MyOrg.ObjectLib.Internet.WebRequestMethods.Http`。
 
  添加用户导入 
 
@@ -88,8 +88,8 @@ ms.locfileid: "75565599"
 
 - XML 命名空间，例如 `<xmlns:xsl="http://www.w3.org/1999/XSL/Transform">`。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [管理项目中的引用](../../ide/managing-references-in-a-project.md)
-- [如何：添加或删除导入的命名空间 (Visual Basic)](../../ide/how-to-add-or-remove-imported-namespaces-visual-basic.md)
+- [如何：添加或移除导入的命名空间 (Visual Basic)](../../ide/how-to-add-or-remove-imported-namespaces-visual-basic.md)
 - [Imports 语句（XML 命名空间）](/dotnet/visual-basic/language-reference/statements/imports-statement-xml-namespace)

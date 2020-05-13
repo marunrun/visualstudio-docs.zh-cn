@@ -10,10 +10,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: c2011438f1fcb0230cde0de527216456553e7c64
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75584434"
 ---
 # <a name="load-test-scenario-properties"></a>负载测试方案属性
@@ -56,6 +56,6 @@ ms.locfileid: "75584434"
 |**预热过程中禁用**|该布尔值用于指定方案是否应在负载测试的运行设置中指定的“预热持续时间”属性时间值期间运行  。<br /><br />有关负载测试运行设置属性的详细信息，请参阅[负载测试运行设置属性](../test/load-test-run-settings-properties.md)。<br /><br />有关详细信息，请参阅[配置方案启动延迟](../test/configure-scenario-start-delays.md)。|
 |**测试迭代之间的思考时间**|该数值用于指定测试迭代之间的等待时间（以秒为单位）。<br /><br />有关详细信息，请参阅[编辑思考时间以模拟网站上的人机交互延迟](../test/edit-think-times-in-load-test-scenarios.md)。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [编辑负载测试方案](../test/edit-load-test-scenarios.md)

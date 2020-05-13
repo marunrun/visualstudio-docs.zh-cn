@@ -20,10 +20,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 5e1f067df647f843819e085f283005606699f3bb
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75595470"
 ---
 # <a name="find-in-files"></a>在文件中查找
@@ -34,11 +34,11 @@ ms.locfileid: "75595470"
 
 ## <a name="to-display-find-in-files"></a>显示“在文件中查找”
 
-1. 在菜单栏中，依次选择“编辑” > “查找和替换”   。
+1. 在菜单栏中，依次选择“编辑” **“查找和替换”**  >   。
 
 1. 选择“在文件中查找”  。
 
-若要取消“查找”操作，请按 Ctrl + Break   。
+若要取消“查找”操作，请按 Ctrl**Break** +   。
 
 > [!NOTE]
 > “查找和替换”工具不会搜索具有 `Hidden` 或 `System` 属性的目录。
@@ -52,7 +52,7 @@ ms.locfileid: "75595470"
 
 ## <a name="look-in"></a>查找范围
 
-从“查找范围”下拉列表中选择的选项可确定是仅在当前活动文件中进行“在文件中查找”搜索，还是在存储于某些文件夹的所有文件中进行此种搜索   。 从列表中选择搜索范围，或单击“浏览(...)”按钮以显示“选择搜索文件夹”对话框并输入自己的目录集   。 也可以直接在“查找范围”框中键入路径  。
+从“查找范围”  下拉列表中选择的选项将确定“在文件中查找”  是仅在当前活动文件中搜索，还是在特定文件夹内存储的所有文件中搜索。 从列表中选择搜索范围，或单击“浏览(...)”按钮以显示“选择搜索文件夹”对话框并输入自己的目录集   。 也可以直接在“查找范围”框中键入路径  。
 
 > [!WARNING]
 > 使用“整个解决方案”或“当前项目”选项，可不搜索项目和解决方案文件   。 如果想要在项目文件进行查找，请选择搜索文件夹。
@@ -106,7 +106,7 @@ ms.locfileid: "75595470"
 
 从搜索的结果追加到以前的搜素结果。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [查找和替换文本](../ide/finding-and-replacing-text.md)
 - [在文件中替换](../ide/replace-in-files.md)

@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 53819a642edcdf0419dd445ac32dbde8d14ffb22
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77579520"
 ---
 # <a name="verifyfilehash-task"></a>VerifyFileHash 任务
@@ -32,7 +32,7 @@ ms.locfileid: "77579520"
 
  下表描述了 `VerifyFileHash` 任务的参数。
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
 |`File`|必选 `String` 参数。<br /><br />要进行哈希处理和验证的文件。|
 |`Hash`|必选 `String` 参数。<br /><br />预期的文件哈希。|
@@ -85,7 +85,7 @@ ms.locfileid: "77579520"
   </Target>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [任务](../msbuild/msbuild-tasks.md)
 - [任务参考](../msbuild/msbuild-task-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: DEBUGPROP_INFO_FLAGS | Microsoft Docs
+title: DEBUGPROP_INFO_FLAGS |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - DBGPROP_INFO_FLAGS enumeration
 ms.assetid: 1c7fe777-615e-4929-9ed4-970d9fe0eb81
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ae512bec8f88be81a0c45ddf541c94d78b483284
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: fa7e4a498188dc91f2a47b3ccf27f367f15ec77b
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66318376"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80737404"
 ---
-# <a name="debugpropinfoflags"></a>DEBUGPROP_INFO_FLAGS
-指定要检索有关调试属性对象的信息。
+# <a name="debugprop_info_flags"></a>DEBUGPROP_INFO_FLAGS
+指定要检索的有关调试属性对象的哪些信息。
 
 ## <a name="syntax"></a>语法
 
@@ -87,47 +87,47 @@ public enum enum_DEBUGPROP_INFO_FLAGS {
 初始化/使用`dwAttrib`字段。
 
 `DEBUGPROP_INFO_PROP`\
-初始化/用`pProperty`包含的字段[IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)接口。
+初始化/使用包含`pProperty` [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)接口的字段。
 
 `DEBUGPROP_INFO_VALUE_AUTOEXPAND`\
-指定的值字段应包含自动扩展值中，是否可用，此类型的对象。
+指定值字段应包含此类型对象的自动展开值（如果可用）。
 
 `DEBUGPROP_INFO_VALUE_NOFUNCEVAL`\
-已否决。
+已弃用。
 
 `DEBUGPROP_INFO_VALUE_RAW`\
-不返回任何非常值或成员 （即，不应格式化值）。
+不要返回任何美化值或成员（即，不要格式化值）。
 
 `DEBUGPROP_INFO_VALUE_NO_TOSTRING`\
-不返回任何特殊的合成的值 (例如，不要调用`ToString()`某个对象以生成值)。
+不要返回任何特殊的合成值（例如，不要调用`ToString()`对象来生成值）。
 
 `DEBUGPROP_INFO_NONE`\
-指定未设置任何标志。
+指定不设置任何标志。
 
 `DEBUGPROP_INFO_STANDARD`\
-初始化/用`dwAttrib`， `bstrName`， `bstrType`，和`bstrValue`字段。
+初始化/使用`dwAttrib`、`bstrName``bstrType`和`bstrValue`字段。
 
 `DEBUGPROP_INFO_All`\
 指示所有标志的掩码。
 
 ## <a name="remarks"></a>备注
-这些值传递给[GetPropertyInfo](../../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md)， [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md)，并[EnumProperties](../../../extensibility/debugger/reference/idebugstackframe2-enumproperties.md)方法，以指示哪些字段是要初始化[DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md)结构。
+这些值将传递给[GetPropertyInfo、Enum](../../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md)[子项](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md)和[枚举属性](../../../extensibility/debugger/reference/idebugstackframe2-enumproperties.md)方法，以指示要初始化[DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md)结构的字段。
 
-这些值还可用于`dwFields`的成员`DEBUG_PROPERTY_INFO`结构，用于指示结构的哪些字段是使用，有效时返回该结构。
+这些值还用于`dwFields``DEBUG_PROPERTY_INFO`结构的成员，以指示在返回结构时使用结构的字段并有效。
 
-可能的按位组合这些值`OR`。
+这些值可以稍微结合`OR`。
 
 ## <a name="requirements"></a>要求
-标头： msdbg.h
+标题： msdbg.h
 
-命名空间:Microsoft.VisualStudio.Debugger.Interop
+命名空间：微软.VisualStudio.调试器.互通
 
-程序集：Microsoft.VisualStudio.Debugger.Interop.dll
+程序集：微软.VisualStudio.调试器.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [枚举](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)
-- [GetPropertyInfo](../../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md)
+- [获取财产信息](../../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md)
 - [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md)
 - [EnumProperties](../../../extensibility/debugger/reference/idebugstackframe2-enumproperties.md)
 - [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md)

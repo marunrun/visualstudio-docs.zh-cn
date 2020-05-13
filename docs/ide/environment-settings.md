@@ -8,11 +8,11 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 780f9e6cdd3a2b30a8cc5ce31b0c8cc61a6d5e55
-ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78408374"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79306847"
 ---
 # <a name="environment-settings-for-visual-studio"></a>Visual Studio 的环境设置
 
@@ -32,7 +32,7 @@ ms.locfileid: "78408374"
 
 要在首次打开 Visual Studio 后更改开发设置，请按照下列步骤操作：
 
-1. 选择菜单栏中的“工具” > “导入和导出设置”，打开“导入和导出设置向导”    。
+1. 选择菜单栏中的“工具” **“导入和导出设置”，打开“导入和导出设置向导”**  >    。
 
 1. 在“导入和导出设置向导”中，选择“重置所有设置”，然后选择“下一步”    。
 
@@ -46,7 +46,7 @@ ms.locfileid: "78408374"
 
 1. 在“重置完成”页上，选择“关闭”   。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [跨多台计算机同步设置](synchronized-settings-in-visual-studio.md)
 - [个性化设置 Visual Studio IDE](personalizing-the-visual-studio-ide.md)

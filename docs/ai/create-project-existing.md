@@ -1,18 +1,19 @@
 ---
 title: 通过现有代码创建 AI 项目
-author: lisawong19
-ms.author: liwong
-manager: routlaw
+author: jillre
+ms.author: jillfra
+manager: jillfra
+monikerRange: vs-2017
 ms.date: 11/13/2017
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 0981a276a21e1b3f816c6a182df29f1c4adb0d1c
-ms.sourcegitcommit: 57bc1c3887838d707c13feff72a677b3bad3be4b
+ms.openlocfilehash: 416a3358f6fab1fa106f54a360fc156abc16c6dc
+ms.sourcegitcommit: 9c1cecaff4d9955276eee7865b78d47679dd1e2a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72777441"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80638623"
 ---
 # <a name="create-an-ai-project-from-existing-code"></a>通过现有代码创建 AI 项目
 
@@ -40,6 +41,6 @@ ms.locfileid: "72777441"
 > [!div class="nextstepaction"]
 > [教程：在 Visual Studio 中使用 Python](../python/tutorial-working-with-python-in-visual-studio-step-00-installation.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [手动标识现有的 Python 环境](../python/managing-python-environments-in-visual-studio.md#manually-identify-an-existing-environment)

@@ -12,10 +12,10 @@ dev_langs:
 ms.workload:
 - nodejs
 ms.openlocfilehash: 792c74a3b5da5ed6528fa3919a0c60625d1a38ef
-ms.sourcegitcommit: 5806d463780368515e59c2614ed9cfaaa4ab4b91
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/07/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77071942"
 ---
 # <a name="unit-testing-javascript-and-typescript-in-visual-studio"></a>在 Visual Studio 中对 JavaScript 和 TypeScript 代码进行单元测试
@@ -70,7 +70,7 @@ describe('Test Suite 1', function() {
 > [!Note]
 > 单元测试选项将优先于单个文件的设置。
 
-打开测试资源管理器（选择“测试” > “Windows” > “测试资源管理器”）后，Visual Studio 发现并显示测试    。 如果开始未显示测试，则重新生成项目以刷新列表。
+打开测试资源管理器（选择“测试” **“Windows”** “测试资源管理器”）后，Visual Studio 发现并显示测试 >    >   。 如果开始未显示测试，则重新生成项目以刷新列表。
 
 ![测试资源管理器](../javascript/media/UnitTestsDiscoveryMocha.png)
 

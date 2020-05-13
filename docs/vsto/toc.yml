@@ -794,6 +794,8 @@
               href: deploying-an-office-solution-by-using-clickonce.md
             - name: 使用 Windows Installer 部署 Office 解决方案
               href: deploying-an-office-solution-by-using-windows-installer.md
+            - name: 使用 Visual Studio 安装项目部署 Office 解决方案
+              href: deploying-a-vsto-solution-by-using-windows-installer.md
             - name: Office 解决方案部署疑难解答
               items:
                 - name: Office 解决方案部署疑难解答

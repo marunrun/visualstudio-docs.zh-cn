@@ -11,15 +11,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 305c562c7600dc6955ce0307db92f4e257fc1c21
-ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
+ms.sourcegitcommit: 95f26af1da51d4c83ae78adcb7372b32364d8a2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78410240"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79301487"
 ---
 # <a name="extend-dependency-diagrams"></a>扩展依赖项关系图
 
-您可以编写代码来创建和更新依赖关系图，并针对 Visual Studio 中的依赖项关系图验证程序代码的结构。 可以添加显示在关系图的快捷（上下文）菜单上的命令、自定义拖放笔势并从文本模板访问层模型的命令。 可以将这些扩展打包到 Visual Studio 集成扩展 (VSIX) 中，并将其分发给其他 Visual Studio 用户。
+您可以编写代码来创建和更新依赖关系关系图，并根据 Visual Studio 中的依赖关系关系图验证程序代码的结构。 可以添加显示在关系图的快捷（上下文）菜单上的命令、自定义拖放笔势并从文本模板访问层模型的命令。 可以将这些扩展打包到 Visual Studio 集成扩展 (VSIX) 中，并将其分发给其他 Visual Studio 用户。
 
 ## <a name="requirements"></a>要求
 
@@ -29,11 +29,11 @@ ms.locfileid: "78410240"
 
 - [Visual Studio SDK](../extensibility/visual-studio-sdk.md)
 
-- Visual Studio 的建模 SDK
+- 可视化工作室建模 SDK
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 
-你必须在要运行层扩展的计算机上安装合适版本的 Visual Studio。 若要查看支持依赖关系图的 Visual Studio 版本，请参阅[体系结构和建模工具的版本支持](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)。
+您必须在要运行图层扩展的计算机上安装合适的 Visual Studio 版本。 要查看哪些版本的 Visual Studio 支持依赖关系图，请参阅[体系结构和建模工具的"版本"支持](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)。
 
 ## <a name="see-also"></a>另请参阅
 

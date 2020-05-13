@@ -10,23 +10,23 @@ dev_langs:
 ms.assetid: 74dca14c-5071-416f-a92b-d09f95e3dfb8
 caps.latest.revision: 1
 author: bowdenk7
-ms.author: wilkelly
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 2a0d3657843dcf282e5c9aab8609efe5f9611965
-ms.sourcegitcommit: 9eff8371b7a79a637ebb6850f775dd3eed343d8b
+ms.openlocfilehash: 9df1b66f1a2407d523e38cd71fc9ffa993cd2d92
+ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78234951"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81649632"
 ---
 # <a name="javascript-in-visual-studio-2017"></a>Visual Studio 2017 中的 JavaScript
 
 JavaScript 是 Visual Studio 中的一级语言。 当你在 Visual Studio IDE 中编写 JavaScript 代码时，你可以使用该标准编辑帮助（代码片段，IntelliSense 等等）的大部分或全部。 对于许多应用程序类型和服务，可以编写 JavaScript 代码。
 
 > [!NOTE]
-> 我们汇集了整个社区的力量，将所有 Microsoft JavaScript API 参考（超过 500 页）从 docs.microsoft.com 重定向到其 MDN 对应位置，以使 [MDN Web 文档](https://developer.mozilla.org/en-US/)成为 Web 的一站式首要开发资源。 有关详细信息，请参阅此[公告](https://blogs.windows.com/msedgedev/2018/06/26/chakra-docs-mdn-web-docs/)。
+> 我们汇集了整个社区的力量，将所有 Microsoft 的 JavaScript API 参考（超过 500 页）从 docs.microsoft.com 重定向到其 MDN 对应位置，以使 [MDN Web 文档](https://developer.mozilla.org/en-US/)成为 Web 的一站式首要开发资源。 有关详细信息，请参阅此[公告](https://blogs.windows.com/msedgedev/2018/06/26/chakra-docs-mdn-web-docs/)。
 
-## 对 ECMAScript 2015 (ES6) 和更高版本的 <a name="ES6"></a> 支持
+## <a name="support-for-ecmascript-2015-es6-and-beyond"></a>对 ECMAScript 2015 (ES6) 和更高版本的 <a name="ES6"></a> 支持
 
 Visual Studio 现在支持 ECMAScript 语言更新（例如 ECMAScript 2015/2016）的语法。
 
@@ -58,7 +58,7 @@ Tsconfig 文件的必需设置如下：
 应向此设置添加输出位置和非项目文件夹（如 `node_modules` 或 `temp`）。
 - `enableAutoDiscovery`：此设置按上面所述启用自动检测和下载定义文件。
 - `compileOnSave`：此设置指示编译器是否只要在 Visual Studio 中保存源文件时就应重新编译。
-- `typeAcquisition`：这组设置控制自动类型获取的行为（[这一部分](/visualstudio/ide/javascript-intellisense#Auto)进一步说明了这一点）
+- `typeAcquisition`：这组设置控制自动类型获取的行为（[这一部分](../ide/javascript-intellisense.md#Auto)进一步说明了这一点）
 
 为了将 JavaScript 文件转换为 CommonJS 模块并将其放置在 `./out` 文件夹中，可以使用以下 `tsconfig.json` 文件：
 
@@ -118,7 +118,7 @@ exports.default = Subscription_1.Subscription;
 
 [!include[vs_dev15](../../docs/misc/includes/vs_dev15_md.md)] 中的 JavaScript IntelliSense 现将显示有关参数和成员列表的详细信息。 此新信息由 TypeScript 语言服务提供，该服务在后台使用静态分析来更好地了解使用者的代码。 可以在[此处](/visualstudio/ide/javascript-intellisense/)阅读有关新的 IntelliSense 体验及其工作原理的详细信息。
 
-## <a name="JSX"></a>JSX 语法支持
+## <a name="jsx-syntax-support"></a><a name="JSX"></a>JSX 语法支持
 
 [!include[vs_dev15](../../docs/misc/includes/vs_dev15_md.md)] 中的 JavaScript 提供丰富的 JSX 语法支持。 JSX 是允许在 JavaScript 文件中使用 HTML 标记的语法集。
 

@@ -1,5 +1,5 @@
 ---
-title: IDebugEnumField::GetStringFromValue |Microsoft Docs
+title: IDebugenumfield：：从价值中获取字符串 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugEnumField::GetStringFromValue method
 ms.assetid: 5f95fd0c-fdce-497f-9f54-2ad8749494e9
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: cd7466e5390cff747532dca0343680cf359db46a
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 5de59c573f7e233ea2aacb0dfa38826051c59373
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66345089"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80730284"
 ---
 # <a name="idebugenumfieldgetstringfromvalue"></a>IDebugEnumField::GetStringFromValue
 此方法获取给定其值的枚举常量的名称。
@@ -43,16 +43,16 @@ int GetStringFromValue(
 
 ## <a name="parameters"></a>参数
 `value`\
-[in]要为其获取枚举的名称的常量值。
+[在]要获取枚举常量名称的值。
 
 `pbstrValue`\
-[out]返回的枚举常量的名称。
+[出]返回枚举常量的名称。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回`S_FALSE`如果的值没有关联的名称，或返回错误代码。
+ 如果成功，返回`S_OK`;否则，如果`S_FALSE`值没有关联名称，则返回，或者返回错误代码。
 
 ## <a name="remarks"></a>备注
- 如果有多个相同的值与关联的名称，将返回在枚举中定义的第一个名称。
+ 如果有多个名称与同一值关联，则将返回枚举中定义的第一个名称。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugEnumField](../../../extensibility/debugger/reference/idebugenumfield.md)

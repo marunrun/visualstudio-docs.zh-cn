@@ -1,17 +1,18 @@
 ---
 title: Visual Studio 订阅中的 LinkedIn 学习权益 | Microsoft 文档
 author: evanwindom
-ms.author: lank
+ms.author: v-evwin
 manager: lank
-ms.date: 02/12/2020
+ms.assetid: 5bba2205-d32f-413d-9b58-724a24993842
+ms.date: 04/17/2020
 ms.topic: conceptual
 description: 了解有关所选 Visual Studio 订阅中包含的作为 LinkedIn Premium 订阅一部分的 LinkedIn Learning 权益。
-ms.openlocfilehash: f6c5206055835605ae529f1f07159611bcd6bf7d
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+ms.openlocfilehash: a0b837ce4a86b48acb690030c1a96064b336cd61
+ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2020
-ms.locfileid: "77278848"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81649532"
 ---
 # <a name="the-linkedin-learning-benefit-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 LinkedIn Learning 权益
 
@@ -26,7 +27,7 @@ ms.locfileid: "77278848"
 
 2. 在教育类别中找到 LinkedIn 学习磁贴，然后单击“获取代码”  链接。
    > [!div class="mx-imgBorder"]
-   > ![LinkedIn Learning：权益磁贴](_img/vs-linkedin/vs-linkedin-3-month-tile.png)
+   > ![LinkedIn Learning：权益磁贴](_img/vs-linkedin/vs-linkedin-6-month-tile.png)
 
 3. 如果你已拥有 LinkedIn 帐户并且已自动登录，则会立即进入 LinkedIn 学习权益激活页。  如果你拥有 LinkedIn 帐户但是未自动登录，则只需输入用户名和密码，然后单击“登录”  。  请跳到[此步骤](#activate-your-offer)以激活产品/服务。
 
@@ -78,7 +79,7 @@ ms.locfileid: "77278848"
 | MSDN 平台（标准）                                          | VL、零售                                              | 不可用                                              | NA         |
 | Visual Studio Enterprise、Visual Studio Professional（月度云） | Azure                                       | 不可用                                                           |NA|
 
-<sup>1</sup>  *包括：限制转售 (NFR)、Visual Studio 行业合作伙伴 (VSIP)。不包括：Microsoft 合作伙伴网络 (MPN)、FTE、MCT 软件和服务开发人员、BizSpark、Imagine、最有价值专家 (MVP)、区域总监 (RD)。MCT 软件和服务*。
+<sup>1</sup>  包括：限制转售 (NFR)、Visual Studio 行业合作伙伴 (VSIP)。不包括：Microsoft 合作伙伴网络 (MPN)、FTE、MCT 软件和服务开发人员、BizSpark、Imagine、最有价值专家 (MVP)、区域总监 (RD)。MCT 软件和服务。
 
 > [!NOTE]
 > Microsoft 不再在云订阅中提供 Visual Studio Professional 年度订阅和 Visual Studio Enterprise 年度订阅。 现有客户体验以及续订、增加、减少或取消订阅的能力不会发生变化。 建议新客户访问 [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/)，查看各 Visual Studio 购买选项。
@@ -95,6 +96,12 @@ ms.locfileid: "77278848"
   - 帮助解答有关 [LinkedIn](https://www.linkedin.com/help/linkedin) 的常规问题，例如创建帐户和个人资料，以及维护网络。
 - 有关 Visual Studio 订阅的销售、订阅、帐户和账单的帮助，请与 Visual Studio [订阅支持](https://visualstudio.microsoft.com/subscriptions/support/)联系。
 - 对有关 Visual Studio IDE、Azure DevOps Services 或其他 Visual Studio 产品或服务有疑问？  请访问 [Visual Studio 支持](https://visualstudio.microsoft.com/support/)。
+
+## <a name="see-also"></a>请参阅
+- [Visual Studio 文档](https://docs.microsoft.com/visualstudio/)
+- [Azure DevOps 文档](https://docs.microsoft.com/azure/devops/)
+- [Azure 文档](https://docs.microsoft.com/azure/)
+- [Microsoft 365 文档](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>后续步骤
 查看订阅中包含的其他权益。 请访问 [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)。

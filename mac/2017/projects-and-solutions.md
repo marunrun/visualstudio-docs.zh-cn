@@ -6,10 +6,10 @@ ms.author: dominicn
 ms.date: 05/06/2018
 ms.assetid: 8254505D-D96E-48BD-8A5E-CF6A917897EA
 ms.openlocfilehash: d0cf61c94161e6d6bef6cd580e5fb342a177c1c4
-ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "74983508"
 ---
 # <a name="projects-and-solutions"></a>项目和解决方案
@@ -24,6 +24,6 @@ Visual Studio for Mac 提供 Solution Pad 以显示整个打开的解决方案�
 
 通过双击项目或解决方案名称或右键单击并浏览到“选项”可以同时管理项目和解决方案的属性  。 有关这些选项的详细信息，请参阅[管理解决方案和项目属性](managing-solutions-and-project-properties.md)一文。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Studio 中的解决方案和项目 (Windows)](/visualstudio/ide/solutions-and-projects-in-visual-studio)

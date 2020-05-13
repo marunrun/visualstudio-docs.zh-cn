@@ -1,5 +1,5 @@
 ---
-title: IDebugExpressionContext2::ParseText | Microsoft Docs
+title: IDebugExpressionContext2：:Prse文本 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugExpressionContext2::ParseText
 ms.assetid: f58575db-f926-4ac8-83ff-7b3b86ab61e2
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 170183924c31933f77903a89851c15c463c326e6
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: a8494c9c90c4cb6e94115c542a25e12e948f7064
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66325914"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80729649"
 ---
 # <a name="idebugexpressioncontext2parsetext"></a>IDebugExpressionContext2::ParseText
-分析中以供以后计算的文本形式的表达式。
+在文本窗体中分析表达式，以便以后进行计算。
 
 ## <a name="syntax"></a>语法
 
@@ -51,33 +51,33 @@ int ParseText(
 
 ## <a name="parameters"></a>参数
 `pszCode`\
-[in]要分析的表达式。
+[在]要解析的表达式。
 
 `dwFlags`\
-[in]中的标志的组合[PARSEFLAGS](../../../extensibility/debugger/reference/parseflags.md)控制分析的枚举。
+[在]控制解析的[PARSEFLAGS](../../../extensibility/debugger/reference/parseflags.md)枚举中的标志的组合。
 
 `nRadix`\
-[in]若要在分析中的任何数字信息中使用的基数`pszCode`。
+[在]用于分析 中任何数值信息的`pszCode`半径。
 
 `ppExpr`\
-[out]返回[IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md)对象，表示已分析的表达式，即准备好进行绑定和评估。
+[出]返回表示解析表达式的[IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md)对象，该对象已准备好进行绑定和评估。
 
 `pbstrError`\
-[out]如果表达式包含错误，则返回错误消息。
+[出]如果表达式包含错误，则返回错误消息。
 
 `pichError`\
-[out]返回中的错误的字符索引`pszCode`如果表达式包含错误。
+[出]如果表达式包含错误，则返回`pszCode`中的错误的字符索引。
 
 ## <a name="return-value"></a>返回值
-如果成功，则返回`S_OK`; 否则为返回错误代码。
+如果成功，返回`S_OK`;否则，返回错误代码。
 
 ## <a name="remarks"></a>备注
-调用此方法时，调试引擎 (DE) 应分析表达式，并验证正确。 `pbstrError`和`pichError`可能填充参数，如果表达式无效。
+调用此方法时，调试引擎 （DE） 应分析表达式并验证其正确性。 如果`pbstrError`表达式`pichError`无效，可以填充 和 参数。
 
-请注意，不会计算表达式，只能分析。 稍后调用[EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md)或[EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md)方法计算已分析的表达式的值。
+请注意，表达式不计算，仅解析。 稍后对[评估同步](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md)或[评估 Async](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md)方法的调用将评估解析的表达式。
 
 ## <a name="example"></a>示例
-下面的示例演示如何实现此方法对于简单`CEnvBlock`公开的对象[IDebugExpressionContext2](../../../extensibility/debugger/reference/idebugexpressioncontext2.md)接口。 此示例将视为的表达式无法被分析为环境变量的名称，并从该变量中检索值。
+下面的示例演示如何为公开[IDebugExpressionContext2](../../../extensibility/debugger/reference/idebugexpressioncontext2.md) `CEnvBlock`接口的简单对象实现此方法。 本示例将表达式视为环境变量的名称，并从该变量检索值。
 
 ```cpp
 HRESULT CEnvBlock::ParseText(

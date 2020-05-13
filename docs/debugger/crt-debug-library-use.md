@@ -30,13 +30,13 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 20aeee220bec600c2232286d18600b04201ad03b
 ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/22/2019
 ms.locfileid: "72745610"
 ---
 # <a name="crt-debug-library-use"></a>CRT 调试库使用
-C 运行时库提供了广泛的调试支持。 若要使用其中一个 CRT 调试库，则必须与 [/DEBUG](/cpp/build/reference/debug-generate-debug-info) 链接，并使用 /MDd、/MTd 或 /LDd 进行编译
+C 运行时库提供了广泛的调试支持。 若要使用其中一个 CRT 调试库，则必须与 [/DEBUG](/cpp/build/reference/debug-generate-debug-info) 链接，并使用 /MDd  、/MTd  或 /LDd  进行编译
 
 ## <a name="remarks"></a>备注
  CRT 调试的主要定义和宏可在 CRTDBG.h 头文件中找到。

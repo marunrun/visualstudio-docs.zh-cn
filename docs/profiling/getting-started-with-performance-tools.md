@@ -13,10 +13,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: faba7a6d2e698e919c0f0adca6fa574838b8b3c4
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74779202"
 ---
 # <a name="getting-started-with-performance-tools"></a>性能工具入门
@@ -27,9 +27,9 @@ Visual Studio 提供了几种收集、查看和分析代码性能数据的方法
 
 - 性能报告提供有关应用程序结构、源代码行和进程的不同级别的视图。 性能报告显示应用执行数据，范围从特定函数的调用和被调用函数到整个应用的调用树。
 
-若要快速分析项目、应用或 ASP.NET 网站，请选择“调试” > “性能探查器”，然后选择“性能向导”    。 有关详细说明，请参阅[性能分析初学者指南](../profiling/beginners-guide-to-cpu-sampling.md)和[如何：收集网站的性能数据](../profiling/how-to-collect-performance-data-for-a-web-site.md)。
+若要快速分析项目、应用或 ASP.NET 网站，请选择“调试” **“性能探查器”，然后选择“性能向导”**  >    。 有关详细说明，请参阅[性能分析初学者指南](../profiling/beginners-guide-to-cpu-sampling.md)和[如何：收集网站的性能数据](../profiling/how-to-collect-performance-data-for-a-web-site.md)。
 
-若要手动指定和配置性能分析会话，请选择“调试” > “探查器” > “性能资源管理器”    。 使用“性能资源管理器”中的“目标”文件夹和“属性”页面来配置会话    。 有关说明，请参阅[如何：手动创建性能会话](../profiling/how-to-manually-create-performance-sessions.md)。
+若要手动指定和配置性能分析会话，请选择“调试” **“探查器”** “性能资源管理器” >    >   。 使用“性能资源管理器”中的“目标”文件夹和“属性”页面来配置会话    。 有关说明，请参阅[如何：手动创建性能会话](../profiling/how-to-manually-create-performance-sessions.md)。
 
 **另请参阅：**
 

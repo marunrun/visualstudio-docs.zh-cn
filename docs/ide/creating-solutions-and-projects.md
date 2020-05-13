@@ -15,11 +15,11 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 503b343299f7b30e9f5e834099274215b262a635
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75589742"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79306793"
 ---
 # <a name="create-solutions-and-projects"></a>创建解决方案和项目
 
@@ -141,7 +141,7 @@ ms.locfileid: "75589742"
 
 1. 选择包含解决方案的文件夹，然后按 Delete 键  。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [解决方案和项目](../ide/solutions-and-projects-in-visual-studio.md)
 - [GitHub 上的 Microsoft 开放源代码存储库](https://github.com/Microsoft)

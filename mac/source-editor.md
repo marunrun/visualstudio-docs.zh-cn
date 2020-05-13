@@ -6,15 +6,15 @@ ms.author: cobey
 ms.date: 05/06/2018
 ms.assetid: A018A314-C1C4-4F36-BCB6-2D434208FCFE
 ms.openlocfilehash: d1ea74b4893032252d04ebe5fe5e65ca1eedaeeb
-ms.sourcegitcommit: 9fc8b144d4ed1c46aba87c0b7e1d24454e0eea9d
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "68493245"
 ---
 # <a name="source-editor"></a>源编辑器
 
-可靠的源编辑器对简单高效地编写代码至关重要。 Visual Studio for Mac 提供了成熟的源编辑器，它是与 IDE 进行的交互的中心。 源编辑器提供了轻松工作所需的功能：从语法突出显示、代码片段和代码折叠等基础功能，到其 Roslyn 编译集成（如全功能 IntelliSense 代码完成）带来的优势，功能全面。
+可靠的源编辑器对简单高效地编写代码至关重要。 Visual Studio for Mac 提供了成熟的源编辑器，它是与 IDE 进行的交互的中心。 源编辑器提供了用户轻松工作所需的功能：从语法突出显示、代码片段和代码折叠等基础功能，到其 Roslyn 编译集成（如全功能 IntelliSense 代码完成）带来的优势，功能全面。
 
 Visual Studio for Mac 中的源编辑器支持与 IDE 中的所有其他功能（如调试、重构和版本控制集成）的无缝体验。
 
@@ -46,7 +46,7 @@ Visual Studio for Mac 提供许多强大的功能，最大限度提高了跨平�
 
 此菜单项也可用于启用或禁用代码折叠。
 
-## <a name="word-wrap"></a>自动换行
+## <a name="word-wrap"></a>“自动换行”
 
 当处理长代码行或视图空间有限时，自动换行可以帮助你管理空间。 自动换行还可以确保你的代码视图包含源文件的全部内容，即使在打开可能会遮挡视图或缩小源视图宽度的窗格时也是如此。 
 
@@ -78,7 +78,7 @@ Visual Studio for Mac 提供许多强大的功能，最大限度提高了跨平�
 
 ![显示突出显示颜色的示例](media/source-editor-image7.png)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [代码编辑器功能（Windows 上的 Visual Studio）](/visualstudio/ide/writing-code-in-the-code-and-text-editor)
 - [大纲显示（Windows 上的 Visual Studio）](/visualstudio/ide/outlining)

@@ -10,10 +10,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 4b7b60ad871f40e06e2a8fbf6782773ce6596f31
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74779670"
 ---
 # <a name="collect-concurrency-data-for-a-service-by-using-the-profiler-command-line"></a>使用探查器命令行收集服务的并发数据
@@ -52,5 +52,5 @@ ms.locfileid: "74779670"
 
 - [并发可视化工具](../profiling/concurrency-visualizer.md)
 
-## <a name="reference"></a>参考
+## <a name="reference"></a>引用
 - [命令行分析工具参考](../profiling/command-line-profiling-tools-reference.md)

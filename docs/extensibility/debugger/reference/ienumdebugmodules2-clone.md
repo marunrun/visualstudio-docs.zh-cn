@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugModules2::Clone | Microsoft Docs
+title: IEnum调试模块2：：克隆 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IEnumDebugModules2::Clone
 ms.assetid: fd6d3abc-20d9-4f6f-9c8e-5bd29f68d47d
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: fe930c4fbcc25dbe8f8c8c02b68b3ee40ac25129
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 77dd68fadad5300a7a96787d91fbb17d9d456f60
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66350276"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80716599"
 ---
 # <a name="ienumdebugmodules2clone"></a>IEnumDebugModules2::Clone
-返回当前枚举作为一个单独的对象的副本。
+将当前枚举的副本作为单独的对象返回。
 
 ## <a name="syntax"></a>语法
 
@@ -41,13 +41,13 @@ int Clone(
 
 ## <a name="parameters"></a>参数
 `ppEnum`\
-[out]返回此枚举作为一个单独的对象的副本。
+[出]将此枚举的副本作为单独的对象返回。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，返回`S_OK`;否则，返回错误代码。
 
 ## <a name="remarks"></a>备注
- 枚举的副本在调用此方法时都具有与原始相同的状态。 但是，该副本的和原始的状态是独立的并且可以单独更改。
+ 枚举的副本在调用此方法时与原始副本具有相同的状态。 但是，副本和原始副本的状态是分开的，可以单独更改。
 
 ## <a name="see-also"></a>请参阅
 - [IEnumDebugModules2](../../../extensibility/debugger/reference/ienumdebugmodules2.md)

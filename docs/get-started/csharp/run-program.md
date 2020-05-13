@@ -15,12 +15,12 @@ dev_langs:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2ffe52fc2bf7d05084307b4d972e45f4b1d2acdf
-ms.sourcegitcommit: 4be64917e4224fd1fb27ba527465fca422bc7d62
+ms.openlocfilehash: ee28bde6de10006ccfdc5175cca629ad9d1590d0
+ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76928104"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81649639"
 ---
 # <a name="how-to-run-a-c-program-in-visual-studio"></a>如何：在 Visual Studio 中运行 C# 程序
 

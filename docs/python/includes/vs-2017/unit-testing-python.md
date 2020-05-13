@@ -11,10 +11,10 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: 9843b47e38d5d33a25c455efe619dfcc033fb334
-ms.sourcegitcommit: 9f6f63a2d76c6e579b4b67a96ec86faba99ad1df
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "71933476"
 ---
 ## <a name="discover-and-view-tests"></a>发现和查看测试
@@ -23,7 +23,7 @@ ms.locfileid: "71933476"
 
 1. 打开一个 Visual Studio 中加载的 [Python 项目](../../managing-python-projects-in-visual-studio.md)，右键单击该项目，选择“添加”   > “新建项”  ，然后选择其后有“添加”  的“Python 单元测试”  。
 
-1. 如果直接运行脚本，此操作将创建具有导入标准 `unittest` 模块的代码的 test1.py  文件，从 `unittest.TestCase` 派生一个测试类，并调用 `unittest.main()`：
+1. 如果直接运行脚本，此操作将创建具有导入标准  *模块的代码的 test1.py*`unittest` 文件，从 `unittest.TestCase` 派生一个测试类，并调用 `unittest.main()`：
 
     ```python
 
@@ -37,7 +37,7 @@ ms.locfileid: "71933476"
         unittest.main()
     ```
 
-1. 根据需要保存该文件，然后通过“测试”   > “窗口”   > “测试资源管理器”  菜单命令打开“测试资源管理器”  。
+1. 根据需要保存该文件，然后通过“测试”  **“窗口”**  >  **“测试资源管理器”**  > 菜单命令打开“测试资源管理器”  。
 
 1. “测试资源管理器”  会搜索要测试的项目并进行显示，如下所示。 双击测试打开其源文件。
 

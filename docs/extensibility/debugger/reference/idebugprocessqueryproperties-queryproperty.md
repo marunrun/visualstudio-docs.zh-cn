@@ -1,27 +1,27 @@
 ---
-title: IDebugProcessQueryProperties::QueryProperty |Microsoft Docs
+title: IDebugProcess查询属性：：查询属性 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IDebugProcessQueryProperties::QueryProperty
 ms.assetid: 9a91707d-a590-44ef-b122-69d9816a7a79
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: b1a5a57cb0aa2e5173886b36a58da19a70aae707
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: b190d7ed1d3690be898334270bbd1d16584b81a7
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66311578"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80723296"
 ---
 # <a name="idebugprocessquerypropertiesqueryproperty"></a>IDebugProcessQueryProperties::QueryProperty
-此方法查询的调试过程的指定的属性值。
+此方法查询调试过程的指定属性值。
 
 ## <a name="syntax"></a>语法
 
@@ -39,7 +39,7 @@ int QueryProperty(
 
 ## <a name="parameters"></a>参数
 `dwPropType`\
-[in]查询的属性的定义。 该属性的值有：
+[在]被查询的属性的定义。 有效值为：
 
 - PROCESS_PROPERTY_COMMAND_LINE = 1
 
@@ -48,13 +48,13 @@ int QueryProperty(
 - PROCESS_PROPERTY_ENVIRONMENT_VARIABLES = 3
 
 `pvarPropValue`\
-[out]属性的值。
+[出]属性的值。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，返回`S_OK`;否则，返回错误代码。
 
 ## <a name="remarks"></a>备注
- 很少使用此方法。
+ 此方法很少使用。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugProcessQueryProperties](../../../extensibility/debugger/reference/idebugprocessqueryproperties.md)

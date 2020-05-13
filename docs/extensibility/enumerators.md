@@ -1,41 +1,41 @@
 ---
-title: 枚举器 |Microsoft Docs
+title: 枚举器 |微软文档
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - source control plug-ins, enumerators
 ms.assetid: a60030c5-e1d1-47e1-84bb-cbfe838ab479
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2d3a0876dfd3a9d7b9cc86b18f6e9a6ba3b780d3
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: ee48d064612e5519d5ad7e5eaf04de6c5a697837
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66334497"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80711859"
 ---
-# <a name="enumerators"></a>枚举数
-本部分列出了源代码管理插件必须要知道源控制插件 API 中的枚举器的数据类型。
+# <a name="enumerators"></a>枚举器
+本节列出了源代码管理插件 API 中的枚举器数据类型，源代码管理插件必须了解这些数据类型。
 
-## <a name="in-this-section"></a>本节内容
-- [命令代码](../extensibility/command-code-enumerator.md)枚举的选项[SccGetCommandOptions](../extensibility/sccgetcommandoptions-function.md)并[SccPopulateList](../extensibility/sccpopulatelist-function.md)函数。
+## <a name="in-this-section"></a>在本节中
+- [命令代码](../extensibility/command-code-enumerator.md)枚举[SccGet命令选项](../extensibility/sccgetcommandoptions-function.md)和[Scc 填充列表](../extensibility/sccpopulatelist-function.md)函数的选项。
 
-- [消息](../extensibility/message-enumerator.md)枚举用于打印的回叫，使用标志[LPTEXTOUTPROC](../extensibility/lptextoutproc.md)。
+- [消息](../extensibility/message-enumerator.md)枚举用于打印回调[、LPTEXTOUTPROC](../extensibility/lptextoutproc.md)的标志。
 
-- [文件状态代码](../extensibility/file-status-code-enumerator.md)包含名为指定的源控件下的文件状态的常量值。
+- [文件状态代码](../extensibility/file-status-code-enumerator.md)包含指定源控制下文件状态的命名常量值。
 
-- [目录状态代码](../extensibility/directory-status-code-enumerator.md)包含名为常量值用于指定源代码管理下的目录的状态。
+- [目录状态代码](../extensibility/directory-status-code-enumerator.md)包含指定源控制下的目录状态的命名常量值。
 
 ## <a name="related-sections"></a>相关章节
-- [创建源代码管理插件](../extensibility/internals/creating-a-source-control-plug-in.md)定义源代码控制插件 SDK，并说明包含的资源。
+- [创建源代码管理插件](../extensibility/internals/creating-a-source-control-plug-in.md)定义源代码管理插件 SDK 并描述包含的资源。
 
-- [SccGetCommandOptions](../extensibility/sccgetcommandoptions-function.md)提示用户输入给定命令的高级选项。
+- [SccGet命令选项](../extensibility/sccgetcommandoptions-function.md)提示用户为给定命令提供高级选项。
 
-- [SccPopulateList](../extensibility/sccpopulatelist-function.md)检查以了解其当前状态的文件的列表。 此外，使用`pfnPopulate`函数，以通知调用方，当文件不匹配的条件时`nCommand`。
+- [Scc填充列表](../extensibility/sccpopulatelist-function.md)检查文件列表的当前状态。 此外，当文件与`pfnPopulate`的条件`nCommand`不匹配时，使用 函数通知调用方。
 
-- [LPTEXTOUTPROC](../extensibility/lptextoutproc.md)描述使用的回调函数[SccOpenProject](../extensibility/sccopenproject-function.md)以显示从源代码管理插件通过 IDE 的消息。
+- [LPTEXTOUTPROC](../extensibility/lptextoutproc.md)描述[SccOpenProject](../extensibility/sccopenproject-function.md)用于通过 IDE 显示来自源代码管理插件的消息的回调功能。
 
-- [源代码管理插件](../extensibility/source-control-plug-ins.md)提供源控制插件 API 中的所有元素的完整列表。
+- [源代码管理插件](../extensibility/source-control-plug-ins.md)提供源代码管理插件 API 中所有元素的完整列表。

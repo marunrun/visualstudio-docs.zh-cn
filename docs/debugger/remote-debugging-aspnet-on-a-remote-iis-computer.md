@@ -1,5 +1,5 @@
 ---
-title: 远程调试远程 IIS 计算机上的 ASP.NET Core |Microsoft 文档
+title: 远程调试 ASP.NET Core 在远程 IIS 计算机上 |Microsoft Docs
 ms.custom: remotedebugging
 ms.date: 05/21/2018
 ms.topic: conceptual
@@ -10,12 +10,12 @@ manager: jillfra
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: f3741f9b510450dabfea5c1df4eec4b2e0868b26
-ms.sourcegitcommit: 3d64bfb9bf85395357effe054db9a9afaa0be5ea
+ms.openlocfilehash: 3e11480949545781630dec0c533949dd200ecbc7
+ms.sourcegitcommit: 7a9d5c10690c594dcdb414d88b20e070d43e7a4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/29/2020
-ms.locfileid: "78181153"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82218881"
 ---
 # <a name="remote-debug-aspnet-core-on-a-remote-iis-computer-in-visual-studio"></a>在 Visual Studio 中远程调试 ASP.NET Core 在远程 IIS 计算机上
 
@@ -55,15 +55,15 @@ ms.locfileid: "78181153"
 1. 创建新的 ASP.NET Core Web 应用呈现。 
 
     ::: moniker range=">=vs-2019"
-    在 Visual Studio 2019 中，键入**Ctrl + Q**打开搜索框，键入 " **asp.net**"，选择 "**模板**"，然后选择 "**创建新的 ASP.NET Core Web 应用程序**"。 在出现的对话框中，将项目命名为**MyASPApp**，然后选择 "**创建**"。 接下来，选择 " **Web 应用程序（模型-视图-控制器）** "，然后选择 "**创建**"。
+    在 Visual Studio 2019 中，键入**Ctrl + Q**打开搜索框，键入 " **asp.net**"，选择 "**模板**"，然后选择 "**创建新的 ASP.NET Core Web 应用程序**"。 在出现的对话框中，将项目命名为**MyASPApp**，然后选择 "**创建**"。 接下来，选择 " **Web 应用程序（模型-视图-控制器）**"，然后选择 "**创建**"。
     ::: moniker-end
     ::: moniker range="vs-2017"
-    在 Visual Studio 2017 中，选择 "**文件" > 新建 > 项目**"，然后选择"  **C# Visual > Web > ASP.NET Core web 应用程序**"。 在 "ASP.NET Core 模板" 部分，选择 " **Web 应用程序（模型-视图-控制器）** "。 请确保选择 "ASP.NET Core 2.1"，并选择 "**启用 Docker 支持**"，并将**身份验证**设置为 "**无身份验证**"。 将项目命名为**MyASPApp**。
+    在 Visual Studio 2017 中，选择 "**文件" > 新建 > 项目**"，然后选择" **Visual c # > Web > ASP.NET Core web 应用程序**"。 在 "ASP.NET Core 模板" 部分，选择 " **Web 应用程序（模型-视图-控制器）**"。 请确保选择 "ASP.NET Core 2.1"，并选择 "**启用 Docker 支持**"，并将**身份验证**设置为 "**无身份验证**"。 将项目命名为**MyASPApp**。
     ::: moniker-end
 
-4. 打开 About.cshtml.cs 文件并在 `OnGet` 方法中设置断点（在旧模板中，请改为打开 HomeController.cs，然后在 `About()` 方法中设置断点）。
+4. 打开 About.cshtml.cs 文件并在`OnGet`方法中设置断点（在旧模板中，打开 HomeController.cs，并在`About()`方法中设置断点）。
 
-## <a name="bkmk_configureIIS"></a>在 Windows Server 上安装和配置 IIS
+## <a name="install-and-configure-iis-on-windows-server"></a><a name="bkmk_configureIIS"></a>在 Windows Server 上安装和配置 IIS
 
 [!INCLUDE [remote-debugger-install-iis-role](../debugger/includes/remote-debugger-install-iis-role.md)]
 
@@ -83,9 +83,9 @@ ms.locfileid: "78181153"
 1. 在托管系统上安装 [.NET Core Windows Server 托管捆绑包](https://aka.ms/dotnetcore-2-windowshosting)。 捆绑包可安装 .NET Core 运行时、.NET Core 库和 ASP.NET Core 模块。 有关更深入的说明，请参阅[发布到 IIS](/aspnet/core/publishing/iis?tabs=aspnetcore2x#iis-configuration)。
 
     > [!NOTE]
-    > 如果系统没有 Internet 连接，请先获取并安装 *Microsoft Visual C++ 2015 Redistributable[，再安装 .NET Core Windows Server 托管捆绑包](https://www.microsoft.com/download/details.aspx?id=53840)* 。
+    > 如果系统没有 Internet 连接，请先获取并安装 [Microsoft Visual C++ 2015 Redistributable](https://www.microsoft.com/download/details.aspx?id=53840)，再安装 .NET Core Windows Server 托管捆绑包**。
 
-3. 重启系统（或在命令提示符处依次执行“net stop was /y”和“net start w3svc”，了解系统路径的更改）。
+3. 重启系统（或在命令提示符处依次执行“net stop was /y”和“net start w3svc”，了解系统路径的更改）********。
 
 ## <a name="choose-a-deployment-option"></a>选择部署选项
 
@@ -114,7 +114,7 @@ ms.locfileid: "78181153"
 
 [!INCLUDE [install-web-deploy-with-hosting-server](../deployment/includes/import-publish-settings-vs.md)]
 
-应用成功部署后，它应自动启动。 如果应用不是从 Visual Studio 启动的，请在 IIS 中启动该应用。 对于 ASP.NET Core，需要确保将 DefaultAppPool 的应用程序池字段设置为“无托管代码”。
+应用成功部署后，它应自动启动。 如果应用不是从 Visual Studio 启动的，请在 IIS 中启动该应用。 对于 ASP.NET Core，需要确保将 DefaultAppPool 的应用程序池字段设置为“无托管代码”********。
 
 1. 在 "**设置**" 对话框中，通过单击 "**下一步**" 启用调试，选择 "**调试**" 配置，然后选择 "**文件发布**选项" 下的 "**删除目标中的其他文件**"。
 
@@ -127,17 +127,17 @@ ms.locfileid: "78181153"
 
 如果要使用 PowerShell、RoboCopy 将应用复制到 IIS 或要手动复制文件，则可以使用此选项来部署应用。
 
-### <a name="BKMK_deploy_asp_net"></a>在 Windows Server 计算机上配置 ASP.NET Core 网站
+### <a name="configure-the-aspnet-core-web-site-on-the-windows-server-computer"></a><a name="BKMK_deploy_asp_net"></a>在 Windows Server 计算机上配置 ASP.NET Core 网站
 
 1. 打开 Windows 资源管理器并创建一个新文件夹**C:\Publish**，稍后将在其中部署 ASP.NET Core 项目。
 
-2. 如果它尚未打开，请打开**Internet Information Services （IIS）管理器**。 （在服务器管理器的左窗格中，选择 " **IIS**"。 右键单击服务器并选择“Internet Information Services (IIS)管理器”。）
+2. 如果它尚未打开，请打开**Internet Information Services （IIS）管理器**。 （在服务器管理器的左窗格中，选择 " **IIS**"。 右键单击服务器并选择“Internet Information Services (IIS)管理器”****。）
 
 3. 在左窗格中的 "**连接**" 下，中转到 "**站点**"。
 
 4. 选择 "**默认**网站"，选择 "**基本设置**"，并将 "**物理路径**" 设置为**C:\Publish**。
 
-4. 右键单击“默认网站” 节点，然后选择“添加应用程序”。
+4. 右键单击“默认网站” **** 节点，然后选择“添加应用程序” ****。
 
 5. 将**别名**字段设置为**MyASPApp**，接受默认应用程序池（**DefaultAppPool**），并将**物理路径**设置为**C:\Publish**。
 
@@ -153,13 +153,13 @@ ms.locfileid: "78181153"
 
 [!INCLUDE [remote-debugger-deploy-app-local](../debugger/includes/remote-debugger-deploy-app-local.md)]
 
-## <a name="BKMK_msvsmon"></a>在 Windows Server 上下载和安装远程工具
+## <a name="download-and-install-the-remote-tools-on-windows-server"></a><a name="BKMK_msvsmon"></a>在 Windows Server 上下载和安装远程工具
 
 下载与你的 Visual Studio 版本匹配的远程工具版本。
 
 [!INCLUDE [remote-debugger-download](../debugger/includes/remote-debugger-download.md)]
 
-## <a name="BKMK_setup"></a>在 Windows Server 上设置远程调试器
+## <a name="set-up-the-remote-debugger-on-windows-server"></a><a name="BKMK_setup"></a>在 Windows Server 上设置远程调试器
 
 [!INCLUDE [remote-debugger-configuration](../debugger/includes/remote-debugger-configuration.md)]
 
@@ -168,7 +168,7 @@ ms.locfileid: "78181153"
 
 有关以服务的形式运行远程调试器的信息，请参阅[将远程调试器作为服务运行](../debugger/remote-debugging.md#bkmk_configureService)。
 
-## <a name="BKMK_attach"></a> 从 Visual Studio 计算机附加到 ASP.NET 应用程序
+## <a name="attach-to-the-aspnet-application-from-the-visual-studio-computer"></a><a name="BKMK_attach"></a> 从 Visual Studio 计算机附加到 ASP.NET 应用程序
 
 1. 在 Visual Studio 计算机上，打开要调试的解决方案（如果你按照本文中的所有步骤操作，请**MyASPApp** ）。
 2. 在 Visual Studio 中，单击 "**调试" > "附加到进程**" （Ctrl + Alt + P）。
@@ -176,34 +176,34 @@ ms.locfileid: "78181153"
     > [!TIP]
     > 在 Visual Studio 2017 及更高版本中，你可以使用 "调试" > "重新附加**到进程 ...** " （Shift + Alt + P）重新附加到之前附加到的进程。
 
-3. 将 "限定符" 字段设置为 **\<远程计算机名称 >** ，然后按**enter**。
+3. 将 "限定符" 字段设置为** \<"远程计算机名称>** "，然后按**enter**。
 
-    验证 Visual Studio 是否向计算机名称添加所需的端口，该端口采用以下格式： **\<远程计算机名称 >:p o**
+    验证 Visual Studio 是否向计算机名称添加所需的端口，该端口的格式为： ** \<远程计算机名称>:p o**
 
     ::: moniker range=">=vs-2019"
-    在 Visual Studio 2019 上，应看到 **\<远程计算机名称 >： 4024**
+    在 Visual Studio 2019 上，应看到** \<远程计算机名称>：4024**
     ::: moniker-end
     ::: moniker range="vs-2017"
-    在 Visual Studio 2017 上，应看到 **\<远程计算机名称 >： 4022**
+    在 Visual Studio 2017 上，应看到** \<远程计算机名称>：4022**
     ::: moniker-end
     端口是必需的。 如果看不到端口号，请手动添加。
 
-4. 单击“刷新”。
-    “可用进程” 窗口中将显示某些进程。
+4. 单击“刷新”。****
+    “可用进程” **** 窗口中将显示某些进程。
 
-    如果看不到任何进程，请尝试使用 IP 地址而不是远程计算机名称（端口是必需的）。 可以在命令行中使用 `ipconfig` 来获取 IPv4 地址。
+    如果看不到任何进程，请尝试使用 IP 地址而不是远程计算机名称（端口是必需的）。 可以在命令`ipconfig`行中使用来获取 IPv4 地址。
 
     如果要使用 "**查找**" 按钮，可能需要在服务器上[打开 UDP 端口 3702](#bkmk_openports) 。
 
-5. 勾选“显示所有用户的进程”。
+5. 勾选“显示所有用户的进程”  ****。
 
 6. 键入你的进程名称的第一个字母，以快速查找你的应用。
 
-    * 选择**dotnet**。
+    * 如果使用的是 IIS 上的[进程内托管模型](/aspnet/core/host-and-deploy/aspnet-core-module?view=aspnetcore-3.1#hosting-models)，请选择正确的**w3wp.exe**进程。 从 .NET Core 3 开始，这是默认设置。
 
-      如果有多个显示**dotnet**的进程，请检查 "**用户名**" 列。 在某些情况下，"**用户名**" 列会显示应用池名称，如**IIS APPPOOL\DefaultAppPool**。 如果你看到应用程序池，则可以使用一种简单的方法来确定正确的进程：为要调试的应用程序实例创建新的命名应用程序池，然后在 "**用户名**" 列中轻松找到它。
+    * 否则，请选择 " **dotnet** " 进程。 （这是进程外托管模型。）
 
-    * 在某些 IIS 方案中，你可能会在进程列表中找到你的应用程序名称，例如**MyASPApp**。 您可以改为附加到此进程。
+    如果有多个进程显示*w3wp.exe*或*dotnet*，请检查 "**用户名**" 列。 在某些情况下，"**用户名**" 列会显示应用池名称，如**IIS APPPOOL\DefaultAppPool**。 如果你看到应用程序池，但它不是唯一的，则为你要调试的应用程序实例创建新的命名应用程序池，然后你可以在 "**用户名**" 列中轻松找到它。
 
     ::: moniker range=">=vs-2019"
     ![RemoteDBG_AttachToProcess](../debugger/media/vs-2019/remotedbg-attachtoprocess-aspnetcore.png "RemoteDBG_AttachToProcess")
@@ -212,9 +212,9 @@ ms.locfileid: "78181153"
     ![RemoteDBG_AttachToProcess](../debugger/media/remotedbg-attachtoprocess-aspnetcore.png "RemoteDBG_AttachToProcess")
     ::: moniker-end
 
-7. 单击 **“附加”** 。
+7. 单击 "**附加**"。
 
-8. 打开远程计算机的网站。 在浏览器中，转到 http://**remote computer name>\<** 。
+8. 打开远程计算机的网站。 在浏览器中，转到 http://\<remote computer name>****。
 
     将显示 ASP.NET 网页。
 
@@ -222,7 +222,7 @@ ms.locfileid: "78181153"
 
     应在 Visual Studio 中命中断点。
 
-## <a name="bkmk_openports"></a> 疑难解答Windows Server 上打开所需的端口
+## <a name="troubleshooting-open-required-ports-on-windows-server"></a><a name="bkmk_openports"></a> 疑难解答Windows Server 上打开所需的端口
 
 在大多数情况下，所需的端口都是通过安装 ASP.NET 和远程调试器打开的。 但是，你可能需要验证端口是否已打开。
 
@@ -246,14 +246,14 @@ ms.locfileid: "78181153"
 
 3. 在 "**特定本地端口**" 下，输入端口号，然后单击 "**下一步**"。
 
-4. 单击 "**允许连接"** ，然后单击 "**下一步**"。
+4. 单击 "**允许连接"**，然后单击 "**下一步**"。
 
 5. 选择要为端口启用的一个或多个网络类型，然后单击 "**下一步**"。
 
     你选择的类型必须包括远程计算机连接到的网络。
 6. 添加入站规则的名称（例如， **IIS**、 **Web 部署**或**msvsmon**），然后单击 "**完成**"。
 
-    你应该会在“入站规则”或“出站规则”列表中看到你的新规则。
+    应该能在“入站规则”或“出站规则”列表中看到自己的新规则。
 
     如果需要更多有关配置 Windows 防火墙的详细信息，请参阅[配置 Windows 防火墙以进行远程调试](../debugger/configure-the-windows-firewall-for-remote-debugging.md)。
 

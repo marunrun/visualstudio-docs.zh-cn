@@ -22,12 +22,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: b0e8c8fe10451e9e5906eabf7f4f65086d147904
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.openlocfilehash: 98886df1c7fb09fa30d5c54abe19452780195b6a
+ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76113709"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81649193"
 ---
 # <a name="remove-visual-studio"></a>删除 Visual Studio
 
@@ -51,10 +51,10 @@ ms.locfileid: "76113709"
 1. 打开管理员命令提示符。 要打开管理员命令提示符，请执行以下步骤：
    * 在“在此键入进行搜索”框中键入“cmd”  。
    * 右键单击“命令提示符”  ，然后选择“以管理员身份运行”  。
-1. 输入 `InstallCleanup.exe` 工具的完整路径，并添加所需的命令行开关。 默认情况下，此工具的路径如下所示：
+1. 输入 `InstallCleanup.exe` 工具的完整路径，并添加所需的命令行开关。 默认情况下，此工具的路径如下所示。 使用双引号将包含空格的命令括起来：
 
    ```
-   C:\Program Files (x86)\Microsoft Visual Studio\Installer\resources\app\layout\InstallCleanup.exe
+   "C:\Program Files (x86)\Microsoft Visual Studio\Installer\resources\app\layout\InstallCleanup.exe"
    ```
 
    > [!NOTE]

@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentContext2::GetStatementRange |Microsoft Docs
+title: IDebug文档上下文2：：获取声明范围 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugDocumentContext2::GetStatementRange
 ms.assetid: bc94851a-0ec4-47ea-99c7-0a585e54e726
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 6ef4dae20a69fefcb67240e82999bdf2798d56e5
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 50e521d98f10477d56dfece30e20fd000b87b632
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66335298"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80731767"
 ---
 # <a name="idebugdocumentcontext2getstatementrange"></a>IDebugDocumentContext2::GetStatementRange
-获取文件语句范围的文档上下文。
+获取文档上下文的文件语句范围。
 
 ## <a name="syntax"></a>语法
 
@@ -43,21 +43,21 @@ int GetStatementRange(
 
 ## <a name="parameters"></a>参数
 `pBegPosition`\
-[in、 out]一个[TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md)填充的起始位置的结构。 如果不需要此信息，请将此参数设置为 null 值。
+[进出]用起始位置填充[TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md)结构。 如果不需要此信息，则此参数设置为 null 值。
 
 `pEndPosition`\
-[in、 out]一个[TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md)填充的结束位置的结构。 如果不需要此信息，请将此参数设置为 null 值。
+[进出]用结束位置填充[的TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md)结构。 如果不需要此信息，则此参数设置为 null 值。
 
 ## <a name="return-value"></a>返回值
-如果成功，则返回`S_OK`; 否则为返回错误代码。
+如果成功，返回`S_OK`;否则，返回错误代码。
 
 ## <a name="remarks"></a>备注
-语句范围是参与此文档上下文所引用的代码的行的范围。
+语句范围是贡献本文档上下文引用的代码的行的范围。
 
-若要获取此文档上下文中的范围 （包括注释） 的源代码，请调用[GetSourceRange](../../../extensibility/debugger/reference/idebugdocumentcontext2-getsourcerange.md)方法。
+要获取本文档上下文中的源代码（包括注释）范围，请调用[GetSourceRange](../../../extensibility/debugger/reference/idebugdocumentcontext2-getsourcerange.md)方法。
 
 ## <a name="example"></a>示例
-下面的示例演示如何实现此方法对于简单`CDebugContext`公开的对象[IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md)接口。 仅当开始位置不是 null 值，本示例中的结束位置填充。
+下面的示例演示如何为公开[IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) `CDebugContext`接口的简单对象实现此方法。 仅当开始位置不是空值时，此示例才填充结束位置。
 
 ```cpp
 HRESULT CDebugContext::GetStatementRange(TEXT_POSITION* pBegPosition,

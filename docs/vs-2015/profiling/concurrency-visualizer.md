@@ -16,12 +16,12 @@ caps.latest.revision: 36
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: becaa70d2eed862d77f4c666b0a408054eaf5926
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: e7061acabbe5ce18ff6e1f210fe0003bdaf88980
+ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75850951"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82586820"
 ---
 # <a name="concurrency-visualizer"></a>并发可视化工具
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "75850951"
 > 对于 Visual Studio，并发可视化工具是可选扩展。 从以下链接下载并发可视化工具和并发可视化工具收集工具：  
 > 
 > - 下载              [并发可视化工具](https://visualstudiogallery.msdn.microsoft.com/a6c24ce9-beec-4545-9261-293061436ee9) 扩展。  
->   - 下载              [Visual Studio 2015 的并发可视化工具收集工具](https://www.microsoft.com/download/details.aspx?id=49103)。  
+>   - 下载[适用于 Visual Studio 2015 的并发可视化工具收集工具](https://www.microsoft.com/download/details.aspx?id=49103)。  
 > 
 >   [并发可视化工具命令行实用工具(CVCollectionCmd)](../profiling/concurrency-visualizer-command-line-utility-cvcollectioncmd.md) 使你能够从命令行收集跟踪，可以在 Visual Studio 2015 的并发可视化工具中查看该命令行。 该工具可以在未安装 Visual Studio 的计算机上使用。  
   
@@ -43,16 +43,16 @@ ms.locfileid: "75850951"
   
 ## <a name="related-topics"></a>相关主题  
   
-|职务|描述|  
+|Title|描述|  
 |-----------|-----------------|  
 |[使用率视图](../profiling/utilization-view.md)|介绍如何在所有处理器中查看和分析系统活动。|  
 |[线程视图](../profiling/threads-view-parallel-performance.md)|介绍如何分析程序中线程之间的交互。|  
-|[“核心”视图](../profiling/cores-view.md)|介绍如何分析跨越核心的线程迁移。|  
+|[内核视图](../profiling/cores-view.md)|介绍如何分析跨越核心的线程迁移。|  
 |[性能不佳的多线程应用程序的常见模式](../profiling/common-patterns-for-poorly-behaved-multithreaded-applications.md)|描述若干常见模式并展示其在并发可视化工具中的显示方式。|  
-|[Visual Studio 博客中的并行开发](https://blogs.msdn.com/b/visualizeparallel)|提供关于并发可视化工具的提示和最佳做法。|  
+|[Visual Studio 博客中的并行开发](https://docs.microsoft.com/archive/blogs/visualizeparallel/)|提供关于并发可视化工具的提示和最佳做法。|  
 |[性能报告视图](../profiling/performance-report-views.md)|提供有关 Visual Studio 分析工具报告和视图的参考信息。|  
 |[并发可视化工具 SDK](../profiling/concurrency-visualizer-sdk.md)|描述如何检测你的源代码，以便在并发可视化工具中显示附加信息。|  
 |[并发可视化工具命令行实用工具 (CVCollectionCmd)](../profiling/concurrency-visualizer-command-line-utility-cvcollectioncmd.md)|描述如何使用并发可视化工具命令行实用程序 (CVCollectionCmd.exe) 在未安装 Visual Studio 的计算机上收集并处理跟踪信息。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [分析工具](../profiling/profiling-tools.md)

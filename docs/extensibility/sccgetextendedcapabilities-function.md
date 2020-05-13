@@ -1,5 +1,5 @@
 ---
-title: SccGetExtendedCapabilities 函数 |Microsoft Docs
+title: SccGet 扩展功能 |微软文档
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - SccGetExtendedCapabilities function
 ms.assetid: 588c6a92-2147-4d8b-a357-96ca7da0a092
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: aa6a067a0b9e8358f503228dbc53e20586b84468
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 5247f2de7ffc63db7235f915c72b3274b8fee5f5
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66353671"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80700723"
 ---
-# <a name="sccgetextendedcapabilities-function"></a>SccGetExtendedCapabilities 函数
-此函数返回受源代码管理插件的其他功能。
+# <a name="sccgetextendedcapabilities-function"></a>SccGet 扩展功能功能
+此功能返回源代码管理插件支持的其他功能。
 
 ## <a name="syntax"></a>语法
 
@@ -35,26 +35,26 @@ SCCRTN SccGetExtendedCapabilities(
 ### <a name="parameters"></a>参数
  pContext
 
-[in]源控件插件上下文指针。
+[在]源代码管理插件上下文指针。
 
  lSccExCaps
 
-[in]标志，指定对其进行测试的扩展的功能 (请参阅中的扩展功能代码表[功能标志](../extensibility/capability-flags.md)可能标志)。
+[在]指定要测试的扩展功能的标志（请参阅["功能"标志](../extensibility/capability-flags.md)中的扩展功能代码表，了解可能的标志）。
 
- pbSupported
+ pb 支持
 
-[out]返回非零值 (`TRUE`) 如果支持指定的功能; 否则，返回零 (`FALSE`)。
+[出]如果支持指定的功能，`TRUE`则返回非零 （ ），否则，返回零`FALSE`（）。
 
 ## <a name="return-value"></a>返回值
- 此函数的源控制插件实现应返回以下值之一：
+ 此函数的源代码管理插件实现应返回以下值之一：
 
-|值|描述|
+|值|说明|
 |-----------|-----------------|
 |SCC_OK|获取功能操作已成功完成。|
-|SCC_E_UNKNOWNERROR<br /><br /> SCC_E_NONSPECIFICERROR|出现未知或未指定错误。|
+|SCC_E_UNKNOWNERROR<br /><br /> SCC_E_NONSPECIFICERROR|发生未知或未指定的错误。|
 
 ## <a name="remarks"></a>备注
- 按需; 调用此方法也就是说，当一项功能需要进行测试，调用此方法是可确定是否支持功能。 指定一次只有一个标志。
+ 此方法是按需调用的;也就是说，当需要测试功能时，将调用此方法以确定该功能是否受支持。 一次只指定一个标志。
 
 ## <a name="see-also"></a>请参阅
 - [源代码管理插件 API 功能](../extensibility/source-control-plug-in-api-functions.md)

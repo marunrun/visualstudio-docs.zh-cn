@@ -1,5 +1,5 @@
 ---
-title: BP_RESOLUTION_LOCATION | Microsoft Docs
+title: BP_RESOLUTION_LOCATION |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BP_RESOLUTION_LOCATION structure
 ms.assetid: 21dc5246-69c1-43e3-855c-9cd4e596c0e6
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ed287f2d90e1ee92c7e0fd4ae685fbb9f38854f4
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 4b11d80e90daec19a14ca509e5a4b9bdb2d1ced4
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66350588"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80737821"
 ---
-# <a name="bpresolutionlocation"></a>BP_RESOLUTION_LOCATION
-指定断点解析位置的结构。
+# <a name="bp_resolution_location"></a>BP_RESOLUTION_LOCATION
+指定断点分辨率位置的结构。
 
 ## <a name="syntax"></a>语法
 
@@ -50,41 +50,41 @@ public struct BP_RESOLUTION_LOCATION {
 
 ## <a name="members"></a>成员
 `bpType`\
-中的值[BP_TYPE](../../../extensibility/debugger/reference/bp-type.md)枚举，用于指定如何解释`bpResLocation`union 或`unionmemberX`成员。
+[BP_TYPE](../../../extensibility/debugger/reference/bp-type.md)枚举中指定如何解释`bpResLocation`联合或`unionmemberX`成员的值。
 
 `bpResLocation.bpresCode`\
-[C++仅]包含[BP_RESOLUTION_CODE](../../../extensibility/debugger/reference/bp-resolution-code.md)结构，如果`bpType`  =  `BPT_CODE`。
+[仅C++]如果 包含[BP_RESOLUTION_CODE](../../../extensibility/debugger/reference/bp-resolution-code.md)结构`bpType` = `BPT_CODE`。
 
 `bpResLocation.bpresData`\
-[C++仅]包含[BP_RESOLUTION_DATA](../../../extensibility/debugger/reference/bp-resolution-data.md)结构，如果`bpType`  =  `BPT_DATA`。
+[仅C++]如果 包含[BP_RESOLUTION_DATA](../../../extensibility/debugger/reference/bp-resolution-data.md)结构`bpType` = `BPT_DATA`。
 
 `bpResLocation.unused`\
-[C++仅]一个占位符。
+[仅C++]占位符。
 
 `unionmember1`\
-[C#仅]请参阅关于如何解释的备注。
+[仅 C]请参阅有关如何解释的备注。
 
 `unionmember2`\
-[C#仅]请参阅关于如何解释的备注。
+[仅 C]请参阅有关如何解释的备注。
 
 `unionmember3`\
-[C#仅]请参阅关于如何解释的备注。
+[仅 C]请参阅有关如何解释的备注。
 
 `unionmember4`\
-[C#仅]请参阅关于如何解释的备注。
+[仅 C]请参阅有关如何解释的备注。
 
 ## <a name="remarks"></a>备注
-此结构是的成员[BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md)并[BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md)结构。
+此结构是[BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md)和[BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md)结构的成员。
 
- [C#仅]`unionmemberX`成员根据下表解释。 查看左侧列下方`bpType`值然后跨以确定每个`unionmemberX`成员表示和封送`unionmemberX`相应地。 请参阅一种方法来解释此结构在 C# 中的示例。
+ [仅 C]成员`unionmemberX`根据下表进行解释。 向下看左列的值，`bpType`然后跨，以确定每个`unionmemberX`成员表示什么，并相应地封送`unionmemberX`。 有关在 C# 中解释此结构的方法，请参阅示例。
 
 |`bpLocationType`|`unionmember1`|`unionmember2`|`unionmember3`|`unionmember4`|
 |----------------------|--------------------|--------------------|--------------------|--------------------|
 |`BPT_CODE`|[IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md)|-|-|-|
-|`BPT_DATA`|`string` （数据表达式）|`string` （函数名称）|`string` （映像名称）|`enum_BP_RES_DATA_FLAGS`|
+|`BPT_DATA`|`string`（数据表达式）|`string`（功能名称）|`string`（图像名称）|`enum_BP_RES_DATA_FLAGS`|
 
 ## <a name="example"></a>示例
-此示例显示了如何解释`BP_RESOLUTION_LOCATION`C# 中的结构。
+此示例演示如何在 C#`BP_RESOLUTION_LOCATION`中解释结构。
 
 ```csharp
 using System;
@@ -114,11 +114,11 @@ namespace MyPackage
 ```
 
 ## <a name="requirements"></a>要求
-标头： msdbg.h
+标题： msdbg.h
 
-命名空间:Microsoft.VisualStudio.Debugger.Interop
+命名空间：微软.VisualStudio.调试器.互通
 
-程序集：Microsoft.VisualStudio.Debugger.Interop.dll
+程序集：微软.VisualStudio.调试器.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [结构和联合](../../../extensibility/debugger/reference/structures-and-unions.md)

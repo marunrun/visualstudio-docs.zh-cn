@@ -17,10 +17,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: c6a5a0eb84e4f06fd1b4dd248a1bce952b2c7197
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74779800"
 ---
 # <a name="beginners-guide-to-cpu-sampling"></a>CPU 采样初学者指南
@@ -124,7 +124,7 @@ ms.locfileid: "74779800"
 
      此时将打开新的报告窗口，并显示比较结果。 有关如何使用比较视图的详细信息，请参阅[如何：比较性能数据文件](../profiling/how-to-compare-performance-data-files.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [性能资源管理器](../profiling/performance-explorer.md)
 - [入门](../profiling/getting-started-with-performance-tools.md)
 - [概述](../profiling/overviews-performance-tools.md)

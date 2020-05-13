@@ -10,10 +10,10 @@ author: ghogen
 ms.author: ghogen
 manager: jillfra
 ms.openlocfilehash: 9899b7367e6ae9255755ae04fe06d8c8733043ae
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77633819"
 ---
 # <a name="how-to-ignore-errors-in-tasks"></a>如何：忽略任务中的错误
@@ -22,7 +22,7 @@ ms.locfileid: "77633819"
 
 ## <a name="use-the-continueonerror-attribute"></a>使用 ContinueOnError 属性
 
-`Task` 元素的 `ContinueOnError` 属性控制在发生任务失败时，是停止还是继续生成。 此属性还可以控制在生成继续操作时，错误被视为错误还是警告。
+`ContinueOnError` 元素的 `Task` 属性控制在发生任务失败时，是停止还是继续生成。 此属性还可以控制在生成继续操作时，错误被视为错误还是警告。
 
 `ContinueOnError` 属性可以包含下列值之一：
 
@@ -38,7 +38,7 @@ ms.locfileid: "77633819"
 
 #### <a name="to-ignore-an-error-in-a-task"></a>忽略任务中的错误
 
-使用任务的 `ContinueOnError` 属性。 例如：
+使用任务的 `ContinueOnError` 属性。 例如:
 
 ```xml
 <Delete Files="@(Files)" ContinueOnError="WarnAndContinue"/>
@@ -46,7 +46,7 @@ ms.locfileid: "77633819"
 
 ## <a name="example"></a>示例
 
-以下代码示例阐释即使 `Delete` 任务失败，`Build` 目标仍将运行并且生成将被视为成功。
+以下代码示例阐释即使 `Build` 任务失败，`Delete` 目标仍将运行并且生成将被视为成功。
 
 ```xml
 <Project DefaultTargets="FakeBuild"
@@ -64,7 +64,7 @@ ms.locfileid: "77633819"
 </Project>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [MSBuild](../msbuild/msbuild.md)
 - [任务参考](../msbuild/msbuild-task-reference.md)

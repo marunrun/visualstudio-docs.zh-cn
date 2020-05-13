@@ -10,14 +10,14 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 06de982643a08e1af88073dde0fb0a9abc029900
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74779449"
 ---
 # <a name="crosssession"></a>CrossSession
-通过 VSPerfCmd.exe“CrossSession”选项，探查器可从任何控制台会话收集数据   。  “CrossSession”选项必须与“Start”  选项一起使用。
+VSPerfCmd.exe“CrossSession”选项使探查器可以从任何控制台会话收集数据   。  “CrossSession”选项必须与“Start”  选项一起使用。
 
  可以使用缩写 CS  代替 CrossSession  。
 
@@ -28,7 +28,7 @@ VSPerfCmd.exe /Start:Method /CrossSession [Options]
 ```
 
 #### <a name="parameters"></a>参数
- 无
+ None
 
 ## <a name="valid-options"></a>有效选项
  若要在另一个会话中启用分析，必须使用“Start”  选项指定“CrossSession”  选项。 “CrossSession”  还必须在任何后续“VSPerfCmd Attach”  和“Detach”  命令中进行指定。

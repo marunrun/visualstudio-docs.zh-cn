@@ -9,10 +9,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 0c0a9967f1248c6dc23c5d70be35788ad9e05eb2
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75566301"
 ---
 # <a name="modify-load-test-logging-settings"></a>修改负载测试日志记录设置
@@ -25,9 +25,9 @@ ms.locfileid: "75566301"
 
 |任务|关联主题|
 |-|-----------------------|
-|**在负载测试失败时保存日志：** 可以指定是否每当负载测试未通过就保存测试日志。|-   [如何：指定是否将测试失败保存到测试日志中](../test/how-to-specify-if-test-failures-are-saved-to-test-logs.md)|
-|**为日志文件指定最大文件大小：** 可以编辑与测试控制器服务关联的 XML 配置文件，以指定要用于日志文件的最大文件大小。|修改 QTCcontroller.exe.config XML 配置文件中的 `<add key="LogSizeLimitInMegs" value="20"/>`  。|
+|**在负载测试未通过时保存日志：** 可以指定是否每当负载测试未通过就保存测试日志。|-   [如何：指定是否将测试失败保存到测试日志中](../test/how-to-specify-if-test-failures-are-saved-to-test-logs.md)|
+|**为日志文件设置最大文件大小：** 可以编辑与测试控制器服务关联的 XML 配置文件，以指定要用于日志文件的最大文件大小。|修改 QTCcontroller.exe.config XML 配置文件中的 `<add key="LogSizeLimitInMegs" value="20"/>`  。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [配置负载测试运行设置](../test/configure-load-test-run-settings.md)

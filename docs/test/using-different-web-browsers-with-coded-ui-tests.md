@@ -8,10 +8,10 @@ ms.workload:
 - multiple
 author: mikejo5000
 ms.openlocfilehash: 104bdcc7a3f609456d521e710ac6ec2aeda2bb75
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75585569"
 ---
 # <a name="use-different-web-browsers-with-coded-ui-tests"></a>对编码的 UI 测试使用不同的 Web 浏览器
@@ -43,9 +43,9 @@ ms.locfileid: "75585569"
 > [!NOTE]
 > 你无法使用 Google Chrome 或 Mozilla Firefox 浏览器记录编码的 UI 测试。
 
-**使用 Internet Explorer 播放：** 如果未明确指定浏览器，则默认情况下将在 Internet Explorer 上运行测试。 可以在测试代码中设置 **BrowserWindow.CurrentBrowser** 属性来显式声明要使用的浏览器。 对于 Internet Explorer，应将此属性设为“IE”  或“Internet Explorer”  。
+**使用 Internet Explorer 播放：** 如果未显式指定浏览器，默认将在 Internet Explorer 中运行测试。 可以在测试代码中设置 **BrowserWindow.CurrentBrowser** 属性来显式声明要使用的浏览器。 对于 Internet Explorer，应将此属性设为“IE”  或“Internet Explorer”  。
 
-**使用非 Internet Explorer Web 浏览器播放：** 要在非 Internet Explorer Web 浏览器中播放，请将测试代码中的 BrowserWindow.CurrentBrowser 属性更改为“Firefox”或“Chrome”   。
+**使用非 Internet Explorer Web 浏览器播放：** 若要在非 Internet Explorer Web 浏览器中播放，请将测试代码中的 BrowserWindow.CurrentBrowser 属性更改为“Firefox”  或“Chrome”  。
 
 必须**用于编码的 UI 跨浏览器测试的 Selenium 组件**，才能在非 IE 浏览器上播放测试。
 
@@ -53,7 +53,7 @@ ms.locfileid: "75585569"
 
 ::: moniker range="vs-2017"
 
-1. 在“工具”  菜单上，选择“扩展和更新”  。
+1. 在 **“工具”** 菜单上，选择 **“扩展和更新”** 。
 
 2. 在“扩展和更新”对话框中，  搜索“`Selenium components for Cross Browser Testing`”。
 
@@ -130,7 +130,7 @@ ms.locfileid: "75585569"
 
 [跨浏览器测试问题排查](https://skydrive.live.com/redir?resid=AE5CD7309CCCC43C!182&authkey=!AEpS48i295B49FI)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用 UI 自动化来测试代码](../test/use-ui-automation-to-test-your-code.md)
 - [支持编码的 UI 测试和操作录制的配置和平台](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)

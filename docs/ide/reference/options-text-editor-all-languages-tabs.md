@@ -42,10 +42,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 0fc169960cf757e4e334d5f77b06ff70b0d6da7c
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75594742"
 ---
 # <a name="options-text-editor-all-languages-tabs"></a>选项，文本编辑器，所有语言，选项卡
@@ -59,7 +59,7 @@ ms.locfileid: "75594742"
 
 ## <a name="indenting"></a>缩进
 
-None
+无
 
 选中后，新行不缩进。 插入点被置于新行的第一列。
 
@@ -91,7 +91,7 @@ None
 
 选中后，缩进操作会尽可能多地插入制表符。 每个制表符都会填充“制表符大小”中指定的空格数  。 如果“缩进大小”不是“制表符大小”的偶数倍，则会添加空格字符以填充差额   。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [“选项”->“文本编辑器”->“所有语言”](../../ide/reference/options-text-editor-all-languages.md)
 - [“选项”对话框 ->“环境”->“常规”](../../ide/reference/general-environment-options-dialog-box.md)

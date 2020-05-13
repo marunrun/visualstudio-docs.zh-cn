@@ -2,7 +2,7 @@
 title: Visual Studio 管理员指南
 titleSuffix: ''
 description: 详细了解如何在企业环境中部署 Visual Studio。
-ms.date: 06/02/2019
+ms.date: 03/09/2020
 ms.custom: seodec18
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +17,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 9f4b044cddee59254e0b4f5198e75e3fa774aab7
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.openlocfilehash: bda9a73a7a1aabb2d288653ff4d7b20b1c40db8c
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76114207"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79190273"
 ---
 # <a name="visual-studio-administrator-guide"></a>Visual Studio 管理员指南
 
@@ -115,6 +115,14 @@ ms.locfileid: "76114207"
 
 我们提供了几种工具来帮助你在客户端计算机上[检测和管理安装的 Visual Studio 实例](tools-for-managing-visual-studio-instances.md?view=vs-2019)。
 
+## <a name="advanced-configuration"></a>高级配置
+
+默认情况下，Visual Studio 安装允许从错误列表 F1 和代码链接在必应搜索中包含自定义类型。 可以通过按策略更改以下注册表项的值，将 Visual Studio 配置为禁止搜索机制包括任何自定义用户类型：
+
+**“PutCustomTypeInBingSearch” DWORD 0**
+
+注册表位于专用注册表配置单元的 *Software\Microsoft\VisualStudio\16.0_{InstanceId}\Roslyn\Internal\Diagnostics\* 目录中。 有关如何打开注册表配置单元的说明，请参阅[编辑 Visual Studio 实例的注册表](tools-for-managing-visual-studio-instances.md?view=vs-2019#editing-the-registry-for-a-visual-studio-instance)。
+
 ::: moniker-end
 
 ::: moniker range="vs-2017"
@@ -153,6 +161,14 @@ ms.locfileid: "76114207"
 ## <a name="step-5---optional-use-visual-studio-tools"></a>第 5 步 -（可选）使用 Visual Studio 工具
 
 我们提供了几种工具来帮助你在客户端计算机上[检测和管理安装的 Visual Studio 实例](tools-for-managing-visual-studio-instances.md?view=vs-2017)。
+
+## <a name="advanced-configuration"></a>高级配置
+
+默认情况下，Visual Studio 安装允许从错误列表 F1 和代码链接在必应搜索中包含自定义类型。 可以通过按策略更改以下注册表项的值，将 Visual Studio 配置为禁止搜索机制包括任何自定义用户类型：
+
+**“PutCustomTypeInBingSearch” DWORD 0**
+
+注册表位于专用注册表配置单元的 *Software\Microsoft\VisualStudio\15.0_{InstanceId}\Roslyn\Internal\Diagnostics\* 目录中。 有关如何打开注册表配置单元的说明，请参阅[编辑 Visual Studio 实例的注册表](tools-for-managing-visual-studio-instances.md?view=vs-2017#editing-the-registry-for-a-visual-studio-instance)。
 
 ::: moniker-end
 

@@ -1,5 +1,5 @@
 ---
-title: AD_PROCESS_ID_TYPE | Microsoft Docs
+title: AD_PROCESS_ID_TYPE |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - AD_PROCESS_ID_TYPE enumeration
 ms.assetid: 0aab80e9-285a-4697-94ac-c864d42a6aaa
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a9df097037a84af9da63f0a98ee6cfa3b28cfcdd
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: a88fbe97cede8d343f1a96bc1917a69b8905b02b
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66351392"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80738189"
 ---
-# <a name="adprocessidtype"></a>AD_PROCESS_ID_TYPE
-指定如何解释中的进程 ID [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md)结构。
+# <a name="ad_process_id_type"></a>AD_PROCESS_ID_TYPE
+指定如何在[AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md)结构中解释进程 ID。
 
 ## <a name="syntax"></a>语法
 
@@ -44,20 +44,20 @@ public enum enum_AD_PROCESS_ID {
 
 ## <a name="fields"></a>字段
 `AD_PROCESS_ID_SYSTEM`\
-进程 ID 是系统标识符。 使用`ProcessId.dwProcessId`字段[AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md)结构。
+进程 ID 是系统标识符。 使用AD_PROCESS_ID`ProcessId.dwProcessId`结构的字段[AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md)。
 
 `AD_PROCESS_ID_GUID`\
-进程 ID 是一个 GUID。 使用`ProcessId.guidProcessId`字段的`AD_PROCESS_ID`结构。
+进程 ID 是 GUID。 `ProcessId.guidProcessId`使用结构字段`AD_PROCESS_ID`。
 
 ## <a name="remarks"></a>备注
-用于`ProcessIdType`的成员[AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md)结构以确定结构中包含的进程 ID 的类型。 确定如何解释`ProcessId`联合结构中。
+用于AD_PROCESS_ID结构`ProcessIdType`的成员，用于[AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md)标识结构中包含的进程 ID 的类型。 确定如何解释结构中的`ProcessId`联合。
 
 ## <a name="requirements"></a>要求
-标头： msdbg.h
+标题： msdbg.h
 
-命名空间:Microsoft.VisualStudio.Debugger.Interop
+命名空间：微软.VisualStudio.调试器.互通
 
-程序集：Microsoft.VisualStudio.Debugger.Interop.dll
+程序集：微软.VisualStudio.调试器.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [枚举](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

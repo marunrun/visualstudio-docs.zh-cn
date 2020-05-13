@@ -1,31 +1,31 @@
 ---
-title: m_parent 字段 |Microsoft Docs
+title: m_parent字段 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - m_parent field, Task class [.NET Framework debug engines]
 ms.assetid: da9e3dc7-8e9b-4c3a-a9e0-12921b5300c6
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 10b95a49eca8f3f4cc7fa81e62eb95d4ca048b1b
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 2d9d21cdd7fd89e075d15c0db1b0696deaa5cb46
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66350665"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80738395"
 ---
-# <a name="mparent-field"></a>m_parent 字段
+# <a name="m_parent-field"></a>m_parent字段
 
-任务的父支持字段<xref:System.Threading.Tasks.Task>。
+任务父<xref:System.Threading.Tasks.Task>项的备份字段。
 
-**Namespace**：<xref:System.Threading.Tasks?displayProperty=fullName>
+**命名空间：**<xref:System.Threading.Tasks?displayProperty=fullName>
 
-**程序集：** mscorlib (在*mscorlib.dll*)
+**程序集**：mscorlib（在*mscorlib.dll*中）
 
-无法从.NET Framework 来访问此内部成员，因为以下语法提供通用中间语言 (CIL)。
+由于您无法从 .NET 框架访问此内部成员，因此在通用中间语言 （CIL） 中提供了以下语法。
 
 ## <a name="syntax"></a>语法
 

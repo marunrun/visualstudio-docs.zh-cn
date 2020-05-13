@@ -13,10 +13,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 2a74862d59fe402cbfd9e6bfa804d62ca4c8310b
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74778370"
 ---
 # <a name="profiling-and-windows-vista-security"></a>分析和 Windows Vista 安全性
@@ -33,7 +33,7 @@ ms.locfileid: "74778370"
 
 ## <a name="cross-session-profiling"></a>跨会话分析
 
-跨会话分析是分析在不同用户会话中运行的进程的能力  。 例如，大多数服务在会话 0 中运行，而用户无法直接在会话 0 中运行。 使用性能资源管理器工具栏上的“附加到进程”按钮或 VSPerfCmd 命令行工具的 `/attach` 选项可以分析不同用户会话中的大多数进程  。
+跨会话分析是分析在不同用户会话中运行的进程的能力  。 例如，大多数服务在会话 0 中运行，而用户无法直接在会话 0 中运行。 使用性能资源管理器工具栏上的“附加到进程”按钮或 VSPerfCmd 命令行工具的  **选项可以分析不同用户会话中的大多数进程**`/attach`。
 
 可以通过设置跨进程分析可见性选项来查看可用进程的列表。 在选择“附加到进程”时显示的“附加到进程”窗口中提供了这些选项   ：
 
@@ -45,8 +45,8 @@ ms.locfileid: "74778370"
 
   未选择此选项时，列表显示当前会话中的进程。 否则，该列表会显示所有会话中的进程。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [概述](../profiling/overviews-performance-tools.md)
 - [VSPerfCmd](../profiling/vsperfcmd.md)
-- [如何：附加到正在运行的进程](/previous-versions/visualstudio/visual-studio-2010/c6wf8e4z\(v\=vs.100\))
+- [如何：附加到运行的进程](/previous-versions/visualstudio/visual-studio-2010/c6wf8e4z\(v\=vs.100\))

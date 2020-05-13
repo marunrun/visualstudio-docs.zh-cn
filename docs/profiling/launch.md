@@ -10,10 +10,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 9834c10c58fb343de0707fa0b805586a6cdebcb3
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74778604"
 ---
 # <a name="launch"></a>启动
@@ -37,7 +37,7 @@ VSPerfCmd.exe /Launch:AppName [Options]
 
  **GlobalOn** and **GlobalOff** 恢复 (GlobalOn) 或暂停 (GlobalOff) 分析，但不结束分析会话   。
 
- ProcessOn:  `PID` 和 ProcessOff  :`PID`恢复 (ProcessOn) 或暂停 (ProcessOff) 指定进程的分析   。
+ ProcessOn: `PID` 和 ProcessOff: `PID`   恢复 (ProcessOn) 或暂停 (ProcessOff) 指定进程的分析   。
 
  **TargetCLR** 指定在分析会话中加载了多个版本的 .NET Framework 公共语言运行时 (CLR) 时，要分析的 .NET Framework CLR 版本。 默认情况下分析加载的第一个版本。
 

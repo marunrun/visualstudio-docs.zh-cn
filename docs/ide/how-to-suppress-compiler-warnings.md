@@ -9,15 +9,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: b604f6a1392353d304897a233b74c0d81fc258df
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "76114509"
 ---
-# <a name="how-to-suppress-compiler-warnings"></a>如何：取消编译器警告
+# <a name="how-to-suppress-compiler-warnings"></a>如何：取消显示编译器警告
 
-通过筛选出一个或多个类型的编译器警告，可以整理一个生成日志。 例如，可能只想查看在将生成日志详细信息设置为“正常”、“详细信息”或“诊断”时生成的某些输出    。 有关详细程度的详细信息，请参见[如何：查看、保存和配置生成日志文件](../ide/how-to-view-save-and-configure-build-log-files.md)。
+通过筛选出一个或多个类型的编译器警告，可以整理一个生成日志。 例如，可能只想查看在将生成日志详细信息设置为“正常”、“详细信息”或“诊断”时生成的某些输出    。 有关详细级别的更多信息，请参阅[如何：查看、保存和配置生成日志文件](../ide/how-to-view-save-and-configure-build-log-files.md)。
 
 ## <a name="suppress-specific-warnings-for-visual-c-or-f"></a>取消显示特定的 Visual C# 或 F\# 警告
 
@@ -63,13 +63,13 @@ ms.locfileid: "76114509"
 
 1. 在菜单栏上，依次选择“项目”   > “卸载项目”  。
 
-1. 在“解决方案资源管理器”中，打开项目的右键单击菜单或快捷菜单，然后选择“编辑 \<ProjectName>.vbproj”   。
+1. 在“解决方案资源管理器”中，打开项目的右键单击菜单或快捷菜单，然后选择“编辑 **ProjectName>.vbproj”** **\<** 。
 
     该 XML 项目文件将在代码编辑器中打开。
 
 1. 找到正在生成的用于生成配置的 `<NoWarn>` 元素，并添加一个或多个警告编号作为 `<NoWarn>` 元素的值。 如果指定多个警告编号，请使用逗号分隔。
 
-     以下示例显示了在 x86 平台上的“调试”  生成配置的 `<NoWarn>` 元素，其中取消显示了两个编译器警告：
+     以下示例显示了在 x86 平台上的“调试”`<NoWarn>`*生成配置的*  元素，其中取消显示了两个编译器警告：
 
     ```xml
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
@@ -87,7 +87,7 @@ ms.locfileid: "76114509"
     ```
 
    > [!NOTE]
-   > 在默认情况下，.NET Core 项目不包含生成配置属性组。 若要取消显示 .NET Core 项目中的警告，请将生成配置部分手动添加到文件。 例如：
+   > 在默认情况下，.NET Core 项目不包含生成配置属性组。 若要取消显示 .NET Core 项目中的警告，请将生成配置部分手动添加到文件。 例如:
    >
    > ```xml
    > <Project Sdk="Microsoft.NET.Sdk">
@@ -130,8 +130,8 @@ ms.locfileid: "76114509"
 
    警告已从解决方案资源管理器  和错误列表  消失。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [演练：构建应用程序](../ide/walkthrough-building-an-application.md)
+- [演练：生成应用程序](../ide/walkthrough-building-an-application.md)
 - [如何：查看、保存和配置生成日志文件](../ide/how-to-view-save-and-configure-build-log-files.md)
 - [编译和生成](../ide/compiling-and-building-in-visual-studio.md)

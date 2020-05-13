@@ -14,10 +14,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: cfb0d9ae2d677b1cc9dc828ffaecd5c0f71bfd5b
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74772283"
 ---
 # <a name="performance-report-views"></a>性能报告视图
@@ -52,5 +52,5 @@ ms.locfileid: "74772283"
 
  有关包含层交互数据的分析数据文件的交互视图和报告的参考信息。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [分析性能工具数据](../profiling/analyzing-performance-tools-data.md)

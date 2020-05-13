@@ -11,10 +11,10 @@ monikerRange: vs-2017
 ms.workload:
 - dotnet
 ms.openlocfilehash: a95e907379db19d88fd7204e8410038ddb881d3b
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74779111"
 ---
 # <a name="how-to-attach-the-profiler-to-a-net-service-to-collect-concurrency-data-by-using-the-command-line"></a>如何：将探查器附加到 .NET 服务，以使用命令行收集并发数据
@@ -57,7 +57,7 @@ ms.locfileid: "74779111"
     > [!NOTE]
     > **/User** 和 **/crosssession** 选项通常为服务所需选项。
 
-    |选项|说明|
+    |选项|描述|
     |------------|-----------------|
     |[/user](../profiling/user-vsperfcmd.md) **:** [`Domain` **\\** ]`UserName`|指定拥有所分析进程的帐户的域和用户名。 仅在进程以已登录用户外的用户身份运行时才需要此选项。 进程所有者在 Windows 任务管理器的“进程”选项卡上的“用户名”列中列出   。|
     |[/crosssession](../profiling/crosssession.md)|启用其他会话中的进程分析。 在其他的会话中运行该服务时需要此选项。 会话 ID 位于 Windows 任务管理器的“进程”选项卡上的“会话 ID”列中   。 可以将 **/CS** 指定为 **/crosssession** 的缩写。|
@@ -73,7 +73,7 @@ ms.locfileid: "74779111"
 
     - `PID` 指定服务的进程 ID 或进程名称。 可以在 Windows 任务管理器中查看所有运行中的进程的进程 ID。
 
-    - **targetclr:** `Version` 指定应用程序中加载运行时的多个版本时要分析的公共语言运行时 (CLR) 的版本。 可选。
+    - targetclr: `Version` 指定应用程序中加载运行时的多个版本时要分析的公共语言运行时 (CLR) 的版本  。 可选。
 
 ## <a name="control-data-collection"></a>控制数据收集
  服务运行时，使用通过使用 VSPerfCmd.exe 选项开始和停止向文件的数据写入，从而控制数据收集  。 通过控制数据收集，使你能够针对程序执行的特定部分（如启动或关闭应用程序）进行数据收集。
@@ -82,7 +82,7 @@ ms.locfileid: "74779111"
 
 - 以下 **VSPerfCmd** 选项对可启动和停止数据收集。 在单独的命令行上指定每个选项。 可多次打开和关闭数据收集。
 
-    |选项|说明|
+    |选项|描述|
     |------------|-----------------|
     |[/globalon /globaloff](../profiling/globalon-and-globaloff.md)|启动 ( **/globalon**) 或停止 ( **/globaloff**) 所有进程的数据收集。|
     |[/processon](../profiling/processon-and-processoff.md) **:** `PID` [/processoff](../profiling/processon-and-processoff.md) **:** `PID`|启动 ( **/processon**) 或停止 ( **/processoff**) 由进程 ID (`PID`) 指定的进程的数据收集。|
@@ -99,10 +99,10 @@ ms.locfileid: "74779111"
 
     - 停止服务。
 
-         -或-
+         \- 或 -
 
     - 键入 **VSPerfCmd /detach.**
 
 2. 关闭探查器。 类型：
 
-     **VSPerfCmd**：[关闭](../profiling/shutdown.md)
+     **VSPerfCmd**  [Shutdown](../profiling/shutdown.md)

@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 988e89b9019b149e89ed569cf3ff585fdd4641bc
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75590834"
 ---
 # <a name="set-language-specific-editor-options"></a>设置语言特定的编辑器选项
@@ -45,7 +45,7 @@ Visual Studio 提供了各种可应用于特定编程语言的文本编辑器选
 [“选项”->“文本编辑器”->“XAML”->“格式设置”](../../ide/reference/options-text-editor-xaml-formatting.md)\
 描述 XAML 文档中元素和特性排列的设置。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [自定义编辑器](../how-to-change-text-case-in-the-editor.md)
 - [使用 EditorConfig 创建可移植的自定义编辑器设置](../../ide/create-portable-custom-editor-options.md)

@@ -12,10 +12,10 @@ ms.workload:
 - aspnet
 - dotnetcore
 ms.openlocfilehash: 990106f7f3ca97ae38a20170ca6ed2e1d699d4e4
-ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "70180324"
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-aspnet-core-web-service-in-f"></a>快速入门：使用 Visual Studio 在 F\# 中创建首个 ASP.NET Core Web 服务
@@ -42,7 +42,7 @@ ms.locfileid: "70180324"
 
 1. 打开 Visual Studio。
 
-2. 从顶部菜单栏中选择“文件”  >“新建”  >“项目”  。
+2. 从顶部菜单栏中选择“文件”>“新建”>“项目”    。
 
 3. 在“新建项目”对话框的左窗格中，展开“Visual F#”，然后选择“Web”    。 在中间窗格中，选择“ASP.NET Core Web 应用程序”，然后选择“确定”   。
 

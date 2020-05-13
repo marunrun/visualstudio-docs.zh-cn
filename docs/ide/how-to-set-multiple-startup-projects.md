@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 2a1eec02adf0a643d7ac7e0da8a75da5328c601b
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "76115143"
 ---
 # <a name="how-to-set-multiple-startup-projects"></a>如何：设置多个启动项目
@@ -32,7 +32,7 @@ Visual Studio 允许指定在启动调试器时如何运行多个项目。
 
 4. 选择“多个启动项目”选项并设置适当的操作  。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [编译和生成](../ide/compiling-and-building-in-visual-studio.md)
 - [创建解决方案和项目](../ide/creating-solutions-and-projects.md)

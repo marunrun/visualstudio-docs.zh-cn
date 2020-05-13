@@ -1,5 +1,5 @@
 ---
-title: IDebugPendingBreakpoint2::CanBind | Microsoft Docs
+title: IDebug 待定断点2：：CanBind |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -8,23 +8,23 @@ helpviewer_keywords:
 - IDebugPendingBreakpoint2::CanBind method
 - CanBind method
 ms.assetid: 84a2b189-ccf1-467e-8fab-0c0da68f0b91
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c9325d8a0c8ee39aec6f8ceccb5bbb894eef2163
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 07625f7249092e2de3d3dccaaef31a2869755e36
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66311730"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80725977"
 ---
 # <a name="idebugpendingbreakpoint2canbind"></a>IDebugPendingBreakpoint2::CanBind
-确定此挂起断点是否可将绑定到代码位置。
+确定此挂起的断点是否可以绑定到代码位置。
 
 ## <a name="syntax"></a>语法
 
@@ -42,16 +42,16 @@ int CanBind ( 
 
 ## <a name="parameters"></a>参数
 `ppErrorEnum`\
-[out]返回[IEnumDebugErrorBreakpoints2](../../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2.md)对象，其中包含一系列[IDebugErrorBreakpoint2](../../../extensibility/debugger/reference/idebugerrorbreakpoint2.md)对象如果可能会出现错误。
+[出]返回[IEnumDebugErrorBreakpoints2](../../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2.md)对象，该对象包含[IDebugErrorBreakpoint2](../../../extensibility/debugger/reference/idebugerrorbreakpoint2.md)对象的列表（如果可能有错误）。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK.`将返回`S_FALSE`如果无法绑定断点，在这种情况下返回的错误`ppErrorEnum`参数。 否则，返回错误代码。 返回`E_BP_DELETED`如果断点已被删除。
+ 如果成功，则`S_OK.`返回`S_FALSE`（如果断点无法绑定）返回，在这种情况下，`ppErrorEnum`参数将返回错误。 否则，返回错误代码。 如果`E_BP_DELETED`断点已被删除，则返回。
 
 ## <a name="remarks"></a>备注
- 调用此方法来确定会发生什么情况如果此挂起断点绑定。 调用[绑定](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md)方法来实际进行绑定挂起断点。
+ 调用此方法以确定如果绑定此挂起的断点会发生什么情况。 调用[Bind](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md)方法以实际绑定挂起的断点。
 
 ## <a name="example"></a>示例
- 下面的示例演示如何实现此方法对于简单`CPendingBreakpoint`公开的对象[IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)接口。
+ 下面的示例演示如何为公开`CPendingBreakpoint`[IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)接口的简单对象实现此方法。
 
 ```cpp
 HRESULT CPendingBreakpoint::CanBind(IEnumDebugErrorBreakpoints2** ppErrorEnum)
@@ -142,4 +142,4 @@ HRESULT CPendingBreakpoint::CanBind(IEnumDebugErrorBreakpoints2** ppErrorEnum)
 - [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)
 - [IEnumDebugErrorBreakpoints2](../../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2.md)
 - [IDebugErrorBreakpoint2](../../../extensibility/debugger/reference/idebugerrorbreakpoint2.md)
-- [Bind](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md)
+- [绑定](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md)

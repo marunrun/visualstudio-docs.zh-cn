@@ -19,15 +19,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 44d6e3c77fee53b15ec8d18cb74fd7355ee101a8
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77633234"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79307177"
 ---
 # <a name="msbuild-response-files"></a>MSBuild 响应文件
 
-响应 (.rsp  ) 文件是包含 MSBuild.exe  命令行开关的文本文件。 每个开关可以单独占一行，或者所有开关仅占一行。 注释行以 # 符号开头  。 @ 开关用于将另一个响应文件传递给 MSBuild.exe   。
+响应 (.rsp  ) 文件是包含 MSBuild.exe  命令行开关的文本文件。 每个开关可以单独占一行，或者所有开关仅占一行。 注释行以  **符号开头#** 。 **开关用于将另一个响应文件传递给 MSBuild.exe@**  。
 
 ## <a name="msbuildrsp"></a>MSBuild.rsp
 
@@ -37,7 +37,7 @@ ms.locfileid: "77633234"
 
 在版本 15.6 及更高版本中，MSBuild 会在该项目的父级目录中搜索名为 Directory.Build.rsp 的文件  。  这可以帮助源代码存储库在命令行生成过程中提供默认参数。  此外，它还可以用于指定托管生成的命令行参数。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [MSBuild 参考](../msbuild/msbuild-reference.md)
 - [命令行参考](../msbuild/msbuild-command-line-reference.md)

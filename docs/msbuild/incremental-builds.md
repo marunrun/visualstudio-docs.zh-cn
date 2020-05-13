@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: c7283d67710a3b5b319b2d25a1c5d6535fed83b9
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77633715"
 ---
 # <a name="incremental-builds"></a>增量生成
@@ -46,13 +46,13 @@ MSBuild 通过比较目标的 `Inputs` 和 `Outputs` 属性来确定是否执行
 
 共有三种情况：
 
-- 目标具有计算结果为 `false` 的 `Condition` 属性。 这种情况不运行目标且不影响生成。
+- 目标具有计算结果为 `Condition` 的 `false` 属性。 这种情况不运行目标且不影响生成。
 
 - 目标具有过时的输出，将运行目标，让这些输出保持为最新。
 
 - 目标没有过时的输出，将跳过目标。 MSBuild 会像已运行目标一样，计算目标并更改项和属性。
 
-要支持增量编译，任务必须确保所有 `Output` 元素的 `TaskParameter` 属性值与某个任务输入参数相等。 下面是一些可能的恶意活动：
+要支持增量编译，任务必须确保所有 `TaskParameter` 元素的 `Output` 属性值与某个任务输入参数相等。 下面是一些可能的恶意活动：
 
 ```xml
 <CreateProperty Value="123">
@@ -78,6 +78,6 @@ MSBuild 通过比较目标的 `Inputs` 和 `Outputs` 属性来确定是否执行
 
 该代码会创建 CompileRan 属性并为其赋予值 `true`，但仅当执行了目标时才如此操作。 如果跳过目标，则不会创建 CompileRan。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [目标](../msbuild/msbuild-targets.md)

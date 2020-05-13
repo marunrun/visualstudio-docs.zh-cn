@@ -20,9 +20,9 @@
           items:
             - name: 符号类型的词法层次结构
               href: lexical-hierarchy-of-symbol-types.md
-            - name: 批注
+            - name: Annotation
               href: annotation.md
-            - name: 块
+            - name: 街区
               href: block.md
             - name: 编译单位
               href: compiland.md

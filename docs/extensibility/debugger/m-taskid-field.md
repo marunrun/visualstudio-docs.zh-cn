@@ -1,30 +1,30 @@
 ---
-title: m_taskId 字段 |Microsoft Docs
+title: m_taskId字段 |微软文档
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - m_taskId field, Task class [.NET Framework debug engines]
 ms.assetid: 9e4b827e-7c41-4fa3-b646-830aba2ec736
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 511a9e51c9612db30efe122d940ae458f1850a08
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: c031d225010c6e1e6d8a7c681e47699efe56ed9c
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66351549"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80738367"
 ---
-# <a name="mtaskid-field"></a>m_taskId 字段
-有关支持字段<xref:System.Threading.Tasks.Task.Id%2A?displayProperty=fullName>属性。
+# <a name="m_taskid-field"></a>m_taskId字段
+属性的<xref:System.Threading.Tasks.Task.Id%2A?displayProperty=fullName>后备字段。
 
- **Namespace**：<xref:System.Threading.Tasks?displayProperty=fullName>
+ **命名空间：**<xref:System.Threading.Tasks?displayProperty=fullName>
 
- **程序集：** mscorlib (在*mscorlib.dll*)
+ **程序集**：mscorlib（在*mscorlib.dll*中）
 
- 无法从.NET Framework 来访问此内部成员，因为以下语法提供通用中间语言 (CIL)。
+ 由于您无法从 .NET 框架访问此内部成员，因此在通用中间语言 （CIL） 中提供了以下语法。
 
 ## <a name="syntax"></a>语法
 

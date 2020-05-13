@@ -13,12 +13,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 288cb11d3e6ae3917f5fcc6ec9ed242549908576
-ms.sourcegitcommit: 978df2feb5e64228d2e3dd430b299a5c234cda17
+ms.openlocfilehash: ae8b6fd52cd2469cf7562a199b952d388b463089
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72888640"
+ms.lasthandoff: 03/20/2020
+ms.locfileid: "79549928"
 ---
 # <a name="develop-javascript-and-typescript-code-in-visual-studio-without-solutions-or-projects"></a>在 Visual Studio 中开发 JavaScript 和 TypeScript 代码，而无需解决方案或项目
 
@@ -27,7 +27,7 @@ ms.locfileid: "72888640"
 若要开始，请从工具栏中选择“文件” > “打开” > “文件夹”    。 解决方案资源管理器显示文件夹中的所有文件，你可以打开任何文件以开始编辑。 在后台，Visual Studio 对文件编制索引，启用 npm、生成和调试功能。
 
 > [!IMPORTANT]
-> 本文所述的很多功能（包括 npm 集成）均要求 Visual Studio 2017 版本 15.8 或更高版本。
+> 本文所述的很多功能（包括 npm 集成）均要求 Visual Studio 2017 版本 15.8 或更高版本。 必须安装 Visual Studio Node.js 开发工作负载  。
 
 ## <a name="npm-integration"></a>npm 集成
 

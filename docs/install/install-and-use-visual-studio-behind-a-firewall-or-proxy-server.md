@@ -17,20 +17,20 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 44ffc778d398c2f9a1cfaf026d2364ee1dc27f9b
-ms.sourcegitcommit: ea5e02720d71185f8e27fbea205024371b0c7ceb
+ms.openlocfilehash: 025cf432912d38976507c93545e7c38b44d86fd8
+ms.sourcegitcommit: 316dd2182dd56b0cbde49f0cd82e9f75baa2530f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77544533"
+ms.lasthandoff: 04/12/2020
+ms.locfileid: "81223653"
 ---
 # <a name="install-and-use-visual-studio-and-azure-services-behind-a-firewall-or-proxy-server"></a>在防火墙或代理服务器后面安装和使用 Visual Studio 和 Azure 服务
 
 如果你或贵组织使用防火墙或代理服务器等安全措施，则会有可能需要将其添加到“允许列表”的域 URL，以及可能需要打开的端口和协议，以便在安装和使用 Visual Studio 以及 Azure 服务时获得最佳体验。
 
-* **[安装 Visual Studio](#install-visual-studio)**：这些表包括要添加到允许列表的域 URL，以便你可访问所需的所有组件和工作负载。
+* **[安装 Visual Studio](#install-visual-studio)** ：这些表包括要添加到允许列表的域 URL，以便你可访问所需的所有组件和工作负载。
 
-* **[使用 Visual Studio 和 Azure 服务](#use-visual-studio-and-azure-services)**：此表包括要添加到允许列表的域 URL 以及要打开的端口和协议，以便你可访问所需的所有功能和服务。
+* **[使用 Visual Studio 和 Azure 服务](#use-visual-studio-and-azure-services)** ：此表包括要添加到允许列表的域 URL 以及要打开的端口和协议，以便你可访问所需的所有功能和服务。
 
 > [!NOTE]
 > 本文针对 Windows 上的 Visual Studio 编写，但部分信息也适用于在防火墙或代理服务器后[安装 Visual Studio for Mac](/visualstudio/mac/install-behind-a-firewall-or-proxy-server)。
@@ -147,7 +147,7 @@ ms.locfileid: "77544533"
 
 ## <a name="get-support"></a>获取支持
 
-对于安装相关问题，我们提供[实时聊天](https://visualstudio.microsoft.com/vs/support/#talktous)（仅限英语）支持选项。
+对于与安装相关的问题，我们提供[安装聊天](https://visualstudio.microsoft.com/vs/support/#talktous)（仅限英语）支持选项  。
 
 下面是另外几个支持选项：
 

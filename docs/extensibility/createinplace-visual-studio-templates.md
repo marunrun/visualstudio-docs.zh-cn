@@ -1,5 +1,5 @@
 ---
-title: CreateInPlace 元素 （Visual Studio 模板）
+title: 创建位置元素（可视化工作室模板）
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -9,22 +9,22 @@ helpviewer_keywords:
 - CreateInPlace element [Visual Studio Templates]
 - <CreateInPlace> element [Visual Studio Templates]
 ms.assetid: 420d46ea-2470-4da9-ad8e-95165588a920
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: da14da9606c2fcd84f053aff30139eec5751c673
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: ab2b5d68be069f30c8f71536b6d47cb1ce8823b6
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66341782"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80739659"
 ---
-# <a name="createinplace-element-visual-studio-templates"></a>CreateInPlace 元素 （Visual Studio 模板）
-指定是否要创建项目和在指定位置中，执行参数替换或在一个临时位置执行参数替换，然后将项目保存到指定的位置。
+# <a name="createinplace-element-visual-studio-templates"></a>创建 InPlace 元素（可视化工作室模板）
+指定是在指定位置创建项目并执行参数替换，还是在临时位置执行参数替换，然后将项目保存到指定位置。
 
- \<VSTemplate> \<TemplateData> \<CreateInPlace>
+ \<vstemplate>\<模板数据>\<创建原>
 
 ## <a name="syntax"></a>语法
 
@@ -50,7 +50,7 @@ ms.locfileid: "66341782"
 ## <a name="text-value"></a>文本值
  需要一个文本值。
 
- 文本必须为 `true` 或 `false`。 如果`true`，创建项目并在中指定的位置执行参数替换**新建项目**对话框。 如果`false`，参数替换执行在一个临时位置，然后将此项目复制到指定位置。
+ 文本必须为 `true` 或 `false`。 如果`true`创建 项目并在 **"新项目"** 对话框中指定的位置执行参数替换。 如果在`false`临时位置执行 参数替换，然后将项目复制到指定位置。
 
 ## <a name="remarks"></a>备注
  `CreateInPlace` 是可选元素。 默认值为 `true`。
@@ -85,4 +85,4 @@ ms.locfileid: "66341782"
 
 ## <a name="see-also"></a>请参阅
 - [创建项目和项模板](../ide/creating-project-and-item-templates.md)
-- [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
+- [可视化工作室模板架构参考](../extensibility/visual-studio-template-schema-reference.md)

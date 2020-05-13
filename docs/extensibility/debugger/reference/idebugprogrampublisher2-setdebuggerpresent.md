@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramPublisher2::SetDebuggerPresent | Microsoft Docs
+title: IDebug程序发布者2：：set调试器存在 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProgramPublisher2::SetDebuggerPresent
 ms.assetid: c88c3ff4-3632-4199-b5de-83c6d21bcf75
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 402a9a65344af02dd4c321f4a1e449b012af36ee
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: b551c644346b66d907fa4f75b11b24c8b9538e27
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66343306"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80721599"
 ---
 # <a name="idebugprogrampublisher2setdebuggerpresent"></a>IDebugProgramPublisher2::SetDebuggerPresent
-告知调试器存在并且运行程序发布服务器。
+告诉程序发布者调试器存在并运行。
 
 ## <a name="syntax"></a>语法
 
@@ -41,13 +41,13 @@ int SetDebuggerPresent(
 
 ## <a name="parameters"></a>参数
 `fDebuggerPresent`\
-[in]非零 (`TRUE`) 如果存在调试程序，则为零 (`FALSE`) 如果不是。
+[在]如果存在调试器`TRUE`，则非零 （ ）， 如果`FALSE`不存在，则为零 （ ）。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，返回`S_OK`;否则，返回错误代码。
 
 ## <a name="remarks"></a>备注
- 从返回的数据中反映出来是否存在调试器[GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md)方法： 存在返回的值是设置，或者通过调用之前清除`SetDebuggerPresent`方法。
+ 调试器的存在或不存在反映在从[GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md)方法返回的数据中：返回的值由对`SetDebuggerPresent`该方法的事先调用设置或清除。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugProgramPublisher2](../../../extensibility/debugger/reference/idebugprogrampublisher2.md)

@@ -1,121 +1,121 @@
 ---
-title: 发布扩展使用命令行
+title: 使用命令行发布扩展
 ms.date: 07/12/2018
 ms.topic: conceptual
 helpviewer_keywords:
 - publishing extensions
 - extension, publishing
 ms.assetid: 6ff9efc4-919d-4071-a80d-6dbdd2ceb2f8
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8a6b5531bc5dc138f2f90a0a67da39f9583bc4b0
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 40be0252218f39b4ff98b58caedd7f9f20ce6d5d
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66320641"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80697130"
 ---
-# <a name="walkthrough-publishing-a-visual-studio-extension-via-command-line"></a>演练：发布 Visual Studio 扩展中的通过命令行
+# <a name="walkthrough-publishing-a-visual-studio-extension-via-command-line"></a>演练：通过命令行发布可视化工作室扩展
 
-此演练演示如何将 Visual Studio 扩展发布到 Visual Studio Marketplace 使用命令行。 当你的扩展添加到 Marketplace 后时，开发人员可以使用[**扩展和更新**](../ide/finding-and-using-visual-studio-extensions.md)对话框从中浏览新建和更新的扩展。
+本演练演示如何使用命令行将可视化工作室扩展发布到可视化工作室市场。 将扩展添加到应用商店时，开发人员可以使用[**"扩展和更新**](../ide/finding-and-using-visual-studio-extensions.md)"对话框浏览其中的新扩展和更新的扩展。
 
-VsixPublisher.exe 是发布到 Marketplace 的 Visual Studio 扩展的命令行工具。 可以从 ${VSInstallDir}\VSSDK\VisualStudioIntegration\Tools\Bin\VsixPublisher.exe 访问。 可在上找到此工具的命令是：**发布**， **createPublisher**， **deletePublisher**， **deleteExtension**， **登录名**，**注销**。
+VsixPublisher.exe 是用于将可视化工作室扩展发布到应用商店的命令行工具。 可以从 ${VSInstallDir}VSSDK\VisualStudio 集成\工具\Bin_VsixPublisher.exe 访问它。 此工具上可用的命令是：**发布**、**创建发布者**、**删除发布者**、**删除扩展**、**登录**、**注销**。
 
 ## <a name="commands"></a>命令
 
-### <a name="publish"></a>publish
+### <a name="publish"></a>发布
 
-将扩展发布到 Marketplace。 该扩展可以是 vsix、 exe/msi 文件或链接。 如果扩展已存在具有相同的版本，它将覆盖该扩展。 如果尚不存在该扩展，它将创建一个新的扩展。
+发布到应用商店的扩展。 扩展名可以是 vsix、exe/msi 文件或链接。 如果扩展已使用相同的版本存在，它将覆盖扩展。 如果扩展不存在，它将创建新扩展。
 
 |命令选项 |描述 |
 |---------|---------|
-|有效负载 （必需） | 若要发布的有效负载或将其用作"详细信息 URL"的链接到的路径。 |
-|publishManifest （必需） | 发布路径清单文件使用。 |
-|ignoreWarnings | 要发布扩展时忽略的警告的列表。 发布扩展时，将为命令行的消息中显示这些警告。 (例如，"VSIXValidatorWarning01，VSIXValidatorWarning02")
-|personalAccessToken | 个人访问令牌 (PAT) 用于进行身份验证发布服务器。 如果未提供，则会从登录的用户获取 PAT。 |
+|有效负载（必需） | 要发布的有效负载的路径或用作"更多信息 URL"的链接。 |
+|发布清单（必需） | 要使用的发布清单文件的路径。 |
+|忽略警告 | 发布扩展时要忽略的警告列表。 发布扩展时，这些警告显示为命令行消息。 （例如，"VSIX 验证器警告 01，VSIX 验证器警告 02"）
+|个人访问令牌 | 用于对发布者进行身份验证的个人访问令牌 （PAT）。 如果未提供，则从登录用户获取 PAT。 |
 
 ```
 VsixPublisher.exe publish -payload "{path to vsix}" -publishManifest "{path to vs-publish.json}" -ignoreWarnings "VSIXValidatorWarning01,VSIXValidatorWarning02"
 ```
 
-### <a name="createpublisher"></a>createPublisher
+### <a name="createpublisher"></a>创建发布者
 
-在 Marketplace 上创建发布服务器。 此外将记录发布服务器到未来的操作 （例如删除/发布扩展） 的计算机。
+在应用商店中创建发布者。 还将发布者记录到计算机中以进行将来的操作（例如，删除/发布扩展）。
 
 |命令选项 |描述 |
 |---------|---------|
-|displayName （必需） | 发布服务器上的显示名称。 |
-|publisherName （必需） | 发布服务器 （例如，标识符） 的名称。 |
-|personalAccessToken （必需） | 个人访问令牌用于进行身份验证发布服务器。 |
-|shortDescription | 发布服务器 （而不是文件） 的简短说明。 |
-|longDescription | 发布服务器 （而不是文件） 的详细说明。 |
+|显示名称（必需） | 显示发布者的名称。 |
+|发布者名称（必需） | 发布者的名称（例如标识符）。 |
+|个人访问令牌（必需） | 用于对发布者进行身份验证的个人访问令牌。 |
+|shortDescription | 发布者的简短描述（不是文件）。 |
+|长描述 | 发布者（不是文件）的长描述。 |
 
 ```
 VsixPublisher.exe createPublisher -publisherName "{Publisher Name}" -displayName "{Publisher Display Name}" -personalAccessToken "{Personal Access Token}"
 ```
 
-### <a name="deletepublisher"></a>deletePublisher
+### <a name="deletepublisher"></a>删除发布者
 
-发布服务器上，在 Marketplace 中删除。
+删除应用商店上的发布者。
 
 |命令选项 |描述 |
 |---------|---------|
-|publisherName （必需） | 发布服务器 （例如，标识符） 的名称。 |
-|personalAccessToken （必需） | 个人访问令牌用于进行身份验证发布服务器。 |
+|发布者名称（必需） | 发布者的名称（例如标识符）。 |
+|个人访问令牌（必需） | 用于对发布者进行身份验证的个人访问令牌。 |
 
 ```
 VsixPublisher.exe deletePublisher -publisherName "{Publisher Name}" -personalAccessToken "{Personal Access Token}"
 ```
 
-### <a name="deleteextension"></a>deleteExtension
+### <a name="deleteextension"></a>删除扩展
 
-从 Marketplace 中删除扩展。
+从应用商店中删除扩展。
 
 |命令选项 |描述 |
 |---------|---------|
-|extensionName （必需） | 要删除的扩展插件的名称。 |
-|publisherName （必需） | 发布服务器 （例如，标识符） 的名称。 |
-|personalAccessToken | 个人访问令牌用于进行身份验证发布服务器。 如果未提供，则会从登录的用户获取 pat。 |
+|分名（必填） | 要删除的扩展的名称。 |
+|发布者名称（必需） | 发布者的名称（例如标识符）。 |
+|个人访问令牌 | 用于对发布者进行身份验证的个人访问令牌。 如果未提供，则从登录用户获取 pat。 |
 
 ```
 VsixPublisher.exe deleteExtension -extensionName "{Extension Name}" -publisherName "{Publisher Name}"
 ```
 
-### <a name="login"></a>登录
+### <a name="login"></a>login
 
-登录到计算机的发布服务器。
+将发布者记录到计算机中。
 
 |命令选项 |描述 |
 |---------|---------|
-|（所需的 personalAccessToken | 个人访问令牌用于进行身份验证发布服务器。 |
-|publisherName （必需） | 发布服务器 （例如，标识符） 的名称。 |
-|overwrite | 指定应使用新的个人访问令牌覆盖任何现有发布服务器。 |
+|个人访问令牌（必需 | 用于对发布者进行身份验证的个人访问令牌。 |
+|发布者名称（必需） | 发布者的名称（例如标识符）。 |
+|overwrite | 指定任何现有发布者都应使用新的个人访问令牌进行覆盖。 |
 
 ```
 VsixPublisher.exe login -personalAccessToken "{Personal Access Token}" -publisherName "{Publisher Name}"
 ```
 
-### <a name="logout"></a>注销
+### <a name="logout"></a>logout
 
-记录从计算机的发布服务器。
+将发布者从计算机中注销。
 
 |命令选项 |描述 |
 |---------|---------|
-|publisherName （必需） | 发布服务器 （例如，标识符） 的名称。 |
-|ignoreMissingPublisher | 指定该工具应不是错误，是否指定的发布服务器是不已登录的。 |
+|发布者名称（必需） | 发布者的名称（例如标识符）。 |
+|忽略缺失的发布者 | 指定如果指定的发布者尚未登录，该工具不应出错。 |
 
 ```
 VsixPublisher.exe logout -publisherName "{Publisher Name}"
 ```
 
-## <a name="publishmanifest-file"></a>publishManifest 文件
+## <a name="publishmanifest-file"></a>发布清单文件
 
-PublishManifest 文件可供**发布**命令。 它表示有关 Marketplace 需要知道扩展的所有元数据。 如果正在上传的扩展是从 VSIX 扩展，则"标识"属性必须只有"internalName"设置。 这是因为可以从 vsixmanifest 文件生成的"标识"属性的其余部分。 如果扩展是一个 msi/exe 或链接扩展，用户必须提供必填的字段中的"标识"属性。 在清单的剩余部分包含特定于市场上的信息 (例如，类别，是否问答已启用，等等。)。
+**发布**命令使用 publishManifest 文件。 它表示有关应用商店需要知道的扩展的所有元数据。 如果上载的扩展来自 VSIX 扩展，"标识"属性必须仅设置"内部名称"。 这是因为可以从 vsixmanifest 文件生成"标识"属性的其余部分。 如果扩展是 msi/exe 或链接扩展，则用户必须在"标识"属性中提供所需的字段。 清单的其余部分包含特定于应用商店的信息（例如，类别、是否启用 Q&A 等）。
 
-VSIX 扩展 publishManifest 文件示例：
+VSIX 扩展名发布清单文件示例：
 
 ```json
 {
@@ -134,7 +134,7 @@ VSIX 扩展 publishManifest 文件示例：
 }
 ```
 
-MSI/EXE 或链接 publishManifest 文件示例：
+MSI/EXE 或 LINK 发布清单文件示例：
 
 ```json
 {
@@ -167,7 +167,7 @@ MSI/EXE 或链接 publishManifest 文件示例：
 
 ## <a name="asset-files"></a>资产文件
 
-资产文件可提供用于在自述文件中嵌入图像等内容。 例如，如果扩展具有以下"概述"Markdown 文档：
+可以提供资产文件，用于在读读文件中嵌入图像等内容。 例如，如果扩展具有以下"概述"标记文档：
 
 ```markdown
 TestExtension
@@ -176,7 +176,7 @@ This is test extension.
 ![Test logo](images/testlogo.png "Test logo")
 ```
 
-为了解决"images/testlogo.png"上一示例中的，用户可以在提供"assetFiles"其发布清单类似如下：
+为了解决前面的示例中的"图像/testlogo.png"，用户可以在其发布清单中提供"资产文件"，如下所示：
 
 ```json
 {
@@ -192,106 +192,106 @@ This is test extension.
 
 ## <a name="publishing-walkthrough"></a>发布演练
 
-### <a name="prerequisites"></a>系统必备
+### <a name="prerequisites"></a>先决条件
 
-要按照本演练的步骤操作，必须安装 Visual Studio SDK。 有关详细信息，请参阅[安装 Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md)。
+要按照本演练的步骤操作，必须安装 Visual Studio SDK。 有关详细信息，请参阅[安装可视化工作室 SDK](../extensibility/installing-the-visual-studio-sdk.md)。
 
-### <a name="create-a-visual-studio-extension"></a>创建 Visual Studio 扩展
+### <a name="create-a-visual-studio-extension"></a>创建可视化工作室扩展
 
-在这种情况下，我们将使用默认 VSPackage 扩展，但相同的步骤适用于在每个类型的扩展。
+在这种情况下，我们将使用默认的 VSPackage 扩展，但相同的步骤对于每种扩展都有效。
 
-1. 在 C# 中名为"TestPublish"具有菜单命令创建 VSPackage。 有关详细信息，请参阅[创建第一个扩展：Hello World](../extensibility/extensibility-hello-world.md)。
+1. 在 C# 中创建一个 VSPackage，名为"TestPublish"，具有菜单命令。 有关详细信息，请参阅[创建您的第一个扩展：你好世界](../extensibility/extensibility-hello-world.md)。
 
-### <a name="package-your-extension"></a>打包你的扩展
+### <a name="package-your-extension"></a>打包扩展
 
-1. 更新扩展 vsixmanifest 有关产品名称、 作者和版本的正确信息。
+1. 使用有关产品名称、作者和版本的正确信息更新扩展 vsix 清单。
 
    ![更新扩展 vsixmanifest](media/update-extension-vsixmanifest.png)
 
-2. 构建您的扩展插件**版本**模式。 现在您的扩展插件将打包为 VSIX \bin\Release 文件夹中。
+2. 在**释放**模式下生成扩展。 现在，您的扩展将打包为 [bin_释放文件夹中的 VSIX》。
 
-3. 你可以双击 VSIX 验证安装成功。
+3. 您可以双击 VSIX 以验证安装。
 
-### <a name="test-the-extension"></a>测试此扩展
+### <a name="test-the-extension"></a>测试扩展
 
- 分发扩展之前，生成和测试，以确保 Visual Studio 的实验实例中正确安装。
+ 在分发扩展之前，请生成并对其进行测试，以确保它在 Visual Studio 的实验实例中正确安装。
 
-1. 在 Visual Studio 中，开始调试。 若要打开的 Visual Studio 实验实例。
+1. 在可视化工作室中，开始调试。 打开视觉工作室的实验实例。
 
-2. 在实验实例中，转到**工具**菜单，然后单击**扩展和更新...** .TestPublish 扩展应显示在中心窗格中，启用。
+2. 在实验实例中，转到 **"工具"** 菜单，然后单击 **"扩展和更新..."。** 测试发布扩展应显示在中心窗格中并启用。
 
-3. 上**工具**菜单中，请确保您看到测试命令。
+3. 在 **"工具"** 菜单上，请确保看到测试命令。
 
-### <a name="publish-the-extension-to-the-marketplace-via-command-line"></a>将扩展发布到 Marketplace 通过命令行
+### <a name="publish-the-extension-to-the-marketplace-via-command-line"></a>通过命令行将扩展发布到应用商店
 
-1. 请确保你已经构建了您的扩展插件的版本并且保持最新状态。
+1. 请确保您已构建扩展的发布版本，并且该版本是最新的。
 
-2. 请确保已创建 publishmanifest.json 和 overview.md 文件。
+2. 请确保您已创建 publishmanifest.json 和overview.md文件。
 
-3. 打开命令行，并导航到 ${VSInstallDir} \VSSDK\VisualStudioIntegration\Tools\Bin\ 目录。
+3. 打开命令行并导航到 $_VSInstallDir_VSSDK_VisualStudio 集成\工具\Bin_目录。
 
-4. 若要创建新的发布服务器，请使用以下命令：
+4. 要创建新发布服务器，请使用以下命令：
 
    ```
    VsixPublisher.exe createPublisher -publisherName "TestVSIXPublisher" -displayName "Test VSIX Publisher" -personalAccessToken "{Personal Access Token that is used to authenticate the publisher. If not provided, the pat is acquired from the logged-in users.}"
    ```
 
-5. 在发布服务器创建成功后，您将看到以下的命令行消息：
+5. 成功创建发布者时，您将看到以下命令行消息：
 
    ```
    Added 'Test VSIX Publisher' as a publisher on the Marketplace.
    ```
 
-6. 您可以通过导航到创建的新发布服务器来验证[Visual Studio Marketplace](https://marketplace.visualstudio.com/manage/publishers)
+6. 您可以通过导航到[可视化工作室市场](https://marketplace.visualstudio.com/manage/publishers)来验证您创建的新发布者
 
-7. 若要发布一个新的扩展，请使用以下命令：
+7. 要发布新扩展，请使用以下命令：
 
    ```
    VsixPublisher.exe publish -payload "{Path to vsix file}"  -publishManifest "{path to publishManifest file}"
    ```
 
-8. 在发布服务器创建成功后，您将看到以下的命令行消息：
+8. 成功创建发布者时，您将看到以下命令行消息：
 
    ```
    Uploaded 'MyVsixExtension' to the Marketplace.
    ```
 
-9. 你可以验证新的扩展插件通过导航到发布[Visual Studio Marketplace](https://marketplace.visualstudio.com/)
+9. 您可以通过导航到[可视化工作室市场](https://marketplace.visualstudio.com/)来验证发布的新扩展
 
-### <a name="install-the-extension-from-the-visual-studio-marketplace"></a>从 Visual Studio Marketplace 安装扩展
+### <a name="install-the-extension-from-the-visual-studio-marketplace"></a>从可视化工作室市场安装扩展
 
-现在，发布扩展时，在 Visual Studio 中安装它，然后对其进行测试。
+现在，扩展已发布，请将其安装在 Visual Studio 中并在那里进行测试。
 
-1. 在 Visual Studio 中，在**工具**菜单上，单击**扩展和更新...** .
+1. 在可视化工作室中，在 **"工具"** 菜单上，单击 **"扩展和更新..."。**
 
-2. 单击**Online** TestPublish 然后搜索。
+2. 单击 **"联机"，** 然后搜索测试发布。
 
-3. 单击 **“下载”** 。 然后将安装计划扩展。
+3. 单击“下载”  。 然后，将计划安装扩展。
 
-4. 若要完成安装，请关闭 Visual Studio 的所有实例。
+4. 要完成安装，关闭可视化工作室的所有实例。
 
 ## <a name="remove-the-extension"></a>删除扩展
 
-从 Visual Studio Marketplace 和您的计算机，可以删除该扩展。
+可以从可视化工作室应用商店和计算机中删除扩展。
 
-### <a name="to-remove-the-extension-from-the-marketplace-via-command-line"></a>若要从命令行通过 Marketplace 中删除扩展
+### <a name="to-remove-the-extension-from-the-marketplace-via-command-line"></a>通过命令行从应用商店中删除扩展
 
-1. 如果你想要删除扩展，使用以下命令：
+1. 如果要删除扩展，请使用以下命令：
 
    ```
    VsixPublisher.exe deleteExtension -publisherName "TestVSIXPublisher" -extensionName "MyVsixExtension"
    ```
 
-2. 在成功删除的扩展，您将看到以下的命令行消息：
+2. 成功删除扩展后，您将看到以下命令行消息：
 
    ```
    Removed 'MyVsixExtension' from the Marketplace.
    ```
 
-### <a name="to-remove-the-extension-from-your-computer"></a>若要从您的计算机中删除扩展
+### <a name="to-remove-the-extension-from-your-computer"></a>从计算机中删除扩展名
 
-1. 在 Visual Studio 中，在**工具**菜单上，单击**扩展和更新**。
+1. 在可视化工作室中，在 **"工具"** 菜单上，单击 **"扩展和更新**"。
 
-2. 选择"MyVsixExtension"，然后单击**卸载**。 然后将卸载计划扩展。
+2. 选择"MyVsix 扩展"，然后单击 **"卸载**"。 然后，将安排卸载扩展。
 
-3. 若要完成卸载，请关闭 Visual Studio 的所有实例。
+3. 要完成卸载，关闭可视化工作室的所有实例。

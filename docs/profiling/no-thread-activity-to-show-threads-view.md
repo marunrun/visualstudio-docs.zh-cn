@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 91cc840a69135edf59603ba62d15985eb541df0e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62794462"
 ---
 # <a name="no-thread-activity-to-show-threads-view"></a>没有要显示的线程活动（线程视图）
@@ -28,9 +28,9 @@ ms.locfileid: "62794462"
 
 - 是否隐藏太多线程？ 如果是这样，请尝试显示所有线程
 
-- 如果选择了“仅我的代码”，则只能查看有关你的代码的数据。 尝试清除设置以确定是否有任何系统线程活动。
+- 如果选择了“仅我的代码”  ，则只能查看有关你的代码的数据。 尝试清除设置以确定是否有任何系统线程活动。
 
 - 确保“降噪”设置为低阈值。
 
-## <a name="see-also"></a>请参阅
-- [线程视图](../profiling/threads-view-parallel-performance.md)
+## <a name="see-also"></a>另请参阅
+- [“线程”视图](../profiling/threads-view-parallel-performance.md)

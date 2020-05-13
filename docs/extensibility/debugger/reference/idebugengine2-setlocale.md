@@ -1,5 +1,5 @@
 ---
-title: IDebugEngine2::SetLocale | Microsoft Docs
+title: IDebugEngine2：：设置局部性 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugEngine2::SetLocale
 ms.assetid: cd0d2cf1-2aac-43da-a830-4bb3d696c219
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 62330b3002486969af563413cf6f7893c9d7881d
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 8616dd827f99dfcfbc337cb5cdf5ac5a7d392e88
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66322388"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80730911"
 ---
 # <a name="idebugengine2setlocale"></a>IDebugEngine2::SetLocale
-设置调试引擎 (DE) 的区域设置。
+设置调试引擎 （DE） 区域设置。
 
 ## <a name="syntax"></a>语法
 
@@ -41,13 +41,13 @@ int SetLocale( 
 
 ## <a name="parameters"></a>参数
 `wLangID`\
-[in]指定的语言区域设置。 例如，1033 为英语的。
+[在]指定语言区域设置。 例如，英语为 1033。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，返回`S_OK`;否则，返回错误代码。
 
 ## <a name="remarks"></a>备注
- 会话调试管理器 (SDM) 传播 IDE 的区域设置，以便正确本地化字符串 DE 返回通过调用此方法。
+ 会话调试管理器 （SDM） 调用此方法来传播 IDE 的区域设置，以便 DE 返回的字符串正确本地化。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)

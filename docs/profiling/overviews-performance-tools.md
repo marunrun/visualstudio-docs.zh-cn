@@ -10,10 +10,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: d284ffc6b850a9746cf1442f35400a18045bbe18
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74772662"
 ---
 # <a name="overviews-performance-tools"></a>概述（性能工具）
@@ -56,7 +56,7 @@ ms.locfileid: "74772662"
 
  了解在 [!INCLUDE[wiprlhext](../debugger/includes/wiprlhext_md.md)] 上收集采样数据和分析跨会话应用程序所需的问题和步骤。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [入门](../profiling/getting-started-with-performance-tools.md)
 - [性能资源管理器](../profiling/performance-explorer.md)

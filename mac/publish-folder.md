@@ -8,18 +8,18 @@ author: sayedihashimi
 ms.author: sayedha
 manager: unniravindranathan
 ms.prod: visual-studio-mac
-ms.openlocfilehash: 5dfee3999eddd8c4dacdd6180e18a4a50e6535dc
-ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
+ms.openlocfilehash: 0ea70fb1a5898e2415b7f74e93233ca03ea52c45
+ms.sourcegitcommit: b4e0cc76d94fe8cf6d238c4cc09512d17131a195
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73715905"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81224493"
 ---
 # <a name="publish-to-a-folder-using-visual-studio-for-mac"></a>使用 Visual Studio for Mac 发布到文件夹
 
 可使用“发布”工具将 .NET Core 控制台或 ASP.NET Core 应用发布到文件夹。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 - 已安装 [Visual Studio 2019 for Mac](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs4mac2019)，并启用了 .NET Core。
 - .NET Core 控制台或 ASP.NET Core 项目。 如果还没有项目，则可以[创建一个新的项目](/visualstudio/mac/create-new-projects?view=vsmac-2019)。
@@ -52,7 +52,7 @@ ms.locfileid: "73715905"
 
 ## <a name="customize-publish-options"></a>自定义发布选项
 
-若要更改发布配置文件的名称（显示在“发布”上下文菜单中），请重命名发布配置文件。 切勿更改文件扩展名 (`.puxbml`)。
+若要更改发布配置文件的名称（显示在“发布”上下文菜单中），请重命名发布配置文件。 切勿更改文件扩展名 (`.pubxml`)。
 
 若要更改发布文件夹路径，请打开发布配置文件并编辑 `publishUrl` 值。
 

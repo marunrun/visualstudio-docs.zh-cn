@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 6c864a10af9ad15d47e2342bb148af464b8f2a0d
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75591497"
 ---
 # <a name="options-dialog-box-visual-studio"></a>“选项”对话框 (Visual Studio)
@@ -43,6 +43,6 @@ ms.locfileid: "75591497"
 
 选择或取消选择“显示所有设置”  将应用在“选项”  对话框中所做的所有更改，即使尚未单击“确定”  亦是如此。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [自定义编辑器](../how-to-change-text-case-in-the-editor.md)

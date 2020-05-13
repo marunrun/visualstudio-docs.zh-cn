@@ -17,10 +17,10 @@ ms.workload:
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.openlocfilehash: d6e46c95584cb3732d6339a02f6098976f2bab85
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "76115045"
 ---
 # <a name="tools-for-detecting-and-managing-visual-studio-instances"></a>用于检测和管理 Visual Studio 实例的工具
@@ -64,7 +64,7 @@ C:\Program Files (x86)\Microsoft Visual Studio\Installer> vswhere.exe -legacy -p
 
 1. 选择“`HKEY_LOCAL_MACHINE`”节点。
 
-1. 在 Regedit 主菜单中，依次选择“文件” > “加载配置单元...”，然后选择专用注册表文件（存储在“AppData\Local”文件夹中）    。 例如：
+1. 在 Regedit 主菜单中，依次选择“文件” **“加载配置单元...”，然后选择专用注册表文件（存储在“AppData\Local”文件夹中）**  >    。 例如:
 
    ```
    %localappdata%\Microsoft\VisualStudio\<config>\privateregistry.bin
@@ -76,10 +76,10 @@ C:\Program Files (x86)\Microsoft Visual Studio\Installer> vswhere.exe -legacy -p
 系统会提示你输入配置单元名称，这将成为你的独立配置单元的名称。 执行此操作后，应该能够在所创建的独立配置单元下浏览注册表。
 
 > [!IMPORTANT]
-> 必须先卸载已创建的独立配置单元，然后才能再次启动 Visual Studio。 为此，请在 Regedit 主菜单中，依次选择“文件” > “卸载配置单元”   。 （如果不这样做，文件会一直处于锁定状态，且 Visual Studio 无法启动。）
+> 必须先卸载已创建的独立配置单元，然后才能再次启动 Visual Studio。 为此，请在 Regedit 主菜单中，依次选择“文件” **“卸载配置单元”**  >   。 （如果不这样做，文件会一直处于锁定状态，且 Visual Studio 无法启动。）
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 * [Visual Studio 管理员指南](visual-studio-administrator-guide.md)

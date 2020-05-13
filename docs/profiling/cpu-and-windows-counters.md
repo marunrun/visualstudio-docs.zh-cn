@@ -14,10 +14,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 9accd3d0ab5ff1f7a3084d5973cace08e66396b9
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74779544"
 ---
 # <a name="cpu-and-windows-counters"></a>CPU 和 Windows 计数器
@@ -96,7 +96,7 @@ Visual Studio 探查器继续支持特定平台的特定事件。 例如，Penti
 
       **请注意**：单击“取消”  可返回到上一个采样配置。
 
-     -或-
+     \- 或 -
 
    - 选择“CPU 计数器”  ，然后选择“收集 CPU 计数器”  。 CPU 计数器列在“可用的计数器”  中。
 

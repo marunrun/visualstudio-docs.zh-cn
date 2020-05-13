@@ -8,10 +8,10 @@ ms.workload:
 - uwp
 author: mikejo5000
 ms.openlocfilehash: 51e16dcaa48a08ae97bc80be1d33163c6f3af875
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75590444"
 ---
 # <a name="set-a-unique-automation-property-for-uwp-controls-for-testing"></a>为 UWP 控件设置唯一的自动化属性以进行测试
@@ -56,11 +56,11 @@ ms.locfileid: "75590444"
 
 在 Blend for Visual Studio 中，可以选择一个选项为按钮、列表框、组合框和文本框等交互元素分配唯一名称，因此授予了控件 AutomationProperties.Name 的唯一值  。
 
-为了将唯一的名称分配到现有控件，请选择“工具” > “命名交互元素”   。
+为了将唯一的名称分配到现有控件，请选择“工具” **“命名交互元素”**  >   。
 
 ![Blend for Visual Studio 中的命名交互元素](../test/media/cuit_windowsstoreproperty_blend_1.png)
 
-若要自动为新添加的控件指定唯一的名称，请选择“工具” > “选项”以打开“选项”对话框    。 选择“XAML 设计器”，然后选择“在创建时自动命名交互元素”   。 选择“确定”关闭对话框  。
+若要自动为新添加的控件指定唯一的名称，请选择“工具” **“选项”以打开“选项”对话框** >    。 选择“XAML 设计器”，然后选择“在创建时自动命名交互元素”   。 选择“确定”关闭对话框  。
 
 ## <a name="use-a-data-template"></a>使用数据模板
 
@@ -163,6 +163,6 @@ private void CreateCheckBox(string txt, StackPanel panel)
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用编码的 UI 测试来测试 UWP 应用](../test/test-uwp-app-with-coded-ui-test.md)

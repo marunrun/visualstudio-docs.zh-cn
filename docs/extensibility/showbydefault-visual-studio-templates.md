@@ -1,5 +1,5 @@
 ---
-title: ShowByDefault 元素（Visual Studio 模板）
+title: 显示默认元素（可视化工作室模板）
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -9,22 +9,22 @@ helpviewer_keywords:
 - <ShowByDefault> element [Visual Studio Templates]
 - ShowByDefault element [Visual Studio Templates]
 ms.assetid: 7be783f6-0ef6-42bc-924a-df9a2eba7781
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2405e46a7f1ed8d2e4ae33b1b58ec44e06aa7d3b
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 711cff06637957b796525543a02bfdd376e04284
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72720106"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80700098"
 ---
-# <a name="showbydefault-element-visual-studio-templates"></a>ShowByDefault 元素（Visual Studio 模板）
-如果 `false`，则指定该模板将只显示在指定的[TemplateGroupID](../extensibility/templategroupid-element-visual-studio-templates.md)下。
+# <a name="showbydefault-element-visual-studio-templates"></a>显示默认元素（可视化工作室模板）
+如果`false`指定模板将仅在指定的[模板组 ID](../extensibility/templategroupid-element-visual-studio-templates.md)下显示。
 
- \<VSTemplate > \<TemplateData > \<ShowByDefault >
+ \<VStemplate>\<模板数据>\<显示默认>
 
 ## <a name="syntax"></a>语法
 
@@ -84,6 +84,6 @@ ms.locfileid: "72720106"
 ```
 
 ## <a name="see-also"></a>请参阅
-- [创建项目和项模板](../ide/creating-project-and-item-templates.md)
+- [创建项目和项目模板](../ide/creating-project-and-item-templates.md)
 - [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
 - [TemplateGroupID 元素（Visual Studio 模板）](../extensibility/templategroupid-element-visual-studio-templates.md)

@@ -11,15 +11,15 @@ manager: jillfra
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 2aa8014835df2b5b2bd3dc68e2aaf0b079e001e8
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75590679"
 ---
 # <a name="c-structures-in-class-designer"></a>类设计器中的 C++ 结构
 
-类设计器支持使用关键字 `struct` 声明的 C++ 结构  。 下面是一个示例：
+类设计器支持使用关键字  **声明的 C++ 结构**`struct`。 下面是一个示例：
 
 ```cpp
 struct MyStructure
@@ -34,11 +34,11 @@ struct MyStructure
 
 类图中的 C++ 结构形状的外观和运行方式都与类形状相似，不同之处在于它的标签名为 **Struct**，且为方角（而不是圆角）。
 
-|代码元素|类设计器视图|
+|Code 元素|类设计器视图|
 |------------------| - |
 |`struct StructureName {};`|**StructureName**<br /><br /> 结构|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用 C++ 代码](working-with-visual-cpp-code.md)
 - [类和结构](/cpp/cpp/classes-and-structs-cpp)

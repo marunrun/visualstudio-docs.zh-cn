@@ -11,12 +11,12 @@ caps.latest.revision: 39
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: b3de5cb1cc62d159567eee804c1aadef865e500a
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: a1beeef572282a642e4a989086ac0fd228409fec
+ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75845397"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82586269"
 ---
 # <a name="validate-your-system-during-development"></a>在开发过程中验证系统
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -34,14 +34,14 @@ Visual Studio 可帮助使你的软件与用户的要求和系统的体系结构
 |**请确保软件满足用户要求**：<br /><br /> 可以使用要求模型和体系结构模型来帮助组织系统及其组件的测试。 这种做法有助于确保你测试了对于用户和其他利益干系人而言非常重要的要求，并可帮助你在要求发生变化时快速更新测试。|-   [从模型开发测试](../modeling/develop-tests-from-a-model.md)|
 |**请确保你的软件与系统的预期设计保持一致：**<br /><br /> 层关系图描述了应用程序组件之间的预期依赖关系。 在开发期间，你可以验证代码中的实际依赖关系是否符合预期设计。|-   [从代码创建层关系图](../modeling/create-layer-diagrams-from-your-code.md)<br />-   [用层关系图验证代码](../modeling/validate-code-with-layer-diagrams.md)|
 
-## <a name="external-resources"></a>外部資源
+## <a name="external-resources"></a>外部资源
 
-|**类别**|**Links**|
+|**类别**|**链接**|
 |------------------|---------------|
 |**视频**|![链接到视频](../data-tools/media/playvideo.gif "PlayVideo")[通道9： Doug 7：代码理解和 Visual Studio 2010 的系统设计](https://channel9.msdn.com/shows/VS2010Launch/Doug-Seven-Code-Understanding-and-Systems-Design-with-Visual-Studio-2010)<br /><br /> ![视频](../data-tools/media/playvideo.gif "PlayVideo")[第9频道：使用层关系图构建应用程序](https://channel9.msdn.com/posts/clinted/UML-with-VS-2010-Part-5-Architecting-an-Application)<br /><br /> ![链接到视频](../data-tools/media/playvideo.gif "PlayVideo") [MSDN 如何实现系列：如何使用层关系图验证代码](https://msdn.microsoft.com/vstudio/gg501755)|
 |**论坛**|-   [Visual Studio 可视化和建模工具](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vsarch)<br />-   [Visual Studio 可视化和建模 SDK（DSL 工具）](https://social.msdn.microsoft.com/Forums/home?forum=dslvsarchx)|
-|**Blogs**|-   [Visual Studio ALM + Team Foundation Server 博客](https://blogs.msdn.com/b/visualstudioalm)|
+|**博客**|-   [Visual Studio ALM + Team Foundation Server 博客](https://devblogs.microsoft.com/devops/welcome-to-the-visual-studio-alm-team-foundation-server-blog/)|
 |**技术文章和日志**|[MSDN 体系结构中心](https://msdn.microsoft.com/architecture/default.aspx)|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [测试应用程序](https://msdn.microsoft.com/library/796b7d6d-ad45-4772-9719-55eaf5490dac)[扩展 UML 模型和关系图](../modeling/extend-uml-models-and-diagrams.md)[模型用户需求](../modeling/model-user-requirements.md)[分析和建模体系结构](../modeling/analyze-and-model-your-architecture.md)

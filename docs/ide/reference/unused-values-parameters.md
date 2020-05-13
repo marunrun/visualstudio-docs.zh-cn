@@ -11,10 +11,10 @@ dev_langs:
 ms.workload:
 - dotnet
 ms.openlocfilehash: ce2b0f1e0c0db45c478c3917306683b314da0564
-ms.sourcegitcommit: 614d5b99576ea27a41957cd94062dc95cbd29c1c
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "65531880"
 ---
 # <a name="unused-value-assignments-variables-and-parameters"></a>未使用的值分配、变量和参数
@@ -28,7 +28,7 @@ ms.locfileid: "65531880"
 
 **使用时机：** 具有从未使用的值分配、参数或表达式值。
 
-操作原因：有时很难判断是否不再使用某个值分配、变量或参数。 通过渐隐这些值或发出警告，可以直观地了解可删除的代码。
+操作原因：  有时很难判断是否不再使用某个值分配、变量或参数。 通过渐隐这些值或发出警告，可以直观地了解可删除的代码。
 
 ## <a name="unused-expression-values-and-parameters-diagnostic"></a>未使用的表达式值和参数诊断
 

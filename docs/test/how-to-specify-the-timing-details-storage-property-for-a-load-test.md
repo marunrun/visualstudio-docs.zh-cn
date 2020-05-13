@@ -10,10 +10,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: fbd3b2a7d7e56870a994af288f5887f1d86256af
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75591640"
 ---
 # <a name="how-to-specify-the-timing-details-storage-property-for-a-load-test-run-setting"></a>如何：为负载测试运行设置指定计时详细信息存储属性
@@ -35,7 +35,7 @@ ms.locfileid: "75591640"
 
   **“计时详细信息存储”属性注意事项**
 
-  如果启用了“计时详细信息存储”属性，则在负载测试过程中执行各个测试、事务和页所需的时间都将存储在负载测试结果存储库中  。 由此，90% 和 95% 的数据显示在负载测试分析器的“测试”、“事务”和“页”表中     。
+  如果启用了“计时详细信息存储”属性，则在负载测试过程中执行各个测试、事务和页所需的时间都将存储在负载测试结果储存库中  。 由此，90% 和 95% 的数据显示在负载测试分析器的“测试”、“事务”和“页”表中     。
 
   如果启用了“计时详细信息存储”属性，则通过将该属性的值设置为“StatisticsOnly”或“AllIndividualDetails”，可对所各测试、页和事务进行计时，并根据各个计时数据计算百分比数据    。 它们的区别是，使用“StatisticsOnly”选项时，在计算完百分比数据之后，将从储存库中删除单个计时数据  。 删除数据可以减少使用计时详细信息时储存库中所需的空间量。 不过，可能需要使用 SQL 工具以其他方式来处理计时详细信息数据，在这种情况下，应使用“AllIndividualDetails”选项，以便可以使用计时详细信息数据进行该处理  。 此外，如果将属性设置为“AllIndividualDetails”，则可以在负载测试运行结束后，使用负载测试分析器中的“虚拟用户活动”图来分析虚拟用户活动    。 有关详细信息，请参阅[在“详细信息”视图中分析虚拟用户活动](../test/analyze-load-test-virtual-user-activity-in-the-details-view.md)。
 
@@ -53,13 +53,13 @@ ms.locfileid: "75591640"
 
 3. 选择要配置的运行设置，例如“Run Settings1[Active]”  。
 
-4. 打开“属性”窗口  。 在“视图”菜单上选择“属性窗口”   。
+4. 打开“属性”窗口  。 在“视图”菜单上选择“属性”窗口。  
 
 5. 在“结果”类别下，选择“计时详细信息存储”属性，然后选择“所有的详细信息”    。
 
      为“计时详细信息存储”属性配置“所有的详细信息”设置之后，可以运行负载测试并查看“虚拟用户活动图”    。 有关详细信息，请参阅[如何：分析虚拟用户在负载测试期间的操作](../test/how-to-analyze-virtual-user-activity-during-a-load-test.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在详细信息视图中分析虚拟用户活动](../test/analyze-load-test-virtual-user-activity-in-the-details-view.md)
 - [演练：使用虚拟用户活动图隔离问题](../test/walkthrough-use-the-virtual-user-activity-chart-to-isolate-issues.md)

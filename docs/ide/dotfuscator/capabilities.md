@@ -18,10 +18,10 @@ author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.openlocfilehash: 019acd338ab49dd08255e3dc5d174cf2e371b71e
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75918408"
 ---
 # <a name="capabilities-of-dotfuscator"></a>Dotfuscator 的功能
@@ -39,7 +39,7 @@ Dotfuscator Community 支持各种 .NET 程序集和应用程序类型，包括[
 应用程序的设计、行为和实现是各种形式的知识产权 (IP)。
 但是，为 .NET 创建的应用程序实质上是公开透明的；[因其包含高级元数据和中间代码][assemblies]，可以轻松地对 .NET 程序集进行反向工程处理。
 
-Dotfuscator Community 中包括以[重命名][renaming]形式进行的基本 [.NET 模糊处理][obfuscation]。
+Dotfuscator Community 中包括以[重命名][obfuscation]形式进行的基本 [.NET 模糊处理][renaming]。
 使用 Dotfuscator 对代码进行模糊处理可降低通过反向工程对源代码进行未经授权访问的风险，因为重要的命名信息将不再公开。
 就用户而言，模糊处理还努力保护代码免受检查 - 这在将 IP 作为商业机密进行合法保护过程中非常有价值的一步。
 
@@ -58,7 +58,7 @@ Dotfuscator Community 可将[应用程序验证代码][checks]插入程序集（
 
 许多这些相同的方法还可用于针对评估和试用软件，强制实施[使用周期结束的最后期限][shelflife]。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [完整 Dotfuscator Community 用户指南中的本主题][full]
 

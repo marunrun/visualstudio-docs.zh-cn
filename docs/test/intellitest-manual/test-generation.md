@@ -10,11 +10,11 @@ ms.workload:
 - multiple
 author: mikejo5000
 ms.openlocfilehash: c251a1539b42da2b4e92c2996457075f3c3be135
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75591549"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79306979"
 ---
 # <a name="test-generation"></a>测试生成
 
@@ -116,7 +116,7 @@ public partial class ListTest {
 
 IntelliTest 提供大量验证属性，帮助将异常分类为预期异常和意外异常。
 
-预期异常生成带有“ExpectedException(typeof(xxx))”等注释的负面测试用例，而意外异常生成失败测试用例   。
+预期异常生成带有“ExpectedException(typeof(xxx))”等注释的负面测试用例，而意外异常生成失败测试用例  。
 
 ```csharp
 [PexMethod, PexAllowedException(typeof(ArgumentNullException))]
@@ -240,6 +240,6 @@ namespace MyTests
 * [代码绑定测试](https://devblogs.microsoft.com/devops/smart-unit-tests-test-to-code-binding-test-case-management/)
 * [One test to rule them all](https://devblogs.microsoft.com/devops/intellitest-one-test-to-rule-them-all/)（一个测试掌控所有情况）
 
-## <a name="got-feedback"></a>是否获得反馈？
+## <a name="got-feedback"></a>有反馈？
 
 在[开发人员社区](https://developercommunity.visualstudio.com/content/idea/post.html?space=8)上发布想法和功能请求。

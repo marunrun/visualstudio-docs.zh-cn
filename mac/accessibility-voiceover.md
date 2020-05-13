@@ -6,10 +6,10 @@ ms.author: dominicn
 ms.date: 09/23/2019
 ms.assetid: 590C325D-AAD0-4889-B1DB-A1090BBFBE89
 ms.openlocfilehash: 8f5cfc4c05ed3911370782185475b23112207c62
-ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "74985075"
 ---
 # <a name="using-voiceover-with-visual-studio-for-mac"></a>将 VoiceOver 与 Visual Studio for Mac 结合使用
@@ -26,7 +26,7 @@ VoiceOver 命令在本指南中显示为“VO key”  ，其中 VO  指的是“
 
 下面是一些用于 Visual Studio for Mac 的常见 VoiceOver 命令的列表：
 
-|功能|说明|快捷键|
+|功能|描述|快捷键|
 |-------|-----------|--------|
 |导航|导航 UI 的所有元素|**VO→** **VO←**|
 |导航|单步跳入或跳出 UI 元素|**VO⇧↓** **VO⇧↑**|

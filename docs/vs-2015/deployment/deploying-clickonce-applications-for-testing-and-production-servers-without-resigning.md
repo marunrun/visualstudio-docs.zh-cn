@@ -1,5 +1,5 @@
 ---
-title: 部署 ClickOnce 应用程序进行测试和生产服务器无需重新签名 |Microsoft Docs
+title: 部署 ClickOnce 应用程序以进行测试和生产服务器，而无需重新分配 |微软文档
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-deployment
@@ -20,50 +20,50 @@ caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 2a65f2e39eac5889b287b082b4cad6842f44aa2e
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: a8e41e67d5e2800acc41e1220fe632001420a274
+ms.sourcegitcommit: d6828e7422c8d74ec1e99146fedf0a05f757245f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65675550"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80395374"
 ---
 # <a name="deploying-clickonce-applications-for-testing-and-production-servers-without-resigning"></a>在不重新签名的情况下为测试服务器和生产服务器部署 ClickOnce 应用程序
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-本主题讨论 ClickOnce 在.NET Framework 版本 3.5，而无需重新签名或更改 ClickOnce 使从多个网络位置的 ClickOnce 应用程序的部署清单中引入的新功能。  
+本主题讨论 .NET Framework 版本 3.5 中引入的 ClickOnce 新功能，该功能允许从多个网络位置部署 ClickOnce 应用程序，而无需重新签名或更改 ClickOnce 清单。  
   
 > [!NOTE]
-> 重新签名仍是用于部署新版本的应用程序的首选的方法。 只要有可能，使用重新签名的方法。 有关详细信息，请参阅 [Mage.exe（清单生成和编辑工具）](https://msdn.microsoft.com/library/77dfe576-2962-407e-af13-82255df725a1)。  
+> 重新分配仍然是部署新版本应用程序的首选方法。 只要有可能，请使用重新分配方法。 有关详细信息，请参阅 [Mage.exe（清单生成和编辑工具）](https://msdn.microsoft.com/library/77dfe576-2962-407e-af13-82255df725a1)。  
   
- 第三方开发人员和 Isv 可以参加此功能，使其客户更新他们的应用程序更轻松。 在以下情况下，可以使用此功能：  
+ 第三方开发人员和 ISV 可以选择加入此功能，从而使其客户更容易更新其应用程序。 此功能可用于以下情况：  
   
-- 当应用程序，不应用程序首次安装更新。  
+- 更新应用程序时，不是应用程序的第一次安装。  
   
-- 当一台计算机上的应用程序只有一个配置。 例如，如果应用程序配置为指向两个不同的数据库，不能使用此功能。  
+- 当计算机上只有一个应用程序配置时。 例如，如果应用程序配置为指向两个不同的数据库，则无法使用此功能。  
   
-## <a name="excluding-deploymentprovider-from-deployment-manifests"></a>从部署清单中排除 deploymentProvider  
- 在.NET Framework 2.0 和.NET Framework 3.0 中，在脱机可用性的系统安装任何 ClickOnce 应用程序必须指定`deploymentProvider`在其部署清单中。 `deploymentProvider`通常称为更新位置中; 它是在其中 ClickOnce 将检查应用程序更新的位置。 此要求，结合应用程序发布者对其部署签名需要进行很难更新 ClickOnce 应用程序供应商或其他第三方公司。 它还使更难以部署在同一网络上的多个位置提供的相同应用程序。  
+## <a name="excluding-deploymentprovider-from-deployment-manifests"></a>从部署清单中排除部署提供程序  
+ 在 .NET 框架 2.0 和 .NET 框架 3.0 中，在系统上安装以进行脱机可用性的任何`deploymentProvider`ClickOnce 应用程序都必须在其部署清单中指定 。 通常`deploymentProvider`称为更新位置;它是 ClickOnce 将检查应用程序更新的位置。 这一要求加上应用程序发布者需要对其部署进行签名，使得公司难以从供应商或其他第三方更新 ClickOnce 应用程序。 它还使在同一网络上的多个位置部署同一应用程序变得更加困难。  
   
- 对.NET Framework 3.5 中的 ClickOnce 所做的更改，就可以为第三方提供到另一个组织，然后可以将其自身的网络上的应用程序部署的 ClickOnce 应用程序。  
+ 通过对 .NET 框架 3.5 中的 ClickOnce 所做的更改，第三方可以将 ClickOnce 应用程序提供给另一个组织，然后该组织可以在自己的网络上部署应用程序。  
   
- 若要充分利用此功能，ClickOnce 应用程序的开发人员必须排除`deploymentProvider`从其部署清单。 这意味着，不包括`-providerUrl`Mage.exe，或确保自变量时创建部署清单**启动位置**上的文本框**应用程序清单**选项卡上为空时如果您生成使用 MageUI.exe 部署清单进行签名。  
+ 为了利用此功能，ClickOnce 应用程序的开发人员必须从其部署清单中排除`deploymentProvider`。 这意味着在使用`-providerUrl`Mage.exe 创建部署清单时排除参数，或者确保使用 MageUI.exe 生成部署清单时，"**应用程序清单"** 选项卡上的 **"启动位置**"文本框留空。  
   
-## <a name="deploymentprovider-and-application-updates"></a>deploymentProvider 和应用程序更新  
- 从.NET Framework 3.5 开始，不再需要指定`deploymentProvider`为了部署联机和脱机使用情况的 ClickOnce 应用程序部署清单中。 此项支持方案中，您需要用来打包和签名部署你自己，但是对其他公司通过其网络部署应用程序。  
+## <a name="deploymentprovider-and-application-updates"></a>部署提供程序和应用程序更新  
+ 从 .NET 框架 3.5 开始，您不再需要在部署`deploymentProvider`清单中指定 ，即可部署 ClickOnce 应用程序以用于联机和脱机使用。 这支持需要自行打包和签名部署，但允许其他公司在其网络上部署应用程序的方案。  
   
- 要记住的要点是，应用程序排除`deploymentProvider`不能更改其安装位置期间更新，直到它们寄送包含的更新`deploymentProvider`再次标记。  
+ 需要记住的要点是，排除 的`deploymentProvider`应用程序在更新期间无法更改其安装位置，直到他们再次发布包含`deploymentProvider`标记的更新。  
   
- 下面是两个示例来说明这一点。 在第一个示例中，发布 ClickOnce 应用程序不具有`deploymentProvider`标记，，并要求用户从 http://www.adatum.com/MyApplication/ 。 如果你决定想要发布的应用程序的下一个更新 http://subdomain.adatum.com/MyApplication/，将具有无法驻留在的部署清单中表示此 http://www.adatum.com/MyApplication/。 您可以执行两个操作之一：  
+ 下面是两个示例来阐明这一点。 在第一个示例中，您发布一`deploymentProvider`个没有标记的 ClickOnce 应用程序，并要求用户从`http://www.adatum.com/MyApplication/`安装该应用程序。 如果您决定要发布应用程序的`http://subdomain.adatum.com/MyApplication/`下一个更新，您将无法在驻留在 的部署清单中`http://www.adatum.com/MyApplication/`表示这一点。 你可以做两件事之一：  
   
-- 告知用户卸载以前的版本，并从新位置中安装新版本。  
+- 告诉用户卸载以前的版本，并从新位置安装新版本。  
   
-- 包括在更新 http://www.adatum.com/MyApplication/，其中包含 `deploymentProvider` 指向 http://www.adatum.com/MyApplication/ 。 然后，释放更高版本与另一个更新 `deploymentProvider` 指向 http://subdomain.adatum.com/MyApplication/ 。  
+- 包括包含`http://www.adatum.com/MyApplication/``deploymentProvider`指向`http://www.adatum.com/MyApplication/`的更新。 然后，稍后使用`deploymentProvider`指向`http://subdomain.adatum.com/MyApplication/`发布另一个更新。  
   
-  在第二个示例中，发布 ClickOnce 应用程序指定`deploymentProvider`，然后决定将其删除。 一次新版本而无需`deploymentProvider`已下载到客户端，您将不能用于更新，直到发布具有应用程序的版本路径重定向`deploymentProvider`还原。 与第一个示例一样`deploymentProvider`最初必须指向当前的更新位置，而不是新位置。 在此情况下，如果你尝试插入`deploymentProvider`，是指 http://subdomain.adatum.com/MyApplication/，则下一次更新将失败。  
+  在第二个示例中，您发布指定`deploymentProvider`的 ClickOnce 应用程序，然后决定删除它。 将新版本下载`deploymentProvider`到客户端后，您将无法重定向用于更新的路径，直到发布已`deploymentProvider`还原的应用程序版本。 与第一个示例一`deploymentProvider`样，必须最初指向当前更新位置，而不是新位置。 在这种情况下，如果尝试插入引用`deploymentProvider``http://subdomain.adatum.com/MyApplication/`的 ，则下一次更新将失败。  
   
 ## <a name="creating-a-deployment"></a>创建部署  
- 有关创建可从不同的网络位置部署的部署的分步指导，请参阅[演练：手动部署 ClickOnce 应用程序，不需要重新签名并且保留署名信息](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-app-no-re-signing-required?view=vs-2015)。  
+ 有关创建可以从不同网络位置部署的部署的分步指南，请参阅[演练：手动部署不需要重新签名并保留品牌信息的 ClickOnce 应用程序](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-app-no-re-signing-required?view=vs-2015)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Mage.exe（清单生成和编辑工具）](https://msdn.microsoft.com/library/77dfe576-2962-407e-af13-82255df725a1)   
- [MageUI.exe（图形化客户端中的清单生成和编辑工具）](https://msdn.microsoft.com/library/f9e130a6-8117-49c4-839c-c988f641dc14)
+ [MageUI.exe（清单生成和编辑工具，图形客户端）](https://msdn.microsoft.com/library/f9e130a6-8117-49c4-839c-c988f641dc14)

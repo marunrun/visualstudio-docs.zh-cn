@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 0ac8b07e5e788a258e39cce5209b33c0190b08bf
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75569187"
 ---
 # <a name="go-to-line-dialog-box"></a>“转到行”对话框
@@ -28,9 +28,9 @@ ms.locfileid: "75569187"
 
 ## <a name="line-number-1---n"></a>行号 (1 - \<n>)
 
-在“行号 (1 - \<n>)”  对话框中，输入想要移动到的活动文档中的行号。 输入的数量必须在 1 到当前文档最后的行号之间。
+在“行号 (1 - **n>)”\<** 对话框中，输入想要移动到的活动文档中的行号。 输入的数量必须在 1 到当前文档最后的行号之间。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用“转到”命令查找代码](../../ide/go-to.md)
 - [在代码中设置书签](../../ide/setting-bookmarks-in-code.md)

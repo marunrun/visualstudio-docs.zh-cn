@@ -1,5 +1,5 @@
 ---
-title: IDebugCanStopEvent2::GetReason | Microsoft Docs
+title: IDebugCanStopevent2：：获取原因 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugCanStopEvent2::GetReason
 ms.assetid: f5de31ca-7b8d-4029-9cf9-ba860ac66af6
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e1b219973e0fced92a588a87ed472cf7a57d312d
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 59e611c3ed69528f92a6085cf74aa44efed09144
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66337275"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80734521"
 ---
 # <a name="idebugcanstopevent2getreason"></a>IDebugCanStopEvent2::GetReason
-获取调试引擎 (DE) 是为什么想要停止的原因。
+获取调试引擎 （DE） 想要停止的原因。
 
 ## <a name="syntax"></a>语法
 
@@ -41,15 +41,15 @@ int GetReason( 
 
 ## <a name="parameters"></a>参数
 `pcr`\
-[out]返回一个值从[CANSTOP_REASON](../../../extensibility/debugger/reference/canstop-reason.md)介绍了此事件的原因的枚举。
+[出]从描述此事件原因[的CANSTOP_REASON](../../../extensibility/debugger/reference/canstop-reason.md)枚举中返回值。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，返回`S_OK`;否则，返回错误代码。
 
 ## <a name="remarks"></a>备注
- 此方法通常称为之前[CanStop](../../../extensibility/debugger/reference/idebugcanstopevent2-canstop.md)方法，以便调用方可以确定是否将传递非零值 (`TRUE`) 到`IDebugCanStopEvent2::CanStop`方法。
+ 此方法通常在[CanStop](../../../extensibility/debugger/reference/idebugcanstopevent2-canstop.md)方法之前调用，以便调用方可以确定是否将非零 （`TRUE`） 传递给`IDebugCanStopEvent2::CanStop`方法。
 
- 正在停止的原因可以是`CANSTOP_ENTRYPOINT`，这意味着 DE 已达到的入口点，或`CANSTOP_STEPIN`，这意味着 DE 单步执行函数。
+ 停止的原因可以是`CANSTOP_ENTRYPOINT`，这意味着 DE 已达到入口点，或者`CANSTOP_STEPIN`表示 DE 已踏入函数。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugCanStopEvent2](../../../extensibility/debugger/reference/idebugcanstopevent2.md)

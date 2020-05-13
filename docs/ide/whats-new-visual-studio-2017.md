@@ -19,10 +19,10 @@ ms.workload:
 - multiple
 monikerRange: vs-2017
 ms.openlocfilehash: de26054894783df283d38223a59741c0500d0bc5
-ms.sourcegitcommit: 0a8855572c6c88f4b2ece232c04aa124fbd9cec3
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74955031"
 ---
 # <a name="whats-new-in-visual-studio-2017"></a>Visual Studio 2017 中的新增功能
@@ -108,11 +108,11 @@ Visual Studio 可以移动自身的扩展（以及第三方扩展），从而根
 
 使用漫游扩展管理器时，列表中会出现 3 种图标类型：
 
-* ![“漫游”图标](media/vs2017ide-roamedicon.png) **_漫游_** ：存在于漫游列表中，但未在计算机上安装的扩展。
+* ![“漫游”图标](media/vs2017ide-roamedicon.png) **漫游 ** ：存在于漫游列表中，但未在计算机上安装的扩展。
   （可通过“下载”  按钮安装这些扩展。）
-* ![“漫游且已安装”图标](media/vs2017ide-roamedinstalledicon.png) **_漫游且已安装_** ：存在于漫游列表中且已在此环境中安装的所有扩展。
+* ![“漫游且已安装”图标](media/vs2017ide-roamedinstalledicon.png) **漫游且已安装 ** ：存在于漫游列表中且已在此环境中安装的所有扩展。
   （如果确定不希望漫游，可通过“停止漫游”  按钮删除它们。）
-* ![“已安装”图标](media/vs2017ide-installedicon.png) **_已安装_** ：此环境中已安装、但不属于漫游列表的所有扩展。
+* ![“已安装”图标](media/vs2017ide-installedicon.png) **已安装 ** ：此环境中已安装、但不属于漫游列表的所有扩展。
   （可通过“启动漫游”  按钮将扩展添加到漫游列表。）
 
 在登录时下载的任何扩展将作为“漫游且已安装”  添加到列表中。 该扩展随即成为“漫游”列表的一部分，可以从任何计算机访问它。

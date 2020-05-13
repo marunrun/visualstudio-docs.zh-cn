@@ -12,10 +12,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 20b8438243382b28cccb510894d1674aa5872946
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74779865"
 ---
 # <a name="add-tier-interaction-data-from-the-command-line"></a>从命令行添加层交互数据
@@ -32,11 +32,11 @@ ms.locfileid: "74779865"
 
 **在远程计算机上收集 TIP 数据**
 
-若要在远程计算机上收集层交互数据，必须从 Visual Studio 计算机的 %VSInstallDir%\Team Tools\Performance Tools\Setups 文件夹中将 vs_profiler\_\<Platform>\_\<Language>.exe 文件复制到远程计算机上并进行安装        。 不能使用[远程调试](../debugger/remote-debugging.md)下载包中的分析工具。
+若要在远程计算机上收集层交互数据，必须从 Visual Studio 计算机的 %VSInstallDir%\Team Tools\Performance Tools\Setups 文件夹中将 vs_profiler **\_Platform>** _Language>.exe 文件复制到远程计算机上并进行安装\<_ **\_** _\<_    。 不能使用[远程调试](../debugger/remote-debugging.md)下载包中的分析工具。
 
-**TIP 报表**
+**TIP 报告**
 
-只能在 Visual Studio Enterprise 中查看层交互数据。 基于文件的层交互报表通过 [VSPerfReport](../profiling/vsperfreport.md) 将不可用。
+只能在 Visual Studio Enterprise 中查看层交互数据。 通过 [VSPerfReport](../profiling/vsperfreport.md) 生成的基于文件的层交互报告不可用。
 
 ## <a name="add-tier-interaction-data-with-vsperfcmd"></a>通过 VSPerfCmd 添加层交互数据
 

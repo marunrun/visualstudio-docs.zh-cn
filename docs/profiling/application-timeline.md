@@ -10,10 +10,10 @@ manager: jillfra
 ms.workload:
 - uwp
 ms.openlocfilehash: a368a9b8f6d25753993a2cc10ea9ca94734d6709
-ms.sourcegitcommit: 53bc4c11b82882ab658e34c65ae374060f823531
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "71128281"
 ---
 # <a name="analyze-resource-consumption-and-ui-thread-activity-xaml"></a>分析资源消耗情况和 UI 线程活动 (XAML)
@@ -68,11 +68,11 @@ ms.locfileid: "71128281"
 
 2. 使用“UI 线程使用率”或“可视吞吐量 (FPS)”图中的信息，检查“时间线详细信息”视图中的详细信息可以找到导致任何明显缺少响应能力情况的可能原因    。
 
-### <a name="BKMK_Report_scenarios_categories_and_events"></a> 报表方案、类别和事件
+### <a name="report-scenarios-categories-and-events"></a><a name="BKMK_Report_scenarios_categories_and_events"></a> 报表方案、类别和事件
 
 **“应用程序时间线”** 工具将显示方案、类别和与 XAML 性能相关的事件的计时数据。
 
-### <a name="BKMK_Diagnostic_session_timeline"></a>诊断会话时间线
+### <a name="diagnostic-session-timeline"></a><a name="BKMK_Diagnostic_session_timeline"></a>诊断会话时间线
 
 ![性能和诊断时间线](../profiling/media/diaghub_timelinewithusermarks.png "DIAGHUB_TimelineWithUserMarks")
 
@@ -80,19 +80,19 @@ ms.locfileid: "71128281"
 
 时间线还显示已插入的任何用户标记和应用程序的激活生命周期事件。
 
-### <a name="BKMK_UI_thread_utilization_graph"></a>UI 线程使用率图
+### <a name="ui-thread-utilization-graph"></a><a name="BKMK_UI_thread_utilization_graph"></a>UI 线程使用率图
 
 ![CPU 使用率图](../profiling/media/timeline_cpuutilization.png "TIMELINE_CpuUtilization")
 
  “UI 线程使用率 (%)”图是一个条形图，它显示了一个集合段内某个类别中耗用的相对时间量。
 
-### <a name="BKMK_Visual_throughput_FPS_graph"></a>可视吞吐量 (FPS) 图
+### <a name="visual-throughput-fps-graph"></a><a name="BKMK_Visual_throughput_FPS_graph"></a>可视吞吐量 (FPS) 图
 
 ![可视吞吐量图](../profiling/media/timeline_visualthroughput.png "TIMELINE_VisualThroughput")
 
 **“可视吞吐量(FPS)”** 折线图显示了应用程序的 UI 线程和复合线程上的每秒帧数 (FPS)。
 
-### <a name="BKMK_Timeline_details_"></a> 时间线详细信息
+### <a name="timeline-details"></a><a name="BKMK_Timeline_details_"></a> 时间线详细信息
 
 详细视图是你在其中花费大部分时间分析报告的地方。 它显示了由 UI 框架子系统或使用 CPU 的系统组件分类的应用程序的 CPU 使用情况。
 
@@ -110,14 +110,14 @@ ms.locfileid: "71128281"
 > [!TIP]
 > 当开始分析时，选择 **“CPU 使用率”** 工具和 **“时间线”** 工具查看在 UI 线程上执行的应用方法。 将长时间运行的应用代码移动到后台线程可以提高 UI 响应能力。
 
-#### <a name="BKMK_Customizing_Timeline_details_"></a> 自定义时间线详细信息
+#### <a name="customizing-timeline-details"></a><a name="BKMK_Customizing_Timeline_details_"></a> 自定义时间线详细信息
 
 使用  “时间线详细信息”工具栏排序、筛选和指定  “时间线详细信息”视图条目的批注。
 
 |||
 |-|-|
 |**排序依据**|按开始时间或事件的长度排序。|
-|![按框架分组事件](../profiling/media/timeline_groupbyframes.png "TIMELINE_GroupByFrames")|添加或删除按框架对事件进行分组的顶级  “框架”类别。|
+|![按框架为事件分组](../profiling/media/timeline_groupbyframes.png "TIMELINE_GroupByFrames")|添加或删除按框架对事件进行分组的顶级  “框架”类别。|
 |![筛选时间线详细信息列表](../profiling/media/timeline_filter.png "TIMELINE_Filter")|按所选类别和事件的长度筛选列表。|
 |![自定义时间线详细信息](../profiling/media/timeline_viewsettings.png "TIMELINE_ViewSettings")|允许你指定事件的批注。|
 

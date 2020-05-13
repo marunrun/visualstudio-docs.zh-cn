@@ -8,12 +8,12 @@ ms.assetid: 6832fe39-04d5-4d94-8a18-3e2730bad423
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 0132401df33bd65d7e328307167b6c228155bb42
-ms.sourcegitcommit: 1efb6b219ade7c35068b79fbdc573a8771ac608d
+ms.openlocfilehash: 07df32104394dffcd61d1561309b77e61593f6e6
+ms.sourcegitcommit: 5d1b2895d3a249c6bea30eb12b0ad7c0f0862d85
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78169386"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80880229"
 ---
 # <a name="how-to-configure-aspnet-profiler-for-load-tests-using-test-settings-in-visual-studio"></a>如何：在 Visual Studio 中使用测试设置为负载测试配置 ASP.NET 探查器
 
@@ -22,7 +22,7 @@ ms.locfileid: "78169386"
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 > [!NOTE]
-> 此诊断数据适配器不能用于通过 Microsoft 测试管理器运行的测试。 可对仅使用网站的负载测试使用 ASP.NET 探查器诊断适配器，这需要 Visual Studio Enterprise。
+> 此诊断数据适配器不能用于通过 Microsoft 测试管理器（在 Visual Studio 2017 中已弃用）运行的测试。 可对仅使用网站的负载测试使用 ASP.NET 探查器诊断适配器，这需要 Visual Studio Enterprise。
 
 使用 ASP.NET 探查器诊断数据适配器，可以在运行负载测试时从应用层收集 ASP.NET 探查器数据。 不能对较长的负载测试（例如，运行时间超过一小时的负载测试）运行探查器。 这是因为探查器文件可能会变得很大，或许可达数百 MB。 应使用 ASP.NET 探查器运行较短的负载测试，从而仍具有深入诊断性能问题的优点。
 

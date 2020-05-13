@@ -19,10 +19,10 @@ ms.workload:
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.openlocfilehash: d03912eecd7b3cfa3563fc095453fee3ddf9b163
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "76114279"
 ---
 # <a name="set-defaults-for-enterprise-deployments-of-visual-studio"></a>为 Visual Studio 企业部署设置默认值
@@ -50,7 +50,7 @@ ms.locfileid: "76114279"
 
 可以设置以下注册表值：
 
-| **Name** | **Type** | **默认** | **说明** |
+| **Name** | 类型  | **Default** | **描述** |
 | -------- | -------- | ----------- | --------------- |
 | `CachePath` | `REG_SZ` 或 `REG_EXPAND_SZ` | %ProgramData%\Microsoft\VisualStudio\Packages | 用于存储包清单和有效负载（可选）的目录。 有关详细信息，请参阅[禁用或移动包缓存](disable-or-move-the-package-cache.md)页面。 |
 | `KeepDownloadedPayloads` | `REG_DWORD` | 1 | 即使在安装后，也仍会保留包有效负载。 随时都可以更改值。 禁用此策略会删除你修复或修改的实例的任何已缓存包有效负载。 有关详细信息，请参阅[禁用或移动包缓存](disable-or-move-the-package-cache.md)页面。 |
@@ -63,7 +63,7 @@ ms.locfileid: "76114279"
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [安装 Visual Studio](install-visual-studio.md)
 - [禁用或移动包缓存](disable-or-move-the-package-cache.md)

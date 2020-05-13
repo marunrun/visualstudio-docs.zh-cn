@@ -2,7 +2,7 @@
   items:
     - name: 安装 Visual Studio 2015
       href: install-visual-studio-2015.md
-    - name: 创建 Visual Studio 脱机安装缓存
+    - name: 创建 Visual Studio 的脱机安装
       href: create-an-offline-installation-of-visual-studio.md
     - name: 并行安装 Visual Studio 版本
       href: install-visual-studio-versions-side-by-side.md

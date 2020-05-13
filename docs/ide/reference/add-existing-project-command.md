@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 008802546d87bd44137c6d13ee2aef802877e308
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75595873"
 ---
 # <a name="add-existing-project-command"></a>“添加现有项目”命令
@@ -29,7 +29,7 @@ ms.locfileid: "75595873"
 File.AddExistingProject filename
 ```
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
 `filename`\
 可选。 待添加到解决方案的项目的完整路径、项目名称和扩展名。
 
@@ -47,7 +47,7 @@ File.AddExistingProject filename
 >File.AddExistingProject "c:\visual studio projects\TestProject1.vbproj"
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Studio 命令](../../ide/reference/visual-studio-commands.md)
 - [“命令”窗口](../../ide/reference/command-window.md)

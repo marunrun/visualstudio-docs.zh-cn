@@ -11,10 +11,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 0836fdb085ab33b2a646d9774c94bd859b5ca5ad
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75590301"
 ---
 # <a name="edit-load-patterns-to-model-virtual-user-activities"></a>编辑负载模式以便为虚拟用户活动建模
@@ -30,7 +30,7 @@ ms.locfileid: "75590301"
 
 ## <a name="load-patterns"></a>负载模式
 
-### <a name="constant"></a>返回的常量
+### <a name="constant"></a>常量
 
 常量负载模式用于指定在负载测试期间不发生变化的用户负载。 例如，对 Web 应用程序运行冒烟测试时，可能要设置一个较小的、10 个用户的常量负载。
 
@@ -55,15 +55,15 @@ ms.locfileid: "75590301"
 
 分级负载模式可用于在负载测试运行时增加服务器上的负载，这样您就能够看到性能如何随着用户负载的增加而发生变化。 例如，若要查看用户负载增加到 2000 个用户时服务器的性能如何，您可以使用具有以下属性的分级负载模式来运行一个 10 小时的负载测试：
 
-- **初始用户计数**：100
+-  初始用户计数：100
 
-- **最大用户计数**：2,000
+-  最大用户计数：2000
 
-- **单步持续时间（秒）** ：1,800
+-  单步持续时间(秒)：1,800
 
-- **单步负载增加时间（秒）** ：20
+-  单步负载增加时间(秒)：20
 
-- **单步用户计数**：100
+-  单步用户计数：100
 
   这些设置可使负载测试在 100、200、300 直至 2,000 个用户的用户负载下运行 30 分钟（1,800 秒）。 请特别注意“单步负载增加时间”  属性，因为在这些属性中，它是“新建负载测试向导”  中唯一不可选的属性。 通过此属性，可从某一步逐渐（而不是一下）增加到下一步（例如，从 100 个用户增加到 200 个用户）。 在此示例中，用户负载将在 20 秒内从 100 个用户增加到 200 用户，即每秒增加 5 个用户。 有关详细信息，请参阅[如何：为分级负载模式指定单步负载增加时间属性](../test/how-to-specify-the-step-ramp-time-property-for-a-step-load-pattern.md)。
 
@@ -82,7 +82,7 @@ ms.locfileid: "75590301"
 |属性组|Property|“值”|
 |-|--------------|-|
 |性能计数器|类别|处理器|
-|性能计数器|计算机|ContosoServer1|
+|性能计数器|Computer|ContosoServer1|
 |性能计数器|计数器|% Processor Time|
 |性能计数器|实例|_Total|
 |性能计数器的目标范围|高端|90|
@@ -93,7 +93,7 @@ ms.locfileid: "75590301"
 |用户计数限制|最大用户计数增量|5|
 |用户计数限制|最小用户计数|1|
 
-这些设置会导致“负载测试分析器”在测试运行期间在 1 和 100 之间调整用户负载，以使 WebServer01 的 `% Processor Time`“计数器”保持在 `70%` 到 `90%.` 之间  
+这些设置会导致“负载测试分析器”在测试运行期间在 1 和 100 之间调整用户负载，以使 WebServer01 的 **“计数器”保持在**  到  **之间**`% Processor Time``70%``90%.`
 
 每个用户负载调整的大小由“最大用户计数增量”和“最大用户计数减量”设置决定   。 用户计数限制由“最大用户计数”和“最小用户计数”属性设置   。
 
@@ -109,10 +109,10 @@ ms.locfileid: "75590301"
 
 |任务|相关主题|
 |-|-----------------------|
-|**为负载测试指定初始负载模式：** 使用“新建负载测试向导”创建负载测试时，要选择一种负载模式  。|-   [更改负载模式](../test/edit-load-patterns-to-model-virtual-user-activities.md#change-the-load-pattern)|
-|**为负载测试编辑负载模式：** 创建负载测试后，可以在“负载测试编辑器”中编辑负载模式  。|-   [如何：为分级负载模式指定单步负载增加时间属性](../test/how-to-specify-the-step-ramp-time-property-for-a-step-load-pattern.md)|
-|**指定负载测试方案中的虚拟用户是否应包含 Web 缓存数据：** 可以更改“新用户的百分比”属性以影响负载测试模拟由虚拟用户的 Web 浏览器执行的 Web 缓存的方式  。|-   [如何：指定使用 Web 高速缓存数据的虚拟用户的百分比](../test/how-to-specify-the-percentage-of-virtual-users-that-use-web-cache-data.md)|
-|**为分级负载模式指定单步负载增加时间：** 通过“单步负载增加时间”属性，可从某一步逐渐（而不是一下）增加到下一步（例如，从 100 个用户增加到 200 个用户）  。|-   [如何：为分级负载模式指定单步负载增加时间属性](../test/how-to-specify-the-step-ramp-time-property-for-a-step-load-pattern.md)|
+| 为负载测试指定初始负载模式：使用“新建负载测试向导”  创建负载测试时，要选择一种负载模式。|-   [更改负载模式](../test/edit-load-patterns-to-model-virtual-user-activities.md#change-the-load-pattern)|
+| 为负载测试编辑负载模式：创建负载测试后，可以在“负载测试编辑器”  中编辑负载模式。|-   [如何：为分级负载模式指定单步负载增加时间属性](../test/how-to-specify-the-step-ramp-time-property-for-a-step-load-pattern.md)|
+| 指定负载测试方案中的虚拟用户是否应包含 Web 缓存数据：可以更改“新用户的百分比”  属性以影响负载测试模拟由虚拟用户的 Web 浏览器执行的 Web 缓存的方式。|-   [如何：指定使用 Web 缓存数据的虚拟用户的百分比](../test/how-to-specify-the-percentage-of-virtual-users-that-use-web-cache-data.md)|
+|**指定分级负载模式的单步负载增加时间：** 通过“单步负载增加时间”属性，可从某一步逐渐（而不是一下）增加到下一步（例如，从 100 个用户增加到 200 个用户）  。|-   [如何：为分级负载模式指定单步负载增加时间属性](../test/how-to-specify-the-step-ramp-time-property-for-a-step-load-pattern.md)|
 
 ## <a name="change-the-load-pattern"></a>更改负载模式
 
@@ -150,8 +150,8 @@ ms.locfileid: "75590301"
 
 6. 更改完属性后，请选择“文件”菜单上的“保存”   。 然后，就可以用新的负载模式运行负载测试了。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [编辑负载测试方案](../test/edit-load-test-scenarios.md)
-- [如何：指定使用 Web 高速缓存数据的虚拟用户的百分比](../test/how-to-specify-the-percentage-of-virtual-users-that-use-web-cache-data.md)
+- [如何：指定使用 Web 缓存数据的虚拟用户的百分比](../test/how-to-specify-the-percentage-of-virtual-users-that-use-web-cache-data.md)
 - [如何：为分级负载模式指定单步负载增加时间属性](../test/how-to-specify-the-step-ramp-time-property-for-a-step-load-pattern.md)

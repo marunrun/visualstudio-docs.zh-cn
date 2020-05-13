@@ -10,14 +10,14 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: bf5e0fdf478e067f61b1d0e259cb1624380e4f02
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74778240"
 ---
 # <a name="status"></a>状态
-VSPerfCmd.exe Status 选项显示有关探查器状态以及当前正在分析的任何进程的信息   。
+VSPerfCmd.exe“Status”选项显示有关探查器状态以及当前正在分析的任何进程的信息   。
 
  **Status** 选项必须是命令行中指定的唯一选项。 必须先使用 VSPerfCmd.exe Start 选项初始化探查器，然后才能显示任何状态   。
 
@@ -28,7 +28,7 @@ VSPerfCmd.exe /Status
 ```
 
 #### <a name="parameters"></a>参数
- 无
+ None
 
 ## <a name="remarks"></a>备注
  **Status** 选项显示探查器的以下状态信息。

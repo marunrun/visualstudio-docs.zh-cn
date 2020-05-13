@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: ce16e436172a7d369f2df8342f6b027b574056ab
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75589521"
 ---
 # <a name="how-to-create-a-basic-3d-model"></a>如何：创建基本三维模型
@@ -58,7 +58,7 @@ ms.locfileid: "75589521"
 
     ![已进一步延伸立方体的一侧。](../designers/media/gfx_model_demo_house_extend.png)
 
-7. 对模型进行三角测量。 在“模型编辑器”工具栏上，依次选择“高级” > “工具” > “三角化”    。
+7. 对模型进行三角测量。 在“模型编辑器”工具栏上，依次选择“高级” **“工具”** “三角化” >    >   。
 
 8. 创建房子的屋顶。 选择“模型编辑器”工具栏上的“选择边”  切换到边选择模式，然后选择立方体将其激活。 选择此处显示的边时，请按住 Ctrl 键  ：
 
@@ -70,10 +70,10 @@ ms.locfileid: "75589521"
 
    ![简约建筑的已完成模型](../designers/media/gfx_model_demo_house_final.png)
 
-   下一步，可以将着色器应用于此三维模型。 有关详细信息，请参阅[如何：向三维模型应用着色器](../designers/how-to-apply-a-shader-to-a-3-d-model.md)。
+   下一步，可以将着色器应用于此三维模型。 相关信息，请参阅[如何：向三维模型应用着色器](../designers/how-to-apply-a-shader-to-a-3-d-model.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [如何：构建三维地形模型](../designers/how-to-model-3-d-terrain.md)
+- [如何：构建 3D 地形模型](../designers/how-to-model-3-d-terrain.md)
 - [模型编辑器](../designers/model-editor.md)
 - [着色器设计器](../designers/shader-designer.md)

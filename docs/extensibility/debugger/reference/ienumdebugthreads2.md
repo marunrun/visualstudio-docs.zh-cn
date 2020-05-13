@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugThreads2 | Microsoft Docs
+title: IEnum调试线程2 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IEnumDebugThreads2
 ms.assetid: 1854f078-3b49-42c2-b65b-33e3b506fd63
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a6d8f869e519d9500f1ea8f3bb33a3ee098f5cfd
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: bbbe047c08f8e91264163d028c1b40d94cde97fc
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66325422"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80715092"
 ---
 # <a name="ienumdebugthreads2"></a>IEnumDebugThreads2
-此接口枚举当前调试会话中运行的线程。
+此接口枚举在当前调试会话中运行的线程。
 
 ## <a name="syntax"></a>语法
 
@@ -28,37 +28,37 @@ ms.locfileid: "66325422"
 IEnumDebugThreads2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>实施者的说明
- 调试引擎 (DE) 实现此接口来表示在程序中的主题的列表。
+## <a name="notes-for-implementers"></a>实施者说明
+ 调试引擎 （DE） 实现此接口以表示程序中的线程列表。
 
-## <a name="notes-for-callers"></a>调用方的说明
- 调用[EnumThreads](../../../extensibility/debugger/reference/idebugprocess2-enumthreads.md)获取表示的进程中运行的所有程序中的所有线程列表的此接口。 调用[EnumThreads](../../../extensibility/debugger/reference/idebugprogram2-enumthreads.md)获取表示在程序中运行的线程的列表的此接口。
+## <a name="notes-for-callers"></a>呼叫者备注
+ 调用[EnumThreads](../../../extensibility/debugger/reference/idebugprocess2-enumthreads.md)以获取此接口，以表示进程中运行的所有程序中所有线程的列表。 调用[EnumThreads](../../../extensibility/debugger/reference/idebugprogram2-enumthreads.md)以获取此接口，表示程序中正在运行的线程列表。
 
 ## <a name="methods-in-vtable-order"></a>Vtable 顺序中的方法
- 下表显示的方法`IEnumDebugThreads2`。
+ 下表显示了 的方法`IEnumDebugThreads2`。
 
 |方法|描述|
 |------------|-----------------|
-|[下一页](../../../extensibility/debugger/reference/ienumdebugthreads2-next.md)|检索指定的数目的枚举序列中的线程。|
-|[Skip](../../../extensibility/debugger/reference/ienumdebugthreads2-skip.md)|将跳过指定的数目的枚举序列中的线程。|
-|[Reset](../../../extensibility/debugger/reference/ienumdebugthreads2-reset.md)|将枚举序列重置到开头。|
-|[Clone](../../../extensibility/debugger/reference/ienumdebugthreads2-clone.md)|创建包含相同枚举状态与当前的枚举器。|
-|[GetCount](../../../extensibility/debugger/reference/ienumdebugthreads2-getcount.md)|获取一个枚举器中的线程数。|
+|[下一步](../../../extensibility/debugger/reference/ienumdebugthreads2-next.md)|检索枚举序列中指定数量的线程。|
+|[跳](../../../extensibility/debugger/reference/ienumdebugthreads2-skip.md)|在枚举序列中跳过指定数量的线程。|
+|[重置](../../../extensibility/debugger/reference/ienumdebugthreads2-reset.md)|将枚举序列重置为开头。|
+|[克隆](../../../extensibility/debugger/reference/ienumdebugthreads2-clone.md)|创建与当前枚举状态相同的枚举器。|
+|[GetCount](../../../extensibility/debugger/reference/ienumdebugthreads2-getcount.md)|获取枚举器中的线程数。|
 
 ## <a name="remarks"></a>备注
- Visual Studio 通常将获取此接口，以更新**线程**窗口以及关于获取列表中，在第一个线程，以便调用[Execute](../../../extensibility/debugger/reference/idebugprocess3-execute.md)，[继续](../../../extensibility/debugger/reference/idebugprocess3-continue.md)，和[步骤](../../../extensibility/debugger/reference/idebugprocess3-step.md)。
+ Visual Studio 通常获取此接口以更新**线程**窗口以及获取列表的第一个线程，以便调用[执行](../../../extensibility/debugger/reference/idebugprocess3-execute.md)、[继续](../../../extensibility/debugger/reference/idebugprocess3-continue.md)和[步骤](../../../extensibility/debugger/reference/idebugprocess3-step.md)。
 
 ## <a name="requirements"></a>要求
- 标头： msdbg.h
+ 标题： msdbg.h
 
- 命名空间:Microsoft.VisualStudio.Debugger.Interop
+ 命名空间：微软.VisualStudio.调试器.互通
 
- 程序集：Microsoft.VisualStudio.Debugger.Interop.dll
+ 程序集：微软.VisualStudio.调试器.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [核心接口](../../../extensibility/debugger/reference/core-interfaces.md)
 - [EnumThreads](../../../extensibility/debugger/reference/idebugprocess2-enumthreads.md)
 - [EnumThreads](../../../extensibility/debugger/reference/idebugprogram2-enumthreads.md)
-- [Step](../../../extensibility/debugger/reference/idebugprocess3-step.md)
-- [Continue](../../../extensibility/debugger/reference/idebugprocess3-continue.md)
-- [Execute](../../../extensibility/debugger/reference/idebugprocess3-execute.md)
+- [步骤](../../../extensibility/debugger/reference/idebugprocess3-step.md)
+- [继续](../../../extensibility/debugger/reference/idebugprocess3-continue.md)
+- [执行](../../../extensibility/debugger/reference/idebugprocess3-execute.md)

@@ -3,15 +3,16 @@ title: Visual Studio 订阅中软件下载的产品可用性 | Microsoft Docs
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 07/29/2019
+ms.assetid: abf271b5-7547-4695-a46f-72b2878ba8d4
+ms.date: 03/09/2020
 ms.topic: conceptual
 description: 了解 Visual Studio 订阅的软件下载中的产品可用性
-ms.openlocfilehash: bf75f9638807b823fb72c4e23f69d0204fcec5de
-ms.sourcegitcommit: 49ebf69986713e440fd138fb949f1c0f47223f23
+ms.openlocfilehash: 7b6b3bf3dbcf75a33853a9af5edf51e3ef1165a8
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74706812"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80232306"
 ---
 # <a name="product-availability-for-software-downloads-in-visual-studio-subscriptions"></a>Visual Studio 订阅的软件下载中的产品可用性
 订阅者权益包含可以下载各种各样的软件。
@@ -36,6 +37,12 @@ ms.locfileid: "74706812"
 > 如果你有多个与同一电子邮件地址关联的订阅，则可用的软件标题由你拥有的最高级订阅确定  。  例如，如果你具有 Visual Studio Enterprise 订阅和 Visual Studio Test Professional 订阅，那么你将有权访问 Visual Studio Enterprise 订阅中包含的软件标题，而不管订阅门户中当前使用的是哪种订阅。 
 
 无法确定正在使用哪些订阅？  连接到 [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs)，查看分配给电子邮件地址的所有订阅。 如果没有看到所有订阅，则可能是有一个或多个订阅分配给了不同的电子邮件地址。  你需要使用其他电子邮件地址登录来查看那些订阅。
+
+## <a name="see-also"></a>另请参阅
+- [Visual Studio 文档](https://docs.microsoft.com/visualstudio/)
+- [Azure DevOps 文档](https://docs.microsoft.com/azure/devops/)
+- [Azure 文档](https://docs.microsoft.com/azure/)
+- [Microsoft 365 文档](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>后续步骤
 - 某些软件下载可能需要产品密钥才能安装和激活它们。  有关如何获取和管理产品密钥的详细信息，请参阅我们的[产品密钥](product-keys.md)文章。 

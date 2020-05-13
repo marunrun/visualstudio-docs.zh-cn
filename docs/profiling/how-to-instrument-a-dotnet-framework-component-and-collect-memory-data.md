@@ -10,10 +10,10 @@ monikerRange: vs-2017
 ms.workload:
 - dotnet
 ms.openlocfilehash: 76d216c4f112f88001b0314a23f22e689f729106
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74775896"
 ---
 # <a name="how-to-instrument-a-stand-alone-net-framework-component-and-collect-memory-data-with-the-profiler-by-using-the-command-line"></a>如何：使用探查器命令行检测独立 .NET Framework 组件，并收集内存数据
@@ -42,7 +42,7 @@ ms.locfileid: "74775896"
 
    - **/tracegc** 和 **/tracegclife** 选项用于初始化环境变量，以便只收集内存分配数据，或同时收集内存分配数据和对象生存期数据。
 
-       |选项|说明|
+       |选项|描述|
        |------------|-----------------|
        |**/tracegc**|只启用对内存分配数据的收集。|
        |**/tracegclife**|启用对内存分配数据和对象生存期数据的收集。|
@@ -57,7 +57,7 @@ ms.locfileid: "74775896"
 
      可以将以下任意选项与 **/start:trace** 选项一起使用。
 
-   | 选项 | 说明 |
+   | 选项 | 描述 |
    | - | - |
    | [/user](../profiling/user-vsperfcmd.md) **:** [`Domain` **\\** ]`UserName` | 指定拥有所分析进程的帐户的域和用户名。 仅当运行进程的用户不是已登录用户时，才需要此选项。 进程所有者在 Windows 任务管理器的“进程”选项卡上的“用户名”列中列出  。 |
    | [/crosssession](../profiling/crosssession.md) | 启用其他会话中的进程分析。 如果应用程序在其他会话中运行，则需要此选项。 会话标识符在 Windows 任务管理器的“进程”选项卡上的“会话 ID”列中列出   。 可以将 **/CS** 指定为 **/crosssession** 的缩写。 |
@@ -76,14 +76,14 @@ ms.locfileid: "74775896"
 
 - 以下 **VSPerfCmd** 选项对可启动和停止数据收集。 在单独的命令行上指定每个选项。 可多次打开和关闭数据收集。
 
-    |选项|说明|
+    |选项|描述|
     |------------|-----------------|
     |[/globalon](../profiling/globalon-and-globaloff.md) [/globaloff](../profiling/globalon-and-globaloff.md)|启动 ( **/globalon**) 或停止 ( **/globaloff**) 所有进程的数据收集。|
     |[/processon](../profiling/processon-and-processoff.md) **:** `PID` [/processoff](../profiling/processon-and-processoff.md) **:** `PID`|启动 ( **/processon**) 或停止 ( **/processoff**) 由进程 ID (`PID`) 指定的进程的数据收集。|
     |[/threadon](../profiling/threadon-and-threadoff.md) **:** `TID` [/threadoff](../profiling/threadon-and-threadoff.md) **:** `TID`|启动 ( **/threadon**) 或停止 ( **/threadoff**) 由线程 ID (`TID`) 指定的线程的数据收集。|
 
 ## <a name="end-the-profiling-session"></a>结束分析会话
- 若要结束分析会话，请关闭正在运行受检测组件的应用程序，然后调用 **VSPerfCmd** [/shutdown](../profiling/shutdown.md) 选项来关闭探查器和分析数据文件。 **VSPerfClrEnv /off** 命令会清除分析环境变量。
+ 若要结束分析会话，请关闭正在运行受检测组件的应用程序，然后调用 VSPerfCmd [/shutdown](../profiling/shutdown.md) 选项来关闭探查器和分析数据文件  。 **VSPerfClrEnv /off** 命令会清除分析环境变量。
 
 #### <a name="to-end-a-profiling-session"></a>结束分析会话
 

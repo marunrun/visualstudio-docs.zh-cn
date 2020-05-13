@@ -13,12 +13,12 @@ helpviewer_keywords:
 - updating templates [Visual Studio]
 - template tagging, updating
 - template tags, updating
-ms.openlocfilehash: 37fa5449847eb4c093475df11a07decb31168f1f
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: ef26a566229c228711ba6e57de50402df255c3dd
+ms.sourcegitcommit: dab57cebd484228e6f0cf7ab1b9685c575410c06
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73189541"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82153027"
 ---
 # <a name="add-tags-to-project-templates"></a>向项目模板添加标签
 
@@ -56,7 +56,7 @@ ms.locfileid: "73189541"
 
 可以在高级用户场景中使用下面的可选属性：
 
-|特性|说明|
+|特性|描述|
 |---------------|-----------------|
 |`Package`|指定 Visual Studio 包 ID 的 GUID。|
 |`ID`|指定 Visual Studio 资源 ID。|
@@ -77,7 +77,7 @@ ms.locfileid: "73189541"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|（必需）将此模板分类并定义此模板在  “新建项目”或“添加新项”  对话框中的显示方式。|
 
@@ -93,7 +93,7 @@ Visual Studio 提供了一系列内置标签。 添加内置标签时，标签�
 
 以下列表显示在 Visual Studio 中可用的内置标签。 对应的值将显示在括号中。
 
-| 语言 | Platform | 项目类型 |
+| 语言标签 | 平台标签 | 项目类型标签 |
 | -- | -- | -- |
 | C++ (`cpp`) | Android (`android`) | 云 (`cloud`) |
 | C# (`csharp`) | Azure (`azure`) | 控制台 (`console`) |

@@ -1,5 +1,5 @@
 ---
-title: 如何：更新 Visual Studio 扩展 |Microsoft Docs
+title: 如何：更新视觉工作室扩展 |微软文档
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,59 +7,59 @@ helpviewer_keywords:
 - update extension
 - new package version
 ms.assetid: 93f79774-7b79-4dd6-94ad-13698f72c257
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 237a1139a7a314cf99b5edbd8993abefe04592c8
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 266c0a49db1bca03cec0eb68301445102173df3d
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66324874"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80710657"
 ---
-# <a name="how-to-update-a-visual-studio-extension"></a>如何：更新 Visual Studio 扩展
-可以通过使用你的系统上更新 Visual Studio 扩展**扩展和更新**若要安装的更新的版本。 如果您创建扩展的更新的版本，您可以将其表示为更新的 VSIX 清单中的版本号递增。
+# <a name="how-to-update-a-visual-studio-extension"></a>如何：更新可视化工作室扩展
+您可以使用**扩展和更新**来安装更新的版本，从而更新系统上的 Visual Studio 扩展。 如果创建扩展的更新版本，则可以通过在 VSIX 清单中增加版本号来将其表示为更新版本。
 
- 安装更新时传入的扩展的 VSIX 清单具有相同`ID`已安装的证书和更高版本作为`Version`数。 如果`Version`数是相同或更低时，无法安装此包。 如果`ID`值不匹配、 尚未安装的包识别为单独的扩展。
+ 当传入扩展的 VSIX 清单与已安装的一个`ID`数字和更高的`Version`数字相同时，将安装更新。 如果`Version`数字相同或更低，则无法安装包。 如果`ID`这些值不匹配，则尚未安装的包将识别为单独的扩展。
 
- 若要帮助防止冲突，在开发过程中，我们建议您卸载早期版本的扩展正在运行，并还卸载或禁用发生潜在冲突的任何其他扩展。
+ 为了帮助防止开发过程中的冲突，我们建议您卸载正在进行的扩展的早期版本，并卸载或禁用任何其他可能冲突的扩展。
 
-## <a name="to-update-an-extension-on-your-system"></a>若要更新你的系统上的扩展
+## <a name="to-update-an-extension-on-your-system"></a>更新系统上的扩展
 
-1. 在  “工具”菜单上，单击  “扩展和更新”。
+1. 在 **** “工具”菜单上，单击 ****“扩展和更新”。
 
-2. 在左窗格中，单击**更新**。
+2. 在左侧窗格中，单击"**更新**"。
 
-3. 在中间窗格中，单击你想要安装的更新。
+3. 在中间窗格中，单击要安装的更新。
 
-     更新扩展的版本号显示在右窗格中，以及其他信息。
+     更新的扩展的版本号与其他信息一起显示在右侧窗格中。
 
-4. 在右窗格的底部，单击**更新**。
+4. 在右侧窗格的底部，单击"**更新**"。
 
-## <a name="to-publish-an-update-of-an-extension"></a>若要发布扩展的更新
+## <a name="to-publish-an-update-of-an-extension"></a>发布扩展的更新
 
-1. 在 Visual Studio 中，打开你想要更新的扩展的解决方案。 进行更改。
+1. 在 Visual Studio 中，打开要更新的扩展的解决方案。 进行更改。
 
     > [!IMPORTANT]
-    > 无符号不会自动更新所有用户扩展。 你始终应登录你的扩展。
+    > 未签名的所有用户扩展不会自动更新。 应始终在扩展中签名。
 
-2. 在中**解决方案资源管理器**，打开*source.extension.manifest*。
+2. 在**解决方案资源管理器**中，*开源.扩展.清单*。
 
-3. 在清单设计器中的数字将值增加**版本**字段。
+3. 在清单设计器中，增加 **"版本"** 字段中的数字值。
 
-4. 保存解决方案，并生成它。
+4. 保存解决方案并构建它。
 
-5. 上传新 *.vsix*文件 (在 * \bin\Debug\*项目文件夹中的) 到[Visual Studio Marketplace](https://marketplace.visualstudio.com/vs) Web 站点。
+5. 将新的 *.vsix*文件（在项目的 _bin_\*调试文件夹中）上载到[可视化工作室应用商店](https://marketplace.visualstudio.com/vs)网站。
 
-     当具有扩展的早期版本的用户身份打开**扩展和更新**，新版本将出现在**更新**列表中，前提是该工具将自动查找更新。
+     当具有早期版本的扩展的用户打开**扩展和更新**时，新版本将显示在 **"更新**"列表中，前提是该工具设置为自动查找更新。
 
-     可以启用或禁用自动检查更新的底部**更新**窗格 (**可用更新的启用/禁用自动检测**)，哪些更改**检查更新**中设置**工具** > **选项** > **环境** >  **扩展和更新**。
+     您可以在 **"更新"** 窗格（**启用/禁用自动检测可用更新**）中启用或禁用自动检查更新，这将更改 **"工具** > **选项** > **环境** > **扩展和更新**"中的 **"检查更新**"设置。
 
     > [!NOTE]
-    > 从 Visual Studio 2015 Update 2 开始，你可以指定 (在**工具** > **选项** > **环境** >  **扩展和更新**) 是否需要自动更新为每用户扩展、 所有用户扩展或两者 （默认设置）。
+    > 从 Visual Studio 2015 更新 2 开始，您可以指定（在**工具** > **选项** > **环境** > **扩展和更新**中），是否要自动更新每个用户扩展、所有用户扩展或两者（默认设置）。
 
 ## <a name="see-also"></a>请参阅
-- [VSIX 包的剖析](../extensibility/anatomy-of-a-vsix-package.md)
-- [查找和使用 Visual Studio 扩展](../ide/finding-and-using-visual-studio-extensions.md)
+- [VSIX 软件包的剖析](../extensibility/anatomy-of-a-vsix-package.md)
+- [查找和使用可视化工作室扩展](../ide/finding-and-using-visual-studio-extensions.md)

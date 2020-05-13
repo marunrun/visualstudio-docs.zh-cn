@@ -18,10 +18,10 @@ ms.author: ghogen
 ms.workload:
 - multiple
 ms.openlocfilehash: d95b6e7d4197487adc13050572ac31310701c759
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75595340"
 ---
 # <a name="custombuild-task"></a>CustomBuild 任务
@@ -32,12 +32,12 @@ ms.locfileid: "75595340"
 
 下表描述了 CustomBuild 任务  的参数。
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
 |**BuildSuffix**|可选的 string  参数。|
 |**Sources**|必需的 **ITaskItem[]** 参数。|
 |**TrackerLogDirectory**|可选的 string  参数。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [任务参考](../msbuild/msbuild-task-reference.md)

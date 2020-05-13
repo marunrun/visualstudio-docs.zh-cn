@@ -30,15 +30,15 @@ manager: jillfra
 ms.workload:
 - uwp
 ms.openlocfilehash: d340a3b9468ea23c4cab23aabe19a7c1390955a3
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75568238"
 ---
 # <a name="options-text-editor-xaml-formatting"></a>选项，文本编辑器，XAML，格式
 
-使用“格式设置”  属性页可指定如何在 XAML 文档中设置元素和特性的格式。 若要打开“选项”  对话框，请单击“工具”  菜单，然后单击“选项”  。 要访问“格式设置”属性页，请展开“文本编辑器” > “XAML” > “格式设置”节点     。
+使用“格式设置”  属性页可指定如何在 XAML 文档中设置元素和特性的格式。 若要打开“选项”  对话框，请单击“工具”  菜单，然后单击“选项”  。 要访问“格式设置”属性页，请展开“文本编辑器” **“XAML”** “格式设置”节点   >    >   。
 
 ## <a name="auto-formatting-events"></a>自动格式化事件
 
@@ -174,6 +174,6 @@ Width="75">Hello</Button>
 </Grid>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [WPF 中的 XAML](/dotnet/framework/wpf/advanced/xaml-in-wpf)

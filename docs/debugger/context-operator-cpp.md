@@ -24,7 +24,7 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: aa16bd6f93198e5360139dbc5a6a0d96f02a1e41
 ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62564699"
@@ -32,7 +32,7 @@ ms.locfileid: "62564699"
 # <a name="context-operator-in-the-visual-studio-debugger-c"></a>Visual Studio 调试器中的上下文运算符 (C++)
 可使用 C++ 中的上下文运算符来限定断点位置、变量名称或表达式。 上下文运算符可用于指定来自外部范围的但被本地名称隐藏的名称。
 
-## <a name="BKMK_Using_context_operators_to_specify_a_symbol"></a> 语法
+## <a name="syntax"></a><a name="BKMK_Using_context_operators_to_specify_a_symbol"></a> 语法
  有两种方法指定上下文：
 
 1. {,,[*模块*] } *表达式*

@@ -1,19 +1,20 @@
 ---
 title: Azure PAYG 权益
 author: evanwindom
-ms.author: lank
+ms.author: v-evwin
 manager: lank
-ms.date: 07/30/2019
+ms.assetid: 5dc7f57e-883a-4cc1-a914-06245a8cb1ff
+ms.date: 04/15/2020
 ms.topic: conceptual
 description: 了解如何设置 Azure 即用即付帐户。
-ms.openlocfilehash: 851ebd4a3218cada7af5ac139a7297094abde0c6
-ms.sourcegitcommit: bcdab788085bd9931d73883fe70cd5831317dca2
+ms.openlocfilehash: 4fdbaacd9f778d7e81667cd4faa504f877775f02
+ms.sourcegitcommit: 7b60e81414a82c6d34f6de1a1f56115c9cd26943
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72816405"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81444840"
 ---
-# <a name="azure-devtest-pay-as-you-go-subscriptions"></a>Azure 开发/测试即用即付订阅
+# <a name="azure-devtest-pay-as-you-go-subscriptions"></a>Azure 开发测试即用即付订阅
 与团队在云中协作。  创建多个开发和测试即用即付订阅，这样可与其他订阅者进行协作，并将团队与环境隔离。  可享受针对开发/测试的专享优惠小时费率，还可获得 Azure 上订阅软件的云使用权限。
 
 ## <a name="set-up-a-subscription"></a>设置订阅
@@ -42,6 +43,12 @@ ms.locfileid: "72816405"
 2. 在左窗格的列表中，选择“成本管理 + 计费”  。
 3. 你将在“我的订阅”  中看到订阅列表。 单击所需的订阅。
 4. 现在，你将具有管理或取消订阅、重命名订阅、更改目录或转让帐单所有权的选项。
+
+## <a name="see-also"></a>请参阅
+- [Visual Studio 文档](https://docs.microsoft.com/visualstudio/)
+- [Azure DevOps 文档](https://docs.microsoft.com/azure/devops/)
+- [Azure 文档](https://docs.microsoft.com/azure/)
+- [Microsoft 365 文档](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>后续步骤
 许多订阅包含其他 Azure 相关权益，例如 Azure DevOps 和 Azure 开发测试个人额度等。  有关这些权益的详细信息，请参阅：

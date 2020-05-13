@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 57bccfccb77c5a80fd2630680564f88f08d7ca5b
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75591991"
 ---
 # <a name="support-for-bidirectional-languages-in-visual-studio"></a>对 Visual Studio 中双向语言的支持
@@ -58,7 +58,7 @@ Visual Studio 支持 Unicode，因此，如果系统设置了适当的区域设�
 
 - 属性值。
 
-   可在“属性”窗口中使用阿拉伯语或希伯来语文本  。 可在此窗口使用标准的 Windows 击键（“Ctrl+右 Shift”组合键用于从右到左读取，“Ctrl+左 Shift”组合键用于从左到右读取）选择从右到左或从左到右读取顺序     。
+   可在“属性”窗口中使用阿拉伯语或希伯来语文本  。 可在此窗口使用标准的 Windows 击键（“Ctrl**右 Shift”组合键用于从右到左读取，“Ctrl**左 Shift”组合键用于从左到右读取）选择从右到左或从左到右读取顺序+   +  。
 
 - 代码和文本。
 
@@ -78,7 +78,7 @@ Visual Studio 支持 Unicode，因此，如果系统设置了适当的区域设�
 
 ## <a name="right-to-left-reading-order"></a>从右到左的读取顺序
 
-Visual Studio 对从右到左的读取顺序提供有限支持。 默认情况下，Visual Studio 中使用的文本输入控件使用的是从右到左的读取顺序。 大多数情况可以使用标准 Window 手势来切换读取顺序。 例如，可以按“Ctrl+右 Shift”组合键，将“属性”窗口切换为支持按从右到左的顺序读取属性值    。
+Visual Studio 对从右到左的读取顺序提供有限支持。 默认情况下，Visual Studio 中使用的文本输入控件使用的是从右到左的读取顺序。 大多数情况可以使用标准 Window 手势来切换读取顺序。 例如，可以按“Ctrl**右 Shift”组合键，将“属性”窗口切换为支持按从右到左的顺序读取属性值**+   。
 
 在 Visual Studio 中，以下情况不支持从右到左的读取顺序：
 
@@ -86,6 +86,6 @@ Visual Studio 对从右到左的读取顺序提供有限支持。 默认情况�
 
 - 代码编辑器（和文本编辑器）不支持从右到左的读取顺序。 可以用双向语言输入文本，但读取顺序总是从左到右。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [开发全球化和本地化应用](globalizing-and-localizing-applications.md)

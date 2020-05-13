@@ -14,19 +14,19 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 4e1fa46162f2aea74c5b3cb8396ad5e8d4c9a4cf
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74779371"
 ---
-# <a name="da0022-high-rate-of-gen-2-garbage-collections"></a>DA0022：第 2 代垃圾回收率高
+# <a name="da0022-high-rate-of-gen-2-garbage-collections"></a>DA0022: 第 2 代垃圾回收的速率很高
 
 |||
 |-|-|
 |规则 ID|DA0022|
 |类别|.NET Framework 使用情况|
-|分析方法|全部|
+|分析方法|All|
 |消息|第 2 代垃圾回收率非常高。 按设计来说，如果分配了大部分程序的数据结构且其保留时间较长，那么这通常并不是问题。 但是，如果此行为不在计划内，则表示应用程序可能锁定了对象。 如果不能确定，则可收集 .NET 内存分配数据和对象生存期信息，了解应用程序使用的内存分配模式。|
 |规则类型|警告|
 

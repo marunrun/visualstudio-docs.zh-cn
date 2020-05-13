@@ -1,20 +1,20 @@
 ---
-title: SDKReference 元素（Visual Studio 模板） |Microsoft Docs
+title: SDK 参考元素（可视化工作室模板） |微软文档
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
 ms.assetid: 72c8b352-0b7a-42b3-ba5d-2a2d1e90c34b
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3cf1b3bed942894e20132ecd7b06c1884caa9a93
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 2f43c813e688c1e175f1d36e6f06125f92404c48
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72720090"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80700168"
 ---
 # <a name="sdkreference-element-visual-studio-templates"></a>SDKReference 元素（Visual Studio 模板）
 指定项模板使用 SDK 引用。
@@ -42,7 +42,7 @@ ms.locfileid: "72720090"
 
 |元素|描述|
 |-------------|-----------------|
-|[引用](../extensibility/reference-element-visual-studio-templates.md)|指定向项目添加项时要添加的程序集引用。|
+|[参考](../extensibility/reference-element-visual-studio-templates.md)|指定向项目添加项时要添加的程序集引用。|
 
 ## <a name="text-value"></a>文本值
  需要一个文本值。
@@ -63,5 +63,5 @@ ms.locfileid: "72720090"
 ## <a name="see-also"></a>请参阅
 - [References 元素（Visual Studio 模板）](../extensibility/references-element-visual-studio-templates.md)
 - [Reference 元素（Visual Studio 模板）](../extensibility/reference-element-visual-studio-templates.md)
-- [创建项目和项模板](../ide/creating-project-and-item-templates.md)
+- [创建项目和项目模板](../ide/creating-project-and-item-templates.md)
 - [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)

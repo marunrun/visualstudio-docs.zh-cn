@@ -17,17 +17,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: b420644672309371ab61f1499e22d4745c69c569
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75596406"
 ---
 # <a name="visual-studio-command-aliases"></a>Visual Studio Command Aliases
 
-通过命令别名，可在希望执行命令时键入较少的字符。 可将别名输入“查找/命令”  框或“命令”  窗口。 例如，可以使用预定义别名 `>of`，而不是输入 `>File.OpenFile` 来显示“打开文件”  对话框。
+通过命令别名，可在希望执行命令时键入较少的字符。 可将别名输入“查找/命令”  框或“命令”  窗口。 例如，可以使用预定义别名 `>File.OpenFile`，而不是输入  **来显示“打开文件”** `>of`对话框。
 
-在“命令”  窗口中键入 `alias` 可显示当前别名及其定义的列表。 键入 `>cls` 可清除“命令”  窗口中的内容。 若要查看特定命令的别名，请键入 `alias <command name>`。
+在“命令”`alias`**窗口中键入**  可显示当前别名及其定义的列表。 键入 `>cls` 可清除“命令”  窗口中的内容。 若要查看特定命令的别名，请键入 `alias <command name>`。
 
 您可以轻松地为某个 Visual Studio 命令创建您自己的别名（带有或不带参数）。 例如，用于为 `File.NewFile MyFile.txt` 创建别名的语法是 `alias MyAlias File.NewFile MyFile.txt`。 您可以使用 `alias <alias name> /delete` 删除某个别名。
 
@@ -97,9 +97,9 @@ ms.locfileid: "75596406"
 |跳出|pr|调试.跳出|
 |上一书签|PrevBook|编辑.上一书签|
 |打印文件|print|文件.打印|
-|属性窗口|props|视图.属性窗口|
+|“属性”窗口|props|视图.属性窗口|
 |停止|q|调试.停止调试|
-|重做|redo|编辑.重做|
+|重做|重做 (redo)|编辑.重做|
 |“寄存器”窗口|寄存器|调试.寄存器|
 |运行到光标处|rtc|调试.运行到光标处|
 |保存选定项|保存|文件.保存选定项|
@@ -125,7 +125,7 @@ ms.locfileid: "75596406"
 |列出进程|&#124;|Debug.ListProcesses|
 |[“列出线程”命令](../../ide/reference/list-threads-command.md)|~ ~*k ~\*kb|Debug.ListThreads Debug.ListTheads /AllThreads|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Studio 命令](../../ide/reference/visual-studio-commands.md)
 - [“命令”窗口](../../ide/reference/command-window.md)

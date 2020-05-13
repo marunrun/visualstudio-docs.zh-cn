@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 0c332fb67e96bdfea0059de11441da7c32871633
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77633559"
 ---
 # <a name="logging-in-a-multi-processor-environment"></a>多处理器环境下的日志记录
@@ -49,7 +49,7 @@ public interface INodeLogger: ILogger
 
 为缓解这个问题，MSBuild 还启用了“分布式日志记录模型”，通过允许创建转发记录器，该模型扩展了集中式日志记录模型。 转发记录器会附加到辅助节点，并从该节点接收传入的生成事件。 转发记录器与常规记录器类似，只不过它可以筛选事件，然后只将所需事件转发到中心节点。 这样可以减少中心节点上的消息流量，提高性能。
 
- 通过实现派生自 <xref:Microsoft.Build.Framework.ILogger> 的 <xref:Microsoft.Build.Framework.IForwardingLogger> 接口，可以创建转发记录器。 接口定义如下：
+ 通过实现派生自 <xref:Microsoft.Build.Framework.IForwardingLogger> 的 <xref:Microsoft.Build.Framework.ILogger> 接口，可以创建转发记录器。 接口定义如下：
 
 ```csharp
 public interface IForwardingLogger: INodeLogger
@@ -59,7 +59,7 @@ public interface IForwardingLogger: INodeLogger
 }
 ```
 
-要转发转发记录器中的事件，请调用 <xref:Microsoft.Build.Framework.IEventRedirector> 接口 <xref:Microsoft.Build.Framework.IEventRedirector.ForwardEvent%2A> 方法。 以参数的形式传递相应的 <xref:Microsoft.Build.Framework.BuildEventArgs> 或派生类。
+要转发转发记录器中的事件，请调用 <xref:Microsoft.Build.Framework.IEventRedirector.ForwardEvent%2A> 接口 <xref:Microsoft.Build.Framework.IEventRedirector> 方法。 以参数的形式传递相应的 <xref:Microsoft.Build.Framework.BuildEventArgs> 或派生类。
 
 有关详细信息，请参阅[创建转发记录器](../msbuild/creating-forwarding-loggers.md)。
 
@@ -75,7 +75,7 @@ Culture=neutral
 
 用星号 (*) 来分隔 `-dl` 开关中的两个记录器名称。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [生成记录器](../msbuild/build-loggers.md)
 - [创建转发记录器](../msbuild/creating-forwarding-loggers.md)

@@ -1,5 +1,5 @@
 ---
-title: 如何：创建基本 Phong 着色器
+title: 如何：创建基本冯氏着色器
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: c7c69da8-142b-4d3b-9be9-4be0d5970b25
@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: f3059048f44524b9a838a8dfefc948ec4018dd05
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75589482"
 ---
 # <a name="how-to-create-a-basic-phong-shader"></a>如何：创建基本 Phong 着色器
@@ -23,11 +23,11 @@ ms.locfileid: "75589482"
 
 冯氏照明模型扩展了朗伯照明模型，包括可反射图面属性的镜面高光。 反射分量提供用于朗伯照明模型的相同定向光源的其他照明，但是会以不同的方式处理其对最终颜色的比例。 镜面高光根据视图方向、光源方向和表面方向之间的关系，以不同的方式影响场景中的每个表面。 它是表面的反射颜色、反射强度和方向，以及光源的颜色、强度和方向共同产生的结果。 在观察者处直接反射光源的表面接收最大反射比例，反射远离观察者的光源的表面无接收比例。 在冯氏照明模型下，将结合一个或多个反射分量来确定对象上每个点的镜面高光颜色和强度，然后将其添加到朗伯照明模型的结果上以产生像素的最终颜色。
 
-有关 Lambert 光照模型的详细信息，请参阅[如何：创建基本 Lambert 着色器](../designers/how-to-create-a-basic-lambert-shader.md)。
+有关朗伯照明模型的详细信息，请参阅[如何：创建基本朗伯着色器](../designers/how-to-create-a-basic-lambert-shader.md)。
 
 开始前，请确保显示“属性”  窗口和“工具箱”  。
 
-1. 按照以下方法创建 Lambert 着色器：[如何：创建基本 Lambert 着色器](../designers/how-to-create-a-basic-lambert-shader.md)。
+1. 按[如何：创建基本朗伯着色器](../designers/how-to-create-a-basic-lambert-shader.md)中所述创建朗伯着色器。
 
 2. 从“最终颜色”  节点断开“朗伯”  节点。 选择“朗伯”  节点的“RGB”  终端，然后选择“断开链接”  。 这为在下一步中添加的节点腾出空间。
 
@@ -59,10 +59,10 @@ ms.locfileid: "75589482"
 
 有关如何向三维模型应用着色器的详细信息，请参阅[如何：向三维模型应用着色器](../designers/how-to-apply-a-shader-to-a-3-d-model.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [如何：向三维模型应用着色器](../designers/how-to-apply-a-shader-to-a-3-d-model.md)
+- [如何：向 3D 模型应用着色器](../designers/how-to-apply-a-shader-to-a-3-d-model.md)
 - [如何：导出着色器](../designers/how-to-export-a-shader.md)
-- [如何：创建基本 Lambert 着色器](../designers/how-to-create-a-basic-lambert-shader.md)
+- [如何：创建基本朗伯着色器](../designers/how-to-create-a-basic-lambert-shader.md)
 - [着色器设计器](../designers/shader-designer.md)
 - [着色器设计器节点](../designers/shader-designer-nodes.md)

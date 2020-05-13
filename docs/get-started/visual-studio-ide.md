@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 3707e06aa41c4f232a5525ca4422f3941fbe2d1a
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75589352"
 ---
 # <a name="welcome-to-the-visual-studio-ide"></a>欢迎使用 Visual Studio IDE
@@ -44,7 +44,7 @@ ms.locfileid: "75589352"
 
 - [使用 Visual Studio 创建第一个 C++ 控制台应用](/cpp/get-started/tutorial-console-cpp)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - 发现[更多 Visual Studio 功能](../ide/advanced-feature-overview.md)
 - 访问 [visualstudio.microsoft.com](https://visualstudio.microsoft.com/vs/)

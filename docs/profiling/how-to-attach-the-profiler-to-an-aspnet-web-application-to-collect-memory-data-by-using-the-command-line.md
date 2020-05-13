@@ -11,10 +11,10 @@ monikerRange: vs-2017
 ms.workload:
 - aspnet
 ms.openlocfilehash: f2b9ea7799656b0dd7dacd35bde62dc84aea08dd
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74779059"
 ---
 # <a name="how-to-attach-the-profiler-to-an-aspnet-web-application-to-collect-memory-data-by-using-the-command-line"></a>如何：将探查器附加到 ASP.NET Web 应用程序，以使用命令行收集内存数据
@@ -43,7 +43,7 @@ ms.locfileid: "74779059"
 
         指定下列选项中的一个且仅指定一个。
 
-       |选项|说明|
+       |选项|描述|
        |------------|-----------------|
        |/globalsamplegc |启用对内存分配数据的收集。|
        |/globalsamplegclife |启用对内存分配数据和对象生存期数据的收集。|
@@ -67,7 +67,7 @@ ms.locfileid: "74779059"
    > [!NOTE]
    > **/user** 和 **/crosssession** 选项通常为 ASP.NET 应用程序所需选项。
 
-   | 选项 | 说明 |
+   | 选项 | 描述 |
    | - | - |
    | [/user](../profiling/user-vsperfcmd.md) **:** [`Domain` **\\** ]`UserName` | 指定拥有 ASP.NET 工作进程的帐户的域和用户名。 在进程以已登录用户外的用户身份运行时才需要此选项。 进程所有者在 Windows 任务管理器的“进程”选项卡上的“用户名”列中列出。 |
    | [/crosssession](../profiling/crosssession.md) | 启用其他登录会话中的进程分析。 如果 ASP.NET 应用程序在其他会话中运行，则需要此选项。 会话标识符在 Windows 任务管理器的“进程”选项卡上的“会话 ID”列中列出。 可以将 **/CS** 指定为 **/crosssession** 的缩写。 |
@@ -84,7 +84,7 @@ ms.locfileid: "74779059"
 
    - 进程 ID `(PID)` 指定 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 工作进程的进程 ID 或进程名称。 可以在 Windows 任务管理器中查看所有运行中的进程的进程 ID。
 
-   - /targetclr：  `Version` 指定应用程序中加载运行时的多个版本时要分析的公共语言运行时 (CLR) 的版本。
+   - /targetclr: `Version` 指定应用程序中加载运行时的多个版本时要分析的公共语言运行时 (CLR) 的版本  。
 
 ## <a name="control-data-collection"></a>控制数据收集
  在应用程序运行时，可以使用 VSPerfCmd.exe  选项开始和停止向探查器数据文件写入数据，从而控制数据收集。 通过控制数据收集，可以针对程序执行的特定部分（如启动或关闭应用程序）进行数据收集。
@@ -93,22 +93,22 @@ ms.locfileid: "74779059"
 
 - 以下 **VSPerfCmd** 选项对可启动和停止数据收集。 在单独的命令行上指定每个选项。 可多次打开和关闭数据收集。
 
-    |选项|说明|
+    |选项|描述|
     |------------|-----------------|
     |[/globalon /globaloff](../profiling/globalon-and-globaloff.md)|启动 ( **/globalon**) 或停止 ( **/globaloff**) 所有进程的数据收集。|
     |[/processon](../profiling/processon-and-processoff.md) **:** `PID` [/processoff](../profiling/processon-and-processoff.md) **:** `PID`|启动 ( **/processon**) 或停止 ( **/processoff**) 由 `PID` 指定的进程的数据收集。|
     |**/attach:** {`PID`&#124;`ProcName`} [/detach](../profiling/detach.md)[ **:** {`PID`&#124;:`ProcName`}]|/attach  将启动由进程 ID 或进程名称指定的进程的数据收集。 **/detach** 将停止指定进程或所有进程（未指定任何特定进程时）的数据收集。|
 
 ## <a name="end-the-profiling-session"></a>结束分析会话
- 若要结束分析会话，必须从 Web 应用程序分离探查器。 可通过重启 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 工作进程或调用 VSPerfCmd /detach  选项，停止从使用采样方法分析的应用程序收集数据。 然后，可以调用 VSPerfCmd  [/shutdown](../profiling/shutdown.md) 选项，关闭探查器和分析数据文件。 **VSPerfClrEnv /globaloff** 命令可清除分析环境变量，但在重新启动计算机前不会重置系统配置。
+ 若要结束分析会话，必须从 Web 应用程序分离探查器。 可通过重启 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 工作进程或调用 VSPerfCmd /detach  选项，停止从使用采样方法分析的应用程序收集数据。 然后，可以调用 VSPerfCmd [/shutdown](../profiling/shutdown.md) 选项，关闭探查器和分析数据文件  。 **VSPerfClrEnv /globaloff** 命令可清除分析环境变量，但在重新启动计算机前不会重置系统配置。
 
 #### <a name="to-end-a-profiling-session"></a>结束分析会话
 
 1. 执行下列步骤之一，从目标应用程序分离探查器：
 
-   - 键入 VSPerfCmd  [/detach](../profiling/detach.md)
+   - Type **VSPerfCmd** [/detach](../profiling/detach.md)
 
-      -或-
+      \- 或 -
 
    - 关闭 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 工作进程。 类型：
 

@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: aa9fc04df3e817730492353e54d74c1e46c3775e
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75589794"
 ---
 # <a name="work-with-3d-assets-for-games-and-apps"></a>处理游戏和应用的 3D 资产
@@ -54,7 +54,7 @@ Visual Studio 使用 DirectX 呈现二维和三维资产。 可以选择 DirectX
 
 ## <a name="related-topics"></a>相关主题
 
-|Title|描述|
+|标题|说明|
 |-----------|-----------------|
 |[使用纹理和图像](../designers/working-with-textures-and-images.md)|介绍如何使用 Visual Studio 处理图像和纹理。|
 |[使用三维模型](../designers/working-with-3-d-models.md)|介绍如何使用 Visual Studio 处理三维模型。|

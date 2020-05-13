@@ -10,10 +10,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 514b910f2c19822dc821b8c9a52ae96b8aac80f0
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74778097"
 ---
 # <a name="troubleshoot-performance-tools-issues"></a>性能工具问题疑难解答
@@ -26,13 +26,13 @@ ms.locfileid: "74778097"
 ## <a name="no-data-is-collected-by-the-profiling-tools"></a>分析工具未收集任何数据
  分析应用程序之后，未创建分析数据 (.vsp) 文件，你在“输出”窗口或命令窗口中收到以下警告   ：
 
- PRF0025：未收集到任何数据。
+ PRF0025: 未收集到任何数据。
 
  此问题可能由多个问题导致：
 
 - 使用采样或 .NET 内存方法分析的进程启动的子进程成为执行应用程序工作的进程。 例如，某些应用程序读取命令行以确定它们是作为 Windows 应用程序还是命令行应用程序启动。 如果请求了 Windows 应用程序，则原始进程会启动一个配置为 Windows 应用程序的新进程，然后原始进程退出。 因为分析工具不会自动收集子进程的数据，所以不会收集任何数据。
 
-     若要在这种情况下收集分析数据，请将探查器附加到子进程而不是使用探查器启动应用程序。 有关详细信息，请参阅[如何：在正在运行的进程中附加和拆离性能工具](../profiling/how-to-attach-and-detach-performance-tools-to-running-processes.md)和[附加 (VSPerfCmd)](../profiling/attach.md)
+     若要在这种情况下收集分析数据，请将探查器附加到子进程而不是使用探查器启动应用程序。 有关详细信息，请参阅[如何：在正在运行的进程中附加和分离性能工具](../profiling/how-to-attach-and-detach-performance-tools-to-running-processes.md)和[附加 (VSPerfCmd)](../profiling/attach.md)
 
 ## <a name="performance-views-and-reports-display-numbers-for-function-names"></a>性能视图和报告显示函数名的编号
  分析应用程序之后，在报告和视图中看到编号而不是函数名。
