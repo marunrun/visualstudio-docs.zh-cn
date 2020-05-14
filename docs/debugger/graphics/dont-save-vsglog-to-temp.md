@@ -10,7 +10,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 40f3c3c22de6b4b0ebdbdf2dfc953f4cb1c9b5e6
 ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/22/2019
 ms.locfileid: "72736080"
@@ -25,15 +25,15 @@ ms.locfileid: "72736080"
 ```
 
 ## <a name="value"></a>“值”
- 由其存在或缺少的预处理器符号确定图形日志文件是否保存到用户的临时文件目录中。 如果定义了此符号，则 `VSG_DEFAULT_RUN_FILENAME` 定义的文件名相对于已捕获应用的当前目录，或者是绝对路径;否则，`VSG_DEFAULT_RUN_FILENAME` 定义的文件名相对于用户的临时文件目录，并且不能是绝对路径。
+ 一个预处理器符号，根据其是否存在来确定是否将图形日志文件保存到用户的临时文件目录中。 如果定义了此符号，则 `VSG_DEFAULT_RUN_FILENAME` 定义的文件名相对于捕获的应用的当前目录，或为绝对路径；否则，`VSG_DEFAULT_RUN_FILENAME` 定义的文件名相对于用户的临时文件目录，且不能是绝对路径。
 
 ## <a name="remarks"></a>备注
- 根据用户的权限，图形日志文件可能无法保存到任意位置。 如果你不确定要选择的位置，则建议你将图形日志保存到用户的临时文件目录或另一个已知良好的位置。
+ 根据用户权限的不同，可能无法将图形日志文件保存到任意位置。 如果不确定用户是否可以写入到你选择的位置，建议你最好将图形日志保存到用户的临时文件目录或其他已知良好的位置。
 
- 若要阻止将图形日志文件保存到临时文件目录，必须在包括 `vsgcapture.h` 之前定义 `DONT_SAVE_VSGLOG_TO_TEMP`。
+ 若要防止将图形日志文件保存到临时文件目录，必须在包含 `vsgcapture.h` 之前定义 `DONT_SAVE_VSGLOG_TO_TEMP`。
 
 ## <a name="example"></a>示例
- 此示例显示了如何将图形日志文件保存到主机计算机上的绝对路径。
+ 此示例展示如何将图形日志文件保存到主机计算机上的绝对路径。
 
 ```cpp
 // Define DONT_SAVE_VSGLOG_TO_TEMP and VSG_DEFAULT_RUN_FILENAME before including vsgcapture.h
