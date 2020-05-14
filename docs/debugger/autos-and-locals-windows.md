@@ -1,4 +1,4 @@
----
+﻿---
 title: 检查变量-"自动" 和 "局部变量" 窗口 |Microsoft Docs
 ms.custom: seodec18
 ms.date: 10/18/2018

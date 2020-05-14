@@ -1,4 +1,4 @@
----
+﻿---
 title: 用仅我的代码调试用户代码 |Microsoft Docs
 ms.date: 02/13/2019
 ms.topic: conceptual
@@ -36,7 +36,7 @@ ms.locfileid: "72535995"
 
 在调试会话期间，"**模块**" 窗口显示调试器将哪个代码模块视为我的代码（用户代码）以及其符号加载状态。 有关详细信息，请参阅[更熟悉调试器如何附加到你的应用程序](../debugger/debugger-tips-and-tricks.md#modules_window)。
 
-![模块 窗口中的用户代码](../debugger/media/dbg_justmycode_module.png ""模块" 窗口中的用户代码")
+!["模块" 窗口中的用户代码](../debugger/media/dbg_justmycode_module.png "\"模块\" 窗口中的用户代码")
 
 在 "**调用堆栈**" 或 "**任务**" 窗口中，仅我的代码将非用户代码折叠成标记为 `[External Code]` 的灰色批注代码框架。
 

@@ -1,4 +1,4 @@
----
+﻿---
 title: 使用 IntelliTest 为你的代码生成单元测试
 ms.date: 10/05/2015
 ms.topic: conceptual
@@ -40,7 +40,7 @@ IntelliTest 浏览你的 .NET 代码，以生成测试数据和单元测试套�
 
 1. 在 Visual Studio 中打开解决方案，然后打开包含要测试的方法的类文件。
 
-2. 右键单击一个方法并选择“运行 IntelliTest”，为方法中的代码生成单元测试  。
+2. 右键单击一个方法并选择“运行 IntelliTest”，为方法中的代码生成单元测试。
 
    ![在方法中右键单击以生成单元测试](../test/media/runpex.png)
 
