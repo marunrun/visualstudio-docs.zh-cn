@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 3711a87d84e25fd6f790cee62ecb71b2b046d0be
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75596198"
 ---
 # <a name="options-text-editor-file-extension"></a>选项，文本编辑器，文件扩展名
@@ -34,7 +34,7 @@ ms.locfileid: "75596198"
 
 键入要定义在 IDE 中的编辑体验的文件扩展名。
 
-编辑器 
+**编辑器**
 
 选择打开具有此文件扩展名的文档所使用的 IDE 编辑器或设计器。 选中“使用编码”选项后，每当打开此类文档时，都会显示一个对话框，用户可以选择编码方案。
 
@@ -58,6 +58,6 @@ ms.locfileid: "75596198"
 
 提供与“编辑器”相同的列表  。 选择打开不具有此文件扩展名的文档所使用的 IDE 编辑器或设计器。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [如何：管理编辑器模式](../../ide/how-to-manage-editor-modes.md)

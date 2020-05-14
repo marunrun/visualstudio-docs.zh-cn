@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 4c57382809b7730df2d7c674c24902d70ccab647
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75590691"
 ---
 # <a name="c-typedefs-in-class-designer"></a>类设计器中的 C++ Typedef
@@ -82,7 +82,7 @@ typedef class coord
 > [!NOTE]
 > “类设计器”不显示其源类型为函数指针的 typedef  。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用 C++代码](working-with-visual-cpp-code.md)
 - [Typedefs](/cpp/cpp/aliases-and-typedefs-cpp#typedefs)

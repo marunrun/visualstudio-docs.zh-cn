@@ -16,10 +16,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: e01259fdd23e60a1408addc10a6af3a12479c9f2
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74772813"
 ---
 # <a name="collect-tier-interaction-data"></a>收集层交互数据
@@ -46,6 +46,6 @@ ms.locfileid: "74772813"
 
 3. 在“性能资源管理器”中，选择“目标”  节点，然后指定要分析的项目、可执行文件或网站。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [“层交互”视图](../profiling/tier-interactions-view.md)

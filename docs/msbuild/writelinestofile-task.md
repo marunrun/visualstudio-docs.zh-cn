@@ -19,10 +19,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: b78ac2347a5143aeb532a4bcc294551430584b4a
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77630660"
 ---
 # <a name="writelinestofile-task"></a>WriteLinesToFile 任务
@@ -33,7 +33,7 @@ ms.locfileid: "77630660"
 
  下表描述了 `WriteLinestoFile` 任务的参数。
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
 |`File`|必选 <xref:Microsoft.Build.Framework.ITaskItem> 参数。<br /><br /> 指定要将项写入到的文件。|
 |`Lines`|可选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 指定要写入到文件的项。|
@@ -95,7 +95,7 @@ dotnet %~dp0$(AssemblyName).dll %*
 </Project>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [任务](../msbuild/msbuild-tasks.md)
 - [任务参考](../msbuild/msbuild-task-reference.md)

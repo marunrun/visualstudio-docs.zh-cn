@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 25886ad4f7c31ea02c8dab2d45d8709a362a5a69
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62969987"
 ---
 # <a name="execution-profile-report"></a>执行分析报告
@@ -30,7 +30,7 @@ ms.locfileid: "62969987"
 
 |列|说明|
 |------------|-----------------|
-|name|调用堆栈每个级别的函数的名称。|
+|名称|调用堆栈每个级别的函数的名称。|
 |非独占样本数|为汇总到此调用堆栈树级别的所有堆栈收集的样本总数。 非独占数是此函数的独占样本数和所有子节点的非独占计数器的总和。|
 |独占样本|收集的样本总数，其中此函数是最低的调用堆栈。|
 |非独占百分比|非独占样本列中显示的总样本百分比。 百分比舍入到两个小数位。|
@@ -39,5 +39,5 @@ ms.locfileid: "62969987"
 
  可在[执行时间（“线程”视图）](../profiling/execution-time-threads-view.md)视图中查看此报告表格。
 
-## <a name="see-also"></a>请参阅
-- [线程视图](../profiling/threads-view-parallel-performance.md)
+## <a name="see-also"></a>另请参阅
+- [“线程”视图](../profiling/threads-view-parallel-performance.md)

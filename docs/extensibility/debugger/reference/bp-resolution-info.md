@@ -1,5 +1,5 @@
 ---
-title: BP_RESOLUTION_INFO | Microsoft Docs
+title: BP_RESOLUTION_INFO |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BP_RESOLUTION_INFO structure
 ms.assetid: ba0c162a-61e8-4a0b-811f-4c1d8a5d82f0
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 5e07110a4ab4aae014f6134130a92dfcb8a31289
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 70e66a936ec1eaf1f818ad249aa4eb14b0b63749
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66350596"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80737824"
 ---
-# <a name="bpresolutioninfo"></a>BP_RESOLUTION_INFO
-介绍代码断点或数据断点的绑定的断点信息。
+# <a name="bp_resolution_info"></a>BP_RESOLUTION_INFO
+描述代码断点或数据断点的边界断点信息。
 
 ## <a name="syntax"></a>语法
 
@@ -47,26 +47,26 @@ public struct BP_RESOLUTION_INFO {
 
 ## <a name="members"></a>成员
 `dwFields`\
-中的标志的集合[BPRESI_FIELDS](../../../extensibility/debugger/reference/bpresi-fields.md)填充指定的字段的枚举。
+[BPRESI_FIELDS](../../../extensibility/debugger/reference/bpresi-fields.md)枚举中标记的集合，用于指定填写哪些字段。
 
 `bpResLocation`\
-[BP_RESOLUTION_LOCATION](../../../extensibility/debugger/reference/bp-resolution-location.md)结构，它在代码或数据中指定的断点的位置。
+在代码或数据中指定断点位置的[BP_RESOLUTION_LOCATION](../../../extensibility/debugger/reference/bp-resolution-location.md)结构。
 
 `pProgram`\
-[IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)表示应用程序发生断点错误的对象。
+[IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)对象，表示发生断点错误的应用程序。
 
 `pThread`\
-[IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)对象，表示包含断点错误的应用程序正在其中运行的线程。
+[IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)对象，表示包含断点错误的应用程序在其中运行的线程。
 
 ## <a name="remarks"></a>备注
-返回此结构[GetResolutionInfo](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo.md)。
+此结构由[Get决议信息返回](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo.md)。
 
 ## <a name="requirements"></a>要求
-标头： msdbg.h
+标题： msdbg.h
 
-命名空间:Microsoft.VisualStudio.Debugger.Interop
+命名空间：微软.VisualStudio.调试器.互通
 
-程序集：Microsoft.VisualStudio.Debugger.Interop.dll
+程序集：微软.VisualStudio.调试器.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [结构和联合](../../../extensibility/debugger/reference/structures-and-unions.md)

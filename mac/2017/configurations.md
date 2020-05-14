@@ -6,10 +6,10 @@ ms.author: dominicn
 ms.date: 04/14/2017
 ms.assetid: 78107CFA-9308-4293-A92A-9B552A259E15
 ms.openlocfilehash: 0bd35d415a60ea64c479b19cb506c58c2c346cc0
-ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "74983594"
 ---
 # <a name="understanding-build-configurations"></a>了解生成配置
@@ -67,6 +67,6 @@ Android 项目的运行配置可以在运行或调试项目时指定活动、服
   * 模式（速览、通知）
   * 通知有效负载
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [了解生成配置（Windows 上的 Visual Studio）](/visualstudio/ide/understanding-build-configurations)

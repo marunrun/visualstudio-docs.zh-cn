@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: d38aed17d7fdaa694c8c5753705b28b0390dedfc
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "72652148"
 ---
 # <a name="overview-of-domain-specific-language-tools"></a>域特定语言工具的概述
@@ -79,4 +79,4 @@ ms.locfileid: "72652148"
  在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中生成和运行 DSL 工具解决方案时，[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的另一个实例会向你展示使用该语言的用户所看到的你的域特定语言工具的外观。 验证一切运行正常之后，可以分发 DslPackage 项目的生成文件夹中的 `.vsix` 文件。 该文件可用于安装 DSL 作为其他计算机上的 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 扩展。  有关详细信息，请参阅[部署域特定语言解决方案](../modeling/deploying-domain-specific-language-solutions.md)。
 
 ## <a name="see-also"></a>另请参阅
- [试验实例](../extensibility/the-experimental-instance.md)[特定于域的语言工具术语表](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+ [试验实例](../extensibility/the-experimental-instance.md) [特定于域的语言工具术语表](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

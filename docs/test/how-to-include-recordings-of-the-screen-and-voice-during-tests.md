@@ -8,12 +8,12 @@ ms.assetid: 2cefe8c2-430a-4cb4-bbe0-f3edb2e5bc03
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 94d8fdc2765b3a073ca481d09bc38dfbc9b38f2c
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: d53f03ed711b613a44aaf7cd243bd9aadeb2c93b
+ms.sourcegitcommit: 5d1b2895d3a249c6bea30eb12b0ad7c0f0862d85
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75589014"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80880320"
 ---
 # <a name="how-to-include-recordings-of-the-screen-and-voice-during-tests-using-test-settings"></a>如何：使用测试设置在测试期间包括屏幕和语音录制
 
@@ -58,8 +58,14 @@ ms.locfileid: "75589014"
 
 7. 选择 **“确定”** 。 现在已为测试设置配置和保存了诊断跟踪收集器设置。
 
+    ::: moniker range="vs-2017"
     > [!TIP]
     > 若要重置此诊断数据适配器的配置，请为 Visual Studio 选择“重置为默认配置”，并为 Microsoft 测试管理器选择“重置为默认值”   。
+    ::: moniker-end
+    ::: moniker range=">=vs-2019"
+    > [!TIP]
+    > 要重置此诊断数据适配器的配置，请在 Visual Studio 中选择“重置为默认配置”  。
+    ::: moniker-end
 
 ## <a name="see-also"></a>请参阅
 

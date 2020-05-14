@@ -15,15 +15,15 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: fd3379b9769cfd6bfe1335b12545e635a9bde782
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74778682"
 ---
 # <a name="how-to-specify-the-binary-to-start"></a>如何：指定要启动的二进制文件
 
-若要分析二进制文件（如 DLL），必须在“\<目标> 属性页”对话框中输入信息  。 这些信息指示 DLL 项目查找调用应用程序的位置。
+若要分析二进制文件（如 DLL），必须在“**目标> 属性页”对话框中输入信息\<** 。 这些信息指示 DLL 项目查找调用应用程序的位置。
 
 1. 在“性能资源管理器”  中，右键单击目标二进制文件，然后单击“属性”  。
 
@@ -39,6 +39,6 @@ ms.locfileid: "74778682"
 
 7. 单击 **“确定”** 。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [配置性能会话](../profiling/configuring-performance-sessions.md)

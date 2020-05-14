@@ -8,10 +8,10 @@ manager: markl
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 8c43c48a797619f86f81e219e31ccf2afab5ba87
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77279313"
 ---
 # <a name="configure-a-c-project-for-intellisense"></a>配置用于 IntelliSense 的 C++ 项目
@@ -38,7 +38,7 @@ IntelliSense 最多生成 1000 个错误。 如果源文件包含的头文件中
 
 ![VC++ Include 目录](media/vcpp-intellisense-include-paths.png)
 
-若要查看生成宏（如 VC_IncludePath  ）的当前值，请选择“Include 目录”行，再单击右侧的下拉列表。 然后，选择“\<编辑>”  ，并单击“宏”  按钮。
+若要查看生成宏（如 VC_IncludePath  ）的当前值，请选择“Include 目录”行，再单击右侧的下拉列表。 然后，选择“**编辑>”\<** ，并单击“宏”  按钮。
 
 ### <a name="makefile-projects"></a>生成文件项目
 
@@ -76,7 +76,7 @@ IntelliSense 最多生成 1000 个错误。 如果源文件包含的头文件中
 
 若要检查 IntelliSense 编译器使用的编译器选项（包括“Include 路径”和“预处理器宏”）是否正确，请依次转到“工具”>“选项”>“文本编辑器”>“C/C++”>“高级”>“诊断日志记录”  ，以启用 IntelliSense 命令行诊断日志记录。 将“启用日志记录”  设置为“True”，将“日志记录级别”  设置为“5”（即最详细），并将“日志记录筛选器”  设置为“8”（即 IntelliSense 日志记录）。
 
-此时，输出窗口会显示传递到 IntelliSense 编译器的命令行。 下面展示了示例输出：
+此时，输出窗口会显示传递到 IntelliSense 编译器的命令行。 下面是示例输出：
 
 ```output
 [IntelliSense] Configuration Name: Debug|Win32
@@ -120,6 +120,6 @@ Visual Studio to investigate.
 
 若要详细了解 TRACEDESIGNTIME 环境变量，请参阅 [Roslyn](https://github.com/dotnet/roslyn/wiki/Diagnosing-Project-System-Build-Errors) 和[公共项目系统](https://github.com/dotnet/project-system/blob/master/docs/design-time-builds.md)。 这些文章中的信息适用于 C++ 项目。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual C++ IntelliSense](visual-cpp-intellisense.md)

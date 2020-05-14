@@ -12,14 +12,14 @@ caps.latest.revision: 39
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 7f4c490abbcd5b970c5bf9586ea881be4c5d62a4
-ms.sourcegitcommit: 3154387056160bf4c36ac8717a7fdc0cd9faf3f9
+ms.openlocfilehash: ee4e307040f22078ed66f897eaa868ccfd259577
+ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78409512"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82586727"
 ---
-# <a name="extend-uml-models-and-diagrams"></a>Extend UML models and diagrams
+# <a name="extend-uml-models-and-diagrams"></a>扩展 UML 模型和关系图
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 本主题汇总了扩展 Visual Studio 包含的 UML 建模工具可使用的不同方法。 若要查看支持每个模型类型和工具的 Visual Studio 版本，请参阅 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)。
@@ -32,9 +32,9 @@ ms.locfileid: "78409512"
 
  有关详细信息，请参阅此视频：![链接到视频](../data-tools/media/playvideo.gif "PlayVideo")[MSDN 如何实现系列： UML 工具和扩展性](https://msdn.microsoft.com/vstudio/ff859492)。
 
-## <a name="Requirements"></a>要求
+## <a name="requirements"></a><a name="Requirements"></a> 要求
 
-- [Visual Studio SDK](../extensibility/visual-studio-sdk.md)。
+- [Visual STUDIO SDK](../extensibility/visual-studio-sdk.md)。
 
 - [Visual Studio 2015 的建模 SDK](https://www.microsoft.com/download/details.aspx?id=48148)。
 
@@ -85,7 +85,7 @@ ms.locfileid: "78409512"
 
  有关详细信息，请参阅将[UML 模型与其他模型和工具集成](../modeling/integrate-uml-models-with-other-models-and-tools.md)。
 
-## <a name="generation"></a>代
+## <a name="generation"></a>Generation
  可以从模型生成程序代码、脚本、配置、文档、新模型或其他项目。
 
  在 Fabrikam 设计的行李系统中，大部分程序代码在不同项目中都是相同的。 主要的可变因素是行李流环绕机场的规划。 设计团队在拥有首批数个项目的经验后，由工具开发人员创建一个模板，该模板从行李流模型生成大部分可变程序代码和其他文件（如用户文档）。 这样可大大减少每个新项目的开发时间和错误率。
@@ -109,13 +109,13 @@ ms.locfileid: "78409512"
 ## <a name="domain-specific-languages"></a>域特定语言
  在经常使用某个特定类型的模型的情况下，创建域特定语言会很有用。 域特定语言比 UML 模型更能符合你的业务需求，只不过你需要进行更多的工作来生成和维护它。 有关详细信息，请参阅用于[Visual Studio 的建模 SDK-域特定语言](../modeling/modeling-sdk-for-visual-studio-domain-specific-languages.md)。
 
-## <a name="external-resources"></a>外部資源
+## <a name="external-resources"></a>外部资源
 
-|**类别**|**Links**|
+|**类别**|**链接**|
 |------------------|---------------|
 |**视频**|![链接到视频](../data-tools/media/playvideo.gif "PlayVideo") [MSDN 如何实现系列： UML 工具和扩展性](https://msdn.microsoft.com/vstudio/ff859492)<br /><br /> ![视频](../data-tools/media/playvideo.gif "PlayVideo")[通道9： UML 与 Visual Studio 的](https://channel9.msdn.com/posts/clinted/)链接|
 |**论坛**|-   [Visual Studio 可视化和建模工具](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vsarch)<br />-   [Visual Studio 可视化和建模 SDK（DSL 工具）](https://social.msdn.microsoft.com/Forums/home?forum=dslvsarchx)|
-|**Blogs**|[Visual Studio ALM + Team Foundation Server 博客](https://blogs.msdn.com/b/visualstudioalm)|
+|**博客**|[Visual Studio ALM + Team Foundation Server 博客](https://devblogs.microsoft.com/devops/welcome-to-the-visual-studio-alm-team-foundation-server-blog/)|
 |**技术文章和日志**|[MSDN 体系结构中心](https://msdn.microsoft.com/architecture/default.aspx)|
 
 ## <a name="see-also"></a>另请参阅

@@ -1,17 +1,18 @@
 ---
 title: Visual Studio 订阅中的 Pluralsight 权益 | Microsoft Docs
 author: evanwindom
-ms.author: lank
+ms.author: v-evwin
 manager: lank
-ms.date: 11/18/2019
+ms.assetid: bc8b526c-2fed-4ac8-aaa2-73d2495256fd
+ms.date: 04/20/2020
 ms.topic: conceptual
 description: 了解有关所选的 Visual Studio 订阅中随附的 Pluralsight 培训订阅。
-ms.openlocfilehash: f76db59053451ca58890ec055295758add482725
-ms.sourcegitcommit: 41f4f55af0176bed1ed949426929d4bdb53105a7
+ms.openlocfilehash: 6ae0a77cf4849f0e648eeed17830911c90c8b584
+ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2020
-ms.locfileid: "77192411"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81649811"
 ---
 # <a name="pluralsight-training-benefits-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 Pluralsight 培训权益
 
@@ -24,7 +25,7 @@ ms.locfileid: "77192411"
 ## <a name="activation-steps"></a>激活步骤
 1. 要激活订阅，请连接到 [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)，然后在“专业开发”部分中的 Pluralsight 权益磁贴上单击“获取代码”链接  。
    > [!div class="mx-imgBorder"]
-   > ![Pluralsight 权益磁贴](_img/vs-pluralsight/vs-pluralsight-3month-tile.png)
+   > ![Pluralsight 权益磁贴](_img/vs-pluralsight/vs-pluralsight-6month-tile.png)
    >
    > [!IMPORTANT]
    > 单击 Pluralsight 权益磁贴上的“获取代码”链接时，可能会收到以下消息：
@@ -66,9 +67,9 @@ ms.locfileid: "77192411"
 |             Visual Studio Enterprise (NFR<sup>1</sup> )              |      计划      | 不可用 |       NA       |
 ||
 
-<sup>1</sup>  *包括：不得转售 (NFR)、Visual Studio 行业合作伙伴 (VSIP)、BizSpark、MCT 软件和服务开发人员、MCT 软件和服务、最有价值专家 (MVP)、区域总监 (RD)、Microsoft 合作伙伴网络 (MPN)、FTE、Imagine*。
+<sup>1</sup>  包括：不得转售 (NFR)、Visual Studio 行业合作伙伴 (VSIP)、BizSpark、MCT 软件和服务开发人员、MCT 软件和服务、最有价值专家 (MVP)、区域总监 (RD)、Microsoft 合作伙伴网络 (MPN)、FTE、Imagine。
 
-<sup>2</sup>  所选 Visual Studio 订阅中的 Pluralsight 权益随订阅一同续订。例如，如果你的年度订阅是每年续订一次，当你续订时也会获得每一年的权益。如果是多年订阅，你在订阅期间可获得 Pluralsight 权益。如果续订多年订阅，在续订后将再次获得该权益。  
+<sup>2</sup>  所选 Visual Studio 订阅中的 Pluralsight 权益随订阅一同续订。例如，如果你的年度订阅是每年续订一次，当你续订时也会获得每一年的权益。如果是多年订阅，你在订阅期间可获得 Pluralsight 权益。如果续订多年订阅，在续订后将再次获得该权益。
 
 > [!NOTE]
 > Microsoft 不再在云订阅中提供 Visual Studio Professional 年度订阅和 Visual Studio Enterprise 年度订阅。 现有客户体验以及续订、增加、减少或取消订阅的能力不会发生变化。 建议新客户访问 [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/)，查看各 Visual Studio 购买选项。
@@ -96,6 +97,12 @@ ms.locfileid: "77192411"
 - [Pluralsight 帮助中心](https://help.pluralsight.com/help)可以在参加 Pluralsight 课程或使用 Pluralsight 网站方面提供帮助。
 - 有关 Visual Studio 订阅的销售、订阅、帐户和账单的帮助，请与 Visual Studio [订阅支持](https://visualstudio.microsoft.com/subscriptions/support/)联系。
 - 对有关 Visual Studio IDE、Azure DevOps Services 或其他 Visual Studio 产品或服务有疑问？  请访问 [Visual Studio 支持](https://visualstudio.microsoft.com/support/)。
+
+## <a name="see-also"></a>请参阅
+- [Visual Studio 文档](https://docs.microsoft.com/visualstudio/)
+- [Azure DevOps 文档](https://docs.microsoft.com/azure/devops/)
+- [Azure 文档](https://docs.microsoft.com/azure/)
+- [Microsoft 365 文档](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>后续步骤
 创建帐户后，就可以开始培训了。  请访问 [https://www.pluralsight.com](https://www.pluralsight.com) 并点击页面右上角的“登录”以开始新课程，或返回正在进行的课程  。

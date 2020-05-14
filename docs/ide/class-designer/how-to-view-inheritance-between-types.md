@@ -15,13 +15,13 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 47907493451841b631d561bfddb74676a460ff29
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75591770"
 ---
-# <a name="how-to-view-inheritance-between-types-in-class-designer"></a>如何：查看类设计器中类型之间的继承
+# <a name="how-to-view-inheritance-between-types-in-class-designer"></a>如何：在类设计器中查看类型之间的继承
 
 如果基类型和派生类型之间存在继承关系，则可在类设计器中的类图上查看这种关系  。 若要创建两个类型之间的继承关系（如果不存在该关系），请参阅[如何：创建类型之间的继承](how-to-create-inheritance-between-types.md)。
 
@@ -45,7 +45,7 @@ ms.locfileid: "75591770"
 
 还可以右键单击想要显示其派生类型的类型，然后选择“显示派生类”或“显示派生接口”   。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [如何：创建类型之间的关联](how-to-create-associations-between-types.md)
 - [查看类型和关系](designing-and-viewing-classes-and-types.md)

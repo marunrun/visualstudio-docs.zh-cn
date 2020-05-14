@@ -8,10 +8,10 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: f9b1a639dd655f4f75b21555396866858b144010
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75569278"
 ---
 # <a name="generate-equals-and-gethashcode-method-overrides-in-visual-studio"></a>在 Visual Studio 中生成 C# Equals 和 GetHashCode 方法重写
@@ -20,9 +20,9 @@ ms.locfileid: "75569278"
 
 - C#
 
-**功能：** 用于生成“Equals”和“GetHashCode”方法   。
+功能：  让你生成 Equals  和 GetHashCode  方法。
 
-**使用时机：** 当类型应按一个或多个字段进行比较，而不是按内存中的对象位置进行比较时，请生成这些替代。
+适用情况：当具备的类型应按一个或多个字段进行比较，而不是按内存中的对象位置进行比较时，生成这些重写  。
 
 操作原因： 
 
@@ -64,7 +64,7 @@ ms.locfileid: "75569278"
 
    ![生成方法结果](media/overrides-result-cs.png)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [代码生成](../code-generation-in-visual-studio.md)
 - [预览更改](../../ide/preview-changes.md)

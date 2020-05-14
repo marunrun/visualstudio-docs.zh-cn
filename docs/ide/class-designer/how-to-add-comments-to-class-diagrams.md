@@ -1,5 +1,5 @@
 ---
-title: 如何：向类图添加注释（类设计器）
+title: 如何：向类关系图添加注释（类设计器）
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a46ad971fa9b68de25b55c6c4c882f29c71d6b68
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75592251"
 ---
 # <a name="how-to-add-comments-to-class-diagrams"></a>如何：向类图添加注释
@@ -35,7 +35,7 @@ ms.locfileid: "75592251"
 
 2. 单击关系图上的新注释形状，并键入所需文本。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用类图](designing-and-viewing-classes-and-types.md)
 - [如何：自定义类图](how-to-customize-class-diagrams.md)

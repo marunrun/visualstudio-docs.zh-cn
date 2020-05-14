@@ -8,10 +8,10 @@ manager: markl
 ms.workload:
 - cplusplus
 ms.openlocfilehash: c0d1be12f733a858bf223fb1dce6a091c0dc6c50
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75594209"
 ---
 # <a name="visual-c-intellisense-features"></a>Visual C++ IntelliSense 功能
@@ -104,7 +104,7 @@ IntelliSense 是使编码更方便的一组功能的名称。 由于不同的人
 
 ![“工具选项”对话框](../ide/media/sintellisensecpptoolsoptions.PNG)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用 IntelliSense](../ide/using-intellisense.md)
 - [为 C++ 项目配置 IntelliSense](visual-cpp-intellisense-configuration.md)

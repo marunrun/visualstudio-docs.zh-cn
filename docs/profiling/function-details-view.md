@@ -15,10 +15,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 6e5bd33d9924784220addafca85a63f550df02c7
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74779254"
 ---
 # <a name="function-details-view"></a>函数详细信息视图
@@ -73,7 +73,7 @@ ms.locfileid: "74779254"
 
 |列|说明|
 |------------|-----------------|
-|**独占**|- 执行函数体时产生的性能指标的量。|
+|**排他**|- 执行函数体时产生的性能指标的量。|
 |**在调用中**|- 所选函数所调用的函数中产生的性能指标的量。|
 |**非独占总数**|-“独占”  和“在调用中”  值的总和。|
 

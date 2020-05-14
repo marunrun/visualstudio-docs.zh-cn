@@ -10,10 +10,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: df3ccda9730be02bafb7f7d069a26193a4528d1e
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74778266"
 ---
 # <a name="start"></a>Start
@@ -53,12 +53,12 @@ VSPerfCmd.exe /Start:Method /Output:FileName [Options]
 ## <a name="invalid-options"></a>无效选项
  以下选项不能在命令行上与 **Start** 选项一起使用。
 
- **Status** Status 适用于用于被分析的进程  。 它列出进程和线程及其当前分析状态 (On/Off)。 例如，如果某个进程已停止，则 **Status** 不会在报告中对此进行指示。 **Status** 会显示该进程是否进行分析。
+ **Status** **Status** 应用于进行分析的进程。 它列出进程和线程及其当前分析状态 (On/Off)。 例如，如果某个进程已停止，则 **Status** 不会在报告中对此进行指示。 **Status** 会显示该进程是否进行分析。
 
  **Shutdown**[ **:** `Timeout`] 关闭探查器。
 
 ## <a name="example"></a>示例
- 以下示例演示如何使用 VSPerfCmd.exe Start 选项来初始化探查器   。
+ 以下示例演示如何使用 *VSPerfCmd.exe* **Start** 选项来初始化探查器。
 
 ```cmd
 VSPerfCmd.exe /Start:Sample /Output:TestApp.exe.vsp

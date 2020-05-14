@@ -19,13 +19,13 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 8b5cacba328c48b682fe9069d8ab4a9ee21635db
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74779033"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79307183"
 ---
-# <a name="how-to-collect-performance-data-for-a-web-site"></a>如何：收集网站性能数据
+# <a name="how-to-collect-performance-data-for-a-web-site"></a>如何：为 Web 站点收集性能数据
 
 可以使用“性能向导”  为 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web 应用程序收集性能数据。 可以分析在 Visual Studio 中打开的 Web 应用程序，也可以分析位于本地计算机且未在 Visual Studio IDE 中打开的 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web 站点。
 
@@ -58,7 +58,7 @@ ms.locfileid: "74779033"
 
     - 若要从网页中运行的 JavaScript 中收集数据，请选中“分析 JavaScript”  复选框。
 
-6. 单击 **“下一步”** 。
+6. 单击“下一步”。 
 
 7. 在向导的第四页上，单击“完成”  。
 
@@ -78,7 +78,7 @@ ms.locfileid: "74779033"
 
 5. 在向导第三页的“运行 Web 应用程序的 URL 或路径是什么”  框中，在应用程序主页上输入 URL，然后单击“下一步”  。
 
-   - 对于基于服务器 (IIS) 的网站，请键入一个 URL（如“<`http://localhost/MySite/default.aspx`>”  ）。 这将导致对 MySite 应用程序根目录上本地计算机中的 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 应用程序进行分析，并且在 Internet Explorer 中启动该站点网页 default.aspx，从而启动会话。
+   - 对于基于服务器 (IIS) 的网站，请键入一个 URL（如“ **<`http://localhost/MySite/default.aspx`”>** ）。 这将导致对 MySite 应用程序根目录上本地计算机中的 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 应用程序进行分析，并且在 Internet Explorer 中启动该站点网页 default.aspx，从而启动会话。
 
    - 对于基于文件的网站，请键入路径，例如文件 ///**c:\WebSites\MySite\default.aspx**。 这将导致对位于 c:\webSites\MySite 上的 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 应用程序进行分析，并且在 Internet Explorer 中启动 `http://localhost:nnnn/MySite/default.aspx` 网页，从而启动会话。
 
@@ -92,7 +92,7 @@ ms.locfileid: "74779033"
 
     - 若要从网页中运行的 JavaScript 中收集数据，请选中“分析 JavaScript”  复选框。
 
-7. 单击 **“下一步”** 。
+7. 单击“下一步”。 
 
 8. 在向导的第四页上，单击“完成”  。
 
@@ -100,7 +100,7 @@ ms.locfileid: "74779033"
 
      探查器生成数据文件，并在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 主窗口中显示数据的摘要视图。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [概述](../profiling/overviews-performance-tools.md)
 [配置性能会话](../profiling/configuring-performance-sessions.md)

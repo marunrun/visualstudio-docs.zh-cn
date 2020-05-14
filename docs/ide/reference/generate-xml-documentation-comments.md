@@ -8,10 +8,10 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: 0e21d0617f954c0cc34975b7f8626b83966f6b5d
-ms.sourcegitcommit: 9de7d25056da59df0941508c80c0b12766ba6580
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77706384"
 ---
 # <a name="how-to-insert-xml-comments-for-documentation-generation"></a>如何：为文档生成项插入 XML 注释

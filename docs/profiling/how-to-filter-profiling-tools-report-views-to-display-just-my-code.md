@@ -9,13 +9,13 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: db43caeb00ef8348eb1a7dd584c1b0b52001bc3f
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74778955"
 ---
-# <a name="how-to-filter-profiling-tools-report-views-to-display-just-my-code"></a>如何：筛选分析工具报表视图以显示“仅我的代码”
+# <a name="how-to-filter-profiling-tools-report-views-to-display-just-my-code"></a>如何：筛选分析工具报告视图以显示“仅我的代码”
 
 Visual Studio 提供了性能报告的筛选功能，使之仅显示你已实现的代码。 此功能名为“仅我的代码”，默认情况下会启用。 可通过“选项”对话框中的“仅我的代码”选项配置此功能   。
 
@@ -35,6 +35,6 @@ Visual Studio 提供了性能报告的筛选功能，使之仅显示你已实现
 
 3. 在“常规设置”下，清除“启用‘仅我的代码’”复选框   。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [自定义性能工具报告视图](../profiling/customizing-performance-tools-report-views.md)

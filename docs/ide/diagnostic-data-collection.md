@@ -8,10 +8,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 9702439569fa9db1ff8687e914d5c9d20865e2b0
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "72652463"
 ---
 # <a name="system-generated-logs-collected-by-visual-studio"></a>由 Visual Studio 收集的系统生成的日志
@@ -52,7 +52,7 @@ Visual Studio 收集崩溃、挂起、UI 无响应以及很高的 CPU 或内存�
 
 ### <a name="error-classification"></a>错误分类
 
-基于日志对错误进行了分类和计数，以确定调查的优先顺序。 例如，我们可能发现，在产品的版本 \<x> 中，“System.IO.FileStream.Init”处的“System.IO.\__Error.WinIOError”出现了 500 次，并且在该版本中的出现率是最高的。
+基于日志对错误进行了分类和计数，以确定调查的优先顺序。 例如，我们可能发现，在产品的版本 \_x> 中，“System.IO.FileStream.Init”处的“System.IO.\<_Error.WinIOError”出现了 500 次，并且在该版本中的出现率是最高的。
 
 ### <a name="work-items-for-tracking"></a>用于跟踪的工作项
 
@@ -70,7 +70,7 @@ Visual Studio 收集崩溃、挂起、UI 无响应以及很高的 CPU 或内存�
 
 鉴于我们收集数据的目的以及数据访问和保留的相关约束，建议使用 Visual Studio 和 Windows 的默认隐私设置。 不过你可以[选择退出](../ide/visual-studio-experience-improvement-program.md#opt-in-or-out) Visual Studio 体验改善计划。 若要选择退出所有程序的系统生成的日志收集，请参阅 [Windows 10 中的诊断、反馈和隐私](https://privacy.microsoft.com/windows-10-feedback-diagnostics-and-privacy)。 根据使用的 Windows 版本，选项可能有所不同。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Studio 客户体验改善计划](visual-studio-experience-improvement-program.md)
 - [Windows 10 中的诊断、反馈和隐私](https://privacy.microsoft.com/windows-10-feedback-diagnostics-and-privacy)

@@ -15,12 +15,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 13c0731781efec98a117c11a7172645c46028af3
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.openlocfilehash: cbec3c7c020bae0e94bc16bdb1fe9740a36a93ae
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77633156"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "78865318"
 ---
 # <a name="msbuild-task-reference"></a>MSBuild 任务参考
 
@@ -37,15 +37,15 @@ ms.locfileid: "77633156"
 
 - [任务基类](../msbuild/task-base-class.md)
 
- 向派生自 <xref:Microsoft.Build.Utilities.Task> 类的任务添加几个参数。
+ 向派生自 <xref:Microsoft.Build.Utilities.Task> 类的任务添加几个参数。 请不要直接使用。
 
 - [TaskExtension 基类](../msbuild/taskextension-base-class.md)
 
- 向派生自 <xref:Microsoft.Build.Tasks.TaskExtension> 类的任务添加几个参数。
+ 向派生自 <xref:Microsoft.Build.Tasks.TaskExtension> 类的任务添加几个参数。 请不要直接使用。
 
 - [ToolTaskExtension 基类](../msbuild/tooltaskextension-base-class.md)
 
- 向派生自 <xref:Microsoft.Build.Tasks.ToolTaskExtension> 类的任务添加几个参数。
+ 向派生自 <xref:Microsoft.Build.Tasks.ToolTaskExtension> 类的任务添加几个参数。 请不要直接使用。
 
 - [AL（程序集链接器）任务](../msbuild/al-assembly-linker-task.md)
 

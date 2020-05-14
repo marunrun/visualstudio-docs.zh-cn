@@ -9,12 +9,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: b02f8bf9542b5de4737d173835c011f59c3fdc86
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 499f335edabe77d001a1a2486e7b559abe6c7a8a
+ms.sourcegitcommit: 5d1b2895d3a249c6bea30eb12b0ad7c0f0862d85
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75847289"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80880333"
 ---
 # <a name="use-a-lab-environment-for-your-devops"></a>使用实验室环境进行开发
 
@@ -28,7 +28,7 @@ ms.locfileid: "75847289"
 
 以下是常见的实验室环境拓扑示例：
 
-| 拓扑 | 描述 |
+| 拓扑 | 说明 |
 |---|---|
 |![仅包含服务器的拓扑](../media/topology_backend.png)| 此实验室环境具有服务器拓扑，此拓扑常用于在服务器应用程序上运行手动测试，并且允许测试人员使用他们自己的客户端计算机验证环境中的 bug  。 在后端拓扑中，你的实验室环境仅包含服务器。 当你使用此类型的拓扑时，通常使用不属于该环境一部分的客户端计算机连接实验室环境中的服务器。|
 |![云实验室环境](../media/topology_cloud.png)| 此实验室环境提供的功能与服务器拓扑类似，但无需在本地环境运行物理计算机或虚拟机，这样可以缩短安装时间、简化维护过程并降低成本  。 在 Microsoft Azure 等云环境中可以快速方便地设置多个网站、虚拟机和自定义网络。|
@@ -53,6 +53,7 @@ ms.locfileid: "75847289"
 
 有关详细信息，请参阅[使用生成或发布管理](use-build-or-rm-instead-of-lab-management.md)。
 
+::: moniker range="vs-2017"
 ## <a name="use-the-visual-studio-lab-management-features-of-microsoft-test-manager"></a>使用 Microsoft 测试管理器的 Visual Studio 实验室管理工具版功能
 
 使用 Visual Studio Enterprise Edition 时，可以使用 Microsoft 测试管理器的 Visual Studio 实验室管理工具版功能创建和管理实验室环境。
@@ -114,7 +115,7 @@ ms.locfileid: "75847289"
 
 以下是一些你在继续之前应该熟悉的其他概念：
 
-|术语|描述|
+|术语|说明|
 |-|-----------------|
 |实验室中心|可在其中创建和管理实验室环境的 Microsoft 测试管理器区域。|
 |Azure DevOps 项目实验室|已设置的实验室环境的集合，以便你连接到它们并运行其虚拟机。|
@@ -136,8 +137,9 @@ ms.locfileid: "75847289"
 * [标准实验室环境](https://msdn.microsoft.com/library/ee390842.aspx)
 * [SCVMM（虚拟）环境](https://msdn.microsoft.com/library/ee943322.aspx)
 * [创建和使用网络独立环境](https://msdn.microsoft.com/library/ee518924.aspx)
+::: moniker-end
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 * [安装和配置测试代理](../../test/lab-management/install-configure-test-agents.md)
 * [Visual Studio 实验室管理工具版指南](https://blogs.msdn.microsoft.com/visualstudioalmrangers/2015/04/22/library-of-tooling-and-guidance-solutions-aka-msvsarsolutions/)

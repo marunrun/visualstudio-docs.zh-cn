@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: c69b48a5b1b551e2e29b9aa10e7f68ff0df0e379
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62980949"
 ---
 # <a name="span-markers"></a>范围标记
@@ -28,7 +28,7 @@ ms.locfileid: "62980949"
  ![不同类别中的 5 个范围](../profiling/media/cvmarkerspancategory.png "CVMarkerSpanCategory") 前 5 个范围类别的颜色
 
 ## <a name="span-aggregation-markers"></a>范围聚合标记
- 有时，并发可视化工具中范围标记发生时间过于接近，导致无法单独绘制。 发生这种情况时，将会显示代表基础范围的灰色范围聚合标记。 当将鼠标指针放在这些图标上时，工具提示将显示所代表的基础范围数量。 若要查看范围，请放大。 如果一直放大但仍显示范围聚合标记，则可以在[标记报告](../profiling/markers-report.md)中查看基础范围标记。 此图显示范围聚合标记：
+ 有时，并发可视化工具中范围标记发生时间过于接近，导致无法单独绘制。 发生这种情况时，将会显示代表基础范围的灰色范围聚合标记  。 当将鼠标指针放在这些图标上时，工具提示将显示所代表的基础范围数量。 若要查看范围，请放大。 如果一直放大但仍显示范围聚合标记，则可以在[标记报告](../profiling/markers-report.md)中查看基础范围标记。 此图显示范围聚合标记：
 
  ![并发可视化工具中的聚合范围](../profiling/media/cvmarkerspanaggregate.png "CVMarkerSpanAggregate") 范围聚合标记
 

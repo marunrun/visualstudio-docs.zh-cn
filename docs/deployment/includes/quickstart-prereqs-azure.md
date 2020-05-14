@@ -1,12 +1,12 @@
 ---
 ms.openlocfilehash: 6c210537c671ef6960d3f767c740dee5c1538fac
-ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "70197101"
 ---
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 ::: moniker range=">=vs-2019"
 

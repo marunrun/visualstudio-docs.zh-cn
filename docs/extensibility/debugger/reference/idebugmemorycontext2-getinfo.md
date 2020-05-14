@@ -1,5 +1,5 @@
 ---
-title: IDebugMemoryContext2::GetInfo | Microsoft Docs
+title: IDebug内存上下文2：：获取信息 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -8,23 +8,23 @@ helpviewer_keywords:
 - GetInfo method
 - IDebugMemoryContext2::GetInfo method
 ms.assetid: 08c7f091-1816-4d64-8834-f9ecaac5c58d
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: f349ef2f923dd18feeb2a201ef59e9d3489271ab
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: c190710afc9231662fa12c5552d6f73e0268b643
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66347051"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80727463"
 ---
 # <a name="idebugmemorycontext2getinfo"></a>IDebugMemoryContext2::GetInfo
-检索[CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md)结构，它描述的上下文。
+检索描述上下文[CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md)结构。
 
 ## <a name="syntax"></a>语法
 
@@ -44,13 +44,13 @@ int GetInfo(
 
 ## <a name="parameters"></a>参数
 `dwFields`\
-[in]中的标志的组合[CONTEXT_INFO_FIELDS](../../../extensibility/debugger/reference/context-info-fields.md)枚举，用于指示哪些字段[CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md)结构，则为填写。
+[在][CONTEXT_INFO_FIELDS](../../../extensibility/debugger/reference/context-info-fields.md)枚举中的标志的组合，指示要填充[CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md)结构的字段。
 
 `pInfo`\
-[in、 out]`CONTEXT_INFO`中填充的结构。
+[进出]填充`CONTEXT_INFO`的结构。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，返回`S_OK`;否则，返回错误代码。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)

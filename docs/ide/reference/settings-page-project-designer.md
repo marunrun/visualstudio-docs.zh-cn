@@ -13,17 +13,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 4f4ca1def334241999445e3f11cf142aa426d962
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75566769"
 ---
 # <a name="settings-page-project-designer"></a>“设置”页面，项目设计器
 
 可在项目设计器的“设置”页面上指定项目的应用程序设置  。 通过应用程序设置，能够为应用程序动态存储和检索属性设置及其他信息。 这些设置还能让你维护客户端计算机上的自定义应用程序和用户首选项。 有关详细信息，请参阅[管理应用程序设置](../managing-application-settings-dotnet.md)。
 
-要访问“设置”页，请在解决方案资源管理器中选择项目节点，然后选择“项目” > “属性”     。 项目设计器出现时，选择“设置”选项卡  。
+要访问“设置”页，请在解决方案资源管理器中选择项目节点，然后选择“项目” **“属性”**    >   。 项目设计器出现时，选择“设置”选项卡  。
 
 ## <a name="header-bar"></a>标题栏
 
@@ -51,7 +51,7 @@ Properties.Settings.Default.Save();
 
 **访问修饰符**
 
-“访问修饰符”按钮指定 `Properties.Settings`（对于 C#）或 `My.Settings`（对于 Visual Basic）帮助程序类的访问级别，这些类分是 Visual Studio 在 Settings.Designer.cs 或 Settings.Designer.vb 中生成的    。
+“访问修饰符”按钮指定 **（对于 C#）或** （对于 Visual Basic）帮助程序类的访问级别，这些类分是 Visual Studio 在 Settings.Designer.cs 或 Settings.Designer.vb 中生成的`Properties.Settings``My.Settings`   。
 
 对于 Visual C# 项目，访问修饰符可为“内部”或“公共”   。
 
@@ -69,7 +69,7 @@ Properties.Settings.Default.Save();
 
 在此字段中输入应用程序设置的名称。
 
-**Type**
+类型 
 
 使用下拉列表选择设置类型。 使用频率最高的类型将显示在下拉列表中，例如 String、(Connection string) 和 System.Drawing.Font    。 可选择列表末尾的“浏览”，然后在“选择类型”对话框中选择一种类型，进而改选其他类型   。 选择一种类型后，它会添加到下拉列表中的常用类型（仅限当前解决方案）。
 
@@ -85,7 +85,7 @@ Properties.Settings.Default.Save();
 
 与应用程序设置关联的数据或值。 例如，如果设置为字体，则它的值可以是“Verdana, 9.75pt, 样式=粗体”  。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [管理应用程序设置](../managing-application-settings-dotnet.md)
 - [访问应用程序设置 (Visual Basic)](/dotnet/visual-basic/developing-apps/programming/app-settings/accessing-application-settings)

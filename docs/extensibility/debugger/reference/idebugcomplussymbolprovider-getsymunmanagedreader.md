@@ -1,28 +1,28 @@
 ---
-title: IDebugComPlusSymbolProvider::GetSymUnmanagedReader | Microsoft Docs
+title: IDebugComPlus符号提供程序：：获取SymUn托管阅读器 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IDebugComPlusSymbolProvider::GetSymUnmanagedReader
 - GetSymUnmanagedReader
 ms.assetid: 8f1c1627-217f-4405-8141-7a2eb80310a5
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 0ebb8d92e552ef9052ad4878802ded05f5bb62dc
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 9b17479868b3f394c4e55aa9d04d92fd87e59aa3
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66336751"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80733746"
 ---
 # <a name="idebugcomplussymbolprovidergetsymunmanagedreader"></a>IDebugComPlusSymbolProvider::GetSymUnmanagedReader
-检索要使用由非托管代码的符号读取器。
+检索由非托管代码使用的符号读取器。
 
 ## <a name="syntax"></a>语法
 
@@ -44,19 +44,19 @@ int GetSymUnmanagedReader(
 
 ## <a name="parameters"></a>参数
 `ulAppDomainID`\
-[in]应用程序域的标识符。
+[在]应用程序域的标识符。
 
 `guidModule`\
-[in]该模块的唯一标识符。
+[在]模块的唯一标识符。
 
 `ppSymUnmanagedReader`\
-[out]返回该对象表示的符号读取器。
+[出]返回表示符号读取器的对象。
 
 ## <a name="return-value"></a>返回值
-如果成功，则返回`S_OK`; 否则为返回错误代码。
+如果成功，返回`S_OK`;否则，返回错误代码。
 
 ## <a name="example"></a>示例
-下面的示例演示如何实现此方法对于**CDebugSymbolProvider**对象，它公开[IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)接口。
+下面的示例演示如何为公开[IDebugComPlusSymbol提供程序](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)接口的**CDebugSymbol提供程序**对象实现此方法。
 
 ```cpp
 HRESULT CDebugSymbolProvider::GetSymUnmanagedReader(

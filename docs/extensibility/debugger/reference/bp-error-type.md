@@ -1,5 +1,5 @@
 ---
-title: BP_ERROR_TYPE | Microsoft Docs
+title: BP_ERROR_TYPE |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - BP_ERROR_TYPE enumeration
 ms.assetid: c483eaab-db29-46de-bfdb-5c2a9a9cfb68
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 3dc51691d4d424ee4d1c1a450f1e4e32b78e0e6e
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: e777e1f8cb67187a81f8f3bb4f79299939bfa31c
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66319297"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80738080"
 ---
-# <a name="bperrortype"></a>BP_ERROR_TYPE
+# <a name="bp_error_type"></a>BP_ERROR_TYPE
 指定断点的错误类型。
 
 ## <a name="syntax"></a>语法
@@ -62,7 +62,7 @@ public enum enum_BP_ERROR_TYPE {
 
 ## <a name="fields"></a>字段
 `BPET_NONE`\
-不指定任何断点错误。
+指定无断点错误。
 
 `BPET_TYPE_WARNING`\
 指定警告样式断点错误。
@@ -71,7 +71,7 @@ public enum enum_BP_ERROR_TYPE {
 指定错误样式断点错误。
 
 `BPET_SEV_HIGH`\
-指定高严重级别断点错误。
+指定高严重性断点错误。
 
 `BPET_SEV_GENERAL`\
 指定中等严重性断点错误。
@@ -80,31 +80,31 @@ public enum enum_BP_ERROR_TYPE {
 指定低严重性断点错误。
 
 `BPET_TYPE_MASK`\
-指定掩码样式断点错误。
+指定蒙版样式断点错误。
 
 `BPET_SEV_MASK`\
-指定严重级别掩码样式断点错误。
+指定严重性蒙版样式断点错误。
 
 `BPET_GENERAL_WARNING`\
 指定常规警告样式断点错误。
 
 `BPET_GENERAL_ERROR`\
-指定常规错误样式断点错误。
+指定一般错误样式断点错误。
 
 `BPET_ALL`\
 指定所有断点错误类型。
 
 ## <a name="remarks"></a>备注
-这些值可能组合的按位`OR`，用于`dwType`的成员[BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md)结构。 作为参数传递给[EnumErrorBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumerrorbreakpoints.md)方法。
+这些值可以与位组合，`OR`并用于`dwType`[BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md)结构的成员。 作为参数传递给[EnumErrorBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumerrorbreakpoints.md)方法。
 
-断点错误类型组成的类型和严重性。 这意味着该断点错误类型永远不会为只是类型 (例如， `BPET_TYPE_ERROR`，) 或严重级别 (例如， `BPET_SEV_GENERAL`) 本身。 `BPET_GENERAL_WARNING` 和`BPET_GENERAL_ERROR`为常规警告和错误断点提供预定义的值。
+断点错误类型由类型和严重性组成。 这意味着断点错误类型本身不仅仅是一种类型（例如 ，，）`BPET_TYPE_ERROR`或严重性（例如）。 `BPET_SEV_GENERAL` `BPET_GENERAL_WARNING`并为`BPET_GENERAL_ERROR`常规警告和错误断点提供预定义值。
 
 ## <a name="requirements"></a>要求
-标头： msdbg.h
+标题： msdbg.h
 
-命名空间:Microsoft.VisualStudio.Debugger.Interop
+命名空间：微软.VisualStudio.调试器.互通
 
-程序集：Microsoft.VisualStudio.Debugger.Interop.dll
+程序集：微软.VisualStudio.调试器.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [枚举](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

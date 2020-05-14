@@ -1,5 +1,5 @@
 ---
-title: IDebugEngine2::SetMetric |Microsoft Docs
+title: IDebugEngine2：：设置指标 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugEngine2:::SetMetric
 ms.assetid: dcda4972-c32e-4693-a0e1-25d5c58b9782
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 10e4662536dbe8fef8c250122d22520df1736cf8
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: caada8db1791d94e7a9632394cd4659bf8cec3a0
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66352567"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80730893"
 ---
 # <a name="idebugengine2setmetric"></a>IDebugEngine2::SetMetric
-此方法设置名为指标的注册表值。
+此方法设置称为指标的注册表值。
 
 ## <a name="syntax"></a>语法
 
@@ -43,16 +43,16 @@ int SetMetric(
 
 ## <a name="parameters"></a>参数
 `pszMetric`\
-[in]指标名称。
+[在]指标名称。
 
 `varValue`\
-[in]指定的指标值。
+[在]指定指标值。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，返回`S_OK`;否则，返回错误代码。
 
 ## <a name="remarks"></a>备注
- 指标是用于更改调试引擎的行为或播发受支持的功能的注册表值。 此方法可以将转发到相应的窗体调用[以便进行调试的 SDK 帮助程序](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)函数， `SetMetric`。
+ 指标是用于更改调试引擎的行为或通告支持的功能的注册表值。 此方法可以将调用转发到用于调试功能的 SDK[帮助器](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)的适当形式`SetMetric`。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)

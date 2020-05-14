@@ -18,10 +18,10 @@ monikerRange: vs-2017
 ms.workload:
 - uwp
 ms.openlocfilehash: a483d1382ea1f67c14aa4674016331bfe0f76e7d
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "73189369"
 ---
 # <a name="analyze-html-ui-responsiveness-in-universal-windows-apps"></a>分析中通用 Windows 应用中的 HTML UI 响应能力
@@ -76,11 +76,11 @@ ms.locfileid: "73189369"
 
 1. 在 Visual Studio 中打开应用程序。
 
-2. 测试应用程序的 UI 响应能力问题。 （按 Ctrl+F5 以启动应用而不进行调试   。）
+2. 测试应用程序的 UI 响应能力问题。 （按 Ctrl**F5 以启动应用而不进行调试**+  。）
 
      如果发现问题，请继续测试以尝试缩小发生问题的时间范围，或尝试确定导致该行为的触发器。
 
-3. 切换回 Visual Studio（按 Alt+Tab），并停止应用 (Shift+F5)     。
+3. 切换回 Visual Studio（按 Alt**Tab），并停止应用 (Shift**F5)+   +  。
 
 4. 或者，使用 performance.mark [标记要分析的代码](#ProfileMark)。
 
@@ -188,7 +188,7 @@ if (performance.mark && performance.measure) {
 - 导航事件，在导航到其他页面时发生。 此事件的工具提示显示目标页面 URL。
 
 ### <a name="CPUUtilization"></a> 查看 CPU 使用率
- 通过“CPU 使用率”图可确定 CPU 活动过多的时间段。 该图提供一段时间内应用程序的 CPU 平均消耗量信息。 信息使用了彩色编码来表示以下特定类别：“正在加载”、“脚本”、垃圾回收 (GC)、“样式”、“渲染”和“图像解码”       。 有关这些类别的详细信息，请参阅本主题后面部分的 [Profiler event reference](#profiler-event-reference) 。
+ 通过“CPU 使用率”图可确定 CPU 活动过多的时间段。 该图提供一段时间内应用程序的 CPU 平均消耗量信息。 信息使用了彩色编码来表示以下具体类别： **“加载”** 、 **“脚本”** 、垃圾回收（ **“GC”** ）、 **“样式”** 、 **“呈现”** 和 **“图像解码”** 。 有关这些类别的详细信息，请参阅本主题后面部分的 [Profiler event reference](#profiler-event-reference) 。
 
  “CPU 使用率”图显示在所有应用程序线程上花费的时间，它将一个或多个 CPU 的 CPU 使用率值合并为一个百分比值。 当多个 CPU 正在使用时，CPU 使用率值可能超过 100%。
 
@@ -325,29 +325,29 @@ if (performance.mark && performance.measure) {
 
   下表显示了事件及其说明：
 
-|事件|事件类别|在出现以下情况时发生|
+|ㄆン|事件类别|在出现以下情况时发生|
 |-----------|--------------------|-----------------|
 |CSS 解析|“加载”|发现了新 CSS 内容，而且尝试解析 CSS 内容。|
 |HTML 解析|“加载”|发现了新 HTML 内容，而且尝试将此内容解析到节点并将内容插入到 DOM 树。|
 |HTTP 请求|“加载”|在 DOM 中找到了远程资源，或者创建了生成 HTTP 请求的 XMLHttpRequest。|
 |推理下载|“加载”|已在页面的 HTML 内容中搜索所需的资源，以便快速调度对资源的后续 HTTP 请求。|
-|动画帧回调函数|“脚本”|浏览器即将呈现另一个帧，这触发了应用程序提供的回调函数。|
-|DOM 事件|“脚本”|已发生并执行 DOM 事件。<br /><br /> DOM 事件的 `context` 属性（例如  `DOMContentLoaded` 或 `click`）显示在括号中。|
-|事件侦听器|“脚本”|已调用并执行事件侦听器。|
-|媒体查询侦听器|“脚本”|已注册的媒体查询无效化，这导致了其关联的侦听器的执行。|
-|转变观察器|“脚本”|已修改一个或多个观察到的 DOM 元素，这导致执行与 MutationObserver 关联的回调。|
-|脚本计算|“脚本”|在 DOM 中找到了新的脚本元素，并且尝试解析和执行此脚本。|
-|计时器|“脚本”|计划的计时器过时，从而导致执行其关联的回调函数。|
-|Windows 运行时异步回调函数|“脚本”|Windows 运行时对象完成了触发 `Promise` 回调函数的异步操作。|
-|Windows 运行时事件|“脚本”|Windows 运行时对象上发生的事件触发了注册侦听器。|
+|动画帧回调函数|脚本|浏览器即将呈现另一个帧，这触发了应用程序提供的回调函数。|
+|DOM 事件|脚本|已发生并执行 DOM 事件。<br /><br /> DOM 事件的 `context` 属性（例如  `DOMContentLoaded` 或 `click`）显示在括号中。|
+|事件侦听器|脚本|已调用并执行事件侦听器。|
+|媒体查询侦听器|脚本|已注册的媒体查询无效化，这导致了其关联的侦听器的执行。|
+|转变观察器|脚本|已修改一个或多个观察到的 DOM 元素，这导致执行与 MutationObserver 关联的回调。|
+|脚本计算|脚本|在 DOM 中找到了新的脚本元素，并且尝试解析和执行此脚本。|
+|计时器|脚本|计划的计时器过时，从而导致执行其关联的回调函数。|
+|Windows 运行时异步回调函数|脚本|Windows 运行时对象完成了触发 `Promise` 回调函数的异步操作。|
+|Windows 运行时事件|脚本|Windows 运行时对象上发生的事件触发了注册侦听器。|
 |垃圾回收|“GC”|收集不再使用的对象的内存所用的时间。|
 |CSS 计算|“样式”|已对 DOM 进行更改，要求重新计算所有受影响的元素的样式属性。|
 |布局|“样式”|已对 DOM 进行更改，要求重新计算所有受影响的元素的大小和/或位置。|
 |画图|“呈现”|已对 DOM 进行可视更改，并且尝试重新呈现页面的各部分。|
 |呈现层|“呈现”|已对 DOM 的独立呈现片段（称为层）进行可视更改，这些更改要求呈现此页面的一个部分。|
 |“图像解码”|“图像解码”|向 DOM 中加入了一个图像，并且尝试将该图像从其原始格式解压缩并解码成位图。|
-|Frame|不可用|对需要重新提取页面的所有受影响部分的 DOM 进行了可视更改。 这是用于分组的工具生成的事件。|
-|“用户测量”|不可用|使用 `performance.measure` 方法测量应用特定的方案。 这是用于分析代码的工具生成的事件。|
+|Frame|不适用|对需要重新提取页面的所有受影响部分的 DOM 进行了可视更改。 这是用于分组的工具生成的事件。|
+|“用户测量”|不适用|使用 `performance.measure` 方法测量应用特定的方案。 这是用于分析代码的工具生成的事件。|
 
 ## <a name="additional-information"></a>其他信息
 
@@ -357,5 +357,5 @@ if (performance.mark && performance.measure) {
 
 - 若要了解单线程代码执行模型和性能，请参见 [执行代码](/previous-versions/windows/apps/hh781217\(v\=win.10\))。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [首先了解分析工具](../profiling/profiling-feature-tour.md)

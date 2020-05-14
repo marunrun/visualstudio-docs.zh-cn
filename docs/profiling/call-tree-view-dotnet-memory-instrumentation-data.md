@@ -12,10 +12,10 @@ monikerRange: vs-2017
 ms.workload:
 - dotnet
 ms.openlocfilehash: 2066959578987e358f8c1c91dcbda1eeb6f79f26
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74773592"
 ---
 # <a name="call-tree-view---net-memory-instrumentation-data"></a>“调用树”视图 - .NET 内存检测数据
@@ -46,7 +46,7 @@ ms.locfileid: "74773592"
 |**进程名**|分配给进程的名称。|
 |**时间独占探测开销**|此函数由检测导致的时间开销。 已从所有独占时间中减去探测开销。|
 |**时间非独占探测开销**|此函数及其子函数由检测导致的时间开销。 已从所有非独占时间中减去探测开销。|
-|**Type**|函数的上下文：<br /><br /> -   **0** - 当前函数<br />-   **1** - 调用当前函数的函数<br />-   **2** - 当前函数调用的函数<br /><br /> 仅在 [VSPerfReport](../profiling/vsperfreport.md) 命令行报表中。|
+|类型 |函数的上下文：<br /><br /> -   **0** - 当前函数<br />-   **1** - 调用当前函数的函数<br />-   **2** - 当前函数调用的函数<br /><br /> 仅在 [VSPerfReport](../profiling/vsperfreport.md) 命令行报表中。|
 |**根函数名**|当前函数的名称。 仅在 [VSPerfReport](../profiling/vsperfreport.md) 命令行报表中。|
 
 ## <a name="net-memory-values"></a>.NET 内存值

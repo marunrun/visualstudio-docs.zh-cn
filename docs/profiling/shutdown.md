@@ -10,10 +10,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 89a08808387067b934bfd826feb2dcfbcf949aab
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74778279"
 ---
 # <a name="shutdown"></a>关闭
@@ -33,7 +33,7 @@ VSPerfCmd.exe /Shutdown[:Timeout]
 `Timeout`
 - （可选）如果指定，则此选项将在指定的秒数后返回，而不会关闭探查器或分析数据文件。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [VSPerfCmd](../profiling/vsperfcmd.md)
 - [分析独立应用程序](../profiling/command-line-profiling-of-stand-alone-applications.md)
 - [分析 ASP.NET Web 应用程序](../profiling/command-line-profiling-of-aspnet-web-applications.md)

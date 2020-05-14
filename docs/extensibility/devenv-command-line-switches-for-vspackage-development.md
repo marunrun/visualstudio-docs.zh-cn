@@ -1,5 +1,5 @@
 ---
-title: VSPackage 开发的 Devenv 命令行开关 |Microsoft Docs
+title: 用于 VSPackage 开发的 Devenv 命令线交换机 |微软文档
 ms.date: 12/10/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,43 +13,43 @@ helpviewer_keywords:
 - command line, switches
 - Visual Studio SDK, command-line switches
 ms.assetid: d65d2c04-dd84-42b0-b956-555b11f5a645
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 289f31c503143dc2b992717483f4d8701414e09d
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: ad3a5125a730b9230959bbf9342b4c0a4823c4d3
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66348053"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80712195"
 ---
-# <a name="devenv-command-line-switches-for-vspackage-development"></a>VSPackage 开发的 Devenv 命令行开关
+# <a name="devenv-command-line-switches-for-vspackage-development"></a>用于 VSPackage 开发的 Devenv 命令行交换机
 
-Visual Studio 允许开发人员自动执行任务命令行中的，执行时`devenv.exe`，启动 Visual Studio IDE 的文件。
+可视化工作室允许开发人员在执行启动`devenv.exe`Visual Studio IDE 的文件时自动执行命令行的任务。
 
  任务包括：
 
-- 在从 IDE 外部的预配置中部署应用程序。
+- 从 IDE 外部部署预设计配置中的应用程序。
 
-- 自动使用预设的生成项目的生成设置，或调试配置。
+- 使用预设生成设置或调试配置自动生成项目。
 
-- 在 IDE 之外，在特定配置中，IDE 加载中的所有内容。 此外可以自定义在启动时 IDE。
+- 在特定配置中加载 IDE，全部来自 IDE 外部。 您还可以在启动时自定义 IDE。
 
-## <a name="guidelines-for-switches"></a>开关的准则
+## <a name="guidelines-for-switches"></a>开关指南
 
-Visual Studio 文档介绍了用户级`devenv`命令行开关。 有关详细信息，请参阅[Devenv 命令行开关](../ide/reference/devenv-command-line-switches.md)。 `devenv`工具还支持用于 VSPackage 开发、 部署和调试的其他命令行开关。
+Visual Studio 文档描述了用户级`devenv`命令行交换机。 有关详细信息，请参阅[Devenv 命令行开关](../ide/reference/devenv-command-line-switches.md)。 该工具`devenv`还支持其他命令行交换机，这些开关对 VSPackage 开发、部署和调试非常有用。
 
 | 命令行开关 | 描述 |
 |---------------------| - |
-| `/ResetSkipPkgs` | 清除已添加的用户想要避免加载有问题的 Vspackage，请启动 Visual Studio 的所有跳过加载选项。 SkipLoading 标记的状态禁用 VSPackage 加载。 清除这些标记将重新启用 VSPackage 的加载。<br /><br /> 此开关不带参数。 |
-| `/RootSuffix` | 启动 Visual Studio 中通过使用备用位置。 通过 Visual Studio SDK 安装程序创建的快捷方式运行以下命令：<br /><br /> `devenv /RootSuffix exp`<br /><br /> 在这种情况下，`exp`标识具有特定的后缀的位置 (例如，`10.0Exp`而不是`10.0`)。 实验实例，可调试的 VSPackage 单独从要用来编写代码的 Visual Studio 的实例。<br /><br /> 此开关可以接受任何字符串，标识已使用 VSRegEx.exe 创建的位置。 有关详细信息，请参阅[实验实例](../extensibility/the-experimental-instance.md)。 |
-| `/SafeMode` | 在安全模式下，加载默认 IDE 和服务将启动 Visual Studio。 `/SafeMode`参数可防止所有第三方 VSPackages 加载 Visual Studio 启动时，确保执行稳定。<br /><br /> 此开关不带参数。 |
-| `/Setup` | 强制 Visual Studio 合并描述菜单、 工具栏和命令组从所有可用的 Vspackage 的资源元数据。 只能以管理员身份运行此命令。 <br /><br /> 此开关不带参数。 `devenv /Setup` 命令通常作为安装过程的最后一步给出。 使用`/Setup`开关不会启动 IDE。|
-| `/Splash` | 像往常一样，屏幕上，然后显示一条消息框显示在主 IDE 前，显示了 Visual Studio 启动画面。 消息框，您研究初始屏幕 （例如，若要检查的 VSPackage 产品图标）。<br /><br /> 此开关不带参数。 |
+| `/ResetSkipPkgs` | 清除希望避免加载有问题的 VS 包的用户添加的所有跳过加载选项，然后启动 Visual Studio。 跳过加载标记的存在会禁用 VSPackage 的加载。 清除标记可重新启用 VSPackage 的加载。<br /><br /> 此开关不带参数。 |
+| `/RootSuffix` | 使用备用位置启动可视化工作室。 以下命令由 Visual Studio SDK 安装程序创建的快捷方式运行：<br /><br /> `devenv /RootSuffix exp`<br /><br /> 在这种情况下，`exp`标识具有特定后缀的位置（例如，`10.0Exp`而不是`10.0`。 实验实例允许您将 VSPackage 与用于编写代码的 Visual Studio 实例分开调试。<br /><br /> 此开关可以采用任何使用 VSRegEx.exe 标识已创建位置的字符串。 有关详细信息，请参阅[实验实例](../extensibility/the-experimental-instance.md)。 |
+| `/SafeMode` | 在安全模式下启动 Visual Studio，仅加载默认 IDE 和服务。 该`/SafeMode`交换机可防止所有第三方 VSPackages 在 Visual Studio 启动时加载，从而确保稳定执行。<br /><br /> 此开关不带参数。 |
+| `/Setup` | 强制 Visual Studio 合并资源元数据，这些元数据描述所有可用 VSPackages 中的菜单、工具栏和命令组。 您只能以管理员身份运行此命令。 <br /><br /> 此开关不带参数。 `devenv /Setup` 命令通常作为安装过程的最后一步给出。 使用`/Setup`交换机不会启动 IDE。|
+| `/Splash` | 像往常一样显示可视化工作室初始屏幕，然后在显示主 IDE 之前显示一个消息框。 消息框允许您研究初始屏幕（例如，检查 VSPackage 产品图标）。<br /><br /> 此开关不带参数。 |
 
 ## <a name="see-also"></a>请参阅
 
-- [添加命令行开关](../extensibility/adding-command-line-switches.md)
+- [添加命令行交换机](../extensibility/adding-command-line-switches.md)
 - [Devenv 命令行开关](../ide/reference/devenv-command-line-switches.md)

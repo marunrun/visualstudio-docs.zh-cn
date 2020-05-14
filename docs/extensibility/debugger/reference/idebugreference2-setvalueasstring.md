@@ -1,5 +1,5 @@
 ---
-title: IDebugReference2::SetValueAsString |Microsoft Docs
+title: IDebug参考2：：设置价值字符串 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugReference2::SetValueAsString
 ms.assetid: 9a508ced-fd54-44f5-bb42-ec15c80384d7
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 2cb58326f36e88768ab9144f08ded8c85410e1c9
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: c8414ce5f53acec2a30ff681ff0bab8ddc919310
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66339814"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80720293"
 ---
 # <a name="idebugreference2setvalueasstring"></a>IDebugReference2::SetValueAsString
-设置引用的字符串值。 留待将来使用。
+设置字符串中的引用的值。 保留供将来使用。
 
 ## <a name="syntax"></a>语法
 
@@ -45,13 +45,13 @@ int SetValueAsString ( 
 
 ## <a name="parameters"></a>参数
 `pszValue`\
-[in]字符串形式的值。
+[在]作为字符串的值。
 
 `dwRadix`\
-[in]用于格式化数值的任何信息的基数。
+[在]用于格式化任何数值信息的半径。
 
 `dwTimeout`\
-[in]最大时间 （毫秒），此方法返回前等待。 使用`INFINITE`无限期等待。
+[在]从此方法返回之前等待的最大时间（以毫秒为单位）。 用于`INFINITE`无限期等待。
 
 ## <a name="return-value"></a>返回值
  始终返回 `E_NOTIMPL`。

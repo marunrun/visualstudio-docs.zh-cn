@@ -16,12 +16,12 @@ caps.latest.revision: 18
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 8ede112706cfc0291d2523424192f123c9929771
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
-ms.translationtype: MTE95
+ms.openlocfilehash: 3557e830ba90b1e9f32b01c344867c5370e7425c
+ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75846965"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82586192"
 ---
 # <a name="additional-resources-for-msbuild"></a>有关 MSBuild 的其他资源
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "75846965"
  [MSBuild 第 9 频道网站](https://channel9.msdn.com/tags/MSBuild/)  
  包含有关 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 的信息，以及 Web 上其他 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 站点的链接。  
   
- [MSBuild Team Blog](https://blogs.msdn.com/msbuild/)（MSBuild 团队博客）  
+ [MSBuild Team Blog](https://blogs.msdn.com/b/msbuild/)（MSBuild 团队博客）  
  包含由 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 产品团队编写的信息、链接和更新。  
   
  [Visual Studio MSBuild 论坛](https://social.msdn.microsoft.com/forums/en-US/msbuild/threads/)  
@@ -43,4 +43,4 @@ ms.locfileid: "75846965"
 ## <a name="see-also"></a>另请参阅  
  [MSBuild](msbuild.md)   
  [MSBuild 概念](../msbuild/msbuild-concepts.md)   
- [MSBuild 参考](../msbuild/msbuild-reference.md)
+ [MSBuild 引用](../msbuild/msbuild-reference.md)

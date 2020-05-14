@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 3ef53be4d3894dd1d22a3afbde9dbf631b472aa2
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75569564"
 ---
 # <a name="find-and-replace-environment-options-dialog-box"></a>“选项”对话框 ->“环境”->“查找和替换”
@@ -53,6 +53,6 @@ ms.locfileid: "75569564"
 
 如果选择此选项，从“编辑”菜单选择“查找和替换”窗口的任何视图时，可以将当前编辑器插入点任何一侧的文本粘贴到“查找内容”字段    。 清除此选项可以将上次搜索的最后一个搜索模式用作“查找内容”字符串  。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [查找和替换文本](../../ide/finding-and-replacing-text.md)

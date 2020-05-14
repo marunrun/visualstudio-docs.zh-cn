@@ -1,27 +1,27 @@
 ---
-title: Description 元素 （Visual Studio 模板） |Microsoft Docs
+title: 描述元素（视觉工作室模板） |微软文档
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
 helpviewer_keywords:
 - Description element [Visual Studio project templates]
 ms.assetid: 6e12be73-081f-4c7d-898f-027c307a9fe1
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 68b9df33051de1c4b4bb70321e0caff7df2e91f4
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 2ea10b43662d2818792dbc57aeac09a056cb63ce
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66348110"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80712262"
 ---
-# <a name="description-element-visual-studio-templates"></a>Description 元素 （Visual Studio 模板）
-指定模板的说明中所示**新的项目**或**添加新项**对话框。
+# <a name="description-element-visual-studio-templates"></a>描述元素（可视化工作室模板）
+指定模板在 **"新项目**"或"**添加新项目**"对话框中显示的说明。
 
- \<VSTemplate> \<TemplateData> \<Description>
+ \<VStemplate \<>模板数据\<>说明>
 
 ## <a name="syntax"></a>语法
 
@@ -42,8 +42,8 @@ ms.locfileid: "66348110"
 
 |特性|描述|
 |---------------|-----------------|
-|`Package`|适用于高级的用户情形的可选属性。<br /><br /> 指定 Visual Studio 包的 GUID id。|
-|`ID`|适用于高级的用户情形的可选属性。<br /><br /> 指定 Visual Studio 资源 id。|
+|`Package`|可选属性，用于高级用户方案。<br /><br /> 指定 Visual Studio 包 ID 的 GUID。|
+|`ID`|可选属性，用于高级用户方案。<br /><br /> 指定 Visual Studio 资源 ID。|
 
 ### <a name="child-elements"></a>子元素
  无。
@@ -52,18 +52,18 @@ ms.locfileid: "66348110"
 
 |元素|描述|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|必需的元素。<br /><br /> 将此模板分类并定义此模板在 **“新建项目”** 或 **“添加新项”** 对话框中的显示方式。|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|必需元素。<br /><br /> 将此模板分类并定义此模板在 **“新建项目”** 或 **“添加新项”** 对话框中的显示方式。|
 
 ## <a name="text-value"></a>文本值
- 文本值是必需的除非`Package`和`ID`使用属性。
+ 若未使用 `Package` 和 `ID` 属性，则必须提供文本值。
 
- 此文本提供模板的说明。
+ 文本提供模板的说明。
 
 ## <a name="remarks"></a>备注
- `Description` 是 `TemplateData` 元素的必需子元素。
+ `Description`是`TemplateData`元素的必需子元素。
 
 ## <a name="example"></a>示例
- 下面的示例演示用于的项目模板的元数据[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]应用程序。
+ 下面的示例显示了[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]应用程序的项目模板的元数据。
 
 ```
 <VSTemplate Type="Project" Version="3.0.0"
@@ -90,5 +90,5 @@ ms.locfileid: "66348110"
 ```
 
 ## <a name="see-also"></a>请参阅
-- [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
+- [可视化工作室模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
 - [创建项目和项模板](../ide/creating-project-and-item-templates.md)

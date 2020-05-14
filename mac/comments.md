@@ -6,10 +6,10 @@ ms.author: cobey
 ms.date: 05/06/2018
 ms.assetid: 0FE5E929-1846-4F48-B5E3-70990FAF9504
 ms.openlocfilehash: 2966d8b89a2609d3fbfc2b6b4561288433641ca1
-ms.sourcegitcommit: 7fbfb2a1d43ce72545096c635df2b04496b0be71
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "67693115"
 ---
 # <a name="comments"></a>注释
@@ -48,6 +48,6 @@ ms.locfileid: "67693115"
 *)
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [为代码添加注释（Windows 上的 Visual Studio）](/visualstudio/ide/quickstart-editor#comment-out-code)

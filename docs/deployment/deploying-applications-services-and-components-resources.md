@@ -14,11 +14,11 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: b7c322b960360231c2e8a1d2aa1a9920bbcf5521
-ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66263304"
+ms.lasthandoff: 03/20/2020
+ms.locfileid: "79300851"
 ---
 # <a name="overview-of-deployment-in-visual-studio"></a>Visual Studio 中的部署概述
 
@@ -37,7 +37,7 @@ ms.locfileid: "66263304"
 - [文件系统](#file-system)
 - [自定义目标（如 IIS、FTP 等）](#custom-targets-iis-ftp)，包括所有任意的 Web 服务器。
 
-在“发布”选项卡上，可以选择现有发布配置文件、导入现有发布配置文件或使用此处所述的选项新建发布配置文件。 若要查看教程了解 IDE 中针对不同应用类型的发布选项，请参阅[初探部署](../deployment/deploying-applications-services-and-components.md)。
+在“发布”  选项卡上，可以选择现有发布配置文件、导入现有发布配置文件或使用此处所述的选项新建发布配置文件。 若要查看教程了解 IDE 中针对不同应用类型的发布选项，请参阅[初探部署](../deployment/deploying-applications-services-and-components.md)。
 
 ## <a name="azure-app-service"></a>Azure 应用服务
 
@@ -95,7 +95,7 @@ ms.locfileid: "66263304"
 
 利用自定义目标，可以将应用程序部署到 Azure 应用服务、Azure 虚拟机或本地文件系统以外的目标。 它可以部署到你有权访问的文件系统或任何其他服务器（Internet 或 Intranet），包括其他云服务上的服务器。 它可以与 Web 部署（文件或 .ZIP）和 FTP 配合使用。
 
-如果选择自定义目标，Visual Studio 会提示输入配置文件名称，然后收集包括目标服务器或位置、站点名称和凭据在内的其他**连接**信息。 可以在“设置”选项卡上控制以下行为：
+如果选择自定义目标，Visual Studio 会提示输入配置文件名称，然后收集包括目标服务器或位置、站点名称和凭据在内的其他**连接**信息。 可以在“设置”  选项卡上控制以下行为：
 
 - 要部署的配置。
 - 是否从目标中删除现有文件。

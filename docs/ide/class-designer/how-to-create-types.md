@@ -18,10 +18,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 881a8ed7f1aceb5f97eaed1f0b9285951d1d39f6
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75590171"
 ---
 # <a name="how-to-create-types-by-using-class-designer"></a>如何：使用类设计器创建类型
@@ -87,7 +87,7 @@ ms.locfileid: "75590171"
 
    自定义属性随即应用于类型。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [如何：创建类型之间的继承](how-to-create-inheritance-between-types.md)
 - [如何：创建类型之间的关联](how-to-create-associations-between-types.md)

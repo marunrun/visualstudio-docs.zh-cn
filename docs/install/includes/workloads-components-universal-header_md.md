@@ -2,16 +2,16 @@
 author: ornellaalt
 ms.author: ornella
 manager: jillfra
-ms.date: 03/02/2019
+ms.date: 03/16/2020
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: include
-ms.openlocfilehash: 0066837f2cbd64fb88cdbf57290eebf0a04bd114
-ms.sourcegitcommit: 3b48ce4649d38a7e3b095bd087739d6131e49d1b
+ms.openlocfilehash: 040a168f45afff9111426aac57cafc32a05c1b12
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76159096"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79437477"
 ---
 本页的表中列出了可用于从命令行安装 Visual Studio 或可指定为 VSIX 清单中的依赖项的 ID。 我们将在发布 Visual Studio 更新时添加其他组件。
 

@@ -2,22 +2,22 @@
 author: ornellaalt
 ms.author: ornella
 manager: jillfra
-ms.date: 03/02/2019
+ms.date: 03/23/2020
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: include
-ms.openlocfilehash: a2a8a5bc03baf51f684777f39f0815699c6c77af
-ms.sourcegitcommit: 3b48ce4649d38a7e3b095bd087739d6131e49d1b
+ms.openlocfilehash: f8f4645c9b69ff0fa7aa332f0716cc07b7a46e8a
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76159248"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80234214"
 ---
 ## <a name="get-support"></a>获取支持
 
 有时，你难免遇到一些问题。 如果 Visual Studio 安装失败，请参阅 [Visual Studio 安装和升级问题疑难解答](../troubleshooting-installation-issues.md)获取分步指南。
 
-对于安装相关问题，我们还提供[实时聊天  ](https://visualstudio.microsoft.com/vs/support/#talktous)（仅限英语）支持选项。
+对于安装相关问题，我们还提供[安装聊天](https://visualstudio.microsoft.com/vs/support/#talktous)（仅限英语）支持选项  。
 
 下面是另外几个支持选项：
 

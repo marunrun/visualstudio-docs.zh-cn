@@ -1,17 +1,18 @@
 ---
 title: 如何购买 Visual Studio 云订阅
 author: evanwindom
-ms.author: lank
+ms.author: v-evwin
 manager: lank
-ms.date: 07/28/2019
+ms.assetid: af1f7888-6942-4515-9475-0928ecf49dab
+ms.date: 03/24/2020
 ms.topic: conceptual
 description: 按月或按年租赁 Visual Studio Professional 或 Visual Studio Enterprise，无需任何长期协定。
-ms.openlocfilehash: c31a6cb89d34456678c82ce683535005f581376d
-ms.sourcegitcommit: dc12a7cb66124596089f01d3e939027ae562ede9
+ms.openlocfilehash: babf05c991bd323f2ebe2385085a1d9fc3b1acf8
+ms.sourcegitcommit: dfa9476b69851c28b684ece66980bee735fef8fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71962953"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80273941"
 ---
 # <a name="buy-visual-studio-professional-and-visual-studio-enterprise-cloud-subscriptions"></a>购买 Visual Studio Professional 和 Visual Studio Enterprise 云订阅
 可从 [Visual Studio Marketplace](https://marketplace.visualstudio.com) 购买 [Visual Studio Professional 和 Visual Studio Enterprise 订阅](https://visualstudio.microsoft.com/subscriptions/)。 这些称为“云订阅”  。
@@ -59,7 +60,7 @@ ms.locfileid: "71962953"
 > [!div class="mx-imgBorder"]
 > ![查看订阅](_img/buy-vs-subscriptions/assign-subscriptions.png)
 
-## <a name="manage-subscriptions"></a>取消续订已购买的云订阅
+## <a name="cancel-renewals-of-cloud-subscriptions-youve-purchased"></a><a name="manage-subscriptions"></a>取消续订已购买的云订阅
 
 * 若要更改已购买的订阅数，请执行以下操作：
 
@@ -118,6 +119,12 @@ ms.locfileid: "71962953"
 - [Visual Studio 订阅支持](https://visualstudio.microsoft.com/vs/support/)
 - [Visual Studio 云订阅计费常见问题解答](vscloud-billing-faq.md)
 - [适用于 CSP 的 Visual Studio 云订阅购买](vscloud-csp.md)
+
+## <a name="see-also"></a>请参阅
+- [Visual Studio 文档](https://docs.microsoft.com/visualstudio/)
+- [Azure DevOps 文档](https://docs.microsoft.com/azure/devops/)
+- [Azure 文档](https://docs.microsoft.com/azure/)
+- [Microsoft 365 文档](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>后续步骤
 购买云订阅

@@ -1,5 +1,5 @@
 ---
-title: IDebugObject::IsNullReference |Microsoft Docs
+title: IDebugObject：：是空引用 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugObject::IsNullReference method
 ms.assetid: 6dbfcdb0-954f-4486-8fac-7ea8d003e3a9
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 1fb6b5c0692ec43feec0cf4de48d9ce730b0032e
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: e4b6e5f2d28d27deb5e4e1ff8278a071ff9110fd
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66323518"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80726515"
 ---
 # <a name="idebugobjectisnullreference"></a>IDebugObject::IsNullReference
-测试此对象是否为 null 引用。
+测试此对象是否为空引用。
 
 ## <a name="syntax"></a>语法
 
@@ -41,13 +41,13 @@ int IsNullReference(
 
 ## <a name="parameters"></a>参数
 `pfIsNull`\
-[out]返回非零值 (`TRUE`) 如果此对象为 null 的引用; 否则，返回零 (`FALSE`)。
+[出]如果此对象为空`TRUE`引用，则返回非零 （ ）， 则返回非零 （ ）否则，返回零`FALSE`（）。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回 S_OK;否则，返回错误代码。
+ 如果成功，返回S_OK;否则，返回错误代码。
 
 ## <a name="remarks"></a>备注
- Null 引用表示一个空的对象或未分配给的对象。
+ 空引用表示空对象或尚未分配给的对象。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)

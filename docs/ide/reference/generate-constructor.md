@@ -8,11 +8,11 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: 3c8259841af4511bd782bca1be222353634638f5
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75569499"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79306787"
 ---
 # <a name="generate-a-constructor-in-visual-studio"></a>在 Visual Studio 中生成构造函数
 

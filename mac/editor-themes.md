@@ -6,10 +6,10 @@ ms.author: cobey
 ms.date: 11/06/2018
 ms.assetid: 4C1B7952-CD45-4132-AD6B-01CF993D83F8
 ms.openlocfilehash: 0c9c58f8da76b09055c1f2b70cd05a44890ce22c
-ms.sourcegitcommit: 7fbfb2a1d43ce72545096c635df2b04496b0be71
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "67691635"
 ---
 # <a name="editor-themes"></a>编辑器主题
@@ -28,7 +28,7 @@ ms.locfileid: "67691635"
 
 找到或创建新主题并将其下载到本地计算机后，可通过执行以下步骤添加它：
 
-1. 选择“颜色主题选项”对话框中的“添加”按钮：  ![颜色主题添加](media/source-editor-image20.png)
+1. 选择“颜色主题选项”对话框中的“添加”按钮：**颜色主题添加**![](media/source-editor-image20.png)
 2. 浏览本地计算机上的主题，并按“打开”  。
 3. 主题将被添加到预安装的主题列表底部。 若要预览主题，请选择它：![颜色主题预览](media/source-editor-image21.png)
 4. 若要应用主题，请按“好的”按钮  。

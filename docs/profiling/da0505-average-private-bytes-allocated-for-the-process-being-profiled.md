@@ -1,5 +1,5 @@
 ---
-title: DA0505：为所分析的进程分配的平均专用字节数 | Microsoft Docs
+title: DA0505：为所分析进程分配的平均专用字节数 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -14,19 +14,19 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: b905b0de69110f5f7cd684deb6fe6c5955bb4b0c
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74777398"
 ---
-# <a name="da0505-average-private-bytes-allocated-for-the-process-being-profiled"></a>DA0505：为所分析的进程分配的平均专用字节数
+# <a name="da0505-average-private-bytes-allocated-for-the-process-being-profiled"></a>DA0505：为所分析进程分配的平均专用字节数
 
 |||
 |-|-|
 |规则 ID|DA0505|
 |类别|资源管理|
-|分析方法|全部|
+|分析方法|All|
 |消息|收集此信息仅用于参考。 进程专用字节计数器测量由正在分析的进程分配的虚拟内存。 报告的值是针对所有测量时间间隔所计算的平均值。|
 |规则类型|信息|
 

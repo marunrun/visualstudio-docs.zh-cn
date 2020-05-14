@@ -10,10 +10,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 7f28d7271fdf33822475a663debed269bb515959
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74777772"
 ---
 # <a name="create-profiler-reports-from-the-command-line"></a>通过命令行创建探查器报告
@@ -26,7 +26,7 @@ ms.locfileid: "74777772"
 |任务|相关内容|
 |----------|---------------------|
 |创建基本报告。  创建全部或部分 VSPerfReport 报告类型。|-   [创建基本报告](../profiling/creating-basic-profiling-reports-from-the-command-line.md)|
-|比较两个分析数据文件。  创建“diff”报告，用于比较两个分析数据文件中的性能数据。|-   [如何：通过命令提示符创建探查器比较报表](../profiling/how-to-create-a-profiler-comparison-report-from-a-command-prompt.md)|
-|查看调用跟踪和 Windows 事件跟踪 (ETW) 数据。  创建调用跟踪报告，报告将列出应用程序函数每个入口点和出口点的计时信息，以及该函数对其他函数的每次调用的计时信息。 或者，创建在分析运行期间收集的所有 ETW 事件的详细列表。|-   [如何：创建调用跟踪报表](../profiling/how-to-create-a-profiling-tools-call-trace-report.md)|
-|筛选报告。  限制报告，使其仅显示代码中的函数，或仅显示分析数据文件中的特定时间。|-   [如何：通过命令行筛选报表](../profiling/how-to-filter-reports-from-the-command-line.md)|
+|比较两个分析数据文件。  创建“diff”报告，用于比较两个分析数据文件中的性能数据。|-   [如何：通过命令提示符创建探查器比较报告](../profiling/how-to-create-a-profiler-comparison-report-from-a-command-prompt.md)|
+|查看调用跟踪和 Windows 事件跟踪 (ETW) 数据。  创建调用跟踪报告，报告将列出应用程序函数每个入口点和出口点的计时信息，以及该函数对其他函数的每次调用的计时信息。 或者，创建在分析运行期间收集的所有 ETW 事件的详细列表。|-   [如何：创建调用跟踪报告](../profiling/how-to-create-a-profiling-tools-call-trace-report.md)|
+|筛选报告。  限制报告，使其仅显示代码中的函数，或仅显示分析数据文件中的特定时间。|-   [如何：从命令行筛选报告](../profiling/how-to-filter-reports-from-the-command-line.md)|
 |创建可移植分析数据文件。  若要更轻松地共享分析数据，可以将分析运行的符号嵌入 .vsp 文件中  。 还可创建经过预先分析的分析数据 (.vsps) 文件，此文件较小，打开速度较快  。|-   [创建可移植的分析数据文件](../profiling/creating-portable-profiling-data-files-from-the-command-line.md)|

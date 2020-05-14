@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentContext2::GetSourceRange | Microsoft Docs
+title: IDebug文档上下文2：：获取来源范围 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugDocumentContext2::GetSourceRange
 ms.assetid: 5903c75e-5390-4d13-9314-1ee276255313
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 210ac493a2b717b901e989dcb248efe29ad3fe75
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 782cf230c38af77da09b49f69c093e2e95bf7199
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66311846"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80731799"
 ---
 # <a name="idebugdocumentcontext2getsourcerange"></a>IDebugDocumentContext2::GetSourceRange
-获取此文档上下文的源的代码范围。
+获取此文档上下文的源代码范围。
 
 ## <a name="syntax"></a>语法
 
@@ -43,18 +43,18 @@ int GetSourceRange( 
 
 ## <a name="parameters"></a>参数
 `pBegPosition`\
-[in、 out]一个[TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md)填充的起始位置的结构。 如果不需要此信息，请将此参数设置为 null 值。
+[进出]用起始位置填充[TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md)结构。 如果不需要此信息，则此参数设置为 null 值。
 
 `pEndPosition`\
-[in、 out]一个[TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md)填充的结束位置的结构。 如果不需要此信息，请将此参数设置为 null 值。
+[进出]用结束位置填充[的TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md)结构。 如果不需要此信息，则此参数设置为 null 值。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，返回`S_OK`;否则，返回错误代码。
 
 ## <a name="remarks"></a>备注
- 源范围是源代码，从当前的语句后，前面代码的语句之后的整个范围。 源范围通常用于混合源语句，其中包括注释，使用反汇编窗口中的代码。
+ 源范围是源代码的整个范围，从当前语句回回，到上次提供代码的语句之后。 源范围通常用于将源语句（包括注释）与拆解窗口中的代码混合。
 
- 若要获取的只是包含在此文档上下文中的代码语句的范围，请调用[GetStatementRange](../../../extensibility/debugger/reference/idebugdocumentcontext2-getstatementrange.md)方法。
+ 要获取本文档上下文中包含的代码语句的范围，请调用[Get语句范围](../../../extensibility/debugger/reference/idebugdocumentcontext2-getstatementrange.md)方法。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md)

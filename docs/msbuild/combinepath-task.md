@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 533f87eba9032efa7dc60ac682bbe400cb640727
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77634430"
 ---
 # <a name="combinepath-task"></a>CombinePath 任务
@@ -31,7 +31,7 @@ ms.locfileid: "77634430"
  下表描述了 [CombinePath 任务](../msbuild/combinepath-task.md)的参数。
 
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
 |`BasePath`|必选 `String` 参数。<br /><br /> 与其他路径组合的基路径。 可以是相对路径、绝对路径或空白。|
 |`Paths`|必选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 要与 BasePath 组合成组合路径的各个路径的列表。 路径可以是相对路径，也可以是绝对路径。|
@@ -41,7 +41,7 @@ ms.locfileid: "77634430"
 
  除上面列出的参数外，此任务还从 <xref:Microsoft.Build.Tasks.TaskExtension> 类继承参数，后者自身继承自 <xref:Microsoft.Build.Utilities.Task> 类。 有关这些其他参数的列表及其说明的信息，请参阅 [TaskExtension 基类](../msbuild/taskextension-base-class.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [任务](../msbuild/msbuild-tasks.md)
 - [任务参考](../msbuild/msbuild-task-reference.md)

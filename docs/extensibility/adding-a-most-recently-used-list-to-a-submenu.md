@@ -1,5 +1,5 @@
 ---
-title: 添加最近使用过的子菜单上的列表 |Microsoft Docs
+title: 将最近使用的列表添加到子菜单 |微软文档
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,50 +7,50 @@ helpviewer_keywords:
 - menus, creating MRU list
 - most recently used
 ms.assetid: 27d4bbcf-99b1-498f-8b66-40002e3db0f8
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6eb32f81947f7359f5912e8a558e8df5002a0b80
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: cf389c0da7ec0aafb6e47dae8f09ffdc3b1d1e4d
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66352400"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80740299"
 ---
-# <a name="add-a-most-recently-used-list-to-a-submenu"></a>添加最近使用过的子菜单上的列表
-本演练基于中的演示[添加到菜单的子菜单](../extensibility/adding-a-submenu-to-a-menu.md)，并演示如何将动态列表添加到子菜单。 动态列表窗体创建最近使用过的 (MRU) 列表的基础。
+# <a name="add-a-most-recently-used-list-to-a-submenu"></a>将最近使用的列表添加到子菜单
+本演练基于[将子菜单添加到菜单](../extensibility/adding-a-submenu-to-a-menu.md)中的演示，并演示如何向子菜单添加动态列表。 动态列表构成创建最近使用 （MRU） 列表的基础。
 
-动态菜单列表开始菜单上的占位符。 每次显示菜单，Visual Studio 集成的开发环境 (IDE) 要求的所有命令都应显示在占位符都提供 VSPackage。 在菜单上，动态列表可以出现任意位置。 但是，动态列表将通常存储，并显示本身，位于子菜单或菜单的底部。 通过使用这些设计模式，可以使命令进行扩展和收缩而不会影响其他命令的菜单上的位置的动态列表。 在此演练中，动态 MRU 列表显示在现有子菜单，通过行分隔子菜单的其余部分的底部。
+动态菜单列表以菜单上的占位符开头。 每次显示菜单时，Visual Studio 集成开发环境 （IDE） 都会向 VSPackage 询问应在占位符处显示的所有命令。 动态列表可能发生在菜单上的任意位置。 但是，动态列表通常由自身存储在子菜单或菜单底部。 通过使用这些设计模式，您可以启用命令的动态列表来展开和收缩，而不会影响菜单上其他命令的位置。 在本演练中，动态 MRU 列表显示在现有子菜单的底部，由一行与子菜单的其余部分分开。
 
-从技术上讲，动态列表还可以应用到工具栏。 但是，我们建议不要使用情况因为工具栏应保持不变，除非用户执行特定步骤，以便对其进行更改。
+从技术上讲，动态列表也可以应用于工具栏。 但是，我们阻止使用该工具栏，因为工具栏应保持不变，除非用户采取特定步骤来更改它。
 
-本演练创建的每次选择其中一个更改它们的顺序的四个项目的 MRU 列表 （选定的项将移至列表的顶部）。
+本演练创建一个 MRU 列表，其中四个项目在每次选择其中一个项目时都会更改其顺序（所选项移动到列表顶部）。
 
-有关详细信息，有关菜单和 *.vsct*文件，请参阅[命令、 菜单和工具栏](../extensibility/internals/commands-menus-and-toolbars.md)。
+有关菜单和 *.vsct*文件的详细信息，请参阅[命令、菜单和工具栏](../extensibility/internals/commands-menus-and-toolbars.md)。
 
-## <a name="prerequisites"></a>系统必备
-要按照本演练的步骤操作，必须安装 Visual Studio SDK。 有关详细信息，请参阅[Visual Studio SDK](../extensibility/visual-studio-sdk.md)。
+## <a name="prerequisites"></a>先决条件
+要按照本演练的步骤操作，必须安装 Visual Studio SDK。 有关详细信息，请参阅[可视化工作室 SDK](../extensibility/visual-studio-sdk.md)。
 
-## <a name="create-an-extension"></a>创建扩展
+## <a name="create-an-extension"></a>创建一个扩展
 
-- 按照中的过程[将子菜单添加到菜单](../extensibility/adding-a-submenu-to-a-menu.md)以下过程中创建修改的子菜单。
+- 按照将[子菜单添加到菜单](../extensibility/adding-a-submenu-to-a-menu.md)中的过程来创建在以下过程中修改的子菜单。
 
-  在本演练中的过程假定 VSPackage 的名称是`TopLevelMenu`，这是使用中的名称[向 Visual Studio 菜单栏添加菜单](../extensibility/adding-a-menu-to-the-visual-studio-menu-bar.md)。
+  本演练中的过程假定 VSPackage 的名称为`TopLevelMenu`，这是在[将菜单添加到 Visual Studio 菜单栏](../extensibility/adding-a-menu-to-the-visual-studio-menu-bar.md)中使用的名称。
 
 ## <a name="create-a-dynamic-item-list-command"></a>创建动态项列表命令
 
-1. 打开*TestCommandPackage.vsct*。
+1. 打开*测试命令包.vsct*.
 
-2. 在`Symbols`部分中，在`GuidSymbol`节点中名为 guidTestCommandPackageCmdSet，添加的符号`MRUListGroup`组和`cmdidMRUList`命令时，按如下所示。
+2. 在名为`Symbols`guidTestCommandPackageCmdSet 的`GuidSymbol`节点中，添加`MRUListGroup`组和命令的`cmdidMRUList`符号，如下所示。
 
     ```csharp
     <IDSymbol name="MRUListGroup" value="0x1200"/>
     <IDSymbol name="cmdidMRUList" value="0x0200"/>
     ```
 
-3. 在`Groups`部分中，现有的组条目后添加声明的组。
+3. 在节中`Groups`，在现有组条目之后添加声明的组。
 
     ```cpp
     <Group guid="guidTestCommandPackageCmdSet" id="MRUListGroup"
@@ -60,7 +60,7 @@ ms.locfileid: "66352400"
 
     ```
 
-4. 在`Buttons`部分中，添加节点来表示新声明的命令之后的现有按钮项。
+4. 在节中`Buttons`，在现有按钮条目之后添加一个节点以表示新声明的命令。
 
     ```csharp
     <Button guid="guidTestCommandPackageCmdSet" id="cmdidMRUList"
@@ -74,34 +74,34 @@ ms.locfileid: "66352400"
     </Button>
     ```
 
-    `DynamicItemStart`标志可使要动态生成的命令。
+    该`DynamicItemStart`标志允许动态生成命令。
 
-5. 生成项目并开始调试以测试新的命令的显示。
+5. 生成项目并开始调试以测试新命令的显示。
 
-    上**TestMenu**菜单上，单击新的子菜单**子菜单**，以显示新的命令**MRU 占位符**。 在下一个过程中实现动态的 MRU 列表的命令后，每当打开子菜单时，将替换此命令标签由该列表。
+    在 **"测试菜单"** 菜单上，单击新的子菜单"**子菜单**"以显示新命令**MRU 占位符**。 在下一个过程中实现命令的动态 MRU 列表后，每次打开子菜单时，此命令标签都将替换为该列表。
 
-## <a name="filling-the-mru-list"></a>填充 MRU 列表
+## <a name="filling-the-mru-list"></a>填写 MRU 列表
 
-1. 在中*TestCommandPackageGuids.cs*之后的现有命令 Id 中, 添加以下代码行`TestCommandPackageGuids`类定义。
+1. 在*TestCommandPackageGuids.cs*中，在`TestCommandPackageGuids`类定义中的现有命令指示后添加以下行。
 
     ```csharp
     public const string guidTestCommandPackageCmdSet = "00000000-0000-0000-0000-00000000"; // get the GUID from the .vsct file
     public const uint cmdidMRUList = 0x200;
     ```
 
-2. 在中*TestCommand.cs*添加以下 using 语句。
+2. 在*TestCommand.cs*添加以下 using 语句。
 
     ```csharp
     using System.Collections;
     ```
 
-3. 最后一个 AddCommand 调用后 TestCommand 构造函数中添加以下代码。 `InitMRUMenu`将在以后定义
+3. 在上次 AddCommand 调用之后的 TestCommand 构造函数中添加以下代码。 稍后将`InitMRUMenu`定义
 
     ```csharp
     this.InitMRUMenu(commandService);
     ```
 
-4. TestCommand 类中添加以下代码。 此代码将初始化的字符串表示要在 MRU 列表上显示的项的列表。
+4. 在 TestCommand 类中添加以下代码。 此代码初始化表示要在 MRU 列表中显示的项的字符串列表。
 
     ```csharp
     private int numMRUItems = 4;
@@ -125,7 +125,7 @@ ms.locfileid: "66352400"
     }
     ```
 
-5. 之后`InitializeMRUList`方法中，添加`InitMRUMenu`方法。 此初始化 MRU 列表菜单命令。
+5. 在`InitializeMRUList`方法之后，添加`InitMRUMenu`方法。 这将初始化 MRU 列表菜单命令。
 
     ```csharp
     private void InitMRUMenu(OleMenuCommandService mcs)
@@ -143,9 +143,9 @@ ms.locfileid: "66352400"
     }
     ```
 
-    MRU 列表中，必须创建每个可能的项的菜单命令对象。 IDE 调用`OnMRUQueryStatus`MRU 列表，直到没有更多的项中的每个项的方法。 在托管代码中，IDE 知道有没有其他项的唯一方法是先创建所有可能的项。 如果你想，您可以将附加项标记为不可见时首先通过使用`mc.Visible = false;`创建菜单命令之后。 这些项可以然后让用户看到更高版本使用`mc.Visible = true;`在`OnMRUQueryStatus`方法。
+    您必须为 MRU 列表中的每个可能项创建菜单命令对象。 IDE 调用`OnMRUQueryStatus`MRU 列表中每个项的方法，直到没有更多项。 在托管代码中，IDE 知道没有更多项的唯一方法是首先创建所有可能的项目。 如果需要，可以在创建菜单命令后使用`mc.Visible = false;`，将其他项标记为最初不可见。 然后，可以使用`mc.Visible = true;``OnMRUQueryStatus`方法稍后使这些项目可见。
 
-6. 之后`InitMRUMenu`方法中，添加以下`OnMRUQueryStatus`方法。 这是设置每个 MRU 项的文本的处理程序。
+6. 在`InitMRUMenu`方法之后，添加以下`OnMRUQueryStatus`方法。 这是为每个 MRU 项设置文本的处理程序。
 
     ```csharp
     private void OnMRUQueryStatus(object sender, EventArgs e)
@@ -162,7 +162,7 @@ ms.locfileid: "66352400"
     }
     ```
 
-7. 之后`OnMRUQueryStatus`方法中，添加以下`OnMRUExec`方法。 这是用于选择 MRU 项的处理程序。 此方法将所选的项移动到列表的顶部，然后在消息框中显示所选的项。
+7. 在`OnMRUQueryStatus`方法之后，添加以下`OnMRUExec`方法。 这是用于选择 MRU 项的处理程序。 此方法将所选项移动到列表顶部，然后在消息框中显示所选项。
 
     ```csharp
     private void OnMRUExec(object sender, EventArgs e)
@@ -192,14 +192,14 @@ ms.locfileid: "66352400"
 
 1. 生成项目并启动调试。
 
-2. 上**TestMenu**菜单上，单击**调用 TestCommand**。 执行此操作将显示一个消息框，指示已选择的命令。
+2. 在 **"测试菜单"** 菜单上，单击 **"调用测试命令**"。 执行此操作将显示一个消息框，指示该命令已选定。
 
     > [!NOTE]
-    > 此步骤需要强制 VSPackage 加载并正确显示 MRU 列表。 如果跳过此步骤中，不显示 MRU 列表。
+    > 此步骤需要强制 VSPackage 加载并正确显示 MRU 列表。 如果跳过此步骤，将不会显示 MRU 列表。
 
-3. 上**测试菜单**菜单上，单击**子菜单**。 在子菜单，如下一个分隔符的结尾显示的四个项列表。 当您单击**3 项**，应会显示一个消息框，将其显示文本，**选定项 3**。 （如果未显示的四个项的列表，请确保您已按照前面步骤中的说明进行操作。）
+3. 在 **"测试菜单"菜单上**，单击 **"子菜单**"。 四个项目的列表显示在子菜单的末尾，位于分隔符下方。 单击项目**3**时，应显示一个消息框并显示文本 **"选定项目 3**"。 （如果未显示四个项目的列表，请确保已遵循前面的步骤中的说明。
 
-4. 再次打开子菜单。 请注意，**项 3**现在位于列表的顶部和其他项已推送下移一个位置。 单击**3 项**再次请注意，该消息框仍显示**选定项 3**，指示文本已正确地移动到与命令标签的新位置。
+4. 再次打开子菜单。 请注意，**项目 3**现在位于列表的顶部，其他项目已向下推一个位置。 再次单击**项目 3**并注意到消息框仍显示 **"选定项目 3"，** 表示文本与命令标签一起正确移动到新位置。
 
 ## <a name="see-also"></a>请参阅
 - [动态添加菜单项](../extensibility/dynamically-adding-menu-items.md)

@@ -3,15 +3,16 @@ title: 使用 Microsoft 帐户 (MSA) 登录 Visual Studio 订阅 | Microsoft Doc
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 07/11/2019
+ms.assetid: 19038bb0-2858-49df-9624-cbf8bfbb5d39
+ms.date: 03/11/2020
 ms.topic: conceptual
 description: 如何使用 Microsoft 帐户 (MSA) 登录 Visual Studio 订阅
-ms.openlocfilehash: 1d144692ad8004037a590a6702d45765cda23a03
-ms.sourcegitcommit: 9fc8b144d4ed1c46aba87c0b7e1d24454e0eea9d
+ms.openlocfilehash: 6bc71eac42ac582b7d714706567be69e78dfa383
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68493086"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233201"
 ---
 # <a name="signing-in-to-your-visual-studio-subscriptions-with-your-microsoft-account-msa"></a>使用 Microsoft 帐户 (MSA) 登录 Visual Studio 订阅
 
@@ -36,10 +37,16 @@ ms.locfileid: "68493086"
 
 ### <a name="q--i-cant-see-my-subscription-where-is-it"></a>问：我看不到我的订阅。 它们托管在哪个位置？
 答：许多用户可能有多个订阅。  如果能够在 https://my.visualstudio.com 登录订阅门户却看不到订阅，则有两个常见原因：
-1. 你使用了其他 Microsoft 帐户登录。  你可能有多个订阅，比如专业版或企业版订阅和 Visual Studio Dev Essentials 成员，而这些订阅与不同的电子邮件地址相关联。 要查看其他订阅，请注销并使用其他 MSA 重新登录。
-2. 你有多个订阅与同一个 MSA 相关联。  要查看与你的 MSA 关联的所有订阅，请访问 https://my.visualstudio.com/subscriptions 并选择你希望使用的订阅。 
+- 你使用了其他 Microsoft 帐户登录。  你可能有多个订阅，比如专业版或企业版订阅和 Visual Studio Dev Essentials 成员，而这些订阅与不同的电子邮件地址相关联。 要查看其他订阅，请注销并使用其他 MSA 重新登录。
+- 你有多个订阅与同一个 MSA 相关联。  要查看与你的 MSA 关联的所有订阅，请访问 https://my.visualstudio.com/subscriptions 并选择你希望使用的订阅。 
 
 如果仍有问题，可联系我们的[订阅支持](https://visualstudio.microsoft.com/subscriptions/support/)团队以获得帮助。  
+
+## <a name="see-also"></a>请参阅
+- [Visual Studio 文档](https://docs.microsoft.com/visualstudio/)
+- [Azure DevOps 文档](https://docs.microsoft.com/azure/devops/)
+- [Azure 文档](https://docs.microsoft.com/azure/)
+- [Microsoft 365 文档](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>后续步骤
 成功登录到订阅门户后，建议访问 https://my.visualstudio.com/benefits 上的“权益”页，并浏览适合你的强大工具、服务和产品。  

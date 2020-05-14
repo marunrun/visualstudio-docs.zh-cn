@@ -21,11 +21,11 @@ ms.workload:
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.openlocfilehash: d8e6e3a857c9bbf5577cf395f698f64cfb11bddc
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76114569"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79307225"
 ---
 # <a name="install-visual-studio"></a>安装 Visual Studio
 

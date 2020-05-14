@@ -9,10 +9,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 63b6b9479347b076b7bd9e350e80e4bfa2a36d69
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75594820"
 ---
 # <a name="how-to-specify-the-sample-rate-for-a-load-test-run-setting"></a>如何：为负载测试运行设置指定采样率
@@ -38,19 +38,19 @@ ms.locfileid: "75594820"
 
 1. 打开一个负载测试。
 
-     “负载测试编辑器”随即显示  。 其中显示负载测试树。
+     此时将显示“负载测试编辑器”  。 其中显示负载测试树。
 
 2. 在负载测试树的“运行设置”文件夹中，选择要为其指定采样率的运行设置  。
 
-3. 在“视图”菜单上选择“属性窗口”   。
+3. 在“视图”菜单上选择“属性”窗口。  
 
      负载运行设置的类别和属性将显示在“属性”窗口中  。
 
 4. 在“采样率”属性中，输入一个时间值以指示负载测试收集性能计数器数据的频率  。
 
-5. 更改完此属性后，请选择“文件”菜单上的“保存”   。 然后，可以使用新的“采样率”值来运行负载测试  。
+5. 更改完此属性后，请选择“文件”菜单上的“保存”。   然后，可以使用新的“采样率”值来运行负载测试  。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [配置负载测试运行设置](../test/configure-load-test-run-settings.md)
 - [负载测试方案属性](../test/load-test-scenario-properties.md)

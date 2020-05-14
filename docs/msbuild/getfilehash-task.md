@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a8f3de9a4f2fe848e1cbd41e14e82498845ca2cf
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77578659"
 ---
 # <a name="getfilehash-task"></a>GetFileHash 任务
@@ -32,7 +32,7 @@ ms.locfileid: "77578659"
 
  下表描述了 `GetFileHash` 任务的参数。
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
 |`Files`|必选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br />要进行哈希处理的文件。|
 |`Items`|<xref:Microsoft.Build.Framework.ITaskItem>`[]` 输出参数。<br /><br />`Files` 输入以及文件哈希的其他元数据集。|
@@ -63,7 +63,7 @@ ms.locfileid: "77578659"
 </Project>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [任务](../msbuild/msbuild-tasks.md)
 

@@ -17,10 +17,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 282bb801625429d639e625a0a5edb02a8fb4da25
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74777980"
 ---
 # <a name="vsperfreport"></a>VSPerfReport
@@ -48,7 +48,7 @@ VSPerfReport [/U] /diff vspfilename1 vspfilename2 [/options]
 ## <a name="general-report-options"></a>常规报告选项
  下表说明了常规报表格式设置选项和用于选择要报告的数据的选项。
 
-|选项|说明|
+|选项|描述|
 |-------------|-----------------|
 |**U**|报表输出和重定向控制台输出是以 Unicode 形式写入的。 必须是指定的第一个选项。|
 |**Summary:** [*types*]|创建一个或多个类型的报表。<br /><br /> -   `All` - 生成所有报表类型。<br />-   `CallerCallee` - 函数间的父/子关系。<br />-   `Function` - 调用的函数。<br />-   `CallTree` - 所调用函数的层次结构。<br />-   `Counter` - 所有标记，以及 Windows 性能计数器值。<br />-   `Ip` - 分析的说明。<br />-   `Life` - 已分配对象的生存期（在收集分配数据后可用）。<br />-   `Line` 源代码行配置文件数据。<br />-   `Header` - 报表包含文件头信息。<br />-   `Mark` 所有标记。<br />-   `Module` - 分析的模块。<br />-   `Process` - 分析的进程。<br />-   `Thread` - 分析的线程。<br />-   `Type` - 分配的类型。<br />-   `Contention` - 资源争用。<br />-   `RuleWarnings` - 性能规则问题<br />-   `ETW` - 运行分析期间收集的所有 Windows 事件跟踪 (ETW) 事件。 .etl 数据文件必须位于其原始位置，或位于包含 .vsp 或 .vsps 文件的目录中。|
@@ -68,7 +68,7 @@ VSPerfReport [/U] /diff vspfilename1 vspfilename2 [/options]
 ## <a name="filter-options"></a>筛选器选项
  下表说明了用于筛选可用数据的选项。
 
-|选项|说明|
+|选项|描述|
 |-------------|-----------------|
 |**JustMyCode**[ **:** [`caller`][,`callee`]]|仅显示用户应用程序函数调用；隐藏系统调用。<br /><br /> - 无参数 - 隐藏所有系统函数。<br />-   `caller` - 显示调用应用程序函数的系统函数的一个级别。<br />-   `callee` - 显示由用户应用程序函数调用的系统函数的一个级别。|
 |**StartTime:** [*value*]|仅显示此值（以毫秒为单位）之后收集的数据。|
@@ -82,7 +82,7 @@ VSPerfReport [/U] /diff vspfilename1 vspfilename2 [/options]
 ## <a name="difference-report-options"></a>差异报告选项
  下表说明用于比较报表文件的选项。
 
-|选项|说明|
+|选项|描述|
 |-------------|-----------------|
 |**Diff**  `vspfile1 vspfile2`|比较两个报表文件（.vsp 或 .vsps）文件   。 使用 diff 选项将忽略摘要选项。|
 |**Diff:** [*value*]|低于此阈值时，两个值之间的差异将被忽略。 此外，具有低于此阈值的值的数据将不会显示。|

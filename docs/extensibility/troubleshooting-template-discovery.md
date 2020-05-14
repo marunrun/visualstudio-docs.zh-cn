@@ -1,75 +1,75 @@
 ---
-title: 在 Visual Studio 中的模板发现疑难解答 |Microsoft Docs
+title: 在可视化工作室中排除模板发现 |微软文档
 ms.date: 01/02/2018
 ms.topic: conceptual
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b3c5558079772a8ddc4c4826ba68d1866c220ba2
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 078d06c797c3b228c1ea5b1d836dceb0394b3174
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67823981"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80698937"
 ---
-# <a name="troubleshooting-template-installation"></a>模板安装故障排除
+# <a name="troubleshooting-template-installation"></a>故障排除模板安装
 
-如果遇到问题，部署项目或项模板，则可以启用诊断日志记录。
+如果在部署项目或项目模板时遇到问题，可以启用诊断日志记录。
 
 ::: moniker range="vs-2017"
 
-1. 创建 pkgdef 文件中的*Common7\IDE\CommonExtensions*为您的安装文件夹。 例如， *C:\Program Files (x86) \Microsoft Visual Studio\2017\Enterprise\Common7\IDE\CommonExtensions\EnablePkgDefLogging.pkgdef*。
+1. 在*公用 7_IDE_公用扩展文件夹中*为安装创建 pkgdef 文件。 例如 *，C：_程序文件 （x86）\微软可视化工作室\2017_企业_通用7_IDE_通用扩展\启用PkgDef_pkgdef*。
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-1. 创建 pkgdef 文件中的*Common7\IDE\CommonExtensions*为您的安装文件夹。 例如， *C:\Program Files (x86) \Microsoft Visual Studio\2019\Enterprise\Common7\IDE\CommonExtensions\EnablePkgDefLogging.pkgdef*。
+1. 在*公用 7_IDE_公用扩展文件夹中*为安装创建 pkgdef 文件。 例如 *，C：_程序文件 （x86）\微软可视化工作室\2019_企业_通用7_IDE_通用扩展\启用PkgDef_pkgdef*。
 
 ::: moniker-end
 
-2. 以下代码添加到 pkgdef 文件：
+2. 将以下内容添加到 pkgdef 文件：
 
     ```
     [$RootKey$\VsTemplate]
     "EnableTemplateDiscoveryLog"=dword:00000001
     ```
 
-3. 打开[开发人员命令提示](/dotnet/framework/tools/developer-command-prompt-for-vs)进行安装和运行`devenv /updateConfiguration`。
+3. 打开安装并运行`devenv /updateConfiguration`的[开发人员命令提示。](/dotnet/framework/tools/developer-command-prompt-for-vs)
 
 ::: moniker range="vs-2017"
 
-4. 打开 Visual Studio，并启动的新项目和新项对话框来初始化两个模板树。
+4. 打开可视化工作室并启动"新项目"和"新项目"对话框，以初始化两个模板树。
 
-   模板日志现在显示在 **%LOCALAPPDATA%\Microsoft\VisualStudio\15.0_[instanceid]\VsTemplateDiagnosticsList.csv** （对应于您的 Visual Studio 实例的安装 ID 的实例 id）。 每个模板树初始化附加到此日志条目。
+   模板日志现在以 **%LOCALAPPDATA%*Microsoft_VisualStudio_15.0_[实例id]\VsTemplate诊断列表.csv（** 实例id对应于可视化工作室实例的安装 ID） 中显示。 每个模板树初始化都会将条目追加到此日志。
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-4. 打开 Visual Studio 和启动**创建一个新项目**并**新项**对话框初始化这两个模板树。
+4. 打开可视化工作室并启动 **"创建新项目和****新项目"** 对话框，以初始化两个模板树。
 
-   模板日志现在显示在 **%LOCALAPPDATA%\Microsoft\VisualStudio\16.0_[instanceid]\VsTemplateDiagnosticsList.csv** （对应于您的 Visual Studio 实例的安装 ID 的实例 id）。 每个模板树初始化附加到此日志条目。
+   模板日志现在以 **%LOCALAPPDATA%*Microsoft_VisualStudio_16.0_[实例id]\VsTemplate诊断列表.csv（** 实例id对应于可视化工作室实例的安装 ID） 中显示。 每个模板树初始化都会将条目追加到此日志。
 
 ::: moniker-end
 
 日志文件包含以下列：
 
-- **FullPathToTemplate**，其中包含以下值：
+- **FullPathtoTemplate**， 具有以下值：
 
   - 1 表示基于清单的部署
 
-  - 0 为基于磁盘的部署的
+  - 0 表示基于磁盘的部署
 
-- **TemplateFileName**
+- **模板文件名称**
 
 - 其他模板属性
 
 > [!NOTE]
-> 若要禁用日志记录，请删除该 pkgdef 文件，或更改的值`EnableTemplateDiscoveryLog`到`dword:00000000`，然后运行`devenv /updateConfiguration`试。
+> 要禁用日志记录，请删除 pkgdef 文件，或将 的值`EnableTemplateDiscoveryLog`更改为`dword:00000000`，然后再次`devenv /updateConfiguration`运行。
 
 ## <a name="see-also"></a>请参阅
 
-- [创建自定义项目和项模板](creating-custom-project-and-item-templates.md)
+- [创建自定义项目和项目模板](creating-custom-project-and-item-templates.md)

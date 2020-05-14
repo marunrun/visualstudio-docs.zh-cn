@@ -10,11 +10,11 @@ ms.workload:
 - multiple
 author: mikejo5000
 ms.openlocfilehash: 2a57d79fb64675f90edf50e6a0d7d50b8a3c6fd7
-ms.sourcegitcommit: 1efb6b219ade7c35068b79fbdc573a8771ac608d
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78169412"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79307003"
 ---
 # <a name="exploration-bounds"></a>浏览边界
 
@@ -166,7 +166,7 @@ MaxRuns  和 MaxRunsWithUniquePaths  这两个设置的关系如下所示：
 <a name="testemissionfilter"></a>
 ## <a name="testemissionfilter"></a>TestEmissionFilter
 
-指示 IntelliTest 应发出的测试类型。 可能的值为：
+指示 IntelliTest 应发出的测试类型。 可能的值包括：
 
 * 全部  - 对所有内容（包括假设冲突）发出测试。
 * FailuresAndIncreasedBranchHits  （默认）- 对所有唯一故障发出测试，且每当测试用例按 [TestEmissionBranchHits](#testemissionbranchhits) 的控制，增加覆盖率时发出测试。
@@ -184,6 +184,6 @@ TestEmissionBranchHits = 1  将产生非常小的测试套件，套件将涵盖 
 
 此选项的默认值是 TestEmissionBranchHits = 2  ，这将生成更具表达意义的测试套件，也更适合检测将来的回归错误。
 
-## <a name="got-feedback"></a>是否获得反馈？
+## <a name="got-feedback"></a>有反馈？
 
 在[开发人员社区](https://developercommunity.visualstudio.com/content/idea/post.html?space=8)上发布想法和功能请求。

@@ -1,5 +1,5 @@
 ---
-title: IDebugProgram2::Terminate | Microsoft Docs
+title: IDebugProgram2：：终止 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProgram2::Terminate
 ms.assetid: 4d3127d3-b1e9-4b28-ac22-2f2eea255f86
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 16a6d60173090642bda7d8fd940ecf0699e1d7ec
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 913c90e34e308ce5bb4ceecface739afc8d03f3d
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66331499"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80722742"
 ---
 # <a name="idebugprogram2terminate"></a>IDebugProgram2::Terminate
 终止程序。
@@ -38,13 +38,13 @@ int Terminate();
 ```
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，返回`S_OK`;否则，返回错误代码。
 
 ## <a name="remarks"></a>备注
- 如果可能，将终止并从进程; 中卸载程序否则，调试引擎 (DE) 将执行任何必要的清理。
+ 如果可能，程序将被终止并从进程卸载;否则，调试引擎 （DE） 将执行任何必要的清理。
 
- 此方法或[Terminate](../../../extensibility/debugger/reference/idebugprocess2-terminate.md) IDE 中，通常以响应停止所有调试用户调用方法。 此方法的实现应，理想情况下，终止过程中的程序。 如果无法做到这一点，DE 应运行此过程中的其他任何阻止程序 （和执行任何必要的清理）。 如果`IDebugProcess2::Terminate`由 IDE 调用方法，将一段时间后终止整个过程`IDebugProgram2::Terminate`调用方法。
+ 此方法或[终止](../../../extensibility/debugger/reference/idebugprocess2-terminate.md)方法由 IDE 调用，通常是响应用户停止所有调试。 理想情况下，此方法的实现应在进程中终止程序。 如果这是不可能的，DE 应阻止程序在此进程中再运行任何（并进行任何必要的清理）。 如果`IDebugProcess2::Terminate`IDE 调用了该方法，则整个进程将在调用`IDebugProgram2::Terminate`该方法后的某个时间终止。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)
-- [Terminate](../../../extensibility/debugger/reference/idebugprocess2-terminate.md)
+- [终止](../../../extensibility/debugger/reference/idebugprocess2-terminate.md)

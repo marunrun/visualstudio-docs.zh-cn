@@ -12,11 +12,11 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: 5befdfb5f6974ff7b042319121a27c3628757b6e
-ms.sourcegitcommit: 0d8488329263cc0743a89d43f6de863028e982ff
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75678982"
+ms.lasthandoff: 03/20/2020
+ms.locfileid: "79300887"
 ---
 # <a name="step-2-create-a-django-app-with-views-and-page-templates"></a>步骤 2：使用视图和页面模板创建 Django 应用
 

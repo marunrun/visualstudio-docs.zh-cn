@@ -29,15 +29,15 @@ manager: jillfra
 ms.workload:
 - uwp
 ms.openlocfilehash: cec66cdb2de3f89358cd0ee90867154cc374a7fd
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75568199"
 ---
 # <a name="options-text-editor-xaml-miscellaneous"></a>选项, 文本编辑器, XAML, 杂项
 
-使用“杂项”属性页以指定如何在 XAML 文档中设置元素和特性的格式  。 若要打开“选项”  对话框，请单击“工具”  菜单，然后单击“选项”  。 要访问“杂项”属性页，请展开“文本编辑器” > “XAML” > “杂项节点”     。
+使用“杂项”属性页以指定如何在 XAML 文档中设置元素和特性的格式  。 若要打开“选项”  对话框，请单击“工具”  菜单，然后单击“选项”  。 要访问“杂项”属性页，请展开“文本编辑器” **“XAML”** “杂项节点”   >    >   。
 
 ## <a name="auto-insert"></a>自动插入
 
@@ -54,6 +54,6 @@ ms.locfileid: "75568199"
 
 使用此设置控制何时自动生成错误和警告。 有关详细信息，请参阅 [XAML 错误和警告](../../xaml-tools/xaml-errors-warnings.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [WPF 中的 XAML](/dotnet/framework/wpf/advanced/xaml-in-wpf)

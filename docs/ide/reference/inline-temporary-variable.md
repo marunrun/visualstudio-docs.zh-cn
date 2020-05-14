@@ -11,10 +11,10 @@ dev_langs:
 ms.workload:
 - dotnet
 ms.openlocfilehash: 8f0199436f5f9b1013a4c49cfb5909e760c73dcc
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75568862"
 ---
 # <a name="inline-a-temporary-variable-refactoring"></a>“内联临时变量”重构
@@ -25,11 +25,11 @@ ms.locfileid: "75568862"
 
 - Visual Basic
 
-**功能：** 删除临时变量并将其替换为其值。
+ 功能：删除临时变量并将其替换为其值。
 
-**使用时机：** 使用临时变量会使代码难以理解时。
+ 时机：使用临时变量会使代码难以理解时。
 
-操作原因：  删除临时变量可使代码更易于理解。
+ 原因：删除临时变量可使代码更易于理解。
 
 ## <a name="how-to"></a>操作说明
 
@@ -62,6 +62,6 @@ ms.locfileid: "75568862"
 
       ![内联结果 - Visual Basic](media/inline-result-vb.png)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [重构](../refactoring-in-visual-studio.md)

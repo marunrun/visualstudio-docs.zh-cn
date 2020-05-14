@@ -1,5 +1,5 @@
 ---
-title: IDebugCoreServer3::DisableAutoAttach |Microsoft Docs
+title: IDebugCoreServer3：:D可自动附加 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugCoreServer3::DisableAutoAttach
 ms.assetid: 9d860a20-c154-4df4-ba15-636e0fcd42bf
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 52d92cdfbbf076a733cacba307d30fe2006a4fc6
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: bd4f874a2a144ec050d0b018ba78ee3e42d70bad
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66317753"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80732926"
 ---
 # <a name="idebugcoreserver3disableautoattach"></a>IDebugCoreServer3::DisableAutoAttach
-禁用自动附加与此服务器关联的所有调试引擎。
+禁用与此服务器关联的所有调试引擎的自动附加。
 
 ## <a name="syntax"></a>语法
 
@@ -38,7 +38,7 @@ int DisableAutoAttach();
 ```
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为将返回错误代码。
+ 如果成功，返回`S_OK`;否则，返回错误代码。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md)

@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 9b71679e460b904138cb0bf922da9d157f0a91c9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62552975"
 ---
 # <a name="c-library-reference"></a>C++ 库参考
@@ -28,6 +28,6 @@ ms.locfileid: "62552975"
 
 [Concurrency 命名空间（并发可视化工具）](../profiling/concurrency-namespace-concurrency-visualizer.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [并发可视化工具 SDK](../profiling/concurrency-visualizer-sdk.md)

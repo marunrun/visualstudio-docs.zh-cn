@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 2a547122579da8bb19935e268a1845a8ed8d4b03
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "76114215"
 ---
 # <a name="my-extensions-page-project-designer-visual-basic"></a>“项目设计器”->“My 扩展”页 (Visual Basic)
@@ -40,7 +40,7 @@ ms.locfileid: "76114215"
 
 在“My 命名空间扩展”  列表中选择一个或多个引用，然后单击此按钮从项目中删除 `My` 命名空间扩展。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [扩展 Visual Basic 中的 My 命名空间](/dotnet/visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace)
 - [打包和部署自定义 My 扩展](/dotnet/visual-basic/developing-apps/customizing-extending-my/packaging-and-deploying-custom-my-extensions)

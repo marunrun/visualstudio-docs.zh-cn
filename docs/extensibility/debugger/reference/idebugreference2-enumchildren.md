@@ -1,5 +1,5 @@
 ---
-title: IDebugReference2::EnumChildren |Microsoft Docs
+title: IDebug参考2：：枚举儿童 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugReference2::EnumChildren
 ms.assetid: 35b3c2f3-69f4-4013-b555-f847221f62e8
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 432a3c25722ae7adb966efa6998c42680bd60307
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 96b2fec782ce88dfb2200df35f56b35b304beda5
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66335778"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80720630"
 ---
 # <a name="idebugreference2enumchildren"></a>IDebugReference2::EnumChildren
-获取引用的选定子级的列表。 留待将来使用。
+获取所选引用子级的列表。 保留供将来使用。
 
 ## <a name="syntax"></a>语法
 
@@ -51,22 +51,22 @@ int EnumChildren ( 
 
 ## <a name="parameters"></a>参数
 `dwFields`\
-[in]中的标志的组合[DEBUGREF_INFO_FLAGS](../../../extensibility/debugger/reference/debugref-info-flags.md)枚举，用于指定哪些字段中枚举[DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md)结构是必填。
+[在][DEBUGREF_INFO_FLAGS](../../../extensibility/debugger/reference/debugref-info-flags.md)枚举中的标志的组合，指定要填充枚举[DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md)结构中的字段。
 
 `dwRadix`\
-[in]用于格式化数值的任何信息的基数。
+[在]用于格式化任何数值信息的半径。
 
 `dwAttribFilter`\
-[in]中的标志的组合[DBG_ATTRIB_FLAGS](../../../extensibility/debugger/reference/dbg-attrib-flags.md)作为筛选器结合使用的枚举`pszNameFilter`参数选择的结构是要枚举。
+[在][DBG_ATTRIB_FLAGS](../../../extensibility/debugger/reference/dbg-attrib-flags.md)枚举中的标志与`pszNameFilter`参数结合使用，以选择要枚举的结构的组合。
 
 `pszNameFilter`\
-[in]一个字符串，指定筛选器，例如"MyX"，与结合使用`dwAttribFilter`参数选择要枚举的结构。
+[在]指定筛选器的字符串，如"MyX"，与`dwAttribFilter`参数结合使用，用于选择要枚举的结构。
 
 `dwTimeout`\
-[in]最大时间 （毫秒），此方法返回前等待。 使用`INFINITE`无限期等待。
+[在]从此方法返回之前等待的最大时间（以毫秒为单位）。 用于`INFINITE`无限期等待。
 
 `ppEnum`\
-[out]返回[IEnumDebugReferenceInfo2](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2.md)对象，其中包含请求的子属性的列表。
+[出]返回包含请求子属性列表的[IEnumDebugReferenceInfo2](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2.md)对象。
 
 ## <a name="return-value"></a>返回值
  始终返回 `E_NOTIMPL`。

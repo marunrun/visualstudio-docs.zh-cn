@@ -8,10 +8,10 @@ ms.technology: vs-ide-install
 ms.assetid: 22B1F2CD-32AE-464D-80AC-C8AB4786B015
 ms.custom: video
 ms.openlocfilehash: 45f9756607cbb638d1f69f77bdf8cd2ee30953c5
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "75851942"
 ---
 # <a name="install-visual-studio-2019-for-mac"></a>安装 Visual Studio 2019 for Mac
@@ -37,7 +37,7 @@ ms.locfileid: "75851942"
 
     [![单击大箭头开始安装](media/install-installer-sml.png)](media/install-installer.png#lightbox)
 
-3. 可能会收到有关从 Internet 下载应用程序的警告。 单击“打开”  。
+3. 可能会收到有关从 Internet 下载应用程序的警告。 单击 **“打开”** 。
 4. 安装程序检查系统时，请耐心等待：
 
     [![安装程序会检查系统中是否有已安装的组件](media/install-checking-sml.png)](media/install-checking.png#lightbox)
@@ -53,12 +53,12 @@ ms.locfileid: "75851942"
    如果不希望安装所有平台，请参阅以下指南，它们有助于确定要安装的平台：
 
 
-|应用类型  |目标  |选择  |说明  |
+|应用类型  |目标  |选项  |说明  |
 |---------|---------|---------|---------|
-|**使用 Xamarin 的应用**| Xamarin.Forms|选择“Android”和“iOS”平台   |你需要安装 [Xcode](https://developer.apple.com/xcode/)  |
-||仅限 iOS|选择“iOS”平台 |你需要安装 [Xcode](https://developer.apple.com/xcode/) |
+|**使用 Xamarin 的应用**| Xamarin.Forms|选择“Android”和“iOS”平台   |你需要安装 [Xcode  ](https://developer.apple.com/xcode/) |
+||仅限 iOS|选择“iOS”平台 |你需要安装 [Xcode  ](https://developer.apple.com/xcode/)|
 ||仅限 Android|选择“Android”平台 |请注意，还应选择相关的依赖项|
-||仅限 Mac|选择“macOS (Cocoa)”平台 |你需要安装 [Xcode](https://developer.apple.com/xcode/) |
+||仅限 Mac|选择“macOS (Cocoa)”平台 |你需要安装 [Xcode  ](https://developer.apple.com/xcode/)|
 |**.NET Core 应用程序**|         |选择“.NET Core”平台  。|         |
 |**ASP.NET Core Web 应用程序**|         |选择“.NET Core”平台  。|         |
 |**Azure Functions**|         |选择“.NET Core”平台  。|         |
@@ -97,7 +97,7 @@ ms.locfileid: "75851942"
 
 ### <a name="ios"></a>iOS
 
-1. [Hello，iOS](https://developer.xamarin.com/guides/ios/getting_started/hello,_iOS/)
+1. [了解 iOS](https://developer.xamarin.com/guides/ios/getting_started/hello,_iOS/)
 2. [设备预配](https://developer.xamarin.com/guides/ios/getting_started/installation/device_provisioning)（以在设备上运行应用程序）。
 
 ### <a name="android"></a>Android
@@ -114,6 +114,6 @@ ms.locfileid: "75851942"
 
 > [!Video https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Visual-Studio-for-Mac-Acquisition/player]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [安装 Visual Studio (Windows)](/visualstudio/install/install-visual-studio)

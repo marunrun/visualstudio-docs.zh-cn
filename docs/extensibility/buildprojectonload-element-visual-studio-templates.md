@@ -1,23 +1,23 @@
 ---
-title: BuildProjectOnload 元素 （Visual Studio 模板） |Microsoft Docs
+title: 生成项目加载元素（可视化工作室模板） |微软文档
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
 ms.assetid: b07d3074-0fc9-45e1-baf5-da6bd4f3f1c0
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c9a9d4536c9ae7205a98ef0c79906ccbb002b5f7
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 72d1981aab67762b3ee4aa8d62e0643f4c2a8963
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66321245"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80739952"
 ---
-# <a name="buildprojectonload-element-visual-studio-templates"></a>BuildProjectOnload 元素 （Visual Studio 模板）
-生成新的项目如下创建并将其添加到解决方案。 不生成整个解决方案。
+# <a name="buildprojectonload-element-visual-studio-templates"></a>生成项目加载元素（可视化工作室模板）
+仅在创建新项目时生成新项目，并将这些项目添加到解决方案中。 整个解决方案不是构建的。
 
 元素层次结构：
 
@@ -46,18 +46,18 @@ ms.locfileid: "66321245"
 
 |元素|描述|
 |-------------|-----------------|
-|`TemplateData`|将此模板分类并定义显示在这种方式**新的项目**并**添加新项**对话框。|
+|`TemplateData`|对模板进行分类，并定义模板在 **"新项目**"和"**添加新项目**"对话框中的显示方式。|
 
 ## <a name="text-value"></a>文本值
  需要一个文本值。
 
- 文本必须是`true`或`false`以指示是否从模板创建时生成新的项目。
+ 文本必须或`true``false`指示是否仅在从模板创建新项目时生成该项目。
 
 ## <a name="remarks"></a>备注
  `BuildProjectOnLoad` 是可选元素。 默认值为 `false`。
 
 ## <a name="example"></a>示例
- 下面的示例说明了 Visual C# 模板的元数据。
+ 下面的示例说明了 Visual C++ 模板的元数据。
 
 ```xml
 <VSTemplate Type="Project" Version="3.0.0"
@@ -86,6 +86,6 @@ ms.locfileid: "66321245"
 
 ## <a name="see-also"></a>请参阅
 
-- [BuildOnLoad 属性和元素](buildonload-visual-studio-templates.md)
+- [生成加载属性和元素](buildonload-visual-studio-templates.md)
 - [创建项目和项模板](../ide/creating-project-and-item-templates.md)
-- [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
+- [可视化工作室模板架构参考](../extensibility/visual-studio-template-schema-reference.md)

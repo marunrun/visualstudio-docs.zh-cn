@@ -13,15 +13,15 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: d23d565752d81bff960027090ddaaf88e9d78ed5
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75588923"
 ---
 # <a name="how-to-specify-test-agents-to-use-in-load-test-scenarios"></a>如何：指定要在负载测试方案中使用的测试代理
 
-在使用“新建负载测试向导”创建负载测试后，可以使用“负载测试编辑器”更改方案属性，以满足测试需求和目标   。
+在使用“新建负载测试向导”创建负载测试后，可以使用“负载测试编辑器”更改方案属性，以满足你的测试需求和目标。  
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
@@ -47,11 +47,11 @@ ms.locfileid: "75588923"
 
 1. 打开一个负载测试。
 
-     “负载测试编辑器”随即显示  。 其中显示负载测试树。
+     此时将显示“负载测试编辑器”  。 其中显示负载测试树。
 
 2. 在负载测试树的“方案”文件夹中，选择要为其指定所用代理的方案节点  。
 
-3. 在“视图”菜单上选择“属性窗口”   。
+3. 在“视图”菜单上选择“属性”窗口。  
 
      该方案的类别和属性将显示在“属性”窗口中  。
 
@@ -62,9 +62,9 @@ ms.locfileid: "75588923"
     > [!NOTE]
     > 对本地运行将忽略“要使用的代理”属性  。 对于远程运行，如果“要使用的代理”中指定的代理都不存在，则该方案中的测试将不运行  。
 
-5. 更改属性后，在“文件”菜单上选择“保存”   。 然后，就可以用新的“要使用的代理”值运行负载测试了  。
+5. 更改属性后，在“文件”菜单上选择“保存”。   然后，就可以用新的“要使用的代理”值运行负载测试了  。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [编辑负载测试方案](../test/edit-load-test-scenarios.md)
 - [演练：创建和运行负载测试](../test/walkthrough-create-and-run-a-load-test.md)

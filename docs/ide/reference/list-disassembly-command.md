@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: aaeab2e65088b8f1bfce3a6a12f8cd66c3245b75
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "72747921"
 ---
 # <a name="list-disassembly-command"></a>“列出反汇编”命令
@@ -44,15 +44,15 @@ Debug.ListDisassembly [/count:number] [/endaddress:expression]
 
 /codebytes:`yes`&#124;`no` [or] /bytes:`yes`&#124;`no` [or] /b:`yes`&#124;`no`
 
-可选。 指示是否显示代码字节。 默认值是 `no`。
+可选。 指示是否显示代码字节。 默认值为 `no`。
 
 /source:`yes`&#124;`no` [or] /s:`yes`&#124;`no`
 
-可选。 指示是否显示源代码。 默认值是 `no`。
+可选。 指示是否显示源代码。 默认值为 `no`。
 
 /symbolnames:`yes`&#124;`no` [or] /names:`yes`&#124;`no` [or] /n:`yes`&#124;`no`
 
-可选。 指示是否显示符号名称。 默认值是 `yes`。
+可选。 指示是否显示符号名称。 默认值为 `yes`。
 
  [/linenumbers:`yes`&#124;`no`]
 
@@ -64,7 +64,7 @@ Debug.ListDisassembly [/count:number] [/endaddress:expression]
 >Debug.ListDisassembly
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [“列出调用堆栈”命令](../../ide/reference/list-call-stack-command.md)
 - [“列出线程”命令](../../ide/reference/list-threads-command.md)

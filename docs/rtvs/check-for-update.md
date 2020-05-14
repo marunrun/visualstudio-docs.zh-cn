@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - data-science
 ms.openlocfilehash: c076fb97b3574b5c710814054232b9757e7a77e3
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75843738"
 ---
 # <a name="rtvs-current-version"></a>RTVS 当前版本
@@ -27,4 +27,4 @@ ms.locfileid: "75843738"
 
 有关 Visual Studio 和 Windows 的相关要求，请参阅[安装](installing-r-tools-for-visual-studio.md)。
 
-有关 Microsoft R Open 和 Microsoft Machine Learning Server（以前称为 Microsoft R Server）的更新信息，请参阅：[Microsoft R 产品](https://azure.microsoft.com/?ocid=cloudplat_hp)。
+有关 Microsoft R Open 和 Microsoft Machine Learning Server（之前的 Microsoft R Server）的更新信息，请参阅 [Microsoft R 产品](https://azure.microsoft.com/?ocid=cloudplat_hp)。

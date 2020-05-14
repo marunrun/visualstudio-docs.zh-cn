@@ -6,10 +6,10 @@ ms.date: 04/14/2017
 ms.technology: vs-ide-sdk
 ms.assetid: 7D00512B-9688-4D8D-87A7-F04F207E3D02
 ms.openlocfilehash: c5b3b759b32acfc86b4b584b3f3d52298c138a2c
-ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "74985035"
 ---
 # <a name="extending-visual-studio-for-mac-walkthrough"></a>扩展 Visual Studio for Mac 演练
@@ -32,7 +32,7 @@ ms.locfileid: "74985035"
 
 4. 安装 Addin Maker 后，便可开始生成扩展包。 首先创建新的解决方案。
 
-5. 从“新解决方案对话框”中，选择“其他”>“杂项”>“常规”>“Xamarin Studio 加载项”>“C#”模板，在接下来出现的屏幕中将新解决方案命名为 `DateInserter`：  
+5. 从“新解决方案对话框”中，选择“其他”>“杂项”>“常规”>“Xamarin Studio 加载项”>“C#”模板，在接下来出现的屏幕中将新解决方案命名为 **：**  `DateInserter`
 
    ![创建新解决方案](media/extending-visual-studio-mac-addin7New.png)
 
@@ -112,7 +112,7 @@ ms.locfileid: "74985035"
 
     请注意，从菜单选择“插入日期”不会产生任何效果，因为当前实现只有占位符方法。
 
-13. 框架已放置在可供扩展包使用的合适位置，可以开始写入实现插入日期的代码。 首先，请确保仅当用户使用以下代码替换 `InsertDateHandler.cs` 中的 `Update` 方法来打开文本文件时，才启用“插入日期命令”： 
+13. 框架已放置在可供扩展包使用的合适位置，可以开始写入实现插入日期的代码。 首先，请确保仅当用户使用以下代码替换 **中的** 方法来打开文本文件时，才启用“插入日期命令”：`Update``InsertDateHandler.cs`
 
     ```cs
     protected override void Update(CommandInfo info)
@@ -136,6 +136,6 @@ ms.locfileid: "74985035"
 
     ![插入日期屏幕截图](media/extending-visual-studio-mac-addin12.png)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [创建你的首个扩展（Windows 上的 Visual Studio）](/visualstudio/extensibility/extensibility-hello-world)

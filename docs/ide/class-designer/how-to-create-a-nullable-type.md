@@ -15,10 +15,10 @@ dev_langs:
 ms.workload:
 - multiple
 ms.openlocfilehash: 5be8b553dfead4b8c05f29bbd18c16fcef847130
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75592225"
 ---
 # <a name="how-to-create-a-nullable-type-in-class-designer"></a>如何：在类设计器中创建可以为 null 的类型
@@ -45,11 +45,11 @@ ms.locfileid: "75592225"
 
 1. 在类图中，展开现有类，或创建一个新类。
 
-2. 若要将类添加到项目，请在“类图”菜单上，单击“添加” > “添加类”    。
+2. 若要将类添加到项目，请在“类图”菜单上，单击“添加” **“添加类”**   >   。
 
 3. 若要展开类形状，请在“类图”  菜单上，单击“展开”  。
 
-4. 选择类形状。 请在“类图”菜单上，单击“添加” > “字段”    。 将在类形状以及“类详细信息”  窗口中显示默认名称为“字段”  的新字段。
+4. 选择类形状。 请在“类图”菜单上，单击“添加” **“字段”**   >   。 将在类形状以及“类详细信息”  窗口中显示默认名称为“字段”  的新字段。
 
 5. 在“类详细信息”  窗口的“名称”  列中（或类形状中），将新字段的名称更改为有效且有意义的名称。
 
@@ -85,7 +85,7 @@ ms.locfileid: "75592225"
 
 5. 右键单击类形状，然后单击“类详细信息”  。 可以在“类详细信息”  窗口中查看或修改新类型的属性。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Nullable%601>
 - [可以为 null 的类型](/dotnet/csharp/programming-guide/nullable-types/index)

@@ -12,12 +12,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: a1995353d00f9e48811f388e1d853c93850b85f4
-ms.sourcegitcommit: 9eff8371b7a79a637ebb6850f775dd3eed343d8b
+ms.openlocfilehash: 882c3a148164ab88412a817abd72d0608fadf9b2
+ms.sourcegitcommit: 5c804c42d24d35dcf2ba195aba9ce07031743f62
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78235101"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81744975"
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-vuejs-app"></a>快速入门：使用 Visual Studio 创建第一个 Vue.js 应用
 
@@ -103,19 +103,24 @@ ms.locfileid: "78235101"
 
 ## <a name="build-the-project"></a>生成项目
 
-1. （仅限 TypeScript 项目）在 Visual Studio 中，选择“生成” > “清洁解决方案”   。
+::: moniker range=">=vs-2019"
+1. 接下来，选择“生成”>“生成解决方案”以生成项目   。
 
-    ::: moniker range=">=vs-2019"
-    在 Visual Studio 2019 随附的 TypeScript 模板中，跳过此步骤。
-    ::: moniker-end
+1. 检查“输出”窗口以查看生成结果，并从“显示输出来源”列表中选择“生成”    。
+::: moniker-end
+::: moniker range="vs-2017"
+1. （仅限 TypeScript 项目）在 Visual Studio 中，选择“生成”>“清理解决方案”   。
 
-1. 接下来，选择“生成” > “生成解决方案”以生成项目   。 检查“输出”窗口以查看生成结果，并从“显示输出来源”列表中选择“生成”    。
+1. 接下来，选择“生成”>“生成解决方案”以生成项目   。
 
-    JavaScript Vue.js 项目模板（以及旧版本的 TypeScript 模板）通过配置后期生成事件使用 `build` npm 脚本。 如果要修改此设置，在“Windows 资源管理器”中打开项目文件 (\<projectname\>.njsproj) 并找到下面的代码行  ：
+1. 检查“输出”窗口以查看生成结果，并从“显示输出来源”列表中选择“生成”    。
+::: moniker-end
 
-    ```xml
-    <PostBuildEvent>npm run build</PostBuildEvent>
-    ```
+JavaScript Vue.js 项目模板（以及旧版本的 TypeScript 模板）通过配置后期生成事件使用 `build` npm 脚本。 如果要修改此设置，在“Windows 资源管理器”中打开项目文件 (\<projectname\>.njsproj) 并找到下面的代码行  ：
+
+```xml
+<PostBuildEvent>npm run build</PostBuildEvent>
+```
 
 ## <a name="run-the-application"></a>运行此应用程序
 
@@ -135,6 +140,6 @@ ms.locfileid: "78235101"
 
 ## <a name="next-steps"></a>后续步骤
 
+- 浏览 [Vue.js](create-application-with-vuejs.md) 的文章
 - 浏览 [Node.js 和 Express 教程](tutorial-nodejs.md)
-- 浏览 [Node.js 和 React 教程](tutorial-nodejs-with-react-and-jsx.md)
 - [将应用部署到 Linux 应用服务](../javascript/publish-nodejs-app-azure.md)

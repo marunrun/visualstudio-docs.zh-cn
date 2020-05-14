@@ -1,5 +1,5 @@
 ---
-title: SccQueryChanges 函数 |Microsoft Docs
+title: SccQuery 更改功能 |微软文档
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - SccQueryChanges function
 ms.assetid: 4cd58eb3-6952-49b1-9620-8682e3eaa604
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 617f07a11f92ab65f079c7d1b41773494e3d0c8b
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: ec335d808c287decb75bf759d5a3795d98962579
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72720856"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80700487"
 ---
 # <a name="sccquerychanges-function"></a>SccQueryChanges 函数
-此函数枚举给定的文件列表，并通过回调函数提供每个文件的名称更改的相关信息。
+此函数枚举给定的文件列表，提供有关通过回调函数更改每个文件的名称的信息。
 
 ## <a name="syntax"></a>语法
 
@@ -37,36 +37,36 @@ SCCRTN SccQueryChanges(
 #### <a name="parameters"></a>参数
  pContext
 
-中源代码管理插件上下文指针。
+[在]源代码管理插件上下文指针。
 
- n
+ n文件
 
-中@No__t_0 数组中的文件数。
+[在]数组中`lpFileNames`的文件数。
 
- lpFileNames
+ lpFile名称
 
-中要获取其相关信息的文件名数组。
+[在]要获取有关信息的文件名数组。
 
  pfnCallback
 
-中为列表中的每个文件名调用的回调函数（有关详细信息，请参阅[QUERYCHANGESFUNC](../extensibility/querychangesfunc.md) ）。
+[在]回调函数用于调用列表中的每个文件名（有关详细信息，请参阅[查询更改FUNC）。](../extensibility/querychangesfunc.md)
 
  pvCallerData
 
-中将以不更改的形式传递给回调函数的值。
+[在]将传递给回调函数的值保持不变。
 
 ## <a name="return-value"></a>返回值
  此函数的源代码管理插件实现应返回以下值之一：
 
-|“值”|描述|
+|值|说明|
 |-----------|-----------------|
 |SCC_OK|查询过程已成功完成。|
-|SCC_E_PROJNOTOPEN|未在源代码管理中打开该项目。|
-|SCC_E_ACCESSFAILURE|访问源代码管理系统时出现问题，可能是由于网络或争用问题导致的。|
-|SCC_E_NONSPECIFICERROR|出现未指定的错误或常规错误。|
+|SCC_E_PROJNOTOPEN|项目尚未在源代码管理中打开。|
+|SCC_E_ACCESSFAILURE|访问源代码管理系统时出现问题，可能是由于网络或争用问题。|
+|SCC_E_NONSPECIFICERROR|发生未指定或常规错误。|
 
 ## <a name="remarks"></a>备注
- 查询的更改是命名空间：具体而言，即重命名、添加和删除文件。
+ 查询的更改是命名空间：特别是重命名、添加和删除文件。
 
 ## <a name="see-also"></a>请参阅
 - [源代码管理插件 API 函数](../extensibility/source-control-plug-in-api-functions.md)

@@ -1,5 +1,5 @@
 ---
-title: 演练：构建应用程序
+title: 演练：生成应用程序
 ms.date: 09/25/2017
 ms.technology: vs-ide-compile
 ms.topic: conceptual
@@ -9,13 +9,13 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: d94a525f9938b6845584b6d5872bd486e947025d
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "76115409"
 ---
-# <a name="walkthrough-build-an-application"></a>演练：构建应用程序
+# <a name="walkthrough-build-an-application"></a>演练：生成应用程序
 
 完成本演练后，你会更熟悉使用 Visual Studio 生成应用程序时可配置的多个选项。 将为示例应用程序创建自定义生成配置、隐藏特定警告消息以及增加生成输出信息。
 
@@ -35,19 +35,19 @@ ms.locfileid: "76115409"
 
    ![“生成”菜单-&gt;“配置管理器”命令](../ide/media/buildwalk_configurationmanagerdialogbox.png)
 
-1. 在“活动解决方案配置”  列表中，选择“\<新建...\>”  。
+1. 在“活动解决方案配置”  列表中，选择“**新建...\<”\>** 。
 
-1. 在“新建解决方案配置”对话框中，命名新配置 `Test`，复制现有“调试”配置中的设置，然后选择“确定”按钮    。
+1. 在“新建解决方案配置”对话框中，命名新配置 **，复制现有“调试”配置中的设置，然后选择“确定”按钮**`Test`   。
 
    ![“新建解决方案配置”对话框](../ide/media/buildwalk_newsolutionconfigdlgbox.png)
 
-1. 在“活动解决方案平台”  列表中，选择“\<新建...\>”  。
+1. 在“活动解决方案平台”  列表中，选择“**新建...\<”\>** 。
 
 1. 在“新建解决方案平台”对话框中，选择“x64”，且不要复制 x86 平台中的设置   。
 
    ![“新建解决方案平台”对话框](../ide/media/buildwalk_newsolutionplatform.png)
 
-1. 选择“确定”  按钮。
+1. 选择 **“确定”** 按钮。
 
    “活动解决方案配置”已更改为“测试”，且“活动解决方案平台”设置为“x64”  。
 
@@ -65,7 +65,7 @@ ms.locfileid: "76115409"
 
 ### <a name="build-the-solution"></a>生成解决方案
 
-- 在菜单栏上，依次选择“生成” > “生成解决方案”，或按 Ctrl+Shift+B      。
+- 在菜单栏上，依次选择“生成” **“生成解决方案”，或按 Ctrl**Shift > B   +  +  。
 
     “输出”  窗口将显示生成的结果。 成功生成。
 
@@ -129,7 +129,7 @@ ms.locfileid: "76115409"
 
    ![输出窗口 Visual Basic 生成警告](../ide/media/buildwalk_visualbasicbuildwarnings.png)
 
-   有关详细信息，请参阅[如何：取消编译器警告](../ide/how-to-suppress-compiler-warnings.md)。
+   有关详细信息，请参阅[如何：禁止显示编译器警告](../ide/how-to-suppress-compiler-warnings.md)。
 
 ## <a name="display-additional-build-details-in-the-output-window"></a>在“输出”窗口中显示其他生成详细信息
 
@@ -148,7 +148,7 @@ ms.locfileid: "76115409"
 
 1. 在“MSBuild 项目生成输出详细信息”  列表中，选择“常规”  ，然后选择“确定”  按钮。
 
-1. 在菜单栏上，依次选择“生成” > “清理解决方案”   。
+1. 在菜单栏上，依次选择“生成” **“清理解决方案”**  >   。
 
 1. 生成解决方案，然后查看“输出”  窗口中的信息。
 
@@ -159,7 +159,7 @@ ms.locfileid: "76115409"
      在 Visual Basic 生成中，[/nowarn](/dotnet/visual-basic/reference/command-line-compiler/nowarn) 不包括要排除的特定警告，因此不会出现任何警告。
 
     > [!TIP]
-    > 如果通过选择 Ctrl+F 键，显示“查找”对话框，则可以搜索“输出”窗口的内容     。
+    > 如果通过选择 Ctrl**F 键，显示“查找”对话框，则可以搜索“输出”窗口的内容**   +  。
 
 有关详细信息，请参阅[如何：查看、保存和配置生成日志文件](../ide/how-to-view-save-and-configure-build-log-files.md)。
 
@@ -188,7 +188,7 @@ ms.locfileid: "76115409"
     > [!IMPORTANT]
     > 可能会出现一个消息框，警告指定的网络共享位置可能不受信任。 如果信任指定的位置，请在消息框中选择“确定”按钮  。
 
-1. 生成应用程序。
+1. 构建应用程序。
 
      ![“生成”菜单上的“生成解决方案”命令](../ide/media/exploreide-buildsolution.png)
 
@@ -213,7 +213,7 @@ ms.locfileid: "76115409"
 
 1. 在“标准工具栏”  上，将解决方案配置设置为“发布”  ，将解决方案平台设置为“x86”  。
 
-1. 生成应用程序。
+1. 构建应用程序。
 
      ![“生成”菜单上的“生成解决方案”命令](../ide/media/exploreide-buildsolution.png)
 
@@ -221,7 +221,7 @@ ms.locfileid: "76115409"
 
 祝贺你！ 已成功完成此演练。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [演练：生成项目 (C++)](/cpp/ide/walkthrough-building-a-project-cpp)
 - [ASP.NET Web 应用程序项目预编译概述](/previous-versions/aspnet/aa983464\(v\=vs.110\))

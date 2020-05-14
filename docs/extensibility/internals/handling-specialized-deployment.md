@@ -1,25 +1,25 @@
 ---
-title: 处理专用部署 |Microsoft Docs
+title: 处理专业部署 |微软文档
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - deploying applications [Visual Studio SDK]
 - specialized deployment
 ms.assetid: de068b6a-e806-45f0-9dec-2458fbb486f7
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9c54b98c7bc7341a09fee9e6e5d0cc6860f4254f
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 972965c3565088af8205d6f7903d7098e568c057
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75848961"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80708209"
 ---
 # <a name="handle-specialized-deployment"></a>处理专用部署
-部署是项目的可选操作。 例如，Web 项目支持部署，使项目可以更新 Web 服务器。 同样，**智能设备**项目支持将生成的应用程序复制到目标设备的部署。 项目子类型可通过实现 <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg> 接口提供专用的部署行为。 此接口定义一组完整的部署操作：
+部署是项目的可选操作。 例如，Web 项目支持部署，让项目更新 Web 服务器。 同样，**智能设备**项目支持将生成的应用程序复制到目标设备的部署。 项目子类型可以通过实现<xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg>接口来提供专用部署行为。 此接口定义一组完整的部署操作：
 
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.AdviseDeployStatusCallback%2A>
 
@@ -37,13 +37,13 @@ ms.locfileid: "75848961"
 
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.UnadviseDeployStatusCallback%2A>
 
-  实际部署操作应在单独的线程中执行，以使 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 甚至能更快地响应用户交互。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg> 提供的方法通过 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 并在后台中操作来异步调用，使环境能够随时查询部署操作的状态，或者在必要时停止操作。 当用户选择 "部署" 命令时，环境将调用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg> 接口部署操作。
+  实际部署操作应在单独的线程中执行，以使[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]对用户交互的响应更加灵敏。 提供<xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg>的方法由[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]后台异步调用并在后台操作，允许环境随时查询部署操作的状态或在必要时停止该操作。 当用户<xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg>选择部署命令时，环境将调用接口部署操作。
 
-  若要通知环境部署操作已开始或已结束，项目子类型需要调用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployStatusCallback.OnStartDeploy%2A> 和 <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployStatusCallback.OnEndDeploy%2A> 方法。
+  要通知环境部署操作已开始或结束，项目子类型需要调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployStatusCallback.OnStartDeploy%2A>和<xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployStatusCallback.OnEndDeploy%2A>方法。
 
 ## <a name="to-handle-a-specialized-deployment-by-a-subtype-project"></a>按子类型项目处理专用部署
 
-- 实现 <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.AdviseDeployStatusCallback%2A> 方法来注册环境，以便接收部署状态事件的通知。
+- 实现注册<xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.AdviseDeployStatusCallback%2A>环境以接收部署状态事件通知的方法。
 
     ```vb
     Private adviseSink As Microsoft.VisualStudio.Shell.EventSinkCollection = New Microsoft.VisualStudio.Shell.EventSinkCollection()
@@ -74,7 +74,7 @@ ms.locfileid: "75848961"
 
     ```
 
-- 实现 <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.UnadviseDeployStatusCallback%2A> 方法可取消环境的注册，以接收部署状态事件的通知。
+- 实施取消<xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.UnadviseDeployStatusCallback%2A>环境注册以接收部署状态事件通知的方法。
 
     ```vb
     Public Function UnadviseDeployStatusCallback(ByVal dwCookie As UInteger) As Integer
@@ -92,7 +92,7 @@ ms.locfileid: "75848961"
 
     ```
 
-- 实现 <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.Commit%2A> 方法，以执行特定于您的应用程序的提交操作。  此方法主要用于数据库部署。
+- 实现方法<xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.Commit%2A>以执行特定于应用程序的提交操作。  此方法主要用于数据库部署。
 
     ```vb
     Public Function Commit(ByVal dwReserved As UInteger) As Integer
@@ -110,7 +110,7 @@ ms.locfileid: "75848961"
 
     ```
 
-- 实现 <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.Rollback%2A> 方法以执行回滚操作。 调用此方法时，部署项目必须执行任何适当的操作，以便回滚更改并还原项目的状态。 此方法主要用于数据库部署。
+- 实现方法<xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.Rollback%2A>以执行回滚操作。 调用此方法时，部署项目必须执行任何适当的操作来回滚更改并还原项目的状态。 此方法主要用于数据库部署。
 
     ```vb
     Public Function Commit(ByVal dwReserved As UInteger) As Integer
@@ -128,7 +128,7 @@ ms.locfileid: "75848961"
 
     ```
 
-- 实现 <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.QueryStartDeploy%2A> 方法，以确定项目是否能够启动部署操作。
+- 实现方法<xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.QueryStartDeploy%2A>以确定项目是否能够启动部署操作。
 
     ```vb
     Public Function QueryStartDeploy(ByVal dwOptions As UInteger, ByVal pfSupported As Integer(), ByVal pfReady As Integer()) As Integer
@@ -161,7 +161,7 @@ ms.locfileid: "75848961"
 
     ```
 
-- 实现 <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.QueryStatusDeploy%2A> 方法，以确定部署操作是否已成功完成。
+- 实现方法<xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.QueryStatusDeploy%2A>以确定部署操作是否成功完成。
 
     ```vb
     Public Function QueryStatusDeploy(ByRef pfDeployDone As Integer) As Integer
@@ -184,7 +184,7 @@ ms.locfileid: "75848961"
 
     ```
 
-- 实现 <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.StartDeploy%2A> 方法，以便在单独的线程中开始部署操作。 将特定于应用程序部署的代码放在 `Deploy` 方法内。
+- 实现方法<xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.StartDeploy%2A>以在单独的线程中开始部署操作。 将特定于应用程序部署的代码放在`Deploy`方法中。
 
     ```vb
     Public Function StartDeploy(ByVal pIVsOutputWindowPane As IVsOutputWindowPane, ByVal dwOptions As UInteger) As Integer
@@ -241,7 +241,7 @@ ms.locfileid: "75848961"
 
     ```
 
-- 实现 <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.StopDeploy%2A> 方法以停止部署操作。 当用户在部署过程中按下 "**取消**" 按钮时，将调用此方法。
+- 实现停止<xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.StopDeploy%2A>部署操作的方法。 当用户在部署过程中按下 **"取消"** 按钮时，将调用此方法。
 
     ```vb
     Public Function StopDeploy(ByVal fSync As Integer) As Integer
@@ -287,7 +287,7 @@ ms.locfileid: "75848961"
     ```
 
 > [!NOTE]
-> 本主题中提供的所有代码示例都是[VSSDK 示例](https://github.com/Microsoft/VSSDK-Extensibility-Samples)中更大示例的一部分。
+> 本主题提供的所有代码示例都是[VSSDK 示例中](https://github.com/Microsoft/VSSDK-Extensibility-Samples)较大示例的一部分。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [项目子类型](../../extensibility/internals/project-subtypes.md)

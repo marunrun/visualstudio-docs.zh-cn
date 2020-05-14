@@ -8,10 +8,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: c7aebdc4c734f6831dc6ec1315aa7263b73cd30b
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75596718"
 ---
 # <a name="popular-keyboard-shortcuts-for-visual-studio"></a>Visual Studio 的常用键盘快捷方式
@@ -52,7 +52,7 @@ ms.locfileid: "75596718"
 |调试.停止调试|**Shift+F5** [全局]|
 |调试.切换断点|**F9** [全局]|
 
-## <a name="edit"></a>Edit
+## <a name="edit"></a>编辑
 
 |命令|键盘快捷方式 [上下文]|
 |--------------| - |
@@ -119,7 +119,7 @@ ms.locfileid: "75596718"
 |文件.保存选定项|**Ctrl+S** [全局]|
 |文件.在浏览器中查看|**Ctrl+Shift+W** [全局]|
 
-## <a name="project"></a>项目
+## <a name="project"></a>Project
 
 |命令|键盘快捷方式 [上下文]|
 |--------------| - |
@@ -138,7 +138,7 @@ ms.locfileid: "75596718"
 |-------------| - |
 |工具.附加到进程|**Ctrl+Alt+P** [全局]|
 
-## <a name="view"></a>视图
+## <a name="view"></a>查看
 
 |命令|键盘快捷方式 [上下文]|
 |--------------| - |
@@ -149,7 +149,7 @@ ms.locfileid: "75596718"
 |视图.向前定位|**Ctrl+Shift+-** [全局]|
 |视图.对象浏览器|**Ctrl+Alt+J** [全局]|
 |视图.输出|**Ctrl+Alt+O** [全局]|
-|视图.属性窗口|F4 |
+|视图.属性窗口|**F4**|
 |视图.刷新|**F5** [团队资源管理器]|
 |视图.服务器资源管理器|**Ctrl+Alt+S** [全局]|
 |视图.显示智能标记|**Ctrl+.** [Global]<br /><br />或 **Shift+Alt+F10** [全局、HTML 编辑器设计视图]|
@@ -169,7 +169,7 @@ ms.locfileid: "75596718"
 |窗口.下一个文档窗口导航栏|**Ctrl+Tab** [全局]|
 |窗口.下一个拆分窗格|**F6** [全局]|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在 Visual Studio 中识别并自定义键盘快捷方式](../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md)
 - [Visual Studio 中的所有键盘快捷方式](default-keyboard-shortcuts-in-visual-studio.md)

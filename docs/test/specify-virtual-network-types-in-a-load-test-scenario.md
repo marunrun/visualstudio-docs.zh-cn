@@ -13,10 +13,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 60fa2bd38f3d7e594e9af7ba8ec544518bdbb920
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "76115294"
 ---
 # <a name="specify-virtual-network-types-in-a-load-test-scenario"></a>在负载测试方案中指定虚拟网络类型
@@ -95,9 +95,9 @@ Visual Studio 对所有测试类型（包括负载测试）使用基于软件的
 > [!WARNING]
 > “分布”按钮会重写任意锁定的项  。
 
-还可以不使用滑块而直接在“%”列中键入百分比值  。 如果直接输入百分比值，则其他项将不会自动调整。
+还可以不使用滑块而直接在“ **”列中键入百分比值%** 。 如果直接输入百分比值，则其他项将不会自动调整。
 
 > [!NOTE]
-> 当总数达不到 100% 或者在“%”列中输入的百分比值为小数时，滑块处于禁用状态  。
+> 当总数达不到 100% 或者在“ **”列中输入的百分比值为小数时，滑块处于禁用状态%** 。
 
 手动输入百分比值时，应该确保所有项的总和为 100%。 保存组合时，如果总和不是 100%，则系统将提示你是接受现有的百分比值，还是返回并调整百分比值。 如果选择接受现有百分比，则会按比例分配这些百分比以达到 100%。  例如，如果有两个项，并且手动将它们设置为 80% 和 40%，则第一个项将设置为 66.67%（80 除以 120），第二个项将设置为 33.33%（40 除以 120）。

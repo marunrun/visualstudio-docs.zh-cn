@@ -10,10 +10,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 62c16c2d578a38187b4a58958466597a5e4d297d
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74778383"
 ---
 # <a name="processon-and-processoff"></a>ProcessOn 和 ProcessOff
@@ -42,12 +42,12 @@ VSPerfCmd.exe /{ProcessOff|ProcessOn}:PID [Options]
  `PID` 要启动或停止的进程的整数标识符。 Windows 任务管理器的“进程”选项卡上列出了进程 ID  。
 
 ## <a name="required-subcommands"></a>需要的子命令
- 无
+ None
 
 ## <a name="valid-subcommands"></a>有效的子命令
  可以在包含以下子命令的命令行上指定 **ProcessOn** 和 **ProcessOff**。
 
- **Start：** `Method` 初始化命令行分析会话并设置指定的分析方法。
+ **Start:** `Method` 初始化命令行分析会话并设置指定的分析方法。
 
  **Launch：** `AppName` 启动指定的应用程序并开始使用采样方法进行分析。
 

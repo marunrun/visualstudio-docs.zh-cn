@@ -15,10 +15,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 26819be7cd001e87a6f94ac97d29c8a5e67f3932
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74777694"
 ---
 # <a name="da0007-avoid-using-exceptions-for-control-flow"></a>DA0007：避免使用控制流异常
@@ -27,7 +27,7 @@ ms.locfileid: "74777694"
 |-|-|
 |规则 ID|DA0007|
 |类别|.NET Framework 使用情况|
-|分析方法|全部|
+|分析方法|All|
 |消息|持续引发大量异常。 请考虑减少使用程序逻辑中的异常。|
 |消息类型|警告|
 
@@ -42,6 +42,6 @@ ms.locfileid: "74777694"
  有关详细信息，请参阅 MSDN 上 Microsoft 模式和做法库“提高 .NET 应用程序性能和可扩展性”卷中第 5 章 - 提高托管代码性能”的[异常管理](/previous-versions/msp-n-p/ff647790(v=pandp.10)#exception-management)部分    。
 
 ## <a name="how-to-investigate-a-warning"></a>如何调查警告
- 双击“错误列表”窗口中的消息，导航到“标记”视图。 查找包含 .NET CLR Exceptions(@ProcessInstance)\\# of Excels Thrown / sec 度量的列  。 确定是否存在异常处理更频繁的程序执行特定阶段。 使用采样分析，尝试标识生成频繁异常的 throw 语句和 try/catch 块。 如有必要，请向 catch 块添加逻辑，以便了解处理最频繁的异常。 如有可能，使用简单的流控制逻辑或验证代码替换频繁执行的 throw 语句或 catch 块。
+ 双击“错误列表”窗口中的消息，导航到“标记”视图。 查找包含 .NET CLR Exceptions( **)@ProcessInstance# of Excels Thrown / sec 度量的列\\** 。 确定是否存在异常处理更频繁的程序执行特定阶段。 使用采样分析，尝试标识生成频繁异常的 throw 语句和 try/catch 块。 如有必要，请向 catch 块添加逻辑，以便了解处理最频繁的异常。 如有可能，使用简单的流控制逻辑或验证代码替换频繁执行的 throw 语句或 catch 块。
 
  例如，如果发现应用程序正在处理频繁的 DivideByZeroException 异常，则向程序添加逻辑以便检查为零值的分母将改进应用程序的性能。

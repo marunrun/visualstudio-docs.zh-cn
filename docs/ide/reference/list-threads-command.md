@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: e1b36b8f4d9970d94eb83c47b59e85d01f932589
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75595483"
 ---
 # <a name="list-threads-command"></a>“列出线程”命令
@@ -30,7 +30,7 @@ ms.locfileid: "75595483"
 Debug.ListThreads [index]
 ```
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
 `index`
 
 可选。 通过索引来选择要用作当前线程的线程。
@@ -44,7 +44,7 @@ Debug.ListThreads [index]
 >Debug.ListThreads
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [“列出调用堆栈”命令](../../ide/reference/list-call-stack-command.md)
 - [“列出反汇编”命令](../../ide/reference/list-disassembly-command.md)

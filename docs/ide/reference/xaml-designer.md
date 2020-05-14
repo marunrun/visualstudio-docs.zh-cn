@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - uwp
 ms.openlocfilehash: 9a925e7f3c31b8347148c15b050692fcee26fcb1
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75585608"
 ---
 # <a name="xaml-designer-options-page"></a>XAML 设计器选项页
@@ -37,7 +37,7 @@ ms.locfileid: "75585608"
 |||
 |-|-|
 |**源视图**|指定是否仅在 XAML 视图中显示 XAML 源。 加载大型文档时，此设置非常有用。|
-|**设计视图**|指定是否在 XAML 视图中仅显示可视 XAML 设计器。|
+|**“设计”视图**|指定是否在 XAML 视图中仅显示可视 XAML 设计器。|
 |**拆分视图**|指定可视 XAML 设计器和 XAML 源是否紧邻出现在 XAML 视图中（基于“拆分方向”  设置的位置）。|
 
 ## <a name="split-orientation"></a>拆分方向
@@ -48,7 +48,7 @@ ms.locfileid: "75585608"
 |-|-|
 |**垂直**|XAML 源显示在 XAML 视图的左侧，XAML 设计器显示在右侧。|
 |**水平**|XAML 设计器显示在 XAML 视图顶部，XAML 源显示在底部。|
-|**默认**|XAML 文档使用为文档的项目所面向的平台推荐的拆分方向。 对于大多数平台，此值等于“水平”  。|
+|**Default**|XAML 文档使用为文档的项目所面向的平台推荐的拆分方向。 对于大多数平台，此值等于“水平”  。|
 
 ## <a name="zoom-by-using"></a>缩放方式
 
@@ -106,7 +106,7 @@ ms.locfileid: "75585608"
 |**呈现效果**|指定在 XAML 设计器中使用 Blend 编辑 XAML 文件时是否呈现效果。|
 |**缩放阈值**|指定当选中“呈现效果”  复选框时所呈现效果的缩放百分比。 如果缩放值超过此设置，则 XAML 设计器不再呈现效果。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [WPF 中的 XAML](/dotnet/framework/wpf/advanced/xaml-in-wpf)
 - [演练：我的第一个 WPF 桌面应用程序](/dotnet/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application)

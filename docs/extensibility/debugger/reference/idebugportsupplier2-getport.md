@@ -1,5 +1,5 @@
 ---
-title: IDebugPortSupplier2::GetPort | Microsoft Docs
+title: IDebugPort供应商2：：获取端口 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugPortSupplier2::GetPort
 ms.assetid: d55d5055-7386-4037-bf22-4c3e434a99ca
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 3b27c810ec6cb71cacb54e39ad97a95b53480232
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: be3f53c12b5562377cd79267d6e216a1435859a5
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66340150"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80724664"
 ---
 # <a name="idebugportsupplier2getport"></a>IDebugPortSupplier2::GetPort
-获取一个端口从端口提供程序。
+从端口供应商获取端口。
 
 ## <a name="syntax"></a>语法
 
@@ -43,13 +43,13 @@ int GetPort( 
 
 ## <a name="parameters"></a>参数
 `guidPort`\
-[in]该端口的全局唯一标识符 (GUID)。
+[在]端口的全局唯一标识符 （GUID）。
 
 `ppPort`\
-[out]返回[IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md)对象表示的端口。
+[出]返回表示端口的[IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md)对象。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。 返回`E_PORTSUPPLIER_NO_PORT`如果任何端口不存在具有给定的标识符。
+ 如果成功，返回`S_OK`;否则，返回错误代码。 如果`E_PORTSUPPLIER_NO_PORT`给定标识符不存在端口，则返回。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugPortSupplier2](../../../extensibility/debugger/reference/idebugportsupplier2.md)

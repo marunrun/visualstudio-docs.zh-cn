@@ -1,6 +1,6 @@
 ---
 title: 单元测试入门
-ms.date: 02/13/2020
+ms.date: 04/07/2020
 ms.topic: conceptual
 helpviewer_keywords:
 - unit testing, create unit test plans
@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7ffbc5c6730fb4ca4d2f39732ad2a595de15bbf2
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+ms.openlocfilehash: c167e98f9419842876aed713e008b8746064669a
+ms.sourcegitcommit: dab57cebd484228e6f0cf7ab1b9685c575410c06
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2020
-ms.locfileid: "77279329"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82153040"
 ---
 # <a name="get-started-with-unit-testing"></a>单元测试入门
 
@@ -22,7 +22,7 @@ ms.locfileid: "77279329"
 
 ## <a name="create-unit-tests"></a>创建单元测试
 
-本节从较高层面介绍了如何创建单元测试项目。
+本节介绍了如何创建单元测试项目。
 
 1. 在 Visual Studio 中，打开要测试的项目。
 
@@ -72,7 +72,7 @@ ms.locfileid: "77279329"
 
 1. 向单元测试方法添加代码。
 
-   例如，对于 MSTest 或 NUnit 测试项目，可以使用以下代码。
+   例如，对于 MSTest 项目，可以使用以下代码。
 
    ```csharp
    using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -101,12 +101,45 @@ ms.locfileid: "77279329"
    }
    ```
 
+   或者，对于 NUnit 项目，可以使用以下代码。
+
+   ```csharp
+   using NUnit.Framework;
+   using System.IO;
+   using System;
+
+   namespace HelloWorldTests
+   {
+      public class Tests
+      {
+         private const string Expected = "Hello World!";
+
+         [SetUp]
+         public void Setup()
+         {
+         }
+         [Test]
+         public void TestMethod1()
+         {
+            using (var sw = new StringWriter())
+            {
+               Console.SetOut(sw);
+               HelloWorldCore.Program.Main();
+
+               var result = sw.ToString().Trim();
+               Assert.AreEqual(Expected, result);
+            }
+         }
+      }
+   }
+   ```
+
 > [!TIP]
-> 有关创建单元测试的更详细演练，请参阅[创建并运行托管代码的单元测试](walkthrough-creating-and-running-unit-tests-for-managed-code.md)。
+> 有关创建单元测试的更详细信息，请参阅[创建并运行托管代码的单元测试](walkthrough-creating-and-running-unit-tests-for-managed-code.md)。
 
 ## <a name="run-unit-tests"></a>运行单元测试
 
-1. 打开[“测试资源管理器”](../test/run-unit-tests-with-test-explorer.md)。
+1. 打开[测试资源管理器](../test/run-unit-tests-with-test-explorer.md)。
 
    ::: moniker range=">=vs-2019"
    若要打开测试资源管理器，请选择顶部菜单栏中的“测试”>“测试资源管理器”   。

@@ -10,16 +10,84 @@ ms.author: johmil
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: fe317d446ddc9196df02dfafcf0397f8815574c3
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.openlocfilehash: 5599153f79b273249e93c48aaa197214d92f5fe7
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74771538"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80232922"
 ---
 # <a name="change-log-visual-studio-tools-for-unity-mac"></a>更改日志（Visual Studio Tools for Unity、Mac）
 
 Visual Studio Tools for Unity 更改日志。
+
+## <a name="2520"></a>2.5.2.0
+
+发布日期：2020 年 3 月 23 日
+
+### <a name="bug-fixes"></a>Bug 修复
+
+- **调试器：**
+
+  - 修复了附加时的线程注册问题。
+
+## <a name="2510"></a>2.5.1.0
+
+发布日期：2020 年 3 月 3 日
+
+### <a name="new-features"></a>新增功能
+
+- **集成：**
+
+  - 添加了针对 [`IDE0051`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/USP0008.md) 的抑制器。 与 Invoke、InvokeRepeating、StartCoroutine 或 StopCoroutine 一起使用的专用方法不应标记为未使用。
+
+### <a name="bug-fixes"></a>Bug 修复
+
+- **集成：**
+
+  - 修复了 OnDrawGizmos/OnDrawGizmosSelected 文档
+
+- **评估版：**
+
+  - 修复了 Lambda 参数检查。
+
+## <a name="2501"></a>2.5.0.1
+
+发布日期：2020 年 2 月 19 日
+
+### <a name="bug-fixes"></a>Bug 修复
+
+- **集成：**
+
+  - 修复了针对错误的消息签名的 [`UNT0006`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/UNT0006.md) 诊断检查。 当检查具有多个继承级别的类型时，此诊断可能会失败，并显示以下消息：`warning AD0001: Analyzer 'Microsoft.Unity.Analyzers.MessageSignatureAnalyzer' threw an exception of type 'System.ArgumentException' with message 'An item with the same key has already been added`。
+
+## <a name="2500"></a>2.5.0.0
+
+发布日期：2020 年 1 月 22 日
+
+### <a name="new-features"></a>新增功能
+
+- **集成：**
+
+  - 添加了对 HLS 文件的支持。
+  
+  - 切换到“新建文件夹”对话框用户界面。
+  
+  - 切换到新的可访问属性网格以进行设置。
+
+  - 添加了针对 [`IDE0051`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/USP0006.md) 的抑制器。 具有 `SerializeField` 属性的专用字段不应标记为未使用。
+
+  - 添加了针对 [`CS0649`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/USP0007.md) 的抑制器。 具有 `SerializeField` 属性的字段不应标记为未分配。  
+
+### <a name="bug-fixes"></a>Bug 修复
+
+- **集成：**
+
+  - 修复了项目生成问题（无法始终正确找到 `GenerateTargetFrameworkMonikerAttribute` 目标）
+
+- **评估版：**
+
+  - 修复了字符串评估问题（不使用 ToString() 调用）
 
 ## <a name="2420"></a>2.4.2.0
 
@@ -277,7 +345,7 @@ Visual Studio Tools for Unity 更改日志。
 
 ### <a name="new-features"></a>新增功能
 
-- **项目生成：**
+- **Project Generation:**
 
   - 处理解决方案文件时，请保留外部属性。
   
@@ -309,7 +377,7 @@ Visual Studio Tools for Unity 更改日志。
 
 ### <a name="new-features"></a>新增功能
 
-- **项目生成：**
+- **Project Generation:**
 
   - 公共字段和序列化字段将不再引发警告。 在创建这些消息的 Unity 项目中，我们自动禁止了 `CS0649` 和 `IDE0051` 编译器警告。
 
@@ -430,7 +498,7 @@ Visual Studio Tools for Unity 更改日志。
 
   - 修复了 OnApplicationFocus 消息拼写错误。
 
-- **项目生成：**
+- **Project Generation:**
 
   - Unity 性能 Bug 的暂时解决方法：生成项目时缓存 MonoIsland。
 
@@ -474,7 +542,7 @@ Visual Studio Tools for Unity 更改日志。
 
 ### <a name="new-features"></a>新增功能
 
-- **项目生成：**
+- **Project Generation:**
 
   - 添加了对 Unity 2018.1 中新项目生成器的支持。
 
@@ -488,7 +556,7 @@ Visual Studio Tools for Unity 更改日志。
 
 ### <a name="bug-fixes"></a>Bug 修复
 
-- **项目生成：**
+- **Project Generation:**
 
   - 修复了 Mono 版本检测的问题。
 
@@ -514,7 +582,7 @@ Visual Studio Tools for Unity 更改日志。
 
 ### <a name="new-features"></a>新增功能
 
-- **项目生成：**
+- **Project Generation:**
 
   - 添加了对 .NET Standard 的支持。
 
@@ -562,7 +630,7 @@ Visual Studio Tools for Unity 更改日志。
 
 ### <a name="bug-fixes"></a>Bug 修复
 
-- **项目生成：**
+- **Project Generation:**
 
   - 修复了额外 .dll 扩展名错误添加到程序集文件问题。
 
@@ -574,7 +642,7 @@ Visual Studio Tools for Unity 更改日志。
 
 ### <a name="new-features"></a>新增功能
 
-- **项目生成：**
+- **Project Generation:**
 
   - 添加了对 .NET 4.6 配置文件的支持。
 
@@ -588,7 +656,7 @@ Visual Studio Tools for Unity 更改日志。
 
   - 如果不确定附加到哪个 Unity，启动“附加到进程”对话框。
 
-- **项目生成：**
+- **Project Generation:**
 
   - 使用 Unity 5.6 时，始终启用不安全编译开关。
 
@@ -612,7 +680,7 @@ Visual Studio Tools for Unity 更改日志。
 
   - 添加了对通过“附加到进程”窗口附加到播放器和编辑器的支持。
 
-- **项目生成：**
+- **Project Generation:**
 
   - 修复了使用 mcs.rsp 文件的程序集名称引用。
 

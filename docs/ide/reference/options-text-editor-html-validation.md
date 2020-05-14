@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: ede4600cb1fa1df118b4635a193d8bff348d5119
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75568277"
 ---
 # <a name="options-text-editor-html-web-forms-validation"></a>“选项”>“文本编辑器”>“HTML (Web 窗体)”>“验证”
@@ -27,7 +27,7 @@ ms.locfileid: "75568277"
 
    架构用于确定在此架构中有效的元素、属性和大小写。 架构还用于确定 IntelliSense 中可用的标记和属性。
 
-   如果希望 Visual Studio 使用页面的 <!DOCTYPE>  声明和 html  元素内容来确定架构，请选中此选项。 例如，如果你选中此选项，且页面中有声明 `<!DOCTYPE html>`，Visual Studio 就会使用 HTML5 架构。 不过，如果 html  标记有 xmlns  属性（如 `<html>`），Visual Studio 就会使用 XHTML5 架构。
+   如果希望 Visual Studio 使用页面的 <!DOCTYPE>  声明和 html  元素内容来确定架构，请选中此选项。 例如，如果你选中此选项，且页面中有声明 `<!DOCTYPE html>`，Visual Studio 就会使用 HTML5 架构。 不过，如果 html  标记有 xmlns  属性（如 `<html xmlns="http://www.w3.org/1999/xhtml">`），Visual Studio 就会使用 XHTML5 架构。
 
 - **找不到 doctype 时的目标**
 
@@ -42,6 +42,6 @@ ms.locfileid: "75568277"
      > [!NOTE]
      > 某些架构不提供标记各个错误类型的选项。 例如，如果你选择“XHTML 1.1”  作为目标架构，所有选项复选框都会遭禁用。 在此示例中，编辑器会标记所有类型的错误。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [“选项”对话框 ->“环境”->“常规”](../../ide/reference/general-environment-options-dialog-box.md)

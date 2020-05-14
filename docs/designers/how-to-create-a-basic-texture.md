@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 916be87824a86e96d6fcb791cf8181d70e1e8104
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75589445"
 ---
 # <a name="how-to-create-a-basic-texture"></a>如何：创建基本纹理
@@ -85,8 +85,8 @@ ms.locfileid: "75589445"
 
 ![完整的“靶心”目标纹理](../designers/media/gfx_image_demo_bullseye.png)
 
-作为下一步，可以为此纹理生成 MIP 级别。 有关详细信息，请参阅[如何：创建和修改 MIP 级别](../designers/how-to-create-and-modify-mip-levels.md)。
+作为下一步，可以为此纹理生成 MIP 级别。 有关信息，请参阅[如何：创建和修改 MIP 级别](../designers/how-to-create-and-modify-mip-levels.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [图像编辑器](../designers/image-editor.md)

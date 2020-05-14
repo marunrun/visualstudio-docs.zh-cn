@@ -14,10 +14,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 92cce705135daa8bc54a7fab301cf5dcd8cf96d6
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75591172"
 ---
 # <a name="code-a-custom-extraction-rule-for-a-web-performance-test"></a>为 Web 性能测试编码自定义提取规则
@@ -206,7 +206,7 @@ End Namespace
 
 <xref:Microsoft.VisualStudio.TestTools.WebTesting.ExtractionRule.Extract*> 方法中包含了提取规则的核心功能。 前面示例中的 <xref:Microsoft.VisualStudio.TestTools.WebTesting.ExtractionRule.Extract*> 方法接受 <xref:Microsoft.VisualStudio.TestTools.WebTesting.ExtractionEventArgs> 参数，该参数用于提供此提取规则涵盖范围内的请求生成的响应。 该响应包含一个 <xref:Microsoft.VisualStudio.TestTools.WebTesting.HtmlDocument>，其中包含了响应中的所有标记。 输入标记会从 <xref:Microsoft.VisualStudio.TestTools.WebTesting.HtmlDocument> 筛选排除掉。 会对每个输入标记的 `name` 特性进行检查，以确定其值是否与用户所提供的 `Name` 属性的值相等。 如果找到具有此匹配特性的标记，便会尝试提取 `value` 特性所包含的值（如果存在 value 特性的话）。 如果该值存在，则会提取标记的名称和值，并将它们添加到 Web 性能测试上下文中。 提取规则通过。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:Microsoft.VisualStudio.TestTools.WebTesting.ExtractionRule>
 - <xref:Microsoft.VisualStudio.TestTools.WebTesting.Rules>

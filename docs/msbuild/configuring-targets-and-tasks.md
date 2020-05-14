@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 39a3d6ba3eff6a01c2d0ff68b4132d883eadb90f
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77634391"
 ---
 # <a name="configure-targets-and-tasks"></a>配置目标和任务
@@ -29,6 +29,6 @@ ms.locfileid: "77634391"
 
  如果要创建自己的目标上下文，必须正确设置这些实参和形参。 有关示例，请参阅 .NET Framework 4.5 Microsoft.Common.targets 文件和 Microsoft.Common.Tasks 文件   。  有关如何创建可用于多个目标上下文的自定义任务或如何修改现有任务的信息，请参阅[如何：配置目标和任务](../msbuild/how-to-configure-targets-and-tasks.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [多定向](../msbuild/msbuild-multitargeting-overview.md)

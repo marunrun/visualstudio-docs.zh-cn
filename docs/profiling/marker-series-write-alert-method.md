@@ -13,13 +13,13 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 635f767f97ea3d237aeff843e99735eccae31efc
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62831379"
 ---
-# <a name="markerserieswritealert-method"></a>marker_series::write_alert 方法
+# <a name="marker_serieswrite_alert-method"></a>marker_series::write_alert 方法
 向并发可视化工具跟踪文件写入一个警报。
 
 ## <a name="syntax"></a>语法
@@ -35,7 +35,7 @@ void write_alert(
  `_Format` 一个复合格式字符串，其中包含与零个或多个格式项混合的文本，这些格式项对应于参数列表中的对象。
 
 ## <a name="requirements"></a>要求
- **标头：** cvmarkersobj.h
+ **Header:** *cvmarkersobj.h*
 
  **命名空间：** Concurrency::diagnostic
 

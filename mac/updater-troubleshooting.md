@@ -8,10 +8,10 @@ ms.date: 04/13/2019
 ms.technology: vs-ide-install
 ms.assetid: 31AF914A-C66B-4CD3-9429-39695E0E94AE
 ms.openlocfilehash: 2ccef07a2889f66df3e7f217ea292b61ffc0008f
-ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "75405480"
 ---
 # <a name="troubleshooting-updater-has-errors-retrieving-information"></a>疑难解答：更新程序在检索信息时发生错误

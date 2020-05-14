@@ -1,5 +1,5 @@
 ---
-title: 注册项目和项模板 |Microsoft Docs
+title: 注册项目和项目模板 |微软文档
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,25 +9,25 @@ helpviewer_keywords:
 - Add New Project dialog box
 - registry, Add New Project dialog box
 ms.assetid: 6b909f93-d7f5-4aec-81c6-ee9ff0f31638
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2e35a476ab8fe8d8de3ce11dd117de4c84a3befa
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: b64504c39b1fc3c4a82530b265cfd0e96832b4f2
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72724629"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80705827"
 ---
 # <a name="registering-project-and-item-templates"></a>注册项目和项模板
-项目类型必须注册其项目和项目项模板所在的目录。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 使用与项目类型关联的注册信息来确定要在 "**添加新项目**" 和 "**添加新项**" 对话框中显示的内容。
+项目类型必须注册其项目和项目项目模板所在的目录。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]使用与项目类型关联的注册信息来确定要在 **"添加新项目和****添加新项目**"对话框中显示的内容。
 
- 有关模板的详细信息，请参阅[添加项目和项目项模板](../../extensibility/internals/adding-project-and-project-item-templates.md)。
+ 有关模板的详细信息，请参阅[添加项目和项目项目模板](../../extensibility/internals/adding-project-and-project-item-templates.md)。
 
 ## <a name="registry-entries-for-projects"></a>项目的注册表项
- 以下示例显示 HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio \\ <*版本*> 下的注册表项。 随附的表解释了示例中使用的元素。
+ 以下示例显示HKEY_LOCAL_MACHINE\软件\微软_VisualStudio\\<*版本*>下的注册表项。 随附的表说明了示例中使用的元素。
 
 ```
 [Projects\{ProjectGUID}]
@@ -37,15 +37,15 @@ ms.locfileid: "72724629"
 "ProjectTemplatesDir"="C:\\MyProduct\\MyProjectTemplates"
 ```
 
-|“属性”|键入|描述|
+|名称|类型|说明|
 |----------|----------|-----------------|
-|@|REG_SZ|此类型的项目的默认名称。|
-|DisplayName|REG_SZ|要从在包下注册的附属 DLL 检索的名称的资源 ID。|
-|Package|REG_SZ|包中注册的包的类 ID。|
-|ProjectTemplatesDir|REG_SZ|项目模板文件的默认路径。 项目模板文件由**新项目**模板显示。|
+|@|REG_SZ|此类项目的默认名称。|
+|DisplayName|REG_SZ|要从在"包"下注册的卫星 DLL 检索的名称的资源 ID。|
+|程序包|REG_SZ|在"包"下注册的包的类 ID。|
+|项目模板Dir|REG_SZ|项目模板文件的默认路径。 项目模板文件由**新项目**模板显示。|
 
-### <a name="registering-item-templates"></a>注册项模板
- 必须注册存储项模板的目录。
+### <a name="registering-item-templates"></a>注册项目模板
+ 您必须注册存储项目模板的目录。
 
 ```
 [Projects\{ProjectGUID}\AddItemTemplates\TemplateDirs\{VSPackageGUID}\1]
@@ -55,21 +55,21 @@ ms.locfileid: "72724629"
 "SortPriority"=dword:00000064
 ```
 
-| “属性” | 键入 | 描述 |
+| 名称 | 类型 | 说明 |
 |--------------------------|-----------| - |
-| @ | REG_SZ | 添加项模板的资源 ID。 |
-| TemplatesDir | REG_SZ | 显示在 "**添加新项**向导" 对话框中的项目项的路径。 |
-| TemplatesLocalizedSubDir | REG_SZ | 命名包含本地化模板的 TemplatesDir 子目录的字符串的资源 ID。 由于 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 从附属 Dll 加载字符串资源（如果有），因此每个附属 DLL 都可以包含一个不同的本地化子目录名称。 |
-| SortPriority | REG_DWORD | 设置 SortPriority 以控制模板在 "**添加新项**" 对话框中的显示顺序。 较大的 SortPriority 值将显示在模板列表中较早的值。 |
+| @ | REG_SZ | 添加项目模板的资源 ID。 |
+| 模板迪尔 | REG_SZ | **"添加新项目**"向导的对话框中显示的项目项的路径。 |
+| 模板本地化子 Dir | REG_SZ | 命名保存本地化模板的 TemplatesDir 子目录的字符串的资源 ID。 由于[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]如果具有附属 DLL，则从附属 DLL 加载字符串资源，因此每个附属 DLL 可以包含不同的本地化子目录名称。 |
+| 排序优先级 | REG_DWORD | 设置排序优先级以控制模板在"**添加新项目**"对话框中的显示顺序。 较大的排序优先级值出现在模板列表中的较早位置。 |
 
 ### <a name="registering-file-filters"></a>注册文件筛选器
- 或者，你可以注册 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 在提示输入文件名时使用的筛选器。 例如，"**打开文件**" 对话框的 "[!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] 筛选器是：
+ 或者，您可以注册在提示文件名时[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]使用的筛选器。 例如，"[!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]**打开文件"** 对话框的筛选器是：
 
- **视觉C#文件（\* .cs、\* .resx \*、\*、\*）;\* .cs，\* .resx \*，0 .xsd，1）**
+ **可视化 C#\*文件（.cs、.resx、.\*\*设置、.xsd、.wsdl）;\*\*\*.cs，\*.resx，\*.\*设置， .xsd，\*.wsdl）**
 
- 为了支持注册多个筛选器，每个筛选器都在 HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio \\ <*Version*> \Projects \\ {\<*ProjectGUID*>} \Filters<*子项*> \\。 子项名称为任意; [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 忽略子项的名称，并只使用其值。
+ 为了支持多个筛选器的注册，每个\\<筛选器在HKEY_LOCAL_MACHINE\软件\Microsoft_VisualStudio*版本*>_项目\\[\<*ProjectGUID*>]\\<下>"下注册自己的子*键*。 子键名称是任意的;[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]忽略子键的名称，只使用其值。
 
- 您可以通过设置标志来控制使用筛选器的上下文，如下表所示。 如果筛选器没有设置任何标志，则该筛选器将在 "**添加现有项**" 对话框和 "**打开文件**" 对话框中的常见筛选器后列出，但不会在 "在**文件中查找**" 对话框中使用。
+ 您可以通过设置标记来控制使用筛选器的上下文，如下表所示。 如果筛选器未设置任何标志，它将在"**添加现有项目**"对话框和 **"打开文件"** 对话框中的常用筛选器之后列出，但不会在"**在文件中查找**"对话框中使用。
 
 ```
 [Projects\{ProjectGUID}\Filters\MyLanguageFilter]
@@ -82,39 +82,39 @@ ms.locfileid: "72724629"
 "SortPriority"=dword:00000064
 ```
 
-|“属性”|键入|描述|
+|名称|类型|说明|
 |----------|----------|-----------------|
-|CommonFindFilesFilter|REG_DWORD|使筛选器在 "**在文件中查找**" 对话框中的一个公共筛选器。 筛选器列表中会列出常见筛选器，然后筛选器才会标记为公用筛选器。|
-|CommonOpenFilesFilter|REG_DWORD|使筛选器 "**打开文件**" 对话框中的一个公共筛选器。 筛选器列表中会列出常见筛选器，然后筛选器才会标记为公用筛选器。|
-|FindInFilesFilter|REG_DWORD|列出 "在**文件中查找**" 对话框中常见筛选器之后的筛选器。|
-|NotOpenFileFilter|REG_DWORD|指示 "**打开文件**" 对话框中未使用筛选器。|
-|NotAddExistingItemFilter|REG_DWORD|指示 "**添加现有项**" 对话框中未使用筛选器。|
-|SortPriority|REG_DWORD|设置 SortPriority 来控制筛选器的显示顺序。 较大的 SortPriority 值将显示在筛选器列表中较早的值。|
+|常见查找文件筛选器|REG_DWORD|使筛选器成为"**在文件中查找**"对话框中的常见筛选器之一。 在筛选器未标记为公共筛选器之前，筛选器将列在筛选器列表中。|
+|常见打开文件筛选器|REG_DWORD|使筛选器成为 **"打开文件"** 对话框中常见的筛选器之一。 在筛选器未标记为公共筛选器之前，筛选器将列在筛选器列表中。|
+|查找文件筛选器|REG_DWORD|在"**在文件中查找**"对话框中列出常见筛选器后筛选器。|
+|未打开文件筛选器|REG_DWORD|指示筛选器未在 **"打开文件"** 对话框中使用。|
+|未添加现有项目筛选器|REG_DWORD|指示筛选器未在 **"添加现有项目"** 对话框中使用。|
+|排序优先级|REG_DWORD|设置排序优先级以控制筛选器的显示顺序。 较大的排序优先级值出现在筛选器列表中的较早位置。|
 
 ## <a name="directory-structure"></a>目录结构
- 只要通过集成开发环境（IDE）注册位置，Vspackage 就可以将模板文件和文件夹放置在本地或远程磁盘上的任何位置。 但是，为了便于组织，我们建议你在产品的安装路径下安装以下目录结构。
+ 只要位置是通过集成开发环境 （IDE） 注册，VS包就可以将模板文件和文件夹放在本地或远程磁盘上的任意位置。 但是，为了便于组织，我们建议在产品的安装路径下采用以下目录结构。
 
- \Templates
+ *模板
 
- \Projects （包含项目模板）
+ *项目（包含项目模板）
 
- \Applications and
+ *应用
 
- \Components
+ *组件
 
  \ ...
 
- \ProjectItems （包含项目项）
+ *项目项目（包含项目项）
 
- \Class
+ *类
 
- \Form
+ *表格
 
- \Web 页
+ *网页
 
- \HelperFiles （包含多文件项目项中使用的文件）
+ •帮助文件（包含多文件项目项中使用的文件）
 
- \WizardFiles
+ *向导文件
 
 ## <a name="see-also"></a>请参阅
 

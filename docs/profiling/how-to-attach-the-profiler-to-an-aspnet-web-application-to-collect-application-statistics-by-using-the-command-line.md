@@ -11,10 +11,10 @@ monikerRange: vs-2017
 ms.workload:
 - aspnet
 ms.openlocfilehash: 549e43f403b19d8832e00277f826cdc7b276b747
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74779072"
 ---
 # <a name="how-to-attach-the-profiler-to-an-aspnet-web-application-to-collect-application-statistics-by-using-the-command-line"></a>如何：将探查器附加到 ASP.NET Web 应用程序，以使用命令行收集应用程序统计信息
@@ -49,7 +49,7 @@ ms.locfileid: "74779072"
 
 3. 重新启动计算机。
 
-4. 启动探查器。 输入：**VSPerfCmd** [/start](../profiling/start.md) **:sample** [/output](../profiling/output.md) **:** `OutputFile`[`Options`]
+4. 启动探查器。 Type:**VSPerfCmd** [/start](../profiling/start.md) **:sample** [/output](../profiling/output.md) **:** `OutputFile`[`Options`]
 
    - /start:sample  选项初始化探查器。
 
@@ -60,7 +60,7 @@ ms.locfileid: "74779072"
    > [!NOTE]
    > **/user** 和 **/crosssession** 选项通常为 ASP.NET 应用程序所需选项。
 
-   | 选项 | 说明 |
+   | 选项 | 描述 |
    | - | - |
    | [/user](../profiling/user-vsperfcmd.md) **:** [`Domain` **\\** ]`UserName` | 指定拥有 ASP.NET 工作进程的帐户的域和用户名。 在进程以已登录用户外的用户身份运行时才需要此选项。 进程所有者在 Windows 任务管理器的“进程”选项卡上的“用户名”列中列出   。 |
    | [/crosssession](../profiling/crosssession.md) | 启用其他登录会话中的进程分析。 如果 ASP.NET 应用程序在其他会话中运行，则需要此选项。 会话标识符在 Windows 任务管理器的“进程”选项卡上的“会话 ID”列中列出。 可以将 **/CS** 指定为 **/crosssession** 的缩写。 |
@@ -70,13 +70,13 @@ ms.locfileid: "74779072"
 
 5. 以典型方式启动 ASP.NET Web 应用程序。
 
-6. 将探查器附加到 ASP.NET 工作进程。 输入：**VSPerfCmd** [/attach](../profiling/attach.md) **:** {`PID`&#124;`ProcName`} [`Sample Event`] [[/targetclr](../profiling/targetclr.md) **:** `Version`]
+6. 将探查器附加到 ASP.NET 工作进程。 Type:**VSPerfCmd** [/attach](../profiling/attach.md) **:** {`PID`&#124;`ProcName`} [`Sample Event`] [[/targetclr](../profiling/targetclr.md) **:** `Version`]
 
    - `PID` 指定 ASP.NET 工作进程的进程 ID；`ProcName` 指定工作进程的名称。 可以在 Windows 任务管理器中查看所有运行中的进程的进程 ID 和名称。
 
    - 默认情况下，性能数据为每 10,000,000 个非暂停处理器时钟周期采样一次。 在 1GH 处理器上，每秒约为 100 次。 可以指定以下 VSPerfCmd  选项之一，更改时钟周期间隔或指定不同的采样事件。
 
-   |样本事件|说明|
+   |样本事件|描述|
    |------------------|-----------------|
    |[/timer](../profiling/timer.md) **:** `Interval`|将采样间隔更改为 `Interval` 所指定的非暂停时钟周期数目。|
    |[/pf](../profiling/pf.md)[ **:** `Interval`]|将采样事件更改为页面错误。 如果已指定 `Interval`，则会设置样本之间的页面错误数目。 默认值为 10。|
@@ -93,14 +93,14 @@ ms.locfileid: "74779072"
 
 - 以下 **VSPerfCmd** 选项对可启动和停止数据收集。 在单独的命令行上指定每个选项。 可多次打开和关闭数据收集。
 
-    |选项|说明|
+    |选项|描述|
     |------------|-----------------|
     |[/globalon /globaloff](../profiling/globalon-and-globaloff.md)|启动 ( **/globalon**) 或停止 ( **/globaloff**) 所有进程的数据收集。|
     |[/processon](../profiling/processon-and-processoff.md) **:** `PID` **/processoff:** `PID`|对由 `PID` 指定的进程，启动 (/processon  ) 或停止 (/processoff  ) 数据收集。|
     |[/attach](../profiling/attach.md) **:** {`PID`&#124;`ProcName`} [/detach](../profiling/detach.md)[ **:** {`PID`&#124;`ProcName`}]|**/attach** 将启动由 `PID` 或进程名称 (ProcName) 指定的进程的数据收集。 **/detach** 将停止指定进程或所有进程（未指定任何特定进程时）的数据收集。|
 
 ## <a name="end-the-profiling-session"></a>结束分析会话
- 要结束分析会话，请关闭 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web 应用，然后使用 Internet Information Services (IIS) IISReset 命令来关闭 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 工作进程  。 调用 VSPerfCmd  [/shutdown](../profiling/shutdown.md) 选项关闭探查器和分析数据文件。
+ 要结束分析会话，请关闭 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web 应用，然后使用 Internet Information Services (IIS) IISReset 命令来关闭 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 工作进程  。 调用 VSPerfCmd [/shutdown](../profiling/shutdown.md) 选项关闭探查器和分析数据文件  。
 
  VSPerfClrEnv /globaloff 命令会清除分析环境变量  。 必须重启计算机才能应用新的环境设置。
 
@@ -112,11 +112,11 @@ ms.locfileid: "74779072"
 
    - 键入 **VSPerfCmd /detach**
 
-      -或-
+      \- 或 -
 
    - 关闭 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 工作进程。
 
-2. 关闭探查器。 输入：**VSPerfCmd** [/shutdown](../profiling/shutdown.md)
+2. 关闭探查器。 Type:**VSPerfCmd** [/shutdown](../profiling/shutdown.md)
 
 3. （可选）清除分析环境变量。 类型：
 

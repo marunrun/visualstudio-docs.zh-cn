@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: f25f9d96cd8de8dcb140c79c7dfb3a7a5981986c
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75595847"
 ---
 # <a name="advanced-build-settings-dialog-box-c"></a>“高级生成设置”对话框 (C#)
@@ -56,7 +56,7 @@ ms.locfileid: "75595847"
 
 指定是否将 mscorlib.dll 导入程序，同时定义整个 <xref:System> 命名空间。 如果想要定义或创建自己的 <xref:System> 命名空间和对象，请选中此框。 有关详细信息，请参阅 [/nostdlib（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/nostdlib-compiler-option)。
 
-## <a name="output"></a>Output
+## <a name="output"></a>输出
 
 使用以下选项可以指定高级输出选项。
 
@@ -94,7 +94,7 @@ ms.locfileid: "75595847"
 
 指定要加载 DLL 的首选基址。 DLL 的默认基址由 .NET Framework 公共语言运行时设置。 有关详细信息，请参阅 [/baseaddress（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/baseaddress-compiler-option)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 编译器选项](/dotnet/csharp/language-reference/compiler-options/index)
 - [项目设计器的“生成”页 (C#)](../../ide/reference/build-page-project-designer-csharp.md)

@@ -11,11 +11,11 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: 4678e3508c16b38fec2a10cdeb79bc499eaf15fd
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62959792"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79307171"
 ---
 # <a name="debug-your-python-code"></a>调试 Python 代码
 
@@ -66,7 +66,7 @@ Visual Studio 提供全面的 Python 调试体验，包括附加到正在运行�
 
 在断点处停止后，可使用多种方法逐句通过代码或在再次中断之前运行代码块。 多个位置和途径可以提供这些命令，包括顶部调试工具栏、“调试”菜单、通过右键单击代码编辑器中的上下文菜单，以及通过键盘快捷方式（但并非所有命令都可以在这些位置提供）  ：
 
-| 功能 | 击键 | 说明 |
+| 功能 | 击键 | 描述 |
 | --- | --- | --- |
 | **Continue** | **F5** | 运行代码，到达下一个断点时停止。 |
 | **逐语句** | F11  | 运行下一语句并停止。 如果下一语句是对函数的调用，调试器将在调用函数的第一行处停止。 |
@@ -132,7 +132,7 @@ HTML、XML 和 JSON 可视化效果显示在单独的弹出窗口中，其中突
 
 ### <a name="launch-mode-options"></a>启动模式选项
 
-| 选项 | 说明 |
+| 选项 | 描述 |
 | --- | --- |
 | **标准 Python 启动器** | 使用以可移植 Python（与 CPython、IronPython 和无堆栈 Python 等变量兼容）编写的调试代码。 它提供调试纯 Python 代码的最佳体验。 附加到正在运行的 python.exe 进程时，将使用此启动器  。 此外，此启动器还提供针对 CPython 的[混合模式调试](debugging-mixed-mode-c-cpp-python-in-visual-studio.md)，可以无缝地在 C/C++ 代码和 Python 代码之间进行单步执行。 |
 | **Web 启动器** | 在启动时启动默认浏览器并启用模板调试。 请参阅[Web 模板调试](python-web-application-project-templates.md#debugging)部分，了解详细信息。 |
@@ -141,7 +141,7 @@ HTML、XML 和 JSON 可视化效果显示在单独的弹出窗口中，其中突
 
 ### <a name="run-options-search-paths-startup-arguments-and-environment-variables"></a>运行选项（搜索路径、启动参数和环境变量）
 
-| 选项 | 说明 |
+| 选项 | 描述 |
 | --- | --- |
 | **搜索路径** | 这些值与解决方案资源管理器中项目的搜索路径节点中显示的值匹配   。 可以在此处修改该值，但使用解决方案资源管理器更简单，因为可以浏览文件夹和自动将路径转换为相对形式  。 |
 | **脚本参数** | 这些参数添加到用于启动脚本的命令中，并且显示在脚本的文件名后。 此处可供脚本使用的第一项为 `sys.argv[1]`，第二项为 `sys.argv[2]`，以此类推。 |
@@ -161,10 +161,10 @@ Python 调试交互窗口（“调试” > “窗口” > “Python 调试交互
 
 除[标准 REPL 命令](python-interactive-repl-in-visual-studio.md#meta-commands)外，调试交互窗口还支持特殊元命令  ：
 
-| 命令 | 自变量 | 说明 |
+| 命令 | 自变量 | 描述 |
 | --- | --- | --- |
 | `$continue`, `$cont`, `$c` | 从当前语句开始运行程序。 |
-| `$down`， `$d` | 在堆栈跟踪中将当前帧下移一级。 |
+| `$down`，`$d` | 在堆栈跟踪中将当前帧下移一级。 |
 | `$frame` | | 显示当前的帧 ID。
 | `$frame` | 帧 ID | 将当前帧切换为指定帧 ID。
 | `$load` | 从文件加载命令并执行，直到完成 |
@@ -177,7 +177,7 @@ Python 调试交互窗口（“调试” > “窗口” > “Python 调试交互
 | `$thread` | | 显示当前的线程 ID。 |
 | `$thread` | 线程 ID | 将当前线程切换为指定线程 ID。 |
 | `$threads` | | 列出当前正在调试的线程。 |
-| `$up`， `$u` | | 在堆栈跟踪中将当前帧上移一级。 |
+| `$up`，`$u` | | 在堆栈跟踪中将当前帧上移一级。 |
 | `$where`, `$w`, `$bt` | 列出当前线程的帧。 |
 
 请注意，标准调试器窗口（如进程、线程和调用堆栈）不与调试交互窗口同步     。 更改调试交互窗口中的活动进程、线程或帧不会影响其他调试器窗口  。 同样，更改其他调试器窗口中的活动进程、线程或帧也不会影响调试交互窗口  。

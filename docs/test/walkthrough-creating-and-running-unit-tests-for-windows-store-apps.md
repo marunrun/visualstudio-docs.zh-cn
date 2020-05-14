@@ -13,10 +13,10 @@ ms.workload:
 - uwp
 author: mikejo5000
 ms.openlocfilehash: 4109f743caf7c62450591f78e90b92113fc4107e
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75568875"
 ---
 # <a name="walkthrough-create-and-run-unit-tests-for-uwp-apps"></a>演练：创建并运行 UWP 应用的单元测试
@@ -123,7 +123,7 @@ Visual Studio 支持对通用 Windows 平台 (UWP) 应用进行单元测试。 V
 
    ![单元测试资源管理器 - 已完成测试](../test/media/unit_test_win8_unittestexplorer_done.png)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用 Visual Studio 测试 UWP 应用](../test/unit-test-your-code.md)
 - [生成和测试 UWP 应用](/azure/devops/pipelines/apps/windows/universal?tabs=vsts)

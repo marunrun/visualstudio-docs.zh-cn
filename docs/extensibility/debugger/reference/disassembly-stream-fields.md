@@ -1,5 +1,5 @@
 ---
-title: DISASSEMBLY_STREAM_FIELDS | Microsoft Docs
+title: DISASSEMBLY_STREAM_FIELDS |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - DISASSEMBLY_STREAM_FIELDS enumeration
 ms.assetid: cfc9b4de-c756-4844-bea7-d9f186a51d1b
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 3499ce5bfe46f3185dd5c8ca9e2ada055544c8c8
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: d10f2143cbefa86442e4087ac098020f5f2bd6ac
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66318263"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80737363"
 ---
-# <a name="disassemblystreamfields"></a>DISASSEMBLY_STREAM_FIELDS
-指定要检索有关反汇编字段信息。
+# <a name="disassembly_stream_fields"></a>DISASSEMBLY_STREAM_FIELDS
+指定要检索的有关拆解字段的信息。
 
 ## <a name="syntax"></a>语法
 
@@ -87,7 +87,7 @@ public enum enum_DISASSEMBLY_STREAM_FIELDS {
 初始化/使用`uCodeLocationId`字段。
 
 `DSF_POSITION`\
-初始化/用`posBeg`和`posEnd`字段。
+初始化/使用`posBeg`和`posEnd`字段。
 
 `DSF_DOCUMENTURL`\
 初始化/使用`bstrDocumentUrl`字段。
@@ -96,30 +96,30 @@ public enum enum_DISASSEMBLY_STREAM_FIELDS {
 初始化/使用`dwByteOffset`字段。
 
 `DSF_FLAGS`\
-初始化/用`dwFlags`([DISASSEMBLY_FLAGS](../../../extensibility/debugger/reference/disassembly-flags.md)) 字段。
+初始化/使用`dwFlags`（[DISASSEMBLY_FLAGS](../../../extensibility/debugger/reference/disassembly-flags.md)） 字段。
 
 `DSF_OPERANDS_SYMBOLS`\
-包括中的符号名称`bstrOperands`字段。
+在`bstrOperands`字段中包括符号名称。
 
 `DSF_ALL`\
-指定为反汇编的流的所有字段。
+指定拆解流的所有字段。
 
 ## <a name="remarks"></a>备注
-作为参数传递给[读](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md)方法，以指示的哪些字段[DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md)结构是进行初始化。
+作为参数传递给[Read](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md)方法，以指示要初始化[拆解数据](../../../extensibility/debugger/reference/disassemblydata.md)结构的哪些字段。
 
-用于`dwFields`的成员`DisassemblyData`结构，用于指示哪些字段是使用，有效时返回该结构。
+用于`dwFields``DisassemblyData`结构的成员，用于指示在返回结构时使用哪些字段并有效。
 
-可能的按位组合这些值`OR`。
+这些值可以稍微结合`OR`。
 
 ## <a name="requirements"></a>要求
-标头： msdbg.h
+标题： msdbg.h
 
-命名空间:Microsoft.VisualStudio.Debugger.Interop
+命名空间：微软.VisualStudio.调试器.互通
 
-程序集：Microsoft.VisualStudio.Debugger.Interop.dll
+程序集：微软.VisualStudio.调试器.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [枚举](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md)
-- [Read](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md)
+- [读取](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md)
 - [DISASSEMBLY_FLAGS](../../../extensibility/debugger/reference/disassembly-flags.md)

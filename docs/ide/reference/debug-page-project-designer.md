@@ -14,12 +14,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a2c3e7813e5e07a0fbb8f4ebf5838c883faa0fb8
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 16be10dc69f203e52eb0dccc0e0738399d37ee3d
+ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75595717"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81649437"
 ---
 # <a name="debug-page-project-designer"></a>“项目设计器”->“调试”页
 
@@ -87,5 +87,5 @@ ms.locfileid: "75595717"
 - [初探调试器](../../debugger/debugger-feature-tour.md)
 - [C# 调试配置的项目设置](../../debugger/project-settings-for-csharp-debug-configurations.md)
 - [Visual Basic 调试配置的项目设置](../../debugger/project-settings-for-a-visual-basic-debug-configuration.md)
-- [如何：使用受限权限调试 ClickOnce 应用程序](../../deployment/how-to-debug-a-clickonce-application-with-restricted-permissions.md)
+- [保护 ClickOnce 应用](../../deployment/securing-clickonce-applications.md)
 - [如何：创建和编辑配置](../../ide/how-to-create-and-edit-configurations.md)

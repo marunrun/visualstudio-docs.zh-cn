@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 607584b4b41bdfde224bdb35d30eec1c6c8a4197
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75585452"
 ---
 # <a name="target-build-order"></a>目标生成顺序
@@ -35,7 +35,7 @@ ms.locfileid: "75585452"
 
 ## <a name="initial-targets"></a>初始目标
 
-[Project`DefaultTargets` 元素的 `InitialTargets` 属性指定将首先运行的目标，即使在命令行或 ](../msbuild/project-element-msbuild.md) 属性中指定了目标。 初始目标常用于错误检查。
+`InitialTargets`Project[ 元素的 ](../msbuild/project-element-msbuild.md) 属性指定将首先运行的目标，即使在命令行或 `DefaultTargets` 属性中指定了目标。 初始目标常用于错误检查。
 
 `InitialTargets` 属性的值可以是以分号分隔的、有序的目标列表。 以下示例指定运行的 `Warm` 目标，然后指定运行的 `Eject` 目标。
 
@@ -49,7 +49,7 @@ ms.locfileid: "75585452"
 
 ## <a name="default-targets"></a>默认目标
 
-如果未在命令行上显式指定某个目标，[Project](../msbuild/project-element-msbuild.md) 元素的 `DefaultTargets` 属性可指定将生成哪个或哪些目标。
+如果未在命令行上显式指定某个目标，`DefaultTargets`Project[ 元素的 ](../msbuild/project-element-msbuild.md) 属性可指定将生成哪个或哪些目标。
 
 `DefaultTargets` 属性的值可以是以分号分隔的、有序的默认目标列表。 以下示例指定运行的 `Clean` 目标，然后指定运行的 `Build` 目标。
 
@@ -98,7 +98,7 @@ ms.locfileid: "75585452"
 </Project>
 ```
 
-若要创建在 `Compile` 目标后，`Link` 目标前运行的直接目标 `Optimize`，请将以下目标添加到 `Project` 元素中的任意位置。
+若要创建在 `Optimize` 目标后，`Compile` 目标前运行的直接目标 `Link`，请将以下目标添加到 `Project` 元素中的任意位置。
 
 ```xml
 <Target Name="Optimize"
@@ -130,6 +130,6 @@ MSBuild 按以下方式确定目标生成顺序：
 
 7. 执行或跳过目标后，运行 `AfterTargets` 属性中列出目标的任何其他目标。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [目标](../msbuild/msbuild-targets.md)

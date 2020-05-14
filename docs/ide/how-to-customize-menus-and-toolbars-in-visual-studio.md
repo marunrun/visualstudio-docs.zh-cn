@@ -28,11 +28,11 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: ed425b120d5d47fb684294ce17bd7d48374c638e
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75591094"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79306823"
 ---
 # <a name="how-to-customize-menus-and-toolbars-in-visual-studio"></a>如何：在 Visual Studio 中自定义菜单和工具栏
 
@@ -43,7 +43,7 @@ ms.locfileid: "75591094"
 
 ## <a name="add-remove-or-move-a-menu-on-the-menu-bar"></a>添加、删除或移动菜单栏上的菜单
 
-1. 在菜单栏上，依次选择“工具” > “自定义”   。
+1. 在菜单栏上，依次选择“工具” **“自定义”**  >   。
 
      此时将打开“自定义”  对话框。
 
@@ -59,7 +59,7 @@ ms.locfileid: "75591094"
 
 ## <a name="add-remove-or-move-a-toolbar"></a>添加、删除或移动工具栏
 
-1. 在菜单栏上，依次选择“工具” > “自定义”   。
+1. 在菜单栏上，依次选择“工具” **“自定义”**  >   。
 
      此时将打开“自定义”  对话框。
 
@@ -83,7 +83,7 @@ ms.locfileid: "75591094"
 
 ## <a name="customizing_menu">自定义菜单或工具栏</a>
 
-1. 在菜单栏上，依次选择“工具” > “自定义”   。
+1. 在菜单栏上，依次选择“工具” **“自定义”**  >   。
 
     此时将打开“自定义”  对话框。
 
@@ -105,7 +105,7 @@ ms.locfileid: "75591094"
 
 ## <a name="reset-a-menu-or-a-toolbar"></a>重置菜单或工具栏
 
-1. 在菜单栏上，依次选择“工具” > “自定义”   。
+1. 在菜单栏上，依次选择“工具” **“自定义”**  >   。
 
     此时将打开“自定义”  对话框。
 
@@ -117,7 +117,7 @@ ms.locfileid: "75591094"
 
     还可以选择“全部重置”  按钮，从而重置所有菜单和工具栏。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [个性化 IDE](../ide/personalizing-the-visual-studio-ide.md)
 - [自定义编辑器](../ide/how-to-change-text-case-in-the-editor.md)

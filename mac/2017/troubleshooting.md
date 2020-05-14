@@ -1,5 +1,5 @@
 ---
-title: 疑难解答
+title: 故障排除
 description: Visual Studio for Mac 用户的常见问题和解决方法。
 ms.topic: troubleshooting
 author: heiligerdankgesang
@@ -7,13 +7,13 @@ ms.author: dominicn
 ms.date: 05/06/2018
 ms.assetid: CE860D79-E29E-4B93-B094-BE74B35FC1C2
 ms.openlocfilehash: 6073e0bf2a601bf5183798a1df4fd835d0b93427
-ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "74985160"
 ---
-# <a name="troubleshooting"></a>疑难解答
+# <a name="troubleshooting"></a>故障排除
 
 ## <a name="viewing-logs-in-visual-studio-for-mac"></a>查看 Visual Studio for Mac 中的日志
 
@@ -47,6 +47,6 @@ ms.locfileid: "74985160"
 
 请注意某些部分只有在异常属于内部异常时可见。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [用于排除 IDE 错误的资源（Windows 上的 Visual Studio）](/visualstudio/ide/reference/resources-for-troubleshooting-integrated-development-environment-errors)

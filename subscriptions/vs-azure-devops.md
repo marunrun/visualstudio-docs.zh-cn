@@ -1,22 +1,28 @@
 ---
 title: Visual Studio 订阅者的 Azure DevOps 权益 | Microsoft Docs
 author: evanwindom
-ms.author: lank
+ms.author: v-evwin
 manager: lank
-ms.date: 07/30/2019
+ms.assetid: fe826200-9600-4b29-a64e-0d66ba3caf3d
+ms.date: 03/24/2020
 ms.topic: conceptual
 description: 了解如何以 Visual Studio 订阅者身份使用 Azure DevOps。
-ms.openlocfilehash: 9b4c616c870f0834b6974d59540035687b32fc12
-ms.sourcegitcommit: 3a19319e2599bd193fb2ca32020ca53942974bfd
+ms.openlocfilehash: a68456b93a307d97ab706e18b3790e84be547f9f
+ms.sourcegitcommit: 7b60e81414a82c6d34f6de1a1f56115c9cd26943
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73983694"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81444814"
 ---
 # <a name="azure-devops-benefits-for-visual-studio-subscribers"></a>Visual Studio 订阅者的 Azure DevOps 权益
 作为权益，有效 Visual Studio 订阅者可使用订阅随附的一系列 Azure DevOps 功能。 可以在所属的每个 Azure DevOps 组织中使用这些相同的功能，无论你是创建了组织，还是被其他人添加到组织中。
 
 ## <a name="sign-in"></a>登录
+
+   > [!div class="mx-imgBorder"]
+   > ![Azure DevOps 磁贴](_img/vs-azure-devops/vs-azure-devops-tile.png)
+
+   
 如果你使用激活 Visual Studio 订阅所用的标识或[备用标识](vs-alternate-identity.md)登录 Azure DevOps，我们会自动识别这一点。  这样，你还能添加工作或学校帐户（登录 Visual Studio、Office 365 或公司/学校网络时使用的帐户），以使用个人帐户和工作或学校帐户访问 Azure DevOps。
 
 [注册免费 Azure DevOps 组织](https://visualstudio.microsoft.com/team-services/)
@@ -36,7 +42,7 @@ ms.locfileid: "73983694"
 
 
 > [!NOTE]
-> Microsoft 不再在云订阅中提供 Visual Studio Professional 年度订阅和 Visual Studio Enterprise 年度订阅。 现有客户体验以及续订、增加、减少或取消订阅的能力不会发生变化。 我们鼓励新客户访问 [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) 以浏览购买 Visual Studio 的不同选项。
+> Microsoft 不再在云订阅中提供 Visual Studio Professional 年度订阅和 Visual Studio Enterprise 年度订阅。 现有客户体验以及续订、增加、减少或取消订阅的能力不会发生变化。 建议新客户访问 [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/)，查看各 Visual Studio 购买选项。
 
 无法确定正在使用哪些订阅？  连接到 [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs)，查看分配给自己的所有订阅。
 如果没有看到所有订阅，则可能是有一个或多个订阅分配给了不同的电子邮件地址。  你需要使用其他电子邮件地址登录来查看那些订阅。
@@ -46,9 +52,15 @@ ms.locfileid: "73983694"
 - 对有关 Visual Studio IDE、Azure DevOps 或其他 Visual Studio 产品或服务有疑问？  请访问 [Visual Studio 支持](https://visualstudio.microsoft.com/support/)。
 - [Azure DevOps 文档](/azure/devops/)。
 
+## <a name="see-also"></a>请参阅
+- [Visual Studio 文档](https://docs.microsoft.com/visualstudio/)
+- [Azure DevOps 文档](https://docs.microsoft.com/azure/devops/)
+- [Azure 文档](https://docs.microsoft.com/azure/)
+- [Microsoft 365 文档](https://docs.microsoft.com/microsoft-365/)
+
 ## <a name="next-steps"></a>后续步骤
 详细了解 Azure DevOps 功能：
-- [Azure Boards 和 Azure Repos（基础版）](https://azure.microsoft.com/services/devops/compare-features/)
+- [Azure Boards 和 Azure Repos（基本计划）](https://azure.microsoft.com/services/devops/compare-features/)
 - [Azure Test Plans](https://marketplace.visualstudio.com/items?itemName=ms.vss-testmanager-web)
 - [Azure Artifacts](https://marketplace.visualstudio.com/items?itemName=ms.feed)
 

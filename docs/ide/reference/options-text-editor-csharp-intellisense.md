@@ -17,15 +17,15 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: 87a167a75f3b06522da77d562b0137df89757975
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75596211"
 ---
 # <a name="options-text-editor-c-intellisense"></a>选项，文本编辑器，C#，IntelliSense
 
-使用“IntelliSense”选项页可修改影响 IntelliSense for C# 行为的设置  。 要访问此选项页，请选择“工具” > “选项”，然后选择“文本编辑器” > “C#” > “IntelliSense”      。
+使用“IntelliSense”选项页可修改影响 IntelliSense for C# 行为的设置  。 要访问此选项页，请选择“工具” **“选项”，然后选择“文本编辑器”** “C#” > “IntelliSense”    >    >   。
 
 “IntelliSense”选项页面包含以下选项  ：
 
@@ -33,7 +33,7 @@ ms.locfileid: "75596211"
 
 - 键入字符后显示完成列表*
 
-   选择此选项后，IntelliSense 在你开始键入时会自动显示完成列表。 即使未选中此选项，仍可通过“IntelliSense”菜单或通过按 Ctrl+空格使用 IntelliSense 完成功能    。
+   选择此选项后，IntelliSense 在你开始键入时会自动显示完成列表。 即使未选中此选项，仍可通过“IntelliSense”菜单或通过按 Ctrl**空格使用 IntelliSense 完成功能**  +  。
 
 - 删除字符后显示完成列表
 
@@ -53,7 +53,7 @@ ms.locfileid: "75596211"
 
 - 在标识符后键入 ?-Tab 时包含片段
 
-   选择此选项后，IntelliSense 会在标识符后按 ?+Tab 时，将 C# 代码片段的别名添加到完成列表中  
+   选择此选项后，IntelliSense 会在标识符后按 ?**Tab 时，将 C# 代码片段的别名添加到完成列表中**+ 
 
 ## <a name="enter-key-behavior"></a>输入关键行为
 
@@ -83,7 +83,7 @@ ms.locfileid: "75596211"
 
 为最近所选择的成员执行自动对象名称完成。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [“选项”对话框 ->“环境”->“常规”](../../ide/reference/general-environment-options-dialog-box.md)
 - [使用 IntelliSense](../../ide/using-intellisense.md)

@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 34225858e88f4ee969f0e51013bcdb04812d425f
-ms.sourcegitcommit: a86ee68e3ec23869b6eaaf6c6b7946b1d9a88d01
+ms.openlocfilehash: 78a47cb2a5aefd7d20e0b8087f5f3ad735716175
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77144775"
+ms.lasthandoff: 03/20/2020
+ms.locfileid: "79431275"
 ---
 # <a name="overview-of-source-code-analyzers"></a>源代码分析器概述
 
@@ -44,7 +44,7 @@ Roslyn 分析器进行的源分析会替换针对托管代码的[传统分析](.
 
 ![Visual Studio 中代码编辑器中的波浪线](media/diagnostics-severity-colors.png)
 
-代码分析器在生成时检查代码，比如传统分析（如果启用），但还可在你键入时保持运行状态。 如果启用[完整的解决方案分析](../code-quality/how-to-enable-and-disable-full-solution-analysis-for-managed-code.md#toggle-full-solution-analysis)，代码分析器还提供未在编辑器中打开的代码文件的设计时分析。
+代码分析器在生成时检查代码，比如传统分析（如果启用），但还可在你键入时保持运行状态。 你可配置实时代码分析的范围，以仅对当前文档执行、对所有打开的文档执行或对整个解决方案执行。 请参阅[如何：配置实时代码分析范围](./configure-live-code-analysis-scope-managed-code.md)。
 
 > [!TIP]
 > 仅当分析器作为 NuGet 包安装时，才会显示来自代码分析器的生成时错误和警告。 内置分析器（例如 IDE0067 和 IDE0068）不会在生成期间运行。
@@ -52,7 +52,7 @@ Roslyn 分析器进行的源分析会替换针对托管代码的[传统分析](.
 Roslyn 代码分析器不仅会报告传统分析也会报告的相同类型的问题，而且还可以用于轻松修复文件或项目中一次冲突或所有。 这些操作称为代码修复  。 代码修复是特定于 IDE 的；在 Visual Studio 中，它们以[快速操作](../ide/quick-actions.md)的方式实现。 并非所有分析器诊断都有相关联的代码修复。
 
 > [!NOTE]
-> “分析” > “运行代码分析”菜单选项仅适用于传统分析   。
+> 在 Visual Studio 2019 16.5 版本之前，“分析” > “运行代码分析”菜单选项会执行旧式分析   。 从 Visual Studio 2019 16.5 开始，“运行代码分析”菜单选项会针对所选项目或解决方案执行基于 Roslyn 的分析器  。
 
 若在“错误列表”中要区分来自代码分析器和传统分析的冲突，请查看“工具”列  。 如果“工具”值与“解决方案资源管理器”中的某个分析器程序集（例如 Microsoft.CodeQuality.Analyzers）匹配，则该冲突来自代码分析器   。 否则，冲突源自传统分析。
 

@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 3d7c89761dfc12d342747567389e39daeed4a227
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75585647"
 ---
 # <a name="watch-command"></a>“监视”命令
@@ -29,7 +29,7 @@ ms.locfileid: "75585647"
 Debug.Watch[index]
 ```
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
 
 `index`\
 必需。 监视窗口的实例数。
@@ -44,7 +44,7 @@ Debug.Watch[index]
 >Debug.Watch1
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [“自动”和“局部变量”窗口](../../debugger/autos-and-locals-windows.md)
 - [在 Visual Studio 中使用“监视”窗口和“快速监视”窗口对变量设置监视](../../debugger/watch-and-quickwatch-windows.md)

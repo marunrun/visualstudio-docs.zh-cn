@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - cplusplus
 ms.openlocfilehash: d68391bbd4c6c873940bbc2714ee41db8309b629
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75590730"
 ---
 # <a name="c-classes-in-class-designer"></a>类设计器中的 C++ 类
@@ -35,7 +35,7 @@ class A {};
 class B : A {};
 ```
 
-也可以只将类 B 拖到类图中，右键单击 B 的类形状，然后单击“显示基类”  。 此操作将显示其基类：答：
+也可以只将类 B 拖到类图中，右键单击 B 的类形状，然后单击“显示基类”  。 这样可以显示它的基类 A。
 
 ## <a name="multiple-inheritance"></a>多重继承
 
@@ -107,7 +107,7 @@ int main()
 }
 ```
 
-在类图中显示此代码时，类图会绘制一条从 `Fish` 到 `Swimmer` 的继承线  。
+在类图中显示此代码时，类图会绘制一条从 **到** 的继承线`Fish``Swimmer`。
 
 ## <a name="anonymous-classes"></a>匿名类
 
@@ -138,7 +138,7 @@ typedef struct
 
 下表列出了一些分部专用化示例。
 
-|代码元素|类设计器视图|
+|Code 元素|类设计器视图|
 |------------------| - |
 |`template<class T, class U>`<br /><br /> `class A {};`|`A<T, U>`<br /><br /> 模板类|
 |`template<class T>`<br /><br /> `class A<T, T> {};`|`A<T, T>`<br /><br /> 模板类|
@@ -147,13 +147,13 @@ typedef struct
 
 下表列出了一些分部专用化继承示例。
 
-|代码元素|类设计器视图|
+|Code 元素|类设计器视图|
 |------------------| - |
 |`template <class T, class U>`<br /><br /> `class A {};`<br /><br /> `template <class TC>`<br /><br /> `class A<T, int> {};`<br /><br /> `class B : A<int, float>`<br /><br /> `{};`<br /><br /> `class C : A<int, int>`<br /><br /> `{};`|`A<T, U>`<br /><br /> 模板类<br /><br /> `B`<br /><br /> 类<br /><br /> （指向类 A）<br /><br /> `C`<br /><br /> 类<br /><br /> （指向类 A）|
 
 下表列出了一些分部专用化模板函数示例。
 
-|代码元素|类设计器视图|
+|Code 元素|类设计器视图|
 |------------------| - |
 |`class A`<br /><br /> `{`<br /><br /> `template <class T, class U>`<br /><br /> `void func(T a, U b);`<br /><br /> `template <class T>`<br /><br /> `void func(T a, int b);`<br /><br /> `};`|`A`<br /><br /> func\<T, U>（+ 1 重载）|
 |`template <class T1>`<br /><br /> `class A {`<br /><br /> `template <class T2>`<br /><br /> `class B {};`<br /><br /> `};`<br /><br /> `template<> template<>`<br /><br /> `class A<type>::B<type> {};`|`A<T1>`<br /><br /> 模板类<br /><br /> `B<T2>`<br /><br /> 模板类<br /><br /> （B 包含在类 A 中的“嵌套类型”  下）|
@@ -161,18 +161,18 @@ typedef struct
 
 下表列出了一些模板继承示例。
 
-|代码元素|类设计器视图|
+|Code 元素|类设计器视图|
 |------------------| - |
 |`template <class T>`<br /><br /> `class C {};`<br /><br /> `template<>`<br /><br /> `class C<int> {`<br /><br /> `class B {};`<br /><br /> `}`<br /><br /> `class A : C<int>::B {};`|`A`<br /><br /> 类<br /><br /> ->B<br /><br /> `C<int>`<br /><br /> 类<br /><br /> （B 包含在类 C 中的“嵌套类型”  下）<br /><br /> `C<T>`<br /><br /> 模板类|
 
 下表列出了一些规范专用化类连接示例。
 
-|代码元素|类设计器视图|
+|Code 元素|类设计器视图|
 |------------------| - |
 |`template <class T>`<br /><br /> `class C {};`<br /><br /> `template<>`<br /><br /> `class C<int> {};`<br /><br /> `class A : C<int> {};`<br /><br /> `class D : C<float> {};`|`A`<br /><br /> 类<br /><br /> ->C\<int><br /><br /> `C<int>`<br /><br /> 类<br /><br /> `C<T>`<br /><br /> 模板类<br /><br /> `D`<br /><br /> 类<br /><br /> ->C\<float>|
 |`class B {`<br /><br /> `template <class T>`<br /><br /> `T min (const T &a, const T &b);`<br /><br /> `};`|`B`<br /><br /> min \<T>|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用 C++ 代码](working-with-visual-cpp-code.md)
 - [类和结构](/cpp/cpp/classes-and-structs-cpp)

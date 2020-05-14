@@ -10,11 +10,11 @@ ms.workload:
 - multiple
 author: mikejo5000
 ms.openlocfilehash: 00d8b24d26237a3c7b4130eba4614b5ea7b7eccd
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75594300"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79306997"
 ---
 # <a name="attribute-glossary"></a>属性术语表
 
@@ -245,6 +245,6 @@ class CtorTest(int capacity) {
 
 [详细信息](xref:Microsoft.Pex.Framework.Validation.PexAllowedExceptionFromTypeUnderTestAttribute)
 
-## <a name="got-feedback"></a>是否获得反馈？
+## <a name="got-feedback"></a>有反馈？
 
 在[开发人员社区](https://developercommunity.visualstudio.com/content/idea/post.html?space=8)上发布想法和功能请求。

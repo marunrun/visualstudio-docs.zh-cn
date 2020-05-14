@@ -19,10 +19,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 4b7cc2316168d14c6c996c4d55065771c85ffdfc
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62989776"
 ---
 # <a name="cvwritealert-function"></a>CvWriteAlert 函数
@@ -65,7 +65,7 @@ HRESULT CvWriteAlertVA(
  成功写入消息时返回 S_OK。 出现任何错误时返回错误代码。 使用 SUCCEEDED/FAILED 宏检查错误条件。
 
 ## <a name="requirements"></a>要求
- **标头：** cvmarkers.h
+ **Header:** cvmarkers.h 
 
  **Unicode：** CvWriteAlertW、CvWriteAlertVW
 

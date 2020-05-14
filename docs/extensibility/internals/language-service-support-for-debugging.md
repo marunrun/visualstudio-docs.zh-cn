@@ -1,33 +1,33 @@
 ---
-title: 用于调试的语言服务支持 |Microsoft Docs
+title: 语言服务对调试的支持 |微软文档
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - debugger, language support
 - language services, debugging support
 ms.assetid: 7a44067f-a410-4a6a-84d2-bda5184140bc
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8d4946c25aeac2d677b7a527a3d2bb338db3aa31
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 8c80e8e1f584b1728f342cb596b689f6a22c9297
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66333649"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80707434"
 ---
 # <a name="language-service-support-for-debugging"></a>用于调试的语言服务支持
-语言服务可以提供可支持通过调试器功能<xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageDebugInfo>接口。 这些功能包括验证断点并提供一系列表达式到**自动**窗口。
+语言服务可以提供通过接口支持调试器的功能<xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageDebugInfo>。 这些功能包括验证断点和向 **"自动"** 窗口提供表达式列表。
 
- 但是，你需要具有要调试您的语言的表达式计算器。 表达式计算器负责评估表达式来进行调试时生成值。 有关实现 CLR 表达式计算器的信息，请参阅：
+ 但是，您需要有一个表达式赋值器来调试您的语言。 表达式赋值器负责在调试时评估表达式以生成值。 有关实现 CLR 表达式赋值器的信息，请参阅：
 
-- [CLR 表达式计算器](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators)
+- [CLR 表达式赋值器](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators)
 
-- [托管的表达式计算器示例](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)
+- [托管表达式计算器示例](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)
 
 ## <a name="compiler-output"></a>编译器输出
- 编译器的类型确定需要执行的操作实现调试你的语言。 如果您的编译器面向 Windows 操作系统，并编写一个.pdb 文件，可以使用本机代码调试引擎集成到 Visual Studio 调试程序。 如果您的编译器生成 Microsoft 中间语言 (MSIL)，可以使用托管代码调试引擎，还集成到 Visual Studio 调试程序。 如果您的编译器面向专有操作系统或不同的运行时环境，需要编写你自己的调试引擎。
+ 编译器类型确定需要执行哪些操作来实现语言的调试。 如果编译器以 Windows 操作系统为目标并编写 .pdb 文件，则可以使用集成到 Visual Studio 的本机代码调试引擎来调试程序。 如果编译器生成 Microsoft 中间语言 （MSIL），则可以使用托管代码调试引擎调试程序，该引擎也将集成到 Visual Studio 中。 如果编译器以专有操作系统或不同的运行时环境为目标，则需要编写自己的调试引擎。
 
- 有关实现调试你的语言的详细信息，请参阅[Getting Started](../../extensibility/debugger/getting-started-with-debugger-extensibility.md) Visual Studio 调试 SDK 中。
+ 有关实现语言调试的详细信息，请参阅在可视化工作室调试 SDK 中[入门](../../extensibility/debugger/getting-started-with-debugger-extensibility.md)。

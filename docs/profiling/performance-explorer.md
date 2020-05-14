@@ -14,10 +14,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 89399d49909e1c9067723e75a1adbaa123865758
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74778474"
 ---
 # <a name="performance-explorer"></a>性能资源管理器
@@ -35,17 +35,17 @@ ms.locfileid: "74778474"
 |任务|相关内容|
 |----------|---------------------|
 |**Windows 8 和更高版本的技术**|[Windows 8 和 Windows Server 2012 应用程序上的性能工具](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)|
-|**了解分析概念：** 了解使用分析工具收集、查看和分析代码性能的过程中将用到的概念和术语。|[概述](../profiling/overviews-performance-tools.md)|
-|**投入进来然后执行此操作：** 了解使用分析工具收集、查看和分析代码性能时将用到的基本过程。 通过实际演练进行尝试。|[入门](../profiling/getting-started-with-performance-tools.md)|
+|**了解分析概念：** 学习使用分析工具收集、查看和分析代码性能的过程中将用到的概念和术语。|[概述](../profiling/overviews-performance-tools.md)|
+|**投入进来然后执行此操作：** 学习使用分析工具收集、查看和分析代码性能时将用到的基本过程。 通过实际演练进行尝试。|[入门](../profiling/getting-started-with-performance-tools.md)|
 |**配置分析会话：** 了解用于指定要分析的项目或二进制文件、选择分析方法、选择要收集的性能数据及设置其他分析会话选项的的高级方法。|[配置性能会话](../profiling/configuring-performance-sessions.md)|
 |**控制探查器收集的数据：** 了解如何使用性能会话属性和交互式过程来启动和停止分析，以及如何将搜集的性能数据限制为所需的信息。|[控制数据收集](../profiling/controlling-data-collection.md)|
-|**查找性能问题：** 了解如何查看和分析“分析工具报表”视图窗口中的收集的性能数据。|[分析性能工具数据](../profiling/analyzing-performance-tools-data.md)|
+|**查找性能问题：** 了解如何查看和分析分析工具报告视图窗口中的收集的性能数据。|[分析性能工具数据](../profiling/analyzing-performance-tools-data.md)|
 |**分析性能变化：** 了解如何比较两个探查器数据文件以分析性能变化。|[比较性能数据文件](../profiling/comparing-performance-data-files.md)|
-|**保存和共享结果：** 了解如何保存分析数据以便进行存档或共享。|[保存和导出性能工具数据](../profiling/saving-and-exporting-performance-tools-data.md)|
+|**保存和共享结果：** 了解如何保存分析数据进行存档或共享。|[保存和导出性能工具数据](../profiling/saving-and-exporting-performance-tools-data.md)|
 |**自动分析：** 了解如何从命令提示符使用分析工具。|[通过命令行进行分析](../profiling/using-the-profiling-tools-from-the-command-line.md)|
 |**以编程方式控制分析：** 了解如何使用托管的和本机分析工具 API 控制直接收集自源代码的数据。|[分析工具 API](../profiling/profiling-tools-apis.md)|
 |**分析问题疑难解答**|[性能工具问题疑难解答](../profiling/troubleshooting-performance-tools-issues.md)|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [首先了解分析工具](../profiling/profiling-feature-tour.md)

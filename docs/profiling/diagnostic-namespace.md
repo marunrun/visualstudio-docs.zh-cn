@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 03671f314dca3c016f9524bcb246b74e0eb1f837
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62970078"
 ---
 # <a name="diagnostic-namespace"></a>diagnostic 命名空间
@@ -32,19 +32,19 @@ namespace diagnostic;
 
 ### <a name="classes"></a>类
 
-|name|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[marker_series 类](../profiling/marker-series-class.md)|表示由单个提供程序生成的一系列事件通道。|
 |[span 类](../profiling/span-class.md)|定义应用程序的一个阶段。|
 
 ### <a name="enumerations"></a>枚举
 
-|name|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[marker_importance 枚举](../profiling/marker-importance-enumeration.md)|表示并发可视化工具标记的重要性级别。|
 
 ## <a name="requirements"></a>要求
- **标头：** cvmarkersobj.h
+ **Header:** *cvmarkersobj.h*
 
  **命名空间：** 并发
 

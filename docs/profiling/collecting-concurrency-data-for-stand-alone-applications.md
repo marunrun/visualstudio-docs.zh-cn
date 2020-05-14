@@ -13,10 +13,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 6180d2f2e3ed655f378900d3d41691daa98a0354
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74773252"
 ---
 # <a name="collect-concurrency-data-for-stand-alone-applications-by-using-the-profiler-command-line"></a>使用探查器命令行收集独立应用程序的并发数据
@@ -29,7 +29,7 @@ ms.locfileid: "74773252"
 |**启动 .NET Framework 应用程序并分析并发数据**|-   [如何：启动 .NET Framework 应用程序以收集并发数据](../profiling/how-to-launch-a-stand-alone-dotnet-framework-app-to-collect-concurrency-data.md)|
 |**启动 C/C++ 应用程序并分析并发数据**|-   [如何：启动本机应用程序以收集并发数据](../profiling/how-to-launch-a-stand-alone-native-application-to-collect-concurrency-data.md)|
 |**将探查器附加到正在运行的 .NET Framework 应用程序**|-   [如何：将探查器附加到 .NET Framework 应用程序以收集并发数据](../profiling/how-to-attach-the-profiler-to-a-dotnet-app-and-collect-concurrency-data.md)|
-|**将探查器附加到正在运行的 C/C++ 应用程序**|-   [如何：将探查器附加到本机应用程序，并收集并发数据](../profiling/how-to-attach-the-profiler-to-a-native-app-and-collect-concurrency-data.md)|
+|**将探查器附加到正在运行的 C/C++ 应用程序**|-   [如何：将探查器附加到本机应用程序中并收集并发数据](../profiling/how-to-attach-the-profiler-to-a-native-app-and-collect-concurrency-data.md)|
 
 ## <a name="related-tasks"></a>相关任务
 
@@ -54,5 +54,5 @@ ms.locfileid: "74773252"
 
 - [并发可视化工具](../profiling/concurrency-visualizer.md)
 
-## <a name="reference"></a>参考
+## <a name="reference"></a>引用
 - [命令行分析工具参考](../profiling/command-line-profiling-tools-reference.md)

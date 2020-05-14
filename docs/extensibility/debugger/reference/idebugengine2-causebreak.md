@@ -1,5 +1,5 @@
 ---
-title: IDebugEngine2::CauseBreak |Microsoft Docs
+title: IDebugEngine2：：原因中断 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugEngine2::CauseBreak
 ms.assetid: 17fe4698-b04e-4798-8412-80e0da60c387
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 93f9937609a09439b265946e76f0af0381d488f1
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 62be3ce13ecbc3180cf2bbcce26b04f3d79edb1a
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66330133"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80731163"
 ---
 # <a name="idebugengine2causebreak"></a>IDebugEngine2::CauseBreak
-一个其线程尝试运行所有程序 (DE) 停止执行下一次此调试引擎正在调试的请求。
+请求此调试引擎 （DE） 调试的所有程序在下次线程尝试运行时停止执行。
 
 ## <a name="syntax"></a>语法
 
@@ -38,10 +38,10 @@ int CauseBreak();
 ```
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，返回`S_OK`;否则，返回错误代码。
 
 ## <a name="remarks"></a>备注
- 此方法是异步的： [IDebugBreakEvent2](../../../extensibility/debugger/reference/idebugbreakevent2.md)接下来，该程序尝试执行后调用此方法则会发送事件。
+ 此方法是异步的：当程序在调用此方法后下次尝试执行时，将发送[IDebugBreakEvent2](../../../extensibility/debugger/reference/idebugbreakevent2.md)事件。
 
 ## <a name="see-also"></a>请参阅
 - [CauseBreak](../../../extensibility/debugger/reference/idebugprogram2-causebreak.md)

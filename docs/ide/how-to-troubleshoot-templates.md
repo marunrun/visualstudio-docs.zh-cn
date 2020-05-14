@@ -8,13 +8,13 @@ author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.openlocfilehash: 1bef6a460f1a59823930597565b955b591ab48a0
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75591380"
 ---
-# <a name="how-to-troubleshoot-templates"></a>如何：模板疑难解答
+# <a name="how-to-troubleshoot-templates"></a>如何：对模板进行故障排除
 
 如果模板在开发环境中无法加载，可以采用以下几种方法找出问题。
 
@@ -38,7 +38,7 @@ ms.locfileid: "75591380"
 
 1. 解压缩 .zip 文件  。
 
-1. 在 Visual Studio 的“文件”菜单上，选择“打开” > “文件”    。
+1. 在 Visual Studio 的“文件”菜单上，选择“打开” **“文件”**   >   。
 
 1. 选择模板的 vstemplate  文件，然后选择“打开”  。
 
@@ -49,7 +49,7 @@ ms.locfileid: "75591380"
 
 1. 保存并关闭 vstemplate  文件。
 
-1. 选择模板中包含的文件，右键单击，然后选择“发送至” > “压缩的文件夹（zip 格式）”   。 所选的文件将压缩到一个 .zip 文件中  。
+1. 选择模板中包含的文件，右键单击，然后选择“发送至” **“压缩的文件夹（zip 格式）”**  >   。 所选的文件将压缩到一个 .zip 文件中  。
 
 1. 将新的 .zip 文件与旧的 .zip 文件放在同一目录中   。
 
@@ -59,7 +59,7 @@ ms.locfileid: "75591380"
 
 可按照[模板发现疑难解答（扩展性）](../extensibility/troubleshooting-template-discovery.md)中的步骤启用模板发现的诊断日志记录。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [模板发现疑难解答（扩展性）](../extensibility/troubleshooting-template-discovery.md)
 - [自定义模板](../ide/customizing-project-and-item-templates.md)

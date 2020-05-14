@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramProvider2::GetProviderProcessData | Microsoft Docs
+title: IDebug程序提供程序2：：获取提供程序处理数据 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProgramProvider2::GetProviderProcessData
 ms.assetid: 90cf7b7f-53d2-487e-b793-94501a6e24dd
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: bee54c3876c2de1be0754a74b429e6d24b80b738
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 4e958900307f5f7915f58679709c88f80c2abfc9
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66325029"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80721851"
 ---
 # <a name="idebugprogramprovider2getproviderprocessdata"></a>IDebugProgramProvider2::GetProviderProcessData
-检索从指定的进程正在运行的程序列表。
+从指定进程检索正在运行的程序的列表。
 
 ## <a name="syntax"></a>语法
 
@@ -49,32 +49,32 @@ int GetProviderProcessData(
 
 ## <a name="parameters"></a>参数
 `Flags`\
-[in]中的标志的组合[PROVIDER_FLAGS](../../../extensibility/debugger/reference/provider-flags.md)枚举。 下列标志则典型的此调用：
+[在][PROVIDER_FLAGS](../../../extensibility/debugger/reference/provider-flags.md)枚举中的标志的组合。 以下标志是此调用的典型标志：
 
-|Flag|描述|
+|标志|描述|
 |----------|-----------------|
-|`PFLAG_REMOTE_PORT`|调用方在远程计算机上运行。|
-|`PFLAG_DEBUGGEE`|当前正在调试调用方 （为每个节点将返回有关封送处理的其他信息）。|
-|`PFLAG_ATTACHED_TO_DEBUGGEE`|调用方已附加到但不是启动调试器。|
-|`PFLAG_GET_PROGRAM_NODES`|调用方要求提供程序节点的列表返回。|
+|`PFLAG_REMOTE_PORT`|呼叫者在远程计算机上运行。|
+|`PFLAG_DEBUGGEE`|当前正在调试调用方（将为每个节点返回有关编组的其他信息）。|
+|`PFLAG_ATTACHED_TO_DEBUGGEE`|调用方已附加到调试器，但未启动。|
+|`PFLAG_GET_PROGRAM_NODES`|调用方要求返回程序节点的列表。|
 
 `pPort`\
-[in]调用进程的端口上运行。
+[在]调用进程正在运行的端口。
 
 `processId`\
-[in][AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md)保存包含该程序的进程的 ID 相关的结构。
+[在]包含包含相关程序的进程 ID 的[AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md)结构。
 
 `EngineFilter`\
-[in]Guid 的数组，用于分配要调试该进程 （它们将用于筛选根据提供的引擎的支持; 如果未不指定任何引擎，则将返回所有程序实际都返回的程序） 的调试引擎。
+[在]分配给调试此过程的调试引擎的 GUID 数组（这些程序将用于筛选根据提供的引擎支持的内容实际返回的程序;如果未指定引擎，则将返回所有程序）。
 
 `pProcess`\
-[out]一个[PROVIDER_PROCESS_DATA](../../../extensibility/debugger/reference/provider-process-data.md)填充所需的信息的结构。
+[出]使用请求的信息填充[PROVIDER_PROCESS_DATA](../../../extensibility/debugger/reference/provider-process-data.md)结构。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，返回`S_OK`;否则，返回错误代码。
 
 ## <a name="remarks"></a>备注
- 一个过程来获取该进程中运行的程序的列表，通常情况下调用此方法。 返回的信息是一系列[IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)对象。
+ 此过程通常调用此方法以获取该进程中运行的程序的列表。 返回的信息是[IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)对象的列表。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugProgramProvider2](../../../extensibility/debugger/reference/idebugprogramprovider2.md)

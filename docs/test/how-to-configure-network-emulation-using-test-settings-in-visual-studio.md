@@ -8,12 +8,12 @@ ms.assetid: ff275cfb-5df9-4710-9a91-9caabaaad34f
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 350640a4db6a81d19801aedb03d0d490895f97ef
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 685b22f25c7138c4c3e7c9068ba52864e40648e1
+ms.sourcegitcommit: 5d1b2895d3a249c6bea30eb12b0ad7c0f0862d85
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75589209"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80880138"
 ---
 # <a name="how-to-configure-network-emulation-using-test-settings-in-visual-studio"></a>如何：在 Visual Studio 中使用测试设置配置网络仿真
 
@@ -24,12 +24,19 @@ ms.locfileid: "75589209"
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
+::: moniker range="vs-2017"
 下面的过程介绍如何通过配置编辑器配置网络仿真。 这些步骤同时适用于 Microsoft 测试管理器和 Visual Studio 中的配置编辑器。
+::: moniker-end
+::: moniker range=">=vs-2019"
+下面的过程介绍如何通过配置编辑器配置网络仿真。 这些步骤适用于 Visual Studio 中的配置编辑器。
+::: moniker-end
 
 > [!NOTE]
-> 此网络仿真诊断数据适配器仅适用于 Visual Studio 测试设置。 不适用于 Microsoft 测试管理器中的测试设置。
+> 此网络仿真诊断数据适配器仅适用于 Visual Studio 测试设置。 不适用于 Microsoft 测试管理器（在 Visual Studio 2017 中已弃用）中的测试设置。
 
+::: moniker range="vs-2017"
 必须将具有管理员特权的帐户用于网络仿真。 如果为运行手动测试的本地角色选择了网络仿真，则必须使用管理员特权启动 Microsoft 测试管理器。 如果对任意其他角色选择了网络仿真，则必须验证该角色计算机上的测试代理使用的用户帐户是否为管理员组的成员。 有关如何为测试代理设置帐户的详细信息，请参阅[安装和配置测试代理](../test/lab-management/install-configure-test-agents.md)。
+::: moniker-end
 
 > [!NOTE]
 > Network Service 帐户（测试代理的默认帐户）不是管理员组的成员。

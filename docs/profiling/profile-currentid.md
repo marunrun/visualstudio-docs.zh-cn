@@ -12,10 +12,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 63b44bee152acbf5529acfcadaa49a19e9feb52b
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74778357"
 ---
 # <a name="profile_currentid"></a>PROFILE_CURRENTID
@@ -58,7 +58,7 @@ void ExerciseProfileCurrentID()
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [Visual Studio 探查器 API 参考（本机）](../profiling/visual-studio-profiler-api-reference-native.md)
 - [NameProfile](../profiling/nameprofile.md)
 - [ResumeProfile](../profiling/resumeprofile.md)

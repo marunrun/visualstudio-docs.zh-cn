@@ -1,27 +1,27 @@
 ---
-title: IDebugPortSupplierLocale2::SetLocale | Microsoft Docs
+title: IDebugPort供应商本地化2：：设置地位 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IDebugPortSupplierLocale2::SetLocale
 ms.assetid: 21e88510-caac-405e-ba45-cb00e19a28bc
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 72e662060067f455275465ce4ade7ed824936313
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: f35e4f2732427045fac982454ce9f7290a6dc970
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66353292"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80724305"
 ---
 # <a name="idebugportsupplierlocale2setlocale"></a>IDebugPortSupplierLocale2::SetLocale
-为端口提供程序设置的区域设置。
+设置端口供应商的区域设置。
 
 ## <a name="syntax"></a>语法
 
@@ -39,10 +39,10 @@ int SetLocale(
 
 ## <a name="parameters"></a>参数
 `wLangID`\
-要设置的区域设置标识符。
+要设置区域设置的标识符。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，返回`S_OK`;否则，返回错误代码。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugPortSupplierLocale2](../../../extensibility/debugger/reference/idebugportsupplierlocale2.md)

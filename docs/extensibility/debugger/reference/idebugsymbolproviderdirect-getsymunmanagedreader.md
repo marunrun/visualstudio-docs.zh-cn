@@ -1,25 +1,25 @@
 ---
-title: IDebugSymbolProviderDirect::GetSymUnmanagedReader | Microsoft Docs
+title: IDebug符号提供程序直接：：获取SymUn托管阅读器 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - GetSymUnmanagedReader
 - IDebugSymbolProviderDirect::GetSymUnmanagedReader
 ms.assetid: 147bacfa-f66c-43e0-8a72-e601058dc57f
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: d2fb5a2fd5d8ba34112e01da07fc1f41177e8e9f
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: fbac2e234cfc991f27e08dc33bdc895c22d501fa
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66320414"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80718939"
 ---
 # <a name="idebugsymbolproviderdirectgetsymunmanagedreader"></a>IDebugSymbolProviderDirect::GetSymUnmanagedReader
 检索非托管代码的符号读取器。
@@ -44,16 +44,16 @@ int GetSymUnmanagedReader (
 
 ## <a name="parameters"></a>参数
 `ulAppDomainID`\
-[in]应用程序域的标识符。
+[在]应用程序域的标识符。
 
 `guidModule`\
-[in]该模块的唯一标识符。
+[在]模块的唯一标识符。
 
 `ppSymUnmanagedReader`\
-[out]返回一个对象，表示非托管代码的符号读取器。
+[出]返回表示非托管代码的符号读取器的对象。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，返回`S_OK`;否则，返回错误代码。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugSymbolProviderDirect](../../../extensibility/debugger/reference/idebugsymbolproviderdirect.md)

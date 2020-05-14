@@ -9,10 +9,10 @@ author: angelosp
 ms.author: angelpe
 manager: jillfra
 ms.openlocfilehash: a36ca2535785f72756ad66a69c2ebe4d7d5a373b
-ms.sourcegitcommit: 32144a09ed46e7223ef7dcab647a9f73afa2dd55
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "67587028"
 ---
 # <a name="file-nesting-in-solution-explorer"></a>解决方案资源管理器中的文件嵌套
@@ -158,9 +158,9 @@ ms.locfileid: "67587028"
 
 ![特定于解决方案和项目的嵌套规则](media/filenesting_solutionprojectspecific.png)
 
-特定于解决方案和特定于项目的设置与活动的 Visual Studio 设置结合。 例如，可能有一个空白的特定于项目的设置文件，但是解决方案资源管理器仍是嵌套文件  。 嵌套行为来自特定于解决方案的设置或 Visual Studio 设置。 合并文件嵌套设置的优先顺序是：“Visual Studio”>“解决方案”>“项目”。
+特定于解决方案和特定于项目的设置与活动的 Visual Studio 设置结合。 例如，可能有一个空白的特定于项目的设置文件，但是解决方案资源管理器仍是嵌套文件  。 嵌套行为来自特定于解决方案的设置或 Visual Studio 设置。 合并文件嵌套设置的优先顺序是：Visual Studio > 解决方案 > 项目。
 
-可以通过启用“工具” > “选项” > “ASP.NET Core” > “文件嵌套”下的选项“忽略解决方案和项目设置”，指示 Visual Studio 忽略特定于解决方案和特定于项目的设置，即使是文件位于磁盘上      。
+可以通过启用“工具” **“选项”** “ASP.NET Core” **“文件嵌套”下的选项“忽略解决方案和项目设置”，指示 Visual Studio 忽略特定于解决方案和特定于项目的设置，即使是文件位于磁盘上** >    >    >   。
 
 可以通过将“root”节点设为“true”，执行相反操作并指示 Visual Studio 仅使用特定于解决方案或特定于项目的设置    。 Visual Studio 停止合并该级别的文件，并且不将其与层次结构更高的文件合并。
 
@@ -178,7 +178,7 @@ ms.locfileid: "67587028"
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [个性化 IDE](../ide/personalizing-the-visual-studio-ide.md)
 - [Visual Studio 中的解决方案和项目](solutions-and-projects-in-visual-studio.md)

@@ -13,17 +13,17 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: d188d6c3268c8ee9f066eba1b6a57e469f34a78e
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74778136"
 ---
 # <a name="tier-interactions-view"></a>“层交互”视图
 
 层交互分析提供有关多层应用程序函数执行时间的附加信息，这些应用程序通过 [!INCLUDE[vstecado](../data-tools/includes/vstecado_md.md)] 服务与数据库进行通信。 仅针对同步函数调用收集数据。
 
-**要求**
+**惠?**
 
 - Visual Studio Enterprise
 

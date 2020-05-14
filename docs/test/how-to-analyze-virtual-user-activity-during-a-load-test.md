@@ -9,10 +9,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: c997f27e65a8e3992239fac78d52b0b4f19670c3
-ms.sourcegitcommit: 1efb6b219ade7c35068b79fbdc573a8771ac608d
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "78169399"
 ---
 # <a name="how-to-analyze-what-virtual-users-are-doing-during-a-load-test-using-the-virtual-user-activity-chart"></a>如何：使用虚拟用户活动图分析虚拟用户在负载测试期间的操作
@@ -29,7 +29,7 @@ ms.locfileid: "78169399"
 
 2. 运行完负载测试之后，将显示测试结果摘要页。 选择工具栏上的“用户详细信息”按钮。 
 
-     \- 或 -
+     或
 
      通过选择工具栏上的“关系图”按钮打开关系图视图。  右键单击某个关系图，然后选择“转到用户详细信息”。 
 
@@ -57,7 +57,7 @@ ms.locfileid: "78169399"
 
    - **Network**
 
-   - **开始时间**
+   - **Start Time**
 
    - **持续时间**
 
@@ -103,7 +103,7 @@ ms.locfileid: "78169399"
 
      “虚拟用户活动图”  会相应地更新。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在详细信息视图中分析虚拟用户活动](../test/analyze-load-test-virtual-user-activity-in-the-details-view.md)
 - [演练：使用虚拟用户活动图隔离问题](../test/walkthrough-use-the-virtual-user-activity-chart-to-isolate-issues.md)

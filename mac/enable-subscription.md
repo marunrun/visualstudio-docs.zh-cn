@@ -6,10 +6,10 @@ ms.author: dominicn
 ms.date: 09/18/2019
 ms.assetid: 898DFEB8-5757-4CCE-8AD2-8BC7706F5855
 ms.openlocfilehash: 2074207876df78bc6a268db909e5fa190073f9ba
-ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "74984046"
 ---
 # <a name="enable-subscription"></a>启用订阅
@@ -44,6 +44,6 @@ Visual Studio for Mac 有三种不同的订阅级别可供选择，一次下载�
 
 如果为没有 Internet 连接的计算机购买了 Visual Studio Enterprise 2019 for Mac，可以在不激活的情况下继续使用 Visual Studio for Mac，但无法使用 Xamarin Inspector、Xamarin Profiler 和嵌入式程序集功能。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [登录 Visual Studio (Windows)](/visualstudio/ide/signing-in-to-visual-studio)

@@ -1,5 +1,5 @@
 ---
-title: IDebugPendingBreakpoint2::EnumErrorBreakpoints |Microsoft Docs
+title: IDebug 挂起断点2：：enum错误断点 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -8,23 +8,23 @@ helpviewer_keywords:
 - IDebugPendingBreakpoint2::EnumErrorBreakpoints method
 - EnumErrorBreakpoints method
 ms.assetid: 2f9a9720-c1ac-4430-8f28-200d85360452
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ba93cf1e254f428261c2eaf2e144ad5dff4780ef
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 11caf8c2af92a14e001d7403f2457f0fc66ff3ed
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66333735"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80725859"
 ---
 # <a name="idebugpendingbreakpoint2enumerrorbreakpoints"></a>IDebugPendingBreakpoint2::EnumErrorBreakpoints
-获取来自此挂起断点的所有错误断点的列表。
+获取此挂起断点产生的所有错误断点的列表。
 
 ## <a name="syntax"></a>语法
 
@@ -44,16 +44,16 @@ int EnumErrorBreakpoints( 
 
 ## <a name="parameters"></a>参数
 `bpErrorType`\
-[in]中值的组合[BP_ERROR_TYPE](../../../extensibility/debugger/reference/bp-error-type.md)选择要枚举的错误的类型的枚举。
+[在][BP_ERROR_TYPE](../../../extensibility/debugger/reference/bp-error-type.md)枚举中的值的组合，用于选择要枚举的错误类型。
 
 `ppEnum`\
-[out]返回[IEnumDebugErrorBreakpoints2](../../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2.md)对象，其中包含一系列[IDebugErrorBreakpoint2](../../../extensibility/debugger/reference/idebugerrorbreakpoint2.md)对象。
+[出]返回包含[IDebugErrorBreakpoint2](../../../extensibility/debugger/reference/idebugerrorbreakpoint2.md)对象列表的[IEnumDebugErrorBreakpoints2](../../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2.md)对象。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。 返回`E_BP_DELETED`如果断点已被删除。
+ 如果成功，返回`S_OK`;否则，返回错误代码。 如果`E_BP_DELETED`断点已被删除，则返回。
 
 ## <a name="example"></a>示例
- 下面的示例演示如何实现此方法对于简单`CPendingBreakpoint`公开的对象[IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)接口。
+ 下面的示例演示如何为公开`CPendingBreakpoint`[IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)接口的简单对象实现此方法。
 
 ```cpp
 HRESULT CPendingBreakpoint::EnumErrorBreakpoints(

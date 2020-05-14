@@ -13,10 +13,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 3f80f3e65969973202af08299b07ebfa420f3bd2
-ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/22/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77557851"
 ---
 # <a name="command-line-profiling-of-stand-alone-applications"></a>通过命令行分析独立应用程序
@@ -27,7 +27,7 @@ ms.locfileid: "77557851"
 | 任务 | 相关的内容 |
 | - | - |
 | **收集应用程序统计信息：** 使用采样法收集性能统计信息。 对于分析 CPU 使用率问题以及了解应用程序的常规性能特征，采样数据十分有用。 | -   [使用采样收集应用程序统计信息](../profiling/collecting-application-statistics-for-stand-alone-applications.md) |
-| **收集详细计时信息：** 使用检测方法收集详细计时信息。 检测数据可用于分析 I/O 问题和精细分析应用程序方案。 | -   [使用检测收集详细计时数据](../profiling/collecting-detailed-timing-data-for-a-stand-alone-application.md) |
+| **收集详细计时数据：** 使用检测方法收集详细计时信息。 检测数据可用于分析 I/O 问题和精细分析应用程序方案。 | -   [使用检测收集详细计时数据](../profiling/collecting-detailed-timing-data-for-a-stand-alone-application.md) |
 | **收集 .NET 内存数据：** 使用采样法或检测法收集显示分配对象的大小和数量的 .NET 内存分配数据。 还可以收集对象生存期数据，此数据显示在每次垃圾回收生成中回收的对象的大小和数量。 | -   [收集 .NET Framework 内存数据](../profiling/collecting-dotnet-framework-memory-data-for-stand-alone-applications.md) |
 | **收集并发数据：** 使用并发方法收集资源争用数据和线程活动数据，后者可显示 CPU 使用率、线程争用、线程迁移、同步延迟、重叠 I/O 的区域和其他系统事件。 | -   [收集并发数据](../profiling/collecting-concurrency-data-for-stand-alone-applications.md) |
 | **添加层交互数据：** 可以添加有关应用程序对 Microsoft [!INCLUDE[ssNoVersion](../data-tools/includes/ssnoversion_md.md)] 数据库进行的同步 ADO.NET 调用的性能数据。 若要将层交互数据添加到分析运行，需要使用命令行分析工具执行特定的步骤。 | -   [收集层交互数据](../profiling/adding-tier-interaction-data-from-the-command-line.md) |

@@ -25,10 +25,10 @@ author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.openlocfilehash: 08492340022f772beadca8061a216de69fafc8af
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75596796"
 ---
 # <a name="upgrade-dotfuscator-community"></a>升级 Dotfuscator Community
@@ -65,7 +65,7 @@ Dotfuscator Professional 是行业标准的 [.NET 模糊处理程序][net-obfusc
 有关 Dotfuscator Professional 的高级应用程序保护功能的详细信息，请访问 PreEmptive Solutions 的 [Dotfuscator 概述页][product-about]和[与 Dotfuscator Community 进行比较][product-compare]。
 [可通过 preemptive.com 获取全面支持的试用版][eval]。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [完整 Dotfuscator Community 用户指南中的本主题][full]
 

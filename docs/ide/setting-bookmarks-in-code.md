@@ -11,15 +11,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 2c62ded0b94db9d39a197dde55fbc77434c5325d
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75595431"
 ---
 # <a name="set-bookmarks-in-code"></a>在代码中设置书签
 
-可以使用书签标记代码行，以便能够快速返回到特定位置，或者在不同位置间来回跳转。 有两个位置提供书签命令和图标：“书签窗口”（“视图” > “书签窗口”）和文本编辑器工具栏    。
+可以使用书签标记代码行，以便能够快速返回到特定位置，或者在不同位置间来回跳转。 有两个位置提供书签命令和图标：“书签窗口”（“视图” **“书签窗口”）和文本编辑器工具栏**   >   。
 
 ![书签工具栏](media/bookmark-toolbar.png)
 
@@ -27,7 +27,7 @@ ms.locfileid: "75595431"
 
 ## <a name="manage-bookmarks"></a>管理书签
 
-若要添加书签，请将光标置于要添加书签的行上。 选择“切换书签”按钮，或者按 Ctrl+K、Ctrl+K      。 这样便可添加书签。 如果再次选择“切换书签”按钮（或按 Ctrl+K、Ctrl+K），将删除该书签      。
+若要添加书签，请将光标置于要添加书签的行上。 选择“切换书签”按钮，或者按 Ctrl**K、Ctrl**K  +   +  。 这样便可添加书签。 如果再次选择“切换书签”按钮（或按 Ctrl**K、Ctrl**K），将删除该书签  +   +  。
 
 若要一目了然地了解特定书签的用途，可在右键单击或上下文菜单中的“书签窗口”中对其进行重命名  。 也可以选择书签窗口中的“删除”按钮来删除书签  。
 
@@ -40,6 +40,6 @@ ms.locfileid: "75595431"
 
 选择书签窗口中的“禁用所有书签”按钮，可以关闭书签（但不会删除书签）  。 选择同一按钮（现在称为“启用所有书签”），可以重新启用书签  。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [代码编辑器功能](../ide/writing-code-in-the-code-and-text-editor.md)

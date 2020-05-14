@@ -18,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - aspnet
-ms.openlocfilehash: 8707371fac876586d38f12a797aaee7228b5f729
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.openlocfilehash: 072d1b94c552b3aca34a1573e5d6545628f6568e
+ms.sourcegitcommit: 93859158465eab3423a0c0435f06490f0a456a57
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77634573"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82167327"
 ---
 # <a name="aspnetcompiler-task"></a>AspNetCompiler 任务
 
@@ -50,9 +50,7 @@ ms.locfileid: "77634573"
 |`Updateable`|可选 `Boolean` 参数。<br /><br /> 如果此参数为 `true`，则预编译的应用程序将为可更新。  默认值为 `false`。 此参数对应于 aspnet_compiler.exe 上的 -u 开关   。|
 |`VirtualPath`|可选 `String` 参数。<br /><br /> 要编译的应用程序的虚拟路径。 如果指定 `PhysicalPath`，则物理路径将用于查找应用程序。 否则，将使用 IIS 元数据库，并假定应用程序位于默认站点中。 此参数对应于 aspnet_compiler.exe 上的 -v 开关   。|
 
-## <a name="remarks"></a>备注
-
-除上面列出的参数外，此任务还从 <xref:Microsoft.Build.Tasks.ToolTaskExtension> 类继承参数，后者自身继承自 <xref:Microsoft.Build.Utilities.ToolTask> 类。 有关这些其他参数的列表及其说明，请参阅 [ToolTaskExtension 基类](../msbuild/tooltaskextension-base-class.md)。
+[!INCLUDE [ToolTaskExtension arguments](includes/tooltaskextension-base-params.md)]
 
 ## <a name="example"></a>示例
 

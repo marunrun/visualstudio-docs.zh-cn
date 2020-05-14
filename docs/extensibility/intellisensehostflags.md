@@ -1,5 +1,5 @@
 ---
-title: IntelliSenseHostFlags | Microsoft Docs
+title: IntelliSenseHostFlags |微软文档
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -8,17 +8,17 @@ helpviewer_keywords:
 - IntelliSense, IntellisenseHostFlags enumeration
 - IntellisenseHostFlags enumeration
 ms.assetid: 0930640b-eb84-48ef-a8f7-d4268f55c99c
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6d0e66f70b91985882df5691d05175995b4f6ca8
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: a0df05e7363db01bd4f16fee5d75141dc93df1c0
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66328082"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80710273"
 ---
 # <a name="intellisensehostflags"></a>IntelliSenseHostFlags
 指定 IntelliSense 主机标志。
@@ -41,13 +41,13 @@ enum IntellisenseHostFlags
 |成员|描述|
 |-------------|-----------------|
 |`IHF_READONLYCONTEXT`|上下文缓冲区是只读的。|
-|`IHF_NOSEPARATESUBJECT`|没有使用者的文本。 上下文缓冲区包含 IntelliSense 目标 (意味着`!IHF_READONLYCONTEXT`)。|
-|`IHF_SINGLELINESUBJECT`|不支持多行的主题文本。|
+|`IHF_NOSEPARATESUBJECT`|无主题文本。 上下文缓冲区包含 IntelliSense 目标（暗示`!IHF_READONLYCONTEXT`）。|
+|`IHF_SINGLELINESUBJECT`|主题文本不支持多行。|
 |`IHF_FORCECOMMITTOCONTEXT`|与 `CanCommitIntoReadOnlyBuffer` 相同。|
-|`IHF_OVERTYPE`|应在改写模式下编辑 （在使用者或上下文）。|
+|`IHF_OVERTYPE`|编辑（在主题或上下文中）应在过度类型模式下完成。|
 
 ## <a name="requirements"></a>要求
- SingleFileeditor.idl
+ 单文件编辑器.idl
 
 ## <a name="see-also"></a>请参阅
 - <xref:Microsoft.VisualStudio.TextManager.Interop>

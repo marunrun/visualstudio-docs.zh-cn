@@ -3,23 +3,24 @@ title: AI Tools for Visual Studio
 titleSuffix: ''
 description: AI Tools for Visual Studio 概述
 keywords: ai, visual studio
-author: lisawong19
-ms.author: liwong
-manager: routlaw
+author: jillre
+ms.author: jillfra
+manager: jillfra
+monikerRange: vs-2017
 ms.date: 11/13/2017
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 0c16a51381a1ef22d780f7d3c2b26821d7029e8f
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: f696f5c2696ef15c133c9011b4235bf6714742e7
+ms.sourcegitcommit: 9c1cecaff4d9955276eee7865b78d47679dd1e2a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75915959"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80638568"
 ---
 # <a name="visual-studio-tools-for-ai"></a>Visual Studio Tools for AI
 
-Visual Studio Tools for AI 是用于生成、测试和部署深入学习/AI 解决方案的扩展。 它与 Azure 机器学习无缝集成以实现强大的试验功能，包括但不限于提交数据准备以及以透明方式将训练作业建模为不同的计算目标。 此外，它提供对自定义指标和运行历史记录跟踪的支持，从而可实现数据科学的可再现性和审核。 通过企业就绪协作，可以安全地与他人一起处理项目。
+Visual Studio Tools for AI 是用于生成、测试和部署深度学习/AI 解决方案的扩展。 它与 Azure 机器学习无缝集成以实现强大的试验功能，包括但不限于提交数据准备以及以透明方式将训练作业建模为不同的计算目标。 此外，它提供对自定义指标和运行历史记录跟踪的支持，从而可实现数据科学的可再现性和审核。 通过企业就绪协作，可以安全地与他人一起处理项目。
 
 立即开始使用 [Microsoft 认知工具包 (CNTK)](/cognitive-toolkit/)、[Google TensorFlow](https://www.tensorflow.org) 或其他深入学习框架进行深入学习。
 

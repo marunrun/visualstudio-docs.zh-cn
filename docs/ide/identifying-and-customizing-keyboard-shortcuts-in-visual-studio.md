@@ -18,10 +18,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: ce87385314ec84c7c0ed9d30c806a6287bb91d9e
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75591328"
 ---
 # <a name="identify-and-customize-keyboard-shortcuts-in-visual-studio"></a>在 Visual Studio 中识别并自定义键盘快捷方式
@@ -32,7 +32,7 @@ ms.locfileid: "75591328"
 
 - 你是否已自定义快捷键的行为。
 
-- 你选择快捷键时所在的上下文。 例如，在你使用“设置设计器”时，F2 快捷键将调用 `Edit.EditCell` 命令；而使用团队资源管理器时，则调用 `File.Rename` 命令    。
+- 你选择快捷键时所在的上下文。 例如，在你使用“设置设计器”时，F2 快捷键将调用 **命令；而使用团队资源管理器时，则调用** 命令`Edit.EditCell`  `File.Rename`  。
 
 不管设置、自定义和上下文，始终可以在“选项”对话框中找到并更改键盘快捷方式  。 还可以在[常用键盘快捷方式](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md)中查找诸多命令的默认键盘快捷方式。 有关所有默认快捷方式的完整列表（基于“常规开发”  设置），请参阅[所有键盘快捷方式](../ide/default-keyboard-shortcuts-in-visual-studio.md)。
 
@@ -43,7 +43,7 @@ ms.locfileid: "75591328"
 
 ## <a name="identify-a-keyboard-shortcut"></a>识别键盘快捷方式
 
-1. 在菜单栏上，依次选择“工具” > “选项”   。
+1. 在菜单栏上，依次选择“工具” **“选项”**  >   。
 
 2. 展开“环境”，然后选择“键盘”   。
 
@@ -63,7 +63,7 @@ ms.locfileid: "75591328"
 
 ## <a name="customize-a-keyboard-shortcut"></a>自定义键盘快捷方式
 
-1. 在菜单栏上，依次选择“工具” > “选项”   。
+1. 在菜单栏上，依次选择“工具” **“选项”**  >   。
 
 2. 展开“环境”，然后选择“键盘”   。
 
@@ -105,7 +105,7 @@ ms.locfileid: "75591328"
 
 ### <a name="to-export-only-keyboard-shortcuts"></a>仅导出键盘快捷键
 
-1. 在菜单栏上，选择“工具” > “导入和导出设置”   。
+1. 在菜单栏上，选择“工具” **“导入和导出设置”**  >   。
 
 2. 选择“导出选定的环境设置”，然后选择“下一步”   。
 
@@ -131,7 +131,7 @@ ms.locfileid: "75591328"
 
 ### <a name="to-import-only-keyboard-shortcuts"></a>仅导入键盘快捷键
 
-1. 在菜单栏上，选择“工具” > “导入和导出设置”   。
+1. 在菜单栏上，选择“工具” **“导入和导出设置”**  >   。
 
 2. 选择“导入选定的环境设置”选项按钮，然后选择“下一步”   。
 
@@ -147,6 +147,6 @@ ms.locfileid: "75591328"
 
    ![仅导入自定义的键盘快捷键](../ide/media/importshortcuts.png)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Studio 的辅助功能](../ide/reference/accessibility-features-of-visual-studio.md)

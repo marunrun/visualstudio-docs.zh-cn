@@ -12,19 +12,19 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 36720588f56d7c718078dca96445eb48915a3845
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 0f49925211247e346ac3203de20a97496c54295d
+ms.sourcegitcommit: 7b60e81414a82c6d34f6de1a1f56115c9cd26943
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75569070"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81444799"
 ---
 # <a name="how-to-manage-word-wrap-in-the-editor"></a>如何：在编辑器中管理自动换行
 
 可以设置和清除“自动换行”选项  。 如果设置了此选项，较长行中超出代码编辑器窗口当前宽度的部分将在下一行显示。 如果清除了此选项，例如，为方便使用行号，则可以向右滚动查看较长行的末尾。
 
 > [!NOTE]
-> 本主题仅适用于 Windows 上的 Visual Studio。 Visual Studio for Mac 目前不支持自动换行。
+> 本主题适用于 Visual Studio  Windows 版。 有关 Visual Studio for Mac，请参阅[源编辑器：自动换行](/visualstudio/mac/source-editor#word-wrap)。
 
 ## <a name="to-set-word-wrap-preferences"></a>设置换行首选项
 
@@ -50,7 +50,6 @@ ms.locfileid: "75569070"
 如果熟悉 Notepad++、Sublime Text 或 Visual Studio Code 中的自动换行功能，请注意 Visual Studio 的行为在以下方面与其他编辑器的行为不同：
 
 * [三次单击不会选择整行](https://developercommunity.visualstudio.com/content/problem/268989/triple-click-doesnt-select-whole-line-when-word-wr.html)
-* [剪切命令不会删除整行](https://developercommunity.visualstudio.com/content/problem/138259/cut-command-should-delete-logical-line.html)
 * [按两次 End 键不会将光标移动到行尾](https://developercommunity.visualstudio.com/content/problem/138274/pressing-end-key-twice-should-move-cursor-to-end-o.html)
 
 ## <a name="see-also"></a>请参阅

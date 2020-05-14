@@ -1,5 +1,5 @@
 ---
-title: IDebugFunctionObject::Evaluate |Microsoft Docs
+title: IDebug函数对象：：评估 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugFunctionObject::Evaluate method
 ms.assetid: 29349ea3-d5c1-4135-aa76-ced073ab9683
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a3d9ddafe744c2815e3730cd835fb1afe63ffc23
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 529a5f67c808efa258bc0cb9899f546dbb90d431
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66313498"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80728508"
 ---
 # <a name="idebugfunctionobjectevaluate"></a>IDebugFunctionObject::Evaluate
-调用函数，并返回结果值作为对象。
+调用函数并将结果值作为对象返回。
 
 ## <a name="syntax"></a>语法
 
@@ -47,22 +47,22 @@ int Evaluate(
 
 ## <a name="parameters"></a>参数
 `ppParams`\
-[in]一个数组[IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)表示输入的参数的对象。 其中每个参数之一创建`Create`中的方法[IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md)接口。
+[在]表示输入参数的[IDebugObject 对象的](../../../extensibility/debugger/reference/idebugobject.md)数组。 每个参数都是使用[IDebug函数对象](../../../extensibility/debugger/reference/idebugfunctionobject.md)接口中的`Create`一种方法创建的。
 
 `dwParams`\
-[in]中的参数数量`ppParams`数组。
+[在]数组中的`ppParams`参数数。
 
 `dwTimeout`\
-[in]指定以毫秒为单位，此方法返回前等待的最长时间。 使用`INFINITE`无限期等待。
+[在]指定从此方法返回之前等待的最大时间（以毫秒为单位）。 用于`INFINITE`无限期等待。
 
 `ppResult`\
-[out]返回[IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)表示函数作为对象的值。
+[出]返回表示函数值为对象的[IDebugObject。](../../../extensibility/debugger/reference/idebugobject.md)
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回 S_OK;否则，返回错误代码。
+ 如果成功，返回S_OK;否则，返回错误代码。
 
 ## <a name="remarks"></a>备注
- 此方法将设置，执行对所表示的函数的调用[IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md)对象。
+ 此方法设置并执行对[IDebug函数对象](../../../extensibility/debugger/reference/idebugfunctionobject.md)表示的函数的调用。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md)

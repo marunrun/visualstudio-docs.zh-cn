@@ -1,5 +1,5 @@
 ---
-title: IDebugPortNotify2::AddProgramNode | Microsoft Docs
+title: IDebug端口通知2：：添加程序节点 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugPortNotify2::AddProgramNode
 ms.assetid: 34c0e949-1eb9-4108-9cb8-a3eb87fcf190
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: f0afd0b2ae50555e29a75159edb8f52635730a56
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 9090c39d85519435d17c940ad21fd55d26904765
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66319469"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80724988"
 ---
 # <a name="idebugportnotify2addprogramnode"></a>IDebugPortNotify2::AddProgramNode
-可调试的程序注册到的端口运行。
+注册一个程序，该程序可以使用正在运行的端口进行调试。
 
 ## <a name="syntax"></a>语法
 
@@ -41,13 +41,13 @@ int AddProgramNode( 
 
 ## <a name="parameters"></a>参数
 `pProgramNode`\
-[in][IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)对象，表示要注册的程序。
+[在]表示要注册的程序的[IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)对象。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，返回`S_OK`;否则，返回错误代码。
 
 ## <a name="remarks"></a>备注
- 程序节点可以注销从端口通过调用[RemoveProgramNode](../../../extensibility/debugger/reference/idebugportnotify2-removeprogramnode.md)方法。
+ 可以通过调用[RemoveProgramNode](../../../extensibility/debugger/reference/idebugportnotify2-removeprogramnode.md)方法从端口取消注册程序节点。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugPortNotify2](../../../extensibility/debugger/reference/idebugportnotify2.md)

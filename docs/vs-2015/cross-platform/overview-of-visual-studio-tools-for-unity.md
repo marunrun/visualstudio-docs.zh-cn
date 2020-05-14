@@ -9,10 +9,10 @@ caps.latest.revision: 6
 ms.author: crdun
 manager: crdun
 ms.openlocfilehash: ba5447301c3a5581d35825ed91c17b3c9f50015f
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "74298755"
 ---
 # <a name="overview-of-visual-studio-tools-for-unity"></a>Visual Studio Tools for Unity 的概述
@@ -20,14 +20,14 @@ ms.locfileid: "74298755"
 
 本部分将介绍更多有关 Visual Studio Tools for Unity 提供的功能的内容以及如何使用它们提高 Unity 的使用效率。  
   
- 借助适用于 Unity 的 Visual Studio 工具 (VSTU  )，可以使用 Visual Studio 以 C# 编写游戏和编辑器脚本，随后使用其功能强大的调试器查找和修复错误。 VSTU 的最新版本包括用于 Unity 的 ShaderLab 着色器语言的语法着色、更好的调试器可视化效果以及针对 MonoBehavior 向导的改进的代码生成。 VSTU 还提供 Unity 项目文件、控制台消息以及在 Visual studio 中启动游戏的功能，从而使你可以在编写代码时花费更少的时间与 Unity 编辑器进行切换。  
+ 借助适用于 Unity 的 Visual Studio 工具 (VSTU)，可以使用 Visual Studio 以 C# 编写游戏和编辑器脚本，随后使用其功能强大的调试器查找和修复错误。 VSTU 的最新版本包括用于 Unity 的 ShaderLab 着色器语言的语法着色、更好的调试器可视化效果以及针对 MonoBehavior 向导的改进的代码生成。 VSTU 还提供 Unity 项目文件、控制台消息以及在 Visual studio 中启动游戏的功能，从而使你可以在编写代码时花费更少的时间与 Unity 编辑器进行切换。  
   
  继续阅读以了解有关这些功能的详细信息。  
   
 ## <a name="integration-with-unity"></a>与 Unity 集成  
  如果不得不一直在 Unity 编辑器和 Visual Studio 之间来回切换，则 Visual Studio Tools for Unity 就不会是一个提升效率的工具。 这就是借助 Visual Studio Tools for Unity 可以轻松地在无需离开 Visual Studio 的情况下保持工作的原因。  
   
-- “Unity 项目资源管理器”  使用在 Unity 编辑器中显示的相同层次结构在 Visual Studio 中显示整个 Unity 项目。  
+- “Unity 项目资源管理器”使用在 Unity 编辑器中显示的相同层次结构在 Visual Studio 中显示整个 Unity 项目。  
   
 - Unity 控制台集成将来自 Unity 控制台的输出显示在 Visual Studio 的错误窗口内的右侧。  
   

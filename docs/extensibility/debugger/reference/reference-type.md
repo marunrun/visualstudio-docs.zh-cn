@@ -1,5 +1,5 @@
 ---
-title: REFERENCE_TYPE | Microsoft Docs
+title: REFERENCE_TYPE |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - REFERENCE_TYPE enumeration
 ms.assetid: b1ffba10-eb9d-48ba-bf48-6d8b71d6f270
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c45457566682e373b879892cfdd26707102ebd5f
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 29ce6ad17aa32b98fd28914c422a49bd8bcc14b5
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66329272"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80713660"
 ---
-# <a name="referencetype"></a>REFERENCE_TYPE
+# <a name="reference_type"></a>REFERENCE_TYPE
 指定引用类型。
 
 ## <a name="syntax"></a>语法
@@ -44,22 +44,22 @@ public enum enum_REFERENCE_TYPE { 
 
 ## <a name="fields"></a>字段
  `REF_TYPE_WEAK`\
- 指定的弱引用。 不能结合`REF_TYPE_STRONG`。
+ 指定弱引用。 不能与`REF_TYPE_STRONG`合并。
 
  `REF_TYPE_STRONG`\
- 指定的强引用。 不能结合`REF_TYPE_WEAK`。
+ 指定强引用。 不能与`REF_TYPE_WEAK`合并。
 
 ## <a name="remarks"></a>备注
- 用作`dwRefType`的成员[DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md)结构。
+ 用作[DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md)结构`dwRefType`的成员。
 
  作为参数传递给[SetReferenceType](../../../extensibility/debugger/reference/idebugreference2-setreferencetype.md)方法。
 
 ## <a name="requirements"></a>要求
- 标头： msdbg.h
+ 标题： msdbg.h
 
- 命名空间:Microsoft.VisualStudio.Debugger.Interop
+ 命名空间：微软.VisualStudio.调试器.互通
 
- 程序集：Microsoft.VisualStudio.Debugger.Interop.dll
+ 程序集：微软.VisualStudio.调试器.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [枚举](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

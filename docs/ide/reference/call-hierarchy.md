@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: dcedc6a49c0df84b4482f8030524d59d4336bcc8
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75595795"
 ---
 # <a name="view-call-hierarchy"></a>查看调用层次结构
@@ -63,7 +63,7 @@ ms.locfileid: "75595795"
 
 下表描述了在树状视图窗格中右键单击某个节点时，可以使用的多个快捷菜单选项。
 
-|上下文菜单项|描述|
+|上下文菜单项|说明|
 | - |-----------------|
 |**作为新根添加**|将选定节点添加为树状视图窗格中的新根节点。 这样就可以集中关注特定子树。|
 |**移除根**|从树视图窗格中删除所选根节点。 只有根节点有此选项。<br /><br /> 还可以使用“移除根”  工具栏按钮来移除选定的根节点。|

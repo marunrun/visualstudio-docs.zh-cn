@@ -1,5 +1,5 @@
 ---
-title: IDebugMemoryBytes2::WriteAt | Microsoft Docs
+title: IDebug记忆字节2：：写 at |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -8,23 +8,23 @@ helpviewer_keywords:
 - IDebugMemoryBytes2::WriteAt method
 - WriteAt method
 ms.assetid: 61cc3704-47fa-4d9b-aa62-bb4585ac8fb1
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 5eefaee08d64952681e91711cdf8347186123e57
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: ac9113424c6cd5cce230774a6e5335ffa4d4ba77
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66347136"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80727528"
 ---
 # <a name="idebugmemorybytes2writeat"></a>IDebugMemoryBytes2::WriteAt
-写入指定的内存，在指定地址开始的字节数。
+从指定的地址开始，写入指定的内存字节数。
 
 ## <a name="syntax"></a>语法
 
@@ -46,19 +46,19 @@ int WriteAt(
 
 ## <a name="parameters"></a>参数
 `pStartContext`\
-[in][IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)对象，它指定位置开始写入字节数。
+[在][IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)对象，指定从何处开始写入字节。
 
 `dwCount`\
-[in]要写入的字节数。
+[在]要写入的字节数。
 
 `rgbMemory`\
-[in]要写入的字节。 此数组被假定为至少`dwCount`字节的大小。
+[在]要写入的字节。 此数组假定为大小中至少`dwCount`字节。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回`S_FALSE`如果不是所有字节都可以编写，或返回错误代码 (通常`E_FAIL`)。
+ 如果成功，返回`S_OK`;否则，如果`S_FALSE`并非所有字节都可以写入或返回错误代码（通常`E_FAIL`），则返回。
 
 ## <a name="remarks"></a>备注
- 如果起始地址不是由此内存窗口内[IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md)对象时，发生任何写操作和错误代码的`E_FAIL`返回 — 即使量要写入到内存空间重叠。
+ 如果起始地址不在此[IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md)对象表示的内存窗口中，则不进行写入并返回 其`E_FAIL`错误代码 -即使写入量重叠到内存空间。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md)

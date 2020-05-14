@@ -3,15 +3,16 @@ title: 设置月度订阅的管理员 | Microsoft Docs
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 03/02/2020
+ms.assetid: 8b30e2bc-2ac3-4fcc-b296-128731471032
+ms.date: 03/03/2020
 ms.topic: conceptual
 description: 设置月度订阅的管理员
-ms.openlocfilehash: d9ae6f8aac48b9d54b851d543a72fd98854c1131
-ms.sourcegitcommit: 9eff8371b7a79a637ebb6850f775dd3eed343d8b
+ms.openlocfilehash: c9a1303d4111f0ec4a0c1249a25e49fc40cf26de
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78235207"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80232657"
 ---
 # <a name="set-up-administrators-for-visual-studio-monthly-subscriptions"></a>设置 Visual Studio 月度订阅的管理员
 
@@ -33,13 +34,21 @@ Visual Studio 月度订阅由管理员进行管理。 管理员可以分配订�
 
 1. 在 [portal.azure.com](https://portal.azure.com) 上连接到 Azure 门户。
 2. 使用购买 Visual Studio 月度订阅时所用的帐户登录。
-3. 在左侧导航窗格中，向下滚动到“成本管理 + 计费”  。
+3. 在“Azure 服务”下，选择“成本管理 + 计费”   。
+   > [!div class="mx-imgBorder"]
+   > ![选择“Azure 服务”下的“成本管理 + 计费”](_img/cloud-admin/azure-cost-billing.png)
 4. 在“我的订阅”列表中，选择用于进行购买的 Azure 订阅  。
-5. 左侧导航窗格中列表顶部附近单击“访问控制”  。
+   > [!div class="mx-imgBorder"]
+   > ![选择订阅](_img/cloud-admin/subscription-list.png)
+5. 单击左侧导航窗格中列表顶部附近的“访问控制(IAM)”  。
 6. 在页面顶部单击“添加”选项卡  。
 7. 单击“添加角色分配”  。
+   > [!div class="mx-imgBorder"]
+   > ![选择“访问控制”、“添加”和“添加角色分配”](_img/cloud-admin/access-control-add.png)
 8. 在右侧的弹出窗格中，在窗格顶部单击“角色”下拉列表，向下滚动，然后选择“用户访问管理员”   。
 9. 在用户列表中向下滚动至你想要创建管理员的用户并选择该用户。 
+   > [!div class="mx-imgBorder"]
+   > ![选择“角色”和“用户访问管理”](_img/cloud-admin/add-role-user-access-admin.png)
 10. 单击“保存”  。
 11. 单击“角色分配”选项卡，验证所选用户现在是否显示为“用户访问管理员”  。
 

@@ -1,5 +1,5 @@
 ---
-title: CustomDataSignature 元素 （Visual Studio 模板） |Microsoft Docs
+title: 自定义数据签名元素（可视化工作室模板） |微软文档
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - <CustomDataSignature> Element (Visual Studio Templates)
 - CustomDataSignature Element (Visual Studio Templates)
 ms.assetid: 8c3db51d-7014-4484-802a-15aa1353dbdb
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: db2b4d089495245d1a37469df1dc43a19be31866
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: ec8bae34da0f007bac65f26c4e442c1d03e56d08
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66351980"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80739440"
 ---
-# <a name="customdatasignature-element-visual-studio-templates"></a>CustomDataSignature 元素 （Visual Studio 模板）
-指定要查找的自定义数据的文本签名。
+# <a name="customdatasignature-element-visual-studio-templates"></a>自定义数据签名元素（可视化工作室模板）
+指定文本签名以查找自定义数据。
 
- \<VSTemplate > \<TemplateData > \<CustomDataSignature >
+ \<模板>\<模板数据>\<自定义数据签名>
 
 ## <a name="syntax"></a>语法
 
@@ -43,16 +43,16 @@ ms.locfileid: "66351980"
 
 |元素|描述|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|必需的元素。<br /><br /> 此模板分类并定义如何显示在**新的项目**或**添加新项**对话框。|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|必需元素。<br /><br /> 对模板进行分类，并定义如何在 **"新项目**"或"**添加新项目**"对话框中显示模板。|
 
 ## <a name="text-value"></a>文本值
  需要一个文本值。
 
- 文本是一个字符串，找到自定义数据所需的文本签名。
+ 文本是具有查找自定义数据所需的文本签名的字符串。
 
 ## <a name="remarks"></a>备注
  `CustomDataSignature` 是可选元素。
 
 ## <a name="see-also"></a>请参阅
-- [Visual Studio 模板架构引用](../extensibility/visual-studio-template-schema-reference.md)
+- [可视化工作室模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
 - [创建项目和项模板](../ide/creating-project-and-item-templates.md)

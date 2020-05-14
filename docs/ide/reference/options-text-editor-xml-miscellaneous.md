@@ -9,15 +9,15 @@ author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.openlocfilehash: dd468945b1ab9ac83b219b9c8c396f017065e2be
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75568121"
 ---
 # <a name="options-text-editor-xml-miscellaneous"></a>选项, 文本编辑器, XML, 杂项
 
-使用“杂项”选项页更改 XML 编辑器的自动完成和架构设置  。 要访问杂项 XML 选项，请选择“工具” > “选项” > “文本编辑器” > “XML”，然后选择“杂项”      。
+使用“杂项”选项页更改 XML 编辑器的自动完成和架构设置  。 要访问杂项 XML 选项，请选择“工具” **“选项”** “文本编辑器” > “XML”，然后选择“杂项”   >    >    。
 
 ## <a name="auto-insert"></a>自动插入
 
@@ -27,7 +27,7 @@ ms.locfileid: "75568121"
 
 **特性引号**
 
-在创作 XML 属性时，编辑器会插入 `="` 和 `"` 字符并将插入符号 (^  ) 置于引号之间。 默认情况下选中此复选框。
+在创作 XML 属性时，编辑器会插入 `="` 和 `"` 字符并将插入符号 ( **^** ) 置于引号之间。 默认情况下选中此复选框。
 
 **命名空间声明**
 
@@ -55,7 +55,7 @@ ms.locfileid: "75568121"
 
 指定架构缓存的位置。 “浏览”按钮在新窗口中打开当前架构的缓存位置  。 默认位置为 %VsInstallDir%\xml\Schemas  。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [XML 选项 - 格式设置](options-text-editor-xml-formatting.md)
 - [Visual Studio 中的 XML 工具](../../xml-tools/xml-tools-in-visual-studio.md)

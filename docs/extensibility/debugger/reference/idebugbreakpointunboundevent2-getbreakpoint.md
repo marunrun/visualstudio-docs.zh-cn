@@ -1,5 +1,5 @@
 ---
-title: IDebugBreakpointUnboundEvent2::GetBreakpoint |Microsoft Docs
+title: IDebug 突破点无绑定事件2：：获取断点 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugBreakpointUnboundEvent2::GetBreakpoint
 ms.assetid: ad73a207-b778-4dc5-b645-5ec668a63333
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: db0042e3c7d6f4c8ce7eabeef6e488d18cd0ad27
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 6db69becfb16ebabbab782485e170bc761fd4577
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66352811"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80734729"
 ---
 # <a name="idebugbreakpointunboundevent2getbreakpoint"></a>IDebugBreakpointUnboundEvent2::GetBreakpoint
-获取未绑定的断点。
+获取非绑定的断点。
 
 ## <a name="syntax"></a>语法
 
@@ -41,13 +41,13 @@ int GetBreakpoint(
 
 ## <a name="parameters"></a>参数
 `ppBP`\
-[out]返回[IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md)表示未绑定断点的对象。
+[出]返回[IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md)对象，该对象表示成为未绑定的断点。
 
 ## <a name="return-value"></a>返回值
-如果成功，则返回`S_OK`; 否则为返回错误代码。
+如果成功，返回`S_OK`;否则，返回错误代码。
 
 ## <a name="example"></a>示例
-下面的示例演示如何实现此方法对于**CBreakpointUnboundDebugEventBase**对象，它公开[IDebugBreakpointUnboundEvent2](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2.md)接口。
+下面的示例演示如何为公开[IDebugBreakpoint UnbundEvent2](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2.md)接口的**CBreakpoint 未绑定 DebugEventBase**对象实现此方法。
 
 ```cpp
 STDMETHODIMP CBreakpointUnboundDebugEventBase::GetBreakpoint(

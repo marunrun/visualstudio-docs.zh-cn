@@ -11,10 +11,10 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: eb3e3ca5d18429c60894c42bda12328836dc6fc8
-ms.sourcegitcommit: bb5425b9c6d8fd7135d9584c2963831754071347
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "73024724"
 ---
 # <a name="edit-python-code"></a>编辑 Python 代码

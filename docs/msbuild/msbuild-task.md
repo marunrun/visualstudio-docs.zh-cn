@@ -18,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4a312bfe8c88b0ac523666779970cc28e3a7c798
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.openlocfilehash: ab54c5c523c833be60ef4b5d5088b6217a3111a5
+ms.sourcegitcommit: 0b8497b720eb06bed8ce2194731177161b65eb84
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77633169"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82072575"
 ---
 # <a name="msbuild-task"></a>MSBuild 任务
 
@@ -42,6 +42,7 @@ ms.locfileid: "77633169"
 | `RemoveProperties` | 可选 `String` 参数。<br /><br /> 指定要删除的全局属性的集。 |
 | `RunEachTargetSeparately` | 可选 `Boolean` 参数。<br /><br /> 如果为 `true`，则 MSBuild 任务一次一个地调用被传递到 MSBuild 的列表中的目标，不会同时调用目标。 将此参数设置为 `true` 可确保即使先前调用目标失败，也可调用后续目标。 否则，生成错误将停止调用所有后续目标。 默认值为 `false`。 |
 | `SkipNonexistentProjects` | 可选 `Boolean` 参数。<br /><br /> 如果为 `true`，则将跳过磁盘上不存在的项目文件。 否则，此类项目会引发错误。 |
+|`SkipNonexistentTargets`|可选 `Boolean` 参数。<br /><br /> 如果为 `true`，则将跳过存在但不包含已命名的 `Targets` 的项目文件。 否则，此类项目会引发错误。 在 MSBuild 15.5 中引入。|
 | `StopOnFirstFailure` | 可选 `Boolean` 参数。<br /><br /> 如果为 `true`，当其中一个项目生成失败时，则不会再生成其他项目。 目前在并行生成时（具有多个处理器）不支持此参数。 |
 | `TargetAndPropertyListSeparators` | 可选 `String[]` 参数。<br /><br /> 将目标和属性的列表指定为 `Project` 项元数据）。 进行处理前，分隔符为非转义的。 例如 %3B（转义的“;”）将被视为未转义的“;”。 |
 | `TargetOutputs` | 可选的 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 只读输出参数。<br /><br /> 返回出自所有项目文件的生成目标的输出。 仅返回出自所指定目标的输出，不返回存在于目标所依赖的目标上的任何输出。<br /><br /> `TargetOutputs` 参数还包含以下元数据：<br /><br /> -   `MSBuildSourceProjectFile`：包含设置输出的目标的 MSBuild 项目文件。<br />-   `MSBuildSourceTargetName`：设置输出的目标。 **注意：** 如果要分别识别每个项目文件或目标中的输出，请为每个项目文件或目标分别运行 `MSBuild` 任务。 如果只运行一次 `MSBuild` 任务来生成所有的项目文件，则会将所有目标的输出收集到一个数组中。 |

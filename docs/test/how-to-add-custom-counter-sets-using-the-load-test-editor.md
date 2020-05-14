@@ -11,20 +11,20 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: f7438f657af2ba40fbda5afefbd8a12cc56a2a4c
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "76114871"
 ---
 # <a name="how-to-add-custom-counter-sets-using-the-load-test-editor"></a>如何：使用负载测试编辑器添加自定义计数器集
 
-使用“新建负载测试向导”创建负载测试时，需添加一个初始计数器集。  该计数器集为您的负载测试提供了一组预定义计数器集。
+在使用“新建负载测试向导”创建负载测试时，需添加一个初始计数器集  。 该计数器集为您的负载测试提供了一组预定义计数器集。
 
 > [!NOTE]
 > 如果负载测试分布在多台远程计算机之间，则会将控制器和代理计数器映射到控制器和代理计数器集中。 有关如何在负载测试中使用远程计算机的详细信息，请参阅[测试控制器和测试代理](configure-test-agents-and-controllers-for-load-tests.md)。
 
-在“负载测试编辑器”中管理计数器。  已添加到测试中的计数器集会出现在负载测试的“计数器集”节点中。  创建负载测试之后，可以向其中添加新的自定义计数器集。
+在“负载测试编辑器”中管理计数器  。 已添加到测试中的计数器集会出现在负载测试的“计数器集”节点中。  创建负载测试之后，可以向其中添加新的自定义计数器集。
 
 ![自定义计数器集](../test/media/loadtestcustomcounter.png)
 
@@ -41,12 +41,12 @@ ms.locfileid: "76114871"
     > [!NOTE]
     > 会向此计数器集赋予一个默认名称，如 Custom1  。 可以使用“属性”窗口更改该名称。  按 F4  以显示“属性”  窗口。
 
-4. 若要向自定义计数器集添加计数器，请右键单击新的计数器集，然后选择“添加计数器”。  有关如何添加计数器的更多信息，请参见[如何：向计数器集中添加计数器](../test/how-to-add-counters-to-counter-sets-using-the-load-test-editor.md)。
+4. 若要向自定义计数器集添加计数器，请右键单击新的计数器集，然后选择“添加计数器”。  有关如何添加计数器的详细信息，请参阅[如何：向计数器集添加计数器](../test/how-to-add-counters-to-counter-sets-using-the-load-test-editor.md)。
 
     > [!NOTE]
     > 还可以通过右键单击现有计数器集，选择“复制”，然后将其粘贴到“计数器集”节点来添加自定义计数器集。 可以删除那些复制了但不需要的多余计数器。 可以使用“属性”窗口更改新计数器集的名称。 
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [为负载测试中的计算机指定计数器集和阈值规则](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md)
 - [配置负载测试运行设置](../test/configure-load-test-run-settings.md)

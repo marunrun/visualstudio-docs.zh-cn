@@ -10,14 +10,14 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 435393ac536eb70f2f3f6d38b16eaab645848704
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74778175"
 ---
 # <a name="sys-vsperfcmd"></a>Sys (VSPerfCmd)
-VSPerfCmd.exe Sys 选项将采样的分析事件设置为系统调用事件（被分析的应用程序中对操作系统的函数调用），还可以选择将采样间隔内的系统调用数从默认值 10 改为其他值   。
+VSPerfCmd.exe“Sys”选项将采样的分析事件设置为系统调用事件（被分析的应用程序中对操作系统的函数调用），还可以选择将采样间隔内的系统调用数从默认值 10 改为其他值   。
 
  只能在包含 **Launch** 或 **Attach** 选项的命令行中使用 **Sys**。
 

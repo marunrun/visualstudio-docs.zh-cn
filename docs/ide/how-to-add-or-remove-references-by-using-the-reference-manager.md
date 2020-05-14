@@ -22,10 +22,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: dfad622a7587246836161cd79bb5b759151df1ef
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75595305"
 ---
 # <a name="how-to-add-or-remove-references-by-using-the-reference-manager"></a>如何：使用引用管理器添加或删除引用

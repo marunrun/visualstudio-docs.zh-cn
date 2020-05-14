@@ -6,19 +6,19 @@ ms.topic: tutorial
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
 ms.devlang: CSharp
-author: TerryGLee
-ms.author: tglee
+author: ornellaalt
+ms.author: ornella
 manager: jillfra
 dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: 4017ee2da040ccef36c58b17d896abab199c3517
-ms.sourcegitcommit: 13decf878b33fc0c5d665a88067170c2861b261b
+ms.openlocfilehash: 8c798640ea80900c633b5b7d0817cc278a772a51
+ms.sourcegitcommit: b4e0cc76d94fe8cf6d238c4cc09512d17131a195
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685528"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81224532"
 ---
 # <a name="create-a-windows-forms-app-in-visual-studio-with-c"></a>在 Visual Studio 中使用 C# 创建 Windows 窗体应用
 
@@ -47,11 +47,11 @@ ms.locfileid: "71685528"
 
 1. 打开 Visual Studio 2017。
 
-1. 从顶部菜单栏中选择“文件”  >“新建”  >“项目”  。
+1. 从顶部菜单栏中选择“文件”>“新建”>“项目”    。
 
 1. 在“新建项目”  对话框左侧的窗格中，展开“Visual C#”  ，然后选择“Windows 桌面”  。 在中间窗格中，选择“Windows 窗体应用(.NET Framework)”  。 随后将文件命名为 `HelloWorld`。
 
-     如果没有看到“Windows 窗体应用(.NET Framework)”项目模板，则取消“新建项目”对话框，然后在顶部菜单栏中依次选择“工具” > “获取工具和功能”     。 Visual Studio 安装程序启动。 选择“.NET 桌面开发”工作负载，然后选择“修改”   。
+     如果没有看到“Windows 窗体应用(.NET Framework)”  项目模板，则取消“新建项目”  对话框，然后在顶部菜单栏中依次选择“工具”   > “获取工具和功能”  。 Visual Studio 安装程序启动。 选择“.NET 桌面开发”工作负载，然后选择“修改”   。
 
      ![Visual Studio 安装程序中的 .NET Core 开发工作负载](../ide/media/install-dot-net-desktop-env.png)
 
@@ -129,7 +129,7 @@ ms.locfileid: "71685528"
 
 1. 从“工具箱”窗口选择“标签”控件，然后将其拖到窗体上，并放到“单击此处”按钮下方    。
 
-1. 在“属性”  窗口的“设计”  部分或 (DataBindings)  部分，将名称从“Label1”  更改为 `lblHelloWorld`，然后按 Enter  。
+1. 在“属性”  窗口的“设计”  部分或“(DataBindings)”  部分，将“Label1”  的名称更改为 `lblHelloWorld`，然后按 Enter  。
 
 ### <a name="add-code-to-the-form"></a>向窗体添加代码
 

@@ -13,10 +13,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 8d845d84d421ca44f5b936df0a7138fefa848d8d
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74772151"
 ---
 # <a name="profiler-sampling-method-data-views"></a>探查器采样方法数据视图
@@ -54,7 +54,7 @@ ms.locfileid: "74772151"
 
  列出收集样本时执行的源代码行。
 
-## <a name="reference"></a>参考
+## <a name="reference"></a>引用
 - [“进程”视图](../profiling/process-view.md)
 
  列出进程和线程的开始和结束时间。
@@ -76,5 +76,5 @@ ms.locfileid: "74772151"
 
  有关包含 .NET 内存数据的探查器数据文件的视图和报告的参考信息。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [了解采样数据值](../profiling/understanding-sampling-data-values.md)

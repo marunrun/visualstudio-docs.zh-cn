@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: 3eb813dc5d4389b002851a904d61219b0d5c316e
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75593637"
 ---
 # <a name="how-to-add-an-application-configuration-file-to-a-c-project"></a>如何：向 C# 项目添加应用程序配置文件
@@ -39,7 +39,7 @@ ms.locfileid: "75593637"
 
      项目中将添加名为 app.config 的文件  。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [管理应用程序设置 (.NET)](../ide/managing-application-settings-dotnet.md)
 - [配置文件架构 (.NET Framework)](/dotnet/framework/configure-apps/file-schema/index)

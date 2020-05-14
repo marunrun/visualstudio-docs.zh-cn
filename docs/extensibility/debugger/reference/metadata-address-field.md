@@ -1,5 +1,5 @@
 ---
-title: METADATA_ADDRESS_FIELD | Microsoft Docs
+title: METADATA_ADDRESS_FIELD |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - METADATA_ADDRESS_FIELD structure
 ms.assetid: 15ab45fe-6b3b-4e09-880b-31b34f523607
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: dd8e536c1916f22fba81ff77379c218b1f2516ad
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: fe9901ac9dab4a1ec4b5e8467f3063845dfb74f5
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66334645"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80714532"
 ---
-# <a name="metadataaddressfield"></a>METADATA_ADDRESS_FIELD
+# <a name="metadata_address_field"></a>METADATA_ADDRESS_FIELD
 
 此结构表示类或结构的字段的地址。
 
@@ -45,19 +45,19 @@ public struct METADATA_ADDRESS_FIELD {
 `tokField`\
 字段令牌的 ID。
 
-[C++]`_mdToken`是`typedef`适用于 32 位`int`。
+[C++]`_mdToken`是`typedef`32 位`int`的 。
 
 ## <a name="remarks"></a>备注
 
-此结构是中的联合的一部分[DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md)结构时`dwKind`字段`DEBUG_ADDRESS_UNION`结构设置为`ADDRESS_KIND_FIELD`(从值[ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md)枚举）。
+当`DEBUG_ADDRESS_UNION``ADDRESS_KIND_FIELD`结构字段设置为[（ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md)枚举中[DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md)的值）时，`dwKind`此结构是DEBUG_ADDRESS_UNION结构中的联合的一部分。
 
 ## <a name="requirements"></a>要求
 
-标头： sh.h
+标题： sh.h
 
-命名空间:Microsoft.VisualStudio.Debugger.Interop
+命名空间：微软.VisualStudio.调试器.互通
 
-程序集：Microsoft.VisualStudio.Debugger.Interop.dll
+程序集：微软.VisualStudio.调试器.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 

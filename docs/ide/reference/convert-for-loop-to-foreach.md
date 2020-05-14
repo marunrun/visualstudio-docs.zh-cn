@@ -1,20 +1,21 @@
 ---
 title: 重构代码以将 for 循环转换为 foreach 语句
-ms.date: 05/10/2018
+ms.date: 03/10/2020
 ms.topic: reference
-author: TerryGLee
-ms.author: tglee
+author: mikadumont
+ms.author: midumont
 manager: jillfra
 dev_langs:
 - CSharp
+- VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3539bae5bb2174fa4728fb8b277cce4ce9c48eb9
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: af52761f5cb199c7f842d01589c35501898b09aa
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75570240"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79094608"
 ---
 # <a name="refactoring-to-convert-between-a-for-loop-and-a-foreach-statement"></a>重构，以便在 for 循环和 foreach 语句之间进行转换
 
@@ -27,6 +28,8 @@ ms.locfileid: "75570240"
 此重构适用于：
 
 - C#
+
+- Visual Basic
 
 > [!NOTE]
 > 转换为 foreach  快速操作重构仅适用于包含全部三部分的 [for](/dotnet/csharp/language-reference/keywords/for) 循环：初始化表达式、条件和迭代器。
@@ -80,9 +83,9 @@ ms.locfileid: "75570240"
 1. 因为重构会引入一个新迭代计数变量，因此，“重命名”  框将出现在编辑器的右上角。 如果想要为变量选择不同名称，键入该名称，然后按“Enter”  或选择“重命名”  框中的“应用”  。 如果不想选择新名称，按“Esc”  或选择“应用”  以关闭“重命名”  框。
 
 > [!NOTE]
-> 对于 C#，由这些重构生成的代码对集合中的项目类型使用显式类型或 [var](/dotnet/csharp/language-reference/keywords/var)。 生成代码中的类型（显式或隐式）取决于范围内的代码样式设置。 这些特定的代码样式设置在“工具”   > “选项”   > “文本编辑器”   > “C#”   > “代码样式”   > “常规”   > “var 首选项”\'  下以计算机级别进行配置，或在 [EditorConfig](../../ide/editorconfig-language-conventions.md#implicit-and-explicit-types) 文件下以解决方案级别进行配置。 如果在“选项”  中更改了代码样式设置，请重新打开代码文件以使更改生效。
+> 对于 C#，由这些重构生成的代码对集合中的项目类型使用显式类型或 [var](/dotnet/csharp/language-reference/keywords/var)。 生成代码中的类型（显式或隐式）取决于范围内的代码样式设置。 这些特定的代码样式设置在“工具”   > “选项”   > “文本编辑器”   > “C#”   > “代码样式”   > “常规”   > “var 首选项” **\'** 下以计算机级别进行配置，或在 [EditorConfig](../../ide/editorconfig-language-conventions.md#implicit-and-explicit-types) 文件下以解决方案级别进行配置。 如果在“选项”  中更改了代码样式设置，请重新打开代码文件以使更改生效。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [重构](../refactoring-in-visual-studio.md)
 - [预览更改](../../ide/preview-changes.md)

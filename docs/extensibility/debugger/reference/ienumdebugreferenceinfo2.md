@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugReferenceInfo2 | Microsoft Docs
+title: IEnumDebug参考信息2 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - IEnumDebugReferenceInfo2
 ms.assetid: 7ed01441-686f-4032-8268-a4c750f19f85
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b664b068ac7cd30a7475ab14bfe1b064c98142c2
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 6132235a7e4789c7d9efe5bae9d7fd531112dab4
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66324404"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80715270"
 ---
 # <a name="ienumdebugreferenceinfo2"></a>IEnumDebugReferenceInfo2
 此接口枚举[DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md)结构。
@@ -28,32 +28,32 @@ ms.locfileid: "66324404"
 IEnumDebugReferenceInfo2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>实施者的说明
- 调试引擎 (DE) 在内存中实现此接口作为对对象的引用的支持的一部分。 仅当支持引用，必须实现此接口。
+## <a name="notes-for-implementers"></a>实施者说明
+ 调试引擎 （DE） 实现此接口，作为其对内存中对象的引用的支持的一部分。 仅当支持引用时，才能实现此接口。
 
-## <a name="notes-for-callers"></a>调用方的说明
- Visual Studio 调用[EnumChildren](../../../extensibility/debugger/reference/idebugreference2-enumchildren.md)若要获取此接口。
+## <a name="notes-for-callers"></a>呼叫者备注
+ Visual Studio 调用[Enum 儿童](../../../extensibility/debugger/reference/idebugreference2-enumchildren.md)以获取此接口。
 
 ## <a name="methods-in-vtable-order"></a>Vtable 顺序中的方法
- 下表显示的方法`IEnumDebugReferenceInfo2`。
+ 下表显示了 的方法`IEnumDebugReferenceInfo2`。
 
 |方法|描述|
 |------------|-----------------|
-|[下一页](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2-next.md)|检索指定的数目的[DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md)枚举序列中的结构。|
-|[Skip](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2-skip.md)|跳过指定的数目的[DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md)枚举序列中的结构。|
-|[Reset](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2-reset.md)|将枚举序列重置到开头。|
-|[Clone](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2-clone.md)|创建一个包含当前枚举数形式的相同枚举状态的枚举器。|
-|[GetCount](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2-getcount.md)|获取数[DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md)枚举器中的结构。|
+|[下一步](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2-next.md)|检索枚举序列中指定数量的[DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md)结构。|
+|[跳](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2-skip.md)|跳过枚举序列中指定数量的[DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md)结构。|
+|[重置](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2-reset.md)|将枚举序列重置为开头。|
+|[克隆](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2-clone.md)|创建与当前枚举器相同的枚举状态的枚举器。|
+|[GetCount](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2-getcount.md)|获取枚举器中[DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md)结构的数量。|
 
 ## <a name="remarks"></a>备注
- 引用是实质上是一种类型和地址，而属性是名称、 类型和地址。 引用仍然存在，只要引用要存在于内存中的对象。 请参阅[IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)的更多详细信息。
+ 引用本质上是一个类型和地址，而属性是名称、类型和地址。 只要引用的对象存在于内存中，引用就保持不变。 有关详细信息[，请参阅 IDebug 参考 2。](../../../extensibility/debugger/reference/idebugreference2.md)
 
 ## <a name="requirements"></a>要求
- 标头： msdbg.h
+ 标题： msdbg.h
 
- 命名空间:Microsoft.VisualStudio.Debugger.Interop
+ 命名空间：微软.VisualStudio.调试器.互通
 
- 程序集：Microsoft.VisualStudio.Debugger.Interop.dll
+ 程序集：微软.VisualStudio.调试器.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [核心接口](../../../extensibility/debugger/reference/core-interfaces.md)

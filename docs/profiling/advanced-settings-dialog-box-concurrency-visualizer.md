@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: fa9d6658ae14c4b84aae9361f73e4701e758f975
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "72911224"
 ---
 # <a name="advanced-settings-dialog-box-concurrency-visualizer"></a>“高级设置”对话框（并发可视化工具）
@@ -83,6 +83,6 @@ ms.locfileid: "72911224"
 
   两个 ETL 文件用于存储原始跟踪数据，而两个并发可视化工具文件用于存储处理后的数据。  处理跟踪后，通常不使用原始 ETL 文件。  选择“在分析后删除事件跟踪日志(ETL)文件”复选框后，将减少磁盘上存储的跟踪数据量  。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [仅我的代码](../profiling/just-my-code-threads-view.md)
 - [并发可视化工具标记](../profiling/concurrency-visualizer-markers.md)

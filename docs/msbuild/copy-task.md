@@ -22,10 +22,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 28fd0033f5ef6f83ca29432f95d6b635fcd36116
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77634365"
 ---
 # <a name="copy-task"></a>Copy 任务
@@ -36,9 +36,9 @@ ms.locfileid: "77634365"
 
 下表描述了 `Copy` 任务的参数。
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
-|`CopiedFiles`|可选的 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 输出参数。<br /><br /> 包含已成功复制的项，包括尚未进行实际复制但由于其已为最新且 `SkipUnchangedFiles` 为 `true` 因此被跳过的项  。|
+|`CopiedFiles`|可选的 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 输出参数。<br /><br /> 包含已成功复制的项，包括尚未进行实际复制但由于其已为最新且 *为* 因此被跳过的项`SkipUnchangedFiles``true`。|
 |`DestinationFiles`|可选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 指定要对其复制源文件的文件的列表。 此列表应与 `SourceFiles` 参数中指定的列表具有一对一的映射关系。 也就是说，`SourceFiles` 中指定的第一个文件将复制到 `DestinationFiles` 中指定的第一个位置，依次类推。|
 |`DestinationFolder`|可选 <xref:Microsoft.Build.Framework.ITaskItem> 参数。<br /><br /> 指定要将文件复制到其中的目录。 这必须是目录，而不能是文件。 如果该目录不存在，将自动创建它。|
 |`OverwriteReadOnlyFiles`|可选 `Boolean` 参数。<br /><br /> 覆盖文件，即使它们标记为只读文件|
@@ -116,7 +116,7 @@ ms.locfileid: "77634365"
 </Project>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [任务](../msbuild/msbuild-tasks.md)
 - [任务参考](../msbuild/msbuild-task-reference.md)

@@ -13,10 +13,10 @@ ms.workload:
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.openlocfilehash: 368ca6619a2fcff48cc3bcc7eb70913247b631b2
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "76114744"
 ---
 # <a name="repair-visual-studio"></a>修复 Visual Studio
@@ -77,7 +77,7 @@ Visual Studio 安装有时会损毁或损坏。 通过修复可以解决此问�
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 * [安装 Visual Studio](install-visual-studio.md)
 * [更新 Visual Studio](update-visual-studio.md)

@@ -160,7 +160,7 @@
           href: legacy-language-service-parser-and-scanner.md
         - name: 演练：创建旧版语言服务
           href: walkthrough-creating-a-legacy-language-service.md
-        - name: 演练：获取包含已安装的代码片段的列表（旧版实现）
+        - name: 演练：获取已安装代码片段（旧版实现）的列表
           href: walkthrough-getting-a-list-of-installed-code-snippets-legacy-implementation.md
         - name: 旧版语言服务功能 1
           items:
@@ -224,7 +224,7 @@
               href: creating-project-types.md
             - name: 项目类型设计决策
               href: project-type-design-decisions.md
-            - name: 清单：创建新的项目类型
+            - name: 清单：新建项目类型
               href: checklist-creating-new-project-types.md
             - name: 使用项目工厂创建项目实例
               href: creating-project-instances-by-using-project-factories.md
@@ -486,11 +486,11 @@
           items:
             - name: 源代码管理插件的测试指南
               href: test-guide-for-source-control-plug-ins.md
-            - name: 测试区域 1：添加到源代码管理/从源代码管理打开
+            - name: 测试区域 1：添加到源代码管理或从源代码管理打开
               href: test-area-1-add-to-open-from-source-control.md
             - name: 测试区域 2：从源代码管理获取
               href: test-area-2-get-from-source-control.md
-            - name: 测试区域 3：签出/撤消签出
+            - name: 测试区域 3：签出/撤销签出
               href: test-area-3-check-out-undo-checkout.md
             - name: 测试区域 4：签入
               href: test-area-4-check-in.md

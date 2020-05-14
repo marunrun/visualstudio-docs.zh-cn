@@ -9,10 +9,10 @@ ms.technology: vs-unity-tools
 ms.workload:
 - unity
 ms.openlocfilehash: 5fb521ff1769f1d742dc1ce67080e98aecb417ad
-ms.sourcegitcommit: 9a66f1c31cc9eba0b5231af72da1d18761a9c56a
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75944236"
 ---
 # <a name="using-net-4x-in-unity"></a>在 Unity 中使用 .NET 4.x
@@ -21,7 +21,7 @@ ms.locfileid: "75944236"
 
 随着 Unity 2017.1 的发布，Unity 引入了升级到 .NET 4.6、C# 6 兼容版本的实验版脚本运行时。 在 Unity 2018.1 中，与 .NET 4.x 等效的运行时不再视为实验版，较旧的等效于 .NET 3.5 的运行时现被视为旧版本。 随着 Unity 2018.3 的发布，Unity 计划将已升级的脚本运行时作为默认选择，并进一步更新为 C# 7。 有关此路线图的详细信息和最新更新，请阅读 Unity 的[博客文章](https://blogs.unity3d.com/2018/07/11/scripting-runtime-improvements-in-unity-2018-2/)或访问其[实验性脚本预览论坛](https://forum.unity.com/forums/experimental-scripting-previews.107/)。 与此同时，请查看以下部分，了解有关 .NET 4.x 脚本运行时现在可用的新功能的详细信息。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 * [Unity 2017.1 或更高版本](https://unity3d.com/)（建议使用 2018.2）
 * [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download)
@@ -159,7 +159,7 @@ Debug.Log($"Player health: {Health}");
 
 ### <a name="expression-bodied-members"></a>Expression-Bodied 成员
 
-使用 .NET 4.x 运行时中提供的新的 C# 语法，[Lambda 表达式](/dotnet/csharp/programming-guide/statements-expressions-operators/lambda-expressions)可替换函数主体，使它们更为简洁：
+使用 .NET 4.x 运行时中可用的较新 C# 语法，[Lambda 表达式](/dotnet/csharp/programming-guide/statements-expressions-operators/lambda-expressions)可替换函数主体，使它们更为简洁：
 
 ```csharp
 // .NET 3.5

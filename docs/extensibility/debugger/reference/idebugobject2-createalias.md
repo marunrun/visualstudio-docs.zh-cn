@@ -1,5 +1,5 @@
 ---
-title: IDebugObject2::CreateAlias | Microsoft Docs
+title: IDebugObject2：：创建别名 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugObject2::CreateAlias method
 ms.assetid: 54a05920-5d13-4f67-962b-d1a7f013dff9
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: efab749b7850cc3c7e3a29a62240ce9502f99843
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 03564e8b81eb4e11a2cd4f25e1047d326d62b21b
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66317402"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80726292"
 ---
 # <a name="idebugobject2createalias"></a>IDebugObject2::CreateAlias
-创建唯一的 ID 或此对象的别名或返回现有别名。
+为此对象创建唯一的 ID 或别名或返回现有别名。
 
 ## <a name="syntax"></a>语法
 
@@ -41,13 +41,13 @@ int CreateAlias(
 
 ## <a name="parameters"></a>参数
 `ppAlias`\
-[out]新的 （或现有的） 的别名。
+[出]新的（或现有）别名。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回 S_OK;否则，返回错误代码。
+ 如果成功，返回S_OK;否则，返回错误代码。
 
 ## <a name="remarks"></a>备注
- 别名是表示特定对象，而该对象是在内存中的标签。
+ 别名是在对象在内存中时表示特定对象的标签。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugObject2](../../../extensibility/debugger/reference/idebugobject2.md)

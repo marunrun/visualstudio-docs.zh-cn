@@ -18,10 +18,10 @@ ms.author: corob
 ms.workload:
 - multiple
 ms.openlocfilehash: bfa60ff0f7e4060f5725fe54bd5950d858b86a22
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77272403"
 ---
 # <a name="getoutofdateitems-task"></a>GetOutOfDateItems 任务
@@ -32,7 +32,7 @@ ms.locfileid: "77272403"
 
 下表介绍了 GetOutOfDateItems 任务的参数  。
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
 |**CheckForInterdependencies**|可选的 bool  参数。|
 |**CommandMetadataName**|可选的 string  参数。|
@@ -44,6 +44,6 @@ ms.locfileid: "77272403"
 |**TLogDirectory**|必需的 **String** 参数。|
 |**TLogNamePrefix**|必需的 **String** 参数。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [任务参考](../msbuild/msbuild-task-reference.md)

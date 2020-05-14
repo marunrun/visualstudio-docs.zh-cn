@@ -2,20 +2,21 @@
 title: 在本地训练 tensorflow 模型
 description: 在 AI Tools for Visual Studio 中以本地方式运行 tensorflow 模型
 keywords: ai, visual studio, tensorflow, 本地
-author: lisawong19
-ms.author: liwong
-manager: routlaw
+author: jillre
+ms.author: jillfra
+manager: jillfra
+monikerRange: vs-2017
 ms.date: 11/13/2017
 ms.topic: quickstart
 ms.devlang: python
 ms.workload:
 - multiple
-ms.openlocfilehash: 43ce126baeb96efcaab3c40bac912274ee1cd8c7
-ms.sourcegitcommit: 57bc1c3887838d707c13feff72a677b3bad3be4b
+ms.openlocfilehash: eca02b74154eab5468adeabdb84efdf2839fc92e
+ms.sourcegitcommit: 9c1cecaff4d9955276eee7865b78d47679dd1e2a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72777435"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80638747"
 ---
 # <a name="train-a-tensorflow-model-locally"></a>在本地训练 TensorFlow 模型
 
@@ -43,17 +44,17 @@ C:\>pip.exe install tensorflow
 
 ## <a name="open-solution-and-train-model"></a>打开解决方案并训练模型
 
-- 启动 Visual Studio，选择“文件”>“打开”>“项目/解决方案”  。
+- 启动 Visual Studio，选择“文件”>“打开”>“项目/解决方案”。
 
-- 在下载的示例存储库中选择 Tensorflow Examples 文件夹，然后打开 TensorflowExamples.sln 文件   。
+- 在下载的示例存储库中选择 Tensorflow Examples 文件夹，然后打开 TensorflowExamples.sln 文件。
 
    ![打开项目](media/tensorflow-local/open-project.png)
 
    ![打开解决方案](media/tensorflow-local/open-solution.png)
 
-- 在“解决方案资源管理器”中找到 MNIST 项目，右键单击并选择“设为启动项目”   。
+- 在“解决方案资源管理器”中找到 MNIST 项目，右键单击并选择“设为启动项目”。
 
-- 单击“开始”  。
+- 单击“开始” 。
 
 - 输出会在控制台中进行打印。
 

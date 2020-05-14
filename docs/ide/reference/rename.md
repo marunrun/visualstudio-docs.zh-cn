@@ -13,10 +13,10 @@ dev_langs:
 ms.workload:
 - dotnet
 ms.openlocfilehash: 4dbccd4732f56d671fd74f59916885ea338136f8
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75565456"
 ---
 # <a name="rename-a-code-symbol-refactoring"></a>“重命名代码符号”重构
@@ -27,11 +27,11 @@ ms.locfileid: "75565456"
 
 - Visual Basic
 
-**功能：** 重命名代码符号的标识符，例如字段、本地变量、方法、命名空间、属性和类型。
+功能：  重命名代码符号的标识符，例如字段、本地变量、方法、命名空间、属性和类型。
 
-**使用时机：** 想要安全地进行重命名（无需查找所有实例）并复制/粘贴新名称。
+时机：  想要安全地进行重命名（无需查找所有实例）并复制/粘贴新名称。
 
-操作原因：  复制和粘贴整个项目的新名称可能会导致错误。 此重构工具将准确地执行重命名操作。
+原因：  复制和粘贴整个项目的新名称可能会导致错误。 此重构工具将准确地执行重命名操作。
 
 ## <a name="how-to"></a>操作说明
 
@@ -78,9 +78,9 @@ ms.locfileid: "75565456"
 
    ![重命名冲突](media/rename-conflict-cs.png)
 
-- 重命名符号的另一种方法是在编辑器中更改其名称。 然后，当光标位于符号名称处，按 Ctrl  +。  或者只需展开显示的灯泡图标菜单，选择“重命名\<旧名称>到\<新名称>”  。
+- 重命名符号的另一种方法是在编辑器中更改其名称。 然后，当光标位于符号名称处，按 Ctrl  +。  或者只需展开显示的灯泡图标菜单，选择“重命名**旧名称>到\<新名称>”\<** 。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [重构](../refactoring-in-visual-studio.md)
 - [预览更改](../../ide/preview-changes.md)

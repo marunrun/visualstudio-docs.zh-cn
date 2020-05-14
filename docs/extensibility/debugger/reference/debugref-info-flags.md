@@ -1,5 +1,5 @@
 ---
-title: DEBUGREF_INFO_FLAGS | Microsoft Docs
+title: DEBUGREF_INFO_FLAGS |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - DEBUGREF_INFO_FLAGS enumeration
 ms.assetid: 1b043327-302a-4f6d-b51d-f94f9d7c7f9d
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 1adab87ed09ca2ff16d837da084d8cc0b76956fe
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: cb10ae5d3b4ce9f8aa777f643d412e075bd5293f
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66318358"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80737386"
 ---
-# <a name="debugrefinfoflags"></a>DEBUGREF_INFO_FLAGS
-指定要检索有关调试引用对象的信息。
+# <a name="debugref_info_flags"></a>DEBUGREF_INFO_FLAGS
+指定要检索的有关调试引用对象的哪些信息。
 
 ## <a name="syntax"></a>语法
 
@@ -58,45 +58,45 @@ public enum enum_DEBUGREF_INFO_FLAGS {
 
 ## <a name="fields"></a>字段
 `DEBUGREF_INFO_NAME`\
-初始化/使用`bstrName`结构中的字段。
+初始化/使用结构`bstrName`中的字段。
 
 `DEBUGREF_INFO_TYPE`\
-初始化/使用`bstrType`结构中的字段。
+初始化/使用结构`bstrType`中的字段。
 
 `DEBUGREF_INFO_VALUE`\
-初始化/使用`bstrValue`结构中的字段。
+初始化/使用结构`bstrValue`中的字段。
 
 `DEBUGREF_INFO_ATTRIB`\
-初始化/使用`dwAttrib`结构中的字段。
+初始化/使用结构`dwAttrib`中的字段。
 
 `DEBUGREF_INFO_REFTYPE`\
-初始化/使用`dwRefType`结构中的字段。
+初始化/使用结构`dwRefType`中的字段。
 
 `DEBUGREF_INFO_REF`\
-初始化/使用`pReference`结构中的字段。
+初始化/使用结构`pReference`中的字段。
 
 `DEBUGREF_INFO_VALUE_AUTOEXPAND`\
-值字段应包含自动扩展值中，如果可用，此类型的对象。
+值字段应包含此类型对象的自动展开值（如果可用）。
 
 `DEBUGREF_INFO_NONE`\
 指示未设置任何标志。
 
 `DEBUGREF_INFO_ALL`\
-表示的标志的掩码。
+指示标志的蒙版。
 
 ## <a name="remarks"></a>备注
-这些标志传递给[EnumChildren](../../../extensibility/debugger/reference/idebugreference2-enumchildren.md)并[GetReferenceInfo](../../../extensibility/debugger/reference/idebugreference2-getreferenceinfo.md)方法，以指示的哪些字段[DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md)结构是进行初始化。
+这些标志将传递给[Enum 子项](../../../extensibility/debugger/reference/idebugreference2-enumchildren.md)和[GetReferenceInfo](../../../extensibility/debugger/reference/idebugreference2-getreferenceinfo.md)方法，以指示要初始化[DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md)结构的字段。
 
-用于`dwFields`的成员`DEBUG_REFERENCE_INFO`结构，用于指示哪些字段是使用，有效时返回该结构。
+用于`dwFields``DEBUG_REFERENCE_INFO`结构的成员，用于指示在返回结构时使用哪些字段并有效。
 
-可能的按位组合这些值`OR`。
+这些值可以稍微结合`OR`。
 
 ## <a name="requirements"></a>要求
-标头： msdbg.h
+标题： msdbg.h
 
-命名空间:Microsoft.VisualStudio.Debugger.Interop
+命名空间：微软.VisualStudio.调试器.互通
 
-程序集：Microsoft.VisualStudio.Debugger.Interop.dll
+程序集：微软.VisualStudio.调试器.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [枚举](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

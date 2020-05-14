@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: d30d8e8ddcdc8c1fa4fe1935da1f1dedd1b18f4b
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75593559"
 ---
 # <a name="services-page-project-designer"></a>“项目设计器”->“服务”页
@@ -51,7 +51,7 @@ ms.locfileid: "75593559"
 
  **使用 Forms 身份验证**
 
-指示验证提供程序将使用 Forms 身份验证。 这意味着应用程序必须提供用户界面以供登录。 有关详细信息，请参阅[如何：使用客户端应用程序服务实现用户登录](/dotnet/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services)。
+指示验证提供程序将使用 Forms 身份验证。 这意味着应用程序必须提供用户界面以供登录。 有关详细信息，请参阅[如何：使用客户端应用程序服务来实现用户登录](/dotnet/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services)。
 
  **身份验证服务位置**
 
@@ -59,7 +59,7 @@ ms.locfileid: "75593559"
 
  **可选：凭据提供程序**
 
-仅用于 Forms 身份验证。 当应用程序调用 `static`<xref:System.Web.Security.Membership.ValidateUser%2A?displayProperty=fullName> 方法以及为参数传递空字符串或 `null` 时，指示身份验证服务将用于显示登录对话框的 <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider> 实现。 如果将此框留空，则必须向 <xref:System.Web.Security.Membership.ValidateUser%2A?displayProperty=fullName> 方法传递有效的用户名和密码。 必须将凭据提供程序指定为程序集限定类型名称。 有关详细信息，请参阅 <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=fullName> 和[程序集名称](/dotnet/framework/app-domains/assembly-names)。 程序集限定类型名称最简单的形式类似于下面的示例：`MyNamespace.MyLoginClass, MyAssembly`
+仅用于 Forms 身份验证。 当应用程序调用 <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider>`static` 方法以及为参数传递空字符串或 <xref:System.Web.Security.Membership.ValidateUser%2A?displayProperty=fullName> 时，指示身份验证服务将用于显示登录对话框的 `null` 实现。 如果将此框留空，则必须向 <xref:System.Web.Security.Membership.ValidateUser%2A?displayProperty=fullName> 方法传递有效的用户名和密码。 必须将凭据提供程序指定为程序集限定类型名称。 有关详细信息，请参阅 <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=fullName> 和[程序集名称](/dotnet/framework/app-domains/assembly-names)。 程序集限定类型名称最简单的形式类似于下面的示例：`MyNamespace.MyLoginClass, MyAssembly`
 
  **角色服务位置**
 
@@ -73,7 +73,7 @@ ms.locfileid: "75593559"
 
 打开[“高级服务设置”对话框](../../ide/reference/advanced-settings-for-services-dialog-box.md)，可以使用该对话框重写默认行为。 例如，可以使用此对话框指定一个数据库进行脱机存储，而不是使用本地文件系统。 有关详细信息，请参阅[“高级服务设置”对话框](../../ide/reference/advanced-settings-for-services-dialog-box.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [客户端应用程序服务](/dotnet/framework/common-client-technologies/client-application-services)
 - [“高级服务设置”对话框](../../ide/reference/advanced-settings-for-services-dialog-box.md)

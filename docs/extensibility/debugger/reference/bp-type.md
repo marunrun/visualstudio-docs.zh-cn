@@ -1,5 +1,5 @@
 ---
-title: BP_TYPE | Microsoft Docs
+title: BP_TYPE |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BP_TYPE enumeration
 ms.assetid: ef07191e-7966-43ab-96fb-1a0b1db3115d
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 69774df555c4258ef36a65a3a18e6ce3fccbe555
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 02550141fb1857214d5bfd80d5dd86969bec9fba
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66350567"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80737786"
 ---
-# <a name="bptype"></a>BP_TYPE
-指定断点在代码位置、 是一个数据位置，或另一种类型的断点。
+# <a name="bp_type"></a>BP_TYPE
+指定断点是位于代码位置、数据位置还是其他类型的断点。
 
 ## <a name="syntax"></a>语法
 
@@ -48,26 +48,26 @@ public enum enum_BP_TYPE {
 
 ## <a name="fields"></a>字段
 `BPT_NONE`\
-不指定任何断点类型。
+指定无断点类型。
 
 `BPT_CODE`\
-指定一个代码断点。
+指定代码断点。
 
 `BPT_DATA`\
 指定数据断点。
 
 `BPT_SPECIAL`\
-指定一个代码和数据类型都不是一个断点。 此类型已弃用，不应使用。
+指定既不是代码也不是数据类型的断点。 此类型已弃用，不应使用。
 
 ## <a name="remarks"></a>备注
-作为参数传递给[GetBreakpointType](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getbreakpointtype.md)并[GetBreakpointType](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getbreakpointtype.md)方法。
+作为参数传递给[获取断点类型](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getbreakpointtype.md)和[获取断点类型](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getbreakpointtype.md)方法。
 
 ## <a name="requirements"></a>要求
-标头： msdbg.h
+标题： msdbg.h
 
-命名空间:Microsoft.VisualStudio.Debugger.Interop
+命名空间：微软.VisualStudio.调试器.互通
 
-程序集：Microsoft.VisualStudio.Debugger.Interop.dll
+程序集：微软.VisualStudio.调试器.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [枚举](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

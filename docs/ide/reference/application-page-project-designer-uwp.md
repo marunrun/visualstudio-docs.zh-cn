@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - uwp
 ms.openlocfilehash: 3c8f72d4e1d1caeacd5dfefef5310dc2cef83b92
-ms.sourcegitcommit: 83d9f2b56955f7a5267a1438bb28ef804775f88b
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77173078"
 ---
 # <a name="application-property-page-uwp-projects"></a>应用程序属性页（UWP 项目）
@@ -46,7 +46,7 @@ ms.locfileid: "77173078"
 
 有关 Visual Studio 中的平台目标信息，请参阅[平台目标](/visualstudio/productinfo/vs2017-compatibility-vs#platform-targeting)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [创建你的第一个 UWP 应用](/windows/uwp/get-started/your-first-app)
 - [选择 UWP 版本](/windows/uwp/updates-and-versions/choose-a-uwp-version)

@@ -1,5 +1,5 @@
 ---
-title: IDebugSymbolProvider::GetLanguage | Microsoft Docs
+title: IDebug符号提供商：获取语言 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugSymbolProvider::GetLanguage method
 ms.assetid: e4142183-3d8b-418f-907f-4ee4c753d8ce
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: dfa11a1df6460c08431d7b23fabe5d94674baad2
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 876466d3617131815f6aa48b8b7dfb68b645ecb2
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66347605"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80719241"
 ---
 # <a name="idebugsymbolprovidergetlanguage"></a>IDebugSymbolProvider::GetLanguage
-此方法获取用于编译调试地址处的代码的语言。
+此方法获取用于在调试地址编译代码的语言。
 
 ## <a name="syntax"></a>语法
 
@@ -45,19 +45,19 @@ int GetLanguage(
 
 ## <a name="parameters"></a>参数
 `pAddress`\
-[in]一个地址对象所表示[IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md)接口。
+[在]由[IDebug 地址](../../../extensibility/debugger/reference/idebugaddress.md)接口表示的地址对象。
 
 `pguidLanguage`\
-[out]返回`GUID`指定的语言。
+[出]返回指定`GUID`语言的 。
 
 `pguidLanguageVendor`\
-[out]返回`GUID`，它指定的语言供应商。
+[出]返回指定`GUID`语言供应商的 。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，返回`S_OK`;否则，返回错误代码。
 
 ## <a name="remarks"></a>备注
- 调试引擎将调用此方法来获得其需要选择正确的表达式计算器的信息。
+ 调试引擎调用此方法以获取选择正确表达式赋值器所需的信息。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)

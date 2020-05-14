@@ -13,10 +13,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: e7b23a7cbefeace19a3deaa5c1bfc05580081d39
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74778461"
 ---
 # <a name="performance-session-overview"></a>性能会话概述
@@ -74,6 +74,6 @@ ms.locfileid: "74778461"
 ## <a name="generate-a-report-of-the-results"></a>生成结果的报告
  可以将任何性能报告视图的行粘贴到电子邮件和电子表格中，并且可以生成包含一个或多个视图的数据的报告。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [概述](../profiling/overviews-performance-tools.md)
-- [演练：确定性能问题](beginners-guide-to-cpu-sampling.md)
+- [演练：发现性能问题](beginners-guide-to-cpu-sampling.md)

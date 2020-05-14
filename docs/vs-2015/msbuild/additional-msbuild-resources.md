@@ -599,12 +599,12 @@ caps.latest.revision: 20
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 6460d26ea7b7240cf54dfe3379ec75634bc5465d
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
-ms.translationtype: MTE95
+ms.openlocfilehash: aa25e4e15406c9091e90dfd8be5c2efd0a19e41b
+ms.sourcegitcommit: 7b60e81414a82c6d34f6de1a1f56115c9cd26943
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75847064"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81445046"
 ---
 # <a name="additional-msbuild-resources"></a>其他 MSBuild 资源
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -612,7 +612,7 @@ ms.locfileid: "75847064"
 尝试解决问题时，如果无法在文档中找到所需信息，可以参考其他资源，如知识库文章、开发人员社区或产品支持。  
   
 ## <a name="knowledge-base-articles"></a>知识库文章  
- 可以在联机知识库 (KB) 中搜索有关产品问题的文章。 并非所有问题都有相应的 KB 文章，但很多客户所遇到的错误通常会记录下来。 可以在[知识库（MSBuild 搜索结果）](https://search.microsoft.com/supportresults.aspx?q=knowledge+base+MSBuild&x=0&y=0)网站上访问 KB 文章。  
+ 可以在联机知识库 (KB) 中搜索有关产品问题的文章。 并非所有问题都有相应的 KB 文章，但很多客户所遇到的错误通常会记录下来。 您可以在[知识库](https://support.microsoft.com/help/242450/how-to-query-the-microsoft-knowledge-base-by-using-keywords-and-query)网站上访问知识库文章。  
   
 ## <a name="community-forums"></a>社区论坛  
  可通过论坛与其他开发人员以及 Microsoft 员工进行互动。 如果遇到无法解决的问题，可在论坛中发布有关该问题的帖子。 还可搜索讨论组，查看其他人是否已发布有关该问题的帖子。 可通过 [MSDN 论坛](https://social.msdn.microsoft.com/forums/en-US/msbuild/threads/)网站访问 Visual Studio MSBuild 论坛。  

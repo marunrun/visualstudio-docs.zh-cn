@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 93703bdd4bf2f0046176ceb1f6febd5564f61705
-ms.sourcegitcommit: 53bc4c11b82882ab658e34c65ae374060f823531
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "71128309"
 ---
 # <a name="perftips"></a>性能提示

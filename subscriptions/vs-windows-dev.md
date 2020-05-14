@@ -1,17 +1,18 @@
 ---
 title: Visual Studio 订阅中的 Windows 开发者帐户权益 | Microsoft 文档
 author: evanwindom
-ms.author: lank
+ms.author: v-evwin
 manager: lank
-ms.date: 11/18/2019
+ms.assetid: 588480a3-8806-4ea5-9915-c25974770069
+ms.date: 04/20/2020
 ms.topic: conceptual
 description: 了解有关 Visual Studio 订阅中包含的 Windows 开发者帐户。
-ms.openlocfilehash: 7ba77979c47d61cd230351a352d85baa7c1eae9a
-ms.sourcegitcommit: b5cb0eb09369677514ee1f44d5d7050d34c7fbc1
+ms.openlocfilehash: c3764330b5ace58f976f726770fa7a3e9ed2a4ed
+ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74491280"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81649714"
 ---
 # <a name="windows-developer-account-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 Windows 开发者帐户
 通过所选 Visual Studio 订阅包含的 Windows 开发者帐户，可以将免费和付费的 Windows 应用提交到 Windows 应用商店。
@@ -51,10 +52,10 @@ ms.locfileid: "74491280"
 | Visual Studio Enterprise、Visual Studio Professional（月度云） | Azure                                       | 不可用                                                           |NA|
 ||
 
-<sup>1</sup>  *包括：限制转售 (NFR)、FTE、Visual Studio 行业合作伙伴 (VSIP)、BizSpark、MCT 软件和服务开发人员。不包括：Microsoft 合作伙伴网络 (MPN)、Imagine、最有价值专家 (MVP)、区域总监 (RD)、MCT 软件和服务。*
+<sup>1</sup>  包括：限制转售 (NFR)、FTE、Visual Studio 行业合作伙伴 (VSIP)、BizSpark、MCT 软件和服务开发人员。不包括：Microsoft 合作伙伴网络 (MPN)、Imagine、最有价值专家 (MVP)、区域总监 (RD)、MCT 软件和服务。
 
 > [!NOTE]
-> Microsoft 不再在云订阅中提供 Visual Studio Professional 年度订阅和 Visual Studio Enterprise 年度订阅。 现有客户体验以及续订、增加、减少或取消订阅的能力不会发生变化。 我们鼓励新客户访问 [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) 以浏览购买 Visual Studio 的不同选项。
+> Microsoft 不再在云订阅中提供 Visual Studio Professional 年度订阅和 Visual Studio Enterprise 年度订阅。 现有客户体验以及续订、增加、减少或取消订阅的能力不会发生变化。 建议新客户访问 [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/)，查看各 Visual Studio 购买选项。
 
 无法确定正在使用哪些订阅？  连接到 [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs)，查看分配给电子邮件地址的所有订阅。 如果没有看到所有订阅，则可能是有一个或多个订阅分配给了不同的电子邮件地址。  你需要使用其他电子邮件地址登录来查看那些订阅。
 
@@ -63,6 +64,12 @@ ms.locfileid: "74491280"
 - [Windows 开发](/windows/)
 - 有关 Visual Studio 订阅的销售、订阅、帐户和账单的帮助，请与 Visual Studio [订阅支持](https://visualstudio.microsoft.com/subscriptions/support/)联系。
 - 对有关 Visual Studio IDE、Azure DevOps Services 或其他 Visual Studio 产品或服务有疑问？  请访问 [Visual Studio 支持](https://visualstudio.microsoft.com/support/)。
+
+## <a name="see-also"></a>请参阅
+- [Visual Studio 文档](https://docs.microsoft.com/visualstudio/)
+- [Azure DevOps 文档](https://docs.microsoft.com/azure/devops/)
+- [Azure 文档](https://docs.microsoft.com/azure/)
+- [Microsoft 365 文档](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>后续步骤
 请务必激活这些重要权益以充分利用 Visual Studio 订阅：

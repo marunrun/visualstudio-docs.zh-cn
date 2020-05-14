@@ -18,10 +18,10 @@ ms.author: corob
 ms.workload:
 - multiple
 ms.openlocfilehash: c1526fbd3c2c0822781f0e011999ddcb9c679170
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77275460"
 ---
 # <a name="clangcompile-task"></a>ClangCompile 任务
@@ -32,7 +32,7 @@ ms.locfileid: "77275460"
 
 下表介绍了  ClangCompile 任务的参数。
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
 |**AdditionalIncludeDirectories**|可选的 string[]  参数。<br/><br/>指定一个或多个要添加到包含路径中的目录；存在多个目录时，请用分号分隔。<br/><br/>请使用 `-I[path]`。|
 |**AdditionalOptions**|可选的 string  参数。|
@@ -82,6 +82,6 @@ ms.locfileid: "77275460"
 |**Verbose**|可选的 bool  参数。<br/><br/>显示要运行的命令，并使用详细输出。|
 |**WarningLevel**|可选的 string  参数。<br/><br/>选择编译器对代码错误的严格程度。 其他标记应直接添加到附加选项  （使用 `/w`、`/Weverything`）。<br/><br/>**TurnOffAllWarnings**，禁用所有编译器警告（使用 `w`）。<br/>**EnableAllWarnings**，启用所有警告，包括默认情况下禁用的那些警告（使用 `Wall`）。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [任务参考](../msbuild/msbuild-task-reference.md)

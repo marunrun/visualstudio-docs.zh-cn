@@ -10,12 +10,12 @@ ms.assetid: bbf075a5-96d5-48ed-a03c-330f0fc04748
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 1c2ade11d4bffc3c9fdf812cb38d21cd742c9845
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 780485a4d42cad574cddaaa5a9ae51a65a1a9b7d
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75590847"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79093635"
 ---
 # <a name="walkthrough-create-and-run-a-load-test-that-contains-unit-tests"></a>演练：创建并运行包含单元测试的负载测试
 
@@ -41,23 +41,25 @@ ms.locfileid: "75590847"
 
 ### <a name="to-start-the-new-load-test-wizard"></a>启动“新建负载测试向导”
 
+1. 请确保已安装[创建负载测试项目](../test/quickstart-create-a-load-test-project.md)中所述的“Web 性能和负载测试工具”组件  。
+
 1. 打开在[演练：创建并运行托管代码的单元测试](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)中创建的 Bank 解决方案。
 
-2. 在“解决方案资源管理器”中，打开 Bank 解决方案节点的快捷菜单，选择“添加”，然后选择“新建项目”    。
+1. 在“解决方案资源管理器”中，打开 Bank 解决方案节点的快捷菜单，选择“添加”，然后选择“新建项目”    。
 
      此时，将显示“添加新项目”对话框  。
 
-3. 在“添加新项目”对话框中，展开“Visual C#”，然后选择“测试”    。 从模板列表中，选择“Web 性能和负载测试项目”，并在“名称”字段中键入 `BankLoadTest`   。 选择 **“确定”** 。
+1. 在“添加新项目”对话框中，展开“Visual C#”，然后选择“测试”    。 从模板列表中，选择“Web 性能和负载测试项目”，并在“名称”字段中键入 `BankLoadTest`   。 选择 **“确定”** 。
 
      BankLoadTest Web 性能测试和负载测试项目将添加到解决方案中。
 
-4. 打开新的 BankLoadTest Web 性能和负载测试项目的快捷菜单，选择“添加”，然后选择“负载测试”   。
+1. 打开新的 BankLoadTest Web 性能和负载测试项目的快捷菜单，选择“添加”，然后选择“负载测试”   。
 
-5. 启动“新建负载测试向导”  。
+1. 启动“新建负载测试向导”  。
 
-6. “欢迎使用”页是“新建负载测试向导”的第一页   。
+1. “欢迎使用”页是“新建负载测试向导”的第一页   。
 
-7. 选择“下一步”  。
+1. 选择“下一步”  。
 
 ### <a name="to-edit-settings-for-load-test-scenario"></a>编辑负载测试方案的设置
 

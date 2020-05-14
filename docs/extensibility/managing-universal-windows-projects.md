@@ -1,35 +1,35 @@
 ---
-title: 管理通用 Windows 项目 |Microsoft Docs
+title: 管理通用 Windows 项目 |微软文档
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 47926aa1-3b41-410d-bca8-f77fc950cbe7
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e542d1cc53fbdfb287d004c15b2a9055d3a0cba1
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: dc6894bcfe3bfab3b0246d716b0bd85152ad17e2
+ms.sourcegitcommit: 5c804c42d24d35dcf2ba195aba9ce07031743f62
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72647946"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81744938"
 ---
 # <a name="manage-universal-windows-projects"></a>管理通用 Windows 项目
 
-通用 Windows 应用是面向 Windows 8.1 和 Windows Phone 8.1 的应用，使开发人员能够在这两个平台上使用代码和其他资产。 共享代码和资源保留在共享项目中，而特定于平台的代码和资源保留在单独的项目中，一个用于 Windows，另一个用于 Windows Phone。 有关通用 Windows 应用的详细信息，请参阅[通用 windows 应用](https://msdn.microsoft.com/library/windows/apps/dn609832.aspx)。 用于管理项目的 Visual Studio 扩展应该知道，通用 Windows 应用程序项目的结构与单平台应用程序不同。 本演练演示如何导航共享项目并管理共享项。
+通用 Windows 应用是面向 Windows 8.1 和 Windows Phone 8.1 的应用，允许开发人员在这两个平台上使用代码和其他资产。 共享代码和资源保存在共享项目中，而特定于平台的代码和资源保存在单独的项目中，一个用于 Windows，另一个用于 Windows Phone。 有关通用 Windows 应用的详细信息，请参阅[通用 Windows 应用](https://msdn.microsoft.com/library/windows/apps/dn609832.aspx)。 管理项目的 Visual Studio 扩展应注意，通用 Windows 应用项目的结构不同于单平台应用。 本演练将介绍如何导航共享项目和管理共享项目。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
 
-从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅[安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
+从 Visual Studio 2015 开始，您不会从下载中心安装 Visual Studio SDK。 它作为可选功能包含在可视化工作室设置中。 以后还可以安装 VS SDK。 有关详细信息，请参阅[安装可视化工作室 SDK](../extensibility/installing-the-visual-studio-sdk.md)。
 
 ### <a name="navigate-the-shared-project"></a>导航共享项目
 
-1. 创建名C#为**TestUniversalProject**的 VSIX 项目。 （**文件** > **新**的  > **项目**， **C#** 然后  > **扩展性** > **Visual Studio 包**中）。 添加**自定义命令**项目项模板（在**解决方案资源管理器**上，右键单击项目节点，然后选择 "**添加** > **新项**"，然后单击 "**扩展性**"。 将该文件命名为**TestUniversalProject**。
+1. 创建名为**TestUniversal 项目的**C# VSIX 项目。 （**文件** > **新项目** > **Project**，然后**C#** > **扩展可视化** > **工作室包**）。 添加**自定义命令**项目项模板（在**解决方案资源管理器**上，右键单击项目节点并选择 **"添加新** > **项**"，然后转到 **"扩展性**"。。 命名文件**TestUniversalProject**。
 
-2. 添加对 VisualStudio 和*DesignTime*的引用（在 "扩展" 部分*中，为*"**扩展名**" 部分），然后添加一个。
+2. 添加对*Microsoft.VisualStudio.shell.Interop.12.1.DesignTime.dll*和*Microsoft.VisualStudio.shell.Interop.14.0.DesignTime.dll*的引用（在**扩展部分**）。
 
-3. 打开*TestUniversalProject.cs*并添加以下 `using` 指令：
+3. 打开*TestUniversalProject.cs*并添加以下`using`指令：
 
     ```csharp
     using EnvDTE;
@@ -42,7 +42,7 @@ ms.locfileid: "72647946"
     using System.Windows.Forms;
     ```
 
-4. 在 `TestUniversalProject` 类中，添加指向 "**输出**" 窗口的私有字段。
+4. 在类`TestUniversalProject`中添加指向 **"输出"** 窗口的专用字段。
 
     ```csharp
     public sealed class TestUniversalProject
@@ -52,7 +52,7 @@ ms.locfileid: "72647946"
     }
     ```
 
-5. 将引用设置为 TestUniversalProject 构造函数中的 "输出" 窗格：
+5. 在 TestUniversalProject 构造函数中设置对输出窗格的引用：
 
     ```csharp
     private TestUniversalProject(Package package)
@@ -72,12 +72,13 @@ ms.locfileid: "72647946"
             MenuCommand menuItem = new MenuCommand(eventHandler, menuCommandID);
             commandService.AddCommand(menuItem);
         }
+
         // get a reference to the Output window
-                    output = (IVsOutputWindowPane)ServiceProvider.GetService(typeof(SVsGeneralOutputWindowPane));
+        output = (IVsOutputWindowPane)ServiceProvider.GetService(typeof(SVsGeneralOutputWindowPane));
     }
     ```
 
-6. 删除 `ShowMessageBox` 方法中的现有代码：
+6. 从`ShowMessageBox`方法中删除现有代码：
 
     ```csharp
     private void ShowMessageBox(object sender, EventArgs e)
@@ -85,7 +86,7 @@ ms.locfileid: "72647946"
     }
     ```
 
-7. 获取 DTE 对象，在本演练中，我们将使用这些对象进行多种不同的目的。 此外，请确保在单击菜单按钮时加载解决方案。
+7. 获取 DTE 对象，在本演练中，我们将用于几个不同的用途。 此外，请确保在单击菜单按钮时加载解决方案。
 
     ```csharp
     private void ShowMessageBox(object sender, EventArgs e)
@@ -103,7 +104,7 @@ ms.locfileid: "72647946"
     }
     ```
 
-8. 查找共享项目。 共享项目是一个纯容器;它不生成或生成输出。 下面的方法通过查找具有共享项目功能的 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> 对象查找解决方案中的第一个共享项目。
+8. 查找共享项目。 共享项目是一个纯容器;它不生成或生成输出。 以下方法通过查找具有共享项目功能<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy>的对象来查找解决方案中的第一个共享项目。
 
     ```csharp
     private IVsHierarchy FindSharedProject()
@@ -125,7 +126,7 @@ ms.locfileid: "72647946"
     }
     ```
 
-9. 在 `ShowMessageBox` 方法中，输出共享项目的标题（出现在**解决方案资源管理器**中的项目名称）。
+9. 在`ShowMessageBox`方法中，输出共享项目的标题（出现在**解决方案资源管理器**中的项目名称）。
 
     ```csharp
     private void ShowMessageBox(object sender, EventArgs e)
@@ -146,7 +147,7 @@ ms.locfileid: "72647946"
                 MessageBox.Show("Solution has no shared project");
                 return;
             }
-                }
+        }
         else
         {
             MessageBox.Show("No solution is open");
@@ -155,7 +156,7 @@ ms.locfileid: "72647946"
     }
     ```
 
-10. 获取活动平台项目。 平台项目是包含特定于平台的代码和资源的项目。 下面的方法使用新的字段 <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID7.VSHPROPID_SharedItemContextHierarchy> 获取活动平台项目。
+10. 获取活动平台项目。 平台项目是包含特定于平台的代码和资源的项目。 以下方法使用新字段<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID7.VSHPROPID_SharedItemContextHierarchy>获取活动平台项目。
 
     ```csharp
     private IVsHierarchy GetActiveProjectContext(IVsHierarchy hierarchy)
@@ -173,7 +174,7 @@ ms.locfileid: "72647946"
     }
     ```
 
-11. 在 `ShowMessageBox` 方法中，输出活动平台项目的标题。
+11. 在`ShowMessageBox`该方法中，输出活动平台项目的标题。
 
     ```csharp
     private void ShowMessageBox(object sender, EventArgs e)
@@ -198,25 +199,22 @@ ms.locfileid: "72647946"
                 }
                 else
                 {
-                MessageBox.Show("Shared project has no active platform project");
+                    MessageBox.Show("Shared project has no active platform project");
                 }
             }
             else
             {
                 MessageBox.Show("Solution has no shared project");
-                return;
             }
         }
         else
-            {
-                MessageBox.Show("No solution is open");
-                return;
-            }
+        {
+            MessageBox.Show("No solution is open");
         }
     }
     ```
 
-12. 遍历平台项目。 以下方法获取共享项目中的所有导入（平台）项目。
+12. 迭代平台项目。 以下方法从共享项目获取所有导入（平台）项目。
 
     ```csharp
     private IEnumerable<IVsHierarchy> EnumImportingProjects(IVsHierarchy hierarchy)
@@ -235,7 +233,7 @@ ms.locfileid: "72647946"
     ```
 
     > [!IMPORTANT]
-    > 如果用户已在实验实例C++中打开通用 Windows 应用项目，上述代码将引发异常。 这是一个已知问题。 若要避免此异常，请将上述 `foreach` 块替换为以下内容：
+    > 如果用户已在实验实例中打开了C++通用 Windows 应用项目，则上述代码将引发异常。 这是一个已知问题。 为避免出现异常，请将上面`foreach`的块替换为以下内容：
 
     ```csharp
     var importingProjects = sharedAssetsProject.EnumImportingProjects();
@@ -245,7 +243,7 @@ ms.locfileid: "72647946"
     }
     ```
 
-13. 在 `ShowMessageBox` 方法中，输出每个平台项目的标题。 在输出活动平台项目标题的行的后面插入以下代码。 此列表中仅显示已加载的平台项目。
+13. 在`ShowMessageBox`该方法中，输出每个平台项目的标题。 在输出活动平台项目标题的行后插入以下代码。 只有加载的平台项目才会显示在此列表中。
 
     ```csharp
     output.OutputStringThreadSafe("Platform projects:\n");
@@ -261,7 +259,7 @@ ms.locfileid: "72647946"
     }
     ```
 
-14. 更改 "活动平台" 项目。 下面的方法使用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.SetProperty%2A> 设置活动项目。
+14. 更改活动平台项目。 以下方法使用<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.SetProperty%2A>设置活动项目。
 
     ```csharp
     private int SetActiveProjectContext(IVsHierarchy hierarchy, IVsHierarchy activeProjectContext)
@@ -270,7 +268,7 @@ ms.locfileid: "72647946"
     }
     ```
 
-15. 在 `ShowMessageBox` 方法中，更改 "活动平台" 项目。 将此代码插入 `foreach` 块中。
+15. 在`ShowMessageBox`方法中，更改活动平台项目。 在`foreach`块内插入此代码。
 
     ```csharp
     bool isActiveProjectSet = false;
@@ -293,7 +291,7 @@ ms.locfileid: "72647946"
     output.OutputStringThreadSafe("set active project: " + platformCaption +'\n');
     ```
 
-16. 现在试试看。按 F5 启动实验实例。 在实验C#实例中创建通用中心应用项目（在 "**新建项目**" 对话框中， **Visual C#**   > **windows**  > **windows 8**  > **通用**0**中心应用**）。 加载解决方案后，请切换到 "**工具**" 菜单，单击 "**调用 TestUniversalProject**"，然后在 "**输出**" 窗格中查看文本。 显示的内容应与以下类似：
+16. 现在试试看。按 F5 启动实验实例。 在实验实例中创建 C# 通用中心应用项目（在 **"新项目**"对话框中 **，Visual C++** > **Windows** > **8** > **通用** > **中心应用**）。 加载解决方案后，转到 **"工具"** 菜单并单击 **"调用测试通用项目**"，然后检查 **"输出"** 窗格中的文本。 会看到下面这样的内容：
 
     ```
     Found shared project: HubApp.Shared
@@ -304,9 +302,9 @@ ms.locfileid: "72647946"
     set active project: HubApp.WindowsPhone
     ```
 
-### <a name="manage-the-shared-items-in-the-platform-project"></a>管理平台项目中的共享项
+### <a name="manage-the-shared-items-in-the-platform-project"></a>管理平台项目中的共享项目
 
-1. 在平台项目中查找共享项。 共享项目中的项在平台项目中显示为共享项。 你无法在**解决方案资源管理器**中查看它们，但你可以浏览项目层次结构来查找它们。 下面的方法遍历层次结构并收集所有共享项。 它还可以输出每个项的标题。 共享项由 <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID7.VSHPROPID_IsSharedItem> 的新属性标识。
+1. 查找平台项目中的共享项目。 共享项目中的项目在平台项目中显示为共享项目。 在**解决方案资源管理器**中看不到它们，但可以遍历项目层次结构来查找它们。 以下方法遍走层次结构并收集所有共享项。 它可以选择输出每个项目的标题。 共享项由新属性<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID7.VSHPROPID_IsSharedItem>标识。
 
     ```csharp
     private void InspectHierarchyItems(IVsHierarchy hier, uint itemid, int level, List<uint> itemIds, bool getSharedItems, bool printItems)
@@ -334,11 +332,11 @@ ms.locfileid: "72647946"
             {
                 this.InspectHierarchyItems(hier, child, level + 1, itemIds, isSharedItem, printItems);
             }
-                    }
+        }
     }
     ```
 
-2. 在 `ShowMessageBox` 方法中，添加以下代码来演练平台项目层次结构项。 将其插入 `foreach` 块内。
+2. 在`ShowMessageBox`方法中，添加以下代码以遍历平台项目层次结构项。 将其插入块内`foreach`。
 
     ```csharp
     output.OutputStringThreadSafe("Walk the active platform project:\n");
@@ -346,7 +344,7 @@ ms.locfileid: "72647946"
     this.InspectHierarchyItems(activePlatformHier, (uint)VSConstants.VSITEMID.Root, 1, sharedItemIds, true, true);
     ```
 
-3. 读取共享项。 共享项作为隐藏链接文件显示在平台项目中，您可以将所有属性作为普通链接文件读取。 下面的代码读取第一个共享项的完整路径。
+3. 阅读共享项目。 共享项目在平台项目中显示为隐藏链接文件，您可以将所有属性读为普通链接文件。 以下代码读取第一个共享项的完整路径。
 
     ```csharp
     var sharedItemId = sharedItemIds[0];
@@ -355,7 +353,7 @@ ms.locfileid: "72647946"
     output.OutputStringThreadSafe(string.Format("Shared item full path: {0}\n", fullPath));
     ```
 
-4. 现在试试看。按**F5**启动实验实例。 在实验C#实例中创建通用中心应用项目（在 "**新建项目**" 对话框中， **Visual C#**   > **windows**  > **windows 8**  > **通用**0**中心应用**）中转到 "**工具**" 菜单，单击 "**调用 TestUniversalProject**"，然后在 "**输出**" 窗格中检查文本。 显示的内容应与以下类似：
+4. 现在试试看。按**F5**启动实验实例。 在实验实例中创建 C# 通用中心应用项目（在 **"新项目**"对话框中 **，Visual C++** > **Windows** > **8** > **通用** > **中心应用**）转到 **"工具"** 菜单并单击 **"调用测试通用项目**"，然后选中 **"输出**"窗格中的文本。 会看到下面这样的内容：
 
     ```
     Found shared project: HubApp.Shared
@@ -411,23 +409,23 @@ ms.locfileid: "72647946"
 
 ### <a name="detect-changes-in-platform-projects-and-shared-projects"></a>检测平台项目和共享项目中的更改
 
-1. 您可以使用层次结构和项目事件来检测共享项目中的更改，就像对平台项目一样。 但是，共享项目中的项目项是不可见的，这意味着在更改共享项目项时，某些事件不会激发。
+1. 您可以使用层次结构和项目事件来检测共享项目中的更改，就像对平台项目一样。 但是，共享项目中的项目项不可见，这意味着当更改共享项目项时，某些事件不会触发。
 
-    重命名项目中的文件时，请考虑事件的顺序：
+    在重命名项目中的文件时，请考虑事件序列：
 
-   1. 在磁盘上更改文件名。
+   1. 文件名在磁盘上更改。
 
-   2. 项目文件将更新为包含文件的新名称。
+   2. 项目文件将更新以包括该文件的新名称。
 
-      层次结构事件（例如 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents>）通常跟踪 UI 中显示的更改，如**解决方案资源管理器**中所示。 层次结构事件将文件重命名操作视为包含文件删除和文件添加操作。 但是，当不可见项发生更改时，层次结构事件系统将引发 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A> 事件，但不会引发 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemAdded%2A> 事件。 因此，如果重命名平台项目中的文件，则会同时获取 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A> 和 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemAdded%2A>，但是如果在共享项目中重命名文件，则仅会获得 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A>。
+      层次结构事件（例如<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents>），通常跟踪 UI 中显示的更改，如**解决方案资源管理器**中所示。 层次结构事件考虑文件重命名操作，以包括文件删除，然后添加文件。 但是，当更改不可见项时，层次结构事件系统将触发事件<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A>，但不会触发<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemAdded%2A>事件。 因此，如果在平台项目中重命名文件，则获取 和<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A><xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemAdded%2A>，但如果重命名共享项目中的文件，则仅<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A>获取 。
 
-      若要跟踪项目项的更改，可以处理 DTE 项目项事件（在 <xref:EnvDTE.ProjectItemsEventsClass> 中找到的事件）。 但是，如果要处理大量事件，可以更好地处理 <xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocuments2> 中的事件。 在本演练中，我们只显示层次结构事件和 DTE 事件。 在此过程中，您将向共享项目和平台项目中添加一个事件侦听器。 然后，当你重命名共享项目中的一个文件和平台项目中的另一个文件时，可以查看为每个重命名操作触发的事件。
+      要跟踪项目项中的更改，可以处理 DTE 项目项事件（中找到的<xref:EnvDTE.ProjectItemsEventsClass>项事件）。 但是，如果您正在处理大量事件，则可以在 中<xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocuments2>处理事件时获得更好的性能。 在本演练中，我们仅显示层次结构事件和 DTE 事件。 在此过程中，您将事件侦听器添加到共享项目和平台项目。 然后，当您重命名共享项目中的一个文件和平台项目中的另一个文件时，您可以看到为每个重命名操作触发的事件。
 
-      在此过程中，您将向共享项目和平台项目中添加一个事件侦听器。 然后，当你重命名共享项目中的一个文件和平台项目中的另一个文件时，可以查看为每个重命名操作触发的事件。
+      在此过程中，您将事件侦听器添加到共享项目和平台项目。 然后，当您重命名共享项目中的一个文件和平台项目中的另一个文件时，您可以看到为每个重命名操作触发的事件。
 
-2. 添加事件侦听器。 向项目中添加一个新的类文件，并将其称为 " *HierarchyEventListener.cs*"。
+2. 添加事件侦听器。 向项目添加新类文件，并将其调用*HierarchyEventListener.cs*。
 
-3. 打开*HierarchyEventListener.cs*文件并添加以下 using 指令：
+3. 打开*HierarchyEventListener.cs*文件并添加以下使用指令：
 
    ```csharp
    using Microsoft.VisualStudio.Shell.Interop;
@@ -435,14 +433,14 @@ ms.locfileid: "72647946"
    using System.IO;
    ```
 
-4. 让 `HierarchyEventListener` 类实现 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents>：
+4. 具有类`HierarchyEventListener`实现<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents>：
 
    ```csharp
    class HierarchyEventListener : IVsHierarchyEvents
    { }
    ```
 
-5. 实现 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents> 的成员，如下面的代码所示。
+5. 实现 的成员<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents>，如下代码所示。
 
    ```csharp
    class HierarchyEventListener : IVsHierarchyEvents
@@ -485,7 +483,7 @@ ms.locfileid: "72647946"
    }
    ```
 
-6. 在同一个类中，为 DTE 事件添加另一个事件处理程序 <xref:EnvDTE.ProjectItemsEventsClass.ItemRenamed>，每当重命名项目项时都会发生这种情况。
+6. 在同一类中为 DTE 事件<xref:EnvDTE.ProjectItemsEventsClass.ItemRenamed>添加另一个事件处理程序 ，每当重命名项目项时都会发生这种情况。
 
    ```csharp
    public void OnItemRenamed(EnvDTE.ProjectItem projItem, string oldName)
@@ -495,7 +493,7 @@ ms.locfileid: "72647946"
    }
    ```
 
-7. 注册层次结构事件。 需要为要跟踪的每个项目单独进行注册。 将以下代码添加到 `ShowMessageBox` 中，一个用于共享项目，另一个用于某个平台项目。
+7. 注册层次结构事件。 您需要为正在跟踪的每个项目分别注册。 在 中`ShowMessageBox`添加以下代码 ，一个用于共享项目，另一个用于其中一个平台项目。
 
    ```csharp
    // hook up the event listener for hierarchy events on the shared project
@@ -510,7 +508,7 @@ ms.locfileid: "72647946"
    activePlatformHier.AdviseHierarchyEvents(listener2, out cookie2);
    ```
 
-8. 注册 DTE 项目项事件 <xref:EnvDTE.ProjectItemsEventsClass.ItemRenamed>。 在挂钩第二个侦听器后，添加以下代码。
+8. 注册 DTE 项目项事件<xref:EnvDTE.ProjectItemsEventsClass.ItemRenamed>。 挂接第二个侦听器后，添加以下代码。
 
    ```csharp
    // hook up DTE events for project items
@@ -518,12 +516,12 @@ ms.locfileid: "72647946"
    dteEvents.ProjectItemsEvents.ItemRenamed += listener1.OnItemRenamed;
    ```
 
-9. 修改共享项。 不能修改平台项目中的共享项;相反，你必须在作为这些项的实际所有者的共享项目中对其进行修改。 你可以通过 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject.IsDocumentInProject%2A> 获取共享项目中的相应项 ID，并为其提供共享项的完整路径。 然后，可以修改共享项。 更改将传播到平台项目。
+9. 修改共享项。 不能修改平台项目中的共享项目;但是，您可以修改平台项目中的共享项目。相反，您必须在共享项目中修改它们，这些共享项目是这些项目的实际所有者。 您可以在 共享<xref:Microsoft.VisualStudio.Shell.Interop.IVsProject.IsDocumentInProject%2A>项目中获取相应的项目 ID，从而提供共享项的完整路径。 然后，您可以修改共享项。 更改将传播到平台项目。
 
     > [!IMPORTANT]
-    > 在修改项目项之前，应查明项目项是否为共享项。
+    > 在修改项目项之前，应先了解项目项是否为共享项。
 
-     下面的方法修改项目项文件的名称。
+     以下方法修改项目项文件的名称。
 
     ```csharp
     private void ModifyFileNameInProject(IVsHierarchy project, string path)
@@ -541,7 +539,7 @@ ms.locfileid: "72647946"
     }
     ```
 
-10. 在 `ShowMessageBox` 中的所有其他代码之后调用此方法，以修改共享项目中的项的文件名。 将此项插入到共享项目中获取项的完整路径的代码之后。
+10. 在 中的所有其他代码之后`ShowMessageBox`调用此方法，以修改共享项目中的项目的文件名。 在获取共享项目中项目的完整路径的代码后插入此项。
 
     ```csharp
     // change the file name of an item in a shared project
@@ -551,9 +549,9 @@ ms.locfileid: "72647946"
     this.ModifyFileNameInProject(sharedHier, fullPath);
     ```
 
-11. 生成并运行该项目。 在实验C#实例中创建通用集线器应用，请在 "**工具**" 菜单中单击 "**调用 TestUniversalProject**"，然后在 "常规输出" 窗格中检查文本。 共享项目中第一项的名称（我们希望它是*app.xaml*文件）应更改，你应看到 <xref:EnvDTE.ProjectItemsEventsClass.ItemRenamed> 事件已激发。 在这种情况下，由于重命名*app.config*会导致*App.xaml.cs*被重命名，应会看到四个事件（每个平台项目两个）。 （DTE 事件不跟踪共享项目中的项。）应会看到两个 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A> 事件（每个平台项目一个事件），但没有 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemAdded%2A> 事件。
+11. 生成并运行该项目。 在实验实例中创建 C# 通用集线器应用，转到 **"工具"** 菜单并单击 **"调用测试通用项目**"，然后检查常规输出窗格中的文本。 应更改共享项目中第一个项目的名称（我们预计它是*App.xaml*文件），您应该看到<xref:EnvDTE.ProjectItemsEventsClass.ItemRenamed>事件已触发。 在这种情况下，由于重命名*App.xaml*也会导致*App.xaml.cs*重命名，因此应看到四个事件（每个平台项目有两个事件）。 （DTE 事件不跟踪共享项目中的项目。您应该看到两<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A>个事件（每个平台项目一个），但没有<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemAdded%2A>事件。
 
-12. 现在，请尝试在平台项目中重命名文件，然后可以看到触发的事件之间的差异。 在调用 `ModifyFileName` 之后 `ShowMessageBox` 中添加以下代码。
+12. 现在尝试重命名平台项目中的文件，您可以看到触发事件的差异。 在调用`ShowMessageBox`后将`ModifyFileName`以下代码添加到 。
 
     ```csharp
     // change the file name of an item in a platform project
@@ -568,4 +566,4 @@ ms.locfileid: "72647946"
     this.ModifyFileNameInProject(activePlatformHier, unsharedPath);
     ```
 
-13. 生成并运行该项目。 在实验C#实例中创建通用项目，请在 "**工具**" 菜单中，单击 "**调用 TestUniversalProject**"，然后检查 "常规输出" 窗格中的文本。 重命名平台项目中的文件后，应会看到 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemAdded%2A> 事件和 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A> 事件。 因为更改文件会导致不更改其他文件，而且由于对平台项目中的项进行的更改不会传播到任何位置，因此，其中只有一个事件。
+13. 生成并运行该项目。 在实验实例中创建 C# 通用项目，转到 **"工具"** 菜单并单击 **"调用测试通用项目**"，然后检查常规输出窗格中的文本。 重命名平台项目中的文件后，应同时看到<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemAdded%2A>事件和<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A>事件。 由于更改文件不会更改其他文件，并且对平台项目中项的更改不会在任何地方传播，因此每个事件只有一个。

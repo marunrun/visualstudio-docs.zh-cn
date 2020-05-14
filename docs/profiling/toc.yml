@@ -24,6 +24,8 @@
       href: running-profiling-tools-with-or-without-the-debugger.md
 - name: 操作指南
   items:
+    - name: 使用 PerfTip
+      href: perftips.md
     - name: CPU 使用率
       href: cpu-usage.md
     - name: 内存使用率
@@ -32,18 +34,16 @@
           href: analyze-memory-usage.md
         - name: 分析 .NET 对象的内存使用情况
           href: dotnet-alloc-tool.md
-        - name: 自定义本机 ETW 堆事件
-          href: custom-native-etw-heap-events.md
         - name: 不使用调试器情况下的内存使用情况
           href: memory-usage-without-debugging2.md
+        - name: 自定义本机 ETW 堆事件
+          href: custom-native-etw-heap-events.md
     - name: 从命令行测量性能
       href: profile-apps-from-command-line.md
     - name: 分析 GPU 使用情况
       href: gpu-usage.md
     - name: 分析资源消耗情况
       href: application-timeline.md
-    - name: 使用 PerfTip
-      href: perftips.md
     - name: 分析网络使用情况
       href: network-usage.md
     - name: 分析 JavaScript 内存

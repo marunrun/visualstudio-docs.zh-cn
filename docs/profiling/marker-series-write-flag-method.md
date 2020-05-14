@@ -13,13 +13,13 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: f09cca9bd1e3babccb0debc369881a0efa00fa0b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62830806"
 ---
-# <a name="markerserieswriteflag-method"></a>marker_series::write_flag 方法
+# <a name="marker_serieswrite_flag-method"></a>marker_series::write_flag 方法
 向并发可视化工具跟踪文件写入一个标志。
 
 ## <a name="syntax"></a>语法
@@ -55,7 +55,7 @@ void write_flag(
  `_Category` 类别。
 
 ## <a name="requirements"></a>要求
- **标头：** cvmarkersobj.h
+ **Header:** *cvmarkersobj.h*
 
  **命名空间：** Concurrency::diagnostic
 

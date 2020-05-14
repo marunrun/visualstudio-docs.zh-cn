@@ -12,18 +12,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8fd77fe5fc00e8c1a3b487c93a6004b2f8cf7060
-ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
+ms.openlocfilehash: 663a9c9e5e76792b4478d6ecca3043a8a2893268
+ms.sourcegitcommit: 0ba0cbff77eac15feab1a73eeee3667006794b29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/22/2020
-ms.locfileid: "77558196"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80411989"
 ---
 # <a name="quickstart-analyze-cpu-usage-data-in-visual-studio-c-visual-basic"></a>快速入门：在 Visual Studio 中分析 CPU 使用情况数据（C#、Visual Basic）
 
 Visual Studio 提供了许多强大的功能来帮助你分析应用程序中的性能问题。 本主题提供了一种快速了解部分基本功能的方法。 此处，我们将了解用来确定由于 CPU 使用率高而导致性能瓶颈的工具。 Visual Studio 中的 .NET 开发（包括 ASP.NET、和本机 /C++ 开发）支持此诊断工具。
 
-诊断中心提供了大量其他选项来运行和管理诊断会话。 如果此处介绍的“CPU 使用率”  工具未提供所需数据，[其他分析工具](../profiling/profiling-feature-tour.md)可提供可能有帮助的不同种类的信息。 在许多情况下，CPU 以外的因素可能会导致应用程序性能瓶颈，例如内存、呈现 UI 或网络请求时间。 诊断中心提供大量其他选项，可用于记录和分析此种数据。
+诊断中心提供了大量其他选项来运行和管理诊断会话。 如果此处介绍的“CPU 使用率”  工具未提供所需数据，[其他分析工具](../profiling/profiling-feature-tour.md)可提供可能有帮助的不同种类的信息。 在许多情况下，CPU 以外的因素可能会导致应用程序性能瓶颈，例如内存、呈现 UI 或网络请求时间。 诊断中心提供大量其他选项，可用于记录和分析此种数据。 借助另一个集成了调试器的分析工具 [PerfTips](../profiling/perftips.md)，你还可以单步执行代码并确定完成特定函数或代码块所用的时间。
 
 要运行带调试器的分析工具（“诊断工具”窗口），需具备 Windows 8 及更高版本  。 在 Windows 7 及更高版本中，可使用事后分析工具（即[性能探查器](../profiling/profiling-feature-tour.md)）。
 
@@ -193,8 +193,7 @@ Visual Studio 提供了许多强大的功能来帮助你分析应用程序中的
 
      ![设置断点以进行分析](../profiling/media/quickstart-cpu-usage-breakpoints.png "设置断点以进行分析")
 
-    > [!TIP]
-    > 通过设置两个断点，可将数据收集限制到想要分析的代码部分。
+    通过设置两个断点，可将数据收集限制到想要分析的代码部分。
 
 3. 已显示“诊断工具”  窗口，除非已将其关闭。 若要再次显示该窗口，请依次单击“调试”   > “Windows”   > “显示诊断工具”  。
 

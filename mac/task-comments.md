@@ -6,10 +6,10 @@ ms.author: cobey
 ms.date: 05/06/2018
 ms.assetid: 562DCB46-D8FA-4DC4-AAEA-F274448C4CD2
 ms.openlocfilehash: d88b74ab953f97e061f4be3befc227646006f38b
-ms.sourcegitcommit: 7fbfb2a1d43ce72545096c635df2b04496b0be71
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "67692316"
 ---
 # <a name="task-comments"></a>任务注释
@@ -18,7 +18,7 @@ ms.locfileid: "67692316"
 
 ![任务列表首选项](media/source-editor-image10.png)
 
-要添加新的任务注释，请添加包含任务关键字的注释。 例如:
+要添加新的任务注释，请添加包含任务关键字的注释。 例如：
 
 ```csharp
 //TODO: Finish this for all properties.
@@ -28,6 +28,6 @@ Visual Studio for Mac 通过在“任务列表”面板中突出显示这些标�
 
 ![“任务列表”面板](media/source-editor-image11.png)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用任务列表（Windows 上的 Visual Studio）](/visualstudio/ide/using-the-task-list)

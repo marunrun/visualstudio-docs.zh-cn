@@ -10,10 +10,10 @@ f1_keywords:
 ms.workload:
 - multiple
 ms.openlocfilehash: f45b186153b4cc046d35fd941f6a80e108476fc0
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75585764"
 ---
 # <a name="preview-changes-window"></a>预览更改窗口
@@ -28,7 +28,7 @@ ms.locfileid: "75585764"
 
 检查所做的更改之后，单击“应用”  按钮以提交这些更改，或单击“取消”  按钮保持内容不变。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在 Visual Studio 中重构](../ide/refactoring-in-visual-studio.md)
 - [快速操作](../ide/quick-actions.md)

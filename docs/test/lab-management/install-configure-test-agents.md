@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 27f030fb73629172e0b5a2d5d4cb27cf186bb69f
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 271e9253daf4ab23a5fb06a189ac3042bc925b2a
+ms.sourcegitcommit: 5d1b2895d3a249c6bea30eb12b0ad7c0f0862d85
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75594261"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80880268"
 ---
 # <a name="install-test-agents-and-test-controllers"></a>安装测试代理和测试控制器
 
@@ -40,6 +40,7 @@ ms.locfileid: "75594261"
 
 这些安装程序可用作 ISO 文件，便于在虚拟机上安装。
 
+::: moniker range="vs-2017"
 ## <a name="compatible-versions-of-tfs-microsoft-test-manager-the-test-controller-and-test-agent"></a>TFS、Microsoft 测试管理器、测试控制器和测试代理的兼容版本
 
 可以根据下表混合使用不同版本的 TFS、Microsoft 测试管理器、测试控制器和测试代理：
@@ -53,6 +54,23 @@ ms.locfileid: "75594261"
 | 2015：全新安装 | 2013 | 2013 | 2013 |
 | 2015：从 2013 升级或全新安装 | 2015 | 2013 | 2013 |
 | 2013 | 2015 | 2013 | 2013 |
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+## <a name="compatible-versions-of-tfs-the-test-controller-and-test-agent"></a>TFS、测试控制器和测试代理的兼容版本
+
+可以根据下表混合使用不同版本的 TFS、测试控制器和测试代理：
+
+| TFS | 控制器 | 代理 |
+| --- | -------------------------------------- | ---------- | ----- |
+| 2017：从 2015 升级或全新安装 | 2017 | 2017 |
+| 2017：从 2015 升级或全新安装 | 2013 Update 5 | 2013 Update 5 |
+| 2017：从 2015 升级或全新安装 | 2013 Update 5 | 2013 Update 5 |
+| 2015：从 2013 升级 | 2013 |2013 |
+| 2015：全新安装 | 2013 | 2013 |
+| 2015：从 2013 升级或全新安装 | 2013 | 2013 |
+| 2013 | 2013 | 2013 |
+::: moniker-end
 
 > [!NOTE]
 > TFS 2018 和 Azure DevOps Services 中的实验室管理方案已弃用。 有关详细信息，请参阅 [TFS 2018 发行说明](/visualstudio/releasenotes/tfs2018-relnotes#--removing-support-for-lab-center-and-automated-testing-flows-in-microsoft-test-manager)。
@@ -67,5 +85,5 @@ ms.locfileid: "75594261"
 | - | - |
 | Visual Studio 中的“生成-部署-测试工”作流 | 用户可以在 TFS 中使用[生成管道](/azure/devops/pipelines/index?view=vsts)（而不是 XAML 生成）生成、部署和测试方案。 |
 | 使用本地远程计算机进行负载测试（性能测试） | 使用 Test Controller 和 Test Agents 2013 Update 5 在本地运行负载测试。 |
-| 使用实验室环境从 Microsoft 测试管理器远程执行自动测试 | 目前此方案没有替代方案。 建议在生成和发布定义（而不是 XAML 生成）中使用“运行功能测试”任务来远程执行测试。 |
+| 使用实验室环境从 Microsoft 测试管理器（在 Visual Studio 2017 中已弃用）远程执行自动测试 | 目前此方案没有替代方案。 建议在生成和发布定义（而不是 XAML 生成）中使用“运行功能测试”任务来远程执行测试。 |
 | 开发人员在 Visual Studio 中执行远程测试 | 不再支持。 |

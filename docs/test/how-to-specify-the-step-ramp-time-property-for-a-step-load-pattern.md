@@ -9,15 +9,15 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: a40f7ce4aacfdc03b5e05becbfc83439945f7e8a
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75588910"
 ---
 # <a name="how-to-specify-the-step-ramp-time-property-for-a-step-load-pattern"></a>如何：为分级负载模式指定单步负载增加时间属性
 
-在用“新建负载测试向导”创建负载测试之后，可以使用“负载测试编辑器”来更改方案属性以满足测试需求和目标   。 有关详细信息，请参见[演练：创建和运行负载测试](../test/walkthrough-create-and-run-a-load-test.md)。
+在用“新建负载测试向导”创建负载测试之后，可以使用“负载测试编辑器”来更改方案属性以满足测试需求和目标   。 有关详细信息，请参阅[演练：创建和运行负载测试](../test/walkthrough-create-and-run-a-load-test.md)。
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
@@ -34,9 +34,9 @@ ms.locfileid: "75588910"
 
 - 最大用户计数：2000
 
-- 单步持续时间（秒）：1800
+- 单步持续时间(秒)：1800
 
-- 单步负载增加时间（秒）：20
+- 单步负载增加时间(秒)：20
 
 - 单步用户计数：100
 
@@ -51,7 +51,7 @@ ms.locfileid: "75588910"
 
 1. 打开一个负载测试。
 
-     “负载测试编辑器”随即显示  。 其中显示负载测试树。
+     此时将显示“负载测试编辑器”  。 其中显示负载测试树。
 
 2. 在负载测试树的“方案”文件夹中，打开要为其指定单步负载增加时间的方案节点  。
 
@@ -60,15 +60,15 @@ ms.locfileid: "75588910"
     > [!NOTE]
     > 该方案的负载模式必须是分级负载模式。 如果不是，则负载模式将显示当前与该方案关联的负载模式类型。 有关详细信息，请参阅[编辑负载模式以便为虚拟用户活动建模](../test/edit-load-patterns-to-model-virtual-user-activities.md)。
 
-4. 在“视图”菜单上选择“属性窗口”   。
+4. 在“视图”菜单上选择“属性”窗口。  
 
      该方案的类别和属性将显示在“属性”  窗口中。
 
 5. 通过输入每一步所占用的秒数来设置“单步负载增加时间”属性的值，以逐渐添加由“单步用户计数”属性所指定的用户   。
 
-6. 完成更改属性后，请选择“文件”菜单上的“保存”   。 然后，可以使用新的“单步负载增加时间”值运行负载测试  。
+6. 更改完此属性后，请选择“文件”菜单上的“保存”。   然后，可以使用新的“单步负载增加时间”值运行负载测试  。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [编辑负载测试方案](../test/edit-load-test-scenarios.md)
 - [测试控制器和测试代理](configure-test-agents-and-controllers-for-load-tests.md)

@@ -11,10 +11,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: b4328c5b71fa7023ec9c2ab68ae6725f5855ada5
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75589638"
 ---
 # <a name="fix-non-detectable-dynamic-parameters-in-a-web-performance-test"></a>在 Web 性能测试中修复无法检测的动态参数
@@ -190,7 +190,7 @@ ms.locfileid: "75589638"
 
      ![使用快速查找隔离该动态参数](../test/media/web_test_dynamicparameter_runresultsquckfind.png)
 
-4. 从测试编辑器中可以看到，已为 JScriptQuery.aspx 请求的 CustomQueryString 分配值：`jScriptQueryString___1v0yhyiyr0raa2w4j4pwf5zl`，并且怀疑的动态部分为“1v0yhyiyr0raa2w4j4pwf5zl”。  在“查找内容”下拉列表中，移除该搜索字符串的可疑部分。 该字符串应为“CustomQueryString=jScriptQueryString___”。
+4. 从测试编辑器中可以看到，已为 JScriptQuery.aspx 请求的 CustomQueryString 分配值： *，并且怀疑的动态部分为“1v0yhyiyr0raa2w4j4pwf5zl”。* `jScriptQueryString___1v0yhyiyr0raa2w4j4pwf5zl` 在“查找内容”下拉列表中，移除该搜索字符串的可疑部分。 该字符串应为“CustomQueryString=jScriptQueryString___”。
 
      动态参数将存在错误的请求前面的一个请求中进行赋值。 因此，请选中“向上搜索”复选框，然后选择“查找下一个”，直到 Querystring.aspx 前面的请求突出显示在“请求”面板中。  此情况应在您选择“查找下一个”三次后发生。
 
@@ -237,7 +237,7 @@ ms.locfileid: "75589638"
 
      ![用参数替换文本](../test/media/web_test_dynamicparameter_addextractionfindreplace2.png)
 
-     “JScriptQuery.aspx”请求下的 QueryString 参数使用以下新的上下文参数进行更新：  CustomQueryString=jScriptQueryString___{{Param0}}。
+     JScriptQuery.aspx 请求下的 QueryString 参数将使用新的上下文参数“CustomQueryString=jScriptQueryString___{{Param0}}”进行更新。 
 
      ![应用于查询字符串的参数](../test/media/web_test_dynamicparameter_addextractionfindreplace3.png)
 
@@ -251,7 +251,7 @@ ms.locfileid: "75589638"
 
 ### <a name="q-can-i-re-run-dynamic-parameter-detection-if-my-web-app-gets-modified"></a>问：如果我的 Web 应用程序已被修改，我是否可以重新运行动态参数检测？
 
-**答：** 可以，请使用下列过程：
+答：可以，请使用下列过程  ：
 
 1. 在工具栏中，选择“将动态参数提升为 Web 测试参数”按钮。 
 
@@ -265,4 +265,4 @@ ms.locfileid: "75589638"
 
 ### <a name="q-do-i-need-to-configure-visual-studio-to-detect-dynamic-parameters"></a>问：我是否需要将 Visual Studio 配置为检测动态参数？
 
-**答：** 当记录 Web 性能测试时，默认的 Visual Studio 配置为检测动态参数。 但是，如果将 Visual Studio 选项配置为不检测动态参数，或使用其他动态参数修改了所测试的 Web 应用程序；仍可从 Web 性能测试编辑器运行动态参数检测。
+答：当记录 Web 性能测试时，默认的 Visual Studio 配置为检测动态参数  。 但是，如果将 Visual Studio 选项配置为不检测动态参数，或使用其他动态参数修改了所测试的 Web 应用程序；仍可从 Web 性能测试编辑器运行动态参数检测。

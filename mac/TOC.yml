@@ -1,0 +1,238 @@
+- name: Visual Studio for Mac
+  href: index.yml
+- name: 入门
+  items:
+    - name: IDE 教程
+      href: ide-tour.md
+    - name: 面向 Windows 用户的 Visual Studio for Mac
+      href: vsmac-for-windows-users.md
+- name: 安装
+  items:
+    - name: 安装 Visual Studio 2019 for Mac
+      href: installation.md
+    - name: 在防火墙或代理的保护下进行安装和使用
+      href: install-behind-a-firewall-or-proxy-server.md
+    - name: 安装预览版
+      href: install-preview.md
+    - name: 更新
+      href: update.md
+    - name: 卸载
+      href: uninstall.md
+- name: 用户帐户
+  items:
+    - name: 概述
+      href: user-accounts.md
+    - name: 登录
+      href: signing-in.md
+    - name: 启用订阅
+      href: enable-subscription.md
+- name: 自定义 IDE
+  items:
+    - name: 自定义 IDE 的外观
+      href: customizing-the-ide.md
+    - name: 扩展 Visual Studio for Mac
+      href: extending-visual-studio-mac.md
+- name: 项目和解决方案
+  items:
+    - name: 概述
+      href: projects-and-solutions.md
+    - name: 创建新项目
+      href: create-new-projects.md
+    - name: 添加和删除项目项
+      href: add-and-remove-project-items.md
+    - name: 管理解决方案和项目属性
+      href: managing-solutions-and-project-properties.md
+    - name: 多目标
+      href: project-multitargeting.md
+    - name: 管理项目中的引用
+      items:
+        - name: 概述
+          href: managing-references-in-a-project.md
+        - name: 演练 - 在项目中包括 NuGet 包
+          href: nuget-walkthrough.md
+    - name: 管理应用资源
+      href: managing-app-resources.md
+    - name: 如何：打开多个解决方案或实例
+      href: open-multiple-solutions.md
+- name: 源编辑器
+  items:
+    - name: 编辑器功能
+      href: source-editor.md
+    - name: 重构
+      href: refactoring.md
+    - name: IntelliSense
+      href: intellisense.md
+    - name: 显示导入项
+      href: show-imports.md
+    - name: 多个插入点编辑
+      href: multi-caret-editing.md
+    - name: 注释
+      href: comments.md
+    - name: 编辑器行为
+      href: editor-behavior.md
+    - name: 任务注释
+      href: task-comments.md
+    - name: 代码片段
+      href: snippets.md
+    - name: 块选择
+      href: block-selection.md
+    - name: 编辑器主题
+      href: editor-themes.md
+    - name: EditorConfig
+      href: editorconfig.md
+    - name: 默认键盘快捷键
+      href: keyboard-shortcuts.md
+- name: 调试
+  items:
+    - name: 概述
+      href: debugging.md
+    - name: 数据可视化
+      href: data-visualizations.md
+    - name: 通过源链接调试 NuGet 包
+      href: source-link.md
+- name: 编译和生成
+  items:
+    - name: 概述
+      href: compiling-and-building.md
+    - name: 生成和清理项目和解决方案
+      href: building-and-cleaning-projects-and-solutions.md
+    - name: 生成操作
+      href: build-actions.md
+    - name: 如何：设置多个启动项目
+      href: set-startup-projects.md
+    - name: 自定义生成系统
+      href: customizing-build-system.md
+    - name: 配置
+      items:
+        - name: 了解生成配置
+          href: configurations.md
+        - name: 创建和编辑配置
+          href: create-and-edit-configurations.md
+- name: 版本控制
+  items:
+    - name: 概述
+      href: version-control.md
+    - name: 设置 Git 存储库
+      href: set-up-git-repository.md
+    - name: 使用 Git
+      href: working-with-git.md
+    - name: 设置 Subversion 存储库
+      href: set-up-subversion-repository.md
+    - name: 使用 Subversion
+      href: working-with-subversion.md
+- name: Web 应用部署
+  items:
+    - name: 概述
+      href: web-app-deployment.md
+    - name: 发布到 Azure 应用服务
+      href: publish-app-svc.md
+    - name: 发布到文件夹
+      href: publish-folder.md
+- name: 工作负载
+  items:
+    - name: 可用工作负载
+      href: workloads.md
+    - name: ASP.NET Core
+      items:
+        - name: .NET Core 支持
+          href: net-core-support.md
+        - name: ASP.NET Core 入门
+          href: asp-net-core.md
+        - name: 在 Visual Studio for Mac 中生成 ASP.NET Core 应用程序
+          href: building-asp-net-core.md
+        - name: Razor
+          href: razor.md
+        - name: Blazor
+          href: blazor.md
+        - name: JavaScript 和 TypeScript
+          href: javascript.md
+        - name: launchSettings.json
+          href: launch-settings.md
+    - name: Azure
+      items:
+        - name: 概述
+          href: azure-workload.md
+        - name: Azure Functions 简介
+          href: azure-functions.md
+        - name: 教程：Azure Functions
+          href: azure-functions-lab.md
+        - name: 连接的服务
+          href: connected-services.md
+    - name: Docker
+      items:
+        - name: Docker 入门
+          href: docker-quickstart.md
+        - name: 使用 Docker Compose 创建多容器应用
+          href: docker-multi-container.md
+    - name: Unity 游戏开发
+      items:
+        - name: Unity 游戏开发
+          href: unity-tools.md
+        - name: 安装
+          href: setup-vsmac-tools-unity.md
+        - name: Unity 入门
+          href: unity-walkthrough.md
+        - name: 使用 Unity 工具
+          href: using-vsmac-tools-unity.md
+        - name: 在 Unity 中使用 .NET 4.x
+          href: /visualstudio/cross-platform/unity-scripting-upgrade?context=visualstudio/mac/context
+        - name: 更改日志
+          href: /visualstudio/cross-platform/change-log-visual-studio-tools-for-unity-mac?context=visualstudio/mac/context
+    - name: 使用 Xamarin 的移动应用
+      href: /visualstudio/mac/xamarin
+- name: 可访问性
+  items:
+    - name: 概述
+      href: accessibility.md
+    - name: 设置 IDE 辅助功能选项
+      href: accessibility-ide-options.md
+    - name: macOS 辅助工具和功能
+      items:
+        - name: 使用 macOS 辅助工具
+          href: accessibility-macos.md
+        - name: 使用键盘导航
+          href: accessibility-keyboard.md
+        - name: 使用 VoiceOver
+          href: accessibility-voiceover.md
+- name: 视频教程
+  items:
+    - name: 开始在 Visual Studio for Mac 中使用 ASP.NET Core
+      href: tutorial-aspnet-core-vsmac-getting-started.md
+    - name: 扩展现有的 ASP.NET Core Web 应用程序
+      href: tutorial-aspnet-core-vsmac-extending.md
+- name: 面向 Windows 用户的 Visual Studio for Mac
+  href: vsmac-for-windows-users.md
+- name: 疑难解答
+  items:
+    - name: 日志和异常
+      href: troubleshooting.md
+    - name: Visual Studio 客户体验改善计划
+      href: visual-studio-experience-improvement-program.md
+    - name: 报告问题
+      href: report-a-problem.md
+    - name: 疑难解答：Visual Studio for Mac 是否支持 Team Foundation 版本控制？
+      href: tf-version-control.md
+    - name: 疑难解答：我为什么看不到部分模板？
+      href: troubleshooting-no-templates.md
+    - name: 疑难解答：更新程序在检索信息时发生错误
+      href: updater-troubleshooting.md
+- name: 发行说明
+  href: /visualstudio/releasenotes/vs2019-mac-relnotes
+- name: 预览发行说明
+  href: /visualstudio/releasenotes/vs2019-mac-preview-relnotes
+- name: 示例
+  items:
+    - name: 特色示例
+      href: samples/index.yml
+    - name: 所有 ASP.NET Core 示例
+      href: /samples/browse/?products=aspnet-core
+    - name: 所有 .NET Core 示例
+      href: /samples/browse/?products=dotnet-core
+    - name: 所有 Xamarin.Forms 示例
+      href: /xamarin/xamarin-forms/samples/
+    - name: 所有 Xamarin.iOS 示例
+      href: /xamarin/ios/samples/
+    - name: 所有 Xamarin.Android 示例
+      href: /xamarin/android/samples/
+    - name: 所有 Xamarin.Mac 示例
+      href: /xamarin/mac/samples/

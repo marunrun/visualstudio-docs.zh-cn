@@ -2,34 +2,35 @@
 title: 在云中运行 TensorFlow 模型
 description: 在 Azure 深入学习 VM 中运行 tensorflow 模型
 keywords: ai, visual studio, 深入学习虚拟机
-author: lisawong19
-ms.author: liwong
-manager: routlaw
+author: jillre
+ms.author: jillfra
+manager: jillfra
+monikerRange: vs-2017
 ms.date: 11/13/2017
 ms.topic: tutorial
 ms.devlang: python
 ms.workload:
 - multiple
-ms.openlocfilehash: 9cb06220c99abb86c24808f6831cf98280133f2e
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: 6cd833a687591ba4f49e785746381f9a5d738f5e
+ms.sourcegitcommit: 9c1cecaff4d9955276eee7865b78d47679dd1e2a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75915828"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80638756"
 ---
 # <a name="train-a-tensorflow-model-in-the-cloud"></a>在云中训练 TensorFlow 模型
 
-在本教程中，我们会在 Azure [深入学习](/azure/machine-learning/data-science-virtual-machine/deep-learning-dsvm-overview)虚拟机上使用 [MNIST 数据集](http://yann.lecun.com/exdb/mnist/)训练 TensorFlow 模型。
+在本教程中，我们会在 Azure [深入学习](http://yann.lecun.com/exdb/mnist/)虚拟机上使用 [MNIST 数据集](/azure/machine-learning/data-science-virtual-machine/deep-learning-dsvm-overview)训练 TensorFlow 模型。
 
 MNIST 数据库具有包含 60,000 个示例的训练集，以及包含 10,000 个手写数字示例的测试集。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 开始之前，确保安装和配置了以下各项：
 
 ### <a name="setup-azure-deep-learning-virtual-machine"></a>设置 Azure 深入学习虚拟机
 
 > [!NOTE]
-> 将“操作系统类型”  设置为 Linux。
+> 将“操作系统类型”设置为 Linux。
 
 可以在[此处](/azure/machine-learning/data-science-virtual-machine/provision-deep-learning-dsvm)找到用于设置深入学习虚拟机的说明。
 
@@ -45,9 +46,9 @@ echo -e ". /etc/profile\n$(cat ~/.bashrc)" > ~/.bashrc
 
 ## <a name="open-project"></a>打开项目
 
-- 启动 Visual Studio，选择“文件”>“打开”>“项目/解决方案”  。
+- 启动 Visual Studio，选择“文件”>“打开”>“项目/解决方案”。
 
-- 在下载的示例存储库中选择 Tensorflow Examples 文件夹，然后打开 TensorflowExamples.sln 文件   。
+- 在下载的示例存储库中选择 Tensorflow Examples 文件夹，然后打开 TensorflowExamples.sln 文件。
 
    ![打开项目](media/tensorflow-local/open-project.png)
 
@@ -55,25 +56,25 @@ echo -e ". /etc/profile\n$(cat ~/.bashrc)" > ~/.bashrc
 
 ## <a name="add-azure-remote-vm"></a>添加 Azure 远程 VM
 
-在服务器资源管理器中，右键单击“AI 工具”下的“远程计算机”  节点，然后选择“添加...”。 输入远程计算机显示名称、IP 主机、SSH 端口、用户名和密码/密钥文件。
+在服务器资源管理器中，右键单击“AI 工具”下的“远程计算机”节点，然后选择“添加...”。 输入远程计算机显示名称、IP 主机、SSH 端口、用户名和密码/密钥文件。
 
 ![添加新远程计算机](media/tensorflow-vm/add-remote-vm.png)
 
 ## <a name="submit-job-to-azure-vm"></a>将作业提交到 Azure VM
-在“解决方案资源管理器”  中右键单击 MNIST 项目，然后选择“提交作业”  。
+在“解决方案资源管理器”中右键单击 MNIST 项目，然后选择“提交作业”。
 
 ![将作业提交到远程计算机](media/tensorflow-vm/job-submission.png)
 
 在提交窗口中：
 
-- 在“要使用的群集”  列表中，选择要将作业提交到的远程计算机（具有“rm:”前缀）。
+- 在“要使用的群集”列表中，选择要将作业提交到的远程计算机（具有“rm:”前缀）。
 
-- 输入“作业名称”  。
+- 输入“作业名称”。
 
-- 单击“提交”  。
+- 单击“提交”。
 
 ## <a name="check-status-of-job"></a>检查作业的状态
-查看作业的状态和详细信息：在“服务器资源管理器”  中展开将作业提交到的虚拟机。 双击“作业”  。
+查看作业的状态和详细信息：在“服务器资源管理器”中展开将作业提交到的虚拟机。 双击“作业”。
 
 ![作业浏览器](media/tensorflow-vm/job-browser.png)
 

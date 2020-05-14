@@ -10,10 +10,10 @@ manager: AndSter
 ms.workload:
 - multiple
 ms.openlocfilehash: 9518ffd618a6d82505feca33b37b5151a3a9f961
-ms.sourcegitcommit: aa302af53de342e75793bd05b10325939dc69b53
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75886760"
 ---
 # <a name="analyze-memory-usage-using-the-net-object-allocation-tool"></a>使用 .NET 对象分配工具分析内存使用情况
@@ -32,7 +32,7 @@ ms.locfileid: "75886760"
 > [!NOTE]
 > 启动项目被默认选为“分析目标”，但可打开“更改目标”下拉菜单，然后从可用选项中进行选择，将其更改为正在运行的进程、可执行文件、正在运行的应用和已安装的应用   。
 
-   .NET 对象分配工具当前不支持通过下拉菜单选择可执行文件。 你将必须通过 exe 项目系统才能使用该工具。 要执行此操作，请关闭当前解决方案（“文件” -> “关闭解决方案”），然后点击“文件” -> “打开项目或解决方案”-> 选择你的 .exe 文件     。
+   .NET 对象分配工具当前不支持通过下拉菜单选择可执行文件。 你将必须通过 exe 项目系统才能使用该工具。 要执行此操作，请关闭当前解决方案（“文件” **“关闭解决方案”），然后点击“文件”** “打开项目或解决方案”-> 选择你的 .exe 文件 ->     ->   。
 
 ![分析目标](../profiling/media/analysistarget.png "分析目标")
 
@@ -51,7 +51,7 @@ Allocation![](../profiling/media/allocation.png "分配")
 
 ### <a name="collection"></a>集合
 
-![集合](../profiling/media/collection.png "集合")
+![收集](../profiling/media/collection.png "集合")
 
 通过“集合”视图，可查看垃圾回收过程中收集的对象数以及保留的对象数。 此视图还提供了几个饼图，可按类型直观显示收集的对象和保留的对象。
 

@@ -1,5 +1,5 @@
 ---
-title: 调试器中的表达式 |Microsoft Docs
+title: 调试器中的表达式 |微软文档
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -28,11 +28,11 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 3999737a2fad04c9b513722ae11608574a72c410
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 95f26af1da51d4c83ae78adcb7372b32364d8a2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68158492"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79301415"
 ---
 # <a name="expressions-in-the-debugger"></a>调试器中的表达式
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -42,7 +42,7 @@ Visual Studio 调试器包括表达式计算器，当您在 **“快速监视”
  以下各节提供了有关不同语言的表达式的详细信息。  
   
 ## <a name="f-expressions-are-not-supported"></a>不支持 F# 表达式。  
- 无法识别 F# 表达式。 如果正在调试 F# 代码，你需要在向调试器窗口或对话框中输入表达式之前，将表达式转换为 C# 语法。 当把表达式从 F # 转换到 C# 时，请务必记住 C# 使用 `==` 运算符来测试相等性，而 F # 使用单个 `=`。  
+ 无法识别 F# 表达式。 如果正在调试 F# 代码，你需要在向调试器窗口或对话框中输入表达式之前，将表达式转换为 C# 语法。 当把表达式从 F# 转换到 C# 时，请务必记住 C# 使用 `==` 运算符来测试相等性，而 F# 使用单个 `=`。  
   
 ## <a name="c-expressions"></a>C++ 表达式  
  有关将上下文运算符用于 C++ 中的表达式的信息，请参阅 [上下文运算符 (C++)](../debugger/context-operator-cpp.md)。  
@@ -94,7 +94,7 @@ int main()
   
 ```  
   
-### <a name="BKMK_Using_debugger_intrinisic_functions_to_maintain_state"></a> 使用调试器内部函数来维护状态  
+### <a name="using-debugger-intrinsic-functions-to-maintain-state"></a><a name="BKMK_Using_debugger_intrinisic_functions_to_maintain_state"></a> 使用调试器内部函数来维护状态  
  利用调试器内部函数，您可以调用表达式中的某些 C/C++ 函数而不更改应用程序的状态。  
   
  调试器内部函数：  
@@ -113,7 +113,7 @@ int main()
 |**字符串比较**|strcmp、wcscmp、stricmp、_stricmp、_strcmpi、wcsicmp、_wcscmpi、_wcsnicmp、strncmp、wcsncmp、strnicmp、wcsnicmp|  
 |**字符串搜索**|strchr、wcschr、strstr、wcsstr|  
 |**Win32**|GetLastError()、TlsGetValue()|  
-|**Windows 8**|WindowsGetStringLen()、WindowsGetStringRawBuffer()<br /><br /> 这些函数要求将调试的进程运行于 Windows 8 上。 调试从 Windows 8 设备生成的转储文件还要求 Visual Studio 计算机运行的是 Windows 8。 但是，如果远程调试 Windows 8 设备，则 Visual Studio 计算机可运行 Windows 7。|  
+|**视窗 8**|WindowsGetStringLen()、WindowsGetStringRawBuffer()<br /><br /> 这些函数要求将调试的进程运行于 Windows 8 上。 调试从 Windows 8 设备生成的转储文件还要求 Visual Studio 计算机运行的是 Windows 8。 但是，如果远程调试 Windows 8 设备，则 Visual Studio 计算机可运行 Windows 7。|  
 |**杂项**|__log2<br /><br /> 返回以 2 为底指定整数的对数，并舍入到最接近的较小整数。|  
   
 ## <a name="ccli---unsupported-expressions"></a>C++/CLI - 不支持的表达式  
@@ -180,7 +180,7 @@ int main()
  不支持导入别名。  
   
 ### <a name="variable-declarations"></a>变量声明  
- 不能在调试器窗口中声明显式的新变量。 但是，可以在“即时”  窗口中分配一个新的隐式变量。 这些隐式变量的范围限于调试会话并且无法在调试器外对其进行访问。 例如，语句 `o = 5` 隐式创建一个新变量 `o` ，并向其赋予值 5。 这样的隐式变量为 **对象** 类型，除非调试器可以推断该类型。  
+ 不能在调试器窗口中声明显式的新变量。 但是，可以在“即时” **** 窗口中分配一个新的隐式变量。 这些隐式变量的范围限于调试会话并且无法在调试器外对其进行访问。 例如，语句 `o = 5` 隐式创建一个新变量 `o` ，并向其赋予值 5。 这样的隐式变量为 **对象** 类型，除非调试器可以推断该类型。  
   
 ### <a name="unsupported-keywords"></a>不受支持的关键字  
   
@@ -214,8 +214,8 @@ int main()
   
 - 命名空间或模块级的关键字，如 `End Sub` 或 `Module`。  
   
-## <a name="see-also"></a>请参阅  
- [C++ 中的格式说明符](../debugger/format-specifiers-in-cpp.md)   
- [Context Operator (C++)](../debugger/context-operator-cpp.md)   
- [C# 中的格式说明符](../debugger/format-specifiers-in-csharp.md)   
+## <a name="see-also"></a>另请参阅  
+ [C++格式指定器](../debugger/format-specifiers-in-cpp.md)   
+ [上下文运算符（C++）](../debugger/context-operator-cpp.md)   
+ [格式规格在C#](../debugger/format-specifiers-in-csharp.md)   
  [伪变量](../debugger/pseudovariables.md)

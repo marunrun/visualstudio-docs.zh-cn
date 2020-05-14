@@ -1,27 +1,27 @@
 ---
-title: IDebugComPlusSymbolProvider::IsHiddenCode | Microsoft Docs
+title: IDebugComPlus符号提供程序：隐藏代码 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IDebugComPlusSymbolProvider::IsHiddenCode
 ms.assetid: 1352c6ab-7b92-4a16-b2d2-6520b628830e
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 0fff87eff48f5d52c67bba0914654a9646697988
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: d1ede1cbd8c2a69d45a8c653aa97d0bfb618f821
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66321624"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80733662"
 ---
 # <a name="idebugcomplussymbolproviderishiddencode"></a>IDebugComPlusSymbolProvider::IsHiddenCode
-确定指定的调试程序地址处代码处于隐藏状态。
+确定指定调试器地址的代码是否隐藏。
 
 ## <a name="syntax"></a>语法
 
@@ -39,13 +39,13 @@ int IsHiddenCode(
 
 ## <a name="parameters"></a>参数
 `pAddress`\
-[in]由表示的调试地址[IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md)接口。
+[在]由[IDebugAddress 接口](../../../extensibility/debugger/reference/idebugaddress.md)表示的调试地址。
 
 ## <a name="return-value"></a>返回值
-如果代码处于隐藏状态，则返回`S_OK`; 否则为返回`S_FALSE`。
+如果代码处于隐藏状态，则`S_OK`返回 。否则，返回`S_FALSE`。
 
 ## <a name="example"></a>示例
-下面的示例演示如何实现此方法对于**CDebugSymbolProvider**对象，它公开[IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)接口。
+下面的示例演示如何为公开[IDebugComPlusSymbol提供程序](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)接口的**CDebugSymbol提供程序**对象实现此方法。
 
 ```cpp
 HRESULT CDebugSymbolProvider::IsHiddenCode(

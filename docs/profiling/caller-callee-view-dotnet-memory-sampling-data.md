@@ -12,10 +12,10 @@ monikerRange: vs-2017
 ms.workload:
 - dotnet
 ms.openlocfilehash: 50e278e858ea086c83b29ef4eebf6b48ee8e477e
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74773304"
 ---
 # <a name="callercallee-view---net-memory-sampling-data"></a>“调用方/被调用方”视图 - .NET 内存采样数据
@@ -29,7 +29,7 @@ ms.locfileid: "74773304"
 
  双击调用方或被调用方函数行，以使该行成为当前函数。
 
-|列|说明|
+|列|描述|
 |------------|-----------------|
 |**进程 ID**|分析运行的进程 ID (PID)。|
 |**进程名**|进程的名称。|

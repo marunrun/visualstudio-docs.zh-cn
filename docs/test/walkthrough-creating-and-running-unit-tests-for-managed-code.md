@@ -13,16 +13,18 @@ manager: jillfra
 ms.workload:
 - dotnet
 author: mikejo5000
-ms.openlocfilehash: b1ec115dd960799a1242a0d60bd793d671facb18
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: b68cb720a636483a0c5e8c3193142d95dbb0afcd
+ms.sourcegitcommit: 316dd2182dd56b0cbde49f0cd82e9f75baa2530f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75590704"
+ms.lasthandoff: 04/12/2020
+ms.locfileid: "81223666"
 ---
 # <a name="walkthrough-create-and-run-unit-tests-for-managed-code"></a>演练：创建并运行托管代码的单元测试
 
 本文将使用托管代码的 Microsoft 单元测试框架和 Visual Studio 测试资源管理器引导你逐步完成一系列单元测试的创建、运行和自定义  。 你将从正处于开发过程中的 C# 项目开始，创建执行该项目代码的测试，运行测试并检查结果。 然后，更改项目代码并重新运行测试。
+
+
 
 ## <a name="create-a-project-to-test"></a>创建一个项目进行测试
 
@@ -429,7 +431,7 @@ public void Debit_WhenAmountIsMoreThanBalance_ShouldThrowArgumentOutOfRange()
 
 ### <a name="retest-rewrite-and-reanalyze"></a>重测、重写和重新分析
 
-假定测试方法中存在一个 bug 且 `Debit` 方法没有引发 <xref:System.ArgumentOutOfRangeException>，也没有输出有关该异常的正确消息。 目前，测试方法无法处理这种情况。 如果 `debitAmount` 值有效（即小于余额，但大于零），则不会捕获到异常，因此永远不会触发该断言。 但是测试方法通过了。 这样并不好，因为如果未引发异常，则希望测试方法失败。
+目前，测试方法不会处理它原本应该处理的所有情况。 如果所测试的方法 `Debit` 在 `debitAmount` 大于余额（或小于零）时未能引发 <xref:System.ArgumentOutOfRangeException>，则该测试方法通过。 这样并不好，因为如果未引发异常，则希望测试方法失败。
 
 这是测试方法中的一个 bug。 要解决该问题，在测试方法末尾添加 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.Fail%2A> 断言，处理未引发异常的情况。
 

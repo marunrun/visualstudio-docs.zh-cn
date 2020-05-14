@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 60789dece03487f3f3a6dfd71407ec03bab6700e
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75589872"
 ---
 # <a name="work-with-3d-models"></a>处理三维模型
@@ -29,7 +29,7 @@ ms.locfileid: "75589872"
 
 ## <a name="related-topics"></a>相关主题
 
-|Title|描述|
+|标题|说明|
 |-----------|-----------------|
 |[模型编辑器](../designers/model-editor.md)|描述如何使用模型编辑器处理三维模型。|
 |[模型编辑器示例](../designers/how-to-create-a-basic-3-d-model.md)|提供演示如何使用模型编辑器执行常见三维模型任务的主题的链接。|

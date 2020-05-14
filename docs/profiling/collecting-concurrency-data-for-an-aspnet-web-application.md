@@ -13,10 +13,10 @@ monikerRange: vs-2017
 ms.workload:
 - aspnet
 ms.openlocfilehash: 4941e9fde651e9274eeafeffc4aefa27483f3730
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74779657"
 ---
 # <a name="collect-concurrency-data-for-an-aspnet-web-application-using-the-profiler-command-line"></a>使用探查器命令行收集 ASP.NET Web 应用程序的并发数据
@@ -28,7 +28,7 @@ ms.locfileid: "74779657"
 |----------|---------------------|
 |将探查器附加到正在运行的 ASP.NET 应用程序|-   [如何：将探查器附加到 ASP.NET 应用程序以收集并发数据](../profiling/how-to-attach-the-profiler-to-an-aspnet-web-application-to-collect-concurrency-data-by-using-the-command-line.md)|
 
-## <a name="reference"></a>参考
+## <a name="reference"></a>引用
 - [命令行分析工具参考](../profiling/command-line-profiling-tools-reference.md)
 
 ## <a name="related-tasks"></a>相关任务
@@ -53,5 +53,5 @@ ms.locfileid: "74779657"
 
 - [并发可视化工具](../profiling/concurrency-visualizer.md)
 
-## <a name="reference"></a>参考
+## <a name="reference"></a>引用
 - [命令行分析工具参考](../profiling/command-line-profiling-tools-reference.md)

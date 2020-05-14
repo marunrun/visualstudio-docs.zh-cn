@@ -1,5 +1,5 @@
 ---
-title: IDebugProcessEx2 | Microsoft Docs
+title: IDebugProcessEx2 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProcessEx2 interface
 ms.assetid: 44e309ba-1d6f-499b-aa7e-9b34858a6d57
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5c27a03a09a6073ebab8d7a2dd5f60218066d474
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 743dd1aa72d9b8db6b848618c8a2ad6c8c8ecaaf
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66311605"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80723339"
 ---
 # <a name="idebugprocessex2"></a>IDebugProcessEx2
-此接口允许的会话调试管理器 (SDM) 通知过程将附加到或与进程分离。
+此接口允许会话调试管理器 （SDM） 通知它附加到的进程或从进程分离的进程。
 
 ## <a name="syntax"></a>语法
 
@@ -28,37 +28,37 @@ ms.locfileid: "66311605"
 IDebugProcessEx2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>实施者的说明
- 自定义端口提供程序在与相同的对象上实现此接口[IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)接口以便：
+## <a name="notes-for-implementers"></a>实施者说明
+ 自定义端口供应商在[IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)接口的同一对象上实现此接口，以便：
 
-- 支持跟踪的会话连接到的进程
+- 支持跟踪连接到进程的会话
 
-- 支持自动附加跨多个调试引擎
+- 支持跨多个调试引擎自动附加
 
-  如果还选择能自定义端口供应商可以实现此接口。
+  如果选择，自定义端口供应商可以实现此接口。
 
-## <a name="notes-for-callers"></a>调用方的说明
+## <a name="notes-for-callers"></a>呼叫者备注
 
-- SDM 调用[QueryInterface](/cpp/atl/queryinterface)上`IDebugProcess2`接口，以获得此接口。
+- SDM 在`IDebugProcess2`接口上调用[查询接口](/cpp/atl/queryinterface)以获取此接口。
 
 ## <a name="methods-in-vtable-order"></a>Vtable 顺序中的方法
- 下表显示的方法`IDebugProcessEx2`。
+ 下表显示了 的方法`IDebugProcessEx2`。
 
 |方法|描述|
 |------------|-----------------|
-|[附加](../../../extensibility/debugger/reference/idebugprocessex2-attach.md)|通知会话现在正在调试的进程的进程。|
-|[分离](../../../extensibility/debugger/reference/idebugprocessex2-detach.md)|通知该过程在会话不再调试进程。|
-|[AddImplicitProgramNodes](../../../extensibility/debugger/reference/idebugprocessex2-addimplicitprogramnodes.md)|将添加一系列的调试引擎的程序节点。|
+|[Attach](../../../extensibility/debugger/reference/idebugprocessex2-attach.md)|通知进程会话正在调试进程。|
+|[Detach](../../../extensibility/debugger/reference/idebugprocessex2-detach.md)|通知进程会话不再调试进程。|
+|[AddImplicitProgramNodes](../../../extensibility/debugger/reference/idebugprocessex2-addimplicitprogramnodes.md)|为调试引擎列表添加程序节点。|
 
 ## <a name="remarks"></a>备注
- 此接口是专用 SDM 和进程之间。
+ 此接口在 SDM 和进程之间是私有的。
 
 ## <a name="requirements"></a>要求
- 标头：Portpriv.h
+ 标题： 波特普里夫.h
 
- 命名空间:Microsoft.VisualStudio.Debugger.Interop
+ 命名空间：微软.VisualStudio.调试器.互通
 
- 程序集：Microsoft.VisualStudio.Debugger.Interop.dll
+ 程序集：微软.VisualStudio.调试器.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [核心接口](../../../extensibility/debugger/reference/core-interfaces.md)

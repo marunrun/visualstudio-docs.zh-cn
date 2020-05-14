@@ -8,10 +8,10 @@ ms.workload:
 - multiple
 author: mikejo5000
 ms.openlocfilehash: e45df63f36947b5f6f0aad77bb8eebcab4aca731
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75585556"
 ---
 # <a name="use-the-mstest-framework-in-unit-tests"></a>在单元测试中使用 MSTest 框架
@@ -133,6 +133,6 @@ ClassInitialize 和 ClassCleanup 恰好在加载类之后以及恰好在卸载�
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateType>
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting> 参考文档

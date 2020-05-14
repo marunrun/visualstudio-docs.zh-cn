@@ -12,10 +12,10 @@ ms.workload:
 - multiple
 author: mikejo5000
 ms.openlocfilehash: c36916c79bd783ed2c6ce960b068e85478b9971d
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75592043"
 ---
 # <a name="use-assert-classes-for-unit-testing"></a>使用 Assert 类进行单元测试
@@ -47,6 +47,6 @@ ms.locfileid: "75592043"
 
 要验证期望由应用程序代码中的方法引发的异常确实已引发，请使用 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.ThrowsException%2A?displayProperty=nameWithType> 方法。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [单元测试代码](../test/unit-test-your-code.md)

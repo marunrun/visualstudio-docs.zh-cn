@@ -10,16 +10,16 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 1bd6462f9159a2926c6dfa45dcadff860cce9ca1
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74778929"
 ---
 # <a name="how-to-filter-reports-from-the-command-line"></a>如何：从命令行筛选报告
 通过使用 VSPerfReport  命令选项，可以根据分析数据文件的特定时间段筛选报告，或将数据限制到一个或多个进程或线程。 有关此命令的详细信息，请参阅 [VSPerfReport](../profiling/vsperfreport.md)。
 
-|选项|说明|
+|选项|描述|
 |-------------|-----------------|
 |**StartTime:** [*Value*]|仅显示此值（以毫秒为单位）之后收集的数据。|
 |**EndTime:** [*Value*]|仅显示此值（以毫秒为单位）之前收集的数据。|

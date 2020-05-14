@@ -12,10 +12,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 0289ff0d4a20eacc4f6801d9300d39df594bc79e
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75591228"
 ---
 # <a name="analyzing-load-test-virtual-user-activity-in-the-details-view-of-the-load-test-analyzer"></a>在负载测试分析器的详细信息视图中分析负载测试虚拟用户活动
@@ -55,11 +55,11 @@ ms.locfileid: "75591228"
 
 |任务|关联主题|
 |-|-|
-|**运行负载测试：** 创建负载测试并将其配置为启用虚拟用户活动数据收集后，必须运行该测试，直到全部完成后才能查看其“虚拟用户活动图”  。||
-|**查看包含虚拟用户活动数据的负载测试结果：** 创建、配置并运行完负载测试后，可以使用虚拟用户活动图查看“虚拟用户活动图”  。|-   [分析负载测试结果](../test/analyze-load-test-results-using-the-load-test-analyzer.md)<br />-   [如何：分析虚拟用户在负载测试期间的操作](../test/how-to-analyze-virtual-user-activity-during-a-load-test.md)|
-|**隔离负载测试中的性能问题：** 可以使用“虚拟用户活动图”来帮助隔离负载测试中的性能问题  。|-   [演练：使用虚拟用户活动图隔离问题](../test/walkthrough-use-the-virtual-user-activity-chart-to-isolate-issues.md)|
+|运行负载测试：创建负载测试并将其配置为启用虚拟用户活动数据收集后，必须运行该测试，直到全部完成后才能查看其虚拟用户活动图   。||
+|查看包含虚拟用户活动数据的负载测试结果：创建、配置并运行完负载测试后，可以使用虚拟用户活动图查看虚拟用户活动数据   。|-   [分析负载测试结果](../test/analyze-load-test-results-using-the-load-test-analyzer.md)<br />-   [如何：分析虚拟用户在负载测试期间的操作](../test/how-to-analyze-virtual-user-activity-during-a-load-test.md)|
+|隔离负载测试中的性能问题：可以使用虚拟用户活动图来帮助隔离负载测试中的性能问题   。|-   [演练：使用虚拟用户活动图隔离问题](../test/walkthrough-use-the-virtual-user-activity-chart-to-isolate-issues.md)|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [分析负载测试结果](../test/analyze-load-test-results-using-the-load-test-analyzer.md)
 - [在表视图中分析负载测试结果和错误](../test/analyze-load-test-results-and-errors-in-the-tables-view.md)

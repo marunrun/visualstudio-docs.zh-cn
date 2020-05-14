@@ -1,5 +1,5 @@
 ---
-title: IDebugBinder3::GetExceptionObjectAndType |Microsoft Docs
+title: IDebugBinder3：：获取异常对象和类型 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugBinder3::GetExceptionObjectAndType method
 ms.assetid: 2a313fe1-4ee1-4f01-af86-382d6c661a8f
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 29aa44bdd67234dec4b560ad41be8c677e4356e3
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: e25a0f7b4e1713a072359f1efdd962f36c50b774
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66327080"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80735748"
 ---
 # <a name="idebugbinder3getexceptionobjectandtype"></a>IDebugBinder3::GetExceptionObjectAndType
-如果有，则此方法检索与对象关联的异常。
+此方法检索与对象关联的异常（如果有）。
 
 ## <a name="syntax"></a>语法
 
@@ -43,16 +43,16 @@ int GetExceptionObjectAndType(
 
 ## <a name="parameters"></a>参数
 `ppException`\
-[out]返回表示异常的对象。
+[出]返回表示异常的对象。
 
 `ppField`\
-[out]返回表示可能导致的异常 （可能为 null 值） 的特定字段的对象。
+[出]返回表示可能导致异常的特定字段的对象（这可能是空值）。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，返回`S_OK`;否则，返回错误代码。
 
 > [!NOTE]
-> 若要验证是否存在异常，请检查返回的值`ppException`： 如果它是一个 null 值，则任何异常不是与此对象相关联。
+> 要验证是否存在异常，请检查`ppException`由 返回的值：如果是 null 值，则没有异常与此对象相关联。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md)

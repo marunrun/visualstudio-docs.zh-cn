@@ -1,27 +1,27 @@
 ---
-title: IDebugSettingsCallback2::GetEELocalObject | Microsoft Docs
+title: IDebugsettings回调2：：获取本地对象 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IDebugSettingsCallback2::GetEELocalObject
 ms.assetid: e69a3469-a049-420c-b918-c48a1e7b9baf
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 561f6727ca0273d5d59434a7bfdd0cdc00533754
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: fc205392f325a014bfe07b02b64cd8b0050ce079
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66322195"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80720068"
 ---
 # <a name="idebugsettingscallback2geteelocalobject"></a>IDebugSettingsCallback2::GetEELocalObject
-检索给定的指标名称的表达式计算器本地对象。
+检索给定指标名称的表达式赋值器本地对象。
 
 ## <a name="syntax"></a>语法
 
@@ -45,19 +45,19 @@ private int GetEELocalObject(
 
 ## <a name="parameters"></a>参数
 `guidLang`\
-[in]编程语言的唯一标识符。
+[在]编程语言的唯一标识符。
 
 `guidVendor`\
-[in]供应商的唯一标识符。
+[在]供应商的唯一标识符。
 
 `pszMetric`\
-[in]指标的名称。
+[在]指标的名称。
 
 `ppUnk`\
-[out]返回的表达式计算器本地对象。
+[出]返回表达式赋值器本地对象。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，返回`S_OK`;否则，返回错误代码。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugSettingsCallback2](../../../extensibility/debugger/reference/idebugsettingscallback2.md)

@@ -1,27 +1,27 @@
 ---
-title: GUID_ARRAY | Microsoft Docs
+title: GUID_ARRAY |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - GUID_ARRAY structure
 ms.assetid: 9e12500c-2c1c-49b1-a0ba-e08366c97eb8
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: d53413ee56700fe39470d3bbc3229f4b8b668373
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: e163674b5622146ef1a270920dc7458dce2e3993
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66317530"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80736640"
 ---
-# <a name="guidarray"></a>GUID_ARRAY
-介绍可用的调试引擎的唯一标识符的数组。
+# <a name="guid_array"></a>GUID_ARRAY
+描述可用调试引擎的唯一标识符数组。
 
 ## <a name="syntax"></a>语法
 
@@ -43,20 +43,20 @@ public struct GUID_ARRAY
 
 ## <a name="members"></a>成员
 `dwCount`\
-数组中的唯一标识符的数量。
+数组中的唯一标识符数。
 
 `Members`\
-数组，其中包含唯一标识符。
+包含唯一标识符的数组。
 
 ## <a name="remarks"></a>备注
-返回此结构[GetEngineFilter](../../../extensibility/debugger/reference/idebugprocess3-getenginefilter.md)方法。
+此结构由[GetEngineFilter](../../../extensibility/debugger/reference/idebugprocess3-getenginefilter.md)方法返回。
 
 ## <a name="requirements"></a>要求
-标头：Msdbg.h
+标题： Msdbg.h
 
-命名空间:Microsoft.VisualStudio.Debugger.Interop
+命名空间：微软.VisualStudio.调试器.互通
 
-程序集：Microsoft.VisualStudio.Debugger.Interop.dll
+程序集：微软.VisualStudio.调试器.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [结构和联合](../../../extensibility/debugger/reference/structures-and-unions.md)

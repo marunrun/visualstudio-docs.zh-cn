@@ -13,10 +13,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 3c633e12b2e0bf157ffd94ef06a5898fdc3ec830
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74776340"
 ---
 # <a name="how-to-choose-collection-methods"></a>如何：选择收集方法
@@ -90,7 +90,7 @@ Visual Studio 分析工具支持三种收集性能数据的方法：采样、检
 
 3. 单击“并发”  。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [配置性能会话](../profiling/configuring-performance-sessions.md)
 [了解采样数据值](../profiling/understanding-sampling-data-values.md)

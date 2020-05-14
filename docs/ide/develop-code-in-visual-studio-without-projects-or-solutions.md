@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: d7a9459868d569a7466dccf92e4b548c0500bf80
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75596289"
 ---
 # <a name="develop-code-in-visual-studio-without-projects-or-solutions"></a>在 Visual Studio 中开发代码而无需创建项目或解决方案
@@ -93,7 +93,7 @@ ms.locfileid: "75596289"
 
 如果代码库包含 Python 或 JavaScript 代码，则无需配置任何 .json  文件，但必须安装相应的工作负载。 还必须配置启动脚本：
 
-1. 通过选择“工具” > “获取工具和功能”  ，或者通过关闭 Visual Studio 并运行 Visual Studio 安装程序来安装 [Node.js 开发](https://visualstudio.microsoft.com/vs/node-js/)或 [Python 开发](https://visualstudio.microsoft.com/vs/python/)工作负载  。
+1. 通过选择“工具”[“获取工具和功能”](https://visualstudio.microsoft.com/vs/node-js/)[，或者通过关闭 Visual Studio 并运行 Visual Studio 安装程序来安装 ](https://visualstudio.microsoft.com/vs/python/)Node.js 开发**或** Python 开发 > 工作负载  。
 
    ![Node.js 和 Python 开发工作负载](media/python_nodejs_workloads.png)
 
@@ -115,7 +115,7 @@ ms.locfileid: "75596289"
 
 ![“开始”按钮上的项目](media/customize-start-button-project.png)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [自定义生成和调试任务](../ide/customize-build-and-debug-tasks-in-visual-studio.md)
 - [C++ 的打开文件夹项目](/cpp/build/open-folder-projects-cpp)

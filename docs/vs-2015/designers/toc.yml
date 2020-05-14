@@ -38,7 +38,7 @@
               items:
                 - name: 键盘快捷方式和修改键
                   href: keyboard-shortcuts-and-modifier-keys-in-blend.md
-                - name: 键盘快捷键
+                - name: 键盘快捷方式
                   href: keyboard-shortcuts-in-blend.md
                 - name: 美工板修改键
                   href: artboard-modifier-keys-in-blend.md
@@ -52,9 +52,9 @@
           href: keyboard-shortcuts-for-xaml-designer.md
         - name: 在 XAML 设计器中调试或禁用项目代码
           href: debugging-or-disabling-project-code-in-xaml-designer.md
-    - name: 使用 Windows Presentation Foundation 创建现代桌面应用程序
+    - name: 使用 Windows Presentation Foundation 创建新式桌面应用程序
       items:
-        - name: 使用 Windows Presentation Foundation 创建现代桌面应用程序
+        - name: 使用 Windows Presentation Foundation 创建新式桌面应用程序
           href: create-modern-desktop-applications-with-windows-presentation-foundation.md
         - name: WPF 入门
           items:
@@ -88,13 +88,13 @@
                       items:
                         - name: XElement 类动态属性
                           href: xelement-class-dynamic-properties.md
-                        - name: 特性
+                        - name: Attribute
                           href: attribute-xelement-dynamic-property.md
                         - name: 元素
                           href: element-xelement-dynamic-property.md
                         - name: 元素
                           href: elements-xelement-dynamic-property.md
-                        - name: 子代
+                        - name: Descendants
                           href: descendants-xelement-dynamic-property.md
                         - name: 值
                           href: value-xelement-dynamic-property.md

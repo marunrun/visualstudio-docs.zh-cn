@@ -19,10 +19,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 793500faf217c74772506b4b7394d926447ffd40
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75585292"
 ---
 # <a name="miscellaneous-files"></a>杂项文件
@@ -48,7 +48,7 @@ ms.locfileid: "75585292"
 
 可以设置“杂项文件”文件夹的显示选项，以便即使未打开任何杂项文件时也显示该文件夹  。 解决方案文件不永久管理杂项文件列表。 它使用一项可选功能，该功能使它记住每个用户最近使用过 (MRU) 的文件列表。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在 Visual Studio 中开发代码而无需项目或解决方案](../develop-code-in-visual-studio-without-projects-or-solutions.md)
 - [解决方案和项目](../../ide/solutions-and-projects-in-visual-studio.md)

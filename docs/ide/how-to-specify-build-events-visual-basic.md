@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 33cf9cadc8fbf091fb213926fb25b232d14dc0d7
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "76115108"
 ---
 # <a name="how-to-specify-build-events-visual-basic"></a>如何：指定生成事件 (Visual Basic)
@@ -67,7 +67,7 @@ Visual Basic 中的生成事件可用于运行脚本、宏或用作作为编译�
 
 2. 在“新建项目”  对话框的“Visual Basic”  节点中，依次选择“Windows”  、“控制台应用程序”  模板。 将项目命名为 `ChangeOSVersionVB`。
 
-3. 在 Module1.vb 中，将以下行添加到文件顶部的其他 `Imports` 语句中  ：
+3. 在 Module1.vb 中，将以下行添加到文件顶部的其他  *语句中*`Imports`：
 
    ```vb
    Imports System.Xml
@@ -116,7 +116,7 @@ Visual Basic 中的生成事件可用于运行脚本、宏或用作作为编译�
    End Sub
    ```
 
-   此命令采用两个参数。 第一个参数是应用程序清单的路径（即生成进程在其中创建清单的文件夹，通常为 \<ProjectName>.publish  ）。 第二个参数是新的操作系统版本。
+   此命令采用两个参数。 第一个参数是应用程序清单的路径（即生成进程在其中创建清单的文件夹，通常为 *ProjectName>.publish\<* ）。 第二个参数是新的操作系统版本。
 
 5. 在 **“生成”** 菜单上，单击 **“生成解决方案”** 。
 
@@ -163,9 +163,9 @@ Visual Basic 中的生成事件可用于运行脚本、宏或用作作为编译�
     <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
     ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [项目设计器的“编译”页 (Visual Basic)](../ide/reference/compile-page-project-designer-visual-basic.md)
+- [“项目设计器”->“编译”页 (Visual Basic)](../ide/reference/compile-page-project-designer-visual-basic.md)
 - [项目设计器的“发布”页](../ide/reference/publish-page-project-designer.md)
 - [预生成事件/生成后事件命令行对话框](../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md)
 - [如何：指定生成事件 (C#)](../ide/how-to-specify-build-events-csharp.md)

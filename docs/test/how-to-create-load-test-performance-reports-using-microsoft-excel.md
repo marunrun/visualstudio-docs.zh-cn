@@ -10,10 +10,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 8134d2652c1654a65ac303838bd1209a5d061bd0
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75589066"
 ---
 # <a name="how-to-create-load-test-performance-reports-using-microsoft-excel"></a>如何：使用 Microsoft Excel 创建负载测试性能报告
@@ -148,6 +148,6 @@ ms.locfileid: "75589066"
 
 负载测试结果和报告包含的潜在敏感信息可用于生成针对你的计算机或网络的攻击。 负载测试结果和报告包含计算机名称和连接字符串。 在与他人共享负载测试报告时应注意这一点。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [报告负载测试结果以进行测试比较或趋势分析](../test/compare-load-test-results.md)

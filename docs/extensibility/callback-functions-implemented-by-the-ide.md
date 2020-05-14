@@ -1,48 +1,48 @@
 ---
-title: 通过 IDE 实现的回调函数 |Microsoft Docs
+title: IDE 实现的回调功能 |微软文档
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - source control plug-ins, callback functions
 - callback functions, source control plug-ins
 ms.assetid: 4a8833f0-6ac0-4ea7-9400-8275aa991468
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: dff6ee0a81472ea556aaca478a2ff33db93fe871
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 666486f5b800707a4467a129abeed7a13306f10a
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66321172"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80739890"
 ---
-# <a name="callback-functions-implemented-by-the-ide"></a>通过 IDE 实现的回调函数
-为了使与集成为尽可能，并提供了统一的最终用户体验，无缝集成的开发环境 (IDE) 的源代码管理插件可以使用通过 IDE 实现的回调函数。 该插件可调用这些函数在将信息传递到 IDE; 源代码管理操作期间的适当时间IDE 可以显示此信息作为其本机用户界面中的嵌入元素。 用户必须在此方案中比如果插件，则使用自己的 UI 不太零碎的体验。
+# <a name="callback-functions-implemented-by-the-ide"></a>IDE 实现的回调功能
+为了使与集成开发环境 （IDE） 的集成尽可能无缝，并提供统一的最终用户体验，源代码管理插件可以使用 IDE 实现的回调功能。 插件可以在源代码管理操作期间的适当时间调用这些函数，以将信息传递给 IDE;然后，IDE 可以将其本地 UI 中的嵌入元素显示此信息。 与插件使用其自己的 UI 相比，用户在此方案中具有较少碎片化的体验。
 
- 必需的标头文件是*scc.h*。 默认位置是 *\Program Files\VSIP 8.0\EnvSDK\common\inc\\* 。 它也是已在源控件插件示例的 VSIP 文件夹 *\Program Files\VSIP 8.0\MSSCCI\\* 。
+ 所需的头文件是*scc.h*。 默认位置是 *[程序文件]VSIP 8.0\EnvSDK_common_inc\\*。 它还在 VSIP 文件夹中，该文件夹在 *[程序文件]VSIP 8.0_MSSCCI\\*处具有源代码管理插件示例。
 
-## <a name="in-this-section"></a>本节内容
-- [LPTEXTOUTPROC](../extensibility/lptextoutproc.md)描述使用的回调函数[SccOpenProject](../extensibility/sccopenproject-function.md)以显示从源代码管理插件通过 IDE 的消息。
+## <a name="in-this-section"></a>在本节中
+- [LPTEXTOUTPROC](../extensibility/lptextoutproc.md)描述[SccOpenProject](../extensibility/sccopenproject-function.md)用于通过 IDE 显示来自源代码管理插件的消息的回调功能。
 
-- [POPLISTFUNC](../extensibility/poplistfunc.md)描述使用的回调函数[SccPopulateList](../extensibility/sccpopulatelist-function.md) IDE 不具有完全访问仅向源代码管理插件，例如，完整的列表提供的信息版本控制下的文件。
+- [POPLISTFUNC](../extensibility/poplistfunc.md)描述[SccPopulateList](../extensibility/sccpopulatelist-function.md)在 IDE 无法完全访问仅对源代码管理插件可用的信息（如版本控制下的文件的完整列表）时使用的回调功能。
 
-- [QUERYCHANGESFUNC](../extensibility/querychangesfunc.md)描述使用的回调函数[SccQueryChanges](../extensibility/sccquerychanges-function.md)操作。
+- [查询更改](../extensibility/querychangesfunc.md)描述[SccQuery 更改](../extensibility/sccquerychanges-function.md)操作使用的回调功能。
 
-- [POPDIRLISTFUNC](../extensibility/popdirlistfunc.md)描述使用的回调函数[SccPopulateDirList](../extensibility/sccpopulatedirlist-function.md)操作。
+- [波普迪利斯芬奇](../extensibility/popdirlistfunc.md)描述[SccPopulateDirList](../extensibility/sccpopulatedirlist-function.md)操作使用的回调函数。
 
-- [OPTNAMECHANGEPFN](../extensibility/optnamechangepfn.md)介绍了通过调用设置的回调函数[SccSetOption](../extensibility/sccsetoption-function.md)启用源代码管理插件通信名称更改回 IDE。
+- [OPTNAMECHANGEPFN](../extensibility/optnamechangepfn.md)描述对[SccSetOption](../extensibility/sccsetoption-function.md)的调用设置的回调功能，该调用使源代码管理插件能够将名称更改传回 IDE。
 
 ## <a name="related-sections"></a>相关章节
-- [SccOpenProject](../extensibility/sccopenproject-function.md)打开一个项目。
+- [SccOpen项目](../extensibility/sccopenproject-function.md)打开项目。
 
-- [SccPopulateList](../extensibility/sccpopulatelist-function.md)检查以了解其当前状态的文件的列表。 此外，使用`pfnPopulate`函数，以通知调用方，当文件不匹配的条件时`nCommand`。
+- [Scc填充列表](../extensibility/sccpopulatelist-function.md)检查文件列表的当前状态。 此外，当文件与`pfnPopulate`的条件`nCommand`不匹配时，使用 函数通知调用方。
 
-- [SccPopulateDirList](../extensibility/sccpopulatedirlist-function.md)检查中一个项目或项目源代码管理下的目录和文件的列表。 找到每个目录和文件名称传递给回调函数。
+- [SccpopulateDirlist](../extensibility/sccpopulatedirlist-function.md)检查受源代码管理的项目或项目中的目录和文件的列表。 找到的每个目录和文件名都传递给回调函数。
 
-- [SccQueryChanges](../extensibility/sccquerychanges-function.md)检查所做的文件列表的名称更改。 每个文件名传递给回调函数以及将其更改状态。
+- [SccQuery 更改](../extensibility/sccquerychanges-function.md)检查对文件列表所做的名称更改。 每个文件名都传递给回调函数及其更改状态。
 
-- [SccSetOption](../extensibility/sccsetoption-function.md)设置各种选项。 每个选项开始`SCC_OPT_xxx`并具有其自己定义的值集。
+- [SccSetOption](../extensibility/sccsetoption-function.md)设置各种选项。 每个选项都从`SCC_OPT_xxx`并有自己的定义值集开始。
 
-- [源代码管理插件](../extensibility/source-control-plug-ins.md)描述源控件插件 SDK 的参考部分的内容。
+- [源代码管理插件](../extensibility/source-control-plug-ins.md)描述源代码管理插件 SDK 的参考部分的内容。

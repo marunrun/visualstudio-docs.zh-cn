@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 5bb2b296d8728587c9aa3c22b7a670d89612eff1
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75596419"
 ---
 # <a name="upgrade-devenvexe"></a>/Upgrade (devenv.exe)
@@ -29,7 +29,7 @@ ms.locfileid: "75596419"
 devenv {SolutionFile|ProjectFile} /Upgrade [/Out OutputFilename]
 ```
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
 
 - SolutionFile 
 
@@ -59,6 +59,6 @@ devenv {SolutionFile|ProjectFile} /Upgrade [/Out OutputFilename]
 devenv "%USERPROFILE%\source\repos\MyProject\MyProject.sln" /upgrade
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Devenv 命令行开关](../../ide/reference/devenv-command-line-switches.md)

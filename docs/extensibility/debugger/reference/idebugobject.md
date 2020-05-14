@@ -1,5 +1,5 @@
 ---
-title: IDebugObject | Microsoft Docs
+title: IDebugObject |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugObject interface
 ms.assetid: 05cd8bf4-c9ee-4b49-b782-2263c33067d6
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 97fd6c328b15c8e41dbbc2b4e45bfc4285b4273f
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 6801176964a47646f03091131e1be89cf63c97f8
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66319030"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80726311"
 ---
 # <a name="idebugobject"></a>IDebugObject
 > [!IMPORTANT]
-> 在 Visual Studio 2015 中，这种方式实现表达式计算器已弃用。 有关实现 CLR 表达式计算器的信息，请参阅[CLR 表达式计算器](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators)并[托管表达式计算器示例](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)。
+> 在 Visual Studio 2015 中，这种实现表达式赋值器的方式被弃用。 有关实现 CLR 表达式赋值器的信息，请参阅[CLR 表达式赋值器](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators)和[托管表达式赋值器示例](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)。
 
- 此接口表示联编程序创建要封装的符号和表达式的值的对象。
+ 此接口表示活页夹为封装符号和表达式的值而创建的对象。
 
 ## <a name="syntax"></a>语法
 
@@ -31,39 +31,39 @@ ms.locfileid: "66319030"
 IDebugObject : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>实施者的说明
- 表达式计算器实现此接口表示的对象。
+## <a name="notes-for-implementers"></a>实施者说明
+ 表达式赋值器实现此接口以表示对象。
 
-## <a name="notes-for-callers"></a>调用方的说明
- 此接口是表达式计算器分析表达式中使用的所有对象的基类。 返回通过调用[绑定](../../../extensibility/debugger/reference/idebugbinder-bind.md)方法。 [QueryInterface](/cpp/atl/queryinterface)从此接口获取更多专用的接口。
+## <a name="notes-for-callers"></a>呼叫者备注
+ 此接口是表达式赋值器在解析表达式中使用的所有对象的基类。 它通过调用[Bind](../../../extensibility/debugger/reference/idebugbinder-bind.md)方法返回。 [查询接口](/cpp/atl/queryinterface)从此接口获取更专业的接口。
 
 ## <a name="methods-in-vtable-order"></a>Vtable 顺序中的方法
- 下表显示的方法`IDebugObject`。
+ 下表显示了 的方法`IDebugObject`。
 
 |方法|描述|
 |------------|-----------------|
 |[GetSize](../../../extensibility/debugger/reference/idebugobject-getsize.md)|获取对象的大小。|
-|[GetValue](../../../extensibility/debugger/reference/idebugobject-getvalue.md)|获取对象的值作为一系列连续的字节数。|
-|[SetValue](../../../extensibility/debugger/reference/idebugobject-setvalue.md)|设置对象的值从一系列连续的字节数。|
+|[GetValue](../../../extensibility/debugger/reference/idebugobject-getvalue.md)|获取对象的值作为连续字节系列。|
+|[SetValue](../../../extensibility/debugger/reference/idebugobject-setvalue.md)|设置连续字节序列中对象的值。|
 |[SetReferenceValue](../../../extensibility/debugger/reference/idebugobject-setreferencevalue.md)|设置此对象的引用值。|
-|[GetMemoryContext](../../../extensibility/debugger/reference/idebugobject-getmemorycontext.md)|获取表示对象的值的地址的内存上下文。|
-|[GetManagedDebugObject](../../../extensibility/debugger/reference/idebugobject-getmanageddebugobject.md)|调试引擎的地址空间中创建托管对象的副本。|
-|[IsNullReference](../../../extensibility/debugger/reference/idebugobject-isnullreference.md)|测试此对象是否为 null 引用。|
-|[IsEqual](../../../extensibility/debugger/reference/idebugobject-isequal.md)|与此对象进行比较。|
-|[IsReadOnly](../../../extensibility/debugger/reference/idebugobject-isreadonly.md)|确定此对象是只读的。|
-|[IsProxy](../../../extensibility/debugger/reference/idebugobject-isproxy.md)|确定对象是否透明代理。|
+|[GetMemoryContext](../../../extensibility/debugger/reference/idebugobject-getmemorycontext.md)|获取表示对象值地址的内存上下文。|
+|[GetManagedDebugObject](../../../extensibility/debugger/reference/idebugobject-getmanageddebugobject.md)|在调试引擎的地址空间中创建托管对象的副本。|
+|[IsNullReference](../../../extensibility/debugger/reference/idebugobject-isnullreference.md)|测试此对象是否为空引用。|
+|[IsEqual](../../../extensibility/debugger/reference/idebugobject-isequal.md)|将对象与此对象进行比较。|
+|[仅阅读](../../../extensibility/debugger/reference/idebugobject-isreadonly.md)|确定此对象是否为只读对象。|
+|[IsProxy](../../../extensibility/debugger/reference/idebugobject-isproxy.md)|确定对象是否为透明代理。|
 
 ## <a name="remarks"></a>备注
- 表达式计算器使用此接口作为基类，用于表示分析树中的对象。
+ 表达式赋值器使用此接口作为基类来表示解析树中的对象。
 
 ## <a name="requirements"></a>要求
- 标头： ee.h
+ 标题： ee.h
 
- 命名空间:Microsoft.VisualStudio.Debugger.Interop
+ 命名空间：微软.VisualStudio.调试器.互通
 
- 程序集：Microsoft.VisualStudio.Debugger.Interop.dll
+ 程序集：微软.VisualStudio.调试器.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [表达式计算接口](../../../extensibility/debugger/reference/expression-evaluation-interfaces.md)
 - [GetElement](../../../extensibility/debugger/reference/idebugarrayobject-getelement.md)
-- [Bind](../../../extensibility/debugger/reference/idebugbinder-bind.md)
+- [绑定](../../../extensibility/debugger/reference/idebugbinder-bind.md)

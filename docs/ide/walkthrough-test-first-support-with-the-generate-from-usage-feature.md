@@ -14,15 +14,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 9bf9a7e613a482167a01739320282f9ba8fdea26
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75596887"
 ---
-# <a name="walkthrough-test-first-development-with-the-generate-from-usage-feature"></a>演练：带有“使用时生成”功能的测试先行开发
+# <a name="walkthrough-test-first-development-with-the-generate-from-usage-feature"></a>演练：带有“使用时生成”功能的测试优先开发
 
-本主题演示如何利用可支持测试优先开发的[使用时生成](../ide/visual-csharp-intellisense.md#generate-from-usage)功能。
+本主题演示如何利用可支持测试优先开发的 [Generate From Usage](../ide/visual-csharp-intellisense.md#generate-from-usage) 功能。
 
  *测试优先的开发* 是一种软件设计的方法，其中首先基于产品规格编写单元测试，然后编写测试成功所需的源代码。 首次在测试用例中引用新类型和成员时，Visual Studio 通过在对其进行定义之前在源代码中生成这些新类型和成员来支持测试优先的开发。
 
@@ -36,7 +36,7 @@ Visual Studio 生成对工作流中断次数最少的新类型和成员。 你�
 
 1. 在 C# 或 Visual Basic 中创建新的“Windows 类库”项目  。 将其命名为 `GFUDemo_VB` 或 `GFUDemo_CS`，具体取决于所使用的语言。
 
-2. 在“解决方案资源管理器”中，右键单击顶部的解决方案图标，选择“添加” > “新建项目”    。
+2. 在“解决方案资源管理器”中，右键单击顶部的解决方案图标，选择“添加” **“新建项目”**   >   。
 
 3. 创建新的“单元测试项目(.NET Framework)”项目  。
 
@@ -77,7 +77,7 @@ Visual Studio 生成对工作流中断次数最少的新类型和成员。 你�
 
 5. 单击“生成新类型”  ，打开“生成类型”  对话框。 此对话框中提供了许多选项，包含在其他项目中生成类型。
 
-6. 在“项目”  列表中，单击“GFUDemo\_VB”  或“GFUDemo_CS”  ，指示 Visual Studio 将文件添加到类库项目而不是测试项目。 如果尚未选中，则选择“创建新文件”  并将其命名为 Automobile.cs  或 Automobile.vb  。
+6. 在“项目”  列表中，单击“GFUDemo**VB”\_** 或“GFUDemo_CS”  ，指示 Visual Studio 将文件添加到类库项目而不是测试项目。 如果尚未选中，则选择“创建新文件”  并将其命名为 Automobile.cs  或 Automobile.vb  。
 
      ![“生成新类型”对话框](../ide/media/genotherdialog.png)
 
@@ -121,9 +121,9 @@ Visual Studio 生成对工作流中断次数最少的新类型和成员。 你�
      [!code-csharp[VbTDDWalkthrough#3](../ide/codesnippet/CSharp/walkthrough-test-first-support-with-the-generate-from-usage-feature_3.cs)]
      [!code-vb[VbTDDWalkthrough#3](../ide/codesnippet/VisualBasic/walkthrough-test-first-support-with-the-generate-from-usage-feature_3.vb)]
 
-2. 单击 `myAuto.Start` 方法调用的“快速操作”  错误灯泡，然后单击“生成方法 'Automobile.Start'”  。
+2. 单击  **方法调用的“快速操作”** `myAuto.Start`错误灯泡，然后单击“生成方法 'Automobile.Start'”  。
 
-3. 单击 `IsRunning` 属性的“快速操作”  灯泡，然后单击“生成属性 'Automobile.IsRunning'”  。
+3. 单击  **属性的“快速操作”** `IsRunning`灯泡，然后单击“生成属性 'Automobile.IsRunning'”  。
 
      `Automobile` 类现在包含一个名为 `Start()` 的方法和一个名为 `IsRunning` 的属性。
 
@@ -159,7 +159,7 @@ Visual Studio 生成对工作流中断次数最少的新类型和成员。 你�
 
      ![通过的测试结果](../ide/media/testspassed.png)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用时生成](../ide/visual-csharp-intellisense.md#generate-from-usage)
 - [代码编辑器功能](../ide/writing-code-in-the-code-and-text-editor.md)

@@ -21,10 +21,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 516e2aaf4a55ad6422200f9fef1cbbf2d435af7b
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75597329"
 ---
 # <a name="signing-page-project-designer"></a>“项目设计器”->“签名”页
@@ -41,7 +41,7 @@ ms.locfileid: "75597329"
 
 “为 ClickOnce 清单签名”  复选框
 
-选中此复选框以使用公钥/私钥对对应用程序和部署清单进行签名。 有关如何执行此操作的详细信息，请参阅[如何：对应用程序和部署清单签名](../../ide/how-to-sign-application-and-deployment-manifests.md)。
+选中此复选框以使用公钥/私钥对对应用程序和部署清单进行签名。 有关如何执行此操作的详细信息，请参阅[如何：对应用程序和部署清单进行签名](../../ide/how-to-sign-application-and-deployment-manifests.md)。
 
 “从存储区选择”  按钮
 
@@ -73,15 +73,15 @@ ms.locfileid: "75597329"
 
 “为程序集签名”  复选框
 
-选择此复选框可为程序集签名并创建强名称密钥文件。 有关使用“项目设计器”为程序集签名的详细信息，请参阅[如何  ：为程序集签名 (Visual Studio)](../managing-assembly-and-manifest-signing.md#how-to-sign-an-assembly-in-visual-studio)。
+选择此复选框可为程序集签名并创建强名称密钥文件。 有关使用“项目设计器”  为程序集签名的详细信息，请参阅[如何：为程序集签名 (Visual Studio)](../managing-assembly-and-manifest-signing.md#how-to-sign-an-assembly-in-visual-studio)。
 
 此选项使用 Windows 软件开发工具包 (SDK) 提供的 Al.exe 工具对程序集进行签名。 有关 Al.exe 的详细信息，请参阅[如何：使用强名称为程序集签名](/dotnet/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name)。
 
 “选择强名称密钥文件”  列表
 
-使你可以指定一个新的或现有强名称密钥文件，用来对程序集签名。 选择“\<浏览...>”  以选择现有的密钥文件。
+使你可以指定一个新的或现有强名称密钥文件，用来对程序集签名。 选择“**浏览...>”\<** 以选择现有的密钥文件。
 
-选择“\<新建...>”  以创建用来对程序集签名的新密钥文件。 将出现“创建强名称密钥”  对话框，你可以使用该对话框指定密钥文件名，并使用密码保护密钥文件。 密码长度必须至少为 6 个字符。 如果指定密码，则会创建个人信息交换 (.pfx) 文件；如果不指定密码，则创建强名称密钥 (.snk) 文件。
+选择“**新建...>”\<** 以创建用来对程序集签名的新密钥文件。 将出现“创建强名称密钥”  对话框，你可以使用该对话框指定密钥文件名，并使用密码保护密钥文件。 密码长度必须至少为 6 个字符。 如果指定密码，则会创建个人信息交换 (.pfx) 文件；如果不指定密码，则创建强名称密钥 (.snk) 文件。
 
 “更改密码”  按钮
 
@@ -98,11 +98,11 @@ ms.locfileid: "75597329"
 > [!NOTE]
 > 对程序集签名时，可能并不总是有权访问私钥。 例如，一个组织可能具有开发人员不是每天都能访问的严密保护密钥对。 公钥可能可用，但私钥的访问权限仅限于少数几个人。 在这种情况下，你可以使用延迟  或部分签名  来提供公钥，将私钥的添加延迟到转交该程序集后。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [项目属性引用](../../ide/reference/project-properties-reference.md)
 - [管理程序集签名和清单签名](../../ide/managing-assembly-and-manifest-signing.md)
-- [如何：对应用程序和部署清单签名](../../ide/how-to-sign-application-and-deployment-manifests.md)
-- [如何：为程序集签名 (Visual Studio)](../managing-assembly-and-manifest-signing.md#how-to-sign-an-assembly-in-visual-studio)
+- [如何：对应用程序和部署清单进行签名](../../ide/how-to-sign-application-and-deployment-manifests.md)
+- [如何：对程序集进行签名 (Visual Studio)](../managing-assembly-and-manifest-signing.md#how-to-sign-an-assembly-in-visual-studio)
 - [如何：使用强名称为程序集签名](/dotnet/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name)
 - [具有强名称的程序集](/dotnet/framework/app-domains/strong-named-assemblies)

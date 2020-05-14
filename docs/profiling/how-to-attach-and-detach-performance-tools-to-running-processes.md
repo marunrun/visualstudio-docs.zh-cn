@@ -19,10 +19,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 4c4ae54d6b90166de31c338a5e606eaf31ecd6cc
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74779163"
 ---
 # <a name="how-to-attach-and-detach-performance-tools-to-running-processes"></a>如何：在正在运行的进程中附加和拆离性能工具
@@ -61,9 +61,9 @@ ms.locfileid: "74779163"
 
 3. 单击“分离”  。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [控制数据收集](../profiling/controlling-data-collection.md)
 - [性能会话概述](../profiling/performance-session-overview.md)
-- [如何：启动和结束性能数据收集](../profiling/how-to-start-and-end-performance-data-collection.md)
+- [如何：启动和停止性能数据收集](../profiling/how-to-start-and-end-performance-data-collection.md)
 - [分析和 Windows Vista 安全性](../profiling/profiling-and-windows-vista-security.md)
 - [VSPerfCmd](../profiling/vsperfcmd.md)

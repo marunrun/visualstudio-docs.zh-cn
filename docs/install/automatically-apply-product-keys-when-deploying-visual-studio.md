@@ -13,10 +13,10 @@ ms.workload:
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.openlocfilehash: e7f331536de264186bc2977cc4acaaab02147e13
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "76115216"
 ---
 # <a name="automatically-apply-product-keys-when-deploying-visual-studio"></a>在部署 Visual Studio 时自动应用产品密钥
@@ -89,7 +89,7 @@ ms.locfileid: "76115216"
 
 如果 `StorePID.exe` 成功应用产品密钥，则会返回值为 0 的 `%ERRORLEVEL%`。 如果遇到错误，则会返回下列代码之一（具体视错误条件而定）：
 
-| 错误                     | 代码 |
+| Error                     | 代码 |
 |---------------------------|------|
 | `PID_ACTION_SUCCESS`      | 0    |
 | `PID_ACTION_NOTINSTALLED` | 1    |
@@ -104,7 +104,7 @@ ms.locfileid: "76115216"
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 * [安装 Visual Studio](../install/install-visual-studio.md)
 * [创建 Visual Studio 的脱机安装](../install/create-an-offline-installation-of-visual-studio.md)

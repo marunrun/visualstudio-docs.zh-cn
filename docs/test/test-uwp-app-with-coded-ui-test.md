@@ -11,10 +11,10 @@ dev_langs:
 ms.workload:
 - uwp
 ms.openlocfilehash: fdd3d98bd848bb6fe679809a58f2e316a316f012
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75590353"
 ---
 # <a name="create-a-coded-ui-test-to-test-a-uwp-app"></a>创建编码的 UI 测试来测试 UWP 应用

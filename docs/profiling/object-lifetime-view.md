@@ -18,10 +18,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: d4ea486930d0ea9f266b4ee57b69a50f7c570651
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74772619"
 ---
 # <a name="object-lifetime-view"></a>“对象生存期”视图
@@ -46,7 +46,7 @@ ms.locfileid: "74772619"
 
 |列|说明|
 |------------|-----------------|
-|**实例**|此类型对象的分配数。|
+|**实例数**|此类型对象的分配数。|
 |**总实例数百分比**|在分析运行期间进行的分配总数的百分比。|
 |**已收集的第 0 代实例数**|在垃圾回收算法的第 0 代中，已解除分配的类型实例数。|
 |**已收集的第 1 代实例数**|在垃圾回收算法的第 1 代中，已解除分配的类型实例数。|
@@ -72,5 +72,5 @@ ms.locfileid: "74772619"
 |**已收集的大型对象堆实例数**|位于大型对象堆中，且在分析运行期间收集的此类型实例的数目。|
 |**已收集的大型对象堆字节数**|位于大型对象堆中，且在分析运行期间收集的此类型实例的大小（以字节为单位）。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [.NET 内存数据视图](../profiling/dotnet-memory-data-views.md)

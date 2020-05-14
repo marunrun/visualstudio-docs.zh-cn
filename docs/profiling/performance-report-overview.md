@@ -14,10 +14,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 517156677a6d3711fa5dc2e4a15629a55229cfe2
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74772227"
 ---
 # <a name="performance-report-overview"></a>性能报告概述
@@ -94,6 +94,6 @@ ms.locfileid: "74772227"
 
 - **导出** - 将当前报告保存在 .CVS 格式或 .XML 格式文件中（可以选择保存不同的视图）。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [分析性能工具数据](../profiling/analyzing-performance-tools-data.md)
 - [性能报告视图](../profiling/performance-report-views.md)

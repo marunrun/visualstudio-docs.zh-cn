@@ -9,27 +9,27 @@ caps.latest.revision: 7
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 0330ef80fc1127893590ef8d326cb5b8e0cf0160
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.sourcegitcommit: 95f26af1da51d4c83ae78adcb7372b32364d8a2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74291607"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79301343"
 ---
 # <a name="colors-and-styling-for-visual-studio"></a>Visual Studio 的颜色和样式
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-## <a name="using-color-in-visual-studio"></a>在 Visual Studio 中使用颜色
- 在 Visual Studio 中，颜色主要用作一种通信工具，而不是作为装饰。 如果要执行以下操作，请尽量少使用颜色并保留它：
+## <a name="using-color-in-visual-studio"></a>在视觉工作室中使用颜色
+ 在视觉工作室中，颜色主要用作通信工具，而不仅仅是装饰。 最小使用颜色，并保留它的情况，你想：
 
-- 传达含义或从属关系（例如，平台或语言修饰符）
+- 传达含义或隶属关系（例如，平台或语言修改器）
 
-- 吸引人注意（例如，指示状态发生变化）
+- 吸引注意力（例如，指示状态更改）
 
-- 提高可读性并提供用于导航 UI 的特征点
+- 提高可读性并提供用于导航 UI 的地标
 
-- 增加性能
+- 提高可取性
 
-  有多个选项可用于在 Visual Studio 中为 UI 元素分配颜色。 有时，很难确定你应该使用哪种选项，或是如何正确使用它。 本主题将帮助你：
+  在 Visual Studio 中，存在将颜色分配给 UI 元素的几个选项。 有时，很难确定您应该使用哪个选项，或者如何正确使用它。 本主题将帮助您：
 
 1. 了解用于在 Visual Studio 中定义颜色的不同服务和系统。
 
@@ -37,73 +37,73 @@ ms.locfileid: "74291607"
 
 3. 正确使用您选择的选项。
 
-   **重要提示：** 切勿在 UI 元素中硬编码十六进制、RGB 或系统颜色。 使用服务可灵活地调整色调。 此外，如果没有该服务，将无法利用[VSColor 服务](../../extensibility/ux-guidelines/colors-and-styling-for-visual-studio.md#BKMK_TheVSColorService)的主题切换功能。
+   **重要提示：** 切勿对 UI 元素硬编码十六进制、RGB 或系统颜色。 使用服务可以灵活地调整色调。 此外，如果没有该服务，您将无法利用[VSColor 服务](../../extensibility/ux-guidelines/colors-and-styling-for-visual-studio.md#BKMK_TheVSColorService)的主题切换功能。
 
-### <a name="methods-for-assigning-color-to-visual-studio-interface-elements"></a>向 Visual Studio 接口元素分配颜色的方法
- 选择最适合您的 UI 元素的方法。
+### <a name="methods-for-assigning-color-to-visual-studio-interface-elements"></a>为可视化工作室界面元素分配颜色的方法
+ 选择最适合 UI 元素的方法。
 
-|你的 UI|方法|它们是什么？|
+|您的 UI|方法|它们是什么？|
 |-------------|------------|--------------------|
-|您具有嵌入的或独立的对话框。|**系统颜色**|允许操作系统定义 UI 元素的颜色和外观的系统名称，例如用于通用对话框控件的。|
-|你具有要与整个 VS 环境一致的自定义 UI，并且你具有与共享令牌的类别和语义含义相匹配的 UI 元素。|**公共共享颜色**|特定 UI 元素的现有预定义颜色标记名称|
-|您有一项功能或一组功能，但对于类似元素没有共享的颜色。|**自定义颜色**|特定于区域的颜色标记名称，不应与其他 UI 共享|
-|您希望允许最终用户自定义 UI 或内容（例如，对于文本编辑器或专用设计器窗口）。|**最终用户自定义**<br /><br /> **（"工具" > 选项 "对话框）**|"**工具" > 选项**"对话框的" 字体和颜色 "页中定义的设置，或特定于一个 UI 功能的专用页面。|
+|您有嵌入的或独立的对话框。|**系统颜色**|允许操作系统定义 UI 元素的颜色和外观的系统名称，例如用于常见对话框控件。|
+|您有要与整个 VS 环境一致的自定义 UI，并且具有与共享令牌的类别和语义含义相匹配的 UI 元素。|**常见共享颜色**|特定 UI 元素的现有预定义颜色令牌名称|
+|您具有单个要素或一组要素，并且没有类似元素的共享颜色。|**自定义颜色**|特定于区域且不打算与其他 UI 共享的颜色令牌名称|
+|您希望允许最终用户自定义 UI 或内容（例如，对于文本编辑器或专用设计器窗口）。|**最终用户自定义**<br /><br /> **（工具>选项对话框）**|**在"工具>选项**"对话框的"字体和颜色"页面或特定于一个 UI 功能的专用页面中定义的设置。|
 
-### <a name="visual-studio-themes"></a>Visual Studio 主题
- Visual Studio 具有三种不同的颜色主题：浅、暗和蓝色。 它还检测高对比度模式，这是为辅助功能而设计的系统范围的颜色主题。
+### <a name="visual-studio-themes"></a>视觉工作室主题
+ Visual Studio 具有三种不同的颜色主题：浅色、深色和蓝色。 它还检测高对比度模式，这是专为辅助功能而设计的全系统颜色主题。
 
- 在首次使用 Visual Studio 时，系统将提示用户选择一个主题，稍后可以通过转到 "工具" **> 选项 "> 环境 >" 常规**"，然后从" 颜色主题 "下拉菜单中选择一个新主题来切换主题。
+ 在首次使用 Visual Studio 时，系统会提示用户选择主题，并稍后通过转到 **"工具>选项>环境>一般**"以及从"颜色主题"下拉菜单中选择新主题来切换主题。
 
- 用户还可以使用 "控制面板" 将其整个系统切换为多个高对比度主题之一。 如果用户选择高对比度主题，则 Visual Studio 颜色主题选择器将不再影响 Visual Studio 中的颜色，但当用户退出高对比度模式时，会保存任何主题更改。 有关高对比度模式的详细信息，请参阅[选择高对比度颜色](../../extensibility/ux-guidelines/colors-and-styling-for-visual-studio.md#BKMK_ChoosingHighContrastColors)。
+ 用户还可以使用控制面板将其整个系统切换到几个高对比度主题之一。 如果用户选择高对比度主题，则 Visual Studio 颜色主题选择器不再影响 Visual Studio 中的颜色，尽管当用户退出高对比度模式时，将保存任何主题更改。 有关高对比度模式的详细信息，请参阅[选择高对比度颜色](../../extensibility/ux-guidelines/colors-and-styling-for-visual-studio.md#BKMK_ChoosingHighContrastColors)。
 
 ### <a name="the-vscolor-service"></a>VSColor 服务
- Visual Studio 提供了一种称为 VSColor service 的环境颜色服务，该服务允许你将 UI 元素的颜色值绑定到包含每个 Visual Studio 主题的颜色值的命名条目。 这可确保颜色会自动更改，以反映当前用户选择的主题或系统高对比度模式。 使用该服务意味着在一个位置处理所有与主题相关的颜色更改的实现，并且如果您使用的是服务中的常见共享颜色，则您的 UI 会自动反映将来版本的 Visual Studio 中的新主题。
+ Visual Studio 提供一种称为 VSColor 服务的环境颜色服务，该服务允许您将 UI 元素的颜色值绑定到包含每个 Visual Studio 主题颜色值的命名条目。 这可确保颜色将自动更改以反映当前用户选择的主题或系统高对比度模式。 使用该服务意味着所有主题相关颜色更改的实现都在一个位置处理，如果您使用服务中的常见共享颜色，则 UI 将自动反映 Visual Studio 的未来版本中的新主题。
 
 ### <a name="implementation"></a>实现
- Visual Studio 源代码包含多个包定义文件，其中包含每个主题的标记名称和各自颜色值的列表。 颜色服务将读取在这些包定义文件中定义的 VSColors。 这些颜色在 XAML 标记或代码中引用，然后通过**IVsUIShell5 或 GetThemedColor**方法或 DynamicResource 映射进行加载。
+ Visual Studio 源代码包括多个包定义文件，其中包含令牌名称列表和每个主题的相应颜色值。 颜色服务读取这些包定义文件中定义的 VSColors。 这些颜色在 XAML 标记或代码中引用，然后通过**IVsUIShell5.Get 主题颜色**方法或动态资源映射加载。
 
 ### <a name="system-colors"></a>系统颜色
- 默认情况下，公共控件引用系统颜色。 如果希望 UI 使用系统颜色，例如在创建嵌入的或独立的对话框时，无需执行任何操作。
+ 默认情况下，公共控件引用系统颜色。 如果希望 UI 使用系统颜色（例如，在创建嵌入或独立对话框时），则无需执行任何操作。
 
 ### <a name="common-shared-colors-in-the-vscolor-service"></a>VSColor 服务中的常见共享颜色
- 接口元素应反映整个 Visual Studio 环境。 通过重复使用适用于你正在设计的 UI 组件的常见共享颜色，你可以确保你的接口与其他 Visual Studio 接口一致，并且你的颜色将在添加或更新主题时自动更新。
+ 您的界面元素应反映整个可视化工作室环境。 通过重用适用于所设计的 UI 组件的常见共享颜色，可确保界面与其他 Visual Studio 界面一致，并确保在添加或更新主题时颜色将自动更新。
 
- 使用常见的共享颜色之前，请确保了解如何正确使用它们。 不正确地使用常见的共享颜色可能会导致用户遇到不一致、令人费解或混乱的体验。
+ 在使用公共共享颜色之前，请确保您了解如何正确使用它们。 对常见共享颜色的不正确使用可能会导致用户体验不一致、令人沮丧或混乱。
 
 ### <a name="user-customizable-colors"></a>用户可自定义的颜色
- 请参阅：[公开最终用户的颜色](../../extensibility/ux-guidelines/colors-and-styling-for-visual-studio.md#BKMK_ExposingColorsForEndUsers)
+ 请参阅：[为最终用户公开颜色](../../extensibility/ux-guidelines/colors-and-styling-for-visual-studio.md#BKMK_ExposingColorsForEndUsers)
 
- 有时，您需要允许最终用户自定义您的 UI，例如在创建代码编辑器或设计图面时。 可自定义的 UI 组件位于 "**工具" > 选项**"对话框的"**字体和颜色**"部分中，用户可以在其中选择更改前景色、背景色或同时更改两者。
+ 有时，您需要允许最终用户自定义 UI，例如创建代码编辑器或设计图面时。 可自定义的 UI 组件位于 **"工具>选项"** 对话框的"**字体和颜色**"部分，用户可以选择更改前景颜色、背景颜色或两者。
 
- ![Visual &#62; Studio 中的 "工具选项" 对话框](../../extensibility/ux-guidelines/media/0301-a-toolsoptionsdialog.png "0301-a_ToolsOptionsDialog")
+ ![可视化工作室中的工具&#62;选项对话框](../../extensibility/ux-guidelines/media/0301-a-toolsoptionsdialog.png "0301-a_ToolsOptionsDialog")
 
- **"工具" > 选项 "对话框**
+ **工具>选项对话框**
 
-## <a name="BKMK_TheVSColorService"></a>VSColor 服务
- Visual Studio 提供了环境颜色服务，也称为 VSColor 服务或 shell color 服务。 此服务允许你将 UI 元素的颜色值绑定到一个名称-值颜色集，其中包含每个主题的颜色。 VSColor 服务必须用于所有 UI 元素，因此，颜色会自动改变以反映当前用户选择的主题，这样，绑定到环境颜色服务的 UI 会与未来版本的 Visual Studio 中的新主题集成。
+## <a name="the-vscolor-service"></a><a name="BKMK_TheVSColorService"></a>VSColor 服务
+ Visual Studio 提供环境颜色服务，也称为 VSColor 服务或外壳颜色服务。 此服务允许您将 UI 元素的颜色值绑定到包含每个主题颜色的名称值颜色集。 VSColor 服务必须用于所有 UI 元素，以便颜色自动更改以反映当前用户选择的主题，以便绑定到环境颜色服务的 UI 将与 Visual Studio 的未来版本中的新主题集成。
 
 ### <a name="how-the-service-works"></a>服务的工作原理
- 环境颜色服务会在 .pkgdef 中为 UI 组件读取 VSColors 定义的内容。 然后，在 XAML 标记或代码中引用这些 VSColors，并通过**GetThemedColor**或 DynamicResource 映射进行加载。
+ 环境颜色服务读取在 .pkgdef 中定义的 UI 组件中的 VSColors。 然后，这些 VSColors 在 XAML 标记或代码中引用，并通过**IVsUIShell5.Get 主题颜色**或动态资源映射加载。
 
  ![环境颜色服务体系结构](../../extensibility/ux-guidelines/media/0302-a-environmentcolorservicearchitecture.png "0302-a_EnvironmentColorServiceArchitecture")
 
  **环境颜色服务体系结构**
 
 ### <a name="accessing-the-service"></a>访问服务
- 有多种不同的方法可用于访问 VSColor 服务，具体取决于所使用的颜色标记的类型以及所使用的代码类型。
+ 有几种不同的方法来访问 VSColor 服务，具体取决于您正在使用的颜色令牌类型以及您拥有的代码类型。
 
 #### <a name="predefined-environment-colors"></a>预定义环境颜色
 
 ##### <a name="from-native-code"></a>从本机代码
- Shell 提供一个服务，该服务提供对颜色 COLORREF 的访问。 服务/接口为：
+ shell 提供一种服务，该服务允许访问颜色的 COLORREF。 服务/接口是：
 
 ```
 IVsUIShell2::GetVSSysColorEx(VSSYSCOLOR dwSysColIndex, DWORD *pdwRGBval)
 ```
 
- 在文件 VSShell80 中，枚举 **__VSSYSCOLOREX**包含 shell 颜色常量。 若要使用此方法，请传入作为索引值的值之一，如 MSDN 中所述的枚举 __VSSYSCOLOREX 之一或 Windows 系统 API **GetSysColor**接受的常规索引号。 这样做会返回应在第二个参数中使用的颜色的 RGB 值。
+ 在文件 VSShell80.idl 中，枚举 **__VSSYSCOLOREX**具有外壳颜色常量。 要使用它，传入为索引值，要么从 MSDN 中记录的枚举__VSSYSCOLOREX的值之一，要么将 Windows 系统 API **GetSysColor**接受的常规索引号。 执行此操作将返回应在第二个参数中使用的颜色的 RGB 值。
 
- 如果使用新颜色存储笔或画笔，则必须 AdviseBroadcastMessages （从 Visual Studio shell 开始）并侦听 WM_SYSCOLORCHANGE 和 WM_THEMECHANGED 消息。
+ 如果存储具有新颜色的笔或画笔，则必须建议广播消息（从 Visual Studio 外壳中）并侦听WM_SYSCOLORCHANGE和WM_THEMECHANGED消息。
 
 ```
 // To access the color service in native code, you'll make a call that resembles this:
@@ -111,10 +111,10 @@ pUIShell2->GetVSSysColorEx(VSCOLOR_COLOR_NAME, &rgbLOCAL_COLOR);
 
 ```
 
- **注意：** **GetVSSysColorEx （）** 返回的 COLORREF 值只包含 R、G、B 主题颜色的组成部分。 如果主题条目使用透明度，则会在返回前丢弃 alpha 通道值。 因此，如果需要在透明通道非常重要的地方使用所需的环境颜色，则应使用 GetThemedColor 而不是 IVsUIShell2：： GetVSSysColorEx，如本主题后面所述。
+ **注：****GetVSSysColorEx（）** 返回的 COLORREF 值仅包含主题颜色的 R、G、B 组件。 如果主题条目使用透明度，则在返回之前将丢弃 alpha 通道值。 因此，如果需要在透明度通道很重要的地方使用感兴趣的环境颜色，则应使用 IVUIShell5.Get 主题色而不是 IVsUIShell2：：getVSSysColorEx，如本主题后面所述。
 
 ##### <a name="from-managed-code"></a>从托管代码
- 通过本机代码访问 VSColor 服务非常简单。 但是，如果您正在处理托管代码，则确定如何使用服务可能比较棘手。 考虑到这一点，下面的代码C#片段演示了此过程：
+ 通过本机代码访问 VSColor 服务相当简单。 但是，如果您正在处理托管代码，则确定如何使用服务可能比较棘手。 考虑到这一点，下面是一个 C# 代码段，演示了此过程：
 
 ```
 private void VSColorPaint(object sender, System.Windows.Forms.PaintEventArgs e)
@@ -137,14 +137,14 @@ private void VSColorPaint(object sender, System.Windows.Forms.PaintEventArgs e)
 }
 ```
 
- 如果使用的是 Visual Basic，请使用：
+ 如果您在可视化基础中工作，请使用：
 
 ```
 Dim myColor As Color = ColorTranslator.FromWin32((Integer)win32Color)
 ```
 
 ##### <a name="from-wpf-ui"></a>从 WPF UI
- 可以通过导出到应用程序的 ResourceDictionary 的值绑定到 Visual Studio 颜色。 下面是一个示例，介绍如何使用颜色表中的资源，以及如何绑定到 XAML 中的环境字体数据。
+ 您可以通过导出到应用程序的资源字典的值绑定到 Visual Studio 颜色。 下面是使用颜色表中的资源以及绑定到 XAML 中的环境字体数据的示例。
 
 ```
 <Style TargetType="{x:Type Button}">
@@ -157,10 +157,10 @@ Dim myColor As Color = ColorTranslator.FromWin32((Integer)win32Color)
 </Style>
 ```
 
-#### <a name="helper-classes-and-methods-for-managed-code"></a>托管代码的帮助程序类和方法
- 对于托管代码，shell 的托管包框架库（VisualStudio）包含几个帮助器类，以方便使用主题颜色。
+#### <a name="helper-classes-and-methods-for-managed-code"></a>托管代码的帮助器类和方法
+ 对于托管代码，shell 的托管包框架库（Microsoft.VisualStudio.shell.12.0.dll）包含几个帮助器类，便于使用主题颜色。
 
- MPF 中**VisualStudio**类的帮助器方法包括**GetThemedGDIColor （）** 和**GetThemedWPFColor （）** 。 这些帮助器方法将主题项的颜色值返回为 WinForms 或 WPF UI 时使用的 "System.web" 或 "System.web"。
+ 微软中的帮助器方法 **.VisualStudio.shell.VsColors**类中 MPF 中包括**获取主题 GDIColor（）** 和**获取主题WPFColor（）**。 这些帮助器方法将主题条目的颜色值返回为"系统.绘图.颜色或系统.Windows.Media.Color"，用于 WinForms 或 WPF UI。
 
 ```
 IVsUIShell5 shell5;
@@ -210,14 +210,14 @@ public static System.Windows.Media.Color GetThemedWPFColor(this IVsUIShell5 vsUI
 
 ```
 
- 类还可用于获取给定 WPF 颜色资源键的 VSCOLOR 标识符，反之亦然。
+ 该类还可用于获取给定 WPF 颜色资源键的 VSCOLOR 标识符，反之亦然。
 
 ```
 public static string GetColorBaseKey(int vsSysColor);
 public static bool TryGetColorIDFromBaseKey(string baseKey, out int vsSysColor);
 ```
 
- **VsColors**类的方法在每次调用时都查询 VSColor 服务以返回颜色值。 若要以**system.web. color**形式获取颜色值，另一种具有更好性能的替代方法是改用 VSThemeColor 类的方法，该方法缓存从 VSColor 服务获取的颜色值。 **VisualStudio** 类在内部订阅以 shell 广播消息事件，并在发生主题更改事件时丢弃缓存的值。 此外，类还提供。用于订阅主题更改的网络友好事件。 使用**ThemeChanged**事件添加新的处理程序，并使用**GetThemedColor （）** 方法获取相关**ThemeResourceKeys**的颜色值。 示例代码可能如下所示：
+ **VsColors**类的方法查询 VSColor 服务，以便每次调用它们时返回颜色值。 要获得颜色值为 **"系统.绘图.颜色**"，另一种性能更好的方法是使用**Microsoft.VisualStudio.PlatformUI.VSTheMeColor**类的方法，该方法缓存从 VSColor 服务获取的颜色值。 类在内部订阅 shell 广播消息事件，并在发生主题更改事件时丢弃缓存的值。 此外，类提供 。NET 友好活动，用于订阅主题更改。 使用**Methe"更改"** 事件添加新处理程序，并使用 Get**主题颜色（）** 方法获取感兴趣的**主题资源键**的颜色值。 示例代码可能如下所示：
 
 ```
 public MyWindowPanel()
@@ -256,38 +256,38 @@ protected override void Dispose(bool disposing)
 }
 ```
 
-## <a name="BKMK_ChoosingHighContrastColors"></a>选择高对比度颜色
+## <a name="choosing-high-contrast-colors"></a><a name="BKMK_ChoosingHighContrastColors"></a>选择高对比度颜色
 
 ### <a name="overview"></a>概述
- Windows 使用多个高对比度系统级主题，这些主题提高了文本、背景和图像的颜色对比度，使元素在屏幕上显得更加独特。 出于辅助功能的原因，当用户切换到高对比度主题时，Visual Studio 接口元素会正确响应，这一点很重要。
+ Windows 使用多个高对比度的系统级主题，这些主题可增加文本、背景和图像的颜色对比度，从而使元素在屏幕上显得更加清晰。 出于辅助功能的原因，当用户切换到高对比度主题时，Visual Studio 界面元素正确响应非常重要。
 
- 只有少量的系统颜色可用于高对比度主题。 选择系统颜色名称时，请记住以下提示：
+ 只有少量系统颜色可用于高对比度主题。 选择系统颜色名称时，请记住以下提示：
 
-1. 选择与您要着色的元素**具有相同语义含义的系统颜色**。 例如，如果为窗口中的文本选择高对比度的颜色，请使用 WindowText 而不是 ControlText。
+1. 选择与着色的元素**具有相同语义含义的系统颜色**。 例如，如果要为窗口中的文本选择高对比度颜色，请使用 WindowText 而不是 ControlText。
 
-2. 同时**选择前景/背景对**，也不会确信您的颜色选择在所有高对比度主题中都有效。
+2. **一起选择前景/背景对**，否则您不会确信您的颜色选择在所有高对比度主题中都起作用。
 
-3. **确定 UI 的哪些部分是最重要的部分，并确保内容区域将会突出。** 您将会丢失很多详细信息，颜色色相的细微差异通常会区分开来，因此使用强边框颜色是定义内容区域的常用方法，因为不同的内容区域没有任何颜色变体。
+3. **确定 UI 的哪些部分最重要，并确保内容区域脱颖而出。** 您将失去颜色色调的细微差异通常会区分的很多细节，因此使用强边框颜色是定义内容区域的常见内容，因为不同内容区域没有颜色变体。
 
 ### <a name="system-color-set"></a>系统颜色集
- [WPF 团队博客上的表： SystemColors 引用](https://devblogs.microsoft.com/wpf/systemcolors-reference/)指示一组完整的系统颜色名称，以及每个主题中显示的相应色相。
+ [WPF 团队博客中的表：系统颜色参考](https://devblogs.microsoft.com/wpf/systemcolors-reference/)指示完整的系统颜色名称集，以及每个主题中显示的相应色调。
 
- 将此有限的一组颜色应用于您的 UI 时，*您将会丢失 "正常" 主题中存在的细微细节*。 下面是一个使用细小灰色颜色的 UI 示例，用于区分工具窗口内的区域。 当与高对比度模式下显示的同一窗口配对时，您可以看到所有背景都具有相同的色调，并且这些区域的边框仅由边框表示：
+ 当将这种有限的颜色集应用于 UI 时 *，预计您将丢失"正常"主题中存在的细微细节*。 下面是一个带有微妙灰色 UI 的示例，用于区分工具窗口中的区域。 与在高对比度模式下显示的同一窗口配对时，您可以看到所有背景都具有相同的色调，并且这些区域的边界仅由边框表示：
 
  ![属性窗口](../../extensibility/ux-guidelines/media/030303-a-propertieswindow.png "030303-a_PropertiesWindow")
 
- **高对比度中的细微细节的丢失示例**
+ **高对比度时如何丢失细微细节的示例**
 
 #### <a name="choosing-text-colors-in-an-editor"></a>在编辑器中选择文本颜色
- 着色文本用在编辑器或设计图面上以指示含义，如允许轻松识别相似项的组。 但是，在高对比度主题中，您不能区分三个以上的文本颜色。 WindowText、GrayText 和 HotTrackText 是 WindowBackground 表面上唯一可用的颜色。 由于不能使用三种以上的颜色，因此在高对比度模式下，请仔细选择要显示的最重要的差异。
+ 着色文本用于编辑器或设计表面，以指示含义，例如允许轻松识别类似项组。 但是，在高对比度主题中，您无法区分三种以上文本颜色。 窗口文本、灰色文本和热轨道文本是窗口背景曲面上唯一可用的颜色。 由于不能使用三种颜色以上，请仔细选择在高对比度模式下要显示的最重要差异。
 
- 编辑器表面上所允许的每个令牌名称的色相，因为它们显示在每个高对比度主题中：
+ 编辑器曲面上允许的每个令牌名称的色调，因为它们出现在每个高对比度主题中：
 
  ![高对比度编辑器比较](../../extensibility/ux-guidelines/media/030303-b-hceditorcomparison.png "030303-b_HCEditorComparison")
 
  **高对比度编辑器比较**
 
- 蓝色主题中的编辑器表面示例：
+ 蓝色主题中编辑器表面的示例：
 
  ![蓝色主题中的编辑器](../../extensibility/ux-guidelines/media/030303-c-editorblue.png "030303-c_EditorBlue")
 
@@ -295,125 +295,125 @@ protected override void Dispose(bool disposing)
 
  ![高对比度主题中的编辑器](../../extensibility/ux-guidelines/media/030303-d-editorhc1.png "030303-d_EditorHC1")
 
- **高对比度 #1 主题中的编辑器**
+ **高对比度#1主题的编辑**
 
 ### <a name="usage-patterns"></a>使用模式
- 许多常见 UI 元素已经定义了高对比度颜色。 选择自己的系统颜色名称时，可以引用这些使用模式，以便您的 UI 元素与类似的组件一致。
+ 许多常见的 UI 元素已定义高对比度颜色。 在选择自己的系统颜色名称时，可以引用这些使用模式，以便 UI 元素与类似的组件一致。
 
-|系统颜色|用法|
+|系统颜色|使用情况|
 |------------------|-----------|
-|ActiveCaption|-悬停并按下时的活动 IDE 和 rafted 窗口按钮字形<br />-IDE 和 rafted 窗口的标题栏背景<br />-默认状态栏背景|
-|ActiveCaptionText|-用于标题栏前景的活动 IDE 和 rafted 窗口（文本和字形）<br />-悬停并按下活动窗口按钮的背景和边框|
-|控件|-组合框、下拉列表和搜索控件默认和禁用背景，包括下拉按钮<br />-"停靠目标" 按钮背景<br />-命令栏背景<br />-工具窗口背景|
-|ControlDark|-IDE 背景<br />-菜单和命令栏分隔符<br />-命令栏边框<br />-菜单阴影<br />-工具窗口选项卡默认和悬停边框和分隔符<br />-"文档溢出" 按钮背景<br />-停靠目标标志符号边框|
-|ControlDarkDark|-失去焦点，选择的文档选项卡窗口|
-|ControlLight|-自动隐藏选项卡边框<br />-组合框和下拉列表边框<br />-停靠目标背景和边框|
-|ControlLightLight|-选定，重点临时边框|
-|ControlText|-组合框和下拉列表标志符号<br />-未选定的工具窗口选项卡文本|
-|GrayText|-组合框和下拉列表禁用边框、下拉标志符号、文本和菜单项文本<br />-已禁用菜单文本<br />-搜索控件 "搜索选项" 标头文本<br />-搜索控件节分隔符|
-|突出显示|-所有悬停和按下的背景和边框，组合框下拉按钮的背景和文档溢出按钮边框除外<br />-选定的项背景|
-|HighlightText|-所有悬停并按下 foregrounds （文本和字形）<br />重点工具窗口和文档选项卡窗口控件前景<br />重点工具窗口标题栏边框<br />-专注于选定的临时选项卡前景<br />-悬停并按下时的文档溢出按钮边框<br />-选定的图标边框|
-|HotTrack|-滚动条按下的背景和边框<br />-按下的滚动条箭头标志符号|
-|InactiveCaption|-悬停时的非活动 IDE 和 rafted 窗口按钮字形<br />-IDE 和 rafted 窗口的标题栏背景<br />-已禁用搜索控件背景|
-|InactiveCaptionText|-非活动 IDE 和 rafted windows 标题栏前景（文本和字形）<br />-悬停时的非活动窗口按钮背景和边框<br />-失去焦点工具窗口按钮的背景和边框<br />-已禁用搜索控制前景|
-|菜单|-下拉菜单背景<br />-选中并禁用的复选标记背景|
-|MenuText|-下拉菜单边框<br />-选中复选标记<br />-菜单字形<br />-下拉菜单文本<br />-选定的图标边框|
-|Scrollbar|-滚动条和滚动条箭头背景，所有状态|
-|窗口|-自动隐藏选项卡背景<br />-菜单栏和命令架背景<br />-"打开" 和 "临时" 选项卡的 "失去焦点" 或 "未选定文档" 窗口选项卡背景和文档边框<br />-失去焦点工具窗口标题栏背景<br />-工具窗口选项卡背景，已选中和未选择|
-|WindowFrame|-IDE 边框|
-|WindowText|-自动隐藏选项卡前景<br />-选定的工具窗口选项卡前景<br />-失去焦点 "文档窗口" 选项卡和 "失去焦点" 或未选定的临时选项卡前景<br />-树形视图默认前景并悬停在未选定的标志符号上<br />-工具窗口选定的选项卡边框<br />-滚动条缩略背景、边框和字形|
+|ActiveCaption|- 活动 IDE 和漂流窗口按钮字形悬停并按下<br />- IDE 和漂流窗口的标题栏背景<br />- 默认状态栏背景|
+|ActiveCaptionText|- 标题栏前景的活动 IDE 和漂流窗口（文本和字形）<br />- 悬停上活动窗口按钮的背景和边框，然后按|
+|控制|- 组合框、下拉列表和搜索控件默认和禁用背景，包括下拉按钮<br />- 停靠目标按钮背景<br />- 命令栏背景<br />- 工具窗口背景|
+|ControlDark|- IDE 背景<br />- 菜单和命令栏分隔符<br />- 命令栏边框<br />- 菜单阴影<br />- 工具窗口选项卡默认值和悬停边框和分隔符<br />- 记录溢出按钮背景<br />- 停靠目标字形边框|
+|ControlDarkDark|- 未聚焦、选定的文档选项卡窗口|
+|ControlLight|- 自动隐藏选项卡边框<br />- 组合框和下拉列表边框<br />- 停靠目标背景和边框|
+|控制灯|- 选定、重点突出的临时边界|
+|控件文本|- 组合框和下拉列表字形<br />- 工具窗口未选中选项卡文本|
+|灰色文本|- 组合框和下拉列表禁用边框、下拉字、文本和菜单项文本<br />- 禁用菜单文本<br />- 搜索控件"搜索选项"标题文本<br />- 搜索控制截面分隔符|
+|突出显示|- 所有悬停和按下的背景和边框，但组合框下拉按钮背景和文档溢出按钮边框<br />- 选定的项目背景|
+|突出显示文本|- 所有悬停和按下的前景（文本和字形）<br />- 聚焦工具窗口和文档选项卡窗口控制前景<br />- 聚焦工具窗口标题栏边框<br />- 聚焦、选定的临时选项卡前景<br />- 在悬停上记录溢流按钮边框，然后按<br />- 选定的图标边框|
+|热轨道|- 按下的滚动条拇指背景和边框<br />- 按下时滚动条箭头字形|
+|非活动标题|- 悬停时非活动 IDE 和漂流窗口按钮字形<br />- IDE 和漂流窗口的标题栏背景<br />- 禁用的搜索控制背景|
+|非活动字幕文本|- 非活动 IDE 和漂流窗口标题栏前景（文本和字形）<br />- 非活动窗口按钮背景和悬停边框<br />- 无焦点工具窗口按钮背景和边框<br />- 禁用的搜索控制前景|
+|菜单|- 下拉菜单背景<br />- 已选中和禁用复选标记背景|
+|菜单文本|- 下拉菜单边框<br />- 复选标记检查<br />- 菜单字形<br />- 下拉菜单文本<br />- 选定的图标边框|
+|Scrollbar|- 滚动条和滚动条箭头背景，所有状态|
+|窗口|- 自动隐藏选项卡背景<br />- 菜单栏和命令搁板背景<br />- 未聚焦或未选择的文档窗口选项卡背景和文档边框，适用于打开和临时选项卡<br />- 无焦点工具窗口标题栏背景<br />- 工具窗口选项卡背景，已选择和未选中|
+|窗口框架|- IDE 边框|
+|窗口文本|- 自动隐藏选项卡前景<br />- 选定的工具窗口选项卡前景<br />- 未聚焦的文档窗口选项卡和未聚焦或未选中的临时选项卡前景<br />- 树视图默认前景，并将鼠标悬停在未选择的字形上<br />- 工具窗口选择选项卡边框<br />- 滚动条拇指背景、边框和字形|
 
-## <a name="BKMK_ExposingColorsForEndUsers"></a>公开最终用户的颜色
+## <a name="exposing-colors-for-end-users"></a><a name="BKMK_ExposingColorsForEndUsers"></a>为最终用户公开颜色
 
 ### <a name="overview"></a>概述
- 有时，您需要允许最终用户自定义您的 UI，例如在创建代码编辑器或设计图面时。 最常见的方法是使用 "**工具" > 选项**"对话框。 除非您的 UI 需要特殊的控件，否则提供自定义的最简单方法是通过对话框的 "**环境**" 部分中的 "**字体和颜色**" 页。 对于为自定义公开的每个元素，用户都可以选择更改前景色、背景色或同时更改两者。
+ 有时，您需要允许最终用户自定义 UI，例如创建代码编辑器或设计图面时。 最常见的方法是使用 **"工具>选项"** 对话框。 除非您具有需要特殊控件的高度专业化 UI，否则显示自定义的最简单方法是通过对话框 **"环境**"部分中的 **"字体和颜色**"页。 对于要自定义公开的每个元素，用户可以选择更改前景颜色、背景颜色或两者。
 
-### <a name="building-a-vspackage-for-your-customizable-colors"></a>为可自定义的颜色生成 VSPackage
- VSPackage 可以通过自定义类别和 "字体和颜色" 属性页上的 "显示项目" 来控制字体和颜色。 使用此机制时，Vspackage 必须实现[IVsFontAndColorDefaultsProvider](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolordefaultsprovider.aspx)接口及其关联接口。
+### <a name="building-a-vspackage-for-your-customizable-colors"></a>为可自定义的颜色构建 VS 包
+ VSPackage 可以通过自定义类别控制字体和颜色，并在"字体和颜色"属性页上显示项目。 使用此机制时，VSPackages 必须实现[IVsFontAndColorDefaults 提供程序接口](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolordefaultsprovider.aspx)及其关联的接口。
 
- 原则上，此机制可用于修改所有现有显示项以及包含它们的类别。 但是，它不应用于修改 "文本编辑器" 类别或其显示项。 有关 "文本编辑器" 类别的详细信息，请参阅 "[字体和颜色概述](https://msdn.microsoft.com/library/bb165065.aspx)"。
+ 原则上，此机制可用于修改所有现有的显示项及其包含它们的类别。 但是，它不应用于修改文本编辑器类别或其显示项。 有关文本编辑器类别的详细信息，请参阅[字体和颜色概述](https://msdn.microsoft.com/library/bb165065.aspx)。
 
- 若要实现自定义类别或显示项，VSPackage 必须：
+ 要实现自定义类别或显示项目，VS 包必须：
 
-- **在注册表中创建或标识类别。** IDE 的 "**字体和颜色**" 属性页的实现将使用此信息来正确查询支持给定类别的服务。
+- **创建或标识注册表中的类别。** IDE 的 **"字体和颜色**"属性页的实现使用此信息正确查询支持给定类别的服务。
 
-- **在注册表中创建或标识组（可选）。** 定义组（表示两个或多个类别的联合）可能会很有用。 如果定义了组，则 IDE 会自动合并子类别，并在组内分配显示项。
+- **在注册表中创建或标识组（可选）。** 定义表示两个或多个类别的联合的组可能很有用。 如果定义了组，IDE 将自动合并子类别并在组中分发显示项。
 
-- **实现 IDE 支持。**
+- **实施 IDE 支持。**
 
 - **处理字体和颜色更改。**
 
 #### <a name="to-create-or-identify-categories"></a>创建或标识类别
- 在 [HKLM\SOFTWARE\Microsoft \Visual Studio\\上构造一种特殊类型的类别注册表项 < Visual Studio 版本\>\FontAndColors\\< 类别\>]。 \<类别 > 是类别的非本地化名称。
+ 在 [HKLM_SOFTWARE]微软 [视觉工作室<视觉\\工作室版本\>[FontAndColors\\<类别 ]\>下构造特殊类型的类别注册表项。 \<类别>是类别的非本地化名称。
 
- 用两个值填充注册表：
+ 使用两个值填充注册表：
 
-|名称|Type|数据|描述|
+|名称|类型|数据|说明|
 |----------|----------|----------|-----------------|
-|类别|REG_SZ|GUID|为标识类别而创建的 GUID|
-|包|REG_SZ|GUID|支持该类别的 VSPackage 服务的 GUID|
+|类别|REG_SZ|GUID|为识别类别而创建的 GUID|
+|程序包|REG_SZ|GUID|支持类别的 VSPackage 服务的 GUID|
 
- 注册表中指定的服务必须为相应的类别提供[IVsFontAndColorDefaults](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolordefaults.aspx)的实现。
+ 注册表中指定的服务必须为相应的类别提供[IVsFontAndColorDefaults 的](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolordefaults.aspx)实现。
 
 #### <a name="to-create-or-identify-groups"></a>创建或标识组
- 在 [HKLM\SOFTWARE\Microsoft \Visual Studio\\上构造一种特殊类型的类别注册表项，< Visual Studio 版本\>\FontAndColors\\< 组\>]。 \<组 > 是组的非本地化名称。
+ 在 [HKLM_SOFTWARE]微软 [视觉\\工作室<视觉工作室版本\>[FontAndColors\\<组\>]下构造特殊类型的类别注册表项。 \<组>是组的非本地化名称。
 
- 用两个值填充注册表：
+ 使用两个值填充注册表：
 
-|名称|Type|数据|描述|
+|名称|类型|数据|说明|
 |----------|----------|----------|-----------------|
-|类别|REG_SZ|GUID|为标识类别而创建的 GUID|
-|包|REG_SZ|GUID|支持该类别的 VSPackage 服务的 GUID|
+|类别|REG_SZ|GUID|为识别类别而创建的 GUID|
+|程序包|REG_SZ|GUID|支持类别的 VSPackage 服务的 GUID|
 
- 注册表中指定的服务必须为相应组提供**T:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorGroup**的实现。
+ 注册表中指定的服务必须为相应的组提供**T：Microsoft.VisualStudio.shell.Interop.IVsfontAndColorGroup**的实现。
 
  ![IVsFontAndColorGroup](../../extensibility/ux-guidelines/media/0304-a-fontandcolorgroup.png "0304-a_FontAndColorGroup")
 
 ### <a name="to-implement-ide-support"></a>实现 IDE 支持
- 实现[GetObject](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolordefaultsprovider.getobject.aspx)，该方法为提供的每个类别或组 GUID 将[IVsFontAndColorDefaults](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolordefaults.aspx)接口或**T:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorGroup**接口返回到 IDE。
+ 实现[GetObject](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolordefaultsprovider.getobject.aspx)，它返回[IVsfontAndColorDefaults](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolordefaults.aspx)接口或**T：Microsoft.VisualStudio.shell.Interop.IVsfontAndColorGroup**接口到 IDE 为每个类别或组 GUID 提供。
 
- 对于它支持的每个类别，VSPackage 实现了[IVsFontAndColorDefaults](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolordefaults.aspx)接口的单独实例。
+ 对于它支持的每个类别，VS包实现[IVsFontAndColorDefaults](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolordefaults.aspx)接口的单独实例。
 
- 通过[IVsFontAndColorDefaults](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolordefaults.aspx)实现的方法必须为 IDE 提供以下内容：
+ 通过[IVsfontAndColorDefaults](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolordefaults.aspx)实现的方法必须为 IDE 提供：
 
 - 类别中显示项的列表
 
 - 显示项的可本地化名称
 
-- 显示类别中每个成员的信息
+- 显示类别每个成员的信息
 
-  **注意：** 每个类别都必须至少包含一个显示项。
+  **注：** 每个类别必须至少包含一个显示项。
 
-  IDE 使用**T:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorGroup**接口来定义多个类别的联合。
+  IDE 使用**T：Microsoft.VisualStudio.shell.Interop.IVsfontAndColorGroup**界面来定义多个类别的联盟。
 
-  它的实现为 IDE 提供了：
+  其实现为 IDE 提供了：
 
-- 构成给定组的类别的列表
+- 组成给定组的类别列表
 
-- 访问支持组中的每个类别的[IVsFontAndColorDefaults](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolordefaults.aspx)实例
+- 访问支持组内每个类别的[IVsFontAndColorDefaults 实例](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolordefaults.aspx)
 
 - 可本地化组名称
 
 #### <a name="updating-the-ide"></a>更新 IDE
- IDE 缓存有关字体和颜色设置的信息。 因此，在对 IDE 字体和颜色配置进行修改后，确保缓存是最新的，这是最佳做法。
+ IDE 缓存有关字体和颜色设置的信息。 因此，在修改 IDE 字体和颜色配置后，最佳做法是确保缓存是最新的。
 
- 更新缓存是通过[IvsFontAndColorCacheManager](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolorcachemanager.aspx)接口完成的，可以全局执行，也可以仅在所选项目上执行。
+ 更新缓存通过[IvsFontAndColorCacheManager](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolorcachemanager.aspx)界面完成，可以全局执行，也可以仅对选定项目执行。
 
 ### <a name="handling-font-and-color-changes"></a>处理字体和颜色更改
- 若要正确支持 VSPackage 显示的文本的着色，支持 VSPackage 的着色服务必须响应用户通过 "字体和颜色" 属性页所做的更改。
+ 为了正确支持 VSPackage 显示的文本着色，支持 VSPackage 的着色服务必须响应用户通过"字体和颜色"属性页所做的更改。
 
- 为此，VSPackage 必须：
+ 为此，VS 包必须：
 
-- 通过实现[IVsFontAndColorEvents](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolorevents.aspx)接口**处理 IDE 生成的事件**。 在用户修改 "字体和颜色" 页后，IDE 将调用相应的方法。 例如，如果选择新字体，它将调用[OnFontChanged](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolorevents.onfontchanged.aspx)方法。
+- 通过实现[IVsfontAndColor 事件](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolorevents.aspx)接口**来处理 IDE 生成的事件**。 在用户修改"字体和颜色"页后，IDE 调用适当的方法。 例如，如果选择了新字体，它将调用[OnFont"更改](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolorevents.onfontchanged.aspx)"方法。
 
   **或**
 
-- **轮询 IDE 中的更改**。 可以通过系统实现的[以下](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage.aspx)接口完成此操作。 尽管主要是为了支持暂留，但[GetItem](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage.getitem.aspx)方法可以获取显示项的字体和颜色信息。 有关字体和颜色设置的详细信息，请参阅 MSDN 文章[访问存储的字体和颜色设置](https://msdn.microsoft.com/library/bb166382.aspx)。
+- **轮询 IDE 以进行更改**。 这可以通过系统实现的[IVsfontAndColor 存储](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage.aspx)接口来完成。 尽管主要为了支持持久性，但[GetItem](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage.getitem.aspx)方法可以获取显示项目的字体和颜色信息。 有关字体和颜色设置的详细信息，请参阅 MSDN 文章[访问存储的字体和颜色设置](https://msdn.microsoft.com/library/bb166382.aspx)。
 
-  **注意：** 若要确保轮询结果正确，请使用[IVsFontAndColorCacheManager](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolorcachemanager.aspx)接口来确定是否需要缓存刷新和更新，然后再调用[以下](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage.aspx)接口的检索方法。
+  **注：** 为确保轮询结果正确，请使用[IVsFontAndColorCacheManager](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolorcachemanager.aspx)界面来确定是否需要缓存刷新和更新，然后调用[IVsFontAndColor 存储](https://msdn.microsoft.com/library/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage.aspx)接口的检索方法。
 
-#### <a name="registering-custom-font-and-color-category-without-implementing-interfaces"></a>在不实现接口的情况下注册自定义字体和颜色类别
- 下面的代码示例演示如何在不实现接口的情况下注册自定义字体和颜色类别：
+#### <a name="registering-custom-font-and-color-category-without-implementing-interfaces"></a>注册自定义字体和颜色类别，无需实现接口
+ 以下代码示例演示如何在不实现接口的情况下注册自定义字体和颜色类别：
 
 ```xml
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\FontAndColors\CSharp Tool Window]
@@ -428,12 +428,12 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\FontAndColors\CSharp T
 
 - "NameID" = 包中本地化类别名称的资源 ID
 
-- "ToolWindowPackage" = 包 GUID
+- "工具窗口包" = 包 GUID
 
-- "Category" = "{9FF46859-A47E-47bf-8AC5-EC3DBE69D1FE}" 只是一个示例，实际值可以是由实施者提供的新 GUID。
+- "类别"[][9FF46859-A47E-47bf-8AC5-EC3DBE69D1FE]只是一个例子，实际值可以是实现者提供的新GUID。
 
-### <a name="set-the-font-and-color-property-category-guid"></a>设置 "字体和颜色" 属性类别 GUID
- 下面的代码示例演示如何设置类别 Guid。
+### <a name="set-the-font-and-color-property-category-guid"></a>设置字体和颜色属性类别 GUID
+ 下面的代码示例演示了设置类别 GUID。
 
 ```cs
 // m_pView is your IVsTextView

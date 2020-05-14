@@ -13,10 +13,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: f1462769a4ba9929a000bca998c1fe3708908798
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77272054"
 ---
 # <a name="system-requirements-for-the-visual-studio-emulator-for-android"></a>适用于 Android 的 Visual Studio 仿真程序的系统要求
@@ -126,7 +126,7 @@ Windows 中的 Hyper-V 要求
  要手动将自己添加到组中，请打开本地用户和组管理单元。
 
 ## <a name="running-the-emulator-from-a-bootable-vhd-is-not-supported"></a>不支持从可启动 VHD 运行仿真器
- 从可启动 VHD 运行 Windows 时，如果尝试在 Visual Studio Emulator for Android 上运行应用，则仿真器通常需要几分钟时间才能启动，或会启动失败。 当仿真程序启动失败时，将出现以下消息：应用部署失败。 请重试。
+ 从可启动 VHD 运行 Windows 时，如果尝试在 Visual Studio Emulator for Android 上运行应用，则仿真器通常需要几分钟时间才能启动，或会启动失败。 当仿真器启动失败时，你将看到以下消息：应用部署失败。 请重试。
 
  此配置不受支持。 有关相关问题的信息，请参阅[适用于 Android 的 Visual Studio 模拟器疑难解答](../cross-platform/troubleshooting-the-visual-studio-emulator-for-android.md)。
 
@@ -147,6 +147,6 @@ Windows 中的 Hyper-V 要求
 
 为了让仿真器能够仿真对 GPU 的调用（例如 OpenGL ES 使用的那些调用），计算机必须具有兼容 DirectX 的 GPU 且安装了合适的 DirectX 驱动程序。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [适用于 Android 的 Visual Studio 模拟器疑难解答](../cross-platform/troubleshooting-the-visual-studio-emulator-for-android.md)

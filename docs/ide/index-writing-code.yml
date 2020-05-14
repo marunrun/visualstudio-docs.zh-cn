@@ -10,54 +10,48 @@ metadata:
   author: jillre
   ms.author: jillfra
   ms.date: 10/15/2019
-  ms.openlocfilehash: 797df026fb9873c5f50e39fe281e0c9a11688b8f
-  ms.sourcegitcommit: b04c603ce73b993d042ebdf7f3722cf4fe2ef7f4
-  ms.translationtype: HT
-  ms.contentlocale: zh-CN
-  ms.lasthandoff: 11/22/2019
-  ms.locfileid: "74316442"
 landingContent:
-- title: 打开或创建项目
-  linkLists:
-  - linkListType: tutorial
-    links:
-    - text: 创建新项目
-      url: create-new-project.md
-    - text: 打开存储库中的项目
-      url: ../get-started/tutorial-open-project-from-repo.md
-  - linkListType: how-to-guide
-    links:
-    - text: 使用 Visual Studio 而无需项目或解决方案
-      url: develop-code-in-visual-studio-without-projects-or-solutions.md
-- title: 使用编辑功能
-  linkLists:
-  - linkListType: overview
-    links:
-    - text: 使用代码编辑器
-      url: writing-code-in-the-code-and-text-editor.md
-    - text: 导航代码
-      url: navigating-code.md
-    - text: 生成和修复代码
-      url: code-generation-in-visual-studio.md
-    - text: 将 IntelliSense 用于代码完成
-      url: using-intellisense.md
-    - text: 管理代码样式首选项
-      url: code-styles-and-code-cleanup.md
-    - text: 代码分析
-      url: ../code-quality/roslyn-analyzers-overview.md
-    - text: IntelliCode
-      url: /visualstudio/intellicode/intellicode-visual-studio
-- title: 编程语言入门
-  linkLists:
-  - linkListType: tutorial
-    links:
-    - text: Visual Studio 中的 C# 和 ASP.NET Core 入门
-      url: tutorial-csharp-aspnet-core.md
-    - text: 在 Visual Studio 中创建 C++ 控制台应用程序
-      url: /cpp/get-started/tutorial-console-cpp
-    - text: Visual Studio 中的 Python 入门
-      url: quickstart-python.md
-    - text: 使用 Visual Basic 创建控制台应用
-      url: quickstart-visual-basic-console.md
-    - text: 使用 Node.js 创建 Web 应用
-      url: quickstart-nodejs.md
+  - title: 打开或创建项目
+    linkLists:
+      - linkListType: tutorial
+        links:
+          - text: 创建新项目
+            url: create-new-project.md
+          - text: 打开存储库中的项目
+            url: ../get-started/tutorial-open-project-from-repo.md
+      - linkListType: how-to-guide
+        links:
+          - text: 使用 Visual Studio 而无需项目或解决方案
+            url: develop-code-in-visual-studio-without-projects-or-solutions.md
+  - title: 使用编辑功能
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: 使用代码编辑器
+            url: writing-code-in-the-code-and-text-editor.md
+          - text: 导航代码
+            url: navigating-code.md
+          - text: 生成和修复代码
+            url: code-generation-in-visual-studio.md
+          - text: 将 IntelliSense 用于代码完成
+            url: using-intellisense.md
+          - text: 管理代码样式首选项
+            url: code-styles-and-code-cleanup.md
+          - text: 代码分析
+            url: ../code-quality/roslyn-analyzers-overview.md
+          - text: IntelliCode
+            url: /visualstudio/intellicode/intellicode-visual-studio
+  - title: 编程语言入门
+    linkLists:
+      - linkListType: tutorial
+        links:
+          - text: 'Visual Studio 中的 C# 和 ASP.NET Core 入门'
+            url: tutorial-csharp-aspnet-core.md
+          - text: 在 Visual Studio 中创建 C++ 控制台应用程序
+            url: /cpp/get-started/tutorial-console-cpp
+          - text: Visual Studio 中的 Python 入门
+            url: quickstart-python.md
+          - text: 使用 Visual Basic 创建控制台应用
+            url: quickstart-visual-basic-console.md
+          - text: 使用 Node.js 创建 Web 应用
+            url: quickstart-nodejs.md

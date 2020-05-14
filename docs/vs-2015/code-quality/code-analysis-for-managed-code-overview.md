@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 33ab4a000fac75c51c32e8a6d37de62e006160b3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "72610064"
 ---
 # <a name="code-analysis-for-managed-code-overview"></a>托管代码的代码分析概述
@@ -66,4 +66,4 @@ ms.locfileid: "72610064"
  你可以使用生成系统的集成功能在生成过程中运行分析工具。 有关详细信息，请参阅[生成应用程序](/azure/devops/pipelines/index)。
 
 ## <a name="see-also"></a>另请参阅
- [使用规则集对代码分析规则进行分组](../code-quality/using-rule-sets-to-group-code-analysis-rules.md)[操作方法：启用和禁用自动代码分析](../code-quality/how-to-enable-and-disable-automatic-code-analysis-for-managed-code.md)
+ [使用规则集对代码分析规则进行分组](../code-quality/using-rule-sets-to-group-code-analysis-rules.md) [如何：启用和禁用自动代码分析](../code-quality/how-to-enable-and-disable-automatic-code-analysis-for-managed-code.md)

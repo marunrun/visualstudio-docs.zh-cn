@@ -1,5 +1,5 @@
 ---
-title: ProjectSubType 元素 （Visual Studio 模板） |Microsoft Docs
+title: 项目子类型元素（可视化工作室模板） |微软文档
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -9,22 +9,22 @@ helpviewer_keywords:
 - ProjectSubType element [Visual Studio Templates]
 - <ProjectSubType> element [Visual Studio Templates]
 ms.assetid: f6895cd4-3e95-4f0e-aa9e-8c7750f46ed4
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 16852378609b058bc1f5c1c02ea2ad54a37a2ac9
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 27396ad1bcc4e181b2b8cecd6ca863db2412630d
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66335926"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80701835"
 ---
-# <a name="projectsubtype-element-visual-studio-templates"></a>ProjectSubType 元素 （Visual Studio 模板）
-将模板中指定的值的子类别归入`ProjectType`元素。
+# <a name="projectsubtype-element-visual-studio-templates"></a>项目子类型元素（可视化工作室模板）
+将模板分类为`ProjectType`元素中指定值的子类别。
 
- \<VSTemplate> \<TemplateData> \<ProjectSubType>
+ \<VStemplate>\<模板数据>\<项目子类型>
 
 ## <a name="syntax"></a>语法
 
@@ -45,7 +45,7 @@ ms.locfileid: "66335926"
 
 |元素|描述|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|必需的元素。<br /><br /> 将此模板分类并定义此模板在 **“新建项目”** 或 **“添加新项”** 对话框中的显示方式。|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|必需元素。<br /><br /> 将此模板分类并定义此模板在 **“新建项目”** 或 **“添加新项”** 对话框中的显示方式。|
 
 ## <a name="text-value"></a>文本值
  需要一个文本值。
@@ -55,20 +55,20 @@ ms.locfileid: "66335926"
 ## <a name="remarks"></a>备注
  `ProjectSubType` 是 `TemplateData` 的可选子元素。
 
- `ProjectSubType`元素提供了到子类别[ProjectType](../extensibility/projecttype-element-visual-studio-templates.md)元素。 此值可以包括：
+ 该`ProjectSubType`元素为[ProjectType](../extensibility/projecttype-element-visual-studio-templates.md)元素提供子类别。 此值可以包括：
 
-- `SmartDevice-NETCFv1`：指定模板面向[!INCLUDE[Compact](../extensibility/includes/compact_md.md)]1.0 版。
+- `SmartDevice-NETCFv1`：指定模板以[!INCLUDE[Compact](../extensibility/includes/compact_md.md)]版本 1.0 为目标。
 
-- `SmartDevice-NETCFv2`：指定模板面向[!INCLUDE[Compact](../extensibility/includes/compact_md.md)]2.0 版。
+- `SmartDevice-NETCFv2`：指定模板以[!INCLUDE[Compact](../extensibility/includes/compact_md.md)]版本 2.0 为目标。
 
-  如果模板包含`ProjectType`具有值的元素`Web`，则`ProjectSubType`元素指定模板的编程语言。 此元素可以具有以下值：
+  如果模板包含`ProjectType`的值的元素`Web`，则`ProjectSubType`元素指定模板的编程语言。 此元素可以具有以下值：
 
-- `CSharp`：指定此模板创建[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]Web 项目或项。
+- `CSharp`：指定模板创建[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]Web 项目或项。
 
-- `VisualBasic`：指定此模板创建[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]Web 项目或项。
+- `VisualBasic`：指定模板创建[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]Web 项目或项。
 
 ## <a name="example"></a>示例
- 下面的示例演示用于的项目模板的元数据[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]设备应用程序的目标[!INCLUDE[Compact](../extensibility/includes/compact_md.md)]2.0 版。
+ 下面的示例显示了面向版本 2.0[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]的设备应用程序的项目模板的[!INCLUDE[Compact](../extensibility/includes/compact_md.md)]元数据。
 
 ```
 <VSTemplate Type="Project" Version="3.0.0"
@@ -96,6 +96,6 @@ ms.locfileid: "66335926"
 ```
 
 ## <a name="see-also"></a>请参阅
-- [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
+- [可视化工作室模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
 - [创建项目和项模板](../ide/creating-project-and-item-templates.md)
-- [ProjectType 元素 （Visual Studio 模板）](../extensibility/projecttype-element-visual-studio-templates.md)
+- [项目类型元素（可视化工作室模板）](../extensibility/projecttype-element-visual-studio-templates.md)

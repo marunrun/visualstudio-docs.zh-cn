@@ -10,10 +10,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 051c983920ddc80909d721e569c5efb5ecd33a7c
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74779930"
 ---
 # <a name="vsperf"></a>VSPerf
@@ -58,6 +58,6 @@ ms.locfileid: "74779930"
 |**/detach**|停止数据收集，但允许目标进程继续运行。|
 |**/status**|显示探查器状态。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [Windows 8 和 Windows Server 2012 应用程序上的性能工具](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)
 - [通过命令行分析](../profiling/using-the-profiling-tools-from-the-command-line.md)

@@ -13,10 +13,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 1b3bafa976c8e57f468a3f3f59a3b6b19308fd1b
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74772197"
 ---
 # <a name="performance-session-properties"></a>性能会话属性
@@ -33,7 +33,7 @@ ms.locfileid: "74772197"
 
 这些设置使您能够选择分析方法、添加 .NET 对象集合和生存期数据，以及指定默认报告位置和命名约定。
 
-有关详细信息，请参见:
+有关详情，请参阅：
 
 [如何：选择收集方法](../profiling/how-to-choose-collection-methods.md)
 
@@ -72,7 +72,7 @@ ms.locfileid: "74772197"
 
 通过这些设置可以收集为 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 网页中的 JScript 代码收集性能数据，并指定要在检测过程之前或之后发生的任何**检测前**和**检测后**事件。
 
-有关详细信息，请参见:
+有关详情，请参阅：
 
 [如何：分析网页中的 JavaScript 代码](../profiling/how-to-profile-javascript-code-in-web-pages.md)
 
@@ -86,9 +86,9 @@ ms.locfileid: "74772197"
 
 ## <a name="windows-events"></a>Windows 事件
 
-在分析过程中，可以从事件跟踪提供程序收集数据。 可以使用 VSPerfReport.exe 命令行工具 `/calltrace` 选项查看数据  。 有关 Windows 事件跟踪 (ETW) 的详细信息，请参阅[关于事件跟踪](/windows/win32/etw/about-event-tracing)。
+在分析过程中，可以从事件跟踪提供程序收集数据。 可以使用 VSPerfReport.exe 命令行工具  *选项查看数据*`/calltrace`。 有关 Windows 事件跟踪 (ETW) 的详细信息，请参阅[关于事件跟踪](/windows/win32/etw/about-event-tracing)。
 
-有关详细信息，请参见:
+有关详情，请参阅：
 
 [如何：收集 Windows 事件跟踪 (ETW) 数据](../profiling/how-to-collect-event-tracing-for-windows-etw-data.md)
 
@@ -104,13 +104,13 @@ ms.locfileid: "74772197"
 
 通过这些设置可以指定 [VSInstr](../profiling/vsinstr.md) 命令行分析工具的一个或多个选项，从而将选项添加到检测过程。 应用程序使用多个版本时，还可以指定要分析的公共运行时版本。
 
-有关详细信息，请参见:
+有关详情，请参阅：
 
 [如何：指定 .NET Framework 运行时](../profiling/how-to-specify-the-dotnet-framework-runtime.md)
 
 [如何：指定其他检测选项](../profiling/how-to-specify-additional-instrumentation-options.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [概述](../profiling/overviews-performance-tools.md)
 [配置性能会话](../profiling/configuring-performance-sessions.md)

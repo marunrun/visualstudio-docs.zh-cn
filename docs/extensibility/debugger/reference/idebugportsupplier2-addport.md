@@ -1,5 +1,5 @@
 ---
-title: IDebugPortSupplier2::AddPort | Microsoft Docs
+title: IDebugPort供应商2：：添加端口 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugPortSupplier2::AddPort
 ms.assetid: df491161-6bf3-4fcc-b478-b9ec88ec995f
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 245c14e2aaa6867f964a2beec7bcbc232b5800be
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 00954ceaa0ddd750a3d08e372d1edaa1905f01c1
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66340279"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80724735"
 ---
 # <a name="idebugportsupplier2addport"></a>IDebugPortSupplier2::AddPort
-将添加一个端口。
+添加端口。
 
 ## <a name="syntax"></a>语法
 
@@ -43,16 +43,16 @@ int AddPort( 
 
 ## <a name="parameters"></a>参数
 `pRequest`\
-[in][IDebugPortRequest2](../../../extensibility/debugger/reference/idebugportrequest2.md)对象，描述要添加的端口。
+[在]描述要添加的端口的[IDebugPortRequest2](../../../extensibility/debugger/reference/idebugportrequest2.md)对象。
 
 `ppPort`\
-[out]返回[IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md)对象表示的端口。
+[出]返回表示端口的[IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md)对象。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，返回`S_OK`;否则，返回错误代码。
 
 ## <a name="remarks"></a>备注
- 此方法实际上会创建请求的端口，以及将其添加到活动的端口的端口提供程序的内部列表。 [CanAddPort](../../../extensibility/debugger/reference/idebugportsupplier2-canaddport.md)可以首先调用方法以避免可能耗费时间的延迟。
+ 此方法实际上创建请求的端口，并将其添加到端口供应商的活动端口的内部列表中。 可以首先调用[CanAddPort](../../../extensibility/debugger/reference/idebugportsupplier2-canaddport.md)方法，以避免可能耗时的延迟。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugPortSupplier2](../../../extensibility/debugger/reference/idebugportsupplier2.md)

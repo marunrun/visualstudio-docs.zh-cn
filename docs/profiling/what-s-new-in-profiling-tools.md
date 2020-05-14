@@ -14,13 +14,13 @@ ms.workload:
 - multiple
 monikerRange: vs-2017
 ms.openlocfilehash: 0512c6e95f0a26184593f7af5ba08c31c33a3299
-ms.sourcegitcommit: 53bc4c11b82882ab658e34c65ae374060f823531
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "71128342"
 ---
-# <a name="whats-new-in-profiling-tools-in-includevs_dev15miscincludesvs_dev15_mdmd"></a>[!include[vs_dev15](../misc/includes/vs_dev15_md.md)] 中的分析工具的新增功能
+# <a name="whats-new-in-profiling-tools-in-includevs_dev15"></a>[!include[vs_dev15](../misc/includes/vs_dev15_md.md)] 中的分析工具的新增功能
 
 诊断工具包括新的可视化功能，有助于确定应用程序中需要修复的问题。 诊断工具现在包括对 ASP.NET 应用程序的支持。
 
@@ -32,7 +32,7 @@ ms.locfileid: "71128342"
 
 CPU 使用情况工具具有[新的可视化功能](../profiling/Beginners-Guide-to-Performance-Profiling.md)，可帮助你识别最有可能导致性能问题的函数。 新的**调用方/被调用方**视图可用于调查所选函数调用和被调用的成本。
 
-![诊断工具调用方和被调用方视图](../profiling/media/diag-tools-caller-callee-2.png "DiagToolsCallerCallee")
+![诊断工具“调用方和被调用方”视图](../profiling/media/diag-tools-caller-callee-2.png "DiagToolsCallerCallee")
 
 ## <a name="see-also"></a>请参阅
 

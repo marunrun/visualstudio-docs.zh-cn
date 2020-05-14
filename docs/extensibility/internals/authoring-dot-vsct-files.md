@@ -1,38 +1,38 @@
 ---
-title: 创作..Vsct Files |Microsoft Docs
+title: 创作。Vsct 文件 |微软文档
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - VSCT files, manual authoring
 ms.assetid: e9f715dc-12b7-439b-bdf3-f3dc75e62f1c
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 82960de02c43a7c4002e189d573a914bb2a73f20
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: dfa276d04e2d312d7ff00b1e9bc0015beb1e254e
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73186657"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80709997"
 ---
-# <a name="author-vsct-files"></a>创作 .vsct 文件
-本文档演示如何创作 *.vsct*文件，以便将菜单项、工具栏和其他用户界面（UI）元素添加到 Visual Studio 集成开发环境（IDE）。 将 UI 元素添加到尚不具有 *.vsct*文件的 Visual Studio 包（VSPackage）时，请使用以下步骤。
+# <a name="author-vsct-files"></a>作者 .vsct 文件
+本文档演示如何创作 *.vsct*文件，将菜单项、工具栏和其他用户界面 （UI） 元素添加到 Visual Studio 集成开发环境 （IDE）。 将 UI 元素添加到尚未具有 *.vsct*文件的 Visual Studio 包 （VSPackage） 时，请使用以下步骤。
 
- 对于新项目，建议使用 Visual Studio 包模板，因为它会生成一个 *.vsct*文件，该文件根据你的选择，已具有菜单命令、工具窗口或自定义编辑器所需的元素。 可以修改此 *.vsct*文件以满足 VSPackage 的要求。 有关如何修改 *.vsct*文件的详细信息，请参阅[扩展菜单和命令](../../extensibility/extending-menus-and-commands.md)中的示例。
+ 对于新项目，我们建议您使用 Visual Studio 包模板，因为它会生成一个 *.vsct*文件，该文件根据您的选择，该文件已经具有菜单命令、工具窗口或自定义编辑器所需的元素。 您可以修改此 *.vsct*文件以满足 VSPackage 的要求。 有关如何修改 *.vsct*文件的详细信息，请参阅[扩展菜单和命令](../../extensibility/extending-menus-and-commands.md)中的示例。
 
 ## <a name="author-the-file"></a>创作文件
- 在以下阶段创作 *.vsct*文件：创建文件和资源的结构，声明 ui 元素，将 ui 元素放入 IDE，并添加任何专用行为。
+ 在这些阶段中编写一个 *.vsct*文件：为文件和资源创建结构，声明 UI 元素，将 UI 元素放入 IDE 中，并添加任何专用行为。
 
 ### <a name="file-structure"></a>文件结构
- *.Vsct*文件的基本结构是一个[CommandTable](../../extensibility/commandtable-element.md)根元素，其中包含[命令](../../extensibility/commands-element.md)元素和[符号](../../extensibility/symbols-element.md)元素。
+ *.vsct*文件的基本结构是命令[表](../../extensibility/commandtable-element.md)根元素，其中包含[命令](../../extensibility/commands-element.md)元素和[Symbols](../../extensibility/symbols-element.md)元素。
 
 #### <a name="to-create-the-file-structure"></a>创建文件结构
 
-1. 按照[如何：创建 .vsct 文件](../../extensibility/internals/how-to-create-a-dot-vsct-file.md)中的步骤，将 *.vsct*文件添加到你的项目中。
+1. 按照[操作中的步骤：创建 .vsct 文件](../../extensibility/internals/how-to-create-a-dot-vsct-file.md)，将 *.vsct*文件添加到项目中。
 
-2. 将必需的命名空间添加到 `CommandTable` 元素中，如以下示例中所示：
+2. 向`CommandTable`元素添加所需的命名空间，如以下示例所示：
 
     ```xml
     <CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable"
@@ -40,118 +40,118 @@ ms.locfileid: "73186657"
 
     ```
 
-3. 在 `CommandTable` 元素中，添加一个 `Commands` 元素来承载所有自定义菜单、工具栏、命令组和命令。 为了能够加载自定义 UI 元素，`Commands` 元素必须将其 `Package` 属性设置为包的名称。
+3. 在`CommandTable`元素中，添加`Commands`一个元素来承载所有自定义菜单、工具栏、命令组和命令。 因此，自定义 UI 元素可以加载，`Commands`该元素的属性必须`Package`设置为包的名称。
 
-     在 `Commands` 元素之后，添加一个 `Symbols` 元素以定义包的 Guid，以及 UI 元素的名称和命令 Id。
+     元素`Commands`之后，添加一个`Symbols`元素来定义包的 GUID，以及 UI 元素的名称和命令 ID。
 
-### <a name="include-visual-studio-resources"></a>包括 Visual Studio 资源
- 使用[Extern](../../extensibility/extern-element.md)元素访问定义 Visual Studio 命令的文件，以及将 UI 元素放入 IDE 所需的菜单。 如果要使用在包外定义的命令，请使用[UsedCommands](../../extensibility/usedcommands-element.md)元素来通知 Visual Studio。
+### <a name="include-visual-studio-resources"></a>包括可视化工作室资源
+ 使用[Extern](../../extensibility/extern-element.md)元素访问定义 Visual Studio 命令的文件以及将 UI 元素放入 IDE 所需的菜单。 如果要使用包外定义的命令，请使用["已使用命令"](../../extensibility/usedcommands-element.md)元素通知 Visual Studio。
 
-#### <a name="to-include-visual-studio-resources"></a>包括 Visual Studio 资源
+#### <a name="to-include-visual-studio-resources"></a>包括视觉工作室资源
 
-1. 在 `CommandTable` 元素的顶部，为要引用的每个外部文件添加一个 `Extern` 元素，并将 `href` 特性设置为该文件的名称。 可以引用以下头文件来访问 Visual Studio 资源：
+1. 在`CommandTable`元素的顶部，为每个要引用的外部文件`Extern`添加一个元素，并将`href`属性设置为文件的名称。 您可以引用以下标头文件来访问 Visual Studio 资源：
 
-   - *Stdidcmd*：定义 Visual Studio 公开的所有命令的 id。
+   - *Stdidcmd.h*： 为 Visual Studio 公开的所有命令定义 ID。
 
-   - *Vsshlids*：包含 Visual Studio 菜单的命令 id。
+   - *Vsshlids.h*： 包含可视化工作室菜单的命令 ID。
 
-2. 如果你的包调用由 Visual Studio 或其他包定义的任何命令，请在 `Commands` 元素的后面添加一个 `UsedCommands` 元素。 对于您调用的不属于包的每个命令，使用[UsedCommand](../../extensibility/usedcommand-element.md)元素填充此元素。 将 `UsedCommand` 元素的 `guid` 和 `id` 属性设置为要调用的命令的 GUID 和 ID 值。
+2. 如果包调用由 Visual Studio 或其他包定义的任何命令，请在`UsedCommands``Commands`元素之后添加元素。 对于不属于包的每个命令，使用[UsedCommand](../../extensibility/usedcommand-element.md)元素填充此元素。 将`UsedCommand`元素`guid`的`id`和 属性设置为要调用的命令的 GUID 和 ID 值。
 
-   有关如何查找 Visual Studio 命令的 Guid 和 Id 的详细信息，请参阅[Visual studio 命令的 guid 和 id](../../extensibility/internals/guids-and-ids-of-visual-studio-commands.md)。 若要从其他包调用命令，请使用这些包的 *.vsct*文件中定义的 GUID 和命令 ID。
+   有关如何查找 Visual Studio 命令的 GUID 和 IT 的详细信息，请参阅[Visual Studio 命令的 GUID 和 IT。](../../extensibility/internals/guids-and-ids-of-visual-studio-commands.md) 要从其他包调用命令，请使用这些包 *.vsct*文件中定义的 GUID 和命令 ID。
 
 ### <a name="declare-ui-elements"></a>声明 UI 元素
- 在 *.vsct*文件的 `Symbols` 节中声明所有新的 UI 元素。
+ 声明 *.vsct*文件`Symbols`部分中的所有新 UI 元素。
 
 #### <a name="to-declare-ui-elements"></a>声明 UI 元素
 
-1. 在 `Symbols` 元素中，添加三个[GuidSymbol](../../extensibility/guidsymbol-element.md)元素。 每个 `GuidSymbol` 元素都具有 `name` 属性和 `value` 特性。 设置 `name` 属性，使其反映元素的用途。 `value` 属性采用 GUID。 （若要生成 GUID，请在 "**工具**" 菜单上选择 "**创建 guid**"，然后选择 "**注册表格式**"。）
+1. 在元素`Symbols`中，添加三个[GuidSymbol](../../extensibility/guidsymbol-element.md)元素。 每个`GuidSymbol`元素都有一`name`个属性和`value`一个属性。 设置属性`name`，以便它反映元素的用途。 该`value`属性采用 GUID。 （要生成 GUID，请在 **"工具"** 菜单上，选择 **"创建 GUID"，** 然后选择**注册表格式**。
 
-     第一个 `GuidSymbol` 元素表示包，并且通常没有子级。 第二个 `GuidSymbol` 元素表示命令集，并将包含定义菜单、组和命令的所有符号。 第三个 `GuidSymbol` 元素表示映像存储，并包含命令的所有图标的符号。 如果你没有使用图标的命令，则可以省略第三个 `GuidSymbol` 元素。
+     第一`GuidSymbol`个元素表示包，通常没有子元素。 第二`GuidSymbol`个元素表示命令集，并将包含定义菜单、组和命令的所有符号。 第三`GuidSymbol`个元素表示图像存储，并包含命令的所有图标的符号。 如果没有使用图标的命令，则可以省略第三`GuidSymbol`个元素。
 
-2. 在表示命令集的 `GuidSymbol` 元素中，添加一个或多个[IDSymbol](../../extensibility/idsymbol-element.md)元素。 其中每个都表示要添加到 UI 的菜单、工具栏、组或命令。
+2. 在`GuidSymbol`表示命令集的元素中，添加一个或多个[IDSymbol](../../extensibility/idsymbol-element.md)元素。 其中每个表示要添加到 UI 的菜单、工具栏、组或命令。
 
-     对于每个 `IDSymbol` 元素，请将 `name` 属性设置为将用于引用相应菜单、组或命令的名称，然后将 `value` 元素设置为表示其命令 ID 的十六进制数。 具有相同父级的两个 `IDSymbol` 元素不能具有相同的值。
+     对于每个`IDSymbol`元素，将`name`属性设置为用于引用相应菜单、组或命令的名称，然后将`value`元素设置为表示其命令 ID 的十六进制数字。 没有两`IDSymbol`个具有相同父元素的元素可以具有相同的值。
 
-3. 如果任意 UI 元素需要图标，请将每个图标的 `IDSymbol` 元素添加到表示映像存储的 `GuidSymbol` 元素。
+3. 如果任何 UI 元素需要图标，请为每个`IDSymbol`图标添加一个元素到`GuidSymbol`表示图像存储的元素。
 
-### <a name="put-ui-elements-in-the-ide"></a>在 IDE 中放置 UI 元素
- [菜单](../../extensibility/menus-element.md)、[组](../../extensibility/groups-element.md)和[按钮](../../extensibility/buttons-element.md)元素包含包中定义的所有菜单、组和命令的定义。 将这些菜单、组和命令放置在 IDE 中，方法是使用[父](../../extensibility/parent-element.md)元素，该元素是 UI 元素定义的一部分，或使用在其他位置定义的[CommandPlacement](../../extensibility/commandplacement-element.md)元素。
+### <a name="put-ui-elements-in-the-ide"></a>将 UI 元素放入 IDE
+ [菜单](../../extensibility/menus-element.md)、[组](../../extensibility/groups-element.md)和[按钮](../../extensibility/buttons-element.md)元素包含包中定义的所有菜单、组和命令的定义。 通过使用作为 UI 元素定义的一部分[的父](../../extensibility/parent-element.md)元素，或者使用在其他地方定义的[Command安置](../../extensibility/commandplacement-element.md)元素，将这些菜单、组和命令放在 IDE 中。
 
- 每个 `Menu`、`Group`和 `Button` 元素都具有 `guid` 特性和 `id` 特性。 始终将 `guid` 特性设置为与表示命令集的 `GuidSymbol` 元素的名称匹配，并将 `id` 特性设置为表示 `Symbols` 节中的菜单、组或命令的 `IDSymbol` 元素的名称。
+ 每个`Menu` `Group`，`Button`和 元素`guid`都有一个`id`属性和一个属性。 `guid`始终将属性设置为匹配表示命令集`GuidSymbol`的元素的名称，并将`id`该属性设置为表示`IDSymbol``Symbols`节中菜单、组或命令的元素的名称。
 
 #### <a name="to-define-ui-elements"></a>定义 UI 元素
 
-1. 如果要定义任何新的菜单、子菜单、快捷菜单或工具栏，请将 `Menus` 元素添加到 `Commands` 元素。 然后，对于要创建的每个菜单，将[menu](../../extensibility/menu-element.md)元素添加到 `Menus` 元素。
+1. 如果要定义任何新菜单、子菜单、快捷菜单或工具栏，则向`Menus``Commands`元素添加元素。 然后，要创建每个菜单，向`Menus`元素添加一个[菜单](../../extensibility/menu-element.md)元素。
 
-    设置 `Menu` 元素的 `guid` 和 `id` 属性，然后将 `type` 属性设置为所需的菜单类型。 您还可以设置 `priority` 属性，以确定菜单在父组中的相对位置。
+    设置`Menu`元素`guid`的`id`和 属性，然后将`type`属性设置为所需的菜单类型。 还可以设置属性`priority`以在父组中建立菜单的相对位置。
 
    > [!NOTE]
-   > `priority` 属性不适用于工具栏和上下文菜单。
+   > 该`priority`属性不适用于工具栏和上下文菜单。
 
-2. Visual Studio IDE 中的所有命令都必须由命令组托管，命令组是菜单和工具栏的直接子级。 如果要向 IDE 添加新菜单或工具栏，它们必须包含新的命令组。 你还可以向现有菜单和工具栏添加命令组，以便可以直观地对命令进行分组。
+2. 可视化工作室 IDE 中的所有命令必须由命令组托管，命令组是菜单和工具栏的直接子级。 如果要向 IDE 添加新菜单或工具栏，这些菜单或工具栏必须包含新的命令组。 您还可以将命令组添加到现有菜单和工具栏中，以便可以直观地对命令进行分组。
 
-    添加新的命令组时，必须首先创建一个 `Groups` 元素，然后将每个命令组的[group](../../extensibility/group-element.md)元素添加到该元素。
+    添加新命令组时，必须首先创建一个`Groups`元素，然后为每个命令组添加一个[组](../../extensibility/group-element.md)元素。
 
-    设置每个 `Group` 元素的 "`guid`" 和 "`id`" 属性，然后设置 `priority` 属性以建立父菜单上的组的相对位置。 有关详细信息，请参阅[创建可重用的按钮组](../../extensibility/creating-reusable-groups-of-buttons.md)。
+    设置每个`guid``id``Group`元素的 和 属性，然后设置`priority`属性以在父菜单上建立组的相对位置。 有关详细信息，请参阅[创建可重用的按钮组](../../extensibility/creating-reusable-groups-of-buttons.md)。
 
-3. 如果要向 IDE 添加新命令，请将 `Buttons` 元素添加到 `Commands` 元素。 然后，对于每个命令，将[Button](../../extensibility/button-element.md)元素添加到 `Buttons` 元素。
+3. 如果要向 IDE 添加新命令，则向元素`Buttons``Commands`添加元素。 然后，对于每个命令，向`Buttons`元素添加一个[Button](../../extensibility/button-element.md)元素。
 
-   1. 设置每个 `Button` 元素的 "`guid`" 和 "`id`" 属性，然后将 "`type`" 属性设置为所需的按钮类型。 还可以设置 `priority` 属性，以在父组中建立命令的相对位置。
+   1. 设置每个`guid``id``Button`元素的 和 属性，然后将`type`属性设置为所需的按钮类型。 还可以设置属性`priority`以在父组中建立命令的相对位置。
 
        > [!NOTE]
-       > 在工具栏上使用标准菜单命令和按钮 `type="button"`。
+       > 用于`type="button"`工具栏上的标准菜单命令和按钮。
 
-   2. 在 `Button` 元素中，添加一个包含[ButtonText](../../extensibility/buttontext-element.md)元素和[CommandName](../../extensibility/commandname-element.md)元素的[string](../../extensibility/strings-element.md)元素。 `ButtonText` 元素为菜单项或工具栏按钮的工具提示提供文本标签。 `CommandName` 元素提供要在命令中使用的命令的名称。
+   2. 在元素`Button`中，添加包含[ButtonText](../../extensibility/buttontext-element.md)元素和[命令名称](../../extensibility/commandname-element.md)元素的[字符串](../../extensibility/strings-element.md)元素。 该`ButtonText`元素提供菜单项的文本标签或工具栏按钮的工具提示。 该`CommandName`元素提供要在命令井中使用的命令的名称。
 
-   3. 如果命令将包含一个图标，请在 `Button` 元素中创建一个[icon](../../extensibility/icon-element.md)元素，并将其 `guid` 和 `id` 特性设置为该图标的 `Bitmap` 元素。
+   3. 如果命令将具有图标，请在`Button`元素中创建一个[Icon](../../extensibility/icon-element.md)元素，并将`guid`其`id`和属性设置为`Bitmap`该图标的元素。
 
        > [!NOTE]
        > 工具栏按钮必须具有图标。
 
-   有关详细信息，请参阅[menucommand 与 OleMenuCommands](/visualstudio/extensibility/menucommands-vs-olemenucommands?view=vs-2015)。
+   有关详细信息，请参阅[菜单命令与 OleMenu 命令](/visualstudio/extensibility/menucommands-vs-olemenucommands?view=vs-2015)。
 
-4. 如果你的任何命令需要图标，请将一个[位图](../../extensibility/bitmaps-element.md)元素添加到 `Commands` 元素。 然后，对于每个图标，将[位图](../../extensibility/bitmap-element.md)元素添加到 `Bitmaps` 元素。 此处为指定位图资源位置的位置。 有关详细信息，请参阅[将图标添加到菜单命令](../../extensibility/adding-icons-to-menu-commands.md)。
+4. 如果任何命令需要图标，请向`Commands`元素添加[位图](../../extensibility/bitmaps-element.md)元素。 然后，对于每个图标，向`Bitmaps`元素添加[位图](../../extensibility/bitmap-element.md)元素。 这是指定位图资源的位置的位置。 有关详细信息，请参阅[向菜单命令添加图标](../../extensibility/adding-icons-to-menu-commands.md)。
 
-   您可以依赖于父结构来正确放置大多数菜单、组和命令。 对于非常大的命令集，或当菜单、组或命令必须出现在多个位置时，建议指定命令位置。
+   您可以依赖父级结构正确放置大多数菜单、组和命令。 对于非常大的命令集，或者当菜单、组或命令必须出现在多个位置时，我们建议您指定命令放置。
 
-#### <a name="to-rely-on-parenting-to-place-ui-elements-in-the-ide"></a>依赖于在 IDE 中放置 UI 元素的父级
+#### <a name="to-rely-on-parenting-to-place-ui-elements-in-the-ide"></a>依靠父子关系在 IDE 中放置 UI 元素
 
-1. 对于典型的父级，请在包中定义的每个 `Menu`、`Group`和 `Command` 元素中创建一个 `Parent` 元素。
+1. 对于典型的父级，请在每个`Parent``Menu`中`Group`创建一个元素`Command`，并在包中定义的元素。
 
-    `Parent` 元素的目标是将包含菜单、组或命令的菜单或组。
+    `Parent`元素的目标是包含菜单、组或命令的菜单或组。
 
-   1. 将 `guid` 特性设置为定义命令集的 `GuidSymbol` 元素的名称。 如果目标元素不是包的一部分，请使用该命令集的 guid （如相应的 *.vsct*文件中所定义）。
+   1. 将`guid`属性设置为定义命令集`GuidSymbol`的元素的名称。 如果目标元素不是包的一部分，请使用该命令集的 guid，如相应的 *.vsct*文件中定义的那样。
 
-   2. 设置 `id` 属性以匹配目标菜单或组的 `id` 属性。 有关 Visual Studio 公开的菜单和组的列表，请参阅[Visual studio 菜单的 guid 和 id](../../extensibility/internals/guids-and-ids-of-visual-studio-menus.md)和[visual Studio 工具栏的 guid 和 id](../../extensibility/internals/guids-and-ids-of-visual-studio-toolbars.md)。
+   2. 将`id`属性设置为匹配目标菜单`id`或组的属性。 有关 Visual Studio 公开的菜单和组的列表，请参阅 Visual Studio 菜单的[GUID 和 IT](../../extensibility/internals/guids-and-ids-of-visual-studio-menus.md)或[Visual Studio 工具栏的 GUID 和 IT。](../../extensibility/internals/guids-and-ids-of-visual-studio-toolbars.md)
 
-   如果要在 IDE 中放置大量 UI 元素，或者如果元素出现在多个位置，请在[CommandPlacements](../../extensibility/commandplacements-element.md)元素中定义其位置，如以下步骤中所示。
+   如果 ID 中要放置大量 UI 元素，或者元素应出现在多个位置，请将其放置在["命令放置"](../../extensibility/commandplacements-element.md)元素中，如以下步骤所示。
 
 #### <a name="to-use-command-placement-to-place-ui-elements-in-the-ide"></a>使用命令放置在 IDE 中放置 UI 元素
 
-1. 在 `Commands` 元素之后，添加一个 `CommandPlacements` 元素。
+1. 在 `Commands` 元素后面添加 `CommandPlacements` 元素。
 
-2. 在 `CommandPlacements` 元素中，为每个要放置的菜单、组或命令添加 `CommandPlacement` 元素。
+2. 在`CommandPlacements`元素中，为每个`CommandPlacement`菜单、组或要放置的命令添加一个元素。
 
-    每个 `CommandPlacement` 元素或 `Parent` 元素在一个 IDE 位置中放置一个菜单、组或命令。 一个 UI 元素只能有一个父级，但它可以有多个命令放置。 若要将 UI 元素放置在多个位置，请为每个位置添加一个 `CommandPlacement` 元素。
+    每个`CommandPlacement`元素或`Parent`元素在一个 IDE 位置放置一个菜单、组或命令。 UI 元素只能有一个父元素，但它可以有多个命令放置。 要将 UI 元素放置在多个位置，为每个`CommandPlacement`位置添加一个元素。
 
-3. 将每个 `CommandPlacement` 元素的 `guid` 和 `id` 属性设置为 "宿主" 菜单或组，就像对 `Parent` 元素所做的那样。 还可以设置 `priority` 特性以建立 UI 元素的相对位置。
+3. 将每个`guid``id``CommandPlacement`元素的 和 属性设置为宿主菜单或组，就像对元素一`Parent`样。 还可以设置属性`priority`以建立 UI 元素的相对位置。
 
-   可以通过父级和命令放置来混合放置。 但对于非常大的命令集，我们建议你仅使用命令位置。
+   您可以通过父项和命令放置混合放置。 但是，对于非常大的命令集，我们建议您仅使用命令放置。
 
-### <a name="add-specialized-behaviors"></a>添加专用行为
- 可以使用[CommandFlag](../../extensibility/command-flag-element.md)元素修改菜单和命令的行为，例如，更改其外观和可见性。 你还可以通过使用[VisibilityConstraints](../../extensibility/visibilityconstraints-element.md)元素来影响命令的显示时间，或使用[键绑定](../../extensibility/keybindings-element.md)元素添加键盘快捷方式。 某些类型的菜单和命令已内置了专门的行为。
+### <a name="add-specialized-behaviors"></a>添加专门行为
+ 可以使用[CommandFlag](../../extensibility/command-flag-element.md)元素修改菜单和命令的行为，例如，更改其外观和可见性。 您还可以使用[可见性约束](../../extensibility/visibilityconstraints-element.md)元素影响命令何时可见，或者通过使用[KeyBindings](../../extensibility/keybindings-element.md)元素添加键盘快捷键。 某些类型的菜单和命令已经内置了专门行为。
 
-#### <a name="to-add-specialized-behaviors"></a>添加专用行为
+#### <a name="to-add-specialized-behaviors"></a>添加专门行为
 
-1. 若要使 UI 元素仅在某些 UI 上下文中可见，例如，在加载解决方案时，请使用可见性约束。
+1. 要使 UI 元素仅在某些 UI 上下文中可见（例如，加载解决方案时）请使用可见性约束。
 
-   1. 在 `Commands` 元素之后，添加一个 `VisibilityConstraints` 元素。
+   1. 在 `Commands` 元素后面添加 `VisibilityConstraints` 元素。
 
-   2. 对于要约束的每个 UI 项，请添加一个[VisibilityItem](../../extensibility/visibilityitem-element.md)元素。
+   2. 对于要约束的每个 UI 项，添加[可见性项目](../../extensibility/visibilityitem-element.md)元素。
 
-   3. 对于每个 `VisibilityItem` 元素，请将 `guid` 和 `id` 特性设置为菜单、组或命令，然后将 `context` 特性设置为所需的 UI 上下文，如 <xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids80> 类中所定义。
+   3. 对于每个`VisibilityItem`元素，将`guid`和`id`属性设置为菜单、组或命令，然后将`context`属性设置为所需的 UI 上下文（如<xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids80>类中定义）。
 
-2. 若要在代码中设置 UI 项的可见性或可用性，请使用以下一个或多个命令标志：
+2. 要在代码中设置 UI 项的可见性或可用性，请使用以下命令标志中的一个或多个：
 
    - `DefaultDisabled`
 
@@ -167,7 +167,7 @@ ms.locfileid: "73186657"
 
    有关详细信息，请参阅[CommandFlag](../../extensibility/command-flag-element.md)元素。
 
-3. 若要更改元素的显示方式或动态更改其外观，请使用以下一个或多个命令标志：
+3. 要更改元素的显示方式或动态更改其外观，请使用以下一个或多个命令标志：
 
    - `AlwaysCreate`
 
@@ -195,7 +195,7 @@ ms.locfileid: "73186657"
 
    有关详细信息，请参阅[CommandFlag](../../extensibility/command-flag-element.md)元素。
 
-4. 若要更改元素收到命令时的反应方式，请使用以下一个或多个命令标志：
+4. 要更改元素在接收命令时的反应方式，请使用以下一个或多个命令标志：
 
    - `AllowParams`
 
@@ -221,19 +221,19 @@ ms.locfileid: "73186657"
 
    有关详细信息，请参阅[CommandFlag](../../extensibility/command-flag-element.md)元素。
 
-5. 若要将菜单相关的键盘快捷方式附加到菜单或菜单上的项，请在菜单或菜单项的 `ButtonText` 元素中添加 "&" 符（&）。 当父菜单打开时，与号后面的字符是活动的键盘快捷方式。
+5. 要将依赖于菜单的键盘快捷键附加到菜单或菜单上的项目，请在菜单或菜单项`ButtonText`的元素中添加一个 ampand 字符 （&）。 当父菜单打开时，放大器后面的字符是活动键盘快捷键。
 
-6. 若要将独立于菜单的键盘快捷方式附加到命令，请使用[键绑定](../../extensibility/keybindings-element.md)元素。 有关详细信息，请参阅[键绑定](../../extensibility/keybinding-element.md)元素。
+6. 要将独立于菜单的键盘快捷键附加到命令，请使用[KeyBindings](../../extensibility/keybindings-element.md)元素。 有关详细信息，请参阅[键绑定](../../extensibility/keybinding-element.md)元素。
 
-7. 若要本地化菜单文本，请使用 `LocCanonicalName` 元素。 有关详细信息，请参阅[字符串](../../extensibility/strings-element.md)元素。
+7. 要本地化菜单文本，请使用 元素`LocCanonicalName`。 有关详细信息，请参阅[字符串](../../extensibility/strings-element.md)元素。
 
-   某些菜单和按钮类型包括特殊行为。 以下列表描述了一些专门的菜单和按钮类型。 对于其他类型，请参见[菜单](../../extensibility/menu-element.md)、[按钮](../../extensibility/button-element.md)和[组合](../../extensibility/combo-element.md)元素中的 `types` 属性说明。
+   某些菜单和按钮类型包括专门行为。 下面的列表描述了一些专用菜单和按钮类型。 有关其他类型，请参阅`types`[菜单](../../extensibility/menu-element.md)、[按钮](../../extensibility/button-element.md)和[组合](../../extensibility/combo-element.md)元素中的属性说明。
 
-   - 组合框：组合框是可在工具栏上使用的下拉列表。 若要将组合框添加到 UI，请在 `Commands` 元素中创建一个[Combos](../../extensibility/combos-element.md)元素。 然后向 `Combos` 元素添加每个要添加的组合框 `Combo` 元素。 `Combo` 元素具有与 `Button` 元素相同的属性和子级，同时还具有 `DefaultWidth` 和 `idCommandList` 特性。 `DefaultWidth` 属性设置宽度（以像素为单位），`idCommandList` 属性指向用于填充组合框的命令 ID。
+   - 组合框：组合框是可在工具栏上使用的下拉列表。 要将组合框添加到 UI，请在`Commands`元素中创建[Combos](../../extensibility/combos-element.md)元素。 然后向`Combos`元素添加要添加`Combo`的每个组合框的元素。 `Combo`元素具有与`Button`元素相同的属性和子级，并且具有`DefaultWidth``idCommandList`和 属性。 属性`DefaultWidth`以像素为单位设置宽度，`idCommandList`该属性指向用于填充组合框的命令 ID。
 
-   - 菜单控制器：菜单控制器是一个按钮，该按钮旁有一个箭头。 单击箭头将打开一个列表。 若要将菜单控制器添加到 UI，请创建 `Menu` 元素，并将其 `type` 属性设置为 `MenuController` 或 `MenuControllerLatched`，具体取决于所需的行为。 若要填充菜单控制器，请将其设置为 `Group` 元素的父控制器。 菜单控制器会在其下拉列表中显示该组的所有子级。
+   - 菜单控制器：菜单控制器是一个按钮，旁边有一个箭头。 单击箭头将打开一个列表。 要向 UI 添加菜单控制器，请创建`Menu`一个元素，`type`并根据所需的`MenuController`行为`MenuControllerLatched`将其属性设置为 或 。 要填充菜单控制器，将其设置为`Group`元素的父级。 菜单控制器将在其下拉列表中显示该组的所有子级。
 
 ## <a name="see-also"></a>请参阅
 - [扩展菜单和命令](../../extensibility/extending-menus-and-commands.md)
-- [Visual Studio 命令表（.vsct）文件](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
-- [.VSCT XML 架构引用](../../extensibility/vsct-xml-schema-reference.md)
+- [可视化工作室命令表 （.vsct） 文件](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [VSCT XML 架构引用](../../extensibility/vsct-xml-schema-reference.md)

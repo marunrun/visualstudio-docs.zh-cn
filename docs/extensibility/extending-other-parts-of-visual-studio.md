@@ -1,33 +1,33 @@
 ---
-title: 扩展 Visual Studio 的其他部分 |Microsoft Docs
+title: 扩展视觉工作室的其他部分 |微软文档
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - user interfaces
 ms.assetid: 27d2f1e1-2503-4aca-9cfc-707abd07ccf0
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 31cbad96f52b3c29c417c3d380c39dd4cc610dd6
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 3c9076fbba822a1dfcff1ef13294ebd4dcafd9e9
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66341075"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80711766"
 ---
-# <a name="extend-other-parts-of-visual-studio"></a>扩展 Visual Studio 的其他部分
+# <a name="extend-other-parts-of-visual-studio"></a>扩展视觉工作室的其他部分
 
-有许多更多可以扩展 Visual Studio 用户界面部分。 在这里我们演示几个。
+可视化工作室 UI 中还有更多部分可以扩展。 在这里，我们向您展示几个。
 
-## <a name="create-a-vspackage"></a>创建 VSPackage
+## <a name="create-a-vspackage"></a>创建 VS 包
 
-Visual Studio 扩展性的基本构建基块为 Vspackage。  了解如何添加 VSPackage:[使用 VSPackage 创建扩展](../extensibility/creating-an-extension-with-a-vspackage.md)
+可视化工作室扩展性的基本构建块是 VSPackages。  了解如何添加 VS 包：[使用 VS 包创建扩展](../extensibility/creating-an-extension-with-a-vspackage.md)
 
 ## <a name="extend-the-toolbox"></a>扩展工具箱
 
-了解如何将新控件和其他项添加到工具箱以及如何使用工具箱功能：
+了解如何向工具箱添加新控件和其他项目以及如何使用工具箱功能：
 
 - [创建 WPF 工具箱控件](../extensibility/creating-a-wpf-toolbox-control.md)
 
@@ -35,16 +35,16 @@ Visual Studio 扩展性的基本构建基块为 Vspackage。  了解如何添加
 
 ## <a name="extend-the-status-bar"></a>扩展状态栏
 
-了解如何读取和写入状态栏，进度栏，以及如何提供动画和其他 UI:[扩展状态栏](../extensibility/extending-the-status-bar.md)。
+了解如何读取和写入状态栏和进度栏，以及如何提供动画和其他 UI：[扩展状态栏](../extensibility/extending-the-status-bar.md)。
 
 ::: moniker range="vs-2017"
 
 ## <a name="create-custom-start-pages"></a>创建自定义起始页
 
-了解如何使你自己的起始页，从零开始或从可下载开始页示例：[创建自定义起始页](../extensibility/creating-a-custom-start-page.md)。
+了解如何从头开始或从可下载的起始页示例创建您自己的起始[页：创建自定义起始页](../extensibility/creating-a-custom-start-page.md)。
 
 ::: moniker-end
 
 ## <a name="write-to-the-activity-log"></a>写入活动日志
 
-了解如何将写入到活动日志：[如何：使用活动日志](../extensibility/how-to-use-the-activity-log.md)。
+了解如何写入活动日志：[如何：使用活动日志](../extensibility/how-to-use-the-activity-log.md)。

@@ -6,10 +6,10 @@ ms.author: dominicn
 ms.date: 09/18/2019
 ms.assetid: 5399BCB1-E317-4C7B-87B1-C531E985DE6E
 ms.openlocfilehash: d089f38bd91eda2565f215e8d15a74cc119b8767
-ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "73714398"
 ---
 # <a name="build-actions"></a>生成操作
@@ -33,10 +33,10 @@ Visual Studio for Mac 项目中的所有文件都具有生成操作。 该生成
 
 |生成操作 | 项目类型 | 说明 |
 |--|--|--|
-| **编译** | 任何 | 文件被传递到 C# 编译器作为源文件。|
+| **编译** | any | 文件被传递到 C# 编译器作为源文件。|
 | **内容** | .NET、Xamarin | 对于 ASP.NET 项目，在部署站点时包含这些文件，作为站点的一部分。 对于 Xamarin.iOS 和 Xamarin.Mac 项目，它们会被包含在应用程序包中。|
-| **嵌入式资源** | .NET | 文件被传递到 C# 编译器作为嵌入程序集中的资源。 来自 `System.Reflection` 命名空间的 [Assembly.GetManifestResourceStream](/dotnet/api/system.reflection.assembly.getmanifestresourcestream) 可用于从程序集中读取文件。|
-| **无** | 任何 | 该文件不以任何形式包含在生成中，且它包括在项目中是为了便于从 IDE 轻松访问。 例如，此值可用于文档文件，例如“ReadMe”文件。|
+| **嵌入式资源** | .NET | 文件被传递到 C# 编译器作为嵌入程序集中的资源。 来自 [ 命名空间的 ](/dotnet/api/system.reflection.assembly.getmanifestresourcestream)Assembly.GetManifestResourceStream`System.Reflection` 可用于从程序集中读取文件。|
+| 无  | any | 该文件不以任何形式包含在生成中，且它包括在项目中是为了便于从 IDE 轻松访问。 例如，此值可用于文档文件，例如“ReadMe”文件。|
 
 > [!NOTE]
 > 可以为特定项目类型定义其他生成操作，因此，生成操作列表取决于项目类型，可能出现不在此列表中的值。  
@@ -45,6 +45,6 @@ Xamarin.iOS 项目具有 BundleResource  生成操作，用于将文件添加为
 
 还可在解决方案资源管理器中选择多个文件，这样便可同时设置多个文件的生成操作。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [生成操作（Windows 上的 Visual Studio）](/visualstudio/ide/build-actions)

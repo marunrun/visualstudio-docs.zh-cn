@@ -1,5 +1,5 @@
 ---
-title: IDebugThreadCreateEvent2 | Microsoft Docs
+title: IDebugThread创建事件2 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugThreadCreateEvent2
 ms.assetid: aee34a14-4f9c-4ad3-845f-c96ee938cefd
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c2bff87f7d8bef0c548b973492c15a549430c1e1
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 1aaa25e719f17701344d821759a0dac06aa88698
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66320015"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80718535"
 ---
 # <a name="idebugthreadcreateevent2"></a>IDebugThreadCreateEvent2
-当正在调试的程序中创建一个线程时，此接口是由调试引擎 (DE) 发送到会话调试管理器 (SDM) 中。
+当正在调试的程序中创建线程时，调试引擎 （DE） 会将此接口发送到会话调试管理器 （SDM）。
 
 ## <a name="syntax"></a>语法
 
@@ -28,18 +28,18 @@ ms.locfileid: "66320015"
 IDebugThreadCreateEvent2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>实施者的说明
- DE 实现此接口以报告已创建一个线程。 [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)接口必须实现此接口作为对同一个对象。 使用 SDM [QueryInterface](/cpp/atl/queryinterface)访问`IDebugEvent2`接口。
+## <a name="notes-for-implementers"></a>实施者说明
+ DE 实现此接口以报告已创建线程。 [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)接口必须在与此接口相同的对象上实现。 SDM 使用[查询接口](/cpp/atl/queryinterface)访问`IDebugEvent2`接口。
 
-## <a name="notes-for-callers"></a>调用方的说明
- DE 创建并发送此事件对象来报告已创建一个线程。 通过使用发送该事件[IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) SDM 附加到正在调试的程序时提供的回调函数。
+## <a name="notes-for-callers"></a>呼叫者备注
+ DE 创建并发送此事件对象以报告已创建线程。 该事件使用 SDM 在附加到正在调试的程序时提供的[IDebugEvent 回调2](../../../extensibility/debugger/reference/idebugeventcallback2.md)回调函数进行发送。
 
 ## <a name="requirements"></a>要求
- 标头： msdbg.h
+ 标题： msdbg.h
 
- 命名空间:Microsoft.VisualStudio.Debugger.Interop
+ 命名空间：微软.VisualStudio.调试器.互通
 
- 程序集：Microsoft.VisualStudio.Debugger.Interop.dll
+ 程序集：微软.VisualStudio.调试器.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [核心接口](../../../extensibility/debugger/reference/core-interfaces.md)

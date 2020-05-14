@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 87d313c29be1d5fb4f1be1febe9b5b7cd32e7e11
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75569577"
 ---
 # <a name="find-in-files-command"></a>“在文件中查找”命令
@@ -31,7 +31,7 @@ Edit.FindinFiles findwhat [/case] [/ext:extensions]
 [/text2] [/wild|/regex] [/word]
 ```
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
 
 `findwhat`\
 必需。 要匹配的文本。
@@ -84,7 +84,7 @@ Edit.FindinFiles findwhat [/case] [/ext:extensions]
 >Edit.FindinFiles btnCancel /lookin:"c:/My Visual Studio Projects" /ext:*.cls /text2
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在文件中查找](../../ide/find-in-files.md)
 - [“命令”窗口](../../ide/reference/command-window.md)

@@ -10,10 +10,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 24379a720ccaa3405cbe5c127f3b8abaf12e49aa
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74771904"
 ---
 # <a name="querycounters"></a>QueryCounters
@@ -35,7 +35,7 @@ VSPerfCmd.exe /QueryCounters
 
  不同的处理器公开不同的 CPU 性能计数器。 探查器定义一组可用于几乎所有处理器的常规计数器。 “QueryCounters”  选项同时列出常规计数器的名称和特定于处理器的计数器名称。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [VSPerfCmd](../profiling/vsperfcmd.md)
 - [分析独立应用程序](../profiling/command-line-profiling-of-stand-alone-applications.md)
 - [分析 ASP.NET Web 应用程序](../profiling/command-line-profiling-of-aspnet-web-applications.md)

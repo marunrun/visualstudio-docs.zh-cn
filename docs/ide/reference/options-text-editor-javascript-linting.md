@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 1f8a194f3848b0737fc33af2b9948102987a5923
-ms.sourcegitcommit: ce1ab8a25c66a83e60eab80ed8e1596fe66dd85c
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "68605966"
 ---
 # <a name="options-dialog-box-text-editor--javascripttypescript--linting"></a>“选项”对话框：“文本编辑器”\>“JavaScript/TypeScript”\>“Linting”
@@ -30,7 +30,7 @@ ms.locfileid: "68605966"
 
 ### <a name="uielement-list"></a>UIElement 列表
 
-|选项|说明|
+|选项|描述|
 |------------|-----------------|
 |**启用 ESLint**|如果你选中此选项，代码编辑器就会允许对代码进行静态分析。|
 |**对项目中的所有文件(甚至包括已关闭文件)执行 Lint**|如果你选中此选项，代码编辑器就会分析已关闭文件，除非仅报告已打开文件的诊断信息。|

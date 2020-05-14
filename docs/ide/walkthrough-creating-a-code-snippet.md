@@ -1,6 +1,6 @@
 ---
 title: 演练：创建代码片段
-ms.date: 06/10/2019
+ms.date: 03/31/2020
 ms.topic: conceptual
 helpviewer_keywords:
 - code snippets, creating
@@ -17,12 +17,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: adb0415e926bba9a1809c77f0f35b43d78263f43
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 1bfadb4b8d1836d131b669ea43f28f522f3fbd8b
+ms.sourcegitcommit: ce3d0728ec1063ab548dac71c8eaf26d20450acc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75597290"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80472810"
 ---
 # <a name="walkthrough-create-a-code-snippet"></a>演练：创建代码片段
 
@@ -54,7 +54,7 @@ ms.locfileid: "75597290"
 
 2. 在 Title 元素中填写代码片段的标题  。 使用标题 Square Root  。
 
-3. 在 Code  元素的“语言”  属性中填写代码片段的语言。 对于 C#，使用 CSharp，对于 Visual Basic，使用 VB   。
+3. 在 Code  元素的“语言”  属性中填写代码片段的语言。 对于 C#，使用 CSharp；对于 Visual Basic，使用 VB；对于 C++，使用 CPP    。
 
    > [!TIP]
    > 要查看所有可用语言值，请浏览[代码片段架构引用](code-snippets-schema-reference.md)页上的[代码元素属性部分](code-snippets-schema-reference.md#attributes)。

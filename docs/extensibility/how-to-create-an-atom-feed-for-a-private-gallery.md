@@ -1,40 +1,40 @@
 ---
-title: 如何：创建 Atom 馈送专用库 |Microsoft Docs
+title: 如何：为专用库创建 Atom 源 |微软文档
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Atom feed, VSIX private galleries
 - VSIX private galleries, Atom feed
 ms.assetid: 5897f538-9c41-486f-97d9-a1976d20d9fd
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 027a7f70240695e64051ef6c16fd3e5469d75900
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: c72fbf2d3973ffd84de1cf6f33788c43511c3ce4
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66340889"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80711012"
 ---
-# <a name="how-to-create-an-atom-feed-for-a-private-gallery"></a>如何：创建 Atom 馈送专用库
-您可以创建 Atom (RSS) 源到 intranet 位置包含扩展并添加到的源**扩展和更新**作为专用库。 有关详细信息，请参阅[专用库](../extensibility/private-galleries.md)。
+# <a name="how-to-create-an-atom-feed-for-a-private-gallery"></a>如何：为专用库创建 Atom 源
+您可以创建 Atom （RSS） 源到包含扩展的 Intranet 位置，并将源作为专用库添加到**扩展和更新**。 有关详细信息，请参阅[专用库](../extensibility/private-galleries.md)。
 
-## <a name="create-an-atom-feed"></a>创建 Atom 馈送
- 若要创建 Atom 馈送作为专用库，则先收集你的扩展 ( *.vsix*文件) 的文件夹。 您可以将它们组织到子文件夹的前提。 您将需要以下资源：
+## <a name="create-an-atom-feed"></a>创建原子源
+ 要将 Atom 源创建为专用库，请首先将扩展名 *（.vsix*文件）收集到文件夹中。 如果需要，可以将它们组织到子文件夹中。 您还需要以下资源：
 
-- *Atom.xml*提供扩展作为专用库的文件。 有关如何连接信息*atom.xml*的文件**扩展和更新**，请参阅[专用库](../extensibility/private-galleries.md)。
+- 使扩展作为专用库可用的*atom.xml*文件。 有关如何将*Atom.xml*文件连接到**扩展和更新**的信息，请参阅[专用库](../extensibility/private-galleries.md)。
 
-- 包含已从扩展插件 （例如，屏幕截图） 中提取任何图像文件的文件夹。 *Atom.xml*文件，使他们能够在包含这些图像的相对链接**扩展和更新**。
+- 包含从扩展名中提取的任何图像文件的文件夹（例如，屏幕截图）。 *Atom.xml*文件包含指向这些图像的相对链接，以便它们在**扩展和更新**中可用。
 
-  例如，假设您到文件夹收集了以下两个扩展：
+  例如，假设您已将以下两个扩展收集到一个文件夹中：
 
 - *Template_Wizard_239.vsix*，这是一个空的 VSIX 项目模板。
 
-- *SelectionHighlight.vsix*，这是一个工具，可突出显示所选单词的所有实例。
+- *选择高亮显示.vsix*， 这是一个突出显示选定单词的所有实例的工具。
 
-  内容*atom.xml*文件将类似于下面的示例：
+  *atom.xml*文件的内容类似于以下示例：
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -70,7 +70,7 @@ ms.locfileid: "66340889"
 </feed>
 ```
 
- 请注意，这两个链接标记引用的映像的生成文件夹中的屏幕截图。
+ 请注意，两个链接标记是指生成的图像文件夹中的屏幕截图。
 
 ## <a name="see-also"></a>请参阅
-- [专用库](../extensibility/private-galleries.md)
+- [私人画廊](../extensibility/private-galleries.md)

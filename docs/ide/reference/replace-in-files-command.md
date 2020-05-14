@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 96f7d7ae0ea5eaf0de1a6fa4357e2750cdd8c22e
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75565469"
 ---
 # <a name="replace-in-files-command"></a>“在文件中替换”命令
@@ -32,7 +32,7 @@ Edit.ReplaceinFiles findwhat replacewith [/all] [/case]
 [/reset] [/stop] [/sub] [/text2] [/wild] [/word]
 ```
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
 `findwhat`
 
 必需。 要匹配的文本。
@@ -105,7 +105,7 @@ Edit.ReplaceinFiles findwhat replacewith [/all] [/case]
 >Edit.ReplaceinFiles btnCancel btnReset /lookin:"c:/my visual studio projects" /ext:.cls /text2
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [查找和替换文本](../../ide/finding-and-replacing-text.md)
 - [在文件中替换](../../ide/replace-in-files.md)

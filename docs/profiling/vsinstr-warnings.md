@@ -16,10 +16,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: f1a0cba29caeda01de1154430af7a0d94bcfc2a5
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74779943"
 ---
 # <a name="vsinstr-warnings"></a>VSInstr 警告
@@ -44,5 +44,5 @@ ms.locfileid: "74779943"
 |**VSP2013**|检测此映像需要它以 32 位进程运行。 已更新了 CLR 标头标志以反映这一情况。<br /><br /> 探查器修改二进制文件，以便 64 位操作系统可以在 WOW64 仿真器中打开 32 位进程。 对于库 (DLL)，如果是在现有 64 位进程中加载这些库，则上述操作可能失败。 此警告会向用户通知依赖项。|
 |**VSP2014**|检测后得到的映像似乎无效，可能无法运行。<br /><br /> 当最终检测程序集具有无效的 PE 头时，将出现此消息。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [VSInstr](../profiling/vsinstr.md)

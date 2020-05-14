@@ -1,6 +1,6 @@
 ---
 title: 将 if 语句转换为 switch 语句或 switch 表达式
-ms.date: 02/12/2020
+ms.date: 03/10/2020
 ms.topic: reference
 author: mikadumont
 ms.author: midumont
@@ -9,12 +9,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: cb0c06fe0493f973ea9cf0a566ffda45a49eeeff
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+ms.openlocfilehash: 93ad96809c77d5644b13e6221a41f0b182fb448f
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2020
-ms.locfileid: "77283459"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79094141"
 ---
 # <a name="convert-if-statement-to-switch-statement-or-switch-expression"></a>将 if 语句转换为 switch 语句或 switch 表达式
 
@@ -32,9 +32,15 @@ ms.locfileid: "77283459"
 
 1. 请将光标置于 `if` 关键字。
 2. 按“Ctrl”  + **。** 触发“快速操作和重构”  菜单。
-3. 选择“转换为 'switch' 语句”  。
+3. 从下列两个选项中进行选择： 
 
-   ![将 if 语句转换为 switch 语句或 switch 表达式](media/convert-if-statement-to-switch-statement-or-switch-expression.png) 
+    选择“转换为 'switch' 语句”  。
+
+   ![将 if 语句转换为 switch 语句](media/convert-if-to-switch-statement.png) 
+
+    选择“转换为 "switch" 表达式”  。 
+
+    ![将 If 语句转换为 Switch 表达式](media/convert-if-to-switch-expression.png) 
 
 ## <a name="see-also"></a>请参阅
 

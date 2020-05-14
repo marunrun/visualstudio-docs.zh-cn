@@ -10,15 +10,15 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 446da348c1a947e6c59b8ad60d9bd0799d0d4322
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75588936"
 ---
 # <a name="how-to-specify-the-number-of-test-iterations-in-a-load-test-run-setting"></a>如何：在负载测试运行设置中指定测试迭代数
 
-在用“新建负载测试向导”创建负载测试之后，可以使用“负载测试编辑器”来更改方案属性以满足测试需求和目标   。 有关详细信息，请参见[演练：创建和运行负载测试](../test/walkthrough-create-and-run-a-load-test.md)。
+在用“新建负载测试向导”创建负载测试之后，可以使用“负载测试编辑器”来更改方案属性以满足测试需求和目标   。 有关详细信息，请参阅[演练：创建和运行负载测试](../test/walkthrough-create-and-run-a-load-test.md)。
 
 使用负载测试编辑器，可在“属性”窗口中编辑运行设置值的“测试迭代”属性    。 “测试迭代”  属性使用“负载测试编辑器”  指定要对负载测试的所有方案中的所有 Web 性能测试和单元测试运行的迭代数。
 
@@ -43,7 +43,7 @@ ms.locfileid: "75588936"
 
 6. 更改完此属性后，请选择“文件”菜单上的“保存”。   然后，可以使用新的“测试迭代”值运行负载测试。 
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [配置负载测试运行设置](../test/configure-load-test-run-settings.md)
 - [负载测试方案属性](../test/load-test-scenario-properties.md)

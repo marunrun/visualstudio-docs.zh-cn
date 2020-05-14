@@ -13,10 +13,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 7e74027512eba0d64593133a3bbe758570cbf567
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74779267"
 ---
 # <a name="net-memory-data-views"></a>.NET 内存数据视图
@@ -75,7 +75,7 @@ ms.locfileid: "74779267"
 
  列出分析运行期间检测函数的内存分配数据。
 
-## <a name="reference"></a>参考
+## <a name="reference"></a>引用
 - [“函数详细信息”视图](../profiling/function-details-view.md)
 
  显示所选函数和调用所选函数及被所选函数调用的函数之间的关系图形图表。

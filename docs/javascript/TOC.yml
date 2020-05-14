@@ -24,7 +24,7 @@
       href: tutorial-aspnet-with-typescript.md
     - name: 将 Node.js 应用发布到 Linux 应用服务
       href: publish-nodejs-app-azure.md
-- name: 操作指南
+- name: 操作方法指南
   items:
     - name: 编写和编辑代码
       href: write-and-edit-code.md

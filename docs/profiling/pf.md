@@ -10,14 +10,14 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 07ec6d636ec087386fdc9462ae09db55400957a9
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74778409"
 ---
 # <a name="pf"></a>PF
-VSPerfCmd.exe PF 选项将采样的分析事件设置为页面错误，还可选择性地将采样间隔内的页面错误数从默认值 10 改为其他值   。
+VSPerfCmd.exe“PF”选项将采样的分析事件设置为页面错误，还可以选择将采样间隔内的页面错误数从默认值 10 改为其他值   。
 
 > [!NOTE]
 > **PF** 不能用于 64 位系统。

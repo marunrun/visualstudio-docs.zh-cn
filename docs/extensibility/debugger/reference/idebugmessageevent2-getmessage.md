@@ -1,5 +1,5 @@
 ---
-title: IDebugMessageEvent2::GetMessage | Microsoft Docs
+title: IDebug消息事件2：：获取消息 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - GetMessage method
 - IDebugMessageEvent2::GetMessage method
 ms.assetid: 9fca7285-f7f1-422d-8565-92bf0e0db60a
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 758b3b860167ed8c2db8bb20c0d76ab289e39a0f
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 819b796a656f0ef8775fbb1c9e800e3019b81729
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66346896"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80727396"
 ---
 # <a name="idebugmessageevent2getmessage"></a>IDebugMessageEvent2::GetMessage
 获取要显示的消息。
@@ -50,24 +50,24 @@ int GetMessage( 
 
 ## <a name="parameters"></a>参数
 `pMessageType`\
-[out]返回一个值从[MESSAGETYPE](../../../extensibility/debugger/reference/messagetype.md)枚举，用于描述消息的类型。
+[出]从[消息类型](../../../extensibility/debugger/reference/messagetype.md)枚举中返回描述消息类型的值。
 
 `pbstrMessage`\
-[out]返回的消息。
+[出]返回消息。
 
 `pdwType`\
-[out]返回使用 Win32 的约定的消息的类型`MessageBox`函数。 请参阅[AfxMessageBox](/cpp/mfc/reference/cstring-formatting-and-message-box-display#afxmessagebox)函数的详细信息。
+[出]使用 Win32`MessageBox`函数的约定返回消息的类型。 有关详细信息，请参阅[AfxMessageBox](/cpp/mfc/reference/cstring-formatting-and-message-box-display#afxmessagebox)功能。
 
 `pbstrHelpFileName`\
-[in、 out]返回的帮助文件名称。 可能为 null (C++) 或为空 (C#) 如果没有帮助文件，则值。
+[进出]返回帮助文件名。 如果没有帮助文件，则可能是空（C++）或空 （C#） 值。
 
 `pdwHelpId`\
-[in、 out]返回的帮助标识符。 可能是 0，如果没有帮助与此消息关联。
+[进出]返回帮助标识符。 如果没有与此消息关联的帮助，则可能是 0。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，返回`S_OK`;否则，返回错误代码。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugMessageEvent2](../../../extensibility/debugger/reference/idebugmessageevent2.md)
-- [MESSAGETYPE](../../../extensibility/debugger/reference/messagetype.md)
+- [消息类型](../../../extensibility/debugger/reference/messagetype.md)
 - [AfxMessageBox](/cpp/mfc/reference/cstring-formatting-and-message-box-display#afxmessagebox)

@@ -18,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f588ae1b32b8b8d47d6323ee32d02c9053a3de32
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.openlocfilehash: 634916d9ab4ef0ce3119fcb5695301598992f38c
+ms.sourcegitcommit: 93859158465eab3423a0c0435f06490f0a456a57
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77634209"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82167290"
 ---
 # <a name="exec-task"></a>Exec 任务
 
@@ -49,13 +49,13 @@ ms.locfileid: "77634209"
 |`StdOutEncoding`|可选 `String` 输出参数。<br /><br /> 指定捕获的任务标准输出流的编码。 默认值为当前控制台输出编码。|
 |`WorkingDirectory`|可选 `String` 参数。<br /><br /> 指定要在其中运行命令的目录。<br /><br />默认：项目当前的工作目录。|
 
+[!INCLUDE [ToolTaskExtension arguments](includes/tooltaskextension-base-params.md)]
+
 ## <a name="remarks"></a>备注
 
 在要执行的作业的特定 MSBuild 任务不可用时，此任务会非常有用。 但是，与更加具体的任务不同，`Exec` 任务不能根据运行的工具或命令的结果执行其他处理或条件操作。
 
 `Exec` 任务调用 cmd.exe 而不是直接调用进程  。
-
-除本文档列出的参数外，此任务还从 <xref:Microsoft.Build.Tasks.ToolTaskExtension> 类继承参数，后者自身继承自 <xref:Microsoft.Build.Utilities.ToolTask> 类。 有关这些其他参数的列表及其说明，请参阅 [ToolTaskExtension 基类](../msbuild/tooltaskextension-base-class.md)。
 
 ## <a name="example"></a>示例
 

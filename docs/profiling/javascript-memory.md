@@ -21,10 +21,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: cfbc0dcecbf9b30afdfb268117e34c2fcfc0341e
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "73189394"
 ---
 # <a name="analyze-javascript-memory-usage-in-uwp-apps"></a>分析 UWP 应用中的 JavaScript 内存使用情况
@@ -353,7 +353,7 @@ if (performance && performance.mark) {
 
 - 当内存问题的原因时难以确定时，使用各种视图（例如控制器和类型）可找到共性，特别是可帮助确定某个对象（或一些对象），这个/这些对象可能包含对显示在视图中的许多其他对象的引用。
 
-- 在用户导航到新页后，查找无意间保留在内存中的对象，这是导致出现内存问题的一个常见原因。 例如:
+- 在用户导航到新页后，查找无意间保留在内存中的对象，这是导致出现内存问题的一个常见原因。 例如：
 
   - [URL.CreateObjectUrl](https://developer.mozilla.org/docs/Web/API/URL/createObjectURL) 函数的使用不当可能导致此问题。
 

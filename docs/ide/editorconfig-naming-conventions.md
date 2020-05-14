@@ -1,21 +1,21 @@
 ---
 title: EditorConfig 文件适用的 .NET 命名约定
-ms.date: 08/07/2019
+ms.date: 03/31/2020
 ms.topic: reference
 helpviewer_keywords:
 - naming conventions [EditorConfig]
 - EditorConfig naming conventions
-author: TerryGLee
-ms.author: tglee
+author: mikadumont
+ms.author: midumont
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b5c4115f4d63456e105fb4a6770fd1650938770d
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: d4864cc20813bc57b35e315a3b415cb6902e6361
+ms.sourcegitcommit: 054815dc9821c3ea219ae6f31ebd9cd2dc8f6af5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75588598"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80543995"
 ---
 # <a name="net-naming-conventions-for-editorconfig"></a>EditorConfig 适用的 .NET 命名约定
 
@@ -56,6 +56,9 @@ ms.locfileid: "75588598"
 - type_parameter
 - local
 - local_function
+
+> [!NOTE] 
+> 目前不支持元组成员。
 
 ### <a name="accessibility-levels-of-symbols"></a>符号的可访问性级别
 

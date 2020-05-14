@@ -11,11 +11,11 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: 73420f5fa6a90638f4a3dbbdf484178c5e177ce9
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75917386"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79307105"
 ---
 # <a name="python-web-application-project-templates"></a>Python Web 应用程序项目模板
 

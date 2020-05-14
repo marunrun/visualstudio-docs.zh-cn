@@ -19,10 +19,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 5bf13c7624d6c9d8e64b79f653eb83a0c5f3b3f0
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75565872"
 ---
 # <a name="shell-command"></a>shell 命令
@@ -34,7 +34,7 @@ ms.locfileid: "75565872"
 Tools.Shell [/command] [/output] [/dir:folder] path [args]
 ```
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
 `path`
 
 必需。 要执行的文件或要打开的文档的路径和文件名。 如果在环境变量 PATH 的某个目录中没有指定的文件，则必须使用完整路径。
@@ -84,7 +84,7 @@ Tools.Shell """C:\Program Files\SomeFile.exe"""
 >Tools.Shell /o /c xcopy.exe c:\MyText.txt c:\Text\MyText.txt
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Studio 命令](../../ide/reference/visual-studio-commands.md)
 - [“命令”窗口](../../ide/reference/command-window.md)

@@ -12,10 +12,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: ff4d851937111400002de531696b9b69aec20ba9
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74778578"
 ---
 # <a name="lines-view---sampling-data"></a>“行”视图 - 采样数据
@@ -60,5 +60,5 @@ ms.locfileid: "74778578"
 |**独占样本数**|执行函数行时收集的样本总数。|
 |**独占样本数百分比**|执行函数行时在分析运行期间收集的所有样本数的百分比。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [“行”视图 - 采样](../profiling/lines-view-dotnet-memory-sampling-data.md)

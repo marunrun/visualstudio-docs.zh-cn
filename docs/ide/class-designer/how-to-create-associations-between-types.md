@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 61b598505ad465ec9086102b9e16e96cb7aa8275
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75590379"
 ---
 # <a name="how-to-create-associations-between-types-in-class-designer"></a>如何：在类设计器中创建类型之间的关联
@@ -54,6 +54,6 @@ ms.locfileid: "75590379"
 
    此名称在“类详细信息”  窗口中、关联行上、“属性”  窗口中和代码中同时得到更新。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [如何：在成员表示法与关联表示法之间转换](how-to-change-between-member-notation-and-association-notation.md)

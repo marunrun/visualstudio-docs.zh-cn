@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: bd040b613a5b982050d651f341456c5fafc2954b
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "65679193"
 ---
 # <a name="publish-an-application-to-azure-app-service-by-importing-publish-settings-in-visual-studio"></a>通过在 Visual Studio 中导入发布设置将应用程序发布到 Azure 应用服务
@@ -30,10 +30,10 @@ ms.locfileid: "65679193"
 > * 将发布设置文件导入 Visual Studio
 > * 将应用部署到 Azure 应用服务
 
-发布设置文件 (\*.publishsettings) 与在 Visual Studio 中创建的发布配置文件 (\*.pubxml) 不同。 发布设置文件由 Azure 应用服务创建，然后可将其导入 Visual Studio。
+发布设置文件 (*.publishsettings) 与在 Visual Studio 中创建的发布配置文件 (\*.pubxml) 不同**\**。 发布设置文件由 Azure 应用服务创建，然后可将其导入 Visual Studio。
 
 > [!NOTE]
-> 若只需要将 Visual Studio 发布配置文件（\*.pubxml 文件）从一个 Visual Studio 安装复制到另一个，则对于托管项目类型可以在 \\<projectname\>\Properties\PublishProfiles 文件夹中查找发布配置文件 \<profilename\>.pubxml。 对于网站则在 \App_Data 文件夹下进行查找。 发布配置文件是 MSBuild XML 文件。
+> 若只需要将 Visual Studio 发布配置文件（*.pubxml 文件）从一个 Visual Studio 安装复制到另一个，则对于托管项目类型可以在 \*<projectname*\Properties\PublishProfiles 文件夹中查找发布配置文件 *profilename\<.pubxml\>**\\\>*。 对于网站则在 \App_Data 文件夹下进行查找。 发布配置文件是 MSBuild XML 文件。
 
 ## <a name="prerequisites"></a>系统必备
 
@@ -69,7 +69,7 @@ ms.locfileid: "65679193"
 
     Visual Studio 随即创建项目。
 
-1. 选择“生成” > “生成解决方案”以生成项目。
+1. 选择“生成”**“生成解决方案”以生成项目** > 。
 
 ## <a name="create-the-publish-settings-file-in-azure-app-service"></a>在 Azure 应用服务中创建发布设置文件
 

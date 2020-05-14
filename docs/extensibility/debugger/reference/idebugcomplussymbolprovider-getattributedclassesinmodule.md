@@ -1,28 +1,28 @@
 ---
-title: IDebugComPlusSymbolProvider::GetAttributedClassesinModule | Microsoft Docs
+title: IDebugComPlus符号提供程序：：获取属性类模块 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IDebugComPlusSymbolProvider::GetAttributedClassesinModule
 - GetAttributedClassesinModule
 ms.assetid: d8b087f3-1d32-4570-9eb0-7e0f7b051bc8
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 7aaff6ee7b770ce55a2ad08ff3d8f4f392375576
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 408aa2f373ab296394a0181014c16b1697fdf9ae
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66336937"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80733927"
 ---
 # <a name="idebugcomplussymbolprovidergetattributedclassesinmodule"></a>IDebugComPlusSymbolProvider::GetAttributedClassesinModule
-检索与给定模块中的指定属性的类。
+检索给定模块中具有指定属性的类。
 
 ## <a name="syntax"></a>语法
 
@@ -46,22 +46,22 @@ int GetAttributedClassesinModule (
 
 ## <a name="parameters"></a>参数
 `ulAppDomainID`\
-[in]应用程序域的标识符。
+[在]应用程序域的标识符。
 
 `guidModule`\
-[in]该模块的唯一标识符。
+[在]模块的唯一标识符。
 
 `pstrAttribute`\
-[in]属性的字符串。
+[在]属性字符串。
 
 `ppEnum`\
-[out]返回的特性化类的枚举。
+[出]返回属性类的枚举。
 
 ## <a name="return-value"></a>返回值
-如果成功，则返回`S_OK`; 否则为返回错误代码。
+如果成功，返回`S_OK`;否则，返回错误代码。
 
 ## <a name="example"></a>示例
-下面的示例演示如何实现此方法对于**CDebugSymbolProvider**对象，它公开[IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)接口。
+下面的示例演示如何为公开[IDebugComPlusSymbol提供程序](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)接口的**CDebugSymbol提供程序**对象实现此方法。
 
 ```cpp
 HRESULT CDebugSymbolProvider::GetAttributedClassesinModule(

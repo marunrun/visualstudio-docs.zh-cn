@@ -1,5 +1,5 @@
 ---
-title: FullClassName 元素 （VS 模板向导扩展）
+title: 全类名称元素（VS 模板向导扩展名）
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: conceptual
@@ -8,22 +8,22 @@ f1_keywords:
 helpviewer_keywords:
 - FullClassName element [Visual Studio project template]
 ms.assetid: 651e1010-d529-4856-85ff-c77ceca5d2ed
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 63b7e480944e8f5519db1c9cfd123c07a0cf6208
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 3e533fdf5b5497b17949581801721136b18bc2d1
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66342629"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80711420"
 ---
-# <a name="fullclassname-element-visual-studio-template-wizard-extension"></a>FullClassName 元素 （Visual Studio 模板向导扩展）
-实现的类的完全限定的名称`IWizard`接口。
+# <a name="fullclassname-element-visual-studio-template-wizard-extension"></a>全类名称元素（可视化工作室模板向导扩展名）
+实现`IWizard`接口的类的完全限定名称。
 
- \<VSTemplate > \<WizardExtension >...\<FullClassName>
+ \<VSTemplate>\<向导扩展>...\<全类名称>
 
 ## <a name="syntax"></a>语法
 
@@ -49,13 +49,13 @@ ms.locfileid: "66342629"
 ## <a name="text-value"></a>文本值
  需要一个文本值。
 
- 此文本指定实现的类`IWizard`接口。 指定的类必须存在于由指定的程序集[程序集](../extensibility/assembly-element-visual-studio-template-wizard-extension.md)元素。
+ 此文本指定实现接口的`IWizard`类。 指定的类必须存在于[程序集](../extensibility/assembly-element-visual-studio-template-wizard-extension.md)元素指定的程序集中。
 
 ## <a name="remarks"></a>备注
  `FullClassName` 是 `WizardExtension` 的必需子元素。
 
 ## <a name="example"></a>示例
- 下面的示例演示的标准项目模板的元数据[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]Windows 应用程序。
+ 下面的示例演示了[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]Windows 应用程序的标准项目模板的元数据。
 
 ```
 <VSTemplate Version="3.0.0" Type="Item"
@@ -86,6 +86,6 @@ ms.locfileid: "66342629"
 ```
 
 ## <a name="see-also"></a>请参阅
-- [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
+- [可视化工作室模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
 - [创建项目和项模板](../ide/creating-project-and-item-templates.md)
-- [如何：使用向导来处理项目模板](../extensibility/how-to-use-wizards-with-project-templates.md)
+- [如何：将向导与项目模板一起使用](../extensibility/how-to-use-wizards-with-project-templates.md)

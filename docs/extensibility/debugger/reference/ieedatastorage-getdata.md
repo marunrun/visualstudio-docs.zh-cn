@@ -1,5 +1,5 @@
 ---
-title: IEEDataStorage::GetData | Microsoft Docs
+title: IEEData存储：获取数据 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IEEDataStorage::GetData
 ms.assetid: 4d384039-73d4-40b4-ace6-a2474c546397
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: f8859b019559f21797e23fa9a568b0ad7d649454
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 62a1295aeb2a6afad51dee0f1015e3ab01d13fbb
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66319650"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80718208"
 ---
 # <a name="ieedatastoragegetdata"></a>IEEDataStorage::GetData
-从对象检索指定的字节数。
+从对象检索指定数量的字节。
 
 ## <a name="syntax"></a>语法
 
@@ -45,19 +45,19 @@ int GetData(
 
 ## <a name="parameters"></a>参数
 `dataSize`\
-[in]要检索的字节数 (`data`数组必须至少容纳此数目的字节数)。
+[在]要检索的字节数（`data`数组必须至少保留此字节数）。
 
 `sizeGotten`\
-[out]返回实际检索的字节的数。
+[出]返回实际检索的字节数。
 
 `data`\
-[in、 out]若要使用请求的数据填充的数组。
+[进出]要用请求的数据填充的数组。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，返回`S_OK`;否则，返回错误代码。
 
 ## <a name="remarks"></a>备注
- 建议的使用此方法是将所有数据字节都检索到本地数组，因为没有方法来跳过的检索过程中的字节。 在此情况下，参数`dataSize`应返回的值[GetSize](../../../extensibility/debugger/reference/ieedatastorage-getsize.md)方法。
+ 此方法的建议用途是检索到本地数组中的所有数据字节，因为在检索过程中无法跳过字节。 在这种情况下，参数`dataSize`应该是[GetSize](../../../extensibility/debugger/reference/ieedatastorage-getsize.md)方法返回的值。
 
 ## <a name="see-also"></a>请参阅
 - [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md)

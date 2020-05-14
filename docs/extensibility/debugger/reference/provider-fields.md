@@ -1,5 +1,5 @@
 ---
-title: PROVIDER_FIELDS | Microsoft Docs
+title: PROVIDER_FIELDS |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - PROVIDER_FIELDS enumeration
 ms.assetid: 39631545-2b0e-45b4-978b-d63656484b02
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 923ae0bc3ca03dabee7b5d4bca74d24c7f7d5815
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 37f64b455ab0331f9b8f08da1f29a3e2c1b82fdf
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66329371"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80713792"
 ---
-# <a name="providerfields"></a>PROVIDER_FIELDS
+# <a name="provider_fields"></a>PROVIDER_FIELDS
 指定与程序提供程序关联的属性。
 
 ## <a name="syntax"></a>语法
@@ -44,22 +44,22 @@ public enum enum_PROVIDER_FIELDS {
 
 ## <a name="fields"></a>字段
  `PFIELD_PROGRAM_NODES`\
- `ProgramNodes`字段才有效。
+ 该`ProgramNodes`字段有效。
 
  `PFIELD_IS_DEBUGGER_PRESENT`\
- `fIsDebuggerPresent`字段才有效。
+ 该`fIsDebuggerPresent`字段有效。
 
 ## <a name="remarks"></a>备注
- 这些值中返回`Fields`的成员[PROVIDER_PROCESS_DATA](../../../extensibility/debugger/reference/provider-process-data.md)结构，以指示已显式填充结构的哪些字段。
+ 这些值在`Fields`[PROVIDER_PROCESS_DATA](../../../extensibility/debugger/reference/provider-process-data.md)结构的成员中返回，以指示已显式填充结构的字段。
 
- 可以组合这些值的按位`OR`。
+ 这些值可以与一点一点地`OR`结合。
 
 ## <a name="requirements"></a>要求
- 标头： msdbg.h
+ 标题： msdbg.h
 
- 命名空间:Microsoft.VisualStudio.Debugger.Interop
+ 命名空间：微软.VisualStudio.调试器.互通
 
- 程序集：Microsoft.VisualStudio.Debugger.Interop.dll
+ 程序集：微软.VisualStudio.调试器.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [枚举](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

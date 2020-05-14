@@ -6,12 +6,12 @@ ms.author: dominicn
 ms.date: 12/20/2019
 ms.technology: vs-ide-sdk
 ms.assetid: D5245AB0-8404-426B-B538-F49125E672B2
-ms.openlocfilehash: 30826f68be1ef2f29940c8f9c95b2b79435e0a2a
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: dd4db2502c65e9330bde5f475fc97b2e86a49e4a
+ms.sourcegitcommit: 054815dc9821c3ea219ae6f31ebd9cd2dc8f6af5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75852040"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80544031"
 ---
 # <a name="extending-visual-studio-for-mac"></a>扩展 Visual Studio for Mac
 
@@ -36,7 +36,7 @@ Visual Studio for Mac 包含一组被称为“扩展包”的模块  。 可使�
 
 ## <a name="attribute-files"></a>属性文件
 
-扩展包存储与其名称、版本、依赖项和其他 C# 属性中的信息相关的元数据。 Add-in Maker 创建两个文件（`AddinInfo.cs` 和 `AssemblyInfo.cs`）来存储和组织该信息。 必须为扩展包的“`Addin` 属性”指定唯一的 ID 和命名空间  ：
+扩展包存储与其名称、版本、依赖项和其他 C# 属性中的信息相关的元数据。 Add-in Maker 创建两个文件（`AddinInfo.cs` 和 `AssemblyInfo.cs`）来存储和组织该信息。 必须为扩展包的“ *属性”指定唯一的 ID 和命名空间`Addin`* ：
 
 ```csharp
 [assembly:Addin (
@@ -155,13 +155,13 @@ public enum DateInserterCommands
 * 目标框架
 * 目标运行时
 * VCS 后端
-* 重构
+* Refactoring
 * 执行处理程序
 * 语法突出显示
 
 ## <a name="extending-the-new-editor"></a>扩展新编辑器
 
-Visual Studio for Mac [引入新的本机 Cocoa 文本编辑器 UI](https://docs.microsoft.com/visualstudio/releasenotes/vs2019-mac-relnotes#RTW)，它基于 Windows 上的 Visual Studio 的相同编辑器层而构建。
+Visual Studio for Mac [引入新的本机 Cocoa 文本编辑器 UI](https://docs.microsoft.com/visualstudio/releasenotes/vs2019-mac-relnotes)，它基于 Windows 上的 Visual Studio 的相同编辑器层而构建。
 
 在 Visual Studio 和 Visual Studio for Mac 之间共享编辑器的诸多好处之一是，可以采用针对 Visual Studio 编辑器的代码以在 Visual Studio for Mac 上运行。
 
@@ -182,17 +182,17 @@ Visual Studio for Mac [引入新的本机 Cocoa 文本编辑器 UI](https://docs
 
 拥有这些资源后，需要熟悉的主要概念就是 [`ITextBuffer`](/dotnet/api/microsoft.visualstudio.text.itextbuffer) 和 [`ITextView`](/dotnet/api/microsoft.visualstudio.text.editor.itextview)：
 
-* `ITextBuffer` 是文本的内存中表示，可以随时间的推移而更改。 `ITextBuffer` 上的 `CurrentSnapshot` 属性返回缓冲区当前内容的不可变  表示，即 `ITextSnapshot` 的实例。 在缓冲区上进行编辑时，CurrentSnapshot 属性将更新为最新版本。 分析器可以检查任何线程上的文本快照，并确保其内容永不更改。
+* `ITextBuffer` 是文本的内存中表示，可以随时间的推移而更改。 `CurrentSnapshot` 上的 `ITextBuffer` 属性返回缓冲区当前内容的不可变  表示，即 `ITextSnapshot` 的实例。 在缓冲区上进行编辑时，CurrentSnapshot 属性将更新为最新版本。 分析器可以检查任何线程上的文本快照，并确保其内容永不更改。
 
 * `ITextView` 是在编辑器控件的屏幕上如何呈现 `ITextBuffer` 的 UI 表示。 它引用其文本缓冲区，以及 `Caret``Selection` 和其他与 UI 相关的概念。
 
-对于给定的 [`MonoDevelop.Ide.Gui.Document`](http://source.monodevelop.com/#MonoDevelop.Ide/MonoDevelop.Ide.Gui/Document.cs,4e960d4735f089b5)，可以分别通过 `Document.GetContent<ITextBuffer>()` 和 `Document.GetContent<ITextView>()` 检索关联的基础 `ITextBuffer` 和 `ITextView`。
+对于给定的 [`MonoDevelop.Ide.Gui.Document`](http://source.monodevelop.com/#MonoDevelop.Ide/MonoDevelop.Ide.Gui/Document.cs,4e960d4735f089b5)，可以分别通过 `ITextBuffer` 和 `ITextView` 检索关联的基础 `Document.GetContent<ITextBuffer>()` 和 `Document.GetContent<ITextView>()`。
 
 ## <a name="additional-information"></a>其他信息
 
 > [!NOTE]
 > 我们正在致力于改善针对 Visual Studio for Mac 的扩展性方案。 若要创建扩展，并需要其他帮助或信息，或希望提供反馈，请填写 [Visual Studio for Mac 扩展创建](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR3YufGX_azhFl7MkrQO9i9JUNVMyMklVVlAzQVdURDg2NjQxTFRBVTJURC4u)表单。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [开发 Visual Studio 扩展 (Windows)](/visualstudio/extensibility/starting-to-develop-visual-studio-extensions)

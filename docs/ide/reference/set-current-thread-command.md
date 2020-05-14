@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 0d782a507d57e459aa5735cf34717f13e41d4cde
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "72748617"
 ---
 # <a name="set-current-thread-command"></a>“设置当前线程”命令
@@ -29,7 +29,7 @@ ms.locfileid: "72748617"
 Debug.SetCurrentThread index
 ```
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
 `index`
 
 必需。 按线程的索引选择线程。
@@ -40,7 +40,7 @@ Debug.SetCurrentThread index
 >Debug.SetCurrentThread 1
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Studio 命令](../../ide/reference/visual-studio-commands.md)
 - [“命令”窗口](../../ide/reference/command-window.md)

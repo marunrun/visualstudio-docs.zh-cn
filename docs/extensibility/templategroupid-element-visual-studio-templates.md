@@ -1,5 +1,5 @@
 ---
-title: TemplateGroupID 元素（Visual Studio 模板） |Microsoft Docs
+title: 模板组 ID 元素（可视化工作室模板） |微软文档
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -9,22 +9,22 @@ helpviewer_keywords:
 - TemplateGroupID element [Visual Studio Templates]
 - <TemplateGroupID> element [Visual Studio Templates]
 ms.assetid: bce7b49a-90bc-4691-aff3-a87e209f6d83
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7f710a73d8b9c4e31c8189d3322c518f20def5bb
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: affc324418e3745f85fb0b91a0ef7abda0ab28b0
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72718659"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80699080"
 ---
 # <a name="templategroupid-element-visual-studio-templates"></a>TemplateGroupID 元素（Visual Studio 模板）
-指定项模板将显示在哪种项目类型中。 当[ShowByDefault （Visual Studio 模板）](../extensibility/showbydefault-visual-studio-templates.md)设置为 `false` 时，此元素很重要。 当[ShowByDefault （Visual Studio 模板）](../extensibility/showbydefault-visual-studio-templates.md)设置为 `true` 时，项模板可用于所有项目类型。
+指定项模板将显示在哪种项目类型中。 当[ShowByDefault（可视化工作室模板）](../extensibility/showbydefault-visual-studio-templates.md)设置为`false`时，此元素非常重要。 当[ShowByDefault（可视化工作室模板）](../extensibility/showbydefault-visual-studio-templates.md)设置为`true`时，项目模板在所有项目类型中都可用。
 
- \<VSTemplate > \<TemplateData > \<TemplateGroupID >
+ \<模板>\<模板数据>\<模板组id>
 
 ## <a name="syntax"></a>语法
 
@@ -55,7 +55,7 @@ ms.locfileid: "72718659"
 ## <a name="remarks"></a>备注
  `TemplateGroupID` 是一个元素。
 
- @No__t_0 元素的值与项目系统注册一起使用（HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio \\ *\<version 号 >* \Projects \\）来筛选显示在 "**添加新项" 中的模板**对话框。
+ 元素的值`TemplateGroupID`与项目系统注册（HKEY_LOCAL_MACHINE_SOFTWARE_Microsoft_VisualStudio\\*\<版本号>*[项目\\]一起使用，以筛选"**添加新项目"** 对话框中显示的模板。
 
 |Visual C++ 值|含义|
 |------------------------|-------------|
@@ -71,4 +71,4 @@ ms.locfileid: "72718659"
 
 ## <a name="see-also"></a>请参阅
 - [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
-- [创建项目和项模板](../ide/creating-project-and-item-templates.md)
+- [创建项目和项目模板](../ide/creating-project-and-item-templates.md)

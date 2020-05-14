@@ -11,10 +11,10 @@ dev_langs:
 - VB
 - CSharp
 ms.openlocfilehash: 662a61bf97e1726892b877dc79a0ef98340a34ec
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75566886"
 ---
 # <a name="isolate-code-under-test-with-microsoft-fakes"></a>用 Microsoft Fakes 隔离测试代码
@@ -25,11 +25,11 @@ Fakes 有两种风格：
 
 - [存根](#get-started-with-stubs)将类替换为可实现同一接口的小型替代项。  若要使用存根，你在设计应用程序时必须让每个组件仅依赖接口，而不依赖其他组件。 （“组件”是指一个类或一起开发和更新的一组类，通常包含在一个程序集中。）
 
-- [填充码](#get-started-with-shims)在运行时修改应用的编译代码，这样就可以运行测试提供的填充码代码，而不用执行指定的方法调用。 填充码可用于替换对无法修改的程序集（如 .NET 程序集）的调用。
+- [垫片](#get-started-with-shims)在运行时修改应用的编译代码，这样就可以运行测试提供的垫片代码，而不用执行指定的方法调用。 填充码可用于替换对无法修改的程序集（如 .NET 程序集）的调用。
 
 ![Fakes 将替换其他组件](../test/media/fakes-2.png)
 
-**要求**
+**惠?**
 
 - Visual Studio Enterprise
 - .NET Framework 项目

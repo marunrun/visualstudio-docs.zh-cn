@@ -10,10 +10,10 @@ author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.openlocfilehash: 6da7464f5e22e186edff7671744c2605bee3c9ad
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75591081"
 ---
 # <a name="how-to-create-multi-project-templates"></a>如何：创建多项目模板
@@ -46,14 +46,14 @@ ms.locfileid: "75591081"
 
 多项目模板的根 vstemplate  文件不同于单项目模板，表现在以下方面：
 
-- VSTemplate 元素的 Type 属性有 ProjectGroup 而没有 Project 值     。 例如：
+- VSTemplate 元素的 Type 属性有 ProjectGroup 而没有 Project 值     。 例如:
 
     ```xml
     <VSTemplate Version="2.0.0" Type="ProjectGroup"
         xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
     ```
 
-- TemplateContent 元素包含 ProjectCollection 元素，它有一个或多个 ProjectTemplateLink 元素，这些元素定义了所包含项目的 vstemplate 文件的路径     。 例如：
+- TemplateContent 元素包含 ProjectCollection 元素，它有一个或多个 ProjectTemplateLink 元素，这些元素定义了所包含项目的 vstemplate 文件的路径     。 例如:
 
     ```xml
     <TemplateContent>
@@ -69,7 +69,7 @@ ms.locfileid: "75591081"
     ```
 
 > [!TIP]
-> 如果只需在“新建项目”对话框中显示多项目模板（而不是所包含的各个项目），请将内部模板标记为[隐藏](../extensibility/hidden-element-visual-studio-templates.md)。 例如：
+> 如果只需在“新建项目”对话框中显示多项目模板（而不是所包含的各个项目），请将内部模板标记为[隐藏](../extensibility/hidden-element-visual-studio-templates.md)。 例如:
 >
 > ```xml
 > <VSTemplate Type="Project" ... >
@@ -113,13 +113,13 @@ ms.locfileid: "75591081"
 
 8. 在基目录中，创建扩展名为“.vstemplate”的 XML 文件  。 此文件包含多项目模板的元数据。 有关文件结构，请参阅以下示例。 确保为每个项目的 vstemplate  文件指定相对路径。
 
-9. 选择基目录中的所有文件，然后通过右键单击或从上下文菜单中选择“发送至” > “压缩的文件夹（zip 格式）”   。
+9. 选择基目录中的所有文件，然后通过右键单击或从上下文菜单中选择“发送至” **“压缩的文件夹（zip 格式）”**  >   。
 
    这些文件和文件夹会压缩到一个 .zip 文件中  。
 
-10. 将 .zip 文件复制到用户项目模板目录中  。 默认情况下，此目录为 %USERPROFILE%\Documents\Visual Studio \<version\>\Templates\ProjectTemplates  。
+10. 将 .zip 文件复制到用户项目模板目录中  。 默认情况下，此目录为 %USERPROFILE%\Documents\Visual Studio *version\<\Templates\ProjectTemplates\>* 。
 
-11. 在 Visual Studio 中，选择“文件” > “新建” > “项目”，并验证是否显示了模板    。
+11. 在 Visual Studio 中，选择“文件” **“新建”** “项目”，并验证是否显示了模板 >    >   。
 
 ## <a name="two-project-example"></a>两个项目的示例
 
@@ -186,7 +186,7 @@ ms.locfileid: "75591081"
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [创建项目和项模板](../ide/creating-project-and-item-templates.md)
 - [如何：创建项目模板](../ide/how-to-create-project-templates.md)

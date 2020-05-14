@@ -7,10 +7,10 @@ ms.author: jomatthi
 ms.date: 12/12/2019
 ms.assetid: 2a561af4-f1fe-493e-9a53-aa6d77d15498
 ms.openlocfilehash: 3d1372ab5bd08ce164352293ec9d341ca567e3d5
-ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "75439042"
 ---
 # <a name="projects-with-multiple-target-frameworks"></a>具有多个目标框架的项目
@@ -23,7 +23,7 @@ ms.locfileid: "75439042"
 
 ## <a name="targeting-multiple-frameworks"></a>面向多个框架
 
-目标框架在项目文件中指定，可通过右键单击项目并选择“工具”>“编辑文件”  命令来编辑。 指定单个目标框架时，使用 TargetFramework 元素。 以下控制台应用项目文件演示了如何以 .NET Core 3.0 为目标：
+目标框架在项目文件中指定，可通过右键单击项目并选择“工具”>“编辑文件”命令来编辑。 指定单个目标框架时，使用 TargetFramework 元素。 以下控制台应用项目文件演示了如何以 .NET Core 3.0 为目标：
 
 ```XML
 <Project Sdk="Microsoft.NET.Sdk">
@@ -49,7 +49,7 @@ ms.locfileid: "75439042"
 详细了解如何[面向多个框架](/dotnet/standard/frameworks#how-to-specify-target-frameworks)。
 
 ## <a name="working-with-code-in-a-multi-target-project"></a>处理多目标项目中的代码
-当你在具有多个目标框架的项目中编辑 C# 文件时，可以指定想要用于指导编辑器体验的目标框架（例如，如果使用该框架不支持的 API，则显示警告）。 可以使用编辑器窗口左上角的“目标框架”  选择器来更改目标框架。
+当你在具有多个目标框架的项目中编辑 C# 文件时，可以指定想要用于指导编辑器体验的目标框架（例如，如果使用该框架不支持的 API，则显示警告）。 可以使用编辑器窗口左上角的“目标框架”选择器来更改目标框架。
 
 ![使用“目标框架”选择器更改位于编辑器窗口顶部的目标框架](media/project-multitargeting-framework-selector.png)
 
@@ -75,7 +75,7 @@ public class MyClass
 
 ![IntelliSense 中显示警告消息，API 将不适用于指定的目标框架。 示例文本：命名空间 System.Buffers、SharedUtils (netstandard2.0) - 不可用。 你可以使用导航栏切换上下文。](media/project-multitargeting-intellisense-warnings.png)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [框架定位概述 (Windows)](/visualstudio/ide/visual-studio-multi-targeting-overview)
 - [SDK 样式项目中的目标框架](/dotnet/standard/frameworks#how-to-specify-target-frameworks)

@@ -3,15 +3,16 @@ title: 管理通过 Microsoft 合作伙伴网络 (MPN) 提供的 Visual Studio �
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 07/28/2019
+ms.assetid: 83efe4ee-9a9d-4776-b27c-852d89dadafd
+ms.date: 03/09/2020
 ms.topic: conceptual
 description: 对于 MPN 合作伙伴而言，如何将 Visual Studio 订阅分配到最终用户。
-ms.openlocfilehash: 544987556b33358865fc785db7e86d455942a430
-ms.sourcegitcommit: 9186dc1af846ef2236ca78d4facf399c253ab5f7
+ms.openlocfilehash: aecc9892b60951f869c6a6bc721b746d2c013db5
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/26/2019
-ms.locfileid: "75492904"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80232426"
 ---
 # <a name="manage-visual-studio-subscriptions-offered-through-the-microsoft-partner-network-mpn"></a>管理通过 Microsoft 合作伙伴网络 (MPN) 提供的 Visual Studio 订阅
 具备相应资格或在 MPN 中购买了Action Pack 的合作伙伴可以使用 Visual Studio 订阅。 这些订阅按用户授权，并且仅在分配给为合作伙伴公司工作的特定命名用户时才有效。
@@ -59,7 +60,13 @@ Microsoft Action Pack 订阅者和 Visual Studio 订阅
   > Visual Studio 订阅需要技术联系人角色
   - 第 8 页 - 为能力合作伙伴分配 Visual Studio 订阅
 
+## <a name="see-also"></a>另请参阅
+- [Visual Studio 文档](https://docs.microsoft.com/visualstudio/)
+- [Azure DevOps 文档](https://docs.microsoft.com/azure/devops/)
+- [Azure 文档](https://docs.microsoft.com/azure/)
+- [Microsoft 365 文档](https://docs.microsoft.com/microsoft-365/)
+
 ## <a name="next-steps"></a>后续步骤
 订阅者和计划管理器应直接与 Microsoft 合作伙伴网络支持团队协作，以解决订阅者访问订阅时出现的任何问题。 请访问[“支持合作伙伴”](https://partner.microsoft.com/support)页寻求帮助。 （需要提供 MPN 登录凭据。）
 
-https://r.search.yahoo.com/_ylt=AwrWnKI73ARewjwA1C0PxQt.;_ylu=X3oDMTEyN2cxcTlwBGNvbG8DZ3ExBHBvcwMxBHZ0aWQDQjg0OTJfMQRzZWMDc3I-/RV=2/RE=1577405628/RO=10/RU=https%3a%2f%2fassetsprod.microsoft.com%2fmpn%2fProgram-Administrator-Guide-to-Software-and-Online-Services-Benefits/RK=2/RS=xsA5OL.9t6QqJlvFYZ3OPnZkC_k-
+

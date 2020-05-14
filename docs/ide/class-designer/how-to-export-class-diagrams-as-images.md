@@ -1,5 +1,5 @@
 ---
-title: 如何：将类图导出为图像（类设计器）
+title: 如何：将类关系图导出为图像（类设计器）
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: ac469b913b03dec9389b3f44121c2e80d87d30b3
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75590132"
 ---
 # <a name="how-to-export-class-diagrams-as-images"></a>如何：将类图作为图像导出
@@ -37,7 +37,7 @@ ms.locfileid: "75590132"
 
 若要自动更新从其他文档链接的导出图像，请在 Visual Studio 中再次导出该关系图。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [如何：打印类图](how-to-print-class-diagrams.md)
 - [使用类图](designing-and-viewing-classes-and-types.md)

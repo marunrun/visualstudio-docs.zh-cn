@@ -7,10 +7,10 @@ ms.date: 05/03/2018
 ms.technology: vs-ide-general
 ms.assetid: 61432695-5B12-4257-B250-48D37EED106D
 ms.openlocfilehash: d2ce3b3cdbf1a4cf1f19956a7327d73c0bb34b62
-ms.sourcegitcommit: 8589d85cc10710ef87e6363a2effa5ee5610d46a
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "72807148"
 ---
 # <a name="javascript-and-typescript-support"></a>JavaScript 和 TypeScript 支持
@@ -43,6 +43,6 @@ Visual Studio for Mac 中的 JavaScript IntelliSense 可以基于类型推理、
 
     ![添加 typescript 定义文件](media/javascript-type-intellisense-2019.gif)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [JavaScript IntelliSense（Windows 上的 Visual Studio）](/visualstudio/ide/javascript-intellisense)

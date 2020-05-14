@@ -1,28 +1,28 @@
 ---
-title: IDebugComPlusSymbolProvider::UpdateSymbols |Microsoft Docs
+title: IDebugComPlus符号提供程序：：更新符号 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - UpdateSymbols
 - IDebugComPlusSymbolProvider::UpdateSymbols
 ms.assetid: d530f6f1-4af2-454b-bab0-02478a8fe81e
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: def89659f49b25b09e777abf3df1d71db5506537
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 20a4fa6f6ec52ee556bd62fe303d0e21e4c56d6a
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66352773"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80733502"
 ---
 # <a name="idebugcomplussymbolproviderupdatesymbols"></a>IDebugComPlusSymbolProvider::UpdateSymbols
-指定的数据流中的这些更新在内存中的调试符号。
+使用指定数据流中的调试符号更新内存中的调试符号。
 
 ## <a name="syntax"></a>语法
 
@@ -44,16 +44,16 @@ int UpdateSymbols (
 
 ## <a name="parameters"></a>参数
 `ulAppDomainID`\
-[in]应用程序域的标识符。
+[在]应用程序域的标识符。
 
 `guidModule`\
-[in]该模块的唯一标识符。
+[在]模块的唯一标识符。
 
 `pUpdateStream`\
-[in]包含已更新的调试符号的数据流。
+[在]包含更新的调试符号的数据流。
 
 ## <a name="example"></a>示例
-下面的示例演示如何实现此方法对于**CDebugSymbolProvider**对象，它公开[IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)接口。
+下面的示例演示如何为公开[IDebugComPlusSymbol提供程序](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)接口的**CDebugSymbol提供程序**对象实现此方法。
 
 ```cpp
 HRESULT CDebugSymbolProvider::UpdateSymbols(
@@ -92,7 +92,7 @@ Error:
 ```
 
 ## <a name="return-value"></a>返回值
-如果成功，则返回`S_OK`; 否则为返回错误代码。
+如果成功，返回`S_OK`;否则，返回错误代码。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)

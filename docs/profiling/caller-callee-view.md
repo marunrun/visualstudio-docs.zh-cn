@@ -17,10 +17,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: bab816a0b71adef190a7d919b5ada7138a6a0e7c
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74779709"
 ---
 # <a name="callercallee-view"></a>“调用方/被调用方”视图
@@ -36,9 +36,9 @@ ms.locfileid: "74779709"
 
  双击视图其他两部分中列出的任意一个函数，可选择其他函数作为“报表”视图中间部分中的“当前函数”。 会自动更新“报表”视图以反映更改。
 
- 可通过单击列名对数据进行排序。 可将其他列添加到“调用方/被调用方”视图。 有关详细信息，请参阅[如何：自定义报表视图列](../profiling/how-to-customize-report-view-columns.md)。
+ 可通过单击列名对数据进行排序。 可将其他列添加到“调用方/被调用方”视图。 有关详细信息，请参阅[如何：自定义报告视图列](../profiling/how-to-customize-report-view-columns.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [“调用方/被调用方”视图 - 采样数据](../profiling/caller-callee-view-sampling-data.md)
 - [“调用方/被调用方”视图 - 检测数据](../profiling/caller-callee-view-instrumentation-data.md)
 - [“调用方/被调用方”视图 - .NET 内存检测数据](../profiling/caller-callee-view-net-memory-instrumentation-data.md)

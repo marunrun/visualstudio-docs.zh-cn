@@ -6,10 +6,10 @@ ms.author: dominicn
 ms.date: 05/06/2018
 ms.assetid: 0D58FB37-530E-495B-BED6-FD499477A9B6
 ms.openlocfilehash: 7133ffd01d8f384efa91d95bc8ea05aa75b7dd0d
-ms.sourcegitcommit: 370cc7fd2e11ede6d8215c8d81963a8307614550
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "74985226"
 ---
 # <a name="set-up-a-subversion-repository"></a>设置 Subversion 存储库
@@ -56,6 +56,6 @@ xcode-select --install
 
 8. 现在，在版本控制菜单中，应可见所有可用的版本控制命令。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用 Subversion](working-with-subversion.md)

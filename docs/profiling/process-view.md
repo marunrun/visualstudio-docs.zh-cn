@@ -18,10 +18,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: da3097c276557238e6f5b521f6f7d3231434cd10
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74772171"
 ---
 # <a name="process-view"></a>“进程”视图
@@ -29,7 +29,7 @@ ms.locfileid: "74772171"
 
  进程按名称列出。 线程作为创建它们的进程的子节点列出。 如果无可用符号，可以通过启动线程的函数或标签 **[ntdll.dll]** 对线程命名。
 
- 若要添加和移除列，请右键单击视图，然后选择“添加/移除列”  。 此外，还可通过单击列名对数据进行排序。 有关详细信息，请参阅[如何：自定义报表视图列](../profiling/how-to-customize-report-view-columns.md)。
+ 若要添加和移除列，请右键单击视图，然后选择“添加/移除列”  。 此外，还可通过单击列名对数据进行排序。 有关详细信息，请参阅[如何：自定义报告视图列](../profiling/how-to-customize-report-view-columns.md)。
 
  对于使用采样和检测方法生成的数据和其中包含 .NET 内存数据的数据而言，“进程”视图的列相同。 下表对列值进行了说明。
 
@@ -41,7 +41,7 @@ ms.locfileid: "74772171"
 |**开始时间**|从分析开始到进程或线程启动的毫秒数或处理器周期数。|
 |**结束时间**|从分析开始到进程或线程结束的毫秒数或处理器周期数。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [采样方法数据视图](../profiling/profiler-sampling-method-data-views.md)
 - [检测方法数据视图](../profiling/instrumentation-method-data-views.md)
 - [.NET 内存数据视图](../profiling/dotnet-memory-data-views.md)

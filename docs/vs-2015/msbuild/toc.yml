@@ -20,9 +20,9 @@
               href: how-to-build-the-same-source-files-with-different-options.md
             - name: 属性函数
               href: property-functions.md
-        - name: 项
+        - name: Items
           items:
-            - name: 项
+            - name: Items
               href: msbuild-items.md
             - name: 选择要生成的文件
               href: how-to-select-the-files-to-build.md
@@ -156,7 +156,7 @@
                   href: how-to-configure-targets-and-tasks.md
             - name: .NET Framework 目标错误疑难解答
               href: troubleshooting-dotnet-framework-targeting-errors.md
-        - name: 最佳做法
+        - name: 最佳实践
           href: msbuild-best-practices.md
     - name: MSBuild 中的日志记录
       items:
@@ -432,7 +432,7 @@
                   href: updatemanifestforbrowserapplication-task.md
         - name: 要转义的特殊字符
           href: special-characters-to-escape.md
-    - name: 词汇表
+    - name: 术语表
       href: msbuild-glossary1.md
     - name: 其他资源
       href: additional-msbuild-resources.md

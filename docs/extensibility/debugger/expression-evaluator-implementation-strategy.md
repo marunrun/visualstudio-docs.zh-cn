@@ -1,34 +1,34 @@
 ---
-title: 表达式计算器实施策略 |Microsoft Docs
+title: 表达式赋值器实现策略 |微软文档
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - expression evaluation, implementation strategy
 - debug engines, implementation strategies
 ms.assetid: 1bccaeb3-8109-4128-ae79-16fd8fbbaaa2
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ee0842f8375faeca7e715d4b20c73ca13598dbc3
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 3922689c20c839b3c0c2b2440bc9fefd5d25c80a
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66353744"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80738672"
 ---
-# <a name="expression-evaluator-implementation-strategy"></a>表达式计算器实施策略
+# <a name="expression-evaluator-implementation-strategy"></a>表达式赋值器实现策略
 > [!IMPORTANT]
-> 在 Visual Studio 2015 中，这种方式实现表达式计算器已弃用。 有关实现 CLR 表达式计算器的信息，请参阅[CLR 表达式计算器](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators)并[托管表达式计算器示例](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)。
+> 在 Visual Studio 2015 中，这种实现表达式赋值器的方式被弃用。 有关实现 CLR 表达式赋值器的信息，请参阅[CLR 表达式赋值器](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators)和[托管表达式赋值器示例](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)。
 
- 快速创建的表达式计算器 (EE) 的一种方法是首先实现显示中的局部变量所需要的最小代码**局部变量**窗口。 最好要认识到，中的每一行**局部变量**窗口将显示名称、 类型和本地变量的值和所有三个由[IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md)对象。 名称、 类型和本地变量的值取自`IDebugProperty2`对象通过调用其[GetPropertyInfo](../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md)方法。 详细了解如何显示中的局部变量**局部变量**窗口中，请参阅[显示局部变量](../../extensibility/debugger/displaying-locals.md)。
+ 快速创建表达式赋值器 （EE） 的一种方法是首先实现在 **"局部变量"** 窗口中显示局部变量所需的最小代码。 必须认识到"**局部变量"** 窗口中的每一行都显示局部变量的名称、类型和值，并且所有三行都由[IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md)对象表示。 局部变量的名称、类型和值通过调用其[GetPropertyInfo](../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) `IDebugProperty2`方法从对象获得。 有关如何在 **"局部变量"** 窗口中显示局部变量的详细信息，请参阅[显示局部变量](../../extensibility/debugger/displaying-locals.md)。
 
-## <a name="discussion"></a>讨论
- 可能的实现序列开头，实现[IDebugExpressionEvaluator](../../extensibility/debugger/reference/idebugexpressionevaluator.md)。 [分析](../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md)并[GetMethodProperty](../../extensibility/debugger/reference/idebugexpressionevaluator-getmethodproperty.md)必须实现方法以显示局部变量。 调用`IDebugExpressionEvaluator::GetMethodProperty`将返回`IDebugProperty2`对象，表示一种方法： 即[IDebugMethodField](../../extensibility/debugger/reference/idebugmethodfield.md)对象。 方法本身不会显示在**局部变量**窗口。
+## <a name="discussion"></a>讨论区
+ 可能的实现序列从实现[IDebugExpression 赋值器](../../extensibility/debugger/reference/idebugexpressionevaluator.md)开始。 必须实现[分析](../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md)法和[GetMethodProperty](../../extensibility/debugger/reference/idebugexpressionevaluator-getmethodproperty.md)方法以显示局部变量。 调用`IDebugExpressionEvaluator::GetMethodProperty`返回表示`IDebugProperty2`方法的对象：即[IDebugMethodField](../../extensibility/debugger/reference/idebugmethodfield.md)对象。 方法本身不显示在 **"局部变量"** 窗口中。
 
- [EnumChildren](../../extensibility/debugger/reference/idebugproperty2-enumchildren.md)应下一步实现方法。 调试引擎 (DE) 调用此方法以获取本地变量和参数的列表，通过传递`IDebugProperty2::EnumChildren``guidFilter`自变量的`guidFilterLocalsPlusArgs`。 `IDebugProperty2::EnumChildren` 调用[EnumArguments](../../extensibility/debugger/reference/idebugmethodfield-enumarguments.md)并[EnumLocals](../../extensibility/debugger/reference/idebugmethodfield-enumlocals.md)，结合单个枚举中的结果。 请参阅[显示局部变量](../../extensibility/debugger/displaying-locals.md)的更多详细信息。
+ 接下来应实现[枚举子](../../extensibility/debugger/reference/idebugproperty2-enumchildren.md)方法。 调试引擎 （DE） 调用此方法，通过传递`IDebugProperty2::EnumChildren`的`guidFilter``guidFilterLocalsPlusArgs`参数来获取本地变量和参数的列表。 `IDebugProperty2::EnumChildren`调用[枚举](../../extensibility/debugger/reference/idebugmethodfield-enumarguments.md)和[枚举，](../../extensibility/debugger/reference/idebugmethodfield-enumlocals.md)将结果合并到单个枚举中。 有关详细信息[，请参阅显示局部变量](../../extensibility/debugger/displaying-locals.md)。
 
 ## <a name="see-also"></a>请参阅
-- [实现表达式计算器](../../extensibility/debugger/implementing-an-expression-evaluator.md)
+- [实现表达式赋值器](../../extensibility/debugger/implementing-an-expression-evaluator.md)
 - [显示局部变量](../../extensibility/debugger/displaying-locals.md)

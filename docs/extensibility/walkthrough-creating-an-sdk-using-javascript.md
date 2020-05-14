@@ -1,45 +1,45 @@
 ---
-title: 演练：使用 JavaScript 创建 SDK |Microsoft Docs
+title: 演练：使用 JavaScript 创建 SDK |微软文档
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: a8c89d5d-5b78-4435-817f-c5f25ca6d715
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 61f18d2d7412b84827aaa9b6a229c80019716df4
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: f3a3fa110bd6521443521449898474299dd267d6
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66312555"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80697507"
 ---
-# <a name="walkthrough-create-an-sdk-using-javascript"></a>演练：创建使用 JavaScript SDK
-本演练介绍了如何使用 JavaScript 创建简单的数学运算 SDK 作为 Visual Studio 扩展 (VSIX)。  本演练分为以下部分：
+# <a name="walkthrough-create-an-sdk-using-javascript"></a>演练：使用 JavaScript 创建 SDK
+本演练介绍如何使用 JavaScript 创建简单的数学 SDK 作为可视化工作室扩展 （VSIX）。  演练分为以下几部分：
 
-- [若要创建 SimpleMathVSIX 扩展 SDK 项目](../extensibility/walkthrough-creating-an-sdk-using-javascript.md#createSimpleMathVSIX)
+- [创建 SimpleMathVSIX 扩展 SDK 项目](../extensibility/walkthrough-creating-an-sdk-using-javascript.md#createSimpleMathVSIX)
 
-- [若要创建使用 SDK 的示例应用](../extensibility/walkthrough-creating-an-sdk-using-javascript.md#createSampleApp)
+- [创建使用 SDK 的示例应用](../extensibility/walkthrough-creating-an-sdk-using-javascript.md#createSampleApp)
 
-  对于 JavaScript，没有任何类库项目类型。 在此演练中，该示例*arithmetic.js* VSIX 项目中直接创建文件。 在实践中，我们建议您首先生成和测试的 JavaScript 和 CSS 文件为 Windows 应用商店应用程序 — 例如，通过使用**空白应用**模板，将其放在一个 VSIX 项目之前。
+  对于 JavaScript，没有类库项目类型。 在本演练中，示例*算术.js*文件直接在 VSIX 项目中创建。 实际上，我们建议您先将 JavaScript 和 CSS 文件构建并测试为 Windows 应用商店应用（例如，使用**空白应用**模板）然后再将它们放入 VSIX 项目中。
 
-## <a name="prerequisites"></a>系统必备
- 要按照本演练的步骤操作，必须安装 Visual Studio SDK。 有关详细信息，请参阅[Visual Studio SDK](../extensibility/visual-studio-sdk.md)。
+## <a name="prerequisites"></a>先决条件
+ 要按照本演练的步骤操作，必须安装 Visual Studio SDK。 有关详细信息，请参阅[可视化工作室 SDK](../extensibility/visual-studio-sdk.md)。
 
-## <a name="createSimpleMathVSIX"></a> 若要创建 SimpleMathVSIX 扩展 SDK 项目
+## <a name="to-create-the-simplemathvsix-extension-sdk-project"></a><a name="createSimpleMathVSIX"></a>创建 SimpleMathVSIX 扩展 SDK 项目
 
-1. 在菜单栏上，依次选择“文件”   > “新建”   > “项目”  。
+1. 在菜单栏上，选择 **"文件** > **新项目** > **"。**
 
-2. 在模板类别列表中下**Visual C#** ，选择**扩展性**，然后选择**VSIX 项目**模板。
+2. 在模板类别列表中，在**Visual C#** 下，选择 **"可扩展性**"，然后选择**VSIX 项目**模板。
 
-3. 在中**名称**文字框中，指定`SimpleMathVSIX`，然后选择**确定**按钮。
+3. 在 **"名称**"文本框中，`SimpleMathVSIX`指定并选择"**确定**"按钮。
 
-4. 如果**Visual Studio 包向导**出现，请选择**下一步**按钮**欢迎**页上，然后在**7 的第 1 页**，选择**完成**按钮。
+4. 如果出现 **"视觉工作室包向导"，** 请选择 **"欢迎**"页上的 **"下一步**"按钮，然后在**7 页的第 1 页**中选择"**完成"** 按钮。
 
-     尽管**清单设计器**随即打开，我们将继续本演练简单通过直接修改清单文件。
+     尽管**清单设计器**打开，但我们将通过直接修改清单文件来保持本演练简单。
 
-5. 在中**解决方案资源管理器**，打开快捷菜单**source.extension.vsixmanifest**文件，，然后选择**查看代码**。 使用此代码替换文件中的现有内容。
+5. 在**解决方案资源管理器中**，打开**源.扩展.vsixmanifest**文件的快捷菜单，然后选择 **"查看代码**"。 使用此代码可以替换文件中的现有内容。
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -61,13 +61,13 @@ ms.locfileid: "66312555"
     </PackageManifest>
     ```
 
-6. 在中**解决方案资源管理器**，打开快捷菜单**SimpleMathVSIX**项目，，然后选择**添加** > **新项**.
+6. 在**解决方案资源管理器**中，打开**SimpleMathVSIX**项目的快捷菜单，然后选择"**Add** > **添加新项**"。
 
-7. 在中**数据**类别中，选择**XML 文件**，将文件命名`SDKManifest.xml`，然后选择**添加**按钮。
+7. 在 **"数据"** 类别中，选择**XML 文件**，`SDKManifest.xml`命名文件，然后选择"**添加**"按钮。
 
-8. 在中**解决方案资源管理器**，打开快捷菜单**SDKManifest.xml**文件，，然后选择**打开**以显示中的文件**XML 编辑器**.
+8. 在**解决方案资源管理器中**，打开**SDKManifest.xml**文件的快捷菜单，然后选择**Open**以在 XML**编辑器**中显示该文件。
 
-9. 将以下代码添加到**SDKManifest.xml**文件。
+9. 将以下代码添加到**SDKManifest.xml**文件中。
 
     ```xml
     <?xml version="1.0" encoding="utf-8" ?>
@@ -84,21 +84,21 @@ ms.locfileid: "66312555"
 
     ```
 
-10. 在中**解决方案资源管理器**，在快捷菜单上**SDKManifest.xml**文件中，选择**属性**。
+10. 在**解决方案资源管理器**中，在**SDKManifest.xml**文件的快捷菜单中，选择**属性**。
 
-11. 在中**属性**窗口中，将**包含在 VSIX**属性设置为**True**。
+11. 在 **"属性"** 窗口中，将**VSIX 属性中的"包括"** 设置为 **"True**"。
 
-12. 在**解决方案资源管理器**，在快捷菜单上**SimpleMathVSIX**项目中，选择**添加** > **新文件夹**，和然后将该文件夹`Redist`。
+12. 在 **"解决方案资源管理器**"中，在**SimpleMathVSIX**项目的快捷菜单上，选择 **"添加新** > **文件夹**"，然后命名`Redist`文件夹 。
 
-13. 添加下创建此文件夹结构的 Redist 子文件夹：
+13. 在 Redist 下添加子文件夹以创建此文件夹结构：
 
-     *\Redist\CommonConfiguration\Neutral\SimpleMath\js\\*
+     *[红色]通用配置\中性_简单数学\js\\*
 
-14. 上的快捷菜单 **\js\\** 文件夹中，选择**添加** > **新项**。
+14. 在**\js\\**文件夹的快捷菜单上，选择 **"添加新** > **项目**"。
 
-15. 下**Visual C# 项**，选择**Web**类别中，并选择**JavaScript 文件**项。 将文件命名`arithmetic.js`，然后选择**添加**按钮。
+15. 在**Visual C# 项**下，选择**Web**类别，然后选择**JavaScript 文件**项。 命名文件`arithmetic.js`，然后选择"**添加**"按钮。
 
-16. 将以下代码插入*arithmetic.js*:
+16. 将以下代码插入*到算术.js 中*：
 
     ```csharp
     (function (global) {
@@ -124,37 +124,37 @@ ms.locfileid: "66312555"
 
     ```
 
-17. 在中**解决方案资源管理器**，在快捷菜单上**arithmetic.js**文件中，选择**属性**。 更改这些属性：
+17. 在**解决方案资源管理器**中，在**算术.js**文件的快捷菜单上，选择**属性**。 进行以下属性更改：
 
-    - 设置**包含在 VSIX**属性设置为**True**。
+    - 将**VSIX 属性中的"包括"** 设置为 **"True"。**
 
-    - 设置**复制到输出目录**属性设置为**始终复制**。
+    - 将 **"复制到输出目录"** 属性设置为 **"始终复制**"。
 
-18. 在中**解决方案资源管理器**，在快捷菜单上**SimpleMathVSIX**项目中，选择**生成**。
+18. 在**解决方案资源管理器**中，在**SimpleMathVSIX**项目的快捷菜单上，选择 **"生成**"。
 
-19. 生成项目的快捷菜单上成功完成后，选择**在文件资源管理器中打开文件夹**。 导航到 **\bin\debug\\** ，并运行`SimpleMathVSIX.vsix`进行安装。
+19. 生成成功完成后，在项目的快捷菜单上，在**文件资源管理器中选择"打开文件夹**"。 导航到**\bin\debug\\**，`SimpleMathVSIX.vsix`然后运行以安装它。
 
-20. 选择**安装**按钮并让安装完成。
+20. 选择 **"安装**"按钮，让安装完成。
 
-21. 重新启动 Visual Studio。
+21. 重启 Visual Studio。
 
-## <a name="createSampleApp"></a> 若要创建使用 SDK 的示例应用
+## <a name="to-create-a-sample-app-that-uses-the-sdk"></a><a name="createSampleApp"></a>创建使用 SDK 的示例应用
 
-1. 在菜单栏上，依次选择“文件”   > “新建”   > “项目”  。
+1. 在菜单栏上，选择 **"文件** > **新项目** > **"。**
 
-2. 在模板类别列表中下**JavaScript**，选择**Windows 应用商店**，然后选择**空白应用**模板。
+2. 在模板类别列表中，在**JavaScript**下 ，选择**Windows 应用商店**，然后选择 **"空白应用"** 模板。
 
-3. 在中**名称**框中，指定`ArithmeticUI`。 选择“确定”  按钮。
+3. 在 **"名称"** 框中，`ArithmeticUI`指定 。 选择“确定”按钮。****
 
-4. 在中**解决方案资源管理器**，打开快捷菜单**ArithmeticUI**项目，，然后选择**添加** > **引用**.
+4. 在**解决方案资源管理器**中，打开**算术UI**项目的快捷菜单，然后选择 **"添加** > **参考**"。
 
-5. 下**Windows**，选择**扩展**，您会发现**简单的数学运算**显示。
+5. 在**Windows**下，选择**扩展**，并注意显示**简单数学**。
 
-6. 选择**简单的数学运算**复选框，然后选择**确定**按钮。
+6. 选择 **"简单数学"** 复选框，然后选择"**确定**"按钮。
 
-7. 在中**解决方案资源管理器**下**引用**，请注意，**简单的数学运算**显示引用。 将其展开，请注意，没有 **\js\\** 包括的文件夹**arithmetic.js**。 您可以打开**arithmetic.js**以确认是否已安装你的源代码。
+7. 在**解决方案资源管理器**中 ，在**参考引用**下 ，请注意将显示**简单数学**引用。 展开它，并注意到有一个包含**算术.js**的**\\\js**文件夹。 您可以打开**算术.js**来确认已安装源代码。
 
-8. 使用以下代码替换内容*default.htm*。
+8. 使用以下代码替换*default.htm*的内容。
 
    ```html
    <!DOCTYPE html>
@@ -192,7 +192,7 @@ ms.locfileid: "66312555"
    </html>
    ```
 
-9. 使用以下代码替换内容 *\js\default.js*。
+9. 使用以下代码替换*\js_default.js 的内容*。
 
     ```csharp
     (function () {
@@ -250,7 +250,7 @@ ms.locfileid: "66312555"
     })();
     ```
 
-10. 内容替换为 *\css\default.css*使用以下代码：
+10. 将*\css_default.css*的内容替换为以下代码：
 
     ```xml
     form {
@@ -309,9 +309,9 @@ ms.locfileid: "66312555"
 
     ```
 
-11. 选择**F5**键生成并运行应用程序。
+11. 选择要生成和运行应用的**F5**键。
 
-12. 在应用 UI 中，输入任何两个数字，选择一个操作，然后选择 **=** 按钮。 将显示正确的结果。
+12. 在应用 UI 中，输入任意两个数字，选择操作，然后选择**=** 该按钮。 将显示正确的结果。
 
 ## <a name="see-also"></a>请参阅
 - [创建软件开发工具包](../extensibility/creating-a-software-development-kit.md)

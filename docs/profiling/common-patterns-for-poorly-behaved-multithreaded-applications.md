@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 4aec033266ccb2a6e6dcd0342669b7c31082488a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62788852"
 ---
 # <a name="common-patterns-for-poorly-behaved-multithreaded-applications"></a>性能不佳的多线程应用程序的常见模式
@@ -24,7 +24,7 @@ ms.locfileid: "62788852"
 
 ## <a name="lock-contention-and-serialized-execution"></a>锁争用和序列化执行
 
-![锁争用导致序列化执行](../profiling/media/lockcontention_serialized.png "LockContention_Serialized")
+![串行化执行的锁争用](../profiling/media/lockcontention_serialized.png "LockContention_Serialized")
 
 有时，即使并行化应用程序有多个线程，并且计算机有足够数量的逻辑内核，它仍会顽固地继续串行执行。 第一个症状是较差的多线程性能，甚至可能比串行实现要稍慢。 在“线程”视图中，看不到并行运行的多个线程；相反，将看到在任何时候都只有一个线程运行。 在这种情况下，如果单击线程中的同步段，则可以看到被阻塞线程的调用堆栈（阻塞调用堆栈）和删除阻塞条件的线程（取消阻塞调用堆栈）。 此外，如果正在分析的进程中发生取消阻塞调用堆栈，将显示线程就绪连接符。 从这点上看，可以在阻塞和取消阻塞调用堆栈中导航到代码，以进一步调查造成序列化的原因。
 
@@ -46,7 +46,7 @@ ms.locfileid: "62788852"
 
 ## <a name="oversubscription"></a>过度订阅
 
-![过度订阅](../profiling/media/oversubscription.png "Oversubscription")
+![过度订阅](../profiling/media/oversubscription.png "过度订阅")
 
 在出现过度订阅的情况下，进程中活动线程的数量将超出系统上可用的逻辑内核数。 上图显示过度订阅的结果，以及所有活动线程中明显的抢占区段。 此外，图例显示了抢占占用了大部分的时间（在本例中为 84%）。 这可能表示进程正在要求系统执行多于逻辑核心数的并发线程。 但是，这也可能表示系统上的其他进程正在使用假设为此进程所提供的资源。
 
@@ -58,7 +58,7 @@ ms.locfileid: "62788852"
 
 ## <a name="inefficient-io"></a>I/O 效率低
 
-![I/O 效率低](../profiling/media/inefficient_io.png "Inefficient_IO")
+![I&#47;O 效率低](../profiling/media/inefficient_io.png "Inefficient_IO")
 
 过度使用或误用 I/O 是导致应用程序效率低下的常见原因。 请参考上图。 可见时间线分析显示 I/O 使用了 44% 的可见线程时间。 时间线显示大量 I/O，这指示 I/O 频繁地阻塞被分析应用程序。 若要深入了解 I/O 类型和程序被阻塞的位置，请放大存在问题的区域，检查可见时间线分析，然后单击特定 I/O 块以查看当前的调用堆栈。
 

@@ -34,11 +34,11 @@
               href: form-support-in-workflows.md
             - name: 演练：创建和调试 SharePoint 工作流解决方案
               href: walkthrough-creating-and-debugging-a-sharepoint-workflow-solution.md
-            - name: 演练：使用关联和启动表单创建工作流
+            - name: 演练：创建带有关联窗体和启动窗体的工作流
               href: walkthrough-creating-a-workflow-with-association-and-initiation-forms.md
-            - name: 演练：将应用程序页添加到工作流
+            - name: 演练：向工作流中添加应用程序页
               href: walkthrough-add-an-application-page-to-a-workflow.md
-            - name: 演练：创建自定义站点工作流活动
+            - name: 演练：创建自定义网站工作流活动
               href: walkthrough-create-a-custom-site-workflow-activity.md
             - name: 演练：将 SharePoint Designer 可重用工作流导入 Visual Studio
               href: walkthrough-import-a-sharepoint-designer-reusable-workflow-into-visual-studio.md

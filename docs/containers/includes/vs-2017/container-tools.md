@@ -6,12 +6,12 @@ ms.author: ghogen
 ms.date: 02/01/2019
 ms.technology: vs-azure
 ms.topic: include
-ms.openlocfilehash: ae6548892010035564bf29a8eda25b736db97d2a
-ms.sourcegitcommit: 4be64917e4224fd1fb27ba527465fca422bc7d62
+ms.openlocfilehash: 627b0b1260a3ccdd401dbb170f8e2dfffadea2dc
+ms.sourcegitcommit: cc58ca7ceae783b972ca25af69f17c9f92a29fc2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76922971"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389936"
 ---
 使用 Visual Studio，可以轻松地生成、调试和运行容器化的 ASP.NET Core 应用程序并将其发布到 Azure 容器注册表 (ACR)、Docker Hub、Azure 应用服务或你自己的容器注册表。 在本文中，我们将发布到 ACR。
 
@@ -19,7 +19,7 @@ ms.locfileid: "76922971"
 
 * [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
 * 安装了“Web 开发”、“Azure 工具”工作负载和/或“.NET Core 跨平台开发”工作负载的 [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download)   
-* 若要发布到 Azure 容器注册表，需要 Azure 订阅。 [注册免费试用版](https://azure.microsoft.com/offers/ms-azr-0044p/)。
+* 若要发布到 Azure 容器注册表，需要 Azure 订阅。 [注册免费试用版](https://azure.microsoft.com/free/dotnet/)。
 
 ## <a name="installation-and-setup"></a>安装和设置
 

@@ -12,10 +12,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 5874ffc7b4d304d1eaacd78032d657fe6ff31d94
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74780047"
 ---
 # <a name="functions-view---contention-data"></a>“函数”视图 - 争用数据
@@ -23,7 +23,7 @@ ms.locfileid: "74780047"
 
  下表介绍了使用并发方法收集的分析数据文件的“函数”视图中显示的值。
 
-|列|说明|
+|列|描述|
 |------------|-----------------|
 |**独占阻塞的时间**|阻止此函数执行函数体内代码的时间。 不包含此函数调用的函数中的阻塞时间。|
 |**独占阻塞的时间百分比**|此函数的独占阻止时间占分析运行期间所有阻止时间的百分比。|

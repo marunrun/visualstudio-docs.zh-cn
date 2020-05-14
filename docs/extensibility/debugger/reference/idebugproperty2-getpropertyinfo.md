@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty2::GetPropertyInfo | Microsoft Docs
+title: IDebug属性2：：获取财产信息 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProperty2::GetPropertyInfo
 ms.assetid: 39d6e942-df72-4c84-a5d9-a386d112714c
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 96d291ed86d285316445e40e85c30806f3a42c83
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 6ec1c3e29e0dbb6ca069dec696e6645a159ec7e6
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66342916"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80721375"
 ---
 # <a name="idebugproperty2getpropertyinfo"></a>IDebugProperty2::GetPropertyInfo
-获取[DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md)描述的属性的结构。
+获取描述属性[DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md)结构。
 
 ## <a name="syntax"></a>语法
 
@@ -51,25 +51,25 @@ int GetPropertyInfo ( 
 
 ## <a name="parameters"></a>参数
 `dwFields`\
-[in]中值的组合[DEBUGPROP_INFO_FLAGS](../../../extensibility/debugger/reference/debugprop-info-flags.md)枚举，用于指定哪些字段是要填写`pPropertyInfo`结构。
+[在][DEBUGPROP_INFO_FLAGS](../../../extensibility/debugger/reference/debugprop-info-flags.md)枚举中的值的组合，用于指定要在`pPropertyInfo`结构中填写哪些字段。
 
 `nRadix`\
-[in]用于格式化数值的任何信息的基数。
+[在]用于格式化任何数值信息的 Radix。
 
 `dwTimeout`\
-[in]指定以毫秒为单位，此方法返回前等待的最长时间。 使用`INFINITE`无限期等待。
+[在]指定从此方法返回之前等待的最大时间（以毫秒为单位）。 用于`INFINITE`无限期等待。
 
 `rgpArgs`\
-[in、 out]保留供将来使用;设置为 null 值。
+[进出]保留供将来使用;设置为空值。
 
 `dwArgCount`\
-[in]保留供将来使用;设置为零。
+[在]保留供将来使用;设置为零。
 
 `pPropertyInfo`\
-[out]一个[DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md)填充属性的说明的结构。
+[出]用属性的说明填充的[DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md)结构。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则返回错误代码。
+ 如果成功，返回`S_OK`;否则返回错误代码。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)

@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a4b57a5bd51ff20de8da87798aa398db04bc1c7d
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75567770"
 ---
 # <a name="project-devenvexe"></a>/Project (devenv.exe)
@@ -33,7 +33,7 @@ ms.locfileid: "75567770"
 devenv SolutionName {/Build|/Clean|/Deploy|/Rebuild} [SolnConfigName [/Project ProjName [/ProjectConfig ProjConfigName]] [/Out OutputFilename]]
 ```
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
 
 - *SolutionName*
 
@@ -45,7 +45,7 @@ devenv SolutionName {/Build|/Clean|/Deploy|/Rebuild} [SolnConfigName [/Project P
 
 - *SolnConfigName*
 
-  可选。 应用于 SolutionName  中命名的解决方案的解决方案配置的名称（如 `Debug` 或 `Release`）。 如果有多个解决方案平台可用，还必须指定平台（例如，`Debug|Win32`）。 如果未指定此参数或字符串为空 (`""`)，工具便会使用解决方案的有效配置。
+  可选。 应用于 SolutionName`Debug``Release` 中命名的解决方案的解决方案配置的名称（如 *或*）。 如果有多个解决方案平台可用，还必须指定平台（例如，`Debug|Win32`）。 如果未指定此参数或字符串为空 (`""`)，工具便会使用解决方案的有效配置。
 
 - `/Project` *ProjName*
 
@@ -53,7 +53,7 @@ devenv SolutionName {/Build|/Clean|/Deploy|/Rebuild} [SolnConfigName [/Project P
 
 - `/ProjectConfig` *ProjConfigName*
 
-  可选。 要应用于已命名 `/Project` 的项目生成配置名称（如 `Debug` 或 `Release`）。 如果有多个解决方案平台可用，还必须指定平台（例如，`Debug|Win32`）。
+  可选。 要应用于已命名 `Debug` 的项目生成配置名称（如 `Release` 或 `/Project`）。 如果有多个解决方案平台可用，还必须指定平台（例如，`Debug|Win32`）。
 
 - `/Out` *OutputFilename*
 
@@ -69,13 +69,13 @@ devenv SolutionName {/Build|/Clean|/Deploy|/Rebuild} [SolnConfigName [/Project P
 
 ## <a name="example"></a>示例
 
-下面的示例使用 `MySolution` 中的 `Debug` 项目生成配置来生成项目 `CSharpWinApp`。
+下面的示例使用 `CSharpWinApp` 中的 `Debug` 项目生成配置来生成项目 `MySolution`。
 
 ```shell
 devenv "%USERPROFILE%\source\repos\MySolution\MySolution.sln" /build Debug /project "CSharpWinApp\CSharpWinApp.csproj" /projectconfig Debug
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Devenv 命令行开关](../../ide/reference/devenv-command-line-switches.md)
 - [/ProjectConfig (devenv.exe)](../../ide/reference/projectconfig-devenv-exe.md)

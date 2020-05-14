@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 monikerRange: vs-2017
 ms.openlocfilehash: 7f7ab0c257bfed4521e95d9da12eaa0b9e25a71e
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "76114269"
 ---
 # <a name="whats-new-in-live-unit-testing-for-visual-studio-2017"></a>Visual Studio 2017 的 Live Unit Testing 的新增功能
@@ -26,7 +26,7 @@ ms.locfileid: "76114269"
 
 从 Visual Studio 2017 版本 15.4 开始，Live Unit Testing 包含以下领域的改进和增强功能：
 
-- **改进的可发现性**。 对于不知道 Live Unit Testing 功能存在的用户，只要用户打开包含单元测试但未启用 Live Unit Testing 的解决方案，Visual Studio IDE 就显示一个提及 Live Unit Testing 的黄色条框。 用户可借助黄色条框中提供的信息详细了解 Live Unit Testing 并启用该功能。 如果未满足 Live Unit Testing 的先决条件，也会显示金色条框。 这些方法包括：
+- **改进的可发现性**。 对于不知道 Live Unit Testing 功能存在的用户，只要用户打开包含单元测试但未启用 Live Unit Testing 的解决方案，Visual Studio IDE 就显示一个提及 Live Unit Testing 的黄色条框。 用户可借助黄色条框中提供的信息详细了解 Live Unit Testing 并启用该功能。 如果未满足 Live Unit Testing 的先决条件，也会显示金色条框。 其中包括：
 
   - 缺少测试适配器。
   - 存在较旧版本的测试适配器。
@@ -34,11 +34,11 @@ ms.locfileid: "76114269"
 
 - **与任务中心通知集成**。 Visual Studio IDE 现在在任务中心显示 Live Unit Testing 后台处理通知，以便用户可以轻松地了解启用 Live Unit Testing 后发生的情况。 这解决了在大型解决方案中启动 Live Unit Testing 的关键问题。 之前，在覆盖率图标显示前的数分钟，用户无法确定 Live Unit Testing 是否实际已被启用以及它是否在正常运行。 现在不会这样了！
 
-- **支持 MSTest 框架版本 1**：Live Unit Testing 已经可与三个常用单元测试框架配合使用：xUnit、NUnit 以及 MSTest。 之前，Live Unit Testing 仅在 MSTest 单元测试项目使用 MS Test 版本 2 时有效。 从 Visual Studio 2017 版本 15.4 开始，它现在还支持 MSTest 版本 1。
+- **MSTest 框架版本 1 支持**：Live Unit Testing 已经可与三个常用单元测试框架配合使用：xUnit、NUnit 以及 MSTest。 之前，Live Unit Testing 仅在 MSTest 单元测试项目使用 MS Test 版本 2 时有效。 从 Visual Studio 2017 版本 15.4 开始，它现在还支持 MSTest 版本 1。
 
-- **可靠性和性能**：Live Unit Testing 现可确保系统能够更好地检测出项目尚未完全完成加载的情况，并可避免 Live Unit Testing 出现崩溃。 生成性能改进还可在系统知道项目文件未进行任何更改时避免重新计算 MSBuild 项目。
+- **可靠性和性能**：Live Unit Testing 现在可确保系统能够更好地检测出项目尚未完全完成加载的情况，并可避免 Live Unit Testing 出现崩溃。 生成性能改进还可在系统知道项目文件未进行任何更改时避免重新计算 MSBuild 项目。
 
-- **其他用户界面改进**：右键单击手势中令人费解的“实时测试集 - 包括/排除”选项已更名为“Live Unit Testing 包括/排除”   。 “测试” > “Live Unit Testing”菜单的“重置清理”选项已被删除    。 现可通过依次选择“工具” > “选项” > “Live Unit Testing”，然后选择“删除持久化数据”访问该选项     。
+- **其他用户界面优化**：右键单击手势中令人费解的“实时测试集 - 包括/排除”  选项已更名为“Live Unit Testing 包括/排除”  。 “测试” **“Live Unit Testing”菜单的“重置清理”选项已被删除**   >   。 现可通过依次选择“工具” **“选项”** “Live Unit Testing”，然后选择“删除持久化数据”访问该选项 >    >    。
 
 ## <a name="version-153"></a>版本 15.3
 
@@ -64,7 +64,7 @@ ms.locfileid: "76114269"
   - 对于 NUnit：`[Category("SkipWhenLiveUnitTesting")]`
   - 对于 MSTest：`[TestCategory("SkipWhenLiveUnitTesting")]`
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Live Unit Testing 简介](live-unit-testing-intro.md)
 - [使用 Visual Studio 进行实时单元测试](live-unit-testing.md)

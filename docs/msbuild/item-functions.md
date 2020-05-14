@@ -10,12 +10,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: af4fb872206611ea5eb1aa93b7aa759615b56e41
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.openlocfilehash: d3f6299a8be52aef068746ca33e48341da55f778
+ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77633676"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82586878"
 ---
 # <a name="item-functions"></a>项函数
 
@@ -101,6 +101,10 @@ ms.locfileid: "77633676"
     Reverse: third;second;first
   -->
 ```
+
+## <a name="msbuild-condition-functions"></a>MSBuild 条件函数
+
+函数 `Exists` 和 `HasTrailingSlash` 不是项函数。 它们可与 `Condition` 属性一起使用。 请参阅 [MSBuild 条件](msbuild-conditions.md)。
 
 ## <a name="see-also"></a>请参阅
 

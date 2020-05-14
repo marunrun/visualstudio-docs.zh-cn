@@ -1,5 +1,5 @@
 ---
-title: IDebugCoreServer2::GetMachineName | Microsoft Docs
+title: IDebugCoreServer2：：获取机器名称 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugCoreServer2::GetName
 ms.assetid: 693bd794-7215-4f07-8651-b57366d39953
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: cff51d5cf394c7ff93cc0b0310a69d78a2a6a045
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 238088caa3229a0e57da90baeb0ee0f791c2908a
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66332345"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80733139"
 ---
 # <a name="idebugcoreserver2getmachinename"></a>IDebugCoreServer2::GetMachineName
 获取核心服务器运行的计算机的名称。
@@ -41,10 +41,10 @@ int GetName( 
 
 ## <a name="parameters"></a>参数
 `pbstrName`\
-[out]返回包含计算机的名称的字符串。
+[出]返回包含计算机名称的字符串。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，返回`S_OK`;否则，返回错误代码。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md)

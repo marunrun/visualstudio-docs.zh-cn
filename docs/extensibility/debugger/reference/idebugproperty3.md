@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty3 | Microsoft Docs
+title: IDebug属性3 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,28 +7,28 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProperty3 interface
 ms.assetid: 8f9be68d-4490-4eca-8f6b-8a10ed77e226
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8581e8163ab95eac7d49c5deca70c339804aac64
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: d2819724c204631112fd1a3e827126c4bc176972
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66348704"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80721041"
 ---
 # <a name="idebugproperty3"></a>IDebugProperty3
-此接口提供以下支持：
+此接口支持：
 
-- 正在检索任意长度的字符串与属性关联。
+- 检索与该属性关联的任意长字符串。
 
-- 将与属性关联的唯一 ID。
+- 将唯一 ID 与 属性关联。
 
-- 正在检索的属性的自定义查看器的列表。
+- 检索属性的自定义查看器列表。
 
-- 设置属性的值与报告产生的任何错误的功能
+- 设置属性的值，并能够报告任何生成的错误
 
 ## <a name="syntax"></a>语法
 
@@ -36,34 +36,34 @@ ms.locfileid: "66348704"
 IDebugProperty3 : IDebugProperty2
 ```
 
-## <a name="notes-for-implementers"></a>实施者的说明
- 调试引擎 (DE) 实现此接口上实现的相同对象[IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)长字符串、 属性 Id 和自定义查看器提供支持。
+## <a name="notes-for-implementers"></a>实施者说明
+ 调试引擎 （DE） 在实现[IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)的同一对象上实现此接口，以支持长字符串、属性 IT 和自定义查看器。
 
-## <a name="notes-for-callers"></a>调用方的说明
- 调用[QueryInterface](/cpp/atl/queryinterface)上`IDebugProperty2`接口，以获得此接口。
+## <a name="notes-for-callers"></a>呼叫者备注
+ 在`IDebugProperty2`接口上调用[查询接口](/cpp/atl/queryinterface)以获取此接口。
 
 ## <a name="methods-in-vtable-order"></a>Vtable 顺序中的方法
- 除了继承的方法之外`IDebugProperty2`，则`IDebugProperty3`接口公开以下方法。
+ 除了从`IDebugProperty2`继承的方法外，`IDebugProperty3`接口还公开以下方法。
 
 |方法|描述|
 |------------|-----------------|
 |[GetStringCharLength](../../../extensibility/debugger/reference/idebugproperty3-getstringcharlength.md)|返回与属性关联的字符串的长度。|
-|[GetStringChars](../../../extensibility/debugger/reference/idebugproperty3-getstringchars.md)|用户提供的缓冲区中返回的字符串。|
-|[CreateObjectID](../../../extensibility/debugger/reference/idebugproperty3-createobjectid.md)|创建此属性的唯一 ID。|
+|[GetStringChars](../../../extensibility/debugger/reference/idebugproperty3-getstringchars.md)|返回用户提供的缓冲区中的字符串。|
+|[CreateObjectID](../../../extensibility/debugger/reference/idebugproperty3-createobjectid.md)|为此属性创建唯一 ID。|
 |[DestroyObjectID](../../../extensibility/debugger/reference/idebugproperty3-destroyobjectid.md)|销毁此属性的唯一 ID。|
-|[GetCustomViewerCount](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewercount.md)|返回此属性可以查看使用的自定义查看器数。|
-|[GetCustomViewerList](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md)|返回此属性可以查看使用的自定义查看器的列表。|
-|[SetValueAsStringWithError](../../../extensibility/debugger/reference/idebugproperty3-setvalueasstringwitherror.md)|设置此属性，如果任何出错，则返回一条错误消息的值。|
+|[GetCustomViewerCount](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewercount.md)|返回可以使用此属性查看的自定义查看器数。|
+|[GetCustomViewerList](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md)|返回可以使用此属性查看的自定义查看器的列表。|
+|[SetValueAsStringWithError](../../../extensibility/debugger/reference/idebugproperty3-setvalueasstringwitherror.md)|设置此属性的值，如果出现问题，将返回错误消息。|
 
 ## <a name="remarks"></a>备注
-- [SetValueAsStringWithError](../../../extensibility/debugger/reference/idebugproperty3-setvalueasstringwitherror.md)会话调试管理器 (SDM) 若要设置属性的值是首选的方法。
+- [SetValueAsStringWithError](../../../extensibility/debugger/reference/idebugproperty3-setvalueasstringwitherror.md)是会话调试管理器 （SDM） 设置属性值的首选方式。
 
 ## <a name="requirements"></a>要求
- 标头： msdbg.h
+ 标题： msdbg.h
 
- 命名空间:Microsoft.VisualStudio.Debugger.Interop
+ 命名空间：微软.VisualStudio.调试器.互通
 
- 程序集：Microsoft.VisualStudio.Debugger.Interop.dll
+ 程序集：微软.VisualStudio.调试器.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [核心接口](../../../extensibility/debugger/reference/core-interfaces.md)

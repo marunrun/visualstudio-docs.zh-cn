@@ -9,10 +9,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 3938e7dc1b3ec33c8a4cf74b6957067bbdfd6185
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74778422"
 ---
 # <a name="performance-tools-on-windows-8-and-windows-server-2012-applications"></a>Windows 8 和 Windows Server 2012 应用程序上的性能工具
@@ -108,17 +108,17 @@ Windows 8 和 Windows Server 2012 中新增的增强安全功能需要对 Visual
 
 必须从性能资源管理器将层交互数据收集选项添加到性能运行。 还必须将项目、可执行文件或网站添加到性能资源管理器的目标节点。 请参阅[收集层交互数据](../profiling/collecting-tier-interaction-data.md)。
 
-**在远程计算机上收集 TIP 数据**
+**收集远程计算机上的 TIP 数据**
 
-若要在远程计算机上收集层交互数据，必须从 Visual Studio 计算机的 %VSInstallDir%\Team Tools\Performance Tools\Setups 文件夹中将 vs\_profiler\_\<Platform>\_\<Language>.exe 文件复制到远程计算机上并进行安装       。 不能使用[远程调试](../debugger/remote-debugging.md)下载包中的分析工具。
+若要在远程计算机上收集层交互数据，必须从 Visual Studio 计算机的 %VSInstallDir%\Team Tools\Performance Tools\Setups 文件夹中将 vs**profiler\_\_Platform>** _Language>.exe 文件复制到远程计算机上并进行安装\<_ **\_** _\<_   。 不能使用[远程调试](../debugger/remote-debugging.md)下载包中的分析工具。
 
 可以使用 [VSPerfCmd](../profiling/vsperfcmd.md) 或 [VSPerfASPNetCmd](../profiling/vsperfaspnetcmd.md) 收集分析数据。
 
-**TIP 报表**
+**TIP 报告**
 
-只能在 Visual Studio Enterprise 中查看层交互数据。 基于文件的层交互报表通过 [VSPerfReport](../profiling/vsperfreport.md) 将不可用。
+只能在 Visual Studio Enterprise 中查看层交互数据。 通过 [VSPerfReport](../profiling/vsperfreport.md) 生成的基于文件的层交互报告不可用。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [性能资源管理器](../profiling/performance-explorer.md)
 [配置性能会话](../profiling/configuring-performance-sessions.md)

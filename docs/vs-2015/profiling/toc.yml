@@ -6,9 +6,9 @@
       href: what-s-new-in-profiling-tools.md
     - name: 运行带或不带调试器的分析工具
       href: running-profiling-tools-with-or-without-the-debugger.md
-    - name: 内存使用率
+    - name: 内存用量
       items:
-        - name: 内存使用率
+        - name: 内存用量
           href: memory-usage.md
         - name: 不调试的内存使用情况
           href: memory-usage-without-debugging2.md
@@ -176,33 +176,33 @@
                       items:
                         - name: .NET Framework 使用性能规则
                           href: dotnet-framework-usage-performance-rules.md
-                        - name: DA0001：将 StringBuilder 用于串联
+                        - name: DA0001：使用 StringBuilder 进行串联
                           href: da0001-use-stringbuilder-for-concatenations.md
                         - name: DA0005：频繁进行 GC2 收集
                           href: da0005-frequent-gc2-collections.md
-                        - name: DA0006：替代值类型的 Equals()
+                        - name: DA0006：重写值类型的 Equals()
                           href: da0006-override-equals-parens-for-value-types.md
                         - name: DA0007：避免使用控制流异常
                           href: da0007-avoid-using-exceptions-for-control-flow.md
                         - name: DA0010：高开销 GetHashCode
                           href: da0010-expensive-gethashcode.md
-                        - name: DA0011：高开销 CompareTo
+                        - name: DA0011：高开销的 CompareTo
                           href: da0011-expensive-compareto.md
                         - name: DA0012：大量反射
                           href: da0012-significant-amount-of-reflection.md
                         - name: DA0013：String.Split 或 String.Substring 的使用率高
                           href: da0013-high-usage-of-string-split-or-string-substring.md
-                        - name: DA0018：运行的 32 位应用程序达到了进程托管内存限制
+                        - name: DA0018：运行的 32 位应用程序达到了进程托管内存的限制
                           href: da0018-32-bit-application-running-at-process-managed-memory-limits.md
-                        - name: DA0021：第 1 代垃圾回收率高
+                        - name: 'DA0021: 第 1 代垃圾回收的速率很高'
                           href: da0021-high-rate-of-gen-1-garbage-collections.md
-                        - name: DA0022：第 2 代垃圾回收率高
+                        - name: 'DA0022: 第 2 代垃圾回收的速率很高'
                           href: da0022-high-rate-of-gen-2-garbage-collections.md
                         - name: DA0023：垃圾回收占用的 CPU 时间很多
                           href: da0023-high-gc-cpu-time.md
-                        - name: DA0024：GC 占用的 CPU 时间过多
+                        - name: DA0024：垃圾回收占用的 CPU 时间过多
                           href: da0024-excessive-gc-cpu-time.md
-                        - name: DA0038：锁争用率高
+                        - name: DA0038：锁争用率很高
                           href: da0038-high-rate-of-lock-contentions.md
                         - name: DA0039：锁争用率非常高
                           href: da0039-very-high-rate-of-lock-contentions.md
@@ -222,31 +222,31 @@
                           href: da0002-vsperfcorprof-dll-is-missing.md
                         - name: DA0003：大量内核样本
                           href: da0003-many-kernel-samples.md
-                        - name: DA0004：处理器使用情况很高
+                        - name: DA0004：处理器使用率很高
                           href: da0004-high-processor-usage.md
                         - name: DA0008：收集的样本过少
                           href: da0008-few-samples-collected.md
                         - name: DA0026：处理过程的内核 CPU 时间过长
                           href: da0026-excessive-kernel-cpu-time-processing.md
-                        - name: DA0029：CLR 版本不受支持
+                        - name: DA0029：不支持的 CLR 版本
                           href: da0029-unsupported-clr-version.md
-                        - name: DA0030：收集数据库项目的层交互度量值
+                        - name: DA0030：收集数据库项目的层交互测量值
                           href: da0030-gather-tier-interaction-measurements-for-database-projects.md
                     - name: 资源监控性能规则
                       items:
                         - name: 资源监控性能规则
                           href: resource-monitoring-performance-rules.md
-                        - name: DA0501：所分析的进程的 CPU 平均消耗量。
+                        - name: DA0501：所分析的进程的平均 CPU 使用率。
                           href: da0501-average-cpu-consumption-by-the-process-being-profiled.md
                         - name: DA0502：所分析的进程的 CPU 最大消耗量
                           href: da0502-maximum-cpu-consumption-by-the-process-being-profiled.md
-                        - name: DA0503：所分析的进程的平均工作集（字节）
+                        - name: DA0503：所分析的进程的平均工作集(以字节为单位)
                           href: da0503-average-working-set-in-bytes-for-the-process-being-profiled.md
-                        - name: DA0504：所分析进程的最大工作集（字节）
+                        - name: DA0504：所分析的进程的最大工作集(以字节为单位)
                           href: da0504-maximum-working-set-in-bytes-for-the-process-being-profiled.md
-                        - name: DA0505：为所分析的进程分配的平均专用字节数
+                        - name: DA0505：为所分析进程分配的平均专用字节数
                           href: da0505-average-private-bytes-allocated-for-the-process-being-profiled.md
-                        - name: DA0506：为所分析进程分配的最大专用字节数
+                        - name: DA0506：为所分析的进程分配的最大专用字节数
                           href: da0506-maximum-private-bytes-allocated-for-the-process-being-profiled.md
             - name: 性能报告视图
               items:
@@ -566,11 +566,11 @@
                   items:
                     - name: VSPerfCmd
                       href: vsperfcmd.md
-                    - name: Start
+                    - name: 开始
                       href: start.md
                     - name: CrossSession
                       href: crosssession.md
-                    - name: Output
+                    - name: 输出
                       href: output.md
                     - name: WinCounter
                       href: wincounter.md
@@ -586,7 +586,7 @@
                       href: querycounters.md
                     - name: 事件
                       href: events-vsperfcmd.md
-                    - name: 关闭
+                    - name: 关机
                       href: shutdown.md
                     - name: GlobalOn 和 GlobalOff
                       href: globalon-and-globaloff.md
@@ -594,23 +594,23 @@
                       href: processon-and-processoff.md
                     - name: ThreadOn 和 ThreadOff
                       href: threadon-and-threadoff.md
-                    - name: “GC”
+                    - name: GC
                       href: gc-vsperfcmd.md
                     - name: 启动
                       href: launch.md
-                    - name: Attach
+                    - name: 附加
                       href: attach.md
-                    - name: Args
+                    - name: 参数
                       href: args.md
                     - name: 标记
                       href: mark.md
-                    - name: Detach
+                    - name: 分离
                       href: detach.md
                     - name: PF
                       href: pf.md
                     - name: Sys
                       href: sys-vsperfcmd.md
-                    - name: 计时器
+                    - name: Timer
                       href: timer.md
                     - name: LineOff
                       href: lineoff.md

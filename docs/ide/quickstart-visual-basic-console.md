@@ -15,10 +15,10 @@ dev_langs:
 ms.workload:
 - multiple
 ms.openlocfilehash: 34f3dc8642e2cf8e965e2ad303bed79931d2645c
-ms.sourcegitcommit: 2ae2436dc3484b9dfa10e0483afba1e5a02a52eb
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2020
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "77579497"
 ---
 # <a name="quickstart-create-your-first-console-app-in-visual-studio-with-visual-basic"></a>快速入门：使用 Visual Basic 在 Visual Studio 中创建第一个控制台应用
@@ -45,17 +45,17 @@ ms.locfileid: "77579497"
 
 1. 打开 Visual Studio 2017。
 
-2. 从顶部菜单栏中选择“文件”>“新建”>“项目”    。
+2. 从顶部菜单栏中选择“文件”**“新建”**“项目”>>。
 
-3. 在“新建项目”对话框左侧的窗格中，展开“Visual Basic”，然后选择“.NET Core”    。 在中间窗格中，选择“控制台应用(.NET Core)”  。 随后将项目命名为 HelloWorld  。
+3. 在“新建项目”对话框左侧的窗格中，展开“Visual Basic”，然后选择“.NET Core”。 在中间窗格中，选择“控制台应用(.NET Core)”。 随后将项目命名为 HelloWorld。
 
    ![Visual Studio IDE 中“新建项目”对话框中的控制台应用 (.NET Core) 项目模板](../ide/media/new-project-vb-dotnetcore-helloworld-console-app.png)
 
-     如果没有看到“控制台应用(.NET Core)”项目模板，请单击“新建项目”对话框左侧窗格中的“打开 Visual Studio 安装程序”链接    。
+     如果没有看到“控制台应用(.NET Core)”项目模板，请单击“新建项目”对话框左侧窗格中的“打开 Visual Studio 安装程序”链接。
 
    ![单击“新建项目”对话框中的“打开 Visual Studio 安装程序”链接](../ide/media/vb-open-visual-studio-installer-hello-world.png)
 
-     Visual Studio 安装程序启动。 选择“.NET Core 跨平台开发”工作负载，然后选择“修改”   。
+     Visual Studio 安装程序启动。 选择“.NET Core 跨平台开发”工作负载，然后选择“修改”。
 
      ![Visual Studio 安装程序中的 .NET Core 跨平台开发工作负荷](../ide/media/dot-net-core-xplat-dev-workload.png)
 
@@ -68,28 +68,28 @@ ms.locfileid: "77579497"
 
 1. 打开 Visual Studio 2019。
 
-1. 在“开始”窗口上，选择“创建新项目”  。
+1. 在“开始”窗口上，选择“创建新项目”。
 
    ![查看“创建新项目”窗口](../get-started/media/vs-2019/create-new-project-dark-theme.png)
 
-1. 在“创建新项目”窗口的搜索框中输入或键入“控制台”   。 接下来，从“语言”列表中选择 Visual Basic，然后从“平台”列表中选择“Windows”   。 
+1. 在“创建新项目”窗口的搜索框中输入或键入“控制台”。 接下来，从“语言”列表中选择 Visual Basic，然后从“平台”列表中选择“Windows”。 
 
-   应用语言和平台筛选器之后，选择“控制台应用(.NET Core)”模板，然后选择“下一步”   。
+   应用语言和平台筛选器之后，选择“控制台应用(.NET Core)”模板，然后选择“下一步”。
 
    ![为“控制台应用(.NET Framework)”选择 Visual Basic 模板](../get-started/visual-basic/media/vs-2019/vb-create-new-project-search-console-net-core-filtered.png)
 
    > [!NOTE]
-   > 如果未看到“控制台应用(.NET Core)”模板，则可以通过“创建新项目”窗口安装该模板   。 在“找不到所需内容?”消息中，选择“安装更多工具和功能”链接   。
+   > 如果未看到“控制台应用(.NET Core)”模板，则可以通过“创建新项目”窗口安装该模板。 在“找不到所需内容?”消息中，选择“安装更多工具和功能”链接。
    >
    > ![“创建新项目”窗口内“找不到所需内容”消息中的“安装更多工具和功能”链接](../get-started/media/vs-2019/not-finding-what-looking-for.png) 
    > 
-   > 然后，在 Visual Studio 安装程序中，选择“.NET Core 跨平台开发”工作负载  。
+   > 然后，在 Visual Studio 安装程序中，选择“.NET Core 跨平台开发”工作负载。
    >
    > ![Visual Studio 安装程序中的 .NET Core 跨平台开发工作负荷](../get-started/media/dot-net-core-xplat-dev-workload.png)
    >
-   > 之后，在 Visual Studio 安装程序中选择“修改”按钮  。 系统可能会提示你保存所有内容；如果出现提示，请按照指示进行操作。 接下来，选择“继续”，以安装工作负载  。 然后，返回到“[创建项目](#create-a-project)”过程中的步骤 2。
+   > 之后，在 Visual Studio 安装程序中选择“修改”按钮。 系统可能会提示你保存所有内容；如果出现提示，请按照指示进行操作。 接下来，选择“继续”，以安装工作负载。 然后，返回到“[创建项目](#create-a-project)”过程中的步骤 2。
 
-1. 在“配置新项目”窗口中，在“项目名称”框中键入或输入“WhatIsYourName”    。 然后，选择“创建”  。
+1. 在“配置新项目”窗口中，在“项目名称”框中键入或输入“WhatIsYourName”。 然后，选择“创建”。
 
    ![在“配置新项目”窗口中，将项目命名为“WhatIsYourName”](../get-started/visual-basic/media/vs-2019/vb-name-your-project-whatname.png)
 
@@ -103,7 +103,7 @@ ms.locfileid: "77579497"
 
 ![查看模板中的默认 Hello World 代码](../ide/media/vb-console-helloworld-template.png)
 
-在 IDE 中单击“HelloWorld”按钮，即可在“调试”模式下运行程序  。
+在 IDE 中单击“HelloWorld”按钮，即可在“调试”模式下运行程序。
 
   ![单击“Hello World”按钮，在“调试”模式下运行程序](../ide/media/vb-console-hello-world-button.png)
 
@@ -122,13 +122,13 @@ ms.locfileid: "77579497"
 
     此时程序暂停，直到按下某个键。
 
-2. 在菜单栏中，选择“生成”   > “生成解决方案”  。
+2. 在菜单栏中，选择“生成” > “生成解决方案”。
 
    这会将程序编译成一种中间语言 (IL)，然后由实时 (JIT) 编译器转换成二进制代码。
 
 ## <a name="run-the-application"></a>运行此应用程序
 
-1. 单击工具栏上的“HelloWorld”按钮  。
+1. 单击工具栏上的“HelloWorld”按钮。
 
    ![单击“Hello World”按钮，从工具栏运行程序](../ide/media/vb-console-hello-world-button.png)
 

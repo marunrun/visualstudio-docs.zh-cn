@@ -9,24 +9,24 @@ author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.openlocfilehash: b5dabfbc4f705d7de9fa881f373994714e43d26a
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75568134"
 ---
 # <a name="options-text-editor-xml-formatting"></a>选项, 文本编辑器, XML, 格式设置
 
-使用“格式设置”选项页指定 XML 文档中元素和属性的格式设置方式  。 要访问 XML 格式设置选项，请选择“工具” > “选项” > “文本编辑器” > “XML”，然后选择“格式设置”      。
+使用“格式设置”选项页指定 XML 文档中元素和属性的格式设置方式  。 要访问 XML 格式设置选项，请选择“工具” **“选项”** “文本编辑器” > “XML”，然后选择“格式设置”   >    >    。
 
 ## <a name="attributes"></a>特性
 
 **保留手动特性格式设置**
 
-请勿重新设置特性的格式。 此设置为默认设置。
+请不要重新设置属性的格式。 此设置为默认设置。
 
 > [!NOTE]
-> 如果属性在多行上，编辑器将对每行属性进行缩进，以便与父元素的缩进匹配。
+> 如果这些属性位于多行上，则编辑器会缩进属性的每一行，以与父元素的缩进大小相匹配。
 
 **在单独的行上对齐每个特性**
 
@@ -64,7 +64,7 @@ ms.locfileid: "75568134"
 </dir>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [XML 选项 - 杂项](options-text-editor-xml-miscellaneous.md)
 - [Visual Studio 中的 XML 工具](../../xml-tools/xml-tools-in-visual-studio.md)

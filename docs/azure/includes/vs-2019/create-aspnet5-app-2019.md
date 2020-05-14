@@ -7,10 +7,10 @@ ms.author: ghogen
 ms.topic: include
 ms.date: 03/05/2019
 ms.openlocfilehash: 81c2f7ae366efa70c3608e112dabcbfceb4087e4
-ms.sourcegitcommit: 748d9cd7328a30f8c80ce42198a94a4b5e869f26
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "71126003"
 ---
 1. 在 Visual Studio“启动”窗口，选择“创建新项目”  。

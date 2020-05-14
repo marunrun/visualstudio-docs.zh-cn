@@ -11,10 +11,10 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: e718a5610d9539e3e2a89af0a9de502ebfd168a7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62962512"
 ---
 # <a name="remotely-debug-python-code-on-linux"></a>在 Linux 上远程调试 Python 代码
@@ -25,7 +25,7 @@ Visual Studio 可在 Windows 计算机本地和远程启动和调试 Python 应�
 
 |   |   |
 |---|---|
-| ![视频的摄像机图标](../install/media/video-icon.png "观看视频") | 有关远程调试的介绍，请观看 [Deep Dive:Cross-Platform Remote Debugging](https://youtu.be/y1Qq7BrV6Cc)（深入了解：跨平台远程调试，youtube.com，6 分 22 秒），该视频适用于 Visual Studio 2015 和 2017。 |
+| ![视频的摄像机图标](../install/media/video-icon.png "观看视频") | 有关远程调试的介绍，请观看 [Deep Dive: Cross-Platform Remote Debugging](https://youtu.be/y1Qq7BrV6Cc)（深入了解：跨平台远程调试，youtube.com，6 分 22 秒），该视频适用于 Visual Studio 2015 和 2017。 |
 
 ## <a name="set-up-a-linux-computer"></a>设置 Linux 计算机
 
@@ -40,7 +40,7 @@ Visual Studio 可在 Windows 计算机本地和远程启动和调试 Python 应�
 
 ## <a name="prepare-the-script-for-debugging"></a>准备调试脚本
 
-1. 在远程计算机上，使用下面的代码创建名为 guessing-game.py 的 Python 文件：
+1. 在远程计算机上，使用下面的代码创建名为 guessing-game.py 的 Python 文件  ：
 
     ```python
     import random
@@ -65,21 +65,21 @@ Visual Studio 可在 Windows 计算机本地和远程启动和调试 Python 应�
         print('Nope. The number I was thinking of was {0}'.format(number))
     ```
 
-1. 使用 `pip3 install ptvsd` 将 `ptvsd` 包安装到环境中。
+1. 使用 `ptvsd` 将 `pip3 install ptvsd` 包安装到环境中。
    >[!NOTE]
    >建议记录安装的 ptvsd 版本，以防需要进行故障排除；[ptvsd 列表](https://pypi.python.org/pypi/ptvsd)也显示了可用版本。
 
-1. 将以下代码添加到 guessing-game.py 中其他代码前的最早可能点处，启用远程调试。 （虽然不是严格要求，但不能调试调用 `enable_attach` 函数前生成的任何后台线程。）
+1. 将以下代码添加到 guessing-game.py 中其他代码前的最早可能点处，启用远程调试  。 （虽然不是严格要求，但不能调试调用 `enable_attach` 函数前生成的任何后台线程。）
 
    ```python
    import ptvsd
    ptvsd.enable_attach()
    ```
 
-1. 保存文件并运行 `python3 guessing-game.py`。 另外，当你与程序进行交互时，对 `enable_attach` 的调用将在后台运行并等待传入连接。 需要时，可在 `enable_attach` 后调用 `wait_for_attach` 函数以阻止程序，直到附加调试器。
+1. 保存文件并运行 `python3 guessing-game.py`。 另外，当你与程序进行交互时，对 `enable_attach` 的调用将在后台运行并等待传入连接。 需要时，可在 `wait_for_attach` 后调用 `enable_attach` 函数以阻止程序，直到附加调试器。
 
 > [!Tip]
-> 除了 `enable_attach` 和 `wait_for_attach`，ptvsd 还提供了一个帮助程序函数 `break_into_debugger`，如果已附加调试器，它将作为编程断点。 如果已附加调试器，还有返回 `True` 的 `is_attached` 函数（请注意，无需在调用任何其他 `ptvsd` 函数前检查此结果）。
+> 除了 `enable_attach` 和 `wait_for_attach`，ptvsd 还提供了一个帮助程序函数 `break_into_debugger`，如果已附加调试器，它将作为编程断点。 如果已附加调试器，还有返回 `is_attached` 的 `True` 函数（请注意，无需在调用任何其他 `ptvsd` 函数前检查此结果）。
 
 ## <a name="attach-remotely-from-python-tools"></a>从 Python 工具远程附加
 
@@ -89,19 +89,19 @@ Visual Studio 可在 Windows 计算机本地和远程启动和调试 Python 应�
 
 1. （可选）若要在本地计算机上安装适用于 ptvsd 的 IntelliSense，请将 ptvsd 包安装到 Python 环境中。
 
-1. 选择“调试” > “附加到进程”。
+1. 选择“调试” **“附加到进程”**  >   。
 
-1. 在出现的“附加到进程”对话框中，将“连接类型”设置为“Python 远程(ptvsd)”。 （在旧版本的 Visual Studio 中，这些命令被称为“传输”和“Python 远程调试”。）
+1. 在出现的“附加到进程”  对话框中，将“连接类型”  设置为“Python 远程(ptvsd)”  。 （在旧版本的 Visual Studio 中，这些命令被称为“传输”和“Python 远程调试”   。）
 
-1. 在“连接目标”字段（旧版本中为“限定符”）中，输入 `tcp://<ip_address>:5678`，其中 `<ip_address>` 是远程计算机的地址（可以是显式地址或名称，如 myvm.cloudapp.net），`:5678` 是远程调试端口号。
+1. 在“连接目标”  字段（旧版本中为“限定符”  ）中，输入 `tcp://<ip_address>:5678`，其中 `<ip_address>` 是远程计算机的地址（可以是显式地址或名称，如 myvm.cloudapp.net），`:5678` 是远程调试端口号。
 
-1. 按 Enter 填充该计算机上可用 ptvsd 进程的列表：
+1. 按 Enter 填充该计算机上可用 ptvsd 进程的列表  ：
 
     ![输入连接目标并列出进程](media/remote-debugging-qualifier.png)
 
-    如果在填写此列表后碰巧在远程机器上启动了另一个程序，请选择“刷新”按钮。
+    如果在填写此列表后碰巧在远程机器上启动了另一个程序，请选择“刷新”按钮  。
 
-1. 选择要调试的进程，然后选择“附加”，或双击该进程。
+1. 选择要调试的进程，然后选择“附加”  ，或双击该进程。
 
 1. Visual Studio 将切换为调试模式，而脚本继续在远程计算机上运行，并提供所有常用[调试](debugging-python-in-visual-studio.md)功能。 例如，在 `if guess < number:` 行上设置断点，然后切换到远程计算机上，输入其他猜测。 执行此操作后，本地计算机上的 Visual Studio 将在该断点处停止、显示局部变量等：
 
@@ -111,11 +111,11 @@ Visual Studio 可在 Windows 计算机本地和远程启动和调试 Python 应�
 
 ### <a name="connection-troubleshooting"></a>连接疑难解答
 
-1. 请确保针对“连接类型”选择“Python 远程(ptvsd)”（在旧版本中，对应为“传输”和“Python 远程调试”。）
-1. 检查“连接目标”（或“限定符”）中的机密是否与远程代码中的机密完全匹配。
-1. 检查“连接目标”（或“限定符”）中的 IP 地址是否与远程计算机中的 IP 地址相匹配。
+1. 请确保针对“连接类型”  选择“Python 远程(ptvsd)”  （在旧版本中，对应为“传输”  和“Python 远程调试”  。）
+1. 检查“连接目标”  （或“限定符”  ）中的机密是否与远程代码中的机密完全匹配。
+1. 检查“连接目标”（或“限定符”）中的 IP 地址是否与远程计算机中的 IP 地址相匹配   。
 1. 检查是否打开了远程计算机上的远程调试端口，并且已在连接目标值中添加了端口后缀，如 `:5678`。
-    - 如果需要使用其他端口，可以使用 `address` 参数在 `enable_attach` 调用中指定端口，如 `ptvsd.enable_attach(address = ('0.0.0.0', 8080))`。 在这种情况下，将在防火墙中打开指定的端口。
+    - 如果需要使用其他端口，可以使用 `enable_attach` 参数在 `address` 调用中指定端口，如 `ptvsd.enable_attach(address = ('0.0.0.0', 8080))`。 在这种情况下，将在防火墙中打开指定的端口。
 1. 检查由 `pip3 list` 返回的远程计算机上安装的 ptvsd 版本是否与下表中 Visual Studio 使用的 Python 工具版本所用的 ptvsd 版本相匹配。 如有必要，请更新远程计算机上的 ptvsd。
 
     | Visual Studio 版本 | Python 工具/ptvsd 版本 |
@@ -146,9 +146,9 @@ Visual Studio 可在 Windows 计算机本地和远程启动和调试 Python 应�
     openssl req -new -x509 -days 365 -nodes -out cert.cer -keyout cert.key
     ```
 
-    出现提示时，如果是 openssl 提示，请使用主机名或 IP 地址（任选一个用于连接）作为“公用名”。
+    出现提示时，如果是 openssl 提示，请使用主机名或 IP 地址（任选一个用于连接）作为“公用名”  。
 
-    （有关详细信息，请参阅 Python `ssl` 模块文档中的[自签名证书](https://docs.python.org/3/library/ssl.html#self-signed-certificates)。 请注意，这些文档中的命令仅生成单个合并文件。）
+    （有关详细信息，请参阅 Python [ 模块文档中的](https://docs.python.org/3/library/ssl.html#self-signed-certificates)自签名证书`ssl`。 请注意，这些文档中的命令仅生成单个合并文件。）
 
 1. 在代码中，修改对 `enable_attach` 的调用，使其包含 `certfile` 和 `keyfile` 参数（这些参数使用文件名作为值，其含义与标准 `ssl.wrap_socket` Python 函数中的含义相同）：
 
@@ -163,20 +163,20 @@ Visual Studio 可在 Windows 计算机本地和远程启动和调试 Python 应�
 1. 使用 Visual Studio 将证书添加到 Windows 计算机上受信任的根 CA 以保护信道：
 
     1. 将证书文件从远程计算机复制到本地计算机。
-    1. 打开“控制面板”，导航到“管理工具” > “管理计算机证书”。
-    1. 在出现的窗口中，展开左侧的“受信任的根证书颁发机构”，右键单击“证书”，然后选择“所有任务” > “导入”。
-    1. 导航到从远程计算机复制的 .cer 文件，并将其选中，然后单击对话框以完成导入。
+    1. 打开“控制面板”，导航到“管理工具” **“管理计算机证书”**   >   。
+    1. 在出现的窗口中，展开左侧的“受信任的根证书颁发机构”，右键单击“证书”，然后选择“所有任务” **“导入”**    >   。
+    1. 导航到从远程计算机复制的 .cer 文件，并将其选中，然后单击对话框以完成导入  。
 
-1. 在 Visual Studio 中重复如前所述的附加进程，现在使用 `tcps://` 作为“连接目标”或（“限定符”）的协议。
+1. 在 Visual Studio 中重复如前所述的附加进程，现在使用 `tcps://` 作为“连接目标”  或（“限定符”  ）的协议。
 
     ![选择使用 SSL 进行远程调试传输](media/remote-debugging-qualifier-ssl.png)
 
 1. 当你通过 SSL 连接时，Visual Studio 会提示你注意潜在证书问题。 可以忽略这些警告并继续操作，但是，虽然信道会加密以防止窃听，该信道仍然可能会受到中间人攻击。
 
-    1. 如果看到下面的“远程证书不是受信任的证书”警告，则表示未正确地将证书添加到受信任根 CA。 请检查相关步骤并重试。
+    1. 如果看到下面的“远程证书不是受信任的证书”警告，则表示未正确地将证书添加到受信任根 CA  。 请检查相关步骤并重试。
 
         ![SSL 证书信任警告](media/remote-debugging-ssl-warning.png)
 
-    1. 如果看到下面的“远程证书名称与主机名不匹配”警告，则表示创建证书时，未使用适当的主机名或 IP 地址作为“公用名”。
+    1. 如果看到下面的“远程证书名称与主机名不匹配”警告，则表示创建证书时，未使用适当的主机名或 IP 地址作为“公用名”   。
 
         ![SSL 证书主机名警告](media/remote-debugging-ssl-warning2.png)

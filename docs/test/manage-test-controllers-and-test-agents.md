@@ -7,12 +7,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: efcc284291281b6e370cf51ddbe175faf8f1204c
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 086601cb8cde00d63e3be85c028201922ebe5b76
+ms.sourcegitcommit: 5d1b2895d3a249c6bea30eb12b0ad7c0f0862d85
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75584408"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80880190"
 ---
 # <a name="manage-test-controllers-and-test-agents"></a>管理测试控制器和测试代理
 
@@ -20,7 +20,9 @@ ms.locfileid: "75584408"
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
+::: moniker range="vs-2017"
 如果使用 Microsoft 测试管理器在实验室环境中运行测试，可使用 Microsoft 测试管理器的“实验室中心”中的“测试控制器管理器”来管理测试控制器及其代理   。 本主题仅在使用 Visual Studio 运行测试时适用。
+::: moniker-end
 
 有关如何安装和配置测试代理和测试控制器以便在 Visual Studio 中运行测试的信息，请参阅[配置测试代理和测试控制器](../test/configure-test-agents-and-controllers-for-load-tests.md)。
 
@@ -90,25 +92,36 @@ ms.locfileid: "75584408"
 
 在移除测试代理之前，必须将其设置为脱机状态。
 
+::: moniker range="vs-2017"
 > [!NOTE]
 > 此过程不能用于删除作为实验室环境的一部分向控制器注册的代理。 若要从控制器中删除这些代理，则必须使用 Microsoft 测试管理器删除环境。
+::: moniker-end
+::: moniker range=">=vs-2019"
+> [!NOTE]
+> 此过程不能用于删除作为实验室环境的一部分向控制器注册的代理。
+::: moniker-end
 
 ### <a name="to-remove-a-test-agent-from-a-test-controller"></a>从测试控制器中移除测试代理
 
-1. 如果测试控制器未向项目注册，请按以下步骤进行操作。
+::: moniker range=">=vs-2019"
+在 Visual Studio 2019 中，如果已在项目中注册了测试控制器，则无法删除测试代理。
+::: moniker-end
+如果测试控制器未向项目注册，请按以下步骤进行操作。
 
-    1. 从 Visual Studio 打开测试项目的测试设置文件，选择“角色”并从“控制器”字段的下拉列表中选择“管理测试控制器”    。
+1. 从 Visual Studio 打开测试项目的测试设置文件，选择“角色”并从“控制器”字段的下拉列表中选择“管理测试控制器”    。
 
-         此时将显示“管理测试控制器”对话框  。
+   此时将显示“管理测试控制器”对话框  。
 
-    2. 在“控制器”下拉列表中，键入安装了测试控制器的计算机的名称  。 如果你先前已经管理了特定测试控制器，则可以从列表中选择该名称。
+2. 在“控制器”下拉列表中，键入安装了测试控制器的计算机的名称  。 如果你先前已经管理了特定测试控制器，则可以从列表中选择该名称。
 
-    3. 在“代理”窗格中，选择测试代理名称  。 如果代理仍处于联机状态，请选择“脱机”  。 若要删除它，请选择“删除”  。
+3. 在“代理”窗格中，选择测试代理名称  。 如果代理仍处于联机状态，请选择“脱机”  。 若要删除它，请选择“删除”  。
 
-        > [!NOTE]
-        > 移除测试代理只是解除该代理与测试控制器之间的关联。 若要完全卸载测试代理，请使用测试代理计算机上“控制面板”中的“程序和功能”  。
+   > [!NOTE]
+   > 移除测试代理只是解除该代理与测试控制器之间的关联。 若要完全卸载测试代理，请使用测试代理计算机上“控制面板”中的“程序和功能”  。
 
-2. 如果测试控制器已向项目注册，请使用 Microsoft 测试管理器删除该代理。
+::: moniker range="vs-2017"
+如果测试控制器已向项目注册，请使用 Microsoft 测试管理器删除该代理。
+::: moniker-end
 
 ## <a name="change-the-settings-for-a-test-agent"></a>更改测试代理的设置
 
@@ -125,8 +138,10 @@ ms.locfileid: "75584408"
 
 ### <a name="to-change-the-settings-of-a-test-agent"></a>更改测试代理的设置
 
+::: moniker range="vs-2017"
 > [!NOTE]
 > 如果向测试控制器注册了测试代理，且测试控制器已向项目注册，请更改 Microsoft 测试管理器中的设置。
+::: moniker-end
 
 1. 若要为负载测试配置和监视测试控制器以及任何注册的代理，请选择 Visual Studio 中的“负载测试”菜单，然后选择“管理测试控制器”   。 对于任何其他测试，在 Visual Studio 中打开测试项目的测试设置文件，选择“角色”并从“控制器”字段的下拉列表中选择“管理测试控制器”    。
 

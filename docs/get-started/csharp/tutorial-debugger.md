@@ -2,7 +2,7 @@
 title: 教程：调试 C# 代码
 description: 了解如何启动 Visual Studio 调试器、单步执行代码以及检查数据。
 ms.custom: debug-experiment, seodec18, get-started
-ms.date: 01/31/2020
+ms.date: 04/23/2020
 ms.technology: vs-ide-debug
 ms.topic: tutorial
 dev_langs:
@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6ede47c9daf37011195d66c746498cdfc809d24b
-ms.sourcegitcommit: b2fc9ac7d73c847508f6ed082bed026476bb3955
+ms.openlocfilehash: 3d6e9ee79602f3a0db8f68d701120c450bfee721
+ms.sourcegitcommit: dab57cebd484228e6f0cf7ab1b9685c575410c06
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/05/2020
-ms.locfileid: "77027256"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82153066"
 ---
 # <a name="tutorial-learn-to-debug-c-code-using-visual-studio"></a>教程：了解如何使用 Visual Studio 调试 C# 代码
 
@@ -169,7 +169,7 @@ ms.locfileid: "77027256"
 
 2. 按“F5”  或“开始调试”  按钮![开始调试](../../debugger/media/dbg-tour-start-debugging.png "开始调试")，应用随即启动，调试器将运行到你设置断点的代码行。
 
-    ![设置并命中断点](../csharp/media/get-started-set-breakpoint.png)
+    ![设置并命中断点](../csharp/media/get-started-set-breakpoint.gif)
 
     黄色箭头表示调试器暂停处的语句，它还在同一点上暂停应用执行（此语句尚未执行）。
 
@@ -177,13 +177,35 @@ ms.locfileid: "77027256"
 
     当你知道要详细检查的代码行或代码段时，断点功能非常有用。 有关可设置的不同类型断点（如条件断点）的信息，请参阅[使用断点](../../debugger/using-breakpoints.md)。
 
-## <a name="navigate-code-in-the-debugger-using-step-commands"></a>使用单步执行命令在调试器中导航代码
+## <a name="navigate-code-and-inspect-data-using-data-tips"></a>使用数据提示浏览代码和检查数据
 
 大多数情况下，我们使用键盘快捷方式，因为这是在调试器中快速执行应用的好方法（括号中显示了等效的命令，如菜单命令）。
 
-1. 在 `Main` 方法中的 `for` 循环中暂停时，按两次 F11（或选择“调试”>“单步执行”）前进到 `SendMessage` 方法调用   。
+1. 在 `name += letters[i]` 语句上暂停时，将鼠标悬停在 `letters` 变量上，会看到其默认值为数组中第一个元素的值 `char[10]`。
 
-     按两次 F11 后，应位于以下代码行  ：
+     允许你检查变量的功能是调试器最有用的功能之一，并且有不同的方法来执行此操作。 通常，当尝试调试问题时，你试图找出变量是否存储了你期望它们在特定时间具有的值。
+
+1. 展开 `letters` 变量，查看其属性，其中包括变量包含的所有元素。
+
+     ![查看数据提示](../csharp/media/get-started-view-data-tip.png "查看数据提示")
+
+1. 接下来，将鼠标悬停在 `name` 变量上，会看到其当前值为空字符串。
+
+1. 按两次 F10（或选择“调试”>“单步跳过”）前进到 `SendMessage` 方法调用，然后再按一次 F10    。
+
+     按 F10 将使调试器前进到下一条语句，但不会单步执行应用代码中的函数或方法（代码仍将执行）。 在进行 `SendMessage` 方法调用时，通过按 F10，我们跳过了 `SendMessage` 的实现代码（我们现在可能对此不感兴趣）。
+
+1. 多按几次 F10（或“调试” > “单步跳过”），通过 `for` 循环执行多次循环访问，再次在断点处暂停，每次都将鼠标悬停在 `name` 变量上以检查其值    。
+
+     ![查看数据提示](../csharp/media/get-started-data-tip.gif "查看数据提示")
+
+     变量的值随 `for` 循环的每次迭代而更改，显示的值依次为 `f`、`fr`、`fre`，依此类推。 要在此方案中更快地前进到循环，可以按 F5 （或选择“调试器” > “继续”），此操作会使你前进到断点，而不是下一条语句    。
+
+     通常情况下，在调试时，需要快速检查变量的属性值，以查看它们是否存储了你希望它们存储的值，可根据数据提示执行此操作。
+
+1. 在 `Main` 方法的 `for` 循环中仍处于暂停状态时，按 F11（或选择“调试”>“单步执行”），直到在 `SendMessage` 方法调用处暂停   。
+
+     你应该位于以下代码行：
 
      `SendMessage(name, a[i]);`
 
@@ -193,7 +215,7 @@ ms.locfileid: "77027256"
 
      ![使用 F11 单步执行代码](../csharp/media/get-started-f11.png "F10 单步执行")
 
-     F11 是“单步执行”命令，每按一次，应用就执行下一个语句  。 F11 是一种以最详尽方式检查执行流的好方法。 （为了更快地浏览代码，我们还向你展示一些其他选项。）默认情况下，调试器会跳过非用户代码（如果需要更多详细信息，请参阅[仅我的代码](../../debugger/just-my-code.md)）。
+     F11 是“单步执行”命令，每按一次，应用就执行下一个语句  。 F11 是一种以最详尽方式检查执行流的好方法。 默认情况下，调试器会跳过非用户代码（如果需要更多详细信息，请参阅[仅我的代码](../../debugger/just-my-code.md)）。
 
      假设你已完成了对 `SendMessage` 方法的检查，并且希望退出该方法但保持位于调试器中。 可使用“单步跳出”命令执行此操作  。
 
@@ -201,15 +223,7 @@ ms.locfileid: "77027256"
 
      此命令将恢复应用执行（并使调试器前进），直到当前方法或函数返回。
 
-     你应当回到 `Main` 方法的 `for` 循环，在 `SendMessage` 方法调用处暂停。
-
-1. 多按几次 F11，直到再次返回到 `SendMessage` 方法调用  。
-
-1. 在方法调用处暂停时，按一次 F10（或选择“调试”>“单步跳过”）   。
-
-     ![使用 F10 单步跳过代码](../csharp/media/get-started-step-over.png "F10 单步跳过")
-
-     请注意，这次调试器不会单步执行 `SendMessage` 方法。 按 F10 将使调试器前进，但不会单步执行应用代码中的函数或方法（代码仍将执行）  。 通过在进行 `SendMessage` 方法调用时按“F10”（而不是“F11”），我们跳过了 `SendMessage` 的实现代码（我们现在可能对此不感兴趣）   。 有关在代码中进行移动的不同方法的详细信息，请参阅[浏览调试器中的代码](../../debugger/navigating-through-code-with-the-debugger.md)。
+     你应当回到 `Main` 方法的 `for` 循环，在 `SendMessage` 方法调用处暂停。 有关在代码中进行移动的不同方法的详细信息，请参阅[浏览调试器中的代码](../../debugger/navigating-through-code-with-the-debugger.md)。
 
 ## <a name="navigate-code-using-run-to-click"></a>使用“运行时单击”导航代码
 
@@ -235,24 +249,6 @@ ms.locfileid: "77027256"
 当你按下“重启”时，与停止应用并重启调试器相比，它节省了时间  。 调试器在执行代码命中的第一个断点处暂停。
 
 调试器再次在你之前在 `for` 循环上设置的断点处停止。
-
-## <a name="inspect-variables-with-data-tips"></a>使用数据提示检查变量
-
-允许你检查变量的功能是调试器最有用的功能之一，并且有不同的方法来执行此操作。 通常，当尝试调试问题时，你试图找出变量是否存储了你期望它们在特定时间具有的值。
-
-1. 在 `name += letters[i]` 语句上暂停时，将鼠标悬停在 `letters` 变量上，会看到其默认值为数组中第一个元素的值 `char[10]`。
-
-1. 展开 `letters` 变量，查看其属性，其中包括变量包含的所有元素。
-
-1. 接下来，将鼠标悬停在 `name` 变量上，会看到其当前值为空字符串。
-
-1. 多按几次 F5（或“调试” > “继续”），通过 `for` 循环执行多次循环访问，再次在断点处暂停，每次都将鼠标悬停在 `name` 变量上以检查其值    。
-
-     ![查看数据提示](../csharp/media/get-started-data-tip.gif "查看数据提示")
-
-     变量的值随 `for` 循环的每次迭代而更改，显示的值依次为 `f`、`fr`、`fre`，依此类推。
-
-     通常情况下，在调试时，需要快速检查变量的属性值，以查看它们是否存储了你希望它们存储的值，可根据数据提示执行此操作。
 
 ## <a name="inspect-variables-with-the-autos-and-locals-windows"></a>使用“自动”和“局部变量”窗口检查变量
 

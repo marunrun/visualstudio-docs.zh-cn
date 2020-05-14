@@ -6,12 +6,12 @@ ms.author: ghogen
 ms.date: 08/12/2019
 ms.technology: vs-azure
 ms.topic: conceptual
-ms.openlocfilehash: 226078127d2fe61675a592bbafa06d732afc7c49
-ms.sourcegitcommit: 8cbced0fb46959a3a2494852df1e41db1177a26c
+ms.openlocfilehash: 85cb8745a14439cfb09036a1bc96e6bd0fa15ae4
+ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76826453"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "79988507"
 ---
 # <a name="docker-compose-build-properties"></a>Docker Compose 生成属性
 
@@ -41,6 +41,7 @@ ms.locfileid: "76826453"
 |DockerComposeDownArguments|dcproj|指定要传递给 `docker-compose down` 命令的额外参数。 例如，`--timeout 500`|-|  
 |DockerComposeProjectPath|csproj 或 vbproj|Docker-compose 项目 (.dcproj) 文件的相对路径。 发布服务项目时设置此属性，以查找存储在 docker-compose.yml 文件中的关联映像生成设置。|-|
 |DockerComposeUpArguments|dcproj|指定要传递给 `docker-compose up` 命令的额外参数。 例如，`--timeout 500`|-|
+|DockerDevelopmentMode|dcproj| 控制是否启用“build-on-host”优化（“快速模式”调试）。  允许的值为“快速”和“常规”   。 | 快速 |
 |DockerLaunchAction| dcproj | 指定要针对 F5 或 Ctrl+F5 执行的启动操作。  允许的值为 None、LaunchBrowser 和 LaunchWCFTestClient|None|
 |DockerLaunchBrowser| dcproj | 指示是否启动浏览器。 如果指定了 DockerLaunchAction，则忽略。 | False |
 |DockerServiceName| dcproj|如果指定了 DockerLaunchAction 或 DockerLaunchBrowser，则 DockerServiceName 为应启动的服务名称。  使用此属性来确定将启动 docker-compose 文件可能引用的多个项目中的哪一个。|-|

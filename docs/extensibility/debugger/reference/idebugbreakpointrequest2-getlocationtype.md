@@ -1,5 +1,5 @@
 ---
-title: IDebugBreakpointRequest2::GetLocationType | Microsoft Docs
+title: IDebug 突破点请求2：：获取位置类型 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugBreakpointRequest2::GetLocationType
 ms.assetid: b6d14c59-d3aa-48ff-8278-f6b5bba9c2f3
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 4c298bd220547c2faa6315ae7c06f9495368b62e
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 06bb64190d6821b05ebd638c753bd2b6d3decf71
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66352968"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80734990"
 ---
 # <a name="idebugbreakpointrequest2getlocationtype"></a>IDebugBreakpointRequest2::GetLocationType
 获取此断点请求的断点位置类型。
@@ -41,13 +41,13 @@ int GetLocationType(
 
 ## <a name="parameters"></a>参数
 `pBPLocationType`\
-[out]返回一个值从[BP_LOCATION_TYPE](../../../extensibility/debugger/reference/bp-location-type.md)枚举，用于描述此断点请求的位置。
+[出]从描述此断点请求位置[的BP_LOCATION_TYPE](../../../extensibility/debugger/reference/bp-location-type.md)枚举中返回值。
 
 ## <a name="return-value"></a>返回值
-如果成功，则返回`S_OK`; 否则为返回错误代码。 返回`E_FAIL`如果`bpLocation`字段中关联[BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md)结构无效。
+如果成功，返回`S_OK`;否则，返回错误代码。 如果`E_FAIL`关联的`bpLocation`[BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md)结构中的字段无效，则返回。
 
 ## <a name="example"></a>示例
-下面的示例演示如何实现此方法对于简单`CDebugBreakpointRequest`公开的对象[IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md)接口。
+下面的示例演示如何为公开`CDebugBreakpointRequest`[IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md)接口的简单对象实现此方法。
 
 ```
 HRESULT CDebugBreakpointRequest::GetLocationType(BP_LOCATION_TYPE* pBPLocationType)

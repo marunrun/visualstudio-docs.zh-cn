@@ -158,7 +158,7 @@
               href: create-and-run-unit-tests-for-a-store-app-in-visual-studio.md
             - name: 对 C++ DLL 进行单元测试
               href: unit-testing-a-visual-cpp-dll-for-store-apps.md
-            - name: '单元测试 C# 代码'
+            - name: '对 C# 代码进行单元测试'
               href: unit-testing-visual-csharp-code-in-a-store-app.md
             - name: 在测试资源管理器中运行单元测试
               href: run-unit-tests-for-store-apps-in-visual-studio.md

@@ -12,17 +12,17 @@ ms.custom: video
 ms.workload:
 - azure
 ms.openlocfilehash: e4ce4273b72a57a2b9456974a108809dcd73b4e0
-ms.sourcegitcommit: fe212f8960d7882a1b0fdae9e22f008996aacf3c
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "70222735"
 ---
 # <a name="publish-a-web-app-to-azure-app-service-using-visual-studio-for-mac"></a>使用 Visual Studio for Mac 将 Web 应用发布到 Azure 应用服务
 
 可使用“发布”工具将 ASP.NET Core 应用发布到 Azure 应用服务。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>必备条件
 
 - 已安装 [Visual Studio 2019 for Mac](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs4mac2019)，并启用了 ASP.NET Core。
 - 一个 Azure 订阅。 如果还没有订阅，请[免费注册](https://azure.microsoft.com/free/dotnet/)，其中包括为期 30 天的 $200 额度和为期 12 个月的热门免费服务。
@@ -56,7 +56,7 @@ ms.locfileid: "70222735"
 
     可以使用“订阅”下拉列表更改应用服务将与之关联的订阅  。
 
-    可以使用下拉列表选择一个现有资源组，也可以使用 + 按钮创建一个新的资源组   。
+    可以使用下拉列表选择一个现有资源组，也可以使用  **按钮创建一个新的资源组** **+** 。
 
     对于应用服务计划，请选择一个现有资源组，或通过选择“自定义”单选按钮创建一个新的资源组  。
 

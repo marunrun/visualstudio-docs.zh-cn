@@ -12,10 +12,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 1dfcdf67c897c0c1565e536a69cc940b9df83390
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74778591"
 ---
 # <a name="lines-view---contention-data"></a>“行”视图 - 争用数据
@@ -39,7 +39,7 @@ ms.locfileid: "74778591"
 
   下表介绍“行视图”报告中的各列。
 
-|列|说明|
+|列|描述|
 |------------|-----------------|
 |**独占阻塞的时间**|因争用事件而阻滞此语句执行语句中代码的时间长度。 不包括语句所调用的函数中的阻塞时间。|
 |**独占阻塞的时间百分比**|语句的独占阻塞时间占进程中所有阻塞时间的百分比。|

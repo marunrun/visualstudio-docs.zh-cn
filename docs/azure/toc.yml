@@ -23,16 +23,6 @@
       href: /azure/key-vault/vs-key-vault-add-connected-service?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json
     - name: 添加 Azure Active Directory (AD)
       href: /azure/active-directory/develop/vs-active-directory-add-connected-service?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json
-    - name: 添加认知服务
-      items:
-        - name: 文本分析
-          href: /azure/cognitive-services/text-analytics/vs-text-connected-service?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json
-        - name: 必应搜索
-          href: /azure/cognitive-services/bing-news-search/vs-bing-news-search-add-connected-service?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json
-        - name: 面部识别
-          href: /azure/cognitive-services/face/vs-face-connected-service?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json
-        - name: 计算机视觉
-          href: /azure/cognitive-services/computer-vision/vs-computer-vision-connected-service?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json
 - name: Azure 云服务开发
   expanded: false
   items:

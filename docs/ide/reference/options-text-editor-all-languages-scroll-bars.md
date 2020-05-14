@@ -33,10 +33,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 54ce07537adc436f719de8596657d1367afcb87d
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75588793"
 ---
 # <a name="options-text-editor-all-languages-scroll-bars"></a>“选项”->“文本编辑器”->“所有语言”->“滚动条”
@@ -86,6 +86,6 @@ ms.locfileid: "75588793"
 > [!TIP]
 > 在地图模式下，可禁用代码缩图，具体方法是将“源代码概述”  设置为“关”  。 如果已选择“显示预览工具提示”  ，仍可在将指针悬停在滚动条之上时预览相应位置的代码，并且在你单击滚动条后光标仍会跳到文件中的相应位置。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [如何：自定义滚动条](../how-to-track-your-code-by-customizing-the-scrollbar.md)
+- [操作说明：自定义滚动条](../how-to-track-your-code-by-customizing-the-scrollbar.md)

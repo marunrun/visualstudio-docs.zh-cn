@@ -9,17 +9,17 @@ ms.author: sayedha
 manager: unniravindranathan
 ms.prod: visual-studio-mac
 ms.openlocfilehash: 02175180e5217a14a4464e46c75d519adab2a332
-ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "73714509"
 ---
 # <a name="publish-a-web-app-to-a-folder-using-visual-studio-for-mac"></a>使用 Visual Studio for Mac 将 Web 应用发布到文件夹
 
 可使用“发布”工具将 ASP.NET Core 应用发布到文件夹。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>必备条件
 
 - 已安装 [Visual Studio 2017 for Mac](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs4mac2017)并启用了 ASP.NET Core。
 - ASP.NET Core 项目。 如果还没有项目，则可以[创建一个新的项目](/visualstudio/mac/create-new-projects?view=vsmac-2017)。

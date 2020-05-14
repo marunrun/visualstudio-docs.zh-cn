@@ -1,5 +1,5 @@
 ---
-title: FIELD_MODIFIERS | Microsoft Docs
+title: FIELD_MODIFIERS |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - FIELD_MODIFIERS enumeration
 ms.assetid: 1e44681c-1f03-41a9-9c04-b79f231b0822
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 10538f3728647a716a9f3f964a3deedf2a5ae5c9
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: f7a24345174854462a2118df626223a8a299cd7f
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66324499"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80736853"
 ---
-# <a name="fieldmodifiers"></a>FIELD_MODIFIERS
-指定字段类型修饰符。
+# <a name="field_modifiers"></a>FIELD_MODIFIERS
+指定字段类型的修饰符。
 
 ## <a name="syntax"></a>语法
 
@@ -106,94 +106,94 @@ public enum enum_FIELD_MODIFIERS {
 
 ## <a name="fields"></a>字段
 `FIELD_MOD_ACCESS_TYPE`\
-指示不能访问该字段。
+指示无法访问该字段。
 
 `FIELD_MOD_ACCESS_PUBLIC`\
 指示该字段具有公共访问权限。
 
 `FIELD_MOD_ACCESS_PROTECTED`\
-指示该字段具有受保护的访问。
+指示该字段具有受保护的访问权限。
 
 `FIELD_MOD_ACCESS_PRIVATE`\
 指示该字段具有私有访问权限。
 
 `FIELD_MOD_NOMODIFIERS`\
-指示该字段具有没有修饰符。
+指示该字段没有修饰符。
 
 `FIELD_MOD_STATIC`\
 指示该字段是静态的。
 
 `FIELD_MOD_CONSTANT`\
-指示字段是一个常量。
+指示该字段是常量。
 
 `FIELD_MOD_TRANSIENT`\
-指示该字段为暂时性。
+指示该字段是瞬态的。
 
 `FIELD_MOD_VOLATILE`\
-指示该字段是易失性。
+指示该字段是可变的。
 
 `FIELD_MOD_ABSTRACT`\
-指示该字段为抽象。
+指示该字段是抽象的。
 
 `FIELD_MOD_NATIVE`\
-指示该字段是本机。
+指示该字段是本机字段。
 
 `FIELD_MOD_SYNCHRONIZED`\
-指示该字段保持同步。
+指示该字段是同步的。
 
 `FIELD_MOD_VIRTUAL`\
-指示该字段是虚拟。
+指示该字段是虚拟的。
 
 `FIELD_MOD_INTERFACE`\
-指示该字段是一个接口。
+指示该字段是接口。
 
 `FIELD_MOD_FINAL`\
-指示该字段是最后一个。
+指示该字段为最终字段。
 
 `FIELD_MOD_SENTINEL`\
-指示该字段是 sentinel。
+指示该字段是哨兵。
 
 `FIELD_MOD_INNERCLASS`\
-指示该字段是一个内部类。
+指示该字段是内部类。
 
 `FIELD_TYPE_OPTIONAL`\
-指示字段是可选的。
+指示该字段是可选的。
 
 `FIELD_MOD_BYREF`\
-指示该字段是引用自变量。 这是专门为方法参数。
+指示该字段是引用参数。 这是专门针对方法参数的。
 
 `FIELD_MOD_HIDDEN`\
-指示字段必须是隐藏或显示在另一个上下文中;例如，[!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)]静态局部变量。
+指示字段必须隐藏或显示在其他上下文中;否则，该字段必须隐藏或显示在其他上下文中。例如，[!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)]静态局部变量。
 
 `FIELD_MOD_MARSHALASOBJECT`\
-指示此字段表示的对象`IUnknown`接口。
+指示该字段表示具有`IUnknown`接口的对象。
 
 `FIELD_MOD_SPECIAL_NAME`\
-指示该字段具有特殊名称，例如，`.ctor`的构造函数 ([!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)]仅)。
+指示该字段具有特殊名称，例如，`.ctor`对于构造函数（[!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)]仅）。
 
 `FIELD_MOD_HIDEBYSIG`\
-指示该字段具有`Overloads`关键字应用于它 ([!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)]仅)。
+指示该字段已`Overloads`应用于该字段（[!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)]仅）。
 
 `FIELD_MOD_WRITEONLY`\
-指示该字段是只写。 此值不包括在`FIELD_MOD_ALL`，因为此类只写字段的唯一用途是函数求值。 用户必须明确地要求提供`FIELD_MOD_WRITEONLY`字段。
+指示该字段是仅写入的。 此值不包括在 中`FIELD_MOD_ALL`，因为此类仅写入字段的唯一用途是函数评估。 用户必须显式请求`FIELD_MOD_WRITEONLY`字段。
 
 `FIELD_MOD_ACCESS_MASK`\
-指示字段访问掩码。
+指示字段访问的掩码。
 
 `FIELD_MOD_MASK`\
-指示字段修饰符的掩码。
+指示字段修改器的蒙版。
 
 ## <a name="remarks"></a>备注
-用于`dwModifiers`的成员[FIELD_INFO](../../../extensibility/debugger/reference/field-info.md)结构。
+用于`dwModifiers`[FIELD_INFO](../../../extensibility/debugger/reference/field-info.md)结构的成员。
 
-这些值也将传递给[EnumFields](../../../extensibility/debugger/reference/idebugcontainerfield-enumfields.md)方法来筛选特定字段。
+这些值也会传递给[EnumFields](../../../extensibility/debugger/reference/idebugcontainerfield-enumfields.md)方法，以筛选特定字段。
 
 ## <a name="requirements"></a>要求
-标头： sh.h
+标题： sh.h
 
-命名空间:Microsoft.VisualStudio.Debugger.Interop
+命名空间：微软.VisualStudio.调试器.互通
 
-程序集：Microsoft.VisualStudio.Debugger.Interop.dll
+程序集：微软.VisualStudio.调试器.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [枚举](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

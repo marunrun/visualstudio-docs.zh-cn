@@ -10,10 +10,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: c3deee8d35f06e50dbe22001e8a2fa81b41563e0
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "76113440"
 ---
 # <a name="how-to-manually-create-a-load-test-performance-report-using-microsoft-word"></a>如何：使用 Microsoft Word 手动创建负载测试性能报告
@@ -55,7 +55,7 @@ ms.locfileid: "76113440"
     > [!WARNING]
     > 不能从远程桌面复制关系图并将其粘贴到另一台计算机，因为这样仅复制与关系图关联的表信息而不是复制关系图图像。 关系图图像存储在从中复制它的计算机的临时目录中，另一台计算机不能取消对该目录的引用。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [报告负载测试结果以进行测试比较或趋势分析](../test/compare-load-test-results.md)
 - [如何：使用 Microsoft Excel 创建负载测试性能报告](../test/how-to-create-load-test-performance-reports-using-microsoft-excel.md)

@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: f6138c4cff33f0b2a4211439a01a058da59da811
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75590275"
 ---
 # <a name="start-command"></a>“启动”命令
@@ -29,7 +29,7 @@ ms.locfileid: "75590275"
 Debug.Start [address]
 ```
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
 `address`
 
 可选。 程序挂起执行的地址，类似于源代码中的断点。 此参数仅在调试模式下有效。
@@ -44,7 +44,7 @@ Debug.Start [address]
 >Debug.Start
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Studio 命令](../../ide/reference/visual-studio-commands.md)
 - [“命令”窗口](../../ide/reference/command-window.md)

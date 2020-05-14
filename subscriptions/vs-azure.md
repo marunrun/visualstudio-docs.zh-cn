@@ -3,15 +3,16 @@ title: Microsoft Azure 权益 | Microsoft Docs
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 07/29/2019
+ms.assetid: 872c5746-5357-4764-949b-aa525a0adf1a
+ms.date: 04/28/2020
 ms.topic: conceptual
 description: 了解如何激活 Visual Studio 订阅中包含的 Azure 开发测试个人额度权益。
-ms.openlocfilehash: 01c31d96b7ee3e696f941725bbcb314c5f0e0e60
-ms.sourcegitcommit: 7b07e7b5e06e2e13f622445c568b78a284e1a40d
+ms.openlocfilehash: f1e566750c4eb6928dd3c7c3e3407db1d161d621
+ms.sourcegitcommit: 1b7412f1a5b039b2b294c6001013f399ea7aa5bc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2020
-ms.locfileid: "76542667"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82564168"
 ---
 # <a name="use-microsoft-azure-in-visual-studio-subscriptions"></a>在 Visual Studio 订阅中使用 Microsoft Azure
 Visual Studio 订阅者无需额外付费即可使用 Microsoft Azure。  通过[每月 Azure 开发测试个人额度](https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/)，可将 Azure 用作开发/测试的个人沙盒。  你可以预配虚拟机、云服务和其他 Azure 资源。  信用额度因订阅级别而异。
@@ -41,6 +42,29 @@ Visual Studio 订阅者无需额外付费即可使用 Microsoft Azure。  通过
 
 0. 可将 [Azure 门户](https://portal.azure.com)收藏为书签，方便日后访问。
 
+## <a name="maintain-a-subscription-to-use-monthly-credits"></a>维护订阅以使用每月额度
+如果你的 Visual Studio 订阅到期或被删除，所有订阅权益（包括每月 Azure 开发/测试单独额度）将不再可用。 要在有每月额度的情况下继续使用 Azure，需要续订订阅、购买新订阅，或将 Azure 权益转移到包含 Azure 开发/测试单独额度的活动订阅。  
+
+> [!IMPORTANT]
+> 在当前 Azure 订阅被禁用之前，必须将资源转移到另一个 Azure 订阅，否则你将无法访问数据。  
+
+可以通过多种方式继续使用 Azure 的每月额度。  要保存 Azure 资源，无论你在下面选择什么操作，都需要[将资源转移到另一个 Azure 订阅](https://docs.microsoft.com/azure/azure-resource-manager/management/move-resource-group-and-subscription)。 
+
+- 如果直接购买 Visual Studio 订阅，请通过 [Microsoft Store](https://www.microsoft.com/store/collections/visualstudiosubscription/#:~:text=) 购买新订阅或续订订阅  。  
+- 如果组织中的某个人代表你购买了订阅，请[联系组织的 Visual Studio 订阅管理员](https://docs.microsoft.com/visualstudio/subscriptions/contact-my-admin)，并请求提供所需每月额度的订阅  。  
+- 如果在与其他 Microsoft 帐户关联的同一订阅级别有其他活动 Visual Studio 订阅，则可以通过在 Visual Studio [订阅门户](https://my.visualstudio.com/subscriptions)中[添加备用帐户](https://docs.microsoft.com/visualstudio/subscriptions/manage-vs-subscriptions#managing-my-profile)，将 Azure 权益转移到另一个活动 Visual Studio 订阅  。  
+
+请通过以下资格表来确定各订阅类型包含多少额度。  
+
+
+## <a name="convert-your-azure-subscription-to-pay-as-you-go"></a>将 Azure 订阅转换为即用即付类型
+
+如果不再需要 Visual Studio 订阅或额度，但要继续使用 Azure 资源，请[将资源移到另一个 Azure 订阅](https://docs.microsoft.com/azure/azure-resource-manager/management/move-resource-group-and-subscription)，或通过[删除支出限制](https://docs.microsoft.com/azure/cost-management-billing/manage/spending-limit#remove-the-spending-limit-in-azure-portal)将 Azure 订阅转换为即用即付定价。 
+
+如果未执行上述任何操作，你的 Azure 订阅将在收到电子邮件通知后 30 天被禁用并删除。  
+
+## <a name="have-a-question"></a>遇到问题？
+如果你有关于转移资源、删除支出限制或其他 Azure 主题的问题，可以在 Azure 门户中[提交 Azure 支持请求](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview)。 
 
 ## <a name="eligibility"></a>资格
 |                 订阅级别/计划                 |           好处           |                         是否续订？                          |
@@ -82,37 +106,18 @@ Visual Studio 订阅者无需额外付费即可使用 Microsoft Azure。  通过
 ### <a name="q-how-owns-the-intellectual-property-i-create-using-my-azure-devtest-individual-credit"></a>问：如何拥有我使用我的 Azure DevTest 个人点数创建的知识产权？
 答：员工根据该公司提供的资源创建的知识产权是提供该资源的公司的知识产权。 因此，如果你通过你的雇主接收 Visual Studio 订阅，则其知识产权政策适用。 
 
-### <a name="q-ive-received-a-message-stating-that-my-access-to-azure-will-end-soon--what-can-i-do-to-continue-using-azure"></a>问：我收到一条消息，指出我对 Azure 的访问即将结束。  若要继续使用 Azure，我该做什么呢？
-答：因为你使用的 Azure 权益是与 Visual Studio 订阅相关联的，而该订阅已过期或已删除，所以会收到此电子邮件。  要继续使用 Azure，你有多个选择：
-
-**建议操作：**
-
-要继续使用 Visual Studio Azure 开发测试个人额度和折扣，请执行以下步骤之一：
-
-如果团队和组织中的某人代表你购买了订阅，请联系组织的 Visual Studio 管理员并请求一个 Visual Studio 订阅以获取所需的 Azure 开发测试个人额度。   请求管理员将新订阅分配到以前订阅分配到的同一个用户 ID，以免担心传输 Azure 订阅的问题。
-
-如果直接购买了订阅，请执行以下任一操作：
-1. 通过 Visual Studio Marketplace 购买年度 Visual Studio [Enterprise](https://marketplace.visualstudio.com/items?itemName=ms.vs-enterprise-annual) 或 [Professional](https://marketplace.visualstudio.com/items?itemName=ms.vs-professional-annual) 云订阅。
-2. 通过 [Microsoft Store](https://www.microsoft.com/en-us/search/result.aspx?q=visual+studio+subscription) 利用 50% 或更高的折扣力度续订当前订阅。
-
-比较所有的[订阅及其权益](https://visualstudio.microsoft.com/vs/pricing/)。
-
-如果在 Microsoft 帐户下的不同订阅级别具有其他活动 Visual Studio 订阅，则可以通过在 Visual Studio 订阅门户中添加[备用帐户](manage-vs-subscriptions.md#linking-my-subscription-to-existing-azure-devops-services-or-azure-subscriptions)，将该订阅与此 Azure 权益关联  。 如果该操作不起作用，还可以尝试[将 Azure 权益传输](/azure/billing/billing-subscription-transfer/)到活动 Visual Studio 订阅。
-
-如果在 Microsoft 帐户下的不同订阅级别具有其他活动 Visual Studio 订阅，请联系 [Azure 支持](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade)以获取帮助  。
-
-如果订阅有支出限制并且在过期前尚未采取措施，则会禁用 Azure 订阅。 要将其转换为即用即付产品/服务并继续使用，请添加付款方式并[删除支出限制](/azure/billing/billing-spending-limit/)。
-
-如果你不想继续使用此 Visual Studio Azure 订阅，则需要将资源（例如虚拟机和数据库）传输到其他 Azure 订阅，并随时[取消](https://azure.microsoft.com/support/cancel-account/)此订阅。
-
-如果你认为不该收到此电子邮件，请联系 [Azure 客户支持](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade)。
-
 ## <a name="support-resources"></a>支持资源
 - 需要与 Azure 有关的帮助？  请参阅下列资源：
   - 技术支持：[https://azure.microsoft.com/support/options/](https://azure.microsoft.com/support/options/)
   - [Azure 提示与技巧](https://microsoft.github.io/AzureTipsAndTricks/ "Azure 提示与技巧") 
 - 有关 Visual Studio 订阅的销售、订阅、帐户和账单的帮助，请与 Visual Studio [订阅支持](https://visualstudio.microsoft.com/subscriptions/support/)联系。
 - 对有关 Visual Studio IDE、Azure DevOps Services 或其他 Visual Studio 产品或服务有疑问？  请访问 [Visual Studio 支持](https://visualstudio.microsoft.com/support/)。
+
+## <a name="see-also"></a>请参阅
+- [Visual Studio 文档](https://docs.microsoft.com/visualstudio/)
+- [Azure DevOps 文档](https://docs.microsoft.com/azure/devops/)
+- [Azure 文档](https://docs.microsoft.com/azure/)
+- [Microsoft 365 文档](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>后续步骤
 有关 Microsoft 工具和服务的详细信息，请查看针对以下内容的相关文档：

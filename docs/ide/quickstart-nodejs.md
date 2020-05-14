@@ -14,10 +14,10 @@ dev_langs:
 ms.workload:
 - nodejs
 ms.openlocfilehash: f716421da3b9f888dbb7656c55db6814de88332b
-ms.sourcegitcommit: 9eff8371b7a79a637ebb6850f775dd3eed343d8b
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/03/2020
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "78235049"
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-nodejs-app"></a>快速入门：使用 Visual Studio 创建你的第一个 Node.js 应用

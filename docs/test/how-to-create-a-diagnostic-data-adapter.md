@@ -8,12 +8,12 @@ ms.assetid: bd7ad36c-54cb-4d2a-9aea-9d10ad98d7ba
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: f196c3850c9413a7c68fd1fe67af50273915f249
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 5b198d8d3e9156b8a38325034bf19ce96b742d9e
+ms.sourcegitcommit: 5d1b2895d3a249c6bea30eb12b0ad7c0f0862d85
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75589170"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80880151"
 ---
 # <a name="how-to-create-a-diagnostic-data-adapter"></a>如何：创建诊断数据适配器
 
@@ -23,7 +23,7 @@ ms.locfileid: "75589170"
 
 可以创建一个诊断数据适配器，它会影响在其上运行测试的计算机，或用于运行受测应用程序的环境中包含的计算机。 例如，该诊断数据适配器在运行测试的测试计算机上收集文件，或在充当应用程序的 Web 服务器角色的计算机上收集文件。
 
-可以为诊断数据适配器指定一个友好名称，使用 Microsoft 测试管理器或 Visual Studio 创建测试设置时会显示该名称。 利用测试设置可以定义在运行测试时，哪个计算机角色将在环境中运行特定诊断数据适配器。 也可以在创建测试设置时配置诊断数据适配器。 例如，可以创建用于从 Web 服务器收集自定义日志的诊断数据适配器。 在创建测试设置时，可以选择在执行此 Web 服务器角色的一台或多台计算机上运行此诊断数据适配器，并且可以修改测试设置的配置以便仅收集已创建的最后三个日志。 有关测试设置的详细信息，请参阅[使用测试设置收集诊断信息](../test/collect-diagnostic-information-using-test-settings.md)。
+你可为诊断数据适配器指定一个易记名称，使用 Visual Studio 或 Microsoft 测试管理器（在 Visual Studio 2017 中已弃用）创建测试设置时会显示该名称。 利用测试设置可以定义在运行测试时，哪个计算机角色将在环境中运行特定诊断数据适配器。 也可以在创建测试设置时配置诊断数据适配器。 例如，可以创建用于从 Web 服务器收集自定义日志的诊断数据适配器。 在创建测试设置时，可以选择在执行此 Web 服务器角色的一台或多台计算机上运行此诊断数据适配器，并且可以修改测试设置的配置以便仅收集已创建的最后三个日志。 有关测试设置的详细信息，请参阅[使用测试设置收集诊断信息](../test/collect-diagnostic-information-using-test-settings.md)。
 
 运行测试时将引发事件，这使诊断数据适配器可以在测试中的该点执行任务。
 
@@ -255,7 +255,7 @@ ms.locfileid: "75589170"
 
 14. 有关如何在运行测试时配置测试设置以使用环境的详细信息，请参阅[在手动测试中收集诊断数据 (Azure Test Plans)](/azure/devops/test/mtm/collect-more-diagnostic-data-in-manual-tests?view=vsts)。
 
-15. 若要选择诊断数据适配器，必须先选择现有的测试设置，或从 Microsoft 测试管理器或 Visual Studio 中创建一个新测试设置。 该适配器将显示在测试设置的“数据和诊断”选项卡上，并具有你指派给该类的友好名称  。
+15. 要选择诊断数据适配器，必须先选择现有的测试设置，或者从 Visual Studio 或 Microsoft 测试管理器（在 Visual Studio 2017 中已弃用）中创建一个新的测试设置。 该适配器将显示在测试设置的“数据和诊断”选项卡上，并具有你指派给该类的友好名称  。
 
 16. 将这些测试设置设置为活动状态。 有关测试设置的详细信息，请参阅[使用测试设置收集诊断信息](../test/collect-diagnostic-information-using-test-settings.md)。
 

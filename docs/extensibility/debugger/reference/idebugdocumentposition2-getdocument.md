@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentPosition2::GetDocument |Microsoft Docs
+title: IDebug文档位置2：：获取文档 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugDocumentPosition2::GetDocument
 ms.assetid: eaa172c9-5748-4ce1-a0e2-33c2063f6752
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 81a394398f719e50afc178b3c57161e3ceb61ee5
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 1f167c581ea07225774d9a34e42058d6616f0f89
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66326563"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80731697"
 ---
 # <a name="idebugdocumentposition2getdocument"></a>IDebugDocumentPosition2::GetDocument
-获取包含文档。
+获取包含的文档。
 
 ## <a name="syntax"></a>语法
 
@@ -41,10 +41,10 @@ int GetDocument( 
 
 ## <a name="parameters"></a>参数
 `ppDoc`\
-[out]返回[IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md)对象，表示包含此位置的文档。
+[出]返回表示包含此位置的文档的[IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md)对象。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，返回`S_OK`;否则，返回错误代码。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugDocumentPosition2](../../../extensibility/debugger/reference/idebugdocumentposition2.md)

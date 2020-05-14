@@ -1,5 +1,5 @@
 ---
-title: IDebugCoreServer2::EnumPortSuppliers | Microsoft Docs
+title: IDebugCoreServer2：：EnumPort供应商 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugCoreServer2::EnumPortSuppliers
 ms.assetid: ce0c90e4-8e02-4b08-b558-7677fb2c88f7
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: f607b965cbaa0eb6dbad445a19d3c0fba19e5993
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 72edf2a5752371366752333659458439d646642a
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66321594"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80733168"
 ---
 # <a name="idebugcoreserver2enumportsuppliers"></a>IDebugCoreServer2::EnumPortSuppliers
-检索所有可用端口供应商提供的列表。
+检索所有可用端口供应商的列表。
 
 ## <a name="syntax"></a>语法
 
@@ -41,10 +41,10 @@ int EnumPortSuppliers(
 
 ## <a name="parameters"></a>参数
 `ppEnum`\
-[out]返回[IEnumDebugPortSuppliers2](../../../extensibility/debugger/reference/ienumdebugportsuppliers2.md)对象，其中包含所有端口供应商提供的列表。
+[出]返回包含所有端口供应商列表的[IEnumDebugPortSupplier2](../../../extensibility/debugger/reference/ienumdebugportsuppliers2.md)对象。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，返回`S_OK`;否则，返回错误代码。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md)

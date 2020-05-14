@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 94ac6e9e85a2d7dd504b2d2bd83bd1bbdb265ea0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62776772"
 ---
 # <a name="channels-threads-view"></a>通道（线程视图）
@@ -47,5 +47,5 @@ ms.locfileid: "62776772"
 ## <a name="gpu-channels"></a>GPU 通道
  GPU 通道显示系统上有关 DirectX 11 活动的信息。  每个与图形卡关联的 DirectX 引擎都有一个单独的通道。  单独的段表示处理 DMA 数据包所花费的时间。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [“线程”视图](../profiling/threads-view-parallel-performance.md)

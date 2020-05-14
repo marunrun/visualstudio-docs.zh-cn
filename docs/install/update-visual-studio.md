@@ -18,10 +18,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 19da163c76724ae56c0e3d83f1ed795333d081d5
-ms.sourcegitcommit: e3b9cbeea282f1b531c6a3f60515ebfe1688aa0e
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77453390"
 ---
 # <a name="update-visual-studio-to-the-most-recent-release"></a>请将 Visual Studio 更新到最新版本
@@ -287,7 +287,7 @@ Visual Studio 自身或安装的任何组件有更新时，以及 Visual Studio 
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 * [并行安装 Visual Studio 版本](install-visual-studio-versions-side-by-side.md)
 * [更新基于网络的 Visual Studio 安装](update-a-network-installation-of-visual-studio.md)

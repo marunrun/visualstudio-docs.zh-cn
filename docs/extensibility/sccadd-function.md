@@ -1,5 +1,5 @@
 ---
-title: SccAdd 函数 |Microsoft Docs
+title: SccAdd 功能 |微软文档
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - SccAdd function
 ms.assetid: 545268f3-8e83-446a-a398-1a9db9e866e8
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5ee567dff65f184f604fb390ec19ebbf6d1e0208
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 23a6226b0d3cc2441a509c16b2e4672a766f3329
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66334015"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80701316"
 ---
 # <a name="sccadd-function"></a>SccAdd 函数
-此函数将新文件添加到源代码管理系统。
+此功能向源代码管理系统添加新文件。
 
 ## <a name="syntax"></a>语法
 
@@ -39,66 +39,66 @@ SCCRTN SccAdd(
 ### <a name="parameters"></a>参数
  pvContext
 
-[in]源控制插件上下文结构。
+[在]源代码管理插件上下文结构。
 
- hWnd
+ hwnd
 
-[in]它提供了任何对话框，父级可以使用源代码管理插件，则 IDE 窗口的句柄。
+[在]源控件插件可以用作它提供的任何对话框的父级的 IDE 窗口句柄。
 
- nFiles
+ n文件
 
-[in]选择要添加到当前项目中给出的文件数`lpFileNames`数组。
+[在]选择添加到当前项目中的文件数（如数组中给出的`lpFileNames`）。
 
- lpFileNames
+ lpFile名称
 
-[in]要添加的文件的完全限定的本地名称的数组。
+[在]要添加的文件完全限定的本地名称的数组。
 
  lpComment
 
-[in]要应用于所有要添加的文件的注释。
+[在]要应用于要添加到的所有文件的注释。
 
  pfOptions
 
-[in]命令标志，在每个文件的基础上提供的数组。
+[在]命令标志数组，按文件提供。
 
  pvOptions
 
-[in]源代码管理插件特定选项。
+[在]源代码管理插件特定选项。
 
 ## <a name="return-value"></a>返回值
- 此函数的源控制插件实现应返回以下值之一：
+ 此函数的源代码管理插件实现应返回以下值之一：
 
-|值|描述|
+|值|说明|
 |-----------|-----------------|
-|SCC_OK|添加操作已成功。|
-|SCC_E_FILEALREADYEXISTS|所选的文件已在源代码管理下。|
-|SCC_E_TYPENOTSUPPORTED|（例如二进制） 文件的类型不受源代码管理系统。|
+|SCC_OK|添加操作成功。|
+|SCC_E_FILEALREADYEXISTS|所选文件已在源代码管理中。|
+|SCC_E_TYPENOTSUPPORTED|源代码管理系统不支持文件的类型（例如二进制文件）。|
 |SCC_E_OPNOTSUPPORTED|源代码管理系统不支持此操作。|
-|SCC_E_ACCESSFAILURE|访问源代码管理系统，很可能是由于网络或争用问题时出现问题时。 建议重试。|
+|SCC_E_ACCESSFAILURE|访问源代码管理系统时出现问题，可能是由于网络或争用问题。 建议重试。|
 |SCC_E_NOTAUTHORIZED|不允许用户执行此操作。|
-|SCC_E_NONSPECIFICERROR|非特定故障;添加不执行。|
-|SCC_I_OPERATIONCANCELED|在完成之前已取消操作。|
+|SCC_E_NONSPECIFICERROR|非特异性故障;未执行添加。|
+|SCC_I_OPERATIONCANCELED|操作在完成之前已取消。|
 |SCC_I_RELOADFILE|需要重新加载文件或项目。|
-|SCC_E_FILENOTEXIST|找不到本地文件。|
+|SCC_E_FILENOTEXIST|未找到本地文件。|
 
 ## <a name="remarks"></a>备注
- 常用`fOptions`由一个数组，此处替换`pfOptions`，其中一个`LONG`选项每个文件规范。 这是因为文件类型可能会有所不同文件文件。
+ 通常`fOptions`在此处替换为数组，`pfOptions`每个文件有一个选项`LONG`规范。 这是因为文件类型可能因文件而异。
 
 > [!NOTE]
-> 它是无效的同时指定`SCC_FILETYPE_TEXT`和`SCC_FILETYPE_BINARY`是未指定有效的同一文件中，但它的选项。 设置既不是设置相同`SCC_FILETYPE_AUTO`，在这种情况下进行源代码管理插件自动检测文件类型。
+> 为同一文件指定和`SCC_FILETYPE_TEXT``SCC_FILETYPE_BINARY`选项是无效的，但同时指定这两个文件都无效。 设置两者与 设置`SCC_FILETYPE_AUTO`相同，在这种情况下，源代码管理插件自动检测文件类型。
 
- 下面是列表中使用标志`pfOptions`数组：
+ 下面是`pfOptions`数组中使用的标志列表：
 
 |选项|值|含义|
 |------------|-----------|-------------|
-|SCC_FILETYPE_AUTO|0x00|源代码管理插件应检测到的文件类型。|
-|SCC_FILETYPE_TEXT|0x01|指示一个 ASCII 文本文件。|
-|SCC_FILETYPE_BINARY|0x02|指示之外 ASCII 文本的文件类型。|
-|SCC_ADD_STORELATEST|0x04|存储仅该文件，没有增量数据的最新副本。|
-|SCC_FILETYPE_TEXT_ANSI|0x08|将该文件视为 ANSI 文本。|
-|SCC_FILETYPE_UTF8|0x10|将该文件视为 UTF8 格式的 Unicode 文本。|
-|SCC_FILETYPE_UTF16LE|0x20|将该文件视为 Unicode 文本中 UTF16 Little Endian 格式。|
-|SCC_FILETYPE_UTF16BE|0x40|将作为 Unicode 文本 UTF16 Big Endian 文件格式。|
+|SCC_FILETYPE_AUTO|0x00|源代码管理插件应检测文件类型。|
+|SCC_FILETYPE_TEXT|0x01|指示 ASCII 文本文件。|
+|SCC_FILETYPE_BINARY|0x02|指示 ASCII 文本以外的文件类型。|
+|SCC_ADD_STORELATEST|0x04|只存储文件的最新副本，没有增量。|
+|SCC_FILETYPE_TEXT_ANSI|0x08|将文件视为 ANSI 文本。|
+|SCC_FILETYPE_UTF8|0x10|以 UTF8 格式将文件视为 Unicode 文本。|
+|SCC_FILETYPE_UTF16LE|0x20|将文件视为 UTF16 小 Endian 格式的 Unicode 文本。|
+|SCC_FILETYPE_UTF16BE|0x40|将文件视为 UTF16 大 Endian 格式的 Unicode 文本。|
 
 ## <a name="see-also"></a>请参阅
 - [源代码管理插件 API 功能](../extensibility/source-control-plug-in-api-functions.md)

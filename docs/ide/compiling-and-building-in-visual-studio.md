@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 8b5f00b3e71f0deb15d6266640db39751f2ae22f
-ms.sourcegitcommit: e3c3d2b185b689c5e32ab4e595abc1ac60b6b9a8
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "76269101"
 ---
 # <a name="compile-and-build-in-visual-studio"></a>在 Visual Studio 中编译和生成
@@ -53,7 +53,7 @@ ms.locfileid: "76269101"
 - [设置生成选项](reference/options-dialog-box-projects-and-solutions-build-and-run.md)
 - [并行生成多个项目](../msbuild/building-multiple-projects-in-parallel-with-msbuild.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [生成（编译）网站项目](https://msdn.microsoft.com/Library/a9cbb88c-8fff-4c67-848b-98fbfd823193)
 - [编译和生成 (Visual Studio for Mac)](/visualstudio/mac/compiling-and-building)

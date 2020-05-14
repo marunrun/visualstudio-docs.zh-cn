@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: cc3ec00ed771caba7e779e708801d611ca16b8c5
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75567718"
 ---
 # <a name="project-properties-reference"></a>项目属性引用
@@ -24,7 +24,7 @@ ms.locfileid: "75567718"
 
 ## <a name="project-properties-pages"></a>项目属性页
 
-| Title | 描述 |
+| 标题 | 说明 |
 | - | - |
 | [“项目设计器”->“应用程序”页 (Visual Basic)](../../ide/reference/application-page-project-designer-visual-basic.md) | 使用此页指定 [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] 项目的应用程序设置和属性。 |
 | [“项目设计器”->“应用程序”页 (C#)](../../ide/reference/application-page-project-designer-csharp.md) | 使用此页指定 [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] 项目的应用程序设置和属性。 |
@@ -38,6 +38,6 @@ ms.locfileid: "75567718"
 | [“项目设计器”->“安全”页](../../ide/reference/security-page-project-designer.md) | 使用此页配置使用 [!INCLUDE[ndptecclick](../../deployment/includes/ndptecclick_md.md)] 部署部署的应用程序的代码访问安全性设置。 |
 | [“项目设计器”->“签名”页](../../ide/reference/signing-page-project-designer.md) | 使用此页对应用程序和部署清单及程序集进行签名。 |
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [解决方案和项目](../../ide/solutions-and-projects-in-visual-studio.md)

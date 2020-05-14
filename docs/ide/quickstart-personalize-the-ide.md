@@ -1,18 +1,18 @@
 ---
 title: 设置颜色主题和字体
-ms.date: 11/20/2017
+ms.date: 03/23/2020
 ms.topic: quickstart
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 11cd73574f42fffb7bcfcda5ab47496fe92565c7
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 2c0b7b4e439f33e4e2eed8609d7e85e098068aea
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75596939"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233154"
 ---
 # <a name="personalize-the-visual-studio-ide-and-editor"></a>个性化设置 Visual Studio IDE 和编辑器
 
@@ -52,8 +52,19 @@ Visual Studio 用户界面的默认颜色主题命名为“蓝色”  。 让我
 
    ::: moniker-end
 
+::: moniker range="vs-2017"
+
 > [!TIP]
 > 可以通过从 [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.VisualStudio2017ColorThemeEditor) 中安装“Visual Studio 颜色主题编辑器”  来安装其他预定义的主题。 安装此工具后，其他颜色主题将显示在“颜色主题”下拉列表中  。
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+> [!TIP]
+> 可以通过从 [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-madsk.ColorThemeDesigner) 中安装“Visual Studio 颜色主题设计器”  来创建自己的主题。
+
+::: moniker-end
 
 ## <a name="change-text-color"></a>更改文本颜色
 

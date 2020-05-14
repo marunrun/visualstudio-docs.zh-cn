@@ -3,15 +3,16 @@ title: 通过 Microsoft for Startups 计划向初创企业提供的 Visual Studi
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 07/28/2019
+ms.assetid: 71af88da-b9fa-4d12-999c-7d461f3df0ec
+ms.date: 03/09/2020
 ms.topic: conceptual
 description: 订阅的详细信息通过 Microsoft for Startups 计划提供。
-ms.openlocfilehash: 087fb820687063c22e98b34b0c3cd2292fb9a35b
-ms.sourcegitcommit: ce1ab8a25c66a83e60eab80ed8e1596fe66dd85c
+ms.openlocfilehash: 6c2fdcfc9fa71c1906a1033ac719b07cb0b157a4
+ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68605740"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233259"
 ---
 # <a name="visual-studio-subscriptions-offered-to-startups"></a>向初创企业提供的 Visual Studio 订阅
 加入 Microsoft for Startups 计划的合格初创企业可以获得 5 个 [Visual Studio Enterprise 月度云订阅](https://visualstudio.microsoft.com/vs/pricing/)。 
@@ -38,6 +39,12 @@ ms.locfileid: "68605740"
 对于月度云订阅，取消在次月第一天生效。 如果只取消部分月度云订阅，请务必在次月的第一天删除用户，确保为正确的人员继续分配活动订阅。
 
 对于年度云订阅，取消在最初购买日 12 个月后的次月第一天生效，或在上一次年度续订收费后的 12 个月后生效。 例如，如果在 2018 年 1 月 3 日购买了 Visual Studio Professional 年度云订阅，那么它会保持活动状态，直到 2019 年 2 月 1 日自动续订一年。 如果在 2020 年 2 月 1 日之前的任何时间取消订阅，则订阅于 2020 年 2 月 1 日到期。 对于年度云订阅取消后的剩余部分，不会进行退款。
+
+## <a name="see-also"></a>请参阅
+- [Visual Studio 文档](https://docs.microsoft.com/visualstudio/)
+- [Azure DevOps 文档](https://docs.microsoft.com/azure/devops/)
+- [Azure 文档](https://docs.microsoft.com/azure/)
+- [Microsoft 365 文档](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>后续步骤
 [了解有关 Microsoft for Startups 的详细信息](https://startups.microsoft.com)

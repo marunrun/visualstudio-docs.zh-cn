@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: 85bf50c653d82a7de22d5a81fd81c38db0db1be8
-ms.sourcegitcommit: 4be64917e4224fd1fb27ba527465fca422bc7d62
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "76923271"
 ---
 # <a name="build-page-project-designer-c"></a>“项目设计器”->“生成”页 (C#)
@@ -119,7 +119,7 @@ ms.locfileid: "76923271"
 > [!TIP]
 > 如果不希望将代码分析警告视为错误，请参阅[代码分析常见问题解答](../../code-quality/analyzers-faq.md#treat-warnings-as-errors)。
 
-## <a name="output"></a>Output
+## <a name="output"></a>输出
 
 以下设置用于配置生成过程的输出选项。
 
@@ -139,13 +139,13 @@ ms.locfileid: "76923271"
 
 “生成序列化程序集” 
 
-指定编译器是否将使用 XML 序列化程序生成器工具 (Sgen.exe) 创建 XML 序列化程序集。 序列化程序集可以提高 <xref:System.Xml.Serialization.XmlSerializer> 的启动性能（如果已使用该类序列化代码中的类型）。 默认情况下，此选项设置为“自动”，用于指定仅在已使用 <xref:System.Xml.Serialization.XmlSerializer> 将代码中的类型编码为 XML 的情况下，才会生成序列化程序集  。 若设置为“关闭”，则指定永远不会生成序列化程序集，无论代码是否使用 <xref:System.Xml.Serialization.XmlSerializer>  。 若设置为“打开”  ，则指定始终会生成序列化程序集。 序列化程序集命名为 `TypeName`.XmlSerializers.dll。 有关详细信息，请参阅 [XML 序列化程序生成器工具 (Sgen.exe)](/dotnet/framework/serialization/xml-serializer-generator-tool-sgen-exe)。
+指定编译器是否将使用 XML 序列化程序生成器工具 (Sgen.exe) 创建 XML 序列化程序集。 序列化程序集可以提高 <xref:System.Xml.Serialization.XmlSerializer> 的启动性能（如果已使用该类序列化代码中的类型）。 默认情况下，此选项设置为“自动”，用于指定仅在已使用  **将代码中的类型编码为 XML 的情况下，才会生成序列化程序集**<xref:System.Xml.Serialization.XmlSerializer>。 若设置为“关闭”，则指定永远不会生成序列化程序集，无论代码是否使用  <xref:System.Xml.Serialization.XmlSerializer>。 若设置为“打开”  ，则指定始终会生成序列化程序集。 序列化程序集命名为 `TypeName`.XmlSerializers.dll。 有关详细信息，请参阅 [XML 序列化程序生成器工具 (Sgen.exe)](/dotnet/framework/serialization/xml-serializer-generator-tool-sgen-exe)。
 
 **高级**
 
 单击以显示[“高级生成设置”对话框 (C#)](../../ide/reference/advanced-build-settings-dialog-box-csharp.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [项目属性引用](../../ide/reference/project-properties-reference.md)
 - [C# 编译器选项](/dotnet/csharp/language-reference/compiler-options/index)

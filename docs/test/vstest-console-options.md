@@ -10,12 +10,12 @@ author: mikejo5000
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: affad69f6821addb50686d4f41d0bdb3bd816e8e
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: 40f8bc4847201d1bd0298bc91432996ecce58d65
+ms.sourcegitcommit: 4bcd6abb89feff1cf8251e3ded73fdc30b67e347
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75919024"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81615548"
 ---
 # <a name="vstestconsoleexe-command-line-options"></a>VSTest.Console.exe 命令行选项
 
@@ -43,10 +43,10 @@ VSTest.Console.exe 是用于运行测试的命令行工具  。 可在命令行�
 |**/UseVsixExtensions**|此选项使 vstest.console.exe 进程使用或跳过在测试运行中安装的 VSIX 扩展（如果有）  。<br />此选项已弃用。 从 Visual Studio 的下一个主版本开始，此选项可能会删除。 转为作为 NuGet 包提供的使用扩展。<br />示例：`/UseVsixExtensions:true`|
 |**/TestAdapterPath:[路径]** |强制 vstest.console.exe 进程使用测试运行中指定路径（如果有）内的自定义测试适配器  。<br />示例：`/TestAdapterPath:[pathToCustomAdapters]`|
 |**/Platform:[平台类型]** |将用来执行测试的目标平台体系结构。<br />有效值为 x86、x64 和 ARM。|
-|**/Framework: [Framework 版本]** |要用于执行测试的目标 .NET 版本。<br />示例值有 `Framework35`、`Framework40`、`Framework45`、`FrameworkUap10`、`.NETCoreApp,Version=v1.1`。<br />如果将目标框架指定为 Framework35，则测试在 CLR 4.0“兼容模式”下运行  。<br />示例：`/Framework:framework40`|
+|**/Framework: [Framework 版本]** |要用于执行测试的目标 .NET 版本。<br />示例值有 `Framework35`、`Framework40`、`Framework45`、`FrameworkUap10`、`.NETCoreApp,Version=v1.1`。<br />TargetFrameworkAttribute 用于从程序集中自动检测此选项，并在属性不存在时默认为 `Framework40`。 如果从 .NET Core 程序集删除 [TargetFrameworkAttribute](https://docs.microsoft.com/dotnet/api/system.runtime.versioning.targetframeworkattribute)，则必须显式指定此选项。<br />如果将目标框架指定为 Framework35，则测试在 CLR 4.0“兼容模式”下运行  。<br />示例：`/Framework:framework40`|
 |**/TestCaseFilter:[表达式]** |运行与给定表达式匹配的测试。<br /><Expression\> 的格式为 <property\>=<value\>[\|<Expression\>]。<br />示例：`/TestCaseFilter:"Priority=1"`<br />示例：`/TestCaseFilter:"TestCategory=Nightly|FullyQualifiedName=Namespace.ClassName.MethodName"`<br />/TestCaseFilter 命令行选项不能与 /Tests 命令行选项一起使用   。 <br />有关创建和使用表达式的信息，请参阅 [TestCase 筛选](https://github.com/Microsoft/vstest-docs/blob/master/docs/filter.md)。|
 |**/?**|显示使用情况信息。|
-|**/Logger:[*uri/friendlyname*]**|为测试结果指定一个记录器。<br />示例：要将结果记录到 Visual Studio 测试结果文件 (TRX)，请使用<br />/Logger:trx <br />[;LogFileName=\<Defaults to unique file name>] <br />示例：要将测试结果发布到 Team Foundation Server，请使用 TfsPublisher：<br />**/logger:TfsPublisher;**<br />**Collection=<project url\>;**<br />**BuildName=<build name\>;**<br />**TeamProject=<project name\>;**<br />**[;Platform=\<Defaults to "Any CPU">]**<br />**[;Flavor=\<Defaults to "Debug">]**<br />**[;RunTitle=<title\>]**<br />注意：TfsPublisher 记录器已在 Visual Studio 2017 中被弃用，且在更高版本的 Visual Studio 中不受支持。 对于这些情况，请改用自定义记录器。 此记录器会将记录器切换到旧模式。|
+|**/Logger:[*uri/friendlyname*]**|为测试结果指定一个记录器。<br />示例：要将结果记录到 Visual Studio 测试结果文件 (TRX)，请使用<br />/Logger:trx <br />[;LogFileName=\<Defaults to unique file name>] |
 |**/ListTests:[文件名]** |列出给定测试容器中的已发现的测试。|
 |**/ListDiscoverers**|列出已安装的测试发现器。|
 |**/ListExecutors**|列出已安装的测试执行器。|

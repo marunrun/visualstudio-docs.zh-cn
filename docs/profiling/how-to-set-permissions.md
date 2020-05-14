@@ -15,10 +15,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: c1ab7705c7ab46b07b08b707ce447f37c581036a
-ms.sourcegitcommit: 00b71889bd72b6a566586885bdb982cfe807cf54
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "74774584"
 ---
 # <a name="how-to-set-permissions"></a>如何：设置权限
@@ -64,13 +64,13 @@ ms.locfileid: "74774584"
 
 2. 右键单击该文件夹，  然后单击“属性”。
 
-     随即显示“\<文件夹名称> 属性”  对话框。
+     随即显示“**文件夹名称> 属性”\<** 对话框。
 
 3. 单击 **“安全”** 选项卡。
 
 4. 单击“组或用户名”  框中的用户帐户的名称。
 
-5. 在“\<用户名> 的权限”  框中，选中“完全控制”复选框  。
+5. 在“**用户名> 的权限”\<** 框中，选中“完全控制”复选框  。
 
 6. 单击 **“确定”** 。
 
@@ -86,7 +86,7 @@ ms.locfileid: "74774584"
     <drive>:\Program Files\Microsoft Visual Studio 14\Team Tools\Performance Tools
     ```
 
-3. 运行下面的命令：
+3. 运行以下命令：
 
     ```cmd
     vsperfcmd /admin:driver,start /admin:service,start
@@ -120,7 +120,7 @@ ms.locfileid: "74774584"
 
    现在，指定的用户登录后，能在没有管理员权限的情况下使用分析工具。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [配置性能会话](../profiling/configuring-performance-sessions.md)
 [VSPerfCmd](../profiling/vsperfcmd.md)

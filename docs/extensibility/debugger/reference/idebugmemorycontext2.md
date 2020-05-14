@@ -1,5 +1,5 @@
 ---
-title: IDebugMemoryContext2 | Microsoft Docs
+title: IDebug内存上下文2 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugMemoryContext2 interface
 ms.assetid: 3a544c8b-11dc-46bb-8549-261e4ac5bbc4
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: bb1abe29a915d8ca2aaba1135d2e57946250bc3f
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 7d20a1180e1162e7de3aee1c5d69facf8c193910
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66346974"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80727427"
 ---
 # <a name="idebugmemorycontext2"></a>IDebugMemoryContext2
 此接口表示运行正在调试的程序的计算机的地址空间中的位置。
@@ -28,32 +28,32 @@ ms.locfileid: "66346974"
 IDebugMemoryContext2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>实施者的说明
- 调试引擎 (DE) 实现此接口来表示内存中的地址。
+## <a name="notes-for-implementers"></a>实施者说明
+ 调试引擎 （DE） 实现此接口以表示内存中的地址。
 
-## <a name="notes-for-callers"></a>调用方的说明
- 调用[GetMemoryContext](../../../extensibility/debugger/reference/idebugproperty2-getmemorycontext.md)或[GetMemoryContext](../../../extensibility/debugger/reference/idebugreference2-getmemorycontext.md)返回此接口。 此外，调用[外](../../../extensibility/debugger/reference/idebugmemorycontext2-add.md)并[Subtract](../../../extensibility/debugger/reference/idebugmemorycontext2-subtract.md)应用适当的算术运算后返回的此接口的新副本。
+## <a name="notes-for-callers"></a>呼叫者备注
+ 对[获取内存上下文](../../../extensibility/debugger/reference/idebugproperty2-getmemorycontext.md)或[获取内存上下文](../../../extensibility/debugger/reference/idebugreference2-getmemorycontext.md)的调用将返回此接口。 此外，在应用适当的算术运算后，对["添加](../../../extensibility/debugger/reference/idebugmemorycontext2-add.md)["和"减法"](../../../extensibility/debugger/reference/idebugmemorycontext2-subtract.md)的调用将返回此接口的新副本。
 
 ## <a name="methods-in-vtable-order"></a>Vtable 顺序中的方法
- 下表显示的方法`IDebugMemoryContext2`。
+ 下表显示了 的方法`IDebugMemoryContext2`。
 
 |方法|描述|
 |------------|-----------------|
-|[GetName](../../../extensibility/debugger/reference/idebugmemorycontext2-getname.md)|获取此上下文中的用户可显示名称。|
+|[GetName](../../../extensibility/debugger/reference/idebugmemorycontext2-getname.md)|获取此上下文的用户可显示名称。|
 |[GetInfo](../../../extensibility/debugger/reference/idebugmemorycontext2-getinfo.md)|获取描述此上下文的信息。|
-|[添加](../../../extensibility/debugger/reference/idebugmemorycontext2-add.md)|将指定的值添加到当前上下文的地址以创建新的上下文。|
-|[相减](../../../extensibility/debugger/reference/idebugmemorycontext2-subtract.md)|减去指定的值从当前上下文的地址以创建新的上下文。|
-|[Compare](../../../extensibility/debugger/reference/idebugmemorycontext2-compare.md)|比较两个上下文的方式指示比较标志。|
+|[添加](../../../extensibility/debugger/reference/idebugmemorycontext2-add.md)|将指定值添加到当前上下文的地址以创建新上下文。|
+|[减去](../../../extensibility/debugger/reference/idebugmemorycontext2-subtract.md)|从当前上下文的地址中减去指定值以创建新上下文。|
+|[比较](../../../extensibility/debugger/reference/idebugmemorycontext2-compare.md)|以比较标志指示的方式比较两个上下文。|
 
 ## <a name="remarks"></a>备注
- Visual Studio**内存**窗口中调用[GetMemoryContext](../../../extensibility/debugger/reference/idebugproperty2-getmemorycontext.md)若要获取`IDebugMemoryContext2`包含计算的表达式使用的内存地址的接口。 然后将此上下文传递给[ReadAt](../../../extensibility/debugger/reference/idebugmemorybytes2-readat.md)并[WriteAt](../../../extensibility/debugger/reference/idebugmemorybytes2-writeat.md)来指定要读取或写入的地址。
+ Visual Studio 的**内存**窗口调用[GetMemoryContext](../../../extensibility/debugger/reference/idebugproperty2-getmemorycontext.md) `IDebugMemoryContext2`以获取包含用于内存地址的计算表达式的接口。 然后，此上下文将传递到[ReadAt](../../../extensibility/debugger/reference/idebugmemorybytes2-readat.md)和[WriteAt](../../../extensibility/debugger/reference/idebugmemorybytes2-writeat.md)以指定要读取或写入的地址。
 
 ## <a name="requirements"></a>要求
- 标头： msdbg.h
+ 标题： msdbg.h
 
- 命名空间:Microsoft.VisualStudio.Debugger.Interop
+ 命名空间：微软.VisualStudio.调试器.互通
 
- 程序集：Microsoft.VisualStudio.Debugger.Interop.dll
+ 程序集：微软.VisualStudio.调试器.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [核心接口](../../../extensibility/debugger/reference/core-interfaces.md)

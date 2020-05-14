@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: de7a02f7247e09876bc4598d44fc1c395161ebc2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "62935888"
 ---
 # <a name="preemption-time"></a>抢占时间
@@ -30,5 +30,5 @@ ms.locfileid: "62935888"
 
   抢占段的工具提示会显示导致抢占的进程或线程的名称。 然而，这并不表示接管的进程或线程在抢占期间内会实际运行。
 
-## <a name="see-also"></a>请参阅
-- [线程视图](../profiling/threads-view-parallel-performance.md)
+## <a name="see-also"></a>另请参阅
+- [“线程”视图](../profiling/threads-view-parallel-performance.md)

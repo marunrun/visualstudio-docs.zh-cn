@@ -15,10 +15,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: b6a5da728e24d5d7fdbeccd1e28aa2742e04bf48
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75596458"
 ---
 # <a name="how-to-access-load-test-results-for-analysis"></a>如何：访问负载测试结果进行分析
@@ -37,9 +37,9 @@ ms.locfileid: "75596458"
 
      显示“打开和管理结果”对话框。 
 
-3. 在“请输入要用来查找负载测试结果的控制器名称”中选择一个控制器。  选择“\<本地> - 无控制器”以访问本地存储的结果。 
+3. 在“请输入要用来查找负载测试结果的控制器名称”中选择一个控制器  。 选择“**本地> - 无控制器”以访问本地存储的结果。\<**
 
-4. 在“显示以下负载测试的结果”中，选择要查看其结果的负载测试。  选择“\<显示所有测试的结果>”以查看所有测试的所有结果。 
+4. 在“显示以下负载测试的结果”中，选择要查看其结果的负载测试  。 选择“**显示所有测试的结果>”以查看所有测试的所有结果。\<**
 
      如果存在负载测试结果，它们将出现在“负载测试结果”列表中。  其中包括“时间”、“持续时间”、“用户”、“结果”、“测试”和“说明”列。       “测试”列包含测试的名称，“说明”列包含运行测试之前添加的可选说明。  
 
@@ -52,6 +52,6 @@ ms.locfileid: "75596458"
 
      可以在“打开和管理结果”  对话框中管理负载测试结果的其他方面，包括导入、导出和删除负载测试结果。 有关详细信息，请参阅[管理负载测试结果存储库中的负载测试结果](../test/manage-load-test-results-in-the-load-test-results-repository.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [分析负载测试结果](../test/analyze-load-test-results-using-the-load-test-analyzer.md)

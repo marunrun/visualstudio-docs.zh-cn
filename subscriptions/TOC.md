@@ -2,7 +2,7 @@
 # [新增功能](whats-new-in-subscriptions.md)
 # 订阅
 ## 购买订阅
-### [零售](https://visualstudio.microsoft.com/vs/pricing)
+### [零售](buy-activate-retail.md)
 ### 云 
 #### [概述](vscloud-overview.md)
 #### [账单常见问题解答](vscloud-billing-faq.md)
@@ -13,7 +13,6 @@
 #### [管理面向 MPN 的订阅](manage-mpn-subscriptions.md)
 ### [启动 Microsoft](program-startups.md)
 ## 登录 
-### [激活零售订阅](activate-store-subscriptions.md)
 ### [使用 Microsoft 帐户登录](sign-in-msa.md)
 ### [使用工作或学校帐户登录](sign-in-work.md)
 ### [使用 GitHub 登录](sign-in-github.md)
@@ -40,6 +39,7 @@
 #### [Visual Studio IDE](vs-ide-benefit.md)
 #### [WhiteSource Bolt](vs-whitesource.md)
 #### [Windows 开发人员帐户](vs-windows-dev.md)
+#### [Windows 虚拟桌面](vs-windows-virtual-desktop.md)
 ### 专业开发
 #### [MSDN 杂志](vs-code-magazine.md)
 #### [DataCamp](vs-datacamp.md)
@@ -74,10 +74,10 @@
 ### [超级管理员和管理人员](admin-roles.md)
 ### [设置协议首选项](admin-prefs.md)
 ### [概述](using-admin-portal.md)
-### [视频教程：使用管理门户](https://www.youtube.com/watch?v=XG-E-IDjA-w&list=PLReL099Y5nReJhZ6o8CQFPSBgzGCHX99_&index=3&t=0s)
 ### 分配订阅
 #### [添加单用户](assign-license.md)
 #### [添加多个用户](assign-license-bulk.md)
+#### [分配特定订阅](assign-guid.md)
 ### [编辑订阅](edit-license.md)
 ### [删除订阅](delete-license.md)
 ### [搜索订阅](search-license.md)

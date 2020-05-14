@@ -10,10 +10,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: f85800ea59545ad64a821d1bb8c003ba6eef8c26
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75589339"
 ---
 # <a name="report-load-tests-results-for-test-comparisons-or-trend-analysis"></a>报告负载测试结果以进行测试比较或趋势分析
@@ -41,9 +41,9 @@ ms.locfileid: "75589339"
 
 |任务|关联主题|
 |-|-|
-|**创建性能和压力报告：** 可使用 Microsoft Excel 创建有关负载测试和 Web 性能测试的报告。|- [如何：使用 Microsoft Excel 创建负载测试性能报告](../test/how-to-create-load-test-performance-reports-using-microsoft-excel.md)|
-|**使用 Microsoft Word 手动创建性能和压力报告：** 可以通过将摘要、表和关系图数据复制并粘贴到 Microsoft Word 文档中，手动创建有关负载测试和 Web 性能测试的报告。|- [如何：使用 Microsoft Word 手动创建负载测试性能报告](../test/how-to-manually-create-a-load-test-performance-report-using-microsoft-word.md)|
+|创建性能和压力报告：  可使用 Microsoft Excel 创建有关负载测试和 Web 性能测试的报告。|- [如何：使用 Microsoft Excel 创建负载测试性能报告](../test/how-to-create-load-test-performance-reports-using-microsoft-excel.md)|
+|使用 Microsoft Word 手动创建性能和压力报告：  可以通过将摘要、表和关系图数据复制并粘贴到 Microsoft Word 文档中，手动创建有关负载测试和 Web 性能测试的报告。|- [如何：使用 Microsoft Word 手动创建负载测试性能报告](../test/how-to-manually-create-a-load-test-performance-report-using-microsoft-word.md)|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [分析负载测试结果](../test/analyze-load-test-results-using-the-load-test-analyzer.md)

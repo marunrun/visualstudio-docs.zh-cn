@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 8f6382a79884bf8c3891a3a191b594bf183efb62
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75565625"
 ---
 # <a name="quick-watch-command"></a>“快速监视”命令
@@ -29,7 +29,7 @@ ms.locfileid: "75565625"
 Debug.QuickWatchq [text]
 ```
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
 
 `text`\
 可选。 要添加到“快速监视”对话框的文本  。
@@ -44,7 +44,7 @@ Debug.QuickWatchq [text]
 >Debug.QuickWatch
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在 Visual Studio 中使用“监视”窗口和“快速监视”窗口对变量设置监视](../../debugger/watch-and-quickwatch-windows.md)
 - [Visual Studio 命令](../../ide/reference/visual-studio-commands.md)

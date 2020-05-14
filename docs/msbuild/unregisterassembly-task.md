@@ -19,10 +19,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 2f8cddcf9bf0632914d1a6de1cc904dbf0f173e6
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77631492"
 ---
 # <a name="unregisterassembly-task"></a>UnregisterAssembly 任务
@@ -33,7 +33,7 @@ ms.locfileid: "77631492"
 
  下表描述了 `UnregisterAssembly` 任务的参数。
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
 |`Assemblies`|可选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 指定要注销的程序集。|
 |`AssemblyListFile`|可选 <xref:Microsoft.Build.Framework.ITaskItem> 参数。<br /><br /> 包含有关 `RegisterAssembly` 任务和 `UnregisterAssembly` 任务之间状态的信息。 这样可以防止任务尝试注销无法在 `RegisterAssembly` 任务中注册的程序集。<br /><br /> 如果已指定此参数，则 `Assemblies` 和 `TypeLibFiles` 参数将被忽略。|
@@ -64,7 +64,7 @@ ms.locfileid: "77631492"
 </Project>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [RegisterAssembly 任务](../msbuild/registerassembly-task.md)
 - [任务](../msbuild/msbuild-tasks.md)

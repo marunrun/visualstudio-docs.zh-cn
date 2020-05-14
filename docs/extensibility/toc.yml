@@ -4,7 +4,7 @@
   href: installing-the-visual-studio-sdk.md
 - name: 开始开发 Visual Studio 扩展
   href: starting-to-develop-visual-studio-extensions.md
-- name: 编写自己的首个扩展：Hello World
+- name: 创建第一个扩展：Hello World
   href: extensibility-hello-world.md
 - name: Visual Studio 2019 SDK 的新增功能
   items:
@@ -48,7 +48,7 @@
       href: workspace-indexing.md
     - name: 语言服务
       href: workspace-language-services.md
-    - name: 生成
+    - name: 构建
       href: workspace-build.md
 - name: 扩展菜单和命令
   items:
@@ -140,7 +140,7 @@
           href: supporting-editorconfig.md
         - name: 演练：将内容类型链接到文件扩展名
           href: walkthrough-linking-a-content-type-to-a-file-name-extension.md
-        - name: 演练：创建边缘字形
+        - name: 演练：创建边距字形
           href: walkthrough-creating-a-margin-glyph.md
         - name: 演练：自定义文本视图
           href: walkthrough-customizing-the-text-view.md
@@ -150,7 +150,7 @@
           href: walkthrough-highlighting-text.md
         - name: 演练：大纲显示
           href: walkthrough-outlining.md
-        - name: 演练：显示匹配的括号
+        - name: 演练：显示匹配括号
           href: walkthrough-displaying-matching-braces.md
         - name: 演练：显示 QuickInfo 工具提示
           href: walkthrough-displaying-quickinfo-tooltips.md
@@ -164,7 +164,7 @@
           href: walkthrough-displaying-light-bulb-suggestions.md
         - name: 演练：在编辑器扩展中使用 Shell 命令
           href: walkthrough-using-a-shell-command-with-an-editor-extension.md
-        - name: 演练：将快捷键与编辑器扩展结合使用
+        - name: 演练：在编辑器扩展中使用快捷键
           href: walkthrough-using-a-shortcut-key-with-an-editor-extension.md
         - name: 演练：通过编辑器扩展访问 DTE 对象
           href: walkthrough-accessing-the-dte-object-from-an-editor-extension.md
@@ -768,9 +768,9 @@
               href: popdirlistfunc.md
             - name: OPTNAMECHANGEPFN
               href: optnamechangepfn.md
-        - name: 枚举数
+        - name: 枚举器
           items:
-            - name: 枚举数
+            - name: 枚举器
               href: enumerators.md
             - name: 命令代码枚举器
               href: command-code-enumerator.md

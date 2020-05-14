@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 18ca581c5a8a7f631138e8b3eacff02a031e0931
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75593598"
 ---
 # <a name="runexit-devenvexe"></a>/RunExit (devenv.exe)
@@ -29,7 +29,7 @@ ms.locfileid: "75593598"
 devenv /RunExit {SolutionName|ProjectName} [/Out OutputFilename]
 ```
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
 
 - *SolutionName*
 
@@ -49,7 +49,7 @@ devenv /RunExit {SolutionName|ProjectName} [/Out OutputFilename]
 
 - 用双引号将含有空格的字符串引起来。
 
-- “命令”窗口或使用 `/Out` 开关指定的任何日志文件中都可显示摘要信息（包括错误）  。
+- “命令”窗口或使用  **开关指定的任何日志文件中都可显示摘要信息（包括错误）** `/Out`。
 
 ## <a name="example"></a>示例
 
@@ -59,7 +59,7 @@ devenv /RunExit {SolutionName|ProjectName} [/Out OutputFilename]
 devenv /runexit "%USERPROFILE%\source\repos\MySolution\MySolution.sln"
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Devenv 命令行开关](../../ide/reference/devenv-command-line-switches.md)
 - [/Run (devenv.exe)](../../ide/reference/run-devenv-exe.md)

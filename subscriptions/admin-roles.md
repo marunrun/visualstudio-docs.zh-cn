@@ -3,15 +3,16 @@ title: 管理门户中的超级管理员和管理员角色
 author: evanwindom
 ms.author: lank
 manager: lank
-ms.date: 03/02/2020
+ms.assetid: 6601c395-f778-48c1-ab76-cf454b9193e4
+ms.date: 04/07/2020
 ms.topic: conceptual
 description: 了解超级管理员和管理员角色以及如何分配管理员。
-ms.openlocfilehash: ef0ba479c099bf1e34fe871386984297b130ffd6
-ms.sourcegitcommit: 9eff8371b7a79a637ebb6850f775dd3eed343d8b
+ms.openlocfilehash: 234153dcb8dd06b33ab7aac78e587439684963f9
+ms.sourcegitcommit: 1f7aed335c48215dff5c151f76f22e3f10e8b564
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78234812"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80808374"
 ---
 # <a name="super-admins-and-administrators-for-visual-studio-subscription-agreements"></a>Visual Studio 订阅协议的超级管理员和管理员
 
@@ -20,6 +21,8 @@ ms.locfileid: "78234812"
 **超级管理员：** 首次设置组织时，“主要联系人或通知联系人”在默认情况下会成为超级管理员。 主要联系人或通知联系人可以选择分配其他超级管理员或管理员。 超级管理员可以添加和删除其他管理员和订阅者。 如果系统中有两个以上的超级管理员，为了安全起见，超级管理员可以删除最后两个以外的所有超级管理员。
 
 **管理员：** 管理员只能由超级管理员分配。管理员只能在超级管理员分配给订阅者的协议中对其进行管理。
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4th6L]
 
 ## <a name="assigning-administrators"></a>分配管理员
 分配新的管理员：

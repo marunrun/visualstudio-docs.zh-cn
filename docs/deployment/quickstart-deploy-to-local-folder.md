@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 862310c8c763ce366798bfacd4f4759d606bb33c
-ms.sourcegitcommit: 53bc4c11b82882ab658e34c65ae374060f823531
+ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
+ms.lasthandoff: 03/20/2020
 ms.locfileid: "71128211"
 ---
 # <a name="deploy-an-app-to-a-local-folder-using-visual-studio"></a>使用 Visual Studio 将应用部署到本地文件夹
@@ -30,7 +30,7 @@ ms.locfileid: "71128211"
 
 1. 在解决方案资源管理器中，右键单击该项目并选择“发布”（或使用“生成” > “发布”菜单项）    。
 
-    ![解决方案资源管理器中项目上下文菜单上的“发布”命令](../deployment/media/quickstart-publish.png "选择“发布”")
+    ![解决方案资源管理器中项目上下文菜单上的“发布”命令](../deployment/media/quickstart-publish.png "选择发布")
 
 1. 如果先前配置了任何发布配置文件，则“发布”窗格会显示  。 选择“新建配置文件”  。
 

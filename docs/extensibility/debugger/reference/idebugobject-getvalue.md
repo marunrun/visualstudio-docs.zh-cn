@@ -1,5 +1,5 @@
 ---
-title: IDebugObject::GetValue | Microsoft Docs
+title: IDebugObject：获取价值 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugObject::GetValue method
 ms.assetid: eec6051e-8ecb-49fa-bdd4-dd786f211692
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 59d58e136045bb4177755c981f91974f9ac2fa77
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 45d555cbea6bf8239ef4527ba982072e17532af4
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66323647"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80726538"
 ---
 # <a name="idebugobjectgetvalue"></a>IDebugObject::GetValue
-获取对象的值作为一系列连续的字节数。
+获取对象的值作为连续字节系列。
 
 ## <a name="syntax"></a>语法
 
@@ -43,16 +43,16 @@ int GetValue(
 
 ## <a name="parameters"></a>参数
 `pValue`\
-[in、 out]使用一系列连续的字节数表示的对象的值填充数组。
+[进出]用表示对象值的连续字节系列填充的数组。
 
 `nSize`\
-[in]要提取的字节数目上限。
+[在]要提取的最大字节数。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回 S_OK;否则，返回错误代码。
+ 如果成功，返回S_OK;否则，返回错误代码。
 
 ## <a name="remarks"></a>备注
- 获取可以通过调用提取的值字节总数[GetSize](../../../extensibility/debugger/reference/idebugobject-getsize.md)方法。
+ 通过调用[GetSize](../../../extensibility/debugger/reference/idebugobject-getsize.md)方法获取可以提取的值字节的总数。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)

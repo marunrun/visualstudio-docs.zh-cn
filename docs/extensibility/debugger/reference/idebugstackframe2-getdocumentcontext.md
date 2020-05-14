@@ -1,5 +1,5 @@
 ---
-title: IDebugStackFrame2::GetDocumentContext | Microsoft Docs
+title: IDebugStackFrame2：：获取文档上下文 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugStackFrame2::GetDocumentContext
 ms.assetid: 69e81439-1238-4f18-9028-6fd1c1ba5e4a
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: b7b89c8114c65e25153beb6c66845ef66014fbf7
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 362ee6b98699a32a3bfd6219d11ccf4c80d2a4be
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66352130"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80719769"
 ---
 # <a name="idebugstackframe2getdocumentcontext"></a>IDebugStackFrame2::GetDocumentContext
-获取此堆栈帧的文档上下文。
+获取此堆栈框架的文档上下文。
 
 ## <a name="syntax"></a>语法
 
@@ -41,13 +41,13 @@ int GetDocumentContext ( 
 
 ## <a name="parameters"></a>参数
 `ppCxt`\
-[out]返回[IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md)对象，表示源文档中的当前位置。
+[出]返回表示源文档中当前位置的[IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md)对象。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，返回`S_OK`;否则，返回错误代码。
 
 ## <a name="remarks"></a>备注
- 此方法的速度快于调用[GetCodeContext](../../../extensibility/debugger/reference/idebugstackframe2-getcodecontext.md)方法，然后再调用[GetDocumentContext](../../../extensibility/debugger/reference/idebugcodecontext2-getdocumentcontext.md)代码上下文上的方法。 但是，不保证每个调试引擎 (DE) 将实现此方法。
+ 此方法比调用[GetCodeContext](../../../extensibility/debugger/reference/idebugstackframe2-getcodecontext.md)方法然后在代码上下文中调用[GetDocumentContext](../../../extensibility/debugger/reference/idebugcodecontext2-getdocumentcontext.md)方法要快。 但是，不能保证每个调试引擎 （DE） 都会实现此方法。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)

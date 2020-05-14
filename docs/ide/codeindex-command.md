@@ -13,17 +13,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 4bd2a6cc947c5f52212029bebe590d59906f5aee
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75591159"
 ---
 # <a name="codeindex-command"></a>CodeIndex 命令
 
 使用 **CodeIndex** 命令管理 Team Foundation Server 中的代码索引。 例如，你可能希望重置该索引以修复 CodeLens 信息，或关闭索引以调查服务器性能问题。
 
-## <a name="required-permissions"></a>需要的权限
+## <a name="required-permissions"></a>所需的权限
 
 若要使用 **CodeIndex** 命令，必须是“Team Foundation Administrators”  安全组的成员。 请参阅[为 Azure DevOps Services 和 TFS 定义的权限和组](/azure/devops/organizations/security/permissions?view=vsts)。
 
@@ -38,17 +38,17 @@ TFSConfig CodeIndex /indexingStatus | /setIndexing:[ on | off | keepupOnly ] | /
 
 ### <a name="parameters"></a>参数
 
-|**参数**|**说明**|
+|**参数**|**描述**|
 |------------------| - |
 |`CollectionName`|指定项目集合的名称。 如果名称包含空格，则用引号将该名称引起来，例如“Fabrikam 网站”。|
 |`CollectionId`|指定项目集合的标识号。|
 |`ServerPath`|指定代码文件的路径。|
 
-|**选项**|**说明**|
+|**选项**|**描述**|
 |----------------| - |
 |**/indexingStatus**|显示代码索引服务的状态和配置。|
 |**/setIndexing:** [ on &#124; off &#124; keepupOnly ]|-   **on**：开始为所有变更集创建索引。<br />-   **off**：停止为所有变更集创建索引。<br />-   **keepupOnly**：停止为之前创建的变更集创建索引，开始仅为新的变更集创建索引。|
-|**/ignoreList:** [ add &#124; remove &#124; removeAll &#124; view ] `ServerPath`<br /><br /> 可以在服务器路径的开头、末尾或两端使用通配符 (*)。|指定你不希望编制索引的代码文件的列表及其路径。<br /><br /> -   **add**：将不希望编制索引的文件添加到已忽略文件列表。<br />-   **remove**：从已忽略文件列表中移除希望编制索引的文件。<br />-   **removeAll**：清理忽略的文件列表，并开始为所有文件创建索引。<br />-   **view**：查看所有未编制索引的文件。|
+|**/ignoreList:** [ add &#124; remove &#124; removeAll &#124; view ] `ServerPath`<br /><br /> 可以在服务器路径的开头、末尾或两端使用通配符 (*)。|指定你不希望编制索引的代码文件的列表及其路径。<br /><br /> -   **add**：将不希望编制索引的文件添加到已忽略文件列表。<br />-   **remove**：从已忽略文件列表中移除希望编制索引的文件。<br />-   **removeAll**：清理忽略的文件列表，并开始为所有文件创建索引。<br />-   **view**：查看所有不要编制索引的文件。|
 |**/listLargeFiles [/fileCount:** `FileCount` **/minSize:** `MinSize`]|显示超出指定大小（以 KB 为单位）的文件的指定数量。 然后可使用 **/ignoreList** 选项从编制索引中排除这些文件。|
 |**/reindexAll**|清理以前的索引数据并重新开始创建索引。|
 |**/destroyCodeIndex [/noPrompt]**|删除代码索引并移除所有索引的数据。 如果使用 **/noPrompt** 选项，则无需确认。|
@@ -122,7 +122,7 @@ TFSConfig CodeIndex /temporaryDataSizeLimit:disable /collectionName:"Fabrikam We
 TFSConfig CodeIndex /destroyCodeIndex /collectionName:"Fabrikam Website"
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用 CodeLens 查找代码更改和其他历史记录](../ide/find-code-changes-and-other-history-with-codelens.md)
 - [使用 TFSConfig 管理服务器配置](/azure/devops/server/command-line/tfsconfig-cmd)

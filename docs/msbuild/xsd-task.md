@@ -21,10 +21,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 217e045a731efa1fe3ba1dda63e89eca685d4b75
-ms.sourcegitcommit: 96737c54162f5fd5c97adef9b2d86ccc660b2135
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "77630777"
 ---
 # <a name="xsd-task"></a>XSD 任务
@@ -64,7 +64,7 @@ ms.locfileid: "77630777"
 
      从 **CS**（默认情况下为 C#）、**VB** (Visual Basic) 或 **JS** (JScript) 中进行选择。 也可指定实现 `System.CodeDom.Compiler.CodeDomProvider Class` 的类的完全限定名。
 
-- **Namespace**
+- **命名空间**
 
      可选 **String** 参数。
 
@@ -88,6 +88,6 @@ ms.locfileid: "77630777"
 
      指定跟踪器日志目录。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [任务参考](../msbuild/msbuild-task-reference.md)

@@ -11,13 +11,13 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 931ce20ee872a37b8ca7ccccc18714abc7a0e41f
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75593754"
 ---
-# <a name="how-to-use-surround-with-code-snippets"></a>如何：使用外侧代码片段
+# <a name="how-to-use-surround-with-code-snippets"></a>如何使用外侧代码片段
 
 下列过程描述如何使用环绕代码片段。 可通过以下三种方式使用范围陈述式代码片段：键盘快捷键、“编辑”  菜单和右键单击菜单（或关联菜单）。
 
@@ -27,7 +27,7 @@ ms.locfileid: "75593754"
 
 1. 在代码编辑器中，选择要环绕的文本  。
 
-1. 按 Ctrl+K、Ctrl+S     。
+1. 按 Ctrl**K、Ctrl**S+   +  。
 
 1. 使用鼠标从代码片段列表中选择代码片段，或通过键入代码片段的名称并按 Tab 或 Enter 来选择代码片段   。
 
@@ -55,7 +55,7 @@ ms.locfileid: "75593754"
 
      或者，可键入代码片段的名称，然后按 Tab 或 Enter   。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C# 代码片段](../ide/visual-csharp-code-snippets.md)
 - [代码片段选择器](../ide/reference/code-snippet-picker.md)

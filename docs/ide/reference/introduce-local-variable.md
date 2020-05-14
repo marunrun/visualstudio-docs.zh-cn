@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: 0fbd5ed752b28cc3f8c0dd734ed2b3ce09e80b78
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75568810"
 ---
 # <a name="introduce-a-local-variable-in-visual-studio"></a>在 Visual Studio 中引入局部变量

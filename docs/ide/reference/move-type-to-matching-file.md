@@ -12,10 +12,10 @@ dev_langs:
 ms.workload:
 - dotnet
 ms.openlocfilehash: ba082e90c2447d1da7510ce16f888f67a52b5ac0
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "75585266"
 ---
 # <a name="move-a-type-to-a-matching-file-refactoring"></a>“将类型移到匹配的文件”重构
@@ -26,15 +26,15 @@ ms.locfileid: "75585266"
 
 - Visual Basic
 
-**功能：** 移动选定的类型到具有相同名称的单独文件。
+ 功能：移动选定的类型到具有相同名称的单独文件。
 
-**使用时机：** 在想要分开的相同文件中有多个类、结构和接口等时。
+时机：  在想要分开的相同文件中有多个类、结构和接口等时。
 
-操作原因：  将多个类型置于相同的文件会使查找这些类型变得困难。 通过将类型移动到具有相同名称的文件，代码变得更具可读性且更易于导航。
+ 原因：将多个类型置于相同的文件会使查找这些类型变得困难。 通过将类型移动到具有相同名称的文件，代码变得更具可读性且更易于导航。
 
 ## <a name="how-to"></a>操作说明
 
-1. 将光标置于定义类型的类型名称中。 例如：
+1. 将光标置于定义类型的类型名称中。 例如:
 
    ```csharp
    class Person
@@ -61,6 +61,6 @@ ms.locfileid: "75585266"
 
       ![内联结果 - Visual Basic](media/movetype-result-vb.png)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [重构](../refactoring-in-visual-studio.md)

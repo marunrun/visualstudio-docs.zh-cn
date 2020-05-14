@@ -17,10 +17,10 @@ ms.workload:
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.openlocfilehash: fd21f01f89cb4fe4507775670968496cbb5f99f5
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "76115014"
 ---
 # <a name="uninstall-visual-studio"></a>卸载 Visual Studio
@@ -55,9 +55,9 @@ ms.locfileid: "76115014"
 
 1. 在 Windows 10 的“在此键入进行搜索”框中，键入“应用和功能”  。
 1. 查找“Microsoft Visual Studio 2017”（或“Visual Studio 2017”）   。
-1. 选择“卸载”  。
+1. 选择“卸载”。 
 1. 然后，查找“Microsoft Visual Studio 安装程序”  。
-1. 选择“卸载”  。
+1. 选择“卸载”。 
 
 ::: moniker-end
 
@@ -92,9 +92,9 @@ ms.locfileid: "76115014"
 
 1. 在 Windows 10 的“在此键入进行搜索”框中，键入“应用和功能”  。
 1. 查找“Visual Studio 2019”  。
-1. 选择“卸载”  。
+1. 选择“卸载”。 
 1. 然后，查找“Microsoft Visual Studio 安装程序”  。
-1. 选择“卸载”  。
+1. 选择“卸载”。 
 
 ::: moniker-end
 
@@ -104,7 +104,7 @@ ms.locfileid: "76115014"
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 * [修改 Visual Studio](modify-visual-studio.md)
 * [更新 Visual Studio](update-visual-studio.md)

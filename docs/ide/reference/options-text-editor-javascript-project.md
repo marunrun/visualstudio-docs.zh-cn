@@ -14,15 +14,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 190cbdb2a8096415985d83fc525b997572d252c2
-ms.sourcegitcommit: ce1ab8a25c66a83e60eab80ed8e1596fe66dd85c
+ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2019
+ms.lasthandoff: 03/18/2020
 ms.locfileid: "68605930"
 ---
 # <a name="options-text-editor-javascript-project"></a>“选项”>“文本编辑器”>“JavaScript”>“项目”
 
-使用“选项”对话框中的“项目”页，可以指定代码编辑器中的 JavaScript 和 TypeScript 项目选项   。 要访问此页，请先依次选择菜单栏中的“工具” > “选项”，再依次展开“文本编辑器” > “JavaScript/TypeScript” > “项目”      。
+使用“选项”对话框中的“项目”页，可以指定代码编辑器中的 JavaScript 和 TypeScript 项目选项   。 要访问此页，请先依次选择菜单栏中的“工具” **“选项”，再依次展开“文本编辑器”** “JavaScript/TypeScript” > “项目”    >    >   。
 
 ## <a name="project-analysis-options"></a>项目分析选项
 
@@ -65,6 +65,6 @@ ms.locfileid: "68605930"
 |**React 框架**|在你选中此选项后，代码编辑器会发出 .js  文件扩展名。|
 |**Preserve**|在你选中此选项后，代码编辑器会在输出中保留 JSX，并发出 .jsx  文件扩展名。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [“选项”对话框 ->“环境”->“常规”](../../ide/reference/general-environment-options-dialog-box.md)

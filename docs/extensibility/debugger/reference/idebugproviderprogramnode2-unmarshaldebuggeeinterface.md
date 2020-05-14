@@ -1,5 +1,5 @@
 ---
-title: IDebugProviderProgramNode2::UnmarshalDebuggeeInterface | Microsoft Docs
+title: IDebug提供程序程序节点2：：取消封送调试接口 |微软文档
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProviderProgramNode2::UnmarshalDebuggeeInterface
 ms.assetid: 2e4653c5-10f1-493c-9973-f31d266c5d48
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 30163fe2dad42f42dd635eddcc2afdf3e1acaf0a
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 3c0f6e66b6585eafde656cd7be88d0c76bbb3f37
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66350033"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80720705"
 ---
 # <a name="idebugproviderprogramnode2unmarshaldebuggeeinterface"></a>IDebugProviderProgramNode2::UnmarshalDebuggeeInterface
-获取跨进程边界的指定的接口。
+获取跨进程边界的指定接口。
 
 ## <a name="syntax"></a>语法
 
@@ -43,16 +43,16 @@ int UnmarshalDebuggeeInterface(
 
 ## <a name="parameters"></a>参数
 `riid`\
-[in]若要获取接口的 GUID。
+[在]要获取的接口的 GUID。
 
 `ppvObject`\
-[out]返回实现所需的接口的对象。 [C++] 这可以直接向所需的接口类型强制转换。 [C#] 使用<xref:System.Runtime.InteropServices.Marshal.GetObjectForIUnknown%2A>方法以获取所需的接口。
+[出]返回实现所需接口的对象。 [C++] 可以直接转换为所需的接口类型。 [C] 使用<xref:System.Runtime.InteropServices.Marshal.GetObjectForIUnknown%2A>方法获取所需的接口。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功，返回`S_OK`;否则，返回错误代码。
 
 ## <a name="remarks"></a>备注
- 当在运行时的调试引擎使用此方法[!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]进程空间和正在调试的程序运行的在其自己的进程空间中。
+ 当调试引擎在[!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]进程空间中运行时，并且正在调试的程序在其自己的进程空间中运行时，将使用此方法。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugProviderProgramNode2](../../../extensibility/debugger/reference/idebugproviderprogramnode2.md)
