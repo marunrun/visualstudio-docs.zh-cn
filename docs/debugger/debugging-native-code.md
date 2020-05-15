@@ -1,5 +1,5 @@
 ---
-title: 调试本机代码 |Microsoft Docs
+title: 调试本机代码 | Microsoft Docs
 ms.date: 04/11/2017
 ms.topic: conceptual
 f1_keywords:
@@ -22,41 +22,41 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: f98b99a31d9215d661879aa7fa52d4b671024496
 ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/22/2019
 ms.locfileid: "72738156"
 ---
 # <a name="debugging-native-code"></a>调试本机代码
-本节讲述本机应用程序的一些常见调试问题和调试技术。 本节阐述的技术属于高级别技术。 有关使用 Visual Studio 调试器的机制，请参阅[第一次查看调试器](../debugger/debugger-feature-tour.md)）。
+本节讲述本机应用程序的一些常见调试问题和调试技术。 本节阐述的技术属于高级别技术。 有关使用 Visual Studio 调试器的方法，请参阅[初探调试器](../debugger/debugger-feature-tour.md)。
 
 ## <a name="in-this-section"></a>本节内容
- [如何：调试优化的代码](../debugger/how-to-debug-optimized-code.md)提供调试优化代码的提示，具体而言，调试优化的程序版本的原因，调试和发布配置的默认优化设置，以及查找只出现在优化代码中的 bug 的提示（启用调试生成配置中的优化。
+ [如何：调试优化的代码](../debugger/how-to-debug-optimized-code.md) 给出有关调试优化代码的提示，具体包括调试未优化版本的程序的理由，“调试”和“发布”配置的默认优化设置，以及有关如何查找仅出现在优化代码中的 bug 的提示（在“调试”生成配置中启用优化）。
 
- [DebugBreak 和 __debugbreak](../debugger/debugbreak-and-debugbreak.md)介绍 Win32 `DebugBreak` 函数，并提供指向平台 SDK 中的参考主题的链接。 还描述了 `__debugbreak` 内部。
+ [DebugBreak 和 __debugbreak](../debugger/debugbreak-and-debugbreak.md) 描述 Win32 `DebugBreak` 函数，并提供指向其位于 Platform SDK 中的参考主题的链接。 还描述了 `__debugbreak` 内部。
 
- [C/C++断言](../debugger/c-cpp-assertions.md)讨论断言语句，它们的工作原理、使用它们的好处（捕获逻辑错误、检查操作的结果和测试错误条件）、它们与 `_DEBUG` 的交互以及 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 中支持的断言类型。
+ [C/C++ 断言](../debugger/c-cpp-assertions.md) 讨论断言语句，包括它们的工作方式，使用它们的好处（捕捉逻辑错误、检查操作的结果和测试错误情况），它们与 `_DEBUG` 的交互，以及 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 中受支持的断言类型。
 
- [如何：调试内联程序集代码](../debugger/how-to-debug-inline-assembly-code.md)提供有关使用 "反汇编" 窗口查看程序集指令和 "寄存器" 窗口以查看寄存器内容的简短说明，并提供指向有关这些窗口的主题的链接。
+ [如何：调试内联程序集代码](../debugger/how-to-debug-inline-assembly-code.md) 提供有关使用“反汇编”窗口查看程序集指令和使用“寄存器”窗口查看寄存器内容的简短说明，并提供指向关于这些窗口的主题的链接。
 
- [MFC 调试技术](../debugger/mfc-debugging-techniques.md)链接到 MFC 程序的调试技术，包括： afxDebugBreak，跟踪宏，检测 MFC 中的内存泄漏，MFC 断言，并减小 MFC 调试生成的大小。
+ [MFC 调试技术](../debugger/mfc-debugging-techniques.md) 链接到用于 MFC 程序的调试技术，包括：afxDebugBreak、TRACE 宏、在 MFC 中检测内存泄漏、MFC 断言以及缩减 MFC 调试生成的大小。
 
- [CRT 调试技术](../debugger/crt-debugging-techniques.md)链接到 C 运行时库的调试技术，包括使用 CRT 调试库、用于报告的宏、malloc 和 _malloc_dbg 之间的差异、编写调试挂钩函数以及 CRT 调试堆。
+ [CRT 调试技术](../debugger/crt-debugging-techniques.md) 链接到用于 C 运行时库的调试技术，包括：使用 CRT 调试库、用于报告的宏、malloc 和 _malloc_dbg 之间的差异、编写调试挂钩函数以及 CRT 调试堆。
 
- [调试本机代码常见问题解答](../debugger/debugging-native-code-faqs.md)提供有关调试C++程序的常见问题的解答
+ [调试本机代码常见问题解答](../debugger/debugging-native-code-faqs.md) 提供有关调试 C++ 程序的常见问题的答案
 
- [COM 和 ActiveX 调试](../debugger/com-and-activex-debugging.md)提供有关调试 COM 和 ActiveX 应用程序的信息，包括可用于 COM 和 ActiveX 调试的工具。
+ [COM 和 ActiveX 调试](../debugger/com-and-activex-debugging.md) 提供有关调试 COM 和 ActiveX 应用程序的信息，包括可用于 COM 和 ActiveX 调试的工具。
 
- [如何：调试插入的代码](../debugger/how-to-debug-injected-code.md)提供有关调试使用特性的代码的指南。 指导信息包括如何打开“源批注”、如何查看插入的代码以及如何在当前执行点查看反汇编代码。
+ [如何：调试插入的代码](../debugger/how-to-debug-injected-code.md) 就如何调试使用属性的代码提供指导。 指导信息包括如何打开“源批注”、如何查看插入的代码以及如何在当前执行点查看反汇编代码。
 
- [演练：调试并行应用程序](../debugger/walkthrough-debugging-a-parallel-application.md)介绍如何使用 "**并行任务**" 和 "**并行堆栈**" 工具窗口调试并行应用程序。
+ [演练：调试并行应用程序](../debugger/walkthrough-debugging-a-parallel-application.md) 描述如何使用“并行任务”  和“并行堆栈”  工具窗口调试并行应用程序。
 
 ## <a name="related-sections"></a>相关章节
- ["准备调试C++项目](../debugger/debugging-preparation-visual-cpp-project-types.md)" 提供了一些主题的链接，这些主题描述如何调试由C++项目模板创建的本机项目类型。
+ [准备调试 C++ 项目](../debugger/debugging-preparation-visual-cpp-project-types.md) 提供指向特定主题的链接，这些主题描述如何调试由 C++ 项目模板创建的本机项目类型。
 
- [调试 DLL 项目](../debugger/debugging-dll-projects.md)提供有关如何调试本机和托管的 Dll 的信息。
+ [调试 DLL 项目](../debugger/debugging-dll-projects.md) 提供有关如何调试本机 DLL 和托管 DLL 的信息。
 
- [首先查看调试器](../debugger/debugger-feature-tour.md)提供指向调试文档的较大章节的链接。 涉及的信息包括：调试器的新增功能、设置和准备、断点、处理异常、编辑和继续、调试托管代码、调试本机代码、调试 SQL 以及用户界面参考。
+ [初探调试器](../debugger/debugger-feature-tour.md) 提供指向调试文档的较大章节的链接。 涉及的信息包括：调试器的新增功能、设置和准备、断点、处理异常、编辑和继续、调试托管代码、调试本机代码、调试 SQL 以及用户界面参考。
 
 ## <a name="see-also"></a>请参阅
 

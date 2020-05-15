@@ -1,5 +1,5 @@
 ---
-title: 可视化工具 API 参考 |Microsoft Docs
+title: 可视化工具 API 参考 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -19,7 +19,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: d8479343634ca8afc647edde61eb8b1106954c83
 ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/31/2019
 ms.locfileid: "73187209"
