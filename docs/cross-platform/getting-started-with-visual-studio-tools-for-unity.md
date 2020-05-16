@@ -1,4 +1,4 @@
-﻿---
+---
 title: Visual Studio Tools for Unity 入门 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/03/2018
@@ -61,23 +61,23 @@ ms.locfileid: "79306961"
 
 自 Unity 2018.1 起，Visual Studio 应为 Unity 的默认外部脚本编辑器。 可以确认下是否如此，或者将外部脚本编辑器更改为特定版本的 Visual Studio：
 
-1. 从“Edit”菜单选择“Preferences”。
+1. 从“编辑”  菜单选择“首选项”  。
 
    ![选择首选项](media/vstu_unity-preferences.png)
 
 2. 在“Preferences”对话框中，选择“External Tools”选项卡。 
 
-3. 从“External Script Editor”下拉列表中，选择所需版本的 Visual Studio（如果列出此项），否则选择“Browse...”。
+3. 从“外部脚本编辑器”  下拉列表中，选择所需版本的 Visual Studio（如果列出此项），否则选择“浏览...”  。
 
    ![选择 Visual Studio](media/vstu_unity-external-tools.png)
 
-4. 如果已选择“Browse...”，请导航到 Visual Studio 安装目录中的“Common7/IDE”目录，然后选择“devenv.exe”。 然后单击“Open”。
+4. 如果已选择“浏览...”  ，导航到 Visual Studio 安装目录中的“Common7/IDE”  目录，然后选择“devenv.exe”  。 然后单击“打开”  。
 
    ![选择“打开”](media/vstu_browse-for-application.png)
 
-5. 在“External Script Editor”列表中选择 Visual Studio 后，确认已选中“Editor Attaching”复选框。
+5. 在“外部脚本编辑器”  列表中选择 Visual Studio 后，确认已选中“编辑器连接”  复选框。
 
-6. 关闭“Preferences”对话框以完成配置过程。
+6. 关闭“首选项”对话框以完成配置过程  。
 
 ## <a name="support-for-older-versions"></a>支持旧版本
 

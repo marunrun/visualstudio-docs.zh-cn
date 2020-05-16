@@ -39,7 +39,7 @@ ms.locfileid: "75589599"
 
 -  基于顺序测试顺序：每个虚拟用户按照在方案中定义测试的顺序运行 Web 性能测试或单元测试。 虚拟用户可按此顺序连续循环运行测试，直到负载测试完成。 有关详细信息，请参阅[顺序](#SequentialOrder)。
 
-### <a name="BasedOnTestsStarted"></a> 基于已启动测试数的百分比
+### <a name="percentage-based-on-tests-started"></a><a name="BasedOnTestsStarted"></a> 基于已启动测试数的百分比
 
 对于组合中的每个测试，可以指定一个百分比，它确定选择测试作为下一个要运行的测试的频率。 例如，可能将下列百分比值分配给三种测试：
 
@@ -51,10 +51,10 @@ ms.locfileid: "75589599"
 
 如果使用此设置，则下一个要启动的测试将基于分配的百分比。 执行此操作时不考虑当前运行每个测试的虚拟用户的数目。
 
-### <a name="PercentageBasedonVirtualUsers"></a> 基于虚拟用户数的百分比
+### <a name="percentage-based-on-virtual-users"></a><a name="PercentageBasedonVirtualUsers"></a> 基于虚拟用户数的百分比
 此测试组合模型确定将运行特定测试的虚拟用户的百分比。 如果使用此测试组合模型，则下一个要启动的测试不仅基于分配的百分比，还基于当前运行特定测试的虚拟用户的百分比。 在负载测试的任何时刻，运行特定测试的用户数与分配的分发项尽可能匹配。
 
-### <a name="PacingTestMix"></a> 速度测试组合
+### <a name="pacing-test-mix"></a><a name="PacingTestMix"></a> 速度测试组合
 
 如果指定速度测试组合，则为测试组合中每个测试的每个虚拟用户指定测试执行的速率。 对于每个测试，此速率是指每个虚拟用户每小时运行的测试数。 例如，可能将下列速度测试组合分配给以下测试：
 
@@ -81,7 +81,7 @@ ms.locfileid: "75589599"
 
   有关详细信息，请参阅[如何：在使用用户节奏测试组合模型时对节奏延迟应用分布](../test/how-to-apply-distribution-to-pacing-delay-when-using-a-user-pace-test-mix-model.md)。
 
-### <a name="SequentialOrder"></a> 顺序
+### <a name="sequential-order"></a><a name="SequentialOrder"></a> 顺序
 如果选择“基于顺序测试顺序”选项，则每个虚拟用户将按照测试的定义顺序运行方案中的所有测试。
 
 ## <a name="test-iterations-property"></a>“测试迭代”属性

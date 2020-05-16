@@ -23,20 +23,20 @@ ms.locfileid: "62429741"
 
 1. 启动 Visual Studio。
 
-1. 在顶部菜单栏中，选择“文件” > “新建” > “项目”，然后在“新建项目”对话框中搜索“空白 Flask”，在中间列表中选择“空白 Flask Web 项目”模板，指定项目的名称，最后选择“确定”：
+1. 在顶部菜单栏中，选择“文件”   > “新建”   > “项目”  ，然后在“新建项目”  对话框中搜索“空白 Flask”，在中间列表中选择“空白 Flask Web 项目”  模板，指定项目的名称，最后选择“确定”  ：
 
     ![使用“空白 Flask Web 项目”模板新建项目](media/quickstart-python-06-blank-flask-template.png)
 
-1. Visual Studio 中显示对话框，提示“此项目需要外部包。” 显示此对话框的原因是模板包括指定 Flask 依赖项的 requirements.txt 文件。 Visual Studio 可自动安装包，且让你能够将这些包安装到虚拟环境中。 安装到全局环境时建议使用虚拟环境，因此选择“安装到虚拟环境”继续操作。
+1. Visual Studio 中显示对话框，提示“此项目需要外部包。”  显示此对话框的原因是模板包括指定 Flask 依赖项的 requirements.txt  文件。 Visual Studio 可自动安装包，且让你能够将这些包安装到虚拟环境中  。 安装到全局环境时建议使用虚拟环境，因此选择“安装到虚拟环境”继续操作  。
 
     ![将 Flask 安装到虚拟环境](media/quickstart-python-07-install-into-virtual-environment.png)
 
-1. Visual Studio 随即显示“添加虚拟环境”对话框。 接受默认设置并选择“创建”，然后同意任意升级请求。
+1. Visual Studio 随即显示“添加虚拟环境”对话框  。 接受默认设置并选择“创建”，然后同意任意升级请求  。
 
     > [!Tip]
-    > 开始一个项目时，强烈建议立即创建虚拟环境，因为大多数 Visual Studio 模板均有此项提示。 在你添加和删除库时，虚拟环境随之保证项目的确切需求。 然后，可轻松生成 requirements.txt 文件。在其他开发计算机上重新安装这些依赖项时使用此文件（因为此时使用源代码管理功能集），将项目部署到生产服务器时也使用此文件。 有关虚拟环境及其优势的详细信息，请参阅[使用虚拟环境](../python/selecting-a-python-environment-for-a-project.md#use-virtual-environments)和[使用 requirements.txt 管理所需的包](../python/managing-required-packages-with-requirements-txt.md)。
+    > 开始一个项目时，强烈建议立即创建虚拟环境，因为大多数 Visual Studio 模板均有此项提示。 在你添加和删除库时，虚拟环境随之保证项目的确切需求。 然后，可轻松生成 requirements.txt  文件。在其他开发计算机上重新安装这些依赖项时使用此文件（因为此时使用源代码管理功能集），将项目部署到生产服务器时也使用此文件。 有关虚拟环境及其优势的详细信息，请参阅[使用虚拟环境](../python/selecting-a-python-environment-for-a-project.md#use-virtual-environments)和[使用 requirements.txt 管理所需的包](../python/managing-required-packages-with-requirements-txt.md)。
 
-1. Visual Studio 创建该环境后，在“解决方案资源管理器”中查看是否已具备 app.py 文件和 requirements.txt。 打开 app.py，可看到模板提供了类似[快速入门 - 使用 Flask 创建 Web 应用](../ide/quickstart-python.md)中的代码，还增添了几个部分。 下面显示的所有代码均由模板创建，因此无需自行将任何代码粘贴到 app.py 中。
+1. Visual Studio 创建该环境后，在“解决方案资源管理器”  中查看是否已具备 app.py  文件和 requirements.txt  。 打开 app.py  ，可看到模板提供了类似[快速入门 - 使用 Flask 创建 Web 应用](../ide/quickstart-python.md)中的代码，还增添了几个部分。 下面显示的所有代码均由模板创建，因此无需自行将任何代码粘贴到 app.py  中。
 
     代码开始部分为以下必要导入：
 
@@ -73,13 +73,13 @@ ms.locfileid: "62429741"
         app.run(HOST, PORT)
     ```
 
-1. 选择“调试” > “启动而不调试”，以运行应用并打开指向 `localhost:5555` 的浏览器。
+1. 选择“调试”   > “启动而不调试”  ，以运行应用并打开指向 `localhost:5555` 的浏览器。
 
 **问：Visual Studio 还提供哪些 Python 模板？**
 
-**答**：在安装了 Python 工作负载的情况下，Visual Studio 提供多种项目模板，其中包括用于 [Flask、Bottle 和 Django Web 框架](../python/python-web-application-project-templates.md)、Azure 云服务以及不同机器学习方案的模板，甚至还有一个模板用于根据带 Python 应用的现有文件夹结构创建项目。 要访问模板，可选择“Python”语言节点及其子节点，再依次单击“文件” > “新建” > “项目”。
+**答**：在安装了 Python 工作负载的情况下，Visual Studio 提供多种项目模板，其中包括用于 [Flask、Bottle 和 Django Web 框架](../python/python-web-application-project-templates.md)、Azure 云服务以及不同机器学习方案的模板，甚至还有一个模板用于根据带 Python 应用的现有文件夹结构创建项目。 要访问模板，可选择“Python”  语言节点及其子节点，再依次单击“文件”   > “新建”   > “项目”  。
 
-Visual Studio 还提供各种文件或项模板，用于快速创建 Python 类、Python 包、Python 单元测试、web.config 文件等内容。 如果打开了 Python 项目，可依次单击“项目” > “添加新项”菜单命令来访问项模板。 请参阅[项模板](python-item-templates.md)引用。
+Visual Studio 还提供各种文件或项模板  ，用于快速创建 Python 类、Python 包、Python 单元测试、web.config  文件等内容。 如果打开了 Python 项目，可依次单击“项目”   > “添加新项”  菜单命令来访问项模板。 请参阅[项模板](python-item-templates.md)引用。
 
 开始项目或创建文件时，使用模板可节省大量时间，这还是一个了解不同应用类型和代码结构的好方法。 最好先花几分钟基于不同模板创建项目和项，熟悉模板的功能。
 

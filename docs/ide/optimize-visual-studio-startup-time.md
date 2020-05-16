@@ -35,7 +35,7 @@ Visual Studio 可快速高效地启动。 但是，某些 Visual Studio 扩展�
 
 该对话框会列出影响启动性能的扩展和工具窗口。 可更改扩展和工具窗口的设置以提高启动性能。
 
-## <a name="a-nameextensions-to-change-extension-settings-to-improve-startup-solution-load-and-typing-performance"></a><a name="extensions" />更改扩展设置以改善启动、解决方案加载和键入性能
+## <a name="to-change-extension-settings-to-improve-startup-solution-load-and-typing-performance"></a><a name="extensions" />更改扩展设置以改善启动、解决方案加载和键入性能
 
 1. 通过在菜单栏上选择“帮助” **“管理 Visual Studio 性能”，打开“管理 Visual Studio 性能”对话框**   >   。
 
@@ -47,7 +47,7 @@ Visual Studio 可快速高效地启动。 但是，某些 Visual Studio 扩展�
 
 可以始终使用“扩展管理器”  或“管理 Visual Studio 性能”  对话框重新启用扩展，以用于以后的会话。
 
-## <a name="a-nametool-windows-to-change-tool-window-settings-to-improve-startup-time"></a><a name="tool-windows" />更改工具窗口设置以改善启动时间
+## <a name="to-change-tool-window-settings-to-improve-startup-time"></a><a name="tool-windows" />更改工具窗口设置以改善启动时间
 
 1. 通过在菜单栏上选择“帮助” **“管理 Visual Studio 性能”，打开“管理 Visual Studio 性能”对话框**   >   。
 

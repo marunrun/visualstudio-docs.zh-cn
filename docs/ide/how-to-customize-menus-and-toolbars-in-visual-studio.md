@@ -81,7 +81,7 @@ ms.locfileid: "79306823"
         > [!NOTE]
         > 有关如何改进工具栏的可用性和辅助功能的详细信息，请参阅[如何：设置 IDE 辅助功能选项](../ide/reference/how-to-set-ide-accessibility-options.md)。
 
-## <a name="customizing_menu">自定义菜单或工具栏</a>
+## <a name=""></a><a name="customizing_menu">自定义菜单或工具栏</a>
 
 1. 在菜单栏上，依次选择“工具” **“自定义”**  >   。
 

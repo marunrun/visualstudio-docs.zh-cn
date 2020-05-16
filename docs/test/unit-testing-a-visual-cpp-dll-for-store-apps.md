@@ -22,7 +22,7 @@ ms.locfileid: "77274454"
 
 本主题还为单元测试和要测试的 DLL 创建一个 Visual Studio 解决方案和单独的项目。 你还可在 DLL 项目中直接包含单元测试，也可以为单元测试和 .DLL 创建不同的解决方案。 有关要使用的指令的提示，请参阅[向现有的 C++ 应用程序添加单元测试](../test/how-to-use-microsoft-test-framework-for-cpp.md)。
 
-## <a name="Create_the_solution_and_the_unit_test_project"></a> 创建解决方案和单元测试项目
+## <a name="create-the-solution-and-the-unit-test-project"></a><a name="Create_the_solution_and_the_unit_test_project"></a> 创建解决方案和单元测试项目
 
 ::: moniker range="vs-2019"
 
@@ -58,7 +58,7 @@ ms.locfileid: "77274454"
 
          运行测试时，将为每个测试类创建一个实例。 测试方法以未指定的顺序进行调用。 可以定义在每个模块、类或方法之前和之后调用的特殊方法。 有关详细信息，请参阅[使用 Microsoft.VisualStudio.TestTools.CppUnitTestFramework](how-to-use-microsoft-test-framework-for-cpp.md)。
 
-## <a name="Verify_that_the_tests_run_in_Test_Explorer"></a> 验证测试是否可在资源管理器中运行
+## <a name="verify-that-the-tests-run-in-test-explorer"></a><a name="Verify_that_the_tests_run_in_Test_Explorer"></a> 验证测试是否可在资源管理器中运行
 
 1. 插入某些测试代码：
 
@@ -77,7 +77,7 @@ ms.locfileid: "77274454"
 
      ![测试资源管理器](../test/media/ute_cpp_testexplorer_testmethod1.png)
 
-## <a name="Add_the_DLL_project_to_the_solution"></a> 向解决方案添加 DLL 项目
+## <a name="add-the-dll-project-to-the-solution"></a><a name="Add_the_DLL_project_to_the_solution"></a> 向解决方案添加 DLL 项目
 
 ::: moniker range="vs-2019"
 
@@ -148,7 +148,7 @@ ms.locfileid: "77274454"
 
     ```
 
-## <a name="make_the_dll_functions_visible_to_the_test_code"></a>使 dll 函数对测试代码可见
+## <a name="make-the-dll-functions-visible-to-the-test-code"></a><a name="make_the_dll_functions_visible_to_the_test_code"></a>使 dll 函数对测试代码可见
 
 1. 将 RooterLib 添加到 RooterLibTests 项目。
 
@@ -196,7 +196,7 @@ ms.locfileid: "77274454"
 
    你已设置测试和代码项目，并已验证可运行测试（运行测试项目中的函数）。 现在可以开始编写实际测试和代码。
 
-## <a name="Iteratively_augment_the_tests_and_make_them_pass"></a> 以迭代方式增加测试并使它们通过
+## <a name="iteratively-augment-the-tests-and-make-them-pass"></a><a name="Iteratively_augment_the_tests_and_make_them_pass"></a> 以迭代方式增加测试并使它们通过
 
 1. 添加新测试：
 
@@ -256,7 +256,7 @@ ms.locfileid: "77274454"
 > [!TIP]
 > 通过一次添加一个测试来开发代码。 确保每次迭代后所有的测试都会通过。
 
-## <a name="Debug_a_failing_test"></a> 调试失败测试
+## <a name="debug-a-failing-test"></a><a name="Debug_a_failing_test"></a> 调试失败测试
 
 1. 将另一个测试添加到 *unittest1.cpp*：
 
@@ -325,7 +325,7 @@ ms.locfileid: "77274454"
 
    ![所有测试通过](../test/media/ute_ult_alltestspass.png)
 
-## <a name="Refactor_the_code_without_changing_tests"></a> 在不更改测试的情况下重构代码
+## <a name="refactor-the-code-without-changing-tests"></a><a name="Refactor_the_code_without_changing_tests"></a> 在不更改测试的情况下重构代码
 
 1. 简化 `SquareRoot` 函数中的核心计算过程：
 

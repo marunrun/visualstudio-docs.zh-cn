@@ -19,11 +19,11 @@ ms.locfileid: "75755563"
 
 默认情况下，适用于 C++ 的 Microsoft Unit Testing 框架包含在“使用 C++ 的桌面开发”  工作负荷中。
 
-## <a name="separate_project"></a> 在单独的项目中编写单元测试
+## <a name="to-write-unit-tests-in-a-separate-project"></a><a name="separate_project"></a> 在单独的项目中编写单元测试
 
 通常会直接在要测试代码的项目（与要测试的代码处于相同解决方案中）中运行测试代码。 若要设置和配置新测试项目，请参阅[编写 C/C++ 单元测试](writing-unit-tests-for-c-cpp.md)。
 
-## <a name="same_project"></a>在同一项目中编写单元测试
+## <a name="to-write-unit-tests-in-the-same-project"></a><a name="same_project"></a>在同一项目中编写单元测试
 
 在某些情况下，例如测试 DLL 中的非导出函数时，可能需要在所测试程序所处的同一项目中创建测试。 在同一项目中编写单元测试：
 
@@ -44,7 +44,7 @@ ms.locfileid: "75755563"
 
    - 右键单击解决方案资源管理器中的项目节点，然后选择“添加” **“新建项”** “C++ 文件(.cpp)”   >    >   。
 
-## <a name="object_files"></a>将测试与对象或库文件相关联的具体步骤
+## <a name="to-link-the-tests-to-the-object-or-library-files"></a><a name="object_files"></a>将测试与对象或库文件相关联的具体步骤
 
 如果受测代码没有导出要测试的函数，可以将输出的 .obj 或 .lib 文件添加到测试项目的依赖项中   。 修改测试项目的属性，以包含单元测试所需的标头和库或对象文件。
 
