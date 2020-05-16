@@ -36,7 +36,7 @@ ms.locfileid: "79306787"
 - [向现有的构造函数添加参数](#addparameter)
 - [从构造函数参数创建和初始化字段/属性](#create)
 
-## <a id = "pick"></a> 生成构造函数并选择成员（仅限 C#）
+## <a name="generate-constructor-and-pick-members-c-only"></a><a id = "pick"></a> 生成构造函数并选择成员（仅限 C#）
 
 1. 将光标置于类中的任何空行：
 
@@ -67,7 +67,7 @@ ms.locfileid: "79306787"
 
    ![生成构造函数结果](media/constructor1-result-cs.png)
 
-## <a id="selection"></a> 基于所选字段生成构造函数（仅限 C#）
+## <a name="generate-constructor-from-selected-fields-c-only"></a><a id="selection"></a> 基于所选字段生成构造函数（仅限 C#）
 
 1. 突出显示要在生成的构造函数中内附的成员：
 
@@ -89,7 +89,7 @@ ms.locfileid: "79306787"
 
    ![“生成构造函数”的结果](media/constructor2-result-cs.png)
 
-## <a id="usage"></a> 基于新用法生成构造函数（C# 和 Visual Basic）
+## <a name="generate-constructor-from-new-usage-c-and-visual-basic"></a><a id="usage"></a> 基于新用法生成构造函数（C# 和 Visual Basic）
 
 1. 将光标置于红色波浪线上。 红色波浪线表示尚无针对构造函数的任何调用。
 
@@ -127,7 +127,7 @@ ms.locfileid: "79306787"
 
        ![“生成方法”的结果 VB](media/constructor-result-vb.png)
 
-## <a id="addparameter"></a> 向现有构造函数添加参数（仅限 C#）
+## <a name="add-parameter-to-existing-constructor-c-only"></a><a id="addparameter"></a> 向现有构造函数添加参数（仅限 C#）
 
 1. 从现有构造函数调用添加参数。
 
@@ -154,7 +154,7 @@ ms.locfileid: "79306787"
 
 还可以向现有方法添加参数。 有关详细信息，请参阅[向方法添加参数](add-parameter.md)。
 
-## <a id="create"></a> 基于构造函数参数创建和初始化字段或属性（仅限 C#）
+## <a name="create-and-initialize-a-field-or-property-from-a-constructor-parameter-c-only"></a><a id="create"></a> 基于构造函数参数创建和初始化字段或属性（仅限 C#）
 
 1. 查找现有构造函数并添加参数：
 

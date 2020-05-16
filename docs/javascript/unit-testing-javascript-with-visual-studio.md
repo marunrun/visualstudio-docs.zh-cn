@@ -130,7 +130,7 @@ Test execution time: 1.5731 Seconds
 > [!NOTE]
 > 如果收到指示无法找到 vstest.console.exe 的错误，请确保已打开开发人员命令提示，而不是常规的命令提示符  。
 
-## <a name="addingFramework"></a>添加对单元测试框架的支持
+## <a name="add-support-for-a-unit-test-framework"></a><a name="addingFramework"></a>添加对单元测试框架的支持
 
 可以通过使用 JavaScript 实现发现和执行逻辑添加对其他测试框架的支持。 可以通过在以下位置添加名为测试框架的文件夹执行此操作：
 

@@ -38,7 +38,7 @@ ms.locfileid: "77279269"
 
 ## <a name="create-the-tests"></a>创建测试
 
-### <a name="staticLink"></a> 将 DLL 更改为静态库的具体步骤
+### <a name="to-change-the-dll-to-a-static-library"></a><a name="staticLink"></a> 将 DLL 更改为静态库的具体步骤
 
 - 如果测试必须使用 DLL 项目不导出的成员，并且所测试项目将生成为动态库，请考虑将其转换为静态库。
 
@@ -50,7 +50,7 @@ ms.locfileid: "77279269"
 
   继续执行过程[将测试与对象或库文件相关联的具体步骤](#objectRef)。
 
-### <a name="projectRef"></a>从测试项目引用导出的 DLL 函数的具体步骤
+### <a name="to-reference-exported-dll-functions-from-the-test-project"></a><a name="projectRef"></a>从测试项目引用导出的 DLL 函数的具体步骤
 
 - 如果 DLL 项目将导出你要测试的函数，则可从测试项目添加对代码项目的引用。
 
@@ -82,7 +82,7 @@ ms.locfileid: "77279269"
 
   转到[编写单元测试](#addTests)。
 
-### <a name="objectRef"></a>将测试与对象或库文件相关联的具体步骤
+### <a name="to-link-the-tests-to-the-object-or-library-files"></a><a name="objectRef"></a>将测试与对象或库文件相关联的具体步骤
 
 - 如果 DLL 没有导出要测试的函数，可以将输出的 *.obj* 或 *.lib* 文件添加到测试项目的依赖项中。
 
@@ -116,7 +116,7 @@ ms.locfileid: "77279269"
 
   转到[编写单元测试](#addTests)。
 
-### <a name="sameProject"></a>在同一项目中添加单元测试的具体步骤
+### <a name="to-add-unit-tests-in-the-same-project"></a><a name="sameProject"></a>在同一项目中添加单元测试的具体步骤
 
 1. 修改产品代码项目属性，以包含单元测试所需的标头和库文件。
 
@@ -137,7 +137,7 @@ ms.locfileid: "77279269"
 
    转到[编写单元测试](#addTests)。
 
-## <a name="addTests"></a> 编写单元测试
+## <a name="write-the-unit-tests"></a><a name="addTests"></a> 编写单元测试
 
 1. 在每个单元测试代码文件中，为所测试项目的标头添加 `#include` 语句。
 

@@ -22,15 +22,15 @@ ms.locfileid: "62429999"
 
 **上一步：[创建新的 Python 项目](tutorial-working-with-python-in-visual-studio-step-01-create-project.md)**
 
-虽然可以在解决方案资源管理器中管理项目文件，但处理文件内容（如源代码）通常还是在编辑器窗口进行。 编辑器根据上下文识别正在编辑的文件类型，其中包括编程语言（基于文件扩展名），并使用 IntelliSense 提供适合该语言的功能，比如语法着色和自动完成。
+虽然可以在解决方案资源管理器  中管理项目文件，但处理文件内容  （如源代码）通常还是在编辑器  窗口进行。 编辑器根据上下文识别正在编辑的文件类型，其中包括编程语言（基于文件扩展名），并使用 IntelliSense 提供适合该语言的功能，比如语法着色和自动完成。
 
-1. 创建新的“Python 应用程序”项目后，名为 PythonApplication1.py 的默认空文件将在 Visual Studio 编辑器中打开。
+1. 创建新的“Python 应用程序”项目后，名为 PythonApplication1.py  的默认空文件将在 Visual Studio 编辑器中打开。
 
-1. 在编辑器中，开始键入 `print("Hello, Visual Studio")`，注意 Visual Studio IntelliSense 如何在此过程中显示自动完成选项。 下拉列表中加外边框的选项是按 Tab 键时使用的默认完成选项。 涉及到较长的语句或标识符时，最适合使用“完成”。
+1. 在编辑器中，开始键入 `print("Hello, Visual Studio")`，注意 Visual Studio IntelliSense 如何在此过程中显示自动完成选项。 下拉列表中加外边框的选项是按 Tab  键时使用的默认完成选项。 涉及到较长的语句或标识符时，最适合使用“完成”。
 
     ![IntelliSense 自动完成弹出窗口](media/vs-getting-started-python-04-IntelliSense1b.png)
 
-1. IntelliSense 根据正在使用的语句、正在调用的函数等显示不同的信息。 使用 `print` 函数时，在 `(` 后面键入 `print` 表示函数调用将显示该函数的完整使用情况信息。 IntelliSense 弹出窗口还用粗体显示当前参数（如此处所示的 **value**）：
+1. IntelliSense 根据正在使用的语句、正在调用的函数等显示不同的信息。 使用 `print` 函数时，在 `print` 后面键入 `(` 表示函数调用将显示该函数的完整使用情况信息。 IntelliSense 弹出窗口还用粗体显示当前参数（如此处所示的 **value**）：
 
     ![某函数的 IntelliSense 自动完成弹出窗口](media/vs-getting-started-python-05-IntelliSense2b.png)
 
@@ -45,11 +45,11 @@ ms.locfileid: "62429999"
     ![IntelliSense 语法着色和错误突出显示](media/vs-getting-started-python-06-IntelliSense3b.png)
 
     > [!Tip]
-    > 由于一个人的开发环境是件非常私人的事情，因此，Visual Studio 允许用户完全控制 Visual Studio 的外观和行为。 选择“工具” > “选项”菜单命令，浏览“环境”和“文本编辑器”选项卡下面的设置。 默认情况下仅显示部分选项；若要查看每种编程语言的每个选项，请选择对话框底部的“显示所有设置”。
+    > 由于一个人的开发环境是件非常私人的事情，因此，Visual Studio 允许用户完全控制 Visual Studio 的外观和行为。 选择“工具”   > “选项”  菜单命令，浏览“环境”  和“文本编辑器”  选项卡下面的设置。 默认情况下仅显示部分选项；若要查看每种编程语言的每个选项，请选择对话框底部的“显示所有设置”  。
 
-1. 按 Ctrl+F5 或选择“调试” > “开始执行(不调试)”菜单项，运行到目前为止编写的代码。 如果代码中仍然存在错误，Visual Studio 会发出警告。
+1. 按 Ctrl  +F5  或选择“调试”   > “开始执行(不调试)”  菜单项，运行到目前为止编写的代码。 如果代码中仍然存在错误，Visual Studio 会发出警告。
 
-1. 运行程序时，会出现一个显示结果的控制台窗口，就像从命令行使用 PythonApplication1.py 运行 Python 解释器一样。 按键关闭窗口，返回到 Visual Studio 编辑器。
+1. 运行程序时，会出现一个显示结果的控制台窗口，就像从命令行使用 PythonApplication1.py  运行 Python 解释器一样。 按键关闭窗口，返回到 Visual Studio 编辑器。
 
     ![首次运行程序时的输出](media/vs-getting-started-python-07-output.png)
 
@@ -84,7 +84,7 @@ ms.locfileid: "62429999"
         print(cos(radians(i)))
     ```
 
-1. 使用 Ctrl+F5 或“调试” > “开始执行(不调试)”再次运行程序。 完成后，关闭输出窗口。
+1. 使用 Ctrl  +F5  或“调试”   > “开始执行(不调试)”  再次运行程序。 完成后，关闭输出窗口。
 
 ## <a name="next-step"></a>下一步
 

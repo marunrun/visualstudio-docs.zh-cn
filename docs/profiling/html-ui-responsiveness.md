@@ -71,7 +71,7 @@ ms.locfileid: "73189369"
 ## <a name="isolate-an-issue"></a>隔离问题
  下一节会提供帮助你隔离性能问题的建议。 有关如何通过使用样本性能测试应用来标识和修复性能问题的分步说明，请参阅[演练：改进 UI 响应能力 (HTML)](html-ui-responsiveness.md)。
 
-### <a name="Workflow"></a> 隔离 UI 响应能力问题
+### <a name="isolate-a-ui-responsiveness-problem"></a><a name="Workflow"></a> 隔离 UI 响应能力问题
  以下是建议的工作流步骤，可帮助你更有效地使用 UI 响应能力探查器：
 
 1. 在 Visual Studio 中打开应用程序。
@@ -128,12 +128,12 @@ ms.locfileid: "73189369"
 
 13. 放大后，选择“CPU 使用率”或“可视吞吐量”图的一部分。 做出选择后，探查器下方窗格中的“时间线详细信息”图将更改为仅显示选定时间段。
 
-### <a name="IsolateVisualThroughput"></a> Isolate a visual throughput problem
+### <a name="isolate-a-visual-throughput-problem"></a><a name="IsolateVisualThroughput"></a> Isolate a visual throughput problem
  CPU 利用率过高的时间段可能会导致帧速率较低或不一致。 如果开发富媒体应用程序和游戏，“可视吞吐量”图可能会比“CPU 使用率”图提供更重要的数据。
 
  若要隔离可视吞吐量问题，请按照上节所述的步骤操作，但要使用“可视吞吐量”图作为其中一个关键数据点。
 
-### <a name="ProfileMark"></a> 标记要分析的代码
+### <a name="mark-code-for-analysis"></a><a name="ProfileMark"></a> 标记要分析的代码
  若要隔离与图中所显示数据关联的应用程序代码部分，你可以在应用程序中添加一个函数调用，指示探查器在函数执行时向时间线中插入一个用户标记（倒三角形）。 你添加的所有用户标记均显示在“CPU 使用率”图、“可视吞吐量”图和“时间线详细信息”图的时间线中。
 
  若要添加用户标记，请将以下代码添加到你的应用程序中。 此示例使用“getting data”（获取数据）作为事件说明。
@@ -172,7 +172,7 @@ if (performance.mark && performance.measure) {
 ## <a name="analyze-data"></a>分析数据
  以下各节提供了有助于解释在探查器中显示的数据的信息。
 
-### <a name="Ruler"></a> 查看诊断会话时间线
+### <a name="view-the-diagnostic-session-timeline"></a><a name="Ruler"></a> 查看诊断会话时间线
  探查器顶部的标尺将显示已分析信息的时间线。 此时间线适用于“CPU 使用率”图和“可视吞吐量”图。
 
  下面是诊断会话时间线的外观，其中包含为几个应用程序生命周期事件显示的工具提示：
@@ -187,7 +187,7 @@ if (performance.mark && performance.measure) {
 
 - 导航事件，在导航到其他页面时发生。 此事件的工具提示显示目标页面 URL。
 
-### <a name="CPUUtilization"></a> 查看 CPU 使用率
+### <a name="view-cpu-utilization"></a><a name="CPUUtilization"></a> 查看 CPU 使用率
  通过“CPU 使用率”图可确定 CPU 活动过多的时间段。 该图提供一段时间内应用程序的 CPU 平均消耗量信息。 信息使用了彩色编码来表示以下具体类别： **“加载”** 、 **“脚本”** 、垃圾回收（ **“GC”** ）、 **“样式”** 、 **“呈现”** 和 **“图像解码”** 。 有关这些类别的详细信息，请参阅本主题后面部分的 [Profiler event reference](#profiler-event-reference) 。
 
  “CPU 使用率”图显示在所有应用程序线程上花费的时间，它将一个或多个 CPU 的 CPU 使用率值合并为一个百分比值。 当多个 CPU 正在使用时，CPU 使用率值可能超过 100%。
@@ -209,7 +209,7 @@ if (performance.mark && performance.measure) {
 
   有关使此图的详细信息，请参阅本主题中的 [Isolate a UI responsiveness problem](#Workflow) 。
 
-### <a name="VisualThroughput"></a> 查看可视吞吐量 (FPS)
+### <a name="view-visual-throughput-fps"></a><a name="VisualThroughput"></a> 查看可视吞吐量 (FPS)
  通过“可视吞吐量”图可确定帧速率下降的时间段。 该图显示应用程序的每秒帧数 (FPS)。 此图最适于游戏和富媒体应用程序的开发。
 
  显示的 FPS 值可能与实际帧速率不同。 检查此图中的数据时，请记住以下信息：
@@ -232,7 +232,7 @@ if (performance.mark && performance.measure) {
 
 - 通过选择 **“放大”** 按钮可获取选定时间段的更详细的视图。
 
-### <a name="TimelineDetails"></a> 查看时间线详细信息
+### <a name="view-timeline-details"></a><a name="TimelineDetails"></a> 查看时间线详细信息
  “时间线详细信息”图显示在 UI 响应能力探查器的底部窗格中。 该图提供关于选定时间段内消耗最多 CPU 时间的事件的顺序和分层信息。 该图可帮助你确定触发特定事件的原因，对于某些事件，还可确定如何找到与事件对应的源代码。 该图还有助于确定在屏幕上绘制视觉对象更新所需的时间。
 
  该图显示 UI 线程工作并关注可导致视觉对象更新缓慢的后台线程。 此图不显示 JavaScript JIT 工作、异步 GPU 工作、在宿主进程之外执行的工作（例如 RuntimeBroker.exe 和 dwm.exe 工作），或尚未基于分析目的而检测的 Windows 运行时方面的工作（例如磁盘 I/O）。
@@ -271,12 +271,12 @@ if (performance.mark && performance.measure) {
   > [!TIP]
   > 时间线详细信息图和 **“包含时间摘要”** 可帮助你识别需要优化的方面。 如果其中一个视图显示有大量的小型任务，则事件可能需要优化。 例如，应用可能会频繁刷新 DOM 元素，造成大量布局和 HTML 解析事件。 你或许能够通过批处理此工作来优化性能。
 
-### <a name="FilterTimelineDetails"></a> 筛选时间线详细信息
+### <a name="filter-timeline-details"></a><a name="FilterTimelineDetails"></a> 筛选时间线详细信息
  通过从指定事件的上下文菜单中选择 **“筛选到事件”** ，可以在时间线详细信息中将视图筛选到特定事件。 当选择此选项时，时间线和网格视图的范围限于所选事件。 “CPU 使用率”图中选定内容的范围也限于特定事件。
 
  ![筛选事件的时间线](../profiling/media/js_htmlvizprofiler_filtertoevent.png "JS_HTMLVizProfiler_FilterToEvent")
 
-### <a name="FilterEvents"></a> 筛选事件
+### <a name="filter-events"></a><a name="FilterEvents"></a> 筛选事件
  可以从“时间线详细信息”图中筛选出一些事件以对数据降噪，或为性能方案去除不相关的数据。 你可以按事件名称或事件持续时间或者此处所述的特定筛选器来进行筛选。
 
  若要筛选出图像解码、推理下载和 GC 事件，请从下窗格中的筛选器图标中清除 **“后台活动”** 选项。 由于这些事件不是很好操作，因此默认情况下已将其隐藏。
@@ -292,7 +292,7 @@ if (performance.mark && performance.measure) {
 
  若要筛选出用户度量，请清除 **“用户测量”** 选项。 用户测量是无子项的顶级事件。
 
-### <a name="GroupFrames"></a> 通过框为事件分组
+### <a name="group-events-by-frame"></a><a name="GroupFrames"></a> 通过框为事件分组
  你可以将时间线详细信息视图中显示的事件分组为单个帧。 这些帧事件是工具生成的事件，并且代表所有在绘制事件之间发生的 UI 线程工作的顶级事件容器。 若要启用此视图，请选择 **“按帧为顶级事件分组”** 。
 
  ![按帧为顶级事件分组](../profiling/media/js_htmlvizprofiler_frame_grouping_button.png "JS_HTMLVizProfiler_Frame_Grouping_Button")
