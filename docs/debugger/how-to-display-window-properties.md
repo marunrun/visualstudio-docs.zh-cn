@@ -1,5 +1,5 @@
 ---
-title: 如何：显示窗口属性 |Microsoft Docs
+title: 如何：显示窗口属性 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,16 +12,16 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 2c1be02b5adb486cf101dc9b021ea70bbd72674a
 ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62906747"
 ---
 # <a name="how-to-display-window-properties"></a>如何：显示窗口属性
-若要了解有关中列出的窗口的详细信息[Windows 视图](../debugger/windows-view.md)，使用[窗口属性对话框](../debugger/window-properties-dialog-box.md)。
+若要详细了解[窗口视图](../debugger/windows-view.md)中列出的窗口，请使用[“窗口属性”对话框](../debugger/window-properties-dialog-box.md)。
 
-### <a name="to-open-the-window-properties-dialog-box"></a>若要打开窗口属性对话框
+### <a name="to-open-the-window-properties-dialog-box"></a>打开“窗口属性”对话框
 
-1. 选择该项，然后选择**属性**从**视图**菜单。
+1. 选择项目，然后在“视图”菜单中选择“属性” 。
 
-   属性对话框都不是模式。 视图窗口中单击的项之间时，对话框的自动刷新，每个选择的项信息。
+   属性对话框不是模式对话框。 在视图窗口中单击各个项时，对话框将自动刷新为选中每一项的信息。

@@ -1,5 +1,5 @@
 ---
-title: 错误:“Microsoft Visual Studio 远程调试监视器”(MSVSMON.EXE) 似乎没有在远程计算机上运行。
+title: 错误：Microsoft Visual Studio 远程调试监视器 (MSVSMON.EXE) 似乎没有在远程计算机上运行。
 titleSuffix: ''
 ms.custom: seodec18
 ms.date: 11/04/2016
@@ -18,19 +18,19 @@ ms.workload:
 - multiple
 ms.openlocfilehash: cc9558ff4d470d30df19ea5982eb6acbcc708eea
 ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/13/2020
 ms.locfileid: "75916262"
 ---
-# <a name="error-the-microsoft-visual-studio-remote-debugging-monitor-msvsmonexe-does-not-appear-to-be-running-on-the-remote-computer"></a>错误:“Microsoft Visual Studio 远程调试监视器”(MSVSMON.EXE) 似乎没有在远程计算机上运行。
+# <a name="error-the-microsoft-visual-studio-remote-debugging-monitor-msvsmonexe-does-not-appear-to-be-running-on-the-remote-computer"></a>错误：Microsoft Visual Studio 远程调试监视器 (MSVSMON.EXE) 似乎没有在远程计算机上运行。
 此错误消息表示 Visual Studio 未能在远程计算机上找到 Visual Studio 远程调试监视器的正确实例。 必须安装 Visual Studio 远程调试监视器以便进行远程调试。 有关下载和设置远程调试器的信息，请参阅[远程调试](../debugger/remote-debugging.md)。
 
 > [!IMPORTANT]
-> 如果你认为你因产品 bug 而收到此消息，请[向 Visual Studio 报告此问题](../ide/how-to-report-a-problem-with-visual-studio.md)。 如果需要更多帮助，请参阅 [Talk to Us](../ide/feedback-options.md) 了解与 Microsoft 联系的方法。
+> 如果你认为你因产品 Bug 而收到此消息，请[向 Visual Studio 报告此问题](../ide/how-to-report-a-problem-with-visual-studio.md)。 如果需要更多帮助，请参阅 [Talk to Us](../ide/feedback-options.md) 了解与 Microsoft 联系的方法。
 
 ## <a name="i-got-this-message-while-i-was-debugging-in-visual-studio-2010-or-earlier"></a>我在 Visual Studio 2010 或更早版本中进行调试时收到了此消息
- 当你使用的 Visual Studio 是 Visual Studio 2010 或更早版本时，如果文件和打印机共享未启用，则也可能收到此错误。 若要了解有关此问题的详细信息，请参阅本文档的 Visual Studio 2010 版本：[错误：Microsoft Visual Studio 远程调试监视器 (MSVSMON.EXE) 似乎没有在远程计算机上运行。- Visual Studio 2010](/previous-versions/visualstudio/visual-studio-2010/ms164726(v=vs.100))
+ 当你使用的 Visual Studio 是 Visual Studio 2010 或更早版本时，如果文件和打印机共享未启用，则也可能收到此错误。 若要详细了解此问题，请参阅本文档的 Visual Studio 2010 版本：[错误：Microsoft Visual Studio 远程调试监视器 (MSVSMON.EXE) 似乎没有在远程计算机上运行。- Visual Studio 2010](/previous-versions/visualstudio/visual-studio-2010/ms164726(v=vs.100))
 
 ## <a name="i-got-this-message-while-i-was-debugging-locally"></a>我在本地调试时收到了此消息
  如果在本地调试时收到此消息，问题可能出在你的防病毒软件或第三方防火墙。 Visual Studio 是一个 32 位应用程序，因此它使用 64 位的远程调试器版本来调试 64 位应用程序。 两个进程使用本地计算机内的本地网络进行通信。 计算机会持续进行通信，但第三方安全软件可能会阻止通信。
@@ -55,7 +55,7 @@ ms.locfileid: "75916262"
 
 - 可以将此用户添加到远程调试器权限（在远程调试器窗口“工具”>“权限”）。
 
-- 如果你不能使用前面步骤中的方法，可以允许任何用户进行远程调试。 在远程调试器窗口中，转到“工具”>“选项”对话框。 选中“无身份验证”后，可选中“允许任何用户进行调试”。 但仅当你别无选择或在专用网络上操作时才应使用此选项。
+- 如果你不能使用前面步骤中的方法，可以允许任何用户进行远程调试。 在远程调试器窗口中，转到“工具”>“选项”对话框。 选中“无身份验证”   后，可选中 “允许任何用户进行调试”。 但仅当你别无选择或在专用网络上操作时才应使用此选项。
 
 ## <a name="the-firewall-on-the-remote-machine-doesnt-allow-incoming-connections-to-the-remote-debugger"></a>远程计算机上的防火墙不允许对远程调试器的传入连接
  Visual Studio 计算机上的防火墙和远程计算机上的防火墙都必须配置为允许在 Visual Studio 和远程调试器之间进行通信。 有关远程调试器使用的端口的信息，请参阅 [Remote Debugger Port Assignments](../debugger/remote-debugger-port-assignments.md)。 有关配置 Windows 防火墙的信息，请参阅 [Configure the Windows Firewall for Remote Debugging](../debugger/configure-the-windows-firewall-for-remote-debugging.md)。
@@ -70,9 +70,9 @@ ms.locfileid: "75916262"
  你可能需要在另一个时间进行远程调试，或重新安排另一个时间进行网络上的工作。
 
 ## <a name="more-help"></a>更多帮助
- 若要获取更多远程调试器的帮助（包括命令行开关），请在远程调试器窗口中单击 "**帮助" > 用法**"。 如果尚未打开，可以通过将以下行复制到 "**文件资源管理器**" 窗口来查看网页。 （需要将 \<Visual Studio 安装目录 > 替换为 Visual Studio 安装的位置。）
+ 若要获取更多远程调试器的帮助（包括命令行开关），请在远程调试器窗口中单击“帮助”>“使用情况”。 如果没有打开远程调试器窗口，可以将以下行复制到“文件资源管理器”窗口来查看网页。 （需要将 \<Visual Studio installation directory> 替换为 Visual Studio 的安装位置。）
 
- res:// *\<Visual Studio 安装目录 >* \ COMMON7 \ IDE \ 远程 %2 0 调试器 \ x64 \ msvsmon .exe/help .htm
+ res:// *\<Visual Studio installation directory>* \Common7\IDE\Remote%20Debugger\x64\msvsmon.exe/help.htm
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [远程调试错误和疑难解答](../debugger/remote-debugging-errors-and-troubleshooting.md)

@@ -1,5 +1,5 @@
 ---
-title: 演练：因设备状态而缺少对象 |Microsoft Docs
+title: 演练：因设备状态而缺少对象 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 1b0d2bbd-0729-4aa5-8308-70c5bf1468c5
@@ -10,7 +10,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 0e85aa8fc5af3f32f117b112e8624962a49d90c6
 ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62895438"
@@ -33,7 +33,7 @@ ms.locfileid: "62895438"
 
  在本演练所述方案中，你已到达了三维应用开发中的首个里程碑，并已准备好对其进行首次测试。 但是，当你运行该应用时，仅用户界面会被呈现到屏幕。 通过使用“图形诊断”，捕获图形日志文件的问题，以便调试该应用。 应用中的问题如下所示：
 
- ![前解决该问题的应用程序](media/vsg_walkthru1_firstview.png "vsg_walkthru1_firstview")
+ ![问题解决之前的应用](media/vsg_walkthru1_firstview.png "vsg_walkthru1_firstview")
 
  有关如何捕获图形日志中的图形问题的信息，请参阅 [Capturing Graphics Information](capturing-graphics-information.md)。
 
@@ -46,7 +46,7 @@ ms.locfileid: "62895438"
 
 2. 在“帧列表” 中，选择演示未显示该模型的帧。 更新呈现目标以反映所选的帧。 在此方案中，图形日志选项卡如下所示：
 
-    ![.Vsglog 选项卡帧缓冲区预览和帧列表](media/vsg_walkthru1_experiment.png "vsg_walkthru1_experiment")
+    ![.vsglog 选项卡帧缓冲区预览和帧列表](media/vsg_walkthru1_experiment.png "vsg_walkthru1_experiment")
 
    选择演示问题的帧后，可以使用“图形事件列表”  进行诊断。 “图形事件列表”  包含用以呈现活动帧的各个 Direct3D API 调用，例如设置设备状态、创建和更新缓冲区、绘制在帧中显示的对象的 API 调用。 许多类型的调用（例如绘图、调度、复制或清除调用）都很有趣，因为当应用按照预期运行时通常（但不总是）在呈现目标中会有相应的变动。 绘图调用特别有趣，因为每个绘图调用都表示应用呈现的几何图形（调度调用也可呈现几何图形）。
 
@@ -56,7 +56,7 @@ ms.locfileid: "62895438"
 
 2. 检查“图形事件列表”  中是否存在绘图调用。 若要简化此过程，请在“图形事件列表”  窗口右上角的“搜索”  框中输入“Draw”。 这将筛选列表，使其仅包含在其标题中具有的“Draw”的事件。 在此方案中，你将发现进行了多个绘图调用：
 
-    ![图形事件列表显示了捕获的事件](media/vsg_walkthru1_.png "vsg_walkthru1_")
+    ![显示捕获的事件的图形事件列表](media/vsg_walkthru1_.png "vsg_walkthru1_")
 
    确认进行绘图调用后，即可确定对应于所缺失几何图形的调用。 由于已知（在本例中）不会将缺失的对象绘制到呈现目标，但会按预期绘制场景的其余部分，因此可以使用“图形管道阶段”  窗口确定与缺失几何图形对应的绘图调用。 “图形管道阶段”  窗口显示已发送到每个绘图调用的几何图形，而不考虑其在呈现目标的效果。 当你进行绘图调用时，将更新管道阶段以显示与该调用相关联的几何图形，并且更新呈现目标输出以显示调用完成后该呈现目标的状态。
 
@@ -78,11 +78,11 @@ ms.locfileid: "62895438"
 
 2. 根据“像素着色器”  缩略图，在应包含缺失几何图形的一部分的帧缓冲区输出中选择一个像素。 在此方案中，像素着色器输出应涵盖了大部分呈现器目标；选择某个像素后，“图形像素历史记录”  窗口将如下所示：
 
-    ![像素历史记录窗口，其中显示相关绘图调用](media/vsg_walkthru1_hist1.png "vsg_walkthru1_hist1")
+    ![显示相关绘图调用的“像素历史记录”窗口](media/vsg_walkthru1_hist1.png "vsg_walkthru1_hist1")
 
 3. 通过将你正在检查的绘图调用的编号（在“图形事件列表”  窗口中）与“图形像素历史记录”  窗口中的绘图调用之一相匹配，确认所选呈现器目标像素是否包含该几何图形的一部分。 如果“图形像素历史记录”  窗口中的任何一个调用与你正在检查的绘图调用均不匹配，请重复以上步骤（步骤 1 除外）直至找到匹配项。 在此方案中，匹配的绘图调用如下所示：
 
-    ![显示片段信息的像素历史记录窗口](media/vsg_walkthru1_hist2.png "vsg_walkthru1_hist2")
+    ![显示片段信息的“像素历史记录”窗口](media/vsg_walkthru1_hist2.png "vsg_walkthru1_hist2")
 
 4. 找到匹配项后，在“图形像素历史记录”  窗口中展开匹配的绘图调用并确认是否排除了该像素。 “图形像素历史记录”  窗口中的每个绘图调用都对应于一个或多个几何基元（点、线条或三角形），这些基元由于相应对象的几何图形而与该像素相交。 每个此类交点都可能影响该像素的最终颜色。 因深度测试失败而被排除的基元由一个图标表示，该图标在从左到右向下倾斜的箭头之上显示字母 Z。
 
@@ -94,9 +94,9 @@ ms.locfileid: "62895438"
 
 1. 打开“图形对象表”  窗口。 在“图形诊断”  工具栏上，选择“对象表” 。
 
-2. 在“图形对象表”  中找到“D3D10 设备” 对象，然后打开“D3D10 设备”  对象。 **中将打开一个新的“d3d10 设备”**[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]选项卡。 若要简化操作，可以按“类型”  对“图形对象表” 进行排序。
+2. 在“图形对象表”  中找到“D3D10 设备” 对象，然后打开“D3D10 设备”  对象。 **中将打开一个新的“d3d10 设备”** [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]选项卡。 若要简化操作，可以按“类型”  对“图形对象表” 进行排序。
 
-    ![图形对象表和相关的设备状态](media/vsg_walkthru1_objtable.png "vsg_walkthru1_objtable")
+    ![图形对象表和相关设备状态](media/vsg_walkthru1_objtable.png "vsg_walkthru1_objtable")
 
 3. 检查“d3d10 设备”  选项卡中显示的设备状态以查明潜在问题。 由于几何图形因其基元未通过深度测试而未显示，因此你可以专注于影响深度测试的设备状态，例如深度模具。 在此方案中，“深度模具描述”  （“输出合并器状态” 之下）包含“深度函数”  成员 `D3D10_COMPARISON_GREATER`的常见值：
 
@@ -104,4 +104,4 @@ ms.locfileid: "62895438"
 
    确定呈现问题的原因可能是配置错误的深度函数后，可以利用此信息以及你对代码的了解查找错误设置深度函数的位置，并解决此问题。 如果你不熟悉该代码，可以使用调试时收集的线索来查找问题。例如，根据此方案中的“深度模具描述”  ，你可以在代码中搜索“depth”或“GREATER”等单词。 修复代码后，重新生成并运行应用以查明呈现的问题是否已解决：
 
-   ![解决该问题后的应用程序](media/vsg_walkthru1_finalview.png "vsg_walkthru1_finalview")
+   ![问题解决之后的应用](media/vsg_walkthru1_finalview.png "vsg_walkthru1_finalview")

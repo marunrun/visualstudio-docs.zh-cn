@@ -1,5 +1,5 @@
 ---
-title: 错误：Windows 文件共享已配置...|Microsoft Docs
+title: 错误：已配置 Windows 文件共享... | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: troubleshooting
 f1_keywords:
@@ -16,7 +16,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 89224dc5394f248ea82d428731ef387cb705ff27
 ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62850044"
@@ -34,11 +34,11 @@ ms.locfileid: "62850044"
 
 1. 使用其他帐户名登录到本地计算机（要从其进行调试的计算机）上。
 
-     - 或 -
+     \- 或 -
 
-     . 中断与远程计算机的连接，然后重新配置文件共享，以便使用您的帐户名称连接至其他计算机：
+     。 中断与远程计算机的连接，然后重新配置文件共享，以便使用您的帐户名称连接至其他计算机：
 
-    1. 在**开始**菜单中，指向**附件**，然后单击**命令提示符**。
+    1. 在“开始”菜单上，指向“附件”，然后单击“命令提示”  。
 
     2. 在 Windows 命令提示符中，键入：
 

@@ -1,5 +1,5 @@
 ---
-title: 本机运行时检查自定义 |Microsoft Docs
+title: 本机运行时检查自定义 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -24,13 +24,13 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: db7cc513c4c96a8b60cc6471280bb837a7b9a248
 ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/22/2019
 ms.locfileid: "72730893"
 ---
 # <a name="native-run-time-checks-customization"></a>本机运行时检查自定义
-使用 **/rtc** （运行时检查）进行编译或使用 `runtime_checks` 杂注时，C 运行时库提供了本机运行时检查。 某些情况下，可能需要自定义运行时检查：
+在使用 /RTC（运行时检查）进行编译或使用 `runtime_checks` 杂注时，C 运行时库会提供本机运行时检查。 某些情况下，可能需要自定义运行时检查：
 
 - 将运行时检查信息传送到默认以外的文件或目标。
 
@@ -52,7 +52,7 @@ ms.locfileid: "72730893"
  如果使用自定义报告函数，则使用 `_RTC_SetErrorType` 将错误与报告类型关联。
 
 ## <a name="query-for-information-about-run-time-checks"></a>查询有关运行时检查的信息
- `_RTC_NumErrors` 返回运行时错误检查所检测到的错误类型的数量。 要得到每个错误的简短说明，可以从 0 循环到 `_RTC_NumErrors` 的返回值，并在每次循环中将迭代值传递给 `_RTC_GetErrDesc`。 有关详细信息，请参阅[_RTC_NumErrors](/cpp/c-runtime-library/reference/rtc-numerrors)和[_RTC_GetErrDesc](/cpp/c-runtime-library/reference/rtc-geterrdesc)。
+ `_RTC_NumErrors` 返回运行时错误检查所检测到的错误类型的数量。 要得到每个错误的简短说明，可以从 0 循环到 `_RTC_NumErrors` 的返回值，并在每次循环中将迭代值传递给 `_RTC_GetErrDesc`。 有关详细信息，请参阅 [_RTC_NumErrors](/cpp/c-runtime-library/reference/rtc-numerrors) 和 [_RTC_GetErrDesc](/cpp/c-runtime-library/reference/rtc-geterrdesc)。
 
 ## <a name="see-also"></a>请参阅
 - [如何：使用本机运行时检查](../debugger/how-to-use-native-run-time-checks.md)

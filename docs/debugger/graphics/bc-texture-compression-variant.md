@@ -1,5 +1,5 @@
 ---
-title: BC 纹理压缩变量 |Microsoft Docs
+title: BC 纹理压缩变体 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 2d0f5305-585b-4b01-bc9a-7a32d6e991da
@@ -10,7 +10,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: c5faf19632d746105deed3a36af6943627594175
 ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/22/2019
 ms.locfileid: "72736163"

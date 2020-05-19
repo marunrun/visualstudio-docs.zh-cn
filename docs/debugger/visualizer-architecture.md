@@ -1,5 +1,5 @@
 ---
-title: 可视化工具体系结构 |Microsoft Docs
+title: 可视化工具体系结构 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -15,7 +15,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: a6dfbc8c57ff2e78bf0c6ebbd4e9899c372d7084
 ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/31/2019
 ms.locfileid: "73187157"
@@ -25,7 +25,7 @@ ms.locfileid: "73187157"
 
 - “调试器端”在 Visual Studio 调试器中运行。 调试器端代码创建并显示可视化工具的用户界面。
 
-- “调试对象端”在 Visual Studio 正在调试的进程（“调试对象”）中运行。
+- “调试对象端”在 Visual Studio 正在调试的进程（“调试对象”）中运行 。
 
   可视化工具是一个调试器组件，借助它，调试器即可以一种有意义且易理解的方式将数据对象的内容显示（“可视化”）出来。 某些可视化工具还支持数据对象编辑。 通过编写自定义可视化工具，可以扩展调试器的功能，使其能够处理你自己的自定义数据类型。
 
@@ -35,7 +35,7 @@ ms.locfileid: "73187157"
 |----------------------|----------------------|
 |调试器用户界面（数据提示、监视窗口、快速监视）|要可视化的数据对象|
 
- 若要在调试器界面中可视化数据对象，则需要一些代码，以实现两个进程间的通信。 由此可见，可视化工具的体系结构由两部分组成：“调试器端”代码和“调试对象端”代码。
+ 若要在调试器界面中可视化数据对象，则需要一些代码，以实现两个进程间的通信。 由此可见，可视化工具的体系结构由两部分组成：“调试器端”代码和“调试对象端”代码 。
 
  调试器端代码用于创建其自身用户界面，该界面可从调试器界面调用，例如数据提示、监视窗口或快速监视。 可以使用 <xref:Microsoft.VisualStudio.DebuggerVisualizers.DialogDebuggerVisualizer> 类和 <xref:Microsoft.VisualStudio.DebuggerVisualizers.IDialogVisualizerService> 界面来创建可视化工具界面。 与所有的可视化工具 API 一样，DialogDebuggerVisualizer 和 IDialogVisualizerService 可在 <xref:Microsoft.VisualStudio.DebuggerVisualizers> 命名空间中找到。
 
@@ -67,7 +67,7 @@ ms.locfileid: "73187157"
 
  注意，对象提供程序既可使用 <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.GetData%2A>，也可使用 <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.GetObject%2A>。 其个任何一个 API 均会针对对象源调用 <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource.GetData%2A>。 对 <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource.GetData%2A?displayProperty=fullName> 的调用将填充 <xref:System.IO.Stream?displayProperty=fullName>，它以序列化的方式将要可视化的对象呈现出来。
 
- <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.GetObject%2A?displayProperty=fullName> 将数据重新反序列化为对象形式，使你可以在使用 <xref:Microsoft.VisualStudio.DebuggerVisualizers.DialogDebuggerVisualizer> 创建的 UI 中显示该对象。 <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.GetData%2A?displayProperty=fullName> 填入原始 `Stream` 形式的数据，你必须自己反序列化这些数据。 <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.GetObject%2A?displayProperty=fullName> 的工作方式是调用 <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.GetData%2A?displayProperty=fullName> 来获得序列化的 `Stream`，然后再对数据进行反序列化处理。 如果 .NET 无法序列化该对象，而需要自定义序列化时，请使用 <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.GetData%2A?displayProperty=fullName>。 在这种情况下，你还必须重写 <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource.Serialize%2A?displayProperty=fullName> 方法。
+ <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.GetObject%2A?displayProperty=fullName> 将数据重新反序列化为对象形式，使你可以在使用 <xref:Microsoft.VisualStudio.DebuggerVisualizers.DialogDebuggerVisualizer> 创建的 UI 中显示该对象。 <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.GetData%2A?displayProperty=fullName> 填入原始 `Stream` 形式的数据，须自行对这些数据进行反序列化处理。 <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.GetObject%2A?displayProperty=fullName> 的工作方式是调用 <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.GetData%2A?displayProperty=fullName> 来获得序列化的 `Stream`，然后再对数据进行反序列化处理。 如果 .NET 无法序列化该对象，而需要自定义序列化时，请使用 <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.GetData%2A?displayProperty=fullName>。 在这种情况下，你还必须重写 <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource.Serialize%2A?displayProperty=fullName> 方法。
 
  如果要创建只读可视化工具，则与 <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.GetData%2A> 或 <xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider.GetObject%2A> 的单向通信就可满足要求。 如果要创建支持数据对象编辑的可视化工具，还必须进行其他操作。 你还必须能够将数据对象从对象提供程序返回给对象源。 下表给出了对象提供程序和对象源用于此目的的 API：
 

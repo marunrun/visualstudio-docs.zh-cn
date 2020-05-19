@@ -1,5 +1,5 @@
 ---
-title: 监视菜单命令 |Microsoft Docs
+title: “监视”菜单命令 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,22 +12,22 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 036a99fc0f25f2302c82d043fa20cf6e35687668
 ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62929758"
 ---
 # <a name="spy-menu-commands"></a>“监视”菜单命令
-**Spy**菜单提供命令来使用 Spy + + Windows 和视图。
+“监视”菜单提供了用于使用 Spy++ 窗口和视图的命令。
 
- **Windows**打开新的 Windows 视图。
+ **窗口** 打开新的“窗口”视图。
 
- **进程**打开新的进程视图。
+ **进程** 打开新的“进程”视图。
 
- **线程**打开新的线程视图。
+ **线程** 打开新的“线程”视图。
 
- **日志消息**打开新的消息视图，并打开[消息选项对话框](../debugger/message-options-dialog-box.md)的视图。
+ **日志消息** 打开新的消息视图，并打开视图的[“消息选项”对话框](../debugger/message-options-dialog-box.md)。
 
- **查找窗口**显示器**FindWindow**对话框可以使用鼠标选择窗口。
+ **查找窗口** 显示 FindWindow 对话框，以便使用鼠标选择窗口。
 
- **退出**关闭 Spy + + 实用工具。
+ **退出** 关闭 Spy++ 实用工具。

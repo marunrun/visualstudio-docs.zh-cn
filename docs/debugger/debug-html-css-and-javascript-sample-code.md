@@ -1,5 +1,5 @@
 ---
-title: 调试 HTML 和 CSS 示例代码 |Microsoft Docs
+title: 调试 HTML 和 CSS 示例代码 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -16,14 +16,14 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 460419d976211747c44f156a5821b88b75aa2e6b
 ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/22/2019
 ms.locfileid: "72745544"
 ---
 # <a name="debug-html-and-css-sample-code"></a>调试 HTML 和 CSS 示例代码
 
-本主题中的代码是用于快速入门的示例文件[：调试 HTML 和 CSS](../debugger/quickstart-debug-html-and-css.md)。 此版本的代码中修复了快速入门中有意出现的错误。
+本主题中的代码是[快速入门：调试 HTML 和 CSS](../debugger/quickstart-debug-html-and-css.md) 的示例文件。 此版本的代码中修复了快速入门中有意出现的错误。
 
 ## <a name="sample-code"></a>代码示例
 快速入门中的 \<body> 标记中使用了以下 HTML 代码。

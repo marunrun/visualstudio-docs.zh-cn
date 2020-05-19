@@ -1,5 +1,5 @@
 ---
-title: 如何：调试优化的代码 |Microsoft Docs
+title: 如何：调试优化的代码 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -23,7 +23,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 590925a894f1bf9bfe70d9dd1bf6142fcb6a2e34
 ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/16/2019
 ms.locfileid: "72430663"
@@ -52,7 +52,7 @@ ms.locfileid: "72430663"
 
   全局和静态变量总是正确显示。 结构布局也是这样。 如果您有指向结构的指针而且指针的值是正确的，那么结构的每个成员变量都将显示正确值。
 
-  出于这些限制原因，只要有可能，就应使用程序的“未优化”版本进行调试。 默认情况下，在C++程序的 "调试" 配置中禁用优化，并在 "发布" 配置中启用。
+  出于这些限制原因，只要有可能，就应使用程序的“未优化”版本进行调试。 默认情况下，优化在 C++ 程序的“调试”配置中处于关闭状态，在“发布”配置中处于打开状态。
 
   但是，bug 可能仅在程序的优化版本中出现。 在此情况下，必须调试优化的代码。
 
@@ -62,19 +62,19 @@ ms.locfileid: "72430663"
 
 2. 在解决方案资源管理器中选择项目。
 
-3. 在“视图”菜单上，单击“属性页”。
+3. 在“视图”菜单上，单击“属性页” 。
 
-4. 在“属性页”对话框中，确保在“配置”下拉列表框中选择了 `Debug`。
+4. 在“属性页”对话框中，确保在“配置”下拉列表框中选择了 `Debug` 。
 
 5. 在左边的文件夹视图中，选择“C/C++”文件夹。
 
 6. 在“C++”文件夹下，选择 `Optimization`。
 
-7. 在右边的属性列表中找到“`Optimization`”。 它旁边的设置可能显示为 `Disabled (` [/Od](/cpp/build/reference/od-disable-debug) `)`。 选择其他选项（`Minimum Size``(`[/O1](/cpp/build/reference/o1-o2-minimize-size-maximize-speed)`)`、`Maximum Speed``(`[/O2](/cpp/build/reference/o1-o2-minimize-size-maximize-speed)`)`、`Full Optimization``(`[/Ox](/cpp/build/reference/ox-full-optimization)`)` 或 `Custom`）之一。
+7. 在右边的属性列表中找到“`Optimization`”。 它旁边的设置可能显示为 `Disabled (`[/Od](/cpp/build/reference/od-disable-debug)`)`。 选择其他选项（`Minimum Size``(`[/O1](/cpp/build/reference/o1-o2-minimize-size-maximize-speed)`)`、`Maximum Speed``(`[/O2](/cpp/build/reference/o1-o2-minimize-size-maximize-speed)`)`、`Full Optimization``(`[/Ox](/cpp/build/reference/ox-full-optimization)`)` 或 `Custom`）之一。
 
 8. 如果为“`Custom`”选择了“`Optimization`”选项，现在便可为属性列表中显示的其他任何属性设置选项。
 
-9. 选择 "项目属性" 页的C++"配置属性"、"C/" 和 "命令行" 节点，并将 `(`[/Zo](/cpp/build/reference/zo-enhance-optimized-debugging) "`)` 添加到"**其他选项**"文本框中。
+9. 选择项目属性页中的配置属性、C/C++、命令行节点，并将 `(`[/Zo](/cpp/build/reference/zo-enhance-optimized-debugging)`)` 添加到“其他选项”文本框。
 
     > [!WARNING]
     > `/Zo` 需要 Visual Studio 2013 Update 3 或更高版本。

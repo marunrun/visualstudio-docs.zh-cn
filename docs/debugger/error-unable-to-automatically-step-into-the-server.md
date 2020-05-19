@@ -1,5 +1,5 @@
 ---
-title: 错误：无法自动单步执行服务器 |Microsoft Docs
+title: 错误：无法自动单步执行服务器 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: troubleshooting
 f1_keywords:
@@ -19,7 +19,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 34b298b299bb4911bfe64b362d94c3e90ecfa585
 ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/22/2019
 ms.locfileid: "72736879"
@@ -39,4 +39,4 @@ ms.locfileid: "72736879"
 
 ## <a name="see-also"></a>请参阅
 - [远程调试错误和疑难解答](../debugger/remote-debugging-errors-and-troubleshooting.md)
-- [Remote Debugging](../debugger/remote-debugging.md)
+- [远程调试](../debugger/remote-debugging.md)

@@ -1,5 +1,5 @@
 ---
-title: JavaScript 控制台命令 |Microsoft Docs
+title: JavaScript 控制台命令 | Microsoft Docs
 ms.custom: ''
 ms.date: 10/17/2019
 ms.topic: reference
@@ -16,21 +16,21 @@ ms.workload:
 - cordova
 ms.openlocfilehash: b30b59b95b09cac8308474b2b2963f9b96d58146
 ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/22/2019
 ms.locfileid: "72731701"
 ---
 # <a name="javascript-console-commands-in-visual-studio"></a>Visual Studio 中的 JavaScript 控制台命令
 
-你可以在 Visual Studio 的“JavaScript 控制台”窗口中使用命令发送消息和执行其他任务。 有关演示如何使用此窗口的示例，请参阅[快速入门：调试 JavaScript](../debugger/quickstart-debug-javascript-using-the-console.md?view=vs-2017)。 本主题中的信息适用于 node.js 应用、UWP 应用和使用 Visual Studio Tools Apache Cordova 创建的应用。
+你可以在 Visual Studio 的“JavaScript 控制台”窗口中使用命令发送消息和执行其他任务。 有关如何使用该窗口的示例，请参阅[快速入门：调试 JavaScript](../debugger/quickstart-debug-javascript-using-the-console.md?view=vs-2017)。 本主题中的信息适用于 Node.js 应用、UWP 应用，以及使用 Visual Studio Tools for Apache Cordova 创建的应用。
 
-如果 JavaScript 控制台窗口处于关闭状态，则在 Visual Studio 中进行调试时，可以通过选择 "**调试**"  > **Windows**  > **JavaScript 控制台**来打开它。
+如果“JavaScript 控制台”窗口已关闭，可在 Visual Studio 中调试时，选择“调试” > “窗口” > “JavaScript 控制台”将其打开  。
 
 > [!NOTE]
 > 如果该窗口在调试会话期间不可用，请确保在项目的“调试”属性中将调试器类型设置为 **“脚本”** 。
 
-有关在 Microsoft Edge 开发人员工具中使用控制台的信息，请参阅[此主题](/microsoft-edge/devtools-guide)。
+有关在 Microsoft Edge 开发人员工具中使用控制台的信息，请参阅[本主题](/microsoft-edge/devtools-guide)。
 
 ## <a name="console-object-commands"></a>控制台对象命令
 
@@ -89,7 +89,7 @@ if (console && console.log) {
 ## <a name="examining-objects-in-the-javascript-console-window"></a>检查“JavaScript 控制台”窗口中的对象
 使用“JavaScript 控制台”窗口时，你可以与范围内的任何对象进行交互。 若要检查控制台窗口中超出范围的对象，请在代码中使用 `console.log` 、 `console.dir`或其他命令。 当对象在范围内时，你还可以在代码中设置断点（ **“断点”**  > **Insert “断点”** ），从控制台窗口与对象进行交互。
 
-## <a name="ConsoleLog"></a>格式化 console.log 输出
+## <a name="formatting-consolelog-output"></a><a name="ConsoleLog"></a>格式化 console.log 输出
 若将多个参数传递给 `console.log`，则控制台将这些参数视为数组并连接输出。
 
 ```javascript

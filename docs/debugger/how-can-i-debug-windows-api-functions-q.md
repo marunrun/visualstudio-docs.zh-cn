@@ -24,7 +24,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: e7b5f3842160f4ffc6cecd41e65dd05ab7566dd0
 ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/22/2019
 ms.locfileid: "72734353"
@@ -40,7 +40,7 @@ ms.locfileid: "72734353"
     {,,USER32.DLL}_MessageBeep@4
     ```
 
-     若要获取修饰名称，请参阅[查看修饰名](https://msdn.microsoft.com/library/f79e2717-a4db-4d12-a689-69830cce2be0)。
+     若要获取修饰名，请参阅[查看修饰名](https://msdn.microsoft.com/library/f79e2717-a4db-4d12-a689-69830cce2be0)。
 
 ## <a name="see-also"></a>请参阅
 - [调试本机代码常见问题解答](../debugger/debugging-native-code-faqs.md)

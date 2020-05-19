@@ -1,5 +1,5 @@
 ---
-title: 如何：调试插入的代码 |Microsoft Docs
+title: 如何：调试插入的代码 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -26,7 +26,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 35d2343343bf554df7592c8616e7697d88665baf
 ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62847779"
@@ -46,7 +46,7 @@ ms.locfileid: "62847779"
 
 ## <a name="to-turn-on-source-annotation"></a>打开源批注
 
-- 右键单击“反汇编”窗口，然后从快捷菜单中选定“显示源代码”。
+- 右键单击“反汇编”窗口，然后从快捷菜单中选定“显示源代码” 。
 
      如果知道属性在源窗口中的位置，则可以使用快捷菜单在“反汇编”窗口中查找插入的代码。
 
@@ -58,13 +58,13 @@ ms.locfileid: "62847779"
 
 3. 右键单击并从快捷菜单中选择“转到反汇编”。
 
-     如果属性位置在当前执行点附近，则可以从“调试”菜单选择“反汇编”窗口。
+     如果属性位置在当前执行点附近，则可以从“调试”菜单选择“反汇编”窗口 。
 
 ## <a name="to-view-the-disassembly-code-at-the-current-execution-point"></a>查看当前执行点处的反汇编代码
 
 1. 调试器必须处于中断模式。
 
-2. 从“调试”菜单中选择“窗口”，然后单击“反汇编”。
+2. 从“调试”菜单中选择“窗口”，然后单击“反汇编”  。
 
 ## <a name="see-also"></a>请参阅
 

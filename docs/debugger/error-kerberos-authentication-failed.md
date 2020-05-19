@@ -1,5 +1,5 @@
 ---
-title: '错误: Kerberos 身份验证失败 | Microsoft Docs'
+title: 错误：Kerberos 身份验证失败 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: troubleshooting
 f1_keywords:
@@ -16,7 +16,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: fbe13fd3d0dc7e29fc12d369ec0865bcbc97b1a4
 ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/22/2019
 ms.locfileid: "72737672"
@@ -38,13 +38,13 @@ Error: The Visual Studio Remote Debugger on the target computer cannot connect b
 
 - 域控制器上已禁用 Kerberos。
 
-  如果 Kerberos 身份验证不可用，请更改用于运行 Visual Studio 远程调试监视器的帐户。 有关过程，请参阅[错误：目标计算机上的 Visual Studio 远程调试器服务无法重新连接到此计算机](../debugger/error-the-visual-studio-remote-debugger-service-on-the-target-computer-cannot-connect-back-to-this-computer.md)。
+  如果 Kerberos 身份验证不可用，请更改用于运行 Visual Studio 远程调试监视器的帐户。 有关该过程，请参阅[错误：目标计算机上的 Visual Studio 远程调试器服务无法重新连接到此计算机](../debugger/error-the-visual-studio-remote-debugger-service-on-the-target-computer-cannot-connect-back-to-this-computer.md)。
 
   如果这两台计算机都连接到同一域，而您仍然收到此消息，请验证目标计算机上的 DNS 是否正确解析了调试器主机的名称。 请参见下面的步骤。
 
 ### <a name="to-verify-that-dns-on-the-target-computer-is-correctly-resolving-the-debugger-host-computer-name"></a>验证目标计算机上的 DNS 是否正确解析了调试器主机名称
 
-1. 在目标计算机上，打开“开始”菜单，指向“附件”，再单击“命令提示符”。
+1. 在目标计算机上，打开“开始”菜单，指向“附件”，再单击“命令提示符”  。
 
 2. 在命令提示符窗口中，键入以下内容：
 
@@ -60,4 +60,4 @@ Error: The Visual Studio Remote Debugger on the target computer cannot connect b
 
 ## <a name="see-also"></a>请参阅
 - [远程调试错误和疑难解答](../debugger/remote-debugging-errors-and-troubleshooting.md)
-- [Remote Debugging](../debugger/remote-debugging.md)
+- [远程调试](../debugger/remote-debugging.md)

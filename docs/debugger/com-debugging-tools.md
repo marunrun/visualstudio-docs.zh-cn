@@ -1,5 +1,5 @@
 ---
-title: COM 调试工具 |Microsoft Docs
+title: COM 调试工具 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -23,7 +23,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 723549865a39b390d411ffe83ee1fefad7ecb82d
 ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 09/24/2019
 ms.locfileid: "71211278"
@@ -46,5 +46,5 @@ Microsoft 基础类示例
 - [COM 调试工具](../debugger/com-debugging-tools.md)
 - [在 Visual Studio 中进行调试](../debugger/index.yml)
 - [初探调试器](../debugger/debugger-feature-tour.md)
-- [OCLIENT 示例：说明一个可视化编辑容器应用程序](https://msdn.microsoft.com/library/8cd5c234-9a4e-4934-8f5d-bac189ad92c4)
+- [OCLIENT 示例：阐释可视编辑容器应用程序](https://msdn.microsoft.com/library/8cd5c234-9a4e-4934-8f5d-bac189ad92c4)
 - [SUPERPAD 示例：演示使用 CEditView 编辑文本的可视化编辑服务器](https://msdn.microsoft.com/library/7b14e975-d986-4e6a-8289-226485cfcb72)

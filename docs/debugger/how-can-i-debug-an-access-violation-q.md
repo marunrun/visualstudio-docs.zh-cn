@@ -21,12 +21,12 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: f0235cc00a740069a77afd492cd585788ea666d2
 ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/25/2019
 ms.locfileid: "72911461"
 ---
-# <a name="how-can-i-debug-a-c-access-violation"></a>如何调试C++访问冲突？
+# <a name="how-can-i-debug-a-c-access-violation"></a>如何调试 C++ 访问冲突？
 
 ## <a name="problem-description"></a>问题描述
 

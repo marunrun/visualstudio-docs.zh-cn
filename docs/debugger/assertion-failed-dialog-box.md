@@ -1,5 +1,5 @@
-﻿---
-title: "\"断言失败\" 对话框 |Microsoft Docs"
+---
+title: “断言失败”对话框 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -22,7 +22,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: cb42067bb4c88777a6c25ace71f53b9d9b3aa36b
 ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/22/2019
 ms.locfileid: "72745764"

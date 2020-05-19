@@ -1,5 +1,5 @@
 ---
-title: "\"停止正在进行的调试\" 对话框 |Microsoft Docs"
+title: “停止正在进行的调试”对话框 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -21,7 +21,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 3beefe16f8883eb64d7d0a2641cabf9eb1f702fa
 ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/22/2019
 ms.locfileid: "72729658"
@@ -31,7 +31,7 @@ ms.locfileid: "72729658"
 
  可以等待进程分离，直到此对话框消失，或者使用“立即停止”按钮强制立即终止。
 
- **立即停止**单击此按钮可立即结束调试会话。 使用 "**立即停止**" 将终止，而不是分离正在调试的进程。 如果正在调试系统进程，使用“立即停止”终止这些进程可能产生不希望出现的意外结果。
+ **立即停止** 单击此按钮可立即结束调试会话。 使用“立即停止”将终止而不是分离正在调试的进程。 如果正在调试系统进程，使用“立即停止”终止这些进程可能产生不希望出现的意外结果。
 
 ## <a name="see-also"></a>请参阅
 - [调试器安全](../debugger/debugger-security.md)

@@ -1,5 +1,5 @@
 ---
-title: 调试已部署的 ASP.NET 应用程序 |Microsoft Docs
+title: 调试已部署的 ASP.NET 应用程序 | Microsoft Docs
 ms.date: 06/30/2018
 ms.topic: conceptual
 dev_langs:
@@ -22,13 +22,13 @@ ms.workload:
 - aspnet
 ms.openlocfilehash: c2b1838375ee878640d77a9c93808efafc9f519c
 ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/22/2019
 ms.locfileid: "72738286"
 ---
 # <a name="debugging-deployed-aspnet-applications"></a>调试已部署的 ASP.NET 应用程序
-若要使用 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 调试已部署的应用程序，必须附加到 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 工作进程，并确保调试器能够访问该应用程序的符号。 此外，还必须找到并打开该应用程序的源文件。 有关详细信息，请参阅[指定符号 (.pdb) 和源文件](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)，[如何： 查找 ASP.NET 进程的名称](../debugger/how-to-find-the-name-of-the-aspnet-process.md)和[系统要求](../debugger/aspnet-debugging-system-requirements.md)。
+若要使用 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 调试已部署的应用程序，必须附加到 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 工作进程，并确保调试器能够访问该应用程序的符号。 此外，还必须找到并打开该应用程序的源文件。 有关详细信息，请参阅[指定符号 (.pdb) 和源文件](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)[如何：查找 ASP.NET 进程名称](../debugger/how-to-find-the-name-of-the-aspnet-process.md)、和[系统需求](../debugger/aspnet-debugging-system-requirements.md)。
 
 > [!WARNING]
 > 如果附加到 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 工作进程中开始调试并命中断点，工作进程中所有的托管代码都将暂停。 工作进程中暂停的所有托管代码会导致服务器上的所有用户的工作中断。 在生产服务器上进行调试之前，请考虑对生产工作的潜在影响。
@@ -41,5 +41,5 @@ ms.locfileid: "72738286"
 ## <a name="see-also"></a>请参阅
 - [调试 ASP.NET 应用程序](../debugger/how-to-enable-debugging-for-aspnet-applications.md)
 - [如何：为 ASP.NET 应用程序启用调试](../debugger/how-to-enable-debugging-for-aspnet-applications.md)
-- [如何：查找 ASP.NET 进程的名称](../debugger/how-to-find-the-name-of-the-aspnet-process.md)
+- [如何：查找 ASP.NET 进程名称](../debugger/how-to-find-the-name-of-the-aspnet-process.md)
 - [指定符号 (.pdb) 和源文件](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)

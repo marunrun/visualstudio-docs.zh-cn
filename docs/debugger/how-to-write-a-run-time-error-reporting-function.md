@@ -1,5 +1,5 @@
 ---
-title: 编写运行时错误报告函数 |Microsoft Docs
+title: 编写运行时错误报告函数 | Microsoft Docs
 ms.custom: seodec18
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -20,12 +20,12 @@ ms.workload:
 - multiple
 ms.openlocfilehash: b145e34b0dfeafbb7fde436dd561721962a89f3b
 ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/22/2019
 ms.locfileid: "72731810"
 ---
-# <a name="how-to-write-a-run-time-error-reporting-function-c"></a>操作说明：编写运行时错误报告函数 (C++)
+# <a name="how-to-write-a-run-time-error-reporting-function-c"></a>如何：编写运行时错误报告函数 (C++)
 运行时错误的自定义报告函数必须具有与 `_CrtDbgReportW` 相同的声明。 它应当将值 1 返回给调试器。
 
 下面的示例显示了如何定义自定义报告函数：
@@ -62,7 +62,7 @@ int MyErrorFunc(int errorType, const wchar_t *filename,
 ```
 
 ## <a name="example"></a>示例
-下面的示例显示了一个更为复杂的自定义报告函数。 在该示例中，switch 语句处理由 `reportType` 的 `_CrtDbgReportW` 参数定义的各种错误类型。 由于要替换 `_CrtDbgReportW`，因此不能使用 `_CrtSetReportMode`。 函数必须处理输出。 这个函数中的第一个变量自变量获得运行时错误号。 有关详细信息，请参阅[_RTC_SetErrorType](/cpp/c-runtime-library/reference/rtc-seterrortype)。
+下面的示例显示了一个更为复杂的自定义报告函数。 在该示例中，switch 语句处理由 `reportType` 的 `_CrtDbgReportW` 参数定义的各种错误类型。 由于要替换 `_CrtDbgReportW`，因此不能使用 `_CrtSetReportMode`。 函数必须处理输出。 这个函数中的第一个变量自变量获得运行时错误号。 有关详细信息，请参阅 [_RTC_SetErrorType](/cpp/c-runtime-library/reference/rtc-seterrortype)。
 
 ```cpp
 #include <windows.h>

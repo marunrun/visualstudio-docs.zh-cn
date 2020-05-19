@@ -1,5 +1,5 @@
 ---
-title: 调试混合模式应用程序 |Microsoft Docs
+title: 调试混合模式应用程序 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -23,7 +23,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 6ba41447af829a378f70d2286ed7a7b9295ed109
 ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/13/2020
 ms.locfileid: "75916294"
@@ -33,7 +33,7 @@ ms.locfileid: "75916294"
 
 ## <a name="enable-c-edit-and-continue-in-mixed-mode-debugging"></a>在混合模式调试下启用 C++“编辑并继续”
 
-若要为启用C++"编辑并继续"，请参阅[如何启用和禁用 "编辑并继续](../debugger/how-to-enable-and-disable-edit-and-continue.md)"。
+若要启用 C++“编辑并继续”，请参阅[如何启用和禁用“编辑并继续”](../debugger/how-to-enable-and-disable-edit-and-continue.md)。
 
 > [!NOTE]
 > 若要使用 Visual Studio 2013 中的 C++“编辑并继续”功能，你必须还原为旧调试引擎。 请参阅“Microsoft 应用程序生命周期管理”博客上的 [Switching to Managed Compatibility Mode in Visual Studio 2013](https://devblogs.microsoft.com/devops/switching-to-managed-compatibility-mode-in-visual-studio-2013/)（切换为 Visual Studio 2013 中的托管兼容性模式）。
@@ -48,12 +48,12 @@ ms.locfileid: "75916294"
 
 1. 在 **“工具”** 菜单上，选择 **“选项”** 。
 
-2. 在“选项”对话框中，打开“调试”文件夹并选择“常规”类别。
+2. 在“选项”对话框中，打开“调试”文件夹并选择“常规”类别  。
 
 3. 清除“启用属性求值和其他隐式函数调用”复选框。
 
    由于本机调用堆栈和托管调用堆栈不同，因此调试器不能总是为混合代码提供完整的调用堆栈。 当本机代码调用托管代码时，你可能会注意到某些差异。 有关详细信息，请参阅[“调用堆栈”窗口中的混合代码与缺失信息](../debugger/mixed-code-and-missing-information-in-the-call-stack-window.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [调试托管代码](../debugger/debugging-managed-code.md)

@@ -1,5 +1,5 @@
 ---
-title: 报表挂钩函数 |Microsoft Docs
+title: 报表挂钩函数 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -25,7 +25,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: a0bb14b47fb17c4d59089aafa123115b85ab9342
 ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/22/2019
 ms.locfileid: "72729862"
@@ -37,13 +37,13 @@ ms.locfileid: "72729862"
 int YourReportHook(int nRptType, char *szMsg, int *retVal);
 ```
 
- 传递给 **_CrtSetReportHook**的指针为 **_CRT_REPORT_HOOK**类型，如 crtdbg.h 中所定义。高
+ 传递给 _CrtSetReportHook 的指针为 _CRT_REPORT_HOOK 类型，如 CRTDBG.H 中所定义：
 
 ```cpp
 typedef int (__cdecl *_CRT_REPORT_HOOK)(int, char *, int *);
 ```
 
- 当运行库调用挂钩函数时，nRptType参数包含报告类别（_CRT_WARN、_CRT_ERROR 或 _CRT_ASSERT），szMsg 包含指向完全汇编的报告消息字符串的指针，而 retVal 指定 `_CrtDbgReport` 应在生成报告以后继续正常执行还是启动调试器。 （retVal 值为零继续执行，值为 1 为启动调试器。）
+ 当运行库调用挂钩函数时，nRptType参数包含报告类别（_CRT_WARN、_CRT_ERROR 或 _CRT_ASSERT），szMsg 包含指向完全汇编的报告消息字符串的指针，而 retVal 指定 `_CrtDbgReport` 应在生成报告以后继续正常执行还是启动调试器   。 （retVal 值为零继续执行，值为 1 为启动调试器。）
 
  如果挂钩完全处理了所讨论的消息，因而不需要进一步的报告，那么应返回 TRUE。 如果返回 FALSE，`_CrtDbgReport` 将以正常方式报告消息。
 

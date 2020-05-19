@@ -1,5 +1,5 @@
 ---
-title: 图形事件调用堆栈 |Microsoft Docs
+title: 图形事件调用堆栈 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,7 +12,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: c221a572264bf6a6aaed9edbec66fb3c0c3ff4b9
 ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/22/2019
 ms.locfileid: "72735503"
@@ -22,7 +22,7 @@ Visual Studio 图形分析器中的图形事件调用堆栈可帮助你映射有
 
  这就是“事件调用堆栈”窗口：
 
- ![DrawIndexed 事件之前的调用堆栈。](media/gfx_diag_demo_graphics_event_call_stack_orientation.png "gfx_diag_demo_graphics_event_call_stack_orientation")
+ ![继续 DrawIndexed 事件的调用堆栈。](media/gfx_diag_demo_graphics_event_call_stack_orientation.png "gfx_diag_demo_graphics_event_call_stack_orientation")
 
 ## <a name="understanding-the-graphics-event-call-stack"></a>了解图形事件调用堆栈
  你可以使用“事件调用堆栈”来了解导致特定 Direct3D 事件的执行流。 它类似于 Visual Studio 调用堆栈窗口，不同之处在于，它不会显示正在运行的应用中当前线程的当前调用堆栈，而是在选定的 Direct3D 事件发生时显示存在的调用堆栈。 你可以从“事件调用堆栈”跳转到选定的 Direct3D 事件的调用站点，以检查周围的代码。
@@ -34,7 +34,7 @@ Visual Studio 图形分析器中的图形事件调用堆栈可帮助你映射有
 
 |列|描述|
 |------------|-----------------|
-|**名称**|包含调用站点的函数的唯一标识符号。 这个函数的调试符号在它可用时显示；否则将显示函数偏移量。|
+|**Name**|包含调用站点的函数的唯一标识符号。 这个函数的调试符号在它可用时显示；否则将显示函数偏移量。|
 |**文件**|包含调用站点的源代码文件或库文件的文件名。|
 |**位置**|调用站点行号。|
 

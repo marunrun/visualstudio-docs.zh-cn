@@ -1,5 +1,5 @@
 ---
-title: 发生异常后检查系统代码 |Microsoft Docs
+title: 在异常发生后检查系统代码 | Microsoft Docs
 ms.custom: seodec18
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -19,7 +19,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 98f3eb98024e20350151904f297f7e7b4d6f1fea
 ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/22/2019
 ms.locfileid: "72733372"
@@ -29,13 +29,13 @@ ms.locfileid: "72733372"
 
 ### <a name="to-examine-system-code-following-an-exception"></a>在发生异常后检查系统代码
 
-1. 在“调用堆栈”窗口中右键单击，然后单击“显示外部代码”。
+1. 在“调用堆栈”窗口中右键单击，然后单击“显示外部代码” 。
 
      如果未启用“仅我的代码”，则快捷菜单中不提供此选项，默认情况下显示系统代码。
 
 2. 右键单击此时显示在“调用堆栈”窗口中的外部代码帧。
 
-3. 指向“从其中加载符号”，然后单击“Microsoft 符号服务器”。
+3. 指向“从其中加载符号”，然后单击“Microsoft 符号服务器” 。
 
     1. 如果启用了“仅我的代码”，则将显示一个对话框。 它指出“仅我的代码”现在已禁用。 要单步执行系统调用，必须这样做。
 

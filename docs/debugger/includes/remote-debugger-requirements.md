@@ -15,29 +15,29 @@ translation.priority.ht:
 - zh-tw
 ms.openlocfilehash: fe2927a7a863b3825a680096da44afa6d68f1cba
 ms.sourcegitcommit: 748d9cd7328a30f8c80ce42198a94a4b5e869f26
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68149203"
 ---
-### <a name="supported-operating-systems"></a>支持的操作系统  
+### <a name="supported-operating-systems"></a>Supported Operating Systems  
 
 远程计算机运行的是下列操作系统之一：  
   
-- Windows 10 (而不是 phone)
+- Windows 10（非手机版）
   
-- Windows 8 或 8.1 (而不是 phone)
+- Windows 8 或 8.1（非手机版）
   
 - Windows 7 Service Pack 1  
 
-- Windows Server 2016
+- Windows 2016 Server
   
 - Windows Server 2012 或 Windows Server 2012 R2  
   
 - Windows Server 2008 Service Pack 2、Windows Server 2008 R2 Service Pack 1
 
 > [!NOTE]
-> Windows Phone 需要通过 USB 连接调试 （不需要远程工具）。
+> Windows Phone 需要 USB 连接才能进行调试（无需远程工具）。
   
 ### <a name="supported-hardware-configurations"></a>支持的硬件配置  
   
@@ -53,4 +53,4 @@ ms.locfileid: "68149203"
   
 ### <a name="network-configuration"></a>网络配置  
 
-远程计算机与 Visual Studio 计算机必须通过网络、工作组、家庭组或其他通过以太网电缆直接连接的方式连接在一起。 不支持调试通过代理连接的两台计算机之间。 调试通过高延迟或低带宽连接，例如拨号 Internet，或通过 Internet 跨国家/地区不建议并可能会失败或很令人无法接受慢。
+远程计算机与 Visual Studio 计算机必须通过网络、工作组、家庭组或其他通过以太网电缆直接连接的方式连接在一起。 不支持在通过代理连接的两台计算机之间进行调试。 不建议通过高延迟或低带宽连接（如拨号 Internet）或跨国家/地区的 Internet 进行调试，否则可能会导致调试失败或速度过慢。

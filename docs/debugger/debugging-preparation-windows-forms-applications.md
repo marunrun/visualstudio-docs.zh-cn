@@ -1,5 +1,5 @@
 ---
-title: 准备调试 Windows 窗体应用 |Microsoft Docs
+title: 准备调试 Windows 窗体应用 | Microsoft Docs
 ms.custom: seodec18
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -22,7 +22,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: e9e98411a009ea4345b567cbc38e6cf94c037323
 ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/13/2020
 ms.locfileid: "75916395"
@@ -32,7 +32,7 @@ Windows 窗体项目模板创建 Windows 窗体应用程序。 在 [!INCLUDE[vsp
 
  用项目模板创建 Windows 窗体项目时，[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 将自动为调试和发布配置创建所需的设置。 必要时，可更改这些设置。 可以在”\<项目名称> 属性页”对话框（在 Visual Basic “我的项目” 中）中更改这些设置 **\<** 。
 
- 有关详细信息，请参阅[建议的属性设置](../debugger/managed-debugging-recommended-property-settings.md)。
+ 有关详细信息，请参阅[推荐的属性设置](../debugger/managed-debugging-recommended-property-settings.md)。
 
  下表显示一个附加的建议属性设置。
 
@@ -60,11 +60,11 @@ Windows 窗体项目模板创建 Windows 窗体应用程序。 在 [!INCLUDE[vsp
 
       有关详细信息，请参阅[在 Windows 窗体中创建事件处理程序](/dotnet/framework/winforms/creating-event-handlers-in-windows-forms)。
 
-3. 在“调试”菜单上，单击“启动”。
+3. 在“调试”菜单上，单击“启动” 。
 
 4. 使用 [初步了解调试器](../debugger/debugger-feature-tour.md) 中讨论的技术进行调试。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [调试托管代码](../debugger/debugging-managed-code.md)
 - [C#, F#, and Visual Basic Project Types](../debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types.md)（C#、F# 和 Visual Basic 项目类型）
 - [如何：设置调试和发布配置](../debugger/how-to-set-debug-and-release-configurations.md)

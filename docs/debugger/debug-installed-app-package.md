@@ -22,7 +22,7 @@ ms.workload:
 - uwp
 ms.openlocfilehash: d5c2e94e9fa80145489bddfb005b7136bdff8a71
 ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 09/24/2019
 ms.locfileid: "71211287"
@@ -34,11 +34,11 @@ Visual Studio 可以调试 Windows 10 计算机以及 Xbox、HoloLens 和 IoT �
 >[!NOTE]
 >手机不支持 Visual Studio 调试已安装的 UWP 应用。
 
-有关调试 UWP 应用的详细信息，请参阅有关[调试已安装应用包](https://devblogs.microsoft.com/devops/updates-for-debugging-installed-app-packages-in-visual-studio-2015-update-2/)和[构建通用 WINDOWS 应用（UWP）](https://devblogs.microsoft.com/visualstudio/universal-windows-apps-targeting-windows-10-anniversary-sdk/)的博客文章。
+有关调试 UWP 应用的详细信息，请参阅有关[调试安装的应用包](https://devblogs.microsoft.com/devops/updates-for-debugging-installed-app-packages-in-visual-studio-2015-update-2/)和[生成通用 Windows 应用 (UWP)](https://devblogs.microsoft.com/visualstudio/universal-windows-apps-targeting-windows-10-anniversary-sdk/) 的博客文章。
 
 ## <a name="debug-an-installed-uwp-app-on-a-local-machine"></a>在本地计算机上调试已安装的 UWP 应用
 
-1. 在 Visual Studio 中，选择 "**调试** > " "**其他调试目标** > " "调试**安装的应用包**"。
+1. 在 Visual Studio 中，选择“调试” > “其他调试目标” > “调试安装的应用程序包”。
 
 1. 在“调试已安装的应用包”对话框的“连接类型”下，选择“本地计算机”。
 
@@ -54,7 +54,7 @@ Visual Studio 可以调试 Windows 10 计算机以及 Xbox、HoloLens 和 IoT �
 > [!NOTE]
 > 此外，还可以通过在 Visual Studio 中选择“调试” > “附加到进程”以附加到任何正在运行的 UWP 或其他应用进程。 无需原始 Visual Studio 项目也可附加到正在运行的进程中，但是在调试你没有原始代码的进程时，加载应用的符号会有很大帮助。 请参阅[在调试器中指定符号和源文件](specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)。
 
-## <a name="remote"></a>在远程计算机或设备上调试已安装的 UWP 应用
+## <a name="debug-an-installed-uwp-app-on-a-remote-computer-or-device"></a><a name="remote"></a> 在远程计算机或设备上调试已安装的 UWP 应用
 
 Visual Studio 首次调试 Windows 10 设备或后创意者更新 Windows 10 远程计算机上已安装的 UWP 应用时，会在目标设备上安装远程调试工具。
 
@@ -66,19 +66,19 @@ Visual Studio 首次调试 Windows 10 设备或后创意者更新 Windows 10 远
 
 1. 在“调试已安装的应用包”对话框的“连接类型”下，选择“远程计算机”或“设备”。
 
-   如果选择 "**设备**"，则计算机必须物理连接到 Windows 10 设备。
+   如果选择“设备”，则计算机必须以物理方式连接到 Windows 10 设备。
 
    对于远程计算机，如果计算机地址未出现在“地址”旁，请选择“更改”。
 
-   1. 在 "**远程连接**" 对话框中的 "**地址**" 旁边，键入要连接到的计算机的名称或 IP 地址。
+   1. 在“远程连接”对话框中，在“地址”旁键入要连接到的计算机的名称或 IP 地址。
 
       ![ChooseRemoteComputer](../debugger/media/debug-remote-app-pkg.png "ChooseRemoteComputer")
 
-      如果调试器无法使用计算机名称连接到远程计算机，请改用 IP 地址。 使用 Xbox、HoloLens 或 IoT 设备的 IP 地址。
-   1. 选择 "**身份验证模式**" 旁边的身份验证选项。
+      如果调试器无法使用计算机名称连接到远程计算机，请改用 IP 地址。 对 Xbox、HoloLens 或 IoT 设备使用 IP 地址。
+   1. 在“身份验证模式”旁选择身份验证选项。
 
-      对于大多数应用，保留默认值**通用（未加密的协议）**。
-   1. 选择 "**选择**"。
+      对于大多数应用，保留默认值“通用(未加密协议)”。
+   1. 选择“选择”。
 
 1. 在“已安装的应用包”下选择要调试的应用，或在搜索框中键入其名称。 未运行的已安装应用包显示在“未运行”下，正在运行的应用显示在“正在运行”下。
 

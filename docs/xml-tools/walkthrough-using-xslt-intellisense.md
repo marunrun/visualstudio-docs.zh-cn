@@ -10,7 +10,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: adeab012e78d5f49ca94d1d8135aaf491839c767
 ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/01/2020
 ms.locfileid: "75592433"
@@ -45,7 +45,7 @@ ms.locfileid: "75592433"
     </xsl:stylesheet>
     ```
 
-2. 将光标插入 `<xsl:template name="msg23" match="msg23">` 之后，然后按**enter**。 然后开始键入以下 `xsl:call-template` 元素：
+2. 在 `<xsl:template name="msg23" match="msg23">` 之后插入光标并按 Enter。 然后开始键入以下 `xsl:call-template` 元素：
 
     ```xml
     <xsl:call-template name="localized-message">
@@ -54,7 +54,7 @@ ms.locfileid: "75592433"
 
      在键入元素时，模板名称列表出现在 `name=""` 元素的 `xsl:call-template` 特性中。
 
-3. 将光标插入 `<xsl:call-template name="localized-message">` 之后，然后按**enter**。 然后开始键入以下 `xsl:with-param` 元素：
+3. 在 `<xsl:call-template name="localized-message">` 之后插入光标并按 Enter。 然后开始键入以下 `xsl:with-param` 元素：
 
     ```xml
     <xsl:with-param name="msgcode">msg23</xsl:with-param>
@@ -111,7 +111,7 @@ ms.locfileid: "75592433"
     </xsl:stylesheet>
     ```
 
-2. 将光标插入 `<xsl:apply-templates select="phone" />` 之后，然后按**enter**。 然后开始键入以下 `xsl: apply-templates` 元素：
+2. 在 `<xsl:apply-templates select="phone" />` 之后插入光标并按 Enter。 然后开始键入以下 `xsl: apply-templates` 元素：
 
     ```xml
     <xsl:apply-templates select="phone"  mode="accountNumber">
@@ -152,7 +152,7 @@ ms.locfileid: "75592433"
     </xsl:stylesheet>
     ```
 
-2. 将光标插入 `<xsl:stylesheet version="1.0">` 之后，然后按**enter**。 然后开始键入以下 `xsl:namespace-alias` 元素：
+2. 在 `<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:alt="http://www.w3.org/1999/XSL/Transform-alternate" version="1.0">` 之后插入光标并按 Enter。 然后开始键入以下 `xsl:namespace-alias` 元素：
 
     ```xml
     <xsl:namespace-alias stylesheet-prefix="alt" result-prefix="xsl"/>
@@ -160,6 +160,6 @@ ms.locfileid: "75592433"
 
      请注意前缀列表在 `stylesheet-prefix` 元素的 `result-prefix` 和 `xsl:namespace-alias` 特性中的显示方式。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-- [XML 编辑器的 IntelliSense 功能](../xml-tools/xml-editor-intellisense-features.md)
+- [XML 编辑器 IntelliSense 功能](../xml-tools/xml-editor-intellisense-features.md)

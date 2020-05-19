@@ -1,5 +1,5 @@
 ---
-title: 在用户帐户下运行辅助进程 |Microsoft Docs
+title: 在用户帐户下运行工作进程 | Microsoft Docs
 ms.custom: seodec18
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -22,16 +22,16 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 5905ad87eb534013bdfd786a79e40e46087dff55
 ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/22/2019
 ms.locfileid: "72732822"
 ---
-# <a name="how-to-run-the-worker-process-under-a-user-account"></a>如何：在用户帐户下运行辅助进程
+# <a name="how-to-run-the-worker-process-under-a-user-account"></a>如何：在用户帐户下运行工作进程
 若要设置计算机以便在某个用户帐户下运行 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 辅助进程（aspnet_wp.exe 或 w3wp.exe），请执行下列步骤。
 
  > [!IMPORTANT]
- > 从 Windows Server 2008 R2 开始，我们建议使用[ApplicationPoolIdentity](/iis/manage/configuring-security/application-pool-identities)作为每个应用程序池的标识。
+ > 从 Windows Server 2008 R2 开始，建议使用 [ApplicationPoolIdentity](/iis/manage/configuring-security/application-pool-identities) 作为每个应用程序池的标识。
 
 ## <a name="procedure"></a>过程
 
@@ -68,7 +68,7 @@ ms.locfileid: "72732822"
    net start w3svc
    ```
 
-6. 找到 Temporary [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Files 文件夹，它应位于 CONFIG 文件夹所在的路径中。 右键单击 Temporary [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Files 文件夹，然后选择快捷菜单上的“属性” 。
+6. 找到 Temporary [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Files 文件夹，它应位于 CONFIG 文件夹所在的路径中。 右键单击 Temporary [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Files 文件夹，然后选择快捷菜单上的“属性”  。
 
 7. 在 **“临时 ASP.NET 文件属性”** 对话框中单击 **“安全性”** 选项卡。
 
@@ -82,7 +82,7 @@ ms.locfileid: "72732822"
 
 11. 在 **“临时 ASP.Net 文件的权限项”** 对话框中，授予用户 **“完全控制”** ，然后单击 **“确定”** 以关闭 **“临时 ASP.Net 文件项”** 对话框。
 
-12. 将出现 **“安全性”** 对话框，询问是否确实要更改系统文件夹的权限。 单击“是”。
+12. 将出现 **“安全性”** 对话框，询问是否确实要更改系统文件夹的权限。 单击 **“是”** 。
 
 13. 单击 **“确定”** 以关闭 **“临时 ASP.NET 文件属性”** 对话框。
 

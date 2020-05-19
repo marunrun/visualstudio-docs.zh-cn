@@ -1,5 +1,5 @@
 ---
-title: 如何：在内存中向上或向下翻页 |Microsoft Docs
+title: 如何：在内存中向上或向下翻页 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -21,14 +21,14 @@ ms.workload:
 - multiple
 ms.openlocfilehash: c9f93b24c9349a28176164d667c96133668cf3f4
 ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/22/2019
 ms.locfileid: "72733027"
 ---
 # <a name="how-to-page-up-or-down-in-memory"></a>如何：在内存中向上或向下翻页
 
-在“内存”窗口或“反汇编”窗口中查看内存内容时，可以使用垂直滚动条在内存空间中上下移动。
+在“内存”窗口或“反汇编”窗口中查看内存内容时，可以使用垂直滚动条在内存空间中上下移动 。
 
 ### <a name="to-page-up-or-down-in-memory"></a>在内存中向上或向下翻页
 

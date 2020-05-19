@@ -20,13 +20,13 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 972b21c4535df37dd81da6aceaa062b39176469c
 ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/22/2019
 ms.locfileid: "72732089"
 ---
-# <a name="how-to-use-the-gpu-threads-window-c"></a>如何：使用 "GPU 线程" 窗口（C++）
-在“GPU 线程”窗口中，可以检查和使用在要调试的应用程序中的 GPU 上运行的线程。 有关在 GPU 上运行的应用程序的详细信息，请参阅[ C++ AMP 概述](/cpp/parallel/amp/cpp-amp-overview)。
+# <a name="how-to-use-the-gpu-threads-window-c"></a>如何：使用 GPU 线程窗口 (C++)
+在“GPU 线程”窗口中，可以检查和使用在要调试的应用程序中的 GPU 上运行的线程。 有关在 GPU 上运行的应用程序的详细信息，请参阅 [C++ AMP 概述](/cpp/parallel/amp/cpp-amp-overview)。
 
  “GPU 线程”窗口包含一个表，其中，每个行均表示一组在所有列中具有相同值的 GPU 线程。 您可以对列中的项进行排序、重新排序、移除和分组操作。 您可以在“GPU 线程”窗口中标记、取消标记、冻结（禁止显示）和解冻（恢复）线程。 下面的列将显示在“GPU 线程”窗口中：
 
@@ -52,19 +52,19 @@ ms.locfileid: "72732089"
 
 ### <a name="to-display-the-gpu-threads-window"></a>显示“GPU 线程”窗口
 
-1. 在“解决方案资源管理器”中，打开项目的快捷菜单，然后选择“属性”。
+1. 在“解决方案资源管理器” 中，打开项目的快捷菜单，然后选择“属性” 。
 
-2. 在项目的“属性页”窗口中，在“配置属性”下，选择“调试”。
+2. 在项目的“属性页”窗口中，在“配置属性”下，选择“调试”  。
 
-3. 在“要启动的调试器”列表中，选择“本地 Windows 调试器”。 在“调试器类型”列表中，选择“仅 GPU”。 必须选择此调试器以便在 GPU 上运行的代码的断点处中断。
+3. 在“要启动的调试器”列表中，选择“本地 Windows 调试器” 。 在“调试器类型”列表中，选择“仅 GPU” 。 必须选择此调试器以便在 GPU 上运行的代码的断点处中断。
 
-4. 选择 **“确定”** 按钮。
+4. 选择“确定”  按钮。
 
 5. 在 GPU 代码中设置断点。
 
-6. 在菜单栏上，依次选择“调试”、“开始调试”。 等待应用程序到达断点。
+6. 在菜单栏上，依次选择“调试”、“开始调试” 。 等待应用程序到达断点。
 
-7. 在菜单栏上，依次选择“调试”、“Windows”和“GPU 线程”。
+7. 在菜单栏上，依次选择“调试”、“Windows”和“GPU 线程”  。
 
 ### <a name="to-switch-to-a-different-thread"></a>切换到其他线程
 
@@ -92,11 +92,11 @@ ms.locfileid: "72732089"
 
 ### <a name="to-freeze-or-thaw-a-row-of-threads"></a>冻结或解冻线程的某个行
 
-- 打开行的快捷菜单，然后选择“冻结”或“解冻”。
+- 打开行的快捷菜单，然后选择“冻结”或“解冻” 。
 
 ### <a name="to-flag-or-unflag-a-row-of-threads"></a>标记或取消标记线程的某个行
 
-- 选择线程的标记列，或打开线程的快捷菜单并选择“标记”或“取消标记”。
+- 选择线程的标记列，或打开线程的快捷菜单并选择“标记”或“取消标记” 。
 
 ### <a name="to-display-only-flagged-threads"></a>仅显示标记的线程
 

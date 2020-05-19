@@ -1,5 +1,5 @@
 ---
-title: 错误：工作组远程登录失败 |Microsoft Docs
+title: 错误：工作组远程登录失败 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: troubleshooting
 f1_keywords:
@@ -20,7 +20,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 9d1ee0cfbd021eb7d6a03a791713d187d3c8877c
 ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/22/2019
 ms.locfileid: "72736262"
@@ -67,12 +67,12 @@ ms.locfileid: "72736262"
 
 3. 单击“安全选项”。
 
-4. 在中**策略**列中，双击**网络访问：本地帐户的共享和安全模型**。
+4. 在“策略”列中，双击“网络访问:本地帐户的共享和安全模型”。
 
-5. 在**网络访问： 本地帐户的共享和安全模型**对话框中，将值更改为**经典-本地用户以自己的身份验证**，然后单击**应用**按钮。
+5. 在“网络访问:本地帐户的共享和安全模型”对话框中，将相应的值更改为“经典 - 本地用户以自己的身份验证”，然后单击“应用”按钮。
 
      ![本地安全策略安全选项](../debugger/media/dbg_err_localsecuritypolicy_securityoptions_networkaccess.png "DBG_ERR_LocalSecurityPolicy_SecurityOptions_NetworkAccess")
 
 ## <a name="see-also"></a>请参阅
 - [远程调试错误和疑难解答](../debugger/remote-debugging-errors-and-troubleshooting.md)
-- [Remote Debugging](../debugger/remote-debugging.md)
+- [远程调试](../debugger/remote-debugging.md)

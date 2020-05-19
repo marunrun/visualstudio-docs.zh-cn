@@ -14,7 +14,7 @@ ms.workload:
 - azure
 ms.openlocfilehash: 6944c930ba6357fffeebba417a32cd167bd4debd
 ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 08/30/2019
 ms.locfileid: "70179824"
@@ -32,15 +32,15 @@ Snapshot Debugger 会在你感兴趣的代码执行时为生产中的应用拍�
 > * 设置快照点，以及查看快照
 > * 设置记录点
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
-* 仅在 Visual Studio 2017 Enterprise 版本15.5 或更高版本的**Azure 开发工作负荷**中开始使用 Snapshot Debugger。 （可在“各个组件”选项卡的“调试和测试” > “Snapshot Debugger”下找到它。）
+* Snapshot Debugger 仅适用于具有 Azure 开发工作负载的 Visual Studio 2017 Enterprise 版本 15.5 或更高版本。 （可在“各个组件”选项卡的“调试和测试” > “Snapshot Debugger”下找到它  。）
 
    ::: moniker range=">=vs-2019"
-   如果尚未安装, 请安装[Visual Studio 2019](https://visualstudio.microsoft.com/downloads)。 如果要从以前的 Visual Studio 安装中进行更新, 请运行 Visual Studio 安装程序, 并在**ASP.NET 和 web 开发工作负荷**中检查 Snapshot Debugger 组件。
+   如果尚未安装，请安装 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads)。 如果从旧版 Visual Studio 安装更新，请运行 Visual Studio 安装程序，并选中 ASP.NET 和 Web 开发工作负载中的 Snapshot Debugger 组件。
    ::: moniker-end
    ::: moniker range="<=vs-2017"
-   如果尚未安装，请安装 [Visual Studio 2017 Enterprise 版本 15.5](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) 或更高版本。 如果要从以前的 Visual Studio 2017 安装进行更新, 请运行 Visual Studio 安装程序, 并在**ASP.NET 和 web 开发工作负荷**中检查 Snapshot Debugger 组件。
+   如果尚未安装，请安装 [Visual Studio 2017 Enterprise 版本 15.5](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) 或更高版本。 如果从旧版 Visual Studio 2017 安装更新，请运行 Visual Studio 安装程序，并选中 ASP.NET 和 Web 开发工作负载中的 Snapshot Debugger 组件。
    ::: moniker-end
 
 * 基本或更高版本的 Azure 应用服务计划。
@@ -58,7 +58,7 @@ Snapshot Debugger 会在你感兴趣的代码执行时为生产中的应用拍�
 
 ::: moniker range="<=vs-2017"
 
-2. 在云资源管理器（“视图”>“云资源管理器”）中，右键单击项目部署到的 Azure 应用服务，然后选择“附加快照调试器”。
+2. 在云资源管理器（“视图”>“云资源管理器”）中，右键单击项目部署到的 Azure 应用服务，然后选择“附加快照调试器” 。
 
    ![启动 Snapshot Debugger](../debugger/media/snapshot-launch.png)
 
@@ -66,7 +66,7 @@ Snapshot Debugger 会在你感兴趣的代码执行时为生产中的应用拍�
 
 ::: moniker range=">=vs-2019"
 
-2. 选择“调试”>“附加 Snapshot Debugger...”。选择部署项目的 Azure 应用服务和一个 Azure 存储帐户，然后单击“附加”。 Snapshot Debugger 还支持[Azure Kubernetes 服务](debug-live-azure-kubernetes.md)和[azure 虚拟机 (VM) & 虚拟机规模集](debug-live-azure-virtual-machines.md)。
+2. 选择“调试”>“附加 Snapshot Debugger...”。选择部署项目的 Azure 应用服务和一个 Azure 存储帐户，然后单击“附加”。 Snapshot Debugger 还支持 [Azure Kubernetes 服务](debug-live-azure-kubernetes.md)和 [Azure 虚拟机 (VM) 和虚拟机规模集](debug-live-azure-virtual-machines.md)。
 
    ![从“调试”菜单启动 Snapshot Debugger](../debugger/media/snapshot-debug-menu-attach.png)
 
@@ -79,11 +79,11 @@ Snapshot Debugger 会在你感兴趣的代码执行时为生产中的应用拍�
 
    ::: moniker range="<=vs-2017"
    > [!NOTE]
-   > Application Insights 站点扩展还支持快照调试。 如果遇到 "站点扩展过期" 错误消息, 请参阅[故障排除提示和](../debugger/debug-live-azure-apps-troubleshooting.md)有关升级详细信息的快照调试的已知问题。
+   > Application Insights 站点扩展还支持快照调试。 如果遇到“站点扩展过期”错误消息，请参阅[快照调试的疑难解答提示和已知问题](../debugger/debug-live-azure-apps-troubleshooting.md)以获取升级详细信息。
    ::: moniker-end
    ::: moniker range=">=vs-2019"
    > [!NOTE]
-   > (Visual Studio 2019 版本16.2 及更高版本)Snapshot Debugger 已启用 Azure 云支持。 请确保所选的 Azure 资源和 Azure 存储帐户都来自同一个云。 如果你对企业的[azure 符合性](https://azure.microsoft.com/overview/trusted-cloud/)配置有任何疑问, 请联系 Azure 管理员。
+   > （Visual Studio 2019 版本 16.2 及更高版本）Snapshot Debugger 已启用 Azure 云支持。 请确保所选的 Azure 资源和 Azure 存储帐户都来自同一个云。 如果对企业 [Azure 合规性](https://azure.microsoft.com/overview/trusted-cloud/)配置有任何疑问，请联系 Azure 管理员。
    ::: moniker-end
 
    Visual Studio 现在处于快照调试模式下。
@@ -95,7 +95,7 @@ Snapshot Debugger 会在你感兴趣的代码执行时为生产中的应用拍�
 
 ## <a name="set-a-snappoint"></a>设置快照点
 
-1. 在代码编辑器中, 单击你感兴趣的代码行旁边的左侧装订线, 设置吸附点。 请确保它是要执行的代码。
+1. 在代码编辑器中，单击你感兴趣的代码行旁边的左滚动条槽以设置快照点。 请确保它是你已知将执行的代码。
 
    ![设置快照点](../debugger/media/snapshot-set-snappoint.png)
 
@@ -108,7 +108,7 @@ Snapshot Debugger 会在你感兴趣的代码执行时为生产中的应用拍�
 
 ## <a name="take-a-snapshot"></a>获取快照
 
-设置吸附点后, 可以通过转到网站的 "浏览器" 视图并运行标记的代码行或等待用户从网站的使用中生成一个快照, 手动生成快照。
+设置快照点后，可以通过转到网站的浏览器视图并运行标记的代码行来手动生成快照，也可以等待用户根据其网站的使用情况生成快照。
 
 ## <a name="inspect-snapshot-data"></a>检查快照数据
 
@@ -120,9 +120,9 @@ Snapshot Debugger 会在你感兴趣的代码执行时为生产中的应用拍�
 
    ![检查快照数据](../debugger/media/snapshot-inspect-data.png)
 
-   在此视图中，可通过将鼠标悬停在变量上来查看数据提示；使用“局部变量”、“监视”和“调用堆栈”窗口；以及计算表达式。
+   在此视图中，可通过将鼠标悬停在变量上来查看数据提示；使用“局部变量”、“监视”和“调用堆栈”窗口；以及计算表达式  。
 
-   网站本身仍处于活动, 最终用户不会受到影响。 默认情况下，每个快照点只捕获一个快照：快照点在捕获快照后即关闭。 如果要在此快照点再捕获一个快照，可以通过单击“更新集合”来重新打开快照点。
+   网站本身仍然是实时的，最终用户不会受到影响。 默认情况下，每个快照点只捕获一个快照：快照点在捕获快照后即关闭。 如果要在此快照点再捕获一个快照，可以通过单击“更新集合”来重新打开快照点。
 
 还可以向应用添加更多快照点，并使用“更新集合”按钮将其启动。
 
@@ -130,7 +130,7 @@ Snapshot Debugger 会在你感兴趣的代码执行时为生产中的应用拍�
 
 ## <a name="set-a-conditional-snappoint"></a>设置条件性快照点
 
-如果很难在应用中重新创建特定状态, 请考虑使用条件吸附点。 条件吸附点帮助您控制何时拍摄快照 (例如, 当变量包含要检查的特定值时)。 可以使用表达式、筛选器或命中次数设置表达式。
+如果很难在应用中重新创建特定状态，请考虑使用条件性快照点。 条件性快照点帮助你控制何时拍摄快照（例如，当变量包含要检查的特定值时）。 可以使用表达式、筛选器或命中次数设置表达式。
 
 #### <a name="to-create-a-conditional-snappoint"></a>创建条件性快照点
 

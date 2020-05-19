@@ -1,5 +1,5 @@
 ---
-title: 将消息发送到 "输出" 窗口 |Microsoft Docs
+title: 将消息发送到“输出”窗口 | Microsoft Docs
 ms.date: 11/08/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -23,7 +23,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 47b563f58d08a732ec224bb8bbf47ad807c4e81d
 ms.sourcegitcommit: ce1ab8a25c66a83e60eab80ed8e1596fe66dd85c
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 07/29/2019
 ms.locfileid: "68605376"
@@ -37,9 +37,9 @@ ms.locfileid: "68605376"
 
 - 各种 `Write` 方法，在执行不中断的情况下输出信息。 这些方法取代了在 Visual Basic 早期版本中使用的 `Debug.Print` 方法。
 
-- <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName>和<xref:System.Diagnostics.Trace.Assert%2A?displayProperty=fullName>方法, 当指定的条件失败时, 它们会中断执行和输出信息。 默认情况下，`Assert` 方法显示对话框中的信息。 有关详细信息，请参阅[托管代码中的断言](../debugger/assertions-in-managed-code.md)。
+- <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName> 和 <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=fullName> 方法，如果指定的条件失败，这些方法将中断执行并输出信息。 默认情况下，`Assert` 方法显示对话框中的信息。 有关详细信息，请参阅[托管代码中的断言](../debugger/assertions-in-managed-code.md)。
 
-- <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=fullName> 和<xref:System.Diagnostics.Trace.Fail%2A?displayProperty=fullName>方法, 它们始终中断执行和输出信息。 默认情况下，在对话框中显示 `Fail` 方法信息。
+- <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=fullName> 和 <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=fullName> 方法，它们总是中断执行并输出信息。 默认情况下，在对话框中显示 `Fail` 方法信息。
 
 **输出**窗口还可以显示下列信息：
 

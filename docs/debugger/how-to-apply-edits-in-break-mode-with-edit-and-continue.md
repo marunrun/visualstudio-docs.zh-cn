@@ -25,7 +25,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 05340b4922262eb134aca8fef4bf215342e5a997
 ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/22/2019
 ms.locfileid: "72734023"
@@ -39,26 +39,26 @@ ms.locfileid: "72734023"
 
 1. 执行下列操作之一进入中断模式：
 
-    - 在代码中设置断点，从“调试”菜单选择“开始调试”，然后等待应用程序命中断点。
+    - 在代码中设置断点，从“调试”菜单选择“开始调试”，然后等待应用程序命中断点 。
 
-         或
+         \- 或 -
 
-    - 开始调试，然后从“调试”菜单中选择“全部中断”。
+    - 开始调试，然后从“调试”菜单中选择“全部中断” 。
 
-         或
+         \- 或 -
 
-    - 发生异常时，请在 "**异常助手**" 中选择 "**启用编辑**"。
+    - 当发生异常时，从“异常情况助手”选择“启用编辑” 。
 
-2. 进行任何所需的和支持的代码更改。
+2. 进行任何所需的且受支持的代码更改。
 
      有关详细信息，请参阅[受支持的代码更改（C# 和 Visual Basic）](../debugger/supported-code-changes-csharp.md)。
 
     > [!NOTE]
     > 如果尝试进行“编辑并继续”所不允许的代码更改，你的编辑将被加上紫色波浪线，并且“任务列表”中会出现一项任务。 除非撤消非法的代码更改，否则将无法继续执行代码。
 
-3. 在 “调试” 菜单上，单击 “继续” 继续执行。
+3. 在 “调试” 菜单上，单击 “继续” 继续执行 。
 
-     现在将继续执行你的代码，并且已应用的编辑将并入项目中。
+     在你所做的编辑已并入项目并已应用的情况下，你的代码继续执行。
 
 ## <a name="see-also"></a>请参阅
 - [支持的代码更改（C# 和 Visual Basic）](../debugger/supported-code-changes-csharp.md)

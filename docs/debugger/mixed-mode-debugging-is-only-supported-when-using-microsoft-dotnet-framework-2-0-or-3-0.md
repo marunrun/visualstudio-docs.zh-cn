@@ -1,5 +1,5 @@
 ---
-title: 仅当使用 Microsoft .NET Framework 2.0 或3.0 时才支持混合模式调试 |Microsoft Docs
+title: 仅当使用 Microsoft .NET Framework 2.0 或 3.0 时才支持混合模式调试 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -17,7 +17,7 @@ ms.workload:
 - dotnet
 ms.openlocfilehash: b20ef6b81e4d7162fd230d9d0c3437fe1b5232c1
 ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/22/2019
 ms.locfileid: "72730918"
@@ -35,19 +35,19 @@ ms.locfileid: "72730918"
 
 ### <a name="to-change-the-operating-system-to-32-bit-visual-basic-or-c"></a>将操作系统更改为 32 位（Visual Basic 或 C#）
 
-1. 在“解决方案资源管理器”中，右键单击所需项目，然后在快捷方式菜单中单击“属性”。
+1. 在“解决方案资源管理器”中，右键单击所需项目，然后在快捷方式菜单中单击“属性” 。
 
-2. 在属性页中，单击“编译”或“调试”选项卡。
+2. 在属性页中，单击“编译”或“调试”选项卡 。
 
-3. 单击“平台”，然后从平台列表中选择“x86”。
+3. 单击“平台”，然后从平台列表中选择“x86” 。
 
-     默认情况下，Visual Basic 和 C# 编译器生成要在任何 CPU 上运行的代码。 在 64 位计算机上，这些二进制代码作为 64 位进程运行。 若要在 32 位进程中运行，必须选择“Win32”而不是“AnyCPU”。
+     默认情况下，Visual Basic 和 C# 编译器生成要在任何 CPU 上运行的代码。 在 64 位计算机上，这些二进制代码作为 64 位进程运行。 若要在 32 位进程中运行，必须选择“Win32”而不是“AnyCPU” 。
 
 ### <a name="to-change-the-operating-system-to-32-bit-cc"></a>将操作系统更改为 32 位 (C/C++)
 
-1. 在“解决方案资源管理器”中，右键单击所需项目，然后在快捷方式菜单中单击“属性”。
+1. 在“解决方案资源管理器”中，右键单击所需项目，然后在快捷方式菜单中单击“属性” 。
 
-     在属性页中，单击“平台”，然后从平台列表中选择“Win32”。
+     在属性页中，单击“平台”，然后从平台列表中选择“Win32” 。
 
 ### <a name="to-correct-this-error"></a>更正此错误
 

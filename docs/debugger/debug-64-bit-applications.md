@@ -1,5 +1,5 @@
 ---
-title: 调试64位应用程序 |Microsoft Docs
+title: 调试 64 位应用程序 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -18,7 +18,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 3a805942e85540b776ceacd972a09a71bb80cbb4
 ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/25/2019
 ms.locfileid: "72911583"
@@ -37,14 +37,14 @@ ms.locfileid: "72911583"
 
 1. 创建一个 Visual Studio 解决方案，例如 C# 控制台应用程序。
 
-2. 使用配置管理器将配置设置为 64 位。 有关详细信息，请参阅 [How to: Configure Projects to Target Platforms](../ide/how-to-configure-projects-to-target-platforms.md)。
+2. 使用配置管理器将配置设置为 64 位。 有关详细信息，请参阅[如何：将项目配置为面向平台](../ide/how-to-configure-projects-to-target-platforms.md)。
 
 3. 此时将启动 64 位版本的远程调试器 (msvsmon.exe)。 只要具有 64 位配置的解决方案处于启用状态，它就会运行。
 
 4. 开始调试。 此体验应该与调试 32 位配置的应用程序的体验相同。 如果出现错误，请参阅下面的“疑难解答”一节。
 
 ## <a name="troubleshooting-64-bit-debugging"></a>64 位调试疑难解答
- 可能会出现一条错误信息：“64 位调试操作所花费的时间超出了预期。” 在这种情况下，则说明 Visual Studio 已向 64 位版本的 msvsmon.exe 发送请求，返回该请求的结果花费了较长的时间。
+ 可能会出现错误：“64 位调试操作花费的时间比预期要长。” 在这种情况下，则说明 Visual Studio 已向 64 位版本的 msvsmon.exe 发送请求，返回该请求的结果花费了较长的时间。
 
  出现此错误的主要原因有两个：
 
@@ -58,4 +58,4 @@ ms.locfileid: "72911583"
 - [配置 64 位的程序](/cpp/build/configuring-programs-for-64-bit-visual-cpp)
 - [Visual Studio IDE 64 位支持](../ide/visual-studio-ide-64-bit-support.md)
 - [使用转储文件](../debugger/using-dump-files.md)
-- [Remote Debugging](../debugger/remote-debugging.md)
+- [远程调试](../debugger/remote-debugging.md)

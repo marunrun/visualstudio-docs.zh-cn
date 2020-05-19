@@ -7,7 +7,7 @@ ms.author: tglee
 manager: jillfra
 ms.openlocfilehash: 892c166504b9a33fdcbbe0af2605e8268a2b06e7
 ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/01/2020
 ms.locfileid: "75592446"
@@ -20,9 +20,9 @@ XSLT 层次结构工具简化了诸多 XML 开发任务。 XSLT 样式表通常�
 
 本主题中的示例演示了所引用样式表中的调试。
 
-## <a name="to-debug-in-a-referenced-style-sheet"></a>在引用的样式表中进行调试
+## <a name="to-debug-in-a-referenced-style-sheet"></a>在引用样式表中进行调试
 
-1. 在 Visual Studio 中打开 XML 文档。 此示例使用以下文档：
+1. 在 Visual Studio 中打开 XML 文档。 本示例使用下列文档：
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -46,7 +46,7 @@ XSLT 层次结构工具简化了诸多 XML 开发任务。 XSLT 样式表通常�
     </COLLECTION>
     ```
 
-1. 添加以下*xslincludefile*：
+1. 添加以下 xslincludefile.xsl：
 
     ```xml
     <?xml version='1.0'?>
@@ -69,7 +69,7 @@ XSLT 层次结构工具简化了诸多 XML 开发任务。 XSLT 样式表通常�
     </xsl:stylesheet>
     ```
 
-3. 添加以下*xslinclude*文件：
+3. 添加以下 xslinclude.xsl 文件：
 
     ```xml
     <?xml version='1.0'?>
@@ -103,12 +103,12 @@ XSLT 层次结构工具简化了诸多 XML 开发任务。 XSLT 样式表通常�
     </xsl:stylesheet>
     ```
 
-4. 在指令 `<xsl:include href="xslincludefile.xsl" />`添加断点。
+4. 在以下指令位置添加断点：`<xsl:include href="xslincludefile.xsl" />`。
 
 5. 开始调试。
 
-6. 调试器在指令 `<xsl:include href="xslincludefile.xsl" />`停止时，按 "**单步**执行" 按钮。 可以在引用的样式表中继续进行调试。 该层次结构可见，并且设计器显示正确的路径。
+6. 当调试器在指令 `<xsl:include href="xslincludefile.xsl" />` 处停止运行时，请按“单步执行”按钮。 该调试可在所引用的样式表中继续进行。 该层次结构可见，并且设计器显示正确的路径。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [XSLT 探查器](../xml-tools/xslt-profiler.md)

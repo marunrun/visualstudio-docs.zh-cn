@@ -15,7 +15,7 @@ ms.workload:
 - azure
 ms.openlocfilehash: 6eb7af4ead7cd58a0ccf36cbeb2b9fc56e890315
 ms.sourcegitcommit: 59e5758036223ee866f3de5e3c0ab2b6dbae97b6
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 07/23/2019
 ms.locfileid: "68415748"
@@ -33,11 +33,11 @@ Snapshot Debugger 会在你感兴趣的代码执行时为生产中的应用拍�
 > * 设置快照点，以及查看快照
 > * 设置记录点
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
-* Azure Kubernetes Services 的 Snapshot Debugger 仅适用于 Visual Studio 2019 企业版或更高版本的**azure 开发工作负荷**。 （可在“各个组件”选项卡的“调试和测试” > “Snapshot Debugger”下找到它。）
+* 适用于 Azure Kubernetes 服务的 Snapshot Debugger 仅可用于具有 Azure 开发工作负载的 Visual Studio 2019 Enterprise 或更高版本。 （可在“各个组件”选项卡的“调试和测试” > “Snapshot Debugger”下找到它  。）
 
-    如果尚未安装, 请安装[Visual Studio 2019 企业版](https://visualstudio.microsoft.com/vs/)。
+    如果尚未安装，请安装 [Visual Studio 2019 Enterprise](https://visualstudio.microsoft.com/vs/)。
 
 * 快照集合适用于以下 Azure Kubernetes 服务 Web 应用：
   * 在 Debian 9 中的 .Net Core 2.2 或更高版本上运行的 ASP.NET Core 应用程序。
@@ -54,14 +54,14 @@ Snapshot Debugger 会在你感兴趣的代码执行时为生产中的应用拍�
     > [!IMPORTANT]
     > 对于快照调试，需要打开与已发布到 Azure Kubernetes 服务的相同版本的源代码。
 
-1. 选择“调试”>“附加 Snapshot Debugger...”。选择部署 Web 应用的 AKS 资源和一个 Azure 存储帐户，然后单击“附加”。 Snapshot Debugger 还支持[Azure App Service](debug-live-azure-applications.md)和[Azure 虚拟机 (VM) & 虚拟机规模集](debug-live-azure-virtual-machines.md)。
+1. 选择“调试”>“附加 Snapshot Debugger...”。选择部署 Web 应用的 AKS 资源和一个 Azure 存储帐户，然后单击“附加”。 Snapshot Debugger 还支持 [Azure 应用服务](debug-live-azure-applications.md)和 [Azure 虚拟机 (VM) 和虚拟机规模集](debug-live-azure-virtual-machines.md)。
 
     ![从“调试”菜单启动 Snapshot Debugger](../debugger/media/snapshot-debug-menu-attach.png)
 
     ![选择 Azure 资源](../debugger/media/snapshot-select-azure-resource-aks.png)
 
     > [!NOTE]
-    > (Visual Studio 2019 版本16.2 及更高版本)Snapshot Debugger 已启用 Azure 云支持。 请确保所选的 Azure 资源和 Azure 存储帐户都来自同一个云。 如果你对企业的[azure 符合性](https://azure.microsoft.com/overview/trusted-cloud/)配置有任何疑问, 请联系 Azure 管理员。
+    > （Visual Studio 2019 版本 16.2 及更高版本）Snapshot Debugger 已启用 Azure 云支持。 请确保所选的 Azure 资源和 Azure 存储帐户都来自同一个云。 如果对企业 [Azure 合规性](https://azure.microsoft.com/overview/trusted-cloud/)配置有任何疑问，请联系 Azure 管理员。
 
 Visual Studio 现在处于快照调试模式下。
 
@@ -73,7 +73,7 @@ Visual Studio 现在处于快照调试模式下。
 
 ## <a name="set-a-snappoint"></a>设置快照点
 
-1. 在代码编辑器中, 单击你感兴趣的代码行旁边的左侧装订线, 设置吸附点。 请确保它是要执行的代码。
+1. 在代码编辑器中，单击你感兴趣的代码行旁边的左滚动条槽以设置快照点。 请确保它是你已知将执行的代码。
 
    ![设置快照点](../debugger/media/snapshot-set-snappoint.png)
 
@@ -86,7 +86,7 @@ Visual Studio 现在处于快照调试模式下。
 
 ## <a name="take-a-snapshot"></a>获取快照
 
-设置吸附点后, 可以通过转到网站的 "浏览器" 视图并运行标记的代码行或等待用户从网站的使用中生成一个快照, 手动生成快照。
+设置快照点后，可以通过转到网站的浏览器视图并运行标记的代码行来手动生成快照，也可以等待用户根据其网站的使用情况生成快照。
 
 ## <a name="inspect-snapshot-data"></a>检查快照数据
 
@@ -98,9 +98,9 @@ Visual Studio 现在处于快照调试模式下。
 
     ![检查快照数据](../debugger/media/snapshot-inspect-data.png)
 
-    在此视图中，可通过将鼠标悬停在变量上来查看数据提示；使用“局部变量”、“监视”和“调用堆栈”窗口；以及计算表达式。
+    在此视图中，可通过将鼠标悬停在变量上来查看数据提示；使用“局部变量”、“监视”和“调用堆栈”窗口；以及计算表达式  。
 
-    网站本身仍处于活动, 最终用户不会受到影响。 默认情况下，每个快照点只捕获一个快照：快照点在捕获快照后即关闭。 如果要在此快照点再捕获一个快照，可以通过单击“更新集合”来重新打开快照点。
+    网站本身仍然是实时的，最终用户不会受到影响。 默认情况下，每个快照点只捕获一个快照：快照点在捕获快照后即关闭。 如果要在此快照点再捕获一个快照，可以通过单击“更新集合”来重新打开快照点。
 
 还可以向应用添加更多快照点，并使用“更新集合”按钮将其启动。
 
@@ -108,7 +108,7 @@ Visual Studio 现在处于快照调试模式下。
 
 ## <a name="set-a-conditional-snappoint"></a>设置条件性快照点
 
-如果很难在应用中重新创建特定状态, 请考虑使用条件吸附点。 条件吸附点帮助您控制何时拍摄快照 (例如, 当变量包含要检查的特定值时)。 可以使用表达式、筛选器或命中次数设置表达式。
+如果很难在应用中重新创建特定状态，请考虑使用条件性快照点。 条件性快照点帮助你控制何时拍摄快照（例如，当变量包含要检查的特定值时）。 可以使用表达式、筛选器或命中次数设置表达式。
 
 #### <a name="to-create-a-conditional-snappoint"></a>创建条件性快照点
 

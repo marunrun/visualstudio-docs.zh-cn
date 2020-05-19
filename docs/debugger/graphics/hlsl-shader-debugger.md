@@ -1,5 +1,5 @@
 ---
-title: HLSL 着色器调试器 |Microsoft Docs
+title: HLSL 着色器调试器 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,7 +12,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 164c404f3bce6b8216092635e3489843039fb1eb
 ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/22/2019
 ms.locfileid: "72735306"
@@ -22,7 +22,7 @@ Visual Studio 图形分析器中的 HLSL 调试器可帮助了解 HLSL 着色器
 
  这是 HLSL 调试器：
 
- ![使用 "监视" 和 "调用堆栈" 窗口调试 HLSL。](media/gfx_diag_demo_hlsl_debugger_orientation.png "gfx_diag_demo_hlsl_debugger_orientation")
+ ![使用监视和调用堆栈窗口调试 HLSL。](media/gfx_diag_demo_hlsl_debugger_orientation.png "gfx_diag_demo_hlsl_debugger_orientation")
 
 ## <a name="understanding-the-hlsl-debugger"></a>了解 HLSL 调试器
  HLSL 调试器可以帮助你了解着色器代码中产生的问题。 在 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 中调试 HLSL 代码类似于调试以其他语言（例如 C++、C# 或 Visual Basic）编写的代码。 你可以检查变量内容、设置断点、逐句通过代码和遍历调用堆栈，就像你调试其他语言时一样。
@@ -63,14 +63,14 @@ Visual Studio 图形分析器中的 HLSL 调试器可帮助了解 HLSL 着色器
 
 2. 在绘图调用详细信息中，展开所生成的颜色量表明着色器代码中存在 Bug 的基元。 如有多个基元表明存在 Bug，请选择表明 Bug 的第一个基元，从而避免错误累积，导致问题诊断更加困难。
 
-3. 在基元详细信息中，选择是调试“顶点着色器”还是“像素着色器”。 如果你怀疑像素着色器是正确的，但由于顶点着色器向其传递错误常量而生成错误的颜色量，请调试顶点着色器。 否则，请调试像素着色器。
+3. 在基元详细信息中，选择是调试“顶点着色器”还是“像素着色器” 。 如果你怀疑像素着色器是正确的，但由于顶点着色器向其传递错误常量而生成错误的颜色量，请调试顶点着色器。 否则，请调试像素着色器。
 
     在所选着色器的右侧，选择“开始调试”（显示为小绿色箭头）。
 
    > [!NOTE]
    > HLSL 调试器中的此入口点调试与你选择的绘图调用、基元和像素对应的像素着色器线程，或调试与通过你选择的绘图调用、基元和像素来插入结果的顶点着色器线程对应的像素着色器线程。 对于顶点着色器，可通过展开顶点着色器详细信息，将入口点进一步细化到特定顶点。
 
-   有关如何使用 HLSL 调试器来调试着色器错误的示例，请参阅 "另请参见" 部分中的链接到的[示例](graphics-diagnostics-examples.md)或演练。
+   有关如何使用 HLSL 调试器来调试着色器错误的示例，请参阅[示例](graphics-diagnostics-examples.md)或“另请参阅”部分中的演练链接。
 
 ## <a name="see-also"></a>请参阅
 - [演练：因顶点着色而缺少对象](walkthrough-missing-objects-due-to-vertex-shading.md)

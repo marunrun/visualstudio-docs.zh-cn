@@ -1,5 +1,5 @@
 ---
-title: 堆分配函数的调试版本 |Microsoft Docs
+title: 堆分配函数的“Debug”版本 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -25,7 +25,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: d0fde776e9f2bd48aca92c7ba6d7f1fe1e23f01a
 ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/22/2019
 ms.locfileid: "72738369"
@@ -45,7 +45,7 @@ C 运行库包含堆分配函数的特殊“Debug”版本。 这些函数的名
 
   若要跟踪客户端块中各种类型的分配，必须直接调用 `_malloc_dbg`，并将 `blockType` 参数设置为 `_CLIENT_BLOCK`。
 
-  未定义 _DEBUG 时，对 `malloc` 的调用不会受干扰，对 `_malloc_dbg` 的调用则解析为 `malloc`，同时会忽略 [_CRTDBG_MAP_ALLOC](/cpp/c-runtime-library/crtdbg-map-alloc) 的定义，并且不会提供与分配请求相关的源文件信息。 由于 `malloc` 没有块类型参数，因此对 `_CLIENT_BLOCK` 类型的请求会作为标准分配处理。
+  未定义 _DEBUG 时，对 `malloc` 的调用不会受干扰，对 `_malloc_dbg` 的调用则解析为 `malloc`，同时会忽略 [_CRTDBG_MAP_ALLOC](/cpp/c-runtime-library/crtdbg-map-alloc) 的定义，并且不会提供与分配请求相关的源文件信息。 因为 `malloc` 没有块类型参数，所以将对 `_CLIENT_BLOCK` 类型的请求作为标准分配处理。
 
 ## <a name="see-also"></a>请参阅
 

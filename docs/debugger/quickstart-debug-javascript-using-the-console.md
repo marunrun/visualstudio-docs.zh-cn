@@ -1,5 +1,5 @@
 ---
-title: 使用控制台调试 JavaScript |Microsoft Docs
+title: 使用控制台调试 JavaScript | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -18,14 +18,14 @@ ms.workload:
 - multiple
 ms.openlocfilehash: ad037a0e71bc2156fe1c604d183a5e02ae914688
 ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/31/2019
 ms.locfileid: "73187549"
 ---
 # <a name="debug-javascript-using-the-console-in-visual-studio"></a>在 Visual Studio 中使用控制台调试 JavaScript
 
-可以使用 JavaScript 控制台窗口与进行交互，并调试使用 JavaScript 生成的 UWP 应用。 对于使用 Apache Cordova Visual Studio Tools 创建的 UWP 应用和应用，支持这些功能。 有关控制台命令参考的信息，请参见 [JavaScript Console commands](../debugger/javascript-console-commands.md?view=vs-2017)。
+可以使用 JavaScript 控制台窗口中与使用 JavaScript 生成的 UWP 应用进行交互并对它进行调试。 这些功能支持 UWP 应用以及使用用于 Apache Cordova 的 Visual Studio 工具创建的应用。 有关控制台命令参考的信息，请参见 [JavaScript Console commands](../debugger/javascript-console-commands.md?view=vs-2017)。
 
 “JavaScript 控制台”窗口允许你执行以下操作：
 
@@ -42,25 +42,25 @@ ms.locfileid: "73187549"
 - 执行其他任务，如清除屏幕。 有关完整的命令列表，请参见 [JavaScript Console commands](../debugger/javascript-console-commands.md?view=vs-2017) 。
 
 > [!TIP]
-> 如果 JavaScript 控制台窗口处于关闭状态，请依次选择“调试”>  >  以重新打开它。 该窗口仅在脚本调试会话期间出现。
+> 如果 JavaScript 控制台窗口处于关闭状态，请依次选择“调试” >  >  以重新打开它。 该窗口仅在脚本调试会话期间出现。
 
-使用“JavaScript 控制台”窗口，你可以在无需停止和重新启动调试器的情况下与应用交互。 有关详细信息，请参阅[刷新应用（JavaScript）](../debugger/refresh-an-app-javascript.md)。 有关其他 JavaScript 调试功能（如使用 DOM 资源管理器和设置断点）的信息，请参阅快速入门：[在 Visual Studio 中](debugging-windows-store-and-windows-universal-apps.md)[调试 HTML、CSS](../debugger/quickstart-debug-html-and-css.md)和调试应用。
+使用“JavaScript 控制台”窗口，你可以在无需停止和重新启动调试器的情况下与应用交互。 有关详细信息，请参阅 [刷新应用 (JavaScript)](../debugger/refresh-an-app-javascript.md)。 有关其他 JavaScript 调试功能（例如使用 DOM 资源管理器和设置断点）的信息，请参阅[快速入门：调试 HTML 和 CSS](../debugger/quickstart-debug-html-and-css.md) 和[在 Visual Studio 中调试应用](debugging-windows-store-and-windows-universal-apps.md)。
 
-## <a name="InteractiveConsole"></a> 使用“JavaScript 控制台”窗口进行调试
+## <a name="debug-by-using-the-javascript-console-window"></a><a name="InteractiveConsole"></a> 使用“JavaScript 控制台”窗口进行调试
 以下步骤会创建一个 `FlipView` 应用并演示如何以交互方式调试 JavaScript 编码错误。
 
 > [!NOTE]
-> 此处的示例应用是 UWP 应用。 但是，此处所述的控制台功能也适用于使用 Visual Studio Tools for Apache Cordova 创建的应用。
+> 此处的示例应用是一个 UWP 应用。 但是，此处所述的控制台功能也适用于使用 Visual Studio Tools for Apache Cordova 创建的应用。
 
 #### <a name="to-debug-javascript-code-in-the-flipview-app"></a>调试 FlipView 应用中的 JavaScript 代码
 
 1. 通过选择 **“文件”**  >  **“新建项目”** 。
 
-2. 选择 " **JavaScript**  > **Windows 通用**"，然后选择 " **WinJS 应用**"。
+2. 选择“JavaScript” > “Windows Universal”，然后选择“WinJS App”  。
 
-3. 为项目输入名称（如 `FlipViewApp`），然后选择“确定” 以创建应用。
+3. 为项目输入名称（如 `FlipViewApp`），然后选择“确定”  以创建应用。
 
-4. 在 index 的 BODY 元素中，将现有 HTML 代码替换为以下代码：
+4. 在 index.html 的 BODY 元素中，将现有 HTML 代码替换为以下代码：
 
     ```html
     <div id="flipTemplate" data-win-control="WinJS.Binding.Template"
@@ -136,7 +136,7 @@ ms.locfileid: "73187549"
     })();
     ```
 
-7. 如果尚未选择调试目标，请从 "**调试**" 工具栏上 "**设备**" 按钮旁边的下拉列表中选择 "**本地计算机**"：
+7. 如果尚未选择调试目标，请从“调试”工具栏上“设备”按钮旁的下拉列表中选择“本地计算机”  ：
 
     ![选择调试目标列表](../debugger/media/js_select_target.png "JS_Select_Target")
 
@@ -144,11 +144,11 @@ ms.locfileid: "73187549"
 
     应用会运行，但缺少图像。 JavaScript 控制台窗口中的 APPHOST 错误指示缺少图像。
 
-9. 在运行 `FlipView` 应用的情况下，在控制台窗口输入提示中键入 `Data.items` （位于 "> >" 符号旁边），然后按 Enter。
+9. 在 `FlipView` 应用运行时，在控制台窗口输入提示符（“>>”符号旁边）下键入 `Data.items`，然后按 Enter。
 
     `items` 对象的可视化工具会出现在控制台窗口中。 这指示 `items` 对象进行了实例化，并且在当前脚本上下文中可用。 在控制台窗口中，可以在对象的各个节点中单击以查看属性值（或使用箭头键）。 如果向下单击到 `items._data` 对象（如图所示），则会发现其图像源引用不正确（与预期一样）。 该对象中存在的仍是默认图像 (logo.png)，并且有缺少的图像与预期的图像交织在一起。
 
-    ![JavaScript 控制台窗口](../debugger/media/js_console_window.png "JS_Console_Window")
+    ![“JavaScript 控制台”窗口](../debugger/media/js_console_window.png "JS_Console_Window")
 
     另请注意， `items._data` 对象中的项目远比你预期的要多。
 
@@ -184,7 +184,7 @@ ms.locfileid: "73187549"
 
 15. 在提示符下，键入 `Data.items.length = 3` ，并按 Enter。 这会从数据中移除额外的元素。
 
-16. 再次检查应用，你会看到正确的图像位于正确的 `FlipView` 页面上。
+16. 再次检查应用，你将发现正确的 `FlipView` 页上已有了正确的图像。
 
 17. 在 DOM 资源管理器中，可以查看更新后的 DIV 元素，并且可以导航到子树中以查找预期的 IMG 元素。
 
@@ -192,7 +192,7 @@ ms.locfileid: "73187549"
 
     有关包含更正后的示例代码的完整 default.html 页面，请参阅[调试 HTML、CSS 和 JavaScript 示例代码](../debugger/debug-html-css-and-javascript-sample-code.md)。
 
-## <a name="InteractiveDebuggingBreakMode"></a> 交互式调试和中断模式
+## <a name="interactive-debugging-and-break-mode"></a><a name="InteractiveDebuggingBreakMode"></a> 交互式调试和中断模式
 可以在使用 JavaScript 调试工具（如 JavaScript 控制台窗口）时使用断点和单步执行代码。 当在调试器中运行的程序遇到断点时，调试器会临时挂起程序的执行。 当执行挂起时，程序会从运行模式切换为中断模式。 可以随时恢复执行。
 
 当程序处于中断模式时，可以使用 JavaScript 控制台窗口运行在当前脚本执行上下文中有效的脚本和命令。 在此过程中，你会使用之前创建的已修复版本的 `FlipView` 应用，来演示中断模式的使用。
@@ -201,13 +201,13 @@ ms.locfileid: "73187549"
 
 1. 在之前创建的 `FlipView` 应用的 default.html 文件中，打开 `updateImages()` 函数的快捷菜单，然后选择 **“断点”**  >  **“插入断点”** 。
 
-2. 在 "**调试**" 工具栏上的 "**启动调试**" 按钮旁的下拉列表中选择 "**本地计算机**"。
+2. 在“调试”工具栏上的“启动调试”按钮旁的下拉列表中选择“本地计算机”  。
 
 3. 选择 **“仿真程序 8.1 WVGA 4 英寸 512MB”**  >  **“本地计算机”** ，或按 F5。
 
     当执行过程抵达 `updateImages()` 函数时，应用程序进入中断模式，并以黄色突出显示程序执行的当前行。
 
-    ![将中断模式与 JavaScript 控制台结合使用](../debugger/media/js_breakmode.png "JS_BreakMode")
+    ![将中断模式与 JavaScript 控制台一起使用](../debugger/media/js_breakmode.png "JS_BreakMode")
 
     更改变量的值即可立即影响程序状态，而不会结束当前的调试会话。
 
@@ -217,7 +217,7 @@ ms.locfileid: "73187549"
 
     下图显示了此时的控件台窗口。
 
-    ![显示可视化工具的 JavaScript 控制台窗口](../debugger/media/js_console_function_visualizer.png "JS_Console_Function_Visualizer")
+    ![显示可视化工具的“JavaScript 控制台”窗口](../debugger/media/js_console_function_visualizer.png "JS_Console_Function_Visualizer")
 
 6. 将下面这行函数从输出窗口复制到输入提示符下，并将索引值更改为 3：
 
@@ -233,14 +233,14 @@ ms.locfileid: "73187549"
 
     若要切换回 Visual Studio，请按 F12 或 Alt+Tab。
 
-## <a name="SinglelineMultilineMode"></a> JavaScript 控制台窗口中的单行模式和多行模式
+## <a name="single-line-mode-and-multiline-mode-in-the-javascript-console-window"></a><a name="SinglelineMultilineMode"></a> JavaScript 控制台窗口中的单行模式和多行模式
 JavaScript 控制台窗口的输入提示支持单行模式和多行模式。 本主题中的交互式调试过程提供了使用这两种模式的示例。 可以按  Ctrl+Alt+M 在模式之间切换。
 
 单行模式提供输入历史记录。 可以使用向上键和向下键在输入历史记录中进行导航。 运行脚本时，单行模式会清除输入提示。 若要在单行模式下运行脚本，请按 Enter。
 
 运行脚本时，多行模式不清除输入提示。 从多行模式切换到单行模式时，可以通过按“清除输入”（红色“X”）来清除输入行。 若要在多行模式下运行脚本，请按 Ctrl+Enter 或选择窗口右下角的箭头符号。
 
-## <a name="Switching"></a> 切换脚本执行上下文
+## <a name="switching-the-script-execution-context"></a><a name="Switching"></a> 切换脚本执行上下文
 JavaScript 控制台窗口允许一次与单个执行上下文（表示 Web 平台主机 (WWAHost.exe) 的单个实例）进行交互。 在某些情况下，应用可能会启动主机的另一个实例，例如在使用 `iframe`、共享协定、Web 辅助进程或 `WebView` 控件时。 如果主机的另一个实例正在运行，则可以通过在 **“目标”** 列表中选择执行上下文，在运行应用时选择不同的执行上下文。
 
 下图显示了“JavaScript 控件台”窗口中的“目标”列表。

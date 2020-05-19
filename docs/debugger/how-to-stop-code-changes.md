@@ -1,5 +1,5 @@
 ---
-title: 如何：停止代码更改 |Microsoft Docs
+title: 如何：停止代码更改 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -19,7 +19,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 545599aa68da79aa7be41f0a2517049146cebc89
 ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/22/2019
 ms.locfileid: "72732454"
@@ -32,7 +32,7 @@ ms.locfileid: "72732454"
 
 ### <a name="to-stop-applying-code-changes"></a>停止应用代码更改
 
-- 从“调试”菜单中选择“停止应用代码更改”。
+- 从“调试”菜单中选择“停止应用代码更改” 。
 
   该菜单项仅在应用代码更改时才可见。
 

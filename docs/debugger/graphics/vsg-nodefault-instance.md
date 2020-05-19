@@ -10,13 +10,13 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 304576391b2287aee7567b3ccc2e4514ce5cb2e8
 ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62848455"
 ---
-# <a name="vsgnodefaultinstance"></a>VSG_NODEFAULT_INSTANCE
-通过其存在定义的默认实例是否[VsgDbg 类](vsgdbg-class.md)类，它提供编程捕获界面 — 提供。
+# <a name="vsg_nodefault_instance"></a>VSG_NODEFAULT_INSTANCE
+通过其存在状况定义是否提供 [VsgDbg 类](vsgdbg-class.md)的默认实例（它提供编程捕获接口）。
 
 ## <a name="syntax"></a>语法
 
@@ -38,7 +38,7 @@ VsgDbg *g_pVsgDbg;
 
  如果未禁用默认实例，则它将在程序运行前自动进行初始化并在程序终止时自动销毁。 您不必显式初始化或取消初始化此实例。
 
- 若要禁用默认实例，必须定义`VSG_NODEFAULT_INSTANCE`包含之前`vsgcapture.h`在程序中。
+ 若要禁用默认实例，必须在将 `vsgcapture.h` 包含在程序中之前定义 `VSG_NODEFAULT_INSTANCE`。
 
 ## <a name="example"></a>示例
  此示例说明如何禁用默认实例：

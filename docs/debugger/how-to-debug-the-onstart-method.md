@@ -1,5 +1,5 @@
 ---
-title: 如何：调试 OnStart 方法 |Microsoft Docs
+title: 如何：调试 OnStart 方法 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -21,7 +21,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 107ce6d5ca2b327d77fe588e1ac7ffda10a0a3a3
 ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/22/2019
 ms.locfileid: "72733626"
@@ -38,7 +38,7 @@ ms.locfileid: "72733626"
     }
     ```
 
-2. 启动服务（可以使用 `net start`，或在“服务” 窗口中启动）。
+2. 启动服务（可以使用 `net start`，或在“服务”  窗口中启动）。
 
     将显示一个对话框，如下所示：
 

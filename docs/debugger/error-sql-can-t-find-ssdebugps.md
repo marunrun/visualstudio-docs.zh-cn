@@ -1,5 +1,5 @@
 ---
-title: 错误：SQL 可以&#39;t 不到 Ssdebugps |Microsoft Docs
+title: 错误：SQL 找不到 SSDEBUGPS | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: troubleshooting
 f1_keywords:
@@ -17,12 +17,12 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 854105ea5d94f6d3b09ce73a23ec45ccab9e797c
 ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62850483"
 ---
-# <a name="error-sql-can39t-find-ssdebugps"></a>错误：SQL 可以&#39;t 不到 Ssdebugps
+# <a name="error-sql-can39t-find-ssdebugps"></a>错误：SQL 找不到 SSDEBUGPS
 
 SSDEBUGPS.dll 为 SQL Server Debugging Host 组件。
 
@@ -30,9 +30,9 @@ SSDEBUGPS.dll 为 SQL Server Debugging Host 组件。
 
 有两种方法可以纠正此错误：重新运行远程调试安装，以及将该文件复制到 [!INCLUDE[sqprsqlong](../debugger/includes/sqprsqlong_md.md)] 计算机上。
 
-若要重新运行远程调试安装，请按照的说明[远程调试](../debugger/remote-debugging.md)。
+若要重新运行远程调试安装程序，请按照[远程调试](../debugger/remote-debugging.md)中的说明操作。
 
-如果可以找到 ssdebugps.dll 的某个副本，则可以将其复制到 [!INCLUDE[sqprsqlong](../debugger/includes/sqprsqlong_md.md)] 计算机上。 如果存在，该文件会位于目录 \Program Files\ Common Files\Microsoft Shared\SQL Debugging 中。 你可能会发现它在另一台[!INCLUDE[sqprsqlong](../debugger/includes/sqprsqlong_md.md)]计算机，或已安装 Visual Studio 2005 的计算机上。
+如果可以找到 ssdebugps.dll 的某个副本，则可以将其复制到 [!INCLUDE[sqprsqlong](../debugger/includes/sqprsqlong_md.md)] 计算机上。 如果存在，该文件会位于目录 \Program Files\ Common Files\Microsoft Shared\SQL Debugging 中。 在另一台 [!INCLUDE[sqprsqlong](../debugger/includes/sqprsqlong_md.md)] 计算机或安装了 Visual Studio 2005 的计算机上可以找到该文件。
 
 将 SSDEBUGPS.dll 复制到 SQL Server 2005 计算机上：
 

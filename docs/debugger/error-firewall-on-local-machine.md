@@ -1,5 +1,5 @@
 ---
-title: 错误：本地计算机上的防火墙 |Microsoft Docs
+title: 错误：本地计算机上的防火墙 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: troubleshooting
 f1_keywords:
@@ -16,7 +16,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 87a1813410a092ced335f37b9df4cf6547ca1cc3
 ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62851041"

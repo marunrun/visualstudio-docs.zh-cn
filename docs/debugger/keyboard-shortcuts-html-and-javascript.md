@@ -1,5 +1,5 @@
 ---
-title: 键盘快捷键（HTML 和 JavaScript） |Microsoft Docs
+title: 键盘快捷键（HTML 和 JavaScript）| Microsoft Docs
 ms.date: 10/17/2019
 ms.topic: conceptual
 dev_langs:
@@ -15,18 +15,18 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 824d0787de78ddc679d1060179e65043e0bf5299
 ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/22/2019
 ms.locfileid: "72731486"
 ---
 # <a name="keyboard-shortcuts-html-and-javascript"></a>键盘快捷键（HTML 和 JavaScript）
 
-Visual Studio 中的键盘快捷方式，用于使用 HTML 和 JavaScript 调试 UWP 应用。
+Visual Studio 中使用 HTML 和 JavaScript 的用于调试 UWP 应用的键盘快捷方式。
 
 ## <a name="general-shortcuts"></a>常规快捷方式
 
- 这些快捷方式使用 HTML 和 JavaScript 跨 UWP 应用的所有工具工作。
+ 这些快捷方式适用于所有使用 HTML 和 JavaScript 的 UWP 应用的工具。
 
 |操作|快捷键|
 |------------|--------------|

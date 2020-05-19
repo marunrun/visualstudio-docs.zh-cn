@@ -1,5 +1,5 @@
 ---
-title: 调试本机代码常见问题解答 |Microsoft Docs
+title: 调试本机代码常见问题解答 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -22,7 +22,7 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 15a94d20ade7bfe3e5aaac2c90bb3ba452ef4330
 ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/22/2019
 ms.locfileid: "72738171"

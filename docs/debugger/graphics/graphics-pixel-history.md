@@ -1,5 +1,5 @@
 ---
-title: 图形像素历史记录 |Microsoft Docs
+title: 图形像素历史记录 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,7 +12,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 8cb1b7a869915eebc561e1baf47082dd5dbc00df
 ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/22/2019
 ms.locfileid: "72735485"
@@ -22,27 +22,27 @@ Visual Studio 中的“图形像素历史记录”窗口可以帮助你了解，
 
  下面是“像素历史记录”窗口：
 
- ![其历史记录中包含三个 Direct3D 事件的像素。](media/gfx_diag_demo_pixel_history_orientation.png "gfx_diag_demo_pixel_history_orientation")
+ ![一个像素的历史记录中具有三个 Direct3D 事件。](media/gfx_diag_demo_pixel_history_orientation.png "gfx_diag_demo_pixel_history_orientation")
 
 ## <a name="understanding-the-pixel-history-window"></a>了解“像素历史记录”窗口
  通过使用“像素历史纪录”，你可以分析在某个帧期间，Direct3D 事件如何对呈现器目标的某一特定像素产生影响。 你可以将呈现问题准确定位到特定的 Direct3D 事件，即使后续事件 - 或同一个事件的后续基元 - 继续更改像素的最终颜色值。 例如，一个像素可能被错误呈现，然后被另一个半透明的像素遮盖，这样它们的颜色就会在帧缓冲区中相融合。 如果可用于指导你的只有呈现器目标的最终内容，这种问题将会很难诊断。
 
  “像素历史”窗口显示像素在所选帧过程中的完整历史记录。 窗口顶部的“最终帧缓存器”会显示出在帧的末尾写入帧缓冲区的颜色以及其他像素信息（例如像素所属的帧以及像素屏幕坐标。 该区域还包含“呈现 Alpha”复选框。 选中此复选框后，“最终帧缓存器”颜色和中间颜色值将会以一定的透明度呈现为棋盘样式。 如果清除复选框，颜色值的 Alpha 通道将被忽略。
 
- 窗口的底部会显示可能影响像素颜色的事件，以及代表帧缓冲区中像素的初始和最终颜色值的“初始”和“最终”伪事件。 初始颜色值由更改像素颜色的第一个事件确定（通常为 `Clear` 事件）。 像素的历史记录中始终存在这两个伪事件，即使没有其他事件影响到它。 当其他事件有可能影响到像素时，这些事件会显示在“初始”和“最终”事件之间。 可将这些事件展开以查看它们的详细信息。 对于如清除呈现器目标之类的简单事件，事件的效果只是一个颜色值。 更复杂的事件，例如绘制调用，则生成可能会参与像素颜色构成的一个或多个基元。
+ 窗口的底部会显示可能影响像素颜色的事件，以及代表帧缓冲区中像素的初始和最终颜色值的“初始”和“最终”伪事件 。 初始颜色值由更改像素颜色的第一个事件确定（通常为 `Clear` 事件）。 像素的历史记录中始终存在这两个伪事件，即使没有其他事件影响到它。 当其他事件有可能影响到像素时，这些事件会显示在“初始”和“最终”事件之间 。 可将这些事件展开以查看它们的详细信息。 对于如清除呈现器目标之类的简单事件，事件的效果只是一个颜色值。 更复杂的事件，例如绘制调用，则生成可能会参与像素颜色构成的一个或多个基元。
 
  事件绘制的基元由它们的基元类型和索引以及对象的基元总计数来标识。 例如，标识符“(6214) 中的三角形 (1456)”表示该基元对应 6214 个三角形组成的对象中的第 1456 个三角形。 每个基元标识符的左侧的是一个图标，总结基元对像素产生的效果。 影响像素颜色的基元由填充了生成颜色的圆角矩形表示。 代表不可能对像素颜色产生影响的基元的图标指示了像素被排除的原因。 这些图标将在本文后面的[基元排除](#exclusion)一节中进行说明。
 
  你可以展开每个基元来检查像素着色器输出是如何与现有的像素颜色合并产生最后生成的颜色的。 你也可以从这里检查或调试与基元相关的像素着色器代码，也可以进一步展开顶点着色器节点来检查顶点着色器输入。
 
-### <a name="exclusion"></a> 基元排除
+### <a name="primitive-exclusion"></a><a name="exclusion"></a> 基元排除
  如果基元被排除了影响像素颜色的可能性，造成这一排除的原因可能是多种的。 这个表格中所述的图标各代表一个原因：
 
 |图标|排除原因|
 |----------|--------------------------|
-|!["深度测试失败" 图标。](media/vsg_hist_icon_failed_depth.png "vsg_hist_icon_failed_depth")|由于没有通过深度测试，像素被排除。|
-|!["剪测试失败" 图标。](media/vsg_hist_icon_failed_scissor.png "vsg_hist_icon_failed_scissor")|由于未通过剪式测试，像素被排除。|
-|!["模具测试失败" 图标。](media/vsg_hist_icon_failed_stencil.png "vsg_hist_icon_failed_stencil")|由于未通过模具测试，像素被排除。|
+|![“深度测试失败”图标。](media/vsg_hist_icon_failed_depth.png "vsg_hist_icon_failed_depth")|由于没有通过深度测试，像素被排除。|
+|![“剪式测试失败”图标。](media/vsg_hist_icon_failed_scissor.png "vsg_hist_icon_failed_scissor")|由于未通过剪式测试，像素被排除。|
+|![“模具测试失败”图标。](media/vsg_hist_icon_failed_stencil.png "vsg_hist_icon_failed_stencil")|由于未通过模具测试，像素被排除。|
 
 ### <a name="draw-call-exclusion"></a>绘图调用排除
  如果绘图调用中的所有基元因未通过测试而不再影响呈现目标，则绘图调用将无法进行扩展，并且对应于排除原因的图标将显示在它的旁边。 绘图调用排除的原因与基元排除的原因类似，并且它们的图标也相似。

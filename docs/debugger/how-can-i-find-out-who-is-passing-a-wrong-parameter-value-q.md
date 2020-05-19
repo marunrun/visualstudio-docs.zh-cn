@@ -24,7 +24,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 42884cd6498f00cfe2df2d0396ff9ea6b03c2f98
 ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/22/2019
 ms.locfileid: "72734235"
@@ -41,15 +41,15 @@ ms.locfileid: "72734235"
 
 2. 右键单击该断点并选择“条件”。
 
-3. 在“断点条件”对话框中，单击“条件”复选框。 请参阅[高级断点](../debugger/using-breakpoints.md#BKMK_Specify_a_breakpoint_condition_using_a_code_expression)。
+3. 在“断点条件”对话框中，单击“条件”复选框 。 请参阅[高级断点](../debugger/using-breakpoints.md#BKMK_Specify_a_breakpoint_condition_using_a_code_expression)。
 
 4. 在文本框中输入一个表达式，例如 `Var==3`，此处 `Var` 是包含错误值的参数名称，`3` 是传给此参数的错误值。
 
-5. 选择“为真”单选按钮，单击“确定”按钮。
+5. 选择“为真”单选按钮，单击“确定”按钮 。
 
 6. 现在再次运行程序。 当 `Var` 参数的值为 `3` 时，断点导致程序在函数开始处暂停。
 
-7. 然后可以使用“调用堆栈”窗口查找调用函数并定位到其源代码。 有关详细信息，请参阅[如何：使用 "调用堆栈" 窗口](../debugger/how-to-use-the-call-stack-window.md)。
+7. 然后可以使用“调用堆栈”窗口查找调用函数并定位到其源代码。 有关详细信息，请参阅[如何：使用“调用堆栈”窗口](../debugger/how-to-use-the-call-stack-window.md)。
 
 ## <a name="see-also"></a>请参阅
 - [调试本机代码常见问题解答](../debugger/debugging-native-code-faqs.md)

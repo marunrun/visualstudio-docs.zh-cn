@@ -1,5 +1,5 @@
 ---
-title: 如何：指定调试器设置 |Microsoft Docs
+title: 如何：指定调试器设置 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -21,7 +21,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 66e9d0fb5b7d63402c9add3ddf06b3997bc0d7d9
 ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/22/2019
 ms.locfileid: "72732715"
@@ -33,7 +33,7 @@ ms.locfileid: "72732715"
 
 1. 在 **“工具”** 菜单上，单击 **“选项”** 。
 
-2. 在“选项”对话框中打开“调试”文件夹。
+2. 在“选项”对话框中打开“调试”文件夹 。
 
 3. 在“调试”文件夹中选择所需选项的类别。
 

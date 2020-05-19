@@ -1,5 +1,5 @@
 ---
-title: 使用调试器窗口检查数据 |Microsoft Docs
+title: 使用调试器窗口检查数据 | Microsoft Docs
 ms.custom: seodec18
 ms.date: 04/25/2018
 ms.topic: conceptual
@@ -11,7 +11,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 3c27d2b4436fc5defedcda44c4f7840760018ade
 ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/31/2019
 ms.locfileid: "73188539"

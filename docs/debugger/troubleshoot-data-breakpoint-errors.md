@@ -1,5 +1,5 @@
 ---
-title: 错误：无法设置数据断点 |Microsoft Docs
+title: 错误：无法设置数据断点 | Microsoft Docs
 ms.date: 12/3/2019
 ms.topic: troubleshooting
 f1_keywords:
@@ -17,71 +17,71 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 18fa63f2a6f4b6d789bad6f813cb3956a636a2d2
 ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 12/25/2019
 ms.locfileid: "75404088"
 ---
 # <a name="troubleshooting-data-breakpoint-errors"></a>数据断点错误疑难解答
-此页面将引导您解决在使用 "当值发生更改时中断" 时出现的常见错误
+此页面将引导你解决在使用“值发生更改时中断”时出现的常见错误
 
-## <a name="diagnosing-unable-to-set-data-breakpoint-errors"></a>诊断 "无法设置数据断点" 错误
+## <a name="diagnosing-unable-to-set-data-breakpoint-errors"></a>诊断“无法设置数据断点”错误
 > [!IMPORTANT]
-> .NET Core 3.0 和更高的支持托管数据断点。 可在[此处](https://dotnet.microsoft.com/download)下载最新版本。
+> .NET Core 3.0 和更高版本中支持托管数据断点。 可以在[此处](https://dotnet.microsoft.com/download)下载最新版本。
 
-下面是使用托管数据断点时可能发生的错误列表。 它们包含有关发生错误的原因以及解决错误的可能解决方案或解决方法的其他说明。
+下面是使用托管数据断点时可能发生的错误的列表。 它们包含有关发生错误的原因以及解决错误的可能解决方案或解决方法的其他说明。
 
-- *"目标进程使用的 .NET 版本不支持数据断点。数据断点需要 .NET Core 3.0 + 在 x86 或 x64 上运行。 "*
+- “目标进程使用的 .NET 版本不支持数据断点。数据断点需要在 x86 或 x64 上运行的 .NET Core 3.0 及更高版本。”
 
-    - 对托管数据断点的支持从 .NET Core 3.0 开始。 目前在3.0 的 .NET Core .NET Framework 或版本中不支持此方法。 
+    - 从 .NET Core 3.0 开始支持托管数据断点。 在 .NET Framework 以及低于 3.0 的 .NET Core 版本中，当前不支持该功能。 
     
-    - **解决方案**：这样做的解决方案是将项目升级到 .net Core 3.0。
+    - **解决方案**；此错误的解决方案是将项目升级到 .NET Core 3.0。
 
-- *"无法在托管堆上找到此值，因此无法对其进行跟踪。"*
-    - 在堆栈上声明的变量。
+- “托管堆上找不到此值，无法对其进行跟踪。”
+    - 变量在堆栈上声明。
         - 我们不支持为堆栈上创建的变量设置数据断点，因为此变量在函数退出后将无效。
         - **解决方法**：在使用变量的行上设置断点。
 
-    - 不是从下拉列表中展开的变量的 "当值发生更改时中断"。
-        - 调试器需要知道包含要跟踪的字段的对象。垃圾回收器可能会在堆中四处移动对象，以便调试器需要知道保存要跟踪的变量的对象。 
-        - **解决**方法：如果你使用的是要在其中设置数据断点的对象中的方法，请打开一个帧并使用 `locals/autos/watch` 窗口展开对象，并为所需的字段设置数据断点。
+    - 对变量使用“值发生更改时中断”（不是从下拉菜单展开）。
+        - 调试器在内部需要知道包含要跟踪的字段的对象。垃圾回收器可能会在堆中四处移动对象，因此调试器需要知道保存要跟踪的变量的对象。 
+        - **解决方法**：如果处于要对其设置数据断点的对象中的方法中，请向上移动一帧并使用 `locals/autos/watch` 窗口展开对象，然后为所需字段设置数据断点。
 
-- *"静态字段或静态属性不支持数据断点"。*
+- “静态字段或静态属性不支持数据断点。”
     
-    - 目前不支持静态字段和属性。 如果你对此功能感兴趣，请提供[反馈](#provide-feedback)。
+    - 目前不支持静态字段和属性。 如果对此功能感兴趣，请提供[反馈](#provide-feedback)。
 
-- *"无法跟踪结构的字段和属性。"*
+- “无法跟踪结构的字段和属性。”
 
-    - 目前不支持结构的字段和属性。 如果你对此功能感兴趣，请提供[反馈](#provide-feedback)。
+    - 目前不支持结构的字段和属性。 如果对此功能感兴趣，请提供[反馈](#provide-feedback)。
 
-- *"属性值已更改，不能再进行跟踪。"*
+- “属性值已更改，无法再进行跟踪。”
 
-    - 属性可能会更改在运行时计算它的方式，如果发生这种情况，属性所依赖的变量的数目会增加，并且可能会超出硬件限制。 请参阅下面的`"The property is dependent on more memory than can be tracked by the hardware."`。
+    - 属性可能会更改它在运行时的计算方式，如果发生这种情况，则属性所依赖的变量数会增加，并且可能会超出硬件限制。 请参阅下面的 `"The property is dependent on more memory than can be tracked by the hardware."`。
 
-- *"属性依赖于硬件无法跟踪的内存。"*
+- “此属性依赖的内存比硬件可跟踪的内存要多。”
     
-    - 每个体系结构都具有一组可以支持的字节数和硬件数据断点，并且你希望在其上设置数据断点的属性已超过该限制。 请参阅[数据断点硬件限制](#data-breakpoint-hardware-limitations)表，了解所使用的体系结构支持的硬件数据断点和字节数。 
-    - **解决方法**：在属性内可能发生更改的值上设置数据断点。
+    - 每个体系结构都具有一定数量的可以支持的字节和硬件数据断点，你希望对其设置数据断点的属性已超过该限制。 请参阅[数据断点硬件限制](#data-breakpoint-hardware-limitations)表，以了解有多少硬件支持的数据断点和字节可用于所使用的体系结构。 
+    - **解决方法**：在属性中对可能发生更改的值设置数据断点。
 
-- *"使用旧C#的表达式计算器时不支持数据断点"。*
+- “使用旧版 C# 表达式计算器时，不支持数据断点。”
 
-    - 仅在非旧C#表达式计算器上支持数据断点。 
-    - **解决方案**：通过转到 " C# `Debug -> Options`" `Debugging -> General` 取消选中 "`"Use the legacy C# and VB expression evaluators"`，禁用旧的表达式计算器。
+    - 仅在非旧版 C# 表达式计算器上才支持数据断点。 
+    - **解决方案**；通过转到 `Debug -> Options`，然后在 `Debugging -> General` 下取消选中 `"Use the legacy C# and VB expression evaluators"`，来禁用旧版 C# 表达式计算器。
 
 ## <a name="data-breakpoint-hardware-limitations"></a>数据断点硬件限制
 
-你的程序在其上运行的体系结构（平台配置）的硬件数据断点数量有限。 下表列出了可用于每个体系结构的寄存器数。
+用于运行程序的体系结构（平台配置）可使用的硬件数据断点数量有限。 下表指出每个体系结构可使用的寄存器数。
 
-| 体系结构 | 支持的硬件数据断点数 | 最大字节大小|
+| 体系结构 | 硬件支持的数据断点数 | 最大字节大小|
 | :-------------: |:-------------:| :-------------:|
 | x86 | 4 | 4 |
-| x64 | 4 | 8 |
+| X64 | 4 | 8 |
 | ARM | 1 | 4 |
 | ARM64 | 2 | 8 |
 
 ## <a name="provide-feedback"></a>提供反馈
-有关此功能的任何问题或建议，请通过 "帮助" > 发送反馈 > 在 IDE 或[开发人员社区](https://developercommunity.visualstudio.com/)中[报告问题](../ide/how-to-report-a-problem-with-visual-studio.md)。
+有关此功能的任何问题或建议，请通过 IDE 中的“帮助”>“发送反馈”>[“报告问题”](../ide/how-to-report-a-problem-with-visual-studio.md)或是在[开发人员社区](https://developercommunity.visualstudio.com/)中告知我们。
 
-## <a name="see-also"></a>另请参阅
-- [.Net Core 3.0 中的 "值更改时中断"](using-breakpoints.md#BKMK_set_a_data_breakpoint_native_cplusplus)。
-- [DevBlog：值更改时中断： Visual Studio 2019 中 .NET Core 的数据断点](https://devblogs.microsoft.com/visualstudio/break-when-value-changes-data-breakpoints-for-net-core-in-visual-studio-2019/)
+## <a name="see-also"></a>请参阅
+- [在 .NET Core 3.0 中使用“值发生更改时中断”](using-breakpoints.md#BKMK_set_a_data_breakpoint_native_cplusplus)。
+- [DevBlog：值发生更改时中断：Visual Studio 2019 中用于 .NET Core 的数据断点](https://devblogs.microsoft.com/visualstudio/break-when-value-changes-data-breakpoints-for-net-core-in-visual-studio-2019/)

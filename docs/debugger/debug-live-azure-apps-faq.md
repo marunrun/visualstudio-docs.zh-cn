@@ -12,7 +12,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 5e0d8839daac2d470f4275257bfcfbc83fc7a62f
 ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/25/2019
 ms.locfileid: "72911398"
@@ -31,7 +31,7 @@ ms.locfileid: "72911398"
 
 #### <a name="how-does-the-snapshot-debugger-load-symbols"></a>Snapshot Debugger 如何加载符号？
 
-若要使用 Snapshot Debugger，本地应用程序或部署到 Azure 应用服务的应用程序必须具有匹配的符号。 （目前不支持嵌入式 Pdb。）Snapshot Debugger 会自动从 Azure App Service 下载符号。 自 Visual Studio 2017 版本 15.2 起，部署到 Azure 应用服务时，也会同时部署应用的符号。
+若要使用 Snapshot Debugger，本地应用程序或部署到 Azure 应用服务的应用程序必须具有匹配的符号。 （目前不支持嵌入的 PDB。）Snapshot Debugger 将自动从 Azure 应用服务下载符号。 自 Visual Studio 2017 版本 15.2 起，部署到 Azure 应用服务时，也会同时部署应用的符号。
 
 #### <a name="does-the-snapshot-debugger-work-against-release-builds-of-my-application"></a>Snapshot Debugger 是否适用于我的应用程序的发布版本？
 
@@ -49,7 +49,7 @@ ms.locfileid: "72911398"
 
 可以通过执行以下步骤来卸载应用服务上的 Snapshot Debugger 站点扩展：
 
-1. 通过 Visual Studio 中的 Cloud Explorer 或 Azure 门户关闭应用服务。
+1. 通过 Visual Studio 中的 Cloud Explorer 或 Azure 门户禁用应用服务。
 1. 导航到应用服务的 Kudu 站点（即，yourappservice.scm.azurewebsites.net）并导航到“站点扩展”。
 1. 单击 Snapshot Debugger 站点扩展上的 X 以将其删除。
 
@@ -57,28 +57,28 @@ ms.locfileid: "72911398"
 
 Snapshot Debugger 必须打开一组端口才能调试在 Azure 中获取的快照，这些端口与远程调试所需的端口相同。 [可以在此处找到端口列表](../debugger/remote-debugger-port-assignments.md)。
 
-#### <a name="how-do-i-disable-the-remote-debugger-extension"></a>如何实现禁用远程调试器扩展吗？
+#### <a name="how-do-i-disable-the-remote-debugger-extension"></a>如何禁用远程调试器扩展？
 
 对于应用服务：
-1. 通过应用服务的 Azure 门户禁用远程调试器扩展。
-2. Azure 门户 > 应用程序服务资源边栏选项卡 >*应用程序设置*
-3. 导航到 "*调试*" 部分，然后单击 "*关闭*" 按钮进行*远程调试*。
+1. 通过 Azure 门户为应用服务禁用远程调试器扩展。
+2. Azure 门户 > 你的应用程序服务资源边栏选项卡 >“应用程序设置”
+3. 导航到“调试”部分，然后单击“远程调试”的“关闭”按钮 。
 
 对于 AKS：
-1. 更新 Dockerfile，删除[Docker 映像上与 Visual Studio Snapshot Debugger](https://github.com/Microsoft/vssnapshotdebugger-docker)相对应的部分。
-2. 重新生成并重新部署已修改的 Docker 映像。
+1. 更新 Dockerfile，以删除与 [Docker 映像上的 Visual Studio Snapshot Debugger](https://github.com/Microsoft/vssnapshotdebugger-docker) 对应的部分。
+2. 重新生成并重新部署修改后的 Docker 映像。
 
-对于虚拟机/虚拟机规模集，请删除远程调试器扩展、证书、KeyVaults 和入站 NAT 池，如下所示：
+对于虚拟机/虚拟机规模集，请按照以下步骤删除远程调试器扩展、证书、KeyVault 和入站 NAT 池：
 
 1. 删除远程调试器扩展
 
-   可以通过多种方式来禁用虚拟机和虚拟机规模集的远程调试器：
+   可通过多种方法为虚拟机和虚拟机规模集禁用远程调试器：
 
       - 通过 Cloud Explorer 禁用远程调试器
 
-         - Cloud Explorer > 虚拟机资源 > 禁用调试（禁用 Cloud Explorer 上虚拟机规模集的调试）。
+         - Cloud Explorer > 你的虚拟机资源 >“禁用调试”（对于 Cloud Explorer 上的虚拟机规模集，不存在“禁用调试”）。
 
-      - 通过 PowerShell 脚本/Cmdlet 禁用远程调试器
+      - 使用 PowerShell 脚本/Cmdlet 禁用远程调试器
 
          对于虚拟机：
 
@@ -95,19 +95,19 @@ Snapshot Debugger 必须打开一组端口才能调试在 Azure 中获取的快�
          ```
 
       - 通过 Azure 门户禁用远程调试器
-         - Azure 门户 > 虚拟机/虚拟机规模集资源边栏选项卡 > 扩展
-         - 卸载 VisualStudio。 VSRemoteDebugger 扩展
+         - Azure 门户 > 你的虚拟机/虚拟机规模集资源边栏选项卡 >“扩展”
+         - 卸载 Microsoft.VisualStudio.Azure.RemoteDebug.VSRemoteDebugger 扩展
 
          > [!NOTE]
-         > 虚拟机规模集-门户不允许删除 DebuggerListener 端口。 你将需要使用 Azure PowerShell。 有关详细信息，请参见以下内容。
+         > 虚拟机规模集：门户不允许删除 DebuggerListener 端口。 你将需要使用 Azure PowerShell。 有关详细信息，请参见以下内容。
 
 2. 删除证书和 Azure KeyVault
 
-   为虚拟机或虚拟机规模集安装远程调试器扩展时，将创建客户端证书和服务器证书，以通过 Azure 虚拟机/虚拟机规模集资源对 VS 客户端进行身份验证。
+   在为虚拟机或虚拟机规模集安装远程调试器扩展时，将同时创建客户端证书和服务器证书，以使用 Azure 虚拟机/虚拟机规模集资源对 VS 客户端进行身份验证。
 
    - 客户端证书
 
-      此证书是位于 Cert：/CurrentUser/My/中的自签名证书
+      此证书是自签名证书，位于 Cert:/CurrentUser/My/
 
       ```
       Thumbprint                                Subject
@@ -124,9 +124,9 @@ Snapshot Debugger 必须打开一组端口才能调试在 Azure 中获取的快�
       ```
 
    - 服务器证书
-      - 相应的服务器证书指纹作为机密部署到 Azure KeyVault。 VS 将尝试在对应于虚拟机或虚拟机规模集资源的区域中查找或创建前缀为 MSVSAZ * 的 KeyVault。 所有虚拟机或虚拟机规模集部署到该区域的资源将共享同一 KeyVault。
-      - 若要删除服务器证书指纹密码，请跳到 Azure 门户，并在承载资源的同一区域中查找 MSVSAZ * KeyVault。 删除应该标记的机密 `remotedebugcert<<ResourceName>>`
-      - 还需要通过 PowerShell 从资源中删除服务器机密。
+      - 相应的服务器证书指纹已作为机密部署到 Azure KeyVault。 VS 将尝试在对应于虚拟机或虚拟机规模集资源的区域中找到或创建带有 MSVSAZ* 前缀的 KeyVault。 因此，部署到该区域的所有虚拟机或虚拟机规模集资源都将共享同一 KeyVault。
+      - 若要删除服务器证书指纹机密，请转到 Azure 门户，然后在托管资源的同一区域中找到 MSVSAZ* KeyVault。 删除标记为 `remotedebugcert<<ResourceName>>` 的机密
+      - 你还需要通过 PowerShell 从资源中删除服务器机密。
 
       对于虚拟机：
 
@@ -142,9 +142,9 @@ Snapshot Debugger 必须打开一组端口才能调试在 Azure 中获取的快�
       Update-AzVmss -ResourceGroupName $rgName -VMScaleSetName $vmssName -VirtualMachineScaleSet $vmss
       ```
 
-3. 删除所有 DebuggerListener 入站 NAT 池（仅虚拟机规模集）
+3. 删除所有 DebuggerListener 入站 NAT 池（仅限虚拟机规模集）
 
-   远程调试器引入了 DebuggerListener 的绑定 NAT 池，这些池应用于规模集的负载均衡器。
+   远程调试器引入了 DebuggerListener 入站 NAT 池，这些池应用于规模集的负载均衡器。
 
    ```powershell
    $inboundNatPools = $vmss.VirtualMachineProfile.NetworkProfile.NetworkInterfaceConfigurations.IpConfigurations.LoadBalancerInboundNatPools
@@ -158,30 +158,30 @@ Snapshot Debugger 必须打开一组端口才能调试在 Azure 中获取的快�
    }
    ```
 
-#### <a name="how-do-i-disable-snapshot-debugger"></a>如何实现禁用 Snapshot Debugger？
+#### <a name="how-do-i-disable-snapshot-debugger"></a>如何禁用 Snapshot Debugger？
 
 对于应用服务：
-1. 通过应用服务的 Azure 门户禁用 Snapshot Debugger。
-2. Azure 门户 > 应用程序服务资源边栏选项卡 >*应用程序设置*
-3. 删除 Azure 门户中的以下应用设置，并保存所做的更改。
+1. 通过 Azure 门户为应用服务禁用 Snapshot Debugger。
+2. Azure 门户 > 你的应用程序服务资源边栏选项卡 >“应用程序设置”
+3. 在 Azure 门户中删除以下应用设置，然后保存更改。
    - INSTRUMENTATIONENGINE_EXTENSION_VERSION
    - SNAPSHOTDEBUGGER_EXTENSION_VERSION
 
    > [!WARNING]
-   > 对应用程序设置的任何更改都将启动应用程序重启。 有关应用程序设置的详细信息，请参阅[在 Azure 门户中配置应用服务应用](/azure/app-service/web-sites-configure)。
+   > 对应用程序设置的所有更改都会启动应用重启。 有关应用程序设置的详细信息，请参阅[在 Azure 门户中配置应用服务应用](/azure/app-service/web-sites-configure)。
 
 对于 AKS：
-1. 更新 Dockerfile，删除[Docker 映像上与 Visual Studio Snapshot Debugger](https://github.com/Microsoft/vssnapshotdebugger-docker)相对应的部分。
-2. 重新生成并重新部署已修改的 Docker 映像。
+1. 更新 Dockerfile，以删除与 [Docker 映像上的 Visual Studio Snapshot Debugger](https://github.com/Microsoft/vssnapshotdebugger-docker) 对应的部分。
+2. 重新生成并重新部署修改后的 Docker 映像。
 
 对于虚拟机/虚拟机规模集：
 
-可以通过多种方式来禁用 Snapshot Debugger：
-- Cloud Explorer > 虚拟机/虚拟机规模集资源 > 禁用诊断
+有多种方法可以禁用 Snapshot Debugger：
+- Cloud Explorer > 你的虚拟机/虚拟机规模集资源 >“禁用诊断”
 
-- Azure 门户 > 虚拟机/虚拟机规模集资源边栏选项卡 > 扩展 > 卸载 VMDiagnosticsSettings 扩展
+- Azure 门户 > 你的虚拟机/虚拟机规模集资源边栏选项卡 >“扩展”> 卸载 Microsoft.Insights.VMDiagnosticsSettings 扩展
 
-- [Az powershell](/powershell/azure/overview)中的 powershell cmdlet
+- 来自 [Az PowerShell](/powershell/azure/overview) 的 PowerShell Cmdlet
 
    虚拟机：
 
@@ -200,6 +200,6 @@ Snapshot Debugger 必须打开一组端口才能调试在 Azure 中获取的快�
 
 - [在 Visual Studio 中进行调试](../debugger/index.yml)
 - [使用快照调试器调试实时 ASP.NET 应用](../debugger/debug-live-azure-applications.md)
-- [使用 Snapshot Debugger 调试实时 ASP.NET Azure Virtual Machines\Virtual 计算机规模集](../debugger/debug-live-azure-virtual-machines.md)
+- [使用 Snapshot Debugger 调试实时 ASP.NET Azure 虚拟机或虚拟机规模集](../debugger/debug-live-azure-virtual-machines.md)
 - [使用 Snapshot Debugger 调试实时 ASP.NET Azure Kubernetes](../debugger/debug-live-azure-kubernetes.md)
-- [快照调试的疑难解答和已知问题](../debugger/debug-live-azure-apps-troubleshooting.md)
+- [快照调试疑难解答和已知问题](../debugger/debug-live-azure-apps-troubleshooting.md)

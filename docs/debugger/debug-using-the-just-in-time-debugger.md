@@ -1,5 +1,5 @@
 ---
-title: 使用实时调试器进行调试 |Microsoft Docs
+title: 使用实时调试器进行调试 | Microsoft Docs
 ms.date: 09/24/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,7 +12,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: b842fa4ce7c75e061a58d980cefe5648094c2ef7
 ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/31/2019
 ms.locfileid: "73188666"
@@ -26,7 +26,7 @@ ms.locfileid: "73188666"
 > [!TIP]
 > 如果只想让实时调试器对话框停止显示，而不安装 Visual Studio，请参阅[禁用实时调试器](../debugger/just-in-time-debugging-in-visual-studio.md)。 如果已安装 Visual Studio，可能需要[从 Windows 注册表禁用实时调试](#disable-just-in-time-debugging-from-the-windows-registry)。
 
-## <a name="BKMK_Enabling"></a> 在 Visual Studio 中启用或禁用实时调试
+## <a name="enable-or-disable-just-in-time-debugging-in-visual-studio"></a><a name="BKMK_Enabling"></a> 在 Visual Studio 中启用或禁用实时调试
 
 >[!NOTE]
 >若要启用或禁用实时调试，必须以管理员身份运行 Visual Studio。 启用或禁用实时调试会设置一个注册表项，可能需要管理员权限来更改此注册表项。 若要以管理员身份打开 Visual Studio，右键单击 Visual Studio 应用程序，然后选择**以管理员身份运行**。
@@ -39,7 +39,7 @@ ms.locfileid: "73188666"
 
    ![启用或禁用 JIT 调试](../debugger/media/dbg-jit-enable-or-disable.png "启用或禁用 JIT 调试")
 
-1. 在“为这些类型的代码启用实时调试”框中，选择希望通过实时调试进行调试的代码类型：“托管”、“本机”和/或“脚本”。
+1. 在“启用这些代码类型的实时调试”框中，选择希望通过实时调试进行调试的代码类型：“托管”、“本机”和/或“脚本”。
 
 1. 选择“确定”。
 
@@ -51,9 +51,9 @@ ms.locfileid: "73188666"
 
 **若要通过编辑注册表禁用实时调试，请执行以下操作：**
 
-1. 从 Windows“开始”菜单，运行“注册表编辑器”(regedit.exe)。
+1. 从 Windows“开始”菜单，运行“注册表编辑器”(regedit.exe) 。
 
-2. 在 "**注册表编辑器**" 窗口中，找到并删除以下注册表项：
+2. 在“注册表编辑器”窗口中，找到并删除下列注册表项：
 
     - **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework\DbgManagedDebugger**
 
@@ -61,15 +61,15 @@ ms.locfileid: "73188666"
 
     ![JIT 注册表项](../debugger/media/dbg-jit-registry.png "JIT 注册表项")
 
-3. 如果计算机运行的是64位操作系统，还请删除以下注册表项：
+3. 如果你的计算机运行的是 64 位操作系统，还请删除下列注册表项：
 
     - **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework\DbgManagedDebugger**
 
     - **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows NT\CurrentVersion\AeDebug\Debugger**
 
-    请确保不要删除或更改任何其他注册表项。
+    确保不要删除或更改任何其他注册表项。
 
-5. 关闭 "**注册表编辑器**" 窗口。
+5. 关闭“注册表编辑器”窗口。
 
 ## <a name="enable-just-in-time-debugging-of-a-windows-form"></a>启用 Windows 窗体的实时调试
 
@@ -79,7 +79,7 @@ ms.locfileid: "73188666"
 
 若要启用实时调试而不是标准 Windows 窗体错误处理，请添加以下设置：
 
-- 在 machine.config 或 \<应用名称>.exe.config 文件的 `system.windows.forms` 部分中，将 `jitDebugging` 值设置为 `true`****:
+- 在 machine.config 或 \<应用名称>.exe.config 文件的 `system.windows.forms` 部分中，将 `jitDebugging` 值设置为 `true`**** :
 
     ```xml
     <configuration>
@@ -93,18 +93,18 @@ ms.locfileid: "73188666"
    [assembly:System::Diagnostics::DebuggableAttribute(true, true)];
    ```
 
-   有关更多信息，请参见<xref:System.Diagnostics.DebuggableAttribute>。
+   有关详细信息，请参阅 <xref:System.Diagnostics.DebuggableAttribute>。
 
-## <a name="BKMK_Using_JIT"></a>使用实时调试
+## <a name="use-just-in-time-debugging"></a><a name="BKMK_Using_JIT"></a>使用实时调试
 此示例演示在应用引发错误时如何进行实时调试。
 
 - 必须安装 Visual Studio，才能按照以下步骤操作。 如果未安装 Visual Studio，则可以免费下载 [Visual Studio Community Edition](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&rel=15)。
 
-- 请务必依次选择“工具” > “选项” > “调试” > “实时”，[启用](#BKMK_Enabling)实时调试。
+- 请务必依次选择“工具” > “选项” > “调试” > “实时”，[启用](#BKMK_Enabling)实时调试   。
 
 本示例会在 Visual Studio 中创建 C# 控制台应用，该应用可引发 [NullReferenceException](/dotnet/api/system.nullreferenceexception)。
 
-1. 在 visual Studio 中，创建C#名为*ThrowsNullException*的控制台应用（**文件** > **新建** > **项目** > **Visual C#**  > **控制台应用程序**）。 有关在 Visual Studio 中创建项目的详细信息，请参阅[演练：创建简单的应用程序](../get-started/csharp/tutorial-wpf.md)。
+1. 在 Visual Studio 中，创建一个名为 ThrowsNullException 的 C# 控制台应用（“文件” > “新建” > “项目” > “Visual C#” > “控制台应用程序”）。 有关在 Visual Studio 中创建项目的详细信息，请参阅[演练：创建简单的应用程序](../get-started/csharp/tutorial-wpf.md)。
 
 1. 在 Visual Studio 中打开项目时，请打开 *Program.cs* 文件。 将 Main() 方法替换为以下代码，该代码会在控制台中打印一行，然后引发 NullReferenceException：
 
@@ -116,25 +116,25 @@ ms.locfileid: "73188666"
    }
    ```
 
-1. 若要生成解决方案，请选择“调试”（默认值） 或“发布”配置，然后选择“生成” > “重新生成解决方案”.
+1. 若要生成解决方案，请选择“调试”（默认值） 或“发布”配置，然后选择“生成” > “重新生成解决方案”   .
 
    > [!NOTE]
-   > - 选择 "**调试**配置" 以获取完整的调试体验。
-   > - 如果选择[发布](../debugger/how-to-set-debug-and-release-configurations.md)配置，必须先关闭[仅我的代码](../debugger/just-my-code.md)才能运行此过程。 可在“工具” > “选项” > “调试”下，取消选择“启用仅我的代码”。
+   > - 选择“调试”配置以获得完整调试体验。
+   > - 如果选择[发布](../debugger/how-to-set-debug-and-release-configurations.md)配置，必须先关闭[仅我的代码](../debugger/just-my-code.md)才能运行此过程。 可在“工具” > “选项” > “调试”下，取消选择“启用仅我的代码”   。
 
    有关生成配置的详细信息，请参阅[了解生成配置](../ide/understanding-build-configurations.md)。
 
 1. 在 C# 项目文件夹 ( *...\ThrowsNullException\ThrowsNullException\bin\Debug*或 *...\ThrowsNullException\ThrowsNullException\bin\Release*) 中打开生成的应用 *ThrowsNullException.exe*。
 
-   应会看到以下命令窗口：
+   应看到以下命令窗口：
 
    ![ThrowsNullExceptionConsole](../debugger/media/throwsnullexceptionconsole.png "ThrowsNullExceptionConsole")
 
-1. 此时将打开 "**选择实时调试器**" 对话框。
+1. “选择实时调试器”对话框将打开。
 
    ![JustInTimeDialog](../debugger/media/justintimedialog.png "JustInTimeDialog")
 
-   在“可用调试器”下，选择“\<首选 Visual Studio 版本>的新实例”（如果尚未选择）。
+   在“可用调试器”下，选择“\<首选 Visual Studio 版本>的新实例”（如果尚未选择） 。
 
 1. 选择“确定”。
 
@@ -147,35 +147,35 @@ ms.locfileid: "73188666"
 > [!CAUTION]
 > 如果应用包含不受信任的代码，则会出现安全警告对话框，让你可决定是否继续进行调试。 继续调试前，请确定是否信任该代码。 代码是否为自己编写的？ 如果应用程序在远程计算机上运行，你能否识别进程的名称？ 如果应用在本地运行，请考虑计算机上运行恶意代码的可能性。 如果决定信任该代码，请选择“确定”。 否则，请选择“取消”。
 
-## <a name="jit_errors"></a>实时调试疑难解答
+## <a name="troubleshoot-just-in-time-debugging"></a><a name="jit_errors"></a> 实时调试疑难解答
 
 如果在应用崩溃时实时调试不启动，即使 Visual Studio 中已启用实时调试也是如此，则：
 
 - Windows 错误报告可能会接管计算机上的错误处理。
 
-  若要解决此问题，请使用注册表编辑器将**值**为**1**的**已禁用**的**DWORD 值**添加到以下注册表项：
+  若要修复此问题，请使用注册表编辑器向以下注册表项添加值为“已禁用”的“DWORD 值”，以及值为“1”的“数值数据”   ：
 
-  - **HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\Windows 错误报告**
+  - HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\Windows Error Reporting
 
-  - （适用于64位计算机）： **HKEY_LOCAL_MACHINE\Software\WOW6432Node\Microsoft\Windows\Windows 错误报告**
+  - （对于 64 位计算机）：HKEY_LOCAL_MACHINE\Software\WOW6432Node\Microsoft\Windows\Windows Error Reporting
 
   有关详细信息，请参阅 [.WER 设置](/windows/desktop/wer/wer-settings)。
 
 - 已知的 Windows 问题可能导致实时调试器启动失败。
 
-  解决方法是将值为**1**的**自动** **值**的**DWORD 值**添加到以下注册表项：
+  修复方法是向以下注册表项添加值为“自动”的“DWORD 值”，以及值为“1”的“数值数据”   ：
 
   - **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AeDebug**
 
-  - （适用于64位计算机）： **HKEY_LOCAL_MACHINE\Software\WOW6432Node\Microsoft\Windows NT\CurrentVersion\AeDebug**
+  - （对于 64 位计算机）：HKEY_LOCAL_MACHINE\Software\WOW6432Node\Microsoft\Windows NT\CurrentVersion\AeDebug
 
-在实时调试过程中，你可能会看到以下错误消息：
+你可能会在实时调试过程中遇到以下错误消息：
 
 - **无法附加到崩溃进程。指定的程序不是 Windows 或 MS-DOS 程序。**
 
     调试器尝试附加到在另一个用户下运行的进程。
 
-    若要解决此问题，请在 Visual Studio 中依次打开“调试” > “附加到进程”，然后在“可用进程”列表中查找要调试的进程。 如果不清楚进程名称，请在“Visual Studio 实时调试器”对话框中查找进程 ID。 在“可用进程”列表中选择该进程，然后选择“附加”。 选择“否”可关闭“实时调试器”对话框。
+    若要解决此问题，请在 Visual Studio 中依次打开“调试” > “附加到进程”，然后在“可用进程”列表中查找要调试的进程  。 如果不清楚进程名称，请在“Visual Studio 实时调试器”对话框中查找进程 ID。 在“可用进程”列表中选择该进程，然后选择“附加” 。 选择“否”可关闭“实时调试器”对话框。
 
 - **未能启动调试器，因为没有用户登录。**
 
@@ -187,11 +187,11 @@ ms.locfileid: "73188666"
 
     调试器试图创建的 COM 类未进行注册，可能是由安装问题导致。
 
-    若要解决此问题，请使用 Visual Studio 安装程序重新安装或修复 Visual Studio 安装。
+    若要修复此问题，请使用 Visual Studio 安装程序重新安装或修复 Visual Studio 安装。
 
 ## <a name="see-also"></a>请参阅
 
 - [调试器安全](../debugger/debugger-security.md)
 - [初探调试器](../debugger/debugger-feature-tour.md)
-- ["选项"、"调试"、"实时" 对话框](../debugger/just-in-time-debugging-options-dialog-box.md)
-- [安全警告附加到不受信任的用户所拥有的进程可能很危险。如果以下信息看上去可疑或者你无法确定，请勿附加到此进程](../debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user.md)
+- [“实时”对话框 ->“选项”->“调试”](../debugger/just-in-time-debugging-options-dialog-box.md)
+- [安全警告：附加到不受信任的用户所拥有的进程可能很危险。如果以下信息看上去可疑或者你无法确定，请勿附加到此进程](../debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user.md)

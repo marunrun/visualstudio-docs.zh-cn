@@ -1,5 +1,5 @@
 ---
-title: 如何：编辑寄存器值 |Microsoft Docs
+title: 如何：编辑寄存器值 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -21,14 +21,14 @@ ms.workload:
 - multiple
 ms.openlocfilehash: b3ccaa124b64ad462f633e760695f931afaae531
 ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/22/2019
 ms.locfileid: "72733421"
 ---
-# <a name="how-to-edit-a-register-value-c-c-visual-basic-f"></a>如何：编辑寄存器值（C#、 C++、Visual Basic、） F#
+# <a name="how-to-edit-a-register-value-c-c-visual-basic-f"></a>如何：编辑寄存器值（C#、C++、Visual Basic、F#）
 
-只有在“选项”对话框中的“调试”节点下启用了地址级调试后，“寄存器”窗口才可用。
+只有在“选项”对话框中的“调试”节点下启用了地址级调试后，“寄存器”窗口才可用 。
 
 ### <a name="to-change-the-value-of-a-register"></a>更改寄存器值
 

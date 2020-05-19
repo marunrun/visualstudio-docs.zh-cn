@@ -1,5 +1,5 @@
 ---
-title: 刷新 UWP 应用 |Microsoft Docs
+title: 刷新 UWP 应用 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -21,14 +21,14 @@ ms.workload:
 - uwp
 ms.openlocfilehash: 0b1d19c0b607d2c5a09fddc9d4550230e478d57a
 ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/22/2019
 ms.locfileid: "72730314"
 ---
 # <a name="refresh-a-uwp-app-in-visual-studio"></a>在 Visual Studio 中刷新 UWP 应用
 
- 你可以在调试时对代码进行更改，然后通过选择 "**调试**" 工具栏上的 "**刷新 Windows 应用程序**" 按钮，使用 JavaScript 刷新 UWP 应用。 选择此按钮将重新加载应用程序，但不会停止并重新启动调试器。 通过“刷新”功能，可修改 HTML、CSS 和 JavaScript 代码并迅速看到结果。 UWP 应用支持此功能。
+ 可在进行调试时对代码进行更改，然后通过选择“调试”工具栏上的“刷新 Windows 应用”按钮，刷新使用 JavaScript 的 UWP 应用 。 选择此按钮将重新加载应用程序，但不会停止并重新启动调试器。 通过“刷新”功能，可修改 HTML、CSS 和 JavaScript 代码并迅速看到结果。 UWP 应用支持此功能。
 
  刷新功能不保持应用程序状态，也不反映对应用程序的以下更改：
 
@@ -47,7 +47,7 @@ ms.locfileid: "72730314"
 
 ### <a name="to-refresh-an-app"></a>刷新应用程序
 
-1. 在 Visual Studio 中打开 UWP 项目后，选择 "**本地计算机**" 作为调试目标。
+1. 在 Visual Studio 中打开 UWP 项目后，选择“本地计算机”作为调试目标。
 
      ![选择调试目标列表](../debugger/media/js_select_target.png "JS_Select_Target")
 
@@ -55,11 +55,11 @@ ms.locfileid: "72730314"
 
 4. 切换到 Visual Studio。
 
-5. 在 UWP 应用的主页中，编辑一些 HTML。
+5. 在 UWP 应用的主页中，编辑其中一些 HTML。
 
-7. 单击 "**刷新 windows 应用程序**" 按钮，该按钮如下所示： "![刷新 windows 应用程序" 按钮](../debugger/media/js_refresh.png "JS_Refresh")。 （或按 F4。）
+7. 单击“刷新 Windows 应用”按钮，该按钮如下所示：![“刷新 Windows 应用”按钮](../debugger/media/js_refresh.png "JS_Refresh")。 （或按 F4。）
 
-8. 切换到该应用程序。 应用重新加载，并使用更新的 HTML 来呈现应用。
+8. 切换到该应用程序。 应用重载，并使用更新的 HTML 呈现应用。
 
 ## <a name="see-also"></a>请参阅
 - [快速入门：调试 HTML 和 CSS](../debugger/quickstart-debug-html-and-css.md)

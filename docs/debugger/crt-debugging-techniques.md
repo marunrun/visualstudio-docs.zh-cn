@@ -1,5 +1,5 @@
 ---
-title: CRT 调试技术 |Microsoft Docs
+title: CRT 调试方法 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -21,7 +21,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 88cdc78fd739de412b4cf796d0ca7a42f9174e0a
 ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62564029"
@@ -36,7 +36,7 @@ ms.locfileid: "62564029"
 
  [用于报告的宏](../debugger/macros-for-reporting.md)
 
- 提供有关 _RPTn 和 _RPTFn 宏（在 CRTDBG.H 中定义）的信息，它们取代了用于调试的 `printf` 语句。
+ 提供有关 _RPTn 和 _RPTFn 宏（在 CRTDBG.H 中定义）的信息，它们取代了用于调试的 `printf` 语句 。
 
  [堆分配函数的调试版本](../debugger/debug-versions-of-heap-allocation-functions.md)
 
@@ -56,5 +56,5 @@ ms.locfileid: "62564029"
 
 ## <a name="related-sections"></a>相关章节
 
-- [调试本机代码](../debugger/debugging-native-code.md)-于 c 语言中讨论的一些常见调试问题和技术和C++应用程序。
-- [调试器安全](../debugger/debugger-security.md)-提供有关调试更安全的建议。
+- [调试本机代码](../debugger/debugging-native-code.md) - 讨论 C 和 C++ 应用程序的一些常见调试问题和方法。
+- [调试器安全性](../debugger/debugger-security.md) - 针对如何实现更安全的调试提供建议。

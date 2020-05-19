@@ -1,5 +1,5 @@
 ---
-title: "\"数据集可视化工具\" 对话框 |Microsoft Docs"
+title: “数据集可视化工具”对话框 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -21,7 +21,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 1e215d4a52965b4e89bc3a01b15da57fc8919437
 ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/22/2019
 ms.locfileid: "72745599"
@@ -32,7 +32,7 @@ ms.locfileid: "72745599"
  可以在此可视化工具中对这些对象进行更改。 所做的更改会在提交一个行后立即保存。
 
 ## <a name="uielement-list"></a>UIElement 列表
- 表使用此下拉列表框选择要可视化的数据集中的表。
+ 表格。使用此下拉列表框，在要对其进行可视化处理的数据集中选择一个表。
 
 ## <a name="see-also"></a>请参阅
 

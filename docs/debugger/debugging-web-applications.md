@@ -1,5 +1,5 @@
 ---
-title: 调试 Web 应用程序 |Microsoft Docs
+title: 调试 Web 应用程序 | Microsoft Docs
 ms.date: 11/05/2019
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,22 +15,22 @@ ms.workload:
 - multiple
 ms.openlocfilehash: b1a7727f93e3f4fe279bb9cc009e61a3fdd70a15
 ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/07/2019
 ms.locfileid: "73714450"
 ---
 # <a name="debugging-web-applications"></a>调试 Web 应用程序
 
-本文提供的链接可帮助你调试不同类型的 web 应用程序。
+本文提供的链接可帮助你调试不同类型的 Web 应用程序。
 
 - 调试 ASP.NET 应用程序
 
   有关启用 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 应用程序调试所需的步骤，请参阅[调试 ASP.NET 应用程序](how-to-enable-debugging-for-aspnet-applications.md)。
 
-- 调试 ASP.NET 中的客户端脚本
+- 在 ASP.NET 中调试客户端脚本
 
-  有关必需的步骤，请参阅博客文章[Microsoft Edge 中的调试 JavaScript](https://devblogs.microsoft.com/visualstudio/debug-javascript-in-microsoft-edge-from-visual-studio/)和此[Post for Google Chrome](https://devblogs.microsoft.com/aspnet/client-side-debugging-of-asp-net-projects-in-google-chrome)。
+  有关所需步骤，请参阅博客文章[在 Microsoft Edge 中调试 JavaScript](https://devblogs.microsoft.com/visualstudio/debug-javascript-in-microsoft-edge-from-visual-studio/) 和这篇 [Google Chrome 文章](https://devblogs.microsoft.com/aspnet/client-side-debugging-of-asp-net-projects-in-google-chrome)。
 
 - 调试 JavaScript 和 TypeScript
 
@@ -38,7 +38,7 @@ ms.locfileid: "73714450"
 
 - 查看脚本文档
 
-  可在要查看的“解决方案资源管理器”中查看服务器端和客户端脚本文档的列表。 可以从 **“解决方案资源管理器”** 中打开任何脚本文档。 有关详细信息，请参阅 [How to: View Script Documents](../debugger/how-to-view-script-documents.md)。
+  可在要查看的“解决方案资源管理器”中查看服务器端和客户端脚本文档的列表。 可以从 **“解决方案资源管理器”** 中打开任何脚本文档。 有关详细信息，请参阅[如何：查看脚本文档](../debugger/how-to-view-script-documents.md)。
 
 - 调试 AJAX 脚本应用程序
 

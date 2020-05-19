@@ -10,7 +10,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 0f3a6e6391e3c76a43a94e5cf77c819a2f4b18c6
 ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/01/2020
 ms.locfileid: "75592290"
@@ -21,6 +21,6 @@ ms.locfileid: "75592290"
 
 XSLT 调试器此时显示 XSLT 默认模板的代码。 当逐句通过 XSLT 转换时，如果使用默认模板，则调试器在窗口中显示默认模板。 这使您能够逐句通过默认模板的代码并且按照它的说明设置断点。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [调试 XSLT](../xml-tools/debugging-xslt.md)

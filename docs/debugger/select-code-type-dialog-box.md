@@ -1,5 +1,5 @@
 ---
-title: "\"选择代码类型\" 对话框 |Microsoft Docs"
+title: “选择代码类型”对话框 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -23,17 +23,17 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 761845044bae9b35694bef53cae36dd64f3dd6ba
 ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/22/2019
 ms.locfileid: "72729584"
 ---
 # <a name="select-code-type-dialog-box"></a>“选择代码类型”对话框
-若要打开此对话框，请打开“附加到进程”对话框，然后单击“选择”按钮。
+若要打开此对话框，请打开“附加到进程”对话框，然后单击“选择”按钮 。
 
- **自动确定要调试的代码类型**将根据正在运行的代码的类型选择相应的调试器。
+ **自动确定要调试的代码类型**：根据正在运行的代码的类型选择适当的调试器。
 
- **调试以下代码类型：** 从提供的列表中，选择要调试的代码类型。
+ 调试以下代码类型：从提供的列表中，选择要调试的代码的类型。
 
 ## <a name="see-also"></a>请参阅
 - [调试器安全](../debugger/debugger-security.md)

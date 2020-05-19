@@ -1,5 +1,5 @@
 ---
-title: 关于 "寄存器" 窗口 |Microsoft Docs
+title: 关于“寄存器”窗口 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -19,12 +19,12 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 4deaf03013b6e28ea02e6ec7412bd23a05f1b87e
 ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/22/2019
 ms.locfileid: "72738252"
 ---
-# <a name="about-the-registers-window-in-visual-studio-c-c-visual-basic-f"></a>关于 Visual Studio 中的 "寄存器"C#窗口C++（、、 F#Visual Basic、）
+# <a name="about-the-registers-window-in-visual-studio-c-c-visual-basic-f"></a>关于 Visual Studio 中的“寄存器”窗口 (C#、C++、Visual Basic、F#)
 
 只有在“选项”对话框中的“调试”节点下启用了地址级调试后，“寄存器”窗口才可用。
 
@@ -40,30 +40,30 @@ ms.locfileid: "72738252"
 
  有关显示“寄存器”窗口的更多信息，请参阅[使用寄存器窗口](../debugger/how-to-use-the-registers-window.md)。
 
- 查看 "**寄存器**" 窗口时，将会看到一些条目，如 `EAX = 003110D8`。
+ 当查看“寄存器”窗口时，会看到 `EAX = 003110D8` 等条目。
 
- @No__t_0 符号左侧的符号是寄存器名称，在本例中为 `EAX`。 符号“`=`”右边的数字表示寄存器内容。
+ `=` 号左边的符号是寄存器名称（这里是 `EAX`）。 符号“`=`”右边的数字表示寄存器内容。
 
  通过“寄存器”窗口不仅可以看到寄存器的内容，还可以完成更多任务。 当本机代码处于中断模式时，可以单击寄存器内容并更改其值。 这不是可以随意做的事。 除非理解正在编辑的寄存器和它所包含的内容，草率编辑很可能导致程序崩溃或其他不良后果。 很遗憾，详细介绍各种 Intel 和 Intel 兼容处理器的寄存器组超出了本文的范围。
 
-## <a name="register-groups"></a>注册组
+## <a name="register-groups"></a>寄存器组
 
 为避免杂乱，“寄存器”窗口中的寄存器按组显示。 右键单击“寄存器”窗口，可以看到一个包含组列表的快捷菜单，可根据需要显示或隐藏它。
 
-## <a name="register-flags"></a>注册标志
+## <a name="register-flags"></a>寄存器标志
 
-对于 Intel x86 处理器，你可能会在 "**寄存器**" 窗口中看到以下标志。 在调试会话期间，还可以编辑这些标志。
+对于 Intel x86 处理器，你可能会在“寄存器”窗口中看到以下标志。 调试会话期间，你还可以编辑这些标志。
 
 |Flag|设置值|
 |-|-|
-|溢出|OV-ES = 1|
-|方向|向上 = 1|
-|妨碍|EI = 1|
+|溢出|OV = 1|
+|方向|UP = 1|
+|中断|EI = 1|
 |Sign|PL = 1|
 |零|ZR = 1|
-|辅助携带|AC = 1|
-|性|PE = 1|
-|送修|CY = 1|
+|辅助 Carry|AC = 1|
+|Parity|PE = 1|
+|Carry|CY = 1|
 
 ## <a name="see-also"></a>请参阅
 - [如何：使用“寄存器”窗口](../debugger/how-to-use-the-registers-window.md)

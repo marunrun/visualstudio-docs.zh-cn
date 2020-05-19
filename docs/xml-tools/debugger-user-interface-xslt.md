@@ -10,14 +10,14 @@ ms.workload:
 - multiple
 ms.openlocfilehash: bb72acf2db63e54da8a1ee001d2abfaa30850fc3
 ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 01/01/2020
 ms.locfileid: "75592875"
 ---
-# <a name="debugger-user-interface-xslt"></a>调试器用户界面（XSLT）
+# <a name="debugger-user-interface-xslt"></a>调试器用户界面 (XSLT)
 
-本文介绍调试器窗口和对话框。 它只讨论具有 XSLT 特定的调试行为的用户界面部分。
+本文介绍调试器窗口和对话框。 只讨论具有 XSLT 特定的调试行为的用户界面部分。
 
 有关详细信息，请参阅[调试用户界面参考](../debugger/debugging-user-interface-reference.md)。
 
@@ -27,19 +27,19 @@ ms.locfileid: "75592875"
 
 **Name**
 
-此列包含当前范围中的所有局部变量的名称。 节点集具有树控件，你可以向下钻取以查看其子文件夹。
+此列包含当前范围中的所有局部变量的名称。 节点集具有一个树控件，可以通过向下钻取查看其子文件夹。
 
-**“值”**
+**值**
 
 该列显示每个变量所包含的值。 属性、处理指令、注释、文本和 CData 节点显示节点的文本值。 命名空间节点显示命名空间 URI。
 
 **Type**
 
-此列标识在 "**名称**" 列中列出的每个变量的数据类型。
+此列标识 Name 列中列出的每个变量的数据类型。
 
 “局部变量”窗口还显示用于跟踪 XSLT 转换上下文的预定义上下文变量。 下表介绍 XSLT 调试程序所使用的预定义上下文变量。
 
-|Name|描述|
+|“属性”|描述|
 |-|-----------------|
 |`last()`|上下文大小。|
 |`position()`|上下文节点相对于上下文大小的位置（或索引号）。|
@@ -51,12 +51,12 @@ ms.locfileid: "75592875"
 
 ## <a name="task-list"></a>任务列表
 
-**任务列表**列出样式表中的所有编译错误。 双击错误可以将光标置于包含错误的行。
+“任务列表”列出样式表中的所有编译错误。 双击错误可以将光标置于包含错误的行。
 
-**任务列表**包括 XSLT 文件的脚本块中出现的任何错误。
+“任务列表”包括 XSLT 文件的脚本块中出现的任何错误。
 
 > [!NOTE]
-> XSLT 调试器没有警告，因此它们永远不会出现在**任务列表**中。
+> XSLT 调试器没有任何警告，因此，“任务列表”中永远不会出现警告。
 
 ## <a name="breakpoints-window"></a>“断点”窗口
 
@@ -64,7 +64,7 @@ ms.locfileid: "75592875"
 
 “断点”窗口的操作方式应与其他 Visual Studio 调试程序相同。
 
-## <a name="watch-window"></a>观察时段
+## <a name="watch-window"></a>监视窗口
 
 “监视”窗口用于计算变量。 还可以更改变量的值。
 
@@ -72,9 +72,9 @@ ms.locfileid: "75592875"
 
 ## <a name="call-stack-window"></a>“调用堆栈”窗口
 
-"**调用堆栈**" 窗口用于查看调用堆栈上的函数的名称、参数类型和参数值。 仅当正在调试的程序处于中断状态时，才显示调用堆栈信息。
+“调用堆栈”窗口用于查看调用堆栈上函数的名称、参数类型和参数值。 仅当正在调试的程序处于中断状态时，才显示调用堆栈信息。
 
-调用堆栈表示 XSLT 执行所经过的各种上下文。 例如，如果从模板 "a" 到模板 "b" 的调用，则在 "**调用堆栈**" 窗口中将显示模板 "a" 和模板 "b"，其中当前上下文位于列表顶部。 用户可以查看当前正在执行的查询。
+调用堆栈表示 XSLT 执行所经过的各种上下文。 例如，如果存在一个从模板“a”到模板“b”的调用，模板“a”和模板“b”将出现在“调用堆栈”窗口中，当前上下文处于列表的顶部。 用户可以查看当前正在执行的查询。
 
 如果模板在 XSLT 文件中没有名称，将使用 XSLT 处理器生成的名称。
 
@@ -82,13 +82,13 @@ ms.locfileid: "75592875"
 
 ## <a name="quickwatch-dialog-box"></a>“快速监视”对话框
 
-"**快速监视**" 对话框用于计算 XPath 1.0 表达式。 上下文节点（“局部变量”窗口中的 `self::node()` 节点）为 XPath 表达式的执行提供上下文。 执行 XPath 表达式的结果显示在“监视”窗口中。
+“快速监视”对话框用于计算 XPath 1.0 表达式。 上下文节点（“局部变量”窗口中的 `self::node()` 节点）为 XPath 表达式的执行提供上下文。 执行 XPath 表达式的结果显示在“监视”窗口中。
 
-以下列表描述了对 XPath 表达式计算的限制：
+以下列表介绍对 XPath 表达式计算的限制：
 
 - 只允许使用内置 XPath 函数。
 
-- 不允许使用内置 XSLT 函数（如 `document()` 和 `key()`）。
+- 不允许使用内置 XSLT 函数（例如 `document()` 和 `key()`）。
 
 - 不允许使用用户定义函数。
 
@@ -98,10 +98,10 @@ ms.locfileid: "75592875"
 
 “反汇编”窗口显示 XSLT 编译器生成的程序集代码。 此窗口的用法与所有其他 Visual Studio 反汇编窗口相同。
 
-有关详细信息，请[使用 "反汇编" 窗口](../debugger/how-to-use-the-disassembly-window.md)。
+有关详细信息，请参阅[如何：使用“反汇编”窗口](../debugger/how-to-use-the-disassembly-window.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [调试 XSLT](../xml-tools/debugging-xslt.md)
 - [初探调试器](../debugger/debugger-feature-tour.md)
-- [在 Visual Studio 中的 "自动" 和 "局部变量" 窗口中检查变量](../debugger/autos-and-locals-windows.md)
+- [在 Visual Studio 中检查“自动”窗口和“局部变量”窗口中的变量](../debugger/autos-and-locals-windows.md)

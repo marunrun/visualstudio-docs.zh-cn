@@ -1,5 +1,5 @@
 ---
-title: 如何：更改字体 |Microsoft Docs
+title: 如何：更改字体 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,7 +12,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 2cf933dc7277f0f4c1533ca071a391b78413b029
 ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/22/2019
 ms.locfileid: "72733941"
@@ -26,7 +26,7 @@ ms.locfileid: "72733941"
 
 2. 选择字体、字形和字号。
 
-3. 单击“确定”。
+3. 单击 **“确定”** 。
 
    选择“保存为默认字”将导致之后所有的 Spy++ 窗口均使用此字体。
 

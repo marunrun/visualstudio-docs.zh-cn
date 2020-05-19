@@ -1,5 +1,5 @@
 ---
-title: 如何：启用和禁用 "编辑并继续" |Microsoft Docs
+title: 如何：启用和禁用“编辑并继续” | Microsoft Docs
 ms.custom: seodec18
 ms.date: 10/04/2018
 ms.topic: conceptual
@@ -28,33 +28,33 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 2c8486bdcd7bc737d3851eabd88734df4efd80b7
 ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/16/2019
 ms.locfileid: "72430531"
 ---
-# <a name="how-to-enable-and-disable-edit-and-continue-c-vb-c"></a>如何：启用和禁用 "编辑并继续"C#（、VB C++、）
+# <a name="how-to-enable-and-disable-edit-and-continue-c-vb-c"></a>如何：启用和禁用“编辑并继续”（C#、VB、C++）
 
-您可以在设计时在 Visual Studio 的 "**选项**" 对话框中禁用或启用 "**编辑并继续**"。 “编辑并继续”仅在调试版本中起作用。 有关详细信息，请参阅[编辑并继续](../debugger/edit-and-continue.md)。
+设计时，可以在 Visual Studio“选项”对话框中禁用或启用“编辑并继续” 。 “编辑并继续”仅在调试版本中起作用。 有关详细信息，请参阅[编辑并继续](../debugger/edit-and-continue.md)。
 
-对于本机C++，"**编辑并继续**" 需要使用 `/INCREMENTAL` 选项。 有关中C++的功能要求的详细信息，请参阅此[博客文章](https://devblogs.microsoft.com/cppblog/c-edit-and-continue-in-visual-studio-2015-update-3/)和[编辑并C++继续（）](../debugger/edit-and-continue-visual-cpp.md)。
+对于本机 C++，“编辑并继续”需要使用 `/INCREMENTAL` 选项。 有关 C++ 中的功能要求的详细信息，请参阅此[博客文章](https://devblogs.microsoft.com/cppblog/c-edit-and-continue-in-visual-studio-2015-update-3/)和[编辑并继续 (C++)](../debugger/edit-and-continue-visual-cpp.md)。
 
-**若要启用或禁用 "编辑并继续"：**
+**启用或禁用“编辑并继续”：**
 
-1. 如果在调试会话中，请停止调试（**调试** > **停止调试** **或 +** **F5**）。
+1. 如果正在进行调试会话，请停止调试（“调试” > “停止调试”或按 Shift+F5）   。
 
-1. 在 "**工具**"  > **选项**"> （或**调试** > **选项**） >**调试** > **常规**"，在右窗格中选择 "**编辑并继续**"。
+1. 在“工具” > “选项” >（或“调试” > “选项”）>“调试” > “常规”中，选择右窗格中的“编辑并继续”。
 
     > [!NOTE]
-    > 如果启用了 IntelliTrace 并且收集 IntelliTrace 事件和调用信息，则会禁用“编辑并继续”。 有关详细信息，请参阅[IntelliTrace](../debugger/intellitrace.md)。
+    > 如果启用了 IntelliTrace 并且收集 IntelliTrace 事件和调用信息，则会禁用“编辑并继续”。 有关详细信息，请参阅 [IntelliTrace](../debugger/intellitrace.md)。
 
-1. 对于C++ "代码"，请确保选择 "**启用本机编辑并继续**"，并设置其他选项：
+1. 对于 C++ 代码，请确保选择“启用本机‘编辑并继续’”，并设置其他选项：
     - **继续应用更改（仅限本机）**
 
-      如果选择此选项，则当你继续从中断状态进行调试时，Visual Studio 将自动编译并应用代码更改。 否则，你可以选择使用**调试** ** >  应用更改。**
+      如果选择，则在从中断状态继续调试时，Visual Studio 会自动编译并应用代码更改。 否则，可以选择使用“调试” > “应用代码更改”来应用更改。
 
     - **警告过时代码（仅限本机）**
 
-      如果选择此选项，将提供有关陈旧代码的警告。
+      如果选择，则提供有关陈旧代码的警告。
 
-1. 单击“确定”。
+1. 单击 **“确定”** 。

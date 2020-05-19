@@ -1,5 +1,5 @@
 ---
-title: 如何：测试和调试可视化工具 |Microsoft Docs
+title: 如何：测试和调试可视化工具 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -19,7 +19,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 2a0d2fdcd0685b83f63e9354b96146c1c869b355
 ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/22/2019
 ms.locfileid: "72732398"
@@ -27,7 +27,7 @@ ms.locfileid: "72732398"
 # <a name="how-to-test-and-debug-a-visualizer"></a>如何：测试和调试可视化工具
 编写完可视化工具后，需要对其进行调试和测试。
 
-测试可视化工具的一种方法是将它安装在 Visual Studio 中并从调试器窗口进行调用。 （请参阅[如何：安装可视化工具](../debugger/how-to-install-a-visualizer.md)。）如果这样做，则需要使用 Visual Studio 的第二个实例来附加和调试在调试器的第一个实例中运行的可视化工具。
+测试可视化工具的一种方法是将它安装在 Visual Studio 中并从调试器窗口进行调用。 （请参阅[如何：安装可视化工具](../debugger/how-to-install-a-visualizer.md)。）如果采用这种方法，则需要使用另一个 Visual Studio 实例附加和调试正在第一个调试器实例中运行的可视化工具。
 
 一种更简单的调试可视化工具的方法，是从测试驱动程序运行可视化工具。 可视化工具 API 使这类驱动程序（称为“可视化工具开发宿主”）的创建更为容易。
 
@@ -51,7 +51,7 @@ ms.locfileid: "72732398"
     DebuggerSide.TestShowVisualizer(myString);
     ```
 
-    有关更完整的示例，请参阅[演练：在中C#编写可视化工具](../debugger/walkthrough-writing-a-visualizer-in-csharp.md)。
+    有关更完整的示例，请参阅[演练：用 C# 编写可视化工具](../debugger/walkthrough-writing-a-visualizer-in-csharp.md)。
 
 ## <a name="see-also"></a>请参阅
 - [演练：用 C# 编写可视化工具](../debugger/walkthrough-writing-a-visualizer-in-csharp.md)

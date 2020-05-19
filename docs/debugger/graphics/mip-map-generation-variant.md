@@ -1,5 +1,5 @@
 ---
-title: Mip 映射代变量 |Microsoft Docs
+title: Mip-map 生成变量 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 3b4b3583-0b01-4f5d-aacb-3f96d19111d9
@@ -10,7 +10,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 422a68f4e33733aa2874c639f0dcc799cd3ec795
 ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/22/2019
 ms.locfileid: "72734892"
@@ -26,7 +26,7 @@ Mip 贴图主要用于通过预先计算更小版本的纹理，来在缩减状�
 如果此变体显示显著的性能提升，则表示你使用的是纹理，而未启用 mip 贴图，因此无法充分利用纹理缓存。
 
 ## <a name="remarks"></a>备注
-每次调用创建源纹理的 `ID3D11Device::CreateTexture2D` 时，都强制执行 mip 贴图生成。 具体而言，在 `pDesc` 中传递的 D3D11_TEXTURE2D_DESC 对象描述不变的着色器资源时，将强制执行 mip 映射生成;那是：
+每次调用创建源纹理的 `ID3D11Device::CreateTexture2D` 时，都强制执行 mip 贴图生成。 具体而言，当在 `pDesc` 中传递的 D3D11_TEXTURE2D_DESC 对象描述不变的着色器资源时，将强制执行 mip 贴图生成；即：
 
 - BindFlags 成员仅设置 D3D11_BIND_SHADER_RESOURCE 标志。
 
@@ -62,7 +62,7 @@ for (auto&& mip_level : initial_data)
 d3d_device->CreateTexture2D(&texture_description, initial_data.data(), &texture)
 ```
 
-若要创建具有完整 mip 链的纹理，请将 `D3D11_TEXTURE2D_DESC::MipLevels` 设置为 0。 完整 mip 链中的 mip 级别数为 floor （log2 （n） + 1），其中 n 为纹理的最大维度。
+若要创建具有完整 mip 链的纹理，请将 `D3D11_TEXTURE2D_DESC::MipLevels` 设置为 0。 完整 mip 链中的 mip 级别数为 floor(log2(n) + 1)，其中 n 是纹理的最大维度。
 
 请记住，当你向 `CreateTexture2D` 提供初始数据时，你必须为每个 mip 级别提供一个 D3D11_SUBRESOURCE_DATA 对象。
 
