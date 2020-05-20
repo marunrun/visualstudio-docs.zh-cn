@@ -47,7 +47,7 @@ ms.locfileid: "79306907"
 
 ::: moniker-end
 
-   有关 .vstemplate 文件的详细信息，请参阅[模板标签](template-tags.md)和[模板参数](../ide/template-parameters.md)  。
+   有关 .vstemplate 文件的详细信息，请参阅[模板标签](template-tags.md)和[模板参数](../ide/template-parameters.md)。
 
 当这些文件压缩成 .zip 文件并放在正确的文件夹时，Visual Studio 将自动在以下位置显示这些文件  ：
 

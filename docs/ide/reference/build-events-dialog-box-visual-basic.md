@@ -30,7 +30,7 @@ ms.locfileid: "68461438"
 
 预生成事件命令行 
 
-在生成开始之前，指定要执行的任何命令。 要键入长命令，单击“编辑预生成”，显示[预生成事件/生成后事件命令行对话框](../../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md)  。
+在生成开始之前，指定要执行的任何命令。 要键入长命令，单击“编辑预生成”，显示[预生成事件/生成后事件命令行对话框](../../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md)。
 
 > [!NOTE]
 > 如果项目是最新的且没有触发任何生成，则不会运行预生成事件。
