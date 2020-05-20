@@ -22,7 +22,7 @@ ms.locfileid: "62809552"
 
 配置远程计算机后，以下步骤将针对 Visual Studio 的 R 工具 (RTVS) 连接到该服务：
 
-1. 选择“R 工具” **“窗口”** “工作区”，打开“工作区”窗 >    >    。
+1. 选择“R 工具” > “窗口” > “工作区”，打开“工作区”窗。
 1. 选择“添加连接”  。
 1. 为连接命名并提供其 URL，例如 `https://localhost:5444`（适用于 Linux 的 Windows 子系统）或 `https://public-ip:5444`（Azure 容器）。 完成后，选择“保存”  。
 1. 选择连接图标或双击连接项。
@@ -67,7 +67,7 @@ ms.locfileid: "62809552"
     sudo systemctl start rtvsd
     ```
 
-1. 配置 SSL 证书（生产所需）。 默认情况下，rtvs-daemon 使用 `ssl-cert-snakeoil.pem` 包生成的 `ssl-cert-snakeoil.pem` 和 `ssl-cert`。 安装期间，它们合并为 `ssl-cert-snakeoil.pfx`。 如果要用于生产目的，请使用管理员提供的 SSL 证书。 可通过在 /etc/rtvs/rtvsd.config.json 中提供 .pfx 文件和可选导入密码配置 SSL 证书   。
+1. 配置 SSL 证书（生产所需）。 默认情况下，rtvs-daemon 使用 `ssl-cert` 包生成的 `ssl-cert-snakeoil.pem` 和 `ssl-cert-snakeoil.pem`。 安装期间，它们合并为 `ssl-cert-snakeoil.pfx`。 如果要用于生产目的，请使用管理员提供的 SSL 证书。 可通过在 /etc/rtvs/rtvsd.config.json 中提供 .pfx 文件和可选导入密码配置 SSL 证书   。
 
 1. （可选）检查服务正在运行：
 
@@ -161,7 +161,7 @@ ms.locfileid: "62809552"
 1. 按照[本地或远程 Docker 容器（干净的生成）](#local-or-remote-docker-container-clean-build)中的说明创建映像。
 1. 将容器推送到 Docker 中心或 Azure Container Repository。
 1. 启动 Azure CLI 并使用 `az login` 命令登录。
-1. 使用 `az container create` 命令创建容器，如果尚未将容器设置为将 `--command-line "rtvsd"` 作为 `rtvsd` 服务运行，则使用 `systemd`。 在以下命令中，映像应位于 Docker 中心。 还可以通过将 Container Repository 凭据参数添加到命令行来使用 Azure Container Repository。
+1. 使用 `az container create` 命令创建容器，如果尚未将容器设置为将 `rtvsd` 作为 `systemd` 服务运行，则使用 `--command-line "rtvsd"`。 在以下命令中，映像应位于 Docker 中心。 还可以通过将 Container Repository 凭据参数添加到命令行来使用 Azure Container Repository。
 
     ```bash
     az container create --image myimage:latest --name myaz-container --resource-group myaz-container-res --ip-address public --port 5444 --cpu 2 --memory 4 --command-line "rtvsd"

@@ -22,7 +22,7 @@ ms.locfileid: "62810117"
 
 ## <a name="create-a-container"></a>创建容器
 
-1. 选择“工作区”窗口（“R 工具” > “窗口” > “工作区”）右上角的“容器”按钮      。 如果未安装 Docker for Windows，则窗口中会显示通知，并提供下载链接。 安装 Docker 可能需要重启计算机。
+1. 选择“工作区”窗口（“R 工具” > “窗口” > “工作区”）右上角的“容器”按钮。 如果未安装 Docker for Windows，则窗口中会显示通知，并提供下载链接。 安装 Docker 可能需要重启计算机。
 
     ![针对 Visual Studio 的 R 工具 (VS2017) 中的工作区窗口，其中包含“容器”命令](media/container-workspaces-window.png)
 
@@ -44,7 +44,7 @@ ms.locfileid: "62810117"
 
     ![显示可用容器的工作区窗口](media/workspaces-window-running-containers.png)
 
-1. 要连接到容器，请双击容器名称或选择右侧的向前箭头按钮。 连接后，可看见“R 交互”窗口（请参阅[使用 R 交互窗口](interactive-repl-for-r-in-visual-studio.md)）  ：
+1. 要连接到容器，请双击容器名称或选择右侧的向前箭头按钮。 连接后，可看见“R 交互”窗口（请参阅[使用 R 交互窗口](interactive-repl-for-r-in-visual-studio.md)）：
 
     ![针对容器打开的工作区窗口和 REPL 窗口](media/workspaces-window-container-connected.png)
 
@@ -68,4 +68,4 @@ docker build -t my-rtvs-image:latest .
 docker run -p 6056:5444 --name my-rtvs-container my-rtvs-image:latest rtvsd
 ```
 
-`-p 6056:5444` 参数将端口 6056 映射到内部端口 5444，以便 RTVS 检测 rtvs-daemon。 “工作区”窗口中列出了公开容器端口 5444 的所有容器  。 然后可以使用“工作区”窗口，通过用户名 `<<unix>>\ruser1` 和密码“foobar”连接到容器，除非在 docker 文件中指定了不同的凭据  。
+`-p 6056:5444` 参数将端口 6056 映射到内部端口 5444，以便 RTVS 检测 rtvs-daemon。 “工作区”窗口中列出了公开容器端口 5444 的所有容器  。 然后可以使用“工作区”窗口，通过用户名 `<<unix>>\ruser1` 和密码“foobar”连接到容器，除非在 docker 文件中指定了不同的凭据。
