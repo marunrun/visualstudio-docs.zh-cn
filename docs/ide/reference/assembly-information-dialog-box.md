@@ -36,7 +36,7 @@ ms.locfileid: "75595782"
 **公司**\
 指定程序集清单的公司名称。 对应到 <xref:System.Reflection.AssemblyCompanyAttribute>。
 
-可以在注册表中设置或更改公司的默认值。 查找 Computer\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows NT\CurrentVersion  或 Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion  键下的 **RegisteredOrganization** 值，具体取决于 Windows 的版本。
+可以在注册表中设置或更改公司的默认值。 查找 Computer\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows NT\CurrentVersion 或 Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion 键下的 **RegisteredOrganization** 值，具体取决于 Windows 的版本。
 
 **产品**\
 指定程序集清单的产品名称。 对应到 <xref:System.Reflection.AssemblyProductAttribute>。

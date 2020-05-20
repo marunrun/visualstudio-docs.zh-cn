@@ -40,6 +40,6 @@ ms.locfileid: "74779501"
  StringBuilder 类是可变的对象，与 System.String 不同，StringBuilder 上修改此类的实例的大多数方法都将返回对该相同实例的引用。 可以插入字符或将文本追加到 StringBuilder 实例，并删除或替换实例中的字符，而无需分配新的实例和删除原始实例。
 
 ## <a name="how-to-investigate-a-warning"></a>如何调查警告
- 双击“错误列表”窗口中的消息，导航到采样分析数据的[函数详细信息视图](../profiling/function-details-view.md)  。 查找程序中使用字符串串联最频繁的部分。 请对复杂的字符串操作使用 StringBuilder 类，包括频繁使用的字符串串联操作。
+ 双击“错误列表”窗口中的消息，导航到采样分析数据的[函数详细信息视图](../profiling/function-details-view.md)。 查找程序中使用字符串串联最频繁的部分。 请对复杂的字符串操作使用 StringBuilder 类，包括频繁使用的字符串串联操作。
 
  若要深入了解如何使用字符串，请参阅 Microsoft 模式和做法库中[第 5 章 - 提高托管代码性能](/previous-versions/msp-n-p/ff647790(v=pandp.10))的[字符串操作](/previous-versions/msp-n-p/ff647790(v=pandp.10)#string-operations)部分。

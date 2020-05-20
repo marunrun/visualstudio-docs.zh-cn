@@ -22,7 +22,7 @@ ms.locfileid: "75735813"
 默认情况下，在 Visual Studio 2017 和更高版本中安装 Python 开发工作负载也会同时安装 Python 3（64 位）。 可以根据需要选择安装 32 位和 64 位版本的 Python 2 和 Python 3，并安装 Miniconda (Visual Studio 2019) 或者 Anaconda 2/Anaconda 3 (Visual Studio 2017)，如[安装](installing-python-support-in-visual-studio.md)中所述。
 
 ::: moniker range=">=vs-2019"
-或者，也可以从“添加环境”  对话框中安装标准 Python 解释器。 在“Python 环境”  窗口或 Python 工具栏中选择“添加环境”  命令，选择“Python 安装”  选项卡，指示安装哪个解释器，并选择“安装”  。
+或者，也可以从“添加环境”  对话框中安装标准 Python 解释器。 在“Python 环境”窗口或 Python 工具栏中选择“添加环境”命令，选择“Python 安装”选项卡，指示安装哪个解释器，并选择“安装”。
 ::: moniker-end
 
 除了 Visual Studio 安装程序，还可以手动安装下表列出的任何解释器。 例如，如果在安装 Visual Studio 之前安装了 Anaconda 3，则不需要通过 Visual Studio 安装程序再次进行安装。 例如，如果在 Visual Studio 安装程序中尚无可安装的更高版本，也可以手动安装解释器。
@@ -38,7 +38,7 @@ Visual Studio（所有版本）通过检查注册表（根据 [PEP 514 - Windows
 
 如果 Visual Studio 并未检测到安装的环境，请参阅[手动标识现有环境](managing-python-environments-in-visual-studio.md#manually-identify-an-existing-environment)。
 
-Visual Studio 在[Python 环境”**窗口中显示所有已知环境，并自动检测现有解释器的更新**](managing-python-environments-in-visual-studio.md#the-python-environments-window)。
+Visual Studio 在[Python 环境”](managing-python-environments-in-visual-studio.md#the-python-environments-window)窗口中显示所有已知环境，并自动检测现有解释器的更新。
 
 | 解释器 | 说明 |
 | --- | --- |

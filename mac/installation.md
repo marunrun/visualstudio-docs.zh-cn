@@ -55,10 +55,10 @@ ms.locfileid: "75851942"
 
 |应用类型  |目标  |选项  |说明  |
 |---------|---------|---------|---------|
-|**使用 Xamarin 的应用**| Xamarin.Forms|选择“Android”和“iOS”平台   |你需要安装 [Xcode  ](https://developer.apple.com/xcode/) |
-||仅限 iOS|选择“iOS”平台 |你需要安装 [Xcode  ](https://developer.apple.com/xcode/)|
+|**使用 Xamarin 的应用**| Xamarin.Forms|选择“Android”和“iOS”平台   |你需要安装 [Xcode](https://developer.apple.com/xcode/) |
+||仅限 iOS|选择“iOS”平台 |你需要安装 [Xcode](https://developer.apple.com/xcode/)|
 ||仅限 Android|选择“Android”平台 |请注意，还应选择相关的依赖项|
-||仅限 Mac|选择“macOS (Cocoa)”平台 |你需要安装 [Xcode  ](https://developer.apple.com/xcode/)|
+||仅限 Mac|选择“macOS (Cocoa)”平台 |你需要安装 [Xcode](https://developer.apple.com/xcode/)|
 |**.NET Core 应用程序**|         |选择“.NET Core”平台  。|         |
 |**ASP.NET Core Web 应用程序**|         |选择“.NET Core”平台  。|         |
 |**Azure Functions**|         |选择“.NET Core”平台  。|         |

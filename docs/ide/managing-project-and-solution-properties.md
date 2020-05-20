@@ -37,7 +37,7 @@ ms.locfileid: "75591302"
 
 ![Visual Studio 项目设计器](../ide/media/vs2015_proppage_build.png)
 
-有关“项目设计器”中每个属性页的信息，请参阅[项目属性引用](../ide/reference/project-properties-reference.md)  。
+有关“项目设计器”中每个属性页的信息，请参阅[项目属性引用](../ide/reference/project-properties-reference.md)。
 
 > [!TIP]
 > 解决方案和项目项都具有一些属性；这些属性可在[属性窗口](../ide/reference/properties-window.md)中访问，而不是在**项目设计器**中访问。

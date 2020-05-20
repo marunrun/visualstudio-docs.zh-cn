@@ -44,7 +44,7 @@ ms.locfileid: "74779241"
 
 #### <a name="to-create-a-profiler-report-filter-from-the-marks-report-view"></a>从“标记报告”视图中创建探查器报告筛选器
 
-1. 在“性能报告”视图工具栏上，从“当前视图”  列表中选择“标记”  。
+1. 在“性能报告”视图工具栏上，从“当前视图”列表中选择“标记”。
 
     此时将显示“标记探查器”报告。
 

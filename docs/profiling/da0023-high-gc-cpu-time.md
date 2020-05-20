@@ -48,4 +48,4 @@ ms.locfileid: "74777642"
 ## <a name="how-to-investigate-a-warning"></a>如何调查警告
  双击“错误列表”窗口中的消息，导航到分析数据的[标记视图](../profiling/marks-view.md)。 查找 **.NET CLR Memory\\% Time in GC** 列。 确定程序执行中是否存在托管内存垃圾回收的开销高于其他阶段的某个阶段。 将 %Time in GC 的值与 **第 0 代回收 #** **第 1 代回收 #** 、 **第 2 代回收 #** 值中报告的垃圾回收速率进行比较。
 
- %Time in GC 值尝试报告应用程序执行垃圾回收处理所用的时间总量（与处理总量成正比）。 请注意，有时 % Time in GC 值可能报告很高的值，但这不是由垃圾回收过多引起的。 有关计算 % Time in GC 值的方法的详细信息，请参阅 MSDN 上 Maoni 博客  的 [Difference Between Perf Data Reported by Different Tools – 4](https://devblogs.microsoft.com/maoni/archive/difference-between-perf-data-reported-by-different-tools-4.aspx)（不同工具所报告的性能数据间的差异 - 4）。 如果垃圾回收期间发生页面故障或计算机上其他操作的优先级高于此应用程序，则 %Time in GC 计数器将反映这些额外的延迟。
+ %Time in GC 值尝试报告应用程序执行垃圾回收处理所用的时间总量（与处理总量成正比）。 请注意，有时 % Time in GC 值可能报告很高的值，但这不是由垃圾回收过多引起的。 有关计算 % Time in GC 值的方法的详细信息，请参阅 MSDN 上 Maoni 博客的 [Difference Between Perf Data Reported by Different Tools – 4](https://devblogs.microsoft.com/maoni/archive/difference-between-perf-data-reported-by-different-tools-4.aspx)（不同工具所报告的性能数据间的差异 - 4）。 如果垃圾回收期间发生页面故障或计算机上其他操作的优先级高于此应用程序，则 %Time in GC 计数器将反映这些额外的延迟。

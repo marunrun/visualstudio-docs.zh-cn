@@ -43,4 +43,4 @@ ms.locfileid: "74779398"
  如果管理内存分配对于应用程序很重要，请考虑使用 String.Split 和 String.Substr 方法的替代方法。 例如，可以使用 IndexOf 或 IndexOfAny 方法查找 String 字符内的特定子字符串，而无需创建 String 类的新实例。
 
 ## <a name="how-to-investigate-a-warning"></a>如何调查警告
- 双击“错误列表”窗口中的消息，导航到采样分析数据的[函数详细信息视图](../profiling/function-details-view.md)  。 检查调用函数，以查找程序中使用 System.String.Split 或 System.String.Substr 方法最频繁的部分。 如果可以，请使用 IndexOf 或 IndexOfAny 方法查找 String 字符内的特定子字符串，而无需创建 String 类的新实例。
+ 双击“错误列表”窗口中的消息，导航到采样分析数据的[函数详细信息视图](../profiling/function-details-view.md)。 检查调用函数，以查找程序中使用 System.String.Split 或 System.String.Substr 方法最频繁的部分。 如果可以，请使用 IndexOf 或 IndexOfAny 方法查找 String 字符内的特定子字符串，而无需创建 String 类的新实例。

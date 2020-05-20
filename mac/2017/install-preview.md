@@ -24,7 +24,7 @@ ms.locfileid: "74984921"
 
 Visual Studio for Mac 的预览版是作为更新发布的，而不是通过单独下载发布。 如[更新](update.md)一文中所述，Visual Studio for Mac 有三个更新程序通道：稳定通道、Beta 通道和 Alpha 通道。
 
-大多数预览版都可通过 Beta 版本和 Alpha 版本通道获取，但请务必查看[预览版发布说明](/visualstudio/releasenotes/vs2017-mac-preview-relnotes)，了解最准确的信息   。
+大多数预览版都可通过 Beta 版本和 Alpha 版本通道获取，但请务必查看[预览版发布说明](/visualstudio/releasenotes/vs2017-mac-preview-relnotes)，了解最准确的信息 。
 
 若要安装 Visual Studio for Mac 预览版，请执行以下步骤：
 

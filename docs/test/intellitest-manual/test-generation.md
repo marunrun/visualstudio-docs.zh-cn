@@ -116,7 +116,7 @@ public partial class ListTest {
 
 IntelliTest 提供大量验证属性，帮助将异常分类为预期异常和意外异常。
 
-预期异常生成带有“ExpectedException(typeof(xxx))”等注释的负面测试用例，而意外异常生成失败测试用例  。
+预期异常生成带有“ExpectedException(typeof(xxx))”等注释的负面测试用例，而意外异常生成失败测试用例。
 
 ```csharp
 [PexMethod, PexAllowedException(typeof(ArgumentNullException))]

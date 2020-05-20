@@ -63,7 +63,7 @@ ms.locfileid: "75591185"
 
 2. 要远程运行测试，请使用“测试执行方法”下拉列表，然后选择“远程执行”   。
 
-3. 在“控制器”下拉列表中，键入[你的测试控制器](../test/lab-management/install-configure-test-agents.md)的计算机名称  。
+3. 在“控制器”下拉列表中，键入[你的测试控制器](../test/lab-management/install-configure-test-agents.md)的计算机名称。
 
     > [!NOTE]
     > 如果这是首次添加控制器，则下拉列表中不会列出任何控制器。 列表由先前在其他测试设置中指定的控制器填充。

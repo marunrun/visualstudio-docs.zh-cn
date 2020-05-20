@@ -22,7 +22,7 @@ IntelliSense 是使编码更方便的一组功能的名称。 用于 C++ 的 Int
 
 ## <a name="intellisense-features-in-c"></a>C++ 中的 IntelliSense 功能
 
-IntelliSense 是使编码更方便的一组功能的名称。 由于不同的人对方便的定义有着不同的看法，几乎所有的 IntelliSense 功能都可以在“选项”  对话框中的“文本编辑器”   > “C/C++”   > “高级”  下启用或禁用。 可从菜单栏上的“工具”  菜单中访问“选项”  对话框。
+IntelliSense 是使编码更方便的一组功能的名称。 由于不同的人对方便的定义有着不同的看法，几乎所有的 IntelliSense 功能都可以在“选项”  对话框中的“文本编辑器”   > “C/C++”   > “高级”  下启用或禁用。 可从菜单栏上的“工具”菜单中访问“选项”对话框。
 
 ![“工具选项”对话框](../ide/media/sintellisensecpptoolsoptions.PNG)
 
@@ -100,7 +100,7 @@ IntelliSense 是使编码更方便的一组功能的名称。 由于不同的人
 
 ## <a name="enable-or-disable-features"></a>启用或禁用功能
 
-由于不同的人对方便的定义有着不同的看法，几乎所有的 IntelliSense 功能都可以在“选项”  对话框中的“文本编辑器”   > “C/C++”   > “高级”  下启用或禁用。 可从菜单栏上的“工具”  菜单中访问“选项”  对话框。
+由于不同的人对方便的定义有着不同的看法，几乎所有的 IntelliSense 功能都可以在“选项”  对话框中的“文本编辑器”   > “C/C++”   > “高级”  下启用或禁用。 可从菜单栏上的“工具”菜单中访问“选项”对话框。
 
 ![“工具选项”对话框](../ide/media/sintellisensecpptoolsoptions.PNG)
 

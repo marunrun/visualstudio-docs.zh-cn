@@ -17,7 +17,7 @@ ms.locfileid: "74985017"
 
 Visual Studio for Mac 具有本机调试器，支持 Xamarin.iOS、Xamarin.Mac 和 Xamarin.Android 应用程序的调试。
 
-Visual Studio for Mac 使用 [Mono 软调试器 *，该调试器在 Mono 运行时中实施，以便 Visual Studio for Mac 跨所有平台调试托管代码*](https://www.mono-project.com/docs/advanced/runtime/docs/soft-debugger/)。
+Visual Studio for Mac 使用 [Mono 软调试器](https://www.mono-project.com/docs/advanced/runtime/docs/soft-debugger/)，该调试器在 Mono 运行时中实施，以便 Visual Studio for Mac 跨所有平台调试托管代码。
 
 ## <a name="the-debugger"></a>调试器
 

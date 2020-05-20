@@ -20,11 +20,11 @@ ms.lasthandoff: 03/18/2020
 ms.locfileid: "75585673"
 ---
 # <a name="advanced-settings-for-services-dialog-box"></a>“高级服务设置”对话框
-使用客户端应用程序服务，可简便地从 Windows 窗体和 Windows Presentation Foundation (WPF) 应用程序访问 [!INCLUDE[ajax_current_short](../../ide/reference/includes/ajax_current_short_md.md)] 登录、角色和配置文件服务。 可以使用“项目设计器”  的“服务”  页，配置客户端应用程序服务。 有关“服务”  页的详细信息，请参阅[“项目设计器”->“服务”页](../../ide/reference/services-page-project-designer.md)。
+使用客户端应用程序服务，可简便地从 Windows 窗体和 Windows Presentation Foundation (WPF) 应用程序访问 [!INCLUDE[ajax_current_short](../../ide/reference/includes/ajax_current_short_md.md)] 登录、角色和配置文件服务。 可以使用“项目设计器”的“服务”页，配置客户端应用程序服务。 有关“服务”  页的详细信息，请参阅[“项目设计器”->“服务”页](../../ide/reference/services-page-project-designer.md)。
 
-在“项目设计器”  中，使用“服务”  页的“服务的高级设置”  对话框，配置客户端应用程序服务的高级设置。 通过使用这些设置，可以重写一些默认应用程序服务行为，从而启用不太常见的方案。 有关详细信息，请参阅[客户端应用程序服务](/dotnet/framework/common-client-technologies/client-application-services)。
+在“项目设计器”中，使用“服务”页的“服务的高级设置”对话框，配置客户端应用程序服务的高级设置。 通过使用这些设置，可以重写一些默认应用程序服务行为，从而启用不太常见的方案。 有关详细信息，请参阅[客户端应用程序服务](/dotnet/framework/common-client-technologies/client-application-services)。
 
-若要访问“服务的高级设置”  对话框，请在“解决方案资源管理器”  中选择项目节点，然后在“项目”  菜单上单击“属性”  。 显示“项目设计器”  后，单击“服务”  选项卡，然后单击“高级”  按钮。 启用客户端应用程序服务前，此按钮将处于禁用状态。
+若要访问“服务的高级设置”对话框，请在“解决方案资源管理器”中选择项目节点，然后在“项目”菜单上单击“属性”。 显示“项目设计器”  后，单击“服务”  选项卡，然后单击“高级”  按钮。 启用客户端应用程序服务前，此按钮将处于禁用状态。
 
 ## <a name="task-list"></a>任务列表
 

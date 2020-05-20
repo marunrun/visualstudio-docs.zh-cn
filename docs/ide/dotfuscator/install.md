@@ -97,7 +97,7 @@ Dotfuscator Community 现在是 Visual Studio 的可选组件。
 
 1. 选择“各个组件”选项卡  。
 2. 在“代码工具”  下，勾选“PreEmptive Protection - Dotfuscator”  项。<br/> <br/> ![单个组件](media/install_individually_12.png) <br/> <br/>
-3. “PreEmptive Protection - Dotfuscator”  显示在“摘要”  面板的“各个组件”  部分下。 <br/> <br/> ![摘要窗格](media/install_individually_3.png) <br/> <br/>
+3. “PreEmptive Protection - Dotfuscator”显示在“摘要”面板的“各个组件”部分下。 <br/> <br/> ![摘要窗格](media/install_individually_3.png) <br/> <br/>
 4. 根据环境需要进一步配置任何安装设置。
 5. 准备好安装 Visual Studio 后，单击“安装”  按钮。
 

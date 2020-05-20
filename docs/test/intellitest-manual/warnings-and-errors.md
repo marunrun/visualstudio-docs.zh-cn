@@ -65,7 +65,7 @@ IntelliTest 在[输入生成](input-generation.md)期间会限制其浏览的所
 for (int i=0; i<100; i++) { }
 ```
 
-可以编辑派生自 PexSettingsAttributeBase 的属性（例如 [PexClass](attribute-glossary.md#pexclass) 或 [PexMethod](attribute-glossary.md#pexmethod)）的 MaxBranches 选项   。 下面的示例可有效地移除此边界：
+可以编辑派生自 PexSettingsAttributeBase 的属性（例如 [PexClass](attribute-glossary.md#pexclass) 或 [PexMethod](attribute-glossary.md#pexmethod)）的 MaxBranches 选项 。 下面的示例可有效地移除此边界：
 
 ```csharp
 [PexMethod(MaxBranches=int.MaxValue)]
@@ -114,7 +114,7 @@ void ParameterizedTest(int n) {
 }
 ```
 
-可以编辑派生自 PexSettingsAttributeBase 的属性（例如 [PexClass](attribute-glossary.md#pexclass) 或 [PexMethod](attribute-glossary.md#pexmethod)）的 MaxConditions 选项   。 例如：
+可以编辑派生自 PexSettingsAttributeBase 的属性（例如 [PexClass](attribute-glossary.md#pexclass) 或 [PexMethod](attribute-glossary.md#pexmethod)）的 MaxConditions 选项 。 例如：
 
 ```csharp
 [PexMethod(MaxConditions=10000)]
@@ -145,7 +145,7 @@ IntelliTest 在[输入生成](input-generation.md)期间会限制其浏览的所
 
 执行和监视代码的每个调用（直接、间接、虚拟或跳转）均计入此限制。
 
-可编辑派生自 PexSettingsAttributeBase 的属性（例如 [PexClass](attribute-glossary.md#pexclass) 或 [PexMethod](attribute-glossary.md#pexmethod)）的 MaxCalls 选项   。 下面的示例可有效地移除此边界：
+可编辑派生自 PexSettingsAttributeBase 的属性（例如 [PexClass](attribute-glossary.md#pexclass) 或 [PexMethod](attribute-glossary.md#pexmethod)）的 MaxCalls 选项 。 下面的示例可有效地移除此边界：
 
 ```csharp
 [PexMethod(MaxCalls=int.MaxValue)]
@@ -161,7 +161,7 @@ public void MyTest(...) {
 
 IntelliTest 在[输入生成](input-generation.md)期间会限制其浏览的所有执行路径的调用堆栈大小。 发生堆栈溢出时，此功能可防止 IntelliTest 终止。
 
-可编辑派生自 PexSettingsAttributeBase 的属性（例如 [PexClass](attribute-glossary.md#pexclass) 或 [PexMethod](attribute-glossary.md#pexmethod)）的 MaxStack 选项   。 下例可有效地移除此边界（不推荐）：
+可编辑派生自 PexSettingsAttributeBase 的属性（例如 [PexClass](attribute-glossary.md#pexclass) 或 [PexMethod](attribute-glossary.md#pexmethod)）的 MaxStack 选项 。 下例可有效地移除此边界（不推荐）：
 
 ```csharp
 [PexMethod(MaxStack=int.MaxValue)]
@@ -179,7 +179,7 @@ IntelliTest 在[输入生成](input-generation.md)期间会限制其浏览的执
 
 并不是每次 IntelliTest 使用特定输入运行参数化测试时，它都会发出新的测试用例。 请参阅 [TestEmissionFilter](exploration-bounds.md#testemissionfilter) 了解有关详细信息。
 
-可编辑派生自 PexSettingsAttributeBase 的属性（例如 [PexClass](attribute-glossary.md#pexclass) 或 [PexMethod](attribute-glossary.md#pexmethod)）的 MaxRuns 选项   。 下例可有效地移除此边界（不推荐）：
+可编辑派生自 PexSettingsAttributeBase 的属性（例如 [PexClass](attribute-glossary.md#pexclass) 或 [PexMethod](attribute-glossary.md#pexmethod)）的 MaxRuns 选项 。 下例可有效地移除此边界（不推荐）：
 
 ```csharp
 [PexMethod(MaxRuns=2000)]
@@ -197,7 +197,7 @@ IntelliTest 在[输入生成](input-generation.md)期间会限制其浏览的执
 
 IntelliTest 通常会在最初查找许多有趣的测试输入，但一段时间之后它就不会再发出任何其他测试。 此选项可控制 IntelliTest 在多长时间内不断尝试查找其他相关的测试输入。
 
-可编辑派生自 PexSettingsAttributeBase 的属性（例如 [PexClass](attribute-glossary.md#pexclass) 或 [PexMethod](attribute-glossary.md#pexmethod)）的 MaxRunsWithoutNewTests 选项   。 下例可有效地移除此边界（不推荐）：
+可编辑派生自 PexSettingsAttributeBase 的属性（例如 [PexClass](attribute-glossary.md#pexclass) 或 [PexMethod](attribute-glossary.md#pexmethod)）的 MaxRunsWithoutNewTests 选项 。 下例可有效地移除此边界（不推荐）：
 
 ```csharp
 [PexMethod(MaxRunsWithoutNewTests=2000)]

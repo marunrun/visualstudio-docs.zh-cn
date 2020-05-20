@@ -61,7 +61,7 @@ ms.locfileid: "79306961"
 
 自 Unity 2018.1 起，Visual Studio 应为 Unity 的默认外部脚本编辑器。 可以确认下是否如此，或者将外部脚本编辑器更改为特定版本的 Visual Studio：
 
-1. 从“编辑”  菜单选择“首选项”  。
+1. 从“编辑”菜单选择“首选项”。
 
    ![选择首选项](media/vstu_unity-preferences.png)
 
@@ -88,7 +88,7 @@ ms.locfileid: "79306961"
    [下载 Visual Studio 2015 Tools for Unity](https://marketplace.visualstudio.com/items?itemName=SebastienLebreton.VisualStudio2015ToolsforUnity)
 
 > [!NOTE]
-> Visual Studio Tools for Unity 要求 Unity 5.2 和更高版本，以及支持扩展的 Visual Studio 版本，例如，Visual Studio Community、Professional、Premium 或 Enterprise。 若要验证你安装的 Unity 是否启用了 Visual Studio Tools for Unity，请从“帮助”  菜单中选择“关于 Unity”  ，并在对话框左下角查看“Microsoft Visual Studio Tools for Unity 已启用”文本。
+> Visual Studio Tools for Unity 要求 Unity 5.2 和更高版本，以及支持扩展的 Visual Studio 版本，例如，Visual Studio Community、Professional、Premium 或 Enterprise。 若要验证你安装的 Unity 是否启用了 Visual Studio Tools for Unity，请从“帮助”菜单中选择“关于 Unity”，并在对话框左下角查看“Microsoft Visual Studio Tools for Unity 已启用”文本。
 > ![关于 Unity](media/vstu_about-unity.png)
 
 ## <a name="next-steps"></a>后续步骤

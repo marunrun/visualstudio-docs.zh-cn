@@ -121,7 +121,7 @@ function Foo(param1) {
 <a name="TsDeclFiles"></a>
 ### <a name="intellisense-based-on-typescript-declaration-files"></a>基于 TypeScript 声明文件的 IntelliSense
 
-由于 JavaScript 和 TypeScript 现基于同一语言服务，因此它们能够以更丰富的方式进行交互。 例如，可以为在 .d.ts 文件（详细信息）中声明的值提供 JavaScript IntelliSense（请参阅 [TypeScript 文档](https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html)），而且在 TypeScript 中声明的类型（如接口和类）可用作 JsDoc 注释中的类型  。
+由于 JavaScript 和 TypeScript 现基于同一语言服务，因此它们能够以更丰富的方式进行交互。 例如，可以为在 .d.ts 文件（详细信息）中声明的值提供 JavaScript IntelliSense（请参阅 [TypeScript 文档](https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html)），而且在 TypeScript 中声明的类型（如接口和类）可用作 JsDoc 注释中的类型。
 
 下面是一个简单的示例，其中演示 TypeScript 定义文件通过接口向同一项目的 JavaScript 文件提供此类类型信息（使用 `JsDoc` 标记）。
 
@@ -130,7 +130,7 @@ function Foo(param1) {
 <a name="Auto"></a>
 ### <a name="automatic-acquisition-of-type-definitions"></a>自动获取类型定义
 
-在 TypeScript 世界中，最常用的 JavaScript 库的 API 由 .d.ts 文件描述，此类定义最常见的存储库位于 [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)  。
+在 TypeScript 世界中，最常用的 JavaScript 库的 API 由 .d.ts 文件描述，此类定义最常见的存储库位于 [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)。
 
 默认情况下，Salsa 语言服务将尝试检测正在使用的 JavaScript 库，并自动下载和引用用于描述库的对应 .d.ts 文件，以提供更丰富的 IntelliSense  。 文件将下载到用户文件夹下的缓存中，位置为 %LOCALAPPDATA%\Microsoft\TypeScript  。
 

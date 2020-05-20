@@ -23,7 +23,7 @@ ms.locfileid: "62784110"
 目前，仅适用于 Linux 的 Azure 应用服务支持 Python，可按照本文所述使用 [Git deploy](#publish-to-app-service-on-linux-using-git-deploy) 和[容器](#publish-to-app-service-on-linux-using-containers)发布应用。
 
 > [!Note]
-> 适用于 Windows 的 Azure 应用服务对的 Python 支持已遭正式弃用。 因此，仅 [IIS 目标](#publish-to-iis)正式支持 Visual Studio 中的“发布”  命令，Azure 应用服务中的远程调试功能已不再正式受支持。
+> 适用于 Windows 的 Azure 应用服务对的 Python 支持已遭正式弃用。 因此，仅 [IIS 目标](#publish-to-iis)正式支持 Visual Studio 中的“发布”命令，Azure 应用服务中的远程调试功能已不再正式受支持。
 >
 > 不过，[发布到 Windows 上的应用服务](publish-to-app-service-windows.md)功能目前仍有效，因为 Windows 上的应用服务适用的 Python 扩展仍可用，但我们不再会为它提供服务或更新它。
 

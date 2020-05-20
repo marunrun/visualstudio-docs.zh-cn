@@ -61,9 +61,9 @@ ms.locfileid: "74984911"
 
    * **使用 Xamarin 的应用**：
       - Xamarin.Forms - 选择“Android”  和“iOS”  平台。
-      - 仅限 iOS - 选择“iOS”  平台（请注意，需要安装 [Xcode  ](https://developer.apple.com/xcode/)）。
+      - 仅限 iOS - 选择“iOS”平台（请注意，需要安装 [Xcode](https://developer.apple.com/xcode/)）。
       - 仅限 Android - 选择“Android”  平台（请注意，还应选择相关依赖项）。
-      - 仅限 Mac - 选择“macOS”  平台（请注意，需要安装 [Xcode  ](https://developer.apple.com/xcode/)）。
+      - 仅限 Mac - 选择“macOS”平台（请注意，需要安装 [Xcode](https://developer.apple.com/xcode/)）。
       - 完全跨平台的 Xamarin 应用 - 选择“Android”  、“iOS”  和“macOS”  平台。
    * **.NET Core 应用程序** - 选择“.NET Core”  平台。
    * **ASP.NET Core Web 应用程序** - 选择“.NET Core”  平台。

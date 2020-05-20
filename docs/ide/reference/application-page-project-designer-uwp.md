@@ -38,7 +38,7 @@ ms.locfileid: "77173078"
 
  程序集信息 &mdash; 选择此按钮将显示[“程序集信息”对话框](../../ide/reference/assembly-information-dialog-box.md)。
 
- 包清单 &mdash; 选择此按钮将打开清单设计器。 此外，还可以通过选择“解决方案资源管理器”  中的 Package.appxmanifest  文件来访问清单设计器。 有关详细信息，请参阅[使用清单设计器配置包](/windows/msix/package/packaging-uwp-apps#configure-your-project)。
+ 包清单 &mdash; 选择此按钮将打开清单设计器。 此外，还可以通过选择“解决方案资源管理器”中的 Package.appxmanifest 文件来访问清单设计器。 有关详细信息，请参阅[使用清单设计器配置包](/windows/msix/package/packaging-uwp-apps#configure-your-project)。
 
 ## <a name="targeting-section"></a>“设定目标”部分
 

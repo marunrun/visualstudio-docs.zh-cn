@@ -16,7 +16,7 @@ ms.locfileid: "74538576"
 
 本文提供关于团队资源管理器中各种功能的 Azure DevOps 文章的链接  。
 
-使用“团队资源管理器”工具窗口与其他团队成员协调代码工作，以开发项目，并管理分配给你、你的团队或项目的工作  。 团队资源管理器将 Visual Studio 连接到 Git 和 GitHub 存储库、Team Foundation 版本控制 (TFVC) 存储库以及 [Azure DevOps Services](/azure/devops/user-guide/what-is-azure-devops-services) 或本地 [Azure DevOps Server](/azure/devops/index-all)（以前称为 TFS）上托管的项目  。 你可管理源代码、工作项和生成。
+使用“团队资源管理器”工具窗口与其他团队成员协调代码工作，以开发项目，并管理分配给你、你的团队或项目的工作  。 团队资源管理器将 Visual Studio 连接到 Git 和 GitHub 存储库、Team Foundation 版本控制 (TFVC) 存储库以及 [Azure DevOps Services](/azure/devops/user-guide/what-is-azure-devops-services) 或本地 [Azure DevOps Server](/azure/devops/index-all)（以前称为 TFS）上托管的项目。 你可管理源代码、工作项和生成。
 
 ## <a name="home-page"></a>主页
 
@@ -26,7 +26,7 @@ ms.locfileid: "74538576"
 - [Web 门户](/azure/devops/project/navigation/index)
 - [任务板](/azure/devops/boards/sprints/task-board)
 
-根据用户是连接到 [Git](/azure/devops/repos/git/gitquickstart?view=vsts&tabs=visual-studio) 还是 [Team Foundation 版本控制 (TFVC)](/azure/devops/repos/tfvc/overview) 存储库，“开始”页具有不同功能  。
+根据用户是连接到 [Git](/azure/devops/repos/git/gitquickstart?view=vsts&tabs=visual-studio) 还是 [Team Foundation 版本控制 (TFVC)](/azure/devops/repos/tfvc/overview) 存储库，“开始”页具有不同功能。
 
 > [!TIP]
 > 要比较这两个版本控制系统，请参见[为项目 (Azure DevOps) 选择正确的版本控制](/azure/devops/repos/tfvc/comparison-git-tfvc)。
@@ -69,7 +69,7 @@ ms.locfileid: "74538576"
 
 ## <a name="work-items-page"></a>工作项页面
 
-通过“工作项”页，可以查看[工作项](/azure/devops/boards/work-items/about-work-items)查询  。 请参阅：
+通过“工作项”页，可以查看[工作项](/azure/devops/boards/work-items/about-work-items)查询。 请参阅：
 
 - [添加工作项](/azure/devops/boards/backlogs/add-work-items)
 - [使用查询编辑器来列出和管理查询](/azure/devops/boards/queries/using-queries)

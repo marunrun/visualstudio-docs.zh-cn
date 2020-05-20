@@ -70,10 +70,10 @@ ms.locfileid: "74772227"
  “指令指针”视图可用于查看在采样分析过程中执行的特定指令。 有关详细信息，请参阅[“指令指针”(IP) 视图](../profiling/instruction-pointers-ips-view.md)。
 
 ### <a name="allocation-view"></a>“分配”视图
- 如果在“性能会话”  属性对话框的“常规”  页上选择了“收集 .NET 对象分配”  ，则可使用“分配”视图。 请参阅[性能会话概述](../profiling/performance-session-overview.md)。 “分配”视图列出应用程序或组件分配的 .NET 对象。 展开某个对象行时，会显示调用树。 调用树显示对象创建所产生的执行路径。 还会在调用树中显示有关每个函数的非独占和独占分配数量的信息。 “分配”视图还可以展开以及突出显示分配了最大对象数的函数的执行路径。 若要显示最活跃的路径，请右键单击函数，然后单击“展开热路径”  。 有关详细信息，请参阅[收集 .NET 内存分配数据和生存期数据](../profiling/collecting-dotnet-memory-allocation-and-lifetime-data.md)和[“分配”视图](../profiling/dotnet-memory-allocations-view.md)。
+ 如果在“性能会话”属性对话框的“常规”页上选择了“收集 .NET 对象分配”，则可使用“分配”视图。 请参阅[性能会话概述](../profiling/performance-session-overview.md)。 “分配”视图列出应用程序或组件分配的 .NET 对象。 展开某个对象行时，会显示调用树。 调用树显示对象创建所产生的执行路径。 还会在调用树中显示有关每个函数的非独占和独占分配数量的信息。 “分配”视图还可以展开以及突出显示分配了最大对象数的函数的执行路径。 若要显示最活跃的路径，请右键单击函数，然后单击“展开热路径”  。 有关详细信息，请参阅[收集 .NET 内存分配数据和生存期数据](../profiling/collecting-dotnet-memory-allocation-and-lifetime-data.md)和[“分配”视图](../profiling/dotnet-memory-allocations-view.md)。
 
 ### <a name="objects-lifetime-view"></a>“对象生存期”视图
- 如果在“性能会话”  属性对话框的“常规”  页上选择了“收集 .NET 对象分配信息”  和“同时收集 .NET 对象的生存期信息”  ，则可使用“对象生存期”视图。
+ 如果在“性能会话”属性对话框的“常规”页上选择了“收集 .NET 对象分配信息”和“同时收集 .NET 对象的生存期信息”，则可使用“对象生存期”视图。
 
  “对象生存期”视图显示每种类型的实例的总数，以及在每代垃圾回收中收集的对象的数量。 有关详细信息，请参阅[“对象生存期”视图](../profiling/object-lifetime-view.md)。
 

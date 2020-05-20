@@ -32,7 +32,7 @@ IntelliTest 提供了一套静态帮助程序类，可供创作[参数化单元�
 <a name="pexassume"></a>
 ## <a name="pexassume"></a>PexAssume
 
-表示假设的静态类，例如[参数化单元测试](test-generation.md#precondition)中的[前置条件](test-generation.md#parameterized-unit-testing)。 此类的方法可用于筛除不需要的测试输入。
+表示假设的静态类，例如[参数化单元测试](test-generation.md#parameterized-unit-testing)中的[前置条件](test-generation.md#precondition)。 此类的方法可用于筛除不需要的测试输入。
 
 如果假设的条件不适用于某些测试输入，则会引发 PexAssumeFailedException  。 这将导致在无提示的情况下忽略该测试。
 
@@ -64,7 +64,7 @@ PexAssume  还包含专用的嵌套类，用于对字符串、数组和集合进
 <a name="pexassert"></a>
 ## <a name="pexassert"></a>PexAssert
 
-表示断言的静态类，例如[参数化单元测试](test-generation.md#postcondition)中的[后置条件](test-generation.md#parameterized-unit-testing)。
+表示断言的静态类，例如[参数化单元测试](test-generation.md#parameterized-unit-testing)中的[后置条件](test-generation.md#postcondition)。
 
 如果断言的条件不适用于某些测试输入，则会引发 PexAssertFailedException，这将导致测试失败  。
 

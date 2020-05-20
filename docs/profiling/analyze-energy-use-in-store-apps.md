@@ -150,7 +150,7 @@ if (performance && performance.mark) {
 
 ## <a name="other-resources"></a>其他资源
 
-- [C#/VB/C++ 和 XAML](/previous-versions/windows/apps/hh452985\(v\=win.10\)) 的“连接状态和成本管理”部分介绍了提供网络连接信息的 Windows API，应用程序可以使用这些信息最大程度降低网络通信成本  。
+- [C#/VB/C++ 和 XAML](/previous-versions/windows/apps/hh452985\(v\=win.10\)) 的“连接状态和成本管理”部分介绍了提供网络连接信息的 Windows API，应用程序可以使用这些信息最大程度降低网络通信成本。
 
    使用 UWP 应用的 Visual Studio 模拟器可以模拟网络信息 API 的数据连接属性。 请参阅[在模拟器中运行 UWP 应用](../debugger/run-windows-store-apps-in-the-simulator.md)
 

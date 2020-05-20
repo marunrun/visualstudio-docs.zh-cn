@@ -75,7 +75,7 @@ ms.locfileid: "68918888"
 
 ## <a name="extensions-to-hide"></a>要隐藏的扩展名
 
-指定在“显示所有文件”  启用时，不会在“解决方案资源管理器”  中显示的文件的文件扩展名。
+指定在“显示所有文件”启用时，不会在“解决方案资源管理器”中显示的文件的文件扩展名。
 
 ## <a name="build-customization-search-path"></a>生成自定义搜索路径
 

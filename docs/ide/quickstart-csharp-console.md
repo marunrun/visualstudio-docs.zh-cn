@@ -52,7 +52,7 @@ ms.locfileid: "77579486"
 
    ![Visual Studio IDE 中“新建项目”对话框中的控制台应用 (.NET Core) 项目模板](../ide/media/new-project-csharp-dotnetcore-helloworld-console-app.png)
 
-     如果看不到“控制台应用(.NET Core)”  项目模板，请选择“新建项目”  对话框左侧窗格中的“打开 Visual Studio 安装程序”  链接。
+     如果看不到“控制台应用(.NET Core)”项目模板，请选择“新建项目”对话框左侧窗格中的“打开 Visual Studio 安装程序”链接。
 
    ![选择“新建项目”对话框中的“打开 Visual Studio 安装程序”链接](../ide/media/csharp-open-visual-studio-installer-hello-world.png)
 

@@ -20,7 +20,7 @@ ms.locfileid: "75590834"
 ---
 # <a name="set-language-specific-editor-options"></a>设置语言特定的编辑器选项
 
-Visual Studio 提供了各种可应用于特定编程语言的文本编辑器选项。 可从“工具”  菜单访问“选项”  对话框，并在其中配置选项。 还可以通过[创建 EditorConfig 文件](../../ide/create-portable-custom-editor-options.md)，根据项目或基本代码配置某些编辑器设置。
+Visual Studio 提供了各种可应用于特定编程语言的文本编辑器选项。 可从“工具”菜单访问“选项”对话框，并在其中配置选项。 还可以通过[创建 EditorConfig 文件](../../ide/create-portable-custom-editor-options.md)，根据项目或基本代码配置某些编辑器设置。
 
 ## <a name="settings-available-in-the-options-dialog-box"></a>“选项”对话框中可用的设置
 

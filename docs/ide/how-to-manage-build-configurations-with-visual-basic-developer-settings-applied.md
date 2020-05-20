@@ -27,7 +27,7 @@ ms.locfileid: "76115155"
 
 ## <a name="enable-advanced-build-configurations"></a>启用高级生成配置
 
-默认情况下，Visual Basic 开发人员设置将隐藏用于打开“Configuration Manager”  对话框以及[项目设计器](../ide/reference/application-page-project-designer-visual-basic.md)中的“配置”和“平台”列表的选项   。
+默认情况下，Visual Basic 开发人员设置将隐藏用于打开“Configuration Manager”对话框以及[项目设计器](../ide/reference/application-page-project-designer-visual-basic.md)中的“配置”和“平台”列表的选项 。
 
 1. 在 **“工具”** 菜单上，单击 **“选项”** 。
 
