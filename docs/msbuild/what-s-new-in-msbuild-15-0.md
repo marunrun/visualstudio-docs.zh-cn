@@ -42,7 +42,7 @@ MSBuild 现已推出，属于 [.NET Core SDK](https://www.microsoft.com/net/down
 
 - [项目元素](../msbuild/project-element-msbuild.md)具有新的 `SDK` 属性。 此外，`Xmlns` 属性现也是可选项。 有关 `SDK` 属性的详细信息，请参阅[如何：使用 MSBuild 项目 SDK](../msbuild/how-to-use-project-sdk.md)；[包、元包和框架](/dotnet/core/packages)；以及 [.NET Core 的 csproj 格式的新增内容](/dotnet/core/tools/csproj)。
 - 目标外的[项元素](../msbuild/item-element-msbuild.md)具有新的 `Update` 属性。 此外，已放弃对 `Remove` 属性的限制。
-- Directory.Build.props  是用户定义文件，对目录下的项目提供自定义选项。 除非  *属性设为 false，否则该文件将从 Microsoft.Common.props 自动导入。* `ImportDirectoryBuildTargets`  Directory.Build.targets 由 Microsoft.Common.targets 导入。  
+- Directory.Build.props  是用户定义文件，对目录下的项目提供自定义选项。 除非 `ImportDirectoryBuildTargets` 属性设为 false，否则该文件将从 Microsoft.Common.props 自动导入。 Directory.Build.targets 由 Microsoft.Common.targets 导入。  
 - 名称不与当前属性列表冲突的元数据可选择性地表示为属性。 有关详细信息，请参阅[项元素](../msbuild/item-element-msbuild.md)。
 
 ## <a name="new-property-functions"></a>新的属性函数

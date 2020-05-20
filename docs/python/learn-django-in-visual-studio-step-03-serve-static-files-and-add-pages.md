@@ -20,7 +20,7 @@ ms.locfileid: "62957977"
 ---
 # <a name="step-3-serve-static-files-add-pages-and-use-template-inheritance"></a>步骤 3：提供静态文件、添加页面和使用模板继承
 
-上一步：[使用视图和页面模板创建 Django 应用](learn-django-in-visual-studio-step-02-create-an-app.md) 
+上一步：[使用视图和页面模板创建 Django 应用](learn-django-in-visual-studio-step-02-create-an-app.md)
 
 在本教程的前几个步骤中，你已了解如何在自包含 HTML 的单个页面中创建最小的 Django 应用。 然而，现代 Web 应用通常由许多页面组成，并利用 CSS、JavaScript 文件等共享资源来提供一致的样式和行为。
 
@@ -34,7 +34,7 @@ ms.locfileid: "62957977"
 
 ## <a name="step-3-1-become-familiar-with-item-templates"></a>步骤 3-1：熟悉项模板
 
-在开发 Django 应用时，通常会添加更多的 Python、HTML、CSS 和 JavaScript 文件。 对于每个文件类型（以及诸如 web.config 等其他需要部署的文件），Visual Studio 提供了方便的[项模板](python-item-templates.md)来帮助入门  。
+在开发 Django 应用时，通常会添加更多的 Python、HTML、CSS 和 JavaScript 文件。 对于每个文件类型（以及诸如 web.config 等其他需要部署的文件），Visual Studio 提供了方便的[项模板](python-item-templates.md)来帮助入门。
 
 若要查看可用模板，请转到“解决方案资源管理器”  ，右键单击要在其中创建项的文件夹，选择“添加”   > “新项”  ：
 
@@ -63,9 +63,9 @@ STATIC_ROOT = posixpath.join(*(BASE_DIR.split(os.path.sep) + ['static']))
 
 可使用 static 中你喜欢的任意文件夹结构来组织文件，然后在该文件夹中使用相对路径来引用文件  。 为了演示此过程，下面的步骤会将 CSS 文件添加到应用中，然后在 index.html 模板中使用该样式表  ：
 
-1. 在解决方案资源管理器中，右键单击 Visual Studio 项目中的“HelloDjangoApp”文件夹，依次选择“添加” > “新文件夹”，并命名文件夹 `static`    。
+1. 在解决方案资源管理器中，右键单击 Visual Studio 项目中的“HelloDjangoApp”文件夹，依次选择“添加” > “新文件夹”，并命名文件夹 `static`。
 
-1. 右键单击 static 文件夹，然后选择“添加” > “新项”    。 在出现的对话框中，选择“样式表”模板，将文件命名为 `site.css`，然后选择“确定”   。 site.css 文件出现在项目中，并在编辑器中打开  。 文件夹结构应类似于下图：
+1. 右键单击 static 文件夹，然后选择“添加” > “新项”。 在出现的对话框中，选择“样式表”模板，将文件命名为 `site.css`，然后选择“确定”。 site.css 文件出现在项目中，并在编辑器中打开  。 文件夹结构应类似于下图：
 
     ![解决方案资源管理器中显示的静态文件结构](media/django/step03-static-file-structure.png)
 
@@ -78,7 +78,7 @@ STATIC_ROOT = posixpath.join(*(BASE_DIR.split(os.path.sep) + ['static']))
     }
     ```
 
-1. 将应用的 templates/HelloDjangoApp/index.html 文件的内容替换为以下代码，从而将步骤 2 中使用的 `<strong>` 元素替换为引用 `message` 样式类的 `<span>` 。 通过此方式使用样式类为设计元素样式提供了更多灵活性。 （如果在使用 VS 2017 15.7 及更早版本时，尚未将 index.html 移动到 templates 的子文件夹中，请参阅步骤 2-4 中的[模板命名空间](learn-django-in-visual-studio-step-02-create-an-app.md#template-namespacing)   。）
+1. 将应用的 templates/HelloDjangoApp/index.html 文件的内容替换为以下代码，从而将步骤 2 中使用的 `<strong>` 元素替换为引用 `message` 样式类的 `<span>`。 通过此方式使用样式类为设计元素样式提供了更多灵活性。 （如果在使用 VS 2017 15.7 及更早版本时，尚未将 index.html 移动到 templates 的子文件夹中，请参阅步骤 2-4 中的[模板命名空间](learn-django-in-visual-studio-step-02-create-an-app.md#template-namespacing)。）
 
     ```html
     <html>
@@ -113,7 +113,7 @@ STATIC_ROOT = posixpath.join(*(BASE_DIR.split(os.path.sep) + ['static']))
 
 以下步骤将“关于”页面添加到“HelloDjangoApp”项目，并从主页链接到该页面：
 
-1. 在解决方案资源管理器中，右键单击 templates/HelloDjangoApp 文件夹，选择“添加” > “新项”，选择“HTML 页”项模板，将文件命名为 `about.html`，然后选择“确定”       。
+1. 在解决方案资源管理器中，右键单击 templates/HelloDjangoApp 文件夹，选择“添加” > “新项”，选择“HTML 页”项模板，将文件命名为 `about.html`，然后选择“确定”。
 
     > [!Tip]
     > 如果“新项”  命令未显示在“添加”  菜单上，请确保已停止服务器，使 Visual Studio 退出调试模式。
@@ -134,7 +134,7 @@ STATIC_ROOT = posixpath.join(*(BASE_DIR.split(os.path.sep) + ['static']))
     </html>
     ```
 
-1. 打开应用的 views.py 文件，并添加使用该模板的名为 `about` 的函数  ：
+1. 打开应用的 views.py 文件，并添加使用该模板的名为 `about` 的函数：
 
     ```python
     def about(request):
@@ -148,27 +148,27 @@ STATIC_ROOT = posixpath.join(*(BASE_DIR.split(os.path.sep) + ['static']))
         )
     ```
 
-1. 打开 Django 项目的 urls.py 文件，将以下行添加到 `urlPatterns` 数组  ：
+1. 打开 Django 项目的 urls.py 文件，将以下行添加到 `urlPatterns` 数组：
 
     ```python
     url(r'^about$', HelloDjangoApp.views.about, name='about'),
     ```
 
-1. 打开 templates/HelloDjangoApp/index.html 文件，添加 `<body>` 元素下的以下行以链接到“关于”页（同样，可以使用步骤 3-4 中的导航栏替换此链接）  ：
+1. 打开 templates/HelloDjangoApp/index.html 文件，添加 `<body>` 元素下的以下行以链接到“关于”页（同样，可以使用步骤 3-4 中的导航栏替换此链接）：
 
     ```html
     <div><a href="about">About</a></div>
     ```
 
-1. 若要保存所有文件，请使用“文件” > “全部保存”菜单命令，或只需按 Ctrl+Shift+S      。 （从技术上讲，不需要执行此步骤，因为在 Visual Studio 中运行项目会自动保存文件。 不过，可以了解一下这个命令！）
+1. 若要保存所有文件，请使用“文件” > “全部保存”菜单命令，或只需按 Ctrl+Shift+S。 （从技术上讲，不需要执行此步骤，因为在 Visual Studio 中运行项目会自动保存文件。 不过，可以了解一下这个命令！）
 
 1. 运行项目并观察结果，并检查页面之间的导航。 完成时关闭服务器。
 
 ### <a name="question-i-tried-using-index-for-the-link-to-the-home-page-but-it-didnt-work-why"></a>问：我曾尝试使用“index”来链接到主页，但它不起作用。 为什么？
 
-答：即使 views.py 中的视图函数被命名为 `index`，Django 项目 urls.py 文件中的 URL 路由模式也不包含与字符串“index”相匹配的正则表达式   。 若要匹配该字符串，需要为模式 `^index$` 添加另一个条目。
+答：即使 views.py 中的视图函数被命名为 `index`，Django 项目 urls.py 文件中的 URL 路由模式也不包含与字符串“index”相匹配的正则表达式。 若要匹配该字符串，需要为模式 `^index$` 添加另一个条目。
 
-如下一节所示，最好在页面模板中使用 `{% url '<pattern_name>' %}` 标记来引用模式的名称  ，在这种情况下，Django 会为你创建适当的 URL。 例如，用 `<div><a href="{% url 'index' %}">Home</a></div>` 替换 about.html 中的 `<div><a href="home">Home</a></div>` 。 在这里使用“index”会起作用，因为 urls.py 中的第一个 URL 模式实际上被命名为“index”（依据 `name='index'` 参数）  。 也可以用“home”来引用第二种模式。
+如下一节所示，最好在页面模板中使用 `{% url '<pattern_name>' %}` 标记来引用模式的名称  ，在这种情况下，Django 会为你创建适当的 URL。 例如，用 `<div><a href="{% url 'index' %}">Home</a></div>` 替换 about.html 中的 `<div><a href="home">Home</a></div>`。 在这里使用“index”会起作用，因为 urls.py 中的第一个 URL 模式实际上被命名为“index”（依据 `name='index'` 参数）。 也可以用“home”来引用第二种模式。
 
 ## <a name="step-3-4-use-template-inheritance-to-create-a-header-and-nav-bar"></a>步骤 3-4：使用模板继承创建标头和导航栏
 
@@ -180,13 +180,13 @@ Django 模板系统为实现跨多个模板重用特定元素提供了两种方�
 
 - 继承  使用页面模板开头的 `{% extends <template_path> %}` 来指定共享基本模板，然后会在此模板上生成引用模板。 继承通常用于为应用页面定义共享布局、导航栏和其他结构，这样一来，引用模板只需要添加或修改称为“块”  的基本模板的特定区域。
 
-在这两种情况下，`<template_path>` 对应于应用的 templates 文件夹（还允许 `../` 或 `./`）  。
+在这两种情况下，`<template_path>` 对应于应用的 templates 文件夹（还允许 `../` 或 `./`）。
 
 基本模板使用 `{% block <block_name> %}` 和 `{% endblock %}` 标记来标示块。 如果引用模板随后使用具有相同块名称的标记，那么它的块内容将替代基本模板的内容。
 
 以下步骤演示继承：
 
-1. 在应用的 templates/HelloDjangoApp 文件夹中，新建一个名为 layout.html 的 HTML 文件（使用“添加” > “新项”上下文菜单或“添加” > “HTML 页”），再将其内容替换为以下标记       。 可以看到此模板包含一个名为“content”的块，这是引用页面需要替换的全部内容：
+1. 在应用的 templates/HelloDjangoApp 文件夹中，新建一个名为 layout.html 的 HTML 文件（使用“添加” > “新项”上下文菜单或“添加” > “HTML 页”），再将其内容替换为以下标记。 可以看到此模板包含一个名为“content”的块，这是引用页面需要替换的全部内容：
 
     ```html
     <!DOCTYPE html>

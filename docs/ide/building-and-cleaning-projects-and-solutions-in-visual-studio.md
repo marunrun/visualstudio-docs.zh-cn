@@ -38,7 +38,7 @@ ms.locfileid: "76114553"
 > 本主题适用于 Visual Studio  Windows 版。 对于 Visual Studio for Mac，请参阅[在 Visual Studio for Mac 中生成和清除项目和解决方案](/visualstudio/mac/building-and-cleaning-projects-and-solutions)。
 
 > [!NOTE]
-> 你的 Visual Studio 版本中的 UI 可能与此主题中描述的有所不同，具体取决于现用的设置。 若要更改设置，例如“常规”或“Visual C++”设置，请选择“工具” **“导入和导出设置”，再选择“重置所有设置”**    >    。
+> 你的 Visual Studio 版本中的 UI 可能与此主题中描述的有所不同，具体取决于现用的设置。 若要更改设置，例如“常规”或“Visual C++”设置，请选择“工具” > “导入和导出设置”，再选择“重置所有设置”。
 
 ## <a name="to-build-rebuild-or-clean-an-entire-solution"></a>生成、重新生成或清理整个解决方案
 
@@ -67,25 +67,25 @@ ms.locfileid: "76114553"
 
 ## <a name="to-build-only-the-startup-project-and-its-dependencies"></a>仅生成启动项目及其依赖项
 
-1. 在菜单栏上，依次选择“工具” **“选项”**  >   。
+1. 在菜单栏上，依次选择“工具” > “选项”。
 
 2. 在“选项”  对话框框中，展开“项目和解决方案”  节点，然后选择“生成和运行”  页。
 
-     “生成和运行” **“项目和解决方案”** “选项”对话框随即打开 >    >   。
+     “生成和运行” > “项目和解决方案” > “选项”对话框随即打开。
 
 3. 选择“在运行时仅生成启动项目和依赖项”  复选框。
 
      选中此复选框后，执行以下步骤之一时，将仅生成当前启动项目及其依赖项：
 
-    - 在菜单栏上，依次选择“调试” **“启动”(F5)**  >    。
+    - 在菜单栏上，依次选择“调试” > “启动”(F5)。
 
-    - 在菜单栏上，依次选择“生成” **“生成解决方案”(Ctrl**Shift > B)   +  +  。
+    - 在菜单栏上，依次选择“生成” > “生成解决方案”(Ctrl+Shift+B)。
 
     清理此复选框后，运行以上任一命令时，会生成所有项目、项目依赖项和解决方案文件。 默认情况下清除此复选框。
 
 ## <a name="to-build-only-the-selected-visual-c-project"></a>仅生成选定的 Visual C++ 项目
 
-选择 [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] 项目，然后在菜单栏上选择“生成” **“仅项目”，再选择下列某个命令** >   ：
+选择 [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] 项目，然后在菜单栏上选择“生成” > “仅项目”，再选择下列某个命令：
 
 - 仅生成  ProjectName 
 
@@ -107,9 +107,9 @@ ms.locfileid: "76114553"
 
 任意执行以下步骤之一：
 
-- 在菜单栏上，选择“生成” **“取消”**  >   。
+- 在菜单栏上，选择“生成” > “取消”。
 
-- 按 Ctrl **Break**+  。
+- 按 Ctrl +Break。
 
 ## <a name="see-also"></a>另请参阅
 

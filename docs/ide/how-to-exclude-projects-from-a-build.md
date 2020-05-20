@@ -30,7 +30,7 @@ ms.locfileid: "76114799"
 
 ## <a name="to-temporarily-remove-a-project-from-the-active-solution-configuration"></a>从活动解决方案配置中暂时删除项目
 
-1. 在菜单栏上，依次选择“生成” **“Configuration Manager”**  >   。
+1. 在菜单栏上，依次选择“生成” > “Configuration Manager”。
 
 2. 在“项目上下文”表中，找到要从生成中排除的项目  。
 
@@ -40,9 +40,9 @@ ms.locfileid: "76114799"
 
 ## <a name="to-create-a-solution-configuration-that-excludes-a-project"></a>创建排除项目的解决方案配置
 
-1. 在菜单栏上，依次选择“生成” **“Configuration Manager”**  >   。
+1. 在菜单栏上，依次选择“生成” > “Configuration Manager”。
 
-2. 在“活动解决方案配置”列表中，选择“**新建>”** **\<** 。
+2. 在“活动解决方案配置”列表中，选择“\<新建>”。
 
 3. 在“名称”框中，输入解决方案配置的名称  。
 
@@ -56,7 +56,7 @@ ms.locfileid: "76114799"
 
 ## <a name="skipped-projects"></a>跳过的项目
 
-可在生成期间因项目并非最新或已将其从配置中排除而跳过这些项目。 Visual Studio 会使用 MSBuild 生成项目。 如果输出早于输入，则 MSBuild 仅生成目标，其中时间由文件时间戳决定。 要强制重新生成，请使用命令“生成” **“重新生成解决方案”**  >   。
+可在生成期间因项目并非最新或已将其从配置中排除而跳过这些项目。 Visual Studio 会使用 MSBuild 生成项目。 如果输出早于输入，则 MSBuild 仅生成目标，其中时间由文件时间戳决定。 要强制重新生成，请使用命令“生成” > “重新生成解决方案”。
 
 在“输出”窗口的“生成”窗格中，Visual Studio 会报告处于最新状态的项目数量、成功构建的数量、失败的数量和跳过的数量   。 跳过计数不包括因是最新状态而未生成的项目。 如果从活动配置中排除项目，则会在生成期间跳过这些项目。 在生成输出中，会看到一条消息显示已跳过此项目：
 
@@ -65,7 +65,7 @@ ms.locfileid: "76114799"
 2>Project not selected to build for this solution configuration
 ```
 
-要查看为何跳过了某项目，请记下活动配置（在上例中为 `Debug x86`），然后选择“生成” **“Configuration Manager”**  >   。 如本文中所述，可查看或更改每个配置会跳过的具体项目。
+要查看为何跳过了某项目，请记下活动配置（在上例中为 `Debug x86`），然后选择“生成” > “Configuration Manager”。 如本文中所述，可查看或更改每个配置会跳过的具体项目。
 
 ## <a name="see-also"></a>另请参阅
 

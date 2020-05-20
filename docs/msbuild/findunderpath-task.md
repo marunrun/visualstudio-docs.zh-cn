@@ -47,7 +47,7 @@ ms.locfileid: "77634131"
 
 ## <a name="example"></a>示例
 
-以下示例使用 `FindUnderPath` 任务确定 `MyFiles` 项中所包含的文件是否具有位于 `SearchPath` 属性指定的路径下的路径。 任务完成后，`FilesNotFoundInPath` 项包含 File1.txt 文件， *项包含 File2.txt 文件*`FilesFoundInPath`  。
+以下示例使用 `FindUnderPath` 任务确定 `MyFiles` 项中所包含的文件是否具有位于 `SearchPath` 属性指定的路径下的路径。 任务完成后，`FilesNotFoundInPath` 项包含 File1.txt 文件，`FilesFoundInPath` 项包含 File2.txt 文件。
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">

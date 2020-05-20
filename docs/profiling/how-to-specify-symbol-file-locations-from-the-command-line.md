@@ -48,7 +48,7 @@ ms.locfileid: "77476893"
 
     `srv*<LocalStore>*https://msdl.microsoft.com/download/symbols`
 
-    其中，“ *”是你创建的本地目录的路径<LocalStore>* 。
+    其中，“<LocalStore>”是你创建的本地目录的路径。
 
 ## <a name="specify-component-symbol-files"></a>指定组件符号文件
  分析工具会在以下位置搜索待分析组件的 .pdb 文件：.pdb 文件在组件中的原始存储位置，或者包含分析数据文件的文件夹  。 可通过向 **_NT_SYMBOL_PATH** 或向 **/SymbolPath** 选项添加一个或多个路径来指定要搜索的其他位置。 各个路径之间用分号分隔。

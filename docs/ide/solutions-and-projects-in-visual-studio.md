@@ -42,7 +42,7 @@ ms.locfileid: "79307291"
 
 Visual Studio 使用 [MSBuild](../msbuild/msbuild.md) 生成解决方案中的每个项目，每个项目都包含一个 MSBuild 项目文件。 文件扩展名反映项目的类型（例如，C# 项目 (.csproj)、Visual Basic 项目 (.vbproj) 或数据库项目 (.dbproj)）。 项目文件是一个 XML 文档，其中包含 MSBuild 生成项目所需的所有信息和说明，包括内容、平台要求、版本控制信息、Web 服务器或数据库服务器设置以及要执行的任务。
 
-项目文件基于 [MSBuild XML 架构](../msbuild/msbuild-project-file-schema-reference.md)。 要在 Visual Studio 中查看较新的 [SDK 样式项目文件](../msbuild/how-to-use-project-sdk.md)的内容，请在解决方案资源管理器中右键单击项目节点，然后选择“编辑 **projectname**” **\<\>** 。 要查看该样式的 .NET Framework 和其他项目的内容，请先卸载该项目（右键单击“解决方案资源管理器”中的项目节点并选择“卸载项目”   ）。 然后，右键单击该项目并选择“编辑 **projectname\<”\>** 。
+项目文件基于 [MSBuild XML 架构](../msbuild/msbuild-project-file-schema-reference.md)。 要在 Visual Studio 中查看较新的 [SDK 样式项目文件](../msbuild/how-to-use-project-sdk.md)的内容，请在解决方案资源管理器中右键单击项目节点，然后选择“编辑 \<projectname\>”。 要查看该样式的 .NET Framework 和其他项目的内容，请先卸载该项目（右键单击“解决方案资源管理器”中的项目节点并选择“卸载项目”   ）。 然后，右键单击该项目并选择“编辑 \<projectname\>”。
 
 > [!NOTE]
 > 无需在 Visual Studio 中使用解决方案或项目来编辑、生成和调试代码。 只需在 Visual Studio 中打开包含源文件的文件夹并开始编辑。 有关详细信息，请参阅[在 Visual Studio 中开发代码而无需创建项目或解决方案](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md)。
@@ -60,11 +60,11 @@ Visual Studio 采用两种文件类型（.sln 和 .suo）来存储解决方案�
 
 ## <a name="create-new-projects"></a>创建新项目
 
-创建新项目最简单的方法是从特定类型的应用程序或网站的项目模板开始。 项目模板包含一组基本的预生成代码文件、配置文件、资产和设置。 可以在创建新项目的对话框中（“文件” **“新建”** “项目”）使用这些模板 >    >   。 有关详细信息，请参阅[在 Visual Studio 中创建新项目](create-new-project.md)和[创建解决方案和项目](../ide/creating-solutions-and-projects.md)。
+创建新项目最简单的方法是从特定类型的应用程序或网站的项目模板开始。 项目模板包含一组基本的预生成代码文件、配置文件、资产和设置。 可以在创建新项目的对话框中（“文件” > “新建” > “项目”）使用这些模板。 有关详细信息，请参阅[在 Visual Studio 中创建新项目](create-new-project.md)和[创建解决方案和项目](../ide/creating-solutions-and-projects.md)。
 
 如果你经常以某种方式自定义项目，则可以创建可用于从中创建新项目的自定义项目模板。 有关详细信息，请参阅[创建项目和项模板](../ide/creating-project-and-item-templates.md)。
 
-创建新项目时，默认情况下会将其保存在 %USERPROFILE%\source\repos 中  。 可以在“工具” **“选项”** “项目和解决方案” **“位置”下的“项目位置”设置中更改此位置** >    >    >   。 有关详细信息，请参阅[项目和解决方案页的“选项”对话框](../ide/reference/projects-and-solutions-options-dialog-box.md)。
+创建新项目时，默认情况下会将其保存在 %USERPROFILE%\source\repos 中  。 可以在“工具” > “选项” > “项目和解决方案” > “位置”下的“项目位置”设置中更改此位置。 有关详细信息，请参阅[项目和解决方案页的“选项”对话框](../ide/reference/projects-and-solutions-options-dialog-box.md)。
 
 ## <a name="solution-explorer"></a>“解决方案资源管理器”
 

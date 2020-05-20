@@ -22,7 +22,7 @@ C# 项目的一些常见生成操作为：
 
 * **无** - 文件不属于任何一种生成 - 它包括在项目中为了便于从 IDE 轻松访问。
 * **编译** - 文件将被传递到 C# 编译器作为源文件。
-* **嵌入式资源** - 文件将被传递到 C# 编译器作为嵌入程序集中的资源。 来自 [ 命名空间的 ](/dotnet/api/system.reflection.assembly.getmanifestresourcestream)Assembly.GetManifestResourceStream`System.Reflection` 可用于从程序集中读取文件。
+* **嵌入式资源** - 文件将被传递到 C# 编译器作为嵌入程序集中的资源。 来自 `System.Reflection` 命名空间的 [Assembly.GetManifestResourceStream](/dotnet/api/system.reflection.assembly.getmanifestresourcestream) 可用于从程序集中读取文件。
 * **内容** - 对于 ASP.NET 项目，将在部署站点时包含这些文件，作为站点的一部分。 对于 Xamarin.iOS 和 Xamarin.Mac 项目，它们会被包含在应用程序包中。
 
 可在解决方案资源管理器中选择多个文件，这样便可同时设置多个文件的生成操作。

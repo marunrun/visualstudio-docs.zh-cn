@@ -26,9 +26,9 @@ ms.locfileid: "75591211"
 
 - 测试项目中不存在 App.config  文件：
 
-   1. 确定运行测试时启动了哪个 QTAgent *.exe\** 进程。 一种方法是查看 Windows“任务管理器”  中的“详细信息”  选项卡。
+   1. 确定运行测试时启动了哪个 QTAgent\*.exe 进程。 一种方法是查看 Windows“任务管理器”中的“详细信息”选项卡。
 
-   2. 从 %ProgramFiles(x86)%\Microsoft Visual Studio  version> *\\edition>\Common7\IDE\<\\ 文件夹打开相应的 .config\<* 文件。 例如，如果运行的进程是 QTAgent_40.exe  ，则打开 QTAgent_40.exe.config  。
+   2. 从 %ProgramFiles(x86)%\Microsoft Visual Studio\\\<version>\\\<edition>\Common7\IDE 文件夹打开相应的 .config 文件。 例如，如果运行的进程是 QTAgent_40.exe  ，则打开 QTAgent_40.exe.config  。
 
    2. 将 EqtTraceLevel  的值修改为所需的日志级别。
 
@@ -60,7 +60,7 @@ ms.locfileid: "75591211"
 
 ## <a name="step-2-run-your-coded-ui-test-and-view-the-log"></a>步骤 2: 运行编码的 UI 测试并查看日志
 
-对 QTAgent *.exe.config\** 文件就地运行编码的 UI 测试并对其进行修改时，可在“测试资源管理器”  结果中看到一条输出链接。 日志文件不仅在测试失败时生成，而且在跟踪级别设置为“详细”  时也会对成功的测试生成。
+对 QTAgent\*.exe.config 文件就地运行编码的 UI 测试并对其进行修改时，可在“测试资源管理器”结果中看到一条输出链接。 日志文件不仅在测试失败时生成，而且在跟踪级别设置为“详细”  时也会对成功的测试生成。
 
 1. 在“测试”菜单上，选择“窗口”，然后选择“测试资源管理器”    。
 
@@ -71,7 +71,7 @@ ms.locfileid: "75591211"
      自动测试会运行并指示它们是否通过。
 
     > [!TIP]
-    > 要查看测试资源管理器，请选择“测试” **“窗口”，然后选择“测试资源管理器”**   >    。
+    > 要查看测试资源管理器，请选择“测试” > “窗口”，然后选择“测试资源管理器”。
 
 4. 在“测试资源管理器”结果中选择“输出”链接   。
 

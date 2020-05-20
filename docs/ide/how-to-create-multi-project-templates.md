@@ -88,7 +88,7 @@ ms.locfileid: "75591081"
 2. 自定义项目，直到可将其导出到模板。
 
    > [!TIP]
-   > 如果使用的是[模板参数](template-parameters.md)并且想要引用父模板中的变量，请在参数名称前加上前缀 `ext_`。 例如 `$ext_safeprojectname$`。 此外，将“ProjectTemplateLink”  元素的“CopyParameters”  属性设置为“true”  。
+   > 如果使用的是[模板参数](template-parameters.md)并且想要引用父模板中的变量，请在参数名称前加上前缀 `ext_`。 例如 `$ext_safeprojectname$`。 此外，将“ProjectTemplateLink”元素的“CopyParameters”属性设置为“true”。
    >
    > ```xml
    > <ProjectTemplateLink ProjectName="MyProject" CopyParameters="true">...</ProjectTemplateLink>
@@ -113,13 +113,13 @@ ms.locfileid: "75591081"
 
 8. 在基目录中，创建扩展名为“.vstemplate”的 XML 文件  。 此文件包含多项目模板的元数据。 有关文件结构，请参阅以下示例。 确保为每个项目的 vstemplate  文件指定相对路径。
 
-9. 选择基目录中的所有文件，然后通过右键单击或从上下文菜单中选择“发送至” **“压缩的文件夹（zip 格式）”**  >   。
+9. 选择基目录中的所有文件，然后通过右键单击或从上下文菜单中选择“发送至” > “压缩的文件夹（zip 格式）”。
 
    这些文件和文件夹会压缩到一个 .zip 文件中  。
 
-10. 将 .zip 文件复制到用户项目模板目录中  。 默认情况下，此目录为 %USERPROFILE%\Documents\Visual Studio *version\<\Templates\ProjectTemplates\>* 。
+10. 将 .zip 文件复制到用户项目模板目录中  。 默认情况下，此目录为 %USERPROFILE%\Documents\Visual Studio \<version\>\Templates\ProjectTemplates。
 
-11. 在 Visual Studio 中，选择“文件” **“新建”** “项目”，并验证是否显示了模板 >    >   。
+11. 在 Visual Studio 中，选择“文件” > “新建” > “项目”，并验证是否显示了模板。
 
 ## <a name="two-project-example"></a>两个项目的示例
 

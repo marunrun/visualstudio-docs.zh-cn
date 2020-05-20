@@ -30,7 +30,7 @@ ms.locfileid: "75847465"
 
 ::: moniker range="vs-2019"
 
-如果无法使用 Visual Studio（如发生故障、性能缓慢或意外行为），请使用“报告问题”  工具告诉我们。 在 Visual Studio 中，选择右上角的反馈图标，或依次选择菜单栏中的“帮助” > “发送反馈” > “报告问题”    。
+如果无法使用 Visual Studio（如发生故障、性能缓慢或意外行为），请使用“报告问题”工具告诉我们。 在 Visual Studio 中，选择右上角的反馈图标，或依次选择菜单栏中的“帮助” > “发送反馈” > “报告问题”。
 
 ![Visual Studio 2019 IDE 的发送反馈图标](./media/vs-2019/send-feedback-icon.png)
 
@@ -40,7 +40,7 @@ ms.locfileid: "75847465"
 
 ::: moniker range="vs-2017"
 
-如果无法使用 Visual Studio（如发生故障、性能缓慢或意外行为），请使用“报告问题”  工具告诉我们。 在 Visual Studio 中，选择搜索框旁边的反馈图标，或依次选择菜单栏中的“帮助”   > “发送反馈”   > “报告问题”  。
+如果无法使用 Visual Studio（如发生故障、性能缓慢或意外行为），请使用“报告问题”工具告诉我们。 在 Visual Studio 中，选择搜索框旁边的反馈图标，或依次选择菜单栏中的“帮助”   > “发送反馈”   > “报告问题”  。
 
 ![Visual Studio 2019 IDE 的发送反馈图标](./media/send-feedback-icon.png)
 
@@ -52,7 +52,7 @@ ms.locfileid: "75847465"
 
 ::: moniker range="vs-2019"
 
-如果你有改进 Visual Studio 的想法或建议，请使用“建议功能”  工具告诉我们。 在 Visual Studio 中，选择右上角的反馈图标，或依次选择菜单栏中的“帮助” > “发送反馈” > “功能建议”    。
+如果你有改进 Visual Studio 的想法或建议，请使用“建议功能”  工具告诉我们。 在 Visual Studio 中，选择右上角的反馈图标，或依次选择菜单栏中的“帮助” > “发送反馈” > “功能建议”。
 
 接下来，Visual Studio 打开[开发者社区](https://developercommunity.visualstudio.com)界面。在此界面中，可以在登录后分享想法。 有关详细信息，请参阅[提出 Visual Studio 功能建议](suggest-a-feature.md)。
 
@@ -60,7 +60,7 @@ ms.locfileid: "75847465"
 
 ::: moniker range="vs-2017"
 
-如果你有改进 Visual Studio 的想法或建议，请使用“提供建议”  工具告诉我们。 在 Visual Studio 中，选择搜索框旁边的反馈图标，或依次选择菜单栏中的“帮助” > “发送反馈” > “提供建议”    。
+如果你有改进 Visual Studio 的想法或建议，请使用“提供建议”  工具告诉我们。 在 Visual Studio 中，选择搜索框旁边的反馈图标，或依次选择菜单栏中的“帮助” > “发送反馈” > “提供建议”。
 
 接下来，Visual Studio 打开[开发者社区](https://developercommunity.visualstudio.com)页面。在此页面中，可以在登录后分享想法。 有关详细信息，请参阅[提出 Visual Studio 功能建议](suggest-a-feature.md)。
 
@@ -71,7 +71,7 @@ ms.locfileid: "75847465"
 有两种方法可以帮助我们改进文档：
 
 * 使用文档页面右上角的“此页面有帮助吗?”  应答工具。
-* 使用 GitHub 帐户提供与 [docs.microsoft.com](/visualstudio/) 上任何 Visual Studio 页面相关的反馈。 要执行此操作，请选择文档页面底部的“发送相关反馈” > “本页”按钮   。
+* 使用 GitHub 帐户提供与 [docs.microsoft.com](/visualstudio/) 上任何 Visual Studio 页面相关的反馈。 要执行此操作，请选择文档页面底部的“发送相关反馈” > “本页”按钮。
 
 ## <a name="contact-microsoft-support"></a>联系 Microsoft 支持部门
 

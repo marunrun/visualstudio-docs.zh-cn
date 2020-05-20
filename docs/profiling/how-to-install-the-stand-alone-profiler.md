@@ -41,7 +41,7 @@ ms.locfileid: "77557830"
    > [!NOTE]
    > 如果显示 vsinstr.exe 的用法信息，则表明安装无误。 如果看见一条错误信息，该消息指出找不到 vsinstr.exe 或它的依赖项，请确保已经按步骤 2 中的说明正确设置了路径。
 
-4. 通过将 _NT_SYMBOL_PATH 变量设置为 symsrv**symsrv.dll**c:\localcache **\* 来设置符号服务器\*\*https://msdl.microsoft.com/download/symbols**
+4. 通过将 _NT_SYMBOL_PATH 变量设置为 symsrv\*symsrv.dll\*c:\localcache\*https://msdl.microsoft.com/download/symbols 来设置符号服务器
 
 5. 使用系统环境变量设置符号服务器后，请在新的命令提示符处运行命令行探查器工具。 这将使新环境变量生效。 在命令提示符窗口中，键入以下命令：
 

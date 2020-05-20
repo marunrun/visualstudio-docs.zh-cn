@@ -63,7 +63,7 @@ ms.locfileid: "77633611"
 
 ## <a name="example"></a>示例
 
- 下面的代码示例演示如何将具有值 `Culture` 的 `fr` 元数据添加到项 `CSFile`。
+ 下面的代码示例演示如何将具有值 `fr` 的 `Culture` 元数据添加到项 `CSFile`。
 
 ```xml
 <ItemGroup>

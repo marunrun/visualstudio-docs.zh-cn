@@ -36,25 +36,25 @@ ms.locfileid: "75591042"
 
 ::: moniker range="vs-2017"
 
-- %ProgramFiles(x86)%*Microsoft Visual Studio\\2017\\\\edition>\<Common7\IDE\ProjectTemplates\\<Language\\\><Locale ID\\\>*
+- %ProgramFiles(x86)%\\Microsoft Visual Studio\\2017\\\<edition>\\Common7\IDE\ProjectTemplates\\<Language\>\\<Locale ID\>
 
-- %ProgramFiles(x86)%*Microsoft Visual Studio\\2017\\\\edition>\Common7\IDE\ItemTemplates\<<Language\\\><Locale ID\\\>*
+- %ProgramFiles(x86)%\\Microsoft Visual Studio\\2017\\\<edition>\Common7\IDE\ItemTemplates\\<Language\>\\<Locale ID\>
 
 例如，以下目录包含以英语 (LCID 1033) 表示的 Visual Basic 项模板：
 
-C:*Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\Common7\\IDE\\ItemTemplates\\VisualBasic\\1033\\*
+C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\Common7\\IDE\\ItemTemplates\\VisualBasic\\1033
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-- %ProgramFiles(x86)%*Microsoft Visual Studio\\2019\\\\edition>\<Common7\IDE\ProjectTemplates\\<Language\\\><Locale ID\\\>*
+- %ProgramFiles(x86)%\\Microsoft Visual Studio\\2019\\\<edition>\\Common7\IDE\ProjectTemplates\\<Language\>\\<Locale ID\>
 
-- %ProgramFiles(x86)%*Microsoft Visual Studio\\2019\\\\edition>\Common7\IDE\ItemTemplates\<<Language\\\><Locale ID\\\>*
+- %ProgramFiles(x86)%\\Microsoft Visual Studio\\2019\\\<edition>\Common7\IDE\ItemTemplates\\<Language\>\\<Locale ID\>
 
 例如，以下目录包含以英语 (LCID 1033) 表示的 Visual Basic 项模板：
 
-C:*Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Common7\\IDE\\ItemTemplates\\VisualBasic\\1033\\*
+C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Common7\\IDE\\ItemTemplates\\VisualBasic\\1033
 
 ::: moniker-end
 
@@ -87,7 +87,7 @@ C:*Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Common7\\IDE\\
 ::: moniker-end
 
 > [!TIP]
-> 可在“工具” **“选项”** “项目和解决方案” > “位置”中更改用户模板的已知位置   >    >   。
+> 可在“工具” > “选项” > “项目和解决方案” > “位置”中更改用户模板的已知位置。
 
 ::: moniker range="vs-2017"
 

@@ -58,13 +58,13 @@ ms.locfileid: "75595626"
 
 3. 可从下拉菜单中选择一种选项：
 
-   - 在新文件中生成“TypeName”类&mdash;在名为 *TypeName*.cs/.vb 的文件中创建名为 TypeName 的类  
-   - 创建“TypeName”类&mdash;在当前文件创建名为 TypeName 的类   。
-   - 创建“TypeName”嵌套类&mdash;在当前类的内部创建名为 TypeName 的嵌套类   。
+   - 在新文件中生成“TypeName”类&mdash;在名为 *TypeName*.cs/.vb 的文件中创建名为 TypeName 的类
+   - 创建“TypeName”类&mdash;在当前文件创建名为 TypeName 的类。
+   - 创建“TypeName”嵌套类&mdash;在当前类的内部创建名为 TypeName 的嵌套类。
    - 创建新类...&mdash;使用所指定的所有属性创建新类或结构。
 
    > [!TIP]
-   > 进行选择前，使用预览窗口底部的“预览更改”链接[查看将发生的所有更改](../../ide/preview-changes.md)  。
+   > 进行选择前，使用预览窗口底部的“预览更改”链接[查看将发生的所有更改](../../ide/preview-changes.md)。
 
 4. 如果选择的是“生成新类型”项，则打开“生成类型”对话框   。 配置新类型的可访问性、类型和位置。
 

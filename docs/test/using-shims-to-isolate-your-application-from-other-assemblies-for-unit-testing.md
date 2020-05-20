@@ -88,7 +88,7 @@ public void Y2kCheckerTest() {
 }
 ```
 
-正确释放每个填充码上下文至关重要。 根据经验，请调用 `ShimsContext.Create` 语句内的 `using`，以便确保清除已注册的填充码。 例如，您可能为某一测试方法注册了填充码，而且该方法会将 `DateTime.Now` 方法替换为始终返回 2000 年 1 月 1 日的委托。 如果忘记清除测试方法中的已注册填充码，则剩余的测试运行将始终返回 2000 年 1 月 1 日作为 `DateTime.Now` 值。 这可能会让人感到惊讶和困惑。
+正确释放每个填充码上下文至关重要。 根据经验，请调用 `using` 语句内的 `ShimsContext.Create`，以便确保清除已注册的填充码。 例如，您可能为某一测试方法注册了填充码，而且该方法会将 `DateTime.Now` 方法替换为始终返回 2000 年 1 月 1 日的委托。 如果忘记清除测试方法中的已注册填充码，则剩余的测试运行将始终返回 2000 年 1 月 1 日作为 `DateTime.Now` 值。 这可能会让人感到惊讶和困惑。
 
 ### <a name="write-a-test-with-shims"></a>编写包含填充码的测试
 
@@ -519,7 +519,7 @@ System.Fakes.ShimEnvironment.GetCommandLineArgsGet = ...
 
 ## <a name="limitations"></a>限制
 
-填充码无法用于 .NET 基类库 mscorlib 和 System 中的所有类型。
+垫片无法用于 .NET 基类库 **mscorlib** 和 **System** 中的所有类型。
 
 ## <a name="see-also"></a>另请参阅
 

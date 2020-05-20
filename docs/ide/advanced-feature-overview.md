@@ -60,7 +60,7 @@ ms.locfileid: "78235194"
 - [Azure 存储连接服务](/azure/vs-azure-tools-connected-services-storage)，该服务适用于 blob 存储、队列和表
 - [密钥保管库连接服务](/azure/key-vault/vs-key-vault-add-connected-service)，可用于管理 Web 应用的机密
 
-项目类型决定了可用的连接服务  。 右键单击“解决方案资源管理器”中的项目并选择“添加” **“连接服务”来添加服务**   >   。
+项目类型决定了可用的连接服务  。 右键单击“解决方案资源管理器”中的项目并选择“添加” > “连接服务”来添加服务。
 
 ![Visual Studio 连接服务](media/connected-services.png)
 
@@ -80,7 +80,7 @@ Web 推动着现代社会前进，Visual Studio 可以帮助你编写 Web 应用
 
 - 通过使用 [Xamarin](https://developer.xamarin.com/guides/cross-platform/windows/visual-studio/)，在 C# 和 F# 中生成适用于 iOS、Android 和 Windows 的移动应用。
 
-- 通过 &mdash;Apache Cordova&mdash;，使用标准 Web 技术 [HTML、CSS 和 JavaScript](/visualstudio/cross-platform/tools-for-cordova/) 生成适用于 iOS、Android 和 Windows 的移动应用。
+- 通过 [Apache Cordova](/visualstudio/cross-platform/tools-for-cordova/)，使用标准 Web 技术 &mdash;HTML、CSS 和 JavaScript&mdash; 生成适用于 iOS、Android 和 Windows 的移动应用。
 
 - 通过使用 [Visual Studio Tools for Unity](../cross-platform/visual-studio-tools-for-unity.md)，在 C# 中生成 2D 和 3D 游戏。
 
@@ -118,7 +118,7 @@ Azure DevOps Services 是基于云的服务，用于规划、托管、自动化�
 
 Team Foundation Server (TFS) 是 Visual Studio 的应用程序生命周期管理中心。 它使用单个解决方案，使开发过程中涉及的所有人均可参与该开发过程。 TFS 对于管理异类团队和项目也非常有用。
 
-如果网络中已经具有 Azure DevOps 组织或 Team Foundation Server，则可通过 Visual Studio 中的“团队资源管理器”  窗口连接。 可在此窗口中将代码签入（出）源控件、管理工作项、启动生成以及访问团队聊天室和工作区。 可以从搜索框，或者从“视图”  **“团队资源管理器”**  > 或“团队”  **“管理连接”**  > 的主菜单中打开“团队资源管理器”  。
+如果网络中已经具有 Azure DevOps 组织或 Team Foundation Server，则可通过 Visual Studio 中的“团队资源管理器”  窗口连接。 可在此窗口中将代码签入（出）源控件、管理工作项、启动生成以及访问团队聊天室和工作区。 可以从搜索框，或者从“视图” > “团队资源管理器”或“团队” > “管理连接”的主菜单中打开“团队资源管理器”。
 
 下图展示了 Azure DevOps Services 中托管的解决方案的“团队资源管理器”  窗口。
 

@@ -23,7 +23,7 @@ ms.locfileid: "75595457"
 
 将所有活动记录到日志文件以用于疑难解答。 此文件在你至少调用一次 `devenv /log` 后显示。 默认情况下，日志文件位于以下路径：
 
-%APPDATA%**Microsoft\\VisualStudio\\\\** \<Version\>**ActivityLog.xml\\**
+%APPDATA%\\Microsoft\\VisualStudio\\\<Version\>\\ActivityLog.xml
 
 其中，“版本”是 Visual Studio 的版本\<\>。 但是，可以指定一个不同的路径和文件名。
 

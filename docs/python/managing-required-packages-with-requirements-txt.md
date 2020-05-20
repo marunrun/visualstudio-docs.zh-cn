@@ -23,7 +23,7 @@ ms.locfileid: "62535696"
 
 从技术上讲，任何文件名都可用于跟踪要求（通过安装包时使用 `-r <full path to file>`），但 Visual Studio 提供针对 requirements.txt  的特定支持：
 
-- 如果已加载包含 requirements.txt  的项目，且想要安装该文件列出的所有包，请展开“解决方案资源管理器”  中的“Python 环境”  节点，然后右键单击环境节点并选择“从 requirements.txt 安装”  ：
+- 如果已加载包含 requirements.txt 的项目，且想要安装该文件列出的所有包，请展开“解决方案资源管理器”中的“Python 环境”节点，然后右键单击环境节点并选择“从 requirements.txt 安装”：
 
     ![从 requirements.txt 安装](media/environments/environments-requirements-txt-install.png)
 
@@ -39,7 +39,7 @@ ms.locfileid: "62535696"
 
 因为 requirements.txt  文件的目的是冻结环境的要求，因此所有已安装的包都采用精确的版本编写。 使用精确的版本可确保轻松地在其他计算机上重现环境。 即使采用一个版本范围（作为另一个包的依赖项）或使用安装程序而非 pip 安装了包，也会包含这些包。
 
-如果包不能通过 pip 安装，且它出现在 requirements.txt  文件中，则整个安装会失败。 在这种情况下，手动编辑文件以排除此包或使用 [pip 的选项](https://pip.readthedocs.org/en/latest/reference/pip_install.html#requirements-file-format)来指包的可安装版本。 例如，你可能更喜欢使用 [`pip wheel`](https://pip.readthedocs.org/en/latest/reference/pip_wheel.html) 来编译依赖项，并向 requirements.txt`--find-links <path>`*添加* 选项：
+如果包不能通过 pip 安装，且它出现在 requirements.txt  文件中，则整个安装会失败。 在这种情况下，手动编辑文件以排除此包或使用 [pip 的选项](https://pip.readthedocs.org/en/latest/reference/pip_install.html#requirements-file-format)来指包的可安装版本。 例如，你可能更喜欢使用 [`pip wheel`](https://pip.readthedocs.org/en/latest/reference/pip_wheel.html) 来编译依赖项，并向 requirements.txt 添加 `--find-links <path>` 选项：
 
 ```output
 C:\Project>pip wheel azure

@@ -38,7 +38,7 @@ Visual Studio 解决方案可以包含使用不同框架和面向不同语言的
 
 ### <a name="to-update-to-the-latest-stable-test-adapter-version"></a>更新到最新版本的稳定测试适配器
 
-1. 导航到“工具” **“NuGet 包管理器”** “管理解决方案的 NuGet 包”，打开解决方案的 Nuget 包管理器 >    >   。
+1. 导航到“工具” > “NuGet 包管理器” > “管理解决方案的 NuGet 包”，打开解决方案的 Nuget 包管理器。
 
 2. 单击“更新”选项卡，并搜索已安装的 MSTest、NUnit 或 xUnit 测试适配器  。
 

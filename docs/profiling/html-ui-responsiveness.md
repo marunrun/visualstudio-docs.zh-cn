@@ -76,11 +76,11 @@ ms.locfileid: "73189369"
 
 1. 在 Visual Studio 中打开应用程序。
 
-2. 测试应用程序的 UI 响应能力问题。 （按 Ctrl**F5 以启动应用而不进行调试**+  。）
+2. 测试应用程序的 UI 响应能力问题。 （按 Ctrl+F5 以启动应用而不进行调试。）
 
      如果发现问题，请继续测试以尝试缩小发生问题的时间范围，或尝试确定导致该行为的触发器。
 
-3. 切换回 Visual Studio（按 Alt**Tab），并停止应用 (Shift**F5)+   +  。
+3. 切换回 Visual Studio（按 Alt+Tab），并停止应用 (Shift+F5)。
 
 4. 或者，使用 performance.mark [标记要分析的代码](#ProfileMark)。
 

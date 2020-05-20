@@ -107,7 +107,7 @@ int main()
 }
 ```
 
-在类图中显示此代码时，类图会绘制一条从 **到** 的继承线`Fish``Swimmer`。
+在类图中显示此代码时，类图会绘制一条从 `Fish` 到 `Swimmer` 的继承线。
 
 ## <a name="anonymous-classes"></a>匿名类
 

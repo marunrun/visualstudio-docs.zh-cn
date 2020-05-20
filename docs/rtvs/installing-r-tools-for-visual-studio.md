@@ -38,7 +38,7 @@ Visual Studio for Mac 目前尚不支持 RTVS。
 
 ## <a name="install-rtvs-in-visual-studio-2017"></a>在 Visual Studio 2017 中安装 RTVS
 
-1. 运行 Visual Studio 安装程序并选择“修改”选项（有关详细信息，请参阅[修改 Visual Studio](../install/modify-visual-studio.md)）  。 如果还没有安装 Visual Studio，请参阅[安装 Visual Studio](../install/install-visual-studio.md)。 在 Windows 7 上，请确保安装程序已更新，显示 Visual Studio 2017 版本 15.2 内部版本 26430.12  或更高版本。
+1. 运行 Visual Studio 安装程序并选择“修改”选项（有关详细信息，请参阅[修改 Visual Studio](../install/modify-visual-studio.md)）。 如果还没有安装 Visual Studio，请参阅[安装 Visual Studio](../install/install-visual-studio.md)。 在 Windows 7 上，请确保安装程序已更新，显示 Visual Studio 2017 版本 15.2 内部版本 26430.12  或更高版本。
 
 1. 选择“数据科学和分析应用程序”  工作负载：
 
@@ -46,7 +46,7 @@ Visual Studio for Mac 目前尚不支持 RTVS。
 
 1. 在同一工作负载名称下的右侧设置任何其他选项。 此工作负载默认包含 F# 和 Python 支持。 对于 R，最低要求是“R 语言支持”、“R 开发运行时支持”以及“Microsoft R Client”    。
 
-RTVS 的安装位置：%ProgramFiles(x86)%\Microsoft Visual Studio\<version>\<edition>Common7\IDE\Extensions\Microsoft\R Tools for Visual Studio，其中 \<version> 通常为 `2017`，\<edition> 为 `Community`、`Professional` 或 `Enterprise`    。
+RTVS 的安装位置：%ProgramFiles(x86)%\Microsoft Visual Studio\<version>\<edition>Common7\IDE\Extensions\Microsoft\R Tools for Visual Studio，其中 \<version> 通常为 `2017`，\<edition> 为 `Community`、`Professional` 或 `Enterprise`。
 
 ## <a name="install-rtvs-in-visual-studio-2015"></a>在 Visual Studio 2015 中安装 RTVS
 

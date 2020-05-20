@@ -32,7 +32,7 @@ ms.locfileid: "74779865"
 
 **在远程计算机上收集 TIP 数据**
 
-若要在远程计算机上收集层交互数据，必须从 Visual Studio 计算机的 %VSInstallDir%\Team Tools\Performance Tools\Setups 文件夹中将 vs_profiler **\_Platform>** _Language>.exe 文件复制到远程计算机上并进行安装\<_ **\_** _\<_    。 不能使用[远程调试](../debugger/remote-debugging.md)下载包中的分析工具。
+若要在远程计算机上收集层交互数据，必须从 Visual Studio 计算机的 %VSInstallDir%\Team Tools\Performance Tools\Setups 文件夹中将 vs_profiler\_\<Platform>\_\<Language>.exe 文件复制到远程计算机上并进行安装。 不能使用[远程调试](../debugger/remote-debugging.md)下载包中的分析工具。
 
 **TIP 报告**
 

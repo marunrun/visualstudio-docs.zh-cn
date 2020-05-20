@@ -77,7 +77,7 @@ ms.locfileid: "62429741"
 
 **问：Visual Studio 还提供哪些 Python 模板？**
 
-**答**：在安装了 Python 工作负载的情况下，Visual Studio 提供多种项目模板，其中包括用于 [Flask、Bottle 和 Django Web 框架](../python/python-web-application-project-templates.md)、Azure 云服务以及不同机器学习方案的模板，甚至还有一个模板用于根据带 Python 应用的现有文件夹结构创建项目。 要访问模板，可选择“Python”  语言节点及其子节点，再依次单击“文件”   > “新建”   > “项目”  。
+**答**：在安装了 Python 工作负载的情况下，Visual Studio 提供多种项目模板，其中包括用于 [Flask、Bottle 和 Django Web 框架](../python/python-web-application-project-templates.md)、Azure 云服务以及不同机器学习方案的模板，甚至还有一个模板用于根据带 Python 应用的现有文件夹结构创建项目。 要访问模板，可选择“Python”语言节点及其子节点，再依次单击“文件” > “新建” > “项目”。
 
 Visual Studio 还提供各种文件或项模板  ，用于快速创建 Python 类、Python 包、Python 单元测试、web.config  文件等内容。 如果打开了 Python 项目，可依次单击“项目”   > “添加新项”  菜单命令来访问项模板。 请参阅[项模板](python-item-templates.md)引用。
 

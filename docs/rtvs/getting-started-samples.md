@@ -41,7 +41,7 @@ ms.locfileid: "75843826"
 
 此示例集合演示如何使用 R 创建机器学习模型，以及如何利用 [Microsoft Machine Learning Server](/machine-learning-server/what-is-machine-learning-server)。
 
-与所有示例一样，请打开文件、将光标置于顶部，然后按 Ctrl+Enter 逐行单步执行代码   。 每个文件夹中的 Markdown 文件还包含其他详细信息。
+与所有示例一样，请打开文件、将光标置于顶部，然后按 Ctrl+Enter 逐行单步执行代码。 每个文件夹中的 Markdown 文件还包含其他详细信息。
 
 - `Benchmarks` 运行大量密集型的并行线性代数计算，显示使用 Microsoft R Open 和 Intel Math Kernel Library (MKL) 可能提升的性能。 通过模拟数据，基准专门将一个线程和其他两个线程上的矩阵计算进行比较。
 

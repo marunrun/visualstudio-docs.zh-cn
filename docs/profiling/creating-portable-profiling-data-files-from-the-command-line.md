@@ -24,7 +24,7 @@ ms.locfileid: "74779488"
 > [!NOTE]
 > 请确保符号 (.pdb) 文件可供 VSPerfReport 使用   。 有关详细信息，请参阅[如何：通过命令行指定符号文件位置](../profiling/how-to-specify-symbol-file-locations-from-the-command-line.md)。
 >
-> 有关 VSReport 路径的信息，请参阅[指定命令行工具的路径](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)  。
+> 有关 VSReport 路径的信息，请参阅[指定命令行工具的路径](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)。
 >
 > 无法筛选 .vsps 文件中的分析数据  。
 
@@ -32,7 +32,7 @@ ms.locfileid: "74779488"
 
 - 在命令提示符窗口中，键入以下命令：
 
-   \<Path>VSPerfReport \<VSP File> /PackSymbols 
+   \<Path>VSPerfReport \<VSP File> /PackSymbols
 
    默认采用 .vsp 文件的基名称对 .vsps 文件进行命名   。 可以通过使用“输出”选项指定替代名称  。
 

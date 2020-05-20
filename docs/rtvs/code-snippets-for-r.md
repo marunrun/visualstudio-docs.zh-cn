@@ -30,9 +30,9 @@ Visual Studio 中的代码片段提供了一些快捷方式，可用于快速插
 
 ![使用代码片段插入对 read.csv 的调用的动画](media/code-snippet-expansion.gif)
 
-在这种情况下，当键入 `readc` 时，IntelliSense 将显示一个完成列表。 在下拉菜单中选择该完成列表，按 Tab 选择 **，然后再次按 Tab 展开代码片段**`readc`  。 （因此，通常认为展开代码片段是“键入代码片段并按 Tab 两次”）。 在大多数情况下，第一次按 Tab 完成 IntelliSense 选择，第二次按 Tab 触发展开。
+在这种情况下，当键入 `readc` 时，IntelliSense 将显示一个完成列表。 在下拉菜单中选择该完成列表，按 Tab 选择 `readc`，然后再次按 Tab 展开代码片段。 （因此，通常认为展开代码片段是“键入代码片段并按 Tab 两次”）。 在大多数情况下，第一次按 Tab 完成 IntelliSense 选择，第二次按 Tab 触发展开。
 
-要查看所有可用的代码片段，请打开“工具” **“代码片段管理器”对话框（Ctrl**K、B），并为“语言”选择“R” >    +     。 展开组并选择单独的代码片段，查看说明和快捷方式文本：
+要查看所有可用的代码片段，请打开“工具” > “代码片段管理器”对话框（Ctrl+K、B），并为“语言”选择“R”。 展开组并选择单独的代码片段，查看说明和快捷方式文本：
 
 ![R 的代码片段对话框](media/code-snippet-dialog.png)
 
@@ -60,4 +60,4 @@ Visual Studio 中的代码片段提供了一些快捷方式，可用于快速插
 </CodeSnippets>
 ```
 
-用于所有代码片段的 XML 文件是随 RTVS 一起安装的；“代码片段管理器”  中的“位置”  字段提供了相关路径。 也可以在 [src/Package/Impl/Snippets](https://github.com/Microsoft/RTVS/tree/master/src/Package/Impl/Snippets) 下 GitHub 的 RTVS 源代码中找到它们。
+用于所有代码片段的 XML 文件是随 RTVS 一起安装的；“代码片段管理器”中的“位置”字段提供了相关路径。 也可以在 [src/Package/Impl/Snippets](https://github.com/Microsoft/RTVS/tree/master/src/Package/Impl/Snippets) 下 GitHub 的 RTVS 源代码中找到它们。

@@ -49,7 +49,7 @@ ms.locfileid: "75596991"
 
 ## <a name="help-us-improve"></a>帮助我们改进
 
-你的反馈有助于我们改进。 使用“报告问题”功能来“记录”跟踪并发送给我们  。 选择“快速启动”旁边的反馈图标，或从菜单栏中选择“帮助” **“发送反馈”** “报告问题”   >    >   。 有关详细信息，请参阅[如何报告 Visual Studio 的问题](../ide/how-to-report-a-problem-with-visual-studio.md)。
+你的反馈有助于我们改进。 使用“报告问题”功能来“记录”跟踪并发送给我们  。 选择“快速启动”旁边的反馈图标，或从菜单栏中选择“帮助” > “发送反馈” > “报告问题”。 有关详细信息，请参阅[如何报告 Visual Studio 的问题](../ide/how-to-report-a-problem-with-visual-studio.md)。
 
 ## <a name="see-also"></a>另请参阅
 

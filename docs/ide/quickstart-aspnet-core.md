@@ -150,7 +150,7 @@ ms.locfileid: "77579959"
 
    ![更改 Visual Studio 编辑器中“应用程序说明”区域的默认消息文本](../ide/media/csharp-aspnet-about-cshtml-cs-message.png)
 
-1. 选择“IIS Express”或按 Ctrl+F5 运行此应用，并在 Web 浏览器中打开它    。
+1. 选择“IIS Express”或按 Ctrl+F5 运行此应用，并在 Web 浏览器中打开它。
 
    ![在 Visual Studio 中选择“IIS Express”按钮](../ide/media/csharp-aspnet-helloworld-iisbutton.png)
 
@@ -191,7 +191,7 @@ ms.locfileid: "77579959"
 
    ![在 Visual Studio 编辑器中，更改默认 HTML 代码，使其不显示“欢迎”一词而是显示“Hello World”](../ide/media/vs-2019/csharp-aspnet-index-cshtml-page-hello-world.png)
 
-1. 选择“IIS Express”或按 Ctrl+F5 运行此应用，并在 Web 浏览器中打开它    。
+1. 选择“IIS Express”或按 Ctrl+F5 运行此应用，并在 Web 浏览器中打开它。
 
    ![在 Visual Studio 中选择“IIS Express”按钮](../ide/media/vs-2019/csharp-aspnet-generic-iisbutton.png)
 

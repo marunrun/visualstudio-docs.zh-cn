@@ -100,7 +100,7 @@ Python 站点扩展安装在 d:\home  下服务器上的文件夹中，适合 Py
 
 ### <a name="configure-the-httpplatform-handler"></a>配置 HttpPlatform 处理程序
 
-HttpPlatform 模块将套接字连接直接传递到独立的 Python 进程。 借助此传递可根据需要运行任何 Web 服务器，但需要用于运行本地 Web 服务器的启动脚本。 在 web.config  的 `<httpPlatform>` 元素中指定脚本，其中 `processPath` 属性指向站点扩展的 Python 解释器，`arguments` 属性指向脚本和希望提供的任何参数：
+HttpPlatform 模块将套接字连接直接传递到独立的 Python 进程。 借助此传递可根据需要运行任何 Web 服务器，但需要用于运行本地 Web 服务器的启动脚本。 在 web.config 的 `<httpPlatform>` 元素中指定脚本，其中 `processPath` 属性指向站点扩展的 Python 解释器，`arguments` 属性指向脚本和希望提供的任何参数：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -154,7 +154,7 @@ FastCGI 是在请求级别工作的接口。 IIS 接收传入的连接，并将�
 - `WSGI_HANDLER` 必须指向可从你的应用导入的 WSGI 应用。
 - `WSGI_LOG` 为可选，但建议在调试应用时使用。
 
-有关 Bottle、Flask 和 Django Web 应用的 web.config  内容的更多详细信息，请参阅[发布到 Azure](publishing-python-web-applications-to-azure-from-visual-studio.md)。
+有关 Bottle、Flask 和 Django Web 应用的 web.config 内容的更多详细信息，请参阅[发布到 Azure](publishing-python-web-applications-to-azure-from-visual-studio.md)。
 
 ## <a name="install-packages"></a>安装包
 

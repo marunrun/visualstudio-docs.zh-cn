@@ -28,7 +28,7 @@ ms.locfileid: "75591666"
 
 |参数|说明|
 |---------------|-----------------|
-|**ActiveToolSwitchesValues**|可选的 Dictionary**string, ToolSwitch>\<** 参数。|
+|**ActiveToolSwitchesValues**|可选的 Dictionary\<string, ToolSwitch> 参数。|
 |**AdditionalOptions**|可选的 string  参数。|
 |**EffectiveWorkingDirectory**|可选的 string  参数。|
 |**EnableErrorListRegex**|可选的 bool  参数。<br/><br/>默认值为 `true`。|

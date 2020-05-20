@@ -24,7 +24,7 @@ ms.locfileid: "75597303"
 
 显示可以添加到适用于 Windows 窗体的 Visual Basic 和 C# 设计器的组件。 除 Visual Studio 附带的 .NET 组件（如 <xref:System.Messaging.MessageQueue> 和 <xref:System.Diagnostics.EventLog> 组件）外，还可向此选项卡添加自己的组件或第三方组件。
 
-要显示此选项卡，请打开 Windows 窗体设计器。 选择“视图”**工具箱”**  >   。 在“工具箱”中，选择“组件”选项卡   。
+要显示此选项卡，请打开 Windows 窗体设计器。 选择“视图” > 工具箱”。 在“工具箱”中，选择“组件”选项卡   。
 
 ## <a name="components"></a>组件
 
@@ -85,7 +85,7 @@ ms.locfileid: "75597303"
 创建 <xref:System.Windows.Forms.Timer> 组件实例，该实例可用于向基于 Windows 的应用程序添加基于时间的功能。 有关详细信息，请参阅 [Timer 组件](/dotnet/framework/winforms/controls/timer-component-windows-forms)。
 
 > [!NOTE]
-> 此外，还有一个基于系统的 <xref:System.Timers.Timer>，可将其添加到“工具箱”。此 **针对服务器应用程序进行了优化，Windows 窗体** 最适合在 Windows 窗体上使用<xref:System.Timers.Timer><xref:System.Windows.Forms.Timer>。
+> 此外，还有一个基于系统的 <xref:System.Timers.Timer>，可将其添加到“工具箱”。此 <xref:System.Timers.Timer> 针对服务器应用程序进行了优化，Windows 窗体 <xref:System.Windows.Forms.Timer> 最适合在 Windows 窗体上使用。
 
 ## <a name="see-also"></a>另请参阅
 

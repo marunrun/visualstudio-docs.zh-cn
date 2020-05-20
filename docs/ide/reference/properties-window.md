@@ -57,19 +57,19 @@ ms.locfileid: "75565703"
 显示对象的事件。
 
 > [!NOTE]
-> 该“属性”窗口工具栏控件仅在  **项目的上下文中的窗体或控件设计器处于活动状态时可用**[!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]。 编辑 XAML 文件时，事件将显示在属性窗口的单独选项卡上。
+> 该“属性”窗口工具栏控件仅在 [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] 项目的上下文中的窗体或控件设计器处于活动状态时可用。 编辑 XAML 文件时，事件将显示在属性窗口的单独选项卡上。
 
 消息\
 列出所有 Windows 消息。 允许针对为选定类提供的消息添加或删除指定处理程序函数。
 
 > [!NOTE]
-> 该“属性”窗口工具栏控件仅在“类视图”在  **项目的上下文中为活动窗口时可用**  [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)]。
+> 该“属性”窗口工具栏控件仅在“类视图”在 [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] 项目的上下文中为活动窗口时可用。
 
 重写\
 列出选定类的所有虚函数并允许添加或删除重写函数。
 
 > [!NOTE]
-> 该“属性”窗口工具栏控件仅在“类视图”在  **项目的上下文中为活动窗口时可用**  [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)]。
+> 该“属性”窗口工具栏控件仅在“类视图”在 [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] 项目的上下文中为活动窗口时可用。
 
 说明窗格\
 显示属性类型和属性的简短说明。 可以使用快捷菜单上的说明命令关闭和打开属性的说明。

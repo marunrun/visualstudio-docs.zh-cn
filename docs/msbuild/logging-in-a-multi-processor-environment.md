@@ -49,7 +49,7 @@ public interface INodeLogger: ILogger
 
 为缓解这个问题，MSBuild 还启用了“分布式日志记录模型”，通过允许创建转发记录器，该模型扩展了集中式日志记录模型。 转发记录器会附加到辅助节点，并从该节点接收传入的生成事件。 转发记录器与常规记录器类似，只不过它可以筛选事件，然后只将所需事件转发到中心节点。 这样可以减少中心节点上的消息流量，提高性能。
 
- 通过实现派生自 <xref:Microsoft.Build.Framework.IForwardingLogger> 的 <xref:Microsoft.Build.Framework.ILogger> 接口，可以创建转发记录器。 接口定义如下：
+ 通过实现派生自 <xref:Microsoft.Build.Framework.ILogger> 的 <xref:Microsoft.Build.Framework.IForwardingLogger> 接口，可以创建转发记录器。 接口定义如下：
 
 ```csharp
 public interface IForwardingLogger: INodeLogger
@@ -59,7 +59,7 @@ public interface IForwardingLogger: INodeLogger
 }
 ```
 
-要转发转发记录器中的事件，请调用 <xref:Microsoft.Build.Framework.IEventRedirector.ForwardEvent%2A> 接口 <xref:Microsoft.Build.Framework.IEventRedirector> 方法。 以参数的形式传递相应的 <xref:Microsoft.Build.Framework.BuildEventArgs> 或派生类。
+要转发转发记录器中的事件，请调用 <xref:Microsoft.Build.Framework.IEventRedirector> 接口 <xref:Microsoft.Build.Framework.IEventRedirector.ForwardEvent%2A> 方法。 以参数的形式传递相应的 <xref:Microsoft.Build.Framework.BuildEventArgs> 或派生类。
 
 有关详细信息，请参阅[创建转发记录器](../msbuild/creating-forwarding-loggers.md)。
 

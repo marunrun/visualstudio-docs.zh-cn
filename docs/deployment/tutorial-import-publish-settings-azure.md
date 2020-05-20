@@ -30,10 +30,10 @@ ms.locfileid: "65679193"
 > * 将发布设置文件导入 Visual Studio
 > * 将应用部署到 Azure 应用服务
 
-发布设置文件 (\*.publishsettings) 与在 Visual Studio 中创建的发布配置文件 (\*.pubxml) 不同   。 发布设置文件由 Azure 应用服务创建，然后可将其导入 Visual Studio。
+发布设置文件 (\*.publishsettings) 与在 Visual Studio 中创建的发布配置文件 (\*.pubxml) 不同。 发布设置文件由 Azure 应用服务创建，然后可将其导入 Visual Studio。
 
 > [!NOTE]
-> 若只需要将 Visual Studio 发布配置文件（\*.pubxml 文件）从一个 Visual Studio 安装复制到另一个，则对于托管项目类型可以在 \\<projectname\>\Properties\PublishProfiles 文件夹中查找发布配置文件 \<profilename\>.pubxml    。 对于网站则在 \App_Data 文件夹下进行查找  。 发布配置文件是 MSBuild XML 文件。
+> 若只需要将 Visual Studio 发布配置文件（\*.pubxml 文件）从一个 Visual Studio 安装复制到另一个，则对于托管项目类型可以在 \\<projectname\>\Properties\PublishProfiles 文件夹中查找发布配置文件 \<profilename\>.pubxml。 对于网站则在 \App_Data 文件夹下进行查找  。 发布配置文件是 MSBuild XML 文件。
 
 ## <a name="prerequisites"></a>系统必备
 
@@ -69,7 +69,7 @@ ms.locfileid: "65679193"
 
     Visual Studio 随即创建项目。
 
-1. 选择“生成” > “生成解决方案”以生成项目   。
+1. 选择“生成” > “生成解决方案”以生成项目。
 
 ## <a name="create-the-publish-settings-file-in-azure-app-service"></a>在 Azure 应用服务中创建发布设置文件
 

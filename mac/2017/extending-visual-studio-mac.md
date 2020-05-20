@@ -96,7 +96,7 @@ Visual Studio for Mac 包含一组被称为“扩展包”的模块  。 可使�
 </Extension>
 ```
 
-命令项将其 ID 属性中指定的命令放入菜单中。 该命令项扩展 `/MonoDevelop/Ide/MainMenu/Edit` 扩展点，使该命令的标签显示在“编辑菜单”中  。 请注意，命令项中的“ID”对应于命令节点  **的 ID**`InsertDate`。 如果移除命令项，“编辑菜单”中的“插入日期”选项将消失  。
+命令项将其 ID 属性中指定的命令放入菜单中。 该命令项扩展 `/MonoDevelop/Ide/MainMenu/Edit` 扩展点，使该命令的标签显示在“编辑菜单”中  。 请注意，命令项中的“ID”对应于命令节点 `InsertDate` 的 ID。 如果移除命令项，“编辑菜单”中的“插入日期”选项将消失  。
 
 ### <a name="command-handlers"></a>命令处理程序
 

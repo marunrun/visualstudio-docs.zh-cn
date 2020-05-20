@@ -42,7 +42,7 @@ ms.locfileid: "79094090"
 1. 选择“转换为‘foreach’”  。 或者，选择“预览更改”  以打开[“预览更改”](../../ide/preview-changes.md)对话框，然后选择“应用”  。
 
 > [!NOTE]
-> 对于 C#，由这些重构生成的代码对 [ 循环的迭代变量使用显式类型或 ](/dotnet/csharp/language-reference/keywords/var)var`foreach`。 生成代码中的类型（显式或隐式）取决于范围内的代码样式设置。 这些特定的代码样式设置在“工具”   > “选项”   > “文本编辑器”   > “C#”   > “代码样式”   > “常规”   > “var 首选项” **\'** 下以计算机级别进行配置，或在 [EditorConfig](../../ide/editorconfig-language-conventions.md#implicit-and-explicit-types) 文件下以解决方案级别进行配置。 如果在“选项”  中更改了代码样式设置，请重新打开代码文件以使更改生效。
+> 对于 C#，由这些重构生成的代码对 `foreach` 循环的迭代变量使用显式类型或 [var](/dotnet/csharp/language-reference/keywords/var)。 生成代码中的类型（显式或隐式）取决于范围内的代码样式设置。 这些特定的代码样式设置在“工具” > “选项” > “文本编辑器” > “C#” > “代码样式” > “常规” > “var 首选项”\'下以计算机级别进行配置，或在 [EditorConfig](../../ide/editorconfig-language-conventions.md#implicit-and-explicit-types) 文件下以解决方案级别进行配置。 如果在“选项”  中更改了代码样式设置，请重新打开代码文件以使更改生效。
 
 ## <a name="see-also"></a>另请参阅
 

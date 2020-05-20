@@ -19,7 +19,7 @@ ms.locfileid: "62784795"
 ---
 # <a name="django-web-project-template"></a>Django Web 项目模板
 
-[Django](https://www.djangoproject.com/) 是高级 Python 框架，用于快速、安全及可扩展的 Web 开发。 借助 Visual Studio 中的 Python 支持，可以使用多个项目模板来设置基于 Django 的 Web 应用程序的结构。 若要在 Visual Studio 中使用模板，请选择“文件” **“新建”** “项目”，搜索“Django”，然后从“空白 Django Web 项目”、“Django Web 项目”和“投票 Django Web 项目”模板中进行选择 >    >      。 有关所有模板的演练，请参阅 [Django 学习教程](learn-django-in-visual-studio-step-01-project-and-solution.md)。
+[Django](https://www.djangoproject.com/) 是高级 Python 框架，用于快速、安全及可扩展的 Web 开发。 借助 Visual Studio 中的 Python 支持，可以使用多个项目模板来设置基于 Django 的 Web 应用程序的结构。 若要在 Visual Studio 中使用模板，请选择“文件” > “新建” > “项目”，搜索“Django”，然后从“空白 Django Web 项目”、“Django Web 项目”和“投票 Django Web 项目”模板中进行选择。 有关所有模板的演练，请参阅 [Django 学习教程](learn-django-in-visual-studio-step-01-project-and-solution.md)。
 
 Visual Studio 为 Django 项目提供完整的 IntelliSense：
 

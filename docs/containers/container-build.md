@@ -92,7 +92,7 @@ msbuild /p:SolutionPath=<solution-name>.sln /p:Configuration=Release docker-comp
 
 ## <a name="project-warmup"></a>项目预热
 
-项目预热指的是在为项目选择 Docker 配置文件时（即在加载项目或添加 Docker 支持时）执行的一系列步骤，旨在提高后续运行的性能（F5 或 Ctrl*F5）*   +  。 在“工具” **“选项”** “容器工具”下可以配置项目预热 >    >   。 下面是在后台运行的任务：
+项目预热指的是在为项目选择 Docker 配置文件时（即在加载项目或添加 Docker 支持时）执行的一系列步骤，旨在提高后续运行的性能（F5 或 Ctrl+F5）。 在“工具” > “选项” > “容器工具”下可以配置项目预热。 下面是在后台运行的任务：
 
 - 检查 Docker Desktop 是否已安装且正在运行。
 - 确保将 Docker Desktop 设置为与项目相同的操作系统。
@@ -110,7 +110,7 @@ msbuild /p:SolutionPath=<solution-name>.sln /p:Configuration=Release docker-comp
 | **远程调试程序** | 包含在容器中运行调试器所需的位，视具体项目类型而定。 有关详细信息， |请参阅[调试](#debugging)部分。
 | **应用文件夹** | 包含 Dockerfile 所在的项目文件夹。|
 | **源文件夹** | 包含传递给 Docker 命令的生成上下文。|
-| **NuGet 包文件夹** | 包含从项目的 obj*project}.csproj.nuget.g.props 文件中读取的 NuGet 包和 fallback 文件夹\{* 。 |
+| **NuGet 包文件夹** | 包含从项目的 obj\{project}.csproj.nuget.g.props 文件中读取的 NuGet 包和 fallback 文件夹。 |
 
 对于 ASP.NET Core Web 应用，SSL 证书和用户机密可能还有两个额外的文件夹，下一部分将对此进行详细介绍。
 
@@ -148,7 +148,7 @@ ASP.NET Core 将查找与 Https 文件夹下的程序集名称匹配的证书，
 
 在调试配置中进行生成时，Visual Studio 执行的一些优化操作有助于提高容器化项目生成过程的性能  。 容器化应用的生成过程并不像仅遵循 Dockerfile 中所述的步骤那样简单。 在容器中生成比在本地计算机上生成要慢得多。  因此，在“调试”配置中生成时，Visual Studio 实际上会在本地计算机上生成项目，然后使用卷装载将输出文件夹共享到容器  。 启用了此优化的生成称为“快速”模式生成  。
 
-在“快速”  模式下，Visual Studio 使用参数（该参数指示 Docker 仅生成 `docker build` 阶段）调用 `base`。  Visual Studio 处理该过程的其余部分，而与 Dockerfile 的内容无关。 因此，修改 Dockerfile（例如自定义容器环境或安装其他依赖项）时，应将修改放在第一阶段。  Dockerfile 的 `build`、`publish` 或 `final` 阶段中的任何自定义步骤均不会执行。
+在“快速”模式下，Visual Studio 使用参数（该参数指示 Docker 仅生成 `base` 阶段）调用 `docker build`。  Visual Studio 处理该过程的其余部分，而与 Dockerfile 的内容无关。 因此，修改 Dockerfile（例如自定义容器环境或安装其他依赖项）时，应将修改放在第一阶段。  Dockerfile 的 `build`、`publish` 或 `final` 阶段中的任何自定义步骤均不会执行。
 
 仅当在“调试”配置中生成时才会进行此性能优化  。 在“发布”配置中，生成在 Dockerfile 中指定的容器中进行  。
 

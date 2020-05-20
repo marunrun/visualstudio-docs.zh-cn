@@ -34,7 +34,7 @@ ms.locfileid: "75591406"
 
 1. 在模板的 vstemplate  文件中，找到包括此文件的 `ProjectItem` 元素。
 
-1. 将 `ReplaceParameters` 元素的 `true` 属性设置为 `ProjectItem`：
+1. 将 `ProjectItem` 元素的 `ReplaceParameters` 属性设置为 `true`：
 
     ```xml
     <ProjectItem ReplaceParameters="true">Class1.cs</ProjectItem>

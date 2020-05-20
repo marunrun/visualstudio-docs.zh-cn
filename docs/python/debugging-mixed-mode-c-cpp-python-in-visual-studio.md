@@ -47,9 +47,9 @@ Visual Studio 为 Python 和本机 C/C++ 提供集成的同步混合模式调试
     ![启用本机代码调试](media/mixed-mode-debugging-enable-native.png)
 
     > [!Tip]
-    > 启用本机代码调试后，Python 输出窗口可能在程序完成后立即消失，而不出现通常的“按任何键以继续”暂停界面  。 若要强制暂停，请在启用本机代码调试后，向“调试”选项卡上的“运行” > “解释器参数”字段添加 `-i` 选项    。 此参数会在代码完成后将 Python 解释器置于交互模式，此时它等待用户按 Ctrl+Z > Enter 退出    。
+    > 启用本机代码调试后，Python 输出窗口可能在程序完成后立即消失，而不出现通常的“按任何键以继续”暂停界面  。 若要强制暂停，请在启用本机代码调试后，向“调试”选项卡上的“运行” > “解释器参数”字段添加 `-i` 选项。 此参数会在代码完成后将 Python 解释器置于交互模式，此时它等待用户按 Ctrl+Z > Enter 退出。
 
-1. 将混合模式调试器附加到现有进程（“调试” > “附加到进程”）时，使用“选择”按钮打开“选择代码类型”对话框     。 然后设置“调试这些代码类型”  选项并从列表中选择“本机”  和“Python”  ：
+1. 将混合模式调试器附加到现有进程（“调试” > “附加到进程”）时，使用“选择”按钮打开“选择代码类型”对话框。 然后设置“调试这些代码类型”  选项并从列表中选择“本机”  和“Python”  ：
 
     ![选择本机和 Python 代码类型](media/mixed-mode-debugging-code-type.png)
 
@@ -79,8 +79,8 @@ Visual Studio（2017 版本 15.5 及更高版本）支持通过 C/C++ 项目进�
 
 针对所有以前版本的 Visual Studio，只有在 Visual Studio 中启动 Python 项目时才启用直接混合模式调试，因为 C/C++ 项目仅使用本机调试器。 但你可以单独附加调试器：
 
-1. 启动 C++ 项目，但不进行调试（“调试” > “启动但不调试”或 Ctrl+F5）     。
-1. 选择“调试” > “附加到进程”   。 在出现的对话框中，选择相应的进程，然后使用“选择”按钮来打开“选择代码类型”对话框，在其中选择 Python    ：
+1. 启动 C++ 项目，但不进行调试（“调试” > “启动但不调试”或 Ctrl+F5）。
+1. 选择“调试” > “附加到进程”。 在出现的对话框中，选择相应的进程，然后使用“选择”按钮来打开“选择代码类型”对话框，在其中选择 Python    ：
 
     ![附加调试器时选择 Python 作为调试类型](media/mixed-mode-debugging-attach-type.png)
 
@@ -100,13 +100,13 @@ Visual Studio（2017 版本 15.5 及更高版本）支持通过 C/C++ 项目进�
 
 ![将“调用堆栈”和“混合模式调试”合并](media/mixed-mode-debugging-call-stack.png)
 
-如果已设置“工具” > “选项” > “调试” > “常规” > “启用仅我的代码”选项，转换将显示为“[外部代码]”，但不指定转换方向       。
+如果已设置“工具” > “选项” > “调试” > “常规” > “启用仅我的代码”选项，转换将显示为“[外部代码]”，但不指定转换方向。
 
 如果可能，双击任何调用帧将使其处于活动状态，并打开相应的源代码。 如果源代码不可用，该帧仍将处于活动状态并可以检查局部变量。
 
 ### <a name="step-between-python-and-native-code"></a>在 Python 和本机代码之间进行单步执行
 
-使用单步执行 (F11) 或单步跳出 (Shift+F11) 命令时，混合模式调试器会正确处理代码类型间的更改      。 例如，当 Python 调用在 C 中实现的类型的方法时，对该方法的调用进行的单步执行将在实现该方法的本机函数开头处停止。 当本机代码调用导致调用 Python 代码的某些 Python API 函数时也一样。 例如，对最初在 Python 中定义的函数值进行的单步执行 `PyObject_CallObject` 将在 Python 函数的开头处停止。 通过 [ctype](https://docs.python.org/3/library/ctypes.html) 从 Python 调用的本机函数也支持从 Python 到本机的单步执行。
+使用单步执行 (F11) 或单步跳出 (Shift+F11) 命令时，混合模式调试器会正确处理代码类型间的更改。 例如，当 Python 调用在 C 中实现的类型的方法时，对该方法的调用进行的单步执行将在实现该方法的本机函数开头处停止。 当本机代码调用导致调用 Python 代码的某些 Python API 函数时也一样。 例如，对最初在 Python 中定义的函数值进行的单步执行 `PyObject_CallObject` 将在 Python 函数的开头处停止。 通过 [ctype](https://docs.python.org/3/library/ctypes.html) 从 Python 调用的本机函数也支持从 Python 到本机的单步执行。
 
 ### <a name="pyobject-values-view-in-native-code"></a>本机代码中的 PyObject 值视图
 
@@ -114,7 +114,7 @@ Visual Studio（2017 版本 15.5 及更高版本）支持通过 C/C++ 项目进�
 
 ![“局部变量”窗口中的 Python 视图](media/mixed-mode-debugging-python-view.png)
 
-若要禁用此功能，单键单击局部变量窗口中的任何位置并切换“Python” > “显示 Python 视图节点”菜单选项    ：
+若要禁用此功能，单键单击局部变量窗口中的任何位置并切换“Python” > “显示 Python 视图节点”菜单选项：
 
 ![在“局部变量”窗口中启用 Python 视图](media/mixed-mode-debugging-enable-python-view.png)
 
@@ -137,13 +137,13 @@ Visual Studio（2017 版本 15.5 及更高版本）支持通过 C/C++ 项目进�
 
 “[Python 视图]”不会为你自行创作的类型自动显示  。 为 Python 3.x 创作扩展时，缺少此项通常不成问题，因为任何对象最终都具有上述类型之一的 `ob_base` 字段，这将导致显示“[Python 视图]”  。
 
-但是对于 Python 2.x，每个对象类型通常将其标头声明为内联字段的集合，并且在 C/C++ 代码中的类型系统级别的自定义创作类型和 `PyObject` 之间没有任何关联。 若要为此类自定义类型启用“[Python 视图]”节点，请在 [Python 工具安装目录](installing-python-support-in-visual-studio.md#install-locations)中编辑 PythonDkm.natvis 文件，然后为 C 构造或 C++ 类在 XML 中添加其他元素   。
+但是对于 Python 2.x，每个对象类型通常将其标头声明为内联字段的集合，并且在 C/C++ 代码中的类型系统级别的自定义创作类型和 `PyObject` 之间没有任何关联。 若要为此类自定义类型启用“[Python 视图]”节点，请在 [Python 工具安装目录](installing-python-support-in-visual-studio.md#install-locations)中编辑 PythonDkm.natvis 文件，然后为 C 构造或 C++ 类在 XML 中添加其他元素。
 
 其他（更优）选项为遵循 [PEP 3123](https://www.python.org/dev/peps/pep-3123/) 并使用显式 `PyObject ob_base;` 字段而非 `PyObject_HEAD`，但因为向后兼容性的原因，因此不可能总是采用这种选项。
 
 ### <a name="native-values-view-in-python-code"></a>Python 代码中的本机值视图
 
-类似上一节，当 Python 帧处于活动状态时，可以为局部变量窗口中的本机值启用“[C++ 视图]”   。 默认情况下未启用此功能，因此可通过在局部变量窗口中单击右键并切换“Python” > “显示 C++ 视图节点”菜单选项来启用此功能    。
+类似上一节，当 Python 帧处于活动状态时，可以为局部变量窗口中的本机值启用“[C++ 视图]”   。 默认情况下未启用此功能，因此可通过在局部变量窗口中单击右键并切换“Python” > “显示 C++ 视图节点”菜单选项来启用此功能。
 
 ![在“局部变量”窗口中启用 C++ 视图](media/mixed-mode-debugging-enable-cpp-view.png)
 
@@ -161,7 +161,7 @@ static int FobObject_init(FobObject* self, PyObject* args, PyObject* kwds) {
 }
 ```
 
-则调试器可正确推断该对象的 C 类型为 `FobObject`。 如果无法根据 `tp_init` 确定更精确的类型，它将移到其他字段。 如果无法通过所有这些字段推断类型，“[C++ 视图]”节点会将该对象作为 `PyObject` 实例显示  。
+则调试器可正确推断该对象的 C 类型为 `FobObject`。 如果无法根据 `tp_init` 确定更精确的类型，它将移到其他字段。 如果无法通过所有这些字段推断类型，“[C++ 视图]”节点会将该对象作为 `PyObject` 实例显示。
 
 若要始终获得自定义创作类型的有用表示形式，注册类型时最好注册至少一个特殊函数，并使用强类型 `self` 参数。 大多数类型可自然地满足该要求；如果无法满足，则 `tp_init` 通常是实现此目的最方便的选项。 针对单独显示的类型虚拟实现 `tp_init` 以启用调试类型推理只能立即返回零，如上述代码示例所示。
 

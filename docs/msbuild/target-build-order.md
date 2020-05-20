@@ -35,7 +35,7 @@ ms.locfileid: "75585452"
 
 ## <a name="initial-targets"></a>初始目标
 
-`InitialTargets`Project[ 元素的 ](../msbuild/project-element-msbuild.md) 属性指定将首先运行的目标，即使在命令行或 `DefaultTargets` 属性中指定了目标。 初始目标常用于错误检查。
+[Project`DefaultTargets` 元素的 `InitialTargets` 属性指定将首先运行的目标，即使在命令行或 ](../msbuild/project-element-msbuild.md) 属性中指定了目标。 初始目标常用于错误检查。
 
 `InitialTargets` 属性的值可以是以分号分隔的、有序的目标列表。 以下示例指定运行的 `Warm` 目标，然后指定运行的 `Eject` 目标。
 
@@ -49,7 +49,7 @@ ms.locfileid: "75585452"
 
 ## <a name="default-targets"></a>默认目标
 
-如果未在命令行上显式指定某个目标，`DefaultTargets`Project[ 元素的 ](../msbuild/project-element-msbuild.md) 属性可指定将生成哪个或哪些目标。
+如果未在命令行上显式指定某个目标，[Project](../msbuild/project-element-msbuild.md) 元素的 `DefaultTargets` 属性可指定将生成哪个或哪些目标。
 
 `DefaultTargets` 属性的值可以是以分号分隔的、有序的默认目标列表。 以下示例指定运行的 `Clean` 目标，然后指定运行的 `Build` 目标。
 
@@ -98,7 +98,7 @@ ms.locfileid: "75585452"
 </Project>
 ```
 
-若要创建在 `Optimize` 目标后，`Compile` 目标前运行的直接目标 `Link`，请将以下目标添加到 `Project` 元素中的任意位置。
+若要创建在 `Compile` 目标后，`Link` 目标前运行的直接目标 `Optimize`，请将以下目标添加到 `Project` 元素中的任意位置。
 
 ```xml
 <Target Name="Optimize"

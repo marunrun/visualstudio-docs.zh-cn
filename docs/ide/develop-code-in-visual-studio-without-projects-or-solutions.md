@@ -87,13 +87,13 @@ ms.locfileid: "75596289"
 
 ### <a name="codebases-that-use-custom-build-tools"></a>使用自定义生成工具的代码库
 
-如果代码库使用自定义生成工具，则必须告知 Visual Studio 如何使用 .json  文件中定义的生成任务  来生成代码。 有关详细信息，请参阅[自定义生成和调试任务](../ide/customize-build-and-debug-tasks-in-visual-studio.md)。
+如果代码库使用自定义生成工具，则必须告知 Visual Studio 如何使用 .json 文件中定义的生成任务来生成代码。 有关详细信息，请参阅[自定义生成和调试任务](../ide/customize-build-and-debug-tasks-in-visual-studio.md)。
 
 ### <a name="codebases-that-contain-python-or-javascript-code"></a>包含 Python 或 JavaScript 代码的代码库
 
 如果代码库包含 Python 或 JavaScript 代码，则无需配置任何 .json  文件，但必须安装相应的工作负载。 还必须配置启动脚本：
 
-1. 通过选择“工具”[“获取工具和功能”](https://visualstudio.microsoft.com/vs/node-js/)[，或者通过关闭 Visual Studio 并运行 Visual Studio 安装程序来安装 ](https://visualstudio.microsoft.com/vs/python/)Node.js 开发**或** Python 开发 > 工作负载  。
+1. 通过选择“工具” > “获取工具和功能”，或者通过关闭 Visual Studio 并运行 Visual Studio 安装程序来安装 [Node.js 开发](https://visualstudio.microsoft.com/vs/node-js/)或 [Python 开发](https://visualstudio.microsoft.com/vs/python/)工作负载。
 
    ![Node.js 和 Python 开发工作负载](media/python_nodejs_workloads.png)
 

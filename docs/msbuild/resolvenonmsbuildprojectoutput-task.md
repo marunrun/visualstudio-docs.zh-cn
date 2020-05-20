@@ -40,7 +40,7 @@ ms.locfileid: "77632571"
 
 ## <a name="remarks"></a>备注
 
- 除了具有表中列出的参数外，此任务还将从本身继承自 <xref:Microsoft.Build.Tasks.TaskExtension> 类的 <xref:Microsoft.Build.Utilities.Task> 类继承参数。 有关这些其他参数的列表及其说明的信息，请参阅 [TaskExtension 基类](../msbuild/taskextension-base-class.md)。
+ 除了具有表中列出的参数外，此任务还将从本身继承自 <xref:Microsoft.Build.Utilities.Task> 类的 <xref:Microsoft.Build.Tasks.TaskExtension> 类继承参数。 有关这些其他参数的列表及其说明的信息，请参阅 [TaskExtension 基类](../msbuild/taskextension-base-class.md)。
 
 ## <a name="see-also"></a>另请参阅
 

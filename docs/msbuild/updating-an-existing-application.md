@@ -69,7 +69,7 @@ MSBuild 包的主要版本和次要版本须低于或等于希望支持的 Visua
 
 ### <a name="ensure-output-is-clean"></a>确保输出清洁
 
-生成项目并检查输出目录，以确保它不包含任何 Microsoft.Build. *.dll 程序集（除 Microsoft.Build.Locator.dll 以外，它在下一步中添加）。\** 
+生成项目并检查输出目录，以确保它不包含任何 Microsoft.Build.\*.dll 程序集（除 Microsoft.Build.Locator.dll 以外，它在下一步中添加）。
 
 ### <a name="add-package-reference-for-microsoftbuildlocator"></a>为 Microsoft.Build.Locator 添加包引用
 

@@ -190,7 +190,7 @@ ms.locfileid: "75589638"
 
      ![使用快速查找隔离该动态参数](../test/media/web_test_dynamicparameter_runresultsquckfind.png)
 
-4. 从测试编辑器中可以看到，已为 JScriptQuery.aspx 请求的 CustomQueryString 分配值： *，并且怀疑的动态部分为“1v0yhyiyr0raa2w4j4pwf5zl”。* `jScriptQueryString___1v0yhyiyr0raa2w4j4pwf5zl` 在“查找内容”下拉列表中，移除该搜索字符串的可疑部分。 该字符串应为“CustomQueryString=jScriptQueryString___”。
+4. 从测试编辑器中可以看到，已为 JScriptQuery.aspx 请求的 CustomQueryString 分配值：`jScriptQueryString___1v0yhyiyr0raa2w4j4pwf5zl`，并且怀疑的动态部分为“1v0yhyiyr0raa2w4j4pwf5zl”。 在“查找内容”下拉列表中，移除该搜索字符串的可疑部分。 该字符串应为“CustomQueryString=jScriptQueryString___”。
 
      动态参数将存在错误的请求前面的一个请求中进行赋值。 因此，请选中“向上搜索”复选框，然后选择“查找下一个”，直到 Querystring.aspx 前面的请求突出显示在“请求”面板中。  此情况应在您选择“查找下一个”三次后发生。
 

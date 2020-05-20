@@ -48,7 +48,7 @@ MSBuild 15.0 引入了“项目 SDK”的概念，它可让你更轻松地使用
 
 可通过三种方法引用项目 SDK：
 
-- 使用 `Sdk` 元素的 `<Project/>` 属性：
+- 使用 `<Project/>` 元素的 `Sdk` 属性：
 
     ```xml
     <Project Sdk="My.Custom.Sdk">

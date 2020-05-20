@@ -36,7 +36,7 @@ Visual Studio 生成对工作流中断次数最少的新类型和成员。 你�
 
 1. 在 C# 或 Visual Basic 中创建新的“Windows 类库”项目  。 将其命名为 `GFUDemo_VB` 或 `GFUDemo_CS`，具体取决于所使用的语言。
 
-2. 在“解决方案资源管理器”中，右键单击顶部的解决方案图标，选择“添加” **“新建项目”**   >   。
+2. 在“解决方案资源管理器”中，右键单击顶部的解决方案图标，选择“添加” > “新建项目”。
 
 3. 创建新的“单元测试项目(.NET Framework)”项目  。
 
@@ -77,7 +77,7 @@ Visual Studio 生成对工作流中断次数最少的新类型和成员。 你�
 
 5. 单击“生成新类型”  ，打开“生成类型”  对话框。 此对话框中提供了许多选项，包含在其他项目中生成类型。
 
-6. 在“项目”  列表中，单击“GFUDemo**VB”\_** 或“GFUDemo_CS”  ，指示 Visual Studio 将文件添加到类库项目而不是测试项目。 如果尚未选中，则选择“创建新文件”  并将其命名为 Automobile.cs  或 Automobile.vb  。
+6. 在“项目”列表中，单击“GFUDemo\_VB”或“GFUDemo_CS”，指示 Visual Studio 将文件添加到类库项目而不是测试项目。 如果尚未选中，则选择“创建新文件”  并将其命名为 Automobile.cs  或 Automobile.vb  。
 
      ![“生成新类型”对话框](../ide/media/genotherdialog.png)
 
@@ -121,9 +121,9 @@ Visual Studio 生成对工作流中断次数最少的新类型和成员。 你�
      [!code-csharp[VbTDDWalkthrough#3](../ide/codesnippet/CSharp/walkthrough-test-first-support-with-the-generate-from-usage-feature_3.cs)]
      [!code-vb[VbTDDWalkthrough#3](../ide/codesnippet/VisualBasic/walkthrough-test-first-support-with-the-generate-from-usage-feature_3.vb)]
 
-2. 单击  **方法调用的“快速操作”** `myAuto.Start`错误灯泡，然后单击“生成方法 'Automobile.Start'”  。
+2. 单击 `myAuto.Start` 方法调用的“快速操作”错误灯泡，然后单击“生成方法 'Automobile.Start'”。
 
-3. 单击  **属性的“快速操作”** `IsRunning`灯泡，然后单击“生成属性 'Automobile.IsRunning'”  。
+3. 单击 `IsRunning` 属性的“快速操作”灯泡，然后单击“生成属性 'Automobile.IsRunning'”。
 
      `Automobile` 类现在包含一个名为 `Start()` 的方法和一个名为 `IsRunning` 的属性。
 

@@ -52,7 +52,7 @@ devenv {/Run|/R} {SolutionName|ProjectName} [/Out OutputFilename]
 
 - 用双引号将含有空格的字符串引起来。
 
-- “命令”窗口或使用  **开关指定的任何日志文件中都可显示摘要信息（包括错误）** `/Out`。
+- “命令”窗口或使用 `/Out` 开关指定的任何日志文件中都可显示摘要信息（包括错误）。
 
 ## <a name="example"></a>示例
 

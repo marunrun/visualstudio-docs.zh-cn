@@ -29,7 +29,7 @@ ms.locfileid: "77027293"
 - 安装带有“ASP.NET 和 Web 开发”工作负载的最新版本 [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download)
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-- [Visual Studio 2019](https://visualstudio.microsoft.com/downloads) 与“ASP.NET 和 Web 开发”工作负载  。
+- 带有 ASP.NET 和 Web 开发工作负荷的 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads)。
 ::: moniker-end
 - 安装 [Docker Desktop](https://docs.docker.com/docker-for-windows/install/)
 
@@ -94,7 +94,7 @@ ms.locfileid: "77027293"
 
 ## <a name="clean-up-resources"></a>清理资源
 
-若要删除与本教程相关联的所有 Azure 资源，请使用 [Azure 门户](https://portal.azure.com)删除相应的资源组。 若要查找与已发布 Web 应用程序相关联的资源组，请选择“查看” **“其他 Windows”** “Web 发布活动”，然后选择齿轮图标 >    >   。 此时会打开“发布”选项卡，其中包含资源组  。
+若要删除与本教程相关联的所有 Azure 资源，请使用 [Azure 门户](https://portal.azure.com)删除相应的资源组。 若要查找与已发布 Web 应用程序相关联的资源组，请选择“查看” > “其他 Windows” > “Web 发布活动”，然后选择齿轮图标。 此时会打开“发布”选项卡，其中包含资源组  。
 
 在 Azure 门户中，选择“资源组”，选择要打开其详细信息页面的资源组  。 确认这是正确的资源组，然后选择“删除资源组”，键入名称，并选择“删除”   。
 

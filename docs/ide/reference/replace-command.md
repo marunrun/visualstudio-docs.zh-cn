@@ -94,7 +94,7 @@ Edit.Replace findwhat replacewith [/all] [/case]
 可选。 只搜索全字。
 
 ## <a name="example"></a>示例
-此示例用所有打开文档中的 `btnSend` 替换 `btnSubmit`。
+此示例用所有打开文档中的 `btnSubmit` 替换 `btnSend`。
 
 ```
 >Edit.Replace btnSend btnSubmit /open

@@ -23,7 +23,7 @@ ms.locfileid: "75593273"
 ---
 # <a name="diagnosing-task-failures"></a>诊断任务故障
 
-`MSB6006` 派生类运行工具进程（如果任务未记录更具体的错误，则会返回非零退出代码）时，会发出 <xref:Microsoft.Build.Utilities.ToolTask>。
+<xref:Microsoft.Build.Utilities.ToolTask> 派生类运行工具进程（如果任务未记录更具体的错误，则会返回非零退出代码）时，会发出 `MSB6006`。
 
 ## <a name="identifying-the-failing-task"></a>识别失败的任务
 

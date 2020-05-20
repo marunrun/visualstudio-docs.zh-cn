@@ -30,11 +30,11 @@ ms.locfileid: "75592056"
 
 3. 在“所有 WPF 控件”  部分，将一个“Button”  、“CheckBox”  和“ProgressBar”  控件拖动到设计图面的主窗口中。
 
-4. 选择“Button”控件  。 在“属性”窗口中，将“名称”属性的值从 \<无名称> 更改为 button1   。 然后将“内容”  属性的值从 Button 更改为 Start。
+4. 选择“Button”控件  。 在“属性”窗口中，将“名称”属性的值从 \<无名称> 更改为 button1。 然后将“内容”  属性的值从 Button 更改为 Start。
 
-5. 选择“ProgressBar”控件  。 在“属性”窗口中，将“名称”属性的值从 \<无名称> 更改为 progressBar1   。 然后将“最大值”  属性的值从“100”  更改为“10000”  。
+5. 选择“ProgressBar”控件  。 在“属性”窗口中，将“名称”属性的值从 \<无名称> 更改为 progressBar1。 然后将“最大值”  属性的值从“100”  更改为“10000”  。
 
-6. 选择“Checkbox”控件  。 在“属性”窗口中，将“名称”属性的值从 \<无名称> 更改为 checkBox1，然后清除“IsEnabled”属性    。
+6. 选择“Checkbox”控件  。 在“属性”窗口中，将“名称”属性的值从 \<无名称> 更改为 checkBox1，然后清除“IsEnabled”属性。
 
      ![简单 WPF 应用程序](../test/media/codedui_wpfapp.png)
 
@@ -106,12 +106,12 @@ ms.locfileid: "75592056"
 
 ## <a name="create-a-coded-ui-test-for-simplewpfapp"></a>为 SimpleWPFApp 创建编码的 UI 测试
 
-1. 在“解决方案资源管理器”中，右键单击解决方案，然后依次选择“添加” > “新建项目”    。
+1. 在“解决方案资源管理器”中，右键单击解决方案，然后依次选择“添加” > “新建项目”。
 
 2. 搜索并选择“编码的 UI 测试项目”项目模板，并继续执行这些步骤，直到完成项目的创建  。
 
    > [!NOTE]
-   > 如未看到“编码的 UI 测试项目”模板，则需要安装[编码的 UI 测试组件](../test/use-ui-automation-to-test-your-code.md#install-the-coded-ui-test-component)  。
+   > 如未看到“编码的 UI 测试项目”模板，则需要安装[编码的 UI 测试组件](../test/use-ui-automation-to-test-your-code.md#install-the-coded-ui-test-component)。
 
      新的编码的 UI 测试项目（名为 CodedUITestProject1）将添加到解决方案中，并且系统随即显示“为编码的 UI 测试生成代码”对话框   。
 

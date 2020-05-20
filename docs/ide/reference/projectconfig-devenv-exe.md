@@ -49,7 +49,7 @@ devenv SolutionName {/Build|/Clean|/Deploy|/Rebuild} [SolnConfigName [/Project P
 
 - *SolnConfigName*
 
-  可选。 要用于 SolutionName`Debug``Release` 中命名的解决方案的解决方案配置的名称（如 *或*）。 如果有多个解决方案平台可用，还必须指定平台（例如，`Debug|Win32`）。 如果未指定此参数或字符串为空 (`""`)，工具便会使用解决方案的有效配置。
+  可选。 要用于 SolutionName 中命名的解决方案的解决方案配置的名称（如 `Debug` 或 `Release`）。 如果有多个解决方案平台可用，还必须指定平台（例如，`Debug|Win32`）。 如果未指定此参数或字符串为空 (`""`)，工具便会使用解决方案的有效配置。
 
 - `/Project` *ProjName*
 
@@ -57,7 +57,7 @@ devenv SolutionName {/Build|/Clean|/Deploy|/Rebuild} [SolnConfigName [/Project P
 
 - `/ProjectConfig` *ProjConfigName*
 
-  可选。 要应用于已命名 `Debug` 的项目生成配置名称（如 `Release` 或 `/Project`）。 如果有多个解决方案平台可用，还必须指定平台（例如，`Debug|Win32`）。
+  可选。 要应用于已命名 `/Project` 的项目生成配置名称（如 `Debug` 或 `Release`）。 如果有多个解决方案平台可用，还必须指定平台（例如，`Debug|Win32`）。
 
 - `/Out` *OutputFilename*
 
@@ -65,7 +65,7 @@ devenv SolutionName {/Build|/Clean|/Deploy|/Rebuild} [SolnConfigName [/Project P
 
 ## <a name="remarks"></a>备注
 
-`/ProjectConfig` 开关必须在 `/Project`、/`/Build`、`Clean` 或 `/Deploy` 命令中与 `/Rebuild` 开关一起使用。
+`/ProjectConfig` 开关必须在 `/Build`、/`Clean`、`/Deploy` 或 `/Rebuild` 命令中与 `/Project` 开关一起使用。
 
 用双引号将含有空格的字符串引起来。
 
@@ -73,7 +73,7 @@ devenv SolutionName {/Build|/Clean|/Deploy|/Rebuild} [SolnConfigName [/Project P
 
 ## <a name="example"></a>示例
 
-下面的命令使用 `CSharpWinApp` 中的 `Debug` 项目生成配置来生成项目 `MySolution`：
+下面的命令使用 `MySolution` 中的 `Debug` 项目生成配置来生成项目 `CSharpWinApp`：
 
 ```shell
 devenv "%USERPROFILE%\source\repos\MySolution\MySolution.sln" /build Debug /project "CSharpWinApp\CSharpWinApp.csproj" /projectconfig Debug

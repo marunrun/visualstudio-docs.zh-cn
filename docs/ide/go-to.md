@@ -28,7 +28,7 @@ Visual Studio 的“转到”命令可执行代码的重点搜索，有助于快
 输入 | 函数
 ------------ | ---
 **键盘** | 按 Ctrl  +T  或 Ctrl  +, 
-**鼠标** | 选择“编辑” **“转到”** “转到全部” >    >  
+**鼠标** | 选择“编辑” > “转到” > “转到全部”
 
 代码编辑器的右上方会显示一个小窗口。
 
@@ -72,7 +72,7 @@ m| ![成员图标](media/gotoall-members-icon.png) | Ctrl  +1  、Ctrl  +M  | �
 
 ## <a name="camel-casing"></a>驼峰式大小写
 
-如果在代码中使用[驼峰式大小写](https://en.wikipedia.org/wiki/Camel_case)，可以仅输入码位元素名称的大写字母，以更快地查找码位元素。 例如，如果代码中有 `CredentialViewModel` 类型，可以选择“类型”筛选器 (t)，然后在“转到”对话框中仅输入名称的大写字母 ( **) 来缩小搜索范围**  `CVM`。 如果代码名称很长，此功能就非常有用。
+如果在代码中使用[驼峰式大小写](https://en.wikipedia.org/wiki/Camel_case)，可以仅输入码位元素名称的大写字母，以更快地查找码位元素。 例如，如果代码中有 `CredentialViewModel` 类型，可以选择“类型”筛选器 (t)，然后在“转到”对话框中仅输入名称的大写字母 (`CVM`) 来缩小搜索范围。 如果代码名称很长，此功能就非常有用。
 
 ![转到窗口 - 使用大写字母进行搜索](../ide/media/vside_capitalsearch.png)
 

@@ -25,7 +25,7 @@ ms.locfileid: "75591354"
 
 Visual Studio 提供了“导出模板向导”，该向导可用于更新现有模板  ：
 
-1. 从菜单栏中选择“文件” > “新建” > ’“项目”    。
+1. 从菜单栏中选择“文件” > “新建” > ’“项目”。
 
 1. 选择要更新的模板，然后继续完成新项目的创建步骤。
 
@@ -37,7 +37,7 @@ Visual Studio 提供了“导出模板向导”，该向导可用于更新现有
 
 1. 按照向导中的提示将模板以 .zip 文件导出  。
 
-1. （可选）请将 .zip 文件放在以下目录中以供选择：%USERPROFILE%\Documents\Visual Studio \<version\>\Templates\ProjectTemplates   。 如果未在“导出模板向导”中选择“自动将模板导入 Visual Studio”选项，则需执行此步骤   。
+1. （可选）请将 .zip 文件放在以下目录中以供选择：%USERPROFILE%\Documents\Visual Studio \<version\>\Templates\ProjectTemplates。 如果未在“导出模板向导”中选择“自动将模板导入 Visual Studio”选项，则需执行此步骤   。
 
 1. 删除旧的模板 .zip 文件  。
 
@@ -47,7 +47,7 @@ Visual Studio 提供了“导出模板向导”，该向导可用于更新现有
 
 ### <a name="to-manually-update-an-existing-template"></a>手动更新现有模板
 
-1. 找到包含模板的 .zip 文件  。 用户项目模板通常位于 %USERPROFILE%\Documents\Visual Studio \<version\>\Templates\ProjectTemplates  。
+1. 找到包含模板的 .zip 文件  。 用户项目模板通常位于 %USERPROFILE%\Documents\Visual Studio \<version\>\Templates\ProjectTemplates。
 
 1. 解压缩 .zip 文件  。
 
@@ -55,9 +55,9 @@ Visual Studio 提供了“导出模板向导”，该向导可用于更新现有
 
 1. 打开、修改并保存 .vstemplate XML 文件，以处理已更新的行为或新文件  。
 
-    有关 .vstemplate 架构的详细信息，请参阅 [Visual Studio 模板架构引用（扩展性）](../extensibility/visual-studio-template-schema-reference.md)  。 有关可在源文件中进行参数化的内容的详细信息，请参阅[模板参数](../ide/template-parameters.md)。
+    有关 .vstemplate 架构的详细信息，请参阅 [Visual Studio 模板架构引用（扩展性）](../extensibility/visual-studio-template-schema-reference.md)。 有关可在源文件中进行参数化的内容的详细信息，请参阅[模板参数](../ide/template-parameters.md)。
 
-1. 选择模板中的文件，然后通过右键单击或从上下文菜单中选择“发送至” > “压缩的文件夹（zip 格式）”   。
+1. 选择模板中的文件，然后通过右键单击或从上下文菜单中选择“发送至” > “压缩的文件夹（zip 格式）”。
 
     所选的文件将压缩到一个 .zip 文件中  。
 

@@ -38,7 +38,7 @@ devenv SolutionName /Deploy [SolnConfigName [/Project ProjName [/ProjectConfig P
 
 - *SolnConfigName*
 
-  可选。 要用于生成 SolutionName`Debug``Release` 中命名的解决方案的解决方案配置的名称（如 *或*）。 如果有多个解决方案平台可用，还必须指定平台（例如，`Debug|Win32`）。 如果未指定此参数或字符串为空 (`""`)，工具便会使用解决方案的有效配置。
+  可选。 要用于生成 SolutionName 中命名的解决方案的解决方案配置的名称（如 `Debug` 或 `Release`）。 如果有多个解决方案平台可用，还必须指定平台（例如，`Debug|Win32`）。 如果未指定此参数或字符串为空 (`""`)，工具便会使用解决方案的有效配置。
 
 - `/Project` *ProjName*
 
@@ -46,7 +46,7 @@ devenv SolutionName /Deploy [SolnConfigName [/Project ProjName [/ProjectConfig P
 
 - `/ProjectConfig` *ProjConfigName*
 
-  可选。 要在生成已命名 `Debug` 时使用的项目生成配置的名称（如 `Release` 或 `/Project`）。 如果有多个解决方案平台可用，还必须指定平台（例如，`Debug|Win32`）。 如果此开关已指定，它会替代 SolnConfigName  参数。
+  可选。 要在生成已命名 `/Project` 时使用的项目生成配置的名称（如 `Debug` 或 `Release`）。 如果有多个解决方案平台可用，还必须指定平台（例如，`Debug|Win32`）。 如果此开关已指定，它会替代 SolnConfigName  参数。
 
 - `/Out` *OutputFilename*
 
@@ -62,7 +62,7 @@ devenv SolutionName /Deploy [SolnConfigName [/Project ProjName [/ProjectConfig P
 
 ## <a name="example"></a>示例
 
-下面的示例使用 `CSharpWinApp` 中的 `Release` 项目生成配置来部署项目 `MySolution`。
+下面的示例使用 `MySolution` 中的 `Release` 项目生成配置来部署项目 `CSharpWinApp`。
 
 ```shell
 devenv "%USERPROFILE%\source\repos\MySolution\MySolution.sln" /deploy Release /project "CSharpWinApp\CSharpWinApp.csproj" /projectconfig Release

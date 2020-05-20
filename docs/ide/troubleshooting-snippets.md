@@ -25,9 +25,9 @@ ms.locfileid: "75588689"
 
 ## <a name="the-snippet-cannot-be-dragged-from-file-explorer-to-a-visual-studio-source-file"></a>代码片段不能从文件资源管理器拖动到 Visual Studio 源文件
 
-- 代码片段文件中的 XML 可能已损坏。 **中的 XML 编辑器可找到 XML 结构中的问题**[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]。
+- 代码片段文件中的 XML 可能已损坏。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 中的 XML 编辑器可找到 XML 结构中的问题。
 
-- 代码片段文件可能不符合代码片段架构。 **中的 XML 编辑器可找到 XML 结构中的问题**[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]。
+- 代码片段文件可能不符合代码片段架构。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 中的 XML 编辑器可找到 XML 结构中的问题。
 
 ## <a name="the-code-has-compiler-errors-that-are-not-highlighted"></a>代码具有未突出显示的编译器错误
 

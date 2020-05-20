@@ -94,16 +94,16 @@ Visual Studio for Mac 使用包含的默认函数创建 .NET Standard 项目。 
 
 ## <a name="publish-to-azure"></a>发布到 Azure
 
-1. 右键单击项目名，然后选择“发布”>“发布到 Azure”  ：![发布到 Azure 菜单选项](media/azure-functions-image5.png)
+1. 右键单击项目名称，然后选择“发布”>“发布到 Azure”：![发布到 Azure 菜单选项](media/azure-functions-image5.png)
 2. 如果已将 Azure 帐户连接到 Visual Studio for Mac，则会显示可用应用服务的列表。 如果尚未登录，系统将提示登录。
 3. 从“发布到 Azure 应用服务”对话框，可选择现有应用服务，也可通过单击“新建”来创建新服务   。
-4. 在“创建新的应用服务”对话框中，输入设置  ：![发布到 Azure 菜单选项](media/azure-functions-image7.png)
+4. 在“创建新的应用服务”对话框中，输入设置：![发布到 Azure 菜单选项](media/azure-functions-image7.png)
 
     |设置  |描述  |
     |---------|---------|
     |**应用服务名称**|用于标识新函数应用的全局唯一名称。|
     |**订阅**|要使用的 Azure 订阅。|
-    |**[资源组](/azure/azure-resource-manager/resource-group-overview)**|要在其中创建函数应用的资源组的名称。 选择“+”以创建新的资源组  。|
+    |**[资源组](/azure/azure-resource-manager/resource-group-overview)**|要在其中创建函数应用的资源组的名称。 选择“+”以创建新的资源组。|
     |**[服务计划](/azure/azure-functions/functions-scale)**|选择现有计划或创建自定义计划。 在附近的区域或函数访问的其他服务附近选择一个位置。|
 
 5. 单击“下一步”创建存储帐户  。 Functions 运行时需要 Azure 存储帐户。 单击“自定义”以创建通用存储帐户，或使用现有帐户  ：

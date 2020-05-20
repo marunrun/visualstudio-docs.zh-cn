@@ -35,9 +35,9 @@ ms.locfileid: "75589196"
 
    项目将添加到新解决方案中，设计器中将显示一个名为 UserControl1.cs 的 <xref:System.Windows.Forms.UserControl>  。
 
-1. 从“工具箱”的“公共控件”类别下，将  **拖动到 UserControl1 的曲面上**  <xref:System.Windows.Forms.RichTextBox>。
+1. 从“工具箱”的“公共控件”类别下，将 <xref:System.Windows.Forms.RichTextBox> 拖动到 UserControl1 的曲面上。
 
-1. 选择 ![ 控件右上角的操作标记标志符号（](../test/media/vs_winformsmttagglyph.gif)智能标记字形<xref:System.Windows.Forms.RichTextBox>），然后选择“在父容器中停靠”  。
+1. 选择 <xref:System.Windows.Forms.RichTextBox> 控件右上角的操作标记标志符号（![智能标记字形](../test/media/vs_winformsmttagglyph.gif)），然后选择“在父容器中停靠”。
 
 1. 在解决方案资源管理器中，右键单击“Windows 窗体库”项目，然后选择“属性”   。
 
@@ -119,7 +119,7 @@ private MessageEditorControl messageEditorControl
 
 messageEditorControl 实例承载在 <xref:Microsoft.VisualStudio.TestTools.WebTesting.IStringHttpBodyEditorPlugin.CreateEditor*> 方法创建的插件对话框中。 此外，messageEditorControl 的 <xref:System.Windows.Forms.RichTextBox> 将由 <xref:Microsoft.VisualStudio.TestTools.WebTesting.IHttpBody> 中的内容进行填充。 但是，除非 <xref:Microsoft.VisualStudio.TestTools.WebTesting.IStringHttpBodyEditorPlugin.SupportsContentType*> 返回 `true`，否则无法创建插件。 对于此编辑器，如果 <xref:Microsoft.VisualStudio.TestTools.WebTesting.IStringHttpBodyEditorPlugin.SupportsContentType*> 中的 `true` 包含“xml”，则 <xref:Microsoft.VisualStudio.TestTools.WebTesting.IHttpBody.ContentType*> 返回 <xref:Microsoft.VisualStudio.TestTools.WebTesting.IHttpBody>。
 
-当完成字符串主体的编辑并且用户在插件对话框中单击“确定”时，将调用  **以获取字符串形式的已编辑文本，并在 Web 测试性能编辑器的请求中更新“字符串主体”** <xref:Microsoft.VisualStudio.TestTools.WebTesting.IStringHttpBodyEditorPlugin.GetNewValue*>  。
+当完成字符串主体的编辑并且用户在插件对话框中单击“确定”时，将调用 <xref:Microsoft.VisualStudio.TestTools.WebTesting.IStringHttpBodyEditorPlugin.GetNewValue*> 以获取字符串形式的已编辑文本，并在 Web 测试性能编辑器的请求中更新“字符串主体”。
 
 ### <a name="create-a-class-and-implement-the-istringhttpbodyeditorplugin-interface"></a>创建类并实现 IStringHttpBodyEditorPlugin 接口
 
@@ -129,7 +129,7 @@ messageEditorControl 实例承载在 <xref:Microsoft.VisualStudio.TestTools.WebT
 
 2. 选择“类”  。
 
-3. 在“名称”文本框中，为类键入有意义的名称，例如  `MessageEditorPlugins`。
+3. 在“名称”文本框中，为类键入有意义的名称，例如 `MessageEditorPlugins`。
 
 4. 选择“添加”  。
 
@@ -206,7 +206,7 @@ private MessageEditorControl messageEditorControl
 
 messageEditorControl 实例承载在 <xref:Microsoft.VisualStudio.TestTools.WebTesting.IBinaryHttpBodyEditorPlugin.CreateEditor*> 方法创建的插件对话框中。 此外，messageEditorControl 的 <xref:System.Windows.Forms.RichTextBox> 将由 <xref:Microsoft.VisualStudio.TestTools.WebTesting.IHttpBody> 中的内容进行填充。 但是，除非 <xref:Microsoft.VisualStudio.TestTools.WebTesting.IBinaryHttpBodyEditorPlugin.SupportsContentType*> 返回 `true`，否则无法创建插件。 对于此编辑器，如果 <xref:Microsoft.VisualStudio.TestTools.WebTesting.IBinaryHttpBodyEditorPlugin.SupportsContentType*> 中的 `true` 包含“msbin1”，<xref:Microsoft.VisualStudio.TestTools.WebTesting.IHttpBody.ContentType*> 返回 <xref:Microsoft.VisualStudio.TestTools.WebTesting.IHttpBody>。
 
-当完成字符串主体的编辑并且用户在插件对话框中单击“确定”时，将调用  **以获取字符串形式的已编辑文本，并在 Web 测试性能编辑器的请求中更新“BinaryHttpBody.Data”** <xref:Microsoft.VisualStudio.TestTools.WebTesting.IBinaryHttpBodyEditorPlugin.GetNewValue*>  。
+当完成字符串主体的编辑并且用户在插件对话框中单击“确定”时，将调用 <xref:Microsoft.VisualStudio.TestTools.WebTesting.IBinaryHttpBodyEditorPlugin.GetNewValue*> 以获取字符串形式的已编辑文本，并在 Web 测试性能编辑器的请求中更新“BinaryHttpBody.Data”。
 
 ### <a name="to-add-the-ibinaryhttpbodyeditorplugin-to-the-class"></a>向类中添加 IBinaryHttpBodyEditorPlugin
 
@@ -264,14 +264,14 @@ messageEditorControl 实例承载在 <xref:Microsoft.VisualStudio.TestTools.WebT
 
 ## <a name="build-and-deploy-the-plug-ins"></a>生成和部署插件
 
-1. 在“生成”菜单上，选择“生成 **Windows 窗体控件库项目名称>”** **\<** 。
+1. 在“生成”菜单上，选择“生成 \<Windows 窗体控件库项目名称>”。
 
 2. 关闭 Visual Studio 的所有实例。
 
    > [!NOTE]
    > 关闭 Visual Studio，确保在尝试复制 .dll 文件前不会锁定它  。
 
-3. 将生成的 .dll 文件（如 MessageEditors.dll）从项目的 bin\debug 文件夹复制到 %ProgramFiles%\Microsoft Visual Studio\2017  edition>\Common7\IDE\PrivateAssemblies\WebTestPlugins   *\\\<* 。
+3. 将生成的 .dll 文件（如 MessageEditors.dll）从项目的 bin\debug 文件夹复制到 %ProgramFiles%\Microsoft Visual Studio\2017\\\<edition>\Common7\IDE\PrivateAssemblies\WebTestPlugins。
 
 4. 打开 Visual Studio。
 

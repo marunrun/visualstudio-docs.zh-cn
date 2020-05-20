@@ -45,7 +45,7 @@ open -n "/Applications/Visual Studio.app"
 
 或者，如果最近打开过解决方案，可按照以下步骤操作：
 
-1. 依次转到“文件”   > “最近打开的解决方案”  。
+1. 依次转到“文件” > “最近打开的解决方案”。
 
     ![“最近打开的解决方案”菜单屏幕截图](media/open-multiple-solutions-image2.png)
 

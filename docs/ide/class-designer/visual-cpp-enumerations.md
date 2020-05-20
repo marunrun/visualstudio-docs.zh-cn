@@ -19,7 +19,7 @@ ms.locfileid: "76114199"
 ---
 # <a name="c-enumerations-in-class-designer"></a>类设计器中的 C++ 枚举
 
-类设计器支持 C++ **和域化的** 类型`enum``enum class`。 下面是一个示例：
+类设计器支持 C++ `enum` 和域化的 `enum class` 类型。 下面是一个示例：
 
 ```cpp
 enum CardSuit {

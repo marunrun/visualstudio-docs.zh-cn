@@ -22,18 +22,18 @@ ms.locfileid: "79307063"
 ---
 # <a name="r-tools-for-visual-studio-options"></a>针对 Visual Studio 的 R 工具选项
 
-可使用“R 工具” **“选项”菜单，也可使用“工具”** “选项”，然后滚到“R 工具” > 来访问设置    >    ：
+可使用“R 工具” > “选项”菜单，也可使用“工具” > “选项”，然后滚到“R 工具”**来访问设置**：
 
   ![R 工具的选项对话框](media/options-dialog.png)
 
 可通过以下方法访问特定于 R 的选项和设置。 必选中“选项”对话框底部的“显示所有设置”框，才可显示所有这些部分   。
 
-- 代码格式设置选项（请参阅[编辑器选项](editing-r-code-in-visual-studio.md#editor-options)）：选择“工具” **“选项”菜单，然后选择“文本编辑器”** “R” > “格式设置”    >    >  
-- Linter 选项（请参阅 [Linting](linting-r-code.md)）：选择“工具” **“选项”菜单，然后选择“文本编辑器”** “R” > “Lint”    >    >  
-- 高级编辑器选项（[在本文中介绍](#text-editor--r--advanced-options)）：选择“工具” **“选项”菜单，然后选择“文本编辑器”** “R” > “高级”    >    >  
-- 行为选项（[在本文中介绍](#r-tools--advanced-options)）：选择“R 工具” **“选项”菜单，或者选择“工具”** “选项”，然后滚动到“R 工具” >     >    。
+- 代码格式设置选项（请参阅[编辑器选项](editing-r-code-in-visual-studio.md#editor-options)）：选择“工具” > “选项”菜单，然后选择“文本编辑器” > “R” > “格式设置”
+- Linter 选项（请参阅 [Linting](linting-r-code.md)）：选择“工具” > “选项”菜单，然后选择“文本编辑器” > “R” > “Lint”
+- 高级编辑器选项（[在本文中介绍](#text-editor--r--advanced-options)）：选择“工具” > “选项”菜单，然后选择“文本编辑器” > “R” > “高级”
+- 行为选项（[在本文中介绍](#r-tools--advanced-options)）：选择“R 工具” > “选项”菜单，或者选择“工具” > “选项”，然后滚动到“R 工具”。
 
-“R 工具” **“数据科学设置”命令还会影响整个 Visual Studio 中的众多不同设置** >   。 下一部分中对此命令进行了介绍。
+“R 工具” > “数据科学设置”命令还会影响整个 Visual Studio 中的众多不同设置。 下一部分中对此命令进行了介绍。
 
 <a name="data-scientist-layout"></a>
 
@@ -43,7 +43,7 @@ ms.locfileid: "79307063"
 
 ![Visual Studio 中的数据科学家窗口布局](media/installation-data-scientist-layout-result.png)
 
-若稍后要还原到其他 Visual Studio 设置，请先使用“工具” **“导入和导出设置”命令，选择“导出所选环境设置”，然后指定一个文件名** >    。 若要还原这些设置，请使用相同的命令，然后选择“导入所选环境设置”  。 如果要更改数据科学家布局，并且想要稍后返回该布局，还可使用相同的命令，而不是直接使用“数据科学设置”命令  。
+若稍后要还原到其他 Visual Studio 设置，请先使用“工具” > “导入和导出设置”命令，选择“导出所选环境设置”，然后指定一个文件名。 若要还原这些设置，请使用相同的命令，然后选择“导入所选环境设置”  。 如果要更改数据科学家布局，并且想要稍后返回该布局，还可使用相同的命令，而不是直接使用“数据科学设置”命令  。
 
 ## <a name="text-editor--r--advanced-options"></a>“文本编辑器”>”R”>“高级”选项
 
@@ -57,7 +57,7 @@ ms.locfileid: "79307063"
 
 ## <a name="r-tools--advanced-options"></a>“R 工具”>“高级”选项
 
-“R 工具” **“选项”菜单命令可打开 R 选项的“选项”对话框** >    ：
+“R 工具” > “选项”菜单命令可打开 R 选项的“选项”对话框：
 
   ![R 工具的选项对话框](media/options-dialog.png)
 
@@ -82,8 +82,8 @@ ms.locfileid: "79307063"
 
 | 选项 | 默认值 | 说明 |
 | --- | --- | --- |
-| F1 Web 浏览器 | `Internal` | 控制使用 Ctrl**F1 搜索术语时帮助的显示方式**+  。 如果设置为 `Internal`，帮助将在 Visual Studio 的工具窗口内呈现。 如果设置为 `External`，帮助将出现在默认的 Web 浏览器中。 |
-| F1 Web 搜索字符串 | `R site:stackoverflow.com` | 控制在编辑器中的术语上按 Ctrl**F1 时，向搜索引擎传递搜索词的方式**+  。 默认情况下，字符串为 `R site:stackoverflow.com`，它将 `R` 追加到搜索词。 `site:stackoverflow.com` 是向搜索引擎发出的指令，告知搜索引擎将搜索范围限定在 `stackoverflow.com` 域内的页面内。 |
+| F1 Web 浏览器 | `Internal` | 控制使用 Ctrl+F1 搜索术语时帮助的显示方式。 如果设置为 `Internal`，帮助将在 Visual Studio 的工具窗口内呈现。 如果设置为 `External`，帮助将出现在默认的 Web 浏览器中。 |
+| F1 Web 搜索字符串 | `R site:stackoverflow.com` | 控制在编辑器中的术语上按 Ctrl+F1 时，向搜索引擎传递搜索词的方式。 默认情况下，字符串为 `R site:stackoverflow.com`，它将 `R` 追加到搜索词。 `site:stackoverflow.com` 是向搜索引擎发出的指令，告知搜索引擎将搜索范围限定在 `stackoverflow.com` 域内的页面内。 |
 | R 帮助浏览器 | `Automatic` | 控制使用 F1、“?”或“??”搜索 R 文档时帮助的显示方式    。 如果设置为 `Automatic`，帮助将在相应的窗口中呈现。 例如，HTML 帮助将在 Visual Studio 工具窗口中出现，而 PDF 帮助在默认的 PDF 程序中出现。 如果设置为 `External`，帮助将在默认的 Web 浏览器中呈现。 |
 
 ### <a name="history"></a>历史记录

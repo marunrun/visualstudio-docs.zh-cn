@@ -20,7 +20,7 @@ ms.locfileid: "62961668"
 ---
 # <a name="step-4-use-the-full-django-web-project-template"></a>步骤 4：使用完整的 Django Web 项目模板
 
-上一步：[为静态文件提供服务、添加页面和使用模板继承](learn-django-in-visual-studio-step-03-serve-static-files-and-add-pages.md) 
+上一步：[为静态文件提供服务、添加页面和使用模板继承](learn-django-in-visual-studio-step-03-serve-static-files-and-add-pages.md)
 
 通过在 Visual Studio 中的“空白 Django Web 项目”模板上生成应用，你已经了解了 Django 的基础知识，现在可以轻松地了解“Django Web 项目”模板生成的更完整的应用。
 
@@ -35,7 +35,7 @@ ms.locfileid: "62961668"
 
 ## <a name="step-4-1-create-a-project-from-the-template"></a>步骤 4-1：通过模板创建项目
 
-1. 在 Visual Studio 中，转到解决方案资源管理器，右键单击在本教程前面创建的“LearningDjango”解决方案，并选择“添加” > “新项目”     。 （或者，如果想要使用新的解决方案，请改为选择“文件”   > “新建”   > “项目”  。）
+1. 在 Visual Studio 中，转到解决方案资源管理器，右键单击在本教程前面创建的“LearningDjango”解决方案，并选择“添加” > “新项目”。 （或者，如果想要使用新的解决方案，请改为选择“文件”   > “新建”   > “项目”  。）
 
 1. 在“新建项目”对话框中，搜索并选择“Django Web 项目”模板，调用项目“DjangoWeb”并选择“确定”   。
 
@@ -47,7 +47,7 @@ ms.locfileid: "62961668"
 
     ![将 DjangoWeb 项目显示为启动项目的解决方案资源管理器](media/django/step04-second-project-in-solution-set-as-startup-project.png)
 
-1. 选择“调试” > “启动调试”(F5) 或使用工具栏上的“Web 服务器”按钮运行服务器     ：
+1. 选择“调试” > “启动调试”(F5) 或使用工具栏上的“Web 服务器”按钮运行服务器：
 
     ![Visual Studio 中的运行 Web 服务器工具栏按钮](media/django/run-web-server-toolbar-button.png)
 
@@ -73,7 +73,7 @@ ms.locfileid: "62961668"
   - requirements.txt 包含了 Django 1.x 上的依赖项  。
   - readme.html，此文件在创建项目后显示在 Visual Studio 中  。 如上一节所述，请按照此处的说明为应用创建一个超级用户（管理员）帐户。
 - app 文件夹包含所有应用文件，包括视图、模型、测试、窗体、模板和静态文件（请参阅步骤 4-2）  。 通常会重命名此文件夹，使用一个更有特色的应用名称。
-- DjangoWeb （Django 项目）文件夹包含典型的 Django 项目文件：\_\_init\_\_.py、settings.py、urls.py 和 wsgi.py      。 通过使用项目模板，已经为应用和数据库文件配置了 settings.py，且为 urls.py 配置了到所有应用程序页（包括登录窗体）的路由   。
+- DjangoWeb （Django 项目）文件夹包含典型的 Django 项目文件：\_\_init\_\_.py、settings.py、urls.py 和 wsgi.py。 通过使用项目模板，已经为应用和数据库文件配置了 settings.py，且为 urls.py 配置了到所有应用程序页（包括登录窗体）的路由   。
 
 ### <a name="question-is-it-possible-to-share-a-virtual-environment-between-visual-studio-projects"></a>问：能否能在 Visual Studio 项目之间共享虚拟环境？
 
@@ -144,7 +144,7 @@ def about(request):
 </html>
 ```
 
-每个单页模板 about.html、contact.html、index.html 均扩展了基本模板 layout.html     。 about.html 最简单，它显示 `{% extends %}` 和 `{% block content %}` 标记  ：
+每个单页模板 about.html、contact.html、index.html 均扩展了基本模板 layout.html     。 about.html 最简单，它显示 `{% extends %}` 和 `{% block content %}` 标记：
 
 ```html
 {% extends "app/layout.html" %}
@@ -161,7 +161,7 @@ def about(request):
 
 index.html 和 contact.html 使用相同的结构，在“内容”块中提供更长的内容   。
 
-templates / app 文件夹中还具有第 4 页 login.html，以及使用 `{% include %}` 引入 layout.html 的 loginpartial.html     。 这些模板文件在有关身份验证的步骤 5 中进行了讨论。
+templates / app 文件夹中还具有第 4 页 login.html，以及使用 `{% include %}` 引入 layout.html 的 loginpartial.html。 这些模板文件在有关身份验证的步骤 5 中进行了讨论。
 
 ### <a name="question-can--block--and--endblock--be-indented-in-the-django-page-template"></a>问：在 Django 页面模板中是否可以缩进 {% block %} 和 {% endblock %}？
 

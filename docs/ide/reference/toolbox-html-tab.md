@@ -40,7 +40,7 @@ ms.locfileid: "75596432"
 
 ![HTML 网页按钮](../../ide/reference/media/vxbutton.gif)
 
-插入 `input` 的一个 `type="button"` 元素。 若要更改显示的文本，请编辑 `name` 属性。 默认情况下，对于第一个按钮，插入 `id="Button1"`，对于第二个按钮，插入 `id="Button2"`，以此类推。
+插入 `type="button"` 的一个 `input` 元素。 若要更改显示的文本，请编辑 `name` 属性。 默认情况下，对于第一个按钮，插入 `id="Button1"`，对于第二个按钮，插入 `id="Button2"`，以此类推。
 
 将“Input (Button)”  拖动到“设计”视图图面上时，会在文档中插入类似如下的 HTML 标记：
 
@@ -52,7 +52,7 @@ ms.locfileid: "75596432"
 
 ![HTMLpageResetButton 屏幕快照](../../ide/reference/media/vxreset.gif)
 
-插入 `input` 的一个 `type="reset"` 元素。 若要更改显示的文本，请编辑 `name` 属性。 默认情况下，对于第一个重置按钮，插入 `id="Reset1"`，对于第二个重置按钮，插入 `id="Reset2"`，以此类推。
+插入 `type="reset"` 的一个 `input` 元素。 若要更改显示的文本，请编辑 `name` 属性。 默认情况下，对于第一个重置按钮，插入 `id="Reset1"`，对于第二个重置按钮，插入 `id="Reset2"`，以此类推。
 
 将“Input (Reset)”  拖动到“设计”视图图面上时，会在文档中插入类似如下的 HTML 标记：
 
@@ -64,7 +64,7 @@ ms.locfileid: "75596432"
 
 ![HTMLpageToolbarSubmitButton 屏幕快照](../../ide/reference/media/vxsubmit.gif)
 
-插入 `input` 的一个 `type="submit"` 元素。 若要更改显示的文本，请编辑 `name` 属性。 默认情况下，对于第一个提交按钮，插入 `id="Submit1"`，对于第二个提交按钮，插入 `id="Submit2"`，以此类推。
+插入 `type="submit"` 的一个 `input` 元素。 若要更改显示的文本，请编辑 `name` 属性。 默认情况下，对于第一个提交按钮，插入 `id="Submit1"`，对于第二个提交按钮，插入 `id="Submit2"`，以此类推。
 
 将“Input (Submit)”  拖动到“设计”视图图面上时，会在文档中插入类似如下的 HTML 标记：
 
@@ -76,7 +76,7 @@ ms.locfileid: "75596432"
 
 ![HTMLpageToolbarTextField 屏幕快照](../../ide/reference/media/vxtextfield.gif)
 
-在文档中插入 `input` 的一个 `type="text"` 元素。 若要更改显示的默认文本，请编辑 `value` 特性。 默认情况下，对于第一个文本字段，插入 `id="Text1"`，对于第二个文本字段，插入 `id="Text2"`，以此类推。
+在文档中插入 `type="text"` 的一个 `input` 元素。 若要更改显示的默认文本，请编辑 `value` 特性。 默认情况下，对于第一个文本字段，插入 `id="Text1"`，对于第二个文本字段，插入 `id="Text2"`，以此类推。
 
 将“Input (Text)”  拖动到“设计”视图图面上时，会在文档中插入类似如下的 HTML 标记：
 
@@ -91,7 +91,7 @@ ms.locfileid: "75596432"
 
 ![HTML 页文件字段](../../ide/reference/media/vxfilefield.gif)
 
-在文档中插入 `input` 的一个 `type="file"` 元素。 默认情况下，对于第一个文件字段，插入 `id="File1"`，对于第二个文件字段，插入 `id="File2"`，以此类推。
+在文档中插入 `type="file"` 的一个 `input` 元素。 默认情况下，对于第一个文件字段，插入 `id="File1"`，对于第二个文件字段，插入 `id="File2"`，以此类推。
 
 将“Input (File)”  拖动到“设计”视图图面上时，会在文档中插入类似如下的 HTML 标记：
 
@@ -106,7 +106,7 @@ ms.locfileid: "75596432"
 
 ![Visual Studio 密码字段](../../ide/reference/media/vxpassword.gif)
 
-插入 `input` 的一个 `type="password"` 元素。 默认情况下，对于第一个密码字段，插入 `id="Password1"`，对于第二个密码字段，插入 `id="Password2"`，以此类推。
+插入 `type="password"` 的一个 `input` 元素。 默认情况下，对于第一个密码字段，插入 `id="Password1"`，对于第二个密码字段，插入 `id="Password2"`，以此类推。
 
 将“Input (Password)”  拖动到“设计”视图图面上时，会在文档中插入类似如下的 HTML 标记：
 
@@ -121,7 +121,7 @@ ms.locfileid: "75596432"
 
 ![HTML 网页工具箱复选框选项](../../ide/reference/media/vxcheckbox.gif)
 
-插入 `input` 的一个 `type="checkbox"` 元素。 若要更改显示的文本，请编辑 `name` 属性。 默认情况下，对于第一个复选框，插入 `id="Checkbox1"`，对于第二个复选框，插入 `id="Checkbox2"`，以此类推。
+插入 `type="checkbox"` 的一个 `input` 元素。 若要更改显示的文本，请编辑 `name` 属性。 默认情况下，对于第一个复选框，插入 `id="Checkbox1"`，对于第二个复选框，插入 `id="Checkbox2"`，以此类推。
 
 将“Input (Check box)”  拖动到“设计”视图图面上时，会在文档中插入类似如下的 HTML 标记：
 
@@ -133,7 +133,7 @@ ms.locfileid: "75596432"
 
 ![VisualStudioHTMLpageRadioButton 屏幕快照](../../ide/reference/media/vxradio.gif)
 
-插入 `input` 的一个 `type="radio"` 元素。 若要更改显示的文本，请编辑 `name` 属性。 默认情况下，对于第一个单选按钮，插入 `id="Radio1"`，对于第二个单选按钮，插入 `id="Radio2"`，以此类推。
+插入 `type="radio"` 的一个 `input` 元素。 若要更改显示的文本，请编辑 `name` 属性。 默认情况下，对于第一个单选按钮，插入 `id="Radio1"`，对于第二个单选按钮，插入 `id="Radio2"`，以此类推。
 
 将“Input (Radio)”  拖动到“设计”视图图面上时，会在文档中插入类似如下的 HTML 标记：
 
@@ -145,7 +145,7 @@ ms.locfileid: "75596432"
 
 ![HTML 页隐藏项](../../ide/reference/media/vxhidden.gif)
 
-插入 `input` 的一个 `type="hidden"` 元素。 默认情况下，对于第一个隐藏字段，插入 `id="Hidden1"`，对于第二个隐藏字段，插入 `id="Hidden2"`，以此类推。
+插入 `type="hidden"` 的一个 `input` 元素。 默认情况下，对于第一个隐藏字段，插入 `id="Hidden1"`，对于第二个隐藏字段，插入 `id="Hidden2"`，以此类推。
 
 将“Input (Hidden)”  拖动到“设计”视图图面上时，会在文档中插入类似如下的 HTML 标记：
 

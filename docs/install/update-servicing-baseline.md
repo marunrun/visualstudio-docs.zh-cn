@@ -44,7 +44,7 @@ ms.locfileid: "76114959"
 
 ### <a name="install-a-servicing-baseline-on-a-network"></a>在网络上安装维护基线
 
-使用网络布局安装的管理员应修改布局中 response.json`channelUri`*文件的* 值，以使用同一个文件夹中的 channelmanifest.json  文件。 有关要执行的步骤，请参阅[控制对基于网络的 Visual Studio 部署的更新](controlling-updates-to-visual-studio-deployments.md)。 更改 `channelUri` 后，客户端即可从布局位置查找更新。
+使用网络布局安装的管理员应修改布局中 response.json 文件的 `channelUri` 值，以使用同一个文件夹中的 channelmanifest.json 文件。 有关要执行的步骤，请参阅[控制对基于网络的 Visual Studio 部署的更新](controlling-updates-to-visual-studio-deployments.md)。 更改 `channelUri` 后，客户端即可从布局位置查找更新。
 
 ### <a name="install-a-servicing-baseline-via-the-internet"></a>通过 Internet 安装维护基线
 

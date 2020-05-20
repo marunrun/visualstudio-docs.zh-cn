@@ -38,7 +38,7 @@ ms.locfileid: "77634365"
 
 |参数|说明|
 |---------------|-----------------|
-|`CopiedFiles`|可选的 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 输出参数。<br /><br /> 包含已成功复制的项，包括尚未进行实际复制但由于其已为最新且 *为* 因此被跳过的项`SkipUnchangedFiles``true`。|
+|`CopiedFiles`|可选的 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 输出参数。<br /><br /> 包含已成功复制的项，包括尚未进行实际复制但由于其已为最新且 `SkipUnchangedFiles` 为 `true` 因此被跳过的项。|
 |`DestinationFiles`|可选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 指定要对其复制源文件的文件的列表。 此列表应与 `SourceFiles` 参数中指定的列表具有一对一的映射关系。 也就是说，`SourceFiles` 中指定的第一个文件将复制到 `DestinationFiles` 中指定的第一个位置，依次类推。|
 |`DestinationFolder`|可选 <xref:Microsoft.Build.Framework.ITaskItem> 参数。<br /><br /> 指定要将文件复制到其中的目录。 这必须是目录，而不能是文件。 如果该目录不存在，将自动创建它。|
 |`OverwriteReadOnlyFiles`|可选 `Boolean` 参数。<br /><br /> 覆盖文件，即使它们标记为只读文件|

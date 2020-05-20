@@ -78,7 +78,7 @@ ms.locfileid: "79307183"
 
 5. 在向导第三页的“运行 Web 应用程序的 URL 或路径是什么”  框中，在应用程序主页上输入 URL，然后单击“下一步”  。
 
-   - 对于基于服务器 (IIS) 的网站，请键入一个 URL（如“ **<`http://localhost/MySite/default.aspx`”>** ）。 这将导致对 MySite 应用程序根目录上本地计算机中的 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 应用程序进行分析，并且在 Internet Explorer 中启动该站点网页 default.aspx，从而启动会话。
+   - 对于基于服务器 (IIS) 的网站，请键入一个 URL（如“<`http://localhost/MySite/default.aspx`>”）。 这将导致对 MySite 应用程序根目录上本地计算机中的 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 应用程序进行分析，并且在 Internet Explorer 中启动该站点网页 default.aspx，从而启动会话。
 
    - 对于基于文件的网站，请键入路径，例如文件 ///**c:\WebSites\MySite\default.aspx**。 这将导致对位于 c:\webSites\MySite 上的 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 应用程序进行分析，并且在 Internet Explorer 中启动 `http://localhost:nnnn/MySite/default.aspx` 网页，从而启动会话。
 

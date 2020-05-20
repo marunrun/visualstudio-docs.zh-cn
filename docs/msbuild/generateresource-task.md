@@ -41,7 +41,7 @@ ms.locfileid: "77634053"
 |`ExecuteAsTool`|可选 `Boolean` 参数。<br /><br /> 如果为 `true`，请于进程外从适当的目标框架运行 tlbimp.exe 和 aximp.exe 来生成所需的包装器程序集。   此参数允许多目标的 `ResolveComReferences`。|
 |`FilesWritten`|可选的 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 输出参数。<br /><br /> 包含写入磁盘的所有文件的名称。 其中包含缓存文件（如果存在）。 此参数对实现 Clean 非常有用。|
 |`MinimalRebuildFromTracking`|可选 `Boolean` 参数。<br /><br /> 获取或设置一个开关，用于指定是否使用跟踪的增量生成。 如果为 `true`，则启用增量生成；否则，将强制执行重新生成。|
-|`NeverLockTypeAssemblies`|可选 `Boolean` 参数。<br /><br /> 获取或设置一个布尔值，该值指定是创建新的 [AppDomain](/dotnet/api/system.appdomain) 来计算资源 (.resx) 文件 (true) 还是仅当资源文件引用用户的程序集时才创建新的 [AppDomain](/dotnet/api/system.appdomain) (false)。 |
+|`NeverLockTypeAssemblies`|可选 `Boolean` 参数。<br /><br /> 获取或设置一个布尔值，该值指定是创建新的 [AppDomain](/dotnet/api/system.appdomain) 来计算资源 (.resx) 文件 (true) 还是仅当资源文件引用用户的程序集时才创建新的 [AppDomain](/dotnet/api/system.appdomain) (false)。|
 |`OutputResources`|可选的 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 输出参数。<br /><br /> 指定生成的文件（如 .resources 文件）的名称  。 如果不指定名称，则会使用匹配输入文件的名称，且创建的 .resources 文件会放在包含此输入文件的目录之中  。|
 |`PublicClass`|可选 `Boolean` 参数。<br /><br /> 如果为 `true`，则会将强类型的资源类创建为公共类。|
 |`References`|可选 `String[]` 参数。<br /><br /> 要从中加载 .resx 文件中的类型的引用  。 .resx 文件数据元素可能具有 .NET 类型  。 读取 .resx 文件时，必须对此进行解析  。 通常，使用标准类型加载规则可成功解析。 如果在 `References` 中提供程序集，则它们具有优先级。<br /><br /> 强类型资源不要求此参数。|
@@ -72,7 +72,7 @@ ms.locfileid: "77634053"
 
 ## <a name="example"></a>示例
 
-以下示例使用 `GenerateResource` 任务从 `Resx` 项集合指定的文件中生成 .resources 文件  。
+以下示例使用 `GenerateResource` 任务从 `Resx` 项集合指定的文件中生成 .resources 文件。
 
 ```xml
 <GenerateResource

@@ -22,7 +22,7 @@ ms.locfileid: "77633819"
 
 ## <a name="use-the-continueonerror-attribute"></a>使用 ContinueOnError 属性
 
-`ContinueOnError` 元素的 `Task` 属性控制在发生任务失败时，是停止还是继续生成。 此属性还可以控制在生成继续操作时，错误被视为错误还是警告。
+`Task` 元素的 `ContinueOnError` 属性控制在发生任务失败时，是停止还是继续生成。 此属性还可以控制在生成继续操作时，错误被视为错误还是警告。
 
 `ContinueOnError` 属性可以包含下列值之一：
 
@@ -46,7 +46,7 @@ ms.locfileid: "77633819"
 
 ## <a name="example"></a>示例
 
-以下代码示例阐释即使 `Build` 任务失败，`Delete` 目标仍将运行并且生成将被视为成功。
+以下代码示例阐释即使 `Delete` 任务失败，`Build` 目标仍将运行并且生成将被视为成功。
 
 ```xml
 <Project DefaultTargets="FakeBuild"

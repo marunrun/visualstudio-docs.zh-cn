@@ -33,7 +33,7 @@ Visual Studio 提供的模板有助于使用 Python 创建 Azure 云服务。
 
     ![用于 Python 的 Azure 云项目模板](media/template-azure-cloud-project.png)
 
-1. 选择要包括的一个或多个角色。 云项目可合并不同语言编写的角色，因此可轻松使用最适合的语言编写应用程序的各个部分。 若要在完成此对话框后向项目添加新角色，请右键单击“解决方案资源管理器”  中的“角色”  ，然后选择“添加”  下的某项。
+1. 选择要包括的一个或多个角色。 云项目可合并不同语言编写的角色，因此可轻松使用最适合的语言编写应用程序的各个部分。 若要在完成此对话框后向项目添加新角色，请右键单击“解决方案资源管理器”中的“角色”，然后选择“添加”下的某项。
 
     ![在 Azure 云项目模板中添加角色](media/template-azure-cloud-service-project-wizard.png)
 
@@ -58,9 +58,9 @@ Visual Studio 提供的模板有助于使用 Python 创建 Azure 云服务。
 
 其他配置可通过如下操作完成：
 
-1. 更新项目根目录中的 requirements.txt  文件后，使用 `pip` 来安装包。 ConfigureCloudService.ps1  脚本在部署时安装此文件。
-1. 通过修改 web.config  文件（Web 角色）或 ServiceDefinition.csdef  文件（辅助角色）的 `Runtime` 部分，设置环境变量。
-1. 通过修改 ServiceDefinitions.csdef  文件的 `Runtime/EntryPoint` 部分中的命令行，指定辅助角色要使用的脚本和参数。
+1. 更新项目根目录中的 requirements.txt 文件后，使用 `pip` 来安装包。 ConfigureCloudService.ps1  脚本在部署时安装此文件。
+1. 通过修改 web.config 文件（Web 角色）或 ServiceDefinition.csdef 文件（辅助角色）的 `Runtime` 部分，设置环境变量。
+1. 通过修改 ServiceDefinitions.csdef 文件的 `Runtime/EntryPoint` 部分中的命令行，指定辅助角色要使用的脚本和参数。
 1. 通过 web.config  文件设置 Web 角色的主要处理程序脚本。
 
 ## <a name="test-role-deployment"></a>测试角色部署
@@ -87,13 +87,13 @@ Visual Studio 提供的模板有助于使用 Python 创建 Azure 云服务。
 
 请注意，云服务实例不包括 C 编译器，因此，具有 C 扩展名的所有库都必须提供预编译二进制文件。
 
-会自动下载 pip 及其依赖项，以及 requirements.txt  中的包，并且这些内容可能被计为付费的带宽使用。 有关管理 requirements.txt  文件的详细信息，请参阅[管理所需的包](managing-required-packages-with-requirements-txt.md)。
+会自动下载 pip 及其依赖项，以及 requirements.txt  中的包，并且这些内容可能被计为付费的带宽使用。 有关管理 requirements.txt 文件的详细信息，请参阅[管理所需的包](managing-required-packages-with-requirements-txt.md)。
 
 ## <a name="troubleshooting"></a>疑难解答
 
 如果部署后无法正常使用 Web 或辅助角色，请检查以下各项：
 
-- Python 项目（至少）包含具有以下内容的 bin\\  文件夹：
+- Python 项目（至少）包含具有以下内容的 bin\\ 文件夹：
 
   - *ConfigureCloudService.ps1*
   - *LaunchWorker.ps1*（仅适用于辅助角色）
@@ -101,6 +101,6 @@ Visual Studio 提供的模板有助于使用 Python 创建 Azure 云服务。
 
 - Python 项目包含列出所有依赖项的 requirements.txt  （或滚轮文件的集合）。
 - 在云服务上启用远程桌面，并调查日志文件。
-- ConfigureCloudService.ps1  和 LaunchWorker.ps1  的日志存储在远程计算机的 C:\Resources\Directory\%RoleId%.DiagnosticStore\LogFiles  文件夹中。
+- ConfigureCloudService.ps1 和 LaunchWorker.ps1 的日志存储在远程计算机的 C:\Resources\Directory\%RoleId%.DiagnosticStore\LogFiles 文件夹中。
 - Web 角色可能将其他日志写入 web.config  配置的路径中，即 `WSGI_LOG` appSetting 中的路径。 最常规的 IIS 或 FastCGI 日志记录也会起作用。
 - 目前，LaunchWorker.ps1.log  文件是查看 Python 辅助角色所显示的输出或错误的唯一方法。

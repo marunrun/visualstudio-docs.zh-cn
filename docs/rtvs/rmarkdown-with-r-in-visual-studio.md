@@ -24,7 +24,7 @@ ms.locfileid: "72888573"
 ## <a name="using-r-markdown"></a>使用 R Markdown
 
 1. 关闭 Visual Studio。
-1. （仅一次）从 `pandoc`pandoc.org[ 安装 ](https://pandoc.org/installing.html)。
+1. （仅一次）从 [pandoc.org](https://pandoc.org/installing.html) 安装 `pandoc`。
 1. 重启 Visual Studio，它应该获取 pandoc 安装程序。
 1. 安装 `knitr` 和 `rmarkdown` 包，可从[交互窗口](interactive-repl-for-r-in-visual-studio.md)执行安装操作：
 
@@ -34,7 +34,7 @@ ms.locfileid: "72888573"
 
     ```
 
-1. 要创建新的 R Markdown 文件，请使用“文件” **“新建”** “文件”菜单命令，并在列表中选择”R” > ”R Markdown”   >     >   。 访问项目的上下文，在解决方案资源管理器中右键单击项目，选择“添加 R Markdown”（或“添加” **“新项目”，再在列表中选择”R Markdown”）**   >    。
+1. 要创建新的 R Markdown 文件，请使用“文件” > “新建” > “文件”菜单命令，并在列表中选择”R” > ”R Markdown”。 访问项目的上下文，在解决方案资源管理器中右键单击项目，选择“添加 R Markdown”（或“添加” > “新项目”，再在列表中选择”R Markdown”）。
 
 1. 新文件的默认内容如下：
 
@@ -64,8 +64,8 @@ ms.locfileid: "72888573"
 
 ## <a name="previews"></a>预览版
 
-Visual Studio 2017 版本 15.5 以及更高版本自动提供 R Markdown 的实时预览。 要启用编辑器与预览之间的自动同步，请选择“R 工具” **“Markdown”** “自动同步”(Ctrl > Shift**Y)**  >    +  +  。 如果没有使用自动同步，可使用“R 工具” **“Markdown”** “重载 R Markdown 预览”来刷新预览 >    >   。
+Visual Studio 2017 版本 15.5 以及更高版本自动提供 R Markdown 的实时预览。 要启用编辑器与预览之间的自动同步，请选择“R 工具” > “Markdown” > “自动同步”(Ctrl+Shift+Y)。 如果没有使用自动同步，可使用“R 工具” > “Markdown” > “重载 R Markdown 预览”来刷新预览。
 
-还可以通过在编辑器中右键单击并选择一个“预览”命令，在 HTML、PDF 和 Microsoft Word 格式中预览文件  。 还可通过“R 工具” **“Markdown”菜单获取相同命令** >   。 （在早期版本的 Visual Studio 中，这些命令位于“R 工具” **“发布”菜单。**  >   ）
+还可以通过在编辑器中右键单击并选择一个“预览”命令，在 HTML、PDF 和 Microsoft Word 格式中预览文件  。 还可通过“R 工具” > “Markdown”菜单获取相同命令。 （在早期版本的 Visual Studio 中，这些命令位于“R 工具” > “发布”菜单。）
 
 ![R Markdown 实时预览和其他预览菜单命令](media/rmarkdown-live-preview.png)

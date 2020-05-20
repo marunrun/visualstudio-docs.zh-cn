@@ -23,7 +23,7 @@ ms.locfileid: "75566769"
 
 可在项目设计器的“设置”页面上指定项目的应用程序设置  。 通过应用程序设置，能够为应用程序动态存储和检索属性设置及其他信息。 这些设置还能让你维护客户端计算机上的自定义应用程序和用户首选项。 有关详细信息，请参阅[管理应用程序设置](../managing-application-settings-dotnet.md)。
 
-要访问“设置”页，请在解决方案资源管理器中选择项目节点，然后选择“项目” **“属性”**    >   。 项目设计器出现时，选择“设置”选项卡  。
+要访问“设置”页，请在解决方案资源管理器中选择项目节点，然后选择“项目” > “属性”。 项目设计器出现时，选择“设置”选项卡  。
 
 ## <a name="header-bar"></a>标题栏
 
@@ -51,7 +51,7 @@ Properties.Settings.Default.Save();
 
 **访问修饰符**
 
-“访问修饰符”按钮指定 **（对于 C#）或** （对于 Visual Basic）帮助程序类的访问级别，这些类分是 Visual Studio 在 Settings.Designer.cs 或 Settings.Designer.vb 中生成的`Properties.Settings``My.Settings`   。
+“访问修饰符”按钮指定 `Properties.Settings`（对于 C#）或 `My.Settings`（对于 Visual Basic）帮助程序类的访问级别，这些类分是 Visual Studio 在 Settings.Designer.cs 或 Settings.Designer.vb 中生成的。
 
 对于 Visual C# 项目，访问修饰符可为“内部”或“公共”   。
 

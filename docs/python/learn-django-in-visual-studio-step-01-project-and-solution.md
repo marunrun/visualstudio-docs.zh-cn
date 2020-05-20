@@ -75,18 +75,18 @@ Visual Studio 项目就其本身而言，可以包含 Django 项目和多个应�
 
 ## <a name="step-1-2-examine-the-git-controls-and-publish-to-a-remote-repository"></a>步骤 1-2：检查 Git 控件并发布到远程存储库
 
-由于选择了“新建项目”  对话框中的“创建新的 Git 存储库”  ，在创建过程完成后，项目就已经提交到本地源代码管理。 在此步骤中，你将熟悉 Visual Studio 的 Git 控件和在其中使用源代码管理的“团队资源管理器”  窗口。
+由于选择了“新建项目”对话框中的“创建新的 Git 存储库”，在创建过程完成后，项目就已经提交到本地源代码管理。 在此步骤中，你将熟悉 Visual Studio 的 Git 控件和在其中使用源代码管理的“团队资源管理器”  窗口。
 
 1. 在 Visual Studio 主窗口下角处检查 Git 控件。 这些控件从左到右依次显示未推送的提交、未提交的更改、存储库的名称以及当前分支：
 
     ![Visual Studio 窗口中的 Git 控件](media/django/step01-git-controls.png)
 
     > [!Note]
-    > 如果未选择“新建项目”  对话框中的”创建新 Git 存储库“  ，Git 控件将仅显示用于创建本地存储库的”添加到源代码管理“  命令。
+    > 如果未选择“新建项目”对话框中的”创建新 Git 存储库“，Git 控件将仅显示用于创建本地存储库的”添加到源代码管理“命令。
     >
     > ![未创建存储库时 Visual Studio 中显示的“添加到源代码管理”](media/django/step01-git-add-to-source-control.png)
 
-1. 选择“更改”按钮，Visual Studio 会在“更改”  页上打开“团队资源管理器”  窗口。 由于新创建的项目已经自动提交给源代码管理，因此，看不到任何挂起的更改。
+1. 选择“更改”按钮，Visual Studio 会在“更改”页上打开“团队资源管理器”窗口。 由于新创建的项目已经自动提交给源代码管理，因此，看不到任何挂起的更改。
 
     ![“更改”页上的“团队资源管理器”窗口](media/django/step01-team-explorer-changes.png)
 
@@ -115,7 +115,7 @@ Visual Studio 项目就其本身而言，可以包含 Django 项目和多个应�
 
 ### <a name="question-can-i-prevent-visual-studio-from-auto-committing-a-new-project"></a>问：我能否阻止 Visual Studio 自动提交新项目？
 
-答：能。 若要禁用自动提交，请转到“团队资源管理器”  中的“设置”  页，选择“Git”   > “全局设置”  ，清除标记为“合并后默认提交更改”  的选项，然后选择“更新”  。
+答：能。 若要禁用自动提交，请转到“团队资源管理器”中的“设置”页，选择“Git” > “全局设置”，清除标记为“合并后默认提交更改”的选项，然后选择“更新”。
 
 ## <a name="step-1-3-create-the-virtual-environment-and-exclude-it-from-source-control"></a>步骤 1-3：创建虚拟环境并从源代码管理中将其排除
 
@@ -151,9 +151,9 @@ Visual Studio 项目就其本身而言，可以包含 Django 项目和多个应�
 
 ### <a name="question-how-do-i-remove-a-virtual-environment-thats-already-committed-to-source-control"></a>问：如何删除已经提交给源代码管理的虚拟环境？
 
-答：首先，编辑 .gitignore 文件以排除文件夹：在末尾找到带注释 *的部分，并为虚拟环境文件夹添加一个新行，如*`# Python Tools for Visual Studio (PTVS)``/BasicProject/env`。 （由于 Visual Studio 不会显示“解决方案资源管理器”  中的文件，请使用“文件”   > “打开”   > “文件”  菜单命令直接打开它。 也可以从团队资源管理器打开文件：在“设置”页上，选择“存储库设置”，转到“忽略和属性文件”部分，然后选择 .gitignore 旁的“编辑”链接。       ）
+答：首先，编辑 .gitignore 文件以排除文件夹：在末尾找到带注释 `# Python Tools for Visual Studio (PTVS)` 的部分，并为虚拟环境文件夹添加一个新行，如 `/BasicProject/env`。 （由于 Visual Studio 不会显示“解决方案资源管理器”  中的文件，请使用“文件”   > “打开”   > “文件”  菜单命令直接打开它。 也可以从团队资源管理器打开文件：在“设置”页上，选择“存储库设置”，转到“忽略和属性文件”部分，然后选择 .gitignore 旁的“编辑”链接。       ）
 
-接下来，打开命令窗口，导航到包含虚拟环境文件夹（如 env）的文件夹（如 BasicProject），然后运行   `git rm -r env`。 然后从命令行 (`git commit -m 'Remove venv'`) 提交这些更改，或从“团队资源管理器”  的“更改”  页进行提交。
+接下来，打开命令窗口，导航到包含虚拟环境文件夹（如 env）的文件夹（如 BasicProject），然后运行 `git rm -r env`。 然后从命令行 (`git commit -m 'Remove venv'`) 提交这些更改，或从“团队资源管理器”的“更改”页进行提交。
 
 ## <a name="step-1-4-examine-the-boilerplate-code"></a>步骤 1-4：检查样本代码
 
@@ -180,7 +180,7 @@ Visual Studio 项目就其本身而言，可以包含 Django 项目和多个应�
 
 ## <a name="step-1-5-run-the-empty-django-project"></a>步骤 1-5：运行空 Django 项目
 
-1. 在 Visual Studio 中，选择“调试” **“启动调试”(F5) 或使用工具栏上的“Web 服务器”按钮（所看到的浏览器可能会有所不同）**  >     ：
+1. 在 Visual Studio 中，选择“调试” > “启动调试”(F5) 或使用工具栏上的“Web 服务器”按钮（所看到的浏览器可能会有所不同）：
 
     ![Visual Studio 中的运行 Web 服务器工具栏按钮](media/django/run-web-server-toolbar-button.png)
 

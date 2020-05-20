@@ -23,9 +23,9 @@ ms.locfileid: "76923271"
 ---
 # <a name="build-page-project-designer-c"></a>“项目设计器”->“生成”页 (C#)
 
-使用“项目设计器”  的“生成”  页指定项目的生成配置属性。 此页仅适用于 [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] 项目。
+使用“项目设计器”的“生成”页指定项目的生成配置属性。 此页仅适用于 [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] 项目。
 
-若要访问“生成”  页，请在“解决方案资源管理器”  中选择项目节点（而非“解决方案”  节点）。 然后依次在菜单上选择“查看”、“属性页”   。 “项目设计器”出现后，选择“生成”选项卡  。
+若要访问“生成”页，请在“解决方案资源管理器”中选择项目节点（而非“解决方案”节点）。 然后依次在菜单上选择“查看”、“属性页”   。 “项目设计器”出现后，选择“生成”选项卡  。
 
 [!INCLUDE[note_settings_general](../../data-tools/includes/note_settings_general_md.md)]
 
@@ -127,7 +127,7 @@ ms.locfileid: "76923271"
 
 指定该项目配置的输出文件的位置。 在此框中输入生成输出的路径，或选择“浏览”  按钮指定路径。 该路径是相对的；如果输入绝对路径，将保存为相对路径。 默认路径为 bin\Debug 或 bin\Release\\。
 
-使用简化的生成配置，项目系统可确定是生成调试版本还是发行版本。 使用“调试”  菜单 (F5) 中的“生成”  命令，会将生成放置在调试位置中（无论指定的“输出路径”  为何）。 但是，“生成”  菜单上的“生成”  命令会将其放在指定的位置。 有关详细信息，请参阅[了解生成配置](../../ide/understanding-build-configurations.md)。
+使用简化的生成配置，项目系统可确定是生成调试版本还是发行版本。 使用“调试”菜单 (F5) 中的“生成”命令，会将生成放置在调试位置中（无论指定的“输出路径”为何）。 但是，“生成”菜单上的“生成”命令会将其放在指定的位置。 有关详细信息，请参阅[了解生成配置](../../ide/understanding-build-configurations.md)。
 
 “XML 文档文件” 
 
@@ -135,11 +135,11 @@ ms.locfileid: "76923271"
 
 “注册 COM 互操作” 
 
-指示托管应用程序将公开一个允许 COM 对象与托管应用程序进行交互的 COM 对象（COM 可调用包装器）。 必须在此应用程序的“项目设计器”  的[应用程序页](../../ide/reference/application-page-project-designer-visual-basic.md)中，将“输出类型”  属性设置为“类库”  ，才能使用“注册 COM 互操作”  属性。 若要了解可能会包含在 [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] 应用程序中，且将作为 COM 对象公开的类示例，请参阅 [COM 类示例](/dotnet/csharp/programming-guide/interop/example-com-class)。
+指示托管应用程序将公开一个允许 COM 对象与托管应用程序进行交互的 COM 对象（COM 可调用包装器）。 必须在此应用程序的“项目设计器”的[应用程序页](../../ide/reference/application-page-project-designer-visual-basic.md)中，将“输出类型”属性设置为“类库”，才能使用“注册 COM 互操作”属性。 若要了解可能会包含在 [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] 应用程序中，且将作为 COM 对象公开的类示例，请参阅 [COM 类示例](/dotnet/csharp/programming-guide/interop/example-com-class)。
 
 “生成序列化程序集” 
 
-指定编译器是否将使用 XML 序列化程序生成器工具 (Sgen.exe) 创建 XML 序列化程序集。 序列化程序集可以提高 <xref:System.Xml.Serialization.XmlSerializer> 的启动性能（如果已使用该类序列化代码中的类型）。 默认情况下，此选项设置为“自动”，用于指定仅在已使用  **将代码中的类型编码为 XML 的情况下，才会生成序列化程序集**<xref:System.Xml.Serialization.XmlSerializer>。 若设置为“关闭”，则指定永远不会生成序列化程序集，无论代码是否使用  <xref:System.Xml.Serialization.XmlSerializer>。 若设置为“打开”  ，则指定始终会生成序列化程序集。 序列化程序集命名为 `TypeName`.XmlSerializers.dll。 有关详细信息，请参阅 [XML 序列化程序生成器工具 (Sgen.exe)](/dotnet/framework/serialization/xml-serializer-generator-tool-sgen-exe)。
+指定编译器是否将使用 XML 序列化程序生成器工具 (Sgen.exe) 创建 XML 序列化程序集。 序列化程序集可以提高 <xref:System.Xml.Serialization.XmlSerializer> 的启动性能（如果已使用该类序列化代码中的类型）。 默认情况下，此选项设置为“自动”，用于指定仅在已使用 <xref:System.Xml.Serialization.XmlSerializer> 将代码中的类型编码为 XML 的情况下，才会生成序列化程序集。 若设置为“关闭”，则指定永远不会生成序列化程序集，无论代码是否使用 <xref:System.Xml.Serialization.XmlSerializer>。 若设置为“打开”  ，则指定始终会生成序列化程序集。 序列化程序集命名为 `TypeName`.XmlSerializers.dll。 有关详细信息，请参阅 [XML 序列化程序生成器工具 (Sgen.exe)](/dotnet/framework/serialization/xml-serializer-generator-tool-sgen-exe)。
 
 **高级**
 

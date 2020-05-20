@@ -20,7 +20,7 @@ ms.locfileid: "75776159"
 ---
 # <a name="walkthrough-using-a-configuration-file-to-define-a-data-source"></a>演练：使用配置文件定义数据源
 
-本演练演示如何使用 app.config 文件中定义的数据源进行单元测试。  你将学习如何创建用于定义可供 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute> 类使用的数据源的 app.config 文件  。 本演练包括以下任务：
+本演练演示如何使用 app.config 文件中定义的数据源进行单元测试。  你将学习如何创建用于定义可供 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute> 类使用的数据源的 app.config 文件。 本演练包括以下任务：
 
 - 创建 app.config 文件  。
 
@@ -44,9 +44,9 @@ ms.locfileid: "75776159"
 
 ## <a name="add-an-appconfig-file-to-the-project"></a>将 app.config 文件添加到项目
 
-1. 如果测试项目已有 app.config 文件，请转到[定义自定义配置节](#define-a-custom-configuration-section)  。
+1. 如果测试项目已有 app.config 文件，请转到[定义自定义配置节](#define-a-custom-configuration-section)。
 
-2. 在解决方案资源管理器中右键单击测试项目，然后选择“添加” > “新建项”    。
+2. 在解决方案资源管理器中右键单击测试项目，然后选择“添加” > “新建项”。
 
      此时，“添加新项”  窗口会打开。
 
@@ -58,9 +58,9 @@ ms.locfileid: "75776159"
 
 ### <a name="to-add-the-custom-configuration-section-to-the-appconfig-file"></a>若要将自定义配置节添加到 app.config 文件
 
-1. app.config 的根元素应为 configuration 元素   。 在 configuration  元素中创建一个 configSections  元素。 configSections  应为 app.config  文件中的第一个元素。
+1. app.config 的根元素应为 configuration 元素   。 在 configuration 元素中创建一个 configSections 元素。 configSections  应为 app.config  文件中的第一个元素。
 
-2. 在 configSections  元素中创建一个 section  元素。
+2. 在 configSections 元素中创建一个 section 元素。
 
 3. 在 section  元素中，添加一个名为 `name` 的特性，并为其分配一个 `microsoft.visualstudio.testtools` 的值。 再添加一个名为 `type` 的特性，并为其分配一个 `Microsoft.VisualStudio.TestTools.UnitTesting.TestConfigurationSection, Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions` 的值。
 
@@ -192,7 +192,7 @@ Microsoft.visualstudio.testtools  元素应类似于：
 
 1. 创建一个名为 testdatasource.accdb  的 Microsoft Access 数据库。
 
-2. 在 testdatasource.accdb  中创建一个表并将其命名为 `MyDataTable`。
+2. 在 testdatasource.accdb 中创建一个表并将其命名为 `MyDataTable`。
 
 3. 使用 `Number` 数据类型在 `MyDataTable` 中创建两个分别名为 `Arg1` 和 `Arg2` 的字段。
 
@@ -206,7 +206,7 @@ Microsoft.visualstudio.testtools  元素应类似于：
 
 1. 创建一个名为 data.xlsx  的 Microsoft Excel 电子表格。
 
-2. 如果 data.xlsx  中尚不存在名为 `Sheet1` 的工作表，则创建一个。
+2. 如果 data.xlsx 中尚不存在名为 `Sheet1` 的工作表，则创建一个。
 
 3. 在 `Sheet1` 中创建两个列标头，并将它们命名为 `Val1` 和 `Val2`。
 

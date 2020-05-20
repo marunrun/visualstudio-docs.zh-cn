@@ -36,7 +36,7 @@ Visual Studio 集成开发环境是一种创新启动板，可用于编辑、调
 
 此图像显示 Visual Studio 具有一个打开的项目和若干可能会使用的关键工具窗口：
 
-- 可通过[解决方案资源管理器](../../ide/solutions-and-projects-in-visual-studio.md)（右上方）查看、导航和管理代码文件。 解决方案资源管理器可将代码文件分组为[解决方案和项目](tutorial-projects-solutions.md)，从而帮助整理代码  。
+- 可通过[解决方案资源管理器](../../ide/solutions-and-projects-in-visual-studio.md)（右上方）查看、导航和管理代码文件。 解决方案资源管理器可将代码文件分组为[解决方案和项目](tutorial-projects-solutions.md)，从而帮助整理代码。
 
 - [编辑器窗口](../../ide/writing-code-in-the-code-and-text-editor.md)（中心）用于显示文件内容，你可能会在该窗口花费大部分时间。 可在该窗口编辑代码或设计用户界面，例如带有按钮和文本框的窗口。
 
@@ -107,7 +107,7 @@ Visual Studio 中的一些常用功能可帮助你在开发软件时提高工作
    visual Studio 有时会因为有如此多的菜单、选项和属性而让人不知所措。 使用搜索框可以在 Visual Studio 中快速找到所需内容。 开始键入要查找内容的名称时，Visual Studio 会列出结果，这些结果可以准确地将你导向目标位置。 如果需要向 Visual Studio 添加功能，例如添加对其他编程语言的支持，可使用搜索框提供的结果打开 Visual Studio 安装程序以安装工作负载或单个组件。
 
    > [!TIP]
-   > 按 Ctrl+Q 作为启动搜索框的快捷方式   。
+   > 按 Ctrl+Q 作为启动搜索框的快捷方式。
 
    ::: moniker range="vs-2017"
 
@@ -235,9 +235,9 @@ Visual Studio 中的一些常用功能可帮助你在开发软件时提高工作
 
 ::: moniker-end
 
-2. 在菜单栏中，选择“工具” > “选项”，打开“选项”对话框    。
+2. 在菜单栏中，选择“工具” > “选项”，打开“选项”对话框。
 
-3. 在“环境”   > “常规”  选项页上，将选择的“颜色主题”  更改为“深色”  ，然后选择“确定”  。
+3. 在“环境” > “常规”选项页上，将选择的“颜色主题”更改为“深色”，然后选择“确定”。
 
    ![将 Visual Studio 中的“颜色主题”更改为“深色”](media/change-color-theme.png)
 
@@ -259,7 +259,7 @@ Visual Studio 中的一些常用功能可帮助你在开发软件时提高工作
 
 接下来，我们将把 Visual Studio 配置为，使用可满足 Visual Basic 开发人员需求的环境设置。
 
-1. 在菜单栏上，选择“工具” > “导入和导出设置”   。
+1. 在菜单栏上，选择“工具” > “导入和导出设置”。
 
 2. 在“导入和导出设置向导”  中，依次选择第一页上的“重置所有设置”  和“下一步”  。
 
@@ -283,12 +283,12 @@ Visual Studio 中的一些常用功能可帮助你在开发软件时提高工作
 
    “新建项目”  对话框中会显示几个项目模板  。 模板包含给定项目类型所需的基本文件和设置。
 
-1. 依次选择“Visual Basic”  下的“.NET Core”  类别和“控制台应用(.NET Core)”  模板。 在“名称”文本框中，键入“HelloWorld”，然后选择“确定”按钮    。
+1. 依次选择“Visual Basic”下的“.NET Core”类别和“控制台应用(.NET Core)”模板。 在“名称”文本框中，键入“HelloWorld”，然后选择“确定”按钮    。
 
    ![.NET Core 应用模板](media/overview-npd.png)
 
    > [!NOTE]
-   > 如果未看到“.NET Core”类别，则需要安装“.NET Core 跨平台开发”工作负载   。 为此，选择“新建项目”  对话框左下角的“打开 Visual Studio 安装程序”  链接。 “Visual Studio 安装程序”打开后，向下滚动并选择“.NET Core 跨平台开发”工作负载，然后选择“修改”   。
+   > 如果未看到“.NET Core”类别，则需要安装“.NET Core 跨平台开发”工作负载   。 为此，选择“新建项目”对话框左下角的“打开 Visual Studio 安装程序”链接。 “Visual Studio 安装程序”打开后，向下滚动并选择“.NET Core 跨平台开发”工作负载，然后选择“修改”   。
 
    Visual Studio 随即创建项目。 它是简单的“Hello World”应用程序，可调用 <xref:System.Console.WriteLine?displayProperty=nameWithType> 方法在控制台窗口中 显示文本字符串“Hello World!”。
 
@@ -302,7 +302,7 @@ Visual Studio 中的一些常用功能可帮助你在开发软件时提高工作
 
    还提供了一些其他的菜单和工具窗口，但是现在我们继续下一步操作。
 
-1. 现在启动该应用。 可从菜单栏的“调试”菜单中选择“开始执行(不调试)”，以执行此操作   。 还可按 Ctrl+F5   。
+1. 现在启动该应用。 可从菜单栏的“调试”菜单中选择“开始执行(不调试)”，以执行此操作   。 还可按 Ctrl+F5。
 
    ![“调试”>“开始执行(不调试)”菜单](../media/overview-start-without-debugging.png)
 
@@ -347,13 +347,13 @@ Visual Studio 中的一些常用功能可帮助你在开发软件时提高工作
 
    随即打开“创建新项目”  窗口，并显示几个项目模板  。 模板包含给定项目类型所需的基本文件和设置。
 
-1. 若要查找所需的模板，请在搜索框中键入或输入“.Net Core 控制台”  。 系统会自动根据输入的关键字筛选可用模板列表。 可以通过从“语言”  下拉列表选择“Visual Basic”  进一步筛选模板结果。
+1. 若要查找所需的模板，请在搜索框中键入或输入“.Net Core 控制台”  。 系统会自动根据输入的关键字筛选可用模板列表。 可以通过从“语言”下拉列表选择“Visual Basic”进一步筛选模板结果。
 
 1. 选择“控制台应用 (.NET Core)”  模板，然后选择“下一步”  。
 
    ![在 Visual Studio 中创建新项目](media/vs-2019/create-new-project.png)
 
-1. 在“配置新项目”  窗口中，在“项目名称”  框中输入“HelloWorld”  ，根据需要更改项目文件的目录位置，然后选择“创建”  。
+1. 在“配置新项目”窗口中，在“项目名称”框中输入“HelloWorld”，根据需要更改项目文件的目录位置，然后选择“创建”。
 
    ![在 Visual Studio 中配置新项目](media/vs-2019/configure-new-project.png)
 
@@ -369,7 +369,7 @@ Visual Studio 中的一些常用功能可帮助你在开发软件时提高工作
 
    还提供了一些其他的菜单和工具窗口，但是现在我们继续下一步操作。
 
-1. 现在启动该应用。 可从菜单栏的“调试”菜单中选择“开始执行(不调试)”，以执行此操作   。 还可按 Ctrl+F5   。
+1. 现在启动该应用。 可从菜单栏的“调试”菜单中选择“开始执行(不调试)”，以执行此操作   。 还可按 Ctrl+F5。
 
    ![“调试”>“开始执行(不调试)”菜单](media/vs-2019/start-without-debugging.png)
 
@@ -459,7 +459,7 @@ Visual Studio 中的一些常用功能可帮助你在开发软件时提高工作
 
 ::: moniker range="vs-2017"
 
-10. 按 Ctrl+F5 重新运行程序   。 输出的内容与以下类似：
+10. 按 Ctrl+F5 重新运行程序。 输出的内容与以下类似：
 
     ![显示程序输出的控制台窗口](../media/overview-console-final.png)
 
@@ -467,7 +467,7 @@ Visual Studio 中的一些常用功能可帮助你在开发软件时提高工作
 
 ::: moniker range=">=vs-2019"
 
-10. 按 Ctrl+F5 重新运行程序   。 输出的内容与以下类似：
+10. 按 Ctrl+F5 重新运行程序。 输出的内容与以下类似：
 
     ![显示程序输出的控制台窗口](../media/vs-2019/overview-console-final.png)
 
@@ -485,7 +485,7 @@ Visual Studio 中的一些常用功能可帮助你在开发软件时提高工作
 
    ![Visual Studio 中代码行上的断点](media/breakpoint.png)
 
-1. 选择“调试” > “启动调试”或按 F5，开始调试    。
+1. 选择“调试” > “启动调试”或按 F5，开始调试。
 
 1. 控制台窗口出现并询问姓名时，请键入姓名，然后按 Enter  。
 

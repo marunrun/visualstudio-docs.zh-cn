@@ -25,9 +25,9 @@ ms.locfileid: "75596406"
 ---
 # <a name="visual-studio-command-aliases"></a>Visual Studio Command Aliases
 
-通过命令别名，可在希望执行命令时键入较少的字符。 可将别名输入“查找/命令”  框或“命令”  窗口。 例如，可以使用预定义别名 `>File.OpenFile`，而不是输入  **来显示“打开文件”** `>of`对话框。
+通过命令别名，可在希望执行命令时键入较少的字符。 可将别名输入“查找/命令”  框或“命令”  窗口。 例如，可以使用预定义别名 `>of`，而不是输入 `>File.OpenFile` 来显示“打开文件”对话框。
 
-在“命令”`alias`**窗口中键入**  可显示当前别名及其定义的列表。 键入 `>cls` 可清除“命令”  窗口中的内容。 若要查看特定命令的别名，请键入 `alias <command name>`。
+在“命令”窗口中键入 `alias` 可显示当前别名及其定义的列表。 键入 `>cls` 可清除“命令”  窗口中的内容。 若要查看特定命令的别名，请键入 `alias <command name>`。
 
 您可以轻松地为某个 Visual Studio 命令创建您自己的别名（带有或不带参数）。 例如，用于为 `File.NewFile MyFile.txt` 创建别名的语法是 `alias MyAlias File.NewFile MyFile.txt`。 您可以使用 `alias <alias name> /delete` 删除某个别名。
 

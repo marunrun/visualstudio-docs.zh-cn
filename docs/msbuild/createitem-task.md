@@ -49,9 +49,9 @@ ms.locfileid: "77634326"
 
 ## <a name="example"></a>示例
 
- 以下代码示例会从项集合 `MySourceItemsWithMetadata` 创建一个名为 `MySourceItems` 的新项集合。 `CreateItem` 任务会使用 `MySourceItems` 项中的项填充新的项集合。 然后它会将一个名为 `MyMetadata` 的其他元数据条目（值为 `Hello`）添加到新集合中的每个项。
+ 以下代码示例会从项集合 `MySourceItems` 创建一个名为 `MySourceItemsWithMetadata` 的新项集合。 `CreateItem` 任务会使用 `MySourceItems` 项中的项填充新的项集合。 然后它会将一个名为 `MyMetadata` 的其他元数据条目（值为 `Hello`）添加到新集合中的每个项。
 
- 任务执行后，`MySourceItemsWithMetadata` 项集合包含项 file1.resx 和 file2.resx，这两者都具有  *的元数据条目*  `MyMetadata`。 `MySourceItems` 项集合保持不变。
+ 任务执行后，`MySourceItemsWithMetadata` 项集合包含项 file1.resx 和 file2.resx，这两者都具有 `MyMetadata` 的元数据条目。 `MySourceItems` 项集合保持不变。
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">

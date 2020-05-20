@@ -24,7 +24,7 @@ Visual Studio 可自动生成标准的 XML 文档注释结构，进而帮助记�
 可随附 .NET 程序集一并分发编译器生成的 XML 文件，让 Visual Studio 和其他 IDE 能够快速显示类型和成员信息。 此外，可以通过 [DocFX](https://dotnet.github.io/docfx/) 和 [Sandcastle](https://www.microsoft.com/download/details.aspx?id=10526) 等工具运行 XML 文件，由此生成 API 引用网站。
 
 > [!NOTE]
-> 可在 [C#](/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments) 和 [Visual Basic](/dotnet/visual-basic/programming-guide/program-structure/how-to-create-xml-documentation) 中使用自动插入 XML 文档注释的“插入注释”命令  。 但可在 C++ 文件中手动插入 [XML 文档注释](/cpp/build/reference/xml-documentation-visual-cpp)，这样仍可在编译时生成 XML 文档文件。
+> 可在 [C#](/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments) 和 [Visual Basic](/dotnet/visual-basic/programming-guide/program-structure/how-to-create-xml-documentation) 中使用自动插入 XML 文档注释的“插入注释”命令。 但可在 C++ 文件中手动插入 [XML 文档注释](/cpp/build/reference/xml-documentation-visual-cpp)，这样仍可在编译时生成 XML 文档文件。
 
 ## <a name="to-insert-xml-comments-for-a-code-element"></a>若要为代码元素插入 XML 注释
 
@@ -34,11 +34,11 @@ Visual Studio 可自动生成标准的 XML 文档注释结构，进而帮助记�
 
    - 在 C# 中键入 `///` 或在 Visual Basic 中键入 `'''`
 
-   - 在“编辑”菜单上，选择“IntelliSense” > “插入注释”   
+   - 在“编辑”菜单上，选择“IntelliSense” > “插入注释”
 
-   - 在代码元素上或其正上方的右键单击或上下文菜单中，选择“代码段” > “插入代码段”  
+   - 在代码元素上或其正上方的右键单击或上下文菜单中，选择“代码段” > “插入代码段”
 
-   随即基于代码元素生成 XML 模板。 例如，对方法进行注释时，它会生成 \<summary\> 元素，针对每个参数生成一个 \<param\> 元素，并生成一个记录返回值的 \<returns\> 元素    。
+   随即基于代码元素生成 XML 模板。 例如，对方法进行注释时，它会生成 \<summary\> 元素，针对每个参数生成一个 \<param\> 元素，并生成一个记录返回值的 \<returns\> 元素。
 
    ![XML 注释模板 - C#](media/doc-preview-cs.png)
 
@@ -53,7 +53,7 @@ Visual Studio 可自动生成标准的 XML 文档注释结构，进而帮助记�
    ![完成的注释](media/doc-style-cs.png) 
 
 > [!NOTE]
-> 在 C# 中键入`///`（或在 Visual Basic 中键入 `'''`）后，可[选择](../../ide/reference/options-text-editor-csharp-advanced.md)切换 XML 文档注释。 在菜单栏中，选择“工具” > “选项”以打开“选项”对话框    。 然后，导航到“文本编辑器” > “C#”或导航到“基本” > “高级”     。 在“编辑器帮助”部分，查找“生成 XML 文档注释”选项   。
+> 在 C# 中键入`///`（或在 Visual Basic 中键入 `'''`）后，可[选择](../../ide/reference/options-text-editor-csharp-advanced.md)切换 XML 文档注释。 在菜单栏中，选择“工具” > “选项”以打开“选项”对话框。 然后，导航到“文本编辑器” > “C#”或导航到“基本” > “高级”。 在“编辑器帮助”部分，查找“生成 XML 文档注释”选项   。
 
 ## <a name="see-also"></a>请参阅
 

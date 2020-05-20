@@ -160,7 +160,7 @@ namespace ClassLibrary2
 
 在此示例中，泛型类型参数 `T` 具有约束 `where T : Employee`。 测试方法中未满足此约束。 因此，`DataTest()` 方法包含一个断言语句，提醒你要求提供已置于 `T` 上的类型约束。 此断言语句的消息如下所示：`("No appropriate type parameter is found to satisfies the type constraint(s) of T. " + "Please call DataTestHelper<T>() with appropriate type parameters.");`
 
-换而言之，当从测试方法 `DataTestHelper<T>()` 调用 `DataTest()` 方法时，必须传递 `Employee` 类型的参数或从 `Employee` 派生的类。
+换而言之，当从测试方法 `DataTest()` 调用 `DataTestHelper<T>()` 方法时，必须传递 `Employee` 类型的参数或从 `Employee` 派生的类。
 
 ```csharp
 using ClassLibrary2;

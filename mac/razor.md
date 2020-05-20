@@ -26,7 +26,7 @@ Visual Studio for Mac 提供对 Razor 编辑的支持，包括 .cshtml 文件中
 1. 在欢迎屏幕上，选择“新建”以创建新项目  ：
 
    ![Visual Studio for Mac“新建项目”](media/razor-new.png)
-1. 在“新建项目”对话框中，转到“.NET Core” **“应用”** “Web 应用程序”，然后选择“下一步”   >    >    ：
+1. 在“新建项目”对话框中，转到“.NET Core” > “应用” > “Web 应用程序”，然后选择“下一步”：
 
    ![Razor 项目模板](media/razor-new-project1.png)
 1. 选择你的 .NET Core 目标框架（建议使用 2.2 或更高版本），然后选择“下一步”  。 为项目选择一个名称，并在必要时添加 Git 支持。 选择“创建”  来创建项目。
@@ -47,8 +47,8 @@ Razor Web 应用包含以下组件。
 ### <a name="pages-folder"></a>Pages 文件夹
 
 此文件夹包含项目的网页，以及每个网页的代码隐藏：
-   - *.cshtml 文件对应 HTML 标记和 Razor 语法\** 。
-   - *.cshtml.cs\** 文件对应用于处理页面事件的 C# 代码隐藏。
+   - \*.cshtml 文件对应 HTML 标记和 Razor 语法。
+   - \*.cshtml.cs 文件对应用于处理页面事件的 C# 代码隐藏。
 
 支持文件的名称以下划线开头。 例如，_Layout.cshtml 文件可配置所有页面通用的 UI 元素。 此文件设置页面顶部的导航菜单和页面底部的版权声明。 有关详细信息，请参阅 [ASP.NET Core 中的布局](/aspnet/core/mvc/views/layout)。
 

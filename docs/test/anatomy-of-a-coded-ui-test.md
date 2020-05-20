@@ -120,7 +120,7 @@ public void AddItems()
 }
 ```
 
-每种方法定义的总结评论介绍了哪些类可用于该方法的参数值。 本例中为 `AddItemsParams` 类，它稍后在 UIMap.cs 文件中进行定义，同时也是 `AddItemsParams` 属性返回的值类型  。
+每种方法定义的总结评论介绍了哪些类可用于该方法的参数值。 本例中为 `AddItemsParams` 类，它稍后在 UIMap.cs 文件中进行定义，同时也是 `AddItemsParams` 属性返回的值类型。
 
 方法代码的顶部是 `Variable Declarations` 区域，该区域用于定义该方法所用 UI 对象的局部变量。
 
@@ -181,7 +181,7 @@ public class AddItemsParams
 }
 ```
 
-正如 UIMap.cs 文件中的其他所有类一样，此类也以 <xref:System.CodeDom.Compiler.GeneratedCodeAttribute> 开头  。 在此示例中，小类是 `Fields` 区域，它定义了用作 <xref:Microsoft.VisualStudio.TestTools.UITesting.Keyboard.SendKeys%2A?displayProperty=fullName> 方法的参数的字符串，该方法是我们之前介绍的 `UIMap.AddItems()` 方法中使用的方法。 你可以在调用在其中使用这些参数的方法之前，编写代码以替换这些字符串字段中的值。
+正如 UIMap.cs 文件中的其他所有类一样，此类也以 <xref:System.CodeDom.Compiler.GeneratedCodeAttribute> 开头。 在此示例中，小类是 `Fields` 区域，它定义了用作 <xref:Microsoft.VisualStudio.TestTools.UITesting.Keyboard.SendKeys%2A?displayProperty=fullName> 方法的参数的字符串，该方法是我们之前介绍的 `UIMap.AddItems()` 方法中使用的方法。 你可以在调用在其中使用这些参数的方法之前，编写代码以替换这些字符串字段中的值。
 
 ### <a name="uimapcs"></a><a name="UIMapCS"></a>UIMap.cs
 默认情况下，此文件包括没有方法或属性的分部 `UIMap` 类。
@@ -264,7 +264,7 @@ public void MyTestCleanup()
 ### <a name="uimapuitest"></a><a name="UIMapuitest"></a>UIMap.uitest
 这是一个 XML 文件，表示编码的 UI 测试录制及其所有部分的结构。 除类的方法和属性之外，其中还包括操作以及这些类。 [UIMap.Designer.cs](#UIMapDesignerFile) 文件包含编码的 UI 测试生成器为了重现测试结构而生成的代码，并建立与测试框架的连接。
 
-UIMap.uitest 文件不可直接编辑  。 但是，可使用编码的 UI 生成器来修改测试，从而自动修改 UIMap.uitest 文件和 [UIMap.Designer.cs](#UIMapDesignerFile) 文件   。
+UIMap.uitest 文件不可直接编辑  。 但是，可使用编码的 UI 生成器来修改测试，从而自动修改 UIMap.uitest 文件和 [UIMap.Designer.cs](#UIMapDesignerFile) 文件。
 
 ## <a name="see-also"></a>请参阅
 

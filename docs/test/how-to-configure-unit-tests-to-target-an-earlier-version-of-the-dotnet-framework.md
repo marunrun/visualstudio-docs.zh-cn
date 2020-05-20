@@ -83,11 +83,11 @@ ms.locfileid: "75596016"
 
 2. 在“解决方案资源管理器”中，从新的 C++ 测试项目中选择“卸载项目”   。
 
-3. 在“解决方案资源管理器”中，选择已卸载的 C++ 测试项目，然后选择“编辑**项目名称>.vcxproj”** **\<** 。
+3. 在“解决方案资源管理器”中，选择已卸载的 C++ 测试项目，然后选择“编辑\<项目名称>.vcxproj”。
 
    即可在编辑器中打开 .vcxproj 文件  。
 
-4. 在标记为`TargetFrameworkVersion`的 `PropertyGroup` 中将 `"Globals"` 设为版本 3.5 或更高版本。 不应指定客户端版本：
+4. 在标记为`"Globals"`的 `PropertyGroup` 中将 `TargetFrameworkVersion` 设为版本 3.5 或更高版本。 不应指定客户端版本：
 
     ```xml
     <PropertyGroup Label="Globals">

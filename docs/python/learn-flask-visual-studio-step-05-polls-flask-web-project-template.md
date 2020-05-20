@@ -20,7 +20,7 @@ ms.locfileid: "70154898"
 ---
 # <a name="step-5-use-the-polls-flask-web-project-template"></a>步骤 5：使用投票 Flask Web 项目模板
 
-上一步：[使用完整的 Flask Web 项目模板](learn-flask-visual-studio-step-04-full-flask-project-template.md) 
+上一步：[使用完整的 Flask Web 项目模板](learn-flask-visual-studio-step-04-full-flask-project-template.md)
 
 在了解 Visual Studio 的“Flask Web 项目”模板后，现在可以查看第三个 Flask 模板，“投票 Flask Web 项目”，该模板基于相同的代码库构建而成。
 
@@ -36,7 +36,7 @@ Visual Studio 还提供了“投票 Flask/Jade Web 项目”模板，该模板�
 
 ## <a name="step-5-1-create-the-project"></a>步骤 5-1：创建项目
 
-1. 在 Visual Studio 中，转到解决方案资源管理器，右键单击本教程中之前创建的“LearningFlask”解决方案，并选择“添加” > “新项目”     。 （或者，如果想要使用新的解决方案，请改为选择“文件”   > “新建”   > “项目”  。）
+1. 在 Visual Studio 中，转到解决方案资源管理器，右键单击本教程中之前创建的“LearningFlask”解决方案，并选择“添加” > “新项目”。 （或者，如果想要使用新的解决方案，请改为选择“文件”   > “新建”   > “项目”  。）
 
 1. 在“新项目”对话框中，搜索并选择“投票 Flask Web 项目”模板，调用项目“FlaskPolls”并选择“确定”   。
 
@@ -44,7 +44,7 @@ Visual Studio 还提供了“投票 Flask/Jade Web 项目”模板，该模板�
 
 1. 在解决方案资源管理器中右键单击“FlaskPolls”项目，然后选择“设为启动项目”，从而将该项目设置为 Visual Studio 解决方案的默认值    。 启动项目（以粗体显示）会在启动调试器时运行。
 
-1. 选择“调试” > “启动调试”(F5) 或使用工具栏上的“Web 服务器”按钮运行服务器     ：
+1. 选择“调试” > “启动调试”(F5) 或使用工具栏上的“Web 服务器”按钮运行服务器：
 
     ![Visual Studio 中的运行 Web 服务器工具栏按钮](media/django/run-web-server-toolbar-button.png)
 
@@ -76,7 +76,7 @@ Visual Studio 还提供了“投票 Flask/Jade Web 项目”模板，该模板�
 
 ## <a name="step-5-2-understand-the-data-models"></a>步骤 5-2：了解数据模型
 
-应用的数据模型是名为 Poll 和 Choice 的 Python 类，它们在 models/\_\_init\_\_.py 中进行定义  。 Poll 表示一个问题，Choice 实例集合表示该问题的可选答案。 Poll 还会保留（任意选项的）总票数，以及统计信息的计算方法（这些信息将用于生成视图）：
+应用的数据模型是名为 Poll 和 Choice 的 Python 类，它们在 models/\_\_init\_\_.py 中进行定义。 Poll 表示一个问题，Choice 实例集合表示该问题的可选答案。 Poll 还会保留（任意选项的）总票数，以及统计信息的计算方法（这些信息将用于生成视图）：
 
 ```python
 class Poll(object):
@@ -123,7 +123,7 @@ class Choice(object):
     REPOSITORY_NAME = environ.get('REPOSITORY_NAME', 'memory')
     ```
 
-1. settings.py 代码随后初始化 `REPOSITORY_SETTINGS` 对象  。 如果想要使用 Azure 表存储或 Mondo DB，则必须首先在其他位置初始化这些数据存储，然后设置必需的环境变量，用于告知应用如何连接到存储：
+1. settings.py 代码随后初始化 `REPOSITORY_SETTINGS` 对象。 如果想要使用 Azure 表存储或 Mondo DB，则必须首先在其他位置初始化这些数据存储，然后设置必需的环境变量，用于告知应用如何连接到存储：
 
     ```python
     if REPOSITORY_NAME == 'azuretablestorage':
@@ -145,7 +145,7 @@ class Choice(object):
         raise ValueError('Unknown repository.')
     ```
 
-1. 在 views.py 中，应用调用工厂方法，使用数据存储名称和设置来初始化 `Repository` 对象  ：
+1. 在 views.py 中，应用调用工厂方法，使用数据存储名称和设置来初始化 `Repository` 对象：
 
     ```python
     from FlaskPolls.models import PollNotFound
@@ -155,7 +155,7 @@ class Choice(object):
     repository = create_repository(REPOSITORY_NAME, REPOSITORY_SETTINGS)
     ```
 
-1. 在 models\factory.py 中找到 `factory.create_repository` 方法，该方法只导入相应的存储库模块，然后创建一个 `Repository` 实例  ：
+1. 在 models\factory.py 中找到 `factory.create_repository` 方法，该方法只导入相应的存储库模块，然后创建一个 `Repository` 实例：
 
     ```python
     def create_repository(name, settings):
@@ -180,10 +180,10 @@ class Choice(object):
 
 如果需要，可通过以下步骤添加对其他数据存储（除项目模板提供的这三种数据存储外）的支持：
 
-1. 将 memory.py 复制到新文件，这样即可拥有 `Repository` 类的基本接口  。
+1. 将 memory.py 复制到新文件，这样即可拥有 `Repository` 类的基本接口。
 1. 修改类的实现，使其适合正在使用的数据存储。
-1. 修改 factory.py，添加其他 `elif` 事例，用于识别添加的数据存储的名称，并导入相应模块  。
-1. 修改 settings.py，识别 `REPOSITORY_NAME` 环境变量中的其他名称，然后相应地初始化 `REPOSITORY_SETTINGS` 。
+1. 修改 factory.py，添加其他 `elif` 事例，用于识别添加的数据存储的名称，并导入相应模块。
+1. 修改 settings.py，识别 `REPOSITORY_NAME` 环境变量中的其他名称，然后相应地初始化 `REPOSITORY_SETTINGS`。
 
 ### <a name="seed-the-data-store-from-samplesjson"></a>从 samples.json 设定数据存储种子
 
@@ -228,7 +228,7 @@ def seed():
     return redirect('/')
 ```
 
-`repository.add_sample_polls()` 调用结束，最终将显示所选数据存储的某个特定 `Repository` 实现。 每个实现都调用 models\_\_init\_\_.py  中的 `_load_samples_json` 方法，将 models\samples.json  文件加载到内存中，再循环访问相应数据，以在数据存储中创建必要的 `Poll` 和 `Choice` 对象。
+`repository.add_sample_polls()` 调用结束，最终将显示所选数据存储的某个特定 `Repository` 实现。 每个实现都调用 models\_\_init\_\_.py 中的 `_load_samples_json` 方法，将 models\samples.json 文件加载到内存中，再循环访问相应数据，以在数据存储中创建必要的 `Poll` 和 `Choice` 对象。
 
 完成此过程后，`seed` 方法中的 `redirect('/')` 语句将返回到主页。 此时，因为 `repository.get_polls` 现在返回一个数据对象，所以 templates\index.html 中的条件标记会呈现一个包含投票的表  。
 
@@ -242,7 +242,7 @@ def seed():
 
 剩下的部分将介绍如何查看单个投票的投票（详情）和结果视图。
 
-从主页选择某项投票时，应用将导航至 URL /poll/\<key\>，其中 key 是该项投票的唯一标识符  。 在 views.py 中，可以发现分配了 `details` 函数来处理 GET 和请求的 URL 路由  。 还可发现在 URL 路由中使用 `<key>` 同时将该表单的任意路由映射到同一个函数，并生成与其同名称的函数的参数：
+从主页选择某项投票时，应用将导航至 URL /poll/\<key\>，其中 key 是该项投票的唯一标识符  。 在 views.py 中，可以发现分配了 `details` 函数来处理 GET 和请求的 URL 路由。 还可发现在 URL 路由中使用 `<key>` 同时将该表单的任意路由映射到同一个函数，并生成与其同名称的函数的参数：
 
 ```python
 @app.route('/poll/<key>', methods=['GET', 'POST'])
@@ -266,7 +266,7 @@ def details(key):
     )
 ```
 
-为显示投票（GET 请求），该函数只调用 templates\details.html，用于循环访问投票的 `choices` 数组，从而为每项创建一个单选按钮  。
+为显示投票（GET 请求），该函数只调用 templates\details.html，用于循环访问投票的 `choices` 数组，从而为每项创建一个单选按钮。
 
 ```html
 {% extends "layout.html" %}
@@ -296,9 +296,9 @@ def details(key):
 {% endblock %}
 ```
 
-“投票”按钮具有 `type="submit"`，因此选中它会生成一个 POST 请求，该请求返回再次路由到 `details` 函数的同一 URL  。 不过，此时它从表单数据中提取选项并且重定向到 /results/\<choice\>。
+“投票”按钮具有 `type="submit"`，因此选中它会生成一个 POST 请求，该请求返回再次路由到 `details` 函数的同一 URL。 不过，此时它从表单数据中提取选项并且重定向到 /results/\<choice\>。
 
-然后，/result/\<key\> URL 将路由到 views.py 中的 `results` 函数，该函数随后调用投票的 `calculate_stats` 方法并使用 templates\results.html 呈现   ：
+然后，/result/\<key\> URL 将路由到 views.py 中的 `results` 函数，该函数随后调用投票的 `calculate_stats` 方法并使用 templates\results.html 呈现：
 
 ```python
 @app.route('/results/<key>')

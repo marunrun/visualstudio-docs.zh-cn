@@ -18,15 +18,15 @@ ms.locfileid: "79306991"
 ---
 # <a name="input-generation-using-dynamic-symbolic-execution"></a>使用动态符号执行的输入生成
 
-IntelliTest 通过分析程序中的分支条件为[参数化单元测试](test-generation.md#parameterized-unit-testing)生成输入。 测试输入的选择依据是它们是否可触发程序的新分支行为。 分析是一个增量过程。 这将优化正式测试输入参数 `q: I -> {true, false}` 的谓词 `I`。 `q` 表示 IntelliTest 已观察到的行为集。 最初，`q := false`，因为尚未观察到任何行为。
+IntelliTest 通过分析程序中的分支条件为[参数化单元测试](test-generation.md#parameterized-unit-testing)生成输入。 测试输入的选择依据是它们是否可触发程序的新分支行为。 分析是一个增量过程。 这将优化正式测试输入参数 `I` 的谓词 `q: I -> {true, false}`。 `q` 表示 IntelliTest 已观察到的行为集。 最初，`q := false`，因为尚未观察到任何行为。
 
 循环的步骤如下：
 
-1. IntelliTest 确定输入 `i`，以使用`q(i)=false`约束求解器[使 ](#constraint-solver)。 按构造，输入 `i` 将采用之前没有见过的执行路径。 最初，这意味着 `i` 可以是任何输入，因为尚未发现任何执行路径。
+1. IntelliTest 确定输入 `i`，以使用[约束求解器](#constraint-solver)使 `q(i)=false`。 按构造，输入 `i` 将采用之前没有见过的执行路径。 最初，这意味着 `i` 可以是任何输入，因为尚未发现任何执行路径。
 
 1. IntelliTest 使用所选输入 `i` 执行测试，并监视测试以及被测程序的执行情况。
 
-1. 在执行期间，程序采用由该程序的所有条件分支决定的特定路径。 确定执行的所有条件集称为“路径条件”，在形式输入参数中写作谓词  `p: I -> {true, false}`。 IntelliTest 计算此谓词的表示形式。
+1. 在执行期间，程序采用由该程序的所有条件分支决定的特定路径。 确定执行的所有条件集称为“路径条件”，在形式输入参数中写作谓词 `p: I -> {true, false}`。 IntelliTest 计算此谓词的表示形式。
 
 1. IntelliTest 设置 `q := (q or p)`。 换言之，它会记录观察到由 `p` 表示的路径这一事实。
 

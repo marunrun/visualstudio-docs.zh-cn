@@ -126,13 +126,13 @@ DataCollection.CurrentId);
 
 1. 打开 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] IDE。 在“分析”菜单上指向“探查器”，然后选择“新建性能会话”    。
 
-2. 将编译的二进制文件添加到“性能资源管理器”  窗口的“目标”  列表中。 右键单击“目标”  ，然后选择“添加目标二进制文件”  。 在“添加目标二进制文件”  对话框中找到二进制文件，然后单击“打开”  。
+2. 将编译的二进制文件添加到“性能资源管理器”窗口的“目标”列表中。 右键单击“目标”  ，然后选择“添加目标二进制文件”  。 在“添加目标二进制文件”  对话框中找到二进制文件，然后单击“打开”  。
 
-3. 从“性能资源管理器”  工具栏上的“方法”  列表中选择“检测”  。
+3. 从“性能资源管理器”工具栏上的“方法”列表中选择“检测”。
 
 4. 单击“启动并启用分析功能”  。
 
-    探查器将检测和执行该二进制文件，并创建一个性能报告文件。 性能报告文件将显示在“性能资源管理器”  的“报告”  节点中。
+    探查器将检测和执行该二进制文件，并创建一个性能报告文件。 性能报告文件将显示在“性能资源管理器”的“报告”节点中。
 
 5. 打开生成的性能报告文件。
 
@@ -152,9 +152,9 @@ DataCollection.CurrentId);
 
      **VsPerfCLREnv /traceon**
 
-3. 键入下面的命令：VSInstr **filename>.exe\<**
+3. 键入下面的命令：VSInstr \<filename>.exe
 
-4. 键入下面的命令：VSPerfCmd /start:trace /output:**filename>.vsp\<**
+4. 键入下面的命令：VSPerfCmd /start:trace /output:\<filename>.vsp
 
 5. 键入下面的命令：VSPerfCmd /globaloff 
 
@@ -162,7 +162,7 @@ DataCollection.CurrentId);
 
 7. 键入下面的命令：VSPerfCmd /shutdown 
 
-8. 键入下面的命令：VSPerfReport /calltrace:**filename>.vsp\<**
+8. 键入下面的命令：VSPerfReport /calltrace:\<filename>.vsp
 
      当前目录中即会创建一个 .csv 文件，该文件包含得到的性能数据  。
 

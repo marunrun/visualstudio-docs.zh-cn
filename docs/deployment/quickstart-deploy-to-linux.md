@@ -30,7 +30,7 @@ ms.locfileid: "72806872"
 
 ## <a name="publish-to-app-service-on-linux"></a>发布到 Linux 上的应用服务
 
-1. 在解决方案资源管理器中，右键单击该项目并选择“发布”（或使用“生成” > “发布”菜单项）    。
+1. 在解决方案资源管理器中，右键单击该项目并选择“发布”（或使用“生成” > “发布”菜单项）。
 
     ![解决方案资源管理器中项目上下文菜单上的“发布”命令](../deployment/media/quickstart-publish.png "选择发布")
 

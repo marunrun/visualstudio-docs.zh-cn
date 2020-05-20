@@ -20,7 +20,7 @@ ms.locfileid: "72985181"
 ---
 # <a name="step-3-serve-static-files-add-pages-and-use-template-inheritance"></a>步骤 3：提供静态文件、添加页面和使用模板继承
 
-上一步：[使用视图和页面模板创建 Flask 应用](learn-flask-visual-studio-step-02-create-app.md) 
+上一步：[使用视图和页面模板创建 Flask 应用](learn-flask-visual-studio-step-02-create-app.md)
 
 在本教程的前几个步骤中，你已了解如何通过单页自包含 HTML 创建最小的 Flask 应用。 然而，现代 Web 应用通常由许多页面组成，并利用 CSS、JavaScript 文件等共享资源来提供一致的样式和行为。
 
@@ -34,7 +34,7 @@ ms.locfileid: "72985181"
 
 ## <a name="step-3-1-become-familiar-with-item-templates"></a>步骤 3-1：熟悉项模板
 
-开发 Flask 应用时，通常会添加多个 Python、HTML、CSS 和 JavaScript 文件。 对于每个文件类型（以及诸如 web.config 等其他需要部署的文件），Visual Studio 提供了方便的[项模板](python-item-templates.md)来帮助入门  。
+开发 Flask 应用时，通常会添加多个 Python、HTML、CSS 和 JavaScript 文件。 对于每个文件类型（以及诸如 web.config 等其他需要部署的文件），Visual Studio 提供了方便的[项模板](python-item-templates.md)来帮助入门。
 
 若要查看可用模板，请转到“解决方案资源管理器”  ，右键单击要在其中创建项的文件夹，选择“添加”   > “新项”  ：
 
@@ -56,9 +56,9 @@ ms.locfileid: "72985181"
 
 ### <a name="use-a-static-file-in-a-template"></a>使用模板中的静态文件
 
-1. 在解决方案资源管理器中，右键单击 Visual Studio 项目中的“HelloFlask”文件夹，选择“添加” > “新文件夹”，然后命名 `static` 文件夹     。
+1. 在解决方案资源管理器中，右键单击 Visual Studio 项目中的“HelloFlask”文件夹，选择“添加” > “新文件夹”，然后命名 `static` 文件夹。
 
-1. 右键单击 static 文件夹，然后选择“添加” > “新项”    。 在出现的对话框中，选择“样式表”模板，将文件命名为 `site.css`，然后选择“确定”   。 site.css 文件出现在项目中，并在编辑器中打开  。 文件夹结构应类似于下图：
+1. 右键单击 static 文件夹，然后选择“添加” > “新项”。 在出现的对话框中，选择“样式表”模板，将文件命名为 `site.css`，然后选择“确定”。 site.css 文件出现在项目中，并在编辑器中打开  。 文件夹结构应类似于下图：
 
     ![解决方案资源管理器中显示的静态文件结构](media/flask/step03-static-file-structure.png)
 
@@ -71,7 +71,7 @@ ms.locfileid: "72985181"
     }
     ```
 
-1. 将应用的 templates/index.html 文件的内容替换为以下代码，此操作会将步骤 2 中使用的 `<span>` 元素替换为引用 `message` 样式类的 `<strong>` 。 通过此方式使用样式类为设计元素样式提供了更多灵活性。
+1. 将应用的 templates/index.html 文件的内容替换为以下代码，此操作会将步骤 2 中使用的 `<span>` 元素替换为引用 `message` 样式类的 `<strong>`。 通过此方式使用样式类为设计元素样式提供了更多灵活性。
 
     ```html
     <html>
@@ -91,7 +91,7 @@ ms.locfileid: "72985181"
 
 Flask 提供一个名为 `serve_static_file` 的函数，可通过代码调用该函数来引用项目的 static 文件夹中的任何文件  。 以下过程创建一个返回静态数据文件的简单 API 终结点。
 
-1. 如果尚未进行此操作，请创建 static 文件夹：在解决方案资源管理器中，右键单击 Visual Studio 项目中的 HelloFlask 文件夹，选择“添加” > “新文件夹”，然后命名 `static` 文件夹      。
+1. 如果尚未进行此操作，请创建 static 文件夹：在解决方案资源管理器中，右键单击 Visual Studio 项目中的 HelloFlask 文件夹，选择“添加” > “新文件夹”，然后命名 `static` 文件夹。
 
 1. 在 static 文件夹中，创建名为 data.json 的静态 JSON 数据文件，该文件包含以下内容（这些是无意义的示例数据）   ：
 
@@ -103,7 +103,7 @@ Flask 提供一个名为 `serve_static_file` 的函数，可通过代码调用�
     }
     ```
 
-1. 在 views.py 中，添加含有 /api/data 路由的函数，该路由使用 `send_static_file` 方法返回静态数据文件  ：
+1. 在 views.py 中，添加含有 /api/data 路由的函数，该路由使用 `send_static_file` 方法返回静态数据文件：
 
     ```python
     @app.route('/api/data')
@@ -131,7 +131,7 @@ Flask 提供一个名为 `serve_static_file` 的函数，可通过代码调用�
 
 以下步骤将“关于”页添加到“HelloFlask”项目，并从主页链接到该页面：
 
-1. 在解决方案资源管理器中，右键单击 templates 文件夹，选择“添加” > “新项”，选择“HTML 页”项模板，将文件命名为 `about.html`，然后选择“确定”       。
+1. 在解决方案资源管理器中，右键单击 templates 文件夹，选择“添加” > “新项”，选择“HTML 页”项模板，将文件命名为 `about.html`，然后选择“确定”。
 
     > [!Tip]
     > 如果“新项”  命令未显示在“添加”  菜单上，请确保已停止应用，使 Visual Studio 退出调试模式。
@@ -151,7 +151,7 @@ Flask 提供一个名为 `serve_static_file` 的函数，可通过代码调用�
     </html>
     ```
 
-1. 打开应用的 views.py 文件，并添加使用该模板的名为 `about` 的函数  ：
+1. 打开应用的 views.py 文件，并添加使用该模板的名为 `about` 的函数：
 
     ```python
     @app.route('/about')
@@ -162,13 +162,13 @@ Flask 提供一个名为 `serve_static_file` 的函数，可通过代码调用�
             content = "Example app page for Flask.")
     ```
 
-1. 打开 templates/index.html 文件，立即在 `<body>` 元素中添加以下行以链接到“关于”页（同样，可以使用步骤 3-4 中的导航栏替换此链接）  ：
+1. 打开 templates/index.html 文件，立即在 `<body>` 元素中添加以下行以链接到“关于”页（同样，可以使用步骤 3-4 中的导航栏替换此链接）：
 
     ```html
     <div><a href="about">About</a></div>
     ```
 
-1. 若要保存所有文件，请使用“文件” > “全部保存”菜单命令，或只需按 Ctrl+Shift+S      。 （从技术上讲，不需要执行此步骤，因为在 Visual Studio 中运行项目会自动保存文件。 不过，可以了解一下这个命令！）
+1. 若要保存所有文件，请使用“文件” > “全部保存”菜单命令，或只需按 Ctrl+Shift+S。 （从技术上讲，不需要执行此步骤，因为在 Visual Studio 中运行项目会自动保存文件。 不过，可以了解一下这个命令！）
 
 1. 运行项目并观察结果，并检查页面之间的导航。 完成后停止应用。
 
@@ -186,13 +186,13 @@ Flask 模板系统（默认 Jinja）为实现跨多个模板重用特定元素�
 
 - 继承  使用页面模板开头的 `{% extends <template_path> %}` 来指定共享基本模板，然后会在此模板上生成引用模板。 继承通常用于为应用页面定义共享布局、导航栏和其他结构，这样一来，引用模板只需要添加或修改称为“块”  的基本模板的特定区域。
 
-在这两种情况下，`<template_path>` 对应于应用的 templates 文件夹（还允许 `../` 或 `./`）  。
+在这两种情况下，`<template_path>` 对应于应用的 templates 文件夹（还允许 `../` 或 `./`）。
 
-基本模板使用 `{% block <block_name> %}` 和 `{% endblock %}` 标记来标示块  。 如果引用模板随后使用具有相同块名称的标记，那么它的块内容将替代基本模板的内容。
+基本模板使用 `{% block <block_name> %}` 和 `{% endblock %}` 标记来标示块。 如果引用模板随后使用具有相同块名称的标记，那么它的块内容将替代基本模板的内容。
 
 以下步骤演示继承：
 
-1. 在应用的 templates 文件夹中，创建一个名为 layout.html 的新 HTML 文件（使用“添加” > “新项”上下文菜单或“添加” > “HTML 页”），并将它的内容替换为以下标记       。 可以看到此模板包含一个名为“content”的块，这是引用页面需要替换的全部内容：
+1. 在应用的 templates 文件夹中，创建一个名为 layout.html 的新 HTML 文件（使用“添加” > “新项”上下文菜单或“添加” > “HTML 页”），并将它的内容替换为以下标记。 可以看到此模板包含一个名为“content”的块，这是引用页面需要替换的全部内容：
 
     ```html
     <!DOCTYPE html>

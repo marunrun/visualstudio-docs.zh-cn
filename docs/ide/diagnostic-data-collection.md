@@ -52,7 +52,7 @@ Visual Studio 收集崩溃、挂起、UI 无响应以及很高的 CPU 或内存�
 
 ### <a name="error-classification"></a>错误分类
 
-基于日志对错误进行了分类和计数，以确定调查的优先顺序。 例如，我们可能发现，在产品的版本 \_x> 中，“System.IO.FileStream.Init”处的“System.IO.\<_Error.WinIOError”出现了 500 次，并且在该版本中的出现率是最高的。
+基于日志对错误进行了分类和计数，以确定调查的优先顺序。 例如，我们可能发现，在产品的版本 \<x> 中，“System.IO.FileStream.Init”处的“System.IO.\__Error.WinIOError”出现了 500 次，并且在该版本中的出现率是最高的。
 
 ### <a name="work-items-for-tracking"></a>用于跟踪的工作项
 

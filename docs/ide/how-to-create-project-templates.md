@@ -41,7 +41,7 @@ ms.locfileid: "75591068"
 
    项目会导出到一个 .zip 文件中，并放在指定的输出位置，还可以导入到 Visual Studio（如果选择）  。
 
-若要在“新建项目”对话框中找到模板，请展开“已安装”，然后展开 .vstemplate 文件中与  **元素对应的类别**  `ProjectType`  。 例如，默认情况下，包含  *的 .vstemplate 文件显示在“已安装”* “Visual C#”下`<ProjectType>CSharp</ProjectType>`   >   。 可将模板组织到项目类型的子目录中，只需在该目录中创建一个文件夹，然后将模板的 .zip 文件放入其中即可  。 有关详细信息，请参阅[如何：查找和组织模板](../ide/how-to-locate-and-organize-project-and-item-templates.md)。
+若要在“新建项目”对话框中找到模板，请展开“已安装”，然后展开 .vstemplate 文件中与 `ProjectType` 元素对应的类别。 例如，默认情况下，包含 `<ProjectType>CSharp</ProjectType>` 的 .vstemplate 文件显示在“已安装” > “Visual C#”下。 可将模板组织到项目类型的子目录中，只需在该目录中创建一个文件夹，然后将模板的 .zip 文件放入其中即可  。 有关详细信息，请参阅[如何：查找和组织模板](../ide/how-to-locate-and-organize-project-and-item-templates.md)。
 
 ::: moniker-end
 

@@ -61,7 +61,7 @@ Docker 容器可用于 .NET Framework 和 .NET Core 项目。 请看以下两个
 
 1. 请确保 Docker 设置为使用你所使用的容器类型（Linux 或 Windows）。 右键单击任务栏上的 Docker 图标，然后选择相应的“切换到 Linux 容器”  或“切换到 Windows 容器”  。
 
-1. （仅限 .NET Core 3 及更高版本）在 3.0 及以上版本的 .NET Core 中的默认模板不支持按此部分所述的方式编辑代码和刷新运行的站点。 为了启用此功能，请添加 NuGet 包 [Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation](https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation/) 在 Startup.cs 中，在 *方法的代码中添加对扩展方法* 的调用`IMvcBuilder.AddRazorRuntimeCompilation``ConfigureServices`。 由于你只需在调试模式中启用此功能，因此请按如下所示的方法进行编码：
+1. （仅限 .NET Core 3 及更高版本）在 3.0 及以上版本的 .NET Core 中的默认模板不支持按此部分所述的方式编辑代码和刷新运行的站点。 为了启用此功能，请添加 NuGet 包 [Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation](https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation/) 在 Startup.cs 中，在 `ConfigureServices` 方法的代码中添加对扩展方法 `IMvcBuilder.AddRazorRuntimeCompilation` 的调用。 由于你只需在调试模式中启用此功能，因此请按如下所示的方法进行编码：
 
     ```csharp
     public IWebHostEnvironment Env { get; set; }
@@ -83,7 +83,7 @@ Docker 容器可用于 .NET Framework 和 .NET Core 项目。 请看以下两个
 
    有关详细信息，请参阅 [ASP.NET Core 中的 Razor 文件编译](/aspnet/core/mvc/views/view-compilation?view=aspnetcore-3.1)。
 
-1. 将“解决方案配置”设置为“调试”   。 然后，按 Ctrl**F5 以生成 Docker 映像并在本地运行该映像**+  。
+1. 将“解决方案配置”设置为“调试”   。 然后，按 Ctrl+F5 以生成 Docker 映像并在本地运行该映像。
 
     在 Docker 容器中生成映像并运行该映像后，Visual Studio 会在默认浏览器中启动 Web 应用。
 
@@ -126,7 +126,7 @@ Docker 容器可用于 .NET Framework 和 .NET Core 项目。 请看以下两个
 使用 .NET Framework 控制台应用项目时，不支持在没有业务流程的情况下添加 Docker 支持的方式。 即使仅使用单个 Docker 项目，你仍可以使用以下过程。
 
 1. 创建新的 .NET Framework 控制台应用项目。
-1. 在解决方案资源管理器中，右键单击项目节点，然后选择“添加” **“容器业务流程支持”**  >   。  在出现的对话框中，选择“Docker Compose”  。 将 Dockerfile 添加到项目中，并添加一个包含相关支持文件的 Docker Compose 项目。
+1. 在解决方案资源管理器中，右键单击项目节点，然后选择“添加” > “容器业务流程支持”。  在出现的对话框中，选择“Docker Compose”  。 将 Dockerfile 添加到项目中，并添加一个包含相关支持文件的 Docker Compose 项目。
 
 ### <a name="debug-with-breakpoints"></a>使用断点进行调试
 
@@ -147,7 +147,7 @@ Docker 容器可用于 .NET Framework 和 .NET Core 项目。 请看以下两个
 
 在开发周期中，Visual Studio 在你更改 Dockerfile 后仅重新生成容器映像和容器本身。 如果不更改 Dockerfile，Visual Studio 将重复使用以前运行的容器。
 
-如果你手动修改了容器，并希望使用干净的容器映像重启，请使用 Visual Studio 中的“Build” **“Clean”命令，然后按常规操作生成** >   。
+如果你手动修改了容器，并希望使用干净的容器映像重启，请使用 Visual Studio 中的“Build” > “Clean”命令，然后按常规操作生成。
 
 ## <a name="troubleshoot"></a>故障排除
 

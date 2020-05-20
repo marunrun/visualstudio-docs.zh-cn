@@ -19,7 +19,7 @@ ms.locfileid: "75590679"
 ---
 # <a name="c-structures-in-class-designer"></a>类设计器中的 C++ 结构
 
-类设计器支持使用关键字  **声明的 C++ 结构**`struct`。 下面是一个示例：
+类设计器支持使用关键字 `struct` 声明的 C++ 结构。 下面是一个示例：
 
 ```cpp
 struct MyStructure

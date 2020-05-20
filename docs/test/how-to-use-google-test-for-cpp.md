@@ -53,19 +53,19 @@ ms.locfileid: "77279306"
 
 ## <a name="set-additional-options"></a>设置附加选项
 
-从主菜单中，选择“工具” > “选项” > “Google Test 测试适配器”以设置附加选项    。 有关这些设置的详细信息，请参阅 Google Test 文档。
+从主菜单中，选择“工具” > “选项” > “Google Test 测试适配器”以设置附加选项。 有关这些设置的详细信息，请参阅 Google Test 文档。
 
 ![Google Test 项目设置](media/cpp-gtest-settings.png)
 
 ## <a name="add-include-directives"></a>添加 include 指令
 
-在测试 .cpp 文件中，添加任何所需的 `#include` 指令以使程序的类型和函数对测试代码可见  。 通常，程序在文件夹层次结构中的上一层。 如果键入 `#include "../"`，则会出现一个 IntelliSense 窗口，使你可以选择头文件的完整路径。
+在测试 .cpp 文件中，添加任何所需的 `#include` 指令以使程序的类型和函数对测试代码可见。 通常，程序在文件夹层次结构中的上一层。 如果键入 `#include "../"`，则会出现一个 IntelliSense 窗口，使你可以选择头文件的完整路径。
 
 ![添加 #include 指令](media/cpp-gtest-includes.png)
 
 ## <a name="write-and-run-tests"></a>编写和运行测试
 
-现在已准备就绪，可以编写和运行 Google Test。 有关测试宏的信息，请参阅 [Google Test 入门](https://github.com/google/googletest/blob/master/googletest/docs/primer.md)。 有关使用“测试资源管理器”  发现、运行和分组测试的信息，请参阅[使用测试资源管理器运行单元测试](run-unit-tests-with-test-explorer.md)。
+现在已准备就绪，可以编写和运行 Google Test。 有关测试宏的信息，请参阅 [Google Test 入门](https://github.com/google/googletest/blob/master/googletest/docs/primer.md)。 有关使用“测试资源管理器”发现、运行和分组测试的信息，请参阅[使用测试资源管理器运行单元测试](run-unit-tests-with-test-explorer.md)。
 
 ## <a name="see-also"></a>请参阅
 

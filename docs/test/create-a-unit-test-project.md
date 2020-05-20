@@ -23,7 +23,7 @@ ms.locfileid: "75565248"
 
 ## <a name="to-create-a-unit-test-project"></a>创建单元测试项目
 
-1. 在“文件”菜单上，选择“新建” **“项目”，或按 Ctrl**Shift**N** >    +  +  。
+1. 在“文件”菜单上，选择“新建” > “项目”，或按 Ctrl+Shift+N。
 
 ::: moniker range="vs-2017"
 

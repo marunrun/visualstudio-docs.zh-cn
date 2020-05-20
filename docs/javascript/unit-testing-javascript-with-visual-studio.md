@@ -70,7 +70,7 @@ describe('Test Suite 1', function() {
 > [!Note]
 > 单元测试选项将优先于单个文件的设置。
 
-打开测试资源管理器（选择“测试” **“Windows”** “测试资源管理器”）后，Visual Studio 发现并显示测试 >    >   。 如果开始未显示测试，则重新生成项目以刷新列表。
+打开测试资源管理器（选择“测试” > “Windows” > “测试资源管理器”）后，Visual Studio 发现并显示测试。 如果开始未显示测试，则重新生成项目以刷新列表。
 
 ![测试资源管理器](../javascript/media/UnitTestsDiscoveryMocha.png)
 

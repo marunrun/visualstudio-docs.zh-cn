@@ -61,9 +61,9 @@ Visual Studio 为当前项目和标准库中的顶级包和模块提供 `import`
 
 ![添加导入的结果](media/code-refactor-add-import-2.png)
 
-Visual Studio 尝试筛选出实际未在模块中定义的成员，例如导入其他模块但不属于执行导入操作的模块的子级的模块。 例如，许多模块使用 `import sys` 而不是 `from xyz import sys`，因此不会看到从其他模块导入 `sys` 的完成，即使模块缺少可排除 `__all__` 的 `sys` 成员。
+Visual Studio 尝试筛选出实际未在模块中定义的成员，例如导入其他模块但不属于执行导入操作的模块的子级的模块。 例如，许多模块使用 `import sys` 而不是 `from xyz import sys`，因此不会看到从其他模块导入 `sys` 的完成，即使模块缺少可排除 `sys` 的 `__all__` 成员。
 
-同样，Visual Studio 将筛选从其他模块或内置命名空间导入的函数。 例如，如果某个模块从 `settrace` 模块导入 `sys` 函数，从理论上讲，可以从该模块导入它。 但最好直接使用 `import settrace from sys`，以便 Visual Studio 专门提供该语句。
+同样，Visual Studio 将筛选从其他模块或内置命名空间导入的函数。 例如，如果某个模块从 `sys` 模块导入 `settrace` 函数，从理论上讲，可以从该模块导入它。 但最好直接使用 `import settrace from sys`，以便 Visual Studio 专门提供该语句。
 
 最后，如果按常规排除某些内容，但该内容具有将包括的其他值（例如，由于名称分配有模块中的值），Visual Studio 仍将排除该导入。 此行为假定不应导出该值，因为它在其他模块重定义，因此其他分配也可能为不会导出的虚拟值。
 

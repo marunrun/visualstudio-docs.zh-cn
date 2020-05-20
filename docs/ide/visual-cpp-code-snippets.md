@@ -30,7 +30,7 @@ ms.locfileid: "77277827"
 
 - 在“编辑”/“IntelliSense”  菜单中，选择“插入代码片段” 
 
-- 使用热键：CTRL+K+X   
+- 使用热键：CTRL+K+X
 
 将出现一个以“#if”  开头的选择列表。 选择“#if”  后，显示添加到文件的以下代码：
 
@@ -48,9 +48,9 @@ ms.locfileid: "77277827"
 
 - 右键单击以获取上下文菜单并选择“外侧代码” 
 
-- 在“编辑” > “IntelliSense”菜单中，选择“外侧代码”   
+- 在“编辑” > “IntelliSense”菜单中，选择“外侧代码”
 
-- 在键盘上按：Ctrl+K+S   
+- 在键盘上按 Ctrl+K+S
 
 选择“#if”  。 将显示如下所示的内容：
 
@@ -92,7 +92,7 @@ MyClass::~MyClass()
 }
 ```
 
-classi 代码片段也提供名为 `MyClass` 的类的定义，但默认构造函数和析构函数在类定义的内部进行定义  ：
+classi 代码片段也提供名为 `MyClass` 的类的定义，但默认构造函数和析构函数在类定义的内部进行定义：
 
 ```cpp
 class MyClass
@@ -113,9 +113,9 @@ private:
 
 ## <a name="for-vs-forr-vs-rfor"></a>for、forr 与 rfor 比较
 
-有三个不同的 for 代码片段，可提供不同种类的 `for` 循环  。
+有三个不同的 for 代码片段，可提供不同种类的 `for` 循环。
 
-rfor 代码片段具有[基于范围](/cpp/cpp/range-based-for-statement-cpp)的 for 循环（链接）  。 该构造优于基于索引的 `for` 循环。
+rfor 代码片段具有[基于范围](/cpp/cpp/range-based-for-statement-cpp)的 for 循环（链接）。 该构造优于基于索引的 `for` 循环。
 
 ```cpp
 for (auto& i : v)
@@ -124,7 +124,7 @@ for (auto& i : v)
 }
 ```
 
-for 代码片段具有 `for` 循环，此循环中的条件以对象的长度 (`size_t`) 为依据  。
+for 代码片段具有 `for` 循环，此循环中的条件以对象的长度 (`size_t`) 为依据。
 
 ```cpp
 for (size_t i = 0; i < length; i++)
@@ -133,7 +133,7 @@ for (size_t i = 0; i < length; i++)
 }
 ```
 
-forr 代码片段具有反向 `for` 循环，此循环中的条件以对象的长度（整数）为依据  。
+forr 代码片段具有反向 `for` 循环，此循环中的条件以对象的长度（整数）为依据。
 
 ```cpp
 for (int i = length - 1; i >= 0; i--)

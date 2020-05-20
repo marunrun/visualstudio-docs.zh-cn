@@ -123,7 +123,7 @@ Foo* pFoo3 = (Foo*)mPool.allocate();
    VSHeapTrackerReallocateEvent(hHeapTracker, memPtrNew, size, memPtrOld);
    ```
 
-1. 最后，若要关闭并清除 C++ 中的自定义堆跟踪器，请通过手动或通过标准作用域规则或 C 中的 `CHeapTracker` 函数使用 `CloseHeapTracker` 析构函数：
+1. 最后，若要关闭并清除 C++ 中的自定义堆跟踪器，请通过手动或通过标准作用域规则或 C 中的 `CloseHeapTracker` 函数使用 `CHeapTracker` 析构函数：
 
    ```cpp
    delete pHeapTracker;
@@ -140,7 +140,7 @@ Foo* pFoo3 = (Foo*)mPool.allocate();
 
 ![启用堆分析](media/heap-enable-heap.png)
 
-若要查看自定义堆跟踪，请使用位于“快照”  窗口右上角的“堆”  下拉菜单，将视图从“NT 堆”  更改为之前已命名的自己的堆。
+若要查看自定义堆跟踪，请使用位于“快照”窗口右上角的“堆”下拉菜单，将视图从“NT 堆” 更改为之前已命名的自己的堆。
 
 ![堆选择](media/heap-example-custom-heap.png)
 
@@ -153,7 +153,7 @@ Foo* pFoo3 = (Foo*)mPool.allocate();
 如[内存使用量](../profiling/memory-usage.md)文档中所述，与标准的 Windows 堆一样，你还可使用此工具比较快照，并查找自定义堆中的泄漏和损坏。
 
 > [!TIP]
-> Visual Studio 在性能分析工具集中还包含内存使用情况工具，可在“调试” **“性能探查器”菜单选项或通过 Alt**F2 组合键启用该工具    >    +  。  此功能不包含堆跟踪，并且不会按如下所述显示你的自定义堆。  只有“诊断工具”窗口包含此功能，可通过选择“调试” **“Windows”** “显示诊断工具”菜单或 Ctrl**Alt**F2 组合键来启用此窗口 >    >    +  +  。
+> Visual Studio 在性能分析工具集中还包含内存使用情况工具，可在“调试” > “性能探查器”菜单选项或通过 Alt+F2 组合键启用该工具。  此功能不包含堆跟踪，并且不会按如下所述显示你的自定义堆。  只有“诊断工具”窗口包含此功能，可通过选择“调试” > “Windows” > “显示诊断工具”菜单或 Ctrl+Alt+F2 组合键来启用此窗口。
 
 ## <a name="see-also"></a>另请参阅
 [首先了解分析工具](../profiling/profiling-feature-tour.md)

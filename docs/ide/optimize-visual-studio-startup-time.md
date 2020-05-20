@@ -29,7 +29,7 @@ Visual Studio 可快速高效地启动。 但是，某些 Visual Studio 扩展�
 
 为了避免启动时间延长，Visual Studio 使用按需方法加载扩展  。 该行为意味着不会在 Visual Studio 启动后立即打开扩展，而是根据需要打开。 此外，由于在之前的 Visual Studio 会话中保持工具窗口的打开状态会使启动时间变慢，因此 Visual Studio 以更智能的方式打开工具窗口，从而避免影响启动时间。
 
-如果 Visual Studio 检测到启动速度较慢，则会弹出一条消息，提示你导致速度变慢的扩展或工具窗口。 此消息提供了指向“管理 Visual Studio 性能”对话框的链接  。 还可以通过在菜单栏中选择“帮助” **“管理 Visual Studio 性能”，访问此对话框** >   。
+如果 Visual Studio 检测到启动速度较慢，则会弹出一条消息，提示你导致速度变慢的扩展或工具窗口。 此消息提供了指向“管理 Visual Studio 性能”对话框的链接  。 还可以通过在菜单栏中选择“帮助” > “管理 Visual Studio 性能”，访问此对话框。
 
 ![“管理 Visual Studio 性能”- 弹出窗口显示“我们注意到扩展 ... 正在拖慢 Visual Studio”](../ide/media/vside_perfdialog_popup.png)
 
@@ -37,9 +37,9 @@ Visual Studio 可快速高效地启动。 但是，某些 Visual Studio 扩展�
 
 ## <a name="to-change-extension-settings-to-improve-startup-solution-load-and-typing-performance"></a><a name="extensions" />更改扩展设置以改善启动、解决方案加载和键入性能
 
-1. 通过在菜单栏上选择“帮助” **“管理 Visual Studio 性能”，打开“管理 Visual Studio 性能”对话框**   >   。
+1. 通过在菜单栏上选择“帮助” > “管理 Visual Studio 性能”，打开“管理 Visual Studio 性能”对话框。
 
-    如果某个扩展使 Visual Studio 的启动、解决方案加载或键入变慢，此扩展将显示在“扩展” **“启动”（或“解决方案加载”或“键入”）下的“管理 Visual Studio 性能”对话框中**   >     。
+    如果某个扩展使 Visual Studio 的启动、解决方案加载或键入变慢，此扩展将显示在“扩展” > “启动”（或“解决方案加载”或“键入”）下的“管理 Visual Studio 性能”对话框中。
 
     ![管理 Visual Studio 性能 - 扩展视图](../ide/media/vside_perfdialog_extensions.png)
 
@@ -49,9 +49,9 @@ Visual Studio 可快速高效地启动。 但是，某些 Visual Studio 扩展�
 
 ## <a name="to-change-tool-window-settings-to-improve-startup-time"></a><a name="tool-windows" />更改工具窗口设置以改善启动时间
 
-1. 通过在菜单栏上选择“帮助” **“管理 Visual Studio 性能”，打开“管理 Visual Studio 性能”对话框**   >   。
+1. 通过在菜单栏上选择“帮助” > “管理 Visual Studio 性能”，打开“管理 Visual Studio 性能”对话框。
 
-    如果某个工具窗口使 Visual Studio 启动变慢，此工具窗口将显示在“工具窗口” **“启动”下的“管理 Visual Studio 性能”对话框中**   >   。
+    如果某个工具窗口使 Visual Studio 启动变慢，此工具窗口将显示在“工具窗口” > “启动”下的“管理 Visual Studio 性能”对话框中。
 
 2. 选择想要更改其行为的工具窗口。
 

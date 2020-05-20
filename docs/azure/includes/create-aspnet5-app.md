@@ -15,8 +15,8 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 03/18/2020
 ms.locfileid: "71126009"
 ---
-1. 在 Visual Studio 菜单中，选择“文件” **“新建”** “项目” >    >   。
-2. 在“新建项目”对话框的“模板”部分中，选择“Visual C#” **“Web”**    >   。
+1. 在 Visual Studio 菜单中，选择“文件” > “新建” > “项目”。
+2. 在“新建项目”对话框的“模板”部分中，选择“Visual C#” > “Web”。
 3. 选择“ASP.NET Core Web 应用程序”  。
 4. 输入新应用程序的名称（或使用默认名称），然后选择“确定”  。
 5. 选择“Web 应用程序”  。

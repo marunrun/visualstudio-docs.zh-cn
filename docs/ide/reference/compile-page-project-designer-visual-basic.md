@@ -30,7 +30,7 @@ ms.locfileid: "76111305"
 
 使用项目设计器的“编译”页来指定编译指令  。 此外，还可在此页上指定高级编译器选项以及预先生成或后期生成的事件。
 
-若要访问“编译”  页，请在“解决方案资源管理器”  中选择项目节点（而非“解决方案”  节点）。 然后在菜单栏上依次选择“项目”  、“属性”  。 “项目设计器”出现时，单击“编译”选项卡  。
+若要访问“编译”页，请在“解决方案资源管理器”中选择项目节点（而非“解决方案”节点）。 然后在菜单栏上依次选择“项目”  、“属性”  。 “项目设计器”出现时，单击“编译”选项卡  。
 
 [!INCLUDE[note_settings_general](../../data-tools/includes/note_settings_general_md.md)]
 
@@ -57,7 +57,7 @@ ms.locfileid: "76111305"
 
 指定该项目配置的输出文件的位置。 在此框中键入生成输出的路径，或单击“浏览”  按钮选择路径。 请注意，该路径是相对的；如果输入绝对路径，将保存为相对路径。 默认路径为 bin\Debug 或 bin\Release\\。
 
-使用简化的生成配置，项目系统可确定是生成调试版本还是发行版本。 使用“调试”  菜单 (F5) 中的“生成”  命令，会将生成放置在调试位置中（无论指定的“输出路径”  为何）。 但是，“生成”  菜单上的“生成”  命令会将其放在指定的位置。
+使用简化的生成配置，项目系统可确定是生成调试版本还是发行版本。 使用“调试”菜单 (F5) 中的“生成”命令，会将生成放置在调试位置中（无论指定的“输出路径”为何）。 但是，“生成”菜单上的“生成”命令会将其放在指定的位置。
 
 Option Explicit 
 
@@ -69,7 +69,7 @@ Option Explicit
 
 创建新项目时，将“编译”页上的“Option Explicit”设置设置为“选项”对话框中的“Option Explicit”设置     。 若要查看或更改此对话框中的设置，请单击“工具”菜单上的“选项”   。 在“选项”对话框中，展开“项目和解决方案”，然后单击“VB 默认值”    。 “VB 默认值”中的“Option Explicit”初始默认设置为“开启”    。
 
-通常不建议将“Option Explicit”设置为 `Off`  。 在一个或多个位置拼错变量名称，将会在程序运行时导致意想不到的结果。
+通常不建议将“Option Explicit”设置为 `Off`。 在一个或多个位置拼错变量名称，将会在程序运行时导致意想不到的结果。
 
 Option strict 
 
@@ -87,7 +87,7 @@ Option strict
 
 如果无法为已声明的变量推断出合适的类型，则会发生隐式对象类型错误，因此 `Object` 类型是推断出来的。 这主要是在未使用 `As` 子句的情况下使用 `Dim` 语句声明变量，且 `Option Infer` 为关闭时发生的。 有关详细信息，请参阅 [Option Strict 语句](/dotnet/visual-basic/language-reference/statements/option-strict-statement)、[Option Infer 语句](/dotnet/visual-basic/language-reference/statements/option-infer-statement)和 [Visual Basic 语言规范](/dotnet/visual-basic/reference/language-specification)。
 
-“Option Strict”设置对应于 [/optionstrict](/dotnet/visual-basic/reference/command-line-compiler/optionstrict) 编译器选项  。
+“Option Strict”设置对应于 [/optionstrict](/dotnet/visual-basic/reference/command-line-compiler/optionstrict) 编译器选项。
 
 如果源代码文件包含 [Option Strict 语句](/dotnet/visual-basic/language-reference/statements/option-strict-statement)，则语句中的 `On` 或 `Off` 值会替代“编译”页上的“Option Strict”设置   。
 
@@ -95,7 +95,7 @@ Option strict
 
 **Option Strict 各个警告**
 
-“编译”页的“警告配置”部分具有与 `Option Strict` 开启时引起编译时错误的三种情况相对应的设置   。 这些设置如下：
+“编译”页的“警告配置”部分具有与 `Option Strict` 开启时引起编译时错误的三种情况相对应的设置。 这些设置如下：
 
 - 隐式转换 
 
@@ -105,7 +105,7 @@ Option strict
 
 “Option Strict”设置为“开启”时，所有这三个警告配置设置都将被设置为“错误”    。 “Option Strict”设置为“关闭”时，所有这三个设置都将被设置为“无”    。
 
-可单独将各个警告配置设置更改为“无”、“警告”或“错误”    。 如果三个警告配置都设置为“错误”  ，则 `On` 会出现在 `Option strict` 框中。 如果三个都设置为“无”，则 `Off` 会出现在此框中  。 对于这些配置的任何其他组合，显示“(自定义)”  。
+可单独将各个警告配置设置更改为“无”、“警告”或“错误”    。 如果三个警告配置都设置为“错误”  ，则 `On` 会出现在 `Option strict` 框中。 如果三个都设置为“无”，则 `Off` 会出现在此框中。 对于这些配置的任何其他组合，显示“(自定义)”  。
 
 Option compare 
 

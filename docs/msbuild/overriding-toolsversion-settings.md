@@ -82,9 +82,9 @@ msbuild.exe someproj.proj -tv:12.0 -p:Configuration=Debug
     msbuild projectA.proj -t:go -toolsversion:3.5
     ```
 
-4. 将显示以下输出。 对于 `projectA`，命令行上的 `-toolsversion:3.5` 设置将替代 `ToolsVersion=12.0` 标记中的 `Project` 设置。
+4. 将显示以下输出。 对于 `projectA`，命令行上的 `-toolsversion:3.5` 设置将替代 `Project` 标记中的 `ToolsVersion=12.0` 设置。
 
-     `ProjectB` 由 `projectA` 中的任务调用。 该任务具有 `ToolsVersion=2.0`，替代了 `ToolsVersion` 的其他 `projectB` 设置。
+     `ProjectB` 由 `projectA` 中的任务调用。 该任务具有 `ToolsVersion=2.0`，替代了 `projectB` 的其他 `ToolsVersion` 设置。
 
     ```
     Output:
@@ -111,7 +111,7 @@ msbuild.exe someproj.proj -tv:12.0 -p:Configuration=Debug
 
 5. 如果设置了环境变量 `MSBUILDLEGACYDEFAULTTOOLSVERSION`，或者如果未设置 `ToolsVersion`，则使用以下步骤：
 
-    1. 项目文件的 `ToolsVersion`Project[ 元素的 ](../msbuild/project-element-msbuild.md) 属性。 如果此属性不存在，则假定是当前版本。
+    1. 项目文件的 [Project](../msbuild/project-element-msbuild.md) 元素的 `ToolsVersion` 属性。 如果此属性不存在，则假定是当前版本。
 
     2. MSBuild.exe.config  文件中的默认工具版本。
 
@@ -121,7 +121,7 @@ msbuild.exe someproj.proj -tv:12.0 -p:Configuration=Debug
 
     1. 如果环境变量 `MSBUILDDEFAULTTOOLSVERSION` 设置为现有的 `ToolsVersion`，请使用它。
 
-    2. 如果在 MSBuild.exe.config`DefaultOverrideToolsVersion`*中设置了*，请使用它。
+    2. 如果在 MSBuild.exe.config 中设置了 `DefaultOverrideToolsVersion`，请使用它。
 
     3. 如果在注册表中设置了 `DefaultOverrideToolsVersion`，请使用它。
 

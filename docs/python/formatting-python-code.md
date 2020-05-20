@@ -21,16 +21,16 @@ ms.locfileid: "62957525"
 
 在 Visual Studio 中，可以快速重新设置代码格式以匹配预配置的格式设置选项。
 
-- 若要设置选定内容的格式：请选择“编辑” **“高级”** “设置选定内容的格式”或按 Ctrl > E**F** >    +   >   。
-- 若要设置整个文件的格式：请选择“编辑” **“高级”** “设置文档的格式”或按 Ctrl > E**D** >    +   >   。
+- 若要设置选定内容的格式：请选择“编辑” > “高级” > “设置选定内容的格式”或按 Ctrl+E > F。
+- 若要设置整个文件的格式：请选择“编辑” > “高级” > “设置文档的格式”或按 Ctrl+E > D。
 
-可通过“工具” **“选项”** “文本编辑器” > “Python” **“格式”及其嵌套选项卡来设置选项** >    >    >   。 需要选择“显示所有设置”  来显示这些选项：
+可通过“工具” > “选项” > “文本编辑器” > “Python” > “格式”及其嵌套选项卡来设置选项。 需要选择“显示所有设置”  来显示这些选项：
 
 ![Visual Studio 中的 Python“格式”选项](media/options-editor-formatting.png)
 
 默认情况下，“格式”选项设置为匹配 [PEP 8 样式指南](https://www.python.org/dev/peps/pep-0008/)的超集。 “常规”  选项卡确定何时应用格式；本文介绍了其他三个选项卡的设置。
 
-借助 [Visual Studio 中的 Python 支持](installing-python-support-in-visual-studio.md)，还可在“编辑”[“高级”菜单中添加有用的 **“Fill Comment Paragraph”** 命令，如下节所述](#fill-comment-paragraph-command)   >   。
+借助 [Visual Studio 中的 Python 支持](installing-python-support-in-visual-studio.md)，还可在“编辑” > “高级”菜单中添加有用的[“Fill Comment Paragraph”](#fill-comment-paragraph-command)命令，如下节所述。
 
 ## <a name="spacing"></a>间距
 
@@ -109,7 +109,7 @@ ms.locfileid: "62957525"
 
 ## <a name="fill-comment-paragraph-command"></a>填充注释段落命令
 
-使用“编辑” **“高级”** “填充注释段落”(Ctrl > E**P) 可重排并设置注释文本格式，从而组合短行、分割长行** >    +   >   。
+使用“编辑” > “高级” > “填充注释段落”(Ctrl+E > P) 可重排并设置注释文本格式，从而组合短行、分割长行。
 
 例如:
 

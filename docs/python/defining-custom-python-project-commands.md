@@ -36,17 +36,17 @@ Visual Studio 中的某些 Python 项目模板已使用其 .targets 文件添加
 > [!Tip]
 > 每次在文本编辑器中更改项目文件时，都必须在 Visual Studio 中重新加载项目才能应用这些更改。 例如，必须先重新加载项目，才能向要在项目上下文菜单上显示的这些命令添加自定义命令。
 >
-> 如你所知，Visual Studio 提供直接编辑项目文件的方式。 首先右键单击项目文件并选择“卸载项目”，然后再次右键单击并选择“编辑 \<项目名称>”，才能在 Visual Studio 编辑器中打开项目   。 然后，编辑内容并进行保存，再次右键单击项目，再选择“重新加载项目”，此时系统也会提示你确认关闭编辑器中的项目文件  。
+> 如你所知，Visual Studio 提供直接编辑项目文件的方式。 首先右键单击项目文件并选择“卸载项目”，然后再次右键单击并选择“编辑 \<项目名称>”，才能在 Visual Studio 编辑器中打开项目。 然后，编辑内容并进行保存，再次右键单击项目，再选择“重新加载项目”，此时系统也会提示你确认关闭编辑器中的项目文件  。
 >
-> 但在开发自定义命令时，所有这些单击都变得繁琐。 要提升工作流效率，请在 Visual Studio 中加载项目，并同时在单独的编辑器中一并打开 .pyproj 文件（例如 Visual Studio、Visual Studio Code 和记事本等的其他实例）  。 保存在编辑器中所做的更爱并切换到 Visual Studio 时，Visual Studio 会检测所做更改，并询问是否要重新加载项目（已在环境外部修改项目 \<名称>）  。 选择“重新加载”，只需一步即可应用所做更改  。
+> 但在开发自定义命令时，所有这些单击都变得繁琐。 要提升工作流效率，请在 Visual Studio 中加载项目，并同时在单独的编辑器中一并打开 .pyproj 文件（例如 Visual Studio、Visual Studio Code 和记事本等的其他实例）  。 保存在编辑器中所做的更爱并切换到 Visual Studio 时，Visual Studio 会检测所做更改，并询问是否要重新加载项目（已在环境外部修改项目 \<名称>）。 选择“重新加载”，只需一步即可应用所做更改  。
 
 ## <a name="walkthrough-add-a-command-to-a-project-file"></a>演练：向项目文件添加命令
 
-此部分将演示一个使用 python.exe 直接运行项目启动文件的简单示例，有助于熟悉自定义命令  。 （此类命令的作用等同于使用“调试” > “启动但不调试”   。）
+此部分将演示一个使用 python.exe 直接运行项目启动文件的简单示例，有助于熟悉自定义命令  。 （此类命令的作用等同于使用“调试” > “启动但不调试”。）
 
 1. 使用“Python 应用程序”模板新建一个名为“Python-CustomCommands”的项目  。 （如果尚不熟悉流程，请参阅[快速入门：基于模板创建 Python 项目](quickstart-02-python-in-visual-studio-project-from-template.md)以获取相关说明。）
 
-1. 在 Python_CustomCommands.py 中，添加代码 `print("Hello custom commands")`  。
+1. 在 Python_CustomCommands.py 中，添加代码 `print("Hello custom commands")`。
 
 1. 在“解决方案资源管理器”中右键单击项目，再选择“Python”。请注意，子菜单中仅显示 Run PyLint 命令    。 自定义命令也显示在此子菜单上。
 
@@ -60,7 +60,7 @@ Visual Studio 中的某些 Python 项目模板已使用其 .targets 文件添加
     </PropertyGroup>
     ```
 
-1. 切换回到 Visual Studio，并在系统提示出现文件更改时选择“重新加载”  。 然后再次检查“Python”菜单，查看 Run PyLint 是否仍是此处显示的唯一项，因为所添加的行仅复制包含 PyLint 命令的默认 `<PythonCommands>` 属性组   。
+1. 切换回到 Visual Studio，并在系统提示出现文件更改时选择“重新加载”  。 然后再次检查“Python”菜单，查看 Run PyLint 是否仍是此处显示的唯一项，因为所添加的行仅复制包含 PyLint 命令的默认 `<PythonCommands>` 属性组。
 
 1. 通过项目文件切换到编辑器，并在 `<PropertyGroup>` 的后面添加以下 `<Target>` 定义。 如本文稍后所述，此 `Target` 元素定义一个在控制台窗口使用 python.exe 运行启动文件（由“StartupFile”属性标识）的自定义命令  。 此 `ExecuteIn="consolepause"` 属性使用一个在你按键后才关闭的控制台。
 
@@ -143,13 +143,13 @@ Visual Studio 中的某些 Python 项目模板已使用其 .targets 文件添加
 
 | 特性 | 必需 | 描述 |
 | --- | --- | --- |
-| TargetType | 是 | 指定 Target 属性包含的内容以及如何将其与 Arguments 属性一并使用：<ul><li>**可执行文件：** 运行在 Target 中命名的可执行文件，附加 Arguments 的值，就如在命令行中直接输入一般。 值仅可包含项目名称且不可带有参数。</li><li>**脚本**：向 Target 中的文件名运行 python.exe，再执行 Arguments 中的值  。</li><li>**模块**：在 Target 中运行后接模块名的 `python -m`，再运行 Arguments 中的值。</li><li>**代码**：运行 Target 中包含的内联代码。 这会忽略 Arguments 值。</li><li>**pip**：通过 Target 中的命令运行 `pip`，后接 Arguments；但如果 ExecuteIn 设置为“输出”，pip 则假定 `install` 命令并使用 Target 作为包名称。</li></ul> |
+| TargetType | 是 | 指定 Target 属性包含的内容以及如何将其与 Arguments 属性一并使用：<ul><li>**可执行文件：** 运行在 Target 中命名的可执行文件，附加 Arguments 的值，就如在命令行中直接输入一般。 值仅可包含项目名称且不可带有参数。</li><li>**脚本**：向 Target 中的文件名运行 python.exe，再执行 Arguments 中的值  。</li><li>模块：在 Target 中运行后接模块名的 `python -m`，再运行 Arguments 中的值。</li><li>**代码**：运行 Target 中包含的内联代码。 这会忽略 Arguments 值。</li><li>pip：通过 Target 中的命令运行 `pip`，后接 Arguments；但如果 ExecuteIn 设置为“输出”，pip 则假定 `install` 命令并使用 Target 作为包名称。</li></ul> |
 | 目标 | 是 | 要使用的文件名、模块名、代码或 pip 命令（取决于 TargetType）。 |
 | 自变量 | 可选 | 指定要赋值给目标的参数字符串（若有）。 请注意，如果 TargetType 是 `script`，则向 Python 项目赋予参数，而不是 python.exe  。 `code` TargetType 忽略此项。 |
 | ExecuteIn | 是 | 指定要运行命令的环境：<ul><li>**控制台**：（默认）如同直接在命令行上直接输入 Target 和 Arguments 一样运行它们。 这会在运行 Target 时显示命令窗口，该窗口随后自动关闭。</li><li>**consolepause**：与控制台相同，但必须按键才能关闭窗口。</li><li>**输出**：运行 Target 并在 Visual Studio 的“输出”窗口中显示其结果  。 如果 TargetType 为“pip”，则 Visual Studio 使用 Target 作为包名称并附加 Arguments。</li><li>**repl**：在 [Python 交互式](python-interactive-repl-in-visual-studio.md)窗口中运行 Target；可选显示名称用作窗口的标题。</li><li>无：与控制台的行为相同  。</li></ul>|
 | WorkingDirectory | 可选 | 要在其中运行命令的文件夹。 |
 | ErrorRegex<br>WarningRegEx | 可选 | 仅可在 ExecuteIn 为 `output` 时使用。 这两个值均指定一个正则表达式，Visual Studio 使用此表达式来分析命令输出，以在“错误列表”窗口中显示错误和警报  。 若未指定，则命令不会影响“错误列表”窗口  。 有关 Visual Studio 所需内容的详细信息，请参阅[命令的捕获组](#named-capture-groups-for-regular-expressions)。 |
-| RequiredPackages | 可选 | 命令的包请求列表，其中命令的格式与 [requirements.txt](https://pip.readthedocs.io/en/1.1/requirements.html) 相同 (pip.readthedocs.io)  。 “运行 PyLint”命令，例如指定 `pylint>=1.0.0`  。 运行命令之前，Visual Studio 会先检查是否已安装列表中的所有包。 Visual Studio 使用 pip 命令来安装缺少的包。 |
+| RequiredPackages | 可选 | 命令的包请求列表，其中命令的格式与 [requirements.txt](https://pip.readthedocs.io/en/1.1/requirements.html) 相同 (pip.readthedocs.io)。 “运行 PyLint”命令，例如指定 `pylint>=1.0.0`。 运行命令之前，Visual Studio 会先检查是否已安装列表中的所有包。 Visual Studio 使用 pip 命令来安装缺少的包。 |
 | 环境 | 可选 | 运行命令前要定义的环境变量的字符串。 每个变量均使用 \<NAME>=\<VALUE> 形式，多个变量用分号隔开。 具有多个值的变量必须用单引号或双引号引起来，例如 'NAME=VALUE1;VALUE2' 形式。 |
 
 #### <a name="named-capture-groups-for-regular-expressions"></a>正则表达式中已命名的捕获组
@@ -169,7 +169,7 @@ Visual Studio 中的某些 Python 项目模板已使用其 .targets 文件添加
 C:  1, 0: Missing module docstring (missing-docstring)
 ```
 
-“运行 Pylint”命令的 `WarningRegex` 值必须如下所示，Visual Studio 才能从此类警报中提取正确的信息并将其显示在“错误列表”窗口中   ：
+“运行 Pylint”命令的 `WarningRegex` 值必须如下所示，Visual Studio 才能从此类警报中提取正确的信息并将其显示在“错误列表”窗口中：
 
 ```regex
 ^(?<filename>.+?)\((?<line>\d+),(?<column>\d+)\): warning (?<msg_id>.+?): (?<message>.+?)$]]
@@ -200,7 +200,7 @@ C:  1, 0: Missing module docstring (missing-docstring)
 </Project>
 ```
 
-要将 .targets 文件加载到项目中，需将 `<Import Project="(path)">` 元素置于 `<Project>` 元素中（位置不限）  。 例如，如果项目的 targets 子文件夹中具有名为 CustomCommands.targets 的文件，请使用以下代码   ：
+要将 .targets 文件加载到项目中，需将 `<Import Project="(path)">` 元素置于 `<Project>` 元素中（位置不限）。 例如，如果项目的 targets 子文件夹中具有名为 CustomCommands.targets 的文件，请使用以下代码   ：
 
 ```xml
 <Import Project="targets/CustomCommands.targets"/>
@@ -289,7 +289,7 @@ C:  1, 0: Missing module docstring (missing-docstring)
 
 ### <a name="run-server-and-run-debug-server-commands"></a>运行服务器和调试服务器命令
 
-要了解如何为 Web 项目定义“启动服务器”和“启动调试服务器”命令，请查看 [Microsoft.PythonTools.Web.targets](https://github.com/Microsoft/PTVS/blob/master/Python/Product/BuildTasks/Microsoft.PythonTools.Web.targets) (GitHub)   。
+要了解如何为 Web 项目定义“启动服务器”和“启动调试服务器”命令，请查看 [Microsoft.PythonTools.Web.targets](https://github.com/Microsoft/PTVS/blob/master/Python/Product/BuildTasks/Microsoft.PythonTools.Web.targets) (GitHub)。
 
 ### <a name="install-package-for-development"></a>安装开发程序包
 

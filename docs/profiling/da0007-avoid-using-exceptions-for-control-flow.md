@@ -42,6 +42,6 @@ ms.locfileid: "74777694"
  有关详细信息，请参阅 MSDN 上 Microsoft 模式和做法库“提高 .NET 应用程序性能和可扩展性”卷中第 5 章 - 提高托管代码性能”的[异常管理](/previous-versions/msp-n-p/ff647790(v=pandp.10)#exception-management)部分    。
 
 ## <a name="how-to-investigate-a-warning"></a>如何调查警告
- 双击“错误列表”窗口中的消息，导航到“标记”视图。 查找包含 .NET CLR Exceptions( **)@ProcessInstance# of Excels Thrown / sec 度量的列\\** 。 确定是否存在异常处理更频繁的程序执行特定阶段。 使用采样分析，尝试标识生成频繁异常的 throw 语句和 try/catch 块。 如有必要，请向 catch 块添加逻辑，以便了解处理最频繁的异常。 如有可能，使用简单的流控制逻辑或验证代码替换频繁执行的 throw 语句或 catch 块。
+ 双击“错误列表”窗口中的消息，导航到“标记”视图。 查找包含 .NET CLR Exceptions(@ProcessInstance)\\# of Excels Thrown / sec 度量的列。 确定是否存在异常处理更频繁的程序执行特定阶段。 使用采样分析，尝试标识生成频繁异常的 throw 语句和 try/catch 块。 如有必要，请向 catch 块添加逻辑，以便了解处理最频繁的异常。 如有可能，使用简单的流控制逻辑或验证代码替换频繁执行的 throw 语句或 catch 块。
 
  例如，如果发现应用程序正在处理频繁的 DivideByZeroException 异常，则向程序添加逻辑以便检查为零值的分母将改进应用程序的性能。

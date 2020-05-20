@@ -71,7 +71,7 @@ MSBuild 执行项类型之间的转换，并且需要字符串值。 若要查�
 </PropertyGroup>
 ```
 
-项类型 OutputDir 具有值为“KeyFiles`Include`;Certificates\\”的 \\ 属性。 MSBuild 将此字符串分析为两个项：KeyFiles\ 和Certificates\\。 当项类型 OutputDir 用作 OutputDirList 属性的值时，MSBuild 会将项类型转换或“平展”到用分号分隔的字符串“KeyFiles\\;Certificates\\”。
+项类型 OutputDir 具有值为“KeyFiles\\;Certificates\\”的 `Include` 属性。 MSBuild 将此字符串分析为两个项：KeyFiles\ 和Certificates\\。 当项类型 OutputDir 用作 OutputDirList 属性的值时，MSBuild 会将项类型转换或“平展”到用分号分隔的字符串“KeyFiles\\;Certificates\\”。
 
 ## <a name="properties-and-items-in-tasks"></a>任务中的属性和项
 

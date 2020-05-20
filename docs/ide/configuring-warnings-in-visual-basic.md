@@ -23,16 +23,16 @@ ms.locfileid: "76114731"
 
 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 编译器提供了可能导致运行时错误的代码的一组警告。 可以使用这些信息编写 bug 较少的更干净、更快速和更好的代码。 例如，如果用户尝试调用未赋值的对象变量的成员，从未设置返回值的函数返回或者执行有逻辑错误的 `Try` 块来捕获异常，该编译器都将生成警告。
 
-有时该编译器替用户提供额外的逻辑，以便用户可以专注于正在进行的任务，而不用预先考虑可能出现的错误。 在早期版本的 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 中，使用“Option Strict”限制  **编译器提供的其他逻辑**[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]。 通过配置警告，可以用更精细的方式在单个警告级别限制此逻辑。
+有时该编译器替用户提供额外的逻辑，以便用户可以专注于正在进行的任务，而不用预先考虑可能出现的错误。 在早期版本的 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 中，使用“Option Strict”限制 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 编译器提供的其他逻辑。 通过配置警告，可以用更精细的方式在单个警告级别限制此逻辑。
 
 你可能需要自定义项目，并关闭与你的应用程序无关的某些警告，而将其他警告变为错误。 本页说明如何打开和关闭单个警告。
 
 ## <a name="turning-warnings-off-and-on"></a>关闭和打开警告
 配置警告有两种不同的方法：可以使用“项目设计器”  配置警告，也可以使用 **/warnaserror** 和 **/nowarn** 编译器选项进行配置。
 
-使用“项目设计器”  页的“编译”  选项卡可以打开和关闭警告。 选中“禁用所有警告”  复选框可禁用所有警告；选中“将所有警告视为错误”  可将所有警告都视为错误。 有些个别警告可以根据所显示的表的需要，在错误和警告之间切换。
+使用“项目设计器”页的“编译”选项卡可以打开和关闭警告。 选中“禁用所有警告”  复选框可禁用所有警告；选中“将所有警告视为错误”  可将所有警告都视为错误。 有些个别警告可以根据所显示的表的需要，在错误和警告之间切换。
 
-如果“Option Strict”  设置为“Off”  ，则不能将与“Option Strict”  相关的警告视为彼此独立。 如果“Option Strict”  设置为“On”  ，则将相关联的警告视为错误，而无论其状态如何。 如果通过在命令行编译器中指定  **将“Option Strict”** **设置为“自定义”** `/optionstrict:custom`，则可以不受限制地在开和关之间切换“Option Strict”  警告。
+如果“Option Strict”  设置为“Off”  ，则不能将与“Option Strict”  相关的警告视为彼此独立。 如果“Option Strict”  设置为“On”  ，则将相关联的警告视为错误，而无论其状态如何。 如果通过在命令行编译器中指定 `/optionstrict:custom` 将“Option Strict”设置为“自定义”，则可以不受限制地在开和关之间切换“Option Strict”警告。
 
 此外，还可以使用该编译器的 **/warnaserror** 命令行选项指定是否将警告视为错误。 可以将逗号分隔的列表添加到此选项，以通过使用 + 或 - 指定应将哪些警告视为错误或警告。 下表对可能的选项进行了详细说明。
 
@@ -108,7 +108,7 @@ ID：42004（运算符）、42026（属性）
 ID：42105（函数）、42016（运算符）
 
 ### <a name="overloads-modifier-used-in-a-module-warning"></a>在模块中使用重载修饰符警告
-在 `Overloads` 中使用 `Module` 时生成。 新项目的默认值为 On。
+在 `Module` 中使用 `Overloads` 时生成。 新项目的默认值为 On。
 
 ID：42028
 

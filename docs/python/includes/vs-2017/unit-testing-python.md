@@ -21,9 +21,9 @@ ms.locfileid: "71933476"
 
 根据惯例，Visual Studio 将测试标识为名称以“`test`”开头的方法。 若要查看此行为，请执行以下操作：
 
-1. 打开一个 Visual Studio 中加载的 [Python 项目](../../managing-python-projects-in-visual-studio.md)，右键单击该项目，选择“添加”   > “新建项”  ，然后选择其后有“添加”  的“Python 单元测试”  。
+1. 打开一个 Visual Studio 中加载的 [Python 项目](../../managing-python-projects-in-visual-studio.md)，右键单击该项目，选择“添加” > “新建项”，然后选择其后有“添加”的“Python 单元测试” 。
 
-1. 如果直接运行脚本，此操作将创建具有导入标准  *模块的代码的 test1.py*`unittest` 文件，从 `unittest.TestCase` 派生一个测试类，并调用 `unittest.main()`：
+1. 如果直接运行脚本，此操作将创建具有导入标准 `unittest` 模块的代码的 test1.py 文件，从 `unittest.TestCase` 派生一个测试类，并调用 `unittest.main()`：
 
     ```python
 
@@ -37,13 +37,13 @@ ms.locfileid: "71933476"
         unittest.main()
     ```
 
-1. 根据需要保存该文件，然后通过“测试”  **“窗口”**  >  **“测试资源管理器”**  > 菜单命令打开“测试资源管理器”  。
+1. 根据需要保存该文件，然后通过“测试” > “窗口” > “测试资源管理器”菜单命令打开“测试资源管理器”。
 
 1. “测试资源管理器”  会搜索要测试的项目并进行显示，如下所示。 双击测试打开其源文件。
 
     ![显示默认 test_A 的测试资源管理器](../../media/unit-test-A.png)
 
-1. 向项目添加更多测试时，可以使用工具栏上的“分组”  菜单整理“测试资源管理器”  中视图：
+1. 向项目添加更多测试时，可以使用工具栏上的“分组”菜单整理“测试资源管理器”中视图：
 
     ![测试资源管理器分组工具栏菜单](../../media/unit-test-group-menu.png)
 

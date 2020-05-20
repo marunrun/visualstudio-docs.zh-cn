@@ -24,7 +24,7 @@ ms.locfileid: "75565599"
 ---
 # <a name="references-page-project-designer-visual-basic"></a>项目设计器 ->“引用”页 (Visual Basic)
 
-使用“项目设计器”  的“引用”  页可以管理项目中的引用、Web 引用和导入的命名空间。 项目可包含对 COM 组件、XML Web service、.NET 库或程序集以及其他类库的引用。 有关使用引用的详细信息，请参阅[管理项目中的引用](../../ide/managing-references-in-a-project.md)。
+使用“项目设计器”的“引用”页可以管理项目中的引用、Web 引用和导入的命名空间。 项目可包含对 COM 组件、XML Web service、.NET 库或程序集以及其他类库的引用。 有关使用引用的详细信息，请参阅[管理项目中的引用](../../ide/managing-references-in-a-project.md)。
 
 若要访问“引用”页，请在“解决方案资源管理器”中选择项目节点（而非“解决方案”节点）    。 然后在菜单栏上依次选择“项目”  、“属性”  。 当“项目设计器”出现时，单击“引用”选项卡  。
 
@@ -68,7 +68,7 @@ ms.locfileid: "75565599"
 
 可以在此框中键入自己的命名空间，并单击“添加用户导入”，将其添加到命名空间列表  。
 
-可以为用户导入的命名空间创建别名。 为此，可以使用“别名*命名空间”的格式输入别名和命名空间*=  。 使用长命名空间时此格式十分有用，例如：`Http= MyOrg.ObjectLib.Internet.WebRequestMethods.Http`。
+可以为用户导入的命名空间创建别名。 为此，可以使用“别名=命名空间”的格式输入别名和命名空间。 使用长命名空间时此格式十分有用，例如：`Http= MyOrg.ObjectLib.Internet.WebRequestMethods.Http`。
 
  添加用户导入 
 

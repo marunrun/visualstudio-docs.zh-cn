@@ -22,9 +22,9 @@ ms.locfileid: "75595821"
 ---
 # <a name="application-page-project-designer-c"></a>“项目设计器”->“应用程序”页 (C#)
 
-使用“项目设计器”  的“应用程序”  页指定项目的应用程序设置和属性。
+使用“项目设计器”的“应用程序”页指定项目的应用程序设置和属性。
 
-若要访问“应用程序”  页，请在**解决方案资源管理器**中选择项目节点（而非“解决方案”  节点）。 然后在菜单栏上依次选择“项目”   > “属性”  。 当“项目设计器”  出现时，单击“应用程序”  选项卡。
+若要访问“应用程序”页，请在**解决方案资源管理器**中选择项目节点（而非“解决方案”节点）。 然后在菜单栏上依次选择“项目”   > “属性”  。 当“项目设计器”  出现时，单击“应用程序”  选项卡。
 
 [!INCLUDE[note_settings_general](../../data-tools/includes/note_settings_general_md.md)]
 
@@ -69,7 +69,7 @@ ms.locfileid: "75595821"
 
 对于 Web 应用程序项目，必须指定“类库”  。
 
-有关“输出类型”的详细信息，请参阅 [/target（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/target-compiler-option)  。
+有关“输出类型”的详细信息，请参阅 [/target（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/target-compiler-option)。
 
 有关如何以编程方式访问此属性的信息，请参阅 <xref:VSLangProj.ProjectProperties.OutputType%2A>。
 
@@ -83,7 +83,7 @@ ms.locfileid: "75595821"
 
 定义应用程序加载时要调用的入口点。 此选项通常设置为应用程序中的主窗体或当应用程序启动时应运行的 `Main` 过程。 类库没有入口点，因此它们为此属性提供的唯一选项是“(未设置)”  。
 
-默认情况下，在 WPF 应用项目中，此选项设置为“(未设置)”  。 另一个选项为 \[projectname].App。 在 WPF 项目中，必须将启动 URI 设置为在应用程序启动时加载 UI 资源。 要执行此操作，请打开项目中的 Application.xaml 文件，并将 `StartupUri` 属性设置为项目中的 .xaml 文件，例如 Window1.xaml    。 有关可接受的根元素的列表，请参阅 <xref:System.Windows.Application.StartupUri%2A>。 此外，还必须在项目的一个类中定义 `public static void Main()` 方法。 此类将在“启动对象”  列表中显示为 *ProjectName.ClassName*。 然后可以将该类选作启动对象。
+默认情况下，在 WPF 应用项目中，此选项设置为“(未设置)”  。 另一个选项为 \[projectname].App。 在 WPF 项目中，必须将启动 URI 设置为在应用程序启动时加载 UI 资源。 要执行此操作，请打开项目中的 Application.xaml 文件，并将 `StartupUri` 属性设置为项目中的 .xaml 文件，例如 Window1.xaml。 有关可接受的根元素的列表，请参阅 <xref:System.Windows.Application.StartupUri%2A>。 此外，还必须在项目的一个类中定义 `public static void Main()` 方法。 此类将在“启动对象”  列表中显示为 *ProjectName.ClassName*。 然后可以将该类选作启动对象。
 
 有关详细信息，请参阅 [/main（C# 编译器选项）](/dotnet/csharp/language-reference/compiler-options/main-compiler-option)。 若要以编程方式访问此属性，请参阅 <xref:VSLangProj.ProjectProperties.StartupObject%2A>。
 

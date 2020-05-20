@@ -57,13 +57,13 @@ ms.locfileid: "75590353"
    Me.textBox.Text = Me.button.Name
    ```
 
-1. 按 Ctrl+F5 运行应用   。 显示的内容应与以下类似：
+1. 按 Ctrl+F5 运行应用。 显示的内容应与以下类似：
 
    ![带按钮和文本框的 UWP 应用](media/uwp-app.png)
 
 ## <a name="create-a-coded-ui-test"></a>创建编码的 UI 测试
 
-1. 若要向解决方案添加测试项目，请右键单击“解决方案资源管理器”中的解决方案，然后选择“添加” > “新项目”    。
+1. 若要向解决方案添加测试项目，请右键单击“解决方案资源管理器”中的解决方案，然后选择“添加” > “新项目”。
 
 1. 搜索并选择“编码的 UI 测试项目(通用 Windows)”模板  。
 
@@ -74,15 +74,15 @@ ms.locfileid: "75590353"
    ::: moniker-end
 
    > [!NOTE]
-   > 如果未看到“编码的 UI 测试项目(通用 Windows)”模板，则需要[安装编码的 UI 测试组件](../test/use-ui-automation-to-test-your-code.md#install-the-coded-ui-test-component)  。
+   > 如果未看到“编码的 UI 测试项目(通用 Windows)”模板，则需要[安装编码的 UI 测试组件](../test/use-ui-automation-to-test-your-code.md#install-the-coded-ui-test-component)。
 
 1. 在“为编码的 UI 测试生成代码”对话框中，选择“手动编辑测试”   。
 
    ![“为编码的 UI 测试生成代码”对话框](../test/media/manually-edit-the-test.png)
 
-1. 如果尚未运行 UWP 应用，请按 Ctrl+F5 启动应用   。
+1. 如果尚未运行 UWP 应用，请按 Ctrl+F5 启动应用。
 
-1. 将在光标放在 `CodedUITestMethod1` 方法上，然后选择“测试” > “为编码的 UI 测试生成代码” > “使用编码的 UI 测试生成器”，从而 打开“编码的 UI 测试生成器”对话框     。
+1. 将在光标放在 `CodedUITestMethod1` 方法上，然后选择“测试” > “为编码的 UI 测试生成代码” > “使用编码的 UI 测试生成器”，从而 打开“编码的 UI 测试生成器”对话框。
 
 1. 将控件添加到 UI 控件图。 使用“编码的 UI 测试生成器”十字准线工具选择 UWP 应用中的按钮控件  。 在“添加断言”对话框中，展开“UI 控件图”窗格（如有必要），然后选择“将控件添加到 UI 控件图”    。
 
@@ -90,7 +90,7 @@ ms.locfileid: "75590353"
 
 1. 若要将文本框控件添加到 UI 控件图，请重复上一个步骤。
 
-1. 在“编码的 UI 测试生成器”对话框中，选择“生成代码”或按 Ctrl+G     。 然后选择“生成”，创建用于 UI 控件图更改的代码  。
+1. 在“编码的 UI 测试生成器”对话框中，选择“生成代码”或按 Ctrl+G。 然后选择“生成”，创建用于 UI 控件图更改的代码  。
 
      ![为 UI 映射生成代码](../test/media/generate-code-dialog.png)
 
@@ -98,7 +98,7 @@ ms.locfileid: "75590353"
 
      ![单击 button 控件设置 textbox 值](../test/media/uwp-app-button-textbox.png)
 
-1. 添加断言，验证文本框控件中的文本。 使用十字准线工具选择文本框控件，然后在“添加断言”对话框中选择“文本”属性   。 然后，选择“添加断言”或按 Alt+A    。 在“断言失败消息”框中，输入“文本框值异常”   。 然后选择“确定”  。
+1. 添加断言，验证文本框控件中的文本。 使用十字准线工具选择文本框控件，然后在“添加断言”对话框中选择“文本”属性   。 然后，选择“添加断言”或按 Alt+A。 在“断言失败消息”框中，输入“文本框值异常”   。 然后选择“确定”  。
 
      ![选择带有十字准线的文本框，然后添加断言](../test/media/add-assertion-for-text.png)
 
@@ -137,7 +137,7 @@ ms.locfileid: "75590353"
     End Sub
     ```
 
-1. 接下来，需要获取想要测试的 UWP [应用](#create-a-uwp-app-to-test)的 AutomationId  。 打开 Windows“启动”菜单，查看应用的磁贴  。 然后，将十字准线工具![目标图标](media/target-icon.png) 从“编码的 UI 测试生成器”对话框拖动到应用的磁贴中  。 当磁贴周围出现蓝色框时，释放鼠标。
+1. 接下来，需要获取想要测试的 UWP [应用](#create-a-uwp-app-to-test)的 AutomationId。 打开 Windows“启动”菜单，查看应用的磁贴  。 然后，将十字准线工具![目标图标](media/target-icon.png) 从“编码的 UI 测试生成器”对话框拖动到应用的磁贴中  。 当磁贴周围出现蓝色框时，释放鼠标。
 
    ![十字准线工具](media/cross-hair-tool.png)
 
@@ -202,7 +202,7 @@ ms.locfileid: "75590353"
        End Sub
    ```
 
-1. 生成测试项目，然后通过选择“测试” > “Windows” > “测试资源管理器”来打开“测试资源管理器”     。
+1. 生成测试项目，然后通过选择“测试” > “Windows” > “测试资源管理器”来打开“测试资源管理器”。
 
 1. 选择“全部运行”，运行测试  。
 

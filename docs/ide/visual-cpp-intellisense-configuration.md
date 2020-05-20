@@ -38,11 +38,11 @@ IntelliSense 最多生成 1000 个错误。 如果源文件包含的头文件中
 
 ![VC++ Include 目录](media/vcpp-intellisense-include-paths.png)
 
-若要查看生成宏（如 VC_IncludePath  ）的当前值，请选择“Include 目录”行，再单击右侧的下拉列表。 然后，选择“**编辑>”\<** ，并单击“宏”  按钮。
+若要查看生成宏（如 VC_IncludePath  ）的当前值，请选择“Include 目录”行，再单击右侧的下拉列表。 然后，选择“\<编辑>”，并单击“宏”按钮。
 
 ### <a name="makefile-projects"></a>生成文件项目
 
-对于基于 NMake 项目模板的生成文件项目，依次选择左侧窗格中的“NMake”  和“IntelliSense”  类别下的“Include 搜索路径”  ：
+对于基于 NMake 项目模板的生成文件项目，依次选择左侧窗格中的“NMake”和“IntelliSense”类别下的“Include 搜索路径”：
 
 ![生成文件项目 Include 路径](media/vcpp-intellisense-makefile-include-paths.png)
 

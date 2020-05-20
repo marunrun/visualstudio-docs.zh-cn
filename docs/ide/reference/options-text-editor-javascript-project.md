@@ -22,7 +22,7 @@ ms.locfileid: "68605930"
 ---
 # <a name="options-text-editor-javascript-project"></a>“选项”>“文本编辑器”>“JavaScript”>“项目”
 
-使用“选项”对话框中的“项目”页，可以指定代码编辑器中的 JavaScript 和 TypeScript 项目选项   。 要访问此页，请先依次选择菜单栏中的“工具” **“选项”，再依次展开“文本编辑器”** “JavaScript/TypeScript” > “项目”    >    >   。
+使用“选项”对话框中的“项目”页，可以指定代码编辑器中的 JavaScript 和 TypeScript 项目选项   。 要访问此页，请先依次选择菜单栏中的“工具” > “选项”，再依次展开“文本编辑器” > “JavaScript/TypeScript” > “项目”。
 
 ## <a name="project-analysis-options"></a>项目分析选项
 

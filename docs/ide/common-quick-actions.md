@@ -20,7 +20,7 @@ ms.locfileid: "75585517"
 ---
 # <a name="common-quick-actions"></a>常见快速操作
 
-此主题的各个部分列出了同时适用于 C# 和 Visual Basic 代码的一些常见“快速操作”  。 这些操作是适用于编译器诊断或 Visual Studio 中的内置 [.NET Compiler Platform 分析器](../code-quality/roslyn-analyzers-overview.md)的代码修复  。
+此主题的各个部分列出了同时适用于 C# 和 Visual Basic 代码的一些常见“快速操作”  。 这些操作是适用于编译器诊断或 Visual Studio 中的内置 [.NET Compiler Platform 分析器](../code-quality/roslyn-analyzers-overview.md)的代码修复。
 
 ## <a name="actions-that-fix-errors"></a>修复错误的操作
 
@@ -30,7 +30,7 @@ ms.locfileid: "75585517"
 
 ### <a name="correct-misspelled-symbol-or-keyword"></a>更正拼写错误的符号或关键字
 
-如果在 Visual Studio 中意外拼错类型或关键字，此“快速操作”会自动更正拼写错误。 灯泡菜单“将‘\<拼写错误的单词>’更改为‘\<正确单词>’”中会显示这些项  。 例如：
+如果在 Visual Studio 中意外拼错类型或关键字，此“快速操作”会自动更正拼写错误。 灯泡菜单“将‘\<拼写错误的单词>’更改为‘\<正确单词>’”中会显示这些项。 例如：
 
 ```csharp
 // Before

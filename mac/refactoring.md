@@ -42,7 +42,7 @@ Visual Studio for Mac 与 Roslyn（Microsoft 的开源 .NET 编译器平台）�
 * 应用重构（例如，内联临时变量）
 * 生成代码（例如，引入局部变量）
 
-可使用灯泡![灯泡图标](media/quick-actions-light-bulb-icon.png)或螺丝刀![螺丝刀图标](media/quick-actions-screwdriver-icon.png)图标，或当光标位于操作就绪的代码行上时按 Option (⌥)**Enter 来应用快速操作**+  。 如果出现指示错误的红色波形曲线，且 Visual Studio 有针对该错误的可用修复方法，会显示一个错误灯泡![错误灯泡图标](media/quick-actions-error-light-bulb-icon.png)。
+可使用灯泡![灯泡图标](media/quick-actions-light-bulb-icon.png)或螺丝刀![螺丝刀图标](media/quick-actions-screwdriver-icon.png)图标，或当光标位于操作就绪的代码行上时按 Option (⌥)+Enter 来应用快速操作。 如果出现指示错误的红色波形曲线，且 Visual Studio 有针对该错误的可用修复方法，会显示一个错误灯泡![错误灯泡图标](media/quick-actions-error-light-bulb-icon.png)。
 
 第三方可针对任何语言提供自定义诊断和建议，例如随附 SDK 提供，同时根据这些规则，Visual Studio 电灯泡可能亮起。
 
@@ -57,7 +57,7 @@ Visual Studio for Mac 与 Roslyn（Microsoft 的开源 .NET 编译器平台）�
 
 - 将脱字号移动到可使用快速操作的代码行时，编辑器左边距中会显示灯泡和螺丝刀。
 
-- 在行的任意位置按 Option (⌥)**Enter，可查看可用快速操作和重构的列表**+  。
+- 在行的任意位置按 Option (⌥)+Enter，可查看可用快速操作和重构的列表。
 
 ![显示上下文项](media/refactoring-context-action.png)
 
