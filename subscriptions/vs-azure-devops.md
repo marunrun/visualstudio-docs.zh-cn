@@ -38,7 +38,7 @@ ms.locfileid: "81444814"
 | MSDN 平台（标准）                                          | VL、零售                                              | Azure Boards 和 Azure Repos（基础版）、Azure Test Plans                                              |  是          |
 ||
 
-<sup>1</sup>  包括：*不得转售 (NFR)、最有价值专家 (MVP)、区域总监 (RD)、Visual Studio 行业合作伙伴 (VSIP)、Microsoft 合作伙伴网络 (Enterprise)、BizSpark、MCT 软件和服务开发人员、FTE。不包括：MCT 软件和服务、Imagine  。
+<sup>1</sup>  包括：不得转售 (NFR)、最有价值专家 (MVP)、区域总监 (RD)、Visual Studio 行业合作伙伴 (VSIP)、Microsoft 合作伙伴网络 (Enterprise)、BizSpark、MCT 软件和服务开发人员、FTE。不包括：MCT 软件和服务、Imagine。
 
 
 > [!NOTE]
