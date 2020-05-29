@@ -9,25 +9,26 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/10/2017
 ms.author: ghogen
-ms.openlocfilehash: a5f918cac9d2b9e97c047e8823d7702768134336
-ms.sourcegitcommit: 59a8732dc563242590f7c6ccf4ced6c6d195533c
+ms.openlocfilehash: c3d622d52e6ae1c1e25563fdbb05f68a9ecc91d0
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81489670"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84179994"
 ---
-# <a name="how-to-migrate-and-publish-a-web-application-to-an-azure-cloud-service-from-visual-studio"></a>如何：通过 Visual Studio 将 Web 应用程序迁移和发布到 Azure 云服务
+# <a name="how-to-migrate-and-publish-a-web-application-to-an-azure-cloud-service-from-visual-studio"></a>如何：从 Visual Studio 将 web 应用程序迁移和发布到 Azure 云服务
 
 要利用 Azure 的托管服务和缩放功能，可能需要将 Web 应用程序迁移和部署到 Azure 云服务。 只需要很小的更改。 本文仅介绍了如何部署到云服务；对于应用服务，请参阅[在 Azure 应用服务中部署 Web 应用](/azure/app-service/app-service-deploy-local-git)。
 
 > [!Important]
-> 仅特定的 ASP.NET、Silverlight、WCF 和 WCF 工作流项目支持此迁移， 而 ASP.NET Core 项目不支持。 请参阅[支持的项目模板](#supported-project-templates)。
+> 仅特定的 ASP.NET、WCF 和 WCF 工作流项目支持此迁移。 而 ASP.NET Core 项目不支持。 请参阅[支持的项目模板](#supported-project-templates)。
 
 ## <a name="migrate-a-project-to-cloud-services"></a>将项目迁移到云服务
 
-1. 右键单击 Web 应用程序项目，然后选择“转换”>“转换到 Microsoft Azure 云服务项目”****。 （请注意，如果解决方案中已有 web 角色项目，则不会显示此命令。）
-1. Visual Studio 在包含所需 Web 角色的解决方案中创建一个云服务项目。 该项目的名称与加上后缀 `.Azure` 的应用程序项目相同。
-1. 对于 MVC 2、MVC 3、MVC 4 和 Silverlight 业务应用程序需要的任何程序集，Visual Studio 还将“复制本地”属性设置为 true。**** 此属性将这些程序集添加到用于部署的服务包。
+1. 右键单击 "解决方案" 节点，然后选择 "**添加 > 新建项目 ...** "，并将新的 " **Azure 云服务（经典）** " 项目添加到现有解决方案。
+1. 在 "**新建 Microsoft Azure 云服务（经典）** " 对话框中，单击 "确定"，而不向项目添加任何角色。
+1. 右键单击新添加的 "云服务" 项目下的 "角色" 节点，然后选择 "**在解决方案中添加 Web 角色项目 ..."**。
+1. 在 "**与角色项目关联**" 对话框中，选择想要关联为 web 角色的项目。
 
    > [!Important]
    > 如果有此 Web 应用程序所需的其他程序集或文件，必须手动设置这些文件的属性。 有关如何设置这些属性的信息，请参阅[在服务包中包含文件](vs-azure-tools-publishing-a-cloud-service.md#include-files-in-the-service-package)。
@@ -79,7 +80,6 @@ ms.locfileid: "81489670"
 | --- | --- |
 | ASP.NET Web 应用程序<br/>（包括 MVC 2、MVC 3、MVC 4） | 选择 Azure 活动日志的“部署”选项卡中的 URL。******** |
 | ASP.NET 空 Web 应用程序 | 如果你的应用程序中有默认的 `.aspx` 页面，请选择 Azure 活动日志的“部署”选项卡中的 URL。******** 要导航到其他页面，请在浏览器中输入以下窗体的 URL：`<deployment_url>/<page_name>.aspx` |
-| Silverlight 应用程序<br/>Silverlight 业务应用程序<br/>Silverlight 导航应用程序 | 使用以下 URL 窗体导航到应用程序的特定页面：`<deployment_url>/<page_name>.aspx` |
 | WCF 服务应用程序<br/>WCF 工作流服务应用程序 | 将 `.svc` 文件设置为 WCF 服务项目的起始页。 然后导航到 `<deployment_url>/<service_file>.svc`。 |
 | ASP.NET 动态实体<br/>ASP.NET 动态数据 Linq to SQL | 如下一部分所述更新连接字符串。 然后导航到 `<deployment_url>/<page_name>.aspx`。 对于 Linq to SQL，你必须使用 Azure SQL 数据库。 |
 
@@ -117,9 +117,6 @@ ms.locfileid: "81489670"
 | Web | ASP.NET MVC 2 空 Web 应用程序 |
 | Web | ASP.NET 动态数据实体 Web 应用程序 |
 | Web | ASP.NET 动态数据实体 Linq to SQL Web 应用程序 |
-| Silverlight | Silverlight 应用程序 |
-| Silverlight | Silverlight 业务应用程序 |
-| Silverlight | Silverlight 导航应用程序 |
 | WCF | WCF 服务应用程序 |
 | WCF | WCF 工作流服务应用程序 |
 | 工作流 | WCF 工作流服务应用程序 |
