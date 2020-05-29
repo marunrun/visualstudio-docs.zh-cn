@@ -1,5 +1,5 @@
 ---
-title: '&lt;trustInfo&gt;元素 （ClickOnce 应用程序） |Microsoft Docs'
+title: '&lt;trustInfo &gt; 元素（ClickOnce 应用程序） |Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -22,12 +22,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4d6ac13c6eb76bff5ffc07043fd20063700237fc
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.openlocfilehash: 5873eb18b2f803acfd5aba9444657884b1a24581
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66745585"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84184427"
 ---
 # <a name="lttrustinfogt-element-clickonce-application"></a>&lt;trustInfo&gt; 元素（ClickOnce 应用程序）
 描述应用程序要在客户端计算机上运行所需的最低安全权限。
@@ -69,7 +69,7 @@ ms.locfileid: "66745585"
 ## <a name="elements-and-attributes"></a>元素和属性
  `trustInfo` 元素是必需的，它位于 `asm.v2` 命名空间中。 它没有属性，并包含下列元素。
 
-## <a name="security"></a>安全性
+## <a name="security"></a>security
  必需。 此元素是 `trustInfo` 元素的子元素。 它包含 `applicationRequestMinimum` 元素，但没有属性。
 
 ## <a name="applicationrequestminimum"></a>applicationRequestMinimum
@@ -87,7 +87,7 @@ ms.locfileid: "66745585"
      必需。 标识权限的版本。 此值通常为 `1`。
 
 ## <a name="ipermission"></a>IPermission
- 可选。 此元素是 `PermissionSet` 元素的子元素。 `IPermission`元素完全标识.NET Framework 中的权限类。 `IPermission` 元素具有以下属性，但可具有与权限类上属性对应的其他属性。 若要找出特定权限的语法，请参阅 Security.config 文件中列出的示例。
+ 可选。 此元素是 `PermissionSet` 元素的子元素。 `IPermission`元素在 .NET Framework 中完全标识权限类。 `IPermission` 元素具有以下属性，但可具有与权限类上属性对应的其他属性。 若要找出特定权限的语法，请参阅 Security.config 文件中列出的示例。
 
 - `class`
 
@@ -142,7 +142,7 @@ ms.locfileid: "66745585"
 
 - `Level`
 
-   必需。 标识应用程序正在请求的安全级别。 可能的值有：
+   必需。 标识应用程序正在请求的安全级别。 可能的值包括：
 
    `asInvoker`，不请求其他权限。 此级别不需要其他信任提示。
 
