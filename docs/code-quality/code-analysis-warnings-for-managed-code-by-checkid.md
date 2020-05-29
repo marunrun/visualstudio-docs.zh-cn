@@ -71,6 +71,8 @@ f1_keywords:
 - CA1066
 - CA1067
 - CA1068
+- CA1069
+- CA1070
 - CA1200
 - CA1300
 - CA1301
@@ -174,6 +176,8 @@ f1_keywords:
 - CA2006
 - CA2007
 - CA2009
+- CA2011
+- CA2015
 - CA2100
 - CA2101
 - CA2102
@@ -265,32 +269,35 @@ f1_keywords:
 - CA2241
 - CA2242
 - CA2243
+- CA2245
+- CA2246
 - CA5122
+- CA5374
 ms.assetid: 5cb221f6-dc59-4abf-9bfa-adbd6f907f96
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4b4b0929830f825b2c1f7fd568620a3f743308f4
-ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
+ms.openlocfilehash: 6ea04276b7b2fe3dfb5814fbd31602134641b8ef
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82586295"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84180033"
 ---
 # <a name="code-analysis-warnings-for-managed-code-by-checkid"></a>托管代码的代码分析警告（按 CheckId）
 
 下表列出了托管代码的代码分析警告，按警告的 CheckId 标识符排列。
 
-| CheckId | 警告 | 描述 |
+| CheckId | 警告 | 说明 |
 |---------| - | - |
 | CA1000 | [CA1000:不要在泛型类型中声明静态成员](../code-quality/ca1000.md) | 调用泛型类型的静态成员时，必须指定该类型的类型参数。 当调用不支持推理的泛型实例成员时，必须指定该成员的类型参数。 在上述两种情况下，用于指定类型自变量的语法不同，但很容易混淆。 |
 | CA1001 | [CA1001:具有可释放字段的类型应该是可释放的](../code-quality/ca1001.md) | 一个类声明并实现 System.IDisposable 类型的实例字段，但该类不实现 IDisposable。 声明 IDisposable 字段的类间接拥有非托管资源，并且应该实现 IDisposable 接口。 |
-| CA1002 | [CA1002:不要公开泛型列表](../code-quality/ca1002.md) | < \<（T>） >）的泛型集合是设计为性能的泛型集合，而不是继承。 因此，List 不包含任何虚拟成员。 应改为公开针对继承设计的泛型集合。 |
+| CA1002 | [CA1002:不要公开泛型列表](../code-quality/ca1002.md) | < （of \<(T> ） >）是一个泛型集合，设计用于性能，而不是继承。 因此，List 不包含任何虚拟成员。 应改为公开针对继承设计的泛型集合。 |
 | CA1003 | [CA1003:使用泛型事件处理程序实例](../code-quality/ca1003.md) |某个类型包含的委托返回 void，该委托的签名包含两个参数（第一个参数是对象，第二个参数是可以分配给 EventArgs 的类型），而且包含程序集针对的是 Microsoft .NET Framework 2.0。 |
 | CA1004 | [CA1004:泛型方法应提供类型参数](../code-quality/ca1004.md) | 推理是指由传递给泛型方法的自变量类型来确定该方法的类型参数，而不是显式指定类型参数。 若要启用推理，泛型方法的参数签名必须包含与该方法的类型参数属于相同类型的参数。 在这种情况下，不必指定类型参数。 如果对所有类型参数都使用推理，则调用泛型实例方法和非泛型实例方法的语法完全相同；这简化了泛型方法的可用性。 |
-| CA1005 | [CA1005:避免泛型类型的参数过多](../code-quality/ca1005.md) | 泛型类型包含的类型参数越多，越难以知道并记住每个类型参数各代表什么。 通常情况下，使用一个类型形参（如 List\<T> 中所示），并且在某些情况下有两个类型形参\<，如 Dictionary TKey TValue>。 但是，如果存在两个以上的类型参数，则大多数用户都会感到过于困难。 |
+| CA1005 | [CA1005:避免泛型类型的参数过多](../code-quality/ca1005.md) | 泛型类型包含的类型参数越多，越难以知道并记住每个类型参数各代表什么。 通常，使用一个类型参数（与在列表中一样 \<T> ），并且在具有两个类型参数的某些情况下，与在字典中一样 \<TKey, TValue> 。 但是，如果存在两个以上的类型参数，则大多数用户都会感到过于困难。 |
 | CA1006 | [CA1006:不要将泛型类型嵌套在成员签名中](../code-quality/ca1006.md) | 嵌套类型参数是一个类型参数，也是一个泛型类型。 若要调用签名包含嵌套类型参数的成员，用户必须实例化一个泛型类型，并将此类型传递到另一个泛型类型的构造函数。 所需的过程和语法很复杂，应当避免。 |
 | CA1007 |[CA1007:在适用处使用泛型](../code-quality/ca1007.md) | 外部可见方法包含类型为 System.Object 的引用参数。 使用泛型方法使受约束的所有类型都可以传递给该方法，而比不先将类型强制转换为引用参数类型。 |
 | CA1008 | [CA1008:枚举应具有零值](../code-quality/ca1008.md) | 像其他值类型一样，未初始化枚举的默认值为零。 无标志特性的枚举应通过使用零值来定义成员，这样默认值即为该枚举的有效值。 如果应用了 FlagsAttribute 特性的枚举定义值为零成员，则该成员的名称应为“None”，以指示枚举中尚未设置值。 |
@@ -325,7 +332,7 @@ ms.locfileid: "82586295"
 | CA1041 | [CA1041:提供 ObsoleteAttribute 消息](../code-quality/ca1041.md) | 用未指定其 ObsoleteAttribute.Message 属性的 System.ObsoleteAttribute 特性来标记类型或成员。 当编译用 ObsoleteAttribute 标记的类型或成员时，将显示该特性的 Message 属性。 这将为用户提供有关已过时的类型或成员的信息。 |
 | CA1043 | [CA1043:将整型或字符串参数用于索引器](../code-quality/ca1043.md) | 索引器（即索引属性）应将整型或字符串类型用于索引。 这些类型一般用于为数据结构编制索引，并且提高库的可用性。 应仅限于在设计时无法指定特定整型或字符串类型的情况下使用 Object 类型。 |
 | CA1044 | [CA1044:属性不应是只写的](../code-quality/ca1044.md) | 虽然可以接受且经常需要使用只读属性，但设计准则禁止使用只写属性。 这是因为允许用户设置值但又禁止该用户查看这个值不能提供任何安全性。 而且，如果没有读访问，将无法查看共享对象的状态，使其用处受到限制。 |
-| CA1045 |[CA1045:不要通过引用来传递类型](../code-quality/ca1045.md) | 通过引用（使用 out 或 ref）传递类型要求具有以下能力：使用指针的经验，了解值类型和引用类型的不同之处，以及能处理具有多个返回值的方法。 为一般受众设计的库架构师不应指望用户使用`out`或`ref`参数。 |
+| CA1045 |[CA1045:不要通过引用来传递类型](../code-quality/ca1045.md) | 通过引用（使用 out 或 ref）传递类型要求具有以下能力：使用指针的经验，了解值类型和引用类型的不同之处，以及能处理具有多个返回值的方法。 为一般受众设计的库架构师不应指望用户使用 `out` 或 `ref` 参数。 |
 | CA1046 | [CA1046:不要对引用类型重载相等运算符](../code-quality/ca1046.md) | 对于引用类型，相等运算符的默认实现几乎始终是正确的。 默认情况下，仅当两个引用指向同一对象时，它们才相等。 |
 | CA1047 |[CA1047:不要在密封类型中声明受保护的成员](../code-quality/ca1047.md) | 类型声明受保护的成员，使继承类型可以访问或重写该成员。 按照定义，不能继承密封类型，这表示不能调用密封类型上的受保护方法。 |
 | CA1048 | [CA1048:不要在密封类型中声明虚拟成员](../code-quality/ca1048.md) | 类型将方法声明为虚方法，使继承类型可以重写虚方法的实现。 按照定义，不能继承密封类型。 这使得虚方法对于密封类型没有意义。 |
@@ -344,12 +351,14 @@ ms.locfileid: "82586295"
 | CA1061 |[CA1061:不要隐藏基类方法](../code-quality/ca1061.md) | 如果派生方法的参数签名只是在类型方面有所不同，而且与基方法的参数签名中的对应类型相比，这些类型的派生方式更弱，则基类型中的方法由派生类型中的同名方法隐藏。 |
 | CA1062 | [CA1062:验证公共方法的参数](../code-quality/ca1062.md) | 对于传递给外部可见方法的所有引用自变量，都应检查其是否为 null。 |
 | CA1063 | [CA1063:正确实现 IDisposable](../code-quality/ca1063.md) | 所有的 IDisposable 类型都应当正确实现 Dispose 模式。 |
-| CA1064 | [CA1064:异常应该是公共的](../code-quality/ca1064.md) | 内部异常仅在其自己的内部范围内可见。 当异常超出内部范围后，只能使用基异常来捕获该异常。 如果内部异常继承自<xref:System.Exception>、 <xref:System.SystemException>或<xref:System.ApplicationException>，外部代码将不会有足够的信息来了解如何处理该异常。 |
+| CA1064 | [CA1064:异常应该是公共的](../code-quality/ca1064.md) | 内部异常仅在其自己的内部范围内可见。 当异常超出内部范围后，只能使用基异常来捕获该异常。 如果内部异常继承自 <xref:System.Exception> 、或， <xref:System.SystemException> <xref:System.ApplicationException> 外部代码将不会有足够的信息来了解如何处理该异常。 |
 | CA1065 | [CA1065:不要在意外的位置引发异常](../code-quality/ca1065.md) | 不应引发异常的方法引发了异常。 |
-| CA1066 | [CA1066：重写 Equals 时实现 IEquatable](../code-quality/ca1066.md) | 值类型重写<xref:System.Object.Equals%2A>方法，但不实现<xref:System.IEquatable%601>。 |
-| CA1067 | [CA1067：实现 IEquatable 时重写 Equals](../code-quality/ca1067.md) | 类型实现<xref:System.IEquatable%601>，但不重写<xref:System.Object.Equals%2A>方法。 |
+| CA1066 | [CA1066：重写 Equals 时实现 IEquatable](../code-quality/ca1066.md) | 值类型重写 <xref:System.Object.Equals%2A> 方法，但不实现 <xref:System.IEquatable%601> 。 |
+| CA1067 | [CA1067：实现 IEquatable 时重写 Equals](../code-quality/ca1067.md) | 类型实现 <xref:System.IEquatable%601> ，但不重写 <xref:System.Object.Equals%2A> 方法。 |
 | CA1068 | [CA1068:CancellationToken 参数必须最后出现](../code-quality/ca1068.md) | 方法具有一个不是最后一个参数的 CancellationToken 参数。 |
-| CA1200 | [CA1200:不要使用带前缀的 cref 标记](../code-quality/ca1200.md) | XML 文档标记中的[cref](/dotnet/csharp/programming-guide/xmldoc/cref-attribute)特性表示 "代码引用"。 它指定标记的内部文本是一个代码元素，例如类型、方法或属性。 避免使用`cref`带有前缀的标记，因为这会阻止编译器验证引用。 它还可防止 Visual Studio 集成开发环境（IDE）在重构期间查找和更新这些符号引用。 |
+| CA1069 | [CA1069：枚举不应包含重复值](../code-quality/ca1069.md) | 枚举具有多个显式分配相同常数值的成员。 |
+| CA1070 | [CA1070：不要将事件字段声明为虚拟](../code-quality/ca1070.md) | [类似字段的事件](/dotnet/csharp/language-reference/language-specification/classes#field-like-events)被声明为 virtual。 |
+| CA1200 | [CA1200:不要使用带前缀的 cref 标记](../code-quality/ca1200.md) | XML 文档标记中的[cref](/dotnet/csharp/programming-guide/xmldoc/cref-attribute)特性表示 "代码引用"。 它指定标记的内部文本是一个代码元素，例如类型、方法或属性。 避免使用 `cref` 带有前缀的标记，因为这会阻止编译器验证引用。 它还可防止 Visual Studio 集成开发环境（IDE）在重构期间查找和更新这些符号引用。 |
 | CA1300 | [CA1300:指定 MessageBoxOptions](../code-quality/ca1300.md) | 为了让使用从右到左阅读顺序的文化区域正确显示消息框，必须将 MessageBoxOptions 枚举的 RightAlign 和 RtlReading 成员传递给 Show 方法。 |
 | CA1301 | [CA1301:避免快捷键重复](../code-quality/ca1301.md) | 访问键也称为快捷键，它通过使用 Alt 键来实现对控件的键盘访问。 如果多个控件具有重复的访问键，则访问键的行为定义不正确。 |
 | CA1302 | [CA1302:请不要对区域设置特定的字符串进行硬编码](../code-quality/ca1302.md) | System.Environment.SpecialFolder 枚举包含表示特殊系统文件夹的成员。 对于不同的操作系统，这些文件夹的位置可能具有不同的值；用户也可能会更改某些位置；或者这些位置已经进行了本地化。 Environment.GetFolderPath 方法返回与 Environment.SpecialFolder 枚举关联、经过本地化且与当前正在运行的计算机相应的位置。 |
@@ -364,7 +373,7 @@ ms.locfileid: "82586295"
 | CA1401 | [CA1401： P/Invoke 应不可见](../code-quality/ca1401.md) | 公共类型中的公共或受保护方法具有 System.Runtime.InteropServices.DllImportAttribute 特性（还在 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 中由 Declare 关键字实现）。 这些方法不能公开。 |
 | CA1402 |[CA1402:避免在 COM 可见接口中进行重载](../code-quality/ca1402.md) | 在向 COM 客户端公开重载的方法时，只有第一个方法重载保留其名称。 对于后续重载，将为其指定唯一名称，方法是在其名称后面追加一个下划线字符 (_) 和一个与该重载的声明顺序对应的整数。 |
 | CA1403 | [CA1403:自动布局类型不应对 COM 可见](../code-quality/ca1403.md) | COM 可见值类型是使用设置为 LayoutKind 的 InteropServices. StructLayoutAttribute 特性标记的。这些类型的布局在 .NET 版本之间可能会发生变化，这会中断需要特定布局的 COM 客户端。 |
-| CA1404 | [CA1404：紧接在 P/Invoke 之后调用 GetLastError](../code-quality/ca1404.md) | 对 GetLastWin32Error 方法或等效[!INCLUDE[TLA2#tla_win32](../code-quality/includes/tla2sharptla_win32_md.md)]的 GetLastError 函数进行调用，并且直接上一个调用不是操作系统调用方法。 |
+| CA1404 | [CA1404：紧接在 P/Invoke 之后调用 GetLastError](../code-quality/ca1404.md) | 对 GetLastWin32Error 方法或等效的 [!INCLUDE[TLA2#tla_win32](../code-quality/includes/tla2sharptla_win32_md.md)] GetLastError 函数进行调用，并且直接上一个调用不是操作系统调用方法。 |
 | CA1405 | [CA1405:COM 可见类型的基类型应对 COM 可见](../code-quality/ca1405.md) | 某个 COM 可见的类型是从非 COM 可见的类型派生而来。 |
 | CA1406 |[CA1406:避免对 Visual Basic 6 客户端使用 Int64 参数](../code-quality/ca1406.md) | Visual Basic 6 COM 客户端不能访问 64 位整数。 |
 | CA1407 |[CA1407:避免在 COM 可见类型中使用静态成员](../code-quality/ca1407.md) | COM 不支持静态方法。 |
@@ -382,9 +391,9 @@ ms.locfileid: "82586295"
 | CA1504 | [CA1504:检查令人误解的字段名](../code-quality/ca1504.md) | 实例字段的名称以“s_”开头，或者 static（在 Visual Basic 中为 Shared）字段的名称以“m_”开头。 |
 | CA1505 | [CA1505:避免使用无法维护的代码](../code-quality/ca1505.md) | 类型或方法具有较低的可维护性索引值。 如果可维护性指数较低，则表示类型或方法可能难以维护，最好重新进行设计。 |
 | CA1506 | [CA1506:避免过度类耦合度](../code-quality/ca1506.md) | 此规则通过计算类型或方法包含的唯一类型引用的个数来衡量类耦合。 |
-| CA1507 | [CA1507：使用 nameof 代替字符串](../code-quality/ca1507.md) | 字符串文本用作参数，可在其中使用`nameof`表达式。 |
-| CA1508 | [CA1508：避免死条件代码](../code-quality/ca1508.md) | 方法具有始终计算为`true`或`false`在运行时的条件代码。 这会导致条件的`false`分支中的代码停滞。 |
-| CA1509 | [CA1509：代码度量值配置文件中的条目无效](../code-quality/ca1509.md) | 代码度量规则（如[CA1501](ca1501.md)、 [CA1502](ca1502.md)、 [CA1505](ca1505.md)和[CA1506](ca1506.md)）提供了名为`CodeMetricsConfig.txt`的配置文件，该文件具有无效条目。 |
+| CA1507 | [CA1507：使用 nameof 代替字符串](../code-quality/ca1507.md) | 字符串文本用作参数，可在其中 `nameof` 使用表达式。 |
+| CA1508 | [CA1508：避免死条件代码](../code-quality/ca1508.md) | 方法具有始终计算为 `true` 或 `false` 在运行时的条件代码。 这会导致条件的分支中的代码停滞 `false` 。 |
+| CA1509 | [CA1509：代码度量配置文件中的条目无效](../code-quality/ca1509.md) | 代码度量规则（如[CA1501](ca1501.md)、 [CA1502](ca1502.md)、 [CA1505](ca1505.md)和[CA1506](ca1506.md)）提供了名为的配置文件， `CodeMetricsConfig.txt` 该文件具有无效条目。 |
 | CA1600 | [CA1600:不要使用 Idle 进程优先级](../code-quality/ca1600.md) | 不要将进程优先级设置为 Idle。 具有 System.Diagnostics.ProcessPriorityClass.Idle 优先级的进程将在 CPU 本应处于空闲状态时占用它，从而阻止进入待机状态。 |
 | CA1601 | [CA1601:不要使用阻止电源状态更改的计时器](../code-quality/ca1601.md) | 频率较高的定期活动会使 CPU 处于繁忙状态，并且会干扰具有节能功能（关闭显示器和硬盘）的空闲计时器。 |
 | CA1700 | [CA1700:不要命名“Reserved”枚举值](../code-quality/ca1700.md) | 此规则假定当前不使用名称中包含“reserved”的枚举成员，而是将其作为一个占位符，以在将来的版本中重命名或移除它。 重命名或移除成员是一项重大更改。 |
@@ -412,7 +421,7 @@ ms.locfileid: "82586295"
 | CA1726 | [CA1726:使用首选词条](../code-quality/ca1726.md) | 在外部可见的标识符的名称中，包括一个存在首选备用词条的词条。 或者，名称中包含“Flag”或“Flags”一词。 |
 | CA1800 | [CA1800:避免进行不必要的强制转换](../code-quality/ca1800.md) | 重复强制转换会降低性能，特别是在精简的迭代语句中执行强制转换时。 |
 | CA1801 | [CA1801:检查未使用的参数](../code-quality/ca1801.md) | 方法签名包含一个没有在方法体中使用的参数。 |
-| CA1802 |[CA1802:在合适的位置使用文本](../code-quality/ca1802.md) |某个字段被声明为 static 和 read-only（在 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 中为 Shared 和 ReadOnly），并使用可在编译时计算的值初始化。 由于分配给目标字段的值是在编译时可的，因此将声明更改为 const （in in [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]）字段，以便在编译时（而不是在运行时）计算值。 |
+| CA1802 |[CA1802:在合适的位置使用文本](../code-quality/ca1802.md) |某个字段被声明为 static 和 read-only（在 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 中为 Shared 和 ReadOnly），并使用可在编译时计算的值初始化。 由于分配给目标字段的值是在编译时可的，因此将声明更改为 const （in in [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] ）字段，以便在编译时（而不是在运行时）计算值。 |
 | CA1804 | [CA1804:移除未使用的局部变量](../code-quality/ca1804.md) | 未使用的局部变量和不必要的赋值会增加程序集的大小并降低性能。 |
 | CA1806 | [CA1806:不要忽略方法结果](../code-quality/ca1806.md) | 创建一个新对象，但从不使用该对象；或者调用会创建并返回一个新字符串的方法，但从不使用这个新字符串；或者 COM 或 P/Invoke 方法返回一个从不使用的 HRESULT 或错误代码。 |
 | CA1809 |[CA1809:避免过多的局部变量](../code-quality/ca1809.md) | 优化性能的常见方法是将值存储于处理器寄存器，而不是内存中，这称为“注册值”。 若要提高所有的局部变量都能注册的机会，应将局部变量的数目限制在 64 个以内。 |
@@ -429,11 +438,11 @@ ms.locfileid: "82586295"
 | CA1822 |[CA1822:将成员标记为 static](../code-quality/ca1822.md) | 可以将不访问实例数据或不调用实例方法的成员标记为 static（在 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 中为 Shared）。 在将这些方法标记为 static 之后，编译器将向这些成员发出非虚拟调用站点。 这会使性能敏感的代码的性能得到显著提高。 |
 | CA1823 | [CA1823:避免未使用的私有字段](../code-quality/ca1823.md) | 检测到程序集内有似乎未访问过的私有字段。 |
 | CA1824 |[CA1824:用 NeutralResourcesLanguageAttribute 标记程序集](../code-quality/ca1824.md) | NeutralResourcesLanguage 属性通知资源管理器，该语言用于显示程序集的非特定区域性的资源。 这将改进所加载的第一个资源的查找性能，并缩小工作集。 |
-| CA1825 |[CA1825:避免数组分配长度为零](../code-quality/ca1825.md) | 初始化长度为零的数组将导致不必要的内存分配。 相反，请通过调用<xref:System.Array.Empty%2A?displayProperty=nameWithType>来使用静态分配的空数组实例。 内存分配在此方法的所有调用之间共享。 |
+| CA1825 |[CA1825:避免数组分配长度为零](../code-quality/ca1825.md) | 初始化长度为零的数组将导致不必要的内存分配。 相反，请通过调用来使用静态分配的空数组实例 <xref:System.Array.Empty%2A?displayProperty=nameWithType> 。 内存分配在此方法的所有调用之间共享。 |
 | CA1826 |[CA1826:使用属性，而不是 Linq Enumerable 方法](../code-quality/ca1826.md) | <xref:System.Linq.Enumerable>LINQ 方法用于支持等效且更有效的属性的类型。 |
-| CA1827 |[CA1827:如果可以使用 Any，请勿使用 Count/LongCount](../code-quality/ca1827.md) | <xref:System.Linq.Enumerable.Count%2A><xref:System.Linq.Enumerable.LongCount%2A>使用方法，其中<xref:System.Linq.Enumerable.Any%2A>方法会更有效。 |
-| CA1828 |[CA1828:如果可以使用 AnyAsync，请勿使用 CountAsync/LongCountAsync](../code-quality/ca1828.md) | <xref:Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.CountAsync%2A><xref:Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.LongCountAsync%2A>使用方法，其中<xref:Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.AnyAsync%2A>方法会更有效。 |
-| CA1829 |[CA1829:使用 Length/Count 属性，而不是 Enumerable.Count 方法](../code-quality/ca1829.md) | <xref:System.Linq.Enumerable.Count%2A>LINQ 方法用于支持等效的、更有效`Length`的或`Count`属性的类型。 |
+| CA1827 |[CA1827:如果可以使用 Any，请勿使用 Count/LongCount](../code-quality/ca1827.md) | <xref:System.Linq.Enumerable.Count%2A><xref:System.Linq.Enumerable.LongCount%2A>使用方法，其中 <xref:System.Linq.Enumerable.Any%2A> 方法会更有效。 |
+| CA1828 |[CA1828:如果可以使用 AnyAsync，请勿使用 CountAsync/LongCountAsync](../code-quality/ca1828.md) | <xref:Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.CountAsync%2A><xref:Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.LongCountAsync%2A>使用方法，其中 <xref:Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.AnyAsync%2A> 方法会更有效。 |
+| CA1829 |[CA1829:使用 Length/Count 属性，而不是 Enumerable.Count 方法](../code-quality/ca1829.md) | <xref:System.Linq.Enumerable.Count%2A>LINQ 方法用于支持等效的、更有效的或属性的类型 `Length` `Count` 。 |
 | CA1900 | [CA1900:值类型字段应为可移植字段](../code-quality/ca1900.md) | 此规则对以下项进行检查：当用显式布局声明的结构封送到 64 位操作系统上的非托管代码时，是否正确对齐。 |
 | CA1901 | [CA1901： P/Invoke 声明应为可移植声明](../code-quality/ca1901.md) | 此规则计算 P/Invoke 的每个参数和返回值的大小，还验证它们在封送到 32 位和 64 位操作系统上的非托管代码时参数的大小是否正确。 |
 | CA1903 | [CA1903:仅使用目标框架中的 API](../code-quality/ca1903.md) | 一个成员或类型使用了某个 Service Pack 中引入的成员或类型，该 Service Pack 没有与项目的目标框架一起包括。 |
@@ -443,8 +452,10 @@ ms.locfileid: "82586295"
 | CA2003 |[CA2003:不要将纤程视为线程](../code-quality/ca2003.md) | 托管线程被视为 [!INCLUDE[TLA2#tla_win32](../code-quality/includes/tla2sharptla_win32_md.md)] 线程。 |
 | CA2004 | [CA2004:移除对 GC.KeepAlive 的调用](../code-quality/ca2004.md) | 如果转换为使用 SafeHandle，请移除所有对 GC.KeepAlive (object) 的调用。 在这种情况下，类不必调用 GC.KeepAlive。 这将假定它们没有终结器，而只是依赖 SafeHandle 来为它们完成 OS 句柄。 |
 | CA2006 | [CA2006:使用 SafeHandle 封装本机资源](../code-quality/ca2006.md) | 在托管代码中使用 IntPtr 可能意味着潜在的安全性和可靠性方面的问题。 必须检查所有使用 IntPtr 之处，以确定是否需要在该处使用 SafeHandle 或类似的技术。 |
-| CA2007 | [CA2007：不直接等待任务](ca2007.md) | 异步方法会[awaits](/dotnet/csharp/language-reference/keywords/await) <xref:System.Threading.Tasks.Task>直接等待。 当异步方法<xref:System.Threading.Tasks.Task>直接等待时，延续将在创建任务的同一线程中发生。 此行为在性能方面可能会很大，并且可能会在 UI 线程上导致死锁。 请考虑<xref:System.Threading.Tasks.Task.ConfigureAwait(System.Boolean)?displayProperty=nameWithType>调用以通知你的继续符。 |
-| CA2009 | [CA2009：不要对 ImmutableCollection 值调用 ToImmutableCollection](ca2009.md) | `ToImmutable`不必要地对命名空间中<xref:System.Collections.Immutable>的不可变集合调用方法。 |
+| CA2007 | [CA2007：不直接等待任务](ca2007.md) | 异步方法会[awaits](/dotnet/csharp/language-reference/keywords/await)直接等待 <xref:System.Threading.Tasks.Task> 。 当异步方法直接等待时 <xref:System.Threading.Tasks.Task> ，延续将在创建任务的同一线程中发生。 此行为在性能方面可能会很大，并且可能会在 UI 线程上导致死锁。 请考虑调用 <xref:System.Threading.Tasks.Task.ConfigureAwait(System.Boolean)?displayProperty=nameWithType> 以通知你的继续符。 |
+| CA2009 | [CA2009：请勿对 ImmutableCollection 值调用 ToImmutableCollection](ca2009.md) | `ToImmutable`不必要地对命名空间中的不可变集合调用方法 <xref:System.Collections.Immutable> 。 |
+| CA2011 | [CA2011：不要在其资源库中分配属性](ca2011.md) | 属性在其自身的[set 访问器](/dotnet/csharp/programming-guide/classes-and-structs/using-properties#the-set-accessor)中被意外赋值。 |
+| CA2015 | [CA2015：不要为派生自 MemoryManager T 的类型定义终结器 &lt;&gt;](ca2015.md) | 将终结器添加到从派生的类型 <xref:System.Buffers.MemoryManager%601> 时，可能会允许在仍在使用时释放内存 <xref:System.Span%601> 。 |
 | CA2100 | [CA2100:检查 SQL 查询是否存在安全漏洞](../code-quality/ca2100.md) | 一个方法使用按该方法的字符串参数生成的字符串设置 System.Data.IDbCommand.CommandText 属性。 此规则假定字符串参数中包含用户输入。 基于用户输入生成的 SQL 命令字符串易于受到 SQL 注入式攻击。 |
 | CA2101 |[CA2101：为 P/Invoke 字符串参数指定封送处理](../code-quality/ca2101.md) | 某平台调用成员允许部分受信任的调用方，具有一个字符串参数，并且不显式封送该字符串。 这可能导致潜在的安全漏洞。 |
 | CA2102 | [CA2102:在常规处理程序中捕捉非 CLSCompliant 异常](../code-quality/ca2102.md) | 程序集中未用 RuntimeCompatibilityAttribute 标记或用 RuntimeCompatibility(WrapNonExceptionThrows = false) 标记的某个成员包含一个处理 System.Exception 的 catch 块，而不包含紧跟其后的一般 catch 块。 |
@@ -533,4 +544,28 @@ ms.locfileid: "82586295"
 | CA2241 | [CA2241:为格式化方法提供正确的参数](../code-quality/ca2241.md) | 传递给 System.String.Format 的 format 自变量不包含对应于每个对象自变量的格式项，反之亦然。 |
 | CA2242 |[CA2242:正确测试 NaN](../code-quality/ca2242.md) | 此表达式对照 Single.Nan 或 Double.Nan 测试某个值。 使用 Single.IsNan(Single) 或 Double.IsNan(Double) 测试该值。 |
 | CA2243 |[CA2243:特性字符串文本应正确分析](../code-quality/ca2243.md) | 特性的字符串文本参数不能正确解析为 URL、GUID 或版本。 |
+| CA2244 | [CA2244：不重复索引元素初始化](../code-quality/ca2244.md) | 对象初始值设定项具有多个具有相同的常量索引的索引元素初始值设定项。 除最后一个初始值设定项之外的所有都是冗余的。 |
+| CA2245 | [CA2245：不要将属性分配给自身](../code-quality/ca2245.md) | 属性意外分配给自身。 |
+| CA2246 | [CA2246：不要在同一语句中分配符号及其成员](../code-quality/ca2246.md) | 不建议在同一语句中分配符号及其成员（即，字段或属性）。 如果成员访问权限打算在赋值前使用符号的旧值，或者在此语句的赋值中使用新值，则不清楚。 |
 | CA5122 | [CA5122 P/Invoke 声明不应是安全关键的](../code-quality/ca5122.md) | 当方法执行安全敏感性操作时，将被标记为 SecuritySafeCritical，但透明代码使用它们也是安全的。 透明代码决不能通过通过 P/Invoke 直接调用本机代码。 因此，将 P/Invoke 标记为安全关键将使透明代码无法调用它，并且会误导安全分析。 |
+| CA5359 | [CA5359 不禁用证书验证](../code-quality/ca5359.md) | 证书可以帮助验证服务器的身份。 客户端应验证服务器证书，以确保将请求发送到目标服务器。 如果 Servicepointmanager.servercertificatevalidationcallback 始终返回 `true` ，则任何证书将通过验证。 |
+| CA5362 | [反序列化对象图中的 CA5362 潜在引用循环](../code-quality/ca5362.md) | 如果反序列化不受信任的数据，则处理反序列化对象图的任何代码都需要处理引用循环，而不会进入无限循环。 这包括作为反序列化回调一部分的代码和在反序列化完成后处理对象图的代码。 否则，攻击者可能会对包含引用周期的恶意数据执行拒绝服务攻击。 |
+| CA5365 | [CA5365 不禁用 HTTP 头检查](../code-quality/ca5365.md) | HTTP 标头检查启用在响应标头中找到的回车符和换行符（\r 和 \n）的编码。 这种编码有助于避免注入攻击，攻击者利用该应用程序回显了标头中包含的不受信任的数据。 |
+| CA5366 | [CA5366 使用 XmlReader 进行数据集读取 XML](../code-quality/ca5366.md) | 使用 <xref:System.Data.DataSet> 读取包含不受信任数据的 XML 可能会加载危险的外部引用，应使用 <xref:System.Xml.XmlReader> 具有安全解析程序或禁用 DTD 处理的进行限制。 |
+| CA5367 | [CA5367 不序列化包含指针字段的类型](../code-quality/ca5367.md) | 此规则检查是否存在具有指针字段或属性的可序列化类。 无法序列化的成员可以是指针，如使用标记的静态成员或字段 <xref:System.NonSerializedAttribute> 。 |
+| CA5368 | [CA5368 为派生自 Page 的类设置 ViewStateUserKey](../code-quality/ca5368.md) | 设置 <xref:System.Web.UI.Page.ViewStateUserKey> 属性可帮助您阻止对应用程序的攻击，方法是允许您为个别用户分配视图状态变量的标识符，使攻击者无法使用该变量生成攻击。 否则，会出现跨站点请求伪造的漏洞。 |
+| CA5374 | [CA5374 不使用 XslTransform](../code-quality/ca5374.md) | 此规则检查 <xref:System.Xml.Xsl.XslTransform?displayProperty=nameWithType> 是否在代码中实例化。 <xref:System.Xml.Xsl.XslTransform?displayProperty=nameWithType>现已过时，不应使用。 |
+| CA5379 | [CA5379 不使用弱密钥派生函数算法](../code-quality/ca5379.md) | <xref:System.Security.Cryptography.Rfc2898DeriveBytes>类默认使用 <xref:System.Security.Cryptography.HashAlgorithmName.SHA1> 算法。 应指定要在具有 <xref:System.Security.Cryptography.HashAlgorithmName.SHA256> 或更高版本的构造函数的某些重载中使用的哈希算法。 请注意， <xref:System.Security.Cryptography.Rfc2898DeriveBytes.HashAlgorithm> 属性仅具有 `get` 访问器，没有 `overriden` 修饰符。 |
+| CA5382 | [CA5382 在 ASP.NET Core 中使用安全 cookie](../code-quality/ca5382.md) | 通过 HTTPS 提供的应用程序必须使用安全 cookie，这向浏览器指示该 cookie 只应使用安全套接字层（SSL）进行传输。 |
+| CA5383 | [CA5383 确保在 ASP.NET Core 中使用安全 cookie](../code-quality/ca5383.md) | 通过 HTTPS 提供的应用程序必须使用安全 cookie，这向浏览器指示该 cookie 只应使用安全套接字层（SSL）进行传输。 |
+| CA5384 | [CA5384 不使用数字签名算法（DSA）](../code-quality/ca5384.md) | DSA 是弱非对称加密算法。 |
+| CA5385 | [CA5385 使用具有足够密钥大小的 Rivest – Rivest-shamir-adleman – Rivest-shamir-adleman （RSA）算法](../code-quality/ca5385.md) | 小于2048位的 RSA 密钥更容易受到暴力破解攻击。 |
+| CA5387 | [CA5387 不使用弱密钥派生函数，迭代次数不足](../code-quality/ca5387.md) | 此规则检查是否生成了的加密密钥 <xref:System.Security.Cryptography.Rfc2898DeriveBytes> ，迭代次数小于100000。 较高的迭代次数可帮助缓解字典攻击，尝试猜测生成的加密密钥。 |
+| CA5388 | [使用弱密钥派生函数时，CA5388 确保有足够的迭代计数](../code-quality/ca5388.md) | 此规则检查是否生成的加密密钥 <xref:System.Security.Cryptography.Rfc2898DeriveBytes> 带有小于100000的迭代次数。 较高的迭代次数可帮助缓解字典攻击，尝试猜测生成的加密密钥。 |
+| CA5390 | [CA5390 不对加密密钥进行硬编码](../code-quality/ca5390.md) | 若要成功使用对称算法，密钥必须仅对发送方和接收方是已知的。 当某个密钥是硬编码的，很容易发现它。 即使已编译的二进制文件，恶意用户也可以轻松地将其提取出来。 私钥泄露后，可以直接解密密码文本，而不会再对其进行保护。 |
+| CA5394 | [CA5394 不使用不安全的随机性](../code-quality/ca5394.md) | 使用加密弱伪随机数生成器可以允许攻击者预测将生成的安全敏感值。 |
+| CA5396 | [对于 HttpCookie，CA5396 将 HttpOnly 设置为 true](../code-quality/ca5396.md) | 作为深层防御措施，请确保将安全敏感的 HTTP cookie 标记为 HttpOnly。 这表明 web 浏览器应禁止脚本访问 cookie。 注入的恶意脚本是偷窃 cookie 的常见方法。 |
+| CA5399 | [CA5399 肯定禁用 HttpClient 证书吊销列表检查](../code-quality/ca5399.md) | 吊销的证书不再受信任。 攻击者可以使用它来传递某些恶意数据或偷窃 HTTPS 通信中的敏感数据。 |
+| CA5400 | [CA5400 确保未禁用 HttpClient 证书吊销列表检查](../code-quality/ca5400.md) | 吊销的证书不再受信任。 攻击者可以使用它来传递某些恶意数据或偷窃 HTTPS 通信中的敏感数据。 |
+| CA5401 | [CA5401 不将 CreateEncryptor 与非默认 IV 一起使用](../code-quality/ca5401.md) | 对称加密应始终使用不可重复的初始化向量来防止字典攻击。 |
+| CA5402 | [CA5402 将 CreateEncryptor 与默认 IV 一起使用](../code-quality/ca5402.md) | 对称加密应始终使用不可重复的初始化向量来防止字典攻击。 |
