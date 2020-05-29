@@ -84,9 +84,9 @@
               href: how-to-write-a-run-time-error-reporting-function.md
             - name: 使用无 C 运行库的运行时检查
               href: using-run-time-checks-without-the-c-run-time-library.md
-    - name: 附加到运行的进程
+    - name: 附加到正在运行的进程
       href: attach-to-running-processes-with-the-visual-studio-debugger.md
-    - name: 指定符号 (.pdb) 和源文件
+    - name: 指定符号 (.pdb) 文件和源文件
       href: specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md
     - name: 调试 64 位应用程序
       href: debug-64-bit-applications.md
@@ -140,7 +140,7 @@
           href: how-to-debug-an-executable-not-part-of-a-visual-studio-solution.md
         - name: 使用 Code Center Premium 源进行调试
           href: how-to-debug-with-code-center-premium-source.md
-        - name: 调试和托管进程
+        - name: 调试和承载进程
           href: debugging-and-the-hosting-process.md
         - name: 指定用于调试的 .NET Framework 版本
           href: how-to-specify-a-dotnet-framework-version-for-debugging.md
@@ -230,9 +230,9 @@
           href: dump-file-summary-extensibility-api.md
     - name: 还原隐藏的调试器命令
       href: how-to-restore-hidden-debugger-commands.md
-- name: 远程调试
+- name: Remote Debugging
   items:
-    - name: 远程调试
+    - name: Remote Debugging
       href: remote-debugging.md
     - name: 配置 Windows 防火墙以便进行远程调试
       href: configure-the-windows-firewall-for-remote-debugging.md
@@ -244,9 +244,7 @@
       items:
         - name: 远程调试错误和疑难解答
           href: remote-debugging-errors-and-troubleshooting.md
-        - name: 远程计算机上的 Microsoft Visual Studio 远程调试监视器没有连接到此计算机的权限
-          href: error-the-microsoft-visual-studio-remote-debugging-monitor-on-the-remote-computer-does-not-have-permission-to-connect-to-this-computer.md
-        - name: 尝试联系远程计算机时出现 DCOM 错误。 访问被拒绝。
+        - name: 尝试联系远程计算机时出现 DCOM 错误。 拒绝访问。
           href: a-dcom-error-occurred-trying-to-contact-the-remote-computer-access-is-denied.md
         - name: 远程计算机上的 Microsoft Visual Studio 远程调试监视器正在以其他用户身份运行 |Microsoft Docs
           href: error-the-microsoft-visual-studio-remote-debugging-monitor-on-the-remote-computer-is-running-as-a-different-user.md
@@ -258,8 +256,6 @@
           href: error-kerberos-authentication-failed.md
         - name: 确保目标计算机上正确配置了 DNS
           href: error-ensure-that-dns-is-correctly-configured-on-the-target-computer.md
-        - name: Microsoft Visual Studio 远程调试监视器 (MSVSMON.EXE) 似乎没有在远程计算机上运行。
-          href: error-the-microsoft-visual-studio-remote-debugging-monitor-msvsmon-exe-does-not-appear-to-be-running-on-the-remote-computer.md
         - name: Unable to Connect to the Microsoft Visual Studio Remote Debugging Monitor
           href: unable-to-connect-to-the-microsoft-visual-studio-remote-debugging-monitor.md
         - name: 无法启动 DCOM 通信
@@ -352,7 +348,7 @@
           href: debugging-windows-store-and-windows-universal-apps.md
         - name: 从 Visual Studio 运行应用程序
           items:
-            - name: 从 Visual Studio 运行应用程序
+            - name: 从 Visual Studio 运行应用
               href: run-store-apps-from-visual-studio.md
             - name: 在本地计算机上运行 Windows 应用商店应用程序
               href: run-windows-store-apps-on-the-local-machine.md
@@ -390,7 +386,7 @@
                   href: refresh-an-app-javascript.md
                 - name: 调试 WebView 控件
                   href: debug-a-webview-control.md
-                - name: 键盘快捷方式
+                - name: 键盘快捷键
                   href: keyboard-shortcuts-html-and-javascript.md
                 - name: 调试 HTML、CSS 和 JavaScript 示例代码
                   href: debug-html-css-and-javascript-sample-code.md
@@ -410,7 +406,7 @@
                   href: navigate-a-debugging-session-in-visual-studio-xaml-and-csharp.md
                 - name: '调试器导航示例代码（XAML 和 C#）'
                   href: debugger-navigation-sample-code-xaml-and-csharp.md
-            - name: 触发 Windows 应用商店的挂起、继续和后台事件
+            - name: 触发 Windows 应用商店的挂起、继续和后台事件）
               href: how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio.md
         - name: 预提取 Windows 应用商店应用的内容
           href: prefetch-content-for-windows-store-apps.md
@@ -422,7 +418,7 @@
           items:
             - name: 'C#、F# 和 Visual Basic 项目类型'
               href: debugging-preparation-csharp-f-hash-and-visual-basic-project-types.md
-            - name: 推荐的属性设置
+            - name: 建议的属性设置
               href: managed-debugging-recommended-property-settings.md
             - name: Windows 窗体应用程序
               href: debugging-preparation-windows-forms-applications.md
@@ -510,7 +506,7 @@
               href: debugging-native-code-faqs.md
             - name: 如何调试访问冲突？
               href: how-can-i-debug-an-access-violation-q.md
-            - name: 在调试器外部运行程序时，如何调试访问冲突？
+            - name: 在调试器外部运行程序时如何调试访问冲突？
               href: how-can-i-debug-access-violations-when-running-my-program-outside-the-debugger-q.md
             - name: 如何查明指针是否损坏了内存地址？
               href: how-can-i-find-out-if-my-pointers-corrupt-a-memory-address-q.md
@@ -716,9 +712,9 @@
           items:
             - name: 错误和疑难解答
               href: debugging-web-applications-errors-and-troubleshooting.md
-            - name: 故障排除
+            - name: 疑难解答
               items:
-                - name: 故障排除
+                - name: 疑难解答
                   href: debugging-web-applications-troubleshooting.md
                 - name: 验证 IIS 属性设置
                   href: how-to-verify-iis-property-settings.md
