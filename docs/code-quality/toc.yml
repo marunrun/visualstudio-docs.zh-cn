@@ -332,12 +332,16 @@
                   href: ca1064.md
                 - name: 'CA1065:不要在意外的位置引发异常'
                   href: ca1065.md
-                - name: CA1066：重写 Equals 时实现 IEquatable
+                - name: 'CA1066:重写 Equals 时实现 IEquatable'
                   href: ca1066.md
-                - name: CA1067：实现 IEquatable 时重写 Equals
+                - name: 'CA1067:实现 IEquatable 时重写 Equals'
                   href: ca1067.md
                 - name: 'CA1068:CancellationToken 参数必须最后出现'
                   href: ca1068.md
+                - name: 'CA1069:枚举不得具有重复值'
+                  href: ca1069.md
+                - name: 'CA1070:不要将事件字段声明为“虚拟”'
+                  href: ca1070.md
                 - name: 'CA2210:程序集应具有有效的强名称'
                   href: ca2210.md
             - name: 文档警告
@@ -428,11 +432,11 @@
                   href: ca1505.md
                 - name: 'CA1506:避免过度类耦合度'
                   href: ca1506.md
-                - name: CA1507：使用 nameof 代替字符串
+                - name: 'CA1507:使用 nameof 代替字符串'
                   href: ca1507.md
-                - name: CA1508：避免死条件代码
+                - name: 'CA1508:避免死条件代码'
                   href: ca1508.md
-                - name: CA1509：代码度量配置文件中的条目无效
+                - name: 'CA1509:代码度量配置文件中的条目无效'
                   href: ca1509.md
             - name: 移动性警告
               items:
@@ -579,6 +583,10 @@
                   href: ca2007.md
                 - name: CA2009：请勿对 ImmutableCollection 值调用 ToImmutableCollection
                   href: ca2009.md
+                - name: 'CA2011:请勿在其资源库中分配属性'
+                  href: ca2011.md
+                - name: 'CA2015:请勿为派生自 MemoryManager<T> 的类型定义终结器'
+                  href: ca2015.md
             - name: 安全警告
               items:
                 - name: 概述
@@ -740,12 +748,24 @@
                   href: ca3147.md
                 - name: CA5358：请勿使用不安全的密码模式
                   href: ca5358.md
+                - name: 'CA5359:请勿禁用证书验证'
+                  href: ca5359.md
                 - name: CA5361：不禁用 SChannel 使用强加密
                   href: ca5361.md
+                - name: 'CA5362:反序列化对象图中存在潜在引用循环'
+                  href: ca5362.md
                 - name: CA5363：请勿禁用请求验证
                   href: ca5363.md
                 - name: CA5364：不使用已弃用的安全协议
                   href: ca5364.md
+                - name: 'CA5365:请勿禁用 HTTP 头检查'
+                  href: ca5365.md
+                - name: 'CA5366:将 XmlReader 用于数据集读取 XML'
+                  href: ca5366.md
+                - name: 'CA5367:请勿序列化具有 Pointer 字段的类型'
+                  href: ca5367.md
+                - name: 'CA5368:针对派生自 Page 的类设置 ViewStateUserKey'
+                  href: ca5368.md
                 - name: CA5369：将 XmlReader 用于反序列化
                   href: ca5369.md
                 - name: CA5370：将 XmlReader 用于验证读取器
@@ -756,21 +776,51 @@
                   href: ca5372.md
                 - name: CA5373：请勿使用已过时的密钥派生功能
                   href: ca5373.md
+                - name: 'CA5374:请勿使用 XslTransform'
+                  href: ca5374.md
                 - name: CA5378：不禁用 ServicePointManagerSecurityProtocols
                   href: ca5378.md
+                - name: 'CA5379:请勿使用弱密钥派生功能算法'
+                  href: ca5379.md
                 - name: CA5380：请勿将证书添加到根存储中
                   href: ca5380.md
                 - name: CA5381：请确保证书未添加到根存储中
                   href: ca5381.md
+                - name: 'CA5382:在 ASP.NET Core 中使用安全 Cookie'
+                  href: ca5382.md
+                - name: 'CA5383:确保在 ASP.NET Core 中使用安全 Cookie'
+                  href: ca5383.md
+                - name: 'CA5384:不使用数字签名算法(DSA)'
+                  href: ca5384.md
+                - name: 'CA5385:设置具有足够密钥大小的 Rivest–Shamir–Adleman (RSA)算法'
+                  href: ca5385.md
                 - name: CA5386：避免对 SecurityProtocolType 值进行硬编码
                   href: ca5386.md
+                - name: 'CA5387:请勿使用迭代计数不足的弱密钥派生功能'
+                  href: ca5387.md
+                - name: 'CA5388:使用弱密钥派生功能时，请确保迭代计数足够大'
+                  href: ca5388.md
                 - name: CA5389：请勿将存档项的路径添加到目标文件系统路径中
                   href: ca5389.md
-                - name: CA5397：不使用已弃用的 SslProtocols 值
+                - name: 'CA5390:请勿编码加密密钥'
+                  href: ca5390.md
+                - name: 'CA5394:请勿使用不安全的随机性'
+                  href: ca5394.md
+                - name: 'CA5396:将 HttpCookie 的 HttpOnly 设置为 true'
+                  href: ca5396.md
+                - name: 'CA5397:不使用已弃用的 SslProtocols 值'
                   href: ca5397.md
-                - name: CA5398：避免硬编码的 SslProtocols 值
+                - name: 'CA5398:避免硬编码的 SslProtocols 值'
                   href: ca5398.md
-                - name: CA5403：请勿硬编码证书
+                - name: 'CA5399:绝对禁用 HttpClient 证书吊销列表检查'
+                  href: ca5399.md
+                - name: 'CA5400:确保未禁用 HttpClient 证书吊销列表检查'
+                  href: ca5400.md
+                - name: 'CA5401:不要将 CreateEncryptor 与非默认 IV 结合使用'
+                  href: ca5401.md
+                - name: 'CA5402:将 CreateEncryptor 与默认 IV 结合使用'
+                  href: ca5402.md
+                - name: 'CA5403:请勿硬编码证书'
                   href: ca5403.md
             - name: 用法警告
               items:
@@ -863,5 +913,11 @@
                   href: ca2242.md
                 - name: 'CA2243:特性字符串文本应正确分析'
                   href: ca2243.md
+                - name: 'CA2244:不要复制已索引的元素初始值设定项'
+                  href: ca2244.md
+                - name: 'CA2245:请勿将属性分配给其自身'
+                  href: ca2245.md
+                - name: 'CA2246:请勿在同一语句中分配符号及其成员'
+                  href: ca2246.md
             - name: 自动功能挂起
               href: automatic-feature-suspension.md

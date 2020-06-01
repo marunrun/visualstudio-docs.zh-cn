@@ -7,12 +7,12 @@ ms.assetid: 59eb35fd-ec94-41ce-b24c-a8a120976bac
 author: CaityBuschlen
 ms.author: cabuschl
 ms.date: 3/3/2020
-ms.openlocfilehash: 7c90cb398e174d5b023668040352de11e1caaee3
-ms.sourcegitcommit: cc58ca7ceae783b972ca25af69f17c9f92a29fc2
+ms.openlocfilehash: 192cb7118a9f431ce2e7a9396b67a919fad10bb9
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81386166"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84200326"
 ---
 ## <a name="how-do-i-assign-visual-studio-subscriptions"></a>如何分配 Visual Studio 订阅？
 
@@ -22,7 +22,7 @@ ms.locfileid: "81386166"
 
 1. 选择 [manage.visualstudio.com](https://manage.visualstudio.com) 页面顶部的[“管理订阅者”选项卡](https://manage.visualstudio.com/subscribers)
 2. 选择“添加”，然后键入要分配订阅的用户的名称和电子邮件地址。
-    - 如果你的组织使用 Azure Active Directory，则将搜索“名称”字段以查找当前控制器中的人员。 你可以从搜索结果中进行选择，也可以手动添加其他人。
+    1. 如果你的组织使用 Azure Active Directory，则将搜索“名称”字段以查找当前控制器中的人员。 你可以从搜索结果中进行选择，也可以手动添加其他人。
 3. 如果你希望订阅者在登录 [Visual Studio 订阅门户](https://my.visualstudio.com/)时可以访问软件下载项，请务必在“下载设置”部分保持启用下载项切换开关。
 4. 完成“通信首选项”部分，以便我们知道用什么语言向订阅者发送分配电子邮件。
 5. 如果想要添加任何与分配相关的注释，请使用“参考”选项。

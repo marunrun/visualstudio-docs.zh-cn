@@ -8,16 +8,16 @@ ms.technology: ''
 author: CaityBuschlen
 ms.author: cabuschl
 ms.date: 3/3/2020
-ms.openlocfilehash: 417b3e8dd4145a8f19b273d88b688af389eaf876
-ms.sourcegitcommit: cc58ca7ceae783b972ca25af69f17c9f92a29fc2
+ms.openlocfilehash: 8bbeb8a5e13ad000939057a7d476f6979b15dca8
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81386386"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84200531"
 ---
 ## <a name="how-do-i-manage-administrators"></a>如何管理管理员？
 
-如果你是超级管理员，则可以添加或删除其他超级管理员或管理员。 管理员只能添加或删除订阅者，而不会在 manage.visualstudio.com 上看到“管理管理员”选项卡。
+如果你是超级管理员，则可以添加或删除其他超级管理员或管理员。 管理员只能添加或删除订阅者，而不会在[管理员门户](https://manage.visualstudio.com)上看到“管理管理员”选项卡。
 
 要管理管理员，请执行以下操作：
 

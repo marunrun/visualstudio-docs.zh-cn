@@ -910,6 +910,8 @@
           href: ide/signing-in-to-visual-studio.md
         - name: 使用多个用户帐户
           href: ide/work-with-multiple-user-accounts.md
+        - name: 适用于需要多重身份验证的帐户
+          href: ide/work-with-multi-factor-authentication.md
         - name: 扩展试用版或更新许可证
           href: ide/how-to-unlock-visual-studio.md
     - name: 优化 Visual Studio 的性能
