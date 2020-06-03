@@ -19,7 +19,7 @@ Visual Studio 订阅管理员需要跟踪 Visual Studio 使用情况，并按批
 
 ## <a name="maximum-usage"></a>最大用量
 **在以下情况下，贵公司购买 Visual Studio 订阅的义务立即生效：**
-- 向用户 OR 分配许可证 
+- 向用户 OR 分配许可证
 - 用户与 Visual Studio 软件交互。
 
 你的完整购买义务由分配给用户的最大订阅数决定。 这种级别的订阅分配是指日常用户分配最大数量或与 Visual Studio 软件交互的用户最大数量（以两者中的较高者为准）。
@@ -29,7 +29,7 @@ Visual Studio 订阅管理员需要跟踪 Visual Studio 使用情况，并按批
 - Visual Studio 订阅管理员可以自初始分配之日起的 90 天后，将一个订阅者的订阅重新分配给另一个订阅者。 
     > [!NOTE]
     > 为避免人为提高最大用量，在执行此操作时应始终先删除现有订阅，然后再添加新订阅。 
-- 为帮助你监视组织的最大用量，Visual Studio [订阅管理门户](maximum-usage.md)中提供[最大用量](https://manage.visualstudio.com)报告。 
+- 为帮助你监视组织的最大用量，Visual Studio [订阅管理门户](https://manage.visualstudio.com)中提供[最大用量](maximum-usage.md)报告。 
 
 ## <a name="monthly-subscriptions-open-license-or-open-value"></a>月度订阅、开放式许可或开放式价值
 你可能会通过“开放许可”和“开放式价值”等程序分配订阅，或者每月通过 Visual Studio Marketplace 来分配订阅。 如果是这样，则必须在用户（员工或外部承包商）开始与 Visual Studio 授权软件交互的当月处理附加用户订单。
@@ -37,7 +37,7 @@ Visual Studio 订阅管理员需要跟踪 Visual Studio 使用情况，并按批
 ## <a name="enterprise-mpsa-and-select-agreements"></a>企业协议、MPSA 和 Select 协议
 Microsoft 企业协议 (EA)、MPSA 和 Select Plus 协议允许你随时间推移灵活地使用和授权 Visual Studio 软件。 Visual Studio 管理员必须制定年度校准订单，使软件许可证数量在协议期间达到规定的最大使用量。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [Visual Studio 文档](https://docs.microsoft.com/visualstudio/)
 - [Azure DevOps 文档](https://docs.microsoft.com/azure/devops/)
 - [Azure 文档](https://docs.microsoft.com/azure/)

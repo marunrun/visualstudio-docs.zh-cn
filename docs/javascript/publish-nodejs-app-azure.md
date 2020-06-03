@@ -47,7 +47,7 @@ Linux 应用服务部署 Linux Docker 容器来运行 Node.js 应用程序（不
     如果尚未安装 Visual Studio 2017，请转到  [Visual Studio 下载](https://visualstudio.microsoft.com/downloads/) 页免费安装。
     ::: moniker-end
 
-    如果需要安装工作负载但已有 Visual Studio，请转到“工具” > “获取工具和功能...”，这会打开 Visual Studio 安装程序。 选择“Node.js 开发”工作负载，然后选择“修改”。
+    如果需要安装工作负载但已有 Visual Studio，请转到“工具” > “获取工具和功能...”，这会打开 Visual Studio 安装程序。 选择“Node.js 开发”工作负载，然后选择“修改” 。
 
     ![VS 安装程序中的 Node.js 工作负载](../ide/media/quickstart-nodejs-workload.png)
 
@@ -62,14 +62,14 @@ Linux 应用服务部署 Linux Docker 容器来运行 Node.js 应用程序（不
 1. 创建新的 TypeScript Express 应用。
 
     ::: moniker range=">=vs-2019"
-    按 Esc 关闭启动窗口。 键入 Ctrl+Q 以打开搜索框，键入“Node.js”，然后选择“创建新的基本 Azure Node.js Express 4 应用程序”(TypeScript)。 在出现的对话框中，选择“创建”。
+    按 Esc 关闭启动窗口。 键入 Ctrl+Q 以打开搜索框，键入“Node.js”，然后选择“创建新的基本 Azure Node.js Express 4 应用程序”(TypeScript)  。 在出现的对话框中，选择“创建”。
     ::: moniker-end
     ::: moniker range="vs-2017"
-    从顶部菜单栏中选择“文件” > “新建” > “项目”。 在“新建项目”对话框的左窗格中，展开“TypeScript”，然后选择“Node.js”。 在中间窗格中，选择“基本 Azure Node.js Express 4 应用程序”，然后选择“确定”。
+    从顶部菜单栏中选择“文件” > “新建” > “项目”。 在“新建项目”对话框的左窗格中，展开“TypeScript”，然后选择“Node.js”  。 在中间窗格中，选择“基本 Azure Node.js Express 4 应用程序”，然后选择“确定” 。
 
     ![创建新的 TypeScript Express 应用](../javascript/media/azure-ts-express-app.png)
     ::: moniker-end
-    如果未看到“基本 Azure Node.js Express 4 应用程序”项目模板，必须添加 Node.js 开发工作负载。 有关详细说明，请参阅[先决条件](#prerequisites)。
+    如果未看到“基本 Azure Node.js Express 4 应用程序”项目模板，必须添加 Node.js 开发工作负载 。 有关详细说明，请参阅[先决条件](#prerequisites)。
 
     Visual Studio 将创建项目并在解决方案资源管理器（右窗格）中将其打开。
 
@@ -115,7 +115,7 @@ Linux 应用服务部署 Linux Docker 容器来运行 Node.js 应用程序（不
 
 3. 如果要求，请创建新的资源组和应用服务计划来托管新应用。
 
-4. 确保将“OS”设为“Linux”，将“运行时堆栈”设为所需 Node.js 版本，如图所示。
+4. 确保将“OS”设为“Linux”，将“运行时堆栈”设为所需 Node.js 版本，如图所示  。
 
     ![创建 Linux 应用服务](../javascript/media/azure-create-appservice-annotated.png)
 
@@ -174,8 +174,8 @@ Linux 应用服务部署 Linux Docker 容器来运行 Node.js 应用程序（不
 
 * 如果 node.exe 进程发生故障（也就是说出现未处理的异常），容器将重新启动。
 * 容器启动时，它通过各种试探法来找出如何启动 Node.js 进程。 可在 [generateStartupCommand.js](https://github.com/Azure/app-service-builtin-images/blob/master/node/8.9.4/startup/generateStartupCommand.js) 看到实现的详细信息。
-* 可以通过 SSH 连接到正在运行的容器进行调查。 这可以通过 Azure 门户轻松实现。 选择应用服务，向下滚动工具列表直至“开发工具”部分下的“SSH”。
-* 若要帮助进行故障排除，请转到应用服务的“诊断日志”设置，并将“Docker 容器日志记录”设置从“关”改为“文件系统”。 日志创建在 /home/LogFiles/_docker.log* 中，并且可以通过 SSH 或 FTP 在框上进行访问。
+* 可以通过 SSH 连接到正在运行的容器进行调查。 这可以通过 Azure 门户轻松实现。 选择应用服务，向下滚动工具列表直至“开发工具”部分下的“SSH” 。
+* 若要帮助进行故障排除，请转到应用服务的“诊断日志”设置，并将“Docker 容器日志记录”设置从“关”改为“文件系统”  。 日志创建在 /home/LogFiles/_docker.log* 中，并且可以通过 SSH 或 FTP 在框上进行访问。
 * 可向站点分配自定义域名，而不是默认分配的 *.azurewebsites.net URL。 有关更多详细信息，请参阅主题[映射自定义域](/azure/app-service/app-service-web-tutorial-custom-domain)。
 * 最好先部署到过渡站点进行进一步测试，再移动到生产环节。 有关如何配置此项的详细信息，请参阅主题[创建过渡环境](/azure/app-service/web-sites-staged-publishing)。
 * 有关更多常问问题，请参阅 [Linux 上应用服务的常见问题解答](/azure/app-service/containers/app-service-linux-faq)。

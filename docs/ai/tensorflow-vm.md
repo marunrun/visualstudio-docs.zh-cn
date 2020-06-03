@@ -20,11 +20,11 @@ ms.locfileid: "80638756"
 ---
 # <a name="train-a-tensorflow-model-in-the-cloud"></a>在云中训练 TensorFlow 模型
 
-在本教程中，我们会在 Azure [深入学习](http://yann.lecun.com/exdb/mnist/)虚拟机上使用 [MNIST 数据集](/azure/machine-learning/data-science-virtual-machine/deep-learning-dsvm-overview)训练 TensorFlow 模型。
+在本教程中，我们会在 Azure [深入学习](/azure/machine-learning/data-science-virtual-machine/deep-learning-dsvm-overview)虚拟机上使用 [MNIST 数据集](http://yann.lecun.com/exdb/mnist/)训练 TensorFlow 模型。
 
 MNIST 数据库具有包含 60,000 个示例的训练集，以及包含 10,000 个手写数字示例的测试集。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 开始之前，确保安装和配置了以下各项：
 
 ### <a name="setup-azure-deep-learning-virtual-machine"></a>设置 Azure 深入学习虚拟机
@@ -48,7 +48,7 @@ echo -e ". /etc/profile\n$(cat ~/.bashrc)" > ~/.bashrc
 
 - 启动 Visual Studio，选择“文件”>“打开”>“项目/解决方案”。
 
-- 在下载的示例存储库中选择 Tensorflow Examples 文件夹，然后打开 TensorflowExamples.sln 文件。
+- 在下载的示例存储库中选择 Tensorflow Examples 文件夹，然后打开 TensorflowExamples.sln 文件 。
 
    ![打开项目](media/tensorflow-local/open-project.png)
 

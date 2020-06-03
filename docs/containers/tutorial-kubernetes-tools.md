@@ -21,20 +21,20 @@ Visual Studio Kubernetes 工具有助于简化面向 Kubernetes 的容器化应�
 
 本教程介绍如何使用 Visual Studio 将 Kubernetes 支持添加到项目并将其发布到 AKS。 如果主要需求是使用 [Azure Dev Spaces](/azure/dev-spaces/) 来调试和测试 AKS 中运行的项目，则可以改为转到 [Azure Dev Spaces 教程](/azure/dev-spaces/get-started-netcore-visualstudio)。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 若要利用此新的功能，将需要以下各项：
 
 ::: moniker range="vs-2017"
-- 带有“ASP.NET 和 Web 开发”工作负载的最新版本 [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download)  。
+- 带有“ASP.NET 和 Web 开发”工作负载的最新版本 [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download)。
 - [适用于 Visual Studio的 Kubernetes 工具](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vs-tools-for-kubernetes)，可作为单独的下载提供。
 ::: moniker-end
 ::: moniker range="vs-2019"
-- [Visual Studio 2019](https://visualstudio.microsoft.com/downloads) 与“ASP.NET 和 Web 开发”工作负载  。
+- [Visual Studio 2019](https://visualstudio.microsoft.com/downloads) 与“ASP.NET 和 Web 开发”工作负载。
 ::: moniker-end
-- 在开发工作站（即运行 Visual Studio 的位置）上安装的 [Docker Desktop](https://store.docker.com/editions/community/docker-ce-desktop-windows)，如果要生成 Docker 映像，请调试本地运行的 Docker 容器，或发布到 AKS。 （使用 Azure Dev Spaces 在 AKS 中生成和调试 Docker 容器时不需要 Docker  。）
+- 在开发工作站（即运行 Visual Studio 的位置）上安装的 [Docker Desktop](https://store.docker.com/editions/community/docker-ce-desktop-windows)，如果要生成 Docker 映像，请调试本地运行的 Docker 容器，或发布到 AKS。 （使用 Azure Dev Spaces 在 AKS 中生成和调试 Docker 容器时不需要 Docker。）
 ::: moniker range="vs-2017"
-- 若要从 Visual Studio 发布到 AKS（使用 Azure Dev Spaces 在 AKS 中进行调试不需要）  ：
+- 若要从 Visual Studio 发布到 AKS（使用 Azure Dev Spaces 在 AKS 中进行调试不需要）：
 
     1. [AKS 发布工具](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vs-tools-for-kubernetes)，可作为单独的下载提供。
 
@@ -49,14 +49,14 @@ Visual Studio Kubernetes 工具有助于简化面向 Kubernetes 的容器化应�
 
 ::: moniker range="vs-2017"
 
-安装适当的工具后，启动 Visual Studio 并新建项目。 在“云”下，选择“适用于 Kubernetes 的容器应用程序”项目类型   。 选择此项目类型，然后选择“确定”  。
+安装适当的工具后，启动 Visual Studio 并新建项目。 在“云”下，选择“适用于 Kubernetes 的容器应用程序”项目类型 。 选择此项目类型，然后选择“确定”。
 
 ![新建 Kubernetes 应用项目的屏幕截图](media/tutorial-kubernetes-tools/k8s-tools-new-k8s-app.png)
 
 ::: moniker-end
 ::: moniker range=">= vs-2019"
 
-在 Visual Studio“开始”窗口中，搜索 Kubernetes，然后选择“适用于 Kubernetes 的容器应用程序”   。
+在 Visual Studio“开始”窗口中，搜索 Kubernetes，然后选择“适用于 Kubernetes 的容器应用程序”。
 
 ![新建 Kubernetes 应用项目的屏幕截图](media/tutorial-kubernetes-tools/vs-2019/k8s-tools-new-k8s-app1.png)
 
@@ -66,7 +66,7 @@ Visual Studio Kubernetes 工具有助于简化面向 Kubernetes 的容器化应�
 
 ::: moniker-end
 
-然后可选择要创建的 ASP.NET Core Web 应用的类型。 选择“Web 应用程序”  。 此对话框中不显示常用的“启用 Docker 支持”选项  。  默认为适用于 Kubernetes 的容器应用程序启用 Docker 支持。
+然后可选择要创建的 ASP.NET Core Web 应用的类型。 选择“Web 应用程序”。 此对话框中不显示常用的“启用 Docker 支持”选项。  默认为适用于 Kubernetes 的容器应用程序启用 Docker 支持。
 
 ::: moniker range="vs-2017"
 
@@ -81,7 +81,7 @@ Visual Studio Kubernetes 工具有助于简化面向 Kubernetes 的容器化应�
 
 ## <a name="add-kubernetes-support-to-an-existing-project"></a>将 Kubernetes 支持添加到现有项目
 
-或者可将 Kubernetes 支持添加到现有 ASP.NET Core web 应用程序项目。 为此，请右键单击该项目，然后选择“添加” **“容器业务流程协调程序支持”**  >   。
+或者可将 Kubernetes 支持添加到现有 ASP.NET Core web 应用程序项目。 为此，请右键单击该项目，然后选择“添加” > “容器业务流程协调程序支持” 。
 
 ::: moniker range="vs-2017"
 
@@ -94,13 +94,13 @@ Visual Studio Kubernetes 工具有助于简化面向 Kubernetes 的容器化应�
 
 ::: moniker-end
 
-在对话框中，选择 "Kubernetes/Helm"，然后选择“确定”   。
+在对话框中，选择 "Kubernetes/Helm"，然后选择“确定” 。
 
 ![添加容器业务流程协调程序对话框的屏幕截图](media/tutorial-kubernetes-tools/k8s-tools-add-container-orchestrator-dialog-box.PNG)
 
 ## <a name="what-visual-studio-creates-for-you"></a>Visual Studio 为你创建的内容
 
-在新建“适用于 Kubernetes 的容器应用程序”项目或向现有项目添加 Kubernetes 容器业务流程协调程序支持后，项目中会显示一些其他文件，可以帮助你部署到 Kubernetes  。
+在新建“适用于 Kubernetes 的容器应用程序”项目或向现有项目添加 Kubernetes 容器业务流程协调程序支持后，项目中会显示一些其他文件，可以帮助你部署到 Kubernetes。
 
 ::: moniker range="vs-2017"
 
@@ -115,13 +115,13 @@ Visual Studio Kubernetes 工具有助于简化面向 Kubernetes 的容器化应�
 
 添加的文件包括：
 
-- Dockerfile，使你能够生成托管此 Web 应用程序的 Docker 容器映像。 如你所见，在调试并部署到 Kubernetes 时，Visual Studio 工具会利用此 Dockerfile。 如果希望直接使用 Docker 映像，可以右键单击 Dockerfile，然后选择“生成 Docker 映像”  。
+- Dockerfile，使你能够生成托管此 Web 应用程序的 Docker 容器映像。 如你所见，在调试并部署到 Kubernetes 时，Visual Studio 工具会利用此 Dockerfile。 如果希望直接使用 Docker 映像，可以右键单击 Dockerfile，然后选择“生成 Docker 映像”。
 
    ![生成 Docker 映像选项的屏幕截图](media/tutorial-kubernetes-tools/k8s-tools-build-docker-image.png)
 
-- Helm 图表，及 charts 文件夹  。 这些 yaml 文件构成应用程序的 Helm 图表，可用于将其部署到 Kubernetes。 有关 Helm 的详细信息，请参阅 [https://www.helm.sh](https://www.helm.sh)。
+- Helm 图表，及 charts 文件夹。 这些 yaml 文件构成应用程序的 Helm 图表，可用于将其部署到 Kubernetes。 有关 Helm 的详细信息，请参阅 [https://www.helm.sh](https://www.helm.sh)。
 
-- azds.yaml  . 这包含 Azure Dev Spaces 的设置，可在 Azure Kubernetes 服务中提供快速的迭代调试体验。 有关详细信息，请参阅 [Azure Dev Spaces 文档](/azure/dev-spaces/azure-dev-spaces)。
+- azds.yaml. 这包含 Azure Dev Spaces 的设置，可在 Azure Kubernetes 服务中提供快速的迭代调试体验。 有关详细信息，请参阅 [Azure Dev Spaces 文档](/azure/dev-spaces/azure-dev-spaces)。
 
 ::: moniker range="vs-2017"
 
@@ -133,25 +133,25 @@ Visual Studio Kubernetes 工具有助于简化面向 Kubernetes 的容器化应�
 
 若要执行此操作，首先需要仔细检查是否已按照[先决条件](#prerequisites)部分所述，在发布到 AKS 的项下安装所有内容，并运行链接中提供的所有命令行步骤。 然后，设置发布配置文件，使其将容器映像发布到 Azure 容器注册表 (ACR)。 AKS 随后可从 ACR 拉取容器映像并将其部署到群集中。
 
-1. 在解决方案资源管理器中，右键单击项目，选择“发布”    。
+1. 在解决方案资源管理器中，右键单击项目，选择“发布”。
 
    ![“发布”菜单项的屏幕截图](media/tutorial-kubernetes-tools/k8s-tools-publish-project.png)
 
-2. 在“发布”屏幕中，对于发布目标，选择“容器注册表”，然后按照提示选择容器注册表   。 如果还没有容器注册表，请选择“新建 Azure 容器注册表”，从 Visual Studio 创建容器注册表  。 有关详细信息，请参阅[将容器发布到 Azure 容器注册表](hosting-web-apps-in-docker.md)。
+2. 在“发布”屏幕中，对于发布目标，选择“容器注册表”，然后按照提示选择容器注册表 。 如果还没有容器注册表，请选择“新建 Azure 容器注册表”，从 Visual Studio 创建容器注册表。 有关详细信息，请参阅[将容器发布到 Azure 容器注册表](hosting-web-apps-in-docker.md)。
 
    ![“选取发布目标”屏幕的屏幕截图](media/tutorial-kubernetes-tools/k8s-tools-publish-to-acr.png)
 
-3. 返回解决方案资源管理器中，右键单击解决方案，然后单击“发布到 Azure AKS”   。
+3. 返回解决方案资源管理器中，右键单击解决方案，然后单击“发布到 Azure AKS”。
 
    ![“发布到 Azure AKS”菜单项的屏幕截图](media/tutorial-kubernetes-tools/k8s-tools-publish-solution.png)
 
-4. 选择订阅和 AKS 群集，以及刚刚创建的 ACR 发布配置文件。 然后单击“确定”  。
+4. 选择订阅和 AKS 群集，以及刚刚创建的 ACR 发布配置文件。 然后单击“确定” 。
 
    ![“发布到 AKS”屏幕的屏幕截图](media/tutorial-kubernetes-tools/k8s-tools-publish-to-aks.png)
 
-   这会转到“发布到 Azure AKS”屏幕  。
+   这会转到“发布到 Azure AKS”屏幕。
 
-5. 选择“配置 Helm”链接，可更新用于在服务器上安装 Helm 图表的命令行  。
+5. 选择“配置 Helm”链接，可更新用于在服务器上安装 Helm 图表的命令行。
 
    ![“配置 Helm 链接”的屏幕截图](media/tutorial-kubernetes-tools/k8s-tools-configure-helm.png)
 
@@ -159,7 +159,7 @@ Visual Studio Kubernetes 工具有助于简化面向 Kubernetes 的容器化应�
 
    ![“Helm 配置”屏幕的屏幕截图](media/tutorial-kubernetes-tools/k8s-tools-helm-configure-screen.png)
 
-6. 准备好进行部署后，单击“发布”按钮，将应用程序发布到 AKS  。
+6. 准备好进行部署后，单击“发布”按钮，将应用程序发布到 AKS。
 
    ![“发布到 Azure AKS”屏幕的屏幕截图](media/tutorial-kubernetes-tools/k8s-tools-publish-screen.png)
 
