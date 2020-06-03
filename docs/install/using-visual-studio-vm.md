@@ -17,12 +17,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 6095a3d7d8bfa7a5ee367da2c93d16113a777d0c
-ms.sourcegitcommit: 5ab22b8601db9c420691f8e57abe140e837aa720
+ms.openlocfilehash: 6453c263cb970ae3fff2c134f1ae570bca730b93
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82109476"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84183231"
 ---
 # <a name="visual-studio-images-on-azure"></a><a id="top"> </a> Azure 上的 Visual Studio 映像
 
@@ -37,10 +37,10 @@ ms.locfileid: "82109476"
 | 发行版本                                                                                                                                          | 版本              |    产品版本    |
 |:--------------------------------------------------------------------------------------------------------------------------------------------------------:|:---------------------:|:-----------------------:|
 | [Visual Studio 2019：最新（版本 16.5）](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftvisualstudio.visualstudio2019latest?tab=Overview) | Enterprise，Community | 版本 16.5.4    |
-| [Visual Studio 2019：RTW](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftvisualstudio.visualstudio2019?tab=Overview)                         | 企业            | 版本 16.0.13    |
-| [Visual Studio 2017：最新（版本 15.9）](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftvisualstudio.visualstudio?tab=Overview)           | Enterprise，Community | 版本 15.9.22   |
-| [Visual Studio 2017：RTW](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftvisualstudio.visualstudio?tab=Overview)                             | Enterprise，Community | 版本 15.0.28   |
-| [Visual Studio 2015：最新（更新 3）](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftvisualstudio.visualstudio?tab=Overview)               | Enterprise，Community | 版本 14.0.25431.01 |
+| Visual Studio 2019：RTW                         | 企业            | 版本 16.0.13    |
+| Visual Studio 2017：最新（版本 15.9）           | Enterprise，Community | 版本 15.9.22   |
+| Visual Studio 2017：RTW                             | Enterprise，Community | 版本 15.0.28   |
+| Visual Studio 2015：最新（更新 3）              | Enterprise，Community | 版本 14.0.25431.01 |
 
 > [!NOTE]
 > 根据 Microsoft 服务策略，最初发布的 (RTW) Visual Studio 2015 版本已过维护期限。 Visual Studio 2015 Update 3 是 Visual Studio 2015 产品系列仅剩的版本。
@@ -101,11 +101,11 @@ Visual Studio 在 Azure 中遵循“自带许可”模型。 与在专有硬件�
 
 开发环境的范围非常大，构建更为复杂的环境将产生高昂的成本。 无论环境配置如何，都可以将配置的 VM 保存或捕获为“基础映像”，以供将来使用或由团队其他成员使用。 然后，在启动新的 VM 时，从基础映像而不是从 Azure 市场映像对其进行预配。
 
-概要：使用系统准备工具 (Sysprep) 并关闭正在运行的 VM，然后通过 Azure 门户的 UI 来捕获（图 1）VM 作为映像  。 Azure 将在你所选的存储帐户中保存包含映像的 `.vhd` 文件。 然后，新映像将在资源订阅列表中显示为映像资源。
+概要：使用系统准备工具 (Sysprep) 并关闭正在运行的 VM，然后通过 Azure 门户的 UI 来捕获（图 1）VM 作为映像。 Azure 将在你所选的存储帐户中保存包含映像的 `.vhd` 文件。 然后，新映像将在资源订阅列表中显示为映像资源。
 
 ![通过 Azure 门户 UI 捕获映像](media/capture-vm.png)
 
- （图 1）通过 Azure 门户 UI 捕获映像。
+（图 1）通过 Azure 门户 UI 捕获映像。
 
 有关详细信息，请参阅[在 Azure 中创建通用化 VM 的托管映像](/azure/virtual-machines/windows/capture-image-resource)。
 
@@ -115,7 +115,7 @@ Visual Studio 在 Azure 中遵循“自带许可”模型。 与在专有硬件�
 > [!NOTE]
 > 存储映像仍会产生一定的费用，但与从头开始为需要 VM 的每个团队成员重新构建 VM 所产生的开销成本相比，增加的这点成本就无关紧要了。 例如，每月创建和存储 127 GB 的映像供整个团队重复使用需要几美元。 但是，与每个员工投入数小时构建和验证正确配置的开发框供其个人使用相比，这些成本微不足道。
 
-此外，开发任务或技术可能需要更大的规模，例如各种开发配置和多个计算机配置。 可以使用 Azure 开发测试实验室来创建可自动构建“黄金映像”的方案  。 还可以使用开发测试实验室针对团队运行的 VM 管理策略。 [使用适用于开发人员的 Azure DevTest 实验室](/azure/devtest-lab/devtest-lab-developer-lab)是详细了解 Azure DevTest 实验室的最佳来源。
+此外，开发任务或技术可能需要更大的规模，例如各种开发配置和多个计算机配置。 可以使用 Azure 开发测试实验室来创建可自动构建“黄金映像”的方案。 还可以使用开发测试实验室针对团队运行的 VM 管理策略。 [使用适用于开发人员的 Azure DevTest 实验室](/azure/devtest-lab/devtest-lab-developer-lab)是详细了解 Azure DevTest 实验室的最佳来源。
 
 ## <a name="next-steps"></a>后续步骤
 

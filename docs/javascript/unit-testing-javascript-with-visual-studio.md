@@ -11,12 +11,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 792c74a3b5da5ed6528fa3919a0c60625d1a38ef
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 4e3e0b1c1579614454580d2f5446b31c718d7f35
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77071942"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84183101"
 ---
 # <a name="unit-testing-javascript-and-typescript-in-visual-studio"></a>在 Visual Studio 中对 JavaScript 和 TypeScript 代码进行单元测试
 
@@ -29,20 +29,17 @@ ms.locfileid: "77071942"
 * Jest ([jestjs.io](https://jestjs.io/))
 * 导出运行程序（此框架特定于针对 Visual Studio 的 Node.js 工具）
 
-> [!WARNING]
-> 磁带的问题当前阻止磁带测试运行。 如果合并 [PR #361](https://github.com/substack/tape/pull/361)，则应解决此问题。
-
 如果你常用的框架不受支持，请参阅[添加对单元测试框架的支持](#addingFramework)，获取有关添加支持的信息。
 
 ## <a name="write-unit-tests"></a>写入单元测试
 
 将单元测试添加到项目之前，请确保要使用的框架已本地安装在项目中。 使用 [npm 包安装窗口](npm-package-management.md#npmInstallWindow)可以轻松完成此操作。
 
-向项目添加单元测试的首选方法是在项目中创建“测试”文件夹并将其设置为项目属性中的测试根  。 还需要选择想要使用的测试框架。
+向项目添加单元测试的首选方法是在项目中创建“测试”文件夹并将其设置为项目属性中的测试根。 还需要选择想要使用的测试框架。
 
 ![设置测试根和测试框架](../javascript/media/unit-test-project-properties.png)
 
-可以使用“添加新项”对话框，将简单的空白测试添加到项目  。 同一项目中同时支持 JavaScript 和 TypeScript。
+可以使用“添加新项”对话框，将简单的空白测试添加到项目。 同一项目中同时支持 JavaScript 和 TypeScript。
 
 ![添加新单元测试](../javascript/media/unit-test-add-new-item.png)
 
@@ -63,19 +60,19 @@ describe('Test Suite 1', function() {
 })
 ```
 
-如果尚未在项目属性中设置单元测试选项，则必须确保“属性”窗口中的“测试框架”属性设为适用于单元测试文件的正确测试框架   。 这通过单元测试文件模板自动完成。
+如果尚未在项目属性中设置单元测试选项，则必须确保“属性”窗口中的“测试框架”属性设为适用于单元测试文件的正确测试框架 。 这通过单元测试文件模板自动完成。
 
 ![测试框架](../javascript/media/UnitTestsFrameworkMocha.png)
 
 > [!Note]
 > 单元测试选项将优先于单个文件的设置。
 
-打开测试资源管理器（选择“测试” > “Windows” > “测试资源管理器”）后，Visual Studio 发现并显示测试。 如果开始未显示测试，则重新生成项目以刷新列表。
+打开测试资源管理器（选择“测试” > “Windows” > “测试资源管理器”）后，Visual Studio 发现并显示测试  。 如果开始未显示测试，则重新生成项目以刷新列表。
 
 ![测试资源管理器](../javascript/media/UnitTestsDiscoveryMocha.png)
 
 > [!NOTE]
-> 请勿在 tsconfig.json 中使用 `outdir` 或 `outfile`，因为测试资源管理器无法在 TypeScript 文件中找到单元测试  。
+> 请勿在 tsconfig.json 中使用 `outdir` 或 `outfile`，因为测试资源管理器无法在 TypeScript 文件中找到单元测试。
 
 ## <a name="run-tests"></a>运行测试
 
@@ -83,7 +80,7 @@ describe('Test Suite 1', function() {
 
 ### <a name="run-tests-in-visual-studio-2017"></a>在 Visual Studio 2017 中运行测试
 
-可以通过在测试资源管理器中单击“全部运行”链接运行测试  。 或者，可以选择一个或多个测试或组，右键单击并从快捷菜单选择“运行所选测试”，从而运行测试  。 后台运行测试，测试资源管理器自动更新并显示结果。 此外，还可以通过选择“调试所选测试”调试所选测试  。
+可以通过在测试资源管理器中单击“全部运行”链接运行测试。 或者，可以选择一个或多个测试或组，右键单击并从快捷菜单选择“运行所选测试”，从而运行测试。 后台运行测试，测试资源管理器自动更新并显示结果。 此外，还可以通过选择“调试所选测试”调试所选测试。
 
 > [!Warning]
 > 使用 Node 8+ 调试单元测试仅适用于 JavaScript 测试文件，TypeScript 测试文件命中断点失败。 一种变通方法是使用 `debugger` 关键字。
@@ -128,7 +125,7 @@ Test execution time: 1.5731 Seconds
 ```
 
 > [!NOTE]
-> 如果收到指示无法找到 vstest.console.exe 的错误，请确保已打开开发人员命令提示，而不是常规的命令提示符  。
+> 如果收到指示无法找到 vstest.console.exe 的错误，请确保已打开开发人员命令提示，而不是常规的命令提示符。
 
 ## <a name="add-support-for-a-unit-test-framework"></a><a name="addingFramework"></a>添加对单元测试框架的支持
 
@@ -150,7 +147,7 @@ Visual Studio 启动时开始发现可用测试框架。 如果在 Visual Studio
 ## <a name="unit-tests-in-other-project-types"></a>其他项目类型中的单元测试
 并不局限于在 Node.js 项目中编写单元测试。 将 TestFramework 和 TestRoot 属性添加到任何 C# 或 Visual Basic 项目时，将枚举这些测试，并且可使用“测试资源管理器”窗口运行它们。
 
-为实现此操作，请在解决方案资源管理器中右键单击项目节点，选择“卸载项目”  ，然后选择“编辑项目”  。 然后在项目文件中，将以下两个元素添加到属性组中。
+为实现此操作，请在解决方案资源管理器中右键单击项目节点，选择“卸载项目”，然后选择“编辑项目”。 然后在项目文件中，将以下两个元素添加到属性组中。
 
 > [!NOTE]
 > 确保未对要添加元素的属性组指定条件。

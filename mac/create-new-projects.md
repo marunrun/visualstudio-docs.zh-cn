@@ -5,29 +5,29 @@ author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 05/23/2019
 ms.assetid: 5880BB10-0A12-47E2-8A82-7A2D59C4D579
-ms.openlocfilehash: 10fcb52a8e1311f3e8128361ee835f6ddcb3670d
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: fa77993892c79cf29d268aa942b8c77ccb7a2139
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "75678871"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84183947"
 ---
 # <a name="create-a-new-project"></a>创建新项目
 
 ## <a name="opening-the-project-creation-dialog"></a>打开“项目创建”对话框
 
-可通过多种方式在 Visual Studio for Mac 中创建新项目。 首次打开 Visual Studio for Mac 时，将显示启动窗口。 可在此处选择“新建”，随即将转到项目创建屏幕  。
+可通过多种方式在 Visual Studio for Mac 中创建新项目。 首次打开 Visual Studio for Mac 时，将显示启动窗口。 可在此处选择“新建”，随即将转到项目创建屏幕。
 
 > [!TIP]
-> 此外，在启动窗口中，还可以打开并搜索最近的项目和解决方案。 还可以通过转到菜单栏并依次选择“文件”、“最近使用的解决方案”来打开最近使用的项目 
+> 此外，在启动窗口中，还可以打开并搜索最近的项目和解决方案。 还可以通过转到菜单栏并依次选择“文件”、“最近使用的解决方案”来打开最近使用的项目
 
 ![带有“创建新项目“的启动窗口](media/first-run-project.png)
 
-如果 Visual Studio for Mac 已打开，并且已加载解决方案，可以通过转到菜单栏并依次选择“文件”、“新建解决方案”来创建新解决方案  。 通过此方法创建新解决方案将关闭已加载的解决方案。
+如果 Visual Studio for Mac 已打开，并且已加载解决方案，可以通过转到菜单栏并依次选择“文件”、“新建解决方案”来创建新解决方案。 通过此方法创建新解决方案将关闭已加载的解决方案。
 
-## <a name="creating-a-new-project-from-a-template"></a>根据模板创建新项目
+## <a name="creating-a-new-project"></a>创建新项目
 
-默认情况下，“新建项目”对话框将按“最近使用”排序显示最近使用的模板   。
+默认情况下，“新建项目”对话框将按“最近使用”排序显示最近使用的模板。
 
 如果不想使用最近使用的模板，可以从对话框左侧的类别中进行选择。 每个类别包含多个项目模板，你可以随意选择。 单击项目类型可查看屏幕右侧的描述。
 
@@ -45,12 +45,12 @@ ms.locfileid: "75678871"
 
 ## <a name="adding-additional-projects-to-a-solution"></a>向解决方案添加其他项目
 
-可通过右键单击 Solution Pad 中的解决方案并依次选择“添加”、“添加新项目”，或者依次选择“添加”、“添加现有项目”，向解决方案添加其他项目   。
+可通过右键单击 Solution Pad 中的解决方案并依次选择“添加”、“添加新项目”，或者依次选择“添加”、“添加现有项目”，向解决方案添加其他项目 。
 
 添加新项目将引导你完成项目创建步骤，如[配置新项目](#configuring-your-new-project)中所示。
 
 选择添加现有项目，你将能浏览计算机上的现有项目并将其添加到解决方案。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [创建解决方案和项目（Windows 上的 Visual Studio）](/visualstudio/ide/creating-solutions-and-projects)
