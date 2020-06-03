@@ -7,12 +7,12 @@ ms.assetid: 872c5746-5357-4764-949b-aa525a0adf1a
 ms.date: 04/20/2020
 ms.topic: conceptual
 description: 了解如何通过 Visual Studio 订阅利用 Microsoft Windows 虚拟桌面
-ms.openlocfilehash: 87911b1b7b6eb63eb85b64515d5d24755e4656e6
-ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
+ms.openlocfilehash: b84527f7bdaf3e9218585bd52af0743ef23a5637
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81649737"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84183582"
 ---
 # <a name="access-windows-virtual-desktop-in-subscriptions"></a>在订阅中访问 Windows 虚拟桌面 
 Visual Studio 订阅者现在可以将其 Azure 开发/测试个人额度用于 Microsoft Windows 虚拟桌面服务。  
@@ -39,7 +39,7 @@ Windows 虚拟桌面需要 Azure Active Directory (Azure AD)，VM 将加入到�
 
 ## <a name="get-started"></a>入门 
 满足所有先决条件后，将需要完成几项操作来完成实现。  请查看以下入门教程：
-- [创建 Windows 虚拟桌面租户](https://docs.microsoft.com/azure/virtual-desktop/tenant-setup-azure-active-directory)
+- [创建 Windows 虚拟桌面租户](https://docs.microsoft.com/azure/virtual-desktop/virtual-desktop-fall-2019/tenant-setup-azure-active-directory)
 - 使用 Azure 门户[创建主机池](https://docs.microsoft.com/azure/virtual-desktop/create-host-pools-azure-marketplace)
 - [管理 Windows 虚拟桌面的应用组](https://docs.microsoft.com/azure/virtual-desktop/manage-app-groups)
 
