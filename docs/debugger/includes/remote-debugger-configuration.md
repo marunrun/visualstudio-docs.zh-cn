@@ -38,7 +38,7 @@ ms.locfileid: "68149182"
   
 1. 配置完成后，将显示“远程调试器”窗口。
   
-    (../media/remotedebuggerwindow.png "远程调试器窗口![远程调试器窗口]")
+    ![远程调试器窗口](../media/remotedebuggerwindow.png "远程调试器窗口")
   
     远程调试器正在等待连接。 使用显示的服务器名称和端口号在 Visual Studio 中设置远程连接配置。  
   
