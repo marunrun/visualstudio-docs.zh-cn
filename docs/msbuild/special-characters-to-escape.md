@@ -16,12 +16,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d1b17ded468e262d4f636ed5494081adab7b8c5f
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 9c3a0feed4177bd41ee2b77edc49336bfda3171b
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77632246"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84184037"
 ---
 # <a name="special-characters-to-escape"></a>要转义的特殊字符
 
@@ -31,16 +31,16 @@ ms.locfileid: "77632246"
 
  要转义的特殊字符的完整列表紧跟：
 
-|字符|描述|
-|---------------|-----------------|
-|%|百分号，用于引用元数据。|
-|$|美元符号，用于引用属性。|
-|@|At 符号，用于引用项列表。|
-|(|左圆括号，用在列表中。|
-|)|右圆括号，用在列表中。|
-|;|分号，列表分隔符。|
-|?|问号，描述项的“Include/Exclude”节中的文件规范时使用的通配符。|
-|*|星号，描述项的“Include/Exclude”节中的文件规范时使用的通配符。|
+|字符|ASCII 编码|描述|
+|---------|----------|-----------|
+|%|%25|百分号，用于引用元数据。|
+|$|%24|美元符号，用于引用属性。|
+|@|%40|At 符号，用于引用项列表。|
+|(|%28|左圆括号，用在列表中。|
+|)|%29|右圆括号，用在列表中。|
+|;|%3B|分号，列表分隔符。|
+|?|%3F|问号，描述项的“Include/Exclude”节中的文件规范时使用的通配符。|
+|* |%2A|星号，描述项的“Include/Exclude”节中的文件规范时使用的通配符。|
 
 > [!NOTE]
 > 在某些情况下，可能需要转义双引号 (") 字符，例如在 `Exec` 任务中使用时。

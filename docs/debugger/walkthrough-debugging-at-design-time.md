@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: beb16ae52f880e31bd19a185d47b13c02026752f
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: 8bc5d08e8b0ae71acb846e1e863e24e8b8def0ee
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75916146"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84183556"
 ---
 # <a name="debug-at-design-time-in-visual-studio-c-ccli-visual-basic-f"></a>在 Visual Studio 中进行设计时调试（C#、C++/CLI、Visual Basic、F#）
 
@@ -83,13 +83,13 @@ ms.locfileid: "75916146"
 
 1. 打开包含要调试的自定义控件的 XAML 页。
 
-   对于面向 Windows 内部版本 16299 或更高版本的 UWP 项目，此步骤将启动 UwpSurface.exe 进程。 对于 Windows 内部版本 16299 之前的 WPF 或 UWP 版本，此步骤将启动 XDesProc.exe 进程。
+   对于面向 Windows 内部版本 16299 或更高版本的 UWP 项目，此步骤将启动 UwpSurface.exe 进程。 对于面向 Windows 16299 或更高内部版本的 WPF 项目，此步骤将启动 WpfSurface.exe 进程。 对于 Windows 内部版本 16299 之前的 WPF 或 UWP 版本，此步骤将启动 XDesProc.exe 进程。 
 
 1. 打开 Visual Studio 的第二个实例。 不要在第二个实例中打开解决方案或项目。
 
 1. 在 Visual Studio 的第二个实例中，打开“调试”菜单，然后选择“附加到进程...”。
 
-1. 根据项目类型（请参阅前面的步骤），从可用进程的列表中选择 UwpSurface.exe  或 XDesProc.exe。
+1. 根据项目类型（请参阅前面的步骤），从可用进程的列表中选择 UwpSurface.exe、WpfSurface.exe 或 XDesProc.exe  。
 
 1. 在“附加到进程”对话框的“附加到”字段中，为要调试的自定义控件选择正确的代码类型 。
 

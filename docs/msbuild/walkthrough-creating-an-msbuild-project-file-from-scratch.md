@@ -10,12 +10,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5fe9f052c10f31c4db0f8bf09f273be5814ff732
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 20ec2a10210517f291a3bb21db9e1689942786c9
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "78263131"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84184271"
 ---
 # <a name="walkthrough-create-an-msbuild-project-file-from-scratch"></a>演练：从头开始创建 MSBuild 项目文件
 
@@ -25,11 +25,11 @@ ms.locfileid: "78263131"
 
  此演练演示如何只使用文本编辑器以增量方式创建基本项目文件。 演练采用以下步骤：
 
-1. 创建最小的应用程序源文件。
+1. 扩展 PATH 环境变量。
 
-2. 创建最小的 MSBuild 项目文件。
+2. 创建最小的应用程序源文件。
 
-3. 扩展 PATH 环境变量以包括 MSBuild。
+3. 创建最小的 MSBuild 项目文件。
 
 4. 使用项目文件生成应用程序。
 
@@ -45,7 +45,11 @@ ms.locfileid: "78263131"
 
 此演练演示如何在命令提示符下生成项目并检查结果。 有关 MSBuild 以及如何在命令提示符下运行 MSBuild 的详细信息，请参阅[演练：使用 MSBuild](../msbuild/walkthrough-using-msbuild.md)。
 
-若要完成本演练，必须安装 .NET Framework（版本 2.0、3.5、4.0、4.5 或更高版本），因为它包含演练所需的 MSBuild 和 Visual C# 编译器。
+要完成演练，必须安装 Visual Studio，因为其中包括演练所需的 MSBuild 和 Visual C# 编译器。
+
+## <a name="extend-the-path"></a>扩展路径
+
+必须先扩展 PATH 环境变量以包括全部所需工具，然后才能使用 MSBuild。 你可以使用“Visual Studio 开发人员命令提示”。 在 Windows 10 上，在 Windows 任务栏的搜索框中进行搜索。 要在普通命令提示符下或在脚本环境中设置环境，请在 Visual Studio 安装的 Common7/Tools 子文件夹中运行 VSDevCmd.bat 。
 
 ## <a name="create-a-minimal-application"></a>创建最小的应用程序
 
@@ -75,7 +79,7 @@ ms.locfileid: "78263131"
     }
     ```
 
-5. 保存此源代码文件，并将其命名为“Helloworld.cs”  。
+5. 保存此源代码文件，并将其命名为“Helloworld.cs”。
 
 6. 在命令提示符下，键入 **csc helloworld.cs** 来生成应用程序。
 
@@ -131,7 +135,7 @@ ms.locfileid: "78263131"
     <Csc Sources="@(Compile)"/>
     ```
 
-5. 保存此项目文件，并将其命名为“Helloworld.csproj”  。
+5. 保存此项目文件，并将其命名为“Helloworld.csproj”。
 
 你的最小项目文件应类似于以下代码：
 
@@ -146,30 +150,20 @@ ms.locfileid: "78263131"
 </Project>
 ```
 
-Build 目标中的任务按顺序执行。 在本例中，Visual C# 编译器 `Csc` 任务是唯一的任务。 它需要编译一系列源文件，这一系列文件由 `Compile` 项的值指定。 `Compile` 项只引用一个源文件，即 Helloworld.cs  。
+Build 目标中的任务按顺序执行。 在本例中，Visual C# 编译器 `Csc` 任务是唯一的任务。 它需要编译一系列源文件，这一系列文件由 `Compile` 项的值指定。 `Compile` 项只引用一个源文件，即 Helloworld.cs。
 
 > [!NOTE]
-> 在项元素中，可以使用星号通配符 (\*) 来引用文件扩展名为 .cs  的所有文件，如下所示：
+> 在项元素中，可以使用星号通配符 (\*) 来引用文件扩展名为 .cs 的所有文件，如下所示：
 >
 > ```xml
 > <Compile Include="*.cs" />
 > ```
 
-## <a name="extend-the-path-to-include-msbuild"></a>扩展路径以包括 MSBuild
-
-必须先扩展 PATH 环境变量以包括 .NET Framework 文件夹，然后才能访问 MSBuild。
-
-从 Visual Studio 2013 开始，可以在 MSBuild 文件夹（32 位操作系统上的 %ProgramFiles%\MSBuild 或 64 位操作系统上的 %ProgramFiles(x86)%\MSBuild）中查找 MSBuild.exe    。
-
-在命令提示符处，键入 **set PATH=%PATH%;%ProgramFiles%\MSBuild** 或 **set PATH=%PATH%;%ProgramFiles(x86)%\MSBuild**。
-
-或者，如果安装了 Visual Studio，则可以使用 Visual Studio 开发人员命令提示，其中具有包含 MSBuild 文件夹的路径   。
-
 ## <a name="build-the-application"></a>生成应用程序
 
  现在，为了生成应用程序，请使用刚刚创建的项目文件。
 
-1. 在命令提示符处，键入 msbuild helloworld.csproj -t:Build  。
+1. 在命令提示符处，键入 msbuild helloworld.csproj -t:Build。
 
      此操作将调用 Visual C# 编译器来创建 Helloworld 应用程序，从而生成 Helloworld 项目文件的 Build 目标。
 
@@ -219,7 +213,7 @@ Build 目标中的任务按顺序执行。 在本例中，Visual C# 编译器 `C
 
      这将指示 Visual C# 编译器生成由 `AssemblyName` 属性命名的程序集，并将其放在由 `OutputPath` 属性命名的文件夹中。
 
-5. 保存所做更改。
+5. 保存更改。
 
 你的项目文件现在应类似于以下代码：
 
@@ -256,7 +250,7 @@ Build 目标中的任务按顺序执行。 在本例中，Visual C# 编译器 `C
 
  现在即可使用项目文件来生成应用程序，在该项目文件中，你使用了生成属性来指定输出文件夹和应用程序名称。
 
-1. 在命令提示符处，键入 msbuild helloworld.csproj -t:Build  。
+1. 在命令提示符处，键入 msbuild helloworld.csproj -t:Build。
 
      这将创建“\Bin\\”文件夹，然后调用 Visual C# 编译器创建 MSBuildSample 应用程序，并将其放在“\Bin\\”文件夹中。
 
@@ -333,9 +327,9 @@ Build 目标中的任务按顺序执行。 在本例中，Visual C# 编译器 `C
 
 ### <a name="to-test-the-build-targets"></a>测试生成目标
 
-1. 在命令提示符处，键入msbuild helloworld.csproj -p:AssemblyName=Greetings  。
+1. 在命令提示符处，键入msbuild helloworld.csproj -p:AssemblyName=Greetings。
 
-     由于未使用 -t  开关显式设置目标，因此 MSBuild 运行默认 Build 目标。 -p  开关替代 `AssemblyName` 属性，并为它指定新值 `Greetings`。 这将导致在“\Bin\\”文件夹中创建一个新应用程序 Greetings.exe。
+     由于未使用 -t 开关显式设置目标，因此 MSBuild 运行默认 Build 目标。 -p 开关替代 `AssemblyName` 属性，并为它指定新值 `Greetings`。 这将导致在“\Bin\\”文件夹中创建一个新应用程序 Greetings.exe。
 
 2. 要验证“\Bin\\”文件夹是否同时包含 MSBuildSample 应用程序和新的 Greetings 应用程序，请键入“dir Bin”。
 
@@ -343,11 +337,11 @@ Build 目标中的任务按顺序执行。 在本例中，Visual C# 编译器 `C
 
      显示的消息应为 **Hello, world!** 。
 
-4. 通过键入 msbuild helloworld.csproj -t:clean  ，删除 MSBuildSample 应用程序。
+4. 通过键入 msbuild helloworld.csproj -t:clean，删除 MSBuildSample 应用程序。
 
      这将运行 Clean 任务，以删除具有默认 `AssemblyName` 属性值 `MSBuildSample` 的应用程序。
 
-5. 通过键入 msbuild helloworld.csproj -t:clean -p:AssemblyName=Greetings  ，删除 Greetings 应用程序。
+5. 通过键入 msbuild helloworld.csproj -t:clean -p:AssemblyName=Greetings，删除 Greetings 应用程序。
 
      这将运行 Clean 任务，以删除具有指定 **AssemblyName** 属性值 `Greetings` 的应用程序。
 
@@ -355,7 +349,7 @@ Build 目标中的任务按顺序执行。 在本例中，Visual C# 编译器 `C
 
 7. 键入 **msbuild**。
 
-     尽管未指定项目文件，但 MSBuild 会生成 helloworld.csproj  文件，因为当前文件夹中只有一个项目文件。 这将导致在“\Bin\\”文件夹中创建 MSBuildSample 应用程序。
+     尽管未指定项目文件，但 MSBuild 会生成 helloworld.csproj 文件，因为当前文件夹中只有一个项目文件。 这将导致在“\Bin\\”文件夹中创建 MSBuildSample 应用程序。
 
      要验证“\Bin\\”文件夹是否包含 MSBuildSample 应用程序，请键入“dir Bin”。
 
@@ -382,11 +376,11 @@ Build 目标中的任务按顺序执行。 在本例中，Visual C# 编译器 `C
     </Target>
     ```
 
-2. 在命令提示符处，键入 msbuild -v:d  ，以测试 Build 目标。
+2. 在命令提示符处，键入 msbuild -v:d，以测试 Build 目标。
 
-     请记住，helloworld.csproj  是默认项目文件，并且 Build 为默认目标。
+     请记住，helloworld.csproj 是默认项目文件，并且 Build 为默认目标。
 
-     -v:d  开关指定了生成流程的详细说明。
+     -v:d 开关指定了生成流程的详细说明。
 
      此时应显示以下各行：
 
@@ -476,7 +470,7 @@ Build 目标中的任务按顺序执行。 在本例中，Visual C# 编译器 `C
 
  Visual Studio 能够自动执行本演练中演示的大部分工作。 若要了解如何使用 Visual Studio 来创建、编辑、生成和测试 MSBuild 项目文件，请参阅[演练：使用 MSBuild](../msbuild/walkthrough-using-msbuild.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [MSBuild 概述](../msbuild/msbuild.md)
 - [MSBuild 参考](../msbuild/msbuild-reference.md)

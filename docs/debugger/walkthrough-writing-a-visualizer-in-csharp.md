@@ -1,7 +1,7 @@
 ---
 title: 使用 C# 编写可视化工具 | Microsoft Docs
 ms.custom: seodec18
-ms.date: 04/12/2019
+ms.date: 05/27/2020
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: a46967d5f46c4f495a07d80e5f73cfc9f9d60c1a
-ms.sourcegitcommit: 7b07e7b5e06e2e13f622445c568b78a284e1a40d
+ms.openlocfilehash: 1f188b40938c62ae8c3692f096217618f9cb7ff6
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2020
-ms.locfileid: "76542628"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84183738"
 ---
 # <a name="walkthrough-writing-a-visualizer-in-c"></a>演练：使用 C\# 编写可视化工具
+
 本演练演示如何使用 C# 编写简单的可视化工具。 本演练中创建的可视化工具使用 Windows 窗体消息框显示字符串的内容。 这种简单的字符串可视化工具本身并不是特别有用，但它显示了为其他数据类型创建更有用的可视化工具时必须遵循的基本步骤。
 
 > [!NOTE]
@@ -133,7 +134,9 @@ ms.locfileid: "76542628"
 
    这是调试器端代码的结尾部分。 但是还有一步操作：添加用于通知调试对象端哪些类集合构成可视化工具的属性。
 
-### <a name="to-add-the-debuggee-side-code"></a>添加调试对象端代码
+### <a name="to-add-the-type-to-visualize-for-the-debuggee-side-code"></a>添加类型以可视化调试对象端代码
+
+在调试器端代码中，使用 <xref:System.Diagnostics.DebuggerVisualizerAttribute> 属性来指定用于可视化调式对象的类型（对象源）。 `Target` 属性设置要可视化的类型。
 
 1. 在 DebuggerSide.cs 中的 `using` 指令之后以及 `namespace MyFirstVisualizer` 之前添加以下特性代码：
 

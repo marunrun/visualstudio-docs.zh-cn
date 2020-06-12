@@ -22,16 +22,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5ceb23d34fab92fe0056f9bd82b9d9c63967dc4c
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 1092add6386ccc5bc1de78efcf7b623a617d920b
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79094573"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84183062"
 ---
 # <a name="zipdirectory-task"></a>ZipDirectory 任务
 
-根据目录内容创建 .zip 存档。 
+根据目录内容创建 .zip 存档。
 
 >[!NOTE]
 >仅在 MSBuild 15.8 及更高版本中提供 `ZipDirectory` 任务。
@@ -42,9 +42,9 @@ ms.locfileid: "79094573"
 
 |参数|描述|
 |---------------|-----------------|
-|`DestinationFile`|<xref:Microsoft.Build.Framework.ITaskItem> 参数（必选）<br /><br /> 要创建的 .zip 文件的完整路径。 |
-|`Overwrite`|可选 `Boolean` 参数。<br /><br /> 如果为 `true`，则跳过要覆盖的目标文件（如有）。 默认为 `false`。|
-|`SourceDirectory`|必选 <xref:Microsoft.Build.Framework.ITaskItem> 参数。<br /><br /> 指定要从中创建 .zip 存档的目录。 |
+|`DestinationFile`|<xref:Microsoft.Build.Framework.ITaskItem> 参数（必选）<br /><br /> 要创建的 .zip 文件的完整路径。|
+|`Overwrite`|可选 `Boolean` 参数。<br /><br /> 如果为 `true`，则将覆盖目标文件（如有）。 默认为 `false`。|
+|`SourceDirectory`|必选 <xref:Microsoft.Build.Framework.ITaskItem> 参数。<br /><br /> 指定要从中创建 .zip 存档的目录。|
 
 ## <a name="remarks"></a>备注
 
@@ -52,7 +52,7 @@ ms.locfileid: "79094573"
 
 ## <a name="example"></a>示例
 
- 以下示例（如果用作导入的 .targets 文件）在生成项目后基于输出目录创建 .zip 存档   。 `$(OutputPath)` 属性通常在 MSBuild 项目文件中定义，因此导入以下文件的项目文件将生成 `output.zip` 的 zip 存档：
+ 以下示例（如果用作导入的 .targets 文件）在生成项目后基于输出目录创建 .zip 存档 。 `$(OutputPath)` 属性通常在 MSBuild 项目文件中定义，因此导入以下文件的项目文件将生成 `output.zip` 的 zip 存档：
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">

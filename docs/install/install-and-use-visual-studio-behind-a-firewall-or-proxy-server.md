@@ -1,7 +1,7 @@
 ---
 title: 在防火墙或代理服务器背后安装和使用
 description: 如果组织使用防火墙或代理服务器，请检查希望添加到允许列表或打开的域 URL、端口和协议
-ms.date: 02/01/2020
+ms.date: 05/13/2020
 ms.custom: seodec18
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +17,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 025cf432912d38976507c93545e7c38b44d86fd8
-ms.sourcegitcommit: 316dd2182dd56b0cbde49f0cd82e9f75baa2530f
+ms.openlocfilehash: c1a1fd706ce64b9b39954142664e0799b6251c56
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/12/2020
-ms.locfileid: "81223653"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84180436"
 ---
 # <a name="install-and-use-visual-studio-and-azure-services-behind-a-firewall-or-proxy-server"></a>在防火墙或代理服务器后面安装和使用 Visual Studio 和 Azure 服务
 
@@ -132,11 +132,11 @@ ms.locfileid: "81223653"
 | 开发人员社区 | sendvsfeedback2.azurewebsites.net/api | https/443 | 用于调用开发者社区反馈工具 API（我的问题、搜索、投票、评论、提交、上传、恢复） |
 | Intellicode | \*.intellicode.vsengsaas.visualstudio.com | https/443 | 用于调用 Intellicode API |
 | Live Share | \*.liveshare.vsengsaas.visualstudio.com| https/443 | 用于调用 Live Share API |
-| Visual Studio Online | \*.online.visualstudio.com | https/443 | 用于调用 Visual Studio Online API |
+| Visual Studio Codespaces | \*.online.visualstudio.com | https/443 | 用于调用 Visual Studio Codespaces API |
 | JavaScript 自动类型获取 | registry.npmjs.org | https/443 | 用于安装 TypeScript 类型定义，为常用 JavaScript 库提供 Intellisense |
 | Visual Studio 订阅许可服务 | app.vssps.visualstudio.com/apis/<br/>Licensing/ClientRights | https/443 | 联机激活的许可 |
 | 调试器 | 1. <br>vsdebugger.blob.core.windows.net <br>vsdebugger.azureedge.net <br><br>2. <br>download.visualstudio.com/\*/<br/>onecore.msvsmon.\*.zip<br><br> 3. referencesource.microsoft.com/symbols <br><br> 4. <br>symbols.nuget.org/download/symbols<br><br> 5. visualstudio.com<br><br>6. msdl.microsoft.com/download/symbols | https/443 | 1. <br>用于下载在 Unix/macOS 上通过 SSH 进行 .NET Core 调试所需的调试器位 <br><br>2. <br>用于下载远程 Windows Docker 容器调试的调试器位<br><br> 3.用于 .NET Framework 源单步执行 <br><br> 4. <br>（如果用户选择加入）用于下载已发布到 nuget.org 符号服务器的符号。<br><br> 5.（如果用户选择加入）用于下载 MS 符号和二进制文件，还可能需要调试转储中的托管代码 |
-| Visual Studio Online| \*.online.visualstudio.com | https/443 | 用于调用 Visual Studio Online API |
+| Visual Studio Codespaces| \*.online.visualstudio.com | https/443 | 用于调用 Visual Studio Codespaces API |
 | Xamarin Android 应用发布 | \*.googleapis.com <br/> play.google.com <br/>accounts.google.com | https/443 | 用于与 Google Play Store 服务交互，以便直接从 Visual Studio 发布/上传 Xamarin Android 应用程序。 |
 | Azure 容器注册表 | *.azurecr.io | https/443 | 访问 Azure 上托管的容器注册表，用于配置 CICD 管道 |
 | | | | |
@@ -147,7 +147,7 @@ ms.locfileid: "81223653"
 
 ## <a name="get-support"></a>获取支持
 
-对于与安装相关的问题，我们提供[安装聊天](https://visualstudio.microsoft.com/vs/support/#talktous)（仅限英语）支持选项  。
+对于与安装相关的问题，我们提供[安装聊天](https://visualstudio.microsoft.com/vs/support/#talktous)（仅限英语）支持选项。
 
 下面是另外几个支持选项：
 

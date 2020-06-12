@@ -1,7 +1,7 @@
 ---
 title: 用 Visual Basic 编写可视化工具 | Microsoft Docs
 ms.custom: seodec18
-ms.date: 04/12/2019
+ms.date: 05/27/2020
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -17,14 +17,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 293e7dd99ea2c4d440153797fcc5e9a15083e93c
-ms.sourcegitcommit: 7b07e7b5e06e2e13f622445c568b78a284e1a40d
+ms.openlocfilehash: 25720f31c721cae44ed5425631a86b3a41bf475e
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2020
-ms.locfileid: "76542602"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84180527"
 ---
 # <a name="walkthrough-writing-a-visualizer-in-visual-basic"></a>演练：用 Visual Basic 编写可视化工具
+
 本演练演示如何使用 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 编写简单的可视化工具。 本演练中创建的可视化工具使用 Windows 窗体消息框显示字符串的内容。 此简单字符串可视化工具是一个基本示例，将演示如何创建更加适合您项目的其他数据类型的可视化工具。
 
 > [!NOTE]
@@ -138,7 +139,9 @@ ms.locfileid: "76542602"
 ## <a name="add-the-necessary-attribute"></a>添加必需特性
  这是调试器端代码的结尾部分。 但是还有一步操作：添加用于通知调试对象端哪些类集合构成可视化工具的特性。
 
-### <a name="to-add-the-debugee-side-code"></a>添加调试对象端代码
+### <a name="to-add-the-type-to-visualize-for-the-debuggee-side-code"></a>添加类型以可视化调试对象端代码
+
+在调试器端代码中，使用 <xref:System.Diagnostics.DebuggerVisualizerAttribute> 属性来指定用于可视化调式对象的类型（对象源）。 `Target` 属性设置要可视化的类型。
 
 1. 在 DebuggerSide.vb 中的 `Imports` 语句之后但在 `namespace MyFirstVisualizer` 之前，添加以下特性代码：
 

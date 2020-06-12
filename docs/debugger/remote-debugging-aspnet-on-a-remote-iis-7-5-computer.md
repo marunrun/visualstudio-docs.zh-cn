@@ -3,7 +3,7 @@ title: 远程调试 IIS 计算机上的 ASP.NET
 ms.custom:
 - remotedebugging
 - seodec18
-ms.date: 05/21/2018
+ms.date: 05/06/2020
 ms.topic: conceptual
 ms.assetid: 9cb339b5-3caf-4755-aad1-4a5da54b2a23
 author: mikejo5000
@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - aspnet
-ms.openlocfilehash: 86b035164c4d34f4ce0182ea51fdfe6381ad2d4f
-ms.sourcegitcommit: 08c144d290da373df841f04fc799e3133540a541
+ms.openlocfilehash: cd2b787fe546b9c53332fcdc548d3da829759755
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72536019"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84173910"
 ---
 # <a name="remote-debug-aspnet-on-a-remote-iis-computer"></a>远程调试远程 IIS 计算机上的 ASP.NET
 若要调试已部署到 IIS 的 ASP.NET 应用程序，请在部署了应用的计算机上安装并运行远程工具，然后从 Visual Studio 附加到正在运行的应用。
@@ -113,7 +113,7 @@ ms.locfileid: "72536019"
 可以使用此选项创建一个发布设置文件，并将其导入到 Visual Studio 中。
 
 > [!NOTE]
-> 此部署方法使用 Web 部署。 如果要在 Visual Studio 中手动配置 Web 部署，而不是导入设置，则可以安装 Web 部署 3.6，而不是用于宿主服务器的 Web 部署 3.6。 但是，如果手动配置 Web 部署，则需要确保使用正确的值和权限配置服务器上的应用文件夹（请参阅[配置 ASP.NET 网站](#BKMK_deploy_asp_net)）。
+> 此部署方法使用 Web 部署，必须安装在服务器上。 如果要手动配置 Web 部署，而不是导入设置，则可以安装 Web 部署 3.6，而不是用于托管服务器的 Web 部署 3.6。 但是，如果手动配置 Web 部署，则需要确保使用正确的值和权限配置服务器上的应用文件夹（请参阅[配置 ASP.NET 网站](#BKMK_deploy_asp_net)）。
 
 ### <a name="install-and-configure-web-deploy-for-hosting-servers-on-windows-server"></a>在 Windows Server 上安装和配置用于宿主服务器的 Web 部署
 
@@ -131,7 +131,7 @@ ms.locfileid: "72536019"
 
 1. 在“设置”对话框中，单击“下一步”启用调试，选择“调试”配置，然后在“文件发布”选项下选择“删除目标处的其他文件”。
 
-    > [!NOTE]
+    > [!IMPORTANT]
     > 如果选择发布配置，则在发布时，需要在 web.config 文件中禁用调试。
 
 1. 单击“保存”，然后重新发布应用。
@@ -185,7 +185,7 @@ ms.locfileid: "72536019"
 
 [!INCLUDE [remote-debugger-download](../debugger/includes/remote-debugger-download.md)]
 
-## <a name="set-up-the-remote-debugger-on-windows-server"></a><a name="BKMK_setup"></a> 在 Windows Server 上设置远程调试器
+## <a name="set-up-the-remote-debugger-on-windows-server"></a><a name="BKMK_setup"></a>在 Windows Server 上设置远程调试器
 
 [!INCLUDE [remote-debugger-configuration](../debugger/includes/remote-debugger-configuration.md)]
 
@@ -202,15 +202,15 @@ ms.locfileid: "72536019"
     > [!TIP]
     > 在 Visual Studio 2017 及更高版本中，可以使用“调试”>“重新附加到进程...”重新附加到以前附加到的同一进程(Shift+Alt+P)。
 
-3. 将限定符字段设置为“\<remote computer name>”并按 Enter 。
+3. 将限定符字段设置为 \<remote computer name>，并按 Enter 。
 
     确保 Visual Studio 将所需的端口添加到计算机名称中，其格式为：\<remote computer name>:port
 
     ::: moniker range=">=vs-2019"
-    在 Visual Studio 2019 上，应看到 \<remote computer name>:4024
+    在 Visual Studio 2019 中应看到 \<remote computer name>:4024
     ::: moniker-end
     ::: moniker range="vs-2017"
-    在 Visual Studio 2017 上，应看到 \<remote computer name>:4022
+    在 Visual Studio 2017 中应看到 \<remote computer name>:4022
     ::: moniker-end
     端口是必需的。 如果看不到端口号，请手动添加。
 

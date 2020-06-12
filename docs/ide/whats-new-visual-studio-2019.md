@@ -2,7 +2,7 @@
 title: Visual Studio 2019 中的新增功能
 titleSuffix: ''
 description: 了解 Visual Studio 2019 中的新增功能。
-ms.date: 03/16/2020
+ms.date: 05/20/2020
 helpviewer_keywords:
 - Visual Studio, what's new
 - what's new [Visual Studio]
@@ -15,21 +15,25 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: bf251ade250a466cefe02db6f5cc709a0c18837b
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: a6321e840941958fb2618a551a0212d6dc797cfb
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79437741"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84183374"
 ---
 # <a name="whats-new-in-visual-studio-2019"></a>Visual Studio 2019 中的新增功能
 
-已针对[版本 16.5](/visualstudio/releases/2019/release-notes/) 进行更新 
+已针对[版本 16.6](/visualstudio/releases/2019/release-notes/) 进行更新
 
 >[!div class="button"]
 >[下载 Visual Studio 2019](https://visualstudio.microsoft.com/downloads)
 
-使用 Visual Studio 2019，你将获得面向任何开发人员、应用程序和平台的一流工具和服务。 无论是首次使用 Visual Studio 还是已经使用多年，此新版本都有很多值得称赞的地方！
+Visual Studio 会不断改进以满足开发人员的需求。 以下视频来自 [Microsoft Build](https://mybuild.microsoft.com/) 库，请观看视频，与我们一起了解即将发布的[最新功能](/visualstudio/releases/2019/release-notes/)和[抢先体验功能](/visualstudio/releases/2019/release-notes-preview/)： <br><br>*视频长度：44.58 分钟*
+
+> [!VIDEO https://channel9.msdn.com/Events/Build/2020/BOD111/player]
+
+使用 Visual Studio 2019，你将获得面向任何开发人员、应用程序和平台的一流工具和服务。 无论是首次使用 Visual Studio 还是已经使用多年，此最新版本都有很多让你惊艳的地方！
 
 以下是对新增功能的简要概括：
 
@@ -59,7 +63,7 @@ C# 中有很多新颖有用的重构，更便于组织代码。 它们在灯泡�
 
    ![Visual Studio 2019 中的重构体验动画](media/vs-2019/refactorings.gif)
 
-只需通过按 Ctrl+.  并选择要采取的操作调用重构。
+只需通过按 Ctrl+. 并选择要采取的操作调用重构。
 
 ### <a name="intellicode"></a>IntelliCode
 
@@ -74,7 +78,7 @@ C# 中有很多新颖有用的重构，更便于组织代码。 它们在灯泡�
 * 发现难以察觉的代码问题
 * 将关注点集中到重要领域，从而专注代码评审
 
-在首次预览作为 Visual Studio 扩展的 IntelliCode 时，我们最初仅支持 C#。 现在，在 16.1 的新增功能中，我们添加了对 C# 和 XAML“in-the-box”的支持  。 （但是，对 C++ 和 TypeScript/JavaScript 的支持仍处于预览状态。）
+在首次预览作为 Visual Studio 扩展的 IntelliCode 时，我们最初仅支持 C#。 现在，在 16.1 的新增功能中，我们添加了对 C# 和 XAML“in-the-box”的支持。 （但是，对 C++ 和 TypeScript/JavaScript 的支持仍处于预览状态。）
 
 如果你使用的是 C#，我们还添加了在你自己的代码上训练自定义模型的功能。
 

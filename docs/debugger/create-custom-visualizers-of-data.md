@@ -1,6 +1,6 @@
 ---
 title: 创建自定义数据可视化工具 | Microsoft Docs
-ms.date: 11/07/2018
+ms.date: 05/27/2020
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.visualizer.troubleshoot
@@ -19,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 64f44379c98808cb93fbe51498234a34a695c3d6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 70c16b603f1c38eeb3e71718937e7c669ae8ebc9
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62564714"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84184544"
 ---
 # <a name="create-custom-data-visualizers"></a>创建自定义数据可视化工具
  “可视化工具”是 [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] 调试器用户界面的一部分，该用户界面以适合其数据类型的方式显示变量或对象。 例如，HTML 可视化工具解释 HTML 字符串，并以与浏览器窗口中相同的方式显示结果。 位图可视化工具解释位图结构并显示它表示的图形。 某些可视化工具允许你修改数据，还允许你查看数据。
@@ -33,7 +33,7 @@ ms.locfileid: "62564714"
 
 可从 Microsoft、第三方和社区下载更多可视化工具。 还可以编写自己的可视化工具，并将它们安装在 [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] 调试器中。
 
-在调试器中，可视化工具由放大镜图标 ![VisualizerIcon](../debugger/media/dbg-tips-visualizer-icon.png "可视化工具图标")表示。 可以在 DataTip、调试器“监视”窗口中或“快速监视”对话框中选择图标，然后为相应对象选择适当的可视化工具  。
+在调试器中，可视化工具由放大镜图标 ![VisualizerIcon](../debugger/media/dbg-tips-visualizer-icon.png "可视化工具图标") 表示。 可以在 DataTip、调试器“监视”窗口中或“快速监视”对话框中选择图标，然后为相应对象选择适当的可视化工具  。
 
 ## <a name="write-custom-visualizers"></a>编写自定义可视化工具
 
@@ -72,11 +72,11 @@ ms.locfileid: "62564714"
 
 4. 应用 <xref:System.Diagnostics.DebuggerVisualizerAttribute>，让可视化工具显示它 (<xref:Microsoft.VisualStudio.DebuggerVisualizers.DialogDebuggerVisualizer>)。
 
-### <a name="to-create-the-debuggee-side"></a>创建调试对象端
+### <a name="to-create-the-visualizer-object-source-for-the-debuggee-side"></a>为调试对象端创建可视化工具对象源
 
-使用 <xref:System.Diagnostics.DebuggerVisualizerAttribute> 指定调试对象端代码。
+在调试器端代码中使用 <xref:System.Diagnostics.DebuggerVisualizerAttribute> 指定要可视化的类型（调试对象端对象源）。
 
-1. 应用 <xref:System.Diagnostics.DebuggerVisualizerAttribute>，为它指定可视化工具 (<xref:Microsoft.VisualStudio.DebuggerVisualizers.DialogDebuggerVisualizer>) 和对象源 (<xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource>)。 如果省略对象源，可视化工具将使用默认对象源。
+1. 在调试器端代码中，编辑 <xref:System.Diagnostics.DebuggerVisualizerAttribute>，并为其提供对象源 (<xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource>)。 `Target` 属性设置对象源。 如果省略对象源，可视化工具将使用默认对象源。
 
 1. 若要让可视化工具编辑并显示数据对象，请重写 <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource> 中的 `TransferData` 或 `CreateReplacementObject` 方法。
 

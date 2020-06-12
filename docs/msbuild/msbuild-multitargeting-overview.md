@@ -8,12 +8,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: af7649a75fbf3ded0cf5d09e9063b49f4fcab1b2
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 609c764192673e4d3f9fbd99a1bc572e9d78db7f
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77633325"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84183517"
 ---
 # <a name="msbuild-multitargeting-overview"></a>MSBuild 多定向概述
 
@@ -36,11 +36,11 @@ ms.locfileid: "77633325"
 
 ## <a name="target-framework-and-platform"></a>目标框架和平台
 
- 目标框架  是项目生成后要在其上运行的一个 .NET Framework 版本；目标平台  项目生成后要在其上运行的一个系统平台。  例如，你可能希望将 .NET Framework 2.0 应用程序的目标设定为在与 802x86 处理器系列 (x86) 兼容的 32 位平台上运行。 目标框架与目标平台的组合称为“目标上下文”  。 有关详细信息，请参阅[目标框架和目标平台](../msbuild/msbuild-target-framework-and-target-platform.md)。
+ 目标框架是项目生成后要在其上运行的一个 .NET Framework 版本；目标平台项目生成后要在其上运行的一个系统平台。  例如，你可能希望将 .NET Framework 2.0 应用程序设定为在与 80x86 处理器系列 (x86) 兼容的 32 位平台上运行。 目标框架与目标平台的组合称为“目标上下文”。 有关详细信息，请参阅[目标框架和目标平台](../msbuild/msbuild-target-framework-and-target-platform.md)。
 
 ## <a name="toolset-toolsversion"></a>工具集 (ToolsVersion)
 
- 工具集可收集用于创建应用程序的工具、任务和目标。 工具集包括编译器（如 csc.exe 和 vbc.exe）、常见目标文件 (microsoft.common.targets) 及常见任务文件 (microsoft.common.tasks)     。 工具集 4.5 可用于面向 .NET Framework 版本 2.0、3.0、3.5、4 和 4.5。 但工具集 2.0 仅可用于面向 .NET Framework 版本 2.0。 有关详细信息，请参阅[工具集 (ToolsVersion)](../msbuild/msbuild-toolset-toolsversion.md)。
+ 工具集可收集用于创建应用程序的工具、任务和目标。 工具集包括编译器（如 csc.exe 和 vbc.exe）、常见目标文件 (microsoft.common.targets) 及常见任务文件 (microsoft.common.tasks)   。 工具集 4.5 可用于面向 .NET Framework 版本 2.0、3.0、3.5、4 和 4.5。 但工具集 2.0 仅可用于面向 .NET Framework 版本 2.0。 有关详细信息，请参阅[工具集 (ToolsVersion)](../msbuild/msbuild-toolset-toolsversion.md)。
 
 ## <a name="reference-assemblies"></a>引用程序集
 
@@ -50,6 +50,6 @@ ms.locfileid: "77633325"
 
  通过 MSBuild 可配置要在进程外运行的 MSBuild 目标和任务，这样即可面向与当前运行所在的上下文有很大不同的上下文。  例如，当开发计算机在具有 .NET Framework 4.5 的 64 位平台上运行时，可面向 32 位 NET Framework 2.0 应用程序。 有关详细信息，请参阅[配置目标和任务](../msbuild/configuring-targets-and-tasks.md)。
 
-## <a name="troubleshooting"></a>故障排除
+## <a name="troubleshooting"></a>疑难解答
 
  如果尝试引用不属于目标上下文的程序集，则可能会遇到错误。 有关这些错误以及如何处理这些错误的详细信息，请参阅 [.NET Framework 目标错误疑难解答](../msbuild/troubleshooting-dotnet-framework-targeting-errors.md)。

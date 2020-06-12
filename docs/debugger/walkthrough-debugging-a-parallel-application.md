@@ -22,12 +22,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c9079fc17da9f89ceae61cbd7d4f086f1db133cf
-ms.sourcegitcommit: 6ef52c2030b37ea7a64fddb32f050ecfb77dd918
+ms.openlocfilehash: 84d43ede5fcca1ae76d155cb8799a61900926d7b
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77416420"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84183842"
 ---
 # <a name="walkthrough-debugging-a-parallel-application-in-visual-studio-c-visual-basic-c"></a>演练：在 Visual Studio 中调试并行应用程序（C#、Visual Basic、C++）
 
@@ -232,9 +232,9 @@ ms.locfileid: "77416420"
 
 2. 在“调试”菜单上指向“窗口”，然后单击“线程”  。 将“线程”窗口停靠在 Visual Studio 底部。
 
-3. 在“调试”菜单上指向“窗口”，然后单击“调用堆栈”  。 将“调用堆栈”窗口停靠在 Visual Studio 底部。
+3. 在“调试”菜单上指向“窗口”，然后单击“调用堆栈”  。 将“调用堆栈”窗口停靠在 Visual Studio 的底部。
 
-4. 在“线程”窗口中双击线程，以将其作为当前线程。 当前线程具有一个黄色箭头。 更改当前线程时，将更新其他窗口。 接着，我们将查看任务。
+4. 在“线程”窗口中双击线程，使其作为当前线程。 当前线程具有一个黄色箭头。 更改当前线程时，将更新其他窗口。 接着，我们将查看任务。
 
 5. 在“调试”菜单上指向“窗口”，然后单击“任务”  。 下图所示为“任务”窗口。
 

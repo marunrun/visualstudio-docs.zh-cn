@@ -8,16 +8,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c3cccb9bb87d03d1fb285babe2a02cf30cfb9ed9
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 76dcbbf8c5c5c5019c0b45fe97150838d996bfa1
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77633195"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84183348"
 ---
 # <a name="msbuild-target-framework-and-target-platform"></a>MSBuild 目标框架和目标平台
 
-可以生成要在目标框架  （.NET Framework 的一个特定版本）和目标平台  （一种特定的软件体系结构）上运行的项目。  例如，可将一个应用程序的目标设定为在与 802x86 处理器系列 (“x86”) 兼容的 32 位平台上的 .NET Framework 2.0 上运行。 目标框架与目标平台的组合称为“目标上下文”  。
+可以生成要在目标框架（.NET Framework 的一个特定版本）和目标平台（一种特定的软件体系结构）上运行的项目。  例如，可将一个应用程序设定为在与 80x86 处理器系列 (“x86”) 兼容的 32 位平台上的 .NET Framework 2.0 上运行。 目标框架与目标平台的组合称为“目标上下文”。
 
 > [!IMPORTANT]
 > 本文介绍了指定目标框架的旧方法。 SDK 风格的项目支持不同的目标框架，例如 netstandard。 有关详细信息，请参阅[目标框架](/dotnet/standard/frameworks)。
@@ -58,7 +58,7 @@ ms.locfileid: "77633195"
 <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
 ```
 
- 目标概况  是目标框架的一个子集。 例如，.NET Framework 4 客户端配置文件不包括对 MSBuild 程序集的引用。
+ 目标概况是目标框架的一个子集。 例如，.NET Framework 4 客户端配置文件不包括对 MSBuild 程序集的引用。
 
  > [!NOTE]
  > 目标配置文件仅适用于[可移植类库](/dotnet/standard/cross-platform/cross-platform-development-with-the-portable-class-library)。
@@ -72,7 +72,7 @@ ms.locfileid: "77633195"
 
 ## <a name="target-platform"></a>目标平台
 
- 平台  是定义特定运行时环境的硬件和软件的组合。 例如，应用于对象的
+ 平台是定义特定运行时环境的硬件和软件的组合。 例如，应用于对象的
 
 - `x86` 指定在 Intel 80x86 处理器或等效处理器上运行的 32 位 Windows 操作系统。
 
@@ -80,7 +80,7 @@ ms.locfileid: "77633195"
 
 - `Xbox` 指定 Microsoft Xbox 360 平台。
 
-目标平台  是指将在其上运行生成项目的特定平台。 目标平台是在项目文件中的 `PlatformTarget` 生成属性中指定的。 可通过在 IDE 中使用项目属性页或**配置管理器**来更改目标平台。
+目标平台是指将在其上运行生成项目的特定平台。 目标平台是在项目文件中的 `PlatformTarget` 生成属性中指定的。 可通过在 IDE 中使用项目属性页或**配置管理器**来更改目标平台。
 
 ```xml
 <PropertyGroup>
@@ -89,7 +89,7 @@ ms.locfileid: "77633195"
 
 ```
 
-目标配置  是目标平台的一个子集。 例如，`x86``Debug` 配置不包括大多数代码优化项。 目标配置是在项目文件中的 `Configuration` 生成属性中指定的。 可通过使用项目属性页或**配置管理器**来更改目标配置。
+目标配置是目标平台的一个子集。 例如，`x86` `Debug` 配置不包括大多数代码优化项。 目标配置是在项目文件中的 `Configuration` 生成属性中指定的。 可通过使用项目属性页或**配置管理器**来更改目标配置。
 
 ```xml
 <PropertyGroup>

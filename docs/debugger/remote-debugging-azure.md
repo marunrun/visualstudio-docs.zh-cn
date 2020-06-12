@@ -1,7 +1,7 @@
 ---
 title: IIS 和 Azure 上的远程调试 ASP.NET Core |Microsoft Docs
 ms.custom: remotedebugging
-ms.date: 04/14/2020
+ms.date: 05/06/2020
 ms.topic: conceptual
 ms.assetid: a6c04b53-d1b9-4552-a8fd-3ed6f4902ce6
 author: mikejo5000
@@ -11,12 +11,12 @@ ms.workload:
 - aspnet
 - dotnetcore
 - azure
-ms.openlocfilehash: 079e324f2304118c9041118c13e8ebc0cce2015c
-ms.sourcegitcommit: cc58ca7ceae783b972ca25af69f17c9f92a29fc2
+ms.openlocfilehash: 6983d3ac191b8eb85d38e1d40afa3244e97dbb17
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81385498"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84184245"
 ---
 # <a name="remote-debug-aspnet-core-on-iis-in-azure-in-visual-studio"></a>在 Azure 中的 IIS 上的 Visual Studio 中远程调试 ASP.NET Core
 
@@ -105,6 +105,7 @@ ms.locfileid: "81385498"
 这些过程已在以下服务器配置上进行了测试：
 * Windows Server 2012 R2 和 IIS 8
 * Windows Server 2016 和 IIS 10
+* Windows Server 2019 和 IIS 10
 
 ### <a name="app-already-running-in-iis-on-the-azure-vm"></a>应用已在 Azure VM 上的 IIS 中运行？
 
@@ -116,7 +117,7 @@ ms.locfileid: "81385498"
 
   * 在开始之前，请按照[安装和运行 IIS](/azure/virtual-machines/windows/quick-create-portal) 中所述的所有步骤进行操作。
 
-  * 在网络安全组中打开端口 80 时，还应为远程调试器打开[正确的端口](#bkmk_openports)（4024 或 4022）。 这样一来，以后就不必打开它。
+  * 在网络安全组中打开端口 80 时，还应为远程调试器打开[正确的端口](#bkmk_openports)（4024 或 4022）。 这样一来，以后就不必打开它。 如果使用的是 Web 部署，还应打开端口 8172。
 
 ### <a name="update-browser-security-settings-on-windows-server"></a>更新 Windows Server 上的浏览器安全设置
 
@@ -131,7 +132,10 @@ ms.locfileid: "81385498"
 
 ### <a name="install-aspnet-core-on-windows-server"></a>在 Windows Server 上安装 ASP.NET Core
 
-1. 在托管系统上安装 [.NET Core Windows Server 托管捆绑包](https://aka.ms/dotnetcore-2-windowshosting)。 捆绑包可安装 .NET Core 运行时、.NET Core 库和 ASP.NET Core 模块。 有关更深入的说明，请参阅[发布到 IIS](/aspnet/core/publishing/iis?tabs=aspnetcore2x#iis-configuration)。
+1. 在托管系统上安装 .NET Core 托管捆绑包。 捆绑包可安装 .NET Core 运行时、.NET Core 库和 ASP.NET Core 模块。 有关更深入的说明，请参阅[发布到 IIS](/aspnet/core/publishing/iis?tabs=aspnetcore2x#iis-configuration)。
+
+    对 .NET Core 3，安装 [.NET Core 托管捆绑包](https://dotnet.microsoft.com/permalink/dotnetcore-current-windows-runtime-bundle-installer)。
+    对 .NET Core 2，安装 [.NET Core Windows Server 托管捆绑包](https://aka.ms/dotnetcore-2-windowshosting)。
 
     > [!NOTE]
     > 如果系统没有 Internet 连接，请先获取并安装 [Microsoft Visual C++ 2015 Redistributable](https://www.microsoft.com/download/details.aspx?id=53840)，再安装 .NET Core Windows Server 托管捆绑包。
@@ -151,7 +155,13 @@ ms.locfileid: "81385498"
 可以使用此选项创建一个发布设置文件，并将其导入到 Visual Studio 中。
 
 > [!NOTE]
-> 此部署方法使用 Web 部署。 如果要在 Visual Studio 中手动配置 Web 部署，而不是导入设置，则可以安装 Web 部署 3.6，而不是用于宿主服务器的 Web 部署 3.6。 但是，如果手动配置 Web 部署，则需要确保使用正确的值和权限配置服务器上的应用文件夹（请参阅[配置 ASP.NET 网站](#BKMK_deploy_asp_net)）。
+> 此部署方法使用 Web 部署，必须安装在服务器上。 如果要手动配置 Web 部署，而不是导入设置，则可以安装 Web 部署 3.6，而不是用于托管服务器的 Web 部署 3.6。 但是，如果手动配置 Web 部署，则需要确保使用正确的值和权限配置服务器上的应用文件夹（请参阅[配置 ASP.NET 网站](#BKMK_deploy_asp_net)）。
+
+### <a name="configure-the-aspnet-core-web-site"></a>配置 ASP.NET Core 网站
+
+1. 在 IIS 管理器左窗格的“连接”下，选择“应用程序池” 。 打开 DefaultAppPool，将“.NET CLR 版本”设置为“无托管代码”  。 ASP.NET Core 需要执行此操作。 默认网站使用 DefaultAppPool。
+
+2. 停止并重新启动 DefaultAppPool。
 
 ### <a name="install-and-configure-web-deploy-for-hosting-servers-on-windows-server"></a>在 Windows Server 上安装和配置用于宿主服务器的 Web 部署
 
@@ -165,11 +175,14 @@ ms.locfileid: "81385498"
 
 [!INCLUDE [install-web-deploy-with-hosting-server](../deployment/includes/import-publish-settings-vs.md)]
 
-应用成功部署后，它应自动启动。 如果在 Visual Studio 中无法启动应用，请在 IIS 中启动。 对于 ASP.NET Core，需要确保将 DefaultAppPool 的应用程序池字段设置为“无托管代码” 。
+    > [!NOTE]
+    > If you restart an Azure VM, the IP address may change.
+
+应用成功部署后，它应自动启动。 如果在 Visual Studio 中无法启动应用，请在 IIS 中启动应用以验证其是否正常运行。 对于 ASP.NET Core，还需要确保将 DefaultAppPool 的“应用程序池”字段设置为“无托管代码” 。
 
 1. 在“设置”对话框中，单击“下一步”启用调试，选择“调试”配置，然后在“文件发布”选项下选择“删除目标处的其他文件”    。
 
-    > [!NOTE]
+    > [!IMPORTANT]
     > 如果选择发布配置，则在发布时，需要在 web.config 文件中禁用调试。
 
 1. 单击“保存”，然后重新发布应用。
@@ -219,15 +232,15 @@ ms.locfileid: "81385498"
     > [!TIP]
     > 在 Visual Studio 2017 及更高版本中，可以使用“调试”>“重新附加到进程...”重新附加到以前附加的相同进程(Shift+Alt+P)。
 
-3. 将限定符字段设置为“\<remote computer name>”并按 Enter 。
+3. 将限定符字段设置为 \<remote computer name>，并按 Enter 。
 
     确保 Visual Studio 将所需的端口添加到计算机名称中，其格式为：\<remote computer name>:port
 
     ::: moniker range=">=vs-2019"
-    在 Visual Studio 2019 上，应看到 \<remote computer name>:4024
+    在 Visual Studio 2019 中应看到 \<remote computer name>:4024
     ::: moniker-end
     ::: moniker range="vs-2017"
-    在 Visual Studio 2017 上，应看到 \<remote computer name>:4022
+    在 Visual Studio 2017 中应看到 \<remote computer name>:4022
     ::: moniker-end
     端口是必需的。 如果看不到端口号，请手动添加。
 
@@ -242,11 +255,11 @@ ms.locfileid: "81385498"
 
 6. 键入进程名称的第一个字母，以快速查找应用。
 
-    * 选择 dotnet.exe（适用于 .NET Core）
+    * 如果正在 IIS 上使用[进程内托管模型](/aspnet/core/host-and-deploy/aspnet-core-module?view=aspnetcore-3.1#hosting-models)，请选择正确的 w3wp.exe 进程。 从 .NET Core 3 开始，这是默认设置。
 
-      如果有多个显示 dotnet.exe 的进程，请检查“用户名”列 。 在某些情况下，“用户名”列显示应用池名称，例如 IIS APPPOOL\DefaultAppPool 。 如果你看到应用池，则一种确定正确进程的简单方法是为要调试的应用实例创建新的命名应用池，随后可以在“用户名”列中轻松找到它。
+    * 否则，请选择 dotnet.exe 进程。 （这是进程外托管模型。）
 
-    * 在某些 IIS 场景中，你可能会在进程列表中找到你的应用名称，例如 MyASPApp.exe。 可以改为附加到此进程。
+    如果有多个进程显示 w3wp.exe 或 dotnet.exe，请检查“用户名”列。 在某些情况下，“用户名”列显示应用池名称，例如 IIS APPPOOL\DefaultAppPool。 如果你看到了应用池，但它不是唯一的，则为要调试的应用实例创建一个使用新名称的应用池，然后就可以在“用户名”列中轻松找到它了。
 
     ::: moniker range=">=vs-2019"
     ![RemoteDBG_AttachToProcess](../debugger/media/vs-2019/remotedbg-attachtoprocess-aspnetcore.png "RemoteDBG_AttachToProcess")

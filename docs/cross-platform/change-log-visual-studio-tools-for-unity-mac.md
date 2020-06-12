@@ -1,7 +1,7 @@
 ---
 title: 更改日志（Visual Studio Tools for Unity、Mac）| Microsoft Docs
 ms.custom: ''
-ms.date: 12/02/2019
+ms.date: 5/19/2020
 ms.technology: vs-unity-tools
 ms.topic: conceptual
 ms.assetid: 33a6ac54-d997-4308-b5a0-af7387460849
@@ -10,16 +10,70 @@ ms.author: johmil
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: 5599153f79b273249e93c48aaa197214d92f5fe7
-ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
+ms.openlocfilehash: 4fa5a68a15dd5b53d5a626ff5c46e9739db504fc
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80232922"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84184557"
 ---
 # <a name="change-log-visual-studio-tools-for-unity-mac"></a>更改日志（Visual Studio Tools for Unity、Mac）
 
 Visual Studio Tools for Unity 更改日志。
+
+## <a name="2610"></a>2.6.1.0
+发布日期：2020 年 5 月 19 日
+
+### <a name="bug-fixes"></a>Bug 修复
+
+- **集成：**
+
+  - 如果无法在 Unity 端创建消息服务器，则会发出警告。
+
+  - 在轻量级编译期间正确运行分析器。
+
+  - 修复了与 Unity 中心安装相关的 API 文档。
+  
+  - 修复了调试器可视化工具故障。
+
+## <a name="2600"></a>2.6.0.0
+发布时间：2020 年 4 月 14 日
+
+### <a name="new-features"></a>新增功能
+
+- **集成：**
+
+  - 添加了 [`UNT0012`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/UNT0012.md) 诊断。 在 `StartCoroutine()` 中检测并包装对协同例程的调用。
+
+  - 添加了 [`UNT0013`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/UNT0013.md) 诊断。 检测并删除无效或冗余的 `SerializeField` 属性。
+
+  - 添加了 [`UNT0014`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/UNT0014.md) 诊断。 检测用非组件或非接口类型调用的 `GetComponent()`。
+
+  - 为 `IDE0051` 添加了 [`USP0009`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/USP0009.md) 抑制器。 请勿将具有 `ContextMenu` 属性的方法或由具有 `ContextMenuItem` 属性的字段引用的方法标记为未使用。
+
+  - 为 `IDE0051` 添加了 [`USP0010`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/USP0010.md) 抑制器。 请勿将具有 `ContextMenuItem` 属性的字段标记为未使用。
+
+  - 为 `IDE0044` 添加了 [`USP0011`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/USP0011.md) 抑制器。 请勿将具有 `ContextMenuItem` 属性的字段设为只读字段。
+
+  - [`USP0004`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/USP0004.md)、[`USP0006`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/USP0006.md) 和 [`USP0007`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/USP0007.md) 现在都适用于 `SerializeReference` 和 `SerializeField` 属性。
+
+### <a name="bug-fixes"></a>Bug 修复
+
+- **集成：**
+
+  - 当编辑器能够进行通信时，才向 Unity 发送启动/停止命令。
+
+  - 修复了与继承消息相关的 QuickInfo 文档。
+
+  - 修复了 `CreateInspectorGUI` 消息的消息范围。
+
+  - 请勿报告与具有多态修饰符的方法相关的 [`UNT0001`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/UNT0001.md)。
+
+- **评估版：**
+
+  - 修复了别名为 using 的处理。
+  
+  - 修复了 null 值的处理。  
 
 ## <a name="2520"></a>2.5.2.0
 
@@ -39,13 +93,13 @@ Visual Studio Tools for Unity 更改日志。
 
 - **集成：**
 
-  - 添加了针对 [`IDE0051`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/USP0008.md) 的抑制器。 与 Invoke、InvokeRepeating、StartCoroutine 或 StopCoroutine 一起使用的专用方法不应标记为未使用。
+  - 为 `IDE0051` 添加了 [`USP0008`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/USP0008.md) 抑制器。 与 Invoke、InvokeRepeating、StartCoroutine 或 StopCoroutine 一起使用的专用方法不应标记为未使用。
 
 ### <a name="bug-fixes"></a>Bug 修复
 
 - **集成：**
 
-  - 修复了 OnDrawGizmos/OnDrawGizmosSelected 文档
+  - 修复了 OnDrawGizmos/OnDrawGizmosSelected 文档。
 
 - **评估版：**
 
@@ -75,15 +129,15 @@ Visual Studio Tools for Unity 更改日志。
   
   - 切换到新的可访问属性网格以进行设置。
 
-  - 添加了针对 [`IDE0051`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/USP0006.md) 的抑制器。 具有 `SerializeField` 属性的专用字段不应标记为未使用。
+  - 为 `IDE0051` 添加了 [`USP0006`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/USP0006.md) 抑制器。 具有 `SerializeField` 属性的专用字段不应标记为未使用。
 
-  - 添加了针对 [`CS0649`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/USP0007.md) 的抑制器。 具有 `SerializeField` 属性的字段不应标记为未分配。  
+  - 为 `CS0649` 添加了 [`USP0007`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/USP0007.md) 抑制器。 具有 `SerializeField` 属性的字段不应标记为未分配。  
 
 ### <a name="bug-fixes"></a>Bug 修复
 
 - **集成：**
 
-  - 修复了项目生成问题（无法始终正确找到 `GenerateTargetFrameworkMonikerAttribute` 目标）
+  - 修复了项目生成问题（无法始终正确找到 `GenerateTargetFrameworkMonikerAttribute` 目标）。
 
 - **评估版：**
 
@@ -133,7 +187,7 @@ Visual Studio Tools for Unity 更改日志。
 
 - **集成：**
 
-  - 为所有 Unity 消息的 `IDE0060`（未使用的参数）添加了抑制器。
+  - 为所有 Unity 消息的 `IDE0060`（未使用的参数）添加了 [`USP0005`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/USP0005.md) 抑制器。
 
   - 为标有 `TooltipAttribute` 的字段添加了快速工具提示。 （这也适用于使用此字段的简单 get 访问器）。
 

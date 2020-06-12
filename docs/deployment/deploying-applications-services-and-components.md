@@ -23,16 +23,16 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1a45dea4b386be418f078f6947487b42f7d968e7
-ms.sourcegitcommit: 054815dc9821c3ea219ae6f31ebd9cd2dc8f6af5
+ms.openlocfilehash: f10831ac398ef8fb48337436dd33253cfb32f26c
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80543960"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84182997"
 ---
 # <a name="first-look-at-deployment-in-visual-studio"></a>先查看 Visual Studio 中的部署
 
-通过部署应用程序、服务或组件，你可以将其分发以便安装于其他计算机、设备、或服务器上，或云中。 你需要在 Visual Studio 中为所需的部署类型选择适当的方法。 （许多应用类型支持此处未介绍的其他部署工具，如命令行部署。）
+通过部署应用程序、服务或组件，你可以将其分发以便安装于其他计算机、设备、或服务器上，或云中。 你需要在 Visual Studio 中为所需的部署类型选择适当的方法。 （许多应用类型支持此处未描述的其他部署工具，如命令行部署或 NuGet。）
 
 有关分步部署说明，请参阅快速入门和教程。 有关部署选项的概述，请参阅[哪些发布选项适合我？](deploying-applications-services-and-components-resources.md#what-publishing-options-are-right-for-me)
 
@@ -40,11 +40,11 @@ ms.locfileid: "80543960"
 
 部署到本地文件夹通常用于测试，或开始分阶段部署，其中使用另一个工具进行最终部署。
 
-- **ASP.NET**、**ASP.NET Core**、**Node.js**、**Python** 和 .**NET Core**：使用发布工具部署到本地文件夹。 可用的具体选项取决于应用类型。 在解决方案资源管理器中，右键单击项目，选择“发布”  。 （如果之前尚未配置任何发布配置文件，必须单击“新建配置文件”  。）接下来，选择“文件夹”  。 有关详细信息，请参阅[部署到本地文件夹](quickstart-deploy-to-local-folder.md)。
+- **ASP.NET**、**ASP.NET Core**、**Node.js**、**Python** 和 .**NET Core**：使用发布工具部署到本地文件夹。 可用的具体选项取决于应用类型。 在解决方案资源管理器中，右键单击项目，选择“发布”。 （如果之前尚未配置任何发布配置文件，必须单击“新建配置文件”。）接下来，选择“文件夹”。 有关详细信息，请参阅[部署到本地文件夹](quickstart-deploy-to-local-folder.md)。
 
     ![选择发布](../deployment/media/quickstart-publish.png)
 
-- Windows 桌面  可以使用 ClickOnce 部署将 Windows 桌面应用程序发布到文件夹。 用户随后只需一次单击即可安装应用程序。 有关详细信息，请参阅[使用 ClickOnce 部署桌面应用](how-to-publish-a-clickonce-application-using-the-publish-wizard.md)（C# 和 Visual Basic）。 对于 C++/CLI，请参阅[使用 ClickOnce 部署本机应用](/cpp/windows/clickonce-deployment-for-visual-cpp-applications)；对于 C/C++，请参阅[使用安装项目部署本机应用](/cpp/windows/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project)。
+- Windows 桌面 可以使用 ClickOnce 部署将 Windows 桌面应用程序发布到文件夹。 用户随后只需一次单击即可安装应用程序。 有关详细信息，请参阅[使用 ClickOnce 部署桌面应用](how-to-publish-a-clickonce-application-using-the-publish-wizard.md)（C# 和 Visual Basic）。 对于 C++/CLR，请参阅[使用 ClickOnce 部署本机应用](/cpp/windows/clickonce-deployment-for-visual-cpp-applications)，或者对于 C/C++，请参阅[使用安装项目部署本机应用](/cpp/windows/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project)。
 
 ## <a name="publish-to-azure"></a>发布到 Azure
 
@@ -52,15 +52,15 @@ ms.locfileid: "80543960"
 
   - 对于应用的连续（或自动）部署，请将 Azure DevOps 与 [Azure 管道](/azure/devops/pipelines/get-started-yaml?view=azdevops)结合使用。
 
-  - 对于应用的一次性（或手动）部署，请使用 Visual Studio 中的“发布”工具  。
+  - 对于应用的一次性（或手动）部署，请使用 Visual Studio 中的“发布”工具。
 
-  对于可提供自定义程度更高的服务器配置的部署，还可以使用“发布”工具将应用部署到 Azure 虚拟机  。
+  对于可提供自定义程度更高的服务器配置的部署，还可以使用“发布”工具将应用部署到 Azure 虚拟机。
 
-  要使用“发布”工具，请右键单击“解决方案资源管理器”中的项目，然后选择“发布”   。 （如果之前已配置任何发布配置文件，必须单击“新建配置文件”  。）在发布对话框中，选择“应用服务”或“Azure虚拟机”，然后按照配置步骤操作   。
+  要使用“发布”工具，请右键单击“解决方案资源管理器”中的项目，然后选择“发布” 。 （如果之前已配置任何发布配置文件，必须单击“新建配置文件”。）在发布对话框中，选择“应用服务”或“Azure虚拟机”，然后按照配置步骤操作 。
 
   ![选择 Azure 应用服务](../deployment/media/quickstart-publish-azure.png "选择 Azure 应用服务")
 
-  自 Visual Studio 2017 版本 15.7 开始，可将 ASP.NET Core 应用部署到适用于 Linux 的应用服务  。
+  自 Visual Studio 2017 版本 15.7 开始，可将 ASP.NET Core 应用部署到适用于 Linux 的应用服务。
 
   对于 Python 应用，另请参阅 [Python - 发布到 Azure 应用服务](../python/publishing-python-web-applications-to-azure-from-visual-studio.md?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)。
 
@@ -75,15 +75,15 @@ ms.locfileid: "80543960"
 
 - **ASP.NET**、**ASP.NET Core**、**Node.js** 和 **Python**：可以通过 FTP 或 Web 部署使用发布工具部署到网站。 有关详细信息，请参阅[部署到网站](quickstart-deploy-to-a-web-site.md)。
 
-    在解决方案资源管理器中，右键单击项目，选择“发布”  。 （如果之前已配置任何发布配置文件，必须单击“新建配置文件”  。）在发布工具中，选择想要的选项并遵循配置步骤。
+    在解决方案资源管理器中，右键单击项目，选择“发布”。 （如果之前已配置任何发布配置文件，必须单击“新建配置文件”。）在发布工具中，选择想要的选项并遵循配置步骤。
 
-    ![选择 IIS、FTP 等。](../deployment/media/quickstart-publish-iis-ftp.png)
+    ![选择 IIS](../deployment/media/quickstart-publish-iis.png)
 
     有关在 Visual Studio 中导入发布配置文件的信息，请参阅[导入发布设置并部署到 IIS](../deployment/tutorial-import-publish-settings-iis.md)。
 
-    也可以采用多种不同的方式部署 ASP.NET 应用程序和服务。 有关详细信息，请参阅[部署 ASP.NET Web 应用程序和服务](/aspnet/mvc/overview/deployment/)。
+    也可以采用多种不同的方式部署 ASP.NET 应用程序和服务。 有关详细信息，请参阅[部署 ASP.NET Web 应用程序和服务](/aspnet/overview/deployment)。
 
-- **Windows 桌面** 可以使用 ClickOnce 部署将 Windows 桌面应用程序发布到 Web 服务器或网络文件共享。 用户随后只需一次单击即可安装应用程序。 有关详细信息，请参阅[使用 ClickOnce 部署桌面应用](how-to-publish-a-clickonce-application-using-the-publish-wizard.md)（C# 和 Visual Basic）。 对于 C++/CLI，请参阅[使用 ClickOnce 部署本机应用](/cpp/windows/clickonce-deployment-for-visual-cpp-applications)；对于 C/C++，请参阅[使用安装项目部署本机应用](/cpp/windows/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project)。
+- **Windows 桌面** 可以使用 ClickOnce 部署将 Windows 桌面应用程序发布到 Web 服务器或网络文件共享。 用户随后只需一次单击即可安装应用程序。 有关详细信息，请参阅[使用 ClickOnce 部署桌面应用](how-to-publish-a-clickonce-application-using-the-publish-wizard.md)（C# 和 Visual Basic）。 对于 C++/CLR，请参阅[使用 ClickOnce 部署本机应用](/cpp/windows/clickonce-deployment-for-visual-cpp-applications)，或者对于 C/C++，请参阅[使用安装项目部署本机应用](/cpp/windows/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project)。
 
 ## <a name="publish-to-microsoft-store"></a>发布到 Microsoft Store
 
@@ -93,16 +93,9 @@ ms.locfileid: "80543960"
 
     ![创建应用程序包](../deployment/media/feature-tour-create-app-package.jpg)
 
-- **Windows 桌面**：从 Visual Studio 2017 15.4 版开始，可以部署到 Microsoft Store。 若要执行此操作，首先创建一个 Windows 应用程序打包项目。 有关详细信息，请参阅[为 Microsoft Store 打包桌面应用](/windows/msix/desktop/desktop-to-uwp-packaging-dot-net)。
+- **Windows 桌面**：从 Visual Studio 2017 15.4 版开始可以使用桌面桥部署到 Microsoft Store。 若要执行此操作，首先创建一个 Windows 应用程序打包项目。 有关详细信息，请参阅[为 Microsoft Store 打包桌面应用（桌面桥）](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)。
 
-    ![打包桌面应用](../deployment/media/feature-tour-desktop-bridge.png)
-
-## <a name="deploy-net-packages-to-nugetorg"></a>将 .NET 包部署到 NuGet.org
-
-若要将捆绑代码部署到包含已编译代码（如 DLL）的“包”以及使用这些包的项目中所需的其他内容，可以使用 Visual Studio 创建 NuGet 包和 CLI 工具来发出最终部署命令。
-
-- [创建并发布 .NET Standard 包](/nuget/quickstart/create-and-publish-a-package-using-visual-studio)
-- [创建并发布 .NET Framework 包](/nuget/quickstart/create-and-publish-a-package-using-visual-studio-net-framework)
+    ![桌面桥](../deployment/media/feature-tour-desktop-bridge.png)
 
 ## <a name="deploy-to-a-device-uwp"></a>部署到设备 (UWP)
 
@@ -112,13 +105,12 @@ ms.locfileid: "80543960"
 
 如果需要比 [ClickOnce](how-to-publish-a-clickonce-application-using-the-publish-wizard.md) 提供的更为复杂的桌面应用程序安装，则可以创建 Windows Installer 包（MSI 或 EXE 安装文件）或自定义引导程序。
 
-- 可以使用 [WiX 工具集扩展](https://marketplace.visualstudio.com/items?itemName=WixToolset.WiXToolset)创建基于 MSI 的安装程序包。 这是一个命令行工具集。
+- 可以使用 [WiX 工具集 Visual Studio 2017 扩展](https://marketplace.visualstudio.com/items?itemName=RobMensching.WixToolsetVisualStudio2017Extension)创建基于 MSI 的安装程序包。 这是一个命令行工具集。
 
-   ::: moniker range=">=vs-2019"
-   对于 Visual Studio 2019，请参阅 [WiX Toolset Visual Studio 2019 Extension](https://marketplace.visualstudio.com/items?itemName=WixToolset.WixToolsetVisualStudio2019Extension)（WiX 工具集 Visual Studio 2019 扩展）。
-   ::: moniker-end
+- 可以使用 Flexera Software 中的 [InstallShield](https://www.flexerasoftware.com/producer/products/software-installation/installshield-software-installer/tab/requirements) 创建 MSI 或 EXE 安装程序包。 InstallShield 可与 Visual Studio 2017 及更高版本（不支持 Community Edition）一起使用。 
 
-- 可以使用 Flexera Software 中的 [InstallShield](https://www.flexerasoftware.com/producer/products/software-installation/installshield-software-installer/tab/requirements) 创建 MSI 或 EXE 安装程序包。 InstallShield 可与 Visual Studio 2017 及更高版本（不支持 Community Edition）一起使用。 请注意，InstallShield Limited Edition 不再包含在 Visual Studio 中，且不受 Visual Studio 2017 及更高版本支持；请查看 [Flexera Software](https://info.flexerasoftware.com/IS-EVAL-InstallShield-Limited-Edition-Visual-Studio)，了解其未来的可用性。
+  > [!NOTE]
+  > InstallShield Limited Edition 不再包含在 Visual Studio 中，且不受 Visual Studio 2017 及更高版本支持；请查看 [Flexera Software](http://learn.flexerasoftware.com/content/IS-EVAL-InstallShield-Limited-Edition-Visual-Studio)，了解其未来的可用性。
 
 - 可以使用安装项目 (vdproj) 创建 MSI 或 EXE 安装程序包。 若要使用此选项，请安装 [Visual Studio 安装程序项目扩展](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.MicrosoftVisualStudio2017InstallerProjects#overview)。
 
@@ -146,7 +138,7 @@ ms.locfileid: "80543960"
 
 | 应用类型 | 部署方案 | 链接 |
 | --- | --- | --- |
-| **Office 应用** | 可以从 Visual Studio 发布 Office 的加载项。 | [部署和发布 Office 加载项](/office/dev/add-ins/publish/publish) |
+| **Office 应用** | 可以从 Visual Studio 发布 Office 的加载项。 | [部署和发布 Office 加载项](https://dev.office.com/docs/add-ins/publish/publish) |
 | **WCF 或 OData 服务** | 其他应用程序可以使用部署到 Web 服务器的 WCF RIA 服务。 | [开发和部署 WCF Data Services](/dotnet/framework/data/wcf/developing-and-deploying-wcf-data-services) |
 | **LightSwitch** | 自 Visual Studio 2017 起不再支持 LightSwitch，但仍可以从 Visual Studio 2015 及更早版本中部署它。 | [部署 LightSwitch 应用程序](https://msdn.microsoft.com/Library/4818d933-295c-4ecc-9148-7ad9ca28dcdb) |
 
