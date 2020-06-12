@@ -3,15 +3,15 @@ title: 使用 Visual Studio for Mac 调试
 description: 调试是编程中常见且必要的部分。 Visual Studio for Mac 作为成熟的 IDE，具有一整套方便调试的功能。 本文将介绍如何在 Visual Studio for Mac 中充分使用调试功能，包括从安全调试到数据可视化效果。
 author: therealjohn
 ms.author: johmil
-ms.date: 12/13/2019
+ms.date: 5/13/2020
 ms.technology: vs-ide-debug
 ms.assetid: BB7A084D-9AC2-48B5-8076-6C8518796BBA
-ms.openlocfilehash: 8a12880c25e980d668351ef4c24ced1e479577d4
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: a81eb9bbae905599cc5d953f27ac3a8d06441f8b
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "75397930"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84183973"
 ---
 # <a name="debugging-with-visual-studio-for-mac"></a>使用 Visual Studio for Mac 调试
 
@@ -29,7 +29,7 @@ Visual Studio for Mac 使用 Mono 软调试器来调试所有 Xamarin 应用程�
 
 ## <a name="using-the-debugger"></a>使用调试器
 
-若要开始调试应用程序，请始终确保将配置设置为“调试”  。 调试配置提供一组实用工具来支持调试，如断点、使用数据可视化工具和查看调用堆栈：
+若要开始调试应用程序，请始终确保将配置设置为“调试”。 调试配置提供一组实用工具来支持调试，如断点、使用数据可视化工具和查看调用堆栈：
 
 ![调试配置](media/debugging-image_0.png)
 
@@ -39,18 +39,18 @@ Visual Studio for Mac 使用 Mono 软调试器来调试所有 Xamarin 应用程�
 
 ![在边距中设置断点](media/debugging-image0.png)
 
-可通过转到“断点”  面板查看代码中已设置的所有断点：
+可通过转到“断点”面板查看代码中已设置的所有断点：
 
 ![断点列表](media/debugging-image0a.png)
 
-## <a name="start-debugging"></a>开始调试
+## <a name="start-debugging"></a>“启动调试”
 
 若要开始调试，请选择目标浏览器、设备或模拟器/仿真器：
 
 ![调试配置](media/debugging-image_0.png)
 ![选择目标设备](media/debugging-image1.png)
 
-然后通过按“播放”按钮或“Cmd + 返回”部署应用程序   。 命中断点时，代码会以黄色突出显示：
+然后通过按“播放”按钮或“Cmd + 返回”部署应用程序 。 命中断点时，代码会以黄色突出显示：
 
 ![突出显示表明已命中断点](media/debugging-image2.png)
 
@@ -60,13 +60,13 @@ Visual Studio for Mac 使用 Mono 软调试器来调试所有 Xamarin 应用程�
 
 ## <a name="conditional-breakpoints"></a>条件断点
 
-还可以设置规则，规定应该发生断点的情况，这称为添加“条件断点”  。 若要设置条件断点，请访问“断点属性”  窗口。具体有以下两种操作方法：
+还可以设置规则，规定应该发生断点的情况，这称为添加“条件断点”。 若要设置条件断点，请访问“断点属性”窗口。具体有以下两种操作方法：
 
 * 若要添加新的条件断点，请右键单击编辑器边缘（即要设置断点的代码行号左侧），再选择“新建断点”：
 
  ![断点上下文菜单](media/debugging-image4.png)
 
-* 若要向现有断点添加条件，请右键单击该断点并选择“断点属性”，或如下图所示在“断点”面板中选择“编辑断点”按钮：  
+* 若要向现有断点添加条件，请右键单击该断点并选择“断点属性”，或如下图所示在“断点”面板中选择“编辑断点”按钮： 
 
  ![在“断点”面板中编辑现有断点](media/debugging-image5.png)
 
@@ -82,10 +82,19 @@ Visual Studio for Mac 使用 Mono 软调试器来调试所有 Xamarin 应用程�
 
 以下是四个按钮：
 
-* 播放  - 此按钮开始执行代码，直至下一个断点处。
-* 单步跳过  - 此按钮执行下一行代码。 如果下一行是函数调用，“单步跳过”将执行该函数，并在该函数后的下一行代码停止  。
-* 单步执行  - 此按钮也执行下一行代码。 如果下一行是函数调用，“单步执行”将在该函数的第一行停止，允许继续进行函数的逐行调试。 如果下一行不是函数，其行为与“单步跳过”相同。
-* 跳出  - 此按钮返回到调用当前函数的代码行。
+* 播放 - 此按钮开始执行代码，直至下一个断点处。
+* 单步跳过 - 此按钮执行下一行代码。 如果下一行是函数调用，“单步跳过”将执行该函数，并在该函数后的下一行代码停止。
+* 单步执行 - 此按钮也执行下一行代码。 如果下一行是函数调用，“单步执行”将在该函数的第一行停止，允许继续进行函数的逐行调试。 如果下一行不是函数，其行为与“单步跳过”相同。
+* 跳出 - 此按钮返回到调用当前函数的代码行。
+
+## <a name="change-which-statement-is-executed-next"></a>更改要执行的下一条语句
+
+调试器暂停时，边距中的箭头会显示下一条要执行的代码行。 可以单击箭头并将其拖至不同的代码行，以更改将执行的语句。 还可以通过右键单击代码行，然后从上下文菜单中选择“设置下一条语句”来实现同一操作。
+
+![拖放箭头以设置下一条语句](media/debugger-drag-setnextstatement.gif)
+
+> [!CAUTION]
+> 更改当前执行行可能会导致应用程序中出现意外行为。 在某些情况下，无法更改要执行的下一条语句。 例如，无法将箭头从一个方法拖动到另一个方法。 在这些不受支持的情况下，Visual Studio for Mac 将显示一个对话框，告知你无法更改当前执行行。 
 
 ## <a name="debugging-monos-class-libraries"></a>调试 Mono 类库
 
@@ -93,10 +102,10 @@ Xamarin 产品随附用于 Mono 类库的源代码，可使用此代码在调试
 
 由于此功能在调试过程中会占用更多内存，因此默认禁用。
 
-若要启用此功能，请浏览到“Visual Studio for Mac”>“首选项”>“调试器”  ，并确保“单步执行外部代码”  为“选中”  状态，如下所示：
+若要启用此功能，请浏览到“Visual Studio for Mac”>“首选项”>“调试器”，并确保“单步执行外部代码”为“选中”状态，如下所示：
 
 ![“单步执行外部代码”选项](media/debugging-image8.png)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [在 Visual Studio 中进行调试 (Windows)](/visualstudio/debugger/)

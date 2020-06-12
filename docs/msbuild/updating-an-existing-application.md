@@ -7,12 +7,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8d4e7d84768307964b495e8c5e97e7731b0622a1
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: c141d1e35db1e5ce334606b255d99ce2c0afc29b
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75597134"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84184024"
 ---
 # <a name="update-an-existing-application-for-msbuild-15"></a>将现有的应用程序更新到 MSBuild 15
 
@@ -22,11 +22,11 @@ ms.locfileid: "75597134"
 
 ## <a name="use-msbuild-from-visual-studio"></a>从 Visual Studio 使用 MSBuild
 
-为确保以编程方式从应用程序生成的项目与 Visual Studio 或 MSBuild.exe 中生成的项目相匹配，请从 Visual Studio 加载 MSBuild 程序集，并使用 Visual Studio 中提供的 SDK。  Microsoft.Build.Locator NuGet 包简化了这一过程。
+为确保以编程方式从应用程序生成的项目与 Visual Studio 或 MSBuild.exe 中生成的项目相匹配，请从 Visual Studio 加载 MSBuild 程序集，并使用 Visual Studio 中提供的 SDK。 Microsoft.Build.Locator NuGet 包简化了这一过程。
 
 ## <a name="use-microsoftbuildlocator"></a>使用 Microsoft.Build.Locator
 
-如果将 Microsoft.Build.Locator.dll  与应用程序一起重新分发，则无需分发其他 MSBuild 程序集。
+如果将 Microsoft.Build.Locator.dll 与应用程序一起重新分发，则无需分发其他 MSBuild 程序集。
 
 若要更新项目以使用 MSBuild 15 和定位符 API，需要对项目进行一些更改，如下所述。 若要查看更新项目所需更改的示例，请参阅[在 MSBuildLocator 存储库中对示例项目进行的提交](https://github.com/Microsoft/MSBuildLocator/commits/example-updating-to-msbuild-15)。
 
@@ -69,7 +69,7 @@ MSBuild 包的主要版本和次要版本须低于或等于希望支持的 Visua
 
 ### <a name="ensure-output-is-clean"></a>确保输出清洁
 
-生成项目并检查输出目录，以确保它不包含任何 Microsoft.Build.\*.dll 程序集（除 Microsoft.Build.Locator.dll 以外，它在下一步中添加）。
+生成项目并检查输出目录，以确保它不包含任何 Microsoft.Build.\*.dll 程序集（除 Microsoft.Build.Locator.dll 以外，它在下一步中添加）。 
 
 ### <a name="add-package-reference-for-microsoftbuildlocator"></a>为 Microsoft.Build.Locator 添加包引用
 
@@ -85,7 +85,33 @@ MSBuild 包的主要版本和次要版本须低于或等于希望支持的 Visua
 
 ### <a name="register-instance-before-calling-msbuild"></a>在调用 MSBuild 之前注册实例
 
-在调用任何使用 MSBuild 的方法之前，添加对 Locator API 的调用。
+> [!IMPORTANT]
+> 在调用 MSBuildLocator 的方法中，无法引用任何 MSBuild 类型（来自 `Microsoft.Build` 命名空间）。 例如，无法执行以下操作：
+>
+> ```csharp
+> void ThisWillFail()
+> {
+>     MSBuildLocator.RegisterDefaults();
+>     Project p = new Project(SomePath); // Could be any MSBuild type
+>     // Code that uses the MSBuild type
+> }
+> ```
+>
+> 但是，必须执行以下操作：
+>
+> ```csharp
+> void MethodThatDoesNotDirectlyCallMSBuild()
+> {
+>     MSBuildLocator.RegisterDefaults();
+>     MethodThatCallsMSBuild();
+> }
+> 
+> void MethodThatCallsMSBuild()
+> {
+>     Project p = new Project(SomePath);
+>     // Code that uses the MSBuild type
+> }
+> ```
 
 添加对 Locator API 的调用的最简单方法是：在应用程序启动代码中
 

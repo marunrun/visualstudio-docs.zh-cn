@@ -18,18 +18,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8064ce4c13419238ca5877893a731d2ac53afb25
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: c058a5986f72192a86d0e554d9e0d0b9bdce1b42
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77633637"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84173507"
 ---
 # <a name="itemgroup-element-msbuild"></a>ItemGroup 元素 (MSBuild)
 
 包含一组用户定义的 [Item](../msbuild/item-element-msbuild.md) 元素。 MSBuild 项目中使用的每一个项都必须被指定为 `ItemGroup` 元素的子元素。
 
-\<Project> \<ItemGroup>
+\<Project>
+\<ItemGroup>
 
 ## <a name="syntax"></a>语法
 
@@ -85,6 +86,10 @@ ms.locfileid: "77633637"
 ...
 </Project>
 ```
+
+在简单的项目文件中，通常使用单个 `ItemGroup` 元素，但也可以使用多个 `ItemGroup` 元素。 当使用多个 `ItemGroup` 元素时，多个项会合并为单个 `ItemGroup`。 例如，某些项可能包含在导入文件中定义的单独 `ItemGroup` 元素中。
+
+ItemGroups 可以通过使用 `Condition` 属性来应用条件。 在这种情况下，仅当满足条件时才会将项添加到项列表。 请参阅 [MSBuild 条件](msbuild-conditions.md)
 
 ## <a name="see-also"></a>请参阅
 

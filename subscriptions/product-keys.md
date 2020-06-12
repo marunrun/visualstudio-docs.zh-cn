@@ -7,12 +7,12 @@ ms.assetid: 89e3fcf9-fe5d-4266-8dd7-5567d05fe869
 ms.date: 03/09/2020
 ms.topic: conceptual
 description: 了解如何获取和管理 Visual Studio 订阅中的产品密钥。
-ms.openlocfilehash: 138b85d151aff5ecded4e8a69595518d05f12e7b
-ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
+ms.openlocfilehash: 10b09275dc1ba3d20e47c097888677e733e21ced
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80232232"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84183920"
 ---
 # <a name="using-product-keys-in-visual-studio-subscriptions"></a>使用 Visual Studio 订阅中的产品密钥
 
@@ -21,6 +21,9 @@ Visual Studio 订阅允许访问一系列 Microsoft 产品来设计、开发、�
 对于当前版本的 Windows 和 Office 产品，Visual Studio 订阅通常包含 5 个产品密钥；对于较早版本，通常包含 3 个产品密钥。
 
 大多数产品密钥都支持产品的每个密钥对其进行多次激活。  许多产品还允许在未激活的情况下安装产品并使用 30 天或更长时间。  对于大多数订阅者来说，这种提供了更多激活次数，以满足他们的需求。  但是，如果已用完产品的可用激活次数，可以通过 Visual Studio [订阅客户服务](https://visualstudio.microsoft.com/subscriptions/support/)提交获取其他密钥的请求。
+
+> [!NOTE]
+> 如果你的订阅是由工作或学校提供的，则订阅管理员将控制你是否有权访问软件下载。  如果在订阅中禁用对下载的访问权限，则还会禁用对产品密钥的访问权限。  如果需要访问下载和/或产品密钥，请[联系管理员](contact-my-admin.md)。
 
 ## <a name="activating-a-product"></a>激活产品
 某些产品需要激活。  在 Visual Studio 订阅中通常限于 Windows、Windows Server、Microsoft Office 客户端应用程序以及 Expression Studio。 对于需要激活的情况，许多产品（包括 Windows 和 Office）都允许在未激活的情况下安装产品并使用 30 天或更长时间。 如果频繁地（每 30 天至少一次）重建计算机映像，建议不激活产品。 在 Visual Studio 订阅中提供的产品密钥不允许无限次地激活产品。
@@ -44,10 +47,10 @@ Microsoft 致力于维护 Visual Studio 订阅计划的完整性以及该计划�
 研究表明，大多数订阅者的订阅中所含产品密钥的数量足以满足他们的需求。 如果需要其他密钥，可通过 Visual Studio 订阅[客户服务](https://visualstudio.microsoft.com/subscriptions/support/)提交请求，我们将根据具体情况考虑是否批准你的请求。
 
 ## <a name="accessing-product-keys"></a>访问产品密钥
-必须登录你的 Visual Studio 订阅才能查看产品密钥。 可在如下所示的“[下载](https://my.visualstudio.com/downloads)”页中，选择某一特定产品的蓝色“获取密钥”链接来查找单个产品密钥。   如果一个产品有多个密钥，会在下载项的“注释”列中显示注释，帮助你确定应使用哪个密钥。
+必须登录你的 Visual Studio 订阅才能查看产品密钥。 可在如下所示的“[下载](https://my.visualstudio.com/downloads)”页中，选择某一特定产品的蓝色“获取密钥”链接来查找单个产品密钥。  如果一个产品有多个密钥，会在下载项的“注释”列中显示注释，帮助你确定应使用哪个密钥。
 
 某些产品将其多个版本捆绑到单次下载中。 在这种情况下，输入的产品密钥决定安装的产品版本。
-某些密钥会自动提供，例如“静态”密钥，同一个密钥可以根据需要使用无数次，因为不需要激活。 其他密钥必须通过选择该产品的“获取密钥”链接来索取。 
+某些密钥会自动提供，例如“静态”密钥，同一个密钥可以根据需要使用无数次，因为不需要激活。 其他密钥必须通过选择该产品的“获取密钥”链接来索取。
 > [!div class="mx-imgBorder"]
 > ![从“下载”页获取密钥](_img/product-keys/download-get-key.png)
 

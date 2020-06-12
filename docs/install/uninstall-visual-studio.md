@@ -2,7 +2,7 @@
 title: 卸载 Visual Studio
 titleSuffix: ''
 description: 了解如何逐步卸载 Visual Studio。
-ms.date: 12/19/2019
+ms.date: 05/06/2020
 ms.custom: seodec18
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +16,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: fd21f01f89cb4fe4507775670968496cbb5f99f5
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 6b5377c9bdb83c5c67816b3567656c49cf707071
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "76115014"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84184414"
 ---
 # <a name="uninstall-visual-studio"></a>卸载 Visual Studio
 
@@ -30,34 +30,41 @@ ms.locfileid: "76115014"
 > [!NOTE]
 > 本主题适用于 Visual Studio  Windows 版。 对于 Visual Studio for Mac，请查阅[卸载 Visual Studio for Mac](/visualstudio/mac/uninstall)。
 
+> [!TIP]
+> 如果你在 Visual Studio 实例中遇到问题，请尝试使用“修复”工具。 有关详细信息，请参阅[修复 Visual Studio](../install/repair-visual-studio.md)。 
+>
+> 如果需要更改某些 Visual Studio 文件的位置，则可以执行此操作，而无需卸载当前实例。 有关详细信息，请参阅[在 Visual Studio 中选择安装位置](../install/change-installation-locations.md)。
+>
+> 有关一般故障排除提示，请参阅 [Visual Studio 安装和升级问题疑难解答](../install/troubleshooting-installation-issues.md)。
+
 ::: moniker range="vs-2017"
 
 1. 在计算机上找到 Visual Studio 安装程序。
 
-     例如，在运行 Windows 10 周年更新或更高版本的计算机上，选择“开始”  ，再滚动到字母“V”  （其中它被列为“Visual Studio 安装程序”  ）。
+     例如，在运行 Windows 10 周年更新或更高版本的计算机上，选择“开始”，再滚动到字母“V”（其中它被列为“Visual Studio 安装程序”）。
 
      ![Visual Studio 安装程序](media/locate-the-visual-studio-installer.png "找到 Microsoft Visual Studio 安装程序")
 
    > [!NOTE]
    > 对于某些计算机，Visual Studio 安装程序可能列在字母 **“M”** 下，即 **Microsoft Visual Studio 安装程序**。<br/><br/> 或者，可以在以下位置找到 Visual Studio 安装程序：`C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe`
 
-1. 在安装程序中，查找已安装的 Visual Studio 版本。 接下来，选择“更多”  ，然后选择“卸载”  。
+1. 在安装程序中，查找已安装的 Visual Studio 版本。 接下来，选择“更多”，然后选择“卸载”。
 
      ![卸载 Visual Studio 2017](media/uninstall-visual-studio.png "卸载 Visual Studio 2017")
 
-1. 单击  “确定”确认所做选择。
+1. 单击“确定”确认所做选择。
 
-如果以后改变主意，想重新安装 Visual Studio 2017，请再次启动 Visual Studio 安装程序，然后从选择屏幕中选择“安装”  。
+如果以后改变主意，想重新安装 Visual Studio 2017，请再次启动 Visual Studio 安装程序，然后从选择屏幕中选择“安装”。
 
 ## <a name="uninstall-visual-studio-installer"></a>卸载 Visual Studio 安装程序
 
 若要从计算机中彻底删除 Visual Studio 2017 的所有安装内容和 Visual Studio 安装程序，请使用“应用和功能”进行卸载。
 
-1. 在 Windows 10 的“在此键入进行搜索”框中，键入“应用和功能”  。
-1. 查找“Microsoft Visual Studio 2017”（或“Visual Studio 2017”）   。
-1. 选择“卸载”。 
-1. 然后，查找“Microsoft Visual Studio 安装程序”  。
-1. 选择“卸载”。 
+1. 在 Windows 10 的“在此键入进行搜索”框中，键入“应用和功能”。
+1. 查找“Microsoft Visual Studio 2017”（或“Visual Studio 2017”） 。
+1. 选择“卸载”。
+1. 然后，查找“Microsoft Visual Studio 安装程序”。
+1. 选择“卸载”。
 
 ::: moniker-end
 
@@ -65,7 +72,7 @@ ms.locfileid: "76115014"
 
 1. 在计算机上找到 Visual Studio 安装程序。
 
-     例如，在运行 Windows 10 的计算机上，选择“开始”，然后滚动到字母“V”，它作为“Visual Studio 安装程序”在那里列出    。
+     例如，在运行 Windows 10 的计算机上，选择“开始”，然后滚动到字母“V”，它作为“Visual Studio 安装程序”在那里列出  。
 
      ![打开 Visual Studio 安装程序](media/vs-2019/vs-installer-windows-start.png "打开 Visual Studio 安装程序")
 
@@ -76,25 +83,25 @@ ms.locfileid: "76115014"
 
     可能需要先更新安装程序，然后才能继续操作。 如果是这样，请按照提示操作。
 
-1. 在安装程序中，查找已安装的 Visual Studio 版本。 接下来，选择“更多”  ，然后选择“卸载”  。
+1. 在安装程序中，查找已安装的 Visual Studio 版本。 接下来，选择“更多”，然后选择“卸载”。
 
      ![卸载 Visual Studio 2019](media/vs-2019/vs-installer-uninstall.png "卸载 Visual Studio 2019")
 
-1. 单击  “确定”确认所做选择。
+1. 单击“确定”确认所做选择。
 
      ![卸载 Visual Studio 确认](media/vs-2019/uninstall-visualstudio-confirm.png "确认是否要卸载 Visual Studio 2019")
 
-如果稍后改变主意并想要重新安装 Visual Studio 2019，请再次启动 Visual Studio 安装程序，选择“可用”选项卡，选择要安装的 Visual Studio 版本，然后选择“安装”   。
+如果稍后改变主意并想要重新安装 Visual Studio 2019，请再次启动 Visual Studio 安装程序，选择“可用”选项卡，选择要安装的 Visual Studio 版本，然后选择“安装” 。
 
 ## <a name="uninstall-visual-studio-installer"></a>卸载 Visual Studio 安装程序
 
 若要从计算机中删除 Visual Studio 2019 的所有安装内容和 Visual Studio 安装程序，请使用“应用和功能”进行卸载。
 
-1. 在 Windows 10 的“在此键入进行搜索”框中，键入“应用和功能”  。
-1. 查找“Visual Studio 2019”  。
-1. 选择“卸载”。 
-1. 然后，查找“Microsoft Visual Studio 安装程序”  。
-1. 选择“卸载”。 
+1. 在 Windows 10 的“在此键入进行搜索”框中，键入“应用和功能”。
+1. 查找“Visual Studio 2019”。
+1. 选择“卸载”。
+1. 然后，查找“Microsoft Visual Studio 安装程序”。
+1. 选择“卸载”。
 
 ::: moniker-end
 
@@ -104,7 +111,7 @@ ms.locfileid: "76115014"
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 * [修改 Visual Studio](modify-visual-studio.md)
 * [更新 Visual Studio](update-visual-studio.md)

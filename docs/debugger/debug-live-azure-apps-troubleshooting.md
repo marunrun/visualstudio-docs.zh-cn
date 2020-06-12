@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dc0d5ce27c3241b89a1baaf540cab4f1f56d24b5
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: 16d55c4e729a39f46b4b038490e92f7cb43bf98d
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72911602"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84182867"
 ---
 # <a name="troubleshooting-and-known-issues-for-snapshot-debugging-in-visual-studio"></a>Visual Studio 中的快照调试疑难解答和已知问题
 
@@ -30,12 +30,36 @@ ms.locfileid: "72911602"
 
 ### <a name="401-unauthorized"></a>(401) 未经授权
 
-此错误表示 Visual Studio 向 Azure 发出的 REST 调用使用了无效的凭据。 Azure Active Directory Easy OAuth 模块的一个已知 bug 可能会产生此错误。
+此错误表示 Visual Studio 向 Azure 发出的 REST 调用使用了无效的凭据。 
 
 执行以下步骤：
 
 * 确保 Visual Studio 个性化帐户对 Azure 订阅和要附加的资源具有相应权限。 一种快速确定方法是检查该资源是否出现在“调试” > “附加 Snapshot Debugger…” > “Azure 资源” > “选择现有资源”的对话框或 Cloud Explorer 中   。
 * 如果此错误仍然存在，请使用本文开头所述的任一反馈渠道进行反馈。
+
+如果已在应用服务上启用身份验证/授权 (EasyAuth)，则可能会遇到 401 错误，并且调用堆栈错误消息中会显示 LaunchAgentAsync。 请确保在 Azure 门户中将“请求未通过身份验证时采取的操作”设置为“允许匿名请求(不执行任何操作)”，并改为在 D:\Home\sites\wwwroot 中提供包含以下内容的 authorization.json 。 
+
+```
+{
+  "routes": [
+    {
+      "path_prefix": "/",
+      "policies": {
+        "unauthenticated_action": "RedirectToLoginPage"
+      }
+    },
+    {
+      "http_methods": [ "POST" ],
+      "path_prefix": "/41C07CED-2E08-4609-9D9F-882468261608/api/agent",
+      "policies": {
+        "unauthenticated_action": "AllowAnonymous"
+      }
+    }
+  ]
+}
+```
+
+第一种途径类似于“使用 [IdentityProvider] 登录”，它能够有效地保护你的应用域。 第二种途径在身份验证之外公开 SnapshotDebugger AgentLaunch 终结点，它只有在应用服务启用了 SnapshotDebugger 预安装站点扩展的情况下，才会执行启动 SnapshotDebugger 诊断代理的预定义操作。 有关 authorization.json 配置的更多详细信息，请参阅 [URL 授权规则](https://azure.github.io/AppService/2016/11/17/URL-Authorization-Rules.html)。
 
 ### <a name="403-forbidden"></a>(403) 禁止
 
@@ -55,7 +79,7 @@ ms.locfileid: "72911602"
 
 * 验证是否已在要附加的应用服务资源上部署并运行网站。
 * 验证该站点在 https://\<resource\>.azurewebsites.net 上是否可用
-* 验证在访问 https://\<resource\>.azurewebsites.net 时，正常运行的自定义 Web 应用是否不会返回状态码 404。
+* 验证在访问 https://\<resource\>.azurewebsites.net 时，正常运行的自定义 Web 应用是否不会返回状态码 404
 * 如果此错误仍然存在，请使用本文开头所述的任一反馈渠道进行反馈。
 
 ### <a name="406-not-acceptable"></a>(406) 不可接受
@@ -64,7 +88,7 @@ ms.locfileid: "72911602"
 
 执行以下步骤：
 
-* 验证站点在 https://\<resource\>.azurewebsites.net 上是否可用
+* 验证你的站点在 https://\<resource\>.azurewebsites.net 上是否可用
 * 验证站点是否尚未迁移到新实例。 Snapshot Debugger 采用 ARRAffinity 的概念，将请求路由到特定实例，这可能会间歇性地产生此错误。
 * 如果此错误仍然存在，请使用本文开头所述的任一反馈渠道进行反馈。
 

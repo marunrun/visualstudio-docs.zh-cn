@@ -7,12 +7,12 @@ ms.assetid: 0fe9eaa4-f589-429e-a443-13bf86637d5a
 ms.date: 03/17/2020
 ms.topic: conceptual
 description: 了解如何在管理门户中设置语言、联系人、订阅级别等的首选项
-ms.openlocfilehash: cbcf532620e958ca408d43295d2d4200d12ee0cd
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: b719e60771ef8cca9b956626ca6e9e3dd91edce5
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "79508753"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84183491"
 ---
 # <a name="set-preferences-for-your-agreements-in-the-administration-portal"></a>在管理门户中设置协议的首选项
 超级管理员可以在管理门户中设置某些首选项，这些首选项将全局应用于每个协议。  这些首选项将在管理员添加订阅者时为管理员自动填充订阅详细信息，并且只能由超级管理员进行全局修改。  
@@ -50,7 +50,7 @@ ms.locfileid: "79508753"
 借助此首选项可决定管理员是否可以从组织的租户/目录之外添加订户。  如果关闭此功能，则不允许任何外部订阅者。  如果启用该功能并且管理员尝试添加外部订阅者，则会要求他们确认他们的选择，并且将允许他们分配订阅。 管理员无法覆盖此设置。 
 
 ### <a name="default-downloads-setting"></a>默认下载设置
-启用此设置（默认情况下处于启用状态）将使订阅者能够在管理员创建新订阅时访问下载。  管理员仍可基于单个订阅禁用下载。  
+启用此设置（默认情况下处于启用状态）将使订阅者能够在管理员创建新订阅时访问下载。  管理员仍可基于单个订阅禁用下载。  如果禁用对下载的访问权限，则还会禁用对产品密钥的访问权限。  
 
 ### <a name="default-subscription-level"></a>默认订阅级别
 可使用此设置确定在将订阅分配给用户时默认选择协议中包含的订阅级别。  管理员可以将设置更改为你协议中的任何订阅级别，这样便可避免重复做出最常见的选择。 
@@ -68,7 +68,7 @@ ms.locfileid: "79508753"
 ### <a name="q-where-can-i-find-out-more-about-the-contact-my-admin-feature-in-the-subscriber-portal"></a>问：在哪里可以找到有关订阅者门户中“联系我的管理员”功能的详细信息？
 答：请查看我们的[联系我的管理员](contact-my-admin.md)文章。 
 
-### <a name="q-if-we-dont-complete-the-contact-email-address-and-a-subscriber-uses-the-contact-my-admin-feature-who-receives-their-request"></a>问：如果我们未完成“联系人电子邮件地址”，并且订阅者使用“联系我的管理员”功能，谁会收到他们的请求？
+### <a name="q-if-we-dont-complete-the-contact-email-address-and-a-subscriber-uses-the-contact-my-admin-feature-who-receives-their-request"></a>问：如果我们未完成“联系人电子邮件地址”，并且订阅者使用“联系我的管理员”功能，谁会收到他们的请求 ？
 答：如果在“联系人电子邮件地址”首选项中没有设置特定的电子邮件地址，协议上的所有管理员都将收到请求。 
 
 ## <a name="resources"></a>资源

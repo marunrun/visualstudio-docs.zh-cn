@@ -10,49 +10,49 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 862310c8c763ce366798bfacd4f4759d606bb33c
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: 3355636eba7556a472d8ce272437fb07c30714be
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "71128211"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84184147"
 ---
 # <a name="deploy-an-app-to-a-local-folder-using-visual-studio"></a>使用 Visual Studio 将应用部署到本地文件夹
 
-可以使用“发布”工具将 ASP.NET、ASP.NET Core、.NET Core 和 Python 应用从 Visual Studio 发布到本地文件夹  。 对于 Node.js，支持这些步骤但用户界面不同。
+可以使用“发布”工具将 ASP.NET、ASP.NET Core、.NET Core 和 Python 应用从 Visual Studio 发布到本地文件夹。 对于 Node.js，支持这些步骤但用户界面不同。
 
 [!INCLUDE [quickstart-prereqs](includes/quickstart-prereqs.md)]
 
 > [!NOTE]
-> 如果需要将 Windows 桌面应用程序发布到本地文件夹，请参阅[使用 ClickOnce 部署桌面应用](how-to-publish-a-clickonce-application-using-the-publish-wizard.md)（C# 或 Visual Basic）。 对于 C++/CLI，请参阅[使用 ClickOnce 部署本机应用](/cpp/windows/clickonce-deployment-for-visual-cpp-applications)；对于 C/C++，请参阅[使用安装项目部署本机应用](/cpp/windows/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project)。
+> 如果需要将 Windows 桌面应用程序发布到本地文件夹，请参阅[使用 ClickOnce 部署桌面应用](how-to-publish-a-clickonce-application-using-the-publish-wizard.md)（C# 或 Visual Basic）。 对于 C++/CLR，请参阅[使用 ClickOnce 部署本机应用](/cpp/windows/clickonce-deployment-for-visual-cpp-applications)，或者对于 C/C++，请参阅[使用安装项目部署本机应用](/cpp/windows/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project)。
 
 ## <a name="deploy-to-a-local-folder"></a>部署到本地文件夹
 
-1. 在解决方案资源管理器中，右键单击该项目并选择“发布”（或使用“生成” > “发布”菜单项）    。
+1. 在解决方案资源管理器中，右键单击该项目并选择“发布”（或使用“生成” > “发布”菜单项）  。
 
     ![解决方案资源管理器中项目上下文菜单上的“发布”命令](../deployment/media/quickstart-publish.png "选择发布")
 
-1. 如果先前配置了任何发布配置文件，则“发布”窗格会显示  。 选择“新建配置文件”  。
+1. 在“发布”对话框中，选择“文件夹” 。
 
-1. 在“选取发布目标”对话框中，选择“文件夹”   。
+    ![选择文件夹作为发布目标](../deployment/media/quickstart-publish-folder.png "选择文件夹")
 
-    ![选择本地文件夹作为发布目标](../deployment/media/quickstart-publish-folder.png "选择文件夹")
+1. 输入路径，或选择“浏览”以指定文件夹。
 
-1. 输入路径，或选择“浏览”以指定本地文件夹  。
+    ![指定文件夹的路径](../deployment/media/quickstart-publish-folder-path.png "选择文件夹")
 
-1. 选择“发布”  。 Visual Studio 将生成项目并将其发布到指定文件夹。 项目属性“发布”窗格出现，显示配置文件摘要  。
+1. 选择“发布”。 Visual Studio 将生成项目并将其发布到指定文件夹。 项目属性“发布”窗格出现，显示配置文件摘要。
 
     ![显示配置文件摘要的“发布”属性窗格](../deployment/media/quickstart-publish-folder-summary.png)
 
-1. 若要配置部署设置，请选择配置文件摘要中的“配置”并选择“设置”选项卡   。
+1. 要配置部署设置，请选择发布文件摘要中的“编辑”并选择“设置”选项卡 。
 
     ![配置文件设置](../deployment/media/quickstart-profile-settings.png "配置文件设置")
 
-1. 配置选项（如是部署“调试”配置还是“发布”配置），然后选择“保存”  。
+1. 配置选项（如是部署“调试”配置还是“发布”配置），然后选择“保存”。
 
-1. 若要重新发布，请选择“发布”  。
+1. 若要重新发布，请选择“发布”。
 
-可按照任何喜欢的方式部署已发布的文件。 例如，可以使用简单的复制命令将其打包为 .zip 文件，或者使用选择的任何安装包进行部署  。
+可按照任何喜欢的方式部署已发布的文件。 例如，可以使用简单的复制命令将其打包为 .zip 文件，或者使用选择的任何安装包进行部署。
 
 ## <a name="next-steps"></a>后续步骤
 

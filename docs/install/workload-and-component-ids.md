@@ -6,7 +6,7 @@ keywords: ''
 author: ornellaalt
 ms.author: ornella
 manager: jillfra
-ms.date: 03/16/2020
+ms.date: 05/19/2020
 ms.topic: reference
 helpviewer_keywords:
 - workload ID, Visual Studio
@@ -17,12 +17,12 @@ ms.assetid: 34e19ef1-abfb-44fd-aad2-33c5d7874482
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 open_to_public_contributors: false
-ms.openlocfilehash: c80c9677a52c32f9539858b64e3be0e5cfb5f27f
-ms.sourcegitcommit: 22deb247ad951e4971f27fdab413b158415d0584
+ms.openlocfilehash: 37080bd450f17968612601d50a5c45e7ffb06dad
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81276437"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84184349"
 ---
 # <a name="visual-studio-workload-and-component-ids"></a>Visual Studio 工作负荷和组件 ID
 
@@ -30,7 +30,7 @@ ms.locfileid: "81276437"
 
 ::: moniker range="vs-2017"
 
-针对[版本 15.9](/visualstudio/releasenotes/vs2017-relnotes/) 而更新 
+针对[版本 15.9](/visualstudio/releasenotes/vs2017-relnotes/) 而更新
 
 | **版本** | **ID** | **说明** |
 | ----------- | ------ | --------------- |
@@ -51,7 +51,7 @@ ms.locfileid: "81276437"
 
 ::: moniker range="vs-2019"
 
-已针对[版本 16.5](/visualstudio/releases/2019/release-notes/) 进行更新 
+已针对[版本 16.6](/visualstudio/releases/2019/release-notes/) 进行更新
 
 | **版本** | **ID** | **说明** |
 | ----------- | ------ | --------------- |

@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 867aac31f1515136e3aa9f0a6f171ec425d90cf7
-ms.sourcegitcommit: ce3d0728ec1063ab548dac71c8eaf26d20450acc
+ms.openlocfilehash: e31ec2be9ccce0b07b04746d2ed51ab3909cdd2c
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80472792"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84183673"
 ---
 # <a name="code-snippets-schema-reference"></a>代码片段架构参考
 
@@ -108,20 +108,21 @@ $selected$ is a great color. I love $selected$.
 
 以下三种属性可用于 Code 元素：
 
-- **语言** -  该必选属性用于指定代码片段的语言  。 值可以是下列任一值：
+- **语言** -  该必选属性用于指定代码片段的语言。 值可以是下列任一值：
 
    |“值”|描述|
    |-----|-----------|
    |`VB`|标识 Visual Basic 代码段。|
    |`CSharp`|标识 C# 代码段。|
    |`CPP`|标识 C++ 代码段。|
+   |`XAML`|标识 XAML 代码片段。|
    |`XML`|标识 XML 代码段。|
    |`JavaScript`|标识 JavaScript 代码段。|
    |`TypeScript`|标识 TypeScript 代码片段。|
    |`SQL`|标识 SQL 代码段。|
    |`HTML`|标识 HTML 代码段。|
 
-- **Kind** - 用于指定代码片段包含的代码种类的可选属性  。 值可以是下列任一值：
+- **Kind** - 用于指定代码片段包含的代码种类的可选属性。 值可以是下列任一值：
 
    |“值”|描述|
    |-----|-----------|
@@ -131,7 +132,7 @@ $selected$ is a great color. I love $selected$.
    |`file`|指定代码段为完整的代码文件。 这些代码段可单独插入到代码文件或命名空间中。|
    |`any`|指定代码段可插入到任何位置。 此标记可用于上下文独立的代码段（例如注释）。|
 
-- **分隔符** -  该可选属性用于指定用于描述代码中的文本和对象的分隔符  。 默认情况下，分隔符为 `$`。
+- **分隔符** -  该可选属性用于指定用于描述代码中的文本和对象的分隔符。 默认情况下，分隔符为 `$`。
 
 ### <a name="parent-element"></a>父元素
 

@@ -7,12 +7,12 @@ ms.assetid: 872c5746-5357-4764-949b-aa525a0adf1a
 ms.date: 04/28/2020
 ms.topic: conceptual
 description: 了解如何激活 Visual Studio 订阅中包含的 Azure 开发测试个人额度权益。
-ms.openlocfilehash: f1e566750c4eb6928dd3c7c3e3407db1d161d621
-ms.sourcegitcommit: 1b7412f1a5b039b2b294c6001013f399ea7aa5bc
+ms.openlocfilehash: 50e784a60dc50232bc390233e2ad80dc91d0f4ab
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82564168"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84183608"
 ---
 # <a name="use-microsoft-azure-in-visual-studio-subscriptions"></a>在 Visual Studio 订阅中使用 Microsoft Azure
 Visual Studio 订阅者无需额外付费即可使用 Microsoft Azure。  通过[每月 Azure 开发测试个人额度](https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/)，可将 Azure 用作开发/测试的个人沙盒。  你可以预配虚拟机、云服务和其他 Azure 资源。  信用额度因订阅级别而异。
@@ -20,19 +20,19 @@ Visual Studio 订阅者无需额外付费即可使用 Microsoft Azure。  通过
 ## <a name="activation-steps"></a>激活步骤
 1. 登录到 [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)。
 
-2. 在“权益”页上的“工具”部分中找到“Azure”磁贴，然后单击“权益”磁贴底部的“激活”  链接。
+2. 在“权益”页上的“工具”部分中找到“Azure”磁贴，然后单击“权益”磁贴底部的“激活”链接。
    > [!div class="mx-imgBorder"]
    > ![Azure 磁贴](_img/vs-azure/vs-azure-tile.png)
 
-3. 如果没有现有的 Azure 订阅，系统将要求你填写所需信息以创建 Azure 订阅。  第一步是提供个人信息，然后单击“下一步”  。
+3. 如果没有现有的 Azure 订阅，系统将要求你填写所需信息以创建 Azure 订阅。  第一步是提供个人信息，然后单击“下一步”。
    > [!div class="mx-imgBorder"]
    > ![Azure 注册](_img/vs-azure/vs-azure-about-you.png)
 
-4. 接下来，需要使用简单的验证码验证身份。 提供电话号码，并选择是通过短信还是电话接收代码。  输入收到的代码，单击“验证代码”  。   
+4. 接下来，需要使用简单的验证码验证身份。 提供电话号码，并选择是通过短信还是电话接收代码。  输入收到的代码，单击“验证代码”。   
    > [!div class="mx-imgBorder"]
    > ![Azure 准备工作](_img/vs-azure/vs-azure-identity.png)
 
-5. 最后一步，单击复选框以接受条款，然后单击“注册”  。  就这么简单！
+5. 最后一步，单击复选框以接受条款，然后单击“注册”。  就这么简单！
    > [!div class="mx-imgBorder"]
    > ![Azure 准备工作](_img/vs-azure/vs-azure-agreement.png)
 
@@ -50,9 +50,12 @@ Visual Studio 订阅者无需额外付费即可使用 Microsoft Azure。  通过
 
 可以通过多种方式继续使用 Azure 的每月额度。  要保存 Azure 资源，无论你在下面选择什么操作，都需要[将资源转移到另一个 Azure 订阅](https://docs.microsoft.com/azure/azure-resource-manager/management/move-resource-group-and-subscription)。 
 
-- 如果直接购买 Visual Studio 订阅，请通过 [Microsoft Store](https://www.microsoft.com/store/collections/visualstudiosubscription/#:~:text=) 购买新订阅或续订订阅  。  
-- 如果组织中的某个人代表你购买了订阅，请[联系组织的 Visual Studio 订阅管理员](https://docs.microsoft.com/visualstudio/subscriptions/contact-my-admin)，并请求提供所需每月额度的订阅  。  
-- 如果在与其他 Microsoft 帐户关联的同一订阅级别有其他活动 Visual Studio 订阅，则可以通过在 Visual Studio [订阅门户](https://my.visualstudio.com/subscriptions)中[添加备用帐户](https://docs.microsoft.com/visualstudio/subscriptions/manage-vs-subscriptions#managing-my-profile)，将 Azure 权益转移到另一个活动 Visual Studio 订阅  。  
+- 如果直接购买 Visual Studio 订阅，请通过 Microsoft Store 购买新订阅或续订订阅。  
+    - [Visual Studio Enterprise](https://www.microsoft.com/p/visual-studio-enterprise-subscription/dg7gmgf0dst4?activetab=pivot%3aoverviewtab)
+    - [Visual Studio Professional](https://www.microsoft.com/p/visual-studio-professional-subscription/dg7gmgf0dst3?activetab=pivot%3aoverviewtab)
+    - [Visual Studio Test Professional](https://www.microsoft.com/p/visual-studio-test-professional-subscription/dg7gmgf0dst6?activetab=pivot%3aoverviewtab)
+- 如果组织中的某个人代表你购买了订阅，请[联系组织的 Visual Studio 订阅管理员](https://docs.microsoft.com/visualstudio/subscriptions/contact-my-admin)，并请求提供所需每月额度的订阅。  
+- 如果在与其他 Microsoft 帐户关联的同一订阅级别有其他活动 Visual Studio 订阅，则可以通过在 Visual Studio [订阅门户](https://my.visualstudio.com/subscriptions)中[添加备用帐户](https://docs.microsoft.com/visualstudio/subscriptions/manage-vs-subscriptions#managing-my-profile)，将 Azure 权益转移到另一个活动 Visual Studio 订阅。  
 
 请通过以下资格表来确定各订阅类型包含多少额度。  
 

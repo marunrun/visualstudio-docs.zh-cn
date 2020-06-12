@@ -22,12 +22,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0a06849c2aa0f4ec0203a7209ffc78be438dba9e
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: a7d6693a24d208cab6bd3b58ce16dcba8a32b190
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77633377"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84184284"
 ---
 # <a name="msbuild-conditional-constructs"></a>MSBuild 条件构造
 
@@ -77,6 +77,18 @@ MSBuild 为非此即彼的处理机制提供 [Choose](../msbuild/choose-element-
     </Choose>
     <!-- Rest of Project -->
 </Project>
+```
+
+在此示例中，使用了关于编译器常量 `DEFINED_CONSTANT` 的条件。 这些内容包含在 `DefinedConstants` 属性中。 正则表达式用于匹配分号分隔列表中的确切常量。
+
+```xml
+<Choose>
+   <When Condition="$([System.Text.RegularExpressions.Regex]::IsMatch(
+         $(DefineConstants), '^(.*;)*DEFINED_CONSTANT(;.*)*$'))">
+      <!-- When DEFINED_CONSTANT is defined. -->
+   </When>
+   <!-- other conditions -->
+</Choose>
 ```
 
 ## <a name="see-also"></a>请参阅

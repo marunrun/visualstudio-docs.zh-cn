@@ -7,12 +7,12 @@ ms.assetid: 7f4399d8-41da-41e5-a666-acc34958b8c0
 ms.date: 03/09/2020
 ms.topic: conceptual
 description: 有关在 MPN 中提供的订阅、应用的规则以及提供的订阅数的详细信息。
-ms.openlocfilehash: c463ee24b9c145de6fdbca9b1971b0fc767df694
-ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
+ms.openlocfilehash: fb19f84c480fb1291d225dcce8c0e140a953826b
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80232336"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84183049"
 ---
 # <a name="visual-studio-subscriptions-offered-to-partners-in-the-microsoft-partner-network-mpn"></a>提供给 Microsoft 合作伙伴网络 (MPN) 中的合作伙伴的 Visual Studio 订阅
 
@@ -30,7 +30,7 @@ ms.locfileid: "80232336"
 
 ### <a name="additional-visual-studio-benefit-for-select-competencies"></a>选定资格的其他 Visual Studio 权益
 
-| 资质                                  | 白银资格可获得的额外订阅数  | 黄金资格可获得的额外订阅数  |
+| 资格                                  | 白银资格可获得的额外订阅数 | 黄金资格可获得的额外订阅数 |
 |---------------------------------------------|-----------------------------------------------------------|---------------------------------------------------------|
 | 应用程序开发                     | 5 个 Visual Studio Enterprise 订阅                  | 25 个 Visual Studio Enterprise 订阅               |
 | 云客户关系管理      | 5 个 Visual Studio Enterprise 订阅                  | 25 个 Visual Studio Enterprise 订阅               |
@@ -50,7 +50,7 @@ ms.locfileid: "80232336"
 
 具备资格的合作伙伴能够购买 Action Pack。 每个合作伙伴只能购买一个 Action Pack。
 
-通过 Action Pack，合作伙伴可获得 3 个 Visual Studio Professional (MPN) 订阅  。 Visual Studio Professional (MPN) 是一种自定义产品，市场上没有相应的同类型产品。 它包括以下内容：
+通过 Action Pack，合作伙伴可获得 3 个 Visual Studio Professional (MPN) 订阅。 Visual Studio Professional (MPN) 是一种自定义产品，市场上没有相应的同类型产品。 它包括以下内容：
 
 - Visual Studio Professional - 仅最新版本
 - Windows 企业版 - 仅最新版本且仅用于开发和测试
@@ -72,12 +72,12 @@ MPN 规则规定，作为计划权益提供的所有软件只能在内部使用�
 
 ## <a name="resources"></a>资源
 
-- [MPN 计划管理员指南](https://assets.microsoft.com/en-us/Program-Administrator-Guide-to-Software-and-Online-Services-Benefits_1.pdf) - 包含有关如何为 MPN 员工分配 Visual Studio 订阅的说明。
+- [Microsoft 合作伙伴网络计划指南](https://assets.microsoft.com/MPN-MAPS-Product-Usage-Guide.pdf?tpqid=300-000121)
 - [为 MPN 员工分配 Visual Studio 订阅](manage-mpn-subscriptions.md)
 - [使用条款](https://www.microsoft.com/useterms/) - 通过 MPN 提供的 Visual Studio 订阅应遵循 Visual Studio 订阅不得转售 (NFR) EULA。
 
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [Visual Studio 文档](https://docs.microsoft.com/visualstudio/)
 - [Azure DevOps 文档](https://docs.microsoft.com/azure/devops/)
 - [Azure 文档](https://docs.microsoft.com/azure/)

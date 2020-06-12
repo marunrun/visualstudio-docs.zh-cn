@@ -11,12 +11,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f756d432d9ff4d3824c1f1165c63710e4d10c2e9
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 8210ceeb26c3350822d95f85af7689a37894dba9
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75594885"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84184050"
 ---
 # <a name="obtain-build-logs-with-msbuild"></a>用 MSBuild 获取生成日志
 
@@ -35,9 +35,9 @@ ms.locfileid: "75594885"
 
 - 生成总结。
 
-使用 -verbosity  (-v  ) 开关，可控制输出日志中的数据量。 对于故障排除，请使用 `detailed` (`d`) 或 `diagnostic` (`diag`) 的详细级别，它可提供大部分信息。
+使用 -verbosity (-v) 开关，可控制输出日志中的数据量。 对于故障排除，请使用 `detailed` (`d`) 或 `diagnostic` (`diag`) 的详细级别，它可提供大部分信息。
 
-如果你将 -verbosity  设置为 `detailed`，生成流程可能会减速；如果你将 -verbosity  设置为 `diagnostic`，此流程甚至会更慢。
+如果你将 -verbosity 设置为 `detailed`，生成流程可能会减速；如果你将 -verbosity 设置为 `diagnostic`，此流程甚至会更慢。
 
 ```cmd
 msbuild MyProject.proj -t:go -v:diag
@@ -47,7 +47,7 @@ msbuild MyProject.proj -t:go -v:diag
 
 下表显示日志详细级别（列值）如何影响记录的消息类型（行值）。
 
-|                                       | Quiet | 最低 | 一般 | 详细 | 诊断 |
+|                                       | Quiet | 最低 | 普通 | 详细 | 诊断 |
 |---------------------------------------|:-----:|:-------:|:------:|:--------:|:----------:|
 | 错误                                |   ✅   |    ✅    |    ✅   |     ✅    |      ✅     |
 | 警告                              |   ✅   |    ✅    |    ✅   |     ✅    |      ✅     |
@@ -58,13 +58,13 @@ msbuild MyProject.proj -t:go -v:diag
 
 ## <a name="save-the-build-log-to-a-file"></a>将生成日志保存到文件中
 
-可使用 -fileLogger  (fl  ) 开关，将生成数据保存到文件中。 以下示例将生成数据保存到名为“msbuild.log”  的文件。
+可使用 -fileLogger (fl) 开关，将生成数据保存到文件中。 以下示例将生成数据保存到名为“msbuild.log”的文件。
 
 ```cmd
 msbuild MyProject.proj -t:go -fileLogger
 ```
 
- 在以下示例中，日志文件被命名为“MyProjectOutput.log”  ，且日志输出的详细级别设置为了 `diagnostic`。 使用 -filelogparameters  (`flp`) 开关指定这两个设置。
+ 在以下示例中，日志文件被命名为“MyProjectOutput.log”，且日志输出的详细级别设置为了 `diagnostic`。 使用 -fileLoggerParameters (`flp`) 开关指定这两个设置。
 
 ```cmd
 msbuild MyProject.proj -t:go -fl -flp:logfile=MyProjectOutput.log;verbosity=diagnostic
@@ -74,9 +74,9 @@ msbuild MyProject.proj -t:go -fl -flp:logfile=MyProjectOutput.log;verbosity=diag
 
 ## <a name="save-the-log-output-to-multiple-files"></a>将日志输出保存到多个文件中
 
- 以下示例将整个日志保存到了 msbuild1.log  ，将错误保存到了 JustErrors.log  ，并且将警告保存到了 JustWarnings.log  。 该示例为三个文件中的每个文件都使用了文件编号。 文件编号是紧跟在 -fl  和 -flp  开关后面指定（例如，`-fl1` 和 `-flp1`）。
+ 以下示例将整个日志保存到了 msbuild1.log，将错误保存到了 JustErrors.log，并且将警告保存到了 JustWarnings.log。 该示例为三个文件中的每个文件都使用了文件编号。 文件编号是紧跟在 -fl 和 -flp 开关后面指定（例如，`-fl1` 和 `-flp1`）。
 
- 文件 2 和 3 的 -filelogparameters  (`flp`) 开关指定了每个文件的名称和内容。 未为文件 1 指定名称，因此使用了默认名称“msbuild1.log”  。
+ 文件 2 和 3 的 -fileLoggerParameter (`flp`) 开关指定了每个文件的名称和内容。 未为文件 1 指定名称，因此使用了默认名称“msbuild1.log”。
 
 ```cmd
 msbuild MyProject.proj -t:go -fl1 -fl2 -fl3 -flp2:logfile=JustErrors.log;errorsonly -flp3:logfile=JustWarnings.log;warningsonly
@@ -86,9 +86,9 @@ msbuild MyProject.proj -t:go -fl1 -fl2 -fl3 -flp2:logfile=JustErrors.log;errorso
 
 ## <a name="save-a-binary-log"></a>保存二进制日志
 
-可使用 -binaryLogger  (bl  ) 开关，以压缩二进制格式保存日志。 此日志包含生成进程的详细说明，并可以由某些日志分析工具读取。
+可使用 -binaryLogger (bl) 开关，以压缩二进制格式保存日志。 此日志包含生成进程的详细说明，并可以由某些日志分析工具读取。
 
-在以下示例中，创建了名为“binarylogfilename”  的二进制日志文件。
+在以下示例中，创建了名为“binarylogfilename”的二进制日志文件。
 
 ```cmd
 -bl:binarylogfilename.binlog
@@ -100,9 +100,9 @@ msbuild MyProject.proj -t:go -fl1 -fl2 -fl3 -flp2:logfile=JustErrors.log;errorso
 
  可以通过创作一个实现 <xref:Microsoft.Build.Framework.ILogger> 接口的托管类型来编写自己的记录器。 例如，可使用自定义记录程序，在电子邮件中发送生成错误，将其记录到数据库，或记录到 XML 文件。 有关详细信息，请参阅[生成记录器](../msbuild/build-loggers.md)。
 
- 在 MSBuild 命令行中，可使用 -logger  开关指定自定义记录器。 还可使用 -noconsolelogger  开关，禁用默认控制台记录器。
+ 在 MSBuild 命令行中，可使用 -logger 开关指定自定义记录器。 还可使用 -noconsolelogger 开关，禁用默认控制台记录器。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - <xref:Microsoft.Build.Framework.LoggerVerbosity>
 - [生成记录器](../msbuild/build-loggers.md)
