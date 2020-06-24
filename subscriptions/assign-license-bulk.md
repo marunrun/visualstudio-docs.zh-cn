@@ -7,12 +7,12 @@ ms.assetid: c2853359-18fd-4be4-97a6-02230c862f92
 ms.date: 05/10/2020
 ms.topic: conceptual
 description: 了解管理员如何使用批量添加功能或 Microsoft Azure Active Directory 组将许可证分配给多个订阅者
-ms.openlocfilehash: 41dd3049c790ac790b46d12b976eb3ab6457fcb2
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: bc5f4a9bfc78dd3139202872bdf8d70a050f4039
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84182893"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85289126"
 ---
 # <a name="assign-subscriptions-to-multiple-users"></a>将订阅分配给多个用户
 你可以在订阅管理门户中一次添加一个多个用户，也可以采用大用户组形式添加。  要添加各个用户，请参阅[添加单个用户](assign-license.md)。
@@ -24,18 +24,18 @@ ms.locfileid: "84182893"
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4vxNq]
 
 ## <a name="use-bulk-add-to-assign-subscriptions"></a>使用批量添加功能分配订阅
-1. 登录 Visual Studio 订阅管理门户，网址： https://manage.visualstudio.com 。
+1. 登录 Visual Studio 订阅管理门户，网址： <https://manage.visualstudio.com> 。
 
-2. 若要一次添加多个订阅者，请导航到“管理订阅者”选项卡。选择“添加”选项卡，然后选择下拉列表中的“批量添加”。  
+1. 若要一次添加多个订阅者，请导航到“管理订阅者”选项卡。选择“添加”选项卡，然后选择下拉列表中的“批量添加”。  
 
-2. 批量添加功能会使用 Microsoft Excel 模板上传订阅者信息。 在“上传多个订阅者”对话框中，单击“下载”下载模板。
+1. 批量添加功能会使用 Microsoft Excel 模板上传订阅者信息。 在“上传多个订阅者”对话框中，单击“下载”下载模板。
    > [!div class="mx-imgBorder"]
    > ![下载 Excel 模板以上传多个订阅者](media/download-template-upload-subscribers.png)
    >
    > [!NOTE]
    > 请务必下载本模板的最新版本。 如果使用旧版本，批量上传可能会失败。
 
-3. 在 Excel 电子表格的字段中，填写想要为其分配订阅的个人的信息。 （“引用”是可选字段。）完成后将文件保存在本地。
+1. 在 Excel 电子表格的字段中，填写想要为其分配订阅的个人的信息。 （“引用”是可选字段。）完成后将文件保存在本地。
 
     > [!NOTE]
     > 管理员可以使用模板中的一个字段启用或禁用订阅者下载软件的功能。  如果禁用下载，则还会禁用他们对产品密钥的访问权限。
@@ -48,11 +48,11 @@ ms.locfileid: "84182893"
     - 确保填写所有必填字段。 
     - 检查“错误消息”列。  如果列出了任何错误，请先修复这些错误，然后再尝试上传文件。 
 
-4. 返回到 Visual Studio 订阅管理门户。 在“上传多个订阅者”对话框中，单击“浏览” 。
+1. 返回到 Visual Studio 订阅管理门户。 在“上传多个订阅者”对话框中，单击“浏览” 。
    > [!div class="mx-imgBorder"]
    > ![浏览到之前保存的模板以上传多个订阅者](media/bulk-add-browse-saved-template.png)
 
-5. 导航到之前保存的 Excel 文件，然后单击“确定”。
+1. 导航到之前保存的 Excel 文件，然后单击“确定”。
    > [!div class="mx-imgBorder"]
    > ![上传 Excel 模板以上传多个订阅者](media/bulk-upload-subscribers.png)
 

@@ -1,18 +1,18 @@
 ---
 title: 如何使用适用于 C++ 的 CTest
 ms.date: 01/23/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.author: corob
 manager: jillfra
 ms.workload:
 - cplusplus
 author: corob-msft
-ms.openlocfilehash: 78759a017575916bce3b3fff643cbce8ff303fd6
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: c429c9e676ead54bb9f168e3220bf2d4791fac63
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "76826518"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85287228"
 ---
 # <a name="how-to-use-ctest-for-c-in-visual-studio-2017-and-later"></a>如何在 Visual Studio 2017 及更高版本中使用适用于 C++ 的 CTest
 
