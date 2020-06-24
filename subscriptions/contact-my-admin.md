@@ -7,12 +7,12 @@ ms.assetid: 64455e79-229a-42f0-9d65-c2cca8ab8513
 ms.date: 03/07/2020
 ms.topic: conceptual
 description: 了解如何与订阅管理员联系以获取有关问题的帮助。
-ms.openlocfilehash: b203feee61bf44af99ea802992e1fdc3c416c037
-ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
+ms.openlocfilehash: 117bdb82c878e498862dd967615fde9d6ba632eb
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80232631"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85289100"
 ---
 # <a name="get-assistance-from-your-subscriptions-administrator"></a>获取订阅管理员的帮助
 如果 Visual Studio 订阅是由你的工作或学校提供的，那么它很可能是由订阅管理员或“管理员”分配给你的。  管理员可以分配或删除订阅，更改登录电子邮件地址，确定你是否能够下载软件以及执行与订阅相关的其他功能。
@@ -20,7 +20,7 @@ ms.locfileid: "80232631"
 鉴于许多组织的规模和复杂性，你可能不知道你的管理员是谁，因此很难知道从哪里获得帮助。  我们向订阅者门户添加了一个新功能，以帮助你联系管理员。   
 
 ## <a name="how-to-contact-your-admin"></a>如何联系你的管理员
-1. 在 https://my.visualstudio.com 登录到订阅者门户
+1. 在 <https://my.visualstudio.com> 登录到订阅者门户
 2. 单击“订阅”选项卡  。 
 3. 单击右上方的“联系我的管理员”按钮  。 
    > [!div class="mx-imgBorder"]

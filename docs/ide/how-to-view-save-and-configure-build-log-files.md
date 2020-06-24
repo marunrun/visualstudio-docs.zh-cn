@@ -2,19 +2,19 @@
 title: 如何：查看、保存和配置生成日志文件 | Microsoft Docs
 ms.date: 08/28/2019
 ms.technology: vs-ide-compile
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 75d38b76-26d6-4f43-bbe7-cbacd7cc81e7
 author: ghogen
 ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 84efda930066c4236fa4397fbadf287c6774fdb0
-ms.sourcegitcommit: ce3d0728ec1063ab548dac71c8eaf26d20450acc
+ms.openlocfilehash: 4acf8ca4e116bfb0ab990f1b0aed66bef95820ad
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80472789"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85283900"
 ---
 # <a name="how-to-view-save-and-configure-build-log-files"></a>如何：查看、保存和配置生成日志文件
 
@@ -63,7 +63,7 @@ ms.locfileid: "80472789"
      有关详细信息，请参阅[“选项”对话框->“项目和解决方案”->“生成和运行”](../ide/reference/options-dialog-box-projects-and-solutions-build-and-run.md)和 <xref:Microsoft.Build.Framework.LoggerVerbosity>。
 
     > [!IMPORTANT]
-    > 更改要在“输出”窗口（所有项目）和 \<ProjectName>.txt 文件（仅限 C++ 项目）中生效，必须重新生成该项目   。
+    > 要使更改在“输出”窗口（所有项目）和 \<ProjectName>.txt 文件（仅限 C++ 项目）中生效，必须重新生成该项目******。
 
 ## <a name="use-binary-logs-to-make-it-easier-to-browse-large-log-files"></a>使用二进制日志更轻松地浏览大型日志文件
 

@@ -18,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 926c54be9d31a6d0708b33248b6887c0ac7e324e
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: fea7763bf1cbce5fac36ce2cd5e54c40e1da989a
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84184063"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85289230"
 ---
 # <a name="msbuild-conditions"></a>MSBuild 条件
 
@@ -31,10 +31,10 @@ MSBuild 支持一组特定的条件，只要允许使用 `Condition` 属性，�
 
 |条件|描述|
 |---------------|-----------------|
-|'`stringA`' == '`stringB`'|如果 `stringA` 等于 `stringB`，则计算结果为 `true`。<br /><br /> 例如：<br /><br /> `Condition="'$(CONFIG)'=='DEBUG'"`<br /><br /> 对于简单的字母数字字符串或布尔值，不需要单引号。 但对于空值，单引号是必需的。 此检查不区分大小写。|
-|'`stringA`' != '`stringB`'|如果 `stringA` 不等于 `stringB`，则计算结果为 `true`。<br /><br /> 例如：<br /><br /> `Condition="'$(CONFIG)'!='DEBUG'"`<br /><br /> 对于简单的字母数字字符串或布尔值，不需要单引号。 但对于空值，单引号是必需的。 此检查不区分大小写。|
+|'`stringA`' == '`stringB`'|如果 `stringA` 等于 `stringB`，则计算结果为 `true`。<br /><br /> 例如：<br /><br /> `Condition="'$(Configuration)'=='DEBUG'"`<br /><br /> 对于简单的字母数字字符串或布尔值，不需要单引号。 但对于空值，单引号是必需的。 此检查不区分大小写。|
+|'`stringA`' != '`stringB`'|如果 `stringA` 不等于 `stringB`，则计算结果为 `true`。<br /><br /> 例如：<br /><br /> `Condition="'$(Configuration)'!='DEBUG'"`<br /><br /> 对于简单的字母数字字符串或布尔值，不需要单引号。 但对于空值，单引号是必需的。 此检查不区分大小写。|
 |\<, >, \<=, >=|计算操作数的数值。 如果关系评估为 true，则返回 `true`。 操作数的计算结果必须为十进制或十六进制数。 十六进制数必须以“0x”开头。 **注意：** 在 XML 中，必须对字符 `<` 和 `>` 进行转义。 符号 `<` 表示为 `&lt;`。 符号 `>` 表示为 `&gt;`。|
-|Exists('`stringA`')|如果存在名为 `stringA` 的文件或文件夹，则计算结果为 `true`。<br /><br /> 例如：<br /><br /> `Condition="!Exists('$(builtdir)')"`<br /><br /> 对于简单的字母数字字符串或布尔值，不需要单引号。 但对于空值，单引号是必需的。|
+|Exists('`stringA`')|如果存在名为 `stringA` 的文件或文件夹，则计算结果为 `true`。<br /><br /> 例如：<br /><br /> `Condition="!Exists('$(Folder)')"`<br /><br /> 对于简单的字母数字字符串或布尔值，不需要单引号。 但对于空值，单引号是必需的。|
 |HasTrailingSlash('`stringA`')|如果指定的字符串末尾包含反斜杠 (\\) 或正斜杠 (/) 字符，则计算结果为 `true`。<br /><br /> 例如：<br /><br /> `Condition="!HasTrailingSlash('$(OutputPath)')"`<br /><br /> 对于简单的字母数字字符串或布尔值，不需要单引号。 但对于空值，单引号是必需的。|
 |!|如果操作数计算结果为 `false`，则计算结果为 `true`。|
 |`And`|如果两个操作数计算结果均为 `true`，则计算结果为 `true`。|
@@ -51,7 +51,7 @@ MSBuild 支持一组特定的条件，只要允许使用 `Condition` 属性，�
         <TargetFrameworks>net45;net48;netstandard2.1;netcoreapp2.1;netcoreapp3.1</TargetFrameworks>
     </PropertyGroup>
 
-    <PropertyGroup Condition="'$(TargetFramework.TrimEnd(`0123456789.`))' == 'net'">
+    <PropertyGroup Condition="'$(TargetFramework.TrimEnd(`0123456789`))' == 'net'">
         <!-- Properties for .NET Framework -->
     </PropertyGroup>
 

@@ -1,7 +1,7 @@
 ---
 title: 创建项目模板
 ms.date: 01/02/2018
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - VS.ExportTemplateWizard
 helpviewer_keywords:
@@ -9,12 +9,12 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: f4caebfdc4e61b683e0f1407d1522f6da2328fcf
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: e6f168244971a348cdb7938af463538d0fa2acaf
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75591068"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85284381"
 ---
 # <a name="how-to-create-project-templates"></a>如何：创建项目模板
 

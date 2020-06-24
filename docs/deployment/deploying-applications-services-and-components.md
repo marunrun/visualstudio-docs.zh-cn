@@ -23,12 +23,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f10831ac398ef8fb48337436dd33253cfb32f26c
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: ab0d62efb8abc3cfbae365312a009bc6d2efea43
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84182997"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85286346"
 ---
 # <a name="first-look-at-deployment-in-visual-studio"></a>先查看 Visual Studio 中的部署
 
@@ -58,7 +58,7 @@ ms.locfileid: "84182997"
 
   要使用“发布”工具，请右键单击“解决方案资源管理器”中的项目，然后选择“发布” 。 （如果之前已配置任何发布配置文件，必须单击“新建配置文件”。）在发布对话框中，选择“应用服务”或“Azure虚拟机”，然后按照配置步骤操作 。
 
-  ![选择 Azure 应用服务](../deployment/media/quickstart-publish-azure.png "选择 Azure 应用服务")
+  ![选择 Azure 应用服务](../deployment/media/quickstart-publish-azure-new.png "选择 Azure 应用服务")
 
   自 Visual Studio 2017 版本 15.7 开始，可将 ASP.NET Core 应用部署到适用于 Linux 的应用服务。
 
@@ -91,7 +91,7 @@ ms.locfileid: "84182997"
 
 - **UWP**：可以使用菜单项将应用打包并部署。 有关详细信息，请参阅[使用 Visual Studio 打包 UWP 应用](/windows/uwp/packaging/packaging-uwp-apps)。
 
-    ![创建应用程序包](../deployment/media/feature-tour-create-app-package.jpg)
+    ![创建应用程序包](../deployment/media/feature-tour-create-app-package.png)
 
 - **Windows 桌面**：从 Visual Studio 2017 15.4 版开始可以使用桌面桥部署到 Microsoft Store。 若要执行此操作，首先创建一个 Windows 应用程序打包项目。 有关详细信息，请参阅[为 Microsoft Store 打包桌面应用（桌面桥）](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)。
 

@@ -3,7 +3,7 @@ title: 使用 Node.js 创建 Vue.js 应用
 description: 可以使用 Vue.js 框架在 Visual Studio 中创建 Node.js 应用程序
 ms.custom: seodec18
 ms.date: 07/06/2018
-ms.topic: conceptual
+ms.topic: how-to
 ms.devlang: javascript
 author: mikejo5000
 ms.author: mikejo
@@ -12,12 +12,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: edf5307984b4efc00a7c83c84fe5cb87954a93dd
-ms.sourcegitcommit: 5c804c42d24d35dcf2ba195aba9ce07031743f62
+ms.openlocfilehash: e16b09a165421d36c67dad1fc657fd36846cd382
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81744912"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85285161"
 ---
 # <a name="create-a-vuejs-application-using-nodejs-tools-for-visual-studio"></a>使用针对 Visual Studio 的 Node.js 工具创建 Vue.js 应用程序
 

@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3355636eba7556a472d8ce272437fb07c30714be
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: da13cb2b249146c7a29abbab03b66f77594abf4b
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84184147"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85285396"
 ---
 # <a name="deploy-an-app-to-a-local-folder-using-visual-studio"></a>使用 Visual Studio 将应用部署到本地文件夹
 
@@ -34,7 +34,7 @@ ms.locfileid: "84184147"
 
 1. 在“发布”对话框中，选择“文件夹” 。
 
-    ![选择文件夹作为发布目标](../deployment/media/quickstart-publish-folder.png "选择文件夹")
+    ![选择文件夹作为发布目标](../deployment/media/quickstart-publish-folder-new.png "选择文件夹")
 
 1. 输入路径，或选择“浏览”以指定文件夹。
 

@@ -19,12 +19,12 @@ helpviewer_keywords:
 - conversion, projects
 - asset compatibility
 - projects, conversion
-ms.openlocfilehash: 221fd38b6035c1e41d9a768f5e30117dd3f4d35c
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 7ae4e0f865b35787663313277eb4df37169b72b7
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75406354"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85286058"
 ---
 # <a name="project-migration-and-upgrade-reference-for-visual-studio"></a>Visual Studio 的项目迁移和升级参考
 
@@ -43,15 +43,15 @@ Visual Studio 的每个版本通常都支持大部分以前的项目、文件和
 
 以下列表描述了 Visual Studio 2017 中对在之前版本中创建的项目的支持。
 
-如果未看到本应在此列出的项目或文件类型，请查阅[本文的 Visual Studio 2015 版本](/visualstudio/porting/porting-migrating-and-upgrading-visual-studio-projects?view=vs-2015)，并使用此页底部的“发送以下项的反馈” > “本页”按钮来提供有关项目的详细信息   。 （如果使用匿名“此页是否有帮助？” 控件，则我们无法对你的反馈作出响应。）
+如果未看到本应在此列出的项目或文件类型，请查阅[本文的 Visual Studio 2015 版本](/visualstudio/porting/porting-migrating-and-upgrading-visual-studio-projects?view=vs-2015)，并使用此页底部的“发送以下项的反馈” > “本页”按钮来提供有关项目的详细信息 。 （如果使用匿名“此页是否有帮助？” 控件，则我们无法对你的反馈作出响应。）
 
 | 项目类型 | 支持 |
 | --- | --- |
 | .NET Core 项目 (xproj) | 使用 Visual Studio 2015 旧预览工具创建的项目，其中包括 xproj 项目文件。 在 Visual Studio 2017 中，不支持 xproj 格式，除非迁移到 csproj 格式。 当你打开 xproj 文件时，系统将提示你将文件迁移到 SDK 样式的 .csproj 格式。 （创建 xproj 文件的备份。）Visual Studio 2015 及更早版本不支持使用 SDK 样式的 .csproj 项目。 有关详细信息，请参阅[将 .NET Core 项目迁移到 csproj 格式](/dotnet/core/migration/#visual-studio)。|
 | ASP.NET Web 应用程序和启用了 Application Insights 的 ASP.NET Core Web 应用程序 | 对于每个 Visual Studio 用户，资源信息存储在每个用户实例的注册表中。 用户在不打开项目，但想要搜索 Azure Application Insights 数据的情况下，可使用此信息。 Visual Studio 2015 使用与 Visual Studio 2017 不同的注册表位置，且未发生冲突。<br/><br/>用户创建 ASP.NET Web 应用程序或 ASP.NET Core Web 应用程序后，资源存储在 .suo 文件中。 用户可在 Visual Studio 2015 或 2017 中打开项目，只要 Visual Studio 支持这两个版本中使用的项目和解决方案，资源信息就可用于这两个版本。 用户需要在每个产品上进行一次身份验证。 例如，如果使用 Visual Studio 2015 创建项目，然后在 Visual Studio 2017 中打开，则用户需要在 Visual Studio 2017 上进行身份验证。 |
 | C#/Visual Basic Web 窗体或 Windows 窗体 | 可以在 Visual Studio 2017 和 Visual Studio 2015 中打开项目。 |
-| 数据库单元测试项目（csproj、.vbproj） | 较旧的数据单元测试项目在 Visual Studio 2017 中加载，但将使用 GAC 版本的依赖关系。 若要升级单元测试项目以使用最新的依赖关系，请在“解决方案资源管理器”中右键单击该项目，然后选择“转换为 SQL Server 单元测试项目...”  。 |
-| F# | Visual Studio 2017 可以打开 Visual Studio 2013 和 2015 中创建的项目。 但是，若要在这些项目中启用 Visual Studio 2017 功能，请打开项目属性，将目标 fsharp.core 更改为 F# 4.1。 此外，还需注意，.NET 工作负载不会默认选择 Visual Studio 安装程序中的“F# 语言支持”  选项；必须为工作负载选择该选项，或从“开发活动”  下的“个人组件”  选项卡中选择该选项。 |
+| 数据库单元测试项目（csproj、.vbproj） | 较旧的数据单元测试项目在 Visual Studio 2017 中加载，但将使用 GAC 版本的依赖关系。 若要升级单元测试项目以使用最新的依赖关系，请在“解决方案资源管理器”中右键单击该项目，然后选择“转换为 SQL Server 单元测试项目...”。 |
+| F# | Visual Studio 2017 可以打开 Visual Studio 2013 和 2015 中创建的项目。 但是，若要在这些项目中启用 Visual Studio 2017 功能，请打开项目属性，将目标 fsharp.core 更改为 F# 4.1。 此外，还需注意，.NET 工作负载不会默认选择 Visual Studio 安装程序中的“F# 语言支持”选项；必须为工作负载选择该选项，或从“开发活动”下的“个人组件”选项卡中选择该选项。 |
 | InstallShield<br/>MSI 安装程序 | 借助 [Visual Studio 安装程序项目扩展](https://marketplace.visualstudio.com/items?itemName=UnniRavindranathan-MSFT.MicrosoftVisualStudio2013InstallerProjects)，在 Visual Studio 2010 中创建的安装程序项目可在更高版本中打开。 另请参阅 [WiX Toolset Visual Studio 2017 Extension](https://marketplace.visualstudio.com/items?itemName=RobMensching.WixToolsetVisualStudio2017Extension)（WiX 工具集 Visual Studio 2017 扩展）。 Visual Studio 不再附带 InstallShield Limited Edition。 有关 Visual Studio 2017 的可用性，请咨询 [Flexera 软件](https://info.flexerasoftware.com/IS-EVAL-InstallShield-Limited-Edition-Visual-Studio)。 |
 | LightSwitch | Visual Studio 2017 中不再支持 LightSwitch。 使用 Visual Studio 2012 及早期版本创建并在 Visual Studio 2013 或 Visual Studio 2015 中打开的项目进行升级，之后只能在 Visual Studio 2013 或 Visual Studio 2015 中打开。 |
 | Microsoft Azure Tools for Visual Studio | 若要打开这些类型的项目，请首先安装 [Azure SDK for .NET](https://azure.microsoft.com/downloads/)，然后打开该项目。 如有必要，请更新项目。 |
@@ -91,7 +91,7 @@ Visual Studio 的每个版本通常都支持大部分以前的项目、文件和
 
 但是，如果与本文中所述的某些项目类型一样，不可能有此兼容性，那么 Visual Studio 会打开升级向导进行必要的单向更改。
 
-此类单向更改可能涉及更改项目文件中的 `ToolsVersion` 属性，该属性明确表示哪个 MSBuild 版本可以将项目的源代码转变为最终所需的可运行且可部署的项目。 也就是说，导致项目与 Visual Studio 早期版本不兼容的不是 Visual Studio 版本，而是由 `ToolsVersion` 确定的 MSBuild 版本   。 只要 Visual Studio 版本包含与项目中的 `ToolsVersion` 匹配的 MSBuild 工具链，Visual Studio 就可以调用该工具链来生成项目。
+此类单向更改可能涉及更改项目文件中的 `ToolsVersion` 属性，该属性明确表示哪个 MSBuild 版本可以将项目的源代码转变为最终所需的可运行且可部署的项目。 也就是说，导致项目与 Visual Studio 早期版本不兼容的不是 Visual Studio 版本，而是由 `ToolsVersion` 确定的 MSBuild 版本 。 只要 Visual Studio 版本包含与项目中的 `ToolsVersion` 匹配的 MSBuild 工具链，Visual Studio 就可以调用该工具链来生成项目。
 
 为了最大限度保持与较旧版本中创建的项目的兼容性，Visual Studio 2017 包含了必要的 MSBuild 工具链来支持 `ToolsVersion` 15、14、12 和 4。 使用任意这些 `ToolsVersion` 值的项目都可进行成功的生成。 （再次强调，有关 Visual Studio 2017 是否支持项目类型的主题，请参阅[平台目标以及兼容性](/visualstudio/productinfo/vs2017-compatibility-vs)。）
 
@@ -106,7 +106,8 @@ Visual Studio 的每个版本通常都支持大部分以前的项目、文件和
 
 ## <a name="see-also"></a>请参阅
 
-[Visual Studio 2019 的项目迁移和升级参考](port-migrate-and-upgrade-visual-studio-projects.md?view=vs-2019)
+- [Visual Studio 2019 的项目迁移和升级参考](port-migrate-and-upgrade-visual-studio-projects.md?view=vs-2019)
+- [Visual Studio 产品生命周期和维护](/visualstudio/releases/2019/servicing/)
 
 ::: moniker-end
 
@@ -114,7 +115,7 @@ Visual Studio 的每个版本通常都支持大部分以前的项目、文件和
 
 Visual Studio 的每个新版本都支持大部分项目、文件和其他资产类型。 只要不依赖于新功能，就可以[像往常一样](../ide/solutions-and-projects-in-visual-studio.md)使用它们。
 
-我们尝试保留与早期版本的向后兼容性，如 Visual Studio 2017、Visual Studio 2015、Visual Studio 2013 和 Visual Studio 2012。 但是，对某些项目类型的支持会随着时间的推移而更改。 较新版本的 Visual Studio 可能根本不支持某些项目，或者可能需要更新项目，使其不再向后兼容。 
+我们尝试保留与早期版本的向后兼容性，如 Visual Studio 2017、Visual Studio 2015、Visual Studio 2013 和 Visual Studio 2012。 但是，对某些项目类型的支持会随着时间的推移而更改。 较新版本的 Visual Studio 可能根本不支持某些项目，或者可能需要更新项目，使其不再向后兼容。
 
 > [!NOTE]
 > 有关迁移问题的当前状态，请参阅 [Visual Studio 开发人员社区](https://developercommunity.visualstudio.com)。 若要详细了解哪些功能特定于对应的 Visual Studio 版本，请参阅[发行说明](/visualstudio/releases/2019/release-notes/)。
@@ -126,7 +127,7 @@ Visual Studio 的每个新版本都支持大部分项目、文件和其他资产
 
 以下列表描述了 Visual Studio 2019 中对在之前版本中创建的项目的支持。
 
-如果在此处未看到任何项目或文件类型（此处本应出现这些内容），请参阅[本文的 Visual Studio 2017 版本](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects?view=vs-2017)。 还可以使用本页底部的“发送有关以下内容的反馈”   > “本页”  按钮来提供项目的详细信息。 （如果使用匿名“此页是否有帮助？” 控件，则我们无法对你的反馈作出响应。）
+如果在此处未看到任何项目或文件类型（此处本应出现这些内容），请参阅[本文的 Visual Studio 2017 版本](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects?view=vs-2017)。 还可以使用本页底部的“发送有关以下内容的反馈” > “本页”按钮来提供项目的详细信息。 （如果使用匿名“此页是否有帮助？” 控件，则我们无法对你的反馈作出响应。）
 
 | 项目类型 | 支持 |
 | --- | --- |
@@ -134,7 +135,7 @@ Visual Studio 的每个新版本都支持大部分项目、文件和其他资产
 | ASP.NET Web 应用程序和启用了 Application Insights 的 ASP.NET Core Web 应用程序 | 对于每个 Visual Studio 用户，资源信息存储在每个用户实例的注册表中。 用户在不打开项目，但想要搜索 Azure Application Insights 数据的情况下，可使用此信息。 Visual Studio 2015 使用与 Visual Studio 2017 和 Visual Studio 2019 不同的注册表位置，且未发生冲突。<br/><br/>用户创建 ASP.NET Web 应用程序或 ASP.NET Core Web 应用程序后，资源存储在 .suo 文件中。 用户可在 Visual Studio 2015、Visual Studio 2017 或者 Visual Studio 2019 中打开项目，只要 Visual Studio 支持每个版本中使用的项目和解决方案，资源信息就可用于这些版本。 用户需要在每个产品上进行一次身份验证。 例如，如果使用 Visual Studio 2017 创建项目，然后在 Visual Studio 2019 中打开，则用户需要在 Visual Studio 2019 上进行身份验证。 |
 | C#/Visual Basic Web 窗体或 Windows 窗体 | 可以在 Visual Studio 2019、Visual Studio 2017 和 Visual Studio 2015 中打开项目。 |
 | 编码的 UI 测试 | 在 Visual Studio 2019 中，已弃用自动 UI 驱动功能测试的编码的 UI 测试。 <br/><br/>Visual Studio 2019 将是编码的 UI 测试的最后一个版本。 建议使用 Selenium 来测试 Web 应用，使用 Appium 和 WinAppDriver 来测试桌面和 UWP 应用。 |
-| 数据库单元测试项目（csproj、.vbproj） | 较旧的数据单元测试项目在 Visual Studio 2019 中加载，但将使用 GAC 版本的依赖关系。 若要升级单元测试项目以使用最新的依赖关系，请在“解决方案资源管理器”中右键单击该项目，然后选择“转换为 SQL Server 单元测试项目...”  。 |
+| 数据库单元测试项目（csproj、.vbproj） | 较旧的数据单元测试项目在 Visual Studio 2019 中加载，但将使用 GAC 版本的依赖关系。 若要升级单元测试项目以使用最新的依赖关系，请在“解决方案资源管理器”中右键单击该项目，然后选择“转换为 SQL Server 单元测试项目...”。 |
 | F# | Visual Studio 2019 可以打开 Visual Studio 2013、Visual Studio 2015 和 Visual Studio 2017 中创建的项目。 对于新项目来说，与较旧的 Visual Studio 模板的关键区别是 FSharp.Core 版本现在始终是 NuGet 包。 默认情况下，F# 随任何 .NET 工作负载安装。|
 | InstallShield<br/>MSI 安装程序 | 借助 [Visual Studio 安装程序项目扩展](https://marketplace.visualstudio.com/items?itemName=UnniRavindranathan-MSFT.MicrosoftVisualStudio2013InstallerProjects)，在 Visual Studio 2010 中创建的安装程序项目可在更高版本中打开。 另请参阅 [WiX Toolset Visual Studio 2017 Extension](https://marketplace.visualstudio.com/items?itemName=RobMensching.WixToolsetVisualStudio2017Extension)（WiX 工具集 Visual Studio 2017 扩展）。 Visual Studio 不再附带 InstallShield Limited Edition。 有关 Visual Studio 2019 的可用性，请咨询 [Flexera 软件](https://info.flexerasoftware.com/IS-EVAL-InstallShield-Limited-Edition-Visual-Studio)。 |
 | LightSwitch | Visual Studio 2019 或 Visual Studio 2017 不再支持 LightSwitch。 使用 Visual Studio 2012 及早期版本创建并在 Visual Studio 2013 或 Visual Studio 2015 中打开的项目进行升级，之后只能在 Visual Studio 2013 或 Visual Studio 2015 中打开。 |
@@ -182,9 +183,9 @@ Visual Studio 的每个新版本都支持大部分项目、文件和其他资产
 
 拥有项目类型的工程团队可查看这些条件，并确定需要支持、兼容性和迁移的位置。 同样，我们尝试保持 Visual Studio 各版本之间的兼容性，以便在某一 Visual Studio 版本中创建和修改项目时，它也可在其他版本中工作。
 
-有时无法实现兼容性。 然后，Visual Studio 会打开升级向导以进行必要的单向更改。 这些单向更改可能涉及更改项目文件中的 `ToolsVersion` 属性，该属性明确表示哪个 MSBuild 版本可以将项目的源代码转变为所需的可运行且可部署的项目。 
+有时无法实现兼容性。 然后，Visual Studio 会打开升级向导以进行必要的单向更改。 这些单向更改可能涉及更改项目文件中的 `ToolsVersion` 属性，该属性明确表示哪个 MSBuild 版本可以将项目的源代码转变为所需的可运行且可部署的项目。
 
-导致项目与 Visual Studio 早期版本不兼容的不是 Visual Studio  版本，而是由 `ToolsVersion` 确定的 MSBuild  版本。 如果 Visual Studio 版本包含与项目中的 `ToolsVersion` 匹配的 MSBuild 工具链，Visual Studio 就可以调用该工具链来生成项目。
+导致项目与 Visual Studio 早期版本不兼容的不是 Visual Studio 版本，而是由 `ToolsVersion` 确定的 MSBuild 版本。 如果 Visual Studio 版本包含与项目中的 `ToolsVersion` 匹配的 MSBuild 工具链，Visual Studio 就可以调用该工具链来生成项目。
 
 为了保持与早期版本中创建的项目的兼容性，Visual Studio 2019 包含了必要的 MSBuild 工具链来支持 `ToolsVersion` 15、14、12 和 4。 使用任意这些 `ToolsVersion` 值的项目都可进行成功的生成。 （再次强调，有关 Visual Studio 2019 是否支持项目类型的主题，请参阅[平台目标和兼容性](/visualstudio/releases/2019/compatibility)。）
 
@@ -199,6 +200,7 @@ Visual Studio 的每个新版本都支持大部分项目、文件和其他资产
 
 ## <a name="see-also"></a>请参阅
 
-[Visual Studio 2017 的项目迁移和升级参考](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects?view=vs-2017)
+- [Visual Studio 2017 的项目迁移和升级参考](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects?view=vs-2017)
+- [Visual Studio 产品生命周期和维护](/visualstudio/releases/2019/servicing/)
 
 ::: moniker-end

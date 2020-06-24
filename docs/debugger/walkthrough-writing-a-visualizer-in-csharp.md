@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1f188b40938c62ae8c3692f096217618f9cb7ff6
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: b3b8a67d1b01d7f3a3ada7b391423676b9294e8d
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84183738"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85286297"
 ---
 # <a name="walkthrough-writing-a-visualizer-in-c"></a>演练：使用 C\# 编写可视化工具
 
@@ -235,6 +235,8 @@ ms.locfileid: "84183738"
 
    如果您想在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 中使用可视化工具，而不是只从测试工具中调用它，则需要安装它。 有关详细信息，请参阅[如何：安装可视化工具](../debugger/how-to-install-a-visualizer.md)。
 
+::: moniker range="vs-2017"
+
 ## <a name="create-a-visualizer-using-the-visualizer-item-template"></a>使用可视化工具项模板创建可视化工具
 
 到目前为止，本演练演示了如何手动创建可视化工具。 至此，我们完成了这项学习训练。 现在你已了解简单的可视化工具的工作原理，可以通过更简单的方法创建一个可视化工具：使用可视化工具项模板。
@@ -268,6 +270,7 @@ ms.locfileid: "84183738"
 5. 单击 **添加**。
 
    就这么简单。 查看文件 SecondVisualizer.cs，并查看模板添加的代码。 继续试验这些代码。 了解基础知识后，可以自己创建更复杂、更有用的可视化工具。
+::: moniker-end
 
 ## <a name="see-also"></a>请参阅
 

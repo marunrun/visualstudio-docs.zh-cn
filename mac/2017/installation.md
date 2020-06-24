@@ -7,12 +7,12 @@ ms.date: 11/03/2018
 ms.technology: vs-ide-install
 ms.assetid: 22B1F2CD-32AE-464D-80AC-C8AB4786B015
 ms.custom: video
-ms.openlocfilehash: dfc9f7469f5954aaac56b5d45bb5ae722110dfcc
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: 962ca0cf3960195ffabefb5a9bd2c6cc7e72590c
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "74984911"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85289412"
 ---
 # <a name="install-visual-studio-2017-for-mac"></a>安装 Visual Studio 2017 for Mac
 
@@ -29,7 +29,7 @@ ms.locfileid: "74984911"
 
 要结合使用 iOS 和 Visual Studio，需要以下各项：
 
-- 运行 macOS Sierra 10.12 或更高版本的 Mac
+- 配备 macOS High Sierra 10.13 或更高版本的 Mac。
 - Xcode 9.3 或更高版本。 通常建议使用稳定的最新版本。
 - 一个 Apple ID。 如果没有 Apple ID，请在 https://appleid.apple.com 新建一个。 需要 Apple ID 才可安装和登录 Xcode。
 
@@ -37,11 +37,11 @@ ms.locfileid: "74984911"
 
 1. 从 [my.visualstudio.com](https://my.visualstudio.com/Downloads?q=Visual%20Studio%202017%20for%20Mac) 下载 Visual Studio for Mac
 
-2. 下载安装包后，单击“VisualStudioForMacInstaller.dmg”文件装载安装程序，然后通过双击徽标运行它，如下图所示： 
+2. 下载安装包后，单击“VisualStudioForMacInstaller.dmg”文件装载安装程序，然后通过双击徽标运行它，如下图所示：
 
    ![安装程序对话框](media/installer-image1.png)
 
-3. 系统可能会通过警报对话框发出提示，如下图所示。 在此情况下，请单击“打开”： 
+3. 系统可能会通过警报对话框发出提示，如下图所示。 在此情况下，请单击“打开”：
 
    ![警报对话框](media/installer-image2.png)
 
@@ -49,7 +49,7 @@ ms.locfileid: "74984911"
 
    ![评估系统](media/installer-image3.png)
 
-5. 之后，会出现一个警报对话框，要求确认隐私和许可条款。 按“继续”按钮接受条款： 
+5. 之后，会出现一个警报对话框，要求确认隐私和许可条款。 按“继续”按钮接受条款：
 
    ![许可对话框](media/installer-image4.png)
 
@@ -60,20 +60,20 @@ ms.locfileid: "74984911"
    如果不希望安装所有平台，请参阅以下指南，它们有助于确定要安装的平台：
 
    * **使用 Xamarin 的应用**：
-      - Xamarin.Forms - 选择“Android”  和“iOS”  平台。
+      - Xamarin.Forms - 选择“Android”和“iOS”平台。
       - 仅限 iOS - 选择“iOS”平台（请注意，需要安装 [Xcode](https://developer.apple.com/xcode/)）。
-      - 仅限 Android - 选择“Android”  平台（请注意，还应选择相关依赖项）。
+      - 仅限 Android - 选择“Android”平台（请注意，还应选择相关依赖项）。
       - 仅限 Mac - 选择“macOS”平台（请注意，需要安装 [Xcode](https://developer.apple.com/xcode/)）。
-      - 完全跨平台的 Xamarin 应用 - 选择“Android”  、“iOS”  和“macOS”  平台。
-   * **.NET Core 应用程序** - 选择“.NET Core”  平台。
-   * **ASP.NET Core Web 应用程序** - 选择“.NET Core”  平台。
+      - 完全跨平台的 Xamarin 应用 - 选择“Android”、“iOS”和“macOS”平台。
+   * **.NET Core 应用程序** - 选择“.NET Core”平台。
+   * **ASP.NET Core Web 应用程序** - 选择“.NET Core”平台。
    * **跨平台 Unity 游戏开发** - 除 Visual Studio for Mac 之外，无需安装其他任何平台。 若要详细了解如何安装 Unity 扩展，请参阅 [Unity 安装指南](/visualstudio/mac/setup-vsmac-tools-unity)。
 
    此安装屏幕显示每个组件的版本和大小。 可单击每个组件查看该组件的依赖项列表（对于 Android），该组件下载的其他包（对于 .NET Core），或任何其他所需应用程序（对于 iOS 和 macOS）：
 
    ![Android 附加依赖项](media/installer-image6.png)
 
-7. 确认选择后，选择“安装和更新”按钮开始安装过程  。
+7. 确认选择后，选择“安装和更新”按钮开始安装过程。
 
 8. 安装程序会启动所选项的下载和安装过程：
 
@@ -87,7 +87,7 @@ ms.locfileid: "74984911"
 
    ![输入权限以继续执行安装程序](media/installer-image10.png)
 
-10. 安装成功后，可通过按“开始”，开始在 Visual Studio 中开发应用： 
+10. 安装成功后，可通过按“开始”，开始在 Visual Studio 中开发应用：
 
     ![打开 Visual Studio](media/installer-image11.png)
 
@@ -108,7 +108,7 @@ ms.locfileid: "74984911"
 
 ### <a name="ios"></a>iOS
 
-1. [了解 iOS](https://developer.xamarin.com/guides/ios/getting_started/hello,_iOS/)
+1. [Hello，iOS](https://developer.xamarin.com/guides/ios/getting_started/hello,_iOS/)
 2. [设备预配](https://developer.xamarin.com/guides/ios/getting_started/installation/device_provisioning)（以在设备上运行应用程序）。
 
 ### <a name="android"></a>Android
@@ -125,6 +125,6 @@ ms.locfileid: "74984911"
 
 > [!Video https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Visual-Studio-for-Mac-Acquisition/player]
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [安装 Visual Studio 2017 (Windows)](/visualstudio/install/install-visual-studio)
