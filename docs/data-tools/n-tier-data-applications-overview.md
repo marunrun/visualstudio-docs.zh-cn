@@ -1,7 +1,7 @@
 ---
 title: N 层数据应用程序概述
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: overview
 helpviewer_keywords:
 - presentation tier
 - middle tier
@@ -13,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 21233b94350823b1f765aa33f9304c10c43e0535
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 14527e84d5bbd2d06b2d091ba7a9d4daa9763462
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75586375"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85281950"
 ---
 # <a name="n-tier-data-applications-overview"></a>N 层数据应用程序概述
 *N 层*数据应用程序是分为多个*层*的数据应用程序。 也称为 "分布式应用程序" 和 "多层应用程序"，n 层应用程序将处理单独处理到在客户端和服务器之间分布的离散层。 开发访问数据的应用程序时，应在构成应用程序的各个层之间明确分隔。
@@ -31,18 +31,18 @@ Visual Studio 包含多项功能，可帮助开发人员创建 n 层应用程序
 
 - [Visual Studio 中的 LINQ to SQL 工具](../data-tools/linq-to-sql-tools-in-visual-studio2.md)提供了用于将 DataContext 和数据类生成到单独命名空间中的设置。 这可以实现数据访问层和数据实体层的逻辑分离。
 
-- [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index)提供 <xref:System.Data.Linq.Table%601.Attach%2A> 方法，使你可以将应用程序中不同层的 DataContext 组合在一起。 有关详细信息，请参阅[具有 LINQ to SQL 的 N 层和远程应用程序](/dotnet/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql)。
+- [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index)提供了一 <xref:System.Data.Linq.Table%601.Attach%2A> 种方法，使你可以将应用程序中不同层的 DataContext 组合在一起。 有关详细信息，请参阅[具有 LINQ to SQL 的 N 层和远程应用程序](/dotnet/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql)。
 
 ## <a name="presentation-tier"></a>表示层
 *呈现层*是用户与应用程序进行交互的层。 它通常还包含其他应用程序逻辑。 典型的表示层组件包括：
 
-- 数据绑定组件，如 <xref:System.Windows.Forms.BindingSource> 和 <xref:System.Windows.Forms.BindingNavigator>。
+- 数据绑定组件，例如 <xref:System.Windows.Forms.BindingSource> 和 <xref:System.Windows.Forms.BindingNavigator> 。
 
 - 数据的对象表示形式，例如[LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index)要在表示层中使用的实体类。
 
 呈现层通常使用服务引用访问中间层（例如，[在 Visual Studio 应用程序中 Windows Communication Foundation 服务和 WCF 数据服务](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)）。 呈现层不直接访问数据层。 呈现层通过中间层中数据访问组件的方式与数据层通信。
 
-## <a name="middle-tier"></a>Middle tier（中间层）
+## <a name="middle-tier"></a>中间层
 *中间层*是表示层和数据层用来相互通信的层。 典型的中间层组件包括：
 
 - 业务逻辑，如业务规则和数据验证。
@@ -57,7 +57,7 @@ Visual Studio 包含多项功能，可帮助开发人员创建 n 层应用程序
 
 下图显示了 Visual Studio 中可用的功能和技术，以及它们可能适合于 n 层应用程序的中间层的位置。
 
-中间层](../data-tools/media/ntiermid.png) ![中间层组件
+![中间层组件 ](../data-tools/media/ntiermid.png) 中间层
 
 中间层通常使用数据连接连接到数据层。 此数据连接通常存储在数据访问组件中。
 
@@ -66,22 +66,22 @@ Visual Studio 包含多项功能，可帮助开发人员创建 n 层应用程序
 
 下图显示了 Visual Studio 中可用的功能和技术，以及它们可能适合 n 层应用程序的数据层的位置。
 
-数据层](../data-tools/media/ntierdatatier.png) ![数据层组件
+![数据层组件 ](../data-tools/media/ntierdatatier.png) 数据层
 
 数据层无法直接从表示层中的客户端访问。 中间层中的数据访问组件用于表示层和数据层之间的通信。
 
 ## <a name="help-for-n-tier-development"></a>N 层开发帮助
 以下主题提供有关使用 n 层应用程序的信息：
 
-[将数据集和 TableAdapter 分离到不同的项目中](../data-tools/separate-datasets-and-tableadapters-into-different-projects.md)
+[将数据集和 Tableadapter 分隔到不同的项目中](../data-tools/separate-datasets-and-tableadapters-into-different-projects.md)
 
-[演练：创建 N 层数据应用程序](../data-tools/walkthrough-creating-an-n-tier-data-application.md)
+[演练：创建 n 层数据应用程序](../data-tools/walkthrough-creating-an-n-tier-data-application.md)
 
-[使用 LINQ to SQL 的 n 层和远程应用程序](/dotnet/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql)
+[N 层和远程应用程序与 LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-- [演练：创建 N 层数据应用程序](../data-tools/walkthrough-creating-an-n-tier-data-application.md)
+- [演练：创建 n 层数据应用程序](../data-tools/walkthrough-creating-an-n-tier-data-application.md)
 - [分层更新](../data-tools/hierarchical-update.md)
 - [Visual Studio 中的数据集工具](../data-tools/dataset-tools-in-visual-studio.md)
 - [在 Visual Studio 中访问数据](../data-tools/accessing-data-in-visual-studio.md)

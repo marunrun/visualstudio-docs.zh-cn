@@ -1,7 +1,7 @@
 ---
 title: 将单元测试作为 64 位进程运行
 ms.date: 03/10/2020
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - unit tests, creating
 - unit tests, running
@@ -10,12 +10,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: d6c6839f8c4702d88d1022116231c6f22b5dbf21
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 04895e3dd72a7cb4f0373c970db0f12582506ef9
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79093916"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85285551"
 ---
 # <a name="run-a-unit-test-as-a-64-bit-process"></a>将单元测试作为 64 位进程运行
 

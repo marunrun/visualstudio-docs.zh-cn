@@ -1,7 +1,7 @@
 ---
 title: 将测试控制器或测试代理绑定到网络适配器
 ms.date: 10/19/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - controllers, netwrok adapter
 - agents, configuring
@@ -11,12 +11,12 @@ ms.assetid: 7eb9290a-f9f6-4e41-9caa-796fcfaf0610
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 6383d7a16839ba8934bb7f91664379e99da17a36
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 925df819b903be3de3d44127243f3b18d1e9aff5
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75594781"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85288242"
 ---
 # <a name="how-to-bind-a-test-controller-or-test-agent-to-a-network-adapter"></a>如何：将测试控制器或测试代理绑定到网络适配器
 
@@ -35,19 +35,19 @@ ms.locfileid: "75594781"
 
 ### <a name="to-obtain-the-ip-addresses-of-the-network-adapters"></a>获取网络适配器的 IP 地址
 
-1. 在 Microsoft Windows 中，选择“开始”，在“开始搜索”框中选择，键入 cmd，然后选择“输入”。    
+1. 在 Microsoft Windows 中，选择“开始”，在“开始搜索”框中选择，键入 cmd，然后选择“输入”。   
 
-2. 键入 ipconfig /all。 
+2. 键入 ipconfig /all。
 
      将显示网络适配器的 IP 地址。 记录要将控制器绑定到的网络适配器的 IP 地址。
 
 ### <a name="to-bind-a-network-adapter-to-a-test-controller"></a>将网络适配器绑定到测试控制器
 
-1. 在 Microsoft Windows 中，选择“开始”，在“开始搜索”框中选择，键入 services.msc，然后选择“输入”。    
+1. 在 Microsoft Windows 中，选择“开始”，在“开始搜索”框中选择，键入 services.msc，然后选择“输入”。   
 
-     将显示“服务”对话框。 
+     将显示“服务”对话框。
 
-2. 在结果窗格中的“名称”列中，右键单击“Visual Studio Test Controller”服务，然后选择“停止”。   
+2. 在结果窗格中的“名称”列中，右键单击“Visual Studio Test Controller”服务，然后选择“停止”。  
 
      \- 或 -
 
@@ -55,7 +55,7 @@ ms.locfileid: "75594781"
 
      `net stop vsttcontroller`
 
-3. 打开位于 %ProgramFiles(x86)%\Microsoft Visual Studio\2017\\\<edition>\Common7\IDE 中的 QTCcontroller.exe.config XML 配置文件   。
+3. 打开位于 %ProgramFiles(x86)%\Microsoft Visual Studio\2017\\\<edition>\Common7\IDE 的 QTCcontroller.exe.config。 
 
 4. 找到 `<appSettings>` 标记。
 
@@ -89,19 +89,19 @@ ms.locfileid: "75594781"
 
 ### <a name="to-bind-a-network-interface-card-to-a-test-agent"></a>将网络接口卡绑定到测试代理
 
-1. 在 Microsoft Windows 中，选择“开始”，在“开始搜索”框中选择，键入 services.msc，然后选择“输入”。    
+1. 在 Microsoft Windows 中，选择“开始”，在“开始搜索”框中选择，键入 services.msc，然后选择“输入”。   
 
-    将显示“服务”对话框。 
+    将显示“服务”对话框。
 
-2. 在结果窗格中的“名称”列中，右键单击“Visual Studio Test Agent”服务，然后选择“停止”。   
+2. 在结果窗格中的“名称”列中，右键单击“Visual Studio Test Agent”服务，然后选择“停止”。  
 
      \- 或 -
 
      使用提升的权限打开命令提示符，并在命令行执行以下命令：
 
-     net stop vsttagent 
+     net stop vsttagent
 
-3. 打开位于 %ProgramFiles(x86)%\Microsoft Visual Studio\2017\\\<edition>\Common7\IDE 中的 QTAgentService.exe.config XML 配置文件   。
+3. 打开位于 %ProgramFiles(x86)%\Microsoft Visual Studio\2017\\\<edition>\Common7\IDE 的 QTAgentService.exe.config XML 配置文件。 
 
 4. 找到 `<appSettings>` 标记。
 

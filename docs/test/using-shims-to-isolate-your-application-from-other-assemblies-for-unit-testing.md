@@ -1,19 +1,19 @@
 ---
 title: 使用填充码隔离应用程序以进行单元测试
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.author: mikejo
 manager: jillfra
 author: mikejo5000
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: 480283b4f86f28fdedfb38687682fcee4e67646e
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 0f7d2f993891a4adfa9217357fbdb1a95e10b637
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75585530"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85289295"
 ---
 # <a name="use-shims-to-isolate-your-app-for-unit-testing"></a>使用填充码隔离应用以进行单元测试
 

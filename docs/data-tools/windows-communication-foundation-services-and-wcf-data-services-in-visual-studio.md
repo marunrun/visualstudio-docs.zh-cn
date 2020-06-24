@@ -1,7 +1,7 @@
 ---
 title: Windows Communication Foundation 和 WCF 数据服务
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: overview
 dev_langs:
 - VB
 - CSharp
@@ -35,12 +35,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: abcfde777223ada130e06ab7766319e1d982258c
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: c1f24a33a482b1994d0d8667b4fc71cf968e4625
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75585933"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85281040"
 ---
 # <a name="windows-communication-foundation-services-and-wcf-data-services-in-visual-studio"></a>Visual Studio 中的 Windows Communication Foundation 服务和 WCF 数据服务
 
@@ -52,25 +52,25 @@ Windows Communication Foundation （WCF）是一个统一的框架，用于创�
 
 ### <a name="what-are-wcf-data-services"></a>WCF 数据服务
 
-WCF 数据服务是开放数据（OData）协议标准的实现。  WCF 数据服务允许你以一组 REST Api 的形式公开表格数据，从而使你能够使用标准 HTTP 谓词（如 GET、POST、PUT 或 DELETE）返回数据。 在服务器端，WCF 数据服务被[ASP.NET Web API](https://dotnet.microsoft.com/apps/aspnet/apis)用于创建新的 OData 服务。 在 Visual Studio 中使用 .NET 应用程序中的 OData 服务时，WCF 数据服务客户端库仍是一个不错的选择（**项目** > **添加服务引用**）。 有关详细信息，请参阅 [WCF Data Services 4.5](/dotnet/framework/data/wcf)。
+WCF 数据服务是开放数据（OData）协议标准的实现。  WCF 数据服务允许你以一组 REST Api 的形式公开表格数据，从而使你能够使用标准 HTTP 谓词（如 GET、POST、PUT 或 DELETE）返回数据。 在服务器端，WCF 数据服务被[ASP.NET Web API](https://dotnet.microsoft.com/apps/aspnet/apis)用于创建新的 OData 服务。 在 Visual Studio 中使用 .net 应用程序中的 OData 服务时，WCF 数据服务客户端库仍是一个不错的选择（**项目**  >  **添加服务引用**）。 有关详细信息，请参阅 [WCF Data Services 4.5](/dotnet/framework/data/wcf)。
 
 ### <a name="wcf-programming-model"></a>WCF 编程模型
 
-WCF 编程模型基于两个实体之间的通信： WCF 服务和 WCF 客户端。 编程模型封装在 .NET 中的 <xref:System.ServiceModel> 命名空间中。
+WCF 编程模型基于两个实体之间的通信： WCF 服务和 WCF 客户端。 编程模型封装在 <xref:System.ServiceModel> .net 的命名空间中。
 
 ### <a name="wcf-service"></a>WCF 服务
 
-WCF 服务基于在服务与客户端之间定义协定的接口。 它标记有 <xref:System.ServiceModel.ServiceContractAttribute> 特性，如以下代码所示：
+WCF 服务基于在服务与客户端之间定义协定的接口。 它使用特性进行标记 <xref:System.ServiceModel.ServiceContractAttribute> ，如以下代码所示：
 
 [!code-csharp[WCFWalkthrough#6](../data-tools/codesnippet/CSharp/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio_1.cs)]
 [!code-vb[WCFWalkthrough#6](../data-tools/codesnippet/VisualBasic/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio_1.vb)]
 
-通过使用 <xref:System.ServiceModel.OperationContractAttribute> 特性来标记 WCF 服务公开的函数或方法。
+通过使用特性来标记 WCF 服务所公开的函数或方法 <xref:System.ServiceModel.OperationContractAttribute> 。
 
 [!code-csharp[WCFWalkthrough#1](../data-tools/codesnippet/CSharp/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio_2.cs)]
 [!code-vb[WCFWalkthrough#1](../data-tools/codesnippet/VisualBasic/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio_2.vb)]
 
-此外，还可以通过使用 <xref:System.Runtime.Serialization.DataContractAttribute> 特性标记复合类型来公开序列化的数据。 这会在客户端中启用数据绑定。
+此外，还可以通过使用特性标记复合类型来公开序列化的数据 <xref:System.Runtime.Serialization.DataContractAttribute> 。 这会在客户端中启用数据绑定。
 
 定义接口及其方法后，它们封装在实现接口的类中。 单个 WCF 服务类可实现多个服务协定。
 
@@ -82,9 +82,9 @@ WCF 服务通过所谓的*终结点*来公开使用。 终结点提供了与服�
 
 ### <a name="wcf-client"></a>WCF client（WCF 客户端）
 
-WCF 客户端由一个允许应用程序与 WCF 服务进行通信的*代理*和一个与为服务定义的终结点匹配的终结点组成。 代理在*app.config*文件的客户端上生成，并包括有关服务公开的类型和方法的信息。 对于公开多个终结点的服务，客户端可以选择最适合其需要的服务，例如，通过 HTTP 进行通信并使用 Windows 身份验证。
+WCF 客户端由一个允许应用程序与 WCF 服务进行通信的*代理*和一个与为服务定义的终结点匹配的终结点组成。 代理在*app.config*文件中的客户端上生成，并包括有关服务公开的类型和方法的信息。 对于公开多个终结点的服务，客户端可以选择最适合其需要的服务，例如，通过 HTTP 进行通信并使用 Windows 身份验证。
 
-创建 WCF 客户端之后，你可以在代码中引用服务，就像对任何其他对象一样。 例如，若要调用之前所示的 `GetData` 方法，将编写类似于下面的代码：
+创建 WCF 客户端之后，你可以在代码中引用服务，就像对任何其他对象一样。 例如，若要调用 `GetData` 之前所示的方法，您将编写类似于下面的代码：
 
 [!code-csharp[WCFWalkthrough#3](../data-tools/codesnippet/CSharp/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio_3.cs)]
 [!code-vb[WCFWalkthrough#3](../data-tools/codesnippet/VisualBasic/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio_3.vb)]
@@ -111,7 +111,7 @@ WCF Visual Studio 模板为服务开发提供了一个基本的类结构。 "**�
 
 通过使用 WCF 服务主机，你可以在开发过程中测试 WCF 服务，而无需编写额外的代码或提交到特定的主机。
 
-若要了解有关 WCF 服务主机的详细信息，请参阅[wcf 服务主机（wcfsvchost.exe）](/dotnet/framework/wcf/wcf-service-host-wcfsvchost-exe)。
+若要了解有关 WCF 服务主机的详细信息，请参阅[wcf 服务主机（WcfSvcHost.exe）](/dotnet/framework/wcf/wcf-service-host-wcfsvchost-exe)。
 
 #### <a name="wcf-test-client"></a>WCF 测试客户端
 
@@ -119,11 +119,11 @@ WCF 测试客户端工具使你可以输入测试参数、将该输入提交到 
 
 当您按**F5**调试 WCF 服务项目时，Wcf 测试客户端将打开并显示在配置文件中定义的服务终结点的列表。 你可以测试参数并启动服务，并重复此过程以持续测试和验证你的服务。
 
-若要了解有关 WCF 测试客户端的详细信息，请参阅[wcf 测试客户端（wcftestclient.exe）](/dotnet/framework/wcf/wcf-test-client-wcftestclient-exe)。
+若要了解有关 WCF 测试客户端的详细信息，请参阅[wcf 测试客户端（WcfTestClient.exe）](/dotnet/framework/wcf/wcf-test-client-wcftestclient-exe)。
 
 ### <a name="accessing-wcf-services-in-visual-studio"></a>在 Visual Studio 中访问 WCF 服务
 
-Visual Studio 简化了创建 WCF 客户端的任务，自动生成代理和使用 "**添加服务引用**" 对话框添加的服务的终结点。 所有必需的配置信息都将添加到*app.config*文件中。 大多数情况下，您所要做的只是实例化服务以便使用。
+Visual Studio 简化了创建 WCF 客户端的任务，自动生成代理和使用 "**添加服务引用**" 对话框添加的服务的终结点。 所有必需的配置信息都会添加到*app.config*文件中。 大多数情况下，您所要做的只是实例化服务以便使用。
 
 使用 "**添加服务引用**" 对话框可以输入服务的地址，也可以搜索解决方案中定义的服务。 此对话框返回服务和这些服务提供的操作的列表。 它还允许您定义在代码中引用服务时所依据的命名空间。
 
@@ -133,7 +133,7 @@ Visual Studio 简化了创建 WCF 客户端的任务，自动生成代理和使�
 
 某些 Windows Communication Foundation （WCF）服务公开多个终结点，客户端可以通过这些终结点与服务进行通信。 例如，服务可能会公开一个终结点，该终结点使用 HTTP 绑定、用户名和密码安全以及使用 FTP 和 Windows 身份验证的第二个终结点。 从防火墙外部访问服务的应用程序可能会使用第一个终结点，而第二个终结点可以在 intranet 上使用。
 
-在这种情况下，可以将 `endpointConfigurationName` 指定为服务引用的构造函数的参数。
+在这种情况下，你可以将指定 `endpointConfigurationName` 为服务引用的构造函数的参数。
 
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]
 
@@ -165,13 +165,13 @@ Visual Studio 简化了创建 WCF 客户端的任务，自动生成代理和使�
 
 1. 在**解决方案资源管理器**中，右键单击包含服务引用的项目的**app.config**文件，然后单击 "**打开**"。 文件将出现在代码编辑器中。
 
-2. 在文件中搜索 `<Client>` 标记。
+2. `<Client>`在文件中搜索标记。
 
-3. 在 `<Client>` 标记下搜索以查找以 `<Endpoint>`开头的标记。
+3. 在标记下搜索以 `<Client>` 开头的标记 `<Endpoint>` 。
 
      如果服务引用提供多个终结点，则将有两个或多个 `<Endpoint` 标记。
 
-4. 在 `<EndPoint>` 标记中，你将找到 `name="`*SomeService*`"` 参数（其中*SomeService*表示终结点名称）。 这是终结点的名称，可将其传递给服务引用的构造函数的 `endpointConfigurationName As String` 重载。
+4. 在 `<EndPoint>` 标记中，你将找到 `name="` *SomeService* `"` 参数（其中*SomeService*表示终结点名称）。 这是终结点的名称，可将其传递给 `endpointConfigurationName As String` 服务引用的构造函数的重载。
 
 ## <a name="how-to-call-a-service-method-asynchronously"></a>如何：异步调用服务方法
 
@@ -198,9 +198,9 @@ Windows Communication Foundation （WCF）服务中的大多数方法都可以�
 
 ### <a name="to-bind-a-control-to-single-data-field-returned-by-a-wcf-service"></a>将控件绑定到 WCF 服务返回的单个数据字段
 
-1. 在 **“数据”** 菜单上，单击 **“显示数据源”** 。
+1. 在 **“数据”** 菜单上，单击 **“显示数据源”**。
 
-   随即出现“数据源”窗口。
+   随即出现“数据源”窗口****。
 
 2. 在 "**数据源**" 窗口中，展开服务引用的节点。 服务显示返回的任何复合类型。
 
@@ -210,13 +210,13 @@ Windows Communication Foundation （WCF）服务中的大多数方法都可以�
 
 5. 单击要绑定到的控件的类型。
 
-6. 将字段拖到窗体上。 控件添加到窗体中，同时还添加了一个 <xref:System.Windows.Forms.BindingSource> 组件和一个 <xref:System.Windows.Forms.BindingNavigator> 组件。
+6. 将字段拖到窗体上。 控件与组件和组件一起添加到窗体中 <xref:System.Windows.Forms.BindingSource> <xref:System.Windows.Forms.BindingNavigator> 。
 
 7. 对于要绑定的任何其他字段，请重复步骤4到6。
 
 ### <a name="to-bind-a-control-to-composite-type-returned-by-a-wcf-service"></a>将控件绑定到 WCF 服务返回的复合类型
 
-1. 在 "**数据**" 菜单上，选择 "**显示数据源**"。 随即出现“数据源”窗口。
+1. 在 "**数据**" 菜单上，选择 "**显示数据源**"。 随即出现“数据源”窗口****。
 
 2. 在 "**数据源**" 窗口中，展开服务引用的节点。 服务显示返回的任何复合类型。
 
@@ -224,7 +224,7 @@ Windows Communication Foundation （WCF）服务中的大多数方法都可以�
 
 4. 单击 " **DataGridView** " 可在网格中显示数据，或单击 "**详细信息**" 以在单个控件中显示数据。
 
-5. 将节点拖到窗体上。 控件添加到窗体中，同时还添加了一个 <xref:System.Windows.Forms.BindingSource> 组件和一个 <xref:System.Windows.Forms.BindingNavigator> 组件。
+5. 将节点拖到窗体上。 控件与组件和组件一起添加到窗体中 <xref:System.Windows.Forms.BindingSource> <xref:System.Windows.Forms.BindingNavigator> 。
 
 ## <a name="how-to-configure-a-service-to-reuse-existing-types"></a>如何：将服务配置为重复使用现有类型
 
@@ -252,22 +252,22 @@ Windows Communication Foundation （WCF）服务中的大多数方法都可以�
 
 ## <a name="related-topics"></a>相关主题
 
-| 职务 | 描述 |
+| Title | 说明 |
 | - | - |
 | [演练：在 Windows 窗体中创建简单的 WCF 服务](../data-tools/walkthrough-creating-a-simple-wcf-service-in-windows-forms.md) | 提供在 Visual Studio 中创建和使用 WCF 服务的分步演示。 |
-| [演练：使用 WPF 和 Entity Framework 创建 WCF Data Service](../data-tools/walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework.md) | 提供有关如何在 Visual Studio 中创建和使用 WCF 数据服务的分步演示。 |
+| [演练：使用 WPF 和实体框架创建 WCF 数据服务](../data-tools/walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework.md) | 提供有关如何在 Visual Studio 中创建和使用 WCF 数据服务的分步演示。 |
 | [使用 WCF 开发工具](/dotnet/framework/wcf/using-the-wcf-development-tools) | 介绍如何在 Visual Studio 中创建和测试 WCF 服务。 |
-| | [如何：添加、更新或删除 WCF Data Service 引用](../data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference.md) |
+| | [如何：添加、更新或删除 WCF 数据服务引用](../data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference.md) |
 | [服务引用疑难解答](../data-tools/troubleshooting-service-references.md) | 显示服务引用可能发生的一些常见错误以及如何防止这些错误。 |
 | [调试 WCF 服务](../debugger/debugging-wcf-services.md) | 描述调试 WCF 服务时可能会遇到的常见调试问题和技术。 |
-| [演练：创建 N 层数据应用程序](../data-tools/walkthrough-creating-an-n-tier-data-application.md) | 提供有关创建类型化数据集并将 TableAdapter 和数据集代码分离到多个项目中的分步说明。 |
-| [“配置服务引用”对话框](../data-tools/configure-service-reference-dialog-box.md) | 介绍 "**配置服务引用**" 对话框的用户界面元素。 |
+| [演练：创建 n 层数据应用程序](../data-tools/walkthrough-creating-an-n-tier-data-application.md) | 提供有关创建类型化数据集并将 TableAdapter 和数据集代码分离到多个项目中的分步说明。 |
+| ["配置服务引用" 对话框](../data-tools/configure-service-reference-dialog-box.md) | 介绍 "**配置服务引用**" 对话框的用户界面元素。 |
 
-## <a name="reference"></a>引用
+## <a name="reference"></a>参考
 
 - <xref:System.ServiceModel>
 - <xref:System.Data.Services>
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [适用于 NET 的 Visual Studio Data Tools](../data-tools/visual-studio-data-tools-for-dotnet.md)

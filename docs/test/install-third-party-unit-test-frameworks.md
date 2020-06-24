@@ -1,18 +1,18 @@
 ---
 title: 安装第三方单元测试框架
 ms.date: 04/01/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: b70e26adc7c0c9a8dc409d9b4b971b233418b8e1
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: fb9a08d0d3119724e8db631841aca35c6c6e9fe5
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75594274"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85286968"
 ---
 # <a name="install-unit-test-frameworks"></a>安装单元测试框架
 

@@ -1,18 +1,18 @@
 ---
 title: 滚动条的地图模式和滚动条模式
 ms.date: 03/20/2020
-ms.topic: conceptual
+ms.topic: how-to
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c66cda1b90d11a44f744faf0012a3e41212d33dd
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: 5d1b659dabed2337013ffb84ff48277f0edacb09
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "79988564"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85283978"
 ---
 # <a name="how-to-customize-the-scroll-bar"></a>如何：自定义滚动条
 

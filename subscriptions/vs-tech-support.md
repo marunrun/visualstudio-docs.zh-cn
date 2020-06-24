@@ -7,18 +7,18 @@ ms.assetid: 2e0fd8bb-8f20-487c-b350-b8fde405ea5e
 ms.date: 03/26/2020
 ms.topic: conceptual
 description: 了解如何激活 Visual Studio 订阅中包含的技术支持权益。
-ms.openlocfilehash: 7fd2bd8b3e2f192f82dd2cccf89798b9b2413e62
-ms.sourcegitcommit: 104d75ade6f48538620743d1c836fb26bdd0ade5
+ms.openlocfilehash: cad820977df6351f665944a878b6dcebd1c12a38
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80301941"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85289425"
 ---
 # <a name="activate-and-use-the-technical-support-benefit-in-visual-studio-subscriptions"></a>激活并使用 Visual Studio 订阅中的技术支持权益
 Visual Studio 订阅中的技术支持权益用于解决仍处于[支持生命周期](https://support.microsoft.com/lifecycle/search)的主流支持阶段产品的“非生产环境”中的中断修复问题  。 Visual Studio Enterprise 标准版和年度云订阅接收四个事件，但 Visual Studio Professional 标准版和年度云订阅接收两个事件，从权益激活开始最多一年。 权益激活必须在订阅为最新状态时进行。
 
 > [!NOTE]
-> Microsoft 不再在云订阅中提供 Visual Studio Professional 年度订阅和 Visual Studio Enterprise 年度订阅。 现有客户体验以及续订、增加、减少或取消订阅的能力不会发生变化。 建议新客户访问 https://visualstudio.microsoft.com/vs/pricing/ ，查看各 Visual Studio 订阅购买选项。
+> Microsoft 不再在云订阅中提供 Visual Studio Professional 年度订阅和 Visual Studio Enterprise 年度订阅。 现有客户体验以及续订、增加、减少或取消订阅的能力不会发生变化。 建议新客户访问 <https://visualstudio.microsoft.com/vs/pricing/> ，查看各 Visual Studio 订阅购买选项。
 
 > [!NOTE]
 > 并非所有给定级别的订阅都符合接收支持事件的条件。 通过 FTE、NFR、MPN、MCT 和其他程序获得的订阅不会收到支持事件。 如果订阅不符合接收技术支持事件的条件，则可用权益中不会显示“技术支持”磁贴。
@@ -33,7 +33,7 @@ Visual Studio 订阅中的技术支持权益用于解决仍处于[支持生命�
 产品级别说明：展开“不可用支持计划”  。 如果看到“支持计划不能用于对指定产品的支持(代码:  8)”，则表示你的支持合同不适用于你所选的产品版本。
 
 ## <a name="how-to-activate-the-benefit"></a>如何激活权益
-1. 请转到 https://my.visualstudio.com/Benefits ，向下滚动到“支持”部分，在“技术支持”磁贴上单击“聊天激活”  。
+1. 请转到 <https://my.visualstudio.com/Benefits> ，向下滚动到“支持”部分，在“技术支持”磁贴上单击“聊天激活”  。
     > [!div class="mx-imgBorder"]
     > ![技术支持权益磁贴](_img/vs-tech-support/vs-tech-support-tile.png)
 2. 此操作将启动与可以创建“合同ID”和“访问ID”的代表的聊天会话，并通过电子邮件将这些内容提供给你，以便将其用于记录   。
