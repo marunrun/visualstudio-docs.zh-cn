@@ -332,9 +332,9 @@
                   href: ca1064.md
                 - name: 'CA1065:不要在意外的位置引发异常'
                   href: ca1065.md
-                - name: 'CA1066:重写 Equals 时实现 IEquatable'
+                - name: CA1066：重写 Equals 时实现 IEquatable
                   href: ca1066.md
-                - name: 'CA1067:实现 IEquatable 时重写 Equals'
+                - name: CA1067：实现 IEquatable 时重写 Equals
                   href: ca1067.md
                 - name: 'CA1068:CancellationToken 参数必须最后出现'
                   href: ca1068.md
@@ -432,11 +432,11 @@
                   href: ca1505.md
                 - name: 'CA1506:避免过度类耦合度'
                   href: ca1506.md
-                - name: 'CA1507:使用 nameof 代替字符串'
+                - name: CA1507：使用 nameof 代替字符串
                   href: ca1507.md
-                - name: 'CA1508:避免死条件代码'
+                - name: CA1508：避免死条件代码
                   href: ca1508.md
-                - name: 'CA1509:代码度量配置文件中的条目无效'
+                - name: CA1509：代码度量配置文件中的条目无效
                   href: ca1509.md
             - name: 移动性警告
               items:
@@ -551,6 +551,14 @@
                   href: ca1828.md
                 - name: 'CA1829:使用 Length/Count 属性，而不是 Enumerable.Count 方法'
                   href: ca1829.md
+                - name: 'CA1831:在合适的情况下，为字符串使用 AsSpan 而不是基于范围的索引器'
+                  href: ca1831.md
+                - name: 'CA1832:使用 AsSpan 或 AsMemory 而不是基于范围的索引器来获取数组的 ReadOnlySpan 或 ReadOnlyMemory 部分'
+                  href: ca1832.md
+                - name: 'CA1833:使用 AsSpan 或 AsMemory 而不是基于范围的索引器来获取数组的 Span 或 Memory 部分'
+                  href: ca1833.md
+                - name: 'CA1835:首选 Stream ReadAsync/WriteAsync 方法的内存重载'
+                  href: ca1835.md
             - name: 可移植性警告
               items:
                 - name: 概述
@@ -585,6 +593,12 @@
                   href: ca2009.md
                 - name: 'CA2011:请勿在其资源库中分配属性'
                   href: ca2011.md
+                - name: 'CA2012:正确使用 ValueTask'
+                  href: ca2012.md
+                - name: 'CA2013:请勿将 ReferenceEquals 与值类型结合使用'
+                  href: ca2013.md
+                - name: 'CA2014:请勿在循环中使用 stackalloc'
+                  href: ca2014.md
                 - name: 'CA2015:请勿为派生自 MemoryManager<T> 的类型定义终结器'
                   href: ca2015.md
             - name: 安全警告
@@ -750,6 +764,8 @@
                   href: ca5358.md
                 - name: 'CA5359:请勿禁用证书验证'
                   href: ca5359.md
+                - name: 'CA5360:在反序列化中不要调用危险的方法'
+                  href: ca5360.md
                 - name: CA5361：不禁用 SChannel 使用强加密
                   href: ca5361.md
                 - name: 'CA5362:反序列化对象图中存在潜在引用循环'
@@ -778,6 +794,12 @@
                   href: ca5373.md
                 - name: 'CA5374:请勿使用 XslTransform'
                   href: ca5374.md
+                - name: 'CA5375:请勿使用帐户共享访问签名'
+                  href: ca5375.md
+                - name: 'CA5376:使用 SharedAccessProtocol HttpsOnly'
+                  href: ca5376.md
+                - name: 'CA5377:使用容器级别访问策略'
+                  href: ca5377.md
                 - name: CA5378：不禁用 ServicePointManagerSecurityProtocols
                   href: ca5378.md
                 - name: 'CA5379:请勿使用弱密钥派生功能算法'
@@ -804,13 +826,21 @@
                   href: ca5389.md
                 - name: 'CA5390:请勿编码加密密钥'
                   href: ca5390.md
+                - name: 'CA5391:在 ASP.NET Core MVC 控制器中使用防伪造令牌'
+                  href: ca5391.md
+                - name: 'CA5392:对 P/Invoke 使用 DefaultDllImportSearchPaths 属性'
+                  href: ca5392.md
+                - name: 'CA5393:请勿使用不安全的 DllImportSearchPath 值'
+                  href: ca5393.md
                 - name: 'CA5394:请勿使用不安全的随机性'
                   href: ca5394.md
+                - name: 'CA5395:缺少操作方法的 HttpVerb 属性'
+                  href: ca5395.md
                 - name: 'CA5396:将 HttpCookie 的 HttpOnly 设置为 true'
                   href: ca5396.md
-                - name: 'CA5397:不使用已弃用的 SslProtocols 值'
+                - name: CA5397：不使用已弃用的 SslProtocols 值
                   href: ca5397.md
-                - name: 'CA5398:避免硬编码的 SslProtocols 值'
+                - name: CA5398：避免硬编码的 SslProtocols 值
                   href: ca5398.md
                 - name: 'CA5399:绝对禁用 HttpClient 证书吊销列表检查'
                   href: ca5399.md
@@ -820,7 +850,7 @@
                   href: ca5401.md
                 - name: 'CA5402:将 CreateEncryptor 与默认 IV 结合使用'
                   href: ca5402.md
-                - name: 'CA5403:请勿硬编码证书'
+                - name: CA5403：请勿硬编码证书
                   href: ca5403.md
             - name: 用法警告
               items:
@@ -919,5 +949,7 @@
                   href: ca2245.md
                 - name: 'CA2246:请勿在同一语句中分配符号及其成员'
                   href: ca2246.md
+                - name: 'CA2248:向 Enum.HasFlag 提供正确的 enum 参数'
+                  href: ca2248.md
             - name: 自动功能挂起
               href: automatic-feature-suspension.md

@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 713787472ac9c9320bf94c430108aaf330908496
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: d8fbeb9b1631e9cefa132f50a13dc5cf4db58c9d
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84184596"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85283367"
 ---
 # <a name="security-warnings"></a>安全警告
 
@@ -106,39 +106,47 @@ ms.locfileid: "84184596"
 |[CA3077:API 设计、XML 文档和 XML 文本读取器中的不安全处理](../code-quality/ca3077.md)|当设计派生自 XMLDocument 和 XMLTextReader 的 API 时，请注意 DtdProcessing。 当引用或解析外部实体源或设置 XML 中的不安全值时，使用不安全的 DTDProcessing 实例可能会导致信息泄露。|
 |[CA3147:使用 ValidateAntiForgeryToken 标记谓词处理程序](../code-quality/ca3147.md)|设计 ASP.NET MVC 控制器时，请注意跨站点请求伪造攻击。 跨站点请求伪造攻击可以将经过身份验证的用户的恶意请求发送到 ASP.NET MVC 控制器。|
 |[CA5122 P/Invoke 声明不应是安全关键的](../code-quality/ca5122.md)|当方法执行安全敏感性操作时，将被标记为 SecuritySafeCritical，但透明代码使用它们也是安全的。 透明代码决不能通过通过 P/Invoke 直接调用本机代码。 因此，将 P/Invoke 标记为安全关键将使透明代码无法调用它，并且会误导安全分析。|
-|[CA5359：不禁用证书验证](../code-quality/ca5359.md)|证书可以帮助验证服务器的身份。 客户端应验证服务器证书，以确保将请求发送到目标服务器。 如果 Servicepointmanager.servercertificatevalidationcallback 始终返回 `true` ，则任何证书将通过验证。|
+|[CA5359:请勿禁用证书验证](../code-quality/ca5359.md)|证书可以帮助验证服务器的身份。 客户端应验证服务器证书，以确保将请求发送到目标服务器。 如果 Servicepointmanager.servercertificatevalidationcallback 始终返回 `true` ，则任何证书将通过验证。|
+|[CA5360：不要调用反序列化中的危险方法](../code-quality/ca5360.md)|不受信任的反序列化是指使用不受信任的数据来滥用应用程序的逻辑，导致拒绝服务（DoS）攻击，甚至是在反序列化时执行任意代码时出现的漏洞。 当应用程序对其控制下的不受信任的数据进行反序列化时，恶意用户经常会滥用这些反序列化功能。 具体而言，就是在反序列化过程中调用危险方法。 成功的反反序列化攻击可能会允许攻击者发起攻击，如 DoS 攻击、身份验证绕过和远程代码执行。|
 |[CA5361：不禁用 SChannel 使用强加密](../code-quality/ca5361.md)|将设置 `Switch.System.Net.DontEnableSchUseStrongCrypto` 为 `true` 受损传出传输层安全性（TLS）连接中使用的加密。 较弱的加密可能会危及应用程序与服务器之间通信的机密性，使攻击者更容易窃听敏感数据。|
-|[CA5362：反序列化对象图中的潜在引用循环](../code-quality/ca5362.md)|如果反序列化不受信任的数据，则处理反序列化对象图的任何代码都需要处理引用循环，而不会进入无限循环。 这包括作为反序列化回调一部分的代码和在反序列化完成后处理对象图的代码。 否则，攻击者可能会对包含引用周期的恶意数据执行拒绝服务攻击。|
+|[CA5362:反序列化对象图中存在潜在引用循环](../code-quality/ca5362.md)|如果反序列化不受信任的数据，则处理反序列化对象图的任何代码都需要处理引用循环，而不会进入无限循环。 这包括作为反序列化回调一部分的代码和在反序列化完成后处理对象图的代码。 否则，攻击者可能会对包含引用周期的恶意数据执行拒绝服务攻击。|
 |[CA5363：请勿禁用请求验证](../code-quality/ca5363.md)|请求验证是 ASP.NET 中的一项功能，用于检查 HTTP 请求并确定这些请求是否包含可能导致注入攻击（包括跨站点脚本）的潜在危险内容。|
 |[CA5364：不使用已弃用的安全协议](../code-quality/ca5364.md)|传输层安全性（TLS）保护计算机之间的通信，最常见的是通过超文本传输协议（HTTPS）进行通信。 较早的 TLS 协议版本不如 TLS 1.2 和 TLS 1.3 安全，更有可能出现新的漏洞。 避免旧协议版本来最大程度地降低风险。|
-|[CA5365：不禁用 HTTP 标头检查](../code-quality/ca5365.md)|HTTP 标头检查启用在响应标头中找到的回车符和换行符（\r 和 \n）的编码。 这种编码有助于避免注入攻击，攻击者利用该应用程序回显了标头中包含的不受信任的数据。|
-|[CA5366：将 XmlReader 用于数据集读取 XML](../code-quality/ca5366.md)|使用 <xref:System.Data.DataSet> 读取包含不受信任数据的 XML 可能会加载危险的外部引用，应使用 <xref:System.Xml.XmlReader> 具有安全解析程序或禁用 DTD 处理的进行限制。|
-|[CA5367：不通过指针字段序列化类型](../code-quality/ca5367.md)|此规则检查是否存在具有指针字段或属性的可序列化类。 无法序列化的成员可以是指针，如使用标记的静态成员或字段 <xref:System.NonSerializedAttribute> 。|
-|[CA5368：为从 Page 派生的类设置 ViewStateUserKey](../code-quality/ca5368.md)|设置 <xref:System.Web.UI.Page.ViewStateUserKey> 属性可帮助您阻止对应用程序的攻击，方法是允许您为个别用户分配视图状态变量的标识符，使攻击者无法使用该变量生成攻击。 否则，会出现跨站点请求伪造的漏洞。|
+|[CA5365:请勿禁用 HTTP 头检查](../code-quality/ca5365.md)|HTTP 标头检查启用在响应标头中找到的回车符和换行符（\r 和 \n）的编码。 这种编码有助于避免注入攻击，攻击者利用该应用程序回显了标头中包含的不受信任的数据。|
+|[CA5366:将 XmlReader 用于数据集读取 XML](../code-quality/ca5366.md)|使用 <xref:System.Data.DataSet> 读取包含不受信任数据的 XML 可能会加载危险的外部引用，应使用 <xref:System.Xml.XmlReader> 具有安全解析程序或禁用 DTD 处理的进行限制。|
+|[CA5367:请勿序列化具有 Pointer 字段的类型](../code-quality/ca5367.md)|此规则检查是否存在具有指针字段或属性的可序列化类。 无法序列化的成员可以是指针，如使用标记的静态成员或字段 <xref:System.NonSerializedAttribute> 。|
+|[CA5368:针对派生自 Page 的类设置 ViewStateUserKey](../code-quality/ca5368.md)|设置 <xref:System.Web.UI.Page.ViewStateUserKey> 属性可帮助您阻止对应用程序的攻击，方法是允许您为个别用户分配视图状态变量的标识符，使攻击者无法使用该变量生成攻击。 否则，会出现跨站点请求伪造的漏洞。|
 |[CA5369：将 XmlReader 用于反序列化](../code-quality/ca5369.md)|处理不受信任的 DTD 和 XML 架构可能会启用加载危险的外部引用，这应通过使用具有安全解析程序的 XmlReader 或禁用 DTD 和 XML 内联架构处理来限制。|
 |[CA5370：将 XmlReader 用于验证读取器](../code-quality/ca5370.md)|处理不受信任的 DTD 和 XML 架构可能会启用加载危险的外部引用。 可以通过将 XmlReader 与安全解析程序结合使用，或者禁用 DTD 和 XML 内联架构处理来限制这种危险加载。|
 |[CA5371：将 XmlReader 用于架构读取](../code-quality/ca5371.md)|处理不受信任的 DTD 和 XML 架构可能会启用加载危险的外部引用。 将 XmlReader 用于安全解析程序或 DTD 和 XML 内联架构处理将会限制这种情况。|
 |[CA5372：将 XmlReader 用于 XPathDocument](../code-quality/ca5372.md)|处理来自不受信任数据的 XML 可能会加载危险的外部引用，这可以通过使用具有安全解析程序的 XmlReader 或禁用 DTD 处理来限制。|
 |[CA5373：请勿使用已过时的密钥派生功能](../code-quality/ca5373.md)|此规则检测弱密钥派生方法和的调用 <xref:System.Security.Cryptography.PasswordDeriveBytes?displayProperty=fullName> `Rfc2898DeriveBytes.CryptDeriveKey` 。 <xref:System.Security.Cryptography.PasswordDeriveBytes?displayProperty=fullName>使用弱算法 PBKDF1。|
-|[CA5374：不要使用 XslTransform](../code-quality/ca5374.md)|此规则检查 <xref:System.Xml.Xsl.XslTransform?displayProperty=nameWithType> 是否在代码中实例化。 <xref:System.Xml.Xsl.XslTransform?displayProperty=nameWithType>现已过时，不应使用。|
+|[CA5374:请勿使用 XslTransform](../code-quality/ca5374.md)|此规则检查 <xref:System.Xml.Xsl.XslTransform?displayProperty=nameWithType> 是否在代码中实例化。 <xref:System.Xml.Xsl.XslTransform?displayProperty=nameWithType>现已过时，不应使用。|
+|[CA5375：不使用帐户共享访问签名](../code-quality/ca5375.md)|帐户 SAS 可委派对 blob 容器、表、队列以及服务 SAS 不允许的文件共享上的读取、写入和删除操作的访问权限。 但是，它不支持容器级别的策略，并且具有较低的灵活性和对所授予权限的控制权限。 一旦恶意用户获得，您的存储帐户就会容易泄露。|
+|[CA5376：使用 SharedAccessProtocol HttpsOnly](../code-quality/ca5376.md)|SAS 是不能以纯文本形式在 HTTP 上传输的敏感数据。|
+|[CA5377：使用容器级别访问策略](../code-quality/ca5377.md)|容器级别的访问策略可以随时修改或撤消。 它提供了更大的灵活性并控制授予的权限。|
 |[CA5378：不禁用 ServicePointManagerSecurityProtocols](../code-quality/ca5378.md)|用于 `Switch.System.ServiceModel.DisableUsingServicePointManagerSecurityProtocols` 将 `true` Windows Communication FRAMEWORK （WCF）传输层安全性（TLS）连接限制为使用 TLS 1.0 的设置。 TLS 版本将不推荐使用。|
-|[CA5379：不要使用弱密钥派生函数算法](../code-quality/ca5379.md)|<xref:System.Security.Cryptography.Rfc2898DeriveBytes>类默认使用 <xref:System.Security.Cryptography.HashAlgorithmName.SHA1> 算法。 应指定要在具有 <xref:System.Security.Cryptography.HashAlgorithmName.SHA256> 或更高版本的构造函数的某些重载中使用的哈希算法。 请注意， <xref:System.Security.Cryptography.Rfc2898DeriveBytes.HashAlgorithm> 属性仅具有 `get` 访问器，没有 `overriden` 修饰符。|
+|[CA5379:请勿使用弱密钥派生功能算法](../code-quality/ca5379.md)|<xref:System.Security.Cryptography.Rfc2898DeriveBytes>类默认使用 <xref:System.Security.Cryptography.HashAlgorithmName.SHA1> 算法。 应指定要在具有 <xref:System.Security.Cryptography.HashAlgorithmName.SHA256> 或更高版本的构造函数的某些重载中使用的哈希算法。 请注意， <xref:System.Security.Cryptography.Rfc2898DeriveBytes.HashAlgorithm> 属性仅具有 `get` 访问器，没有 `overriden` 修饰符。|
 |[CA5380：请勿将证书添加到根存储中](../code-quality/ca5380.md)|此规则检测将证书添加到 "受信任的根证书颁发机构" 证书存储中的代码。 默认情况下，"受信任的根证书颁发机构" 证书存储区配置为满足 Microsoft 根证书计划要求的一组公共 Ca。|
 |[CA5381：请确保证书未添加到根存储中](../code-quality/ca5381.md)|此规则检测可能会将证书添加到 "受信任的根证书颁发机构" 证书存储中的代码。 默认情况下，"受信任的根证书颁发机构" 证书存储区使用满足 Microsoft 根证书计划要求的一组公共证书颁发机构（Ca）进行配置。|
-|[CA5382：在 ASP.NET Core 中使用安全 cookie](../code-quality/ca5382.md)|通过 HTTPS 提供的应用程序必须使用安全 cookie，这向浏览器指示该 cookie 只应使用传输层安全性（TLS）传输。|
-|[CA5383：确保在 ASP.NET Core 中使用安全 cookie](../code-quality/ca5383.md)|通过 HTTPS 提供的应用程序必须使用安全 cookie，这向浏览器指示该 cookie 只应使用传输层安全性（TLS）传输。|
-|[CA5384：不使用数字签名算法（DSA）](../code-quality/ca5384.md)|DSA 是弱非对称加密算法。|
-|[CA5385：使用具有足够密钥大小的 Rivest – Rivest-shamir-adleman – Rivest-shamir-adleman （RSA）算法](../code-quality/ca5385.md)|小于2048位的 RSA 密钥更容易受到暴力破解攻击。|
+|[CA5382:在 ASP.NET Core 中使用安全 Cookie](../code-quality/ca5382.md)|通过 HTTPS 提供的应用程序必须使用安全 cookie，这向浏览器指示该 cookie 只应使用传输层安全性（TLS）传输。|
+|[CA5383:确保在 ASP.NET Core 中使用安全 Cookie](../code-quality/ca5383.md)|通过 HTTPS 提供的应用程序必须使用安全 cookie，这向浏览器指示该 cookie 只应使用传输层安全性（TLS）传输。|
+|[CA5384:不使用数字签名算法(DSA)](../code-quality/ca5384.md)|DSA 是弱非对称加密算法。|
+|[CA5385:设置具有足够密钥大小的 Rivest–Shamir–Adleman (RSA)算法](../code-quality/ca5385.md)|小于2048位的 RSA 密钥更容易受到暴力破解攻击。|
 |[CA5386：避免对 SecurityProtocolType 值进行硬编码](../code-quality/ca5386.md)|传输层安全性（TLS）保护计算机之间的通信，最常见的是通过超文本传输协议（HTTPS）进行通信。 协议 1.1 1.0 版本不推荐使用，而 TLS 1.2 和 TLS 1.3 是最新的。 未来，TLS 1.2 和 TLS 1.3 可能已弃用。 若要确保应用程序的安全性，请避免硬编码协议版本，并以至少 .NET Framework v 4.7.1 为目标。|
-|[CA5387：不要使用弱密钥派生函数，迭代次数不足](../code-quality/ca5387.md)|此规则检查是否生成了的加密密钥 <xref:System.Security.Cryptography.Rfc2898DeriveBytes> ，迭代次数小于100000。 较高的迭代次数可帮助缓解字典攻击，尝试猜测生成的加密密钥。|
-|[CA5388：在使用弱密钥派生函数时确保有足够的迭代计数](../code-quality/ca5388.md)|此规则检查是否生成的加密密钥 <xref:System.Security.Cryptography.Rfc2898DeriveBytes> 带有小于100000的迭代次数。 较高的迭代次数可帮助缓解字典攻击，尝试猜测生成的加密密钥。|
+|[CA5387:请勿使用迭代计数不足的弱密钥派生功能](../code-quality/ca5387.md)|此规则检查是否生成了的加密密钥 <xref:System.Security.Cryptography.Rfc2898DeriveBytes> ，迭代次数小于100000。 较高的迭代次数可帮助缓解字典攻击，尝试猜测生成的加密密钥。|
+|[CA5388:使用弱密钥派生功能时，请确保迭代计数足够大](../code-quality/ca5388.md)|此规则检查是否生成的加密密钥 <xref:System.Security.Cryptography.Rfc2898DeriveBytes> 带有小于100000的迭代次数。 较高的迭代次数可帮助缓解字典攻击，尝试猜测生成的加密密钥。|
 |[CA5389：请勿将存档项的路径添加到目标文件系统路径中](../code-quality/ca5389.md)|文件路径可以是相对路径，并且可能会导致文件系统在预期的文件系统目标路径外进行访问，从而导致恶意配置更改并通过 "等待" 等方法执行远程代码。|
-|[CA5390：不对加密密钥进行硬编码](../code-quality/ca5390.md)|若要成功使用对称算法，密钥必须仅对发送方和接收方是已知的。 当某个密钥是硬编码的，很容易发现它。 即使已编译的二进制文件，恶意用户也可以轻松地将其提取出来。 私钥泄露后，可以直接解密密码文本，而不会再对其进行保护。|
-|[CA5394：不要使用不安全的随机性](../code-quality/ca5394.md)|使用加密弱伪随机数生成器可以允许攻击者预测将生成的安全敏感值。|
-|[CA5396：将 HttpCookie 的 HttpOnly 设置为 true](../code-quality/ca5396.md)|作为深层防御措施，请确保将安全敏感的 HTTP cookie 标记为 HttpOnly。 这表明 web 浏览器应禁止脚本访问 cookie。 注入的恶意脚本是偷窃 cookie 的常见方法。|
-|[CA5397：不使用已弃用的 SslProtocols 值](../code-quality/ca5397.md)|传输层安全性（TLS）保护计算机之间的通信，最常见的是通过超文本传输协议（HTTPS）进行通信。 较早的 TLS 协议版本不如 TLS 1.2 和 TLS 1.3 安全，更有可能出现新的漏洞。 避免旧协议版本来最大程度地降低风险。|
-|[CA5398：避免硬编码的 SslProtocols 值](../code-quality/ca5398.md)|传输层安全性（TLS）保护计算机之间的通信，最常见的是通过超文本传输协议（HTTPS）进行通信。 协议 1.1 1.0 版本不推荐使用，而 TLS 1.2 和 TLS 1.3 是最新的。 未来，TLS 1.2 和 TLS 1.3 可能已弃用。 若要确保应用程序的安全性，请避免硬编码协议版本。|
-|[CA5399：明确禁用 HttpClient 证书吊销列表检查](../code-quality/ca5399.md)|吊销的证书不再受信任。 攻击者可以使用它来传递某些恶意数据或偷窃 HTTPS 通信中的敏感数据。|
-|[CA5400：确保未禁用 HttpClient 证书吊销列表检查](../code-quality/ca5400.md)|吊销的证书不再受信任。 攻击者可以使用它来传递某些恶意数据或偷窃 HTTPS 通信中的敏感数据。|
-|[CA5401：不要对非默认 IV 使用 CreateEncryptor](../code-quality/ca5401.md)|对称加密应始终使用不可重复的初始化向量来防止字典攻击。|
-|[CA5402：将 CreateEncryptor 与默认 IV 一起使用](../code-quality/ca5402.md)|对称加密应始终使用不可重复的初始化向量来防止字典攻击。|
+|[CA5390:请勿编码加密密钥](../code-quality/ca5390.md)|若要成功使用对称算法，密钥必须仅对发送方和接收方是已知的。 当某个密钥是硬编码的，很容易发现它。 即使已编译的二进制文件，恶意用户也可以轻松地将其提取出来。 私钥泄露后，可以直接解密密码文本，而不会再对其进行保护。|
+|[CA5391：使用 ASP.NET Core MVC 控制器中的防伪标记](../code-quality/ca5391.md)|处理 `POST` 、、 `PUT` `PATCH` 或 `DELETE` 请求而不验证防伪令牌可能易受到跨站点请求伪造攻击。 跨站点请求伪造攻击可以将经过身份验证的用户的恶意请求发送到 ASP.NET Core MVC 控制器。|
+|[CA5392：将 DefaultDllImportSearchPaths 特性用于 P/Invoke](../code-quality/ca5392.md)|默认情况下，使用探测的 P/Invoke 函数包含 <xref:System.Runtime.InteropServices.DllImportAttribute> 多个目录，其中包含要加载的库的当前工作目录。 对于某些应用程序，这可能是一个安全问题，导致 DLL 劫持。|
+|[CA5393：不使用 unsafe DllImportSearchPath 值](../code-quality/ca5393.md)|默认 DLL 搜索目录和程序集目录中可能存在恶意 DLL。 或者，根据应用程序的运行位置，应用程序目录中可能存在恶意的 DLL。|
+|[CA5394:请勿使用不安全的随机性](../code-quality/ca5394.md)|使用加密弱伪随机数生成器可以允许攻击者预测将生成的安全敏感值。|
+|[CA5395：缺少操作方法的 HttpVerb 属性](../code-quality/ca5395.md)|用于创建、编辑、删除或以其他方式修改数据的所有操作方法都需要通过跨站点请求伪造攻击的防伪属性进行保护。 执行 GET 操作应该是不会产生副作用的安全操作，并且不会修改您的持久数据。|
+|[CA5396:将 HttpCookie 的 HttpOnly 设置为 true](../code-quality/ca5396.md)|作为深层防御措施，请确保将安全敏感的 HTTP cookie 标记为 HttpOnly。 这表明 web 浏览器应禁止脚本访问 cookie。 注入的恶意脚本是偷窃 cookie 的常见方法。|
+|[CA5397:不使用已弃用的 SslProtocols 值](../code-quality/ca5397.md)|传输层安全性（TLS）保护计算机之间的通信，最常见的是通过超文本传输协议（HTTPS）进行通信。 较早的 TLS 协议版本不如 TLS 1.2 和 TLS 1.3 安全，更有可能出现新的漏洞。 避免旧协议版本来最大程度地降低风险。|
+|[CA5398:避免硬编码的 SslProtocols 值](../code-quality/ca5398.md)|传输层安全性（TLS）保护计算机之间的通信，最常见的是通过超文本传输协议（HTTPS）进行通信。 协议 1.1 1.0 版本不推荐使用，而 TLS 1.2 和 TLS 1.3 是最新的。 未来，TLS 1.2 和 TLS 1.3 可能已弃用。 若要确保应用程序的安全性，请避免硬编码协议版本。|
+|[CA5399:绝对禁用 HttpClient 证书吊销列表检查](../code-quality/ca5399.md)|吊销的证书不再受信任。 攻击者可以使用它来传递某些恶意数据或偷窃 HTTPS 通信中的敏感数据。|
+|[CA5400:确保未禁用 HttpClient 证书吊销列表检查](../code-quality/ca5400.md)|吊销的证书不再受信任。 攻击者可以使用它来传递某些恶意数据或偷窃 HTTPS 通信中的敏感数据。|
+|[CA5401:不要将 CreateEncryptor 与非默认 IV 结合使用](../code-quality/ca5401.md)|对称加密应始终使用不可重复的初始化向量来防止字典攻击。|
+|[CA5402:将 CreateEncryptor 与默认 IV 结合使用](../code-quality/ca5402.md)|对称加密应始终使用不可重复的初始化向量来防止字典攻击。|

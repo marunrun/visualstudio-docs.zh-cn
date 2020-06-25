@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 01dfa23896f006dbf904a3e097e0d6fa296e0361
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 9c94fac97a340c8c315ec91e3c5ebb68cac0d516
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84184570"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85283341"
 ---
 # <a name="usage-warnings"></a>用法警告
 
@@ -72,6 +72,7 @@ ms.locfileid: "84184570"
 |[CA2241:为格式化方法提供正确的参数](../code-quality/ca2241.md)|传递给 System.string 格式的格式参数不包含对应于每个对象参数的格式项，反之亦然。|
 |[CA2242:正确测试 NaN](../code-quality/ca2242.md)|此表达式对照 Single.Nan 或 Double.Nan 测试某个值。 使用 Single.IsNan(Single) 或 Double.IsNan(Double) 测试该值。|
 |[CA2243:特性字符串文本应正确分析](../code-quality/ca2243.md)|对于 URL、GUID 或版本，无法正确分析特性的字符串文本参数。|
-|[CA2244：不重复索引元素初始化](../code-quality/ca2244.md)|对象初始值设定项具有多个具有相同的常量索引的索引元素初始值设定项。 除最后一个初始值设定项之外的所有都是冗余的。|
-|[CA2245：不要将属性分配给自身](../code-quality/ca2245.md)|属性意外分配给自身。|
-|[CA2246：不要在同一语句中分配符号及其成员](../code-quality/ca2246.md)|不建议在同一语句中分配符号及其成员（即，字段或属性）。 如果成员访问权限打算在赋值前使用符号的旧值，或者在此语句的赋值中使用新值，则不清楚。|
+|[CA2244:不要复制已索引的元素初始值设定项](../code-quality/ca2244.md)|对象初始值设定项具有多个具有相同的常量索引的索引元素初始值设定项。 除最后一个初始值设定项之外的所有都是冗余的。|
+|[CA2245:请勿将属性分配给其自身](../code-quality/ca2245.md)|属性意外分配给自身。|
+|[CA2246:请勿在同一语句中分配符号及其成员](../code-quality/ca2246.md)|不建议在同一语句中分配符号及其成员（即，字段或属性）。 如果成员访问权限打算在赋值前使用符号的旧值，或者在此语句的赋值中使用新值，则不清楚。|
+|[CA2248：将正确的 "enum" 参数提供给 "Enum.hasflag\"](../code-quality/ca2248.md)|作为参数传递给方法调用的枚举类型 `HasFlag` 不同于调用枚举类型。|

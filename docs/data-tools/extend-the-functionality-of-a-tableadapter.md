@@ -1,7 +1,7 @@
 ---
 title: 扩展 TableAdapter 的功能
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -15,12 +15,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 34a5c1601071a36ca11005503e2f443a72ca3dfe
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 245ea6791fde96c1ff08d43d138c522f43749c6b
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75586635"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85282418"
 ---
 # <a name="extend-the-functionality-of-a-tableadapter"></a>扩展 TableAdapter 的功能
 
@@ -32,7 +32,7 @@ ms.locfileid: "75586635"
 
 ## <a name="locate-tableadapters-in-code"></a>在代码中找到 Tableadapter
 
-尽管 Tableadapter 是用**数据集设计器**设计的，但生成的 TableAdapter 类并非 <xref:System.Data.DataSet>的嵌套类。 TableAdapter 位于基于 TableAdapter 关联数据集的名称的命名空间中。 例如，如果应用程序包含名为 `HRDataSet`的数据集，则 Tableadapter 将位于 `HRDataSetTableAdapters` 命名空间中。 (命名约定采用这种模式： *DatasetName* + `TableAdapters`)。
+尽管 Tableadapter 是用**数据集设计器**设计的，但生成的 TableAdapter 类并不是的嵌套类 <xref:System.Data.DataSet> 。 TableAdapter 位于基于 TableAdapter 关联数据集的名称的命名空间中。 例如，如果应用程序包含名为的数据集 `HRDataSet` ，则 tableadapter 将位于 `HRDataSetTableAdapters` 命名空间中。 （命名约定遵循此模式： *DatasetName*  +  `TableAdapters` ）。
 
 下面的示例假定名为 `CustomersTableAdapter` 的 TableAdapter 与 `NorthwindDataSet` 一起位于项目中。
 
@@ -40,9 +40,9 @@ ms.locfileid: "75586635"
 
 1. 转到 "**项目**" 菜单并选择 "**添加类**"，将新类添加到项目。
 
-2. 将此类命名为 `CustomersTableAdapterExtended`。
+2. 命名类 `CustomersTableAdapterExtended`。
 
-3. 选择“添加”。
+3. 选择“添加”****。
 
 4. 将代码替换为项目的正确命名空间和分部类名称，如下所示：
 

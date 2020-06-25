@@ -1,7 +1,7 @@
 ---
 title: 创建参数化 TableAdapter 查询
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -18,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 98e1ee8a279933cc2cc59abe70b6ea8af4850676
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: a2b94e10dd09d26a17a7574db97880567f7725cd
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75586739"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85282600"
 ---
 # <a name="create-parameterized-tableadapter-queries"></a>创建参数化 TableAdapter 查询
 
@@ -40,7 +40,7 @@ ms.locfileid: "75586739"
 
 - 将 WHERE 子句和所需参数添加到 SQL 语句中，以创建新的 TableAdapter。 有关详细信息，请参阅[创建和配置 tableadapter](../data-tools/create-and-configure-tableadapters.md)。
 
-     或
+     \- 或 -
 
 - 将 WHERE 子句和所需参数添加到 SQL 语句中，以向现有 TableAdapter 中添加查询。
 
@@ -50,34 +50,34 @@ ms.locfileid: "75586739"
 
 2. 在 "**数据**" 菜单上，选择 "**添加查询**"。
 
-3. 将 WHERE 语句和所需参数添加到 SQL 语句中，以完成“搜索标准生成器”对话框。
+3. 将 WHERE 语句和所需参数添加到 SQL 语句中，以完成“搜索标准生成器”对话框****。
 
 ### <a name="to-add-a-query-to-an-existing-data-bound-form"></a>将查询添加到现有数据绑定窗体
 
-1. 在“Windows 窗体设计器”中打开窗体。
+1. 在**Windows 窗体设计器**中打开窗体。
 
 2. 在 "**数据**" 菜单上，选择 "**添加查询**" 或 "**数据智能标记**"。
 
     > [!NOTE]
-    > 如果“添加查询”在“数据”菜单上不可用，请在窗体上选择一个控件，该窗体将显示你希望参数化功能添加到的数据源。 例如，如果窗体在 <xref:System.Windows.Forms.DataGridView> 控件中显示数据，则选择该控件。 如果窗体在各个控件中显示数据，则选择任意数据绑定控件。
+    > 如果“添加查询”在“数据”菜单上不可用，请在窗体上选择一个控件，该窗体将显示你希望参数化功能添加到的数据源********。 例如，如果窗体在 <xref:System.Windows.Forms.DataGridView> 控件中显示数据，则选择该控件。 如果窗体在各个控件中显示数据，则选择任意数据绑定控件。
 
 3. 在 "**选择数据源表**" 区域中，选择要向其添加参数化的表。
 
-4. 如果要创建新查询，请在“新建查询名称”框中键入名称。
+4. 如果要创建新查询，请在“新建查询名称”框中键入名称****。
 
-     或
+     \- 或 -
 
-     在“现有查询名称”框中选择查询。
+     在“现有查询名称”框中选择查询****。
 
 5. 在 "**查询" 文本框**中，键入采用参数的查询。
 
-6. 选择“确定”。
+6. 选择“确定” 。
 
-     用于输入参数的控件和“加载”按钮将添加到 <xref:System.Windows.Forms.ToolStrip> 控件的窗体中。
+     用于输入参数的控件和“加载”按钮将添加到 <xref:System.Windows.Forms.ToolStrip> 控件的窗体中****。
 
 ### <a name="query-for-null-values"></a>查询 null 值
 
-如果要查询没有当前值的记录，可以为 TableAdapter 参数分配 null 值。 例如，请考虑以下查询，该查询在其 `WHERE` 子句中有一个 `ShippedDate` 参数：
+如果要查询没有当前值的记录，可以为 TableAdapter 参数分配 null 值。 例如，请考虑以下 `ShippedDate` 在其子句中包含参数的查询 `WHERE` ：
 
 ```sql
 SELECT CustomerID, OrderDate, ShippedDate
@@ -94,9 +94,9 @@ WHERE (ShippedDate = @ShippedDate) OR (ShippedDate IS NULL)
 
 1. 在**数据集设计器**中，选择需要接受 null 参数值的 TableAdapter 查询。
 
-2. 在 "**属性**" 窗口中，选择 "**参数**"，然后单击省略号（ **...** ）按钮以打开 "**参数集合编辑器**"。
+2. 在 "**属性**" 窗口中，选择 "**参数**"，然后单击省略号（**...**）按钮以打开 "**参数集合编辑器**"。
 
-3. 选择允许空值的参数，并将**AllowDbNull**属性设置为 `true`。
+3. 选择允许空值的参数，并将**AllowDbNull**属性设置为 `true` 。
 
 ## <a name="see-also"></a>另请参阅
 

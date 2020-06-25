@@ -13,26 +13,29 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: c8fa89b2cf6eb5afdf1d09a9b4de60cdc9ca11f2
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: e31be90ff24f110fda66449187d3372976f269a7
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75586882"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85282717"
 ---
-# <a name="create-a-database-and-add-tables-in-visual-studio"></a>在 Visual Studio 中创建数据库并添加表
+# <a name="create-a-database-and-add-tables-in-visual-studio"></a>在 Visual Studio 中创建一个数据库并添加表
 
 可以使用 Visual Studio 来创建和更新 SQL Server Express LocalDB 中的本地数据库文件。 还可以通过在 Visual Studio 的 " **SQL Server 对象资源管理器**工具" 窗口中执行 transact-sql 语句来创建数据库。 在本主题中，我们将创建一个 *.mdf*文件并使用表设计器添加表和键。
 
 ## <a name="prerequisites"></a>先决条件
 
-若要完成本演练，你需要安装在 Visual Studio 中的 **.net 桌面开发**和**数据存储和处理**工作负荷。 若要进行安装，请打开**Visual Studio 安装程序**，然后选择要修改的 Visual Studio 版本旁边的 "**修改**" （或**更多** > "**修改**"）。
+若要完成本演练，你需要安装在 Visual Studio 中的 **.net 桌面开发**和**数据存储和处理**工作负荷。 若要进行安装，请打开**Visual Studio 安装程序**，然后选择要修改的 Visual Studio 版本旁边的 "**修改**（或**更多**  >  **修改**）"。
+
+> [!NOTE]
+> 本文中的过程仅适用于 .NET Framework Windows 窗体项目，不适用于 .NET Core Windows 窗体项目。
 
 ## <a name="create-a-project-and-a-local-database-file"></a>创建一个项目及本地数据库文件
 
-1. 创建新的**Windows 窗体应用**项目，并将其命名为**SampleDatabaseWalkthrough**。
+1. 创建新的**Windows 窗体应用（.NET Framework）** 项目，并将其命名为**SampleDatabaseWalkthrough**。
 
-2. 在菜单栏上，选择 "**项目** > "**添加新项**"。
+2. 在菜单栏上，选择 "**项目**" "  >  **添加新项**"。
 
 3. 在项模板列表中，向下滚动并选择 "**基于服务的数据库**"。
 
@@ -42,13 +45,13 @@ ms.locfileid: "75586882"
 
 ### <a name="add-a-data-source"></a>添加数据源
 
-1. 如果 "**数据源**" 窗口未打开，请在菜单栏上按**Shift**+**Alt**+**D**或选择 "**查看** > **其他窗口** > **数据源**" 来打开它。
+1. 如果 "**数据源**" 窗口未打开，请按**Shift** + **Alt** + **D**或选择**View**  >  菜单栏上的 "查看**其他 Windows**  >  **数据源**" 来打开它。
 
 1. 在 "**数据源**" 窗口中，选择 "**添加新数据源**"。
 
    ![在 Visual Studio 中添加新数据源](media/add-new-data-source.png)
 
-   “数据源配置”向导随即打开。
+   "**数据源配置向导**" 将打开。
 
 1. 在 "**选择数据源类型**" 页上，选择 "**数据库**"，然后选择 "**下一步**"。
 
@@ -58,15 +61,15 @@ ms.locfileid: "75586882"
 
 1. 在 "将**连接字符串保存到应用程序配置文件**中" 页上，选择 "**下一步**"。
 
-1. 在 "**选择数据库对象**" 页上，您将看到一条消息，指出该数据库不包含任何对象。 选择“完成”。
+1. 在 "**选择数据库对象**" 页上，您将看到一条消息，指出该数据库不包含任何对象。 选择 **“完成”**。
 
 ### <a name="view-properties-of-the-data-connection"></a>查看数据连接的属性
 
 可以通过打开数据连接的属性窗口，查看*sampledatabase.mdf*文件的连接字符串：
 
-- 选择 "**查看** > " **SQL Server 对象资源管理器**打开 " **SQL Server 对象资源管理器**" 窗口。 展开 **（localdb） \MSSQLLocalDB** > **数据库**，然后右键单击*sampledatabase.mdf*并选择 "**属性**"。
+- 选择 "**查看**  >  **SQL Server 对象资源管理器**" 以打开 " **SQL Server 对象资源管理器**" 窗口。 展开 **（localdb） "\MSSQLLocalDB**  >  **数据库**"，然后右键单击 " *sampledatabase.mdf* "，然后选择 "**属性**"。
 
-- 或者，如果该窗口尚未打开，还可以选择 "**查看** > "**服务器资源管理器**。 展开 "**数据连接**" 节点，右键单击 sampledatabase.mdf，然后选择 "**属性**"，以打开属性窗口 *。*
+- 或者，如果该窗口尚未打开，还可以选择 "**查看**  >  **服务器资源管理器**"。 展开 "**数据连接**" 节点，右键单击 sampledatabase.mdf，然后选择 "**属性**"，以打开属性窗口 *。*
 
   > [!TIP]
   > 如果无法展开 "数据连接" 节点，或未列出 Sampledatabase.mdf 连接，请在服务器资源管理器工具栏中选择 "**连接到数据库**" 按钮。 在 "**添加连接**" 对话框中，确保在 "**数据源**" 下选择 " **Microsoft SQL Server 数据库文件**"，然后浏览到并选择 sampledatabase.mdf 文件。 通过选择 **"确定"** 完成添加连接。
@@ -94,9 +97,9 @@ ms.locfileid: "75586882"
    |`ContactName`|`nvarchar (50)`|True（已选定）|
    |`Phone`|`nvarchar (24)`|True（已选定）|
 
-4. 右键单击 "`CustomerID`" 行，然后选择 "**设置主键**"。
+4. 右键单击 `CustomerID` 该行，然后选择 "**设置主键**"。
 
-5. 右键单击默认行（`Id`），然后选择 "**删除**"。
+5. 右键单击默认行（ `Id` ），然后选择 "**删除**"。
 
 6. 通过更新脚本窗格的第一行来命名 Customers 表，与以下示例相匹配：
 
@@ -104,7 +107,7 @@ ms.locfileid: "75586882"
    CREATE TABLE [dbo].[Customers]
    ```
 
-   您应看到与下面类似的内容：
+   应看到与下面类似的内容：
 
    ![表设计器](../data-tools/media/table-designer.png)
 
@@ -178,9 +181,9 @@ ms.locfileid: "75586882"
 6. 为一些订单添加数据。
 
     > [!IMPORTANT]
-    > 请确保所有订单 ID 和订单数量是整数，并且每个客户 ID 与 Customers 表中的“CustomerID”列中指定的值匹配。
+    > 请确保所有订单 Id 和订单数量均为整数，并且每个客户 ID 都与在 Customers 表的**CustomerID**列中指定的值匹配。
 
-7. 在菜单栏上，选择 "**文件**" > "**全部保存**"。
+7. 在菜单栏上，选择 "**文件**" "  >  **全部保存**"。
 
 ## <a name="see-also"></a>另请参阅
 

@@ -1,7 +1,7 @@
 ---
 title: 处理并发异常
 ms.date: 09/11/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -18,24 +18,24 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 462d0a9beb88a8fb6d73bf0672bb012c75b8ea93
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 9d1c151b7f3afe977786ef3b308eff2de1c0857f
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75586596"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85282353"
 ---
 # <a name="handle-a-concurrency-exception"></a>处理并发异常
 
-当两个用户尝试同时更改数据库中的相同数据时，将引发并发异常（<xref:System.Data.DBConcurrencyException?displayProperty=fullName>）。 在本演练中，您将创建一个 Windows 应用程序，该应用程序演示如何捕获 <xref:System.Data.DBConcurrencyException>，找到导致错误的行，并学习如何处理该错误的策略。
+<xref:System.Data.DBConcurrencyException?displayProperty=fullName>当两个用户尝试同时更改数据库中的相同数据时，将引发并发异常（）。 在本演练中，您将创建一个 Windows 应用程序，该应用程序演示如何捕获 <xref:System.Data.DBConcurrencyException> ，找到导致错误的行，并学习如何处理它的策略。
 
 本演练将引导你完成以下过程：
 
-1. 创建新的 **Windows 窗体应用程序**项目。
+1. 创建新的**Windows 窗体应用程序**项目。
 
 2. 基于 Northwind Customers 表创建新的数据集。
 
-3. 创建具有 <xref:System.Windows.Forms.DataGridView> 的窗体以显示数据。
+3. 使用创建窗体 <xref:System.Windows.Forms.DataGridView> 以显示数据。
 
 4. 使用 Northwind 数据库的 Customers 表中的数据填充数据集。
 
@@ -67,13 +67,13 @@ ms.locfileid: "75586596"
 
 首先创建一个新的 Windows 窗体应用程序：
 
-1. 在 Visual Studio 的“文件”菜单中，依次选择“新建” > “项目”。
+1. 在 Visual Studio 的“文件”菜单中，依次选择“新建” > “项目”    。
 
-2. 在左侧窗格中展开 "**视觉对象C#**  " 或 " **Visual Basic** "，然后选择 " **Windows 桌面**"。
+2. 在左侧窗格中展开 " **Visual c #** " 或 " **Visual Basic** "，然后选择 " **Windows 桌面**"。
 
 3. 在中间窗格中，选择 " **Windows 窗体应用程序**" 项目类型。
 
-4. 将项目命名为**ConcurrencyWalkthrough**，然后选择 **"确定"** 。
+4. 将项目命名为**ConcurrencyWalkthrough**，然后选择 **"确定"**。
 
      将创建**ConcurrencyWalkthrough**项目并将其添加到**解决方案资源管理器**，并在设计器中打开新窗体。
 
@@ -83,7 +83,7 @@ ms.locfileid: "75586596"
 
 1. 在 "**数据**" 菜单上，选择 "**添加新数据源**"。
 
-   “数据源配置向导”打开。
+   “数据源配置”向导随即打开。
 
 2. 在 "**选择数据源类型**" 屏幕上，选择 "**数据库**"。
 
@@ -102,7 +102,7 @@ ms.locfileid: "75586596"
 
 ## <a name="create-a-data-bound-datagridview-control"></a>创建数据绑定 DataGridView 控件
 
-在本部分中，将通过将 "**客户**" 项从 "**数据源**" 窗口拖到 Windows 窗体上来创建 <xref:System.Windows.Forms.DataGridView?displayProperty=nameWithType>。
+在本部分中，将 <xref:System.Windows.Forms.DataGridView?displayProperty=nameWithType> 通过将 "**客户**" 项从 "**数据源**" 窗口拖到 Windows 窗体来创建。
 
 1. 若要打开 "**数据源**" 窗口，请在 "**数据**" 菜单上，选择 "**显示数据源**"。
 
@@ -112,7 +112,7 @@ ms.locfileid: "75586596"
 
 4. 将该表拖到窗体的空白区域。
 
-     名为**CustomersDataGridView**的 <xref:System.Windows.Forms.DataGridView> 控件和名为**CustomersBindingNavigator**的 <xref:System.Windows.Forms.BindingNavigator> 将添加到绑定到 <xref:System.Windows.Forms.BindingSource>的窗体中。 这反过来又绑定到 NorthwindDataSet 中的 Customers 表。
+     <xref:System.Windows.Forms.DataGridView>名为**CustomersDataGridView**的控件和一个 <xref:System.Windows.Forms.BindingNavigator> 名为**CustomersBindingNavigator**的控件将添加到绑定到的窗体中 <xref:System.Windows.Forms.BindingSource> 。 这反过来又绑定到 NorthwindDataSet 中的 Customers 表。
 
 ## <a name="test-the-form"></a>测试窗体
 
@@ -120,9 +120,9 @@ ms.locfileid: "75586596"
 
 1. 选择**F5**以运行应用程序。
 
-     此时将显示窗体，其中包含一个由 Customers 表中的数据填充的 <xref:System.Windows.Forms.DataGridView> 控件。
+     窗体上将显示一个 <xref:System.Windows.Forms.DataGridView> 控件，其中填充了 "Customers" 表中的数据。
 
-2. 在“调试”菜单中，选择“停止调试”。
+2. 在“调试”菜单中，选择“停止调试”********。
 
 ## <a name="handle-concurrency-errors"></a>处理并发错误
 
@@ -150,33 +150,33 @@ ms.locfileid: "75586596"
 
 ### <a name="add-code-to-handle-the-concurrency-exception"></a>添加代码以处理并发异常
 
-当你尝试执行更新并引发异常时，通常需要使用引发的异常提供的信息来执行某些操作。 在本部分中，将添加尝试更新数据库的代码。 还处理可能引发的任何 <xref:System.Data.DBConcurrencyException> 以及任何其他异常。
+当你尝试执行更新并引发异常时，通常需要使用引发的异常提供的信息来执行某些操作。 在本部分中，将添加尝试更新数据库的代码。 还处理 <xref:System.Data.DBConcurrencyException> 可能引发的任何，以及任何其他异常。
 
 > [!NOTE]
-> 本演练稍后会添加 `CreateMessage` 和 `ProcessDialogResults` 方法。
+> `CreateMessage` `ProcessDialogResults` 稍后将在本演练中添加和方法。
 
-1. 在 `Form1_Load` 方法下面添加以下代码：
+1. 在方法下面添加以下代码 `Form1_Load` ：
 
    [!code-csharp[VbRaddataConcurrency#1](../data-tools/codesnippet/CSharp/handle-a-concurrency-exception_1.cs)]
    [!code-vb[VbRaddataConcurrency#1](../data-tools/codesnippet/VisualBasic/handle-a-concurrency-exception_1.vb)]
 
-2. 替换 `CustomersBindingNavigatorSaveItem_Click` 方法以调用 `UpdateDatabase` 方法，使其类似于以下内容：
+2. 替换 `CustomersBindingNavigatorSaveItem_Click` 方法以调用方法，如下所示 `UpdateDatabase` ：
 
    [!code-csharp[VbRaddataConcurrency#2](../data-tools/codesnippet/CSharp/handle-a-concurrency-exception_2.cs)]
    [!code-vb[VbRaddataConcurrency#2](../data-tools/codesnippet/VisualBasic/handle-a-concurrency-exception_2.vb)]
 
 ### <a name="display-choices-to-the-user"></a>向用户显示选项
 
-刚编写的代码会调用 `CreateMessage` 过程向用户显示错误信息。 对于本演练，您将使用消息框向用户显示该记录的不同版本。 这样，用户就可以选择是用更改覆盖记录还是取消编辑。 用户选择消息框上的选项（单击按钮）后，会将响应传递到 `ProcessDialogResult` 方法。
+刚编写的代码调用 `CreateMessage` 过程向用户显示错误信息。 对于本演练，您将使用消息框向用户显示该记录的不同版本。 这样，用户就可以选择是用更改覆盖记录还是取消编辑。 用户选择消息框上的选项（单击按钮）后，响应将传递给 `ProcessDialogResult` 方法。
 
-通过将以下代码添加到**代码编辑器**来创建消息。 在 `UpdateDatabase` 方法下面输入此代码：
+通过将以下代码添加到**代码编辑器**来创建消息。 在方法下面输入以下代码 `UpdateDatabase` ：
 
 [!code-csharp[VbRaddataConcurrency#4](../data-tools/codesnippet/CSharp/handle-a-concurrency-exception_3.cs)]
 [!code-vb[VbRaddataConcurrency#4](../data-tools/codesnippet/VisualBasic/handle-a-concurrency-exception_3.vb)]
 
 ### <a name="process-the-users-response"></a>处理用户的响应
 
-还需要代码来处理用户对消息框的响应。 这些选项可以用建议的更改覆盖数据库中的当前记录，也可以放弃本地更改并刷新包含数据库中当前记录的数据表。 如果用户选择 **"是"** ，则会调用 <xref:System.Data.DataTable.Merge%2A> 方法，并将*preserveChanges*参数设置为**true**。 这会导致更新尝试成功，因为原始版本的记录现在与数据库中的记录匹配。
+还需要代码来处理用户对消息框的响应。 这些选项可以用建议的更改覆盖数据库中的当前记录，也可以放弃本地更改并刷新包含数据库中当前记录的数据表。 如果用户选择 **"是"**，则 <xref:System.Data.DataTable.Merge%2A> 会调用方法，并将*preserveChanges*参数设置为**true**。 这会导致更新尝试成功，因为原始版本的记录现在与数据库中的记录匹配。
 
 在上一部分中添加的代码下面添加以下代码：
 
@@ -191,7 +191,7 @@ ms.locfileid: "75586596"
 
 2. 窗体显示后，使其保持运行状态，并切换到 Visual Studio IDE。
 
-3. 在“视图”菜单中，选择“服务器资源管理器”。
+3. 在“视图”菜单中，选择“服务器资源管理器”。********
 
 4. 在**服务器资源管理器**中，展开应用程序正在使用的连接，然后展开 "**表**" 节点。
 
@@ -206,7 +206,7 @@ ms.locfileid: "75586596"
 
 8. 在窗体（**ALFKI**）的第一条记录中，将 "**联系人姓名**" 改为 " **Maria Anders1**"。
 
-9. 选择“保存”按钮。
+9. 选择“保存”按钮****。
 
      引发并发错误，并显示消息框。
 
