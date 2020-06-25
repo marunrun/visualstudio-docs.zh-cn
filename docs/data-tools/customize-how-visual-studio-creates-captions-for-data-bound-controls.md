@@ -1,7 +1,7 @@
 ---
 title: 为数据绑定控件自定义标题
 ms.date: 11/03/2017
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - Label captions, Data Sources window
 - smart captions
@@ -13,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: f7780cfb3b266de6f477e74d1b352cf6b24aab42
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.openlocfilehash: 085542f912cc5747c2012adb05e6097b5891ed60
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76113656"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85282574"
 ---
 # <a name="customize-how-visual-studio-creates-captions-for-data-bound-controls"></a>自定义 Visual Studio 创建数据绑定控件的标题的方式
 
@@ -43,7 +43,7 @@ ms.locfileid: "76113656"
 
 下表介绍了控制标题标签的注册表值。
 
-|注册表项|描述|
+|注册表项|说明|
 |-------------------|-----------------|
 |**SmartCaptionExpression**|用于匹配模式的正则表达式。|
 |**SmartCaptionReplacement**|用于显示在**SmartCaptionExpression**中匹配的所有组的格式。|
@@ -53,12 +53,12 @@ ms.locfileid: "76113656"
 
 |注册表项|默认值|说明|
 |-------------------|-------------------|-----------------|
-|**SmartCaptionExpression**|**(\\\p{Ll})(\\\p{Lu})&#124;_+**|匹配后跟一个大写字符或下划线的小写字符。|
+|**SmartCaptionExpression**|**（ \\ \p{Ll}）（ \\ \p{Lu}） &#124;_ +**|匹配后跟一个大写字符或下划线的小写字符。|
 |**SmartCaptionReplacement**|**$1 $2**|**$1**表示表达式的第一个括号中匹配的任何字符， **$2**表示在第二个括号中匹配的任何字符。 替换为第一个匹配项、一个空格，然后第二个匹配项。|
-|**SmartCaptionSuffix**|**:**|表示追加到返回的字符串的字符。 例如，如果 `Company Name`标题，则后缀将使其 `Company Name:`|
+|**SmartCaptionSuffix**|**:**|表示追加到返回的字符串的字符。 例如，如果标题为 `Company Name` ，则后缀使其`Company Name:`|
 
 > [!CAUTION]
-> 在注册表编辑器中执行任何操作时要格外小心。 在编辑注册表之前对其进行备份。 如果不正确地使用注册表编辑器，可能会导致严重问题，可能需要重新安装操作系统。 Microsoft 不保证使用注册表编辑器导致的问题可以得到解决。 使用注册表编辑器的风险由您自己承担。
+> 在注册表编辑器中执行任何操作时要格外小心。 在编辑注册表之前对其进行备份。 如果不正确地使用注册表编辑器，可能会导致严重问题，可能需要重新安装操作系统。 Microsoft 不保证使用注册表编辑器导致的问题可以得到解决。 你自行承担使用注册表编辑器的风险。
 >
 > 有关备份、编辑和还原注册表的信息，请参阅[高级用户的 Windows 注册表信息](https://support.microsoft.com/help/256986/windows-registry-information-for-advanced-users)。
 
@@ -66,19 +66,19 @@ ms.locfileid: "76113656"
 
 1. 通过单击 "**开始**"，然后单击 "**运行**" 打开命令窗口。
 
-2. 在 "**运行**" 对话框中键入 `regedit`，然后单击 **"确定"** 。
+2. `regedit`在 "**运行**" 对话框中键入，然后单击 **"确定"**。
 
-3. 展开 " **HKEY_CURRENT_USER** > **软件** > **Microsoft** > **VisualStudio** " 节点。
+3. 展开 " **HKEY_CURRENT_USER**  >  **Software**  >  **Microsoft**  >  **VisualStudio** " 节点。
 
 ::: moniker range="vs-2017"
 
-4. 右键单击**15.0**节点，然后创建一个名为 `Data Designers`的新**密钥**。
+4. 右键单击**15.0**节点，并创建一个名为的**Key**新密钥 `Data Designers` 。
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-4. 右键单击**16.0**节点，然后创建一个名为 `Data Designers`的新**密钥**。
+4. 右键单击**16.0**节点，并创建一个名为的**Key**新密钥 `Data Designers` 。
 
 ::: moniker-end
 
@@ -106,19 +106,19 @@ ms.locfileid: "76113656"
 
 1. 通过单击 "**开始**"，然后单击 "**运行**" 打开命令窗口。
 
-2. 在 "**运行**" 对话框中键入 `regedit`，然后单击 **"确定"** 。
+2. `regedit`在 "**运行**" 对话框中键入，然后单击 **"确定"**。
 
-3. 展开 " **HKEY_CURRENT_USER** > **软件** > **Microsoft** > **VisualStudio** " 节点。
+3. 展开 " **HKEY_CURRENT_USER**  >  **Software**  >  **Microsoft**  >  **VisualStudio** " 节点。
 
 ::: moniker range="vs-2017"
 
-4. 右键单击**15.0**节点，然后创建一个名为 `Data Designers`的新**密钥**。
+4. 右键单击**15.0**节点，并创建一个名为的**Key**新密钥 `Data Designers` 。
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-4. 右键单击**16.0**节点，然后创建一个名为 `Data Designers`的新**密钥**。
+4. 右键单击**16.0**节点，并创建一个名为的**Key**新密钥 `Data Designers` 。
 
 ::: moniker-end
 
@@ -130,11 +130,11 @@ ms.locfileid: "76113656"
 
 6. 右键单击 " **SmartCaptionExpression** " 项，然后选择 "**修改**"。
 
-7. 输入值 `(.*)`。 这将匹配整个字符串。
+7. 输入 `(.*)` 作为值。 这将匹配整个字符串。
 
 8. 右键单击 " **SmartCaptionReplacement** " 项，然后选择 "**修改**"。
 
-9. 输入值 `$1`。 这会将字符串替换为匹配的值，这是整个字符串，因此它将保持不变。
+9. 输入 `$1` 作为值。 这会将字符串替换为匹配的值，这是整个字符串，因此它将保持不变。
 
     下一次从 "**数据源**" 窗口拖动项时，将创建带有未修改标题的标题标签。
 

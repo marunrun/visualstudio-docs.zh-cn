@@ -1,7 +1,7 @@
 ---
 title: 将控件绑定到数据库中的图片
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - images [Visual Basic], displaying on Windows Forms
 - data binding [Windows Forms], pictures
@@ -17,16 +17,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: a4155a246516bef074a56e5644712912b2ce5af6
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: e9093c2a2d7cec95e4fdd08ff4273ae8f8126a36
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75586999"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85282979"
 ---
 # <a name="bind-controls-to-pictures-from-a-database"></a>将控件绑定到数据库中的图片
 
-您可以使用 "**数据源**" 窗口将数据库中的图像绑定到应用程序中的控件。 例如，可以将图像绑定到 WPF 应用程序中的 <xref:System.Windows.Controls.Image> 控件，或绑定到 Windows 窗体应用程序中的 <xref:System.Windows.Forms.PictureBox> 控件。
+您可以使用 "**数据源**" 窗口将数据库中的图像绑定到应用程序中的控件。 例如，可以将图像绑定到 <xref:System.Windows.Controls.Image> WPF 应用程序中的控件或 <xref:System.Windows.Forms.PictureBox> Windows 窗体应用程序中的控件。
 
 数据库中的图片通常作为字节数组存储。 默认情况下，作为字节数组存储的 "**数据源**" 窗口中的项的控件类型默认设置为 "**无**"，因为字节数组可以包含从简单字节数组到大型应用程序的可执行文件的任何内容。 若要为表示图像的 "**数据源**" 窗口中的字节数组项创建数据绑定控件，你必须选择要创建的控件。
 
@@ -39,7 +39,7 @@ ms.locfileid: "75586999"
 2. 在 "**数据源**" 窗口中，展开所需的表或对象以显示其列或属性。
 
    > [!TIP]
-   > 如果 "**数据源**" 窗口未打开，请通过选择 "**视图**" > **其他 Windows** > **数据源**打开它。
+   > 如果 "**数据源**" 窗口未打开，请选择 "**查看**  >  **其他 Windows**  >  **数据源**" 将其打开。
 
 3. 选择包含图像数据的列或属性，并从其下拉控件列表中选择以下控件之一：
 

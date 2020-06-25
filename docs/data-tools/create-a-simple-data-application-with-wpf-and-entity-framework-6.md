@@ -9,16 +9,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 735a4cc533312bcfa3823410780b09caa4f53fde
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 4aa978098c459d9e55ef0dc1423080357e067a5b
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84173936"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85282756"
 ---
 # <a name="create-a-simple-data-application-with-wpf-and-entity-framework-6"></a>使用 WPF 和 Entity Framework 6 创建简单的数据应用程序
 
-本演练演示如何在 Visual Studio 中创建基本的 "窗体 over 数据" 应用程序。 应用使用 SQL Server LocalDB、Northwind 数据库实体框架6和 Windows Presentation Foundation。 它演示了如何使用大纲-详细信息视图进行基本数据绑定，还提供了一个自定义绑定导航器，其中包含用于**移动**的按钮、"**上**移"、"移**至开头**"、"**结束**"、"**更新**" 和 "**删除**"。
+本演练演示如何在 Visual Studio 中创建基本的 "窗体 over 数据" 应用程序。 应用使用 SQL Server LocalDB、Northwind 数据库、实体框架6（非 Entity Framework Core）和 .NET Framework 的 Windows Presentation Foundation （而非 .NET Core）。 它演示了如何使用大纲-详细信息视图进行基本数据绑定，还提供了一个自定义绑定导航器，其中包含用于**移动**的按钮、"**上**移"、"移**至开头**"、"**结束**"、"**更新**" 和 "**删除**"。
 
 本文重点介绍如何在 Visual Studio 中使用数据工具，并且不会尝试深入了解底层技术。 假设您基本熟悉 XAML、实体框架和 SQL。 此示例还不演示模型-视图-ViewModel （MVVM）体系结构，这是 WPF 应用程序的标准。 不过，你可以将此代码复制到你自己的 MVVM 应用程序中，只需修改少量内容。
 
@@ -102,7 +102,7 @@ ms.locfileid: "84173936"
 
      ![添加实体类作为数据源](../data-tools/media/raddata-add-entity-classes-as-data-sources.png)
 
-3. 单击 **“完成”** 。
+3. 单击“完成”。
 
 4. 在代码视图中导航到*mainwindow.xaml* 。 出于本示例的目的，我们将保持 XAML 简单。 将 Mainwindow.xaml 的标题更改为更具描述性的名称，并将其高度和宽度增加为 600 x 800。 以后随时可以更改它。 现在，将这三个行定义添加到主网格，一行用于导航按钮，一个用于客户的详细信息，一个用于显示其订单的网格：
 
@@ -427,7 +427,7 @@ Visual Studio 生成的默认布局并非适用于你的应用程序，因此我
 
 若要启用调试，请按 F5****。 应会看到 "客户" 和 "订单" 数据已填充到网格中，导航按钮应按预期方式工作。 在输入数据后，单击 "**提交**" 将新客户或订单添加到模型。 单击 "**取消**" 以从新客户或新订单窗体中返回，而不保存数据。 您可以直接在文本框中编辑现有客户和订单，这些更改会自动写入到模型中。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [适用于 NET 的 Visual Studio Data Tools](../data-tools/visual-studio-data-tools-for-dotnet.md)
 - [实体框架文档](/ef/)

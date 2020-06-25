@@ -1,7 +1,7 @@
 ---
 title: 向 n 层应用程序中的 TableAdapter 添加代码
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -14,12 +14,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: e5d240726030a3a08d184b3015f56f65d9168e9f
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.openlocfilehash: 3ea451ac60de971677ee2f7910b28b334c67dff3
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76113329"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85283094"
 ---
 # <a name="add-code-to-tableadapters-in-n-tier-applications"></a>向 n 层应用程序中的 TableAdapter 添加代码
 可以通过为 TableAdapter 创建分部类文件并向其添加代码来扩展 TableAdapter 的功能（而不是将代码添加到*DatasetName*文件）。 分部类使特定类的代码可以在多个物理文件之间进行分隔。 有关详细信息，请参阅[partial](/dotnet/visual-basic/language-reference/modifiers/partial)或[partial （类型）](/dotnet/csharp/language-reference/keywords/partial-type)。
@@ -29,10 +29,10 @@ ms.locfileid: "76113329"
 默认情况下，在分离数据集和 TableAdapter 代码后，结果是每个项目中的离散类文件。 原始项目包含一个名为*DatasetName* （或*DatasetName.Designer.cs*）的文件，该文件包含 TableAdapter 代码。 **数据集项目**属性中指定的项目包含一个名为*DatasetName* （或*DatasetName.DataSet.Designer.cs*）的文件，该文件包含数据集代码。
 
 > [!NOTE]
-> 分离数据集与 TableAdapter（通过设置“数据集项目”属性）时，将不会自动移动项目中现有的数据集分部类。 必须将现有部分数据集类手动移动到数据集项目。
+> 分离数据集与 TableAdapter（通过设置“数据集项目”属性）时，将不会自动移动项目中现有的数据集分部类****。 必须将现有部分数据集类手动移动到数据集项目。
 
 > [!NOTE]
-> 数据集提供了在需要验证时生成 <xref:System.Data.DataTable.ColumnChanging> 和 <xref:System.Data.DataTable.RowChanging> 事件处理程序的功能。 有关详细信息，请参阅[将验证添加到 n 层数据集](../data-tools/add-validation-to-an-n-tier-dataset.md)。
+> 数据集提供了 <xref:System.Data.DataTable.ColumnChanging> <xref:System.Data.DataTable.RowChanging> 在需要验证时生成和事件处理程序的功能。 有关详细信息，请参阅[将验证添加到 n 层数据集](../data-tools/add-validation-to-an-n-tier-dataset.md)。
 
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]
 
@@ -48,7 +48,7 @@ ms.locfileid: "76113329"
 
 4. 将代码添加到分部类声明中。
 
-5. 下面的示例演示如何将代码添加到 `NorthwindDataSet`中的 `CustomersTableAdapter`：
+5. 下面的示例演示了在中将代码添加到的位置 `CustomersTableAdapter` `NorthwindDataSet` ：
 
     ```vb
     Partial Public Class CustomersTableAdapter
@@ -68,6 +68,6 @@ ms.locfileid: "76113329"
 ## <a name="see-also"></a>另请参阅
 
 - [N 层数据应用程序概述](../data-tools/n-tier-data-applications-overview.md)
-- [向 N 层应用程序的数据集添加代码](../data-tools/add-code-to-datasets-in-n-tier-applications.md)
-- [创建和配置 Tableadapter](create-and-configure-tableadapters.md)
+- [将代码添加到 n 层应用程序中的数据集](../data-tools/add-code-to-datasets-in-n-tier-applications.md)
+- [创建和配置 TableAdapter](create-and-configure-tableadapters.md)
 - [分层更新概述](hierarchical-update.md)
