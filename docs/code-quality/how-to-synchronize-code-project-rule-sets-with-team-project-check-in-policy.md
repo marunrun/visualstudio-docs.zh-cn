@@ -1,7 +1,7 @@
 ---
 title: 将项目规则集与签入策略同步
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.codeanalysis.selecttfsruleset
 ms.assetid: 9b02f934-2db6-41ec-aaff-9c31ceec2f04
@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a765bcdd6eefbb5c256603bb73c0684c8782f803
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 5e27987f7fa298ddcedf52a9f01a80f57d3d329f
+ms.sourcegitcommit: 48e93538f1e352fc1f972b642bb5fcce2f6834a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75587402"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85371776"
 ---
 # <a name="how-to-synchronize-code-project-rule-sets-with-an-azure-devops-project-check-in-policy"></a>如何：将代码项目规则集与 Azure DevOps 项目签入策略同步
 
@@ -31,9 +31,9 @@ ms.locfileid: "75587402"
 
 ## <a name="to-specify-a-microsoft-standard-rule-set"></a>指定 Microsoft 标准规则集
 
-1. 在中**解决方案资源管理器**，右键单击代码项目，然后单击**属性**。
+1. 在**解决方案资源管理器**中，右键单击代码项目，然后单击 "**属性**"。
 
-2. 单击“代码分析”。
+2. 单击“代码分析”****。
 
 ::: moniker range="vs-2017"
 
@@ -51,19 +51,19 @@ ms.locfileid: "75587402"
 
 1. 如有必要，对指定签入策略的规则集文件执行 get 操作。
 
-2. 在中**解决方案资源管理器**，右键单击代码项目，然后单击**属性**。
+2. 在**解决方案资源管理器**中，右键单击代码项目，然后单击 "**属性**"。
 
-3. 单击“代码分析”。
+3. 单击“代码分析”****。
 
 ::: moniker range="vs-2017"
 
-4. 在 "**运行此规则集**" 列表中，单击 " **\<浏览 >** 。
+4. 在 "**运行此规则集**" 列表中，单击 "" **\<Browse>** 。
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-4. 在 "**活动规则**" 列表中，单击 **\<浏览 >** 。
+4. 在 "**活动规则**" 列表中，单击 **\<Browse>** 。
 
 ::: moniker-end
 

@@ -1,7 +1,7 @@
 ---
 title: 使用代码分析签入策略
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - code analysis, check-in policies
 ms.assetid: d1b3b04f-4dd9-40e6-b2d4-b414d33fb647
@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2de2322b42be2591fa0f6cdcfc49572322dcd140
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 883b5e231036c446c1cbf1fbc2fc125a01b3de62
+ms.sourcegitcommit: 48e93538f1e352fc1f972b642bb5fcce2f6834a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75587480"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85371854"
 ---
 # <a name="how-to-enforce-maintainable-code-with-a-code-analysis-check-in-policy"></a>如何：使用代码分析签入策略强制实现代码的可维护性
 
@@ -35,7 +35,7 @@ Team Foundation 版本控制的管理员可以将代码分析可维护性规则�
 
      此时将显示 "**添加签入策略**" 对话框。
 
-3. 在 "**签入策略**" 列表中，选择 "**代码分析**" 复选框，然后单击 **"确定"** 。
+3. 在 "**签入策略**" 列表中，选择 "**代码分析**" 复选框，然后单击 **"确定"**。
 
      此时将显示 "**代码分析策略编辑器**" 对话框。
 
@@ -57,7 +57,7 @@ Team Foundation 版本控制的管理员可以将代码分析可维护性规则�
 
 3. 单击" **确定**"。 新的签入策略现在适用于将来的签入。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [代码度量值](../code-quality/code-metrics-values.md)
 - [创建和使用代码分析签入策略](../code-quality/how-to-create-or-update-standard-code-analysis-check-in-policies.md)

@@ -1,19 +1,19 @@
 ---
 title: 取消生成的代码的代码分析冲突
 ms.date: 05/13/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 3a96434e-d419-43a7-81ba-95cccac835b8
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9ab2ffce28103059414cef8f1b556152485a12ff
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 175df8bb4dded4f66508ef405e031178606fd531
+ms.sourcegitcommit: 48e93538f1e352fc1f972b642bb5fcce2f6834a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75587428"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85371802"
 ---
 # <a name="how-to-suppress-code-analysis-warnings-for-generated-code"></a>如何：取消生成的代码的代码分析警告
 

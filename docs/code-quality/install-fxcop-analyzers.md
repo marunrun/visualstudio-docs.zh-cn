@@ -1,7 +1,7 @@
 ---
 title: 安装 FxCop 分析器
 ms.date: 08/03/2018
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - fxcop analyzers
 author: mikejo5000
@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 06391a260909aba08d8c2d2aa9078f9c4383897e
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 105583486a9f1420f1670a16abcb28e8268b293d
+ms.sourcegitcommit: 48e93538f1e352fc1f972b642bb5fcce2f6834a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84182841"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85371789"
 ---
 # <a name="install-fxcop-analyzers-in-visual-studio"></a>在 Visual Studio 中安装 FxCop 分析器
 
@@ -121,7 +121,7 @@ Microsoft 创建了一组名为[CodeAnalysis](https://www.nuget.org/packages/Mic
 
 ::: moniker-end
 
-4. 选择“下载”  。
+4. 选择“下载”。
 
    此扩展已下载。
 

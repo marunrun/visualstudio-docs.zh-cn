@@ -1,7 +1,7 @@
 ---
 title: 安装 Roslyn 分析器
 ms.date: 08/03/2018
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - code analysis, managed code
 - analyzers
@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9a833cb46811bd97467fdb048272c9feb2bb7873
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: ce30dd25c43f1ac8254dbdb6b04b747a976f3557
+ms.sourcegitcommit: 48e93538f1e352fc1f972b642bb5fcce2f6834a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75587376"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85371750"
 ---
 # <a name="install-net-compiler-platform-code-analyzers"></a>安装 .NET Compiler Platform 代码分析器
 
@@ -31,17 +31,17 @@ Visual Studio 包含一组核心的 .NET Compiler Platform （*Roslyn*）分析�
 2. 使用[包管理器控制台](/nuget/quickstart/install-and-use-a-package-in-visual-studio#package-manager-console)或[包管理器 UI](/nuget/quickstart/install-and-use-a-package-in-visual-studio#package-manager-console)，在 Visual Studio 中安装包。
 
    > [!NOTE]
-   > 每个分析器包的 www.nuget.org 页将显示要粘贴到**包管理器控制台**中的命令。 还有一个用于将文本复制到剪贴板的方便的按钮。
+   > 每个分析器包的 "www.nuget.org" 页将显示要粘贴到**包管理器控制台**中的命令。 还有一个用于将文本复制到剪贴板的方便的按钮。
 
-   分析器程序集安装并显示在 "**引用** > **分析器**" 下**解决方案资源管理器**中。
+   分析器程序集安装并显示在**引用**分析器下的**解决方案资源管理器**中  >  **Analyzers**。
 
 ## <a name="to-install-vsix-analyzers"></a>安装 VSIX 分析器
 
 ::: moniker range="vs-2017"
 
-1. 在 Visual Studio 中，选择 "**工具**" > "**扩展和更新**"。
+1. 在 Visual Studio 中，选择 "**工具**" " > **扩展和更新**"。
 
-   此时，“扩展和更新”对话框打开。
+   此时，“扩展和更新”**** 对话框打开。
 
    > [!NOTE]
    > 另外，还可以从[Visual Studio Marketplace](https://marketplace.visualstudio.com)中直接查找并下载分析器扩展。
@@ -50,7 +50,7 @@ Visual Studio 包含一组核心的 .NET Compiler Platform （*Roslyn*）分析�
 
 ::: moniker range=">=vs-2019"
 
-1. 在 Visual Studio 中，选择 "**扩展**" > "**管理扩展**"。
+1. 在 Visual Studio 中，选择 "**扩展**" " > **管理扩展**"。
 
    此时将打开 "**管理扩展**" 对话框。
 
@@ -81,13 +81,13 @@ Visual Studio 包含一组核心的 .NET Compiler Platform （*Roslyn*）分析�
 
 ::: moniker range="vs-2017"
 
-如果要检查是否安装了该扩展，请选择 "**工具**" > "**扩展和更新**"。 在 "**扩展和更新**" 对话框中，选择左侧的 "**已安装**" 类别，然后按名称搜索扩展。
+如果要检查是否安装了扩展，请选择 "**工具**" "  >  **扩展和更新**"。 在 "**扩展和更新**" 对话框中，选择左侧的 "**已安装**" 类别，然后按名称搜索扩展。
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-如果要检查是否安装了扩展，请选择 "**扩展**" > "**管理扩展**"。 在 "**管理扩展**" 对话框中，选择左侧的 "**已安装**" 类别，然后按名称搜索扩展。
+如果要检查是否安装了扩展，请选择 "**扩展**" "  >  **管理扩展**"。 在 "**管理扩展**" 对话框中，选择左侧的 "**已安装**" 类别，然后按名称搜索扩展。
 
 ::: moniker-end
 
@@ -96,7 +96,7 @@ Visual Studio 包含一组核心的 .NET Compiler Platform （*Roslyn*）分析�
 > [!div class="nextstepaction"]
 > [在 Visual Studio 中使用代码分析器](../code-quality/use-roslyn-analyzers.md)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [Visual Studio 中的代码分析器概述](../code-quality/roslyn-analyzers-overview.md)
 - [安装 FxCop 分析器](../code-quality/install-fxcop-analyzers.md)
