@@ -1,21 +1,22 @@
 ---
 title: XAML 代码编辑器
+description: 在 Visual Studio 中浏览 XAML 代码编辑器
 ms.date: 06/16/2020
-ms.topic: conceptual
+ms.topic: overview
 monikerRange: vs-2019
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: d789ac099e6d0bba7a44f0d6efd7a19beec54c19
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 6421fd0139b04262ac5f1e835f010c1372c034ee
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85289655"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85329175"
 ---
 # <a name="xaml-code-editor"></a>XAML 代码编辑器
 
-[Visual STUDIO IDE](../get-started/visual-studio-ide.md)中的 XAML 代码编辑器包含为 Windows 平台和[Xamarin](/xamarin/xamarin-forms/user-interface/text/editor/)创建 WPF 和 UWP 应用所需的所有工具。 本文概述了在开发基于 XAML 的应用时代码编辑器所扮演的角色，以及 Visual Studio 2019 中的 XAML 代码编辑器特有的功能。
+[Visual STUDIO IDE](../get-started/visual-studio-ide.md)中的 XAML 代码编辑器包含为 Windows 平台和[Xamarin](/xamarin/xamarin-forms/user-interface/text/editor/)创建 WPF 和 UWP 应用所需的所有工具。 本文概述了开发基于 XAML 的应用时代码编辑器所扮演的角色，以及 Visual Studio 2019 中的 XAML 代码编辑器特有的功能。
 
 首先，让我们看一下 IDE （集成开发环境），其中包含一个打开的 WPF 项目。 下图显示了将与 XAML 代码编辑器一起使用的几个关键 IDE 工具。
 
@@ -182,7 +183,7 @@ ms.locfileid: "85289655"
 
 代码片段是可重复使用的代码块，你可以通过使用右键单击上下文菜单命令 "**插入代码片段**" 或键盘快捷方式（**ctrl** + **K**、 **ctrl** + **X**）的组合将其插入到代码文件中。 我们增强了[IntelliSense](../ide/using-intellisense.md) ，使其支持显示 XAML 代码段，这些代码段适用于内置代码段以及手动添加的任何自定义代码段。 一些现成的 XAML 代码段包括 `#region` 、 `Column definition` 、、 `Row definition` `Setter` 和 `Tag` 。
 
-![在 IntelliSense 中显示 #region 选项的 XAML 代码编辑器](media/xaml-code-snippets.png "XAML 代码编辑器的屏幕截图，其中的 #region 选项显示在 IntelliSense 中")
+![XAML 代码编辑器，其中包含 XAML 代码段选项，在 IntelliSense 中显示](media/xaml-code-snippets.png "XAML 代码编辑器的屏幕截图，其中的 XAML 代码段选项显示在 IntelliSense 中")
 
 有关详细信息，请参阅 "[代码片段](../ide/code-snippets.md)" 和 " [c # 代码片段](../ide/visual-csharp-code-snippets.md)" 页。
 

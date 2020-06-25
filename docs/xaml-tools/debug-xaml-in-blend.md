@@ -6,15 +6,14 @@ ms.assetid: 29a37182-2a2c-47e4-a4a9-2d5412738fed
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.technology: vs-ide-debug
 ms.workload:
 - uwp
-ms.openlocfilehash: 04bd4540de47ec8a9da86069acb33770f9c800b8
-ms.sourcegitcommit: 9de7d25056da59df0941508c80c0b12766ba6580
+ms.openlocfilehash: d5d40878e40641b9a54a411af122f6207a02a7a1
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "82921255"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85331032"
 ---
 # <a name="debug-xaml-in-blend"></a>在 Blend 中调试 XAML
 
@@ -89,7 +88,7 @@ XAML 语法错误的某些常见原因如下：
     </Grid>
     ```
 
-10. 按**Ctrl**+**Shift**+**B**生成项目。
+10. 按**Ctrl** + **Shift** + **B**生成项目。
 
     将显示一条错误消息，表示无法生成该项目，并且应用的底部将显示列出了错误的“结果”面板****。
 
@@ -109,11 +108,11 @@ XAML 语法错误的某些常见原因如下：
 
 4. 双击“无法识别或访问成员‘content’”。 `c` 中的 `content` 应为大写。 将小写“c”替换为大写“c”。
 
-5. 双击 " `http://schemas.microsoft.com/winfx/2006/xaml`命名空间中不存在属性 ' Mame '"。 “Mame”中的“M”应为“N”。 将“M”替换为“N”。 现在可以分析 XAML，应用程序将显示在设计图面上。
+5. 双击 "命名空间中不存在属性 ' Mame '" `http://schemas.microsoft.com/winfx/2006/xaml` 。 “Mame”中的“M”应为“N”。 将“M”替换为“N”。 现在可以分析 XAML，应用程序将显示在设计图面上。
 
     ![在 Blend for Visual Studio 中调试 XAML](../debugger/media/blend_debugartboard_xaml.png "blend_debugArtboard_XAML")
 
-    按**Ctrl**+**Shift**+**B**生成项目，并确认没有剩余错误。
+    按**Ctrl** + **Shift** + **B**生成项目，并确认没有剩余错误。
 
 ## <a name="debug-in-visual-studio"></a>在 Visual Studio 中进行调试
 

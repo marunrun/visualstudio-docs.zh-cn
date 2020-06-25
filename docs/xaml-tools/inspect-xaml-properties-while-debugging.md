@@ -1,22 +1,21 @@
 ---
 title: 在调试时检查 XAML 属性 |Microsoft Docs
 ms.date: 11/12/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 390edde4-7b8d-4c89-8d69-55106b7e6b11
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.technology: vs-ide-debug
 ms.workload:
 - uwp
-ms.openlocfilehash: 36246f959aa49e49aa84defc203075f163c67118
-ms.sourcegitcommit: 9de7d25056da59df0941508c80c0b12766ba6580
+ms.openlocfilehash: 1c8ac187f5602d1c422fe5699d36deee70341b0f
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "82921261"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85331083"
 ---
-# <a name="inspect-xaml-properties-while-debugging"></a>在调试时检查 XAML 属性 
+# <a name="inspect-xaml-properties-while-debugging"></a>在调试时检查 XAML 属性
 
 通过“实时可视化树”和“实时属性资源管理器”，可以获取正在运行 XAML 代码的实时视图********。 这些工具为你提供了正在运行的 XAML 应用程序的 UI 元素的树视图，并显示你选择的任何 UI 元素的运行时属性。
 
@@ -33,7 +32,7 @@ ms.locfileid: "82921261"
 
 ### <a name="create-the-project"></a>创建项目
 
-1. 创建新的 c # WPF 应用程序（"**文件** > " "**新建** > **项目**"，然后键入 "c # WPF"，然后选择 " **wpf 应用（.net Core）** " 或 " **wpf 应用（.NET Framework）**"）。 将其命名为 TestXAML****。
+1. 创建新的 c # WPF 应用程序（"**文件**  >  **New**  >  " "新建**项目**"，然后键入 "c # WPF"，然后选择 " **wpf 应用（.net Core）** " 或 " **wpf 应用（.NET Framework）**"）。 将其命名为 TestXAML****。
 
 1. 将 MainWindow.xaml 更改为以下内容：
 
@@ -78,10 +77,10 @@ ms.locfileid: "82921261"
 
    当窗口出现时，应会看到应用内工具栏出现在正在运行的应用程序中。
 
-   ::: moniker range=">= vs-2019" 
+   ::: moniker range=">= vs-2019"
    ![该应用的主窗口](../debugger/media/vs-2019/livevisualtree-app.png "LiveVIsualTree-应用")
    ::: moniker-end
-   ::: moniker range="vs-2017" 
+   ::: moniker range="vs-2017"
    ![该应用的主窗口](../debugger/media/livevisualtree-app.png "LiveVIsualTree-应用")
    ::: moniker-end
 
@@ -93,16 +92,16 @@ ms.locfileid: "82921261"
 
 1. 在“实时可视化树”窗口中，展开 ContentPresenter 节点********。 它应包含按钮和列表框的节点。 展开该列表框（然后展开 ScrollContentPresenter 和 ItemsPresenter）以查找列表框各项********。
 
-   ::: moniker range=">= vs-2019" 
+   ::: moniker range=">= vs-2019"
    如果看不到 " **system.windows.controls.contentpresenter>** " 节点，则切换工具栏上的 "**仅显示我的 XAML** " 图标。 从 Visual Studio 2019 版本16.4 开始，默认情况下，使用 "仅我的 XAML" 功能可简化 XAML 元素的视图。 你还可以在 "选项" 中[禁用此设置](../debugger/general-debugging-options-dialog-box.md)，以始终显示所有 XAML 元素。
    ::: moniker-end
 
    该窗口应如下所示：
 
-   ::: moniker range=">= vs-2019" 
+   ::: moniker range=">= vs-2019"
    ![实时可视化树中 ListBoxItem](../debugger/media/vs-2019/livevisualtree-listboxitems.png "LiveVisualTree-Listboxitem")
    ::: moniker-end
-   ::: moniker range="vs-2017" 
+   ::: moniker range="vs-2017"
    ![实时可视化树中 ListBoxItem](../debugger/media/livevisualtree-listboxitems.png "LiveVisualTree-Listboxitem")
    ::: moniker-end
 
@@ -110,16 +109,16 @@ ms.locfileid: "82921261"
 
 1. 现在，让我们看看其中一个列表框项的属性。
 
-   选择“实时可视化树”中的第一个列表框项并单击工具栏上的“显示属性”图标********。 应显示“实时属性资源管理器”****。 请注意，"**内容**" 字段是 "Item1"，**背景** > **色**字段 **#FFFFFFE0**。
-   
-1. 返回到“实时可视化树”，然后选择第二个列表框项****。 "**实时属性资源管理器**" 应显示 "**内容**" 字段是 "Item2"，并且 **#FFD3D3D3** **背景** > **色**字段（取决于主题）。
+   选择“实时可视化树”中的第一个列表框项并单击工具栏上的“显示属性”图标********。 应显示“实时属性资源管理器”****。 请注意，"**内容**" 字段是 "Item1"，**背景**  >  **色**字段 **#FFFFFFE0**。
+
+1. 返回到“实时可视化树”，然后选择第二个列表框项****。 "**实时属性资源管理器**" 应显示 "**内容**" 字段是 "Item2"，并且 #FFD3D3D3**背景**  >  **色**字段（取决于主题）。 **#FFD3D3D3**
 
    > [!NOTE]
-   > **实时属性资源管理器**中的属性周围的黄色边框表示属性值是通过绑定（如）设置的`Color = {BindingExpression}`。 绿色边框表示使用资源（如）设置该值`Color = {StaticResource MyBrush}`。
+   > **实时属性资源管理器**中的属性周围的黄色边框表示属性值是通过绑定（如）设置的 `Color = {BindingExpression}` 。 绿色边框表示使用资源（如）设置该值 `Color = {StaticResource MyBrush}` 。
 
    XAML 的实际结构具有大量你可能并不直接感兴趣的元素，并且如果不熟悉代码，可能很难导航树以查找正在寻找的内容。 因此“实时可视化树”有几种方法可使用应用程序的 UI 来帮助找到想要检查的元素****。
 
-   ::: moniker range=">= vs-2019" 
+   ::: moniker range=">= vs-2019"
    **在正在运行的应用程序中选择元素**。 当选择“实时可视化树”工具栏上最左侧的按钮时，可以启用此模式****。 在此模式下，可以在应用程序中选择 UI 元素，并且“实时可视化树”（以及“实时属性查看器”）会自动更新以显示对应于该元素及其属性的树中的节点********。 从 Visual Studio 2019 版本16.4 开始，你可以[配置元素选择的行为](../debugger/general-debugging-options-dialog-box.md)。
 
    在运行的应用程序中显示布局装饰器****。 当选择“启用选择”按钮右侧紧靠的按钮时，可以启用此模式。 当“显示布局装饰器”打开时，它会导致应用程序窗口沿所选对象的边界显示水平线和垂直线，以便看到它与什么对齐，以及显示边距的矩形****。 例如，启用上的**Select 元素**和**显示布局**，并选择应用程序中的 "**添加项**" 文本块。 应看到“实时可视化树”中的文本块节点和“实时属性查看器”中的文本块属性，以及文本块边界上的水平线和垂直线********。
@@ -129,7 +128,7 @@ ms.locfileid: "82921261"
    预览所选内容****。 你可以通过选择“实时可视化树”工具栏上从左侧起第三个按钮来启用此模式。 如果你有访问该应用程序的源代码的权限，则此模式将在声明元素处显示 XAML。 选择 "**选择元素**" 并**预览选定内容**，然后在测试应用程序中选择该按钮。 MainWindow.xaml 文件在 Visual Studio 中打开并且光标放置在定义按钮的行上。
    ::: moniker-end
 
-   ::: moniker range="vs-2017" 
+   ::: moniker range="vs-2017"
    在运行的应用程序中启用选择****。 当选择“实时可视化树”工具栏上最左侧的按钮时，可以启用此模式****。 在此模式下，可以在应用程序中选择 UI 元素，并且“实时可视化树”（以及“实时属性查看器”）会自动更新以显示对应于该元素及其属性的树中的节点********。
 
    在运行的应用程序中显示布局装饰器****。 当选择“启用选择”按钮右侧紧靠的按钮时，可以启用此模式。 当“显示布局装饰器”打开时，它会导致应用程序窗口沿所选对象的边界显示水平线和垂直线，以便看到它与什么对齐，以及显示边距的矩形****。 例如，打开“启用选择”和“显示布局”这两项，然后选择应用程序中的“添加项”文本块************。 应看到“实时可视化树”中的文本块节点和“实时属性查看器”中的文本块属性，以及文本块边界上的水平线和垂直线********。
