@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 24b8416508ee5800ab581a1a58cedee1e5725cab
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: d99cbf4aaa30e1afb95a98743c223edee94d98fe
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84184440"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85286292"
 ---
 # <a name="secure-clickonce-applications"></a>保护 ClickOnce 应用程序
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序受 .NET Framework 中代码访问安全性约束的限制，以帮助限制代码访问受保护的资源和操作的权限。 因此，了解代码访问安全性的含义以相应地编写 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序是十分重要的。 您的应用程序可以使用完全信任或使用部分区域（如 Internet 区域和 Intranet 区域）来限制访问权限。
@@ -50,7 +50,7 @@ ms.locfileid: "84184440"
  有关代码访问安全性和 ClickOnce 的详细信息，请参阅[ClickOnce 应用程序的代码访问安全性](../deployment/code-access-security-for-clickonce-applications.md)。
 
 ## <a name="code-signing-certificates"></a>代码签名证书
- 若要使用 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 部署发布应用程序，可以用公钥/私钥对为应用程序的应用程序和部署清单签名。 **“项目设计器”** 的 **“签名”** 页上提供了用于为清单签名的工具。 有关更多信息，请参见 [Signing Page, Project Designer](../ide/reference/signing-page-project-designer.md)。 或者可以使用发布向导在发布过程中以密钥文件对清单签名。
+ 若要使用 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 部署发布应用程序，可以用公钥/私钥对为应用程序的应用程序和部署清单签名。 **“项目设计器”** 的 **“签名”** 页上提供了用于为清单签名的工具。 有关更多信息，请参见 [Signing Page, Project Designer](../ide/reference/signing-page-project-designer.md)。
 
  为清单签名之后，安装期间，权限对话框将向用户显示基于 Authenticode 签名的发行者信息，以向用户表明该应用程序来自受信任的来源。
 
@@ -76,6 +76,6 @@ ms.locfileid: "84184440"
 ## <a name="deploying-obfuscated-assemblies"></a>部署经过模糊处理的程序集
  Visual Studio 包括免费的 [PreEmptive Protection - Dotfuscator Community](../ide/dotfuscator/index.md)，使用它，可以通过代码混淆和主动保护措施来保护 ClickOnce 应用程序。  有关详细信息，请参阅 [Dotfuscator Community 用户指南的 ClickOnce 部分](https://www.preemptive.com/dotfuscator/ce/docs/help/5.27/advanced_clickonce.html)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [ClickOnce 安全性和部署](../deployment/clickonce-security-and-deployment.md)
 - [选择 ClickOnce 部署策略](../deployment/choosing-a-clickonce-deployment-strategy.md)

@@ -8,55 +8,65 @@ metadata:
   author: mikejo5000
   ms.author: mikejo
   manager: jillfra
-  ms.date: 10/30/2019
-  ms.openlocfilehash: 94bbe9a81a38b255eba6cc6b15812743328a0f27
-  ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+  ms.date: 06/03/2020
+  ms.openlocfilehash: 4f522f6613424c3251344207381d2eaf31705c9c
+  ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 03/21/2020
-  ms.locfileid: "79549919"
+  ms.lasthandoff: 06/23/2020
+  ms.locfileid: "85289113"
 landingContent:
-- title: 关于分析
-  linkLists:
-  - linkListType: overview
-    links:
-    - text: 首先了解分析工具
-      url: profiling-feature-tour.md
-  - linkListType: concept
-    links:
-    - text: 运行分析工具的方法
-      url: running-profiling-tools-with-or-without-the-debugger.md
 - title: 入门
   linkLists:
-  - linkListType: quickstart
-    links:
-    - text: 分析 CPU 使用情况（C#、Visual Basic）
-      url: quickstart-cpu-usage-managed.md
-    - text: 分析 CPU 使用情况 (C++)
-      url: quickstart-cpu-usage-native.md
-    - text: 分析 CPU 使用情况 (ASP.NET)
-      url: quickstart-cpu-usage-aspnet.md
   - linkListType: tutorial
     links:
     - text: 开始分析 CPU 使用情况
       url: beginners-guide-to-performance-profiling.md
     - text: 开始度量内存使用情况
       url: memory-usage.md
-- title: 更多性能工具
-  linkLists:
   - linkListType: how-to-guide
     links:
     - text: 性能提示
       url: perftips.md
-    - text: 从命令行测量 CPU 使用率
-      url: profile-apps-from-command-line.md
-    - text: 衡量 .NET 对象的内存使用情况
+- title: 基础知识
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 首先了解分析工具
+      url: profiling-feature-tour.md
+    - text: 运行分析工具的方法
+      url: running-profiling-tools-with-or-without-the-debugger.md
+  - linkListType: concept
+    links:
+    - text: 了解性能收集方法
+      url: understanding-performance-collection-methods-perf-profiler.md
+- title: 性能工具
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: CPU 使用率
+      url: cpu-usage.md
+    - text: 数据库
+      url: analyze-database.md
+    - text: 事件查看器
+      url: events-viewer.md
+    - text: 内存使用率
+      url: memory-usage-without-debugging2.md
+    - text: .NET 对象分配跟踪
       url: dotnet-alloc-tool.md
+    - text: GPU 使用情况 (Direct3D)
+      url: gpu-usage.md
+    - text: .NET Async
+      url: analyze-async.md
     - text: 分析资源消耗情况 (XAML)
       url: application-timeline.md
-    - text: 分析 GPU 使用情况 (Direct3D)
-      url: gpu-usage.md
-    - text: 分析网络使用情况 (UWP)
-      url: network-usage.md
-    - text: 分析能量使用情况 (UWP)
-      url: analyze-energy-use-in-store-apps.md
+- title: 参考线
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: 优化探查器设置
+      url: optimize-profiler-settings.md
+    - text: 从命令行测量性能
+      url: profile-apps-from-command-line.md
+    - text: 同时使用多个探查器工具
+      url: use-multiple-profiler-tools-simultaneously.md

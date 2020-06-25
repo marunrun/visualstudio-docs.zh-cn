@@ -11,6 +11,8 @@
         - name: 概述
           displayName: msbuild concepts
           href: msbuild-concepts.md
+        - name: MSBuild 如何生成项目
+          href: build-process-overview.md
         - name: 属性
           items:
             - name: MSBuild 属性
