@@ -1,23 +1,23 @@
 ---
 title: XAML 错误和警告
 ms.date: 03/06/2018
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 34eac8a0-7ec5-4c40-b97a-0126ed367931
-author: karann-msft
+author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f8a36a91f40fd4857e50d5262c1598ee096697e7
-ms.sourcegitcommit: 22deb247ad951e4971f27fdab413b158415d0584
+ms.openlocfilehash: 9b46bf15390f12e7fb0873c7e4c39abf94530821
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "82921327"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85330410"
 ---
 # <a name="xaml-errors-and-warnings"></a>XAML 错误和警告
 
-创作 XAML 时，Visual Studio 会分析键入的代码。 检测到错误时，代码行上会出现波浪线。 光标悬停在波浪线上可获取错误或警告的详细信息。 对于某些错误和警告，将显示快速操作灯泡，并使用**Ctrl**+**。** 键盘快捷方式可问题修复选项。
+创作 XAML 时，Visual Studio 会分析键入的代码。 检测到错误时，代码行上会出现波浪线。 光标悬停在波浪线上可获取错误或警告的详细信息。 对于某些错误和警告，将显示快速操作灯泡，并使用**Ctrl** + **。** 键盘快捷方式可问题修复选项。
 
 ## <a name="error-types"></a>错误类型
 

@@ -1,17 +1,17 @@
 ---
 title: 在 XAML 设计器中调试或禁用项目代码
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: ac600581-8fc8-49e3-abdf-1569a3483d74
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: ce29bcef43877ec8a41235545652278645cad123
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: fba240c29cb8142a9ec4b4d28c71112c1974a5b1
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "82921165"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85331067"
 ---
 # <a name="debug-or-disable-project-code-in-xaml-designer"></a>在 XAML 设计器中调试或禁用项目代码
 
@@ -35,7 +35,7 @@ ms.locfileid: "82921165"
 
 1. 在未处理的异常对话框中，选择“单击此处重载设计器” **** 链接。
 
-2. 在菜单栏上，选择 "**调试** > " "**开始调试**" 以生成和运行应用程序。
+2. 在菜单栏上，选择 "**调试**" "  >  **开始调试**" 以生成和运行应用程序。
 
      如果应用程序成功生成和运行，则设计时异常可能由设计器中运行的项目代码引起。
 
@@ -53,7 +53,7 @@ ms.locfileid: "82921165"
 
 5. 在项目代码中设置断点。
 
-6. 在 Visual Studio 的新实例中，在菜单栏上选择 "**调试** > " "**附加到进程**"。
+6. 在 Visual Studio 的新实例中，在菜单栏上选择 "**调试**" "  >  **附加到进程**"。
 
 7. 在“附加到进程” **** 对话框中，从“可用进程” **** 列表中选择“XDesProc.exe” ****，然后选择“附加” **** 按钮。
 
@@ -61,7 +61,7 @@ ms.locfileid: "82921165"
 
      这是 Visual Studio 的第一个实例中 XAML 设计器的进程。
 
-8. 在 Visual Studio 的第一个实例中，在菜单栏上选择 "**调试** > " "**启动调试**"。
+8. 在 Visual Studio 的第一个实例中，在菜单栏上选择 "**调试**" "  >  **启动调试**"。
 
      现即可单步执行设计器中运行的代码。
 
