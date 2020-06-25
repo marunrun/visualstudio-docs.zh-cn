@@ -6,15 +6,15 @@ manager: jillfra
 assetId: 7d8f1ac9-e439-47e0-a183-0642c4ea1920
 ms.custom: vs-azure
 ms.workload: azure-vs
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 03/21/2017
 ms.author: ghogen
-ms.openlocfilehash: bc3c58343c699833a5a12eee6f79c023f57a2e85
-ms.sourcegitcommit: 59a8732dc563242590f7c6ccf4ced6c6d195533c
+ms.openlocfilehash: 477b7860c320730d6362cdb7e0fcb46ad3bc7d17
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81489644"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85280526"
 ---
 # <a name="using-the-visual-studio-publish-azure-application-wizard"></a>使用 Visual Studio“发布 Azure 应用程序”向导 | Microsoft Docs
 
@@ -97,9 +97,9 @@ Azure 存储帐户将存储应用程序部署的包。 部署应用程序之后�
 
 ## <a name="summary-page"></a>“摘要”页
 
-![总结](./media/vs-azure-tools-publish-azure-application-wizard/summary.png)
+![摘要](./media/vs-azure-tools-publish-azure-application-wizard/summary.png)
 
-**目标配置文件** - 可以选择基于所选的设置创建发布配置文件。 例如，可以创建一个配置文件用于测试环境，并创建另一个配置文件用于生产环境。 要保存此配置文件，请选择 **“保存”** 图标。 向导将创建配置文件并将它保存在 Visual Studio 项目中。 要修改配置文件名称，请打开**目标配置文件**列表，然后选择**&lt;"管理..."&gt;**.
+**目标配置文件** - 可以选择基于所选的设置创建发布配置文件。 例如，可以创建一个配置文件用于测试环境，并创建另一个配置文件用于生产环境。 要保存此配置文件，请选择 **“保存”** 图标。 向导将创建配置文件并将它保存在 Visual Studio 项目中。 若要修改配置文件名称，请打开 "**目标配置文件**" 列表，然后选择 " ** &lt; 管理 &gt; ...**"。
 
    > [!Note]
    > 发布配置文件将出现在 Visual Studio 的解决方案资源管理器中，配置文件设置将写入扩展名为.azurePubxml 的文件。 设置将保存为 XML 标记的属性。
@@ -118,6 +118,6 @@ Azure 存储帐户将存储应用程序部署的包。 部署应用程序之后�
 
 - [测试 Azure 云服务的性能](./vs-azure-tools-performance-profiling-cloud-services.md)
 
-- [配置 Azure 云服务和虚拟机的诊断](./vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines.md)。
+- [为 Azure 云服务和虚拟机配置诊断](./vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines.md)。
 
-- [什么是应用见解？](/azure/application-insights/app-insights-overview)
+- [什么是 Application Insights？](/azure/application-insights/app-insights-overview)

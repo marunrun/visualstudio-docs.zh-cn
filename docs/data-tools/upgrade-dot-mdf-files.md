@@ -1,7 +1,7 @@
 ---
 title: 升级 .mdf 文件
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - SQL Server Express
 - SQL Server LocalDB
@@ -14,16 +14,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 195cab863554bc60478df4e80319eab80124140a
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: d35611dcc7b6067cf6d6166aff521ef291b8dfcd
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75586089"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85281118"
 ---
 # <a name="upgrade-mdf-files"></a>升级 .mdf 文件
 
-本主题介绍安装较新版本的 Visual Studio 后用于升级数据库文件（ *.mdf*）的选项。 其中包括以下任务的说明：
+本主题介绍安装较新版本的 Visual Studio 后用于升级数据库文件（*.mdf*）的选项。 其中包括以下任务的说明：
 
 - 升级数据库文件以使用较新版本的 SQL Server Express LocalDB
 
@@ -33,7 +33,7 @@ ms.locfileid: "75586089"
 
 - 使 SQL Server Express 成为默认数据库引擎
 
-您可以使用 Visual Studio 打开一个项目，该项目包含使用旧版本的 SQL Server Express 或 LocalDB 创建的数据库文件（ *.mdf*）。 但是，若要继续在 Visual Studio 中开发项目，则必须将该版本的 SQL Server Express 或 LocalDB 与 Visual Studio 安装在同一台计算机上，或者必须升级数据库文件。 如果升级数据库文件，将无法使用旧版本的 SQL Server Express 或 LocalDB 来访问它。
+您可以使用 Visual Studio 打开一个项目，该项目包含使用旧版本的 SQL Server Express 或 LocalDB 创建的数据库文件（*.mdf*）。 但是，若要继续在 Visual Studio 中开发项目，则必须将该版本的 SQL Server Express 或 LocalDB 与 Visual Studio 安装在同一台计算机上，或者必须升级数据库文件。 如果升级数据库文件，将无法使用旧版本的 SQL Server Express 或 LocalDB 来访问它。
 
 如果文件版本与当前安装的 SQL Server Express 或 LocalDB 实例不兼容，则还可能会提示你升级通过早期版本的 SQL Server Express 或 LocalDB 创建的数据库文件。 为了解决此问题，Visual Studio 会提示你升级该文件。
 
@@ -65,21 +65,21 @@ ms.locfileid: "75586089"
 
     - **服务器名称**：
 
-        - 若要使用默认版本： `(localdb)\MSSQLLocalDB`。  这将指定 ProjectV12 或 ProjectV13，具体取决于安装的 Visual Studio 版本以及第一个 LocalDB 实例的创建时间。 **SQL Server 对象资源管理器**中的 " **MSSQLLocalDB** " 节点显示它所指向的版本。
+        - 使用默认版本： `(localdb)\MSSQLLocalDB` 。  这将指定 ProjectV12 或 ProjectV13，具体取决于安装的 Visual Studio 版本以及第一个 LocalDB 实例的创建时间。 **SQL Server 对象资源管理器**中的 " **MSSQLLocalDB** " 节点显示它所指向的版本。
 
-        - 使用特定版本： `(localdb)\ProjectsV12` 或 `(localdb)\ProjectsV13`，其中 V12 为 LocalDB 2014，V13 为 LocalDB 2016。
+        - 若要使用特定版本： `(localdb)\ProjectsV12` 或 `(localdb)\ProjectsV13` ，则 V12 为 localdb 2014，V13 为 localdb 2016。
 
     - **附加数据库文件**：主 *.mdf*文件的物理路径。
 
     - **逻辑名称**： 你想要使用该文件的名称。
 
-3. 选择“确定”按钮。
+3. 选择“确定”  按钮。
 
 4. 出现提示时，请选择 "**是"** 按钮来升级文件。
 
     数据库已升级，附加到 LocalDB 数据库引擎，不再与旧版 LocalDB 兼容。
 
-还可以通过打开连接的快捷菜单，然后选择 "**修改连接**" 来修改 SQL Server Express 连接以使用 LocalDB。 在 "**修改连接**" 对话框中，将 "服务器名称" 更改为 `(LocalDB)\MSSQLLocalDB`。 在 "**高级属性**" 对话框中，确保 "**用户实例**" 设置为 " **False**"。
+还可以通过打开连接的快捷菜单，然后选择 "**修改连接**" 来修改 SQL Server Express 连接以使用 LocalDB。 在 "**修改连接**" 对话框中，将服务器名称更改为 `(LocalDB)\MSSQLLocalDB` 。 在 "**高级属性**" 对话框中，确保 "**用户实例**" 设置为 " **False**"。
 
 ### <a name="to-upgrade-a-database-file-to-use-the-sql-server-express-version"></a>升级数据库文件以使用 SQL Server Express 版本
 
@@ -101,13 +101,13 @@ ms.locfileid: "75586089"
 
 ### <a name="to-make-sql-server-express-the-default-database-engine"></a>使 SQL Server Express 默认的数据库引擎
 
-1. 在菜单栏上，选择“工具” > “选项”。
+1. 在菜单栏上，选择 "**工具**" "  >  **选项**"。
 
 2. 在 "**选项**" 对话框中，展开 "**数据库工具**" 选项，然后选择 "**数据连接**"。
 
-3. 在 " **SQL Server 实例名称**" 文本框中，指定要使用的 SQL Server Express 或 LocalDB 实例的名称。 如果该实例未命名，则指定 `.\SQLEXPRESS or (LocalDB)\MSSQLLocalDB`。
+3. 在 " **SQL Server 实例名称**" 文本框中，指定要使用的 SQL Server Express 或 LocalDB 实例的名称。 如果该实例未命名，则指定 `.\SQLEXPRESS or (LocalDB)\MSSQLLocalDB` 。
 
-4. 选择“确定”按钮。
+4. 选择“确定”  按钮。
 
     SQL Server Express 将是应用程序的默认数据库引擎。
 

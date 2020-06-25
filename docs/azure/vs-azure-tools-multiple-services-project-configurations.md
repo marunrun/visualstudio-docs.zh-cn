@@ -6,21 +6,21 @@ manager: jillfra
 assetId: a4fb79ed-384f-4183-9f74-5cac257206b9
 ms.custom: vs-azure
 ms.workload: azure-vs
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 11/11/2017
 ms.author: ghogen
-ms.openlocfilehash: 7b9df8c5609c92a6b6631d1ed9fdda8d65e9b605
-ms.sourcegitcommit: 95f26af1da51d4c83ae78adcb7372b32364d8a2b
+ms.openlocfilehash: 8c9f65291d43a55ee75840591698c26fdde6e967
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79300929"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85280539"
 ---
 # <a name="configuring-your-azure-project-in-visual-studio-to-use-multiple-service-configurations"></a>使用多种服务配置来配置 Visual Studio 中的 Azure 项目
 
 Visual Studio 中的 Azure 云服务项目包括三个配置文件：`ServiceDefinition.csdef`、`ServiceConfiguration.Local.cscfg` 和 `ServiceConfiguration.Cloud.cscfg`。
 
-- `ServiceDefinition.csdef` 部署到 Azure 来描述云服务及其角色的要求，并提供适用于所有实例的设置。 可以使用 Azure 服务托管运行时 API 在运行时读取设置。 只有当云服务停止时，才可以在 Azure 上更新此文件。
+- `ServiceDefinition.csdef` 部署到 Azure 来描述云服务及其角色的要求，并提供适用于所有实例的设置。 可以在运行时使用 Azure 服务托管运行时 API 读取设置。 只有当云服务停止时，才可以在 Azure 上更新此文件。
 - `ServiceConfiguration.Local.cscfg` 和 `ServiceConfiguration.Cloud.cscfg` 为定义文件中的设置提供值，并为每个角色指定要运行的实例数。 “本地”文件包含在本地调试中使用的值；“云”文件作为 `ServiceConfiguration.cscfg` 部署到 Azure，并提供针对服务器环境的设置。 在 Azure 中运行云服务时，可以更新此文件。
 
 在 Visual Studio 中，使用适用角色的属性页面来管理和修改配置设置（右键单击角色并选择“属性”****，或双击角色）。 可将更改范围限定为在“服务配置”**** 下拉列表中所选择的任何配置。 除了以下各节所描述的内容以外，Web 角色和辅助角色的属性是很相似的。
@@ -35,7 +35,7 @@ Visual Studio 中的 Azure 云服务项目包括三个配置文件：`ServiceDef
 
 选择受更改影响的 `ServiceConfiguration.*.cscfg` 文件。 默认情况下有本地和云变体，并且可以使用“管理...”**** 命令来复制、重命名和删除配置文件。 这些文件会被添加到你的云服务项目，并显示在“解决方案资源管理器”**** 中。 但是，只能从该控件中完成重命名或删除配置操作。
 
-### <a name="instances"></a>Instances
+### <a name="instances"></a>实例数
 
 将“实例计数”属性设置为服务应为此角色运行的实例的数目。****
 
@@ -45,7 +45,7 @@ Visual Studio 中的 Azure 云服务项目包括三个配置文件：`ServiceDef
 
 设置此属性可指定在开始调试时，Visual Studio 应为 HTTP 终结点、HTTPS 终结点还是两者启动 Web 浏览器。
 
-仅当已为角色定义 HTTPS**终结点时，HTTPS 终结点**选项才可用。 可以在“终结点”属性页上定义 HTTPS 终结点。****
+仅当已为角色定义 HTTPS 终结点时， **https 终结点**选项才可用。 可以在“终结点”属性页上定义 HTTPS 终结点。****
 
 如果已添加 HTTPS 终结点，则将默认启用“HTTPS 终结点”选项，Visual Studio 除了为 HTTP 终结点启动浏览器之外，还会在开始调试时为此终结点启动浏览器，假定这两个启动选项均已启用。
 
@@ -55,7 +55,7 @@ Visual Studio 中的 Azure 云服务项目包括三个配置文件：`ServiceDef
 
 ## <a name="settings-page"></a>“设置”页
 
-在“设置”**** 页上，可以将设置以名称/值对形式添加到配置中。 在角色中运行的代码可以使用[Azure 托管库](/previous-versions/azure/dn602775(v=azure.11))（特别是[Get配置设置值](/previous-versions/azure/reference/ee772857(v=azure.100))方法）提供的类在运行时读取配置设置的值。
+在“设置”**** 页上，可以将设置以名称/值对形式添加到配置中。 在角色中运行的代码可以使用[Azure 托管库](/previous-versions/azure/dn602775(v=azure.11))提供的类（特别是[GetConfigurationSettingValue](/previous-versions/azure/reference/ee772857(v=azure.100))方法）在运行时读取配置设置的值。
 
 ### <a name="configuring-a-connection-string-for-a-storage-account"></a>为存储帐户配置连接字符串
 

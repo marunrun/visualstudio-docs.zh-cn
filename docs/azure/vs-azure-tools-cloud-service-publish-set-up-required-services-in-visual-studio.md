@@ -6,15 +6,15 @@ manager: jillfra
 ms.assetid: 92ee2f9e-ec49-4c7a-900d-620abe5e9d8a
 ms.custom: vs-azure
 ms.workload: azure-vs
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 11/10/2017
 ms.author: ghogen
-ms.openlocfilehash: f6174f8294f3a9e990893ca9a45d77f2a069692e
-ms.sourcegitcommit: 59a8732dc563242590f7c6ccf4ced6c6d195533c
+ms.openlocfilehash: 5cd458cca0a0b387ce816f2e7f5dde8153e08410
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81489657"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85280799"
 ---
 # <a name="prepare-to-publish-or-deploy-a-cloud-service-from-visual-studio"></a>准备从 Visual Studio 发布或部署云服务
 
@@ -36,7 +36,7 @@ ms.locfileid: "81489657"
 
 ### <a name="create-a-cloud-service-through-the-azure-portal"></a>通过 Azure 门户创建云服务
 
-1. 登录 [Azure 门户](https://portal.azure.com/)。
+1. 登录到 [Azure 门户](https://portal.azure.com/)。
 1. 选择页面左侧的“云服务(经典)”****。
 1. 选择“+ 添加”****，然后提供所需的信息（DNS 名称、订阅、资源组和位置）。 不需要在此时上传包，因为稍后将在 Visual Studio 中执行这一操作。
 1. 选择“创建”**** 以完成过程。
@@ -55,7 +55,7 @@ ms.locfileid: "81489657"
 
 ### <a name="create-a-storage-account-through-the-azure-portal"></a>通过 Azure 门户创建存储帐户
 
-1. 登录 [Azure 门户](https://portal.azure.com/)。
+1. 登录到 [Azure 门户](https://portal.azure.com/)。
 1. 选择左上角的“+ 新建”****。
 1. 选择“Azure 市场”下的“存储”****，然后从右侧选择“存储帐户 - Blob、文件、表、队列”****。
 1. 提供所需的信息（名称、部署模型等）。

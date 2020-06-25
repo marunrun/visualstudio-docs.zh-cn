@@ -1,7 +1,7 @@
 ---
 title: 在窗体间传递数据
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -17,12 +17,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 358cdc4822aa0da1d980f22196618aeaada4b1be
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 198eb09cabe16c72415520aa493a3395cdbf6d48
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75586362"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85281872"
 ---
 # <a name="pass-data-between-forms"></a>在窗体间传递数据
 
@@ -37,9 +37,9 @@ ms.locfileid: "75586362"
 
 - 使用 "[数据源配置向导](../data-tools/media/data-source-configuration-wizard.png)" 创建和配置数据集。
 
-- 选择从“数据源”窗口拖动某些项时要在窗体上创建的控件。 有关详细信息，请参阅[设置在从 "数据源" 窗口中拖动时要创建的控件](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md)。
+- 选择从“数据源”窗口拖动某些项时要在窗体上创建的控件****。 有关详细信息，请参阅[设置在从 "数据源" 窗口中拖动时要创建的控件](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md)。
 
-- 通过将某些项从“数据源”窗口拖到窗体上来创建数据绑定控件。
+- 通过将某些项从“数据源”窗口拖到窗体上来创建数据绑定控件****。
 
 - 创建具有网格的第二个窗体来显示数据。
 
@@ -67,79 +67,79 @@ ms.locfileid: "75586362"
 
 ## <a name="create-the-windows-forms-app-project"></a>创建 Windows 窗体应用项目
 
-1. 在 Visual Studio 的“文件”菜单中，依次选择“新建” > “项目”。
+1. 在 Visual Studio 的“文件”菜单中，依次选择“新建” > “项目”    。
 
-2. 在左侧窗格中展开 "**视觉对象C#**  " 或 " **Visual Basic** "，然后选择 " **Windows 桌面**"。
+2. 在左侧窗格中展开 " **Visual c #** " 或 " **Visual Basic** "，然后选择 " **Windows 桌面**"。
 
 3. 在中间窗格中，选择 " **Windows 窗体应用程序**" 项目类型。
 
-4. 将项目命名为**PassingDataBetweenForms**，然后选择 **"确定"** 。
+4. 将项目命名为**PassingDataBetweenForms**，然后选择 **"确定"**。
 
-     创建“PassingDataBetweenForms”项目并添加到“解决方案资源管理器”中。
+     创建“PassingDataBetweenForms”项目并添加到“解决方案资源管理器”中********。
 
 ## <a name="create-the-data-source"></a>创建数据源
 
 1. 若要打开 "**数据源**" 窗口，请在 "**数据**" 菜单上单击 "**显示数据源**"。
 
-2. 在“数据源”窗口，选择“添加新数据源”以启动“数据源配置”向导。
+2. 在 "**数据源**" 窗口中，选择 "**添加新数据源**" 以启动 "**数据源配置**向导"。
 
-3. 在 **“选择数据源类型”** 页上选择 **“数据库”** ，然后单击 **“下一步”** 。
+3. 在 **“选择数据源类型”** 页上选择 **“数据库”** ，然后单击 **“下一步”**。
 
-4. 在“选择数据库模型”页面上，确认已指定“数据集”，然后单击“下一步”。
+4. 在“选择数据库模型”页面上，确认已指定“数据集”，然后单击“下一步”************。
 
-5. 在“选择数据连接”页面上，执行以下操作之一：
+5. 在 "**选择你的数据连接**" 页上，执行下列操作之一：
 
     - 如果下拉列表中包含到 Northwind 示例数据库的数据连接，请选择该连接。
 
-    - 选择“新建连接”以启动“添加/修改连接”对话框。
+    - 选择“新建连接”以启动“添加/修改连接”对话框********。
 
-6. 如果数据库需要密码并且已启用含有敏感数据的选项，请选择该选项，然后单击“下一步”。
+6. 如果数据库需要密码并且已启用含有敏感数据的选项，请选择该选项，然后单击“下一步”****。
 
 7. 在 "将**连接字符串保存到应用程序配置文件**" 页上，单击 "**下一步**"。
 
-8. 在“选择数据库对象”页上，展开“表”节点。
+8. 在“选择数据库对象”页上，展开“表”节点********。
 
-9. 选择“Customers”和“Orders”表，然后单击“完成”。
+9. 选择“Customers”和“Orders”表，然后单击“完成”************。
 
-     将“NorthwindDataSet”添加到项目中，然后“数据源”窗口中将显示“Customers”和“Orders”表。
+     将“NorthwindDataSet”添加到项目中，然后“数据源”窗口中将显示“Customers”和“Orders”表****************。
 
 ## <a name="create-the-first-form-form1"></a>创建第一个窗体（Form1）
 
-通过将“Customers”节点从“数据源”窗口拖到窗体上，可以创建数据绑定网格（<xref:System.Windows.Forms.DataGridView> 控件）。
+通过将“Customers”节点从“数据源”窗口拖到窗体上，可以创建数据绑定网格（<xref:System.Windows.Forms.DataGridView> 控件）********。
 
 ### <a name="to-create-a-data-bound-grid-on-the-form"></a>在窗体上创建数据绑定网格
 
-- 将主“Customers”节点从“数据源”窗口拖到“Form1”上。
+- 将主“Customers”节点从“数据源”窗口拖到“Form1”上************。
 
-     “Form1”上显示用于导航记录的 <xref:System.Windows.Forms.DataGridView> 和工具栏 (<xref:System.Windows.Forms.BindingNavigator>)。 组件栏中显示[“NorthwindDataSet”](../data-tools/dataset-tools-in-visual-studio.md)、CustomersTableAdapter、<xref:System.Windows.Forms.BindingSource> 和 <xref:System.Windows.Forms.BindingNavigator>。
+     “Form1”上显示用于导航记录的 <xref:System.Windows.Forms.DataGridView> 和工具栏 (<xref:System.Windows.Forms.BindingNavigator>)****。 组件栏中显示[“NorthwindDataSet”](../data-tools/dataset-tools-in-visual-studio.md)、CustomersTableAdapter、<xref:System.Windows.Forms.BindingSource> 和 <xref:System.Windows.Forms.BindingNavigator>。
 
 ## <a name="create-the-second-form"></a>创建第二个窗体
 
 创建要将数据传递到的第二个窗体。
 
-1. 从“项目”菜单中，选择“添加 Windows 窗体”。
+1. 从“项目”**** 菜单中，选择“添加 Windows 窗体”****。
 
-2. 保留“Form2”的默认名称，然后单击“添加”。
+2. 保留“Form2”的默认名称，然后单击“添加”********。
 
-3. 将主“Orders”节点从“数据源”窗口拖到“Form2”上。
+3. 将主“Orders”节点从“数据源”窗口拖到“Form2”上************。
 
-     “Form2”上显示用于导航记录的 <xref:System.Windows.Forms.DataGridView> 和工具栏 (<xref:System.Windows.Forms.BindingNavigator>)。 组件栏中显示[“NorthwindDataSet”](../data-tools/dataset-tools-in-visual-studio.md)、CustomersTableAdapter、<xref:System.Windows.Forms.BindingSource> 和 <xref:System.Windows.Forms.BindingNavigator>。
+     “Form2”上显示用于导航记录的 <xref:System.Windows.Forms.DataGridView> 和工具栏 (<xref:System.Windows.Forms.BindingNavigator>)****。 组件栏中显示[“NorthwindDataSet”](../data-tools/dataset-tools-in-visual-studio.md)、CustomersTableAdapter、<xref:System.Windows.Forms.BindingSource> 和 <xref:System.Windows.Forms.BindingNavigator>。
 
-4. 从组件栏删除“OrdersBindingNavigator”。
+4. 从组件栏删除“OrdersBindingNavigator”****。
 
-     “OrdersBindingNavigator”从“Form2”中消失。
+     “OrdersBindingNavigator”从“Form2”中消失********。
 
 ## <a name="add-a-tableadapter-query"></a>添加 TableAdapter 查询
 
 向 Form2 添加一个 TableAdapter 查询，以便在 Form1 上为所选客户加载订单。
 
-1. 双击“解决方案资源管理器”中的“NorthwindDataSet.xsd”文件。
+1. 双击“解决方案资源管理器”中的“NorthwindDataSet.xsd”文件********。
 
-2. 右键单击“OrdersTableAdapter”，然后选择“添加查询”。
+2. 右键单击“OrdersTableAdapter”，然后选择“添加查询”********。
 
-3. 保留“使用 SQL 语句”的默认选项，然后单击“下一步”。
+3. 保留“使用 SQL 语句”的默认选项，然后单击“下一步”********。
 
-4. 保留“选择返回行”的默认选项，然后单击“下一步”。
+4. 保留“选择返回行”的默认选项，然后单击“下一步”********。
 
 5. 向查询添加 WHERE 子句，根据 `CustomerID` 返回 `Orders`。 查询应当类似于：
 
@@ -152,30 +152,30 @@ ms.locfileid: "75586362"
     > [!NOTE]
     > 验证数据库的参数语法是否正确。 例如，在 Microsoft Access 中，WHERE 子句应当如下：`WHERE CustomerID = ?`。
 
-6. 单击 **“下一步”** 。
+6. 单击“下一步”****。
 
-7. 对于 " **DataTableMethod 名称**"，请键入 `FillByCustomerID`。
+7. 对于 " **DataTableMethod 名称**"，请键入 `FillByCustomerID` 。
 
-8. 清除“返回 DataTable”选项，然后单击“下一步”。
+8. 清除“返回 DataTable”选项，然后单击“下一步”********。
 
-9. 单击 **“完成”** 。
+9. 单击“完成”。
 
 ## <a name="create-a-method-on-form2-to-pass-data-to"></a>在 Form2 上创建用于将数据传递到的方法
 
-1. 右键单击“Form2”，然后选择“查看代码”，在“代码编辑器”中打开“Form2”。
+1. 右键单击“Form2”，然后选择“查看代码”，在“代码编辑器”中打开“Form2”****************。
 
-2. 使用 `Form2_Load` 方法后，将以下代码添加到“Form2”：
+2. 使用 `Form2_Load` 方法后，将以下代码添加到“Form2”****：
 
      [!code-vb[VbRaddataDisplaying#1](../data-tools/codesnippet/VisualBasic/pass-data-between-forms_1.vb)]
      [!code-csharp[VbRaddataDisplaying#1](../data-tools/codesnippet/CSharp/pass-data-between-forms_1.cs)]
 
 ## <a name="create-a-method-on-form1-to-pass-data-and-display-form2"></a>在 Form1 上创建方法以传递数据并显示 Form2
 
-1. 在“Form1”中，右键单击“Customer”数据网格，然后单击“属性”。
+1. 在“Form1”中，右键单击“Customer”数据网格，然后单击“属性”********。
 
-2. 在“属性”窗口中，单击“事件”。
+2. 在“属性”窗口中，单击“事件”********。
 
-3. 双击“CellDoubleClick”事件。
+3. 双击“CellDoubleClick”事件****。
 
      将显示代码编辑器。
 
@@ -188,7 +188,7 @@ ms.locfileid: "75586362"
 
 - 按 **F5** 运行该应用程序。
 
-- 双击“Form1”中的客户记录，打开包含该客户订单的“Form2”。
+- 双击“Form1”中的客户记录，打开包含该客户订单的“Form2”********。
 
 ## <a name="next-steps"></a>后续步骤
 

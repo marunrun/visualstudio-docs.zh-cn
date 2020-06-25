@@ -1,19 +1,19 @@
 ---
 title: 一个或多个所选数据库对象返回与目标类的架构不匹配的架构
 ms.date: 11/04/2016
-ms.topic: reference
+ms.topic: error-reference
 ms.assetid: 3794e88b-4d3d-4e7a-ade6-8208eabe3eae
 author: ghogen
 ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 24729d319d35ee400248a3f961d435e28eb38770
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.openlocfilehash: c4bba0b227321e30f86aa552add245195b34e3b5
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76113626"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85281898"
 ---
 # <a name="one-or-more-selected-database-objects-return-a-schema-that-does-not-match-the-schema-of-the-target-class"></a>一个或多个所选数据库对象返回与目标类的架构不匹配的架构
 
@@ -23,9 +23,9 @@ ms.locfileid: "76113626"
 
 ## <a name="to-correct-this-error"></a>更正此错误
 
-1. 单击“确定”关闭对话框。
+1. 单击“确定”关闭对话框****。
 
-2. 选择一个数据库对象，该对象返回的数据与目标类（要在 O/R 设计器中将该数据库对象拖动到它上面的类）的架构相匹配。
+2. 选择一个数据库对象，该对象返回与目标类的架构匹配的数据（ **O/R 设计器**中要将数据库对象放到的类）。
 
 ## <a name="see-also"></a>另请参阅
 
