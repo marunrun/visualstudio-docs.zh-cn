@@ -9,12 +9,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 29c74f74bbee19e414b3ee32948f3ca5338e8d53
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: b87ed03c8f513f6a9a750186d8763e56061bed98
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "82921153"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85350818"
 ---
 # <a name="draw-shapes-and-paths"></a>绘制形状和路径
 
@@ -86,7 +86,7 @@ ms.locfileid: "82921153"
 
 ## <a name="convert-a-shape-to-a-path"></a>将形状转换为路径
 
-若要采用与修改路径相同的方式来修改形状，请将形状转换为路径。 选择形状，然后选择 "**格式化** > **路径** > " "**转换为路径**"。
+若要采用与修改路径相同的方式来修改形状，请将形状转换为路径。 选择形状，然后选择 "**格式化**  >  **路径**" "  >  **转换为路径**"。
 
 **观看短片：** ![配置已安装的功能](../designers/media/bldadminconsoleinitialconfigicon.png) [使用路径：将形状转换为路径](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=147)。
 
@@ -99,11 +99,14 @@ ms.locfileid: "82921153"
 
 ![合并路径](../designers/media/2df17a5d-a338-4ef4-96c5-dae51cc1ca8a.png)
 
-|||||
-|-|-|-|-|
-|![合并之前的两个形状](../designers/media/b1_1.png)|合并之前的两个形状|![Intersect](../designers/media/b1_4.png)|Intersect|
-|![相并](../designers/media/b1_2.png)|相并|![相斥](../designers/media/b1_5.png)|排除重叠|
-|![除](../designers/media/b1_3.png)|除|![减](../designers/media/b1_6.png)|减|
+|Number|操作|
+|-|-|
+|![合并之前的两个形状](../designers/media/b1_1.png)|合并之前的两个形状|
+|![相并](../designers/media/b1_2.png)|相并|
+|![除](../designers/media/b1_3.png)|除|
+|![Intersect](../designers/media/b1_4.png)|Intersect|
+|![相斥](../designers/media/b1_5.png)|排除重叠|
+|![减](../designers/media/b1_6.png)|减|
 
 **观看短片：** ![配置已安装的功能](../designers/media/bldadminconsoleinitialconfigicon.png) [使用路径：合并路径](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=195)。
 
