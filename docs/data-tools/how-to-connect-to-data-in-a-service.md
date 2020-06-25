@@ -1,7 +1,7 @@
 ---
 title: 如何：连接到服务中的数据
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - data [Visual Studio], connecting to web services
 - data sources, creating from web services
@@ -16,12 +16,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 01ad796faa8c722ba088143da814305844136aa3
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 0b49840a2190abfd223edf5643b8d70da1a59d6b
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75586518"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85282223"
 ---
 # <a name="how-to-connect-to-data-in-a-service"></a>如何：连接到服务中的数据
 
@@ -30,13 +30,13 @@ ms.locfileid: "75586518"
 完成向导后，服务引用将添加到项目中，并在 "[数据源" 窗口](add-new-data-sources.md#data-sources-window)中立即可用。
 
 > [!NOTE]
-> “数据源”窗口中显示的项取决于该服务返回的信息。 某些服务可能没有为“数据源配置”向导创建可绑定的对象提供足够的信息。 例如，如果服务返回非类型化数据集，则在完成该向导时，"**数据源**" 窗口中不会显示任何项。 这是因为非类型化数据集不提供架构，因此向导没有足够的信息来创建数据源。
+> “数据源”窗口中显示的项取决于该服务返回的信息****。 某些服务可能没有为“数据源配置”向导创建可绑定的对象提供足够的信息****。 例如，如果服务返回非类型化数据集，则在完成该向导时，"**数据源**" 窗口中不会显示任何项。 这是因为非类型化数据集不提供架构，因此向导没有足够的信息来创建数据源。
 
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]
 
 ## <a name="to-connect-your-application-to-a-service"></a>将应用程序连接到服务
 
-1. 在 **“数据”** 菜单上，单击 **“添加新数据源”** 。
+1. 在 **“数据”** 菜单上，单击 **“添加新数据源”**。
 
 2. 选择 "**选择数据源类型**" 页上的 "**服务**"，然后单击 "**下一步**"。
 
@@ -49,9 +49,9 @@ ms.locfileid: "75586518"
 
 5. 单击 **"确定"** 将服务引用添加到项目。
 
-6. 单击 **“完成”** 。
+6. 单击“完成”。
 
-     数据源随即添加到“数据源”窗口中。
+     数据源随即添加到“数据源”窗口中****。
 
 ## <a name="next-steps"></a>后续步骤
 

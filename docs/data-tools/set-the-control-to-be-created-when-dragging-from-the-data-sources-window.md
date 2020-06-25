@@ -1,7 +1,7 @@
 ---
 title: 设置从 "数据源" 窗口拖动时要创建的控件
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - Data Sources Window, select controls
 - Windows Forms, displaying data
@@ -13,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 5193f3e3a0a1f4a06cc4830036ecf63806a1dbee
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 8f5a3cf2d1f34ca9a3d0c2918a8f3f0a3e05260f
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75586180"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85281534"
 ---
 # <a name="set-the-control-to-be-created-when-dragging-from-the-data-sources-window"></a>设置从“数据源”窗口中拖动时要创建的控件
 
@@ -37,7 +37,7 @@ ms.locfileid: "75586180"
 2. 在 "**数据源**" 窗口中，选择表示要设置的数据表或对象的项。
 
    > [!TIP]
-   > 如果 "**数据源**" 窗口未打开，可以通过选择 "**视图**" > **其他 Windows** > **数据源**打开它。
+   > 如果 "**数据源**" 窗口未打开，可以通过选择 "**查看**  >  **其他 Windows**  >  **数据源**" 来打开它。
 
 3. 单击该项的下拉菜单，然后在菜单中单击以下项之一：
 
