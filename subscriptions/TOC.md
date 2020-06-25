@@ -74,6 +74,7 @@
 ### [超级管理员和管理人员](admin-roles.md)
 ### [设置协议首选项](admin-prefs.md)
 ### [概述](using-admin-portal.md)
+### [添加月度订阅](add-monthly-subs.md)
 ### 分配订阅
 #### [添加单用户](assign-license.md)
 #### [添加多个用户](assign-license-bulk.md)
