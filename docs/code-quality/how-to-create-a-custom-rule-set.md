@@ -1,7 +1,7 @@
 ---
 title: 创建自定义代码分析规则集
 ms.date: 11/02/2018
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.codeanalysis.addremoverulesets
 helpviewer_keywords:
@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b9f23b2badb40effd4222e21ab9e67b2907513c2
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 81462db07941c73b847c009ef8353b00d28fff4f
+ms.sourcegitcommit: 48e93538f1e352fc1f972b642bb5fcce2f6834a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75587545"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85371906"
 ---
 # <a name="customize-a-rule-set"></a>自定义规则集
 
@@ -24,7 +24,7 @@ ms.locfileid: "75587545"
 
 ## <a name="create-a-custom-rule-set-from-an-existing-rule-set"></a>基于现有规则集创建自定义规则集
 
-若要创建自定义规则集，可以在**规则集编辑器**中打开内置规则集。 在此处，你可以添加或删除特定的规则，并且可以更改违反规则时发生的操作&mdash;例如，显示警告或错误。
+若要创建自定义规则集，可以在**规则集编辑器**中打开内置规则集。 在此处，你可以添加或删除特定的规则，并且可以更改违反规则时发生的操作 &mdash; （例如，显示警告或错误）。
 
 1. 在**解决方案资源管理器**中，右键单击项目，然后选择 "**属性**"。
 
@@ -46,7 +46,7 @@ ms.locfileid: "75587545"
 
      \- 或 -
 
-   - 选择 **\<浏览 >** ，以指定不在列表中的现有规则集。
+   - 选择 **\<Browse>** 此项可指定列表中不存在的现有规则集。
 
 4. 选择 "**打开**" 以在规则集编辑器中显示规则。
 
@@ -57,7 +57,7 @@ ms.locfileid: "75587545"
 
 您可以通过 "**新建文件**" 对话框创建新的规则集文件：
 
-1. 选择 "**文件**" > **新建** > **文件**，或按**Ctrl**+**N**。
+1. 选择**File**  >  **New**  >  "文件" "新建**文件**"，或按**Ctrl** + **N**。
 
 2. 在 "**新建文件**" 对话框中，选择左侧的 "**常规**" 类别，然后选择 "**代码分析规则集**"。
 
@@ -76,13 +76,13 @@ ms.locfileid: "75587545"
 
 ::: moniker range="vs-2017"
 
-3. 选择\<选择 "**运行此规则集** **> 多个规则集**"。
+3. 选择 **\<Choose multiple rule sets>** "**运行此规则集**"。
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-3. 选择\<从**活动规则**中**选择多个规则集 >** 。
+3. **\<Choose multiple rule sets>** 从**活动规则**中选择。
 
 ::: moniker-end
 
@@ -111,7 +111,7 @@ ms.locfileid: "75587545"
 
 - 如果在具有*相同*严重性的规则集中多次列出相同的规则，则可能会在**错误列表**中看到以下警告：
 
-   **CA0063：无法加载规则集文件 "\[你的]. 规则集" 或其依赖规则集文件之一。此文件不符合规则集架构。**
+   **CA0063：无法加载规则集文件 " \[ 你的]. 规则集" 或其依赖规则集文件之一。此文件不符合规则集架构。**
 
 - 如果规则集包括使用**包含**标记的子规则集，并且子规则和父规则集都列出相同的规则但严重性不同，则父规则集中的严重性优先。 例如：
 
@@ -136,7 +136,7 @@ ms.locfileid: "75587545"
 
 ## <a name="name-and-description"></a>名称和说明
 
-若要更改编辑器中打开的规则集的显示名称，请在菜单栏上选择 "**视图** > 属性"**窗口**，打开 "**属性**" 窗口。 在 "**名称**" 框中输入显示名称。 还可以输入规则集的说明。
+若要更改编辑器中打开的规则集的显示名称，请在菜单栏上选择 "**查看**属性" 窗口以打开 "**属性**" 窗口  >  **Properties Window** 。 在 "**名称**" 框中输入显示名称。 还可以输入规则集的说明。
 
 ## <a name="next-steps"></a>后续步骤
 
@@ -145,7 +145,7 @@ ms.locfileid: "75587545"
 > [!div class="nextstepaction"]
 > [修改规则集编辑器中的规则](../code-quality/working-in-the-code-analysis-rule-set-editor.md)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [如何：配置托管代码项目的代码分析](../code-quality/how-to-configure-code-analysis-for-a-managed-code-project.md)
 - [代码分析规则集参考](../code-quality/rule-set-reference.md)

@@ -1,7 +1,7 @@
 ---
 title: 如何：自定义代码分析字典
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - code analysis dictionary
 - custom dictionary, code analysis
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c3fbcbbfd52e4715dc6ee063ae0bae905eb3e65a
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 01c3ad83cea8dc1a28a817677be102c87ebc8f87
+ms.sourcegitcommit: 48e93538f1e352fc1f972b642bb5fcce2f6834a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75587519"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85371867"
 ---
 # <a name="how-to-customize-the-code-analysis-dictionary"></a>如何：自定义代码分析字典
 
@@ -27,7 +27,7 @@ ms.locfileid: "75587519"
 
 ## <a name="to-create-a-custom-dictionary"></a>创建自定义字典
 
-创建名为**CustomDictionary**的文件。
+创建一个名为**CustomDictionary.xml**的文件。
 
 使用以下 XML 结构定义自定义字词：
 
@@ -66,15 +66,15 @@ ms.locfileid: "75587519"
 
 - [字典/字词/无法识别/Word](../code-quality/how-to-customize-the-code-analysis-dictionary.md#BKMK_DictionaryWordsUnrecognizedWord)
 
-- [Dictionary/Words/Deprecated/Term[@PreferredAlternate]](../code-quality/how-to-customize-the-code-analysis-dictionary.md#BKMK_DictionaryWordsDeprecatedTermPreferredAlternate)
+- [字典/字词/弃用/字词 [ @PreferredAlternate ]](../code-quality/how-to-customize-the-code-analysis-dictionary.md#BKMK_DictionaryWordsDeprecatedTermPreferredAlternate)
 
-- [字典/字词/复合/字词 [@CompoundAlternate]](../code-quality/how-to-customize-the-code-analysis-dictionary.md#BKMK_DictionaryWordsCompoundTermCompoundAlternate)
+- [字典/字词/复合/字词 [ @CompoundAlternate ]](../code-quality/how-to-customize-the-code-analysis-dictionary.md#BKMK_DictionaryWordsCompoundTermCompoundAlternate)
 
-- [Dictionary/Words/DiscreteExceptions/Term](../code-quality/how-to-customize-the-code-analysis-dictionary.md#BKMK_DictionaryWordsDiscreteExceptionsTerm)
+- [字典/字词/DiscreteExceptions/字词](../code-quality/how-to-customize-the-code-analysis-dictionary.md#BKMK_DictionaryWordsDiscreteExceptionsTerm)
 
-- [Dictionary/Acronyms/CasingExceptions/Acronym](../code-quality/how-to-customize-the-code-analysis-dictionary.md#BKMK_DictionaryAcronymsCasingExceptionsAcronym)
+- [字典/缩写词/CasingExceptions/缩写](../code-quality/how-to-customize-the-code-analysis-dictionary.md#BKMK_DictionaryAcronymsCasingExceptionsAcronym)
 
-### <a name="BKMK_DictionaryWordsRecognizedWord"></a>字典/字词/识别/字
+### <a name="dictionarywordsrecognizedword"></a><a name="BKMK_DictionaryWordsRecognizedWord"></a>字典/字词/识别/字
 
 若要在代码分析标识为正确拼写的字词列表中包括字词，请将该字词添加为字典/字词/识别/Word 元素的内部文本。 字典/字词/识别/Word 元素中的字词不区分大小写。
 
@@ -95,21 +95,21 @@ ms.locfileid: "75587519"
 
 字典/字词/识别的节点中的字词适用于以下代码分析规则：
 
-- [CA1701：资源字符串复合词应采用正确的大小写](../code-quality/ca1701.md)
+- [CA1701:资源字符串组合词应采用正确的大小写](../code-quality/ca1701.md)
 
-- [CA1702：复合词应采用正确的大小写](../code-quality/ca1702.md)
+- [CA1702:组合词应采用正确的大小写](../code-quality/ca1702.md)
 
-- [CA1703：资源字符串应正确拼写](../code-quality/ca1703.md)
+- [CA1703:资源字符串应正确拼写](../code-quality/ca1703.md)
 
-- [CA1704：标识符应正确拼写](../code-quality/ca1704.md)
+- [CA1704:标识符应正确拼写](../code-quality/ca1704.md)
 
-- [CA1709：标识符的大小写应当正确](../code-quality/ca1709.md)
+- [CA1709:标识符的大小写应当正确](../code-quality/ca1709.md)
 
-- [CA1726：使用首选词条](../code-quality/ca1726.md)
+- [CA1726:使用首选词条](../code-quality/ca1726.md)
 
-- [CA2204：应正确拼写文本](../code-quality/ca2204.md)
+- [CA2204:文字应正确拼写](../code-quality/ca2204.md)
 
-### <a name="BKMK_DictionaryWordsUnrecognizedWord"></a>字典/字词/无法识别/Word
+### <a name="dictionarywordsunrecognizedword"></a><a name="BKMK_DictionaryWordsUnrecognizedWord"></a>字典/字词/无法识别/Word
 
 若要从代码分析标识为正确拼写的字词列表中排除字词，请添加要排除为字典/字词/无法识别/Word 元素的内部文本的字词。 字典/字词/无法识别/Word 元素中的词不区分大小写。
 
@@ -130,21 +130,21 @@ ms.locfileid: "75587519"
 
 字典/字词/无法识别的节点中的字词应用于以下代码分析规则：
 
-- [CA1701：资源字符串复合词应采用正确的大小写](../code-quality/ca1701.md)
+- [CA1701:资源字符串组合词应采用正确的大小写](../code-quality/ca1701.md)
 
-- [CA1702：复合词应采用正确的大小写](../code-quality/ca1702.md)
+- [CA1702:组合词应采用正确的大小写](../code-quality/ca1702.md)
 
-- [CA1703：资源字符串应正确拼写](../code-quality/ca1703.md)
+- [CA1703:资源字符串应正确拼写](../code-quality/ca1703.md)
 
-- [CA1704：标识符应正确拼写](../code-quality/ca1704.md)
+- [CA1704:标识符应正确拼写](../code-quality/ca1704.md)
 
-- [CA1709：标识符的大小写应当正确](../code-quality/ca1709.md)
+- [CA1709:标识符的大小写应当正确](../code-quality/ca1709.md)
 
-- [CA1726：使用首选词条](../code-quality/ca1726.md)
+- [CA1726:使用首选词条](../code-quality/ca1726.md)
 
-- [CA2204：应正确拼写文本](../code-quality/ca2204.md)
+- [CA2204:文字应正确拼写](../code-quality/ca2204.md)
 
-### <a name="BKMK_DictionaryWordsDeprecatedTermPreferredAlternate"></a>字典/字词/弃用/字词 [@PreferredAlternate]
+### <a name="dictionarywordsdeprecatedtermpreferredalternate"></a><a name="BKMK_DictionaryWordsDeprecatedTermPreferredAlternate"></a>字典/字词/弃用/字词 [ @PreferredAlternate ]
 
 若要在代码分析识别为不推荐使用的字词列表中包括字词，请将该字词添加为字典/字词/弃用/字词元素的内部文本。 弃用的字词是拼写正确但不应使用的单词。
 
@@ -171,17 +171,17 @@ ms.locfileid: "75587519"
 
 字典/字词/弃用节点中的词条适用于以下代码分析规则：
 
-- [CA1701：资源字符串复合词应采用正确的大小写](../code-quality/ca1701.md)
+- [CA1701:资源字符串组合词应采用正确的大小写](../code-quality/ca1701.md)
 
-- [CA1702：复合词应采用正确的大小写](../code-quality/ca1702.md)
+- [CA1702:组合词应采用正确的大小写](../code-quality/ca1702.md)
 
-- [CA1703：资源字符串应正确拼写](../code-quality/ca1703.md)
+- [CA1703:资源字符串应正确拼写](../code-quality/ca1703.md)
 
-- [CA1704：标识符应正确拼写](../code-quality/ca1704.md)
+- [CA1704:标识符应正确拼写](../code-quality/ca1704.md)
 
-- [CA1726：使用首选词条](../code-quality/ca1726.md)
+- [CA1726:使用首选词条](../code-quality/ca1726.md)
 
-### <a name="BKMK_DictionaryWordsCompoundTermCompoundAlternate"></a>字典/字词/复合/字词 [@CompoundAlternate]
+### <a name="dictionarywordscompoundtermcompoundalternate"></a><a name="BKMK_DictionaryWordsCompoundTermCompoundAlternate"></a>字典/字词/复合/字词 [ @CompoundAlternate ]
 
 内置字典将一些字词标识为单个离散术语，而不是复合字词。 若要在代码分析识别为组合词并指定正确的字词大小写的字词列表中包括字词，请将该字词添加为字典/字词/复合/字词元素的内部文本。 在 Term 元素的 CompoundAlternate 属性中，通过将单个单词的首字母大写（Pascal 大小写）来指定构成该复合字词的各个单词。 请注意，在内部文本中指定的术语会自动添加到 Dictionary/Words/DiscreteExceptions 列表中。
 
@@ -206,15 +206,15 @@ ms.locfileid: "75587519"
 
 字典/字词/复合节点中的词条适用于以下代码分析规则：
 
-- [CA1701：资源字符串复合词应采用正确的大小写](../code-quality/ca1701.md)
+- [CA1701:资源字符串组合词应采用正确的大小写](../code-quality/ca1701.md)
 
-- [CA1702：复合词应采用正确的大小写](../code-quality/ca1702.md)
+- [CA1702:组合词应采用正确的大小写](../code-quality/ca1702.md)
 
-- [CA1703：资源字符串应正确拼写](../code-quality/ca1703.md)
+- [CA1703:资源字符串应正确拼写](../code-quality/ca1703.md)
 
-- [CA1704：标识符应正确拼写](../code-quality/ca1704.md)
+- [CA1704:标识符应正确拼写](../code-quality/ca1704.md)
 
-### <a name="BKMK_DictionaryWordsDiscreteExceptionsTerm"></a>字典/字词/DiscreteExceptions/字词
+### <a name="dictionarywordsdiscreteexceptionsterm"></a><a name="BKMK_DictionaryWordsDiscreteExceptionsTerm"></a>字典/字词/DiscreteExceptions/字词
 
 若要在由复合单词的大小写规则检查字词时，将代码分析识别为一个离散单词的字词列表中的字词，请将该字词添加为 Dictionary/Words/DiscreteExceptions/Term 元素的内部文本。 字典/字词/DiscreteExceptions/字词元素中的词不区分大小写。
 
@@ -235,11 +235,11 @@ ms.locfileid: "75587519"
 
 字典/字词/DiscreteExceptions 节点中的字词适用于以下代码分析规则：
 
-- [CA1701：资源字符串复合词应采用正确的大小写](../code-quality/ca1701.md)
+- [CA1701:资源字符串组合词应采用正确的大小写](../code-quality/ca1701.md)
 
-- [CA1702：复合词应采用正确的大小写](../code-quality/ca1702.md)
+- [CA1702:组合词应采用正确的大小写](../code-quality/ca1702.md)
 
-### <a name="BKMK_DictionaryAcronymsCasingExceptionsAcronym"></a>字典/缩写词/CasingExceptions/缩写
+### <a name="dictionaryacronymscasingexceptionsacronym"></a><a name="BKMK_DictionaryAcronymsCasingExceptionsAcronym"></a>字典/缩写词/CasingExceptions/缩写
 
 若要在代码分析标识为正确拼写的字词列表中包含首字母缩写，并指示用复合词的大小写规则检查术语的首字母缩写，请将该词添加为字典/首字母缩写/CasingExceptions/缩写元素的内部文本。 字典/缩写词/CasingExceptions/缩写元素中的首字母缩写词区分大小写。
 
@@ -260,9 +260,9 @@ ms.locfileid: "75587519"
 
 字典/首字母缩写/CasingExceptions 节点中的词条适用于以下代码分析规则：
 
-- [CA1709：标识符的大小写应当正确](../code-quality/ca1709.md)
+- [CA1709:标识符的大小写应当正确](../code-quality/ca1709.md)
 
-## <a name="BKMK_ToApplyACustomDictionaryToAProject"></a>向项目应用自定义字典
+## <a name="to-apply-a-custom-dictionary-to-a-project"></a><a name="BKMK_ToApplyACustomDictionaryToAProject"></a>向项目应用自定义字典
 
 1. 在**解决方案资源管理器**中，使用以下过程之一：
 
@@ -270,7 +270,7 @@ ms.locfileid: "75587519"
 
 3. 若要添加两个或多个项目之间共享的字典，请在 "**添加现有项**" 对话框中找到要共享的文件，单击 "**添加**" 按钮上的向下箭头，然后单击 "**添加为链接**"。
 
-4. 在**解决方案资源管理器**中，右键单击**CustomDictionary**文件名称，然后单击 "**属性**"。
+4. 在**解决方案资源管理器**中，右键单击**CustomDictionary.xml**的文件名，然后单击 "**属性**"。
 
 5. 从 "**生成操作**" 列表中，选择 " **CodeAnalysisDictionary**"。
 
