@@ -1,11 +1,13 @@
 - name: 分析文档
   href: index.yml
 - name: 概述
-  href: profiling-overview.md
-- name: 快速入门
   items:
     - name: 初探分析
       href: profiling-feature-tour.md
+    - name: 运行带/不带调试器的分析工具
+      href: running-profiling-tools-with-or-without-the-debugger.md
+- name: 快速入门
+  items:
     - name: 分析 CPU 使用情况（托管）
       href: quickstart-cpu-usage-managed.md
     - name: 分析 CPU 使用情况（本机）
@@ -20,12 +22,22 @@
       href: memory-usage.md
 - name: 概念
   items:
-    - name: 运行带/不带调试器的分析工具
-      href: running-profiling-tools-with-or-without-the-debugger.md
+    - name: 了解性能收集方法
+      href: understanding-performance-collection-methods-perf-profiler.md
+    - name: 优化探查器设置
+      href: optimize-profiler-settings.md
+    - name: 同时使用多个探查器工具
+      href: use-multiple-profiler-tools-simultaneously.md
 - name: 操作指南
   items:
-    - name: 使用 PerfTip
+    - name: 性能提示
       href: perftips.md
+    - name: .NET Async
+      href: analyze-async.md
+    - name: 数据库
+      href: analyze-database.md
+    - name: 事件查看器
+      href: events-viewer.md
     - name: CPU 使用率
       href: cpu-usage.md
     - name: 内存使用率
