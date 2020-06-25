@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c0e26a889c65b80d5a83cc6b2b3a726aa9ad2319
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 8b1a9d109b833d17783beb39c5f34cf6b9ed3274
+ms.sourcegitcommit: 60315ba949aca1ff06fe431dbcbcfb0fedc1e8d3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84184453"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85292888"
 ---
 # <a name="code-metrics-values"></a>代码度量值
 
@@ -40,7 +40,7 @@ ms.locfileid: "84184453"
 
 - **源代码行**数-表示源文件中存在的源代码行的确切数目，包括空行。 在 Visual Studio 2019 版本16.4 和 CodeAnalysis （2.9.5）中开始提供此指标。
 
-- **可执行代码的行**数-表示可执行代码行或操作的大致数目。 这是可执行代码中的操作数。 此指标在 Visual Studio 2019 版本16.4 和 CodeAnalysis. Dc （2.9.5）中启动。 值通常与上一个度量值（即在旧模式下使用的基于 MSIL 指令的度量值的**行**）接近。
+- **可执行代码的行**数-表示可执行代码行或操作的大致数目。 这是可执行代码中的操作数。 在 Visual Studio 2019 版本16.4 和 CodeAnalysis （2.9.5）中开始提供此指标。 值通常与上一个度量值（即在旧模式下使用的基于 MSIL 指令的度量值的**行**）接近。
 ::: moniker-end
 ::: moniker range="vs-2017"
 

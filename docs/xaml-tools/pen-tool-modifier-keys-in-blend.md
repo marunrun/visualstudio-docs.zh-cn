@@ -2,19 +2,19 @@
 title: “笔”工具修改键
 titleSuffix: Blend for Visual Studio
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: c3ab14c6-a320-46db-a6b3-7fd1ca261587
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 95a00fe4b87a0a9e1ee55497b84c59536d66d285
-ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
+ms.openlocfilehash: 2e3f025e31a36edebdd318435d233efd2aab4857
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "82921339"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85328373"
 ---
 # <a name="pen-tool-modifier-keys-in-blend-for-visual-studio"></a>Blend for Visual Studio 中的“笔”工具修改键
 
@@ -26,7 +26,7 @@ ms.locfileid: "82921339"
 |创建一个点来开始绘制曲线线段|单击以创建新点，然后在松开鼠标按钮前拖动以调整切线图柄|![创建一个点来开始绘制曲线线段](../designers/media/0bfb1b71-80ac-4ad4-aed8-40e09f8b7ab8.png)<br /><br /> “钢笔”指针|
 |在没有平滑限制的情况下调整最后的切线，使您生成尖锐的角|单击以创建新点，然后在松开鼠标按钮前按**Alt**|![在没有平滑限制的情况下调整最后一根切线](../designers/media/317e5475-b70c-489f-9477-110a98639ade.png)<br /><br /> “钢笔”调整指针|
 |拆分最后一个切线，以便切线终结点独立操作，使您生成尖锐的角|单击以创建新点，然后在松开鼠标按钮前按住**Alt**并拖动|![拆分最后一根切线，使切线终点独立存在](../designers/media/317e5475-b70c-489f-9477-110a98639ade.png)<br /><br /> “钢笔”调整指针|
-|以 15 度的增量将切线终结点绕新点移动|单击以创建新点，然后在松开鼠标按钮前按住**Shift**+**Alt**并拖动|![以 15 度的增量将切线终结点绕新点移动](../designers/media/317e5475-b70c-489f-9477-110a98639ade.png)<br /><br /> “钢笔”调整指针|
+|以 15 度的增量将切线终结点绕新点移动|单击以创建新点，然后**Shift** + 在松开鼠标按钮前按住 Shift**Alt**并拖动|![以 15 度的增量将切线终结点绕新点移动](../designers/media/317e5475-b70c-489f-9477-110a98639ade.png)<br /><br /> “钢笔”调整指针|
 |将一个终结点处的切线减小为零长度|单击该终结点|![将一个终结点处的切线减小为零长度](../designers/media/317e5475-b70c-489f-9477-110a98639ade.png)<br /><br /> “钢笔”调整指针|
 |向现有路径添加新点|单击您需要新点的位置处的路径|![向现有路径添加新点](../designers/media/b004ad5a-33a4-46ae-81c0-20be0d819332.png)<br /><br /> “钢笔”插入指针|
 |从路径删除一个点|悬浮在现有点上并单击|![删除路径中的点](../designers/media/08a64b78-f3df-4730-8169-c56b5631b071.png)<br /><br /> “钢笔”删除指针|

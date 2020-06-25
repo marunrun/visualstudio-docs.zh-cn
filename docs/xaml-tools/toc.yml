@@ -2,6 +2,8 @@
   href: index.yml
 - name: XAML 概述
   href: xaml-overview.md
+- name: XAML 代码编辑器
+  href: xaml-code-editor.md
 - name: XAML 设计器
   items:
     - name: 在 Visual Studio 和 Blend 中设计 XAML

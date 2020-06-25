@@ -144,19 +144,19 @@
       href: ide/quickstart-python.md
     - name: Node.js：创建 Web 应用
       href: ide/quickstart-nodejs.md
-    - name: 'F#：创建 Web 服务'
+    - name: F#：创建 Web 服务
       href: ide/quickstart-fsharp.md
-    - name: 'C#：创建 Web 应用'
+    - name: C#：创建 Web 应用
       href: ide/quickstart-aspnet-core.md
-    - name: 'C#：创建控制台应用'
+    - name: C#：创建控制台应用
       href: ide/quickstart-csharp-console.md
     - name: Visual Basic：创建控制台应用
       href: ide/quickstart-visual-basic-console.md
 - name: 教程
   items:
-    - name: 'C#'
+    - name: C#
       href: get-started/csharp/
-    - name: 'F#'
+    - name: F#
       href: /dotnet/fsharp/
     - name: Visual Basic
       href: get-started/visual-basic/
@@ -202,7 +202,7 @@
           items:
             - name: 管理应用程序设置 (.NET)
               href: ide/managing-application-settings-dotnet.md
-            - name: '将应用配置文件添加到 C# 项目'
+            - name: 将应用配置文件添加到 C# 项目
               href: ide/how-to-add-app-config-file.md
         - name: 对清单签名
           items:
@@ -210,7 +210,7 @@
               href: ide/managing-assembly-and-manifest-signing.md
             - name: 对应用程序和部署清单签名
               href: ide/how-to-sign-application-and-deployment-manifests.md
-        - name: '指定应用程序图标（Visual Basic、C#）'
+        - name: 指定应用程序图标（Visual Basic、C#）
           href: ide/how-to-specify-an-application-icon-visual-basic-csharp.md
         - name: 确定目标框架
           href: ide/visual-studio-multi-targeting-overview.md
@@ -291,7 +291,7 @@
               items:
                 - name: 使用代码片段
                   href: ide/code-snippets.md
-                - name: 'C# 代码片段参考'
+                - name: C# 代码片段参考
                   href: ide/visual-csharp-code-snippets.md
                 - name: C++ 代码片段参考
                   href: ide/visual-cpp-code-snippets.md
@@ -325,10 +325,16 @@
                   href: ide/reference/generate-method.md
                 - name: 生成字段/属性/本地
                   href: ide/reference/generate-field-property-local.md
+                - name: 为 IComparable 生成比较运算符
+                  href: ide/reference/generate-comparison-operators.md
                 - name: 生成构造函数
                   href: ide/reference/generate-constructor.md
                 - name: 生成解构函数
                   href: ide/reference/generate-deconstructor.md
+                - name: 为结构生成 IEquatable 运算符
+                  href: ide/reference/generate-equals-structs.md
+                - name: 添加文件头
+                  href: ide/reference/add-file-header.md
                 - name: 添加显式强制转换
                   href: ide/reference/add-explicit-cast.md
                 - name: 将参数添加到方法
@@ -368,6 +374,8 @@
                   href: ide/reference/convert-for-loop-to-foreach.md
                 - name: 在 Get 方法和属性之间进行转换
                   href: ide/reference/convert-get-method-to-property.md
+                - name: 在常规字符串和逐字字符串文本之间转换
+                  href: ide/reference/convert-between-regular-string-verbatim-string.md
                 - name: 将本地函数转换为方法
                   href: ide/reference/convert-local-function-method.md
                 - name: 将 foreach 循环转换为 LINQ
@@ -378,6 +386,8 @@
                   href: ide/reference/convert-linq-to-foreach.md
                 - name: 将 Switch 语句转换为 Switch 表达式
                   href: ide/reference/convert-switch-statement-to-switch-expression.md
+                - name: DateTime 和 TimeSpan 完成
+                  href: ide/reference/datetime-timespan-completion.md
                 - name: 封装字段
                   href: ide/reference/encapsulate-field.md
                 - name: 提取接口
@@ -412,6 +422,8 @@
                   href: ide/reference/remove-unreachable-code.md
                 - name: 重命名
                   href: ide/reference/rename.md
+                - name: 简化条件表达式
+                  href: ide/reference/simplify-conditional-expression.md
                 - name: 简化字符串内插
                   href: ide/reference/simplify-string-interpolation.md
                 - name: 对 using 排序
@@ -438,7 +450,7 @@
               href: ide/using-intellisense.md
             - name: Visual Basic IntelliSense
               href: ide/visual-basic-specific-intellisense.md
-            - name: 'C# IntelliSense'
+            - name: C# IntelliSense
               href: ide/visual-csharp-intellisense.md
             - name: JavaScript IntelliSense
               href: ide/javascript-intellisense.md
@@ -583,7 +595,7 @@
           href: ide/productivity-features.md
         - name: 提高生产力的快捷方式
           href: ide/productivity-shortcuts.md
-        - name: '针对 C# 开发人员的提示'
+        - name: 针对 C# 开发人员的提示
           displayName: ReSharper
           href: ide/csharp-developer-productivity.md
         - name: 自定义键盘快捷方式
@@ -613,7 +625,7 @@
                   href: /dotnet/api/system.windows.forms
             - name: 教程
               items:
-                - name: '教程 1：创建图片查看器 (C#)'
+                - name: 教程 1：创建图片查看器 (C#)
                   items:
                     - name: 概述
                       displayName: Tutorial 1 Picture viewer
@@ -640,7 +652,7 @@
                       href: ide/step-10-write-code-for-additional-buttons-and-a-check-box.md
                     - name: 步骤 11：运行应用并尝试其他功能
                       href: ide/step-11-run-your-program-and-try-other-features.md
-                - name: '教程 2：创建计时数学测验 (C#)'
+                - name: 教程 2：创建计时数学测验 (C#)
                   items:
                     - name: 概述
                       displayName: Tutorial 2 Timed math quiz
@@ -661,7 +673,7 @@
                       href: ide/step-7-add-multiplication-and-division-problems.md
                     - name: 步骤 8：自定义测验
                       href: ide/step-8-customize-the-quiz.md
-                - name: '教程 3：创建配对游戏 (C#)'
+                - name: 教程 3：创建配对游戏 (C#)
                   items:
                     - name: 概述
                       displayName: Tutorial 3 Matching game
@@ -684,9 +696,9 @@
                       href: ide/step-8-add-a-method-to-verify-whether-the-player-won.md
                     - name: 步骤 9：尝试其他功能
                       href: ide/step-9-try-other-features.md
-        - name: 'F#'
+        - name: F#
           items:
-            - name: 'F# 开发'
+            - name: F# 开发
               href: ide/fsharp-visual-studio.md
             - name: 面向 .NET 较旧版本
               href: ide/fsharp-target-older-dotnet-versions.md
@@ -851,7 +863,7 @@
       href: /azure/devops/pipelines/index?view=vsts
     - name: 指定生成事件 (Visual Basic)
       href: ide/how-to-specify-build-events-visual-basic.md
-    - name: '指定生成事件 (C#)'
+    - name: 指定生成事件 (C#)
       href: ide/how-to-specify-build-events-csharp.md
     - name: 在 Visual Basic 中配置警告
       href: ide/configuring-warnings-in-visual-basic.md
@@ -1122,7 +1134,7 @@
                       href: ide/code-styles-and-code-cleanup.md
                     - name: IntelliSense
                       href: ide/visual-basic-specific-intellisense.md
-                - name: 'C#'
+                - name: C#
                   items:
                     - name: 高级
                       href: ide/reference/options-text-editor-csharp-advanced.md
@@ -1140,7 +1152,7 @@
                       href: ide/reference/options-text-editor-c-cpp-formatting.md
                     - name: 视图
                       href: ide/reference/options-text-editor-c-cpp-view.md
-                - name: 'F#'
+                - name: F#
                   items:
                     - name: 高级
                       href: ide/reference/options-text-editor-fsharp-advanced.md
@@ -1211,19 +1223,19 @@
                   href: ide/reference/application-page-project-designer-visual-basic.md
                 - name: “程序集信息”对话框
                   href: ide/reference/assembly-information-dialog-box.md
-            - name: '“项目设计器”->“应用程序”页 (C#)'
+            - name: “项目设计器”->“应用程序”页 (C#)
               href: ide/reference/application-page-project-designer-csharp.md
-            - name: '“项目设计器”->“生成事件”页 (C#)'
+            - name: “项目设计器”->“生成事件”页 (C#)
               items:
                 - name: “生成事件”页
                   href: ide/reference/build-events-page-project-designer-csharp.md
                 - name: 预生成事件/生成后事件命令行对话框
                   href: ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md
-            - name: '“项目设计器”->“生成”页 (C#)'
+            - name: “项目设计器”->“生成”页 (C#)
               items:
                 - name: “生成”页
                   href: ide/reference/build-page-project-designer-csharp.md
-                - name: '“高级生成设置”对话框 (C#)'
+                - name: “高级生成设置”对话框 (C#)
                   href: ide/reference/advanced-build-settings-dialog-box-csharp.md
             - name: “项目设计器”->“代码分析”
               href: ide/reference/code-analysis-project-designer.md
