@@ -1,7 +1,7 @@
 ---
-title: 如何：与 ClickOnce 应用程序一起安装的必备组件 |Microsoft Docs
+title: 如何使用 ClickOnce 应用程序安装必备组件 |Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -16,56 +16,56 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 047ac897931cbb93d8a06406e300d39cd83a9fe4
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: ce4ad97439d330a6fc51e741e9ea05ef53a5798a
+ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63406764"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85382375"
 ---
-# <a name="how-to-install-prerequisites-with-a-clickonce-application"></a>如何：将必备组件与 ClickOnce 应用程序一起安装
-所有[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]应用程序要求的计算机上安装.NET Framework 的正确版本之前可运行; 许多应用程序具有其他系统必备组件。 发布时[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]应用程序中，可以选择一组的系统必备组件以与你的应用程序一起打包。 在安装时，检查会执行针对每个必备项，以确定它是否已存在;如果在安装之前将不安装[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]应用程序。
+# <a name="how-to-install-prerequisites-with-a-clickonce-application"></a>如何：与 ClickOnce 应用程序一起安装系统必备组件
+所有 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序都需要在计算机上安装 .NET Framework 的正确版本，然后才能运行该计算机; 许多应用程序也有其他必备组件。 发布 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序时，可以选择要与应用程序一起打包的一组系统必备组件。 在安装时，将针对每个先决条件执行检查，以确定它是否已存在;如果不是，则会在安装应用程序之前安装该 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序。
 
- 而不是打包和发布系统必备组件，还可以指定组件的下载位置。 例如，而不是将与每个发布的应用程序的必备组件，您可以使用集中式的文件共享或包含的所有系统必备组件的安装程序的 Web 位置，在安装时，将下载的组件和从该位置安装。
+ 你还可以指定组件的下载位置，而不是打包和发布必备组件。 例如，你可以在安装时使用包含所有必备组件的安装程序的集中式文件共享或 Web 位置，而不是在每个应用程序中包含先决条件-在安装时，将从该位置下载和安装组件。
 
 > [!IMPORTANT]
-> 应将必备组件安装程序的包添加到开发计算机中，然后发布您的第一个[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]应用程序。 有关详细信息，请参阅[如何：将必备组件与 ClickOnce 应用程序一起添加](../deployment/how-to-include-prerequisites-with-a-clickonce-application.md)。
+> 在发布第一个应用程序之前，应将必备安装程序包添加到开发计算机 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 。 有关详细信息，请参阅[如何：将必备组件与 ClickOnce 应用程序结合使用](../deployment/how-to-include-prerequisites-with-a-clickonce-application.md)。
 
- 在中管理的先决条件**先决条件**对话框中，可通过访问**发布**窗格**项目设计器**。
+ 系统必备组件在 "**必备组件**" 对话框中管理，可从 "**项目设计器**" 的 "**发布**" 窗格访问。
 
 > [!NOTE]
-> 除了预先确定的必备组件列表，可以将您自己的组件添加到列表。 有关详细信息，请参阅[创建引导程序包](../deployment/creating-bootstrapper-packages.md)。
+> 除了预先确定的先决条件列表，你还可以将你自己的组件添加到该列表中。 有关详细信息，请参阅[创建引导程序包](../deployment/creating-bootstrapper-packages.md)。
 
-### <a name="to-specify-prerequisites-to-install-with-a-clickonce-application"></a>若要指定与 ClickOnce 应用程序安装的先决条件
+### <a name="to-specify-prerequisites-to-install-with-a-clickonce-application"></a>指定要与 ClickOnce 应用程序一起安装的先决条件
 
-1. 在“解决方案资源管理器” 中选择一个项目，然后在“项目”  菜单上单击“属性” 。
+1. 在**解决方案资源管理器**中选择一个项目后，在 "**项目**" 菜单上单击 "**属性**"。
 
-2. 选择**发布**窗格。
+2. 选择 "**发布**" 窗格。
 
-3. 单击**先决条件**按钮以打开**先决条件**对话框。
-
-4. 在 **“系统必备”** 对话框中，确保选中 **“创建用于安装系统必备组件的安装程序”** 复选框。
-
-5. 在中**先决条件**列表中，选择的组件，你想要安装，然后依次**确定**。
-
-     所选的组件将打包并随你的应用程序一起发布。
-
-### <a name="to-specify-a-different-download-location-for-prerequisites"></a>若要指定系统必备组件的不同的下载位置
-
-1. 在“解决方案资源管理器” 中选择一个项目，然后在“项目”  菜单上单击“属性” 。
-
-2. 选择**发布**窗格。
-
-3. 单击**先决条件**按钮以打开**先决条件**对话框。
+3. 单击 "**先决条件**" 按钮以打开 "**系统必备**" 对话框。
 
 4. 在 **“系统必备”** 对话框中，确保选中 **“创建用于安装系统必备组件的安装程序”** 复选框。
 
-5. 在中**指定系统必备组件的安装位置**部分中，选择**从以下位置下载系统必备组件**。
+5. 在 "**必备项**" 列表中，检查要安装的组件，然后单击 **"确定"**。
 
-6. 从下拉列表中，选择一个位置或输入 URL、 文件路径或 FTP 位置，然后单击**确定。**
+     选定的组件将与您的应用程序一起打包和发布。
+
+### <a name="to-specify-a-different-download-location-for-prerequisites"></a>为必备组件指定不同的下载位置
+
+1. 在**解决方案资源管理器**中选择一个项目后，在 "**项目**" 菜单上单击 "**属性**"。
+
+2. 选择 "**发布**" 窗格。
+
+3. 单击 "**先决条件**" 按钮以打开 "**系统必备**" 对话框。
+
+4. 在 **“系统必备”** 对话框中，确保选中 **“创建用于安装系统必备组件的安装程序”** 复选框。
+
+5. 在 "**指定系统必备组件的安装位置**" 部分中，选择 **"从以下位置下载系统必备组件**"。
+
+6. 从下拉列表中选择一个位置，或者输入 URL、文件路径或 FTP 位置，然后单击 **"确定"。**
 
     > [!NOTE]
-    > 必须确保在指定位置中存在的指定组件的安装程序。
+    > 必须确保指定组件的安装程序存在于指定位置。
 
 ## <a name="see-also"></a>请参阅
 - [发布 ClickOnce 应用程序](../deployment/publishing-clickonce-applications.md)

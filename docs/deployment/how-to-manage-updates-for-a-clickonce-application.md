@@ -1,7 +1,7 @@
 ---
-title: 如何：管理 ClickOnce 应用程序的更新 |Microsoft Docs
+title: 如何-管理 ClickOnce 应用程序的更新 |Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - Microsoft.VisualStudio.Publish.ClickOnceProvider.Dialog.Update
 dev_langs:
@@ -19,19 +19,19 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0ba899e922e98817462b06a1693525ab1ae69e20
-ms.sourcegitcommit: a1e899248adaf104697fa7dea32a36e69e9cc119
+ms.openlocfilehash: 534171d9145d0a21fee7f8831e9a6355e6079cbd
+ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71159903"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85382349"
 ---
 # <a name="how-to-manage-updates-for-a-clickonce-application"></a>如何：管理 ClickOnce 应用程序的更新
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]应用程序可以自动或以编程方式检查更新。 作为开发人员，您可以很灵活地指定何时以及如何执行更新检查、是否需要更新以及应用程序应检查更新的位置。
 
  你可以将应用程序配置为在应用程序启动前自动检查是否有更新，或在应用程序启动后按设置的时间间隔。 此外，还可以指定所需的最低版本;也就是说，如果用户的版本低于所需版本，则会安装更新。
 
- 你可以将应用程序配置为基于事件（例如用户请求）以编程方式检查更新。 本主题中的 "以编程方式检查更新" 过程说明如何编写使用<xref:System.Deployment.Application.ApplicationDeployment>类的代码，以便基于事件检查更新。
+ 你可以将应用程序配置为基于事件（例如用户请求）以编程方式检查更新。 本主题中的 "以编程方式检查更新" 过程说明如何编写使用类的代码， <xref:System.Deployment.Application.ApplicationDeployment> 以便基于事件检查更新。
 
  你还可以从一个位置部署你的应用程序，并从另一个位置进行更新。 请参阅过程 "指定其他更新位置"。
 
@@ -41,9 +41,9 @@ ms.locfileid: "71159903"
 
 ### <a name="to-check-for-updates-before-the-application-starts"></a>在应用程序启动前检查更新
 
-1. 在“解决方案资源管理器”中选择了项目的情况下，在“项目” 菜单上单击“属性”。
+1. 在“解决方案资源管理器” 中选择了项目的情况下，在“项目”  菜单上单击“属性” 。
 
-2. 单击“发布”选项卡。
+2. 单击 **“发布”** 选项卡。
 
 3. 单击 "**更新**" 按钮以打开 "**应用程序更新**" 对话框。
 
@@ -53,9 +53,9 @@ ms.locfileid: "71159903"
 
 ### <a name="to-check-for-updates-in-the-background-after-the-application-starts"></a>在应用程序启动后在后台检查更新
 
-1. 在“解决方案资源管理器”中选择了项目的情况下，在“项目” 菜单上单击“属性”。
+1. 在“解决方案资源管理器” 中选择了项目的情况下，在“项目”  菜单上单击“属性” 。
 
-2. 单击“发布”选项卡。
+2. 单击 **“发布”** 选项卡。
 
 3. 单击 "**更新**" 按钮以打开 "**应用程序更新**" 对话框。
 
@@ -67,9 +67,9 @@ ms.locfileid: "71159903"
 
 ### <a name="to-specify-a-minimum-required-version-for-the-application"></a>指定应用程序所需的最低版本
 
-1. 在“解决方案资源管理器”中选择了项目的情况下，在“项目” 菜单上单击“属性”。
+1. 在“解决方案资源管理器” 中选择了项目的情况下，在“项目”  菜单上单击“属性” 。
 
-2. 单击“发布”选项卡。
+2. 单击 **“发布”** 选项卡。
 
 3. 单击 "**更新**" 按钮以打开 "**应用程序更新**" 对话框。
 
@@ -79,36 +79,36 @@ ms.locfileid: "71159903"
 
 ### <a name="to-specify-a-different-update-location"></a>指定其他更新位置
 
-1. 在“解决方案资源管理器”中选择了项目的情况下，在“项目” 菜单上单击“属性”。
+1. 在“解决方案资源管理器” 中选择了项目的情况下，在“项目”  菜单上单击“属性” 。
 
-2. 单击“发布”选项卡。
+2. 单击 **“发布”** 选项卡。
 
 3. 单击 "**更新**" 按钮以打开 "**应用程序更新**" 对话框。
 
 4. 在 "**应用程序更新**" 对话框中，确保选中 "**应用程序应检查更新"** 复选框。
 
-5. 在 "**更新位置**" 字段中，使用 *http://Hostname/ApplicationName*  *\\ \Server\ApplicationName*格式输入完全限定的 URL，使用格式或 UNC 路径输入更新位置，或单击 "**浏览**" 按钮浏览到更新位置。
+5. 在 "**更新位置**" 字段中，使用 \Server\ApplicationName 格式输入完全限定的 URL，使用格式 *http://Hostname/ApplicationName* 或 UNC 路径输入更新位置，或* \\ *单击 "**浏览**" 按钮浏览更新位置。
 
 ### <a name="to-check-for-updates-programmatically"></a>以编程方式检查更新
 
-1. 在“解决方案资源管理器”中选择了项目的情况下，在“项目” 菜单上单击“属性”。
+1. 在“解决方案资源管理器” 中选择了项目的情况下，在“项目”  菜单上单击“属性” 。
 
-2. 单击“发布”选项卡。
+2. 单击 **“发布”** 选项卡。
 
 3. 单击 "**更新**" 按钮以打开 "**应用程序更新**" 对话框。
 
 4. 在 "**应用程序更新**" 对话框中，确保清除了 **"应用程序应检查更新"** 复选框。 （也可以选择此复选框以编程方式检查更新，也可以让 ClickOnce 运行时自动检查更新。）
 
-5. 在 "**更新位置**" 字段中，使用 *http://Hostname/ApplicationName*  *\\ \Server\ApplicationName*格式输入完全限定的 URL，使用格式或 UNC 路径输入更新位置，或单击 "**浏览**" 按钮浏览到更新位置。 应用程序将在此更新位置查找其自身的更新版本。
+5. 在 "**更新位置**" 字段中，使用 \Server\ApplicationName 格式输入完全限定的 URL，使用格式 *http://Hostname/ApplicationName* 或 UNC 路径输入更新位置，或* \\ *单击 "**浏览**" 按钮浏览更新位置。 应用程序将在此更新位置查找其自身的更新版本。
 
-6. 在 Windows 窗体上创建一个按钮、菜单项或其他用户界面项，用户将选择这些项来检查更新。 从该项的事件处理程序中，调用方法以检查和安装更新。 你可以在如何执行以下操作中C# [找到此类方法的 Visual Basic 和 Visual 代码的示例：使用 ClickOnce 部署 API](../deployment/how-to-check-for-application-updates-programmatically-using-the-clickonce-deployment-api.md)以编程方式检查应用程序更新。
+6. 在 Windows 窗体上创建一个按钮、菜单项或其他用户界面项，用户将选择这些项来检查更新。 从该项的事件处理程序中，调用方法以检查和安装更新。 可以在[如何：使用 ClickOnce 部署 API 以编程方式检查应用程序更新](../deployment/how-to-check-for-application-updates-programmatically-using-the-clickonce-deployment-api.md)中找到此类方法的 Visual Basic 和 Visual c # 代码的示例。
 
 7. 构建你的应用程序。
 
 ## <a name="see-also"></a>请参阅
 - <xref:System.Deployment.Application.ApplicationDeployment>
-- [“应用程序更新”对话框](/previous-versions/visualstudio/visual-studio-2010/axw1fa38(v=vs.100))
+- ["应用程序更新" 对话框](/previous-versions/visualstudio/visual-studio-2010/axw1fa38(v=vs.100))
 - [选择 ClickOnce 更新策略](../deployment/choosing-a-clickonce-update-strategy.md)
 - [发布 ClickOnce 应用程序](../deployment/publishing-clickonce-applications.md)
 - [如何：使用发布向导发布 ClickOnce 应用程序](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)
-- [如何：使用 ClickOnce 部署 API 以编程方式检查是否有应用程序更新](../deployment/how-to-check-for-application-updates-programmatically-using-the-clickonce-deployment-api.md)
+- [如何：使用 ClickOnce 部署 API 以编程方式检查应用程序更新](../deployment/how-to-check-for-application-updates-programmatically-using-the-clickonce-deployment-api.md)

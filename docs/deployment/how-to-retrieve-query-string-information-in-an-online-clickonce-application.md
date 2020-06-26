@@ -1,7 +1,7 @@
 ---
 title: 在联机 ClickOnce 应用程序中检索查询字符串信息
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 30169a43d88f0ee8ae2c428e5a3da0aef0b9d642
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: d0e177f1d41655ffa6fb6b6bbfa52cfc29d15fd6
+ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72637861"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85382180"
 ---
 # <a name="how-to-retrieve-query-string-information-in-an-online-clickonce-application"></a>如何：在联机 ClickOnce 应用程序中检索查询字符串信息
 *查询字符串* 是 URL 的一部分，它以问号 (?) 开头，并且以 *名称=值*的形式包含任意信息。 假设你有一个在 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 上承载的名为 `WindowsApp1` 的 `servername`应用程序，并且要在该应用程序启动时传入变量 `username` 的值。 你的 URL 可能类似于下面这样：
@@ -39,14 +39,14 @@ ms.locfileid: "72637861"
 > [!NOTE]
 > 决定启用此功能之前，请参阅本主题后面的“安全性”一节。
 
- 有关如何使用*mage.exe*或*mageui.exe*创建 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 部署的信息，请参阅[演练：手动部署 ClickOnce 应用程序](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)。
+ 有关如何 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 使用*Mage.exe*或*MageUI.exe*创建部署的信息，请参阅[演练：手动部署 ClickOnce 应用程序](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)。
 
 > [!NOTE]
 > 从 .NET Framework 3.5 SP1 开始，可以将命令行参数传递给脱机 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序。 如果要向应用程序提供参数，则可以将参数传入具有 .APPREF-MS 扩展名的快捷方式文件。
 
 ### <a name="to-obtain-query-string-information-from-a-clickonce-application"></a>从 ClickOnce 应用程序获取查询字符串信息
 
-1. 将以下代码置于项目中。 为了使此代码正常运行，您必须引用 system.web，并添加 `using` 或 `Imports` 指令以用于 system.web、System.web 和 System.web，并为其添加一个。
+1. 将以下代码置于项目中。 为了使此代码正常运行，您必须对 system.web、system.web 和 System.object 都具有对 system.web 的引用以及对该函数的 add `using` 或 `Imports` 指令。
 
      [!code-csharp[ClickOnceQueryString#1](../deployment/codesnippet/CSharp/how-to-retrieve-query-string-information-in-an-online-clickonce-application_1.cs)]
      [!code-vb[ClickOnceQueryString#1](../deployment/codesnippet/VisualBasic/how-to-retrieve-query-string-information-in-an-online-clickonce-application_1.vb)]
@@ -61,17 +61,17 @@ ms.locfileid: "72637861"
    MageUI
    ```
 
-2. 在“文件” 菜单中，选择“打开”，然后打开 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序的部署清单（这是以 `.application` 扩展名结尾的文件）。
+2. 在“文件” **** 菜单中，选择“打开” ****，然后打开 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序的部署清单（这是以 `.application` 扩展名结尾的文件）。
 
-3. 在左侧导航窗口中选择“部署选项” 面板，然后选中“允许向应用程序传递 URL 参数” 复选框。
+3. 在左侧导航窗口中选择“部署选项” **** 面板，然后选中“允许向应用程序传递 URL 参数” **** 复选框。
 
-4. 在“文件” 菜单中选择“保存”。
+4. 在“文件” **** 菜单中选择“保存” ****。
 
 > [!NOTE]
-> 或者，可以在 [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]中启用查询字符串传递。 选中“允许向应用程序传递 URL 参数” 复选框（可以通过打开“项目属性”，选择“发布” 选项卡，单击“选项” 按钮，然后选择“清单”来找到该复选框）。
+> 或者，可以在 [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]中启用查询字符串传递。 选中“允许向应用程序传递 URL 参数” **** 复选框（可以通过打开“项目属性” ****，选择“发布” **** 选项卡，单击“选项” **** 按钮，然后选择“清单” **** 来找到该复选框）。
 
 ## <a name="robust-programming"></a>可靠编程
- 使用查询字符串参数时，必须仔细考虑如何安装和激活应用程序。 如果应用程序配置为从 Web 或网络共享安装在用户计算机上，则用户可能只会通过 URL 激活应用程序一次。 之后，用户通常会使用“开始” 菜单中的快捷方式激活应用程序。 因此，应用程序确保只会在其生存期中接收查询字符串参数一次。 如果你选择将这些参数存储在用户计算机上以供将来使用，则由你负责以安全稳妥的方式存储它们。
+ 使用查询字符串参数时，必须仔细考虑如何安装和激活应用程序。 如果应用程序配置为从 Web 或网络共享安装在用户计算机上，则用户可能只会通过 URL 激活应用程序一次。 之后，用户通常会使用“开始” **** 菜单中的快捷方式激活应用程序。 因此，应用程序确保只会在其生存期中接收查询字符串参数一次。 如果你选择将这些参数存储在用户计算机上以供将来使用，则由你负责以安全稳妥的方式存储它们。
 
  如果应用程序仅处于联机状态，则它始终通过 URL 进行激活。 但是即使在这种情况下，应用程序也必须编写为可在查询字符串参数丢失或损坏的情况下正常运行。
 
