@@ -1,7 +1,7 @@
 ---
-title: 如何：将数据文件包括在 ClickOnce 应用程序 |Microsoft Docs
+title: 如何-在 ClickOnce 应用程序中包含数据文件 |Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -16,41 +16,41 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fd2db09937ad76c0ea4c990fcdba5c34a0f8f66c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7630d1b363afa7caeae361f607f4b73929fbba1b
+ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62898631"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85382401"
 ---
-# <a name="how-to-include-a-data-file-in-a-clickonce-application"></a>如何：将数据文件添加到 ClickOnce 应用程序中
-每个[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]安装的应用程序分配一个应用程序可以在其中管理其自己的数据的目标计算机的本地磁盘上的数据目录。 数据文件可以包含任何类型的文件： 文本文件、 XML 文件或甚至 Microsoft Access 数据库 (*.mdb*) 文件。 以下过程显示如何将添加到任何类型的数据文件在[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]应用程序。
+# <a name="how-to-include-a-data-file-in-a-clickonce-application"></a>如何：将数据文件包括到 ClickOnce 应用程序中
+安装的每个 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序在目标计算机的本地磁盘上都分配有一个数据目录，应用程序可以在其中管理自己的数据。 数据文件可以包含任何类型的文件：文本文件、XML 文件，甚至 Microsoft Access 数据库（*.mdb*）文件。 下面的过程演示如何向应用程序中添加任何类型的数据文件 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 。
 
-### <a name="to-include-a-data-file-by-using-mageexe"></a>若要将数据文件包括通过使用 Mage.exe
+### <a name="to-include-a-data-file-by-using-mageexe"></a>使用 Mage.exe 包含数据文件
 
-1. 将数据文件添加到你的应用程序目录与应用程序的文件的其余部分。
+1. 将数据文件添加到应用程序目录中的其他应用程序文件。
 
-    通常情况下，在应用程序目录将标记为部署的当前版本的目录 — 例如，v1.0.0.0。
+    通常情况下，应用程序目录将是一个使用部署的当前版本标记的目录，例如，1.0.0.0。
 
-2. 到列表数据文件中更新应用程序清单。
+2. 更新应用程序清单以列出数据文件。
 
     `mage -u v1.0.0.0\Application.manifest -FromDirectory v1.0.0.0`
 
-    执行此任务将重新创建应用程序清单中的文件列表，并且还会自动生成的哈希签名。
+    执行此任务将重新创建应用程序清单中的文件列表，并自动生成哈希签名。
 
-3. 在您首选的文本或 XML 编辑器中打开应用程序清单，并找到`file`最近添加的文件的元素。
+3. 在您首选的文本编辑器或 XML 编辑器中打开应用程序清单，然后查找 `file` 您最近添加的文件的元素。
 
-    如果添加一个名为 XML 文件`Data.xml`，该文件将类似于下面的代码示例。
+    如果添加了一个名为的 XML 文件 `Data.xml` ，则该文件将类似于下面的代码示例。
 
    `<file name="Data.xml" hash="23454C18A2DC1D23E5B391FEE299B1F235067C59" hashalg="SHA1" asmv2:size="39500" />`
 
-4. 将属性添加`type`到此元素，并将其提供的值为`data`。
+4. 将属性添加 `type` 到此元素，并为其提供值 `data` 。
 
    `<file name="Data.xml" writeableType="applicationData" hash="23454C18A2DC1D23E5B391FEE299B1F235067C59" hashalg="SHA1" asmv2:size="39500" />`
 
-5. 使用密钥对或证书，请重新签名应用程序清单，然后重新签名部署清单。
+5. 使用密钥对或证书对应用程序清单进行重新签名，然后对部署清单进行重新签名。
 
-    因为它的应用程序清单的哈希已更改，必须重新签名部署清单。
+    必须对部署清单进行重新签名，因为其应用程序清单的哈希已更改。
 
     `mage -s app manifest -cf cert_file -pwd password`
 
@@ -58,29 +58,29 @@ ms.locfileid: "62898631"
 
     `mage -s deployment manifest -cf certfile -pwd password`
 
-### <a name="to-include-a-data-file-by-using-mageuiexe"></a>若要通过使用 MageUI.exe 中包含的数据文件
+### <a name="to-include-a-data-file-by-using-mageuiexe"></a>使用 MageUI.exe 包含数据文件
 
-1. 将数据文件添加到你的应用程序目录与应用程序的文件的其余部分。
+1. 将数据文件添加到应用程序目录中的其他应用程序文件。
 
-2. 通常情况下，在应用程序目录将标记为部署的当前版本的目录 — 例如，v1.0.0.0。
+2. 通常情况下，应用程序目录将是一个使用部署的当前版本标记的目录，例如，1.0.0.0。
 
-3. 上**文件**菜单上，单击**打开**以打开应用程序清单。
+3. 在 "**文件**" 菜单上，单击 "**打开**" 以打开应用程序清单。
 
-4. 选择**文件**选项卡。
+4. 选择 "**文件**" 选项卡。
 
-5. 在选项卡顶部的文本框中，输入包含应用程序的文件的目录，然后单击**Populate**。
+5. 在选项卡顶部的文本框中，输入包含应用程序文件的目录，然后单击 "**填充**"。
 
-     你的数据文件会在网格中显示。
+     数据文件将显示在网格中。
 
-6. 设置**文件类型**的数据文件的值**数据**。
+6. 将数据文件的 "**文件类型**" 值设置为 "**数据**"。
 
-7. 保存应用程序清单，然后重新登录该文件。
+7. 保存应用程序清单，然后对文件重新签名。
 
-     *MageUI.exe*将提示您重新对文件进行签名。
+     *MageUI.exe*将提示你对该文件进行重新签名。
 
-8. 部署清单重新签名
+8. 对部署清单进行重新签名
 
-     因为它的应用程序清单的哈希已更改，必须重新签名部署清单。
+     必须对部署清单进行重新签名，因为其应用程序清单的哈希已更改。
 
 ## <a name="see-also"></a>请参阅
 - [在 ClickOnce 应用程序中访问本地数据和远程数据](../deployment/accessing-local-and-remote-data-in-clickonce-applications.md)

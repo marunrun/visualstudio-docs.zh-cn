@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9c94fac97a340c8c315ec91e3c5ebb68cac0d516
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: a0ff6ba1f654f3a9b909012f159cd3daaf2892f3
+ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85283341"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85382622"
 ---
 # <a name="usage-warnings"></a>用法警告
 
@@ -75,4 +75,5 @@ ms.locfileid: "85283341"
 |[CA2244:不要复制已索引的元素初始值设定项](../code-quality/ca2244.md)|对象初始值设定项具有多个具有相同的常量索引的索引元素初始值设定项。 除最后一个初始值设定项之外的所有都是冗余的。|
 |[CA2245:请勿将属性分配给其自身](../code-quality/ca2245.md)|属性意外分配给自身。|
 |[CA2246:请勿在同一语句中分配符号及其成员](../code-quality/ca2246.md)|不建议在同一语句中分配符号及其成员（即，字段或属性）。 如果成员访问权限打算在赋值前使用符号的旧值，或者在此语句的赋值中使用新值，则不清楚。|
+|[CA2247：传递到 TaskCompletionSource 构造函数的参数应为 TaskCreationOptions 枚举，而不是 System.threading.tasks.taskcontinuationoptions 枚举](../code-quality/ca2246.md)|TaskCompletionSource 具有采用 TaskCreationOptions 的构造函数，这些构造函数控制基础任务，以及采用任务中存储的对象状态的构造函数。  意外传递 System.threading.tasks.taskcontinuationoptions 而不是 TaskCreationOptions 将导致调用将选项视为状态。|
 |[CA2248：将正确的 "enum" 参数提供给 "Enum.hasflag\"](../code-quality/ca2248.md)|作为参数传递给方法调用的枚举类型 `HasFlag` 不同于调用枚举类型。|

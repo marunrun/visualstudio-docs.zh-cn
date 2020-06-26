@@ -1,7 +1,7 @@
 ---
-title: 如何：设置 ClickOnce 应用程序的自定义权限 |Microsoft Docs
+title: 如何为 ClickOnce 应用程序设置自定义权限 |Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -15,15 +15,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2c8a6fd6625726f749afcf20b80f83178a47ab92
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 17cd398468bd1640e50f6a58004905cfdf6c2ff0
+ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63407008"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85382141"
 ---
 # <a name="how-to-set-custom-permissions-for-a-clickonce-application"></a>如何：设置 ClickOnce 应用程序的自定义权限
-可以部署对 Internet 或本地 Intranet 区域使用默认权限的 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序。 或者，可以为应用程序所需的特定权限创建自定义区域。 可以通过在“项目设计器”  的“安全” 页上自定义安全权限来执行此操作。
+可以部署对 Internet 或本地 Intranet 区域使用默认权限的 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序。 或者，可以为应用程序所需的特定权限创建自定义区域。 可以通过在“项目设计器” **** 的“安全” **** 页上自定义安全权限来执行此操作。
 
 ### <a name="to-customize-a-permission"></a>自定义权限
 
@@ -31,17 +31,17 @@ ms.locfileid: "63407008"
 
 2. 单击 **“安全”** 选项卡。
 
-3. 选中“启用 ClickOnce 安全设置”  复选框。
+3. 选中“启用 ClickOnce 安全设置” **** 复选框。
 
-4. 选择“这是部分可信的应用程序”  选项按钮。
+4. 选择“这是部分可信的应用程序” **** 选项按钮。
 
-     “ClickOnce 安全权限”  部分中的控件已启用。
+     “ClickOnce 安全权限” **** 部分中的控件已启用。
 
-5. 在“将要从中安装应用程序的区域”  下拉列表中，单击“(自定义)” 。
+5. 在“将要从中安装应用程序的区域” **** 下拉列表中，单击“(自定义)” ****。
 
-6. 单击“编辑权限 XML” 。
+6. 单击“编辑权限 XML” ****。
 
-     随即会在“XML 编辑器”中打开 app.manifest 文件。
+     随即会在“XML 编辑器”中打开 app.manifest 文件**。
 
 7. 在 `</applicationRequestMinimum>` 元素之前，为应用程序所需的权限添加 XML 代码。
 

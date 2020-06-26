@@ -1,7 +1,7 @@
 ---
-title: 如何：创建产品清单 |Microsoft Docs
+title: 如何-创建产品清单 |Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - FSharp
 - VB
@@ -18,27 +18,27 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 68f3006104b50876f6d2716ff4eb1efe0a705284
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f0f4302756b089376eca8926453399768faaf58f
+ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62928361"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85382505"
 ---
 # <a name="how-to-create-a-product-manifest"></a>如何：创建产品清单
-若要部署应用程序的先决条件，你可以创建引导程序包。 引导程序包包含一个单一产品清单文件，但是包清单的每个区域设置。 包清单包含包的特定于本地化的方面。 这包括字符串、 最终用户许可协议和语言包。
+若要为应用程序部署必备组件，可以创建一个引导程序包。 引导程序包包含单个产品清单文件，但每个区域设置都包含包清单。 包清单包含包的特定于本地化的方面。 这包括字符串、最终用户许可协议和语言包。
 
  有关包清单的详细信息，请参阅[如何：创建包清单](../deployment/how-to-create-a-package-manifest.md)。
 
 ## <a name="create-the-product-manifest"></a>创建产品清单
 
-#### <a name="to-create-the-product-manifest"></a>若要创建产品清单
+#### <a name="to-create-the-product-manifest"></a>创建产品清单
 
-1. 创建引导程序包的目录。 此示例使用 C:\package。
+1. 为引导程序包创建目录。 此示例使用 C:\package。
 
-2. 在 Visual Studio 中，创建名为的新 XML 文件*product.xml*，并将其保存到*C:\package*文件夹。
+2. 在 Visual Studio 中，创建一个名为*product.xml*的新 XML 文件，并将其保存到*C:\package*文件夹中。
 
-3. 添加以下 XML 来描述包的 XML 命名空间和产品代码。 产品代码替换包的唯一标识符。
+3. 添加以下 XML，以描述包的 XML 命名空间和产品代码。 将产品代码替换为包的唯一标识符。
 
     ```xml
     <Product
@@ -46,7 +46,7 @@ ms.locfileid: "62928361"
     ProductCode="Custom.Bootstrapper.Package">
     ```
 
-4. 添加 XML 以指定的包具有依赖项。 此示例使用在 Microsoft Windows Installer 3.1 上的依赖项。
+4. 添加 XML 以指定包具有依赖项。 此示例使用 Microsoft Windows Installer 3.1 的依赖项。
 
     ```xml
     <RelatedProducts>
@@ -54,7 +54,7 @@ ms.locfileid: "62928361"
       </RelatedProducts>
     ```
 
-5. 添加 XML 以列出引导程序包中的所有文件。 此示例使用包文件的名称*CorePackage.msi*。
+5. 添加 XML 以列出引导程序包中的所有文件。 此示例使用包文件名*CorePackage.msi*。
 
     ```xml
     <PackageFiles>
@@ -62,16 +62,16 @@ ms.locfileid: "62928361"
     </PackageFiles>
     ```
 
-6. 复制或移动*CorePackage.msi*的文件*C:\package*文件夹。
+6. 将*CorePackage.msi*文件复制或移动到*C:\package*文件夹。
 
-7. 添加 XML 以使用引导程序命令安装包。 引导程序会自动添加 **/qn**标记，用于 *.msi*文件，它将以无提示方式安装。 如果该文件是 *.exe*，引导程序运行 *.exe*文件使用命令行程序。 以下 XML 显示没有自变量*CorePackage.msi*，而您可以将其放到命令行参数`Arguments`属性。
+7. 添加 XML 以便使用引导程序命令安装包。 引导程序自动将 **/qn**标志添加到 *.msi*文件中，该文件将以无提示方式进行安装。 如果文件是 *.exe*，则引导程序将使用 shell 运行 *.exe*文件。 以下 XML 不显示*CorePackage.msi*的任何参数，但你可以将命令行参数放入 `Arguments` 属性。
 
     ```xml
     <Commands>
         <Command PackageFile="CorePackage.msi" Arguments="">
     ```
 
-8. 添加以下 XML 来检查是否安装了此引导程序包。 产品代码替换为可再发行组件的 GUID。
+8. 添加以下 XML 以检查是否安装了此引导程序包。 将产品代码替换为可再发行组件的 GUID。
 
     ```xml
     <InstallChecks>
@@ -81,7 +81,7 @@ ms.locfileid: "62928361"
     </InstallChecks>
     ```
 
-9. 添加 XML 以更改具体取决于引导程序行为，如果已安装引导程序组件。 如果安装的组件，引导程序包不运行。 下面的 XML 将检查当前用户是否是管理员，因为此组件需要管理权限。
+9. 添加 XML 以更改引导程序行为，具体取决于是否已安装引导程序组件。 如果组件已安装，则引导程序包不会运行。 下面的 XML 检查当前用户是否为管理员，因为此组件需要管理权限。
 
     ```xml
     <InstallConditions>
@@ -94,7 +94,7 @@ ms.locfileid: "62928361"
     </InstallConditions>
     ```
 
-10. 添加 XML 来设置退出代码，如果安装已成功并重新启动是必需的。 下面的 XML 演示的失败和 FailReboot 的退出代码，指示引导程序将不继续安装包。
+10. 如果安装成功并且需要重新启动，则添加 XML 以设置退出代码。 下面的 XML 演示 Fail 和 FailReboot 退出代码，这表示引导程序将不会继续安装包。
 
     ```xml
     <ExitCodes>
@@ -105,17 +105,17 @@ ms.locfileid: "62928361"
     </ExitCodes>
     ```
 
-11. 添加以下 XML，若要结束的引导程序的命令部分。
+11. 添加以下 XML 以结束引导程序命令的部分。
 
     ```xml
         </Command>
     </Commands>
     ```
 
-12. 移动*C:\package*到 Visual Studio 引导程序目录的文件夹。 对于 Visual Studio 2010 中，这是 *\Program Files\Microsoft SDKs\Windows\v7.0A\Bootstrapper\Packages* 目录。
+12. 将*C:\package*文件夹移到 Visual Studio 引导程序目录。 对于 Visual Studio 2010，这是*\Program Files\Microsoft SDKs\Windows\v7.0A\Bootstrapper\Packages*目录。
 
 ## <a name="example"></a>示例
- 产品清单包含自定义系统必备组件的安装说明。
+ 产品清单包含自定义必备组件的安装说明。
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>

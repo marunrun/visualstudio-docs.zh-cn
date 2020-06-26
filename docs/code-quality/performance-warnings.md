@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 30acc1f38ea0d27a3a8245f586b3c41765330c50
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 24436a76841ae663f733e7c76eeb16065ed1f57b
+ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85283393"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85382661"
 ---
 # <a name="performance-warnings"></a>性能警告
 性能警告支持高性能库和应用程序。
@@ -53,7 +53,8 @@ ms.locfileid: "85283393"
 | [CA1827:如果可以使用 Any，请勿使用 Count/LongCount](../code-quality/ca1827.md) | <xref:System.Linq.Enumerable.Count%2A><xref:System.Linq.Enumerable.LongCount%2A>使用方法，其中 <xref:System.Linq.Enumerable.Any%2A> 方法会更有效。 |
 | [CA1828:如果可以使用 AnyAsync，请勿使用 CountAsync/LongCountAsync](../code-quality/ca1828.md) | <xref:Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.CountAsync%2A><xref:Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.LongCountAsync%2A>使用方法，其中 <xref:Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.AnyAsync%2A> 方法会更有效。 |
 | [CA1829:使用 Length/Count 属性，而不是 Enumerable.Count 方法](../code-quality/ca1829.md) | <xref:System.Linq.Enumerable.Count%2A>LINQ 方法用于支持等效的、更有效的或属性的类型 `Length` `Count` 。 |
-| [CA1831：适当时，使用 AsSpan 而不是字符串的基于范围的索引器](../code-quality/ca1831.md) | 对字符串使用范围索引器并将值隐式赋值给 ReadOnlySpan &lt; char &gt; 类型时， <xref:System.String.Substring%2A?#System_String_Substring_System_Int32_System_Int32_> 将使用方法而不是 <xref:System.Span%601.Slice%2A?#System_Span_1_Slice_System_Int32_System_Int32_> ，这将生成请求的字符串部分的副本。 |
-| [CA1832：使用 AsSpan 或 AsMemory，而不是基于范围的索引器来获取数组的 ReadOnlySpan 或 ReadOnlyMemory 部分](../code-quality/ca1832.md) | 在数组上使用范围索引器并将值隐式赋值给 <xref:System.ReadOnlySpan%601> 或类型时 <xref:System.ReadOnlyMemory%601> ， <xref:System.Runtime.CompilerServices.RuntimeHelpers.GetSubArray%2A> 将使用方法而不是 <xref:System.Span%601.Slice%2A?#System_Span_1_Slice_System_Int32_System_Int32_> ，这将生成数组的请求部分的副本。 |
-| [CA1833：使用 AsSpan 或 AsMemory，而不是基于范围的索引器来获取数组的跨距或 Memory 部分](../code-quality/ca1833.md) | 在数组上使用范围索引器并将值隐式赋值给 <xref:System.Span%601> 或类型时 <xref:System.Memory%601> ， <xref:System.Runtime.CompilerServices.RuntimeHelpers.GetSubArray%2A> 将使用方法而不是 <xref:System.Span%601.Slice%2A?#System_Span_1_Slice_System_Int32_System_Int32_> ，这将生成数组的请求部分的副本。 |
+| [CA1830：在 StringBuilder 上优先使用强类型追加和插入方法重载](../code-quality/ca1830.md) | <xref:System.Text.StringBuilder.Append%2A>和 <xref:System.Text.StringBuilder.Insert%2A> 为除 system.string 之外的多个类型提供重载。  如果可能，更倾向使用强类型重载（）和基于字符串的重载。 |
+| [CA1831:在合适的情况下，为字符串使用 AsSpan 而不是基于范围的索引器](../code-quality/ca1831.md) | 对字符串使用范围索引器并将值隐式赋值给 ReadOnlySpan &lt; char &gt; 类型时， <xref:System.String.Substring%2A?#System_String_Substring_System_Int32_System_Int32_> 将使用方法而不是 <xref:System.Span%601.Slice%2A?#System_Span_1_Slice_System_Int32_System_Int32_> ，这将生成请求的字符串部分的副本。 |
+| [CA1832:使用 AsSpan 或 AsMemory 而不是基于范围的索引器来获取数组的 ReadOnlySpan 或 ReadOnlyMemory 部分](../code-quality/ca1832.md) | 在数组上使用范围索引器并将值隐式赋值给 <xref:System.ReadOnlySpan%601> 或类型时 <xref:System.ReadOnlyMemory%601> ， <xref:System.Runtime.CompilerServices.RuntimeHelpers.GetSubArray%2A> 将使用方法而不是 <xref:System.Span%601.Slice%2A?#System_Span_1_Slice_System_Int32_System_Int32_> ，这将生成数组的请求部分的副本。 |
+| [CA1833:使用 AsSpan 或 AsMemory 而不是基于范围的索引器来获取数组的 Span 或 Memory 部分](../code-quality/ca1833.md) | 在数组上使用范围索引器并将值隐式赋值给 <xref:System.Span%601> 或类型时 <xref:System.Memory%601> ， <xref:System.Runtime.CompilerServices.RuntimeHelpers.GetSubArray%2A> 将使用方法而不是 <xref:System.Span%601.Slice%2A?#System_Span_1_Slice_System_Int32_System_Int32_> ，这将生成数组的请求部分的副本。 |
 | [CA1835：首选 "ReadAsync" 和 "WriteAsync" 的基于 Memory' 的重载](../code-quality/ca1835.md) | "Stream" 有一个 "ReadAsync" 重载，该重载采用 "Memory &lt; byte &gt; " 作为第一个参数，而 "WriteAsync" 重载采用 "ReadOnlyMemory &lt; Byte &gt; " 作为第一个参数。 更愿意调用基于内存的重载，这些重载更有效。 |

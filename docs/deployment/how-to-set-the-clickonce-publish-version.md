@@ -1,7 +1,7 @@
 ---
-title: 如何：设置 ClickOnce 发布版本 |Microsoft Docs
+title: 如何设置 ClickOnce 发布版本 |Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -16,31 +16,31 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e2bd526203b777bafd77c79a4934d1f3e8754dee
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: df5e1d91de14e3da4f188c276ef7dd74943d8978
+ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63406846"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85382115"
 ---
 # <a name="how-to-set-the-clickonce-publish-version"></a>如何：设置 ClickOnce 发布版本
-[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] `Publish Version`属性确定是否要发布的应用程序视为更新。 每个时间版本递增时，将作为更新发布应用程序。
+[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] `Publish Version` 属性确定你要发布的应用程序是否将被视为更新。 每次版本递增时，应用程序将作为更新发布。
 
- `Publish Version`属性可以设置上**发布**页**项目设计器**。
+ `Publish Version`可以在 "**项目设计器**" 的 "**发布**" 页上设置属性。
 
 > [!NOTE]
-> 将自动递增的项目选项`Publish Version`属性每次发布应用程序; 默认情况下启用此选项。 有关详细信息，请参阅[如何：自动递增 ClickOnce 发布版本](../deployment/how-to-automatically-increment-the-clickonce-publish-version.md)。
+> 每次发布应用程序时，都有一个项目选项会自动递增 `Publish Version` 属性; 默认情况下启用此选项。 有关详细信息，请参阅[如何：自动递增 ClickOnce 发布版本](../deployment/how-to-automatically-increment-the-clickonce-publish-version.md)。
 
-### <a name="to-change-the-publish-version"></a>若要更改的发布版本
+### <a name="to-change-the-publish-version"></a>更改发布版本
 
-1. 在“解决方案资源管理器” 中选择一个项目，然后在“项目”  菜单上单击“属性” 。
+1. 在**解决方案资源管理器**中选择一个项目后，在 "**项目**" 菜单上单击 "**属性**"。
 
-2. 单击“发布”选项卡。
+2. 单击 **“发布”** 选项卡。
 
-3. 在中**发布版本**字段中，递增**主要**，**次要**，**生成**，或**修订**版本数字。
+3. 在 "**发布版本**" 字段中，递增**主**版本号、**次**版本号、**内部**版本号或**修订**版本的版本号。
 
     > [!NOTE]
-    > 应永远不会递减版本号;这样做可能导致不可预知的更新行为。
+    > 永远不应减小版本号;这样做可能会导致意外的更新行为。
 
 ## <a name="see-also"></a>请参阅
 - [选择 ClickOnce 更新策略](../deployment/choosing-a-clickonce-update-strategy.md)
