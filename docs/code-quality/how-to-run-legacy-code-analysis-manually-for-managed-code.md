@@ -5,17 +5,17 @@ ms.topic: how-to
 helpviewer_keywords:
 - code analysis, running
 ms.assetid: 5086d228-f92e-4515-9708-c5b89b9e9a03
-author: jillre
-ms.author: jillfra
+author: Mikejo5000
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 38c3de83dc0df39314ad236f647c69bbe614b75d
-ms.sourcegitcommit: 48e93538f1e352fc1f972b642bb5fcce2f6834a2
+ms.openlocfilehash: 44190f8e828f9a971f15b57266978603dcac8139
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85371815"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85462057"
 ---
 # <a name="how-to-run-legacy-code-analysis-manually-for-managed-code"></a>如何：手动运行托管代码的旧式代码分析
 代码分析工具为您提供有关源代码中可能存在的缺陷的信息。 您可以在每次生成代码项目时自动运行代码分析，还可以手动运行代码分析。 代码分析运行时检查的规则在项目属性页的 "代码分析" 页上指定。 有关详细信息，请参阅[如何：配置托管代码项目的代码分析](../code-quality/how-to-configure-code-analysis-for-a-managed-code-project.md)。
