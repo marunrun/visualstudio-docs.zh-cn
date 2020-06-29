@@ -551,6 +551,8 @@
                   href: ca1828.md
                 - name: 'CA1829:使用 Length/Count 属性，而不是 Enumerable.Count 方法'
                   href: ca1829.md
+                - name: 'CA1830:在 StringBuilder 上优先使用强类型“追加和插入”方法重载'
+                  href: ca1830.md
                 - name: 'CA1831:在合适的情况下，为字符串使用 AsSpan 而不是基于范围的索引器'
                   href: ca1831.md
                 - name: 'CA1832:使用 AsSpan 或 AsMemory 而不是基于范围的索引器来获取数组的 ReadOnlySpan 或 ReadOnlyMemory 部分'
@@ -949,6 +951,8 @@
                   href: ca2245.md
                 - name: 'CA2246:请勿在同一语句中分配符号及其成员'
                   href: ca2246.md
+                - name: 'CA2247:传递给 TaskCompletionSource 构造函数的参数应为 TaskCreationOptions 枚举，而不是 TaskContinuationOptions 枚举'
+                  href: ca2247.md
                 - name: 'CA2248:向 Enum.HasFlag 提供正确的 enum 参数'
                   href: ca2248.md
             - name: 自动功能挂起
