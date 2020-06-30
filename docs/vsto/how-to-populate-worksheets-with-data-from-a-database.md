@@ -1,7 +1,7 @@
 ---
 title: 如何：用数据库中的数据填充工作表
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -14,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 0a1e01f5c9fc1372cda4d7d31f8ba56b90e166e7
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 1b594014b2564b5730c1895a007294ee66e07637
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985858"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85520115"
 ---
 # <a name="how-to-populate-worksheets-with-data-from-a-database"></a>如何：用数据库中的数据填充工作表
 
@@ -35,15 +35,15 @@ ms.locfileid: "72985858"
 
 1. 在 Visual Studio 中打开 Excel 文档级项目，并在设计器中打开工作表。
 
-2. 打开“数据源” 窗口并为项目创建数据源。 有关详细信息，请参阅[添加新连接](../data-tools/add-new-connections.md)。
+2. 打开“数据源” **** 窗口并为项目创建数据源。 有关详细信息，请参阅[添加新连接](../data-tools/add-new-connections.md)。
 
 3. 将所需的字段或表从 "**数据源**" 窗口拖到工作表中。
 
 在工作表上创建以下控件之一：
 
-- 如果拖动某个字段，则会在工作表上创建一个 <xref:Microsoft.Office.Tools.Excel.NamedRange> 控件。 有关详细信息，请参阅[NamedRange 控件](../vsto/namedrange-control.md)。
+- 如果拖动某个字段，则 <xref:Microsoft.Office.Tools.Excel.NamedRange> 会在工作表上创建一个控件。 有关详细信息，请参阅[NamedRange 控件](../vsto/namedrange-control.md)。
 
-- 如果拖动某个表，则会在工作表上创建一个 <xref:Microsoft.Office.Tools.Excel.ListObject> 控件。 有关详细信息，请参阅[ListObject 控件](../vsto/listobject-control.md)。
+- 如果拖动某个表，则 <xref:Microsoft.Office.Tools.Excel.ListObject> 会在工作表上创建一个控件。 有关详细信息，请参阅[ListObject 控件](../vsto/listobject-control.md)。
 
 您可以通过在 "**数据源**" 窗口中选择表或字段，然后从下拉列表中选择其他控件来添加不同的控件。
 
@@ -67,7 +67,7 @@ ms.locfileid: "72985858"
 
 有关如何将更新发送到类型化数据集和数据库的信息，请参阅[如何：使用主机控件中的数据更新数据源](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [将数据绑定到 Office 解决方案中的控件](../vsto/binding-data-to-controls-in-office-solutions.md)
 - [添加新数据源](../data-tools/add-new-data-sources.md)

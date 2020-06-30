@@ -15,31 +15,31 @@ caps.latest.revision: 17
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: e34a8e7d4860a599155554410e13df5a6eb3bfe1
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 53fa5f61cb7c503502956831452bc3eca1a9fece
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72672497"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85521194"
 ---
-# <a name="ca2004-remove-calls-to-gckeepalive"></a>CA2004：移除对 GC.KeepAlive 的调用
+# <a name="ca2004-remove-calls-to-gckeepalive"></a>CA2004:移除对 GC.KeepAlive 的调用
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|值|
 |-|-|
 |TypeName|RemoveCallsToGCKeepAlive|
 |CheckId|CA2004|
-|类别|Microsoft 可靠性|
+|Category|Microsoft 可靠性|
 |是否重大更改|不间断|
 
 ## <a name="cause"></a>原因
- 类使用 `SafeHandle` 但仍包含对 `GC.KeepAlive` 的调用。
+ 类使用 `SafeHandle` 但仍包含对的调用 `GC.KeepAlive` 。
 
-## <a name="rule-description"></a>规则说明
- 如果要转换为 `SafeHandle` 用法，请删除对 `GC.KeepAlive` （对象）的所有调用。 在这种情况下，类不必调用 `GC.KeepAlive`，假设它们没有终结器，但依赖于 `SafeHandle` 来完成它们的操作系统句柄。  尽管对 `GC.KeepAlive` 的调用的成本可能会从性能上得出不计，但从性能角度来看，对 `GC.KeepAlive` 的调用很有必要或足以解决可能不再存在的生存期问题，从而使代码更难以维护。
+## <a name="rule-description"></a>规则描述
+ 如果要转换为 `SafeHandle` 用法，请删除对 `GC.KeepAlive` （object）的所有调用。 在这种情况下，类不应调用 `GC.KeepAlive` ，前提是它们没有终结器，而是依赖 `SafeHandle` 于完成它们的操作系统句柄。  尽管对的调用的开销 `GC.KeepAlive` 可能会因为性能的衡量而忽略不计，但从角度来看，对的调用 `GC.KeepAlive` 是必要的或足以解决可能不再存在的生存期问题，这会使代码更难以维护。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
  删除对 `GC.KeepAlive` 的调用。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
- 仅当在技术上不正确时才可以禁止显示此警告，以将其转换为类中 `SafeHandle` 使用。
+ 仅当在技术上不能转换为 `SafeHandle` 类中的使用情况时，才可以禁止显示此警告。
