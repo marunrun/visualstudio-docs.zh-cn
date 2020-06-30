@@ -1,7 +1,7 @@
 ---
 title: 使用 T4 文本模板的运行时文本生成
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - CSharp
 - VB
@@ -15,12 +15,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 26897bee69f7c0e969cd42feb7604321294641fb
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 344e15b69bf3e8308c62c6fa1074720b0cd7618d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75595366"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85520830"
 ---
 # <a name="run-time-text-generation-with-t4-text-templates"></a>使用 T4 文本模板的运行时文本生成
 
@@ -53,16 +53,16 @@ This report is Company Confidential.
 
 ### <a name="to-create-a-run-time-text-template"></a>创建运行时文本模板
 
-1. 在解决方案资源管理器中，在项目的快捷菜单上，选择 "**添加** > **新项**"。
+1. 在解决方案资源管理器中，在项目的快捷菜单上，选择 "**添加**  >  **新项**"。
 
-2. 在 "**添加新项**" 对话框中，选择 "**运行时文本模板**"。 （Visual Basic > **常规**"下的"**常见项**"。）
+2. 在 "**添加新项**" 对话框中，选择 "**运行时文本模板**"。 （在 Visual Basic 查看**常见项**  > **常规**。）
 
 3. 键入模板文件的名称。
 
     > [!NOTE]
     > 模板文件名将用作生成的代码中的类名。 因此，它不应包含空格或标点。
 
-4. 选择“添加”。
+4. 选择 "**添加**"。
 
     将创建一个扩展名为**tt**的新文件。 其 "**自定义工具**" 属性设置为 " **TextTemplatingFilePreprocessor**"。 它包含以下行：
 
@@ -80,7 +80,7 @@ This report is Company Confidential.
 
 ### <a name="to-convert-an-existing-text-file-to-a-run-time-template"></a>将现有文本文件转换为运行时模板
 
-1. 将该文件包含在 Visual Studio 项目中。 在解决方案资源管理器中，在项目的快捷菜单上，选择 "**添加** > **现有项**"。
+1. 将该文件包含在 Visual Studio 项目中。 在解决方案资源管理器中，在项目的快捷菜单上，选择 "**添加**  >  **现有项**"。
 
 2. 将文件的 "**自定义工具**" 属性设置为 " **TextTemplatingFilePreprocessor**"。 在解决方案资源管理器的文件的快捷菜单上，选择 "**属性**"。
 
@@ -91,7 +91,7 @@ This report is Company Confidential.
 
 4. 从文件名的主要部分删除所有空格或标点。 例如，"我的 Web Page.tt" 不正确，但 "MyWebPage.tt" 是正确的。 文件名称将用作生成的代码中的类名。
 
-5. 在文件开头插入以下行。 如果正在 Visual Basic 项目中操作，请将 "C#" 替换为 "VB"。
+5. 在文件开头插入以下行。 如果正在 Visual Basic 项目中操作，请将 "c #" 替换为 "VB"。
 
     `<#@ template language="C#" #>`
 
@@ -119,7 +119,7 @@ This report is Company Confidential.
 
 ### <a name="embedded-program-code"></a>嵌入的程序代码
 
-可以在 `<#` 和 `#>`之间插入程序代码。 例如：
+您可以在和之间插入程序代码 `<#` `#>` 。 例如：
 
 ```csharp
 <table>
@@ -144,7 +144,7 @@ This report is Company Confidential.
 </table>
 ```
 
-请注意，将在 `<# ... #>` 中插入语句，并在 `<#= ... #>`之间插入表达式。 有关详细信息，请参阅[编写 T4 文本模板](../modeling/writing-a-t4-text-template.md)。
+请注意，在 `<# ... #>` 和之间插入语句 `<#= ... #>` 。 有关详细信息，请参阅[编写 T4 文本模板](../modeling/writing-a-t4-text-template.md)。
 
 ## <a name="using-the-template"></a>使用模板
 
@@ -152,7 +152,7 @@ This report is Company Confidential.
 
 保存**tt**文件时，将生成一个子 **.cs**或 **.vb**文件。 若要在**解决方案资源管理器**中查看此文件，请展开**tt**文件节点。 在 Visual Basic 项目中，首先选择**解决方案资源管理器**工具栏中的 "**显示所有文件**"。
 
-请注意，该子公司文件包含一个分部类，其中包含一个名为 `TransformText()`的方法。 可以从应用程序中调用此方法。
+请注意，该子公司文件包含一个分部类，其中包含一个名为的方法 `TransformText()` 。 可以从应用程序中调用此方法。
 
 ### <a name="generating-text-at-run-time"></a>在运行时生成文本
 
@@ -262,7 +262,7 @@ System.IO.File.WriteAllText("outputPage.html", pageContent)
 
 #### <a name="passing-data-in-template-properties"></a>在模板属性中传递数据
 
-将数据传递到模板的另一种方法是将公共属性添加到分部类定义的模板类中。 应用程序可以在调用 `TransformText()`之前设置属性。
+将数据传递到模板的另一种方法是将公共属性添加到分部类定义的模板类中。 应用程序可以在调用之前设置属性 `TransformText()` 。
 
 你还可以将字段添加到分部定义的模板类中。 这使您可以在模板的后续执行之间传递数据。
 
@@ -272,9 +272,9 @@ System.IO.File.WriteAllText("outputPage.html", pageContent)
 
 ### <a name="assemblies-and-references"></a>程序集和引用
 
-如果希望模板代码引用 .NET 或其他程序集（如**system.object**），请按常规方式将其添加到项目的**引用**。
+如果希望模板代码引用 .NET 或其他程序集（如**System.Xml.dll**），请按常规方式将其添加到项目的**引用**。
 
-如果要以与 `using` 语句相同的方式导入命名空间，则可以使用 `import` 指令执行此操作：
+如果要以与语句相同的方式导入命名空间 `using` ，则可以使用指令执行此 `import` 操作：
 
 ```
 <#@ import namespace="System.Xml" #>
@@ -296,19 +296,19 @@ Include 指令可用于模板文件文本或包含的文件文本中的任意位
 
 ### <a name="inheritance-between-run-time-text-templates"></a>运行时文本模板之间的继承
 
-可以通过编写一个基类模板来共享运行时模板之间的内容，该模板可以是抽象的。 使用 `<@#template#>` 指令的 `inherits` 参数引用另一个运行时模板类。
+可以通过编写一个基类模板来共享运行时模板之间的内容，该模板可以是抽象的。 使用 `inherits` 指令的参数 `<@#template#>` 引用另一个运行时模板类。
 
 #### <a name="inheritance-pattern-fragments-in-base-methods"></a>继承模式：基方法中的片段
 
 在下面的示例中使用的模式中，请注意以下几点：
 
-- 基类 `SharedFragments` 在类功能块 `<#+ ... #>`内定义方法。
+- 基类 `SharedFragments` 定义类功能块中 `<#+ ... #>` 的方法。
 
 - 基类不包含任何可用文本。 相反，它的所有文本块都出现在类功能方法中。
 
-- 派生类调用 `SharedFragments`中定义的方法。
+- 派生类调用中定义的方法 `SharedFragments` 。
 
-- 应用程序调用派生类的 `TextTransform()` 方法，但不会转换基类 `SharedFragments`。
+- 应用程序调用 `TextTransform()` 派生类的方法，但不转换基类 `SharedFragments` 。
 
 - 基类和派生类均为运行时文本模板;也就是说，"**自定义工具**" 属性设置为**TextTemplatingFilePreprocessor**。
 
@@ -415,7 +415,7 @@ string result = t1.TransformText();
 Console.WriteLine(result);
 ```
 
-**生成的输出：**
+**结果输出：**
 
 ```
 Here is the description for this derived template:

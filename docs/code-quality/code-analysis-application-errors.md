@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c35ba03c2f93af0705910b8f89dd835c985e3e60
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: fe3f92adea762058b6b4414f0bf9596d77ab698e
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75587779"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85521311"
 ---
 # <a name="code-analysis-application-errors"></a>代码分析应用程序错误
 
@@ -26,14 +26,14 @@ ms.locfileid: "75587779"
 
 ## <a name="in-this-section"></a>本节内容
 
-|||
+|代码|说明|
 |-|-|
 |[CA0001](ca0001.md)|托管代码分析工具中引发了异常，但未指示预期的错误条件。|
 |[CA0051](ca0051.md)|未选择任何规则。|
 |[CA0052](ca0052.md)|未选择要分析的目标。|
 |[CA0053](ca0053.md)|无法加载规则程序集。|
 |[CA0054](ca0054.md)|自定义规则程序集具有无效的 XML 资源。|
-|[CA0055](ca0055.md)|无法加载文件：\<路径 >|
+|[CA0055](ca0055.md)|无法加载文件：\<path>|
 |[CA0056](ca0056.md)|项目文件的版本不正确。|
 |[CA0057](ca0057.md)|不能将冲突映射到当前目标和规则集。|
 |[CA0058](ca0058.md)|无法加载引用的程序集。|
@@ -58,5 +58,5 @@ ms.locfileid: "75587779"
 
 ## <a name="related-sections"></a>相关章节
 
-- [代码分析策略错误](../code-quality/code-analysis-policy-errors.md)
+- [Code Analysis Policy Errors](../code-quality/code-analysis-policy-errors.md)
 - [分析托管代码质量](../code-quality/code-analysis-for-managed-code-overview.md)
