@@ -1,7 +1,7 @@
 ---
 title: 以编程方式向文档添加图片和艺术字
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 45b3030875539035f93bd340354e7041028200d2
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 621051c827b08e66d68bc348401c2a939e279bcf
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71253821"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85538081"
 ---
 # <a name="how-to-programmatically-add-pictures-and-word-art-to-documents"></a>如何：以编程方式向文档中添加图片和艺术字
   可以在设计时或运行时向文档中添加图片和图形对象。 可使用“艺术字”向 Microsoft Office Word 文档添加装饰性文本。 这些特殊文本效果是一些图形对象，你可以自定义这些图形对象并插入到文档中。
@@ -64,7 +64,7 @@ ms.locfileid: "71253821"
 
 3. 在 "**文本**" 组中，单击 "**艺术字**"，然后选择 "艺术字" 样式。
 
-4. 将想要在文档中显示的文本添加到 "**编辑艺术字文本**" 对话框中，然后单击 **"确定"** 。
+4. 将想要在文档中显示的文本添加到 "**编辑艺术字文本**" 对话框中，然后单击 **"确定"**。
 
      这样文本就会添加到文档中，并应用选定的艺术字样式。
 
@@ -97,11 +97,11 @@ ms.locfileid: "71253821"
 
 ## <a name="compile-the-code"></a>编译代码
 
-- 驱动器 C 上必须存在一个名为*SamplePicture*的图片。
+- 驱动器 C 上必须存在一个名为*SamplePicture.jpg*的照片。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [如何：以编程方式打开现有文档](../vsto/how-to-programmatically-open-existing-documents.md)
-- [如何：以编程方式将文本插入 Word 文档](../vsto/how-to-programmatically-insert-text-into-word-documents.md)
-- [如何：搜索后以编程方式还原选定内容](../vsto/how-to-programmatically-restore-selections-after-searches.md)
+- [如何：以编程方式在 Word 文档中插入文本](../vsto/how-to-programmatically-insert-text-into-word-documents.md)
+- [如何：以编程方式在搜索后还原选定内容](../vsto/how-to-programmatically-restore-selections-after-searches.md)
 - [如何：以编程方式保存文档](../vsto/how-to-programmatically-save-documents.md)
 - [Office 解决方案中的可选参数](../vsto/optional-parameters-in-office-solutions.md)

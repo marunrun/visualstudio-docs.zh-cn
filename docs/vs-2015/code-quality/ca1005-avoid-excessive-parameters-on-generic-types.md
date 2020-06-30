@@ -15,28 +15,28 @@ caps.latest.revision: 20
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 7e75b2e295a561e026b437b3c62724536a3ac64e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 56c69badf76a05351b37a7c8a41a9cacf54f9974
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72671988"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85539719"
 ---
-# <a name="ca1005-avoid-excessive-parameters-on-generic-types"></a>CA1005：避免泛型类型的参数过多
+# <a name="ca1005-avoid-excessive-parameters-on-generic-types"></a>CA1005:避免泛型类型的参数过多
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|值|
 |-|-|
 |TypeName|AvoidExcessiveParametersOnGenericTypes|
 |CheckId|CA1005|
-|类别|Microsoft. Design|
+|Category|Microsoft. Design|
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
  外部可见的泛型类型具有两个以上的类型参数。
 
-## <a name="rule-description"></a>规则说明
- 泛型类型包含的类型参数越多，越难以知道并记住每个类型参数各代表什么。 通常情况下，有一种类型参数（如 `List<T>` 中）和（在某些情况下有两个类型参数，如 `Dictionary<TKey, TValue>` 中）。 如果存在两个以上的类型参数，则很难为大多数用户带来太大的难度（例如C# ，在 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 中 `TooManyTypeParameters<T, K, V>` 或 `TooManyTypeParameters(Of T, K, V)`。
+## <a name="rule-description"></a>规则描述
+ 泛型类型包含的类型参数越多，越难以知道并记住每个类型参数各代表什么。 通常情况下，有一种类型参数（如中 `List<T>` ）和（在某些情况下有两个类型参数）非常明显，如中所示 `Dictionary<TKey, TValue>` 。 如果存在两个以上的类型参数，则很难为大多数用户（例如， `TooManyTypeParameters<T, K, V>` c # 中的或中的）变得过大 `TooManyTypeParameters(Of T, K, V)` [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
  若要修复与此规则的冲突，请将设计更改为使用不超过两个类型参数。
@@ -45,19 +45,19 @@ ms.locfileid: "72671988"
  请勿禁止显示此规则发出的警告，除非设计确实需要两个以上的类型参数。 在易于理解和使用的语法中提供泛型，可减少学习和增加新库的采用率所需的时间。
 
 ## <a name="related-rules"></a>相关规则
- [CA1010：集合应实现泛型接口](../code-quality/ca1010-collections-should-implement-generic-interface.md)
+ [CA1010:集合应实现泛型接口](../code-quality/ca1010-collections-should-implement-generic-interface.md)
 
- [CA1000：不要在泛型类型中声明静态成员](../code-quality/ca1000-do-not-declare-static-members-on-generic-types.md)
+ [CA1000:不要在泛型类型中声明静态成员](../code-quality/ca1000-do-not-declare-static-members-on-generic-types.md)
 
- [CA1002：不要公开泛型列表](../code-quality/ca1002-do-not-expose-generic-lists.md)
+ [CA1002:不要公开泛型列表](../code-quality/ca1002-do-not-expose-generic-lists.md)
 
- [CA1006：不要将泛型类型嵌套在成员签名中](../code-quality/ca1006-do-not-nest-generic-types-in-member-signatures.md)
+ [CA1006:不要将泛型类型嵌套在成员签名中](../code-quality/ca1006-do-not-nest-generic-types-in-member-signatures.md)
 
- [CA1004：泛型方法应提供类型形参](../code-quality/ca1004-generic-methods-should-provide-type-parameter.md)
+ [CA1004:泛型方法应提供类型参数](../code-quality/ca1004-generic-methods-should-provide-type-parameter.md)
 
- [CA1003：使用泛型事件处理程序实例](../code-quality/ca1003-use-generic-event-handler-instances.md)
+ [CA1003:使用泛型事件处理程序实例](../code-quality/ca1003-use-generic-event-handler-instances.md)
 
- [CA1007：在适用处使用泛型](../code-quality/ca1007-use-generics-where-appropriate.md)
+ [CA1007:在适用处使用泛型](../code-quality/ca1007-use-generics-where-appropriate.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [泛型](https://msdn.microsoft.com/library/75ea8509-a4ea-4e7a-a2b3-cf72482e9282)

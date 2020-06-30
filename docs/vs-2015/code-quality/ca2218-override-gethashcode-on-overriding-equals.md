@@ -15,28 +15,28 @@ caps.latest.revision: 22
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 06d961fee28fa67f1e4f712564f6b3d5ff4073ee
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 8083edf04aa799c8031fbcd1b53a2e17104dd4a6
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72651618"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85538796"
 ---
-# <a name="ca2218-override-gethashcode-on-overriding-equals"></a>CA2218：重写 Equals 时重写 GetHashCode
+# <a name="ca2218-override-gethashcode-on-overriding-equals"></a>CA2218:重写 Equals 时重写 GetHashCode
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|值|
 |-|-|
 |TypeName|OverrideGetHashCodeOnOverridingEquals|
 |CheckId|CA2218|
-|类别|Microsoft. 使用情况|
+|Category|Microsoft. 使用情况|
 |是否重大更改|非重大更改|
 
 ## <a name="cause"></a>原因
- 公共类型 <xref:System.Object.Equals%2A?displayProperty=fullName> 重写，但不重写 <xref:System.Object.GetHashCode%2A?displayProperty=fullName>。
+ 公共类型重写 <xref:System.Object.Equals%2A?displayProperty=fullName> 但不重写 <xref:System.Object.GetHashCode%2A?displayProperty=fullName> 。
 
-## <a name="rule-description"></a>规则说明
- <xref:System.Object.GetHashCode%2A> 基于当前实例返回一个值，该值适用于哈希算法和数据结构（如哈希表）。 两个相同类型且相等的对象必须返回相同的哈希代码，以确保以下类型的实例正常工作：
+## <a name="rule-description"></a>规则描述
+ <xref:System.Object.GetHashCode%2A>基于当前实例返回一个值，该值适用于哈希算法和数据结构（如哈希表）。 两个相同类型且相等的对象必须返回相同的哈希代码，以确保以下类型的实例正常工作：
 
 - <xref:System.Collections.Hashtable?displayProperty=fullName>
 
@@ -54,54 +54,54 @@ ms.locfileid: "72651618"
 
 - <xref:System.Collections.Specialized.OrderedDictionary?displayProperty=fullName>
 
-- 实现的类型 <xref:System.Collections.Generic.IEqualityComparer%601?displayProperty=fullName>
+- 实现的类型<xref:System.Collections.Generic.IEqualityComparer%601?displayProperty=fullName>
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
- 若要修复与此规则的冲突，请提供 <xref:System.Object.GetHashCode%2A> 的实现。 对于同一类型的一对对象，如果 <xref:System.Object.Equals%2A> 的实现返回对的 `true`，则必须确保实现返回相同的值。
+ 若要修复与此规则的冲突，请提供的实现 <xref:System.Object.GetHashCode%2A> 。 对于同一类型的一对对象，如果实现 <xref:System.Object.Equals%2A> 对的返回，则必须确保实现返回相同的值 `true` 。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
  不禁止显示此规则发出的警告。
 
 ## <a name="class-example"></a>类示例
 
-### <a name="description"></a>描述
+### <a name="description"></a>说明
  下面的示例演示违反此规则的类（引用类型）。
 
 ### <a name="code"></a>代码
  [!code-csharp[FxCop.Usage.GetHashCodeErrorClass#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.GetHashCodeErrorClass/cs/FxCop.Usage.GetHashCodeErrorClass.cs#1)]
 
 ### <a name="comments"></a>注释
- 下面的示例通过重写 <xref:System.Object.GetHashCode> 来修复冲突。
+ 下面的示例通过重写修复了冲突 <xref:System.Object.GetHashCode> 。
 
 ### <a name="code"></a>代码
  [!code-csharp[FxCop.Usage.GetHashCodeFixedClass#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.GetHashCodeFixedClass/cs/FxCop.Usage.GetHashCodeFixedClass.cs#1)]
 
 ## <a name="structure-example"></a>结构示例
 
-### <a name="description"></a>描述
+### <a name="description"></a>说明
  下面的示例演示违反此规则的结构（值类型）。
 
 ### <a name="code"></a>代码
  [!code-csharp[FxCop.Usage.GetHashCodeErrorStruct#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.GetHashCodeErrorStruct/cs/FxCop.Usage.GetHashCodeErrorStruct.cs#1)]
 
 ### <a name="comments"></a>注释
- 下面的示例通过重写 <xref:System.Object.GetHashCode> 来修复冲突。
+ 下面的示例通过重写修复了冲突 <xref:System.Object.GetHashCode> 。
 
 ### <a name="code"></a>代码
  [!code-csharp[FxCop.Usage.GetHashCodeFixedStruct#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.GetHashCodeFixedStruct/cs/FxCop.Usage.GetHashCodeFixedStruct.cs#1)]
 
 ## <a name="related-rules"></a>相关规则
- [CA1046：不要对引用类型重载相等运算符](../code-quality/ca1046-do-not-overload-operator-equals-on-reference-types.md)
+ [CA1046:不要对引用类型重载相等运算符](../code-quality/ca1046-do-not-overload-operator-equals-on-reference-types.md)
 
- [CA2225：运算符重载具有命名的备用项](../code-quality/ca2225-operator-overloads-have-named-alternates.md)
+ [CA2225:运算符重载具有命名的备用项](../code-quality/ca2225-operator-overloads-have-named-alternates.md)
 
- [CA2226：运算符应有对称重载](../code-quality/ca2226-operators-should-have-symmetrical-overloads.md)
+ [CA2226:运算符应有对称重载](../code-quality/ca2226-operators-should-have-symmetrical-overloads.md)
 
- [CA2224：重载相等运算符时重写 Equals 方法](../code-quality/ca2224-override-equals-on-overloading-operator-equals.md)
+ [CA2224:重载相等运算符时重写 Equals 方法](../code-quality/ca2224-override-equals-on-overloading-operator-equals.md)
 
- [CA2231：重写 ValueType.Equals 时应重载相等运算符](../code-quality/ca2231-overload-operator-equals-on-overriding-valuetype-equals.md)
+ [CA2231:重写 ValueType.Equals 时应重载相等运算符](../code-quality/ca2231-overload-operator-equals-on-overriding-valuetype-equals.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Object.Equals%2A?displayProperty=fullName>
 - <xref:System.Object.GetHashCode%2A?displayProperty=fullName>

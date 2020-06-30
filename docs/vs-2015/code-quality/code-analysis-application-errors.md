@@ -14,12 +14,12 @@ caps.latest.revision: 25
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 9fa92e773c3dc130d0c0fc0ce05cc270dc9b6e53
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ef5ccc0cf432a5c6782b76c4623bfdc55f66a8b5
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669011"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85538550"
 ---
 # <a name="code-analysis-application-errors"></a>代码分析应用程序错误
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -27,14 +27,14 @@ ms.locfileid: "72669011"
 
 ## <a name="in-this-section"></a>本节内容
 
-|||
+|Item|值|
 |-|-|
 |[CA0001](ca0001.md)|托管代码分析工具中引发了异常，但未指示预期的错误条件。|
 |[CA0051](ca0051.md)|未选择任何规则。|
 |[CA0052](ca0052.md)|未选择要分析的目标。|
 |[CA0053](ca0053.md)|无法加载规则程序集。|
 |[CA0054](ca0054.md)|自定义规则程序集具有无效的 XML 资源。|
-|[CA0055](ca0055.md)|无法加载文件： \<path >|
+|[CA0055](ca0055.md)|无法加载文件：\<path>|
 |[CA0056](ca0056.md)|项目文件的版本不正确。|
 |[CA0057](ca0057.md)|不能将冲突映射到当前目标和规则集。|
 |[CA0058](ca0058.md)|无法加载引用的程序集。|
@@ -61,4 +61,4 @@ ms.locfileid: "72669011"
 
 - [编写安全代码的准则](https://msdn.microsoft.com/9892fd19-45cd-44b6-9fa8-10f1b5cb6ea4)
 - [分析托管代码质量](../code-quality/analyzing-managed-code-quality-by-using-code-analysis.md)
-- [用于对应用程序生命周期管理工具中的错误进行故障排除的资源](https://msdn.microsoft.com/library/76ca8f76-1e2d-4b55-89e2-bd59e4abe74c)
+- [用于排除 Application Lifecycle Management 工具错误的资源](https://msdn.microsoft.com/library/76ca8f76-1e2d-4b55-89e2-bd59e4abe74c)

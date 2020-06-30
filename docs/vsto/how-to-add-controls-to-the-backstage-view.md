@@ -1,7 +1,7 @@
 ---
 title: '如何：向 Backstage 视图添加控件 '
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -20,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 87cea877928baf52b0442ed9b0d952fcf649f155
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 5b4ea5cdcd869f16f987e9431359511831af9573
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72986013"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85538341"
 ---
 # <a name="how-to-add-controls-to-the-backstage-view"></a>如何：向 Backstage 视图添加控件
   您可以使用功能区设计器将控件添加到单击 "**文件**" 选项卡时打开的菜单。当你运行应用程序时，添加到 "**文件**" 选项卡的控件将显示为名为 "**外接程序**" 的组。
@@ -38,7 +38,7 @@ ms.locfileid: "72986013"
 
 1. 在设计视图中打开功能区项。
 
-     有关如何将 "**功能区（可视化设计器）** " 项添加到项目的信息，请参阅 [如何：开始自定义功能区](../vsto/how-to-get-started-customizing-the-ribbon.md)。
+     有关如何将 "**功能区（可视化设计器）** " 项添加到项目的信息，请参阅[如何：开始自定义功能区](../vsto/how-to-get-started-customizing-the-ribbon.md)。
 
 2. 在功能区设计器中，单击 "**文件**" 选项卡。
 
@@ -62,7 +62,7 @@ ms.locfileid: "72986013"
 
 4. 拖动控件，将其移至菜单上的新位置。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [功能区概述](../vsto/ribbon-overview.md)
 - [功能区设计器](../vsto/ribbon-designer.md)
 - [Ribbon XML](../vsto/ribbon-xml.md)
