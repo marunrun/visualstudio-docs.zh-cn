@@ -1,18 +1,18 @@
 ---
 title: 使用 DSL 库在 DSL 之间共享类
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4bfadc1777dfb4ba0c8ea712cfd39becc47f54a1
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.openlocfilehash: 38496141d6fcdd33f3bf5185c3f50b1bf961d832
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76111364"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85542540"
 ---
 # <a name="sharing-classes-between-dsls-by-using-a-dsl-library"></a>使用 DSL 库在 DSL 之间共享类
 在 Visual Studio 可视化和建模 SDK 中，可以创建可导入到另一个 DSL 的不完整 DSL 定义。 这使您可以对类似模型的常见部分进行因式分解。
@@ -31,17 +31,17 @@ ms.locfileid: "76111364"
 
      若要定义导入程序可以使用的关系，请创建两个域类并创建它们之间的关系。
 
-     请考虑将域类的**继承修饰符**设置为 `Abstract`。
+     请考虑将域类的**继承修饰符**设置为 `Abstract` 。
 
 3. 可以添加在 DSL 资源管理器中定义的元素，例如连接构建器。
 
 4. 您可以添加需要其他代码的自定义项，如验证约束。
 
-5. 单击**转换所有模板**。
+5. 单击 "**转换所有模板**"。
 
-6. 生成此项目。
+6. 生成项目。
 
-7. 将 DSL 分发给其他人使用时，必须同时提供编译的程序集（DLL）和文件 `DslDefinition.dsl`。 可以在下的文件夹中查找已编译的程序集 `Dsl\bin\*`
+7. 将 DSL 分发给其他人使用时，必须同时提供编译的程序集（DLL）和文件 `DslDefinition.dsl` 。 可以在下面的文件夹中查找已编译的程序集`Dsl\bin\*`
 
 #### <a name="to-import-a-dsl-library"></a>导入 DSL 库
 

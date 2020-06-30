@@ -15,27 +15,27 @@ caps.latest.revision: 21
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 57b7214058baf63ffa5e3ee2c9a982bf411b60e7
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ae65e922d1b4946300155bbf148abac574a2ec2a
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72652183"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544373"
 ---
 # <a name="ca2101-specify-marshaling-for-pinvoke-string-arguments"></a>CA2101：指定对 P/Invoke 字符串参数进行封送处理
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|值|
 |-|-|
 |TypeName|SpecifyMarshalingForPInvokeStringArguments|
 |CheckId|CA2101|
-|类别|Microsoft 全球化|
+|Category|Microsoft 全球化|
 |是否重大更改|不间断|
 
 ## <a name="cause"></a>原因
  平台调用成员允许部分受信任的调用方，具有字符串参数，并不显式封送字符串。
 
-## <a name="rule-description"></a>规则说明
+## <a name="rule-description"></a>规则描述
  从 Unicode 转换为 ANSI 时，可能并非所有 Unicode 字符都可以在特定 ANSI 代码页中表示。 *最佳映射*尝试通过将不能表示的字符替换为字符来解决此问题。 使用此功能可能会导致潜在的安全漏洞，因为您无法控制所选的字符。 例如，恶意代码可能会有意创建一个 Unicode 字符串，其中包含在特定代码页中找不到的字符，这些字符将转换为文件系统特殊字符，如 ".." 或 "/"。 另请注意，在将字符串转换为 ANSI 之前，通常会检查是否存在特殊字符。
 
  最佳映射是非托管转换的默认值，WChar 到 Mb。 除非显式禁用最佳映射，否则，由于此问题，你的代码可能包含可利用的安全漏洞。

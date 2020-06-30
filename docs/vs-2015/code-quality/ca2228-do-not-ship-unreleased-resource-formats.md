@@ -15,31 +15,31 @@ caps.latest.revision: 16
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 9297ea0bb24eed54d0134a5f3c0fce87e6757adb
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 4adcae1c1cc616cdbcf5a7aa15342d221c2f4300
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72662876"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85540577"
 ---
-# <a name="ca2228-do-not-ship-unreleased-resource-formats"></a>CA2228：不要发行未发布的资源格式
+# <a name="ca2228-do-not-ship-unreleased-resource-formats"></a>CA2228:不要发行未发布的资源格式
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|值|
 |-|-|
 |TypeName|DoNotShipUnreleasedResourceFormats|
 |CheckId|CA2228|
-|类别|Microsoft. 使用情况|
+|Category|Microsoft. 使用情况|
 |是否重大更改|非重大更改|
 
 ## <a name="cause"></a>原因
- 资源文件是使用当前不支持的 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 版本生成的。
+ 资源文件是使用 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 当前不受支持的版本生成的。
 
-## <a name="rule-description"></a>规则说明
- 使用 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 的预发行版本生成的资源文件可能无法由受支持的 .NET Framework 版本使用。
+## <a name="rule-description"></a>规则描述
+ 使用的预发行版本生成的资源文件 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 可能无法由 .NET Framework 的受支持版本使用。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
- 若要修复与此规则的冲突，请使用支持的 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]k 版本生成资源。
+ 若要修复与此规则的冲突，请使用支持的 k 版本创建资源 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
  不禁止显示此规则发出的警告。

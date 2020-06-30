@@ -9,12 +9,12 @@ caps.latest.revision: 14
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 432a0eddece867972e5c5159f734b4589c22e218
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
-ms.translationtype: MTE95
+ms.openlocfilehash: 53caca1d98b4074867757ae01d8cc9efa9692952
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299922"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85542982"
 ---
 # <a name="tips-and-tricks-for-visual-studio"></a>Visual Studio 的提示和技巧
 
@@ -38,9 +38,9 @@ ms.locfileid: "74299922"
 
 - [应用程序生命周期管理](../ide/tips-and-tricks-for-visual-studio.md#BKMK_ALM)
 
-## <a name="BKMK_WindowMgmt"></a>窗口管理
+## <a name="window-management"></a><a name="BKMK_WindowMgmt"></a>窗口管理
 
-|||
+|命令|快捷键|
 |-|-|
 |拖离浮动选项卡井|按住 Ctrl 的同时单击以进行多重选择|
 |将浮动窗口最大化|双击标题栏|
@@ -49,9 +49,9 @@ ms.locfileid: "74299922"
 |显示打开的文件列表|Ctrl+Alt+向下键|
 |显示全部浮动窗口|Ctrl+Shift+M|
 
-## <a name="BKMK_WindowShortcuts"></a>窗口快捷方式
+## <a name="window-shortcuts"></a><a name="BKMK_WindowShortcuts"></a>窗口快捷方式
 
-|||
+|命令|快捷键|
 |-|-|
 |移动/停靠浮动窗口|Win+向左键/Win+向右键|
 |最大化/最小化窗口|Win+向上键/Win+向下键|
@@ -59,9 +59,9 @@ ms.locfileid: "74299922"
 |启动新实例|Win+Shift+n|
 |在窗口之间切换|Win+n|
 
-## <a name="BKMK_Search"></a>Visual Studio 搜索
+## <a name="visual-studio-search"></a><a name="BKMK_Search"></a>Visual Studio 搜索
 
-|||
+|命令|快捷键|
 |-|-|
 |解决方案资源管理器搜索|Ctrl+;|
 |在任何工具窗口中将焦点置于搜索框中|当工具窗口具有焦点时使用 Alt+`|
@@ -69,9 +69,9 @@ ms.locfileid: "74299922"
 |快速启动范围结果|-   @opt 选项<br />-   @cmd 命令<br />-   @mru 最近使用<br />-   @doc 打开文档|
 |在工具选项中搜索|Ctrl+E|
 
-## <a name="BKMK_EditorFind"></a>编辑器查找
+## <a name="editor-find"></a><a name="BKMK_EditorFind"></a>编辑器查找
 
-|||
+|命令|快捷键|
 |-|-|
 |快速查找|Ctrl+F|
 |快速查找下一个结果|Enter|
@@ -84,9 +84,9 @@ ms.locfileid: "74299922"
 |在文件中查找|Ctrl+Shift+F|
 |在文件中替换|Ctrl+Shift+H|
 
-## <a name="BKMK_CodeEditor"></a>代码编辑器
+## <a name="code-editor"></a><a name="BKMK_CodeEditor"></a>代码编辑器
 
-|||
+|命令|快捷键|
 |-|-|
 |IntelliSense 建议模式|Ctrl+Alt+空格键（切换）|
 |强制显示 IntelliSense|Ctrl+J|
@@ -109,25 +109,25 @@ ms.locfileid: "74299922"
 |在多个查看结果之间导航|F8 和 Shift+F8|
 |在“代码编辑器”窗口和“查看定义”窗口之间切换|Shift+Esc|
 
-## <a name="BKMK_Toolbars"></a>工具栏
+## <a name="toolbars"></a><a name="BKMK_Toolbars"></a>'
 
-|||
+|命令|快捷键|
 |-|-|
 |添加按钮|单击工具栏溢出按钮|
 |标准工具栏中的查找组合框|Ctrl+D|
 |查找文本框命令模式|键入“>”|
 |新建别名|>alias NewAlias 命令|
 
-## <a name="BKMK_Debugging"></a>调试
+## <a name="debugging"></a><a name="BKMK_Debugging"></a>调试
 
-|||
+|命令|快捷键|
 |-|-|
 |开始调试|F5|
 |停止调试|Shift+F5|
 |重新启动调试|Ctrl+Shift+F5|
 |逐过程|F10|
 |逐语句|F11|
-|跳出|Shift+F11|
+|步出|Shift+F11|
 |运行到光标处|Ctrl+F10|
 |设置下一语句|Ctrl+Shift+F10|
 |设置并切换断点|F9|
@@ -137,7 +137,7 @@ ms.locfileid: "74299922"
 |即时窗口清除缓冲区|>cls|
 |即时窗口打印值|?varname|
 
-## <a name="BKMK_ALM"></a>应用程序生命周期管理
+## <a name="application-lifecycle-management"></a><a name="BKMK_ALM"></a>应用程序生命周期管理
 
 请参阅[键盘快捷键：Visual Studio Online、TFS Web 门户和团队资源管理器](/azure/devops/project/navigation/keyboard-shortcuts?view=vsts)。
 

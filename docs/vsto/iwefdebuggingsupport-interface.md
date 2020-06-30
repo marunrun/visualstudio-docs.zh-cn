@@ -1,7 +1,7 @@
 ---
 title: IWefDebuggingSupport 接口
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: interface
 dev_langs:
 - VB
 - CSharp
@@ -10,15 +10,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a71adf5371275fbbdc19cdf09be96ef900ec073d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0a4883d36c1833c66a2539380184521b070f5c2a
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62583758"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544724"
 ---
 # <a name="iwefdebuggingsupport-interface"></a>IWefDebuggingSupport 接口
-  实现的调试环境，如 Visual Studio 中，为了便于调试 office 的应用。 Office 应用程序，如 Word 或 Excel，将从 Visual Studio 中获取此接口，然后在特定时间点的接口上调试会话期间调用的方法。
+  由调试环境（如 Visual Studio）实现，以便为 Office 应用程序进行调试。 Office 应用程序（如 Word 或 Excel）从 Visual Studio 获取此接口，然后在调试会话过程中的特定点调用接口上的方法。
 
 ## <a name="syntax"></a>语法
 
@@ -39,7 +39,7 @@ interface IWefDebuggingSupport : IUnknown
 ## <a name="methods"></a>方法
  下表列出了 IWefDebuggingSupport 接口定义的方法。
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
-|[GetAutoInsertExtensions 方法](../vsto/getautoinsertextensions-method.md)|获取要在调试期间自动插入的 Office 应用的相关信息。|
-|[SetWefProcessId 方法](../vsto/setwefprocessid-method.md)|提供将运行 Web 扩展框架 (WEF) 内容的进程标识符。|
+|[GetAutoInsertExtensions 方法](../vsto/getautoinsertextensions-method.md)|获取有关在调试过程中将自动插入的 Office 相关应用程序的信息。|
+|[SetWefProcessId 方法](../vsto/setwefprocessid-method.md)|提供将运行 Web 扩展框架（WEF）内容的进程标识符。|

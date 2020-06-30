@@ -15,27 +15,27 @@ caps.latest.revision: 17
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 8c79ed71290d54f97bb4ed143d32095b157e2e3e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 4773a34ab7112434813990b4d25cbeeb865f3a08
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669130"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543892"
 ---
-# <a name="ca1712-do-not-prefix-enum-values-with-type-name"></a>CA1712：不要将类型名用作枚举值的前缀
+# <a name="ca1712-do-not-prefix-enum-values-with-type-name"></a>CA1712:不要将类型名用作枚举值的前缀
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|值|
 |-|-|
 |TypeName|DoNotPrefixEnumValuesWithTypeName|
 |CheckId|CA1712|
-|类别|Microsoft。命名|
+|Category|Microsoft。命名|
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
  枚举包含名称以枚举的类型名称开头的成员。
 
-## <a name="rule-description"></a>规则说明
+## <a name="rule-description"></a>规则描述
  枚举成员的名称不带有类型名称前缀，因为开发工具应提供类型信息。
 
  命名约定为面向公共语言运行时的库提供了通用的外观。 这减少了了解新的软件库所需的时间，并使客户对库的开发更加自信，因为有开发托管代码的专业技能。
@@ -54,11 +54,11 @@ ms.locfileid: "72669130"
  [!code-vb[FxCop.Naming.EnumValues#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Naming.EnumValues/vb/FxCop.Naming.EnumValues.vb#1)]
 
 ## <a name="related-rules"></a>相关规则
- [CA1711：标识符应采用正确的后缀](../code-quality/ca1711-identifiers-should-not-have-incorrect-suffix.md)
+ [CA1711:标识符应采用正确的后缀](../code-quality/ca1711-identifiers-should-not-have-incorrect-suffix.md)
 
- [CA1027：用 FlagsAttribute 标记枚举](../code-quality/ca1027-mark-enums-with-flagsattribute.md)
+ [CA1027:用 FlagsAttribute 标记枚举](../code-quality/ca1027-mark-enums-with-flagsattribute.md)
 
- [CA2217：不要使用 FlagsAttribute 标记枚举](../code-quality/ca2217-do-not-mark-enums-with-flagsattribute.md)
+ [CA2217:不要使用 FlagsAttribute 标记枚举](../code-quality/ca2217-do-not-mark-enums-with-flagsattribute.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  <xref:System.Enum?displayProperty=fullName>

@@ -1,7 +1,7 @@
 ---
 title: 如何：创建域特定语言解决方案
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.dsltools.designerwizard
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 175da19782927f8c84b9fae0e6d9820a22bd891a
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 844f3eb97ed9e07aa8125688d2bfe8944249b008
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75594664"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85541786"
 ---
 # <a name="how-to-create-a-domain-specific-language-solution"></a>如何：创建域特定语言解决方案
 使用专用 Visual Studio 解决方案创建域特定语言（DSL）。
@@ -38,7 +38,7 @@ ms.locfileid: "75594664"
 1. 通过创建新的**特定于域的语言设计器**项目来启动 DSL 向导。
 
    > [!NOTE]
-   > 您为项目选择的名称最好是有效的视觉对象C#标识符，因为它可能用于生成代码。
+   > 您为项目选择的名称最好是有效的 Visual c # 标识符，因为它可能用于生成代码。
 
    ::: moniker range="vs-2017"
 
@@ -63,9 +63,9 @@ ms.locfileid: "75594664"
     向导将创建一个包含两个项目的解决方案，分别名为**Dsl**和**DslPackage**。
 
    > [!NOTE]
-   > 如果你看到一条消息，提示你不从不受信任的源运行文本模板，请单击 **"确定"** 。 您可以将此消息设置为不会再次显示。
+   > 如果你看到一条消息，提示你不从不受信任的源运行文本模板，请单击 **"确定"**。 您可以将此消息设置为不会再次显示。
 
-## <a name="settings"></a>DSL 设计器向导页
+## <a name="the-dsl-designer-wizard-pages"></a><a name="settings"></a>DSL 设计器向导页
  您可以保留多个字段的默认值不变。 但是，请确保设置了 "文件扩展名" 字段。
 
 ### <a name="solution-settings-page"></a>"解决方案设置" 页
@@ -73,7 +73,7 @@ ms.locfileid: "75594664"
 选择类似于要创建的 DSL 的模板。 不同的模板提供便利的起点。 选择解决方案模板时，向导会显示说明。 有关解决方案模板的详细信息，请参阅[选择域特定语言解决方案模板](../modeling/choosing-a-domain-specific-language-solution-template.md)。
 
  **要如何命名域特定语言？**
-默认为解决方案名称。 此值生成代码。 它必须是有效的C#类名。
+默认为解决方案名称。 此值生成代码。 它必须是有效的 c # 类名称。
 
 ### <a name="file-extension-page"></a>文件扩展名页
  **使用哪种扩展来建模文件？**

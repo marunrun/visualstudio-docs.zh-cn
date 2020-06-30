@@ -15,27 +15,27 @@ caps.latest.revision: 27
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 56ac5e60964621859c77bf53dc4f6c14480b4a83
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: b5e078fc1bb7fe247d541e7695e98c2de76c2466
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669236"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544061"
 ---
-# <a name="ca1704-identifiers-should-be-spelled-correctly"></a>CA1704：标识符应正确拼写
+# <a name="ca1704-identifiers-should-be-spelled-correctly"></a>CA1704:标识符应正确拼写
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|值|
 |-|-|
 |TypeName|IdentifiersShouldBeSpelledCorrectly|
 |CheckId|CA1704|
-|类别|Microsoft。命名|
+|Category|Microsoft。命名|
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
  标识符的名称包含一个或多个未被 Microsoft 拼写检查器库识别的单词。 此规则不检查构造函数或特殊命名成员，如 get 和 set 属性访问器。
 
-## <a name="rule-description"></a>规则说明
+## <a name="rule-description"></a>规则描述
  此规则将标识符分析为标记，并检查每个标记的拼写。 分析算法执行以下转换：
 
 - 大写字母开始新令牌。 例如，将 MyNameIsJoe 切分为 "My"、"Name"、"Is" 和 "Joe"。
@@ -44,14 +44,14 @@ ms.locfileid: "72669236"
 
 - 删除前导和尾随撇号。 例如，发件人 "切分"。
 
-- 下划线表示标记的末尾并被删除。 例如，将 Hello_world 切分为 "Hello"，"world"。
+- 下划线表示标记的末尾并被删除。 例如，Hello_world 切分为 "Hello"，"world"。
 
-- 删除嵌入的符号。 例如，对于 & 切分 "设置为" format "。
+- 删除嵌入的符号。 例如，对于&切分 "设置为" format "。
 
   默认情况下，使用英语（en）版本的拼写检查器。 当前没有其他语言词典可用。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
- 若要修复与此规则的冲突，请更正单词的拼写，或将该词添加到名为 CustomDictionary 的自定义字典中。 将字典放置在工具、项目目录或与用户的配置文件（%USERPROFILE%\Application Data \\ ...）下的工具关联的目录中。若要了解如何将自定义字典添加到 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中的项目，请参阅[如何：自定义代码分析字典](../code-quality/how-to-customize-the-code-analysis-dictionary.md)
+ 若要修复与此规则的冲突，请更正单词的拼写，或将该词添加到名为 CustomDictionary.xml 的自定义字典中。 将字典放置在工具的安装目录、项目目录或与用户配置文件（%USERPROFILE%\Application Data ...）下的工具关联的目录中 \\ 。若要了解如何将自定义字典添加到中的项目 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ，请参阅[如何：自定义代码分析字典](../code-quality/how-to-customize-the-code-analysis-dictionary.md)
 
 - 添加不应在字典/字词/识别路径下产生冲突的单词。
 
@@ -90,17 +90,17 @@ ms.locfileid: "72669236"
  仅当 word 有意拼写错误，并且 word 适用于有限的库集时，才禁止显示此规则发出的警告。 拼写正确的单词可减少新软件库所需的学习曲线。
 
 ## <a name="related-rules"></a>相关规则
- [CA2204：应正确拼写文本](../code-quality/ca2204-literals-should-be-spelled-correctly.md)
+ [CA2204:文字应正确拼写](../code-quality/ca2204-literals-should-be-spelled-correctly.md)
 
- [CA1703：资源字符串应正确拼写](../code-quality/ca1703-resource-strings-should-be-spelled-correctly.md)
+ [CA1703:资源字符串应正确拼写](../code-quality/ca1703-resource-strings-should-be-spelled-correctly.md)
 
- [CA1709：标识符的大小写应当正确](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)
+ [CA1709:标识符的大小写应当正确](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)
 
- [CA1708：标识符不应仅以大小写进行区分](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)
+ [CA1708:标识符应以大小写之外的差别进行区分](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)
 
- [CA1707：标识符不应包含下划线](../code-quality/ca1707-identifiers-should-not-contain-underscores.md)
+ [CA1707:标识符不应包含下划线](../code-quality/ca1707-identifiers-should-not-contain-underscores.md)
 
- [CA1726：使用首选词条](../code-quality/ca1726-use-preferred-terms.md)
+ [CA1726:使用首选词条](../code-quality/ca1726-use-preferred-terms.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [如何：自定义代码分析字典](../code-quality/how-to-customize-the-code-analysis-dictionary.md)

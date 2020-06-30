@@ -15,27 +15,27 @@ caps.latest.revision: 18
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: b471387db3ce52944ffad3841dc7e946c4d44873
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 61b0157200ddff4cb8335118b30832a0c8950f65
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661880"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85542280"
 ---
-# <a name="ca1032-implement-standard-exception-constructors"></a>CA1032：实现标准异常构造函数
+# <a name="ca1032-implement-standard-exception-constructors"></a>CA1032:实现标准异常构造函数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|值|
 |-|-|
 |TypeName|ImplementStandardExceptionConstructors|
 |CheckId|CA1032|
-|类别|Microsoft. Design|
+|Category|Microsoft. Design|
 |是否重大更改|不间断|
 
 ## <a name="cause"></a>原因
- 类型 <xref:System.Exception?displayProperty=fullName> 扩展，不声明所有必需的构造函数。
+ 类型扩展 <xref:System.Exception?displayProperty=fullName> ，不声明所有必需的构造函数。
 
-## <a name="rule-description"></a>规则说明
+## <a name="rule-description"></a>规则描述
  异常类型必须实现以下构造函数：
 
 - public NewException （）
@@ -46,7 +46,7 @@ ms.locfileid: "72661880"
 
 - protected 或 private NewException （SerializationInfo，StreamingContext）
 
-  如果不能提供完整的构造函数集，要正确处理异常将变得比较困难。 例如，具有签名 `NewException(string, Exception)` 的构造函数用于创建由其他异常导致的异常。 如果不使用此构造函数，则不能创建和引发包含内部（嵌套）异常的自定义异常的实例，在这种情况下，托管代码应执行此操作。 前三个异常构造函数按约定公开。 第四个构造函数在非密封类中受保护，在密封类中是私有的。 有关详细信息，请参阅[CA2229：实现序列化构造函数](../code-quality/ca2229-implement-serialization-constructors.md)
+  如果不能提供完整的构造函数集，要正确处理异常将变得比较困难。 例如，具有签名的构造函数 `NewException(string, Exception)` 用于创建由其他异常导致的异常。 如果不使用此构造函数，则不能创建和引发包含内部（嵌套）异常的自定义异常的实例，在这种情况下，托管代码应执行此操作。 前三个异常构造函数按约定公开。 第四个构造函数在非密封类中受保护，在密封类中是私有的。 有关详细信息，请参阅[CA2229：实现序列化构造函数](../code-quality/ca2229-implement-serialization-constructors.md)
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
  若要修复与此规则的冲突，请将缺少的构造函数添加到异常，并确保它们具有正确的可访问性。

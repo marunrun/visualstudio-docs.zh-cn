@@ -1,7 +1,7 @@
 ---
 title: 如何：以编程方式遍历在文档中找到的项
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -14,15 +14,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 22f8035cc7c1b09e7fd54f3c10842237ee6273b9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e200f910e002bb9380bd5a1b556dc6f1cab08810
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62812405"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544737"
 ---
 # <a name="how-to-programmatically-loop-through-found-items-in-documents"></a>如何：以编程方式遍历在文档中找到的项
-  <xref:Microsoft.Office.Interop.Word.Find>类具有<xref:Microsoft.Office.Interop.Word.Find.Found%2A>属性，它返回**true**每当找到搜索的项。 你可以使用 <xref:Microsoft.Office.Interop.Word.Range> 方法循环访问在 <xref:Microsoft.Office.Interop.Word.Find.Execute%2A> 中找到的所有实例。
+  <xref:Microsoft.Office.Interop.Word.Find>类具有一个 <xref:Microsoft.Office.Interop.Word.Find.Found%2A> 属性，该属性将在每次找到搜索项时返回**true** 。 你可以使用 <xref:Microsoft.Office.Interop.Word.Range> 方法循环访问在 <xref:Microsoft.Office.Interop.Word.Find.Execute%2A> 中找到的所有实例。
 
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]
 
@@ -63,16 +63,16 @@ ms.locfileid: "62812405"
 
 ## <a name="vsto-add-in-example"></a>VSTO 外接程序示例
 
-### <a name="to-loop-through-items-in-a-vsto-add-in"></a>循环访问 VSTO 外接程序中的项
+### <a name="to-loop-through-items-in-a-vsto-add-in"></a>遍历 VSTO 外接程序中的项
 
 1. 下面的示例显示 VSTO 外接程序的完整代码。 若要使用此代码，请从项目中的 `ThisAddIn` 类运行它。
 
      [!code-vb[Trin_VstcoreWordAutomationAddIn#78](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#78)]
      [!code-csharp[Trin_VstcoreWordAutomationAddIn#78](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#78)]
 
-## <a name="see-also"></a>请参阅
-- [如何：以编程方式搜索和替换文档中的 rext](../vsto/how-to-programmatically-search-for-and-replace-text-in-documents.md)
+## <a name="see-also"></a>另请参阅
+- [如何：以编程方式在文档中搜索和替换 uiresources.rext](../vsto/how-to-programmatically-search-for-and-replace-text-in-documents.md)
 - [如何：以编程方式在 Word 中设置搜索选项](../vsto/how-to-programmatically-set-search-options-in-word.md)
-- [如何：以编程方式定义和在文档中选择范围](../vsto/how-to-programmatically-define-and-select-ranges-in-documents.md)
-- [如何：以编程方式搜索后还原选定内容](../vsto/how-to-programmatically-restore-selections-after-searches.md)
+- [如何：以编程方式在文档中定义和选择范围](../vsto/how-to-programmatically-define-and-select-ranges-in-documents.md)
+- [如何：以编程方式在搜索后还原选定内容](../vsto/how-to-programmatically-restore-selections-after-searches.md)
 - [Office 解决方案中的可选参数](../vsto/optional-parameters-in-office-solutions.md)

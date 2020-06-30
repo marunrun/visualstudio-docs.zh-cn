@@ -1,7 +1,7 @@
 ---
 title: 如何：以编程方式隐藏文档中的文本
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,17 +13,17 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 1da471ff1911cdda4a62ef9c150236b3a225342f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 4dae19d196f830e5187fa395473c0a5482cb1d03
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62812763"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543307"
 ---
 # <a name="how-to-programmatically-hide-text-in-documents"></a>如何：以编程方式隐藏文档中的文本
   通过将 <xref:Microsoft.Office.Interop.Word._Font.Hidden%2A> 属性设置为某个特定范围文本的 <xref:Microsoft.Office.Interop.Word.Range.Font%2A> 。
 
- 例如，可以暂时隐藏中的文本<xref:Microsoft.Office.Tools.Word.Bookmark>（在文档级自定义项） 或<xref:Microsoft.Office.Interop.Word.Bookmark>（VSTO 外接程序中） 之前将文档发送到打印机。
+ 例如，你可以 <xref:Microsoft.Office.Tools.Word.Bookmark> 在将文档发送到打印机之前暂时隐藏（在文档级自定义项中）或 <xref:Microsoft.Office.Interop.Word.Bookmark> （在 VSTO 外接程序中）中的文本。
 
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]
 
@@ -52,11 +52,11 @@ ms.locfileid: "62812763"
      [!code-csharp[Trin_VstcoreWordAutomationAddIn#107](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#107)]
 
 ## <a name="compile-the-code"></a>编译代码
- 此代码示例假定文档包含<xref:Microsoft.Office.Tools.Word.Bookmark>控件 （在文档级自定义项） 或<xref:Microsoft.Office.Interop.Word.Bookmark>控件 （在 VSTO 外接程序），名为`bookmark1`。
+ 此代码示例假定文档包含一个 <xref:Microsoft.Office.Tools.Word.Bookmark> 控件（在文档级自定义项中）或 <xref:Microsoft.Office.Interop.Word.Bookmark> 名为的控件（在 VSTO 外接程序中） `bookmark1` 。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [如何：以编程方式打印文档](../vsto/how-to-programmatically-print-documents.md)
-- [如何：以编程方式定义和在文档中选择范围](../vsto/how-to-programmatically-define-and-select-ranges-in-documents.md)
+- [如何：以编程方式在文档中定义和选择范围](../vsto/how-to-programmatically-define-and-select-ranges-in-documents.md)
 - [如何：以编程方式重置 Word 文档中的范围](../vsto/how-to-programmatically-reset-ranges-in-word-documents.md)
 - [如何：以编程方式更新书签文本](../vsto/how-to-programmatically-update-bookmark-text.md)
 - [Office 解决方案中的可选参数](../vsto/optional-parameters-in-office-solutions.md)

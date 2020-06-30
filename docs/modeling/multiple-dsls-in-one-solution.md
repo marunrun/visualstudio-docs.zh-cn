@@ -1,18 +1,18 @@
 ---
 title: 一个解决方案中的多个 DSL
 ms.date: 11/04/2016
-ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+ms.topic: how-to
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b5d21d3954a402e7ce8eb26c34d6a6a5c237309a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f2eef29db24da3be0a9376ea76a9a1a551af9e1a
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72658348"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85542592"
 ---
 # <a name="multiple-dsls-in-one-solution"></a>一个解决方案中的多个 DSL
 
@@ -40,21 +40,21 @@ ms.locfileid: "72658348"
 
 2. 合并 DSL 的 VSIX 清单：
 
-   1. 打开_YourVsixProject_ **\source.extension.manifest**。
+   1. 打开_YourVsixProject_**\source.extension.manifest**。
 
    2. 对于每个 DSL，选择 "**添加内容**" 并添加：
 
-       - 将项目作为**MEF 组件**`Dsl*`
+       - `Dsl*`作为**MEF 组件**的项目
 
-       - 将项目作为**MEF 组件**`DslPackage*`
+       - `DslPackage*`作为**MEF 组件**的项目
 
-       - 将项目作为**VS 包**`DslPackage*`
+       - `DslPackage*`项目即**VS 包**
 
 3. 生成解决方案。
 
-   生成的 VSIX 将安装这两个 DSL。 可以使用 F5 测试它们，或将_YourVsixProject_ **\bin\Debug \\ 部署 \*。**
+   生成的 VSIX 将安装这两个 DSL。 可以使用 F5 测试它们，或部署_YourVsixProject_**\bin\Debug \\ \* **。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用 Visual Studio Modelbus 集成模型](../modeling/integrating-models-by-using-visual-studio-modelbus.md)
 - [如何：添加拖放处理程序](../modeling/how-to-add-a-drag-and-drop-handler.md)

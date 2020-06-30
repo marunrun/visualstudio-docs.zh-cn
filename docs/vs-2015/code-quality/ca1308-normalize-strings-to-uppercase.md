@@ -15,27 +15,27 @@ caps.latest.revision: 13
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: dfe8495184bf4daadb3bf8899ee2857a9743c842
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c068fcda7d03ae91435c040d2110d632668d832a
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661392"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85538731"
 ---
-# <a name="ca1308-normalize-strings-to-uppercase"></a>CA1308：将字符串规范化为大写
+# <a name="ca1308-normalize-strings-to-uppercase"></a>CA1308:将字符串规范化为大写
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|值|
 |-|-|
 |TypeName|NormalizeStringsToUppercase|
 |CheckId|CA1308|
-|类别|Microsoft 全球化|
+|Category|Microsoft 全球化|
 |是否重大更改|不间断|
 
 ## <a name="cause"></a>原因
  操作将字符串规范化为小写。
 
-## <a name="rule-description"></a>规则说明
+## <a name="rule-description"></a>规则描述
  字符串应正常化为大写字母。 将一小部分字符转换为小写字符后，不能进行往返。 若要进行往返，需将字符从一个区域设置转换为另一个表示字符数据的区域设置，然后从转换后的字符中准确检索原始字符。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
@@ -44,5 +44,5 @@ ms.locfileid: "72661392"
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
  如果不是基于结果做出安全决策（例如，在用户界面中显示），则可以安全地禁止显示警告消息。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [全球化警告](../code-quality/globalization-warnings.md)

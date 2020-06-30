@@ -5,17 +5,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, programming domain models
 - Domain-Specific Language, rules
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 74d64b4fe0c0aa5293e11daad13f632c4a487736
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 2050fe0ea2d1a9bb0bf278c13c2beb587412c643
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72747421"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85542553"
 ---
 # <a name="rules-propagate-changes-within-the-model"></a>规则在模型内部传播更改
 你可以创建一个存储规则，以便在可视化和建模 SDK （VMSDK）中将更改从一个元素传播到另一个元素。 当存储区中的任何元素发生更改时，将计划执行规则，通常是在最外面的事务提交时执行。 不同类型的事件有不同类型的规则，例如添加元素或删除元素。 您可以将规则附加到特定类型的元素、形状或关系图。 许多内置功能都是由规则定义的：例如，规则确保在模型更改时更新关系图。 可以通过添加自己的规则来自定义域特定语言。
@@ -72,17 +72,17 @@ namespace ExampleNamespace
 
 ### <a name="to-define-a-rule"></a>定义规则
 
-1. 将规则定义为带有 `RuleOn` 特性前缀的类。 该属性将规则与某个域类、关系或关系图元素相关联。 该规则将应用于此类的每个实例，这可能是抽象的。
+1. 将规则定义为以属性为前缀的类 `RuleOn` 。 该属性将规则与某个域类、关系或关系图元素相关联。 该规则将应用于此类的每个实例，这可能是抽象的。
 
-2. 注册规则，方法是将其添加到域模型类中 `GetCustomDomainModelTypes()` 返回的集中。
+2. 通过将规则添加到域模型类中的返回的集来注册规则 `GetCustomDomainModelTypes()` 。
 
 3. 从一个抽象规则类派生规则类，并编写执行方法的代码。
 
-   以下部分更详细地介绍了这些步骤。
+   以下各部分更详细地说明了这些步骤。
 
 ### <a name="to-define-a-rule-on-a-domain-class"></a>在域类上定义规则
 
-- 在自定义代码文件中，定义一个类并在其前面加上 <xref:Microsoft.VisualStudio.Modeling.RuleOnAttribute> 特性：
+- 在自定义代码文件中，定义一个类并在其前面加上 <xref:Microsoft.VisualStudio.Modeling.RuleOnAttribute> 属性：
 
     ```csharp
     [RuleOn(typeof(ExampleElement),
@@ -94,17 +94,17 @@ namespace ExampleNamespace
 
 - 第一个参数中的使用者类型可以是域类、域关系、形状、连接符或关系图。 通常，将规则应用于域类和关系。
 
-     @No__t_0 通常 `TopLevelCommit`。 这可确保仅在事务的所有主要更改完成后才执行规则。 替代项为内联，这会在更改后立即执行规则;和 LocalCommit，它在当前事务（可能不是最外面的）结束时执行规则。 你还可以设置规则的优先级，以影响其在队列中的顺序，但这是实现所需结果的不可靠方法。
+     `FireTime`通常为 `TopLevelCommit` 。 这可确保仅在事务的所有主要更改完成后才执行规则。 替代项为内联，这会在更改后立即执行规则;和 LocalCommit，它在当前事务（可能不是最外面的）结束时执行规则。 你还可以设置规则的优先级，以影响其在队列中的顺序，但这是实现所需结果的不可靠方法。
 
 - 您可以指定一个抽象类作为使用者类型。
 
 - 此规则适用于 subject 类的所有实例。
 
-- @No__t_0 的默认值为 TimeToFire. TopLevelCommit。 这会导致在最外面的事务提交时执行规则。 替代项为 TimeToFire。 这将导致规则在触发事件之后立即执行。
+- 的默认值 `FireTime` 为 TimeToFire. TopLevelCommit。 这会导致在最外面的事务提交时执行规则。 替代项为 TimeToFire。 这将导致规则在触发事件之后立即执行。
 
 ### <a name="to-register-the-rule"></a>注册规则
 
-- 将规则类添加到域模型中 `GetCustomDomainModelTypes` 返回的类型列表中：
+- 将规则类添加到域模型中返回的类型列表 `GetCustomDomainModelTypes` ：
 
     ```csharp
     public partial class ExampleDomainModel
@@ -131,7 +131,7 @@ namespace ExampleNamespace
   | 基类 | 触发器 |
   |-|-|
   | <xref:Microsoft.VisualStudio.Modeling.AddRule> | 添加了元素、链接或形状。<br /><br /> 除了新元素外，还可以使用此项检测新的关系。 |
-  | <xref:Microsoft.VisualStudio.Modeling.ChangeRule> | 域属性值已更改。 方法参数提供旧值和新值。<br /><br /> 对于形状，如果移动了某个内置 `AbsoluteBounds` 属性，则会触发此规则。<br /><br /> 在许多情况下，更方便地在属性处理程序中重写 `OnValueChanged` 或 `OnValueChanging`。 这些方法将在更改前后立即调用。 与此相反，规则通常在事务结束时运行。 有关详细信息，请参阅[域属性值更改处理程序](../modeling/domain-property-value-change-handlers.md)。 **注意：** 当创建或删除链接时，不会触发此规则。 请改为写入域关系的 `AddRule` 和 `DeleteRule`。 |
+  | <xref:Microsoft.VisualStudio.Modeling.ChangeRule> | 域属性值已更改。 方法参数提供旧值和新值。<br /><br /> 对于形状，如果移动了形状，则当内置属性发生更改时，将触发此规则 `AbsoluteBounds` 。<br /><br /> 在许多情况下，重写 `OnValueChanged` 或 `OnValueChanging` 在属性处理程序中是更方便的方法。 这些方法将在更改前后立即调用。 与此相反，规则通常在事务结束时运行。 有关详细信息，请参阅[域属性值更改处理程序](../modeling/domain-property-value-change-handlers.md)。 **注意：** 当创建或删除链接时，不会触发此规则。 相反，编写 `AddRule` 和 `DeleteRule` 用于域关系的。 |
   | <xref:Microsoft.VisualStudio.Modeling.DeletingRule> | 要删除元素或链接时触发。 在事务结束之前，属性 ModelElement IsDeleting 为 true。 |
   | <xref:Microsoft.VisualStudio.Modeling.DeleteRule> | 删除元素或链接时执行。 规则在执行所有其他规则后执行，包括 DeletingRules。 ModelElement. IsDeleting 为 false，而 ModelElement 为 true。 若要允许后续撤消，元素实际上不会从内存中删除，而是从 ElementDirectory 中删除。 |
   | <xref:Microsoft.VisualStudio.Modeling.MoveRule> | 元素从一个存储区分区移到另一个存储区。<br /><br /> （请注意，这与形状的图形位置无关。） |
@@ -141,7 +141,7 @@ namespace ExampleNamespace
   | <xref:Microsoft.VisualStudio.Modeling.TransactionCommittingRule> | 要提交事务时执行。 |
   | <xref:Microsoft.VisualStudio.Modeling.TransactionRollingBackRule> | 当事务即将回滚时执行。 |
 
-- 每个类都有一个重写的方法。 在类中键入 `override`，以发现它。 此方法的参数标识要更改的元素。
+- 每个类都有一个重写的方法。 键入 `override` 类以发现它。 此方法的参数标识要更改的元素。
 
   请注意以下有关规则的要点：
 
@@ -151,13 +151,13 @@ namespace ExampleNamespace
 
 3. 当回滚事务或执行撤消或重做操作时，不会执行规则。 这些操作将存储的所有内容重置为其以前的状态。 因此，如果规则更改了存储外部的任何内容的状态，它可能不会与存储内容保持 synchronism。 若要更新存储外部的状态，最好使用事件。 有关详细信息，请参阅[事件处理程序在模型外部传播更改](../modeling/event-handlers-propagate-changes-outside-the-model.md)。
 
-4. 从文件加载模型时，会执行某些规则。 若要确定加载或保存是否正在进行，请使用 `store.TransactionManager.CurrentTransaction.IsSerializing`。
+4. 从文件加载模型时，会执行某些规则。 若要确定加载或保存是否正在进行，请使用 `store.TransactionManager.CurrentTransaction.IsSerializing` 。
 
 5. 如果规则的代码创建更多规则触发器，它们将被添加到触发列表的末尾，并在事务完成之前执行。 DeletedRules 在所有其他规则之后执行。 一个规则可在一个事务中运行多次，每次更改一次。
 
-6. 若要向/从规则传递信息，你可以将信息存储在 `TransactionContext` 中。 这只是在事务中维护的字典。 当事务结束时，将释放它。 每个规则中的事件参数都提供对它的访问。 请记住，规则不按可预测顺序执行。
+6. 若要向/从规则传递信息，可以在中存储信息 `TransactionContext` 。 这只是在事务中维护的字典。 当事务结束时，将释放它。 每个规则中的事件参数都提供对它的访问。 请记住，规则不按可预测顺序执行。
 
-7. 考虑其他替代项后使用规则。 例如，如果想要在值更改时更新属性，请考虑使用计算属性。 如果要限制形状的大小或位置，请使用 `BoundsRule`。 如果要响应属性值的更改，请将 `OnValueChanged` 处理程序添加到属性。 有关详细信息，请参阅[响应和传播更改](../modeling/responding-to-and-propagating-changes.md)。
+7. 考虑其他替代项后使用规则。 例如，如果想要在值更改时更新属性，请考虑使用计算属性。 如果要限制形状的大小或位置，请使用 `BoundsRule` 。 如果要响应属性值的更改，请将 `OnValueChanged` 处理程序添加到属性。 有关详细信息，请参阅[响应和传播更改](../modeling/responding-to-and-propagating-changes.md)。
 
 ## <a name="example"></a>示例
  下面的示例在将域关系实例化为链接两个元素时更新属性。 仅当用户在关系图上创建了一个链接，并且程序代码创建了一个链接时，才会触发此规则。
@@ -207,6 +207,6 @@ namespace Company.TaskRuleExample
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [事件处理程序在模型外部传播更改](../modeling/event-handlers-propagate-changes-outside-the-model.md)

@@ -15,28 +15,28 @@ caps.latest.revision: 16
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: a0d5546c6f6a2f5dbd0c6063f4a1dfd40ce1d7bb
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 7429251a66ce2fe22a825a153cb90248faabb9fd
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72658741"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544360"
 ---
-# <a name="ca2111-pointers-should-not-be-visible"></a>CA2111：指针应为不可见
+# <a name="ca2111-pointers-should-not-be-visible"></a>CA2111:指针应为不可见
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|值|
 |-|-|
 |TypeName|PointersShouldNotBeVisible|
 |CheckId|CA2111|
-|类别|Microsoft.Security|
+|Category|Microsoft.Security|
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
  公共或受保护的 <xref:System.IntPtr?displayProperty=fullName> 或 <xref:System.UIntPtr?displayProperty=fullName> 字段不是只读的。
 
-## <a name="rule-description"></a>规则说明
- <xref:System.IntPtr> 和 <xref:System.UIntPtr> 是用于访问非托管内存的指针类型。 如果指针不是私有、内部或只读，则恶意代码可以更改指针的值，这可能会允许访问内存中的任意位置或导致应用程序或系统故障。
+## <a name="rule-description"></a>规则描述
+ <xref:System.IntPtr>和 <xref:System.UIntPtr> 是用于访问非托管内存的指针类型。 如果指针不是私有、内部或只读，则恶意代码可以更改指针的值，这可能会允许访问内存中的任意位置或导致应用程序或系统故障。
 
  如果要保护对包含指针字段的类型的访问，请参阅[CA2112：受保护的类型不应公开字段](../code-quality/ca2112-secured-types-should-not-expose-fields.md)。
 
@@ -52,9 +52,9 @@ ms.locfileid: "72658741"
  [!code-csharp[FxCop.Security.PointersArePrivate#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Security.PointersArePrivate/cs/FxCop.Security.PointersArePrivate.cs#1)]
 
 ## <a name="related-rules"></a>相关规则
- [CA2112：受保护的类型不应公开字段](../code-quality/ca2112-secured-types-should-not-expose-fields.md)
+ [CA2112:受保护的类型不应公开字段](../code-quality/ca2112-secured-types-should-not-expose-fields.md)
 
- [CA1051：不要声明可见实例字段](../code-quality/ca1051-do-not-declare-visible-instance-fields.md)
+ [CA1051:不要声明可见实例字段](../code-quality/ca1051-do-not-declare-visible-instance-fields.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  <xref:System.IntPtr?displayProperty=fullName> <xref:System.UIntPtr?displayProperty=fullName>
