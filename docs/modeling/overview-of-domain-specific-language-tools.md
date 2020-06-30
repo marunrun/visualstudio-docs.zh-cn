@@ -1,7 +1,7 @@
 ---
 title: 域特定语言工具的概述
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: overview
 helpviewer_keywords:
 - Domain-Specific Language
 author: JoshuaPartlow
@@ -9,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7af9aa8ce8719fe08e16e244a2f7009ddf67f533
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: ef80ac1c7e64eb3591e2e6b09de97c77a26e46f8
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75591692"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85532362"
 ---
 # <a name="overview-of-domain-specific-language-tools"></a>域特定语言工具的概述
 在 Visual Studio 中托管的特定于域的语言工具（DSL 工具）使你可以设计域特定语言，然后生成用户创建基于语言的模型时必须具有的所有内容。
@@ -64,7 +64,7 @@ ms.locfileid: "75591692"
 ## <a name="validation-in-dsl-tools"></a>DSL 工具中的验证
  DSL 提供一个级别的验证，以确保域模型满足代码生成的基本要求。 通常情况下，在创建自己的域特定语言后，将添加自己的验证来表达业务逻辑规则。 有关自定义验证的详细信息，请参阅[域特定语言中的验证](../modeling/validation-in-a-domain-specific-language.md)。
 
- 我们建议你在设计域特定语言时经常验证它。 如果你的域特定语言出现验证错误，则无法生成源代码。 通过单击解决方案资源管理器的工具栏中的“转换所有模板”，执行根据模板生成源代码的过程。 只要是修改语言定义，都请确保转换所有模板。 有关详细信息，请参阅[如何：创建特定于域的语言解决方案](../modeling/how-to-create-a-domain-specific-language-solution.md)。
+ 我们建议你在设计域特定语言时经常验证它。 如果你的域特定语言出现验证错误，则无法生成源代码。 通过单击解决方案资源管理器的工具栏中的“转换所有模板”，执行根据模板生成源代码的过程  。 只要是修改语言定义，都请确保转换所有模板  。 有关详细信息，请参阅[如何：创建域特定语言解决方案](../modeling/how-to-create-a-domain-specific-language-solution.md)。
 
 ## <a name="customization-of-dsl-tools"></a>DSL 工具的自定义
  你可以提供其他代码来优化模型的行为和定义对语言的约束。 如果需要，可以通过修改文本模板进行重大更改。

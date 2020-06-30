@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language Tools, DSL Explorer
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5ede0f61d2cec78ac4981e487b72eb4d78508c98
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: caf7d395c08a8c1e8c21f933ba63c8943813831b
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748160"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85532179"
 ---
 # <a name="working-with-the-domain-specific-language-explorer"></a>使用域特定语言资源管理器
 **DSL 资源管理器**在树视图中显示多种类型的信息。 有关 DSL 资源管理器中的大部分项的详细信息，请参阅[如何定义域特定语言](../modeling/how-to-define-a-domain-specific-language.md)。
@@ -41,6 +41,6 @@ ms.locfileid: "72748160"
 
 - **Xml 序列化行为**。 用于该模型的序列化设置。 有关序列化的详细信息，请参阅[自定义文件存储和 XML 序列化](../modeling/customizing-file-storage-and-xml-serialization.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [域特定语言工具术语表](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
