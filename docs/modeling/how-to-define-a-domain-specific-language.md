@@ -1,7 +1,7 @@
 ---
 title: 如何定义域特定语言
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.dsltools.dsldesigner.domainrelationship
 - vs.dsltools.dsldesigner.domainclass
@@ -16,19 +16,19 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 00ade696290e4b8d3c32fa335fc4bf07509aef1c
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: ca9cc6b853ea95cedcb0ce109b9618fc0eb455ba
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75594677"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85542748"
 ---
 # <a name="how-to-define-a-domain-specific-language"></a>如何定义域特定语言
 若要定义域特定语言（DSL），请从模板创建 Visual Studio 解决方案。 解决方案的重要组成部分是 DSL 定义关系图，它存储在 DslDefinition.dsl 中。 DSL 定义将定义 DSL 的类和形状。 在进行修改并将所做修改添加到这些元素后，可以添加程序代码以更详细地自定义 DSL。
 
 如果你不熟悉 Dsl，我们建议你通过**DSL 工具实验室**，你可以在此网站中找到：[可视化和建模 SDK](https://code.msdn.microsoft.com/Visualization-and-Modeling-313535db)
 
-## <a name="templates"></a>选择模板解决方案
+## <a name="selecting-a-template-solution"></a><a name="templates"></a>选择模板解决方案
 
 若要定义 DSL，必须安装以下组件：
 
@@ -66,7 +66,7 @@ ms.locfileid: "75594677"
 
    - 在其他情况下选择**最小语言**，如果不确定，则选择。
 
-   - 选择 "**最小 WinForm 设计器**" 或 "**最小 wpf 设计器**"，创建在 Windows 窗体或 WPF 表面上显示的 DSL。 必须编写代码，才能定义编辑器。 有关更多信息，请参见下列主题：
+   - 选择 "**最小 WinForm 设计器**" 或 "**最小 wpf 设计器**"，创建在 Windows 窗体或 WPF 表面上显示的 DSL。 必须编写代码，才能定义编辑器。 有关详细信息，请参阅下列主题：
 
         [创建基于 Windows 窗体的域特定语言](../modeling/creating-a-windows-forms-based-domain-specific-language.md)
 
@@ -80,7 +80,7 @@ ms.locfileid: "75594677"
 
 4. 可以调整其他页面上的设置，或保留默认值。
 
-5. 单击 **“完成”** 。
+5. 单击“完成”。
 
     该向导将创建包含两个或三个项目的解决方案，并从 DSL 定义生成代码。
 
@@ -121,7 +121,7 @@ ms.locfileid: "75594677"
 
   删除或重命名其他类以满足你的要求。
 
-## <a name="patterns"></a>用于定义 DSL 的模式
+## <a name="patterns-for-defining-a-dsl"></a><a name="patterns"></a>用于定义 DSL 的模式
  建议通过一次添加或调整一个或两个功能来开发 DSL。 添加功能、运行 DSL 并对其进行测试，然后再多添加一个或两个功能。 你的 DSL 的典型功能可能是：
 
 - 域类、将元素连接到模型的嵌入关系、在关系图上显示该类的元素所需的形状，以及允许用户创建元素的元素工具。
@@ -148,7 +148,7 @@ ms.locfileid: "75594677"
 > [!NOTE]
 > “模型”是指用户创建的 DSL 的实例，并且通常显示为关系图。 本主题讨论了 DSL 定义关系图和在使用 DSL 时显示的模型关系图。
 
-## <a name="classes"></a>定义域类
+## <a name="defining-domain-classes"></a><a name="classes"></a>定义域类
  域类表示 DSL 的概念。 实例是*模型元素*。 例如，在**MusicLibrary** DSL 中，你可能具有名为 "**唱片集**" 和 "**歌曲**" 的域类。
 
  若要创建域类，可以将 "**命名域类**" 工具拖到关系图中，然后重命名类。
@@ -190,7 +190,7 @@ ms.locfileid: "75594677"
 
  单击类中的 "**域属性**"，按 enter 键，然后键入属性的名称。 域属性的默认类型是 String。 若要更改类型，请选择 "域" 属性，然后在 "**属性**" 窗口中设置**类型**。 如果所需的类型不在下拉列表中，请参阅[添加属性类型](#addTypes)。
 
- **设置 "元素名称" 属性。** 在语言资源管理器中选择可以用于标识元素的域属性。 例如，在 Song 域类中可以选择 Title 域属性。 在 "**属性**" 窗口中，将 "**元素名称**" 设置为 `true`。
+ **设置元素名称属性。** 在语言资源管理器中选择可以用于标识元素的域属性。 例如，在 Song 域类中可以选择 Title 域属性。 在 "**属性**" 窗口中，将 "**为元素名称**" 设置为 `true` 。
 
 ### <a name="create-derived-domain-classes"></a>创建派生的域类
  如果希望域类具有继承其属性和关系的变量，则创建从它派生的类。 例如，Album 可能具有派生类 WMA 和 MP3。
@@ -214,7 +214,7 @@ ms.locfileid: "75594677"
 
 1. 单击解决方案资源管理器的工具栏中的 **"转换所有模板**"，生成 DSL 设计器代码。 可以自动化执行此步骤。 有关详细信息，请参阅[如何自动转换所有模板](/previous-versions/visualstudio/visual-studio-2012/ff521399\(v\=vs.110\))。
 
-2. **构建并运行 DSL。** 按 F5 或 CTRL + F5 在实验模式下运行 Visual Studio 的新实例。 在 Visual Studio 的实验实例中，打开或创建一个文件，该文件具有 DSL 的文件扩展名。
+2. **生成并运行 DSL。** 按 F5 或 CTRL + F5 在实验模式下运行 Visual Studio 的新实例。 在 Visual Studio 的实验实例中，打开或创建一个文件，该文件具有 DSL 的文件扩展名。
 
 3. **打开资源管理器。** 关系图的一侧是 "语言资源管理器" 窗口，通常名为 " *YourLanguage*资源管理器"。 如果未看见此窗口，则它可能位于“解决方案资源管理器”下方的选项卡上。 如果找不到该文件，请在 "**视图**" 菜单上，指向 "**其他窗口**"，然后单击 " *YourLanguage* **资源管理器**"。
 
@@ -230,7 +230,7 @@ ms.locfileid: "75594677"
 
 7. **保存该文件，将其关闭，然后重新打开它**。 在展开节点后，你创建的所有实例都应在资源管理器中可见。
 
-## <a name="shapes"></a>定义关系图上的形状
+## <a name="defining-shapes-on-the-diagram"></a><a name="shapes"></a>定义关系图上的形状
  可以将显示在关系图上的元素的类定义为矩形、椭圆或图标。
 
 #### <a name="to-define-a-class-of-elements-that-appear-as-shapes-on-a-diagram"></a>定义显示为关系图上的形状的元素的类
@@ -263,7 +263,7 @@ ms.locfileid: "75594677"
 
    5. 在 "**选择图像**" 对话框中，单击 **"文件名" 下的**下拉菜单，然后选择图像。
 
-4. **向形状添加文本修饰器以显示域属性。**
+4. **将文本修饰器添加到形状，以显示域属性。**
 
     若要显示模型元素的名称或标题，将可能需要至少一个文本修饰器。
 
@@ -312,9 +312,9 @@ ms.locfileid: "75594677"
 
 1. 单击解决方案资源管理器的工具栏中的 **"转换所有模板**"，生成 DSL 设计器代码。
 
-2. **构建并运行 DSL。** 按 F5 或 CTRL + F5 在实验模式下运行 Visual Studio 的新实例。 在 Visual Studio 的实验实例中，打开或创建一个文件，该文件具有 DSL 的文件扩展名。
+2. **生成并运行 DSL。** 按 F5 或 CTRL + F5 在实验模式下运行 Visual Studio 的新实例。 在 Visual Studio 的实验实例中，打开或创建一个文件，该文件具有 DSL 的文件扩展名。
 
-3. **验证元素工具是否出现在工具箱中。**
+3. **验证元素工具是否显示在工具箱上。**
 
 4. 通过从工具拖到模型关系图上来**创建形状**。
 
@@ -326,7 +326,7 @@ ms.locfileid: "75594677"
 
    在首次测试形状后，你可能想要调整它的某些属性并添加一些更高级的功能。 有关详细信息，请参阅[自定义和扩展域特定语言](../modeling/customizing-and-extending-a-domain-specific-language.md)。
 
-## <a name="references"></a>定义引用关系
+## <a name="defining-reference-relationships"></a><a name="references"></a>定义引用关系
  可以在任何源域类和任何目标域类之间定义引用关系。 引用关系通常在关系图上显示为连接符，它们是形状之间的线条。
 
  例如，如果音乐 Album 和 Artist 在关系图上显示为形状，则可以定义名为 ArtistsAppearedOnAlbums 的关系，该关系可将 Artist 链接到所参与的 Album。 请参阅图中的示例。
@@ -344,7 +344,7 @@ ms.locfileid: "75594677"
 
  **调整每个角色**的重数（如有必要）。 如果希望每个 Person 最多只有一个 Manager，则将显示在关系图上的 Manager 标签下的重数设置为 0..1。
 
- **向关系添加域属性。** 在该图中，Artist-Album 关系具有角色的属性。
+ **将域属性添加到关系。** 在该图中，Artist-Album 关系具有角色的属性。
 
  如果相同的模型元素对之间可以存在多个相同类的链接 **，则设置该关系的 "允许重复项" 属性**。 例如，可以允许 Teacher 向相同的 Student 教授多个 Subject。
 
@@ -388,9 +388,9 @@ ms.locfileid: "75594677"
 
 1. 单击解决方案资源管理器的工具栏中的 **"转换所有模板**"，生成 DSL 设计器代码。
 
-2. **构建并运行 DSL。** 按 F5 或 CTRL + F5 在实验模式下运行 Visual Studio 的新实例。 在 Visual Studio 的实验实例中，打开或创建一个文件，该文件具有 DSL 的文件扩展名。
+2. **生成并运行 DSL。** 按 F5 或 CTRL + F5 在实验模式下运行 Visual Studio 的新实例。 在 Visual Studio 的实验实例中，打开或创建一个文件，该文件具有 DSL 的文件扩展名。
 
-3. **验证连接工具是否显示在工具箱中。**
+3. **验证连接工具是否显示在工具箱上。**
 
 4. 通过从工具拖到模型关系图上来**创建形状**。
 
@@ -408,7 +408,7 @@ ms.locfileid: "75594677"
 
    在首次测试连接符后，你可能想要调整它的某些属性并添加一些更高级的功能。 有关详细信息，请参阅[自定义和扩展域特定语言](../modeling/customizing-and-extending-a-domain-specific-language.md)。
 
-## <a name="compartments"></a>定义包含列表的形状：隔离舱形状
+## <a name="defining-shapes-that-contain-lists-compartment-shapes"></a><a name="compartments"></a>定义包含列表的形状：隔离舱形状
  隔离舱形状包含一个或多个项列表。 例如，在“音乐库”DSL 中，可以使用隔离舱形状来表示音乐 Album。 在每个 Album 中，存在一个 Song 列表。
 
  ![隔离舱形状](../modeling/media/compartmentshape.png)
@@ -489,9 +489,9 @@ ms.locfileid: "75594677"
 
 1. 单击解决方案资源管理器的工具栏中的 **"转换所有模板**"，生成 DSL 设计器代码。
 
-2. **构建并运行 DSL。** 按 F5 或 CTRL + F5 在实验模式下运行 Visual Studio 的新实例。 在 Visual Studio 的实验实例中，打开或创建一个文件，该文件具有 DSL 的文件扩展名。
+2. **生成并运行 DSL。** 按 F5 或 CTRL + F5 在实验模式下运行 Visual Studio 的新实例。 在 Visual Studio 的实验实例中，打开或创建一个文件，该文件具有 DSL 的文件扩展名。
 
-3. **验证工具是否出现在工具箱中。**
+3. **验证工具是否显示在工具箱上。**
 
 4. 将工具拖到模型关系图上。 随即创建一个形状。
 
@@ -536,7 +536,7 @@ ms.locfileid: "75594677"
 
 7. 在隔离舱形状中选择链接或项。 链接和项都应消失。
 
-## <a name="ports"></a>在另一个形状的边界上定义端口
+## <a name="defining-ports-on-the-boundary-of-another-shape"></a><a name="ports"></a>在另一个形状的边界上定义端口
  端口是位于另一个形状的边界上的形状。
 
  端口可以用于在另一个形状上提供固定连接点，用户可以将连接符绘制到端口。 在这种情况下，可以使端口形状变为透明。
@@ -545,7 +545,7 @@ ms.locfileid: "75594677"
 
 - 存在一个表示端口的容器的域类：`Component`。
 
-- 存在一个表示端口的域类。 在该示例中，此域类是 `ComponentPort`。
+- 存在一个表示端口的域类。 在本示例中，此项为 `ComponentPort`。
 
 - 存在一个从容器域类到端口域类的嵌入关系。 有关详细信息，请参阅[定义域类](#classes)。
 
@@ -559,7 +559,7 @@ ms.locfileid: "75594677"
 
   有关详细信息，请参阅[端口形状的属性](../modeling/properties-of-port-shapes.md)。
 
-## <a name="swimlanes"></a>定义具有泳道的 DSL
+## <a name="defining-a-dsl-that-has-swimlanes"></a><a name="swimlanes"></a>定义具有泳道的 DSL
  泳道是关系图中的水平或垂直分区。 每个泳道都对应于一个模型元素。 DSL 定义需要一个用于泳道元素的域类。
 
  创建具有泳道的 DSL 的最佳方式是创建新 DSL 解决方案并选择“任务流”解决方案模板。 在 DSL 定义中，Actor 类是映射到泳道的域类。 重命名此类和其他类以符合你的项目。
@@ -570,7 +570,7 @@ ms.locfileid: "75594677"
 
  有关详细信息，请参阅[泳道属性](../modeling/properties-of-swimlanes.md)。
 
-## <a name="addTypes"></a>添加属性类型
+## <a name="adding-property-types"></a><a name="addTypes"></a>添加属性类型
 
 ### <a name="domain-enumerations-and-literals"></a>域枚举和文本
  域枚举是具有多种文本值的类型。
@@ -586,7 +586,7 @@ ms.locfileid: "75594677"
 
  若要添加类型，请在 DSL 资源管理器中右键单击模型的根，然后单击 "**添加新的外部类型**"。 在属性窗口中，将 "名称" 设置为 "**颜色**"，将 "命名空间" 设置为 " **system.web**"。 此类型现在显示在 DSL 资源管理器中的 "**域类型**" 下。 无论何时设置域属性的类型，你都可以选择此类型。
 
-## <a name="custom"></a>自定义 DSL
+## <a name="customizing-the-dsl"></a><a name="custom"></a>自定义 DSL
  使用本主题中所述的技术，可以通过关系图表示法、可读 XML 格式以及生成代码和其他项目所需的基础工具快速创建 DSL。
 
  有两种扩展 DSL 定义的方法：
@@ -606,19 +606,19 @@ ms.locfileid: "75594677"
 
  另请参阅[如何：更改域特定语言的命名空间](../modeling/how-to-change-the-namespace-of-a-domain-specific-language.md)。
 
-## <a name="trouble"></a> 故障排除
+## <a name="troubleshooting"></a><a name="trouble"></a> 故障排除
  下表列出了在设计 DSL 时遇到的一些最常见问题，以及其解决方案的建议。 [可视化工具扩展性论坛](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=dslvsarchx)上提供了更多建议。
 
-| Problem | 建议 |
+| 问题 | 建议 |
 |-|-|
 | 在 DSL 定义文件中进行的更改不起作用。 | 单击工具栏上的 "**转换所有模板**" 解决方案资源管理器，然后重新生成解决方案。 |
 | 形状显示了修饰器的名称而不是属性值。 | 设置修饰器映射。 在 DSL 定义关系图上，单击“关系图元素映射”，它是域类和形状类之间的灰色线条。<br /><br /> 打开 " **DSL 详细信息**" 窗口。 如果看不到该窗口，请在 "视图" 菜单上，指向 "**其他窗口**"，再单击 " **DSL 详细信息**"。<br /><br /> 单击 "**修饰器映射**" 选项卡。选择修饰器的名称。 确保选中它旁边的框。 在 "**显示属性**" 下，选择域属性的名称。<br /><br /> 有关详细信息，请参阅[关系图上的形状](#shapes)。 |
 | 在 DSL 资源管理器中，无法添加到集合。 例如，当右键单击“工具”时，菜单中没有“添加工具”命令。<br /><br /> 在 DSL 的资源管理器中，无法将元素添加到列表。 | 右键单击你正在尝试的节点上方的项。 当你想要添加到列表中时，“添加”命令不在列表节点中，而在其所有者中。 |
 | 已创建域类，但无法在语言资源管理器中创建实例。 | 每个域类（根除外）都必须是嵌入关系的目标。 |
 | 在 DSL 的资源管理器中，只显示元素及其类型名称。 | 在 DSL 定义中，选择类的域属性，然后在 "属性窗口中，将"**元素名称**"设置为" true "。 |
-| 始终在 XML 编辑器中打开 DSL。 | 发生这种情况是由于在读取文件的同时出现一个错误。 但是，即使在修复该错误后，也必须显式将该编辑器重置为 DSL 设计器。<br /><br /> 右键单击项目项，单击 "**打开方式**"，然后选择 "YourLanguage ***设计器（默认）** "。 |
+| 始终在 XML 编辑器中打开 DSL。 | 发生这种情况是由于在读取文件的同时出现一个错误。 但是，即使在修复该错误后，也必须显式将该编辑器重置为 DSL 设计器。<br /><br /> 右键单击项目项，单击 "**打开方式**"，然后选择 "YourLanguage ***设计器（默认）**"。 |
 | 在更改程序集名称后，不会显示 DSL 的工具箱。 | 检查并更新**DslPackage\GeneratedCode\Package.tt**有关详细信息，请参阅[如何：更改域特定语言的命名空间](../modeling/how-to-change-the-namespace-of-a-domain-specific-language.md)。 |
-| 不会显示 DSL 的工具箱，但并未更改程序集名称。<br /><br /> 或者，显示一个报告加载扩展失败的消息框。 | 重置实验实例，并重新生成解决方案。<br /><br /> 1. 在 Windows "开始" 菜单的 "**所有程序**" 下，依次展开 "[!INCLUDE[vssdk_current_long](../misc/includes/vssdk_current_long_md.md)]" 和 "**工具**"，然后单击 **"重置 Microsoft Visual Studio 实验实例"** 。<br />2. 在 "**生成**" 菜单上，单击 "**重新生成解决方案**"。 |
+| 不会显示 DSL 的工具箱，但并未更改程序集名称。<br /><br /> 或者，显示一个报告加载扩展失败的消息框。 | 重置实验实例，并重新生成解决方案。<br /><br /> 1. 在 Windows "开始" 菜单的 "**所有程序**" 下，依次展开 [!INCLUDE[vssdk_current_long](../misc/includes/vssdk_current_long_md.md)] "工具" 和 "**工具**"，然后单击 **"重置 Microsoft Visual Studio 实验实例"**。<br />2. 在 "**生成**" 菜单上，单击 "**重新生成解决方案**"。 |
 
 ## <a name="see-also"></a>另请参阅
 

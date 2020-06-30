@@ -15,21 +15,21 @@ caps.latest.revision: 27
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: f68ab71d9ce4fab1b0612f15d866c58e302a317e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 726cde42eb08ee5508481887fae2e9d2b059256c
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72671510"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543866"
 ---
-# <a name="ca1806-do-not-ignore-method-results"></a>CA1806：不要忽略方法结果
+# <a name="ca1806-do-not-ignore-method-results"></a>CA1806:不要忽略方法结果
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|值|
 |-|-|
 |TypeName|DoNotIgnoreMethodResults|
 |CheckId|CA1806|
-|类别|Microsoft. 使用情况|
+|Category|Microsoft. 使用情况|
 |是否重大更改|非重大更改|
 
 ## <a name="cause"></a>原因
@@ -39,7 +39,7 @@ ms.locfileid: "72671510"
 
 - 将调用一个创建并返回一个新字符串的方法，并且永远不会使用新的字符串。
 
-- COM 或 P/Invoke 方法，它返回从未使用过的 HRESULT 或错误代码。 规则说明
+- COM 或 P/Invoke 方法，它返回从未使用过的 HRESULT 或错误代码。 规则描述
 
   不必要的对象创建和未使用对象的关联垃圾回收会降低性能。
 
@@ -52,7 +52,7 @@ ms.locfileid: "72671510"
 
  如果方法 A 调用方法 B，但不使用方法 B 返回的新字符串实例，则为。 将该实例作为参数传递给其他方法，并将该实例分配给一个变量。 如果不需要，则删除该调用。
 
- 或
+ -或-
 
  如果方法 A 调用方法 B，但不使用该方法返回的 HRESULT 或错误代码，则为。 在条件语句中使用结果，将结果赋给变量，或将其作为参数传递给其他方法。
 

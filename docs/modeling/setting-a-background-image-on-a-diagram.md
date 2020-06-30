@@ -1,18 +1,18 @@
 ---
 title: 在图表上设置背景图像
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1bdf30636a6c7fee1463cbe554058f0802a5f6f0
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 7701bf0ba1467b481f6da64d3c2e229be77a7fe7
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75591952"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85542579"
 ---
 # <a name="setting-a-background-image-on-a-diagram"></a>在图表上设置背景图像
 在 Visual Studio 可视化和建模 SDK 中，可以使用自定义代码设置生成的设计器的背景图像。
@@ -43,7 +43,7 @@ ms.locfileid: "75591952"
 
 11. 如果缺少 Resources.Designer.cs，请单击**解决方案资源管理器**中的文件资源 .resx。
 
-12. 在“属性” 窗口中，将 `Custom Tool` 属性设置为 `ResXFileCodeGenerator`。
+12. 在“属性” **** 窗口中，将 `Custom Tool` 属性设置为 `ResXFileCodeGenerator`。
 
 13. 在**解决方案资源管理器**中，右键单击 Dsl 项目，指向 "**添加**"，然后单击 "**新建文件夹**"。
 
@@ -53,7 +53,7 @@ ms.locfileid: "75591952"
 
 16. 在 "**添加新项**" 对话框的 "**模板**" 列表中，单击 "**代码文件**"。
 
-17. 在 "**名称**" 框中，键入 `BackgroundImage.cs`，然后单击 "**添加**"。
+17. 在 "**名称**" 框中键入 `BackgroundImage.cs` ，然后单击 "**添加**"。
 
 18. 将以下代码复制到 BackgroundImage.cs 文件，从而调整命名空间、关系图类名以及图像文件资源名称。
 

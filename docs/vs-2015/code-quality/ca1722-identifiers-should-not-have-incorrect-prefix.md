@@ -15,27 +15,27 @@ caps.latest.revision: 18
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 0f50c5aca934886f03a54692d98a6be3f8bb5562
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a7f4f932f8e2db9a558d7440d8965ce5924043b8
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72671583"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544477"
 ---
-# <a name="ca1722-identifiers-should-not-have-incorrect-prefix"></a>CA1722：标识符应采用正确的前缀
+# <a name="ca1722-identifiers-should-not-have-incorrect-prefix"></a>CA1722:标识符应采用正确的前缀
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|值|
 |-|-|
 |TypeName|IdentifiersShouldNotHaveIncorrectPrefix|
 |CheckId|CA1722|
-|类别|Microsoft。命名|
+|Category|Microsoft。命名|
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
  标识符具有不正确的前缀。
 
-## <a name="rule-description"></a>规则说明
+## <a name="rule-description"></a>规则描述
  按照约定，只有某些编程元素具有以特定前缀开头的名称。
 
  类型名称没有特定的前缀，不应使用 "C" 作为前缀。 此规则报告类型名称（例如 "CMyClass"）的冲突，但不报告类型名称（如 "Cache"）的冲突。
@@ -49,4 +49,4 @@ ms.locfileid: "72671583"
  不禁止显示此规则发出的警告。
 
 ## <a name="related-rules"></a>相关规则
- [CA1715：标识符应具有正确的前缀](../code-quality/ca1715-identifiers-should-have-correct-prefix.md)
+ [CA1715:标识符应具有正确的前缀](../code-quality/ca1715-identifiers-should-have-correct-prefix.md)

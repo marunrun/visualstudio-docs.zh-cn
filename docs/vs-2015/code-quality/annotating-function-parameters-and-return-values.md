@@ -126,12 +126,12 @@ caps.latest.revision: 17
 author: corob-msft
 ms.author: corob
 manager: jillfra
-ms.openlocfilehash: bd9107bed68b9b5b6f88a239b3b155440b0e654c
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+ms.openlocfilehash: 71854388f3fb1c5eaea7d40ed2757af9cecacf1a
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2020
-ms.locfileid: "77271613"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543801"
 ---
 # <a name="annotating-function-parameters-and-return-values"></a>对函数参数和返回值进行批注
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -157,7 +157,7 @@ ms.locfileid: "77271613"
   
 - `_In_z_`  
   
-     指向以 null 结尾的字符串的指针，该字符串用作输入。  该字符串必须在预状态中有效。  首选的 `PSTR`的变体是已具有正确批注的。  
+     指向以 null 结尾的字符串的指针，该字符串用作输入。  该字符串必须在预状态中有效。  首选的变体（ `PSTR` 已经具有正确的批注）是首选的。  
   
 - `_Inout_z_`  
   
@@ -167,45 +167,45 @@ ms.locfileid: "77271613"
   
      `_In_reads_bytes_(s)`  
   
-     指向数组的指针，该数组由函数读取。  数组的大小 `s` 元素，它们都必须有效。  
+     指向数组的指针，该数组由函数读取。  数组的大小为 `s` 元素，所有元素都必须有效。  
   
-     `_bytes_` 变体以字节为单位（而不是元素）提供大小。 仅在无法将大小表示为元素时使用此值。  例如，仅当使用 `wchar_t` 的类似函数时，`char` 字符串才能使用 `_bytes_` 变体。  
+     `_bytes_`变体提供的大小以字节为单位，而不是元素。 仅在无法将大小表示为元素时使用此值。  例如， `char` `_bytes_` 仅当使用的类似函数时，字符串才使用变体 `wchar_t` 。  
   
 - `_In_reads_z_(s)`  
   
-     指向数组的指针，该数组以 null 值终止并具有已知大小。 直到空终止符的元素（如果没有空终止符，则为 `s`）在预状态中必须有效。  如果大小是已知的（以字节为单位），则缩放 `s` 元素大小。  
+     指向数组的指针，该数组以 null 值终止并具有已知大小。 直到空终止符的元素，或者， `s` 如果没有空终止符，则必须在预状态中有效。  如果大小是已知的（以字节为单位），则 `s` 按元素大小进行缩放。  
   
 - `_In_reads_or_z_(s)`  
   
-     指向数组的指针，该数组以 null 值终止或具有已知的大小，或者两者都具有已知的大小。 直到空终止符的元素（如果没有空终止符，则为 `s`）在预状态中必须有效。  如果大小是已知的（以字节为单位），则缩放 `s` 元素大小。  （用于 `strn` 系列。）  
+     指向数组的指针，该数组以 null 值终止或具有已知的大小，或者两者都具有已知的大小。 直到空终止符的元素，或者， `s` 如果没有空终止符，则必须在预状态中有效。  如果大小是已知的（以字节为单位），则 `s` 按元素大小进行缩放。  （用于 `strn` 系列。）  
   
 - `_Out_writes_(s)`  
   
      `_Out_writes_bytes_(s)`  
   
-     一个指针，指向将由函数写入 `s` 元素（resp）的数组。  数组元素不必在预处理中有效，并且在 post 状态中有效的元素数是未指定的。  如果参数类型上存在批注，则它们将在 post 状态下应用。 例如，考虑下面的代码。  
+     一个指针，指向 `s` 将由函数编写的元素数组（resp）。  数组元素不必在预处理中有效，并且在 post 状态中有效的元素数是未指定的。  如果参数类型上存在批注，则它们将在 post 状态下应用。 例如，考虑下面的代码。  
   
      `typedef _Null_terminated_ wchar_t *PWSTR; void MyStringCopy(_Out_writes_ (size) PWSTR p1,    _In_ size_t size,    _In_ PWSTR p2);`  
   
-     在此示例中，调用方提供 `p1``size` 元素的缓冲区。  `MyStringCopy` 使其中一些元素有效。 更重要的是，`PWSTR` 上的 `_Null_terminated_` 注释意味着 `p1` 在 post 状态下以 null 结尾。  通过这种方式，有效元素的数目仍是明确定义的，但不需要特定元素计数。  
+     在此示例中，调用方 `size` 为提供元素的缓冲区 `p1` 。  `MyStringCopy`使其中一些元素有效。 更重要的 `_Null_terminated_` 是，上的批注 `PWSTR` 表示 `p1` 在 post 状态下以 null 结尾。  通过这种方式，有效元素的数目仍是明确定义的，但不需要特定元素计数。  
   
-     `_bytes_` 变体以字节为单位（而不是元素）提供大小。 仅在无法将大小表示为元素时使用此值。  例如，仅当使用 `wchar_t` 的类似函数时，`char` 字符串才能使用 `_bytes_` 变体。  
+     `_bytes_`变体提供的大小以字节为单位，而不是元素。 仅在无法将大小表示为元素时使用此值。  例如， `char` `_bytes_` 仅当使用的类似函数时，字符串才使用变体 `wchar_t` 。  
   
 - `_Out_writes_z_(s)`  
   
-     指向 `s` 元素的数组的指针。  元素不必在预状态中有效。  在后期状态中，通过空终止符向上传递的元素必须是有效的。  如果大小是已知的（以字节为单位），则缩放 `s` 元素大小。  
+     指向元素数组的指针 `s` 。  元素不必在预状态中有效。  在后期状态中，通过空终止符向上传递的元素必须是有效的。  如果大小是已知的（以字节为单位），则 `s` 按元素大小进行缩放。  
   
 - `_Inout_updates_(s)`  
   
      `_Inout_updates_bytes_(s)`  
   
-     指向数组的指针，该数组在函数中进行读取和写入。  它的大小 `s` 元素，在前置状态和 post 状态下有效。  
+     指向数组的指针，该数组在函数中进行读取和写入。  它的大小是 `s` 元素，在预状态和后状态下有效。  
   
-     `_bytes_` 变体以字节为单位（而不是元素）提供大小。 仅在无法将大小表示为元素时使用此值。  例如，仅当使用 `wchar_t` 的类似函数时，`char` 字符串才能使用 `_bytes_` 变体。  
+     `_bytes_`变体提供的大小以字节为单位，而不是元素。 仅在无法将大小表示为元素时使用此值。  例如， `char` `_bytes_` 仅当使用的类似函数时，字符串才使用变体 `wchar_t` 。  
   
 - `_Inout_updates_z_(s)`  
   
-     指向数组的指针，该数组以 null 值终止并具有已知大小。 通过 null 终止符向上（必须存在）的元素必须在前置状态和 post 状态中有效。  公告状态中的值假设不同于预处理状态中的值;这包括 null 结束符的位置。 如果大小是已知的（以字节为单位），则缩放 `s` 元素大小。  
+     指向数组的指针，该数组以 null 值终止并具有已知大小。 通过 null 终止符向上（必须存在）的元素必须在前置状态和 post 状态中有效。  公告状态中的值假设不同于预处理状态中的值;这包括 null 结束符的位置。 如果大小是已知的（以字节为单位），则 `s` 按元素大小进行缩放。  
   
 - `_Out_writes_to_(s,c)`  
   
@@ -215,11 +215,11 @@ ms.locfileid: "77271613"
   
      `_Out_writes_bytes_all_(s)`  
   
-     指向 `s` 元素的数组的指针。  元素不必在预状态中有效。  在 post 状态下，元素到 `c`第一个元素必须有效。  如果大小是已知的（以字节为单位），则按元素大小进行缩放 `s` 和 `c`，或使用 `_bytes_` 变量，该变量定义为：  
+     指向元素数组的指针 `s` 。  元素不必在预状态中有效。  在后期状态中，最多 `c` 个元素的元素必须有效。  如果大小是已知的（以字节为单位）、按比例调整大小， `s` `c` 或者使用 `_bytes_` 变体（定义为：  
   
      `_Out_writes_to_(_Old_(s), _Old_(s))    _Out_writes_bytes_to_(_Old_(s), _Old_(s))`  
   
-     换而言之，缓冲区中的每个要在预状态 `s` 的元素在 post 状态中都有效。  例如：  
+     换言之，缓冲区中的每个位于 `s` 预状态的元素都在 post 状态下有效。  例如：  
   
      `void *memcpy(_Out_writes_bytes_all_(s) char *p1,    _In_reads_bytes_(s) char *p2,    _In_ int s); void * wordcpy(_Out_writes_all_(s) DWORD *p1,     _In_reads_(s) DWORD *p2,    _In_ int s);`  
   
@@ -227,13 +227,13 @@ ms.locfileid: "77271613"
   
      `_Inout_updates_bytes_to_(s,c)`  
   
-     指向数组的指针，该数组由函数读取和写入。  它的大小 `s` 元素中，所有元素都必须在前置状态中有效，并且 `c` 元素在 post 状态中必须有效。  
+     指向数组的指针，该数组由函数读取和写入。  它的大小为 `s` 元素，所有元素都必须在预状态中有效，并且 `c` 元素必须在 post 状态下有效。  
   
-     `_bytes_` 变体以字节为单位（而不是元素）提供大小。 仅在无法将大小表示为元素时使用此值。  例如，仅当使用 `wchar_t` 的类似函数时，`char` 字符串才能使用 `_bytes_` 变体。  
+     `_bytes_`变体提供的大小以字节为单位，而不是元素。 仅在无法将大小表示为元素时使用此值。  例如， `char` `_bytes_` 仅当使用的类似函数时，字符串才使用变体 `wchar_t` 。  
   
 - `_Inout_updates_z_(s)`  
   
-     指向数组的指针，该数组以 null 值终止并具有已知大小。 通过 null 终止符向上（必须存在）的元素必须在前置状态和 post 状态中有效。  公告状态中的值假设不同于预处理状态中的值;这包括 null 结束符的位置。 如果大小是已知的（以字节为单位），则缩放 `s` 元素大小。  
+     指向数组的指针，该数组以 null 值终止并具有已知大小。 通过 null 终止符向上（必须存在）的元素必须在前置状态和 post 状态中有效。  公告状态中的值假设不同于预处理状态中的值;这包括 null 结束符的位置。 如果大小是已知的（以字节为单位），则 `s` 按元素大小进行缩放。  
   
 - `_Out_writes_to_(s,c)`  
   
@@ -243,11 +243,11 @@ ms.locfileid: "77271613"
   
      `_Out_writes_bytes_all_(s)`  
   
-     指向 `s` 元素的数组的指针。  元素不必在预状态中有效。  在 post 状态下，元素到 `c`第一个元素必须有效。  如果大小是已知的（以字节为单位），则按元素大小进行缩放 `s` 和 `c`，或使用 `_bytes_` 变量，该变量定义为：  
+     指向元素数组的指针 `s` 。  元素不必在预状态中有效。  在后期状态中，最多 `c` 个元素的元素必须有效。  如果大小是已知的（以字节为单位）、按比例调整大小， `s` `c` 或者使用 `_bytes_` 变体（定义为：  
   
      `_Out_writes_to_(_Old_(s), _Old_(s))    _Out_writes_bytes_to_(_Old_(s), _Old_(s))`  
   
-     换而言之，缓冲区中的每个要在预状态 `s` 的元素在 post 状态中都有效。  例如：  
+     换言之，缓冲区中的每个位于 `s` 预状态的元素都在 post 状态下有效。  例如：  
   
      `void *memcpy(_Out_writes_bytes_all_(s) char *p1,    _In_reads_bytes_(s) char *p2,    _In_ int s); void * wordcpy(_Out_writes_all_(s) DWORD *p1,     _In_reads_(s) DWORD *p2,    _In_ int s);`  
   
@@ -255,44 +255,42 @@ ms.locfileid: "77271613"
   
      `_Inout_updates_bytes_to_(s,c)`  
   
-     指向数组的指针，该数组由函数读取和写入。  它的大小 `s` 元素中，所有元素都必须在前置状态中有效，并且 `c` 元素在 post 状态中必须有效。  
+     指向数组的指针，该数组由函数读取和写入。  它的大小为 `s` 元素，所有元素都必须在预状态中有效，并且 `c` 元素必须在 post 状态下有效。  
   
-     `_bytes_` 变体以字节为单位（而不是元素）提供大小。 仅在无法将大小表示为元素时使用此值。  例如，仅当使用 `wchar_t` 的类似函数时，`char` 字符串才能使用 `_bytes_` 变体。  
+     `_bytes_`变体提供的大小以字节为单位，而不是元素。 仅在无法将大小表示为元素时使用此值。  例如， `char` `_bytes_` 仅当使用的类似函数时，字符串才使用变体 `wchar_t` 。  
   
 - `_Inout_updates_all_(s)`  
   
      `_Inout_updates_bytes_all_(s)`  
   
-     指向数组的指针，该数组由 size `s` 元素的函数进行读取和写入。 定义为等效于：  
+     指向数组的指针，该数组由大小元素的函数进行读取和写入 `s` 。 定义为等效于：  
   
      `_Inout_updates_to_(_Old_(s), _Old_(s))    _Inout_updates_bytes_to_(_Old_(s), _Old_(s))`  
   
-     换而言之，缓冲区中的每个要在预状态中 `s` 的元素都在前置状态和 post 状态下有效。  
+     换句话说，缓冲区中的每个位于 `s` 预状态的元素都在前置状态和 post 状态下有效。  
   
-     `_bytes_` 变体以字节为单位（而不是元素）提供大小。 仅在无法将大小表示为元素时使用此值。  例如，仅当使用 `wchar_t` 的类似函数时，`char` 字符串才能使用 `_bytes_` 变体。  
+     `_bytes_`变体提供的大小以字节为单位，而不是元素。 仅在无法将大小表示为元素时使用此值。  例如， `char` `_bytes_` 仅当使用的类似函数时，字符串才使用变体 `wchar_t` 。  
   
 - `_In_reads_to_ptr_(p)`  
   
-     指向数组的指针，该数组的表达式 `p` – `_Curr_` （即 `p` 减号 `_Curr_`）由相应的语言标准定义。  `p` 之前的元素必须在预状态中有效。  
+     指向数组的指针，该数组的表达式 `p` `_Curr_` （即 `p` 减号 `_Curr_` ）由相应的语言标准定义。  之前的元素 `p` 必须在预状态中有效。  
   
 - `_In_reads_to_ptr_z_(p)`  
   
-     指向以 null 结尾的数组的指针，该数组的表达式 `p` – `_Curr_` （即 `p` 减 `_Curr_`）由相应的语言标准定义。  `p` 之前的元素必须在预状态中有效。  
+     指向以 null 结尾的数组的指针，该表达式的 `p` 表达式 `_Curr_` （即 `p` 减号 `_Curr_` ）由相应的语言标准定义。  之前的元素 `p` 必须在预状态中有效。  
   
 - `_Out_writes_to_ptr_(p)`  
   
-     指向数组的指针，该数组的表达式 `p` – `_Curr_` （即 `p` 减号 `_Curr_`）由相应的语言标准定义。  `p` 之前的元素不必处于预处理状态，并且在 post 状态中必须有效。  
+     指向数组的指针，该数组的表达式 `p` `_Curr_` （即 `p` 减号 `_Curr_` ）由相应的语言标准定义。  之前的元素不必 `p` 处于预处理状态，并且在 post 状态中必须有效。  
   
 - `_Out_writes_to_ptr_z_(p)`  
   
-     指向以 null 结尾的数组的指针，该数组的表达式 `p` – `_Curr_` （即 `p` 减 `_Curr_`）由相应的语言标准定义。  `p` 之前的元素不必处于预处理状态，并且在 post 状态中必须有效。  
+     指向以 null 结尾的数组的指针，该表达式的 `p` 表达式 `_Curr_` （即 `p` 减号 `_Curr_` ）由相应的语言标准定义。  之前的元素不必 `p` 处于预处理状态，并且在 post 状态中必须有效。  
   
 ## <a name="optional-pointer-parameters"></a>可选指针参数  
- 当指针参数批注包含 `_opt_`时，它指示参数可以为 null。 否则，批注的执行与不包含 `_opt_`的版本相同。 下面列出了指针参数批注的 `_opt_` 变体：  
+ 当指针参数批注包含时 `_opt_` ，它指示参数可以为 null。 否则，批注的执行与不包含的版本相同 `_opt_` 。 下面列出了 `_opt_` 指针参数批注的变体：  
   
-||||  
-|-|-|-|  
-|`_In_opt_`<br /><br /> `_Out_opt_`<br /><br /> `_Inout_opt_`<br /><br /> `_In_opt_z_`<br /><br /> `_Inout_opt_z_`<br /><br /> `_In_reads_opt_`<br /><br /> `_In_reads_bytes_opt_`<br /><br /> `_In_reads_opt_z_`|`_Out_writes_opt_`<br /><br /> `_Out_writes_opt_z_`<br /><br /> `_Inout_updates_opt_`<br /><br /> `_Inout_updates_bytes_opt_`<br /><br /> `_Inout_updates_opt_z_`<br /><br /> `_Out_writes_to_opt_`<br /><br /> `_Out_writes_bytes_to_opt_`<br /><br /> `_Out_writes_all_opt_`<br /><br /> `_Out_writes_bytes_all_opt_`|`_Inout_updates_to_opt_`<br /><br /> `_Inout_updates_bytes_to_opt_`<br /><br /> `_Inout_updates_all_opt_`<br /><br /> `_Inout_updates_bytes_all_opt_`<br /><br /> `_In_reads_to_ptr_opt_`<br /><br /> `_In_reads_to_ptr_opt_z_`<br /><br /> `_Out_writes_to_ptr_opt_`<br /><br /> `_Out_writes_to_ptr_opt_z_`|  
+`_In_opt_`, `_Out_opt_`, `_Inout_opt_`, `_In_opt_z_`, `_Inout_opt_z_`, `_In_reads_opt_`, `_In_reads_bytes_opt_`, `_In_reads_opt_z_`|`_Out_writes_opt_`, `_Out_writes_opt_z_`, `_Inout_updates_opt_`, `_Inout_updates_bytes_opt_`, `_Inout_updates_opt_z_`, `_Out_writes_to_opt_`, `_Out_writes_bytes_to_opt_`, `_Out_writes_all_opt_`, `_Out_writes_bytes_all_opt_`|`_Inout_updates_to_opt_`, `_Inout_updates_bytes_to_opt_`, `_Inout_updates_all_opt_`, `_Inout_updates_bytes_all_opt_`, `_In_reads_to_ptr_opt_`, `_In_reads_to_ptr_opt_z_`, `_Out_writes_to_ptr_opt_`, `_Out_writes_to_ptr_opt_z_`|  
   
 ## <a name="output-pointer-parameters"></a>输出指针参数  
  输出指针参数需要特殊表示法，以消除参数上的空值和指向的位置。  
@@ -315,7 +313,7 @@ ms.locfileid: "77271613"
   
    参数可以为 null，并且在后置位置，指向位置可以为 null。  
   
-  在下表中，将在注释名称中插入附加子字符串，以便进一步限定批注的含义。  各种子字符串分别为 `_z`、`_COM_`、`_buffer_`、`_bytebuffer_`和 `_to_`。  
+  在下表中，将在注释名称中插入附加子字符串，以便进一步限定批注的含义。  各种子字符串分别为、、、 `_z` `_COM_` `_buffer_` `_bytebuffer_` 和 `_to_` 。  
   
 > [!IMPORTANT]
 > 如果要批注的接口是 COM，请使用这些批注的 COM 形式。 不要将 COM 批注用于任何其他类型接口。  
@@ -330,7 +328,7 @@ ms.locfileid: "77271613"
   
    `_Ouptr_opt_result_maybenull_z_`  
   
-   返回的指针具有 `_Null_terminated_` 注释。  
+   返回的指针具有 `_Null_terminated_` 批注。  
   
 - `_COM_Outptr_`  
   
@@ -340,7 +338,7 @@ ms.locfileid: "77271613"
   
    `_COM_Outptr_opt_result_maybenull_`  
   
-   返回的指针具有 COM 语义，因此，返回的指针为 null 时，会出现一个 `_On_failure_` 的后置条件。  
+   返回的指针具有 COM 语义，因此 `_On_failure_` 会出现返回指针为 null 的后置条件。  
   
 - `_Outptr_result_buffer_(s)`  
   
@@ -350,7 +348,7 @@ ms.locfileid: "77271613"
   
    `_Outptr_opt_result_bytebuffer_(s)`  
   
-   返回的指针指向大小 `s` 元素或字节大小的有效缓冲区。  
+   返回的指针指向大小 `s` 元素或字节的有效缓冲区。  
   
 - `_Outptr_result_buffer_to_(s, c)`  
   
@@ -360,7 +358,7 @@ ms.locfileid: "77271613"
   
    `_Outptr_opt_result_bytebuffer_to_(s,c)`  
   
-   返回的指针指向大小 `s` 元素或字节大小的缓冲区，第一个 `c` 有效。  
+   返回的指针指向大小 `s` 元素或字节的缓冲区，其中第一个 `c` 是有效的。  
   
   某些接口约定假定输出参数在失败时 null。  除显式 COM 代码外，下表中的窗体是首选的。  对于 COM 代码，请使用上一节中列出的相应 COM 窗体。  
   
@@ -387,7 +385,7 @@ ms.locfileid: "77271613"
    如果函数成功，则返回的指针指向有效的缓冲区; 如果函数失败，则返回 null。 此批注用于引用参数。  
   
 ## <a name="output-reference-parameters"></a>输出引用参数  
- 引用参数的常见用途是用于输出参数。  对于简单的输出引用参数（例如 `int&`），`_Out_` 提供正确的语义。  但是，当输出值为指针（例如 `int *&`）时，等效的指针批注（如 `_Outptr_ int **`）不提供正确的语义。  若要简洁地表达指针类型的输出引用参数的语义，请使用这些复合批注：  
+ 引用参数的常见用途是用于输出参数。  对于简单的输出引用参数（例如） `int&` ， `_Out_` 提供正确的语义。  但是，当输出值为指针时（例如， `int *&` 类似于 `_Outptr_ int **` 不提供正确语义的等效指针批注）。  若要简洁地表达指针类型的输出引用参数的语义，请使用这些复合批注：  
   
  **批注和说明**  
   
@@ -401,58 +399,56 @@ ms.locfileid: "77271613"
   
 - `_Outref_result_buffer_(s)`  
   
-     结果在 post 状态中必须有效，且不能为 null。 指向大小 `s` 元素的有效缓冲区。  
+     结果在 post 状态中必须有效，且不能为 null。 指向大小元素的有效缓冲区 `s` 。  
   
 - `_Outref_result_bytebuffer_(s)`  
   
-     结果在 post 状态中必须有效，且不能为 null。 指向大小 `s` 字节的有效缓冲区。  
+     结果在 post 状态中必须有效，且不能为 null。 指向大小为字节的有效缓冲区 `s` 。  
   
 - `_Outref_result_buffer_to_(s, c)`  
   
-     结果在 post 状态中必须有效，且不能为 null。 指向第一个 `c` 有效的 `s` 元素的缓冲区。  
+     结果在 post 状态中必须有效，且不能为 null。 指向元素的缓冲区 `s` ，其中第一个 `c` 是有效的。  
   
 - `_Outref_result_bytebuffer_to_(s, c)`  
   
-     结果在 post 状态中必须有效，且不能为 null。 指向第一个 `c` 有效 `s` 字节的缓冲区。  
+     结果在 post 状态中必须有效，且不能为 null。 指向 `s` 第一个有效字节的缓冲区 `c` 。  
   
 - `_Outref_result_buffer_all_(s)`  
   
-     结果在 post 状态中必须有效，且不能为 null。 指向有效元素 `s` 大小的有效缓冲区。  
+     结果在 post 状态中必须有效，且不能为 null。 指向有效元素大小的有效缓冲区 `s` 。  
   
 - `_Outref_result_bytebuffer_all_(s)`  
   
-     结果在 post 状态中必须有效，且不能为 null。 指向有效元素 `s` 字节的有效缓冲区。  
+     结果在 post 状态中必须有效，且不能为 null。 指向 `s` 有效元素字节的有效缓冲区。  
   
 - `_Outref_result_buffer_maybenull_(s)`  
   
-     结果必须在 post 状态中有效，但在 post 状态中可能为 null。 指向大小 `s` 元素的有效缓冲区。  
+     结果必须在 post 状态中有效，但在 post 状态中可能为 null。 指向大小元素的有效缓冲区 `s` 。  
   
 - `_Outref_result_bytebuffer_maybenull_(s)`  
   
-     结果必须在 post 状态中有效，但在 post 状态中可能为 null。 指向大小 `s` 字节的有效缓冲区。  
+     结果必须在 post 状态中有效，但在 post 状态中可能为 null。 指向大小为字节的有效缓冲区 `s` 。  
   
 - `_Outref_result_buffer_to_maybenull_(s, c)`  
   
-     结果必须在 post 状态中有效，但在 post 状态中可能为 null。 指向第一个 `c` 有效的 `s` 元素的缓冲区。  
+     结果必须在 post 状态中有效，但在 post 状态中可能为 null。 指向元素的缓冲区 `s` ，其中第一个 `c` 是有效的。  
   
 - `_Outref_result_bytebuffer_to_maybenull_(s,c)`  
   
-     结果必须在 post 状态中有效，但在 post 状态下可能为 null。 指向第一个 `c` 有效 `s` 字节的缓冲区。  
+     结果必须在 post 状态中有效，但在 post 状态下可能为 null。 指向 `s` 第一个有效字节的缓冲区 `c` 。  
   
 - `_Outref_result_buffer_all_maybenull_(s)`  
   
-     结果必须在 post 状态中有效，但在 post 状态下可能为 null。 指向有效元素 `s` 大小的有效缓冲区。  
+     结果必须在 post 状态中有效，但在 post 状态下可能为 null。 指向有效元素大小的有效缓冲区 `s` 。  
   
 - `_Outref_result_bytebuffer_all_maybenull_(s)`  
   
-     结果必须在 post 状态中有效，但在 post 状态下可能为 null。 指向有效元素 `s` 字节的有效缓冲区。  
+     结果必须在 post 状态中有效，但在 post 状态下可能为 null。 指向 `s` 有效元素字节的有效缓冲区。  
   
 ## <a name="return-values"></a>返回值  
- 函数的返回值类似于 `_Out_` 参数，但它处于不同的取消引用级别，无需考虑指向结果的指针的概念。  对于以下批注，返回值为批注对象：标量、指向结构的指针或指向缓冲区的指针。 这些批注与对应的 `_Out_` 批注具有相同的语义。  
+ 函数的返回值与 `_Out_` 参数类似，但在不同的取消引用级别，无需考虑指向结果的指针的概念。  对于以下批注，返回值为批注对象：标量、指向结构的指针或指向缓冲区的指针。 这些批注具有与对应批注相同的语义 `_Out_` 。  
   
-|||  
-|-|-|  
-|`_Ret_z_`<br /><br /> `_Ret_writes_(s)`<br /><br /> `_Ret_writes_bytes_(s)`<br /><br /> `_Ret_writes_z_(s)`<br /><br /> `_Ret_writes_to_(s,c)`<br /><br /> `_Ret_writes_maybenull_(s)`<br /><br /> `_Ret_writes_to_maybenull_(s)`<br /><br /> `_Ret_writes_maybenull_z_(s)`|`_Ret_maybenull_`<br /><br /> `_Ret_maybenull_z_`<br /><br /> `_Ret_null_`<br /><br /> `_Ret_notnull_`<br /><br /> `_Ret_writes_bytes_to_`<br /><br /> `_Ret_writes_bytes_maybenull_`<br /><br /> `_Ret_writes_bytes_to_maybenull_`|  
+`_Ret_z_`, `_Ret_writes_(s)`, `_Ret_writes_bytes_(s)`, `_Ret_writes_z_(s)`, `_Ret_writes_to_(s,c)`, `_Ret_writes_maybenull_(s)`, `_Ret_writes_to_maybenull_(s)`, `_Ret_writes_maybenull_z_(s)`|`_Ret_maybenull_`, `_Ret_maybenull_z_`, `_Ret_null_`, `_Ret_notnull_`, `_Ret_writes_bytes_to_`, `_Ret_writes_bytes_maybenull_`, `_Ret_writes_bytes_to_maybenull_`
   
 ## <a name="other-common-annotations"></a>其他常见批注  
  **批注和说明**  
@@ -471,24 +467,24 @@ ms.locfileid: "77271613"
   
      `_Field_range_(low, hi)`  
   
-     参数、字段或结果的范围（包含）从 `low` 到 `hi`。  等效于应用于批注对象的 `_Satisfies_(_Curr_ >= low && _Curr_ <= hi)` 以及适当的前置状态或后状态条件。  
+     参数、字段或结果的范围（包含）从 `low` 到到 `hi` 。  等效于 `_Satisfies_(_Curr_ >= low && _Curr_ <= hi)` 应用于批注对象的，以及相应的前置状态或后状态条件。  
   
     > [!IMPORTANT]
-    > 尽管名称包含 "in" 和 "out"，但 `_In_` 和 `_Out_` 的**语义不适用于**这些注释。  
+    > 尽管名称包含 "in" 和 "out"，但和的语义 `_In_` 并 `_Out_` 不适**not**用于这些注释。  
   
 - `_Pre_equal_to_(expr)`  
   
      `_Post_equal_to_(expr)`  
   
-     批注的值完全 `expr`。  等效于应用于批注对象的 `_Satisfies_(_Curr_ == expr)` 以及适当的前置状态或后状态条件。  
+     带批注的值是准确的 `expr` 。  等效于 `_Satisfies_(_Curr_ == expr)` 应用于批注对象的，以及相应的前置状态或后状态条件。  
   
 - `_Struct_size_bytes_(size)`  
   
-     适用于结构或类声明。  指示该类型的有效对象可能大于声明的类型，以及 `size`给定的字节数。  例如：  
+     适用于结构或类声明。  指示该类型的有效对象可能大于声明的类型，以及给定的字节数 `size` 。  例如：  
   
      `typedef _Struct_size_bytes_(nSize) struct MyStruct {    size_t nSize;    ... };`  
   
-     然后，将 `MyStruct *` 类型的参数 `pM` 的缓冲区大小（以字节为单位）为：  
+     然后，将类型为的参数的缓冲区大小（以字节为单位）为 `pM` `MyStruct *` ：  
   
      `min(pM->nSize, sizeof(MyStruct))`  
   
@@ -496,9 +492,9 @@ ms.locfileid: "77271613"
  [代码分析团队博客](https://blogs.msdn.com/b/codeanalysis/)  
   
 ## <a name="see-also"></a>另请参阅  
- [使用 SAL 注释减少 C/C++代码缺陷](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)   
+ [使用 SAL 注释减少 C/c + + 代码缺陷](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)   
  [了解 SAL](../code-quality/understanding-sal.md)   
- [批注函数行为](../code-quality/annotating-function-behavior.md)   
+ [注释函数行为](../code-quality/annotating-function-behavior.md)   
  [批注结构和类](../code-quality/annotating-structs-and-classes.md)   
  [批注锁定行为](../code-quality/annotating-locking-behavior.md)   
  [指定何时以及在何处应用批注](../code-quality/specifying-when-and-where-an-annotation-applies.md)   

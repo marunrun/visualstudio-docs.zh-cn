@@ -15,27 +15,27 @@ caps.latest.revision: 20
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 33e7ea6aaefcaf5b6cbf0bf8c52ade0b9e68a549
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 04a982c993ffbb04a3e7600dfb93a00e80727b84
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661859"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85542163"
 ---
-# <a name="ca1034-nested-types-should-not-be-visible"></a>CA1034：嵌套类型不应是可见的
+# <a name="ca1034-nested-types-should-not-be-visible"></a>CA1034:嵌套类型不应是可见的
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|值|
 |-|-|
 |TypeName|NestedTypesShouldNotBeVisible|
 |CheckId|CA1034|
-|类别|Microsoft. Design|
+|Category|Microsoft. Design|
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
  外部可见类型包含外部可见的类型声明。 嵌套的枚举和受保护的类型不受此规则的保护。
 
-## <a name="rule-description"></a>规则说明
+## <a name="rule-description"></a>规则描述
  嵌套类型是在另一个类型的范围内声明的类型。 嵌套类型适用于封装包含类型的私有实现详细信息。 如果用于此用途，则嵌套类型不应是外部可见的。
 
  不要使用外部可见的嵌套类型进行逻辑分组或避免名称冲突;请改用命名空间。

@@ -15,27 +15,27 @@ caps.latest.revision: 20
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: bec8f129c094f94ba3eb4021092c402e8263812b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a722eb95561a1a81b0d17b8876df8b4bac048b5c
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72660259"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544256"
 ---
-# <a name="ca2123-override-link-demands-should-be-identical-to-base"></a>CA2123：重写的链接请求应与基相同
+# <a name="ca2123-override-link-demands-should-be-identical-to-base"></a>CA2123:重写链接请求应与基相同
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|值|
 |-|-|
 |TypeName|OverrideLinkDemandsShouldBeIdenticalToBase|
 |CheckId|CA2123|
-|类别|Microsoft.Security|
+|Category|Microsoft.Security|
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
  公共类型中的公共或受保护方法会重写方法或实现接口，但不会与接口或虚方法具有相同的[链接要求](https://msdn.microsoft.com/library/a33fd5f9-2de9-4653-a4f0-d9df25082c4d)。
 
-## <a name="rule-description"></a>规则说明
+## <a name="rule-description"></a>规则描述
  该规则将一个方法与其基方法（该基方法为另一个类型中的接口或虚方法）相匹配，然后比较两者的链接请求。 如果方法或基方法具有链接要求，而另一种不具有链接要求，则会报告冲突。
 
  如果违反此规则，则恶意调用方只需调用不安全的方法，即可跳过该链接要求。
@@ -51,5 +51,5 @@ ms.locfileid: "72660259"
 
  [!code-csharp[FxCop.Security.OverridesAndSecurity#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Security.OverridesAndSecurity/cs/FxCop.Security.OverridesAndSecurity.cs#1)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [安全编码准则](https://msdn.microsoft.com/library/4f882d94-262b-4494-b0a6-ba9ba1f5f177)[链接要求](https://msdn.microsoft.com/library/a33fd5f9-2de9-4653-a4f0-d9df25082c4d)

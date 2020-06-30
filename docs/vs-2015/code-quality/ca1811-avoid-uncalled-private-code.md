@@ -15,21 +15,21 @@ caps.latest.revision: 22
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: ccc439e0d84d1fced4ba0359385a6964356d5df6
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 223b2ff9aa25ddd94a3c62eb9e641127a1cace4e
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72668451"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543814"
 ---
-# <a name="ca1811-avoid-uncalled-private-code"></a>CA1811：避免使用未调用的私有代码
+# <a name="ca1811-avoid-uncalled-private-code"></a>CA1811:避免使用未调用的私有代码
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|值|
 |-|-|
 |TypeName|AvoidUncalledPrivateCode|
 |CheckId|CA1811|
-|类别|Microsoft. 性能|
+|Category|Microsoft. 性能|
 |是否重大更改|不间断|
 
 ## <a name="cause"></a>原因
@@ -41,11 +41,11 @@ ms.locfileid: "72668451"
 
 - 序列化构造函数。
 
-- 用 <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute?displayProperty=fullName> 或 <xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute?displayProperty=fullName> 标记的方法。
+- 用或标记的方法 <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute?displayProperty=fullName> <xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute?displayProperty=fullName> 。
 
 - 要重写的成员。
 
-## <a name="rule-description"></a>规则说明
+## <a name="rule-description"></a>规则描述
  如果出现不是由规则逻辑标识的入口点，则此规则可报告误报。 此外，编译器可能会将 noncallable 代码发送到程序集。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
@@ -55,8 +55,8 @@ ms.locfileid: "72668451"
  可以安全地禁止显示此规则发出的警告。
 
 ## <a name="related-rules"></a>相关规则
- [CA1812：避免未实例化的内部类](../code-quality/ca1812-avoid-uninstantiated-internal-classes.md)
+ [CA1812:避免未实例化的内部类](../code-quality/ca1812-avoid-uninstantiated-internal-classes.md)
 
- [CA1801：检查未使用的参数](../code-quality/ca1801-review-unused-parameters.md)
+ [CA1801:检查未使用的参数](../code-quality/ca1801-review-unused-parameters.md)
 
- [CA1804：移除未使用的局部变量](../code-quality/ca1804-remove-unused-locals.md)
+ [CA1804:移除未使用的局部变量](../code-quality/ca1804-remove-unused-locals.md)

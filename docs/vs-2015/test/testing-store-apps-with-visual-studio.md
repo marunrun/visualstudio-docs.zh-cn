@@ -8,12 +8,12 @@ ms.assetid: cf4000b4-91b5-4b3f-a00d-cc8d192467c2
 caps.latest.revision: 22
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 95f321d3f025ffc96477e288d6657f991bd90b30
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 6deffcf9ab5c2d13c3f97097a4c70eaef7803ccd
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72672096"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543788"
 ---
 # <a name="testing-store-apps-with-visual-studio"></a>使用 Visual Studio 测试应用商店应用
 
@@ -23,7 +23,7 @@ Visual Studio 包含可以帮助你确保应用商店应用具有高质量的测
 
 ## <a name="in-this-section"></a>本节内容
 
-|||
+|Title|说明|
 |-|-|
 |[创建并运行单元测试](../test/create-and-run-unit-tests-for-a-store-app-in-visual-studio.md)|从 Visual Studio 中在应用商店应用上创建并运行单元测试。|
 |[使用静态代码分析来分析代码质量](../test/analyze-the-code-quality-of-store-apps-using-visual-studio-static-code-analysis.md)|使用 Visual Studio 代码分析工具查找调试和测试中难以检测到的问题。|

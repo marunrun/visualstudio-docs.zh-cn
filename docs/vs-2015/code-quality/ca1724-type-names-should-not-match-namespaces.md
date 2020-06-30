@@ -15,31 +15,31 @@ caps.latest.revision: 19
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 53c99e34bf253b0962d054685ce637c3849a2857
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: aa0b73b6608f0dfd5daa4b770b7d780e64704c99
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72671600"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544425"
 ---
-# <a name="ca1724-type-names-should-not-match-namespaces"></a>CA1724：类型名不应与命名空间冲突
+# <a name="ca1724-type-names-should-not-match-namespaces"></a>CA1724:类型名不应与命名空间冲突
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|值|
 |-|-|
 |TypeName|TypeNamesShouldNotMatchNamespaces|
 |CheckId|CA1724|
-|类别|Microsoft。命名|
+|Category|Microsoft。命名|
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
- 在不区分大小写的比较中，类型名称与 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 命名空间名称匹配。
+ 类型名称匹配不区分 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 大小写的比较中的命名空间名称。
 
-## <a name="rule-description"></a>规则说明
+## <a name="rule-description"></a>规则描述
  类型名称不应该与 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 类库中定义的命名空间的名称匹配。 与该规则冲突将使库的可用性下降。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
- 选择与 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 类库命名空间的名称不匹配的类型名称。
+ 选择与类库命名空间的名称不匹配的类型名称 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
  对于新开发，不会发生任何已知方案，你必须禁止显示此规则发出的警告。 在您禁止显示该警告之前，请仔细考虑您库的用户可能会如何与匹配名称混淆。 对于装运库，可能必须禁止显示此规则发出的警告。

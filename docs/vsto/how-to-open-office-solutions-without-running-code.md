@@ -1,7 +1,7 @@
 ---
 title: 如何：打开 Office 解决方案但不运行代码
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -18,39 +18,39 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 366416e4f18435bd01391657eb2fc4f65f8a4d62
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: d84515c2c3159b61b96f77555b23eef0df0ae961
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63441771"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543476"
 ---
 # <a name="how-to-open-office-solutions-without-running-code"></a>如何：打开 Office 解决方案但不运行代码
-  创建具有托管的代码扩展的 Microsoft Office 解决方案运行，即使最终用户 Office 应用程序中的安全设置设为高。 这是因为.NET 程序集代码安全性由 Microsoft.NET Framework 中，不是由 Microsoft Office。
+  即使最终用户的 Office 应用程序中的安全设置设置为 "高"，使用托管代码扩展创建的 Microsoft Office 解决方案也会运行。 这是因为，.NET 程序集代码安全由 Microsoft .NET 框架管理，而不是 Microsoft Office。
 
- 但是，有些的时候您可能想要打开的文档，而无需运行代码。 例如，当文档打开时运行的代码可能会更改此内容，但你想要更新文档之前，会查找代码更改它的方式。 或者你可能想要在其中的某些信息将文档发送到人，并不希望运行并可能更改此内容的代码。
+ 但是，有时您可能希望在不运行代码的情况下打开文档。 例如，在打开文档时运行的代码可能会改变内容，但你想要在代码更改文档前更新文档的外观。 或者，您可能想要将文档中的某些信息发送给他人，并且您不希望代码运行，可能会改变内容。
 
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]
 
- 有几种方法来打开文档或工作簿包含托管的代码扩展，而无需运行的程序集代码。
+ 有多种方法可以打开包含托管代码扩展的文档或工作簿，无需运行程序集代码。
 
-## <a name="to-bypass-the-assembly-by-using-the-shift-key"></a>若要使用 Shift 键的跳过程序集
+## <a name="to-bypass-the-assembly-by-using-the-shift-key"></a>使用 Shift 键跳过程序集
 
-- 打开的文档和工作簿**文件**时按下菜单**Shift**密钥以防止 Word 和 Excel 打开文档时引发初始化事件。
+- 在按住**Shift**键的同时打开 "**文件**" 菜单中的文档和工作簿，以防止 Word 和 Excel 在文档打开时引发初始化事件。
 
     > [!NOTE]
-    > 如果您打开的文档或从工作簿**Getting Started**任务窗格中，按住**Shift**未跳过代码。 此外，按下 shift 键不会阻止事件被引发后在文档处于打开状态。
+    > 如果从 "**入门**任务窗格打开文档或工作簿，则按住**Shift**不会绕过代码。 而且，按住 SHIFT 不会阻止在打开文档后引发事件。
 
-     此方法很有用，如果你想要打开的文档运行和第一次更改文档的代码无需进行更改。
+     如果要在不运行代码的情况下打开文档并更改文档，则此方法非常有用。
 
-## <a name="to-bypass-an-assembly-by-renaming-or-removing-it"></a>若要重命名或移除它通过绕过程序集
+## <a name="to-bypass-an-assembly-by-renaming-or-removing-it"></a>通过重命名或删除程序集来跳过程序集
 
-- 如果该程序集所在的计算机上具有所需的权限，可以重命名或删除程序集，使文档或工作簿找不到它。 这会导致每次打开 Office 文档时引发错误。
+- 如果对程序集所在的计算机具有必要的权限，则可以重命名或删除程序集，使文档或工作簿无法找到该程序集。 这会导致每次打开 Office 文档时都会引发错误。
 
-     如果该解决方案由多个人员，此方法会运行所有这些解决方案。 如果在代码或引用的服务器中发现有问题，并且你想要停止执行其所有用户，这很有用。
+     如果该解决方案由多个用户使用，则此方法会阻止解决方案运行。 如果在代码或引用的服务器中发现问题并且你想要阻止所有用户执行该问题，则这会很有用。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [保护 Office 解决方案](../vsto/securing-office-solutions.md)
 - [部署 Office 解决方案](../vsto/deploying-an-office-solution.md)
 - [设计和创建 Office 解决方案](../vsto/designing-and-creating-office-solutions.md)
-- [在 Office 解决方案中的应用程序和部署清单](../vsto/application-and-deployment-manifests-in-office-solutions.md)
+- [Office 解决方案中的应用程序和部署清单](../vsto/application-and-deployment-manifests-in-office-solutions.md)
