@@ -1,7 +1,7 @@
 ---
 title: 排查 Office 解决方案中的错误
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: troubleshooting
 f1_keywords:
 - VST.Project.DesignerDisabled
 - VST.Designer.CannotActivate
@@ -20,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 2aa971a79c0b0f5592c0da5c52a457c585bb0f15
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 8d73dadd10342d3616291fb93efbb447bd7ecaee
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985574"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85537314"
 ---
 # <a name="troubleshoot-errors-in-office-solutions"></a>排查 Office 解决方案中的错误
   在 Visual Studio 中开发 Office 解决方案时，如果执行下面的任务，可能会遇到问题：
@@ -40,7 +40,7 @@ ms.locfileid: "72985574"
 
 - [调试项目](#debugging)
 
-## <a name="creating"></a>创建、升级和打开项目
+## <a name="create-upgrade-and-open-projects"></a><a name="creating"></a>创建、升级和打开项目
  创建或打开 Office 项目时，可能会遇到以下错误。
 
 ### <a name="the-project-cannot-be-created"></a>无法创建该项目
@@ -84,7 +84,7 @@ ms.locfileid: "72985574"
 
  完成项目升级后，如果它未被任何其他 Office 解决方案使用，你可以将 Visual Studio 2005 Tools for Office Second Edition Runtime 从开发计算机上卸载。
 
-## <a name="designers"></a>使用设计器
+## <a name="use-the-designers"></a><a name="designers"></a>使用设计器
  在文档级项目中使用文档、工作簿或工作表设计器时，可能会遇到以下错误。
 
 ### <a name="designer-failed-to-load-correctly"></a>设计器未能正确加载
@@ -105,7 +105,7 @@ ms.locfileid: "72985574"
 ### <a name="insert-clip-art-command-does-nothing-in-the-visual-studio-designer"></a>在 Visual Studio 设计器中插入剪贴画命令不执行任何操作
  当在 Visual Studio 设计器中打开 Excel 或 Word 时，单击功能区中的 "**图例**" 选项卡上的 "**剪贴画**" 按钮不会打开 "**剪贴画**" 任务窗格。 若要添加 "剪贴画"，必须在 Visual Studio 外部打开主项目文件夹（不是*\bin*文件夹中的副本）的工作簿或文档的副本，添加剪贴画，然后保存该工作簿或文档。
 
-## <a name="code"></a>编写代码
+## <a name="write-code"></a><a name="code"></a>编写代码
  在 Office 项目中编写代码时，可能会遇到以下错误。
 
 ### <a name="some-events-of-office-objects-are-not-accessible-when-using-c"></a>使用 C 时，无法访问 Office 对象的某些事件\#
@@ -115,7 +115,7 @@ ms.locfileid: "72985574"
 
  此错误意味着你正尝试访问的事件与对象的其他属性或方法同名。 若要访问该事件，必须将该对象强制转换为其*事件接口*。
 
- 具有事件的 Office PIA 类型实现两种接口：核心接口和事件接口；前者包含所有属性和方法，后者则包含由对象公开的事件。 这些事件接口使用命名约定*objectname*事件*n*_Event，例如 <xref:Microsoft.Office.Interop.Excel.AppEvents_Event> 和 <xref:Microsoft.Office.Interop.Word.ApplicationEvents2_Event>。 如果无法访问应在某一对象中找到的事件，请将该对象强制转换为其事件接口。
+ 具有事件的 Office PIA 类型实现两种接口：核心接口和事件接口；前者包含所有属性和方法，后者则包含由对象公开的事件。 这些事件接口使用命名约定*objectname*事件*n*_Event，例如 <xref:Microsoft.Office.Interop.Excel.AppEvents_Event> 和 <xref:Microsoft.Office.Interop.Word.ApplicationEvents2_Event> 。 如果无法访问应在某一对象中找到的事件，请将该对象强制转换为其事件接口。
 
  例如，<xref:Microsoft.Office.Interop.Excel.Application> 对象具有一个<xref:Microsoft.Office.Interop.Excel.AppEvents_Event.NewWorkbook> 事件和一个 <xref:Microsoft.Office.Interop.Excel._Application.NewWorkbook%2A> 属性。 若要处理 <xref:Microsoft.Office.Interop.Excel.AppEvents_Event.NewWorkbook> 事件，请将 <xref:Microsoft.Office.Interop.Excel.Application> 强制转换为 <xref:Microsoft.Office.Interop.Excel.AppEvents_Event> 接口。 下面的代码示例演示了如何在 Excel 的文档级项目中进行此操作。
 
@@ -123,8 +123,8 @@ ms.locfileid: "72985574"
 
  有关 Office Pia 中的事件接口的详细信息，请参阅[office 主互操作程序集中的类和接口概述](/previous-versions/office/office-12//ms247299(v=office.12))。
 
-### <a name="cannot-reference-office-pia-classes-in-projects-that-target-the-includenet_v40_shortsharepointincludesnet-v40-short-mdmd-or-the-includenet_v45vstoincludesnet-v45-mdmd"></a>无法在以 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] 为目标的项目中引用 Office PIA 类
- 在面向 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] 的项目中，默认情况下 Office PIA 中定义的类的代码不进行编译。 Pia 中的类使用命名约定*objectname*类，如 <xref:Microsoft.Office.Interop.Word.DocumentClass> 和 <xref:Microsoft.Office.Interop.Excel.WorkbookClass>。 例如，Word VSTO 外接程序项目中的以下代码将不进行编译。
+### <a name="cannot-reference-office-pia-classes-in-projects-that-target-the-net_v40_short-or-the-net_v45"></a>无法引用面向或的项目中的 Office PIA 类 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)][!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)]
+ 在面向 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] 的项目中，默认情况下 Office PIA 中定义的类的代码不进行编译。 Pia 中的类使用命名约定*objectname*类，如 <xref:Microsoft.Office.Interop.Word.DocumentClass> 和 <xref:Microsoft.Office.Interop.Excel.WorkbookClass> 。 例如，Word VSTO 外接程序项目中的以下代码将不进行编译。
 
 ```vb
 Dim document As Word.DocumentClass = Globals.ThisAddIn.Application.ActiveDocument
@@ -138,7 +138,7 @@ Word.DocumentClass document = (Word.DocumentClass) Globals.ThisAddIn.Application
 
 - Visual Basic：当使用无 PIA 模式链接的程序集时，不允许对类 "DocumentClass" 的引用。
 
-- 视觉C#对象： "互操作类型" DocumentClass "不能嵌入。 请改用适用的接口。”
+- Visual c #：无法嵌入 "互操作类型" Microsoft.Office.Interop.Word.DocumentClass "。 请改用适用的接口。”
 
   若要解决此错误，请修改代码以改为引用相应的接口。 例如，应引用 <xref:Microsoft.Office.Interop.Word.Document> 接口的实例，而不是引用 <xref:Microsoft.Office.Interop.Word.DocumentClass> 对象。
 
@@ -153,12 +153,12 @@ Word.Document document = Globals.ThisAddIn.Application.ActiveDocument;
  默认情况下，面向 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] 的项目会自动嵌入 Office PIA 中的所有互操作类型。 发生此编译错误的原因是嵌入互操作类型功能仅适用于接口，而不适用于类。 有关 Office Pia 中的接口和类的详细信息，请参阅[office 主互操作程序集中的类和接口概述](/previous-versions/office/office-12/ms247299(v=office.12))。 有关 Office 项目中嵌入的互操作类型功能的详细信息，请参阅[设计和创建 office 解决方案](../vsto/designing-and-creating-office-solutions.md)。
 
 ### <a name="references-to-office-classes-are-not-recognized"></a>无法识别对 Office 类的引用
- 某些类名（例如应用程序）位于多个命名空间中，例如 <xref:Microsoft.Office.Interop.Word> 和 <xref:System.Windows.Forms>。 出于此原因，项目模板顶部的**using**语句/**导入**包含简写的限定常数，例如：
+ 某些类名（例如应用程序）位于多个命名空间中，例如 <xref:Microsoft.Office.Interop.Word> 和 <xref:System.Windows.Forms> 。 出于此原因，项目模板顶部**的 import** / **using**语句包含简写的限定常数，例如：
 
  [!code-csharp[Trin_VstcoreTroubleshootingWord#2](../vsto/codesnippet/CSharp/Trin_VstcoreTroubleshootingWordCS/ThisDocument.cs#2)]
  [!code-vb[Trin_VstcoreTroubleshootingWord#2](../vsto/codesnippet/VisualBasic/Trin_VstcoreTroubleshootingWordVB/ThisDocument.vb#2)]
 
- 此 import/**using** **语句的用法**要求使用 Word 或 Excel 限定符来区分 Office 类的引用，例如：
+ 此**Imports** / **使用 import using**语句的情况要求使用 Word 或 Excel 限定符区分对 Office 类的引用，例如：
 
  [!code-csharp[Trin_VstcoreTroubleshootingWord#3](../vsto/codesnippet/CSharp/Trin_VstcoreTroubleshootingWordCS/ThisDocument.cs#3)]
  [!code-vb[Trin_VstcoreTroubleshootingWord#3](../vsto/codesnippet/VisualBasic/Trin_VstcoreTroubleshootingWordVB/ThisDocument.vb#3)]
@@ -170,7 +170,7 @@ Word.Document document = Globals.ThisAddIn.Application.ActiveDocument;
 
  即使您已经导入了 Word 或 Excel 命名空间并有权访问其中的所有类，也必须使用 Word 或 Excel 完全限定所有类型，以消除命名空间的歧义。
 
-## <a name="building"></a>生成项目
+## <a name="build-projects"></a><a name="building"></a>生成项目
  生成 Office 项目时，可能会遇到以下错误。
 
 ### <a name="cannot-build-a-document-level-project-that-is-based-on-a-document-with-restricted-permissions"></a>无法生成基于具有受限权限的文档的文档级项目
@@ -183,7 +183,7 @@ Word.Document document = Globals.ThisAddIn.Application.ActiveDocument;
 ### <a name="compiler-errors-occur-after-a-namedrange-control-is-deleted"></a>删除 NamedRange 控件后发生编译器错误
  如果从设计器中的非活动工作表的工作表中删除 <xref:Microsoft.Office.Tools.Excel.NamedRange> 控件，则可能不会从项目中移除自动生成的代码，并可能发生编译器错误。 为了确保删除这些代码，应在删除 <xref:Microsoft.Office.Tools.Excel.NamedRange> 控件前总是选中包含该控件的工作表，使其成为活动工作表。 如果在删除该控件时没有删除自动生成的代码，可激活该工作表并进行更改以将该工作表标记为已修改，从而令设计器删除这些代码。 重新生成项目时，将删除这些代码。
 
-## <a name="debugging"></a>调试项目
+## <a name="debug-projects"></a><a name="debugging"></a>调试项目
  调试 Office 项目时，可能会遇到以下错误。
 
 ### <a name="prompt-to-uninstall-appears-when-you-publish-and-install-a-solution-on-the-development-computer"></a>当您在开发计算机上发布和安装解决方案时，将显示 "提示进行卸载"
@@ -197,7 +197,7 @@ Word.Document document = Globals.ThisAddIn.Application.ActiveDocument;
  如果在 UNC 网络位置为 Excel 或 Word 创建文档级项目，则必须将文档的位置添加到 Excel 或 Word 中的受信任位置列表中。 否则，尝试在 Visual Studio 中运行或调试该项目时，将不会加载自定义项。 有关可信位置的详细信息，请参阅[向文档授予信任](../vsto/granting-trust-to-documents.md)。
 
 ### <a name="threads-are-not-stopped-correctly-after-debugging"></a>调试后，线程无法正确停止
- Visual Studio 中的 Office 项目遵循能够使调试器正确关闭程序的线程命名约定。 如果在解决方案中创建线程，则应使用前缀 VSTA_ 为每个线程命名，以确保在停止调试时会正确处理这些线程。 例如，你可以将等待网络事件的线程的 `Name` 属性设置为**VSTA_NetworkListener**。
+ Visual Studio 中的 Office 项目遵循能够使调试器正确关闭程序的线程命名约定。 如果在解决方案中创建线程，则应使用前缀 VSTA_ 为每个线程命名，以确保在停止调试时会正确处理这些线程。 例如，可以设置 `Name` 等待网络事件**VSTA_NetworkListener**的线程的属性。
 
 ### <a name="cannot-run-or-debug-any-office-solution-on-the-development-computer"></a>无法在开发计算机上运行或调试任何 Office 解决方案
  如果无法在开发计算机上运行或开发 Office 项目，则可能会出现下面的错误消息。
@@ -213,7 +213,7 @@ Word.Document document = Globals.ThisAddIn.Application.ActiveDocument;
 
  无论是在对话框中单击 **"是" 还是 "** **否**"，Visual Studio 都将终止 Excel 或 Word 进程并停止调试器。 若要停止调试项目而不显示此对话框，请直接退出 Excel 或 Word，而不是在 Visual Studio 中停止调试器。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [排查 Office 解决方案问题](../vsto/troubleshooting-office-solutions.md)
 - [Office 解决方案安全性疑难解答](../vsto/troubleshooting-office-solution-security.md)
 - [Office 解决方案部署疑难解答](../vsto/troubleshooting-office-solution-deployment.md)

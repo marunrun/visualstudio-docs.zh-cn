@@ -1,22 +1,22 @@
 ---
 title: 使用 Modelbus 集成模型
 ms.date: 11/04/2016
-ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+ms.topic: how-to
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9b5a0ad18c7b1472e8c08ccc2902cade7714f2b9
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: a222d5f69d19d2891b4aa20239c1874f55a056e0
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985270"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85536937"
 ---
 # <a name="integrate-models-by-using-visual-studio-modelbus"></a>使用 Visual Studio Modelbus 集成模型
 
-Visual Studio ModelBus 提供了一种方法，用于在模型和其他工具之间创建链接到模型。 例如，可以链接域特定语言（DSL）模型和 UML 模型。 可以创建一组集成 DSL。
+Visual Studio ModelBus 提供了一种方法，用于在模型和其他工具之间创建链接到模型。 例如，你可以链接域特定语言 (DSL) 模型和 UML 模型。 可以创建一组集成 DSL。
 
 ModelBus 允许你创建对模型或模型中特定元素的唯一引用。 此引用可存储在该模型外部，例如另一个模型的元素中。 在随后的场合中，当工具想要获取对元素的访问权限时，模型总线基础结构将加载相应的模型并返回元素。 如果需要，可以向用户显示该模型。 如果不能在其以前的位置中访问该文件，则 ModelBus 将要求用户查找该文件。 如果用户找到该文件，则 ModelBus 将修复所有对该文件的引用。
 
@@ -31,14 +31,14 @@ ModelBus 允许你创建对模型或模型中特定元素的唯一引用。 此�
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 
-## <a name="provide"></a>提供对 DSL 的访问
+## <a name="providing-access-to-a-dsl"></a><a name="provide"></a>提供对 DSL 的访问
  在可以创建对模型或其元素的 ModelBus 引用之前，必须定义用于 DSL 的 ModelBusAdapter。 执行此操作的最简单方法是使用 Visual Studio 模型总线扩展，该扩展将命令添加到 DSL 设计器。
 
-### <a name="expose"></a>向模型总线公开 DSL 定义
+### <a name="to-expose-a-dsl-definition-to-model-bus"></a><a name="expose"></a>向模型总线公开 DSL 定义
 
 1. 打开 DSL 定义文件。 右键单击设计图面，然后单击 "**启用 Modelbus**"。
 
-2. 在对话框中，选择 **"我想要向 ModelBus 公开此 DSL"** 。 如果希望此 DSL 同时公开其模型并使用对其他 DSL 的引用，则可选择这两个选项。
+2. 在对话框中，选择 **"我想要向 ModelBus 公开此 DSL"**。 如果希望此 DSL 同时公开其模型并使用对其他 DSL 的引用，则可选择这两个选项。
 
 3. 单击“确定”。 新项目“ModelBusAdapter”随即添加到 DSL 解决方案中。
 
@@ -74,7 +74,7 @@ ModelBus 允许你创建对模型或模型中特定元素的唯一引用。 此�
 
 3. 对于想要为其创建模型总线引用的每个类：
 
-    单击 "类" 节点，然后在 "属性窗口中，确保**序列化 ID**设置为 `true`。
+    单击 "类" 节点，然后在 "属性窗口中，确保将"**序列化 ID** "设置为 `true` 。
 
    或者，如果要使用元素名称来标识元素而不是 Guid，则可以重写生成的适配器的各个部分。 在适配器类中重写以下方法：
 
@@ -82,7 +82,7 @@ ModelBus 允许你创建对模型或模型中特定元素的唯一引用。 此�
 
 - 重写 `ResolveElementReference` 以从模型总线引用中查找正确元素。
 
-## <a name="editRef"></a>从另一个 DSL 访问 DSL
+## <a name="accessing-a-dsl-from-another-dsl"></a><a name="editRef"></a>从另一个 DSL 访问 DSL
 
 你可以将模型总线引用存储在 DSL 的域属性中，也可以编写使用它们的自定义代码。 还可以允许用户通过选取模型文件和其中的元素来创建模型总线引用。
 
@@ -94,23 +94,23 @@ ModelBus 允许你创建对模型或模型中特定元素的唯一引用。 此�
 
 2. 在对话框中，选择 "**我想要启用此模型以使用模型总线引用**"。
 
-3. 在使用 DSL 的 DSL 项目中，将以下程序集添加到项目引用。 你将在公开的 DSL 的 ModelBusAdapter\bin \\ * 目录中找到这些程序集（.dll 文件）。
+3. 在使用 DSL 的 DSL 项目中，将以下程序集添加到项目引用。 你将在公开的 DSL 的 ModelBusAdapter\bin * 目录中找到这些程序集（.dll 文件） \\ 。
 
-    - 公开的 DSL 程序集，例如**FamilyTree**
+    - 公开的 DSL 程序集，例如**Fabrikam.FamilyTree.Dsl.dll**
 
-    - 公开的模型总线适配器程序集，例如**FamilyTree. ModelBusAdapter**
+    - 公开的模型总线适配器程序集，例如**Fabrikam.FamilyTree.ModelBusAdapter.dll**
 
 4. 将以下 .NET 程序集添加到使用 DSL 项目的项目引用。
 
-    1. **VisualStudio. 11.0. 11.0。**
+    1. **Microsoft.VisualStudio.Modeling.Sdk.Integration.11.0.dll**
 
-    2. **VisualStudio..... e。**
+    2. **Microsoft.VisualStudio.Modeling.Sdk.Integration.Shell.11.0.dll**
 
 ### <a name="to-store-a-model-bus-reference-in-a-domain-property"></a>将模型总线引用存储在域属性中
 
 1. 在使用 DSL 的 DSL 定义中，将域属性添加到域类并设置其名称。
 
-2. 在 "属性窗口" 中，选择 "域" 属性，将 "**类型**" 设置为 `ModelBusReference`。
+2. 在 "属性窗口" 中，选择 "域" 属性，将 "**类型**" 设置为 `ModelBusReference` 。
 
    在此阶段，程序代码可设置属性值，但在“属性”窗口中该值为只读。
 
@@ -199,7 +199,7 @@ using System.Linq;
 你可以从 AdapterManager 中获取一个适配器，该适配器提供了对模型中各个元素的访问权限。
 
 > [!NOTE]
-> 你必须在使用完适配器后将其公开。 实现此目的的最简便方式是使用 `using` 语句。 下面的示例阐释了这一点。
+> 你必须在使用完适配器后将其公开。 实现此目的的最简便方式是使用 `using` 语句。 下面的示例对此进行了演示。
 
 ```csharp
 // The file path of a model instance of the FamilyTree DSL:
@@ -386,9 +386,9 @@ ModelBusReference elementReferenceRestored =
 
  反序列化 MBR 分为两个阶段：
 
-- `ModelBusReferencePropertySerializer` 是处理 MBR 标头的标准序列化程序。 它使用标准 DSL `SerializationContext` 属性包，该属性包使用键 `ReferenceContext` 存储在 `ModelBusReferencePropertySerializer.ModelBusLoadContextKey` 中。 具体而言，`SerializationContext` 应包含 `ModelBus` 的实例。
+- `ModelBusReferencePropertySerializer`是处理 MBR 标头的标准序列化程序。 它使用标准 DSL `SerializationContext` 属性包，该属性包使用键 `ReferenceContext` 存储在 `ModelBusReferencePropertySerializer.ModelBusLoadContextKey` 中。 具体而言，`SerializationContext` 应包含 `ModelBus` 的实例。
 
-- ModelBus 适配器将处理 MBR 的特定于适配器的部分。 它可使用存储在 MBR 的 ReferenceContext 中的附加信息。 简单的基于文件的适配器使用 `FilePathLoadContextKey` 和 `FilePathSaveContextKey` 的密钥来保存根文件路径。
+- ModelBus 适配器将处理 MBR 的特定于适配器的部分。 它可使用存储在 MBR 的 ReferenceContext 中的附加信息。 简单的基于文件的适配器使用关键字和来保存根文件 `FilePathLoadContextKey` 路径 `FilePathSaveContextKey` 。
 
      仅当使用模型文件中的适配器引用时才对其进行反序列化。
 
@@ -480,9 +480,9 @@ private const string INVALID_REF_FORMAT =
 
 ModelBus 扩展将在 DSL 解决方案中进行以下更改。
 
-右键单击 DSL 定义关系图时，单击 "**启用 Modelbus**"，然后选择 "**启用此 DSL 以使用 Modelbus"** ：
+右键单击 DSL 定义关系图时，单击 "**启用 Modelbus**"，然后选择 "**启用此 DSL 以使用 Modelbus"**：
 
-- 在 DSL 项目中，将一个引用添加到了**VisualStudio**中。
+- 在 DSL 项目中，将引用添加到**Microsoft.VisualStudio.Modeling.Sdk.Integration.11.0.dll**
 
 - 在 DSL 定义中，外部类型引用将添加到：`Microsoft.VisualStudio.Modeling.Integration.ModelBusReference`。
 
@@ -510,11 +510,11 @@ ModelBus 扩展将在 DSL 解决方案中进行以下更改。
 
 - 新项目 `ModelBusAdapter` 已添加到解决方案。
 
-- 对 `ModelBusAdapter` 的引用已添加到 `DslPackage` 项目。 `ModelBusAdapter` 具有对 `Dsl` 项目的引用。
+- 对 `ModelBusAdapter` 的引用已添加到 `DslPackage` 项目。 `ModelBusAdapter`具有对项目的引用 `Dsl` 。
 
-- 在**DslPackage\source.extention.tt**中，`|ModelBusAdapter|` 添加为 MEF 组件。
+- 在**DslPackage\source.extention.tt**中， `|ModelBusAdapter|` 添加为 MEF 组件。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [如何：在程序代码中从文件打开模型](../modeling/how-to-open-a-model-from-file-in-program-code.md)
 - [如何：添加拖放处理程序](../modeling/how-to-add-a-drag-and-drop-handler.md)

@@ -1,5 +1,5 @@
 ---
-title: 添加命令行开关 |微软文档
+title: 添加命令行开关 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,49 +13,48 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3f2df3a704c34d97c9d5acfa72249fe492b7f812
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: c692787a63a7ab06fb3f0e0e94e2839190f58c9d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80740163"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85536274"
 ---
-# <a name="add-command-line-switches"></a>添加命令行交换机
-您可以在执行*devenv.exe*时添加应用于 VSPackage 的命令行开关。 用于<xref:Microsoft.VisualStudio.Shell.ProvideAppCommandLineAttribute>声明交换机的名称及其属性。 在此示例中，MySwitch 开关被添加到名为**AddCommandSwitchPackage**的 VSPackage 子类，该子类没有参数，并且自动加载 VSPackage。
+# <a name="add-command-line-switches"></a>添加命令行开关
+执行*devenv.exe*时，可以添加适用于 VSPackage 的命令行开关。 使用 <xref:Microsoft.VisualStudio.Shell.ProvideAppCommandLineAttribute> 声明开关的名称及其属性。 在此示例中，为名为**AddCommandSwitchPackage**的 VSPackage 的子类添加了 MySwitch 开关，其中不包含参数，并且 VSPackage 会自动加载。
 
 ```csharp
 [ProvideAppCommandLine("MySwitch", typeof(AddCommandSwitchPackage), Arguments = "0", DemandLoad = 1)]
 ```
 
- 命名参数显示在以下说明中。
+ 以下说明显示了命名参数。
 
-||||
-|-|-|-|-|
-| 参数 | 描述|
-| 自变量 | 交换机的参数数。 可以是"*"，也可以是参数列表。 |
-| 需求负载 | 如果设置为 1，则自动加载 VS 包，否则设置为 0。 |
-| 帮助字符串 | 要用**devenv /？** 显示的字符串的帮助字符串或资源 ID。 |
+|名称|说明|
+|-|-|
+| 参数 | 开关的参数数目。 可以是 "*"，也可以是参数列表。 |
+| DemandLoad | 如果此设置为1，则自动加载 VSPackage，否则设置为0。 |
+| HelpString | 要用**devenv/？** 显示的字符串的帮助字符串或资源 ID。 |
 | 名称 | 开关。 |
-| 包装吉德 | 包的 GUID。 |
+| PackageGuid | 包的 GUID。 |
 
- 参数的第一个值通常是 0 或 1。 特殊值"*"可用于指示命令行的整个其余部分是参数。 这对于用户必须传递调试器命令字符串的调试方案非常有用。
+ 参数的第一个值通常为0或1。 特殊值 "*" 可用于指示命令行的整个余数是参数。 这对于调试用户必须传入调试器命令字符串的方案非常有用。
 
- DemandLoad 值为`true`（1）`false`或 （0）表示应自动加载 VS 包。
+ DemandLoad 值为 `true` （1）或 `false` （0）指示应自动加载 VSPackage。
 
- HelpString 值是显示在**devenv /？** 帮助显示。 此值应以"#nnn"的形式，其中 nnn 是整数。 资源文件中的字符串值应以新的行字符结尾。
+ HelpString 值是在**devenv/？** 中显示的字符串的资源 ID。 帮助显示。 此值的形式应为 "#nnn"，其中 nnn 是整数。 资源文件中的字符串值应以换行符结尾。
 
  Name 值是交换机的名称。
 
- 包吉德值是实现此交换机的包的 GUID。 IDE 使用此 GUID 在命令行交换机适用的注册表中查找 VSPackage。
+ PackageGuid 值是实现此开关的包的 GUID。 IDE 使用此 GUID 在注册表中查找应用命令行开关的 VSPackage。
 
-## <a name="retrieve-command-line-switches"></a>检索命令行交换机
- 加载包后，可以通过完成以下步骤来检索命令行开关。
+## <a name="retrieve-command-line-switches"></a>检索命令行开关
+ 加载包时，可以通过完成以下步骤来检索命令行开关。
 
-1. 在 VSPackage 的<xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.SetSite%2A>实现中，`QueryService`调用<xref:Microsoft.VisualStudio.Shell.Interop.SVsAppCommandLine>以获取<xref:Microsoft.VisualStudio.Shell.Interop.IVsAppCommandLine>接口。
+1. 在 VSPackage 的 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.SetSite%2A> 实现中，调用 `QueryService` <xref:Microsoft.VisualStudio.Shell.Interop.SVsAppCommandLine> 以获取 <xref:Microsoft.VisualStudio.Shell.Interop.IVsAppCommandLine> 接口。
 
-2. 调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsAppCommandLine.GetOption%2A>以检索用户输入的命令行交换机。
+2. 调用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsAppCommandLine.GetOption%2A> 以检索用户输入的命令行开关。
 
-   以下代码演示如何查找用户是否输入了 MySwitch 命令行交换机：
+   下面的代码演示如何确定用户是否输入了 MySwitch 命令行开关：
 
 ```csharp
 IVsAppCommandLine cmdline = (IVsAppCommandLine)GetService(typeof(SVsAppCommandLine));
@@ -66,11 +65,11 @@ string optionValue = "";
 cmdline.GetOption("MySwitch", out isPresent, out optionValue);
 ```
 
- 您有责任在每次加载包时检查命令行交换机。
+ 每次加载包时都需要检查命令行开关。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsAppCommandLine>
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.SetSite%2A>
 - [Devenv 命令行开关](../ide/reference/devenv-command-line-switches.md)
-- [创建PkgDef实用程序](../extensibility/internals/createpkgdef-utility.md)
-- [.Pkgdef 文件](https://devblogs.microsoft.com/visualstudio/whats-a-pkgdef-and-why/)
+- [CreatePkgDef 实用程序](../extensibility/internals/createpkgdef-utility.md)
+- [..Pkgdef 文件](https://devblogs.microsoft.com/visualstudio/whats-a-pkgdef-and-why/)
