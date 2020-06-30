@@ -1,7 +1,7 @@
 ---
 title: 向依赖项关系图添加自定义体系结构验证
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - dependency diagrams, adding custom validation
 author: JoshuaPartlow
@@ -9,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9f7c3c37feb2f2d68817807f056ee470f0d0d05f
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 98482eed6c1ed5a8ac2e3bbb7b5ada6af9517c1d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75597225"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546914"
 ---
 # <a name="add-custom-architecture-validation-to-dependency-diagrams"></a>向依赖项关系图添加自定义体系结构验证
 
@@ -30,7 +30,7 @@ ms.locfileid: "75597225"
 > [!WARNING]
 > 创建验证项目之后，请复制本主题末尾的 [示例代码](#example) ，然后根据自己的需要进行编辑。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>要求
 
 请参阅 [要求](../modeling/extend-layer-diagrams.md#requirements)。
 
@@ -75,39 +75,39 @@ ms.locfileid: "75597225"
 
 ### <a name="to-add-layer-validation-to-a-separate-vsix"></a>向单独的 VSIX 添加层验证
 
-1. 创建新的“类库”项目。 此项目将包含层验证类。
+1. 创建新的“类库”项目  。 此项目将包含层验证类。
 
 2. 在解决方案中查找或创建**VSIX 项目**。 VSIX 项目包含名为 **source.extension.vsixmanifest**的文件。
 
 3. 在**解决方案资源管理器**中，在 VSIX 项目的右键单击菜单上，选择 "**设为启动项目**"。
 
-4. 在 **source.extension.vsixmanifest**中的“资产”下，将层验证项目添加为 MEF 组件：
+4. 在 **source.extension.vsixmanifest**中的“资产” **** 下，将层验证项目添加为 MEF 组件：
 
-    1. 选择 **“新建”** 。
+    1. 选择“新建”。****
 
-    2. 在“添加新资产” 对话框中，进行如下设置：
+    2. 在“添加新资产” **** 对话框中，进行如下设置：
 
-         **类型** = **Microsoft.VisualStudio.MefComponent**
+         **类型**  = **VisualStudio. microsoft.visualstudio.mefcomponent**
 
-          = **当前解决方案中的项目**
+         **源**  = **当前解决方案中的项目**
 
-         **项目** = *你的验证程序项目*
+         **项目**  = *验证程序项目*
 
 5. 还必须将其添加为层验证：
 
-    1. 选择 **“新建”** 。
+    1. 选择“新建”。****
 
-    2. 在“添加新资产” 对话框中，进行如下设置：
+    2. 在“添加新资产” **** 对话框中，进行如下设置：
 
-         **类型** = **Microsoft.VisualStudio.ArchitectureTools.Layer.Validator**。 这并不是下拉列表中的选项。 必须从键盘输入。
+         **类型**  = **VisualStudio. microsoft.visualstudio.architecturetools.layer.validator**。 这并不是下拉列表中的选项。 必须从键盘输入。
 
-          = **当前解决方案中的项目**
+         **源**  = **当前解决方案中的项目**
 
-         **项目** = *你的验证程序项目*
+         **项目**  = *验证程序项目*
 
 6. 返回层验证项目，并添加以下项目引用：
 
-    |**引用**|**允许执行的操作**|
+    |**参考**|**允许执行的操作**|
     |-|-|
     |Microsoft.VisualStudio.GraphModel.dll|读取体系结构图|
     |Microsoft.VisualStudio.ArchitectureTools.Extensibility.CodeSchema.dll|读取与层关联的代码 DOM|
@@ -125,7 +125,7 @@ ms.locfileid: "75597225"
 
 9. 若要在 Visual Studio 的主实例中或另一台计算机上安装 VSIX，请在 VSIX 项目的**bin**目录中找到 **.vsix**文件。 将此文件复制到想在其上安装 VSIX 的计算机。 在 Windows 资源管理器中双击该 VSIX 文件。
 
-## <a name="programming"></a> 验证编程
+## <a name="programming-validation"></a><a name="programming"></a> 验证编程
 
 若要定义层验证扩展，可以定义一个具有以下特征的类：
 
@@ -153,7 +153,7 @@ ms.locfileid: "75597225"
   > [!WARNING]
   > 不要使用 `LogValidationError`的可选参数。
 
-用户调用“验证体系结构” 菜单命令时，层运行时系统将分析层及其项目以生成图形。 图形包含四个部分：
+用户调用“验证体系结构” **** 菜单命令时，层运行时系统将分析层及其项目以生成图形。 图形包含四个部分：
 
 - 表示为图形中的节点和链接的 Visual Studio 解决方案的层模型。
 
@@ -194,7 +194,7 @@ ms.locfileid: "75597225"
 
 代码中从层到元素的链接具有“Represents”类别。
 
-## <a name="debugging"></a> 调试验证
+## <a name="debugging-validation"></a><a name="debugging"></a> 调试验证
 
 若要调试你的层验证扩展，请按 Ctrl + F5。 这将打开一个 Visual Studio 实验实例。 在本例中，将打开或创建一个层模型。 此模型必须与代码相关联，并且必须具有至少一个依赖项。
 
@@ -210,7 +210,7 @@ ms.locfileid: "75597225"
 
 ### <a name="run-clean-solution-before-validate-architecture"></a>在验证体系结构之前运行清理解决方案
 
-每当你更新验证代码时，请先在实验解决方案中的“生成” 菜单上使用“清理解决方案” 命令，然后再测试“验证”命令。 这是必要的，因为将缓存验证的结果。 如果尚未更新测试依赖关系图或其代码，则不会执行验证方法。
+每当你更新验证代码时，请先在实验解决方案中的“生成” **** 菜单上使用“清理解决方案” **** 命令，然后再测试“验证”命令。 这是必要的，因为将缓存验证的结果。 如果尚未更新测试依赖关系图或其代码，则不会执行验证方法。
 
 ### <a name="launch-the-debugger-explicitly"></a>显式启动调试器
 
@@ -220,13 +220,13 @@ ms.locfileid: "75597225"
 
 或者，可以插入一个对 `System.Windows.Forms.MessageBox.Show()`的调用。 当消息框出现时，请前往 Visual Studio 的主实例，并在 "**调试**" 菜单上单击 "**附加到进程**"。 选择名为 **Graphcmd.exe**的进程。
 
-始终通过按 Ctrl + F5（“开始执行(不调试)”）启动实验实例。
+始终通过按 Ctrl + F5（“开始执行(不调试)”****）启动实验实例。
 
 ### <a name="deploying-a-validation-extension"></a>部署验证扩展
 
 若要在安装了适当版本的 Visual Studio 的计算机上安装验证扩展，请打开目标计算机上的 VSIX 文件。
 
-## <a name="example"></a> Example code
+## <a name="example-code"></a><a name="example"></a>示例代码
 
 ```csharp
 using System;

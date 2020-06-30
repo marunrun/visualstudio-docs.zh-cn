@@ -1,18 +1,18 @@
 ---
 title: 演练：调试访问模型的文本模板
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f592cfbd46e0f4fc3a64ecaabadf17a6754480c0
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: e33297bba899c1843b8601c031d7669531a1bd3f
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75593520"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546895"
 ---
 # <a name="walkthrough-debugging-a-text-template-that-accesses-a-model"></a>演练：调试访问模型的文本模板
 在域特定语言解决方案中修改或添加文本模板时，当引擎将模板转换为源代码或编译生成的代码时，可能会出现错误。 以下演练演示了调试文本模板时可以执行的一些操作。
@@ -42,7 +42,7 @@ ms.locfileid: "75593520"
 
 2. 向调试项目添加一个名为 `DebugTest.tt` 的文本文件。
 
-3. 确保将 DebugTest.tt 的 "**自定义工具**" 属性设置为 `TextTemplatingFileGenerator`。
+3. 请确保将 DebugTest.tt 的 "**自定义工具**" 属性设置为 `TextTemplatingFileGenerator` 。
 
 ## <a name="debugging-directives-that-access-a-model-from-a-text-template"></a>从文本模板访问模型的调试指令
  必须先调用生成的指令处理器，然后才能从文本模板中的语句和表达式访问模型。 调用生成的指令处理器会使模型中的类可用于文本模板代码作为属性。 有关详细信息，请参阅[从文本模板访问模型](../modeling/accessing-models-from-text-templates.md)。
@@ -93,11 +93,11 @@ ms.locfileid: "75593520"
 
      **名为 "DebuggingTestLanguageDirectiveProcessor" 的处理器不支持名为 "modelRoot" 的指令。转换将不会运行。**
 
-     在这种情况下，指令调用包含错误的指令名称。 您已将 `modelRoot` 指定为指令名称，但 `DebuggingTestLanguage`了正确的指令名称。
+     在这种情况下，指令调用包含错误的指令名称。 你已指定 `modelRoot` 作为指令名称，但正确的指令名称是 `DebuggingTestLanguage` 。
 
 3. 双击 "**错误列表**" 窗口中的错误，跳转到代码。
 
-4. 若要更正此代码，请将指令名称更改为 `DebuggingTestLanguage`。
+4. 若要更正此代码，请将指令名称更改为 `DebuggingTestLanguage` 。
 
      更改将突出显示。
 
@@ -157,13 +157,13 @@ ms.locfileid: "75593520"
 
      (C#)
 
-     **编译转换： VisualStudio. TextTemplating\<GUID >。GeneratedTextTransformation "不包含" 位于 examplemodel.store "的定义**
+     **编译转换： VisualStudio \<GUID> . TextTemplating。GeneratedTextTransformation "不包含" 位于 examplemodel.store "的定义**
 
-     （Visual Basic）
+     (Visual Basic)
 
-     **编译转换： "位于 examplemodel.store" 不是 "TextTemplating\<GUID > 的成员。GeneratedTextTransformation'.**
+     **编译转换： "位于 examplemodel.store" 不是 \<GUID> "TextTemplating" 的成员。GeneratedTextTransformation'.**
 
-     在这种情况下，文本模板代码包含不正确的属性名称。 已将 `ExampleModel` 指定为属性名称，但 `LibraryModel`正确的属性名称。 可以在提供参数中找到正确的属性名称，如下面的代码所示：
+     在这种情况下，文本模板代码包含不正确的属性名称。 你已指定 `ExampleModel` 作为属性名称，但正确的属性名称是 `LibraryModel` 。 可以在提供参数中找到正确的属性名称，如下面的代码所示：
 
     ```
     <#@ DebuggingTestLanguage processor="DebuggingTestLanguageDirectiveProcessor" requires="fileName='Sample.ddd'" provides="ExampleModel=LibraryModel" #>
@@ -171,7 +171,7 @@ ms.locfileid: "75593520"
 
 3. 双击 "错误列表" 窗口中的错误，跳转到代码。
 
-4. 若要更正此代码，请在文本模板代码中将属性名称更改为 `LibraryModel`。
+4. 若要更正此代码，请 `LibraryModel` 在文本模板代码中将属性名称更改为。
 
      突出显示所作更改。
 

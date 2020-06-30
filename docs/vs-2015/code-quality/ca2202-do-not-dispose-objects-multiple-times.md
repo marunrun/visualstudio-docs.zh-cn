@@ -15,42 +15,42 @@ caps.latest.revision: 22
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: e0be715d8aea84fac53ea2a796e71850b961730c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 31bf7fe33aa59c3a713d2da81ddbd11ed6899723
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72667406"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546284"
 ---
-# <a name="ca2202-do-not-dispose-objects-multiple-times"></a>CA2202：不要多次释放对象
+# <a name="ca2202-do-not-dispose-objects-multiple-times"></a>CA2202:不要多次释放对象
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|值|
 |-|-|
 |TypeName|DoNotDisposeObjectsMultipleTimes|
 |CheckId|CA2202|
-|类别|Microsoft. 使用情况|
+|Category|Microsoft. 使用情况|
 |是否重大更改|非重大更改|
 
 ## <a name="cause"></a>原因
- 方法实现包含可导致多次调用 <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> 或 Dispose 等效项的代码路径，例如对同一对象的某些类型的 Close （）方法。
+ 方法实现包含的代码路径可能导致对 <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> 同一对象的多个调用或 Dispose 等效项（如某些类型上的 Close （）方法）。
 
-## <a name="rule-description"></a>规则说明
- 正确实现 <xref:System.IDisposable.Dispose%2A> 方法可多次调用而不引发异常。 但是，这并不能保证是否会生成 <xref:System.ObjectDisposedException?displayProperty=fullName> 不应在一个对象上多次调用 <xref:System.IDisposable.Dispose%2A>。
+## <a name="rule-description"></a>规则描述
+ 正确实现的 <xref:System.IDisposable.Dispose%2A> 方法可以多次调用而不引发异常。 但是，这是不能保证的，为了避免生成， <xref:System.ObjectDisposedException?displayProperty=fullName> 不应对 <xref:System.IDisposable.Dispose%2A> 对象多次调用。
 
 ## <a name="related-rules"></a>相关规则
- [CA2000：超出范围前释放对象](../code-quality/ca2000-dispose-objects-before-losing-scope.md)
+ [CA2000:丢失范围之前释放对象](../code-quality/ca2000-dispose-objects-before-losing-scope.md)
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
- 若要修复与此规则的冲突，请更改实现，以便与代码路径无关，只为对象调用一次 <xref:System.IDisposable.Dispose%2A>。
+ 若要修复与此规则的冲突，请更改实现，以便与代码路径无关， <xref:System.IDisposable.Dispose%2A> 只为对象调用一次。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
- 不禁止显示此规则发出的警告。 即使知道对象 <xref:System.IDisposable.Dispose%2A> 可以安全地多次调用，实现也可能会在将来发生更改。
+ 不禁止显示此规则发出的警告。 即使 <xref:System.IDisposable.Dispose%2A> 已知对象可以安全地多次调用，实现也可能会在将来发生变化。
 
 ## <a name="example"></a>示例
- 嵌套的 `using` 语句（在 Visual Basic 中 `Using`）可能导致违反 CA2202 警告。 如果嵌套的内部 `using` 语句的 IDisposable 资源包含外部 `using` 语句的资源，则嵌套资源的 `Dispose` 方法会释放包含的资源。 出现这种情况时，外部 `using` 语句的 `Dispose` 方法尝试再次释放其资源。
+ 嵌套 `using` 的语句（ `Using` 在 Visual Basic 中）可能导致违反 CA2202 警告。 如果嵌套内部语句的 IDisposable 资源 `using` 包含外部语句的资源 `using` ， `Dispose` 则嵌套资源的方法会释放包含的资源。 出现这种情况时， `Dispose` 外部语句的方法将 `using` 尝试再次释放其资源。
 
- 在下面的示例中，在外部 using 语句中创建的 <xref:System.IO.Stream> 对象在包含 `stream` 对象的 <xref:System.IO.StreamWriter> 对象的 Dispose 方法中释放。 在外部 `using` 语句结束时，`stream` 对象将第二次释放。 第二个版本违反了 CA2202。
+ 在下面的示例中，在 <xref:System.IO.Stream> 外部 using 语句中创建的对象将在 <xref:System.IO.StreamWriter> 包含该对象的对象的 Dispose 方法中的内部 using 语句的末尾释放 `stream` 。 在外部语句结束时 `using` ，将 `stream` 再次释放该对象。 第二个版本违反了 CA2202。
 
 ```
 using (Stream stream = new FileStream("file.txt", FileMode.OpenOrCreate))
@@ -63,7 +63,7 @@ using (Stream stream = new FileStream("file.txt", FileMode.OpenOrCreate))
 ```
 
 ## <a name="example"></a>示例
- 若要解决此问题，请使用 `try` / `finally` 块，而不是外部 `using` 语句。 在 `finally` 块中，确保 `stream` 资源为 not null。
+ 若要解决此问题，请使用 `try` / `finally` 块而不是外部 `using` 语句。 在 `finally` 块中，确保 `stream` 资源不为 null。
 
 ```
 Stream stream = null;
@@ -83,5 +83,5 @@ finally
 }
 ```
 
-## <a name="see-also"></a>请参阅
- <xref:System.IDisposable?displayProperty=fullName> [Dispose 模式](https://msdn.microsoft.com/library/31a6c13b-d6a2-492b-9a9f-e5238c983bcb)
+## <a name="see-also"></a>另请参阅
+ <xref:System.IDisposable?displayProperty=fullName> [释放模式](https://msdn.microsoft.com/library/31a6c13b-d6a2-492b-9a9f-e5238c983bcb)

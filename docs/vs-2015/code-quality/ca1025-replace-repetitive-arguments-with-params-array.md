@@ -15,28 +15,28 @@ caps.latest.revision: 16
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 21d13611a3c4dd11eb691c746f8746347fb9a83b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 84809341d7898aeb3defe0447f2a2f1142eb460a
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661973"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546622"
 ---
-# <a name="ca1025-replace-repetitive-arguments-with-params-array"></a>CA1025：用形参数组替换重复的实参
+# <a name="ca1025-replace-repetitive-arguments-with-params-array"></a>CA1025:用形参数组替换重复的实参
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|值|
 |-|-|
 |TypeName|ReplaceRepetitiveArgumentsWithParamsArray|
 |CheckId|CA1025|
-|类别|Microsoft. Design|
+|Category|Microsoft. Design|
 |是否重大更改|不间断|
 
 ## <a name="cause"></a>原因
  公共类型中的公共或受保护方法包含三个以上的参数，其最后三个参数的类型相同。
 
-## <a name="rule-description"></a>规则说明
- 如果参数的精确数量未知且变量参数为同一类型，或者可以作为相同的类型传递，请使用参数数组而不是重复的参数。 例如，<xref:System.Console.WriteLine%2A> 方法提供了一个常规用途重载，它使用参数数组接受任意数量的 <xref:System.Object> 参数。
+## <a name="rule-description"></a>规则描述
+ 如果参数的精确数量未知且变量参数为同一类型，或者可以作为相同的类型传递，请使用参数数组而不是重复的参数。 例如， <xref:System.Console.WriteLine%2A> 方法提供了一个常规用途重载，该重载使用参数数组接受任意数量的 <xref:System.Object> 自变量。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
  若要修复与此规则的冲突，请将重复参数替换为参数数组。

@@ -15,27 +15,27 @@ caps.latest.revision: 21
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 1f333478c952db74fa6a9482cdad91ce6a858301
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: eb0e097c2f13fa9d9279a5f3e9761a53cb6e4b1d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72666003"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547740"
 ---
-# <a name="ca2106-secure-asserts"></a>CA2106：保护断言
+# <a name="ca2106-secure-asserts"></a>CA2106:保护断言
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|值|
 |-|-|
 |TypeName|SecureAsserts|
 |CheckId|CA2106|
-|类别|Microsoft.Security|
+|Category|Microsoft.Security|
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
  某个方法断言权限，但不对调用方执行任何安全检查。
 
-## <a name="rule-description"></a>规则说明
+## <a name="rule-description"></a>规则描述
  如果在不执行任何安全检查的情况下断言安全权限，则会在代码中留下可利用的安全漏洞。 安全堆栈审核在断言安全权限时停止。 如果在不对调用方执行任何检查的情况下断言权限，调用方可以使用您的权限间接执行代码。 仅当你确定断言无法以有害方式使用时，才允许不进行安全检查的断言。 如果调用的代码无害，或用户无法将任意信息传递给所调用的代码，则断言不会造成危害。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
@@ -44,5 +44,5 @@ ms.locfileid: "72666003"
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
  仅在仔细检查安全检查后，禁止显示此规则发出的警告。
 
-## <a name="see-also"></a>请参阅
- <xref:System.Security.CodeAccessPermission.Assert%2A?displayProperty=fullName>[安全编码准则](https://msdn.microsoft.com/library/4f882d94-262b-4494-b0a6-ba9ba1f5f177)
+## <a name="see-also"></a>另请参阅
+ <xref:System.Security.CodeAccessPermission.Assert%2A?displayProperty=fullName> [代码安全维护指南](https://msdn.microsoft.com/library/4f882d94-262b-4494-b0a6-ba9ba1f5f177)

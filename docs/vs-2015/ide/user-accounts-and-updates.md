@@ -9,12 +9,12 @@ caps.latest.revision: 7
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 92bbfc3612a34d354dee6288d66f2cf96c1e107c
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: f3ed1bd914655109606c1472227fb73c10d5b7a0
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85289360"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547610"
 ---
 # <a name="user-accounts-and-updates"></a>用户帐户和更新
 
@@ -27,7 +27,7 @@ Visual Studio 自身就是一个连接的环境。 登录后，你可以访问�
 
 ## <a name="in-this-section"></a>本节内容
 
-|||
+|Title|说明|
 |-|-|
 |[登录 Visual Studio](../ide/signing-in-to-visual-studio.md)|描述登录到 Visual Studio 的方式和原因。|
 |[使用多个用户帐户](../ide/work-with-multiple-user-accounts.md)|描述如何关联多个 Microsoft 帐户和/或工作或学校帐户以访问所有这些帐户的资源和服务。|

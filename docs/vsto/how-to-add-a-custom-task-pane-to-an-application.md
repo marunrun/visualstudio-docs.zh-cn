@@ -1,7 +1,7 @@
 ---
 title: 如何：向应用程序添加自定义任务窗格
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,12 +13,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 88ac74d0e2c666926c5b88976146878991729628
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 0df4d51795f01c98790f1d5b0525c45cc71899ab
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63427913"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546206"
 ---
 # <a name="how-to-add-a-custom-task-pane-to-an-application"></a>如何：向应用程序添加自定义任务窗格
   你可以通过使用 VSTO 外接程序向上面列出的应用程序添加自定义任务窗格。 有关详细信息，请参阅[自定义任务窗格](../vsto/custom-task-panes.md)。
@@ -36,15 +36,15 @@ ms.locfileid: "63427913"
 
 2. 在 **“项目”** 菜单上，单击 **“添加用户控件”**。
 
-3. 在中**添加新项**对话框中，更改到新的用户控件的名称**MyUserControl**，然后单击**添加**。
+3. 在 "**添加新项**" 对话框中，将新用户控件的名称更改为 " **MyUserControl**"，然后单击 "**添加**"。
 
      用户控件将在设计器中打开。
 
-4. 添加一个或多个 Windows 窗体控件从**工具箱**到用户控件。
+4. 将 "**工具箱**" 中的一个或多个 Windows 窗体控件添加到用户控件。
 
-5. 打开**ThisAddIn.cs**或**ThisAddIn.vb**代码文件。
+5. 打开**ThisAddIn.cs**或**ThisAddIn**代码文件。
 
-6. 向 `ThisAddIn` 类添加下面的代码。 此代码将 `MyUserControl` 和 <xref:Microsoft.Office.Tools.CustomTaskPane> 的实例声明为 `ThisAddIn` 类的成员。
+6. 将以下代码添加到 `ThisAddIn` 类。 此代码将 `MyUserControl` 和 <xref:Microsoft.Office.Tools.CustomTaskPane> 的实例声明为 `ThisAddIn` 类的成员。
 
      [!code-vb[Trin_TaskPaneBasic#1](../vsto/codesnippet/VisualBasic/Trin_TaskPaneBasic/ThisAddIn.vb#1)]
      [!code-csharp[Trin_TaskPaneBasic#1](../vsto/codesnippet/CSharp/Trin_TaskPaneBasic/ThisAddIn.cs#1)]
@@ -57,7 +57,7 @@ ms.locfileid: "63427913"
     > [!NOTE]
     > 此代码将自定义任务窗格与应用程序中的活动窗口关联。 对于某些应用程序，你可能想要修改此代码以确保任务窗格与应用程序中的其他文档或项目一起显示。 有关详细信息，请参阅[自定义任务窗格](../vsto/custom-task-panes.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [Office UI 自定义](../vsto/office-ui-customization.md)
 - [自定义任务窗格](../vsto/custom-task-panes.md)
-- [演练：自动执行从自定义任务窗格应用程序](../vsto/walkthrough-automating-an-application-from-a-custom-task-pane.md)
+- [演练：从自定义任务窗格自动化应用程序](../vsto/walkthrough-automating-an-application-from-a-custom-task-pane.md)

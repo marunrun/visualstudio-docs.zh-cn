@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, programming
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3954f271d4bcdc222841bbcb435cdadf115ac263
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: b67a50623eb1924c4a18b57524c409f7eba6ab20
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748127"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546869"
 ---
 # <a name="write-code-to-customize-a-domain-specific-language"></a>编写代码以自定义域特定语言
 
@@ -72,6 +72,6 @@ ms.locfileid: "72748127"
 
 - **序列化**。 存储提供了一种标准方式来将其包含的对象序列化到文件中。 您可以自定义用于序列化和反序列化的规则。 有关详细信息，请参阅[自定义文件存储和 XML 序列化](../modeling/customizing-file-storage-and-xml-serialization.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [自定义和扩展域特定语言](../modeling/customizing-and-extending-a-domain-specific-language.md)

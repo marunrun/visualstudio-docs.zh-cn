@@ -15,27 +15,27 @@ caps.latest.revision: 23
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: b190e007cfdb016e54148cf0295c68baf68c5033
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a240a6eea86075bbf7f721f8620b6d135d594c20
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661961"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546661"
 ---
-# <a name="ca1024-use-properties-where-appropriate"></a>CA1024：在适用处使用属性
+# <a name="ca1024-use-properties-where-appropriate"></a>CA1024:在适用处使用属性
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|值|
 |-|-|
 |TypeName|UsePropertiesWhereAppropriate|
 |CheckId|CA1024|
-|类别|Microsoft. Design|
+|Category|Microsoft. Design|
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
- 公共或受保护方法的名称以 `Get` 开头，不使用任何参数，并且返回的值不是数组。
+ 公共或受保护方法的名称以开头 `Get` ，不使用任何参数，并且返回的值不是数组。
 
-## <a name="rule-description"></a>规则说明
+## <a name="rule-description"></a>规则描述
  在大多数情况下，属性表示数据并执行操作。 像字段一样访问属性，这样可以更方便地使用它们。 如果存在以下情况之一，则方法非常适合成为属性：
 
 - 不采用任何参数，并返回对象的状态信息。
@@ -67,7 +67,7 @@ ms.locfileid: "72661961"
 ## <a name="controlling-property-expansion-in-the-debugger"></a>控制调试器中的属性扩展
  程序员避免使用属性的原因之一是，它们不希望调试器自动展开它。 例如，属性可能涉及到分配一个大型对象或调用 P/Invoke，但它实际上可能不会有任何明显的副作用。
 
- 可以通过应用 <xref:System.Diagnostics.DebuggerBrowsableAttribute?displayProperty=fullName> 阻止调试器自动扩展属性。 下面的示例演示如何将此特性应用于实例属性。
+ 可以通过应用来阻止调试器自动扩展属性 <xref:System.Diagnostics.DebuggerBrowsableAttribute?displayProperty=fullName> 。 下面的示例演示如何将此特性应用于实例属性。
 
 ```vb
 Imports System

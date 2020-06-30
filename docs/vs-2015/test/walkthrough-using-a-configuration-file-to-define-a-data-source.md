@@ -12,12 +12,12 @@ ms.assetid: 95fa5214-b12e-4e1f-84e5-cc4c2d86b0d7
 caps.latest.revision: 34
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 64ac9835a085908645713f95f1f07c283d807852
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 3f669c4dcfb91579ac50270914112cd6388e2743
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72657061"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547974"
 ---
 # <a name="walkthrough-using-a-configuration-file-to-define-a-data-source"></a>演练：使用配置文件定义数据源
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "72657061"
 
 - 使用 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute> 类访问数据源。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
  若要完成此演练，您需要：
 
 - Visual Studio Enterprise
@@ -47,15 +47,15 @@ ms.locfileid: "72657061"
 
 #### <a name="to-add-an-appconfig-file-to-the-project"></a>若要将 app.config 文件添加到项目
 
-1. 如果测试项目已有 app.config 文件，请转到[定义自定义配置节](#DefineCustomConfigurationSection)。
+1. 如果测试项目已有 app.config 文件，请参阅[定义自定义配置部分](#DefineCustomConfigurationSection)。
 
-2. 在“解决方案资源管理器”中右键单击测试项目，指向“添加”，然后单击“新建项”。
+2. 在“解决方案资源管理器”**** 中右键单击测试项目，指向“添加”****，然后单击“新建项”****。
 
-     此时，“添加新项”窗口会打开。
+     此时，“添加新项”**** 窗口会打开。
 
-3. 选择“应用配置文件”模板，然后单击“添加”。
+3. 选择“应用配置文件”**** 模板，然后单击“添加”****。
 
-## <a name="DefineCustomConfigurationSection"></a>定义自定义配置节
+## <a name="define-a-custom-configuration-section"></a><a name="DefineCustomConfigurationSection"></a>定义自定义配置节
  检查 app.config 文件。 它至少包含 XML 声明和一个根元素。
 
 #### <a name="to-add-the-custom-configuration-section-to-the-appconfig-file"></a>若要将自定义配置节添加到 app.config 文件
@@ -94,7 +94,7 @@ ms.locfileid: "72657061"
 
  在第二个 `add` 元素中，创建下列特性和值以连接到 Microsoft Excel 电子表格：
 
-|||
+|Attribute|值|
 |-|-|
 |`name`|`"MyExcelConn"`|
 |`connectionString`|`"Dsn=Excel Files;dbq=data.xlsx;defaultdir=.; driverid=790;maxbuffersize=2048;pagetimeout=5"`|
@@ -102,7 +102,7 @@ ms.locfileid: "72657061"
 
  `connectionStrings` 元素应类似于此：
 
-```
+```xml
 <connectionStrings>
     <add name="MyJetConn" connectionString="Provider=Microsoft.Jet.OLEDB.4.0; Data Source=C:\testdatasource.accdb; Persist Security Info=False;" providerName="System.Data.OleDb" />
     <add name="MyExcelConn" connectionString="Dsn=Excel Files;dbq=data.xlsx;defaultdir=.; driverid=790;maxbuffersize=2048;pagetimeout=5" providerName="System.Data.Odbc" />
@@ -141,7 +141,7 @@ ms.locfileid: "72657061"
 
  在第二个 `add` 元素中，为 Microsoft Excel 数据源创建下列特性和值：
 
-|||
+|Attribute|值|
 |-|-|
 |`Name`|`"MyExcelDataSource"`|
 |`connectionString`|`"MyExcelConn"`|
@@ -150,7 +150,7 @@ ms.locfileid: "72657061"
 
  `microsoft.visualstudio.testtools` 元素应类似于此：
 
-```
+```xml
 <microsoft.visualstudio.testtools>
     <dataSources>
         <add name="MyJetDataSource" connectionString="MyJetConn" dataTableName="MyDataTable" dataAccessMethod="Sequential"/>
@@ -161,7 +161,7 @@ ms.locfileid: "72657061"
 
  最终的 app.config 文件应类似于此：
 
-```
+```xml
 <?xml version="1.0" encoding="utf-8" ?>
 <configuration>
     <configSections>
@@ -223,7 +223,7 @@ ms.locfileid: "72657061"
 
 2. 将单元测试中自动生成的内容替换为以下代码：
 
-    ```
+    ```csharp
     using System;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -268,5 +268,5 @@ ms.locfileid: "72657061"
 > [!IMPORTANT]
 > 部署数据源等项，以便部署目录中的测试可以访问它们。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [单元测试代码](../test/unit-test-your-code.md)[为现有代码创建和运行单元测试](https://msdn.microsoft.com/e8370b93-085b-41c9-8dec-655bd886f173)[测试应用程序](https://msdn.microsoft.com/library/796b7d6d-ad45-4772-9719-55eaf5490dac)[如何：创建数据驱动的单元测试](../test/how-to-create-a-data-driven-unit-test.md)

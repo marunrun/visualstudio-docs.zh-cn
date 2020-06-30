@@ -1,7 +1,7 @@
 ---
 title: 如何：以编程方式从工作簿中删除工作表
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,12 +13,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 04c7eafd99d122c0b502e4b804b050bf7c59761f
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 38aa92ae1c320ae9eb5ad4bdb1e43b761048661f
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985827"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547129"
 ---
 # <a name="how-to-programmatically-delete-worksheets-from-workbooks"></a>如何：以编程方式从工作簿中删除工作表
   可以删除工作簿中的任意工作表。 若要删除工作表，请使用该工作表主机项或通过使用工作簿的表集合访问该工作表。
@@ -64,7 +64,7 @@ ms.locfileid: "72985827"
      [!code-csharp[Trin_VstcoreExcelAutomation#18](codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#18)]
      [!code-vb[Trin_VstcoreExcelAutomation#18](codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#18)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [使用工作表](working-with-worksheets.md)
 - [如何：以编程方式隐藏工作表](how-to-programmatically-hide-worksheets.md)
 - [如何：以编程方式在工作簿中移动工作表](how-to-programmatically-move-worksheets-within-workbooks.md)

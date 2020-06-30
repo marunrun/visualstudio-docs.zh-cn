@@ -1,7 +1,7 @@
 ---
 title: 如何：以编程方式重置 Word 文档中的范围
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,12 +13,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 622d807da832c4c07baf8b62c902c2b1d25cc14d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8f1978a280a26af3b2a21e0bc5a4c9a238a723a9
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955689"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547116"
 ---
 # <a name="how-to-programmatically-reset-ranges-in-word-documents"></a>如何：以编程方式重置 Word 文档中的范围
   使用 <xref:Microsoft.Office.Interop.Word.Range.SetRange%2A> 方法在 Microsoft Office Word 文档中调整现有范围的大小。
@@ -55,15 +55,15 @@ ms.locfileid: "62955689"
 
 ## <a name="vsto-add-in-example"></a>VSTO 外接程序示例
 
-### <a name="to-reset-an-existing-range-in-a-vsto-add-in"></a>若要重置现有范围 VSTO 外接程序中
+### <a name="to-reset-an-existing-range-in-a-vsto-add-in"></a>在 VSTO 外接程序中重置现有范围
 
-1. 下面的示例显示 VSTO 外接程序的完整的示例。 若要使用此代码，请从项目中的 `ThisAddIn` 类运行它。
+1. 下面的示例演示了 VSTO 外接程序的完整示例。 若要使用此代码，请从项目中的 `ThisAddIn` 类运行它。
 
      [!code-vb[Trin_VstcoreWordAutomationAddIn#42](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#42)]
      [!code-csharp[Trin_VstcoreWordAutomationAddIn#42](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#42)]
 
-## <a name="see-also"></a>请参阅
-- [如何：以编程方式扩展文档中的范围](../vsto/how-to-programmatically-extend-ranges-in-documents.md)
-- [如何：以编程方式定义和在文档中选择范围](../vsto/how-to-programmatically-define-and-select-ranges-in-documents.md)
-- [如何：以编程方式检索范围中的开始和结束字符](../vsto/how-to-programmatically-retrieve-start-and-end-characters-in-ranges.md)
-- [如何：以编程方式折叠范围或在文档中的选定内容](../vsto/how-to-programmatically-collapse-ranges-or-selections-in-documents.md)
+## <a name="see-also"></a>另请参阅
+- [如何：以编程方式在文档中扩展范围](../vsto/how-to-programmatically-extend-ranges-in-documents.md)
+- [如何：以编程方式在文档中定义和选择范围](../vsto/how-to-programmatically-define-and-select-ranges-in-documents.md)
+- [如何：以编程方式检索范围中的开始字符和结束字符](../vsto/how-to-programmatically-retrieve-start-and-end-characters-in-ranges.md)
+- [如何：以编程方式折叠文档中的范围或选定内容](../vsto/how-to-programmatically-collapse-ranges-or-selections-in-documents.md)

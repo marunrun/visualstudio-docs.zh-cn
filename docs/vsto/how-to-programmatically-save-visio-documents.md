@@ -1,7 +1,7 @@
 ---
 title: 如何：以编程方式保存 Visio 文档
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,12 +13,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 85a45da13594a6f204e91f93ddcee64acb29c493
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 891a5c44159d10aacbb767cbc5376ae1d62252b0
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63419395"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547051"
 ---
 # <a name="how-to-programmatically-save-visio-documents"></a>如何：以编程方式保存 Visio 文档
   可通过几种方法来保存 Microsoft Office Visio 文档：
@@ -57,7 +57,7 @@ ms.locfileid: "63419395"
      [!code-csharp[Trin_VstcoreVisioAutomationAddIn#10](../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs#10)]
      [!code-vb[Trin_VstcoreVisioAutomationAddIn#10](../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb#10)]
 
-## <a name="save-a-document-with-a-new-name-and-specified-arguments"></a>使用新名称和指定的参数保存文档
+## <a name="save-a-document-with-a-new-name-and-specified-arguments"></a>使用新名称和指定参数保存文档
  使用 `Microsoft.Office.Interop.Visio.Document.SaveAsEx` 方法可使用新名称保存文档，并指定要应用于该文档的任何适用自变量。
 
 ### <a name="to-save-document-with-a-new-name-and-specified-arguments"></a>若要使用新名称和指定参数保存文档
@@ -72,9 +72,9 @@ ms.locfileid: "63419395"
 ## <a name="compile-the-code"></a>编译代码
  此代码示例要求满足以下条件：
 
-- 若要保存具有新名称的文档，目录的名称`Test`必须位于*My Documents*文件夹 （对于 Windows XP 及更早版本） 或*文档*文件夹 （对于 Windows Vista)。
+- 若要保存具有新名称的文档， `Test` 必须在 "*我的文档*" 文件夹（适用于 windows XP 及更低版本）或 "*文档*" 文件夹（适用于 windows Vista）中找到名为的目录。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [Visio 解决方案](../vsto/visio-solutions.md)
 - [Visio 对象模型概述](../vsto/visio-object-model-overview.md)
 - [如何：以编程方式创建新的 Visio 文档](../vsto/how-to-programmatically-create-new-visio-documents.md)

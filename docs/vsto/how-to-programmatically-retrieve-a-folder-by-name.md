@@ -1,7 +1,7 @@
 ---
 title: 如何：以编程方式按名称检索文件夹
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -12,15 +12,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a494f954f3f670fb796b33a0dbd01e2512ad1d26
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 901de848b22f344ded2d71b11e9859917b8382d4
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955724"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547103"
 ---
 # <a name="how-to-programmatically-retrieve-a-folder-by-name"></a>如何：以编程方式按名称检索文件夹
-  此示例获取命名的自定义文件夹的引用，然后显示文件夹的内容。
+  此示例获取对命名的自定义文件夹的引用，然后显示该文件夹的内容。
 
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]
 
@@ -32,8 +32,8 @@ ms.locfileid: "62955724"
 
 - 名为 TestFolder 的文件夹。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [使用文件夹](../vsto/working-with-folders.md)
-- [如何：以编程方式在特定文件夹内的搜索](../vsto/how-to-programmatically-search-within-a-specific-folder.md)
+- [如何：以编程方式在特定文件夹中搜索](../vsto/how-to-programmatically-search-within-a-specific-folder.md)
 - [如何：以编程方式搜索特定联系人](../vsto/how-to-programmatically-search-for-a-specific-contact.md)
 - [如何：以编程方式创建自定义文件夹项](../vsto/how-to-programmatically-create-custom-folder-items.md)

@@ -1,18 +1,18 @@
 ---
 title: 自定义复制行为
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4e3ab9a30b373e2421607f6dd1609b13adad3087
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.openlocfilehash: b189d3dbd5c1872094b0c1be2a64eb2c02bf1e2e
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76115354"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547337"
 ---
 # <a name="customizing-copy-behavior"></a>自定义复制行为
 在使用 Visual Studio 可视化和建模 SDK 创建的域特定语言（DSL）中，可以更改用户复制和粘贴元素时所发生的情况。
@@ -72,7 +72,7 @@ partial class MyDslClipboardCommandSet
 } }
 ```
 
- **当用户粘贴到选定目标时创建其他链接。** 例如，在将注释框粘贴到元素上时，它们之间即创建一个链接。
+ **当用户粘贴到选定的目标上时创建附加链接。** 例如，在将注释框粘贴到元素上时，它们之间即创建一个链接。
 将元素合并指令添加到目标域类，并将其设置为通过添加链接来处理合并。 这将在拖动操作上产生相同的效果。 有关详细信息，请参阅[自定义元素创建和移动](../modeling/customizing-element-creation-and-movement.md)。
 
  \- 或 -
@@ -80,10 +80,10 @@ partial class MyDslClipboardCommandSet
  重写 `ClipboardCommandSet.ProcessOnPasteCommand()` 以在调用基方法后创建附加链接。
 
  **自定义可将元素复制**到外部应用程序的格式-例如，将边框添加到位图窗体。
-在 DslPackage 项目中重写*MyDsl*`ClipboardCommandSet.ProcessOnMenuCopyCommand()`。
+*MyDsl* `ClipboardCommandSet.ProcessOnMenuCopyCommand()` 在 DslPackage 项目中重写 MyDsl。
 
- **自定义通过复制命令（而不是在拖动操作中）将元素复制到剪贴板的方式。**
-在 DslPackage 项目中重写*MyDsl*`ClipboardCommandSet.CopyModelElementsIntoElementGroupPrototype()`。
+ **自定义通过复制命令（而非采用拖动操作）将元素复制到剪贴板的方式。**
+*MyDsl* `ClipboardCommandSet.CopyModelElementsIntoElementGroupPrototype()` 在 DslPackage 项目中重写 MyDsl。
 
  **通过复制和粘贴保留形状布局。**
 当用户复制多个形状时，可以在粘贴它们时保留其相对位置。 此方法由[VMSDK：线路图示例](https://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)中的示例演示。
@@ -211,7 +211,7 @@ partial class MyDslClipboardCommandSet // EDIT NAME
  **让用户拖放元素。**
 请参阅[如何：添加拖放处理程序](../modeling/how-to-add-a-drag-and-drop-handler.md)。
 
-## <a name="customizeLinks"></a>自定义链接复制行为
+## <a name="customizing-link-copy-behavior"></a><a name="customizeLinks"></a>自定义链接复制行为
  当用户复制元素时，标准行为是还会复制所有嵌入元素。 可以修改标准复制行为。 在 DSL 定义中，选择关系中一方的角色，并在属性窗口设置 "**传播复制**" 值。
 
  ![传播域角色的 Copy 属性](../modeling/media/dslpropagatescopy.png)
@@ -229,7 +229,7 @@ partial class MyDslClipboardCommandSet // EDIT NAME
   所进行的更改将同时影响元素和复制的图像。
 
 ## <a name="programming-copy-and-paste-behavior"></a>编程复制和粘贴行为
- 与复制、粘贴、创建和删除对象有关的 DSL 行为的许多方面由与关系图结合的 <xref:Microsoft.VisualStudio.Modeling.ElementOperations> 的实例控制。 您可以通过从 <xref:Microsoft.VisualStudio.Modeling.ElementOperations> 派生您自己的类，然后重写关系图类的 <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.ElementOperations%2A> 属性，来修改 DSL 的行为。
+ 与复制、粘贴、创建和删除对象有关的 DSL 行为的许多方面由与 <xref:Microsoft.VisualStudio.Modeling.ElementOperations> 关系图耦合的实例控制。 您可以通过从派生您自己的类 <xref:Microsoft.VisualStudio.Modeling.ElementOperations> 并覆盖关系图类的属性来修改 DSL 的行为 <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.ElementOperations%2A> 。
 
 > [!TIP]
 > 有关使用程序代码自定义模型的详细信息，请参阅[在程序代码中导航和更新模型](../modeling/navigating-and-updating-a-model-in-program-code.md)。
@@ -284,12 +284,12 @@ using Microsoft.VisualStudio.Modeling.Diagrams.ExtensionEnablement;
 
  在 ElementOperations 类中定义两个方法：
 
-- `CanMerge(ModelElement targetElement, System.Windows.Forms.IDataObject data)` 确定源元素是否可拖动到目标形状、连接符或关系图上。
+- `CanMerge(ModelElement targetElement, System.Windows.Forms.IDataObject data)`这确定是否可以将源元素拖动到目标形状、连接符或关系图上。
 
-- `MergeElementGroupPrototype(ModelElement targetElement, ElementGroupPrototype sourcePrototype)`，它将源元素与目标组合在一起。
+- `MergeElementGroupPrototype(ModelElement targetElement, ElementGroupPrototype sourcePrototype)`它将源元素与目标组合在一起。
 
 ### <a name="canmerge"></a>CanMerge()
- 当鼠标在关系图中移动时，将调用 `CanMerge()` 来确定应向用户提供的反馈。 该方法的参数是在其上鼠标悬停的元素，以及有关源的数据（拖动操作从该源执行）。 用户可以从屏幕上的任何位置进行拖动。 因此，源对象可以为多种不同类型，并且可以采用不同的格式进行序列化。 如果源是 DSL 或 UML 模型，则数据参数是 <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> 的序列化。 拖动、复制和工具箱操作使用 ElementGroupPrototypes 来表示模型的片段。
+ `CanMerge()`当鼠标移动到关系图上时，将调用来确定应向用户提供的反馈。 该方法的参数是在其上鼠标悬停的元素，以及有关源的数据（拖动操作从该源执行）。 用户可以从屏幕上的任何位置进行拖动。 因此，源对象可以为多种不同类型，并且可以采用不同的格式进行序列化。 如果源是 DSL 或 UML 模型，则数据参数是 <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> 的序列化。 拖动、复制和工具箱操作使用 ElementGroupPrototypes 来表示模型的片段。
 
  元素组原型可以包含任意数目的元素和链接。 元素类型可由其 GUID 标识。 GUID 属于已拖动的形状，而不属于基础模型元素。 在以下示例中，如果将来自 UML 关系图的类形状拖动到此关系图上，则 `CanMerge()` 将返回 True。
 
@@ -367,7 +367,7 @@ private ElementGroupPrototype ConvertDraggedTypeToLocal (MyTargetShape snapshot,
 
  当用户按 CTRL+C 或使用“复制”菜单命令时，将调用方法 <xref:Microsoft.VisualStudio.Modeling.Shell.ClipboardCommandSet.ProcessOnMenuCopyCommand%2A>。 你可以在**DslPackage\Generated Code\CommandSet.cs**中了解这是如何设置的。 有关如何设置命令的详细信息，请参阅[如何：向快捷菜单中添加命令](../modeling/how-to-add-a-command-to-the-shortcut-menu.md)。
 
- 可以通过在 DslPackage 项目中添加*MyDsl*`ClipboardCommandSet` 的分部类定义来替代 ProcessOnMenuCopyCommand。
+ 可以通过*MyDsl* `ClipboardCommandSet` 在 DslPackage 项目中添加 MyDsl 的分部类定义来替代 ProcessOnMenuCopyCommand。
 
 ```csharp
 using System.Collections.Generic;

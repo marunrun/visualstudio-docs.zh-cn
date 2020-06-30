@@ -11,30 +11,30 @@ caps.latest.revision: 13
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 487047b7dd3096e65a6e287d79d91d3029f3dc5a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 12132622900d5698a6b78a1914c687a369d7dc03
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72608986"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547727"
 ---
-# <a name="ca2133-delegates-must-bind-to-methods-with-consistent-transparency"></a>CA2133：委托必须绑定到具有一致透明度的方法
+# <a name="ca2133-delegates-must-bind-to-methods-with-consistent-transparency"></a>CA2133:委托必须绑定到具有一致透明度的方法
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|值|
 |-|-|
 |TypeName|DelegatesMustBindWithConsistentTransparency|
 |CheckId|CA2133|
-|类别|Microsoft.Security|
+|Category|Microsoft.Security|
 |是否重大更改|重大|
 
 > [!NOTE]
 > 此警告仅适用于运行 CoreCLR 的代码（特定于 Silverlight Web 应用程序的 CLR 的版本）。
 
 ## <a name="cause"></a>原因
- 此警告触发方法，该方法将标记有 <xref:System.Security.SecurityCriticalAttribute> 的委托绑定到透明或标记为 <xref:System.Security.SecuritySafeCriticalAttribute> 的方法。 还会对另一个具有以下特点的方法引发此警告：该方法将透明的或安全关键的委托绑定到一个关键方法。
+ 此警告触发方法，该方法将标记为的委托绑定 <xref:System.Security.SecurityCriticalAttribute> 到透明或标记为的方法 <xref:System.Security.SecuritySafeCriticalAttribute> 。 还会对另一个具有以下特点的方法引发此警告：该方法将透明的或安全关键的委托绑定到一个关键方法。
 
-## <a name="rule-description"></a>规则说明
+## <a name="rule-description"></a>规则描述
  委托类型及其绑定到的方法必须具有一致的透明度。 透明和安全关键的委托只能绑定到其他透明或安全关键的方法。 同样，关键委托可能仅绑定到关键方法。 这些绑定规则确保唯一可以通过委托调用方法的代码也可以直接调用同一方法。 例如，绑定规则通过透明委托阻止透明代码直接调用关键代码。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突

@@ -1,18 +1,18 @@
 ---
 title: 使用 MEF 扩展 DSL
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b8e4898ba6c87f25b38a6c3e42032412d69d8ece
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 04d14b3b17953ef30620d9f616bb471b186e9c9f
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75596601"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547636"
 ---
 # <a name="extend-your-dsl-by-using-mef"></a>使用 MEF 扩展 DSL
 
@@ -26,7 +26,7 @@ ms.locfileid: "75596601"
 
 1. 在**DslPackage**项目中创建名为**MefExtension**的新文件夹。 将以下文件添加到其中：
 
-     文件名： `CommandExtensionVSCT.tt`
+     文件名：`CommandExtensionVSCT.tt`
 
     > [!IMPORTANT]
     > 将此文件中的 GUID 设置为与在 DslPackage\GeneratedCode\Constants.tt 中定义的 GUID CommandSetId 相同。
@@ -42,21 +42,21 @@ ms.locfileid: "75596601"
     <#@ include file="DslPackage\CommandExtensionVSCT.tt" #>
     ```
 
-    文件名： `CommandExtensionRegistrar.tt`
+    文件名：`CommandExtensionRegistrar.tt`
 
     ```
     <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>
     <#@ include file="DslPackage\CommandExtensionRegistrar.tt" #>
     ```
 
-    文件名： `ValidationExtensionEnablement.tt`
+    文件名：`ValidationExtensionEnablement.tt`
 
     ```
     <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>
     <#@ include file="DslPackage\ValidationExtensionEnablement.tt" #>
     ```
 
-    文件名： `ValidationExtensionRegistrar.tt`
+    文件名：`ValidationExtensionRegistrar.tt`
 
     如果添加此文件，则必须在 dsl 资源管理器中使用**EditorValidation**中的至少一个开关在 dsl 中启用验证。
 
@@ -65,7 +65,7 @@ ms.locfileid: "75596601"
     <#@ include file="DslPackage\ValidationExtensionRegistrar.tt" #>
     ```
 
-    文件名： `PackageExtensionEnablement.tt`
+    文件名：`PackageExtensionEnablement.tt`
 
     ```
     <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>
@@ -74,21 +74,21 @@ ms.locfileid: "75596601"
 
 2. 在**Dsl**项目中创建名为**MefExtension**的新文件夹。 将以下文件添加到其中：
 
-     文件名： `DesignerExtensionMetaDataAttribute.tt`
+     文件名：`DesignerExtensionMetaDataAttribute.tt`
 
     ```
     <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>
     <#@ include file="Dsl\DesignerExtensionMetadataAttribute.tt" #>
     ```
 
-    文件名： `GestureExtensionEnablement.tt`
+    文件名：`GestureExtensionEnablement.tt`
 
     ```
     <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>
     <#@ include file="Dsl\GestureExtensionEnablement.tt" #>
     ```
 
-    文件名： `GestureExtensionController.tt`
+    文件名：`GestureExtensionController.tt`
 
     ```
     <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>
@@ -101,13 +101,13 @@ ms.locfileid: "75596601"
     <Include href="MefExtension\CommandExtensionVSCT.vsct"/>
     ```
 
-    在现有 `<Include>` 指令的后面插入行。
+    在现有指令后插入行 `<Include>` 。
 
 4. 打开*dsldefinition.dsl*。
 
 5. 在 DSL 资源管理器中，选择**编辑器 \ 验证**。
 
-6. 在属性窗口中，确保至少有一个名为 "**使用**" 的属性为 `true`。
+6. 在属性窗口中，确保至少有一个名为的属性**使用**为 `true` 。
 
 7. 在**解决方案资源管理器**工具栏中，单击 "**转换所有模板**"。
 
@@ -123,13 +123,13 @@ DSL 现在已启用 MEF。 可以将菜单命令、笔势处理程序和验证�
 
 ### <a name="to-create-a-dsl-extension-vsix"></a>创建 DSL 扩展 VSIX
 
-1. 创建新的“类库”项目。
+1. 创建新的“类库”项目  。
 
 2. 在新项目中，添加对 DSL 的程序集的引用。
 
-   - 此程序集通常具有以 "结尾的名称。Dsl .dll "。
+   - 此程序集通常具有以 ".Dsl.dll" 结尾的名称。
 
-   - 如果有权访问 DSL 项目，可以在目录**DSL\\bin\\** 下找到程序集文件 \*
+   - 如果有权访问 DSL 项目，可以在目录**DSL \\ 箱 \\ \* **下找到程序集文件
 
    - 如果有权访问 DSL VSIX 文件，可以通过将 VSIX 文件的文件扩展名更改为 ".zip" 来找到该程序集。 解压缩 .zip 文件。
 
@@ -157,7 +157,7 @@ DSL 现在已启用 MEF。 可以将菜单命令、笔势处理程序和验证�
 
    1. 在**source.extension.vsixmanifest**中，单击 "**添加引用**"
 
-   2. 在对话框中，单击 "**添加有效负载**"，然后找到 DSL 的 VSIX 文件。 VSIX 文件是在 DSL 解决方案中构建的，在**DslPackage\\bin\\\*** 中。
+   2. 在对话框中，单击 "**添加有效负载**"，然后找到 DSL 的 VSIX 文件。 VSIX 文件是在 DSL 解决方案的**DslPackage \\ bin \\ \* **中生成的。
 
        这允许用户同时安装 DSL 和你的扩展。 如果用户已安装 DSL，则仅安装你的扩展。
 
@@ -175,9 +175,9 @@ DSL 现在已启用 MEF。 可以将菜单命令、笔势处理程序和验证�
 
 ### <a name="menu-commands"></a>菜单命令
 
-若要编写菜单命令，请定义一个实现 <xref:Microsoft.VisualStudio.Modeling.ExtensionEnablement.ICommandExtension> 的类，并为该类提供在 DSL 中定义的属性的前缀，名为*yourdsl 可*`CommandExtension`。 可以写入多个菜单命令类。
+若要编写菜单命令，请 <xref:Microsoft.VisualStudio.Modeling.ExtensionEnablement.ICommandExtension> 使用名为*YOURDSL 可*的 DSL 中定义的属性，定义实现类并为类加前缀的类 `CommandExtension` 。 可以写入多个菜单命令类。
 
-只要用户右键单击关系图，就会调用 `QueryStatus()`。 它应检查当前所选内容，并将 `command.Enabled` 设置为指示命令的适用时间。
+`QueryStatus()`只要用户右键单击关系图，就会调用。 它应检查当前所选内容，并将其设置 `command.Enabled` 为指示命令适用的时间。
 
 ```csharp
 using System.ComponentModel.Composition;
@@ -321,7 +321,7 @@ namespace MefExtension
 
 ### <a name="validation-constraints"></a>验证约束
 
-验证方法由 DSL 生成的 `ValidationExtension` 特性标记，还由 <xref:Microsoft.VisualStudio.Modeling.Validation.ValidationMethodAttribute>标记。 方法可以出现在未由特性标记的任何类中。
+验证方法由 `ValidationExtension` DSL 生成的属性和进行标记 <xref:Microsoft.VisualStudio.Modeling.Validation.ValidationMethodAttribute> 。 方法可以出现在未由特性标记的任何类中。
 
 有关详细信息，请参阅[以域特定语言进行验证](../modeling/validation-in-a-domain-specific-language.md)。
 

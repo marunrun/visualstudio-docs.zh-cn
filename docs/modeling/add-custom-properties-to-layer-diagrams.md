@@ -1,7 +1,7 @@
 ---
 title: 向依赖项关系图添加自定义属性
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - dependency diagrams, adding custom properties
 author: JoshuaPartlow
@@ -9,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3623a0c2380188cbb16f6186bddc3f3f2f0c3bd7
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 3c68d8a75ca8203a790684506ffd44b3d890648a
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75590587"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546909"
 ---
 # <a name="add-custom-properties-to-dependency-diagrams"></a>向依赖项关系图添加自定义属性
 
@@ -22,11 +22,11 @@ ms.locfileid: "75590587"
 
 ## <a name="non-visible-properties"></a>不可见属性
 
-如果只希望代码将值附加到依赖关系图中的任何元素，则无需定义 MEF 组件。 [ILayerElement](/previous-versions/ff644511(v=vs.140)) 中有一个名为`Properties`的字典。 只需将可封送的值添加到任何层元素的字典。 它们将作为依赖关系图的一部分进行保存。
+如果只希望代码将值附加到依赖关系图中的任何元素，则无需定义 MEF 组件。 ILayerElement 中有一个名为的字典 `Properties` 。 [ILayerElement](/previous-versions/ff644511(v=vs.140)) 只需将可封送的值添加到任何层元素的字典。 它们将作为依赖关系图的一部分进行保存。
 
 ## <a name="editable-properties"></a>可编辑属性
 
-**初始准备工作**
+**初始准备**
 
 > [!IMPORTANT]
 > 若要显示属性，请在要显示层属性的每台计算机上进行以下更改：
@@ -43,7 +43,7 @@ ms.locfileid: "75590587"
 >      `devenv /rootSuffix /updateConfiguration`
 >
 >      `devenv /rootSuffix Exp /updateConfiguration`
-> 4. 重新启动 Visual Studio。
+> 4. 重启 Visual Studio。
 
 **确保你的代码在 VSIX 项目中**
 
@@ -63,11 +63,11 @@ public class MyProperty : PropertyExtension<ILayerElement>
 
 可以在[ILayerElement](/previous-versions/ff644511(v=vs.140))或其任何派生类上定义属性，其中包括：
 
-- `ILayerModel` - 模型
+- `ILayerModel`-模型
 
-- `ILayer` - 每一层
+- `ILayer`-每个层
 
-- `ILayerDependencyLink` - 层与层之间的链接
+- `ILayerDependencyLink`-层之间的链接
 
 - `ILayerComment`
 

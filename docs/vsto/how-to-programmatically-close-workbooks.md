@@ -1,7 +1,7 @@
 ---
 title: 如何：以编程方式关闭工作簿
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,12 +13,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: ea2ec3162ae7ffdee20f65452f67b0ddf4cc2dd1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3d3fe0f929632bd7021def9f6597182aa8fea87b
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62575398"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547493"
 ---
 # <a name="how-to-programmatically-close-workbooks"></a>如何：以编程方式关闭工作簿
   你可以关闭活动工作簿，也可以指定关闭某个工作簿。
@@ -52,10 +52,10 @@ ms.locfileid: "62575398"
      [!code-csharp[Trin_VstcoreExcelAutomationAddIn#2](../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs#2)]
      [!code-vb[Trin_VstcoreExcelAutomationAddIn#2](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#2)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [使用工作簿](../vsto/working-with-workbooks.md)
 - [如何：以编程方式保存工作簿](../vsto/how-to-programmatically-save-workbooks.md)
 - [如何：以编程方式打开工作簿](../vsto/how-to-programmatically-open-workbooks.md)
-- [主机项和主机控件的编程限制](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)
+- [宿主项和宿主控件的编程限制](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)
 - [Office 解决方案中的可选参数](../vsto/optional-parameters-in-office-solutions.md)
 - [主机项和主机控件概述](../vsto/host-items-and-host-controls-overview.md)
