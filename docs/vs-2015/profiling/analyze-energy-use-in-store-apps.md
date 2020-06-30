@@ -14,19 +14,19 @@ caps.latest.revision: 39
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: a3147a6bafc550383f96134f5a76932413eb8a22
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 82f5e6401ba65a0dfaffc268890ece0166432c08
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299371"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85532946"
 ---
 # <a name="analyze-energy-use-in-store-apps"></a>分析应用商店应用中的能量使用
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Visual Studio 的 **“能耗”** 探查器可以帮助你分析低功率平板设备上的 Windows 应用商店应用的功率和能耗情况，这些低功率平板设备在所有时间或部分时间内靠自有电池运行。 在电池供电的设备上，如果应用程序使用过多的能量，可能导致客户非常不满，最终客户甚至可能将其卸载。 能量利用的优化可使更多的客户选择并使用你的应用程序。  
   
-## <a name="BKMK_What_the_Energy_Consumption_tool_is__how_it_works__and_what_it_measures"></a> “能量消耗”探查器的定义、工作机制和测量内容  
+## <a name="what-the-energy-consumption-profiler-is-how-it-works-and-what-it-measures"></a><a name="BKMK_What_the_Energy_Consumption_tool_is__how_it_works__and_what_it_measures"></a>能源消耗探查器的定义、工作原理和测量内容  
  “能耗”探查器在分析会话期间捕获设备的显示器、CPU 和网络连接的活动。 然后生成这些活动所使用功率的估计值和分析会话使用的总能量。  
   
 > [!NOTE]
@@ -36,18 +36,18 @@ Visual Studio 的 **“能耗”** 探查器可以帮助你分析低功率平板
   
  “能量消耗”探查器使用下面 *功率* 和 *能量*的定义：  
   
-- 功率 用于衡量一段时间内做功而用力的速率。 在电力学中，功率的标准单位是瓦特，其定义为一安培电流流经一伏特的电位差时做功的速率。 在“电源使用” 关系图中，单位显示为毫瓦“mW” ，这是一瓦的千分之一。  
+- 功率  用于衡量一段时间内做功而用力的速率。 在电力学中，功率的标准单位是瓦特  ，其定义为一安培电流流经一伏特的电位差时做功的速率。 在“电源使用”  关系图中，单位显示为毫瓦“mW”  ，这是一瓦的千分之一。  
   
    请注意，由于功率是一种速率，它有方向（功可以在一段时间内增加或减少）和速度（功的增加量或减少量）。  
   
-- 能量 以电容或电势的形式衡量总功率数，如电池的功率容量或在一段时间内消耗的总功率。 能量单位为瓦时，即一瓦持续作用一小时所产生的功率数量。 在 **“能量摘要”** 中，单位显示为毫瓦时 **“mW-h”** 。  
+- 能量  以电容或电势的形式衡量总功率数，如电池的功率容量或在一段时间内消耗的总功率。 能量单位为瓦时，即一瓦持续作用一小时所产生的功率数量。 在 **“能量摘要”** 中，单位显示为毫瓦时 **“mW-h”** 。  
   
-  ![能源容量、已用电量、使用的总能量](../profiling/media/energyprof-capcitypowerused.png "ENERGYPROF_CapcityPowerUsed")  
+  ![能量容量、已用功率和已用总能量](../profiling/media/energyprof-capcitypowerused.png "ENERGYPROF_CapcityPowerUsed")  
   
   例如，平板电脑中充满电的电池存储了一定数量的能量。 当能量用于执行网络通信、计算值或显示图像等任务时，电池的功率以不同的速率消耗。 对于任意一段时间，消耗的功率的总和还可按能量进行衡量。  
   
-## <a name="BKMK_Identify_scenarios_with_user_marks"></a> 用用户标记标识方案  
- 可以向分析数据添加“用户标记” 以帮助标识时间线标尺中的区域。  
+## <a name="identify-scenarios-with-user-marks"></a><a name="BKMK_Identify_scenarios_with_user_marks"></a>用用户标记标识方案  
+ 可以向分析数据添加“用户标记”  以帮助标识时间线标尺中的区域。  
   
  ![时间线中的用户标记](../profiling/media/profilers-usermarktimeline.png "PROFILERS_UserMarkTimeline")  
   
@@ -60,7 +60,7 @@ Visual Studio 的 **“能耗”** 探查器可以帮助你分析低功率平板
  执行此方法时，用户标记将与消息一起添加到分析数据中。  
   
 > [!NOTE]
-> - Windows.Foundation.Diagnostics LoggingChannel 实现 [Windows.Foundation.IClosable](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iclosable.aspx) 接口（在 C# 和 VB 中表现为 [System.IDisposable](https://msdn.microsoft.com/library/System.IDisposable.aspx)）。若要避免操作系统资源泄露，请在完成日志记录通道时调用 [LoggingChannel.Close](https://msdn.microsoft.com/library/windows/apps/windows.foundation.diagnostics.loggingchannel.close.aspx)()（在 C# 和 VB 中为 Windows.Foundation.Diagnostics.LoggingChannel.Dispose()）。  
+> - LoggingChannel 实现[windows.foundation.iclosable](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iclosable.aspx)接口（在 c # 和 VB 中被投影为[IDisposable](https://msdn.microsoft.com/library/System.IDisposable.aspx) ）。若要避免泄露操作系统资源，请在完成日志记录通道后，调用[LoggingChannel](https://msdn.microsoft.com/library/windows/apps/windows.foundation.diagnostics.loggingchannel.close.aspx)（）（在 c # 和 VB 中为 LoggingChannel （））。  
 >   - 每个打开的日志记录通道都必须有唯一的名称。 尝试创建与未释放的通道同名的新日志记录通道会导致出现异常。  
   
  **向 JavaScript 代码添加标记**  
@@ -75,7 +75,7 @@ if (performance && performance.mark) {
   
  *markDescription* 是包含要在用户标记工具提示中显示的消息的字符串。  
   
-## <a name="BKMK_Configure_your_environment_for_profiling"></a> 配置要分析的环境  
+## <a name="configure-your-environment-for-profiling"></a><a name="BKMK_Configure_your_environment_for_profiling"></a>配置要分析的环境  
  若要获取合理估计值，你需要分析由电池供电的低功率设备上的应用程序的能量使用情况。 由于 Visual Studio 不能在大多数的此类设备上运行，因此你需要使用 Visual Studio 远程工具将 Visual Studio 计算机连接到此类设备。 若要连接到远程设备，需要配置 Visual Studio 项目和此远程设备。 有关详细信息，请参阅[在远程计算机上运行 Windows 应用商店应用](../debugger/run-windows-store-apps-on-a-remote-machine.md)。  
   
 > [!TIP]
@@ -83,16 +83,16 @@ if (performance && performance.mark) {
 >   - 在由电池供电的目标设备上进行分析。  
 >   - 关闭可能使用相同资源（网络、CPU 或显示屏）的其他应用程序。  
   
-## <a name="BKMK_Collect_energy_profile_data_for_your_app"></a> 收集应用的能量分布曲线数据  
+## <a name="collect-energy-profile-data-for-your-app"></a><a name="BKMK_Collect_energy_profile_data_for_your_app"></a>收集应用的能量配置文件数据  
   
-1. 在“调试” 菜单中，选择“启动诊断（不调试）”。  
+1. 在“调试” **** 菜单中，选择 ****“启动诊断（不调试）”。  
   
      ![在诊断中心选择“能量消耗”](../profiling/media/energyprof-diagnosticshub.png "ENERGYPROF_DiagnosticsHub")  
   
-2. 选择 **“能耗”** ，然后选择 **“启动”** 。  
+2. 选择 **“能耗”** ，然后选择 **“启动”**。  
   
     > [!NOTE]
-    > 启动 **“能耗”** 探查器时，可能会看到 **“用户帐户控制”** 窗口，要求你提供运行 VsEtwCollector.exe 的权限。 选择 **“是”** 。  
+    > 启动 "**能量消耗**" 探查器时，可能会看到一个 "**用户帐户控制**" 窗口，要求您有权运行 VsEtwCollector.exe 的权限。 选择 **“是”** 。  
   
 3. 执行你的应用程序以收集数据。  
   
@@ -102,10 +102,10 @@ if (performance && performance.mark) {
   
      Visual Studio 将分析收集的数据并显示结果。  
   
-## <a name="BKMK_Collect_energy_profile_data_for_an_installed_app"></a> 收集已安装应用的能量分布曲线数据  
- 能耗工具只能在从 Visual Studio 解决方案启动或从 Windows 应用商店中安装的 Window Store 8.1 应用程序上运行。 在 Visual Studio 中打开解决方案时，默认目标为 **“启动项目”** 。 面向已安装的应用程序：  
+## <a name="collect-energy-profile-data-for-an-installed-app"></a><a name="BKMK_Collect_energy_profile_data_for_an_installed_app"></a>收集已安装应用的能源分析数据  
+ 能耗工具只能在从 Visual Studio 解决方案启动或从 Windows 应用商店中安装的 Window Store 8.1 应用程序上运行。 在 Visual Studio 中打开解决方案时，默认目标为 **“启动项目”**。 面向已安装的应用程序：  
   
-1. 选择 **“更改目标”** ，然后选择 **“已安装的应用程序”** 。  
+1. 选择 **“更改目标”** ，然后选择 **“已安装的应用程序”**。  
   
 2. 从 **“选择已安装的应用程序包”** 列表中选择目标。  
   
@@ -115,12 +115,12 @@ if (performance && performance.mark) {
   
    若要停止分析，请切回到 Visual Studio (Alt + Tab) 并在“诊断中心”页面上选择 **“停止收集”** 。  
   
-## <a name="BKMK_Analyze_energy_profile_data"></a> 分析能量分布曲线数据  
+## <a name="analyze-energy-profile-data"></a><a name="BKMK_Analyze_energy_profile_data"></a>分析能源分析数据  
  能量分布曲线数据显示在 Visual Studio 文档窗口中：  
   
  ![“能量探查器”报表页](../profiling/media/energyprof-all.png "ENERGYPROF_All")  
   
-|||  
+|映像|说明|  
 |-|-|  
 |![步骤 1](../profiling/media/procguid-1.png "ProcGuid_1")|报告文件名为 Report*YYYYMMDD-HHMM*.diagsession。 如果你决定保存此报告，可以更改此名称。|  
 |![步骤 2](../profiling/media/procguid-2.png "ProcGuid_2")|时间线显示分析会话的长度、应用程序生命周期激活事件以及用户标记。|  
@@ -133,7 +133,7 @@ if (performance && performance.mark) {
   
  找到资源功率达到高峰的区域。 将高峰区域与应用程序的功能联系起来。 然后使用时间线上的时间线控制条放大到此区域。 如果关注网络使用率，请展开 **“资源(打开/关闭)”** 图中的 **“网络”**  节点，对比网络连接的打开时间和应用程序通过连接接收或传输数据的时间。 减少不必要的网络打开时间是非常有效的优化。  
   
-## <a name="BKMK_Optimize_energy_use"></a> 优化能量利用  
+## <a name="optimize-energy-use"></a><a name="BKMK_Optimize_energy_use"></a>优化能源使用  
  除了传输数据，网络连接的初始化、维护和关闭也会消耗能量。 某些网络在发送或接收数据后会将连接维持一段时间，以便通过一个连接传输更多数据。 你可以使用 **“资源(打开/关闭)”** 窗格检查你的应用程序与连接的交互方式。  
   
  ![“资源(打开/关闭)”窗格](../profiling/media/energyprof-resources.png "ENERGYPROF_Resources")  
@@ -144,9 +144,9 @@ if (performance && performance.mark) {
   
  对于显示所消耗的能量，你的控制力较小。 大多数屏幕显示亮色比显示暗色所需要的能量更多，因此使用暗色背景可以降低成本。  
   
-## <a name="BKMK_Other_resources"></a> 其他资源  
+## <a name="other-resources"></a><a name="BKMK_Other_resources"></a>其他资源  
   
-- Windows开发人员中心中 [C#/VB/C++ 和 XAML](https://msdn.microsoft.com/0ee0b706-8432-4d49-9801-306ed90764e1) 和 [JavaScript 和 HTML](https://msdn.microsoft.com/372afa6a-1c7c-4657-967d-03a77cd8e933) 的“连接状态和成本管理”  部分介绍了提供网络连接信息的 Windows API，你的应用程序可以使用这些信息最大程度降低网络通信成本。  
+- Windows 开发人员中心中 [C#/VB/C++ 和 XAML](https://msdn.microsoft.com/0ee0b706-8432-4d49-9801-306ed90764e1) 和 [JavaScript 和 HTML](https://msdn.microsoft.com/372afa6a-1c7c-4657-967d-03a77cd8e933) 的“连接状态和成本管理”**** 部分介绍了提供网络连接信息的 Windows API，你的应用程序可以使用这些信息最大程度降低网络通信成本。  
   
      使用 Windows 应用商店应用程序的 Visual Studio 模拟器可以模拟网络信息 API 的数据连接属性。 请参见 [Run Windows Store apps in the simulator](../debugger/run-windows-store-apps-in-the-simulator.md)  
   
