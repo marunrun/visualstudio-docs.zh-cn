@@ -1,5 +1,5 @@
 ---
-title: 来自资源的清单 |微软文档
+title: Manifest from Resources |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 0234109b-5dcb-4d9d-acb9-a63f8bd5699c
@@ -8,65 +8,64 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: cb853963cc5ca6fbe6080249daa8fcf9c08bf943
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: 6ea5931c77e267bc6065693be1ae144c250ce6df
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80707280"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85536223"
 ---
 # <a name="manifest-from-resources"></a>Manifest from Resources
-"来自资源清单"工具是一个控制台应用程序，它获取图像资源列表（.png 或 .xaml 文件），并生成一个 .image 清单文件，允许这些图像与可视化工作室影像服务一起使用。 此外，此工具可用于将图像添加到现有的 .image 清单。 此工具可用于将高 DPI 和图像的鸣制支持添加到 Visual Studio 扩展中。 生成的 .imagemanifest 文件应包含在 Visual Studio 扩展名 （.vsix） 中并部署。
+Manifest from Resources 工具是一个控制台应用程序，它获取图像资源（.png 或 .xaml 文件）的列表并生成一个 imagemanifest 文件，该文件允许将这些图像与 Visual Studio 图像服务一起使用。 此外，此工具可用于将图像添加到现有的 imagemanifest。 此工具可用于将图像的高 DPI 和主题支持添加到 Visual Studio 扩展。 生成的 imagemanifest 文件应包含在中，并部署为 Visual Studio 扩展（.vsix）的一部分。
 
 ## <a name="how-to-use-the-tool"></a>如何使用该工具
  **语法**
 
- 清单资源/资源：\<第1>;\<Img1> /\<装配：装配\<名称>可选阿格斯>
+ ManifestFromResources/resources： \<Dir1> ; \<Img1> /assembly： \<AssemblyName>\<Optional Args>
 
- **自变量**
+ **参数**
 
-||||
+|**交换机名称**|**说明**|**必需或可选**|
 |-|-|-|
-|**切换名称**|**说明**|**必需或可选**|
-|/资源|图像或目录的分号分隔列表。 此列表应始终包含将在清单中的图像的完整列表。 如果只提供了部分列表，则未包含的条目将丢失。<br /><br /> 如果给定的资源文件是图像条，该工具将在将每个子映像添加到清单之前将其拆分为单独的图像。<br /><br /> 如果图像是 .png 文件，我们建议您设置这样的名称格式，以便该工具可以填写图像的正确属性：\<名称>。\<宽度>。\<高度>.png。|必选|
-|/装配|托管程序集的名称（不包括扩展）或承载资源的本机程序集的运行时路径（相对于清单的运行时位置）。|必选|
-|/清单|要为生成的 .imagemanifest 文件提供的名称。 这还可以包括一个绝对路径或相对路径，用于在不同位置创建文件。 默认名称与程序集名称匹配。<br /><br /> 默认值：\<当前目录><\\程序集\>.imagemanifest|可选|
-|/吉德名称|要为生成的清单中的所有图像为 GUID 符号提供的名称。<br /><br /> 默认值：资产已恢复|可选|
-|/根路径|在创建托管资源 URI 之前需要剥离的根路径。 （此标志用于帮助解决工具获取相对 URI 路径错误导致资源无法加载的情况。<br /><br /> 默认值：\<当前目录>|可选|
-|/递归|设置此标志会告诉工具递归地搜索 /resources 参数中的任何目录。 省略此标志将导致仅对目录进行顶级搜索。|可选|
-|/是本机|当程序集参数是本机程序集的路径时，设置此标志。 当程序集参数是托管程序集的名称时，省略此标志。 （有关此标志的其他信息，请参阅"备注"部分。|可选|
-|/新吉|设置此标志会告诉工具为图像的 GUID 符号创建新值，而不是从现有清单合并该值。|可选|
-|/新 ID|设置此标志会告诉工具为每个图像创建新的 ID 符号值，而不是合并现有清单中的值。|可选|
+|/resources|以分号分隔的图像或目录的列表。 此列表应始终包含清单中将包含的映像的完整列表。 如果只提供了部分列表，则不包含的项将丢失。<br /><br /> 如果给定的资源文件是图像条，则该工具会将其拆分为单独的映像，然后将每个 subimage 添加到清单中。<br /><br /> 如果图像是 .png 文件，我们建议您将此名称设置为如下格式，以便该工具可以填充图像的正确属性： \<Name> ... \<Width> \<Height>png.|必选|
+|/assembly|托管程序集的名称（不包括扩展名），或承载资源的本机程序集的运行时路径（相对于清单的运行时位置）。|必选|
+|/manifest|要赋给生成的 imagemanifest 文件的名称。 这还可以包含在其他位置创建文件的绝对或相对路径。 默认名称与程序集名称匹配。<br /><br /> 默认值： \<Current Directory> \\<Assembly \> . imagemanifest|可选|
+|/guidName|要为生成的清单中的所有图像提供 GUID 符号的名称。<br /><br /> 默认值： AssetsGuid|可选|
+|/rootPath|需要在创建托管资源 Uri 之前去掉的根路径。 （此标志用于帮助处理错误的相关 URI 路径，从而导致资源无法加载。）<br /><br /> 默认值：\<Current Directory>|可选|
+|/recursive|如果设置此标志，则会告诉工具以递归方式搜索/resources 参数中的所有目录。 省略此标志将导致搜索顶级目录。|可选|
+|/isNative|如果程序集参数是本机程序集的路径，则设置此标志。 如果程序集参数是托管程序集的名称，则忽略此标志。 （有关此标志的其他信息，请参阅 "备注" 部分。）|可选|
+|/newGuids|如果设置此标志，则会告诉工具为映像 GUID 符号创建新值，而不是合并现有清单中的值。|可选|
+|/newIds|如果设置此标志，则会告诉工具为每个图像创建新的 ID 符号值，而不是合并现有清单中的值。|可选|
 |/noLogo|设置此标志将停止打印产品和版权信息。|可选|
-|/?|打印帮助信息。|可选|
-|/help|打印帮助信息。|可选|
+|/?|打印出帮助信息。|可选|
+|/help|打印出帮助信息。|可选|
 
  **示例**
 
-- 清单源/资源：D：\图像/程序集：我的.程序集.名称/本机
+- ManifestFromResources/resources： D:\Images/assembly：/isNative
 
-- 清单源/资源：D：\图像\Image1.png;D：图像\Image1.xaml/程序集：我的.assembly.名称/清单：MyImageManifest.imagemanifest
+- ManifestFromResources/resources:D:\Images\Image1.png;D： \Images\Image1.xaml/assembly：：/manifest： MyImageManifest. imagemanifest
 
-- 清单源/资源：D：\图像\Image1.png;D：图像\Image1.xaml/程序集：我的.assembly.名称/guidName：MyImages/newGuids/newIds
+- ManifestFromResources/resources:D:\Images\Image1.png;D： \Images\Image1.xaml/assembly：/guidName： MyImages/newGuids/newIds
 
-## <a name="notes"></a>说明
+## <a name="notes"></a>注意
 
-- 该工具仅支持 .png 和 .xaml 文件。 将忽略任何其他图像或文件类型。 针对分析资源时遇到的所有不支持的类型生成警告。 如果工具完成分析资源后未找到受支持的图像，则将生成错误
+- 该工具仅支持 .png 和 .xaml 文件。 任何其他图像或文件类型将被忽略。 对于分析资源时遇到的所有不支持的类型，将生成一个警告。 如果在工具完成对资源的分析后找不到支持的映像，则会生成错误
 
-- 通过遵循建议的 .png 图像格式，该工具将 .png 的大小/尺寸值设置为格式指定的大小，即使它与图像的实际大小不同。
+- 通过遵循 .png 图像的建议格式，该工具会将 .png 的大小/维度值设置为格式指定的大小，即使该大小与图像的实际大小不同也是如此。
 
-- 可以为 .png 图像省略宽度/高度格式，但该工具将读取图像的实际宽度/高度，并将这些宽度/高度用于图像的大小/尺寸值。
+- Png 图像的宽度/高度格式可以省略，但该工具会读取图像的实际宽度/高度，并使用图像的大小/维度值。
 
-- 在同一图像条上多次为同一图像清单运行此工具将导致重复的清单条目，因为该工具尝试将图像条拆分为独立图像并将这些图像添加到现有清单。
+- 在同一图像条带上多次运行此工具，以实现相同的 imagemanifest。该工具会尝试将图像条拆分为独立的映像，并将其添加到现有清单中。
 
-- 合并（省略/新吉德或 /newIds）应仅针对工具生成的清单进行。 已自定义或通过其他方式生成的清单可能无法正确合并。
+- 只应对工具生成的清单进行合并（忽略/newGuids 或/newIds）。 通过其他方式自定义或生成的清单可能无法正确合并。
 
-- 为本机程序集生成的清单可能需要在生成后进行手动编辑，以使 ID 符号与本机程序集的 .rc 文件中的资源 ID 匹配。
+- 为本机程序集生成的清单可能需要在生成后进行手动编辑，使 ID 符号与本机程序集的 .rc 文件中的资源 Id 匹配。
 
 ## <a name="sample-output"></a>示例输出
- **简单的图像清单**
+ **简单图像清单**
 
- 图像清单将类似于此 .xml 文件：
+ 图像清单将类似于以下 .xml 文件：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -92,7 +91,7 @@ ms.locfileid: "80707280"
 
  **图像条的图像清单**
 
- 图像条的图像清单将类似于此 .xml 文件：
+ 图像条的图像清单将类似于以下 .xml 文件：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -129,7 +128,7 @@ ms.locfileid: "80707280"
 
  **本机程序集映像资源的图像清单**
 
- 本机映像的图像清单将类似于此 .xml 文件：
+ 本机映像的图像清单将类似于以下 .xml 文件：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

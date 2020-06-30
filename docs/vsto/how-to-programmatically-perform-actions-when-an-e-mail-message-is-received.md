@@ -1,7 +1,7 @@
 ---
-title: 以编程方式执行操作，如果收到电子邮件消息
+title: 如果收到电子邮件，则以编程方式执行操作
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -15,15 +15,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a0787db2f7055bc65871227b9fcf8cbbb60ec1d8
-ms.sourcegitcommit: 25570fb5fb197318a96d45160eaf7def60d49b2b
+ms.openlocfilehash: 75278a52fb989e5142e5981dab604bf3da49bd99
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66402200"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85537860"
 ---
-# <a name="how-to-programmatically-perform-actions-when-an-email-message-is-received"></a>如何：以编程方式执行操作时收到一封电子邮件
-  此示例执行自定义操作时用户会收到一封电子邮件。
+# <a name="how-to-programmatically-perform-actions-when-an-email-message-is-received"></a>如何：在收到电子邮件时以编程方式执行操作
+  此示例在用户收到电子邮件时执行自定义操作。
 
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]
 
@@ -31,7 +31,7 @@ ms.locfileid: "66402200"
  [!code-vb[Trin_Outlook_RL_PerformActions#1](../vsto/codesnippet/VisualBasic/Trin_Outlook_RL_PerformActions/thisaddin.vb#1)]
  [!code-csharp[Trin_Outlook_RL_PerformActions#1](../vsto/codesnippet/CSharp/Trin_Outlook_RL_PerformActions/thisaddin.cs#1)]
 
-## <a name="see-also"></a>请参阅
-- [如何：Office 项目中创建事件处理程序](../vsto/how-to-create-event-handlers-in-office-projects.md)
+## <a name="see-also"></a>另请参阅
+- [如何：在 Office 项目中创建事件处理程序](../vsto/how-to-create-event-handlers-in-office-projects.md)
 - [使用邮件项](../vsto/working-with-mail-items.md)
 - [VSTO 外接程序编程入门](../vsto/getting-started-programming-vsto-add-ins.md)

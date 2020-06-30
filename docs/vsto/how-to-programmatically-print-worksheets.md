@@ -1,7 +1,7 @@
 ---
 title: 如何：以编程方式打印工作表
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -14,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 764723d0749cd82739d8e67ee71104f41a0f9065
-ms.sourcegitcommit: 5b34052a1c7d86179d7898ed532babb2d9dad4a3
+ms.openlocfilehash: b0affdd34ad1cb302beacdc1abc9d02275878afd
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69490584"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85537886"
 ---
 # <a name="how-to-programmatically-print-worksheets"></a>如何：以编程方式打印工作表
 
@@ -36,7 +36,7 @@ ms.locfileid: "69490584"
     [!code-csharp[Trin_VstcoreExcelAutomation#22](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#22)]
     [!code-vb[Trin_VstcoreExcelAutomation#22](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#22)]
 
-   方法使您可以在 "**打印预览**" 窗口中显示指定的对象。 <xref:Microsoft.Office.Tools.Excel.Worksheet.PrintPreview%2A> 以下代码假定你已具有一个名为 `Sheet1` 的 <xref:Microsoft.Office.Tools.Excel.Worksheet> 主机项。
+   <xref:Microsoft.Office.Tools.Excel.Worksheet.PrintPreview%2A>方法使您可以在 "**打印预览**" 窗口中显示指定的对象。 以下代码假定你已具有一个名为 `Sheet1` 的 <xref:Microsoft.Office.Tools.Excel.Worksheet> 主机项。
 
 ### <a name="to-preview-a-page-before-printing"></a>在打印之前预览页面
 
@@ -54,7 +54,7 @@ ms.locfileid: "69490584"
     [!code-csharp[Trin_VstcoreExcelAutomationAddIn#14](../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs#14)]
     [!code-vb[Trin_VstcoreExcelAutomationAddIn#14](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#14)]
 
-   方法使您可以在 "**打印预览**" 窗口中显示指定的对象。 <xref:Microsoft.Office.Interop.Excel._Worksheet.PrintPreview%2A>
+   <xref:Microsoft.Office.Interop.Excel._Worksheet.PrintPreview%2A>方法使您可以在 "**打印预览**" 窗口中显示指定的对象。
 
 ### <a name="to-preview-a-page-before-printing"></a>在打印之前预览页面
 
@@ -63,7 +63,7 @@ ms.locfileid: "69490584"
      [!code-csharp[Trin_VstcoreExcelAutomationAddIn#15](../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs#15)]
      [!code-vb[Trin_VstcoreExcelAutomationAddIn#15](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#15)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用工作表](../vsto/working-with-worksheets.md)
 - [如何：以编程方式在工作表中检查拼写](../vsto/how-to-programmatically-check-spelling-in-worksheets.md)

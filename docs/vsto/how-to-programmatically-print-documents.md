@@ -1,7 +1,7 @@
 ---
 title: 如何：以编程方式打印文档
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,19 +13,19 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 3df7ad4a5569a0c123d8c0e284ff7ad57e900355
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 413d0e4f56aeb897af4f16a0dc6c43b4f04eace7
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62956039"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85537821"
 ---
 # <a name="how-to-programmatically-print-documents"></a>如何：以编程方式打印文档
   你可以将整个 Microsoft Office Word 文档或文档的一部分打印到默认打印机。
 
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]
 
-## <a name="print-a-document-that-is-part-of-a-document-level-customization"></a>打印属于文档级自定义文档
+## <a name="print-a-document-that-is-part-of-a-document-level-customization"></a>打印属于文档级自定义项的文档
 
 ### <a name="to-print-the-entire-document"></a>若要打印整个文档
 
@@ -41,7 +41,7 @@ ms.locfileid: "62956039"
      [!code-vb[Trin_VstcoreWordAutomation#12](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#12)]
      [!code-csharp[Trin_VstcoreWordAutomation#12](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#12)]
 
-## <a name="print-a-document-by-using-a-vsto-add-in"></a>通过使用 VSTO 外接程序中打印文档
+## <a name="print-a-document-by-using-a-vsto-add-in"></a>使用 VSTO 外接程序打印文档
 
 ### <a name="to-print-an-entire-document"></a>若要打印整个文档
 
@@ -57,5 +57,5 @@ ms.locfileid: "62956039"
      [!code-vb[Trin_VstcoreWordAutomationAddIn#12](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#12)]
      [!code-csharp[Trin_VstcoreWordAutomationAddIn#12](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#12)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [Office 解决方案中的可选参数](../vsto/optional-parameters-in-office-solutions.md)

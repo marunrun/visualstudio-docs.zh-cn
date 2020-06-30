@@ -15,27 +15,27 @@ caps.latest.revision: 11
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 24579e6aa3ba1bf70ed6f195091152b60f3232a3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c884eb569d5682326d2dc667363f991467171386
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72604013"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85533349"
 ---
-# <a name="ca1061-do-not-hide-base-class-methods"></a>CA1061：不要隐藏基类方法
+# <a name="ca1061-do-not-hide-base-class-methods"></a>CA1061:不要隐藏基类方法
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|值|
 |-|-|
 |TypeName|DoNotHideBaseClassMethods|
 |CheckId|CA1061|
-|类别|Microsoft. Design|
+|Category|Microsoft. Design|
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
  派生类型声明一个方法，该方法具有相同的名称，并且参数的参数数目与它的一个基方法相同;一个或多个参数是基方法中的相应参数的基类型;所有剩余参数的类型都与基方法中的相应参数的类型相同。
 
-## <a name="rule-description"></a>规则说明
+## <a name="rule-description"></a>规则描述
  当派生方法的参数签名只是与基方法的参数签名中的相应类型的派生程度更弱的类型不同时，基类型中的同名方法会隐藏基类型中的方法。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突

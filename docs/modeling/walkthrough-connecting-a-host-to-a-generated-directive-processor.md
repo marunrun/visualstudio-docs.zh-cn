@@ -1,7 +1,7 @@
 ---
 title: 将主机连接到生成的指令处理器
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - walkthroughs [text templates], connecting host to processor
 - text templates, custom directive hosts
@@ -13,12 +13,12 @@ ms.workload:
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: a27b856b9c5129f725381afa34bd134009002216
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: c782b84f39419272c271f41d217442cc9e001b3f
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75593975"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85535858"
 ---
 # <a name="walkthrough-connect-a-host-to-a-generated-directive-processor"></a>演练：将主机连接到生成的指令处理器
 
@@ -90,23 +90,23 @@ ms.locfileid: "75593975"
 
 1. 打开 CustomHost 解决方案。
 
-2. 在“项目”菜单上，单击“添加引用”。
+2. 在“项目”菜单上，单击“添加引用”   。
 
      此时将打开 "**添加引用**" 对话框，其中显示了 " **.net** " 选项卡。
 
 3. 添加以下引用：
 
-    - Microsoft.VisualStudio.Modeling.Sdk.11.0
+    - VisualStudio （web.config）
 
-    - Microsoft.VisualStudio.Modeling.Sdk.Diagrams.11.0
+    - VisualStudio. 11.0. 11。0
 
-    - Microsoft.VisualStudio.TextTemplating.11.0
+    - VisualStudio. TextTemplating
 
-    - Microsoft.VisualStudio.TextTemplating.Interfaces.11.0
+    - VisualStudio. TextTemplating。
 
-    - Microsoft.VisualStudio.TextTemplating.Modeling.11.0
+    - VisualStudio （TextTemplating）
 
-    - Microsoft.VisualStudio.TextTemplating.VSHost.11.0
+    - VisualStudio. TextTemplating. Vshost.exe
 
 4. 在 Program.cs 或 Module1 的顶部，添加以下代码行：
 
@@ -118,7 +118,7 @@ ms.locfileid: "75593975"
     Imports Microsoft.Win32
     ```
 
-5. 找到 `StandardAssemblyReferences`属性的代码，并将其替换为以下代码：
+5. 找到属性的代码 `StandardAssemblyReferences` ，并将其替换为以下代码：
 
     > [!NOTE]
     > 在此步骤中，你将添加对你的主机将支持的生成的指令处理器所需的程序集的引用。
@@ -154,7 +154,7 @@ ms.locfileid: "75593975"
     }
     ```
 
-6. 找到函数 `ResolveDirectiveProcessor`的代码，并将其替换为以下代码：
+6. 找到函数的代码 `ResolveDirectiveProcessor` ，并将其替换为以下代码：
 
     > [!IMPORTANT]
     > 此代码包含对要连接到的所生成指令处理器名称的硬编码引用。 您可以轻松地使此方法更常规，在这种情况下，它会查找注册表中列出的所有指令处理器，并尝试找到匹配项。 在这种情况下，主机将适用于任何生成的指令处理器。
@@ -228,7 +228,7 @@ ms.locfileid: "75593975"
             }
     ```
 
-7. 在“文件”菜单上，单击“全部保存”。
+7. 在“文件”菜单上，单击“全部保存” 。
 
 8. 在 **“生成”** 菜单上，单击 **“生成解决方案”** 。
 
@@ -238,7 +238,7 @@ ms.locfileid: "75593975"
 
 ### <a name="create-a-text-template-to-test-the-custom-host"></a>创建文本模板以测试自定义主机
 
-1. 创建一个文本文件，并将其命名为 `TestTemplateWithDP.tt`。 您可以使用任何文本编辑器（例如记事本）来创建该文件。
+1. 创建一个文本文件，并将其命名为 `TestTemplateWithDP.tt` 。 您可以使用任何文本编辑器（例如记事本）来创建该文件。
 
 2. 向文本文件中添加以下内容：
 
@@ -312,9 +312,9 @@ ms.locfileid: "75593975"
     #>
     ```
 
-3. 在代码中，将路径 \<替换为在第一个过程中创建的特定于设计语言的示例文件的路径 >。
+3. 在代码中， \<YOUR PATH> 将替换为在第一个过程中创建的特定于设计语言的示例文件的路径。
 
-4. 保存并关闭文件。
+4. 保存并关闭该文件。
 
 ### <a name="test-the-custom-host"></a>测试自定义主机
 
@@ -327,7 +327,7 @@ ms.locfileid: "75593975"
      `<YOUR PATH>CustomHost\bin\Debug\CustomHost.exe`
 
     > [!NOTE]
-    > 您可以在**Windows 资源管理器**中浏览到文件 CustomHost，然后将该文件拖入命令提示符窗口，而不是键入地址。
+    > 您可以浏览到**Windows 资源管理器**中 CustomHost.exe 的文件，然后将该文件拖入命令提示符窗口，而不是键入地址。
 
 3. 键入一个空格。
 
@@ -338,13 +338,13 @@ ms.locfileid: "75593975"
      `<YOUR PATH>TestTemplateWithDP.txt`
 
     > [!NOTE]
-    > 您可以在**Windows 资源管理器**中浏览到文件 TestTemplateWithDP，然后将该文件拖入命令提示符窗口，而不是键入地址。
+    > 您可以浏览到**Windows 资源管理器**中 TestTemplateWithDP.txt 的文件，然后将该文件拖入命令提示符窗口，而不是键入地址。
 
      自定义主机应用程序将运行并启动文本模板转换过程。
 
-5. 在**Windows 资源管理器**中，浏览到包含文件 TestTemplateWithDP 的文件夹。
+5. 在**Windows 资源管理器**中，浏览到 TestTemplateWithDP.txt 的文件所在的文件夹。
 
-     该文件夹还包含文件 TestTemplateWithDP1。
+     该文件夹还包含 TestTemplateWithDP1.txt 的文件。
 
 6. 打开此文件可以查看文本模板转换的结果。
 
