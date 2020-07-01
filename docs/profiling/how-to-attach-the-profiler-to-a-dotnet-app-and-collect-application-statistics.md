@@ -2,7 +2,7 @@
 title: 将探查器附加到 .NET Framework 独立应用程序；获取应用程序统计信息
 ms.custom: seodec18
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: b62fcbc1-791f-474e-890a-a6c332e0c9ea
 author: mikejo5000
 ms.author: mikejo
@@ -10,12 +10,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9084f2d1dd784172735c66d38da785dffb74d82c
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 68450129d9bb3e9e67793c0a4155e953abbccc3d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74779176"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85531802"
 ---
 # <a name="how-to-attach-the-profiler-to-a-net-framework-stand-alone-application-and-collect-application-statistics-by-using-the-command-line"></a>如何：将探查器附加到 .NET Framework 独立应用程序，并使用命令行收集应用程序统计信息
 本文介绍了如何使用 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 分析工具命令行工具将探查器附加到正在运行的 .NET Framework 独立（客户端）应用程序，并使用采样方法收集性能统计信息。
@@ -73,9 +73,8 @@ ms.locfileid: "74779176"
 
    - 默认情况下，性能数据为每 10,000,000 个非暂停处理器时钟周期采样一次。 在 1GH 的处理器上，大约每 10 秒一次。 可以指定下面的选项之一，更改时钟周期间隔或指定其他采样事件。[/targetclr](../profiling/targetclr.md):  `Version` 指定应用程序中加载运行时的多个版本时要分析的 CLR 版本。 可选。
 
-   |||
-   |-|-|
    |样本事件|描述|
+   |-|-|
    |[/timer](../profiling/timer.md) **:** `Interval`|将采样间隔更改为 `Interval` 所指定的非暂停时钟周期数目。|
    |[/pf](../profiling/pf.md) [:  `Interval`]|将采样事件更改为页面错误。 如果已指定 `Interval`，则会设置样本之间的页面错误数目。 默认值为 10。|
    |[/sys](../profiling/sys-vsperfcmd.md) [ **:** `Interval`]|将采样事件更改为从进程对操作系统内核的系统调用 (syscall)。 如果已指定 `Interval`，则会设置样本之间的调用次数。 默认值为 10。|

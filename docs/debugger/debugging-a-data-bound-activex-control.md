@@ -1,7 +1,7 @@
 ---
 title: 调试数据绑定 ActiveX 控件 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - CSharp
 - VB
@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 82376be37eeb7dd7946b44556a2931e761e2824d
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 460277670d76ddcc1001ba2d6060107ea405601e
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738241"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85350519"
 ---
 # <a name="debugging-a-data-bound-activex-control"></a>调试数据绑定 ActiveX 控件
 如果开发的是将被绑定到数据源控件的 ActiveX 控件，可以通过创建自己的容器应用程序并将该容器用于调试该 ActiveX 控件。

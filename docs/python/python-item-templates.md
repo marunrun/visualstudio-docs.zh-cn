@@ -2,7 +2,7 @@
 title: Python 项目的项模板
 description: 可通过 Visual Studio 中的“添加”>“新项”对话框来获取 Python 项目项模板的引用列表。
 ms.date: 12/06/2018
-ms.topic: tutorial
+ms.topic: reference
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
@@ -10,12 +10,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: c093dad1364fd5209f51c8e87e3fb99b3c1d3c4a
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: 528606356c2d976de71ab2c0317a1a0236d2e63f
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "62430327"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85533388"
 ---
 # <a name="python-item-templates"></a>Python 项模板
 

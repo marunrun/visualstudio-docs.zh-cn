@@ -2,7 +2,7 @@
 title: 面向 Python 开发人员的 Visual Studio 概述
 titleSuffix: ''
 ms.date: 03/13/2019
-ms.topic: conceptual
+ms.topic: overview
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
@@ -11,23 +11,23 @@ dev_langs:
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 8b8b656aaefe4440e811378da2b84d1b944d4fb1
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: b97655efac3fc42f5e5790e32c97de169e61a6b5
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "73661930"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85520583"
 ---
 # <a name="welcome-to-the-visual-studio-ide--python"></a>欢迎使用 Visual Studio IDE | Python
 
-Visual Studio“集成开发环境”是面向 Python （和其他语言）的创新启动板，可用于编辑、调试并生成代码，然后发布应用  。 集成开发环境 (IDE) 是一个功能丰富的程序，可用于软件开发的许多方面。 除了大多数 IDE 提供的标准编辑器和调试器之外，Visual Studio 还包括代码完成工具、交互式 REPL 环境以及其他功能，以简化软件开发过程。
+Visual Studio“集成开发环境”是面向 Python （和其他语言）的创新启动板，可用于编辑、调试并生成代码，然后发布应用。 集成开发环境 (IDE) 是一个功能丰富的程序，可用于软件开发的许多方面。 除了大多数 IDE 提供的标准编辑器和调试器之外，Visual Studio 还包括代码完成工具、交互式 REPL 环境以及其他功能，以简化软件开发过程。
 
 [![带有 Python 项目的 Visual Studio](media/tour-ide-overview.png)](media/tour-ide-overview.png#lightbox)
 
 此图像显示 Visual Studio 中含有一个打开的 Python 项目和若干重要的工具窗口：
 
-- 可通过[解决方案资源管理器](../ide/solutions-and-projects-in-visual-studio.md)（右上方）查看、导航和管理代码文件  。 解决方案资源管理器可将代码文件分组为[解决方案和项目](../get-started/tutorial-projects-solutions.md)，从而帮助整理代码  。
-  - 除“解决方案资源管理器”外，还有[“Python 环境”](managing-python-environments-in-visual-studio.md)，可在其中管理计算机上安装的不同 Python 解释器   。
+- 可通过[解决方案资源管理器](../ide/solutions-and-projects-in-visual-studio.md)（右上方）查看、导航和管理代码文件。 解决方案资源管理器可将代码文件分组为[解决方案和项目](../get-started/tutorial-projects-solutions.md)，从而帮助整理代码。
+  - 除“解决方案资源管理器”外，还有[“Python 环境”](managing-python-environments-in-visual-studio.md)，可在其中管理计算机上安装的不同 Python 解释器 。
 
   ::: moniker range=">=vs-2019"
   - 还可以打开并运行文件夹中的 Python 代码，而无需创建 Visual Studio 项目和解决方案文件。 有关详细信息，请参阅[快速入门：打开并运行文件夹中的 Python 代码](quickstart-05-python-visual-studio-open-folder.md)。
@@ -58,7 +58,7 @@ Visual Studio 中的一些常用功能可帮助你在开发软件时提高工作
 
 - [重构](refactoring-python-code.md)
 
-   通过右键单击一段代码并选择“快速操作和重构”，便可执行 Visual Studio 提供的一系列操作，例如智能重命名变量、将一个或多个代码行提取到新方法中、更改方法参数的顺序等操作  。
+   通过右键单击一段代码并选择“快速操作和重构”，便可执行 Visual Studio 提供的一系列操作，例如智能重命名变量、将一个或多个代码行提取到新方法中、更改方法参数的顺序等操作。
 
    ![在 Visual Studio 中重构](media/tour-ide-refactor-extract-method.png)
 
@@ -82,7 +82,7 @@ Visual Studio 中的一些常用功能可帮助你在开发软件时提高工作
 
 - [转到和速览定义](../ide/go-to-and-peek-definition.md)
 
-   “转到定义”功能可将你直接带到定义函数或类型的位置  。 “速览定义”命令在窗口中显示定义而不打开单独的文件  。 “查找所有引用”命令还提供了一种有用的方法来发现不仅定义而且使用了给定标识符的位置  。
+   “转到定义”功能可将你直接带到定义函数或类型的位置。 “速览定义”命令在窗口中显示定义而不打开单独的文件。 “查找所有引用”命令还提供了一种有用的方法来发现不仅定义而且使用了给定标识符的位置。
 
    ![代码导航命令](media/tour-ide-navigation-commands.png)
 
@@ -100,13 +100,13 @@ Visual Studio 中的一些常用功能可帮助你在开发软件时提高工作
 
 - [Python 交互式 REPL](python-interactive-repl-in-visual-studio.md)
 
-    Visual Studio 为每个 Python 环境提供交互读取-评估-打印-循环 (REPL) 窗口，改进了在命令行中运行 python.exe  获得的 REPL。 在“交互式”窗口中，可以输入任意 Python 代码并查看即时结果  。
+    Visual Studio 为每个 Python 环境提供交互读取-评估-打印-循环 (REPL) 窗口，改进了在命令行中运行 python.exe 获得的 REPL。 在“交互式”窗口中，可以输入任意 Python 代码并查看即时结果。
 
     ![Python 交互窗口](media/interactive-window.png)
 
 - [调试](debugging-python-in-visual-studio.md)
 
-    Visual Studio 提供全面的 Python 调试体验，包括附加到正在运行的进程，在监视窗口和即时窗口中计算表达式，检查局部变量、断点、单步执行/单步跳出/单步跳过语句、设置下一语句等    。 你还可以调试在 Linux 计算机上运行的远程 Python 代码。
+    Visual Studio 提供全面的 Python 调试体验，包括附加到正在运行的进程，在监视窗口和即时窗口中计算表达式，检查局部变量、断点、单步执行/单步跳出/单步跳过语句、设置下一语句等  。 你还可以调试在 Linux 计算机上运行的远程 Python 代码。
 
     ![在 Visual Studio 中调试 Python](media/remote-debugging-breakpoint-hit.png)
 

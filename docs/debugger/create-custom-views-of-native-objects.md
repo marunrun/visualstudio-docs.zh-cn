@@ -2,7 +2,7 @@
 title: 创建 C++ 对象的自定义视图
 description: 使用 Natvis 框架自定义 Visual Studio 在调试器中显示本机类型的方式
 ms.date: 03/02/2020
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - natvis
 dev_langs:
@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f8bdd8d26ba450b1aedd790d644c183607c44af
-ms.sourcegitcommit: b4e0cc76d94fe8cf6d238c4cc09512d17131a195
+ms.openlocfilehash: 5720511c15526a54a82018b2079b91aaf5dd6430
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81224506"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85350701"
 ---
 # <a name="create-custom-views-of-c-objects-in-the-debugger-using-the-natvis-framework"></a>使用 Natvis 框架在调试器中创建 C++ 对象的自定义视图
 

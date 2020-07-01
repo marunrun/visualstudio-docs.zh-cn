@@ -2,7 +2,7 @@
 title: 选择并安装 Python 解释器
 description: Visual Studio 中支持的 Python 解释器的完整列表，并简要说明了可以在哪里找到它们的安装程序。
 ms.date: 06/05/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
@@ -10,12 +10,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 13290aef7acfe599c7693af4be771c625e713596
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: fb1c657789e232307672d494710f330758780a67
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75735813"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85540720"
 ---
 # <a name="install-python-interpreters"></a>安装 Python 解释器
 

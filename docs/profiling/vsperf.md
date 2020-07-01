@@ -1,7 +1,7 @@
 ---
 title: VSPerf | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: b5854e62-279e-4850-bfeb-0c6ef82f4805
 author: mikejo5000
 ms.author: mikejo
@@ -9,12 +9,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 051c983920ddc80909d721e569c5efb5ecd33a7c
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: c58033e89742650dc097a7469cbf62d7b6168509
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74779930"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85520362"
 ---
 # <a name="vsperf"></a>VSPerf
 使用 **VsPerf** 命令行工具可以：
@@ -28,7 +28,7 @@ ms.locfileid: "74779930"
 ## <a name="uwp-apps-only"></a>仅 UWP 应用
  这些选项仅适用于 UWP 应用。
 
-|||
+|选项|描述|
 |-|-|
 |**/app:{AppName}**|启动探查器，然后等待指定的应用从“开始”菜单中启动。<br /><br /> 运行 `vsperf /listapps` 以查看应用名称和已安装应用的 PackageFullName。|
 |**/package:{PackageFullName}**|启动探查器，然后等待指定的应用从“开始”菜单中启动。<br /><br /> 运行 `vsperf /listapps` 以查看应用名称和已安装应用的 PackageFullName。|
@@ -39,7 +39,7 @@ ms.locfileid: "74779930"
 ## <a name="windows-8-desktop-applications-and-windows-server-2012-applications-only"></a>仅限 Windows 8 桌面应用程序和 Windows Server 2012 应用程序
  这些选项不适用于 UWP 应用。
 
-|||
+|选项|描述|
 |-|-|
 |**/launch:{Executable}**|启动并开始分析指定的可执行文件。|
 |**/args:{ExecutableArguments}**|指定要传递 **/launch** 目标的命令行参数。|
@@ -48,7 +48,7 @@ ms.locfileid: "74779930"
 ## <a name="all-applications"></a>所有应用程序
  这些选项适用于任何 Windows 8 或 Windows Server 2012 应用程序。
 
-|||
+|选项|描述|
 |-|-|
 |**/attach:{PID&#124;ProcessName}[,PID&#124;ProcessName]...**|从指定的进程收集数据。<br /><br /> 使用任务管理器查看正在运行的应用的进程 ID (PID) 和进程名称。|
 |**/file:{ReportName}**|可选。 指定输出文件（将覆盖现有文件）。<br /><br /> 仅与 /package 或 /attach 一起使用。|
@@ -58,6 +58,6 @@ ms.locfileid: "74779930"
 |**/detach**|停止数据收集，但允许目标进程继续运行。|
 |**/status**|显示探查器状态。|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [Windows 8 和 Windows Server 2012 应用程序上的性能工具](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)
 - [通过命令行分析](../profiling/using-the-profiling-tools-from-the-command-line.md)
