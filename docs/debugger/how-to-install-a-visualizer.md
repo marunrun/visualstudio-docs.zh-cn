@@ -1,6 +1,6 @@
 ---
 title: 如何：安装可视化工具 | Microsoft Docs
-ms.date: 11/04/2016
+ms.date: 06/10/2020
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c79fd5522447378b879443eb8dccabfe7081af4f
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 99d8c0b0181286465ffe8321470d035961803a64
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84183621"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85286383"
 ---
 # <a name="how-to-install-a-visualizer"></a>如何：安装可视化工具
 创建了可视化工具后，您还必须安装该可视化工具，这样您才可在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 中使用它。 安装可视化工具是个简单的过程。
@@ -43,7 +43,7 @@ ms.locfileid: "84183621"
 
     - `My Documents\` VisualStudioVersion `\Visualizers`
     
-3. 将 [调试对象端](create-custom-visualizers-of-data.md#to-create-the-visualizer-object-source-for-the-debuggee-side) DLL 复制到下列位置之一：
+3. 将[调试对象端](create-custom-visualizers-of-data.md#to-create-the-visualizer-object-source-for-the-debuggee-side) DLL 复制到下列位置之一：
 
     - VisualStudioInstallPath `\Common7\Packages\Debugger\Visualizers\` Framework 
 
@@ -53,6 +53,10 @@ ms.locfileid: "84183621"
     - 对于运行 `.NET Framework` 运行时的调试对象，为 `net2.0`。
     - 对于使用支持 `netstandard 2.0`（`.NET Framework v4.6.1+` 或 `.NET Core 2.0+`）的运行时的调试对象，为 `netstandard2.0`。
     - 对于运行 `.NET Core` 运行时的调试对象，为 `netcoreapp`。 （支持 `.NET Core 2.0+`）
+
+   如果要创建独立可视化工具，则需要调试对象端 DLL。 此 DLL 包含数据对象的代码，该代码可实现 <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource> 方法。
+
+   如果你对调试对象端代码设定了多个目标，则必须将调试对象端 DLL 置于最小支持 TFM 的文件夹中。
 
 4. 重新启动调试会话。
 

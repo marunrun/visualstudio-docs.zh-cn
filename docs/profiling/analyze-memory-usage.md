@@ -8,24 +8,24 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 21522ba32990a850a388bfcf69ab239232a2c23d
-ms.sourcegitcommit: 9c1cecaff4d9955276eee7865b78d47679dd1e2a
+ms.openlocfilehash: 1c3a072408fd8f166475919d988766fb42fa7c54
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80638426"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85285941"
 ---
 # <a name="analyze-memory-usage"></a>分析内存使用情况
 
 可以使用多种工具查找内存泄漏和低效内存使用情况，例如集成了调试程序的“内存使用情况”诊断工具，或性能探查器中的工具（如 .NET 对象分配工具和事后分析“内存使用情况”工具）。
 
-通过内存使用率工具可以拍摄托管和本机内存堆的一个或多个快照  。 可收集 .NET、ASP.NET、本机或混合模式（.NET 和本机）应用的快照。 “内存使用情况”工具可以在打开的 Visual Studio 项目和已安装的 Microsoft Store 应用上运行，也可以附加到正在运行的应用或进程  。 无论是否进行调试，都可以运行“内存使用情况”工具  。 有关详细信息，请参阅[运行带或不带调试器的分析工具](../profiling/running-profiling-tools-with-or-without-the-debugger.md)。 在调试程序中，你可以打开和关闭内存分析，并查看按每个对象细分的内存使用情况。 可以在暂停执行时（例如在断点处）查看内存使用情况结果。
+通过内存使用率工具可以拍摄托管和本机内存堆的一个或多个快照  。 可收集 .NET、ASP.NET、本机或混合模式（.NET 和本机）应用的快照。 “内存使用情况”工具可以在打开的 Visual Studio 项目和已安装的 Microsoft Store 应用上运行，也可以附加到正在运行的应用或进程。 无论是否进行调试，都可以运行“内存使用情况”工具。 有关详细信息，请参阅[运行带或不带调试器的分析工具](../profiling/running-profiling-tools-with-or-without-the-debugger.md)。 在调试程序中，你可以打开和关闭内存分析，并查看按每个对象细分的内存使用情况。 可以在暂停执行时（例如在断点处）查看内存使用情况结果。
 
-.NET 对象分配工具可帮助确定 .NET 代码中的分配模式和异常  。 此工具仅作为事后分析工具运行。 可以在本地或远程计算机上运行此工具。
+.NET 对象分配工具可帮助确定 .NET 代码中的分配模式和异常。 此工具仅作为事后分析工具运行。 可以在本地或远程计算机上运行此工具。
 
 有关描述如何使用内存分析工具的详细说明，请参阅[分析内存使用情况](../profiling/memory-usage.md)教程和 [.NET 对象分配工具](../profiling/dotnet-alloc-tool.md)。
 
-可 Windows 7 及更高版本中使用不带调试器的分析工具。 要运行带调试器的分析工具（“诊断工具”窗口），需具备 Windows 8 及更高版本  。
+可 Windows 7 及更高版本中使用不带调试器的分析工具。 要运行带调试器的分析工具（“诊断工具”窗口），需具备 Windows 8 及更高版本。
 
 ## <a name="blogs-and-videos"></a>博客和视频
 

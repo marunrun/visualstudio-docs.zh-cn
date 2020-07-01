@@ -1,19 +1,19 @@
 ---
 title: 图形诊断入门 | Microsoft Docs
 ms.custom: seodec18
-ms.date: 05/26/2017
+ms.date: 06/08/2020
 ms.topic: conceptual
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 575b0254768ac359e43cd5b04c23a220549ac973
-ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
+ms.openlocfilehash: 473946353a1ea044464e409a75a838eaf52a1483
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/22/2020
-ms.locfileid: "77557928"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85286539"
 ---
 # <a name="getting-started-with-visual-studio-graphics-diagnostics"></a>Visual Studio 图形诊断入门
 在此部分中，你会准备首次使用图形诊断，然后从 Direct3D 应用捕获帧并在图形分析器中检查它们。
@@ -52,12 +52,18 @@ ms.locfileid: "77557928"
  现在你拥有所有所需内容，已准备好开始使用图形诊断。 请执行这些步骤。
 
 ### <a name="1---create-a-direct3d-app"></a>1 - 创建 Direct3D 应用
- 如果你已经拥有自己的 Direct3D 应用，可以用来探索图形诊断，那就再好不过了！ 如果没有，可以使用以下项之一：
 
+如果你已经拥有自己的 Direct3D 应用，可以用来探索图形诊断，那就再好不过了！ 如果没有，可以使用以下项之一：
+
+::: moniker range=">=vs-2019"
+从 [Direct3D 游戏示例](https://docs.microsoft.com/samples/microsoft/windows-universal-samples/simple3dgamedx/)下载示例。
+::: moniker-end
+::: moniker range="vs-2017"
 - 适用于 Windows 10 的“DirectX 11 应用(通用 Windows)”或“DirectX 12 应用(通用 Windows)”项目模板。
 - 适用于 Windows 10 的 [Direct3D 12 UAP 示例](https://code.msdn.microsoft.com/Direct3D-12-UAP-Sample-ecb1779f)。
+::: moniker-end
 
-  确保在继续之前可以生成应用。
+在继续之前，请确保你可以生成和运行应用。 依次选择“生成” > “生成解决方案”，以确保它在生成时不会出错。 然后，依次选择“调试” > “在不调试的情况下启动”(Ctrl+F5)，以确保它能正常运行。 根据要用此工具测试的计算机，可能需要调整示例的平台和调试目标。 例如，若要在 Visual Studio 主机上对 x64 平台进行测试，请选择“x64”作为解决方案平台，并选择“本地计算机”作为调试目标。 
 
 ### <a name="2---start-a-graphics-diagnostics-session"></a>2 - 启动图形诊断会话
  现在你已准备好启动第一个图形诊断会话。 在 Visual Studio 中的主菜单上，依次选择“调试”、“图形”、“启动图形诊断”，或只需按 Alt+F5 。 这会在图形诊断下启动你的应用并在 Visual Studio 中显示诊断会话窗口。

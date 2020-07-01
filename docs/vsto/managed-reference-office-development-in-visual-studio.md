@@ -1,7 +1,7 @@
 ---
 title: 托管参考（Visual Studio 中的 Office 开发）
 ms.date: 08/14/2019
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 - CSharp
@@ -13,15 +13,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 137031202075d1c646cc7415042dd8d6eab72b78
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 29e8a2206432555e58b47691233bd46c49791046
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985771"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85519855"
 ---
 # <a name="managed-reference-office-development-in-visual-studio"></a>托管参考（Visual Studio 中的 Office 开发）
-  本部分包含在针对 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](includes/net-v45-md.md)]的 Office 项目中使用的命名空间和类型的 API 参考文档。 有关面向 .NET Framework 3.5 的 Office 项目中使用的命名空间和类型的 API 参考文档，请参阅 Visual Studio 文档中的以下参考部分：[托管参考（Visual studio 中的 Office 开发)](managed-reference-office-development-in-visual-studio.md).
+  本部分包含在针对 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](includes/net-v45-md.md)]的 Office 项目中使用的命名空间和类型的 API 参考文档。 有关面向 .NET Framework 3.5 的 Office 项目中使用的命名空间和类型的 API 参考文档，请参阅 Visual Studio 文档中的以下参考部分：[托管参考（Visual studio 中的 Office 开发）](managed-reference-office-development-in-visual-studio.md)。
 
 [!include[Add-ins note](includes/addinsnote.md)]
 
@@ -70,8 +70,8 @@ ms.locfileid: "72985771"
 
  包含用于生成 Office 项目的 MSBuild 任务类。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [Visual Studio tools for Office runtime 概述](visual-studio-tools-for-office-runtime-overview.md)
-- [Visual Studio &#40;中的 Office 开发入门&#41;](getting-started-office-development-in-visual-studio.md)
+- [开始 &#40;Visual Studio 中的 Office 开发&#41;](getting-started-office-development-in-visual-studio.md)
 - [Office 开发示例和演练](office-development-samples-and-walkthroughs.md)
 - [设计和创建 Office 解决方案](designing-and-creating-office-solutions.md)

@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: 1e6c6714720d652fff266e3e852d01982c98e34a
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: a292b37a50bbf667fa5b23f18879cd79c3f76805
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84173863"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85292174"
 ---
 用于托管服务器的 Web 部署 3.6 提供额外的配置功能，可实现从 UI 创建发布设置文件。
 
-1. 如果在 Windows 服务器上已安装 Web 部署 3.6，请使用“控制面板” > “程序” > “卸载程序”将其卸载。  
+1. 如果已在 Windows Server 上安装 Web 部署，请使用“控制面板” > “程序” > “卸载程序”将其卸载。
 
 2. 接下来，在 Windows 服务器上安装用于托管服务器的 Web 部署 3.6。
 
@@ -24,6 +24,12 @@ ms.locfileid: "84173863"
 
     需要脚本和工具来生成发布设置文件。
 
-4. 根据需要，打开“控制面板”>“系统和安全”>“管理工具”>“服务”来验证 Web 部署是否正确运行，并确保“Web 部署代理服务”正在运行（旧版本中的服务名称不同） 。
+4. 根据需要，打开“控制面板”>“系统和安全”>“管理工具”>“服务”来验证 Web 部署是否正确运行，然后确保：
 
-    如果代理服务未运行，请启动该服务。 如果服务根本不存在，请转到“控制面板”>“程序”>“卸载程序”，查找“Microsoft Web 部署 \<version>” 。 选择“更改”安装，并确保对 Web 部署组件选择“将安装到本地驱动器” 。 完成更改安装步骤。
+    * “Web 部署代理服务”正在运行（旧版本中的服务名称不同）。
+
+    * “Web 管理服务”正在运行。
+
+    如果某个代理服务未运行，请重新启动“Web 部署代理服务”。
+
+    如果 Web 部署代理服务不存在，请转到“控制面板”>“程序”>“卸载程序”，查找“Microsoft Web 部署 \<version>。 选择“更改”安装，并确保对 Web 部署组件选择“将安装到本地驱动器” 。 完成更改安装步骤。

@@ -11,12 +11,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fef5a84285afdaa429606937f3e537863b060ec8
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: bb75d6fc02f2841383127482503799b2c78512cf
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77632156"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85289178"
 ---
 # <a name="standard-and-custom-toolset-configurations"></a>标准和自定义工具集配置
 
@@ -29,12 +29,12 @@ MSBuild 工具集包含对可用来生成应用程序项目的任务、目标和
 
 |ToolsVersion|工具集路径（如 MSBuildToolsPath 或 MSBuildBinPath 生成属性中所指定）|
 |------------------| - |
-|2.0|\<Windows installation path\Microsoft.Net\Framework\v2.0.50727\\ |
-|3.5|\<Windows installation path>\Microsoft.NET\Framework\v3.5\\ |
-|4.0|\<Windows installation path>\Microsoft.NET\Framework\v4.0.30319\\ |
-|当前|\<Visual Studio installation path>\MSBuild\Current\bin |
+|2.0|\<Windows installation path>\Microsoft.Net\Framework\v2.0.50727\\|
+|3.5|\<Windows installation path>\Microsoft.NET\Framework\v3.5\\|
+|4.0|\<Windows installation path>\Microsoft.NET\Framework\v4.0.30319\\|
+|当前|\<Visual Studio installation path>\MSBuild\Current\bin|
 
- `ToolsVersion` 值确定 Visual Studio 生成的项目使用哪个工具集。 在 Visual Studio 2019 中，默认值为“Current”（不管在项目文件中指定了哪个版本），但可在命令提示符处使用 /toolsversion 开关重写该属性  。 有关此属性和其他指定 `ToolsVersion` 的方式的信息，请参阅[重写 ToolsVersion 设置](../msbuild/overriding-toolsversion-settings.md)。
+ `ToolsVersion` 值确定 Visual Studio 生成的项目使用哪个工具集。 在 Visual Studio 2019 中，默认值为“Current”（不管在项目文件中指定了哪个版本），但可在命令提示符处使用 /toolsversion 开关重写该属性。 有关此属性和其他指定 `ToolsVersion` 的方式的信息，请参阅[重写 ToolsVersion 设置](../msbuild/overriding-toolsversion-settings.md)。
 
  ::: moniker-end
 
@@ -43,27 +43,27 @@ MSBuild 工具集包含对可用来生成应用程序项目的任务、目标和
 
 |ToolsVersion|工具集路径（如 MSBuildToolsPath 或 MSBuildBinPath 生成属性中所指定）|
 |------------------| - |
-|2.0|\<Windows installation path\Microsoft.Net\Framework\v2.0.50727\\ |
-|3.5|\<Windows installation path>\Microsoft.NET\Framework\v3.5\\ |
-|4.0|\<Windows installation path>\Microsoft.NET\Framework\v4.0.30319\\ |
-|15.0|\<Visual Studio installation path>\MSBuild\15.0\bin |
+|2.0|\<Windows installation path>\Microsoft.Net\Framework\v2.0.50727\\|
+|3.5|\<Windows installation path>\Microsoft.NET\Framework\v3.5\\|
+|4.0|\<Windows installation path>\Microsoft.NET\Framework\v4.0.30319\\|
+|15.0|\<Visual Studio installation path>\MSBuild\15.0\bin|
 
- `ToolsVersion` 值确定 Visual Studio 生成的项目使用哪个工具集。 在 Visual Studio 2017 中，默认值为“15.0”（不管在项目文件中指定了哪个版本），但可在命令提示符处使用 /toolsversion 开关重写该属性  。 有关此属性和其他指定 `ToolsVersion` 的方式的信息，请参阅[重写 ToolsVersion 设置](../msbuild/overriding-toolsversion-settings.md)。
+ `ToolsVersion` 值确定 Visual Studio 生成的项目使用哪个工具集。 在 Visual Studio 2017 中，默认值为“15.0”（不管在项目文件中指定了哪个版本），但可在命令提示符处使用 /toolsversion 开关重写该属性。 有关此属性和其他指定 `ToolsVersion` 的方式的信息，请参阅[重写 ToolsVersion 设置](../msbuild/overriding-toolsversion-settings.md)。
  ::: moniker-end
 
 Visual Studio 2017 及更高版本不对 MSBuild 路径使用注册表项。 对于随附 Visual Studio 2017 安装的 15.0 之前的 MSBuild 版本，以下注册表项指定了 MSBuild.exe 的安装路径。
 
 |注册表项|项名称|字符串键值|
 |------------------|--------------|----------------------|
-|\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ MSBuild\ToolsVersions\2.0\\  |MSBuildToolsPath |.NET Framework 2.0 安装路径 |
-|\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ MSBuild\ToolsVersions\3.5\\  |MSBuildToolsPath |.NET Framework 3.5 安装路径 |
-|\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ MSBuild\ToolsVersions\4.0\\  |MSBuildToolsPath |.NET Framework 4 安装路径 |
+|\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ MSBuild\ToolsVersions\2.0\\ |MSBuildToolsPath|.NET Framework 2.0 安装路径|
+|\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ MSBuild\ToolsVersions\3.5\\ |MSBuildToolsPath|.NET Framework 3.5 安装路径|
+|\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ MSBuild\ToolsVersions\4.0\\ |MSBuildToolsPath|.NET Framework 4 安装路径|
 
 ### <a name="sub-toolsets"></a>子工具集
 
  如果上表中的注册表项有一个子项，MSBuild 会使用它确定子工具集的路径是否有可能重写父工具集中的路径。 下面是一个示例子项：
 
- \HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSBuild\ToolsVersions\12.0\12.0 
+ \HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSBuild\ToolsVersions\12.0\12.0
 
  如果基本工具集和选定的子工具集中均定义了某个属性，则使用子工具集中的属性定义。 例如，MSBuild 4.0 工具集将 `SDK40ToolsPath` 定义为指向 7.0A SDK，但是 MSBuild 4.0\11.0 工具集将同一属性定义为指向 8.0A SDK。 如果取消设置 `VisualStudioVersion`，`SDK40ToolsPath` 将指向 7.0A，但如果将 `VisualStudioVersion` 设置为 11.0，该属性将改为指向 8.0A。
 
@@ -74,9 +74,9 @@ Visual Studio 2017 及更高版本不对 MSBuild 路径使用注册表项。 对
 
 ## <a name="custom-toolset-definitions"></a>自定义工具集定义
 
- 当标准工具集不满足生成要求时，可以创建自定义工具集。 例如，你可能有一套生成实验室方案，方案中必须有一个单独的系统用于生成 C++ 项目。 通过使用自定义工具集，可在创建项目或运行 MSBuild.exe  时将自定义值指定为 `ToolsVersion` 属性。 这样，也可以使用 `$(MSBuildToolsPath)` 属性从该目录导入 .targets  文件，以及定义自己的自定义工具集属性，该属性可用于任何使用该工具集的项目。
+ 当标准工具集不满足生成要求时，可以创建自定义工具集。 例如，你可能有一套生成实验室方案，方案中必须有一个单独的系统用于生成 C++ 项目。 通过使用自定义工具集，可在创建项目或运行 MSBuild.exe 时将自定义值指定为 `ToolsVersion` 属性。 这样，也可以使用 `$(MSBuildToolsPath)` 属性从该目录导入 .targets 文件，以及定义自己的自定义工具集属性，该属性可用于任何使用该工具集的项目。
 
- 在 MSBuild.exe  或托管 MSBuild 引擎的自定义工具（如果正在使用的话）的配置文件中指定自定义工具集。 例如，如果想要定义名为 MyCustomToolset 的工具集，MSBuild.exe 的配置文件可以包含以下工具集定义   。
+ 在 MSBuild.exe 或托管 MSBuild 引擎的自定义工具（如果正在使用的话）的配置文件中指定自定义工具集。 例如，如果想要定义名为 MyCustomToolset 的工具集，MSBuild.exe 的配置文件可以包含以下工具集定义 。
 
 ```xml
 <msbuildToolsets default="MyCustomToolset">
@@ -102,10 +102,7 @@ Visual Studio 2017 及更高版本不对 MSBuild 路径使用注册表项。 对
 > [!NOTE]
 > 若要正确读取，`<configSections>` 必须是 `<configuration>` 部分中的第一个子节。
 
- `ToolsetConfigurationSection` 是一个可供任意 MSBuild 主机用于自定义配置的自定义配置部分。 如果使用自定义工具集，则主机除了提供配置文件项外，无需再执行任何其他操作便可初始化生成引擎。 通过在注册表中定义这些项，可指定计算机范围内的、适用于 MSBuild.exe  、Visual Studio 及所有 MSBuild 主机的工具集。
-
-> [!NOTE]
-> 如果已在注册表中定义了 `ToolsVersion` 的设置，而后又在配置文件中对其进行了定义，则这两个定义并不会合并。 配置文件中的定义具有优先权，而注册表中的 `ToolsVersion` 设置则会被忽略。
+ `ToolsetConfigurationSection` 是一个可供任意 MSBuild 主机用于自定义配置的自定义配置部分。 如果使用自定义工具集，则主机除了提供配置文件项外，无需再执行任何其他操作便可初始化生成引擎。
 
  下列属性特定于项目中所用的 `ToolsVersion` 的值：
 

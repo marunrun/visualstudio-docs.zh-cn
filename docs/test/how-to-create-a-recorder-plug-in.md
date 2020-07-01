@@ -1,27 +1,27 @@
 ---
 title: 创建适用于 Web 性能测试的记录器插件
 ms.date: 10/19/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - Web performance tests, recorder plug-in
 ms.assetid: 6fe13be1-aeb5-4927-9bff-35950e194da9
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 5e32faa4525edc79da3d759d67ad2b5676f38fc2
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 3f75114683a4f456d0514af20c1c201c373bd4b0
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75589135"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85287997"
 ---
 # <a name="how-to-create-a-recorder-plug-in"></a>如何：创建记录器插件
 
-通过 <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestRecorderPlugin>，可以修改记录的 Web 性能测试。 应在“Web 性能测试记录器”工具栏中选择“停止”之后，但在“Web 性能测试编辑器”中保存和显示测试之前执行此修改   。
+通过 <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestRecorderPlugin>，可以修改记录的 Web 性能测试。 应在“Web 性能测试记录器”工具栏中选择“停止”之后，但在“Web 性能测试编辑器”中保存和显示测试之前执行此修改 。
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-记录器插件使你可对动态参数执行自己的自定义关联。 通过内置的关联功能，Web 性能测试会在测试完成时或在使用 Web 性能测试编辑器工具栏上的“将动态参数提升为 Web 测试参数”时，在 Web 记录中检测动态参数   。 但是，内置的检测功能并不是总能找到所有动态参数。 例如，该功能找不到通常会在 5 到 30 分钟之间更改其值的会话 ID。 因此，必须手动执行关联过程。
+记录器插件使你可对动态参数执行自己的自定义关联。 通过内置的关联功能，Web 性能测试会在测试完成时或在使用 Web 性能测试编辑器工具栏上的“将动态参数提升为 Web 测试参数”时，在 Web 记录中检测动态参数 。 但是，内置的检测功能并不是总能找到所有动态参数。 例如，该功能找不到通常会在 5 到 30 分钟之间更改其值的会话 ID。 因此，必须手动执行关联过程。
 
 通过 <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestRecorderPlugin>，您可以为自己的自定义插件编写代码。 在“Web 性能测试编辑器”中保存和显示 Web 性能测试之前，此插件可以多种方式执行关联或修改该 Web 性能测试。 因此，如果您确定必须为许多记录关联特定动态变量，则可自动执行此过程。
 
@@ -35,20 +35,20 @@ ms.locfileid: "75589135"
 
 1. 打开包含 Web 性能和负载测试项目以及要为之创建记录器插件的 Web 性能测试的解决方案。
 
-2. 将新的“类库”项目添加到该解决方案中  。
+2. 将新的“类库”项目添加到该解决方案中。
 
-3. 在解决方案资源管理器的新类库项目文件夹中，右键单击“引用”文件夹，然后选择“添加引用”    。
+3. 在解决方案资源管理器的新类库项目文件夹中，右键单击“引用”文件夹，然后选择“添加引用”  。
 
     > [!TIP]
-    > 新类库项目文件夹的一个示例为“RecorderPlugins”  。
+    > 新类库项目文件夹的一个示例为“RecorderPlugins”。
 
-     随即显示“添加引用”对话框  。
+     随即显示“添加引用”对话框。
 
-4. 选择“.NET”选项卡  。
+4. 选择“.NET”选项卡。
 
-5. 向下滚动并选择“Microsoft.VisualStudio.QualityTools.WebTestFramework”，然后选择“确定”   。
+5. 向下滚动并选择“Microsoft.VisualStudio.QualityTools.WebTestFramework”，然后选择“确定” 。
 
-     将“Microsoft.VisualStudio.QualityTools.WebTestFramework”添加到解决方案资源管理器的“引用”文件夹中    。
+     将“Microsoft.VisualStudio.QualityTools.WebTestFramework”添加到解决方案资源管理器的“引用”文件夹中  。
 
 6. 为记录器插件编写代码。 首先，创建一个从 <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestRecorderPlugin> 派生的新公共类。
 
@@ -71,7 +71,7 @@ ms.locfileid: "75589135"
 
 8. 根据希望记录器插件在 Web 记录发生后执行的操作来添加更多代码。 例如，可以添加代码来处理自定义关联，如以下示例所示。 还可以为将注释转换为事务或向 Web 性能测试添加验证规则等操作创建记录器插件。
 
-9. 在“生成”菜单上，选择“生成 \<类库项目名称>”   。
+9. 在“生成”菜单上，选择“生成 \<class library project name>”。
 
 接下来，部署记录器插件以使其向 Visual Studio 注册。
 
@@ -79,9 +79,9 @@ ms.locfileid: "75589135"
 
 编译记录器插件后，将生成的 DLL 置于以下两个位置之一：
 
-- %ProgramFiles(x86)%\Microsoft Visual Studio\\[version]\\[edition]\Common7\IDE\PrivateAssemblies\WebTestPlugins 
+- %ProgramFiles(x86)%\Microsoft Visual Studio\\[version]\\[edition]\Common7\IDE\PrivateAssemblies\WebTestPlugins
 
-- %USERPROFILE%\Documents\Visual Studio [version]\WebTestPlugins 
+- %USERPROFILE%\Documents\Visual Studio [version]\WebTestPlugins
 
 > [!WARNING]
 > 在将记录器插件复制到以上两个位置之一后，必须重新启动 Visual Studio，以便注册记录器插件。
@@ -90,18 +90,18 @@ ms.locfileid: "75589135"
 
 1. 创建新的 Web 性能测试。
 
-     随即显示“启用 WebTestRecordPlugins”对话框  。
+     随即显示“启用 WebTestRecordPlugins”对话框。
 
-2. 选中记录器插件对应的复选框，然后选择“确定”  。
+2. 选中记录器插件对应的复选框，然后选择“确定”。
 
      在 Web 性能测试完成记录后，将执行新记录器插件。
 
     > [!WARNING]
     > 在运行使用插件的 Web 性能测试或负载测试时，可能会出现与下类似的错误：
     >
-    > **请求失败：\<插件> 事件中的异常：无法加载文件或程序集 '\<"Plug-in name".dll file>, Version=\<n.n.n.n>, Culture=neutral, PublicKeyToken=null' 或其依赖项之一。系统找不到指定的文件。**
+    > **请求失败：\<plug-in> 事件中的异常：无法加载文件或程序集 '\<"Plug-in name".dll file>, Version=\<n.n.n.n>, Culture=neutral, PublicKeyToken=null' 或其依赖项之一。系统找不到指定的文件。**
     >
-    > 如果对任何插件进行代码更改并创建新 DLL 版本 (Version=0.0.0.0)，则会引发这种情况，但插件仍会引用原来的插件版本  。 若要更正此问题，请执行以下步骤：
+    > 如果对任何插件进行代码更改并创建新 DLL 版本 (Version=0.0.0.0)，则会引发这种情况，但插件仍会引用原来的插件版本。 若要更正此问题，请执行以下步骤：
     >
     > 1. 在 Web 性能和负载测试项目中，将看到引用警告。 移除和重新添加对插件 DLL 的引用。
     > 2. 从测试或适当位置移除插件，然后再重新添加。

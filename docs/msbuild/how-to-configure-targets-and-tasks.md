@@ -8,12 +8,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fe2955feb50a28e5ba631cdeddd169973a42ed25
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 3ccb29f0ea6322a3f6bbfac5c3c0817892f74644
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77633884"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85288892"
 ---
 # <a name="how-to-configure-targets-and-tasks"></a>如何：配置目标和任务
 
@@ -110,8 +110,9 @@ ms.locfileid: "77633884"
 `MSBuildRuntime` 和 `MSBuildArchitecture` 参数提供设置目标上下文的最灵活方式，但其范围也最受限制。 一方面，因为这些参数是在任务实例本身上设置的，并在任务运行之前不会进行计算，因此可从计算时和生成时都可用的全部属性范围中派生其值。 另一方面，这些参数仅适用于特定目标中任务的特定实例。
 
 > [!NOTE]
-> 任务参数在父节点的上下文中，而不是在任务主机的上下文中进行计算。 运行时相关或体系结构相关的环境变量（例如程序文件位置）将计算为与该父节点匹配的值  。 但是，如果同一个环境变量直接由任务读取，则它会在任务主机的上下文中正确计算。
+> 任务参数在父节点的上下文中，而不是在任务主机的上下文中进行计算。 运行时相关或体系结构相关的环境变量（例如程序文件位置）将计算为与该父节点匹配的值。 但是，如果同一个环境变量直接由任务读取，则它会在任务主机的上下文中正确计算。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [配置目标和任务](../msbuild/configuring-targets-and-tasks.md)
+- [UsingTask 元素](../msbuild/usingtask-element-msbuild.md)

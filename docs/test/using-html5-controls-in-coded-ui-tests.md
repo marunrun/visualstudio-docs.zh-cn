@@ -1,18 +1,18 @@
 ---
 title: 在编码的 UI 测试中使用 HTML5 控件
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 13f5da784a43df5146a66ca868bb6add9a702906
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 3519d1cc030c69880bcc047b4b4123785c4fb8b2
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75585582"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85289334"
 ---
 # <a name="using-html5-controls-in-coded-ui-tests"></a>在编码的 UI 测试中使用 HTML5 控件
 
@@ -20,7 +20,7 @@ ms.locfileid: "75585582"
 
 [!INCLUDE [coded-ui-test-deprecation](includes/coded-ui-test-deprecation.md)]
 
-**惠?**
+**要求**
 
 - Visual Studio Enterprise
 
@@ -38,12 +38,12 @@ ms.locfileid: "75585582"
 
 |操作|录制|生成的代码|
 |-|---------------|-|
-|**播放音频**<br /><br /> 直接通过控件，或通过控件的右键单击菜单。|从 00:00:00 开始播放 \<名称> 音频|HtmlAudio.Play(TimeSpan)|
-|**搜寻音频中的特定时间**|搜寻 \<名称> 音频的 00:01:48|HtmlAudio.Seek(TimeSpan)|
-|**暂停音频**<br /><br /> 直接通过控件，或通过控件的右键单击菜单。|在 00:01:53 暂停 \<名称> 音频|HtmlAudio.Pause(TimeSpan)|
-|**音频静音**<br /><br /> 直接通过控件，或通过控件的右键单击菜单。|使 \<名称> 音频静音|HtmlAudio.Mute()|
-|**取消静音音频**<br /><br /> 直接通过控件，或通过控件的右键单击菜单。|使 \<名称> 音频取消静音|HtmlAudio.Unmute()|
-|**更改音频音量**|将 \<名称> 音频的音量设为 79%|HtmlAudio.SetVolume(float)|
+|**播放音频**<br /><br /> 直接通过控件，或通过控件的右键单击菜单。|从 00:00:00 播放 \<name> 音频|HtmlAudio.Play(TimeSpan)|
+|**搜寻音频中的特定时间**|搜寻到 00:01:48 的 \<name> 音频|HtmlAudio.Seek(TimeSpan)|
+|**暂停音频**<br /><br /> 直接通过控件，或通过控件的右键单击菜单。|在 00:01:53 处暂停 \<name> 音频|HtmlAudio.Pause(TimeSpan)|
+|**音频静音**<br /><br /> 直接通过控件，或通过控件的右键单击菜单。|\<name> 音频静音|HtmlAudio.Mute()|
+|**取消静音音频**<br /><br /> 直接通过控件，或通过控件的右键单击菜单。|取消静音 \<name> 音频|HtmlAudio.Unmute()|
+|**更改音频音量**|将 \<name> 音频的音量设为 79%|HtmlAudio.SetVolume(float)|
 
 有关可在其添加断言的属性列表，请参阅 [HTMLAudioElement](https://developer.mozilla.org/docs/Web/API/HTMLAudioElement)。
 
@@ -61,18 +61,18 @@ ms.locfileid: "75585582"
 
 |操作|录制|生成的代码|
 |-|---------------|-|
-|**播放视频**<br /><br /> 直接通过控件，或通过控件的右键单击菜单。|从 00:00:00 开始播放 \<名称> 视频|HtmlVideo.Play(TimeSpan)|
-|**搜寻视频中的特定时间**|搜寻 \<名称> 视频的 00:01:48|HtmlVideo.Seek(TimeSpan)|
-|**暂停视频**<br /><br /> 直接通过控件，或通过控件的右键单击菜单。|在 00:01:53 暂停 \<名称> 视频|HtmlVideo.Pause(TimeSpan)|
-|**视频静音**<br /><br /> 直接通过控件，或通过控件的右键单击菜单。|使 \<名称> 视频静音|HtmlVideo.Mute()|
-|**取消静音视频**<br /><br /> 直接通过控件，或通过控件的右键单击菜单。|使 \<名称> 视频取消静音|HtmlVideo.Unmute()|
-|**更改视频音量**|将 \<名称> 视频的音量设为 79%||
+|**播放视频**<br /><br /> 直接通过控件，或通过控件的右键单击菜单。|从 00:00:00 播放 \<name> 视频|HtmlVideo.Play(TimeSpan)|
+|**搜寻视频中的特定时间**|搜寻到 00:01:48 的 \<name> 视频|HtmlVideo.Seek(TimeSpan)|
+|**暂停视频**<br /><br /> 直接通过控件，或通过控件的右键单击菜单。|在 00:01:53 处暂停 \<name> 视频|HtmlVideo.Pause(TimeSpan)|
+|**视频静音**<br /><br /> 直接通过控件，或通过控件的右键单击菜单。|\<name> 视频静音|HtmlVideo.Mute()|
+|**取消静音视频**<br /><br /> 直接通过控件，或通过控件的右键单击菜单。|取消静音 \<name> 视频|HtmlVideo.Unmute()|
+|**更改视频音量**|将 \<name> 视频的音量设为 79%||
 
 有关可在其添加断言的属性列表，请参阅 [HTMLVideoElement](https://developer.mozilla.org/docs/Web/HTML/Element/video)。
 
 **搜索属性：** `HtmlVideo` 的搜索属性为 `Id`、`Name` 和 `Title`。
 
-**筛选器属性：** `HtmlVideo` 的筛选器属性为 `Src`、`Poster`、`Class`、`ControlDefinition` 和 `TagInstance`。
+**筛选器属性：** `HtmlVideo` 的筛选属性为 `Src`、`Poster``Class``ControlDefinition` 和 `TagInstance`。
 
 > [!NOTE]
 > 如果使用 -30s 或 +30s 标签对视频后退或快进，将聚合标签以定位到相应的时间。
@@ -82,7 +82,7 @@ ms.locfileid: "75585582"
 
 ![HTML5 进度条控件](../test/media/codedui_html5_progressbar.png)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [HTML 元素](https://developer.mozilla.org/docs/Web/HTML/Element)
 - [使用 UI 自动化来测试代码](../test/use-ui-automation-to-test-your-code.md)

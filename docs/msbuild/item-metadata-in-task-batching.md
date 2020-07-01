@@ -13,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 92613b96d5d85a959e3426df86168c7110b74fed
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 6152b0e64286c3cadedfcafb0ac530616c4012a6
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77633650"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85288983"
 ---
 # <a name="item-metadata-in-task-batching"></a>任务批处理中的项元数据
 
@@ -83,7 +83,7 @@ MSBuild 可基于项元数据将项列表划分为不同类别或批次，并对
 
 ## <a name="divide-several-item-lists-into-batches"></a>将多个项列表划分为多个批
 
-MSBuild 可基于相同元数据将多个项列表划分为多个批。 这样可以轻松地将不同项列表划分为多个批来生成多个程序集。 例如，可将 .cs 文件的项列表划分为一个应用程序批和一个程序集批，并将资源文件的项列表划分为一个应用程序批和程序集批  。 然后，可以使用批处理将这些项列表传递到一个任务，并生成应用程序和程序集。
+MSBuild 可基于相同元数据将多个项列表划分为多个批。 这样可以轻松地将不同项列表划分为多个批来生成多个程序集。 例如，可将 .cs 文件的项列表划分为一个应用程序批和一个程序集批，并将资源文件的项列表划分为一个应用程序批和程序集批。 然后，可以使用批处理将这些项列表传递到一个任务，并生成应用程序和程序集。
 
 > [!NOTE]
 > 如果正被传递到任务的项列表不包含任何具有引用元数据的项，则该项列表中的每个项会被传递到每个批。

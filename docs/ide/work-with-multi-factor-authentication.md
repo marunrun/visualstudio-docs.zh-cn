@@ -9,12 +9,12 @@ manager: jillfra
 ms.workload:
 - multiple
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: 696664aa5aa92a3e9a675df4803a3e65e3e81f36
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 699580689bcf00d00d2a6e07f814be4d1265bb1d
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84185697"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85283541"
 ---
 # <a name="how-to-use-visual-studio-with-accounts-that-require-multi-factor-authentication"></a>如何将 Visual Studio 与需要多重身份验证的帐户一起使用
 
@@ -33,7 +33,11 @@ ms.locfileid: "84185697"
 > [!WARNING]
 > 如果未使用此工作流，则在添加或重新验证 Visual Studio 帐户时，可能会触发降级的体验，导致多次额外的身份验证提示。 
 
-### <a name="enabling-system-web-browser"></a>启用系统 Web 浏览器  
+### <a name="enabling-system-web-browser"></a>启用系统 Web 浏览器
+
+> [!NOTE] 
+> 为了获得最佳体验，建议在继续此工作流之前清除系统的默认 Web 浏览器数据。 此外，如果 Windows 10 设置中的“访问工作或学校”下有工作或学校帐户，请验证它们是否已正确通过身份验证。
+
 要启用此工作流，请转到 Visual Studio 的“选项”对话框（“工具”>“选项…”），选择“帐户”选项卡，然后在“使用以下方式添加并重新验证帐户:”下拉列表中选取“系统 Web 浏览器”   。 
 
 :::image type="content" source="media/select-system-web-browser.png" alt-text="从菜单中选择系统 Web 浏览器。":::
@@ -43,20 +47,22 @@ ms.locfileid: "84185697"
 </br>
 :::image type="content" source="media/add-personalization-account.png" alt-text="向 Visual Studio 添加新的个性化帐户。" border="false":::
 
-此操作将打开系统的默认 Web 浏览器，要求你登录帐户，并验证任何所需的 MFA 策略。 
+此操作将打开系统的默认 Web 浏览器，要求你登录帐户，并验证任何所需的 MFA 策略。
+
+根据你的开发活动和资源配置，系统可能会提示你在会话期间重新输入凭据。 当你添加新资源或尝试访问资源时，如果之前未满足其 CA/MFA 授权要求，可能会发生这种情况。
 
 > [!NOTE] 
-> 在整个过程中，请确保浏览器保持打开状态以获得最佳体验，因为关闭浏览器可能会触发其他授权提示。 
+> 为了获得最佳体验，请保持浏览器打开，直到为资源验证了所有 CA/MFA 策略。 关闭浏览器可能会导致以前生成的 MFA 状态丢失，并且可能会提示其他授权提示。
 
 ## <a name="reauthenticating-an-account"></a>重新验证帐户  
 如果你的帐户有问题，Visual Studio 可能会要求你重新输入帐户凭据。  
 
 :::image type="content" source="media/reauthenticate-account.png" alt-text="重新验证 Visual Studio 帐户。":::
 
-单击“重新输入凭据”会打开系统的默认 Web 浏览器，并尝试自动刷新你的凭据。 如果失败，系统将要求登录你的帐户并验证任何所需的 MFA 策略。 
+单击“重新输入凭据”会打开系统的默认 Web 浏览器，并尝试自动刷新你的凭据。 如果失败，系统将要求登录你的帐户并验证任何所需的 CA/MFA 策略。
 
 > [!NOTE] 
-> 在整个过程中，请确保浏览器保持打开状态以获得最佳体验，因为关闭浏览器可能会触发其他授权提示。 
+> 为了获得最佳体验，请保持浏览器打开，直到为资源验证了所有 CA/MFA 策略。 关闭浏览器可能会导致以前生成的 MFA 状态丢失，并且可能会提示其他授权提示。
 
 ## <a name="how-to-opt-out-of-using-a-specific-azure-active-directory-tenant-in-visual-studio"></a>如何在 Visual Studio 中选择退出使用特定的 Azure Active Directory 租户
 

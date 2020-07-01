@@ -1,7 +1,7 @@
 ---
 title: 更改字体和颜色
-ms.date: 11/04/2016
-ms.topic: conceptual
+ms.date: 06/01/2020
+ms.topic: how-to
 helpviewer_keywords:
 - Visual Studio, color themes
 - color themes, Visual Studio
@@ -11,61 +11,116 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 592b8bb11fa5ea9cf18cfbd5f28aad4c487bedee
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 0eb2373117b382cb19f374581ada45a5732b9c4c
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75588871"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85284669"
 ---
 # <a name="how-to-change-fonts-and-colors-in-visual-studio"></a>如何：在 Visual Studio 中更改字体和颜色
 
-在 Visual Studio 中，你可以使用多种方式来自定义 IDE 框架和工具窗口的颜色。
+可以通过多种方式在 Visual Studio 中更改字体和颜色。 例如，可以将默认的蓝色主题更改为深色主题（也称为“深色模式”）。而且，可以将默认字体和文本大小更改为不同的字体和大小。
 
-> [!TIP]
-> 有关如何更改代码编辑器的颜色的信息，请参阅[如何：更改编辑器中的字体和颜色](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md)。
+## <a name="change-the-color-theme"></a>更改颜色主题
 
-## <a name="change-the-color-theme-of-the-ide"></a>更改 IDE 的颜色主题
+下面介绍如何在 Visual Studio 中更改 IDE 框架和工具窗口的颜色主题。
 
-1. 在菜单栏上，依次选择“工具” > “选项”。
+1. 在菜单栏上，依次选择“工具” > “选项” 。
 
-1. 在选项列表中，选择“环境” > “常规”。
+1. 在选项列表中，选择“环境” > “常规” 。
 
-1. 在“颜色主题”列表中，选择默认的“蓝色”主题，或选择“深色”或“浅色”     。
+1. 在“颜色主题”列表中，选择默认的“蓝色”主题、“浅色”主题、“深色”主题或“蓝色(额外对比度)”主题。
 
-> [!NOTE]
-> 当你更改颜色主题时，IDE 中的文本将恢复为默认值或恢复为之前自定义的字体和大小。
+   ![用于更改颜色主题的“选项”对话框的屏幕截图](media/fonts-colors-theme.png "可用于更改颜色主题的“选项”对话框的屏幕截图")
 
-> [!TIP]
-> 可以通过安装 [Visual Studio 颜色主题编辑器](https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.VisualStudio2017ColorThemeEditor)创建和编辑 Visual Studio 主题。
+    > [!NOTE]
+    > 当你更改颜色主题时，IDE 中的文本将恢复为默认值，或恢复为之前为该主题自定义的字体和大小。
 
-## <a name="use-windows-high-contrast-colors"></a>使用 Windows 高对比度颜色
-
-选择左 Alt+左 Shift+PrtScn 键。
-
-> [!WARNING]
-> 此选项为当前计算机上的所有应用程序和 UI 设置了高对比度。
-
-## <a name="change-ide-fonts"></a>更改 IDE 字体
-
-你可以在 IDE 中更改所有窗口和对话框的字体和文本大小。 你可以选择只自定义某些窗口和其他文本元素。
-
-### <a name="to-change-the-font-and-size-of-all-text-in-the-ide"></a>更改 IDE 中所有文本的字体和大小
-
-1. 在菜单栏上，依次选择“工具” > “选项”。
-
-1. 在选项列表中，选择“环境” > “字体和颜色”。
-
-1. 在“显示以下对象的设置”列表中，选择“环境字体”   。
+    :::moniker range="vs-2017"
 
     > [!TIP]
-    > 如果仅更改工具窗口的字体，则在“显示以下对象的设置”列表中，选择“所有文本工具窗口”   。
+    > 可以通过安装 [Visual Studio 2017 颜色主题编辑器](https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.VisualStudio2017ColorThemeEditor)创建和编辑你自己的 Visual Studio 主题。
 
-1. 在“字体”列表中，选择字体  。
+    :::moniker-end
 
-1. 在“大小”列表中，选择文本大小，然后选择“确定”按钮   。
+    :::moniker range="vs-2019"
 
-## <a name="see-also"></a>另请参阅
+    > [!TIP]
+    > 可以通过安装 [Visual Studio 颜色主题设计器](https://marketplace.visualstudio.com/items?itemName=ms-madsk.ColorThemeDesigner)创建和编辑你自己的 Visual Studio 主题。
 
-- [Visual Studio 的辅助功能](../ide/reference/accessibility-features-of-visual-studio.md)
-- [如何：更改编辑器中的字体和颜色](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md)
+    :::moniker-end
+
+## <a name="change-fonts-and-text-size"></a>更改字体和文本大小
+
+可以更改所有 IDE 框架和工具窗口的字体和文本大小，也可以仅为某些窗口或文本元素更改字体和文本大小。 还可以更改编辑器中的字体和文本大小。
+
+### <a name="to-change-the-font-and-text-size-in-the-ide"></a>更改 IDE 中的字体和文本大小
+
+1. 在菜单栏上，依次选择“工具” > “选项” 。
+
+1. 在选项列表中，选择“环境” > “字体和颜色” 。
+
+1. 在“显示以下对象的设置”列表中，选择“环境”。
+
+   ![用于在 IDE 中更改字体和颜色的“选项”对话框的屏幕截图](media/fonts-colors-environment.png "用于在 IDE 中更改字体和颜色的“选项”对话框的屏幕截图")
+
+    > [!NOTE]
+    > 如果仅更改工具窗口的字体，则在“显示以下对象的设置”列表中，选择“所有文本工具窗口” 。
+
+1. 修改“字体”和“大小”选项，以更改 IDE 的字体和文本大小。
+
+1. 在“显示项”中选择合适的项，然后修改“项前景”和“项背景”选项。
+
+### <a name="to-change-the-font-and-text-size-in-the-editor"></a>更改编辑器中的字体和文本大小
+
+1. 在菜单栏上，依次选择“工具” > “选项” 。
+
+1. 在选项列表中，选择“环境” > “字体和颜色” 。
+
+1. 在“显示以下对象的设置”列表中，选择“文本编辑器”。
+
+   ![用于在编辑器中更改字体和颜色的“选项”对话框的屏幕截图](media/fonts-colors-text-editor.png "用于在编辑器中更改字体和颜色的“选项”对话框的屏幕截图")
+
+1. 修改“字体”和“大小”选项，以更改编辑器的字体和文本大小。
+
+1. 在“显示项”中选择合适的项，然后修改“项前景”和“项背景”选项。
+
+有关详细信息，请参阅[更改编辑器的字体和颜色](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md)页。
+
+## <a name="accessibility-options"></a>辅助功能选项
+
+如果视力不好，可以选择颜色主题选项。 可以为计算机上的所有应用和 UI 使用高对比度选项，或使用仅适用于 Visual Studio 的额外对比度选项。
+
+### <a name="use-windows-high-contrast"></a>使用 Windows 高对比度
+
+使用以下任一过程来切换 Windows 高对比度选项：
+
+- 在 Windows 或任何 Microsoft 应用程序中，按左 Alt+左 Shift+PrtScn 键。
+
+- 在 Windows 中，选择“开始” > “设置” > “轻松访问” > “高对比度”。
+
+    > [!WARNING]
+    > Windows 高对比度设置会影响计算机上的所有应用程序和 UI。
+
+### <a name="use-visual-studio-extra-contrast"></a>使用 Visual Studio 额外对比度
+
+使用以下过程来切换 Visual Studio 额外对比度选项：
+
+1. 在 Visual Studio 的菜单栏上，选择“工具” > “选项”，然后在“选项”列表中，选择“环境” > “常规”。
+
+1. 在“颜色主题”下拉列表中，选择“蓝色(额外对比度)”主题，然后选择“确定”。
+
+若要详细了解可供使用的其他 Visual Studio 辅助功能选项，请参阅 [Visual Studio 的辅助功能](../ide/reference/accessibility-features-of-visual-studio.md)页。
+
+> [!TIP]
+> 如果有你认为可能有用但当前在 Visual Studio 中不可用的颜色或字体辅助功能选项，请通过选择 [Visual Studio 开发者社区](https://developercommunity.visualstudio.com/)中的“建议功能”来告知我们。 有关此论坛及其工作原理的详细信息，请参阅[建议功能](../ide/suggest-a-feature.md)页。
+
+## <a name="next-steps"></a>后续步骤
+
+若要了解有关可更改字体和颜色方案的所有用户界面 (UI) 元素的详细信息，请参阅[字体和颜色、环境、选项对话框](../ide/reference/fonts-and-colors-environment-options-dialog-box.md)页。
+
+## <a name="see-also"></a>请参阅
+
+- [更改代码编辑器中的字体和颜色](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md)
+- [Visual Studio 代码编辑器的功能](../ide/writing-code-in-the-code-and-text-editor.md)

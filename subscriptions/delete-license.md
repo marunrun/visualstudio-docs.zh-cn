@@ -4,23 +4,25 @@ author: evanwindom
 ms.author: lank
 manager: lank
 ms.assetid: e49242bc-e9f2-49e8-8caa-f574d508aba6
-ms.date: 03/03/2020
+ms.date: 06/16/2020
 ms.topic: conceptual
 description: 了解管理员如何删除订阅分配
-ms.openlocfilehash: a884cb56b9c04558023659317ecce2d06a8ec54d
-ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
+ms.openlocfilehash: f630eef2d06e008966165e898cd40d123cb5c590
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80232542"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85289074"
 ---
 # <a name="delete-assignments-in-visual-studio-subscriptions"></a>删除 Visual Studio 订阅中的分配
 当订阅者不再需要 Visual Studio 订阅时，比如当他们离开公司、完成项目或转换为新的作业角色时，你可以删除他们的订阅，并将订阅分配给其他人。 请注意，重新分配订阅时，并非所有订阅者权益都将重置。  新用户将能够认领任何无人认领的密钥并查看以前认领过的密钥，但认领限制**不**会重置。  组织若具有企业协议 (EA)，将重置供原始用户使用的任何权益（如 Pluralsight 培训）。 
 
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4yG2q]
+
 ## <a name="delete-a-subscription-assignment"></a>删除订阅分配
-1. 单击要删除的订阅者名称。 若要选择多个要删除的订阅者，可以单击订阅者名称左侧的圆圈来选择每个订阅者。  或者，你可以按住 CTRL  键，然后单击要删除的每个订阅者。  按 CTRL + A  ，选择并删除所有订阅者。 
-2. 若要删除所选订阅者，请单击“删除”  。
-3. 出现要求确认删除的消息时，单击“确定”  。
+1. 单击要删除的订阅者名称。 若要选择多个要删除的订阅者，可以单击订阅者名称左侧的圆圈来选择每个订阅者。  或者，你可以按住 CTRL 键，然后单击要删除的每个订阅者。 若要删除某一范围的订阅服务器，请单击第一个订阅服务器，按 Shift 键，然后单击最后一个。  按 CTRL + A，选择并删除所有订阅者。 
+2. 若要删除所选订阅者，请单击“删除”。
+3. 出现要求确认删除的消息时，单击“确定”。
    > [!div class="mx-imgBorder"]
    > ![删除订阅者](_img/delete-license/delete-subscribers.png)
 

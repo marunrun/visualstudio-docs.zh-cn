@@ -1,7 +1,7 @@
 ---
 title: 在防火墙或代理服务器背后安装和使用
 description: 如果组织使用防火墙或代理服务器，请检查希望添加到允许列表或打开的域 URL、端口和协议
-ms.date: 05/13/2020
+ms.date: 06/17/2020
 ms.custom: seodec18
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +17,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: c1a1fd706ce64b9b39954142664e0799b6251c56
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 09340940796e20f679c3c9bbad3d55880b25ab7a
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84180436"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85283471"
 ---
 # <a name="install-and-use-visual-studio-and-azure-services-behind-a-firewall-or-proxy-server"></a>在防火墙或代理服务器后面安装和使用 Visual Studio 和 Azure 服务
 
@@ -129,6 +129,8 @@ ms.locfileid: "84180436"
 | Azure Data Lake | &#42;.azuredatalakestore.net <br>&#42;.azuredatalakeanalytics.net | https/443 | 用于编译、提交、查看、诊断和调试作业；用于浏览 ADLS 文件；用于上传和下载文件 |
 | 打包服务 | [account].visualstudio.com <br/> [account].\*.visualstudio.com <br/> \*.blob.core.windows.net <br/> registry.npmjs.org </br> nodejs.org <br/> dist.nuget.org <br/> nuget.org | https/443 | 仅特定生成任务方案（例如：NuGet 工具安装程序、节点工具安装程序）或者打算将公共上游与源结合使用时才需使用 \*.npmjs.org、\*.nuget.org 和 \*.nodejs.org。 要使用打包服务的核心功能，还需具备其他三个域。 |
 | Azure DevOps Services | \*.vsassets.io <br/> static2.sharepointonline.com <br/> dev.azure.com | | 用于连接 Azure DevOps Services |
+| Azure 服务总线 | \*.servicebus.windows.net | ampq/5671 和 5672、 </br> sbmp/9350-9354、 </br> http/80、 </br> https/443 | 用于创建队列、主题和订阅。 </br> 还用于向/从服务总线队列和主题发送/接收消息。 |
+| Azure Cosmos DB | \*.documents.azure.com | https/443 | 用于调用核心文档数据库 API。 |
 | 开发人员社区 | sendvsfeedback2.azurewebsites.net/api | https/443 | 用于调用开发者社区反馈工具 API（我的问题、搜索、投票、评论、提交、上传、恢复） |
 | Intellicode | \*.intellicode.vsengsaas.visualstudio.com | https/443 | 用于调用 Intellicode API |
 | Live Share | \*.liveshare.vsengsaas.visualstudio.com| https/443 | 用于调用 Live Share API |

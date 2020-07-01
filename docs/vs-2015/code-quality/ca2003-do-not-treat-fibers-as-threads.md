@@ -25,11 +25,11 @@ ms.locfileid: "85521169"
 # <a name="ca2003-do-not-treat-fibers-as-threads"></a>CA2003:不要将纤程视为线程
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|Item|值|
+|项|值|
 |-|-|
 |TypeName|DoNotTreatFibersAsThreads|
 |CheckId|CA2003|
-|Category|Microsoft 可靠性|
+|类别|Microsoft 可靠性|
 |是否重大更改|不间断|
 
 ## <a name="cause"></a>原因

@@ -1,23 +1,25 @@
 ---
-ms.openlocfilehash: 69f4f4c2b55670d510652b44a203b9f0eafcc53a
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: b8002d9e911c8d8c07a5aaf5286168e49a374a7c
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "68143547"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85292144"
 ---
 
 1. 关闭并重新打开 IIS 管理控制台以在 UI 中显示更新的配置选项。
 
-2. 在 IIS 中，右键单击“默认网站”，选择“部署” > “配置 Web 部署发布”。
+2. 在 IIS 中，右键单击“默认网站”，选择“部署” > “配置 Web 部署发布”  。
 
     ![配置 Web 部署配置](../../deployment/media/tutorial-configure-web-deploy-publishing.png)
 
-3. 在“配置 Web 部署发布”对话框中，检查设置  。
+   如果看不到“部署”菜单，请参阅前面的部分来验证 Web 部署是否正在运行。
 
-4. 单击“设置”  。
+3. 在“配置 Web 部署发布”对话框中，检查设置。
 
-    在“结果”面板中，输出显示已为指定用户授予访问权限，并且已在对话框中显示的位置生成了具有 .publishsettings 文件扩展名的文件   。
+4. 单击“设置”。
+
+    在“结果”面板中，输出显示已为指定用户授予访问权限，并且已在对话框中显示的位置生成了具有 .publishsettings 文件扩展名的文件。
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
