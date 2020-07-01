@@ -17,12 +17,12 @@ caps.latest.revision: 40
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 5e817bc76a76c3d0af0e3509ef14312ac1b98acf
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: efdbf1b96e1dc49f5b9c48cebe6cededc9ea7c6e
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669805"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85534142"
 ---
 # <a name="design-time-code-generation-by-using-t4-text-templates"></a>使用 T4 文本模板生成设计时代码
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "72669805"
 > [!NOTE]
 > *模型*是描述应用程序的特定方面的数据源。 它可以是任何形式、任何类型的文件或数据库。 它不必是任何特定形式，例如 UML 模型或域特定语言模型。 典型的模型是表或 XML 文件形式。
 
- 你可能已熟悉代码生成。 在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 解决方案中定义 **.resx**文件中的资源时，会自动生成一组类和方法。 通过资源文件编辑资源比必须编辑类和方法要更加容易和可靠。 通过文本模板，可以使用相同的方式从自己设计的源中生成代码。
+ 你可能已熟悉代码生成。 在解决方案中定义 **.resx**文件中的资源时 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ，会自动生成一组类和方法。 通过资源文件编辑资源比必须编辑类和方法要更加容易和可靠。 通过文本模板，可以使用相同的方式从自己设计的源中生成代码。
 
  文本模板包含你要生成的文本以及用于生成文本的变量部分的程序代码。 程序代码允许你重复或有条件地省略部分已生成的文本。 生成的文本本身可以是将组成应用程序一部分的程序代码。
 
@@ -42,7 +42,7 @@ ms.locfileid: "72669805"
 
 #### <a name="to-create-a-design-time-t4-template-in-visual-studio"></a>在 Visual Studio 中创建设计时 T4 模板
 
-1. 创建 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 项目，或打开现有项目。
+1. 创建一个 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 项目，或打开现有项目。
 
      例如，在 "**文件**" 菜单上，选择 "**新建**"、"**项目**"。
 
@@ -52,7 +52,7 @@ ms.locfileid: "72669805"
 
      请注意，该文件的 "**自定义工具**" 属性为 " **TextTemplatingFileGenerator**"。
 
-3. 打开该文件。 该文件中已包含下列指令：
+3. 打开 文件。 该文件中已包含下列指令：
 
     ```
     <#@ template hostspecific="false" language="C#" #>
@@ -61,15 +61,15 @@ ms.locfileid: "72669805"
 
      如果已将模板添加到 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 项目，则语言特性将为“`VB`”。
 
-4. 在文件末尾添加一些文本。 例如:
+4. 在文件末尾添加一些文本。 例如：
 
     ```
     Hello, world!
     ```
 
-5. 保存该文件。
+5. 保存文件。
 
-     你可能会看到一个**安全警告**消息框，要求你确认是否要运行该模板。 单击“确定”。
+     你可能会看到一个**安全警告**消息框，要求你确认是否要运行该模板。 单击 **“确定”** 。
 
 6. 在**解决方案资源管理器**中，展开 "模板文件" 节点，将会找到扩展名为 **.txt**的文件。 该文件包含从该模板生成的文本。
 
@@ -125,12 +125,12 @@ ms.locfileid: "72669805"
 
    请注意，语句括在 `<#...#>` 内，单个表达式括在 `<#=...#>` 内。 有关详细信息，请参阅[编写 T4 文本模板](../modeling/writing-a-t4-text-template.md)。
 
-   如果在 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 中编写生成代码，则 `template` 指令应包含 `language="VB"`。 默认为 `"C#"`。
+   如果在 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 中编写生成代码，则 `template` 指令应包含 `language="VB"`。 默认值为 `"C#"`。
 
 ## <a name="debugging-a-design-time-t4-text-template"></a>调试设计时 T4 文本模板
  创建文本模板：
 
-- 将 `debug="true"` 插入 `template` 指令。 例如:
+- 将 `debug="true"` 插入 `template` 指令。 例如：
 
    `<#@ template debug="true" hostspecific="false" language="C#" #>`
 
@@ -141,7 +141,7 @@ ms.locfileid: "72669805"
   该模板将运行并在断点处停止。 你可以以常用方式检查变量并逐步执行代码。
 
 > [!TIP]
-> `debug="true"` 使生成的代码更精确地映射到文本模板，方法是在生成的代码中插入更多行号指令。 如果不使用它，断点可能在错误状态下停止运行。
+> `debug="true"`通过在生成的代码中插入更多行号指令，使生成的代码更精确地映射到文本模板。 如果不使用它，断点可能在错误状态下停止运行。
 >
 > 但是，即使不在进行调试，你仍可将该子句留在模板指令中。 这仅会使性能下降一点点。
 
@@ -276,8 +276,8 @@ ms.locfileid: "72669805"
 
  `this.Host` 的类型（在 VB 中是 `Me.Host`）是 `Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost`。
 
-### <a name="getting-data-from-includevsprvsincludesvsprvs-mdmd"></a>从 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 获取数据
- 若要使用 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中提供的服务，请设置 `hostSpecific` 特性并加载 `EnvDTE` 程序集。 然后，你可以使用 IServiceProvider.GetCOMService() 访问 DTE 和其他服务。 例如:
+### <a name="getting-data-from-vsprvs"></a>从 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 获取数据
+ 若要使用 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中提供的服务，请设置 `hostSpecific` 特性并加载 `EnvDTE` 程序集。 然后，你可以使用 IServiceProvider.GetCOMService() 访问 DTE 和其他服务。 例如：
 
 ```scr
 <#@ template hostspecific="true" language="C#" #>
@@ -295,7 +295,7 @@ Number of projects in this VS solution:  <#= dte.Solution.Projects.Count #>
 > [!TIP]
 > 文本模板在它自己的应用域中运行，并通过封送访问服务。 在此情况下，GetCOMService() 比 GetService() 更可靠。
 
-## <a name="Regenerating"></a>自动重新生成代码
+## <a name="regenerating-the-code-automatically"></a><a name="Regenerating"></a>自动重新生成代码
  通常，[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 解决方案中的多个文件都使用一个输入模型生成。 每个文件从其自己的模板生成，但这些模板全都引用同一个模型。
 
  如果源模型发生更改，则应重新运行该解决方案中的所有模板。 若要手动执行此操作，请选择 "**生成**" 菜单上的 "**转换所有模板**"。
@@ -320,7 +320,7 @@ Error("An error message");
 Warning("A warning message");
 ```
 
-## <a name="Converting"></a>将现有文件转换为模板
+## <a name="converting-an-existing-file-to-a-template"></a><a name="Converting"></a>将现有文件转换为模板
  模板的一个非常有用的功能是：它们看起来与其生成的文件（加上一些插入的程序代码）非常相似。 这暗示了创建模板的一种有用方法。 首先创建一个普通文件作为原型（如 [!INCLUDE[csprcs](../includes/csprcs-md.md)] 文件），然后逐步引入用于改变生成的文件的生成代码。
 
 #### <a name="to-convert-an-existing-file-to-a-design-time-template"></a>将现有文件转换为设计时模板
@@ -333,10 +333,10 @@ Warning("A warning message");
 
 4. 验证**tt**文件的以下属性：
 
-    |||
+    |Property|值|
     |-|-|
     |**自定义工具 =**|**TextTemplatingFileGenerator**|
-    |**生成操作 =**|**无**|
+    |**生成操作 =**|无|
 
 5. 在文件开头插入以下行：
 
@@ -349,7 +349,7 @@ Warning("A warning message");
 
      将 `extension` 特性设置为要生成的文件类型的文件扩展名，例如 `.cs`、`.resx` 或 `.xml`。
 
-6. 保存该文件。
+6. 保存文件。
 
      将使用指定扩展名创建一个附属文件。 该文件对于相应文件类型具有正确的属性。 例如，将**编译**.cs 文件的 "**生成操作**" 属性。
 
@@ -370,5 +370,5 @@ Warning("A warning message");
 |以域特定语言的形式转换数据。|[从域特定语言生成代码](../modeling/generating-code-from-a-domain-specific-language.md)|
 |编写指令处理器转换自己的数据源。|[自定义 T4 文本转换](../modeling/customizing-t4-text-transformation.md)|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [T4 文本模板编写准则](../modeling/guidelines-for-writing-t4-text-templates.md)

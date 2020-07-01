@@ -1,18 +1,18 @@
 ---
 title: 如果：在程序代码中从文件打开模型
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fae71f748f1f64480c046ae157e1fbca0dd0bec9
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 19cec066d66b08d3f02f3885908722aad047172b
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75594612"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85532478"
 ---
 # <a name="how-to-open-a-model-from-file-in-program-code"></a>如果：在程序代码中从文件打开模型
 
@@ -20,7 +20,7 @@ ms.locfileid: "75594612"
 
 在 Visual Studio 扩展中，你可以使用 ModelBus 来实现此目的。 ModelBus 提供了用于引用模型或模型中的元素的标准机制，并用于查找模型（如果该模型已移动）。 有关详细信息，请参阅[使用 Visual Studio 集成模型 Modelbus](../modeling/integrating-models-by-using-visual-studio-modelbus.md)。
 
-## <a name="target-framework"></a>目标框架
+## <a name="target-framework"></a>目标 Framework
 
 将应用程序项目的**目标框架**设置为 .NET Framework 4 或更高版本。
 
@@ -33,15 +33,15 @@ ms.locfileid: "75594612"
 > [!NOTE]
 > 目标框架不 **.NET Framework 4 客户端配置文件**。
 
-## <a name="references"></a>引用
+## <a name="references"></a>参考
 
 将这些引用添加到你的 Visual Studio 应用程序项目：
 
 - `Microsoft.VisualStudio.Modeling.Sdk.11.0`
 
-  - 如果在 "**添加引用**" 对话框中的 " **.net** " 选项卡下看不到此，请单击 "**浏览**" 选项卡，然后导航到 `%Program Files%\Microsoft Visual Studio 2010 SDK\VisualStudioIntegration\Common\Assemblies\`。
+  - 如果在 "**添加引用**" 对话框中的 " **.net** " 选项卡下未看到此选项，请单击 "**浏览**" 选项卡并导航到 `%Program Files%\Microsoft Visual Studio 2010 SDK\VisualStudioIntegration\Common\Assemblies\` 。
 
-- DSL 程序集，你将在 DSL 项目的 bin 文件夹下找到该程序集。 其名称的格式通常为： *YourCompany*。*项目*`.Dsl.dll`。
+- DSL 程序集，你将在 DSL 项目的 bin 文件夹下找到该程序集。 其名称的格式通常为： *YourCompany*。*项目* `.Dsl.dll` 。
 
 ## <a name="important-classes-in-the-dsl"></a>DSL 中的重要类
 
@@ -49,11 +49,11 @@ ms.locfileid: "75594612"
 
 这些是你应该识别的类：
 
-- *YourDslRootClass* -这是 `DslDefinition.dsl`中的根类的名称。
+- *YourDslRootClass* -这是中根类的名称 `DslDefinition.dsl` 。
 
-- *E* `SerializationHelper`-此类是在 DSL 项目 `SerializationHelper.cs` 中定义的。
+- *E* `SerializationHelper`-在 `SerializationHelper.cs` DSL 项目中定义此类。
 
-- *E* `DomainModel`-此类是在 DSL 项目 `DomainModel.cs` 中定义的。
+- *E* `DomainModel`-在 `DomainModel.cs` DSL 项目中定义此类。
 
 ## <a name="read-from-a-file"></a>从文件中读取
 

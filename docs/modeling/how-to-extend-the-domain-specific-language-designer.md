@@ -1,18 +1,18 @@
 ---
 title: 如何：扩展域特定语言设计器
 ms.date: 11/04/2016
-ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+ms.topic: how-to
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: aa03e43276c7c995c5f494c5325dd79716dcf998
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: aa5b3166606312bb74560f207e6e1d0e6065bb2c
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72605598"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85532581"
 ---
 # <a name="how-to-extend-the-domain-specific-language-designer"></a>如何：扩展域特定语言设计器
 
@@ -68,7 +68,7 @@ ms.locfileid: "72605598"
 
 若要将扩展部署到主 Visual Studio 和其他计算机，请执行以下步骤：
 
-1. 在 bin 中的 VSIX 项目中查找 VSIX 安装文件 \\ * \\ \* .vsix
+1. 在 \\ bin 中的 vsix 项目中 * 查找 vsix 安装文件 \\ \*
 
 2. 将此文件复制到目标计算机，然后在 Windows 资源管理器（或文件资源管理器）中双击它。
 
@@ -84,7 +84,7 @@ ms.locfileid: "72605598"
 
 若要在 DSL 设计器图面上或在 DSL 资源管理器窗口中显示快捷菜单命令，请编写一个类似于下面的类。
 
-类必须实现 `ICommandExtension` 并且必须具有属性 `DslDefinitionModelCommandExtension`。
+类必须实现 `ICommandExtension` ，并且必须具有特性 `DslDefinitionModelCommandExtension` 。
 
 ```csharp
 using System.Collections.Generic;

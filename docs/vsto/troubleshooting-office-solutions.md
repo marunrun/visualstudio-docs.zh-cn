@@ -1,7 +1,7 @@
 ---
-title: 对 Office 解决方案进行故障排除
+title: 排查 Office 解决方案问题
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: troubleshooting
 dev_langs:
 - VB
 - CSharp
@@ -14,26 +14,26 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 901df0b15f26624ecf2e9fca217cdc074913ceae
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7bc8db3478f6856b5d3b511e53656c65d762446c
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62978258"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85537211"
 ---
-# <a name="troubleshoot-office-solutions"></a>对 Office 解决方案进行故障排除
+# <a name="troubleshoot-office-solutions"></a>排查 Office 解决方案问题
   本部分包含用于解决常见问题的提示，你在通过使用 Visual Studio 中的 Office 开发工具创建解决方案时可能会遇到这些问题。
 
 ## <a name="in-this-section"></a>本节内容
-- [对 Office 解决方案中的错误进行故障排除](../vsto/troubleshooting-errors-in-office-solutions.md)
+- [排查 Office 解决方案中的错误](../vsto/troubleshooting-errors-in-office-solutions.md)
 
  描述你在 Visual Studio 中设计、运行和测试 Office 解决方案时可能会产生的常见问题。
 
-- [如何：重新启用 VSTO 外接程序中已禁用](../vsto/how-to-re-enable-a-vsto-add-in-that-has-been-disabled.md)
+- [如何：重新启用已禁用的 VSTO 外接程序](../vsto/how-to-re-enable-a-vsto-add-in-that-has-been-disabled.md)
 
- 介绍如何重新启用 VSTO 外接程序中已硬或软禁用的。
+ 描述如何重新启用已被硬禁用或软禁用的 VSTO 外接程序。
 
-- [Office 解决方案错误的其他支持](../vsto/additional-support-for-errors-in-office-solutions.md)
+- [Office 解决方案中的错误的其他支持](../vsto/additional-support-for-errors-in-office-solutions.md)
 
  描述用于排除 Office 解决方案中的错误和警告的其他资源。
 
@@ -42,7 +42,7 @@ ms.locfileid: "62978258"
 
  描述在保护 Office 解决方案时可能遇到的常见问题。
 
-- [Office 解决方案部署故障排除](../vsto/troubleshooting-office-solution-deployment.md)
+- [Office 解决方案部署疑难解答](../vsto/troubleshooting-office-solution-deployment.md)
 
  描述在部署 Office 解决方案时可能遇到的常见问题。
 

@@ -1,7 +1,7 @@
 ---
 title: 如何：截获对形状或修饰器的单击
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - Domain-Specific Language, programming domain models
 author: JoshuaPartlow
@@ -9,18 +9,18 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f4923a858d9d46c477f50df2a08440a10e9309ef
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.openlocfilehash: 58d447526d83fec406b6fc20a08edcec37de89ae
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76114518"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85532517"
 ---
 # <a name="how-to-intercept-a-click-on-a-shape-or-decorator"></a>如何：截获对形状或修饰器的单击
 下面的过程演示如何截获单击形状或图标修饰器的方法。 您可以截获单击、双击、拖动和其他笔势，并使元素响应。
 
 ## <a name="to-intercept-clicks-on-shapes"></a>若要截获单击形状
- 在 Dsl 项目中，在与生成的代码文件分离的代码文件中，为 shape 类编写分部类定义。 重写 `OnDoubleClick()` 或名称以 `On...`开头的其他方法之一。 例如：
+ 在 Dsl 项目中，在与生成的代码文件分离的代码文件中，为 shape 类编写分部类定义。 重写 `OnDoubleClick()` 或名称以开头的其他方法之一 `On...` 。 例如：
 
 ```csharp
 public partial class MyShape // change
@@ -34,10 +34,10 @@ public partial class MyShape // change
 ```
 
 > [!NOTE]
-> 将 `e.Handled` 设置为 `true`，除非你希望将事件传递给包含形状或关系图。
+> 设置 `e.Handled` 为 `true` ，除非你希望将事件传递给包含形状或关系图。
 
 ## <a name="to-intercept-clicks-on-decorators"></a>若要在修饰器上截获单击
- 图像修饰器在 ImageField 类的实例上传送，该类具有 OnDoubleClick 方法。 如果编写 ImageField 子类，可以截获单击。 这些字段是在 InitializeShapeFields 方法中设置的。 因此，你必须更改该方法以实例化子类，而不是常规 ImageField。 InitializeShapeFields 方法位于 shape 类的生成的代码中。 如下面的过程所述 `Generates Double Derived`，你可以重写 shape 类，如下面的过程所述。
+ 图像修饰器在 ImageField 类的实例上传送，该类具有 OnDoubleClick 方法。 如果编写 ImageField 子类，可以截获单击。 这些字段是在 InitializeShapeFields 方法中设置的。 因此，你必须更改该方法以实例化子类，而不是常规 ImageField。 InitializeShapeFields 方法位于 shape 类的生成的代码中。 如果设置了 shape 类的属性，则可以重写此类， `Generates Double Derived` 如以下过程中所述。
 
  尽管 InitializeShapeFields 是一个实例方法，但对于每个类只调用一次。 因此，每个类中的每个字段只存在一个 ClickableImageField 实例，关系图中的每个形状都不存在一个实例。 当用户双击某个实例时，必须确定命中了哪个实例，如示例中的代码所示。
 
@@ -47,7 +47,7 @@ public partial class MyShape // change
 
 2. 选择或创建一个具有图标修饰器的形状，并将其映射到域类。
 
-3. 在独立于 `GeneratedCode` 文件夹中的文件的代码文件中，创建 ImageField 的新子类：
+3. 在独立于文件夹中的文件的代码文件中 `GeneratedCode` ，创建 ImageField 的新子类：
 
     ```csharp
     using Microsoft.VisualStudio.Modeling;
@@ -112,7 +112,7 @@ public partial class MyShape // change
     }
     ```
 
-1. 生成和运行解决方案。
+1. 生成并运行解决方案。
 
 2. 双击形状实例上的图标。 应显示测试消息。
 
@@ -129,11 +129,11 @@ public partial class MyShape // change
 
 4. 在此代码中调整域类和形状名称，以匹配你自己的 DSL。
 
-   总而言之，代码的工作原理如下。 在此示例中，`ClassShape` 为隔离舱形状的名称。
+   总而言之，代码的工作原理如下。 在此示例中， `ClassShape` 为隔离舱形状的名称。
 
 - 创建每个隔离舱实例时会附加一组鼠标事件处理程序。
 
-- `ClassShape.MouseDown` 事件存储当前项。
+- 此 `ClassShape.MouseDown` 事件存储当前项。
 
 - 当鼠标移出当前项时，将创建一个 MouseAction 实例，该实例将设置光标并捕获鼠标，直到它被释放。
 
@@ -393,7 +393,7 @@ namespace Company.CompartmentDrag
 }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [响应并传播更改](../modeling/responding-to-and-propagating-changes.md)
 - [修饰器的属性](../modeling/properties-of-decorators.md)

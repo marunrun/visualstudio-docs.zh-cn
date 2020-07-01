@@ -1,21 +1,21 @@
 ---
 title: 在 DSL 中修改标准菜单命令
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - .vsct files, adding commands to a domain-specific language
 - Domain-Specific Language, adding custom commands
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4ae2aa04eb415ee5c4b7aaa41ea4c6abb49333f7
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a7236c074bda17023c989c744042db2de4046558
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72605255"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85532491"
 ---
 # <a name="how-to-modify-a-standard-menu-command-in-a-domain-specific-language"></a>如何：使用域特定语言修改标准的菜单命令
 
@@ -28,9 +28,9 @@ ms.locfileid: "72605255"
 
 ### <a name="to-discover-what-commands-you-can-modify"></a>发现可以修改的命令
 
-1. 在 `DslPackage` 项目中，打开 `GeneratedCode\CommandSet.cs`。 可以C#在 `CommandSet.tt` 的子公司解决方案资源管理器中找到此文件。
+1. 在 `DslPackage` 项目中，打开 `GeneratedCode\CommandSet.cs`。 可在解决方案资源管理器作为的子公司找到此 c # 文件 `CommandSet.tt` 。
 
-2. 查找此文件中名称以 "`CommandSet`" 结尾的类，例如 `Language1CommandSet` 和 `Language1ClipboardCommandSet`。
+2. 查找此文件中名称以 "" 结尾的类 `CommandSet` ，例如 `Language1CommandSet` 和 `Language1ClipboardCommandSet` 。
 
 3. 在每个命令集类中，键入“`override`”，后跟一个空格。 IntelliSense 将显示可重写方法的列表。 每个命令具有一对其名称以“`ProcessOnStatus`”和“`ProcessOnMenu`”开头的方法。
 
@@ -53,9 +53,9 @@ ms.locfileid: "72605255"
 
      `{ ...  internal partial class Language1CommandSet : ...`
 
-2. 在**DslPackage**中，创建一个名为 "**自定义代码**" 的文件夹。 在此文件夹中，创建一个名为 `CommandSet.cs` 的新类文件。
+2. 在**DslPackage**中，创建一个名为 "**自定义代码**" 的文件夹。 在此文件夹中，创建一个名为的新类文件 `CommandSet.cs` 。
 
-3. 在该新文件中，编写具有与生成的分部类相同的命名空间和名称的分部声明。 例如:
+3. 在该新文件中，编写具有与生成的分部类相同的命名空间和名称的分部声明。 例如：
 
     ```csharp
     using System;
@@ -70,7 +70,7 @@ ms.locfileid: "72605255"
 
 ## <a name="override-the-command-methods"></a>重写命令方法
 
-大多数命令有两个关联的方法：名为的方法，如 `ProcessOnStatus` .。。确定命令是否应可见并处于启用状态。 它将在每当用户右键单击关系图时调用，并应快速执行且不做任何更改。 `ProcessOnMenu` .。。当用户单击该命令并应执行该命令的功能时，将调用。 你可能想要重写其中一个方法，或两者都进行重写。
+大多数命令有两个关联的方法：名为的方法，类似于 `ProcessOnStatus` .。。确定命令是否应可见并处于启用状态。 它将在每当用户右键单击关系图时调用，并应快速执行且不做任何更改。 `ProcessOnMenu`...当用户单击该命令并应执行该命令的功能时，将调用。 你可能想要重写其中一个方法，或两者都进行重写。
 
 ### <a name="to-change-when-the-command-appears-on-a-menu"></a>更改命令何时显示在菜单上
 
@@ -129,21 +129,21 @@ protected override void ProcessOnMenuDeleteCommand()
 
 以下片段通常在这些方法内十分有用：
 
-- `this.CurrentSelection` 用户右键单击的形状始终包含在此形状和连接符列表中。 如果用户单击关系图的空白部分，则“关系图”是该列表中的唯一成员。
+- `this.CurrentSelection`. 用户右键单击的形状始终包含在此形状和连接符列表中。 如果用户单击关系图的空白部分，则“关系图”是该列表中的唯一成员。
 
-- 如果用户单击了关系图的空白部分，则 `this.IsDiagramSelected()`  -  `true`。
+- `this.IsDiagramSelected()` - `true`如果用户单击了关系图的空白部分，则为。
 
 - `this.IsCurrentDiagramEmpty()`
 
-- `this.IsSingleSelection()` - 用户未选择多个形状
+- `this.IsSingleSelection()`-用户未选择多个形状
 
-- `this.SingleSelection` - 用户右键单击的形状或关系图
+- `this.SingleSelection`-用户右键单击的形状或关系图
 
-- `shape.ModelElement as MyLanguageElement` - 由形状表示的模型元素。
+- `shape.ModelElement as MyLanguageElement`-由形状表示的模型元素。
 
 有关如何从元素导航到元素以及如何创建对象和链接的详细信息，请参阅[在程序代码中导航和更新模型](../modeling/navigating-and-updating-a-model-in-program-code.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.ComponentModel.Design.MenuCommand>
 - [编写代码以自定义域特定语言](../modeling/writing-code-to-customise-a-domain-specific-language.md)

@@ -38,6 +38,6 @@ ms.locfileid: "85537496"
      [!code-vb[Trin_VstcoreCreatingExcel#10](../vsto/codesnippet/VisualBasic/Trin_VstcoreCreatingExcelVB/Sheet1.vb#10)]
      [!code-csharp[Trin_VstcoreCreatingExcel#10](../vsto/codesnippet/CSharp/Trin_VstcoreCreatingExcelCS/Sheet1.cs#10)]
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [如何：通过主互操作程序集面向 Office 应用程序](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md)
 - [Office 解决方案中的后期绑定](../vsto/late-binding-in-office-solutions.md)

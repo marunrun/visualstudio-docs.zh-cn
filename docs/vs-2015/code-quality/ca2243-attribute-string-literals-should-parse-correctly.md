@@ -15,17 +15,17 @@ caps.latest.revision: 12
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 62a2adc6f01e5cb26a6af26d71a124f8b81e07fb
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 09e932651576f9b6d595657ad024b8f2697ad016
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72671968"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85535741"
 ---
-# <a name="ca2243-attribute-string-literals-should-parse-correctly"></a>CA2243：应正确分析特性字符串文本
+# <a name="ca2243-attribute-string-literals-should-parse-correctly"></a>CA2243:特性字符串文本应正确分析
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|项|值|
 |-|-|
 |TypeName|AttributeStringLiteralsShouldParseCorrectly|
 |CheckId|CA2243|
@@ -35,8 +35,8 @@ ms.locfileid: "72671968"
 ## <a name="cause"></a>原因
  对于 URL、GUID 或版本，无法正确分析特性的字符串文本参数。
 
-## <a name="rule-description"></a>规则说明
- 由于属性派生自 <xref:System.Attribute?displayProperty=fullName>，并且在编译时使用特性，因此只能将常数值传递给其构造函数。 必须表示 Url、Guid 和版本的属性参数不能类型化为 <xref:System.Uri?displayProperty=fullName>、<xref:System.Guid?displayProperty=fullName> 和 <xref:System.Version?displayProperty=fullName>，因为这些类型不能表示为常量。 相反，它们必须由字符串表示。
+## <a name="rule-description"></a>规则描述
+ 由于属性是从派生的 <xref:System.Attribute?displayProperty=fullName> ，并且在编译时使用特性，因此只能将常数值传递给其构造函数。 必须表示 Url、Guid 和版本的特性参数不能类型化为 <xref:System.Uri?displayProperty=fullName> 、 <xref:System.Guid?displayProperty=fullName> 和 <xref:System.Version?displayProperty=fullName> ，因为这些类型不能表示为常量。 相反，它们必须由字符串表示。
 
  由于参数已类型化为字符串，因此可能会在编译时传递格式不正确的参数。
 
@@ -61,5 +61,5 @@ ms.locfileid: "72671968"
 
 - 不能将包含 "uri"、"urn" 或 "url" 的参数解析为 system.string。
 
-## <a name="see-also"></a>请参阅
- [CA1054：URI 参数不应为字符串](../code-quality/ca1054-uri-parameters-should-not-be-strings.md)
+## <a name="see-also"></a>另请参阅
+ [CA1054:URI 参数不应为字符串](../code-quality/ca1054-uri-parameters-should-not-be-strings.md)

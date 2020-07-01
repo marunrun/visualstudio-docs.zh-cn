@@ -1,30 +1,30 @@
 ---
 title: 如何：将域特定语言迁移至新版本
 ms.date: 11/04/2016
-ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+ms.topic: how-to
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6be4a8205935d131d880923e721e342ea904134d
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: f8bdaea1267d0bf69078aec5739291e72db8dfda
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72747542"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85532606"
 ---
 # <a name="how-to-migrate-a-domain-specific-language-to-a-new-version"></a>如何：将域特定语言迁移至新版本
-你可以将定义和使用特定于域的语言的项目迁移到使用 [!INCLUDE[vs_orcas_long](../debugger/includes/vs_orcas_long_md.md)] 分发的 [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] 版本中 [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)]。
+你可以将定义和使用特定于域的语言的项目 [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)] 从随分发的版本中迁移 [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] [!INCLUDE[vs_orcas_long](../debugger/includes/vs_orcas_long_md.md)] 。
 
- 作为 [!INCLUDE[vssdk_current_long](../misc/includes/vssdk_current_long_md.md)] 的一部分提供迁移工具。 此工具可转换使用或定义 DSL 工具的 Visual Studio 项目和解决方案。
+ 迁移工具作为的一部分提供 [!INCLUDE[vssdk_current_long](../misc/includes/vssdk_current_long_md.md)] 。 此工具可转换使用或定义 DSL 工具的 Visual Studio 项目和解决方案。
 
  必须显式运行迁移工具：在 Visual Studio 中打开解决方案时，该工具不会自动启动。 可在以下路径找到工具和详细指南文档：
 
  **% Program Files%\Microsoft Visual Studio 2010 SDK\VisualStudioIntegration\Tools\DSLTools\DslProjectsMigrationTool.exe**
 
 ## <a name="before-you-migrate-your-dsl-projects"></a>迁移 DSL 项目之前
- 迁移工具会修改 Visual Studio 项目文件（ **.csproj**）和解决方案文件（ **.sln**）。
+ 迁移工具会修改 Visual Studio 项目文件（**.csproj**）和解决方案文件（**.sln**）。
 
 #### <a name="to-prepare-projects-for-migration"></a>准备要迁移的项目。
 
@@ -59,9 +59,9 @@ ms.locfileid: "72747542"
 
    1. 单击 "**转换**"。
 
-        在转换每个项目文件之前， _project_ **. .csproj**的副本另_存为_**vs2008**
+        在转换每个项目文件之前， _project_**. .csproj**的副本另_存为_**vs2008**
 
-        每个解决方案的**副本均保存为** **vs2008。**
+        每个解决方案的_solution_**副本均保存为** _solution_**vs2008。**
 
    2. 调查报告的任何失败的转换。
 
@@ -86,4 +86,4 @@ ms.locfileid: "72747542"
 
 ## <a name="see-also"></a>请参阅
 
-- [相关博客文章](https://devblogs.microsoft.com/devops/the-visual-studio-modeling-sdk-is-now-available-with-visual-studio-2017/)
+- [相关的博客文章](https://devblogs.microsoft.com/devops/the-visual-studio-modeling-sdk-is-now-available-with-visual-studio-2017/)

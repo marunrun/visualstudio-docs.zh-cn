@@ -1,7 +1,7 @@
 ---
 title: 用于创建此项目的工作簿包含设计器无法加载的 ActiveX 控件
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: error-reference
 f1_keywords:
 - VST.SelectDocWizard.ContainsActiveXControls
 dev_langs:
@@ -12,12 +12,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 27feb1c6a85740d8a9287ce3a2a47800595e178a
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 4485489b48c4d1b03b608c6072cfc859e8bc8f59
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71253775"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85537340"
 ---
 # <a name="the-workbook-used-to-create-this-project-contains-activex-controls-that-the-designer-cannot-load"></a>用于创建此项目的工作簿包含设计器无法加载的 ActiveX 控件
   以编程方式向 Word 文档或 Excel 工作表添加控件时出现此错误，请保存文档或工作簿，然后基于文档或工作簿创建新的文档级解决方案。
