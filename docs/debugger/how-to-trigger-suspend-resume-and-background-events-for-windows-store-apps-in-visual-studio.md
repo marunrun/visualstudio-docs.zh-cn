@@ -2,7 +2,7 @@
 title: 调试 UWP 时触发挂起/继续/后台事件
 ms.custom: seodec18
 ms.date: 01/16/2018
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.debug.error.background_task_activate_failure
 dev_langs:
@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: da634246bfa9f800779c761458028f55b9317f6f
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 83b4bea32f642cbf48acb01831bd4bccc2bb15a0
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73187629"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85348933"
 ---
 # <a name="how-to-trigger-suspend-resume-and-background-events-while-debugging-uwp-apps-in-visual-studio"></a>在 Visual Studio 中调试 UWP 应用时如何触发挂起、继续和后台事件
 

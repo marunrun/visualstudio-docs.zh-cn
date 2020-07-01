@@ -1,7 +1,7 @@
 ---
 title: 关闭 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: a1e37500-4ad1-4670-9737-3d9a20536386
 author: mikejo5000
 ms.author: mikejo
@@ -9,12 +9,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 89a08808387067b934bfd826feb2dcfbcf949aab
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 64bad66491588178dc7d80655a8e517d6daed053
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74778279"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85330998"
 ---
 # <a name="shutdown"></a>关闭
  “关闭”选项会等待任何当前分析的进程结束或分离，然后关闭探查器和分析数据文件。  “关闭”选项必须是分析运行的最后一个命令。

@@ -1,23 +1,23 @@
 ---
 title: marker_series 类 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
-- cvmarkersobj/Concurrency::diagnostic::marker_series
+- cvmarkersobj/Concurrency, diagnostic::marker_series
 helpviewer_keywords:
-- Concurrency::diagnostic::marker_series class
+- Concurrency, diagnostic::marker_series class
 ms.assetid: b8445ed0-c512-4f92-b6b4-3d05c044f939
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 155d47f6764e754a1093cbcf884368c80d709a2a
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 8f7df74624ea602b5c996d5523a45826137119f5
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62575912"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85330715"
 ---
 # <a name="marker_series-class"></a>marker_series 类
 表示由单个提供程序生成的一系列事件通道。

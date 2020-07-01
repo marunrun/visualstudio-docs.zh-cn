@@ -1,7 +1,7 @@
 ---
 title: 使用探查器命令行获取 .NET Framework 内存数据
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 7bce69e2-407c-4342-8516-641586968928
 author: mikejo5000
 ms.author: mikejo
@@ -9,12 +9,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: 04656351b538aa71811bc32d6b45d735f5441441
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 62a55c36cd634b9451ad3796e5866d1e3a89b6a2
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74773200"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85331730"
 ---
 # <a name="collect-net-framework-memory-data-by-using-the-profiler-command-line"></a>使用探查器命令行收集 .NET Framework 内存数据
 

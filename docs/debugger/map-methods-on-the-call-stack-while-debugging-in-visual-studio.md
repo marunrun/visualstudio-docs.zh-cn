@@ -1,7 +1,7 @@
 ---
 title: 创建调用堆栈的可视图 | Microsoft Docs
 ms.date: 11/26/2018
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.progression.debugwithcodemaps
 dev_langs:
@@ -29,12 +29,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 135c7c66c9c6602f8c2e32bbdc1ba6e2fd28f548
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: 2cf0cda942241ca77aa750624b6de25b5ae39391
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72911522"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85348530"
 ---
 # <a name="create-a-visual-map-of-the-call-stack-while-debugging-c-visual-basic-c-javascript"></a>在调试时创建调用堆栈的可视图（C#、Visual Basic、C++ 和 JavaScript）
 
