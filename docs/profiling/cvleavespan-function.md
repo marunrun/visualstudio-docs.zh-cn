@@ -1,7 +1,7 @@
 ---
 title: CvLeaveSpan 函数 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - cvmarkers/CvLeaveSpan
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 776c24777403b9d88de31e11d0c28fe104666600
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 113d6aafbd09f6b726613405a8c1eb82f9e202e5
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62974105"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85330041"
 ---
 # <a name="cvleavespan-function"></a>CvLeaveSpan 函数
 标记范围的结束位置。

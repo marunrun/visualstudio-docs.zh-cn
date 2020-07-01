@@ -1,7 +1,7 @@
 ---
 title: VSPerfASPNetCmd | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - profiling tools,VSPerfASPNETCmd
 - VSPerfASPNETCmd
@@ -12,12 +12,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 8c9bf465b4da7f305e97a18099a7e27db8eab6b4
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: b6ddadc15a5e0d53535b82d87aadd31fec65adaf
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74778006"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85330481"
 ---
 # <a name="vsperfaspnetcmd"></a>VSPerfASPNetCmd
 通过 VSPerfASPNetCmd.exe  命令行，无需设置环境变量或重启计算机即可分析 ASP.NET 网站。 在分析 ASP.NET 网站时，使用 VSPerfASPNetCmd.exe  而非 [VSPerfCmd](../profiling/vsperfcmd.md)，并且无需使用 VSPerfCmd  提供的其他功能。 有关 VSPerfASPNetCmd  的详细信息，请参阅[使用 VSPerfASPNETCmd 进行快速网站分析](../profiling/rapid-web-site-profiling-with-vsperfaspnetcmd.md)。 VSPerfASPNetCmd  是使用独立探查器分析 ASP.NET 网站时的首选命令行工具。

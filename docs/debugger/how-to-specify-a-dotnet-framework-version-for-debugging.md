@@ -2,7 +2,7 @@
 title: 指定用于调试的 .NET Framework 版本 | Microsoft Docs
 ms.custom: seodec18
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - CSharp
 - VB
@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1f6107d6396c6228be1d511e81003fbe7faf06c9
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 3ae48670fceb78ff85f395852f0a31414f37e8cf
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72732638"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85349063"
 ---
 # <a name="specify-an-older-net-framework-version-for-debugging-c-visual-basic-f"></a>指定用于调试的早期 .NET Framework 版本（C#、Visual Basic、F#）
 
