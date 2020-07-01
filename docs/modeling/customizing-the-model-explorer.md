@@ -1,7 +1,7 @@
 ---
 title: 自定义模型资源管理器
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.dsltools.dsldesigner.explorerbehavior
 helpviewer_keywords:
@@ -11,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 96c12ac2063e6b3ac04e3c0e9b0c20c69ea91a35
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 625ba0d592d0dbdaa8cb910c366852fe32c5f220
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75589703"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85548364"
 ---
 # <a name="customizing-the-model-explorer"></a>自定义模型资源管理器
 可以按如下所示更改域特定语言设计器的资源管理器的外观和行为：
@@ -33,14 +33,14 @@ ms.locfileid: "75589703"
  若要更改生成的资源管理器的窗口标题，请在**DSL 资源管理器**中选择 "**资源管理器行为**"，然后在 "**属性**" 窗口中，将 "**标题**" 属性设置为所需的标题。
 
 ## <a name="changing-the-tab-icon"></a>更改选项卡图标
- 若要更改资源管理器的选项卡图标，请在 .bmp 文件中使用16x16 像素的图标。 将图标文件放在 \DslPackage\Resources\ 文件夹中，然后将文件名更改为**ModelExplorerToolWindowBitmaps**。 例如，你可以将 Visual Studio 安装程序的 .ico 图标文件更改为 .bmp 格式，并将其重命名为**DSLLanguageName\DslPackage\Resources\ModelExplorerToolWindowBitmaps.bmp**。 当资源管理器与**解决方案资源管理器**一起停靠时，生成的设计器将在您的资源管理器的选项卡上显示此图标。
+ 若要更改资源管理器的选项卡图标，请在 .bmp 文件中使用16x16 像素的图标。 将图标文件放在 \DslPackage\Resources\ 文件夹中，然后将文件名更改为**ModelExplorerToolWindowBitmaps.bmp**。 例如，你可以将 Visual Studio 安装 .ico 图标文件更改为 .bmp 格式，并将其重命名为**DSLLanguageName\DslPackage\Resources\ModelExplorerToolWindowBitmaps.bmp**。 当资源管理器与**解决方案资源管理器**一起停靠时，生成的设计器将在您的资源管理器的选项卡上显示此图标。
 
 ## <a name="setting-custom-icons-on-explorer-nodes"></a>在资源管理器节点上设置自定义图标
  可以通过使用资源管理器节点设置自定义资源管理器中的节点。 下面的过程演示如何将图标添加到节点。
 
 #### <a name="to-add-an-icon-to-an-explorer-node"></a>向资源管理器节点添加图标
 
-1. 使用 "任务流" 解决方案模板创建 [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] 解决方案。
+1. [!INCLUDE[dsl](../modeling/includes/dsl_md.md)]使用 "任务流" 解决方案模板创建解决方案。
 
 2. 在解决方案的**Dsl\Resources**文件夹中放置一个包含16x16 像素图标的 .bmp 文件。
 

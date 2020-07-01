@@ -15,27 +15,27 @@ caps.latest.revision: 15
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: db2c667d0a3823460a084dc1e4806501d9b26693
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: aa67c33eac5d618c0a080323720775beea7b68c3
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72662955"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85548208"
 ---
-# <a name="ca2211-non-constant-fields-should-not-be-visible"></a>CA2211：非常量字段不应是可见的
+# <a name="ca2211-non-constant-fields-should-not-be-visible"></a>CA2211:非常量字段不应是可见的
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|值|
 |-|-|
 |TypeName|NonConstantFieldsShouldNotBeVisible|
 |CheckId|CA2211|
-|类别|Microsoft. 使用情况|
+|Category|Microsoft. 使用情况|
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
  公共或受保护的静态字段不是常量，也不是只读的。
 
-## <a name="rule-description"></a>规则说明
+## <a name="rule-description"></a>规则描述
  不是常数也不是只读字段的静态字段不是线程安全的。 必须严格控制对此类字段的访问，并且需要使用高级编程技术来同步对类对象的访问。 由于这些都是很难学习和掌握的技能，并且测试此类对象会带来自己的挑战，因此最好将静态字段用于存储不会更改的数据。 此规则适用于库;应用程序不应公开任何字段。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突

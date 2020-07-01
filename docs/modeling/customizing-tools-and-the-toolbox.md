@@ -1,7 +1,7 @@
 ---
 title: 自定义工具和工具箱
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.dsltools.dsldesigner.selectiondialog
 - vs.dsltools.dsldesigner.selecticondialog
@@ -13,18 +13,18 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2e8e9fc3a9ecbadc47c3390d2d4a9b504a316658
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 685da1184706e106f3bdd2088b4d937e0aa7cc9f
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75589716"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85548286"
 ---
 # <a name="customizing-tools-and-the-toolbox"></a>自定义工具和工具箱
 
 你必须为你想要使用户添加到其模型的元素定义工具箱项。 有两种类型的工具：元素工具和连接工具。 在生成的设计器中，用户可以选择元素工具以将形状拖动到关系图中，也可以选择连接工具以在形状之间绘制链接。 通常，元素工具允许用户向其模型添加域类的实例，而连接工具允许他们添加域关系的实例。
 
-## <a name="ToolboxDef"></a>如何定义工具箱
+## <a name="how-the-toolbox-is-defined"></a><a name="ToolboxDef"></a>如何定义工具箱
  在 DSL 资源管理器中，展开“编辑器”节点及其下面的节点。 通常，你将看到如下所示的层次结构：
 
 ```
@@ -69,7 +69,7 @@ Editor
 
 3. 设置 "**工具箱" 图标**属性以引用16x16 位图。
 
-     如果要定义新图标，请在**Dsl\Resources**文件夹的解决方案资源管理器中创建一个位图文件。 该文件应具有以下属性值：**生成操作** = **内容**;**复制到输出目录** = **不复制**。
+     如果要定义新图标，请在**Dsl\Resources**文件夹的解决方案资源管理器中创建一个位图文件。 该文件应具有以下属性值：**生成操作**  =  **内容**;**复制到输出目录**  = 不**复制**。
 
 4. **对于元素工具：** 设置工具的 "**类**" 属性，以引用映射到形状的具体域类。
 
@@ -77,9 +77,9 @@ Editor
 
 5. 若要测试 DSL，请按 F5 或 CTRL + F5，并在 Visual Studio 的实验实例中打开示例模型文件。 新工具应显示在工具箱上。 将它拖动到关系图上以验证它是否将创建新元素。
 
-     如果该工具未出现，则停止实验性的 Visual Studio。 在 Windows "**开始**" 菜单中，运行 **"重置 Microsoft Visual Studio 2010 实验实例"** 。 在“生成”菜单上，单击“重新生成解决方案”。 然后，再次测试 DSL。
+     如果该工具未出现，则停止实验性的 Visual Studio。 在 Windows "**开始**" 菜单中，运行 **"重置 Microsoft Visual Studio 2010 实验实例"**。 在“生成”菜单上，单击“重新生成解决方案” 。 然后，再次测试 DSL。
 
-## <a name="customizing"></a>自定义元素工具
+## <a name="customizing-element-tools"></a><a name="customizing"></a>自定义元素工具
  默认情况下，该工具将创建指定类的单个实例，但是可通过两种方式改变这种情况：
 
 - 在其他类上定义元素合并指令，从而允许它们接受此类的新实例，并允许它们在创建新元素后创建其他链接。 例如，你可以允许用户将“注释”放到其他元素上，从而在两个元素之间创建引用链接。
@@ -90,7 +90,7 @@ Editor
 
 - 编写代码来自定义工具，以便它可以创建元素组。 该工具由 ToolboxHelper.cs 中可重写的方法进行初始化。 有关详细信息，请参阅[从工具创建元素组](#groups)。
 
-## <a name="groups"></a>从工具创建元素组
+## <a name="creating-groups-of-elements-from-a-tool"></a><a name="groups"></a>从工具创建元素组
  每个元素工具都包含它应创建的元素的原型。 默认情况下，每个元素工具都将创建单个元素，但也可以使用一个工具创建一组相关对象。 为此，请使用包含相关项的 <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> 初始化工具。
 
  以下示例取自 DSL，其中有晶体管类型。 每个晶体管具有三个命名的“终端”。 用于晶体管的元素工具将存储包含四个模型元素和三个关系链接的原型。 当用户将工具拖动到关系图上时，该原型将进行实例化并链接到模型根。
@@ -139,7 +139,7 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
 }  }    }
 ```
 
-## <a name="connections"></a>自定义连接工具
+## <a name="customizing-connection-tools"></a><a name="connections"></a>自定义连接工具
  通常，在创建新的连接符类后创建元素工具。 或者，可通过允许两个终端的类型确定关系类型来重载一个工具。 例如，可以定义一个可同时创建 Person-Person 关系和 Person-Town 关系的连接工具。
 
  连接工具将调用连接生成器。 使用连接生成器来指定用户在生成的设计器中链接元素的方式。 连接生成器将指定可链接的元素以及在元素之间创建的链接类型。
@@ -194,7 +194,7 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
 
  ![连接生成器图像](../modeling/media/connectionbuilder_4a.png)
 
- **"DSL 详细信息" 窗口中的链接连接指令**
+ **“DSL 详细信息”窗口中的链接连接指令**
 
  !["DSL 详细信息" 窗口中的链接连接指令](../modeling/media/connectionbuilder_4b.png)
 

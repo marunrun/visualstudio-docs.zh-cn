@@ -1,7 +1,7 @@
 ---
 title: 代码生成和 T4 文本模板
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: overview
 f1_keywords:
 - VS.ToolsOptionsPages.TextTemplating.TextTemplating
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f0eba8b4850ee845414084ef766fce30f9efd7e6
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: fbcd41461ab57e3bbb5fb48849ddde8593c587fb
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75597199"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85548234"
 ---
 # <a name="code-generation-and-t4-text-templates"></a>代码生成和 T4 文本模板
 
@@ -50,7 +50,7 @@ string webResponseText = new MyTemplate().TransformText();
 
 应用程序可以在未安装 Visual Studio 的计算机上运行。
 
-若要创建运行时模板，将“预处理过的文本模板” 文件添加到你的项目中。 或者，你也可以添加一个纯文本文件，并将其“自定义工具” 属性设置为 **TextTemplatingFilePreprocessor**。
+若要创建运行时模板，将“预处理过的文本模板” **** 文件添加到你的项目中。 或者，你也可以添加一个纯文本文件，并将其“自定义工具” **** 属性设置为 **TextTemplatingFilePreprocessor**。
 
 有关详细信息，请参阅[带有 T4 文本模板的运行时文本生成](../modeling/run-time-text-generation-with-t4-text-templates.md)。 有关模板语法的详细信息，请参阅[编写 T4 文本模板](../modeling/writing-a-t4-text-template.md)。
 
@@ -85,7 +85,7 @@ namespace Fabrikam.FirstJob
 
 通过设计时模板，可以在需要时更快更可靠地更配置。 通常，输入根据业务需求定义（如工作流示例所示）。 这样可以更容易地和你的用户讨论更改。 设计时模板也因此成为敏捷开发过程中使用的有用工具。
 
-若要创建运行时模板，请将“文本模版” 文件添加到你的项目中。 或者，你也可以添加一个纯文本文件，并将其“自定义工具” 属性设置为 **TextTemplatingFileGenerator**。
+若要创建运行时模板，请将“文本模版” **** 文件添加到你的项目中。 或者，你也可以添加一个纯文本文件，并将其“自定义工具” **** 属性设置为 **TextTemplatingFileGenerator**。
 
 有关详细信息，请参阅[使用 T4 文本模板生成设计时代码](../modeling/design-time-code-generation-by-using-t4-text-templates.md)。 有关模板语法的详细信息，请参阅[编写 T4 文本模板](../modeling/writing-a-t4-text-template.md)。
 
