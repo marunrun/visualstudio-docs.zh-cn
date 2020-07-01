@@ -3,7 +3,7 @@ title: 面向 C# 开发人员的概述
 ms.date: 03/19/2019
 ms.technology: vs-ide-general
 ms.custom: get-started
-ms.topic: conceptual
+ms.topic: overview
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
@@ -11,12 +11,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: da164414cfcca9631eaf59b5e2f6044e70ac9cc5
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: ade9dbfb17aa4330b572ac96080117562498a338
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79306841"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771125"
 ---
 # <a name="welcome-to-the-visual-studio-ide--c"></a>欢迎使用 Visual Studio IDE | C\#
 
@@ -26,15 +26,15 @@ ms.locfileid: "79306841"
 
 接下来，我们将把 Visual Studio 配置为，使用可满足 C# 开发人员需求的环境设置。
 
-1. 在菜单栏上，选择“工具” > “导入和导出设置”。
+1. 在菜单栏上，选择“工具” > “导入和导出设置” 。
 
-2. 在“导入和导出设置向导”  中，依次选择第一页上的“重置所有设置”  和“下一步”  。
+2. 在“导入和导出设置向导”中，依次选择第一页上的“重置所有设置”和“下一步”。
 
-3. 在“保存当前设置”  页上，依次选择确定是否保存当前设置的选项和“下一步”  。 （如果尚未自定义任何设置，请选择“不，只重置设置，同时覆盖我的当前设置”  。）
+3. 在“保存当前设置”页上，依次选择确定是否保存当前设置的选项和“下一步”。 （如果尚未自定义任何设置，请选择“不，只重置设置，同时覆盖我的当前设置”。）
 
-4. 在“选择默认设置集合”  页上，依次选择“Visual C#”  和“完成”  。
+4. 在“选择默认设置集合”页上，依次选择“Visual C#”和“完成”。
 
-5. 在“重置完成”  页上，选择“关闭”  。
+5. 在“重置完成”页上，选择“关闭”。
 
 若要了解有关 IDE 个性化设置的其他方法，请参阅[个性化设置 Visual Studio](../../ide/personalizing-the-visual-studio-ide.md)。
 
@@ -48,7 +48,7 @@ ms.locfileid: "79306841"
 > [!div class="nextstepaction"]
 > [了解项目和解决方案](../tutorial-projects-solutions.md)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - 发现[更多 Visual Studio 功能](../../ide/advanced-feature-overview.md)
 - 访问 [visualstudio.microsoft.com](https://visualstudio.microsoft.com/vs/)

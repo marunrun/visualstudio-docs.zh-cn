@@ -1,7 +1,7 @@
 ---
 title: 优化启动时间
 ms.date: 11/15/2017
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - startup time [Visual Studio]
 - optimizing performance [Visual Studio]
@@ -14,12 +14,12 @@ f1_keywords:
 - vs.performancecenter
 ms.workload:
 - multiple
-ms.openlocfilehash: 4824939b4ef3ed1bc7fa48b2508fc891c984a3c5
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 399bab1b95a7f17166f205902d04a1abec10e6dd
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79306835"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85770971"
 ---
 # <a name="optimize-visual-studio-startup-time"></a>优化 Visual Studio 启动时间
 

@@ -1,7 +1,7 @@
 ---
 title: 如何：自定义类图（类设计器）
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - class diagrams, customizing
 - shapes, removing type from class diagrams
@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f4c55204983f9e7a546867621ec21070c8d69645
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 4e8e4665790aa228bb30aac05ea4782cfe4a62f1
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75590158"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85770184"
 ---
 # <a name="how-to-customize-class-diagrams"></a>如何：自定义类图
 

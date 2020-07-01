@@ -8,17 +8,17 @@ helpviewer_keywords:
 - Set Radix command
 - Debug.SetRadix command
 ms.assetid: 6ffd1554-7530-4da4-b5f5-e276a5034f3b
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f920311301b722c11bea4a9f4eb90e9aa7663d80
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: e88dc1318e29ddf35073b78218eb113fe8952aac
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "72747733"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85769646"
 ---
 # <a name="set-radix-command"></a>“设置基数”命令
 设置或返回用来显示整数值的数值基数。

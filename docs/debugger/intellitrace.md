@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2be69003d14d2c246f95249b5db0b1fa7d470598
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: 4cbe14e1bf8c3a5e010e3c9e887a208b7e045b4c
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72911442"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85536508"
 ---
 # <a name="intellitrace-for-visual-studio-enterprise-c-visual-basic-c"></a>用于 Visual Studio Enterprise 的 IntelliTrace（C#、Visual Basic、C++）
 
@@ -39,7 +39,7 @@ ms.locfileid: "72911442"
 
 ## <a name="what-do-you-want-to-do"></a>你希望做什么？
 
-|||
+|方案|Title|
 |-|-|
 |**使用 IntelliTrace 调试应用程序：**<br /><br /> - 我想查看以前的事件。<br />- 我想查看以前事件的调用信息。<br />- 保存我的 IntelliTrace 会话。<br />- 控制 IntelliTrace 收集的数据。|- [使用 IntelliTrace 检查上一应用状态](../debugger/view-historical-application-state.md)<br />- [演练：使用 IntelliTrace](../debugger/walkthrough-using-intellitrace.md)<br />- [IntelliTrace 功能](../debugger/intellitrace-features.md)<br />- [历史调试](../debugger/historical-debugging.md)|
 |**从已部署的应用程序中收集 IntelliTrace 数据**|- [使用 IntelliTrace 独立收集器](../debugger/using-the-intellitrace-stand-alone-collector.md)|
@@ -47,7 +47,7 @@ ms.locfileid: "72911442"
 
 ## <a name="what-apps-can-i-debug-with-intellitrace"></a><a name="IntelliTraceSupport"></a>哪些应用程序可以使用 IntelliTrace 进行调试？
 
-| | |
+| 支持级别| 应用程序类型 |
 |---------------------| - |
 | 完全支持 | - 使用 .NET Framework 2.0 或更高版本的 Visual Basic 和 Visual C# 应用程序。<br/>你可以调试大多数应用程序，包括 ASP.NET、Microsoft Azure、Windows 窗体、WCF、WPF、Windows 工作流、SharePoint 2010、SharePoint 2013 和 64 位应用。<br/>若要使用 IntelliTrace 对 SharePoint 应用程序进行调试，请参见[演练：使用 IntelliTrace 调试 SharePoint 应用程序](../sharepoint/walkthrough-debugging-a-sharepoint-application-by-using-intellitrace.md)。<br/> 若要使用 IntelliTrace 调试 Microsoft Azure 应用，请参阅[使用 IntelliTrace 和 Visual Studio 调试已发布的云服务](../azure/vs-azure-tools-intellitrace-debug-published-cloud-services.md)。 |
 | **有限支持** | - 面向 Windows 的 C++ 应用支持使用 IntelliTrace 后退查看快照。 仅支持调试器和异常事件。<br />- .NET Core 和 ASP.NET Core 应用仅支持本地调试中的某些事件（MVC 控制器、ADO.NET 和 HTTPClient 事件）。 .NET Core 或 ASP.NET Core 应用不支持独立收集器。<br />- 实验证明的 F# 应用<br />- 仅支持事件的 UWP 应用 |

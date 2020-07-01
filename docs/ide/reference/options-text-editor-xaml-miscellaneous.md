@@ -28,32 +28,32 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: cec66cdb2de3f89358cd0ee90867154cc374a7fd
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: f646d52e3aae3d52f6cd24d75421fbdc71d30d66
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75568199"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544087"
 ---
 # <a name="options-text-editor-xaml-miscellaneous"></a>选项, 文本编辑器, XAML, 杂项
 
-使用“杂项”属性页以指定如何在 XAML 文档中设置元素和特性的格式  。 若要打开“选项”  对话框，请单击“工具”  菜单，然后单击“选项”  。 要访问“杂项”属性页，请展开“文本编辑器” > “XAML” > “杂项节点”。
+使用“杂项”属性页以指定如何在 XAML 文档中设置元素和特性的格式。 若要打开“选项”对话框，请单击“工具”菜单，然后单击“选项”。 要访问“杂项”属性页，请展开“文本编辑器” > “XAML” > “杂项节点”   。
 
 ## <a name="auto-insert"></a>自动插入
 
 使用此设置可以控制自动生成标记和引号的时间。
 
-|||
+|“属性”|描述|
 |-|-|
 |**结束标记**|指定使用大于号字符 (>) 关闭开始标记时，是否自动生成元素的结束标记。|
 |**特性引号**|指定从语句完成下拉列表中选择特性值时，是否生成封闭引号。|
-|**MarkupExtensions 的右大括号**|指定键入左括号字符 (}  ) 时，是否自动生成标记扩展的右括号 ({  )。|
+|**MarkupExtensions 的右大括号**|指定键入左括号字符 (}) 时，是否自动生成标记扩展的右括号 ({)。|
 |**用于分隔 MarkupExtension 参数的逗号**|指定在标记扩展中键入多个参数时是否生成逗号。|
 
 ## <a name="errors-and-warnings"></a>错误和警告
 
 使用此设置控制何时自动生成错误和警告。 有关详细信息，请参阅 [XAML 错误和警告](../../xaml-tools/xaml-errors-warnings.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [WPF 中的 XAML](/dotnet/framework/wpf/advanced/xaml-in-wpf)

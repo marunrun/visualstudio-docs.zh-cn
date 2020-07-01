@@ -1,7 +1,7 @@
 ---
 title: 在游戏或应用中使用三维资产
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - VC.Project.ImageContentTask.ContentOutput
 - VC.Project.MeshContentTask.ContentOutput
@@ -15,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d38f87970d5f9ff6d90befc61073cc4ed3d4ca92
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 3821262a456f9e3e764555fce5fc883b42d4ae9e
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75589820"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768653"
 ---
 # <a name="how-to-use-3d-assets-in-your-game-or-app"></a>如何：在游戏或应用中使用三维资产
 

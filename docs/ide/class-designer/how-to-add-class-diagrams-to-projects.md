@@ -1,7 +1,7 @@
 ---
 title: 如何：向项目中添加类图（类设计器）
 ms.date: 05/08/2018
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - class diagrams, creating
 - Class Designer [Visual Studio], opening
@@ -11,12 +11,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 87a6c1e996d820724138b6bf38c6440193a4c26b
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: a54b01f718c2faab8d36cc8e44805707fd0cc35f
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75588832"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771033"
 ---
 # <a name="how-to-add-class-diagrams-to-projects"></a>如何：向项目添加类图
 

@@ -4,17 +4,17 @@ ms.date: 01/16/2019
 ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.F%2523.Advanced
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: aacc2b6aa47f7a250b161187146accc51736b586
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 64626a0ebd8850098bbbc056d523b6a3f034bf4e
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "72668949"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85770947"
 ---
 # <a name="options-text-editor-f-advanced"></a>“选项”>“文本编辑器”>“F#”>“高级”
 

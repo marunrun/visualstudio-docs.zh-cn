@@ -1,7 +1,7 @@
 ---
 title: 如何：将类关系图导出为图像（类设计器）
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.classdesigner.exportdialog
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ac469b913b03dec9389b3f44121c2e80d87d30b3
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: fdecb8834f296d24cbd53d6725b800612f9bcf57
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75590132"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85770149"
 ---
 # <a name="how-to-export-class-diagrams-as-images"></a>如何：将类图作为图像导出
 

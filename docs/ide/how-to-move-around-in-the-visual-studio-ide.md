@@ -1,7 +1,7 @@
 ---
 title: 在 IDE 中移动
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - environments [Visual Studio], navigation
 - documents [Visual Studio], navigating
@@ -17,12 +17,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2febdedf5cf472132de936c37cad787df3d77518
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 1052deb04a93d11349ef9beb2ff667893095902f
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75590990"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85769850"
 ---
 # <a name="how-to-move-around-in-the-visual-studio-ide"></a>如何：在 Visual Studio IDE 中移动
 
