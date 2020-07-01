@@ -2,7 +2,7 @@
 title: Dotfuscator Community
 ms.date: 03/28/2019
 ms.devlang: dotnet
-ms.topic: conceptual
+ms.topic: overview
 keywords: Dotfuscator, Dotfuscator CE, Dotfuscator Community, PreEmptive, PreEmptive Solutions, PreEmptive Protection, 保护, 社区版, 模糊处理, .NET, 免费, Visual Studio 2019, Visual Studio 2017, Visual Studio
 helpviewer_keywords:
 - PreEmptive Protection Dotfuscator
@@ -17,12 +17,12 @@ ms.assetid: d9550502-0a82-49a6-b005-2caa791fbe02
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: f1b2c0bfd4adbd4a952a64f20fc3d2639a8abb5f
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: 7a8602dc99ba63e6cba5035636af0fbd47263e58
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "75918449"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85769490"
 ---
 # <a name="dotfuscator-community"></a>Dotfuscator Community
 
@@ -55,10 +55,10 @@ Dotfuscator Community 为开发人员、架构师和测试人员提供了一系�
 Dotfuscator Community 中包含的 [.NET 模糊处理][obfuscation]和其他[应用程序保护][app-protection]功能的示例有：
 
 * *[重命名][renaming]* 标识符，增加对已编译程序集实施反向工程的难度。
-* [防篡改][tamper]  ：检测已遭篡改的应用程序的执行，并终止或响应已遭篡改的会话。
-* [防调试][debug]  ：检测向正在运行的应用程序附加的调试器，并终止或响应已遭调试的会话。
-* [防取得 root 权限的设备][root]  ：检测应用程序是否在取得 root 权限的 Android 设备上运行，并终止或响应这些设备上的会话。
-* [应用程序到期行为][shelflife]  ：对生命周期结束日期进行编码，并终止已到期的应用程序会话。
+* [防篡改][tamper]：检测已遭篡改的应用程序的执行，并终止或响应已遭篡改的会话。
+* [防调试][debug]：检测向正在运行的应用程序附加的调试器，并终止或响应已遭调试的会话。
+* [防取得 root 权限的设备][root]：检测应用程序是否在取得 root 权限的 Android 设备上运行，并终止或响应这些设备上的会话。
+* [应用程序到期行为][shelflife]：对生命周期结束日期进行编码，并终止已到期的应用程序会话。
 
 有关这些功能的详细信息（包括这些功能如何融入应用程序保护策略），请参阅[功能页][capabilities]。
 
@@ -70,23 +70,23 @@ Dotfuscator Community 提供现成的基础保护。
 
 ::: moniker range="vs-2019"
 
-若要开始在 Visual Studio 中使用 Dotfuscator Community，请在“搜索框”  (Ctrl+Q) 中键入 `dotfuscator`。
+若要开始在 Visual Studio 中使用 Dotfuscator Community，请在“搜索框” (Ctrl+Q) 中键入 `dotfuscator`。
 
-* 如果已安装 Dotfuscator Community，“搜索框”  将在“菜单”  标题下显示启动 Dotfuscator Community 的选项。 有关详细信息，请参阅[完整 Dotfuscator Community 用户指南的“入门”页][get-started]。
-* 如果尚未安装 Dotfuscator Community，“搜索框”  将在“各个组件”  标题下显示“安装 PreEmptive Protection - Dotfuscator”  。 有关详细信息，请参阅[安装页][install]。
+* 如果已安装 Dotfuscator Community，“搜索框”将在“菜单”标题下显示启动 Dotfuscator Community 的选项。 有关详细信息，请参阅[完整 Dotfuscator Community 用户指南的“入门”页][get-started]。
+* 如果尚未安装 Dotfuscator Community，“搜索框”将在“各个组件”标题下显示“安装 PreEmptive Protection - Dotfuscator”。 有关详细信息，请参阅[安装页][install]。
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-若要开始在 Visual Studio 中使用 Dotfuscator Community，请在“快速启动”  (Ctrl+Q) 搜索栏中键入 `dotfuscator`。
+若要开始在 Visual Studio 中使用 Dotfuscator Community，请在“快速启动” (Ctrl+Q) 搜索栏中键入 `dotfuscator`。
 
-* 如果已安装 Dotfuscator Community，“快速启动”  栏将弹出“菜单”  选项以启动 Dotfuscator Community 用户界面。 有关详细信息，请参阅[完整 Dotfuscator Community 用户指南的“入门”页][get-started]。
-* 如果尚未安装 Dotfuscator Community，“快速启动”  栏将弹出相关的安装  选项。 有关详细信息，请参阅[安装页][install]。
+* 如果已安装 Dotfuscator Community，“快速启动”栏将弹出“菜单”选项以启动 Dotfuscator Community 用户界面。 有关详细信息，请参阅[完整 Dotfuscator Community 用户指南的“入门”页][get-started]。
+* 如果尚未安装 Dotfuscator Community，“快速启动”栏将弹出相关的安装选项。 有关详细信息，请参阅[安装页][install]。
 
 ::: moniker-end
 
-还可以从 [preemptive.com 上的 Dotfuscator 下载页][download]中获取最新版本的 Dotfuscator Community  。
+还可以从 [preemptive.com 上的 Dotfuscator 下载页][download]中获取最新版本的 Dotfuscator Community。
 
 ## <a name="full-documentation"></a>完整文档
 
