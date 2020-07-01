@@ -23,7 +23,7 @@ ms.locfileid: "85531556"
 
 ## <a name="related-topics"></a>相关主题
 
-|Title|说明|
+|Title|描述|
 |-|-|
 |[如何：创建基本颜色着色器](../designers/how-to-create-a-basic-color-shader.md)|演示将常量颜色应用于对象的着色器。|
 |[如何：创建基本朗伯着色器](../designers/how-to-create-a-basic-lambert-shader.md)|演示将经典朗伯照明模型应用于对象的着色器。|

@@ -66,7 +66,7 @@ ms.locfileid: "85531386"
 
 如果想要创建一个包含命令、层验证程序和其他扩展的 VSIX，建议创建一个项目来定义 VSIX，并分隔处理程序的项目。
 
-1. 创建新的“类库”项目  。 此项目将包含命令或笔势处理程序类。
+1. 创建新的“类库”项目。 此项目将包含命令或笔势处理程序类。
 
    > [!NOTE]
    > 可以在一个类库中定义多个命令或笔势处理程序类，但应在单独的类库中定义层验证类。
@@ -261,6 +261,6 @@ namespace MyLayerExtensions // change to your preference
 
 - 已为某些类型的拖动项定义了处理程序。 例如，用户可以将项从解决方案资源管理器拖动到依赖项关系图上。 无法为这些类型的项定义拖动处理程序。 在这些情况下，不会调用 `DragDrop` 方法。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [向依赖项关系图添加自定义体系结构验证](../modeling/add-custom-architecture-validation-to-layer-diagrams.md)
