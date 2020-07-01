@@ -11,4 +11,4 @@ ms.lasthandoff: 04/02/2020
 ms.locfileid: "80573285"
 ---
 > [!NOTE]
-> 有兴趣开发跨多个平台扩展 Office 体验的解决方案？ 查看新的[Office 外接程序模型](/office/dev/add-ins/)。 与 VSTO 加载项和解决方案相比，Office 加载项占用空间小，您可以使用几乎任何 Web 编程技术（如 HTML5、JavaScript、CSS3 和 XML）来构建它们。
+> 有兴趣开发跨多个平台扩展 Office 体验的解决方案？ 查看新的 " [Office 外接程序" 模型](/office/dev/add-ins/)。 与 VSTO 外接程序和解决方案相比，Office 外接程序的占用空间较小，可以使用几乎任何 web 编程技术（例如 HTML5、JavaScript、CSS3 和 XML）生成它们。
