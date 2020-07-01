@@ -1,7 +1,7 @@
 ---
 title: 自定义“属性”窗口
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - Domain-Specific Language, Properties window
 author: JoshuaPartlow
@@ -9,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b2cd7d4598040721d3c5b6acb7844f668c72ea09
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 4dac40177c3df2a346039a08cf557b6083ed9fc2
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75589690"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85548273"
 ---
 # <a name="customize-the-properties-window"></a>自定义属性窗口
 
@@ -26,13 +26,13 @@ ms.locfileid: "75589690"
 
 在 DSL 定义中设置某个属性的名称时，其显示名称将自动设置为该名称的副本。 如果编写 Pascal 大小写名称（如 "FuelGauge"），则显示名称将自动包含一个空格： "燃料仪表"。 但是，你可以将显示名称显式设置为另一个值。
 
-**描述**。 域属性的说明出现在两个位置：
+**说明**。 域属性的说明出现在两个位置：
 
 - 当用户选择属性时，在 "属性" 窗口的底部。 可以使用它向用户说明属性表示的内容。
 
 - 在生成的程序代码中。 如果使用文档工具来提取 API 文档，它将在 API 中显示为此属性的说明。
 
-**Category**。 类别是属性窗口中的标题。
+**类别**。 类别是属性窗口中的标题。
 
 ## <a name="expose-style-features"></a>公开样式功能
 
@@ -40,7 +40,7 @@ ms.locfileid: "75589690"
 
 右键单击 DSL 定义中的形状类，指向 "添加" "**添加**"，然后选择一项功能。
 
-在形状上，可以公开**FillColor**、 **OutlineColor**、 **TextColor**、 **OutlineDashStyle**、 **OutlineThickness**和**FillGradientMode**属性。 在连接器上，可以`,`**TextColor**、 **DashStyle**和**宽窄**属性公开**颜色**。 在关系图上，可以公开**FillColor**和**TextColor**属性。
+在形状上，可以公开**FillColor**、 **OutlineColor**、 **TextColor**、 **OutlineDashStyle**、 **OutlineThickness**和**FillGradientMode**属性。 在连接器上，可以公开**Color** `,` **TextColor**、 **DashStyle**和**宽窄**属性。 在关系图上，可以公开**FillColor**和**TextColor**属性。
 
 ## <a name="forwarding-display-properties-of-related-elements"></a>转发：显示相关元素的属性
 
@@ -52,7 +52,7 @@ ms.locfileid: "75589690"
 
 当用户在资源管理器中选择形状或连接符或元素时，以下属性将显示在属性窗口中：
 
-- 在模型元素的域类上定义的域属性，包括基类中定义的属性。 例外情况是你为其设置**了可浏览**`False`的域属性。
+- 在模型元素的域类上定义的域属性，包括基类中定义的属性。 例外情况是可以**浏览**设置的域属性 `False` 。
 
 - 通过具有重数为 0 ..1 的关系链接的元素的名称。 这提供了一种方便的方法来查看链接的元素，即使您没有为关系定义连接器映射也是如此。
 
@@ -71,7 +71,7 @@ ms.locfileid: "75589690"
 
 #### <a name="forward-a-property-from-another-element"></a>从另一个元素转发属性
 
-1. 创建一个 [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] 解决方案，该解决方案至少包含两个类，在此示例中称为**书籍**和**作者**。 **本书**和**Author**之间应有一种类型的关系。
+1. 创建一个 [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] 包含至少两个类的解决方案，在此示例中，这两个类称为 "**书籍**和**作者**"。 **本书**和**Author**之间应有一种类型的关系。
 
     源角色的重数（**本书**端角色）应为 0 ..1 或 1 ..1，以便每**本书**都有一个**作者**。
 
@@ -132,7 +132,7 @@ ms.locfileid: "75589690"
 
     在属性窗口的 "**类型**" 字段的下拉列表中，选择 "外部" 类型。
 
-   在此阶段，用户可以查看属性的值，但不能对其进行编辑。 将从 `ToString()` 函数获取显示的值。 您可以编写程序代码以设置属性的值，例如在命令或规则中。
+   在此阶段，用户可以查看属性的值，但不能对其进行编辑。 将从函数获取显示的值 `ToString()` 。 您可以编写程序代码以设置属性的值，例如在命令或规则中。
 
 ### <a name="set-a-property-editor"></a>设置属性编辑器
 
@@ -146,9 +146,9 @@ ms.locfileid: "75589690"
 
 您可以使用属性窗口中的**自定义特性**项设置属性的属性。
 
-`AnEditor` 的类型必须从第二个参数中指定的类型派生而来。 第二个参数应是 <xref:System.Drawing.Design.UITypeEditor> 或 <xref:System.ComponentModel.ComponentEditor>。 有关更多信息，请参见<xref:System.ComponentModel.EditorAttribute>。
+的类型 `AnEditor` 必须派生自第二个参数中指定的类型。 第二个参数应为 <xref:System.Drawing.Design.UITypeEditor> 或 <xref:System.ComponentModel.ComponentEditor> 。 有关详细信息，请参阅 <xref:System.ComponentModel.EditorAttribute>。
 
-您可以指定您自己的编辑器或 .NET 编辑器，如 <xref:System.Windows.Forms.Design.FileNameEditor> 或 <xref:System.Drawing.Design.ImageEditor>。 例如，使用下面的过程可以拥有一个属性，用户可以在其中输入文件名。
+您可以指定您自己的编辑器或 .NET 编辑器（如 <xref:System.Windows.Forms.Design.FileNameEditor> 或） <xref:System.Drawing.Design.ImageEditor> 。 例如，使用下面的过程可以拥有一个属性，用户可以在其中输入文件名。
 
 #### <a name="define-a-file-name-domain-property"></a>定义文件名域属性
 
@@ -169,7 +169,7 @@ ms.locfileid: "75589690"
 
     1. 按 CTRL + F5 或 F5。 在调试解决方案中，打开测试文件。 创建域类的元素并将其选中。
 
-    2. 在属性窗口中，选择 "域" 属性。 值字段显示省略号 **[...]** 。
+    2. 在属性窗口中，选择 "域" 属性。 值字段显示省略号 **[...]**。
 
     3. 单击省略号。 此时将显示一个文件对话框。 选择一个文件并关闭对话框。 文件路径现在为域属性的值。
 
@@ -177,13 +177,13 @@ ms.locfileid: "75589690"
 
 您可以定义自己的编辑器。 您可以通过此操作来允许用户编辑您定义的类型，或以特殊方式编辑标准类型。 例如，您可以允许用户输入表示公式的字符串。
 
-通过编写派生自 <xref:System.Drawing.Design.UITypeEditor>的类来定义编辑器。 你的类必须重写：
+通过编写派生自的类来定义编辑器 <xref:System.Drawing.Design.UITypeEditor> 。 你的类必须重写：
 
 - <xref:System.Drawing.Design.UITypeEditor.EditValue%2A>，用于与用户交互并更新属性值。
 
-- <xref:System.Drawing.Design.UITypeEditor.GetEditStyle%2A>，指定编辑器是打开对话框还是提供下拉菜单。
+- <xref:System.Drawing.Design.UITypeEditor.GetEditStyle%2A>，用于指定编辑器是打开对话框还是提供下拉菜单。
 
-还可以提供属性的值的图形表示形式，该属性的值将显示在属性网格中。 为此，请重写 `GetPaintValueSupported`和 `PaintValue`。  有关更多信息，请参见<xref:System.Drawing.Design.UITypeEditor>。
+还可以提供属性的值的图形表示形式，该属性的值将显示在属性网格中。 为此，请重写 `GetPaintValueSupported` 和 `PaintValue` 。  有关详细信息，请参阅 <xref:System.Drawing.Design.UITypeEditor>。
 
 > [!NOTE]
 > 在**Dsl**项目的单独代码文件中添加代码。
@@ -210,7 +210,7 @@ internal class TextFileNameEditor : System.Windows.Forms.Design.FileNameEditor
    , typeof(System.Drawing.Design.UITypeEditor))]
 ```
 
-有关更多信息，请参见<xref:System.Drawing.Design.UITypeEditor>。
+有关详细信息，请参阅 <xref:System.Drawing.Design.UITypeEditor>。
 
 ## <a name="provide-a-drop-down-list-of-values"></a>提供值的下拉列表
 

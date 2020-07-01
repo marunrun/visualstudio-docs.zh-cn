@@ -12,12 +12,12 @@ caps.latest.revision: 21
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 1c2134c38a3910a5dd1308990b0788002a7ded2d
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: MTE95
+ms.openlocfilehash: 7cac308de96c3edc2dfe5c7577b0bee8077bf9e7
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63441903"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85548430"
 ---
 # <a name="nameprofile"></a>NameProfile
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -50,7 +50,7 @@ PROFILE_COMMAND_STATUS PROFILERAPI NameProfile(
   
   `Level`  
   
-  指示性能数据集合可应用到的分析级别。 以下 PROFILE_CONTROL_LEVEL 值可用于指示性能数据集合可应用到的三个级别之一：  
+  指示性能数据集合可应用到的分析级别。 以下 PROFILE_CONTROL_LEVEL 值可用于指示性能数据集合可应用到的三个级别之一  ：  
   
 |枚举器|说明|  
 |----------------|-----------------|  
@@ -91,10 +91,10 @@ PROFILE_COMMAND_STATUS PROFILERAPI NameProfile(
   
 ## <a name="function-information"></a>函数信息  
   
-|||  
+|Item|说明|  
 |-|-|  
-|**Header**|包括 VSPerf.h|  
-|**Library**|使用 VSPerf.lib|  
+|**标头**|包括 VSPerf.h|  
+|**库**|使用 VSPerf.lib|  
 |**Unicode**|作为 `NameProfileW` (Unicode) 和 `NameProfileA` (ANSI) 实现。|  
   
 ## <a name="example"></a>示例  
@@ -135,5 +135,5 @@ void ExerciseNameProfile()
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Visual Studio 探查器 API 参考（本机）](../profiling/visual-studio-profiler-api-reference-native.md)

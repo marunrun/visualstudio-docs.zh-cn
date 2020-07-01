@@ -15,27 +15,27 @@ caps.latest.revision: 18
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 50a36281edb144ddb949899fa24e0b5088080220
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 0ef6dc666cbc3c26d58358c9b59264f93a7bf184
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72668315"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85548247"
 ---
-# <a name="ca1040-avoid-empty-interfaces"></a>CA1040：避免使用空接口
+# <a name="ca1040-avoid-empty-interfaces"></a>CA1040:避免使用空接口
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|值|
 |-|-|
 |TypeName|AvoidEmptyInterfaces|
 |CheckId|CA1040|
-|类别|Microsoft. Design|
+|Category|Microsoft. Design|
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
  接口不声明任何成员或实现两个或更多个其他接口。
 
-## <a name="rule-description"></a>规则说明
+## <a name="rule-description"></a>规则描述
  接口定义提供某个行为或使用协定的成员。 接口所描述的功能可以被任何类型采用，而不管该类型出现在继承层次结构中的哪个位置。 类型通过实现接口的成员来实现接口。 空接口不定义任何成员。 因此，它不定义可以实现的协定。
 
  如果您的设计包含类型应实现的空接口，则您可能会将接口用作标记或标识一组类型的方式。 如果在运行时进行此标识，则完成此工作的正确方法是使用自定义属性。 使用特性的存在或缺少特性，以标识目标类型。 如果标识必须在编译时出现，则可以使用空接口。
