@@ -1,19 +1,19 @@
 ---
 title: 使用“仅我的代码”调试用户代码 | Microsoft Docs
 ms.date: 02/13/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 0f0df097-bbaf-46ad-9ad1-ef5f40435079
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9c1d474b388dd8f116eb53febb8a472d4c5b8150
-ms.sourcegitcommit: 08c144d290da373df841f04fc799e3133540a541
+ms.openlocfilehash: 867477fd3e490f91e81fb91c8be267ede83c8d2c
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72535995"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85536560"
 ---
 # <a name="debug-only-user-code-with-just-my-code"></a>使用“仅我的代码”仅调试用户代码
 
@@ -196,7 +196,7 @@ ms.locfileid: "72535995"
 
 <a name="BKMK_JS_User_and_non_user_code"></a>JavaScript“仅我的代码”控件通过采用以下分类之一对代码进行分类，来控制单步执行和调用堆栈显示：
 
-|||
+|分类|描述|
 |-|-|
 |**MyCode**|你拥有或控制的用户代码。|
 |**LibraryCode**|你定期使用的库中以及应用必需具备才能正常运行（例如 WinJS 或 jQuery）的非用户代码。|
@@ -279,7 +279,7 @@ Mycode.json 文件使用以下语法：
 
 “Eval”、“Function”和“ScriptBlock”键值对确定如何对动态生成的代码进行分类  ：
 
-|||
+|“属性”|描述|
 |-|-|
 |**Eval**|通过将字符串传递给主机提供的 `eval` 函数来执行的脚本。 默认情况下，Eval 脚本分类为“MyCode”。|
 |**Function**|通过将字符串传递给 `Function` 构造函数来执行的脚本。 默认情况下，Function 脚本分类为“LibraryCode”。|
@@ -295,7 +295,7 @@ Mycode.json 文件使用以下语法：
 
 “MyCode”、“Libraries”和“Unrelated”键值对指定要包含在分类中的 URL 或文件  ：
 
-|||
+|“属性”|描述|
 |-|-|
 |**MyCode**|分类为“MyCode”的 URL 数组或文件数组。|
 |**Libraries**|分类为“LibraryCode”的 URL 数组或文件数组。|

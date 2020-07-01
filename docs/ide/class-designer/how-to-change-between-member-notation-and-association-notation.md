@@ -1,7 +1,7 @@
 ---
 title: 在成员表示法与关联表示法之间转换（类设计器）
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - notation, member
 - association notation
@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9f706acfbaee7c6170f74bc655f9172ff6bdd3b4
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: d453dd2cd19f8a6c9c76ebcc48a762ba3142ea74
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75592264"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771010"
 ---
 # <a name="how-to-change-between-member-notation-and-association-notation-in-class-designer"></a>如何：在类设计器中在成员表示法与关联表示法之间转换
 

@@ -4,7 +4,7 @@ description: 了解如何在 Visual Studio 中设置辅助功能选项，让每�
 ms.date: 08/23/2019
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - accessibility [Visual Studio]
 ms.assetid: ddc96c4c-0600-46c1-8267-7dce4c44ad24
@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 63bba4e8defcd727f05dbc209aa2f48f7d5f2c92
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: ac857d961b1ae736645ba2cfda3f1ef5755d0fa1
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "70107772"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85770284"
 ---
 # <a name="how-to-set-ide-accessibility-options"></a>如何：设置 IDE 辅助功能选项
 

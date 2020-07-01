@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 94ac6e9e85a2d7dd504b2d2bd83bd1bbdb265ea0
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: f18a636d83210b2329d103b1babdf47e697fd5c7
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62776772"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85537080"
 ---
 # <a name="channels-threads-view"></a>通道（线程视图）
 并发可视化工具显示四类通道：线程通道、磁盘通道、标记通道和 GPU 通道。
@@ -25,7 +25,7 @@ ms.locfileid: "62776772"
 ## <a name="thread-channels"></a>线程通道
  线程通道通过颜色显示一个线程的状态。 停在通道名称处时，将显示给定线程的开始函数。 并发可视化工具可检测到多种线程。 下表列出了最常用的线程类型。
 
-|||
+|线程|描述|
 |-|-|
 |主线程|启动应用的线程。|
 |工作线程|由应用程序主线程创建的线程。|
@@ -47,5 +47,5 @@ ms.locfileid: "62776772"
 ## <a name="gpu-channels"></a>GPU 通道
  GPU 通道显示系统上有关 DirectX 11 活动的信息。  每个与图形卡关联的 DirectX 引擎都有一个单独的通道。  单独的段表示处理 DMA 数据包所花费的时间。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [“线程”视图](../profiling/threads-view-parallel-performance.md)

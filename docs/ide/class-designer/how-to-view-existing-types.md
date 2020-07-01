@@ -1,7 +1,7 @@
 ---
 title: 如何：查看现有类型（类设计器）
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.classdesigner.CannotShowBaseType
 helpviewer_keywords:
@@ -14,12 +14,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 04b109bfa5741a5d4349f2d503bd1c821e19029d
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: fa27489844bc59bc0d4da32440cc1caa74ecbea6
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75588702"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85770004"
 ---
 # <a name="how-to-view-existing-types-in-class-designer"></a>如何：在类设计器中查看现有类型
 

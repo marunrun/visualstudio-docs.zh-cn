@@ -1,7 +1,7 @@
 ---
 title: 如何：创建类型之间的关联（类设计器）
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.classdesigner.associationline
 helpviewer_keywords:
@@ -16,12 +16,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 61b598505ad465ec9086102b9e16e96cb7aa8275
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 3cce893efaad5f2317b175391a2685cae7053e3c
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75590379"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85770963"
 ---
 # <a name="how-to-create-associations-between-types-in-class-designer"></a>如何：在类设计器中创建类型之间的关联
 

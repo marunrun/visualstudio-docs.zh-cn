@@ -1,19 +1,19 @@
 ---
 title: 着色器设计器节点
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: overview
 ms.assetid: f5192fbd-c78f-40a8-a4d4-443209610268
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 23877f9b94b498d87a89ae8e657aa2fe52984953
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 75d13aaf5d5b4257ff6ec7c2efc52adbdca7df92
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "72634929"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768784"
 ---
 # <a name="shader-designer-nodes"></a>着色器设计器节点
 文档本部分文章包含关于用于创建图形效果的各种着色器设计器节点的信息。
