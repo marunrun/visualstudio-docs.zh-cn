@@ -15,27 +15,27 @@ caps.latest.revision: 17
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: b9c91a7c9833d3d9d5ae283c28ae4d437bd07734
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 4267b4f55f78106a4d1e8f3b2f9b296be9ddf618
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72658747"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546531"
 ---
-# <a name="ca2112-secured-types-should-not-expose-fields"></a>CA2112：受保护的类型不应公开字段
+# <a name="ca2112-secured-types-should-not-expose-fields"></a>CA2112:受保护的类型不应公开字段
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|值|
 |-|-|
 |TypeName|SecuredTypesShouldNotExposeFields|
 |CheckId|CA2112|
-|类别|Microsoft.Security|
+|Category|Microsoft.Security|
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
  公共或受保护类型包含公共字段，并受[链接要求](https://msdn.microsoft.com/library/a33fd5f9-2de9-4653-a4f0-d9df25082c4d)保护。
 
-## <a name="rule-description"></a>规则说明
+## <a name="rule-description"></a>规则描述
  如果代码可以访问受链接要求保护的类型的实例，则该代码不必满足此链接要求就可以访问该类型的字段。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
@@ -45,7 +45,7 @@ ms.locfileid: "72658747"
  出于安全问题和良好的设计，你应该通过使公共字段成为非公共字段来解决冲突。 如果字段不包含应保持安全的信息，并且您不依赖于字段的内容，则可以禁止显示此规则发出的警告。
 
 ## <a name="example"></a>示例
- 下面的示例由一个包含不安全字段的库类型（`SecuredTypeWithFields`）、一种类型（`Distributor`），该类型（可创建库类型的实例，并将实例与类型一起传递给类型时不具有创建权限的方法）和应用程序代码（可读取实例的字段，即使它不具有用于保护类型的权限。
+ 下面的示例由一个包含不安全字段的库类型（ `SecuredTypeWithFields` ）和一个类型（）组成，该类型（ `Distributor` ）可以创建库类型的实例，并将实例传递到类型无权创建它们，还可以读取实例的字段（即使它没有用于保护类型的权限）。
 
  以下库代码违反了该规则。
 
@@ -65,10 +65,10 @@ ms.locfileid: "72658747"
 
  **创建 SecuredTypeWithFields 的实例。** 
 **安全类型字段：22、33** 
-**更改安全类型的字段 ...** 
+正在**更改安全类型的字段 ...** 
 **缓存的对象字段：99、33**
 ## <a name="related-rules"></a>相关规则
- [CA1051：不要声明可见实例字段](../code-quality/ca1051-do-not-declare-visible-instance-fields.md)
+ [CA1051:不要声明可见实例字段](../code-quality/ca1051-do-not-declare-visible-instance-fields.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [链接需求](https://msdn.microsoft.com/library/a33fd5f9-2de9-4653-a4f0-d9df25082c4d)[数据和建模](https://msdn.microsoft.com/library/8c37635d-e2c1-4b64-a258-61d9e87405e6)

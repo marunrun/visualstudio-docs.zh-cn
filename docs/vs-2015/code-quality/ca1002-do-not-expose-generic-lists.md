@@ -15,28 +15,28 @@ caps.latest.revision: 22
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 2a1d8ea70ca86cbb2f38afff48fe37b414b70e88
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 6fcc4ae2a07eb7b1f155d6c65020e2c1a9ddc9f2
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72646305"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546843"
 ---
-# <a name="ca1002-do-not-expose-generic-lists"></a>CA1002：不要公开泛型列表
+# <a name="ca1002-do-not-expose-generic-lists"></a>CA1002:不要公开泛型列表
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|值|
 |-|-|
 |TypeName|DoNotExposeGenericLists|
 |CheckId|CA1002|
-|类别|Microsoft. Design|
+|Category|Microsoft. Design|
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
- 类型包含外部可见成员，该成员为 <xref:System.Collections.Generic.List%601?displayProperty=fullName> 类型，返回 <xref:System.Collections.Generic.List%601?displayProperty=fullName> 类型，或其签名包含 <xref:System.Collections.Generic.List%601?displayProperty=fullName> 参数。
+ 类型包含外部可见的成员，该成员是 <xref:System.Collections.Generic.List%601?displayProperty=fullName> 类型、返回 <xref:System.Collections.Generic.List%601?displayProperty=fullName> 类型或其签名包含 <xref:System.Collections.Generic.List%601?displayProperty=fullName> 参数。
 
-## <a name="rule-description"></a>规则说明
- <xref:System.Collections.Generic.List%601?displayProperty=fullName> 是为性能而不是继承而设计的泛型集合。 <xref:System.Collections.Generic.List%601?displayProperty=fullName> 不包含使更改继承类的行为变得更简单的虚拟成员。 以下泛型集合专用于继承，并且应公开，而不是 <xref:System.Collections.Generic.List%601?displayProperty=fullName>。
+## <a name="rule-description"></a>规则描述
+ <xref:System.Collections.Generic.List%601?displayProperty=fullName>是为性能而不是继承而设计的泛型集合。 <xref:System.Collections.Generic.List%601?displayProperty=fullName>不包含使更改继承类的行为变得更简单的虚拟成员。 以下泛型集合是为继承设计的，应公开，而不是公开 <xref:System.Collections.Generic.List%601?displayProperty=fullName> 。
 
 - <xref:System.Collections.ObjectModel.Collection%601?displayProperty=fullName>
 
@@ -51,19 +51,19 @@ ms.locfileid: "72646305"
  请勿禁止显示此规则发出的警告，除非引发此警告的程序集不是可重用的库。 例如，可以安全地在性能优化的应用程序中禁止显示此警告，因为使用的是泛型列表。
 
 ## <a name="related-rules"></a>相关规则
- [CA1005：避免泛型类型的参数过多](../code-quality/ca1005-avoid-excessive-parameters-on-generic-types.md)
+ [CA1005:避免泛型类型的参数过多](../code-quality/ca1005-avoid-excessive-parameters-on-generic-types.md)
 
- [CA1010：集合应实现泛型接口](../code-quality/ca1010-collections-should-implement-generic-interface.md)
+ [CA1010:集合应实现泛型接口](../code-quality/ca1010-collections-should-implement-generic-interface.md)
 
- [CA1000：不要在泛型类型中声明静态成员](../code-quality/ca1000-do-not-declare-static-members-on-generic-types.md)
+ [CA1000:不要在泛型类型中声明静态成员](../code-quality/ca1000-do-not-declare-static-members-on-generic-types.md)
 
- [CA1006：不要将泛型类型嵌套在成员签名中](../code-quality/ca1006-do-not-nest-generic-types-in-member-signatures.md)
+ [CA1006:不要将泛型类型嵌套在成员签名中](../code-quality/ca1006-do-not-nest-generic-types-in-member-signatures.md)
 
- [CA1004：泛型方法应提供类型形参](../code-quality/ca1004-generic-methods-should-provide-type-parameter.md)
+ [CA1004:泛型方法应提供类型参数](../code-quality/ca1004-generic-methods-should-provide-type-parameter.md)
 
- [CA1003：使用泛型事件处理程序实例](../code-quality/ca1003-use-generic-event-handler-instances.md)
+ [CA1003:使用泛型事件处理程序实例](../code-quality/ca1003-use-generic-event-handler-instances.md)
 
- [CA1007：在适用处使用泛型](../code-quality/ca1007-use-generics-where-appropriate.md)
+ [CA1007:在适用处使用泛型](../code-quality/ca1007-use-generics-where-appropriate.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [泛型](https://msdn.microsoft.com/library/75ea8509-a4ea-4e7a-a2b3-cf72482e9282)

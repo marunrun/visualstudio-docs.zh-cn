@@ -1,5 +1,5 @@
 ---
-title: IntelliTrace 功能 |Microsoft Docs
+title: IntelliTrace 功能 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -22,17 +22,17 @@ caps.latest.revision: 73
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 8c41889e0e9d570ecdb415b6487c48c7c2b7c7c4
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: e386277c56f7da50e55e077620cbf649ec6a0c9e
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75847228"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546245"
 ---
 # <a name="intellitrace-features"></a>IntelliTrace 功能
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-可以使用 IntelliTrace 记录事件和调用应用程序的方法，它让你能够在执行中的不同位置检查其状态（调用堆栈和局部变量值）。 只需启动 "照常调试"-默认情况下，IntelliTrace 处于打开状态，您可以在 "**事件**" 选项卡下的 "新建**诊断工具**" 窗口中看到 "intellitrace 正在记录" 信息。选择一个事件，然后单击 "**激活历史调试**"，查看为此事件记录的调用堆栈和局部变量。  
+可以使用 IntelliTrace 记录事件和调用应用程序的方法，它让你能够在执行中的不同位置检查其状态（调用堆栈和局部变量值）。 正常启动调试即可，默认启用 IntelliTrace，并且可以在“事件”选项卡下的新“诊断工具”窗口中看到 IntelliTrace 正在记录的信息 。选择一个事件，然后单击“激活历史调试”以查看为此事件记录的调用堆栈和局部变量。  
   
  有关分步说明，请参阅[演练：使用 IntelliTrace](../debugger/walkthrough-using-intellitrace.md)。  
   
@@ -43,12 +43,12 @@ ms.locfileid: "75847228"
 > [!NOTE]
 > “IntelliTrace”选项页上的所有设置都针对 Visual Studio 这个整体，而不针对单个项目或解决方案。 这些设置中的更改适用于 Visual Studio 的所有实例、所有调试会话和所有项目或解决方案。  
   
-## <a name="ChooseEvents"></a>选择 IntelliTrace 记录的事件  
+## <a name="choose-the-events-that-intellitrace-records"></a><a name="ChooseEvents"></a>选择 IntelliTrace 记录的事件  
  可以启用或禁用针对特定 IntelliTrace 事件的记录。  
   
  如果在进行调试，请停止调试。 中转到 "**工具"/"选项"/"intellitrace"/"Intellitrace 事件**"。 选择想要 IntelliTrace 记录的事件。  
   
-## <a name="GoingFurther"></a>收集 IntelliTrace 事件和调用信息  
+## <a name="collect-intellitrace-events-and-call-information"></a><a name="GoingFurther"></a>收集 IntelliTrace 事件和调用信息  
  默认情况下不启用此选项，但 IntelliTrace 可以随事件一起记录方法调用。 若要启用方法调用的集合，请单击 "**工具"/"选项"/"intellitrace"/"常规**"，并选择 " **IntelliTrace 事件和调用信息**"  
   
  这使你可以查看调用堆栈历史记录以及在代码中的调用间后退和前进。 IntelliTrace 记录的数据包括方法名、方法进入和退出点，以及部分参数值和返回值。  
@@ -59,11 +59,11 @@ ms.locfileid: "75847228"
 > 可以通过限制 IntelliTrace 记录的事件列表以及将收集的模块数保持为最小值来减少性能开销。 有关详细信息，请参阅[控制 IntelliTrace 记录的调用信息量](../debugger/intellitrace-features.md#ControlCallData)。  
   
 ### <a name="using-the-navigation-gutter"></a>使用导航线  
- 可以使用代码窗口左侧显示的导航线。 如果看不到导航线，请跳到 "**工具"/"选项"/"IntelliTrace"/"高级**"，然后选择 **"在调试模式下显示导航线"** 。  
+ 可以使用代码窗口左侧显示的导航线。 如果看不到导航线，请跳到 "**工具"/"选项"/"IntelliTrace"/"高级**"，然后选择 **"在调试模式下显示导航线"**。  
   
  导航线让你能够在历史调试模式下向前和向后移动方法调用和事件。 有关历史调试的详细信息，请参阅[历史调试](../debugger/historical-debugging.md)。 它拥有多个命令：  
   
-|||  
+|名称|说明|  
 |-|-|  
 |**在此设置调试器上下文**|将调试上下文设置为调用出现的调用时间范围。<br /><br /> 此图标仅在当前调用堆栈上显示。|  
 |**返回调用站点**|将指针和调试上下文移回调用当前函数的位置。<br /><br /> 如果处于实时调试模式下，则此命令会启用历史调试。 如果向后定位到原始执行中断，则会禁用历史调试并启用实时调试。|  
@@ -73,19 +73,19 @@ ms.locfileid: "75847228"
 |**转到实时模式**|返回实时调试模式。|  
   
 ### <a name="search-for-a-line-or-method-in-intellitrace"></a>在 IntelliTrace 中搜索某行或某个方法  
- 仅当已启用方法调用信息时才可以搜索方法。 可以搜索 IntelliTrace 历史记录以查找特定行或方法。 暂停调试程序执行时，在函数正文内右键单击以查看上下文菜单，然后单击“在 IntelliTrace 中搜索此行”或“在 IntelliTrace 中搜索此方法”。  
+ 仅当已启用方法调用信息时才可以搜索方法。 可以搜索 IntelliTrace 历史记录以查找特定行或方法。 暂停调试程序执行时，在函数正文内右键单击以查看上下文菜单，然后单击“在 IntelliTrace 中搜索此行”或“在 IntelliTrace 中搜索此方法” 。  
   
-### <a name="ControlCallData"></a> 控制 IntelliTrace 记录的调用信息量  
+### <a name="control-how-much-call-information-intellitrace-records"></a><a name="ControlCallData"></a> 控制 IntelliTrace 记录的调用信息量  
  默认情况下，IntelliTrace 记录解决方案使用的所有模块的信息。 可以将 IntelliTrace 设置为仅记录你感兴趣的模块的调用信息。 在 "**工具"/"选项"/"IntelliTrace"/"模块**" 中，可以指定要包括的模块或要从 IntelliTrace 中排除的模块。 IntelliTrace 将仅收集你指定的模块中生成的事件，以及你感兴趣的模块内发生的方法调用。  
   
  若要添加多个模块，请在字符串的开头或结尾使用通配符 *。 对于模块名称，请使用文件名，而不是程序集名称。 不接受文件路径。  
   
  尝试将模块数保持为最小值。 因为要收集的数据变少，所以可以获得更好的性能。 UI 中的噪音也会减少，因为要浏览的数据变少。  
   
-## <a name="SaveSession"></a>将 IntelliTrace 数据保存到文件  
+## <a name="saving-intellitrace-data-to-file"></a><a name="SaveSession"></a>将 IntelliTrace 数据保存到文件  
  你可以在调试时保存 IntelliTrace 收集的、用于**调试/IntelliTrace/保存 Intellitrace 会话**的数据，并且该应用程序处于中断状态。 如果应用程序仍在运行或如果你已经停止调试，则菜单项会被禁用，且你将无法保存 IntelliTrace 收集的数据。  
   
- 通过转到 "**工具"/"选项"/"IntelliTrace"/"高级**" 并选择 **"在此目录中存储 IntelliTrace 记录"** ，可以将 IntelliTrace 配置为自动保存到文件。 还可以为生成的文件配置固定大小，这会让 IntelliTrace 在空间不足时覆盖旧数据。 自动保存文件并启用 Visual Studio 承载进程 (vshost.exe) 时，Visual Studio 会为每个 IntelliTrace 会话创建两个文件。  
+ 通过转到 "**工具"/"选项"/"IntelliTrace"/"高级**" 并选择 **"在此目录中存储 IntelliTrace 记录"**，可以将 IntelliTrace 配置为自动保存到文件。 还可以为生成的文件配置固定大小，这会让 IntelliTrace 在空间不足时覆盖旧数据。 自动保存文件并启用 Visual Studio 承载进程 (vshost.exe) 时，Visual Studio 会为每个 IntelliTrace 会话创建两个文件。  
   
 > [!TIP]
 > 要节省磁盘空间，请在不再需要时禁用自动保存文件。 不会删除任何现有文件。 可以随时从上下文菜单按需保存到文件。  
@@ -101,7 +101,7 @@ ms.locfileid: "75847228"
   
  [Visual Studio Enterprise 2015 中的 IntelliTrace 现在支持附加！](https://devblogs.microsoft.com/devops/intellitrace-in-visual-studio-enterprise-2015-now-supports-attach/)  
   
- [使用 IntelliTrace 独立收集器从 windows 服务收集数据](https://devblogs.microsoft.com/devops/collect-data-from-a-windows-service-using-the-intellitrace-standalone-collector/)  
+ [使用 IntelliTrace 独立收集器从 Windows 服务收集数据](https://devblogs.microsoft.com/devops/collect-data-from-a-windows-service-using-the-intellitrace-standalone-collector/)  
   
  [编辑 IntelliTrace 收集计划](https://devblogs.microsoft.com/devops/editing-the-intellitrace-collection-plan/)  
   

@@ -1,18 +1,18 @@
 ---
 title: 控制图标或修饰器的可见性
 ms.date: 11/04/2016
-ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+ms.topic: how-to
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 76db7caa14050c924706763214e92a6ee3d68975
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 1d2082f7e26d3e335ed88bbced0f59d6d6c4780c
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748491"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546636"
 ---
 # <a name="controlling-the-visibility-of-an-icon-or-decorator"></a>控制图标或修饰器的可见性
 *修饰*器是在特定于域的语言（DSL）的形状上显示的图标或文本行。 您可以根据模型中属性的状态，使修饰器出现和消失。 例如，在代表人员的形状上，可能会根据人员的性别、子女数等显示不同的图标。
@@ -58,13 +58,13 @@ ms.locfileid: "72748491"
 
 1. 向域类添加计算域属性。 在 "**属性**" 窗口中，设置以下值：
 
-     **IsBrowsable =** `False` **-这将隐藏用户的属性**
+     **IsBrowsable =** `False`**-这将隐藏用户的属性**    
 
-     **Kind =** `Calculated` **-这意味着你将提供用于计算其值的代码**
+     **Kind =** `Calculated`**-这意味着你将提供用于计算其值的代码**    
 
      例如**DecoratorControl**的**名称**
 
-     **类型** =  `Boolean`
+     **类别** = `Boolean`
 
      有关详细信息，请参阅[计算的和自定义的存储属性](../modeling/calculated-and-custom-storage-properties.md)。
 
@@ -76,7 +76,7 @@ ms.locfileid: "72748491"
 
     3. 在 "**筛选器" 属性**中，选择控件属性 " **DecoratorControl**"。
 
-    4. 在 "**可见性项**" 下，输入 `True`。
+    4. 在 "**可见性项**" 下，输入 `True` 。
 
 3. 单击 "**解决方案资源管理器**" 工具栏中的 "**转换所有模板**"。
 
@@ -88,7 +88,7 @@ ms.locfileid: "72748491"
 
 6. 请注意缺少的命名空间、类和方法。  例如，FamilyTree. GetDecoratorControlValue （）。
 
-7. 在单独的代码文件中，编写包含缺少的方法的分部类定义。 例如:
+7. 在单独的代码文件中，编写包含缺少的方法的分部类定义。 例如：
 
     ```
     namespace Company.FamilyTree
@@ -103,7 +103,7 @@ ms.locfileid: "72748491"
 
 8. 重新生成并运行解决方案。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [定义形状和连接线](../modeling/defining-shapes-and-connectors.md)
 - [在图表上设置背景图像](../modeling/setting-a-background-image-on-a-diagram.md)

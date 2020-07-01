@@ -11,28 +11,28 @@ caps.latest.revision: 13
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: ab621ade120a257508eddbf9527f674b5fda8748
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 2316d6e555fa091d26392aee71b774489c81a379
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72610192"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546388"
 ---
-# <a name="ca2146-types-must-be-at-least-as-critical-as-their-base-types-and-interfaces"></a>CA2146：类型必须至少与其基类型和接口一样关键
+# <a name="ca2146-types-must-be-at-least-as-critical-as-their-base-types-and-interfaces"></a>CA2146:类型必须至少与其基类型和接口一样关键
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|值|
 |-|-|
 |TypeName|TypesMustBeAtLeastAsCriticalAsBaseTypes|
 |CheckId|CA2146|
-|类别|Microsoft.Security|
+|Category|Microsoft.Security|
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
- 透明类型派生自使用 <xref:System.Security.SecuritySafeCriticalAttribute> 或 <xref:System.Security.SecurityCriticalAttribute> 进行标记的类型，或用 <xref:System.Security.SecuritySafeCriticalAttribute> 特性标记的类型派生自使用 <xref:System.Security.SecurityCriticalAttribute> 特性标记的类型。
+ 透明类型是从用或标记的类型派生的 <xref:System.Security.SecuritySafeCriticalAttribute> <xref:System.Security.SecurityCriticalAttribute> ，或者使用特性标记的类型 <xref:System.Security.SecuritySafeCriticalAttribute> 派生自使用特性标记的类型 <xref:System.Security.SecurityCriticalAttribute> 。
 
-## <a name="rule-description"></a>规则说明
- 当派生类型具有的安全透明特性与其基类型或实现的接口不是同样关键时，将引发此规则。 只有关键类型可以从关键基类型派生或实现关键接口，并且只有关键或关键安全类型可以从安全关键基类型派生或实现关键安全接口。 在第2级透明度中违反此规则会导致派生类型 <xref:System.TypeLoadException>。
+## <a name="rule-description"></a>规则描述
+ 当派生类型具有的安全透明特性与其基类型或实现的接口不是同样关键时，将引发此规则。 只有关键类型可以从关键基类型派生或实现关键接口，并且只有关键或关键安全类型可以从安全关键基类型派生或实现关键安全接口。 在第2级透明度中违反此规则会导致 <xref:System.TypeLoadException> 派生类型的。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
  若要解决此冲突，请使用与基类型或接口至少相同的透明度特性标记派生的或实现类型。

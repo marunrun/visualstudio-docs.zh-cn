@@ -1,9 +1,9 @@
 ---
-title: '&lt;p o i&gt;元素 （Visual Studio 中的 Office 开发）'
+title: '&lt;d &gt; 元素（Visual Studio 中的 Office 开发）'
 titleSuffix: ''
 ms.custom: seodec18
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 - CSharp
@@ -16,15 +16,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 26597796c99d3ab8740812819cf3aa5568e2985b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 689848f14b4540a54489b4ea5bbad67e493fe276
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62956174"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544906"
 ---
-# <a name="ltcustomhostspecifiedgt-element-office-development-in-visual-studio"></a>&lt;p o i&gt;元素 （Visual Studio 中的 Office 开发）
-  `customHostSpecified`元素指示此解决方案不是独立的应用程序。 Office 解决方案包含承载于 Microsoft Office 应用程序内的组件。
+# <a name="ltcustomhostspecifiedgt-element-office-development-in-visual-studio"></a>&lt;d &gt; 元素（Visual Studio 中的 Office 开发）
+  `customHostSpecified`元素指示此解决方案不是独立应用程序。 Office 解决方案包含 Microsoft Office 应用程序内部承载的组件。
 
 ## <a name="syntax"></a>语法
 
@@ -33,14 +33,14 @@ ms.locfileid: "62956174"
 ```
 
 ## <a name="elements-and-attributes"></a>元素和属性
- `customHostSpecified`元素是必需的 Office 解决方案。 此元素处于`co.v1`命名空间和指定此部署包含一个组件，将在自定义主机内部署并不是独立的应用程序。
+ `customHostSpecified`元素是 Office 解决方案所必需的。 此元素位于 `co.v1` 命名空间中，并指定此部署包含将在自定义主机内部署的组件，而不是独立应用程序。
 
- 此元素是子元素的第一个`<entrypoint>`应用程序清单中的元素。 可以有其他子元素中的`<entrypoint>`元素或[!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]在安装过程中，将引发验证错误。
+ 此元素是 `<entrypoint>` 应用程序清单中第一个元素的子元素。 此元素中不能有任何其他子元素， `<entrypoint>` 或者在 [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] 安装过程中将引发验证错误。
 
- 此元素不具有属性和任何子元素。
+ 此元素没有属性和子元素。
 
 ## <a name="example"></a>示例
- 下面的代码示例说明了`customHostSpecified`Office 解决方案的应用程序清单中的元素。 此代码示例摘自[Office 解决方案的应用程序清单](../vsto/application-manifests-for-office-solutions.md)。
+ 下面的代码示例演示 `customHostSpecified` Office 解决方案的应用程序清单中的元素。 此代码示例是[Office 解决方案的应用程序清单](../vsto/application-manifests-for-office-solutions.md)中提供的一个更大示例的一部分。
 
 ```xml
 <entryPoint>
@@ -48,7 +48,7 @@ ms.locfileid: "62956174"
 </entryPoint>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Office 解决方案的应用程序清单](../vsto/application-manifests-for-office-solutions.md)
 - [Office 解决方案的部署清单](../vsto/deployment-manifests-for-office-solutions.md)

@@ -15,30 +15,30 @@ caps.latest.revision: 18
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: ebc6732e559b70e753a44b14cf45b7de9fc150d4
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: e115b4d327f1ac45673de491ceaffc90941e1111
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72668185"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546778"
 ---
-# <a name="ca1047-do-not-declare-protected-members-in-sealed-types"></a>CA1047：不要在密封类型中声明受保护的成员
+# <a name="ca1047-do-not-declare-protected-members-in-sealed-types"></a>CA1047:不要在密封类型中声明受保护的成员
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|值|
 |-|-|
 |TypeName|DoNotDeclareProtectedMembersInSealedTypes|
 |CheckId|CA1047|
-|类别|Microsoft. Design|
+|Category|Microsoft. Design|
 |是否重大更改|不间断|
 
 ## <a name="cause"></a>原因
- 公共类型是 `sealed` 的（在 Visual basic 中为 `NotInheritable`），并声明受保护的成员或受保护的嵌套类型。 此规则不报告 <xref:System.Object.Finalize%2A> 方法的冲突，必须遵循此模式。
+ 公共类型为 `sealed` （ `NotInheritable` 在 Visual basic 中为），并声明受保护的成员或受保护的嵌套类型。 此规则不报告 <xref:System.Object.Finalize%2A> 方法冲突，这些方法必须遵循此模式。
 
-## <a name="rule-description"></a>规则说明
+## <a name="rule-description"></a>规则描述
  类型声明受保护的成员，使继承类型可以访问或重写该成员。 按照定义，不能从密封类型继承，这意味着不能调用密封类型上的受保护方法。
 
- C#编译器会发出此错误的警告。
+ 对于此错误，c # 编译器会发出警告。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
  若要修复与此规则的冲突，请将成员的访问级别更改为 private，或使该类型可继承。

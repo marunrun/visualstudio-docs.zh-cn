@@ -8,12 +8,12 @@ ms.assetid: 620d7dcd-d462-475e-a449-fbfa06ff12c5
 caps.latest.revision: 34
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 96647f362566f0687cb04b7da4459331ac56b031
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 3f7cbe9606b73741e1e59eb14f40cb277052944a
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75851906"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545075"
 ---
 # <a name="microsoft-help-viewer-sdk"></a>Microsoft Help Viewer SDK
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "75851906"
 
  **Help Viewer 主题概述**
 
- 当调用主题进行呈现时，帮助查看器将获取安装或上次更新时与主题关联的品牌包元素以及主题 XHTML，并将两者组合在一起以生成显示的内容视图（品牌数据 +主题数据）。  品牌包包含徽标、对内容行为的支持和品牌文本（版权等）。  有关署名包元素的详细信息，请参阅下面的 "创建署名包"。  如果没有与主题相关联的品牌包，帮助查看器将使用位于帮助查看器应用程序根中的 "后备署名" 包 Branding_en （.mshc）。
+ 当调用主题进行呈现时，帮助查看器将获取安装或上次更新时与主题相关联的品牌包元素以及主题 XHTML，并组合两者以生成显示的内容视图（品牌数据 + 主题数据）。  品牌包包含徽标、对内容行为的支持和品牌文本（版权等）。  有关署名包元素的详细信息，请参阅下面的 "创建署名包"。  如果没有与主题相关联的品牌包，帮助查看器将使用位于帮助查看器应用程序根中的 "后备署名" 包 Branding_en （.mshc）。
 
  **Help Viewer 主题要求**
 
@@ -49,7 +49,7 @@ ms.locfileid: "75851906"
 
   Visual Studio 署名包支持的控件：
 
-- “链接”
+- 链接
 
 - CodeSnippet
 
@@ -77,7 +77,7 @@ ms.locfileid: "75851906"
 
   **创建帮助查看器主题**
 
-  创建名为 ContosoTopic4 的新 XHTML 文档并包括标题标记（如下所示）。
+  创建名为 ContosoTopic4.htm 的新 XHTML 文档，并包括标题标记（如下所示）。
 
 ```html
 <html>
@@ -132,20 +132,20 @@ ms.locfileid: "75851906"
 
  主题的正文（不包括页眉和页脚）将包含页面链接、附注部分、可折叠区域、代码片段和语言特定文本部分。  请参阅品牌部分，了解有关提供的主题的这些区域的信息。
 
-1. 添加主题标题标记： `<div class="title">Contoso Topic 4</div>`
+1. 添加主题标题标记：`<div class="title">Contoso Topic 4</div>`
 
-2. 添加附注部分： `<div class="alert"> add your table tag and text </div>`
+2. 添加便笺部分：`<div class="alert"> add your table tag and text </div>`
 
-3. 添加可折叠区域： `<CollapsibleArea Expanded="1" Title="Collapsible Area Test Heading"> add text  </CollapsibleArea>`
+3. 添加可折叠区域：`<CollapsibleArea Expanded="1" Title="Collapsible Area Test Heading"> add text  </CollapsibleArea>`
 
-4. 添加代码片段： `<CodeSnippet EnableCopyCode="true" Language="CSharp" ContainsMarkup="false" DisplayLanguage="C#" > a block of code </CodeSnippet>`
+4. 添加代码片段：`<CodeSnippet EnableCopyCode="true" Language="CSharp" ContainsMarkup="false" DisplayLanguage="C#" > a block of code </CodeSnippet>`
 
 5. 添加特定于代码语言的文本： `<LanguageSpecificText devLangcs="CS" devLangvb="VB" devLangcpp="C++" devLangnu="F#" />` 请注意，devLangnu = 允许输入其他语言。 例如，当代码片段 DisplayLanguage = Fortran 时，devLangnu = "Fortran" 将显示 Fortran
 
-6. 添加页面链接： `<a href="ms-xhelp://?Id=ContosoTopic1">Main Topic</a>`
+6. 添加页面链接：`<a href="ms-xhelp://?Id=ContosoTopic1">Main Topic</a>`
 
 > [!NOTE]
-> 注意：对于不支持的新 "显示语言" （示例， F#，Cobol，Fortran）代码段中的代码着色将为单色。
+> 注意：对于不支持的新 "显示语言" （例如，F #、Cobol、Fortran）代码段中的代码着色，将为单色。
 
  **示例帮助查看器主题**此代码演示如何定义元数据、代码片段、可折叠区域和语言特定的文本。
 
@@ -270,11 +270,11 @@ some F# code
 
  **F1 支持**
 
- 在 Visual Studio 中，选择 F1 将生成从 IDE 中的光标位置提供的值，并使用提供的值（基于游标位置）填充 "属性包"。 当游标超出功能 x 时，功能 x 是活动/焦点，并用值填充属性包。  选择 F1 后，将填充属性包，并且 Visual Studio F1 代码会查看客户默认帮助源是本地还是联机（默认值为 "联机"），然后根据用户设置创建适当的字符串（默认为 "联机"）– shell execute（请参阅 exe 启动参数的帮助管理员指南），其中包含本地帮助查看器的参数以及属性包中的关键字（如果本地帮助为默认值）或 MSDN URL （参数列表中包含关键字）。
+ 在 Visual Studio 中，选择 F1 将生成从 IDE 中的光标位置提供的值，并使用提供的值（基于游标位置）填充 "属性包"。 当游标超出功能 x 时，功能 x 是活动/焦点，并用值填充属性包。  选择 F1 后，将填充属性包，Visual Studio F1 代码将查看客户的默认帮助源是本地还是联机（默认为联机），然后，基于 "用户" 设置（默认为 "联机"）创建适当的字符串– shell execute （请参阅 exe 启动参数的帮助管理员指南），如果本地帮助是默认值，则为属性包的参数或包含参数列表中关键字的 MSDN URL。
 
  如果为 F1 返回了三个字符串，称为多值字符串，请使用第一项，查找命中，如果找到，则完成;否则，转到下一个字符串。  订单问题。 多值关键字的表示形式应最长为字符串。  若要在多值关键字的情况下验证这一点，请查看联机 F1 URL 字符串，其中包含所选关键字。
 
- 在 Visual Studio 2012 中，我们特意在联机和脱机之间建立了更强的分隔，因此，如果用户的设置为联机，则只需将 F1 请求直接传递到 MSDN 上的联机查询服务，而不是通过帮助库代理进行路由在 Visual Studio 2010 中。 然后，我们依赖于 "安装的供应商内容 = true" 的状态来确定是否在该上下文中执行其他操作。 如果为 true，则根据你希望为客户提供的支持来执行此分析和路由逻辑。 如果为 false，则只需跳到 MSDN。 如果用户的设置为 "本地"，则所有调用都将转向本地帮助引擎。
+ 在 Visual Studio 2012 中，我们特意在联机和脱机之间建立了更强的分隔，因此，如果用户的设置为联机，则只需将 F1 请求直接传递到 MSDN 上的联机查询服务，而不是通过 Visual Studio 2010 中的帮助库代理进行路由。 然后，我们依赖于 "安装的供应商内容 = true" 的状态来确定是否在该上下文中执行其他操作。 如果为 true，则根据你希望为客户提供的支持来执行此分析和路由逻辑。 如果为 false，则只需跳到 MSDN。 如果用户的设置为 "本地"，则所有调用都将转向本地帮助引擎。
 
  F1 流程图：
 
@@ -298,13 +298,13 @@ some F# code
 
    - 对于32位操作系统：
 
-        HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Help\v2.1\Catalogs\VisualStudio12
+        HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Help\v2.1\Catalogs\VisualStudio12
 
         "VendorContent" = dword：00000001
 
    - 对于64位操作系统：
 
-        HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Help\v2.1\Catalogs\VisualStudio12
+        HKEY_LOCAL_MACHINE \SOFTWARE\Wow6432Node\Microsoft\Help\v2.1\Catalogs\VisualStudio12
 
         "VendorContent" = dword：00000001
 
@@ -312,13 +312,13 @@ some F# code
 
    - 对于32位操作系统：
 
-      HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Help\v2.1\Partner<em>\\<namespace\></em>
+      HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Help\v2.1\Partner<em> \\<命名 \> 空间</em>
 
       "位置" = "脱机"
 
    - 对于64位操作系统：
 
-      HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Help\v2.1\Partner<em>\\<namespace\></em>
+      HKEY_LOCAL_MACHINE \SOFTWARE\Wow6432Node\Microsoft\Help\v2.1\Partner<em> \\<命名 \> 空间</em>
 
       "位置" = "脱机"
 
@@ -326,7 +326,7 @@ some F# code
 
    若要启用基本本机命名空间分析，请在注册表中按以下名称添加新的 DWORD： BaseNativeNamespaces，并将其值设置为1（在要支持的目录项下）。  例如，如果你想要使用 Visual Studio 目录，则可以将该密钥添加到路径中：
 
-   HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Help\v2.1\Catalogs\VisualStudio12
+   HKEY_LOCAL_MACHINE \SOFTWARE\Wow6432Node\Microsoft\Help\v2.1\Catalogs\VisualStudio12
 
    如果遇到格式标头/方法中的 F1 关键字，将会分析 "/" 字符，从而导致以下构造：
 
@@ -334,7 +334,7 @@ some F# code
 
 - 方法：这将成为通过传递的关键字。
 
-  例如，假设有一个名为 CustomLibrary 的自定义库和一个名为 MyTestMethod 的方法，当 F1 请求进入时，会将其格式化为 `CustomLibrary/MyTestMethod`。
+  例如，假设有一个名为 CustomLibrary 的自定义库和一个名为 MyTestMethod 的方法，当 F1 请求进入时，它的格式将设置为 `CustomLibrary/MyTestMethod` 。
 
   然后，用户可以将 CustomLibrary 注册为合作伙伴 hive 下的命名空间，并提供所需的任何位置键，并且传递给查询的关键字将为 MyTestMethod。
 
@@ -348,31 +348,31 @@ some F# code
 
   **内容元数据**
 
-  在下表中，括在括号中的任何字符串都是一个必须被识别的值替换的占位符。 例如，在 \<meta name = "Microsoft. Help" content = "[language code]"/> 中，必须使用值（如 "en-us"）替换 "[language code]"。
+  在下表中，括在括号中的任何字符串都是一个必须被识别的值替换的占位符。 例如，在中 \<meta name="Microsoft.Help.Locale" content="[language code]" /> ，必须将 "[language code]" 替换为 "en-us" 之类的值。
 
-|Property （HTML 表示形式）|描述|
+|Property （HTML 表示形式）|说明|
 |--------------------------------------|-----------------|
 |\< meta name="Microsoft.Help.Locale" content="[language-code]" />|为此主题设置区域设置。 如果在主题中使用此标记，则必须只使用一次，并且必须将其插入到任何其他 Microsoft 帮助标记之上。 如果未使用此标记，则将使用与产品区域设置相关联的断字符（如果已指定）对主题的正文文本进行索引。否则，将使用 en-us 断字符。 此标记符合 ISOC RFC 4646。 若要确保 Microsoft 帮助正常工作，请使用此属性而不是 "常规语言" 属性。|
 |\< meta name="Microsoft.Help.TopicLocale" content="[language-code]" />|如果还使用了其他区域设置，则设置本主题的区域设置。 如果在主题中使用此标记，则必须只使用一次。 当目录包含多种语言的内容时，请使用此标记。 目录中的多个主题可以具有相同的 ID，但每个主题都必须指定唯一的 TopicLocale。 指定与目录的区域设置匹配的 TopicLocale 的主题是在目录中显示的主题。 但是，该主题的所有语言版本都将显示在搜索结果中。|
-|\< 标题 > [Title]\</title >|指定本主题的标题。 此标记是必需的，必须在主题中仅使用一次。 如果主题正文不包含 \<div > 部分的标题，此标题将显示在主题和目录中。|
-|\< meta name = "aKeywordPhrase" content = "[]"/>|指定在帮助查看器的 "索引" 窗格中显示的链接文本。 单击此链接时，将显示该主题。您可以为一个主题指定多个索引关键字，如果您不希望该主题的链接显示在索引中，也可以省略此标记。 可以将早期版本的帮助中的 "K" 关键字转换为此属性。|
-|\< meta name = "TopicID" content = "[]"/>|设置该主题的标识符。 此标记是必需的，必须在主题中仅使用一次。 此 ID 必须在目录中具有相同区域设置的主题中是唯一的。 在另一个主题中，你可以使用此 ID 创建指向此主题的链接。|
-|\< meta name = "Microsoft. Help" content = "[IRecyclingItemContainerGenerator]"/>|指定本主题的 F1 关键字。 您可以为一个主题指定多个 F1 关键字，如果您不希望在应用程序用户按 F1 时显示此主题，则可以省略此标记。 通常，为主题指定一个 F1 关键字。 可以将早期版本的帮助中的 "F" 关键字转换为此属性。|
-|\< meta name = "Description" content = "[主题 Description]"/>|提供本主题内容的简短摘要。 如果在主题中使用此标记，则必须只使用一次。 此属性可由查询库直接访问;它不存储在索引文件中。|
- meta name="Microsoft.Help.TocParent" content="[parent_Id]"/>|在目录中指定本主题的父主题。 此标记是必需的，必须在主题中仅使用一次。 该值是父级的 Microsoft.Help.Id。 一个主题在目录中只能有一个位置。 "-1" 被视为 TOC 根的主题 ID。 在 [!INCLUDE[vs_dev12](../../includes/vs-dev12-md.md)]中，该页是 Help Viewer 主页。 这是因为我们将 TocParent =-1 专门添加到一些主题，以确保它们显示在顶级。Help Viewer 主页是系统页面，因此不可替换。 如果 VSP 尝试添加 ID 为-1 的页，则它可能会添加到内容集，但是 Help Viewer 将始终使用系统页– Help Viewer Home|
-|\< meta name = "TocOrder" content = "[正整数]"/>|指定本主题在目录中相对于其对等主题显示的位置。 此标记是必需的，必须在主题中仅使用一次。 该值是一个整数。 指定一个较低值的整数的主题将显示在指定值较大的主题的上方。|
-|\< meta name = "Microsoft. Help. Product" content = "[Product code]"/>|指定本主题描述的产品。 如果在主题中使用此标记，则必须只使用一次。 此信息还可以作为传递到帮助索引器的参数提供。|
-|\< meta name = "ProductVersion" content = "[版本号]"/>|指定本主题描述的产品版本。 如果在主题中使用此标记，则必须只使用一次。 此信息还可以作为传递到帮助索引器的参数提供。|
-|\< meta name = "Microsoft. Help. Category" content = "[string]"/>|由产品用于标识内容的子部分。 您可以为某个主题标识多个子部分，如果您不希望链接识别任何子节，则可以省略此标记。 此标记用于存储在从帮助的早期版本转换主题时 TargetOS 和 TargetFrameworkMoniker 的属性。 内容的格式为 AttributeName： AttributeValue。|
-|\< meta name = "TopicVersion content =" [主题版本号] "/>|如果目录中存在多个版本，则指定主题的此版本。 由于 Microsoft.Help.Id 不一定是唯一的，因此，如果目录中存在多个版本的主题，则需要此标记，例如，当目录包含有关 .NET Framework 3.5 的主题和 .NET Framework 4 的主题并且两者具有相同的微音.Help.Id。|
-|\< meta name = "SelfBranded" content = "[TRUE or FALSE]"/>|指定本主题是使用帮助库管理器启动品牌包还是特定于该主题的品牌包。 此标记必须为 TRUE 或 FALSE。 如果为 TRUE，则相关主题的品牌包将重写在帮助库管理器启动时设置的品牌包，以便即使该主题与其他内容的呈现不同，也会呈现该主题。 如果为 FALSE，则根据帮助库管理器启动时设置的品牌包呈现当前主题。 默认情况下，帮助库管理器假定自品牌为 false，除非 SelfBranded 变量声明为 TRUE;因此，无需声明 \<meta name = "SelfBranded" content = "FALSE"/>。|
+|\< title>词首\</title>|指定本主题的标题。 此标记是必需的，必须在主题中仅使用一次。 如果主题正文不包含标题 \<div> 部分，则此标题将显示在主题和目录中。|
+|\< meta name=" Microsoft.Help.Keywords" content="[aKeywordPhrase]"/>|指定在帮助查看器的 "索引" 窗格中显示的链接文本。 单击此链接时，将显示该主题。您可以为一个主题指定多个索引关键字，如果您不希望该主题的链接显示在索引中，也可以省略此标记。 可以将早期版本的帮助中的 "K" 关键字转换为此属性。|
+|\< meta name="Microsoft.Help.Id" content="[TopicID]"/>|设置该主题的标识符。 此标记是必需的，必须在主题中仅使用一次。 此 ID 必须在目录中具有相同区域设置的主题中是唯一的。 在另一个主题中，你可以使用此 ID 创建指向此主题的链接。|
+|\< meta name="Microsoft.Help.F1" content="[System.Windows.Controls.Primitives.IRecyclingItemContainerGenerator]"/>|指定本主题的 F1 关键字。 您可以为一个主题指定多个 F1 关键字，如果您不希望在应用程序用户按 F1 时显示此主题，则可以省略此标记。 通常，为主题指定一个 F1 关键字。 可以将早期版本的帮助中的 "F" 关键字转换为此属性。|
+|\< meta name="Description" content="[topic description]" />|提供本主题内容的简短摘要。 如果在主题中使用此标记，则必须只使用一次。 此属性可由查询库直接访问;它不存储在索引文件中。|
+ meta name = "TocParent" content = "[parent_Id]"/>|在目录中指定本主题的父主题。 此标记是必需的，必须在主题中仅使用一次。 该值是父级的 Microsoft.Help.Id。 一个主题在目录中只能有一个位置。 "-1" 被视为 TOC 根的主题 ID。 在中 [!INCLUDE[vs_dev12](../../includes/vs-dev12-md.md)] ，该页是 Help Viewer 主页。 这是因为我们将 TocParent =-1 专门添加到一些主题，以确保它们显示在顶级。Help Viewer 主页是系统页面，因此不可替换。 如果 VSP 尝试添加 ID 为-1 的页，则它可能会添加到内容集，但是 Help Viewer 将始终使用系统页– Help Viewer Home|
+|\< meta name="Microsoft.Help.TocOrder" content="[positive integer]"/>|指定本主题在目录中相对于其对等主题显示的位置。 此标记是必需的，必须在主题中仅使用一次。 该值是一个整数。 指定一个较低值的整数的主题将显示在指定值较大的主题的上方。|
+|\< meta name="Microsoft.Help.Product" content="[product code]"/>|指定本主题描述的产品。 如果在主题中使用此标记，则必须只使用一次。 此信息还可以作为传递到帮助索引器的参数提供。|
+|\< meta name="Microsoft.Help.ProductVersion" content="[version number]"/>|指定本主题描述的产品版本。 如果在主题中使用此标记，则必须只使用一次。 此信息还可以作为传递到帮助索引器的参数提供。|
+|\< meta name="Microsoft.Help.Category" content="[string]"/>|由产品用于标识内容的子部分。 您可以为某个主题标识多个子部分，如果您不希望链接识别任何子节，则可以省略此标记。 此标记用于存储在从帮助的早期版本转换主题时 TargetOS 和 TargetFrameworkMoniker 的属性。 内容的格式为 AttributeName： AttributeValue。|
+|\< meta name="Microsoft.Help.TopicVersion content="[topic version number]"/>|如果目录中存在多个版本，则指定主题的此版本。 由于 Microsoft.Help.Id 不一定是唯一的，因此，如果目录中存在多个版本的主题，则需要此标记，例如，当目录包含有关 .NET Framework 3.5 的主题和 .NET Framework 4 的主题并且两者都具有相同的 Microsoft.Help.Id 时。|
+|\< meta name="SelfBranded" content="[TRUE or FALSE]"/>|指定本主题是使用帮助库管理器启动品牌包还是特定于该主题的品牌包。 此标记必须为 TRUE 或 FALSE。 如果为 TRUE，则相关主题的品牌包将重写在帮助库管理器启动时设置的品牌包，以便即使该主题与其他内容的呈现不同，也会呈现该主题。 如果为 FALSE，则根据帮助库管理器启动时设置的品牌包呈现当前主题。 默认情况下，帮助库管理器假定自品牌为 false，除非 SelfBranded 变量声明为 TRUE;因此，您无需声明 \<meta name="SelfBranded" content="FALSE"/> 。|
 
 ### <a name="creating-a-branding-package"></a>创建品牌包
  Visual Studio 版本包含许多不同的 Visual Studio 产品，其中包括适用于 Visual Studio 合作伙伴的独立和集成 shell。  其中每个产品都需要某种程度上基于主题的帮助内容品牌支持，这对于产品是唯一的。  例如，Visual Studio 主题需要具有一致的品牌演示，而用于包装 ISO Shell 的 SQL Studio 需要为每个主题提供自己唯一的帮助内容品牌。  集成的 Shell 合作伙伴可能希望其帮助主题位于父 Visual Studio 产品帮助内容中，同时保持自己的主题品牌。
 
  品牌包由包含帮助查看器的产品安装。  对于 Visual Studio 产品：
 
-- 通过 Help Viewer 语言包在 Help Viewer 2.1 应用程序根（例如： C:\Program Files （x86） \Microsoft Help Viewer\v2.1）中安装了后备署名包（Branding_\<区域设置 > .mshc）。  这适用于未安装产品品牌包（未安装任何内容）或已安装的品牌包损坏的情况。  当使用应用根后备署名包时，Visual Studio 元素（徽标和反馈）会被忽略。
+- 后备署名包（Branding_ \<locale> .mshc）安装在 help viewer 2.1 应用程序根（例如： C:\Program Files （x86） \Microsoft help Viewer\v2.1）中。  这适用于未安装产品品牌包（未安装任何内容）或已安装的品牌包损坏的情况。  当使用应用根后备署名包时，Visual Studio 元素（徽标和反馈）会被忽略。
 
 - 从内容包服务安装 Visual Studio 内容时，还会安装一个品牌包（适用于首次内容安装方案）。  如果有对署名包的更新，则在发生 "下一内容更新" 或 "其他包安装" 操作时，会安装更新。
 
@@ -382,7 +382,7 @@ some F# code
 
 - 如果主题元数据定义自品牌 = false，请使用与 TopicVendor metadata 值相关联的品牌包。
 
-- Where 主题 metadata 定义 name = "TopicVendor" content =\< 品牌包名称在供应商 .MSHA > 中，请使用内容值中定义的品牌包。
+- Where 主题 metadata 定义 name = "TopicVendor" content = \< branding package name in vendor MSHA> ，请使用内容值中定义的品牌包。
 
 - 在 Visual Studio 目录中，有一个优先级应用程序的品牌包。  应用第一个 Visual Studio 默认署名，然后，如果在主题元数据中定义，并支持关联的品牌包（如安装 .msha 中所定义），则会将供应商定义的品牌作为替代应用。
 
@@ -408,9 +408,9 @@ some F# code
 
 - 图形（徽标、图标等）
 
-- 署名 node.js –支持内容行为的脚本文件
+- Branding.js –支持内容行为的脚本文件
 
-- 署名 .xml –始终跨目录内容使用的字符串。  注意：对于署名 .xml 中的 Visual Studio 本地化文本元素，包括 _locID = "\<唯一值 >"
+- Branding.xml –始终跨目录内容使用的字符串。  注意：对于 branding.xml 中的 Visual Studio 本地化文本元素，包括 _locID = " \<unique value> "
 
 - 署名 css –演示一致性的样式定义
 
@@ -422,109 +422,125 @@ some F# code
 
 - 或者，当 SelfBranded = false 并且在 .MSHA 中定义了唯一的品牌包，并且在安装内容时可用
 
-  对于实现自定义品牌包（VSP 内容，SelfBranded = True）的 .Vsps，一种继续操作的方法是从后备署名包开始（随 Help Viewer 一起安装），并根据需要更改文件的名称。  Branding_\<区域设置 > .mshc 文件是文件扩展名更改为 .mshc 的 zip 文件，因此只需将扩展名从 .mshc 改为 .zip 并提取内容即可。  请参阅下面的品牌包元素，并根据需要进行修改（例如，将徽标更改为 VSP 徽标，并对署名 .xml 文件中的徽标进行引用，按 VSP 详细信息更新署名，等等）。
+  对于实现自定义品牌包（VSP 内容，SelfBranded = True）的 .Vsps，一种继续操作的方法是从后备署名包开始（随 Help Viewer 一起安装），并根据需要更改文件的名称。  Branding_ \<locale> .mshc 文件是文件扩展名更改为 .mshc 的 zip 文件，因此只需将扩展名从 .mshc 改为 .zip 并提取内容。  请参阅下面的品牌包元素，并根据需要进行修改（例如，将徽标更改为 VSP 徽标，并对 Branding.xml 文件中的徽标进行引用，按 VSP 详细信息更新 Branding.xml 等）。
 
   完成所有修改后，创建一个包含所需品牌元素的 zip 文件，并将扩展名更改为 .mshc。
 
   若要关联自定义品牌包，请创建 .MSHA，其中包含对品牌 .mshc 文件的引用以及内容 .mshc （包含主题）。  有关如何创建基本 .MSHA 的说明，请参阅下面的 ".MSHA"。
 
-  当主题包含 \<meta name = "SelfBranded" content = "false"/> 时，署名 .xml 文件包含用于对主题中的特定项进行一致呈现的列表元素。  下面列出了署名 .xml 文件中元素的 Visual Studio 列表。  此列表旨在用作 ISO Shell 使用者的模板，其中，他们修改了这些元素（例如徽标、反馈和版权）以满足其自己的产品品牌需求。
+  Branding.xml 文件包含一个列表元素，这些元素用于在主题包含时一致地呈现主题中的特定项 \<meta name="Microsoft.Help.SelfBranded" content="false"/> 。  下面列出了 Branding.xml 文件中的 Visual Studio 元素列表。  此列表旨在用作 ISO Shell 使用者的模板，其中，他们修改了这些元素（例如徽标、反馈和版权）以满足其自己的产品品牌需求。
 
   注意： "{n}" 标记的变量具有代码依赖项，删除或更改这些值会导致错误，并可能导致应用程序崩溃。Visual Studio 品牌包中包含本地化标识符（例如 _locID = "codesnippet"）。
 
   **Branding.xml**
 
-|||
+功能： **CollapsibleArea**使用：展开折叠内容控件文本
+
+|**元素**|**值**|
 |-|-|
-|功能：|**CollapsibleArea**|
-|用途：|展开折叠内容控件文本|
-|**元素**|**“值”**|
-|ExpandText|Expand|
+|ExpandText|展开|
 |CollapseText|折叠|
-|功能：|**CodeSnippet**|
-|用途：|代码片段控件文本。  注意： "不间断" 空间的代码片段内容将更改为空间。|
-|**元素**|**“值”**|
+
+功能：**CodeSnippet**使用：代码片段控件文本。  注意： "不间断" 空间的代码片段内容将更改为空间。
+
+|**元素**|**值**|
+|-|-|
 |CopyToClipboard|复制到剪贴板|
-|ViewColorizedText|查看着色文本|
+|ViewColorizedText|查看着色|
 |CombinedVBTabDisplayLanguage|Visual Basic （示例）|
 |VBDeclaration|声明|
-|VBUsage|用量|
-|功能：|**反馈、页脚和徽标**|
-|用途：|为客户提供反馈控制，以通过电子邮件提供当前主题的反馈。  内容的版权文本。  徽标定义。|
+|VBUsage|使用情况|
+
+功能：**反馈、页脚和徽标**使用：向客户提供反馈控件，以便通过电子邮件提供当前主题的反馈。  内容的版权文本。  徽标定义。
+
 |**元素**|**值（可以对这些字符串进行修改以满足采纳者需求。）**|
-|版权声明|© 2013 Microsoft Corporation。 保留所有权利。|
-|SendFeedback|\<href = "{0}" {1}> 向 Microsoft 发送有关本主题的反馈\</a。|
+|-|-|
+|版权声明|© 2013 微软公司。 保留所有权利。|
+|SendFeedback|\<a href="{0}" {1}>向 \</a> Microsoft 发送有关本主题的反馈。|
 |No-results-found-feedbacklink||
 |LogoTitle|[!INCLUDE[vs_dev12](../../includes/vs-dev12-md.md)]|
 |LogoFileName|vs_logo_bk.gif|
 |LogoFileNameHC|vs_logo_wh.gif|
-|功能：|**免责声明**|
-|用途：|计算机翻译内容的一组案例特定免责声明。|
-|**元素**|**“值”**|
-|MT_Editable|此文章由机器翻译。 如果你有 Internet 连接，请选择 "联机查看本主题" 以在可编辑模式下查看此页面，同时提供原始英语内容。|
-|MT_NonEditable|此文章由机器翻译。 如果你有 Internet 连接，请选择 "联机查看本主题" 以在可编辑模式下查看此页面，同时提供原始英语内容。|
-|MT_QualityEditable|此文章由人工翻译。 如果你有 Internet 连接，请选择 "联机查看本主题" 以在可编辑模式下查看此页面，同时提供原始英语内容。|
-|MT_QualityNonEditable|此文章由人工翻译。 如果你有 Internet 连接，请选择 "联机查看本主题" 以在可编辑模式下查看此页面，同时提供原始英语内容。|
-|MT_BetaContents|此文章由机器翻译，用于预发行版本。 如果你有 Internet 连接，请选择 "联机查看本主题" 以在可编辑模式下查看此页面，同时提供原始英语内容。|
-|MT_BetaRecycledContents|此文章由人工翻译，用于预发行版本。 如果你有 Internet 连接，请选择 "联机查看本主题" 以在可编辑模式下查看此页面，同时提供原始英语内容。|
-|功能：|**LinkTable**|
-|用途：|支持联机主题链接|
-|**元素**|**“值”**|
+
+功能：**免责声明**使用：计算机翻译内容的一组案例特定免责声明。
+
+|**元素**|**值**|
+|-|-|
+|MT_Editable|本文进行了机器翻译。 如果你有 Internet 连接，请选择 "联机查看本主题" 以在可编辑模式下查看此页面，同时提供原始英语内容。|
+|MT_NonEditable|本文进行了机器翻译。 如果你有 Internet 连接，请选择 "联机查看本主题" 以在可编辑模式下查看此页面，同时提供原始英语内容。|
+|MT_QualityEditable|本文已手动翻译。 如果你有 Internet 连接，请选择 "联机查看本主题" 以在可编辑模式下查看此页面，同时提供原始英语内容。|
+|MT_QualityNonEditable|本文已手动翻译。 如果你有 Internet 连接，请选择 "联机查看本主题" 以在可编辑模式下查看此页面，同时提供原始英语内容。|
+|MT_BetaContents|本文是针对预发布版本的机器翻译。 如果你有 Internet 连接，请选择 "联机查看本主题" 以在可编辑模式下查看此页面，同时提供原始英语内容。|
+|MT_BetaRecycledContents|本文是针对初步版本手动翻译的。 如果你有 Internet 连接，请选择 "联机查看本主题" 以在可编辑模式下查看此页面，同时提供原始英语内容。|
+
+功能： **LinkTable**使用：支持联机主题链接
+
+|**元素**|**值**|
+|-|-|
 |LinkTableTitle|链接表|
-|TopicEnuLinkText|查看计算机上提供的本主题的英语版本\</a >。|
-|TopicOnlineLinkText|查看本主题 \<href = "{0}" {1}> online\</a >|
-|OnlineText|Online|
-|功能：|**视频音频控件**|
-|用途：|显示视频内容的元素和文本|
-|**元素**|**“值”**|
+|TopicEnuLinkText|查看 \</a> 计算机上提供的本主题的英文版。|
+|TopicOnlineLinkText|联机查看本主题 \<a href="{0}" {1}>\</a>|
+|OnlineText|联机|
+
+功能：**视频音频控件**使用：显示视频内容的元素和文本
+
+|**元素**|**值**|
+|-|-|
 |MultiMediaNotSupported|必须安装 Internet Explorer 9 或更高版本才能支持 {0} 内容。|
 |VideoText|显示视频|
 |AudioText|流式传输音频|
-|OnlineVideoLinkText|\<p > 若要查看与本主题相关联的视频，请单击 {0}\<href = "{1}" >{2}/a\<。\</p >|
-|OnlineAudioLinkText|\<p > 收听与本主题相关联的音频，请单击 {0}\<href = "{1}" >{2}/a\<>。\</p >|
-|功能：|**内容未安装控件**|
-|用途：|用于呈现 contentnotinstalled 的文本元素（字符串）|
-|**元素**|**“值”**|
+|OnlineVideoLinkText|\<p>若要查看与本主题相关的视频，请单击 {0} \<a href="{1}"> {2} 此处 \</a> 。\</p>|
+|OnlineAudioLinkText|\<p>若要收听与本主题相关的音频，请单击 {0} \<a href="{1}"> {2} 此处 \</a> 。\</p>|
+
+功能：**未安装内容的控件**使用：用于呈现的文本元素（字符串） contentnotinstalled.htm
+
+|**元素**|**值**|
+|-|-|
 |ContentNotInstalledTitle|在您的计算机上找不到任何内容。|
-|ContentNotInstalledDownloadContentText|\<p > 将内容下载到您的计算机，\<href = "{0}" {1}> 单击 "管理" 选项卡\</a >。\</p >|
-|ContentNotInstalledText|\<p > 计算机上未安装任何内容。 请参阅管理员以获取本地帮助内容安装。\</p >|
-|功能：|**找不到主题控件**|
-|用途：|用于呈现 topicnotfound 的文本元素（字符串）|
-|**元素**|**“值”**|
+|ContentNotInstalledDownloadContentText|\<p>若要将内容下载到您的计算机，请 \<a href="{0}" {1}> 单击 "管理" 选项卡 \</a> 。\</p>|
+|ContentNotInstalledText|\<p>计算机上未安装任何内容。 请参阅管理员以获取本地帮助内容安装。\</p>|
+
+功能：**主题找不到控件**使用：用于呈现的文本元素（字符串） topicnotfound.htm
+
+|**元素**|**值**|
+|-|-|
 |TopicNotFoundTitle|在您的计算机上找不到请求的主题。|
-|TopicNotFoundViewOnlineText|\<p > 在您的计算机上找不到您请求的主题，但您可以 \<href = "{0}" {1}> 查看联机\</a > 的主题。\</p >|
-|TopicNotFoundDownloadContentText|\<p > 参见导航窗格以获取指向类似主题的链接，或 \<href = "{0}" {1}> 单击 "管理" 选项卡\</a > 将内容下载到计算机。\</p >|
-|TopicNotFoundText|\<p > 在您的计算机上找不到您请求的主题。\</p >|
-|功能：|**主题损坏控件**|
-|用途：|用于呈现 topiccorrupted 的文本元素（字符串）|
-|**元素**|**“值”**|
+|TopicNotFoundViewOnlineText|\<p>您在计算机上找不到您请求的主题，但您可以 \<a href="{0}" {1}> 联机查看该主题 \</a> 。\</p>|
+|TopicNotFoundDownloadContentText|\<p>请参阅导航窗格以获取指向类似主题的链接，或 \<a href="{0}" {1}> 单击 "管理" 选项卡 \</a> 将内容下载到您的计算机。\</p>|
+|TopicNotFoundText|\<p>在您的计算机上找不到您请求的主题。\</p>|
+
+功能：**主题损坏控件**使用：文本元素（字符串），用于呈现 topiccorrupted.htm
+
+|**元素**|**值**|
+|-|-|
 |TopicCorruptedTitle|无法显示请求的主题。|
-|TopicCorruptedViewOnlineText|\<p > Help Viewer 无法显示请求的主题。 主题的内容或基础系统依赖项中可能存在错误。\</p >|
-|功能：|**主页控件**|
-|用途：|支持显示帮助查看器顶层节点内容的文本。|
-|**元素**|**“值”**|
+|TopicCorruptedViewOnlineText|\<p>Help Viewer 无法显示请求的主题。 主题的内容或基础系统依赖项中可能存在错误。\</p>|
+
+功能：**主页控件**使用：支持显示帮助查看器顶层节点内容的文本。
+
+|**元素**|**值**|
+|-|-|
 |HomePageTitle|Help Viewer 主页|
-|HomePageIntroduction|\<p > 欢迎使用 Microsoft Help Viewer，这是使用 Microsoft 工具、产品、技术和服务的所有用户的重要信息来源。 帮助查看器可让你访问操作方法和参考信息、示例代码、技术文章等。 若要查找所需的内容，请浏览目录、使用全文搜索或使用关键字索引在内容中导航。\</p >|
-|HomePageContentInstallText|\<p >\<br/> 使用 \<href = "{0}" {1}> 管理内容\</a > 选项卡执行以下操作：\<ul >\<li > 将内容添加到计算机。\</li >\<li > 检查本地内容的更新。\</li >\<li > 从计算机中删除内容。\</li >\</ul >\</p >|
+|HomePageIntroduction|\<p>欢迎使用 Microsoft Help Viewer，这是使用 Microsoft 工具、产品、技术和服务的所有用户的重要信息来源。 帮助查看器可让你访问操作方法和参考信息、示例代码、技术文章等。 若要查找所需的内容，请浏览目录、使用全文搜索或使用关键字索引在内容中导航。\</p>|
+|HomePageContentInstallText|\<p>\<br />使用 " \<a href="{0}" {1}> 管理内容" \</a> 选项卡执行以下操作： \<ul> \<li> 向计算机添加内容。 \</li> \<li>检查本地内容的更新。 \</li> \<li>从计算机中删除内容。\</li>\</ul>\</p>|
 |HomePageInstalledBooks|已安装书籍|
 |HomePageNoBooksInstalled|在您的计算机上找不到任何内容。|
 |HomePageHelpSettings|帮助内容设置|
-|HomePageHelpSettingsText|\<p > 当前设置为 "本地帮助"。 "帮助查看器" 显示您在计算机上安装的内容。\<br/> 若要更改帮助内容的源，请在 Visual Studio 菜单栏上选择 "\<范围样式 ="{0}"> 帮助，设置帮助首选项\</span >。\<br/>\</p >|
+|HomePageHelpSettingsText|\<p>你的当前设置是本地帮助。 "帮助查看器" 显示您在计算机上安装的内容。 \<br />若要更改帮助内容的源，请在 Visual Studio 菜单栏上选择 " \<span style="{0}"> 帮助"，然后选择 "帮助首选项" \</span> 。\<br />\</p>|
 |几|MB|
 
  **branding.js**
 
- 署名 .js 文件包含 Visual Studio 帮助查看器品牌元素使用的 JavaScript。  下面是品牌元素和支持 JavaScript 函数的列表。  要为此文件本地化的所有字符串都在此文件顶部的 "可本地化字符串" 部分中定义。  已为署名 .js 文件中的字符串创建了 ICL 文件。
+ branding.js 文件包含 Visual Studio 帮助查看器品牌元素使用的 JavaScript。  下面是品牌元素和支持 JavaScript 函数的列表。  要为此文件本地化的所有字符串都在此文件顶部的 "可本地化字符串" 部分中定义。  已为 branding.js 文件中的位置字符串创建了 ICL 文件。
 
-||||
+|**品牌功能**|**JavaScript 函数**|**说明**|
 |-|-|-|
-|**品牌功能**|**JavaScript 函数**|**描述**|
-|Var 。||定义变量|
+|Var .。。||定义变量|
 |获取用户代码语言|setUserPreferenceLang|将索引号映射到代码语言|
 |设置并获取 cookie 值|System.windows.application.getcookie、System.windows.application.setcookie||
 |继承成员|changeMembersLabel|展开/折叠继承的成员|
 |当 SelfBranded = False 时|onLoad|阅读查询字符串，检查其是否是打印请求。  将所有 codesnippets 设置为 "关注用户首选" 选项卡。 如果是打印请求，则将 isPrinterFriendly 设置为 true。 检查高对比度模式。|
-|代码段|addSpecificTextLanguageTagSet||
+|代码片段|addSpecificTextLanguageTagSet||
 ||getIndexFromDevLang||
 ||ChangeTab||
 ||setCodesnippetLang||
@@ -536,43 +552,42 @@ some F# code
 ||isHighContrast()|使用彩色范围检测高对比度模式|
 ||onHighContrast （黑色）|检测到高对比度时调用|
 |.LST 功能|||
-||addToLanSpecTextIdSet(id)||
+||addToLanSpecTextIdSet （id）||
 ||updateLST(currentLang)||
-||getDevLangFromCodeSnippet(lang)||
+||getDevLangFromCodeSnippet （lang）||
 |多媒体功能|caption （开始、结束、文本、样式）||
 ||findAllMediaControls(normalizedId)||
 ||getActivePlayer(normalizedId)||
 ||captionsOnOff （id）||
 ||toSeconds （t）||
-||getAllComments(node)||
+||getAllComments （node）||
 ||styleRectify （styleName，styleValue）||
 ||showCC （id）||
 ||副标题（id）||
 
  **HTM 文件**
 
- 品牌包包含一组 HTM 文件，这些文件支持用于传达关键信息以帮助内容用户的方案，例如，主页包含描述安装了哪些内容集的部分，以及在主题无法位于本地主题集中。 每个产品都可以修改这些 HTM 文件。  ISO Shell 供应商能够采用默认的品牌包，并更改这些页面的行为和内容以满足他们的需要。  这些文件引用各自的品牌包，以便署名标记从署名 .xml 文件中获取相应的内容。
+ 品牌包包含一组 HTM 文件，这些文件支持用于传达关键信息以帮助内容用户的方案，例如，主页包含描述安装了哪些内容集的部分，以及在本地主题集中找不到主题的页面。 每个产品都可以修改这些 HTM 文件。  ISO Shell 供应商能够采用默认的品牌包，并更改这些页面的行为和内容以满足他们的需要。  这些文件引用各自的品牌包，以便品牌标记获取 branding.xml 文件中的相应内容。
 
-||||
+|**文件**|**使用**|**显示的内容源**|
 |-|-|-|
-|**文件**|**用途**|**显示的内容源**|
 |homepage.htm|此页面显示当前已安装的内容，以及任何其他适用于用户内容的消息。  此文件具有附加的元数据属性 "Microsoft.Help.Id" content = "-1"，该属性将此内容置于本地内容目录的顶部。||
-||<META_HOME_PAGE_TITLE_ADD />|署名 .xml、标记 \<HomePageTitle >|
-||<HOME_PAGE_INTRODUCTION_SECTION_ADD />|署名 .xml、标记 \<HomePageIntroduction >|
-||<HOME_PAGE_CONTENT_INSTALL_SECTION_ADD />|署名 .xml、标记 \<HomePageContentInstallText >|
-||<HOME_PAGE_BOOKS_INSTALLED_SECTION_ADD />|标题部分署名 .xml 标记\<HomePageInstalledBooks >、从应用程序生成的数据，\<HomePageNoBooksInstalled > 未安装任何书籍。|
-||<HOME_PAGE_SETTINGS_SECTION_ADD />|标题部分署名 .xml 标记 \<HomePageHelpSettings >，section text \<HomePageHelpSettingsText >。|
-|topiccorrupted .htm|当主题存在于本地集中时，但出于某种原因无法显示（已损坏的内容）。||
-||< META_TOPIC_CORRUPTED_TITLE_ADD/>|署名 .xml、标记 \<TopicCorruptedTitle >|
-||< TOPIC_CORRUPTED_SECTION_ADD/>|署名 .xml、标记 \<TopicCorruptedViewOnlineText >|
+||<META_HOME_PAGE_TITLE_ADD/>|Branding.xml、标记\<HomePageTitle>|
+||<HOME_PAGE_INTRODUCTION_SECTION_ADD/>|Branding.xml、标记\<HomePageIntroduction>|
+||<HOME_PAGE_CONTENT_INSTALL_SECTION_ADD/>|Branding.xml、标记\<HomePageContentInstallText>|
+||<HOME_PAGE_BOOKS_INSTALLED_SECTION_ADD/>|\<HomePageInstalledBooks> \<HomePageNoBooksInstalled> 在未安装任何书籍时，标题部分 Branding.xml 标记，即从应用程序生成的数据。|
+||<HOME_PAGE_SETTINGS_SECTION_ADD/>|标题节 Branding.xml 标记 \<HomePageHelpSettings> ，部分文本 \<HomePageHelpSettingsText> 。|
+|topiccorrupted.htm|当主题存在于本地集中时，但出于某种原因无法显示（已损坏的内容）。||
+||<META_TOPIC_CORRUPTED_TITLE_ADD/>|Branding.xml、标记\<TopicCorruptedTitle>|
+||<TOPIC_CORRUPTED_SECTION_ADD/>|Branding.xml、标记\<TopicCorruptedViewOnlineText>|
 |topicnotfound.htm|在本地内容集中找不到主题，也不能联机使用时||
-||< META_TOPIC_NOT_FOUND_TITLE_ADD/>|署名 .xml、标记 \<TopicNotFoundTitle >|
-||< META_TOPIC_NOT_FOUND_ID_ADD/>|署名 .xml、标记 \<TopicNotFoundViewOnlineText > + \<TopicNotFoundDownloadContentText >|
-||< TOPIC_NOT_FOUND_SECTION_ADD/>|署名 .xml、标记 \<TopicNotFoundText >|
+||<META_TOPIC_NOT_FOUND_TITLE_ADD/>|Branding.xml、标记\<TopicNotFoundTitle>|
+||<META_TOPIC_NOT_FOUND_ID_ADD/>|Branding.xml、标记\<TopicNotFoundViewOnlineText> + \<TopicNotFoundDownloadContentText>|
+||<TOPIC_NOT_FOUND_SECTION_ADD/>|Branding.xml、标记\<TopicNotFoundText>|
 |contentnotinstalled.htm|如果没有为产品安装本地内容。||
-||< META_CONTENT_NOT_INSTALLED_TITLE_ADD/>|署名 .xml、标记 \<ContentNotInstalledTitle >|
-||< META_CONTENT_NOT_INSTALLED_ID_ADD/>|署名 .xml、标记 \<ContentNotInstalledDownloadContentText >|
-||< CONTENT_NOT_INSTALLED_SECTION_ADD/>|署名 .xml、标记 \<ContentNotInstalledText >|
+||<META_CONTENT_NOT_INSTALLED_TITLE_ADD/>|Branding.xml、标记\<ContentNotInstalledTitle>|
+||<META_CONTENT_NOT_INSTALLED_ID_ADD/>|Branding.xml、标记\<ContentNotInstalledDownloadContentText>|
+||<CONTENT_NOT_INSTALLED_SECTION_ADD/>|Branding.xml、标记\<ContentNotInstalledText>|
 
  **CSS 文件**
 
@@ -582,39 +597,38 @@ some F# code
 
 - Printer –包含用于呈现的 css 元素，其中 SelfBranded = false
 
-  署名 .css 文件包含 Visual Studio 的定义主题演示文稿（需要注意的是，Branding_\<区域 > 设置中包含的 .mshc 可能会更改）。
+  署名 .css 文件包含 Visual Studio 的定义主题演示文稿（需要注意的是，包服务的 Branding_ 中包含的 \<locale> .mshc 可能会更改）。
 
   **图形文件**
 
   Visual Studio 内容显示 Visual Studio 徽标和其他图形。  Visual Studio 帮助查看器署名包中图形文件的完整列表如下所示。
 
-||||
+|**文件**|**使用**|**示例**|
 |-|-|-|
-|**文件**|**用途**|**示例**|
 |clear.gif|用于呈现可折叠区域||
 |footer_slice.gif|页脚显示||
 |info_icon.gif|显示信息时使用|免责声明|
 |online_icon.gif|此图标将与联机链接关联||
 |tabLeftBD.gif|用于呈现代码片段容器||
 |tabRightBD.gif|用于呈现代码片段容器||
-|vs_logo_bk.gif|用于署名 .xml 标记中定义的正常对比度徽标 \<LogoFileName >。  对于 Visual Studio 产品，徽标名称为 vs_logo_bk .gif。||
-|vs_logo_wh.gif|用于署名 .xml 标记中定义的正常高徽标引用 \<LogoFileNameHC >。  对于 Visual Studio 产品，徽标名称为 vs_logo_wh .gif。||
+|vs_logo_bk.gif|用于 Branding.xml 标记中定义的正常对比度徽标 \<LogoFileName> 。  对于 Visual Studio 产品，徽标名称为 vs_logo_bk.gif。||
+|vs_logo_wh.gif|用于 Branding.xml 标记中定义的正常高徽标 \<LogoFileNameHC> 。  对于 Visual Studio 产品，徽标名称为 vs_logo_wh.gif。||
 |ccOff.png|图形标题||
 |ccOn.png|图形标题||
 |ImageSprite.png|用于呈现可折叠区域|展开或折叠图形|
 
 ### <a name="deploying-a-set-of-topics"></a>部署一组主题
- 这是创建帮助查看器内容部署集的简单快捷教程，其中包含 .MSHA 文件以及包含主题的 cab 或 MSHCs 集。 .MSHA 是一个 XML 文件，用于描述一组 cab 文件或 .MSHC 文件。 Help Viewer 可以读取 .MSHA 以获取内容列表（。CAB 或.MSHC 文件）可用于本地安装。
+ 这是创建帮助查看器内容部署集的简单快捷教程，其中包含 .MSHA 文件以及包含主题的 cab 或 MSHCs 集。 .MSHA 是一个 XML 文件，用于描述一组 cab 文件或 .MSHC 文件。 Help Viewer 可以读取 .MSHA 以获取内容列表（。CAB 或。.MSHC 文件）可用于本地安装。
 
  这只是描述帮助查看器 .MSHA 的基本 XML 架构的入门教程。  在此 brief 概述和示例 Helpcontentsetup.msha. .msha 中有一个示例实现。
 
- 在本入门教程中，.MSHA 的名称是 Helpcontentsetup.msha。 .msha （该文件的名称可以是任何内容，扩展名为.MSHA）。 Helpcontentsetup.msha. .msha （如下例所示）应包含 cab 或 MSHCs 的列表。  文件类型必须在 .MSHA 中保持一致（不支持 .MSHA 和 CAB 文件类型的组合）。 对于每个 CAB 或 .MSHC，应存在 \<div 类 = "package" > ...\</div > （请参阅下面的示例）。
+ 在本入门教程中，.MSHA 的名称是 Helpcontentsetup.msha。 .msha （该文件的名称可以是任何内容，扩展名为。.MSHA）。 Helpcontentsetup.msha. .msha （如下例所示）应包含 cab 或 MSHCs 的列表。  文件类型必须在 .MSHA 中保持一致（不支持 .MSHA 和 CAB 文件类型的组合）。 对于每个 CAB 或 .MSHC，都应有 \<div class="package"> .。。\</div> （请参阅下面的示例）。
 
  注意：下面的实现示例中包含了署名包。 若要获取所需的 Visual Studio 内容呈现元素和内容行为，这一点非常重要。
 
  示例 Helpcontentsetup.msha. .msha 文件：（将 "内容集名称 1" 和 "内容集名称 2" 等替换为文件名。）
 
-```
+```html
 <html>
 <head />
 <body class="vendor-book">
@@ -640,7 +654,7 @@ some F# code
 
 1. 创建本地文件夹，如 "C:\SampleContent"
 
-2. 在此示例中，我们将使用 .MSHC 文件来包含主题。  .MSHC 是文件扩展名从 .zip 更改为的 zip.MSHC.
+2. 在此示例中，我们将使用 .MSHC 文件来包含主题。  .MSHC 是文件扩展名从 .zip 更改为的 zip。.MSHC.
 
 3. 将下面的 Helpcontentsetup.msha 创建为文本文件（使用记事本创建文件），并将其保存到前面所述的文件夹（请参阅步骤1）。
 
@@ -686,11 +700,11 @@ some F# code
  使用和扩展以上步骤将使 Vsp 为 Visual Studio 帮助查看器部署其内容集。
 
 ### <a name="adding-help-to-the-visual-studio-shell-integrated-and-isolated"></a>将帮助添加到 Visual Studio Shell （集成和隔离）
- **介绍**
+ **简介**
 
  本演练演示如何将帮助内容纳入 Visual Studio Shell 应用程序，然后将其部署。
 
- **惠?**
+ **要求**
 
 1. [!INCLUDE[vs_dev12](../../includes/vs-dev12-md.md)]
 
@@ -698,11 +712,11 @@ some F# code
 
    **概述**
 
-   [!INCLUDE[vs_dev12](../../includes/vs-dev12-md.md)] Shell 是一个 [!INCLUDE[vs_dev12](../../includes/vs-dev12-md.md)] IDE 版本，你可以在该版本的基础上应用应用程序。 此类应用程序包含独立 Shell 以及您创建的扩展。 使用 [!INCLUDE[vs_dev12](../../includes/vs-dev12-md.md)] SDK 中包含的独立 Shell 项目模板来构建扩展。
+   [!INCLUDE[vs_dev12](../../includes/vs-dev12-md.md)]Shell 是一个 [!INCLUDE[vs_dev12](../../includes/vs-dev12-md.md)] 可以基于其应用程序的 IDE 版本。 此类应用程序包含独立 Shell 以及您创建的扩展。 使用 SDK 中包含的独立 Shell 项目模板 [!INCLUDE[vs_dev12](../../includes/vs-dev12-md.md)] 来构建扩展。
 
    创建基于 Shell 的独立应用程序及其帮助的基本步骤：
 
-3. 获取 [!INCLUDE[vs_dev12](../../includes/vs-dev12-md.md)] ISO Shell 可再发行组件（Microsoft 下载）。
+3. 获取 [!INCLUDE[vs_dev12](../../includes/vs-dev12-md.md)] ISO Shell 可再发行组件（Microsoft 下载中心）。
 
 4. 在 Visual Studio 中，创建一个基于独立 Shell 的帮助扩展，例如本演练稍后介绍的 Contoso 帮助扩展。
 
@@ -712,7 +726,7 @@ some F# code
 
 - 创建文件夹 C:\ProgramData\Microsoft\HelpLibrary2\Catalogs\VisualStudio12。
 
-- 创建一个名为 Catalogtype.xml 的文件，并将其添加到该文件夹中。 该文件应包含以下代码行：
+- 创建一个名为 CatalogType.xml 的文件，并将其添加到该文件夹中。 该文件应包含以下代码行：
 
   ```
   <?xml version="1.0" encoding="UTF-8"?>
@@ -733,9 +747,9 @@ some F# code
 
   若要创建独立的 Shell 扩展：
 
-1. 在 Visual Studio 的 "**文件**" 下，选择 "**新建项目**"，在 "**其他项目类型**" 下，选择 "**扩展性**"，然后选择 " **Visual Studio Shell 独立主机**"。 将项目命名为 `ContosoHelpShell`）以创建基于 Visual Studio 独立 Shell 模板的扩展性项目。
+1. 在 Visual Studio 的 "**文件**" 下，选择 "**新建项目**"，在 "**其他项目类型**" 下，选择 "**扩展性**"，然后选择 " **Visual Studio Shell 独立主机**"。 将项目命名 `ContosoHelpShell` 为），以创建基于 Visual Studio 独立 Shell 模板的扩展性项目。
 
-2. 在解决方案资源管理器的 ContosoHelpShellUI 项目的 "资源文件" 文件夹中，打开 System.windows.input.applicationcommands.paste. .vsct。 请确保此行已注释掉（搜索 "No_Help"）： `<!-- <define name=“No_HelpMenuCommands”/> -->`
+2. 在解决方案资源管理器的 ContosoHelpShellUI 项目的 "资源文件" 文件夹中，打开 System.windows.input.applicationcommands.paste. .vsct。 请确保此行已注释掉（搜索 "No_Help"）：`<!-- <define name=“No_HelpMenuCommands”/> -->`
 
 3. 选择 F5 键编译并运行**调试**。 在独立 Shell IDE 的实验实例中，选择 "**帮助**" 菜单。 请确保显示 "**查看帮助**"、"**添加和删除帮助内容**" 和 "**设置帮助首选项**"。
 
@@ -773,11 +787,11 @@ some F# code
 
 8. 在部署 Contoso 的计算机上，安装下载的（从上面的） ISO Shell。
 
-9. 在 \\\Program Files （x86）\\中创建文件夹，并将其命名为 `Contoso`。
+9. 在 \\ \Program Files （x86）中创建一个文件夹 \\ 并将其命名为 `Contoso` 。
 
-10. 将 ContosoHelpShell release 文件夹中的内容复制到 \\\Program Files （x86） \Contoso\ 文件夹中。
+10. 将 ContosoHelpShell release 文件夹中的内容复制到 \\ \Program Files （x86） \Contoso\ 文件夹中。
 
-11. 通过在 "**开始**" 菜单中选择 "**运行**" 并输入 `Regedit`来启动注册表编辑器。 在注册表编辑器中，选择 "**文件**"，然后选择 "**导入**"。 浏览到 ContosoHelpShell 项目文件夹。 在 ContosoHelpShell 子文件夹中，选择 ContosoHelpShell。
+11. 通过在 "**开始**" 菜单中选择 "**运行**" 并输入来启动注册表编辑器 `Regedit` 。 在注册表编辑器中，选择 "**文件**"，然后选择 "**导入**"。 浏览到 ContosoHelpShell 项目文件夹。 在 ContosoHelpShell 子文件夹中，选择 ContosoHelpShell。
 
 12. 创建内容存储：
 
@@ -785,7 +799,7 @@ some F# code
 
      对于 [!INCLUDE[vs_dev12](../../includes/vs-dev12-md.md)] 集成 Shell，请创建文件夹 C:\ProgramData\Microsoft\HelpLibrary2\Catalogs\VisualStudio12
 
-13. 创建 Catalogtype.xml 并添加到内容存储（上一步），其中包含：
+13. 创建 CatalogType.xml 并添加到内容存储（上一步），其中包含：
 
     ```
     <?xml version="1.0" encoding="UTF-8"?>
@@ -800,7 +814,7 @@ some F# code
 
      C:ProgramDataMicrosoftHelpLibrary2CatalogsVisualStudio12
 
-     [!INCLUDE[vs_dev12](../../includes/vs-dev12-md.md)] 集成 Shell：
+     [!INCLUDE[vs_dev12](../../includes/vs-dev12-md.md)]集成外壳：
 
      C:ProgramDataMicrosoftHelpLibrary2CatalogsVisualStudio12en-US
 
@@ -810,7 +824,7 @@ some F# code
 
 16. 用于测试内容存储的集成 Shell 命令行示例。 对于 ISO Shell，请根据需要更改目录和 launchingApp 值以匹配产品。
 
-      "C:\Program Files (x86)\Microsoft Help Viewer\v2.1\HlpViewer.exe" /catalogName VisualStudio12 /helpQuery method=”page&id=ContosoTopic0” /launchingApp Microsoft,VisualStudio,12.0
+      "C:\Program Files （x86） \Microsoft Help Viewer\v2.1\HlpViewer.exe"/catalogName VisualStudio12/helpQuery method = "page&id = ContosoTopic0"/launchingApp Microsoft，VisualStudio，12。0
 
 17. 启动 Contoso 应用程序（从 Contoso 应用根目录）。 在 ISO Shell 中，选择 "**帮助**" 菜单项，然后将 "**设置帮助首选项**" 更改为 "**使用本地帮助**"。
 

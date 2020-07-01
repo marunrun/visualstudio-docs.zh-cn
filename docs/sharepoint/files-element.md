@@ -1,5 +1,5 @@
 ---
-title: 文件元素 |Microsoft Docs
+title: Files 元素 |Microsoft Docs
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,15 +12,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 3c669b7cc314bc2d7a999e77d5cfb95251789dd8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 42e919bbe25047da14940203ac86793430aeadde
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62967365"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546505"
 ---
 # <a name="files-element"></a>Files 元素
-  指定要部署使用 SharePoint 项目项，如功能元素文件和依赖的非 SharePoint 项目的输出的文件。
+  指定要与 SharePoint 项目项一起部署的文件，例如功能元素文件和依赖非 SharePoint 项目的输出。
 
 ## <a name="syntax"></a>语法
 
@@ -42,25 +42,25 @@ ms.locfileid: "62967365"
 
 ### <a name="child-elements"></a>子元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
-|[ProjectItemFile](../sharepoint/projectitemfile-element.md)|可选**ProjectItemFileType**元素。<br /><br /> 表示 SharePoint 文件，如功能元素文件部署到 SharePoint 时，包含与项目项。|
-|[ProjectOutputFile](../sharepoint/projectoutputfile-element.md)|可选**ProjectOutputFileType**元素。<br /><br /> 表示要部署到 SharePoint 时，包含与项目项的项目的输出。|
+|[ProjectItemFile](../sharepoint/projectitemfile-element.md)|可选的**ProjectItemFileType**元素。<br /><br /> 表示在将项目项部署到 SharePoint 时要包含的 SharePoint 文件（如功能元素文件）。|
+|[ProjectOutputFile](../sharepoint/projectoutputfile-element.md)|可选的**ProjectOutputFileType**元素。<br /><br /> 表示在将项目项部署到 SharePoint 时要包含的项目的输出。|
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
-|[ProjectItem](../sharepoint/projectitem-element.md)|表示 SharePoint 项目项。 此元素的必需的根元素的`.spdata`文件。|
+|[ProjectItem](../sharepoint/projectitem-element.md)|表示 SharePoint 项目项。 此元素是文件必需的根元素 `.spdata` 。|
 
 ## <a name="element-information"></a>元素信息
 
-|||
+|properties|值|
 |-|-|
-|**命名空间**|http:\/\/schemas.microsoft.com/VisualStudio/<br>2010/SharePointTools/SharePointProjectItemModel|
+|**Namespace**|http： \/ \/ schemas.microsoft.com/VisualStudio/<br>2010/SharePointTools/SharePointProjectItemModel|
 |**架构名称**|SharePoint 项目项架构|
-|**验证文件**|ProjectItemModelSchema.xsd|
+|**验证文件**|ProjectItemModelSchema|
 |**可以为空**|否|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [SharePoint 项目项架构参考](../sharepoint/sharepoint-project-item-schema-reference.md)

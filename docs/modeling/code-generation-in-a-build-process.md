@@ -1,7 +1,7 @@
 ---
 title: 生成过程中的代码生成
 ms.date: 03/22/2018
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - text templates, build tasks
 - text templates, transforming by using msbuild
@@ -13,12 +13,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: e01136b845124d74c22ceb1c7cab877a8e2d1d04
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 1fd7538782bff80ee12ac0aa0e66c0daa4da2d5c
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75590548"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546713"
 ---
 # <a name="invoke-text-transformation-in-the-build-process"></a>在生成过程中调用文本转换
 
@@ -26,7 +26,7 @@ ms.locfileid: "75590548"
 
 根据你使用的引擎，生成任务可完成的操作之间是有一些差异的。 在 Visual Studio 中生成解决方案时，如果设置了[hostspecific = "true"](../modeling/t4-template-directive.md)属性，则文本模板可以访问 VISUAL studio API （EnvDTE）。 但当您从命令行生成解决方案时，或者通过 Visual Studio 启动服务器生成时，这种情况并不成立。 在这些情况下，生成由 MSBuild 执行，并且使用不同的 T4 主机。 这意味着，在使用 MSBuild 生成文本模板时，不能以相同的方式访问项目文件名称之类的内容。 但是，可以[使用生成参数将环境信息传递到文本模板和指令处理器](#parameters)。
 
-## <a name="buildserver"></a>配置计算机
+## <a name="configure-your-machines"></a><a name="buildserver"></a>配置计算机
 
 若要在开发计算机上启用生成任务，请安装适用于 Visual Studio 的建模 SDK。
 
@@ -36,22 +36,22 @@ ms.locfileid: "75590548"
 
 - % ProgramFiles （x86）% \ Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VisualStudio\v16.0\TextTemplating
 
-  - VisualStudio. TextTemplating. 15.0。
+  - Microsoft.VisualStudio.TextTemplating.Sdk.Host.15.0.dll
   - Microsoft.TextTemplating.Build.Tasks.dll
   - Microsoft.TextTemplating.targets
 
 - % ProgramFiles （x86）% \ Microsoft Visual Studio\2019\Community\VSSDK\VisualStudioIntegration\Common\Assemblies\v4。0
 
-  - VisualStudio. TextTemplating. 15。0
-  - VisualStudio. TextTemplating. 15。0
-  - VisualStudio. TextTemplating. Vshost.exe. 15。0
+  - Microsoft.VisualStudio.TextTemplating.15.0.dll
+  - Microsoft.VisualStudio.TextTemplating.Interfaces.15.0.dll
+  - Microsoft.VisualStudio.TextTemplating.VSHost.15.0.dll
 
 - % ProgramFiles （x86）% \ Microsoft Visual Studio\2019\Community\Common7\IDE\PublicAssemblies
 
-  - VisualStudio. TextTemplating. 15。0
+  - Microsoft.VisualStudio.TextTemplating.Modeling.15.0.dll
 
 > [!TIP]
-> 如果在生成服务器上运行 TextTemplating 生成目标时获取 CodeAnalysis 方法的 `MissingMethodException`，请确保 Roslyn 程序集位于与生成可执行文件相同的目录中的一个名为*Roslyn*的目录（例如， *msbuild.exe*）。
+> 如果在 `MissingMethodException` 生成服务器上运行 TextTemplating 生成目标时获取了 CodeAnalysis 方法的，请确保 Roslyn 程序集位于与生成可执行文件相同的目录中的一个名为*Roslyn*的目录中（例如*msbuild.exe*）。
 
 ## <a name="edit-the-project-file"></a>编辑项目文件
 
@@ -164,7 +164,7 @@ ms.locfileid: "75590548"
 
 在 `AfterTransform` 中，你可以引用文件列表：
 
-- GeneratedFiles - 由过程写入的文件的列表。 对于覆盖现有只读文件的那些文件，`%(GeneratedFiles.ReadOnlyFileOverwritten)` 将为 true。 可将这些文件签出源代码管理。
+- GeneratedFiles - 由过程写入的文件的列表。 对于那些覆盖现有只读文件的文件，将为 `%(GeneratedFiles.ReadOnlyFileOverwritten)` true。 可将这些文件签出源代码管理。
 
 - NonGeneratedFiles - 未覆盖的只读文件的列表。
 
@@ -184,7 +184,7 @@ ms.locfileid: "75590548"
 </ItemGroup>
 ```
 
-要重定向到的有用文件夹 `$(IntermediateOutputPath)`。
+要重定向到的有用文件夹为 `$(IntermediateOutputPath)` 。
 
 如果指定输出文件名，则其优先于模板中的 output 指令中指定的扩展。
 
@@ -220,7 +220,7 @@ $(IncludeFolders);$(MSBuildProjectDirectory)\Include;AnotherFolder;And\Another</
 </PropertyGroup>
 ```
 
-## <a name="parameters"></a>将生成上下文数据传递到模板
+## <a name="pass-build-context-data-into-the-templates"></a><a name="parameters"></a>将生成上下文数据传递到模板
 
 你可以在项目文件中设置参数值。 例如，可以传递[生成](../msbuild/msbuild-properties.md)属性和[环境变量](../msbuild/how-to-use-environment-variables-in-a-build.md)：
 
@@ -252,9 +252,9 @@ Dim value = Host.ResolveParameterValue("-", "-", "parameterName")
 ```
 
 > [!NOTE]
-> 仅当使用 MSBuild 时，`ResolveParameterValue` 从 `T4ParameterValues` 中获取数据。 使用 Visual Studio 转换模板时，这些参数具有默认值。
+> `ResolveParameterValue``T4ParameterValues`仅在使用 MSBuild 时获取数据。 使用 Visual Studio 转换模板时，这些参数具有默认值。
 
-## <a name="msbuild"></a>在 assembly 和 include 指令中使用项目属性
+## <a name="use-project-properties-in-assembly-and-include-directives"></a><a name="msbuild"></a>在 assembly 和 include 指令中使用项目属性
 
 Visual Studio 宏（如 **$ （SolutionDir））** 在 MSBuild 中不起作用。 你可以改用项目属性。
 
@@ -289,7 +289,7 @@ Visual Studio 宏（如 **$ （SolutionDir））** 在 MSBuild 中不起作用�
 
 如果更新包含的文件或模板读取的其他文件，则 Visual Studio 不会自动转换文件。 将模板转换为生成的一部分可以确保一切都是最新的。
 
-**用于转换文本模板的其他选项有哪些？**
+**还有哪些其他选项适用于转换文本模板？**
 
 - 可在命令脚本中使用[TextTransform 实用程序](../modeling/generating-files-with-the-texttransform-utility.md)。 在大多数情况下，使用 MSBuild 更为简单。
 
@@ -303,13 +303,13 @@ Visual Studio 宏（如 **$ （SolutionDir））** 在 MSBuild 中不起作用�
 
 ::: moniker range="vs-2017"
 
-- `%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\msbuild\Microsoft\VisualStudio\v15.0\TextTemplating\Microsoft.TextTemplating.targets` 中的 T4 MSbuild 模板有很好的指导。
+- T4 MSbuild 模板在`%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\msbuild\Microsoft\VisualStudio\v15.0\TextTemplating\Microsoft.TextTemplating.targets`
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-- `%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Enterprise\msbuild\Microsoft\VisualStudio\v16.0\TextTemplating\Microsoft.TextTemplating.targets` 中的 T4 MSbuild 模板有很好的指导。
+- T4 MSbuild 模板在`%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Enterprise\msbuild\Microsoft\VisualStudio\v16.0\TextTemplating\Microsoft.TextTemplating.targets`
 
 ::: moniker-end
 

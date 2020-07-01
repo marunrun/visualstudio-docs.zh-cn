@@ -12,15 +12,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 192b745580ab676dab476b4dcf31c15b9095be2a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3b700239f97153cef94ab1d7010ad16ed9aa6001
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62967339"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546557"
 ---
 # <a name="extensiondata-element"></a>ExtensionData 元素
-  表示 SharePoint 项目项与相关联的自定义数据项的集合。
+  表示与 SharePoint 项目项关联的自定义数据项的集合。
 
 ## <a name="syntax"></a>语法
 
@@ -38,27 +38,27 @@ ms.locfileid: "62967339"
 
 ### <a name="child-elements"></a>子元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
-|[ExtensionDataItem](../sharepoint/extensiondataitem-element.md)|可选元素。<br /><br /> 表示键/值格式中的 SharePoint 项目项与相关联的自定义数据项。 键和值必须为字符串。|
+|[ExtensionDataItem](../sharepoint/extensiondataitem-element.md)|可选元素。<br /><br /> 表示与 SharePoint 项目项关联的自定义数据项，以键/值格式表示。 键和值都必须是字符串。|
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
-|[ProjectItem](../sharepoint/projectitem-element.md)|表示 SharePoint 项目项。 此元素的必需的根元素的`.spdata`文件。|
+|[ProjectItem](../sharepoint/projectitem-element.md)|表示 SharePoint 项目项。 此元素是文件必需的根元素 `.spdata` 。|
 
 ## <a name="remarks"></a>备注
- 在将自定义数据与 SharePoint 项目项使用<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem.ExtensionData%2A>的属性<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem>对象时，Visual Studio 将保存到数据**ExtensionData**中的元素`.spdata`项目文件项。 有关详细信息，请参阅[将数据保存在 SharePoint 项目系统的扩展](../sharepoint/saving-data-in-extensions-of-the-sharepoint-project-system.md)。
+ 使用对象的属性将自定义数据与 SharePoint 项目项相关联时 <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem.ExtensionData%2A> <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem> ，Visual Studio 会将数据保存到项目项的文件中的**ExtensionData**元素 `.spdata` 。 有关详细信息，请参阅[在 SharePoint 项目系统的扩展中保存数据](../sharepoint/saving-data-in-extensions-of-the-sharepoint-project-system.md)。
 
 ## <a name="element-information"></a>元素信息
 
-|||
+|properties|值|
 |-|-|
-|**命名空间**|http:\/\/schemas.microsoft.com/VisualStudio/<br>2010/SharePointTools/SharePointProjectItemModel|
+|**Namespace**|http： \/ \/ schemas.microsoft.com/VisualStudio/<br>2010/SharePointTools/SharePointProjectItemModel|
 |**架构名称**|SharePoint 项目项架构|
-|**验证文件**|ProjectItemModelSchema.xsd|
+|**验证文件**|ProjectItemModelSchema|
 |**可以为空**|否|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [SharePoint 项目项架构参考](../sharepoint/sharepoint-project-item-schema-reference.md)

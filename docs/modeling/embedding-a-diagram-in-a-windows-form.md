@@ -1,18 +1,18 @@
 ---
 title: 在 Windows 窗体中嵌入图表
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 94425c9f3bc586847f43589f7abdcef2295cf1b9
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.openlocfilehash: 3e81a5ff10cd6e309ffbf17e40ffbaa9ec88f185
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76114626"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547623"
 ---
 # <a name="embed-a-diagram-in-a-windows-form"></a>在 Windows 窗体中嵌入图表
 
@@ -67,7 +67,7 @@ ms.locfileid: "76114626"
 
 ## <a name="update-the-form-using-store-events"></a>使用存储事件更新窗体
 
-1. 在窗体设计器中，添加名为 `listBox1`的**ListBox** 。 这将显示模型中元素的列表。 它使用*存储事件*与模型同步。 有关详细信息，请参阅[事件处理程序在模型外部传播更改](../modeling/event-handlers-propagate-changes-outside-the-model.md)。
+1. 在窗体设计器中，添加一个名为的**ListBox** `listBox1` 。 这将显示模型中元素的列表。 它使用*存储事件*与模型同步。 有关详细信息，请参阅[事件处理程序在模型外部传播更改](../modeling/event-handlers-propagate-changes-outside-the-model.md)。
 
 2. 在自定义代码文件中，重写 DocView 类的其他方法：
 

@@ -15,27 +15,27 @@ caps.latest.revision: 13
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 128069bb24dfc8b1c11963e33c9541701b0eea15
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f1fb30cd37ebffcee7619190cef83560813b25db
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653744"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547363"
 ---
-# <a name="ca1725-parameter-names-should-match-base-declaration"></a>CA1725：参数名应与基方法中的声明保持一致
+# <a name="ca1725-parameter-names-should-match-base-declaration"></a>CA1725:参数名应与基方法中的声明保持一致
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|值|
 |-|-|
 |TypeName|ParameterNamesShouldMatchBaseDeclaration|
 |CheckId|CA1725|
-|类别|Microsoft。命名|
+|Category|Microsoft。命名|
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
  外部可见方法重写中的参数名称与方法的基声明中的参数名称或该方法的接口声明中的参数名称不匹配。
 
-## <a name="rule-description"></a>规则说明
+## <a name="rule-description"></a>规则描述
  以一致的方式命名重写层次结构中的参数可以提高方法重写的可用性。 如果派生方法中的参数名与基声明中的名称不同，可能会导致无法区分出该方法是基方法的重写还是该方法的新重载。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突

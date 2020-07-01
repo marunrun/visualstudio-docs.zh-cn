@@ -15,27 +15,27 @@ caps.latest.revision: 16
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 519faf2d49cb74d60d342d6bcf449f211076b0b4
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 118c29473db09d5ed0a4fa447e27e593a88f98b3
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661083"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546752"
 ---
-# <a name="ca1046-do-not-overload-operator-equals-on-reference-types"></a>CA1046：不要对引用类型重载相等运算符
+# <a name="ca1046-do-not-overload-operator-equals-on-reference-types"></a>CA1046:不要对引用类型重载相等运算符
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|值|
 |-|-|
 |TypeName|DoNotOverloadOperatorEqualsOnReferenceTypes|
 |CheckId|CA1046|
-|类别|Microsoft. Design|
+|Category|Microsoft. Design|
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
  公共或嵌套公共引用类型重载相等运算符。
 
-## <a name="rule-description"></a>规则说明
+## <a name="rule-description"></a>规则描述
  对于引用类型，相等运算符的默认实现几乎始终是正确的。 默认情况下，仅当两个引用指向同一对象时，它们才相等。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
@@ -56,12 +56,12 @@ ms.locfileid: "72661083"
 
  本示例生成以下输出。
 
- **a = new （2，2）和 b = new （2，2）是否相同？不**
-**c 和 a 是否相等？是**
-**b，a 是 = =？No** 
-**c 和 a 是 = =？是**
+ **a = new （2，2）和 b = new （2，2）是否相同？没有** 
+ **c 和 a 是否相等？是** 
+ **b，a 是 = =？没有** 
+ **c 和 a 是 = =？是**
 ## <a name="related-rules"></a>相关规则
- [CA1013：重载加法方法和减法方法时重载相等运算符](../code-quality/ca1013-overload-operator-equals-on-overloading-add-and-subtract.md)
+ [CA1013:重载加法方法和减法方法时重载相等运算符](../code-quality/ca1013-overload-operator-equals-on-overloading-add-and-subtract.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  <xref:System.Object.Equals%2A?displayProperty=fullName>[相等运算符](https://msdn.microsoft.com/library/bc496a91-fefb-4ce0-ab4c-61f09964119a)

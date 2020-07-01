@@ -12,15 +12,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e6b47254a80c9cdadab6ca18f2fb8c3e8540fbd0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6c9936054c5cc622e6f335d81d1568ebed16518f
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62827332"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547922"
 ---
 # <a name="safecontrol-element"></a>SafeControl 元素
-  表示一个 ASPX 控件或指定为安全的任何用户访问 SharePoint 站点上任何 ASPX 页上的 Web 部件。
+  表示一个 ASPX 控件或 Web 部件，在 SharePoint 站点上的任何 ASPX 页上，此控件或 Web 部件被指定为安全，可供任何用户访问。
 
 ## <a name="syntax"></a>语法
 
@@ -38,14 +38,14 @@ ms.locfileid: "62827332"
 
 ### <a name="attributes"></a>特性
 
-|特性|描述|
+|属性|说明|
 |---------------|-----------------|
-|**Assembly**|可选**xs: string**属性。<br /><br /> 定义 Web 部件的 ASPX 控件的程序集的名称。 默认情况下，此特性使用 **$SharePoint.Project.AssemblyFullName$** 可替换参数的程序集名称。 有关详细信息，请参阅[可替换参数](../sharepoint/replaceable-parameters.md)。|
-|**IsSafe**|可选**xs: boolean**属性。<br /><br /> 指定 Web 部件的 ASPX 控件是不受信任的用户可以访问安全。|
-|**IsSafeAgainstScript**|可选**xs: boolean**属性。<br /><br /> 指定不受信任的用户是否可以查看或编辑 Web 部件的 ASPX 控件的属性。|
-|**名称**|可选**xs: string**属性。<br /><br /> 此集合中的安全控件项的名称。|
-|**命名空间**|可选**xs: string**属性。<br /><br /> Web 部件的 ASPX 控件的命名空间。|
-|**TypeName**|可选**xs: string**属性。<br /><br /> Web 部件的 ASPX 控件的类型名称。|
+|**件**|可选**xs： string**特性。<br /><br /> 其中定义了 ASPX 控件或 Web 部件的程序集的名称。 默认情况下，此属性对程序集名称 **$SharePoint 使用 AssemblyFullName $** 可替换参数。 有关详细信息，请参阅可[替换参数](../sharepoint/replaceable-parameters.md)。|
+|**IsSafe**|可选**xs： boolean**属性。<br /><br /> 指定 ASPX 控件或 Web 部件对于不受信任的用户的访问是安全的。|
+|**IsSafeAgainstScript**|可选**xs： boolean**属性。<br /><br /> 指定不受信任的用户是否可以查看或编辑 ASPX 控件或 Web 部件的属性。|
+|**Name**|可选**xs： string**特性。<br /><br /> 此安全控件项在集合中的名称。|
+|**命名空间**|可选**xs： string**特性。<br /><br /> ASPX 控件或 Web 部件的命名空间。|
+|**TypeName**|可选**xs： string**特性。<br /><br /> ASPX 控件或 Web 部件的类型名称。|
 
 ### <a name="child-elements"></a>子元素
  无。
@@ -54,20 +54,20 @@ ms.locfileid: "62827332"
 
 |元素|描述|
 |-------------|-----------------|
-|[SafeControls](../sharepoint/safecontrols-element.md)|表示的 ASPX 控件和指定为安全的任何用户访问 SharePoint 站点上任何 ASPX 页上的 Web 部件的集合。|
+|[SafeControls](../sharepoint/safecontrols-element.md)|表示 ASPX 控件和 Web 部件的集合，这些控件和在 SharePoint 站点上的任何 ASPX 页上被指定为可供任何用户访问的安全。|
 
 ## <a name="remarks"></a>备注
- 有关安全控件的详细信息，请参阅[提供在项目项中的打包和部署信息](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)。
+ 有关安全控件的详细信息，请参阅[在项目项中提供打包和部署信息](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)。
 
 ## <a name="element-information"></a>元素信息
 
-|||
+|properties|值|
 |-|-|
-|**命名空间**|http:\/\/schemas.microsoft.com/VisualStudio/<br>2010/SharePointTools/SharePointProjectItemModel|
+|**Namespace**|http： \/ \/ schemas.microsoft.com/VisualStudio/<br>2010/SharePointTools/SharePointProjectItemModel|
 |**架构名称**|SharePoint 项目项架构|
-|**验证文件**|ProjectItemModelSchema.xsd|
+|**验证文件**|ProjectItemModelSchema|
 |**可以为空**|否|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [SharePoint 项目项架构参考](../sharepoint/sharepoint-project-item-schema-reference.md)
-- [提供在项目项中的打包和部署信息](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)
+- [在项目项中提供打包和部署信息](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)

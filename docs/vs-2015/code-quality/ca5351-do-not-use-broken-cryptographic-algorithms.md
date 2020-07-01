@@ -8,21 +8,21 @@ caps.latest.revision: 12
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 7b4a15530a43937b4f73fba1779216391c862c11
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ad4698fe469176ae8ed590c44b4efbb4ccf39de2
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669022"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545049"
 ---
 # <a name="ca5351-do-not-use-broken-cryptographic-algorithms"></a>CA5351 不使用损坏的加密算法
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|值|
 |-|-|
 |TypeName|DoNotUseBrokenCryptographicAlgorithms|
 |CheckId|CA5351|
-|类别|Microsoft.Cryptography|
+|Category|Microsoft.Cryptography|
 |是否重大更改|非重大更改|
 
 > [!NOTE]
@@ -33,7 +33,7 @@ ms.locfileid: "72669022"
 
  下面的加密算法列表受到已知加密攻击。 加密哈希算法 <xref:System.Security.Cryptography.MD5> 受到哈希冲突攻击。  根据使用情况，哈希冲突可能会使依赖哈希函数这一唯一加密输出的系统受到假冒、篡改或其他类型的攻击。 加密算法 <xref:System.Security.Cryptography.DES> 和 <xref:System.Security.Cryptography.RC2> 受到加密攻击，可能会导致加密数据的意外泄露。
 
-## <a name="rule-description"></a>规则说明
+## <a name="rule-description"></a>规则描述
  损坏的加密算法不安全，不鼓励继续使用。 尽管具体的漏洞因使用环境的不同而异，但 MD5 哈希算法仍易遭到已知的冲突攻击。  用于确保数据完整性的哈希算法（例如文件签名或数字证书）尤其易被攻击。  在这种情况下，攻击者可能会生成两个独立的数据块，以便在不更改哈希值或使相关数字签名无效的情况下，将良性数据替换为恶意数据。
 
  对于加密算法：
@@ -47,7 +47,7 @@ ms.locfileid: "72669022"
 ## <a name="how-to-fix-violations"></a>如何解决冲突
  使用更强大的加密选项：
 
-- 对于 MD5，请使用 [SHA-2](https://msdn.microsoft.com/library/windows/desktop/aa382459.aspx) 系列的哈希（例如 <xref:System.Security.Cryptography.SHA512>、 <xref:System.Security.Cryptography.SHA384>、 <xref:System.Security.Cryptography.SHA256>）。
+- 对于 MD5，请使用[sha-1](https://msdn.microsoft.com/library/windows/desktop/aa382459.aspx)系列中的哈希（例如 <xref:System.Security.Cryptography.SHA512> 、 <xref:System.Security.Cryptography.SHA384> 、 <xref:System.Security.Cryptography.SHA256> ）。
 
 - 对于 DES 和 RC2，请使用 <xref:System.Security.Cryptography.Aes> 加密。
 
@@ -95,7 +95,7 @@ using (AesManaged encAlg = new AesManaged())
 }
 ```
 
-### <a name="des-br-br-encryption-violation"></a>3DES <br /><br />加密冲突
+### <a name="des-br-br-encryption-violation"></a>DES <br /><br />加密冲突
 
 ```
 using System.Security.Cryptography;

@@ -1,7 +1,7 @@
 ---
 title: 自定义元素创建和移动
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.dsltools.dsldesigner.elementmergedirective
 helpviewer_keywords:
@@ -11,18 +11,18 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 45131ff231e34cf769ac3665344e340f38b9380d
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.openlocfilehash: a94f1e3321d846578ea42c69e50d48713ff618fb
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76114241"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547259"
 ---
 # <a name="customizing-element-creation-and-movement"></a>自定义元素创建和移动
 
 可以通过工具箱或粘贴或移动操作，允许将元素拖至另一个元素上。 您可以使用您指定的关系将移动的元素链接到目标元素。
 
-元素合并指令（EMD）指定将一个模型元素*合并*到另一个模型元素时会发生的情况。 发生这种情况的原因有：
+元素合并指令（EMD）指定将一个模型元素*合并*到另一个模型元素时会发生的情况。 在以下情况下会发生这种情况：
 
 - 用户将 "工具箱" 拖动到关系图或形状上。
 
@@ -71,7 +71,7 @@ EMD 的责任是决定如何将对象或对象组合并到模型中的特定位�
 > [!NOTE]
 > 如果你编写自定义合并代码，它只会影响使用此 EMD 执行的合并。 如果有其他 EMDs 合并相同类型的对象，或者存在其他在不使用 EMD 的情况下创建这些对象的自定义代码，则它们将不会受到自定义合并代码的影响。
 >
-> 如果要确保新元素或新关系始终由您的自定义代码进行处理，请考虑在嵌入关系上定义 `AddRule`，并对元素的域类定义 `DeleteRule`。 有关详细信息，请参阅[规则将传播的更改中的模式](../modeling/rules-propagate-changes-within-the-model.md)。
+> 如果要确保新元素或新关系始终由您的自定义代码进行处理，请考虑 `AddRule` 在嵌入关系和 `DeleteRule` 元素的域类上定义。 有关详细信息，请参阅[规则在模型内部传播更改](../modeling/rules-propagate-changes-within-the-model.md)。
 
 ## <a name="example-defining-an-emd-without-custom-code"></a>示例：定义不含自定义代码的 EMD
 
@@ -85,15 +85,15 @@ EMD 的责任是决定如何将对象或对象组合并到模型中的特定位�
 
     当你运行此 DSL 时，它允许你在形状之间创建形状和连接线。 不能将新的**ExampleElement**形状从工具箱拖到现有形状上。
 
-2. 若要允许用户将元素合并到 `ExampleElement` 形状上，请在 `ExampleElement` 域类中创建新的 EMD：
+2. 若要允许用户将元素合并到 `ExampleElement` 形状上，请在域类中创建新的 EMD `ExampleElement` ：
 
-   1. 在**DSL 资源管理器**中，展开 "**域类**"。 右键单击 `ExampleElement`，然后单击 "**添加新元素合并指令**"。
+   1. 在**DSL 资源管理器**中，展开 "**域类**"。 右键单击 `ExampleElement` ，然后单击 "**添加新元素合并指令**"。
 
    2. 确保 " **DSL 详细信息**" 窗口处于打开状态，以便您可以查看新 EMD 的详细信息。 （菜单： **View**、**其他窗口**、 **DSL 详细信息**。）
 
-3. 在 "DSL 详细信息" 窗口中设置**索引类**，以定义可在 `ExampleElement` 对象上合并的元素类。
+3. 在 "DSL 详细信息" 窗口中设置**索引类**，以定义可合并到对象的元素类 `ExampleElement` 。
 
-    对于本示例，请选择 "`ExampleElements`"，以便用户可以将新元素拖动到现有元素上。
+    对于此示例，请选择 `ExampleElements` ，以便用户可以将新元素拖动到现有元素上。
 
     请注意，索引类将成为 DSL 资源管理器中的 EMD 的名称。
 
@@ -109,7 +109,7 @@ EMD 的责任是决定如何将对象或对象组合并到模型中的特定位�
 
       可以使用路径导航工具创建每个路径：
 
-      1. 在 "**处理合并" （通过在路径中创建链接**），单击 **\<添加路径 >** 。
+      1. 在 "**通过创建指向路径的链接处理合并**" 下，单击 **\<add path>** 。
 
       2. 单击列表项右侧的下拉箭头。 此时将显示一个树视图。
 
@@ -141,7 +141,7 @@ EMD 的责任是决定如何将对象或对象组合并到模型中的特定位�
 
 - EMD 会影响 "工具箱" 和 "粘贴" 操作的两项创建。
 
-     如果编写用于创建新元素的自定义代码，则可以使用 `ElementOperations.Merge` 方法显式调用 EMD。 这将确保你的代码以与其他操作相同的方式将新元素链接到模型。 有关详细信息，请参阅[自定义复制行为](../modeling/customizing-copy-behavior.md)。
+     如果编写用于创建新元素的自定义代码，则可以使用方法显式调用 EMD `ElementOperations.Merge` 。 这将确保你的代码以与其他操作相同的方式将新元素链接到模型。 有关详细信息，请参阅[自定义复制行为](../modeling/customizing-copy-behavior.md)。
 
 ## <a name="example-adding-custom-accept-code-to-an-emd"></a>示例：将自定义接受代码添加到 EMD
 
@@ -151,9 +151,9 @@ EMD 的责任是决定如何将对象或对象组合并到模型中的特定位�
 
 1. 使用**最小语言**解决方案模板创建 DSL。 打开 DSL 定义关系图。
 
-2. 在 DSL 资源管理器中，展开 "**域类**"、`ExampleModel`"**元素合并指令**"。 选择名为 `ExampleElement`的元素合并指令。
+2. 在 DSL 资源管理器中，展开 "**域类**"， `ExampleModel` "**元素合并指令**"。 选择名为的元素合并指令 `ExampleElement` 。
 
-     此 EMD 控制用户如何在模型中创建新的 `ExampleElement` 对象，例如通过从工具箱中拖动。
+     此 EMD 控制用户如何 `ExampleElement` 在模型中创建新对象，例如通过从工具箱中拖动。
 
 3. 在 " **DSL 详细信息**" 窗口中，选择 "**使用自定义接受**"。
 
@@ -161,7 +161,7 @@ EMD 的责任是决定如何将对象或对象组合并到模型中的特定位�
 
      将报告生成错误，如下所示： "ElementMergeSample. ExampleElement 不包含 CanMergeExampleElement 的定义 ..."
 
-     必须实现 `CanMergeExampleElement`方法。
+     必须实现方法 `CanMergeExampleElement` 。
 
 5. 在**Dsl**项目中创建新的代码文件。 将其内容替换为以下代码，并将命名空间更改为项目的命名空间。
 
@@ -190,7 +190,7 @@ EMD 的责任是决定如何将对象或对象组合并到模型中的特定位�
     }
     ```
 
-    这个简单的示例限制了可合并到父模型中的元素数。 对于更有趣的条件，该方法可以检查接收对象的任何属性和链接。 它还可以检查在 <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype>中携带的合并元素的属性。 有关 `ElementGroupPrototypes`的详细信息，请参阅[自定义复制行为](../modeling/customizing-copy-behavior.md)。 有关如何编写读取模型的代码的详细信息，请参阅[在程序代码中导航和更新模型](../modeling/navigating-and-updating-a-model-in-program-code.md)。
+    这个简单的示例限制了可合并到父模型中的元素数。 对于更有趣的条件，该方法可以检查接收对象的任何属性和链接。 它还可以检查在中携带的合并元素的属性 <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> 。 有关的详细信息 `ElementGroupPrototypes` ，请参阅[自定义复制行为](../modeling/customizing-copy-behavior.md)。 有关如何编写读取模型的代码的详细信息，请参阅[在程序代码中导航和更新模型](../modeling/navigating-and-updating-a-model-in-program-code.md)。
 
 6. 测试 DSL：
 
@@ -214,7 +214,7 @@ EMD 的责任是决定如何将对象或对象组合并到模型中的特定位�
 
 2. 重写 `MergeRelate` 方法，并选择性地重写 `MergeDisconnect` 方法。 为此，必须设置域类的 "**生成双派生**" 属性。 你的代码可以调用基类中生成的合并代码。 如果希望在执行合并后执行其他操作，请使用此选项。
 
-   这些方法只影响使用此 EMD 执行的合并。 如果要影响可创建合并元素的所有方法，另一种方法是在嵌入关系上定义 `AddRule`，并对合并域类定义 `DeleteRule`。 有关详细信息，请参阅[规则将传播的更改中的模式](../modeling/rules-propagate-changes-within-the-model.md)。
+   这些方法只影响使用此 EMD 执行的合并。 如果要影响可创建合并元素的所有方法，替代方法是 `AddRule` 在嵌入关系和 `DeleteRule` 合并域类上定义。 有关详细信息，请参阅[规则在模型内部传播更改](../modeling/rules-propagate-changes-within-the-model.md)。
 
 ### <a name="to-override-mergerelate"></a>重写 MergeRelate
 
@@ -222,15 +222,15 @@ EMD 的责任是决定如何将对象或对象组合并到模型中的特定位�
 
 2. 在 Dsldefinition.dsl 关系图中，选择合并的接收类。 通常，它是嵌入关系的源端的类。
 
-     例如，在从最小语言解决方案生成的 DSL 中，选择 `ExampleModel`。
+     例如，在从最小语言解决方案生成的 DSL 中，选择 `ExampleModel` 。
 
-3. 在 "**属性**" 窗口中，设置生成派生为 True 的**双精度** **值**。
+3. 在 "**属性**" 窗口中，设置生成派生为 True 的**双精度****值**。
 
 4. 重新生成解决方案。
 
-5. 检查**Dsl\Generated Files\DomainClasses.cs**的内容。 搜索名为 `MergeRelate` 的方法，并检查其内容。 这将帮助你编写自己的版本。
+5. 检查**Dsl\Generated Files\DomainClasses.cs**的内容。 搜索名为的方法 `MergeRelate` ，并检查其内容。 这将帮助你编写自己的版本。
 
-6. 在新的代码文件中，为接收类写入一个分部类，并重写 `MergeRelate` 方法。 请记住调用基方法。 例如：
+6. 在新的代码文件中，为接收类编写一个分部类，并重写 `MergeRelate` 方法。 请记住调用基方法。 例如：
 
     ```csharp
     partial class ExampleModel
@@ -258,9 +258,9 @@ EMD 的责任是决定如何将对象或对象组合并到模型中的特定位�
 
 ### <a name="to-write-custom-merge-code"></a>编写自定义合并代码
 
-1. 在**Dsl\Generated Code\DomainClasses.cs**中，检查名为 `MergeRelate`的方法。 这些方法在新元素和现有模型之间创建链接。
+1. 在**Dsl\Generated Code\DomainClasses.cs**中，检查名为 `MergeRelate` 的方法。 这些方法在新元素和现有模型之间创建链接。
 
-    同时，检查名为 `MergeDisconnect`的方法。 当删除元素时，这些方法会将其从模型中取消链接。
+    另外，检查名为 `MergeDisconnect` 的方法。 当删除元素时，这些方法会将其从模型中取消链接。
 
 2. 在 " **DSL 资源管理器**" 中，选择或创建要自定义的元素合并指令。 在 " **DSL 详细信息**" 窗口中，设置 "**使用自定义合并**"。
 
@@ -268,11 +268,11 @@ EMD 的责任是决定如何将对象或对象组合并到模型中的特定位�
 
 3. 重新生成解决方案。 这将花费比平时更长的时间，因为生成的代码文件将从模型中更新。
 
-    将显示错误消息。 双击错误消息以查看生成的代码中的说明。 这些说明要求提供两种方法，`MergeRelate`*YourDomainClass*和 `MergeDisconnect`*YourDomainClass*
+    将显示错误消息。 双击错误消息以查看生成的代码中的说明。 这些说明要求提供两种方法，即 `MergeRelate` *YourDomainClass*和 `MergeDisconnect` *YourDomainClass*
 
 4. 在单独的代码文件中编写分部类定义中的方法。 之前检查的示例应该建议所需的内容。
 
-   自定义合并代码不会影响直接创建对象和关系的代码，也不会影响其他 EMDs。 若要确保无论如何创建元素都实现其他更改，请考虑改为写入 `AddRule` 和 `DeleteRule`。 有关详细信息，请参阅[规则将传播的更改中的模式](../modeling/rules-propagate-changes-within-the-model.md)。
+   自定义合并代码不会影响直接创建对象和关系的代码，也不会影响其他 EMDs。 若要确保无论如何创建元素都实现其他更改，请考虑改为编写 `AddRule` 和 `DeleteRule` 。 有关详细信息，请参阅[规则在模型内部传播更改](../modeling/rules-propagate-changes-within-the-model.md)。
 
 ## <a name="redirecting-a-merge-operation"></a>重定向合并操作
 
@@ -284,7 +284,7 @@ EMD 的责任是决定如何将对象或对象组合并到模型中的特定位�
 
 ### <a name="to-create-a-forward-merge-directive"></a>创建向前合并指令
 
-1. 使用组件模型模板创建 [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] 解决方案。
+1. [!INCLUDE[dsl](../modeling/includes/dsl_md.md)]使用组件模型模板创建解决方案。
 
 2. 打开 Dsldefinition.dsl，显示**Dsl 资源管理器**。
 
@@ -304,11 +304,11 @@ EMD 的责任是决定如何将对象或对象组合并到模型中的特定位�
 
     新路径应类似于：
 
-    **ComponentHasPorts.Component/!Component**
+    **ComponentHasPorts/！组件**
 
 9. 保存解决方案，然后通过单击**解决方案资源管理器**工具栏上最右侧的按钮来转换这些模板。
 
-10. 生成和运行解决方案。 此时将显示 Visual Studio 的新实例。
+10. 生成并运行解决方案。 此时将显示 Visual Studio 的新实例。
 
 11. 在**解决方案资源管理器**中，打开 mydsl。 将显示关系图和**ComponentLanguage 工具箱**。
 

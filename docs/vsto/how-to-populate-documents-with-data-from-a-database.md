@@ -1,7 +1,7 @@
 ---
 title: 如何：用数据库中的数据填充文档
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,12 +13,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 907b3deeadd0a56f9e47a6e17a40579a0c9ffa64
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 8470ec4acf686c016088c5f474539a1ab7ed85df
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985887"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547194"
 ---
 # <a name="how-to-populate-documents-with-data-from-a-database"></a>如何：用数据库中的数据填充文档
 
@@ -66,7 +66,7 @@ ms.locfileid: "72985887"
 
 有关如何将更新发送到类型化数据集和数据库的信息，请参阅[如何：使用主机控件中的数据更新数据源](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [将数据绑定到 Office 解决方案中的控件](../vsto/binding-data-to-controls-in-office-solutions.md)
 - [添加新数据源](../data-tools/add-new-data-sources.md)

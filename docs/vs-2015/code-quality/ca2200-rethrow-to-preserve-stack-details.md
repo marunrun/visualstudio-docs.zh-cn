@@ -15,28 +15,28 @@ caps.latest.revision: 15
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: d20407d7cc708ac785e4a792bf8e64768ea58540
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 6d63ef6ff3647742e931fd05f59c66b40059ad00
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72667388"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546362"
 ---
-# <a name="ca2200-rethrow-to-preserve-stack-details"></a>CA2200：再次引发以保留堆栈详细信息
+# <a name="ca2200-rethrow-to-preserve-stack-details"></a>CA2200:再次引发以保留堆栈详细信息
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|值|
 |-|-|
 |TypeName|RethrowToPreserveStackDetails|
 |CheckId|CA2200|
-|类别|Microsoft. 使用情况|
+|Category|Microsoft. 使用情况|
 |是否重大更改|非重大更改|
 
 ## <a name="cause"></a>原因
- 再次引发异常，并在 `throw` 语句中显式指定了异常。
+ 再次引发异常，并且在语句中显式指定了异常 `throw` 。
 
-## <a name="rule-description"></a>规则说明
- 引发异常后，它所携带的信息的一部分是堆栈跟踪。 堆栈跟踪是方法调用层次结构的一个列表，它以引发异常的方法开头，并以捕获异常的方法结束。 如果通过在 `throw` 语句中指定异常来重新引发异常，则将在当前方法处重启堆栈跟踪，并将丢失引发异常的原始方法和当前方法之间的方法调用的列表。 若要保留原始堆栈跟踪信息和异常，请在不指定异常的情况下使用 `throw` 语句。
+## <a name="rule-description"></a>规则描述
+ 引发异常后，它所携带的信息的一部分是堆栈跟踪。 堆栈跟踪是方法调用层次结构的一个列表，它以引发异常的方法开头，并以捕获异常的方法结束。 如果通过在语句中指定异常来重新引发异常，则将 `throw` 在当前方法处重新启动堆栈跟踪，并将丢失引发异常的原始方法和当前方法之间的方法调用的列表。 若要保留原始堆栈跟踪信息和异常，请使用 `throw` 语句而不指定异常。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
  若要修复与此规则的冲突，请在不显式指定异常的情况下重新引发异常。
@@ -45,7 +45,7 @@ ms.locfileid: "72667388"
  不禁止显示此规则发出的警告。
 
 ## <a name="example"></a>示例
- 下面的示例演示了一个 `CatchAndRethrowExplicitly` 的方法，该方法违反了规则和一个方法，`CatchAndRethrowImplicitly` 满足规则。
+ 下面的示例演示了一个方法， `CatchAndRethrowExplicitly` 该方法违反了规则和 `CatchAndRethrowImplicitly` 满足规则的方法。
 
  [!code-csharp[FxCop.Usage.Rethrow#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.Rethrow/cs/FxCop.Usage.Rethrow.cs#1)]
  [!code-vb[FxCop.Usage.Rethrow#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Usage.Rethrow/vb/FxCop.Usage.Rethrow.vb#1)]

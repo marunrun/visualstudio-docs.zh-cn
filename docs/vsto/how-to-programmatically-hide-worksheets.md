@@ -1,7 +1,7 @@
 ---
 title: 如何：以编程方式隐藏工作表
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,12 +13,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f1fca54350900b2ed252efc324308d1168c6da53
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 83cf1f63a67525dca4cf9dbb5a4916da5d70b4ce
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62812458"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547402"
 ---
 # <a name="how-to-programmatically-hide-worksheets"></a>如何：以编程方式隐藏工作表
   可以显示或隐藏工作簿中的任意工作表。 若要隐藏工作表，请使用该工作表宿主项或通过使用工作簿的表集合访问该工作表。
@@ -38,7 +38,7 @@ ms.locfileid: "62812458"
 ## <a name="use-the-sheets-collection-of-the-excel-workbook"></a>使用 Excel 工作簿的表集合
  在下列情况中通过 Microsoft Office Excel <xref:Microsoft.Office.Interop.Excel.Sheets> 集合访问工作表：
 
-- 你想要隐藏 VSTO 外接程序中的工作表。
+- 您希望隐藏 VSTO 外接程序中的工作表。
 
 - 想要隐藏的工作表是在运行时在文档级自定义项中创建的。
 
@@ -49,10 +49,10 @@ ms.locfileid: "62812458"
      [!code-csharp[Trin_VstcoreExcelAutomation#26](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#26)]
      [!code-vb[Trin_VstcoreExcelAutomation#26](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#26)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [使用工作表](../vsto/working-with-worksheets.md)
 - [如何：以编程方式从工作簿中删除工作表](../vsto/how-to-programmatically-delete-worksheets-from-workbooks.md)
-- [如何：以编程方式移动工作簿内的工作表](../vsto/how-to-programmatically-move-worksheets-within-workbooks.md)
+- [如何：以编程方式在工作簿中移动工作表](../vsto/how-to-programmatically-move-worksheets-within-workbooks.md)
 - [如何：以编程方式保护工作表](../vsto/how-to-programmatically-protect-worksheets.md)
 - [主机项和主机控件概述](../vsto/host-items-and-host-controls-overview.md)
-- [对 Office 项目中的对象的全局访问](../vsto/global-access-to-objects-in-office-projects.md)
+- [对 Office 项目中对象的全局访问](../vsto/global-access-to-objects-in-office-projects.md)

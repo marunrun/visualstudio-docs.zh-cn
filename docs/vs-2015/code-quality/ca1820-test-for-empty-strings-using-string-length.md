@@ -15,33 +15,33 @@ caps.latest.revision: 23
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 6711dac907de2777cf892b20269fec7e99d3bd6f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 296eb6407e3ce63b0eb28ff86c215c12ec724ce9
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72657495"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545309"
 ---
-# <a name="ca1820-test-for-empty-strings-using-string-length"></a>CA1820：使用字符串长度测试是否有空字符串
+# <a name="ca1820-test-for-empty-strings-using-string-length"></a>CA1820:使用字符串长度测试是否有空字符串
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|值|
 |-|-|
 |TypeName|TestForEmptyStringsUsingStringLength|
 |CheckId|CA1820|
-|类别|Microsoft. 性能|
+|Category|Microsoft. 性能|
 |是否重大更改|不间断|
 
 ## <a name="cause"></a>原因
- 使用 <xref:System.Object.Equals%2A?displayProperty=fullName> 将字符串与空字符串进行比较。
+ 使用将字符串与空字符串进行比较 <xref:System.Object.Equals%2A?displayProperty=fullName> 。
 
-## <a name="rule-description"></a>规则说明
- 使用 <xref:System.String.Length%2A?displayProperty=fullName> 属性或 <xref:System.String.IsNullOrEmpty%2A?displayProperty=fullName> 方法比较字符串比使用 <xref:System.Object.Equals%2A> 明显快。 这是因为 <xref:System.Object.Equals%2A> 比 <xref:System.String.IsNullOrEmpty%2A> 或执行的指令数更多地执行多个 MSIL 指令，以检索 <xref:System.String.Length%2A> 属性值并将其与零进行比较。
+## <a name="rule-description"></a>规则描述
+ 使用 <xref:System.String.Length%2A?displayProperty=fullName> 属性或方法比较字符串 <xref:System.String.IsNullOrEmpty%2A?displayProperty=fullName> 的速度明显快于使用 <xref:System.Object.Equals%2A> 。 这是因为 <xref:System.Object.Equals%2A> 执行的 MSIL 指令比 <xref:System.String.IsNullOrEmpty%2A> 用于检索 <xref:System.String.Length%2A> 属性值并将其与零比较的指令数更多。
 
- 应当注意，对于 null 字符串，<xref:System.Object.Equals%2A> 和 <xref:System.String.Length%2A> = = 0 的行为不同。 如果尝试获取 null 字符串的 <xref:System.String.Length%2A> 属性的值，则公共语言运行时将引发 <xref:System.NullReferenceException?displayProperty=fullName>。 如果在空字符串和空字符串之间执行比较，则公共语言运行时不会引发异常;比较返回 `false`。 测试 null 不会对这两种方法的相对性能产生显著影响。 面向 [!INCLUDE[dnprdnlong](../includes/dnprdnlong-md.md)] 时，请使用 <xref:System.String.IsNullOrEmpty%2A> 方法。 否则，请尽可能使用 <xref:System.String.Length%2A> = = 比较。
+ 应当注意， <xref:System.Object.Equals%2A> <xref:System.String.Length%2A> 对于空字符串，和 = = 0 的行为不同。 如果尝试获取 <xref:System.String.Length%2A> null 字符串的属性值，则公共语言运行时将引发 <xref:System.NullReferenceException?displayProperty=fullName> 。 如果在空字符串和空字符串之间执行比较，则公共语言运行时不会引发异常;比较返回 `false` 。 测试 null 不会对这两种方法的相对性能产生显著影响。 如果目标 [!INCLUDE[dnprdnlong](../includes/dnprdnlong-md.md)] 为，请使用 <xref:System.String.IsNullOrEmpty%2A> 方法。 否则，请 <xref:System.String.Length%2A> 尽可能使用 = = 比较。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
- 若要修复与此规则的冲突，请将比较更改为使用 <xref:System.String.Length%2A> 属性，并测试是否为 null 字符串。 如果目标 [!INCLUDE[dnprdnlong](../includes/dnprdnlong-md.md)]，请使用 <xref:System.String.IsNullOrEmpty%2A> 方法。
+ 若要修复与此规则的冲突，请将比较更改为使用 <xref:System.String.Length%2A> 属性，并测试是否为 null 字符串。 如果 [!INCLUDE[dnprdnlong](../includes/dnprdnlong-md.md)] 为目标，请使用 <xref:System.String.IsNullOrEmpty%2A> 方法。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
  如果性能不是问题，则可以安全地禁止显示此规则发出的警告。

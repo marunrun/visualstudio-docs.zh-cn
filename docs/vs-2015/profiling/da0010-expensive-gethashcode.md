@@ -14,24 +14,24 @@ caps.latest.revision: 16
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: a0a2947f0bd6758de62a4a11d78390d38a503271
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: af234cd130d06c2a76c5ddbc958a67eb064d9128
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75919033"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547571"
 ---
 # <a name="da0010-expensive-gethashcode"></a>DA0010：高开销 GetHashCode
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 有关 Visual Studio 的最新文档，请参阅[DA0010：昂贵的 GetHashCode](/visualstudio/profiling/da0010-expensive-gethashcode)。  
 
-|||  
+|Item|值|  
 |-|-|  
 |规则 ID|DA0010|  
-|类别|.NET Framework 使用情况|  
+|Category|.NET Framework 使用情况|  
 |分析方法|采样<br /><br /> .NET 内存|  
-|Message|GetHashCode 函数成本应较低，且不应分配任何内存。 如果可能，降低哈希代码函数的复杂性。|  
+|消息|GetHashCode 函数成本应较低，且不应分配任何内存。 如果可能，降低哈希代码函数的复杂性。|  
 |消息类型|警告|  
   
 ## <a name="cause"></a>原因  

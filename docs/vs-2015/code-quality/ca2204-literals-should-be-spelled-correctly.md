@@ -15,30 +15,30 @@ caps.latest.revision: 21
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: d3e94f308936f898e555b1ad38e6a9d50051a276
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ecf829251cbeab600cb95f8f0c0b0173cd7338d4
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72659537"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546271"
 ---
-# <a name="ca2204-literals-should-be-spelled-correctly"></a>CA2204：应正确拼写文本
+# <a name="ca2204-literals-should-be-spelled-correctly"></a>CA2204:文字应正确拼写
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Item|值|
 |-|-|
 |TypeName|LiteralsShouldBeSpelledCorrectly|
 |CheckId|CA2204|
-|类别|Microsoft. 使用情况|
+|Category|Microsoft. 使用情况|
 |是否重大更改|非重大更改|
 
 ## <a name="cause"></a>原因
  方法将字符串传递到一个参数或属性中使用的字符串，该字符串需要本地化字符串并且文本字符串包含 Microsoft 拼写检查器库无法识别的一个或多个字词。
 
-## <a name="rule-description"></a>规则说明
+## <a name="rule-description"></a>规则描述
  如果以下一个或多个条件为 true，则此规则将检查作为值传递到参数或属性的文本字符串：
 
-- 参数或属性的 <xref:System.ComponentModel.LocalizableAttribute> 特性设置为 true。
+- <xref:System.ComponentModel.LocalizableAttribute>参数或属性的属性设置为 true。
 
 - 参数或属性名称包含 "文本"、"消息" 或 "标题"。
 
@@ -55,6 +55,6 @@ ms.locfileid: "72659537"
  不禁止显示此规则发出的警告。 拼写正确的单词减少了新软件库所需的学习曲线。
 
 ## <a name="related-rules"></a>相关规则
- [CA1704：标识符应正确拼写](../code-quality/ca1704-identifiers-should-be-spelled-correctly.md)
+ [CA1704:标识符应正确拼写](../code-quality/ca1704-identifiers-should-be-spelled-correctly.md)
 
- [CA1703：资源字符串应正确拼写](../code-quality/ca1703-resource-strings-should-be-spelled-correctly.md)
+ [CA1703:资源字符串应正确拼写](../code-quality/ca1703-resource-strings-should-be-spelled-correctly.md)
