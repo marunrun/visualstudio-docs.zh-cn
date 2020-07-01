@@ -3,7 +3,7 @@ title: 选择安装位置
 description: 了解如何通过将下载缓存、共享组件、SDK 和工具的位置更改到不同的驱动器来减少 Visual Studio 在系统驱动器上的安装占用。 例如，将 C 驱动器中的一些文件移动到 D 驱动器。
 ms.date: 03/30/2019
 ms.custom: seodec18
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - change installation locations for Visual Studio
 - select an installation location for Visual Studio files
@@ -16,12 +16,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 7f80d3c30c536e58811f8ca92676694b6d010010
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 5751ddeca2ba690ec29ff905ec7e8330a7199eab
+ms.sourcegitcommit: 9e15138a34532b222e80f6b42b1a9de7b2fe0175
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "76111786"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85419115"
 ---
 # <a name="select-the-installation-locations-in-visual-studio"></a>在 Visual Studio 中选择安装位置
 

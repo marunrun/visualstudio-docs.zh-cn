@@ -12,12 +12,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: d9f0c9a3259186e1581a4673cdc18d1554e92b3c
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: cc887c6bcef9f8b7307d9d6aa570d6458d87f377
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74778487"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85541695"
 ---
 # <a name="nameprofile"></a>NameProfile
 `NameProfile` 函数会将字符串分配给指定的进程或线程。
@@ -48,9 +48,9 @@ PROFILE_COMMAND_STATUS PROFILERAPI NameProfile(
 
   `Level`
 
-  指示性能数据集合可应用到的分析级别。 以下 PROFILE_CONTROL_LEVEL 值可用于指示性能数据集合可应用到的三个级别之一  ：
+  指示性能数据集合可应用到的分析级别。 以下 PROFILE_CONTROL_LEVEL 值可用于指示性能数据集合可应用到的三个级别之一：
 
-|枚举器|说明|
+|枚举器|描述|
 |----------------|-----------------|
 |PROFILE_GLOBALLEVEL|全局级别设置影响分析运行中的所有进程和线程。|
 |PROFILE_PROCESSLEVEL|进程级别设置影响指定进程包含的所有线程。|
@@ -63,7 +63,7 @@ PROFILE_COMMAND_STATUS PROFILERAPI NameProfile(
 ## <a name="property-valuereturn-value"></a>属性值/返回值
  函数通过使用 **PROFILE_COMMAND_STATUS** 枚举来指示成功或失败。 返回值可以是下列值之一：
 
-|枚举器|说明|
+|枚举器|描述|
 |----------------|-----------------|
 |NAME_ERROR_ID_NOEXIST|指定的分析元素不存在。|
 |NAME_ERROR_INVALID_NAME|名称无效。|
@@ -85,14 +85,14 @@ PROFILE_COMMAND_STATUS PROFILERAPI NameProfile(
 > CreateProcess() 和 CreateThread() API 函数可以在初始化线程或进程前返回。
 
 ## <a name="net-framework-equivalent"></a>.NET Framework 等效项
- Microsoft.VisualStudio.Profiler.dll 
+ Microsoft.VisualStudio.Profiler.dll
 
 ## <a name="function-information"></a>函数信息
 
-|||
+|项|“值”|
 |-|-|
-|**Header**|包括 VSPerf.h |
-|**Library**|使用 VSPerf.lib |
+|**Header**|包括 VSPerf.h|
+|**Library**|使用 VSPerf.lib|
 |**Unicode**|作为 `NameProfileW` (Unicode) 和 `NameProfileA` (ANSI) 实现。|
 
 ## <a name="example"></a>示例
@@ -133,5 +133,5 @@ void ExerciseNameProfile()
 }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [Visual Studio 探查器 API 参考（本机）](../profiling/visual-studio-profiler-api-reference-native.md)

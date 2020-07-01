@@ -17,18 +17,18 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 881a8ed7f1aceb5f97eaed1f0b9285951d1d39f6
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 7bdbc255320a2d17eb3c51191b3a425500dd345c
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75590171"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85533687"
 ---
 # <a name="how-to-create-types-by-using-class-designer"></a>如何：使用类设计器创建类型
 
 若要设计 C# 和 Visual Basic 项目的新类型，请在类图上创建它们。 若要查看现有类型，请参阅[如何：查看现有类型](how-to-view-existing-types.md)。
 
-## <a name="CreateType"></a>创建新类型
+## <a name="create-a-new-type"></a><a name="CreateType"></a>创建新类型
 
 1. 在“工具箱”的“类设计器”下，将以下之一拖动到类图上   ：
 
@@ -56,9 +56,8 @@ ms.locfileid: "75590171"
 
 4. 现在添加其他项以定义该类型：
 
-    |||
-    |-|-|
     |**对于**|**添加**|
+    |-|-|
     |类、抽象类、结构|定义类型的方法、属性、字段、事件、构造函数（方法）、析构函数（方法）和常量|
     |枚举|组成枚举的字段值|
     |接口|组成接口的方法、属性和事件|
@@ -67,7 +66,7 @@ ms.locfileid: "75590171"
 
      请参阅[创建成员](creating-and-configuring-type-members.md#create-members)。
 
-## <a name="CustAttributeType"></a>将自定义特性应用于类型
+## <a name="apply-a-custom-attribute-to-a-type"></a><a name="CustAttributeType"></a>将自定义特性应用于类型
 
 1. 在类图上单击类型的形状。
 
@@ -77,7 +76,7 @@ ms.locfileid: "75590171"
 
    自定义属性随即应用于类型。
 
-## <a name="CustAttributeMember"></a>将自定义特性应用于类型成员
+## <a name="apply-a-custom-attribute-to-a-type-member"></a><a name="CustAttributeMember"></a>将自定义特性应用于类型成员
 
 1. 在类图上类型的形状中单击成员的名称，或者在“类详细信息”窗口中单击成员所在的行。
 

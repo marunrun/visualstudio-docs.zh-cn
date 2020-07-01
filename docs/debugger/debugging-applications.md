@@ -13,19 +13,19 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: baa028029081ee1c9c88b75aac416b634632b21a
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 1849d6918c1fd5607c97b82c17e385d3c6521fc4
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73188368"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85535156"
 ---
 # <a name="debugging-applications"></a>调试应用程序
 以下各节介绍了对不同类型的应用程序进行调试的信息。 不同类型的应用程序和编程语言，需要的设置和技术也会不同，需要调试的问题也不同。
 
 ## <a name="debugging-for-different-types-of-applications"></a>对不同类型的应用程序进行调试
 
-|||
+|标题|说明|
 |-|-|
 |[调试 UWP 应用](../debugger/debugging-windows-store-and-windows-universal-apps.md)|介绍如何调试 UWP 应用。|
 |[调试托管代码](../debugger/debugging-managed-code.md)|描述如何调试托管代码（Visual C#、Visual Basic、F# 和 C++/CLI）。|

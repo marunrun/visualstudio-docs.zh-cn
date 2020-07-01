@@ -9,17 +9,17 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 446e47f50c81fa5bad979117936faef53ad3ef63
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 5280226aaba40de42052d72e58928a53af53f631
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74772184"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543632"
 ---
 # <a name="performance-rules-reference"></a>性能规则参考
 分析工具的性能规则提供有关应用程序性能的其他警告和信息。 性能规则分析在分析运行中从源（如 Windows 和处理器性能计数器）收集的数据。 规则消息会出现在 [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] 集成开发环境的“错误输出”窗口中。 这些消息使用以下规则级别之一列出：
 
-|||
+|类别|描述|
 |-|-|
 |**错误**|极少规则会生成“错误”消息，因为很多性能问题不完全是错误。 “错误”消息可能指示收集分析数据失败。|
 |**警告**|“警告”指示可能成为性能问题来源或可能受益于优化的应用程序区域。|
@@ -31,7 +31,7 @@ ms.locfileid: "74772184"
 
 分析工具性能规则按四个类别进行组织：
 
-|||
+|类别|描述|
 |-|-|
 |[.NET Framework 使用性能规则](../profiling/dotnet-framework-usage-performance-rules.md)|可帮助高效使用 .NET Framework 的规则。|
 |[内存和分页性能规则](../profiling/memory-and-paging-performance-rules.md)|分析应用程序的托管内存和分页行为的规则。|

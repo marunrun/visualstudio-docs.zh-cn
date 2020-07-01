@@ -12,15 +12,15 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 51028dce1d60c0d01c83cee509a1ed7321855437
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: ee9eb5353109bcf5df6903e7e607a11b8bfd0536
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74777837"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545608"
 ---
 # <a name="commentmarkatprofile"></a>CommentMarkAtProfile
-`CommentMarkAtProfile` 方法在 .vsp 文件中插入时间戳值、数值标记和注释字符串  。 时间戳值可用于同步外部事件。 为了插入标记和注释，对包含 CommentMarkAtProfile 函数的线程进行的分析必须为 ON（启用状态）。
+`CommentMarkAtProfile` 方法在 .vsp 文件中插入时间戳值、数值标记和注释字符串。 时间戳值可用于同步外部事件。 为了插入标记和注释，对包含 CommentMarkAtProfile 函数的线程进行的分析必须为 ON（启用状态）。
 
 ## <a name="syntax"></a>语法
 
@@ -47,7 +47,7 @@ PROFILE_COMMAND_STATUS PROFILERAPI CommentMarkAtProfile (
 ## <a name="property-valuereturn-value"></a>属性值/返回值
  函数通过使用 **PROFILE_COMMAND_STATUS** 枚举来指示成功或失败。 返回值可以是下列值之一：
 
-|枚举器|说明|
+|枚举器|描述|
 |----------------|-----------------|
 |MARK_ERROR_MARKER_RESERVED|参数小于或等于零。 这些值将保留。 不会记录标记和注释。|
 |MARK_ERROR_MODE_NEVER|调用函数时，分析模式设置为“从不”。 不会记录标记和注释。|
@@ -64,14 +64,14 @@ PROFILE_COMMAND_STATUS PROFILERAPI CommentMarkAtProfile (
 > CommentMarkAtProfile 方法仅能与检测一起使用。
 
 ## <a name="net-framework-equivalent"></a>.NET Framework 等效项
- Microsoft.VisualStudio.Profiler.dll 
+ Microsoft.VisualStudio.Profiler.dll
 
 ## <a name="function-information"></a>函数信息
 
-|||
+|项|“值”|
 |-|-|
-|**Header**|包括 VSPerf.h |
-|**Library**|使用 VSPerf.lib |
+|**Header**|包括 VSPerf.h|
+|**Library**|使用 VSPerf.lib|
 |**Unicode**|作为 CommentMarkAtProfileW (Unicode) 和 CommentMarkAtProfileA (ANSI) 实现。|
 
 ## <a name="example"></a>示例
@@ -115,5 +115,5 @@ void ExerciseCommentMarkAtProfile(void)
 }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [Visual Studio 探查器 API 参考（本机）](../profiling/visual-studio-profiler-api-reference-native.md)

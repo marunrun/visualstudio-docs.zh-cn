@@ -2,19 +2,19 @@
 title: Python/C++ 混合模式调试的符号
 description: Visual Studio 如何为完整的混合模式 C++ 和 Python 调试提供加载符号的功能。
 ms.date: 11/12/2018
-ms.topic: conceptual
+ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 77dc73b0be050e5108f73d38dfbbaa763d236995
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 4a735c374216b1810b3abd99ffab89000cec8b8f
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62957588"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85540915"
 ---
 # <a name="install-debugging-symbols-for-python-interpreters"></a>安装用于 Python 解释器的调试符号
 

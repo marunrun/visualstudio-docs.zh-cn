@@ -2,7 +2,7 @@
 title: 衡量 Python 代码的性能
 description: 在使用基于 CPython 的解释器时，使用 Visual Studio 探查器来检查 Pyhon 代码的性能。
 ms.date: 11/12/2018
-ms.topic: conceptual
+ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
@@ -10,12 +10,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: e31286a9b0ea3852ad1fe788d4ff6c4c66e7e4f0
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 64cd7db0131843ab48410b6676551c8563b8ffbd
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62784258"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85531776"
 ---
 # <a name="profile-python-code"></a>分析 Python 代码
 

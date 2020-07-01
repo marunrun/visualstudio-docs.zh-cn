@@ -12,15 +12,15 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: d45bab6b909fffa107158236d9050632f114c530
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 2972f9d470bebe3a65b7d525aa2b358d68ad5f1c
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74772777"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546583"
 ---
 # <a name="commentmarkprofile"></a>CommentMarkProfile
-`CommentMarkProfile` 函数在 .vsp 文件中插入数值标记和文本字符串  。 为了插入标记和注释，对包含 `CommentMarkProfile` 函数的线程进行的分析必须为 ON。
+`CommentMarkProfile` 函数在 .vsp 文件中插入数值标记和文本字符串。 为了插入标记和注释，对包含 `CommentMarkProfile` 函数的线程进行的分析必须为 ON。
 
 ## <a name="syntax"></a>语法
 
@@ -42,7 +42,7 @@ PROFILE_COMMAND_STATUS PROFILERAPI CommentMarkProfile(
 ## <a name="property-valuereturn-value"></a>属性值/返回值
  函数通过使用 **PROFILE_COMMAND_STATUS** 枚举来指示成功或失败。 返回值可以是下列值之一：
 
-|枚举器|说明|
+|枚举器|描述|
 |----------------|-----------------|
 |MARK_ERROR_MARKER_RESERVED|参数小于或等于零。 这些值将保留。 不会记录标记和注释。|
 |MARK_ERROR_MODE_NEVER|调用函数时，分析模式设置为“从不”。 不会记录标记和注释。|
@@ -55,7 +55,7 @@ PROFILE_COMMAND_STATUS PROFILERAPI CommentMarkProfile(
 ## <a name="remarks"></a>备注
  当使用 VSInstr Mark 命令或函数（CommentMarkAtProfile、CommentMarkProfile 或 MarkProfile）插入标记和注释时，包含标记配置文件函数的线程的分析状态必须为“开”。
 
- 配置文件标记具有全局范围。 例如，在一个线程中插入的配置文件标记可用于标记 .vsp 文件中任何线程的数据段的开头或结尾  。
+ 配置文件标记具有全局范围。 例如，在一个线程中插入的配置文件标记可用于标记 .vsp 文件中任何线程的数据段的开头或结尾。
 
 > [!IMPORTANT]
 > CommentMarkProfile 方法只能用于检测。
@@ -65,7 +65,7 @@ PROFILE_COMMAND_STATUS PROFILERAPI CommentMarkProfile(
 
 ## <a name="function-information"></a>函数信息
 
-|||
+|项|“值”|
 |-|-|
 |**Header**|包括 VSPerf.h|
 |**Library**|使用 VSPerf.lib|
@@ -110,5 +110,5 @@ void ExerciseCommentMarkProfile()
 }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [Visual Studio 探查器 API 参考（本机）](../profiling/visual-studio-profiler-api-reference-native.md)

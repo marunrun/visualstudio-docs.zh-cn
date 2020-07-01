@@ -1,7 +1,7 @@
 ---
 title: 调试 64 位应用程序 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - CSharp
 - VB
@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3a805942e85540b776ceacd972a09a71bb80cbb4
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: ca7feade173db9ccf8c86daaeb1399ef3e10a08b
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72911583"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85350766"
 ---
 # <a name="debug-64-bit-applications"></a>调试 64 位应用程序
 您可以调试运行于本地计算机或远程计算机上的 64 位应用程序。
