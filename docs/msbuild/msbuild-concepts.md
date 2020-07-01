@@ -10,12 +10,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1bf712cf26c7d2dbc5924aa495a7008fb790c33d
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 605b6ff67963c8df3e711c3f0b000c23f82050cd
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77633390"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85289243"
 ---
 # <a name="msbuild-concepts"></a>MSBuild 概念
 
@@ -33,5 +33,6 @@ MSBuild 提供可用于控制生成平台如何生成软件的基本 XML 架构�
 | [MSBuild 特殊字符](../msbuild/msbuild-special-characters.md) | 说明如何转义 MSBuild 为在特定上下文中作特殊用途而保留的某些字符。 |
 | [演练：从头创建 MSBuild 项目文件](../msbuild/walkthrough-creating-an-msbuild-project-file-from-scratch.md) | 演示如何只使用文本编辑器以增量方式创建基本项目文件。 |
 | [演练：使用 MSBuild](../msbuild/walkthrough-using-msbuild.md) | 介绍 MSBuild 的构建基块，并演示如何在不关闭 Visual Studio 集成开发环境 (IDE) 的情况下编写、操作和调试 MSBuild 项目。 |
+| [MSBuild 如何生成项目](build-process-overview.md) | 介绍了 MSBuild 中使用的内部生成过程 |
 | [MSBuild 参考](../msbuild/msbuild-reference.md) | 链接到包含参考信息的文档。 |
 | [MSBuild](../msbuild/msbuild.md) | 概述了项目文件的 XML 架构，并演示其如何控制生成软件的过程。 |

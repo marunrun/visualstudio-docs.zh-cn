@@ -9,12 +9,12 @@ caps.latest.revision: 13
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 3b2e1fd025d559889f0ea41d39879e251e80fa64
-ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
+ms.openlocfilehash: f837822e47c911e3c27d9d41e31ae9cd448d4fc5
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82586703"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85520492"
 ---
 # <a name="analyze-the-code-quality-of-store-apps-using-visual-studio-static-code-analysis"></a>使用 Visual Studio 静态代码分析来分析应用商店应用的代码质量
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -24,16 +24,16 @@ Visual Studio 中的代码分析工具可检查代码中是否存在一组常见
 > [!NOTE]
 > 代码分析不适用于 JavaScript 代码。
 
-## <a name="in-this-section"></a>在本节中
+## <a name="in-this-section"></a>本节内容
 
-|||
+|Title|说明|
 |-|-|
 |[分析 Visual Basic 和 C# 代码质量](../test/analyze-visual-basic-and-csharp-code-quality-in-store-apps-using-visual-studio-static-code-analysis.md)|在 Visual Basic 和 C# 项目中使用代码分析。|
 |[Analyze C++ 代码质量](../test/analyze-cpp-code-quality-of-store-apps-using-visual-studio-static-code-analysis.md)|在 C++ 项目中使用代码分析。|
 
 ## <a name="more-code-analysis-info"></a>更多代码分析信息
 
-|||
+|标题|说明|
 |-|-|
 |[MSDN 库中的代码分析](https://msdn.microsoft.com/library/dd264897.aspx)|查找有关在 Visual Studio 旗舰版、Visual Studio 高级专业版和 Visual Studio 专业版中使用代码分析的详细信息。|
 |[MSDN 代码分析团队博客](https://blogs.msdn.com/b/codeanalysis/)|查找详细信息，其中包括代码分析团队博客上的技术论文和示例。|

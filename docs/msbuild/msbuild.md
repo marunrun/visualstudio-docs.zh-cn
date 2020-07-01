@@ -11,18 +11,18 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c2387526860b7d6da136a72cf83727f6714e2e52
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: c1bd4c4ab15364e9e2ac8e189fcde01f65244b7a
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77633065"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85289191"
 ---
 # <a name="msbuild"></a>MSBuild
 
-Microsoft 生成引擎是一个用于生成应用程序的平台。 此引擎（也称为 MSBuild）为项目文件提供了一个 XML 架构，用于控制生成平台处理和生成软件的方式。 Visual Studio 会使用 MSBuild，但 MSBuild 不依赖于 Visual Studio。 通过在项目或解决方案文件中调用 msbuild.exe  ，可以在未安装 Visual Studio 的环境中安排和生成产品。
+Microsoft 生成引擎是一个用于生成应用程序的平台。 此引擎（也称为 MSBuild）为项目文件提供了一个 XML 架构，用于控制生成平台处理和生成软件的方式。 Visual Studio 会使用 MSBuild，但 MSBuild 不依赖于 Visual Studio。 通过在项目或解决方案文件中调用 msbuild.exe，可以在未安装 Visual Studio 的环境中安排和生成产品。
 
- Visual Studio 使用 MSBuild 来加载和生成托管项目。 Visual Studio 中的项目文件（.csproj  、.vbproj  、vcxproj  等）包含 MSBuild XML 代码，当你使用 IDE 来生成项目时，此代码就会运行。 Visual Studio 项目会导入所有必要的设置和生成过程来执行典型的开发工作，但你可以从 Visual Studio 内或通过使用 XML 编辑器对其进行扩展或修改。
+ Visual Studio 使用 MSBuild 来加载和生成托管项目。 Visual Studio 中的项目文件（.csproj、.vbproj、vcxproj 等）包含 MSBuild XML 代码，当你使用 IDE 来生成项目时，此代码就会运行。 Visual Studio 项目会导入所有必要的设置和生成过程来执行典型的开发工作，但你可以从 Visual Studio 内或通过使用 XML 编辑器对其进行扩展或修改。
 
  有关适用于 C++ 的 MSBuild 的信息，请参阅 [MSBuild (C++)](/cpp/build/msbuild-visual-cpp)。
 
@@ -53,7 +53,7 @@ Microsoft 生成引擎是一个用于生成应用程序的平台。 此引擎（
 
 ## <a name="use-msbuild-at-a-command-prompt"></a>在命令提示符处使用 MSBuild
 
- 若要在命令提示符处运行 MSBuild，请将项目文件随相应的命令行选项一起传递到 MSBuild.exe  。 命令行选项允许你设置属性、执行特定的目标，以及设置可控制生成过程的其他选项。 例如，使用以下命令行语法生成文件 MyProj.proj  ，并将 `Configuration` 属性设置为 `Debug`。
+ 若要在命令提示符处运行 MSBuild，请将项目文件随相应的命令行选项一起传递到 MSBuild.exe。 命令行选项允许你设置属性、执行特定的目标，以及设置可控制生成过程的其他选项。 例如，使用以下命令行语法生成文件 MyProj.proj，并将 `Configuration` 属性设置为 `Debug`。
 
 ```cmd
 MSBuild.exe MyProj.proj -property:Configuration=Debug
@@ -70,7 +70,7 @@ MSBuild.exe MyProj.proj -property:Configuration=Debug
 
  以下各节介绍了 MSBuild 项目文件格式的一些基本元素。 有关如何创建基本项目文件的教程，请参见[演练：从头开始创建 MSBuild 项目文件](../msbuild/walkthrough-creating-an-msbuild-project-file-from-scratch.md)。
 
-### <a name="BKMK_Properties"></a>属性
+### <a name="properties"></a><a name="BKMK_Properties"></a>属性
 
  属性表示可用于配置生成的键/值对。 属性的声明方式是：创建一个与属性同名的元素，将其指定为 [PropertyGroup](../msbuild/propertygroup-element-msbuild.md) 元素的子元素。 例如，下面的代码将创建一个名为 `BuildDir` 的属性，其值为 `Build`。
 
@@ -86,11 +86,11 @@ MSBuild.exe MyProj.proj -property:Configuration=Debug
 <Configuration  Condition=" '$(Configuration)' == '' ">Debug</Configuration>
 ```
 
- 在整个项目文件中，可以使用语法 $ (\<PropertyName>) 来引用各个属性。 例如，可以使用 `$(BuildDir)` 和 `$(Configuration)` 来引用前面示例中的属性。
+ 在整个项目文件中，可以使用语法 $(\<PropertyName>) 来引用各个属性。 例如，可以使用 `$(BuildDir)` 和 `$(Configuration)` 来引用前面示例中的属性。
 
  有关属性的详细信息，请参阅 [MSBuild 属性](../msbuild/msbuild-properties.md)。
 
-### <a name="BKMK_Items"></a>项
+### <a name="items"></a><a name="BKMK_Items"></a>项
 
  项是生成系统的输入，通常表示文件。 将根据用户定义的项名称，将项编组到各种项类型中。 这些项类型可以用作任务的参数，任务使用各个项来执行生成过程的步骤。
 
@@ -103,7 +103,7 @@ MSBuild.exe MyProj.proj -property:Configuration=Debug
 </ItemGroup>
 ```
 
- 在整个项目文件中，可以使用语法 @(\<ItemType>) 来引用项类型。 例如，可以使用 `@(Compile)` 引用示例中的项类型。
+ 在整个项目文件中，可以使用语法 @(\<ItemType>) 来引用项目类型。 例如，可以使用 `@(Compile)` 引用示例中的项类型。
 
  在 MSBuild 中，元素和特性名称区分大小写。 但是，属性、项和元数据名称不区分大小写。 下面的示例创建了项类型 `Compile`、`comPile` 或任何其他大小写变体，并为其指定了值“one.cs;two.cs”。
 
@@ -116,7 +116,7 @@ MSBuild.exe MyProj.proj -property:Configuration=Debug
 
  可以使用通配符声明项，并且对于更高级的生成方案，项可以包含其他元数据。 有关项的详细信息，请参阅[项](../msbuild/msbuild-items.md)。
 
-### <a name="BKMK_Tasks"></a>任务
+### <a name="tasks"></a><a name="BKMK_Tasks"></a>任务
 
  任务是 MSBuild 项目用于执行生成操作的可执行代码单元。 例如，任务可能编译输入文件或运行外部工具。 任务可以重用，并且可由不同项目中的不同开发人员共享。
 
@@ -134,7 +134,7 @@ MSBuild.exe MyProj.proj -property:Configuration=Debug
 
  有关任务的详细信息，请参阅[任务](../msbuild/msbuild-tasks.md)。
 
-### <a name="BKMK_Targets"></a>目标
+### <a name="targets"></a><a name="BKMK_Targets"></a>目标
 
  目标按特定的顺序将任务组合到一起，并将项目文件的各个部分公开为生成过程的入口点。 目标通常分组到各个逻辑部分中，以便提高可读性并实现扩展。 通过将生成步骤拆分为目标，你可以从其他目标中调用生成过程的一个部分，而不必将那部分代码复制到每个目标中。 例如，如果生成过程的多个入口点需要生成引用，你可以创建一个生成引用的目标，然后从所要求的每个入口点运行此目标。
 
@@ -154,11 +154,11 @@ MSBuild.exe MyProj.proj -property:Configuration=Debug
 
 ## <a name="use-msbuild-in-visual-studio"></a>在 Visual Studio 中使用 MSBuild
 
- Visual Studio 使用 MSBuild 项目文件格式存储有关托管项目的生成信息。 通过使用 Visual Studio 接口添加或更改的项目设置将反映在为每个项目生成的 .\*proj 文件中  。 Visual Studio 使用 MSBuild 的一个托管实例来生成托管项目。 这意味着可以在 Visual Studio 中或在命令提示符处生成托管项目（即使未安装 Visual Studio），并且结果将完全相同。
+ Visual Studio 使用 MSBuild 项目文件格式存储有关托管项目的生成信息。 通过使用 Visual Studio 接口添加或更改的项目设置将反映在为每个项目生成的 .\*proj 文件中。 Visual Studio 使用 MSBuild 的一个托管实例来生成托管项目。 这意味着可以在 Visual Studio 中或在命令提示符处生成托管项目（即使未安装 Visual Studio），并且结果将完全相同。
 
  有关如何在 Visual Studio 中使用 MSBuild 的教程，请参阅[演练：使用 MSBuild](../msbuild/walkthrough-using-msbuild.md)。
 
-## <a name="BKMK_Multitargeting"></a>多定向
+## <a name="multitargeting"></a><a name="BKMK_Multitargeting"></a>多定向
 
  通过 Visual Studio，你可以将应用程序编译为在若干 .NET Framework 版本的任意一个上运行。 例如，可以将同一个应用程序编译为既能在 32 位平台的 .NET Framework 2.0 上运行，也能在 64 位平台的 .NET Framework 4.5 上运行。 这种使用多个框架作为编译目标的能力称为“多目标功能”。
 
@@ -190,6 +190,7 @@ MSBuild.exe MyProj.proj -property:Configuration=Debug
 | [条件](../msbuild/msbuild-conditions.md) | 论述如何在 MSBuild 元素中使用 `Condition` 特性。 |
 | [高级概念](../msbuild/msbuild-advanced-concepts.md) | 演示批处理、执行转换、多目标和其他高级技术。 |
 | [MSBuild 中的日志记录](../msbuild/logging-in-msbuild.md) | 介绍如何记录生成事件、消息和错误。 |
+| [MSBuild 如何生成项目](build-process-overview.md) | 描述 MSBuild 中使用的内部生成过程 |
 | [其他资源](https://social.msdn.microsoft.com/forums/vstudio/home?forum=msbuild) | 列出社区和支持资源，用于了解有关 MSBuild 的更多信息。 |
 
 ## <a name="reference"></a>参考

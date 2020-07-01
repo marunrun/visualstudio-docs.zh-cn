@@ -18,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b78ac2347a5143aeb532a4bcc294551430584b4a
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 27673ba3691e53540bce2249700c4453cb56c166
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77630660"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85286097"
 ---
 # <a name="writelinestofile-task"></a>WriteLinesToFile 任务
 
@@ -33,13 +33,13 @@ ms.locfileid: "77630660"
 
  下表描述了 `WriteLinestoFile` 任务的参数。
 
-|参数|说明|
+|参数|描述|
 |---------------|-----------------|
 |`File`|必选 <xref:Microsoft.Build.Framework.ITaskItem> 参数。<br /><br /> 指定要将项写入到的文件。|
-|`Lines`|可选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 指定要写入到文件的项。|
-|`Overwrite`|可选 `Boolean` 参数。<br /><br /> 如果为 `true`，该任务覆盖文件中的任何现有内容。|
-|`Encoding`|可选 `String` 参数。<br /><br /> 选择字符编码，例如“Unicode”。  另请参阅 <xref:System.Text.Encoding>。|
-|`WriteOnlyWhenDifferent`|可选 `Boolean` 参数。<br /><br /> 如果为 `true`，便会指定目标文件（若有），并先读取它来与写入的任务进行比较。 如果完全相同，此文件就不会写入到磁盘中，并且会保留时间戳。|
+|`Lines`|可选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 指定要写入到文件的项。 默认为空列表。|
+|`Overwrite`|可选 `Boolean` 参数。<br /><br /> 如果为 `true`，该任务覆盖文件中的任何现有内容。 默认值为 `false`。|
+|`Encoding`|可选 `String` 参数。<br /><br /> 选择字符编码，例如“Unicode”。 默认值为 UTF-8。  另请参阅 <xref:System.Text.Encoding>。|
+|`WriteOnlyWhenDifferent`|可选 `Boolean` 参数。<br /><br /> 如果为 `true`，便会指定目标文件（若有），并先读取它来与写入的任务进行比较。 如果完全相同，此文件就不会写入到磁盘中，并且会保留时间戳。 默认值为 `false`。|
 
 ## <a name="remarks"></a>备注
 
@@ -95,7 +95,7 @@ dotnet %~dp0$(AssemblyName).dll %*
 </Project>
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [任务](../msbuild/msbuild-tasks.md)
 - [任务参考](../msbuild/msbuild-task-reference.md)

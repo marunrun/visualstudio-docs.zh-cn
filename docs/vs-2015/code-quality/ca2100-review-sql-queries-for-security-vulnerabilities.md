@@ -16,17 +16,17 @@ caps.latest.revision: 26
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: e7258ec98937e7ea84773e788234e5a34772e9d4
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 797c071cdc74c36afeece304bfa4c708d7bf7147
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72652199"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85521207"
 ---
-# <a name="ca2100-review-sql-queries-for-security-vulnerabilities"></a>CA2100：检查 SQL 查询中是否有安全漏洞
+# <a name="ca2100-review-sql-queries-for-security-vulnerabilities"></a>CA2100:检查 SQL 查询是否存在安全漏洞
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|项|值|
 |-|-|
 |TypeName|ReviewSqlQueriesForSecurityVulnerabilities|
 |CheckId|CA2100|
@@ -34,9 +34,9 @@ ms.locfileid: "72652199"
 |是否重大更改|不间断|
 
 ## <a name="cause"></a>原因
- 方法通过使用从字符串参数生成的字符串为方法设置 <xref:System.Data.IDbCommand.CommandText%2A?displayProperty=fullName> 属性。
+ 方法 <xref:System.Data.IDbCommand.CommandText%2A?displayProperty=fullName> 通过使用从字符串参数生成的字符串为方法设置属性。
 
-## <a name="rule-description"></a>规则说明
+## <a name="rule-description"></a>规则描述
  此规则假定字符串参数中包含用户输入。 基于用户输入生成的 SQL 命令字符串易于受到 SQL 注入式攻击。 在 SQL 注入式攻击中，恶意用户提供的输入会改变查询的设计，试图破坏或获取对基础数据库的未经授权的访问。 典型方法包括单引号或撇号的注入，这是 SQL 文本字符串分隔符;双短划线，表示 SQL 注释;和一个分号，指示下面的新命令。 如果 "用户输入" 必须是查询的一部分，请使用下列项之一（按有效性顺序列出）来降低遭受攻击的风险。
 
 - 使用存储过程。
@@ -45,7 +45,7 @@ ms.locfileid: "72652199"
 
 - 在生成命令字符串之前，验证类型和内容的用户输入。
 
-  以下 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 类型实现 <xref:System.Data.IDbCommand.CommandText%2A> 属性或提供使用字符串参数设置属性的构造函数。
+  以下 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 类型实现属性， <xref:System.Data.IDbCommand.CommandText%2A> 或提供使用字符串参数设置属性的构造函数。
 
 - <xref:System.Data.Odbc.OdbcCommand?displayProperty=fullName> 和 <xref:System.Data.Odbc.OdbcDataAdapter?displayProperty=fullName>
 
@@ -80,11 +80,11 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
  如果命令文本不包含任何用户输入，则可以安全地禁止显示此规则发出的警告。
 
 ## <a name="example"></a>示例
- 下面的示例演示了一个方法（`UnsafeQuery`），该方法违反了规则，以及一个方法（`SaferQuery`），该方法通过使用参数化命令字符串满足规则。
+ 下面的示例演示了一个方法， `UnsafeQuery` 该方法违反了规则和一个方法， `SaferQuery` 该方法通过使用参数化命令字符串满足规则。
 
  [!code-cpp[FxCop.Security.ReviewSqlQueries#1](../snippets/cpp/VS_Snippets_CodeAnalysis/FxCop.Security.ReviewSqlQueries/cpp/FxCop.Security.ReviewSqlQueries.cpp#1)]
  [!code-csharp[FxCop.Security.ReviewSqlQueries#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Security.ReviewSqlQueries/cs/FxCop.Security.ReviewSqlQueries.cs#1)]
  [!code-vb[FxCop.Security.ReviewSqlQueries#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Security.ReviewSqlQueries/vb/FxCop.Security.ReviewSqlQueries.vb#1)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [安全性概述](https://msdn.microsoft.com/library/33e09965-61d5-48cc-9e8c-3b047cc4f194)

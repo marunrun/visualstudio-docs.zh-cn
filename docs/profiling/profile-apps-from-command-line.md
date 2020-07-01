@@ -14,12 +14,12 @@ manager: jillfra
 monikerRange: '>= vs-2019'
 ms.workload:
 - multiple
-ms.openlocfilehash: 18850a6e365988abd33b7e2e2a3972ba5cb0a91a
-ms.sourcegitcommit: 9c1cecaff4d9955276eee7865b78d47679dd1e2a
+ms.openlocfilehash: ba5915e687bd4e1f6afb200f4ca3e7a866c6151c
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80638694"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85285839"
 ---
 # <a name="measure-application-performance-from-the-command-line"></a>从命令行测量应用程序性能
 
@@ -33,19 +33,19 @@ ms.locfileid: "80638694"
 
 * 熟悉命令行工具
 
-* 若要在未安装 Visual Studio 的远程计算机上收集性能信息，请在此远程计算机上安装[用于 Visual Studio 的性能工具](https://visualstudio.microsoft.com/downloads#performance-tools-for-visual-studio-2019)。 工具版本必须与 Visual Studio 版本匹配。
+* 若要在未安装 Visual Studio 的远程计算机上收集性能信息，请在此远程计算机上安装[用于 Visual Studio 的性能工具](https://visualstudio.microsoft.com/downloads#remote-tools-for-visual-studio-2019)。 工具版本必须与 Visual Studio 版本匹配。
 
 ## <a name="collect-performance-data"></a>收集性能数据
 
-使用 Visual Studio 诊断 CLI 工具进行性能分析的工作原理是将性能分析工具与其中某个收集器代理一起附加到进程。 附加性能分析工具时，将开始诊断捕获并存储分析数据的会话，直到该工具停止，此时数据将导出到 .diagsession 文件中  。 然后，可以在 Visual Studio 中打开此文件以分析结果。
+使用 Visual Studio 诊断 CLI 工具进行性能分析的工作原理是将性能分析工具与其中某个收集器代理一起附加到进程。 附加性能分析工具时，将开始诊断捕获并存储分析数据的会话，直到该工具停止，此时数据将导出到 .diagsession 文件中。 然后，可以在 Visual Studio 中打开此文件以分析结果。
 
-1. 启动 Notepad，并打开任务管理器来获取其进程 ID (PID)。 在任务管理器中，找到“详细信息”选项卡中的 PID  。
+1. 启动 Notepad，并打开任务管理器来获取其进程 ID (PID)。 在任务管理器中，找到“详细信息”选项卡中的 PID。
 
 1. 打开命令提示符，切换到包含集合代理可执行文件的目录（通常在此处）。
 
    ```<Visual Studio installation folder>\2019\Preview\Team Tools\DiagnosticsHub\Collector\```
 
-1. 通过键入以下命令，启动 VSDiagnostics.exe  。
+1. 通过键入以下命令，启动 VSDiagnostics.exe。
 
    ```cmd
    VSDiagnostics.exe start <id> /attach:<pid> /loadConfig:<configFile>
@@ -53,9 +53,9 @@ ms.locfileid: "80638694"
 
    必须包含的参数是：
 
-   * \<id> 标识集合会话  。 ID 必须为介于 1 - 255 之间的数字。
-   * \<  pid>，要分析的进程的 PID 在本例中是在步骤 1 中找到的 PID
-   * \<  configFile>，要启动的集合代理的配置文件。 有关详细信息，请参阅[代理的配置文件](#config_file)。
+   * \<*id*> 标识收集会话。 ID 必须为介于 1 - 255 之间的数字。
+   * \<*pid*>，要分析的进程的 PID 在本例中是在步骤 1 中找到的 PID
+   * \<*configFile*>，要启动的集合代理的配置文件。 有关详细信息，请参阅[代理的配置文件](#config_file)。
 
 1. 重设 Notepad 大小，或在其中键入内容，以确保收集一些有趣的分析信息。
 
@@ -71,16 +71,26 @@ ms.locfileid: "80638694"
 
 集合代理是可互换的组件，可根据要测量的内容收集不同类型的数据。
 
-为方便起见，可以将该信息存储在代理配置文件中。 配置文件是至少包含 .dll 的名称及其 COM CLSID 的 .json 文件   。 以下是可以在以下文件夹中找到的示例配置文件：
+为方便起见，可以将该信息存储在代理配置文件中。 配置文件是至少包含 .dll 的名称及其 COM CLSID 的 .json 文件 。 以下是可以在以下文件夹中找到的示例配置文件：
 
-```<Visual Studio installation folder>\2019\Preview\Team Tools\DiagnosticsHub\Collector\AgentConfigs\```
+```<Visual Studio installation folder>Team Tools\DiagnosticsHub\Collector\AgentConfigs\```
 
-* CpuUsage 配置（基本/高/低），对应于为 [CPU 使用率](../profiling/cpu-usage.md)分析工具收集的数据。
-* DotNetObjectAlloc 配置（基本/低），对应于为 [.NET 对象分配工具](../profiling/dotnet-alloc-tool.md)收集的数据。
+请参阅以下链接以下载和查看代理配置文件：
+
+- https://aka.ms/vs/diaghub/agentconfig/cpubase
+- https://aka.ms/vs/diaghub/agentconfig/cpuhigh
+- https://aka.ms/vs/diaghub/agentconfig/cpulow
+- https://aka.ms/vs/diaghub/agentconfig/database
+- https://aka.ms/vs/diaghub/agentconfig/dotnetasyncbase
+- https://aka.ms/vs/diaghub/agentconfig/dotnetallocbase
+- https://aka.ms/vs/diaghub/agentconfig/dotnetalloclow
+
+CpuUsage 配置（基本/高/低），对应于为 [CPU 使用情况](../profiling/cpu-usage.md)分析工具收集的数据。
+DotNetObjectAlloc 配置（基本/低），对应于为 [.NET 对象分配工具](../profiling/dotnet-alloc-tool.md)收集的数据。
 
 基本/低/高配置是指采样率。 例如，低为 100 样本/秒，高为 4000 样本/秒。
 
-为了 VSDiagnostics.exe 工具用于集合代理，它需要用于适当代理的 DLL 和 COM CLSID，并且代理也可能具有其他配置选项  。 如果使用不带配置文件的代理，请使用以下命令中的格式。
+为了 VSDiagnostics.exe 工具用于集合代理，它需要用于适当代理的 DLL 和 COM CLSID，并且代理也可能具有其他配置选项。 如果使用不带配置文件的代理，请使用以下命令中的格式。
 
 ```cmd
 VSDiagnostics.exe start <id> /attach:<pid> /loadAgent:<agentCLSID>;<agentName>[;<config>]

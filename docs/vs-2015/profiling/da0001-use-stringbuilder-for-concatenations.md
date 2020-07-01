@@ -1,5 +1,5 @@
 ---
-title: DA0001：使用 StringBuilder 进行串联 | Microsoft Docs
+title: DA0001：将 StringBuilder 用于串联 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,24 +14,24 @@ caps.latest.revision: 19
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 6a871f726dc13f91c1dfd57471c12ee5cbfeb245
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: 5e2e52b0688f69fd154425887077c40fc3e6c265
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75918867"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85531399"
 ---
-# <a name="da0001-use-stringbuilder-for-concatenations"></a>DA0001：使用 StringBuilder 进行串联
+# <a name="da0001-use-stringbuilder-for-concatenations"></a>DA0001：将 StringBuilder 用于串联
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 有关 Visual Studio 的最新文档，请参阅[DA0001：使用 StringBuilder 进行串联](/visualstudio/profiling/da0001-use-stringbuilder-for-concatenations)。  
   
-|||  
+|项|值|  
 |-|-|  
 |规则 ID|DA0001|  
 |类别|.NET Framework 使用情况|  
-|分析方法|采样<br /><br /> 检测信息|  
-|Message|请考虑使用 StringBuilder 进行字符串串联|  
+|分析方法|采样<br /><br /> 检测|  
+|消息|请考虑使用 StringBuilder 进行字符串串联|  
 |消息类型|警告|  
   
 ## <a name="cause"></a>原因  

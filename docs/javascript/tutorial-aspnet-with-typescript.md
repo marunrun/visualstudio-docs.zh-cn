@@ -11,12 +11,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 91c712ce396000ff9babaf70335edfd5709a3000
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: cb1d5196874956d54c01504288a4d948b12abea8
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84183088"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85283562"
 ---
 # <a name="tutorial-create-an-aspnet-core-app-with-typescript-in-visual-studio"></a>教程：在 Visual Studio 中使用 TypeScript 创建 ASP.NET Core 应用
 
@@ -162,7 +162,7 @@ Visual Studio 管理项目中的单个应用程序的文件。 该项目包括�
 
     选择 `lastName`，将最后一个名称添加回代码。
 
-1. 打开 Views/Home 文件夹，然后打开 index.html 。
+1. 打开 Views/Home 文件夹，然后打开 Index.cshtml。
 
 1. 在文件末尾添加以下 HTML 代码。
 

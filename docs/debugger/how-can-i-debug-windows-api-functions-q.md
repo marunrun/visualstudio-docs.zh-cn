@@ -1,8 +1,8 @@
 ---
 title: 调试 Windows API 函数 | Microsoft Docs
 ms.custom: seodec18
-ms.date: 11/04/2016
-ms.topic: conceptual
+ms.date: 06/03/2020
+ms.topic: how-to
 f1_keywords:
 - vs.debug.api
 dev_langs:
@@ -22,25 +22,33 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e7b5f3842160f4ffc6cecd41e65dd05ab7566dd0
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 6fab5627f3d467c0df289969e4fee010dd3ea78b
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72734353"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85350389"
 ---
 # <a name="how-can-i-debug-windows-api-functions"></a>如何调试 Windows API 函数？
 如果要调试加载了 NT 符号的 Windows API 函数，必须执行以下步骤。
 
 ### <a name="to-set-a-breakpoint-on-a-windows-api-function-with-nt-symbols-loaded"></a>若要在加载了 NT 符号的 Windows API 函数中设置断点
 
-- 输入函数名以及函数所在 DLL 的名称。 在 32 位代码中，使用函数名的修饰形式。 例如，若要给”MessageBeep” 设置断点，你必须输入如下内容。
+- 在[函数断点](../debugger/using-breakpoints.md#BKMK_Set_a_breakpoint_in_a_source_file)中，输入函数名以及函数所在 DLL 的名称（请参阅[上下文运算符](../debugger/context-operator-cpp.md)）。 在 32 位代码中，使用函数名的修饰形式。 例如，若要给”MessageBeep” 设置断点，你必须输入如下内容。
 
     ```cpp
     {,,USER32.DLL}_MessageBeep@4
     ```
 
      若要获取修饰名，请参阅[查看修饰名](https://msdn.microsoft.com/library/f79e2717-a4db-4d12-a689-69830cce2be0)。
+
+     可以测试修饰名称并在反汇编代码中查看它。 在 Visual Studio 调试器的函数中暂停时，在“代码编辑器”或“调用堆栈”窗口中右键单击该函数，然后选择“转到反汇编”。
+
+- 在 64 位代码中，可以使用未修饰名。
+
+    ```cpp
+    {,,USER32.DLL}MessageBeep
+    ```
 
 ## <a name="see-also"></a>请参阅
 - [调试本机代码常见问题解答](../debugger/debugging-native-code-faqs.md)

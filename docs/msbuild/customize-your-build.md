@@ -11,12 +11,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6b0cb05948f8010964eefe101cbc77d48a149566
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 6c52c6b584db94ff3cbe8dc041c00ebe969c9faf
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84180397"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85288931"
 ---
 # <a name="customize-your-build"></a>自定义生成
 
@@ -182,7 +182,7 @@ $(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\{TargetFileName}\ImportAfter\*.t
 ## <a name="customize-the-solution-build"></a>自定义解决方案生成
 
 > [!IMPORTANT]
-> 以这种方式自定义解决方案生成将仅适用于带有 MSBuild.exe 的命令行生成。 它不适用于 Visual Studio 中的生成。
+> 以这种方式自定义解决方案生成将仅适用于带有 MSBuild.exe 的命令行生成。 它不适用于 Visual Studio 中的生成。 出于此原因，不建议将自定义项置于解决方案级别。 自定义一个解决方案中所有项目的更好方法是在解决方案文件夹中使用 Directory.Build.props 和 Directory.build.targets 文件，如本文其他部分所述。
 
 当 MSBuild 生成解决方案文件时，它首先在内部转换为项目文件，然后再生成它。 已生成的项目文件在定义任何目标前导入 `before.{solutionname}.sln.targets`，在导入目标后导入 `after.{solutionname}.sln.targets` ，其中包括安装到 `$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\SolutionFile\ImportBefore` 和 `$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\SolutionFile\ImportAfter` 目录的目标。
 

@@ -12,12 +12,12 @@ caps.latest.revision: 16
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 35ef5e1033224969f4dae1e42036b860f89bbd8f
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: MTE95
+ms.openlocfilehash: 36ebd4a2cd130d63b030e80696dbdde7ff179706
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63416666"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85531516"
 ---
 # <a name="commentmarkatprofile"></a>CommentMarkAtProfile
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -49,7 +49,7 @@ PROFILE_COMMAND_STATUS PROFILERAPI CommentMarkAtProfile (
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  函数通过使用 **PROFILE_COMMAND_STATUS** 枚举来指示成功或失败。 返回值可以是下列值之一：  
   
-|枚举器|说明|  
+|枚举器|描述|  
 |----------------|-----------------|  
 |MARK_ERROR_MARKER_RESERVED|参数小于或等于零。 这些值将保留。 不会记录标记和注释。|  
 |MARK_ERROR_MODE_NEVER|调用函数时，分析模式设置为“从不”。 不会记录标记和注释。|  
@@ -70,7 +70,7 @@ PROFILE_COMMAND_STATUS PROFILERAPI CommentMarkAtProfile (
   
 ## <a name="function-information"></a>函数信息  
   
-|||  
+|项|“值”|  
 |-|-|  
 |**Header**|包括 VSPerf.h|  
 |**Library**|使用 VSPerf.lib|  
@@ -117,5 +117,5 @@ void ExerciseCommentMarkAtProfile(void)
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Visual Studio 探查器 API 参考（本机）](../profiling/visual-studio-profiler-api-reference-native.md)

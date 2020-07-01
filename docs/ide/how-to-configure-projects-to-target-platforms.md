@@ -2,7 +2,7 @@
 title: 如何：将项目配置为面向平台
 ms.date: 08/16/2019
 ms.technology: vs-ide-compile
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - project settings [Visual Studio], targeting platforms
 - platforms, targeting specific CPUs
@@ -18,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9cbe4bc3f982ae18b9f85fe8bf5c21495c98beee
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: a58b60e23bf08fb86a8dd7bc09d760085b6ea25f
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "76112537"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85284591"
 ---
 # <a name="how-to-configure-projects-to-target-platforms"></a>如何：将项目配置为面向平台
 
@@ -31,30 +31,34 @@ ms.locfileid: "76112537"
 
 ## <a name="target-platforms-with-the-configuration-manager"></a>使用 Configuration Manager 设定目标平台
 
-“配置管理器”  提供了一种快速添加面向项目的新平台的方法。 如果选择 Visual Studio 附带的平台之一，则将修改项目属性，以便生成适用于所选平台的项目。
+“配置管理器”提供了一种快速添加面向项目的新平台的方法。 如果选择 Visual Studio 附带的平台之一，则将修改项目属性，以便生成适用于所选平台的项目。
 
 ### <a name="to-configure-a-project-to-target-a-64-bit-platform"></a>将项目配置为面向 64 位平台
 
-1. 在菜单栏上，依次选择“生成” > “Configuration Manager”   。
+1. 在菜单栏上，依次选择“生成” > “Configuration Manager” 。
 
-2. 在“活动解决方案平台”  列表中，选择一个 64 位平台作为解决方案目标，然后选择“关闭”  按钮。
+2. 在“活动解决方案平台”列表中，选择一个 64 位平台作为解决方案目标，然后选择“关闭”按钮。
 
-    1. 如果所需平台未出现在“活动解决方案平台”列表中，请选择“新建”   。
+    1. 如果所需平台未出现在“活动解决方案平台”列表中，请选择“新建” 。
 
-         将显示“新建解决方案平台”  对话框。
+         将显示“新建解决方案平台”对话框。
 
-    2. 在“键入或选择新平台”  列表中，选择“x64”  。
+    2. 在“键入或选择新平台”列表中，选择“x64”。
 
         > [!NOTE]
-        > 如果对配置进行了重命名，则可能需要修改“项目设计器”  中的设置，以面向正确的平台。
+        > 如果对配置进行了重命名，则可能需要修改“项目设计器”中的设置，以面向正确的平台。
 
-    3. 如果要复制当前平台配置的设置，请选择它，然后选择“确定”  按钮。
+    3. 如果要复制当前平台配置的设置，请选择它，然后选择“确定”按钮。
 
 面向 64 位平台的所有项目的属性均已更新，并将为 64 位平台优化项目的下一个生成。
 
+> [!NOTE]
+> Win32 平台名称用于 C++ 项目，这意味着 x86。 Visual Studio 同时考虑项目级平台和解决方案级平台，并且项目平台来自特定于语言的项目系统。 C++ 项目使用 Win32 和 x64，但解决方案平台使用 x86 和 x64。 选择 x86 作为解决方案配置时，Visual Studio 将为 C++ 项目选择 Win32 平台。 若要查看项目级平台和解决方案级平台设置，请打开“Configuration Manager”并记下这两个平台设置。 解决方案级平台显示在“活动解决方案平台”下拉列表中，表显示每个项目的项目级平台。
+> ![显示解决方案平台和项目平台的屏幕截图](media/project-platform-win32.png)
+
 ## <a name="target-platforms-in-the-project-designer"></a>在项目设计器中设定平台目标
 
-项目设计器还提供使项目面向不同平台的方法  。 如果在“新建解决方案平台”  对话框的列表中选择的平台之一不适合自己的解决方案，则可以创建自定义配置名称并修改“项目设计器”  中的配置以面向正确的平台。
+项目设计器还提供使项目面向不同平台的方法。 如果在“新建解决方案平台”对话框的列表中选择的平台之一不适合自己的解决方案，则可以创建自定义配置名称并修改“项目设计器”中的配置以面向正确的平台。
 
 此任务的执行根据所用编程语言而有所不同。 有关详细信息，请参阅以下链接：
 
@@ -109,7 +113,7 @@ ms.locfileid: "76112537"
 
 ::: moniker range="vs-2017"
 > [!NOTE]
-> 在 Visual Studio 2017 中，需要先卸载项目，然后才能编辑项目文件。 若要卸载项目，请右键单击项目节点，然后选择“卸载项目”  。 完成编辑后，请右键单击项目节点并选择“重新加载项目”，以保存所做的更改并重新加载项目  。
+> 在 Visual Studio 2017 中，需要先卸载项目，然后才能编辑项目文件。 若要卸载项目，请右键单击项目节点，然后选择“卸载项目”。 完成编辑后，请右键单击项目节点并选择“重新加载项目”，以保存所做的更改并重新加载项目。
 ::: moniker-end
 
 有关项目文件的详细信息，请参阅 [MSBuild 项目文件架构引用](../msbuild/msbuild-project-file-schema-reference.md)。

@@ -1,7 +1,7 @@
 ---
 title: 如何：以编程方式从文档中删除所有注释
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,12 +13,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 78b73cfe13d2374afad22dd322a80fe69acfb838
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 4b2b0e2be92ca5d4b548b297d01f8ec31b779510
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955827"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85519881"
 ---
 # <a name="how-to-programmatically-remove-all-comments-from-documents"></a>如何：以编程方式从文档中删除所有注释
   使用 `DeleteAllComments` 方法可以删除 Microsoft Office Word 文档中的所有注释。
@@ -32,7 +32,7 @@ ms.locfileid: "62955827"
      [!code-vb[Trin_VstcoreWordAutomation#119](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#119)]
      [!code-csharp[Trin_VstcoreWordAutomation#119](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#119)]
 
-## <a name="to-remove-all-comments-from-a-document-by-using-a-vsto-add-in"></a>若要通过使用 VSTO 外接程序从文档中删除所有注释
+## <a name="to-remove-all-comments-from-a-document-by-using-a-vsto-add-in"></a>使用 VSTO 外接程序从文档中删除所有注释
 
 1. 调用要从中删除注释的 <xref:Microsoft.Office.Interop.Word._Document.DeleteAllComments%2A> 的 <xref:Microsoft.Office.Interop.Word.Document> 方法。
 
@@ -41,6 +41,6 @@ ms.locfileid: "62955827"
      [!code-vb[Trin_VstcoreWordAutomationAddIn#119](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#119)]
      [!code-csharp[Trin_VstcoreWordAutomationAddIn#119](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#119)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [如何：以编程方式向文档中的文本添加注释](../vsto/how-to-programmatically-add-comments-to-text-in-documents.md)
-- [文档主机项](../vsto/document-host-item.md)
+- [文档宿主项](../vsto/document-host-item.md)

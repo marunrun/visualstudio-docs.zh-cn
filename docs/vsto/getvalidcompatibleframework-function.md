@@ -1,7 +1,7 @@
 ---
 title: GetValidCompatibleFramework 函数
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 - CSharp
@@ -10,12 +10,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: b975a4b4b2c1b4ae3f6ef0f1d6d23769bb4c77c7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2219417fe8ddae3d11d0e624ad12d3de80e290dd
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62788691"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85520219"
 ---
 # <a name="getvalidcompatibleframework-function"></a>GetValidCompatibleFramework 函数
   此 API 支持 Office 基础结构，不应在代码中直接使用。
@@ -31,10 +31,10 @@ HRESULT WINAPI GetValidCompatibleFramework(
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
-|*lpwszCompatibleFrameworksXML*|不要使用。|
-|*pbstrValidFrameworkTag*|不要使用。|
+|*lpwszCompatibleFrameworksXML*|请勿使用。|
+|*pbstrValidFrameworkTag*|请勿使用。|
 
 ## <a name="return-value"></a>返回值
- 如果函数成功，它将返回 **，则为 S_OK**。 如果函数失败，则返回错误代码。
+ 如果该函数成功，则它将返回**S_OK**。 如果函数失败，则返回错误代码。

@@ -10,23 +10,23 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 658302de187d6bbeab67dedaaa816709f00436ed
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 9a1f606ed9e3d42d9f57cb941ee9518c1abfbc47
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "78865370"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85289204"
 ---
 # <a name="msbuild-inline-tasks-with-roslyncodetaskfactory"></a>使用 RoslynCodeTaskFactory 创建 MSBuild 内联任务
 
 RoslynCodeTaskFactory 与 [CodeTaskFactory](../msbuild/msbuild-inline-tasks.md) 类似，它使用跨平台的 Roslyn 编译器来生成内存中任务程序集用作内联任务。  RoslynCodeTaskFactory 任务面向的是 .NET Standard，它可用于 .NET Framework 和 .NET Core 运行时，还可用于 Linux 和 Mac 操作系统等其他平台。
 
 >[!NOTE]
->RoslynCodeTaskFactory 仅在 MSBuild 15.8 及更高版本中提供。 MSBuild 版本遵循 Visual Studio 版本，因此 RoslynCodeTaskFactory 在 Visual Studio 15.8 及更高版本版本中提供。
+>RoslynCodeTaskFactory 仅在 MSBuild 15.8 及更高版本中提供。 MSBuild 版本遵循 Visual Studio 版本，因此 RoslynCodeTaskFactory 在 Visual Studio 2017 版本 15.8 及更高版本版本中提供。
 
 ## <a name="the-structure-of-an-inline-task-with-roslyncodetaskfactory"></a>使用 RoslynCodeTaskFactory 的内联任务的结构
 
- RoslynCodeTaskFactory 内联任务的声明方式与 [CodeTaskFactory](../msbuild/msbuild-inline-tasks.md) 的相同，唯一不同之处是它们面向 .NET Standard。  内联任务和包含它的 `UsingTask` 元素通常包括在 .targets 文件中，并根据需要导入到其他项目文件  。 下面是一个基本的内联任务。 请注意，它不执行任何操作。
+ RoslynCodeTaskFactory 内联任务的声明方式与 [CodeTaskFactory](../msbuild/msbuild-inline-tasks.md) 的相同，唯一不同之处是它们面向 .NET Standard。  内联任务和包含它的 `UsingTask` 元素通常包括在 .targets 文件中，并根据需要导入到其他项目文件。 下面是一个基本的内联任务。 请注意，它不执行任何操作。
 
 ```xml
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -83,7 +83,7 @@ RoslynCodeTaskFactory 与 [CodeTaskFactory](../msbuild/msbuild-inline-tasks.md) 
 
 - 如果 `Type` 的值为 `Fragment`，则代码将定义 `Execute` 方法的内容，但不定义签名和 `return` 语句。
 
-通常，该代码本身会出现在 `<![CDATA[` 标记和 `]]>` 标记之间。 由于代码位于 CDATA 部分中，因此你不必担心转义保留字符（例如，“\<”或“>”）。
+通常，该代码本身会出现在 `<![CDATA[` 标记和 `]]>` 标记之间。 由于代码位于 CDATA 部分中，因此你不必担心转义保留字符（例如，“\<" or ">”）。
 
 或者，可以使用 `Code` 元素的 `Source` 属性来指定包含任务代码的文件的位置。 源文件中的代码的类型必须为由 `Type` 属性所指定的类型。 如果存在 `Source` 属性，则 `Type` 的默认值为 `Class`。 如果 `Source` 不存在，则默认值为 `Fragment`。
 
@@ -117,7 +117,7 @@ Log.LogError("Hello, world!");
 </Project>
 ```
 
-可以将 HelloWorld 任务保存在名为 HelloWorld.targets 的文件中，然后按照如下所示从项目中调用它  。
+可以将 HelloWorld 任务保存在名为 HelloWorld.targets 的文件中，然后按照如下所示从项目中调用它。
 
 ```xml
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -256,6 +256,57 @@ Log.LogError("Hello, world!");
 
         <Message Text="File name: '$(MyFileName)'" />
     </Target>
+</Project>
+```
+
+## <a name="provide-backward-compatibility"></a>提供向后兼容性
+
+`RoslynCodeTaskFactory` 最先在 MSBuild 版本 15.8 中提供。 假设你需要支持早期版本的 Visual Studio 和 MSBuild，但 `RoslynCodeTaskFactory` 不可用，而 `CodeTaskFactory` 可用，但你希望使用相同的生成脚本。 你可以使用 `Choose` 构造，该构造使用 `$(MSBuildVersion)` 属性来决定生成时是使用 `RoslynCodeTaskFactory` 还是回退到 `CodeTaskFactory`，如以下示例中所示：
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <Choose>
+    <When Condition=" '$(MSBuildVersion.Substring(0,2))' >= 16 Or
+    ('$(MSBuildVersion.Substring(0,2))' == 15 And '$(MSBuildVersion.Substring(3,1))' >= 8)">
+      <PropertyGroup>
+        <TaskFactory>RoslynCodeTaskFactory</TaskFactory>
+      </PropertyGroup>
+    </When>
+    <Otherwise>
+      <PropertyGroup>
+        <TaskFactory>CodeTaskFactory</TaskFactory>
+      </PropertyGroup>
+    </Otherwise>
+  </Choose>
+  
+  <UsingTask
+    TaskName="HelloWorld"
+    TaskFactory="$(TaskFactory)"
+    AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.Core.dll">
+    <ParameterGroup />
+    <Task>
+      <Using Namespace="System"/>
+      <Using Namespace="System.IO"/>
+      <Code Type="Fragment" Language="cs">
+        <![CDATA[
+         Log.LogError("Using RoslynCodeTaskFactory");
+      ]]>
+      </Code>
+    </Task>
+  </UsingTask>
+
+  <Target Name="RunTask" AfterTargets="Build">
+    <Message Text="MSBuildVersion: $(MSBuildVersion)"/>
+    <Message Text="TaskFactory: $(TaskFactory)"/>
+    <HelloWorld />
+  </Target>
+
 </Project>
 ```
 

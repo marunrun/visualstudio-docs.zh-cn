@@ -1,7 +1,7 @@
-﻿---
+---
 title: 用 Microsoft Fakes 隔离测试代码
-ms.date: 11/04/2016
-ms.topic: conceptual
+ms.date: 06/03/2020
+ms.topic: how-to
 ms.author: mikejo
 manager: jillfra
 ms.workload:
@@ -10,29 +10,30 @@ author: mikejo5000
 dev_langs:
 - VB
 - CSharp
-ms.openlocfilehash: 662a61bf97e1726892b877dc79a0ef98340a34ec
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 49330132321c389fc5b6a4842972769896c72637
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75566886"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85286955"
 ---
 # <a name="isolate-code-under-test-with-microsoft-fakes"></a>用 Microsoft Fakes 隔离测试代码
 
-Microsoft Fakes 将应用的其余部分替换为存根或填充码  ，有助于隔离受测代码。 这些是受你的测试控制的小段代码。 通过隔离接受测试的代码，你将会知道，如果测试失败，原因就在这里而不是其他地方。 即使应用程序的其他部分不起作用，存根和填充码也能让你测试代码。
+Microsoft Fakes 将应用的其余部分替换为存根或填充码，有助于隔离受测代码。 这些是受你的测试控制的小段代码。  这些是受你的测试控制的小段代码。 通过隔离接受测试的代码，你将会知道，如果测试失败，原因就在这里而不是其他地方。 即使应用程序的其他部分不起作用，存根和填充码也能让你测试代码。
 
 Fakes 有两种风格：
 
 - [存根](#get-started-with-stubs)将类替换为可实现同一接口的小型替代项。  若要使用存根，你在设计应用程序时必须让每个组件仅依赖接口，而不依赖其他组件。 （“组件”是指一个类或一起开发和更新的一组类，通常包含在一个程序集中。）
 
-- [垫片](#get-started-with-shims)在运行时修改应用的编译代码，这样就可以运行测试提供的垫片代码，而不用执行指定的方法调用。 填充码可用于替换对无法修改的程序集（如 .NET 程序集）的调用。
+- [填充码](#get-started-with-shims)在运行时修改应用的编译代码，这样就可以运行测试提供的填充码代码，而不用执行指定的方法调用。 填充码可用于替换对无法修改的程序集（如 .NET 程序集）的调用。
 
 ![Fakes 将替换其他组件](../test/media/fakes-2.png)
 
-**惠?**
+**要求**
 
 - Visual Studio Enterprise
 - .NET Framework 项目
+- .NET Core 和 SDK 样式项目支持目前以预览版形式提供。 [阅读详细信息](https://docs.microsoft.com/visualstudio/releases/2019/release-notes#microsoft-fakes-for-net-core-and-sdk-style-projects)
 
 > [!NOTE]
 > - 不支持 .NET Standard 项目。
@@ -41,7 +42,7 @@ Fakes 有两种风格：
 ## <a name="choose-between-stub-and-shim-types"></a>在存根和填充码类型之间进行选择
 通常，你将 Visual Studio 项目视为一个组件，这是因为你同时开发和更新这些类。 对于该项目对你的解决方案中的其他项目所作的调用或对该项目引用的其他程序集所作的调用，应考虑使用存根和填充码。
 
-一般原则是，为在 Visual Studio 解决方案中进行的调用使用存根，并为对其他引用的程序集的调用使用填充码。 这是因为在你自己的解决方案中，通过按照存根要求的方式定义接口来分离组件是一个很好的做法。 但是，外部程序集（如 System.dll）通常没有单独的接口定义，因此必须改用填充码  。
+一般原则是，为在 Visual Studio 解决方案中进行的调用使用存根，并为对其他引用的程序集的调用使用填充码。 这是因为在你自己的解决方案中，通过按照存根要求的方式定义接口来分离组件是一个很好的做法。 但是，外部程序集（如 System.dll）通常没有单独的接口定义，因此必须改用填充码。
 
 其他需要注意的事项还有：
 
@@ -81,9 +82,9 @@ Fakes 有两种风格：
 
 2. **添加 Fakes 程序集**
 
-    1. 在解决方案资源管理器中，展开测试项目的引用列表  。 如果使用的是 Visual Basic，必须选择“显示所有文件”  才能看到引用列表。
+    1. 在解决方案资源管理器中，展开测试项目的引用列表。 如果使用的是 Visual Basic，必须选择“显示所有文件”才能看到引用列表。
 
-    2. 选择对其中定义了接口（例如 IStockFeed）的程序集的引用。 在此引用的快捷菜单上，选择“添加 Fakes 程序集”  。
+    2. 选择对其中定义了接口（例如 IStockFeed）的程序集的引用。 在此引用的快捷菜单上，选择“添加 Fakes 程序集”。
 
     3. 重新生成解决方案。
 
@@ -168,9 +169,9 @@ Fakes 有两种风格：
 
 1. **添加 Fakes 程序集**
 
-     在解决方案资源管理器中，打开单元测试项目的引用，然后选择对包含要虚设的方法的程序集的引用  。 在此示例中，`DateTime` 类位于 *System.dll* 中。  若要查看 Visual Basic 项目中的引用，请选择“显示所有文件”  。
+     在解决方案资源管理器中，打开单元测试项目的引用，然后选择对包含要虚设的方法的程序集的引用。 在此示例中，`DateTime` 类位于 *System.dll* 中。  若要查看 Visual Basic 项目中的引用，请选择“显示所有文件”。
 
-     选择“添加 Fakes 程序集”  。
+     选择“添加 Fakes 程序集”。
 
 2. **在 ShimsContext 中插入填充码**
 

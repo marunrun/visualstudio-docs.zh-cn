@@ -1,6 +1,6 @@
 ---
 title: “常规”&gt;“调试”&gt;“选项”对话框 | Microsoft Docs
-ms.date: 11/12/2019
+ms.date: 06/04/2020
 ms.topic: reference
 f1_keywords:
 - vs.debug.options.General
@@ -21,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 98bbd65d11b26d9b35000e4acbe4d28a585f8ddc
-ms.sourcegitcommit: ce3d0728ec1063ab548dac71c8eaf26d20450acc
+ms.openlocfilehash: c5b03d7b45e488d7e8026a7d6835bbfba1efa210
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80472695"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85286552"
 ---
 # <a name="general-debugging-options"></a>常规调试选项
 
@@ -89,7 +89,7 @@ ms.locfileid: "80472695"
 
 - **对于所有源链接请求，回退到 Git 凭据管理器身份验证**： 若源链接支持已启用且源链接请求未通过身份验证，则 Visual Studio 调用 Git 凭据管理器。
 
-**突出显示断点和当前语句所在的整个行（仅限 C++）** ：调试器突出显示断点或当前语句时，会突出显示整个行。
+突出显示断点和当前语句所在的整个源行（仅限 C++）：调试器突出显示断点或当前语句时，会突出显示整个行。
 
 **要求源文件与原始版本完全匹配**：指示调试器验证源文件是否与用于构建待调试的可执行文件的源代码版本匹配。 若版本不匹配，系统会提示你查找匹配的源。 若找不到匹配的源，调试过程中将不会显示源代码。
 
@@ -101,11 +101,9 @@ ms.locfileid: "80472695"
 
 启用适用于 ASP.NET 的 JavaScript 调试（Chrome、Microsoft Edge 和 IE）：为 ASP.NET 应用启用脚本调试。 第一次在 Chrome 中使用时，可能需要登录到浏览器来启用已安装的 Chrome 扩展。 禁用此选项可恢复为旧行为。
 
-**启动适用于 UWP JavaScript 应用（实验性）的 Edge 开发人员工具**: 在 Microsoft Edge 中启用适用于 UWP JavaScript 应用的开发人员工具。
-
-**启用适用于ASP.NET应用的旧版 Chrome JavaScript 调试器**:启用适用于 ASP.NET 应用的旧版 Chrome JavaScript 脚本调试器。 第一次在 Chrome 中使用时，可能需要登录到浏览器来启用已安装的 Chrome 扩展。
-
-以管理员身份运行 Visual Studio 时，使用实验性方法启动 Chrome JavaScript 调试: 告知 Visual Studio 在 JavaScript 调试期间尝试新方式来启动 Chrome。
+::: moniker range=">= vs-2019"
+启用使用多目标 JavaScript 调试器来调试适用目标中的 JavaScript（需要调试重启）允许同时连接到浏览器和后端，使你能够在编辑器中直接调试在客户端和服务器中运行的代码。
+::: moniker-end
 
 **加载 dll 导出(限本机)** ：加载 DLL 导出表。 处理 Windows 消息、Windows 过程 (WindowProc)、COM 对象、封送或不具有其符号的任何 DLL 时，DLL 导出表中的符号信息将很有用。 读取 DLL 导出信息会占用一些系统开销。 因此，默认情况下此功能被禁用。
 
@@ -124,7 +122,9 @@ ms.locfileid: "80472695"
 > [!NOTE]
 > 选择托管兼容模式会禁用仅可在默认调试引擎中实现的一些功能。 旧版调试引擎已在 Visual Studio 2012 中进行了替换。
 
+::: moniker range="vs-2017"
 **使用旧版 C# 和 VB 表达式计算器**：调试器将使用 Visual Studio 2013 C# 或 Visual Basic 表达式计算器而不是 Visual Studio 2015 基于 Roslyn 的表达式计算器。
+::: moniker-end
 
 使用自定义调试器可视化工具时，针对可能不安全的进程发出警告（仅限托管）: 如果使用自定义调试器可视化工具在调试的进程中运行代码，Visual Studio 会发出警告，因为该调试器可能运行不安全的代码。
 
@@ -142,6 +142,9 @@ ms.locfileid: "80472695"
 - 启用“仅我的 XAML”：从 Visual Studio 2019 版本 16.4 开始，“实时可视化树”在默认情况下只显示归类为用户代码的 XAML。 如果禁用此选项，则会在工具中显示所有生成的 XAML 代码。
 
 - 选择元素时关闭选择模式 从 Visual Studio 2019 版本 16.4 开始，在选择元素时，应用内工具栏元素选择器按钮（“启用选定内容”）会关闭。 如果禁用此选项，则元素选择将一直保持打开状态，直到再次单击应用内程序工具栏按钮。
+
+- 在保存文档时应用 XAML 热重载 从 Visual Studio 2019 版本 16.6 开始，在保存文档时会应用 XAML 热重载。
+
 ::: moniker-end
 
 **调试时启用诊断工具**：调试时显示“诊断工具”窗口。
@@ -162,15 +165,25 @@ ms.locfileid: "80472695"
 
 ::: moniker range=">= vs-2019"
 启用快速表达式计算（仅限托管）：允许调试器通过模拟简单属性和方法的执行来尝试更快速地进行计算。
+
+在外部进程中加载调试符号（仅限本机）在调试时启用此[内存优化](https://devblogs.microsoft.com/cppblog/out-of-process-debugger-for-c-in-visual-studio-2019/)。
+
+调试器中断时，将 Visual Studio 置于前台 在调试器中暂停时，将 Visual Studio 切换到前台。
 ::: moniker-end
 
 ## <a name="options-available-in-older-versions-of-visual-studio"></a>早期版本的 Visual Studio 中可用的选项
 
 如果使用早期版本的 Visual Studio，则可能会出现一些其他选项。
 
+**启动适用于 UWP JavaScript 应用（实验性）的 Edge 开发人员工具**: 在 Microsoft Edge 中启用适用于 UWP JavaScript 应用的开发人员工具。
+
+**启用适用于ASP.NET应用的旧版 Chrome JavaScript 调试器**:启用适用于 ASP.NET 应用的旧版 Chrome JavaScript 脚本调试器。 第一次在 Chrome 中使用时，可能需要登录到浏览器来启用已安装的 Chrome 扩展。
+
 **启用异常助手**：对于托管代码，启用异常助手。 从 Visual Studio 2017 开始，异常帮助程序替换了异常助手。
 
 **在未经处理的异常上展开调用堆栈**：导致“调用堆栈”窗口将调用堆栈回滚到未经处理的异常发生之前的时间点。
+
+以管理员身份运行 Visual Studio 时，使用实验性方法启动 Chrome JavaScript 调试: 告知 Visual Studio 在 JavaScript 调试期间尝试新方式来启动 Chrome。
 
 **启动时若无符号则发出警告(仅限本机)** ：当调试器没有所调试程序的符号信息时，显示一个警告对话框。
 

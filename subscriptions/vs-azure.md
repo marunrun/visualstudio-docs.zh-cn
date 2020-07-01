@@ -7,12 +7,12 @@ ms.assetid: 872c5746-5357-4764-949b-aa525a0adf1a
 ms.date: 04/28/2020
 ms.topic: conceptual
 description: 了解如何激活 Visual Studio 订阅中包含的 Azure 开发测试个人额度权益。
-ms.openlocfilehash: 50e784a60dc50232bc390233e2ad80dc91d0f4ab
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 55092145d5760e235dc0c38c5a191760af2a2bc1
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84183608"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85279765"
 ---
 # <a name="use-microsoft-azure-in-visual-studio-subscriptions"></a>在 Visual Studio 订阅中使用 Microsoft Azure
 Visual Studio 订阅者无需额外付费即可使用 Microsoft Azure。  通过[每月 Azure 开发测试个人额度](https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/)，可将 Azure 用作开发/测试的个人沙盒。  你可以预配虚拟机、云服务和其他 Azure 资源。  信用额度因订阅级别而异。
@@ -106,7 +106,7 @@ Visual Studio 订阅者无需额外付费即可使用 Microsoft Azure。  通过
 
 有关完整详细信息，请访问[技术支持](vs-tech-support.md)文档。
 
-### <a name="q-how-owns-the-intellectual-property-i-create-using-my-azure-devtest-individual-credit"></a>问：如何拥有我使用我的 Azure DevTest 个人点数创建的知识产权？
+### <a name="q-who-owns-the-intellectual-property-i-create-using-my-azure-devtest-individual-credit"></a>问：谁拥有我使用我的 Azure DevTest 个人点数创建的知识产权？
 答：员工根据该公司提供的资源创建的知识产权是提供该资源的公司的知识产权。 因此，如果你通过你的雇主接收 Visual Studio 订阅，则其知识产权政策适用。 
 
 ## <a name="support-resources"></a>支持资源

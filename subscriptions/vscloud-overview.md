@@ -7,15 +7,15 @@ ms.assetid: af1f7888-6942-4515-9475-0928ecf49dab
 ms.date: 03/24/2020
 ms.topic: conceptual
 description: 按月或按年租赁 Visual Studio Professional 或 Visual Studio Enterprise，无需任何长期协定。
-ms.openlocfilehash: babf05c991bd323f2ebe2385085a1d9fc3b1acf8
-ms.sourcegitcommit: dfa9476b69851c28b684ece66980bee735fef8fd
+ms.openlocfilehash: b2a80fce75f710d508f0d32df37bbcde73ee20e3
+ms.sourcegitcommit: 60315ba949aca1ff06fe431dbcbcfb0fedc1e8d3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80273941"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85292927"
 ---
 # <a name="buy-visual-studio-professional-and-visual-studio-enterprise-cloud-subscriptions"></a>购买 Visual Studio Professional 和 Visual Studio Enterprise 云订阅
-可从 [Visual Studio Marketplace](https://marketplace.visualstudio.com) 购买 [Visual Studio Professional 和 Visual Studio Enterprise 订阅](https://visualstudio.microsoft.com/subscriptions/)。 这些称为“云订阅”  。
+可从 [Visual Studio Marketplace](https://marketplace.visualstudio.com) 购买 [Visual Studio Professional 和 Visual Studio Enterprise 订阅](https://visualstudio.microsoft.com/subscriptions/)。 这些称为“云订阅”。
 
 [比较云订阅权益和定价](https://visualstudio.microsoft.com/vs/pricing/)
 
@@ -42,7 +42,7 @@ ms.locfileid: "80273941"
     > [!div class="mx-imgBorder"]
     > ![选择订阅数量](_img/buy-vs-subscriptions/buy-vs-sub-users.png)
 
-    如果不希望将订阅分配给自己，则清除“将此订阅分配给我”  。
+    如果不希望将订阅分配给自己，则清除“将此订阅分配给我”。
 
 5. 确认并完成购买。 如果为自己分配了订阅，则可访问 [Visual Studio 订阅者门户](https://my.visualstudio.com)，开始下载软件并使用其他订阅者权益。
 
@@ -52,7 +52,7 @@ ms.locfileid: "80273941"
 > [!div class="mx-imgBorder"]
 > ![转到 Visual Studio 订阅者门户](_img/buy-vs-subscriptions/view-subscription-benefits-subscriptions-portal.png)
 
-如果购买了多个订阅，请转到 [Visual Studio 订阅管理门户](https://manage.visualstudio.com)，将订阅分配给其他人。
+如果购买了多个订阅，请转到 [Visual Studio 订阅管理门户](https://manage.visualstudio.com)，将订阅分配给其他人。  如果是首次购买新订阅，你可能需要[将新订阅添加](add-monthly-subs.md)到管理门户。
 
 > [!div class="mx-imgBorder"]
 > ![将订阅分配给其他人](_img/buy-vs-subscriptions/buy-vs-sub-success-many.png)
@@ -93,7 +93,7 @@ ms.locfileid: "80273941"
 答：在特定月份购买的年度订阅会立即收取全年费用，并且有效期为一整年。 因此，只能在购买当月修改许可证数量（有效期为一年，并按一年收费）。 在购买当月以外，不能再增加订阅的数量。
 
 #### <a name="q-what-if-i-want-to-decrease-the-number-of-subscriptions-for-my-customers"></a>问：如果我想为客户减少订阅数量，该怎么办？
-答：管理员仍然可以通过访问 https://manage.visualstudio.com 并遵循本文中减少订阅数的说明来减少订阅数量。 系统将不会生成按比例计费的额度  。 有关退款，需要联系 Azure 账单团队。
+答：管理员仍然可以通过访问 https://manage.visualstudio.com 并遵循本文中减少订阅数的说明来减少订阅数量。 系统将不会生成按比例计费的额度。 有关退款，需要联系 Azure 账单团队。
 
 #### <a name="q-if-i-cancel-my-subscription-will-i-be-able-to-buy-another-annual-cloud-subscription-later"></a>问：如果我取消订阅，以后还能再买一份年度云订阅吗？
 答：虽然无法再买一份云年度订阅，但是可以选择购买 Visual Studio 订阅。  更多信息请访问 [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/)。
@@ -109,7 +109,7 @@ ms.locfileid: "80273941"
 答：在特定月份购买的年度订阅会立即收取全年费用，并且有效期为一整年。 因此，管理员只能修改当前购买月份的许可证数量，其有效期为 1 年，计费时间为 1 年。 在购买月份之外，不再增加订阅数量。
 
 #### <a name="q-what-if-i-want-to-decrease-the-number-of-subscriptions-for-my-customers"></a>问：如果我想为客户减少订阅数量，该怎么办？
-答：管理员仍然可以通过访问 [https://manage.visualstudio.com](https://manage.visualstudio.com) 并遵循本文中减少订阅数的说明来减少订阅数量。 系统将不会生成按比例计费的额度  。 有关退款，需要联系 Azure 账单团队。
+答：管理员仍然可以通过访问 [https://manage.visualstudio.com](https://manage.visualstudio.com) 并遵循本文中减少订阅数的说明来减少订阅数量。 系统将不会生成按比例计费的额度。 有关退款，需要联系 Azure 账单团队。
 
 #### <a name="q-if-my-customers-cancel-their-subscriptions-will-they-be-able-to-buy-more-annual-cloud-subscriptions-later"></a>问：如果我的客户取消订阅，他们以后还能购买更多的年度云订阅吗？
 答：虽然他们无法再买一份云年度订阅，但是可以选择购买 Visual Studio 订阅。  更多信息请访问 [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/)。

@@ -19,14 +19,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 70c16b603f1c38eeb3e71718937e7c669ae8ebc9
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 0e184507415810f64060b0d2b2e92a825d642d2e
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84184544"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85280871"
 ---
 # <a name="create-custom-data-visualizers"></a>创建自定义数据可视化工具
+
  “可视化工具”是 [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] 调试器用户界面的一部分，该用户界面以适合其数据类型的方式显示变量或对象。 例如，HTML 可视化工具解释 HTML 字符串，并以与浏览器窗口中相同的方式显示结果。 位图可视化工具解释位图结构并显示它表示的图形。 某些可视化工具允许你修改数据，还允许你查看数据。
 
  [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] 调试器包括六个标准可视化工具。 文本、HTML、XML 和 JSON 可视化工具处理字符串对象。 WPF 树可视化工具显示 WPF 对象可视化树的属性。 数据集可视化工具适用于 DataSet、DataView 和 DataTable 对象。
@@ -74,11 +75,23 @@ ms.locfileid: "84184544"
 
 ### <a name="to-create-the-visualizer-object-source-for-the-debuggee-side"></a>为调试对象端创建可视化工具对象源
 
-在调试器端代码中使用 <xref:System.Diagnostics.DebuggerVisualizerAttribute> 指定要可视化的类型（调试对象端对象源）。
+在调试器端代码中，编辑 <xref:System.Diagnostics.DebuggerVisualizerAttribute>，为其提供要可视化的类型（调试对象端对象源）(<xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource>)。 `Target` 属性设置对象源。 如果省略对象源，可视化工具将使用默认对象源。
 
-1. 在调试器端代码中，编辑 <xref:System.Diagnostics.DebuggerVisualizerAttribute>，并为其提供对象源 (<xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource>)。 `Target` 属性设置对象源。 如果省略对象源，可视化工具将使用默认对象源。
+::: moniker range=">=vs-2019"
+调试对象端代码包含可视化的对象源。 数据对象可以重写 <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource> 方法。 如果要创建独立可视化工具，则需要调试对象端 DLL。
+::: moniker-end
 
-1. 若要让可视化工具编辑并显示数据对象，请重写 <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource> 中的 `TransferData` 或 `CreateReplacementObject` 方法。
+在调试对象端代码中：
+
+- 若要让可视化工具编辑数据对象，对象源必须继承自 <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource>，并重写 `TransferData` 或 `CreateReplacementObject` 方法。
+
+- 如果需要在可视化工具中支持多目标，可以在调试对象端项目文件中使用以下目标框架名字对象 (TFM)。
+
+   ```xml
+   <TargetFrameworks>net20;netstandard2.0;netcoreapp2.0</TargetFrameworks>
+   ```
+
+   它们是唯一受支持的 TFM。
 
 ## <a name="see-also"></a>请参阅
 

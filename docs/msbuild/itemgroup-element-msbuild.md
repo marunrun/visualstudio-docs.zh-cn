@@ -18,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c058a5986f72192a86d0e554d9e0d0b9bdce1b42
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: a62b4df06d1c180a6a6d62b0231dce1136fb8059
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84173507"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85288970"
 ---
 # <a name="itemgroup-element-msbuild"></a>ItemGroup 元素 (MSBuild)
 
@@ -51,7 +51,7 @@ ms.locfileid: "84173507"
 |特性|描述|
 |---------------|-----------------|
 |`Condition`|可选特性。 要计算的条件。 有关详细信息，请参阅[条件](../msbuild/msbuild-conditions.md)。|
-|`Label`|可选特性。 标识 `ItemGroup`。|
+|`Label`|可选特性。 标识 `ItemGroup`。 |
 
 ### <a name="child-elements"></a>子元素
 
@@ -90,6 +90,8 @@ ms.locfileid: "84173507"
 在简单的项目文件中，通常使用单个 `ItemGroup` 元素，但也可以使用多个 `ItemGroup` 元素。 当使用多个 `ItemGroup` 元素时，多个项会合并为单个 `ItemGroup`。 例如，某些项可能包含在导入文件中定义的单独 `ItemGroup` 元素中。
 
 ItemGroups 可以通过使用 `Condition` 属性来应用条件。 在这种情况下，仅当满足条件时才会将项添加到项列表。 请参阅 [MSBuild 条件](msbuild-conditions.md)
+
+`Label` 属性在某些生成系统中用作控制生成行为的方式。 只能在声明中使用它，作为创建更易于理解的 MSBuild 脚本的一种方法，或作为影响生成操作的控件设置。
 
 ## <a name="see-also"></a>请参阅
 
