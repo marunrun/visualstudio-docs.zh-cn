@@ -40,7 +40,7 @@ ms.locfileid: "85535871"
 |**了解类结构：**<br /><br /> 通过从代码创建类关系图，在项目中查看类的结构。|[如何：向项目添加类图（类设计器）](../ide/class-designer/how-to-add-class-diagrams-to-projects.md)|
 |**描述高级系统设计，并对此设计进行代码验证：**<br /><br /> 通过创建依赖关系图来描述高级系统设计及其预期的依赖关系。 对此设计进行代码验证，以确保代码中的依赖项与设计保持一致。|- [从代码创建依赖项关系图](../modeling/create-layer-diagrams-from-your-code.md)<br />- [依赖项关系图：参考](../modeling/layer-diagrams-reference.md)<br />- [依赖项关系图：准则](../modeling/layer-diagrams-guidelines.md)<br />- [通过依赖关系图验证代码](../modeling/validate-code-with-layer-diagrams.md)|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [方案：使用可视化和建模更改设计](../modeling/scenario-change-your-design-using-visualization-and-modeling.md)
 - [分析和模型体系结构](../modeling/analyze-and-model-your-architecture.md)

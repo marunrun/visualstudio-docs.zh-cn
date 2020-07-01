@@ -1,7 +1,7 @@
 ---
 title: 使用 T4 文本模板生成设计时代码
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - text templates, guidelines for code generation
 - text templates, data source model
@@ -15,12 +15,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 06c6244f59482825ed435226f79437da9e2c0df0
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 8589be1bd1c1e9ad86a412d4f8bd2630c93a42ac
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75589625"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85535988"
 ---
 # <a name="design-time-code-generation-by-using-t4-text-templates"></a>使用 T4 文本模板生成设计时代码
 
@@ -41,11 +41,11 @@ ms.locfileid: "75589625"
 
 2. 将文本模板文件添加到项目，并为其指定扩展名为**tt**的名称。
 
-    为此，请在**解决方案资源管理器**中，在项目的快捷菜单上，选择 "**添加** > **新项**"。 在 "**添加新项**" 对话框中，从中间窗格中选择 "**文本模板**"。
+    为此，请在**解决方案资源管理器**中，在项目的快捷菜单上选择 "**添加**  >  **新项**"。 在 "**添加新项**" 对话框中，从中间窗格中选择 "**文本模板**"。
 
     请注意，该文件的 "**自定义工具**" 属性为 " **TextTemplatingFileGenerator**"。
 
-3. 打开该文件。 该文件中已包含下列指令：
+3. 打开 文件。 该文件中已包含下列指令：
 
    ```
    <#@ template hostspecific="false" language="C#" #>
@@ -60,9 +60,9 @@ ms.locfileid: "75589625"
    Hello, world!
    ```
 
-5. 保存该文件。
+5. 保存文件。
 
-    你可能会看到一个**安全警告**消息框，要求你确认是否要运行该模板。 单击" **确定**"。
+    你可能会看到一个**安全警告**消息框，要求你确认是否要运行该模板。 单击 **“确定”** 。
 
 6. 在**解决方案资源管理器**中，展开 "模板文件" 节点，将会找到扩展名为 **.txt**的文件。 该文件包含从该模板生成的文本。
 
@@ -75,7 +75,7 @@ ms.locfileid: "75589625"
 
 - 编辑模板，然后将焦点更改为其他 Visual Studio 窗口。
 
-- 保存该模板。
+- 保存模板。
 
 - 单击 "**生成**" 菜单中的 "**转换所有模板**"。 这会转换 Visual Studio 解决方案中的所有模板。
 
@@ -117,7 +117,7 @@ ms.locfileid: "75589625"
 
    请注意，语句括在 `<#...#>` 内，单个表达式括在 `<#=...#>` 内。 有关详细信息，请参阅[编写 T4 文本模板](../modeling/writing-a-t4-text-template.md)。
 
-   如果在 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 中编写生成代码，则 `template` 指令应包含 `language="VB"`。 默认为 `"C#"`。
+   如果在 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 中编写生成代码，则 `template` 指令应包含 `language="VB"`。 默认值为 `"C#"`。
 
 ## <a name="debugging-a-design-time-t4-text-template"></a>调试设计时 T4 文本模板
 
@@ -134,7 +134,7 @@ ms.locfileid: "75589625"
    模板运行并在断点处停止。 你可以以常用方式检查变量并逐步执行代码。
 
 > [!TIP]
-> `debug="true"` 通过在生成的代码中插入更多行号指令，使生成的代码更精确地映射到文本模板。 如果不使用它，断点可能在错误状态下停止运行。
+> `debug="true"`通过在生成的代码中插入更多行号指令，使生成的代码更精确地映射到文本模板。 如果不使用它，断点可能在错误状态下停止运行。
 >
 > 但是，即使不在进行调试，你仍可将该子句留在模板指令中。 这仅会使性能下降一点点。
 
@@ -219,7 +219,7 @@ ms.locfileid: "75589625"
 <#@ import namespace="System.IO" #>
 ```
 
-`assembly` 指令使指定的程序集可用于模板代码，其方式与 Visual Studio 项目的 "引用" 部分相同。 你无需包括对 System.dll 的引用，它是自动引用的。 `import` 指令允许你使用类型而不使用其完全限定名，方式与普通程序文件中的 `using` 指令相同。
+`assembly`指令使指定的程序集可用于模板代码，其方式与 Visual Studio 项目的 "引用" 部分相同。 你无需包括对 System.dll 的引用，它是自动引用的。 `import` 指令允许你使用类型而不使用其完全限定名，方式与普通程序文件中的 `using` 指令相同。
 
 例如，在导入**System.IO**后，可以编写：
 
@@ -272,7 +272,7 @@ ms.locfileid: "75589625"
 
 ### <a name="getting-data-from-visual-studio"></a>从 Visual Studio 获取数据
 
-若要使用 Visual Studio 中提供的服务，请设置 `hostSpecific` 属性并加载 `EnvDTE` 程序集。 导入 `Microsoft.VisualStudio.TextTemplating`，其中包含 `GetCOMService()` 扩展方法。  然后，你可以使用 IServiceProvider.GetCOMService() 访问 DTE 和其他服务。 例如：
+若要使用 Visual Studio 中提供的服务，请设置 `hostSpecific` 属性并加载 `EnvDTE` 程序集。 导入 `Microsoft.VisualStudio.TextTemplating` ，其中包含 `GetCOMService()` 扩展方法。  然后，你可以使用 IServiceProvider.GetCOMService() 访问 DTE 和其他服务。 例如：
 
 ```src
 <#@ template hostspecific="true" language="C#" #>
@@ -290,7 +290,7 @@ Number of projects in this VS solution:  <#= dte.Solution.Projects.Count #>
 > [!TIP]
 > 文本模板在它自己的应用域中运行，并通过封送访问服务。 在此情况下，GetCOMService() 比 GetService() 更可靠。
 
-## <a name="Regenerating"></a>自动重新生成代码
+## <a name="regenerating-the-code-automatically"></a><a name="Regenerating"></a>自动重新生成代码
 
 通常，Visual Studio 解决方案中的几个文件是使用一个输入模型生成的。 每个文件从其自己的模板生成，但这些模板全都引用同一个模型。
 
@@ -336,13 +336,13 @@ Error("An error message");
 Warning("A warning message");
 ```
 
-## <a name="Converting"></a>将现有文件转换为模板
+## <a name="converting-an-existing-file-to-a-template"></a><a name="Converting"></a>将现有文件转换为模板
 
 模板的一个非常有用的功能是：它们看起来与其生成的文件（加上一些插入的程序代码）非常相似。 这暗示了创建模板的一种有用方法。 首先创建一个普通文件作为原型（如 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 文件），然后逐步引入用于改变生成的文件的生成代码。
 
 ### <a name="to-convert-an-existing-file-to-a-design-time-template"></a>将现有文件转换为设计时模板
 
-1. 在 Visual Studio 项目中，添加要生成的类型的文件，例如 `.cs`、`.vb`或 `.resx` 文件。
+1. 在 Visual Studio 项目中，添加要生成的类型的文件，如 `.cs` 、 `.vb` 或 `.resx` 文件。
 
 2. 测试新文件以确保其工作。
 
@@ -353,7 +353,7 @@ Warning("A warning message");
    | | |
    |-|-|
    | **自定义工具 =** | **TextTemplatingFileGenerator** |
-   | **生成操作 =** | **无** |
+   | **生成操作 =** | 无 |
 
 5. 在文件开头插入以下行：
 
@@ -366,7 +366,7 @@ Warning("A warning message");
 
     将 `extension` 特性设置为要生成的文件类型的文件扩展名，例如 `.cs`、`.resx` 或 `.xml`。
 
-6. 保存该文件。
+6. 保存文件。
 
     将使用指定扩展名创建一个附属文件。 该文件对于相应文件类型具有正确的属性。 例如，将**编译**.cs 文件的 "**生成操作**" 属性。
 
@@ -388,6 +388,6 @@ Warning("A warning message");
 |以域特定语言的形式转换数据。|[从域特定语言生成代码](../modeling/generating-code-from-a-domain-specific-language.md)|
 |编写指令处理器转换自己的数据源。|[自定义 T4 文本转换](../modeling/customizing-t4-text-transformation.md)|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [T4 文本模板编写准则](../modeling/guidelines-for-writing-t4-text-templates.md)

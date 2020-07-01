@@ -1,7 +1,7 @@
 ---
 title: 演练：创建自定义文本模板宿主
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - walkthroughs [text templates], custom host
 - text templates, custom host walkthrough
@@ -13,12 +13,12 @@ ms.workload:
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: 3d578161d43de68d85f3b7704c9fd69fe4e268ea
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 3979f93de6040078a5b1e4315cadc4f7faa4728e
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75593533"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85532218"
 ---
 # <a name="walkthrough-create-a-custom-text-template-host"></a>演练：创建自定义文本模板主机
 
@@ -51,9 +51,9 @@ ms.locfileid: "75593533"
 
 2. 添加对下列程序集的引用：
 
-   - **Microsoft.VisualStudio.TextTemplating.\*.0**
+   - **VisualStudio \* . TextTemplating。0**
 
-   - **VisualStudio. TextTemplating 和更高版本**
+   - **Microsoft.VisualStudio.TextTemplating.Interfaces.10.0 和更高版本**
 
 3. 用下面的代码替换 Program.cs 或 Module1.vb 文件中的代码：
 
@@ -714,9 +714,9 @@ ms.locfileid: "75593533"
    End Namespace
    ```
 
-4. 对于 "仅 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]"，打开 "**项目**" 菜单，然后单击 " **CustomHost 属性**"。 在 "**启动对象**" 列表中，单击 " **CustomHost**"。
+4. [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]仅对于，打开 "**项目**" 菜单，然后单击 " **CustomHost 属性**"。 在 "**启动对象**" 列表中，单击 " **CustomHost**"。
 
-5. 在“文件”菜单上，单击“全部保存”。
+5. 在“文件”菜单上，单击“全部保存” 。
 
 6. 在 **“生成”** 菜单上，单击 **“生成解决方案”** 。
 
@@ -726,11 +726,11 @@ ms.locfileid: "75593533"
 
 ### <a name="to-create-a-text-template-to-test-the-custom-host"></a>创建文本模板测试自定义主机
 
-1. 创建一个文本文件，并将其命名为 `TestTemplate.tt`。
+1. 创建一个文本文件，并将其命名为 `TestTemplate.tt` 。
 
      可以使用任何文本编辑器（例如记事本）来创建文件。
 
-2. 向文件中添加以下内容：
+2. 将以下内容添加到该文件：
 
     > [!NOTE]
     > 文本模板的编程语言不必与自定义宿主的编程语言一致。
@@ -773,11 +773,11 @@ ms.locfileid: "75593533"
 
     ```
 
-3. 保存并关闭文件。
+3. 保存并关闭该文件。
 
 ### <a name="to-test-the-custom-host"></a>测试自定义主机
 
-1. 打开“命令提示符”窗口。
+1. 打开命令提示符窗口。
 
 2. 为自定义宿主键入可执行文件的路径，但暂不要按 Enter。
 
@@ -786,7 +786,7 @@ ms.locfileid: "75593533"
      `<YOUR PATH>CustomHost\bin\Debug\CustomHost.exe`
 
     > [!NOTE]
-    > 您可以在**Windows 资源管理器**中浏览到文件 CustomHost，然后将该文件拖入命令提示符窗口，而不是键入地址。
+    > 您可以浏览到**Windows 资源管理器**中的文件 CustomHost.exe，然后将该文件拖入命令提示符窗口，而不是键入地址。
 
 3. 键入一个空格。
 
@@ -821,6 +821,6 @@ ms.locfileid: "75593533"
 
 在本演练中，你创建了一个支持基本转换功能的文本模板转换主机。 您可以对该宿主进行扩展，以支持可调用自定义或生成的指令处理器的文本模板。 有关详细信息，请参阅[演练：将主机连接到生成的指令处理器](../modeling/walkthrough-connecting-a-host-to-a-generated-directive-processor.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [ITextTemplatingEngineHost](/previous-versions/visualstudio/visual-studio-2012/bb126505(v=vs.110))

@@ -1,5 +1,5 @@
 ---
-title: 向代码清单 |微软文档
+title: Manifest to Code |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 17ecacea-397d-4a97-b003-01bd5d56e936
@@ -8,54 +8,53 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 768561ef289f0f652f082d40ee9856843721f1ff
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: e21f266cc0dea39cfbaba660ef3557af6023c104
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80707268"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85536118"
 ---
 # <a name="manifest-to-code"></a>Manifest to Code
-"向代码清单"工具是一个控制台应用程序，它为 Visual Studio 影像服务获取 .imagemanifest 文件，并生成包装文件或文件，用于引用影像清单的值，用于 C++、C#、VB 或 .vsct 文件，用于 Visual Studio 扩展名。 此工具生成包装文件，可用于直接从 Visual Studio 影像服务请求图像，或者如果代码不处理其自己的任何 UI 和呈现，则用于通过 API 传递清单值。
+Manifest to Code 工具是一个控制台应用程序，它将 imagemanifest 文件用于 Visual Studio 映像服务，并生成一个包装器文件，用于引用 c + +、c #、VB 或. .vsct 文件中的图像清单的值（适用于 Visual Studio 扩展）。 此工具将生成可用于直接从 Visual Studio 图像服务请求图像的包装文件，如果代码不处理其自身的 UI 和呈现，则通过 Api 传递清单值。
 
 ## <a name="how-to-use-the-tool"></a>如何使用该工具
  **语法**
 
- 清单代码/清单：\<图像清单文件>/语言：\<代码语言>\<可选Args>
+ ManifestToCode/manifest： \<Image Manifest file> /language： \<Code Language>\<Optional Args>
 
- **自变量**
+ **参数**
 
-||||
+|**交换机名称**|**备注**|**必需或可选**|
 |-|-|-|
-|**切换名称**|**说明**|**必需或可选**|
-|/清单|用于创建或更新代码包装器的图像清单的路径。|必选|
-|/语言|生成代码包装器的语言。<br /><br /> 有效值：CPP、C++、CS、C夏普、C#、VB 或 VSCT 这些值不区分大小写。<br /><br /> 对于 VSCT 语言选项，将忽略 /monikerClass、/classAccess 和 /命名空间选项。|必选|
-|/图像 IdClass|图像 IdClass 的名称和工具创建的关联文件。 对于C++语言选项，仅生成 .h 文件。<br /><br /> 默认值：\<清单路径>_MyImageIds。\<朗·特特·>|可选|
-|/名字类别|名字对象类的名称和工具创建的关联文件。 对于C++语言选项，仅生成 .h 文件。 对于 VSCT 语言，将忽略这一点。<br /><br /> 默认值：\<清单路径>_MyMonikers。\<朗·特特·>|可选|
-|/类访问|图像 IdClass 和名字类别的访问修改器。 确保访问修改器对给定语言有效。 对于 VSCT 语言选项，将忽略此选项。<br /><br /> 默认值：公共|可选|
-|/命名空间|在代码包装器中定义的命名空间。 对于 VSCT 语言选项，将忽略此选项。 无论选择何种语言选项，'.'或"：："都是有效的命名空间分隔符。<br /><br /> 默认值：我的图像|可选|
+|/manifest|用于创建或更新代码包装的图像清单的路径。|必需|
+|/language|用于生成代码包装的语言。<br /><br /> 有效值： CPP、c + +、CS、CSharp、c #、VB 或 .VSCT，这些值不区分大小写。<br /><br /> 对于 .VSCT language 选项，将忽略/monikerClass、/classAccess 和/namespace 选项。|必需|
+|/imageIdClass|该工具创建的 imageIdClass 和关联文件的名称。 对于 c + + 语言选项，只生成 .h 文件。<br /><br /> 默认值： \<Manifest Path> \MyImageIds。\<Lang Ext>|可选|
+|/monikerClass|该工具创建的 monikerClass 和关联文件的名称。 对于 c + + 语言选项，只生成 .h 文件。 对于 .VSCT 语言，这会被忽略。<br /><br /> 默认值： \<Manifest Path> \MyMonikers。\<Lang Ext>|可选|
+|/classAccess|ImageIdClass 和 monikerClass 的访问修饰符。 请确保访问修饰符对于给定的语言有效。 对于 .VSCT language 选项，此选项将被忽略。<br /><br /> 默认值：公用|可选|
+|/namespace|代码包装中定义的命名空间。 对于 .VSCT language 选项，此选项将被忽略。 无论选择何种语言选项，"." 或 "：：" 都是有效的命名空间分隔符。<br /><br /> 默认值： MyImages|可选|
 |/noLogo|设置此标志将停止打印产品和版权信息。|可选|
-|/?|打印帮助信息。|可选|
-|/help|打印帮助信息。|可选|
+|/?|打印出帮助信息。|可选|
+|/help|打印出帮助信息。|可选|
 
  **示例**
 
-- 清单代码/清单：D：\Mymanifest.图像清单/语言：CSharp
+- ManifestToCode/manifest： D:\MyManifest.imagemanifest/language： CSharp
 
-- 清单Tocode/清单：D：\MyManifest.imagemanifest/语言：C++/命名空间：我的：：：名称空间/图像IdClass：MyImageIds/名字类别：MyMonikers/classAccess：朋友
+- ManifestToCode/manifest： D:\MyManifest.imagemanifest/language： c + +/namespace： My：： Namespace/imageIdClass： MyImageIds/monikerClass： MyMonikers/classAccess： friend
 
-- 清单代码/清单：D：\MyManifest.图像清单/语言：VSCT/图像IdClass：MyImageIds
+- ManifestToCode/manifest： D:\MyManifest.imagemanifest/language： .VSCT/imageIdClass： MyImageIds
 
-## <a name="notes"></a>说明
+## <a name="notes"></a>备注
 
-- 我们建议您将此工具与"来自资源清单"工具生成的图像清单一起使用。
+- 建议将此工具与 Manifest from Resources 工具生成的图像清单一起使用。
 
-- 该工具仅查看符号条目以生成代码包装器。 如果图像清单不包含符号，则生成的代码包装器将为空。 如果图像清单中有一个不使用符号的图像或图像集，则它们将从代码包装器中排除。
+- 该工具仅查找符号项以生成代码包装。 如果图像清单不包含任何符号，则生成的代码包装将为空。 如果图像清单中有一个图像或一组图像未使用符号，则将从代码包装中排除它们。
 
 ## <a name="sample-output"></a>示例输出
- **C# 包装**
+ **C # 包装**
 
- C# 的一对简单图像 ID 和图像名字对象类将类似于以下代码：
+ 适用于 c # 的一对简单映像 ID 和图像名字对象类将类似于以下代码：
 
 ```csharp
 //-----------------------------------------------------------------------------
@@ -96,9 +95,9 @@ namespace MyImages
 }
 ```
 
- **C++包装**
+ **C + + 包装**
 
- 一对用于C++的简单图像 ID 和图像名字对象类将类似于以下代码：
+ C + + 的一对简单图像 ID 和图像名字对象类将类似于以下代码：
 
 ```cpp
 //-----------------------------------------------------------------------------
@@ -155,9 +154,9 @@ __declspec(selectany) const ImageMoniker MyMonikers::MyImage2 = { MyImageIds::As
 }
 ```
 
- **可视基本包装器**
+ **Visual Basic 包装**
 
- Visual Basic 的一对简单图像 ID 和图像名字对象类将类似于以下代码：
+ Visual Basic 的一对简单映像 ID 和图像名字对象类将类似于以下代码：
 
 ```vb
 ' -----------------------------------------------------------------------------
@@ -211,9 +210,9 @@ Namespace MyImages
 End Namespace
 ```
 
- **VSCT 包装器**
+ **.VSCT 包装器**
 
- .vsct 文件的一组图像 ID 将类似于：
+ .Vsct 文件的一组映像 Id 将类似于以下内容：
 
 ```xml
 <?xml version='1.0' encoding='utf-8'?>

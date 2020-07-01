@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 26da567918ea25f212c4c03e87e81d5cc18b60ab
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 0bb76de0d62ab504090d9ac1864ba7ee5627f69d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85285970"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85537275"
 ---
 # <a name="analyze-resource-consumption-and-ui-thread-activity-xaml"></a>分析资源消耗情况和 UI 线程活动 (XAML)
 
@@ -100,7 +100,7 @@ ms.locfileid: "85285970"
 
 支持以下事件：
 
-|||
+|“属性”|描述|
 |-|-|
 |**分析**|分析 XAML 文件并创建对象所耗用的时间。<br /><br /> 展开“时间线详细信息”中的“分析”节点将显示由于根事件进行分析的所有 XAML 文件的依赖关系链 。 此提示可让你识别性能敏感方案中不必要的文件分析和对象创建并对其进行优化。|
 |**布局**|在大型应用程序中，可能会同时在屏幕上显示数千个元素。 此显示可能会导致 UI 帧速率降低以及应用程序响应能力相应地变差。 布局事件准确地确定布局每个元素的成本（即在 Arrange、Measure、ApplyTemplate、ArrangeOverride 和 MeasureOverride 中所用的时间）。 它还会生成参与布局过程的可视化树。 可以使用此可视化效果来确定要删除的逻辑树，或评估其他延期机制，以优化布局过程。|
@@ -116,7 +116,7 @@ ms.locfileid: "85285970"
 
 使用  “时间线详细信息”工具栏排序、筛选和指定  “时间线详细信息”视图条目的批注。
 
-|||
+|“属性”|描述|
 |-|-|
 |**排序依据**|按开始时间或事件的长度排序。|
 |![按框架为事件分组](../profiling/media/timeline_groupbyframes.png "TIMELINE_GroupByFrames")|添加或删除按框架对事件进行分组的顶级  “框架”类别。|

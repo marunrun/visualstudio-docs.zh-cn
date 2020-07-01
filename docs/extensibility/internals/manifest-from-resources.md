@@ -25,10 +25,10 @@ Manifest from Resources 工具是一个控制台应用程序，它获取图像�
 
  **参数**
 
-|**交换机名称**|**说明**|**必需或可选**|
+|**交换机名称**|**备注**|**必需或可选**|
 |-|-|-|
-|/resources|以分号分隔的图像或目录的列表。 此列表应始终包含清单中将包含的映像的完整列表。 如果只提供了部分列表，则不包含的项将丢失。<br /><br /> 如果给定的资源文件是图像条，则该工具会将其拆分为单独的映像，然后将每个 subimage 添加到清单中。<br /><br /> 如果图像是 .png 文件，我们建议您将此名称设置为如下格式，以便该工具可以填充图像的正确属性： \<Name> ... \<Width> \<Height>png.|必选|
-|/assembly|托管程序集的名称（不包括扩展名），或承载资源的本机程序集的运行时路径（相对于清单的运行时位置）。|必选|
+|/resources|以分号分隔的图像或目录的列表。 此列表应始终包含清单中将包含的映像的完整列表。 如果只提供了部分列表，则不包含的项将丢失。<br /><br /> 如果给定的资源文件是图像条，则该工具会将其拆分为单独的映像，然后将每个 subimage 添加到清单中。<br /><br /> 如果图像是 .png 文件，我们建议您将此名称设置为如下格式，以便该工具可以填充图像的正确属性： \<Name> ... \<Width> \<Height>png.|必需|
+|/assembly|托管程序集的名称（不包括扩展名），或承载资源的本机程序集的运行时路径（相对于清单的运行时位置）。|必需|
 |/manifest|要赋给生成的 imagemanifest 文件的名称。 这还可以包含在其他位置创建文件的绝对或相对路径。 默认名称与程序集名称匹配。<br /><br /> 默认值： \<Current Directory> \\<Assembly \> . imagemanifest|可选|
 |/guidName|要为生成的清单中的所有图像提供 GUID 符号的名称。<br /><br /> 默认值： AssetsGuid|可选|
 |/rootPath|需要在创建托管资源 Uri 之前去掉的根路径。 （此标志用于帮助处理错误的相关 URI 路径，从而导致资源无法加载。）<br /><br /> 默认值：\<Current Directory>|可选|
@@ -48,7 +48,7 @@ Manifest from Resources 工具是一个控制台应用程序，它获取图像�
 
 - ManifestFromResources/resources:D:\Images\Image1.png;D： \Images\Image1.xaml/assembly：/guidName： MyImages/newGuids/newIds
 
-## <a name="notes"></a>注意
+## <a name="notes"></a>备注
 
 - 该工具仅支持 .png 和 .xaml 文件。 任何其他图像或文件类型将被忽略。 对于分析资源时遇到的所有不支持的类型，将生成一个警告。 如果在工具完成对资源的分析后找不到支持的映像，则会生成错误
 

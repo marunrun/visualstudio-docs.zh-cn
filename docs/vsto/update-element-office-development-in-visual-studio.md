@@ -1,7 +1,7 @@
 ---
-title: '&lt;更新&gt;元素 （Visual Studio 中的 Office 开发）'
+title: '&lt;update &gt; 元素（Visual Studio 中的 Office 开发）'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 - CSharp
@@ -14,15 +14,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 461fae79e3af346d64017166b6dae3ace67599e1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 241bddb8c79a01bb1ba6921486a4dc46d99940cc
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62967528"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85537379"
 ---
-# <a name="ltupdategt-element-office-development-in-visual-studio"></a>&lt;更新&gt;元素 （Visual Studio 中的 Office 开发）
-  `update`元素指定的更新的解决方案将检查的间隔。
+# <a name="ltupdategt-element-office-development-in-visual-studio"></a>&lt;update &gt; 元素（Visual Studio 中的 Office 开发）
+  `update`元素指定解决方案检查更新的时间间隔。
 
 ## <a name="syntax"></a>语法
 
@@ -41,26 +41,26 @@ ms.locfileid: "62967528"
 
  `update` 元素具有以下属性。
 
-|特性|描述|
+|特性|说明|
 |---------------|-----------------|
-|`enabled`|必需。 将 enabled 设置为以下值之一：<br /><br /> -   **true**检查更新。<br />-   **false**以免检查更新。|
+|`enabled`|必需。 将 "启用" 设置为以下值之一：<br /><br /> -   若要检查更新，**则为 true** 。<br />-   若要防止检查更新，**则为 false** 。|
 
  `update` 元素具有以下子元素。
 
-### <a name="expiration"></a>过期
- `expiration` 元素是必需的，它位于 `vstav3` 命名空间中。 此元素指定的解决方案检查更新的间隔。
+### <a name="expiration"></a>expiration
+ `expiration` 元素是必需的，它位于 `vstav3` 命名空间中。 此元素指定解决方案检查更新的时间间隔。
 
  `expiration` 元素具有以下属性。
 
-|特性|描述|
+|特性|说明|
 |---------------|-----------------|
-|`maximumAge`| 必需。 这将设置为一个整数。|
-|`unit`|必需。 设置`unit`为以下值之一：<br /><br /> -   **小时数**<br />-   **days**<br />-   **周**|
+|`maximumAge`| 必需。 将此设置为等于整数。|
+|`unit`|必需。 设置 `unit` 为以下值之一：<br /><br /> -   **小时**<br />-   **天数**<br />-   **周**|
 
 ## <a name="example-of-always-checking-for-updates"></a>始终检查更新的示例
 
-### <a name="description"></a>描述
- 下面的代码示例说明了`update`设置始终检查更新 Office 解决方案中的元素。
+### <a name="description"></a>说明
+ 下面的代码示例演示了一个 `update` 元素，该元素设置为在 Office 解决方案中始终检查更新。
 
 ### <a name="code"></a>代码
 
@@ -68,10 +68,10 @@ ms.locfileid: "62967528"
 <vstav3:update enabled="true" />
 ```
 
-## <a name="example-of-setting-a-default-update-interval"></a>设置默认的更新时间间隔的示例
+## <a name="example-of-setting-a-default-update-interval"></a>设置默认更新间隔的示例
 
-### <a name="description"></a>描述
- 下面的代码示例说明了`update`Office 解决方案的应用程序清单中的元素。 此代码示例摘自[Office 解决方案的应用程序清单](../vsto/application-manifests-for-office-solutions.md)。
+### <a name="description"></a>说明
+ 下面的代码示例演示 `update` Office 解决方案的应用程序清单中的元素。 此代码示例是[Office 解决方案的应用程序清单](../vsto/application-manifests-for-office-solutions.md)中提供的一个更大示例的一部分。
 
 ### <a name="code"></a>代码
 
@@ -81,7 +81,7 @@ ms.locfileid: "62967528"
 </vstav3:update>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用 ClickOnce 部署 Office 解决方案](../vsto/deploying-an-office-solution-by-using-clickonce.md)
 - [Office 解决方案的应用程序清单](../vsto/application-manifests-for-office-solutions.md)

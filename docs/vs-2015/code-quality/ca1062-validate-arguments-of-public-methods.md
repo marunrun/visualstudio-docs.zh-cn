@@ -16,17 +16,17 @@ caps.latest.revision: 29
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 50044b51a3e576ff7d1c11b19b2f498f99b63019
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 377906675d70a712f8ca72b0b6e4d8a6864c1fbc
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72663647"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85533232"
 ---
-# <a name="ca1062-validate-arguments-of-public-methods"></a>CA1062：验证公共方法的自变量
+# <a name="ca1062-validate-arguments-of-public-methods"></a>CA1062:验证公共方法的参数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|项|值|
 |-|-|
 |TypeName|ValidateArgumentsOfPublicMethods|
 |CheckId|CA1062|
@@ -34,15 +34,15 @@ ms.locfileid: "72663647"
 |是否重大更改|非重大更改|
 
 ## <a name="cause"></a>原因
- 外部可见方法取消引用其引用参数之一，而不验证该参数是否 `null` （Visual Basic 中 `Nothing`）。
+ 外部可见方法取消引用其中一个引用参数，而不验证该参数是否为 `null` （ `Nothing` 在 Visual Basic 中）。
 
-## <a name="rule-description"></a>规则说明
- 对于传递给外部可见方法的所有引用参数，都应根据 `null` 检查。 如果需要，则在 `null` 参数时引发 <xref:System.ArgumentNullException>。
+## <a name="rule-description"></a>规则描述
+ 应检查传递给外部可见方法的所有引用参数 `null` 。 如果需要，则 <xref:System.ArgumentNullException> 在参数为时引发 `null` 。
 
- 如果可从未知程序集调用方法，因为该方法被声明为公共或受保护的，则应验证该方法的所有参数。 如果该方法设计为仅由已知程序集调用，则应将该方法设置为内部方法，并将 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 特性应用于包含该方法的程序集。
+ 如果可从未知程序集调用方法，因为该方法被声明为公共或受保护的，则应验证该方法的所有参数。 如果该方法设计为仅由已知程序集调用，则应将该方法设置为内部方法，并将该特性应用于 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 包含该方法的程序集。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
- 若要修复与此规则的冲突，请对每个引用参数验证 `null`。
+ 若要修复与此规则的冲突，请对的每个引用参数进行验证 `null` 。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
  如果确定取消引用的参数已由函数中的其他方法调用验证，则可以禁止显示此规则发出的警告。
@@ -55,16 +55,16 @@ ms.locfileid: "72663647"
  [!code-vb[FxCop.Design.ValidateArguments#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Design.ValidateArguments/vb/FxCop.Design.ValidateArguments.vb#1)]
 
 ## <a name="example"></a>示例
- 在 [!INCLUDE[vsprvslong](../includes/vsprvslong-md.md)] 中，此规则不检测将参数传递给执行验证的另一种方法。
+ 在中 [!INCLUDE[vsprvslong](../includes/vsprvslong-md.md)] ，此规则不检测将参数传递给执行验证的另一种方法。
 
  [!code-csharp[FxCop.Design.ValidateArguments#2](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.ValidateArguments/cs/fxcop.design.validatearguments.copyctors.cs#2)]
  [!code-csharp[FxCop.Design.ValidateArguments#2](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.ValidateArguments/cs/FxCop.Design.ValidateArguments.cs#2)]
  [!code-vb[FxCop.Design.ValidateArguments#2](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Design.ValidateArguments/vb/FxCop.Design.ValidateArguments.vb#2)]
 
 ## <a name="example"></a>示例
- 填充作为引用对象的字段或属性的复制构造函数也可能违反 CA1062 规则。 发生冲突的原因在于传递给复制构造函数的复制对象可能 `null` （Visual Basic 中 `Nothing`）。 若要解决此冲突，请使用静态方法（在 Visual Basic 中共享）检查复制的对象是否不为 null。
+ 填充作为引用对象的字段或属性的复制构造函数也可能违反 CA1062 规则。 发生冲突的原因是，传递到复制构造函数的复制的对象可能是 `null` （ `Nothing` Visual Basic）。 若要解决此冲突，请使用静态方法（在 Visual Basic 中共享）检查复制的对象是否不为 null。
 
- 在下面的 `Person` 类示例中，可能 `null` 传递到 `Person` 复制构造函数的 `other` 对象。
+ 在下面的 `Person` 类示例中， `other` 传递给 `Person` 复制构造函数的对象可能是 `null` 。
 
 ```
 
@@ -89,7 +89,7 @@ public class Person
 ```
 
 ## <a name="example"></a>示例
- 在下面修改后的 `Person` 示例中，首先在 `PassThroughNonNull` 方法中检查传递给复制构造函数的 `other` 对象是否为 null。
+ 在下面的修订 `Person` 示例中， `other` 首先在方法中检查传递给复制构造函数的对象是否为 null `PassThroughNonNull` 。
 
 ```
 public class Person

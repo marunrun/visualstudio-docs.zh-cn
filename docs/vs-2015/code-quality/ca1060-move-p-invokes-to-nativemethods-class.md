@@ -15,17 +15,17 @@ caps.latest.revision: 23
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 49a693224b6552340d2a01051318842749a84cc1
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: e01ad9fc4fc57917c123404d8863d04240585793
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72663681"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85533427"
 ---
 # <a name="ca1060-move-pinvokes-to-nativemethods-class"></a>CA1060：将 P/Invoke 移动到 NativeMethods 类
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|项|值|
 |-|-|
 |TypeName|MovePInvokesToNativeMethodsClass|
 |CheckId|CA1060|
@@ -35,16 +35,16 @@ ms.locfileid: "72663681"
 ## <a name="cause"></a>原因
  方法使用平台调用服务来访问非托管代码，而不是**NativeMethods**类之一的成员。
 
-## <a name="rule-description"></a>规则说明
- 平台调用方法（如使用 <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName> 特性标记的方法），或通过使用 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 中 `Declare` 关键字定义的方法访问非托管代码。 这些方法应为以下类之一：
+## <a name="rule-description"></a>规则描述
+ 平台调用方法（如使用特性标记的方法 <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName> 或使用中的关键字定义的方法）可 `Declare` [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 访问非托管代码。 这些方法应为以下类之一：
 
-- **NativeMethods** -此类不取消托管代码权限的堆栈行走。 （<xref:System.Security.SuppressUnmanagedCodeSecurityAttribute?displayProperty=fullName> 不得应用于此类。）此类用于可在任何位置使用的方法，因为将执行堆栈遍历。
+- **NativeMethods** -此类不取消托管代码权限的堆栈行走。 （ <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute?displayProperty=fullName> 不能应用于此类。）此类用于可在任何位置使用的方法，因为将执行堆栈遍历。
 
-- **SafeNativeMethods** -此类取消托管代码权限的堆栈行走。 （<xref:System.Security.SuppressUnmanagedCodeSecurityAttribute?displayProperty=fullName> 应用于此类。）此类适用于任何人都可以调用的安全方法。 这些方法的调用方不需要执行完整安全检查以确保使用是安全的，因为这些方法对于任何调用方是无害的。
+- **SafeNativeMethods** -此类取消托管代码权限的堆栈行走。 （ <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute?displayProperty=fullName> 将应用于此类。）此类适用于任何人都可以调用的安全方法。 这些方法的调用方不需要执行完整安全检查以确保使用是安全的，因为这些方法对于任何调用方是无害的。
 
-- **UnsafeNativeMethods** -此类取消托管代码权限的堆栈行走。 （<xref:System.Security.SuppressUnmanagedCodeSecurityAttribute?displayProperty=fullName> 应用于此类。）此类适用于有潜在危险的方法。 这些方法的任何调用方都必须执行完整安全检查，以确保使用是安全的，因为不会执行任何堆栈遍历。
+- **UnsafeNativeMethods** -此类取消托管代码权限的堆栈行走。 （ <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute?displayProperty=fullName> 将应用于此类。）此类适用于有潜在危险的方法。 这些方法的任何调用方都必须执行完整安全检查，以确保使用是安全的，因为不会执行任何堆栈遍历。
 
-  这些类在 Visual Basic 中声明为 `internal` （`Friend`），并声明一个私有构造函数来阻止创建新实例。 应 `static` 和 `internal` 这些类中的方法（`Shared`，并 `Friend` Visual Basic）。
+  这些类声明为 `internal` （ `Friend` 在 Visual Basic 中），并声明一个私有构造函数来阻止创建新实例。 这些类中的方法应为 `static` 和 `internal` （ `Shared` `Friend` 在 Visual Basic 中）。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
  若要修复与此规则的冲突，请将方法移动到相应的**NativeMethods**类中。 对于大多数应用程序，将 P/Invoke 移动到名为**NativeMethods**的新类就足够了。
@@ -69,7 +69,7 @@ ms.locfileid: "72663681"
 ### <a name="description"></a>描述
  由于**NativeMethods**类不应使用**SuppressUnmanagedCodeSecurityAttribute**进行标记，因此，放入它的 P/invoke 将需要**UnmanagedCode**权限。 由于大多数应用程序都从本地计算机运行并与完全信任一起运行，因此通常不会出现问题。 但是，如果要开发可重用的库，应考虑定义**SafeNativeMethods**或**UnsafeNativeMethods**类。
 
- 下面的示例演示了一种与**MessageBeep**函数进行包装的**交互哔声**方法。 **MessageBeep** P/Invoke 置于**NativeMethods**类中。
+ 下面的示例演示了**一个**MessageBeep 函数，该方法用于包装来自 user32.dll 的**MessageBeep**函数。 **MessageBeep** P/Invoke 置于**NativeMethods**类中。
 
 ### <a name="code"></a>代码
  [!code-csharp[FxCop.Design.NativeMethods#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.NativeMethods/cs/FxCop.Design.NativeMethods.cs#1)]
@@ -80,7 +80,7 @@ ms.locfileid: "72663681"
 ### <a name="description"></a>描述
  可以安全地公开给任何应用程序并没有任何副作用的 P/Invoke 方法应放在名为**SafeNativeMethods**的类中。 您无需权限，并且无需特别注意从其调用的位置。
 
- 下面的示例演示了一个**environment.tickcount**属性，该属性包装 kernel32.dll 中的**GetTickCount**函数。
+ 下面的示例演示了一个**environment.tickcount**属性，该属性将**GetTickCount**函数从 kernel32.dll 中包装。
 
 ### <a name="code"></a>代码
  [!code-csharp[FxCop.Design.NativeMethodsSafe#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.NativeMethodsSafe/cs/FxCop.Design.NativeMethodsSafe.cs#1)]
@@ -91,11 +91,11 @@ ms.locfileid: "72663681"
 ### <a name="description"></a>描述
  不能安全调用并且可能导致副作用的 P/Invoke 方法应放在名为**UnsafeNativeMethods**的类中。 应严格检查这些方法，以确保不会无意中向用户公开这些方法。 规则[CA2118：查看 SuppressUnmanagedCodeSecurityAttribute 用法](../code-quality/ca2118-review-suppressunmanagedcodesecurityattribute-usage.md)有助于此操作。 此外，这些方法在使用时，还应具有其他所需的权限，而不是**UnmanagedCode** 。
 
- 下面的示例演示了一个**Cursor。 Hide**方法，该方法可从 User32 包装**ShowCursor**函数。
+ 下面的示例演示了一个**Cursor。 Hide**方法，该方法可从 user32.dll 包装**ShowCursor**函数。
 
 ### <a name="code"></a>代码
  [!code-csharp[FxCop.Design.NativeMethodsUnsafe#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.NativeMethodsUnsafe/cs/FxCop.Design.NativeMethodsUnsafe.cs#1)]
  [!code-vb[FxCop.Design.NativeMethodsUnsafe#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Design.NativeMethodsUnsafe/vb/FxCop.Design.NativeMethodsUnsafe.vb#1)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [设计警告](../code-quality/design-warnings.md)
