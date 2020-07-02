@@ -5,7 +5,7 @@ ms.date: 01/18/2017
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 helpviewer_keywords:
 - Windows Script Host, implementing hosts
 ms.assetid: 9d5f6471-b318-40f3-be01-d9cd0b1cdd47
@@ -13,12 +13,12 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8468f578ee44487acd2575e81e01d65969110437
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: 51053dec1f8362aa9eef80e4867d2f92a06454cb
+ms.sourcegitcommit: 9a9c61ca115c22d33bb902153eb0853789c7be4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72568810"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85835324"
 ---
 # <a name="windows-script-hosts"></a>Windows 脚本宿主
 实现 Microsoft Windows 脚本宿主时，只要宿主执行以下操作，即可以大胆地假定脚本引擎只在基础线程的上下文中调用 [IActiveScriptSite](../winscript/reference/iactivescriptsite.md) 接口：  
@@ -40,5 +40,5 @@ ms.locfileid: "72568810"
 ## <a name="remarks"></a>备注  
  这些限制均不适用于选择实现自由线程 [IActiveScriptSite](../winscript/reference/iactivescriptsite.md) 接口和自由线程对象模型的宿主。 此类宿主可以使用任意线程中的 [IActiveScript](../winscript/reference/iactivescript.md) 接口，而不受任何限制。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Windows 脚本接口](../winscript/windows-script-interfaces.md)

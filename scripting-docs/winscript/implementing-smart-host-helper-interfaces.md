@@ -5,7 +5,7 @@ ms.date: 01/18/2017
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 helpviewer_keywords:
 - Smart Host Helper Interfaces, implementing
 ms.assetid: b9c44246-4d4d-469e-91be-00c8f5796fa5
@@ -13,12 +13,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9b387999d71690deaf5bea30a07439677065d63d
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: deac5827aa38039099f1d0f5e621d473db96743d
+ms.sourcegitcommit: 9a9c61ca115c22d33bb902153eb0853789c7be4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72574377"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85835597"
 ---
 # <a name="implementing-smart-host-helper-interfaces"></a>实现智能宿主帮助程序接口
 [IDebugDocumentHelper 接口](../winscript/reference/idebugdocumenthelper-interface.md)接口极大简化了为活动调试创建智能主机的任务，因为它提供了智能主机所需的许多接口的实现。  
@@ -104,5 +104,5 @@ pddh->CreateDebugDocumentContext(ulStartPos + uCharacterOffset, cChars, &pddcNew
   
 - 为文档提供文件系统中的路径名称。 某些调试 UI 使用它来允许用户编辑和保存对文档所做的更改。 调用 [IDebugDocumentHost::NotifyChanged](../winscript/reference/idebugdocumenthost-notifychanged.md)，以在文档保存后通知主机。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [活动脚本调试概述](../winscript/active-script-debugging-overview.md)
