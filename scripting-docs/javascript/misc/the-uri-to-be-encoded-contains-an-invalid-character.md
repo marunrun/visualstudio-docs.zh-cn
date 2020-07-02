@@ -3,7 +3,7 @@ title: 要编码的 URI 包含无效字符 |Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
-ms.topic: reference
+ms.topic: error-reference
 f1_keywords:
 - VS.WebClient.Help.SCRIPT5024
 dev_langs:
@@ -14,12 +14,12 @@ ms.assetid: a3f0fdbb-8d4b-41ae-a396-43dfc9483760
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 72fd550e27e64754fe8c4857e9aa4d25ae5711a6
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: e6091968dcbdd98240b1705e0fa7dc855dad3bda
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72572243"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85816067"
 ---
 # <a name="the-uri-to-be-encoded-contains-an-invalid-character"></a>要编码的 URI 包含无效字符
 您尝试将字符串编码为 URI （统一资源标识符），但它包含无效字符。 尽管大多数字符在要转换为 Uri 的字符串内有效，但某些 Unicode 字符序列是非法的。  
@@ -32,6 +32,6 @@ ms.locfileid: "72572243"
     <Scheme>:<first>/<second>;<third>?<fourth>  
     ```  
   
-## <a name="see-also"></a>另请参阅  
- [EncodeURI 函数](../../javascript/reference/encodeuri-function-javascript.md)   
+## <a name="see-also"></a>请参阅  
+ [encodeURI 函数](../../javascript/reference/encodeuri-function-javascript.md)   
  [encodeURIComponent 函数](../../javascript/reference/encodeuricomponent-function-javascript.md)

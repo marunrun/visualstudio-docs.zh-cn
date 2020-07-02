@@ -3,7 +3,7 @@ title: 未定义标识符 |Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
-ms.topic: reference
+ms.topic: error-reference
 f1_keywords:
 - VS.WebClient.Help.SCRIPT5009
 dev_langs:
@@ -14,15 +14,15 @@ ms.assetid: 8c8000d9-dd14-487e-922d-98430024a0f6
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b55b6d695cded9b7effac664dfca6ca9904e9d84
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: 3de7f224b6ff40f1606f9593704f799cd64d32da
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72572552"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85816054"
 ---
 # <a name="undefined-identifier"></a>未定义标识符
-尝试使用 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 编译器无法识别的标识符。 使用时，将返回未定义的值：  
+您尝试使用 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 编译器无法识别的标识符。 使用时，将返回未定义的值：  
   
 - 不存在的变量，  
   
@@ -32,8 +32,8 @@ ms.locfileid: "72572552"
   
 ### <a name="to-correct-this-error"></a>更正此错误  
   
-- 用**var**语句（如 `var` x;）声明该变量。  
+- 用**var**语句声明变量（如 `var` x：）。  
   
-## <a name="see-also"></a>另请参阅  
- [变量](../../javascript/variables-javascript.md)   
+## <a name="see-also"></a>请参阅  
+ [变化](../../javascript/variables-javascript.md)   
  [变量范围](../../javascript/advanced/variable-scope-javascript.md)

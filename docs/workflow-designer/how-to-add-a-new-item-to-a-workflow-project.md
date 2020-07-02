@@ -1,19 +1,19 @@
 ---
 title: 工作流设计器：向工作流项目添加新项
 ms.date: 06/25/2018
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 5c6180ca-af10-4513-b0cb-7d478fd84eab
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d7bedc36af2e8fbe19fbb3cc85d82be09d8673de
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 53737eb421f4194b00354899e373441ff0a97227
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75593949"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85814611"
 ---
 # <a name="how-to-add-a-new-item-to-a-workflow-project"></a>如何：向工作流项目添加新项
 
@@ -21,16 +21,16 @@ ms.locfileid: "75593949"
 
 下表列出了可添加到工作流项目的 Windows Workflow Foundation （WF）项：
 
-| Name | 描述 |
+| “属性” | 描述 |
 |-| - |
 | 活动 | 由其他活动组成的活动。 选择此项可将相同的 XAML 文件添加到项目中，就像为新项目选择 "**活动库**" 模板时所获得的那样。 有关此过程的详细信息，请参阅[创建工作流项目](creating-a-workflow-project.md)。 |
-| 活动设计人员 | 用于自定义活动的设计时体验的设计器。 选择此项可将相同文件添加到项目中，就像在为新项目选择 "**活动设计器库**" 模板时所获得的一样。 |
+| 活动设计器 | 用于自定义活动的设计时体验的设计器。 选择此项可将相同文件添加到项目中，就像在为新项目选择 "**活动设计器库**" 模板时所获得的一样。 |
 | Code 活动 | 一个采用代码编写执行逻辑的活动。 已为你生成一个源代码文件，该文件带有 <xref:System.Activities.CodeActivity.Execute%2A> 方法的重写。 |
 | WCF 工作流服务 | 使用工作流活动生成的 [!INCLUDE[indigo2](../workflow-designer/includes/indigo2_md.md)] 服务。 选择此项可将相同文件添加到项目中，就像在为新项目选择**WCF 工作流服务应用程序**模板时所获得的一样。 有关此过程的详细信息，请参阅[如何：创建 WCF 工作流服务应用程序](creating-a-workflow-project.md)。 |
 
 ## <a name="to-add-a-new-item-to-a-workflow-project"></a>向工作流项目添加新项
 
-1. 在“项目”菜单上，选择“添加新项”。
+1. 在“项目”**** 菜单上，选择“添加新项”****。
 
    此时将打开“添加新项”对话框。
 
@@ -43,6 +43,6 @@ ms.locfileid: "75593949"
 
 1. 选择 "**添加**" 将该项添加到项目。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [创建工作流项目](../workflow-designer/creating-a-workflow-project.md)
