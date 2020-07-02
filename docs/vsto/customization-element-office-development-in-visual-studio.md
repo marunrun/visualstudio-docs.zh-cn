@@ -1,9 +1,9 @@
 ---
-title: '&lt;自定义&gt;元素 （Visual Studio 中的 Office 开发）'
+title: '&lt;自定义 &gt; 元素（Visual Studio 中的 Office 开发）'
 titleSuffix: ''
 ms.custom: seodec18
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 - CSharp
@@ -14,17 +14,17 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 798cb2e7a8526e97a3d97240e181ef2e35ed21b1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 1239c6749f25bf4bce7a1f5cc89a2a8430c98a4d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62956055"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544867"
 ---
-# <a name="ltcustomizationgt-element-office-development-in-visual-studio"></a>&lt;自定义&gt;元素 （Visual Studio 中的 Office 开发）
+# <a name="ltcustomizationgt-element-office-development-in-visual-studio"></a>&lt;自定义 &gt; 元素（Visual Studio 中的 Office 开发）
   `customization` 命名空间的 `vstov4` 元素描述特定 Office 解决方案。 对于文档级自定义项和 VSTO 外接程序，子元素是不同的。
 
-## <a name="syntax-for-document-level-customizations"></a>对于文档级自定义项的语法
+## <a name="syntax-for-document-level-customizations"></a>文档级自定义项的语法
 
 ```xml
 <customization
@@ -65,18 +65,18 @@ ms.locfileid: "62956055"
  `customization` 元素具有以下子元素。
 
 #### <a name="document"></a>文档
- `document`中的元素`vstov4`中定义命名空间[&#60;文档&#62;元素&#40;Visual Studio 中的 Office 开发&#41;](../vsto/document-element-office-development-in-visual-studio.md)。
+ `document`命名空间中的元素 `vstov4` 是在[Visual Studio&#41;&#40;Office 开发&#60;文档&#62; 元素](../vsto/document-element-office-development-in-visual-studio.md)中定义的。
 
 ### <a name="vsto-add-ins"></a>VSTO 外接程序
  `customization` 元素具有以下子元素。
 
 #### <a name="appaddin"></a>appAddin
- `appAddin`中的元素`vstov4`中定义命名空间[ &#60;appAddin&#62;元素&#40;Visual Studio 中的 Office 开发&#41;](../vsto/appaddin-element-office-development-in-visual-studio.md)。
+ `appAddin`命名空间中的元素 `vstov4` 是在[Visual Studio&#41;中 &#40;Office 开发&#60;appAddin&#62; 元素](../vsto/appaddin-element-office-development-in-visual-studio.md)中定义的。
 
-## <a name="example-of-a-document-level-customization"></a>文档级自定义的示例
+## <a name="example-of-a-document-level-customization"></a>文档级自定义项示例
 
 ### <a name="description"></a>描述
- 下面的代码示例演示了文档级自定义项的 `customization` 元素。 此代码示例摘自[Office 解决方案的应用程序清单](../vsto/application-manifests-for-office-solutions.md)。
+ 下面的代码示例演示了文档级自定义项的 `customization` 元素。 此代码示例是[Office 解决方案的应用程序清单](../vsto/application-manifests-for-office-solutions.md)中提供的一个更大示例的一部分。
 
 ### <a name="code"></a>代码
 
@@ -87,10 +87,10 @@ ms.locfileid: "62956055"
 </vstov4:customization>
 ```
 
-## <a name="example-of-a-vsto-add-in"></a>VSTO 外接程序的示例
+## <a name="example-of-a-vsto-add-in"></a>VSTO 外接程序示例
 
 ### <a name="description"></a>描述
- 下面的代码示例说明了`customization`VSTO 外接程序的元素。 这是一个包含窗体区域的 Outlook VSTO 外接程序。 此代码示例摘自[Office 解决方案的应用程序清单](../vsto/application-manifests-for-office-solutions.md)。
+ 下面的代码示例演示了 `customization` VSTO 外接程序的元素。 这是一个包含窗体区域的 Outlook VSTO 外接程序。 此代码示例是[Office 解决方案的应用程序清单](../vsto/application-manifests-for-office-solutions.md)中提供的一个更大示例的一部分。
 
 ### <a name="code"></a>代码
 

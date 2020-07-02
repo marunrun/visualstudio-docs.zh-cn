@@ -15,17 +15,17 @@ caps.latest.revision: 19
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 366932c83328c6810e0103308db1c73a3e3076cb
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 77ec48a1164c7065ba5033ef51eb704b8361dc1c
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72671611"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544451"
 ---
-# <a name="ca1721-property-names-should-not-match-get-methods"></a>CA1721：属性名不应与 get 方法冲突
+# <a name="ca1721-property-names-should-not-match-get-methods"></a>CA1721:属性名不应与 get 方法冲突
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|项|值|
 |-|-|
 |TypeName|PropertyNamesShouldNotMatchGetMethods|
 |CheckId|CA1721|
@@ -35,7 +35,7 @@ ms.locfileid: "72671611"
 ## <a name="cause"></a>原因
  公共或受保护成员的名称以 "Get" 开头，否则与公共或受保护的属性的名称匹配。 例如，包含名为 "GetColor" 的方法和名为 "Color" 的属性的类型违反了此规则。
 
-## <a name="rule-description"></a>规则说明
+## <a name="rule-description"></a>规则描述
  Get 方法和属性的名称应能够明确区分其函数。
 
  命名约定为面向公共语言运行时的库提供了通用的外观。 这减少了学习新软件库所需的时间，并使客户对库的开发更加自信，因为有开发托管代码的专业技能。
@@ -56,4 +56,4 @@ ms.locfileid: "72671611"
  [!code-vb[FxCop.Naming.GetMethod#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Naming.GetMethod/vb/FxCop.Naming.GetMethod.vb#1)]
 
 ## <a name="related-rules"></a>相关规则
- [CA1024：在适用处使用属性](../code-quality/ca1024-use-properties-where-appropriate.md)
+ [CA1024:在适用处使用属性](../code-quality/ca1024-use-properties-where-appropriate.md)

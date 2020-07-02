@@ -1,7 +1,7 @@
 ---
 title: 如何：以编程方式列出工作簿中的所有工作表
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,12 +13,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 2153091b2b2abae05bf6f6c7856d2fa6d43f8967
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 700aca059c6ef18f0c8e43aa127c99eaeee4fa2a
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62812413"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85541448"
 ---
 # <a name="how-to-programmatically-list-all-worksheets-in-a-workbook"></a>如何：以编程方式列出工作簿中的所有工作表
   <xref:Microsoft.Office.Interop.Excel.Workbook> 类提供一个 <xref:Microsoft.Office.Interop.Excel.Worksheets> 对象。 此对象包含工作簿中所有 <xref:Microsoft.Office.Interop.Excel.Worksheet> 对象的集合。
@@ -41,6 +41,6 @@ ms.locfileid: "62812413"
 
 ## <a name="see-also"></a>请参阅
 - [使用工作表](../vsto/working-with-worksheets.md)
-- [如何：以编程方式将新工作表添加到工作簿](../vsto/how-to-programmatically-add-new-worksheets-to-workbooks.md)
-- [如何：以编程方式移动工作簿内的工作表](../vsto/how-to-programmatically-move-worksheets-within-workbooks.md)
-- [对 Office 项目中的对象的全局访问](../vsto/global-access-to-objects-in-office-projects.md)
+- [如何：以编程方式向工作簿添加新工作表](../vsto/how-to-programmatically-add-new-worksheets-to-workbooks.md)
+- [如何：以编程方式在工作簿中移动工作表](../vsto/how-to-programmatically-move-worksheets-within-workbooks.md)
+- [对 Office 项目中对象的全局访问](../vsto/global-access-to-objects-in-office-projects.md)

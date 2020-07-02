@@ -15,17 +15,17 @@ caps.latest.revision: 16
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 3dda56e6980133b0e33893fbb814c4a3a7008c49
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 04109e821d3a739b96ad63e1a441089a5d479cd8
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72656063"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85540772"
 ---
-# <a name="ca2222-do-not-decrease-inherited-member-visibility"></a>CA2222：不要递减继承成员的可见性
+# <a name="ca2222-do-not-decrease-inherited-member-visibility"></a>CA2222:不要递减继承成员的可见性
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|项|值|
 |-|-|
 |TypeName|DoNotDecreaseInheritedMemberVisibility|
 |CheckId|CA2222|
@@ -35,7 +35,7 @@ ms.locfileid: "72656063"
 ## <a name="cause"></a>原因
  未密封类型中的私有方法的签名与基类型中声明的公共方法相同。 私有方法不是最后一种方法。
 
-## <a name="rule-description"></a>规则说明
+## <a name="rule-description"></a>规则描述
  不能更改所继承成员的访问修饰符。 将继承的成员更改为私有成员不能防止调用方访问该方法的基类实现。 如果成员是私有的并且类型是不密封的，则继承类型可以在继承层次结构中调用方法的最后一个公共实现。 如果必须更改访问修饰符，则应将方法标记为 final，否则应密封其类型以防止重写方法。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突

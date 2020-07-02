@@ -67,7 +67,7 @@ ms.locfileid: "85543489"
 
      <xref:Microsoft.Office.Tools.Word.XMLNodes>创建一个控件，并将其添加到该项目中。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [XMLNodes 控件](../vsto/xmlnodes-control.md)
 - [使用扩展对象实现 Word 自动化](../vsto/automating-word-by-using-extended-objects.md)
 - [主机项和主机控件概述](../vsto/host-items-and-host-controls-overview.md)

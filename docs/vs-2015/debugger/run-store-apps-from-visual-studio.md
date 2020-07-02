@@ -14,12 +14,12 @@ caps.latest.revision: 15
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 3d5dfe0d5e5e9af35334629bd2bcd27f414dac11
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2ac3e8ec68553159972e88538d8a4bc1ec49ce50
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68154182"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85540304"
 ---
 # <a name="run-store-apps-from-visual-studio"></a>从 Visual Studio 运行应用商店应用
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -30,10 +30,10 @@ ms.locfileid: "68154182"
 
 ## <a name="in-this-section"></a>本节内容
 
-|||
+|Title|描述|
 |-|-|
-|[在本地计算机上运行 Windows 应用商店应用](../debugger/run-windows-store-apps-on-the-local-machine.md)|在 Visual Studio 设备上运行 Windows 应用商店应用。|
-|[在模拟器中运行 Windows 应用商店应用](../debugger/run-windows-store-apps-in-the-simulator.md)|在桌面窗口中运行 Windows 应用商店应用，以模拟 [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] 功能，如触摸和定向。|
+|[在本地计算机上运行 Windows 应用商店应用程序](../debugger/run-windows-store-apps-on-the-local-machine.md)|在 Visual Studio 设备上运行 Windows 应用商店应用。|
+|[在模拟器中运行 Windows 应用商店应用程序](../debugger/run-windows-store-apps-in-the-simulator.md)|在桌面窗口中运行 Windows 应用商店应用，以模拟 [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] 功能，如触摸和定向。|
 |[在远程计算机上运行 Windows 应用商店应用](../debugger/run-windows-store-apps-on-a-remote-machine.md)|在通过网络或直接通过以太网电缆连接到 Visual Studio 计算机的设备上，部署并运行 Windows 应用商店应用。|
 |[在仿真程序中运行 Windows Phone 应用](../debugger/run-windows-phone-apps-in-the-emulator.md)|在模拟 Windows Phone 的桌面窗口中运行 Windows 应用商店应用。|
-|[从 Visual Studio 部署 Windows 应用商店应用](../debugger/deploy-windows-store-apps-from-visual-studio.md)|在用于临时测试的设备上部署并注册 Windows 应用商店应用。|
+|[从 Visual Studio 部署 Windows 应用商店应用程序](../debugger/deploy-windows-store-apps-from-visual-studio.md)|在用于临时测试的设备上部署并注册 Windows 应用商店应用。|

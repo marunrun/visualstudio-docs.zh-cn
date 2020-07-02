@@ -1,7 +1,7 @@
 ---
 title: 如何：用数据填充 ListObject 控件
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -17,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 48af9145ce069b426b86f05bf0aadfc5386a6271
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 2941022cb434198298e9d098ef562efeaba4893f
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985921"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544815"
 ---
 # <a name="how-to-fill-listobject-controls-with-data"></a>如何：用数据填充 ListObject 控件
   可以使用数据绑定快速地将数据添加到文档中。 将数据绑定到列表对象后，可以断开列表对象的连接，以便它能显示数据且不再与数据源绑定。

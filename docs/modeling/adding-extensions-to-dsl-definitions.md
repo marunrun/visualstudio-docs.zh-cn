@@ -2,17 +2,17 @@
 title: 向 DSL 定义中添加扩展
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f3e44c79783479c46247e4026788725d6ae16da7
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 2500fc8d9e09d95d7972a4b151b01937a5570a08
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72747653"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544230"
 ---
 # <a name="add-extensions-to-dsl-definitions"></a>向 DSL 定义中添加扩展
 
@@ -36,4 +36,4 @@ DSL 扩展可以包含以下功能：
 
 ## <a name="see-also"></a>请参阅
 
-- [相关博客文章](https://devblogs.microsoft.com/devops/the-visual-studio-modeling-sdk-is-now-available-with-visual-studio-2017/)
+- [相关的博客文章](https://devblogs.microsoft.com/devops/the-visual-studio-modeling-sdk-is-now-available-with-visual-studio-2017/)

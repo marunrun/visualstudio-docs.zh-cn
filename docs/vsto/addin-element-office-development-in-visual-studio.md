@@ -1,8 +1,8 @@
 ---
-title: '&lt;外接程序&gt;元素 （Visual Studio 中的 Office 开发）'
+title: '&lt;addin &gt; 元素（Visual Studio 中的 Office 开发）'
 titleSuffix: ''
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 - CSharp
@@ -15,15 +15,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 3ab7b0617f09b98c9e30c7f198ef0e2aaa301e33
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: cf922799301aef67ee70c480dd9e0823382cbd47
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62931000"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543762"
 ---
-# <a name="ltaddingt-element-office-development-in-visual-studio"></a>&lt;外接程序&gt;元素 （Visual Studio 中的 Office 开发）
-  **外接程序**元素的`vstav3`命名空间包含特定于 Microsoft Office VSTO 外接程序和文档级自定义使用 Visual Studio 开发的信息。
+# <a name="ltaddingt-element-office-development-in-visual-studio"></a>&lt;addin &gt; 元素（Visual Studio 中的 Office 开发）
+  命名空间的**addin**元素 `vstav3` 包含特定于在 Visual Studio 中开发的 Microsoft Office VSTO 外接程序和文档级自定义项的信息。
 
 ## <a name="syntax"></a>语法
 
@@ -50,28 +50,28 @@ ms.locfileid: "62931000"
 ```
 
 ## <a name="elements-and-attributes"></a>元素和属性
- **外接程序**元素的`vstav3`命名空间包含有关 Office 解决方案和 Microsoft Office 应用程序的信息。 此元素必须在以下命名空间中： `vstav3=urn:schemas-microsoft-com:vsta.v3`。 子元素也必须在此命名空间中。
+ 命名空间的**addin**元素 `vstav3` 包含有关 Office 解决方案和 Microsoft Office 应用程序的信息。 此元素必须在以下命名空间中： `vstav3=urn:schemas-microsoft-com:vsta.v3`。 子元素也必须在此命名空间中。
 
  `addin` 元素没有属性。
 
  `addin` 元素具有以下子元素。
 
 ### <a name="entrypoints"></a>entryPoints
- 必需。 **入口点**元素所述[&#60;的入口点&#62;元素&#40;Visual Studio 中的 Office 开发&#41;](../vsto/entrypoints-element-office-development-in-visual-studio.md)。
+ 必需。 [&#60;s&#62; 元素 &#40;Visual Studio 中的 Office 开发&#41;](../vsto/entrypoints-element-office-development-in-visual-studio.md)中介绍了**s**元素。
 
 ### <a name="update"></a>更新
- 必需。 **更新**元素所述[&#60;更新&#62;元素&#40;Visual Studio 中的 Office 开发&#41;](../vsto/update-element-office-development-in-visual-studio.md)。
+ 必需。 [&#40;Visual Studio 中的 Office 开发&#41;中&#60;更新&#62; 元素](../vsto/update-element-office-development-in-visual-studio.md)中介绍了**update**元素。
 
 ### <a name="postactions"></a>postActions
- 可选。 **PostActions**元素所述[ &#60;postActions&#62;元素&#40;Visual Studio 中的 Office 开发&#41;](../vsto/postactions-element-office-development-in-visual-studio.md)。
+ 可选。 [&#60;postActions&#62; 元素 &#40;Visual Studio 中的 Office 开发&#41;](../vsto/postactions-element-office-development-in-visual-studio.md)中介绍了**postActions**元素。
 
-### <a name="application"></a>应用程序
- 必需。 **应用程序**元素所述[&#60;应用程序&#62;元素&#40;Visual Studio 中的 Office 开发&#41;](../vsto/application-element-office-development-in-visual-studio.md)。
+### <a name="application"></a>application
+ 必需。 [&#40;Visual Studio 中的 Office 开发&#41;中&#60;应用程序&#62; 元素](../vsto/application-element-office-development-in-visual-studio.md)中描述了**应用程序**元素。
 
 ## <a name="document-level-customization-example"></a>文档级自定义项示例
 
 ### <a name="description"></a>描述
- 下面的代码示例演示**外接程序**通过使用部署的文档级 Office 解决方案中的元素[!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]。 此代码示例摘自[Office 解决方案的应用程序清单](../vsto/application-manifests-for-office-solutions.md)。
+ 下面的代码示例说明了使用部署的文档级 Office 解决方案中的**addin**元素 [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] 。 此代码示例是[Office 解决方案的应用程序清单](../vsto/application-manifests-for-office-solutions.md)中提供的一个更大示例的一部分。
 
 ### <a name="code"></a>代码
 
@@ -135,7 +135,7 @@ ms.locfileid: "62931000"
 ## <a name="vsto-add-in-example"></a>VSTO 外接程序示例
 
 ### <a name="description"></a>描述
- 下面的代码示例演示**外接程序**通过使用部署的应用程序级 Office 解决方案中的元素[!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]。 此代码示例摘自[Office 解决方案的应用程序清单](../vsto/application-manifests-for-office-solutions.md)。
+ 下面的代码示例演示应用程序级 Office 解决方案中的**addin**元素，该解决方案是使用部署的 [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] 。 此代码示例是[Office 解决方案的应用程序清单](../vsto/application-manifests-for-office-solutions.md)中提供的一个更大示例的一部分。
 
 ### <a name="code"></a>代码
 

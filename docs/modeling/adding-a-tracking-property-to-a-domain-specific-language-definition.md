@@ -1,22 +1,22 @@
 ---
 title: 将跟踪属性添加到 DSL 定义
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - tracking properties [Domain-Specific Language Tools], walkthrough
 - Domain-Specific Language Tools, walkthroughs
 - walkthroughs [Domain-Specific Language Tools]
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9843e881ddfa202778321dc2e1510c2e121095db
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: d80a8d2ab334495daac4d82fe5c8faa2ad04683d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72984172"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544243"
 ---
 # <a name="add-a-tracking-property-to-a-domain-specific-language-definition"></a>向域特定语言定义中添加跟踪属性
 
@@ -42,7 +42,7 @@ ms.locfileid: "72984172"
 
 - 在 "**属性**" 窗口中，当跟踪属性在 "按用户状态更新" 时，其值以粗体显示。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
 
 在开始本演练之前，必须先安装这些组件：
 
@@ -60,17 +60,17 @@ ms.locfileid: "72984172"
 
     1. 选择**MinimalLanguage**模板。
 
-    2. 使用域特定语言 `TrackingPropertyDSL` 的默认名称。
+    2. 使用域特定语言的默认名称 `TrackingPropertyDSL` 。
 
-    3. 将模型文件的扩展名设置为 `trackingPropertyDsl`。
+    3. 将模型文件的扩展名设置为 `trackingPropertyDsl` 。
 
     4. 使用模型文件的默认模板图标。
 
-    5. 将产品的名称设置为 `Product Name`。
+    5. 将产品的名称设置为 `Product Name` 。
 
-    6. 将公司名称设置为 `Company Name`。
+    6. 将公司的名称设置为 `Company Name` 。
 
-    7. 使用解决方案中项目的根命名空间的默认值 `CompanyName.ProductName.TrackingPropertyDSL`。
+    7. 使用解决方案中项目的根命名空间的默认值 `CompanyName.ProductName.TrackingPropertyDSL` 。
 
     8. 允许向导为程序集创建强名称密钥文件。
 
@@ -91,27 +91,27 @@ ms.locfileid: "72984172"
 
 1. 在 DSL 设计器中，右键单击**位于 examplemodel.store**域类，指向 "**添加**"，然后单击 " **DomainProperty**"。
 
-    1. 将新属性命名 `DefaultNamespace`。
+    1. 为新属性命名 `DefaultNamespace` 。
 
-    2. 在新属性的 "**属性**" 窗口中，将 "**默认值**" 设置为 "`DefaultNamespace`"，将 "**类型**" 设置为 "**字符串**"。
+    2. 在新属性的 "**属性**" 窗口中，将 "**默认值**" 设置为 `DefaultNamespace` ，并将 "**类型**" 设置为 "**字符串**"。
 
-2. 对于**位于 examplemodel.store**域类，添加一个名为 `CustomElements` 的域属性。
+2. 对于**位于 examplemodel.store**域类，添加一个名为的域属性 `CustomElements` 。
 
      在新属性的 "**属性**" 窗口中，将 "**类型**" 设置为 "已**计算**"。
 
-3. 对于**ExampleElement**域类，添加一个名为 `Namespace` 的域属性。
+3. 对于**ExampleElement**域类，添加一个名为的域属性 `Namespace` 。
 
      在新属性的 "**属性**" 窗口中，将 "可**浏览**" 设置为 " **False**"，并将 "**类型**" 设置为**CustomStorage**。
 
-4. 对于**ExampleElement**域类，添加一个名为 `IsNamespaceTracking` 的域属性。
+4. 对于**ExampleElement**域类，添加一个名为的域属性 `IsNamespaceTracking` 。
 
-     在新属性的 "**属性**" 窗口中，将 "可**浏览**" 设置为 " **False**"，将 "**默认值**"**设置为 "** `true`"，将 "**类型**" 设置为
+     在新属性的 "**属性**" 窗口中，将 "可**浏览**" 设置为 " **False**"，将 "**默认值**" 设置为 `true` ，并将 "**类型**" 设置为**Boolean**
 
 ### <a name="to-update-the-diagram-elements-and-dsl-details"></a>更新关系图元素和 DSL 详细信息
 
 1. 在 DSL 设计器中，右键单击**ExampleShape**几何形状，指向 "**添加**"，然后单击 "**文本修饰**器"。
 
-    1. 将新的文本修饰器命名 `NamespaceDecorator`。
+    1. 命名新的文本修饰器 `NamespaceDecorator` 。
 
     2. 在文本修饰器的 "**属性**" 窗口中，将 "**位置**" 设置为**microsoft.visualstudio.modeling.diagrams.shapedecoratorposition.innerbottomleft**。
 
@@ -145,21 +145,21 @@ ms.locfileid: "72984172"
 
 您必须提供代码来维护跟踪属性的值和状态。 为了帮助你将自定义代码与生成的代码区分开来，并避免文件命名冲突，请将你的自定义代码文件放在单独的子文件夹中。
 
-1. 在**解决方案资源管理器**中，右键单击**DSL**项目，指向 "**添加**"，然后单击 "**新建文件夹**"。 将新文件夹命名为 `CustomCode`。
+1. 在**解决方案资源管理器**中，右键单击**DSL**项目，指向 "**添加**"，然后单击 "**新建文件夹**"。 将新文件夹命名为 `CustomCode` 。
 
 2. 右键单击新的 " **CustomCode** " 文件夹，指向 "**添加**"，然后单击 "**新建项**"。
 
-3. 选择**代码文件**模板，将 "**名称**" 设置为 "`NamespaceTrackingProperty.cs`"，然后单击 **"确定"** 。
+3. 选择**代码文件**模板，将 "**名称**" 设置为 `NamespaceTrackingProperty.cs` ，然后单击 **"确定"**。
 
      将创建并打开 NamespaceTrackingProperty.cs 文件进行编辑。
 
-4. 在文件夹中创建以下代码文件： `ExampleModel.cs,``HelperClasses.cs`、`Serialization.cs` 和 `TypeDescriptor.cs`。
+4. 在文件夹中创建以下代码文件： `ExampleModel.cs,``HelperClasses.cs` 、 `Serialization.cs` 和 `TypeDescriptor.cs` 。
 
-5. 在**DslPackage**项目中，另外创建一个 `CustomCode` 文件夹，并向其添加 `Package.cs` 的代码文件。
+5. 在**DslPackage**项目中，另外创建一个 `CustomCode` 文件夹，并向其添加一个 `Package.cs` 代码文件。
 
 ## <a name="add-helper-classes-to-support-tracking-properties"></a>添加帮助器类以支持跟踪属性
 
-向 HelperClasses.cs 文件添加 `TrackingHelper` 和 `CriticalException` 类，如下所示。 稍后将在本演练中引用这些类。
+向 HelperClasses.cs 文件添加 `TrackingHelper` 和类，如下所示 `CriticalException` 。 稍后将在本演练中引用这些类。
 
 1. 将以下代码添加到 HelperClasses.cs 文件。
 
@@ -238,10 +238,10 @@ ms.locfileid: "72984172"
 
 ## <a name="add-custom-code-for-the-custom-type-descriptor"></a>为自定义类型描述符添加自定义代码
 
-为 `ExampleModel` 域类的类型描述符实现 `GetCustomProperties` 方法。
+为 `GetCustomProperties` 域类的类型描述符实现方法 `ExampleModel` 。
 
 > [!NOTE]
-> DSL 工具为 `ExampleModel` 调用的自定义类型描述符生成的代码 `GetCustomProperties`;但是，DSL 工具不会生成实现方法的代码。
+> DSL 工具为自定义类型描述符生成的用于调用的代码 `ExampleModel` `GetCustomProperties` ; 但是，dsl 工具不会生成实现该方法的代码。
 
 定义此方法将为命名空间跟踪属性创建跟踪属性描述符。 此外，为跟踪属性提供属性后，"**属性**" 窗口可以正确显示属性。
 
@@ -334,16 +334,16 @@ ms.locfileid: "72984172"
 
 ## <a name="add-custom-code-for-the-model"></a>为模型添加自定义代码
 
-为 `ExampleModel` 域类实现 `GetCustomElementsValue` 方法。
+`GetCustomElementsValue`为域类实现方法 `ExampleModel` 。
 
 > [!NOTE]
-> DSL 工具为 `ExampleModel` 调用生成的代码 `GetCustomElementsValue`;但是，DSL 工具不会生成实现方法的代码。
+> DSL 工具为调用生成的代码 `ExampleModel` `GetCustomElementsValue` ; 但是，dsl 工具不会生成实现该方法的代码。
 
-定义 `GetCustomElementsValue` 方法为 `ExampleModel` 的 CustomElements 计算属性提供逻辑。 此方法对具有具有用户更新值的命名空间跟踪属性的 `ExampleElement` 域类的数目进行计数，并返回一个字符串，该字符串表示此计数作为模型中的总元素的一部分。
+定义 `GetCustomElementsValue` 方法可以为的 CustomElements 计算属性提供逻辑 `ExampleModel` 。 此方法对 `ExampleElement` 具有具有用户更新值的命名空间跟踪属性的域类的数量进行计数，并返回一个字符串，该字符串表示此计数作为模型中的总元素的一部分。
 
-此外，将 `OnDefaultNamespaceChanged` 方法添加到 `ExampleModel`，并重写 `ExampleModel` 的 `DefaultNamespacePropertyHandler` 嵌套类的 `OnValueChanged` 方法，以调用 `OnDefaultNamespaceChanged`。
+此外，将方法添加 `OnDefaultNamespaceChanged` 到 `ExampleModel` ，并重写的 `OnValueChanged` 嵌套类的方法 `DefaultNamespacePropertyHandler` `ExampleModel` 来调用 `OnDefaultNamespaceChanged` 。
 
-由于 DefaultNamespace 属性用于计算命名空间跟踪属性，因此 `ExampleModel` 必须通知所有 `ExampleElement` 域类 DefaultNamespace 的值已更改。
+因为 DefaultNamespace 属性用于计算命名空间跟踪属性，所以 `ExampleModel` 必须通知所有 `ExampleElement` 域类 DefaultNamespace 的值已更改。
 
 ### <a name="to-modify-the-property-handler-for-the-tracked-property"></a>修改所跟踪属性的属性处理程序
 
@@ -412,14 +412,14 @@ ms.locfileid: "72984172"
 
 ## <a name="add-custom-code-for-the-tracking-property"></a>为跟踪属性添加自定义代码
 
-向 `ExampleElement` 域类添加 `CalculateNamespace` 方法。
+向 `CalculateNamespace` 域类添加方法 `ExampleElement` 。
 
-定义此方法将为 `ExampleModel` 的 CustomElements 计算属性提供逻辑。 此方法对具有处于已更新的用户状态的命名空间跟踪属性的 `ExampleElement` 域类的数量进行计数，并返回一个字符串，该字符串表示此计数作为模型中的总元素的比例。
+定义此方法将提供的 CustomElements 计算属性的逻辑 `ExampleModel` 。 此方法对 `ExampleElement` 具有处于已更新的用户状态的命名空间跟踪属性的域类的数量进行计数，并返回一个字符串，该字符串表示此计数作为模型中的总元素的比例。
 
-此外，为获取和设置的 "命名空间" 自定义存储属性（`ExampleElement` 域类的命名空间自定义存储属性）添加存储。
+此外，还需要为域类的命名空间自定义存储属性添加存储，以及获取和设置方法 `ExampleElement` 。
 
 > [!NOTE]
-> DSL 工具为 `ExampleModel` 生成的代码调用 get 和 set 方法;但是，DSL 工具不会生成实现方法的代码。
+> DSL 工具为 `ExampleModel` 调用 get 和 set 方法而生成的代码; 但是，Dsl 工具不会生成实现方法的代码。
 
 ### <a name="to-add-the-method-for-the-custom-type-descriptor"></a>为自定义类型描述符添加方法
 
@@ -586,7 +586,7 @@ ms.locfileid: "72984172"
 添加代码以支持 XML 序列化的自定义加载后行为。
 
 > [!NOTE]
-> DSL 工具生成的代码调用 `OnPostLoadModel` 和 `OnPostLoadModelAndDiagram` 方法;但是，DSL 工具不会生成实现这些方法的代码。
+> DSL 工具生成的代码调用 `OnPostLoadModel` 和 `OnPostLoadModelAndDiagram` 方法; 但是，dsl 工具不会生成实现这些方法的代码。
 
 ### <a name="to-add-code-to-support-the-custom-post-load-behavior"></a>添加代码以支持自定义后加载行为
 
@@ -714,13 +714,13 @@ ms.locfileid: "72984172"
 
 ## <a name="test-the-language"></a>测试语言
 
-下一步是在 [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] 的新实例中生成并运行 DSL 设计器，以便可以验证跟踪属性是否正常工作。
+下一步是在新的实例中生成并运行 DSL 设计器， [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] 以便可以验证跟踪属性是否正常工作。
 
-1. 在“生成”菜单上，单击“重新生成解决方案”。
+1. 在“生成”菜单上，单击“重新生成解决方案” 。
 
 2. 在“调试”菜单上，单击“启动调试”。
 
-    [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] 的实验版本将打开包含空测试文件的**调试**解决方案。
+    的实验性生成 [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] 将打开包含空测试文件的**调试**解决方案。
 
 3. 在**解决方案资源管理器**中，双击 trackingPropertyDsl 文件以在设计器中将其打开，然后单击设计图面。
 

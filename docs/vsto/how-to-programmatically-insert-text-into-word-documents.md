@@ -1,7 +1,7 @@
 ---
-title: 如何：以编程方式将文本插入 Word 文档
+title: 如何：以编程方式在 Word 文档中插入文本
 ms.date: 08/14/2019
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -16,14 +16,14 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 8ff5e0314e9834bd3d0f048bc82780d7e4af073d
-ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
+ms.openlocfilehash: aef597099964333771fd488e0541b4ea4daf4553
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69551815"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85541500"
 ---
-# <a name="how-to-programmatically-insert-text-into-word-documents"></a>如何：以编程方式将文本插入 Word 文档
+# <a name="how-to-programmatically-insert-text-into-word-documents"></a>如何：以编程方式在 Word 文档中插入文本
   向 Microsoft Office Word 文档中插入文本主要有三种方式：
 
 - 在范围中插入文本。
@@ -33,7 +33,7 @@ ms.locfileid: "69551815"
 - 使用 <xref:Microsoft.Office.Interop.Word.Selection.TypeText%2A> 对象的 <xref:Microsoft.Office.Interop.Word.Selection> 方法在光标或所选位置处插入文本。
 
 > [!NOTE]
-> 你还可以将文本插入到内容控件和书签中。 有关详细信息, 请参阅[内容控件](../vsto/content-controls.md)和[书签控件](../vsto/bookmark-control.md)。
+> 你还可以将文本插入到内容控件和书签中。 有关详细信息，请参阅[内容控件](../vsto/content-controls.md)和[书签控件](../vsto/bookmark-control.md)。
 
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]
 
@@ -62,7 +62,7 @@ ms.locfileid: "69551815"
      [!code-csharp[Trin_VstcoreWordAutomation#52](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#52)]
 
 ## <a name="replace-text-in-a-range"></a>替换范围中的文本
- 如果指定的范围包含文本，则该范围中的所有文本将由插入的文本替换。
+ 如果指定的范围包含文本，则该范围中的所有文本将被插入的文本替换。
 
 ### <a name="to-replace-text-in-a-range"></a>若要替换范围中的文本
 
@@ -93,7 +93,7 @@ ms.locfileid: "69551815"
 
 ### <a name="to-insert-text-using-the-typetext-method"></a>若要使用 TypeText 方法插入文本
 
-1. 声明 <xref:Microsoft.Office.Interop.Word.Selection> 对象变量。
+1. 声明一个 <xref:Microsoft.Office.Interop.Word.Selection> 对象变量。
 
     [!code-vb[Trin_VstcoreWordAutomation#57](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#57)]
     [!code-csharp[Trin_VstcoreWordAutomation#57](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#57)]
@@ -120,7 +120,7 @@ ms.locfileid: "69551815"
     [!code-vb[Trin_VstcoreWordAutomation#61](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#61)]
     [!code-csharp[Trin_VstcoreWordAutomation#61](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#61)]
 
-   你还可以使用<xref:Microsoft.Office.Interop.Word.Selection.TypeBackspace%2A> <xref:Microsoft.Office.Interop.Word.Selection>对象的方法, 该方法模仿键盘上**Backspace**键的功能。 但是，当涉及到插入和操作文本时，<xref:Microsoft.Office.Interop.Word.Range> 对象将提供更多控件。
+   你还可以使用 <xref:Microsoft.Office.Interop.Word.Selection.TypeBackspace%2A> 对象的方法 <xref:Microsoft.Office.Interop.Word.Selection> ，该方法模仿键盘上**Backspace**键的功能。 但是，当涉及到插入和操作文本时，<xref:Microsoft.Office.Interop.Word.Range> 对象将提供更多控件。
 
    以下示例显示了完整的代码。 若要使用此示例，请运行项目中的 `ThisDocument` 或 `ThisAddIn` 类的代码。
 
@@ -128,6 +128,6 @@ ms.locfileid: "69551815"
    [!code-csharp[Trin_VstcoreWordAutomation#56](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#56)]
 
 ## <a name="see-also"></a>请参阅
-- [如何：以编程方式设置文档中文本的格式](../vsto/how-to-programmatically-format-text-in-documents.md)
+- [如何：以编程方式在文档中设置文本格式](../vsto/how-to-programmatically-format-text-in-documents.md)
 - [如何：以编程方式在文档中定义和选择范围](../vsto/how-to-programmatically-define-and-select-ranges-in-documents.md)
 - [如何：以编程方式在文档中扩展范围](../vsto/how-to-programmatically-extend-ranges-in-documents.md)

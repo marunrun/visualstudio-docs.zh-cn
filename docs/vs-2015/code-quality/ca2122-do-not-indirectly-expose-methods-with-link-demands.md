@@ -15,17 +15,17 @@ caps.latest.revision: 19
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 099e5f3f9a09eef57ce1b888601f61e85ceb97c5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 846ce010cddfd505bb967ec612a5c31dd8321977
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72643408"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544321"
 ---
-# <a name="ca2122-do-not-indirectly-expose-methods-with-link-demands"></a>CA2122：不要使用链接请求间接公开方法
+# <a name="ca2122-do-not-indirectly-expose-methods-with-link-demands"></a>CA2122:不要使用链接请求间接公开方法
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|项|值|
 |-|-|
 |TypeName|DoNotIndirectlyExposeMethodsWithLinkDemands|
 |CheckId|CA2122|
@@ -35,8 +35,8 @@ ms.locfileid: "72643408"
 ## <a name="cause"></a>原因
  公共或受保护成员具有[链接要求](https://msdn.microsoft.com/library/a33fd5f9-2de9-4653-a4f0-d9df25082c4d)，且由不执行任何安全检查的成员调用。
 
-## <a name="rule-description"></a>规则说明
- 链接请求仅检查直接调用方的权限。 如果成员 `X` 没有调用方的安全要求，并调用受链接要求保护的代码，则没有必需权限的调用方可以使用 `X` 来访问受保护的成员。
+## <a name="rule-description"></a>规则描述
+ 链接请求仅检查直接调用方的权限。 如果成员 `X` 不对其调用方进行安全要求，并调用受链接要求保护的代码，则没有必要权限的调用方可以使用 `X` 来访问受保护的成员。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
  向成员添加安全[数据和建模](https://msdn.microsoft.com/library/8c37635d-e2c1-4b64-a258-61d9e87405e6)或链接要求，使其不再提供对链接请求保护成员的安全访问。
@@ -45,7 +45,7 @@ ms.locfileid: "72643408"
  若要安全地禁止显示此规则发出的警告，您必须确保您的代码不会向调用方授予对可通过破坏性方式使用的操作或资源的访问权限。
 
 ## <a name="example"></a>示例
- 下面的示例显示了一个与该规则冲突的库，以及一个演示库的漏洞的应用程序。 示例库提供了两个共同违反规则的方法。 @No__t_0 方法受对环境变量的无限制访问的链接要求保护。 @No__t_0 方法在调用 `EnvironmentSetting` 之前不会对其调用方进行任何安全要求。
+ 下面的示例显示了一个与该规则冲突的库，以及一个演示库的漏洞的应用程序。 示例库提供了两个共同违反规则的方法。 此 `EnvironmentSetting` 方法受对环境变量的无限制访问的链接要求的保护。 此 `DomainInformation` 方法在调用之前不会对其调用方进行安全要求 `EnvironmentSetting` 。
 
  [!code-csharp[FxCop.Security.UnsecuredDoNotCall#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Security.UnsecuredDoNotCall/cs/FxCop.Security.UnsecuredDoNotCall.cs#1)]
 
@@ -57,5 +57,5 @@ ms.locfileid: "72643408"
  本示例生成以下输出。
 
  **来自不安全成员的值： seattle.corp.contoso.com**
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [安全编码准则](https://msdn.microsoft.com/library/4f882d94-262b-4494-b0a6-ba9ba1f5f177)[链接要求](https://msdn.microsoft.com/library/a33fd5f9-2de9-4653-a4f0-d9df25082c4d)[数据和建模](https://msdn.microsoft.com/library/8c37635d-e2c1-4b64-a258-61d9e87405e6)

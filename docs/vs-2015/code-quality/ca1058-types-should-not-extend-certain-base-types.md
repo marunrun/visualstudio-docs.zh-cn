@@ -15,17 +15,17 @@ caps.latest.revision: 26
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 9a4663fe3bc09b27bad9eeec05e325f07a3de6f3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: d8e267b1e6203759efc91936a3b13059368a3862
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72603057"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545387"
 ---
-# <a name="ca1058-types-should-not-extend-certain-base-types"></a>CA1058：类型不应扩展某些基类型
+# <a name="ca1058-types-should-not-extend-certain-base-types"></a>CA1058:类型不应扩展某些基类型
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|项|值|
 |-|-|
 |TypeName|TypesShouldNotExtendCertainBaseTypes|
 |CheckId|CA1058|
@@ -51,10 +51,10 @@ ms.locfileid: "72603057"
 
 - <xref:System.Collections.Stack?displayProperty=fullName>
 
-## <a name="rule-description"></a>规则说明
- 对于 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 版本1，建议从 <xref:System.ApplicationException> 中派生出新的异常。 建议已更改，新异常应派生自 <xref:System> 命名空间中 <xref:System.Exception?displayProperty=fullName> 或其子类之一。
+## <a name="rule-description"></a>规则描述
+ 对于 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 版本1，建议从派生新的异常 <xref:System.ApplicationException> 。 建议已更改，新异常应派生自 <xref:System.Exception?displayProperty=fullName> 或其命名空间中的一个子类 <xref:System> 。
 
- 如果要创建基础对象模型或数据源的 XML 视图，请不要创建 <xref:System.Xml.XmlDocument> 的子类。
+ <xref:System.Xml.XmlDocument>如果要创建基础对象模型或数据源的 XML 视图，请不要创建的子类。
 
 ### <a name="non-generic-collections"></a>非泛型集合
  尽可能使用和/或扩展泛型集合。 不要在代码中扩展非泛型集合，除非你之前已将其发布。
@@ -87,4 +87,4 @@ public class MyReadOnlyCollection : ReadOnlyCollection<T>
  若要修复与此规则的冲突，请从其他基类型或泛型集合派生该类型。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
- 请勿禁止显示此规则发出的有关 <xref:System.ApplicationException> 冲突的警告。 可以安全地禁止显示此规则发出的有关 <xref:System.Xml.XmlDocument> 的冲突。 如果以前发布了代码，则可以安全地禁止显示非泛型集合的警告。
+ 不要禁止显示此规则发出的有关的冲突 <xref:System.ApplicationException> 。 可以安全地禁止显示此规则发出的有关冲突的警告 <xref:System.Xml.XmlDocument> 。 如果以前发布了代码，则可以安全地禁止显示非泛型集合的警告。

@@ -1,7 +1,7 @@
 ---
 title: 如何：使用内容控件保护文档的某些部分
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -18,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 129962209d8cfa541a34bc1575a73382cd63d7c4
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: b03521023ea0b4d92bd3125f256d2230de9bba03
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71254667"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85541344"
 ---
 # <a name="how-to-protect-parts-of-documents-by-using-content-controls"></a>如何：使用内容控件保护文档的某些部分
   当你保护文档的一部分时，将阻止用户更改或删除文档该部分中的内容。 通过使用内容控件，有以下几种方法来保护 Microsoft Office Word 文档的各个部分：
@@ -34,10 +34,10 @@ ms.locfileid: "71254667"
 
   [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]
 
-## <a name="EditDeleteControl"></a>保护内容控件
+## <a name="protect-a-content-control"></a><a name="EditDeleteControl"></a>保护内容控件
  可以通过在设计时或运行时设置文档级项目中控件的属性，阻止用户编辑或删除内容控件。
 
- 还可以使用 VSTO 外接程序项目保护在运行时添加到文档中的内容控件。 有关详细信息，请参阅[如何：向 Word 文档](../vsto/how-to-add-content-controls-to-word-documents.md)添加内容控件。
+ 还可以使用 VSTO 外接程序项目保护在运行时添加到文档中的内容控件。 有关详细信息，请参阅[如何：向 Word 文档添加内容控件](../vsto/how-to-add-content-controls-to-word-documents.md)。
 
 ### <a name="to-protect-a-content-control-at-design-time"></a>若要在设计时保护内容控件
 
@@ -53,7 +53,7 @@ ms.locfileid: "71254667"
 
 ### <a name="to-protect-a-content-control-at-run-time"></a>若要在运行时保护内容控件
 
-1. 将内容控件的`LockContentControl`属性设置为 true 可阻止用户编辑控件，并将属性设置为 true，以防止用户`LockContents`删除控件。
+1. 将 `LockContents` 内容控件的属性设置为**true**可阻止用户编辑控件，并将 `LockContentControl` 属性设置为**true** ，以防止用户删除控件。
 
      下面的代码示例演示如何使用文档级项目的两个不同 <xref:Microsoft.Office.Tools.Word.RichTextContentControl> 对象的 <xref:Microsoft.Office.Tools.Word.RichTextContentControl.LockContents%2A> 和 <xref:Microsoft.Office.Tools.Word.RichTextContentControl.LockContentControl%2A> 属性。 若要运行此代码，将此代码添加到项目的 `ThisDocument` 类中，然后从 `AddProtectedContentControls` 事件处理程序调用 `ThisDocument_Startup` 方法。
 
@@ -82,7 +82,7 @@ ms.locfileid: "71254667"
 2. 在功能区上，单击 **“开发人员”** 选项卡。
 
     > [!NOTE]
-    > 如果看不到 **“开发人员”** 选项卡，则必须首先显示它。 有关详细信息，请参阅[如何：在功能区](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)上显示 "开发人员" 选项卡。
+    > 如果看不到 **“开发人员”** 选项卡，则必须首先显示它。 有关详细信息，请参阅[如何：在功能区上显示 "开发人员" 选项卡](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)。
 
 3. 在 "**控件**" 组中，单击 "**组**" 下拉按钮，然后单击 "**组**"。
 

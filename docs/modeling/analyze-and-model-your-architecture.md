@@ -1,7 +1,7 @@
 ---
 title: 对体系结构进行分析和建模
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: overview
 helpviewer_keywords:
 - diagrams - modeling
 - architecture
@@ -17,12 +17,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f0c9bbb0e98fe717e696aa974f4af5ba29de498e
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: e1db28867ea47752aa74b7898c44e797c0704594
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75590574"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544217"
 ---
 # <a name="analyze-and-model-your-architecture"></a>对体系结构进行分析和建模
 
@@ -38,12 +38,12 @@ ms.locfileid: "75590574"
 
 ## <a name="article-reference"></a>文章参考
 
-|||
+|方案|文章|
 |-|-|
-|**可视化代码**：<br /><br />-通过创建代码图来查看代码的组织和关系。 可视化程序集、命名空间、类、方法等之间的依赖关系。<br />-通过从代码创建类关系图，查看特定项目的类结构和成员。<br />-通过创建用于验证代码的依赖项关系图，查找代码和其设计之间的冲突。|- [可视化代码](../modeling/visualize-code.md)<br />[使用类和其他类型的 - （类设计器）](../ide/class-designer/designing-and-viewing-classes-and-types.md)<br />- [视频：通过 Visual Studio 2015 代码图从代码中了解设计](https://channel9.msdn.com/Events/Visual-Studio/Connect-event-2015/502)<br />- [视频：实时验证你的体系结构依赖关系](https://sec.ch9.ms/sessions/69613110-c334-4f25-bb36-08e5a93456b5/170ValidateArchitectureDependenciesWithVisualStudio.mp4)|
-|**定义体系结构**：<br /><br />-通过创建依赖项关系图来定义和强制执行代码组件之间的依赖关系的约束。|- [视频：通过 Visual Studio 验证体系结构依赖项（第9频道）](https://channel9.msdn.com/Events/Connect/2016/170)|
-|**使用要求和预期设计来验证你的系统：**<br /><br />-验证与依赖关系图相关的代码依赖关系图，这些关系图描述了预期的体系结构并防止可能与设计发生冲突的更改。|- [视频：通过 Visual Studio 验证体系结构依赖项（第9频道）](https://channel9.msdn.com/Events/Connect/2016/170)|
-|**自定义模型和关系图**：<br /><br />-创建您自己的域特定语言。|[适用于 Visual Studio 的 - 建模 SDK-特定于域的语言](../modeling/modeling-sdk-for-visual-studio-domain-specific-languages.md)|
+|**可视化代码**：<br /><br />-通过创建代码图来查看代码的组织和关系。 可视化程序集、命名空间、类、方法等之间的依赖关系。<br />-通过从代码创建类关系图，查看特定项目的类结构和成员。<br />-通过创建用于验证代码的依赖项关系图，查找代码和其设计之间的冲突。|- [可视化代码](../modeling/visualize-code.md)<br />- [使用类和其他类型（类设计器）](../ide/class-designer/designing-and-viewing-classes-and-types.md)<br />- [视频：利用 Visual Studio 2015 代码图从代码中了解设计](https://channel9.msdn.com/Events/Visual-Studio/Connect-event-2015/502)<br />- [视频：实时验证你的体系结构依赖关系](https://sec.ch9.ms/sessions/69613110-c334-4f25-bb36-08e5a93456b5/170ValidateArchitectureDependenciesWithVisualStudio.mp4)|
+|**定义体系结构**：<br /><br />-通过创建依赖项关系图来定义和强制执行代码组件之间的依赖关系的约束。|- [视频：通过 Visual Studio 验证体系结构依赖关系（通道9）](https://channel9.msdn.com/Events/Connect/2016/170)|
+|**使用要求和预期设计来验证你的系统：**<br /><br />-验证与依赖关系图相关的代码依赖关系图，这些关系图描述了预期的体系结构并防止可能与设计发生冲突的更改。|- [视频：通过 Visual Studio 验证体系结构依赖关系（通道9）](https://channel9.msdn.com/Events/Connect/2016/170)|
+|**自定义模型和关系图**：<br /><br />-创建您自己的域特定语言。|- [Visual Studio 的建模 SDK-特定于域的语言](../modeling/modeling-sdk-for-visual-studio-domain-specific-languages.md)|
 |**使用 T4 模板生成文本**：<br /><br />-使用模板内的文本块和控制逻辑生成基于文本的文件。<br /> -Visual Studio 中包含 MSBuild 的 T4 模板生成|- [代码生成和 T4 文本模板](../modeling/code-generation-and-t4-text-templates.md)|
 |**使用 Team Foundation 版本控制共享模型、关系图和代码图**：<br /><br />-将代码图、项目和依赖项关系图置于 Team Foundation 版本控制下，以便可以共享它们。| |
 
@@ -93,7 +93,7 @@ DSL 是为特定目的而设计的一种表示法。 在 Visual Studio 中，它
 
 - [Visual Studio 的建模 SDK - 特定于域的语言](../modeling/modeling-sdk-for-visual-studio-domain-specific-languages.md)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [Visual Studio 2017 中建模的新增功能](../modeling/what-s-new-for-design-in-visual-studio.md)
 - [DevOps 和应用程序生命周期管理](/azure/devops/user-guide/devops-alm-overview)

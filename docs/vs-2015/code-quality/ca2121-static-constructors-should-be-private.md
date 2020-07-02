@@ -25,11 +25,11 @@ ms.locfileid: "85544308"
 # <a name="ca2121-static-constructors-should-be-private"></a>CA2121:静态构造函数应为私有
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|Item|值|
+|项|值|
 |-|-|
 |TypeName|StaticConstructorsShouldBePrivate|
 |CheckId|CA2121|
-|Category|Microsoft.Security|
+|类别|Microsoft.Security|
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因

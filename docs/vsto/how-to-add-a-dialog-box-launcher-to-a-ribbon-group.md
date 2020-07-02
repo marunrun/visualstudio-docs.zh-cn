@@ -1,7 +1,7 @@
 ---
 title: 如何：向功能区组添加对话框启动器
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,12 +13,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: b930348845e04dca089cf153a11cc2a9fd29c880
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 29b260929d0478749296496db5b454326497d3ad
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71255894"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85541613"
 ---
 # <a name="how-to-add-a-dialog-box-launcher-to-a-ribbon-group"></a>如何：向功能区组添加对话框启动器
   您可以向功能区上的任何组添加对话框启动器。 对话框启动器是出现在组中的小图标。 用户单击此图标可打开相关对话框或任务窗格，其中提供了与组相关的更多选项。
@@ -27,13 +27,13 @@ ms.locfileid: "71255894"
 
 ### <a name="to-add-a-dialog-box-launcher-to-a-ribbon-group"></a>向功能区组添加对话框启动器
 
-1. 在**解决方案资源管理器**中选择功能区代码文件（ *.vb*或 *.cs*文件）。
+1. 在**解决方案资源管理器**中选择功能区代码文件（*.vb*或 *.cs*文件）。
 
 2. 在 "**视图**" 菜单上，单击 "**设计器**"。
 
 3. 在功能区设计器中，右键单击任何组，然后单击 "**添加 DialogBoxLauncher**"。
 
-     将代码添加到<xref:Microsoft.Office.Tools.Ribbon.RibbonGroup.DialogLauncherClick>组的事件，以打开自定义或内置对话框。
+     将代码添加到 <xref:Microsoft.Office.Tools.Ribbon.RibbonGroup.DialogLauncherClick> 组的事件，以打开自定义或内置对话框。
 
 ## <a name="see-also"></a>请参阅
 - [功能区概述](../vsto/ribbon-overview.md)
@@ -47,7 +47,7 @@ ms.locfileid: "71255894"
 - [如何：自定义内置选项卡](../vsto/how-to-customize-a-built-in-tab.md)
 - [如何：向 backstage 视图添加控件](../vsto/how-to-add-controls-to-the-backstage-view.md)
 - [自定义 Outlook 功能区](../vsto/customizing-a-ribbon-for-outlook.md)
-- [如何：自定义功能区入门](../vsto/how-to-get-started-customizing-the-ribbon.md)
+- [如何：开始自定义功能区](../vsto/how-to-get-started-customizing-the-ribbon.md)
 - [如何：显示外接程序用户界面错误](../vsto/how-to-show-add-in-user-interface-errors.md)
 - [演练：使用功能区设计器创建自定义选项卡](../vsto/walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer.md)
 - [演练：在运行时更新功能区上的控件](../vsto/walkthrough-updating-the-controls-on-a-ribbon-at-run-time.md)

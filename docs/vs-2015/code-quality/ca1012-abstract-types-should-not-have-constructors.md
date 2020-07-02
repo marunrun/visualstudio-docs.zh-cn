@@ -14,17 +14,17 @@ caps.latest.revision: 27
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: f3f53e8b5eab78e79387c24643500888db27b764
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 2c88144e788fb35a3c330aa28b4e9d8b91ff8003
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72663234"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545452"
 ---
-# <a name="ca1012-abstract-types-should-not-have-constructors"></a>CA1012：抽象类型不应具有构造函数
+# <a name="ca1012-abstract-types-should-not-have-constructors"></a>CA1012:抽象类型不应具有构造函数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|项|值|
 |-|-|
 |TypeName|AbstractTypesShouldNotHaveConstructors|
 |CheckId|CA1012|
@@ -34,7 +34,7 @@ ms.locfileid: "72663234"
 ## <a name="cause"></a>原因
  公共类型是抽象的，并且具有公共构造函数。
 
-## <a name="rule-description"></a>规则说明
+## <a name="rule-description"></a>规则描述
  抽象类型的构造函数只能由派生类型调用。 由于公共构造函数用于创建类型的实例，但无法为抽象类型创建实例，因此具有公共构造函数的抽象类在设计上是错误的。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
@@ -50,7 +50,7 @@ ms.locfileid: "72663234"
  [!code-vb[FxCop.Design.AbstractTypeBad#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Design.AbstractTypeBad/vb/FxCop.Design.AbstractTypeBad.vb#1)]
 
 ## <a name="example"></a>示例
- 下面的示例通过将构造函数的可访问性从 `public` 更改为 `protected` 来修复以前的冲突。
+ 下面的示例通过将构造函数的可访问性从更改为来修复以前的冲突 `public` `protected` 。
 
  [!code-csharp[FxCop.Design.AbstractTypeGood#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.AbstractTypeGood/cs/FxCop.Design.AbstractTypeGood.cs#1)]
  [!code-vb[FxCop.Design.AbstractTypeGood#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Design.AbstractTypeGood/vb/FxCop.Design.AbstractTypeGood.vb#1)]

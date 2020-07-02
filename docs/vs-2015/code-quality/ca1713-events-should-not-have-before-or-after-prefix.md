@@ -15,17 +15,17 @@ caps.latest.revision: 16
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 7286272e121cf5054013576c4278f787c8423d79
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: b05c39a9d8a4a004359baf63919eb427c25fa5d9
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669153"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543957"
 ---
-# <a name="ca1713-events-should-not-have-before-or-after-prefix"></a>CA1713：事件不应具有 before 或 after 前缀
+# <a name="ca1713-events-should-not-have-before-or-after-prefix"></a>CA1713:事件不应具有 before 或 after 前缀
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|项|值|
 |-|-|
 |TypeName|EventsShouldNotHaveBeforeOrAfterPrefix|
 |CheckId|CA1713|
@@ -35,7 +35,7 @@ ms.locfileid: "72669153"
 ## <a name="cause"></a>原因
  事件的名称以 "Before" 或 "After" 开头。
 
-## <a name="rule-description"></a>规则说明
+## <a name="rule-description"></a>规则描述
  事件名称应描述引发事件的操作。 若要命名按特定顺序引发的相关事件，请使用现在时或过去时指示一系列操作中的相对位置。 例如，在为关闭资源时引发的事件对进行命名时，可以将其命名为 "关闭" 和 "关闭"，而不是 "BeforeClose" 和 "AfterClose"。
 
  命名约定为面向公共语言运行时的库提供了通用的外观。 这减少了新软件库所需的学习曲线，并使客户可以放心地了解库是由具有开发托管代码的专业技能的人员开发的。

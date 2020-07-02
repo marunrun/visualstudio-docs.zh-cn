@@ -8,17 +8,17 @@ caps.latest.revision: 11
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: b9c2c996c383c8834e44e16f382c14b695c83f26
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: afadf41fc753051047e858758bfe0677987d726d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669000"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545062"
 ---
-# <a name="ca5350-do-not-use-weak-cryptographic-algorithms"></a>CA5350：请勿使用弱加密算法
+# <a name="ca5350-do-not-use-weak-cryptographic-algorithms"></a>CA5350:请勿使用弱加密算法
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|项|值|
 |-|-|
 |TypeName|DoNotUseWeakCryptographicAlgorithms|
 |CheckId|CA5350|
@@ -33,7 +33,7 @@ ms.locfileid: "72669000"
 
  这些加密算法不能与更现代的对应算法提供同样多的安全保证。 与更现代的哈希算法相比，加密哈希算法 <xref:System.Security.Cryptography.SHA1> 和 <xref:System.Security.Cryptography.RIPEMD160> 提供的冲突抗性较低。 与更现代的加密算法相比，加密算法 <xref:System.Security.Cryptography.TripleDES> 提供的安全位数更少。
 
-## <a name="rule-description"></a>规则说明
+## <a name="rule-description"></a>规则描述
  现今出于多种原因而使用弱加密算法和哈希函数，但不应将其用于保证其所保护数据的保密性。
 
  该规则在代码中发现 3DES、SHA1 或 RIPEMD160 算法时将触发并向用户发送警告。
@@ -43,7 +43,7 @@ ms.locfileid: "72669000"
 
 - 对于 TripleDES 加密，请使用 <xref:System.Security.Cryptography.Aes> 加密。
 
-- 对于 SHA1 或 RIPEMD160 哈希函数，请从 [SHA-2](https://msdn.microsoft.com/library/windows/desktop/aa382459.aspx) 系列（例如 <xref:System.Security.Cryptography.SHA512>、 <xref:System.Security.Cryptography.SHA384>、 <xref:System.Security.Cryptography.SHA256>）中选择使用。
+- 对于 SHA1 或 RIPEMD160 哈希函数，请使用[sha-1](https://msdn.microsoft.com/library/windows/desktop/aa382459.aspx)系列中的函数（例如 <xref:System.Security.Cryptography.SHA512> ，、 <xref:System.Security.Cryptography.SHA384> 、 <xref:System.Security.Cryptography.SHA256> ）。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
  当数据所需的保护级别不需要安全保证时，请禁止显示此规则的警告。

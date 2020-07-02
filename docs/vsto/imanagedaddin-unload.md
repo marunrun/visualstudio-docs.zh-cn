@@ -34,6 +34,6 @@ HRESULT Unload();
 ## <a name="remarks"></a>备注
  当前版本的 Microsoft Office 不调用此方法。 此方法保留供将来使用。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [IManagedAddin 接口](../vsto/imanagedaddin-interface.md)
 - [IManagedAddin::Load](../vsto/imanagedaddin-load.md)

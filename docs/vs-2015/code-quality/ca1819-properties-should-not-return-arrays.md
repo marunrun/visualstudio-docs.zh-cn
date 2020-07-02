@@ -15,17 +15,17 @@ caps.latest.revision: 24
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 5c85efc3e601eb9e0d887043c50b30587e51321e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a96d2164cbd6c03cb0d191b2d0c3c4607468209c
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72668379"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545322"
 ---
-# <a name="ca1819-properties-should-not-return-arrays"></a>CA1819：属性不应返回数组
+# <a name="ca1819-properties-should-not-return-arrays"></a>CA1819:属性不应返回数组
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|项|值|
 |-|-|
 |TypeName|PropertiesShouldNotReturnArrays|
 |CheckId|CA1819|
@@ -35,14 +35,14 @@ ms.locfileid: "72668379"
 ## <a name="cause"></a>原因
  公共类型中的公共或受保护的属性返回一个数组。
 
-## <a name="rule-description"></a>规则说明
+## <a name="rule-description"></a>规则描述
  即使属性是只读的，由属性返回的数组仍不受写保护。 若要使数组不会被更改，属性必须返回数组的副本。 通常，用户不能理解调用这种属性的负面性能影响。 具体说来，它们可能使用属性作为索引属性。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
  若要修复与此规则的冲突，请将属性设置为方法或更改属性以返回集合。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
- 特性可以包含返回数组的属性，但不能包含返回集合的属性。 您可以禁止显示从 [System.object] 派生的属性的属性引发的警告（<!-- TODO: review code entity reference <xref:assetId:///System.Attribute?qualifyHint=False&amp;autoUpgrade=True>  -->班级. 否则，请不要禁止显示此规则发出的警告。
+ 特性可以包含返回数组的属性，但不能包含返回集合的属性。 您可以禁止显示从 [System.object] 派生的属性的属性引发的警告（<!-- TODO: review code entity reference <xref:assetId:///System.Attribute?qualifyHint=False&amp;autoUpgrade=True>  -->) 类的动态属性。 否则，请不要禁止显示此规则发出的警告。
 
 ## <a name="example-violation"></a>示例冲突
 
@@ -70,7 +70,7 @@ ms.locfileid: "72668379"
 ### <a name="description"></a>描述
  下面的示例通过将属性更改为返回
 
- <xref:System.Collections.ObjectModel.ReadOnlyCollection%601?displayProperty=fullName>
+ <xref:System.Collections.ObjectModel.ReadOnlyCollection%601?displayProperty=fullName>.
 
 ### <a name="code"></a>代码
  [!code-csharp[FxCop.Performance.PropertyArrayFixedCollection#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Performance.PropertyArrayFixedCollection/cs/FxCop.Performance.PropertyArrayFixedCollection.cs#1)]
@@ -86,11 +86,11 @@ ms.locfileid: "72668379"
  [!code-vb[FxCop.Performance.PropertyModifyViolation#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Performance.PropertyModifyViolation/vb/FxCop.Performance.PropertyModifyViolation.vb#1)]
 
 ### <a name="comments"></a>注释
- 下面的示例通过更改属性来返回 <xref:System.Collections.ObjectModel.Collection%601?displayProperty=fullName> 来修复冲突。
+ 下面的示例通过将属性更改为返回来修复冲突 <xref:System.Collections.ObjectModel.Collection%601?displayProperty=fullName> 。
 
 ### <a name="code"></a>代码
  [!code-csharp[FxCop.Performance.PropertyModifyFixed#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Performance.PropertyModifyFixed/cs/FxCop.Performance.PropertyModifyFixed.cs#1)]
  [!code-vb[FxCop.Performance.PropertyModifyFixed#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Performance.PropertyModifyFixed/vb/FxCop.Performance.PropertyModifyFixed.vb#1)]
 
 ## <a name="related-rules"></a>相关规则
- [CA1024：在适用处使用属性](../code-quality/ca1024-use-properties-where-appropriate.md)
+ [CA1024:在适用处使用属性](../code-quality/ca1024-use-properties-where-appropriate.md)
