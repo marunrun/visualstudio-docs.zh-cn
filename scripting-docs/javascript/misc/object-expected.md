@@ -3,7 +3,7 @@ title: 应为对象 |Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
-ms.topic: reference
+ms.topic: error-reference
 f1_keywords:
 - VS.WebClient.Help.SCRIPT5007
 dev_langs:
@@ -14,12 +14,12 @@ ms.assetid: 5d88c93d-e5b5-4b11-9bb5-bf1a5e41ccc3
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 1611596d844d43ef72663154dc48791830dfe29f
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: 28eec125914f0207fbdf79a39ea2140dd74d6d0d
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72573724"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85816223"
 ---
 # <a name="object-expected"></a>缺少对象
 你尝试调用了 `Object` 类型以外的对象上的方法或属性，或在需要 `Object` 时传递了 `Object` 类型以外的自变量。  
@@ -46,6 +46,6 @@ ms.locfileid: "72573724"
     }  
     ```  
   
-## <a name="see-also"></a>另请参阅  
- [对象对象](../../javascript/reference/object-object-javascript.md)   
+## <a name="see-also"></a>请参阅  
+ [Object 对象](../../javascript/reference/object-object-javascript.md)   
  [对象和数组](../../javascript/objects-and-arrays-javascript.md)

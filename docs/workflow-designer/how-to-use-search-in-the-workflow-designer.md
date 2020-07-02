@@ -1,19 +1,19 @@
 ---
 title: 如何：在工作流设计器中使用搜索
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: f42d3115-2ed2-4941-8f1e-92dac41c30fa
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-author: jillre
-ms.openlocfilehash: 12bda4af085b8ab41d3e11841f24cd5dfd389738
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 63ad6f8b6d3afd1f30f2e9a02eaa4927fb3608d2
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72650299"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85817471"
 ---
 # <a name="how-to-use-search-in-the-workflow-designer"></a>如何：在工作流设计器中使用搜索
 
@@ -33,7 +33,7 @@ ms.locfileid: "72650299"
 
 ### <a name="use-quick-find"></a>使用快速查找
 
-1. 打开工作流设计器后，按**Ctrl + F**，或选择 "**编辑** > **查找并替换** > "**快速查找**"。
+1. 打开工作流设计器后，按**Ctrl + F**，或选择 "**编辑**  >  **查找并替换**  >  **快速查找**"。
 
 2. 在 "**查找内容**" 文本框中输入搜索词，然后单击 "**查找下一个**"。
 
@@ -47,7 +47,7 @@ ms.locfileid: "72650299"
 
 ### <a name="use-find-in-files"></a>使用 "在文件中查找"
 
-1. 在 Visual Studio 中，按**Ctrl** +**Shift** +**F**，或选择 "**编辑** > **查找并  >  替换** **" 在文件中查找 "** 。
+1. 在 Visual Studio 中，按**Ctrl** + **Shift** + **F**，或选择 "**编辑**  >  **查找并替换**  >  **在文件中查找**"。
 
 2. 在 "**查找内容**" 文本框中输入搜索项，并单击 "**查找所有**内容"。
 

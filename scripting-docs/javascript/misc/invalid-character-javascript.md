@@ -3,7 +3,7 @@ title: 无效字符（JavaScript） |Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
-ms.topic: reference
+ms.topic: error-reference
 f1_keywords:
 - VS.WebClient.Help.SCRIPT1014
 dev_langs:
@@ -14,15 +14,15 @@ ms.assetid: b6a54a93-7fc9-459a-bdd6-f42d1ce40b5f
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 267dcc5af0870132a14c679c7fc26589d6b776c9
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: c2dc3e733afdb4f3d25595e819163ff56e397c6e
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72576572"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85816938"
 ---
 # <a name="invalid-character-javascript"></a>无效字符 (JavaScript)
-使用 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 编译器无法识别为有效的字符（或字符）撰写标识符。 有效字符使用以下规则：  
+你使用了编译器不能识别为有效的字符（或字符）编写了一个标识符 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 。 有效字符使用以下规则：  
   
 - 第一个字符必须是 ASCII 字母（大写或小写）或下划线（_）。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "72576572"
   
 - 避免使用不属于 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 语言定义的字符。  
   
-## <a name="see-also"></a>另请参阅  
- [变量](../../javascript/variables-javascript.md)   
+## <a name="see-also"></a>请参阅  
+ [变化](../../javascript/variables-javascript.md)   
  [特殊字符](../../javascript/advanced/special-characters-javascript.md)   
  [数据类型](../../javascript/data-types-javascript.md)

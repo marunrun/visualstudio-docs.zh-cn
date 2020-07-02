@@ -1,7 +1,7 @@
 ---
 title: 工作流设计器-如何：使用导入设计器
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - System.Activities.Presentation.View.ImportDesigner.UI
 ms.assetid: 61328ab6-9b66-4e12-8630-22e30ee8c9d1
@@ -10,18 +10,18 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f221efea08444a4dc3e31ade2a081753eb77242c
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 77da016b062d032965fcf7042cedba2004e3fdf5
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75593182"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85817419"
 ---
 # <a name="how-to-use-the-imports-designer"></a>如何：使用导入设计器
 
-导入设计器允许您为将在表达式中使用的类型输入命名空间。 与 Visual Basic 和C#中的**导入**或**使用**关键字非常类似，在导入设计器中指定命名空间可让你只需在表达式中输入类型名称，而不是完全限定的版本类型名称。
+导入设计器允许您为将在表达式中使用的类型输入命名空间。 与 Visual Basic 和 c # 中的**导入**或**使用**关键字非常类似，在导入设计器中指定命名空间可让你只需在表达式中输入类型名称，而不是完全限定的版本类型名称。
 
-导入设计器既响应 UI 中的更改，也响应保存工作流时进行的更改。 保存工作流后，会向导入设计器中自动添加命名空间。 这些存储包括以下各项：
+导入设计器既响应 UI 中的更改，也响应保存工作流时进行的更改。 保存工作流后，会向导入设计器中自动添加命名空间。 其中包括：
 
 - 变量和自变量声明中使用的所有类型的命名空间。
 
