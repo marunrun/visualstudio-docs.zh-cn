@@ -25,11 +25,11 @@ ms.locfileid: "85538796"
 # <a name="ca2218-override-gethashcode-on-overriding-equals"></a>CA2218:重写 Equals 时重写 GetHashCode
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|Item|值|
+|项|值|
 |-|-|
 |TypeName|OverrideGetHashCodeOnOverridingEquals|
 |CheckId|CA2218|
-|Category|Microsoft. 使用情况|
+|类别|Microsoft. 使用情况|
 |是否重大更改|非重大更改|
 
 ## <a name="cause"></a>原因
@@ -64,7 +64,7 @@ ms.locfileid: "85538796"
 
 ## <a name="class-example"></a>类示例
 
-### <a name="description"></a>说明
+### <a name="description"></a>描述
  下面的示例演示违反此规则的类（引用类型）。
 
 ### <a name="code"></a>代码
@@ -78,7 +78,7 @@ ms.locfileid: "85538796"
 
 ## <a name="structure-example"></a>结构示例
 
-### <a name="description"></a>说明
+### <a name="description"></a>描述
  下面的示例演示违反此规则的结构（值类型）。
 
 ### <a name="code"></a>代码
@@ -101,7 +101,7 @@ ms.locfileid: "85538796"
 
  [CA2231:重写 ValueType.Equals 时应重载相等运算符](../code-quality/ca2231-overload-operator-equals-on-overriding-valuetype-equals.md)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - <xref:System.Object.Equals%2A?displayProperty=fullName>
 - <xref:System.Object.GetHashCode%2A?displayProperty=fullName>

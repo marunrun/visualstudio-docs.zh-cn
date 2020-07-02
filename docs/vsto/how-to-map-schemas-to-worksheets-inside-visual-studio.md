@@ -55,7 +55,7 @@ ms.locfileid: "85538133"
 
 7. 浏览到您的架构文件，选择它，然后单击 "**打开**"。
 
-8. 单击“确定”。
+8. 单击 **“确定”** 。
 
      架构在 " **XML 源**" 窗口中表示。 在您的项目中，将 <xref:System.Data.DataSet> 基于架构生成类型化，并 <xref:System.Windows.Forms.BindingSource> 创建一个。
 
@@ -65,6 +65,6 @@ ms.locfileid: "85538133"
 
      如果拖动重复架构元素，Office 项目将生成一个 <xref:Microsoft.Office.Tools.Excel.ListObject> 不会自动绑定到数据源的控件。 有关详细信息，请参阅[文档级自定义项中的 XML 架构和数据](../vsto/xml-schemas-and-data-in-document-level-customizations.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [如何：将架构映射到 Visual Studio 中的 Word 文档](../vsto/how-to-map-schemas-to-word-documents-inside-visual-studio.md)
 - [文档级自定义项中的 XML 架构和数据](../vsto/xml-schemas-and-data-in-document-level-customizations.md)

@@ -26,11 +26,11 @@ ms.locfileid: "85538631"
 # <a name="ca2224-override-equals-on-overloading-operator-equals"></a>CA2224:重载相等运算符时重写 Equals 方法
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|Item|值|
+|项|值|
 |-|-|
 |TypeName|OverrideEqualsOnOverloadingOperatorEquals|
 |CheckId|CA2224|
-|Category|Microsoft. 使用情况|
+|类别|Microsoft. 使用情况|
 |是否重大更改|非重大更改|
 
 ## <a name="cause"></a>原因
@@ -49,7 +49,7 @@ ms.locfileid: "85538631"
 
 ## <a name="examples-of-inconsistent-equality-definitions"></a>不一致的相等性定义的示例
 
-### <a name="description"></a>说明
+### <a name="description"></a>描述
  下面的示例演示一个具有不一致的相等定义的类型。 `BadPoint`通过提供相等运算符的自定义实现来更改相等性的含义，但不会重写， <xref:System.Object.Equals%2A> 使其行为完全相同。
 
 ### <a name="code"></a>代码
@@ -88,7 +88,7 @@ ms.locfileid: "85538631"
  **b = = bcopy？是**
 ## <a name="class-example"></a>类示例
 
-### <a name="description"></a>说明
+### <a name="description"></a>描述
  下面的示例演示违反此规则的类（引用类型）。
 
 ### <a name="code"></a>代码
@@ -101,7 +101,7 @@ ms.locfileid: "85538631"
 
 ## <a name="structure-example"></a>结构示例
 
-### <a name="description"></a>说明
+### <a name="description"></a>描述
  下面的示例演示违反此规则的结构（值类型）。
 
 ### <a name="code"></a>代码

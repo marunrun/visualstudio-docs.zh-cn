@@ -34,7 +34,7 @@ ms.locfileid: "85537639"
 
 - 电子邮件地址中具有域名 **example.com** （例如， `somebody@example.com`且具有的名字和姓氏的联系人。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [处理联系人项](../vsto/working-with-contact-items.md)
 - [如何：以编程方式发送电子邮件](../vsto/how-to-programmatically-send-e-mail-programmatically.md)
 - [如何：以编程方式访问 Outlook 联系人](../vsto/how-to-programmatically-access-outlook-contacts.md)

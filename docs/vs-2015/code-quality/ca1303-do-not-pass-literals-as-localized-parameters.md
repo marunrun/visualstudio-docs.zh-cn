@@ -26,11 +26,11 @@ ms.locfileid: "85539108"
 # <a name="ca1303-do-not-pass-literals-as-localized-parameters"></a>CA1303:请不要将文本作为本地化参数传递
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|Item|值|
+|项|值|
 |-|-|
 |TypeName|DoNotPassLiteralsAsLocalizedParameters|
 |CheckId|CA1303|
-|Category|Microsoft 全球化|
+|类别|Microsoft 全球化|
 |是否重大更改|非重大更改|
 
 ## <a name="cause"></a>原因

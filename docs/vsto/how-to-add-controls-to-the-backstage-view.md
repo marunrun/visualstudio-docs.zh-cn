@@ -62,7 +62,7 @@ ms.locfileid: "85538341"
 
 4. 拖动控件，将其移至菜单上的新位置。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [功能区概述](../vsto/ribbon-overview.md)
 - [功能区设计器](../vsto/ribbon-designer.md)
 - [Ribbon XML](../vsto/ribbon-xml.md)

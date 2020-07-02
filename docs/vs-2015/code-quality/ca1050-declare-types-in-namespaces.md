@@ -15,17 +15,17 @@ caps.latest.revision: 17
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: c56de70daeabd05215f68024339d5855686d529b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a0a4dcc53fac7dc9b7e189686a3b32e2fb4fd030
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653837"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85539589"
 ---
-# <a name="ca1050-declare-types-in-namespaces"></a>CA1050：在命名空间中声明类型
+# <a name="ca1050-declare-types-in-namespaces"></a>CA1050:在命名空间中声明类型
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|项|值|
 |-|-|
 |TypeName|DeclareTypesInNamespaces|
 |CheckId|CA1050|
@@ -35,7 +35,7 @@ ms.locfileid: "72653837"
 ## <a name="cause"></a>原因
  在命名命名空间的范围外定义公共或受保护类型。
 
-## <a name="rule-description"></a>规则说明
+## <a name="rule-description"></a>规则描述
  类型是在命名空间中声明的，以防止名称冲突，并作为在对象层次结构中组织相关类型的一种方法。 位于任何命名命名空间之外的类型位于无法在代码中引用的全局命名空间中。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
@@ -51,7 +51,7 @@ ms.locfileid: "72653837"
  [!code-vb[FxCop.Design.TypesLiveInNamespaces#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Design.TypesLiveInNamespaces/vb/FxCop.Design.TypesLiveInNamespaces.vb#1)]
 
 ## <a name="example"></a>示例
- 以下应用程序使用之前定义的库。 请注意，当名称 `Test` 不由命名空间限定时，将创建在命名空间外部声明的类型。 另请注意，若要访问 `Goodspace` 中的 `Test` 类型，需要命名空间名称。
+ 以下应用程序使用之前定义的库。 请注意，当名称未 `Test` 由命名空间限定时，将创建在命名空间外部声明的类型。 另请注意，若要访问 `Test` 中的类型 `Goodspace` ，需要命名空间名称。
 
  [!code-csharp[FxCop.Design.TestTypesLive#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.TestTypesLive/cs/FxCop.Design.TestTypesLive.cs#1)]
  [!code-vb[FxCop.Design.TestTypesLive#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Design.TestTypesLive/vb/FxCop.Design.TestTypesLive.vb#1)]

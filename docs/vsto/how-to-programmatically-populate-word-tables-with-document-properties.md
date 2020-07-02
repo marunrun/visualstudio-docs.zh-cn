@@ -1,7 +1,7 @@
 ---
-title: 以编程方式填充 Word 表使用文档属性
+title: 以编程方式用文档属性填充 Word 表
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,14 +13,14 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e296a63c208bc1c3316f89b7b4003f16daf3c93e
-ms.sourcegitcommit: 13ab9a5ab039b070b9cd9251d0b83dd216477203
+ms.openlocfilehash: 92d9b38c6a1e770749849966deec7f503f9eeb5d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66177783"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85537808"
 ---
-# <a name="how-to-programmatically-populate-word-tables-with-document-properties"></a>如何：以编程方式填充 Word 表使用文档属性
+# <a name="how-to-programmatically-populate-word-tables-with-document-properties"></a>如何：以编程方式用文档属性填充 Word 表
   下面的示例在文档的顶部创建 Microsoft Office Word 表格，并使用主机文档的属性填充它。
 
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "66177783"
    [!code-vb[Trin_VstcoreWordAutomation#89](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#89)]
    [!code-csharp[Trin_VstcoreWordAutomation#89](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#89)]
 
-## <a name="populate-tables-in-a-vsto-add-in"></a>填充 VSTO 外接程序中的表
+## <a name="populate-tables-in-a-vsto-add-in"></a>在 VSTO 外接程序中填充表
 
 ### <a name="to-create-a-table-and-populate-it-with-document-properties"></a>创建表格并使用文档属性填充它
 
@@ -95,6 +95,6 @@ ms.locfileid: "66177783"
 
 ## <a name="see-also"></a>请参阅
 - [如何：以编程方式创建 Word 表](../vsto/how-to-programmatically-create-word-tables.md)
-- [如何：以编程方式添加的文本和格式向 Word 表中的单元格](../vsto/how-to-programmatically-add-text-and-formatting-to-cells-in-word-tables.md)
+- [如何：以编程方式向 Word 表中的单元格添加文本和格式设置](../vsto/how-to-programmatically-add-text-and-formatting-to-cells-in-word-tables.md)
 - [如何：以编程方式向 Word 表中添加行和列](../vsto/how-to-programmatically-add-rows-and-columns-to-word-tables.md)
 - [Office 解决方案中的可选参数](../vsto/optional-parameters-in-office-solutions.md)
