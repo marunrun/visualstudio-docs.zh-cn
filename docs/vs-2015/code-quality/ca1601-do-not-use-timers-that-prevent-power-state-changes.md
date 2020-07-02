@@ -15,17 +15,17 @@ caps.latest.revision: 17
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 95f13604908ad45c5f33a011fec886bba90d0bd8
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 7928b2fff8c12ca3f0cc3c58bee31fe5809517e5
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669280"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545634"
 ---
-# <a name="ca1601-do-not-use-timers-that-prevent-power-state-changes"></a>CA1601：不要使用阻止电源状态更改的计时器
+# <a name="ca1601-do-not-use-timers-that-prevent-power-state-changes"></a>CA1601:不要使用阻止电源状态更改的计时器
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|项|值|
 |-|-|
 |TypeName|DoNotUseTimersThatPreventPowerStateChanges|
 |CheckId|CA1601|
@@ -35,7 +35,7 @@ ms.locfileid: "72669280"
 ## <a name="cause"></a>原因
  计时器的间隔设置为每秒出现一次以上。
 
-## <a name="rule-description"></a>规则说明
+## <a name="rule-description"></a>规则描述
  请不要每秒轮询一次以上，或者使用比每秒一次更频繁的计时器。 频率较高的定期活动会使 CPU 处于繁忙状态，并且会干扰具有节能功能（关闭显示器和硬盘）的空闲计时器。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突

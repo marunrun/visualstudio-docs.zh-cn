@@ -25,11 +25,11 @@ ms.locfileid: "85546271"
 # <a name="ca2204-literals-should-be-spelled-correctly"></a>CA2204:文字应正确拼写
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|Item|值|
+|项|值|
 |-|-|
 |TypeName|LiteralsShouldBeSpelledCorrectly|
 |CheckId|CA2204|
-|Category|Microsoft. 使用情况|
+|类别|Microsoft. 使用情况|
 |是否重大更改|非重大更改|
 
 ## <a name="cause"></a>原因

@@ -1,7 +1,7 @@
 ---
 title: 如何：调整书签控件的大小
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,12 +13,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 99e5c789f65a1dff460bc22dd4a0c097e11c7e98
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 6cc7b26bb767c233ed8699519261d4b5b708306b
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71252219"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545855"
 ---
 # <a name="how-to-resize-bookmark-controls"></a>如何：调整书签控件的大小
   当你将 <xref:Microsoft.Office.Tools.Word.Bookmark> 控件添加到 Microsoft Office Word 文档时，可以设置它的大小。 稍后还可以重设其大小。
@@ -39,7 +39,7 @@ ms.locfileid: "71252219"
 
    如果将对书签的大小或位置作出重大更改，此方法很有用。
 
-  在文档级项目中，你可以在设计时或在运行时向项目中的文档添加 <xref:Microsoft.Office.Tools.Word.Bookmark> 控件。 在 VSTO 外接程序项目中，可以在运行时向任何打开的文档添加 <xref:Microsoft.Office.Tools.Word.Bookmark> 控件。 有关详细信息，请参阅[如何：向 Word 文档](../vsto/how-to-add-bookmark-controls-to-word-documents.md)添加书签控件。
+  在文档级项目中，你可以在设计时或在运行时向项目中的文档添加 <xref:Microsoft.Office.Tools.Word.Bookmark> 控件。 在 VSTO 外接程序项目中，可以在运行时向任何打开的文档添加 <xref:Microsoft.Office.Tools.Word.Bookmark> 控件。 有关详细信息，请参阅[如何：将书签控件添加到 Word 文档](../vsto/how-to-add-bookmark-controls-to-word-documents.md)。
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
@@ -47,7 +47,7 @@ ms.locfileid: "71252219"
 
 ### <a name="to-resize-a-bookmark-in-a-document-level-project-at-design-time"></a>在设计时重设文档级项目中的书签大小
 
-1. 在“属性” 窗口中选择书签。
+1. 在“属性” **** 窗口中选择书签。
 
 2. 增大或减小 <xref:Microsoft.Office.Tools.Word.Bookmark.Start%2A> 属性的值。
 
@@ -83,9 +83,9 @@ ms.locfileid: "71252219"
 
 1. 选择要包含在新 <xref:Microsoft.Office.Tools.Word.Bookmark> 控件中的文本。
 
-2. 在“插入” 菜单上，单击“书签”。
+2. 在“插入” **** 菜单上，单击“书签” ****。
 
-3. 在“书签” 对话框中，选择想要重设其大小的书签的名称，并单击“添加”。
+3. 在“书签” **** 对话框中，选择想要重设其大小的书签的名称，并单击“添加” ****。
 
 ## <a name="see-also"></a>请参阅
 - [如何：向 Word 文档添加书签控件](../vsto/how-to-add-bookmark-controls-to-word-documents.md)

@@ -14,23 +14,23 @@ caps.latest.revision: 24
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 639a42e26442e31f7bbbbb2245af0289c6a04fd8
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: 96e0614bc5c08c83008af4e67a2aa865f08f74f3
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75918229"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547805"
 ---
-# <a name="ca1726-use-preferred-terms"></a>CA1726：使用首选词条
+# <a name="ca1726-use-preferred-terms"></a>CA1726:使用首选词条
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 有关 Visual Studio 的最新文档，请参阅[CA1726：使用首选字词](/visualstudio/code-quality/ca1726-use-preferred-terms)。
 
-|||
+|项|值|
 |-|-|
 |TypeName|UsePreferredTerms|
 |CheckId|CA1726|
-|类别|Microsoft.Naming|
+|类别|Microsoft。命名|
 |是否重大更改|正在进行-对程序集引发时<br /><br /> 非中断-在类型参数上触发时|
 
 ## <a name="cause"></a>原因

@@ -15,17 +15,17 @@ caps.latest.revision: 19
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: a2106042b552efbe824d7517abcc86e322b57aa9
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: cf797ad67b7df2eb1f3ba1246e965ed6ebbd586d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72607860"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547857"
 ---
-# <a name="ca1501-avoid-excessive-inheritance"></a>CA1501：避免过度继承
+# <a name="ca1501-avoid-excessive-inheritance"></a>CA1501:避免过度继承
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|项|值|
 |-|-|
 |TypeName|AvoidExcessiveInheritance|
 |CheckId|CA1501|
@@ -35,7 +35,7 @@ ms.locfileid: "72607860"
 ## <a name="cause"></a>原因
  类型在继承层次结构中的深度超过四级。
 
-## <a name="rule-description"></a>规则说明
+## <a name="rule-description"></a>规则描述
  深度嵌套的类型层次结构可能很难遵循、理解和维护。 此规则将分析限制为同一个模块中的层次结构。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突

@@ -15,29 +15,29 @@ caps.latest.revision: 31
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 1e85929202d36be2e6dcc2b08b5b2a60e7656b27
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: fe362a58a047c8594d09bc6985c48d16f21d3b76
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75919192"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545595"
 ---
-# <a name="ca1715-identifiers-should-have-correct-prefix"></a>CA1715：标识符应具有正确的前缀
+# <a name="ca1715-identifiers-should-have-correct-prefix"></a>CA1715:标识符应具有正确的前缀
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 有关 Visual Studio 的最新文档，请参阅[CA1715：标识符应具有正确的前缀](/visualstudio/code-quality/ca1715-identifiers-should-have-correct-prefix)。
 
-|||
+|项|值|
 |-|-|
 |TypeName|IdentifiersShouldHaveCorrectPrefix|
 |CheckId|CA1715|
-|类别|Microsoft.Naming|
+|类别|Microsoft。命名|
 |是否重大更改|正在进行-在接口上引发。<br /><br /> 非换行-对泛型类型参数引发时。|
 
 ## <a name="cause"></a>原因
  外部可见接口的名称不以大写的 "I" 开头。
 
- 或
+ \- 或 -
 
  外部可见类型或方法的泛型类型参数的名称不以大写 "t" 开头。
 
@@ -85,4 +85,4 @@ ms.locfileid: "75919192"
  [!code-vb[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix4#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Naming.IdentifiersShouldHaveCorrectPrefix4/vb/FxCop.Naming.IdentifiersShouldHaveCorrectPrefix4.vb#1)]
 
 ## <a name="related-rules"></a>相关规则
- [CA1722：标识符应采用正确的前缀](../code-quality/ca1722-identifiers-should-not-have-incorrect-prefix.md)
+ [CA1722:标识符应采用正确的前缀](../code-quality/ca1722-identifiers-should-not-have-incorrect-prefix.md)
