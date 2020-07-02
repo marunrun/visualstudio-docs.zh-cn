@@ -15,17 +15,17 @@ caps.latest.revision: 23
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 9032ac105477370477b13554afe4ee65bd7cd733
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c4ad2f4db9290430bb8a378bd264078370ca7b66
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72609020"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543827"
 ---
-# <a name="ca1810-initialize-reference-type-static-fields-inline"></a>CA1810：以内联方式初始化引用类型的静态字段
+# <a name="ca1810-initialize-reference-type-static-fields-inline"></a>CA1810:以内联方式初始化引用类型的静态字段
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|项|值|
 |-|-|
 |TypeName|InitializeReferenceTypeStaticFieldsInline|
 |CheckId|CA1810|
@@ -35,12 +35,12 @@ ms.locfileid: "72609020"
 ## <a name="cause"></a>原因
  引用类型声明显式静态构造函数。
 
-## <a name="rule-description"></a>规则说明
+## <a name="rule-description"></a>规则描述
  当一个类型声明显式静态构造函数时，实时 (JIT) 编译器会向该类型的每个静态方法和实例构造函数中添加一项检查，以确保之前已调用该静态构造函数。 当访问任何静态成员或创建类型的实例时，将触发静态初始化。 但是，如果您声明一个类型的变量，但不使用它，则不会触发静态初始化，如果初始化更改全局状态，这可能很重要。
 
- 当所有静态数据都以内联方式初始化并且未声明显式静态构造函数时，Microsoft 中间语言（MSIL）编译器会将 `beforefieldinit` 标志和用于初始化静态数据的隐式静态构造函数添加到 MSIL 类型定义. 当 JIT 编译器遇到 `beforefieldinit` 标志时，大多数情况下不会添加静态构造函数检查。 在访问静态方法之前，但在调用静态方法或实例构造函数之前，不能保证静态初始化在访问任何静态字段之前发生。 请注意，在声明类型的变量后，可能会随时发生静态初始化。
+ 当所有静态数据都以内联方式初始化并且未声明显式静态构造函数时，Microsoft 中间语言（MSIL）编译器会将 `beforefieldinit` 标志和隐式静态构造函数（该构造函数初始化静态数据）添加到 MSIL 类型定义。 当 JIT 编译器遇到标志时 `beforefieldinit` ，大多数情况下不会添加静态构造函数检查。 在访问静态方法之前，但在调用静态方法或实例构造函数之前，不能保证静态初始化在访问任何静态字段之前发生。 请注意，在声明类型的变量后，可能会随时发生静态初始化。
 
- 静态构造函数检查会降低性能。 通常，静态构造函数仅用于初始化静态字段，在这种情况下，必须仅确保在首次访问静态字段之前发生静态初始化。 @No__t_0 行为适用于这些类型和大多数其他类型。 仅当静态初始化影响全局状态并且满足以下任一条件时，它才是不适当的：
+ 静态构造函数检查会降低性能。 通常，静态构造函数仅用于初始化静态字段，在这种情况下，必须仅确保在首次访问静态字段之前发生静态初始化。 此 `beforefieldinit` 行为适用于这些类型和大多数其他类型。 仅当静态初始化影响全局状态并且满足以下任一条件时，它才是不适当的：
 
 - 全局状态的影响非常昂贵，如果未使用该类型，则不需要这样做。
 
@@ -53,17 +53,18 @@ ms.locfileid: "72609020"
  如果性能不是问题，则可以安全地禁止显示此规则发出的警告;或者，如果静态初始化导致的全局状态更改很昂贵，或者必须保证在调用类型的静态方法或创建类型的实例之前发生。
 
 ## <a name="example"></a>示例
- 下面的示例显示了一个与该规则冲突的类型 `StaticConstructor`）和一个类型，`NoStaticConstructor`，它将静态构造函数替换为内联初始化以满足此规则。
+ 下面的示例演示了一个类型， `StaticConstructor` 该类型违反了规则和一个类型， `NoStaticConstructor` 该类型使用内联初始化替换静态构造函数来满足规则。
 
  [!code-csharp[FxCop.Performance.RefTypeStaticCtor#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Performance.RefTypeStaticCtor/cs/FxCop.Performance.RefTypeStaticCtor.cs#1)]
  [!code-vb[FxCop.Performance.RefTypeStaticCtor#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Performance.RefTypeStaticCtor/vb/FxCop.Performance.RefTypeStaticCtor.vb#1)]
 
- 请注意，在 `NoStaticConstructor` 类的 MSIL 定义上添加了 `beforefieldinit` 标志。
+ 请注意，在 `beforefieldinit` 类的 MSIL 定义上添加标志 `NoStaticConstructor` 。
 
- **。类公共自动 Ansi StaticConstructor** **扩展了 [mscorlib] system.object** 
+ **。类公共自动 ansi StaticConstructor** **扩展了 [mscorlib] system.object** 
  **{** 
- **}//类 StaticConstructor** 
- 的结尾 **。类公共自动 ansi beforefieldinit NoStaticConstructor** **扩展 [mscorlib.dll] System.object** 
- **{** 1 **}//NoStaticConstructor 类的结尾**
+ **}//class StaticConstructor 的结尾** 
+ **。类公共自动 ansi beforefieldinit NoStaticConstructor** **扩展了 [mscorlib] system.object** 
+ **{** 
+ **}//class NoStaticConstructor 的结尾**
 ## <a name="related-rules"></a>相关规则
- [CA2207：以内联方式初始化值类型的静态字段](../code-quality/ca2207-initialize-value-type-static-fields-inline.md)
+ [CA2207:以内联方式初始化值类型的静态字段](../code-quality/ca2207-initialize-value-type-static-fields-inline.md)

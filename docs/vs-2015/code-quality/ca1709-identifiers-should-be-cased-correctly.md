@@ -15,23 +15,23 @@ caps.latest.revision: 30
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: c4da0414c9923a8ed7bb01456f38000433641522
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: 14c50ed94f05401cc5575af9f8b98472c35b261d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75919223"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543996"
 ---
-# <a name="ca1709-identifiers-should-be-cased-correctly"></a>CA1709：标识符的大小写应当正确
+# <a name="ca1709-identifiers-should-be-cased-correctly"></a>CA1709:标识符的大小写应当正确
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 有关 Visual Studio 的最新文档，请参阅[CA1709：标识符应采用正确的大小写](/visualstudio/code-quality/ca1709-identifiers-should-be-cased-correctly)。
 
-|||
+|项|值|
 |-|-|
 |TypeName|IdentifiersShouldBeCasedCorrectly|
 |CheckId|CA1709|
-|类别|Microsoft.Naming|
+|类别|Microsoft。命名|
 |是否重大更改|重大-在程序集、命名空间、类型、成员和参数上引发。<br /><br /> 不间断-当对泛型类型参数引发时。|
 
 ## <a name="cause"></a>原因
@@ -65,4 +65,4 @@ ms.locfileid: "75919223"
  您还可以将特定的词、缩写和首字母缩写添加到代码分析自定义字典中。 自定义字典中指定的条款将不会导致违反此规则。 有关详细信息，请参阅[如何：自定义代码分析字典](../code-quality/how-to-customize-the-code-analysis-dictionary.md)
 
 ## <a name="related-rules"></a>相关规则
- [CA1708：标识符不应仅以大小写进行区分](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)
+ [CA1708:标识符应以大小写之外的差别进行区分](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)

@@ -1,7 +1,7 @@
 ---
 title: 向 ListObject 控件添加新行时验证数据
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -14,14 +14,14 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f65bbc374c1d0ec2a940ff98fcc6f04e5391b2db
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 2b9ed8428f9dd0325678cb91a847609aed76f9b5
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71255680"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85541162"
 ---
-# <a name="how-to-validate-data-when-a-new-row-is-added-to-a-listobject-control"></a>如何：向 ListObject 控件添加新行时验证数据
+# <a name="how-to-validate-data-when-a-new-row-is-added-to-a-listobject-control"></a>如何：在向 ListObject 控件添加新行时验证数据
   用户可以向绑定到数据的 <xref:Microsoft.Office.Tools.Excel.ListObject> 控件添加新行。 可以在将更改提交到数据源之前验证用户数据。
 
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "71255680"
      [!code-csharp[Trin_VstcoreHostControlsExcel#8](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs#8)]
      [!code-vb[Trin_VstcoreHostControlsExcel#8](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb#8)]
 
-2. 在类（ <xref:System.Data.DataTable>文档级项目中）或`ThisAddIn`类（VSTO 外接程序项目中）的事件处理程序中创建新的并添加示例列和数据。`Startup` `Sheet1`
+2. <xref:System.Data.DataTable>在 `Startup` `Sheet1` 类（文档级项目中）或 `ThisAddIn` 类（VSTO 外接程序项目中）的事件处理程序中创建新的并添加示例列和数据。
 
      [!code-csharp[Trin_VstcoreHostControlsExcel#9](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs#9)]
      [!code-vb[Trin_VstcoreHostControlsExcel#9](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb#9)]

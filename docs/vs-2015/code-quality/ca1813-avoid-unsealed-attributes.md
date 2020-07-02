@@ -15,17 +15,17 @@ caps.latest.revision: 15
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: fe5967ef099794b6c71029e9d03d959dd83b01dc
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 8d86f4a9ecbdfff451fed21f93c0fe6a7679d471
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72647055"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543944"
 ---
-# <a name="ca1813-avoid-unsealed-attributes"></a>CA1813：避免使用未密封的特性
+# <a name="ca1813-avoid-unsealed-attributes"></a>CA1813:避免使用非密封特性
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|项|值|
 |-|-|
 |TypeName|AvoidUnsealedAttributes|
 |CheckId|CA1813|
@@ -33,10 +33,10 @@ ms.locfileid: "72647055"
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
- 公共类型从 <xref:System.Attribute?displayProperty=fullName> 继承，不是抽象的，并且不是密封的（`NotInheritable` Visual Basic）。
+ 公共类型继承自 <xref:System.Attribute?displayProperty=fullName> ，不是抽象类型，并且不是密封的（ `NotInheritable` 在 Visual Basic 中）。
 
-## <a name="rule-description"></a>规则说明
- [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 类库提供用于检索自定义特性的方法。 默认情况下，这些方法在属性继承层次结构中搜索;例如 <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=fullName> 搜索指定的属性类型或任何扩展指定属性类型的属性类型。 密封属性可在继承层次结构中消除搜索，并可提高性能。
+## <a name="rule-description"></a>规则描述
+ [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 类库提供用于检索自定义特性的方法。 默认情况下，这些方法在属性继承层次结构中搜索;例如 <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=fullName> ，搜索指定的属性类型或扩展指定属性类型的任何属性类型。 密封属性可在继承层次结构中消除搜索，并可提高性能。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
  若要修复与此规则的冲突，请密封属性类型或使其成为抽象类型。
@@ -51,9 +51,9 @@ ms.locfileid: "72647055"
  [!code-vb[FxCop.Performance.AttributesSealed#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Performance.AttributesSealed/vb/FxCop.Performance.AttributesSealed.vb#1)]
 
 ## <a name="related-rules"></a>相关规则
- [CA1019：定义特性参数的访问器](../code-quality/ca1019-define-accessors-for-attribute-arguments.md)
+ [CA1019:定义特性参数的访问器](../code-quality/ca1019-define-accessors-for-attribute-arguments.md)
 
- [CA1018：用 AttributeUsageAttribute 标记特性](../code-quality/ca1018-mark-attributes-with-attributeusageattribute.md)
+ [CA1018:用 AttributeUsageAttribute 标记特性](../code-quality/ca1018-mark-attributes-with-attributeusageattribute.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [特性](https://msdn.microsoft.com/library/ee0038ef-b247-4747-a650-3c5c5cd58d8b)

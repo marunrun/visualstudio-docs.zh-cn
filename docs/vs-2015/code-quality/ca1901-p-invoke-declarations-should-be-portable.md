@@ -15,17 +15,17 @@ caps.latest.revision: 25
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: d1b4c0c5bcf22db6558f156fd1acd0be94026b08
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: e669d87ad5ecc53c1523db16ab77578c6a703a33
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661062"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545257"
 ---
 # <a name="ca1901-pinvoke-declarations-should-be-portable"></a>CA1901：P/Invoke 声明应为可移植声明
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|项|值|
 |-|-|
 |TypeName|PInvokeDeclarationsShouldBePortable|
 |CheckId|CA1901|
@@ -35,15 +35,15 @@ ms.locfileid: "72661062"
 ## <a name="cause"></a>原因
  此规则将评估每个参数的大小和 P/Invoke 的返回值，并验证在对32位和64位平台上的非托管代码进行封送处理时，其大小是否正确。 此规则最常见的冲突是传递固定大小的整数，其中需要使用平台相关的指针大小变量。
 
-## <a name="rule-description"></a>规则说明
+## <a name="rule-description"></a>规则描述
  以下任何一种情况都会违反此规则：
 
-- 返回值或参数类型为固定大小的整数（当它应类型化为 `IntPtr` 时）。
+- 如果返回值或参数的类型为固定大小的整数，则将其类型化为 `IntPtr` 。
 
-- 返回值或参数的类型应为固定大小的整数 `IntPtr`。
+- 如果返回值或参数的类型应为固定大小的整数，则返回值或参数的类型为 `IntPtr` 。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
- 可以通过使用 `IntPtr` 或 `UIntPtr` 来表示句柄而不是 `Int32` 或 `UInt32` 来解决此冲突。
+ 您可以通过使用 `IntPtr` 或 `UIntPtr` 表示句柄而不是或来解决此冲突 `Int32` `UInt32` 。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
  不应禁止显示此警告。
@@ -60,7 +60,7 @@ internal class NativeMethods
 }
 ```
 
- 在此示例中，将 `nIconIndex` 参数声明为 `IntPtr`，这在32位平台上为4个字节宽，64位平台上为8个字节。 在下面的非托管声明中，可以看到 `nIconIndex` 是所有平台上的4字节无符号整数。
+ 在此示例中，将 `nIconIndex` 参数声明为 `IntPtr` ，它在32位平台上的宽度为4个字节，64位平台上的宽度为8个字节。 在下面的非托管声明中，可以看到， `nIconIndex` 是所有平台上的4字节无符号整数。
 
 ```csharp
 HICON ExtractIcon(HINSTANCE hInst, LPCTSTR lpszExeFileName,
@@ -78,5 +78,5 @@ internal class NativeMethods{
 }
 ```
 
-## <a name="see-also"></a>请参阅
- [可迁移性警告](../code-quality/portability-warnings.md)
+## <a name="see-also"></a>另请参阅
+ [可移植性警告](../code-quality/portability-warnings.md)

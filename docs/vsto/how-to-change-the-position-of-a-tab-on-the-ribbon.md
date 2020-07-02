@@ -1,7 +1,7 @@
 ---
 title: 如何：更改功能区上选项卡的位置
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -12,12 +12,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: bf943f9df4499b30e294e4d7e8bf48b25aa52eab
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 8f821ea2a469fc06f80a7aaea96d07274d02a81d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985990"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544854"
 ---
 # <a name="how-to-change-the-position-of-a-tab-on-the-ribbon"></a>如何：更改功能区上选项卡的位置
   您可以使用 " **Tab 集合编辑器**" 更改功能区上自定义选项卡的顺序。 可以在功能区上的内置选项卡之前或之后放置自定义选项卡。 内置选项卡是 Microsoft Office 应用程序的功能区上已经存在的选项卡。 例如，"**数据**" 选项卡是 Excel 中的内置选项卡。
@@ -26,7 +26,7 @@ ms.locfileid: "72985990"
 
 ### <a name="to-change-the-order-of-tabs-on-the-ribbon"></a>更改功能区上选项卡的顺序
 
-1. 在**解决方案资源管理器**中选择功能区代码文件（ *.vb*或 *.cs*文件）。
+1. 在**解决方案资源管理器**中选择功能区代码文件（*.vb*或 *.cs*文件）。
 
 2. 在 "**视图**" 菜单上，单击 "**设计器**"。
 
@@ -54,7 +54,7 @@ ms.locfileid: "72985990"
 
 5. 将**OfficeId**属性设置为内置选项卡的控件 ID。
 
-     有关控件 Id 的列表，请参阅 [Office 2010 帮助文件：Office 熟知用户界面控件标识符](https://www.microsoft.com/download/details.aspx?id=6627)。
+     有关控件 Id 的列表，请参阅[office 2010 帮助文件： office 熟知用户界面控件标识符](https://www.microsoft.com/download/details.aspx?id=6627)。
 
 ## <a name="see-also"></a>请参阅
 - [功能区概述](../vsto/ribbon-overview.md)

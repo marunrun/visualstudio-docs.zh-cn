@@ -1,7 +1,7 @@
 ---
-title: '&lt;postActions&gt;元素 （Visual Studio 中的 Office 开发）'
+title: '&lt;postActions &gt; 元素（Visual Studio 中的 Office 开发）'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 - CSharp
@@ -14,14 +14,14 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 548396e6393720824c93c07e55046ec2d91797a2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: bfe9ae171f0f6fac1c2b5add5340de1c11f3da0f
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62561457"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544412"
 ---
-# <a name="ltpostactionsgt-element-office-development-in-visual-studio"></a>&lt;postActions&gt;元素 （Visual Studio 中的 Office 开发）
+# <a name="ltpostactionsgt-element-office-development-in-visual-studio"></a>&lt;postActions &gt; 元素（Visual Studio 中的 Office 开发）
   `postActions` 命名空间的 `vstav3` 元素包含描述部署后操作（在安装 Office 解决方案后运行）的 `postAction` 所有元素。
 
 ## <a name="syntax"></a>语法
@@ -45,12 +45,12 @@ ms.locfileid: "62561457"
  `postActions` 具有以下元素。
 
 ### <a name="postaction"></a>postAction
- 可选。 角色`postAction`中的元素`vstav3`中定义命名空间[ &#60;postAction&#62;元素&#40;Visual Studio 中的 Office 开发&#41;](../vsto/postaction-element-office-development-in-visual-studio.md)。
+ 可选。 `postAction`命名空间中元素的角色 `vstav3` 是在[Visual Studio&#41;中 &#40;Office 开发&#60;postAction&#62; 元素](../vsto/postaction-element-office-development-in-visual-studio.md)中定义的。
 
 ## <a name="post-deployment-action-example"></a>部署后操作示例
 
 ### <a name="description"></a>描述
- 下面的代码示例演示 Office 解决方案的应用程序清单中的 `postActions` 元素，该解决方案是使用 [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]部署的。 此代码示例摘自[Office 解决方案的应用程序清单](../vsto/application-manifests-for-office-solutions.md)。
+ 下面的代码示例演示 Office 解决方案的应用程序清单中的 `postActions` 元素，该解决方案是使用 [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]部署的。 此代码示例是[Office 解决方案的应用程序清单](../vsto/application-manifests-for-office-solutions.md)中提供的一个更大示例的一部分。
 
 ### <a name="code"></a>代码
 

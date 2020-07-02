@@ -16,17 +16,17 @@ caps.latest.revision: 19
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 308c970eb21faa7e725559d0451706899b62fd19
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f01495e4238461d0b1dfe5a13a208b528df1581f
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72662821"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85540291"
 ---
-# <a name="ca2231-overload-operator-equals-on-overriding-valuetypeequals"></a>CA2231：重写 ValueType.Equals 时应重载相等运算符
+# <a name="ca2231-overload-operator-equals-on-overriding-valuetypeequals"></a>CA2231:重写 ValueType.Equals 时应重载相等运算符
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|项|值|
 |-|-|
 |TypeName|OverloadOperatorEqualsOnOverridingValueTypeEquals|
 |CheckId|CA2231|
@@ -34,12 +34,12 @@ ms.locfileid: "72662821"
 |是否重大更改|非重大更改|
 
 ## <a name="cause"></a>原因
- 值类型 <xref:System.Object.Equals%2A?displayProperty=fullName> 重写，但不实现相等运算符。
+ 值类型会重写 <xref:System.Object.Equals%2A?displayProperty=fullName> ，但不实现相等运算符。
 
-## <a name="rule-description"></a>规则说明
- 在大多数编程语言中，值类型没有对相等运算符（= =）的默认实现。 如果你的编程语言支持运算符重载，则应考虑实现相等运算符。 它的行为应与 <xref:System.Object.Equals%2A> 的行为相同。
+## <a name="rule-description"></a>规则描述
+ 在大多数编程语言中，值类型没有对相等运算符（= =）的默认实现。 如果你的编程语言支持运算符重载，则应考虑实现相等运算符。 它的行为应与的行为相同 <xref:System.Object.Equals%2A> 。
 
- 不能在相等运算符的重载实现中使用默认的相等运算符。 这样做将导致堆栈溢出。 若要实现相等运算符，请在实现中使用对象 Equals 方法。 例如:
+ 不能在相等运算符的重载实现中使用默认的相等运算符。 这样做将导致堆栈溢出。 若要实现相等运算符，请在实现中使用对象 Equals 方法。 例如：
 
 ```vb
 If (Object.ReferenceEquals(left, Nothing)) Then
@@ -67,15 +67,15 @@ return left.Equals(right);
  [!code-csharp[FxCop.Usage.EqualsGetHashCode#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.EqualsGetHashCode/cs/FxCop.Usage.EqualsGetHashCode.cs#1)]
 
 ## <a name="related-rules"></a>相关规则
- [CA1046：不要对引用类型重载相等运算符](../code-quality/ca1046-do-not-overload-operator-equals-on-reference-types.md)
+ [CA1046:不要对引用类型重载相等运算符](../code-quality/ca1046-do-not-overload-operator-equals-on-reference-types.md)
 
- [CA2225：运算符重载具有命名的备用项](../code-quality/ca2225-operator-overloads-have-named-alternates.md)
+ [CA2225:运算符重载具有命名的备用项](../code-quality/ca2225-operator-overloads-have-named-alternates.md)
 
- [CA2226：运算符应有对称重载](../code-quality/ca2226-operators-should-have-symmetrical-overloads.md)
+ [CA2226:运算符应有对称重载](../code-quality/ca2226-operators-should-have-symmetrical-overloads.md)
 
- [CA2224：重载相等运算符时重写 Equals 方法](../code-quality/ca2224-override-equals-on-overloading-operator-equals.md)
+ [CA2224:重载相等运算符时重写 Equals 方法](../code-quality/ca2224-override-equals-on-overloading-operator-equals.md)
 
- [CA2218：重写 Equals 时重写 GetHashCode](../code-quality/ca2218-override-gethashcode-on-overriding-equals.md)
+ [CA2218:重写 Equals 时重写 GetHashCode](../code-quality/ca2218-override-gethashcode-on-overriding-equals.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  <xref:System.Object.Equals%2A?displayProperty=fullName>

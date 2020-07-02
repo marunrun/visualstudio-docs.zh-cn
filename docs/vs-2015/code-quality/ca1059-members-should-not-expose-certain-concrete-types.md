@@ -15,17 +15,17 @@ caps.latest.revision: 20
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 4c105a1224c405d0be9d74ac6500c875df28604d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 792426615dd78241ade1d38a24ec1f4d5702cede
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72604036"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545374"
 ---
-# <a name="ca1059-members-should-not-expose-certain-concrete-types"></a>CA1059：成员不应公开某些具体类型
+# <a name="ca1059-members-should-not-expose-certain-concrete-types"></a>CA1059:成员不应公开某些具体类型
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|项|值|
 |-|-|
 |TypeName|MembersShouldNotExposeCertainConcreteTypes|
 |CheckId|CA1059|
@@ -35,16 +35,16 @@ ms.locfileid: "72604036"
 ## <a name="cause"></a>原因
  外部可见成员是特定类型的，或者通过其参数或返回值公开某些具体类型。 目前，此规则报告以下具体类型的公开：
 
-- 派生自 <xref:System.Xml.XmlNode?displayProperty=fullName> 的类型。
+- 由 <xref:System.Xml.XmlNode?displayProperty=fullName> 派生的类型。
 
-## <a name="rule-description"></a>规则说明
+## <a name="rule-description"></a>规则描述
  具体类型是指具有一个完整实现因此可以实例化的类型。 若要允许广泛使用成员，请将具体类型替换为建议的接口。 这允许成员接受任何实现接口的类型，或在需要实现接口的类型的情况下使用。
 
  下表列出了目标具体类型及其建议的替换项。
 
-|具体类型|Replacement|
+|具体类型|替代功能|
 |-------------------|-----------------|
-|<xref:System.Xml.XPath.XPathDocument>|<xref:System.Xml.XPath.IXPathNavigable?displayProperty=fullName><br /><br /> 使用接口可将成员与 XML 数据源的特定实现分离。|
+|<xref:System.Xml.XPath.XPathDocument>|<xref:System.Xml.XPath.IXPathNavigable?displayProperty=fullName>.<br /><br /> 使用接口可将成员与 XML 数据源的特定实现分离。|
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
  若要修复与此规则的冲突，请将具体类型更改为建议的接口。
@@ -53,4 +53,4 @@ ms.locfileid: "72604036"
  如果需要具体类型提供的特定功能，则可以安全地禁止显示此规则中的消息。
 
 ## <a name="related-rules"></a>相关规则
- [CA1011：考虑将基类型作为参数传递](../code-quality/ca1011-consider-passing-base-types-as-parameters.md)
+ [CA1011:考虑将基类型作为参数传递](../code-quality/ca1011-consider-passing-base-types-as-parameters.md)

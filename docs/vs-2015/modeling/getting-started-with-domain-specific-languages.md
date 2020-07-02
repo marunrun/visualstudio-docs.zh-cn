@@ -9,12 +9,12 @@ caps.latest.revision: 18
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: c7e8ca0fa1558ce0a2d37d4e11a35ba10a27fd2d
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: 6fe720b380133d15f9bc60485896d4b7acbf2c4b
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75919084"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543190"
 ---
 # <a name="getting-started-with-domain-specific-languages"></a>域特定语言入门
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -24,39 +24,39 @@ ms.locfileid: "75919084"
 ## <a name="what-can-you-do-with-a-domain-specific-language"></a>使用域特定语言可以执行什么操作？
  域特定语言是一种通常为图形的表示法，用于特定目的。 与此相反，UML 等语言是通用的。 在 DSL 中，可以定义模型元素的类型及其关系，以及如何在屏幕上显示它们。
 
- 设计 DSL 后，可以将其作为 Visual Studio 集成扩展（VSIX）包的一部分进行分发。 用户使用 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]中的 DSL：
+ 设计 DSL 后，可以将其作为 Visual Studio 集成扩展（VSIX）包的一部分进行分发。 用户使用中的 DSL [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ：
 
- ![系列树关系图、工具箱和资源管理器](../modeling/media/familyt-instance.png "FamilyT_Instance")
+ ![家谱关系图、工具箱和资源管理器](../modeling/media/familyt-instance.png "FamilyT_Instance")
 
  该表示法仅属于 DSL。 与表示法一起使用，VSIX 包包含一些工具，用户可以应用这些工具来帮助他们从模型中编辑和生成材料。
 
  Dsl 的一个主体应用程序是生成程序代码、配置文件和其他项目。 尤其是在大型项目和产品系列中，将在其中创建产品的多个变体，同时从 Dsl 生成许多可变方面可大大提高可靠性，并快速响应需求变化。
 
- 本概述的其余部分是一个演练，其中介绍了在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]中创建和使用域特定语言的基本操作。
+ 本概述的其余部分是一个演练，其中介绍了在中创建和使用域特定语言的基本操作 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 。
 
 ## <a name="prerequisites"></a>先决条件
  若要定义 DSL，必须安装以下组件：
 
-|||
+|产品|下载链接|
 |-|-|
 |[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185579](https://www.visualstudio.com/)|
 |[!INCLUDE[vssdk_current_short](../includes/vssdk-current-short-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185580](/azure/devops/integrate/index?view=azure-devops&viewFallbackFrom=vsts)|
 |Visual Studio 的建模 SDK|[下载 MSDK](https://www.microsoft.com/download/details.aspx?id=48148)|
 
 ## <a name="creating-a-dsl-solution"></a>创建 DSL 解决方案
- 若要创建新的域特定语言，请使用特定于域的语言项目模板来创建新的 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 解决方案。
+ 若要创建新的域特定语言，请 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 使用 "域特定语言" 项目模板创建一个新的解决方案。
 
 #### <a name="to-create-a-dsl-solution"></a>创建 DSL 解决方案
 
-1. 在 **“文件”** 菜单上，指向 **“新建”** ，然后单击 **“项目”** 。
+1. 在 **“文件”** 菜单上，指向 **“新建”**，再单击 **“项目”**。
 
 2. 在 "**项目类型**" 下，展开 "**其他项目类型**" 节点，然后单击 "**扩展性**"。
 
 3. 单击 "**特定于域的语言设计器**"。
 
-    ![创建 DSL 对话](../modeling/media/create-dsldialog.png "Create_DSLDialog")
+    ![“创建 DSL”对话框](../modeling/media/create-dsldialog.png "Create_DSLDialog")
 
-4. 在 "**名称**" 框中，键入**FamilyTree**。 单击" **确定**"。
+4. 在 "**名称**" 框中，键入**FamilyTree**。 单击 **“确定”** 。
 
     "**域特定语言向导**" 将打开，并显示模板 DSL 解决方案列表。
 
@@ -92,9 +92,9 @@ ms.locfileid: "75919084"
 
 - **Dsl 项目**此项目包含定义域特定语言的代码。
 
-- **DslPackage 项目**此项目包含允许在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]中打开和编辑 DSL 实例的代码。
+- **DslPackage 项目**此项目包含允许在中打开和编辑 DSL 实例的代码 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 。
 
-## <a name="Debugging"></a>运行 DSL
+## <a name="running-the-dsl"></a><a name="Debugging"></a>运行 DSL
  一旦创建 DSL 解决方案，就可以运行它。 稍后，你可以逐步修改 DSL 定义，并在每次更改后再次运行解决方案。
 
 #### <a name="to-experiment-with-the-dsl"></a>试验 DSL
@@ -106,11 +106,11 @@ ms.locfileid: "75919084"
 
 2. 按 F5，或在 "**调试**" 菜单上单击 "**启动调试**"。
 
-    DSL 构建并安装在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]的实验实例中。
+    DSL 构建并安装在的实验实例中 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 。
 
-    此时将启动 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的实验实例。 实验实例从注册表的单独子树获取其设置，其中 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 扩展注册用于调试目的。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的普通实例无法访问在此处注册的扩展。
+    此时将启动 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的实验实例。 实验实例从注册表的单独子树获取其设置，其中 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 扩展是为调试目的而注册的。 的普通实例 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 无法访问在此处注册的扩展。
 
-3. 在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]的实验实例中，从**解决方案资源管理器**中打开名为**Test**的模型文件。
+3. 在的实验实例中 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ，从**解决方案资源管理器**中打开名为**Test**的模型文件。
 
     \- 或 -
 
@@ -128,7 +128,7 @@ ms.locfileid: "75919084"
 
 5. 单击形状的标签可对其进行更改。
 
-   实验性 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 将类似于以下示例：
+   实验 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 将类似于以下示例：
 
    ![](../modeling/media/dsl-min.png "DSL_min")
 
@@ -139,12 +139,12 @@ ms.locfileid: "75919084"
 
  编辑模型时，可以在 "**资源管理器**" 视图中查看作为树的模型。 将形状添加到关系图中时，模型元素也会显示在资源管理器中。 即使没有关系图，也可以使用资源管理器。
 
- 如果您不能看到的调试实例中的资源管理器[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]，然后在**视图**菜单中的指向**其他 Windows**，然后单击 *\<Your 语言>* **资源管理器**。
+ 如果在的调试实例中看不到资源管理器 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ，则在 "**视图**" 菜单上，指向 "**其他窗口**"，再单击 " *\<Your Language>* **资源管理器**"。
 
 ### <a name="the-api-of-your-dsl"></a>DSL 的 API
  DSL 生成一个 API，该 API 允许你读取和更新作为 DSL 实例的模型。 API 的一个应用是从模型生成文本文件。 有关详细信息，请参阅[使用 T4 文本模板生成设计时代码](../modeling/design-time-code-generation-by-using-t4-text-templates.md)。
 
- 在调试解决方案中，打开扩展名为 "tt" 的模板文件。 这些示例演示如何从模型生成文本，并允许你测试 DSL 的 API。 其中一个示例以 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]编写，另一个示例 [!INCLUDE[csprcs](../includes/csprcs-md.md)]。
+ 在调试解决方案中，打开扩展名为 "tt" 的模板文件。 这些示例演示如何从模型生成文本，并允许你测试 DSL 的 API。 其中一个示例是用编写 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 的，另一个在中 [!INCLUDE[csprcs](../includes/csprcs-md.md)] 。
 
  在每个模板文件下，都是它生成的文件。 展开解决方案资源管理器中的模板文件，然后打开生成的文件。
 
@@ -156,7 +156,7 @@ ms.locfileid: "75919084"
 
 ##### <a name="to-regenerate-text-files-after-you-change-the-model-file"></a>更改模型文件之后重新生成文本文件
 
-1. 在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]的实验实例中，保存模型文件。
+1. 在的实验实例中 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ，保存模型文件。
 
 2. 请确保每个 tt 文件中的文件名参数是指用于试验的模型文件。 保存 tt 文件。
 
@@ -174,7 +174,7 @@ ms.locfileid: "75919084"
  有关详细信息，请参阅[从域特定语言生成代码](../modeling/generating-code-from-a-domain-specific-language.md)和[编写代码以自定义域特定语言](../modeling/writing-code-to-customise-a-domain-specific-language.md)。
 
 ## <a name="customizing-the-dsl"></a>自定义 DSL
- 如果要修改 DSL 定义，请关闭实验实例，并在主 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 实例中更新定义。
+ 如果要修改 DSL 定义，请关闭实验实例，并在主实例中更新定义 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 。
 
 > [!NOTE]
 > 修改 DSL 定义后，你可能会丢失使用早期版本创建的测试模型中的信息。  例如，调试解决方案包含名为 Sample 的文件，其中包含某些形状和连接线。 开始开发 DSL 定义后，它们将不会显示，并且在保存文件时它们将丢失。
@@ -190,7 +190,7 @@ ms.locfileid: "75919084"
 
 1. 在 Dsldefinition.dsl 关系图中，将**位于 examplemodel.store**重命名为**FamilyTreeModel**，将重**命名为** **Person**，将**目标**更改为**父级**，将**源**更改为**子级**。 您可以单击每个标签以对其进行更改。
 
-     ![DSL 定义关系&#45;图系列树模型](../modeling/media/familyt-person.png "FamilyT_Person")
+     ![DSL 定义关系图 &#45; 系列树模型](../modeling/media/familyt-person.png "FamilyT_Person")
 
 2. 重命名元素和连接器工具。
 
@@ -198,7 +198,7 @@ ms.locfileid: "75919084"
 
     2. 打开属性窗口并将其放置在一起，以便你可以同时看到 DSL 资源管理器和属性。
 
-    3. 在 DSL 资源管理器中，展开 "**编辑器**"、 **"工具箱" 选项卡**， *\<DSL >* ，然后按 "**工具**"。
+    3. 在 DSL 资源管理器中，展开 "**编辑器**"，**工具箱选项卡**，，然后按 *\<your DSL>* **工具**。
 
     4. 单击 " **ExampleElement**"。 这是用于创建元素的工具箱项。
 
@@ -214,9 +214,9 @@ ms.locfileid: "75919084"
 
     2. 单击工具栏中的 "**转换所有模板**" 解决方案资源管理器
 
-    3. 按 F5。 等待，直到出现 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的实验实例。
+    3. 按 F5。 等待，直到出现实验实例 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 。
 
-4. 在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]的实验实例的调试解决方案中，打开测试模型文件。 将元素从 "工具箱" 拖动到该元素上。 请注意，DSL 资源管理器中的工具标题和类型名称已更改。
+4. 在的实验实例中的调试解决方案中 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ，打开测试模型文件。 将元素从 "工具箱" 拖动到该元素上。 请注意，DSL 资源管理器中的工具标题和类型名称已更改。
 
 5. 保存模型文件。
 
@@ -265,7 +265,7 @@ ms.locfileid: "75919084"
 
 6. 在 tt 文件中，可以添加用于获取每个人员的属性的代码。
 
-   ![系列树关系图、工具箱和资源管理器](../modeling/media/familyt-instance.png "FamilyT_Instance")
+   ![家谱关系图、工具箱和资源管理器](../modeling/media/familyt-instance.png "FamilyT_Instance")
 
 ### <a name="define-new-classes"></a>定义新类
  您可以向模型中添加域类和关系。 例如，可以创建一个新的类来表示城镇，并创建一个新的关系来表示某个人的生活。
@@ -291,7 +291,7 @@ ms.locfileid: "75919084"
 
     1. 单击 "**引用关系**" 工具，单击 "人员"，然后单击 "城镇"。
 
-         ![DSL 定义片段：家族树根](../modeling/media/familyt-root.png "FamilyT_Root")
+         ![DSL 定义片段：家谱根目录](../modeling/media/familyt-root.png "FamilyT_Root")
 
         > [!NOTE]
         > 引用关系表示从模型树的一个部分到另一个部分的交叉引用。
@@ -316,13 +316,13 @@ ms.locfileid: "75919084"
 
     2. 使用 "**关系图元素映射**" 工具可将新的连接器链接到 Person 与城镇之间的关系。
 
-         ![带有添加的形状映射的系列树定义](../modeling/media/familyt-shapemap.png "FamilyT_ShapeMap")
+         ![添加了形状映射的家谱定义](../modeling/media/familyt-shapemap.png "FamilyT_ShapeMap")
 
 6. 创建一个用于创建新的城镇的元素工具。
 
     1. 在**DSL 资源管理器**中，依次展开**编辑器**和**工具箱选项卡**。
 
-    2. 右键单击*DSL >\<* ，然后单击 "**添加新元素工具**"。
+    2. 右键单击 *\<your DSL>* ，然后单击 "**添加新元素工具**"。
 
     3. 设置新工具的 "**名称**" 属性，并将其 "**类**" 属性设置为 "城镇"。
 
@@ -330,7 +330,7 @@ ms.locfileid: "75919084"
 
 7. 创建用于在城镇与人员之间进行链接的连接器工具。
 
-    1. 右键单击*DSL >\<* ，然后单击 "**添加新的连接器工具**"。
+    1. 右键单击 *\<your DSL>* ，然后单击 "**添加新的连接器工具**"。
 
     2. 设置新工具的 "名称" 属性。
 
@@ -340,7 +340,7 @@ ms.locfileid: "75919084"
 
 8. 保存 DSL 定义，单击 "**转换所有模板**"，然后按**F5**。
 
-9. 在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]的实验实例中，打开测试模型文件。 使用新工具来创建城镇和城镇和人员之间的链接。 请注意，只能在正确类型的元素之间创建链接。
+9. 在的实验实例中 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ，打开测试模型文件。 使用新工具来创建城镇和城镇和人员之间的链接。 请注意，只能在正确类型的元素之间创建链接。
 
 10. 创建列出每个人居住的城市的代码。 文本模板是可以运行此类代码的位置之一。 例如，可以修改调试解决方案中的现有 Sample.tt 文件，使其包含以下代码：
 
@@ -372,23 +372,23 @@ ms.locfileid: "75919084"
 ## <a name="validation-and-commands"></a>验证和命令
  可以通过添加验证约束来进一步开发此 DSL。 这些约束是可以定义的方法，可确保模型处于正确的状态。 例如，您可以定义一个约束以确保子项的出生日期晚于其父级的出生日期。 如果 DSL 用户尝试保存中断了任何约束的模型，则验证功能将显示警告。 有关详细信息，请参阅[以域特定语言进行验证](../modeling/validation-in-a-domain-specific-language.md)。
 
- 还可以定义用户可以调用的菜单命令。 命令可以修改模型。 它们还可以与 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中的其他模型和外部资源交互。 有关详细信息，请参阅[如何：修改标准菜单命令](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md)。
+ 还可以定义用户可以调用的菜单命令。 命令可以修改模型。 它们还可以与中的其他模型 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 和外部资源交互。 有关详细信息，请参阅[如何：修改标准菜单命令](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md)。
 
 ## <a name="deploying-the-dsl"></a>部署 DSL
- 若要允许其他用户使用域特定语言，请分发 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 扩展（VSIX）文件。 这是在构建 DSL 解决方案时创建的。
+ 为了使其他用户可以使用域特定语言，你可以分发 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 扩展（VSIX）文件。 这是在构建 DSL 解决方案时创建的。
 
- 找到解决方案的 bin 文件夹中的 .vsix 文件。 将其复制到要在其上安装它的计算机。 在该计算机上，双击该 VSIX 文件。 DSL 可用于该计算机上 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的所有实例中。
+ 找到解决方案的 bin 文件夹中的 .vsix 文件。 将其复制到要在其上安装它的计算机。 在该计算机上，双击该 VSIX 文件。 DSL 可用于该计算机上的所有实例中 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 。
 
- 您可以使用相同的过程在自己的计算机上安装 DSL，这样就不必使用 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]的实验实例。
+ 您可以使用相同的过程在自己的计算机上安装 DSL，这样就不必使用的实验实例 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 。
 
  有关详细信息，请参阅[部署域特定语言解决方案](../modeling/deploying-domain-specific-language-solutions.md)。
 
-## <a name="Reset"></a>删除旧实验 Dsl
- 如果已创建不再需要的实验性 Dsl，可以通过重置 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 实验实例，从计算机中删除它们。
+## <a name="removing-old-experimental-dsls"></a><a name="Reset"></a>删除旧实验 Dsl
+ 如果已创建不再需要的实验性 Dsl，可以通过重置实验实例，将其从计算机中删除 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 。
 
  这将从您的计算机中删除所有实验性 Dsl 和其他实验性 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 扩展。 这些是在调试模式下执行的扩展。
 
- 此过程不会删除已通过执行 VSIX 文件完全安装的 Dsl 或其他 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 扩展。
+ 此过程不会删除 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 已通过执行 VSIX 文件完全安装的 dsl 或其他扩展。
 
 #### <a name="to-reset-the-visual-studio-experimental-instance"></a>重置 Visual Studio 实验实例
 
@@ -396,5 +396,5 @@ ms.locfileid: "75919084"
 
 2. 重新生成仍想要使用的任何实验性 Dsl 或其他实验性 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 扩展。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [了解模型、类和关系](../modeling/understanding-models-classes-and-relationships.md)[如何定义域特定语言](../modeling/how-to-define-a-domain-specific-language.md)[初学者和建模 SDK](https://www.microsoft.com/download/details.aspx?id=48148)

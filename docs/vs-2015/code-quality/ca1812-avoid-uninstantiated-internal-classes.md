@@ -15,17 +15,17 @@ caps.latest.revision: 28
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: f5a36ee8cffc221d15243ff72e2e71558e867319
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 401fbfbccfeeeeec5cbdc0e791b110d1b5f0201b
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72645408"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543970"
 ---
-# <a name="ca1812-avoid-uninstantiated-internal-classes"></a>CA1812：避免未实例化的内部类
+# <a name="ca1812-avoid-uninstantiated-internal-classes"></a>CA1812:避免未实例化的内部类
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|项|值|
 |-|-|
 |TypeName|AvoidUninstantiatedInternalClasses|
 |CheckId|CA1812|
@@ -35,7 +35,7 @@ ms.locfileid: "72645408"
 ## <a name="cause"></a>原因
  程序集级别类型的实例不是由程序集中的代码创建的。
 
-## <a name="rule-description"></a>规则说明
+## <a name="rule-description"></a>规则描述
  此规则尝试查找对该类型的一个构造函数的调用，并在找不到调用时报告冲突。
 
  此规则不检查以下类型：
@@ -50,23 +50,23 @@ ms.locfileid: "72645408"
 
 - 编译器发出的数组类型
 
-- 不能实例化并定义 `static` （`Shared` 在 Visual Basic 中）方法的类型。
+- 不能实例化并 `static` 仅定义（ `Shared` 在 Visual Basic 中）方法的类型。
 
-  如果将 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute?displayProperty=fullName> 应用到正在分析的程序集，则标记为 `internal` 的任何构造函数都不会出现此规则，因为你无法判断某个字段是否正由其他 `friend` 程序集使用。
+  如果你将应用 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute?displayProperty=fullName> 到正在分析的程序集，则将不会在标记为的任何构造函数上出现此规则， `internal` 因为你无法判断某个字段是否正由其他 `friend` 程序集使用。
 
-  即使在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 代码分析中无法解决此限制，如果分析中存在每个 `friend` 的程序集，则外部独立的 FxCop 将发生在内部构造函数上。
+  即使在代码分析中无法解决此限制 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ，在 `friend` 分析中有每个程序集时，外部独立的 FxCop 也将在内部构造函数上发生。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
  若要修复与此规则的冲突，请删除该类型或添加使用它的代码。 如果类型仅包含静态方法，请将以下内容之一添加到类型中，以防止编译器发出默认的公共实例构造函数：
 
-- 面向 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 版本1.0 和1.1 的类型的私有构造函数。
+- 面向版本1.0 和1.1 的类型的私有构造函数 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 。
 
-- 面向 [!INCLUDE[dnprdnlong](../includes/dnprdnlong-md.md)] 的类型的 `static` （`Shared` Visual Basic）修饰符。
+- `static`面向的类型的（ `Shared` 在 Visual Basic）修饰符 [!INCLUDE[dnprdnlong](../includes/dnprdnlong-md.md)] 。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
  可以安全地禁止显示此规则发出的警告。 建议在以下情况下禁止显示此警告：
 
-- 类是通过后期绑定反射方法（如 <xref:System.Activator.CreateInstance%2A?displayProperty=fullName>）创建的。
+- 类是通过后期绑定反射方法（如）创建的 <xref:System.Activator.CreateInstance%2A?displayProperty=fullName> 。
 
 - 类是由运行时或 [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] 自动创建的。 例如，用于实现 <xref:System.Configuration.IConfigurationSectionHandler?displayProperty=fullName> 或 <xref:System.Web.IHttpHandler?displayProperty=fullName> 的类。
 
@@ -94,8 +94,8 @@ ms.locfileid: "72645408"
   在这些情况下，我们建议禁止显示此警告。
 
 ## <a name="related-rules"></a>相关规则
- [CA1811：避免使用未调用的私有代码](../code-quality/ca1811-avoid-uncalled-private-code.md)
+ [CA1811:避免使用未调用的私有代码](../code-quality/ca1811-avoid-uncalled-private-code.md)
 
- [CA1801：检查未使用的参数](../code-quality/ca1801-review-unused-parameters.md)
+ [CA1801:检查未使用的参数](../code-quality/ca1801-review-unused-parameters.md)
 
- [CA1804：移除未使用的局部变量](../code-quality/ca1804-remove-unused-locals.md)
+ [CA1804:移除未使用的局部变量](../code-quality/ca1804-remove-unused-locals.md)

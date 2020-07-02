@@ -13,12 +13,12 @@ caps.latest.revision: 21
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 445eaf5269ce59e6f6f8fa323020a80648567f54
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MTE95
+ms.openlocfilehash: df93a87285bdf1172e75b63ed956c1aa978fc71e
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68193623"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545530"
 ---
 # <a name="channels-threads-view"></a>通道（线程视图）
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "68193623"
 ## <a name="thread-channels"></a>线程通道  
  线程通道通过颜色显示一个线程的状态。 停在通道名称处时，将显示给定线程的开始函数。 并发可视化工具可检测到多种线程。 下表列出了最常用的线程类型。  
   
-|||  
+|线程|描述|  
 |-|-|  
 |主线程|启动应用的线程。|  
 |工作线程|由应用程序主线程创建的线程。|  

@@ -48,7 +48,7 @@ ms.locfileid: "85544906"
 </entryPoint>
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [Office 解决方案的应用程序清单](../vsto/application-manifests-for-office-solutions.md)
 - [Office 解决方案的部署清单](../vsto/deployment-manifests-for-office-solutions.md)

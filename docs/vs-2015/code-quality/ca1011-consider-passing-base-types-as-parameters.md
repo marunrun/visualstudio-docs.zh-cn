@@ -15,17 +15,17 @@ caps.latest.revision: 20
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 3968d81e8ee18b4b0a56bed50f7aa1f121e1c074
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f689dfd6c1d39bbd03d522a33ed8c5639a3da9f8
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72663245"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545478"
 ---
-# <a name="ca1011-consider-passing-base-types-as-parameters"></a>CA1011：考虑将基类型作为参数传递
+# <a name="ca1011-consider-passing-base-types-as-parameters"></a>CA1011:考虑将基类型作为参数传递
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|项|值|
 |-|-|
 |TypeName|ConsiderPassingBaseTypesAsParameters|
 |CheckId|CA1011|
@@ -35,7 +35,7 @@ ms.locfileid: "72663245"
 ## <a name="cause"></a>原因
  方法声明包含一个派生类型的形参，而方法仅调用该参数的基类型的成员。
 
-## <a name="rule-description"></a>规则说明
+## <a name="rule-description"></a>规则描述
  在方法声明中将基类型指定为参数时，可以将派生自基类型的任何类型作为相应的参数传递给方法。 在方法体中使用参数时，执行的特定方法取决于参数的类型。 如果派生类型提供的其他功能不是必需的，则使用基类型可以更广泛使用该方法。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
@@ -53,11 +53,11 @@ ms.locfileid: "72663245"
   在这些情况下，由于编译器和运行时提供的强类型检查，代码将更可靠。
 
 ## <a name="example"></a>示例
- 下面的示例演示一个 `ManipulateFileStream` 方法，该方法只能与违反此规则的 <xref:System.IO.FileStream> 对象一起使用。 第二种方法（`ManipulateAnyStream`）通过使用 <xref:System.IO.Stream> 替换 <xref:System.IO.FileStream> 参数来满足规则。
+ 下面的示例演示一个方法， `ManipulateFileStream` 该方法只能与与 <xref:System.IO.FileStream> 此规则冲突的对象一起使用。 第二种方法是通过 `ManipulateAnyStream` 使用替换参数来满足规则 <xref:System.IO.FileStream> <xref:System.IO.Stream> 。
 
  [!code-cpp[FxCop.Design.ConsiderPassingBaseTypes#1](../snippets/cpp/VS_Snippets_CodeAnalysis/FxCop.Design.ConsiderPassingBaseTypes/cpp/FxCop.Design.ConsiderPassingBaseTypes.cpp#1)]
  [!code-csharp[FxCop.Design.ConsiderPassingBaseTypes#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.ConsiderPassingBaseTypes/cs/FxCop.Design.ConsiderPassingBaseTypes.cs#1)]
  [!code-vb[FxCop.Design.ConsiderPassingBaseTypes#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Design.ConsiderPassingBaseTypes/vb/FxCop.Design.ConsiderPassingBaseTypes.vb#1)]
 
 ## <a name="related-rules"></a>相关规则
- [CA1059：成员不应公开某些具体类型](../code-quality/ca1059-members-should-not-expose-certain-concrete-types.md)
+ [CA1059:成员不应公开某些具体类型](../code-quality/ca1059-members-should-not-expose-certain-concrete-types.md)

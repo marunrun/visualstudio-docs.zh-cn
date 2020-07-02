@@ -15,17 +15,17 @@ caps.latest.revision: 16
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 1fab269e8f583f8b55f52eb70a5a813450f8a184
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 4c1071617572af44a73f98953fd435623190e0e3
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72658892"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85540837"
 ---
-# <a name="ca2223-members-should-differ-by-more-than-return-type"></a>CA2223：成员不应只是返回类型不同
+# <a name="ca2223-members-should-differ-by-more-than-return-type"></a>CA2223:成员不应只是返回类型不同
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|项|值|
 |-|-|
 |TypeName|MembersShouldDifferByMoreThanReturnType|
 |CheckId|CA2223|
@@ -35,7 +35,7 @@ ms.locfileid: "72658892"
 ## <a name="cause"></a>原因
  两个公共或受保护成员具有相同的签名（返回类型除外）。
 
-## <a name="rule-description"></a>规则说明
+## <a name="rule-description"></a>规则描述
  尽管公共语言运行时允许使用返回类型来区分其他完全相同的成员，但此功能并不属于公共语言规范，也不是 .NET 编程语言的常见功能。 如果成员的差异仅在于返回类型，开发人员和开发工具可能无法正确区分它们。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
@@ -45,7 +45,7 @@ ms.locfileid: "72658892"
  不禁止显示此规则发出的警告。
 
 ## <a name="example"></a>示例
- 下面的示例（在 Microsoft 中间语言（MSIL）中）显示了违反此规则的类型。 请注意，不能使用C#或 Visual Basic .net 来违反此规则。
+ 下面的示例（在 Microsoft 中间语言（MSIL）中）显示了违反此规则的类型。 请注意，不能使用 c # 或 .NET Visual Basic 来违反此规则。
 
 ```
 

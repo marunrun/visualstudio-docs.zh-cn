@@ -15,23 +15,23 @@ caps.latest.revision: 9
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: fa0d771d99ac8e7a4f4091db90a607cce970bc38
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: 10649b4106a280089fd6b086167c7e92bff1300b
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75917828"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545244"
 ---
-# <a name="ca1903-use-only-api-from-targeted-framework"></a>CA1903：仅使用目标框架中的 API
+# <a name="ca1903-use-only-api-from-targeted-framework"></a>CA1903:仅使用目标框架中的 API
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 有关 Visual Studio 的最新文档，请参阅[CA1903：仅使用目标框架中的 API](/visualstudio/code-quality/ca1903-use-only-api-from-targeted-framework)。
 
-|||
+|项|值|
 |-|-|
 |TypeName|UseOnlyApiFromTargetedFramework|
 |CheckId|CA1903|
-|类别|Microsoft.Portability|
+|类别|Microsoft 可移植性|
 |是否重大更改|正在进行-针对外部可见成员或类型的签名引发。<br /><br /> 不间断-在方法的主体中触发时。|
 
 ## <a name="cause"></a>原因
@@ -42,13 +42,13 @@ ms.locfileid: "75917828"
 
  **目标框架和 Service Pack 依赖项**
 
-|||
+|项|值|
 |-|-|
 |当目标框架是|在中引入的成员的使用情况触发|
 |.NET Framework 2.0|.NET Framework 2.0 SP1，.NET Framework 2.0 SP2|
 |.NET Framework 3.0|.NET Framework 2.0 SP1，.NET Framework 2.0 SP2，.NET Framework 3.0 SP1，.NET Framework 3.0 SP2|
 |.NET Framework 3.5|.NET Framework 3.5 SP1|
-|.NET Framework 4|不适用|
+|.NET Framework 4|不可用|
 
  若要更改项目的目标框架，请参阅[面向特定 .NET Framework 版本](../ide/targeting-a-specific-dotnet-framework-version.md)。
 
@@ -68,5 +68,5 @@ ms.locfileid: "75917828"
 
  [!code-csharp[FxCop.Portability.UseOnlyApiFromTargetedFramework2#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Portability.UseOnlyApiFromTargetedFramework2/CS/FxCop.Portability.UseOnlyApiFromTargetedFramework2.cs#1)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [面向特定 .NET Framework 版本的](../ide/targeting-a-specific-dotnet-framework-version.md)可[移植性警告](../code-quality/portability-warnings.md)

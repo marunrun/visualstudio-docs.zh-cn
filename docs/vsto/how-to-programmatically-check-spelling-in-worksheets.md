@@ -1,7 +1,7 @@
 ---
-title: 如何：以编程方式检查工作表中的拼写
+title: 如何：以编程方式在工作表中检查拼写
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -15,15 +15,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: feb284657932a0c20cd785b14db5e2b3de9366f1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 797fc498c54bdbc466fe8ddc35229b2c106db80d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62575555"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85541539"
 ---
-# <a name="how-to-programmatically-check-spelling-in-worksheets"></a>如何：以编程方式检查工作表中的拼写
-  可以通过编程方式在工作表中检查单词的拼写。 如果工作表中存在任何拼写错误的单词，则“拼写”  对话框会自动出现。
+# <a name="how-to-programmatically-check-spelling-in-worksheets"></a>如何：以编程方式在工作表中检查拼写
+  可以通过编程方式在工作表中检查单词的拼写。 如果工作表中存在任何拼写错误的单词，则“拼写” **** 对话框会自动出现。
 
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]
 
@@ -34,7 +34,7 @@ ms.locfileid: "62575555"
      [!code-csharp[Trin_VstcoreExcelAutomation#45](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#45)]
      [!code-vb[Trin_VstcoreExcelAutomation#45](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#45)]
 
-## <a name="to-check-spelling-in-a-worksheet-in-a-vsto-add-in"></a>若要在 VSTO 外接程序中的工作表中检查拼写
+## <a name="to-check-spelling-in-a-worksheet-in-a-vsto-add-in"></a>在 VSTO 外接程序中检查工作表中的拼写
 
 1. 调用活动工作表的 <xref:Microsoft.Office.Interop.Excel._Worksheet.CheckSpelling%2A> 方法。
 

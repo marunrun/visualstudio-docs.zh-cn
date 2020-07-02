@@ -13,24 +13,24 @@ caps.latest.revision: 12
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 7fcb38184a1d432ca036be88c4d957c0e4d4f419
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: 7ae2b836549918fa1179e4e70d51d760efbe2c35
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75917166"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544919"
 ---
 # <a name="da0039-very-high-rate-of-lock-contentions"></a>DA0039：锁争用率非常高
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 有关 Visual Studio 的最新文档，请参阅[DA0039：锁争用率非常高](/visualstudio/profiling/da0039-very-high-rate-of-lock-contentions)。  
   
-|||  
+|项|值|  
 |-|-|  
 |规则 ID|DA0039|  
 |类别|.NET Framework 使用情况|  
-|分析方法|采样<br /><br /> 检测信息<br /><br /> .NET 内存|  
-|Message|.NET 锁争用率非常高。 请运行“并发”分析调查出现此锁争用的原因。|  
+|分析方法|采样<br /><br /> 检测<br /><br /> .NET 内存|  
+|消息|.NET 锁争用率非常高。 请运行“并发”分析调查出现此锁争用的原因。|  
 |规则类型|警告|  
   
  使用采样法、.NET 内存或资源争用方法进行分析时，必须至少收集 25 个样本才能触发此规则。  
@@ -39,7 +39,7 @@ ms.locfileid: "75917166"
  与分析数据一起收集的系统性能数据表示：应用程序执行期间的锁争用率过高。 请再次考虑使用并发分析进行分析，以找出争用的起因。  
   
 ## <a name="rule-description"></a>规则描述  
- 锁用于保护代码的关键部分，这些关键部分必须由一个线程在多线程应用程序上一次按顺序执行。 Microsoft .NET 公共语言运行时 (CLR) 提供了一套完整的同步和锁定基元。 例如，C# 语言支持 lock 语句（Visual Basic 中的 SyncLock）。 托管应用程序可以调用 system.exception 命名空间中的 `Monitor.Enter` 和 `Monitor.Exit` 方法来直接获取和释放锁。 .NET Framework 支持其他同步和锁定基元，包括支持互斥锁、ReaderWriterLock 和信号量的类。 有关详细信息，请参阅 MSDN 网站上“.NET Framework 开发人员指南”中的 [Overview of Synchronization Primitives](https://msdn.microsoft.com/library/ms228964.aspx)（同步基元概述）。 .NET Framework 类本身分层在 Windows 操作系统内置的级别较低的同步服务上。 其中包括关键部分对象和很多不同的 Wait 和事件信号函数。 有关详细信息，请参阅 MSDN 库中“Win32 和 COM 开发”的 [Synchronization](https://msdn.microsoft.com/library/ms686353.aspx)（同步）部分  
+ 锁用于保护代码的关键部分，这些关键部分必须由一个线程在多线程应用程序上一次按顺序执行。 Microsoft .NET 公共语言运行时 (CLR) 提供了一套完整的同步和锁定基元。 例如，C# 语言支持 lock 语句（Visual Basic 中的 SyncLock）。 托管应用程序可以调用 system.exception `Monitor.Enter` `Monitor.Exit` 命名空间中的和方法来直接获取和释放锁。 .NET Framework 支持其他同步和锁定基元，包括支持互斥锁、ReaderWriterLock 和信号量的类。 有关详细信息，请参阅 MSDN 网站上“.NET Framework 开发人员指南”中的 [Overview of Synchronization Primitives](https://msdn.microsoft.com/library/ms228964.aspx)（同步基元概述）。 .NET Framework 类本身分层在 Windows 操作系统内置的级别较低的同步服务上。 其中包括关键部分对象和很多不同的 Wait 和事件信号函数。 有关详细信息，请参阅 MSDN Library 中的 Win32 和 COM 开发的[同步](https://msdn.microsoft.com/library/ms686353.aspx)部分  
   
  用于同步和锁定的 .NET Framework 类和 Windows 对象以共享内存位置为基础，且必须使用互锁操作才能更改该共享内存位置。 通过在共享内存位置进行操作的特定于硬件的说明，互锁操作使用原子操作更改其状态。 应确保原子操作在计算机的所有处理器中保持一致。 lock 和 WaitHandles 是 .NET 对象，设置或重置二者时，它们将自动使用互锁操作。 应用程序中可能有其他共享内存数据结构，需使用互锁操作才能以线程安全的方式进行更新。 有关详细信息，请参阅 MSDN 库 .NET Framework 部分中的 [Interlocked Operations](https://msdn.microsoft.com/library/sbhbke0y.aspx)（互锁操作）  
   
@@ -50,7 +50,7 @@ ms.locfileid: "75917166"
  分析运行期间采用的测量值表明锁争用过高时，将触发此规则。 锁争用将延迟执行等待锁的线程。 即使是在低端硬件上运行的单元测试或负载测试中的少量锁争用，也应进行调查。  
   
 > [!NOTE]
-> 分析数据中报告的锁争用率非常高但没有过量时，将触发 [DA0038：锁争用率高](../profiling/da0038-high-rate-of-lock-contentions.md)信息消息，不会触发此警告消息。  
+> 如果分析数据中报告的锁争用率很高，但不是过多，则会激发[DA0038：锁争用率很高](../profiling/da0038-high-rate-of-lock-contentions.md)，而不会触发此警告消息。  
   
 ## <a name="how-to-investigate-a-warning"></a>如何调查警告  
  双击消息导航到分析数据的[“标记”](../profiling/marks-view.md)视图。  查找 **.NET CLR LocksAndThreads\Contention Rate / sec** 列。 确定是否存在特定阶段的程序执行，其中锁争用高于其他阶段。  

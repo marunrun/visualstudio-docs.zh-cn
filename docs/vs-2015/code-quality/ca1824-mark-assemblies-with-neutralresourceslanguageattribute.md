@@ -15,17 +15,17 @@ caps.latest.revision: 14
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: efa328fdff9c357e0183fc2ca80e4d77d4f6782e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 19077a63d5aa22bda3f968943703a82488e2745d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661113"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545283"
 ---
-# <a name="ca1824-mark-assemblies-with-neutralresourceslanguageattribute"></a>CA1824：用 NeutralResourcesLanguageAttribute 标记程序集
+# <a name="ca1824-mark-assemblies-with-neutralresourceslanguageattribute"></a>CA1824:用 NeutralResourcesLanguageAttribute 标记程序集
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|项|值|
 |-|-|
 |TypeName|MarkAssembliesWithNeutralResourcesLanguage|
 |CheckId|CA1824|
@@ -33,9 +33,9 @@ ms.locfileid: "72661113"
 |是否重大更改|不间断|
 
 ## <a name="cause"></a>原因
- 程序集包含基于**ResX**的资源，但未对其应用 <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=fullName>。
+ 程序集包含基于**ResX**的资源，但没有 <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=fullName> 应用到它。
 
-## <a name="rule-description"></a>规则说明
+## <a name="rule-description"></a>规则描述
  **NeutralResourcesLanguage**特性通知用于显示程序集的非特定区域性资源的语言的**ResourceManager** 。 当它在与非特定区域性资源语言相同的区域性中查找资源时， **ResourceManager**会自动使用位于主程序集中的资源。 它不会搜索具有当前线程的当前用户界面区域性的附属程序集。 这将改进所加载的第一个资源的查找性能，并缩小工作集。
 
 ## <a name="fixing-violations"></a>解决冲突
@@ -51,7 +51,7 @@ ms.locfileid: "72661113"
 
 3. 在 "**程序集信息**" 对话框中，从 "**非特定语言**" 下拉列表中选择语言。
 
-4. 单击“确定”。
+4. 单击 **“确定”** 。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
  允许禁止显示此规则发出的警告。 但是，启动性能可能会降低。
