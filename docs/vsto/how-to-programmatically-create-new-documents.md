@@ -1,7 +1,7 @@
 ---
 title: 如何：以编程方式创建新文档
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -14,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 71610d0bd2e957d932e31d83d06aca914bf8b585
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 8e82c5ca62c407481b73de9394c584c3039a8f57
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71251951"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545985"
 ---
 # <a name="how-to-programmatically-create-new-documents"></a>如何：以编程方式创建新文档
   当以编程方式创建文档时，新文档是一个本机 <xref:Microsoft.Office.Interop.Word.Document> 对象。 此对象不具有 <xref:Microsoft.Office.Tools.Word.Document> 主机项的其他事件和数据绑定功能。 有关详细信息，请参阅[主机项和主机控件的编程限制](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)。
@@ -36,7 +36,7 @@ ms.locfileid: "71251951"
      [!code-csharp[Trin_VstcoreWordAutomation#1](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#1)]
 
 ## <a name="use-custom-templates"></a>使用自定义模板
- 此<xref:Microsoft.Office.Interop.Word.Documents.Add%2A>方法具有一个可选的*模板*自变量，可基于模板而不是 Normal 模板来创建新文档。 你必须提供模板的文件名称和完全限定路径。
+ 此 <xref:Microsoft.Office.Interop.Word.Documents.Add%2A> 方法具有一个可选的*模板*自变量，可基于模板而不是 Normal 模板来创建新文档。 你必须提供模板的文件名称和完全限定路径。
 
 ### <a name="to-create-a-new-document-based-on-a-custom-template"></a>基于自定义模板创建新文档
 

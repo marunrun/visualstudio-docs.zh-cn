@@ -1,7 +1,7 @@
 ---
 title: 如何：缓存数据以便脱机使用或在服务器上使用
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -17,28 +17,28 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 551d27cf8d40f2e6e9c996b031fa6c4e0a233355
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: ce295e299e4accb2d79655675f6264a1497b8d69
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73189574"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546180"
 ---
 # <a name="how-to-cache-data-for-use-offline-or-on-a-server"></a>如何：缓存数据以便脱机使用或在服务器上使用
   您可以标记要缓存在文档中的数据项，使其在脱机时可用。 当文档存储在服务器上时，也可以使用其他代码来处理文档中的数据。
 
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]
 
- 在代码中声明数据项时，可以将数据项标记为缓存; 如果使用的是 <xref:System.Data.DataSet>，则可以在 "**属性**" 窗口中设置属性来标记要缓存的数据项。 如果要缓存的数据项不是 <xref:System.Data.DataSet> 或 <xref:System.Data.DataTable>，请确保它满足在文档中进行缓存的条件。 有关详细信息，请参阅[缓存数据](../vsto/caching-data.md)。
+ 在代码中声明数据项时，可以将数据项标记为要缓存; 如果使用的是 <xref:System.Data.DataSet> ，请在 "**属性**" 窗口中设置属性。 如果要缓存的数据项不是 <xref:System.Data.DataSet> 或 <xref:System.Data.DataTable> ，请确保它满足在文档中缓存的条件。 有关详细信息，请参阅[缓存数据](../vsto/caching-data.md)。
 
 > [!NOTE]
-> 使用标记为**缓存**和**WithEvents**的 Visual Basic 创建的数据集（包括从 "**数据源**" 窗口或 **"工具箱**" 中拖到 " **CacheInDocument** " 属性设置为 True 的数据集）在缓存中以下划线作为其名称的前缀。 例如，如果创建一个数据集并将其命名为**Customers**，则 <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem> 名称将在缓存中 **_Customers** 。 使用 <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> 访问此缓存项时，必须指定 **_Customers**而不是**客户**。
+> 使用标记为**缓存**和**WithEvents**的 Visual Basic 创建的数据集（包括从 "**数据源**" 窗口或 **"工具箱**" 中拖到 " **CacheInDocument** " 属性设置为**True**的数据集）在缓存中的名称前面加下划线。 例如，如果创建一个数据集并将其命名为**Customers**，则该 <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem> 名称将在缓存中 **_Customers** 。 使用 <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> 访问此缓存项时，必须指定 **_Customers**而不是**客户**。
 
 ### <a name="to-cache-data-in-the-document-using-code"></a>使用代码在文档中缓存数据
 
-1. 将数据项的公共字段或属性声明为项目中主机项类的成员，例如 Word 项目中的 `ThisDocumen`t 类或 Excel 项目中的 `ThisWorkbook` 类。
+1. 将数据项的公共字段或属性声明为项目中主机项类的成员，如 `ThisDocumen` Word 项目中的 t 类或 `ThisWorkbook` Excel 项目中的类。
 
-2. 将 <xref:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedAttribute> 特性应用于成员，以将数据项标记为要存储在文档的数据缓存中。 下面的示例将此特性应用于 <xref:System.Data.DataSet>的字段声明。
+2. 将属性应用于 <xref:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedAttribute> 成员，以将数据项标记为存储在文档的数据缓存中。 下面的示例将此特性应用于的字段声明 <xref:System.Data.DataSet> 。
 
      [!code-csharp[Trin_VstcoreDataExcel#11](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs#11)]
      [!code-vb[Trin_VstcoreDataExcel#11](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb#11)]

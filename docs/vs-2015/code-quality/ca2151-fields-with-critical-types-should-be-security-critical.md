@@ -9,17 +9,17 @@ caps.latest.revision: 6
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: e5dee78ef3c487541363e9e290e54a8f3d68cf3b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 48c3f55b60add1691fe31c764f31673bbf1ab47b
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72667426"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546349"
 ---
-# <a name="ca2151-fields-with-critical-types-should-be-security-critical"></a>CA2151：具有关键类型的字段应是安全关键的
+# <a name="ca2151-fields-with-critical-types-should-be-security-critical"></a>CA2151:具有关键类型的字段应为安全关键的
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|项|值|
 |-|-|
 |TypeName||
 |CheckId|CA2151|
@@ -27,7 +27,7 @@ ms.locfileid: "72667426"
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
- 声明了安全透明字段或可靠关键字段。 其类型被指定为安全关键。 例如:
+ 声明了安全透明字段或可靠关键字段。 其类型被指定为安全关键。 例如：
 
 ```csharp
 [assembly: AllowPartiallyTrustedCallers]
@@ -43,7 +43,7 @@ ms.locfileid: "72667426"
 
  在此示例中，`m_field` 是一个安全关键类型的安全透明字段。
 
-## <a name="rule-description"></a>规则说明
+## <a name="rule-description"></a>规则描述
  若要使用安全关键类型，引用该类型的代码必须是安全关键或安全可靠关键。 即使引用是间接的，也需如此。 例如，当你引用具有关键类型的透明字段时，你的代码必须是安全关键的或安全可靠的。 因此，具有安全透明字段或安全可靠关键字段具有误导性，因为透明代码仍然无法访问该字段。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突

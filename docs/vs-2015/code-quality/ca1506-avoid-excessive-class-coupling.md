@@ -15,17 +15,17 @@ caps.latest.revision: 14
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: e85ac61e404ac9bc1afb9459716c2395233c5080
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 07f19cb9d4aa2ed118898a1816092479cbd16565
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72607406"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545699"
 ---
-# <a name="ca1506-avoid-excessive-class-coupling"></a>CA1506：避免过度类耦合
+# <a name="ca1506-avoid-excessive-class-coupling"></a>CA1506:避免过度类耦合度
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|项|值|
 |-|-|
 |TypeName|AvoidExcessiveClassCoupling|
 |CheckId|CA1506|
@@ -35,7 +35,7 @@ ms.locfileid: "72607406"
 ## <a name="cause"></a>原因
  类型或方法与许多其他类型耦合在一起。
 
-## <a name="rule-description"></a>规则说明
+## <a name="rule-description"></a>规则描述
  此规则通过计算类型或方法包含的唯一类型引用的个数来衡量类耦合。
 
  类耦合度较高的类型和方法可能很难维护。 有一种很好的做法，就是使用表现低耦合和高聚合的类型和方法。
@@ -46,5 +46,5 @@ ms.locfileid: "72607406"
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
  如果类型或方法仍被视为可维护（尽管它对其他类型的依赖项很多），则排除此警告。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [测量托管代码的复杂性和可维护性的](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)可[维护性警告](../code-quality/maintainability-warnings.md)

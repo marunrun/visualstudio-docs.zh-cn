@@ -15,17 +15,17 @@ caps.latest.revision: 17
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: d4260db808d9c50f78388cf6ba976f7ace52e6a3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 3f6233136dcf7f1db5d622a02419d33e0eedacf5
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669300"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545673"
 ---
-# <a name="ca1600-do-not-use-idle-process-priority"></a>CA1600：不要使用 Idle 进程优先级
+# <a name="ca1600-do-not-use-idle-process-priority"></a>CA1600:不要使用 Idle 进程优先级
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|项|值|
 |-|-|
 |TypeName|DoNotUseIdleProcessPriority|
 |CheckId|CA1600|
@@ -33,13 +33,13 @@ ms.locfileid: "72669300"
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
- 当进程设置为 `ProcessPriorityClass.Idle` 时，将出现此规则。
+ 当进程设置为时，将出现此规则 `ProcessPriorityClass.Idle` 。
 
-## <a name="rule-description"></a>规则说明
- 不要将进程优先级设置为 Idle。 具有 `System.Diagnostics.ProcessPriorityClass.Idle` 的进程将在 CPU 处于空闲状态时占用 CPU，因而会阻止待机。
+## <a name="rule-description"></a>规则描述
+ 不要将进程优先级设置为 Idle。 如果进程在 `System.Diagnostics.ProcessPriorityClass.Idle` 其他情况下处于空闲状态，则会占用 CPU，因而会阻止待机。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
- 将进程设置为 `ProcessPriorityClass.BelowNormal`。
+ 将进程设置为 `ProcessPriorityClass.BelowNormal` 。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
  仅当需要空闲进程优先级时才应禁止显示此规则，并且可以安全地忽略移动性注意事项。

@@ -1,5 +1,5 @@
 ---
-title: 调试程序 Windows |Microsoft Docs
+title: 调试器窗口 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -9,21 +9,20 @@ caps.latest.revision: 10
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 78a81b2392959b968e8905ae33a6f0751e73f2ff
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 1395aba0ea2f40e0df95435a340f4104c9f25d03
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65686767"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545621"
 ---
 # <a name="debugger-windows"></a>调试器窗口
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-调试程序时可以打开大多数调试器窗口。 若要查看调试器窗口列表，请设置断点并开始调试。 当你命中断点并且执行停止时，请单击“调试/窗口” 。  
+调试程序时可以打开大多数调试器窗口。 若要查看调试器窗口列表，请设置断点并开始调试。 命中断点并停止执行时，请单击 "**调试"/"窗口**"。  
   
-||||  
+|**Window**|**热键**|**请参阅主题**|  
 |-|-|-|  
-|**窗口**|**热键**|**请参阅主题**|  
 |断点|CTRL+ALT+B|[使用断点](../debugger/using-breakpoints.md)|  
 |异常设置|CTRL+ALT+E|[管理调试器的异常](../debugger/managing-exceptions-with-the-debugger.md)|  
 |Output|CTRL+ALT+O|[输出窗口](../ide/reference/output-window.md)|  
@@ -49,5 +48,5 @@ ms.locfileid: "65686767"
 |反汇编|CTRL+ALT+D|[如何：使用“反汇编”窗口](../debugger/how-to-use-the-disassembly-window.md)|  
 |寄存器|CTRL+ALT+G|[如何：使用“寄存器”窗口](../debugger/how-to-use-the-registers-window.md)|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [调试器基础知识](../debugger/debugger-basics.md)

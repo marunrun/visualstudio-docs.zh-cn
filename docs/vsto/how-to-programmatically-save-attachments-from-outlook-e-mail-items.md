@@ -1,7 +1,7 @@
 ---
 title: 以编程方式保存 Outlook 电子邮件项的附件
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - CSharp
 helpviewer_keywords:
@@ -15,19 +15,19 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e7e0cff4761b26bac8265592b681d4e56f2ad92f
-ms.sourcegitcommit: 7eb2fb21805d92f085126f3a820ac274f2216b4e
+ms.openlocfilehash: 9fbe6099a8928397a7d885ac72c4f34da2da6af0
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/22/2019
-ms.locfileid: "67328953"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545881"
 ---
 # <a name="how-to-programmatically-save-attachments-from-outlook-email-items"></a>如何：以编程方式保存 Outlook 电子邮件项的附件
 
 此示例会在收件箱接收到电子邮件时将邮件中的附件保存到指定的文件夹中。
 
 > [!IMPORTANT]
-> 此示例仅适用于添加名为的文件夹**TestFileSave** C 目录的根目录。
+> 仅当你在 C 目录的根目录中添加一个名为**TestFileSave**的文件夹时，此示例才有效。
 
 [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]
 
@@ -39,5 +39,5 @@ ms.locfileid: "67328953"
 
 - [使用邮件项](../vsto/working-with-mail-items.md)
 - [如何：以编程方式按名称检索文件夹](../vsto/how-to-programmatically-retrieve-a-folder-by-name.md)
-- [如何：以编程方式执行操作时收到一封电子邮件](../vsto/how-to-programmatically-perform-actions-when-an-e-mail-message-is-received.md)
-- [如何：以编程方式在特定文件夹内的搜索](../vsto/how-to-programmatically-search-within-a-specific-folder.md)
+- [如何：在收到电子邮件时以编程方式执行操作](../vsto/how-to-programmatically-perform-actions-when-an-e-mail-message-is-received.md)
+- [如何：以编程方式在特定文件夹中搜索](../vsto/how-to-programmatically-search-within-a-specific-folder.md)

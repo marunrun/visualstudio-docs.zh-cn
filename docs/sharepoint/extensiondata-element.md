@@ -38,13 +38,13 @@ ms.locfileid: "85546557"
 
 ### <a name="child-elements"></a>子元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[ExtensionDataItem](../sharepoint/extensiondataitem-element.md)|可选元素。<br /><br /> 表示与 SharePoint 项目项关联的自定义数据项，以键/值格式表示。 键和值都必须是字符串。|
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[ProjectItem](../sharepoint/projectitem-element.md)|表示 SharePoint 项目项。 此元素是文件必需的根元素 `.spdata` 。|
 
@@ -53,12 +53,12 @@ ms.locfileid: "85546557"
 
 ## <a name="element-information"></a>元素信息
 
-|properties|值|
+|Property|值|
 |-|-|
 |**Namespace**|http： \/ \/ schemas.microsoft.com/VisualStudio/<br>2010/SharePointTools/SharePointProjectItemModel|
 |**架构名称**|SharePoint 项目项架构|
 |**验证文件**|ProjectItemModelSchema|
 |**可以为空**|否|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [SharePoint 项目项架构参考](../sharepoint/sharepoint-project-item-schema-reference.md)

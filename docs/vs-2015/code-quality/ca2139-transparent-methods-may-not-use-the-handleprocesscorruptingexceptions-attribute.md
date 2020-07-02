@@ -11,17 +11,17 @@ caps.latest.revision: 13
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: ea4f9dc11d2cbb3100ca6e2e0b3177b1acec923a
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 233e4366befd2a5a0d5690b14198ac13e2fcc957
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84173549"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546479"
 ---
 # <a name="ca2139-transparent-methods-may-not-use-the-handleprocesscorruptingexceptions-attribute"></a>CA2139:透明方法不能使用 HandleProcessCorruptingExceptions 特性
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|项|值|
 |-|-|
 |TypeName|TransparentMethodsMustNotHandleProcessCorruptingExceptions|
 |CheckId|CA2139|
@@ -31,7 +31,7 @@ ms.locfileid: "84173549"
 ## <a name="cause"></a>原因
  透明方法用 <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute> 特性标记。
 
-## <a name="rule-description"></a>规则说明
+## <a name="rule-description"></a>规则描述
  此规则将触发任何透明的方法，并使用属性尝试处理进程损坏异常 <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute> 。 进程损坏异常是 CLR 版本4.0 异常分类（例如） <xref:System.AccessViolationException> 。 HandleProcessCorruptedStateExceptionsAttribute 特性只由安全关键方法使用，并且如果应用于透明的方法，则将被忽略。 若要处理进程损坏异常，此方法必须成为安全关键的或安全可靠关键的。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突

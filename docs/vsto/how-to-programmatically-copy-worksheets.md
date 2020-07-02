@@ -1,7 +1,7 @@
 ---
 title: 如何：以编程方式复制工作表
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,12 +13,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 17d248fb0805c83feb64b2f0a28a645b1fa29d49
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 8226f337994c686d4d370e91831bc1262d3ef85e
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63422497"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546076"
 ---
 # <a name="how-to-programmatically-copy-worksheets"></a>如何：以编程方式复制工作表
   你可以创建一份工作表的副本，并将该工作表插入工作簿中现有的工作表之前或之后。 如果不指定要插入工作表的位置，则 Excel 将创建一个新的工作簿来容纳新工作表。
@@ -45,10 +45,10 @@ ms.locfileid: "63422497"
 ## <a name="see-also"></a>请参阅
 - [使用工作表](../vsto/working-with-worksheets.md)
 - [主机项和主机控件概述](../vsto/host-items-and-host-controls-overview.md)
-- [如何：以编程方式将新工作表添加到工作簿](../vsto/how-to-programmatically-add-new-worksheets-to-workbooks.md)
+- [如何：以编程方式向工作簿添加新工作表](../vsto/how-to-programmatically-add-new-worksheets-to-workbooks.md)
 - [如何：以编程方式从工作簿中删除工作表](../vsto/how-to-programmatically-delete-worksheets-from-workbooks.md)
 - [如何：以编程方式选择工作表](../vsto/how-to-programmatically-select-worksheets.md)
-- [通过使用扩展的对象自动化 Excel](../vsto/automating-excel-by-using-extended-objects.md)
-- [对 Office 项目中的对象的全局访问](../vsto/global-access-to-objects-in-office-projects.md)
-- [主机项和主机控件的编程限制](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)
+- [使用扩展对象实现 Excel 自动化](../vsto/automating-excel-by-using-extended-objects.md)
+- [对 Office 项目中对象的全局访问](../vsto/global-access-to-objects-in-office-projects.md)
+- [宿主项和宿主控件的编程限制](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)
 - [Office 解决方案中的可选参数](../vsto/optional-parameters-in-office-solutions.md)

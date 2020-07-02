@@ -15,17 +15,17 @@ caps.latest.revision: 15
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 931b1e5099bf221fefc7a8f4a19524d2531a4418
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 85e27ab04ca81f5513a0b09bc41548f4a7c2430d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72609488"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547675"
 ---
-# <a name="ca2205-use-managed-equivalents-of-win32-api"></a>CA2205：使用 Win32 API 的托管等效项
+# <a name="ca2205-use-managed-equivalents-of-win32-api"></a>CA2205:使用 Win32 API 的托管等效项
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|项|值|
 |-|-|
 |TypeName|UseManagedEquivalentsOfWin32Api|
 |CheckId|CA2205|
@@ -33,10 +33,10 @@ ms.locfileid: "72609488"
 |是否重大更改|非重大更改|
 
 ## <a name="cause"></a>原因
- 定义了平台调用方法，并且 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 类库中存在具有等效功能的方法。
+ 定义了平台调用方法，并且类库中存在具有等效功能的方法 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 。
 
-## <a name="rule-description"></a>规则说明
- 平台调用方法用于调用非托管 DLL 函数，并使用 <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName> 特性或 Visual Basic 中的 `Declare` 关键字进行定义。 错误定义的平台 invoke 方法可能会导致运行时异常，这是由 misnamed 函数、参数和返回值数据类型的错误映射以及错误的字段规范（如调用约定和字符）等问题导致的。字符集. 如果可用，调用等效的托管方法比直接定义和调用非托管方法更简单且更少出错。 调用平台调用方法还可能导致其他需要解决的安全问题。
+## <a name="rule-description"></a>规则描述
+ 平台调用方法用于调用非托管 DLL 函数并使用 <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName> 特性或 `Declare` Visual Basic 中的关键字进行定义。 错误定义的平台调用方法可能会导致运行时异常，原因是 misnamed 函数、参数和返回值数据类型的错误映射以及错误的字段规范（如调用约定和字符集）。 如果可用，调用等效的托管方法比直接定义和调用非托管方法更简单且更少出错。 调用平台调用方法还可能导致其他需要解决的安全问题。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
  若要修复与此规则的冲突，请将对非托管函数的调用替换为对其托管等效项的调用。
@@ -53,10 +53,10 @@ ms.locfileid: "72609488"
 ## <a name="related-rules"></a>相关规则
  [CA1404：紧接在 P/Invoke 之后调用 GetLastError](../code-quality/ca1404-call-getlasterror-immediately-after-p-invoke.md)
 
- [CA1060：将 P/Invoke 移动到](../code-quality/ca1060-move-p-invokes-to-nativemethods-class.md) NativeMethods 类
+ [CA1060：将 P/Invoke 移动到 NativeMethods 类](../code-quality/ca1060-move-p-invokes-to-nativemethods-class.md)
 
- [CA1400：P/Invoke 入口点应该存在](../code-quality/ca1400-p-invoke-entry-points-should-exist.md)
+ [CA1400： P/Invoke 入口点应该存在](../code-quality/ca1400-p-invoke-entry-points-should-exist.md)
 
- [CA1401：P/Invokes 应为不可见](../code-quality/ca1401-p-invokes-should-not-be-visible.md)
+ [CA1401： P/Invoke 应不可见](../code-quality/ca1401-p-invokes-should-not-be-visible.md)
 
- [CA2101：指定对 P/Invoke 字符串参数进行封送处理](../code-quality/ca2101-specify-marshaling-for-p-invoke-string-arguments.md)
+ [CA2101：为 P/Invoke 字符串参数指定封送处理](../code-quality/ca2101-specify-marshaling-for-p-invoke-string-arguments.md)

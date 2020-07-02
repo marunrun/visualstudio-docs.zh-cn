@@ -1,7 +1,7 @@
 ---
 title: 如何：以编程方式在打印预览中显示文档
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,19 +13,19 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: d8296d28e884c746e09b427914af02213bbbaa7e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 036f8a45d5605b55b9743a22d598a13780641c97
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62813031"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545907"
 ---
 # <a name="how-to-programmatically-display-documents-in-print-preview"></a>如何：以编程方式在打印预览中显示文档
   如果你的解决方案生成了报告，你可能需要以打印预览模式向用户显示报告。
 
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]
 
-## <a name="procedures-for-document-level-customizations"></a>对于文档级自定义项的过程
+## <a name="procedures-for-document-level-customizations"></a>文档级自定义项的过程
 
 ### <a name="to-display-a-document-in-print-preview-by-calling-the-printpreview-method"></a>通过调用 PrintPreview 方法在打印预览中显示文档
 
@@ -60,4 +60,4 @@ ms.locfileid: "62813031"
 ## <a name="see-also"></a>请参阅
 - [如何：以编程方式打印文档](../vsto/how-to-programmatically-print-documents.md)
 - [如何：以编程方式打开现有文档](../vsto/how-to-programmatically-open-existing-documents.md)
-- [如何：以编程方式创建新的文档](../vsto/how-to-programmatically-create-new-documents.md)
+- [如何：以编程方式创建新文档](../vsto/how-to-programmatically-create-new-documents.md)
