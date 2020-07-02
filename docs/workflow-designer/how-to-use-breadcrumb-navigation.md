@@ -1,19 +1,19 @@
 ---
 title: 工作流设计器-如何：使用痕迹导航
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 4a688056-37dc-406a-9071-be2141e192fe
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 291badb04c791305f655e187ff7853fc8c5087a1
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 2a432d7cfc40ad6116f570d0e7beb4bfc5b40493
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75584564"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85817458"
 ---
 # <a name="how-to-use-breadcrumb-navigation"></a>如何：使用痕迹导航
 
@@ -47,7 +47,7 @@ ms.locfileid: "75584564"
 2. 应用 "全部展开" 或 "全部折叠" 状态后，可以单击显示的 "**还原**" 按钮，返回到之前应用于每个活动的状态。
 
     > [!WARNING]
-    > 如果某个活动（如 <xref:System.Activities.Statements.Flowchart>）取消了展开功能，则在**流程图**设计器中将禁用与 "**全部展开**" 和 "**全部折叠**" 按钮相关联的功能。 有关**流程图**设计器的详细信息，请参阅[流程图](../workflow-designer/flowchart-activity-designer.md)主题。
+    > 如果某个活动（如 <xref:System.Activities.Statements.Flowchart> ）已取消就地展开，则在**流程图**设计器中将禁用与 "**全部展开**" 和 "**全部折叠**" 按钮相关联的功能。 有关**流程图**设计器的详细信息，请参阅[流程图](../workflow-designer/flowchart-activity-designer.md)主题。
 
     > [!WARNING]
     > 全部展开还会在**Switch**和**TryCatch**活动设计器中产生特殊影响。 单击 "**全部展开**" 时，将显示所有的开关事例和所有 try/catch/finally 块。 单击 "**还原**" 或 "**全部折叠**" 会将这些设计器恢复为其默认状态，从中可以单击单个 case/块来查看其内容。

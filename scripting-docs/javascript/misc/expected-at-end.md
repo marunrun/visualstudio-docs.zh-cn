@@ -1,9 +1,9 @@
 ---
-title: 应输入 "@end" |Microsoft Docs
+title: 应输入 " @end " |Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
-ms.topic: reference
+ms.topic: error-reference
 f1_keywords:
 - VS.WebClient.Help.SCRIPT1029
 dev_langs:
@@ -14,20 +14,20 @@ ms.assetid: c2608995-944e-4d35-8b7e-1cfe264d2458
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 46748d7f516b21fc529e99a3e047040e82036650
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: 7ff759681ca3e4f48f264e00f9e376487dfe4d24
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72573439"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85817302"
 ---
-# <a name="expected-end"></a>应输入 "\@end"
-您尝试创建有条件编译的代码块，但未在结尾包含<strong>@end</strong>语句。 可以通过在<strong>@if/@end</strong>块中包含语句来有条件地编译 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 语句。  
+# <a name="expected-end"></a>应为 " \@ end"
+您尝试创建有条件编译的代码块，但没有在 <strong>@end</strong> 末尾包含语句。 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]通过在块中包含语句，可以有条件地编译 <strong>@if/@end</strong> 。  
   
 ### <a name="to-correct-this-error"></a>更正此错误  
   
-- 添加相应的<strong>@end</strong>语句。  
+- 添加相应的 <strong>@end</strong> 语句。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [条件编译](../../javascript/advanced/conditional-compilation-javascript.md)   
  [条件编译变量](../../javascript/advanced/conditional-compilation-variables-javascript.md)

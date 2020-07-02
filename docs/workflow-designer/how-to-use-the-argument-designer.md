@@ -1,7 +1,7 @@
 ---
 title: 工作流设计器-如何：使用参数设计器
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - System.Activities.Presentation.View.ArgumentDesigner.UI
 - System.Activities.Presentation.View.DesignTimeArgument.UI
@@ -11,12 +11,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2903c69e3cf50f3ed0392239ee8848a79eb50e20
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 6c3c0fe3de3a9ab74ed09c1be45e0d39a71a5b7c
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75584551"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85817445"
 ---
 # <a name="how-to-use-the-argument-designer"></a>如何：使用自变量设计器
 
@@ -33,7 +33,7 @@ ms.locfileid: "75584551"
     > [!NOTE]
     > 若要删除某个参数，请单击该参数，然后按**delete**键。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [使用工作流设计器](developing-applications-with-the-workflow-designer.md)
-- [变量和参数](/dotnet/framework/windows-workflow-foundation/variables-and-arguments)
+- [变量和自变量](/dotnet/framework/windows-workflow-foundation/variables-and-arguments)

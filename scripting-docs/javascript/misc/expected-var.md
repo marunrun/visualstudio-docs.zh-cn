@@ -1,9 +1,9 @@
 ---
-title: 预期 var |Microsoft Docs
+title: 应为 "var" |Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
-ms.topic: reference
+ms.topic: error-reference
 f1_keywords:
 - VS.WebClient.Help.SCRIPT1034
 dev_langs:
@@ -14,16 +14,16 @@ ms.assetid: 528b3be7-4766-42b2-a23a-66a5957d3dd2
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 0d2273979c921acaf5fa42c87e69789be7298938
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 1fbf482e27dcf610c1660fa132f124532673e6cd
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62433820"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85817367"
 ---
 # <a name="expected-var"></a>应有“var”
-应有 var (ERRnoVar 1034))  
+应输入 "var" （ERRnoVar 1034））  
   
- 你需要时添加关键字 var 失败。  
+ 无法在需要时添加关键字 var。  
   
- Var 关键字的详细信息，请参阅[var 语句](../../javascript/reference/var-statement-javascript.md)。
+ 有关 var 关键字的详细信息，请参阅[Var 语句](../../javascript/reference/var-statement-javascript.md)。
