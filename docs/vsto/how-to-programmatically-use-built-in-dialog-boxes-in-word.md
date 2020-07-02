@@ -45,7 +45,7 @@ ms.locfileid: "85537613"
 
  [!code-vb[Trin_VstcoreWordAutomation#102](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#102)]
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [如何：以编程方式在隐藏模式下使用 Word 对话框](../vsto/how-to-programmatically-use-word-dialog-boxes-in-hidden-mode.md)
 - [Word 对象模型概述](../vsto/word-object-model-overview.md)
 - [Office 解决方案中的可选参数](../vsto/optional-parameters-in-office-solutions.md)

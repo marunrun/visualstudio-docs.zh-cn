@@ -25,11 +25,11 @@ ms.locfileid: "85539251"
 # <a name="ca1065-do-not-raise-exceptions-in-unexpected-locations"></a>CA1065:不要在意外的位置引发异常
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|Item|值|
+|项|值|
 |-|-|
 |TypeName|DoNotRaiseExceptionsInUnexpectedLocations|
 |CheckId|CA1065|
-|Category|Microsoft. Design|
+|类别|Microsoft. Design|
 |是否重大更改|非重大更改|
 
 ## <a name="cause"></a>原因

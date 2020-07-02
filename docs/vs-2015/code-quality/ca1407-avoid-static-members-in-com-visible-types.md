@@ -25,11 +25,11 @@ ms.locfileid: "85538848"
 # <a name="ca1407-avoid-static-members-in-com-visible-types"></a>CA1407:避免在 COM 可见类型中使用静态成员
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|Item|值|
+|项|值|
 |-|-|
 |TypeName|AvoidStaticMembersInComVisibleTypes|
 |CheckId|CA1407|
-|Category|Microsoft. 互操作性|
+|类别|Microsoft. 互操作性|
 |是否重大更改|不间断|
 
 ## <a name="cause"></a>原因
@@ -69,7 +69,7 @@ namespace Samples
 
 ## <a name="example-violation"></a>示例冲突
 
-### <a name="description"></a>说明
+### <a name="description"></a>描述
  下面的示例演示了 `static` 违反此规则的方法。
 
 ### <a name="code"></a>代码
@@ -80,7 +80,7 @@ namespace Samples
 
 ## <a name="example-fix"></a>示例修复
 
-### <a name="description"></a>说明
+### <a name="description"></a>描述
  若要解决上一示例中的冲突，可以将方法更改为实例方法，但这在此实例中没有意义。 更好的解决方案是显式应用于 `ComVisible(false)` 方法，以使其他开发人员清楚地看不到 COM 中的方法。
 
  下面的示例适用于 <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute> 方法。

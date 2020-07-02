@@ -25,11 +25,11 @@ ms.locfileid: "85539264"
 # <a name="ca1064-exceptions-should-be-public"></a>CA1064:异常应该是公共的
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|Item|值|
+|项|值|
 |-|-|
 |TypeName|ExceptionsShouldBePublic|
 |CheckId|CA1064|
-|Category|Microsoft. Design|
+|类别|Microsoft. Design|
 |是否重大更改|非重大更改|
 
 ## <a name="cause"></a>原因

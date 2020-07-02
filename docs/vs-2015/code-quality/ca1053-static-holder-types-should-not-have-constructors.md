@@ -15,17 +15,17 @@ caps.latest.revision: 17
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 7de098d264dbdd6d7d9daea385de2e03d4e1ba35
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 29cc322dd59dc0de66af8f92a46524d15b0022c7
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653825"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85539576"
 ---
-# <a name="ca1053-static-holder-types-should-not-have-constructors"></a>CA1053：静态容器类型不应具有构造函数
+# <a name="ca1053-static-holder-types-should-not-have-constructors"></a>CA1053:静态容器类型不应具有构造函数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|项|值|
 |-|-|
 |TypeName|StaticHolderTypesShouldNotHaveConstructors|
 |CheckId|CA1053|
@@ -35,7 +35,7 @@ ms.locfileid: "72653825"
 ## <a name="cause"></a>原因
  公共或嵌套公共类型只声明了静态成员，但具有公共或受保护的默认构造函数。
 
-## <a name="rule-description"></a>规则说明
+## <a name="rule-description"></a>规则描述
  由于调用静态成员不需要类型的示例，因此没必要使用构造函数。 另外，由于类型不具有非静态成员，因此创建实例时不提供对任何类型成员的访问。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
@@ -48,6 +48,6 @@ ms.locfileid: "72653825"
  不禁止显示此规则发出的警告。 如果存在构造函数，则表明该类型不是静态类型。
 
 ## <a name="example"></a>示例
- 下面的示例演示违反此规则的类型。 请注意，源代码中没有默认的构造函数。 将此代码编译为程序集时， C#编译器将插入默认构造函数，这将违反此规则。 若要更正此错误，请声明一个私有构造函数。
+ 下面的示例演示违反此规则的类型。 请注意，源代码中没有默认的构造函数。 将此代码编译为程序集时，c # 编译器将插入默认构造函数，这将违反此规则。 若要更正此错误，请声明一个私有构造函数。
 
  [!code-csharp[FxCop.Design.StaticTypes#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.StaticTypes/cs/FxCop.Design.StaticTypes.cs#1)]

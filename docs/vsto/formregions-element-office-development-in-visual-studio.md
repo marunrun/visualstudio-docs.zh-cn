@@ -1,9 +1,9 @@
 ---
-title: '&lt;formRegions&gt;元素 （Visual Studio 中的 Office 开发）'
+title: '&lt;s &gt; 元素（Visual Studio 中的 Office 开发）'
 titleSuffix: ''
 ms.custom: seodec18
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 - CSharp
@@ -16,15 +16,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 68a24560df1da153702cfca2a206ea38cc8fac94
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6f98c74c2df998f0e79f5b95a316a7917304e029
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62972325"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85538354"
 ---
-# <a name="ltformregionsgt-element-office-development-in-visual-studio"></a>&lt;formRegions&gt;元素 （Visual Studio 中的 Office 开发）
-  `formRegions`元素的`vstov4`命名空间包含与 VSTO 外接程序相关联的 Microsoft Office Outlook 窗体区域。
+# <a name="ltformregionsgt-element-office-development-in-visual-studio"></a>&lt;s &gt; 元素（Visual Studio 中的 Office 开发）
+  `formRegions`命名空间的元素 `vstov4` 包含与 VSTO 外接程序关联的 Microsoft Office Outlook 窗体区域。
 
 ## <a name="syntax"></a>语法
 
@@ -45,12 +45,12 @@ ms.locfileid: "62972325"
  `formRegions` 元素具有以下元素。
 
 ### <a name="formregion"></a>formRegion
- 为包含窗体区域的 Outlook VSTO 外接程序所需。 `formRegion`中定义元素[ &#60;formRegion&#62;元素&#40;Visual Studio 中的 Office 开发&#41;](../vsto/formregion-element-office-development-in-visual-studio.md)。
+ 为包含窗体区域的 Outlook VSTO 外接程序所需。 `formRegion` [&#60;n&#62; 元素中定义元素，&#40;Visual Studio 中的 Office 开发&#41;](../vsto/formregion-element-office-development-in-visual-studio.md)。
 
 ## <a name="vsto-add-in-example"></a>VSTO 外接程序示例
 
 ### <a name="description"></a>描述
- 下面的代码示例演示应用程序级 Office 解决方案的应用程序清单中的 `formRegions` 元素，该解决方案是使用 [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]部署的。 此代码示例摘自[Office 解决方案的应用程序清单](../vsto/application-manifests-for-office-solutions.md)。
+ 下面的代码示例演示应用程序级 Office 解决方案的应用程序清单中的 `formRegions` 元素，该解决方案是使用 [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]部署的。 此代码示例是[Office 解决方案的应用程序清单](../vsto/application-manifests-for-office-solutions.md)中提供的一个更大示例的一部分。
 
 ### <a name="code"></a>代码
 

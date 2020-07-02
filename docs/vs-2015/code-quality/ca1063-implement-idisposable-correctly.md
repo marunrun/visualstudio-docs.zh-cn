@@ -15,17 +15,17 @@ caps.latest.revision: 19
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 1fe2982ab9e1b3951583b268eadb44c97c8e4805
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 04691d2344b232906676180122ad67fff5405891
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72663639"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85539355"
 ---
-# <a name="ca1063-implement-idisposable-correctly"></a>CA1063：正确实现 IDisposable
+# <a name="ca1063-implement-idisposable-correctly"></a>CA1063:正确实现 IDisposable
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|项|值|
 |-|-|
 |TypeName|ImplementIDisposableCorrectly|
 |CheckId|CA1063|
@@ -33,7 +33,7 @@ ms.locfileid: "72663639"
 |是否重大更改|不间断|
 
 ## <a name="cause"></a>原因
- 未正确实现 `IDisposable`。 此问题的一些原因如下所示：
+ `IDisposable`未正确实现。 此问题的一些原因如下所示：
 
 - IDisposable 是在类中重新实现的。
 
@@ -53,27 +53,27 @@ ms.locfileid: "72663639"
 
   每个未密封的根 IDisposable 类型都必须提供其自己的受保护虚拟 void Dispose （bool）方法。 Dispose （）应调用 Dispose （true），Finalize 应调用 Dispose （false）。 如果要创建未密封的根 IDisposable 类型，则必须定义 Dispose （bool）并调用它。 有关详细信息，请参阅 .NET Framework 文档的[框架设计指南](https://msdn.microsoft.com/library/5fbcaf4f-ea2a-4d20-b0d6-e61dee202b4b)部分中的[清理非托管资源](https://msdn.microsoft.com/library/a17b0066-71c2-4ba4-9822-8e19332fc213)。
 
-## <a name="rule-description"></a>规则说明
+## <a name="rule-description"></a>规则描述
  所有的 IDisposable 类型都应当正确实现 Dispose 模式。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
  检查你的代码并确定以下哪种解决方法将修复此冲突。
 
-- 从 {0} 实现的接口列表中删除 IDisposable，并改为重写基类 Dispose 实现。
+- 从实现的接口列表中删除 IDisposable {0} ，并改为重写基类 Dispose 实现。
 
-- 从类型 {0} 中删除终结器，重写 Dispose （bool 释放），并在 "dispose" 为 false 的代码路径中放置终止逻辑。
+- 从类型中删除终结器 {0} ，重写 Dispose （bool 释放），并在 "释放" 为 false 的代码路径中放置终止逻辑。
 
-- 删除 {0}，替代 Dispose （bool 释放），并将 dispose 逻辑放在 "Dispose" 为 true 的代码路径中。
+- 删除 {0} 、重写 dispose （bool 释放），并将 dispose 逻辑放在 "Dispose" 为 true 的代码路径中。
 
-- 确保将 {0} 声明为 public 和 sealed。
+- 确保 {0} 声明为 public 和 sealed。
 
-- 将 {0} 重命名为 "Dispose"，并确保将其声明为 public 和 sealed。
+- 重命名 {0} 为 "Dispose"，并确保将其声明为 public 和 sealed。
 
-- 请确保将 {0} 声明为 protected、virtual 和未密封。
+- 请确保 {0} 将声明为 protected、virtual 和未密封。
 
-- 修改 {0} 以便它调用 Dispose （true），然后调用 GC。Gc.suppressfinalize 在当前对象实例上（[!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 中的 "this" 或 "Me"），然后返回。
+- 修改 {0} 以使其调用 Dispose （true），然后调用 GC。当前对象实例上的 Gc.suppressfinalize （中的 "this" 或 "Me" [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] ），然后返回。
 
-- 修改 {0} 以便它调用 Dispose （false），然后返回。
+- 修改 {0} 以使其调用 Dispose （false），然后返回。
 
 - 如果要编写未密封的根 IDisposable 类，请确保 IDisposable 的实现遵循本部分前面所述的模式。
 

@@ -88,7 +88,7 @@ ms.locfileid: "85537587"
 
 - 若要保存具有新名称的文档，驱动器 C 上必须存在一个名为 " *Test* " 的目录。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [如何：以编程方式关闭文档](../vsto/how-to-programmatically-close-documents.md)
 - [如何：以编程方式打开现有文档](../vsto/how-to-programmatically-open-existing-documents.md)
