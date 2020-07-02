@@ -1,7 +1,7 @@
 ---
 title: 如何：创建可以为 null 的类型（类设计器）
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - nullable types, Class Designer
 - Class Designer [Visual Studio], nullable types
@@ -14,18 +14,18 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 5be8b553dfead4b8c05f29bbd18c16fcef847130
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: ad371f987ab7ff0e50dc7d2fe4effeba5205e74e
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75592225"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85770990"
 ---
 # <a name="how-to-create-a-nullable-type-in-class-designer"></a>如何：在类设计器中创建可以为 null 的类型
 
 某些值类型并不是始终具有（或需要）定义的值。 这是数据库中的常见做法，数据库中某些字段可能没有分配任何值。 例如，可以向某个数据库字段分配 null 值，表示尚未向其分配值。
 
-可以为 null 的类型  是一种扩展的值类型，以便其可为该类型采用典型范围内的值，也可以采用 null 值。 例如，对于一个可以为 null 的 `Int32`（也以 Null\<Int32> 表示），可以为其分配从 -2147483648 到 2147483647 之间的任何值，或可为其分配 null 值。 可以为 Nullable\<bool> 分配的值包括 `True`、`False` 或 null（不分配任何值）。
+可以为 null 的类型是一种扩展的值类型，以便其可为该类型采用典型范围内的值，也可以采用 null 值。 例如，对于一个可以为 null 的 `Int32`（也以 Nullable\<Int32> 表示），可为其分配从 -2147483648 到 2147483647 之间的任何值，或可为其分配 null 值。 可为 Nullable\<bool> 分配的值包括 `True`、`False` 或 null（不分配任何值）。
 
 可以为 null 的类型是 <xref:System.Nullable%601> 结构的实例。 可以为 null 的类型的每个实例都有两个公共只读属性，`HasValue` 和 `Value`：
 
@@ -45,22 +45,22 @@ ms.locfileid: "75592225"
 
 1. 在类图中，展开现有类，或创建一个新类。
 
-2. 若要将类添加到项目，请在“类图”菜单上，单击“添加” > “添加类”。
+2. 若要将类添加到项目，请在“类图”菜单上，单击“添加” > “添加类”  。
 
-3. 若要展开类形状，请在“类图”  菜单上，单击“展开”  。
+3. 若要展开类形状，请在“类图”菜单上，单击“展开”。
 
-4. 选择类形状。 请在“类图”菜单上，单击“添加” > “字段”。 将在类形状以及“类详细信息”窗口中显示默认名称为“字段”的新字段。
+4. 选择类形状。 请在“类图”菜单上，单击“添加” > “字段”  。 将在类形状以及“类详细信息”窗口中显示默认名称为“字段”的新字段。
 
 5. 在“类详细信息”窗口的“名称”列中（或类形状中），将新字段的名称更改为有效且有意义的名称。
 
-6. 在“类详细信息”窗口的“类型”列中，通过指定以下内容来将该类型声明为可以为 null 的类型   ：
+6. 在“类详细信息”窗口的“类型”列中，通过指定以下内容来将该类型声明为可以为 null 的类型 ：
 
     - `int?` (Visual C#)
     - `Nullable(Of Integer)` (Visual Basic)
 
 ## <a name="to-add-a-nullable-type-by-using-the-code-editor"></a>使用代码编辑器添加可以为 null 的类型
 
-1. 向项目中添加类。 在“解决方案资源管理器”  中，选择项目节点，然后在“项目”  菜单中单击“添加类”  。
+1. 向项目中添加类。 在“解决方案资源管理器”中，选择项目节点，然后在“项目”菜单中单击“添加类”。
 
 2. 在新类的 .cs 或 .vb 文件中，将新类中的一个或多个可以为 null 的类型添加到类声明。
 
@@ -83,9 +83,9 @@ ms.locfileid: "75592225"
 
 4. 展开该类形状的详细信息，然后将鼠标指针移到类成员处。 工具提示将显示每个成员的声明。
 
-5. 右键单击类形状，然后单击“类详细信息”  。 可以在“类详细信息”  窗口中查看或修改新类型的属性。
+5. 右键单击类形状，然后单击“类详细信息”。 可以在“类详细信息”窗口中查看或修改新类型的属性。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - <xref:System.Nullable%601>
 - [可以为 null 的类型](/dotnet/csharp/programming-guide/nullable-types/index)

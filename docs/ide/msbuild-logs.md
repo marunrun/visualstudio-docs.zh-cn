@@ -2,7 +2,7 @@
 title: 对 MSBuild 问题进行故障排除并为其创建日志
 ms.date: 06/27/2019
 ms.technology: vs-ide-compile
-ms.topic: conceptual
+ms.topic: troubleshooting
 helpviewer_keywords:
 - msbuild logs"
 author: corob-msft
@@ -15,12 +15,12 @@ dev_langs:
 ms.workload:
 - multiple
 ms.description: Generate build logs for msbuild projects to collect helpful information when troubleshooting issues.
-ms.openlocfilehash: 07b2c5e941d31ab1be853f9a89af94462329bdf2
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: ae91f7b9c90f0b06c449d26f67fe4fcc3434518e
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77278808"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768695"
 ---
 # <a name="troubleshoot-and-create-logs-for-msbuild-problems"></a>对 MSBuild 问题进行故障排除并为其创建日志
 
@@ -89,7 +89,7 @@ ms.locfileid: "77278808"
   Debug\Project1.tlog\CL.write.1.tlog
 ```
 
-如果是在 Visual Studio IDE 中生成（输出窗口详细程度为详细），输出窗口  将显示每个项目不是最新的原因：
+如果是在 Visual Studio IDE 中生成（输出窗口详细程度为详细），输出窗口将显示每个项目不是最新的原因：
 
 ```output
 1>------ Up-To-Date check: Project: Project1, Configuration: Debug Win32 ------
@@ -106,7 +106,7 @@ ms.locfileid: "77278808"
     Msbuild /p:Configuration="MyConfiguration";Platform="x86" /bl MySolution.sln
     ```
 
-    或
+    or
 
     ```cmd
     Msbuild /p:/p:SolutionDir="c:\MySolutionDir\";Configuration="MyConfiguration";Platform="Win32" /bl MyProject.vcxproj
@@ -116,15 +116,15 @@ ms.locfileid: "77278808"
 
 ## <a name="create-a-detailed-log"></a>创建详细的日志
 
-1. 从 Visual Studio 主菜单中，转到“工具”   > “选项”   > “项目和解决方案”   >“生成并运行”  。
-1. 在两个组合框中，将“Msbuild 项目生成详细程度”  设置为“详细”  。 上面的组合框控制“输出窗口”中的生成详细程度，第二个组合框控制生成期间在每个项目的中间目录中创建的 \<projectname\>.log 文件中的生成详细程度。
+1. 从 Visual Studio 主菜单中，转到“工具” > “选项” > “项目和解决方案” >“生成并运行”。
+1. 在两个组合框中，将“Msbuild 项目生成详细程度”设置为“详细”。 上面的组合框控制“输出窗口”中的生成详细程度，第二个组合框控制生成期间在每个项目的中间目录中创建的 \<projectname\>.log 文件中的生成详细程度。
 2. 从 Visual Studio 开发人员命令提示符中，输入以下命令之一，替换你的实际路径和配置值：
 
     ```cmd
     Msbuild /p:Configuration="MyConfiguration";Platform="x86" /fl MySolution.sln
     ```
 
-    或
+    or
 
     ```cmd
     Msbuild /p:/p:SolutionDir="c:\MySolutionDir\";Configuration="MyConfiguration";Platform="Win32" /fl MyProject.vcxproj

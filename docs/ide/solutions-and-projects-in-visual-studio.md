@@ -1,6 +1,6 @@
 ---
 title: 解决方案和项目
-ms.date: 10/05/2017
+ms.date: 06/26/2020
 ms.topic: conceptual
 f1_keywords:
 - vs.addnewitem
@@ -20,12 +20,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 742ee7a8450c5d2cf4d7a167a1977b3c1c18ef21
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: ad0ee64afa78a962271d2b702ee525287c5b2457
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85285226"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468725"
 ---
 # <a name="solutions-and-projects-in-visual-studio"></a>Visual Studio 中的解决方案和项目
 
@@ -74,13 +74,16 @@ Visual Studio 采用两种文件类型（.sln 和 .suo）来存储解决方案�
 
 可以从“解决方案资源管理器”中的各种项目上的右键单击菜单中获取多个菜单命令。 这些命令包括生成项目、管理 NuGet 包、添加引用、重命名文件和运行测试，此处仅举几例。 “解决方案资源管理器”顶部的工具栏具有用于从解决方案视图切换到文件夹视图、显示隐藏文件、折叠所有节点等的按钮。
 
+> [!TIP]
+> 如果已关闭解决方案资源管理器并且想要重新打开它，请在菜单栏中选择“窗口” > “重置窗口布局” 。
+
 对于 ASP.NET Core 项目，你可以自定义如何将文件嵌套在“解决方案资源管理器”中。 有关详细信息，请参阅[在解决方案资源管理器中自定义文件嵌套](file-nesting-solution-explorer.md)
 
-> [!TIP]
-> 若要查看“解决方案资源管理器”中显示的某些图标的列表，请参阅[类视图和对象浏览器图标](class-view-and-object-browser-icons.md)页。
+要查看解决方案资源管理器中显示的某些图标的列表，请参阅[类视图和对象浏览器图标](class-view-and-object-browser-icons.md)。
 
 ## <a name="see-also"></a>请参阅
 
 - [Visual Studio IDE](../get-started/visual-studio-ide.md)
+- [移植、迁移和升级项目](../porting/port-migrate-and-upgrade-visual-studio-projects.md)
 - [项目和解决方案 (Visual Studio for Mac)](/visualstudio/mac/projects-and-solutions)
 - [添加和删除项目项 (Visual Studio for Mac)](/visualstudio/mac/add-and-remove-project-items)
