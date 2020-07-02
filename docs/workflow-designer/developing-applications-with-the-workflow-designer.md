@@ -1,7 +1,7 @@
 ---
 title: 使用工作流设计器开发应用程序
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - DefaultWorkflowDesigner
 - DefaultWorkflowDesigner.UI
@@ -16,33 +16,33 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 51c38a16ddbdca376dbc9788ca49783c7956d101
-ms.sourcegitcommit: 95f26af1da51d4c83ae78adcb7372b32364d8a2b
+ms.openlocfilehash: 9f1b7aa37794618cd051cfdaaacb9359087cc664
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79300947"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85814715"
 ---
 # <a name="develop-apps-with-the-workflow-designer"></a>使用工作流设计器开发应用
 
-工作流设计器是可视化工作室中[Windows 工作流基础](/dotnet/framework/windows-workflow-foundation/index)（WF） 应用程序的图形构造和调试的可视化设计器和调试器。 它使您能够使用模板和活动设计器组成复合工作流应用程序、活动库或 Windows 通信基础 （WCF） 服务。
+工作流设计器是一种可视化设计器和调试器，适用于 Visual Studio 中的[Windows Workflow Foundation](/dotnet/framework/windows-workflow-foundation/index) （WF）应用程序的图形构造和调试。 它使您可以通过使用模板和活动设计器来撰写复合工作流应用程序、活动库或 Windows Communication Foundation （WCF）服务。
 
-## <a name="install-windows-workflow-foundation"></a>安装 Windows 工作流基础
+## <a name="install-windows-workflow-foundation"></a>安装 Windows Workflow Foundation
 
-要在可视化工作室中使用工作流项目模板，请首先安装**Windows 工作流基础**组件。
+若要在 Visual Studio 中使用工作流项目模板，请首先安装**Windows Workflow Foundation**组件。
 
-1. 打开可视化工作室安装程序。 通过选择可视化工作室中的**工具和功能****，** > 可以快速打开它。
+1. 打开 Visual Studio 安装程序。 可以通过选择 "**工具**  >  " "获取 Visual Studio 中的**工具和功能**" 来打开它。
 
-1. 在可视化工作室安装程序中，选择 **"单个组件**"选项卡。
+1. 在 Visual Studio 安装程序中，选择 "**单个组件**" 选项卡。
 
-1. 向下滚动到 **"开发活动"** 类别，然后选择**Windows 工作流基础**组件。
+1. 向下滚动到 "**开发活动**" 类别，然后选择 " **Windows Workflow Foundation** " 组件。
 
-   ![可视化工作室的 Windows 工作流基础组件](media/windows-workflow-foundation-component.png)
+   ![适用于 Visual Studio 的 Windows Workflow Foundation 组件](media/windows-workflow-foundation-component.png)
 
 1. 选择“修改”。****
 
-   可视化工作室安装**Windows 工作流基础**组件。
+   Visual Studio 安装**Windows Workflow Foundation**组件。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-- [Windows 工作流基础 （.NET 框架）](/dotnet/framework/windows-workflow-foundation/index)
+- [Windows Workflow Foundation （.NET Framework）](/dotnet/framework/windows-workflow-foundation/index)

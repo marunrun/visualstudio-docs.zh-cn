@@ -3,7 +3,7 @@ title: 找不到标签 |Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
-ms.topic: reference
+ms.topic: error-reference
 f1_keywords:
 - VS.WebClient.Help.SCRIPT1026
 dev_langs:
@@ -14,12 +14,12 @@ ms.assetid: 79e32926-b03f-457b-997c-2bb2ec8a1ec5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4acfb93808a588ed7efb4e256627f816e26a0137
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: 3af2451efdea5ac3f71ae17fc5919e9f443e86db
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72573786"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85815755"
 ---
 # <a name="label-not-found"></a>未找到标签
 对不存在的标签进行了引用。 标签可用于标记代码块，但在指定范围内，必须是唯一的。  
@@ -30,8 +30,8 @@ ms.locfileid: "72573786"
   
 - 确保对当前作用域中定义的标签进行所有标签引用（这包括前向定义）。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [标记语句](../../javascript/reference/labeled-statement-javascript.md)   
- [Switch 语句](../../javascript/reference/switch-statement-javascript.md)   
+ [switch 语句](../../javascript/reference/switch-statement-javascript.md)   
  [break 语句](../../javascript/reference/break-statement-javascript.md)   
  [continue 语句](../../javascript/reference/continue-statement-javascript.md)
