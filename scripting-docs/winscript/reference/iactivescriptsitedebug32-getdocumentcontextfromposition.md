@@ -5,20 +5,20 @@ ms.date: 01/18/2017
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 ms.assetid: 53348dff-35a6-4303-b263-90c10af06bf3
 caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
-ms.openlocfilehash: 7acbe2a5741fa94ac42470a85803d1720e0a8fa1
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: b43b16f46cc62b6c70460d79c194b5e0d2cfede0
+ms.sourcegitcommit: 9a9c61ca115c22d33bb902153eb0853789c7be4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72574849"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85835272"
 ---
 # <a name="iactivescriptsitedebug32getdocumentcontextfromposition"></a>IActiveScriptSiteDebug32::GetDocumentContextFromPosition
-由语言引擎用来委托 `IDebugCodeContext::GetSourceContext`。  
+供语言引擎用来委托 `IDebugCodeContext::GetSourceContext` 。  
   
 ## <a name="syntax"></a>语法  
   
@@ -33,7 +33,7 @@ HRESULT GetDocumentContextFromPosition(
   
 #### <a name="parameters"></a>参数  
  `dwSourceContext`  
- 中为 `ParseScriptText` 或 `AddScriptlet` 提供的源内容。  
+ 中提供给或的源内容 `ParseScriptText` `AddScriptlet` 。  
   
  `uCharacterOffset`  
  中相对于脚本块或 scriptlet 开始的字符偏移量。  
@@ -47,12 +47,12 @@ HRESULT GetDocumentContextFromPosition(
 ## <a name="return-value"></a>返回值  
  该方法返回 `HRESULT`。 可能的值包括（但并不限于）下表中的项。  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |`S_OK`|方法成功。|  
   
 ## <a name="remarks"></a>备注  
- 语言引擎使用此方法委托 `IDebugCodeContext::GetSourceContext`。  
+ 语言引擎使用此方法委托 `IDebugCodeContext::GetSourceContext` 。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IActiveScriptSiteDebug32 接口](../../winscript/reference/iactivescriptsitedebug32-interface.md)
