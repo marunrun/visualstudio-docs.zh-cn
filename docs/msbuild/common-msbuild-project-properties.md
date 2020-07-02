@@ -18,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 238b963aceebd2bfdae38c2f4032955c1bd0c0c6
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 62f372be9ffa6ae76503550616c6b3612aad6146
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85288944"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85770869"
 ---
 # <a name="common-msbuild-project-properties"></a>常用的 MSBuild 项目属性
 
@@ -51,7 +51,7 @@ ms.locfileid: "85288944"
 | CleanFile | 全部 | 将用作“清理缓存”的文件的名称。 清理缓存是要在清理操作期间删除的已生成文件的列表。 该文件由生成过程放在中间输出路径中。<br /><br /> 此属性只指定没有路径信息的文件名。 |
 | CodePage | .NET | 指定要用于编译中所有源代码文件的代码页。 此属性等效于 `/codepage` 编译器开关。 |
 | CompilerResponseFile | .NET | 可以传递给编译器任务的可选响应文件。 |
-| Configuration | 全部 | 正在生成的配置，为“Debug”或“Release”。 |
+| Configuration | 全部 | 正在生成的配置，通常为 `Debug` 或 `Release`，但可以在解决方案和项目级别进行配置。 |
 | CscToolPath | C# | C# 编译器 csc.exe 的路径。 |
 | CustomBeforeMicrosoftCommonTargets | 全部 | 要在公用目标导入前自动导入的项目文件或目标文件的名称。 |
 | DebugSymbols | 全部 | 一个布尔值，指示是否由生成来生成符号。<br /><br /> 在命令行中设置 -p:DebugSymbols=false 会禁止生成程序数据库 (.pdb) 符号文件。 |
