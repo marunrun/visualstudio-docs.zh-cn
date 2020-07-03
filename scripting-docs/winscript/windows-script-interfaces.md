@@ -5,18 +5,18 @@ ms.date: 01/18/2017
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 ms.assetid: 4c750627-6797-4857-9f5e-e5f54371f83c
 caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 0aebd0857ba847d5c5eba5e3a4a8a01da73ec159
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: HT
+ms.openlocfilehash: 141f3f0e60e797a4104c3e276775631f6e9196c5
+ms.sourcegitcommit: 9a9c61ca115c22d33bb902153eb0853789c7be4c
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62840026"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85835402"
 ---
 # <a name="windows-script-interfaces"></a>Windows 脚本接口
 
@@ -64,13 +64,13 @@ Windows 脚本设计隔离了仅在创作环境中所需的界面元素，以便
 
 1. 创建项目。 主机加载项目或文档。 （此步骤并不特定于 Windows 脚本，但是为了完整起见，这里也包含了此步骤。）
 
-2. 创建 Windows 脚本引擎。 主机调用 `CoCreateInstance` 创建新的 Windows 脚本引擎，以便指定特定于要使用的脚本引擎的类标识符 (CLSID)。 例如，Internet Explorer 的 HTML 浏览器通过 HTML \<OBJECT> 标记的 CLSID= 属性接收脚本引擎的类标识符。
+2. 创建 Windows 脚本引擎。 主机调用 `CoCreateInstance` 创建新的 Windows 脚本引擎，以便指定特定于要使用的脚本引擎的类标识符 (CLSID)。 例如，Internet Explorer 的 HTML 浏览器通过 HTML 标记的 CLSID = 属性接收到脚本引擎的类标识符 \<OBJECT> 。
 
 3. 加载脚本。 如果已保存脚本内容，则主机可以调用脚本引擎的 `IPersist*::Load` 方法来为它提供脚本存储、流或属性包。 否则，主机使用 `IPersist*::InitNew` 或 [IActiveScriptParse::InitNew](../winscript/reference/iactivescriptparse-initnew.md) 方法来创建 null 脚本。 以文本形式维护脚本的主机可以在调用 `IActiveScriptParse::InitNew` 之后，使用 [IActiveScriptParse::ParseScriptText](../winscript/reference/iactivescriptparse-parsescripttext.md) 向脚本引擎提供脚本的文本。
 
 4. 添加命名项。 对于导入到脚本引擎命名空间中的每个顶级命名项（例如，页和表单），主机调用 [IActiveScript::AddNamedItem](../winscript/reference/iactivescript-addnameditem.md) 方法在引擎的命名空间中创建条目。 如果顶级命名项已是步骤 3 中加载的脚本的部分持久状态，那么此步骤就不需要。 主机不使用 `IActiveScript::AddNamedItem` 添加子级命名项（例如 HTML 页上的控件）；相反，引擎使用主机的 `ITypeInfo` 和 `IDispatch` 接口间接获得顶级项的子项。
 
-5. 运行脚本。 主机通过设置 [IActiveScript::SetScriptState](../winscript/reference/iactivescript-setscriptstate.md) 方法中的 SCRIPTSTATE_CONNECTED 标志来使引擎运行脚本。 此调用可能会以类似于脚本 `main()` 函数的方式执行任何脚本引擎构造工作，包括静态绑定、挂接事件（参阅下文）和执行代码。
+5. 运行该脚本。 主机通过设置 [IActiveScript::SetScriptState](../winscript/reference/iactivescript-setscriptstate.md) 方法中的 SCRIPTSTATE_CONNECTED 标志来使引擎运行脚本。 此调用可能会以类似于脚本 `main()` 函数的方式执行任何脚本引擎构造工作，包括静态绑定、挂接事件（参阅下文）和执行代码。
 
 6. 获取项信息。 每当脚本引擎需要将符号与顶级项关联时，都会调用返回给定项信息的 [IActiveScriptSite::GetItemInfo](../winscript/reference/iactivescriptsite-getiteminfo.md) 方法。
 

@@ -1,7 +1,7 @@
 ---
 title: 向子菜单添加最近使用过的列表 |Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - MRU lists
 - menus, creating MRU list
@@ -12,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5624fe4a4f3c9ba774313e862f9e84a6f6d70862
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 3f73f948befc7665ecc3a40f816389bfaae8e4fd
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84183270"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85904203"
 ---
 # <a name="add-a-most-recently-used-list-to-a-submenu"></a>向子菜单添加最近使用过的列表
 本演练基于[向菜单添加子](../extensibility/adding-a-submenu-to-a-menu.md)菜单中的演示，并演示如何向子菜单添加动态列表。 动态列表构成了创建最近使用的（MRU）列表的基础。
@@ -30,7 +30,7 @@ ms.locfileid: "84183270"
 
 有关菜单和 *.vsct*文件的详细信息，请参阅[命令、菜单和工具栏](../extensibility/internals/commands-menus-and-toolbars.md)。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 要按照本演练的步骤操作，必须安装 Visual Studio SDK。 有关详细信息，请参阅[Visual STUDIO SDK](../extensibility/visual-studio-sdk.md)。
 
 ## <a name="create-an-extension"></a>创建一个扩展
@@ -199,5 +199,5 @@ ms.locfileid: "84183270"
 
 4. 再次打开子菜单。 请注意，**项 3**现在位于列表的顶部，而其他项已向下推送一个位置。 再次单击**第3项**，请注意，消息框仍显示**选定的项 3**，这表示文本已正确地与命令标签一起移动到新位置。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [动态添加菜单项](../extensibility/dynamically-adding-menu-items.md)
