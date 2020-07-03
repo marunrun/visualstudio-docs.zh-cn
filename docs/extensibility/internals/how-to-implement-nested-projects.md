@@ -1,7 +1,7 @@
 ---
-title: 如何：实施嵌套项目 |微软文档
+title: 如何：实现嵌套项目 |Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - nested projects, implementing
 - projects [Visual Studio SDK], nesting
@@ -11,83 +11,83 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8d9dfe567db0b8788b93b13aeb760d45f4c05b57
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: 3b1ac3c147962b943499172435c3f601115d36a9
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80707975"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85905355"
 ---
 # <a name="how-to-implement-nested-projects"></a>如何：实现嵌套项目
 
-创建嵌套项目类型时，必须实现几个附加步骤。 父项目承担与解决方案对其嵌套（子）项目承担的一些相同职责。 父项目是类似于解决方案的项目容器。 特别是，有几个事件必须由解决方案和父项目引发，才能生成嵌套项目的层次结构。 这些事件在以下创建嵌套项目的过程中进行了描述。
+创建嵌套项目类型时，还必须实现几个附加步骤。 父项目采用解决方案对其嵌套（子）项目具有的一些相同责任。 父项目是类似于解决方案的项目的容器。 具体而言，解决方案和父项目必须引发若干事件，才能生成嵌套项目的层次结构。 以下创建嵌套项目的过程中介绍了这些事件。
 
 ## <a name="create-nested-projects"></a>创建嵌套项目
 
-1. 集成开发环境 （IDE） 通过调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory>接口加载父项目的项目文件和启动信息。 父项目将创建并添加到解决方案中。
+1. 集成开发环境（IDE）通过调用接口加载父项目的项目文件和启动信息 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory> 。 将创建父项目并将其添加到解决方案中。
 
     > [!NOTE]
-    > 此时，父项目创建嵌套项目的过程还为时过早，因为必须先创建父项目，然后才能创建子项目。 遵循此序列，父项目可以将设置应用于子项目，并且子项目可以根据需要从父项目获取信息。 此序列是客户端（如源代码控制 （SCC） 和**解决方案资源管理器**等 需要它。
+    > 此时，它在父项目创建嵌套项目的过程中过于早，因为必须先创建父项目，然后才能创建子项目。 按照此顺序，父项目可以将设置应用于子项目，子项目可以根据需要从父项目获取信息。 此顺序是客户端（如源代码管理（SCC）和**解决方案资源管理器**）需要此序列。
 
-     父项目必须等待 IDE<xref:Microsoft.VisualStudio.Shell.Interop.IVsParentProject.OpenChildren%2A>调用该方法，然后才能创建其嵌套（子）项目或项目。
+     父项目必须等待 <xref:Microsoft.VisualStudio.Shell.Interop.IVsParentProject.OpenChildren%2A> IDE 调用方法，然后才能创建其嵌套（子）项目或项目。
 
-2. IDE 对`QueryInterface`的父项目调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsParentProject>。 如果此调用成功，IDE 将调用父<xref:Microsoft.VisualStudio.Shell.Interop.IVsParentProject.OpenChildren%2A>项的方法以打开父项目的所有嵌套项目。
+2. IDE 对 `QueryInterface` 的父项目调用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsParentProject> 。 如果此调用成功，IDE 将调用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsParentProject.OpenChildren%2A> 父类的方法来打开父项目的所有嵌套项目。
 
-3. 父项目调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsFireSolutionEvents.FireOnBeforeOpeningChildren%2A>方法以通知侦听器即将创建嵌套项目。 例如，SCC 正在侦听这些事件，了解解决方案和项目创建过程中的步骤是否按顺序进行。 如果步骤顺序不正确，则可能无法正确注册源代码管理。
+3. 父项目调用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsFireSolutionEvents.FireOnBeforeOpeningChildren%2A> 方法，以通知侦听器将要创建的嵌套项目。 例如，SCC 正在侦听这些事件，以了解解决方案和项目创建过程中的步骤是否按顺序发生。 如果步骤顺序不正确，则解决方案可能不会正确地注册到源代码管理中。
 
-4. 父项目调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution.AddVirtualProject%2A>方法或其每个子<xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution.AddVirtualProjectEx%2A>项目上的方法。
+4. 父项目对 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution.AddVirtualProject%2A> <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution.AddVirtualProjectEx%2A> 其每个子项目调用方法或方法。
 
-     传递给<xref:Microsoft.VisualStudio.Shell.Interop.__VSADDVPFLAGS>`AddVirtualProject`方法以指示应将虚拟（嵌套）项目添加到项目窗口，从生成中排除，添加到源代码控件，依如此。 `VSADDVPFLAGS`允许您控制嵌套项目的可见性，并指示与其关联的功能。
+     传递 <xref:Microsoft.VisualStudio.Shell.Interop.__VSADDVPFLAGS> 给方法， `AddVirtualProject` 以指示应将虚拟（嵌套）项目添加到项目窗口中，从生成中排除，并将其添加到源代码管理中，等等。 `VSADDVPFLAGS`允许您控制嵌套项目的可见性，并指示与之相关联的功能。
 
-     如果重新加载以前存在的子项目，该项目 GUID 存储在父项目的项目文件中，则父项目将调用`AddVirtualProjectEx`。 `AddVirtualProject`之间的`AddVirtualProjectEX`唯一区别是，具有`AddVirtualProjectEX`一个参数，使父项目能够为每个实例`guidProjectID`指定一个子项目，以便启用<xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution.GetProjectOfGuid%2A>和<xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution.GetProjectOfProjref%2A>正常运行。
+     如果重新加载一个以前存在的子项目，该项目的项目 GUID 存储在父项目的项目文件中，则父项目会调用 `AddVirtualProjectEx` 。 和之间唯一的区别在于 `AddVirtualProject` `AddVirtualProjectEX` ， `AddVirtualProjectEX` 有一个参数，该参数允许父项目为子项目指定每个实例， `guidProjectID` 以使其能够 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution.GetProjectOfGuid%2A> <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution.GetProjectOfProjref%2A> 正常工作。
 
-     如果没有 GUID 可用（例如，当您添加新嵌套项目时）时，解决方案会在项目添加到父项目时为该项目创建一个。 父项目有责任在其项目文件中保留该项目 GUID。 如果删除嵌套项目，也可以删除该项目的 GUID。
+     如果没有可用的 GUID （如添加新的嵌套项目时），解决方案会在将项目添加到父级时为其创建一个。 父项目负责在其项目文件中持久保存该项目 GUID。 如果删除嵌套项目，则还可以删除该项目的 GUID。
 
-5. IDE 调用父<xref:Microsoft.VisualStudio.Shell.Interop.IVsParentProject.OpenChildren>项目的每个子项目上的方法。
+5. IDE 对 <xref:Microsoft.VisualStudio.Shell.Interop.IVsParentProject.OpenChildren> 父项目的每个子项目调用方法。
 
-     如果要嵌套项目，则必须`IVsParentProject`实现父项目。 但是，父项目即使其`QueryInterface`下方`IVsParentProject`有父项目，也从不调用。 解决方案处理对 的`IVsParentProject`调用，如果实现，则调用`OpenChildren`以创建嵌套项目。 `AddVirtualProjectEX`始终从`OpenChildren`调用 。 父项目绝不应调用它来保持层次结构创建事件的顺序。
+     如果要嵌套项目，则父项目必须实现 `IVsParentProject` 。 但父项目永远不会调用 `QueryInterface` ， `IVsParentProject` 即使它位于其下的父项目。 解决方案处理对的调用 `IVsParentProject` ，如果实现，则调用 `OpenChildren` 以创建嵌套项目。 `AddVirtualProjectEX`始终从调用 `OpenChildren` 。 父项目永远不应调用它来保持层次结构创建事件的顺序。
 
-6. IDE 调用子<xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3.OnAfterOpenProject%2A>项目上的方法。
+6. IDE 对 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3.OnAfterOpenProject%2A> 子项目调用方法。
 
-7. 父项目调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsFireSolutionEvents.FireOnAfterOpeningChildren%2A>方法以通知侦听器父项的子项目已创建。
+7. 父项目调用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsFireSolutionEvents.FireOnAfterOpeningChildren%2A> 方法，以通知侦听器已创建父对象的子项目。
 
-8. 打开所有子项目<xref:Microsoft.VisualStudio.Shell.Interop.IVsFireSolutionEvents.FireOnAfterOpenProject%2A>后，IDE 将调用父项目上的方法。
+8. <xref:Microsoft.VisualStudio.Shell.Interop.IVsFireSolutionEvents.FireOnAfterOpenProject%2A>打开所有子项目后，IDE 将对父项目调用方法。
 
-     如果不存在，父项目通过调用`CoCreateGuid`为每个嵌套项目创建 GUID。
-
-    > [!NOTE]
-    > `CoCreateGuid`是在创建 GUID 时调用的 COM API。 有关详细信息，请参阅`CoCreateGuid`MSDN 库中的 GUID。
-
-     父项目将此 GUID 存储在其项目文件中，以便下次在 IDE 中打开时将其检索。 有关调用`AddVirtualProjectEX`检索`guidProjectID`子项目的详细信息，请参阅步骤 4。
-
-9. <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A>然后，将调用父 ItemID，通过约定，将该方法委派给嵌套项目。 检索<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A>嵌套要在父级上调用项目时要委派的项目的节点的属性。
-
-     由于父项目和子项目以编程方式实例化，因此此时可以为嵌套项目设置属性。
+     如果它尚不存在，则父项目通过调用为每个嵌套项目创建一个 GUID `CoCreateGuid` 。
 
     > [!NOTE]
-    > 您不仅从嵌套项目中接收上下文信息，还可以通过检查__VSHPROPID来询问父项目是否有任何该项的上下文[。VSHPROPID_UserContext](<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID.VSHPROPID_UserContext>). 通过这种方式，您可以添加特定于单个嵌套项目的额外动态帮助属性和菜单选项。
+    > `CoCreateGuid`是要创建 GUID 时调用的 COM API。 有关详细信息，请参阅 `CoCreateGuid` MSDN Library 中的和 guid。
 
-10. 层次结构是为在**解决方案资源管理器**中显示而构建的，并调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetNestedHierarchy%2A>该方法。
+     父项目将此 GUID 存储在它的项目文件中，以便在下一次在 IDE 中打开它时进行检索。 请参阅步骤4，以获取与调用 `AddVirtualProjectEX` 以检索子项目的相关的详细信息 `guidProjectID` 。
 
-     通过将层次结构传递给环境`GetNestedHierarchy`，以生成要在解决方案资源管理器中显示的层次结构。 通过这种方式，解决方案知道项目存在，并且可以由生成管理器进行管理以生成，或者允许将项目中的文件置于源代码控制之下。
+9. <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A>然后为父 ItemID 调用方法，按约定将委托到嵌套项目。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A>检索一个节点的属性，该节点嵌套在父项上调用的项目。
 
-11. 创建 Project1 的所有嵌套项目后，控件将传回解决方案，并重复 Project2 的过程。
+     由于父项目和子项目以编程方式实例化，因此，此时可以设置嵌套项目的属性。
 
-     对于具有子项的子项目，将发生相同的创建嵌套项目的过程。 在这种情况下，如果作为 Project1 的子项的 BuildProject1 具有子项目，则这些项目将在生成 Project1 之后和 Project2 之前创建。 该过程是递归的，层次结构是从自上而下构建的。
+    > [!NOTE]
+    > 您不仅从嵌套项目接收上下文信息，还可以通过检查 __VSHPROPID 来询问父项目是否具有该项目的上下文[。VSHPROPID_UserContext](<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID.VSHPROPID_UserContext>)。 通过这种方式，可以添加特定于单个嵌套项目的额外的动态帮助属性和菜单选项。
 
-     当嵌套项目由于用户关闭解决方案或特定项目本身而关闭时，将调用 上`IVsParentProject`<xref:Microsoft.VisualStudio.Shell.Interop.IVsParentProject.CloseChildren%2A>的另一种方法。 父项目用<xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution.RemoveVirtualProject%2A><xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3.OnBeforeClosingChildren%2A>和<xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3.OnAfterClosingChildren%2A>方法将调用换行，以通知侦听器到解决方案事件，嵌套项目正在关闭。
+10. 该层次结构是使用对方法的调用在**解决方案资源管理器**中显示而生成的 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetNestedHierarchy%2A> 。
 
-以下主题涉及实现嵌套项目时要考虑的其他几个概念：
+     您可以通过将层次结构传递到环境， `GetNestedHierarchy` 以生成在解决方案资源管理器中显示的层次结构。 通过这种方式，解决方案知道项目存在并可由生成管理器进行管理，或者允许将项目中的文件置于源代码管理下。
+
+11. 如果已创建 Project1 的所有嵌套项目，则会将控制传递回解决方案，并为 Project2 重复此过程。
+
+     对于具有子项目的子项目，创建嵌套项目的过程是相同的。 在这种情况下，如果 BuildProject1 是 Project1 的子项目，则会在 BuildProject1 之后和 Project2 之前创建子项目。 流程是递归的，并从上到下构建了层次结构。
+
+     当由于用户关闭了解决方案或特定项目本身而关闭嵌套项目时，将调用上的其他方法 `IVsParentProject` <xref:Microsoft.VisualStudio.Shell.Interop.IVsParentProject.CloseChildren%2A> 。 父项目包装对方法的调用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution.RemoveVirtualProject%2A> <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3.OnBeforeClosingChildren%2A> ，并包装 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3.OnAfterClosingChildren%2A> 方法以通知侦听器解决方案事件嵌套项目将关闭。
+
+以下主题介绍了在实现嵌套项目时要考虑的其他一些概念：
 
 - [卸载和重新加载嵌套项目的注意事项](../../extensibility/internals/considerations-for-unloading-and-reloading-nested-projects.md)
-- [对嵌套项目的向导支持](../../extensibility/internals/wizard-support-for-nested-projects.md)
-- [为嵌套项目实现命令处理](../../extensibility/internals/implementing-command-handling-for-nested-projects.md)
-- [筛选嵌套项目的"添加项目"对话框](../../extensibility/internals/filtering-the-additem-dialog-box-for-nested-projects.md)
+- [嵌套项目的向导支持](../../extensibility/internals/wizard-support-for-nested-projects.md)
+- [实现嵌套项目的命令处理](../../extensibility/internals/implementing-command-handling-for-nested-projects.md)
+- [筛选嵌套项目的 AddItem 对话框](../../extensibility/internals/filtering-the-additem-dialog-box-for-nested-projects.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [将项目添加到"添加新项目"对话框](../../extensibility/internals/adding-items-to-the-add-new-item-dialog-boxes.md)
-- [注册项目和项目模板](../../extensibility/internals/registering-project-and-item-templates.md)
-- [检查表：创建新的项目类型](../../extensibility/internals/checklist-creating-new-project-types.md)
+- [向 "添加新项" 对话框添加项](../../extensibility/internals/adding-items-to-the-add-new-item-dialog-boxes.md)
+- [注册项目和项模板](../../extensibility/internals/registering-project-and-item-templates.md)
+- [清单：创建新的项目类型](../../extensibility/internals/checklist-creating-new-project-types.md)
 - [上下文参数](../../extensibility/internals/context-parameters.md)
-- [向导 （.vsz） 文件](../../extensibility/internals/wizard-dot-vsz-file.md)
+- [向导（.vsz）文件](../../extensibility/internals/wizard-dot-vsz-file.md)

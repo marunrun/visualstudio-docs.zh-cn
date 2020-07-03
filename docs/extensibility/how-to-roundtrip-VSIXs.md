@@ -1,19 +1,19 @@
 ---
 title: 如何往返扩展
 ms.date: 06/25/2017
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 2d6cf53c-011e-4c9e-9935-417edca8c486
 author: willbrown
 ms.author: madsk
 manager: justinclareburt
 ms.workload:
 - willbrown
-ms.openlocfilehash: d6de945e7221d2239e1b4f00185a5b16c04b717d
-ms.sourcegitcommit: e3c3d2b185b689c5e32ab4e595abc1ac60b6b9a8
+ms.openlocfilehash: ff2865080b7d36f1a7c3b8a7680d867b92ec9c08
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2020
-ms.locfileid: "76269067"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85905778"
 ---
 # <a name="how-to-make-extensions-compatible-with-visual-studio-20192017-and-visual-studio-2015"></a>如何：使扩展与 Visual Studio 2019/2017 和 Visual Studio 2015 兼容
 
@@ -29,11 +29,11 @@ ms.locfileid: "76269067"
 1. 导入正确的 NuGet 包。
 2. 更新扩展清单：
     * 安装目标
-    * 先决条件
+    * 必备条件
 3. 更新 .Csproj：
     * 更新 `<MinimumVisualStudioVersion>`。
     * 添加 `<VsixType>` 属性。
-    * 将调试属性添加 `($DevEnvDir)` 3 次。
+    * 添加调试属性 `($DevEnvDir)` 3 次。
     * 添加导入生成工具和目标的条件。
 
 4. 生成和测试
@@ -49,16 +49,16 @@ ms.locfileid: "76269067"
 
 强烈建议使用 Visual Studio 2015 而不是 Visual Studio 2019 或2017开始此次升级。 在 Visual Studio 2015 中进行开发的主要好处是确保不引用 Visual Studio 2015 中没有的程序集。 如果你在 Visual Studio 2019 或2017中进行开发，则你可能会在仅存在于 Visual Studio 2019 或2017中的程序集上引入依赖关系。
 
-## <a name="ensure-there-is-no-reference-to-projectjson"></a>确保不存在对项目 json 的引用
+## <a name="ensure-there-is-no-reference-to-projectjson"></a>确保没有对 project.js的引用
 
-稍后在本文档中，我们将向你的 * *.csproj*文件中插入条件导入语句。 如果 NuGet 引用存储在*项目 json*中，则此操作不起作用。 因此，建议将所有 NuGet 引用移动到*包 .config*文件中。
-如果你的项目包含一个*项目 json*文件：
+稍后在本文档中，我们将向你的 **.csproj*文件中插入条件导入语句。 如果 NuGet 引用存储在*project.js上*，则此操作不起作用。 因此，建议将所有 NuGet 引用移动到*packages.config*文件中。
+如果项目包含文件*上的project.js* ：
 
-* 记下*项目 json*中的引用。
-* 从**解决方案资源管理器**中，从项目中删除*项目 json*文件。 这将删除*项目 json*文件并将其从项目中删除。
+* 记下*project.js上*的引用。
+* 从**解决方案资源管理器**中，从项目中删除文件*project.js* 。 这会删除文件*上的project.js* ，并将其从项目中删除。
 * 将 NuGet 引用添加回项目：
   * 右键单击**解决方案**，然后选择 "**管理解决方案的 NuGet 包**"。
-  * Visual Studio 会自动为你创建*包 .config*文件。
+  * Visual Studio 将自动为你创建*packages.config*文件。
 
 > [!NOTE]
 > 如果你的项目包含 EnvDTE 包，则可能需要通过右键单击 "**引用**"，选择 "**添加引用**" 并添加相应的引用来添加它们。 在尝试生成项目时，使用 NuGet 包可能会产生错误。
@@ -69,10 +69,10 @@ ms.locfileid: "76269067"
 
 若要在 Visual Studio 2015 和2019/2017 中生成和部署 VSIXv3，你将需要以下 NuGet 包：
 
-{2&gt;版本&lt;2} | 构建的工具
+版本 | 构建的工具
 --- | ---
-Visual Studio 2015 | Microsoft.VisualStudio.Sdk.BuildTasks.14.0
-Visual Studio 2019 或2017 | Microsoft.VSSDK.BuildTool
+Visual Studio 2015 | VisualStudio. BuildTasks。
+Visual Studio 2019 或2017 | VSSDK. BuildTool
 
 为此，请执行以下操作：
 
@@ -109,7 +109,7 @@ Visual Studio 2019 或2017 | Microsoft.VSSDK.BuildTool
 </Prerequisites>
 ```
 
-* 保存并关闭文件。
+* 保存并关闭该文件。
 
 > [!NOTE]
 > 你可能需要手动编辑必备版本，以确保它与所有版本的 Visual Studio 2019 或2017兼容。 这是因为设计器将插入最小版本作为 Visual Studio 的当前版本（例如，15.0.26208.0）。 但是，因为其他用户可能有较早的版本，你需要手动将其编辑为15.0。
@@ -127,7 +127,7 @@ Visual Studio 2019 或2017 | Microsoft.VSSDK.BuildTool
 
 ### <a name="1-update-the-minimumvisualstudioversion"></a>1. 更新 I o n
 
-* 将最小 visual studio 版本设置为 `$(VisualStudioVersion)`，并为其添加一个条件语句。 如果这些标记不存在，请添加它们。 确保标记设置如下：
+* 将最小 visual studio 版本设置为 `$(VisualStudioVersion)` ，并为其添加一个条件语句。 如果这些标记不存在，请添加它们。 确保标记设置如下：
 
 ```xml
 <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
@@ -136,10 +136,10 @@ Visual Studio 2019 或2017 | Microsoft.VSSDK.BuildTool
 
 ### <a name="2-add-the-vsixtype-property"></a>2. 添加 VsixType 属性。
 
-* 将以下标记 `<VsixType>v3</VsixType>` 添加到属性组。
+* 将以下标记添加 `<VsixType>v3</VsixType>` 到属性组。
 
 > [!NOTE]
-> 建议将此添加到 `<OutputType></OutputType>` 标记下面。
+> 建议在标记的下面添加 `<OutputType></OutputType>` 。
 
 ### <a name="3-add-the-debugging-properties"></a>3. 添加调试属性
 
@@ -163,7 +163,7 @@ Visual Studio 2019 或2017 | Microsoft.VSSDK.BuildTool
 
 ### <a name="4-add-conditions-to-the-build-tools-imports"></a>4. 向生成工具导入添加条件
 
-* 将其他条件语句添加到具有 VSSDK 引用的 `<import>` 标记。 在 condition 语句的前面插入 `'$(VisualStudioVersion)' != '14.0' And`。 这些语句将显示在 .csproj 文件的页眉和页脚中。
+* 将其他条件语句添加到 `<import>` 具有 VSSDK 引用的标记。 `'$(VisualStudioVersion)' != '14.0' And`在 condition 语句的前面插入。 这些语句将显示在 .csproj 文件的页眉和页脚中。
 
 例如：
 
@@ -171,7 +171,7 @@ Visual Studio 2019 或2017 | Microsoft.VSSDK.BuildTool
 <Import Project="packages\Microsoft.VSSDK.BuildTools.15.0.26201…" Condition="'$(VisualStudioVersion)' != '14.0' And Exists(…" />
 ```
 
-* 将其他条件语句添加到具有 VisualStudio 的 `<import>` 标记中。 在 condition 语句的前面插入 `'$(VisualStudioVersion)' == '14.0' And`。 这些语句将显示在 .csproj 文件的页眉和页脚中。
+* 将其他条件语句添加到 `<import>` 具有 VisualStudio 的标记中。 `'$(VisualStudioVersion)' == '14.0' And`在 condition 语句的前面插入。 这些语句将显示在 .csproj 文件的页眉和页脚中。
 
 例如：
 
@@ -179,7 +179,7 @@ Visual Studio 2019 或2017 | Microsoft.VSSDK.BuildTool
 <Import Project="packages\Microsoft.VisualStudio.Sdk.BuildTasks.14.0.14.0…" Condition="'$(VisualStudioVersion)' == '14.0' And Exists(…" />
 ```
 
-* 将其他条件语句添加到具有 VSSDK 引用的 `<Error>` 标记。 为此，请在 condition 语句的前面插入 `'$(VisualStudioVersion)' != '14.0' And`。 这些语句将显示在 .csproj 文件的页脚中。
+* 将其他条件语句添加到 `<Error>` 具有 VSSDK 引用的标记。 为此，请 `'$(VisualStudioVersion)' != '14.0' And` 在 condition 语句的前面插入。 这些语句将显示在 .csproj 文件的页脚中。
 
 例如：
 
@@ -187,7 +187,7 @@ Visual Studio 2019 或2017 | Microsoft.VSSDK.BuildTool
 <Error Condition="'$(VisualStudioVersion)' != '14.0' And Exists('packages\Microsoft.VSSDK.BuildTools.15.0.26201…" />
 ```
 
-* 将其他条件语句添加到具有 VisualStudio 的 `<Error>` 标记中。 在 condition 语句的前面插入 `'$(VisualStudioVersion)' == '14.0' And`。 这些语句将显示在 .csproj 文件的页脚中。
+* 将其他条件语句添加到 `<Error>` 具有 VisualStudio 的标记中。 `'$(VisualStudioVersion)' == '14.0' And`在 condition 语句的前面插入。 这些语句将显示在 .csproj 文件的页脚中。
 
 例如：
 
@@ -205,9 +205,9 @@ Visual Studio 2019 或2017 | Microsoft.VSSDK.BuildTool
 * 在 Visual Studio 2015 中打开你的项目。
 * 生成项目，并在输出中确认 VSIX 生成正确。
 * 导航到项目目录。
-* 打开 *\bin\Debug* 文件夹。
+* 打开*\bin\Debug*文件夹。
 * 双击 VSIX 文件，并在 Visual Studio 2015 和 Visual Studio 2019/2017 上安装扩展。
-* 请确保在 "**已安装**" 部分中的 "**工具**" > "**扩展和更新**" 中可以看到该扩展。
+* 请确保在**Tools**  >  "**已安装**" 部分的 "工具**扩展和更新**" 中可以看到该扩展。
 * 尝试运行/使用该扩展来检查它是否正常工作。
 
 ![查找 VSIX](media/finding-a-VSIX-example.png)
