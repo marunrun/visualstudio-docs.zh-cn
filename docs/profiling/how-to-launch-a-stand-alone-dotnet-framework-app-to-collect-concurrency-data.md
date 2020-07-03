@@ -1,7 +1,7 @@
 ---
-title: 探查器命令行：打开客户端 .NET 应用，获取并发数据
+title: 探查器命令行 - 打开客户端 .NET 应用，获取并发数据
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 17a48848-bd3e-44ef-9971-e39836ff1df2
 author: mikejo5000
 ms.author: mikejo
@@ -9,12 +9,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4a52c65f8a53d62edde42c26fafef9940046ba5d
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: e2c1b0a52429e74ad35cf0cad3acc44d064c9672
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74775387"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85327899"
 ---
 # <a name="how-to-launch-a-stand-alone-net-framework-application-with-the-profiler-to-collect-concurrency-data-by-using-the-command-line"></a>如何：使用探查器启动独立 .NET Framework 应用程序，并通过命令行收集并发数据
 本主题介绍了如何使用 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 分析工具命令行工具启动 .NET Framework 独立（客户端）应用程序，并收集进程和线程并发数据
@@ -25,7 +25,7 @@ ms.locfileid: "74775387"
  将探查器附加到应用程序时，可以暂停和恢复数据收集。 若要结束分析会话，探查器不得再附加于应用程序，并且必须显示关闭探查器。
 
 ## <a name="start-the-application-with-the-profiler"></a>用探查器启动应用程序
- 要使用探查器启动 .NET Framework 目标应用程序，请使用 VSPerfClrEnv.exe 设置 .NET Framework 分析变量  。 然后，使用 VSPerfCmd /start  和 /launch  选项，以初始化探查器并启动应用程序。 可以在单个命令行中指定 **/start** 和 **/launch** 及其各自的选项。 还可以向命令行添加 /globaloff  选项，以在目标应用程序启动时暂停数据收集。 然后，对单独命令行使用 /globalon  ，以开始收集数据。
+ 要使用探查器启动 .NET Framework 目标应用程序，请使用 VSPerfClrEnv.exe 设置 .NET Framework 分析变量。 然后，使用 VSPerfCmd /start和 /launch 选项，以初始化探查器并启动应用程序。 可以在单个命令行中指定 **/start** 和 **/launch** 及其各自的选项。 还可以向命令行添加 /globaloff 选项，以在目标应用程序启动时暂停数据收集。 然后，对单独命令行使用 /globalon，以开始收集数据。
 
 #### <a name="to-start-an-application-with-the-profiler"></a>用探查器启动应用程序
 
@@ -53,7 +53,7 @@ ms.locfileid: "74775387"
    | [/crosssession](../profiling/crosssession.md) | 启用其他登录会话中的进程分析。 |
    | [/wincounter](../profiling/wincounter.md) **:** `WinCounterPath` | 指定要在分析期间收集的 Windows 性能计数器。 |
    | [/automark](../profiling/automark.md) **:** `Interval` | 仅与 **/wincounter** 一起使用。 指定两次 Windows 性能计数器收集事件相隔的毫秒数。 默认值为 500 毫秒。 |
-   | [/events](../profiling/events-vsperfcmd.md) **:** `Config` | 指定要在分析期间收集的 Windows 事件跟踪 (ETW) 事件。 ETW 事件收集在单独的 (.etl) 文件中  。 |
+   | [/events](../profiling/events-vsperfcmd.md) **:** `Config` | 指定要在分析期间收集的 Windows 事件跟踪 (ETW) 事件。 ETW 事件收集在单独的 (.etl) 文件中。 |
 
 3. 启动目标应用程序。 类型：
 
@@ -72,7 +72,7 @@ ms.locfileid: "74775387"
 
 #### <a name="to-start-and-stop-data-collection"></a>启动和停止数据收集
 
-1. 以下 VSPerfCmd.exe 选项对可启动和停止数据收集  。 在单独的命令行上指定每个选项。 可多次打开和关闭数据收集。
+1. 以下 VSPerfCmd.exe 选项对可启动和停止数据收集。 在单独的命令行上指定每个选项。 可多次打开和关闭数据收集。
 
     |选项|描述|
     |------------|-----------------|

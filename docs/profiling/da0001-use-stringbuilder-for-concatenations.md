@@ -1,7 +1,7 @@
 ---
-title: DA0001：将 StringBuilder 用于串联 | Microsoft Docs
+title: DA0001 - 使用 StringBuilder 进行串联 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - vs.performance.DA0001
 - vs.performance.rules.DAUseStringBuilder
@@ -14,16 +14,16 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 0d93de6ce901bfe4d72628f778b18420beb5ebee
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 6a645816ed046c2ce253a9f882c1425c48347573
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74779501"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85541734"
 ---
 # <a name="da0001-use-stringbuilder-for-concatenations"></a>DA0001：将 StringBuilder 用于串联
 
-|||
+|项|“值”|
 |-|-|
 |规则 ID|DA0001|
 |类别|.NET Framework 使用情况|

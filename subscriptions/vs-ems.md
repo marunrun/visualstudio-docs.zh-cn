@@ -1,51 +1,35 @@
 ---
-title: EMS 权益 |Microsoft 文档
+title: Visual Studio 订阅中的企业移动性 + 安全性权益 | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: bada7a96-a969-4459-a2ac-7f253149d925
-ms.date: 03/25/2020
+ms.date: 06/18/2020
 ms.topic: conceptual
 description: 了解有关 Visual Studio 订阅中包含的企业移动性 + 安全性权益。
-ms.openlocfilehash: e66e760cc8400e1f81c396c0e62ff57bf6356153
-ms.sourcegitcommit: dfa9476b69851c28b684ece66980bee735fef8fd
+ms.openlocfilehash: 8641b0f4710b597d237fc9a84d50c4a45e9b427c
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80273915"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85331248"
 ---
 # <a name="enterprise-mobility--security-ems-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的企业移动性 + 安全性 (EMS)
 
-Visual Studio Enterprise 年度云订阅和标准订阅包含企业移动性 + 安全性 (EMS)。  使用 EMS - Azure Active Directory、Microsoft Intune、Azure 信息保护、Microsoft Advanced Threat Analytics 和 Microsoft Cloud App Security 保护和管理标识、设备、应用程序和数据。 
+企业移动性 + 安全性以前在选定的 Visual Studio 订阅中独立提供，现包含在上述选定 Visual Studio 订阅中的 Microsoft 365 开发人员订阅中。  
 
-## <a name="who-should-install-ems"></a>谁应安装 EMS？
-如果你已经有 Office 365 开发人员 (E3) 租户，则应安装 EMS。  否则，应安装 [Microsoft 365](vs-m365.md)，它同时包括 EMS 和 Office 365 开发人员 (E5)：
-- Power BI 的高级分析
-- Office 365 高级威胁防护
-- Azure Active Directory，用于构建高级标识和访问管理解决方案
+因此，企业移动性 + 安全性将不再单独提供。  
 
-## <a name="eligibility"></a>资格
+若要激活 Microsoft 365 开发人员订阅，请执行以下操作：
+1. 登录到 [Visual Studio 订阅门户](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)
+1. 找到 Microsoft 365 开发人员订阅磁贴，然后单击“激活”。  
+1. 按照提示完成帐户的创建。  
 
-| 订阅级别                                                 |     信道                                            | 好处                                                          | 是否续订？    |
-|--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise（标准）   | VL、Azure、零售、所选 NFR<sup>1</sup> | 可用       |  是          |
-| Visual Studio Professional（标准 <sup>2</sup>） | VL、Azure、零售                                       | 可用                                                            |  是          |
-| Visual Studio Test Professional（标准）                         | VL、零售                                              | 不可用                                             |  不可用          |
-| MSDN 平台（标准）                                          | VL、零售                                              | 不可用                                              |  不可用          |
-| Visual Studio Enterprise、Visual Studio Professional（月度云） | Azure | 不可用 | 不可用 |
-
-<sup>1</sup>  包括：限制转售 (NFR)、Visual Studio 行业合作伙伴 (VSIP)、Microsoft 合作伙伴网络 (MPN)、FTE、MCT 软件和服务开发人员、BizSpark。不包括：最有价值专家 (MVP)、区域总监 (RD)、MCT 软件和服务、Imagine、Microsoft 合作伙伴网络 (Professional)。
-
-<sup>2</sup> 不包括 Microsoft 合作伙伴网络 (Professional) 
-
-> [!NOTE]
-> Microsoft 不再在云订阅中提供 Visual Studio Professional 年度订阅和 Visual Studio Enterprise 年度订阅。 现有客户体验以及续订、增加、减少或取消订阅的能力不会发生变化。 建议新客户访问 [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/)，查看各 Visual Studio 购买选项。
-
-无法确定正在使用哪些订阅？  连接到 [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs)，查看分配给电子邮件地址的所有订阅。 如果没有看到所有订阅，则可能是有一个或多个订阅分配给了不同的电子邮件地址。  你需要使用其他电子邮件地址登录来查看那些订阅。
+了解有关激活 [Microsoft 365 开发人员订阅](vs-m365.md)的详细信息。 
 
 ## <a name="support-resources"></a>支持资源
-- 需要 EMS 的帮助？  签出联机 [EMS 文档](/enterprise-mobility-security/)。
-- 有关 EMS 任何组件的技术支持，请访问 [EMS 支持常见问题解答](https://docs.microsoft.com/enterprise-mobility-security/solutions/ems-support-faq)，以便为你的问题找到合适的支持。
+- 需要 EMS 的帮助？  请参阅在线[企业移动性 + 安全性文档](/enterprise-mobility-security/)。
+- 有关 EMS 任何组件的技术支持，请访问[企业移动性 + 安全性支持常见问题解答](https://docs.microsoft.com/enterprise-mobility-security/solutions/ems-support-faq)，以便为你的问题找到合适的支持。
 - 有关 Visual Studio 订阅的销售、订阅、帐户和账单的帮助，请与 Visual Studio [订阅支持](https://visualstudio.microsoft.com/subscriptions/support/)联系。
 - 对有关 Visual Studio IDE、Azure DevOps Services 或其他 Visual Studio 产品或服务有疑问？  请访问 [Visual Studio 支持](https://visualstudio.microsoft.com/support/)。
 

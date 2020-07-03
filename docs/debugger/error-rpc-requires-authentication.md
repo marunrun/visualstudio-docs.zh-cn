@@ -1,7 +1,7 @@
 ---
-title: 错误：RPC 要求身份验证 | Microsoft Docs
+title: 错误 - RPC 要求身份验证 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: troubleshooting
+ms.topic: error-reference
 f1_keywords:
 - vs.debug.error.rpc_requires_authentication
 dev_langs:
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c473916a6b689984f234736eb8b763056fc002d9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e98daf3697c86eec7767135c9ad85d67cd6e958a
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62850453"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85460580"
 ---
 # <a name="error-rpc-requires-authentication"></a>错误：RPC 要求身份验证
 Visual Studio 调试器无法连接到远程计算机。 本地计算机上启用了阻止远程调试的 RPC 策略。

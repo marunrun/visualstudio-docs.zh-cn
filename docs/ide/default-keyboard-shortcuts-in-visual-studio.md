@@ -13,16 +13,16 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a6d7a8de8c80f32a448753b06c86e576c9c1dec8
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 20f9328b7e048eaf68184925fa1b7ac7a56540af
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79306817"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85533635"
 ---
 # <a name="default-keyboard-shortcuts-in-visual-studio"></a>Visual Studio 中的默认键盘快捷方式
 
-通过选择相应的键盘快捷方式，可访问 Visual Studio 中的各种[命令](reference/visual-studio-commands.md)和窗口。 本页列出了常规  配置文件的默认命令快捷方式，安装 Visual Studio 时可能已选择该配置文件。 无论选择哪个配置文件，都可以通过打开“选项”  对话框，展开“环境”  节点，然后选择“键盘”  ，[认识命令的快捷方式](identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md)。 你还可以为任意给定命令分配不同的快捷键，以自定义你的快捷键。
+通过选择相应的键盘快捷方式，可访问 Visual Studio 中的各种[命令](reference/visual-studio-commands.md)和窗口。 本页列出了常规配置文件的默认命令快捷方式，安装 Visual Studio 时可能已选择该配置文件。 无论选择哪个配置文件，都可以通过打开“选项”对话框，展开“环境”节点，然后选择“键盘”，[认识命令的快捷方式](identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md)。 你还可以为任意给定命令分配不同的快捷键，以自定义你的快捷键。
 
 有关常见键盘快捷方式列表和其他工作效率信息，请参阅：
 
@@ -32,34 +32,50 @@ ms.locfileid: "79306817"
 
 有关 Visual Studio 中辅助功能的详细信息，请参阅[辅助功能提示和技巧](../ide/reference/accessibility-tips-and-tricks.md)以及[如何：仅使用键盘进行操作](../ide/reference/how-to-use-the-keyboard-exclusively.md)。
 
-|||||
-|-|-|-|-|
-|[分析](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_analyze)|[编辑](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_edit)|[Project](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_project)|[测试](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_test)|
-|[体系结构](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_architecture)|[编辑器上下文菜单](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_editorContext)|[项目和解决方案上下文菜单](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_projectContext)|[测试资源管理器](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_testexplorerGLOBAL)|
-|[生成](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_build)|[文件](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_file)|[重构](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_refactor)|[工具](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_tools)|
-|[类视图上下文菜单](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_classview)|[帮助](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_help)|[解决方案资源管理器](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_solutionexplorerGLOBAL)|[视图](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_view)|
-|[调试](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_debug)|[负载测试](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_loadtest)|[团队](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_team)|[窗口](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_window)|
-|[调试器上下文菜单](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_debugger)|[其他上下文菜单](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_otherContext)|[Team Foundation 上下文菜单](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_TFcontext)|[Azure](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_windowsazure)|
-|[诊断中心](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_diagnostics)||||
+- [分析](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_analyze)
+- [编辑](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_edit)
+- [Project](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_project)
+- [测试](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_test)|
+- [体系结构](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_architecture)
+- [编辑器上下文菜单](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_editorContext)
+- [项目和解决方案上下文菜单](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_projectContext)
+- [测试资源管理器](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_testexplorerGLOBAL)
+- [生成](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_build)
+- [文件](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_file)
+- [重构](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_refactor)
+- [工具](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_tools)
+- [类视图上下文菜单](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_classview)
+- [帮助](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_help)
+- [解决方案资源管理器](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_solutionexplorerGLOBAL)
+- [视图](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_view)
+- [调试](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_debug)
+- [负载测试](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_loadtest)
+- [团队](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_team)
+- [窗口](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_window)
+- [调试器上下文菜单](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_debugger)
+- [其他上下文菜单](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_otherContext)
+- [Team Foundation 上下文菜单](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_TFcontext)
+- [Azure](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_windowsazure)
+- [诊断中心](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_diagnostics)
 
 ## <a name="global-shortcuts"></a>全局快捷键
 
-这些键盘快捷键为全局快捷键  ，这意味着你可以在任何 Visual Studio 窗口具有焦点时使用它们。
+这些键盘快捷键为全局快捷键，这意味着你可以在任何 Visual Studio 窗口具有焦点时使用它们。
 
-### <a name="bkmk_analyze"></a>分析
+### <a name="analyze"></a><a name="bkmk_analyze"></a>分析
 
 |命令|键盘快捷键|
 |--------------| - |
 |分析.向后定位|**Shift+Alt+3**|
 |分析.向前定位|**Shift+Alt+4**|
 
-### <a name="bkmk_architecture"></a>体系结构
+### <a name="architecture"></a><a name="bkmk_architecture"></a>体系结构
 
 |命令|键盘快捷键|
 |--------------| - |
 |体系结构.新建关系图|**Ctrl+\\、Ctrl+N**|
 
-### <a name="bkmk_build"></a>生成
+### <a name="build"></a><a name="bkmk_build"></a>生成
 
 |命令|键盘快捷键|
 |--------------| - |
@@ -69,13 +85,13 @@ ms.locfileid: "79306817"
 |生成.编译|**Ctrl+F7**|
 |生成.对解决方案运行代码分析|**Alt+F11**|
 
-### <a name="bkmk_classview"></a>类视图上下文菜单
+### <a name="class-view-context-menus"></a><a name="bkmk_classview"></a>类视图上下文菜单
 
 |命令|键盘快捷键|
 |--------------| - |
 |类视图上下文菜单.类视图多选项目引用项.属性|**Alt+Enter**|
 
-### <a name="bkmk_debug"></a>调试
+### <a name="debug"></a><a name="bkmk_debug"></a>调试
 
 |命令|键盘快捷键|
 |--------------| - |
@@ -125,13 +141,13 @@ ms.locfileid: "79306817"
 |调试.启动|**F5**|
 |调试.启动 Windows Phone 应用程序分析|**Alt+F1**|
 |调试.开始执行不调试|**Ctrl+F5**|
-|调试.逐语句|F11 |
+|调试.逐语句|F11|
 |调试.进入并单步执行当前进程|**Ctrl+Alt+F11**|
 |调试.单步执行特定函数|**Shift+Alt+F11**|
 |调试.跳出|**Shift+F11**|
 |调试.跳出当前进程|**Ctrl+Shift+Alt+F11**|
-|调试.逐过程|F10  （执行调试时：执行单步跳过操作）|
-|调试.逐过程|F10  （未在执行调试时：启动调试，并在第一行用户代码上停止）|
+|调试.逐过程|F10（执行调试时：执行单步跳过操作）|
+|调试.逐过程|F10（未在执行调试时：启动调试，并在第一行用户代码上停止）|
 |调试.逐过程执行当前进程|**Ctrl+Alt+F10**|
 |调试.停止调试|**Shift+F5**|
 |调试.停止性能分析|**Shift+Alt+F2**|
@@ -144,7 +160,7 @@ ms.locfileid: "79306817"
 |调试.监视3|**Ctrl+Alt+W、3**|
 |调试.监视4|**Ctrl+Alt+W、4**|
 
-### <a name="bkmk_debugger"></a>调试器上下文菜单
+### <a name="debugger-context-menus"></a><a name="bkmk_debugger"></a>调试器上下文菜单
 
 |命令|键盘快捷键|
 |--------------| - |
@@ -152,13 +168,13 @@ ms.locfileid: "79306817"
 |调试器上下文菜单.断点窗口.转到反汇编|**Alt+F9、A**|
 |调试器上下文菜单.断点窗口.转到源代码|**Alt+F9、S**|
 
-### <a name="bkmk_diagnostics"></a>诊断中心
+### <a name="diagnostics-hub"></a><a name="bkmk_diagnostics"></a>诊断中心
 
 |命令|键盘快捷键|
 |-------------| - |
 |诊断中心.停止收集|**Ctrl+Alt+F2**|
 
-### <a name="bkmk_edit"></a>编辑
+### <a name="edit"></a><a name="bkmk_edit"></a>编辑
 
 |命令|键盘快捷键|
 |--------------|-|
@@ -176,24 +192,24 @@ ms.locfileid: "79306817"
 |编辑.查找上一个选定项|**Ctrl+Shift+F3**|
 |编辑.生成方法|**Ctrl+K、Ctrl+M**|
 |编辑.转到|**Ctrl+G**|
-|Edit.GoToAll|Ctrl+  或 Ctrl+T |
+|Edit.GoToAll|Ctrl+ 或 Ctrl+T|
 |编辑.转到声明|**Ctrl+F12**|
 |编辑.转到定义|**F12**|
-|Edit.GoToMember|Ctrl+1、Ctrl+M  或 Ctrl+1、M  或 Alt+\\ |
-|编辑.转到下一个位置|F8  （错误列表或输出窗口中的下一个错误）|
-|编辑.转到上一个位置|Shift+F8  （错误列表或输出窗口中的上一个错误）|
+|Edit.GoToMember|Ctrl+1、Ctrl+M 或 Ctrl+1、M 或 Alt+\\|
+|编辑.转到下一个位置|F8（错误列表或输出窗口中的下一个错误）|
+|编辑.转到上一个位置|Shift+F8（错误列表或输出窗口中的上一个错误）|
 |编辑.插入代码片段|**Ctrl+K、Ctrl+X**|
 |编辑.下移控件|**Ctrl+向下键**|
-|编辑.将控件移动到下侧网格|向下键 |
+|编辑.将控件移动到下侧网格|向下键|
 |编辑.左移控件|**Ctrl+向左键**|
 |编辑.将控件移动到左侧网格|**向左键**|
 |编辑.右移控件|**Ctrl+向右键**|
 |编辑.将控件移动到右侧网格|**向右键**|
 |编辑.上移控件|**Ctrl+向上键**|
-|编辑.将控件移动到上侧网格|向上键 |
+|编辑.将控件移动到上侧网格|向上键|
 |编辑.下一书签|**Ctrl+K、Ctrl+N**|
 |编辑.文件夹中的下一书签|**Ctrl+Shift+K、Ctrl+Shift+N**|
-|编辑.打开文件|Ctrl+Shift+G  （打开光标下的文件名称）|
+|编辑.打开文件|Ctrl+Shift+G（打开光标下的文件名称）|
 |编辑.粘贴|**Ctrl+V**<br /><br /> or<br /><br /> **Shift+Ins**|
 |编辑.上一书签|**Ctrl+K、Ctrl+P**|
 |编辑.文件夹中的上一书签|**Ctrl+Shift+K、Ctrl+Shift+P**|
@@ -203,9 +219,9 @@ ms.locfileid: "79306817"
 |编辑.替换|**Ctrl+H**|
 |编辑.在文件中替换|**Ctrl+Shift+H**|
 |编辑.全选|**Ctrl+A**|
-|编辑.选择下一个控件|Tab |
+|编辑.选择下一个控件|Tab|
 |编辑.选择上一个控件|**Shift+Tab**|
-|编辑.显示平铺网格|Enter |
+|编辑.显示平铺网格|Enter|
 |编辑.向下调大控件大小|**Ctrl+Shift+向下键**|
 |编辑.将控件调大到下侧网格|**Shift+向下键**|
 |编辑.向左调整控件大小|**Ctrl+Shift+向左键**|
@@ -218,7 +234,7 @@ ms.locfileid: "79306817"
 |编辑.外侧代码|**Ctrl+K、Ctrl+S**|
 |编辑.取消|**Ctrl+Z**<br /><br /> or<br /><br /> **Alt+Backspace**|
 
-### <a name="bkmk_editorContext"></a>编辑器上下文菜单
+### <a name="editor-context-menus"></a><a name="bkmk_editorContext"></a>编辑器上下文菜单
 
 |命令|键盘快捷键|
 |--------------| - |
@@ -229,7 +245,7 @@ ms.locfileid: "79306817"
 |编辑器上下文菜单.代码窗口.切换标头代码文件|**Ctrl+K、Ctrl+O**（字母“O”）|
 |编辑器上下文菜单.代码窗口.查看调用层次结构|**Ctrl+K、Ctrl+T**<br /><br /> or<br /><br /> **Ctrl+K、T**|
 
-### <a name="bkmk_file"></a>文件
+### <a name="file"></a><a name="bkmk_file"></a>文件
 
 |命令|键盘快捷键|
 |--------------| - |
@@ -245,28 +261,28 @@ ms.locfileid: "79306817"
 |文件.保存选定项|**Ctrl+S**|
 |文件.在浏览器中查看|**Ctrl+Shift+W**|
 
-### <a name="bkmk_help"></a>帮助
+### <a name="help"></a><a name="bkmk_help"></a>帮助
 
 |命令|键盘快捷键|
 |--------------| - |
 |帮助.添加和移除帮助内容|**Ctrl+Alt+F1**|
-|帮助.F1 帮助|F1 |
+|帮助.F1 帮助|F1|
 |Help.ViewHelp|**Ctrl+F1**|
 |帮助.窗口帮助|**Shift+F1**|
 
-### <a name="bkmk_loadtest"></a>负载测试
+### <a name="load-test"></a><a name="bkmk_loadtest"></a>负载测试
 
 |命令|键盘快捷键|
 |-------------| - |
 |负载测试.跳至计数器窗格|**Ctrl+R、Q**|
 
-### <a name="bkmk_otherContext"></a>其他上下文菜单
+### <a name="other-context-menus"></a><a name="bkmk_otherContext"></a>其他上下文菜单
 
 |命令|键盘快捷键|
 |-------------| - |
-|其他上下文菜单.Microsoft 数据实体设计上下文.添加新关系图|插入 |
+|其他上下文菜单.Microsoft 数据实体设计上下文.添加新关系图|插入|
 
-### <a name="bkmk_project"></a>项目
+### <a name="project"></a><a name="bkmk_project"></a>项目
 
 |命令|键盘快捷键|
 |--------------| - |
@@ -274,18 +290,18 @@ ms.locfileid: "79306817"
 |项目.添加新项|**Ctrl+Shift+A**|
 |项目.类向导|**Ctrl+Shift+X**|
 |项目.重写|**Ctrl+Alt+Ins**|
-|项目.预览更改|依次按 Alt+;  和 Alt+C |
-|项目.发布选定文件|依次按 Alt+;  和 Alt+P |
-|项目.替换服务器上的选定文件|依次按 Alt+;  和 Alt+R |
+|项目.预览更改|依次按 Alt+; 和 Alt+C|
+|项目.发布选定文件|依次按 Alt+; 和 Alt+P|
+|项目.替换服务器上的选定文件|依次按 Alt+; 和 Alt+R|
 
-### <a name="bkmk_projectContext"></a>项目和解决方案上下文菜单
+### <a name="project-and-solution-context-menus"></a><a name="bkmk_projectContext"></a>项目和解决方案上下文菜单
 
 |命令|键盘快捷键|
 |--------------| - |
 |项目和解决方案上下文菜单.项.下移|**Alt+向下键**|
 |项目和解决方案上下文菜单.项.上移|**Alt+向上键**|
 
-### <a name="bkmk_refactor"></a>重构
+### <a name="refactor"></a><a name="bkmk_refactor"></a>重构
 
 |命令|键盘快捷键|
 |--------------| - |
@@ -296,7 +312,7 @@ ms.locfileid: "79306817"
 |重构.重命名|**Ctrl+R、Ctrl+R**|
 |重构.重新排列参数|**Ctrl+R、Ctrl+O**（字母“O”）|
 
-### <a name="bkmk_solutionexplorerGLOBAL"></a>解决方案资源管理器
+### <a name="solution-explorer"></a><a name="bkmk_solutionexplorerGLOBAL"></a>解决方案资源管理器
 
 |命令|键盘快捷键|
 |--------------| - |
@@ -304,7 +320,7 @@ ms.locfileid: "79306817"
 |解决方案资源管理器.挂起更改筛选器|**Ctrl+[** 、**P**<br /><br /> or<br /><br /> **Ctrl+[** 、**Ctrl+P**|
 |解决方案资源管理器.与活动文档同步|**Ctrl+[** 、**S**<br /><br /> or<br /><br /> **Ctrl+[** 、**Ctrl+S**|
 
-### <a name="bkmk_team"></a>团队
+### <a name="team"></a><a name="bkmk_team"></a>团队
 
 |命令|键盘快捷键|
 |--------------| - |
@@ -313,7 +329,7 @@ ms.locfileid: "79306817"
 |团队.Git.转到 Git 提交|**Ctrl+0**（数字“0”）、**Ctrl+O**（字母“O”）<br /><br /> or<br /><br /> **Ctrl+0、O**|
 |团队.团队资源管理器搜索|**Ctrl+'**|
 
-### <a name="bkmk_TFcontext"></a>Team Foundation 上下文菜单
+### <a name="team-foundation-context-menus"></a><a name="bkmk_TFcontext"></a>Team Foundation 上下文菜单
 
 |命令|键盘快捷键|
 |--------------| - |
@@ -328,28 +344,28 @@ ms.locfileid: "79306817"
 |Team Foundation 上下文菜单.命令.转到 Web 访问|**Ctrl+0**（数字“0”）、**Ctrl+A**<br /><br /> or<br /><br /> **Ctrl+0、A**|
 |Team Foundation 上下文菜单.命令.转到工作项|**Ctrl+0**（数字“0”）、**Ctrl+W**<br /><br /> or<br /><br /> **Ctrl+0、W**|
 
-### <a name="bkmk_test"></a>测试
+### <a name="test"></a><a name="bkmk_test"></a>测试
 
 |命令|键盘快捷键|
 |--------------| - |
 |测试.使用编码的 UI 测试生成器|**Ctrl+\\、Ctrl+C**|
 |测试.使用现有的操作录制|**Ctrl+\\、Ctrl+A**|
 
-### <a name="bkmk_testexplorerGLOBAL"></a>测试资源管理器
+### <a name="test-explorer"></a><a name="bkmk_testexplorerGLOBAL"></a>测试资源管理器
 
 |命令|键盘快捷键|
 |--------------| - |
 |测试资源管理器.调试所有测试|**Ctrl+R、Ctrl+A**|
 |测试资源管理器.调试上下文中的所有测试|**Ctrl+R、Ctrl+T**|
-|TestExplorer.DebugLastRun|Ctrl+R、D |
+|TestExplorer.DebugLastRun|Ctrl+R、D|
 |测试资源管理器.重复上次运行|**Ctrl+R、L**|
 |测试资源管理器.运行所有测试|**Ctrl+R、A**|
 |测试资源管理器.运行上下文中的所有测试|**Ctrl+R、T**|
-|TestExplorer.ShowTestExplorer|Ctrl+E、T |
-|LiveUnitTesting.OpenTab|Ctrl+E、L |
+|TestExplorer.ShowTestExplorer|Ctrl+E、T|
+|LiveUnitTesting.OpenTab|Ctrl+E、L|
 |Test.CodeCoverageResults|**Ctrl+E、C**|
 
-### <a name="bkmk_tools"></a>工具
+### <a name="tools"></a><a name="bkmk_tools"></a>工具
 
 |命令|键盘快捷键|
 |--------------| - |
@@ -357,13 +373,13 @@ ms.locfileid: "79306817"
 |工具.代码段管理器|**Ctrl+K、Ctrl+B**|
 |工具.强制 GC|**Ctrl+Shift+Alt+F12、Ctrl+Shift+Alt+F12**|
 
-### <a name="bkmk_view"></a>视图
+### <a name="view"></a><a name="bkmk_view"></a>视图
 
 |命令|键盘快捷键|
 |--------------| - |
 |视图.所有窗口|**Shift+Alt+M**|
 |视图.体系结构资源管理器|**Ctrl+\\、Ctrl+R**|
-|视图.向后|Alt+向左键  （在文本编辑器中，这些功能不同于 View.NavigateBackward）|
+|视图.向后|Alt+向左键（在文本编辑器中，这些功能不同于 View.NavigateBackward）|
 |视图.书签窗口|**Ctrl+K、Ctrl+W**|
 |视图.浏览下一个|**Ctrl+Shift+1**|
 |视图.浏览上一个|**Ctrl+Shift+2**|
@@ -374,11 +390,11 @@ ms.locfileid: "79306817"
 |视图.命令窗口|**Ctrl+Alt+A**|
 |View.DataSources|**Shift+Alt+D**|
 |视图.文档大纲|**Ctrl+Alt+T**|
-|视图.编辑标签|F2 |
+|视图.编辑标签|F2|
 |视图.错误列表|**Ctrl+\\、E**<br /><br /> or<br /><br /> **Ctrl+\\、Ctrl+E**|
 |视图.F# Interactive|**Ctrl+Alt+F**|
 |视图.查找符号结果|**Ctrl+Alt+F12**|
-|视图.向前|Alt+向右键  （在文本编辑器中，这些功能不同于 View.NavigateForward）|
+|视图.向前|Alt+向右键（在文本编辑器中，这些功能不同于 View.NavigateForward）|
 |视图.向前浏览上下文|**Ctrl+Shift+7**|
 |视图.全屏|**Shift+Alt+Enter**|
 |视图.向后定位|**Ctrl+-**|
@@ -388,8 +404,8 @@ ms.locfileid: "79306817"
 |视图.对象浏览器|**Ctrl+Alt+J**|
 |视图.对象浏览器转到搜索组合框|**Ctrl+K、Ctrl+R**|
 |视图.输出|**Ctrl+Alt+O**（字母“O”）|
-|View.PopBrowseContext|Ctrl+Shift+8  （仅限 C++）|
-|视图.属性窗口|F4 |
+|View.PopBrowseContext|Ctrl+Shift+8（仅限 C++）|
+|视图.属性窗口|F4|
 |视图.属性页|**Shift+F4**|
 |视图.资源视图|**Ctrl+Shift+E**|
 |视图.服务器资源管理器|**Ctrl+Alt+S**|
@@ -405,9 +421,9 @@ ms.locfileid: "79306817"
 |视图.Web浏览器|**Ctrl+Alt+R**|
 |视图.放大|**Ctrl+Shift+.**|
 |视图.缩小|**Ctrl+Shift+,**|
-|TestExplorer.ShowTestExplorer|Ctrl+E、T |
+|TestExplorer.ShowTestExplorer|Ctrl+E、T|
 
-### <a name="bkmk_window"></a>窗口
+### <a name="window"></a><a name="bkmk_window"></a>窗口
 
 |命令|键盘快捷键|
 |--------------| - |
@@ -438,7 +454,7 @@ ms.locfileid: "79306817"
 |窗口.解决方案资源管理器搜索|**Ctrl+;**|
 |窗口.窗口搜索|**Alt+`**|
 
-### <a name="bkmk_windowsazure"></a>Azure
+### <a name="azure"></a><a name="bkmk_windowsazure"></a>Azure
 
 |命令|键盘快捷键|
 |--------------| - |
@@ -470,7 +486,7 @@ ms.locfileid: "79306817"
 |编辑.展开折叠基类型列表|**Shift+Alt+B**|
 |编辑.定位到棒糖形|**Shift+Alt+L**|
 |编辑.从关系图中移除|**删除**|
-|视图.查看代码|Enter |
+|视图.查看代码|Enter|
 
 ## <a name="coded-ui-test-editor"></a>编码的 UI 测试编辑器
 
@@ -487,7 +503,7 @@ ms.locfileid: "79306817"
 
 |命令|键盘快捷键|
 |--------------| - |
-|OtherContextMenus.ColumnContext.InsertColumn|插入 |
+|OtherContextMenus.ColumnContext.InsertColumn|插入|
 |OtherContextMenus.DbTableContext.Add.Column|**Ctrl+L**|
 
 ## <a name="difference-viewer"></a>差异查看器
@@ -524,13 +540,13 @@ ms.locfileid: "79306817"
 
 |命令|键盘快捷键|
 |--------------| - |
-|体系结构上下文菜单.定向关系图上下文菜单.高级.添加.添加节点|插入 |
+|体系结构上下文菜单.定向关系图上下文菜单.高级.添加.添加节点|插入|
 |体系结构上下文菜单.定向关系图上下文菜单.高级.选择.两个依赖项|**B**|
 |体系结构上下文菜单.定向关系图上下文菜单.高级.选择.传入依赖项|**I**|
 |体系结构上下文菜单.定向关系图上下文菜单.高级.选择.传出依赖项|**O**|
 |体系结构上下文菜单.定向关系图上下文菜单.新注释|**Ctrl+Shift+K**<br /><br /> or<br /><br /> **Ctrl+E、C**|
 |体系结构上下文菜单.定向关系图上下文菜单.删除|**删除**|
-|体系结构上下文菜单.定向关系图上下文菜单.重命名|F2 |
+|体系结构上下文菜单.定向关系图上下文菜单.重命名|F2|
 
 ## <a name="graphics-diagnostics"></a>图形诊断
 
@@ -595,7 +611,7 @@ ms.locfileid: "79306817"
 
 |命令|键盘快捷键|
 |--------------| - |
-|编辑.编辑单元格|F2 |
+|编辑.编辑单元格|F2|
 |编辑.移除|**删除**|
 |编辑.移除行|**Ctrl+Delete**|
 |编辑.取消选定|**Esc 键**|
@@ -633,7 +649,7 @@ ms.locfileid: "79306817"
 |SQL.展开通配符|**Ctrl+R、E**<br /><br /> or<br /><br /> **Ctrl+R、Ctrl+E**|
 |SQL.完全限定名称|**Ctrl+R、Q**<br /><br /> or<br /><br /> **Ctrl+R、Ctrl+Q**|
 |SQL.移至架构|**Ctrl+R、M**<br /><br /> or<br /><br /> **Ctrl+R、Ctrl+M**|
-|SQL.重命名|F2 <br /><br /> or<br /><br /> **Ctrl+R、R**<br /><br /> or<br /><br /> **Ctrl+R、Ctrl+R**|
+|SQL.重命名|F2<br /><br /> or<br /><br /> **Ctrl+R、R**<br /><br /> or<br /><br /> **Ctrl+R、Ctrl+R**|
 |在脚本面板中查看文件|**Shift+Alt+PgDn**|
 
 ## <a name="microsoft-sql-server-data-tools-t-sql-editor"></a>Microsoft SQL Server Data Tools，T-SQL 编辑器
@@ -645,7 +661,7 @@ ms.locfileid: "79306817"
 |SQL.展开通配符|**Ctrl+R、E**<br /><br /> or<br /><br /> **Ctrl+R、Ctrl+E**|
 |SQL.完全限定名称|**Ctrl+R、Q**<br /><br /> or<br /><br /> **Ctrl+R、Ctrl+Q**|
 |SQL.移至架构|**Ctrl+R、M**<br /><br /> or<br /><br /> **Ctrl+R、Ctrl+M**|
-|SQL.重命名|F2 <br /><br /> or<br /><br /> **Ctrl+R、R**<br /><br /> or<br /><br /> **Ctrl+R、Ctrl+R**|
+|SQL.重命名|F2<br /><br /> or<br /><br /> **Ctrl+R、R**<br /><br /> or<br /><br /> **Ctrl+R、Ctrl+R**|
 |SQL.TSql 编辑器取消查询|**Alt+Break**|
 |SQL.TSql 编辑器执行查询|**Ctrl+Shift+E**|
 |SQL.TSql 编辑器结果显示为文件|**Ctrl+D、F**|
@@ -703,15 +719,15 @@ ms.locfileid: "79306817"
 
 |命令|键盘快捷键|
 |--------------| - |
-|编辑.分行|Enter |
+|编辑.分行|Enter|
 |编辑.左移字符|**向左键**|
 |编辑.向左扩展一个字符|**Shift+向左键**|
 |编辑.右移字符|**向右键**|
 |编辑.向右扩展一个字符|**Shift+向右键**|
-|编辑.插入制表符|Tab |
-|编辑.向下移动一行|向下键 |
+|编辑.插入制表符|Tab|
+|编辑.向下移动一行|向下键|
 |编辑.向下扩展一行|**Shift+向下键**|
-|编辑.向上移动一行|向上键 |
+|编辑.向上移动一行|向上键|
 |编辑.向上扩展一行|**Shift+向上键**|
 |编辑.下移控件|**Ctrl+向下键**|
 |编辑.左移控件|**Ctrl+向左键**|
@@ -736,7 +752,7 @@ ms.locfileid: "79306817"
 
 |命令|键盘快捷键|
 |--------------| - |
-|编辑.编辑单元格|F2 |
+|编辑.编辑单元格|F2|
 |编辑.移除行|**Ctrl+Delete**|
 |编辑.取消选定|**Esc**|
 |视图.查看代码|**F7**|
@@ -752,7 +768,7 @@ ms.locfileid: "79306817"
 |命令|键盘快捷键|
 |-------------| - |
 |编辑.删除|**删除**|
-|文件.重命名|F2 |
+|文件.重命名|F2|
 |Team Foundation 上下文菜单.命令.转到团队资源管理器导航|**Alt+Home**|
 |Team Foundation 上下文菜单.命令.转到团队资源管理器下一节内容|**Alt+向下键**|
 |Team Foundation 上下文菜单.命令.转到团队资源管理器页面内容|**Alt+0**（数字“0”）|
@@ -782,7 +798,7 @@ ms.locfileid: "79306817"
 
 | 命令 | 键盘快捷键 |
 | - | - |
-| 编辑.分行 | Enter <br /><br /> or<br /><br /> **Shift+Enter** |
+| 编辑.分行 | Enter<br /><br /> or<br /><br /> **Shift+Enter** |
 | 编辑.左移字符 | **向左键** |
 | 编辑.向左扩展一个字符 | **Shift+向左键** |
 | 编辑.向左扩展一个字符列 | **Shift+Alt+向左键** |
@@ -799,7 +815,7 @@ ms.locfileid: "79306817"
 | 编辑.完成单词 | **Ctrl+空格键**<br /><br /> or<br /><br /> **Alt+向右键** |
 | 编辑.复制参数提示 | **Ctrl+Shift+Alt+C** |
 | 编辑.减少筛选器级别 | **Alt+,** |
-| 编辑.向后删除 | Backspace <br /><br /> or<br /><br /> **Shift+Bkspce** |
+| 编辑.向后删除 | Backspace<br /><br /> or<br /><br /> **Shift+Bkspce** |
 | 编辑.删除水平空白 | **Ctrl+K、Ctrl+\\** |
 | 编辑.文档结尾 | **Ctrl+End** |
 | 编辑.文档结尾扩展 | **Ctrl+Shift+End** |
@@ -822,10 +838,10 @@ ms.locfileid: "79306817"
 | 编辑.渐进式搜索 | **Ctrl+I** |
 | 编辑.插入所有匹配的 Caretsat | **Shift+Alt+;** |
 | 编辑.插入下一个匹配的 Caret | **Shift+Alt+.** |
-| 编辑.插入制表符 | Tab  |
+| 编辑.插入制表符 | Tab |
 | 编辑.剪切行 | **Ctrl+L** |
 | 编辑.删除行 | **Ctrl+Shift+L** |
-| 编辑.向下移动一行 | 向下键  |
+| 编辑.向下移动一行 | 向下键 |
 | 编辑.向下扩展一行 | **Shift+向下键** |
 | 编辑.向下扩展列 | **Shift+Alt+向下键** |
 | 编辑.行尾 | **End** |
@@ -837,7 +853,7 @@ ms.locfileid: "79306817"
 | 编辑.扩展到行首 | **Shift+Home** |
 | 编辑.行首扩展列 | **Shift+Alt+Home** |
 | 编辑.行转置 | **Shift+Alt+T** |
-| 编辑.向上移动一行 | 向上键  |
+| 编辑.向上移动一行 | 向上键 |
 | 编辑.向上扩展一行 | **Shift+向上键** |
 | 编辑.向上扩展列 | **Shift+Alt+向上键** |
 | 编辑.列出成员 | **Ctrl+J** |
@@ -846,7 +862,7 @@ ms.locfileid: "79306817"
 | 编辑.将选定行下移 | **Alt+向下键** |
 | 编辑.将选定行上移 | **Alt+向上键** |
 | 编辑.下一个突出显示的引用 | **Ctrl+Shift+向下键** |
-| 编辑.改写模式 | 插入  |
+| 编辑.改写模式 | 插入 |
 | 编辑.向下翻页 | **PgDn** |
 | 编辑.向下扩展一页 | **Shift+PgDn** |
 | 编辑.向上翻页 | **PgUp** |
@@ -925,17 +941,17 @@ ms.locfileid: "79306817"
 
 |命令|键盘快捷键|
 |--------------| - |
-|编辑.新建快捷键|插入 |
+|编辑.新建快捷键|插入|
 |编辑.键入的下一个键|**Ctrl+W**|
 
 ## <a name="vc-dialog-editor"></a>VC 对话框编辑器
 
 |命令|键盘快捷键|
 |--------------| - |
-|编辑.下移控件|向下键 |
+|编辑.下移控件|向下键|
 |编辑.左移控件|**向左键**|
 |编辑.右移控件|**向右键**|
-|编辑.上移控件|向上键 |
+|编辑.上移控件|向上键|
 |编辑.向左滚动一列|**Ctrl+向左键**|
 |编辑.向右滚动一列|**Ctrl+向右键**|
 |编辑.向下滚动一行|**Ctrl+向下键**|
@@ -982,7 +998,7 @@ ms.locfileid: "79306817"
 |图像.直线工具|**Ctrl+L**|
 |图像.放大工具|**Ctrl+M**|
 |图像.放大|**Ctrl+Shift+M**|
-|图像.新建图像类型|插入 |
+|图像.新建图像类型|插入|
 |图像.下一种颜色|**Ctrl+]**<br /><br /> or<br /><br /> **Ctrl+向右键**|
 |Image.NextRightColor|**Ctrl+Shift+]**<br /><br /> or<br /><br /> **Ctrl+Shift+向右键**|
 |图像.空心椭圆工具|**Shift+Alt+P**|
@@ -1008,7 +1024,7 @@ ms.locfileid: "79306817"
 
 |命令|键盘快捷键|
 |-------------| - |
-|编辑.新建字符串|插入 |
+|编辑.新建字符串|插入|
 
 ## <a name="view-designer"></a>视图设计器
 
@@ -1033,7 +1049,7 @@ ms.locfileid: "79306817"
 
 |命令|键盘快捷键|
 |--------------| - |
-|编辑.分行|Enter |
+|编辑.分行|Enter|
 |编辑.左移字符|**向左键**|
 |编辑.向左扩展一个字符|**Shift+向左键**|
 |编辑.右移字符|**向右键**|
@@ -1042,10 +1058,10 @@ ms.locfileid: "79306817"
 |编辑.文档结尾扩展|**Shift+End**|
 |编辑.文档开始|**Home**|
 |编辑.文档开始扩展|**Shift+Home**|
-|编辑.插入制表符|Tab |
-|编辑.向下移动一行|向下键 |
+|编辑.插入制表符|Tab|
+|编辑.向下移动一行|向下键|
 |编辑.向下扩展一行|**Shift+向上键**|
-|编辑.向上移动一行|向上键 |
+|编辑.向上移动一行|向上键|
 |编辑.向上扩展一行|**Shift+向下键**|
 |编辑.下移控件|**Ctrl+向下键**|
 |编辑.左移控件|**Ctrl+向左键**|
@@ -1127,7 +1143,7 @@ ms.locfileid: "79306817"
 |设计.放大|**Ctrl+Alt+=**|
 |设计.缩小|**Ctrl+Alt+-**|
 |设计器选项|**Ctrl+Shift+;**|
-|格式.编辑文本|F2 |
+|格式.编辑文本|F2|
 |格式.重置布局.全部|**Ctrl+Shift+R**|
 |运行项目代码|**Ctrl+F9**|
 |Timeline.Hide（仅限 Blend）|**Ctrl+H**|

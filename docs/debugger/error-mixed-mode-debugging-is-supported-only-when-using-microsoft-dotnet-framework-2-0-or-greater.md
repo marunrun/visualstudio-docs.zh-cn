@@ -1,7 +1,7 @@
 ---
-title: 错误：仅当使用 Microsoft .NET Framework 2.0 或更高版本时才支持混合模式调试 | Microsoft Docs
+title: 错误 - 仅当使用 Microsoft .NET Framework 2.0 或更高版本时才支持混合模式调试 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: troubleshooting
+ms.topic: error-reference
 f1_keywords:
 - vs.debug.error.interop_unsupported_to_old
 dev_langs:
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: c85dac85146c59d8aeba9f9cf85351b5bc17a81c
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: de19f6b735f990b0e419c040291e1bf538f680f5
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72737614"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85460619"
 ---
 # <a name="error-mixed-mode-debugging-is-supported-only-when-using-microsoft-net-framework-20-or-greater"></a>错误：仅当使用 Microsoft .NET Framework 2.0 或更高版本时，才支持混合模式调试
 若要调试混合的本机代码和托管代码，必须安装有 .NET Framework 版本 2.0、3.0、 3.5 或 4 版。 早期版本的 .NET Framework 不支持混合模式调试。

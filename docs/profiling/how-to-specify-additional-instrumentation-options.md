@@ -1,7 +1,7 @@
 ---
-title: 如何：指定其他检测选项 | Microsoft Docs
+title: 如何 - 指定其他检测选项 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.performance.property.advanced
 helpviewer_keywords:
@@ -14,12 +14,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 2d1f7e912ed5960c52e3f0bfa40fe9b87e91a2e6
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 8390c4aab0624aa59f62397e0b41bcbcc1c80cdd
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74778695"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85331988"
 ---
 # <a name="how-to-specify-additional-instrumentation-options"></a>如何：指定其他检测选项
 
@@ -30,17 +30,17 @@ ms.locfileid: "74778695"
 
 ## <a name="to-specify-additional-instrumentation-option"></a>指定其他检测选项
 
-1. 在“性能资源管理器”中，选择“性能会话”，然后右键单击并选择“属性”    。
+1. 在“性能资源管理器”中，选择“性能会话”，然后右键单击并选择“属性”  。
 
-2. 在“属性页”中   ，单击“高级”属性。
+2. 在“属性页”中 ，单击“高级”属性。
 
-3. 在“其他检测选项”框中键入选项  。
+3. 在“其他检测选项”框中键入选项。
 
      例如，使用 /CONTROL:THREAD 指定分析级别。 有关选项的完整列表，请参阅 [VSInstr](../profiling/vsinstr.md)。
 
 4. 单击 **“确定”** 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [配置性能会话](../profiling/configuring-performance-sessions.md)
 [来自命令行的配置文件](../profiling/using-the-profiling-tools-from-the-command-line.md)

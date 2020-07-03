@@ -1,7 +1,7 @@
 ---
-title: 如何：设置性能数据文件名选项 | Microsoft Docs
+title: 如何 - 设置性能数据文件名选项 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: d7a8d6b9-ab23-46fb-98ed-774781157860
 author: mikejo5000
 ms.author: mikejo
@@ -9,22 +9,22 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: cc42b63524a867c0893aa255180c740d03d4b5fe
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 1fc548f5e051be878382d81bd040accbb13e9755
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74778760"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85548117"
 ---
 # <a name="how-to-set-performance-data-file-name-options"></a>如何：设置性能数据文件名选项
 
-默认情况下，使用以下语法保存分析数据 (.vsp) 文件  ：
+默认情况下，使用以下语法保存分析数据 (.vsp) 文件：
 
 *Path\VSP-File\YYMMDD(N)* **.vsp**
 
-在性能会话属性对话框的“常规”页上，可以更改任意命名参数  。
+在性能会话属性对话框的“常规”页上，可以更改任意命名参数。
 
-|||
+|参数|描述|
 |-|-|
 |*路径*|包含报告的目录。 默认位置为解决方案文件夹或用户项目和解决方案的默认位置。|
 |*VSP-File*|分析数据文件的名称。 默认名称是所分析的解决方案或可执行文件的名称。|
@@ -33,13 +33,13 @@ ms.locfileid: "74778760"
 
 ## <a name="to-change-the-naming-syntax-of-the-profiling-data-files-of-a-performance-session"></a>更改性能会话分析数据文件的命名语法
 
-1. 在“性能资源管理器”  中，右键单击性能会话的名称，然后单击“属性”  。
+1. 在“性能资源管理器”中，右键单击性能会话的名称，然后单击“属性”。
 
-2. 单击“常规”  。
+2. 单击“常规”。
 
-3. 在“报告”下更改下列任意设置： 
+3. 在“报告”下更改下列任意设置：
 
-    |||
+    |“属性”|描述|
     |-|-|
     |**报告位置**|指定用于存储分析数据文件的目录。|
     |**报表名称**|指定文件的基名称。|

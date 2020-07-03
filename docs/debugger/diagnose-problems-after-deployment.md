@@ -1,19 +1,19 @@
 ---
 title: 在部署后诊断问题 | Microsoft Docs
 ms.date: 04/10/2018
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: a3463eab-a352-4d17-8551-adbaad526db0
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bae6a7f5e95f2d853978cf1f8d9665a51ae80fd3
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: 8a4ae5e4f6f21208f02cbfd6513b3c5eb28124a8
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72911372"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85350584"
 ---
 # <a name="diagnose-problems-after-deployment-using-intellitrace-c-visual-basic"></a>使用 IntelliTrace在部署后诊断问题（C#、Visual Basic）
 
@@ -73,7 +73,7 @@ Visual Studio 2017 及更高版本不包括 BuildInfo.config 文件，该文件�
 
 5. 如果使用自定义模板，请添加此 MSBuild 参数，以指定保存符号文件的位置：
 
-     **/p:BuildSymbolStorePath=** \<*path to symbols*>
+     /p:BuildSymbolStorePath=\<*path to symbols*>
 
      ![在生成定义 TFS 2013 中包括生成服务器信息](../debugger/media/ffr_tfs2013builddefincludeserverinfo.png "FFR_TFS2013BuildDefIncludeServerInfo")
 
@@ -110,7 +110,7 @@ Visual Studio 2017 及更高版本不包括 BuildInfo.config 文件，该文件�
 
     - **/p:IncludeServerNameInBuildInfo=True**
 
-    - **/p:BuildSymbolStorePath=** \<*path to symbols*>
+    - /p:BuildSymbolStorePath=\<*path to symbols*>
 
 4. 运行新的生成。
 
@@ -150,7 +150,7 @@ Visual Studio 2017 及更高版本不包括 BuildInfo.config 文件，该文件�
 
  **/p:IncludeServerNameInBuildInfo=True**
 
- **/p:BuildSymbolStorePath=** \<*path to symbols*>
+ /p:BuildSymbolStorePath=\<*path to symbols*>
 
 ## <a name="step-2-release-your-app"></a><a name="DeployRelease"></a> 步骤 2：发布应用
  如果使用生成过程创建的 [Web.Deploy 包](https://msdn.microsoft.com/library/dd394698.aspx) 来部署你的应用，则生成清单从“*ProjectName*.BuildInfo.config”自动重命名为“BuildInfo.config”，并在 Web 服务器上与应用的 Web.config 文件一起放在相同的文件夹中。
@@ -370,9 +370,9 @@ Visual Studio 2017 及更高版本不包括 BuildInfo.config 文件，该文件�
 
 - Visual Studio 未在你的当前团队集合中找到解决方案或项目。
 
-     当生成清单文件 (\<ProjectName>.BuildInfo.config) 未指定 Visual Studio 可在何处找到匹配的源时，Visual Studio 将使用当前连接的 TFS 查找匹配的解决方案或项目。 如果当前团队集合没有匹配的源，Visual Studio 将会提示你连接到不同的团队集合。
+     当生成清单文件 (\<*ProjectName*>.BuildInfo.config) 未指定 Visual Studio 可在何处找到匹配的源时，Visual Studio 将使用你当前连接的 TFS 查找匹配的解决方案或项目。 如果当前团队集合没有匹配的源，Visual Studio 将会提示你连接到不同的团队集合。
 
-- Visual Studio 未在由生成清单文件 (\<ProjectName>.BuildInfo.config) 指定的集合中找到解决方案或项目。
+- Visual Studio 未在由生成清单文件 (\<*ProjectName*>.BuildInfo.config) 指定的集合中找到解决方案或项目。
 
      指定的 TFS 可能不再具有匹配的源，甚至不存在（可能是因为你已迁移到新的 TFS）。 如果指定的 TFS 不存在，Visual Studio 在一分钟后可能会超时，然后会提示你连接到不同的集合。 若要继续，请连接到正确的 TFS 服务器。
 
@@ -384,4 +384,4 @@ Visual Studio 2017 及更高版本不包括 BuildInfo.config 文件，该文件�
 #### <a name="q-why-do-i-get-this-message-about-untrusted-symbols"></a><a name="UntrustedSymbols"></a> 问：为什么我收到了有关不受信任的符号的消息？
  ![使用不受信任的符号路径进行调试？](../debugger/media/ffr_ituntrustedsymbolpaths.png "FFR_ITUntrustedSymbolPaths")
 
- **答：** 当受信任的符号路径列表中不包含生成清单文件 (\<ProjectName>.BuildInfo.config) 中的符号路径时，会出现此消息。 你可将路径添加到调试器选项中的符号路径列表。
+ **答：** 当受信任的符号路径列表中不包含生成清单文件 (\<*ProjectName*>.BuildInfo.config) 中的符号路径时，会出现此消息。 你可将路径添加到调试器选项中的符号路径列表。

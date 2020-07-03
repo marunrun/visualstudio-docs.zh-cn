@@ -511,6 +511,8 @@
                   href: ca1802.md
                 - name: 'CA1804:移除未使用的局部变量'
                   href: ca1804.md
+                - name: CA1805：避免进行不必要的初始化
+                  href: ca1805.md
                 - name: 'CA1806:不要忽略方法结果'
                   href: ca1806.md
                 - name: 'CA1809:避免过多的局部变量'
@@ -603,6 +605,8 @@
                   href: ca2014.md
                 - name: 'CA2015:请勿为派生自 MemoryManager<T> 的类型定义终结器'
                   href: ca2015.md
+                - name: CA2016：将 CancellationToken 参数转发到采用一个该参数的方法
+                  href: ca2016.md
             - name: 安全警告
               items:
                 - name: 概述

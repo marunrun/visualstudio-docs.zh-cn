@@ -1,7 +1,7 @@
 ---
-title: 如何：调试 ASP.NET 异常 | Microsoft Docs
+title: 如何 - 调试 ASP.NET 异常 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - CSharp
 - VB
@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - aspnet
-ms.openlocfilehash: 9f8391d355b2f540db4e38486b8992d940336464
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: a6808bff0a38b6ebaa3049f1655e781439f3f735
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72733787"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85350129"
 ---
 # <a name="how-to-debug-aspnet-exceptions"></a>如何：调试 ASP.NET 异常
 调试异常是开发可靠的 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 应用程序的重要一步。 有关如何调试异常的常规信息，请参阅[使用调试器管理异常](../debugger/managing-exceptions-with-the-debugger.md)。

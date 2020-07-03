@@ -1,7 +1,7 @@
 ---
-title: 如何：从 DLL 项目调试 | Microsoft Docs
+title: 如何 - 从 DLL 项目调试 | Microsoft Docs
 ms.date: 10/10/2018
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - CSharp
 - VB
@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a2e4df2028a14281ee2343ad48b4b71812d29fca
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 081e897b0ff76dd97d2c174bf8c6fbfa2334f8ff
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62847990"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85350116"
 ---
 # <a name="how-to-debug-from-a-dll-project-in-visual-studio-c-c-visual-basic-f"></a>如何：在 Visual Studio 中从 DLL 项目调试（C#、C++、Visual Basic、F#）
 
@@ -37,7 +37,7 @@ ms.locfileid: "62847990"
 
 1. 在解决方案资源管理器中选择 C++ DLL 项目。 选择“属性”图标，按 Alt+Enter，或右键单击并选择“属性”。
 
-1. 在“\<项目> 属性页”对话框中，确保窗口顶部的“配置”字段设置为“调试”。
+1. 在“\<Project> 属性页”对话框中，确保窗口顶部的“配置”字段设置为“调试”  。
 
 1. 选择“配置属性” > “调试”。
 
@@ -79,7 +79,7 @@ ms.locfileid: "62847990"
 
 1. 确保“解决方案配置”设置为“调试” 。 按 F5，然后单击绿色“启动”箭头，或选择“调试” > “启动调试”。
 
-如果调试未命中断点，请确保 DLL 输出（默认情况为 \<项目>\Debug 文件夹）是调用应用进行调用的位置。
+如果调试未命中断点，请确保 DLL 输出（默认情况为 \<project>\Debug 文件夹）是调用应用进行调用的位置。
 
 ## <a name="see-also"></a>请参阅
 - [调试 DLL 项目](../debugger/debugging-dll-projects.md)

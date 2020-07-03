@@ -1,7 +1,7 @@
 ---
-title: VSPerfCmd：将探查器附加到本机服务以获取并发数据
+title: VSPerfCmd - 将探查器附加到本机服务以获取并发数据
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 283a1ee1-b43e-4daf-95ae-1311925a42a8
 author: mikejo5000
 ms.author: mikejo
@@ -9,12 +9,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 705e55363f4f8657da20fe66cd4369188f133cdb
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 202b7e3f51ff16af15e755ad070813c7c2777744
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74776603"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85329458"
 ---
 # <a name="how-to-attach-the-profiler-to-a-native-service-to-collect-concurrency-data-by-using-the-command-line"></a>如何：将探查器附加到本机服务，以使用命令行收集并发数据
 本文介绍如何使用 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 分析工具命令行工具将探查器附加到本机 (C/C++) 服务并使用采样方法收集进程和线程并发数据。
@@ -60,7 +60,7 @@ ms.locfileid: "74776603"
     `PID` 指定目标应用程序的进程 ID 或进程名称。 可以在 Windows 任务管理器中查看所有运行中的进程的进程 ID。
 
 ## <a name="control-data-collection"></a>控制数据收集
- 目标应用程序运行时，可通过使用 VSPerfCmd.exe 选项开始和停止向文件写入数据，从而控制数据收集  。 通过控制数据收集，可以针对程序执行的特定部分（如启动或关闭应用程序）进行数据收集。
+ 目标应用程序运行时，可通过使用 VSPerfCmd.exe 选项开始和停止向文件写入数据，从而控制数据收集。 通过控制数据收集，可以针对程序执行的特定部分（如启动或关闭应用程序）进行数据收集。
 
 #### <a name="to-start-and-stop-data-collection"></a>启动和停止数据收集
 

@@ -1,7 +1,7 @@
 ---
-title: DA0501：所分析的进程的平均 CPU 使用率。 | Microsoft Docs
+title: DA0501 - 所分析的进程的平均 CPU 使用率。 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - vs.performance.rules.DA0501
 - vs.performance.DA0501
@@ -13,20 +13,20 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: d9835ad1965d1fd9a31113117eeb07ed62fd8ec4
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 7f03a65842664ec5d0ed2841f791dd168d82860e
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74777458"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544568"
 ---
-# <a name="da0501-average-cpu-consumption-by-the-process-being-profiled"></a>DA0501：所分析的进程的平均 CPU 使用率。
+# <a name="da0501-average-cpu-consumption-by-the-process-being-profiled"></a>DA0501：所分析的进程的 CPU 平均消耗量。
 
-|||
+|项|“值”|
 |-|-|
 |规则 ID|DA501|
 |类别|资源监控|
-|分析方法|All|
+|分析方法|全部|
 |消息|所分析的进程的 CPU 平均消耗量。|
 |规则类型|信息|
 

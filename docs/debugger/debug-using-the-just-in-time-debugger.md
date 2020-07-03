@@ -1,7 +1,7 @@
 ---
 title: 使用实时调试器进行调试 | Microsoft Docs
 ms.date: 09/24/2018
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - debugging [Visual Studio], Just-In-Time
 - Just-In-Time debugging
@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b842fa4ce7c75e061a58d980cefe5648094c2ef7
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 40b6a0e43a8d0980615087c946e5dd14deef1b0b
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73188666"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85350571"
 ---
 # <a name="debug-using-the-just-in-time-debugger-in-visual-studio"></a>在 Visual Studio 中使用实时调试器进行调试
 
@@ -79,7 +79,7 @@ ms.locfileid: "73188666"
 
 若要启用实时调试而不是标准 Windows 窗体错误处理，请添加以下设置：
 
-- 在 machine.config 或 \<应用名称>.exe.config 文件的 `system.windows.forms` 部分中，将 `jitDebugging` 值设置为 `true`**** :
+- 在 machine.config 或 \<app name>.exe.config 文件的 `system.windows.forms` 部分中，将 `jitDebugging` 值设置为 `true` ：
 
     ```xml
     <configuration>
@@ -134,7 +134,7 @@ ms.locfileid: "73188666"
 
    ![JustInTimeDialog](../debugger/media/justintimedialog.png "JustInTimeDialog")
 
-   在“可用调试器”下，选择“\<首选 Visual Studio 版本>的新实例”（如果尚未选择） 。
+   在“可用调试器”下，选择“\<your preferred Visual Studio version/edition> 的新实例”（如果尚未选择） 。
 
 1. 选择“确定”。
 

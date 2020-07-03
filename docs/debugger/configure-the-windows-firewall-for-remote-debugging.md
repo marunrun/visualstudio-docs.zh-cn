@@ -1,19 +1,19 @@
 ---
 title: 配置 Windows 防火墙以便进行远程调试 | Microsoft Docs
 ms.date: 10/31/2018
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 66e3230a-d195-4473-bbce-8ca198516014
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ff64735e1711a18bd7c55c6e052fa8579bd12e16
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0fa5d60d7fe662cff31b54bf3a13c203f4b6d8c9
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62563716"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85350688"
 ---
 # <a name="configure-windows-firewall-for-remote-debugging"></a>配置 Windows 防火墙以便进行远程调试
 
@@ -94,7 +94,7 @@ Visual Studio 和远程调试器会尝试在安装或启动期间打开正确的
 
 在远程计算机上，远程调试工具位于：
 
-\<Visual Studio 安装目录\>\\Common7\\IDE\\远程调试器\\\<x86、x64 或 Appx\>  
+*\<Visual Studio installation directory\>\\Common7\\IDE\\Remote Debugger\\\<x86*, *x64*, or *Appx*\>
 
 ### <a name="allow-and-configure-the-remote-debugger-through-windows-firewall"></a>配置并允许远程调试器通过 Windows 防火墙
 
@@ -104,7 +104,7 @@ Visual Studio 和远程调试器会尝试在安装或启动期间打开正确的
 
 1. 如果**远程调试器**或**Visual Studio 远程调试器**未显示在**允许的应用程序和功能**，选择**更改设置**，然后选择**允许另一个应用**。
 
-1. 如果远程调试器应用仍未在“添加应用”对话框中列出，请选择“浏览”，然后导航到 \<Visual Studio 安装目录\>\\Common7\\IDE\\远程调试器\\\<x86、x64 或 Appx\>，具体取决于适用于应用的相应架构   。 选择“msvsmon.exe”，然后选择“添加”。
+1. 如果远程调试器应用仍未在“添加应用”对话框中列出，请选择“浏览”，然后导航到 *\<Visual Studio installation directory\>\\Common7\\IDE\\远程调试器\\\<x86*, *x64*, or *Appx*\>，具体取决于适用于应用的相应体系结构 。 选择“msvsmon.exe”，然后选择“添加”。
 
 1. 在“应用”列表中，选择刚才添加的远程调试器 。 选择“网络类型”，然后选择一种或多种网络类型，包括远程连接的网络类型。
 

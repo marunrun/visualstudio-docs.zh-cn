@@ -1,9 +1,9 @@
 ---
-title: 错误：目标计算机上的 Visual Studio 远程调试器服务无法重新连接到此计算机 | Microsoft Docs
+title: 错误 - 目标计算机上的 Visual Studio 远程调试器服务无法重新连接到此计算机
 titleSuffix: ''
 ms.custom: seodec18
 ms.date: 11/04/2016
-ms.topic: troubleshooting
+ms.topic: error-reference
 f1_keywords:
 - vs.debug.error.service_access_denied_oncallback
 dev_langs:
@@ -16,21 +16,20 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 695c4c9e84ce9eb851a551dc9821bff00123a35c
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: b372b1f6fcdab357e87ff91fa4df257e8da7d68d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72737411"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85536664"
 ---
 # <a name="error-the-visual-studio-remote-debugger-service-on-the-target-computer-cannot-connect-back-to-this-computer"></a>错误：目标计算机上的 Visual Studio 远程调试器服务无法重新连接到此计算机 | Microsoft Docs
 此错误表示远程调试器服务正在运行，但是运行它的用户帐户在连接到正在从中进行调试的计算机时无法进行身份验证。 使用旧版调试引擎进行远程调试，且远程调试器作为服务运行时，可能会发生此错误。
 
  下表显示可访问该计算机的帐户：
 
-|||||
+|方案|LocalSystem 帐户|域帐户|在双方计算机上具有相同用户名和密码的本地帐户|
 |-|-|-|-|
-||LocalSystem 帐户|域帐户|在双方计算机上具有相同用户名和密码的本地帐户|
 |双方计算机处于同一个域中|是|是|是|
 |双方计算机处于具有双向信任的域中|否|否|是|
 |双方计算机中有一台或两台都处于工作组中|否|否|是|

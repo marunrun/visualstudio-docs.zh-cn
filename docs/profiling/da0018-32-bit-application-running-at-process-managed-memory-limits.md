@@ -1,7 +1,7 @@
 ---
-title: DA0018：运行的 32 位应用程序达到了进程托管内存的限制 | Microsoft Docs
+title: DA0018 - 运行的 32 位应用程序达到了进程托管内存的限制 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - vs.performance.18
 - vs.performance.DA0018
@@ -13,16 +13,16 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: d7bebd25f499131b4beda109ebb9ac468c2435b1
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 74fed5f0dcbac45f603f16743eb2635fcf35292a
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74780060"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85548143"
 ---
-# <a name="da0018-32-bit-application-running-at-process-managed-memory-limits"></a>DA0018：运行的 32 位应用程序达到了进程托管内存的限制
+# <a name="da0018-32-bit-application-running-at-process-managed-memory-limits"></a>DA0018：运行的 32 位应用程序达到了进程托管内存限制
 
-|||
+|项|“值”|
 |-|-|
 |规则 ID|DA0018|
 |类别|分析工具使用情况|
@@ -55,7 +55,7 @@ ms.locfileid: "74780060"
 
 - 优化应用程序对托管内存资源的使用情况
 
-   或
+   \- 或 -
 
 - 采取措施以解除对 32 位进程虚拟内存最大大小的体系结构约束
 

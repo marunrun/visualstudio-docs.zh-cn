@@ -1,7 +1,7 @@
 ---
-title: 如何：在窗口视图中搜索窗口 | Microsoft Docs
+title: 如何 - 在窗口视图中搜索窗口 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - windows, searching in Windows view
 ms.assetid: 30306970-b861-4315-acf8-f86a43d4e73b
@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5ba5c8469885fd62c99a672e894cde82700c980d
-ms.sourcegitcommit: 3fe6bed9ef8fb1478106645f655c7472009ae43a
+ms.openlocfilehash: fb5fb871ebf03595c0baca0336e8449fe39029f3
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64831032"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85349232"
 ---
 # <a name="how-to-search-for-a-window-in-windows-view"></a>如何：在窗口视图中搜索窗口
 可以通过使用句柄、标题、类别或标题和类别的组合作为搜索条件，在窗口视图中搜索特定窗口。 还可以指定搜索的初始方向。 对话框中的字段将显示窗口树中所选窗口的属性。

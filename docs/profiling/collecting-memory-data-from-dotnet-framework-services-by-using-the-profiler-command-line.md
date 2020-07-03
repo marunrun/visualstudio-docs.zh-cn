@@ -1,7 +1,7 @@
 ---
-title: 探查器命令行：获取 .NET Framework 服务内存数据
+title: 探查器命令行 - 获取 .NET Framework 内存数据
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: b1361333-8a09-4a65-87a9-4ac94ceb2d9f
 author: mikejo5000
 ms.author: mikejo
@@ -9,12 +9,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: 25f61b68249dfab7faf04c5e0460800947275db4
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 67ad8341dc47b5e9275a02950c5335264e619541
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74779462"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85331684"
 ---
 # <a name="collect-memory-data-from-net-framework-services-by-using-the-profiler-command-line"></a>使用探查器命令行从 .NET Framework 服务收集内存数据
 本部分介绍在命令行中使用采样方法来收集 .NET Framework 服务的内存分配和对象生存期数据的步骤和选项。

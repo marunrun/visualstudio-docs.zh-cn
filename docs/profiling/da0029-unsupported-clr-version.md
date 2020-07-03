@@ -1,7 +1,7 @@
 ---
-title: DA0029：不支持的 CLR 版本 | Microsoft Docs
+title: DA0029 - 不支持的 CLR 版本 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - vs.performance.29
 - vs.performance.rules.DA0029
@@ -16,16 +16,16 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: dbc0bfcdb49557e56711b60dca11977a3504d907
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 14e0bb4290ad155b7094c0f60810df4f86cb8d65
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74777510"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544633"
 ---
 # <a name="da0029-unsupported-clr-version"></a>DA0029：不支持的 CLR 版本
 
-|||
+|项|“值”|
 |-|-|
 |规则 ID|DA0029|
 |类别|分析工具使用情况|

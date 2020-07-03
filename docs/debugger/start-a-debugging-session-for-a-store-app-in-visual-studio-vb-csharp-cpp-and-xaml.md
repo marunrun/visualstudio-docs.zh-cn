@@ -2,7 +2,7 @@
 title: 启动 UWP 应用的调试会话 | Microsoft Docs
 ms.custom: seodec18
 ms.date: 11/20/2018
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - VC.Project.IVCAppHostRemoteDebugPageObject.MachineName
 - VC.Project.IVCAppHostRemoteDebugPageObject.BreakpointBehavior
@@ -35,12 +35,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: c4504dda362c8a50f33168a12839e894a14316d7
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: c4e025603fef11e278aee21b3c44f8d35d7cd34b
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72436014"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85536547"
 ---
 # <a name="start-a-debugging-session-for-a-uwp-app"></a>启动 UWP 应用的调试会话
 
@@ -76,7 +76,7 @@ ms.locfileid: "72436014"
 
 可以在 Visual Studio 工具栏或项目的调试属性页中设置调试目标。 选择下列选项之一：
 
-|||
+|“属性”|描述|
 |-|-|
 |**本地计算机**|在本地计算机上的当前会话中调试应用程序。|
 |**模拟器**|在 UWP 应用的 Visual Studio 模拟器中调试应用。 模拟器是一个桌面窗口，可模拟本地计算机上可能未提供的设备功能，如触摸手势和设备旋转。 仅当应用的“目标平台最低版本”小于或等于本地计算机上的操作系统时，模拟器选项才可用。 有关详细信息，请参阅[在模拟器中运行 UWP 应用](../debugger/run-windows-store-apps-in-the-simulator.md)。|
@@ -114,7 +114,7 @@ ms.locfileid: "72436014"
 
 - 对于 C++ 应用，从“调试”属性页上的“调试器类型”下拉菜单中选择以下调试器之一 。
 
-|||
+|“属性”|描述|
 |-|-|
 |**仅限托管**|调试应用程序中的托管代码。 忽略 JavaScript 代码和本机 C/C++ 代码。|
 |**仅限本机**|调试应用程序中的本机 C/C++ 代码。 忽略托管代码和 JavaScript 代码。|

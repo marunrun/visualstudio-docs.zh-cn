@@ -1,7 +1,7 @@
 ---
-title: DA0002：缺少 VSPerfCorProf.dll | Microsoft Docs
+title: DA0002 - 缺少 VSPerfCorProf.dll | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - vs.performance.DA0002
 - vs.performance.2
@@ -14,28 +14,28 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: f768a35e7c50ec55867ae49901718063ca39bd0b
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 36c9f3b33eab8428cd14aa26896c3813422d3dd7
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74777746"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85537067"
 ---
 # <a name="da0002-vsperfcorprofdll-is-missing"></a>DA0002：缺少 VSPerfCorProf.dll
 
-|||
+|项|“值”|
 |-|-|
 |规则 ID|DA0002|
 |类别|分析工具使用情况|
 |分析方法|使用 VSPerfCmd 和 VSPerfASPNETCmd 命令行工具进行分析|
-|消息|收集文件时似乎未使用 VSPerfCLREnv.cmd 正确设置环境变量  。 可能不会解析托管二进制文件的符号。|
+|消息|收集文件时似乎未使用 VSPerfCLREnv.cmd 正确设置环境变量。 可能不会解析托管二进制文件的符号。|
 |规则类型|信息|
 
 ## <a name="cause"></a>原因
- 探查器在分析运行期间找不到 VSPerfCorProf.dll  。 当使用命令行工具收集探查器数据，但未使用 VSPerfCLREnv.cmd 工具初始化必要的环境变量时，将出现此警告  。 如果分析工具启动时另一个探查器正在运行，也可能会触发此警告。
+ 探查器在分析运行期间找不到 VSPerfCorProf.dll。 当使用命令行工具收集探查器数据，但未使用 VSPerfCLREnv.cmd 工具初始化必要的环境变量时，将出现此警告。 如果分析工具启动时另一个探查器正在运行，也可能会触发此警告。
 
 ## <a name="rule-description"></a>规则说明
- 分析运行前必须设置特定的环境变量，探查器才能解析 .NET Framework 二进制文件中的符号。 此警告表明，收集分析数据前未运行 VSPerfCLREnv.cmd 工具  。 可能不会解析托管二进制文件的符号。 有关使用命令行分析工具的详细信息，请参阅[通过命令行进行分析](../profiling/using-the-profiling-tools-from-the-command-line.md)
+ 分析运行前必须设置特定的环境变量，探查器才能解析 .NET Framework 二进制文件中的符号。 此警告表明，收集分析数据前未运行 VSPerfCLREnv.cmd 工具。 可能不会解析托管二进制文件的符号。 有关使用命令行分析工具的详细信息，请参阅[通过命令行进行分析](../profiling/using-the-profiling-tools-from-the-command-line.md)
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
  在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 分析工具中使用命令行工具分析托管应用程序时，先运行 [VSPerfCLREnv](../profiling/vsperfclrenv.md) 命令行工具，然后再开始收集数据。

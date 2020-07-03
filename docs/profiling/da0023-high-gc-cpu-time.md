@@ -1,7 +1,7 @@
 ---
-title: DA0023：垃圾回收占用的 CPU 时间很多 | Microsoft Docs
+title: DA0023 - GC 占用的 CPU 时间很多 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - vs.performance.DA0023
 - vs.performance.23
@@ -13,16 +13,16 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: f0dd45486f526954d7dfce45cd607ff6196eae00
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 55b676a7b3d4bc105cdc99b0338dd101c1e68aa6
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74777642"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544659"
 ---
 # <a name="da0023-high-gc-cpu-time"></a>DA0023：垃圾回收占用的 CPU 时间很多
 
-|||
+|项|“值”|
 |-|-|
 |规则 ID|DA0023|
 |类别|.NET Framework 使用情况|

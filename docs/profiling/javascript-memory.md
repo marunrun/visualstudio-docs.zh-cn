@@ -2,7 +2,7 @@
 title: 分析 UWP 应用中的 JavaScript 内存使用情况 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - JavaScript
 helpviewer_keywords:
@@ -20,12 +20,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: cfbc0dcecbf9b30afdfb268117e34c2fcfc0341e
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 22a9c7a4b58613c0c4bd94ea4f4ce6162f620553
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "73189394"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85331274"
 ---
 # <a name="analyze-javascript-memory-usage-in-uwp-apps"></a>分析 UWP 应用中的 JavaScript 内存使用情况
 JavaScript 内存分析器在 Visual Studio 中提供，旨在帮助你了解内存使用情况，在使用 JavaScript 为 Windows 构建的 UWP 应用中查找内存泄漏。 受支持的应用包括通用 Windows 应用的应用。
@@ -49,9 +49,9 @@ JavaScript 内存分析器在 Visual Studio 中提供，旨在帮助你了解内
 
 1. 打开 Visual Studio。
 
-2. 如果是通过 Visual Studio 运行应用，请在“标准”  工具栏上的“开始调试”  列表中，选择项目的调试目标，即“本地计算机”  或“设备”  。
+2. 如果是通过 Visual Studio 运行应用，请在“标准”工具栏上的“开始调试”列表中，选择项目的调试目标，即“本地计算机”或“设备”。
 
-3. 在菜单栏上，选择“调试”   > “性能探查器”  。
+3. 在菜单栏上，选择“调试” > “性能探查器”。
 
      默认情况下，将分析当前启动项目。 如果要更改分析目标，请选择 **“更改目标”** 。
 
@@ -75,7 +75,7 @@ JavaScript 内存分析器在 Visual Studio 中提供，旨在帮助你了解内
 
      与应用程序交互以测试相关的内存使用量方案并查看内存关系图，如以下各节所述。
 
-6. 按 Alt  +Tab 切换到 Visual Studio  。
+6. 按 Alt+Tab 切换到 Visual Studio。
 
 7. 若要查看内存分析器正在收集的数据，请选择 **“拍摄堆快照”** 。 请参阅本主题后面部分的 [View a snapshot summary](#view-a-snapshot-summary) 。
 
@@ -112,7 +112,7 @@ JavaScript 内存分析器在 Visual Studio 中提供，旨在帮助你了解内
    > [!TIP]
    > 通过重复执行测试方案多次，将有助于确保从结果中筛选出初始化工作。
 
-5. 切换到 Visual Studio（按 Alt  +Tab  ）。
+5. 切换到 Visual Studio（按 Alt+Tab）。
 
 6. 通过选择 **“拍摄堆快照”** 拍摄基线堆快照。
 
@@ -255,22 +255,22 @@ JavaScript 内存分析器在 Visual Studio 中提供，旨在帮助你了解内
 
   若要筛选快照之间的差异信息，可在差异视图顶部选择一个 **“范围”** 筛选器。
 
-- **从快照 #\<编号> 中留下的对象**。 此筛选器通过与基线快照和上一个快照进行比较，以显示添加到堆的对象与从堆中移除的对象之间的差异。 例如，如果快照摘要在对象计数中显示 +205 / -195，则此筛选器将显示已添加（而非移除）的 10 个对象。
+- “从快照 #\<number> 中留下的对象”。 此筛选器通过与基线快照和上一个快照进行比较，以显示添加到堆的对象与从堆中移除的对象之间的差异。 例如，如果快照摘要在对象计数中显示 +205 / -195，则此筛选器将显示已添加（而非移除）的 10 个对象。
 
   > [!TIP]
   > 若要在此筛选器中显示最有用的信息，请按照以下部分中所述的步骤进行操作： [Isolate a memory leak](#isolate-a-memory-leak).
 
-- **在快照 #\<编号> 和快照 #\<编号> 之间添加的对象**。 此筛选器显示从上一个快照添加到堆的所有对象。
+- “在快照 #\<number> 和快照 #\<number> 之间添加的对象”。 此筛选器显示从上一个快照添加到堆的所有对象。
 
-- **快照 #\<编号> 中的所有对象**。 此筛选器设置不会筛选出堆上的任何对象。
+- “快照 #\<number> 中的所有对象”。 此筛选器设置不会筛选出堆上的任何对象。
 
-  若要显示不匹配当前“范围”筛选器的对象引用，请选择窗格右上角的设置列表![内存分析器中的“设置”下拉列表](../profiling/media/js_mem_settings.png "JS_Mem_Settings")中的“显示不匹配的引用”。   如果启用此设置，将以灰色文本显示非匹配引用。
+  若要显示不匹配当前“范围”筛选器的对象引用，请选择窗格右上角的设置列表![内存分析器中的“设置”下拉列表](../profiling/media/js_mem_settings.png "JS_Mem_Settings")中的“显示不匹配的引用”。  如果启用此设置，将以灰色文本显示非匹配引用。
 
 > [!TIP]
 > 建议按照以下部分中的步骤进行操作： [Isolate a memory leak](#isolate-a-memory-leak) ，然后使用留下的对象 **“范围”** 筛选器帮助标识正在泄露内存的对象。
 
 ## <a name="view-objects-by-dominator"></a>按控制器查看对象
- 在类型和控制器视图中，你可以选择是否查看折叠到其控制器的对象（这是“控制器”选项卡中的默认视图  ）。 当选中此视图时，仅控制器在对象的顶级视图中显示。 （非全局对象的派生对象从顶级视图中隐藏。）对于某些应用，这可以通过减少数据中的噪点来澄清哪些对象正在导致内存泄露。
+ 在类型和控制器视图中，你可以选择是否查看折叠到其控制器的对象（这是“控制器”选项卡中的默认视图）。 当选中此视图时，仅控制器在对象的顶级视图中显示。 （非全局对象的派生对象从顶级视图中隐藏。）对于某些应用，这可以通过减少数据中的噪点来澄清哪些对象正在导致内存泄露。
 
  若要按控制器切换对象的视图，请选择 **“按控制器折叠对象”** 按钮。 ![将对象叠放到其控制器](../profiling/media/js_mem_fold_objects.png "JS_Mem_Fold_Objects")
 
@@ -290,7 +290,7 @@ JavaScript 内存分析器在 Visual Studio 中提供，旨在帮助你了解内
 > [!NOTE]
 > 使用星号 (*) 和信息性工具提示显示循环引用，并且无法展开。 否则，它们将阻止你向上遍历引用树并标识正在保留内存的对象。
 
- 如果需要额外的帮助来标识等效对象，请在上窗格右上角的设置列表![内存分析器中的“设置”下拉列表](../profiling/media/js_mem_settings.png "JS_Mem_Settings")中选择“显示对象 ID”  。 此选项将在 **“标识符”** 列表中的对象名称旁显示对象 ID（ID 将显示在所有视图中，而不只是显示在对象引用列表中）。 具有相同 ID 的对象是共享引用。
+ 如果需要额外的帮助来标识等效对象，请在上窗格右上角的设置列表![内存分析器中的“设置”下拉列表](../profiling/media/js_mem_settings.png "JS_Mem_Settings")中选择“显示对象 ID”。 此选项将在 **“标识符”** 列表中的对象名称旁显示对象 ID（ID 将显示在所有视图中，而不只是显示在对象引用列表中）。 具有相同 ID 的对象是共享引用。
 
  下图显示了选定项目的对象引用列表以及显示的 ID。
 
@@ -299,10 +299,10 @@ JavaScript 内存分析器在 Visual Studio 中提供，旨在帮助你了解内
 ## <a name="show-built-in-objects"></a>显示内置对象
  默认情况下，控制器和类型视图仅显示你在应用程序中创建的对象。 这可帮助你筛选出不需要的信息，并隔离应用程序相关的问题。 但是，有时查看由 JavaScript 运行时为你的应用程序生成的所有对象可能会很有用。
 
- 若要显示这些对象，请在窗格右上角的设置列表![内存分析器中的“设置”下拉列表](../profiling/media/js_mem_settings.png "JS_Mem_Settings")中选择“显示内置对象”  。
+ 若要显示这些对象，请在窗格右上角的设置列表![内存分析器中的“设置”下拉列表](../profiling/media/js_mem_settings.png "JS_Mem_Settings")中选择“显示内置对象”。
 
 ## <a name="save-diagnostic-session-files"></a>保存诊断会话文件
- 诊断快照摘要与其关联的详细信息视图一起保存为 .diagsession 文件  。 **“解决方案资源管理器”** 在诊断会话文件夹中显示前几个诊断会话。 在 **“解决方案资源管理器”** 中，可以打开前几个会话或者删除或重命名文件。
+ 诊断快照摘要与其关联的详细信息视图一起保存为 .diagsession 文件。 **“解决方案资源管理器”** 在诊断会话文件夹中显示前几个诊断会话。 在 **“解决方案资源管理器”** 中，可以打开前几个会话或者删除或重命名文件。
 
 ## <a name="associate-source-code-with-memory-usage-data"></a>Associate source code with memory usage data
  为帮助隔离具有内存问题的代码部分，请使用下列方法：
@@ -347,7 +347,7 @@ if (performance && performance.mark) {
 
 ## <a name="tips-to-identify-memory-issues"></a>确定内存问题的提示
 
-- 遵循[隔离内存泄漏](#isolate-a-memory-leak)中所述的工作流，在差异视图中使用“从快照 #\<编号> 中留下的对象”筛选器确定内存泄漏的可能原因  。
+- 遵循[隔离内存泄漏](#isolate-a-memory-leak)中所述的工作流，在差异视图中使用“从快照 #\<number> 中留下的对象”筛选器确定内存泄漏的可能原因。
 
 - 重复内存使用量方案时，请使用 [在对象树中查找对象](#find-an-object-in-the-object-tree) 查看在内存层次结构中引用对象的位置。 根视图显示如何将某个对象植根于全局对象中，以防止将其作为垃圾回收。
 

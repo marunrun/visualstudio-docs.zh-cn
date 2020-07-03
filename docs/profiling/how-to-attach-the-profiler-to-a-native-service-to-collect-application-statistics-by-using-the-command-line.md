@@ -1,7 +1,7 @@
 ---
-title: VSPerfCmd：将探查器附加到本机服务以获取应用统计信息
+title: VSPerfCmd - 将探查器附加到本机服务以获取应用统计信息
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: f783817f-77a0-4eb8-985b-ec3b77eadc42
 author: mikejo5000
 ms.author: mikejo
@@ -9,12 +9,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00f0d3cedf2ef1875d93f7706f7cfa48a8b6b274
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: f45d08a82bdc3f6807f9a4d5a0cb31dc157e4c9c
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74779085"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85328653"
 ---
 # <a name="how-to-attach-the-profiler-to-a-native-service-to-collect-application-statistics-by-using-the-command-line"></a>如何：将探查器附加到本机服务，以使用命令行收集应用程序统计信息
 本文介绍如何使用 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 分析工具命令行工具将探查器附加本机服务，以及如何使用采样方法收集性能统计信息。
@@ -29,7 +29,7 @@ ms.locfileid: "74779085"
  若要结束分析会话，必须将探查器与服务拆离，并且必须显式关闭探查器。
 
 ## <a name="start-the-application-with-the-profiler"></a>用探查器启动应用程序
- 若要将探查器附加到本机服务，请使用 VSPerfCmd.exe  [/start](../profiling/start.md) 和 [/attach](../profiling/attach.md) 选项初始化探查器，并将其附加到目标应用程序。 可以在单个命令行中指定 **/start** 和 **/attach** 及其各自的选项。 还可以添加 [/globaloff](../profiling/globalon-and-globaloff.md) 选项，以在目标应用程序启动时暂停数据收集。 然后可使用 [/globalon](../profiling/globalon-and-globaloff.md) 开始收集数据。
+ 若要将探查器附加到本机服务，请使用 VSPerfCmd.exe[/start](../profiling/start.md) 和 [/attach](../profiling/attach.md) 选项初始化探查器，并将其附加到目标应用程序。 可以在单个命令行中指定 **/start** 和 **/attach** 及其各自的选项。 还可以添加 [/globaloff](../profiling/globalon-and-globaloff.md) 选项，以在目标应用程序启动时暂停数据收集。 然后可使用 [/globalon](../profiling/globalon-and-globaloff.md) 开始收集数据。
 
 #### <a name="to-attach-the-profiler-to-a-native-service"></a>将探查器附加到本机服务
 
@@ -41,9 +41,9 @@ ms.locfileid: "74779085"
 
     **VSPerfCmd /start:sample**  [/output](../profiling/output.md) **:** `OutputFile` [`Options`]
 
-   - /start:sample  选项初始化探查器。
+   - /start:sample 选项初始化探查器。
 
-   - **/output:** `OutputFile` 选项需要与 **/start** 一起使用。 `OutputFile` 指定分析数据 (.vsp) 文件的名称和位置  。
+   - **/output:** `OutputFile` 选项需要与 **/start** 一起使用。 `OutputFile` 指定分析数据 (.vsp) 文件的名称和位置。
 
      可以将以下任意选项与 **/start:sample** 选项一起使用。
 
@@ -74,7 +74,7 @@ ms.locfileid: "74779085"
    |[/counter](../profiling/counter.md) **:** `Config`|将采样事件和间隔更改为 `Config` 中指定的处理器性能计数器和间隔。|
 
 ## <a name="control-data-collection"></a>控制数据收集
- 目标应用程序运行时，可使用 VSPerfCmd.exe  选项开始或停止将数据写入到探查器数据文件。 通过控制数据收集，可以针对程序执行的特定部分（如启动或关闭应用程序）进行数据收集。
+ 目标应用程序运行时，可使用 VSPerfCmd.exe 选项开始或停止将数据写入到探查器数据文件。 通过控制数据收集，可以针对程序执行的特定部分（如启动或关闭应用程序）进行数据收集。
 
 #### <a name="to-start-and-stop-data-collection"></a>启动和停止数据收集
 
@@ -87,7 +87,7 @@ ms.locfileid: "74779085"
     |**/attach:** {`PID`&#124;`ProcName`} [/detach](../profiling/detach.md)[:{`PID`&#124;`ProcName`}]|**/attach** 将启动由进程 ID 或进程名称指定的进程的数据收集。 **/detach** 将停止指定进程或所有进程（未指定进程时）的数据收集。|
 
 ## <a name="end-the-profiling-session"></a>结束分析会话
- 若要结束分析会话，必须将探查器与服务拆离，然后显式关闭探查器。 可通过停止服务或调用 VSPerfCmd /detach  选项拆离使用采样方法分析的本机服务。 然后，调用 VSPerfCmd [/shutdown](../profiling/shutdown.md) 选项关闭探查器和分析数据文件  。
+ 若要结束分析会话，必须将探查器与服务拆离，然后显式关闭探查器。 可通过停止服务或调用 VSPerfCmd /detach 选项拆离使用采样方法分析的本机服务。 然后，调用 VSPerfCmd [/shutdown](../profiling/shutdown.md) 选项关闭探查器和分析数据文件。
 
 #### <a name="to-end-a-profiling-session"></a>结束分析会话
 

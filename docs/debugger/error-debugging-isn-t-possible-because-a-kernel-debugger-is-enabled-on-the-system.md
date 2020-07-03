@@ -1,7 +1,7 @@
 ---
-title: 错误：无法进行调试，因为系统上已启用内核调试程序 | Microsoft Docs
+title: 错误 - 无法进行调试，因为系统上已启用内核调试程序 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: troubleshooting
+ms.topic: error-reference
 f1_keywords:
 - vs.debug.error.kernel_dbg_enabled
 dev_langs:
@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2a966869ff1d200a51c6019a6ae937bea7c447bd
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 80c27ef642697a8514a0809095b980d8c38a47d8
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72737744"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85460860"
 ---
 # <a name="error-debugging-isn39t-possible-because-a-kernel-debugger-is-enabled-on-the-system"></a>错误：无法进行调试，因为系统上已启用内核调试程序
 调试托管代码时，你可能会收到以下错误消息：

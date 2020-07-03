@@ -1,7 +1,7 @@
 ---
-title: 错误：无法启动 DCOM 通信 | Microsoft Docs
+title: 错误 - 无法启动 DCOM 通信 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: troubleshooting
+ms.topic: error-reference
 f1_keywords:
 - vs.debug.error.unmarshal_server_failed
 dev_langs:
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8a5e45df06d4b9490160c94902457ea630548966
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: ccd8b30fcba11d89e11227861c4582ff67f3a7e7
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72736719"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85460021"
 ---
 # <a name="error-unable-to-initiate-dcom-communication"></a>错误：无法启动 DCOM 通信
 当本地计算机尝试与远程计算机通信时，发生 DCOM 错误。 这是由于远程服务器上存在防火墙或远程计算机上的 Windows 身份验证已中断。

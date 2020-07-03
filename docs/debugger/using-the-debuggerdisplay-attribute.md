@@ -1,7 +1,7 @@
 ---
 title: 使用 DebuggerDisplay 显示自定义信息 | Microsoft Docs
 ms.date: 01/09/2019
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - attributes, debugger
 - DebuggerDisplay attribute
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dc2abb054a0e09d0715e708cc4d1d6fcbed476e0
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 2387c5e9a920f0811a65ca400d8da48aa81dccd3
+ms.sourcegitcommit: 9e15138a34532b222e80f6b42b1a9de7b2fe0175
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72728676"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85418777"
 ---
 # <a name="tell-the-debugger-what-to-show-using-the-debuggerdisplay-attribute-c-visual-basic-f-ccli"></a>使用 DebuggerDisplay 特性（C#、Visual Basic、F#、C++/CLI）指示调试器要显示的内容
 
@@ -27,10 +27,10 @@ ms.locfileid: "72728676"
 
 如果一个类中有重写的 `ToString()` 方法，调试器将使用该重写的方法而非默认 `{<typeName>}`。 因此，如果你已重写 `ToString()` 方法，调试器将使用重写的方法而非默认`{<typeName>}`，你无需使用 `DebuggerDisplay`。 如果同时使用，`DebuggerDisplay` 属性优先于替代的 `ToString()` 方法。 `DebuggerDisplay` 特性优先于子类中替代的 `ToString()` 方法。
 
-调试器是否计算此隐式 `ToString()` 调用取决于“工具”/“选项”/“调试”  对话框中的用户设置。 Visual Basic 不实现此隐式 `ToString()` 计算。
+调试器是否计算此隐式 `ToString()` 调用取决于“工具”/“选项”/“调试”对话框中的用户设置。
 
 > [!IMPORTANT]
-> 如果在“工具”/“选项”/“调试”  对话框中选中了“在变量窗口中显示对象的原始结构”  复选框，则将忽略 `DebuggerDisplay` 特性。
+> 如果在“工具”/“选项”/“调试”对话框中选中了“在变量窗口中显示对象的原始结构”复选框，则将忽略 `DebuggerDisplay` 特性 。
 
 > [!NOTE]
 > 对于本机代码，此特性仅在 C++/CLI 代码中受支持。

@@ -1464,5 +1464,7 @@
           href: ide/report-a-problem-perfview.md
     - name: 功能建议
       href: ide/suggest-a-feature.md
+    - name: 开发者社区指南
+      href: ide/developer-community-guidelines.md
     - name: 开发人员社区数据隐私
       href: ide/developer-community-privacy.md

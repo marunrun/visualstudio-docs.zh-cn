@@ -1,7 +1,7 @@
 ---
-title: DA0003：大量内核样本 | Microsoft Docs
+title: DA0003 - 大量内核样本 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - vs.performance.rules.DA0003
 - vs.performance.DA0003
@@ -14,16 +14,16 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 69cd81943641e4e0585a67127c70d35a601a5396
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: d0523f9a21dbdb655a02fb6263a6eb644458ab6d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74777733"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85548221"
 ---
 # <a name="da0003-many-kernel-samples"></a>DA0003：大量内核样本
 
-|||
+|项|“值”|
 |-|-|
 |规则 ID|DA0003|
 |类别|分析工具使用情况|

@@ -1,7 +1,7 @@
 ---
-title: 如何：在混合模式下调试 | Microsoft Docs
+title: 如何 - 在混合模式下调试 | Microsoft Docs
 ms.date: 11/05/2018
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - CSharp
 - VB
@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f58c51bf1b610375c6204e27d064870ce1f76d04
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 53a40c4dc615b5e1b6a3caef3a99be5ab0b56327
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62894373"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85350103"
 ---
 # <a name="how-to-debug-in-mixed-mode-c-c-visual-basic"></a>如何：在混合模式下调试（C#、C++、Visual Basic）
 

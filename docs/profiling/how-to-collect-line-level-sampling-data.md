@@ -1,7 +1,7 @@
 ---
-title: 如何：收集行级采样数据 | Microsoft Docs
+title: 如何 - 收集行级采样数据 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - performance tools, line-level sampling
 ms.assetid: 44803aad-dd39-4c2e-9209-d35185d44983
@@ -11,14 +11,14 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: f64040c9180a152650de16b23276ab0e65cc9ead
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 55afe3be6b01e382c82fb41b7a09fa5f84c92365
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74776353"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85330898"
 ---
-# <a name="how-to-collect-line-level-sampling-data"></a>如何：收集行级采样数据
+# <a name="how-to-collect-line-level-sampling-data"></a>如何：收集行级别采样数据
 行级采样是探查器确定占用大量处理器时间的函数在代码中的位置，如具有高独占样本的函数，处理器需要耗费大量时间。
 
 ## <a name="overview"></a>概述
@@ -45,7 +45,7 @@ ms.locfileid: "74776353"
 
 - IP - 获取聚合样本的地址（仅限 IP 视图）。
 
-  在“模块”  视图中，如果函数具有行级统计信息，这些统计信息将嵌套在每个函数下。 此外，还将显示嵌套在每行下的 IP 级统计信息。
+  在“模块”视图中，如果函数具有行级统计信息，这些统计信息将嵌套在每个函数下。 此外，还将显示嵌套在每行下的 IP 级统计信息。
 
 ### <a name="turn-off-line-level-sampling-for-managed-code"></a>关闭托管代码的行级采样
  默认情况下，行级采样处于开启状态。 可以使用以下任一命令来关闭托管代码的行级数据收集：
@@ -54,8 +54,8 @@ ms.locfileid: "74776353"
 
      — 或 —
 
-- 启动应用程序时，键入 **VSPerfCmd /lineoff \<其他参数>** 。
+- 启动应用程序时，键入“VSPerfCmd /lineoff \<other arguments>”。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [配置性能会话](../profiling/configuring-performance-sessions.md)
 - [分析性能工具数据](../profiling/analyzing-performance-tools-data.md)

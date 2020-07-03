@@ -1,7 +1,7 @@
 ---
-title: DA0024：GC 占用的 CPU 时间过多 | Microsoft Docs
+title: DA0024 - GC 占用的 CPU 时间过多 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - vs.performance.DA0024
 - vs.performance.24
@@ -13,16 +13,16 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 3b8352095bcf31c137d391c2ed2e832d34e0ec7b
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 20736e7af905bbbc72c1c2bec1e5b79d68259217
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74779345"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544646"
 ---
 # <a name="da0024-excessive-gc-cpu-time"></a>DA0024：GC 占用的 CPU 时间过多
 
-|||
+|项|“值”|
 |-|-|
 |规则 ID|DA0024|
 |类别|.NET Framework 使用情况|

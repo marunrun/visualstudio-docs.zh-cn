@@ -1,7 +1,7 @@
 ---
-title: DA0004：处理器使用率很高 | Microsoft Docs
+title: DA0004 - 处理器使用率很高 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - vs.performance.rules.DAHighProcessorUsage
 - vs.performance.rules.DA0004
@@ -14,16 +14,16 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: b324d26d21920bae9f03f909b2eab0c1ce7ab419
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: e0ac8d8558ee73903898e920ed8174c73ea66c4d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74777720"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85548169"
 ---
-# <a name="da0004-high-processor-usage"></a>DA0004：处理器使用率很高
+# <a name="da0004-high-processor-usage"></a>DA0004：处理器使用情况很高
 
-|||
+|项|“值”|
 |-|-|
 |规则 ID|DA0004|
 |类别|分析工具使用情况|

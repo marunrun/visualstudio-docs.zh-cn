@@ -1,7 +1,7 @@
 ---
-title: 探查器命令行：检测动态 ASP.NET 应用，获取内存数据
+title: 探查器命令行 - 检测动态 ASP.NET 应用，获取内存数据
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 2cdd9903-39db-47e8-93dd-5e6a21bc3435
 author: mikejo5000
 ms.author: mikejo
@@ -9,12 +9,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - aspnet
-ms.openlocfilehash: 3378a45ebace942bb8696f2f67962365b5f57796
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 7c1fafd3b21dd40da1215e7864c6d66090589d03
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74778877"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85328070"
 ---
 # <a name="how-to-instrument-a-dynamically-compiled-aspnet-web-application-and-collect-memory-data-by-using-the-profiler-command-line"></a>如何：使用探查器命令行检测动态编译的 ASP.NET web 应用程序，并收集内存数据
 本主题介绍如何使用检测分析方法和 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 分析工具命令行工具为动态编译的 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web 应用程序收集详细的 .NET 内存分配和对象生存期数据。
@@ -22,31 +22,31 @@ ms.locfileid: "74778877"
 > [!NOTE]
 > 若要获取分析工具的路径，请参阅[指定命令行工具的路径](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)。 在 64 位计算机上，同时提供 64 位和 32 位版本的工具。 若要使用探查器命令行工具，必须将工具路径添加到命令提示符窗口的 PATH 环境变量中，或将其添加到命令本身。
 
- 要从 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web 应用程序收集性能数据，请修改目标应用程序的 web.config 文件，让 [VSInstr.exe](../profiling/vsinstr.md) 工具能够检测动态编译的应用程序文件  。 然后使用 [VSPerfCLREnv.cmd](../profiling/vsperfclrenv.md) 工具来配置承载 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web 应用程序的服务器并通过设置适当的环境变量启用 .NET 内存分析，然后重启计算机。
+ 要从 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web 应用程序收集性能数据，请修改目标应用程序的 web.config 文件，让 [VSInstr.exe](../profiling/vsinstr.md) 工具能够检测动态编译的应用程序文件。 然后使用 [VSPerfCLREnv.cmd](../profiling/vsperfclrenv.md) 工具来配置承载 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web 应用程序的服务器并通过设置适当的环境变量启用 .NET 内存分析，然后重启计算机。
 
  若要收集数据，请启动探查器并运行目标应用程序。 在探查器附加到应用程序时，可以暂停并继续数据收集。收集适当的数据后，请关闭应用程序，关闭 Internet Information Services (IIS) 工作进程，然后关闭探查器。
 
- 完成分析工作后，请将 web.config 文件和 Web 服务器还原到其原始状态  。
+ 完成分析工作后，请将 web.config 文件和 Web 服务器还原到其原始状态。
 
 ## <a name="configure-the-aspnet-web-application-and-the-web-server"></a>配置 ASP.NET Web 应用程序和 Web 服务器
 
 #### <a name="to-configure-the-aspnet-web-application-and-the-web-server"></a>配置 ASP.NET Web 应用程序和 Web 服务器
 
-1. 修改目标应用程序的 web.config 文件  。 请参阅[如何：将 web.Config 文件修改为检测和分析动态编译的 ASP.NET web 应用程序](../profiling/how-to-modify-web-config-files-to-instrument-dynamically-compiled-aspnet-apps.md)。
+1. 修改目标应用程序的 web.config 文件。 请参阅[如何：将 web.Config 文件修改为检测和分析动态编译的 ASP.NET web 应用程序](../profiling/how-to-modify-web-config-files-to-instrument-dynamically-compiled-aspnet-apps.md)。
 
 2. 在承载 Web 应用程序的计算机上打开命令提示符窗口。
 
 3. 初始化分析环境变量。 类型：
 
-     VSPerfClrEnv /globaltraceon 
+     VSPerfClrEnv /globaltraceon
 
      \- 或 -
 
-     VSPerfClrEnv /globaltracegclife 
+     VSPerfClrEnv /globaltracegclife
 
-    - /globaltracegc 启用对内存分配数据的收集  。
+    - /globaltracegc 启用对内存分配数据的收集。
 
-    - /globaltracegclife 启用对内存分配数据和对象生存期数据的收集  。
+    - /globaltracegclife 启用对内存分配数据和对象生存期数据的收集。
 
 4. 重新启动计算机。
 
@@ -60,7 +60,7 @@ ms.locfileid: "74778877"
 
    - **/start:trace** 选项初始化探查器。
 
-   - **/output:** `OutputFile` 选项需要与 **/start** 一起使用。 `OutputFile` 指定分析数据 (.vsp) 文件的名称和位置  。
+   - **/output:** `OutputFile` 选项需要与 **/start** 一起使用。 `OutputFile` 指定分析数据 (.vsp) 文件的名称和位置。
 
      可以将以下任意选项与 **/start:trace** 选项一起使用。
 
@@ -69,13 +69,13 @@ ms.locfileid: "74778877"
 
    | 选项 | 描述 |
    | - | - |
-   | [/user](../profiling/user-vsperfcmd.md) **:** [`Domain` **\\** ]`UserName` | 指定拥有 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 工作进程的帐户的可选域和用户名。 在进程以已登录用户外的用户身份运行时才需要此选项。 名称位于 Windows 任务管理器“进程”选项卡上的“用户名”列中   。 |
-   | [/crosssession](../profiling/crosssession.md) | 启用其他会话中的进程分析。 如果应用程序在其他会话中运行，则需要此选项。 会话 ID 位于 Windows 任务管理器的“进程”选项卡上的“会话 ID”列中   。 可以将 **/CS** 指定为 **/crosssession** 的缩写。 |
+   | [/user](../profiling/user-vsperfcmd.md) **:** [`Domain` **\\** ]`UserName` | 指定拥有 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 工作进程的帐户的可选域和用户名。 在进程以已登录用户外的用户身份运行时才需要此选项。 名称位于 Windows 任务管理器“进程”选项卡上的“用户名”列中 。 |
+   | [/crosssession](../profiling/crosssession.md) | 启用其他会话中的进程分析。 如果应用程序在其他会话中运行，则需要此选项。 会话 ID 位于 Windows 任务管理器的“进程”选项卡上的“会话 ID”列中 。 可以将 **/CS** 指定为 **/crosssession** 的缩写。 |
    | [/globaloff](../profiling/globalon-and-globaloff.md) | 在暂停数据收集的情况下启动探查器。 使用 [/globalon](../profiling/globalon-and-globaloff.md) 可恢复分析。 |
    | [/counter](../profiling/counter.md) **:** `Config` | 从 `Config` 中所指定的处理器性能计数器收集信息。 计数器信息将添加到在每个分析事件中收集的数据中。 |
    | [/wincounter](../profiling/wincounter.md) **:** `WinCounterPath` | 指定要在分析期间收集的 Windows 性能计数器。 |
    | [/automark](../profiling/automark.md) **:** `Interval` | 仅与 **/wincounter** 一起使用。 指定两次 Windows 性能计数器收集事件相隔的毫秒数。 默认值为 500 毫秒。 |
-   | [/events](../profiling/events-vsperfcmd.md) **:** `Config` | 指定要在分析期间收集的 Windows 事件跟踪 (ETW) 事件。 ETW 事件收集在单独的 (.etl) 文件中  。 |
+   | [/events](../profiling/events-vsperfcmd.md) **:** `Config` | 指定要在分析期间收集的 Windows 事件跟踪 (ETW) 事件。 ETW 事件收集在单独的 (.etl) 文件中。 |
 
 2. 以典型方式启动 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web 应用程序。
 
@@ -92,7 +92,7 @@ ms.locfileid: "74778877"
     |[/processon](../profiling/processon-and-processoff.md) **:** `PID` [/processoff](../profiling/processon-and-processoff.md) **:** `PID`|启动 ( **/processon**) 或停止 ( **/processoff**) 由进程 ID (`PID`) 指定的进程的数据收集。|
     |[/threadon](../profiling/threadon-and-threadoff.md) **:** `TID` [/threadoff](../profiling/threadon-and-threadoff.md) **:** `TID`|启动 ( **/threadon**) 或停止 ( **/threadoff**) 由线程 ID (`TID`) 指定的线程的数据收集。|
 
-- 还可以使用 **VSPerfCmd.exe**[/mark](../profiling/mark.md) 选项将分析标记插入数据文件。 /mark 命令可添加标识符、时间戳和（可选）用户定义的文本字符串  。 标记可用于筛选探查器报告和数据视图中的数据。
+- 还可以使用 **VSPerfCmd.exe**[/mark](../profiling/mark.md) 选项将分析标记插入数据文件。 /mark 命令可添加标识符、时间戳和（可选）用户定义的文本字符串。 标记可用于筛选探查器报告和数据视图中的数据。
 
 ## <a name="end-the-profiling-session"></a>结束分析会话
  要结束分析会话，请关闭目标 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web 应用程序，停止 Internet Information Services (IIS) 以停止分析的进程，然后关闭探查器。 然后重启 IIS。
@@ -114,11 +114,11 @@ ms.locfileid: "74778877"
     **IISReset /start**
 
 ## <a name="restore-the-application-and-computer-configuration"></a>还原应用程序和计算机配置
- 完成全部分析后，请替换 web.config 文件，清除分析环境变量并重启计算机，以便将服务器和 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 应用程序还原到原始状态  。
+ 完成全部分析后，请替换 web.config 文件，清除分析环境变量并重启计算机，以便将服务器和 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 应用程序还原到原始状态。
 
 #### <a name="to-restore-the-application-and-computer-configuration"></a>还原应用程序和计算机配置
 
-1. 使用原始文件的副本替换 web.config 文件  。
+1. 使用原始文件的副本替换 web.config 文件。
 
 2. （可选）。 清除分析环境变量。 类型：
 

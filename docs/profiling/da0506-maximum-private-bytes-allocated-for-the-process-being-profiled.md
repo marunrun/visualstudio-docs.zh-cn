@@ -1,7 +1,7 @@
 ---
-title: DA0506：为所分析的进程分配的最大专用字节数 | Microsoft Docs
+title: DA0506 - 为所分析的进程分配的最大专用字节数 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - vs.performance.rules.DA0506
 - vs.performance.DA0506
@@ -13,20 +13,20 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 7600e65beb3035fac6d5ea58b25f6965d681f83a
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 663de229aa9d7d3dee22425347a3464c200b9d53
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74779306"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85532088"
 ---
-# <a name="da0506-maximum-private-bytes-allocated-for-the-process-being-profiled"></a>DA0506：为所分析的进程分配的最大专用字节数
+# <a name="da0506-maximum-private-bytes-allocated-for-the-process-being-profiled"></a>DA0506：为所分析进程分配的最大专用字节数
 
-|||
+|项|“值”|
 |-|-|
 |规则 ID|DA0506|
 |类别|资源监控|
-|分析方法|All|
+|分析方法|全部|
 |消息|收集此信息仅用于参考。 进程专用字节计数器测量由正在分析的进程分配的虚拟内存。 报告的值是在所有测量时间间隔内观察到的最大值。|
 |规则类型|信息|
 

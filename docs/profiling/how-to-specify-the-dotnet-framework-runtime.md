@@ -1,7 +1,7 @@
 ---
-title: 如何：指定 .NET Framework 运行时 | Microsoft Docs
+title: 如何 - 指定 .NET Framework 运行时 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - Profiling Tools, .NET Framework versions
 - .NET Framework versions,profililng
@@ -12,12 +12,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4ab53a6cf265b36ee423a2df176014187860f635
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 2eddbe3602386e6a8f5c7e07e796b8c3b047603c
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74778669"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85331374"
 ---
 # <a name="how-to-specify-the-net-framework-runtime"></a>如何：指定 .NET Framework 运行时
 
@@ -25,26 +25,26 @@ ms.locfileid: "74778669"
 
 ## <a name="to-specify-the-net-framework-run-time-to-profile-when-starting-an-application-with-the-profiler"></a>用探查器启动应用程序时指定要分析的 .NET Framework 运行时
 
-1. 在“性能资源管理器”  中，右键单击性能会话，单击“属性”  ，然后单击“高级”  。
+1. 在“性能资源管理器”中，右键单击性能会话，单击“属性”，然后单击“高级”。
 
-     “目标 CLR 版本”列表框显示“自动”以及计算机上安装的 .NET Framework 运行时版本   。
+     “目标 CLR 版本”列表框显示“自动”以及计算机上安装的 .NET Framework 运行时版本 。
 
 2. 执行以下步骤之一：
 
     - 单击要分析的 CLR 版本。
 
-    - 单击“自动”分析应用程序加载的第一个版本  。
+    - 单击“自动”分析应用程序加载的第一个版本。
 
 ## <a name="to-specify-the-net-framework-run-time-to-profile-when-attaching-the-profiler-to-an-application"></a>将探查器附加到应用程序时指定要分析的 .NET Framework 运行时
 
-1. 在“分析”菜单上，指向“探查器”，然后单击“附加/分离”    。
+1. 在“分析”菜单上，指向“探查器”，然后单击“附加/分离”  。
 
-2. 在“将探查器附加到进程”对话框中，单击要分析的进程  。
+2. 在“将探查器附加到进程”对话框中，单击要分析的进程。
 
-     “目标 CLR 版本”列表框显示“自动”以及计算机上安装的 .NET Framework 运行时版本   。
+     “目标 CLR 版本”列表框显示“自动”以及计算机上安装的 .NET Framework 运行时版本 。
 
 3. 执行以下步骤之一：
 
     - 单击要分析的 CLR 版本。
 
-    - 单击“自动”分析探查器附加到应用程序时加载的版本  。
+    - 单击“自动”分析探查器附加到应用程序时加载的版本。

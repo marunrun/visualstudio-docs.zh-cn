@@ -1,7 +1,7 @@
 ---
-title: 如何：标记线程和取消标记线程 | Microsoft Docs
+title: 如何 - 标记线程和取消标记线程 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - CSharp
 - VB
@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 68a2ce8b6ec429b3f7f5cd782c3dac52602eff16
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: e7480f953e2fca57c296d6d1641059993bfa582c
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72733235"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85349622"
 ---
 # <a name="how-to-flag-and-unflag-threads-c-visual-basic-c"></a>如何：标记线程和取消标记线程（C#、Visual Basic、C++）
 
@@ -31,7 +31,7 @@ ms.locfileid: "72733235"
 ### <a name="to-flag-or-unflag-a-thread"></a>标记或取消标记线程
 
 - 在“线程”或“并行监视”窗口中，找到感兴趣的线程，单击标记图标选中或清除标记 。
-- 在“并行堆栈”窗口中，右键单击线程或线程组，然后选择“标记/\<线程>”或“取消标记/\<线程>”  。
+- 在“并行堆栈”窗口中，右键单击线程或线程组，然后选择“标记/\<thread>”或“取消标记/\<thread>”  。
 
 ### <a name="to-unflag-all-threads"></a>取消标记所有线程
 

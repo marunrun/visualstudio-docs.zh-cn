@@ -16,12 +16,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 955a968c52c963c8c6f0204f7687de2bd8482260
-ms.sourcegitcommit: c3b6af7367bef67a02c37404534229b935f713a9
+ms.openlocfilehash: 247567030d47a55b29a3fca901e12948ddd85916
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80892770"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85533752"
 ---
 # <a name="add-visual-studio-editor-support-for-other-languages"></a>为其他语言添加 Visual Studio 编辑器支持
 
@@ -29,20 +29,49 @@ ms.locfileid: "80892770"
 
 ## <a name="syntax-colorization-statement-completion-and-navigate-to-support"></a>语法着色、语句完成和“导航到”支持
 
-Visual Studio 编辑器中的功能（如语法着色、语句完成（也称作 IntelliSense）和“导航到”等）可帮助你更轻松地写入、读取和编辑代码  。 以下屏幕截图举例说明在 Visual Studio 中编辑 Perl 脚本。 语法自动着色。 例如，代码中的注解用绿色标记，代码、路径、语句分别用黑色、红色和蓝色标记。 Visual Studio 编辑器对支持的任何语言自动着色。 此外，当开始输入已知语言关键字或对象时，语句完成会显示可能的语句和对象列表。 语句完成有助于更快速、更轻松地写入代码。
+Visual Studio 编辑器中的功能（如语法着色、语句完成（也称作 IntelliSense）和“导航到”等）可帮助你更轻松地写入、读取和编辑代码。 以下屏幕截图举例说明在 Visual Studio 中编辑 Perl 脚本。 语法自动着色。 例如，代码中的注解用绿色标记，代码、路径、语句分别用黑色、红色和蓝色标记。 Visual Studio 编辑器对支持的任何语言自动着色。 此外，当开始输入已知语言关键字或对象时，语句完成会显示可能的语句和对象列表。 语句完成有助于更快速、更轻松地写入代码。
 
 ![Perl 脚本中的语法着色](../ide/media/vside_perledit.png)
 
 对于以下使用 [TextMate 语法](https://manual.macromates.com/en/language_grammars)的语言，Visual Studio 当前提供语法着色和基本语句完成支持。 如果你最喜爱的语言不在表中，别担心，可以添加它。
 
-|||||||
-|-|-|-|-|-|-|
-|Bat|F#|Java|Markdown|Rust|Visual Basic|
-|Clojure|Go|JavaDoc|Objective-C|ShaderLab|C#|
-|CMake|Groovy|JSON|Perl|ShellScript|Visual C++|
-|CoffeeScript|HTML|LESS|Python|SQL|VBNet|
-|CSS|INI|LUA|R|Swift|XML|
-|Docker|Jade|品牌|Ruby|TypeScript|YAML|
+
+- Bat
+- F#
+- Java
+- Markdown
+- Rust
+- Visual Basic
+- Clojure
+- Go
+- JavaDoc
+- Objective-C
+- ShaderLab
+- C#
+- CMake
+- Groovy
+- JSON
+- Perl
+- ShellScript
+- Visual C++
+- CoffeeScript
+- HTML
+- LESS
+- Python
+- SQL
+- VBNet
+- CSS
+- INI
+- LUA
+- R
+- Swift
+- XML
+- Docker
+- Jade
+- 品牌
+- Ruby
+- TypeScript
+- YAML
 
 除语法着色和基本语句完成外，Visual Studio 还具有一种称为[导航到](https://blogs.msdn.microsoft.com/benwilli/2015/04/09/visual-studio-tip-3-use-navigate-to/)的功能。 可使用此功能快速搜索代码文件、文件路径和代码符号。 Visual Studio 为以下语言提供“导航到”支持。
 
@@ -76,11 +105,11 @@ Visual Studio 通过 [TextMate 语法](https://manual.macromates.com/en/language
 
 |文件夹名|描述|
 |-----------------|-----------------|
-|\\ *\<language name>*|语言文件夹。 用语言的名称替换 *\<language name>* 。 例如， *\Matlab*。|
-|*\Syntaxes*|语法文件夹。 包含语言的 .json 语法文件，如 Matlab.json   。|
+|\\*\<language name>*|语言文件夹。 请将 \<language name> 替换为该语言的名称。 例如， *\Matlab*。|
+|*\Syntaxes*|语法文件夹。 包含语言的 .json 语法文件，如 Matlab.json 。|
 |*\Snippets*|代码段文件夹。 包含语言的代码段。|
 
-在 Windows 中，%userprofile% 解析为路径 c:\Users\\\<user name>   。 如果系统上不存在“Extensions”  文件夹，则需要创建它。 如果该文件夹已存在，它将被隐藏。
+在 Windows 中，%userprofile% 解析为路径 c:\Users\\\<user name> 。 如果系统上不存在“Extensions”文件夹，则需要创建它。 如果该文件夹已存在，它将被隐藏。
 
 > [!TIP]
 > 如果在编辑器中打开了任何文件，则需要在添加 TextMate 语法之后关闭并重新打开它们，以查看语法高亮显示。
