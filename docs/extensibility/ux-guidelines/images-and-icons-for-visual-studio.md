@@ -1,19 +1,19 @@
 ---
 title: Visual Studio 的图像和图标 |Microsoft Docs
 ms.date: 04/26/2017
-ms.topic: conceptual
+ms.topic: overview
 ms.assetid: f410325e-9cf2-4f39-b6d7-b672121c2691
 author: acangialosi
 ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7de4488a8304b21b578b2ad5ac2c29deafcf1b0a
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.openlocfilehash: edbf1542277189f37565e7ff415a52025094e595
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85537535"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85906111"
 ---
 # <a name="images-and-icons-for-visual-studio"></a>Visual Studio 的图像和图标
 ## <a name="image-use-in-visual-studio"></a><a name="BKMK_ImageUseInVisualStudio"></a>Visual Studio 中的图像使用
@@ -96,7 +96,7 @@ ms.locfileid: "85537535"
 
 ### <a name="style-details"></a>样式详细信息
 
-#### <a name="layout"></a>Layout
+#### <a name="layout"></a>布局
  如标准16x16 图标所示的堆栈元素：
 
  ![16x16 图标的布局堆栈](../../extensibility/ux-guidelines/media/0404-15_layoutstack.png "0404-15_LayoutStack")<br />16x16 图标的布局堆栈
@@ -247,7 +247,7 @@ ms.locfileid: "85537535"
 
 - 区分 IntelliSense 内的项
 
-### <a name="accessibility"></a>辅助功能
+### <a name="accessibility"></a>可访问性
  Visual Studio 符合性准则要求所有已签入产品的图标都通过颜色和对比度的辅助功能要求。 已对 visual language 调色板中的颜色进行了测试并满足这些要求。
 
 #### <a name="color-inversion-for-dark-themes"></a>深色主题的颜色反转
@@ -258,7 +258,7 @@ ms.locfileid: "85537535"
 ### <a name="base-palette"></a>基本调色板
  所有标准图标都包含三种基本颜色。 图标不包含渐变或阴影，三维工具图标有一个或两个例外。
 
-|使用情况|“属性”|值（浅色主题）|样板|示例|
+|用法|名称|值（浅色主题）|样板|示例|
 |-----------|----------|---------------------------|------------|-------------|
 |背景/深色|VS BG|424242/66，66，66|![样本 424242](../../extensibility/ux-guidelines/media/0405_424242.png "0405_424242")|![基调色板示例](../../extensibility/ux-guidelines/media/0405-02_basepaletteexample.png "0405-02_BasePaletteExample")|
 |前景/浅色|VS FG|F0EFF1/240239241|![样本 F0EFF1](../../extensibility/ux-guidelines/media/0405_f0eff1.png "0405_F0EFF1")||
@@ -271,7 +271,7 @@ ms.locfileid: "85537535"
 #### <a name="action-modifiers"></a>操作修饰符
  以下四种颜色指示操作修饰符所需的操作类型：
 
-|使用情况|“属性”|值（所有主题）|样板|
+|用法|名称|值（所有主题）|样板|
 |-----------|----------|--------------------------|------------|
 |正|VS 操作绿色|388A34/56138、52|![样本 388A34](../../extensibility/ux-guidelines/media/0405_388a34.png "0405_388A34")|
 |负|VS 操作红色|A1260D/161，38，13|![样本 A1260D](../../extensibility/ux-guidelines/media/0405_a1260d.png "0405_A1260D")|
@@ -314,14 +314,14 @@ ms.locfileid: "85537535"
 
 #### <a name="folder"></a>文件夹
 
-|使用情况|“属性”|值（所有主题）|样板|示例|
+|用法|名称|值（所有主题）|样板|示例|
 |-----------|----------|--------------------------|------------|-------------|
 |文件夹|文件夹|DCB67A/220182122|![样本 DCB67A](../../extensibility/ux-guidelines/media/0405_dcb67a.png "0405_DCB67A")|![“文件夹颜色”图标](../../extensibility/ux-guidelines/media/0405-23_foldercolor.png "0405-23_FolderColor")|
 
 #### <a name="visual-studio-languages"></a>Visual Studio 语言
  Visual Studio 中提供的每个常见语言或平台都有关联的颜色。 这些颜色用在基本图标上，或在复合图标右上角出现的语言修饰符上使用。
 
-|使用情况|“属性”|值（所有主题）|样板|
+|用法|名称|值（所有主题）|样板|
 |-----------|----------|--------------------------|------------|
 |ASP、HTML、WPF|ASP HTML WPF 蓝色|0095D7/0149215|![样本 0095D7](../../extensibility/ux-guidelines/media/0405_0096d7.png "0405_0096D7")|
 |C++|CPP 紫色|9B4F96/155，79150|![样本 9B4F96](../../extensibility/ux-guidelines/media/0405_9b4f96.png "0405_9B4F96")|
@@ -346,7 +346,7 @@ ms.locfileid: "85537535"
 #### <a name="intellisense"></a>IntelliSense
  IntelliSense 图标使用独有调色板。 这些颜色用于帮助用户在 IntelliSense 弹出列表中快速区分不同的项。
 
-|使用情况|“属性”|值（所有主题）|样板|
+|用法|名称|值（所有主题）|样板|
 |-----------|----------|--------------------------|------------|
 |类，事件|VS 操作橙色|C27D1A/194125，26|![样本 C27D1A](../../extensibility/ux-guidelines/media/0405_c27d1a.png "0405_C27D1A")|
 |扩展方法、方法、模块、委托|VS 操作紫色|652D90/101、45144|![样本 652D90](../../extensibility/ux-guidelines/media/0405_652d90.png "0405_652D90")|
@@ -367,7 +367,7 @@ ms.locfileid: "85537535"
 ### <a name="notifications"></a>通知
  Visual Studio 中的通知用于指示状态。 "通知" 面板使用以下四种颜色以及黑色或白色的前景填充选项来定义具有以下状态级别的通知。
 
-|使用情况|“属性”|值（所有主题）|样板|
+|用法|名称|值（所有主题）|样板|
 |-----------|----------|--------------------------|------------|
 |状态：中性|通知蓝（与蓝色）|1BA1E2/27161226|![样本 1BA1E2](../../extensibility/ux-guidelines/media/0405_1ba1e2.png "0405_1BA1E2")|
 |状态：正值|通知绿色（与绿色）|339933/51153，51|![样本 339933](../../extensibility/ux-guidelines/media/0405_339933.png "0405_339933")|
