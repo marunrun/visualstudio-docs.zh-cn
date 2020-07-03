@@ -1,5 +1,5 @@
 ---
-title: '&lt;签名&gt; 元素（ClickOnce 部署） |Microsoft Docs'
+title: '&lt;签名 &gt; 元素（ClickOnce 部署） |Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,32 +14,32 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f69dcec6bbee5358184b74a71274cb26e4de60b3
-ms.sourcegitcommit: 8589d85cc10710ef87e6363a2effa5ee5610d46a
+ms.openlocfilehash: b6f07e2649d6f41e77f453f64c5838c746f22ad0
+ms.sourcegitcommit: 9a9c61ca115c22d33bb902153eb0853789c7be4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72806844"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85835415"
 ---
-# <a name="ltsignaturegt-element-clickonce-deployment"></a>&lt;签名&gt; 元素（ClickOnce 部署）
+# <a name="ltsignaturegt-element-clickonce-deployment"></a>&lt;Signature &gt; 元素（ClickOnce 部署）
 包含对此部署清单进行数字签名所需的信息。
 
 ## <a name="syntax"></a>语法
 
 ```xml
 
-      <Signature> 
+<Signature> 
    XML signature information 
 </Signature>
 ```
 
 ## <a name="remarks"></a>备注
- 使用信封签名对部署清单进行签名是可选的，但建议使用。 有关对 XML 文件进行签名的详细信息，请参阅[http://www.w3.org/TR/xmldsig-core/](https://www.w3.org/TR/xmldsig-core/)中所述的万维网联合会建议 "XML 签名语法和处理"。
+ 使用信封签名对部署清单进行签名是可选的，但建议使用。 有关对 XML 文件进行签名的详细信息，请参阅中所述的万维网联合会建议 "XML 签名语法和处理" [http://www.w3.org/TR/xmldsig-core/](https://www.w3.org/TR/xmldsig-core/) 。
 
  如果要对清单进行签名，则必须为所有文件提供哈希。 无法对包含未进行哈希处理的文件的清单进行签名，因为用户无法验证未经过哈希处理的文件的内容。
 
 ## <a name="example"></a>示例
- 下面的代码示例演示了 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 部署中使用的部署清单中的 `Signature` 元素。
+ 下面的代码示例演示 `Signature` 部署中使用的部署清单中的元素 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 。
 
 ```xml
 <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
@@ -70,5 +70,5 @@ MIIHnTCCBoWgAwIBAgIKJY9+nwAHAAB...
 </Signature>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [ClickOnce 部署清单](../deployment/clickonce-deployment-manifest.md)

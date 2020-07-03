@@ -1,7 +1,7 @@
 ---
-title: 添加和删除属性页 |微软文档
+title: 添加和删除属性页 |Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - property pages, adding
 - property pages, project subtypes
@@ -15,24 +15,24 @@ dev_langs:
 - VB
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4c3df3104e48ca0ee972e1a27f2c32fd0661088b
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: fdc12f0938d3296cf1bfca37d0b9b01e0f2a704a
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80740202"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85903571"
 ---
 # <a name="add-and-remove-property-pages"></a>添加和删除属性页
 
-项目设计器提供一个集中位置，用于管理 中的[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]项目属性、设置和资源。 它显示为集成开发环境 （IDE） 中的[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]单个窗口，并包含右侧通过左侧选项卡访问的多个窗格。 项目设计器中的窗格（通常称为属性页）因项目类型和语言而异。 可以使用 **"** 项目"**菜单上的属性命令**访问项目设计器。
+项目设计器提供一个集中位置，用于管理中的项目属性、设置和资源 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 。 它在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 集成开发环境（IDE）中显示为一个窗口，并在右侧的选项卡中包含多个窗格。 项目设计器中的窗格（通常称为属性页）因项目类型和语言而异。 可以通过 "**项目**" 菜单上的 "**属性**" 命令访问 "项目设计器"。
 
-项目子类型经常需要在项目设计器中显示其他属性页。 同样，某些项目子类型可能要求删除内置属性页。 要执行上述任一操作，项目子类型必须<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy>实现接口并重写<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A>方法。 通过重写此方法并使用包含`propId`<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID2>枚举值之一的参数，可以筛选、添加或删除项目属性。 例如，您可能需要向与配置相关的属性页添加页面。 为此，您需要筛选与配置相关的属性页，然后将新页面添加到现有列表中。
+项目子类型通常需要在 "项目设计器" 中显示其他属性页。 同样，某些项目子类型可能要求删除内置属性页。 若要执行任一操作，项目子类型必须实现 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> 接口并重写 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A> 方法。 通过重写此方法并使用 `propId` 包含枚举值之一的参数 <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID2> ，可以筛选、添加或删除项目属性。 例如，你可能需要将页面添加到依赖于配置的属性页。 为此，需要筛选依赖于配置的属性页，然后向现有列表添加新页。
 
 ## <a name="add-and-remove-property-pages-in-project-designer"></a>在项目设计器中添加和删除属性页
 
 ### <a name="remove-a-property-page"></a>删除属性页
 
-1. 重写`GetProperty(uint itemId, int propId, out object property)`方法以筛选属性页并获取`clsids`列表。
+1. 重写 `GetProperty(uint itemId, int propId, out object property)` 方法，以筛选属性页并获取 `clsids` 列表。
 
     ```vb
     Protected Overrides int GetProperty(uint itemId, int propId, out object property)
@@ -77,7 +77,7 @@ ms.locfileid: "80740202"
     }
     ```
 
-2. 从获取`clsids`列表中删除**生成事件**页。
+2. 从获取的列表中删除 "**生成事件**" 页 `clsids` 。
 
     ```vb
     Private buildEventsPageGuid As String = "{1E78F8DB-6C07-4D61-A18F-7514010ABD56}"
@@ -158,7 +158,7 @@ ms.locfileid: "80740202"
     }
     ```
 
-2. 注册您的新属性页面。
+2. 注册新的属性页。
 
     ```vb
     <MSVSIP.ProvideObject(GetType(DeployPropertyPage), RegisterUsing = RegistrationMethod.CodeBase)>
@@ -168,7 +168,7 @@ ms.locfileid: "80740202"
     [MSVSIP.ProvideObject(typeof(DeployPropertyPage), RegisterUsing = RegistrationMethod.CodeBase)]
     ```
 
-3. 重写`GetProperty(uint itemId, int propId, out object property)`方法以筛选属性页、获取`clsids`列表并添加新属性页。
+3. 重写 `GetProperty(uint itemId, int propId, out object property)` 方法以筛选属性页，获取 `clsids` 列表并添加新的属性页。
 
     ```vb
     Protected Overrides Function GetProperty(ByVal itemId As UInteger, ByVal propId As Integer, ByRef [property] As Object) As Integer
@@ -206,6 +206,6 @@ ms.locfileid: "80740202"
     }
     ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [项目子类型](../extensibility/internals/project-subtypes.md)

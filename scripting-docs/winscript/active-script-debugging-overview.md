@@ -5,7 +5,7 @@ ms.date: 01/18/2017
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 helpviewer_keywords:
 - Active Script Debugging overview
 ms.assetid: ce4ec768-d017-4dfa-a7e3-cced3a29e679
@@ -13,12 +13,12 @@ caps.latest.revision: 11
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a8c06477b7cd9d069e416cfd7d86a8cd0cb7bfd5
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: 0181ee305c99a1d0af1d3e1e965c6ac8fe16f375
+ms.sourcegitcommit: 9a9c61ca115c22d33bb902153eb0853789c7be4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72572268"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85835662"
 ---
 # <a name="active-script-debugging-overview"></a>活动脚本调试概述
 活动脚本调试接口可以进行中性语言调试和中性主机调试，并支持各种开发环境。  
@@ -184,7 +184,7 @@ ms.locfileid: "72572268"
  通过在项目树中提供上下文来扩展 `IDebugDocumentProvider` 接口的功能。  
   
 ## <a name="debugger-ide"></a>调试器 IDE  
- IDE 是一个与语言无关的调试 UI。 提供以下功能：  
+ IDE 是一个与语言无关的调试 UI。 它提供：  
   
 - 文档查看器/编辑器。  
   
@@ -291,5 +291,5 @@ ms.locfileid: "72572268"
   [ISimpleConnectionPoint 接口](../winscript/reference/isimpleconnectionpoint-interface.md)  
   向脚本引擎提供用于描述和枚举在特定连接点上触发的事件的一种简单方式。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [活动脚本调试器接口](../winscript/reference/active-script-debugger-interfaces.md)
