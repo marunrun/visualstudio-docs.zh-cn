@@ -1,7 +1,7 @@
 ---
-title: 探查器命令行：启动独立应用程序，获取应用程序统计信息
+title: 探查器命令行 - 启动独立应用，获取应用统计信息
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 52dcee2b-f178-4a76-bddc-e36c50bfcb78
 author: mikejo5000
 ms.author: mikejo
@@ -9,12 +9,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: fb6228592115091dc538dbe59c227a180e75aa10
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 96838b622171aa3e313dd8c241a5e316f72ff7b2
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74775408"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85327759"
 ---
 # <a name="how-to-launch-a-stand-alone-application-with-the-profiler-and-collect-application-statistics-by-using-the-command-line"></a>如何：使用探查器启动独立应用程序，并通过命令行收集应用程序统计信息
 本主题介绍如何使用 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 分析工具命令行工具启动独立（客户端）应用程序，以及如何使用采样方法收集性能统计信息。
@@ -26,7 +26,7 @@ ms.locfileid: "74775408"
 
  若要使用探查器命令行工具，必须将路径添加到命令提示符窗口的 PATH 环境变量中，或将其添加到命令本身。 可以在安装有 Visual Studio 的计算机上，使用 Visual Studio 命令窗口运行分析工具。
 
-1. 如果在安装有 Visual Studio 的计算机上运行分析工具，Visual Studio 命令窗口会设置正确的路径。 在“工具”  菜单上，选择“VS 命令提示符” 
+1. 如果在安装有 Visual Studio 的计算机上运行分析工具，Visual Studio 命令窗口会设置正确的路径。 在“工具”菜单上，选择“VS 命令提示符”
 
 > [!NOTE]
 > 若要获取分析工具的路径，请参阅[指定命令行工具的路径](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)。 在 64 位计算机上，同时提供 64 位和 32 位版本的工具。 若要使用探查器命令行工具，必须将工具路径添加到命令提示符窗口的 PATH 环境变量中，或将其添加到命令本身。
@@ -54,7 +54,7 @@ ms.locfileid: "74775408"
    | - | - |
    | [/wincounter](../profiling/wincounter.md) **:** `WinCounterPath` | 指定要在分析期间收集的 Windows 性能计数器。 |
    | [/automark](../profiling/automark.md) **:** `Interval` | 仅与 **/wincounter** 一起使用。 指定两次 Windows 性能计数器收集事件相隔的毫秒数。 默认值为 500 毫秒。 |
-   | [/events](../profiling/events-vsperfcmd.md) **:** `Config` | 指定要在分析期间收集的 Windows 事件跟踪 (ETW) 事件。 ETW 事件收集在单独的 (.etl) 文件中  。 |
+   | [/events](../profiling/events-vsperfcmd.md) **:** `Config` | 指定要在分析期间收集的 Windows 事件跟踪 (ETW) 事件。 ETW 事件收集在单独的 (.etl) 文件中。 |
 
 3. 启动目标应用程序。 Type:**VSPerfCmd /launch:** `appName` [`Options`] [`Sample Event`]
 

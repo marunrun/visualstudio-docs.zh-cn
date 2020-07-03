@@ -1,7 +1,7 @@
 ---
-title: 如何：使用“编辑并继续”(C#) | Microsoft Docs
+title: 如何 - 使用“编辑并继续”(C#) | Microsoft Docs
 ms.date: 10/04/2018
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - CSharp
 - VB
@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 515068f29045ef92ee7d2323f752ba2185f28cac
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a88cff54679ac0deae32bfeeff1dd96526f19ea7
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62906266"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85348855"
 ---
 # <a name="how-to-use-edit-and-continue-c"></a>如何：使用“编辑并继续”(C#)
 使用“编辑并继续”，可以在调试时以中断模式对代码进行更改并应用，而无需停止并重新启动调试会话。

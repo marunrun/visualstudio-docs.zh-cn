@@ -1,7 +1,7 @@
 ---
 title: 更新基于网络的安装
 description: 了解如何使用 --layout 命令更新基于网络的 Visual Studio 安装
-ms.date: 01/08/2020
+ms.date: 06/29/2020
 ms.custom: seodec18
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 68acfcd4acc06ff2b370f3d77a30bd4ec21eb6d1
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: f54ee1191dd998d34e46a442debafc175ce98c8b
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "76114975"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545426"
 ---
 # <a name="update-a-network-based-installation-of-visual-studio"></a>更新基于网络的 Visual Studio 安装
 
@@ -67,18 +67,18 @@ ms.locfileid: "76114975"
   vs_enterprise.exe --layout c:\VSLayout --passive
   ```
 
-* 添加额外工作负载和本地化语言的方法如下所示。  （此命令添加 Azure 开发工作负载。  ）现在，此布局中同时加入了托管桌面和 Azure。  这些工作负载中还同时加入了英语和德语的语言资源。  并且已将布局更新至最新的可用版本。
+* 添加额外工作负载和本地化语言的方法如下所示。  （此命令添加 Azure 开发工作负载。）现在，此布局中同时加入了托管桌面和 Azure。  这些工作负载中还同时加入了英语和德语的语言资源。  并且已将布局更新至最新的可用版本。
 
   ```cmd
   vs_enterprise.exe --layout c:\VSLayout --add Microsoft.VisualStudio.Workload.Azure --lang de-DE
   ```
 
     > [!IMPORTANT]
-    > 更新操作不会安装新添加的可选组件（即使将这些组件包含在[响应文件](automated-installation-with-response-file.md)的“添加”部分中）。 这是因为在更新期间未使用添加操作。
+    > 更新操作不会安装新添加的可选组件。 如果需要新添加的可选组件，请在 `Layout.JSON` [响应文件](automated-installation-with-response-file.md) 中删除旧的可选组件，然后将所需组件包含在 `Layout.JSON` 的“添加”部分。 
     >
     > **解决方法**：升级后运行单独的修改操作以安装缺少的组件。
 
-* 最后，有关如何在不更新版本的前提下添加其他工作负载和本地化语言的说明详见此处。 （此命令添加“ASP.NET 和 Web 开发”工作负载  。）当前，托管桌面、Azure 以及 ASP.NET 和 Web 开发工作负载已加入此布局。 这些工作负载中还加入了英语、德语和法语的语言资源。  但在运行此命令时，布局不会更新至最新的可用版本。 它将维持现有版本。
+* 最后，有关如何在不更新版本的前提下添加其他工作负载和本地化语言的说明详见此处。 （此命令添加“ASP.NET 和 Web 开发”工作负载。）当前，托管桌面、Azure 以及 ASP.NET 和 Web 开发工作负载已加入此布局。 这些工作负载中还加入了英语、德语和法语的语言资源。  但在运行此命令时，布局不会更新至最新的可用版本。 它将维持现有版本。
 
   ```cmd
   vs_enterprise.exe --layout c:\VSLayout --add Microsoft.VisualStudio.Workload.NetWeb --lang fr-FR --keepLayoutVersion
@@ -90,7 +90,7 @@ ms.locfileid: "76114975"
 
 * 用户可以更新通过脱机安装文件夹安装的 Visual Studio 实例：
   * 运行 Visual Studio 安装程序。
-  * 然后，单击“更新”  。
+  * 然后，单击“更新”。
 
 ::: moniker range="vs-2017"
 
@@ -172,7 +172,7 @@ c:\VSLayout\vs_enterprise.exe --layout c:\VSLayout --clean c:\VSLayout\Archive\1
 
 如果脱机安装遇到问题，请告知我们。 告知我们的最好方式是使用[报告问题](../ide/how-to-report-a-problem-with-visual-studio.md)工具。 使用此工具时，可发送我们诊断和修复问题所需的遥测数据和日志。
 
-对于安装相关问题，我们还提供[实时聊天  ](https://visualstudio.microsoft.com/vs/support/#talktous)（仅限英语）支持选项。
+对于安装相关问题，我们还提供[实时聊天](https://visualstudio.microsoft.com/vs/support/#talktous)（仅限英语）支持选项。
 
 我们还提供其他支持选项。 若要查看列表，请参阅[反馈](../ide/feedback-options.md)页面。
 

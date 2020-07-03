@@ -1,19 +1,19 @@
 ---
-title: 探查器命令行：检测 .NET 服务，获取计时详细信息
+title: 探查器命令行 - 检测 .NET 服务，获取计时详细信息
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: af801d2b30c48deb1a88800f67ff4d3efef412b4
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 62303ab2ea7296ca5093636efcf97ea7a3c540c1
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74778890"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85331481"
 ---
 # <a name="how-to-instrument-a-net-service-and-collect-detailed-timing-data-by-using-the-profiler-command-line"></a>如何：使用探查器命令行检测 .NET 服务，并收集详细计时数据
 
@@ -36,7 +36,7 @@ ms.locfileid: "74778890"
 
 1. 打开命令提示符窗口。
 
-2. 使用 VSInstr  工具生成该服务二进制文件的检测版本。
+2. 使用 VSInstr 工具生成该服务二进制文件的检测版本。
 
 3. 使用检测版本替换原始二进制文件。 在 Windows 服务控制管理器中，确保将该服务的“启动类型”设置为“手动”。
 
@@ -54,29 +54,29 @@ ms.locfileid: "74778890"
 
    - [/start](../profiling/start.md) **:trace** 选项初始化探查器。
 
-   - [/output](../profiling/output.md) **:** `OutputFile` 选项需要与 **/start** 一起使用。 `OutputFile` 指定分析数据 (.vsp) 文件的名称和位置  。
+   - [/output](../profiling/output.md) **:** `OutputFile` 选项需要与 **/start** 一起使用。 `OutputFile` 指定分析数据 (.vsp) 文件的名称和位置。
 
-     可以将以下任一选项与 /start:trace  选项一起使用。
+     可以将以下任一选项与 /start:trace 选项一起使用。
 
      > [!NOTE]
-     > /User  和 /crosssession  选项通常为分析服务所需选项。
+     > /User 和 /crosssession 选项通常为分析服务所需选项。
 
      | 选项 | 描述 |
      | - | - |
-     | [/user](../profiling/user-vsperfcmd.md) **:** [`Domain` **\\** ]`UserName` | 指定拥有所分析进程的帐户的域和用户名。 仅在进程以已登录用户外的用户身份运行时才需要此选项。 进程所有者在 Windows 任务管理器的“进程”选项卡上的“用户名”列中列出   。 |
-     | [/crosssession](../profiling/crosssession.md) | 启用其他会话中的进程分析。 如果应用程序在其他会话中运行，则需要此选项。 会话 ID 位于 Windows 任务管理器的“进程”选项卡上的“会话 ID”列中   。 可以将 **/CS** 指定为 **/crosssession** 的缩写。 |
-     | [/waitstart](../profiling/waitstart.md)[ **:** `Interval`] | 指定探查器返回错误前，等待探查器初始化的秒数。 如果未指定 `Interval`，则探查器将无限期等待。 默认情况下，  /start 将立即返回。 |
+     | [/user](../profiling/user-vsperfcmd.md) **:** [`Domain` **\\** ]`UserName` | 指定拥有所分析进程的帐户的域和用户名。 仅在进程以已登录用户外的用户身份运行时才需要此选项。 进程所有者在 Windows 任务管理器的“进程”选项卡上的“用户名”列中列出 。 |
+     | [/crosssession](../profiling/crosssession.md) | 启用其他会话中的进程分析。 如果应用程序在其他会话中运行，则需要此选项。 会话 ID 位于 Windows 任务管理器的“进程”选项卡上的“会话 ID”列中 。 可以将 **/CS** 指定为 **/crosssession** 的缩写。 |
+     | [/waitstart](../profiling/waitstart.md)[ **:** `Interval`] | 指定探查器返回错误前，等待探查器初始化的秒数。 如果未指定 `Interval`，则探查器将无限期等待。 默认情况下，/start 将立即返回。 |
      | [/globaloff](../profiling/globalon-and-globaloff.md) | 若要启动探查器而暂停数据收集，请将 **/globaloff** 选项添加到 **/start** 命令行。 使用 **/globalon** 可恢复分析。 |
      | [/counter](../profiling/counter.md) **:** `Config` | 从 Config 中所指定的处理器性能计数器收集信息。计数器信息将添加到在每个分析事件中收集的数据中。 |
      | [/wincounter](../profiling/wincounter.md) **:** `WinCounterPath` | 指定要在分析期间收集的 Windows 性能计数器。 |
      | [/automark](../profiling/automark.md) **:** `Interval` | 仅与 **/wincounter** 一起使用。 指定两次 Windows 性能计数器收集事件相隔的毫秒数。 默认值为 500 毫秒。 |
-     | [/events](../profiling/events-vsperfcmd.md) **:** `Config` | 指定要在分析期间收集的 Windows 事件跟踪 (ETW) 事件。 ETW 事件收集在单独的 (.etl) 文件中  。 |
+     | [/events](../profiling/events-vsperfcmd.md) **:** `Config` | 指定要在分析期间收集的 Windows 事件跟踪 (ETW) 事件。 ETW 事件收集在单独的 (.etl) 文件中。 |
 
 8. 从 Windows 服务控制管理器启动服务。
 
 ## <a name="control-data-collection"></a>控制数据收集
 
-服务运行时，可使用 VSPerfCmd.exe  选项开始或停止将数据写入到探查器数据文件。 通过控制数据收集，可以针对程序执行的特定部分（如启动或关闭服务）进行数据收集。
+服务运行时，可使用 VSPerfCmd.exe 选项开始或停止将数据写入到探查器数据文件。 通过控制数据收集，可以针对程序执行的特定部分（如启动或关闭服务）进行数据收集。
 
 - 以下 **VSPerfCmd** 选项对可启动和停止数据收集。 在单独的命令行上指定每个选项。 可多次打开和关闭数据收集。
 
@@ -88,7 +88,7 @@ ms.locfileid: "74778890"
 
 ## <a name="end-the-profiling-session"></a>结束分析会话
 
-若要结束分析会话，请停止正在运行受检测组件的服务，然后调用 VSPerfCmd [/shutdown](../profiling/shutdown.md) 选项来关闭探查器和分析数据文件  。 VSPerfClrEnv /globaloff 命令会清除分析环境变量  。
+若要结束分析会话，请停止正在运行受检测组件的服务，然后调用 VSPerfCmd [/shutdown](../profiling/shutdown.md) 选项来关闭探查器和分析数据文件。 VSPerfClrEnv /globaloff 命令会清除分析环境变量。
 
 必须重启计算机才能应用新的环境设置。
 
@@ -100,7 +100,7 @@ ms.locfileid: "74778890"
 
 3. 完成所有分析后，清除分析环境变量。 类型：
 
-     VSPerfClrEnv /globaloff 
+     VSPerfClrEnv /globaloff
 
 4. 使用原始模块替换被检测模块。 如有必要，重新配置服务的“启动类型”。
 

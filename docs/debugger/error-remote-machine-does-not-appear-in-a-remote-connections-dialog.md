@@ -1,7 +1,7 @@
 ---
-title: 错误：远程计算机未显示在“远程连接”对话框中 | Microsoft Docs
+title: 错误 - 远程计算机未显示在远程连接对话框中 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: troubleshooting
+ms.topic: error-reference
 dev_langs:
 - CSharp
 - VB
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dd46d2164ccb3cd26831160235b992d699229e2c
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: ac49379f513f753592191632cd3edf1af89a9dc4
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75916181"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85460593"
 ---
 # <a name="error-remote-machine-does-not-appear-in-a-remote-connections-dialog"></a>错误：远程计算机未显示在“远程连接”对话框中
 如果远程计算机未显示在“远程连接”对话框中，请检查以下常见原因。

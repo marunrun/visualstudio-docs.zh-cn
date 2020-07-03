@@ -1,7 +1,7 @@
 ---
 title: 设置调试和发布配置 | Microsoft Docs
 ms.date: 10/05/2018
-ms.topic: reference
+ms.topic: how-to
 f1_keywords:
 - vs.debug.builds
 dev_langs:
@@ -31,12 +31,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 75acf0a3a821b4d2561ea14e583e71761b8b476e
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 458e6cb4ebf882d2d9e331823cc4955143e7d5b7
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68925479"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85349154"
 ---
 # <a name="set-debug-and-release-configurations-in-visual-studio"></a>在 Visual Studio 中设置调试和发布配置
 
@@ -89,7 +89,7 @@ or
 
    可移植格式是 .NET Core 的最新跨平台格式。 如需详细了解各个选项，请参阅[“高级生成设置”对话框 (C#)](../ide/reference/advanced-build-settings-dialog-box-csharp.md)。
 
-   ![用 C# 生成版本的 PDB](../debugger/media/dbg_project_properties_pdb_csharp.png "GeneratePDBsForCSharp")
+   ![使用 C# 为版本生成 PDB](../debugger/media/dbg_project_properties_pdb_csharp.png "GeneratePDBsForCSharp")
 
 7. 生成你的项目。
 
@@ -111,7 +111,7 @@ or
 
    在大多数 C++ 项目中，默认值为 `$(OutDir)$(TargetName).pdb`，用于在输出文件夹中生成 .pdb 文件。
 
-   ![用 C++ 生成版本的 PDB](../debugger/media/dbg_project_properties_pdb_cplusplus.png "GeneratePDBsforCPlusPlus")
+   ![使用 C++ 为版本生成 PDB](../debugger/media/dbg_project_properties_pdb_cplusplus.png "GeneratePDBsforCPlusPlus")
 
 6. 生成你的项目。
 

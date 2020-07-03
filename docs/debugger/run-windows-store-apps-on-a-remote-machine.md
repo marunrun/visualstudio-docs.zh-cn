@@ -1,7 +1,7 @@
 ---
 title: 调试远程计算机上的 UWP 应用 | Microsoft Docs
 ms.date: 10/05/2018
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - CSharp
 - VB
@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 50d307cd65bfdf534b6ca3586e69bbc27be25e36
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3d208c59f08ddeb5a322d174a2c6b56dd901c2c4
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62902851"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85348114"
 ---
 # <a name="debug-uwp-apps-on-remote-machines-from-visual-studio"></a>在 Visual Studio 中调试远程计算机上的 UWP 应用
 
@@ -53,7 +53,7 @@ ms.locfileid: "62902851"
 
 1. 对于远程计算机，请在“远程计算机”字段中输入网络名称或 IP 地址，或在[“远程连接”对话框](#remote-connections)中选择“查找”以搜索设备 。
 
-    ![用于远程调试的托管项目属性](../debugger/media/vsrun_managed_projprop_remote.png "托管的调试项目属性")
+    ![用于远程调试的托管项目属性](../debugger/media/vsrun_managed_projprop_remote.png "托管调试项目属性")
 
 ### <a name="configure-a-c-project-for-remote-debugging"></a><a name="BKMK_Choosing_the_remote_device_for_JavaScript_and_C___projects"></a> 配置 C++ 项目以便进行远程调试
 

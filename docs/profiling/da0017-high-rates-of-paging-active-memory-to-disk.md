@@ -1,7 +1,7 @@
 ---
-title: 'DA0017: 活动内存到磁盘的分页速率很高 | Microsoft Docs'
+title: DA0017 - 以分页方式将活动内存移到磁盘的发生率高 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - vs.performance.17
 - vs.performance.rules.DA0017
@@ -13,20 +13,20 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 87e7c6b2d94602eca9e81098bb50bd0330b2bcd9
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 06295c1b158fe25b481b2aa036f8448895c546f5
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74779384"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544698"
 ---
 # <a name="da0017-high-rates-of-paging-active-memory-to-disk"></a>DA0017：以分页方式将活动内存移到磁盘的发生率高
 
-|||
+|项|“值”|
 |-|-|
 |规则 ID|DA0017|
 |类别|内存和分页|
-|分析方法|All|
+|分析方法|全部|
 |消息|当前活动内存到磁盘的分页速率很高。 应用程序可能受内存限制。|
 |规则类型|信息|
 
@@ -38,7 +38,7 @@ ms.locfileid: "74779384"
 ## <a name="rule-description"></a>规则说明
 
 > [!NOTE]
-> 当活动内存的分页级别达到较高级别时，将会触发此信息规则。 当分页级别极高时，将改为触发警告规则 [DA0014: 活动内存到磁盘的分页速率极高](../profiling/da0014-extremely-high-rates-of-paging-active-memory-to-disk.md)。
+> 当活动内存的分页级别达到较高级别时，将会触发此信息规则。 当分页级别极高时，将改为触发警告规则 [DA0014：活动内存到磁盘的分页速率极高](../profiling/da0014-extremely-high-rates-of-paging-active-memory-to-disk.md)。
 
  物理内存不足可能引起到磁盘的过度分页。 如果分页操作控制对分页文件所在物理磁盘的使用，它们将减缓对同一磁盘的其他面向应用程序的磁盘操作。
 

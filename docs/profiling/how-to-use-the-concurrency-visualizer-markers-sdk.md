@@ -1,19 +1,19 @@
 ---
-title: 如何：使用并发可视化工具标记 SDK | Microsoft Docs
+title: 如何 - 使用并发可视化工具标记 SDK | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 19a45032-f8a7-4137-890e-2ceeec938b8d
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2d97ea90963f70d3a06c669f08473bab27fa08bd
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 0782744236777fb84a6d87f93f59697275df1c11
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "68870330"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85331385"
 ---
 # <a name="how-to-use-the-concurrency-visualizer-markers-sdk"></a>如何：使用并发可视化工具标记 SDK
 本主题演示如何使用并发可视化工具 SDK 来创建范围并编写标志、消息和警报。
@@ -46,7 +46,7 @@ ms.locfileid: "68870330"
     delete alertSpan;
     ```
 
-4. 在菜单栏上，依次选择“分析”  、“并发可视化工具”  、“从当前项目开始”  以运行应用并显示并发可视化工具。 下图显示并发可视化工具中的三个范围和三种标记。
+4. 在菜单栏上，依次选择“分析”、“并发可视化工具”、“从当前项目开始”以运行应用并显示并发可视化工具。 下图显示并发可视化工具中的三个范围和三种标记。
 
      ![具有 3 种标记和警报的并发可视化工具](../profiling/media/cvmarkersnative.png "CvMarkersNative")
 
@@ -124,7 +124,7 @@ ms.locfileid: "68870330"
     alertSpan.Leave();
     ```
 
-4. 在菜单栏上，依次选择“分析”  、“并发可视化工具”  、“从当前项目开始”  以运行应用并显示并发可视化工具。 下图在并发可视化工具的“线程”视图中显示三个范围和三种标记。
+4. 在菜单栏上，依次选择“分析”、“并发可视化工具”、“从当前项目开始”以运行应用并显示并发可视化工具。 下图在并发可视化工具的“线程”视图中显示三个范围和三种标记。
 
      ![具有标记和警报的并发可视化工具](../profiling/media/cvmarkersmanaged.png "CvMarkersManaged")
 

@@ -1,9 +1,9 @@
 ---
-title: 错误：Microsoft Visual Studio 远程调试监视器 (MSVSMON.EXE) 似乎没有在远程计算机上运行。
+title: 错误 - “Microsoft Visual Studio 远程调试监视器”(MSVSMON.EXE) 似乎没有在远程计算机上运行。
 titleSuffix: ''
 ms.custom: seodec18
 ms.date: 11/04/2016
-ms.topic: troubleshooting
+ms.topic: error-reference
 f1_keywords:
 - vs.debug.error.server_machine_no_default
 dev_langs:
@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cc9558ff4d470d30df19ea5982eb6acbcc708eea
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: 6ba7fb30bcb5ac04a823b4ba654382ac23a966fe
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75916262"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85460606"
 ---
 # <a name="error-the-microsoft-visual-studio-remote-debugging-monitor-msvsmonexe-does-not-appear-to-be-running-on-the-remote-computer"></a>错误：Microsoft Visual Studio 远程调试监视器 (MSVSMON.EXE) 似乎没有在远程计算机上运行。
 此错误消息表示 Visual Studio 未能在远程计算机上找到 Visual Studio 远程调试监视器的正确实例。 必须安装 Visual Studio 远程调试监视器以便进行远程调试。 有关下载和设置远程调试器的信息，请参阅[远程调试](../debugger/remote-debugging.md)。
@@ -70,9 +70,9 @@ ms.locfileid: "75916262"
  你可能需要在另一个时间进行远程调试，或重新安排另一个时间进行网络上的工作。
 
 ## <a name="more-help"></a>更多帮助
- 若要获取更多远程调试器的帮助（包括命令行开关），请在远程调试器窗口中单击“帮助”>“使用情况”。 如果没有打开远程调试器窗口，可以将以下行复制到“文件资源管理器”窗口来查看网页。 （需要将 \<Visual Studio installation directory> 替换为 Visual Studio 的安装位置。）
+ 若要获取更多远程调试器的帮助（包括命令行开关），请在远程调试器窗口中单击“帮助”>“使用情况”。 如果没有打开远程调试器窗口，可以将以下行复制到“文件资源管理器”窗口来查看网页。 （需要将 \<Visual Studio installation directory> 替换为你的 Visual Studio 安装的位置。）
 
- res:// *\<Visual Studio installation directory>* \Common7\IDE\Remote%20Debugger\x64\msvsmon.exe/help.htm
+ res://\<Visual Studio installation directory>\Common7\IDE\Remote%20Debugger\x64\msvsmon.exe/help.htm
 
 ## <a name="see-also"></a>请参阅
 - [远程调试错误和疑难解答](../debugger/remote-debugging-errors-and-troubleshooting.md)

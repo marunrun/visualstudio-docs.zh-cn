@@ -1,7 +1,7 @@
 ---
-title: DA0013：String.Split 或 String.Substring 的使用率高 | Microsoft Docs
+title: DA0013 - String.Split 或 String.Substring 的使用率高 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - vs.performance.13
 - vs.performance.rules.DAAvoidStringSubstr
@@ -17,16 +17,16 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: d42469ac5236a41eda96af5d1fe896a5ed84a321
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: a475ef1f4d60d7dfb0d2ea7189295bad47426c0a
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74779398"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85520609"
 ---
 # <a name="da0013-high-usage-of-stringsplit-or-stringsubstring"></a>DA0013：String.Split 或 String.Substring 的使用率高
 
-|||
+|项|“值”|
 |-|-|
 |规则 ID|DA0013|
 |类别|.NET Framework 使用指南|

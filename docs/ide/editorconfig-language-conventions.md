@@ -13,12 +13,12 @@ manager: jillfra
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: a3f80eb555ef11a1e0a462e93d4508e778bd987d
-ms.sourcegitcommit: 054815dc9821c3ea219ae6f31ebd9cd2dc8f6af5
+ms.openlocfilehash: 3fa32e6155959df6e665a807af3b364923ba3f54
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80544016"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85533453"
 ---
 # <a name="language-conventions"></a>语言约定
 
@@ -29,7 +29,7 @@ Visual Studio 中 EditorConfig 的语言约定分为两类：适用于 Visual Ba
 >
 >   ![代码语言选取器控件](media/code-language-picker.png)
 >
-> - 使用“本文中”链接跳转到页面的不同部分  。
+> - 使用“本文中”链接跳转到页面的不同部分。
 
 ## <a name="rule-format"></a>规则格式
 
@@ -55,8 +55,8 @@ Severity | 效果
 `error` | 如违反此样式规则，显示编译器错误。
 `warning` | 如违反此样式规则，显示编译器警告。
 `suggestion` | 如违反此样式规则，会将其作为建议向用户显示。 建议显示为前两个字符下的三个灰点。
-`silent` | 如违反此规则，不会向用户显示任何内容。 但代码生成功能会以此样式生成代码。 严重性为 `silent` 的规则参与清理，并在“快速操作和重构”菜单中显示  。
-`none` | 如违反此规则，不会向用户显示任何内容。 但代码生成功能会以此样式生成代码。 “快速操作和重构”菜单中永远不会出现严重性为 `none` 的规则  。 大多数情况下，此情况被视为“禁用”或“忽略”。
+`silent` | 如违反此规则，不会向用户显示任何内容。 但代码生成功能会以此样式生成代码。 严重性为 `silent` 的规则参与清理，并在“快速操作和重构”菜单中显示。
+`none` | 如违反此规则，不会向用户显示任何内容。 但代码生成功能会以此样式生成代码。 “快速操作和重构”菜单中永远不会出现严重性为 `none` 的规则。 大多数情况下，此情况被视为“禁用”或“忽略”。
 
 ::: moniker range=">=vs-2019"
 
@@ -66,7 +66,7 @@ Severity | 效果
 
 更改代码样式约定：
 
-1. 将鼠标悬停在编辑器中的波浪线上，然后打开显示的灯泡菜单。 选择“配置或取消”问题 > “配置 \<规则 ID> 代码样式”   。
+1. 将鼠标悬停在编辑器中的波浪线上，然后打开显示的灯泡菜单。 选择“配置或取消问题” > “配置 \<rule ID> 代码样式” 。
 
    ![在 Visual Studio 的灯泡菜单中配置代码样式](media/vs-2019/configure-code-style.png)
 
@@ -76,7 +76,7 @@ Severity | 效果
 
    Visual Studio 在 EditorConfig 文件中添加或修改配置设置，如预览框中所示。
 
-若要更改代码样式冲突的严重性，请执行相同的步骤，但请选择“配置 \<规则 ID > 严重性”，而不选择“配置 \<规则 ID > 代码样式”   。 有关详细信息，请参阅[自动配置规则严重性](../code-quality/use-roslyn-analyzers.md#automatically-configure-rule-severity)。
+若要更改代码样式冲突的严重性，请执行相同的步骤，但请选择“配置 \<rule ID> 严重性”，而不选择“配置 \<rule ID> 代码样式” 。 有关详细信息，请参阅[自动配置规则严重性](../code-quality/use-roslyn-analyzers.md#automatically-configure-rule-severity)。
 
 ::: moniker-end
 
@@ -118,9 +118,9 @@ Severity | 效果
 
 ### <a name="this-and-me-qualifiers"></a><a name="this-and-me"></a>“This.” 和“Me.” 限定符
 
-此样式规则可应用于字段、属性、方法或事件。 值为“true”表示代码符号以 `this.` (C#) 或 `Me.` (Visual Basic) 开头为首选项  。 值为“false”表示码位元素不以 `this.` 或 `Me.` 开头为首选项   。
+此样式规则可应用于字段、属性、方法或事件。 值为“true”表示代码符号以 `this.` (C#) 或 `Me.` (Visual Basic) 开头为首选项。 值为“false”表示码位元素不以 `this.` 或 `Me.` 开头为首选项。
 
-这些规则可在 .editorconfig 文件中以如下方式出现  ：
+这些规则可在 .editorconfig 文件中以如下方式出现：
 
 ```ini
 # CSharp and Visual Basic code style settings:
@@ -133,12 +133,12 @@ dotnet_style_qualification_for_event = false:suggestion
 
 #### <a name="dotnet_style_qualification_for_field"></a>dotnet\_style\_qualification\_for_field
 
-|||
+|Property|“值”|
 |-|-|
 | **规则名称** | dotnet_style_qualification_for_field |
 | **规则 ID** | IDE0003 和 IDE0009 |
 | **适用的语言** | C# 和 Visual Basic |
-| **值** | `true` - 字段以 `this.` (C#) 或 `Me.` (Visual Basic) 开头为首选项<br /><br />`false` - 字段不以 `this.` 或 `Me.` 开头为首选项  |
+| **值** | `true` - 字段以 `this.` (C#) 或 `Me.` (Visual Basic) 开头为首选项<br /><br />`false` - 字段不以 `this.` 或 `Me.` 开头为首选项 |
 | **Visual Studio 默认值** | `false:silent` |
 
 代码示例：
@@ -161,12 +161,12 @@ capacity = 0
 
 #### <a name="dotnet_style_qualification_for_property"></a>dotnet\_style\_qualification\_for_property
 
-|||
+|Property|“值”|
 |-|-|
 | **规则名称** | dotnet_style_qualification_for_property |
 | **规则 ID** | IDE0003 和 IDE0009 |
 | **适用的语言** | C# 和 Visual Basic |
-| **值** | `true` - 属性以 `this.` (C#) 或 `Me.` (Visual Basic) 开头为首选项<br /><br />`false` - 属性不以 `this.` 或 `Me.` 开头为首选项  |
+| **值** | `true` - 属性以 `this.` (C#) 或 `Me.` (Visual Basic) 开头为首选项<br /><br />`false` - 属性不以 `this.` 或 `Me.` 开头为首选项 |
 | **Visual Studio 默认值** | `false:silent` |
 
 代码示例：
@@ -189,12 +189,12 @@ ID = 0
 
 #### <a name="dotnet_style_qualification_for_method"></a>dotnet\_style\_qualification\_for_method
 
-|||
+|Property|“值”|
 |-|-|
 | **规则名称** | dotnet_style_qualification_for_method |
 | **规则 ID** | IDE0003 和 IDE0009 |
 | **适用的语言** | C# 和 Visual Basic |
-| **值** | `true` - 方法以 `this.` (C#) 或 `Me.` (Visual Basic) 开头为首选项。<br /><br />`false` - 方法不以 `this.` 或 `Me.` 开头为首选项  。 |
+| **值** | `true` - 方法以 `this.` (C#) 或 `Me.` (Visual Basic) 开头为首选项。<br /><br />`false` - 方法不以 `this.` 或 `Me.` 开头为首选项。 |
 | **Visual Studio 默认值** | `false:silent` |
 
 代码示例：
@@ -217,12 +217,12 @@ Display()
 
 #### <a name="dotnet_style_qualification_for_event"></a>dotnet\_style\_qualification\_for_event
 
-|||
+|Property|“值”|
 |-|-|
 | **规则名称** | dotnet_style_qualification_for_event |
 | **规则 ID** | IDE0003 和 IDE0009 |
 | **适用的语言** | C# 和 Visual Basic |
-| **值** | `true` - 事件以 `this.` (C#) 或 `Me.` (Visual Basic) 开头为首选项。<br /><br />`false` - 事件不以 `this.` 或 `Me.` 开头为首选项  。 |
+| **值** | `true` - 事件以 `this.` (C#) 或 `Me.` (Visual Basic) 开头为首选项。<br /><br />`false` - 事件不以 `this.` 或 `Me.` 开头为首选项。 |
 | **Visual Studio 默认值** | `false:silent` |
 
 代码示例：
@@ -245,9 +245,9 @@ AddHandler Elapsed, AddressOf Handler
 
 ### <a name="language-keywords-instead-of-framework-type-names-for-type-references"></a><a name="language-keywords"></a>语言关键字，而非类型引用的框架类型名称
 
-此样式规则可应用到本地变量、方法参数和类成员，也可作为针对类型成员访问表达式的单独规则。 值为“true”  表示，如果类型中有用于表示类型的关键字，首选语言关键字（例如 `int` 或 `Integer`），而不是类型名称（例如 `Int32`）。 值为“false”代表类型名称为首选项，而非语言关键字  。
+此样式规则可应用到本地变量、方法参数和类成员，也可作为针对类型成员访问表达式的单独规则。 值为“true”表示，如果类型中有用于表示类型的关键字，首选语言关键字（例如 `int` 或 `Integer`），而不是类型名称（例如 `Int32`）。 值为“false”代表类型名称为首选项，而非语言关键字。
 
-这些规则可在 .editorconfig 文件中以如下方式出现  ：
+这些规则可在 .editorconfig 文件中以如下方式出现：
 
 ```ini
 # CSharp and Visual Basic code style settings:
@@ -258,7 +258,7 @@ dotnet_style_predefined_type_for_member_access = true:suggestion
 
 #### <a name="dotnet_style_predefined_type_for_locals_parameters_members"></a>dotnet\_style\_predefined\_type\_for\_locals\_parameters_members
 
-|||
+|Property|“值”|
 |-|-|
 | **规则名称** | dotnet_style_predefined_type_for_locals_parameters_members |
 | **规则 ID** | IDE0012 和 IDE0014 |
@@ -286,7 +286,7 @@ Private _member As Int32
 
 #### <a name="dotnet_style_predefined_type_for_member_access"></a>dotnet\_style\_predefined\_type\_for\_member_access
 
-|||
+|Property|“值”|
 |-|-|
 | **规则名称** | dotnet_style_predefined_type_for_member_access |
 | **规则 ID** | IDE0013 和 IDE0015 |
@@ -316,7 +316,7 @@ Dim local = Int32.MaxValue
 
 本部分中的样式规则与修饰符首选项相关，包括要求使用可访问性修饰符、指定所需的修饰符排序顺序以及要求使用只读修饰符。
 
-这些规则可在 .editorconfig 文件中以如下方式出现  ：
+这些规则可在 .editorconfig 文件中以如下方式出现：
 
 ```ini
 # CSharp and Visual Basic code style settings:
@@ -335,12 +335,12 @@ visual_basic_preferred_modifier_order = Partial,Default,Private,Protected,Public
 
 #### <a name="dotnet_style_require_accessibility_modifiers"></a>dotnet\_style\_require\_accessibility_modifiers
 
-|||
+|Property|“值”|
 |-|-|
 | **规则名称** | dotnet_style_require_accessibility_modifiers |
 | **规则 ID** | IDE0040 |
 | **适用的语言** | C# 和 Visual Basic |
-| **值** | `always` - 优先指定可访问性修饰符。<br /><br />`for_non_interface_members` - 优先声明可访问性修饰符，公共接口成员除外。 （这与往常相同，并且已添加以用于未来验证（如果 C# 添加默认接口方法）  。）<br /><br />`never` - 不优先指定可访问性修饰符。<br /><br />`omit_if_default` - 优先指定可访问性修饰符（除非它们是默认修饰符）。 |
+| **值** | `always` - 优先指定可访问性修饰符。<br /><br />`for_non_interface_members` - 优先声明可访问性修饰符，公共接口成员除外。 （这与往常相同，并且已添加以用于未来验证（如果 C# 添加默认接口方法）。）<br /><br />`never` - 不优先指定可访问性修饰符。<br /><br />`omit_if_default` - 优先指定可访问性修饰符（除非它们是默认修饰符）。 |
 | **Visual Studio 默认值** | `for_non_interface_members:silent` |
 | **引入的版本** | Visual Studio 2017 版本 15.5 |
 
@@ -363,7 +363,7 @@ class MyClass
 
 #### <a name="csharp_preferred_modifier_order"></a>csharp_preferred_modifier_order
 
-|||
+|Property|“值”|
 |-|-|
 | **规则名称** | csharp_preferred_modifier_order |
 | **规则 ID** | IDE0036 |
@@ -387,7 +387,7 @@ class MyClass
 
 #### <a name="visual_basic_preferred_modifier_order"></a>visual_basic_preferred_modifier_order
 
-|||
+|Property|“值”|
 |-|-|
 | **规则名称** | visual_basic_preferred_modifier_order |
 | **规则 ID** | IDE0036 |
@@ -410,7 +410,7 @@ End Class
 
 #### <a name="visual_basic_style_unused_value_expression_statement_preference"></a>visual_basic_style_unused_value_expression_statement_preference
 
-|||
+|Property|“值”|
 |-|-|
 | **规则名称** | visual_basic_style_unused_value_expression_statement_preference |
 | **规则 ID** | IDE0058 |
@@ -428,7 +428,7 @@ Dim unused = Computation()
 
 #### <a name="visual_basic_style_unused_value_assignment_preference"></a>visual_basic_style_unused_value_assignment_preference
 
-|||
+|Property|“值”|
 |-|-|
 | **规则名称** | visual_basic_style_unused_value_assignment_preference |
 | **规则 ID** | IDE0059 |
@@ -447,7 +447,7 @@ Dim x = 1;
 
 #### <a name="dotnet_style_readonly_field"></a>dotnet_style_readonly_field
 
-|||
+|Property|“值”|
 |-|-|
 | **规则名称** | dotnet_style_readonly_field |
 | **规则 ID** | IDE0044 |
@@ -477,7 +477,7 @@ End Class
 
 本部分中的样式规则涉及括号首选项，包括算术、关系和其他二元运算符的括号使用情况。
 
-这些规则可在 .editorconfig 文件中以如下方式出现  ：
+这些规则可在 .editorconfig 文件中以如下方式出现：
 
 ```ini
 # CSharp and Visual Basic code style settings:
@@ -490,7 +490,7 @@ dotnet_style_parentheses_in_other_operators = never_if_unnecessary:silent
 
 #### <a name="dotnet_style_parentheses_in_arithmetic_binary_operators"></a>dotnet\_style\_parentheses\_in\_arithmetic\_binary_operators
 
-|||
+|Property|“值”|
 |-|-|
 | **规则名称** | dotnet_style_parentheses_in_arithmetic_binary_operators |
 | **规则 ID** | IDE0047 |
@@ -519,7 +519,7 @@ Dim v = a + b * c
 
 #### <a name="dotnet_style_parentheses_in_relational_binary_operators"></a>dotnet\_style\_parentheses\_in\_relational\_binary_operators
 
-|||
+|Property|“值”|
 |-|-|
 | **规则名称** | dotnet_style_parentheses_in_relational_binary_operators |
 | **规则 ID** | IDE0047 |
@@ -548,7 +548,7 @@ Dim v = a < b = c > d
 
 #### <a name="dotnet_style_parentheses_in_other_binary_operators"></a>dotnet\_style\_parentheses\_in\_other\_binary_operators
 
-|||
+|Property|“值”|
 |-|-|
 | **规则名称** | dotnet_style_parentheses_in_other_binary_operators |
 | **规则 ID** | IDE0047 |
@@ -577,7 +577,7 @@ Dim v = a OrElse b AndAlso c
 
 #### <a name="dotnet_style_parentheses_in_other_operators"></a>dotnet\_style\_parentheses\_in\_other_operators
 
-|||
+|Property|“值”|
 |-|-|
 | **规则名称** | dotnet_style_parentheses_in_other_operators |
 | **规则 ID** | IDE0047 |
@@ -608,7 +608,7 @@ Dim v = a.b.Length
 
 本节中的样式规则与表达式级别首选项有关，包括对象初始值设定项、集合初始值设定项、显式或推断元组名称和推断匿名类型的使用。
 
-这些规则可在 .editorconfig 文件中以如下方式出现  ：
+这些规则可在 .editorconfig 文件中以如下方式出现：
 
 ```ini
 # CSharp and Visual Basic code style settings:
@@ -626,12 +626,12 @@ dotnet_style_prefer_compound_assignment = true:suggestion
 
 #### <a name="dotnet_style_object_initializer"></a>dotnet\_style\_object_initializer
 
-|||
+|Property|“值”|
 |-|-|
 | **规则名称** | dotnet_style_object_initializer |
 | **规则 ID** | IDE0017 |
 | **适用的语言** | C# 和 Visual Basic |
-| **值** | `true` - 在可能情况下，更倾向使用对象初始值设定项来初始化对象<br /><br />`false` - 更倾向不使用对象初始值设定项来初始化对象  |
+| **值** | `true` - 在可能情况下，更倾向使用对象初始值设定项来初始化对象<br /><br />`false` - 更倾向不使用对象初始值设定项来初始化对象 |
 | **Visual Studio 默认值** | `true:suggestion` |
 
 代码示例：
@@ -656,12 +656,12 @@ c.Age = 21
 
 #### <a name="dotnet_style_collection_initializer"></a>dotnet\_style\_collection_initializer
 
-|||
+|Property|“值”|
 |-|-|
 | **规则名称** | dotnet_style_collection_initializer |
 | **规则 ID** | IDE0028 |
 | **适用的语言** | C# 和 Visual Basic |
-| **值** | `true` - 在可能情况下，更倾向使用集合初始值设定项来初始化集合<br /><br />`false` - 不使用集合初始值设定项来初始化集合为首选项  |
+| **值** | `true` - 在可能情况下，更倾向使用集合初始值设定项来初始化集合<br /><br />`false` - 不使用集合初始值设定项来初始化集合为首选项 |
 | **Visual Studio 默认值** | `true:suggestion` |
 
 代码示例：
@@ -690,7 +690,7 @@ list.Add(3)
 
 #### <a name="dotnet_style_explicit_tuple_names"></a>dotnet\_style\_explicit\_tuple_names
 
-|||
+|Property|“值”|
 |-|-|
 | **规则名称** | dotnet_style_explicit_tuple_names |
 | **规则 ID** | IDE0033 |
@@ -722,7 +722,7 @@ Dim name = customer.Item1
 
 #### <a name="dotnet_style_prefer_inferred_tuple_names"></a>dotnet\_style\_prefer\_inferred\_tuple_names
 
-|||
+|Property|“值”|
 |-|-|
 | **规则名称** | dotnet_style_prefer_inferred_tuple_names |
 | **规则 ID** | IDE0037 |
@@ -751,7 +751,7 @@ Dim tuple = (name:=name, age:=age)
 
 #### <a name="dotnet_style_prefer_inferred_anonymous_type_member_names"></a>dotnet\_style\_prefer\_inferred\_anonymous\_type\_member_names
 
-|||
+|Property|“值”|
 |-|-|
 | **规则名称** | dotnet_style_prefer_inferred_anonymous_type_member_names |
 | **规则 ID** | IDE0037 |
@@ -780,7 +780,7 @@ Dim anon = New With {.name = name, .age = age}
 
 #### <a name="dotnet_style_prefer_auto_properties"></a>dotnet\_style\_prefer\_auto\_properties
 
-|||
+|Property|“值”|
 |-|-|
 | **规则名称** | dotnet_style_prefer_auto_properties |
 | **规则 ID** | IDE0032 |
@@ -823,7 +823,7 @@ End Property
 
 #### <a name="dotnet_style_prefer_is_null_check_over_reference_equality_method"></a>dotnet\_style\_prefer\_is\_null\_check\_over\_reference\_equality\_method
 
-|||
+|Property|“值”|
 |-|-|
 | **规则名称** | dotnet_style_prefer_is_null_check_over_reference_equality_method |
 | **规则 ID** | IDE0041 |
@@ -858,7 +858,7 @@ End If
 
 #### <a name="dotnet_style_prefer_conditional_expression_over_assignment"></a>dotnet\_style\_prefer\_conditional\_expression\_over_assignment
 
-|||
+|Property|“值”|
 |-|-|
 | **规则名称** | dotnet_style_prefer_conditional_expression_over_assignment |
 | **规则 ID** | IDE0045 |
@@ -900,7 +900,7 @@ End If
 
 #### <a name="dotnet_style_prefer_conditional_expression_over_return"></a>dotnet\_style\_prefer\_conditional\_expression\_over_return
 
-|||
+|Property|“值”|
 |-|-|
 | **规则名称** | dotnet_style_prefer_conditional_expression_over_return |
 | **规则 ID** | IDE0046 |
@@ -940,7 +940,7 @@ End If
 
 #### <a name="dotnet_style_prefer_compound_assignment"></a>dotnet\_style\_prefer\_compound\_assignment
 
-|||
+|Property|“值”|
 |-|-|
 | **规则名称** | dotnet_style_prefer_compound_assignment |
 | **规则 ID** | IDE0054 |
@@ -970,7 +970,7 @@ x = x + 1
 
 本节中的样式规则与 Null 检查首选项有关。
 
-这些规则可在 .editorconfig 文件中以如下方式出现  ：
+这些规则可在 .editorconfig 文件中以如下方式出现：
 
 ```ini
 # CSharp and Visual Basic code style settings:
@@ -982,7 +982,7 @@ dotnet_style_prefer_is_null_check_over_reference_equality_method = true:silent
 
 #### <a name="dotnet_style_coalesce_expression"></a>dotnet\_style\_coalesce_expression
 
-|||
+|Property|“值”|
 |-|-|
 | **规则名称** | dotnet_style_coalesce_expression |
 | **规则 ID** | IDE0029 |
@@ -1012,7 +1012,7 @@ Dim v = If(x IsNot Nothing, x, y)
 
 #### <a name="dotnet_style_null_propagation"></a>dotnet\_style\_null_propagation
 
-|||
+|Property|“值”|
 |-|-|
 | **规则名称** | dotnet_style_null_propagation |
 | **规则 ID** | IDE0031 |
@@ -1042,7 +1042,7 @@ Dim v = If(o IsNot Nothing, o.ToString(), Nothing)
 
 ### <a name="dotnet_style_prefer_is_null_check_over_reference_equality_method"></a>dotnet\_style\_prefer\_is\_null\_check\_over\_reference\_equality\_method
 
-|||
+|Property|“值”|
 |-|-|
 | **规则名称** | dotnet_style_prefer_is_null_check_over_reference_equality_method |
 | **规则 ID** | IDE0041 |
@@ -1061,7 +1061,7 @@ Dim v = If(o IsNot Nothing, o.ToString(), Nothing)
 
 本节中的质量规则涉及方法参数。
 
-这些规则可在 .editorconfig 文件中以如下方式出现  ：
+这些规则可在 .editorconfig 文件中以如下方式出现：
 
 ```ini
 # CSharp and Visual Basic code quality settings:
@@ -1071,7 +1071,7 @@ dotnet_code_quality_unused_parameters = all:suggestion
 
 #### <a name="dotnet_code_quality_unused_parameters"></a>dotnet\_code\_quality\_unused\_parameters
 
-|||
+|Property|“值”|
 |-|-|
 | **规则名称** | dotnet_code_quality_unused_parameters |
 | **规则 ID** | IDE0060 |
@@ -1150,7 +1150,7 @@ End Function
 
 本节中的样式规则与变量声明中的 [var](/dotnet/csharp/language-reference/keywords/var) 关键字和显式类型的使用有关。 此规则可单独应用于内置类型（前提是该类型为明显）和其他情况。
 
-.editorconfig 文件示例  ：
+.editorconfig 文件示例：
 
 ```ini
 # CSharp code style settings:
@@ -1162,7 +1162,7 @@ csharp_style_var_elsewhere = true:suggestion
 
 #### <a name="csharp_style_var_for_built_in_types"></a>csharp\_style\_var\_for\_built\_in_types
 
-|||
+|Property|“值”|
 |-|-|
 | **规则名称** | csharp_style_var_for_built_in_types |
 | **规则 ID** | IDE0007 和 IDE0008 |
@@ -1182,7 +1182,7 @@ int x = 5;
 
 #### <a name="csharp_style_var_when_type_is_apparent"></a>csharp\_style\_var\_when\_type\_is_apparent
 
-|||
+|Property|“值”|
 |-|-|
 | **规则名称** | csharp_style_var_when_type_is_apparent |
 | **规则 ID** | IDE0007 和 IDE0008 |
@@ -1202,7 +1202,7 @@ Customer obj = new Customer();
 
 #### <a name="csharp_style_var_elsewhere"></a>csharp\_style\_var_elsewhere
 
-|||
+|Property|“值”|
 |-|-|
 | **规则名称** | csharp_style_var_elsewhere |
 | **规则 ID** | IDE0007 和 IDE0008 |
@@ -1224,7 +1224,7 @@ bool f = this.Init();
 
 本节中的样式规则与在逻辑由单个表达式组成的情况下，[expression-bodied 成员](/dotnet/csharp/programming-guide/statements-expressions-operators/expression-bodied-members)的使用有关。 此规则可应用于方法、构造函数、运算符、属性、索引器和访问器。
 
-.editorconfig 文件示例  ：
+.editorconfig 文件示例：
 
 ```ini
 # CSharp code style settings:
@@ -1241,7 +1241,7 @@ csharp_style_expression_bodied_local_functions = false:silent
 
 #### <a name="csharp_style_expression_bodied_methods"></a>csharp\_style\_expression\_bodied_methods
 
-|||
+|Property|“值”|
 |-|-|
 | **规则名称** | csharp_style_expression_bodied_methods |
 | **规则 ID** | IDE0022 |
@@ -1261,7 +1261,7 @@ public int GetAge() { return this.Age; }
 
 #### <a name="csharp_style_expression_bodied_constructors"></a>csharp\_style\_expression\_bodied_constructors
 
-|||
+|Property|“值”|
 |-|-|
 | **规则名称** | csharp_style_expression_bodied_constructors |
 | **规则 ID** | IDE0021 |
@@ -1281,7 +1281,7 @@ public Customer(int age) { Age = age; }
 
 #### <a name="csharp_style_expression_bodied_operators"></a>csharp\_style\_expression\_bodied_operators
 
-|||
+|Property|“值”|
 |-|-|
 | **规则名称** | csharp_style_expression_bodied_operators |
 | **规则 ID** | IDE0023 和 IDE0024 |
@@ -1303,7 +1303,7 @@ public static ComplexNumber operator + (ComplexNumber c1, ComplexNumber c2)
 
 #### <a name="csharp_style_expression_bodied_properties"></a>csharp\_style\_expression\_bodied_properties
 
-|||
+|Property|“值”|
 |-|-|
 | **规则名称** | csharp_style_expression_bodied_properties |
 | **规则 ID** | IDE0025 |
@@ -1323,7 +1323,7 @@ public int Age { get { return _age; }}
 
 #### <a name="csharp_style_expression_bodied_indexers"></a>csharp\_style\_expression\_bodied_indexers
 
-|||
+|Property|“值”|
 |-|-|
 | **规则名称** | csharp_style_expression_bodied_indexers |
 | **规则 ID** | IDE0026 |
@@ -1343,7 +1343,7 @@ public T this[int i] { get { return _values[i]; } }
 
 #### <a name="csharp_style_expression_bodied_accessors"></a>csharp\_style\_expression\_bodied_accessors
 
-|||
+|Property|“值”|
 |-|-|
 | **规则名称** | csharp_style_expression_bodied_accessors |
 | **规则 ID** | IDE0027 |
@@ -1363,7 +1363,7 @@ public int Age { get { return _age; } set { _age = value; } }
 
 #### <a name="csharp_style_expression_bodied_lambdas"></a>csharp\_style\_expression\_bodied_lambdas
 
-|||
+|Property|“值”|
 |-|-|
 | **规则名称** | csharp_style_expression_bodied_lambdas |
 | **规则 ID** | IDE0053 |
@@ -1384,7 +1384,7 @@ Func<int, int> square = x => { return x * x; };
 
 从 C# 7.0 开始，C# [支持本地函数](/dotnet/csharp/programming-guide/classes-and-structs/local-functions)。 本地函数是一种嵌套在另一成员中的类型的私有方法。
 
-|||
+|Property|“值”|
 |-|-|
 | **规则名称** | csharp_style_expression_bodied_local_functions |
 | **规则 ID** | IDE0061 |
@@ -1417,7 +1417,7 @@ void M()
 
 本节中的样式规则与 C# 中[模式匹配](/dotnet/csharp/pattern-matching)的使用有关。
 
-.editorconfig 文件示例  ：
+.editorconfig 文件示例：
 
 ```ini
 # CSharp code style settings:
@@ -1428,7 +1428,7 @@ csharp_style_pattern_matching_over_as_with_null_check = true:suggestion
 
 #### <a name="csharp_style_pattern_matching_over_is_with_cast_check"></a>csharp\_style\_pattern\_matching\_over\_is\_with\_cast_check
 
-|||
+|Property|“值”|
 |-|-|
 | **规则名称** | csharp_style_pattern_matching_over_is_with_cast_check |
 | **规则 ID** | IDE0020 |
@@ -1448,7 +1448,7 @@ if (o is int) {var i = (int)o; ... }
 
 #### <a name="csharp_style_pattern_matching_over_as_with_null_check"></a>csharp\_style\_pattern\_matching\_over\_as\_with\_null_check
 
-|||
+|Property|“值”|
 |-|-|
 | **规则名称** | csharp_style_pattern_matching_over_as_with_null_check |
 | **规则 ID** | IDE0019 |
@@ -1473,7 +1473,7 @@ if (s != null) {...}
 
 #### <a name="csharp_style_inlined_variable_declaration"></a>csharp\_style\_inlined\_variable_declaration
 
-|||
+|Property|“值”|
 |-|-|
 | **规则名称** | csharp_style_inlined_variable_declaration |
 | **规则 ID** | IDE0018 |
@@ -1492,7 +1492,7 @@ int i;
 if (int.TryParse(value, out i) {...}
 ```
 
-.editorconfig 文件示例  ：
+.editorconfig 文件示例：
 
 ```ini
 # CSharp code style settings:
@@ -1504,7 +1504,7 @@ csharp_style_inlined_variable_declaration = true:suggestion
 
 本节中的样式规则与表达式级首选项有关。
 
-.editorconfig 文件示例  ：
+.editorconfig 文件示例：
 
 ```ini
 # CSharp code style settings:
@@ -1516,7 +1516,7 @@ csharp_prefer_simple_default_expression = true:suggestion
 
 此样式规则与在编译器可以推断表达式类型的情况下，[默认值表达式的 `default` 文本](/dotnet/csharp/language-reference/operators/default#default-literal)的使用有关。
 
-|||
+|Property|“值”|
 |-|-|
 | **规则名称** | csharp_prefer_simple_default_expression |
 | **规则 ID** | IDE0034 |
@@ -1538,7 +1538,7 @@ void DoWork(CancellationToken cancellationToken = default(CancellationToken)) { 
 
 这些样式规则与 `null` 检查的相关语法有关，包括 `throw` 表达式或 `throw` 语句的使用，以及调用 [lambda 表达式](/dotnet/csharp/lambda-expressions)时是否执行 NULL 检查或使用条件合并运算符 (`?.`)。
 
-.editorconfig 文件示例  ：
+.editorconfig 文件示例：
 
 ```ini
 # CSharp code style settings:
@@ -1549,7 +1549,7 @@ csharp_style_conditional_delegate_call = false:suggestion
 
 #### <a name="csharp_style_throw_expression"></a>csharp\_style\_throw_expression
 
-|||
+|Property|“值”|
 |-|-|
 | **规则名称** | csharp_style_throw_expression |
 | **规则 ID** | IDE0016 |
@@ -1570,7 +1570,7 @@ this.s = s;
 
 #### <a name="csharp_style_conditional_delegate_call"></a>csharp\_style\_conditional\_delegate_call
 
-|||
+|Property|“值”|
 |-|-|
 | **规则名称** | csharp_style_conditional_delegate_call |
 | **规则 ID** | IDE0041 |
@@ -1592,7 +1592,7 @@ if (func != null) { func(args); }
 
 此样式规则与是否使用大括号 `{ }` 将代码块括起来有关。
 
-.editorconfig 文件示例  ：
+.editorconfig 文件示例：
 
 ```ini
 # CSharp code style settings:
@@ -1602,7 +1602,7 @@ csharp_prefer_braces = true:silent
 
 #### <a name="csharp_prefer_braces"></a>csharp\_prefer\_braces
 
-|||
+|Property|“值”|
 |-|-|
 | **规则名称** | csharp_prefer_braces |
 | **规则 ID** | IDE0011 |
@@ -1624,7 +1624,7 @@ if (test) this.Display();
 
 这些样式规则涉及未使用的表达式和值赋值。
 
-.editorconfig 文件示例  ：
+.editorconfig 文件示例：
 
 ```ini
 # CSharp code style settings:
@@ -1635,7 +1635,7 @@ csharp_style_unused_value_assignment_preference = discard_variable:suggestion
 
 #### <a name="csharp_style_unused_value_expression_statement_preference"></a>csharp_style_unused_value_expression_statement_preference
 
-|||
+|Property|“值”|
 |-|-|
 | **规则名称** | csharp_style_unused_value_expression_statement_preference |
 | **规则 ID** | IDE0058 |
@@ -1660,7 +1660,7 @@ var unused = Convert.ToInt32("35");
 
 #### <a name="csharp_style_unused_value_assignment_preference"></a>csharp_style_unused_value_assignment_preference
 
-|||
+|Property|“值”|
 |-|-|
 | **规则名称** | csharp_style_unused_value_assignment_preference |
 | **规则 ID** | IDE0059 |
@@ -1690,7 +1690,7 @@ int GetCount(Dictionary<string, int> wordCount, string searchWord)
 
 这些样式规则涉及使用索引和范围操作符，这些操作符在 C# 8.0 及更高版本中可用。
 
-.editorconfig 文件示例  ：
+.editorconfig 文件示例：
 
 ```ini
 # CSharp code style settings:
@@ -1701,7 +1701,7 @@ csharp_style_prefer_range_operator = true:suggestion
 
 #### <a name="csharp_style_prefer_index_operator"></a>csharp\_style\_prefer\_index_operator
 
-|||
+|Property|“值”|
 |-|-|
 | **规则名称** | csharp_style_prefer_index_operator |
 | **规则 ID** | IDE0056 |
@@ -1723,7 +1723,7 @@ var index = names[names.Length - 1];
 
 #### <a name="csharp_style_prefer_range_operator"></a>csharp\_style\_prefer\_range_operator
 
-|||
+|Property|“值”|
 |-|-|
 | **规则名称** | csharp_style_prefer_range_operator |
 | **规则 ID** | IDE0057 |
@@ -1747,7 +1747,7 @@ var sub = sentence.Substring(0, sentence.Length - 4);
 
 本节包含各种样式规则。
 
-.editorconfig 文件示例  ：
+.editorconfig 文件示例：
 
 ```ini
 # CSharp code style settings:
@@ -1762,7 +1762,7 @@ csharp_style_prefer_switch_expression = true:suggestion
 
 #### <a name="csharp_style_deconstructed_variable_declaration"></a>csharp\_style\_deconstructed\_variable_declaration
 
-|||
+|Property|“值”|
 |-|-|
 | **规则名称** | csharp_style_deconstructed_variable_declaration |
 | **规则 ID** | IDE0042 |
@@ -1792,7 +1792,7 @@ Console.WriteLine($"{point.x} {point.y}");
 
 从 C# 7.0 开始，C# [支持本地函数](/dotnet/csharp/programming-guide/classes-and-structs/local-functions)。 本地函数是一种嵌套在另一成员中的类型的私有方法。
 
-|||
+|Property|“值”|
 |-|-|
 | **规则名称** | csharp_style_pattern_local_over_anonymous_function |
 | **规则 ID** | IDE0039 |
@@ -1819,7 +1819,7 @@ fibonacci = (int n) =>
 
 #### <a name="csharp_using_directive_placement"></a>csharp\_using\_directive_placement
 
-|||
+|Property|“值”|
 |-|-|
 | **规则名称** | csharp_using_directive_placement |
 | **规则 ID** | IDE0065 |
@@ -1848,7 +1848,7 @@ namespace Conventions
 
 #### <a name="csharp_prefer_static_local_function"></a>csharp\_prefer\_static\_local_function
 
-|||
+|Property|“值”|
 |-|-|
 | **规则名称** | csharp_prefer_static_local_function |
 | **规则 ID** | IDE0062 |
@@ -1882,12 +1882,12 @@ void M()
 
 #### <a name="csharp_prefer_simple_using_statement"></a>csharp\_prefer\_simple\_using_statement
 
-|||
+|Property|“值”|
 |-|-|
 | **规则名称** | csharp_prefer_simple_using_statement |
 | **规则 ID** | IDE0063 |
 | **适用的语言** | C# 8.0+ |
-| **值** | `true` - 首选使用简单  `using` 语句<br /><br />`false` - 不推荐使用简单  `using` 语句 |
+| **值** | `true` - 首选使用简单 `using` 语句<br /><br />`false` - 不推荐使用简单 `using` 语句 |
 | **Visual Studio 默认值** | `true:suggestion` |
 
 代码示例：
@@ -1902,7 +1902,7 @@ using (var a = b) { }
 
 #### <a name="csharp_style_prefer_switch_expression"></a>csharp\_style\_prefer\_switch_expression
 
-|||
+|Property|“值”|
 |-|-|
 | **规则名称** | csharp_style_prefer_switch_expression |
 | **规则 ID** | IDE0066 |

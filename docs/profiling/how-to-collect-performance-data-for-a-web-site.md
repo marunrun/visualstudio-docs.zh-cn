@@ -1,7 +1,7 @@
 ---
-title: 如何：为 Web 站点收集性能数据 | Microsoft Docs
+title: 如何 - 为 Web 站点收集性能数据 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vsperf.url.url
 - vsperf.chooseurl
@@ -18,16 +18,16 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 8b5cacba328c48b682fe9069d8ab4a9ee21635db
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: c2f8169716bda09e3c4d89ce06dc907c726adee2
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79307183"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85330960"
 ---
-# <a name="how-to-collect-performance-data-for-a-web-site"></a>如何：为 Web 站点收集性能数据
+# <a name="how-to-collect-performance-data-for-a-web-site"></a>如何：收集网站性能数据
 
-可以使用“性能向导”  为 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web 应用程序收集性能数据。 可以分析在 Visual Studio 中打开的 Web 应用程序，也可以分析位于本地计算机且未在 Visual Studio IDE 中打开的 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web 站点。
+可以使用“性能向导” 为 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web 应用程序收集性能数据。 可以分析在 Visual Studio 中打开的 Web 应用程序，也可以分析位于本地计算机且未在 Visual Studio IDE 中打开的 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web 站点。
 
 > [!NOTE]
 > 利用“性能向导”  ，你可以将层交互 (TIP) 数据和/或 JScript 性能数据添加到收集的分析数据中。 TIP 选项从服务器端进程收集数据。 JScript 分析从本地或远程网站运行的脚本处收集数据。 大多数情况下，应只选其中一项。
@@ -46,11 +46,11 @@ ms.locfileid: "79307183"
 
 1. 在 Visual Studio 中打开 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web 项目。
 
-2. 在“分析”  菜单上，选择“性能探查器”  ，选择“性能资源管理器”  ，然后选择“启动”  。
+2. 在“分析”菜单上，选择“性能探查器”，选择“性能资源管理器”，然后选择“启动”。
 
-3. 在向导的第一页上，选择一种分析方法，然后单击“下一步”  。 有关分析方法的详细信息，请参阅[了解性能收集方法](../profiling/understanding-performance-collection-methods.md)。 请注意，并发可视化工具分析方法对 Web 应用程序不可用。
+3. 在向导的第一页上，选择一种分析方法，然后单击“下一步” 。 有关分析方法的详细信息，请参阅[了解性能收集方法](../profiling/understanding-performance-collection-methods.md)。 请注意，并发可视化工具分析方法对 Web 应用程序不可用。
 
-4. 在“要以哪个应用程序为目标进行分析?”  下拉列表中，请确保选择当前项目，然后单击“下一步”  。
+4. 在“要以哪个应用程序为目标进行分析?”  下拉列表中，请确保选择当前项目，然后单击“下一步” 。
 
 5. 在向导的第三页上，可以选择添加层交互分析 (TIP) 数据和/或网页上运行的 JavaScript 中的数据。
 
@@ -58,9 +58,9 @@ ms.locfileid: "79307183"
 
     - 若要从网页中运行的 JavaScript 中收集数据，请选中“分析 JavaScript”  复选框。
 
-6. 单击“下一步”。 
+6. 单击 **“下一步”** 。
 
-7. 在向导的第四页上，单击“完成”  。
+7. 在向导的第四页上，单击“完成” 。
 
 8. 为 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 应用程序创建了性能会话，且在浏览器中启动了网站。 练习要分析的功能，然后关闭浏览器。
 
@@ -70,13 +70,13 @@ ms.locfileid: "79307183"
 
 1. 打开 Visual Studio。
 
-2. 在“分析”  菜单上，选择“性能探查器”  ，选择“性能资源管理器”  ，然后选择“启动”  。
+2. 在“分析”菜单上，选择“性能探查器”，选择“性能资源管理器”，然后选择“启动”。
 
-3. 在向导的第一页上，选择一种分析方法，然后单击“下一步”  。 有关详细信息，请参阅[了解性能收集方法](../profiling/understanding-performance-collection-methods.md)。
+3. 在向导的第一页上，选择一种分析方法，然后单击“下一步” 。 有关详细信息，请参阅[了解性能收集方法](../profiling/understanding-performance-collection-methods.md)。
 
-4. 在向导的第二页上，选择“分析 ASP.NET 或 JavaScript 应用程序选项”  ，然后单击“下一步”  。
+4. 在向导的第二页上，选择“分析 ASP.NET 或 JavaScript 应用程序选项”  ，然后单击“下一步” 。
 
-5. 在向导第三页的“运行 Web 应用程序的 URL 或路径是什么”  框中，在应用程序主页上输入 URL，然后单击“下一步”  。
+5. 在向导第三页的“运行 Web 应用程序的 URL 或路径是什么”  框中，在应用程序主页上输入 URL，然后单击“下一步” 。
 
    - 对于基于服务器 (IIS) 的网站，请键入一个 URL（如“<`http://localhost/MySite/default.aspx`>”）。 这将导致对 MySite 应用程序根目录上本地计算机中的 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 应用程序进行分析，并且在 Internet Explorer 中启动该站点网页 default.aspx，从而启动会话。
 
@@ -90,17 +90,17 @@ ms.locfileid: "79307183"
 
     - 若要收集层交互，请选中“启用层交互分析”  复选框。
 
-    - 若要从网页中运行的 JavaScript 中收集数据，请选中“分析 JavaScript”  复选框。
+    - 若要从网页中运行的 JavaScript 中收集数据，请选中“分析 JavaScript”复选框。
 
-7. 单击“下一步”。 
+7. 单击 **“下一步”** 。
 
-8. 在向导的第四页上，单击“完成”  。
+8. 在向导的第四页上，单击“完成” 。
 
 9. 这样就为 ASP.NET 应用程序创建了性能会话，并在浏览器中启动了网站。 练习要分析的功能，然后关闭浏览器。
 
      探查器生成数据文件，并在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 主窗口中显示数据的摘要视图。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [概述](../profiling/overviews-performance-tools.md)
 [配置性能会话](../profiling/configuring-performance-sessions.md)

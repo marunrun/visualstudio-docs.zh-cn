@@ -1,7 +1,7 @@
 ---
-title: 错误：Web 服务器找不到请求的资源 | Microsoft Docs
+title: 错误 - Web 服务器找不到请求的资源 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: troubleshooting
+ms.topic: error-reference
 dev_langs:
 - CSharp
 - VB
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e5c9b428a03595f387c5ff6fb6f0b8ca35172752
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 5cce9afe8f27b25a01c0f6276164522a78a2ed9a
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72737251"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85460346"
 ---
 # <a name="error-the-web-server-could-not-find-the-requested-resource"></a>错误：Web 服务器找不到所请求的资源
 为了安全起见，IIS 已返回泛型错误。

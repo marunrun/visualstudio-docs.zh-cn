@@ -1,19 +1,19 @@
 ---
 title: 使用历史调试检查应用程序 |Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 629b5d93-39b2-430a-b8ba-d2a47fdf2584
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dea338f940cca0ce24cc200ed933adadb7d5643f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: efabc8cd185daed4f018e3e4209e391b5bc39f44
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62848203"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85350441"
 ---
 # <a name="inspect-your-app-with-intellitrace-historical-debugging-in-visual-studio-c-visual-basic-c"></a>在 Visual Studio 中使用 IntelliTrace 历史调试检查应用程序 (C#，Visual Basic、 c + +)
 
@@ -61,9 +61,9 @@ private static int AddInt(int add)
 
 4. 打开“诊断工具”窗口（“调试”>“显示诊断工具”） 。 代码窗口应如下所示：
 
-    ![在断点处的代码窗口](../debugger/media/historicaldebuggingbreakpoint.png "HistoricalDebuggingBreakpoint")
+    ![断点处的代码窗口](../debugger/media/historicaldebuggingbreakpoint.png "HistoricalDebuggingBreakpoint")
 
-5. 左侧空白旁应会显示一个双箭头，就在断点上方。 此区域称为导航条，用于历史调试。 单击该箭头。
+5. 你应该在左边距旁边看到一个双箭头，就在断点上方。 此区域称为导航条，用于历史调试。 单击该箭头。
 
     在代码窗口中，应该看待前面的代码行 (`int resultInt = AddIterative(testInt);`) 变为粉红色。 在窗口上方，应该看到一条消息，告知你现在处于历史调试模式中。
 

@@ -1,7 +1,7 @@
 ---
 title: VSInstr | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - performance tools, instrumentation
 - instrumentation, VSInstr tool
@@ -18,12 +18,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 87e51a8bd82a4bd79309dfe2a055c44d986e94c4
-ms.sourcegitcommit: a7f781d5a089e6aab6b073a07f3d4d2967af8aa6
+ms.openlocfilehash: fc68ad7da06a1710e3c34ddb601155fc3d0b1182
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81760144"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85330498"
 ---
 # <a name="vsinstr"></a>VSInstr
 VSInstr 工具用于检测二进制文件。 使用以下语法调用该工具：
@@ -40,13 +40,13 @@ VSInstr [/U] filename [/options]
 |**U**|以 Unicode 形式写入重定向的控制台输出。 它必须是指定的第一个选项。|
 |`@filename`|指定响应文件的名称，其中每行包含一个命令选项。  不要使用引号。|
 |**OutputPath** `:path`|指定被检测映像的目标目录。 如果未指定输出路径，则通过在同一目录中向文件名追加“Orig”对原始的二进制文件进行重命名，并且会检测到二进制文件的副本。|
-|**Exclude:** `funcspec`|指定要由探测从检测中排除的函数规范。 当函数中的分析探测插入造成不可预测或不需要的结果时，它将十分有用。<br /><br /> 不要使用引用同一目录中的函数的“Exclude”  和“Include”  选项。<br /><br /> 可使用单独的“Exclude”  选项指定多个函数规范。<br /><br /> `funcspec` 被定义为：<br /><br /> [namespace\<separator1>] [class\<separator2>]function<br /><br /> 对于本机代码，\<separator1> 是 `::`，对于托管代码，则是 `.`。<br /><br /> \<separator2> 始终为 `::`<br /><br /> 代码覆盖率支持 **Exclude**。<br /><br /> 支持通配符 \*。 例如，若要排除命名空间中的所有函数，请使用：<br /><br /> MyNamespace::\*<br /><br /> 可以使用 **VSInstr /DumpFuncs** 列出指定二进制文件中的函数的完整名称。|
-|**Include:** `funcspec`|指定二进制文件中的函数规范以使用探测进行检测。 未检测二进制文件中的所有其他函数。<br /><br /> 可使用单独的“Include”  选项指定多个函数规范。<br /><br /> 请不要使用引用同一目录中的函数的“Include”  和“Exclude”  选项。<br /><br /> 代码覆盖率不支持 **Include**。<br /><br /> `funcspec` 被定义为：<br /><br /> [namespace\<separator1>] [class\<separator2>]function<br /><br /> 对于本机代码，\<separator1> 是 `::`，对于托管代码，则是 `.`。<br /><br /> \<separator2> 始终为 `::`<br /><br /> 支持通配符 \*。 例如，若要包括命名空间中的所有函数，请使用：<br /><br /> MyNamespace::\*<br /><br /> 可以使用 **VSInstr /DumpFuncs** 列出指定二进制文件中的函数的完整名称。|
+|**Exclude:** `funcspec`|指定要由探测从检测中排除的函数规范。 当函数中的分析探测插入造成不可预测或不需要的结果时，它将十分有用。<br /><br /> 不要使用引用同一目录中的函数的“Exclude”和“Include”选项。<br /><br /> 可使用单独的“Exclude”选项指定多个函数规范。<br /><br /> `funcspec` 被定义为：<br /><br /> [namespace\<separator1>] [class\<separator2>]function<br /><br /> 对于本机代码，\<separator1> 是 `::`，对于托管代码，则是 `.`。<br /><br /> \<separator2> 始终是 `::`<br /><br /> 代码覆盖率支持 **Exclude**。<br /><br /> 支持通配符 \*。 例如，若要排除命名空间中的所有函数，请使用：<br /><br /> MyNamespace::\*<br /><br /> 可以使用 **VSInstr /DumpFuncs** 列出指定二进制文件中的函数的完整名称。|
+|**Include:** `funcspec`|指定二进制文件中的函数规范以使用探测进行检测。 未检测二进制文件中的所有其他函数。<br /><br /> 可使用单独的“Include”选项指定多个函数规范。<br /><br /> 请不要使用引用同一目录中的函数的“Include”和“Exclude”选项。<br /><br /> 代码覆盖率不支持 **Include**。<br /><br /> `funcspec` 被定义为：<br /><br /> [namespace\<separator1>] [class\<separator2>]function<br /><br /> 对于本机代码，\<separator1> 是 `::`，对于托管代码，则是 `.`。<br /><br /> \<separator2> 始终是 `::`<br /><br /> 支持通配符 \*。 例如，若要包括命名空间中的所有函数，请使用：<br /><br /> MyNamespace::\*<br /><br /> 可以使用 **VSInstr /DumpFuncs** 列出指定二进制文件中的函数的完整名称。|
 |**DumpFuncs**|列出指定映像中的函数。 未执行任何检测。|
-|**ExcludeSmallFuncs**|从检测中排除较小的函数，它们是不执行任何函数调用的短函数。  “ExcludeSmallFuncs”选项提供了更少的检测开销，因此提高了检测速度。<br /><br /> 排除较小的函数也可减少进行分析所需的 .vsp 文件的大小和时间  。|
+|**ExcludeSmallFuncs**|从检测中排除较小的函数，它们是不执行任何函数调用的短函数。 “ExcludeSmallFuncs”选项提供了更少的检测开销，因此提高了检测速度。<br /><br /> 排除较小的函数也可减少进行分析所需的 .vsp 文件的大小和时间。|
 |**Mark:** {**Before**\|**After**\|**Top**\|**Bottom**}`,funcname,markid`|插入可用于标识 .vsp 报表文件中数据区域的开始或结束处的分析标记（用于分隔报表中的数据的标识符）。<br /><br /> **Before** - 紧邻在目标函数进入前。<br /><br /> **After** - 紧邻目标函数退出后。<br /><br /> **Top** - 紧邻目标函数进入后。<br /><br /> **Bottom** - 紧邻目标函数中的每个返回值前。<br /><br /> `funcname` - 目标函数的名称<br /><br /> `Markid` - 用作分析标记的标识符的正整数（长整型）。|
-|**Coverage**|执行覆盖率检测。 它只能用于以下选项：“Verbose”、“OutputPath”、“Exclude”和“Logfile”     。|
-|**Verbose**|“Verbose”选项用于查看检测进程的相关详细信息  。|
+|**Coverage**|执行覆盖率检测。 它只能用于以下选项：“Verbose”、“OutputPath”、“Exclude”和“Logfile”   。|
+|**Verbose**|“Verbose”选项用于查看检测进程的相关详细信息。|
 |**NoWarn** `[:[Message Number[;Message Number]]]`|取消所有或特定警告。<br /><br /> `Message Number` - 警告编号。 如果省略 `Message Number`，则会取消所有警告。<br /><br /> 有关详细信息，请参阅 [VSInstr 警告](../profiling/vsinstr-warnings.md)。|
 |**Control:** `{` **Thread** \| **Process** \| **Global** `}`|指定以下 VSInstr 数据收集控制选项的分析级别：<br /><br /> **Start**<br /><br /> **StartOnly**<br /><br /> **Suspend**<br /><br /> **StopOnly**<br /><br /> **SuspendOnly**<br /><br /> **ResumeOnly**<br /><br /> **Thread** - 指定线程级别的数据集合控制功能。 仅为当前线程启动或停止分析。 其他线程的分析状态不会受到影响。 默认值为 thread。<br /><br /> **Process** - 指定进程级别的分析数据集合控制功能。 为当前进程中的所有线程启动或停止分析。 其他进程的分析状态不会受到影响。<br /><br /> **Global** - 指定全局级别（跨进程）的数据集合控制功能。<br /><br /> 如果未指定分析级别，则会出现错误。|
 |**Start:** `{` **Inside** \| **Outside** `},funcname`|将数据收集的范围限制为该函数所调用的目标函数和子函数。<br /><br /> **Inside** - 紧邻在目标函数的入口后插入 StartProfile 函数。 紧邻在目标函数中的每次返回前插入 StopProfile 函数。<br /><br /> **Outside** - 紧邻在对目标函数的每次调用前插入 StopProfile 函数。 紧邻在对目标函数的每次调用后插入 StopProfile 函数。<br /><br /> `funcname` - 目标函数的名称。|

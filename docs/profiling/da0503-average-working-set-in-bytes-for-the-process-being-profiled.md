@@ -1,7 +1,7 @@
 ---
-title: DA0503：所分析的进程的平均工作集（以字节为单位）| Microsoft Docs
+title: DA0503 - 所分析的进程的平均工作集（以字节为单位）| Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - vs.performance.503
 - vs.performance.DA0503
@@ -13,20 +13,20 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 8c9d309d7bf10cee07cc30c4568d2dfa59d1be56
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: b6717f524f6a2d3f9f09290ac9bfbd8f02fc23fb
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74777445"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544542"
 ---
-# <a name="da0503-average-working-set-in-bytes-for-the-process-being-profiled"></a>DA0503：所分析的进程的平均工作集（以字节为单位）
+# <a name="da0503-average-working-set-in-bytes-for-the-process-being-profiled"></a>DA0503：所分析进程的平均工作集（字节）
 
-|||
+|项|“值”|
 |-|-|
 |规则 ID|DA0503|
 |类别|资源监控|
-|分析方法|All|
+|分析方法|全部|
 |消息|收集此信息仅用于参考。 进程工作集计数器测量由正在分析的进程使用的物理内存的使用情况。 报告的值是针对所有测量时间间隔所计算的平均值。|
 |规则类型|信息|
 

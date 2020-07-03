@@ -1,7 +1,7 @@
 ---
-title: 探查器命令行：检测静态 ASP.NET 应用，获取内存数据
+title: 探查器命令行 - 检测静态 ASP.NET 应用，获取内存数据
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: ea1dcb7c-1dc3-49ff-9418-8795b5b3d3bc
 author: mikejo5000
 ms.author: mikejo
@@ -9,12 +9,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 98fac9f01219cd398f1d5ec462e3f5165f4638d7
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 427ece50dc2e8add6cc05e944907a9e0e1a890ae
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74775426"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85327929"
 ---
 # <a name="how-to-instrument-a-statically-compiled-aspnet-web-application-and-collect-memory-data-by-using-the-profiler-command-line"></a>如何：使用探查器命令行检测静态编译的 ASP.NET Web 应用程序，并收集内存数据
 本文介绍如何使用 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 分析工具的命令行工具检测预编译的 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web 组件或网站，以及如何收集 .NET 内存分配、对象生存期和详细的计时数据。
@@ -38,15 +38,15 @@ ms.locfileid: "74775426"
 
 3. 初始化 .NET 分析环境变量。 在命令提示符窗口中，键入：
 
-    VSPerfClrEnv /globaltraceon 
+    VSPerfClrEnv /globaltraceon
 
     \- 或 -
 
-    VSPerfClrEnv /globaltracegclife 
+    VSPerfClrEnv /globaltracegclife
 
-   - /globaltracegc 收集 .NET 内存分配和计时数据  。
+   - /globaltracegc 收集 .NET 内存分配和计时数据。
 
-   - /globaltracegclife 收集 .NET 内存分配、对象生存期和详细的计时数据  。
+   - /globaltracegclife 收集 .NET 内存分配、对象生存期和详细的计时数据。
 
 4. 重新启动计算机。
 
@@ -67,8 +67,8 @@ ms.locfileid: "74775426"
 
    | 选项 | 描述 |
    | - | - |
-   | [/user](../profiling/user-vsperfcmd.md) **:** [`Domain` **\\** ]`UserName` | 指定拥有 ASP.NET 工作进程的帐户的可选域和用户名。 如果以登录用户之外的其他用户身份运行进程，则需要选择此选项。名称位于 Windows 任务管理器的“进程”选项卡上的“用户名”列中   。 |
-   | [/crosssession](../profiling/crosssession.md) | 启用其他会话中的进程分析。 如果应用程序在其他会话中运行，则需要此选项。 会话 ID 位于 Windows 任务管理器的“进程”选项卡上的“会话 ID”列中  。 可以将 **/CS** 指定为 **/crosssession** 的缩写。 |
+   | [/user](../profiling/user-vsperfcmd.md) **:** [`Domain` **\\** ]`UserName` | 指定拥有 ASP.NET 工作进程的帐户的可选域和用户名。 如果以登录用户之外的其他用户身份运行进程，则需要选择此选项。名称位于 Windows 任务管理器的“进程”选项卡上的“用户名”列中 。 |
+   | [/crosssession](../profiling/crosssession.md) | 启用其他会话中的进程分析。 如果应用程序在其他会话中运行，则需要此选项。 会话 ID 位于 Windows 任务管理器的“进程”选项卡上的“会话 ID”列中。 可以将 **/CS** 指定为 **/crosssession** 的缩写。 |
    | [/wincounter](../profiling/wincounter.md) **:** `WinCounterPath` | 指定要在分析期间收集的 Windows 性能计数器。 |
    | [/automark](../profiling/automark.md) **:** `Interval` | 仅与 **/wincounter** 一起使用。 指定两次 Windows 性能计数器收集事件相隔的毫秒数。 默认值为 500 毫秒。 |
    | [/events](../profiling/events-vsperfcmd.md) **:** `Config` | 指定要在分析期间收集的 Windows 事件跟踪 (ETW) 事件。 ETW 事件收集在单独的 (.etl) 文件中。 |
@@ -90,7 +90,7 @@ ms.locfileid: "74775426"
     |[/threadon](../profiling/threadon-and-threadoff.md) **:** `TID` [/threadoff](../profiling/threadon-and-threadoff.md) **:** `TID`|启动 ( **/threadon**) 或停止 ( **/threadoff**) 由线程 ID (`TID`) 指定的线程的数据收集。|
 
 ## <a name="end-the-profiling-session"></a>结束分析会话
- 要结束分析会话，请关闭 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web 应用程序，然后使用 Internet Information Services (IIS) IISReset 命令来关闭 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 工作进程  。 调用 VSPerfCmd [/shutdown](../profiling/shutdown.md) 选项关闭探查器和分析数据文件  。 VSPerfClrEnv /globaloff 命令会清除分析环境变量  。 必须重启计算机才能应用新的环境设置。
+ 要结束分析会话，请关闭 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web 应用程序，然后使用 Internet Information Services (IIS) IISReset 命令来关闭 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 工作进程。 调用 VSPerfCmd [/shutdown](../profiling/shutdown.md) 选项关闭探查器和分析数据文件。 VSPerfClrEnv /globaloff 命令会清除分析环境变量。 必须重启计算机才能应用新的环境设置。
 
 #### <a name="to-end-a-profiling-session"></a>结束分析会话
 

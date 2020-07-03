@@ -1,7 +1,7 @@
 ---
-title: 错误：网站工作进程已被 IIS 终止 | Microsoft Docs
+title: 错误 - 网站工作进程已被 IIS 终止 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: troubleshooting
+ms.topic: error-reference
 f1_keywords:
 - vs.debug.error.web_server_process_terminated
 dev_langs:
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3231c8ba2835fb535d538e29ef7df7ea3d1c4a8a
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 6d61f124d906137557b17b81122eba34e471a1a4
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72736358"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85459995"
 ---
 # <a name="error-web-site-worker-process-has-been-terminated-by-iis"></a>错误：网站工作进程已被 IIS 终止
 调试器已停止对网站执行代码。 这导致 Internet Information Services (IIS) 认为辅助进程已停止响应。 因此，IIS 终止了辅助进程。
@@ -38,9 +38,9 @@ ms.locfileid: "72736358"
 
     IIS 管理器随即打开。
 
-3. 在**连接**窗格中，展开\<计算机名称 > 节点（如有必要）。
+3. 在“连接”窗格中，展开 \<computer name> 节点（如有必要）。
 
-4. 在\<计算机名称 > 节点下，单击**应用程序池**。
+4. 在 \<computer name> 节点下，单击“应用程序池”。
 
 5. 在**应用程序池**列表中，右键单击你的应用程序运行所在的池的名称，然后单击**高级设置**。
 

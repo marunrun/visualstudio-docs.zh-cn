@@ -2,7 +2,7 @@
 title: 对变量设置监视 | Microsoft Docs
 ms.custom: seodec18
 ms.date: 10/11/2018
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.debug.watch
 helpviewer_keywords:
@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ea3d2a1e82e92473859fef29754fbb831cf3685b
-ms.sourcegitcommit: 95f26af1da51d4c83ae78adcb7372b32364d8a2b
+ms.openlocfilehash: 6ab66089de25b7648b13e1ba05f88ab55b7868df
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79301013"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85348023"
 ---
 # <a name="watch-variables-with-watch-windows-and-quickwatch"></a>使用“监视”和“快速监视”窗口监视变量
 

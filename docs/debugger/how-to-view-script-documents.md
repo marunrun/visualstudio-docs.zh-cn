@@ -1,7 +1,7 @@
 ---
-title: 如何：查看脚本文档 | Microsoft Docs
+title: 如何 - 查看脚本文档 | Microsoft Docs
 ms.date: 11/05/2019
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - CSharp
 - VB
@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5e362e0504c4ed2584bbbbea687fe3c58fc79edb
-ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
+ms.openlocfilehash: dcd9823e414005a1711ddccf9d972da929090920
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73714441"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85348439"
 ---
 # <a name="how-to-view-script-documents-javascript"></a>如何：查看脚本文档 (JavaScript)
 
@@ -33,7 +33,7 @@ ms.locfileid: "73714441"
 
 ### <a name="to-view-a-server-side-script-document"></a>查看服务器端脚本文档
 
-1. 在“解决方案资源管理器”中，打开“\<网站路径名>”节点 。
+1. 在“解决方案资源管理器”中，打开 \<Website Pathname> 节点 。
 
 2. 双击要查看的脚本文件。
 

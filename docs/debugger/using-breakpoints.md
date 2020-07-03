@@ -1,7 +1,7 @@
 ---
 title: 在调试器中使用断点 |Microsoft Docs
 ms.custom: ''
-ms.date: 10/28/2019
+ms.date: 06/30/2020
 ms.topic: how-to
 f1_keywords:
 - vs.debug.breakpointswin
@@ -34,12 +34,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: af53cdd368d129fc23c3596a4e20d6e95ceb7a18
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.openlocfilehash: 57b2ea6a0c69387043057bc07957a757ed351f99
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85536586"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85769413"
 ---
 # <a name="use-breakpoints-in-the-visual-studio-debugger"></a>在 Visual Studio 调试器中使用断点
 
@@ -50,7 +50,7 @@ ms.locfileid: "85536586"
 
 ## <a name="set-breakpoints-in-source-code"></a><a name="BKMK_Overview"></a> 在源代码中设置断点
 
-可以在任意可执行代码行上设置断点。 例如，在下面的 C# 代码中，可以在变量声明、`for` 循环或 `for` 循环内的任何代码上设置断点。 不能在命名空间、类和变量的声明上设置断点，也不能在方法签名上设置。
+可以在任意可执行代码行上设置断点。 例如，在下面的 C# 代码中，可以在包含变量声明 (`int testInt = 1`) 的代码行、`for` 循环或 `for` 循环内的任何代码上设置断点。 如果没有赋值和 getter/setter，则不能在方法签名、命名空间或类的声明，或者变量声明上设置断点。
 
 若要在源代码中设置断点，请单击代码行最左边的边距。 你还可以选择行并按“F9”，选择“调试” > “切换断点”，或者右键单击并选择“断点” > “插入断点”    。 断点显示为左边距中的一个红点。
 

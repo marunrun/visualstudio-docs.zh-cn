@@ -1,7 +1,7 @@
 ---
-title: DA0038：锁争用率高 | Microsoft Docs
+title: DA0038 - 锁争用率很高 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - vs.performance.38
 - vs.performance.rules.DA0038
@@ -13,16 +13,16 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: d8e0218b01a162a3af8c35009bc8e733f5c386ef
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 51247393b2f08f1b474a063c977b54ad39787ace
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74777497"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544607"
 ---
 # <a name="da0038-high-rate-of-lock-contentions"></a>DA0038：锁争用率高
 
-|||
+|项|“值”|
 |-|-|
 |规则 ID|DA0038|
 |类别|.NET Framework 使用情况|

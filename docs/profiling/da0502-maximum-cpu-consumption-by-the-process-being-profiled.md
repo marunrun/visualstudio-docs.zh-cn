@@ -1,7 +1,7 @@
 ---
-title: DA0502：所分析的进程的 CPU 最大消耗量 | Microsoft Docs
+title: DA0502 - 所分析的进程的 CPU 最大消耗量 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - vs.performance.rules.DA0502
 - vs.performance.DA0502
@@ -13,20 +13,20 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 5c3cb5169d078ba1242bf898ba93e31a7a488bb8
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: a2555344b402513bdea7795e2e71fde1683b08d1
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74779332"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544555"
 ---
 # <a name="da0502-maximum-cpu-consumption-by-the-process-being-profiled"></a>DA0502：所分析的进程的 CPU 最大消耗量
 
-|||
+|项|“值”|
 |-|-|
 |规则 ID|DA0502|
 |类别|资源监控|
-|分析方法|All|
+|分析方法|全部|
 |消息|此规则仅供参考。 Process()\\% 处理器时间计数器测量正在分析的进程的 CPU 消耗量。 报告的值是在所有测量时间间隔内观察到的最大值。|
 |规则类型|信息性|
 

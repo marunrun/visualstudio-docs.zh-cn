@@ -1,7 +1,7 @@
 ---
-title: 如何：自定义报告视图列 | Microsoft Docs
+title: 如何 - 自定义报告视图列 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.test.columnchooser.dialogbox
 helpviewer_keywords:
@@ -14,14 +14,14 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 6a297e6bfbed5023db97cabd370679b0de6caaab
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 58d2a7b7c83f1260427ff0d805510e08ae35c019
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74778968"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85329802"
 ---
-# <a name="how-to-customize-report-view-columns"></a>如何：自定义报告视图列
+# <a name="how-to-customize-report-view-columns"></a>如何：自定义报表视图列
 Visual Studio Team System Development Edition 中的性能工具与集成开发环境 (IDE) 全面集成，旨在提供无缝的用户体验。 下表显示了可通过添加、删除和重新排列列自定义的视图：
 
 - [“模块”视图](../profiling/modules-view.md)
@@ -34,7 +34,7 @@ Visual Studio Team System Development Edition 中的性能工具与集成开发�
 
 - [“调用方/被调用方”视图](../profiling/caller-callee-view.md)
 
-- [“调用树”视图](../profiling/call-tree-view.md)
+- [“调用关系树”视图](../profiling/call-tree-view.md)
 
 - [“分配”视图](../profiling/dotnet-memory-allocations-view.md)
 
@@ -48,9 +48,9 @@ Visual Studio Team System Development Edition 中的性能工具与集成开发�
 
 1. 打开报告视图。
 
-2. 右键单击报告视图图面，然后单击“添加/删除列”  。
+2. 右键单击报告视图图面，然后单击“添加/删除列”。
 
-     随即出现“添加/删除列”对话框  。
+     随即出现“添加/删除列”对话框。
 
 3. 选择要添加的列。
 

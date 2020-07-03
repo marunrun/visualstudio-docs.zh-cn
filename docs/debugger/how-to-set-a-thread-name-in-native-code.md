@@ -1,7 +1,7 @@
 ---
-title: 如何：在本机代码中设置线程名称 | Microsoft Docs
+title: 如何 - 在本机代码中设置线程名称 | Microsoft Docs
 ms.date: 12/17/2018
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e719563c831c50cc325d70d0de431f4be1bf514
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: ce6281a87900247cc54422a5175714d5f05b8e07
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72911426"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85349141"
 ---
 # <a name="how-to-set-a-thread-name-in-native-code"></a>如何：在本机代码中设置线程名称
 在 Visual Studio 的任何版本中都可以使用线程命名功能。 调试正在运行的进程时，线程命名对于在“线程”窗口中标识感兴趣的线程来说非常有用。 通过故障转储检查执行事后调试以及使用各种工具分析性能捕获时，具有高度可识别的线程名称也可能会有所帮助。
