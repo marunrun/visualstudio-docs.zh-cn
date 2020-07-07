@@ -1,7 +1,7 @@
 ---
 title: 为 SharePoint 创建网站栏、内容类型和列表
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - VS.SharePointTools.ListDesigner.GeneralMessageHelp
 - Microsoft.VisualStudio.SharePoint.Designers.ListDesigner.ViewModels.ListViewModel.SortingAndGrouping
@@ -19,12 +19,11 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: cc6782e4a83f259eb17632addec36c7804b27858
-ms.sourcegitcommit: 174c992ecdc868ecbf7d3cee654bbc2855aeb67d
-ms.translationtype: MT
+ms.openlocfilehash: 9ce76c72bad138a5c6c40afe717aadafec02c677
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74879343"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86015271"
 ---
 # <a name="walkthrough-create-a-site-column-content-type-and-list-for-sharepoint"></a>演练：为 SharePoint 创建网站栏、内容类型和列表
   下面的过程演示如何创建自定义 SharePoint 网站列（或*字段*）以及使用网站列的内容类型。 它还演示如何创建使用新内容类型的列表。
@@ -42,32 +41,32 @@ ms.locfileid: "74879343"
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
 ## <a name="prerequisites"></a>先决条件
- 你需要以下组件来完成本演练：
+ 您需要满足以下条件才能完成本演练：
 
 - 支持的 Windows 和 SharePoint 版本。
 
 - [!INCLUDE[vsprvs-current](../sharepoint/includes/vsprvs-current-md.md)]
 
 ## <a name="create-custom-site-columns"></a>创建自定义网站列
- 此示例将创建一个列表，用于管理医院中的患者。 首先，你必须在 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 中创建一个 SharePoint 项目并向其添加网站列，如下所示。
+ 此示例将创建一个列表，用于管理医院中的患者。 首先，你必须在中创建一个 SharePoint 项目 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 并向其添加网站列，如下所示。
 
-#### <a name="to-create-the-project"></a>要创建项目
+#### <a name="to-create-the-project"></a>创建项目
 
-1. 在 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]**文件**"菜单上，选择"**新建** > **项目**"。
+1. 在 " [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] **文件**" 菜单上，选择 "**新建**  >  **项目**"。
 ::: moniker range="=vs-2017"
-2. 在 "**新建项目**" 对话框中的 "**视觉C#对象**" 或 " **Visual Basic**" 下，展开 " **Office/SharePoint** " 节点，然后选择 " **SharePoint 解决方案**"。
+2. 在 "**新建项目**" 对话框中的 " **Visual c #** " 或 " **Visual Basic**" 下，展开 " **Office/SharePoint** " 节点，然后选择 " **SharePoint 解决方案**"。
 
 3. 在 "**模板**" 窗格中，为已安装的特定 sharepoint 版本选择**sharepoint 空项目**。 例如，如果您有 SharePoint 2016 安装，请选择**sharepoint 2016-空项目**模板。  
 
 4. 将项目名称更改为 "**诊所**"，然后选择 **"确定"** 按钮。
 
-5. 在 "**指定用于调试的站点和安全级别**" 对话框中，输入要向其添加新的自定义字段项的本地 SharePoint 站点的 URL，或者使用默认位置（`http://<`*SystemName*`>/)`。
+5. 在 "**指定用于调试的站点和安全级别**" 对话框中，输入要向其添加新的自定义字段项的本地 SharePoint 站点的 URL，或者使用默认位置（ `http://<` *SystemName*） `>/)` 。
 
 6. 在 "**此 SharePoint 解决方案的信任级别是什么？** " 部分中，使用 "**部署为沙盒解决方案**的默认值"。
 
      有关沙盒解决方案和场解决方案的详细信息，请参阅[沙盒解决方案注意事项](../sharepoint/sandboxed-solution-considerations.md)。
 
-7. 单击“完成”按钮。 项目现已在**解决方案资源管理器**中列出。
+7. 选择 **“完成”** 按钮。 项目现已在**解决方案资源管理器**中列出。
 ::: moniker-end
 ::: moniker range=">=vs-2019"
 2.  在 "**创建新项目**" 对话框中，为已安装的特定 sharepoint 版本选择**sharepoint 空项目**。 例如，如果您有 SharePoint 2016 安装，请选择**sharepoint 2016-空项目**模板。
@@ -75,22 +74,22 @@ ms.locfileid: "74879343"
 
 3. 将项目名称更改为 "**诊所**"，然后选择 "**创建**" 按钮。
 
-4. 在 "**指定用于调试的站点和安全级别**" 对话框中，输入要向其添加新的自定义字段项的本地 SharePoint 站点的 URL，或者使用默认位置（`http://<`*SystemName*`>/)`。
+4. 在 "**指定用于调试的站点和安全级别**" 对话框中，输入要向其添加新的自定义字段项的本地 SharePoint 站点的 URL，或者使用默认位置（ `http://<` *SystemName*） `>/)` 。
 
 5. 在 "**此 SharePoint 解决方案的信任级别是什么？** " 部分中，使用 "**部署为沙盒解决方案**的默认值"。
 
      有关沙盒解决方案和场解决方案的详细信息，请参阅[沙盒解决方案注意事项](../sharepoint/sandboxed-solution-considerations.md)。
 
-6. 单击“完成”按钮。 项目现已在**解决方案资源管理器**中列出。
+6. 选择 **“完成”** 按钮。 项目现已在**解决方案资源管理器**中列出。
 ::: moniker-end
 
 #### <a name="to-add-site-columns"></a>添加网站列
 
-1. 添加新的网站列。 为此，请在**解决方案资源管理器**中右键单击 "**诊所**" 项目，然后选择 "**添加** > **新项**"。
+1. 添加新的网站列。 为此，请在**解决方案资源管理器**中右键单击 "**诊所**" 项目，然后选择 "**添加**  >  **新项**"。
 
 2. 在 "**添加新项**" 对话框中，选择 "**网站列**"，将 "名称" 更改为**PatientName**，然后选择 "**添加**" 按钮。
 
-3. 在站点列的 "*元素 .xml* " 文件中，将 "**类型**" 设置保留为 "**文本**"，将 "**组**" 设置更改为 "**诊所站点列**"。 完成后，站点列的*元素 .xml*文件应类似于下面的示例。
+3. 在网站列的*Elements.xml*文件中，将 "**类型**" 设置保留为 "**文本**"，将 "**组**" 设置更改为 "**诊所网站列**"。 完成后，站点列的*Elements.xml*文件应类似于下面的示例。
 
     ```xml
     <Field
@@ -116,9 +115,9 @@ ms.locfileid: "74879343"
 
 1. 向项目中添加内容类型。 为此，请在**解决方案资源管理器**中选择 "项目" 节点
 
-2. 在菜单栏上，依次选择“项目” > “添加新项”。
+2. 在菜单栏上，选择 "**项目**" "  >  **添加新项**"。
 
-3. 在 "**视觉C#对象**" 或 " **Visual Basic**" 下，展开 " **SharePoint** " 节点，然后选择 " **2010** " 节点。
+3. 在 " **Visual c #** " 或 " **Visual Basic**下，展开" **SharePoint** "节点，然后选择" **2010** "节点。
 
 4. 在 "**模板**" 窗格中，选择 "**内容类型**" 模板，将 "名称" 更改为 "**患者信息**"，然后选择 "**添加**" 按钮。
 
@@ -141,7 +140,7 @@ ms.locfileid: "74879343"
 
 10. 将**组名称**更改为**诊所内容类型**，将其他设置保留为其默认值。
 
-11. 在菜单栏上，选择 "**文件**" > "**全部保存**"，然后关闭内容类型设计器。
+11. 在菜单栏上，选择 "**文件**" "  >  **全部保存**"，然后关闭内容类型设计器。
 
 ## <a name="create-a-list"></a>创建列表
  现在，创建一个使用新的 "内容类型" 和 "站点" 列的列表。
@@ -150,13 +149,13 @@ ms.locfileid: "74879343"
 
 1. 向项目添加一个列表。 为此，请在**解决方案资源管理器**中选择项目节点。
 
-2. 在菜单栏上，依次选择“项目” > “添加新项”。
+2. 在菜单栏上，选择 "**项目**" "  >  **添加新项**"。
 
-3. 在 "**视觉C#对象**" 或 " **Visual Basic**" 下，展开 " **SharePoint** " 节点。
+3. 在**Visual c #** 或**Visual Basic**下，展开**SharePoint**节点。
 
 4. 在 "**模板**" 窗格中，选择**列表**模板，将 "名称" 更改为 "**患者**"，然后选择 "**添加**" 按钮。
 
-5. 保留 "**基于默认设置自定义**列表" **（自定义列表）** ，然后选择 "**完成**" 按钮。
+5. 保留 "**基于默认设置自定义**列表" **（自定义列表）**，然后选择 "**完成**" 按钮。
 
 6. 在列表设计器中，选择 "**内容类型**" 按钮以显示 "**内容类型设置**" 对话框。
 
@@ -176,7 +175,7 @@ ms.locfileid: "74879343"
 
     - 医生名称
 
-    - Comments
+    - 注释
 
 9. 在 "**列显示名称**" 下，选择一个空行，添加自定义列表列，然后将其命名为 "**医院**"。 将其数据类型保留为**单行文本**。
 
@@ -211,7 +210,7 @@ ms.locfileid: "74879343"
 
     - 医院
 
-    - Comments
+    - 注释
 
 14. 在 "**属性**" 列表中，选择 "**排序和分组**" 属性，然后选择省略号按钮![省略号图标](../sharepoint/media/ellipsisicon.gif "“省略号”图标")以显示 "**排序和分组**" 对话框。
 
@@ -222,7 +221,7 @@ ms.locfileid: "74879343"
 
 #### <a name="to-test-the-application"></a>测试应用程序
 
-1. 在菜单栏上，依次选择“文件” > “全部保存”。
+1. 在菜单栏上，选择 "**文件**" "  >  **全部保存**"。
 
 2. 选择**F5**键以运行应用程序。
 
@@ -230,7 +229,7 @@ ms.locfileid: "74879343"
 
 3. 在快速导航栏上，选择 "**患者**" 链接以显示**患者**列表。
 
-     列表中的列名应与您在 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]中的 "**视图**" 选项卡上输入的名称相匹配。
+     列表中的列名应与您在中的 "**视图**" 选项卡上输入的名称相匹配 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 。
 
 4. 选择 "**添加新项**" 链接以创建患者信息卡。
 

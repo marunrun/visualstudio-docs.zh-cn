@@ -1,7 +1,7 @@
 ---
 title: 如何：添加和移除附加程序集 |Microsoft Docs
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - VS.SharePointTools.RAD.CustomAssembly
 dev_langs:
@@ -14,12 +14,11 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: bdcc1c478bead4df89622a7311b074965cdc0226
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
-ms.translationtype: MT
+ms.openlocfilehash: 07b9016a4e246d3ed5a2697d924f556517a8226f
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985238"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86014833"
 ---
 # <a name="how-to-add-and-remove-additional-assemblies"></a>如何：添加和移除附加程序集
   如果 SharePoint 包依赖于其他程序集以获取功能或数据，则可以将这些程序集添加到解决方案包（.wsp）中。 这样一来，SharePoint server 便可确保使用包安装自定义程序集。
@@ -33,7 +32,7 @@ ms.locfileid: "72985238"
 
 1. 打开**包设计器**。 有关详细信息，请参阅[如何：自定义 SharePoint 解决方案包](../sharepoint/how-to-customize-a-sharepoint-solution-package.md)。
 
-2. 选择 "**高级**" 选项卡。
+2. 选择“高级”选项卡。
 
 3. 选择 "**添加**" 按钮，然后从列表中选择 "**添加现有程序集**"。
 
@@ -41,7 +40,7 @@ ms.locfileid: "72985238"
 
 4. 选择省略号（![ASP.NET Mobile 设计器椭圆](../sharepoint/media/mwellipsis.gif "ASP.NET 移动设计器中的省略号")），然后选择要添加的程序集。 出于可移植性的目的，我们建议使用相对路径到选定的程序集。
 
-5. 对于**部署目标**，请选择 " **GlobalAssemblyCache** " 选项按钮，将程序集部署到全局程序集缓存，或选择 " **WebApplication** " 选项按钮，将程序集部署到运行 SharePoint 的服务器。
+5. 对于**部署目标**，请选择 " **GlobalAssemblyCache** " 选项按钮，将程序集部署到全局程序集缓存，或选择 " **WebApplication** " 选项按钮，将程序集部署到运行 SharePoint 的服务器上的 WebApplication 文件夹。
 
 #### <a name="to-add-an-assembly-from-project-output"></a>从项目输出中添加程序集
 
@@ -49,7 +48,7 @@ ms.locfileid: "72985238"
 
      有关详细信息，请参阅[如何：自定义 SharePoint 解决方案包](../sharepoint/how-to-customize-a-sharepoint-solution-package.md)。
 
-2. 选择 "**高级**" 选项卡。
+2. 选择“高级”选项卡。
 
 3. 选择 "**添加**" 按钮，然后从列表中选择 "**从项目输出添加程序集**"。
 
@@ -57,7 +56,7 @@ ms.locfileid: "72985238"
 
 4. 在 "**源项目**" 列表中，选择要添加的源项目。
 
-5. 对于**部署目标**，请选择 " **GlobalAssemblyCache** " 选项按钮，将程序集部署到全局程序集缓存，或选择 " **WebApplication** " 选项按钮，将程序集部署到运行 SharePoint 的服务器。
+5. 对于**部署目标**，请选择 " **GlobalAssemblyCache** " 选项按钮，将程序集部署到全局程序集缓存，或选择 " **WebApplication** " 选项按钮，将程序集部署到运行 SharePoint 的服务器上的 WebApplication 文件夹。
 
 #### <a name="to-add-a-safe-control"></a>添加安全控件
 
@@ -86,11 +85,11 @@ ms.locfileid: "72985238"
 
 1. 打开**包设计器**。 有关详细信息，请参阅[如何：自定义 SharePoint 解决方案包](../sharepoint/how-to-customize-a-sharepoint-solution-package.md)。
 
-2. 选择 "**高级**" 选项卡。
+2. 选择“高级”选项卡。
 
 3. 在 "**其他程序集**" 窗格中，选择要删除的自定义程序集。
 
-4. 选择 "**删除**" 按钮。
+4. 选择 **“删除”** 按钮。
 
 #### <a name="to-delete-a-safe-control-for-an-assembly"></a>删除程序集的安全控件
 
@@ -108,7 +107,7 @@ ms.locfileid: "72985238"
 
 3. 选择 "删除" 键。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [创建 SharePoint 功能](../sharepoint/creating-sharepoint-features.md)
 - [如何：自定义 SharePoint 功能](../sharepoint/how-to-customize-a-sharepoint-feature.md)
 - [如何：在 SharePoint 功能中添加和移除项](../sharepoint/how-to-add-and-remove-items-to-sharepoint-features.md)

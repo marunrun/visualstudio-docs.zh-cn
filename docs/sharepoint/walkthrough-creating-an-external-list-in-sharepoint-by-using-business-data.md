@@ -1,7 +1,7 @@
 ---
 title: 使用业务数据在 SharePoint 中创建外部列表
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -19,12 +19,11 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: d670215d6a46003315992201c64c23185be7d715
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
-ms.translationtype: MT
+ms.openlocfilehash: 29f6c4e170bce8ae7bacfc7178ebd9386f2d4416
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72984656"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86015836"
 ---
 # <a name="walkthrough-create-an-external-list-in-sharepoint-by-using-business-data"></a>演练：使用业务数据在 SharePoint 中创建外部列表
 
@@ -40,9 +39,9 @@ ms.locfileid: "72984656"
 - 添加特定的 Finder 方法。
 - 测试项目。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
 
-你需要以下组件来完成本演练：
+您需要满足以下条件才能完成本演练：
 
 - 支持的 Windows 和 SharePoint 版本。
 
@@ -50,11 +49,11 @@ ms.locfileid: "72984656"
 
 ## <a name="create-a-project-that-contains-a-bdc-model"></a>创建包含 BDC 模型的项目
 
-1. 在 Visual Studio 的菜单栏上，选择 "**文件** > **新建** > **项目**"。
+1. 在 Visual Studio 的菜单栏上，选择 "**文件**" "  >  **新建**  >  **项目**"。
 
      **“新建项目”** 对话框随即打开。
 
-2. 在 "**视觉C#对象**" 或 " **Visual Basic**" 下，展开 " **SharePoint** " 节点，然后选择**2010**项。
+2. 在**Visual c #** 或**Visual Basic**下，展开 " **SharePoint** " 节点，然后选择**2010**项。
 
 3. 在 "**模板**" 窗格中，选择 " **SharePoint 2010 项目**"，将项目命名为**AdventureWorksTest**，然后选择 **"确定"** 按钮。
 
@@ -66,7 +65,7 @@ ms.locfileid: "72984656"
 
 6. 在**解决方案资源管理器**中，选择 SharePoint 项目节点。
 
-7. 在菜单栏上，依次选择“项目” > “添加新项”。
+7. 在菜单栏上，选择 "**项目**" "  >  **添加新项**"。
 
      此时将打开“添加新项”对话框。
 
@@ -74,9 +73,9 @@ ms.locfileid: "72984656"
 
 ## <a name="add-data-access-classes-to-the-project"></a>将数据访问类添加到项目
 
-1. 在菜单栏上，选择 "**工具**" > **连接到数据库**"。
+1. 在菜单栏上，选择 "**工具**" "  >  **连接到数据库**"。
 
-     随即会打开“添加连接”对话框。
+     随即会打开“添加连接”对话框****。
 
 2. 将连接添加到 SQL Server AdventureWorks 示例数据库。
 
@@ -84,7 +83,7 @@ ms.locfileid: "72984656"
 
 3. 在 **“解决方案资源管理器”** 中，选择项目节点。
 
-4. 在菜单栏上，依次选择“项目” > “添加新项”。
+4. 在菜单栏上，选择 "**项目**" "  >  **添加新项**"。
 
 5. 在 "**已安装的模板**" 窗格中，选择 "**数据**" 节点。
 
@@ -94,7 +93,7 @@ ms.locfileid: "72984656"
 
      .dbml 文件会添加到项目中，对象关系设计器（O/R 设计器）将打开。
 
-8. 在菜单栏上，选择 "**查看** > **服务器资源管理器**"。
+8. 在菜单栏上，选择 "**查看**  >  **服务器资源管理器**"。
 
 9. 在**服务器资源管理器**中，展开表示 AdventureWorks 示例数据库的节点，然后展开 "**表**" 节点。
 
@@ -112,21 +111,21 @@ ms.locfileid: "72984656"
 
 3. 在设计器中，打开 " **Entity1**" 的快捷菜单，然后选择 "**删除**"。
 
-4. 在**解决方案资源管理器**中，打开*Entity1* （在 Visual Basic 中）或*Entity1.cs* （在中C#为）的快捷菜单，然后选择 "**删除**"。
+4. 在**解决方案资源管理器**中，打开*Entity1* （在 Visual Basic 中）或*Entity1.cs* （在 c # 中）的快捷菜单，然后选择 "**删除**"。
 
-5. 打开*Entity1Service*的快捷菜单（位于 Visual Basic）或*Entity1Service.cs* （在中C#为），然后选择 "**删除**"。
+5. 打开*Entity1Service*的快捷菜单（位于 Visual Basic）或*Entity1Service.cs* （在 c # 中），然后选择 "**删除**"。
 
 ## <a name="add-an-entity-to-the-model"></a>向模型添加实体
 
 将实体添加到模型。 可以将 Visual Studio**工具箱**中的实体添加到 BDC 设计器中。
 
-1. 在菜单栏上，依次选择“视图” > “工具箱”。
+1. 在菜单栏上，选择 "**视图**  >  **" "工具箱**"。
 
 2. 在 "**工具箱**" 的 " **BusinessDataConnectivity** " 选项卡上，将**实体**添加到 BDC 设计器上。
 
-     新实体将显示在设计器上。 Visual Studio 将名为*EntityService*的文件（在 Visual Basic 中）或*EntityService.cs* （在中C#）添加到项目。
+     新实体将显示在设计器上。 Visual Studio 将名为*EntityService*的文件（在 Visual Basic 中）或*EntityService.cs* （在 c # 中）添加到项目。
 
-3. 在菜单栏上，选择 "**查看** > **属性**" > **窗口**"。
+3. 在菜单栏上，选择 "**查看**  >  **属性**  >  **窗口**"。
 
 4. 在 "**属性**" 窗口中，将 "**名称**" 属性值设置为 "**联系人**"。
 
@@ -146,7 +145,7 @@ ms.locfileid: "72984656"
 
 1. 在 BDC 设计器中，选择 "**联系人**" 实体。
 
-2. 在菜单栏上，选择 "**查看** > **其他 Windows** > **BDC 方法详细信息**"。
+2. 在菜单栏上，选择 "**查看**  >  **其他 Windows**  >  **BDC 方法详细信息**"。
 
      “BDC 方法详细信息”窗口将打开。
 
@@ -182,12 +181,12 @@ ms.locfileid: "72984656"
 
 10. 重复步骤6，为以下每个字段创建类型描述符。
 
-    |“属性”|类型名称|
+    |名称|类型名称|
     |----------|---------------|
     |FirstName|System.String|
     |LastName|System.String|
     |电话|System.String|
-    |emailAddress|System.String|
+    |EmailAddress|System.String|
     |EmailPromotion|System.Int32|
     |NameStyle|System.Boolean|
     |PasswordHash|System.String|
@@ -197,14 +196,14 @@ ms.locfileid: "72984656"
 
      联系人服务代码文件将在代码编辑器中打开。
 
-12. 在 `ContactService` 类中，将 `ReadItem` 方法替换为以下代码。 这段代码执行下列任务：
+12. 在 `ContactService` 类中，将 `ReadItem` 方法替换为以下代码。 此代码执行以下任务：
 
     - 从 AdventureWorks 数据库的 Contact 表中检索记录。
 
     - 将 Contact 实体返回给 BDC 服务。
 
     > [!NOTE]
-    > 将 `ServerName` 字段的值替换为服务器的名称。
+    > 将字段的值替换 `ServerName` 为服务器的名称。
 
      [!code-csharp[SP_BDC#3](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs#3)]
      [!code-vb[SP_BDC#3](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb#3)]
@@ -225,14 +224,14 @@ ms.locfileid: "72984656"
 
      联系人服务代码文件随即在代码编辑器中打开。
 
-5. 在 `ContactService` 类中，将 `ReadList` 方法替换为以下代码。 这段代码执行下列任务：
+5. 在 `ContactService` 类中，将 `ReadList` 方法替换为以下代码。 此代码执行以下任务：
 
    - 从 AdventureWorks 数据库的 "联系人" 表中检索数据。
 
    - 返回 BDC 服务的联系人实体的列表。
 
      > [!NOTE]
-     > 将 `ServerName` 字段的值替换为服务器的名称。
+     > 将字段的值替换 `ServerName` 为服务器的名称。
 
      [!code-csharp[SP_BDC#2](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs#2)]
      [!code-vb[SP_BDC#2](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb#2)]
@@ -244,7 +243,7 @@ ms.locfileid: "72984656"
 > [!NOTE]
 > 你可能需要在 SharePoint 中修改安全设置，然后才能调试解决方案。 有关详细信息，请参阅[设计业务数据连接模型](../sharepoint/designing-a-business-data-connectivity-model.md)。
 
-1. 选择 F5。
+1. 选择 F5****。
 
      SharePoint 站点将打开。
 
@@ -274,9 +273,9 @@ ms.locfileid: "72984656"
 - [如何：添加更新方法](../sharepoint/how-to-add-an-updater-method.md)。
 - [如何：添加删除器方法](../sharepoint/how-to-add-a-deleter-method.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[设计业务数据连接模型](../sharepoint/designing-a-business-data-connectivity-model.md)
-[创建业务数据连接模型](../sharepoint/creating-a-business-data-connectivity-model.md)
-[BDC 模型设计工具概述](../sharepoint/bdc-model-design-tools-overview.md)
+[设计业务数据连接模型](../sharepoint/designing-a-business-data-connectivity-model.md) 
+[创建业务数据连接模型](../sharepoint/creating-a-business-data-connectivity-model.md) 
+[BDC 模型设计工具概述](../sharepoint/bdc-model-design-tools-overview.md) 
 将[业务数据集成到 SharePoint 中](../sharepoint/integrating-business-data-into-sharepoint.md)

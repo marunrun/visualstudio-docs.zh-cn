@@ -1,7 +1,7 @@
 ---
 title: 如何：创建 SharePoint 命令 |Microsoft Docs
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -12,12 +12,11 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 3c07d541dc4f68f33d48e7cb41b6bc3923b2ea52
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
-ms.translationtype: MT
+ms.openlocfilehash: 15ea7ff86e90bf7a474f9d64c30a9803e3e20bf5
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73189226"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86016215"
 ---
 # <a name="how-to-create-a-sharepoint-command"></a>如何：创建 SharePoint 命令
   如果要在 SharePoint 工具扩展中使用服务器对象模型，则必须创建自定义*SharePoint 命令*以调用 API。 在可直接调入服务器对象模型的程序集中定义 SharePoint 命令。
@@ -33,7 +32,7 @@ ms.locfileid: "73189226"
     - 面向 AnyCPU 或 x64 平台。 默认情况下，类库项目的目标平台是 AnyCPU。 有关选择目标平台的详细信息，请参阅[如何：配置项目以面向目标平台](../ide/how-to-configure-projects-to-target-platforms.md)。
 
     > [!NOTE]
-    > 无法在定义 SharePoint 工具扩展的同一项目中实现 SharePoint 命令，因为 SharePoint 命令面向 .NET Framework 3.5 和 SharePoint 工具扩展以 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]为目标。 你必须在单独的项目中定义你的扩展所使用的任何 SharePoint 命令。 有关详细信息，请参阅[在 Visual Studio 中部署 SharePoint 工具扩展](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md)。
+    > 不能在定义 SharePoint 工具扩展的同一项目中实现 SharePoint 命令，因为 SharePoint 命令面向 .NET Framework 3.5 和 SharePoint 工具扩展 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 。 你必须在单独的项目中定义你的扩展所使用的任何 SharePoint 命令。 有关详细信息，请参阅[在 Visual Studio 中部署 SharePoint 工具扩展](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md)。
 
 2. 添加对下列程序集的引用：
 
@@ -45,7 +44,7 @@ ms.locfileid: "73189226"
 
     - 它可以有一个或两个参数。
 
-         第一个参数必须是 <xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext> 的对象。 此对象提供在其中执行命令的 Microsoft. SPSite 或 node.js。 它还提供了一个 <xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandLogger> 对象，该对象可用于将消息写入到 "**输出**" 窗口或 Visual Studio 中的 "**错误列表**" 窗口。
+         第一个参数必须是一个 <xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext> 对象。 此对象提供在其中执行命令的 Microsoft. SPSite 或 node.js。 它还提供一个 <xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandLogger> 对象，该对象可用于将消息写入到 "**输出**" 窗口或 Visual Studio 中的 "**错误列表**" 窗口。
 
          第二个参数可以是你选择的类型，但此参数是可选的。 如果需要将数据从 SharePoint 工具扩展传递到命令，则可以将此参数添加到 SharePoint 命令。
 
@@ -55,17 +54,17 @@ ms.locfileid: "73189226"
 
     - 此方法可以具有任何可见性（**公共**、**内部**或**私有**），并且它可以为静态或非静态。
 
-4. 将 <xref:Microsoft.VisualStudio.SharePoint.Commands.SharePointCommandAttribute> 应用于方法。 此属性指定该命令的唯一标识符;此标识符不必与方法名称匹配。
+4. 将应用 <xref:Microsoft.VisualStudio.SharePoint.Commands.SharePointCommandAttribute> 到方法。 此属性指定该命令的唯一标识符;此标识符不必与方法名称匹配。
 
      从 SharePoint 工具扩展中调用命令时，必须指定相同的唯一标识符。 有关详细信息，请参阅[如何：执行 SharePoint 命令](../sharepoint/how-to-execute-a-sharepoint-command.md)。
 
 ## <a name="example"></a>示例
- 下面的代码示例演示一个具有标识符 `Contoso.Commands.UpgradeSolution`的 SharePoint 命令。 此命令使用服务器对象模型中的 Api 升级到已部署的解决方案。
+ 下面的代码示例演示一个具有标识符的 SharePoint 命令 `Contoso.Commands.UpgradeSolution` 。 此命令使用服务器对象模型中的 Api 升级到已部署的解决方案。
 
  [!code-csharp[SPExtensibility.ProjectExtension.UpgradeDeploymentStep#5](../sharepoint/codesnippet/CSharp/UpgradeDeploymentStep/SharePointCommands/Commands.cs#5)]
  [!code-vb[SPExtensibility.ProjectExtension.UpgradeDeploymentStep#5](../sharepoint/codesnippet/VisualBasic/upgradedeploymentstep/sharepointcommands/commands.vb#5)]
 
- 除了隐式第一个 <xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext> 参数外，此命令还具有一个自定义字符串参数，该参数包含正在升级到 SharePoint 站点的 .wsp 文件的完整路径。 若要在更大的示例上下文中查看此代码，请参阅[演练：为 SharePoint 项目创建自定义部署步骤](../sharepoint/walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md)。
+ 除了隐式的第一个 <xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext> 参数外，此命令还具有一个自定义字符串参数，该参数包含正在升级到 SharePoint 站点的 .wsp 文件的完整路径。 若要在更大的示例上下文中查看此代码，请参阅[演练：为 SharePoint 项目创建自定义部署步骤](../sharepoint/walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md)。
 
 ## <a name="compiling-the-code"></a>编译代码
  此示例需要引用以下程序集：
@@ -75,9 +74,9 @@ ms.locfileid: "73189226"
 - Microsoft SharePoint
 
 ## <a name="deploying-the-command"></a>部署命令
- 若要部署此命令，请将命令程序集包含在与使用命令的扩展程序集相同的 [!include[vsprvs](../sharepoint/includes/vsprvs-md.md)] 扩展（*vsix*）包中。 还必须在 source.extension.vsixmanifest 文件中为命令程序集添加一个项。 有关详细信息，请参阅[在 Visual Studio 中部署 SharePoint 工具扩展](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md)。
+ 若要部署此命令，请将命令程序集包含在使用 [!include[vsprvs](../sharepoint/includes/vsprvs-md.md)] 命令的扩展程序集所在的同一扩展（*vsix*）包中。 还必须在 source.extension.vsixmanifest 文件中为命令程序集添加一个项。 有关详细信息，请参阅[在 Visual Studio 中部署 SharePoint 工具扩展](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [调入 SharePoint 对象模型](../sharepoint/calling-into-the-sharepoint-object-models.md)
 - [如何：执行 SharePoint 命令](../sharepoint/how-to-execute-a-sharepoint-command.md)
 - [演练：扩展服务器资源管理器以显示 web 部件](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)

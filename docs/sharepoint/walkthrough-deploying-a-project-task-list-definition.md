@@ -1,7 +1,7 @@
 ---
 title: 演练：部署项目任务列表定义 |Microsoft Docs
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -12,12 +12,11 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c0b7f1b0668af8218017c5cc96712384ed5f275c
-ms.sourcegitcommit: 77ef1dcc71057cd5fdc4733ff0cb6085bd6113e0
-ms.translationtype: MT
+ms.openlocfilehash: b5639fe7a1b35dea41b14be3730986ad7c7309b7
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73661871"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86015763"
 ---
 # <a name="walkthrough-deploy-a-project-task-list-definition"></a>演练：部署项目任务列表定义
 
@@ -25,7 +24,7 @@ ms.locfileid: "73661871"
 
 [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
 
 - 支持的 Microsoft Windows 和 SharePoint 版本。
 
@@ -43,7 +42,7 @@ ms.locfileid: "73661871"
 
 3. 指定用于调试的本地 SharePoint 站点，选择 "**部署为场解决方案**" 选项按钮，然后选择 "**完成**" 按钮。
 
-4. 打开项目的快捷菜单，然后选择 "**添加** > **新项**"。
+4. 打开项目的快捷菜单，然后选择 "**添加**  >  **新项**"。
 
 5. 在 "**模板**" 窗格中选择**列表**模板，然后选择 "**添加**" 按钮。
 
@@ -73,7 +72,7 @@ ms.locfileid: "73661871"
 
      使用名为**ProjectTaskListEventReceiver**的代码文件将新的事件接收器节点添加到项目。
 
-6. 将代码添加到**ProjectTaskListEventReceiver**代码文件中的 `ItemAdded` 方法。 每次添加新任务时，都会向任务添加一个默认的截止日期和说明。 默认截止日期为2009年7月1日。
+6. 将代码添加到 `ItemAdded` **ProjectTaskListEventReceiver**代码文件中的方法。 每次添加新任务时，都会向任务添加一个默认的截止日期和说明。 默认截止日期为2009年7月1日。
 
      [!code-vb[SPProjectTaskList#1](../sharepoint/codesnippet/VisualBasic/projecttasklist1/projecttasklisteventreceiver/projecttasklisteventreceiver.vb#1)]
      [!code-csharp[SPProjectTaskList#1](../sharepoint/codesnippet/CSharp/projecttasklist/projecttasklisteventreceiver/projecttasklisteventreceiver.cs#1)]
@@ -136,19 +135,19 @@ ms.locfileid: "73661871"
 
 ### <a name="to-deploy-the-project-task-list-to-the-local-system"></a>将项目任务列表部署到本地系统
 
-在 Visual Studio 菜单栏上，选择 "**生成** > **部署解决方案**"。
+在 Visual Studio 菜单栏上，选择 "**生成**" "  >  **部署解决方案**"。
 
-Visual Studio 将回收 IIS 应用程序池，收回解决方案的任何现有版本，将解决方案包（ *.wsp*）文件复制到 SharePoint，然后激活其功能。 你现在可以在 SharePoint 中使用该解决方案。 有关部署配置步骤的详细信息，请参阅[如何：编辑 SharePoint 部署配置](../sharepoint/how-to-edit-a-sharepoint-deployment-configuration.md)。
+Visual Studio 将回收 IIS 应用程序池，收回解决方案的任何现有版本，将解决方案包（*.wsp*）文件复制到 SharePoint，然后激活其功能。 你现在可以在 SharePoint 中使用该解决方案。 有关部署配置步骤的详细信息，请参阅[如何：编辑 SharePoint 部署配置](../sharepoint/how-to-edit-a-sharepoint-deployment-configuration.md)。
 
 ### <a name="to-deploy-the-project-task-list-to-a-remote-system"></a>将项目任务列表部署到远程系统
 
-1. 在 Visual Studio 菜单栏上，选择 "**生成**" > **发布**"。
+1. 在 Visual Studio 菜单栏上，选择 "**生成**  >  **发布**"。
 
 2. 在 "**发布**" 对话框中，选择 "**发布到文件系统**" 选项按钮。
 
      您可以通过选择省略号按钮![省略号图标](../sharepoint/media/ellipsisicon.gif "“省略号”图标")，然后导航到另一个位置，在 "**发布**" 对话框中更改目标位置。
 
-3. 选择 "**发布**" 按钮。
+3. 选择 **“发布”** 按钮。
 
      为解决方案创建 *.wsp*文件。
 
@@ -156,11 +155,11 @@ Visual Studio 将回收 IIS 应用程序池，收回解决方案的任何现有�
 
 5. 使用 PowerShell `Add-SPUserSolution` 命令在远程 SharePoint 安装上安装包。 （对于场解决方案，请使用 `Add-SPSolution` 命令。）
 
-     例如 `Add-SPUserSolution C:\MyProjects\ProjectTaskList\ProjectTaskList\bin\Debug\ProjectTaskList.wsp`。
+     例如，`Add-SPUserSolution C:\MyProjects\ProjectTaskList\ProjectTaskList\bin\Debug\ProjectTaskList.wsp`。
 
-6. 使用 PowerShell `Install-SPUserSolution` 命令部署解决方案。 （对于场解决方案，请使用 `Install-SPSolution` 命令。）
+6. 使用 PowerShell `Install-SPUserSolution` 命令来部署解决方案。 （对于场解决方案，请使用 `Install-SPSolution` 命令。）
 
-     例如 `Install-SPUserSolution -Identity ProjectTaskList.wsp -Site http://NewSiteName`。
+     例如，`Install-SPUserSolution -Identity ProjectTaskList.wsp -Site http://NewSiteName`。
 
      有关远程部署的详细信息，请参阅在 SharePoint 2010 中[使用解决方案](/previous-versions/office/developer/sharepoint-2010/ee534972(v=office.14))以及使用[PowerShell 添加和部署解决方案](http://www.dotnetmafia.com/blogs/dotnettipoftheday/archive/2009/12/02/adding-and-deploying-solutions-with-powershell-in-sharepoint-2010.aspx)。
 
@@ -174,5 +173,5 @@ Visual Studio 将回收 IIS 应用程序池，收回解决方案的任何现有�
 
 - [Windows PowerShell for SharePoint Server 2010](/powershell/module/sharepoint-server)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 [打包和部署 SharePoint 解决方案](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)
