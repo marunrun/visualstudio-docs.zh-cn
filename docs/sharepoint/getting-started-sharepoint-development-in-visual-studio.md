@@ -1,7 +1,7 @@
 ---
 title: 入门（Visual Studio 中的 SharePoint 开发） |Microsoft Docs
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: overview
 dev_langs:
 - VB
 - CSharp
@@ -14,12 +14,11 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: fc6d6083b9a764acc915e6c0f800cb70569652b7
-ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
-ms.translationtype: MT
+ms.openlocfilehash: 999a23f8765a72feb22822120a11e1b38b9ac946
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82586668"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86017091"
 ---
 # <a name="get-started-sharepoint-development-in-visual-studio"></a>入门（Visual Studio 中的 SharePoint 开发）
   此部分帮助你开始使用 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 来开发利用 [!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)] 和 [!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)]的 SharePoint 解决方案。
@@ -51,7 +50,7 @@ ms.locfileid: "82586668"
 |[打包和部署 SharePoint 解决方案](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)|介绍如何打包和部署 SharePoint 解决方案。|
 |[在 Visual Studio 中扩展 SharePoint 工具](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)|介绍如何扩展 SharePoint 工具以创建所需的功能。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [开发 SharePoint 解决方案](../sharepoint/developing-sharepoint-solutions.md)
 - [使用服务器资源管理器浏览 SharePoint 连接](../sharepoint/browsing-sharepoint-connections-using-server-explorer.md)

@@ -1,7 +1,7 @@
 ---
 title: 如何：定义方法实例 |Microsoft Docs
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -15,17 +15,16 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 0e21900e87278ad500ee8497d1dd0c49350695d1
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
-ms.translationtype: MT
+ms.openlocfilehash: 170982a5d4abe33ca8cd705a979acc0737185a9c
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72981799"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86016825"
 ---
 # <a name="how-to-define-a-method-instance"></a>如何：定义方法实例
   必须为模型中的每个方法定义至少一个方法实例。
 
- 使用 " **BDC 方法详细信息**" 窗口添加方法实例。 添加方法实例时，Visual Studio 会将 `<MethodInstance>` 元素添加到项目中模型文件的 XML。 有关 `<MethodInstance>` 元素的特性的详细信息，请参阅[MethodInstance](/previous-versions/office/developer/sharepoint-2010/ee556838(v=office.14))。
+ 使用 " **BDC 方法详细信息**" 窗口添加方法实例。 添加方法实例时，Visual Studio 会 `<MethodInstance>` 在项目中的模型文件的 XML 中添加一个元素。 有关元素特性的详细信息 `<MethodInstance>` ，请参阅[MethodInstance](/previous-versions/office/developer/sharepoint-2010/ee556838(v=office.14))。
 
 ### <a name="to-define-a-method-instance"></a>定义方法实例
 
@@ -35,11 +34,11 @@ ms.locfileid: "72981799"
 
      "**实例**" 节点下将出现一个新的方法实例。
 
-3. 在菜单栏上，选择 "**查看** > **属性" 窗口**。
+3. 在菜单栏上，选择 "**查看**  >  **属性窗口**"。
 
 4. 在 "**属性**" 窗口中，设置方法实例的属性。 有关每个属性的详细信息，请参阅[MethodInstance](/previous-versions/office/developer/sharepoint-2010/ee556838(v=office.14))。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [BDC 模型设计工具概述](../sharepoint/bdc-model-design-tools-overview.md)
 - [如何：向模型添加实体](../sharepoint/how-to-add-an-entity-to-a-model.md)
 - [如何：向方法添加参数](../sharepoint/how-to-add-a-parameter-to-a-method.md)

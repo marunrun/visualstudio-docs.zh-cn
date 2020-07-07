@@ -1,7 +1,7 @@
 ---
 title: 演练：创建 SharePoint 应用程序页 |Microsoft Docs
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,12 +13,11 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 0eaf7bda4ac4ed67dae79b8dd83bb59ba6985343
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
-ms.translationtype: MT
+ms.openlocfilehash: 76375c15077bf672eaba01c840ba406228046435
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985029"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86016490"
 ---
 # <a name="walkthrough-create-a-sharepoint-application-page"></a>演练：创建 SharePoint 应用程序页
 
@@ -45,7 +44,7 @@ ms.locfileid: "72985029"
 
 首先，创建一个**空 SharePoint 项目**。 稍后，您将向此项目中添加一个**应用程序页**项。
 
-1. 启动[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]。
+1. 启动 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]。
 
 2. 打开 "**新建项目**" 对话框，展开想要使用的语言下的 " **Office/SharePoint** " 节点，然后选择 " **SharePoint 解决方案**" 节点。
 
@@ -61,19 +60,19 @@ ms.locfileid: "72985029"
 
 1. 在**解决方案资源管理器**中，选择 " **MySharePointProject** " 项目。
 
-2. 在菜单栏上，依次选择“项目” > “添加新项”。
+2. 在菜单栏上，选择 "**项目**" "  >  **添加新项**"。
 
 3. 在 "**添加新项**" 对话框中，选择 "**应用程序" 页（仅场解决方案**模板。
 
 4. 将该页命名为**SearchItems**，然后选择 "**添加**" 按钮。
 
-     Visual Web Developer 设计器会在**源**视图中显示应用程序页，可以在其中查看该页的 HTML 元素。 设计器将为多个 <xref:System.Web.UI.WebControls.Content> 控件显示标记。 每个控件都映射到在默认应用程序母版页中定义的 <xref:System.Web.UI.WebControls.ContentPlaceHolder> 控件。
+     Visual Web Developer 设计器会在**源**视图中显示应用程序页，可以在其中查看该页的 HTML 元素。 设计器将为多个控件显示标记 <xref:System.Web.UI.WebControls.Content> 。 每个控件都映射到 <xref:System.Web.UI.WebControls.ContentPlaceHolder> 在默认应用程序母版页中定义的控件。
 
 ## <a name="design-the-layout-of-the-application-page"></a>设计应用程序页的布局
 
 使用 "应用程序页" 项可以使用设计器将 ASP.NET 控件添加到应用程序页。 此设计器与 Visual Web Developer 中使用的设计器相同。 向设计器的 "**源**" 视图添加标签、单选按钮列表和表，然后设置属性，就像设计任何标准 ASP.NET 页一样。
 
-1. 在菜单栏上，依次选择“视图” **“工具箱”**  > 。
+1. 在菜单栏上，选择 "**视图**  >  **" "工具箱**"。
 
 2. 在 "**工具箱**" 的 "标准" 节点中，执行以下步骤之一：
 
@@ -83,7 +82,7 @@ ms.locfileid: "72985029"
 
 3. 重复上述步骤，将**DropDownList**项和**表**项添加到**PlaceHolderMain**内容控件。
 
-4. 在设计器中，将 "标签" 控件的 "`Text`" 属性的值更改为**显示所有项**。
+4. 在设计器中，将 `Text` "标签" 控件的属性值更改为 "**显示所有项**"。
 
 5. 在设计器中，将 `<asp:DropDownList>` 元素替换为以下 XML。
 
@@ -97,13 +96,13 @@ ms.locfileid: "72985029"
 
 ## <a name="handle-the-events-of-controls-on-the-page"></a>处理页上的控件的事件
 
-像处理任何 ASP.NET 页一样，处理应用程序页中的控件。 在此过程中，您将处理下拉列表的 `SelectedIndexChanged` 事件。
+像处理任何 ASP.NET 页一样，处理应用程序页中的控件。 在此过程中，您将处理 `SelectedIndexChanged` 下拉列表的事件。
 
 1. 在 "**视图**" 菜单上，选择 "**代码**"。
 
      应用程序页代码文件将在代码编辑器中打开。
 
-2. 将以下方法添加到 `SearchItems` 类。 此代码通过调用你稍后将在本演练中创建的方法来处理 <xref:System.Web.UI.WebControls.DropDownList> 的 <xref:System.Web.UI.WebControls.ListControl.SelectedIndexChanged> 事件。
+2. 将以下方法添加到 `SearchItems` 类。 此代码 <xref:System.Web.UI.WebControls.ListControl.SelectedIndexChanged> <xref:System.Web.UI.WebControls.DropDownList> 通过调用你稍后将在本演练中创建的方法来处理的事件。
 
      [!code-vb[SP_ApplicationPage#5](../sharepoint/codesnippet/VisualBasic/sp_applicationpage/layouts/sp_applicationpage/SearchItems.aspx.vb#5)]
      [!code-csharp[SP_ApplicationPage#5](../sharepoint/codesnippet/CSharp/sp_applicationpage/layouts/sp_applicationpage/SearchItems.aspx.cs#5)]
@@ -129,7 +128,7 @@ ms.locfileid: "72985029"
 
 1. 在**解决方案资源管理器**中，打开应用程序页的快捷菜单，然后选择 "**设为启动项**"。
 
-2. 选择 F5。
+2. 选择 F5****。
 
      SharePoint 站点将打开。
 
@@ -153,5 +152,5 @@ ms.locfileid: "72985029"
 
 ## <a name="see-also"></a>另请参阅
 
-[如何：创建应用程序页](../sharepoint/how-to-create-an-application-page.md)
-[应用程序 _layouts 页类型](/previous-versions/office/aa979604(v=office.14))
+[如何：创建应用程序页](../sharepoint/how-to-create-an-application-page.md) 
+[应用程序 _Layouts 页类型](/previous-versions/office/aa979604(v=office.14))

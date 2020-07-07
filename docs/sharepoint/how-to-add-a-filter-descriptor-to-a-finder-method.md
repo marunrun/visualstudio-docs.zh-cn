@@ -1,7 +1,7 @@
 ---
 title: 如何：向 Finder 方法添加筛选器描述符 |Microsoft Docs
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -15,12 +15,11 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f9dd853142d970cd14de20f4782accb3ce3e17eb
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
-ms.translationtype: MT
+ms.openlocfilehash: 228afb2f49f4d528fa9b806e9bf8d2531f7de901
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72986248"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86016737"
 ---
 # <a name="how-to-add-a-filter-descriptor-to-a-finder-method"></a>如何：向 Finder 方法添加筛选器描述符
   筛选器描述符允许模型的使用者在执行之前将值传递给方法。 有关详细信息，请参阅[设计业务数据连接模型](../sharepoint/designing-a-business-data-connectivity-model.md)。
@@ -33,7 +32,7 @@ ms.locfileid: "72986248"
 
 2. 在 "**方法详细信息**" 窗口中，选择参数的类型描述符。
 
-3. 在菜单栏上，选择 "**查看** > **属性" 窗口**。
+3. 在菜单栏上，选择 "**查看**  >  **属性窗口**"。
 
 4. 在 "**属性**" 窗口中，将 "**类型名称**" 属性设置为适用于筛选器的数据类型。
 
@@ -45,7 +44,7 @@ ms.locfileid: "72986248"
 
      **筛选器描述符**节点下将显示一个新的筛选器描述符。
 
-7. 在菜单栏上，选择 "**查看** > **属性" 窗口**。
+7. 在菜单栏上，选择 "**查看**  >  **属性窗口**"。
 
 8. 在 "**属性**" 窗口中，选择 "**类型**" 属性。
 
@@ -62,12 +61,12 @@ ms.locfileid: "72986248"
      下面的示例返回具有指定订单日期的销售订单。
 
     > [!NOTE]
-    > 将 `ServerName` 字段的值替换为服务器的名称。
+    > 将字段的值替换 `ServerName` 为服务器的名称。
 
      [!code-csharp[SP_BDC#11](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/salesorderservice.cs#11)]
      [!code-vb[SP_BDC#11](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/salesorderservice.vb#11)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [如何：添加 Finder 方法](../sharepoint/how-to-add-a-finder-method.md)
 - [如何：添加特定的 Finder 方法](../sharepoint/how-to-add-a-specific-finder-method.md)
 - [如何：向方法添加参数](../sharepoint/how-to-add-a-parameter-to-a-method.md)

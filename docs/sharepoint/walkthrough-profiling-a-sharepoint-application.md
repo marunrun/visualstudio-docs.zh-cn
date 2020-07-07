@@ -1,7 +1,7 @@
 ---
 title: 演练：分析 SharePoint 应用程序 |Microsoft Docs
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -15,12 +15,11 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 27024f3b28b97a1a5d0befc3d70dbf8144fb9e24
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
-ms.translationtype: MT
+ms.openlocfilehash: c900a1496d3ef864e50d40092379348c05a4706b
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2020
-ms.locfileid: "77277648"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86017108"
 ---
 # <a name="walkthrough-profile-a-sharepoint-application"></a>演练：分析 SharePoint 应用程序
   本演练演示在 Visual Studio 中如何使用分析工具优化 SharePoint 应用程序的性能。 此示例应用程序是 SharePoint 功能事件接收器，其中包含降低功能事件接收器性能的空闲循环。 Visual Studio 探查器使你能够查找并消除最昂贵（执行速度最慢）的项目部分，也称为*热路径*。
@@ -37,21 +36,21 @@ ms.locfileid: "77277648"
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
  您需要满足以下条件才能完成本演练：
 
 - 支持的 Microsoft Windows 和 SharePoint 版本。
 
-- [!INCLUDE[vs_dev11_long](../sharepoint/includes/vs-dev11-long-md.md)] 列中的一个值匹配。
+- [!INCLUDE[vs_dev11_long](../sharepoint/includes/vs-dev11-long-md.md)].
 
 ## <a name="create-a-sharepoint-project"></a>创建 SharePoint 项目
  首先，创建一个 SharePoint 项目。
 
 ### <a name="to-create-a-sharepoint-project"></a>创建 SharePoint 项目
 
-1. 在菜单栏上，选择 "**文件**" " > **新建** > **项目**" 以显示 "**新建项目**" 对话框。
+1. 在菜单栏上，选择 "**文件**"  >  "**新建**  >  **项目**" 以显示 "**新建项目**" 对话框。
 
-2. 展开 "**视觉对象C#**  " 或 " **Visual Basic**" 下的 " **SharePoint** " 节点，然后选择 " **2010** " 节点。
+2. 展开 " **Visual c #** " 或 " **Visual Basic**" 下的 " **SharePoint** " 节点，然后选择 " **2010** " 节点。
 
 3. 在 "模板" 窗格中，选择 " **SharePoint 2010 项目**" 模板。
 
@@ -59,13 +58,13 @@ ms.locfileid: "77277648"
 
     " **SharePoint 自定义向导**" 随即出现。
 
-5. 在 "**指定用于调试的站点和安全级别**" 页上，输入要在其中调试站点定义的 SharePoint 服务器站点的 URL，或者使用默认位置（ http://<em>system name</em>/）。
+5. 在 "**指定用于调试的站点和安全级别**" 页上，输入要在其中调试站点定义的 SharePoint 服务器站点的 URL，或者使用默认位置（http://<em>system name</em>/）。
 
 6. 在 "**此 SharePoint 解决方案的信任级别是什么？** " 部分中，选择 "**部署为场解决方案**" 选项按钮。
 
     目前，只能分析场解决方案。 有关沙盒解决方案与场解决方案的详细信息，请参阅[沙盒解决方案注意事项](../sharepoint/sandboxed-solution-considerations.md)。
 
-7. 单击“完成”按钮。 项目将显示在**解决方案资源管理器**中。
+7. 选择 **“完成”** 按钮。 项目将显示在**解决方案资源管理器**中。
 
 ## <a name="add-a-feature-and-feature-event-receiver"></a>添加功能和功能事件接收器
  接下来，向项目中添加功能和该功能的事件接收器。 此事件接收器将包含要分析的代码。
@@ -151,7 +150,7 @@ ms.locfileid: "77277648"
     }
     ```
 
-5. 在 `FeatureActivated`过程下面添加以下过程。
+5. 在该过程下面添加以下过程 `FeatureActivated` 。
 
     ```vb
 
@@ -237,17 +236,17 @@ ms.locfileid: "77277648"
 
 ### <a name="to-view-and-interpret-the-profile-results"></a>查看和解释配置文件结果
 
-1. 在示例分析报告的 "**执行单个工作最多的函数**" 部分中，请注意，`TimeCounter` 位于列表的顶部附近。
+1. 在示例分析报告的 "**执行单个工作最多的工作**" 部分的 "函数" 部分中，请注意，在 `TimeCounter` 列表顶部附近。
 
      此位置表示 `TimeCounter` 是示例数最高的函数之一，这表明它是应用程序中最大的性能瓶颈之一。 此情况并不奇怪，因为这是为了实现演示目的而有意设计的。
 
-2. 在 "**执行单个工作最多的函数**" 部分中，选择 "`ProcessRequest`" 链接以显示 `ProcessRequest` 函数的成本分布。
+2. 在 "**执行单个工作最多的函数**" 部分中，选择 `ProcessRequest` 要显示该函数的成本分布的链接 `ProcessRequest` 。
 
-     在 `ProcessRequest`的 "**被调用函数**" 部分中，请注意， **FeatureActiviated**函数作为开销最高的函数列出。
+     在的 "**被调用函数**" 部分中 `ProcessRequest` ，请注意， **FeatureActiviated**函数作为开销最高的函数列出。
 
 3. 在 "**被调用函数**" 部分中，选择 " **FeatureActivated** " 按钮。
 
-     在**FeatureActivated**的 "**被调用函数**" 部分中，`TimeCounter` 函数作为开销最高的函数列出。 在 "**函数代码视图**" 窗格中，突出显示的代码（`TimeCounter`）是热点，指示需要更正的位置。
+     在**FeatureActivated**的 "**被调用函数**" 部分中，该 `TimeCounter` 函数作为开销最高的函数列出。 在 "**函数代码视图**" 窗格中，突出显示的代码（ `TimeCounter` ）是热点，指示需要更正的位置。
 
 4. 关闭示例分析报告。
 
@@ -275,4 +274,4 @@ ms.locfileid: "77277648"
 ## <a name="see-also"></a>另请参阅
 - [性能会话概述](../profiling/performance-session-overview.md)
 - [性能分析初学者指南](../profiling/beginners-guide-to-performance-profiling.md)
-- [通过 Visual Studio 探查器查找应用程序瓶颈](https://msdn.microsoft.com/magazine/cc337887.aspx)
+- [使用 Visual Studio 探查器查找应用程序瓶颈](https://msdn.microsoft.com/magazine/cc337887.aspx)
