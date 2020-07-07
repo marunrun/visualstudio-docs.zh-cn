@@ -1,7 +1,7 @@
 ---
 title: 如何：创建实体之间的关联 |Microsoft Docs
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - AssociationGroupTool
 dev_langs:
@@ -21,12 +21,11 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: cba9d712e2bcfa90ae37d47e3c518697f10b6add
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
-ms.translationtype: MT
+ms.openlocfilehash: 75d4fcc9b99c9c5e2960e152eb5dac1da1343109
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72981836"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86016929"
 ---
 # <a name="how-to-create-an-association-between-entities"></a>如何：创建实体之间的关联
   您可以通过创建关联来定义业务数据连接（BDC）模型中的实体之间的关系。 Visual Studio 生成的方法为模型的使用者提供有关每个关联的信息。 SharePoint Web 部件、列表或自定义应用程序可以使用这些方法在用户界面 (UI) 中显示数据关系。
@@ -45,11 +44,11 @@ ms.locfileid: "72981836"
 
     1. 在 "**标识符映射**" 表的 "**源 ID** " 列中，选择出现在 "**字段**" 列中的每个匹配类型描述符旁边的标识符。
 
-         例如，在 "**源 ID** " 列中，选择 `ReadList.salesOrderList.SalesOrderList.SalesOrder.ContactID` 类型描述符和 `ReadItem.salesOrder.SalesOrder.ContactID` 类型描述符旁 `ContactID`。
+         例如，在 "**源 ID** " 列中，选择 `ContactID` `ReadList.salesOrderList.SalesOrderList.SalesOrder.ContactID` 类型描述符和 `ReadItem.salesOrder.SalesOrder.ContactID` 类型描述符。
 
 4. 如果要创建外部无键关联，请清除 "**为外键关联**" 复选框。
 
-5. 选择 **“确定”** 按钮。
+5. 选择“确定”  按钮。
 
 6. 在 BDC 设计器中，表示关联的行出现在源实体和目标实体之间。
 
@@ -61,7 +60,7 @@ ms.locfileid: "72981836"
 
      有关关联导航器方法的示例，请参阅[创建实体之间的关联](../sharepoint/creating-an-association-between-entities.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [创建实体之间的关联](../sharepoint/creating-an-association-between-entities.md)
 - [设计业务数据连接模型](../sharepoint/designing-a-business-data-connectivity-model.md)
 - [如何：添加 Finder 方法](../sharepoint/how-to-add-a-finder-method.md)

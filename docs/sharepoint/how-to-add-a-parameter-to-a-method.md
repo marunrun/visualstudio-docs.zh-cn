@@ -1,7 +1,7 @@
 ---
 title: 如何：向方法添加参数 |Microsoft Docs
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -17,12 +17,11 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: eb1a1c1e8f11ac6daa46f9fe1468a1ff3509e135
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
-ms.translationtype: MT
+ms.openlocfilehash: 6d0496d0fd6a347683d56630990e50af585520ba
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72986236"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86016720"
 ---
 # <a name="how-to-add-a-parameter-to-a-method"></a>如何：向方法添加参数
   使用参数将信息传递到方法或从方法返回信息。 所有方法都必须至少有一个参数。 有关如何设计参数来支持要创建的方法类型的详细信息，请参阅[设计业务数据连接模型](../sharepoint/designing-a-business-data-connectivity-model.md)。
@@ -33,7 +32,7 @@ ms.locfileid: "72986236"
 
 1. 向实体添加方法。
 
-2. 在菜单栏上，选择 "**查看** > **其他 Windows** > **BDC 方法详细信息**"。
+2. 在菜单栏上，选择 "**查看**  >  **其他 Windows**  >  **BDC 方法详细信息**"。
 
      此时将打开 " **BDC 方法详细信息**" 窗口。 有关详细信息，请参阅[BDC 模型设计工具概述](../sharepoint/bdc-model-design-tools-overview.md)。
 
@@ -43,7 +42,7 @@ ms.locfileid: "72986236"
 
      新参数将出现在 "**参数**" 节点下。
 
-5. 在菜单栏上，选择 "**查看** > **属性" 窗口**。
+5. 在菜单栏上，选择 "**查看**  >  **属性窗口**"。
 
 6. 在 "**属性**" 窗口中，将 "**名称**" 属性设置为任何有意义的名称。 例如，如果该方法将返回 customers，则可以将该方法命名为**GetCustomers**。
 
@@ -53,7 +52,7 @@ ms.locfileid: "72986236"
 
 8. 修改参数的类型描述符。 有关详细信息，请参阅[如何：定义参数的类型描述符](../sharepoint/how-to-define-the-type-descriptor-of-a-parameter.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [BDC 模型设计工具概述](../sharepoint/bdc-model-design-tools-overview.md)
 - [如何：向模型添加实体](../sharepoint/how-to-add-an-entity-to-a-model.md)
 - [如何：定义参数的类型描述符](../sharepoint/how-to-define-the-type-descriptor-of-a-parameter.md)

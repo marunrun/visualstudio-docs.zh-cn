@@ -1,7 +1,7 @@
 ---
 title: 如何：向模型添加实体 |Microsoft Docs
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - EntityTool
 dev_langs:
@@ -17,12 +17,11 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: b1a7ec1eab5cdcf2e415a4803c51c9da91be29c9
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
-ms.translationtype: MT
+ms.openlocfilehash: b80f39494b98014a75d4265f228906be2ff45188
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985246"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86016672"
 ---
 # <a name="how-to-add-an-entity-to-a-model"></a>如何：向模型添加实体
   若要创建实体，请将 Visual Studio**工具箱**中的实体控件添加到业务数据连接（BDC）设计器。
@@ -33,7 +32,7 @@ ms.locfileid: "72985246"
 
 2. 在 "**工具箱**" 的 " **BusinessDataCatalog** " 组中，将 "**实体**" 控件添加到设计器上。
 
-     新实体将显示在设计器上。 Visual Studio 将 `<Entity>` 元素添加到项目中 BDC 模型文件的 XML。 有关实体元素特性的详细信息，请参阅[entity](/previous-versions/office/developer/sharepoint-2010/ee558325(v=office.14))。
+     新实体将显示在设计器上。 Visual Studio 将一个 `<Entity>` 元素添加到项目中 BDC 模型文件的 XML 中。 有关实体元素特性的详细信息，请参阅[entity](/previous-versions/office/developer/sharepoint-2010/ee558325(v=office.14))。
 
 3. 在设计器中，打开实体的快捷菜单，选择 "**添加**"，然后选择 "**标识符**"。
 
@@ -47,7 +46,7 @@ ms.locfileid: "72985246"
      [!code-csharp[SP_BDC_Entity_Data_Class#1](../sharepoint/codesnippet/CSharp/sp_bdc_entity_data_class/bdcmodel1/contact.cs#1)]
      [!code-vb[SP_BDC_Entity_Data_Class#1](../sharepoint/codesnippet/VisualBasic/sp_bdc_entity_data_class/bdcmodel1/contact.vb#1)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [如何：添加 Creator 方法](../sharepoint/how-to-add-a-creator-method.md)
 - [如何：添加删除器方法](../sharepoint/how-to-add-a-deleter-method.md)
 - [如何：添加更新程序方法](../sharepoint/how-to-add-an-updater-method.md)

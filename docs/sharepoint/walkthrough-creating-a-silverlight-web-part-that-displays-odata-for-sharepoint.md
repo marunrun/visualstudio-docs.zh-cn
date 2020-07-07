@@ -1,7 +1,7 @@
 ---
 title: 创建显示 OData for SharePoint 的 Silverlight web 部件
 ms.date: 02/22/2017
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - VS.SharePointTools.SPE.SilverlightWebPart
 dev_langs:
@@ -12,36 +12,35 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: bd2e42f48a6881b533a2f098e47ac92511b85aa3
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
-ms.translationtype: MT
+ms.openlocfilehash: 75653f0357bcc605e666ee271a527b616985b641
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72984824"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86017167"
 ---
 # <a name="walkthrough-create-a-silverlight-web-part-that-displays-odata-for-sharepoint"></a>演练：创建显示 OData for SharePoint 的 Silverlight web 部件
   SharePoint 2010 通过 OData 公开其列表数据。 在 SharePoint 中，OData 服务由 RESTful 服务 ListData 实现。 本演练演示如何创建承载 Silverlight 应用程序的 SharePoint web 部件。 Silverlight 应用程序使用 ListData 显示 SharePoint 公告列表信息。 有关详细信息，请参阅[SharePoint FOUNDATION REST 接口](/previous-versions/office/developer/sharepoint-2010/ff521587(v=office.14))和[Open Data Protocol](https://www.odata.org/)。
 
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Prerequisites
- 你需要以下组件来完成本演练：
+## <a name="prerequisites"></a>先决条件
+ 您需要满足以下条件才能完成本演练：
 
 - 支持的 Microsoft Windows 和 SharePoint 版本。
 
-- [!INCLUDE[vs_dev11_long](../sharepoint/includes/vs-dev11-long-md.md)]
+- [!INCLUDE[vs_dev11_long](../sharepoint/includes/vs-dev11-long-md.md)].
 
 ## <a name="create-a-silverlight-application-and-silverlight-web-part"></a>创建 Silverlight 应用程序和 Silverlight web 部件
  首先，在 Visual Studio 中创建 Silverlight 应用程序。 Silverlight 应用程序使用 ListData 服务从 SharePoint 公告列表中检索数据。
 
 > [!NOTE]
-> 4\.0 之前的 Silverlight 版本均不支持引用 SharePoint 列表数据所需的接口。
+> 4.0 之前的 Silverlight 版本均不支持引用 SharePoint 列表数据所需的接口。
 
 #### <a name="to-create-a-silverlight-application-and-silverlight-web-part"></a>创建 Silverlight 应用程序和 Silverlight web 部件
 
-1. 在菜单栏上，选择 "**文件**" " > **新建** > **项目**" 以显示 "**新建项目**" 对话框。
+1. 在菜单栏上，选择 "**文件**"  >  "**新建**  >  **项目**" 以显示 "**新建项目**" 对话框。
 
-2. 展开 "**视觉对象C#**  " 或 " **Visual Basic**" 下的 " **SharePoint** " 节点，然后选择 " **2010** " 节点。
+2. 展开 " **Visual c #** " 或 " **Visual Basic**" 下的 " **SharePoint** " 节点，然后选择 " **2010** " 节点。
 
 3. 在 "模板" 窗格中，选择 " **SharePoint 2010 Silverlight Web 部件**" 模板。
 
@@ -49,7 +48,7 @@ ms.locfileid: "72984824"
 
     此时将显示 " **SharePoint 自定义向导**" 对话框。
 
-5. 在 "**指定用于调试的站点和安全级别**" 页上，输入要在其中调试站点定义的 SharePoint 服务器站点的 URL，或者使用默认位置（ http://<em>system name</em>/）。
+5. 在 "**指定用于调试的站点和安全级别**" 页上，输入要在其中调试站点定义的 SharePoint 服务器站点的 URL，或者使用默认位置（http://<em>system name</em>/）。
 
 6. 在 "**此 SharePoint 解决方案的信任级别是什么？** " 部分中，选择 "**部署为场解决方案**" 选项按钮。
 
@@ -57,9 +56,9 @@ ms.locfileid: "72984824"
 
 7. 在 "**指定 Silverlight 配置信息**" 页的 "要**如何关联 silverlight Web 部件**" 部分中，选择 "**创建新的 silverlight 项目并将其与 Web 部件相关联"** 选项按钮。
 
-8. 将**名称**更改为**SLApplication**，将**语言**设置为**Visual Basic**或**视觉C#对象**，然后将**silverlight 版本**设置为**silverlight 4.0**。
+8. 将**名称**更改为**SLApplication**，将**语言**设置为**Visual Basic**或**Visual c #**，然后将**silverlight 版本**设置为**silverlight 4.0**。
 
-9. 选择 "**完成**" 按钮。 项目将显示在**解决方案资源管理器**中。
+9. 选择 **“完成”** 按钮。 项目将显示在**解决方案资源管理器**中。
 
      此解决方案包含两个项目： Silverlight 应用程序和 Silverlight web 部件。 Silverlight 应用程序从 SharePoint 检索并显示列表数据，Silverlight web 部件承载 Silverlight 应用程序，使您可以在 SharePoint 中查看它。
 
@@ -75,15 +74,15 @@ ms.locfileid: "72984824"
     > [!NOTE]
     > 如果使用 Visual Basic，则必须选择**解决方案资源管理器**顶部的 "**显示所有文件**" 图标以显示 "**引用**" 节点。
 
-3. 在 "**添加服务引用**" 对话框的 "地址" 框中，输入 SharePoint 站点的 URL （如 **http://MySPSite** ），然后选择 "**开始**" 按钮。
+3. 在 "**添加服务引用**" 对话框的 "地址" 框中，输入 SharePoint 站点的 URL （例如 **http://MySPSite** ），然后选择 "**开始**" 按钮。
 
-     当 Silverlight 查找 SharePoint OData 服务 ListData 时，它会将该地址替换为完整的服务 URL。 在此示例中， http://myserver 变成 http://myserver/_vti_bin/ListData.svc 。
+     当 Silverlight 查找 SharePoint OData 服务 ListData 时，它会将该地址替换为完整的服务 URL。 对于本示例， http://myserver 将变为 http://myserver/_vti_bin/ListData.svc 。
 
 4. 选择 "**确定"** 按钮以将服务引用添加到项目，并使用默认服务名称 ServiceReference1。
 
-5. 在菜单栏上，依次选择“生成” > “生成解决方案”。
+5. 在菜单栏上，依次选择“生成” > “生成解决方案”   。
 
-6. 将新数据源添加到基于 SharePoint 服务的项目。 为此，请在菜单栏上选择 "**查看** > **其他 Windows**  > **数据源**"。
+6. 将新数据源添加到基于 SharePoint 服务的项目。 为此，请在菜单栏上选择 "**查看**  >  **其他 Windows**  >  **数据源**"。
 
      "**数据源**" 窗口将显示所有可用的 SharePoint 列表数据，如 "任务"、"公告" 和 "日历"。
 
@@ -93,7 +92,7 @@ ms.locfileid: "72984824"
 
 8. 调整网格控件的大小以适合 Silverlight 页。
 
-9. 在 MainPage 代码文件（*MainPage.xaml.cs* for Visual C#或*MainPage* for Visual Basic）中，添加以下命名空间引用。
+9. 在 MainPage 代码文件中（对于 Visual c #，为*MainPage.xaml.cs* ，对于 Visual Basic 为*MainPage* ），添加以下命名空间引用。
 
     ```vb
     ' Add the following three Imports statements.
@@ -230,6 +229,6 @@ ms.locfileid: "72984824"
     > [!NOTE]
     > 跨域访问 Silverlight 中的数据时，Silverlight 会防止可用于利用 web 应用程序的安全漏洞。 如果在访问 Silverlight 中的远程数据时遇到问题，请参阅[使服务跨域边界可用](/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc197955(v=vs.95))。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [为 SharePoint 创建 web 部件](../sharepoint/creating-web-parts-for-sharepoint.md)
 - [部署、发布和升级 SharePoint 解决方案包](../sharepoint/deploying-publishing-and-upgrading-sharepoint-solution-packages.md)

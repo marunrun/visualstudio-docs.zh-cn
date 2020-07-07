@@ -1,7 +1,7 @@
 ---
 title: 如何：添加自定义属性 |Microsoft Docs
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - VS.SharePointTools.BDC.Property_Editor
 dev_langs:
@@ -17,34 +17,33 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: caf2d0e63db724c8eb3c1e72c79a109548af8f9c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MT
+ms.openlocfilehash: e79b18b4d2b388d2ff0387fed24778f8db03fd54
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62556839"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86017072"
 ---
 # <a name="how-to-add-a-custom-property"></a>如何：添加自定义属性
-  可以向模型添加自定义属性，通过使用**属性编辑器**。 您可以访问代码来检索连接字符串等信息和其他数据在运行时中的这些属性。
+  您可以使用**属性编辑器**向模型中添加自定义属性。 您可以在代码中访问这些属性，以便在运行时检索连接字符串和其他数据等信息。
 
-### <a name="to-add-a-custom-property"></a>若要添加自定义属性
+### <a name="to-add-a-custom-property"></a>添加自定义属性
 
-1. 在中**BDC 资源管理器**，选择表示你想要应用自定义属性的模型元素的节点。
+1. 在 " **BDC 资源管理器**" 中，选择表示要对其应用自定义属性的模型元素的节点。
 
-2. 在菜单栏上依次选择**视图** > **属性窗口**。
+2. 在菜单栏上，选择 "**查看**  >  **属性窗口**"。
 
-3. 在中**属性**窗口中，选择**自定义属性**属性，然后选择省略号按钮 (![ASP.NET 移动设计器椭圆](../sharepoint/media/mwellipsis.gif "ASP。NET 移动设计器椭圆"))。
+3. 在 "**属性**" 窗口中，选择 "**自定义属性**" 属性，然后选择省略号按钮（![ASP.NET Mobile 设计器椭圆形](../sharepoint/media/mwellipsis.gif "ASP.NET 移动设计器中的省略号")）。
 
-     **属性编辑器**对话框随即出现。
+     此时将显示 "**属性编辑器**" 对话框。
 
-4. 在文本框中**名称**列中，指定的属性的名称。
+4. 在 "**名称**" 列的文本框中，指定属性的名称。
 
-5. 有关**类型**字段的自定义属性中，选择适当的数据类型。
+5. 对于自定义属性的 "**类型**" 字段，请选择适当的数据类型。
 
-6. 有关**值**字段的自定义属性，指定一个值，然后选择**确定**按钮。
+6. 对于自定义属性的**值**字段，请指定一个值，然后选择 **"确定"** 按钮。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [设计业务数据连接模型](../sharepoint/designing-a-business-data-connectivity-model.md)
 - [设计业务数据连接模型](../sharepoint/designing-a-business-data-connectivity-model.md)
 - [创建业务数据连接模型](../sharepoint/creating-a-business-data-connectivity-model.md)
-- [将业务数据集成到 SharePoint](../sharepoint/integrating-business-data-into-sharepoint.md)
+- [将业务数据集成到 SharePoint 中](../sharepoint/integrating-business-data-into-sharepoint.md)
