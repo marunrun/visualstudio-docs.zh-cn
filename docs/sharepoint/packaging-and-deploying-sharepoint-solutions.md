@@ -1,7 +1,7 @@
 ---
 title: 打包和部署 SharePoint 解决方案 |Microsoft Docs
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: overview
 dev_langs:
 - VB
 - CSharp
@@ -14,17 +14,16 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 45815e03d887f4d22f2559acf741f612cab34c49
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
-ms.translationtype: MT
+ms.openlocfilehash: 9a4bf3394cf47b4f355fbe6a330ff5374e2da1c9
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72986209"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86015590"
 ---
 # <a name="package-and-deploy-sharepoint-solutions"></a>打包和部署 SharePoint 解决方案
   通常，SharePoint 解决方案通过使用解决方案包（.wsp）文件部署到 SharePoint 服务器。 可以使用 Visual Studio 将 SharePoint 项目项组织到功能中，并创建包来部署 SharePoint 功能。
 
- 本主题提供以下信息：
+ 本主题提供了下列信息：
 
 - [创建功能和包](#create-features-and-packages)
 
@@ -37,7 +36,7 @@ ms.locfileid: "72986209"
 ## <a name="create-features-and-packages"></a>创建功能和包
  可以使用 Visual Studio 将相关 SharePoint 元素分组到一个*功能*中。 例如，联系人列表定义的一项功能可能包括列表实例和列表定义。 出于部署目的，可以将这两个元素合并为单个功能。 有关功能的详细信息，请参阅[构建基块：功能](/previous-versions/office/developer/sharepoint-2010/ee537350(v=office.14))。
 
- 接下来，你可以创建一个 SharePoint 解决方案包（ *.wsp*），以将多个功能、站点定义、程序集和其他文件捆绑到一个包中，该包以 SharePoint 将文件部署到服务器所需的格式存储这些文件。 有关详细信息，请参阅 "[构建基块：解决方案](/previous-versions/office/developer/sharepoint-2010/ee537008(v=office.14))"。
+ 接下来，你可以创建一个 SharePoint 解决方案包（*.wsp*），以将多个功能、站点定义、程序集和其他文件捆绑到一个包中，该包以 SharePoint 将文件部署到服务器所需的格式存储这些文件。 有关详细信息，请参阅 "[构建基块：解决方案](/previous-versions/office/developer/sharepoint-2010/ee537008(v=office.14))"。
 
 ## <a name="feature-and-packaging-tool-support"></a>功能和打包工具支持
  您可以使用 Visual Studio 中的 SharePoint 开发工具快速将 SharePoint 文件组织到功能和解决方案包中，以便于部署。 你可以使用以下工具配置功能和解决方案包。
@@ -95,12 +94,12 @@ ms.locfileid: "72986209"
 
  例如，若要将 *.xml*文件添加到 SharePoint 项目，请执行以下操作之一：
 
-- 将 SharePoint "布局" 映射文件夹添加到项目。 这将在**解决方案资源管理器**中创建一个名为 "**布局**" 的文件夹，其中包含项目的子文件夹。 将 *.xml*文件添加到新的子文件夹。 默认情况下，该文件将部署到下的 SharePoint 文件系统*中。\TEMPLATE\LAYOUTS\\\<文件夹名称 >* 。 有关如何添加映射文件夹的信息，请参阅[如何：添加和删除映射文件夹](../sharepoint/how-to-add-and-remove-mapped-folders.md)。
+- 将 SharePoint "布局" 映射文件夹添加到项目。 这将在**解决方案资源管理器**中创建一个名为 "**布局**" 的文件夹，其中包含项目的子文件夹。 将 *.xml*文件添加到新的子文件夹。 默认情况下，该文件将部署到下的 SharePoint 文件系统*中。\\\TEMPLATE\LAYOUTS \<Folder Name> *。 有关如何添加映射文件夹的信息，请参阅[如何：添加和删除映射文件夹](../sharepoint/how-to-add-and-remove-mapped-folders.md)。
 
 - 将 *.xml*文件添加到 SharePoint 项目项的文件夹，然后将 *.xml*文件的 "**部署类型**" 属性从 " **NoDeployment** " 更改为其他设置，例如**RootFile**或**ElementFile**。 适当的**部署类型**设置取决于文件和项目。 有关**部署类型**属性设置的详细信息，请参阅[开发 SharePoint 解决方案](../sharepoint/developing-sharepoint-solutions.md)。
 
   如果添加的文件不适用于解决方案中的任何特定项目，则可以向解决方案中添加一个空 SharePoint 项目，然后向其添加其他文件。 将文件部署到 SharePoint 的另一种方法是将文件添加到项目，然后将文件添加到该模块。 有关详细信息，请参阅[使用模块在解决方案中包含文件](../sharepoint/using-modules-to-include-files-in-the-solution.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [开发 SharePoint 解决方案](../sharepoint/developing-sharepoint-solutions.md)
 - [生成和调试 SharePoint 解决方案](../sharepoint/building-and-debugging-sharepoint-solutions.md)

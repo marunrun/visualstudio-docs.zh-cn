@@ -1,7 +1,7 @@
 ---
 title: 演练：为 SharePoint 创建 Web 部件 |Microsoft Docs
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -14,12 +14,11 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 3cbc4b9a2eecd6eb9853c515eb5358009c32843a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MT
+ms.openlocfilehash: 7d8b5e05fb234e9997bce615f7b2de1d790c1ae0
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72655917"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86014578"
 ---
 # <a name="walkthrough-create-a-web-part-for-sharepoint"></a>演练：为 SharePoint 创建 web 部件
 
@@ -42,7 +41,7 @@ Web 部件显示数据网格中的雇员。 用户指定包含员工数据的文
     > [!NOTE]
     > 以下说明中的某些 Visual Studio 用户界面元素在计算机上出现的名称或位置可能会不同。 这些元素取决于你所使用的 Visual Studio 版本和你所使用的设置。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](../ide/personalizing-the-visual-studio-ide.md)。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
 
 - 支持的 Microsoft Windows 和 SharePoint 版本。
 
@@ -52,9 +51,9 @@ Web 部件显示数据网格中的雇员。 用户指定包含员工数据的文
 
 首先，创建一个空 SharePoint 项目。 稍后，你将使用 " **Web 部件**" 项模板将 web 部件添加到项目。
 
-1. 使用 "以**管理员身份运行**" 选项开始 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]。
+1. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]使用 "以**管理员身份运行**" 选项启动。
 
-2. 在 "男人" 栏上，选择 "**文件** > **新建** > **项目**"。
+2. 在男人栏上，选择 "**文件**" "  >  **新建**  >  **项目**"。
 
 3. 在 "**新建项目**" 对话框中，展开要使用的语言下的 " **SharePoint** " 节点，然后选择 " **2010** " 节点。
 
@@ -68,7 +67,7 @@ Web 部件显示数据网格中的雇员。 用户指定包含员工数据的文
 
 向项目中添加**Web 部件**项。 **Web 部件**项添加 web 部件代码文件。 稍后，您将向 Web 部件代码文件添加代码，以呈现 Web 部件的内容。
 
-1. 在菜单栏上，依次选择“项目” > “添加新项”。
+1. 在菜单栏上，选择 "**项目**" "  >  **添加新项**"。
 
 2. 在 "**添加新项**" 对话框的 "**已安装的模板**" 窗格中，展开 " **SharePoint** " 节点，然后选择 " **2010** " 节点。
 
@@ -80,7 +79,7 @@ Web 部件显示数据网格中的雇员。 用户指定包含员工数据的文
 
 可以通过将控件添加到 Web 部件类的 controls 集合来指定要在 Web 部件中显示的控件。
 
-1. 在**解决方案资源管理器**中，打开*WebPart1* （在 Visual Basic 中）或*WebPart1.cs* （在C#中为）。
+1. 在**解决方案资源管理器**中，打开*WebPart1* （在 Visual Basic 中）或*WebPart1.cs* （在 c # 中）。
 
      Web 部件代码文件将在代码编辑器中打开。
 
@@ -89,7 +88,7 @@ Web 部件显示数据网格中的雇员。 用户指定包含员工数据的文
      [!code-csharp[SP_WebPart#1](../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs#1)]
      [!code-vb[SP_WebPart#1](../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb#1)]
 
-3. 向 `WebPart1` 类添加下面的代码。 此代码声明以下字段：
+3. 将以下代码添加到 `WebPart1` 类。 此代码声明以下字段：
 
    - 用于在 Web 部件中显示员工的数据网格。
 
@@ -102,12 +101,12 @@ Web 部件显示数据网格中的雇员。 用户指定包含员工数据的文
      [!code-csharp[SP_WebPart#2](../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs#2)]
      [!code-vb[SP_WebPart#2](../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb#2)]
 
-4. 向 `WebPart1` 类添加下面的代码。 此代码将名为 `DataFilePath` 的自定义属性添加到 Web 部件。 自定义属性是可以在 SharePoint 中由用户设置的属性。 此属性获取和设置用于填充数据网格的 XML 数据文件的位置。
+4. 将以下代码添加到 `WebPart1` 类。 此代码将名为的自定义属性添加 `DataFilePath` 到 Web 部件。 自定义属性是可以在 SharePoint 中由用户设置的属性。 此属性获取和设置用于填充数据网格的 XML 数据文件的位置。
 
      [!code-csharp[SP_WebPart#3](../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs#3)]
      [!code-vb[SP_WebPart#3](../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb#3)]
 
-5. 将 `CreateChildControls` 方法替换为以下代码。 这段代码执行下列任务：
+5. 将 `CreateChildControls` 方法替换为以下代码。 此代码执行以下任务：
 
    - 添加在上一步中声明的数据网格和标签。
 
@@ -116,7 +115,7 @@ Web 部件显示数据网格中的雇员。 用户指定包含员工数据的文
      [!code-csharp[SP_WebPart#4](../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs#4)]
      [!code-vb[SP_WebPart#4](../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb#4)]
 
-6. 将以下方法添加到 `WebPart1` 类。 这段代码执行下列任务：
+6. 将以下方法添加到 `WebPart1` 类。 此代码执行以下任务：
 
    - 创建在所呈现的 Web 部件的 Web 部件谓词菜单中显示的谓词。
 
@@ -162,11 +161,11 @@ Web 部件显示数据网格中的雇员。 用户指定包含员工数据的文
         </employees>
     ```
 
-2. 在记事本的菜单栏上，选择 "**文件**"  > **另存为**"。
+2. 在记事本的菜单栏上，选择 "**文件**  >  **另存为**"。
 
 3. 在 "**另存为**" 对话框的 "**保存类型**" 列表中，选择 "**所有文件**"。
 
-4. 在 "文件名 **" 框中**，输入 " **data .xml**"。
+4. 在 "**文件名" 框中**，输入**data.xml**。
 
 5. 使用 "**浏览文件夹**" 按钮选择任意文件夹，然后选择 "**保存**" 按钮。
 
@@ -214,9 +213,9 @@ Web 部件显示数据网格中的雇员。 用户指定包含员工数据的文
 
      所有员工都显示在 Web 部件中。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[为 SharePoint 创建 web 部件](../sharepoint/creating-web-parts-for-sharepoint.md)
-[如何：创建 sharepoint Web 部件](../sharepoint/how-to-create-a-sharepoint-web-part.md)
-[如何：使用设计器创建 sharepoint web 部件](../sharepoint/how-to-create-a-sharepoint-web-part-by-using-a-designer.md)
-[演练：使用设计器为 sharepoint 创建 web 部件](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint-by-using-a-designer.md)
+[为 SharePoint](../sharepoint/creating-web-parts-for-sharepoint.md) 
+ 创建 web 部件[如何：创建 SharePoint web 部件](../sharepoint/how-to-create-a-sharepoint-web-part.md) 
+[如何：使用设计器](../sharepoint/how-to-create-a-sharepoint-web-part-by-using-a-designer.md) 
+ 创建 SharePoint web 部件[演练：使用设计器为 SharePoint 创建 web 部件](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint-by-using-a-designer.md)

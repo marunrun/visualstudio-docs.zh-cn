@@ -1,7 +1,7 @@
 ---
 title: 使用 IntelliTrace 调试 SharePoint 应用程序
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -16,12 +16,11 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: fe1130880db42e920e656d5efef1ea6a5af4d2d0
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
-ms.translationtype: MT
+ms.openlocfilehash: 041a110ee39ae7711756b8d689bdf68ae2368caf
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72984140"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86015749"
 ---
 # <a name="walkthrough-debug-a-sharepoint-application-by-using-intellitrace"></a>演练：使用 IntelliTrace 调试 SharePoint 应用程序
 
@@ -35,7 +34,7 @@ ms.locfileid: "72984140"
 
 - [创建功能接收器](#create-a-feature-receiver)
 
-- [将代码添加到功能接收器](#add-code-to-the-feature-receiver)
+- [向功能接收器中添加代码](#add-code-to-the-feature-receiver)
 
 - [测试项目](#test-the-project)
 
@@ -45,9 +44,9 @@ ms.locfileid: "72984140"
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
 
-你需要以下组件来完成本演练：
+您需要满足以下条件才能完成本演练：
 
 - 支持的 Windows 和 SharePoint 版本。
 
@@ -73,9 +72,9 @@ ms.locfileid: "72984140"
 
 ## <a name="add-code-to-the-feature-receiver"></a>将代码添加到功能接收器
 
-接下来，将代码添加到功能接收器中的两个方法： `FeatureActivated` 和 `FeatureDeactivating`。 每当在 SharePoint 中激活或停用功能时，这些方法都会触发。
+接下来，将代码添加到功能接收器中的两个方法： `FeatureActivated` 和 `FeatureDeactivating` 。 每当在 SharePoint 中激活或停用功能时，这些方法都会触发。
 
-1. 在 `Feature1EventReceiver` 类的顶部，添加以下代码，该代码声明用于指定 SharePoint 站点和子站点的变量：
+1. 在类的顶部 `Feature1EventReceiver` ，添加以下代码，该代码声明用于指定 SharePoint 站点和子站点的变量：
 
     ```vb
     ' SharePoint site and subsite.
@@ -89,7 +88,7 @@ ms.locfileid: "72984140"
     private string webUrl = "/";
     ```
 
-2. 将 `FeatureActivated` 方法替换为以下代码：
+2. 将 `FeatureActivated`方法替换为以下代码：
 
     ```vb
     Public Overrides Sub FeatureActivated(ByVal properties As SPFeatureReceiverProperties)
@@ -155,7 +154,7 @@ ms.locfileid: "72984140"
     }
     ```
 
-3. 将 `FeatureDeactivating` 方法替换为以下代码：
+3. 将 `FeatureDeactivating`方法替换为以下代码：
 
     ```vb
     Public Overrides Sub FeatureDeactivating(ByVal properties As SPFeatureReceiverProperties)
@@ -258,7 +257,7 @@ ms.locfileid: "72984140"
 
 2. 显示 "公告" 和 "任务" 列表的内容。
 
-     "公告" 列表应包含名为 "已激活" 功能的新公告 **： IntelliTraceTest_Feature1**，并且 "任务" 列表应包含名为 "**停用" 功能**的新任务： "IntelliTraceTest_Feature1"。 如果缺少上述任何一项，请验证该功能是否已激活。 如果未激活，请激活它。
+     "公告" 列表应包含名为 "已**激活" 功能**的新公告： "IntelliTraceTest_Feature1"，并且 "任务" 列表应包含名为 "**停用" 功能**的新任务： "IntelliTraceTest_Feature1"。 如果缺少上述任何一项，请验证该功能是否已激活。 如果未激活，请激活它。
 
 3. 通过执行以下步骤停用此功能：
 
@@ -295,7 +294,7 @@ ms.locfileid: "72984140"
 
 3. 在 PowerShell 窗口中运行[stop-webapplicationmonitoring](/previous-versions/system-center/powershell/system-center-2012-r2/dn472753(v=sc.20))命令，以创建 .itrace 文件、停止监视和重新启动 SharePoint 解决方案。
 
-     **Stop-webapplicationmonitoring**  *"\<SharePointSite >\\< SharePointAppName\>"*
+     **Stop-webapplicationmonitoring***" \<SharePointSite> \\<SharePointAppName \> "*  
 
 ## <a name="debug-and-fix-the-sharepoint-solution"></a>调试并修复 SharePoint 解决方案
 
@@ -329,7 +328,7 @@ ms.locfileid: "72984140"
 
      代码现在正常运行。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [验证和调试 SharePoint 代码](../sharepoint/verifying-and-debugging-sharepoint-code.md)
 - [IntelliTrace](../debugger/intellitrace.md)

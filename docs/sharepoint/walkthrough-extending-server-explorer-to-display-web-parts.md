@@ -1,7 +1,7 @@
 ---
 title: 演练：扩展要显示 Web 部件的服务器资源管理器 |Microsoft Docs
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -15,12 +15,11 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 46c19edd02988f4d9cbd5263d8d3490bb3576426
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
-ms.translationtype: MT
+ms.openlocfilehash: 5e5221d1cce065a352051ca700cf0fc5ef4ae843
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72983767"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86015631"
 ---
 # <a name="walkthrough-extend-server-explorer-to-display-web-parts"></a>演练：扩展服务器资源管理器以显示 web 部件
   在 Visual Studio 中，可以使用**服务器资源管理器**的 " **sharepoint 连接**" 节点来查看 SharePoint 站点上的组件。 但是，默认情况下**服务器资源管理器**不显示某些组件。 在本演练中，您将扩展**服务器资源管理器**以便它在每个连接的 SharePoint 站点上显示 Web 部件库。
@@ -42,7 +41,7 @@ ms.locfileid: "72983767"
 > [!NOTE]
 > 对于本演练的替代版本，该版本使用 SharePoint 的客户端对象模型而不是其服务器对象模型，请参阅[演练：在服务器资源管理器扩展中调入 SharePoint 客户端对象模型](../sharepoint/walkthrough-calling-into-the-sharepoint-client-object-model-in-a-server-explorer-extension.md)。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
  若要完成本演练，开发计算机上需要以下组件：
 
 - 受支持的 Windows、SharePoint 和 Visual Studio 版本。
@@ -72,7 +71,7 @@ ms.locfileid: "72983767"
 
 2. 在菜单栏上，依次选择“文件” > “新建” > “项目”。
 
-3. 在 "**新建项目**" 对话框中，展开 **" C#视觉对象**" 或 " **Visual Basic** " 节点，然后选择 "**扩展性**" 节点。
+3. 在 "**新建项目**" 对话框中，展开 " **Visual c #** " 或 " **Visual Basic** " 节点，然后选择 "**扩展性**" 节点。
 
     > [!NOTE]
     > 只有在安装 Visual Studio SDK 时，"**扩展性**" 节点才可用。 有关详细信息，请参阅本主题前面的先决条件部分。
@@ -81,19 +80,19 @@ ms.locfileid: "72983767"
 
 5. 选择 " **VSIX 项目**" 模板，将项目命名为 " **WebPartNode**"，然后选择 **"确定"** 按钮。
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 将**WebPartNode**项目添加到**解决方案资源管理器**中。
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]将**WebPartNode**项目添加到**解决方案资源管理器**。
 
 #### <a name="to-create-the-extension-project"></a>创建扩展项目
 
 1. 在**解决方案资源管理器**中，打开 "解决方案" 节点的快捷菜单，选择 "**添加**"，然后选择 "**新建项目**"。
 
-2. 在 "**新建项目**" 对话框中，展开 **" C#视觉对象**节点" 或 " **Visual Basic** " 节点，然后选择 " **Windows**节点"。
+2. 在 "**新建项目**" 对话框中，展开 " **Visual c #** " 节点或**Visual Basic** "节点，然后选择" **Windows**节点 "。
 
 3. 在对话框顶部，选择 .NET Framework 的版本列表中 **.NET Framework "4.5** "。
 
 4. 在项目模板列表中，选择 "**类库**"，将项目命名为 " **WebPartNodeExtension**"，然后选择 **"确定"** 按钮。
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 将**WebPartNodeExtension**项目添加到解决方案，并打开默认的 Class1 代码文件。
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]将**WebPartNodeExtension**项目添加到解决方案，并打开默认的 Class1 代码文件。
 
 5. 从项目中删除 Class1 代码文件。
 
@@ -101,13 +100,13 @@ ms.locfileid: "72983767"
 
 1. 在**解决方案资源管理器**中，打开 "解决方案" 节点的快捷菜单，选择 "**添加**"，然后选择 "**新建项目**"。
 
-2. 在 "**新建项目**" 对话框中，展开 **" C#视觉对象**节点" 或 " **Visual Basic** " 节点，然后选择 " **Windows** " 节点。
+2. 在 "**新建项目**" 对话框中，展开 " **Visual c #** " 节点或**Visual Basic** "节点，然后选择" **Windows** "节点。
 
 3. 在对话框顶部，选择 .NET Framework 的版本列表中 **.NET Framework "3.5** "。
 
 4. 在项目模板列表中，选择 "**类库**"，将项目命名为 " **WebPartCommands**"，然后选择 **"确定"** 按钮。
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 将**WebPartCommands**项目添加到解决方案，并打开默认的 Class1 代码文件。
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]将**WebPartCommands**项目添加到解决方案，并打开默认的 Class1 代码文件。
 
 5. 从项目中删除 Class1 代码文件。
 
@@ -138,11 +137,11 @@ ms.locfileid: "72983767"
 
 5. 在**解决方案资源管理器**中，打开**WebPartNodeExtension**项目节点的快捷菜单，然后选择 "**属性**"。
 
-     将打开“项目设计器”。
+     将打开“项目设计器”****。
 
-6. 选择“应用程序”选项卡。
+6. 选择“应用程序”**** 选项卡。
 
-7. 在 "**默认命名空间**框C#（）" 或 "**根命名空间**" 框（[!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)]）中，输入**ServerExplorer. SharePointConnections. WebPartNode**。
+7. 在 "**默认命名空间**" 框（c #）或 "**根命名空间**" 框（ [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)] ）中，输入**ServerExplorer. SharePointConnections. WebPartNode**。
 
 #### <a name="to-configure-the-webpartcommands-project"></a>配置 webpartcommands 项目
 
@@ -154,7 +153,7 @@ ms.locfileid: "72983767"
 
 4. 选择 "**添加**" 按钮旁边的箭头，然后在出现的菜单中选择 "**添加为链接**"。
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 将代码文件作为链接添加到 WebPartCommands 项目中。 因此，代码文件位于 WebPartNodeExtension 项目中，但文件中的代码也编译在 WebPartCommands 项目中。
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]将代码文件作为链接添加到 WebPartCommands 项目中。 因此，代码文件位于 WebPartNodeExtension 项目中，但文件中的代码也编译在 WebPartCommands 项目中。
 
 5. 再次打开**WebPartCommands**项目的快捷菜单，然后选择 "**添加引用**"。
 
@@ -166,11 +165,11 @@ ms.locfileid: "72983767"
 
 7. 在**解决方案资源管理器**中，再次打开**WebPartCommands**项目的快捷菜单，然后选择 "**属性**"。
 
-     将打开“项目设计器”。
+     将打开“项目设计器”****。
 
-8. 选择“应用程序”选项卡。
+8. 选择“应用程序”**** 选项卡。
 
-9. 在 "**默认命名空间**框C#（）" 或 "**根命名空间**" 框（[!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)]）中，输入**ServerExplorer. SharePointConnections. WebPartNode**。
+9. 在 "**默认命名空间**" 框（c #）或 "**根命名空间**" 框（ [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)] ）中，输入**ServerExplorer. SharePointConnections. WebPartNode**。
 
 ## <a name="create-icons-for-the-new-nodes"></a>创建新节点的图标
  为**服务器资源管理器**扩展创建两个图标： "新建**Web 部件库**" 节点的图标，以及 " **web 部件库**" 节点下的每个子 Web 部件节点的另一个图标。 稍后在本演练中，你将编写用于将这些图标与节点关联的代码。
@@ -179,11 +178,11 @@ ms.locfileid: "72983767"
 
 1. 在**解决方案资源管理器**中，打开**WebPartNodeExtension**项目的快捷菜单，然后选择 "**属性**"。
 
-2. 将打开“项目设计器”。
+2. 将打开“项目设计器”****。
 
 3. 选择 "**资源**" 选项卡，然后选择 "**此项目不包含默认资源文件"。单击此处创建一个**链接。
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 创建一个资源文件并在设计器中将其打开。
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]创建一个资源文件，并在设计器中将其打开。
 
 4. 在设计器的顶部，选择 "**添加资源**" 菜单命令旁的箭头，然后在出现的菜单中选择 "**添加新图标**"。
 
@@ -249,7 +248,7 @@ ms.locfileid: "72983767"
      [!code-vb[SPExtensibility.SPExplorer.WebPartNodeWithCommands#4](../sharepoint/codesnippet/VisualBasic/spextensibility.spexplorer.webpartnodewithcommands.webpartnode/webpartnodeextension/webpartcommandids.vb#4)]
 
 ## <a name="create-the-custom-sharepoint-commands"></a>创建自定义 SharePoint 命令
- 创建调入 SharePoint 服务器对象模型的自定义命令，以检索有关 SharePoint 站点上的 Web 部件的数据。 每个命令都是应用了 <xref:Microsoft.VisualStudio.SharePoint.Commands.SharePointCommandAttribute> 的方法。
+ 创建调入 SharePoint 服务器对象模型的自定义命令，以检索有关 SharePoint 站点上的 Web 部件的数据。 每个命令都是一个应用了的方法 <xref:Microsoft.VisualStudio.SharePoint.Commands.SharePointCommandAttribute> 。
 
 #### <a name="to-define-the-sharepoint-commands"></a>定义 SharePoint 命令
 
@@ -263,7 +262,7 @@ ms.locfileid: "72983767"
 
 #### <a name="to-build-the-solution"></a>生成解决方案
 
-1. 在菜单栏上，依次选择“生成” > “生成解决方案”。
+1. 在菜单栏上，依次选择“生成” > “生成解决方案”   。
 
     > [!WARNING]
     > 此时，WebPartNode 项目可能会出现生成错误，因为 VSIX 清单文件没有作者的值。 在后续步骤中添加值时，此错误将消失。
@@ -290,7 +289,7 @@ ms.locfileid: "72983767"
 6. 在 "**类型**" 列表中，选择 " **VisualStudio. microsoft.visualstudio.mefcomponent**"。
 
     > [!NOTE]
-    > 此值对应于 source.extension.vsixmanifest 文件中的 `MefComponent` 元素。 此元素指定 VSIX 包中扩展程序集的名称。 有关详细信息，请参阅[Microsoft.visualstudio.mefcomponent 元素（VSX 架构）](/previous-versions/visualstudio/visual-studio-2010/dd393736\(v\=vs.100\))。
+    > 此值与 `MefComponent` source.extension.vsixmanifest 文件中的元素相对应。 此元素指定 VSIX 包中扩展程序集的名称。 有关详细信息，请参阅[Microsoft.visualstudio.mefcomponent 元素（VSX 架构）](/previous-versions/visualstudio/visual-studio-2010/dd393736\(v\=vs.100\))。
 
 7. 在 "**源**" 列表中，选择 "**当前解决方案中的项目**"。
 
@@ -309,20 +308,20 @@ ms.locfileid: "72983767"
 
 12. 在 "**项目**" 列表中，选择 " **WebPartCommands**"，然后选择 "**确定"** 按钮。
 
-13. 在菜单栏上，选择 "**生成** > **生成解决方案**"，然后确保解决方案在编译时不会出错。
+13. 在菜单栏上，选择 "**生成**" "生成  >  **解决方案**"，然后确保解决方案在编译时不会出错。
 
 14. 请确保 WebPartNode 项目的生成输出文件夹现在包含 WebPartNode 文件。
 
      默认情况下，生成输出文件夹为。包含项目文件的文件夹下的 \bin\Debug 文件夹。
 
 ## <a name="test-the-extension"></a>测试扩展
- 你现在已准备好在**服务器资源管理器**中测试新的**Web 部件库**节点。 首先，开始在 Visual Studio 的实验实例中调试扩展。 然后，使用 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]实验实例中的新**Web 部件**节点。
+ 你现在已准备好在**服务器资源管理器**中测试新的**Web 部件库**节点。 首先，开始在 Visual Studio 的实验实例中调试扩展。 然后，使用的实验实例中的新**Web 部件**节点 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 。
 
 #### <a name="to-start-debugging-the-extension"></a>开始调试扩展
 
-1. 用管理凭据重新启动 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]，然后打开 WebPartNode 解决方案。
+1. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]用管理凭据重新启动，然后打开 WebPartNode 解决方案。
 
-2. 在 WebPartNodeExtension 项目中，打开 SiteNodeExtension 代码文件，然后将断点添加到 `NodeChildrenRequested` 和 `CreateWebPartNodes` 方法中的第一行代码。
+2. 在 WebPartNodeExtension 项目中，打开 SiteNodeExtension 代码文件，然后将一个断点添加到和方法中的第一行代码 `NodeChildrenRequested` `CreateWebPartNodes` 。
 
 3. 选择**F5**键开始调试。
 
@@ -330,7 +329,7 @@ ms.locfileid: "72983767"
 
 #### <a name="to-test-the-extension"></a>测试扩展
 
-1. 在 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]的实验实例中，在菜单栏上选择 "**查看** > **服务器资源管理器**"。
+1. 在的实验实例中 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ，在菜单栏上选择 "**查看**  >  **服务器资源管理器**"。
 
 2. 如果要用于测试的 SharePoint 站点未出现在**服务器资源管理器**中的 " **sharepoint 连接**" 节点下，请执行以下步骤：
 
@@ -338,30 +337,30 @@ ms.locfileid: "72983767"
 
     2. 在 "**添加 Sharepoint 连接**" 对话框中，输入要连接到的 sharepoint 站点的 URL，然后选择 **"确定"** 按钮。
 
-         若要在开发计算机上指定 SharePoint 站点，请输入**http://localhost**。
+         若要在开发计算机上指定 SharePoint 站点，请输入 **http://localhost** 。
 
 3. 展开 "站点连接" 节点（显示站点的 URL），然后展开 "子站点" 节点（例如，"**团队网站**"）。
 
-4. 验证的其他 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 实例中的代码在您之前在 `NodeChildrenRequested` 方法中设置的断点处停止，然后选择**F5**继续调试该项目。
+4. 验证的另一个实例中的代码在 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 您之前在方法中设置的断点处停止 `NodeChildrenRequested` ，然后选择**F5**继续调试项目。
 
 5. 在 Visual Studio 的实验实例中，验证名为 " **Web 部件库**" 的新节点是否出现在 "顶层站点" 节点下，然后展开 " **web 部件库**" 节点。
 
-6. 验证 Visual Studio 的另一个实例中的代码是否在您之前在 `CreateWebPartNodes` 方法中设置的断点处停止，然后选择**F5**键继续调试该项目。
+6. 验证 Visual Studio 的另一个实例中的代码是否在您之前在方法中设置的断点处停止 `CreateWebPartNodes` ，然后选择**F5**键继续调试该项目。
 
 7. 在 Visual Studio 的实验实例中，验证连接的站点上的所有 Web 部件都显示在 "**服务器资源管理器**中的" **Web 部件库**"节点下。
 
 8. 在**服务器资源管理器**中，打开某个 Web 部件的快捷菜单，然后选择 "**属性**"。
 
-9. 在要调试的 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 实例中，验证有关 Web 部件的详细信息是否出现在 "**属性**" 窗口中。
+9. 在要调试的实例中 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ，验证有关 Web 部件的详细信息是否出现在 "**属性**" 窗口中。
 
 ## <a name="uninstall-the-extension-from-visual-studio"></a>从 Visual Studio 卸载扩展
  完成扩展测试后，从 Visual Studio 中卸载该扩展。
 
 #### <a name="to-uninstall-the-extension"></a>卸载扩展
 
-1. 在 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]的实验实例中，在菜单栏上选择 " > **工具**" "**扩展和更新**"。
+1. 在的实验实例中 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ，在菜单栏上选择 "**工具**" "  >  **扩展和更新**"。
 
-     此时，“扩展和更新”对话框打开。
+     此时，“扩展和更新”**** 对话框打开。
 
 2. 在扩展列表中，选择 " **Web 部件库" "服务器资源管理器" 的 "Web 部件库" 节点扩展**，然后选择 "**卸载**" 按钮。
 
@@ -369,8 +368,8 @@ ms.locfileid: "72983767"
 
 4. 关闭 Visual Studio 的两个实例（在其中打开 WebPartNode 解决方案的实验实例和 Visual Studio 的实例）。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [扩展中的 "SharePoint 连接" 节点服务器资源管理器](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)
 - [演练：在服务器资源管理器扩展中调入 SharePoint 客户端对象模型](../sharepoint/walkthrough-calling-into-the-sharepoint-client-object-model-in-a-server-explorer-extension.md)
 - [图标的图像编辑器](/cpp/windows/image-editor-for-icons)
-- [为图标创建图标或其他&#40;图像图像编辑器&#41;](/cpp/windows/creating-an-icon-or-other-image-image-editor-for-icons)
+- [为图标 &#40;图像编辑器创建图标或其他图像&#41;](/cpp/windows/creating-an-icon-or-other-image-image-editor-for-icons)

@@ -1,7 +1,7 @@
 ---
-title: 如何：将快捷菜单项添加到 SharePoint 项目 |Microsoft Docs
+title: 如何：向 SharePoint 项目添加快捷菜单项 |Microsoft Docs
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -14,43 +14,42 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5b5db3fe3aaf8dc57c7df6a63810106ae9fb30fb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MT
+ms.openlocfilehash: 4e43d8d7717302eb8ab250935188bc2db3bdd66a
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62967117"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86014840"
 ---
-# <a name="how-to-add-a-shortcut-menu-item-to-sharepoint-projects"></a>如何：将快捷菜单项添加到 SharePoint 项目
-  可以将快捷菜单项添加到任何 SharePoint 项目。 用户右键单击项目节点中的时出现的菜单项**解决方案资源管理器**。
+# <a name="how-to-add-a-shortcut-menu-item-to-sharepoint-projects"></a>如何：向 SharePoint 项目添加快捷菜单项
+  您可以向任何 SharePoint 项目添加快捷菜单项。 当用户在**解决方案资源管理器**中右键单击项目节点时，将显示菜单项。
 
- 以下步骤假定你已创建了一个项目扩展。 有关详细信息，请参阅[如何：创建 SharePoint 项目扩展](../sharepoint/how-to-create-a-sharepoint-project-extension.md)。
+ 以下步骤假设已创建项目扩展。 有关详细信息，请参阅[如何：创建 SharePoint 项目扩展](../sharepoint/how-to-create-a-sharepoint-project-extension.md)。
 
-### <a name="to-add-a-shortcut-menu-item-to-sharepoint-projects"></a>若要将快捷菜单项添加到 SharePoint 项目
+### <a name="to-add-a-shortcut-menu-item-to-sharepoint-projects"></a>向 SharePoint 项目添加快捷菜单项
 
-1. 在<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectExtension.Initialize%2A>方法将<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectExtension>实现、 句柄<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectMenuItemsRequested>的事件*projectService*参数。
+1. 在 <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectExtension.Initialize%2A> 实现的方法中 <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectExtension> ，处理 <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectMenuItemsRequested> *projectService*参数的事件。
 
-2. 在事件处理程序中的<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectMenuItemsRequested>事件，添加一个新<xref:Microsoft.VisualStudio.SharePoint.IMenuItem>对象传递给<xref:Microsoft.VisualStudio.SharePoint.SharePointProjectMenuItemsRequestedEventArgs.ActionMenuItems%2A>或<xref:Microsoft.VisualStudio.SharePoint.SharePointProjectMenuItemsRequestedEventArgs.AddMenuItems%2A>事件自变量参数的集合。
+2. 在事件的事件处理程序中 <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectMenuItemsRequested> ，向 <xref:Microsoft.VisualStudio.SharePoint.IMenuItem> <xref:Microsoft.VisualStudio.SharePoint.SharePointProjectMenuItemsRequestedEventArgs.ActionMenuItems%2A> <xref:Microsoft.VisualStudio.SharePoint.SharePointProjectMenuItemsRequestedEventArgs.AddMenuItems%2A> 事件参数参数的或集合添加一个新的对象。
 
-3. 在中<xref:Microsoft.VisualStudio.SharePoint.IMenuItem.Click>新的事件处理程序<xref:Microsoft.VisualStudio.SharePoint.IMenuItem>对象中，执行你想要在用户单击快捷菜单项时执行的任务。
+3. 在 <xref:Microsoft.VisualStudio.SharePoint.IMenuItem.Click> 新对象的事件处理程序中 <xref:Microsoft.VisualStudio.SharePoint.IMenuItem> ，执行用户单击快捷菜单项时要执行的任务。
 
 ## <a name="example"></a>示例
- 下面的代码示例演示如何将快捷菜单项添加到 SharePoint 中的项目节点**解决方案资源管理器**。 当用户右键单击项目节点，然后单击**将消息写入到输出窗口**菜单项，Visual Studio 将显示中的消息**输出**窗口。 此示例中使用 SharePoint 项目服务来显示消息。 有关详细信息，请参阅[使用 SharePoint 项目服务](../sharepoint/using-the-sharepoint-project-service.md)。
+ 下面的代码示例演示如何将快捷菜单项添加到**解决方案资源管理器**中的 SharePoint 项目节点。 当用户右键单击项目节点并单击 "**写入消息到输出窗口**" 菜单项时，Visual Studio 会在 "**输出**" 窗口中显示一条消息。 此示例使用 SharePoint 项目服务显示消息。 有关详细信息，请参阅[使用 SharePoint 项目服务](../sharepoint/using-the-sharepoint-project-service.md)。
 
  [!code-csharp[SPExtensibility.ProjectExtension.Menu#1](../sharepoint/codesnippet/CSharp/projectmenu/extension/projectitemextensionmenu.cs#1)]
  [!code-vb[SPExtensibility.ProjectExtension.Menu#1](../sharepoint/codesnippet/VisualBasic/projectmenu/extension/projectitemextensionmenu.vb#1)]
 
 ## <a name="compile-the-code"></a>编译代码
- 此示例需要引用以下程序集的类库项目：
+ 此示例需要一个类库项目，其中包含对以下程序集的引用：
 
-- Microsoft.VisualStudio.SharePoint
+- VisualStudio
 
 - System.ComponentModel.Composition
 
-## <a name="deploy-the-extension"></a>将扩展部署
- 若要将扩展部署，创建[!include[vsprvs](../sharepoint/includes/vsprvs-md.md)]扩展 (VSIX) 包的程序集和你想要将与该扩展一起分发的任何其他文件。 有关详细信息，请参阅[部署的 Visual Studio 中的 SharePoint 工具扩展](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md)。
+## <a name="deploy-the-extension"></a>部署扩展
+ 若要部署该扩展，请为 [!include[vsprvs](../sharepoint/includes/vsprvs-md.md)] 该程序集创建一个扩展（VSIX）包，并为要使用该扩展分发的任何其他文件创建扩展（VSIX）包。 有关详细信息，请参阅[在 Visual Studio 中部署 SharePoint 工具扩展](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [扩展 SharePoint 项目](../sharepoint/extending-sharepoint-projects.md)
 - [如何：创建 SharePoint 项目扩展](../sharepoint/how-to-create-a-sharepoint-project-extension.md)
-- [如何：将属性添加到 SharePoint 项目](../sharepoint/how-to-add-a-property-to-sharepoint-projects.md)
+- [如何：向 SharePoint 项目添加属性](../sharepoint/how-to-add-a-property-to-sharepoint-projects.md)

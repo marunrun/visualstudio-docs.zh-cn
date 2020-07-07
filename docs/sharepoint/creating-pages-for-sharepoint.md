@@ -1,7 +1,7 @@
 ---
 title: 为 SharePoint 创建页 |Microsoft Docs
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: overview
 dev_langs:
 - VB
 - CSharp
@@ -17,12 +17,11 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 297ebf0e7c2ed1273dd5a8ac973ce497c4c64781
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
-ms.translationtype: MT
+ms.openlocfilehash: 942891bc9281c07966160ea9df065408fcbfd5ff
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72986356"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86015170"
 ---
 # <a name="create-pages-for-sharepoint"></a>创建 SharePoint 页面
   您可以为 SharePoint 站点创建应用程序页、网站页、母版页和页面布局。
@@ -39,9 +38,9 @@ ms.locfileid: "72986356"
 |应用程序页|如果希望页面包含自定义代码或要在多个站点之间共享页面，请创建应用程序页。 否则，站点页可能是最佳选择。|
 |网站页面|如果要执行以下任何任务，请创建站点页面：<br /><br /> -将页面添加到 SharePoint 库。<br />-启用页以承载动态 Web 部件和 Web 部件区域等功能。<br />-使用户能够使用 SharePoint Designer 自定义页面。<br /><br /> 如果希望该页包含自定义代码，请不要创建网站页。 虽然您可以将自定义代码添加到站点页，但当用户使用 SharePoint 设计器自定义该页时，代码将停止运行。|
 |母版页|如果要为网站页面和应用程序页面定义公共结构，请创建一个母版页。|
-|页面布局|页面布局特定于 [!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)]，并使你能够进一步为网站页面和应用程序页面定义公共结构。|
+|页面布局|页面布局是特定的 [!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)] ，使你能够进一步为网站页面和应用程序页面定义公共结构。|
 
- 有关每种类型的页面的概述，请参阅 [构建基块：页面和用户界面](/previous-versions/office/developer/sharepoint-2010/ee539040(v=office.14))、[页面布局和母版页](/previous-versions/office/developer/sharepoint-2010/ms543497(v=office.14))。
+ 有关每种类型的页面的概述，请参阅[生成块：页面和用户界面](/previous-versions/office/developer/sharepoint-2010/ee539040(v=office.14))、[页面布局和母版页](/previous-versions/office/developer/sharepoint-2010/ms543497(v=office.14))。
 
 ## <a name="create-application-pages"></a>创建应用程序页
  可以通过向 SharePoint 项目添加 "**应用程序页**" 项来在 Visual Studio 中创建应用程序页。 您可以向页中添加控件，然后通过添加代码来处理控件事件。
@@ -58,7 +57,7 @@ ms.locfileid: "72986356"
 
  可以直接将这些文件添加到解决方案中，也可以导入它们。 在任一情况下，都必须为添加的每个项创建适当的映射文件夹。 有关如何创建映射文件夹的详细信息，请参阅[如何：添加和删除映射文件夹](../sharepoint/how-to-add-and-remove-mapped-folders.md)。
 
- 有关创建级联样式表的详细信息，请参阅[级联样式表 SharePoint Foundation 中的类用法](/previous-versions/office/developer/sharepoint-2010/ms438349(v=office.14))。 有关为 SharePoint 解决方案创建 JavaScript 和 JScript 文件的详细信息，请参阅[为 ECMAScript 设置基本 ASPX 页面](/previous-versions/office/developer/sharepoint-2010/ee535709(v=office.14))。 有关主题的详细信息，请参阅 [构建基块：页面和用户界面](/previous-versions/office/developer/sharepoint-2010/ee539040(v=office.14))。
+ 有关创建级联样式表的详细信息，请参阅[级联样式表 SharePoint Foundation 中的类用法](/previous-versions/office/developer/sharepoint-2010/ms438349(v=office.14))。 有关为 SharePoint 解决方案创建 JavaScript 和 JScript 文件的详细信息，请参阅[为 ECMAScript 设置基本 ASPX 页面](/previous-versions/office/developer/sharepoint-2010/ee535709(v=office.14))。 有关主题的详细信息，请参阅[生成块：页面和用户界面](/previous-versions/office/developer/sharepoint-2010/ee539040(v=office.14))。
 
 ## <a name="related-topics"></a>相关主题
 

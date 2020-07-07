@@ -1,7 +1,7 @@
 ---
 title: 如何：将控件标记为安全控件 |Microsoft Docs
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -14,17 +14,16 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 232fef4908a6168d550d510a0d753fe8e39db02b
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
-ms.translationtype: MT
+ms.openlocfilehash: cd7ed13504d3d91f4239a8ea070454e1c31b1114
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72982728"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86016257"
 ---
 # <a name="how-to-mark-controls-as-safe-controls"></a>如何：将控件标记为安全控件
   为安全，SharePoint 在保护的 Web 控件和不是的脚本注入和 Web 控件之间区分开来。 不受信任的用户可以访问受保护的控件或*安全控件*。 将程序集添加到包中时，可以在 SharePoint 项目项的 "安全控件项" 属性或**包设计器**中将控件标记为安全。 有关详细信息，请参阅
 
-- web.config[文件设置更改并将](/previous-versions/office/developer/sharepoint-2007/bb802890(v=office.12)) [Web 部件程序集注册为安全控件](/previous-versions/office/developer/sharepoint2003/dd587360(v=office.11))。
+- [web.config 文件设置更改并将](/previous-versions/office/developer/sharepoint-2007/bb802890(v=office.12)) [Web 部件程序集注册为安全控件](/previous-versions/office/developer/sharepoint2003/dd587360(v=office.11))。
 
 > [!IMPORTANT]
 > 这些过程用于说明目的。 仅在确定控件安全时才将其标记为安全。
@@ -63,7 +62,7 @@ ms.locfileid: "72982728"
 
      记下控件的命名空间，因为稍后将用到它。
 
-3. 在菜单栏上，选择 "**生成** > **生成解决方案**" 以生成项目。
+3. 在菜单栏上，选择 "**生成**" "生成  >  **解决方案**" 以生成项目。
 
 4. 创建另一个 SharePoint 解决方案。
 
@@ -85,12 +84,12 @@ ms.locfileid: "72982728"
 
 12. 输入下表中属性的值。
 
-    |属性名|“值”|
+    |属性名称|Value|
     |-------------------|-----------|
-    |Namespace|控件的完全限定命名空间，例如**BdcModelProject1. VisualWebPart1**。|
+    |命名空间|控件的完全限定命名空间，例如**BdcModelProject1. VisualWebPart1**。|
     |类型名称|Button1|
     |程序集名称|强程序集名称，例如： ClientExtensions、Version = 14.0.0.0、Culture = 中立、PublicKeyToken = 71e9bce111e9429c。|
-    |防|清除 "**安全**" 复选框。|
+    |Safe|清除 "**安全**" 复选框。|
     |安全应对脚本|清除 "**安全应对脚本**" 复选框。|
 
     > [!NOTE]
@@ -102,16 +101,16 @@ ms.locfileid: "72982728"
 
 15. 输入下表中属性的值。
 
-    |属性名|“值”|
+    |属性名称|Value|
     |-------------------|-----------|
-    |Namespace|控件的完全限定命名空间，例如**BdcModelProject1. VisualWebPart1**。|
+    |命名空间|控件的完全限定命名空间，例如**BdcModelProject1. VisualWebPart1**。|
     |类型名称|TextBox1|
     |程序集名称|强程序集名称，例如： ClientExtensions、Version = 14.0.0.0、Culture = 中立、PublicKeyToken = 71e9bce111e9429c。|
-    |防|选中 "**安全**" 复选框。|
+    |Safe|选中 "**安全**" 复选框。|
     |安全应对脚本|选中 "**安全应对脚本**" 复选框。|
 
 16. 选择**Tab**键，然后选择 "**确定"** 按钮关闭对话框。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [在项目项中提供打包和部署信息](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)
 - [打包和部署 SharePoint 解决方案](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)
