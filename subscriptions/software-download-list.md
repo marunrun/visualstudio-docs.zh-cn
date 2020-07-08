@@ -5,14 +5,14 @@ ms.author: v-evwin
 manager: lank
 ms.assetid: c2878e28-eb5d-4adb-8d7d-a95ffea703a9
 ms.date: 03/11/2020
-ms.topic: conceptual
+ms.topic: how-to
 description: 查找 Visual Studio 订阅随附的软件下载列表。
-ms.openlocfilehash: cb66eb3bd90bbf26e5900a8286db78ecb12df707
-ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
+ms.openlocfilehash: debf1904fc502f15f4fd6f52cc38e29a84dc763a
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80233189"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85906102"
 ---
 # <a name="what-software-is-available-for-download"></a>有什么软件可供下载？
 

@@ -6,12 +6,13 @@ ms.author: dominicn
 ms.date: 07/13/2017
 ms.assetid: 6E8B0C90-33D6-4546-8207-CE0787584565
 ms.custom: video
-ms.openlocfilehash: 5f1a617c5562c4f95fec94ae449f48b681fcb7ef
-ms.sourcegitcommit: 054815dc9821c3ea219ae6f31ebd9cd2dc8f6af5
+ms.topic: how-to
+ms.openlocfilehash: 2e921ac1e9c85216bebf1626e1454b9fb764f129
+ms.sourcegitcommit: 2ce59c2ffeba5ba7f628c2e6c75cba4731deef8a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80543749"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85938941"
 ---
 # <a name="getting-started-with-aspnet-core"></a>ASP.NET Core 入门
 
@@ -38,7 +39,7 @@ ms.locfileid: "80543749"
 
 ![ASP.NET 项目选项](media/asp-net-core-image11.png)
 
-选择“ASP.NET Core 空 Web 应用”，然后按“下一步”   。 为项目指定名称，并按“创建”  。 这将创建新的 ASP.NET Core 应用，类似于下图：
+选择“ASP.NET Core 空 Web 应用”，然后按“下一步” 。 为项目指定名称，并按“创建”  。 这将创建新的 ASP.NET Core 应用，类似于下图：
 
 ![新 ASP.NET Core 空项目视图](media/asp-net-core-image4.png)
 
@@ -77,7 +78,7 @@ ASP.NET Core 应用将通过 [`WebHostBuilder`](/aspnet/core/fundamentals/hostin
 
 可在 `WebHostBuilder` 上的 `UseStartup()` 方法中指定应用的 Startup 类。 在此类中，可指定请求处理管道和配置任何服务。
 
-在项目中打开并检查“Startup.cs”文件  ：
+在项目中打开并检查“Startup.cs”文件：
 
 ```csharp
 public class Startup
@@ -120,7 +121,7 @@ Startup 类必须始终遵守以下规则：
 
 ![运行应用](media/asp-net-core-image5.png)
 
-Visual Studio for Mac 使用随机端口启动 Web 项目。 要找到该端口，请打开“视图”>“面板”下列出的“应用程序输出”  。 之后应找到类似下图内容的输出：
+Visual Studio for Mac 使用随机端口启动 Web 项目。 要找到该端口，请打开“视图”>“面板”下列出的“应用程序输出”。 之后应找到类似下图内容的输出：
 
 ![显示侦听端口的应用程序输出](media/asp-net-core-image6.png)
 
@@ -140,7 +141,7 @@ ASP.NET Core 应用使用模型视图控制器 (MVC) 设计模式，来为应用
 
 要添加控制器，请执行下列操作：
 
-1. 右键单击项目名称，然后选择“添加”>“新文件”  。 选择“常规”>“空类”，然后输入控制器名称  ：
+1. 右键单击项目名称，然后选择“添加”>“新文件”。 选择“常规”>“空类”，然后输入控制器名称：
 
     ![“新文件”对话框](media/asp-net-core-image8.png)
 
@@ -167,9 +168,9 @@ ASP.NET Core 应用使用模型视图控制器 (MVC) 设计模式，来为应用
     }
     ```
 
-3. 通过右键单击“依赖项”文件夹并选择“添加包...”来添加 `Microsoft.AspNetCore.Mvc` 依赖项   。
+3. 通过右键单击“依赖项”文件夹并选择“添加包...”来添加 `Microsoft.AspNetCore.Mvc` 依赖项 。
 
-4. 使用搜索框浏览 NuGet 库，查找其中的 `Microsoft.AspNetCore.Mvc`，然后选择“添加包”  。 安装可能需要几分钟时间，系统将提示你为必需的依赖项接受各种许可证：
+4. 使用搜索框浏览 NuGet 库，查找其中的 `Microsoft.AspNetCore.Mvc`，然后选择“添加包”。 安装可能需要几分钟时间，系统将提示你为必需的依赖项接受各种许可证：
 
     ![添加 NuGet](media/asp-net-core-image9.png)
 

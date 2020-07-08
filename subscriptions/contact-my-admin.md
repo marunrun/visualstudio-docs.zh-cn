@@ -5,14 +5,14 @@ ms.author: lank
 manager: lank
 ms.assetid: 64455e79-229a-42f0-9d65-c2cca8ab8513
 ms.date: 03/07/2020
-ms.topic: conceptual
+ms.topic: how-to
 description: 了解如何与订阅管理员联系以获取有关问题的帮助。
-ms.openlocfilehash: 117bdb82c878e498862dd967615fde9d6ba632eb
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 2bf4857ebb794baef8098194d90cff7fee1ecc8f
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85289100"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85904568"
 ---
 # <a name="get-assistance-from-your-subscriptions-administrator"></a>获取订阅管理员的帮助
 如果 Visual Studio 订阅是由你的工作或学校提供的，那么它很可能是由订阅管理员或“管理员”分配给你的。  管理员可以分配或删除订阅，更改登录电子邮件地址，确定你是否能够下载软件以及执行与订阅相关的其他功能。

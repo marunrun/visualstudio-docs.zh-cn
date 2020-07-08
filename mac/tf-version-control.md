@@ -6,12 +6,13 @@ ms.author: jomatthi
 ms.date: 09/02/2019
 ms.technology: vs-ide-general
 ms.assetid: 52D3D26A-4D01-4FD1-AAA1-AE7D7BD39746
-ms.openlocfilehash: e56aec03aabe818731c65acb30eafcc18f170ac3
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.topic: troubleshooting
+ms.openlocfilehash: c51f3cd50598cd0c33b019c09f95554cc5f9058b
+ms.sourcegitcommit: 5335a9864d5747bc917ed28d4ebeade3076b10e7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "73714514"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85950494"
 ---
 # <a name="does-visual-studio-for-mac-support-team-foundation-version-control"></a>Visual Studio for Mac 是否支持 Team Foundation 版本控制？
 
@@ -21,7 +22,7 @@ ms.locfileid: "73714514"
 
 ## <a name="alternative-version-control-options-in-visual-studio-for-mac"></a>Visual Studio for Mac 中的备用版本控制选项
 
-为了在 macOS 上获得最佳版本控制体验，建议使用 Git  而不是 Team Foundation 版本控制 (TFVC)。 
+为了在 macOS 上获得最佳版本控制体验，建议使用 Git 而不是 Team Foundation 版本控制 (TFVC)。 
 
 Git 在 Visual Studio for Mac 中受支持，并且是托管在 Team Foundation Server (TFS)/Azure DevOps 中的存储库的默认选项。 要了解有关在 TFS/Azure DevOps 中使用 Git 的详细信息，请参阅[设置 Git 存储库](/visualstudio/mac/set-up-git-repository)指南。
 
@@ -52,13 +53,13 @@ Git 在 Visual Studio for Mac 中受支持，并且是托管在 Team Foundation 
 * 使用 Homebrew 安装客户端，或
 * 下载并手动安装客户端
 
-最简单的解决方案是使用 HomeBrew  ，它是适用于 macOS 的包管理器。 若要使用此方法进行安装：
+最简单的解决方案是使用 HomeBrew，它是适用于 macOS 的包管理器。 若要使用此方法进行安装：
 
 1. 启动 macOS 终端应用程序。
 1. 使用终端和 [Homebrew 主页](https://brew.sh/)上的说明安装 Homebrew。
 1. 安装 Homebrew 后，从终端运行以下命令：`brew install tee-clc`
 
-若要手动设置 TEE-CLC  ：
+若要手动设置 TEE-CLC：
 
 1. 从 Team Explorer Everywhere GitHub 存储库的版本页[下载 tee-clc 的最新版本](https://github.com/Microsoft/team-explorer-everywhere/releases)（例如撰写本文时的 tee-clc-14.134.0.zip）。
 1. 将 .zip 的内容提取到磁盘上的一个文件夹中。
@@ -106,6 +107,6 @@ tf checkin -comment:"Replaced 'Northwand' typos with the correct word Northwind"
 
 `tf help`
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [使用 Visual Studio 开发和共享 TFVC 中的代码 (Windows)](/azure/devops/repos/tfvc/share-your-code-in-tfvc-vs)

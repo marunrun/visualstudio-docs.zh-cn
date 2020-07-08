@@ -6,12 +6,13 @@ ms.author: dominicn
 ms.date: 05/06/2018
 ms.technology: vs-ide-install
 ms.assetid: 4EB95F75-BC2E-4982-9564-2975805712D8
-ms.openlocfilehash: ad0be8546b88fbd01f54faf7eb00f71ddd6aa632
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.topic: how-to
+ms.openlocfilehash: f8452094f0059a1ffa4421d1ccd02ee244559c72
+ms.sourcegitcommit: 5335a9864d5747bc917ed28d4ebeade3076b10e7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "76892150"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85950347"
 ---
 # <a name="uninstalling-visual-studio-for-mac"></a>卸载 Visual Studio for Mac
 
@@ -40,7 +41,7 @@ ms.locfileid: "76892150"
 
 要运行脚本，请执行以下步骤：
 
-1. 右键单击脚本并选择“另存为”以在 Mac 上保存文件  。
+1. 右键单击脚本并选择“另存为”以在 Mac 上保存文件。
 2. 打开“终端”，并将工作目录更改为下载脚本的位置：
 
     ```bash
@@ -62,7 +63,7 @@ ms.locfileid: "76892150"
 
 要运行脚本，请执行以下步骤：
 
-1. 右键单击脚本并选择“另存为”以在 Mac 上保存文件  。
+1. 右键单击脚本并选择“另存为”以在 Mac 上保存文件。
 2. 打开“终端”，并将工作目录更改为下载脚本的位置：
 
     ```bash
@@ -80,7 +81,7 @@ ms.locfileid: "76892150"
 
 ## <a name="uninstall-visual-studio-for-mac"></a>卸载 Visual Studio for Mac
 
-从 Mac 中卸载 Visual Studio 的第一步是在 /Applications 目录中找到 Visual Studio.app，并将其拖动到回收站    。 或者，单击右键并选择“移到回收站”，如下图所示  ：
+从 Mac 中卸载 Visual Studio 的第一步是在 /Applications 目录中找到 Visual Studio.app，并将其拖动到回收站  。 或者，单击右键并选择“移到回收站”，如下图所示：
 
 ![将 Visual Studio 应用程序移动到回收站](media/uninstall-image1.png)
 
@@ -137,7 +138,7 @@ sudo rm -rf /Library/Frameworks/Xamarin.Android.framework
 
 ### <a name="uninstall-android-sdk-and-java-sdk"></a>卸载 Android SDK 和 Java SDK
 
-开发 Android 应用程序需要 Android SDK。 要完全删除 Android SDK 的所有部分，请在 ~/Library/Developer/Xamarin/ 中找到相关文件，并将其移到回收站   。
+开发 Android 应用程序需要 Android SDK。 要完全删除 Android SDK 的所有部分，请在 ~/Library/Developer/Xamarin/ 中找到相关文件，并将其移到回收站 。
 
 > [!WARNING]
 > 应注意，Visual Studio for Mac 生成的 Android 签名密钥位于 `~/Library/Developer/Xamarin/Keystore` 中。 请务必适当备份，或避免在要保留密钥存储时删除此目录。
@@ -219,6 +220,6 @@ rm -rf ~/Library/Preferences/Xamarin/
 rm -rf "~/Library/Preferences/Visual Studio/"
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [卸载 Visual Studio (Windows)](/visualstudio/install/uninstall-visual-studio)

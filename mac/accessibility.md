@@ -5,12 +5,13 @@ author: alanjclark
 ms.author: dominicn
 ms.date: 09/23/2019
 ms.assetid: 2C4AAC2E-3B4A-4496-8BE0-1F5A7F81D1CA
-ms.openlocfilehash: 60c35e886155163bff757b175d4233bd06fe61c3
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.topic: overview
+ms.openlocfilehash: d50f92e6de777205f1289f710b27f4a719b61eef
+ms.sourcegitcommit: 2ce59c2ffeba5ba7f628c2e6c75cba4731deef8a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "74985054"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85939065"
 ---
 # <a name="accessibility"></a>可访问性
 
@@ -25,7 +26,7 @@ MacOS 中内置了许多可帮助你与 Visual Studio for Mac 结合使用的辅
 > [!NOTE]
 > 本指南适用于 Visual Studio for Mac。 有关 Windows 上的 Visual Studio，请参阅 [Visual Studio 的辅助功能](/visualstudio/ide/reference/accessibility-features-of-visual-studio)。
 
-有关详情，请参阅以下主题：
+有关详细信息，请参阅下列主题：
 
 * [设置 IDE 辅助功能选项](accessibility-ide-options.md)
 * [使用 macOS 辅助工具和功能](accessibility-macos.md)

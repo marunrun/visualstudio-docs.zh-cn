@@ -1,19 +1,19 @@
 ---
 title: 创建 XML 架构
 ms.date: 03/05/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 1d6700a9-fd67-4794-8997-399589e99bec
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 857b75f22d45cbabc22062fd14b385e8f6ea5f14
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 10ce1c6dc5bd24b391a8cde184a32684270662ef
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592771"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85815443"
 ---
 # <a name="how-to-create-an-xml-schema-from-an-xml-document"></a>如何：基于XML 文档创建 XML 架构
 

@@ -4,15 +4,15 @@ description: 本文介绍如何设置多个要在运行或调试时启动的项�
 author: sayedihashimi
 ms.author: sayedha
 ms.date: 02/21/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.prod: visual-studio-mac
 ms.assetid: fd354fff-ce6b-4505-a815-84a2311e39ba
-ms.openlocfilehash: 55519960a6b84968ced43183833167a365e91b35
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: 1b015d9009dc813c50ef891a4a523ba497c254c2
+ms.sourcegitcommit: 5335a9864d5747bc917ed28d4ebeade3076b10e7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "68872327"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85950548"
 ---
 # <a name="set-multiple-startup-projects"></a>设置多个启动项目
 
@@ -22,15 +22,15 @@ ms.locfileid: "68872327"
 
 1. 在“Solution Pad”中，选择解决方案（最高层节点）。
 
-2. 右键单击解决方案节点，然后选择“设置启动项目”  ：
+2. 右键单击解决方案节点，然后选择“设置启动项目”：
 
    ![选择设置启动项目](media/startup-proj-ctx-menu.png)
 
-3. 随即打开“创建解决方案运行配置”对话框  。 通过此对话框，可为解决方案创建新的命名解决方案运行配置。 可以使用任何喜欢的名称。 默认名称为 `Multiple Projects`。
+3. 随即打开“创建解决方案运行配置”对话框。 通过此对话框，可为解决方案创建新的命名解决方案运行配置。 可以使用任何喜欢的名称。 默认名称为 `Multiple Projects`。
 
    ![“创建解决方案运行配置”对话框](media/create-sln-run-config.png)
 
-4. 选择“创建运行配置”  。 “解决方案选项”对话框将与所选的新“解决方案运行配置”一起打开  ：
+4. 选择“创建运行配置”。 “解决方案选项”对话框将与所选的新“解决方案运行配置”一起打开：
 
    ![“解决方案选项”对话框](media/sln-options-run-config-multi-projects.png)
 
@@ -38,11 +38,11 @@ ms.locfileid: "68872327"
 
    ![包含所选项目的“解决方案选项”对话框](media/sln-options-run-config-multi-projects-configured.png)
 
-6. 选择“确定”  。 新的“解决方案运行配置”将设置为可用的运行配置：
+6. 选择“确定”。 新的“解决方案运行配置”将设置为可用的运行配置：
 
    ![将带有多个项目的解决方案配置为在调试或运行时启动](media/startup-project-configured.png)
 
-   可以看到两个项目配置为启动，因为两个项目在 Solution Pad 中都是粗体  。 在工具栏中，将新的运行配置设置为当前的“解决方案运行配置”。
+   可以看到两个项目配置为启动，因为两个项目在 Solution Pad 中都是粗体。 在工具栏中，将新的运行配置设置为当前的“解决方案运行配置”。
 
 ## <a name="next-steps"></a>后续步骤
 
