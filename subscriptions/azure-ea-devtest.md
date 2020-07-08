@@ -5,14 +5,14 @@ ms.author: lank
 manager: lank
 ms.assetid: a335ed23-34ee-40cb-83c6-6c93dee57424
 ms.date: 02/23/2020
-ms.topic: conceptual
+ms.topic: how-to
 description: 了解如何利用适用于具有企业协议的客户的特殊 Azure 开发测试定价
-ms.openlocfilehash: 09da80ad735548e9b0c450b9675cebece0b0c60c
-ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
+ms.openlocfilehash: 6d7ad872568ead5c7c53dcd8d0429f2ff0444095
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80232649"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85903139"
 ---
 # <a name="azure-enterprise-agreement-devtest-offer"></a>Azure 企业协议开发测试套餐
 

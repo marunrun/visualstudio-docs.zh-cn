@@ -5,12 +5,13 @@ author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 05/06/2018
 ms.assetid: E4B6CB42-9FE2-43B9-93B7-BD4BD50518B1
-ms.openlocfilehash: 7278b599e6a9c26ec33ea2167402dd641e6005d1
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.topic: how-to
+ms.openlocfilehash: 8c7d502924175632bdabddc234af6ea18d2352ac
+ms.sourcegitcommit: 5335a9864d5747bc917ed28d4ebeade3076b10e7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "74983315"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85950233"
 ---
 # <a name="building-and-cleaning-projects-and-solutions"></a>生成和清理项目和解决方案
 
@@ -44,6 +45,6 @@ ms.locfileid: "74983315"
 
 ![按红色方块停止生成](media/compiling-and-building-image3.png)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [生成和清除项目和解决方案（Windows 上的 Visual Studio）](/visualstudio/ide/building-and-cleaning-projects-and-solutions-in-visual-studio)

@@ -1,18 +1,18 @@
 ---
 title: 如何：编写 C++ DLL 单元测试
 ms.date: 06/13/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.author: corob
 manager: markl
 ms.workload:
 - cplusplus
 author: corob-msft
-ms.openlocfilehash: 752a2bb53e25954824a1400ee178cd0cbf4adcf2
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 16020c0928229c80a9eb33b3bc4804b004d9f432
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77275424"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85816002"
 ---
 # <a name="how-to-write-unit-tests-for-c-dlls"></a>如何：编写 C++ DLL 单元测试
 
@@ -34,7 +34,7 @@ ms.locfileid: "77275424"
 
 8. [将单元与外部资源隔离](using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md)。 通常，DLL 依赖于你开发的系统的其他组件，例如其他 DLL、数据库或远程子系统。 在测试每个单元时，使之与它的依赖项相隔离非常有用。 外部组件可能会降低测试的运行速度。 在开发期间，其他组件可能不完整。
 
-## <a name="create_test_project"></a> 创建本机单元测试项目
+## <a name="create-a-native-unit-test-project"></a><a name="create_test_project"></a> 创建本机单元测试项目
 
 1. 在“文件”菜单上，选择“新建” > “项目”    。
 
@@ -82,7 +82,7 @@ ms.locfileid: "77275424"
 
          ![具有 1 个已通过测试的单元测试资源管理器](../test/media/utecpp04.png)
 
-## <a name="create_dll_project"></a>创建 DLL 项目
+## <a name="create-a-dll-project"></a><a name="create_dll_project"></a>创建 DLL 项目
 
 ::: moniker range="vs-2019"
 
@@ -148,7 +148,7 @@ ms.locfileid: "77275424"
 
 ::: moniker-end
 
-## <a name="make_functions_visible"></a> 将测试项目耦合到 DLL 项目
+## <a name="couple-the-test-project-to-the-dll-project"></a><a name="make_functions_visible"></a> 将测试项目耦合到 DLL 项目
 
 1. 将 DLL 项目添加到测试项目的项目引用中：
 
@@ -194,7 +194,7 @@ ms.locfileid: "77275424"
 
    你已设置测试和代码项目，并已验证可运行测试（运行测试项目中的函数）。 现在可以开始编写实际测试和代码。
 
-## <a name="iterate"></a> 以迭代方式增加测试并使它们通过
+## <a name="iteratively-augment-the-tests-and-make-them-pass"></a><a name="iterate"></a> 以迭代方式增加测试并使它们通过
 
 1. 添加新测试：
 
@@ -252,7 +252,7 @@ ms.locfileid: "77275424"
     > [!TIP]
     > 通过一次添加一个测试来开发代码。 确保每次迭代后所有的测试都会通过。
 
-## <a name="debug"></a> 调试失败测试
+## <a name="debug-a-failing-test"></a><a name="debug"></a> 调试失败测试
 
 1. 添加另一个测试：
 
@@ -337,7 +337,7 @@ ms.locfileid: "77275424"
 
 ::: moniker-end
 
-## <a name="refactor"></a> 在不更改测试的情况下重构代码
+## <a name="refactor-the-code-without-changing-tests"></a><a name="refactor"></a> 在不更改测试的情况下重构代码
 
 1. 简化 SquareRoot 函数中的核心计算：
 

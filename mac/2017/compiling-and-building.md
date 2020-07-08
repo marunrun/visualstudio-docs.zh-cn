@@ -5,12 +5,13 @@ author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 05/06/2018
 ms.assetid: FB253757-DB00-4889-A6BF-E44722E25BD1
-ms.openlocfilehash: 0165594b4c2d77005c2a9ef921cce457f6f2d0f6
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.topic: overview
+ms.openlocfilehash: 532a245b8e217ea278bf5a3424a194ce87ae43f4
+ms.sourcegitcommit: 5335a9864d5747bc917ed28d4ebeade3076b10e7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "74983605"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85950041"
 ---
 # <a name="compiling-and-building-in-visual-studio-for-mac"></a>在 Visual Studio for Mac 中编译和生成
 
@@ -49,6 +50,6 @@ Visual Studio for Mac 还可用于执行以下操作：
 * [生成 Xamarin 应用](/vsts/pipelines/apps/mobile/xamarin?view=vsts&tabs=vsts)
 * [与 Xamarin 持续集成](https://developer.xamarin.com/guides/cross-platform/ci/)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [编译和生成（Windows 上的 Visual Studio）](/visualstudio/ide/compiling-and-building-in-visual-studio)

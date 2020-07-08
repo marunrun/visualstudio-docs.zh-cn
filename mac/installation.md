@@ -7,12 +7,13 @@ ms.date: 09/18/2019
 ms.technology: vs-ide-install
 ms.assetid: 22B1F2CD-32AE-464D-80AC-C8AB4786B015
 ms.custom: video
-ms.openlocfilehash: 45f9756607cbb638d1f69f77bdf8cd2ee30953c5
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.topic: how-to
+ms.openlocfilehash: 4e38084d4dc1e5095581846d0810ad44b742bcdf
+ms.sourcegitcommit: 2ce59c2ffeba5ba7f628c2e6c75cba4731deef8a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "75851942"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85938966"
 ---
 # <a name="install-visual-studio-2019-for-mac"></a>安装 Visual Studio 2019 for Mac
 
@@ -33,16 +34,16 @@ ms.locfileid: "75851942"
 ## <a name="installation-instructions"></a>安装说明
 
 1. 从 [Visual Studio for Mac 下载页面](https://visualstudio.microsoft.com/vs/mac/)下载安装程序。
-2. 下载完成后，单击 VisualStudioforMacInstaller.dmg 以装载安装程序，然后双击箭头徽标运行它  ：
+2. 下载完成后，单击 VisualStudioforMacInstaller.dmg 以装载安装程序，然后双击箭头徽标运行它：
 
     [![单击大箭头开始安装](media/install-installer-sml.png)](media/install-installer.png#lightbox)
 
-3. 可能会收到有关从 Internet 下载应用程序的警告。 单击 **“打开”** 。
+3. 可能会收到有关从 Internet 下载应用程序的警告。 单击“打开”。
 4. 安装程序检查系统时，请耐心等待：
 
     [![安装程序会检查系统中是否有已安装的组件](media/install-checking-sml.png)](media/install-checking.png#lightbox)
 
-5. 将出现一条警告，要求确认隐私和许可条款。 请点击链接仔细阅读，如果同意，则按“继续”： 
+5. 将出现一条警告，要求确认隐私和许可条款。 请点击链接仔细阅读，如果同意，则按“继续”：
 
     [![请点击隐私和条款的链接，如果同意，请继续](media/install-privacy.png)](media/install-privacy.png#lightbox)
 
@@ -53,19 +54,19 @@ ms.locfileid: "75851942"
    如果不希望安装所有平台，请参阅以下指南，它们有助于确定要安装的平台：
 
 
-|应用类型  |目标  |选项  |说明  |
+|应用类型  |目标  |选择  |说明  |
 |---------|---------|---------|---------|
-|**使用 Xamarin 的应用**| Xamarin.Forms|选择“Android”和“iOS”平台   |你需要安装 [Xcode](https://developer.apple.com/xcode/) |
-||仅限 iOS|选择“iOS”平台 |你需要安装 [Xcode](https://developer.apple.com/xcode/)|
-||仅限 Android|选择“Android”平台 |请注意，还应选择相关的依赖项|
-||仅限 Mac|选择“macOS (Cocoa)”平台 |你需要安装 [Xcode](https://developer.apple.com/xcode/)|
-|**.NET Core 应用程序**|         |选择“.NET Core”平台  。|         |
-|**ASP.NET Core Web 应用程序**|         |选择“.NET Core”平台  。|         |
-|**Azure Functions**|         |选择“.NET Core”平台  。|         |
+|**使用 Xamarin 的应用**| Xamarin.Forms|选择“Android”和“iOS”平台  |你需要安装 [Xcode](https://developer.apple.com/xcode/) |
+||仅限 iOS|选择“iOS”平台|你需要安装 [Xcode](https://developer.apple.com/xcode/)|
+||仅限 Android|选择“Android”平台|请注意，还应选择相关的依赖项|
+||仅限 Mac|选择“macOS (Cocoa)”平台|你需要安装 [Xcode](https://developer.apple.com/xcode/)|
+|**.NET Core 应用程序**|         |选择“.NET Core”平台。|         |
+|**ASP.NET Core Web 应用程序**|         |选择“.NET Core”平台。|         |
+|**Azure Functions**|         |选择“.NET Core”平台。|         |
 |**跨平台 Unity 游戏开发**|         |除了 Visual Studio for Mac 之外，无需安装任何其他平台。| 若要详细了解如何安装 Unity 扩展，请参阅 [Unity 安装指南](/visualstudio/mac/setup-vsmac-tools-unity)。|
 
 
-7. 完成选择后，按下“安装”按钮  。
+7. 完成选择后，按下“安装”按钮。
 8. 安装程序将在下载并安装 Visual Studio for Mac 和所选工作负载时显示进度。 系统将提示输入密码以授予安装所需的权限。
 
     [![选择要安装的可选工作负载功能](media/installation-progress.png)](media/installation-progress.png#lightbox)
@@ -97,7 +98,7 @@ ms.locfileid: "75851942"
 
 ### <a name="ios"></a>iOS
 
-1. [了解 iOS](https://developer.xamarin.com/guides/ios/getting_started/hello,_iOS/)
+1. [Hello，iOS](https://developer.xamarin.com/guides/ios/getting_started/hello,_iOS/)
 2. [设备预配](https://developer.xamarin.com/guides/ios/getting_started/installation/device_provisioning)（以在设备上运行应用程序）。
 
 ### <a name="android"></a>Android
@@ -114,6 +115,6 @@ ms.locfileid: "75851942"
 
 > [!Video https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Visual-Studio-for-Mac-Acquisition/player]
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [安装 Visual Studio (Windows)](/visualstudio/install/install-visual-studio)

@@ -12,14 +12,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 89006ab582a48f7f3be54b4eb459903b64af7daf
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 7c1f2583b0624691405ec3ef5a88aa11cb796327
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85280224"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85816688"
 ---
-# <a name="quickstart-first-look-at-profiling-tools"></a>快速入门：首先了解分析工具
+# <a name="first-look-at-profiling-tools"></a>首先了解分析工具
 
 Visual Studio 提供了各种分析工具，可依据你的应用类型帮助你诊断不同种类的性能问题。 在本文中，我们将简要介绍最常见的分析工具。
 
@@ -204,9 +204,9 @@ JavaScript 内存工具类似于适用于其他应用类型的内存使用量工
 |[.NET 对象分配](../profiling/dotnet-alloc-tool.md)|是（仅用于 .NET）|是|是|
 |[GPU 使用情况](/visualstudio/debugger/graphics/gpu-usage)|是|是|否|
 |[应用程序时间线](../profiling/application-timeline.md)|是|是|否|
-|[事件查看器](../profiling/perftips.md)|是|是|是|
-|[.NET Async](../profiling/perftips.md)|是（仅用于 .NET）|是|是|
-|[数据库](../profiling/perftips.md)|是（仅限 .NET Core）|否|是（仅限 ASP.NET Core）|
+|[事件查看器](../profiling/events-viewer.md)|是|是|是|
+|[.NET Async](../profiling/analyze-async.md)|是（仅用于 .NET）|是|是|
+|[数据库](../profiling/analyze-database.md)|是（仅限 .NET Core）|否|是（仅限 ASP.NET Core）|
 |[性能资源管理器](../profiling/performance-explorer.md)|否|否|否|
 |[IntelliTrace](../debugger/intellitrace.md)|仅适用于带有 Visual Studio Enterprise 的 .NET|仅适用于带有 Visual Studio Enterprise 的 .NET|仅适用于带有 Visual Studio Enterprise 的 .NET|
 ::: moniker-end

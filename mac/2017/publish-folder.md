@@ -8,18 +8,19 @@ author: sayedihashimi
 ms.author: sayedha
 manager: unniravindranathan
 ms.prod: visual-studio-mac
-ms.openlocfilehash: 02175180e5217a14a4464e46c75d519adab2a332
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.topic: how-to
+ms.openlocfilehash: 4fe8f7e99f950bbc7a393712d0831f5a4a229481
+ms.sourcegitcommit: 5335a9864d5747bc917ed28d4ebeade3076b10e7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "73714509"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85950066"
 ---
 # <a name="publish-a-web-app-to-a-folder-using-visual-studio-for-mac"></a>使用 Visual Studio for Mac 将 Web 应用发布到文件夹
 
 可使用“发布”工具将 ASP.NET Core 应用发布到文件夹。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 - 已安装 [Visual Studio 2017 for Mac](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs4mac2017)并启用了 ASP.NET Core。
 - ASP.NET Core 项目。 如果还没有项目，则可以[创建一个新的项目](/visualstudio/mac/create-new-projects?view=vsmac-2017)。
@@ -28,19 +29,19 @@ ms.locfileid: "73714509"
 
 使用 Visual Studio for Mac 通过“发布”工具可以将 ASP.NET Core 项目发布到文件夹。 发布到文件夹后可以将文件传输到 Web 服务器，以将它带到其他环境。 若要发布到文件夹，请执行以下步骤。
 
- 1. 在 Solution Pad 中，右键单击项目，选择“发布”  。
+ 1. 在 Solution Pad 中，右键单击项目，选择“发布”。
 
     ![“发布”上下文菜单](media/publish-context-menu.png)
 
  2. 如果之前已发布此项目，则在菜单中将看到发布配置文件。 选择该发布配置文件以启动发布过程。
 
- 3. 若要首次将此项目发布到文件夹，请选择“发布到文件夹” 
+ 3. 若要首次将此项目发布到文件夹，请选择“发布到文件夹”
 
     ![“发布到文件夹”上下文菜单](media/publish-to-folder-context-menu.png)
 
- 4. “发布到文件夹”对话框出现  。 在此对话框可以自定义将在其中发布项目的文件夹。 可以使用“浏览”按钮执行此操作，也可以粘贴某个路径  。
+ 4. “发布到文件夹”对话框出现。 在此对话框可以自定义将在其中发布项目的文件夹。 可以使用“浏览”按钮执行此操作，也可以粘贴某个路径。
 
- 5. 单击“发布”后，系统会发生一些事件  。 首先是创建发布配置文件。 发布配置文件是在发布过程中导入项目的 MSBuild 文件。 它包含在发布过程中使用的属性。 这些文件存储在 `Properties/PublishProfiles` 中并具有扩展名 `.pubxml`。 接下来是启动发布过程。 你可以通过查看 Visual Studio for Mac 中的状态栏监视进度。
+ 5. 单击“发布”后，系统会发生一些事件。 首先是创建发布配置文件。 发布配置文件是在发布过程中导入项目的 MSBuild 文件。 它包含在发布过程中使用的属性。 这些文件存储在 `Properties/PublishProfiles` 中并具有扩展名 `.pubxml`。 接下来是启动发布过程。 你可以通过查看 Visual Studio for Mac 中的状态栏监视进度。
 
     ![显示发布状态的 IDE 状态栏](media/publish-to-folder-status-bar.png)
 

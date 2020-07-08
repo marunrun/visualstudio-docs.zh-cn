@@ -5,12 +5,13 @@ author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 05/06/2018
 ms.assetid: 4AD51385-B0A8-4BA7-B2D4-BF2BD167A142
-ms.openlocfilehash: f9925954083c7fe64ad29c7cfed618a84d7a6386
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.topic: overview
+ms.openlocfilehash: 50aa6077bafb2d4791555d449f06f6c81595a2f5
+ms.sourcegitcommit: 5335a9864d5747bc917ed28d4ebeade3076b10e7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "74984860"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85950561"
 ---
 # <a name="managing-references-in-a-project"></a>管理项目中的引用
 
@@ -18,9 +19,9 @@ Visual Studio for Mac 提供了两种将其他引用添加到项目的方法：
 
 ![项目引用](media/projects-and-solutions-image10.png)
 
-其中包括：
+这些是：
 
-* 参考
+* reference
 * NuGets（通过包文件夹添加）
 
 此外，也可将 Web 引用和本机引用添加到任何项目。
@@ -29,7 +30,7 @@ Visual Studio for Mac 提供了两种将其他引用添加到项目的方法：
 
 Xamarin 中的每个框架都附带十几个程序集。 项目中不会默认引用所有这些程序集包。
 
-要编辑项目中引用的包，请使用“编辑引用”对话框，要显示该对话框，请双击引用文件夹，或在其上下文菜单操作上选择“编辑引用”   ：
+要编辑项目中引用的包，请使用“编辑引用”对话框，要显示该对话框，请双击引用文件夹，或在其上下文菜单操作上选择“编辑引用” ：
 
 ![程序集引用对话框](media/projects-and-solutions-image11.png)
 
@@ -39,11 +40,11 @@ Xamarin 中的每个框架都附带十几个程序集。 项目中不会默认�
 
 NuGet 是 .NET 开发最常用的程序包管理器。 通过 Visual Studio for Mac 的 NuGet 支持，可搜索要添加到项目的包。
 
-为此，请右键单击“包”文件夹，然后选择“添加包”  。
+为此，请右键单击“包”文件夹，然后选择“添加包”。
 
 [在项目中包括 NuGet 包](nuget-walkthrough.md)演练中提供了有关使用 NuGet 包的详细信息。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [管理引用（Windows 上的 Visual Studio）](/visualstudio/ide/managing-references-in-a-project)
 - [使用 NuGet 添加引用与使用扩展 SDK 添加引用（Windows 上的 Visual Studio）](/visualstudio/ide/adding-references-using-nuget-versus-an-extension-sdk)
