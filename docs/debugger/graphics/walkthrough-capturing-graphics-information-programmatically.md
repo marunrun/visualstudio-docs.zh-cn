@@ -7,12 +7,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e2036588fe04825b0fe1a1aa2db7ae8f7e0b5ad4
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 7533c205b95b016c43bd2eef614b4c2825596e74
+ms.sourcegitcommit: 9a9c61ca115c22d33bb902153eb0853789c7be4c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72734774"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85835649"
 ---
 # <a name="walkthrough-capturing-graphics-information-programmatically"></a>演练：以编程方式捕获图形信息
 你可以使用 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 图形诊断以编程方式从 Direct3D 应用中捕获图形信息。
@@ -37,7 +37,7 @@ ms.locfileid: "72734774"
 - 捕获图形信息
 
 > [!NOTE]
-> 以前的编程捕获的实现依赖于适用于 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 的 Visual Studio 远程工具提供捕获功能。
+> 之前，要实现编程捕获，需要 Visual Studio 远程工具来提供捕获功能。
 
 ### <a name="preparing-your-app-to-use-programmatic-capture"></a>准备你的应用以使用编程捕获
 若要在应用中使用编程捕获，它必须包括必要的标头。 这些标头属于 Windows 10 SDK。

@@ -1,7 +1,7 @@
 ---
 title: XML 编辑器和架构设计器
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: overview
 f1_keywords:
 - vb.xmldesigner
 helpviewer_keywords:
@@ -32,14 +32,14 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 87a5f069d5255a744e256bc9f7d1b48a135e85d8
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: e763fa3475f26b9742ea5fb7061978e711eb22ea
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592303"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85816418"
 ---
-# <a name="xml-tools-in-visual-studio"></a>Visual Studio 中的 XML 工具
+# <a name="overview-of-xml-tools-in-visual-studio"></a>Visual Studio 中的 XML 工具概述
 
 可扩展标记语言 (XML) 是一种提供数据描述格式的标记语言。 XML 通过使用可扩展样式表语言 (XSL) 和级联样式表 (CSS) 等关联的样式表来分离数据及其显示。 Visual Studio 提供了一些工具和功能，可以更加容易地使用 XML、XSLT 和 XML 架构。
 

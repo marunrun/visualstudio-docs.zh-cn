@@ -1,16 +1,16 @@
 ---
 title: 连接到团队资源管理器中的项目
-ms.date: 05/19/2020
+ms.date: 07/07/2020
 ms.topic: conceptual
 ms.author: tglee
 author: TerryGLee
 ms.manager: jillfra
-ms.openlocfilehash: 8b79dff4815b8a03d81d66a3d64d0e23439e4021
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 31fab067ec9844b36c287b80ed481a68861b222e
+ms.sourcegitcommit: a466720759426265b18b0f8d74a970e72493d700
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84183699"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86092318"
 ---
 # <a name="connect-to-projects-in-team-explorer"></a>连接到团队资源管理器中的项目
 
@@ -42,6 +42,7 @@ ms.locfileid: "84183699"
 
 ## <a name="see-also"></a>请参阅
 
+- [教程：打开存储库中的项目](../get-started/tutorial-open-project-from-repo.md)
 - [团队资源管理器参考](reference/team-explorer-reference.md)
 - [连接到项目 (Azure DevOps)](/azure/devops/organizations/projects/connect-to-projects)
 - [排查项目连接问题](/azure/devops/user-guide/troubleshoot-connection?view=azure-devops)
