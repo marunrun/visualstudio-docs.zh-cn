@@ -1,7 +1,7 @@
 ---
 title: 对 JavaScript 和 TypeScript 代码进行单元测试
 description: Visual Studio 支持使用针对 Visual Studio 的 Node.js 工具对 JavaScript 和 TypeScript 代码进行单元测试
-ms.date: 06/06/2018
+ms.date: 07/06/2020
 ms.topic: how-to
 ms.devlang: javascript
 author: mikejo5000
@@ -11,12 +11,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: acac3eb306d12ff6976e19ae5dc1ad772691094c
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: cdaff34c7eb2f9eba7c075127647c2eacbb736f9
+ms.sourcegitcommit: bcddb4647815e9ce2e175d9258e8df1b795e3e85
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85288996"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86033346"
 ---
 # <a name="unit-testing-javascript-and-typescript-in-visual-studio"></a>在 Visual Studio 中对 JavaScript 和 TypeScript 代码进行单元测试
 
@@ -72,31 +72,38 @@ describe('Test Suite 1', function() {
 ![测试资源管理器](../javascript/media/UnitTestsDiscoveryMocha.png)
 
 > [!NOTE]
-> 请勿在 tsconfig.json 中使用 `outdir` 或 `outfile`，因为测试资源管理器无法在 TypeScript 文件中找到单元测试。
+> 对于 TypeScript，请勿在 tsconfig.json 中使用 `outdir` 或 `outfile` 选项，因为测试资源管理器没法找到你的单元测试。
 
 ## <a name="run-tests"></a>运行测试
 
-可以在 Visual Studio 2017 中运行测试，或从命令行运行测试。
+可在 Visual Studio 中运行测试，也从命令行运行。
 
-### <a name="run-tests-in-visual-studio-2017"></a>在 Visual Studio 2017 中运行测试
+### <a name="run-tests-in-visual-studio"></a>在 Visual Studio 中运行测试
 
+::: moniker range=">=vs-2019"
+可以通过在测试资源管理器中单击“全部运行”链接运行测试。 或者，可选择一个或多个测试或组，右键单击并从快捷菜单选择“运行”来运行测试。 后台运行测试，测试资源管理器自动更新并显示结果。 此外，还可右键单击并选择“调试”来调试所选测试。
+::: moniker-end
+::: moniker range="vs-2017"
 可以通过在测试资源管理器中单击“全部运行”链接运行测试。 或者，可以选择一个或多个测试或组，右键单击并从快捷菜单选择“运行所选测试”，从而运行测试。 后台运行测试，测试资源管理器自动更新并显示结果。 此外，还可以通过选择“调试所选测试”调试所选测试。
+::: moniker-end
 
-> [!Warning]
-> 使用 Node 8+ 调试单元测试仅适用于 JavaScript 测试文件，TypeScript 测试文件命中断点失败。 一种变通方法是使用 `debugger` 关键字。
+对于 TypeScript，针对生成的 JavaScript 代码运行单元测试。
+
+> [!NOTE]
+> 在大多数 TypeScript 场景中，你可在 TypeScript 代码中设置断点，在测试资源管理器中右键单击一个测试，然后选择“调试”来调试单元测试。 在更复杂的场景中，例如在某些使用源映射的场景中，可能很难在 TypeScript 代码中命中断点。 一种变通方法是尝试使用 `debugger` 关键字。
 
 > [!NOTE]
 > 我们当前不支持分析测试或代码覆盖率。
 
 ### <a name="run-tests-from-the-command-line"></a>从命令行运行测试
 
-可以使用以下命令从适用于 Visual Studio 2017 的[开发人员命令提示](/dotnet/framework/tools/developer-command-prompt-for-vs)运行测试：
+可使用以下命令从 Visual Studio 的[开发人员命令提示](/dotnet/framework/tools/developer-command-prompt-for-vs)中运行测试：
 
 ```
 vstest.console.exe <path to project file>\NodejsConsoleApp23.njsproj /TestAdapterPath:<VisualStudioFolder>\Common7\IDE\Extensions\Microsoft\NodeJsTools\TestAdapter
 ```
 
-该命令显示类似下面的输出：
+该命令显示如下所示的输出：
 
 ```
 Microsoft (R) Test Execution Command Line Tool Version 15.5.0
