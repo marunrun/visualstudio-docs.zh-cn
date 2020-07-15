@@ -10,16 +10,16 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: d0e04a011612cdebebd244fc061981b713b858a7
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: ff42473c6f56d69a56cfbd811f2687ba544c7c5e
+ms.sourcegitcommit: 4d932000a0f7e79c9475fe66c02fe9addcd7e47a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79431483"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86181061"
 ---
 # <a name="options-text-editor-c-advanced"></a>选项，文本编辑器，C#，高级
 
-可使用“高级”选项页修改 C# 的编辑器格式设置、代码重构设置和 XML 文档注释设置  。 要访问此选项页，请选择“工具” > “选项”，然后选择“文本编辑器” > “C#” > “高级”      。
+可使用“高级”选项页修改 C# 的编辑器格式设置、代码重构设置和 XML 文档注释设置。 要访问此选项页，请选择“工具” > “选项”，然后选择“文本编辑器” > “C#” > “高级”    。
 
 > [!NOTE]
 > 并非所有选项都会在此处列出。
@@ -34,7 +34,7 @@ ms.locfileid: "79431483"
 
 - 对 using 排序时将“System”指令排在第一位
 
-   当你选择右键单击菜单中的“删除和排序 Using”命令后，它会对 `using` 指令进行排序，并将“System”命名空间置于列表顶部  。
+   当你选择右键单击菜单中的“删除和排序 Using”命令后，它会对 `using` 指令进行排序，并将“System”命名空间置于列表顶部。
 
    排序前：
 
@@ -60,7 +60,7 @@ ms.locfileid: "79431483"
 
 - 单独的 using 指令组
 
-   当你选择右键单击菜单中的“删除和排序 Using”  命令后，它会在具有相同根命名空间的指令组之间插入空行，以将 `using` 指令分隔开来。
+   当你选择右键单击菜单中的“删除和排序 Using”命令后，它会在具有相同根命名空间的指令组之间插入空行，以将 `using` 指令分隔开来。
 
    排序前：
 
@@ -87,7 +87,14 @@ ms.locfileid: "79431483"
    using System.Linq;
    ```
 
+::: moniker range=">=vs-2019"                                              
 - 建议对 .NET Framework 程序集中的类型使用 using
+::: moniker-end
+                                         
+::: moniker range="vs-2017"                                                
+- 建议对引用程序集中的类型使用 using
+::: moniker-end                                                            
+
 - 建议对 NuGet 包中的类型使用 using
 
    选择这些选项时，[快速操作](../quick-actions.md)可用于安装 NuGet 包，并为未引用的类型添加 `using` 指令。
@@ -108,7 +115,7 @@ ms.locfileid: "79431483"
 
 - 显示过程行分隔符
 
-   文本编辑器指示过程的可视范围。 在项目的 .cs  源文件中，在下表列出的位置处绘制行：
+   文本编辑器指示过程的可视范围。 在项目的 .cs 源文件中，在下表列出的位置处绘制行：
 
    |.cs 源文件中的位置|行位置示例|
    |---------------------------------|------------------------------|
@@ -118,7 +125,7 @@ ms.locfileid: "79431483"
 
 ## <a name="block-structure-guides"></a>块结构指南
 
-如果选中这些复选框，可以在代码中的大括号 ({}  ) 之间显示虚竖线。 然后，就可以轻松查看声明级构造和代码级构造的各个代码块了。
+如果选中这些复选框，可以在代码中的大括号 ({}) 之间显示虚竖线。 然后，就可以轻松查看声明级构造和代码级构造的各个代码块了。
 
 ## <a name="editor-help"></a>编辑器帮助
 
