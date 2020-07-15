@@ -7,12 +7,12 @@ ms.assetid: 588480a3-8806-4ea5-9915-c25974770069
 ms.date: 04/20/2020
 ms.topic: how-to
 description: 了解有关 Visual Studio 订阅中包含的 Windows 开发者帐户。
-ms.openlocfilehash: a39b52f98cb476858e02ae34a4a9422e55dee888
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.openlocfilehash: 659c2b1d792eb02d74ac5d52773f81bdda198a7a
+ms.sourcegitcommit: c2b3bf0de44cd379fd1ad5110385021d0ec950ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85905996"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86301455"
 ---
 # <a name="windows-developer-account-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 Windows 开发者帐户
 通过所选 Visual Studio 订阅包含的 Windows 开发者帐户，可以将免费和付费的 Windows 应用提交到 Windows 应用商店。
@@ -26,7 +26,7 @@ ms.locfileid: "85905996"
 2. 在“工具”部分中找到“Windows 开发人员帐户”磁贴，然后单击“权益”磁贴底部的“获取代码”  链接。  将代码复制到剪贴板，然后单击“激活”  。
    > [!div class="mx-imgBorder"]
    > ![Windows 开发者权益磁贴](_img/vs-windows-dev/vs-windows-dev-tile.png)
-3. 在 [https://developer.microsoft.com](https://developer.microsoft.com) 站点上可以开始注册过程。  单击“注册”以继续  。
+3. 在 [https://developer.microsoft.com/store/register/](https://developer.microsoft.com/store/register/) 站点上可以开始注册过程。  单击“注册”以继续  。
    > [!div class="mx-imgBorder"]
    > ![Windows 开发者权益注册](_img/vs-windows-dev/vs-windows-dev-register1-cropped.png)
 4. 登录到你的订阅。  如果有多个帐户，请选择与你的企业订阅相关联的帐户。

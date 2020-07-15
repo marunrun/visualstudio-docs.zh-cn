@@ -1,22 +1,21 @@
 ---
 title: 将 foreach 循环转换为 LINQ
 descritpion: Convert any foreach loop that uses an IEnumerable to a LINQ query or a LINQ call form (also known as a LINQ method).
-ms.date: 03/10/2020
+ms.date: 07/10/2020
 ms.topic: reference
 author: mikadumont
 ms.author: midumont
 manager: jillfra
 dev_langs:
 - CSharp
-- VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 12c03830ccd37e0970e3c74bc78cdd9c8a8732b7
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 390e66fa01d49f217140c3c030bcc54fd349e402
+ms.sourcegitcommit: 8b1314ceab58e0d562cdbb1367fa738fdca7bf1e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79094216"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86285389"
 ---
 # <a name="convert-a-foreach-loop-to-linq"></a>将 foreach 循环转换为 LINQ
 
@@ -24,13 +23,11 @@ ms.locfileid: "79094216"
 
 - C#
 
-- Visual Basic
-
-**功能：** 可以将使用 IEnumerables 的 foreach  循环轻松转换为 LINQ 查询或 LINQ 调用窗体（也称为 LINQ 方法）。
+**功能：** 可以将使用 IEnumerables 的 foreach 循环轻松转换为 LINQ 查询或 LINQ 调用窗体（也称为 LINQ 方法）。
 
 **使用时机：** 有一个使用 IEnumerable 的 foreach 循环，并且需要将该循环作为 LINQ 查询读取。
 
-操作原因：  更倾向于使用 LINQ 语法而不是 foreach 循环。 [LINQ](/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq) 使查询成为 C# 一流语言构造。 LINQ 可以减少文件中的代码量，使代码更易于读取，并允许不同的数据源具有类似的查询表达式模式。
+操作原因：更倾向于使用 LINQ 语法而不是 foreach 循环。 [LINQ](/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq) 使查询成为 C# 一流语言构造。 LINQ 可以减少文件中的代码量，使代码更易于读取，并允许不同的数据源具有类似的查询表达式模式。
 
 > [!NOTE]
 > LINQ 语法的效率通常低于 foreach 循环。 使用 LINQ 来提高代码的可读性时，最好了解可能发生的性能权衡。
@@ -41,11 +38,11 @@ ms.locfileid: "79094216"
 
     ![使用 IEnumerable 的 Foreach 示例](media/convert-foreach-to-LINQ.png)
 
-2. 按“Ctrl”  + **。** 触发“快速操作和重构”  菜单。
+2. 按“Ctrl”+ **。** 触发“快速操作和重构”菜单。
 
    ![转换为 LINQ 菜单示例](media/convert-foreach-to-LINQ-codefix.png)
 
-3. 选择“转换为 LINQ”  或“转换为 Linq (调用窗体)”  。
+3. 选择“转换为 LINQ”或“转换为 Linq (调用窗体)”。
 
    ![LINQ 查询结果示例](media/convert-foreach-to-LINQ-result.png)
 
