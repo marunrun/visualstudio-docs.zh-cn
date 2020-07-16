@@ -5,16 +5,17 @@ metadata:
   title: Visual Studio 中的测试工具
   description: 了解如何使用功能 Visual Studio 来测试代码。
   ms.topic: landing-page
+  ms.technology: vs-ide-test
   author: mikejo5000
   ms.author: mikejo
   manager: jillfra
   ms.date: 03/23/2020
-  ms.openlocfilehash: cb29c5219cb3ad73cf8a3efeecaf344c7af81968
-  ms.sourcegitcommit: ee12b14f306ad8f49b77b08d3a16d9f54426e7ca
+  ms.openlocfilehash: 345cc23893a335ba7876ca3d6aef202beaac693b
+  ms.sourcegitcommit: ad13d7b427303b0e801d54dc521dfb3c1e2bf6e4
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 03/25/2020
-  ms.locfileid: "80256400"
+  ms.lasthandoff: 07/15/2020
+  ms.locfileid: "86405389"
 landingContent:
 - title: 关于测试工具
   linkLists:
