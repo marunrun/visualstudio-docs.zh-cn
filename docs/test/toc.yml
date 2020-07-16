@@ -42,6 +42,8 @@
       items:
         - name: 使用测试资源管理器运行单元测试
           href: run-unit-tests-with-test-explorer.md
+        - name: 使用测试资源管理器调试单元测试
+          href: debug-unit-tests-with-test-explorer.md
         - name: 测试资源管理器常见问题解答
           href: test-explorer-faq.md
     - name: 从命令行运行测试
@@ -103,7 +105,7 @@
       items:
         - name: 对 C++ UWP DLL 进行单元测试
           href: unit-testing-a-visual-cpp-dll-for-store-apps.md
-        - name: '对 UWP 应用中的 Visual C# 代码进行单元测试'
+        - name: 对 UWP 应用中的 Visual C# 代码进行单元测试
           href: unit-testing-visual-csharp-code-in-a-store-app.md
         - name: 演练：创建并运行 UWP 应用的单元测试
           href: walkthrough-creating-and-running-unit-tests-for-windows-store-apps.md
