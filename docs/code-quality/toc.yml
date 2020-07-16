@@ -730,6 +730,20 @@
                   href: ca2328.md
                 - name: CA2329：不要使用不安全的配置反序列化 JsonSerializer
                   href: ca2329.md
+                - name: 'CA2350:确保 DataTable.ReadXml() 的输入受信任'
+                  href: ca2350.md
+                - name: 'CA2351:确保 DataSet.ReadXml() 的输入受信任'
+                  href: ca2351.md
+                - name: 'CA2352:可序列化类型中的不安全 DataSet 或 DataTable 容易受到远程代码执行攻击'
+                  href: ca2352.md
+                - name: 'CA2353:可序列化类型中的不安全 DataSet 或 DataTable'
+                  href: ca2353.md
+                - name: 'CA2354:反序列化对象图中的不安全 DataSet 或 DataTable 可能容易受到远程代码执行攻击'
+                  href: ca2354.md
+                - name: 'CA2355:反序列化对象图中的不安全 DataSet 或 DataTable'
+                  href: ca2355.md
+                - name: 'CA2356:Web 反序列化对象图中的不安全 DataSet 或 DataTable 类型'
+                  href: ca2356.md
                 - name: CA2330：在反序列化时确保 JsonSerializer 具有安全配置
                   href: ca2330.md
                 - name: CA3001：查看 SQL 注入漏洞的代码
