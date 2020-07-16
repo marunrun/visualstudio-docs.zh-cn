@@ -1,5 +1,5 @@
 ---
-title: 错误：对函数求值&#39;函数&#39;超时，需要以不安全的方式中止 |Microsoft Docs
+title: 错误：计算函数“function”超时，需要以不安全方式中止 | Microsoft Docs
 ms.date: 11/15/2016
 ms.topic: reference
 f1_keywords:
@@ -9,40 +9,40 @@ caps.latest.revision: 9
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 5d5a992751e31f21a7875091b4c8b1be9bd0bd0a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a27bf67770eef770fddef0301a804e6c45579539
+ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68197062"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86387117"
 ---
-# <a name="error-evaluating-the-function-39function39-timed-out-and-needed-to-be-aborted-in-an-unsafe-way"></a>错误：对函数求值&#39;函数&#39;超时，需要以不安全的方式中止
+# <a name="error-evaluating-the-function-39function39-timed-out-and-needed-to-be-aborted-in-an-unsafe-way"></a>错误：计算函数“function”超时，需要以不安全方式中止
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-完整的消息文本：评估函数 function 超时，需要以不安全的方式中止。 这可能会损坏目标进程。 
+完整消息文本：计算函数“function”超时，需要以不安全方式中止。 这可能会损坏目标进程。 
 
-为了更加轻松地检查 .NET 对象的状态，调试器将自动强制调试的进程运行其他代码（通常是属性 getter 方法和 ToString 函数）。 在大多数情况下，这些函数快速完成，使调试更容易。 但是，调试器不会在沙盒中运行应用程序。 因此，属性 getter 或调入挂起的本机函数的 ToString 方法可能会导致无法恢复的长超时。 如果遇到此错误消息，说明发生了这种情况。
+为更轻松地检查 .NET 对象的状态，调试器会自动强制调试的进程运行其他代码（通常是属性 getter 方法和 ToString 函数）。 在大多数方案中，这些函数可以快速完成，使调试更加容易。 但是，调试器不会在沙盒中运行应用程序。 因此，调用到本机函数的属性 getter 或 ToString 方法可以停止响应，这可能导致长时间的超时，这可能无法恢复。 如果你遇到此错误消息，就是发生了这个问题。
  
-此问题的一个常见原因是：当调试器计算属性时，它只允许要检查的线程执行。 因此如果该属性等待其他线程在被调试的应用程序内运行，并且 .NET 运行时不能中断这种等待，此问题就会发生。
+此问题的一个常见原因是，当调试器评估属性时，它只允许执行被检查的线程。 因此，如果属性正在等待其他线程在调试的应用程序内部运行，并且它以 .NET 运行时无法中断的方式等待，则会发生此问题。
  
 ## <a name="to-correct-this-error"></a>更正此错误
  
-此问题有三种可能的解决方案。
+对于此问题，有三种可能的解决方法。
  
-### <a name="solution-1-prevent-the-debugger-from-calling-the-getter-property-or-tostring-method"></a>解决方法 #1:防止调试器调用 getter 的属性或 ToString 方法
+### <a name="solution-1-prevent-the-debugger-from-calling-the-getter-property-or-tostring-method"></a>解决方法 #1：阻止调试器调用 getter 属性或 ToString 方法
  
-错误消息将告知调试器尝试调用的函数的名称。 如果可以修改此函数，您可以防止调试器调用属性 getter 或 ToString 方法。 请尝试以下方法之一：
+错误消息将告诉你调试器尝试调用的函数的名称。 如果可以修改此函数，就可以阻止调试器调用 getter 属性或 ToString 方法。 尝试以下任一项：
  
 * 将方法更改为除 getter 属性或 ToString 方法之外的其他类型的代码，问题将会消失。
-    或
-* （对于 ToString）在类型上定义 DebuggerDisplay 特性（attribute），调试器可以计算 ToString 以外的值。
-    或
-* （对于 getter 属性）在属性上定义 `[System.Diagnostics.DebuggerBrowsable(DebuggerBrowsableState.Never)]` 特性 (attribute)。 如果因为 API 兼容性原因而需要让一个方法保持为属性，这很有用。
+    \- 或 -
+* （对于 ToString）定义类型的 DebuggerDisplay 属性，调试器将计算 ToString 之外的值。
+    \- 或 -
+* （对于属性 getter）为属性定义 `[System.Diagnostics.DebuggerBrowsable(DebuggerBrowsableState.Never)]` 特性。 如果你的方法因为 API 兼容性而要保留属性，那么这是非常有用的，它应该是值得你考虑的方法。
  
-### <a name="solution-2-have-the-target-code-ask-the-debugger-to-abort-the-evaluation"></a>解决方案 2:已请求中止计算在调试器的目标代码
+### <a name="solution-2-have-the-target-code-ask-the-debugger-to-abort-the-evaluation"></a>解决方法 #2：让目标代码要求调试器中止计算
  
-错误消息将告知调试器尝试调用的函数的名称。 如果属性 getter 或 ToString 方法有时无法正确运行，尤其是在需要另一个线程来运行此代码的情况下，实现函数可以调用`System.Diagnostics.Debugger.NotifyOfCrossThreadDependency` 以便让调试器中止函数求值。 使用此解决方案，仍可以显式计算这些函数，但默认行为是在出现 NotifyOfCrossThreadDependency 调用时停止执行。
+错误消息将告诉你调试器尝试调用的函数的名称。 如果属性 getter 或 ToString 方法有时无法正确运行，特别是问题在于代码需要另一个线程来运行代码的情况下，实现函数可以调用 `System.Diagnostics.Debugger.NotifyOfCrossThreadDependency`，请求调试器中止函数计算。 使用此解决方案，仍然可以显式计算这些函数，但默认行为是在发生 NotifyOfCrossThreadDependency 调用时停止执行。
  
-### <a name="solution-3-disable-all-implicit-evaluation"></a>解决方案 3:禁用所有隐式计算
+### <a name="solution-3-disable-all-implicit-evaluation"></a>解决方法 #3：禁用所有隐式计算
  
-如果先前的解决方案未解决此问题，请转到*工具* / *选项*，并取消选中调试   / 常规   / 启用属性求值和其他隐式函数调用设置  。 这将会禁用大多数隐式函数求值，应该会解决此问题。
+如果前面的解决方案未解决问题，请转到“工具” / “选项”，并取消选中“调试” / “常规” / “启用属性计算和其他隐式函数调用”设置    。 这将禁用大多数隐式函数计算，应该可以解决问题。

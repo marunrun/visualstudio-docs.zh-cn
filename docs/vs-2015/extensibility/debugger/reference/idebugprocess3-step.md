@@ -1,5 +1,5 @@
 ---
-title: IDebugProcess3::Step | Microsoft Docs
+title: IDebugProcess3：： Step |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,20 +12,20 @@ ms.assetid: 6ad9094c-27cc-4927-8a7c-1b4d97b2e436
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 45f60aaac3b89b7273a5f548b4716b6aee392256
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 5069a40f4e3ea4b1fba74c8133a18b46f2b3f2d2
+ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63405599"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86386220"
 ---
 # <a name="idebugprocess3step"></a>IDebugProcess3::Step
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-将导致过程步骤一个指令或语句。  
+使进程单步执行一条指令或语句。  
   
 > [!NOTE]
-> 应使用此方法以代替[步骤](../../../extensibility/debugger/reference/idebugprogram2-step.md)。  
+> 应使用此方法而不是[步骤](../../../extensibility/debugger/reference/idebugprogram2-step.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,25 +47,25 @@ int Step(
   
 #### <a name="parameters"></a>参数  
  `pThread`  
- [in][IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)对象，表示正在单步执行的线程。  
+ 中一个[IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)对象，表示正在逐步进行的线程。  
   
  `sk`  
- [in]之一[STEPKIND](../../../extensibility/debugger/reference/stepkind.md)值。  
+ 中[STEPKIND](../../../extensibility/debugger/reference/stepkind.md)值之一。  
   
  `step`  
- [in]之一[STEPUNIT](../../../extensibility/debugger/reference/stepunit.md)值。  
+ 中[STEPUNIT](../../../extensibility/debugger/reference/stepunit.md)值之一。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回 S_OK;否则将返回错误代码。  
+ 如果成功，将返回 S_OK;否则，将返回错误代码。  
   
 ## <a name="remarks"></a>备注  
- 如果没有任何线程同步或线程之间的通信，当特定线程单步执行时应运行过程中的其他线程。  
+ 如果线程之间存在任何线程同步或通信，则进程中的其他线程应在单步执行时运行。  
   
- **警告**stopping 事件或将即时 （同步） 事件与不发送[事件](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)时处理此调用; 否则调试器可能会挂起。  
+ **警告**处理此调用时，不要将停止事件或即时（同步）事件发送到[事件](../../../extensibility/debugger/reference/idebugeventcallback2-event.md);否则，调试器可能会停止响应。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugProcess3](../../../extensibility/debugger/reference/idebugprocess3.md)   
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)   
  [STEPKIND](../../../extensibility/debugger/reference/stepkind.md)   
  [STEPUNIT](../../../extensibility/debugger/reference/stepunit.md)   
- [Event](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)
+ [事件](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)
