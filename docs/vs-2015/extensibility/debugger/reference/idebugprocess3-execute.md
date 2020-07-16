@@ -1,5 +1,5 @@
 ---
-title: IDebugProcess3::Execute | Microsoft Docs
+title: IDebugProcess3：： Execute |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,20 +12,20 @@ ms.assetid: d831cd81-d7bf-4172-8517-aa699867791f
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 8b6647db9e3a013be0ffd3a0a12f92e9cb6cc738
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 5f9b70deabd4cb7996d76373c6216057678c0bd3
+ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63405823"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86386168"
 ---
 # <a name="idebugprocess3execute"></a>IDebugProcess3::Execute
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-将继续运行此过程从已停止状态。 清除任何以前的执行状态 （如步骤），并再次执行该过程开始。  
+继续从停止状态运行此进程。 任何以前的执行状态（如步骤）都将被清除，进程将再次开始执行。  
   
 > [!NOTE]
-> 应使用此方法以代替[Execute](../../../extensibility/debugger/reference/idebugprogram2-execute.md)。  
+> 应使用此方法，而不是[执行](../../../extensibility/debugger/reference/idebugprogram2-execute.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,19 +43,19 @@ int Execute(
   
 #### <a name="parameters"></a>参数  
  `pThread`  
- [in][IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)对象，表示要执行的线程。  
+ 中表示要执行的线程的[IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)对象。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为将返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
 ## <a name="remarks"></a>备注  
- 当用户从某个其他进程的线程已停止状态开始执行时，对此过程将调用此方法。 当用户选择此方法也称为**启动**命令**调试**菜单在 IDE 中的。 此方法的实现可能很简单，与调用[Resume](../../../extensibility/debugger/reference/idebugthread2-resume.md)过程中在当前线程上的方法。  
+ 当用户在某个其他进程的线程中从停止状态开始执行时，将在此过程中调用此方法。 当用户从 IDE 的 "**调试**" 菜单中选择 "**启动**" 命令时，也会调用此方法。 此方法的实现可能与在进程的当前线程上调用[Resume](../../../extensibility/debugger/reference/idebugthread2-resume.md)方法一样简单。  
   
 > [!WARNING]
-> 不发送停止事件或将即时 （同步） 事件与[事件](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)时处理此调用; 否则调试器可能会挂起。  
+> 处理此调用时，不要将停止事件或即时（同步）事件发送到[事件](../../../extensibility/debugger/reference/idebugeventcallback2-event.md);否则，调试器可能会停止响应。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugProcess3](../../../extensibility/debugger/reference/idebugprocess3.md)   
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)   
- [恢复](../../../extensibility/debugger/reference/idebugthread2-resume.md)   
- [Event](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)
+ [退出](../../../extensibility/debugger/reference/idebugthread2-resume.md)   
+ [事件](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)

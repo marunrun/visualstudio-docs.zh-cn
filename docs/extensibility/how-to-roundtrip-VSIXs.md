@@ -8,12 +8,12 @@ ms.author: madsk
 manager: justinclareburt
 ms.workload:
 - willbrown
-ms.openlocfilehash: ff2865080b7d36f1a7c3b8a7680d867b92ec9c08
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.openlocfilehash: ca1f367510aa9730c1b3b212438579a8eaeb0e8f
+ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85905778"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86387273"
 ---
 # <a name="how-to-make-extensions-compatible-with-visual-studio-20192017-and-visual-studio-2015"></a>如何：使扩展与 Visual Studio 2019/2017 和 Visual Studio 2015 兼容
 
@@ -29,7 +29,7 @@ ms.locfileid: "85905778"
 1. 导入正确的 NuGet 包。
 2. 更新扩展清单：
     * 安装目标
-    * 必备条件
+    * 先决条件
 3. 更新 .Csproj：
     * 更新 `<MinimumVisualStudioVersion>`。
     * 添加 `<VsixType>` 属性。
@@ -213,5 +213,4 @@ Visual Studio 2019 或2017 | VSSDK. BuildTool
 ![查找 VSIX](media/finding-a-VSIX-example.png)
 
 > [!NOTE]
-> 如果你的项目挂起，并显示**打开该文件**的消息，则强制关闭 Visual Studio，导航到你的项目目录，显示隐藏文件夹，然后删除*vs>* 文件夹。
- 
+> 如果项目在**打开文件**时停止响应，请强制关闭 Visual Studio，导航到项目目录，显示隐藏文件夹，然后删除 *. vs*文件夹。

@@ -1,5 +1,5 @@
 ---
-title: IDebugProgram2::Execute |Microsoft Docs
+title: IDebugProgram2：： Execute |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,20 +12,20 @@ ms.assetid: f7205ce8-0ac6-4fcd-b6ec-b720b4fcaccf
 caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: f6134c10f30d66011dca5e40c28b6cbe6a7c94ed
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 676a3a7d184c1f34cafcfc2b2a4dd7a1c3f81a95
+ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63430556"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86387325"
 ---
 # <a name="idebugprogram2execute"></a>IDebugProgram2::Execute
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-将继续运行此程序从已停止状态。 清除任何以前的执行状态 （如步骤），然后再次执行该程序开始。  
+继续从停止状态运行该程序。 任何以前的执行状态（如步骤）都将被清除，程序将重新开始执行。  
   
 > [!NOTE]
-> 已弃用此方法。 使用[Execute](../../../extensibility/debugger/reference/idebugprocess3-execute.md)方法相反。  
+> 不推荐使用此方法。 改为使用[Execute](../../../extensibility/debugger/reference/idebugprocess3-execute.md)方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,15 +40,15 @@ int Execute();
 ```  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
 ## <a name="remarks"></a>备注  
- 当用户从其他程序中的线程已停止状态开始执行时，此程序上调用此方法。 当用户选择此方法也称为**启动**命令**调试**菜单在 IDE 中的。 此方法的实现可能很简单，与调用[Resume](../../../extensibility/debugger/reference/idebugthread2-resume.md)程序中的当前线程上的方法。  
+ 当用户在其他程序的线程中从停止状态开始执行时，将对此程序调用此方法。 当用户从 IDE 的 "**调试**" 菜单中选择 "**启动**" 命令时，也会调用此方法。 此方法的实现可能与调用程序中当前线程上的[Resume](../../../extensibility/debugger/reference/idebugthread2-resume.md)方法非常简单。  
   
 > [!WARNING]
-> 不发送停止事件或将即时 （同步） 事件与[事件](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)时处理此调用; 否则调试器可能会挂起。  
+> 处理此调用时，不要将停止事件或即时（同步）事件发送到[事件](../../../extensibility/debugger/reference/idebugeventcallback2-event.md);否则，调试器可能会停止响应。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)   
- [事件](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)   
- [Resume](../../../extensibility/debugger/reference/idebugthread2-resume.md)
+ [引发](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)   
+ [恢复](../../../extensibility/debugger/reference/idebugthread2-resume.md)

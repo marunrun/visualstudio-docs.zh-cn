@@ -14,12 +14,12 @@ caps.latest.revision: 364
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 758e2bbf69c7b48a1027819377839cbdce9204fe
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: 5bdfae6235e7efb833eca0b87631af9204b4a678
+ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75919253"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86387104"
 ---
 # <a name="what39s-new-in-visual-studio-2015"></a>Visual Studio 2015 中的新增功能
 [!INCLUDE[vs2017banner](./includes/vs2017banner.md)]
@@ -35,14 +35,14 @@ ms.locfileid: "75919253"
 
  Visual Studio 2015 安装体验已进行组件化，因此你只需要安装所需的部件。 这让涉及 .NET 或 Web 开发的许多常用方案的安装变得更加快速。 如果进行其他类型的开发（例如跨平台移动开发），或在 C++ 或 F# 中工作，则选择 **“自定义”** 安装，然后选择所需的组件和可选第三方 SDK。 还可以稍后再安装任何自定义组件。 例如，如果选择基本安装，并随后尝试创建一个新的 C++ 项目，则系统会提示你下载 C++ 开发工具。
 
- ![Visual Studio 2015 安装对话框](./ide/media/vs2015-setup-screen.png "VS2015_Setup_screen")
+ ![“Visual Studio 2015 设置”对话框](./ide/media/vs2015-setup-screen.png "VS2015_Setup_screen")
 
 ## <a name="sign-in-across-multiple-accounts"></a>使用多个帐户登录
- 借助 Visual Studio 2015，全新简化的登录体验旨在大大简化对联机资源的访问，即使你拥有多个 Visual Studio 帐户也是如此。 登录到 Visual Studio 后，你会自动登录到 Visual Studio 2015 的所有实例和你计算机上的 Blend。 登录操作会自动开始为你漫游设置。 在 Visual Studio 2015 中，你的帐户跨功能共享，所以只要拥有适当令牌，就可以从“团队资源管理器”访问你的 Visual Studio Team Services 帐户，从服务器资源管理器中的 Microsoft Azure 订阅访问资源和网站。 你也将在 Application Insights 项目的“新建项目”对话框中看到你的 Azure 资源，并且在新的“添加连接的服务” 对话框中看到你的 Azure 移动、Azure 存储、 [Microsoft Office 365](https://msdn.microsoft.com/office/aa905340.aspx) 和 [Saleforce.com 开发人员](https://developer.salesforce.com/) 帐户。
+ 借助 Visual Studio 2015，全新简化的登录体验旨在大大简化对联机资源的访问，即使你拥有多个 Visual Studio 帐户也是如此。 登录到 Visual Studio 后，你会自动登录到 Visual Studio 2015 的所有实例和你计算机上的 Blend。 登录操作会自动开始为你漫游设置。 在 Visual Studio 2015 中，你的帐户跨功能共享，所以只要拥有适当令牌，就可以从“团队资源管理器” **** 访问你的 Visual Studio Team Services 帐户，从服务器资源管理器中的 Microsoft Azure 订阅访问资源和网站。 你也将在 Application Insights 项目的“新建项目”对话框中看到你的 Azure 资源，并且在新的“添加连接的服务” **** 对话框中看到你的 Azure 移动、Azure 存储、 [Microsoft Office 365](https://msdn.microsoft.com/office/aa905340.aspx) 和 [Saleforce.com 开发人员](https://developer.salesforce.com/) 帐户。
 
  你可以随时添加多个用户帐户或通过新的帐户管理器进行添加，从而在 Visual Studio 中使用这些帐户。 然后，你可以在连接到服务或访问联机资源时在这些帐户之间即时切换。 Visual Studio 会记住你添加的帐户，因此你可从 Visual Studio 或 Blend 的任何实例使用这些帐户。 Visual Studio 还将随你的个性化帐户一起漫游帐户列表（但我们不会漫游你的重要凭据），因此你可以在另一台设备上快速地开始使用其中的一个帐户。 当然，你可以随时从“帐户设置”对话框中移除帐户。 若要开始操作，请参见 [Work with multiple user accounts](./ide/work-with-multiple-user-accounts.md)。
 
- ![帐户管理器](./ide/media/vs2015-accountmanager.gif "VS2015_AccountManager")
+ ![“帐户管理器”](./ide/media/vs2015-accountmanager.gif "VS2015_AccountManager")
 
 ## <a name="choose-your-target-platforms"></a>选择你的目标平台
  Visual Studio 2015 支持跨平台移动设备开发。 你可以编写面向 iOS、Android 和 Windows 的应用程序和游戏以及共享通用基本代码，一切都可从 Visual Studio IDE 内执行。 你将在“文件”、“新项目”对话框中见到所有这些新项目类型。
@@ -61,7 +61,7 @@ ms.locfileid: "75919253"
 ### <a name="cross-platform-apps-and-libraries-for-native-c"></a>针对本机 C++ 的跨平台应用程序和库
  C++ 是跨大部分移动设备本机可用的语言。 它可用于编写跨平台共享代码库，这些代码库可以针对多个移动平台目标进行生成。 甚至可以使用 C++ 创建完整的移动应用。 Visual C++ 为你提供编辑、生成、部署和调试跨平台代码的工具。 除适用于 Windows 应用的模板外，还可以根据适用于 Android Native Activity 应用和 iOS 应用的模板创建项目，或创建适用于多个平台的共享代码库项目，包括 Xamarin 混合应用。 借助特定于平台的 IntelliSense，可以浏览 API 以及生成针对 Android、iOS 或 Windows 目标的正确代码。 可以针对 x86 或 ARM 本机平台配置生成，并将代码部署到 iOS 模拟器、联网 Mac 上 iOS 设备或直接附加的 Android 设备，或使用高性能的 Microsoft Visual Studio Emulator for Android 进行测试。 可以在 Visual Studio 调试程序中设置断点、监视变量、查看堆栈和逐句通过 C++ 代码。 可以跨多个应用平台共享除最具有平台特定性的代码之外的所有代码，并在 Visual Studio 中用一个解决方案生成所有这些代码。
 
- 若要开始跨平台C++，请参阅[通过视觉对象C++生成跨平台移动应用](./misc/build-cross-platform-mobile-apps-with-visual-cpp.md)
+ 若要开始跨平台 c + +，请参阅[利用 Visual C++ 生成跨平台移动应用](./misc/build-cross-platform-mobile-apps-with-visual-cpp.md)
 
 ### <a name="universal-windows-apps-for-any-windows-10-device"></a>适用于任何 Windows 10 设备的通用 Windows 应用
  使用通用 Windows 平台和我们的一项 Windows 核心，可在任何 Windows 10 设备上（从电话到桌面）运行同一应用。 使用 Visual Studio 2015 和通用 Windows 应用开发工具创建这些通用 Windows 应用。
@@ -73,7 +73,7 @@ ms.locfileid: "75919253"
  使用 C#、Visual Basic、C++ 或 JavaScript 创建这些 [通用 Windows 应用](https://msdn.microsoft.com/library/dn975273.aspx)。
 
 ### <a name="web"></a>Web
- {2&gt;ASP.NET 5&lt;2} 是 MVC、WebAPI 和 SignalR 的一个重大更新，在 Windows、Mac 和 Linux 上运行。  ASP.NET 5 旨在完全为你提供可组合的精益 .NET 堆栈以便生成基于云的现代应用程序。 Visual Studio 2015 工具与常用 Web 开发工具（例如 Bower 和 Grunt）更紧密地集成。 若要开始操作，请参阅  [NET Web 开发和工具博客](https://devblogs.microsoft.com/aspnet/)上的多篇博客文章。
+ ASP.NET 5 是 MVC、WebAPI 和 SignalR 的一个重大更新，在 Windows、Mac 和 Linux 上运行。  ASP.NET 5 旨在完全为你提供可组合的精益 .NET 堆栈以便生成基于云的现代应用程序。 Visual Studio 2015 工具与常用 Web 开发工具（例如 Bower 和 Grunt）更紧密地集成。 若要开始操作，请参阅  [NET Web 开发和工具博客](https://devblogs.microsoft.com/aspnet/)上的多篇博客文章。
 
 ### <a name="classic-desktop-and-windows-store"></a>经典桌面和 Windows 应用商店
  Visual Studio 2015 继续支持经典桌面和 Windows 商店开发。 Visual Studio 将随着 Windows 的发展而发展。  在 Visual Studio 2015 中，适用于 .NET 和 C++ 的库和语言有了大幅改进，适用于 Windows 的所有版本。
@@ -92,12 +92,12 @@ ms.locfileid: "75919253"
 #### <a name="c"></a>C++
  Visual C++ 在以下方面有大幅提升：C++11/14 语言一致性、对跨平台移动设备开发的支持、对可恢复函数和 await 的支持（目前计划在 C++17 中进行标准化）、C 运行时库 (CRT) 和 C++ 标准库 (STL) 实现中的改进和 Bug 修复、MFC 中可调整大小的对话框、新的编译器优化、更好的生成性能、代码编辑器中的新诊断功能和新效率工具。
 
- 有关详细信息，请参阅[视觉对象C++ ](https://msdn.microsoft.com/library/1cc09fad-85a2-43c2-b022-bb99f5fe0ad7)和[视觉对象C++博客](https://devblogs.microsoft.com/cppblog/)的新增功能。
+ 有关详细信息，请参阅 Visual C++ 和[Visual C++ 博客](https://devblogs.microsoft.com/cppblog/)的[新增功能](https://msdn.microsoft.com/library/1cc09fad-85a2-43c2-b022-bb99f5fe0ad7)。
 
 ## <a name="device-preview-menu-bar"></a>设备预览菜单栏
  在通用 Windows 平台项目中，设备预览菜单栏使你可以查看基于 XAML 的 UI 在各种屏幕尺寸上的呈现方式。
 
- ![设备预览菜单](./ide/media/vs2015-device-preview.png "vs2015_device_preview")
+ ![“设备预览”菜单](./ide/media/vs2015-device-preview.png "vs2015_device_preview")
 
 ## <a name="visual-studio-graphics-diagnostics"></a>Visual Studio 图形诊断
  自 Visual Studio 2013 开始，Visual Studio 图形诊断已添加许多新功能，包括帧分析，Windows Phone 支持、着色器编辑和应用，以及命令行捕获工具。 它还添加了对 DirectX12 应用调试的支持。 有关详细信息，请参阅 [Visual Studio 图形诊断](./debugger/visual-studio-graphics-diagnostics.md)。
@@ -107,15 +107,15 @@ ms.locfileid: "75919253"
 
 1. Azure 移动服务
 
-2. Azure 存储空间
+2. Azure 存储
 
 3. Office 365（邮件、联系人、日历、文件、用户和组）
 
-4. 销售团队
+4. Salesforce
 
    新服务将不断增加，你可通过单击向导中的“查找新服务链接”来发现这些服务。
 
-   ![添加连接的服务对话框](./ide/media/vs2015-addconnectedservicedialog.png "VS2015_AddConnectedServiceDialog")
+   ![添加已连接的服务对话框](./ide/media/vs2015-addconnectedservicedialog.png "VS2015_AddConnectedServiceDialog")
 
 ## <a name="design-your-ui"></a>设计你的 UI
  设计 XAML 用户界面的 Blend 体验获得了巨大提升。 Blend 已经过完全重新设计，以提供更直观的 UI、更强大的 XAML 编辑功能（包括 IntelliSense）并实现与 Visual Studio 更好的集成。 有关详细信息，请参阅[在 Visual Studio 和 Blend for Visual Studio 中设计 XAML](./designers/designing-xaml-in-visual-studio.md)。
@@ -151,25 +151,25 @@ ms.locfileid: "75919253"
 ## <a name="live-code-analysis-light-bulbs"></a>实时代码分析（灯泡）
  适用于 C# 和 Visual Basic 的新 Roslyn 编译器不仅提供更快的编译时间，也启用全新方案（如实时代码分析），这些方案在你输入时直接在代码编辑器内提供丰富的可自定义的反馈和建议。 在 Visual Studio 2015 中，灯泡在左边距中显示（使用键盘时）或显示工具提示（将鼠标悬停在错误上时）。 电灯泡实时提示编译器（可能使用自定义规则集）在你的代码中检测到问题，还提供有关如何解决该问题的建议。 当你看到电灯泡时，请单击它以获得可操作的建议。
 
- ![Visual Studio Code 编辑器中的轻型电灯泡](./ide/media/vs2015-lightbulbs.png "VS2015_LightBulbs")
+ ![Visual Studio Code 编辑器中的灯泡](./ide/media/vs2015-lightbulbs.png "VS2015_LightBulbs")
 
 ## <a name="enjoy-these-additional-ide-improvements"></a>请享受这些额外的 IDE 改进
 
 ### <a name="synchronized-settings-roaming-settings"></a>同步设置（漫游设置）
- Visual Studio 2013 针对最常用的设置（例如文本编辑器、键盘关联、主题和字体及颜色、启动以及环境别名）引入同步设置。  Visual Studio 2015 通过同步更多设置并在 Professional、Enterprise、Express SKU、Blend 等 Visual Studio 应用程序系列中同步设置，使这种体验获得提升。 当你使用在 Visual Studio 2013 中使用的同一帐户首次登录 Visual Studio 2015 时，你会发现你的 Visual Studio 2013 设置同步到了 Visual Studio 2015 中。 可以通过以下方式访问设置：在“快速启动”中输入“sync”，或者导航至“工具”>“选项”>“环境”>“同步设置”。
+ Visual Studio 2013 针对最常用的设置（例如文本编辑器、键盘关联、主题和字体及颜色、启动以及环境别名）引入同步设置。  Visual Studio 2015 通过同步更多设置并在 Professional、Enterprise、Express SKU、Blend 等 Visual Studio 应用程序系列中同步设置，使这种体验获得提升。 当你使用在 Visual Studio 2013 中使用的同一帐户首次登录 Visual Studio 2015 时，你会发现你的 Visual Studio 2013 设置同步到了 Visual Studio 2015 中。 可以通过以下方式访问设置：在“快速启动”中输入“sync”，或者导航至“工具”>“选项”>“环境”>“同步设置”********。
 
 ### <a name="automatic-extension-updates"></a>自动扩展更新
  当 Visual Studio 库里有可用的新版本时，已安装的 Visual Studio 扩展现在将会自动更新。 请参阅 [查找和使用 Visual Studio 拓展](./ide/finding-and-using-visual-studio-extensions.md) 以获取有关可如何自定义自动扩展更新的详细信息。
 
 ### <a name="title-case-menus"></a>标题首字母大写菜单
- 我们专心聆听你的需求。 默认情况下，Visual Studio 菜单为标题首字母大写。 然而，如果想使用“全部大写”样式，可以在启动时或者在“工具”>“选项”>“常规”属性页中设置它：
+ 我们专心聆听你的需求。 默认情况下，Visual Studio 菜单为标题首字母大写。 然而，如果想使用“全部大写”样式，可以在启动时或者在“工具”>“选项”>“常规”属性页中设置它****：
 
- ![Visual Studio 2015 标题用例主菜单命令](./ide/media/vs2015-mainmenu.png "VS2015_MainMenu")
+ ![Visual Studio 2015 标题大写主菜单命令](./ide/media/vs2015-mainmenu.png "VS2015_MainMenu")
 
 ### <a name="high-resolution-images-and-touch-support"></a>高分辨率图像和触摸屏支持
  Visual Studio IDE 可在高清晰度显示屏上显示真正的高分辨率图像（例如菜单、上下文菜单、工具窗口命令栏等区域内，以及解决方案资源管理器中的一些项目中）。 同时，在 Visual Studio 代码编辑器窗口的触摸屏上，现在可以使用以下功能：点触并按住、捏放、点击等以缩放、滚动、选择文本以及调用上下文菜单。
 
- ![编辑器中的触摸支持](./ide/media/vs2015-touchsupport.png "VS2015_TouchSupport")
+ ![编辑器中的触控支持](./ide/media/vs2015-touchsupport.png "VS2015_TouchSupport")
 
 ### <a name="custom-layouts"></a>自定义布局
  你可以创建、保存和漫游自定义窗口布局。 例如，你可以定义一个在台式计算机上使用的首选布局以及在笔记本电脑或小屏幕设备上使用的不同布局。 或者你可为 UI 项目定义一个布局，为数据库项目定义另一个布局。 键盘关联可使你在不同布局之间快速切换。 登录 Visual Studio 后，Visual Studio 的任何实例均可提供这些布局。 有关详细信息，请参阅 [创建自定义窗口布局](./misc/create-custom-window-layouts.md)。
@@ -186,11 +186,11 @@ ms.locfileid: "75919253"
 
 - 获取 Visual Studio 编辑器中整个代码文件的历史记录。
 
-   ![CodeLens：获取代码文件详细信息](./ide/media/codelensfilelevel.png "CodeLensFileLevel")
+   ![CodeLens：获取代码文件的详细信息](./ide/media/codelensfilelevel.png "CodeLensFileLevel")
 
 - 查看显示更改你的代码的人员的图。 这可以帮助发现团队更改中的模式并评估它们的影响。
 
-   ![CodeLens：作为图形查看代码更改历史记录](./ide/media/codelens.png "CodeLens")
+   ![CodeLens：通过图形查看代码更改历史记录](./ide/media/codelens.png "CodeLens")
 
 - 轻松查看上次更改代码的时间。
 
@@ -205,7 +205,7 @@ ms.locfileid: "75919253"
 
  在此版本中，通过将命令组合为与选择、编辑、管理组和更改组内容的布局相关的部分，代码元素和链接的快捷菜单变得更加易于使用。 另请注意，测试项目的显示风格与其他项目不同，并且我们将代码图中的元素图标更新到了更合适的版本。
 
- ![在新代码图上显示选定项](./ide/media/codemapsshowonnewmap.png "CodeMapsShowOnNewMap")
+ ![显示新代码映射上的选定项](./ide/media/codemapsshowonnewmap.png "CodeMapsShowOnNewMap")
 
  其他改进包括：
 
@@ -250,21 +250,21 @@ ms.locfileid: "75919253"
 ### <a name="send-a-smile"></a>发送笑脸
  告诉我们你想如何帮助我们了解何时我们达到或超过你的期待。 当我们设计和实现新功能时，我们使用你希望有助于我们决定设计的功能的相关数据。 所以，如果你希望在 Visual Studio 在增加某个功能，请告知我们。 这是很容易的，你可以直接从 IDE 中告知我们。
 
- 只需单击标题栏上的黄色笑脸，告诉我们你的偏好，然后单击“发送笑脸” 按钮。
+ 只需单击标题栏上的黄色笑脸，告诉我们你的偏好，然后单击“发送笑脸” **** 按钮。
 
- 好了！ 我们将你的反馈路由到适当团队，在这里他们将振作精神，立即思考让你更高兴的方法。
+ 就这么简单！ 我们将你的反馈路由到适当团队，在这里他们将振作精神，立即思考让你更高兴的方法。
 
-### <a name="send-a-frown"></a>发送皱眉表情
- 了解我们在产品中的改进之处有助于我们首先关注对客户最重要的事，从而管理我们的积压工作 (backlog)。 若有任何相关的疑难之事，请直接从 IDE 内使用“发送哭脸” 功能告诉我们。 我们也让这一流程异常简单：
+### <a name="send-a-frown"></a>发送哭脸
+ 了解我们在产品中的改进之处有助于我们首先关注对客户最重要的事，从而管理我们的积压工作 (backlog)。 若有任何相关的疑难之事，请直接从 IDE 内使用“发送哭脸” **** 功能告诉我们。 我们也让这一流程异常简单：
 
- 单击标题栏上的黄色笑脸，然后单击“发送哭脸”。 告诉我们你不喜欢的内容，然后单击“发送皱眉表情”按钮。 有关更多信息，请参见 [Talk to Us](./ide/talk-to-us.md)。
+ 单击标题栏上的黄色笑脸，然后单击“发送哭脸” ****。 告诉我们你不喜欢的内容，然后单击“发送哭脸”按钮。 有关更多信息，请参见 [Talk to Us](./ide/talk-to-us.md)。
 
-### <a name="report-crashes-hangs-and-performance-issues"></a>报告崩溃、挂起和性能问题
- 有时，快速标记哭脸不足以传达你不喜欢的内容造成的完全影响。 当你遭遇挂起、崩溃或性能问题时，你可以通过使用发送皱眉表情后显示的对话框方便地共享重现步骤、故障转储和跟踪文件。
+### <a name="report-crashes-unresponsive-and-performance-issues"></a>报告崩溃、无响应和性能问题
+ 有时，快速标记哭脸不足以传达你不喜欢的内容造成的完全影响。 对于 Visual Studio 停止响应、崩溃或遇到另一个性能问题的时间，可以使用发送哭脸后显示的对话框轻松地共享重现步骤、故障转储和跟踪文件。
 
- 首先，如上所述发送皱眉表情。 在弹出的对话框上，你可以使用任何一个默认标记对你的反馈进行标记或者创建你自己的标记。 标记可帮助我们将你的反馈路由到适当的功能团队。 在“选择类别” 下拉列表中，选择表示你报告的问题的选项，然后按照步骤重现此问题。 同时提供有关如何使用 Visual Studio 报告反馈的详细步骤。 有关详细信息，请参阅[Visual Studio 发送笑脸说明](https://msdn.microsoft.com/library/5cc9b67a-54d0-41b0-aa8f-80dff4475a6b)。
+ 首先，如上所述发送哭脸。 在弹出的对话框上，你可以使用任何一个默认标记对你的反馈进行标记或者创建你自己的标记。 标记可帮助我们将你的反馈路由到适当的功能团队。 在“选择类别” **** 下拉列表中，选择表示你报告的问题的选项，然后按照步骤重现此问题。 同时提供有关如何使用 Visual Studio 报告反馈的详细步骤。 有关详细信息，请参阅[Visual Studio 发送笑脸说明](https://msdn.microsoft.com/library/5cc9b67a-54d0-41b0-aa8f-80dff4475a6b)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 * [使用 Apache Cordova 生成跨平台应用](https://msdn.microsoft.com/library/34d3c1be-22b3-4812-97fb-10b4e8ad2134)
 * [在 Visual Studio 中使用 Xamarin 生成具有本机 UI 的应用](./cross-platform/build-apps-with-native-ui-using-xamarin-in-visual-studio.md)
@@ -272,5 +272,5 @@ ms.locfileid: "75919253"
 * [使用 IntelliTest 为代码生成单元测试](./test/generate-unit-tests-for-your-code-with-intellitest.md)
 * [使用多个用户帐户](./ide/work-with-multiple-user-accounts.md)
 * [创建自定义窗口布局](./misc/create-custom-window-layouts.md)
-* [使用灯泡执行快速操作](./ide/perform-quick-actions-with-light-bulbs.md)
+* [使用电灯泡执行快速操作](./ide/perform-quick-actions-with-light-bulbs.md)
 * [Visual Studio 2017 中的新增功能](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)
