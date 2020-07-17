@@ -1,4 +1,4 @@
-- name: 'C# 教程'
+- name: C# 教程
   href: index.yml
 - name: 概述
   items:
@@ -13,7 +13,7 @@
 - name: 创建应用
   expanded: true
   items:
-    - name: '创建第一个 C# 应用'
+    - name: 创建自己的第一个 C# 应用
       href: tutorial-console.md
     - name: 创建 Web 应用
       href: tutorial-aspnet-core.md

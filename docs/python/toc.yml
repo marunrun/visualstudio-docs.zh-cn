@@ -16,7 +16,7 @@
       href: installing-python-interpreters.md
 - name: 快速入门
   items:
-    - name: 使用 Flask 创建 Web 应用
+    - name: 通过 Flask 创建 Web 应用
       href: ../ide/quickstart-python.md
       maintainContext: true
     - name: 通过模板创建项目
@@ -85,9 +85,9 @@
           href: python-django-web-application-project-template.md
         - name: Azure 云服务模板
           href: python-azure-cloud-service-project-template.md
-    - name: 用于 Python 的 Azure SDK
+    - name: Azure SDK for Python
       href: /python/azure/?view=azure-python
-- name: 操作方法指南
+- name: 操作指南
   items:
     - name: 管理 Python 环境
       items:
