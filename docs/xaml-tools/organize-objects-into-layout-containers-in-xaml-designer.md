@@ -1,17 +1,17 @@
 ---
 title: 在 XAML 设计器中将对象组织到布局容器中
-ms.date: 11/04/2016
+ms.date: 07/17/2020
 ms.topic: conceptual
 ms.assetid: 29c80c38-0fa3-48d6-b3a8-3b864f482e44
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 3f05874459553b0b83c5e43f326a5deb6b0d4798
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: ebe96ec84d957c5ac8dcb6bad0a388ba3318c0fb
+ms.sourcegitcommit: 1fcdb5dae881a1c3a93413bb940d63c232bf96f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "82921105"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86459289"
 ---
 # <a name="organize-objects-into-layout-containers-in-xaml-designer"></a>在 XAML 设计器中将对象组织到布局容器中
 
@@ -71,7 +71,7 @@ ms.locfileid: "82921105"
 
 ![DockPanel 版式面板](../designers/media/72d46b58-9a49-4dd5-8af7-6843c0440226.png)
 
-**观看简短视频：** !["播放"](../designers/media/bldadminconsoleinitialconfigicon.PNG)按钮[WPF-system.windows.controls.dockpanel>](https://www.youtube.com/watch?v=EBH_OIM-zPo)
+**观看简短视频：** !["播放" 按钮 ](../designers/media/bldadminconsoleinitialconfigicon.PNG) [WPF-system.windows.controls.dockpanel>](https://www.youtube.com/watch?v=EBH_OIM-zPo)
 
 ## <a name="layout-controls"></a>布局控件
 
@@ -99,11 +99,9 @@ ms.locfileid: "82921105"
 
 采用与缩放控件十分类似的方式扩展对象。 只能将一个对象添加到 Viewbox****。 如果要将该效果应用于多个对象，请将布局面板添加到 ViewBox****，然后将控件添加到该布局面板。
 
-（仅适用于 WPF 项目。）
-
 ![ViewBox 布局控件](../designers/media/f5b13c66-d918-4141-8a16-bd8f8628687a.png)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [在 XAML 设计器中使用元素](../xaml-tools/working-with-elements-in-xaml-designer.md)
 - [使用 XAML 设计器创建 UI](../xaml-tools/creating-a-ui-by-using-xaml-designer-in-visual-studio.md)
