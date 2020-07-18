@@ -10,17 +10,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3bfd94a55fe207f5c20e2ed1e5630d62c73c9ba2
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.openlocfilehash: 0331c0d240503dd88257269397e1afae80a17803
+ms.sourcegitcommit: 0f30188f57d5ad2b0c8073eb51d37557c8f35a62
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85904728"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86418063"
 ---
 # <a name="walkthrough-highlight-text"></a>演练：突出显示文本
 您可以通过创建 Managed Extensibility Framework （MEF）组件部分向编辑器添加不同的视觉效果。 本演练演示如何突出显示文本文件中当前单词的每个匹配项。 如果某个单词在文本文件中出现多次，并且您将插入符号放置在一个匹配项中，则将突出显示每个匹配项。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
  从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅[安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
 
 ## <a name="create-a-mef-project"></a>创建 MEF 项目
@@ -104,7 +104,7 @@ ms.locfileid: "85904728"
     ```csharp
     public HighlightWordFormatDefinition()
     {
-                this.BackgroundColor = Colors.LightBlue;
+        this.BackgroundColor = Colors.LightBlue;
         this.ForegroundColor = Colors.DarkBlue;
         this.DisplayName = "Highlight Word";
         this.ZOrder = 5;
@@ -405,5 +405,5 @@ ms.locfileid: "85904728"
 
 4. 将光标置于出现的 "hello" 之一中。 每个匹配项都应以蓝色突出显示。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [演练：将内容类型链接到文件扩展名](../extensibility/walkthrough-linking-a-content-type-to-a-file-name-extension.md)
