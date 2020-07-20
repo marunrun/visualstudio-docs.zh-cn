@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: eb66615abbd7124fd6b781598bd8eb28ea34756d
-ms.sourcegitcommit: 0b90e1197173749c4efee15c2a75a3b206c85538
+ms.openlocfilehash: 3155c2cdc9ea3dc5208a52e5fe37f697a4ad5ef6
+ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/07/2019
-ms.locfileid: "74903860"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86386116"
 ---
 # <a name="disable-the-just-in-time-debugger"></a>禁用实时调试器
 
@@ -43,4 +43,4 @@ ms.locfileid: "74903860"
 
 禁用实时调试后，应用可能能够处理错误并正常运行。
 
-如果应用仍存在未处理的错误，则可能会显示错误消息，或者应用可能会崩溃或挂起。 在错误得到修复之前，应用不会正常运行。 你可以尝试与应用的所有者联系，并要求他们对其进行修复。
+如果应用仍存在未处理的错误，你可能会看到错误消息，或者应用可能会崩溃或停止响应。 在错误得到修复之前，应用不会正常运行。 你可以尝试与应用的所有者联系，并要求他们对其进行修复。

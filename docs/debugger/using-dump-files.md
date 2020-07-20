@@ -22,12 +22,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2f0b7edf8ef2670b70dbee25b70cac7b0597490b
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: db6d4e8bc5b2f09194e03bbadc8f49b773d24f1e
+ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65676361"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86386948"
 ---
 # <a name="dump-files-in-the-visual-studio-debugger"></a>Visual Studio 调试器中的转储文件
 
@@ -35,7 +35,7 @@ ms.locfileid: "65676361"
 
 在 Visual Studio 中打开带堆的转储文件类似于在调试会话中在断点处停止。 尽管你无法继续执行，但在转储时可以检查应用的堆栈、线程和变量值。
 
-转储最常用于调试开发人员无权访问的计算机中的问题。 当无法在你自己的计算机上重现崩溃或挂起时，可以使用来自客户计算机的转储文件。 测试人员还会创建转储以保存崩溃或挂起数据，从而用于更多测试。
+转储最常用于调试开发人员无权访问的计算机中的问题。 当你无法在自己的计算机上重现崩溃或无响应的程序时，可以使用来自客户计算机的转储文件。 测试人员还会创建转储以保存崩溃或无响应程序数据，从而用于更多测试。
 
 Visual Studio 调试器可为托管或本机代码保存转储文件。 它可以调试由 Visual Studio 或其他以小型转储格式保存文件的应用创建的转储文件。
 
@@ -84,7 +84,7 @@ Visual Studio 调试器可为托管或本机代码保存转储文件。 它可�
 
    “小型转储文件摘要”窗口显示转储文件的摘要和模块信息，以及你可以执行的操作。
 
-   ![“小型转储摘要”页](../debugger/media/dbg_dump_summarypage.png "“小型转储摘要”页")
+   ![小型转储摘要页](../debugger/media/dbg_dump_summarypage.png "小型转储摘要页")
 
 1. 在“操作”下：
    - 若要设置符号加载位置，请选择“设置符号路径”。

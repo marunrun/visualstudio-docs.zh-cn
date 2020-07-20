@@ -10,12 +10,12 @@ author: mikejo5000
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2b776599b484bef2b02c50528e838b9be82aa035
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: eaf282ca647310010c2e75e7279f11cbc90aad76
+ms.sourcegitcommit: 5e82a428795749c594f71300ab03a935dc1d523b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85289035"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86211562"
 ---
 # <a name="vstestconsoleexe-command-line-options"></a>VSTest.Console.exe 命令行选项
 
@@ -52,7 +52,7 @@ VSTest.Console.exe 是用于运行测试的命令行工具。 可在命令行上
 |**/ListExecutors**|列出已安装的测试执行器。|
 |**/ListLoggers**|列出已安装的测试记录器。|
 |**/ListSettingsProviders**|列出已安装的测试设置提供程序。|
-|**/Blame**|在测试执行时进行跟踪，如果测试主机进程崩溃，则按照执行顺序发出测试名称，包括崩溃发生时正在运行的特定测试。 此输出有助于轻松隔离有问题的测试并进行深入诊断。 [详细信息](https://github.com/Microsoft/vstest-docs/blob/master/docs/extensions/blame-datacollector.md)。|
+|**/Blame**|在意见模式中运行测试。 此选项有助于隔离导致测试主机出现故障的有问题的测试。 检测到故障时，它会在 `TestResults/<Guid>/<Guid>_Sequence.xml` 中创建一个序列文件，用于捕获在出现故障之前运行的测试的顺序。 有关详细信息，请参阅[意见数据收集器](https://github.com/Microsoft/vstest-docs/blob/master/docs/extensions/blame-datacollector.md)。|
 |**/Diag:[文件名]** |将诊断跟踪日志写入指定文件。|
 |**/ResultsDirectory:[*path*]**|如果不存在，则将在指定路径中创建测试结果目录。<br />示例：`/ResultsDirectory:<pathToResultsDirectory>`|
 |**/ParentProcessId:[*parentProcessId*]**|负责启动当前进程的父进程的进程 ID。|
@@ -64,24 +64,44 @@ VSTest.Console.exe 是用于运行测试的命令行工具。 可在命令行上
 
 ## <a name="examples"></a>示例
 
-运行 VSTest.Console.exe 的语法如下：
+运行 vstest.console.exe 的语法如下：
 
-`Vstest.console.exe [TestFileNames] [Options]`
+`vstest.console.exe [TestFileNames] [Options]`
 
-以下命令针对测试库 myTestProject.dll 运行 VSTest.Console.exe：
+以下命令针对测试库 myTestProject.dll 运行 vstest.console.exe ：
 
 ```cmd
 vstest.console.exe myTestProject.dll
 ```
 
-以下命令运行具有多个测试文件的 VSTest.Console.exe。 用空格分隔测试文件名：
+以下命令运行具有多个测试文件的 vstest.console.exe。 用空格分隔测试文件名：
 
 ```cmd
-Vstest.console.exe myTestFile.dll myOtherTestFile.dll
+vstest.console.exe myTestFile.dll myOtherTestFile.dll
 ```
 
-以下命令运行具有多个选项的 VSTest.Console.exe。 它在隔离进程中的 myTestFile.dll 文件中运行测试，同时使用 Local.RunSettings 文件中指定的设置 。 此外，它仅运行标记为“Priority=1”的测试，并将结果记录到 .trx 文件中。
+以下命令运行具有多个选项的 vstest.console.exe。 它在隔离进程中的 myTestFile.dll 文件中运行测试，同时使用 Local.RunSettings 文件中指定的设置 。 此外，它仅运行标记为“Priority=1”的测试，并将结果记录到 .trx 文件中。
 
 ```cmd
-vstest.console.exe  myTestFile.dll /Settings:Local.RunSettings /InIsolation /TestCaseFilter:"Priority=1" /Logger:trx
+vstest.console.exe myTestFile.dll /Settings:Local.RunSettings /InIsolation /TestCaseFilter:"Priority=1" /Logger:trx
+```
+
+以下命令针对测试库 myTestProject.dll 运行具有 `/blame` 选项的 vstest.console.exe ：
+
+```cmd
+vstest.console.exe myTestFile.dll /blame
+```
+
+如果测试主机崩溃了，则会生成 sequence.xml 文件。 此文件包含按顺序执行的测试的完全限定名称，其中包括在崩溃时正在运行的具体测试。
+
+如果测试主机没有崩溃，则不会生成 sequence.xml 文件。
+
+生成的 sequence.xml 文件示例： 
+
+```xml
+<?xml version="1.0"?>
+<TestSequence>
+  <Test Name="TestProject.UnitTest1.TestMethodB" Source="D:\repos\TestProject\TestProject\bin\Debug\TestProject.dll" />
+  <Test Name="TestProject.UnitTest1.TestMethodA" Source="D:\repos\TestProject\TestProject\bin\Debug\TestProject.dll" />
+</TestSequence>
 ```

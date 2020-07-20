@@ -10,12 +10,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: f0e56b7db76d308a55f7d6bd24930e258385b0f9
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.openlocfilehash: 6e9e7fe418528bb888672b1b73d421d811b9e69e
+ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85540863"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86386980"
 ---
 # <a name="define-custom-commands-for-python-projects"></a>为 Python 项目定义自定义命令
 
@@ -384,7 +384,7 @@ C:  1, 0: Missing module docstring (missing-docstring)
 
 如果引用未定义的属性，则属性值可能为空。 例如，例如使用 `$(StartupFile)` 标记，但未在项目中定义任何启动文件，则标记解析为空字符串。 此类情况下，可能需要定义一个默认值。 例如，如果尚未在项目属性中指定服务器启动文件，则在 Bottle，Flask 和 Django 项目模板中定义的“Run server”和“Run debug server”命令将默认为 manage.py 。
 
-### <a name="visual-studio-hangs-and-crashes-when-running-the-command"></a>运行命令时，Visual Studio 挂起且出现崩溃
+### <a name="visual-studio-stops-responding-and-crashes-when-running-the-command"></a>运行命令时，Visual Studio 停止响应且出现崩溃
 
 你可能在尝试通过 `ExecuteIn="output"` 运行控制台命令，此时 Visual Studio 可能在尝试分析输出时崩溃。 请改用 `ExecuteIn="console"`。 （请参阅[问题 3682](https://github.com/Microsoft/PTVS/issues/3681)。）
 

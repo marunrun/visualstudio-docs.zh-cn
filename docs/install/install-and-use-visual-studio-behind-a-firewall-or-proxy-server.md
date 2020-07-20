@@ -17,12 +17,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 09340940796e20f679c3c9bbad3d55880b25ab7a
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: ce11689cc8cba45473a918668a07ddcc6cdc2ee3
+ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85283471"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86387156"
 ---
 # <a name="install-and-use-visual-studio-and-azure-services-behind-a-firewall-or-proxy-server"></a>在防火墙或代理服务器后面安装和使用 Visual Studio 和 Azure 服务
 
@@ -112,7 +112,7 @@ ms.locfileid: "85283471"
 | Office Web <br>Add-in — 外接程序 <br> file:/// <br>确认 <br>服务 | verificationservice.osi.office.net | https/443 | 用于验证 Office Web 外接程序的清单 |
 | SharePoint 和 <br>Office 外接程序 | sharepoint.com<br> office365.com<br> microsoftonline.com <br> outlook.com | https/443 | 用于将 SharePoint 和 Office 外接程序发布到 SharePoint Online 和 Office 365 并对其进行测试 |
 | 工作流管理器 <br>测试服务<br> 主机 | | http/12292 | 自动创建的防火墙规则，用于测试带工作流的 SharePoint 外接程序 |
-| 自动收集 <br>可靠性统计信息 <br>和其他 <br>客户体验 <br>改善计划 (CEIP)<br> 面向 Azure SDK 和 <br>面向 SQL 工具 <br><br> | vortex.data.microsoft.com<br> <br>dc.services.visualstudio.com | https/443 | 用于将可靠性统计信息（故障/挂起数据）从用户发送到 Microsoft。 在启用 Windows 错误报告的情况下，仍将上传实际故障/挂起转储；只会禁止统计信息； <br>用于向 Visual Studio 显示 Azure Tools SDK 扩展的匿名使用模式，并向 Visual Studio 显示 SQL 工具的使用模式 |
+| 自动收集 <br>可靠性统计信息 <br>和其他 <br>客户体验 <br>改善计划 (CEIP)<br> 面向 Azure SDK 和 <br>面向 SQL 工具 <br><br> | vortex.data.microsoft.com<br> <br>dc.services.visualstudio.com | https/443 | 用于将可靠性统计信息（故障/无响应数据）从用户发送到 Microsoft。 在启用了 Windows 错误报告的情况下，仍将上传实际故障/无响应转储；只会禁止统计信息； <br>用于向 Visual Studio 显示 Azure Tools SDK 扩展的匿名使用模式，并向 Visual Studio 显示 SQL 工具的使用模式 |
 | Visual Studio <br> 客户体验 <br>改善计划 (CEIP) <br><br>PerfWatson.exe | vortex.data.microsoft.com<br>dc.services.visualstudio.com<br>visualstudio-devdiv-c2s.msedge.net<br>az667904.vo.msecnd.net <br>scus-breeziest-in.cloudapp.net<br> | https/443 | 用于收集匿名使用模式和错误日志 <br><br>用于跟踪 UI 冻结问题 |
 | 创建和<br>管理 <br>Azure 资源 | management.azure.com <br>management.core.windows.net | https/443 | 用于创建 Azure 网站或其他资源，以支持 Web 应用、Azure Functions 或 WebJobs 的发布 |
 | 更新的 Web 发布工具 <br>检查和扩展 <br>建议 | marketplace.visualstudio.com | https/443 | 用于检查已更新发布工具的可用性。 如果禁用，则可能不会显示用于 Web 发布的潜在建议扩展 |

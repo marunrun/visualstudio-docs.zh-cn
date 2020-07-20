@@ -9,18 +9,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f687672de4bc3511fa0c9198f7ad4145b26dcd11
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.openlocfilehash: 76a655e2994e1eaa1c5ac65e7b8782ec5b9d6f72
+ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85460793"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86386714"
 ---
 # <a name="error-evaluating-the-function-39function39-timed-out-and-needed-to-be-aborted-in-an-unsafe-way"></a>错误：计算函数“function”超时，需要以不安全方式中止
 
 完整消息文本：计算函数“function”超时，需要以不安全方式中止。 这可能会损坏目标进程。
 
-为更轻松地检查 .NET 对象的状态，调试器会自动强制调试的进程运行其他代码（通常是属性 getter 方法和 ToString 函数）。 在大多数方案中，这些函数可以快速完成，使调试更加容易。 但是，调试器不会在沙盒中运行应用程序。 因此，调用挂起的本机函数的属性 getter 或 ToString 方法可能会导致无法恢复的长时间超时。 如果你遇到此错误消息，就是发生了这个问题。
+为更轻松地检查 .NET 对象的状态，调试器会自动强制调试的进程运行其他代码（通常是属性 getter 方法和 ToString 函数）。 在大多数方案中，这些函数可以快速完成，使调试更加容易。 但是，调试器不会在沙盒中运行应用程序。 因此，调用停止响应的本机函数的属性 getter 或 ToString 方法可能会导致无法恢复的长时间超时。 如果你遇到此错误消息，就是发生了这个问题。
 
 此问题的一个常见原因是，当调试器评估属性时，它只允许执行被检查的线程。 因此，如果属性正在等待其他线程在调试的应用程序内运行，并且它以 .NET 运行时无法中断的方式等待，则会出现此问题。
 

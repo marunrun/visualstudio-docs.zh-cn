@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.author: tglee
 author: TerryGLee
 ms.manager: jillfra
-ms.openlocfilehash: 31fab067ec9844b36c287b80ed481a68861b222e
-ms.sourcegitcommit: a466720759426265b18b0f8d74a970e72493d700
+ms.openlocfilehash: bddb3afb602416159c75a5be9923fce14c089fc2
+ms.sourcegitcommit: 4d932000a0f7e79c9475fe66c02fe9addcd7e47a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86092318"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86181048"
 ---
 # <a name="connect-to-projects-in-team-explorer"></a>连接到团队资源管理器中的项目
 
@@ -38,7 +38,7 @@ ms.locfileid: "86092318"
    ![连接到团队资源管理器中的项目](media/team-explorer/connect-project.png)
 
 > [!TIP]
-> 如果需要创建新项目或将用户添加到项目，请参阅[创建项目 (Azure DevOps)](/azure/devops/organizations/projects/create-project) 和[将用户添加到项目或团队 (Azure DevOps)](/azure/devops/organizations/security/add-users-team-project)。
+> 如果要打开存储库中的项目，请参阅[打开存储库中的项目](../get-started/tutorial-open-project-from-repo.md)。 如果要创建新项目或将用户添加到项目，请参阅[创建项目 (Azure DevOps)](/azure/devops/organizations/projects/create-project) 和[将用户添加到项目或团队 (Azure DevOps)](/azure/devops/organizations/security/add-users-team-project)。
 
 ## <a name="see-also"></a>请参阅
 

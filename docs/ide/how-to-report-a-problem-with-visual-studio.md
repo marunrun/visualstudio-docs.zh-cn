@@ -9,12 +9,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1c985d6699c75a78900366204c8bd5275f4c051d
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.openlocfilehash: 15a1d497b5b4217cd7a404cb591c20bb1196b04b
+ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85769937"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86387312"
 ---
 # <a name="how-to-report-a-problem-with-visual-studio-or-visual-studio-installer"></a>如何报告 Visual Studio 或 Visual Studio 安装程序的问题
 
@@ -69,7 +69,7 @@ ms.locfileid: "85769937"
 
 1. 选择“记录”选项卡。
 
-1. 在“记录操作”下，如果可在这里重现问题，请选择 Visual Studio 的当前实例。 如果不能（例如 Visual Studio 挂起），请选择 \<Create a new instance>，以便在新的 Visual Studio 实例中记录操作。
+1. 在“记录操作”下，如果可在这里重现问题，请选择 Visual Studio 的当前实例。 如果不能（例如 Visual Studio 停止响应），请选择 \<Create a new instance> 以在新的 Visual Studio 实例中记录操作。
 
 1. 选择“开始记录”。 授予运行该工具的权限。
 

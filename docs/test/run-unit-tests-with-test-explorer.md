@@ -1,7 +1,7 @@
 ---
-title: 使用测试资源管理器运行和调试单元测试
-description: 了解如何使用测试资源管理器在 Visual Studio 中运行测试。 本主题介绍如何启用生成后自动测试运行、查看测试结果、对测试列表进行分组和筛选、创建播放列表、调试测试以及使用测试快捷方式。
-ms.date: 07/29/2019
+title: 使用测试资源管理器运行单元测试
+description: 了解如何使用测试资源管理器在 Visual Studio 中运行测试。 本主题介绍如何启用生成后自动测试运行、查看测试结果、对测试列表进行分组和筛选、创建播放列表以及使用测试快捷方式。
+ms.date: 07/14/2020
 ms.topic: how-to
 f1_keywords:
 - vs.unittesting.testexplorer.overview
@@ -10,24 +10,31 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6de463fbc941273bed9b949958b9463be6ea1fa3
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: c2d7dc38f1a25826ba275738cd8e758a2ad5d90e
+ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85285629"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86386636"
 ---
 # <a name="run-unit-tests-with-test-explorer"></a>使用测试资源管理器运行单元测试
 
-使用测试资源管理器从 Visual Studio 或第三方单元测试项目运行单元测试。 还可以使用测试资源管理器将测试分组到不同类别、筛选测试列表以及创建、保存和运行测试播放列表。 可以调试测试并分析测试性能和代码覆盖率。
+使用测试资源管理器从 Visual Studio 或第三方单元测试项目运行单元测试。 还可以使用测试资源管理器将测试分组到不同类别、筛选测试列表以及创建、保存和运行测试播放列表。 还可以分析代码覆盖率并[调试单元测试](../test/debug-unit-tests-with-test-explorer.md)。
+
+测试资源管理器可从解决方案的多个测试项目以及生产代码项目包含的测试类中运行测试。 测试项目可以使用不同的单元测试框架。 如果待测试的代码是为 .NET 编写的，则可以面向 .NET 的任何语言编写测试项目，而不考虑目标代码的语言。 本机 C/C++ 代码项目必须使用 C++ 单元测试框架进行测试。
+
+## <a name="build-your-test-project"></a>生成测试项目
+
+如果还没有在 Visual Studio 解决方案中设置测试项目，则必须首先创建并生成测试项目。
+
+- [单元测试入门 (.NET)](../test/getting-started-with-unit-testing.md)
+- [编写适用于 C/C++ 的单元测试](writing-unit-tests-for-c-cpp.md)
 
 Visual Studio 包含适用于托管和本机代码的 Microsoft 单元测试框架。 但是，测试资源管理器还可以运行任何单元测试框架，只要该框架实现了测试资源管理器适配器。 若要详细了解如何安装第三方单元测试框架，请参阅[安装第三方单元测试框架](../test/install-third-party-unit-test-frameworks.md)
 
-测试资源管理器可从解决方案的多个测试项目以及生产代码项目包含的测试类中运行测试。 测试项目可以使用不同的单元测试框架。 如果待测试的代码是为 .NET 编写的，则可以面向 .NET 的任何语言编写测试项目，而不考虑目标代码的语言。 本机 C/C++ 代码项目必须使用 C++ 单元测试框架进行测试。 有关详细信息，请参阅[编写适用于 C/C++ 的单元测试](writing-unit-tests-for-c-cpp.md)。
-
 ## <a name="run-tests-in-test-explorer"></a>在测试资源管理器中运行测试
 
-在[生成测试项目](../test/getting-started-with-unit-testing.md)时，测试将出现在“测试资源管理器”中。 如果测试资源管理器不可见，请选择 Visual Studio 菜单上的“测试”  ，然后依次选择“Windows” 、“测试资源管理器” 。
+在生成测试项目时，测试将出现在测试资源管理器中。 如果测试资源管理器不可见，请选择 Visual Studio 菜单上的“测试”  ，然后依次选择“Windows” 、“测试资源管理器” 。
 
 ::: moniker range="vs-2017"
 ![单元测试资源管理器](../test/media/ute_failedpassednotrunsummary.png)
@@ -211,11 +218,21 @@ Visual Studio 包含适用于托管和本机代码的 Microsoft 单元测试框�
 
 此时将在新的“测试资源管理器”选项卡中打开播放列表。可以使用此播放列表一次，然后将其丢弃，也可以单击播放列表窗口工具栏中的“保存”按钮，然后选择要保存播放列表的名称和位置。
 
-![在单独的“测试资源管理器”选项卡中打开播放列表](../test/media/vs-2019/test-explorer-playlist-tab-16-2.png)
+![在单独的“测试资源管理器”选项卡中打开播放列表](../test/media/vs-2019/test-explorer-playlist-tab-16-7.png)
 
 **若要创建播放列表**，请在测试资源管理器中选择一个或多个测试。 右键单击并选择“添加到播放列表” > “新建播放列表” 。
 
 若要打开播放列表，请选择 Visual Studio 工具栏中的播放列表图标，然后从菜单中选择以前保存的播放列表文件。
+
+**若要编辑播放列表**，可以右键单击任何测试，然后使用菜单选项将它添加到播放列表中或从中删除它。
+
+从 Visual Studio 2019 版本 16.7 开始，可以在工具栏中选择“编辑”按钮。 测试旁边将出现复选框，显示播放列表中包括和排除的测试。 根据需要编辑组。
+
+![“编辑播放列表”按钮](../test/media/vs-2019/test-explorer-playlist-edit-16-7.png)
+
+还可以选中或取消选中层次结构中父组的复选框。 此操作将创建一个动态播放列表，会始终基于该组中的测试更新播放列表。 例如，如果你在某一类旁边放置一个复选标记，那么从该类添加的任何测试都将成为此播放列表的一部分。 如果从该类中删除某个测试，该测试则会从播放列表中删除。 通过使用工具栏中的“保存”按钮保存播放列表，并打开在磁盘上创建的 .playlist 文件，可了解有关这些规则的更多信息。 此文件列出了构成播放列表的所有规则和各个测试。
+
+![播放列表 xml 文件](../test/media/vs-2019/test-explorer-playlist-xml-file.png)
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
@@ -294,23 +311,6 @@ FilterName:"Criteria" -FilterName:"SubsetCriteria"
 
 例如，`FullName:"MyClass" - FullName:"PerfTest"` 返回名称中包含“MyClass”的所有测试，名称中包含“PerfTest”的测试除外。
 
-## <a name="debug-and-analyze-unit-tests"></a>调试并分析单元测试
-
-可以使用测试资源管理器为你的测试启动调试会话。 使用 Visual Studio 调试程序无缝地逐句通过代码将使你在单元测试和所测试项目之间来回反复。 若要开始调试：
-
-1. 在 Visual Studio 编辑器中，在想要调试的一个或多个测试方法中设置断点。
-
-    > [!NOTE]
-    > 因为测试方法可以按任何顺序运行，请在你想要调试的所有测试方法中设置断点。
-
-2. 在测试资源管理器中，依次选择测试方法和右键单击菜单中的“调试选定测试”。
-
-   有关该调试程序的详细信息，请参阅[在 Visual Studio 中进行调试](../debugger/debugger-feature-tour.md)。
-
-### <a name="diagnose-test-method-performance-issues"></a>诊断测试方法性能问题
-
-若要诊断测试方法为何花费过多时间，请在测试资源管理器中依次选择方法和右键单击菜单中的“配置文件选定测试”。 请参阅[检测分析报告](../profiling/understanding-instrumentation-data-values.md?view=vs-2017)。
-
 ### <a name="analyze-unit-test-code-coverage"></a>分析单元测试代码覆盖率
 
 可以使用 Visual Studio Enterprise 版本中提供的 Visual Studio 代码覆盖率工具确定你的单元测试实际测试的产品代码量。 你可以在选定的测试上或解决方案中的所有测试上运行代码覆盖率。
@@ -341,7 +341,7 @@ FilterName:"Criteria" -FilterName:"SubsetCriteria"
 
 ## <a name="test-shortcuts"></a>测试快捷方式
 
-可以从“测试资源管理器”运行测试，方法是：在代码编辑器中右键单击测试，并选择“运行测试”，或者在 Visual Studio 中使用默认的[测试资源管理器快捷方式](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_testexplorerGLOBAL)。 一些快捷方式是基于上下文的。 这意味着它们根据光标在代码编辑器中的位置来运行或调试测试。 如果光标位于某一测试方法内，则运行该测试方法。 如果光标位于类级别，则运行该类中的所有测试。 如果光标位于命名空间级别，则运行该命名空间级别中的所有测试。
+可以从“测试资源管理器”运行测试，方法是：在代码编辑器中右键单击测试，并选择“运行测试”，或者在 Visual Studio 中使用默认的[测试资源管理器快捷方式](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_testexplorerGLOBAL)。 一些快捷方式是基于上下文的。 这意味着它们根据光标在代码编辑器中的位置来运行或[调试测试](../test/debug-unit-tests-with-test-explorer.md)。 如果光标位于某一测试方法内，则运行该测试方法。 如果光标位于类级别，则运行该类中的所有测试。 如果光标位于命名空间级别，则运行该命名空间级别中的所有测试。
 
 |常见命令| 键盘快捷键|
 |-|------------------------|
@@ -356,5 +356,6 @@ FilterName:"Criteria" -FilterName:"SubsetCriteria"
 ## <a name="see-also"></a>请参阅
 
 - [单元测试代码](../test/unit-test-your-code.md)
+- [使用测试资源管理器调试单元测试](../test/debug-unit-tests-with-test-explorer.md)
 - [将单元测试作为 64 位进程运行](../test/run-a-unit-test-as-a-64-bit-process.md)
 - [测试资源管理器常见问题解答](test-explorer-faq.md)

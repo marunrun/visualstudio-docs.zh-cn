@@ -7,12 +7,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: e3ae90ae493fb216d89f0e0ee79fdf7e173a3e72
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: e03400cf916319f963457af5740139bc88fc5105
+ms.sourcegitcommit: 5e82a428795749c594f71300ab03a935dc1d523b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85288762"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86211606"
 ---
 # <a name="configure-unit-tests-by-using-a-runsettings-file"></a>使用 .runsettings 文件配置单元测试
 
@@ -67,7 +67,7 @@ ms.locfileid: "85288762"
     </Project>
     ```
 
-- 将名为“.runsettings”的运行设置文件放在解决方案的根目录下。
+- 将名为 .runsettings 的运行设置文件放在解决方案的根目录下。
 
   如果启用了自动检测运行设置文件，则此文件中的设置将应用到所有测试运行。 可以从以下两个位置打开 runsettings 文件自动检测：
   
@@ -205,6 +205,11 @@ ms.locfileid: "85288762"
           </MediaRecorder>
         </Configuration>
       </DataCollector>
+
+      <!-- Configuration for blame data collector -->
+      <DataCollector friendlyName="blame" enabled="True">
+      </DataCollector>
+
     </DataCollectors>
   </DataCollectionRunSettings>
 
@@ -233,6 +238,7 @@ ms.locfileid: "85288762"
           <LogFileName>foo.html</LogFileName>
         </Configuration>
       </Logger>
+      <Logger friendlyName="blame" enabled="True" />
     </Loggers>
   </LoggerRunSettings>
 
@@ -311,6 +317,16 @@ DataCollectors 元素指定诊断数据适配器的设置。 诊断数据适配�
 
 若要自定义任何其他类型的诊断数据适配器，请使用[测试设置文件](../test/collect-diagnostic-information-using-test-settings.md)。
 
+
+### <a name="blame-data-collector"></a>意见数据收集器
+
+```xml
+<DataCollector friendlyName="blame" enabled="True">
+</DataCollector>
+```
+
+此选项可帮助你隔离导致测试主机崩溃的有问题的测试。 运行此收集器会在 TestResults 中创建一个输出文件 (Sequence.xml)，该文件在主机崩溃之前会捕获执行测试的顺序 。 
+
 ### <a name="testrunparameters"></a>TestRunParameters
 
 ```xml
@@ -356,7 +372,7 @@ public void HomePageTest()
   </LoggerRunSettings>
 ```
 
-`LoggerRunSettings` 节定义要用于测试运行的一个或多个记录器。 最常见的记录器为控制台、.trx 和 html。 
+`LoggerRunSettings` 部分定义要用于测试运行的一个或多个记录器。 最常见的记录器为控制台、.trx 和 html。 
 
 ### <a name="mstest-run-settings"></a>MSTest 运行设置
 
@@ -386,6 +402,33 @@ public void HomePageTest()
 |**MapInconclusiveToFailed**|false|如果测试完成返回无结论的状态，则会映射到“测试资源管理器”中的已跳过状态。 如果希望无结论的测试显示为失败，请将此值设为 true。|
 |**InProcMode**|false|如果希望测试在与 MSTest 适配器相同的进程中运行，请将此值设置为 true。 此设置将提供较小的性能提升。 但是，如果测试存在异常，则剩余测试不会运行。|
 |**AssemblyResolution**|false|查找和执行单元测试时，可以指定其他程序集的路径。 例如，对与测试程序集位于不同目录中的依赖程序集使用这些路径。 若要指定路径，请使用“Directory Path”元素。 路径可以包括环境变量。<br /><br />`<AssemblyResolution>  <Directory Path="D:\myfolder\bin\" includeSubDirectories="false"/> </AssemblyResolution>`|
+
+## <a name="specify-environment-variables-in-the-runsettings-file"></a>在 .runsettings 文件中指定环境变量
+
+可以在 .runsettings 文件中设置环境变量，该文件可直接与测试主机交互。 有必要在 .runsettings 文件中指定环境变量，以便支持需要设置环境变量（例如 DOTNET_ROOT）的重要项目 。 这些变量是在生成测试主机进程时设置的，它们在主机中可用。
+
+### <a name="example"></a>示例
+
+下面的代码是传递环境变量的示例 .runsettings 文件：
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<!-- File name extension must be .runsettings -->
+<RunSettings>
+  <RunConfiguration>
+    <EnvironmentVariables>
+      <!-- List of environment variables we want to set-->
+      <DOTNET_ROOT>C:\ProgramFiles\dotnet</DOTNET_ROOT>
+      <SDK_PATH>C:\Codebase\Sdk</SDK_PATH>
+    </EnvironmentVariables>
+  </RunConfiguration>
+</RunSettings>
+```
+
+RunConfiguration 节点应包含 EnvironmentVariables 节点 。 可以将环境变量指定为元素名称及其值。
+
+> [!NOTE]
+> 由于应始终在启动测试主机时设置这些环境变量，因此测试应始终在单独的进程中运行。 为此，将在存在环境变量时设置 /InIsolation 标记，以便始终调用测试主机。
 
 ## <a name="see-also"></a>请参阅
 

@@ -10,12 +10,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 2fdbd2e7f47e75b4d80d07f6af3a6f998dfd72d6
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.openlocfilehash: 094305e901624e13df147030899981f8fedb80d1
+ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85541149"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86387026"
 ---
 # <a name="debug-your-python-code"></a>调试 Python 代码
 
@@ -253,7 +253,7 @@ Visual Studio 2017 版本 15.8 及更高版本使用基于 ptvsd 版本 4.1+ 的
 
     ![“输出”窗口中的调试器日志记录输出](media/debugger-logging-output.png)
 
-1. 如果 Visual Studio 挂起或你无法以其他方式访问“输出”窗口，请重启 Visual Studio，打开命令窗口，并输入以下命令：
+1. 如果 Visual Studio 停止响应或你无法以其他方式访问“输出”窗口，请重启 Visual Studio、打开命令窗口，并输入以下命令：
 
     ```ps
     DebugAdapterHost.Logging /On
