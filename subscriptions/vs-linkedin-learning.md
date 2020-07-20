@@ -7,12 +7,12 @@ ms.assetid: 5bba2205-d32f-413d-9b58-724a24993842
 ms.date: 04/17/2020
 ms.topic: how-to
 description: 了解有关所选 Visual Studio 订阅中包含的作为 LinkedIn Premium 订阅一部分的 LinkedIn Learning 权益。
-ms.openlocfilehash: f3ce676232742f712a926dbeb70e8fd2505ff18a
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.openlocfilehash: 580b565ad2eeecc0c5923963243ee63c1069b86f
+ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85904407"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86387130"
 ---
 # <a name="the-linkedin-learning-benefit-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 LinkedIn Learning 权益
 
@@ -25,41 +25,41 @@ ms.locfileid: "85904407"
 激活 LinkedIn Premium 订阅和 LinkedIn 学习权益：
 1. 登录到 [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)。
 
-2. 在教育类别中找到 LinkedIn 学习磁贴，然后单击“获取代码”  链接。
+2. 在教育类别中找到 LinkedIn 学习磁贴，然后单击“获取代码”链接。
    > [!div class="mx-imgBorder"]
    > ![LinkedIn Learning：权益磁贴](_img/vs-linkedin/vs-linkedin-6-month-tile.png)
 
-3. 如果你已拥有 LinkedIn 帐户并且已自动登录，则会立即进入 LinkedIn 学习权益激活页。  如果你拥有 LinkedIn 帐户但是未自动登录，则只需输入用户名和密码，然后单击“登录”  。  请跳到[此步骤](#activate-your-offer)以激活产品/服务。
+3. 如果你已拥有 LinkedIn 帐户并且已自动登录，则会立即进入 LinkedIn 学习权益激活页。  如果你拥有 LinkedIn 帐户但是未自动登录，则只需输入用户名和密码，然后单击“登录”。  请跳到[此步骤](#activate-your-offer)以激活产品/服务。
 
 ### <a name="create-a-linkedin-account"></a>创建 LinkedIn 帐户
-4. 如果还没有 LinkedIn 帐户，请单击“立即加入”  。
+4. 如果还没有 LinkedIn 帐户，请单击“立即加入”。
 
-5. 输入个人信息，选择用户名和密码，然后单击“立即加入”  。
+5. 输入个人信息，选择用户名和密码，然后单击“立即加入”。
 
-6. 指定国家/地区和邮政编码，然后单击“下一步”  。
+6. 指定你所在的国家/地区和邮政编码，然后单击“下一步”。
 
 7. 接下来，提供个人资料信息。  指示是否为学生，并提供最新职务、公司和行业。
 
-8. 在此步骤中，可以标识感兴趣的区域。  若要加快帐户创建过程，请单击“尚不确定。  我思想开放！”  （可以在以后标识感兴趣的主题。）
+8. 在此步骤中，可以标识感兴趣的区域。  若要加快帐户创建过程，请单击“尚不确定。我思想开放！”  （可以在以后标识感兴趣的主题。）
 
-9. 提供电子邮件地址时，会向你发送一个包含确认代码的消息。  该消息来自“Linkedin 消息”。  如果未在收件箱中找到它，请检查垃圾邮件文件夹。  输入该消息中的代码，然后单击“验证”  。
+9. 提供电子邮件地址时，会向你发送一个包含确认代码的消息。  该消息来自“Linkedin 消息”。  如果未在收件箱中找到它，请检查垃圾邮件文件夹。  输入该消息中的代码，然后单击“验证”。
 
-10. 如果要从以前输入的电子邮件帐户导入联系人，可以现在执行该操作。  否则，单击“跳过”  。 （如果选择跳过此步骤，则需要确认你的选择。  单击“是”  。）
+10. 如果要从以前输入的电子邮件帐户导入联系人，可以现在执行该操作。  否则，单击“跳过”。 （如果选择跳过此步骤，则需要确认你的选择。  单击“是”。）
 
 11. 工作提醒使你可以收到有关你领域中可能十分适合你的工作的通知。  可以选择现在设置工作提醒，或跳过此步骤以继续创建帐户。
 
 12. 根据你到目前为止提供的首选项和个人信息，你会看到一组用于开始构建你的网络的精选推荐连接。  可以选择添加连接，或跳过此步骤。
 
-13. 若要将照片添加到个人资料，请单击“上传照片”  。  否则可以跳过此步骤。  （始终可以在以后添加照片。）
+13. 若要将照片添加到个人资料，请单击“上传照片”。  否则可以跳过此步骤。  （始终可以在以后添加照片。）
 
-14. 可以将 LinkedIn 应用下载到手机，以便可以在任意位置访问你的网络。  可以向手机发送链接，或直接从 App Store 或 Google Play 进行下载。  还可以单击“下一步”  现在跳过此步骤，在以后下载应用。
+14. 可以将 LinkedIn 应用下载到手机，以便可以在任意位置访问你的网络。  可以向手机发送链接，或直接从 App Store 或 Google Play 进行下载。  还可以单击“下一步”现在跳过此步骤，在以后下载应用。
 
 ### <a name="activate-your-offer"></a>激活产品/服务
-15. 现在你已登录了 LinkedIn 帐户或创建了一个新帐户，已准备就绪，可激活 Premium 订阅并开始享用 LinkedIn 学习。  单击“激活产品/服务”  。
+15. 现在你已登录了 LinkedIn 帐户或创建了一个新帐户，已准备就绪，可激活 Premium 订阅并开始享用 LinkedIn 学习。  单击“激活产品/服务”。
    > [!div class="mx-imgBorder"]
    > ![LinkedIn Learning：激活](_img/vs-linkedin/vs-linkedin-Activate1.png)
 
-16. 可以开始浏览感兴趣的技能。  从建议列表中进行选择，搜索其他技能，或单击“跳过”  以继续进行而不选择技能。
+16. 可以开始浏览感兴趣的技能。  从建议列表中进行选择，搜索其他技能，或单击“跳过”以继续进行而不选择技能。
    > [!div class="mx-imgBorder"]
    > ![LinkedIn Learning：技能](_img/vs-linkedin/vs-linkedin-skills.png)
 
@@ -79,7 +79,7 @@ ms.locfileid: "85904407"
 | MSDN 平台（标准）                                          | VL、零售                                              | 不可用                                              | NA         |
 | Visual Studio Enterprise、Visual Studio Professional（月度云） | Azure                                       | 不可用                                                           |NA|
 
-<sup>1</sup>  包括：限制转售 (NFR)、Visual Studio 行业合作伙伴 (VSIP)。不包括：Microsoft 合作伙伴网络 (MPN)、FTE、MCT 软件和服务开发人员、BizSpark、Imagine、最有价值专家 (MVP)、区域总监 (RD)。MCT 软件和服务。
+<sup>1</sup>  包括：*限制转售 (NFR)、Visual Studio 行业合作伙伴 (VSIP)。不包括：Microsoft 合作伙伴网络 (MPN)、FTE、MCT 软件和服务开发人员、BizSpark、Imagine、最有价值专家 (MVP)、区域总监 (RD)。MCT 软件和服务。
 
 > [!NOTE]
 > Microsoft 不再在云订阅中提供 Visual Studio Professional 年度订阅和 Visual Studio Enterprise 年度订阅。 现有客户体验以及续订、增加、减少或取消订阅的能力不会发生变化。 建议新客户访问 [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/)，查看各 Visual Studio 购买选项。
