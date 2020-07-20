@@ -10,12 +10,12 @@ metadata:
   ms.topic: landing-page
   ms.date: 11/25/2019
   ms.author: ghogen
-  ms.openlocfilehash: 611e723edbf1abf46d6b4466e3f8f163058ada47
-  ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+  ms.openlocfilehash: 43583c3e147c7c036e28670c153c9520e02ef232
+  ms.sourcegitcommit: 510a928153470e2f96ef28b808f1d038506cce0c
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 03/21/2020
-  ms.locfileid: "75400719"
+  ms.lasthandoff: 07/17/2020
+  ms.locfileid: "86454197"
 landingContent:
 - title: 容器工具
   linkLists:
@@ -75,3 +75,17 @@ landingContent:
       url: docker-compose-properties.md
     - text: 配置容器工具
       url: container-tools-configure.md
+- title: Kubernetes 开发
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Visual Studio Tools for Kubernetes
+      url: tutorial-kubernetes-tools.md
+  - linkListType: quickstart
+    links:
+    - text: 在 Visual Studio 中使用 Local Process with Kubernetes
+      url: local-process-kubernetes.md
+  - linkListType: overview
+    links:
+    - text: 如何通过本地进程使用 Kubernetes
+      url: overview-local-process-kubernetes.md

@@ -563,6 +563,8 @@
                   href: ca1833.md
                 - name: 'CA1835:首选 Stream ReadAsync/WriteAsync 方法的内存重载'
                   href: ca1835.md
+                - name: 'CA1836:可用时最好使用 IsEmpty (而不是 Count)'
+                  href: ca1836.md
             - name: 可移植性警告
               items:
                 - name: 概述

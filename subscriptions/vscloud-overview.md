@@ -7,12 +7,12 @@ ms.assetid: af1f7888-6942-4515-9475-0928ecf49dab
 ms.date: 03/24/2020
 ms.topic: overview
 description: 按月或按年租赁 Visual Studio Professional 或 Visual Studio Enterprise，无需任何长期协定。
-ms.openlocfilehash: 936216702113fbba2ec7251363418ab6182ade4a
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.openlocfilehash: 8824ff5f233f580d49fe91f79e6f3d348391ab68
+ms.sourcegitcommit: 5e82a428795749c594f71300ab03a935dc1d523b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85906021"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86211638"
 ---
 # <a name="buy-visual-studio-professional-and-visual-studio-enterprise-cloud-subscriptions"></a>购买 Visual Studio Professional 和 Visual Studio Enterprise 云订阅
 可从 [Visual Studio Marketplace](https://marketplace.visualstudio.com) 购买 [Visual Studio Professional 和 Visual Studio Enterprise 订阅](https://visualstudio.microsoft.com/subscriptions/)。 这些称为“云订阅”。
@@ -40,7 +40,7 @@ ms.locfileid: "85906021"
 
 4. 选择要购买的订阅数。
     > [!div class="mx-imgBorder"]
-    > ![选择订阅数量](_img/buy-vs-subscriptions/buy-vs-sub-users.png)
+    > ![选择订阅数量](_img/buy-vs-subscriptions/buy-vs-sub-users.png "选择要购买的订阅数量")
 
     如果不希望将订阅分配给自己，则清除“将此订阅分配给我”。
 
@@ -62,12 +62,18 @@ ms.locfileid: "85906021"
 
 ## <a name="cancel-renewals-of-cloud-subscriptions-youve-purchased"></a><a name="manage-subscriptions"></a>取消续订已购买的云订阅
 
-* 若要更改已购买的订阅数，请执行以下操作：
+若要取消订阅，只需将协议的订阅数量设置为零 (0) 即可。  按照下列步骤操作以减少订阅数量：
+1. 登录到 <https://manage.visualstudio.com>
+1. 如果有多个协议，请从下拉列表中选择所需的协议。
+1. 单击左上角的“概述”图标以显示有关订阅的信息。  
+> [!div class="mx-imgBorder"]
+> ![显示订阅概述](_img/buy-vs-subscriptions/overview-button.png "单击“概述”按钮以显示订阅详细信息")
+
+4. 找到要取消的订阅的条目，然后单击“更改数量”。
+1. 将数量设置为零 (0)。 你的订阅在计划的计费日期之前将被保留，但在到达计费日期时将不会续订。   
 
 > [!div class="mx-imgBorder"]
-> ![更改订阅](_img/buy-vs-subscriptions/manage-subscriptions.png)
-
-* 若要取消这些订阅，可将订阅数减为零 (0)。 下一个计费周期开始时（对于月度云订阅，为次月第一天；对于年度云订阅，为 12 个月后），它们不再续订。
+> ![更改订阅](_img/buy-vs-subscriptions/manage-subscriptions.png "单击“更改数量”以取消订阅")
 
 ## <a name="frequently-asked-questions"></a>常见问题
 

@@ -7,12 +7,12 @@ ms.author: michma
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9702439569fa9db1ff8687e914d5c9d20865e2b0
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: b3f3774a816ca31bfcdd4013d35dadbb1737e5ab
+ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "72652463"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86387247"
 ---
 # <a name="system-generated-logs-collected-by-visual-studio"></a>由 Visual Studio 收集的系统生成的日志
 
@@ -20,11 +20,11 @@ Visual Studio 收集系统生成的日志以修复问题并通过 [Visual Studio
 
 ## <a name="types-of-collected-data"></a>收集的数据类型
 
-Visual Studio 收集崩溃、挂起、UI 无响应以及很高的 CPU 或内存使用率等方面的系统生成的日志。 我们还会收集产品安装或使用期间遇到的错误的相关信息。 收集的数据会基于错误而有所不同，且会包括堆栈跟踪、内存转储和异常信息：
+Visual Studio 收集崩溃、UI 无响应以及 CPU 或内存使用率偏高等方面的系统生成的日志。 我们还会收集产品安装或使用期间遇到的错误的相关信息。 收集的数据会基于错误而有所不同，且会包括堆栈跟踪、内存转储和异常信息：
 
 - 对于很高的 CPU 使用率和无响应的情况，会收集相关 Visual Studio 线程的堆栈跟踪信息。
 
-- 如果部分线程的堆栈跟踪信息不足以确定问题的根本原因（例如崩溃、挂起或很高的内存使用率），我们会收集内存转储  。 转储代表出现错误时的进程状态。
+- 如果部分线程的堆栈跟踪信息不足以确定问题的根本原因（例如崩溃、无响应还是内存使用率偏高），我们会收集内存转储。 转储代表出现错误时的进程状态。
 
 - 对于意外的错误情况，例如在尝试向文件或磁盘写入内容时出现的异常，我们会收集该异常的相关信息。 此信息包括异常的名称、出现异常的线程的堆栈跟踪、异常的相关消息以及此特定异常的其他相关信息。
 
@@ -52,7 +52,7 @@ Visual Studio 收集崩溃、挂起、UI 无响应以及很高的 CPU 或内存�
 
 ### <a name="error-classification"></a>错误分类
 
-基于日志对错误进行了分类和计数，以确定调查的优先顺序。 例如，我们可能发现，在产品的版本 \<x> 中，“System.IO.FileStream.Init”处的“System.IO.\__Error.WinIOError”出现了 500 次，并且在该版本中的出现率是最高的。
+基于日志对错误进行了分类和计数，以确定调查的优先顺序。 例如，我们可能会发现，在产品的版本 \<x> 中，“System.IO.FileStream.Init”处的“System.IO.\__Error.WinIOError”出现了 500 次，并且在该版本中的出现率是最高的。
 
 ### <a name="work-items-for-tracking"></a>用于跟踪的工作项
 
@@ -70,7 +70,7 @@ Visual Studio 收集崩溃、挂起、UI 无响应以及很高的 CPU 或内存�
 
 鉴于我们收集数据的目的以及数据访问和保留的相关约束，建议使用 Visual Studio 和 Windows 的默认隐私设置。 不过你可以[选择退出](../ide/visual-studio-experience-improvement-program.md#opt-in-or-out) Visual Studio 体验改善计划。 若要选择退出所有程序的系统生成的日志收集，请参阅 [Windows 10 中的诊断、反馈和隐私](https://privacy.microsoft.com/windows-10-feedback-diagnostics-and-privacy)。 根据使用的 Windows 版本，选项可能有所不同。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [Visual Studio 客户体验改善计划](visual-studio-experience-improvement-program.md)
 - [Windows 10 中的诊断、反馈和隐私](https://privacy.microsoft.com/windows-10-feedback-diagnostics-and-privacy)

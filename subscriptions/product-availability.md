@@ -7,12 +7,12 @@ ms.assetid: abf271b5-7547-4695-a46f-72b2878ba8d4
 ms.date: 03/09/2020
 ms.topic: conceptual
 description: 了解 Visual Studio 订阅的软件下载中的产品可用性
-ms.openlocfilehash: 7b6b3bf3dbcf75a33853a9af5edf51e3ef1165a8
-ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
+ms.openlocfilehash: 27950fa2a4589ee5068e7d5f294f651132c229ea
+ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80232306"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86387208"
 ---
 # <a name="product-availability-for-software-downloads-in-visual-studio-subscriptions"></a>Visual Studio 订阅的软件下载中的产品可用性
 订阅者权益包含可以下载各种各样的软件。
@@ -34,11 +34,11 @@ ms.locfileid: "80232306"
 下载内容的数量和类型取决于订阅级别和计划成员身份。  例如，相较于通过 Microsoft 合作伙伴网络 或 BizSpark 计划订阅获得订阅的订阅者，具有 Visual Studio Enterprise 标准订阅的订阅者可以获得的下载内容可能有所不同。  要了解有关各订阅级别可获取的下载内容的详细信息，请下载[按权益级别分类的产品](https://download.microsoft.com/download/1/5/4/15454442-CF17-47B9-A65D-DF84EF88511B/Visual_Studio_by_Subscription_Level.xlsx)列表。
 
 > [!NOTE]
-> 如果你有多个与同一电子邮件地址关联的订阅，则可用的软件标题由你拥有的最高级订阅确定  。  例如，如果你具有 Visual Studio Enterprise 订阅和 Visual Studio Test Professional 订阅，那么你将有权访问 Visual Studio Enterprise 订阅中包含的软件标题，而不管订阅门户中当前使用的是哪种订阅。 
+> 如果你有多个与同一电子邮件地址关联的订阅，则可用的软件标题由你拥有的最高级订阅确定。  例如，如果你具有 Visual Studio Enterprise 订阅和 Visual Studio Test Professional 订阅，那么你将有权访问 Visual Studio Enterprise 订阅中包含的软件标题，而不管订阅门户中当前使用的是哪种订阅。 
 
 无法确定正在使用哪些订阅？  连接到 [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs)，查看分配给电子邮件地址的所有订阅。 如果没有看到所有订阅，则可能是有一个或多个订阅分配给了不同的电子邮件地址。  你需要使用其他电子邮件地址登录来查看那些订阅。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [Visual Studio 文档](https://docs.microsoft.com/visualstudio/)
 - [Azure DevOps 文档](https://docs.microsoft.com/azure/devops/)
 - [Azure 文档](https://docs.microsoft.com/azure/)

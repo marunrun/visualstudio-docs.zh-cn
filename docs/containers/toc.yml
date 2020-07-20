@@ -11,22 +11,20 @@
           href: container-tools.md
         - name: 容器中的 React.js 单页应用
           href: container-tools-react.md
-        - name: 使用 Azure Dev Spaces 进行 Kubernetes 开发>>
-          href: /azure/dev-spaces/quickstart-netcore-visualstudio
+        - name: Kubernetes 开发
+          href: local-process-kubernetes.md
     - name: 教程
       expanded: true
       items:
         - name: 具有 Docker Compose 的多容器应用
           href: tutorial-multicontainer.md
-        - name: Visual Studio 中的 Kubernetes
-          href: tutorial-kubernetes-tools.md
     - name: 如何
       items:
         - name: 在本地 Docker 容器中调试应用
           href: edit-and-refresh.md
         - name: 部署到容器注册表
           href: hosting-web-apps-in-docker.md
-        - name: 部署到 Azure 应用服务
+        - name: 部署到 Azure App Service
           href: deploy-app-service.md
         - name: 部署到 Docker Hub
           href: deploy-docker-hub.md
@@ -38,7 +36,7 @@
       items:
         - name: Visual Studio 如何构建容器化应用
           href: container-build.md
-    - name: 故障排除
+    - name: 疑难解答
       href: troubleshooting-docker-errors.md
     - name: 参考
       items:
@@ -48,3 +46,11 @@
           href: docker-compose-properties.md
         - name: 启动设置
           href: container-launch-settings.md
+- name: 通过 Kubernetes 进行开发
+  items:
+    - name: Visual Studio 中的 Kubernetes
+      href: tutorial-kubernetes-tools.md
+    - name: Local Process with Kubernetes（预览版）
+      href: local-process-kubernetes.md
+    - name: Local Process with Kubernetes 的工作原理（预览版）
+      href: overview-local-process-kubernetes.md
