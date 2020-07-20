@@ -7,12 +7,12 @@ ms.assetid: e5768153-2758-46d3-a323-3272def213ee
 ms.date: 03/25/2020
 ms.topic: how-to
 description: 了解有关 Visual Studio 订阅中包含的 CODE 杂志权益。
-ms.openlocfilehash: 30b97c42c3ead60859aed593a3ffbad6ed721227
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.openlocfilehash: c7b56074ea9a48f4d94af5c7d79cd93dc2c4a3b8
+ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85906074"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86387169"
 ---
 # <a name="code-magazine-included-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 CODE 杂志权益
 
@@ -22,13 +22,13 @@ CODE 杂志是领先的独立软件开发人员杂志，涵盖所有平台中的
 设置 CODE 杂志订阅的过程很简单。  只需要执行以下步骤即可：
 
 1. 访问 [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)
-2. 在门户的“专业开发”或“教育”部分中找到“CODE 杂志”磁贴，然后单击“获取 Code”  。
+2. 在门户的“专业开发”或“教育”部分中找到“CODE 杂志”磁贴，然后单击“获取 Code”。
    > [!div class="mx-imgBorder"]
    > ![CODE Magazine 磁贴](_img/vs-code-magazine/vs-code-magazine-tile.png "CODE Magazine 磁贴")
-3. 你会看到一条消息，提示已检索到你的代码。  单击“激活”，然后继续  。  （如果你还没有准备好激活，没关系。  你可以随时返回到该磁贴进行激活。  检索到你的代码后，“获取 Code”链接将显示“激活”。）
+3. 你会看到一条消息，提示已检索到你的代码。  单击“激活”，然后继续。  （如果你还没有准备好激活，没关系。  你可以随时返回到该磁贴进行激活。  检索到你的代码后，“获取 Code”链接将显示“激活”。）
    > [!div class="mx-imgBorder"]
    > ![已检索 CODE Magazine 代码](_img/vs-code-magazine/vs-code-magazine-success.png "代码检索成功")
-4. 你将重定向到 CODE 杂志登陆页面。 选择国家/地区以及获取杂志的方式。 
+4. 你将重定向到 CODE 杂志登陆页面。 选择你所在的国家/地区以及获取杂志的方式。 
    > [!NOTE]
    > Visual Studio Dev Essentials 成员只能访问数字订阅。 
 5. 根据所做的选择，你会看到一条说明，其中显示了订阅的价格以及已应用的优惠券金额。
@@ -43,7 +43,7 @@ CODE 杂志是领先的独立软件开发人员杂志，涵盖所有平台中的
 8. 可以通过单击复选框来选择加入 CODE HTML Newletter。
    > [!div class="mx-imgBorder"]
    > ![CODE Magazine 订阅者信息](_img/vs-code-magazine/vs-code-magazine-subscriber-info.png "订阅者详细和传送地址")
-9. 单击“下订单”  ，完成订阅。  
+9. 单击“下订单”，完成订阅。  
 完成订阅订单后，系统会显示一个确认页，其中包含可用于查看已收到的问题的链接： https://codemag.com/my/fulfillment 。 
 
 ## <a name="eligibility"></a>资格
@@ -57,7 +57,7 @@ CODE 杂志是领先的独立软件开发人员杂志，涵盖所有平台中的
 | MSDN 平台（标准）                                          | VL、零售                                              | 可用                                              |  否          |
 | Visual Studio Enterprise、Visual Studio Professional（月度云） | Azure | 不可用 | 不可用 |
 
-<sup>1</sup>  包括：限制转售 (NFR)、Visual Studio 行业合作伙伴 (VSIP)、FTE、BizSpark、Imagine Premium。不包括：Microsoft 合作伙伴网络 (MPN)、最有价值专家 (MVP)、区域主管 (RD)、MCT 软件和服务开发人员、MCT 软件和服务、Imagine。
+<sup>1</sup>  包括：*限制转售 (NFR)、Visual Studio 行业合作伙伴 (VSIP)、FTE、BizSpark、Imagine Premium。不包括：Microsoft 合作伙伴网络 (MPN)、最有价值专家 (MVP)、区域主管 (RD)、MCT 软件和服务开发人员、MCT 软件和服务、Imagine。
 
 > [!NOTE]
 > Microsoft 不再在云订阅中提供 Visual Studio Professional 年度订阅和 Visual Studio Enterprise 年度订阅。 现有客户体验以及续订、增加、减少或取消订阅的能力不会发生变化。 建议新客户访问 [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/)，查看各 Visual Studio 购买选项。
