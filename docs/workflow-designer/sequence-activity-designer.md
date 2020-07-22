@@ -5,17 +5,17 @@ ms.topic: reference
 f1_keywords:
 - System.Activities.Statements.Sequence.UI
 ms.assetid: 51c8d3cb-4d43-458f-9631-b63755f9ac94
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 116e8c31a6d7cad2e5c6da95bc66e34a0d11163a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 77980077a580724f6db6bb5a544200890421d8e5
+ms.sourcegitcommit: 186c0c250d85ac74274fa1e438b4c7c7108d8a36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72649953"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86875964"
 ---
 # <a name="sequence-activity-designer"></a>Sequence 活动设计器
 
@@ -25,17 +25,17 @@ ms.locfileid: "72649953"
 
 ## <a name="using-the-sequence-activity-designer"></a>使用 Sequence 活动设计器
 
-若要添加 <xref:System.Activities.Statements.Sequence> 活动，请将 "**序列**" 活动设计器从 "**工具箱**" 拖放到工作流设计器图面上。 若要向此 <xref:System.Activities.Statements.Sequence> 活动添加子活动，请将 "**工具箱**" 中的某些其他活动拖放到框中的三角形上，并在提示文本 "将活动放在此处"。
+若要添加 <xref:System.Activities.Statements.Sequence> 活动，请将 " **Sequence** " 活动设计器从 "**工具箱**" 拖放到工作流设计器图面上。 若要向此活动添加子活动 <xref:System.Activities.Statements.Sequence> ，请将 "**工具箱**" 中的某些其他活动拖放到框中的三角形上，并在提示文本 "将活动放在此处"。
 
 ### <a name="sequence-activity-properties-in-the-workflow-designer"></a>工作流设计器中的 Sequence 活动属性
 
 下表列出 <xref:System.Activities.Statements.Sequence> 属性并说明如何在设计器中使用它们。 这些属性可以在属性网格中或设计器图面上进行编辑。
 
-|属性名|必需|用法|
+|属性名称|必选|使用情况|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|False|指定 <xref:System.Activities.Statements.Sequence> 活动设计器在标头中的友好名称。 默认值为 Sequence。 可以在属性网格或直接在活动设计器的标头中编辑该值。<br /><br /> 虽然 <xref:System.Activities.Activity.DisplayName%2A> 不是绝对必需的，但最好使用该属性。|
+|<xref:System.Activities.Activity.DisplayName%2A>|错误|指定 <xref:System.Activities.Statements.Sequence> 活动设计器在标头中的友好名称。 默认值为 Sequence。 可以在属性网格或直接在活动设计器的标头中编辑该值。<br /><br /> 虽然 <xref:System.Activities.Activity.DisplayName%2A> 不是绝对必需的，但最好使用该属性。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [流程图](../workflow-designer/flowchart-activity-designer.md)
 - [控制流](../workflow-designer/control-flow-activity-designers.md)
