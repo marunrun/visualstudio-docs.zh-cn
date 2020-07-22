@@ -7,12 +7,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: ce63e6ff368b090f096642c7f664c1adf45a0857
-ms.sourcegitcommit: 5d1b2895d3a249c6bea30eb12b0ad7c0f0862d85
+ms.openlocfilehash: 9171afdc6fe5ca65a8ba2bcae81fe255981cdae6
+ms.sourcegitcommit: 8217b2ff48028f43c05c5590a293d358897c8651
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80880307"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475986"
 ---
 # <a name="customize-code-coverage-analysis"></a>自定义代码覆盖率分析
 
@@ -34,13 +34,13 @@ ms.locfileid: "80880307"
 
 ::: moniker range="vs-2017"
 
-3. 若要选择运行设置文件，在“测试”菜单上，选择“测试设置” > “选择测试设置文件”  。 若要指定运行设置文件以从命令行中运行测试，请参阅[配置单元测试](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md#command-line)。
+3. 若要选择运行设置文件，在“测试”菜单上，选择“测试设置” > “选择测试设置文件”  。 若要指定运行设置文件以从命令行中运行测试，请参阅[配置单元测试](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md#specify-a-run-settings-file-from-the-command-line)。
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-3. 若要选择运行设置文件，在“测试”菜单上，选择“选择设置文件”。 若要指定运行设置文件以从命令行中运行测试，请参阅[配置单元测试](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md#command-line)。
+3. 若要选择运行设置文件，在“测试”菜单上，选择“选择设置文件”。 若要指定运行设置文件以从命令行中运行测试，请参阅[配置单元测试](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md#specify-a-run-settings-file-from-the-command-line)。
 
 ::: moniker-end
 
