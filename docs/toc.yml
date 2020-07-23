@@ -82,6 +82,8 @@
               href: install/update-a-network-installation-of-visual-studio.md
             - name: 在维修基线上更新 Visual Studio
               href: install/update-servicing-baseline.md
+            - name: 使用最小脱机布局更新 Visual Studio
+              href: install/update-minimal-layout.md
             - name: 控制 Visual Studio 部署的更新
               href: install/controlling-updates-to-visual-studio-deployments.md
             - name: 管理报包有效负载更改
