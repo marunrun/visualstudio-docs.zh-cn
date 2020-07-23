@@ -13,18 +13,18 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9f9e9963e05b0991beaea7da4027f4db3df4e4eb
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.openlocfilehash: 7c8639ede4a01157718f0ab1a1514927e620fa8d
+ms.sourcegitcommit: cb0c6e55ae560960a493df9ab56e3e9d9bc50100
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85903915"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86972330"
 ---
 # <a name="create-an-extension-with-a-menu-command"></a>使用菜单命令创建扩展
 
 本演练演示如何使用可启动记事本的菜单命令创建扩展。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅[安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
 
@@ -32,7 +32,17 @@ ms.locfileid: "85903915"
 
 1. 创建名为**FirstMenuCommand**的 VSIX 项目。 可以通过搜索 "vsix" 在 "**新建项目**" 对话框中找到 VSIX 项目模板。
 
+::: moniker range="vs-2017"
+
 2. 当项目打开时，添加一个名为**FirstCommand**的自定义命令项模板。 在**解决方案资源管理器**中，右键单击项目节点，然后选择 "**添加**  >  **新项**"。 在 "**添加新项**" 对话框中，选择 " **Visual c #**  >  **扩展性**" 并选择 "**自定义命令**"。 在窗口底部的 "**名称**" 字段中，将命令文件名更改为*FirstCommand.cs*。
+
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+
+2. 当项目打开时，添加一个名为**FirstCommand**的自定义命令项模板。 在**解决方案资源管理器**中，右键单击项目节点，然后选择 "**添加**  >  **新项**"。 在 "**添加新项**" 对话框中，选择 " **Visual c #**  >  **扩展性**" 并选择 "**命令**"。 在窗口底部的 "**名称**" 字段中，将命令文件名更改为*FirstCommand.cs*。
+
+::: moniker-end
 
 3. 生成项目并启动调试。
 
@@ -50,7 +60,7 @@ ms.locfileid: "85903915"
 
 ::: moniker-end
 
-现在，请在实验实例中中转到 "**工具**" 菜单。 应会看到 "**调用 FirstCommand** " 命令。 此时，该命令会显示一个消息框，该消息框显示**FirstMenuCommand 中的 FirstCommandPackage （）**。 在下一部分中，我们将了解如何实际从此命令启动记事本。
+现在，请在实验实例中中转到 "**工具**" 菜单。 应会看到 "**调用 FirstCommand** " 命令。 此时，该命令会显示一个消息框，该消息框显示**FirstMenuCommand 中的 FirstCommand （）**。 在下一部分中，我们将了解如何实际从此命令启动记事本。
 
 ## <a name="change-the-menu-command-handler"></a>更改菜单命令处理程序
 
@@ -77,11 +87,13 @@ ms.locfileid: "85903915"
     }
     ```
 
-3. 删除 `MenuItemCallback` 方法并添加 `StartNotepad` 方法，该方法将只启动记事本：
+3. 删除 `Execute` 方法并添加 `StartNotepad` 方法，该方法将只启动记事本：
 
     ```csharp
     private void StartNotepad(object sender, EventArgs e)
     {
+        ThreadHelper.ThrowIfNotOnUIThread();
+
         Process proc = new Process();
         proc.StartInfo.FileName = "notepad.exe";
         proc.Start();
@@ -102,7 +114,7 @@ ms.locfileid: "85903915"
 
 2. 从命令行运行以下命令：
 
-    ```xml
+    ```cmd
     <VSSDK installation>\VisualStudioIntegration\Tools\Bin\CreateExpInstance.exe /Reset /VSInstance=<version> /RootSuffix=Exp && PAUSE
 
     ```
@@ -113,7 +125,7 @@ ms.locfileid: "85903915"
 
 可以在*FirstMenuCommand* bin 目录中找到此扩展的 *.vsix*文件。 具体而言，假设你已经生成了版本配置，它将位于：
 
-*\<code directory>\FirstMenuCommand\FirstMenuCommand\bin\Release\ FirstMenuCommand*
+*\<code directory>\FirstMenuCommand\FirstMenuCommand\bin\Release\FirstMenuCommand.vsix*
 
 若要安装该扩展，您的朋友需要关闭 Visual Studio 的所有打开的实例，然后双击 *.vsix*文件，该文件将显示**vsix 安装程序**。 文件将复制到 *%LocalAppData%\Microsoft\VisualStudio \<version> \Extensions*目录。
 

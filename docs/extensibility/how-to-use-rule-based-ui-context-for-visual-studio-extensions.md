@@ -7,12 +7,12 @@ author: acangialosi
 ms.author: anthc
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1457b8178a48ac867ee8407df9501dee56afd45b
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.openlocfilehash: 4ee29937b11110ee6aae65628b81ea49588fdd22
+ms.sourcegitcommit: cb0c6e55ae560960a493df9ab56e3e9d9bc50100
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85905569"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86972304"
 ---
 # <a name="how-to-use-rule-based-ui-context-for-visual-studio-extensions"></a>如何：将基于规则的 UI 上下文用于 Visual Studio 扩展
 
@@ -105,7 +105,7 @@ ms.locfileid: "85905569"
     name: "Test auto load",
     expression: "(SingleProject | MultipleProjects) & DotConfig",
     termNames: new[] { "SingleProject", "MultipleProjects","DotConfig" },
-    termValues: new[] { VSConstants.UICONTEXT_SolutionHasSingleProject_string , VSConstants.UICONTEXT_SolutionHasMultipleProjects_string , "HierSingleSelectionName:.config$" })]
+    termValues: new[] { VSConstants.UICONTEXT.SolutionHasSingleProject_string , VSConstants.UICONTEXT.SolutionHasMultipleProjects_string , "HierSingleSelectionName:.config$" })]
 ```
 
  现在，表达式引用了三个字词。 前两个术语 "SingleProject" 和 "MultipleProjects" 引用其他已知的 UI 上下文（通过其 Guid）。 第三个术语 "DotConfig" 是本文前面部分定义的基于规则的 UI 上下文。
