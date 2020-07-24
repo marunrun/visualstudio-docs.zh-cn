@@ -10,12 +10,12 @@ metadata:
   monikerRange: '>=vs-2017'
   f1_keywords:
   - MSDNSTART
-  ms.openlocfilehash: 6ec31d2881abbfe2ae55174ea3f3fb15fd34651f
-  ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+  ms.openlocfilehash: 85929f803733026dfbf7ced8cf8553c3e96ed1c3
+  ms.sourcegitcommit: 239a8ed2c4474769297b42b5ce1f7c8694d62856
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 03/21/2020
-  ms.locfileid: "77904056"
+  ms.lasthandoff: 07/22/2020
+  ms.locfileid: "86944589"
 highlightedContent:
   items:
   - title: 设置和安装
@@ -94,7 +94,7 @@ conceptualContent:
       itemType: quickstart
       url: /aspnet/core/tutorials/razor-pages/razor-pages-start
 tools:
-  title: Languages
+  title: 语言
   items:
   - title: C++
     imageSrc: https://docs.microsoft.com/media/logos/logo_Cplusplus.svg
@@ -127,7 +127,7 @@ additionalContent:
     - title: 开发
       summary: 使用代码编辑器编写和管理代码。
       url: ../ide/index-writing-code.yml
-    - title: 构建
+    - title: 生成
       summary: 编译和生成源代码。
       url: ../ide/compiling-and-building-in-visual-studio.md
     - title: 调试
@@ -148,10 +148,10 @@ additionalContent:
     - title: 测量性能
       summary: 通过使用诊断工具来标识瓶颈，并优化代码性能。
       url: ../profiling/index.yml
-    - title: Extend
+    - title: 扩展
       summary: 将自己的功能添加到 Visual Studio IDE，从而改进开发体验。
       url: ../extensibility/index.yml
-    - title: data
+    - title: 数据
       summary: 创建连接到任意数据库或服务及任意位置（本地或云）的数据应用。
       url: ../data-tools/accessing-data-in-visual-studio.md
     - title: 协作
@@ -160,7 +160,7 @@ additionalContent:
     - title: 使用 Docker 容器进行开发
       summary: 使用 Docker 容器来隔离模块化组件并提高可伸缩性。
       url: ../containers/index.yml
-  - title: 工作负荷
+  - title: 工作负载
     items:
     - title: Web 和云
       links:
@@ -207,4 +207,4 @@ additionalContent:
         url: /cpp/linux/
       - text: .NET Core 跨平台开发
         url: /dotnet/core/
-  footer: '[博客](https://devblogs.microsoft.com/visualstudio/) - [Twitter](https://twitter.com/VisualStudio) - [Stack Overflow](https://stackoverflow.com/questions/tagged/visual-studio) - [问题报告](../ide/talk-to-us.md) - [开发人员社区](https://developercommunity.visualstudio.com/spaces/8/index.html)'
+  footer: '[博客](https://devblogs.microsoft.com/visualstudio/) - [Twitter](https://twitter.com/VisualStudio) - [Stack Overflow](https://stackoverflow.com/questions/tagged/visual-studio) - [问题报告](../ide/talk-to-us.md) - [开发人员社区](https://developercommunity.visualstudio.com/spaces/8/index.html) - [故障排除](/troubleshoot/visualstudio/welcome-visual-studio)'
