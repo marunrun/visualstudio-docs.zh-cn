@@ -1,6 +1,6 @@
 ---
 title: 用于排除错误的资源
-ms.date: 11/04/2016
+ms.date: 07/17/2020
 ms.topic: troubleshooting
 f1_keywords:
 - VS.Message.0x00005A89
@@ -93,12 +93,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dc3b1524b97b68e54574badcb003e608924e476d
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 0a7b4dea467c0ed233b2db917e231a5a4d787f09
+ms.sourcegitcommit: 1fcdb5dae881a1c3a93413bb940d63c232bf96f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75593611"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86459276"
 ---
 # <a name="resources-for-troubleshooting-integrated-development-environment-errors"></a>用于排除集成开发环境错误的资源
 
@@ -109,7 +109,7 @@ ms.locfileid: "75593611"
 
 ## <a name="knowledge-base-articles"></a>知识库文章
 
-可以在联机知识库 (KB) 中搜索有关产品问题的文章。 并非所有问题都有相应的 KB 文章，但很多客户所遇到的错误通常会记录下来。 可以访问 [Microsoft 支持](https://support.microsoft.com)网站上的 KB 文章。
+可以在联机知识库 (KB) 中搜索有关产品问题的文章。 并非所有问题都有相应的 KB 文章，但很多客户所遇到的错误通常会记录下来。 可以访问 [Microsoft 支持](https://support.microsoft.com)网站上的 KB 文章。 还可在 [Visual Studio 故障排除](/troubleshoot/visualstudio/welcome-visual-studio/)页上查看 Visual Studio 的知识库文章集合。
 
 ## <a name="developer-forums"></a>开发人员论坛
 
@@ -121,7 +121,7 @@ ms.locfileid: "75593611"
 
 如果借助其他资源仍不能解决问题，则可以访问 [Microsoft 支持](https://support.microsoft.com/en-us)网站，与 Microsoft 支持服务联系。 若要了解所在区域中可用的产品支持，请参阅 [Visual Studio 反馈选项](../../ide/feedback-options.md)页面。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 * [与网络相关错误或代理错误的疑难解答](../../install/install-and-use-visual-studio-behind-a-firewall-or-proxy-server.md#troubleshoot-network-related-errors)
 * [疑难解答 (Visual Studio for Mac)](/visualstudio/mac/troubleshooting)

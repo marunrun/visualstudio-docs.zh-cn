@@ -8,12 +8,12 @@ ms.devlang: dotnet
 ms.topic: how-to
 ms.date: 01/27/2020
 ms.author: ghogen
-ms.openlocfilehash: db4d114b743484e651d12831cfbe639fe41246ab
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 43bd06fba795c09bfa341ce7b61a3ced0fe15214
+ms.sourcegitcommit: 510a928153470e2f96ef28b808f1d038506cce0c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85283231"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86454158"
 ---
 # <a name="deploy-an-aspnet-core-container-to-azure-app-service-using-visual-studio"></a>使用 Visual Studio 将 ASP.NET Core 容器部署到 Azure 应用服务
 
@@ -39,7 +39,7 @@ ms.locfileid: "85283231"
 
 ::: moniker range="vs-2017"
 1. 在 Visual Studio 菜单中，选择“文件”>“新建”>“项目”。
-2. 在“新建项目”对话框的“模板”部分下，选择“Visual C#”>“Web”。  
+2. 在“新建项目”对话框的“模板”部分下，选择“Visual C#”>“Web”。
 3. 选择“ASP.NET Core Web 应用程序”。
 4. 为新应用程序指定名称（或使用默认值），并选择“确定”。
 5. 选择“Web 应用程序”。

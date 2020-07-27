@@ -1,7 +1,7 @@
 ---
 title: 更改方法签名
 description: 添加、删除或更改方法参数的顺序。 右键单击该方法，选择“快速操作和重构”，然后选择“更改签名”。
-ms.date: 06/08/2020
+ms.date: 07/20/2020
 ms.topic: reference
 author: mikadumont
 ms.author: midumont
@@ -14,12 +14,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 947f44700ef43815eb29bc3e90563afe1be68f2b
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 2d91406b65950515afb3659c0d5918841465b2fc
+ms.sourcegitcommit: 363f3e6e30dd54366ade0d08920755da5951535c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85283863"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86869563"
 ---
 # <a name="change-a-method-signature-refactoring"></a>“更改方法签名”重构
 
@@ -55,7 +55,7 @@ ms.locfileid: "85283863"
    - **鼠标**
       - 选择“编辑 > 重构 > 删除参数”。
       - 选择“编辑 > 重构 > 重新排列参数”。
-      - 右键单击代码，选择“快速操作和重构”菜单，然后从“预览”弹出窗口选择“更改签名”。 
+      - 右键单击代码，选择“快速操作和重构”菜单，然后从“预览”弹出窗口选择“更改签名”。
 
 3. 在弹出的“更改签名”对话框中，可以使用右侧的按钮更改方法签名：
 
@@ -75,18 +75,9 @@ ms.locfileid: "85283863"
 
     ![“添加参数”对话框 - C#](media/add-parameter-dialog.png)
 
-5. 添加参数后，按“确定”按钮预览更改。
+5. 添加参数后，按“确定”预览更改。
 
     ![“更改签名”对话框](media/change-signature.png)
-
-6. 按“确定”查看更改。
-   - C#：
-
-      ![“更改签名”的结果 - C#](media/changesignature-result-cs.png)
-
-   - Visual Basic：
-
-      ![“更改签名”的结果 - Visual Basic](media/changesignature-result-vb.png)
 
 ## <a name="see-also"></a>请参阅
 
