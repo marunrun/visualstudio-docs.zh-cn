@@ -5,19 +5,19 @@ description: Visual Studio 已发布的版本和生成号列表，按日期排�
 author: ornellaalt
 ms.author: ornella
 manager: jillfra
-ms.date: 07/14/2020
+ms.date: 07/21/2020
 ms.topic: reference
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 open_to_public_contributors: false
-ms.openlocfilehash: 63a9929ea4e70a085f41e0f3dd2f8a71c1eb487e
-ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
+ms.openlocfilehash: 2b63d8e269d88b15d4ca057282ebad061f6ea04d
+ms.sourcegitcommit: 186c0c250d85ac74274fa1e438b4c7c7108d8a36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86386181"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86876016"
 ---
 # <a name="visual-studio-build-numbers-and-release-dates"></a>Visual Studio 内部版本号和发布日期
 
@@ -29,6 +29,8 @@ ms.locfileid: "86386181"
 
 | **Version**| **频道** | **发布日期** | **内部版本** |
 | ---------------------- | ----------- | ---------------- | ----------------- |
+| 16.7.0 | 预览版 5 | 2020 年 7 月 21 日 | 16.7.30317.65 |
+| 16.6.5 | Release | 2020 年 7 月 21 日 | 16.6.30320.27 |
 | 16.7.0 | 预览版 4 | 2020 年 7 月 14 日 | 16.7.30310.162 |
 | 16.6.4 | Release | 2020 年 7 月 14 日 | 16.6.30309.148 |
 | 16.4.11 | Release | 2020 年 7 月 14 日 | 16.4.30308.118 |
@@ -339,7 +341,8 @@ ms.locfileid: "86386181"
 
 ## <a name="see-also"></a>请参阅
 
-* [Visual Studio 发行节奏](/visualstudio/productinfo/release-rhythm/)
+* [Visual Studio 路线图](/visualstudio/productinfo/vs-roadmap)
+* [Visual Studio 发行节奏](/visualstudio/productinfo/release-rhythm)
 * [Visual Studio 管理员指南](visual-studio-administrator-guide.md)
 * [使用命令行参数安装 Visual Studio](use-command-line-parameters-to-install-visual-studio.md)
 * [用于检测和管理 Visual Studio 实例的工具](tools-for-managing-visual-studio-instances.md)

@@ -1,6 +1,6 @@
 ---
 title: VSTest.Console.exe 命令行选项
-ms.date: 07/12/2018
+ms.date: 07/17/2020
 ms.topic: reference
 helpviewer_keywords:
 - vstest.console.exe
@@ -10,12 +10,12 @@ author: mikejo5000
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: eaf282ca647310010c2e75e7279f11cbc90aad76
-ms.sourcegitcommit: 5e82a428795749c594f71300ab03a935dc1d523b
+ms.openlocfilehash: 8264aebcbced16f95c177d255e226cfffdbee0ce
+ms.sourcegitcommit: 363f3e6e30dd54366ade0d08920755da5951535c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86211562"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86869589"
 ---
 # <a name="vstestconsoleexe-command-line-options"></a>VSTest.Console.exe 命令行选项
 
@@ -34,26 +34,26 @@ VSTest.Console.exe 是用于运行测试的命令行工具。 可在命令行上
 
 | 选项 | 描述 |
 |---|---|
-|**[测试文件]** |从指定文件运行测试。 用空格分隔多个测试文件名。<br />示例：`mytestproject.dll`、`mytestproject.dll myothertestproject.exe`|
-|**/Settings:[文件名]** |使用其他设置（如数据收集器）运行测试。<br />示例：`/Settings:Local.RunSettings`|
-|**/Tests:[测试名]** |运行其名称包含提供的值的测试。 若要提供多个值，请使用逗号将这些值分隔。<br />示例：`/Tests:TestMethod1,testMethod2`<br />/Tests 命令行选项不能与 /TestCaseFilter 命令行选项一起使用 。|
+|**[测试文件]**|从指定文件运行测试。 用空格分隔多个测试文件名。<br />示例：`mytestproject.dll`、`mytestproject.dll myothertestproject.exe`|
+|**/Settings:[文件名]**|使用其他设置（如数据收集器）运行测试。 有关详细信息，请参阅[使用 .runsettings 文件配置单元测试](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md)<br />示例：`/Settings:local.runsettings`|
+|**/Tests:[测试名]**|运行其名称包含提供的值的测试。 若要提供多个值，请使用逗号将这些值分隔。<br />示例：`/Tests:TestMethod1,testMethod2`<br />/Tests 命令行选项不能与 /TestCaseFilter 命令行选项一起使用 。|
 |**/Parallel**|指定并行执行的测试。 默认情况下，最多可使用计算机上的所有可用内核。 可在设置文件中配置要使用的内核数。|
 |**/Enablecodecoverage**|在测试运行中启用数据诊断适配器 CodeCoverage。<br />如果未使用设置文件指定设置，则将使用默认设置。|
 |**/InIsolation**|在隔离的进程中运行测试。<br />这种隔离使 vstest.console.exe 进程不太可能在测试出错时停止，但测试的运行速度可能较慢。|
 |**/UseVsixExtensions**|此选项使 vstest.console.exe 进程使用或跳过在测试运行中安装的 VSIX 扩展（如果有）。<br />此选项已弃用。 从 Visual Studio 的下一个主版本开始，此选项可能会删除。 转为作为 NuGet 包提供的使用扩展。<br />示例：`/UseVsixExtensions:true`|
-|**/TestAdapterPath:[路径]** |强制 vstest.console.exe 进程使用测试运行中指定路径（如果有）内的自定义测试适配器。<br />示例：`/TestAdapterPath:[pathToCustomAdapters]`|
-|**/Platform:[平台类型]** |将用来执行测试的目标平台体系结构。<br />有效值为 x86、x64 和 ARM。|
-|**/Framework: [Framework 版本]** |要用于执行测试的目标 .NET 版本。<br />示例值有 `Framework35`、`Framework40`、`Framework45`、`FrameworkUap10`、`.NETCoreApp,Version=v1.1`。<br />TargetFrameworkAttribute 用于从程序集中自动检测此选项，并在属性不存在时默认为 `Framework40`。 如果从 .NET Core 程序集删除 [TargetFrameworkAttribute](https://docs.microsoft.com/dotnet/api/system.runtime.versioning.targetframeworkattribute)，则必须显式指定此选项。<br />如果将目标框架指定为 Framework35，则测试在 CLR 4.0“兼容模式”下运行。<br />示例：`/Framework:framework40`|
-|**/TestCaseFilter:[表达式]** |运行与给定表达式匹配的测试。<br /><Expression\> 的格式为 <property\>=<value\>[\|<Expression\>]。<br />示例：`/TestCaseFilter:"Priority=1"`<br />示例：`/TestCaseFilter:"TestCategory=Nightly|FullyQualifiedName=Namespace.ClassName.MethodName"`<br />/TestCaseFilter 命令行选项不能与 /Tests 命令行选项一起使用 。 <br />有关创建和使用表达式的信息，请参阅 [TestCase 筛选](https://github.com/Microsoft/vstest-docs/blob/master/docs/filter.md)。|
+|**/TestAdapterPath:[路径]**|强制 vstest.console.exe 进程使用测试运行中指定路径（如果有）内的自定义测试适配器。<br />示例：`/TestAdapterPath:[pathToCustomAdapters]`|
+|**/Platform:[平台类型]**|将用来执行测试的目标平台体系结构。<br />有效值为 x86、x64 和 ARM。|
+|**/Framework: [Framework 版本]**|要用于执行测试的目标 .NET 版本。<br />示例值有 `Framework35`、`Framework40`、`Framework45`、`FrameworkUap10`、`.NETCoreApp,Version=v1.1`。<br />TargetFrameworkAttribute 用于从程序集中自动检测此选项，并在属性不存在时默认为 `Framework40`。 如果从 .NET Core 程序集删除 [TargetFrameworkAttribute](https://docs.microsoft.com/dotnet/api/system.runtime.versioning.targetframeworkattribute)，则必须显式指定此选项。<br />如果将目标框架指定为 Framework35，则测试在 CLR 4.0“兼容模式”下运行。<br />示例：`/Framework:framework40`|
+|**/TestCaseFilter:[表达式]**|运行与给定表达式匹配的测试。<br /><Expression\> 的格式为 <property\>=<value\>[\|<Expression\>]。<br />示例：`/TestCaseFilter:"Priority=1"`<br />示例：`/TestCaseFilter:"TestCategory=Nightly|FullyQualifiedName=Namespace.ClassName.MethodName"`<br />/TestCaseFilter 命令行选项不能与 /Tests 命令行选项一起使用 。 <br />有关创建和使用表达式的信息，请参阅 [TestCase 筛选](https://github.com/Microsoft/vstest-docs/blob/master/docs/filter.md)。|
 |**/?**|显示使用情况信息。|
 |**/Logger:[*uri/friendlyname*]**|为测试结果指定一个记录器。 多次指定参数，以启用多个记录器。<br />示例：要将结果记录到 Visual Studio 测试结果文件 (TRX)，请使用<br />/Logger:trx<br />[;LogFileName=\<Defaults to unique file name>]|
-|**/ListTests:[文件名]** |列出给定测试容器中的已发现的测试。|
+|**/ListTests:[文件名]**|列出给定测试容器中的已发现的测试。|
 |**/ListDiscoverers**|列出已安装的测试发现器。|
 |**/ListExecutors**|列出已安装的测试执行器。|
 |**/ListLoggers**|列出已安装的测试记录器。|
 |**/ListSettingsProviders**|列出已安装的测试设置提供程序。|
 |**/Blame**|在意见模式中运行测试。 此选项有助于隔离导致测试主机出现故障的有问题的测试。 检测到故障时，它会在 `TestResults/<Guid>/<Guid>_Sequence.xml` 中创建一个序列文件，用于捕获在出现故障之前运行的测试的顺序。 有关详细信息，请参阅[意见数据收集器](https://github.com/Microsoft/vstest-docs/blob/master/docs/extensions/blame-datacollector.md)。|
-|**/Diag:[文件名]** |将诊断跟踪日志写入指定文件。|
+|**/Diag:[文件名]**|将诊断跟踪日志写入指定文件。|
 |**/ResultsDirectory:[*path*]**|如果不存在，则将在指定路径中创建测试结果目录。<br />示例：`/ResultsDirectory:<pathToResultsDirectory>`|
 |**/ParentProcessId:[*parentProcessId*]**|负责启动当前进程的父进程的进程 ID。|
 |**/Port:[*port*]**|套接字连接和接收事件消息的端口。|
