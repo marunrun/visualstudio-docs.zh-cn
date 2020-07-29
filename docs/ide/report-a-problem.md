@@ -9,12 +9,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6172be3995596807562c1dc7956a1ca8952e5ad4
-ms.sourcegitcommit: 22deb247ad951e4971f27fdab413b158415d0584
+ms.openlocfilehash: 95623d72e70e572ca7605c34e2e25e7186c284e1
+ms.sourcegitcommit: 4a77403b6bd33c5a6e66a3eefd42c81c39fb67ca
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81276470"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87330955"
 ---
 # <a name="report-a-problem-states-and-faq"></a>报告问题：状态和常见问题解答
 
@@ -95,12 +95,6 @@ ms.locfileid: "81276470"
 ![开发人员社区上问题报告的“已关闭 - 其他产品”状态](../ide/media/ProblemStates/ClosedOtherProduct.jpg)
 
 “已关闭 - 其他产品”表示已确定你的问题适用于其他产品  。 请参阅 Microsoft 对外部产品和任何相关链接的注释。
-
-- - -
-
-![开发人员社区上问题报告的“已关闭 - 不会修复”状态](../ide/media/ProblemStates/ClosedWontFix.jpg)
-
-“已关闭 - 不会修复”表示由于产品方向不一致或社区影响等因素，无法追究此问题  。 有关其他明确信息，请参阅 Microsoft 的注释。  虽然我们无法解决此特定问题，但请放心，我们会重视你的所有反馈并据此改进 Visual Studio。
 
 - - -
 
