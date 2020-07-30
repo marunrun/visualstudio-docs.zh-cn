@@ -66,7 +66,7 @@ if (log == null) return;
 
     如果工具窗口承载用户控件或任何其他控件容器，则该容器将由 Windows 组件模型放置，并且将无法访问任何 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 服务。 您可以调用 <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> 来从控件容器中获取 VSPackage 服务提供程序。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [可用服务列表](../extensibility/internals/list-of-available-services.md)
 - [使用并提供服务](../extensibility/using-and-providing-services.md)
 - [服务基础](../extensibility/internals/service-essentials.md)

@@ -58,6 +58,6 @@ ms.locfileid: "87234713"
 
  列出 Office 解决方案编程有关的常见问题并提供指向可帮助解决常见问题的主题的链接。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [Visual Studio 疑难解答](/troubleshoot/visualstudio/welcome-visual-studio/)
