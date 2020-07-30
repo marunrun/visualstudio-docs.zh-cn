@@ -48,6 +48,6 @@ ms.locfileid: "87234804"
 
  若要管理 IEESC 和 Internet Explorer 7 及更高版本的效果，请确定你信任的网站和通用命名约定（UNC）路径，并将其添加到某个受信任的安全区域（本地 intranet 或受信任的站点）。有关如何管理区域的信息，请参阅[配置 ClickOnce 受信任的发布者](/previous-versions/dotnet/articles/ms996418(v=msdn.10))。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [保护 Office 解决方案](../vsto/securing-office-solutions.md)
 - [Visual Studio 疑难解答](/troubleshoot/visualstudio/welcome-visual-studio/)

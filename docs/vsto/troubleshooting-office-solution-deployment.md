@@ -125,7 +125,7 @@ ms.locfileid: "87234973"
 
  将扩展名设置为 **.vsto** ，并将 MIME 类型设置为 **application/x-ms-vsto**。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [ClickOnce 部署疑难解答](../deployment/troubleshooting-clickonce-deployments.md)
 - [部署 Office 解决方案](../vsto/deploying-an-office-solution.md)
