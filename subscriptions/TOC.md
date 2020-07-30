@@ -30,7 +30,6 @@
 #### [Azure EA DevTest](azure-ea-devtest.md)
 #### [CAST 突出显示](vs-cast.md)
 #### [CloudPilot](vs-cloudpilot.md)
-#### [企业移动性和安全性](vs-ems.md)
 #### [Microsoft 365 应用企业版](microsoft-365-apps-for-enterprise.md)
 #### [Microsoft 365 开发人员](vs-m365.md)
 #### [Parasoft](vs-parasoft.md)
