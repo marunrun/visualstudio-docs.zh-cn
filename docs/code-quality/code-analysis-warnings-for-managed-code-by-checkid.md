@@ -100,6 +100,7 @@ f1_keywords:
 - CA1413
 - CA1414
 - CA1415
+- CA1417
 - CA1500
 - CA1501
 - CA1502
@@ -291,12 +292,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4ecf66c26838b6e276188eea1c6fa04d3f5d1799
-ms.sourcegitcommit: 510a928153470e2f96ef28b808f1d038506cce0c
+ms.openlocfilehash: b216252ca33495a065c1dbcc6e091a2e5244de78
+ms.sourcegitcommit: 9a7fb8556a5f3dbb4459122fefc7e7a8dfda753a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86454184"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87235090"
 ---
 # <a name="code-analysis-warnings-for-managed-code-by-checkid"></a>托管代码的代码分析警告（按 CheckId）
 
@@ -397,6 +398,7 @@ ms.locfileid: "86454184"
 | CA1413 | [CA1413:避免在 COM 可见值类型中使用非公共字段](../code-quality/ca1413.md) | 对 COM 可见的值类型的非公共实例字段对 COM 客户端可见。 请检查各个字段的内容以查找不应当公开的信息或将对设计或安全性造成意外影响的信息。 |
 | CA1414 | [CA1414：用 MarshalAs 标记布尔型 P/Invoke 参数](../code-quality/ca1414.md) | Boolean 数据类型在非托管代码中有多种表示形式。 |
 | CA1415 | [CA1415：正确声明 P/Invoke](../code-quality/ca1415.md) | 此规则查找针对 [!INCLUDE[TLA2#tla_win32](../code-quality/includes/tla2sharptla_win32_md.md)] 函数的操作系统调用方法声明，这些函数具有指向 OVERLAPPED 结构参数的指针，而对应的托管参数不是指向 System.Threading.NativeOverlapped 结构的指针。 |
+| CA1417 | [CA1417：不 `OutAttribute` 在 P/invoke 的字符串参数上使用](../code-quality/ca1417.md) | 如果字符串是暂存的字符串，则通过值传递的字符串参数与 `OutAttribute` 运行时的不稳定性。 |
 | CA1500 | [CA1500:变量名不应与字段名相同](../code-quality/ca1500.md) | 实例方法声明一个名称与声明类型的实例字段匹配的参数或局部变量，从而导致错误。 |
 | CA1501 | [CA1501:避免过度继承](../code-quality/ca1501.md) | 类型在继承层次结构中的深度超过四级。 深度嵌套的类型层次结构可能很难遵循、理解和维护。 |
 | CA1502 | [CA1502:避免过度复杂](../code-quality/ca1502.md) | 此规则通过方法来测量线性独立的路径的数量，该数量是由条件分支的数量和复杂度决定的。 |

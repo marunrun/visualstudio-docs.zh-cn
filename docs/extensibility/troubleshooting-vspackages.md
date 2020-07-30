@@ -11,12 +11,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2141d2fd7d046f61ba6febecc427066d7a09ba18
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.openlocfilehash: f79bfcb73749992365b167bae84a15de17d2440d
+ms.sourcegitcommit: 9a7fb8556a5f3dbb4459122fefc7e7a8dfda753a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85904473"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87235025"
 ---
 # <a name="troubleshooting-vspackages"></a>VSPackages 故障排除
 下面是你可能会遇到的一些常见问题和解决问题的技巧。
@@ -76,7 +76,7 @@ ms.locfileid: "85904473"
 
      调试的良好起点是构造函数和初始化方法。 您还可以在要计算的区域中设置断点，例如菜单命令。 若要启用断点，必须在调试器下运行。
 
-    1. 在“项目”菜单上，单击“属性”   。
+    1. 在“项目”菜单上，单击“属性” 。
 
     2. 在 "**属性页**" 对话框中，选择 "**调试**" 选项卡。
 
@@ -111,7 +111,7 @@ ms.locfileid: "85904473"
 
 1. 对于托管代码，请确保引用路径正确。
 
-   1. 在“项目”菜单上，单击“属性”   。
+   1. 在“项目”菜单上，单击“属性” 。
 
    2. 在 "**属性页**" 对话框中选择 "**引用**" 选项卡，并确保所有路径都是正确的。 或者，您可以使用**对象浏览器**浏览引用的对象。
 
@@ -124,4 +124,5 @@ ms.locfileid: "85904473"
    请确保 InprocServer32 项具有 VSPackage dll 的正确路径。
 
 ## <a name="see-also"></a>另请参阅
-- [VSPackage](../extensibility/internals/vspackages.md)
+- [VSPackages](../extensibility/internals/vspackages.md)
+- [Visual Studio 疑难解答](/troubleshoot/visualstudio/welcome-visual-studio/)

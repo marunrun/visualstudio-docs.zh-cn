@@ -10,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 588396f3f152222c4e79b03a1d733524a8ff3ca9
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.openlocfilehash: 8bfbe4b11c22d6cfd147783f9fb662843cf57fe9
+ms.sourcegitcommit: 9a7fb8556a5f3dbb4459122fefc7e7a8dfda753a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85905722"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234947"
 ---
 # <a name="how-to-troubleshoot-services"></a>如何：排除服务故障
 尝试获取服务时可能会出现几个常见问题：
@@ -70,3 +70,4 @@ if (log == null) return;
 - [可用服务列表](../extensibility/internals/list-of-available-services.md)
 - [使用并提供服务](../extensibility/using-and-providing-services.md)
 - [服务基础](../extensibility/internals/service-essentials.md)
+- [Visual Studio 疑难解答](/troubleshoot/visualstudio/welcome-visual-studio/)

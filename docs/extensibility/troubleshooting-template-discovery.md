@@ -7,12 +7,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c5225c741206e6a43ff024a5f184404f1ac2bc63
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.openlocfilehash: 89ff5b9974f20841378f367c3cb631a8d4cf7787
+ms.sourcegitcommit: 9a7fb8556a5f3dbb4459122fefc7e7a8dfda753a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85904488"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87235038"
 ---
 # <a name="troubleshooting-template-installation"></a>模板安装故障排除
 
@@ -73,3 +73,4 @@ ms.locfileid: "85904488"
 ## <a name="see-also"></a>另请参阅
 
 - [创建自定义项目和项模板](creating-custom-project-and-item-templates.md)
+- [Visual Studio 疑难解答](/troubleshoot/visualstudio/welcome-visual-studio/)

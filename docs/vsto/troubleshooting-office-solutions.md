@@ -14,17 +14,17 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 7bc8db3478f6856b5d3b511e53656c65d762446c
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.openlocfilehash: 82fbb41bb1bf0d7ba3da046eb7d22eb8606a7529
+ms.sourcegitcommit: 9a7fb8556a5f3dbb4459122fefc7e7a8dfda753a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85537211"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234713"
 ---
 # <a name="troubleshoot-office-solutions"></a>排查 Office 解决方案问题
   本部分包含用于解决常见问题的提示，你在通过使用 Visual Studio 中的 Office 开发工具创建解决方案时可能会遇到这些问题。
 
-## <a name="in-this-section"></a>本节内容
+## <a name="in-this-section"></a>在本节中
 - [排查 Office 解决方案中的错误](../vsto/troubleshooting-errors-in-office-solutions.md)
 
  描述你在 Visual Studio 中设计、运行和测试 Office 解决方案时可能会产生的常见问题。
@@ -57,3 +57,7 @@ ms.locfileid: "85537211"
 - [Office 编程中的常见任务](../vsto/common-tasks-in-office-programming.md)
 
  列出 Office 解决方案编程有关的常见问题并提供指向可帮助解决常见问题的主题的链接。
+
+## <a name="see-also"></a>另请参阅
+
+- [Visual Studio 疑难解答](/troubleshoot/visualstudio/welcome-visual-studio/)

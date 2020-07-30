@@ -20,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 8d73dadd10342d3616291fb93efbb447bd7ecaee
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.openlocfilehash: 4f0d4eee6714d29a1609f6f6531ab18c132d5527
+ms.sourcegitcommit: 9a7fb8556a5f3dbb4459122fefc7e7a8dfda753a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85537314"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234687"
 ---
 # <a name="troubleshoot-errors-in-office-solutions"></a>排查 Office 解决方案中的错误
   在 Visual Studio 中开发 Office 解决方案时，如果执行下面的任务，可能会遇到问题：
@@ -217,3 +217,4 @@ Word.Document document = Globals.ThisAddIn.Application.ActiveDocument;
 - [排查 Office 解决方案问题](../vsto/troubleshooting-office-solutions.md)
 - [Office 解决方案安全性疑难解答](../vsto/troubleshooting-office-solution-security.md)
 - [Office 解决方案部署疑难解答](../vsto/troubleshooting-office-solution-deployment.md)
+- [Visual Studio 疑难解答](/troubleshoot/visualstudio/welcome-visual-studio/)
