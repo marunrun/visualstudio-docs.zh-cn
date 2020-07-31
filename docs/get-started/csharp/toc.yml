@@ -14,7 +14,12 @@
   expanded: true
   items:
     - name: 创建自己的第一个 C# 应用
-      href: tutorial-console.md
+      expanded: true
+      items:
+        - name: 第 1 部分：创建 C# 控制台应用
+          href: tutorial-console.md
+        - name: 第 2 部分：扩展 C# 控制台应用
+          href: tutorial-console-part-2.md
     - name: 创建 Web 应用
       href: tutorial-aspnet-core.md
     - name: 创建 UWP 应用

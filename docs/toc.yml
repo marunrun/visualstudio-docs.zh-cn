@@ -402,8 +402,8 @@
                   href: ide/reference/extract-local-function.md
                 - name: 内联临时变量
                   href: ide/reference/inline-temporary-variable.md
-                - name: IntelliSense 完成未导入类型
-                  href: ide/reference/intellisense-completion-unimported-types.md
+                - name: IntelliSense 完成未导入类型和扩展方法
+                  href: ide/reference/intellisense-completion-unimported-types-extension-methods.md
                 - name: 反转条件表达式和逻辑运算
                   href: ide/reference/invert-conditional-logical.md
                 - name: 反转 if 语句

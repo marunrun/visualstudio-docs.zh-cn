@@ -12,16 +12,16 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 695b1600aedb30a9e75a7829af4bac400f069922
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: c46120c369fa130e83620549ca0bc084a5075f7f
+ms.sourcegitcommit: 9a7fb8556a5f3dbb4459122fefc7e7a8dfda753a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "75584603"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87235142"
 ---
-# <a name="learn-to-use-the-code-editor"></a>了解如何使用代码编辑器
+# <a name="learn-to-use-the-code-editor-with-visual-basic"></a>了解如何将代码编辑器用于 Visual Basic
 
-在这个 10 分钟的 Visual Studio 代码编辑器简介中，我们会向文件添加代码，了解 Visual Studio 编写、导航和了解代码的简便方法。
+在这个 10 分钟的 Visual Studio 代码编辑器简介中，我们会向文件添加代码，了解 Visual Studio 编写、导航和了解 Visual Basic 代码的简便方法。
 
 ::: moniker range="vs-2017"
 
@@ -54,13 +54,13 @@ ms.locfileid: "75584603"
 
 ::: moniker range=">=vs-2019"
 
-1. 打开 Visual Studio。 按 Esc  或单击“开始”窗口中的“继续但无需代码”  以打开开发环境。
+1. 打开 Visual Studio。 按 Esc  或单击“开始”窗口中的“继续但无需代码”以打开开发环境。
 
 ::: moniker-end
 
-2. 在菜单栏上的“文件”  菜单中，选择“新建文件”  。
+2. 在菜单栏上的“文件”菜单中，选择“新建文件”。
 
-3. 在“新建文件”对话框的“常规”类别中，选择“Visual Basic 类”，然后选择“打开”     。
+3. 在“新建文件”对话框的“常规”类别中，选择“Visual Basic 类”，然后选择“打开”   。
 
    编辑器中将打开主干为 Visual Basic 类的新文件。 （你可能已经注意到，无需创建完整的 Visual Studio 项目来获取代码编辑器提供的某些权益，例如语法高亮。 仅需一个代码文件即可！）
 
@@ -68,19 +68,19 @@ ms.locfileid: "75584603"
 
 ## <a name="use-code-snippets"></a>使用代码片段
 
-Visual Studio 提供了实用的代码片段，可用于快速方便地生成常用代码块  。 [代码片段](../../ide/code-snippets.md)可用于不同编程语言，包括 Visual Basic、C# 和 C++。 让我们将 Visual Basic Sub 代码片段添加到文件中  。
+Visual Studio 提供了实用的代码片段，可用于快速方便地生成常用代码块。 [代码片段](../../ide/code-snippets.md)可用于不同编程语言，包括 Visual Basic、C# 和 C++。 让我们将 Visual Basic Sub 代码片段添加到文件中。
 
-1. 将光标放在内容为 `End Class` 的行上方，并输入 sub  。
+1. 将光标放在内容为 `End Class` 的行上方，并输入 sub。
 
-   随即将出现一个弹出对话框，其中包含有关 `Sub` 关键字以及如何插入 Sub 代码片段的信息  。
+   随即将出现一个弹出对话框，其中包含有关 `Sub` 关键字以及如何插入 Sub 代码片段的信息。
 
    ![Visual Studio 中代码片段的 IntelliSense](media/tutorial-intellisense-snippet.png)
 
-1. 按 Tab 两次，插入代码片段  。
+1. 按 Tab 两次，插入代码片段。
 
    将 Sub 过程 `MySub()` 的大纲添加到文件中。
 
-对于不同编程语言，可用的代码片段不同。 可以通过选择“编辑” > “IntelliSense” > “插入代码片段”（或按 Ctrl+K、Ctrl+X）查看 Visual Basic 的可用代码片段     +    。 对于 Visual Basic，代码片段可用于以下类别：
+对于不同编程语言，可用的代码片段不同。 可以通过选择“编辑” > “IntelliSense” > “插入代码片段”（或按 Ctrl+K、Ctrl+X）查看 Visual Basic 的可用代码片段   +  。 对于 Visual Basic，代码片段可用于以下类别：
 
 ![Visual Basic 代码片段列表](media/tutorial-code-snippet-list.png)
 
@@ -116,7 +116,7 @@ Visual Studio 提供了实用的代码片段，可用于快速方便地生成常
                Select word
    ```
 
-1. 我们现在没有使用 `morewords` 数组，但稍后可能会用到，所以我们不想彻底删除它。 那我们就来为这些行加上注释。 选择整个 `morewords` 定义直到结束花括号，然后选择工具栏上的“为选定行添加注释”  。 如果想要使用键盘，请按 Ctrl+K, Ctrl+C     。
+1. 我们现在没有使用 `morewords` 数组，但稍后可能会用到，所以我们不想彻底删除它。 那我们就来为这些行加上注释。 选择整个 `morewords` 定义直到结束花括号，然后选择工具栏上的“为选定行添加注释”。 如果想要使用键盘，请按 Ctrl+K, Ctrl+C   。
 
    ![“添加注释”按钮](media/tutorial-comment-out.png)
 
@@ -124,17 +124,17 @@ Visual Studio 提供了实用的代码片段，可用于快速方便地生成常
 
 ## <a name="collapse-code-blocks"></a>折叠代码块
 
-可以折叠部分代码，只关注感兴趣的部分。 作为演练，现在可将 `_words` 数组折叠为一行代码。 在内容为 `Dim _words = New String() {` 的行的边距中选择内部带有减号的小灰色框。 如果使用的是键盘，也可将光标置于数组定义中的任意位置，然后按 Ctrl+M、Ctrl+M     。
+可以折叠部分代码，只关注感兴趣的部分。 作为演练，现在可将 `_words` 数组折叠为一行代码。 在内容为 `Dim _words = New String() {` 的行的边距中选择内部带有减号的小灰色框。 如果使用的是键盘，也可将光标置于数组定义中的任意位置，然后按 Ctrl+M、Ctrl+M   。
 
 ![“大纲显示折叠”按钮](media/tutorial-collapse.png)
 
-代码块折叠到第一行，后跟省略号 (`...`)。 若要再次展开代码块，请单击现在带有加号的相同灰色框，或者再次按 Ctrl+M，Ctrl+M     。 此功能被称为[大纲显示](../../ide/outlining.md)，在折叠长方法或整个类时特别有用。
+代码块折叠到第一行，后跟省略号 (`...`)。 若要再次展开代码块，请单击现在带有加号的相同灰色框，或者再次按 Ctrl+M，Ctrl+M   。 此功能被称为[大纲显示](../../ide/outlining.md)，在折叠长方法或整个类时特别有用。
 
 ## <a name="view-symbol-definitions"></a>查看符号定义
 
-通过 Visual Studio 编辑器可轻松查看类型、方法等的定义。一种方法是导航到包含定义的文件，例如通过选择“转到定义”，转到引用符号的任何位置  。 使用“[速览定义](../../ide/go-to-and-peek-definition.md#peek-definition)”速度更快，不会干扰你处理文件。 我们来快速查看一下 `String` 类型的定义。
+通过 Visual Studio 编辑器可轻松查看类型、方法等的定义。一种方法是导航到包含定义的文件，例如通过选择“转到定义”，转到引用符号的任何位置。 使用“[速览定义](../../ide/go-to-and-peek-definition.md#peek-definition)”速度更快，不会干扰你处理文件。 我们来快速查看一下 `String` 类型的定义。
 
-1. 右键单击字 `String`，然后选择内容菜单上的“速览定义”  。 或者，按 Alt+F12   。
+1. 右键单击字 `String`，然后选择内容菜单上的“速览定义”。 或者，按 Alt+F12 。
 
    此时会出现一个弹出窗口，其中包含 `String` 类的定义。 可在弹出窗口中滚动，甚至还可从速览的代码中查看另一类型的定义。
 
@@ -152,11 +152,11 @@ Visual Studio 提供了实用的代码片段，可用于快速方便地生成常
    For Each str In qu
    ```
 
-   IntelliSense 会显示有关 `query` 符号的“快速信息”  。
+   IntelliSense 会显示有关 `query` 符号的“快速信息”。
 
    ![Visual Studio 中的 IntelliSense 文字自动完成](media/tutorial-intellisense-completion-list.png)
 
-1. 若要使用 IntelliSense 文字自动完成功能插入单词 `query` 的剩余部分，请按 Tab  。
+1. 若要使用 IntelliSense 文字自动完成功能插入单词 `query` 的剩余部分，请按 Tab。
 
 1. 完成后，代码块如以下代码所示。
 
@@ -170,15 +170,15 @@ Visual Studio 提供了实用的代码片段，可用于快速方便地生成常
 
 没有谁能一次就得到正确的代码，代码中可能必须要更改的一项内容是变量或方法的名称。 我们来试试 Visual Studio 的[重构](../../ide/refactoring-in-visual-studio.md)功能，将 `_words` 变量重命名为 `words`。
 
-1. 将光标置于 `_words` 变量的定义上，然后从右键菜单或上下文菜单中选择“重命名”  。
+1. 将光标置于 `_words` 变量的定义上，然后从右键菜单或上下文菜单中选择“重命名”。
 
-   此时编辑器右上角会弹出一个“重命名”对话框  。
+   此时编辑器右上角会弹出一个“重命名”对话框。
 
-1. 保持变量 `_words` 为选中状态，然后为“words”输入所需名称  。 请注意，查询中对 `words` 的引用也会自动重命名。 请在“重命名”弹出框中选中“包含注释”复选框，然后按 Enter 或“应用”     。
+1. 保持变量 `_words` 为选中状态，然后为“words”输入所需名称。 请注意，查询中对 `words` 的引用也会自动重命名。 请在“重命名”弹出框中选中“包含注释”复选框，然后按 Enter 或“应用”   。
 
    ![“重命名”对话框](media/tutorial-rename.png)
 
-1. 按 Enter 或单击“应用”   。
+1. 按 Enter 或单击“应用” 。
 
    出现的两处 `words` 均被重命名，代码注释中对 `words` 的引用也被重命名。
 

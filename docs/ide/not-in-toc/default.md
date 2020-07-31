@@ -1,6 +1,6 @@
 ---
 title: F1 帮助的默认页面
-ms.date: 02/28/2018
+ms.date: 07/20/2020
 ms.topic: troubleshooting
 robots: noindex,nofollow
 f1_keywords:
@@ -9,12 +9,12 @@ f1_keywords:
 manager: jillfra
 author: TerryGLee
 ms.author: tglee
-ms.openlocfilehash: 48c93cf8abeb573a3a75e6825a8400355c133f2b
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 3fabd640b503c480662239dac4920aa9875d62c9
+ms.sourcegitcommit: 239a8ed2c4474769297b42b5ce1f7c8694d62856
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75597004"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86944563"
 ---
 # <a name="f1-help"></a>F1 帮助
 
@@ -22,11 +22,12 @@ ms.locfileid: "75597004"
 
 ## <a name="cursor-position"></a>游标位置
 
-若要按 F1 以寻求关键字或 API 名称方面的帮助，请务必先将光标放在相应单词内部或右侧（紧挨着它），再按 F1  。 如果仍然无法使用，请从[有用的链接](#useful-links)列表中进行选择，或在 https://docs.microsoft.com 上进行搜索。
+要按 F1 以寻求关键字或 API 名称方面的帮助，请务必先将光标放在相应单词内部或右侧（紧挨着它），再按 F1。 如果仍然无法使用，请从以下[有用的链接](#useful-links)列表中进行选择，或在 https://docs.microsoft.com 上进行搜索。
 
-## <a name="useful-links"></a>有用链接
+## <a name="useful-links"></a>有用的链接
 
 - 在 [.NET API 浏览器](/dotnet/api/)中搜索参考文档。
+- 在 [Visual Studio 故障排除](/troubleshoot/visualstudio/welcome-visual-studio/)页上浏览知识库文章列表。
 - 有关 C# 帮助，请参阅 [C# 指南](/dotnet/csharp/index)。
 - 有关 Visual Basic 帮助，请参阅 [Visual Basic指南](/dotnet/visual-basic/)。
 - 有关 F# 帮助，请参阅 [F# 指南](/dotnet/fsharp/)。

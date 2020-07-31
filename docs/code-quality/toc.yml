@@ -415,6 +415,8 @@
                   href: ca1414.md
                 - name: 'CA1415:正确声明 P-Invoke'
                   href: ca1415.md
+                - name: 'CA1417:请勿对 P/Invokes 的字符串参数使用 OutAttribute'
+                  href: ca1417.md
             - name: 维护性警告
               items:
                 - name: 概述

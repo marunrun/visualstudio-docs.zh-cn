@@ -7,12 +7,12 @@ ms.assetid: c2853359-18fd-4be4-97a6-02230c862f92
 ms.date: 05/10/2020
 ms.topic: how-to
 description: 了解管理员如何使用批量添加功能或 Microsoft Azure Active Directory 组将许可证分配给多个订阅者
-ms.openlocfilehash: 459220c7fb2103da05f15607787390963863e622
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.openlocfilehash: 8bda423ccd5362fba6389195814a44cca286b5a7
+ms.sourcegitcommit: 9a7fb8556a5f3dbb4459122fefc7e7a8dfda753a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85903280"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87235129"
 ---
 # <a name="assign-subscriptions-to-multiple-users"></a>将订阅分配给多个用户
 你可以在订阅管理门户中一次添加一个多个用户，也可以采用大用户组形式添加。  要添加各个用户，请参阅[添加单个用户](assign-license.md)。
@@ -30,7 +30,7 @@ ms.locfileid: "85903280"
 
 1. 批量添加功能会使用 Microsoft Excel 模板上传订阅者信息。 在“上传多个订阅者”对话框中，单击“下载”下载模板。
    > [!div class="mx-imgBorder"]
-   > ![下载 Excel 模板以上传多个订阅者](media/download-template-upload-subscribers.png)
+   > ![下载 Excel 模板以上传多个订阅者](media/download-template-upload-subscribers.png "下载空白 Excel 模板，开始批量分配过程。")
    >
    > [!NOTE]
    > 请务必下载本模板的最新版本。 如果使用旧版本，批量上传可能会失败。
@@ -50,17 +50,17 @@ ms.locfileid: "85903280"
 
 1. 返回到 Visual Studio 订阅管理门户。 在“上传多个订阅者”对话框中，单击“浏览” 。
    > [!div class="mx-imgBorder"]
-   > ![浏览到之前保存的模板以上传多个订阅者](media/bulk-add-browse-saved-template.png)
+   > ![浏览到之前保存的模板以上传多个订阅者](media/bulk-add-browse-saved-template.png "你可以浏览到文件位置，或将其拖放到此对话框中。")
 
 1. 导航到之前保存的 Excel 文件，然后单击“确定”。
    > [!div class="mx-imgBorder"]
-   > ![上传 Excel 模板以上传多个订阅者](media/bulk-upload-subscribers.png)
+   > ![上传 Excel 模板以上传多个订阅者](media/bulk-upload-subscribers.png "此处将显示包含你的数据的模板。单击“确定”开始上传。")
 
     将显示上传进度对话框。
 
     如果模板中存在错误，则无法上传。系统会显示该错误，你可以更正模板，然后再次尝试批量上传。
    > [!div class="mx-imgBorder"]
-   > ![如果上传多个订阅者失败，将显示错误消息](_img/assign-license-bulk/bulk-add-upload-failure.png)
+   > ![如果上传多个订阅者失败，将显示错误消息](_img/assign-license-bulk/bulk-add-upload-failure.png "如果上传的文件包含错误，则将显示此消息。解决错误，然后再次执行批量添加过程。")
 
    如果失败，请按照以下步骤操作：
    1. 打开你创建的 Excel 文件、更正问题，然后保存文件。
@@ -72,7 +72,7 @@ ms.locfileid: "85903280"
 
     上传成功后，系统会显示订阅者列表和一条确认消息。
    > [!div class="mx-imgBorder"]
-   > ![如果上传多个订阅者成功，将显示确认消息](_img/assign-license-bulk/bulk-add-upload-success.png)
+   > ![如果上传多个订阅者成功，将显示确认消息](_img/assign-license-bulk/bulk-add-upload-success.png "上传成功完成后，你将收到一条确认消息。")
 
 ## <a name="use-azure-active-directory-groups-to-assign-subscriptions"></a>使用 Azure Active Directory 组分配订阅 
 使用此功能可以轻松地控制订阅分配。 可以在订阅管理门户中添加 Azure Active Directory 安全组，这将确保为组中的每个成员都分配一个订阅。 为了便于操作，当有成员离开你的组织并且从 Azure Active Directory 中删除时，他们对订阅的访问权限也会相应地删除。 
@@ -100,14 +100,14 @@ ms.locfileid: "85903280"
 3. 选择“添加”选项卡，然后选择下拉列表中的“Azure Active Directory 组”。  
 
    > [!div class="mx-imgBorder"]
-   > ![使用 Azure AD 选择批量添加](_img/assign-license-bulk/bulk-add-aad.png)
+   > ![使用 Azure AD 选择批量添加](_img/assign-license-bulk/bulk-add-aad.png "选择“使用 Azure AD 功能批量添加”以从 Azure Active Directory 组拉取订阅者。")
 
 4. 开始输入要添加到表单域的 Azure AD 组的名称。 这将搜索组织内可用的 Azure AD 组。 
 
 5. 选择组后，该字段将自动填充组名。 在添加用户之前，可以选择查看该组中的用户。 接下来，可以选择组的订阅级别、下载权限和通信首选项。 可以根据需要在引用字段中添加详细信息。 
 
    > [!div class="mx-imgBorder"]
-   > ![使用 Azure AD 选择批量添加](_img/assign-license-bulk/bulk-add-aad-details.png)
+   > ![选择 Azure AD 组](_img/assign-license-bulk/bulk-add-aad-details.png "选择 Azure AD 组的名称以添加该组中的订阅者。")
 
 6. 单击“添加”，然后单击“确认”。 
 

@@ -7,12 +7,12 @@ ms.assetid: 4e529a43-7aed-4eee-895d-862a631952df
 ms.date: 03/02/2020
 ms.topic: conceptual
 description: 了解管理员如何将许可证分配给订阅者
-ms.openlocfilehash: a90d6f3fec1f619cda397788c130f7514307effd
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: e8eba6ad97d0f5e7e1da0e75093c33658f26a56a
+ms.sourcegitcommit: 9a7fb8556a5f3dbb4459122fefc7e7a8dfda753a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84183465"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87235012"
 ---
 # <a name="assign-licenses-in-the-visual-studio-subscriptions-administration-portal"></a>在 Visual Studio 订阅管理门户中分配许可证
 作为 Visual Studio 订阅管理员，你可以使用管理门户为个人用户和用户组分配订阅。
@@ -34,10 +34,10 @@ ms.locfileid: "84183465"
 1. 登录[管理门户](https://manage.visualstudio.com)。
 2. 要为单个 Visual Studio 订阅者分配许可证，请在表的顶部选择“添加”，然后选择“单个订阅者”。
    > [!div class="mx-imgBorder"]
-   > ![添加单个订阅者](_img/assign-license-add/add-subscriber-individual.png)
+   > ![添加单个订阅者](_img/assign-license-add/add-subscriber-individual.png "单击“添加”，然后选择要分配单个订阅的单个订阅者。")
 3. 在表单域中输入新订阅者的信息。 如果你的组织使用 Azure Active Directory，则“姓名”字段可充当搜索功能，用于查找当前目录中的用户，以便从搜索结果中选择正确的用户。 当你选择该用户后，系统会自动填充登录电子邮件和通知电子邮件。
    > [!div class="mx-imgBorder"]
-   > ![订阅者详细信息](_img/assign-license-add/subscriber-details.png)
+   > ![订阅者详细信息](_img/assign-license-add/subscriber-details.png "输入订阅者名称和其他详细信息，或从租户成员中进行选择。")
 
     > [!NOTE]
     > 为了在你输入订阅者姓名时显示 Azure Active Directory 租户的成员，管理员必须是该租户的成员。 
@@ -45,15 +45,15 @@ ms.locfileid: "84183465"
 
     如果希望此订阅者在登录 [Visual Studio 订阅门户](https://my.visualstudio.com?wt.mc_id=o~msft~docs)时可以访问软件下载，请务必将“下载设置”部分中的下载切换保持启用状态。 如果选择禁用下载，则用户将无法访问软件下载。  还将禁用对产品密钥的访问权限。  订阅者仍可访问订阅中包含的所有其他权益。
    > [!div class="mx-imgBorder"]
-   > ![下载的访问权限](media/access-to-downloads.png)
+   > ![访问以下载]（media/access-to-downloads.png"选择“允许”，向订阅者提供软件下载权限。"）
 
     如果要向订阅添加自己的引用说明，则可以在“添加引用”部分执行操作。
    > [!div class="mx-imgBorder"]
-   > ![向每个订阅添加自己的引用说明](media/add-subscriber-reference-notes.png)
+   > ![向每个订阅添加自己的引用说明](media/add-subscriber-reference-notes.png "使用“引用”字段记录有关此订阅的任何注释。")
 
     完成选择选项和输入订阅者数据后，选择“添加订阅者”弹出窗口底部的“添加” 。
    > [!div class="mx-imgBorder"]
-   > ![选择“添加”按钮](media/add-button.png)
+   > ![选择“添加”按钮](media/add-button.png "单击“添加”以保存信息并将订阅分配给订阅者。")
 
 ## <a name="resend-assignment-emails"></a>重新发送分配电子邮件
 添加订阅者后，系统会向新订阅者自动发送一封分配电子邮件，为其提供进一步说明。 通过选中订阅者和单击顶部菜单中的“重新发送”按钮，可以随时再次发送分配电子邮件。  若要向多个用户重新发送电子邮件，请在选择订阅者时按住 Ctrl 键。  单击“重新发送”按钮后，会看到一个对话框，要求确认是否要向这些订阅者重新发送。  
