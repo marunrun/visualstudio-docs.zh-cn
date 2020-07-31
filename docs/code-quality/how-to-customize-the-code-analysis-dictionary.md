@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 01c3ad83cea8dc1a28a817677be102c87ebc8f87
-ms.sourcegitcommit: 48e93538f1e352fc1f972b642bb5fcce2f6834a2
+ms.openlocfilehash: e1a50374a2603153cc7f4770a9aaf5ba72fbe007
+ms.sourcegitcommit: b8ec700fc4c14c68c6ce280f29c19870261990d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85371867"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87453647"
 ---
 # <a name="how-to-customize-the-code-analysis-dictionary"></a>如何：自定义代码分析字典
 
@@ -266,12 +266,12 @@ ms.locfileid: "85371867"
 
 1. 在**解决方案资源管理器**中，使用以下过程之一：
 
-2. 若要将字典添加到单个项目中，请右键单击项目名称，然后单击 "**添加现有项**"。 在 "**添加现有项**" 对话框中指定该文件。
+    - 若要将字典添加到单个项目中，请右键单击项目名称，然后单击 "**添加现有项**"。 在 "**添加现有项**" 对话框中指定该文件。
+  
+    - 若要添加两个或多个项目之间共享的字典，请在 "**添加现有项**" 对话框中找到要共享的文件，单击 "**添加**" 按钮上的向下箭头，然后单击 "**添加为链接**"。
 
-3. 若要添加两个或多个项目之间共享的字典，请在 "**添加现有项**" 对话框中找到要共享的文件，单击 "**添加**" 按钮上的向下箭头，然后单击 "**添加为链接**"。
+2. 在**解决方案资源管理器**中，右键单击**CustomDictionary.xml**的文件名，然后单击 "**属性**"。
 
-4. 在**解决方案资源管理器**中，右键单击**CustomDictionary.xml**的文件名，然后单击 "**属性**"。
+3. 从 "**生成操作**" 列表中，选择 " **CodeAnalysisDictionary**"。
 
-5. 从 "**生成操作**" 列表中，选择 " **CodeAnalysisDictionary**"。
-
-6. 从 "**复制到输出目录**" 列表中，选择 "不**复制**"。
+4. 从 "**复制到输出目录**" 列表中，选择 "不**复制**"。
