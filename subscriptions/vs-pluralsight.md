@@ -7,12 +7,12 @@ ms.assetid: bc8b526c-2fed-4ac8-aaa2-73d2495256fd
 ms.date: 04/20/2020
 ms.topic: how-to
 description: 了解有关所选的 Visual Studio 订阅中随附的 Pluralsight 培训订阅。
-ms.openlocfilehash: e3b8c75249a9246ae15384457957ddea34ea5f2e
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.openlocfilehash: f06b2bb8d2151255cb606fd3dcb8344b1fb37411
+ms.sourcegitcommit: c620d59578db1b89f80e64ae04b4898bc4ab292d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902819"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87375893"
 ---
 # <a name="pluralsight-training-benefits-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 Pluralsight 培训权益
 
@@ -47,9 +47,9 @@ ms.locfileid: "85902819"
    > 如果帐户不符合兑换新产品/服务的条件，则会在收到的电子邮件中说明因不符合条件以致创建帐户时出现问题。  其中还包含用于联系 Pluralsight 支持团队的信息，他们可解答有关帐户的任何问题。
    
 
-6. 成功创建帐户后，收到的电子邮件将包含用户名，并请求创建密码。  提供密码，再次输入以确认，然后单击“登录到 Pluralsight”。 
+6. 成功创建帐户后，收到的电子邮件将包含用户名，并请求创建密码。  提供密码，再次输入以确认，然后单击“登录到 Pluralsight”。
 
-7. 输入欢迎电子邮件提供的用户名和刚刚创建的密码，然后单击“登录”。 
+7. 输入欢迎电子邮件提供的用户名和刚刚创建的密码，然后单击“登录”。
 
 8. 就这么简单！  现在便可以开始学习数以千计的 Pluralsight 课程了！
 
@@ -82,13 +82,7 @@ ms.locfileid: "85902819"
 答：并非所有 Visual Studio Enterprise 订阅都包含 Pluralsight 权益。  请检查[资格表](#eligibility)，查看订阅是否符合条件。
 
 ### <a name="q-do-i-have-access-to-any-customized-learning--playlists-or-channels"></a>问：我是否有权访问任何自定义的学习播放列表或频道？
-答：有，你是 Visual Studio 订阅者，有权访问专家频道，这属于 Pluralsight 培训权益的一部分。 这些频道由 Microsoft 专家专门策划，旨在学习 .Net、Azure、DevOps 和移动性等领域的知识。 通过 Visual Studio 订阅门户[https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) 激活 Pluralsight 权益，获得在 Pluralsight 登录页上访问以下频道的权限 –
-
-•   Scott Hanselmann（.Net、Azure）- [https://go.pluralsight.com/scott-hanselman](https://go.pluralsight.com/scott-hanselman)
-
-•   Donovan Brown (DevOps) - [https://go.pluralsight.com/donovan-brown](https://go.pluralsight.com/donovan-brown)
-
-•   James Montemagno（移动性）- [https://go.pluralsight.com/james-montemagno](https://go.pluralsight.com/james-montemagno)
+答：可以。 作为 Visual Studio 订阅者，你有权访问特色角色、学习路径和自定义频道（播放列表），这属于 Pluralsight 培训权益的一部分。 特色内容由 Microsoft 和 Pluralsight 特别策划，非常适合学习相关的重要领域。 通过 Visual Studio 订阅门户 <https://my.visualstudio.com/benefits> 激活 Pluralsight 权益，获得在 Pluralsight 主页上访问此内容以及其他内容的权限。
 
 ### <a name="q-what-happens-when-my-pluralsight-subscription-runs-out"></a>问：Pluralsight 订阅到期后，会发生什么情况？
 答：免费 Pluralsight 订阅到期后，可选择直接从 Pluralsight 购买订阅。  请联系 [Pluralsight](https://www.pluralsight.com) 获取完整详细信息。

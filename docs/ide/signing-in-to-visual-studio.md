@@ -2,7 +2,7 @@
 title: 登录 Visual Studio
 titleSuffix: ''
 ms.custom: seodec18
-ms.date: 03/10/2020
+ms.date: 07/24/2020
 ms.topic: conceptual
 ms.assetid: b9531c25-e4cf-43ae-b331-a9f31a8cd171
 author: ornellaalt
@@ -10,12 +10,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 85d4be9ffd8d1f5ccc6c6d1a1ba5f83e7f0fccf6
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 4d6bf69050348cbe078cfdf7ae2d419f1dd13745
+ms.sourcegitcommit: 9a7fb8556a5f3dbb4459122fefc7e7a8dfda753a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85285291"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87235194"
 ---
 # <a name="sign-in-to-visual-studio"></a>登录 Visual Studio
 
@@ -38,7 +38,7 @@ ms.locfileid: "85285291"
 以下是登录后可体验的内容及可执行的操作的完整列表：
 - **延长 Visual Studio 试用期** - 可将 Visual Studio Professional 或 Visual Studio Enterprise 的使用延长 90 天，而不会限定为 30 天试用期。 有关详细信息，请参阅[延长试用版期限或更新许可证](../ide/how-to-unlock-visual-studio.md)。
 
-- **解锁 Visual Studio Community Edition** - 如果 Community Edition 安装提示需要许可证，请登录 IDE 自行解锁。
+- 继续使用 Visual Studio Community Edition - 如果 Community Edition 安装提示需要提供许可证，请登录 IDE 以继续免费使用 Visual Studio Community 。 
 
 - 如果使用与 Microsoft Visual Studio 订阅或 Azure DevOps 组织相关联的帐户，解锁 Visual Studio。 有关详细说明，请参阅[延长试用版期限或更新许可证](../ide/how-to-unlock-visual-studio.md)。
 

@@ -6,12 +6,12 @@ manager: lank
 ms.date: 04/20/2020
 ms.topic: conceptual
 description: 了解管理员如何将特定订阅 GUID 分配给订阅者
-ms.openlocfilehash: e2e8cd4f5d07f218fc23c0b7b6f28ababc25263f
-ms.sourcegitcommit: 0b8497b720eb06bed8ce2194731177161b65eb84
+ms.openlocfilehash: e6c50239721d810964f2b95e0ec3509999d2f4d5
+ms.sourcegitcommit: 9a7fb8556a5f3dbb4459122fefc7e7a8dfda753a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82072588"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87235181"
 ---
 # <a name="assign-specific-subscriptions-in-the-visual-studio-subscriptions-administration-portal"></a>在 Visual Studio 订阅管理门户中分配特定订阅
 
@@ -32,7 +32,7 @@ ms.locfileid: "82072588"
 1. 登录[管理门户](https://manage.visualstudio.com)。
 2. 选择“导出”选项卡，文件将下载到本地计算机  。 该文件将包含用户订阅所在的协议名称以及导出日期。
 > [!div class="mx-imgBorder"]
-> ![导出订阅者](_img/exporting-subscriptions/exporting-subscriptions.png)
+> ![导出订阅者](_img/exporting-subscriptions/exporting-subscriptions.png "单击“导出”以保存包含订阅者信息的已分配订阅的列表。")
 
 ### <a name="identify-the-guids-you-want-to-assign"></a>确定要分配的 GUID
 

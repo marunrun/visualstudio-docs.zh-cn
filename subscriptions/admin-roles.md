@@ -7,12 +7,12 @@ ms.assetid: 6601c395-f778-48c1-ab76-cf454b9193e4
 ms.date: 04/07/2020
 ms.topic: conceptual
 description: 了解超级管理员和管理员角色以及如何分配管理员。
-ms.openlocfilehash: 234153dcb8dd06b33ab7aac78e587439684963f9
-ms.sourcegitcommit: 1f7aed335c48215dff5c151f76f22e3f10e8b564
+ms.openlocfilehash: d77ad470395d1ae341a3bc0835d18a4023b9760c
+ms.sourcegitcommit: 9a7fb8556a5f3dbb4459122fefc7e7a8dfda753a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80808374"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234622"
 ---
 # <a name="super-admins-and-administrators-for-visual-studio-subscription-agreements"></a>Visual Studio 订阅协议的超级管理员和管理员
 
@@ -30,10 +30,10 @@ ms.locfileid: "80808374"
 2. 单击标有“管理管理员”的选项卡  。
 3. 单击 **添加**。
    > [!div class="mx-imgBorder"]
-   > ![添加管理员](_img/admin-roles/add-admins.png)
+   > ![添加管理员](_img/admin-roles/add-admins.png "单击“管理管理员”边栏选项卡，然后单击“添加”以分配新管理员。")
 4. 使用新管理员的信息完成表单。  
    > [!div class="mx-imgBorder"]
-   > ![“添加管理员”窗体](_img/admin-roles/add-form.png)
+   > ![“添加管理员”窗体](_img/admin-roles/add-form.png "输入新管理员的登录信息，并选择是否将其设置为超级管理员。然后单击“添加”。")
 
    > [!NOTE]
    > 如果希望此管理员能够分配其他管理员，请记得选中“超级管理员”框  。

@@ -7,12 +7,12 @@ ms.assetid: 0fe9eaa4-f589-429e-a443-13bf86637d5a
 ms.date: 03/17/2020
 ms.topic: conceptual
 description: 了解如何在管理门户中设置语言、联系人、订阅级别等的首选项
-ms.openlocfilehash: b719e60771ef8cca9b956626ca6e9e3dd91edce5
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: e34b9cf1ed32abc81b9c2ebb3ef7c370818c9089
+ms.sourcegitcommit: 9a7fb8556a5f3dbb4459122fefc7e7a8dfda753a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84183491"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234609"
 ---
 # <a name="set-preferences-for-your-agreements-in-the-administration-portal"></a>在管理门户中设置协议的首选项
 超级管理员可以在管理门户中设置某些首选项，这些首选项将全局应用于每个协议。  这些首选项将在管理员添加订阅者时为管理员自动填充订阅详细信息，并且只能由超级管理员进行全局修改。  
@@ -24,13 +24,13 @@ ms.locfileid: "84183491"
 1. 请使用具有超级管理员权限的 ID 登录管理门户。
 2. 单击“管理管理员”选项卡。
    > [!div class="mx-imgBorder"]
-   > ![“管理员首选项”按钮](_img/admin-prefs/admin-prefs-button.png)
+   > ![“管理员首选项”按钮](_img/admin-prefs/admin-prefs-button.png "依次单击“管理管理员”和“协议首选项”以显示首选项")
 
 3. 单击“协议首选项”。
 右侧将打开一个面板，显示可用的首选项。 
 
    > [!div class="mx-imgBorder"]
-   > ![管理员首选项浮出控件对话框](_img/admin-prefs/admin-prefs-flyout.png)
+   > ![管理员首选项浮出控件对话框](_img/admin-prefs/admin-prefs-flyout.png "设置首选项，然后单击“保存”")
 
 ## <a name="set-your-preferences"></a>设置首选项
 下面介绍每个可用的首选项及其效果。 
@@ -86,6 +86,3 @@ ms.locfileid: "84183491"
 - [分配多个订阅](assign-license-bulk.md)
 - [编辑订阅](edit-license.md)
 - [确定最大使用量](maximum-usage.md)
-
-
-

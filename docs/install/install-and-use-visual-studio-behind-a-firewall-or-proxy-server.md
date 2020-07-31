@@ -17,12 +17,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: ce11689cc8cba45473a918668a07ddcc6cdc2ee3
-ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
+ms.openlocfilehash: 05f2984f135ef363d1a5acfb55f4705404f4ea7d
+ms.sourcegitcommit: c620d59578db1b89f80e64ae04b4898bc4ab292d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86387156"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87375854"
 ---
 # <a name="install-and-use-visual-studio-and-azure-services-behind-a-firewall-or-proxy-server"></a>在防火墙或代理服务器后面安装和使用 Visual Studio 和 Azure 服务
 
@@ -123,7 +123,7 @@ ms.locfileid: "86387156"
 | Cordova | npmjs.org<br>gradle.org | http/80 &<br/>https/443 | HTTP 用于在生成期间下载 Gradle；HTTP 用于包含项目中的 Cordova 插件 |
 | Cloud Explorer | 1. &#60;clusterendpoint&#62; <br>Service Fabric <br>2. &#60;management endpoint&#62;<br>常规 Cloud Exp <br>3. &#60;graph endpoint&#62;<br>常规 Cloud Exp<br>4. &#60;storage account endpoint&#62;<br>存储节点 <br>5. &#60;Azure portal URLs&#62;<br>常规 Cloud Exp <br>6. &#60;key vault endpoints&#62; <br>Azure 资源管理器 VM 节点<br>7. &#60;PublicIPAddressOfCluster&#62;<br>Service Fabric 远程调试和 ETW 跟踪 | <br>1. https/19080<br>2. https/443<br>3. https/443<br>4. https/443<br>5. https/443<br>6. https/443<br>7. tcp/dynamic | 1.示例：test12.eastus.cloudapp.com<br>2.检索订阅并检索/管理 Azure 资源<br>3.检索 Azure Stack 订阅<br>4.管理存储资源（示例：mystorageaccount.blob.core.windows.net）<br>5.“在门户中打开”上下文菜单选项（在 Azure 门户中打开资源）<br>6.创建并使用 Key Vault 进行 VM 调试（示例：myvault.vault.azure.net） <br><br>7.基于群集中的节点数和可用端口动态分配端口块。 <br><br>一个端口块将尝试获取至少 10 个端口的 3 倍数量的节点。<br><br>对于流式处理跟踪，将尝试从 810 获取端口块。 如果任何端口块都已被使用，则尝试获取下一个端口块，依次类推。 （如果负载均衡器为空，则很可能使用来自 810 的端口） <br><br>对于调试是同样道理，将保留四个端口块集： <br>- connectorPort:30398, <br>- forwarderPort:31398, <br>- forwarderPortx86:31399,<br>- fileUploadPort:32398<br> |
 | 云服务 | 1.RDP<br><br>2. core.windows.net <br><br>3.  management.azure.com<br> management.core.windows.net <br><br>4. &#42;.blob.core.windows.net <br>&#42;.queue.core.windows.net<br>&#42;.table.core.windows.net <br><br>5. portal.azure.com <br><br>6. &#60;user's cloud service&#62;.cloudapp.net <br> &#60;user's VM&#62;.&#60;region&#62;.azure.com | 1. rdp/3389 <br><br> 2. https/443 <br><br> 3. https/443 <br><br> 4. https/443 <br><br> 5. https/443 <br><br>6. tcp <br>a) 30398 <br>b) 30400 <br>c) 31398 <br>d) 31400 <br>e) 32398 <br>f) 32400 | 1.云服务 VM 的远程桌面 <br><br> 2.专用诊断配置的存储帐户组件 <br><br> 3.Azure 门户 <br><br> 4.服务器资源管理器 - Azure 存储  &#42; 为客户命名的存储帐户  <br><br> 5.用于打开门户的链接 &#47;下载订阅证书 &#47;发布设置文件 <br><br>6. a)  用于云服务和 VM 远程调试的连接器本地端口<br> 6. b)  用于云服务和 VM 远程调试的连接器公用端口 <br> 6. c)  用于云服务和 VM 远程调试的转发器本地端口 <br> 6. d) 用于云服务和 VM 远程调试的转发器公用端口  <br> 6. e) 用于云服务和 VM 远程调试的文件上传程序本地端口 <br> 6. f) 用于云服务和 VM 远程调试的文件上传程序公用端口 |
-| Service Fabric | 1. <br>ocs.Microsoft.com<br>aka.ms <br>go.microsoft.com <br><br>2. <br>vssftools.blob.core.windows.net <br>Vault.azure.com <br>Portal.azure.com <br><br> 3. &#42; vault.azure.net<br><br> 4. <br>app.vsaex.visualstudio.com<br>&#42; .vsspsext.visualstudio.com<br>clouds.vsrm.visualstudio.com <br>clouds.visualstudio.com<br>app.vssps.visualstudio.com <br>&#42; .visualstudio.com | https/443 | 1.文档 <br><br> 2.创建群集功能 <br><br>3.&#42; 为 Azure Key Vault 名称（示例：test11220180112110108.vault.azure.net）  <br><br>  4.&#42; 为动态（示例：vsspsextprodch1su1.vsspsext.visualstudio.com） |
+| Service Fabric | 1. <br>docs.Microsoft.com<br>aka.ms <br>go.microsoft.com <br><br>2. <br>vssftools.blob.core.windows.net <br>Vault.azure.com <br>Portal.azure.com <br><br> 3. &#42; vault.azure.net<br><br> 4. <br>app.vsaex.visualstudio.com<br>&#42; .vsspsext.visualstudio.com<br>clouds.vsrm.visualstudio.com <br>clouds.visualstudio.com<br>app.vssps.visualstudio.com <br>&#42; .visualstudio.com | https/443 | 1.文档 <br><br> 2.创建群集功能 <br><br>3.&#42; 为 Azure Key Vault 名称（示例：test11220180112110108.vault.azure.net）  <br><br>  4.&#42; 为动态（示例：vsspsextprodch1su1.vsspsext.visualstudio.com） |
 | 快照 <br>调试器 | 1. go.microsoft.com <br>2. management.azure.com <br> 3. &#42;.azurewebsites.net <br> 4. &#42;.scm.azurewebsites.net<br>5. api.nuget.org/v3/index.json <br>6.远程服务/服务器 IP 地址/FQDN | 1. https/443 <br>2. https/443  <br>3. http/80 <br>4. https/443 <br>5. https/443 <br>6.Concord/<br> 4022（Visual Studio 从属版本） | 1.查询 .json 文件的应用服务 SKU 大小 <br>2.各种 Azure RM 调用 <br>3.站点预热调用渠道  <br>4.客户的目标应用服务 Kudu 终结点 <br>5.查询 nuget.org 中发布的站点扩展版本 <br>6.[远程调试](../debugger/remote-debugging.md) |
 | Azure 流分析 <br><br>HDInsight | Management.azure.com | https/443 | 用于查看、提交、运行和管理 ASA 作业 <br><br> 用于浏览 HDI 群集，以及提交、诊断和调试 HDI 作业 |
 | Azure Data Lake | &#42;.azuredatalakestore.net <br>&#42;.azuredatalakeanalytics.net | https/443 | 用于编译、提交、查看、诊断和调试作业；用于浏览 ADLS 文件；用于上传和下载文件 |
