@@ -8,16 +8,17 @@ f1_keywords:
 - VS.XamlEditor
 - VS.DocumentOutline
 - Blend.Start.Dev12
+ms.devlang: CSharp
 ms.assetid: c54969a7-d75a-4a35-9b37-af7a596a7c24
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 31a31e413ecd39b7d15f8ea3cd0417c2493463ca
-ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
+ms.openlocfilehash: f8579a4e8088dc0fc6e7403da7f0371e46f2c928
+ms.sourcegitcommit: e359b93c93c6ca316c0d8b86c2b6e566171fd1ea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "82921351"
+ms.lasthandoff: 08/01/2020
+ms.locfileid: "87507958"
 ---
 # <a name="create-a-ui-by-using-xaml-designer"></a>使用 XAML 设计器创建 UI
 
@@ -122,8 +123,8 @@ Visual Studio 中的“文档大纲”窗口类似于 Blend for Visual Studio �
 
 - [创建动画](animate-objects-in-xaml-designer.md)（仅 Blend for Visual Studio）。
 
-若要在 Visual Studio 中查看 "文档大纲" 窗口，请在菜单栏上选择 "**查看** > **其他窗口** > **文档大纲**"。
-若要查看 Blend for Visual Studio 中的 "对象和时间线" 窗口，请在菜单栏上选择 "**查看** > **文档大纲**"。
+若要在 Visual Studio 中查看 "文档大纲" 窗口，请在菜单栏上选择 "**查看**  >  **其他窗口**  >  **文档大纲**"。
+若要查看 Blend for Visual Studio 中的 "对象和时间线" 窗口，请在菜单栏上选择 "**查看**  >  **文档大纲**"。
 
 ![Visual Studio 中的“文档大纲”窗口](media/document-outline-window.png)
 
@@ -131,11 +132,11 @@ Visual Studio 中的“文档大纲”窗口类似于 Blend for Visual Studio �
 
 **显示/隐藏**
 
-显示或隐藏美工板元素。 显示时显示为眼睛符号。 还可以按**ctrl**+**h**隐藏元素，按**Shift**+**ctrl**+**h**显示元素。
+显示或隐藏美工板元素。 显示时显示为眼睛符号。 还可以按**ctrl** + **h**隐藏元素，按**Shift** + **ctrl** + **h**显示元素。
 
 **锁定/解锁**
 
-锁定或解锁美工板元素。 不能修改已锁定的元素。 锁定时显示为挂锁符号。 还可以按**ctrl**+**+ 来锁定**某个元素，按住**Shift**+**Ctrl**+**L**并将其解锁。
+锁定或解锁美工板元素。 不能修改已锁定的元素。 锁定时显示为挂锁符号。 还可以按**ctrl** + **+** 来锁定某个元素，按住**Shift**并 + **Ctrl** + **L**将其解锁。
 
 **返回到 pageRoot 范围**
 
@@ -143,7 +144,7 @@ Visual Studio 中的“文档大纲”窗口类似于 Blend for Visual Studio �
 
 ## <a name="properties-window"></a>“属性”窗口
 
-"**属性**" 窗口可用于设置控件的属性值。 如下所示：
+"**属性**" 窗口可用于设置控件的属性值。 它的外观如下所示：
 
 ![“属性”窗口](media/xaml-designer-properties-window.png)
 
