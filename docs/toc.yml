@@ -42,6 +42,8 @@
       items:
         - name: 概述
           href: install/visual-studio-administrator-guide.md
+        - name: Visual Studio Enterprise 指南
+          href: install/visual-studio-enterprise-guide.md
         - name: 使用命令行
           items:
             - name: 使用命令行参数安装 Visual Studio
