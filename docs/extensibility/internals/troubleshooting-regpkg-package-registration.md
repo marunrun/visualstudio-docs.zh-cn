@@ -36,6 +36,6 @@ ms.locfileid: "87234856"
 
    RegPkg 的早期版本可以注册使用 Microsoft.VisualStudio.Shell.dll 程序集生成的包。 但是，它无法注册使用该程序集的更高版本生成的包。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [VSPackages](../../extensibility/internals/vspackages.md)
-- [Visual Studio 疑难解答](/troubleshoot/visualstudio/welcome-visual-studio/)
+- [Visual Studio 故障排除](/troubleshoot/visualstudio/welcome-visual-studio/)

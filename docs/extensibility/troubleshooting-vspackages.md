@@ -123,6 +123,6 @@ ms.locfileid: "87235025"
 
    请确保 InprocServer32 项具有 VSPackage dll 的正确路径。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [VSPackages](../extensibility/internals/vspackages.md)
-- [Visual Studio 疑难解答](/troubleshoot/visualstudio/welcome-visual-studio/)
+- [Visual Studio 故障排除](/troubleshoot/visualstudio/welcome-visual-studio/)
