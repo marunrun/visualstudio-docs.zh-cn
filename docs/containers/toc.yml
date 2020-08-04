@@ -11,8 +11,6 @@
           href: container-tools.md
         - name: 容器中的 React.js 单页应用
           href: container-tools-react.md
-        - name: Kubernetes 开发
-          href: local-process-kubernetes.md
     - name: 教程
       expanded: true
       items:
@@ -54,3 +52,5 @@
       href: local-process-kubernetes.md
     - name: Local Process with Kubernetes 的工作原理（预览版）
       href: overview-local-process-kubernetes.md
+    - name: 配置 Local Process with Kubernetes
+      href: configure-local-process-with-kubernetes.md
