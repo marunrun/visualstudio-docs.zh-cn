@@ -11,12 +11,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: cb1d5196874956d54c01504288a4d948b12abea8
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: e8a12c16c4c53ab2d0850bf5b768488160fa729a
+ms.sourcegitcommit: b8ec700fc4c14c68c6ce280f29c19870261990d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85283562"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87453691"
 ---
 # <a name="tutorial-create-an-aspnet-core-app-with-typescript-in-visual-studio"></a>教程：在 Visual Studio 中使用 TypeScript 创建 ASP.NET Core 应用
 
@@ -91,9 +91,6 @@ Visual Studio 管理项目中的单个应用程序的文件。 该项目包括�
    ![添加 NuGet 包](../javascript/media/aspnet-core-ts-nuget.png)
 
    Visual Studio 会将 NuGet 包添加到解决方案资源管理器中的“依赖项”节点下。
-
-   > [!NOTE]
-   > 本教程需要 NuGet 包。 或者，在你自己的应用中，你可能想要使用 [TypeScript npm 包](https://www.npmjs.com/package/typescript)。
 
 1. 右键单击项目节点，然后选择“添加”>“新项”。 选择“TypeScript JSON 配置文件”，然后单击“添加”。
 
