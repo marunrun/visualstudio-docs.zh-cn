@@ -26,18 +26,26 @@
       href: publish-nodejs-app-azure.md
 - name: 操作指南
   items:
-    - name: 编写和编辑代码
-      href: write-and-edit-code.md
-    - name: 创建 Vue.js 应用程序
-      href: create-application-with-vuejs.md
+    - name: 编辑器
+      items:
+        - name: 编写和编辑代码
+          href: write-and-edit-code.md
+        - name: JavaScript IntelliSense
+          href: /visualstudio/ide/javascript-intellisense?toc=/visualstudio/javascript/toc.json
+    - name: 生成
+      items:
+        - name: 使用 tsc 编译 TypeScript 代码
+          href: compile-typescript-code-npm.md
+        - name: 使用 NuGet 编译 TypeScript 代码
+          href: compile-typescript-code-nuget.md
     - name: 管理 npm 包
       href: npm-package-management.md
     - name: 不使用项目或解决方案而进行开发（“打开文件夹”）
       href: develop-javascript-code-without-solutions-projects.md
+    - name: 创建 Vue.js 应用程序
+      href: create-application-with-vuejs.md
     - name: 使用 Node.js 交互式 REPL
       href: nodejs-interactive-repl.md
-    - name: JavaScript IntelliSense
-      href: /visualstudio/ide/javascript-intellisense?toc=/visualstudio/javascript/toc.json
     - name: 调试
       href: debug-nodejs.md
     - name: 单元测试
