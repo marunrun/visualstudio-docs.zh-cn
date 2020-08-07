@@ -2,17 +2,17 @@
 title: 下载 Visual Studio 订阅中的软件标题 | Microsoft Docs
 author: evanwindom
 ms.author: lank
-manager: lank
+manager: cabuschl
 ms.assetid: e2f2619c-7736-47e5-a066-5940d5994db9
-ms.date: 03/07/2020
+ms.date: 07/29/2020
 ms.topic: conceptual
 description: 了解如何在 Visual Studio 订阅中查找和下载 Microsoft 软件标题
-ms.openlocfilehash: 5b21a87f0dc84189381f63274343f5fd7a384c5c
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: bf2afafc99993b2b3717f0264fee89b747eab58a
+ms.sourcegitcommit: b8ce85a6d9c7fcceaad0fba625202f5ecf8f368c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84180228"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87434289"
 ---
 # <a name="downloading-software-titles-in-visual-studio-subscriptions"></a>下载 Visual Studio 订阅中的软件标题
 根据你所订阅的 Visual Studio，你可以获得各种各样的 Microsoft 软件标题。  本文将概述如何查找和下载所需的软件，以便最大限度地利用订阅。 
@@ -27,11 +27,11 @@ ms.locfileid: "84180228"
 ## <a name="how-do-i-find-downloads-in-the-subscriber-portal"></a>如何在订阅者门户中找到下载内容？
 访问[下载](https://my.visualstudio.com/downloads/featured?wt.mc_id=o~msft~docs)页时，可以看到按产品类型分组的热门下载。  可以在所示的热门下载中选择一项产品，也可以使用页面顶部的搜索栏搜索任何产品。
 > [!div class="mx-imgBorder"]
-> ![订阅者下载页](_img/subscriber-downloads/subscriber-downloads-resized.png)
+> ![订阅者下载页](_img/subscriber-downloads/subscriber-downloads-resized.png "当你单击“下载”边栏选项卡时，将显示最热门的下载内容。")
 
 例如，如果从“开发人员工具”列表中选择“Visual Studio 2019”，则可以看到可用的 Visual Studio 2019 下载列表。
 > [!div class="mx-imgBorder"]
-> ![Visual Studio 2019 下载](_img/subscriber-downloads/vs2019-product-list.png)
+> ![Visual Studio 2019 下载](_img/subscriber-downloads/vs2019-product-list.png "当你选择一个产品时，将显示可用版本的列表。")
 
 使用可用的下拉菜单，可轻松选择体系结构、语言和文件类型。 选择首选选项，然后单击“下载”开始下载产品。
 
@@ -41,16 +41,16 @@ ms.locfileid: "84180228"
 ### <a name="displaying-download-details"></a>显示下载详细信息
 单击产品名称或“信息”链接后会显示有关下载的详细信息，并提供产品发行说明的访问权限。
 > [!div class="mx-imgBorder"]
-> ![Visual Studio 2019 下载详细信息](_img/subscriber-downloads/vs2019-info.png)
+> ![Visual Studio 2019 下载详细信息](_img/subscriber-downloads/vs2019-info.png "“信息”选项卡显示有关下载的信息，并提供发行说明的相关信息。")
 
 在“详细信息”窗格中，也可以单击“密钥”选项卡查看产品密钥的状态。
 > [!div class="mx-imgBorder"]
-> ![Visual Studio 2019 产品密钥](_img/subscriber-downloads/vs2019-keys.png)
+> ![Visual Studio 2019 产品密钥](_img/subscriber-downloads/vs2019-keys.png "“密钥”选项卡显示剩余的密钥数，并允许声明可用密钥。")
 
 ### <a name="obtaining-product-keys"></a>获取产品密钥
 若要获取下载内容的产品密钥，可单击带有“获取密钥”标记的蓝色密钥，或者如果已在查看“详细信息”窗格，单击“密钥”选项卡上的“索取密钥”。  
 > [!div class="mx-imgBorder"]
-> ![Visual Studio 2019 声明产品密钥](_img/subscriber-downloads/vs2019-claim-keys.png)
+> ![Visual Studio 2019 声明产品密钥](_img/subscriber-downloads/vs2019-claim-keys.png "单击“声明密钥”可以声明剩余的密钥。")
 
 ## <a name="see-also"></a>请参阅
 - [Visual Studio 文档](https://docs.microsoft.com/visualstudio/)
@@ -67,7 +67,3 @@ ms.locfileid: "84180228"
 - [Azure 开发测试个人额度](vs-azure.md)
 - [Azure DevOps](vs-azure-devops.md)
 - [Visual Studio IDE](vs-ide-benefit.md)
-
-
-
-

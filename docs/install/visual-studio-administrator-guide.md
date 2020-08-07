@@ -2,7 +2,7 @@
 title: Visual Studio 管理员指南
 titleSuffix: ''
 description: 详细了解如何在企业环境中部署 Visual Studio。
-ms.date: 03/09/2020
+ms.date: 07/29/2020
 ms.custom: seodec18
 ms.topic: overview
 helpviewer_keywords:
@@ -17,12 +17,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 70eb53c2e2a1625f167844d1e774915fdb1304ac
-ms.sourcegitcommit: 9e15138a34532b222e80f6b42b1a9de7b2fe0175
+ms.openlocfilehash: db1e57097b492a8847be6d96719054a6b917e4bd
+ms.sourcegitcommit: dda98068c0f62ccd1a19fdfde4bdb822428d0125
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85419258"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87425402"
 ---
 # <a name="visual-studio-administrator-guide"></a>Visual Studio 管理员指南
 
@@ -40,13 +40,17 @@ ms.locfileid: "85419258"
 
 * 确定服务需求。
 
-  如果公司需要继续使用某一功能集，但仍想获取常规维护更新，请计划使用维护基线。 有关详细信息，请参阅 [Visual Studio 产品生命周期和维护](/visualstudio/releases/2019/servicing#support-options-for-enterprise-and-professional-customers)页面的“Enterprise 和 Professional 客户的支持选项”部分以及[如何：在维修基线上更新 Visual Studio](update-servicing-baseline.md) 页面。
+  如果公司需要继续使用某一功能集，但仍想获取常规维护更新，请计划使用维护基线。 有关详细信息，请参阅 [Visual Studio 产品生命周期和维护](/visualstudio/releases/2019/servicing#support-options-for-enterprise-and-professional-customers)页面以及[在维修基线上更新 Visual Studio](update-servicing-baseline.md)页面的“Enterprise 和 Professional 客户的支持选项”部分。
 
   如果打算应用维护更新及累积功能更新，可选择最新的位数。
 
 * 确定更新模型。
 
   希望单个客户端计算机在哪里获得更新？ 具体而言，确定是想要从 Internet 还是从公司范围的本地共享获取更新。 接下来，如果选择使用本地共享，确定是单个用户可以自行更新客户端，还是需要管理员以编程方式更新客户端。
+
+  可以使用最新的产品更新来更新 Visual Studio 的网络安装布局，以便将它用作 Visual Studio 最新更新的安装点，同时还可用于维护已部署到客户端工作站的安装。 有关详细信息，请参阅[更新 Visual Studio 的网络安装](../install/update-a-network-installation-of-visual-studio.md)。
+
+  对于未连接到 Internet 的计算机，创建最小布局是更新脱机 Visual Studio 实例的最简单、最快捷的方法。 有关详细信息，请参阅[使用最小脱机布局更新 Visual Studio](update-minimal-layout.md)。
 
 * 确定公司所需的[工作负载和组件](workload-and-component-ids.md?view=vs-2019)。
 
@@ -62,13 +66,17 @@ ms.locfileid: "85419258"
 
 * 确定服务需求。
 
-  如果公司需要继续使用某一功能集，但仍想获取常规维护更新，请计划使用维护基线。 有关详细信息，请参阅 [Visual Studio 产品生命周期和维护](/visualstudio/releases/2019/servicing#support-for-older-versions-of-visual-studio)页面的“对较旧版本的 Visual Studio 的支持”部分以及[如何：在维修基线上更新 Visual Studio](update-servicing-baseline.md) 页面。
+  如果公司需要继续使用某一功能集，但仍想获取常规维护更新，请计划使用维护基线。 有关详细信息，请参阅 [Visual Studio 产品生命周期和维护](/visualstudio/releases/2019/servicing#support-for-older-versions-of-visual-studio)页面以及[在维修基线上更新 Visual Studio](update-servicing-baseline.md) 页面的“对较旧版本的 Visual Studio 的支持”部分。
 
   如果打算应用维护更新及累积功能更新，可选择最新的位数。
 
 * 确定更新模型。
 
   希望单个客户端计算机在哪里获得更新？ 具体而言，确定是想要从 Internet 还是从公司范围的本地共享获取更新。 接下来，如果选择使用本地共享，确定是单个用户可以自行更新客户端，还是需要管理员以编程方式更新客户端。
+
+  可以使用最新的产品更新来更新 Visual Studio 的网络安装布局，以便将它用作 Visual Studio 最新更新的安装点，同时还可用于维护已部署到客户端工作站的安装。 有关详细信息，请参阅[更新 Visual Studio 的网络安装](../install/update-a-network-installation-of-visual-studio.md)。
+
+  对于未连接到 Internet 的计算机，创建最小布局是更新脱机 Visual Studio 实例的最简单、最快捷的方法。 有关详细信息，请参阅[使用最小脱机布局更新 Visual Studio](update-minimal-layout.md)。
 
 * 确定公司所需的[工作负载和组件](workload-and-component-ids.md?view=vs-2017)。
 

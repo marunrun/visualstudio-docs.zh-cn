@@ -7,12 +7,12 @@ ms.assetid: e49242bc-e9f2-49e8-8caa-f574d508aba6
 ms.date: 06/16/2020
 ms.topic: how-to
 description: 了解管理员如何删除订阅分配
-ms.openlocfilehash: e6ce84aa84e25bcdeb44b93954289a65a3454010
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.openlocfilehash: 4f952f574132afbd405c82c75fcddfc952bffb48
+ms.sourcegitcommit: b8ce85a6d9c7fcceaad0fba625202f5ecf8f368c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902908"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87434266"
 ---
 # <a name="delete-assignments-in-visual-studio-subscriptions"></a>删除 Visual Studio 订阅中的分配
 当订阅者不再需要 Visual Studio 订阅时，比如当他们离开公司、完成项目或转换为新的作业角色时，你可以删除他们的订阅，并将订阅分配给其他人。 请注意，重新分配订阅时，并非所有订阅者权益都将重置。  新用户将能够认领任何无人认领的密钥并查看以前认领过的密钥，但认领限制**不**会重置。  组织若具有企业协议 (EA)，将重置供原始用户使用的任何权益（如 Pluralsight 培训）。 
@@ -24,7 +24,7 @@ ms.locfileid: "85902908"
 2. 若要删除所选订阅者，请单击“删除”。
 3. 出现要求确认删除的消息时，单击“确定”。
    > [!div class="mx-imgBorder"]
-   > ![删除订阅者](_img/delete-license/delete-subscribers.png)
+   > ![删除订阅者](_img/delete-license/delete-subscribers.png "选择要删除的用户，然后单击“删除”。可以使用 CTRL 和 Shift 键来选择多个订阅者。")
 
    > [!NOTE]
    > 使用模板进行批量删除的功能不可用。 对于通过 Azure Active Directory 安全组来管理订阅分配的组织，请参阅[我们的文章](assign-license-bulk.md#use-azure-active-directory-groups-to-assign-subscriptions)，详细了解如何进行删除。  

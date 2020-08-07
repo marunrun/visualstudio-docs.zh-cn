@@ -1,7 +1,7 @@
 ---
 title: 更改日志（Visual Studio Tools for Unity、Windows）| Microsoft Docs
 ms.custom: ''
-ms.date: 5/19/2020
+ms.date: 7/30/2020
 ms.technology: vs-unity-tools
 ms.topic: conceptual
 ms.assetid: ea490b7e-fc0d-44b1-858a-a725ce20e396
@@ -10,16 +10,76 @@ ms.author: johmil
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: cc1cbc98d4612c8f480cca0a9469d4a56da10bb3
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 2a069753040be65f963c1047ef376bef653bfbc1
+ms.sourcegitcommit: 43df639b2cd99200f725a8ebb941477481a6f0ff
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84184778"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87471514"
 ---
 # <a name="change-log-visual-studio-tools-for-unity-windows"></a>更改日志（Visual Studio Tools for Unity、Windows）
 
 Visual Studio Tools for Unity 更改日志。
+
+## <a name="4710"></a>4.7.1.0
+发布日期：2020 年 8 月 5 日
+
+### <a name="new-features"></a>新增功能
+
+- **集成：**
+
+  - 向默认模板添加了命名空间支持。
+  
+  - 已将 Unity 消息 API 更新为 2019.4。
+
+  - 为 `CA1823` 添加了 [`USP0013`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0013.md) 抑制器。 不应将具有 `SerializeField` 或 `SerializeReference` 属性的专用字段标记为未使用 (FxCop)。
+  
+  - 为 `CA1822` 添加了 [`USP0014`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0014.md) 抑制器。 不应将 Unity 消息标记为 `static` 修饰符的候选项 (FxCop)。
+
+  - 为 `CA1801` 添加了 [`USP0015`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0015.md) 抑制器。 不应从 Unity 消息中删除未使用的参数 (FxCop)。
+  
+  - 添加了对 [`USP0009`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0009.md) 抑制器的 MenuItem 支持。  
+
+### <a name="bug-fixes"></a>Bug 修复
+
+- **集成：**
+
+  - 修复了 [`USP0001`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0001.md) 和 [`USP0002`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0002.md) 抑制器不能使用额外的括号或方法参数的问题。
+  
+  - 修复了即使在 Unity 设置中禁用自动刷新时也必须刷新资产数据库的问题。
+
+## <a name="4700"></a>4.7.0.0
+发布日期：2020 年 6 月 23 日
+
+### <a name="new-features"></a>新增功能
+
+- **集成：**
+
+  - 添加了在 Unity 重新生成解决方案和项目时对持久性解决方案文件夹的支持。
+
+  - 添加了 [`UNT0015`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0015.md) 诊断。 使用 `InitializeOnLoadMethod` 或 `RuntimeInitializeOnLoadMethod` 属性检测不正确的方法签名。
+
+  - 添加了 [`UNT0016`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0016.md) 诊断。 使用 `Invoke`、`InvokeRepeating`、`StartCoroutine` 或 `StopCoroutine` 时，如果第一个参数是字符串文本，那么就不是类型安全的。
+
+  - 添加了 [`UNT0017`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0017.md) 诊断。 `SetPixels` 调用速度缓慢。
+
+  - 添加了对着色器文件的块注释和缩进的支持。
+
+### <a name="bug-fixes"></a>Bug 修复
+
+- **集成：**
+
+  - 在 Unity 消息向导中筛选消息时，不要重置选择。
+  
+  - 打开 Unity API 文档时，始终使用默认浏览器。
+  
+  - 修复了 [`USP0004`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0004.md)、[`USP0006`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0006.md) 和 [`USP0007`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0007.md) 抑制器的以下规则：为所有使用 SerializeField 属性装饰的字段禁止 `IDE0044`（只读），`IDE0051`（未使用）、`CS0649`（从未指定）。 为扩展 `Unity.Object` 的所有类型的公共字段禁止 `CS0649`（从未指定）。
+
+  - 修复了 [`UNT0014`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0014.md) 诊断的泛型类型参数检查。
+
+- **评估版：**
+
+  - 修复了与枚举的相等比较。
 
 ## <a name="4610"></a>4.6.1.0
 发布日期：2020 年 5 月 19 日
@@ -43,19 +103,19 @@ Visual Studio Tools for Unity 更改日志。
 
   - 添加了对 CodeLens（Unity 脚本和消息）的支持。
   
-  - 添加了 [`UNT0012`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/UNT0012.md) 诊断。 在 `StartCoroutine()` 中检测并包装对协同例程的调用。
+  - 添加了 [`UNT0012`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0012.md) 诊断。 在 `StartCoroutine()` 中检测并包装对协同例程的调用。
 
-  - 添加了 [`UNT0013`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/UNT0013.md) 诊断。 检测并删除无效或冗余的 `SerializeField` 属性。
+  - 添加了 [`UNT0013`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0013.md) 诊断。 检测并删除无效或冗余的 `SerializeField` 属性。
 
-  - 添加了 [`UNT0014`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/UNT0014.md) 诊断。 检测用非组件或非接口类型调用的 `GetComponent()`。
+  - 添加了 [`UNT0014`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0014.md) 诊断。 检测用非组件或非接口类型调用的 `GetComponent()`。
   
-  - 为 `IDE0051` 添加了 [`USP0009`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/USP0009.md) 抑制器。 请勿将具有 `ContextMenu` 属性的方法或由具有 `ContextMenuItem` 属性的字段引用的方法标记为未使用。
+  - 为 `IDE0051` 添加了 [`USP0009`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0009.md) 抑制器。 请勿将具有 `ContextMenu` 属性的方法或由具有 `ContextMenuItem` 属性的字段引用的方法标记为未使用。
 
-  - 为 `IDE0051` 添加了 [`USP0010`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/USP0010.md) 抑制器。 请勿将具有 `ContextMenuItem` 属性的字段标记为未使用。
+  - 为 `IDE0051` 添加了 [`USP0010`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0010.md) 抑制器。 请勿将具有 `ContextMenuItem` 属性的字段标记为未使用。
   
-  - 为 `IDE0044` 添加了 [`USP0011`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/USP0011.md) 抑制器。 请勿将具有 `ContextMenuItem` 属性的字段设为只读字段。
+  - 为 `IDE0044` 添加了 [`USP0011`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0011.md) 抑制器。 请勿将具有 `ContextMenuItem` 属性的字段设为只读字段。
   
-  - [`USP0004`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/USP0004.md)、[`USP0006`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/USP0006.md) 和 [`USP0007`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/USP0007.md) 现在都适用于 `SerializeReference` 和 `SerializeField` 属性。
+  - [`USP0004`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0004.md)、[`USP0006`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0006.md) 和 [`USP0007`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0007.md) 现在都适用于 `SerializeReference` 和 `SerializeField` 属性。
   
 ### <a name="bug-fixes"></a>Bug 修复
 
@@ -67,7 +127,7 @@ Visual Studio Tools for Unity 更改日志。
   
   - 修复了 `CreateInspectorGUI` 消息的消息范围。
 
-  - 请勿报告与具有多态修饰符的方法相关的 [`UNT0001`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/UNT0001.md)。
+  - 请勿报告与具有多态修饰符的方法相关的 [`UNT0001`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0001.md)。
 
 - **评估版：**
 
@@ -81,7 +141,7 @@ Visual Studio Tools for Unity 更改日志。
 
 - **集成：**
 
-  - 为 `IDE0051` 添加了 [`USP0008`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/USP0008.md) 抑制器。 与 Invoke、InvokeRepeating、StartCoroutine 或 StopCoroutine 一起使用的专用方法不应标记为未使用。
+  - 为 `IDE0051` 添加了 [`USP0008`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0008.md) 抑制器。 与 Invoke、InvokeRepeating、StartCoroutine 或 StopCoroutine 一起使用的专用方法不应标记为未使用。
 
 ### <a name="bug-fixes"></a>Bug 修复
 
@@ -101,7 +161,7 @@ Visual Studio Tools for Unity 更改日志。
 
 - **集成：**
 
-  - 修复了针对错误的消息签名的 [`UNT0006`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/UNT0006.md) 诊断检查。 当检查具有多个继承级别的类型时，此诊断可能会失败，并显示以下消息：`warning AD0001: Analyzer 'Microsoft.Unity.Analyzers.MessageSignatureAnalyzer' threw an exception of type 'System.ArgumentException' with message 'An item with the same key has already been added`。
+  - 修复了针对错误的消息签名的 [`UNT0006`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0006.md) 诊断检查。 当检查具有多个继承级别的类型时，此诊断可能会失败，并显示以下消息：`warning AD0001: Analyzer 'Microsoft.Unity.Analyzers.MessageSignatureAnalyzer' threw an exception of type 'System.ArgumentException' with message 'An item with the same key has already been added`。
 
 ## <a name="4500"></a>4.5.0.0
 
@@ -113,9 +173,9 @@ Visual Studio Tools for Unity 更改日志。
 
   - 添加了对 HLS 文件的支持。
   
-  - 为 `IDE0051` 添加了 [`USP0006`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/USP0006.md) 抑制器。 具有 `SerializeField` 属性的专用字段不应标记为未使用。
+  - 为 `IDE0051` 添加了 [`USP0006`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0006.md) 抑制器。 具有 `SerializeField` 属性的专用字段不应标记为未使用。
   
-  - 为 `CS0649` 添加了 [`USP0007`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/USP0007.md) 抑制器。 具有 `SerializeField` 属性的字段不应标记为未分配。  
+  - 为 `CS0649` 添加了 [`USP0007`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0007.md) 抑制器。 具有 `SerializeField` 属性的字段不应标记为未分配。  
 
 ### <a name="bug-fixes"></a>Bug 修复
 
@@ -151,7 +211,7 @@ Visual Studio Tools for Unity 更改日志。
 
 - **集成：**
 
-  - 使用高级二进制和 invocation 表达式修复了标签比较分析器 [`UNT0002`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/UNT0002.md)。
+  - 使用高级二进制和 invocation 表达式修复了标签比较分析器 [`UNT0002`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0002.md)。
 
 ### <a name="deprecated-features"></a>弃用的功能
 
@@ -167,7 +227,7 @@ Visual Studio Tools for Unity 更改日志。
 
 - **集成：**
 
-  - 为所有 Unity 消息的 `IDE0060`（未使用的参数）添加了 [`USP0005`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/USP0005.md) 抑制器。
+  - 为所有 Unity 消息的 `IDE0060`（未使用的参数）添加了 [`USP0005`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0005.md) 抑制器。
   
   - 为标有 `TooltipAttribute` 的字段添加了快速工具提示。 （这也适用于使用此字段的简单 get 访问器）。
 
@@ -190,21 +250,21 @@ Visual Studio Tools for Unity 更改日志。
 - **集成：**
 
   - 通过添加特定于 Unity 的新诊断，深化了 Visual Studio 对 Unity 项目的理解。 还通过取消不适用于 Unity 项目的一般 C# 诊断，使 IDE 更智能。 例如，IDE 不会显示将检查器变量更改为 `readonly` 的快速修复，因此这会阻止你修改 Unity 编辑器中的变量。
-    - [`UNT0001`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/UNT0001.md)：即使 Unity 消息为空，运行时也会调用它们，请勿声明它们，以避免 Unity 运行时进行不必要的处理。
-    - [`UNT0002`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/UNT0002.md)：使用字符串相等比较标记的速度比内置的 CompareTag 方法慢。
-    - [`UNT0003`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/UNT0003.md)：为了获得类型安全性，最好使用 GetComponent 的通用形式。
-    - [`UNT0004`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/UNT0004.md)：更新消息依赖于帧速率，应使用 Time.deltaTime 而不是 Time.fixedDeltaTime。
-    - [`UNT0005`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/UNT0005.md)：固定更新消息与帧速率无关，应使用 Time.fixedDeltaTime 而不是 Time.deltaTime。
-    - [`UNT0006`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/UNT0006.md)：检测到此 Unity 消息的方法签名不正确。
-    - [`UNT0007`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/UNT0007.md)：Unity 重写与 null 合并不兼容的 Unity 对象的 null 比较运算符。
-    - [`UNT0008`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/UNT0008.md)：Unity 重写与 null 传播不兼容的 Unity 对象的 null 比较运算符。
-    - [`UNT0009`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/UNT0009.md)：将 InitializeOnLoad 特性应用于类时，需要提供静态构造函数。 InitializeOnLoad 特性可确保在编辑器启动时调用该函数。
-    - [`UNT0010`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/UNT0010.md)：应只使用 AddComponent() 创建 MonoBehaviours。 MonoBehaviour 是一个组件，需要附加到 GameObject。
-    - [`UNT0011`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/UNT0011.md)：应只使用 CreateInstance() 创建 ScriptableObject。 ScriptableObject 需要由 Unity 引擎创建，才能处理 Unity 消息方法。
-    - 针对 `IDE0029` 的 [`USP0001`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/USP0001.md)：Unity 对象不应使用 Null 合并。
-    - 针对 `IDE0031` 的 [`USP0002`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/USP0002.md)：Unity 对象不应使用 Null 传播。
-    - 针对 `IDE0051` 的 [`USP0003`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/USP0003.md)：Unity 消息由 Unity 运行时调用。
-    - 针对 `IDE0044` 的 [`USP0004`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/master/doc/USP0004.md)：不应将具有 SerializeField 特性的字段设为只读。
+    - [`UNT0001`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0001.md)：即使 Unity 消息为空，运行时也会调用它们，请勿声明它们，以避免 Unity 运行时进行不必要的处理。
+    - [`UNT0002`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0002.md)：使用字符串相等比较标记的速度比内置的 CompareTag 方法慢。
+    - [`UNT0003`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0003.md)：为了获得类型安全性，最好使用 GetComponent 的通用形式。
+    - [`UNT0004`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0004.md)：更新消息依赖于帧速率，应使用 Time.deltaTime 而不是 Time.fixedDeltaTime。
+    - [`UNT0005`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0005.md)：固定更新消息与帧速率无关，应使用 Time.fixedDeltaTime 而不是 Time.deltaTime。
+    - [`UNT0006`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0006.md)：检测到此 Unity 消息的方法签名不正确。
+    - [`UNT0007`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0007.md)：Unity 重写与 null 合并不兼容的 Unity 对象的 null 比较运算符。
+    - [`UNT0008`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0008.md)：Unity 重写与 null 传播不兼容的 Unity 对象的 null 比较运算符。
+    - [`UNT0009`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0009.md)：将 InitializeOnLoad 特性应用于类时，需要提供静态构造函数。 InitializeOnLoad 特性可确保在编辑器启动时调用该函数。
+    - [`UNT0010`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0010.md)：应只使用 AddComponent() 创建 MonoBehaviours。 MonoBehaviour 是一个组件，需要附加到 GameObject。
+    - [`UNT0011`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0011.md)：应只使用 CreateInstance() 创建 ScriptableObject。 ScriptableObject 需要由 Unity 引擎创建，才能处理 Unity 消息方法。
+    - 针对 `IDE0029` 的 [`USP0001`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0001.md)：Unity 对象不应使用 Null 合并。
+    - 针对 `IDE0031` 的 [`USP0002`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0002.md)：Unity 对象不应使用 Null 传播。
+    - 针对 `IDE0051` 的 [`USP0003`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0003.md)：Unity 消息由 Unity 运行时调用。
+    - 针对 `IDE0044` 的 [`USP0004`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0004.md)：不应将具有 SerializeField 特性的字段设为只读。
 
 ## <a name="4310"></a>4.3.1.0
 
@@ -508,7 +568,7 @@ Visual Studio Tools for Unity 更改日志。
 
 ### <a name="bug-fixes"></a>Bug 修复
 
-- **Project Generation:**
+- **项目生成：**
 
   - 回滚了针对 Unity 性能缺陷的解决方案（此缺陷已由 Unity 修复）。
 
@@ -566,7 +626,7 @@ Visual Studio Tools for Unity 更改日志。
 
 ### <a name="bug-fixes"></a>Bug 修复
 
-- **Project Generation:**
+- **项目生成：**
 
   - （从 3.9.0.0 版向后移植）回滚了针对 Unity 性能缺陷的解决方案（此缺陷已由 Unity 修复）。
 
@@ -576,7 +636,7 @@ Visual Studio Tools for Unity 更改日志。
 
 ### <a name="bug-fixes"></a>Bug 修复
 
-- **Project Generation:**
+- **项目生成：**
 
   - Unity 性能 Bug 的暂时解决方法：生成项目时缓存 MonoIsland。
 
@@ -616,7 +676,7 @@ Visual Studio Tools for Unity 更改日志。
 
 ### <a name="bug-fixes"></a>Bug 修复
 
-- **Project Generation:**
+- **项目生成：**
 
   - 使用新版 Unity 运行时，不要再将可移植 pdb 转换为 mdb。
 
@@ -686,7 +746,7 @@ Visual Studio Tools for Unity 更改日志。
 
 ### <a name="bug-fixes"></a>Bug 修复
 
-- **Project Generation:**
+- **项目生成：**
 
   - 修复了 Mono 版本检测的问题。
 
@@ -706,7 +766,7 @@ Visual Studio Tools for Unity 更改日志。
 
 ### <a name="bug-fixes"></a>Bug 修复
 
-- **Project Generation:**
+- **项目生成：**
 
   - 修复了 Unity 目标框架检测的问题。
 
@@ -766,7 +826,7 @@ Visual Studio Tools for Unity 更改日志。
 
 ### <a name="bug-fixes"></a>Bug 修复
 
-- **Project Generation:**
+- **项目生成：**
 
   - 修复了播放器项目的项目 GUID 计算。
 

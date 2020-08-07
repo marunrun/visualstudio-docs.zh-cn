@@ -21,12 +21,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5f67c41f860417a27a6003a19672d4cd617d37a6
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: f02dcc5f38bf8eb4acc702c5d8a1ee466a6a4a71
+ms.sourcegitcommit: 9179c33a78c2ac690ce908d7c73eef50b6e367f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85284721"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87390257"
 ---
 # <a name="how-to-add-or-remove-references-by-using-the-reference-manager"></a>如何：使用引用管理器添加或删除引用
 
@@ -47,6 +47,9 @@ ms.locfileid: "85284721"
 - **Windows**，包含“核心”和“扩展”子组 。 可以使用“对象浏览器”浏览 Windows SDK 或扩展 SDK 中的引用。
 
 - **浏览**，包含“最近”子组
+ 
+    > [!NOTE]
+    > 如果是开发 C++ 项目，则可能不会在“引用管理器”对话框中看到“浏览”。
 
 ## <a name="add-a-reference"></a>添加引用
 
