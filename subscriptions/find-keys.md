@@ -2,17 +2,17 @@
 title: 在 Visual Studio 订阅中查找和声明产品密钥 | Microsoft Docs
 author: evanwindom
 ms.author: lank
-manager: lank
+manager: cabuschl
 ms.assetid: da8df006-4896-4ff9-b487-698d78deabc3
-ms.date: 03/09/2020
+ms.date: 07/30/2020
 ms.topic: conceptual
 description: 了解如何在 Visual Studio 订阅中查找、声明和导出产品密钥
-ms.openlocfilehash: 3946388669533a59176dc79cd72f238994a0a01b
-ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
+ms.openlocfilehash: 8ee21c544a44bfd5eca831cdc9fd1c8e00adb35b
+ms.sourcegitcommit: b8ec700fc4c14c68c6ce280f29c19870261990d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80232488"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87453753"
 ---
 # <a name="finding-and-claiming-product-keys-in-visual-studio-subscriptions"></a>在 Visual Studio 订阅中查找和声明产品密钥
 本文介绍如何从 https://my.visualstudio.com/productkeys 中查找、声明和导出产品密钥。  有关使用密钥激活产品、密钥的零售和批量许可版本以及每日产品密钥索取上限的详细信息，请访问[产品密钥概述](product-keys.md)。
@@ -20,7 +20,7 @@ ms.locfileid: "80232488"
 ## <a name="locating-and-claiming-product-keys"></a>查找并索取产品密钥
 必须登录你的 Visual Studio 订阅才能查看产品密钥。 可在如下所示的“[下载](https://my.visualstudio.com/downloads)”页中，选择某一特定产品的蓝色“获取密钥”链接来查找单个产品密钥。  所有密钥都可在“[产品密钥](https://my.visualstudio.com/productkeys?wt.mc_id=o~msft~docs)”页查找到。 如果一个产品有多个密钥，会在下载项的“注释”列中显示注释，帮助你确定应使用哪个密钥。
 > [!div class="mx-imgBorder"]
-> ![从“下载”页获取密钥](_img/product-keys/download-get-key.png)
+> ![从“下载”页获取密钥](_img/product-keys/download-get-key.png "单击任何下载内容“信息”页上的“获取密钥”以获取该产品的密钥。")
 
 某些产品将其多个版本捆绑到单次下载中。 在这种情况下，输入的产品密钥决定安装的产品版本。
 某些密钥会自动提供，例如“静态”密钥，同一个密钥可以根据需要使用无数次，因为不需要激活。 其他密钥必须通过选择该产品的“获取密钥”链接来索取。
@@ -53,7 +53,7 @@ ms.locfileid: "80232488"
 2. 单击“[产品密钥](https://my.visualstudio.com/productkeys?wt.mc_id=o~msft~docs)”选项卡。
 3. 产品密钥根据产品名称按字母顺序列出。  可以向下滚动到所需产品的名称，也可以使用页面顶部的搜索栏进行搜索。
 > [!div class="mx-imgBorder"]
-> ![搜索产品密钥](_img/product-keys/search-keys.png)
+> ![搜索产品密钥](_img/product-keys/search-keys.png "滚动到所需的产品，或使用搜索框快速查找任何产品。")
    
 在此示例中，我们使用了搜索栏查找 Visual Studio Enterprise 2019 的产品密钥。
 正如你所见，这里列出了几个版本。  已为 Visual Studio Enterprise 2019 版本 16.0 和 16.1 各声明了一个密钥。  对于这两个版本，仍然可以使用不同类型的附加密钥。 注意，你可以在“注释”列记录有关已索取的密钥的简短说明。  可以结合“已索取”列中的日期，使用它来跟踪索取的密钥。  例如，可以在使用密钥激活产品的安装时进行记录。

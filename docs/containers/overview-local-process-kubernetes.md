@@ -6,12 +6,15 @@ ms.topic: conceptual
 description: 介绍如何使用 Local Process with Kubernetes 将开发计算机连接到 Kubernetes 群集
 keywords: Local Process with Kubernetes, Docker, Kubernetes, Azure, 容器
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: 93bfc509eb21545cde812b8d6d71bb9a93a109e8
-ms.sourcegitcommit: debf31a8fb044f0429409bd0587cdb7d5ca6f836
+manager: jillfra
+author: ghogen
+ms.author: ghogen
+ms.openlocfilehash: f8808da9a2bfd49fb0ee7d661b7e57c776036c1c
+ms.sourcegitcommit: e359b93c93c6ca316c0d8b86c2b6e566171fd1ea
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87133966"
+ms.lasthandoff: 08/01/2020
+ms.locfileid: "87507880"
 ---
 # <a name="how-local-process-with-kubernetes-works"></a>如何通过本地进程使用 Kubernetes
 
@@ -20,6 +23,9 @@ ms.locfileid: "87133966"
 Local Process with Kubernetes 可直接在开发计算机与群集之间创建连接，从而避免生成代码并将其部署到群集。 通过在调试时将开发计算机连接到群集，可以在完整应用程序的上下文中快速测试和开发服务，而无需创建任何 Docker 或 Kubernetes 配置。
 
 Local Process with Kubernetes 将重定向已连接的 Kubernetes 群集与开发计算机之间的流量。 此流量重定向允许开发计算机上的代码与 Kubernetes 群集中运行的服务进行通信，就像它们位于同一个 Kubernetes 群集中一样。 Local Process with Kubernetes 还提供了一种方法来复制开发计算机中可用于 Kubernetes 群集中 pod 的环境变量和已装载的卷。 允许访问开发计算机上的环境变量和已装载卷，可以快速处理代码而无需手动复制这些依赖项。
+
+> [!WARNING]
+> Local Process for Kubernetes 仅适用于开发和测试场景。 它不适合用于生产群集或正在使用的实时服务，也不支持这样做。
 
 ## <a name="using-local-process-with-kubernetes"></a>使用 Local Process with Kubernetes
 
@@ -39,6 +45,12 @@ Local Process with Kubernetes 将重定向已连接的 Kubernetes 群集与开�
 * 开始在开发计算机上运行和调试代码。 如有必要，Local Process with Kubernetes 将释放开发计算机上的所需端口，方法是停止当前正在使用这些端口的服务或进程。
 
 建立与群集的连接后，可以在计算机上本机运行和调试代码，而无需容器化，并且代码可以直接与群集的其余部分交互。 在连接期间，远程代理接收的任何网络流量都将重定向到指定的本地端口，让本机运行的代码可以接受和处理该流量。 群集中的环境变量、卷和机密可供开发计算机上运行的代码使用。 此外，由于 Local Process with Kubernetes 将主机文件条目和端口转发添加到了开发人员计算机，你的代码可以使用群集中的服务名称向群集上运行的服务发送网络流量，将该流量转发到群集中正在运行的服务。 在整个连接期间，流量在开发计算机和群集之间路由。
+
+此外，Local Process with Kubernetes 还提供了一种方法，通过 `KubernetesLocalProcessConfig.yaml` 文件复制开发计算机中可用于群集中 Pod 的环境变量和已装载的文件。 还可以使用此文件创建新的环境变量和卷装载。
+
+## <a name="additional-configuration-with-kuberneteslocalprocessconfigyaml"></a>KubernetesLocalProcessConfig.yaml 的其他配置
+
+使用 `KubernetesLocalProcessConfig.yaml` 文件可以将环境变量和已装载文件复制到群集中的 Pod。 有关其他配置选项的详细信息，请参阅[配置 Local Process with Kubernetes][using-config-yaml]。
 
 ## <a name="using-routing-capabilities-for-developing-in-isolation"></a>使用路由功能进行独立开发
 
@@ -108,3 +120,4 @@ Local Process with Kubernetes 具有以下限制：
 [kubectl-port-forward]: https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#port-forward
 [visual-studio]: https://visualstudio.microsoft.com/downloads/
 [lpk-extension]: https://marketplace.visualstudio.com/items?itemName=ms-azuretools.mindaro
+[using-config-yaml]: configure-local-process-with-kubernetes.md

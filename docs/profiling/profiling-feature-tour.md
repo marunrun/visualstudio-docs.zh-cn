@@ -3,7 +3,11 @@ title: 使用分析工具衡量性能
 description: 简要了解 Visual Studio 中提供的各种诊断工具。
 ms.custom: mvc
 ms.date: 06/03/2020
-ms.topic: quickstart
+ms.topic: overview
+f1_keywords:
+- vs.diagnosticshub.overview
+dev_langs:
+- CSharp
 helpviewer_keywords:
 - diagnostic tools
 ms.assetid: d2ee0301-ea78-43d8-851a-71b7b2043d73
@@ -12,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7c1f2583b0624691405ec3ef5a88aa11cb796327
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.openlocfilehash: e890a3d595b98276883c7e75547bb7edb338ca55
+ms.sourcegitcommit: e359b93c93c6ca316c0d8b86c2b6e566171fd1ea
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85816688"
+ms.lasthandoff: 08/01/2020
+ms.locfileid: "87507984"
 ---
 # <a name="first-look-at-profiling-tools"></a>首先了解分析工具
 
@@ -168,7 +172,7 @@ JavaScript 内存工具类似于适用于其他应用类型的内存使用量工
 ::: moniker range="vs-2017"
 ## <a name="analyze-network-usage-uwp"></a>分析网络使用情况 (UWP)
 
-在 UWP 应用中，你可以使用 `Windows.Web.Http` API 分析执行的网络操作。本工具可帮助你解决如访问和身份验证问题、缓存误用以及显示和下载性能差等问题。 若要使用该工具，请在性能探查器中选择“网络”，然后选择“开始”。 在应用中，浏览使用 `Windows.Web.Http` 的应用场景，然后选择“停止收集”生成报表。
+在 UWP 应用中，可以分析使用 `Windows.Web.Http` API 执行的网络操作。 此工具可以帮助你解决问题（如访问和身份验证问题、不正确的缓存用法和不良的显示和下载性能）。 若要使用该工具，请在性能探查器中选择“网络”，然后选择“开始”。 在应用中，浏览使用 `Windows.Web.Http` 的应用场景，然后选择“停止收集”生成报表。
 
 ![网络使用情况分析工具](../profiling/media/prof-tour-network-usage.png "诊断网络使用情况")
 

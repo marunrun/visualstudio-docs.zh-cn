@@ -7,14 +7,14 @@ ms.assetid: a747100c-6f08-41a4-aaad-05099741742b
 ms.date: 03/03/2020
 ms.topic: conceptual
 description: 了解管理员如何解决超额分配的订阅
-ms.openlocfilehash: a4cdab7d4e6e5925bab3d4dc7c800dc33ef6d713
-ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
+ms.openlocfilehash: b518dc9300862e7c39af0489734734668097ef9f
+ms.sourcegitcommit: b8ec700fc4c14c68c6ce280f29c19870261990d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80232452"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87453727"
 ---
-# <a name="overallocated-subscriptions"></a>过度分配的订阅
+# <a name="over-allocated-subscriptions"></a>超额分配的订阅
 有时，添加订阅者后，订单发生变化，这可能会导致已分配的订阅数量超过公司拥有的许可证数量。 这称为“超额分配”。  
 
 要查看你的订阅分配情况，请单击左侧的顶部图标，打开分配窗格。  
@@ -23,11 +23,11 @@ ms.locfileid: "80232452"
 > 开放式许可证计划不允许出现超额分配。  另外，其他程序可能会在门户中以不同方式显示此信息。
 >
 > [!div class="mx-imgBorder"]
-> ![透支订阅通知](_img/over-claimed/over-claimed-alert.png)
+> ![透支订阅通知](_img/over-claimed/over-claimed-alert.png "“概述”中列出了超额分配的数量，由每个订阅类型的关系图上经过哈希处理的条形表示。")
 
-请注意，显示项使用经过哈希处理的条形来表示超额分配的订阅。  所有订阅类型中的超额分配数都包含在顶部的“概述”部分，而每个订阅级别还会显示它自己的分配状态。  
+请注意，显示项使用经过哈希处理的条形来表示超额分配的订阅。  所有订阅类型的超额分配数都包含在顶部的“概述”部分，而每个订阅级别还会显示它自己的分配状态。  
 
-## <a name="resolve-overallocated-subscriptions"></a>解决超额分配的订阅
+## <a name="resolve-over-allocated-subscriptions"></a>解决超额分配的订阅
 有多种方法可解决超额分配：
 - 请与经销商联系以购买其他订阅。
 - 等到你的年度校正期并在此时为超额分配的订阅付款。 

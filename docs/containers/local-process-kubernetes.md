@@ -2,16 +2,19 @@
 title: 在 Visual Studio 中使用 Local Process with Kubernetes（预览版）
 ms.technology: vs-azure
 ms.date: 06/02/2020
-ms.topic: conceptual
+ms.topic: how-to
 description: 了解如何在 Visual Studio 中使用 Local Process with Kubernetes 将开发计算机连接到 Kubernetes 群集
 keywords: Local Process with Kubernetes, Azure Dev Spaces, Dev Spaces, Docker, Kubernetes, Azure, 容器
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: fd2e456f1ffdaaea90c0594b73d5367e51c8f655
-ms.sourcegitcommit: debf31a8fb044f0429409bd0587cdb7d5ca6f836
+ms.author: ghogen
+author: ghogen
+manager: jillfra
+ms.openlocfilehash: 29a3c8563660507a2378a58595ba5ea64788b417
+ms.sourcegitcommit: e359b93c93c6ca316c0d8b86c2b6e566171fd1ea
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87133991"
+ms.lasthandoff: 08/01/2020
+ms.locfileid: "87507893"
 ---
 # <a name="use-local-process-with-kubernetes-preview"></a>使用 Local Process with Kubernetes（预览版）
 
@@ -137,6 +140,10 @@ az aks get-credentials --resource-group MyResourceGroup --name MyAKS
 >
 > 如果 Visual Studio 突然结束与群集的连接或终止，则在与 Local Process with Kubernetes 连接之前，你要重定向的服务可能不会还原为其原始状态。 若要解决此问题，请参阅[故障排除指南][troubleshooting]。
 
+## <a name="additional-configuration"></a>其他配置
+
+Local Process with Kubernetes 可以处理路由流量和复制环境变量，无需任何其他配置。 如果需要下载已装载到 Kubernetes 群集中的容器的所有文件（例如 ConfigMap 文件），可以创建 `KubernetesLocalProcessConfig.yaml` 以将这些文件下载到开发计算机。 有关详细信息，请参阅[将 KubernetesLocalProcessConfig.yaml 用于 Local Process with Kubernetes 的附加配置][kubernetesLocalProcessConfig-yaml]。
+
 ## <a name="using-logging-and-diagnostics"></a>使用日志记录和诊断
 
 可在[开发计算机的 TEMP 目录][azds-tmp-dir]的 `Azure Dev Spaces` 目录中查找诊断日志。
@@ -170,3 +177,4 @@ az aks get-credentials --resource-group MyResourceGroup --name MyAKS
 [troubleshooting]: /azure/dev-spaces/troubleshooting#fail-to-restore-original-configuration-of-deployment-on-cluster
 [visual-studio]: https://www.visualstudio.com/vs/
 [lpk-extension]: https://marketplace.visualstudio.com/items?itemName=ms-azuretools.mindaro
+[kubernetesLocalProcessConfig-yaml]: configure-local-process-with-kubernetes.md

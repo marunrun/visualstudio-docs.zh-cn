@@ -7,12 +7,12 @@ ms.assetid: 196c6d04-9a33-47d5-b0f1-038e7c3a7ac9
 ms.date: 03/09/2020
 ms.topic: conceptual
 description: 了解如何充分利用 Visual Studio 订阅
-ms.openlocfilehash: 7d883092372d58f4a5bcc787daed0a99124a1704
-ms.sourcegitcommit: 7b60e81414a82c6d34f6de1a1f56115c9cd26943
+ms.openlocfilehash: 19b4bd7c6fce88aa99b336d98d6bf471509af556
+ms.sourcegitcommit: b8ec700fc4c14c68c6ce280f29c19870261990d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81444865"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87453679"
 ---
 # <a name="managing-subscriptions"></a>管理订阅
 
@@ -26,14 +26,14 @@ Visual Studio 订阅门户将所有 Visual Studio 订阅和程序汇集到一个
 
 在“权益”页上，正在使用的订阅将突出显示在蓝色的标题栏中。 它还会显示在页面的右上角。
 > [!div class="mx-imgBorder"]
-> ![活动订阅](_img/manage-vs-subscriptions/current-subscription-cropped.png)
+> ![活动订阅](_img/manage-vs-subscriptions/current-subscription-cropped.png "当前订阅会显示在页面顶部和“订阅”下拉列表中。")
 
 ### <a name="to-switch-between-subscriptions-you-can"></a>要在两个订阅之间进行转换，可以：
 
 - 单击右上角的下拉列表，然后从列表中选择订阅
 - 单击“订阅”选项卡，然后单击所需订阅
   > [!div class="mx-imgBorder"]
-  > ![切换订阅](_img/manage-vs-subscriptions/change-subscription-resized.png)
+  > ![切换订阅](_img/manage-vs-subscriptions/change-subscription-resized.png "单击“订阅”选项卡以查看有关所有订阅的详细信息，并在各订阅之间进行切换。")
 
 ### <a name="if-your-subscription-is-not-visible"></a>如果订阅不可见...
 
@@ -78,7 +78,7 @@ Visual Studio 订阅门户将所有 Visual Studio 订阅和程序汇集到一个
 若想要收到关于你的订阅和权益的定期更新，其中包括每月 Visual Studio 订阅新闻稿，请选中 Visual Studio 个人资料中的“Visual Studio 订阅”框，来[更新首选项](https://app.vsaex.visualstudio.com/me?workflowID=devprogram&tab=edit)。 可以随时更改这些首选项，或取消订阅。 
 
    > [!div class="mx-imgBorder"]
-   > ![设置首选项](_img/manage-vs-subscriptions/change-prefs.png)
+   > ![设置首选项](_img/manage-vs-subscriptions/change-prefs.png "勾选“Visual Studio 订阅计划电子邮件”复选框以接收更新。")
    
 ### <a name="linking-my-subscription-to-existing-azure-devops-services-or-azure-subscriptions"></a>将订阅链接到现有的 Azure DevOps Services 或 Azure 订阅
 如果使用个人 Microsoft 帐户 (MSA) 登录到订阅，并且拥有使用由 Azure 管理的工作或学校帐户的订阅（该订阅包含 Azure DevOps Services 或 Microsoft Azure），则可以链接这两个订阅。 这被称为“备用帐户”，借助此帐户，用户可以继续使用 MSA 登录到订阅，同时访问与学校或工作帐户相关联的现有 Azure、Azure DevOps Services 或 IDE 资源。
