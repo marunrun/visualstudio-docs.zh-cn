@@ -16,6 +16,7 @@
 ### [使用 Microsoft 帐户登录](sign-in-msa.md)
 ### [使用工作或学校帐户登录](sign-in-work.md)
 ### [使用 GitHub 登录](sign-in-github.md)
+### [联合标识](use-connected-identities.md)
 ### [备用标识](vs-alternate-identity.md)
 ### [登录问题](sign-in-issues.md)
 ### [订阅者数据匿名化](anonymization.md)
