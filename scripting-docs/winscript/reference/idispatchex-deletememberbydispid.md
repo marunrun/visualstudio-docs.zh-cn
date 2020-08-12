@@ -17,12 +17,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 38ead33fb51caff1103ca9abe6bc01f3e0aa6aa3
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: 0c3dbb040e39fd15b77e42b2eaa9fb2cdda0b1b2
+ms.sourcegitcommit: d281d2a04a5bc302650eebf369946d8f101e59dd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72576642"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88144631"
 ---
 # <a name="idispatchexdeletememberbydispid"></a>IDispatchEx::DeleteMemberByDispID
 按 DISPID 删除成员。  
@@ -42,15 +42,15 @@ HRESULT DeleteMemberByDispID(
 ## <a name="return-value"></a>返回值  
  返回以下值之一：  
   
-|||  
+|值|含义|
 |-|-|  
 |`S_OK`|成功。|  
 |`S_FALSE`|成员存在，但不能删除。|  
   
 ## <a name="remarks"></a>备注  
- 如果删除了成员，则 DISPID 需要对 `GetNextDispID`仍有效。  
+ 如果删除了成员，DISPID 需要对有效 `GetNextDispID` 。  
   
- 如果删除具有给定名称的成员，然后重新创建同名的成员，则 DISPID 应相同。 （仅大小写不同的成员名称是否与对象相关。）  
+ 如果删除具有给定名称的成员，然后重新创建同名的成员，则 DISPID 应相同。  (仅大小写不同的成员名称是否与对象相关。 )   
   
 ## <a name="example"></a>示例  
   
@@ -66,5 +66,5 @@ if (SUCCEEDED(pdex->GetDispID(bstrName, fdexNameCaseSensitive, &dispid)))
   
 ## <a name="see-also"></a>另请参阅  
  [IDispatchEx 接口](../../winscript/reference/idispatchex-interface.md)   
- [IDispatchEx::GetDispID](../../winscript/reference/idispatchex-getdispid.md)   
+ [IDispatchEx：： GetDispID](../../winscript/reference/idispatchex-getdispid.md)   
  [IDispatchEx::GetNextDispID](../../winscript/reference/idispatchex-getnextdispid.md)
