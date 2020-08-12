@@ -1,5 +1,5 @@
 ---
-title: License 元素（VSIX 语言包架构） |Microsoft Docs
+title: " (VSIX 语言包架构) 的许可证元素 |Microsoft Docs"
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -8,12 +8,12 @@ ms.assetid: 57dac3b7-0cdd-405c-9af5-30ed9ca45e53
 caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: f1299d97cbda78049732d3367a9231272397e2ec
-ms.sourcegitcommit: 374f5ec9a5fa18a6d4533fa2b797aa211f186755
+ms.openlocfilehash: 91f0792f64e09292836a3b2d60f669c67903b3a7
+ms.sourcegitcommit: d9254e54079ae01cdf2d07b11f988faf688f80fc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77477079"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88114162"
 ---
 # <a name="license-element-vsix-language-pack-schema"></a>License 元素（VSIX 语言包架构）
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -26,20 +26,20 @@ ms.locfileid: "77477079"
 <License>FilePath\license.txt</License>  
 ```  
   
-## <a name="attributes-and-elements"></a>属性和元素  
+## <a name="attributes-and-elements"></a>特性和元素  
  下列各节描述了特性、子元素和父元素。  
   
-### <a name="attributes"></a>Attributes  
+### <a name="attributes"></a>特性  
   
-|属性|说明|  
+|特性|说明|  
 |---------------|-----------------|  
-|无||  
+|None||  
   
 ### <a name="child-elements"></a>子元素  
   
 |元素|说明|  
 |-------------|-----------------|  
-|无||  
+|None||  
   
 ### <a name="parent-elements"></a>父元素  
   
@@ -51,16 +51,42 @@ ms.locfileid: "77477079"
  要显示的本地化许可证文件的相对路径。  
   
 ## <a name="remarks"></a>备注  
- 如果定义了 `License` 元素，则在安装过程中将显示指定许可证文件的文本，并且用户必须接受许可证才能继续。  
+ 如果定义了该 `License` 元素，则在安装过程中将显示指定许可证文件的文本，并且用户必须接受许可证才能继续。  
   
 ## <a name="element-information"></a>元素信息  
-  
-|                 |                                                           |
-|-----------------|-----------------------------------------------------------|
-|    命名空间    | `http://schemas.microsoft.com/developer/vsx-schema-lp/2010` |
-|   架构名   |                 VSIX 语言包架构                 |
-| 验证文件 |                VSIXLanguagePackSchema.xsd                 |
-|  可以为空   |                      不适用                       |
+
+:::row:::
+    :::column:::
+        命名空间  
+    :::column-end:::
+    :::column:::
+        `http://schemas.microsoft.com/developer/vsx-schema-lp/2010`
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        架构名称
+    :::column-end:::
+    :::column:::
+        VSIX 语言包架构
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        验证文件
+    :::column-end:::
+    :::column:::
+        VSIXLanguagePackSchema
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        可以为空
+    :::column-end:::
+    :::column:::
+        不适用
+    :::column-end:::
+:::row-end:::
   
 ## <a name="see-also"></a>另请参阅  
  [VSX 语言包架构引用](../extensibility/vsx-language-pack-schema-reference.md)   
