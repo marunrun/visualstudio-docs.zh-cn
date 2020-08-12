@@ -17,12 +17,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8016eef7b6e0da9b9fc88695db845cba7f608ff3
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: 488f8790ec25532fb611f18e8b24e7e7dba2e2f4
+ms.sourcegitcommit: d281d2a04a5bc302650eebf369946d8f101e59dd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72574087"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88144542"
 ---
 # <a name="idispatchexgetmemberproperties"></a>IDispatchEx::GetMemberProperties
 检索成员的属性。  
@@ -42,7 +42,7 @@ HRESULT GetMemberProperties(
  标识成员。 使用 `GetDispID` 或 `GetNextDispID` 获取调度标识符。  
   
  `grfdexFetch`  
- 确定要检索的属性。 这可以是 `pgrfdex` 和/或下列值组合下列出的值的组合：  
+ 确定要检索的属性。 这可以是下列值的组合 `pgrfdex` ：和/或下列值的组合：  
   
 |值|含义|  
 |-----------|-------------|  
@@ -52,7 +52,7 @@ HRESULT GetMemberProperties(
 |grfdexPropAll|结合了 grfdexPropCanAll、grfdexPropCannotAll 和 grfdexPropExtraAll。|  
   
  `pgrfdex`  
- 接收请求的属性的 `DWORD` 的地址。 这可以是以下值的组合：  
+ 接收请求的属性的的地址 `DWORD` 。 这可以是以下值的组合：  
   
 |值|含义|  
 |-----------|-------------|  
@@ -74,7 +74,7 @@ HRESULT GetMemberProperties(
 ## <a name="return-value"></a>返回值  
  返回以下值之一：  
   
-|||  
+|值|含义|
 |-|-|  
 |`S_OK`|成功。|  
 |`DISP_E_UNKNOWNNAME`|名称未知。|  
@@ -98,5 +98,5 @@ BSTR bstrName;
   
 ## <a name="see-also"></a>另请参阅  
  [IDispatchEx 接口](../../winscript/reference/idispatchex-interface.md)   
- [IDispatchEx::GetDispID](../../winscript/reference/idispatchex-getdispid.md)   
+ [IDispatchEx：： GetDispID](../../winscript/reference/idispatchex-getdispid.md)   
  [IDispatchEx::GetNextDispID](../../winscript/reference/idispatchex-getnextdispid.md)
