@@ -14,12 +14,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f6a465a752282f4a0dc00f3fb294ade4169bb19b
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: ac3bebc0a64f814e71e7b5ab30282a70fd7eb85e
+ms.sourcegitcommit: d293c0e3e9cc71bd4117b6dfd22990d52964addc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79093941"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88041033"
 ---
 # <a name="how-to-extend-the-visual-studio-build-process"></a>如何：扩展 Visual Studio 生成过程
 
@@ -32,10 +32,9 @@ Visual Studio 生成过程由导入到项目文件中的一系列 MSBuild .targe
 ## <a name="override-predefined-targets"></a>重写预定义目标
 
 公共目标包含一组预定义的空目标，在生成过程中某些主目标的前后会调用这些空目标。 例如，MSBuild 会在主 `CoreBuild` 目标之前调用 `BeforeBuild` 目标，在 `CoreBuild` 目标之后调用 `AfterBuild` 目标。 公共目标中的空目标默认不执行任何操作，但可通过定义导入公共目标的项目文件中所需的目标，重写这些空目标的默认行为。 通过重写预定义目标，可以使用 MSBuild 任务，更好地控制生成过程。
-公共目标包含一组预定义的空目标，在生成过程中某些主目标的前后会调用这些空目标。 例如，MSBuild 会在主 `CoreBuild` 目标之前调用 `BeforeBuild` 目标，在 `CoreBuild` 目标之后调用 `AfterBuild` 目标。 公共目标中的空目标默认不执行任何操作，但可通过定义导入公共目标的项目文件中所需的目标，重写这些空目标的默认行为。 通过重写预定义目标，可以使用 MSBuild 任务，更好地控制生成过程。
 
 > [!NOTE]
-> SDK 类型的项目在项目文件的最后一行后会隐式导入目标  。 这意味着，除非根据[如何：使用 MSBuild 项目 SDK](how-to-use-project-sdk.md) 中所述的方法手动指定导入，否则无法重写默认目标。
+> SDK 类型的项目在项目文件的最后一行后会隐式导入目标**。 这意味着，除非根据[如何：使用 MSBuild 项目 SDK](how-to-use-project-sdk.md) 中所述的方法手动指定导入，否则无法重写默认目标。
 
 #### <a name="to-override-a-predefined-target"></a>重写预定义的目标
 
@@ -59,19 +58,19 @@ Visual Studio 生成过程由导入到项目文件中的一系列 MSBuild .targe
 
 下表显示公共目标中可以安全重写的所有目标。
 
-|目标名称|描述|
+|目标名称|说明|
 |-----------------|-----------------|
-|`BeforeCompile`，`AfterCompile`|插入到这些目标之一中的任务，在完成内核编译之前或之后运行。 大多数自定义均在这两个目标之一中完成。|
-|`BeforeBuild`，`AfterBuild`|插入到这些目标之一中的任务，在生成中所有其他任务之前或之后运行。 **注意：** `BeforeBuild` 和 `AfterBuild` 目标已在大多数项目文件的注释末尾定义，使你能够轻松向项目文件添加预生成和生成后事件。|
-|`BeforeRebuild`，`AfterRebuild`|插入到这些目标之一中的任务，在调用内核重新生成功能之前或之后运行。 Microsoft.Common.targets 中的目标执行顺序是：`BeforeRebuild`、`Clean`、`Build`、`AfterRebuild`  。|
-|`BeforeClean`，`AfterClean`|插入到这些目标之一中的任务，在调用内核清理功能之前或之后运行。|
-|`BeforePublish`，`AfterPublish`|插入到这些目标之一中的任务，在调用内核发布功能之前或之后运行。|
+|`BeforeCompile`, `AfterCompile`|插入到这些目标之一中的任务，在完成内核编译之前或之后运行。 大多数自定义均在这两个目标之一中完成。|
+|`BeforeBuild`, `AfterBuild`|插入到这些目标之一中的任务，在生成中所有其他任务之前或之后运行。 注意：`BeforeBuild` 和 `AfterBuild` 目标已在大多数项目文件的注释末尾定义，使你能够轻松向项目文件添加预生成和生成后事件****。|
+|`BeforeRebuild`, `AfterRebuild`|插入到这些目标之一中的任务，在调用内核重新生成功能之前或之后运行。 Microsoft.Common.targets 中的目标执行顺序是：`BeforeRebuild`、`Clean`、`Build`、`AfterRebuild`。|
+|`BeforeClean`, `AfterClean`|插入到这些目标之一中的任务，在调用内核清理功能之前或之后运行。|
+|`BeforePublish`, `AfterPublish`|插入到这些目标之一中的任务，在调用内核发布功能之前或之后运行。|
 |`BeforeResolveReferences`，`AfterResolveReferences`|插入到这些目标之一中的任务，在解析程序集引用之前或之后运行。|
 |`BeforeResGen`，`AfterResGen`|插入到这些目标之一中的任务，在生成资源之前或之后运行。|
 
 ## <a name="example-aftertargets-and-beforetargets"></a>示例：AfterTargets 和 BeforeTargets
 
-下面的示例演示如何使用 `AfterTargets` 属性添加对输出文件执行某些操作的自定义目标。 在这种情况下，它会将输出文件复制到“CustomOutput”的新文件夹中  。  该示例还演示如何使用 `BeforeTargets` 属性并指定自定义清理操作在目标 `CoreClean` 之前运行，用 `CustomClean` 目标清理由自定义生成操作创建的文件。
+下面的示例演示如何使用 `AfterTargets` 属性添加对输出文件执行某些操作的自定义目标。 在这种情况下，它会将输出文件复制到“CustomOutput”的新文件夹中。  该示例还演示如何使用 `BeforeTargets` 属性并指定自定义清理操作在目标 `CoreClean` 之前运行，用 `CustomClean` 目标清理由自定义生成操作创建的文件。
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -112,7 +111,7 @@ Visual Studio 生成过程由导入到项目文件中的一系列 MSBuild .targe
 
 重写预定义的目标是一种用于扩展生成过程的简单方法，但由于 MSBuild 按顺序计算目标的定义，任何方法都无法阻止已导入你的项目的另一个项目重写你已重写的目标。 因此，例如，在导入所有其他项目后，会在生成过程中使用项目文件中定义的最后一个 `AfterBuild` 目标。
 
-通过重写在全部公共目标的 `DependsOnTargets` 特性中使用的“DependsOn”属性，可防止目标被意外重写。 例如，`Build` 目标包含 `"$(BuildDependsOn)"` 的 `DependsOnTargets` 属性值。 以此为例：
+通过重写在全部公共目标的 `DependsOnTargets` 特性中使用的“DependsOn”属性，可防止目标被意外重写。 例如，`Build` 目标包含 `"$(BuildDependsOn)"` 的 `DependsOnTargets` 属性值。 请注意以下几点：
 
 ```xml
 <Target Name="Build" DependsOnTargets="$(BuildDependsOn)"/>
@@ -163,7 +162,7 @@ Visual Studio 生成过程由导入到项目文件中的一系列 MSBuild .targe
 
 ### <a name="commonly-overridden-dependson-properties"></a>经常重写的 DependsOn 属性
 
-|属性名称|描述|
+|属性名称|说明|
 |-------------------|-----------------|
 |`BuildDependsOn`|在要在整个生成过程之前或之后插入自定义目标的情况下，要重写的属性。|
 |`CleanDependsOn`|在要从自定义生成过程中清理输出的情况下，要重写的属性。|
@@ -223,7 +222,7 @@ Visual Studio 生成过程由导入到项目文件中的一系列 MSBuild .targe
 
 元素的顺序非常重要。 导入标准 SDK 目标文件后，必须出现 `BuildDependsOn` 和 `CleanDependsOn` 元素。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Studio 集成](../msbuild/visual-studio-integration-msbuild.md)
 - [MSBuild 概念](../msbuild/msbuild-concepts.md)

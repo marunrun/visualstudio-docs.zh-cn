@@ -748,6 +748,10 @@
                   href: ca2355.md
                 - name: 'CA2356:Web 反序列化对象图中的不安全 DataSet 或 DataTable 类型'
                   href: ca2356.md
+                - name: CA2361：请确保包含 DataSet.ReadXml() 的自动生成的类没有与不受信任的数据一起使用
+                  href: ca2361.md
+                - name: CA2362：自动生成的可序列化类型中不安全的数据集或数据表易受远程代码执行攻击
+                  href: ca2362.md
                 - name: CA2330：在反序列化时确保 JsonSerializer 具有安全配置
                   href: ca2330.md
                 - name: CA3001：查看 SQL 注入漏洞的代码
