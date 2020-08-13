@@ -983,3 +983,9 @@
                   href: ca2248.md
             - name: 自动功能挂起
               href: automatic-feature-suspension.md
+            - name: 发布警告
+              items:
+                - name: 概述
+                  displayName: publish warnings
+                - name: IL3000：当发布为单个文件时，避免使用访问程序集文件路径
+                  href: il3000.md
