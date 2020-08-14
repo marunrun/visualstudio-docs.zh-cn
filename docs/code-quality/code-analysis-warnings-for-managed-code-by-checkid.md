@@ -173,6 +173,7 @@ f1_keywords:
 - CA1833
 - CA1835
 - CA1836
+- CA1838
 - CA1900
 - CA1901
 - CA1903
@@ -293,12 +294,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: aca6889b46b58828db59be634275e99d6721ee49
-ms.sourcegitcommit: d9254e54079ae01cdf2d07b11f988faf688f80fc
+ms.openlocfilehash: 040df1edf85f2879cd2666e79768e76969464522
+ms.sourcegitcommit: 2946d802aec1418e87bfa779d81834eeb7be5c9d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88114144"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88214601"
 ---
 # <a name="code-analysis-warnings-for-managed-code-by-checkid"></a>托管代码的代码分析警告（按 CheckId）
 
@@ -372,7 +373,7 @@ ms.locfileid: "88114144"
 | CA1068 | [CA1068:CancellationToken 参数必须最后出现](../code-quality/ca1068.md) | 方法具有一个不是最后一个参数的 CancellationToken 参数。 |
 | CA1069 | [CA1069:枚举不得具有重复值](../code-quality/ca1069.md) | 枚举具有多个显式分配相同常数值的成员。 |
 | CA1070 | [CA1070:不要将事件字段声明为“虚拟”](../code-quality/ca1070.md) | [类似字段的事件](/dotnet/csharp/language-reference/language-specification/classes#field-like-events)被声明为 virtual。 |
-| CA1200 | [CA1200:不要使用带前缀的 cref 标记](../code-quality/ca1200.md) | XML 文档标记中的[cref](/dotnet/csharp/programming-guide/xmldoc/cref-attribute)特性表示 "代码引用"。 它指定标记的内部文本是一个代码元素，例如类型、方法或属性。 避免使用 `cref` 带有前缀的标记，因为这会阻止编译器验证引用。 它还可防止 Visual Studio 集成开发环境 (IDE) 在重构期间查找和更新这些符号引用。 |
+| CA1200 | [CA1200:不要使用带前缀的 cref 标记](../code-quality/ca1200.md) | XML 文档标记中的 [cref](/dotnet/csharp/programming-guide/xmldoc/cref-attribute) 特性表示 "代码引用"。 它指定标记的内部文本是一个代码元素，例如类型、方法或属性。 避免使用 `cref` 带有前缀的标记，因为这会阻止编译器验证引用。 它还可防止 Visual Studio 集成开发环境 (IDE) 在重构期间查找和更新这些符号引用。 |
 | CA1300 | [CA1300:指定 MessageBoxOptions](../code-quality/ca1300.md) | 为了让使用从右到左阅读顺序的文化区域正确显示消息框，必须将 MessageBoxOptions 枚举的 RightAlign 和 RtlReading 成员传递给 Show 方法。 |
 | CA1301 | [CA1301:避免快捷键重复](../code-quality/ca1301.md) | 访问键也称为快捷键，它通过使用 Alt 键来实现对控件的键盘访问。 如果多个控件具有重复的访问键，则访问键的行为定义不正确。 |
 | CA1302 | [CA1302:请不要对区域设置特定的字符串进行硬编码](../code-quality/ca1302.md) | System.Environment.SpecialFolder 枚举包含表示特殊系统文件夹的成员。 对于不同的操作系统，这些文件夹的位置可能具有不同的值；用户也可能会更改某些位置；或者这些位置已经进行了本地化。 Environment.GetFolderPath 方法返回与 Environment.SpecialFolder 枚举关联、经过本地化且与当前正在运行的计算机相应的位置。 |
@@ -408,7 +409,7 @@ ms.locfileid: "88114144"
 | CA1506 | [CA1506:避免过度类耦合度](../code-quality/ca1506.md) | 此规则通过计算类型或方法包含的唯一类型引用的个数来衡量类耦合。 |
 | CA1507 | [CA1507：使用 nameof 代替字符串](../code-quality/ca1507.md) | 字符串文本用作参数，可在其中 `nameof` 使用表达式。 |
 | CA1508 | [CA1508：避免死条件代码](../code-quality/ca1508.md) | 方法具有始终计算为 `true` 或 `false` 在运行时的条件代码。 这会导致条件的分支中的代码停滞 `false` 。 |
-| CA1509 | [CA1509：代码度量配置文件中的条目无效](../code-quality/ca1509.md) | 代码度量规则（如[CA1501](ca1501.md)、 [CA1502](ca1502.md)、 [CA1505](ca1505.md)和[CA1506](ca1506.md)）提供了名为的配置文件， `CodeMetricsConfig.txt` 该文件具有无效条目。 |
+| CA1509 | [CA1509：代码度量配置文件中的条目无效](../code-quality/ca1509.md) | 代码度量规则（如 [CA1501](ca1501.md)、 [CA1502](ca1502.md)、 [CA1505](ca1505.md) 和 [CA1506](ca1506.md)）提供了名为的配置文件， `CodeMetricsConfig.txt` 该文件具有无效条目。 |
 | CA1600 | [CA1600:不要使用 Idle 进程优先级](../code-quality/ca1600.md) | 不要将进程优先级设置为 Idle。 具有 System.Diagnostics.ProcessPriorityClass.Idle 优先级的进程将在 CPU 本应处于空闲状态时占用它，从而阻止进入待机状态。 |
 | CA1601 | [CA1601:不要使用阻止电源状态更改的计时器](../code-quality/ca1601.md) | 频率较高的定期活动会使 CPU 处于繁忙状态，并且会干扰具有节能功能（关闭显示器和硬盘）的空闲计时器。 |
 | CA1700 | [CA1700:不要命名“Reserved”枚举值](../code-quality/ca1700.md) | 此规则假定当前不使用名称中包含“reserved”的枚举成员，而是将其作为一个占位符，以在将来的版本中重命名或移除它。 重命名或移除成员是一项重大更改。 |
@@ -455,16 +456,17 @@ ms.locfileid: "88114144"
 | CA1823 | [CA1823:避免未使用的私有字段](../code-quality/ca1823.md) | 检测到程序集内有似乎未访问过的私有字段。 |
 | CA1824 |[CA1824:用 NeutralResourcesLanguageAttribute 标记程序集](../code-quality/ca1824.md) | NeutralResourcesLanguage 属性通知资源管理器，该语言用于显示程序集的非特定区域性的资源。 这将改进所加载的第一个资源的查找性能，并缩小工作集。 |
 | CA1825 |[CA1825:避免数组分配长度为零](../code-quality/ca1825.md) | 初始化长度为零的数组将导致不必要的内存分配。 相反，请通过调用来使用静态分配的空数组实例 <xref:System.Array.Empty%2A?displayProperty=nameWithType> 。 内存分配在此方法的所有调用之间共享。 |
-| CA1826 |[CA1826:使用属性，而不是 Linq Enumerable 方法](../code-quality/ca1826.md) | <xref:System.Linq.Enumerable>LINQ 方法用于支持等效且更有效的属性的类型。 |
+| CA1826 |[CA1826:使用属性，而不是 Linq Enumerable 方法](../code-quality/ca1826.md) | <xref:System.Linq.Enumerable> LINQ 方法用于支持等效且更有效的属性的类型。 |
 | CA1827 |[CA1827:如果可以使用 Any，请勿使用 Count/LongCount](../code-quality/ca1827.md) | <xref:System.Linq.Enumerable.Count%2A><xref:System.Linq.Enumerable.LongCount%2A>使用方法，其中 <xref:System.Linq.Enumerable.Any%2A> 方法会更有效。 |
 | CA1828 |[CA1828:如果可以使用 AnyAsync，请勿使用 CountAsync/LongCountAsync](../code-quality/ca1828.md) | <xref:Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.CountAsync%2A><xref:Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.LongCountAsync%2A>使用方法，其中 <xref:Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.AnyAsync%2A> 方法会更有效。 |
-| CA1829 |[CA1829:使用 Length/Count 属性，而不是 Enumerable.Count 方法](../code-quality/ca1829.md) | <xref:System.Linq.Enumerable.Count%2A>LINQ 方法用于支持等效的、更有效的或属性的类型 `Length` `Count` 。 |
-| CA1830 |[CA1830:在 StringBuilder 上优先使用强类型“追加和插入”方法重载](../code-quality/ca1830.md) | <xref:System.Text.StringBuilder.Append%2A>和 <xref:System.Text.StringBuilder.Insert%2A> 提供多种类型的重载 <xref:System.String> 。  如果可能，更倾向于使用 ToString ( # A1 和基于字符串的重载中的强类型重载。 |
+| CA1829 |[CA1829:使用 Length/Count 属性，而不是 Enumerable.Count 方法](../code-quality/ca1829.md) | <xref:System.Linq.Enumerable.Count%2A> LINQ 方法用于支持等效的、更有效的或属性的类型 `Length` `Count` 。 |
+| CA1830 |[CA1830:在 StringBuilder 上优先使用强类型“追加和插入”方法重载](../code-quality/ca1830.md) | <xref:System.Text.StringBuilder.Append%2A> 和 <xref:System.Text.StringBuilder.Insert%2A> 提供多种类型的重载 <xref:System.String> 。  如果可能，更倾向于使用 ToString ( # A1 和基于字符串的重载中的强类型重载。 |
 | CA1831 |[CA1831:在合适的情况下，为字符串使用 AsSpan 而不是基于范围的索引器](../code-quality/ca1831.md) | 对字符串使用范围索引器并将值隐式赋值给 ReadOnlySpan &lt; char 类型时 &gt; ， <xref:System.String.Substring%2A?#System_String_Substring_System_Int32_System_Int32_> 将使用方法而不是 <xref:System.Span%601.Slice%2A?#System_Span_1_Slice_System_Int32_System_Int32_> ，这将生成请求的字符串部分的副本。 |
 | CA1832 |[CA1832:使用 AsSpan 或 AsMemory 而不是基于范围的索引器来获取数组的 ReadOnlySpan 或 ReadOnlyMemory 部分](../code-quality/ca1832.md) | 在数组上使用范围索引器并将值隐式赋值给 <xref:System.ReadOnlySpan%601> 或类型时 <xref:System.ReadOnlyMemory%601> ， <xref:System.Runtime.CompilerServices.RuntimeHelpers.GetSubArray%2A> 将使用方法而不是 <xref:System.Span%601.Slice%2A?#System_Span_1_Slice_System_Int32_System_Int32_> ，这将生成数组的请求部分的副本。 |
 | CA1833 |[CA1833:使用 AsSpan 或 AsMemory 而不是基于范围的索引器来获取数组的 Span 或 Memory 部分](../code-quality/ca1833.md) | 在数组上使用范围索引器并将值隐式赋值给 <xref:System.Span%601> 或类型时 <xref:System.Memory%601> ， <xref:System.Runtime.CompilerServices.RuntimeHelpers.GetSubArray%2A> 将使用方法而不是 <xref:System.Span%601.Slice%2A?#System_Span_1_Slice_System_Int32_System_Int32_> ，这将生成数组的请求部分的副本。 |
 | CA1835 |[CA1835：首选 "ReadAsync" 和 "WriteAsync" 的基于 Memory' 的重载](../code-quality/ca1835.md) | "Stream" 有一个 "ReadAsync" 重载，该重载采用 "Memory &lt; byte &gt; " 作为第一个参数，而 "WriteAsync" 重载采用 "ReadOnlyMemory &lt; Byte &gt; " 作为第一个参数。 更愿意调用基于内存的重载，这些重载更有效。 |
 | CA1836 |[CA1836：优先 `IsEmpty` `Count` 使用（如果可用）](../code-quality/ca1836.md) | 首选 `IsEmpty` 比、或更有效的属性， `Count` `Length` <xref:System.Linq.Enumerable.Count%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29> <xref:System.Linq.Enumerable.LongCount%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29> 以确定对象是否包含任何项。 |
+| CA1838 | [CA1838：避免 `StringBuilder` P/invoke 参数](../code-quality/ca1838.md) | "StringBuilder" 的封送处理始终创建本机缓冲区副本，从而导致一个封送处理操作有多个分配。 |
 | CA1900 | [CA1900:值类型字段应为可移植字段](../code-quality/ca1900.md) | 此规则对以下项进行检查：当用显式布局声明的结构封送到 64 位操作系统上的非托管代码时，是否正确对齐。 |
 | CA1901 | [CA1901： P/Invoke 声明应为可移植声明](../code-quality/ca1901.md) | 此规则计算 P/Invoke 的每个参数和返回值的大小，还验证它们在封送到 32 位和 64 位操作系统上的非托管代码时参数的大小是否正确。 |
 | CA1903 | [CA1903:仅使用目标框架中的 API](../code-quality/ca1903.md) | 一个成员或类型使用了某个 Service Pack 中引入的成员或类型，该 Service Pack 没有与项目的目标框架一起包括。 |
@@ -475,8 +477,8 @@ ms.locfileid: "88114144"
 | CA2004 | [CA2004:移除对 GC.KeepAlive 的调用](../code-quality/ca2004.md) | 如果转换为使用 SafeHandle，请移除所有对 GC.KeepAlive (object) 的调用。 在这种情况下，类不必调用 GC.KeepAlive。 这将假定它们没有终结器，而只是依赖 SafeHandle 来为它们完成 OS 句柄。 |
 | CA2006 | [CA2006:使用 SafeHandle 封装本机资源](../code-quality/ca2006.md) | 在托管代码中使用 IntPtr 可能意味着潜在的安全性和可靠性方面的问题。 必须检查所有使用 IntPtr 之处，以确定是否需要在该处使用 SafeHandle 或类似的技术。 |
 | CA2007 | [CA2007：不直接等待任务](ca2007.md) | 异步方法会[awaits](/dotnet/csharp/language-reference/keywords/await)直接等待 <xref:System.Threading.Tasks.Task> 。 当异步方法直接等待时 <xref:System.Threading.Tasks.Task> ，延续将在创建任务的同一线程中发生。 此行为在性能方面可能会很大，并且可能会在 UI 线程上导致死锁。 请考虑调用 <xref:System.Threading.Tasks.Task.ConfigureAwait(System.Boolean)?displayProperty=nameWithType> 以通知你的继续符。 |
-| CA2009 | [CA2009：请勿对 ImmutableCollection 值调用 ToImmutableCollection](ca2009.md) | `ToImmutable`不必要地对命名空间中的不可变集合调用方法 <xref:System.Collections.Immutable> 。 |
-| CA2011 | [CA2011:请勿在其资源库中分配属性](ca2011.md) | 属性在其自身的[set 访问器](/dotnet/csharp/programming-guide/classes-and-structs/using-properties#the-set-accessor)中被意外赋值。 |
+| CA2009 | [CA2009：请勿对 ImmutableCollection 值调用 ToImmutableCollection](ca2009.md) | `ToImmutable` 不必要地对命名空间中的不可变集合调用方法 <xref:System.Collections.Immutable> 。 |
+| CA2011 | [CA2011:请勿在其资源库中分配属性](ca2011.md) | 属性在其自身的 [set 访问器](/dotnet/csharp/programming-guide/classes-and-structs/using-properties#the-set-accessor)中被意外赋值。 |
 | CA2012 | [CA2012:正确使用 ValueTask](ca2012.md) | 从成员调用返回的 ValueTasks 将直接等待。  多次尝试使用 ValueTask 或在已知完成前直接访问一个结果可能会导致异常或损坏。  忽略此类 ValueTask 可能表明出现功能 bug，并可能会降低性能。 |
 | CA2013 | [CA2013:请勿将 ReferenceEquals 与值类型结合使用](ca2013.md) | 使用比较值时 <xref:System.Object.ReferenceEquals%2A?displayProperty=fullName> ，如果 objA 和 objB 是值类型，则在将其传递给方法之前将它们装箱 <xref:System.Object.ReferenceEquals%2A> 。 这意味着，即使 objA 和 objB 都表示值类型的同一个实例，该方法也会 <xref:System.Object.ReferenceEquals%2A> 返回 false。 |
 | CA2014 | [CA2014：不要在循环中使用 stackalloc。](ca2014.md) | Stackalloc 分配的堆栈空间仅在当前方法的调用结束时释放。  在循环中使用此方法可能会导致无限堆栈增长，并最终产生堆栈溢出情况。 |
@@ -582,14 +584,14 @@ ms.locfileid: "88114144"
 | CA5366 | [CA5366 使用 XmlReader 进行数据集读取 XML](../code-quality/ca5366.md) | 使用 <xref:System.Data.DataSet> 读取包含不受信任数据的 XML 可能会加载危险的外部引用，应使用 <xref:System.Xml.XmlReader> 具有安全解析程序或禁用 DTD 处理的进行限制。 |
 | CA5367 | [CA5367 不序列化包含指针字段的类型](../code-quality/ca5367.md) | 此规则检查是否存在具有指针字段或属性的可序列化类。 无法序列化的成员可以是指针，如使用标记的静态成员或字段 <xref:System.NonSerializedAttribute> 。 |
 | CA5368 | [CA5368 为派生自 Page 的类设置 ViewStateUserKey](../code-quality/ca5368.md) | 设置 <xref:System.Web.UI.Page.ViewStateUserKey> 属性可帮助您阻止对应用程序的攻击，方法是允许您为个别用户分配视图状态变量的标识符，使攻击者无法使用该变量生成攻击。 否则，会出现跨站点请求伪造的漏洞。 |
-| CA5374 | [CA5374 不使用 XslTransform](../code-quality/ca5374.md) | 此规则检查 <xref:System.Xml.Xsl.XslTransform?displayProperty=nameWithType> 是否在代码中实例化。 <xref:System.Xml.Xsl.XslTransform?displayProperty=nameWithType>现已过时，不应使用。 |
+| CA5374 | [CA5374 不使用 XslTransform](../code-quality/ca5374.md) | 此规则检查 <xref:System.Xml.Xsl.XslTransform?displayProperty=nameWithType> 是否在代码中实例化。 <xref:System.Xml.Xsl.XslTransform?displayProperty=nameWithType> 现已过时，不应使用。 |
 | CA5375 | [CA5375 不使用帐户共享访问签名](../code-quality/ca5375.md) | 帐户 SAS 可委派对 blob 容器、表、队列以及服务 SAS 不允许的文件共享上的读取、写入和删除操作的访问权限。 但是，它不支持容器级别的策略，并且具有较低的灵活性和对所授予权限的控制权限。 一旦恶意用户获得，您的存储帐户就会容易泄露。 |
 | CA5376 | [CA5376 使用 SharedAccessProtocol HttpsOnly](../code-quality/ca5376.md) | SAS 是不能以纯文本形式在 HTTP 上传输的敏感数据。 |
 | CA5377 | [CA5377 使用容器级别访问策略](../code-quality/ca5377.md) | 容器级别的访问策略可以随时修改或撤消。 它提供了更大的灵活性并控制授予的权限。 |
 | CA5379 | [CA5379 不使用弱密钥派生函数算法](../code-quality/ca5379.md) | <xref:System.Security.Cryptography.Rfc2898DeriveBytes>类默认使用 <xref:System.Security.Cryptography.HashAlgorithmName.SHA1> 算法。 应指定要在具有 <xref:System.Security.Cryptography.HashAlgorithmName.SHA256> 或更高版本的构造函数的某些重载中使用的哈希算法。 请注意， <xref:System.Security.Cryptography.Rfc2898DeriveBytes.HashAlgorithm> 属性仅具有 `get` 访问器，没有 `overriden` 修饰符。 |
 | CA5382 | [CA5382 在 ASP.NET Core 中使用安全 cookie](../code-quality/ca5382.md) | 通过 HTTPS 提供的应用程序必须使用安全 cookie，这向浏览器指示该 cookie 只应使用安全套接字层 (SSL) 传输。 |
 | CA5383 | [CA5383 确保在 ASP.NET Core 中使用安全 cookie](../code-quality/ca5383.md) | 通过 HTTPS 提供的应用程序必须使用安全 cookie，这向浏览器指示该 cookie 只应使用安全套接字层 (SSL) 传输。 |
-| CA5384 | [CA5384 (DSA) 使用数字签名算法](../code-quality/ca5384.md) | DSA 是弱非对称加密算法。 |
+| CA5384 | [CA5384 (DSA) 使用数字签名算法 ](../code-quality/ca5384.md) | DSA 是弱非对称加密算法。 |
 | CA5385 | [CA5385 使用 Rivest – Rivest-shamir-adleman – Rivest-shamir-adleman (RSA) 具有足够密钥大小的算法](../code-quality/ca5385.md) | 小于2048位的 RSA 密钥更容易受到暴力破解攻击。 |
 | CA5387 | [CA5387 不使用弱密钥派生函数，迭代次数不足](../code-quality/ca5387.md) | 此规则检查是否生成了的加密密钥 <xref:System.Security.Cryptography.Rfc2898DeriveBytes> ，迭代次数小于100000。 较高的迭代次数可帮助缓解字典攻击，尝试猜测生成的加密密钥。 |
 | CA5388 | [使用弱密钥派生函数时，CA5388 确保有足够的迭代计数](../code-quality/ca5388.md) | 此规则检查是否生成的加密密钥 <xref:System.Security.Cryptography.Rfc2898DeriveBytes> 带有小于100000的迭代次数。 较高的迭代次数可帮助缓解字典攻击，尝试猜测生成的加密密钥。 |
