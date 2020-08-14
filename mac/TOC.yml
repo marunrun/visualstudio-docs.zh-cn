@@ -92,6 +92,10 @@
       href: data-visualizations.md
     - name: 通过源链接调试 NuGet 包
       href: source-link.md
+- name: 正在测试
+  items:
+    - name: 概述
+      href: testing.md
 - name: 编译和生成
   items:
     - name: 概述
