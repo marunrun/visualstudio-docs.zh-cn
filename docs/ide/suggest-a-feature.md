@@ -8,12 +8,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bbe6992bd48cfe28dfe3df20f5540aca76390bf1
-ms.sourcegitcommit: 22deb247ad951e4971f27fdab413b158415d0584
+ms.openlocfilehash: 2d8106463f306ddbc3fe6aefb337935cbe0d316c
+ms.sourcegitcommit: d9254e54079ae01cdf2d07b11f988faf688f80fc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81276483"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88114200"
 ---
 # <a name="suggest-a-feature-for-visual-studio"></a>建议 Visual Studio 功能
 
@@ -86,6 +86,13 @@ User Voice 网站设为只读模式。 可以根据需要查看上下文，但�
 “已关闭 - 信息不足”表示经过多次尝试后，我们获得的信息仍不足，无法全面了解你的功能建议  。 我们不得不关闭新功能建议，因为在此阶段无法进一步采取任何措施。
 
 找到了所需的信息后，该怎么办？ 找到其他信息后，可发出重新激活票证的请求。
+
+- - -
+
+![开发者社区中功能建议的“已关闭 - 超出范围”状态](../ide/media/SuggestStates/closed-out-of-scope.png)
+
+已关闭 - 超出范围：如果建议不符合我们的整体产品方向，则会以超出范围的缘由将其关闭。 例如，我们可能具有相似的对 Visual Studio 产品系列中其他成员的投资。 或者建议的功能可能只与少数人相关，进行扩展会更适合提供此功能。
+
 
 - - -
 

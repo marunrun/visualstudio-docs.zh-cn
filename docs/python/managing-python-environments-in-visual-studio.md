@@ -9,12 +9,12 @@ manager: jillfra
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: e8deed53d2789afb964989e4e995e3120e9842bd
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.openlocfilehash: 1b6782a95793f222ba15fe8f928ecd9d7337c90f
+ms.sourcegitcommit: 50bbb62525c91c5a31bab57e1caf37c5638872c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85543840"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87913315"
 ---
 # <a name="how-to-create-and-manage-python-environments-in-visual-studio"></a>如何在 Visual Studio 中创建和管理 Python 环境
 
@@ -262,7 +262,7 @@ conda 环境文件夹如下所示：
 若要更正没有修复选项的环境，或删除无效环境，请使用以下步骤直接修改注册表。 更改注册表后，Visual Studio 会自动更新“Python 环境”窗口  。
 
 1. 运行 Regedit.exe  。
-1. 导航到 HKEY_LOCAL_MACHINE\SOFTWARE\Python  。 对于 IronPython，则请查找 IronPython  。
+1. 导航到 HKEY_LOCAL_MACHINE\SOFTWARE\Python 或 HKEY_CURRENT_USER\SOFTWARE\Python。 对于 IronPython，则请查找 IronPython  。
 1. 展开与分发匹配的节点，例如 CPython 为 PythonCore 或 Anaconda 为 ContinuumAnalytics   。 对于 IronPython，请展开版本号节点。
 1. 检查 InstallPath 节点下的值  ：
 
@@ -270,7 +270,8 @@ conda 环境文件夹如下所示：
 
     - 如果计算机上仍存在该环境，请将 ExecutablePath 的值更改为正确位置  。 还根据需要更正“(默认)”值和 WindowedExecutablePath 值   。
     - 如果计算机上不再存在该环境，且想将其从“Python 环境”窗口中删除，请删除 InstallPath 的父节点，例如上图中的 3.6    。
-
+    - HKEY_CURRENT_USER\SOFTWARE\Python 中的无效设置替代 HKEY_LOCAL_MACHINE\SOFTWARE\Python 中的设置
+    
 ## <a name="see-also"></a>请参阅
 
 - [安装 Python 解释器](installing-python-interpreters.md)

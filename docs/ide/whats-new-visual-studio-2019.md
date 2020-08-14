@@ -2,7 +2,7 @@
 title: Visual Studio 2019 中的新增功能
 titleSuffix: ''
 description: 了解 Visual Studio 2019 中的新增功能。
-ms.date: 05/20/2020
+ms.date: 08/05/2020
 helpviewer_keywords:
 - Visual Studio, what's new
 - what's new [Visual Studio]
@@ -15,16 +15,16 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 28c8e647943b6e99946c2a9123ee17e2be8cc5c2
-ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
+ms.openlocfilehash: 333bb9ca24579758112199c13d5a4af3f60d6058
+ms.sourcegitcommit: d21f1a028628d0221b567ba496690b3b68cfded7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86387039"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87818581"
 ---
 # <a name="whats-new-in-visual-studio-2019"></a>Visual Studio 2019 中的新增功能
 
-已针对[版本 16.6](/visualstudio/releases/2019/release-notes/) 进行更新
+已针对[版本 16.7](/visualstudio/releases/2019/release-notes/) 进行更新
 
 >[!div class="button"]
 >[下载 Visual Studio 2019](https://visualstudio.microsoft.com/downloads)
@@ -86,7 +86,7 @@ C# 中有很多新颖有用的重构，更便于组织代码。 它们在灯泡�
 
 ### <a name="code-cleanup"></a>代码清理
 
-与新文档运行状况指示符配对是一种新的代码清理命令。 可以使用此新命令通过单击按钮来识别并修复警告和建议。
+与新文档运行状况指示符配对是一种新的代码清理命令。 可以使用此新命令通过单个操作（或单击按钮）来识别并修复警告和建议。
 
 清理将格式化代码并应用[当前设置](code-styles-and-code-cleanup.md)和 [.editorconfig 文件](create-portable-custom-editor-options.md)建议的任何代码修复程序。
 
@@ -178,7 +178,7 @@ Visual Studio 2019 中会默认安装此服务。
 
    ![显示 Visual Studio 2019 调试搜索窗口的动画](media/vs-2019/debug-window-search.gif)
 
-还可以格式化监视、本地和自动窗口中值的显示方式。  双击任何窗口中的一个项目并添加逗号 (",") 以访问可能的格式说明符下拉列表，每个列表都包含其预期效果的说明。
+还可以格式化监视、本地和自动窗口中值的显示方式。 选择（或双击）任何窗口中的一个项目并添加逗号 (",") 以访问可能的格式说明符下拉列表，每个列表都包含其预期效果的说明。
 
    ![Visual Studio 2019 中的新监视窗口和格式化值的功能](media/search-watch-window.png)
 
@@ -212,7 +212,21 @@ Visual Studio 2019 中会默认安装此服务。
 
 我们经常更新 Visual Studio 2019 的新功能，不断提升开发体验。 若要了解有关我们最新创新的详细信息，请查看 [Visual Studio 博客](https://devblogs.microsoft.com/visualstudio/)。 对于我们迄今为止在预览版中发布的内容记录，请参阅[预览发行说明](/visualstudio/releases/2019/release-notes-preview/)。 有关接下来要发布的内容的列表，请参阅 [Visual Studio 路线图](/visualstudio/productinfo/vs-roadmap)。
 
-想要了解更多关于 Visual Studio 2019 的其他功能吗？ 请参阅 [Visual Studio 路线图](/visualstudio/productinfo/vs-roadmap/)。
+与此同时，以下是我们目前正在开发的一些新功能。
+
+- **Visual Studio 2019 对 Visual Studio Codespaces 的支持（预览版）**
+
+  如今，开发人员要在工作和家庭中兼顾多个项目（比以往更甚）。 新功能、bug 修复、PR 评审和原型都在争用时间，并需要不断地切换上下文。 [Visual Studio Codespaces](https://visualstudio.microsoft.com/services/visual-studio-codespaces/) 可以提供帮助。 你可以完全在云中进行开发，并为每个项目创建专用的自定义环境（以秒为单位）。 使用 Visual Studio 2019，可以连接到 codespace，并像在本地那样工作。
+
+  有关详细信息，请参阅[什么是 Visual Studio Codespaces](/visualstudio/codespaces/overview/what-is-vsonline/) 页。
+
+- **Visual Studio 2019 中改进了 Git 体验（预览版）**
+
+   我们将继续迭代改进后的 Git 体验，以提高你在 GitHub、Azure Repos 和其他远程托管服务上使用代码的效率。 可以在 Visual Studio 2019 中通过单个操作（或单击）进行初始化和推送。 还可以创建新的分支，管理当前分支，并解决合并冲突。
+
+   有关详细信息，请参阅[Visual Studio 中针对 Git 体验的精彩新更新](https://devblogs.microsoft.com/visualstudio/exciting-new-updates-to-the-git-experience-in-visual-studio/)博客文章。
+
+若要详细了解预览版（和下载链接，如果你希望试用），请参阅 [Visual Studio Preview](https://visualstudio.microsoft.com/vs/preview/) 页。
 
 ## <a name="give-us-feedback"></a>给我们提供反馈
 
