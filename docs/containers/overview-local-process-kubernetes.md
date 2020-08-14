@@ -9,12 +9,12 @@ monikerRange: '>=vs-2019'
 manager: jillfra
 author: ghogen
 ms.author: ghogen
-ms.openlocfilehash: f8808da9a2bfd49fb0ee7d661b7e57c776036c1c
-ms.sourcegitcommit: e359b93c93c6ca316c0d8b86c2b6e566171fd1ea
+ms.openlocfilehash: 5b6c07d5987c52d818a35babd16681652ddf5830
+ms.sourcegitcommit: 50bbb62525c91c5a31bab57e1caf37c5638872c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2020
-ms.locfileid: "87507880"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87913266"
 ---
 # <a name="how-local-process-with-kubernetes-works"></a>如何通过本地进程使用 Kubernetes
 
@@ -47,6 +47,9 @@ Local Process with Kubernetes 将重定向已连接的 Kubernetes 群集与开�
 建立与群集的连接后，可以在计算机上本机运行和调试代码，而无需容器化，并且代码可以直接与群集的其余部分交互。 在连接期间，远程代理接收的任何网络流量都将重定向到指定的本地端口，让本机运行的代码可以接受和处理该流量。 群集中的环境变量、卷和机密可供开发计算机上运行的代码使用。 此外，由于 Local Process with Kubernetes 将主机文件条目和端口转发添加到了开发人员计算机，你的代码可以使用群集中的服务名称向群集上运行的服务发送网络流量，将该流量转发到群集中正在运行的服务。 在整个连接期间，流量在开发计算机和群集之间路由。
 
 此外，Local Process with Kubernetes 还提供了一种方法，通过 `KubernetesLocalProcessConfig.yaml` 文件复制开发计算机中可用于群集中 Pod 的环境变量和已装载的文件。 还可以使用此文件创建新的环境变量和卷装载。
+
+> [!NOTE]
+> 在连接到群集期间（加上额外的 15 分钟），Kubernetes 本地进程将使用本地计算机上的管理员权限来运行名为“EndpointManager”的进程。
 
 ## <a name="additional-configuration-with-kuberneteslocalprocessconfigyaml"></a>KubernetesLocalProcessConfig.yaml 的其他配置
 
@@ -92,7 +95,7 @@ Local Process with Kubernetes 将重定向已连接的 Kubernetes 群集与开�
 
 ## <a name="diagnostics-and-logging"></a>诊断和日志记录
 
-使用 Local Process with Kubernetes 连接到群集时，会将群集中的诊断日志记录到开发计算机的[临时目录][azds-tmp-dir]。
+使用 Local Process with Kubernetes 连接到群集时，会将群集中的诊断日志记录到开发计算机的“Kubernetes 本地进程”文件夹中的 TEMP 目录。
 
 ## <a name="limitations"></a>限制
 

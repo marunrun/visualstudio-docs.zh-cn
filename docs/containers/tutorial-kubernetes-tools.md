@@ -8,12 +8,12 @@ manager: jillfra
 ms.technology: vs-azure
 ms.workload:
 - azure
-ms.openlocfilehash: 02a672321a11889d88a8af3305e64a66fe779080
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 7778019e73119a4b8b1a5842bb7a8c04ef017143
+ms.sourcegitcommit: 50bbb62525c91c5a31bab57e1caf37c5638872c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85283185"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87913305"
 ---
 # <a name="get-started-with-visual-studio-kubernetes-tools"></a>Visual Studio Kubernetes 工具入门
 
@@ -123,7 +123,7 @@ Visual Studio Kubernetes 工具有助于简化面向 Kubernetes 的容器化应�
 
 - azds.yaml. 这包含 Azure Dev Spaces 的设置，可在 Azure Kubernetes 服务中提供快速的迭代调试体验。 有关详细信息，请参阅 [Azure Dev Spaces 文档](/azure/dev-spaces/azure-dev-spaces)。
 
-::: moniker range="vs-2017"
+:::moniker range="vs-2017"
 
 ## <a name="publish-to-azure-kubernetes-service-aks"></a>发布到 Azure Kubernetes 服务 (AKS)
 
@@ -166,6 +166,16 @@ Visual Studio Kubernetes 工具有助于简化面向 Kubernetes 的容器化应�
 ::: moniker-end
 
 祝贺你！ 现可使用 Visual Studio 的全部功能来开发所有 Kubernetes 应用。
+
+## <a name="remove-kubernetes-support"></a>删除 Kubernetes 支持
+
+1. 在“解决方案资源管理器”的“属性”下，打开 launchSettings.json。
+
+1. 删除“Kubernetes 中的容器”部分。
+
+1. 如果要切换回 Docker 撰写，请在“解决方案资源管理器”中选择该项目，右键单击并选择“设置为启动项目”。
+
+1. （可选）还可以删除本文前面提到的其他项目列表，如“图表”文件夹和 azds.yaml。
 
 ## <a name="next-steps"></a>后续步骤
 

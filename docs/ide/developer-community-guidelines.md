@@ -8,12 +8,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fb7f821a7b815b29c9f85b6ab0686edb0292866d
-ms.sourcegitcommit: 4d5cd0b9de7a87efb69f17b02c2331b749e6ec8d
+ms.openlocfilehash: b39b62ade75687a61981712c47e9876a0ef082fd
+ms.sourcegitcommit: 615c8f39216ee2500161fa3aa1b3fe2f3e4386fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86137568"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87972468"
 ---
 # <a name="developer-community-guidelines"></a>开发者社区指南
 
@@ -89,12 +89,15 @@ ms.locfileid: "86137568"
 
 在我们的决策过程中，我们将查看关于功能建议的下列特征：
 
+- 它是否符合我们的一般产品方向？
 - 我们能负担得起构建和维护它的费用吗？
 - 它符合我们的总体[路线图](https://docs.microsoft.com/visualstudio/productinfo/vs-roadmap)策略吗？
 - 如投票和评论所示，它得到社区的支持了吗？
 - 即使社区支持度低，我们还是喜欢它吗？
 
 如果我们对其中任一问题没法给出“是”的答案，我们就会关闭它。 但建议通常保持在“正在评审”状态下打开，以收集更多社区反馈。
+
+如果建议不符合我们的整体产品方向，则会以超出范围的缘由将其关闭。 例如，我们可能具有相似的对 Visual Studio 产品系列中其他成员的投资。 或者建议的功能可能只与少数人相关，进行扩展会更适合提供此功能。
 
 可查看[建议状态和常见问题解答](https://docs.microsoft.com/visualstudio/ide/report-a-problem)来跟踪功能建议的进度。
 
