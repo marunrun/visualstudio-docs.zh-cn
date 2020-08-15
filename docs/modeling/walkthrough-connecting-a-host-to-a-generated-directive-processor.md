@@ -13,21 +13,21 @@ ms.workload:
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: c782b84f39419272c271f41d217442cc9e001b3f
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.openlocfilehash: 8dfca47159192c1f6fe25f703b54745b55d8e384
+ms.sourcegitcommit: d8609a78b460d4783f5d59c0c89454910a4dbd21
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85535858"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88237992"
 ---
 # <a name="walkthrough-connect-a-host-to-a-generated-directive-processor"></a>演练：将主机连接到生成的指令处理器
 
 您可以编写自己的宿主来处理文本模板。 [演练：创建自定义文本模板宿主](../modeling/walkthrough-creating-a-custom-text-template-host.md)中演示了一个基本的自定义主机。 您可以扩展该主机以添加功能，如生成多个输出文件。
 
-在本演练中，将展开自定义主机，使其支持调用指令处理器的文本模板。 定义域特定语言时，它将为域模型生成*指令处理器*。 指令处理器使用户能够更轻松地编写访问该模型的模板，从而减少了在模板中编写程序集和导入指令的需求。
+在本演练中，将展开自定义主机，使其支持调用指令处理器的文本模板。 定义域特定语言时，它将为域模型生成 *指令处理器* 。 指令处理器使用户能够更轻松地编写访问该模型的模板，从而减少了在模板中编写程序集和导入指令的需求。
 
 > [!NOTE]
-> 本演练基于[演练：创建自定义文本模板宿主](../modeling/walkthrough-creating-a-custom-text-template-host.md)。 首先执行该演练。
+> 本演练基于 [演练：创建自定义文本模板宿主](../modeling/walkthrough-creating-a-custom-text-template-host.md)。 首先执行该演练。
 
 本演练包含以下任务：
 
@@ -41,7 +41,7 @@ ms.locfileid: "85535858"
 
 若要定义 DSL，必须安装以下组件：
 
-| | |
+| 组件 | 链接 |
 |-|-|
 | Visual Studio | [http://go.microsoft.com/fwlink/?LinkId=185579](https://visualstudio.microsoft.com/) |
 | [!INCLUDE[vssdk_current_short](../modeling/includes/vssdk_current_short_md.md)] | [http://go.microsoft.com/fwlink/?LinkId=185580](/azure/devops/integrate/index) |
@@ -49,7 +49,7 @@ ms.locfileid: "85535858"
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 
-此外，还必须在[演练：创建自定义文本模板宿主](../modeling/walkthrough-creating-a-custom-text-template-host.md)中创建自定义文本模板转换。
+此外，还必须在 [演练：创建自定义文本模板宿主](../modeling/walkthrough-creating-a-custom-text-template-host.md)中创建自定义文本模板转换。
 
 ## <a name="use-domain-specific-language-tools-to-generate-a-directive-processor"></a>使用特定于域的语言工具生成指令处理器
 
@@ -65,14 +65,14 @@ ms.locfileid: "85535858"
 
    - 公司名称： Fabrikam
 
-   有关创建域特定语言解决方案的详细信息，请参阅[如何：创建特定于域的语言解决方案](../modeling/how-to-create-a-domain-specific-language-solution.md)。
+   有关创建域特定语言解决方案的详细信息，请参阅 [如何：创建特定于域的语言解决方案](../modeling/how-to-create-a-domain-specific-language-solution.md)。
 
-2. 在 **“生成”** 菜单上，单击 **“生成解决方案”** 。
+2. 在“生成”菜单中，单击“生成解决方案”。
 
    > [!IMPORTANT]
    > 此步骤将生成指令处理器，并在注册表中为其添加密钥。
 
-3. 在“调试”菜单上，单击“启动调试”。
+3. 在 **“调试”** 菜单中，单击 **“启动调试”** 。
 
     此时将打开 Visual Studio 的第二个实例。
 
@@ -86,13 +86,13 @@ ms.locfileid: "85535858"
 
 ## <a name="connect-a-custom-text-template-host-to-a-directive-processor"></a>将自定义文本模板主机连接到指令处理器
 
-生成指令处理器后，将连接在[演练：创建自定义文本模板主机](../modeling/walkthrough-creating-a-custom-text-template-host.md)中创建的指令处理器和自定义文本模板主机。
+生成指令处理器后，将连接在 [演练：创建自定义文本模板主机](../modeling/walkthrough-creating-a-custom-text-template-host.md)中创建的指令处理器和自定义文本模板主机。
 
 1. 打开 CustomHost 解决方案。
 
-2. 在“项目”菜单上，单击“添加引用”   。
+2. 在“项目”菜单上，单击“添加引用”。
 
-     此时将打开 "**添加引用**" 对话框，其中显示了 " **.net** " 选项卡。
+     此时将打开 " **添加引用** " 对话框，其中显示了 " **.net** " 选项卡。
 
 3. 添加以下引用：
 
@@ -228,9 +228,9 @@ ms.locfileid: "85535858"
             }
     ```
 
-7. 在“文件”菜单上，单击“全部保存” 。
+7. 在“文件”  菜单上，单击“全部保存” 。
 
-8. 在 **“生成”** 菜单上，单击 **“生成解决方案”** 。
+8. 在“生成”菜单中，单击“生成解决方案”。
 
 ## <a name="test-the-custom-host-with-the-directive-processor"></a>用指令处理器测试自定义主机
 
@@ -314,7 +314,7 @@ ms.locfileid: "85535858"
 
 3. 在代码中， \<YOUR PATH> 将替换为在第一个过程中创建的特定于设计语言的示例文件的路径。
 
-4. 保存并关闭该文件。
+4. 保存并关闭文件。
 
 ### <a name="test-the-custom-host"></a>测试自定义主机
 
@@ -327,7 +327,7 @@ ms.locfileid: "85535858"
      `<YOUR PATH>CustomHost\bin\Debug\CustomHost.exe`
 
     > [!NOTE]
-    > 您可以浏览到**Windows 资源管理器**中 CustomHost.exe 的文件，然后将该文件拖入命令提示符窗口，而不是键入地址。
+    > 您可以浏览到 **Windows 资源管理器**中 CustomHost.exe 的文件，然后将该文件拖入命令提示符窗口，而不是键入地址。
 
 3. 键入一个空格。
 
@@ -338,11 +338,11 @@ ms.locfileid: "85535858"
      `<YOUR PATH>TestTemplateWithDP.txt`
 
     > [!NOTE]
-    > 您可以浏览到**Windows 资源管理器**中 TestTemplateWithDP.txt 的文件，然后将该文件拖入命令提示符窗口，而不是键入地址。
+    > 您可以浏览到 **Windows 资源管理器**中 TestTemplateWithDP.txt 的文件，然后将该文件拖入命令提示符窗口，而不是键入地址。
 
      自定义主机应用程序将运行并启动文本模板转换过程。
 
-5. 在**Windows 资源管理器**中，浏览到 TestTemplateWithDP.txt 的文件所在的文件夹。
+5. 在 **Windows 资源管理器**中，浏览到 TestTemplateWithDP.txt 的文件所在的文件夹。
 
      该文件夹还包含 TestTemplateWithDP1.txt 的文件。
 
