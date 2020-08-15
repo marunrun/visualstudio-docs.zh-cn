@@ -11,15 +11,15 @@ caps.latest.revision: 2
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d21be6a4e0d6fb24bec95cd7232a33dd20c67f31
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f0c6505449e6b54bdbc02998e78770c7cde54976
+ms.sourcegitcommit: d8609a78b460d4783f5d59c0c89454910a4dbd21
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62840169"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88238252"
 ---
 # <a name="scriptuichandling-enumeration"></a>SCRIPTUICHANDLING 枚举
-表示应处理 UI 控件的方式。  
+表示应对 UI 控件进行处理的方式。  
   
 ## <a name="syntax"></a>语法  
   
@@ -29,8 +29,8 @@ typedef enum tagSCRIPTUICHANDLING {     SCRIPTUICHANDLING_ALLOW = 0,     SCRIPTU
   
 ## <a name="enumeration-value"></a>枚举值  
   
-|||  
+|“值”|UIC 处理方法|  
 |-|-|  
-|SCRIPTUICHANDLING_ALLOW|允许要显示的控件。|  
+|SCRIPTUICHANDLING_ALLOW|允许显示控件。|  
 |SCRIPTUICHANDLING_NOUIERROR||  
 |SCRIPTUICHANDLING_NOUIDEFAULT||
