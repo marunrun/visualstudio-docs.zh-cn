@@ -11,45 +11,45 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 61321555a6896fad926d2ee38c5d73d50801d6b9
-ms.sourcegitcommit: cb0c6e55ae560960a493df9ab56e3e9d9bc50100
+ms.openlocfilehash: aa3ab53bbda2582d1a9b3c60ac07fd3617d51ddf
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86972343"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88248787"
 ---
 # <a name="add-a-menu-to-the-visual-studio-menu-bar"></a>将菜单添加到 Visual Studio 菜单栏
 
-本演练演示如何将菜单添加到 Visual Studio 集成开发环境（IDE）的菜单栏中。 IDE 菜单栏包含 "**文件**"、"**编辑**"、"**视图**"、"**窗口**" 和 "**帮助**" 等菜单类别。
+本演练演示如何将菜单添加到 Visual Studio 集成开发环境 (IDE) 的菜单栏中。 IDE 菜单栏包含 " **文件**"、" **编辑**"、" **视图**"、" **窗口**" 和 " **帮助**" 等菜单类别。
 
-在将新菜单添加到 Visual Studio 菜单栏之前，请考虑是否应将命令置于现有菜单中。 有关命令放置的详细信息，请参阅[Visual Studio 的菜单和命令](../extensibility/ux-guidelines/menus-and-commands-for-visual-studio.md)。
+在将新菜单添加到 Visual Studio 菜单栏之前，请考虑是否应将命令置于现有菜单中。 有关命令放置的详细信息，请参阅 [Visual Studio 的菜单和命令](../extensibility/ux-guidelines/menus-and-commands-for-visual-studio.md)。
 
-菜单在项目的 *.vsct*文件中声明。 有关菜单和 *.vsct*文件的详细信息，请参阅[命令、菜单和工具栏](../extensibility/internals/commands-menus-and-toolbars.md)。
+菜单在项目的 *.vsct* 文件中声明。 有关菜单和 *.vsct* 文件的详细信息，请参阅 [命令、菜单和工具栏](../extensibility/internals/commands-menus-and-toolbars.md)。
 
-完成本演练后，可以创建一个名为 "**测试" 菜单**的菜单，其中包含一个命令。
+完成本演练后，可以创建一个名为 " **测试" 菜单** 的菜单，其中包含一个命令。
 
 :::moniker range=">=vs-2019"
 > [!NOTE]
-> 从 Visual Studio 2019 开始，由扩展提供的顶级菜单放置在 "**扩展**" 菜单下。
+> 从 Visual Studio 2019 开始，由扩展提供的顶级菜单放置在 " **扩展** " 菜单下。
 :::moniker-end
 
 ## <a name="prerequisites"></a>先决条件
 
-从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅[安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
+从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
 
 ## <a name="create-a-vsix-project-that-has-a-custom-command-item-template"></a>创建具有自定义命令项模板的 VSIX 项目
 
-1. 创建一个名为的 VSIX 项目 `TopLevelMenu` 。 可以通过搜索 "vsix" 在 "**新建项目**" 对话框中找到 VSIX 项目模板。  有关详细信息，请参阅[使用菜单命令创建扩展](../extensibility/creating-an-extension-with-a-menu-command.md)。
+1. 创建一个名为的 VSIX 项目 `TopLevelMenu` 。 可以通过搜索 "vsix" 在 " **新建项目** " 对话框中找到 VSIX 项目模板。  有关详细信息，请参阅 [使用菜单命令创建扩展](../extensibility/creating-an-extension-with-a-menu-command.md)。
 
 ::: moniker range="vs-2017"
 
-2. 当项目打开时，添加一个名为**testcommand (** 的自定义命令项模板。 在**解决方案资源管理器**中，右键单击项目节点，然后选择 "**添加**  >   **新项**"。 在 "**添加新项**" 对话框中，切换到 " **Visual c #/扩展性**"，然后选择 "**自定义命令**"。 在窗口底部的 "**名称**" 字段中，将命令文件名更改为*TestCommand.cs*。
+2. 当项目打开时，添加一个名为 **testcommand (** 的自定义命令项模板。 在**解决方案资源管理器**中，选择并按住 (或右键单击 "项目" 节点) ，然后选择 "**添加**  >   **新项**"。 在 " **添加新项** " 对话框中，切换到 " **Visual c #/扩展性** "，然后选择 " **自定义命令**"。 在窗口底部的 " **名称** " 字段中，将命令文件名更改为 *TestCommand.cs*。
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-2. 当项目打开时，添加一个名为**testcommand (** 的自定义命令项模板。 在**解决方案资源管理器**中，右键单击项目节点，然后选择 "**添加**  >   **新项**"。 在 "**添加新项**" 对话框中，选择 " **Visual c #/扩展性**"，然后选择 "**命令**"。 在窗口底部的 "**名称**" 字段中，将命令文件名更改为*TestCommand.cs*。
+2. 当项目打开时，添加一个名为 **testcommand (** 的自定义命令项模板。 在**解决方案资源管理器**中，选择并按住 (或右键单击 "项目" 节点) ，然后选择 "**添加**  >   **新项**"。 在 " **添加新项** " 对话框中，选择 " **Visual c #/扩展性** "，然后选择 " **命令**"。 在窗口底部的 " **名称** " 字段中，将命令文件名更改为 *TestCommand.cs*。
 
 ::: moniker-end
 
@@ -57,7 +57,7 @@ ms.locfileid: "86972343"
 
 ::: moniker range="vs-2017"
 
-1. 在**解决方案资源管理器**中，打开 *.vsct*。
+1. 在 **解决方案资源管理器**中，打开 *.vsct*。
 
     在文件末尾，有一个 `<Symbols>` 节点包含多个 `<GuidSymbol>` 节点。 在名为的节点中 `guidTestCommandPackageCmdSet` ，添加一个新符号，如下所示：
 
@@ -101,7 +101,7 @@ ms.locfileid: "86972343"
 
 ::: moniker range=">=vs-2019"
 
-1. 在**解决方案资源管理器**中，打开 *.vsct*。
+1. 在 **解决方案资源管理器**中，打开 *.vsct*。
 
     在文件末尾，有一个 `<Symbols>` 节点包含多个 `<GuidSymbol>` 节点。 在名为的节点中 `guidTopLevelMenuPackageCmdSet` ，添加一个新符号，如下所示：
 
@@ -153,19 +153,19 @@ ms.locfileid: "86972343"
 
 ::: moniker range="vs-2017"
 
-2. 实验实例中的菜单栏应包含一个 "**测试" 菜单**菜单。
+2. 实验实例中的菜单栏应包含一个 " **测试" 菜单** 菜单。
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-2. 实验实例中的 "**扩展**" 菜单应该包含一个 "**测试" 菜单**菜单。
+2. 实验实例中的 " **扩展** " 菜单应该包含一个 " **测试" 菜单** 菜单。
 
 ::: moniker-end
 
-3. 在 "**测试" 菜单**菜单上，单击 "**测试命令**"。
+3. 在 " **测试" 菜单** 菜单上，选择 " **测试命令**"。
 
-    将出现一个消息框，并显示消息 "Testcommand (内部 TopLevelMenu （）"。
+    将出现一个消息框，并显示消息 "Testcommand (内部 TopLevelMenu ( # A1"。
 
 ## <a name="see-also"></a>另请参阅
 
