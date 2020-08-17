@@ -567,6 +567,8 @@
                   href: ca1835.md
                 - name: 'CA1836:可用时最好使用 IsEmpty (而不是 Count)'
                   href: ca1836.md
+                - name: CA1838：不要对 P/Invoke 使用 StringBuilder 参数
+                  href: ca1838.md
             - name: 可移植性警告
               items:
                 - name: 概述
