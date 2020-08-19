@@ -9,12 +9,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 95623d72e70e572ca7605c34e2e25e7186c284e1
-ms.sourcegitcommit: 4a77403b6bd33c5a6e66a3eefd42c81c39fb67ca
+ms.openlocfilehash: ca095bf424420fb73ba8f369f7e41daea92fe33d
+ms.sourcegitcommit: 98af63c1a53a732558f8207338dc2722abbbe49e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87330955"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88584497"
 ---
 # <a name="report-a-problem-states-and-faq"></a>报告问题：状态和常见问题解答
 
@@ -52,7 +52,7 @@ ms.locfileid: "87330955"
 
 ![开发人员社区问题报告的“需要更多信息”状态](../ide/media/ProblemStates/NeedMoreInfo.jpg)
 
-“需要更多信息”表示需要你提供更多诊断信息，以便继续进行调查  。  [了解如何对“需要更多信息”请求做出响应。](./how-to-report-a-problem-with-visual-studio.md#when-further-information-is-needed-need-more-info)
+“需要更多信息”表示需要你提供更多诊断信息，以便继续进行调查  。  [了解如何对“需要更多信息”请求做出响应。](./how-to-report-a-problem-with-visual-studio.md#when-further-information-is-needed)
 
 - - -
 

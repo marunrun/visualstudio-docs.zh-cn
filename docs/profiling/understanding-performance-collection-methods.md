@@ -12,12 +12,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 0a37d58d1bd18ef19f610602ec8f2238816405e4
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: ecbabae86b762c9143dba6be5aa0e4683a92b0dd
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85285746"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88250776"
 ---
 # <a name="understand-performance-collection-methods"></a>了解性能收集方法
 
@@ -86,21 +86,21 @@ Visual Studio 分析工具提供了五种用于收集性能数据的方法。 �
 
 并发分析收集有关多线程应用的信息。 每当争用线程等待访问共享资源时，资源争用分析都会收集详细的调用堆栈信息。 并发可视化还收集有关多线程应用如何与以下对象进行交互的更多常规信息：
 
-  - 本身。
-  - 硬件。
-  - 操作系统。
-  - 主计算机上的其他进程。
+- 本身。
+- 硬件。
+- 操作系统。
+- 主计算机上的其他进程。
 
 资源争用报告显示争用的总次数。 它们还报告模块、函数、源代码行和指令等待资源的总时间。 时间线关系图会在争用发生时显示争用。
 
 并发可视化工具显示关系图信息以帮助你查找：
 
-  - 性能瓶颈。
-  - CPU 使用不足。
-  - 线程争用。
-  - 线程迁移。
-  - 同步延迟。
-  - 重叠 I/O 区域。
+- 性能瓶颈。
+- CPU 使用不足。
+- 线程争用。
+- 线程迁移。
+- 同步延迟。
+- 重叠 I/O 区域。
 
   如果可能，图形输出会链接到调用堆栈和源代码中的数据。 只能为命令行应用和 Windows 应用收集并发可视化数据。
 

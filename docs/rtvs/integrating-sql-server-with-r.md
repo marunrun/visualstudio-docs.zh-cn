@@ -8,12 +8,12 @@ ms.author: kraigb
 manager: jillfra
 ms.workload:
 - data-science
-ms.openlocfilehash: 10b5dfee629b5b6e67ab544ca0bdd905ed2a120a
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 2b239059f445d92a5be6709ee7b7a26cb8bb7164
+ms.sourcegitcommit: d281d2a04a5bc302650eebf369946d8f101e59dd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "72888445"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88144709"
 ---
 # <a name="work-with-sql-server-and-r"></a>使用 SQL Server 和 R
 
@@ -24,9 +24,14 @@ Visual Studio 能够完美地支持 SQL Server，可以创建和运行 SQL 查�
 > - Visual Studio 2017：运行 Visual Studio 安装程序并选择数据存储和处理工作负载，其中包括 SQL Server 数据工具。
 > - Visual Studio 2015：按照[下载 SQL Server 数据工具](/sql/ssdt/download-sql-server-data-tools-ssdt)上的说明操作。
 
-|   |   |
-|---|---|
-| ![视频的摄像机图标](../install/media/video-icon.png "观看视频") | [观看视频 (youtube.com)](https://www.youtube.com/watch?v=n4AYr0QIwdQ) 了解有关 SQL Server 和 R 的概述（3 分 03 秒）。 |
+:::row:::
+    :::column:::
+        ![视频的摄像机图标](../install/media/video-icon.png "观看视频")
+    :::column-end:::
+    :::column:::
+        [观看视频 (youtube.com)](https://www.youtube.com/watch?v=n4AYr0QIwdQ) 了解有关 SQL Server 和 R 的概述（3 分 03 秒）。
+    :::column-end:::
+:::row-end:::
 
 ## <a name="create-and-run-sql-queries"></a>创建和运行 SQL 查询
 
@@ -57,9 +62,14 @@ Transact-SQL 编辑器支持各种其他功能，例如查看查询的执行计�
 - [编写和测试 SQL 存储过程](#write-and-test-a-sql-stored-procedure)
 - [发布 SQL 存储过程](#publish-a-sql-stored-procedure)
 
-|   |   |
-|---|---|
-| ![视频的摄像机图标](../install/media/video-icon.png "观看视频") | [观看视频 (youtube.com)](https://www.youtube.com/watch?v=dFKIT2OitWQ) 了解有关 R 和 SQL 存储过程的概述（6 分 09 秒）。 |
+:::row:::
+    :::column:::
+        ![视频的摄像机图标](../install/media/video-icon.png "观看视频")
+    :::column-end:::
+    :::column:::
+        [观看视频 (youtube.com)](https://www.youtube.com/watch?v=dFKIT2OitWQ) 了解有关 R 和 SQL 存储过程的概述（6 分 09 秒）。
+    :::column-end:::
+:::row-end:::
 
 ### <a name="add-a-database-connection"></a>添加数据库连接
 

@@ -16,12 +16,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 3d223d6e1e6ed3bf4b75b1c66bcc0f9dc897cfed
-ms.sourcegitcommit: b8ce85a6d9c7fcceaad0fba625202f5ecf8f368c
+ms.openlocfilehash: 02ce09aebae0d6e5225ba1cdfa7484aa887135fd
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87434314"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88247638"
 ---
 # <a name="visual-studio-enterprise-guide"></a>Visual Studio Enterprise 指南
 如果你想节省在 Visual Studio 上正常运行公司业务的时间，请阅读本文。 本企业指南提供了一些提示，可帮助你在常见的企业场景中安装和更新 Visual Studio、在遇到问题时解决问题，并了解如何在需要更多帮助的情况下报告问题。 
@@ -70,6 +70,3 @@ ms.locfileid: "87434314"
 ## <a name="see-also"></a>请参阅 
 
 - [Visual Studio 实用指南](../ide/productivity-features.md)
-
-
-

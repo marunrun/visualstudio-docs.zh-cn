@@ -8,14 +8,14 @@ ms.author: kraigb
 manager: jillfra
 ms.workload:
 - data-science
-ms.openlocfilehash: 05a21da94dd643b04cea94b7840ca26d9379cb5a
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 31dfa975cea519d4d064856090a265b844f265f6
+ms.sourcegitcommit: d8609a78b460d4783f5d59c0c89454910a4dbd21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62969435"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88238720"
 ---
-# <a name="code-snippets"></a>代码片段
+# <a name="code-snippets-for-r"></a>R 的代码片段
 
 Visual Studio 中的代码片段提供了一些快捷方式，可用于快速插入任意长度的代码块，有助于避免反复键入相似的代码。 针对 Visual Studio 的 R 工具 (RTVS) 向 Visual Studio 的集合添加了许多有用的 R 代码片段。
 

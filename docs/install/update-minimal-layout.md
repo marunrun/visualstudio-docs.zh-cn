@@ -12,12 +12,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 849cad46463ffb52e2f4f2a930f05daf66f7d737
-ms.sourcegitcommit: 363f3e6e30dd54366ade0d08920755da5951535c
+ms.openlocfilehash: 2b9c86c17b89258145613e867ba6a91b2219fe0d
+ms.sourcegitcommit: 2c26d6e6f2a5c56ae5102cdded7b02f2d0fd686c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86869900"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88168744"
 ---
 # <a name="update-visual-studio-using-a-minimal-offline-layout"></a>使用最小脱机布局更新 Visual Studio
 
@@ -56,12 +56,13 @@ ms.locfileid: "86869900"
 #### <a name="commands"></a>命令
 * **预览**：使用此命令可预览将下载的包数以及用于创建此布局的总空间。 
 * **Generate**：使用此命令可生成用于更新 Visual Studio 的最小布局。
-* **Regenerate**：使用此命令可使用现有的最小布局响应文件再生成布局。 每个最小布局都会生成一个 `MinimalLayout.json` 响应文件，其中包含原始的最小布局输入参数。 你可使用 Regenerate 命令和 `MinimalLayout.json` 响应文件来再生成最小布局。 如果要基于之前的最小布局的响应文件为新的 Visual Studio 更新创建最小布局，这会很有用。 
-   - 对于此命令，需要已生成的布局中的 `MinimalLayout.json` 文件路径。 
+* **Regenerate**：使用此命令可使用现有的最小布局响应文件再生成布局。 每个最小布局都会生成一个 `MinimalLayout.json` 响应文件，其中包含原始的最小布局输入参数。 你可使用 Regenerate 命令和 `MinimalLayout.json` 响应文件来再生成最小布局。 如果要基于之前的最小布局的响应文件为新的 Visual Studio 更新创建最小布局，这会很有用。
 
-        ```cmd
-        MinimalLayout.exe regenerate --filePath C:\MinimalLayout\MinimalLayout.json
-        ```
+   对于此命令，需要已生成的布局中的 `MinimalLayout.json` 文件路径。 
+
+    ```cmd
+    MinimalLayout.exe regenerate --filePath C:\MinimalLayout\MinimalLayout.json
+    ```
 
 * **Verify**：使用此命令可确定布局文件夹是否已损坏。
 * **Fix**：使用此命令可修复损坏的布局文件夹，包括替换布局文件夹中缺少的任何包。

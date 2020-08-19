@@ -9,12 +9,12 @@ ms.author: sashe
 manager: AndSter
 ms.workload:
 - multiple
-ms.openlocfilehash: f7ec98f8d17465e95369eb6e2ecd88051f8daa59
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.openlocfilehash: 81c15753b083256b97c9f67219b64565a8db8736
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85330449"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88247795"
 ---
 # <a name="analyze-memory-usage-by-using-the-net-object-allocation-tool"></a>使用 .NET 对象分配工具分析内存使用情况
 
@@ -118,11 +118,11 @@ ms.locfileid: "85330449"
 - “名称”列将进程显示为最高级别的节点。 进程下面是模块，模块下面是函数。
 - 下面这些列显示的信息与“分配”和“调用树”视图中显示的信息相同：
 
-   - **总计(分配)**
-   - **自身(分配)**
-   - **总大小(字节)**
-   - **自大小(字节)**
-   - **平均大小(字节)**
+  - **总计(分配)**
+  - **自身(分配)**
+  - **总大小(字节)**
+  - **自大小(字节)**
+  - **平均大小(字节)**
 
 ### <a name="collection"></a>集合
 

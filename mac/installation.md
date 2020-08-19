@@ -8,12 +8,12 @@ ms.technology: vs-ide-install
 ms.assetid: 22B1F2CD-32AE-464D-80AC-C8AB4786B015
 ms.custom: video
 ms.topic: how-to
-ms.openlocfilehash: 4e38084d4dc1e5095581846d0810ad44b742bcdf
-ms.sourcegitcommit: 2ce59c2ffeba5ba7f628c2e6c75cba4731deef8a
+ms.openlocfilehash: 632ba9aa12eb1fa6550d0f9567e686366cfbcb00
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "85938966"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88250555"
 ---
 # <a name="install-visual-studio-2019-for-mac"></a>安装 Visual Studio 2019 for Mac
 
@@ -53,18 +53,16 @@ ms.locfileid: "85938966"
 
    如果不希望安装所有平台，请参阅以下指南，它们有助于确定要安装的平台：
 
-
-|应用类型  |目标  |选择  |说明  |
-|---------|---------|---------|---------|
-|**使用 Xamarin 的应用**| Xamarin.Forms|选择“Android”和“iOS”平台  |你需要安装 [Xcode](https://developer.apple.com/xcode/) |
-||仅限 iOS|选择“iOS”平台|你需要安装 [Xcode](https://developer.apple.com/xcode/)|
-||仅限 Android|选择“Android”平台|请注意，还应选择相关的依赖项|
-||仅限 Mac|选择“macOS (Cocoa)”平台|你需要安装 [Xcode](https://developer.apple.com/xcode/)|
-|**.NET Core 应用程序**|         |选择“.NET Core”平台。|         |
-|**ASP.NET Core Web 应用程序**|         |选择“.NET Core”平台。|         |
-|**Azure Functions**|         |选择“.NET Core”平台。|         |
-|**跨平台 Unity 游戏开发**|         |除了 Visual Studio for Mac 之外，无需安装任何其他平台。| 若要详细了解如何安装 Unity 扩展，请参阅 [Unity 安装指南](/visualstudio/mac/setup-vsmac-tools-unity)。|
-
+   |应用类型  |目标  |选择  |说明  |
+   |---------|---------|---------|---------|
+   |**使用 Xamarin 的应用**| Xamarin.Forms|选择“Android”和“iOS”平台  |你需要安装 [Xcode](https://developer.apple.com/xcode/) |
+   ||仅限 iOS|选择“iOS”平台|你需要安装 [Xcode](https://developer.apple.com/xcode/)|
+   ||仅限 Android|选择“Android”平台|请注意，还应选择相关的依赖项|
+   ||仅限 Mac|选择“macOS (Cocoa)”平台|你需要安装 [Xcode](https://developer.apple.com/xcode/)|
+   |**.NET Core 应用程序**|         |选择“.NET Core”平台。|         |
+   |**ASP.NET Core Web 应用程序**|         |选择“.NET Core”平台。|         |
+   |**Azure Functions**|         |选择“.NET Core”平台。|         |
+   |**跨平台 Unity 游戏开发**|         |除了 Visual Studio for Mac 之外，无需安装任何其他平台。| 若要详细了解如何安装 Unity 扩展，请参阅 [Unity 安装指南](/visualstudio/mac/setup-vsmac-tools-unity)。|
 
 7. 完成选择后，按下“安装”按钮。
 8. 安装程序将在下载并安装 Visual Studio for Mac 和所选工作负载时显示进度。 系统将提示输入密码以授予安装所需的权限。

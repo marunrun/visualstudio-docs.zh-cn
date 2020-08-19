@@ -14,12 +14,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: cb559bc21b70b66d64bc44fb4269c97304dd81c3
-ms.sourcegitcommit: 054815dc9821c3ea219ae6f31ebd9cd2dc8f6af5
+ms.openlocfilehash: aec4b72e8393e241039e8c005d05275ab61111bb
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80543931"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88249256"
 ---
 # <a name="tutorial-create-your-first-universal-windows-platform-application-in-visual-studio-with-xaml-and-c35"></a>教程：在 Visual Studio 中使用 XAML 和 C#35 创建第一个通用 Windows 平台应用程序；
 
@@ -160,7 +160,6 @@ ms.locfileid: "80543931"
 代码使用某些 Windows API 创建语音合成对象，然后向此对象通过一些文本用于朗读。 （有关使用 `SpeechSynthesis` 的详细信息，请参阅 <xref:System.Speech.Synthesis>。）
 
 ## <a name="run-the-application"></a>运行此应用程序
-
 
 ::: moniker range="vs-2017"
 该生成、部署和启动“Hello World”UWP 应用了，以了解它的视听效果。 操作方法如下。
