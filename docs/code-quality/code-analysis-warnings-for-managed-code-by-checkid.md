@@ -288,18 +288,19 @@ f1_keywords:
 - CA5122
 - CA5374
 - IL3000
+- IL3001
 ms.assetid: 5cb221f6-dc59-4abf-9bfa-adbd6f907f96
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 040df1edf85f2879cd2666e79768e76969464522
-ms.sourcegitcommit: 2946d802aec1418e87bfa779d81834eeb7be5c9d
+ms.openlocfilehash: daaf6854b56b31419408691c27af245c4001ea42
+ms.sourcegitcommit: 328ab0d8e5770f1067e37dcc266c2b50ea07783c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88214601"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88612872"
 ---
 # <a name="code-analysis-warnings-for-managed-code-by-checkid"></a>托管代码的代码分析警告（按 CheckId）
 
@@ -606,4 +607,5 @@ ms.locfileid: "88214601"
 | CA5400 | [CA5400 确保未禁用 HttpClient 证书吊销列表检查](../code-quality/ca5400.md) | 吊销的证书不再受信任。 攻击者可以使用它来传递某些恶意数据或偷窃 HTTPS 通信中的敏感数据。 |
 | CA5401 | [CA5401 不将 CreateEncryptor 与非默认 IV 一起使用](../code-quality/ca5401.md) | 对称加密应始终使用不可重复的初始化向量来防止字典攻击。 |
 | CA5402 | [CA5402 将 CreateEncryptor 与默认 IV 一起使用](../code-quality/ca5402.md) | 对称加密应始终使用不可重复的初始化向量来防止字典攻击。 |
-| IL3000 | [在发布为单文件时，IL3000 避免使用访问程序集文件路径](../code-quality/il3000.md) | 在发布为单文件时避免使用访问程序集文件路径 |
+| IL3000 | [在发布为单个文件时，IL3000 避免访问程序集文件路径](../code-quality/il3000.md) | 在发布为单一文件时避免使用访问程序集文件路径 |
+| IL3001 | [在发布为单文件时，IL3001 避免访问程序集文件路径](../code-quality/il3001.md) | 作为单文件发布时避免访问程序集文件路径 |
