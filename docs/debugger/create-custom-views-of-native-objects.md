@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5720511c15526a54a82018b2079b91aaf5dd6430
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.openlocfilehash: 37bfd1ab57fd0e37f32a55d5bfc3787cb0c0cbd2
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85350701"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88248062"
 ---
 # <a name="create-custom-views-of-c-objects-in-the-debugger-using-the-natvis-framework"></a>使用 Natvis 框架在调试器中创建 C++ 对象的自定义视图
 
@@ -99,6 +99,7 @@ Visual Studio 调试器会自动在 C++ 项目中加载 *.natvis* 文件，默�
 VSIX 包可以安装和注册 .natvis 文件。 无论它们安装在何处，所有注册的 .natvis 文件都会在调试过程中自动提取。
 
 1. 将 .natvis 文件包含在 VSIX 包中。 例如，对于以下项目文件：
+
    ```xml
    <?xml version="1.0" encoding="utf-8"?>
    <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
@@ -109,6 +110,7 @@ VSIX 包可以安装和注册 .natvis 文件。 无论它们安装在何处，�
    ```
 
 2. 在 source.extension.vsixmanifest 文件中注册 .natvis 文件：
+
    ```xml
    <?xml version="1.0" encoding="utf-8"?>
    <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
@@ -702,7 +704,7 @@ Natvis 的可视化功能使用 C++ 表达式来指定要显示的数据项。 �
 
  可以在 `CustomVisualizer` 元素上使用 `Condition`、`IncludeView` 和 `ExcludeView` 属性。
 
- ## <a name="limitations"></a>限制
+## <a name="limitations"></a>限制
 
 Natvis 自定义适用于类和结构，但不能适用于 typedef。
 

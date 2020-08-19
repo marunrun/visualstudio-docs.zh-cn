@@ -5,18 +5,18 @@ ms.date: 03/14/2019
 author: heiligerdankgesang
 ms.author: dominicn
 ms.assetid: 48E06A61-7294-4EC8-A09D-1763C32AD910
-ms.openlocfilehash: 2877f50528c5f93d6f764cc0dbde12a5bdf06a49
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: 989c47e3c192c936eec0828b96a800d5ed4feaa4
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "77567967"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88247374"
 ---
 # <a name="default-keyboard-shortcuts-in-visual-studio-for-mac"></a>Visual Studio for Mac 中的默认键盘快捷键
 
 有关键盘辅助功能的信息，请参阅[如何：使用键盘导航](~/accessibility-keyboard.md)。
 
-可以通过使用相应的键盘快捷键来访问 Visual Studio for Mac 中的各种命令。 本文档列出了 Visual Studio for Mac 键绑定方案的默认快捷键  。 有关如何更改键绑定方案的详细信息，请参阅[自定义 IDE](~/customizing-the-ide.md#key-bindings)。 另外，还可以使用 Visual Studio for Mac   > “首选项”  菜单项并选择“首选项”  窗口中的“环境”   > “键绑定”  来自定义命令的快捷键。
+可以通过使用相应的键盘快捷键来访问 Visual Studio for Mac 中的各种命令。 本文档列出了 Visual Studio for Mac 键绑定方案的默认快捷键****。 有关如何更改键绑定方案的详细信息，请参阅[自定义 IDE](~/customizing-the-ide.md#key-bindings)。 另外，还可以使用 Visual Studio for Mac > “首选项”菜单项并选择“首选项”窗口中的“环境” > “键绑定”来自定义命令的快捷键。
 
 > [!TIP]
 > 使用 macOS 中常用的符号将显示本文档中显示的键盘快捷键和 Visual Studio for Mac 中的键绑定首选项。 如果你不确定符号，请查看 [macOS 键符号查找表](#macos-key-symbols-lookup)。
@@ -25,8 +25,8 @@ ms.locfileid: "77567967"
 
 我们已将最常用和最有用的键盘快捷方式编译为可下载的 pdf 文件。 我们有两个版本，一个版本显示用于 Visual Studio for Mac 的快捷方式，另一个版本并排显示两种操作系统的 Visual Studio 快捷方式，适用于有在 Windows 上使用 Visual Studio 经验的用户。
 
- - [Visual Studio for Mac 键盘快捷方式快速参考](https://aka.ms/vsm-keys)
- - [Visual Studio 及 Visual Studio for Mac 键盘快捷方式快速参考](https://aka.ms/vsm-vs-keys)
+- [Visual Studio for Mac 键盘快捷方式快速参考](https://aka.ms/vsm-keys)
+- [Visual Studio 及 Visual Studio for Mac 键盘快捷方式快速参考](https://aka.ms/vsm-vs-keys)
 
 ## <a name="code-navigation"></a>代码导航
 
@@ -45,23 +45,23 @@ ms.locfileid: "77567967"
 |-|-|
 |启用或禁用断点|**⌥⌘/** 、**⌘F9**|
 |暂停|**⌥⌘P**、**⌥⌘L5**|
-|删除所有断点|**⇧⌘F9**|
+|移除所有断点|**⇧⌘F9**|
 |运行到光标处|**⌘F10**|
 |设置下一语句|**⇧⌘F10**|
 |显示下一语句|**⌥\***|
 |逐语句|**⇧⌘I**、**⌘F11**|
-|跳出|**⇧⌘U**、**⇧⌘F11**|
+|步出|**⇧⌘U**、**⇧⌘F11**|
 |逐过程|**⇧⌘O**、**F10**|
-|切换断点|**⌘\\** 、**F9**|
+|切换断点|**⌘\\**、**F9**|
 |查看断点|**⌥⌘B**|
 
-## <a name="designer"></a>Designer
+## <a name="designer"></a>设计器
 
 |命令|键盘快捷键|
 |-|-|
 |在相关文件之间切换|**⌃⌘↑**|
 
-## <a name="edit"></a>Edit
+## <a name="edit"></a>编辑
 
 |命令|键盘快捷键|
 |-|-|
@@ -90,7 +90,7 @@ ms.locfileid: "77567967"
 |命令|键盘快捷键|
 |-|-|
 |清除 F# 交互窗口|**⌃⌥C**|
-|F# 交互窗口|**⌃⌥F**|
+|F# Interactive|**⌃⌥F**|
 |重启 F# 交互窗口|**⌃⌥R**|
 |向 F# 交互窗口发送行|**⌃⌥L**|
 |向 F# 交互窗口发送引用|**⌃⌥P**|
@@ -106,8 +106,8 @@ ms.locfileid: "77567967"
 |新建文件|**⌘N**|
 |新建解决方案|**⇧⌘N**|
 |打开|**⌘O**|
-|的|**⌘P**|
-|退出|**⌘Q**|
+|打印|**⌘P**|
+|Quit|**⌘Q**|
 |还原|**⌘U**|
 |保存|**⌘S**|
 |全部保存|**⇧⌘S**|
@@ -131,9 +131,9 @@ ms.locfileid: "77567967"
 |命令|键盘快捷键|
 |-|-|
 |添加文件|**⌥⌘A**|
-|生成|**⌘K**、**⇧F6**|
+|构建|**⌘K**、**⇧F6**|
 |全部生成|**⌘B**、**F6**|
-|清理|**⇧⌘K**|
+|clean|**⇧⌘K**|
 |重新生成|**⌃⌘K**|
 |全部重新生成|**⌃⌘B**|
 |开始调试|**⌘⏎**、**F5**|
@@ -163,7 +163,7 @@ ms.locfileid: "77567967"
 |转到类型|**⇧⌘T**|
 |定位到|**⌘.**|
 |在文件中替换|**⌥⇧⌘F**|
-|替换|**⌥⌘F**|
+|Replace|**⌥⌘F**|
 
 ## <a name="text-editor"></a>文本编辑器
 
@@ -178,8 +178,8 @@ ms.locfileid: "77567967"
 |删除右侧字符|**⌃D**|
 |删除至行尾|**⌃K**|
 |动态缩写|**⌃/**|
-|展开选定内容|**⌥⇧↓**|
-|展开选定内容|**⌥⇧↑**|
+|展开所选内容|**⌥⇧↓**|
+|展开所选内容|**⌥⇧↑**|
 |将选定内容扩展到文档结尾处|**⇧⌘↓**、**⇧⌘↘**|
 |将选定内容扩展到文档起始处|**⇧⌘↑**、**⇧⌘↖**|
 |将选定内容扩展到行尾|**⇧↘**、**⇧⌘→**|
@@ -252,7 +252,7 @@ ms.locfileid: "77567967"
 |隐藏 Visual Studio|**⌘H**|
 |最小化|**⌘M**|
 |下一个文档|**⌘}** 、**⌘F6**|
-|上一个文档|**⌘{** 、**⇧⌘F6**|
+|上一个文档|**⌘{**、**⇧⌘F6**|
 |切换到下一个文档|**⌃⇥**|
 |切换到下一个窗口|**⌃⌥⇥**|
 |切换到上一个文档|**⌃⇧⇥**|
@@ -260,7 +260,7 @@ ms.locfileid: "77567967"
 
 ## <a name="macos-key-symbols-lookup"></a>macOS 键符号查找
 
-|符号|键|
+|符号|密钥|
 |-|-|
 |⌘|**命令** (**cmd**)|
 |⌥|**选项** (**alt**)|
@@ -270,13 +270,13 @@ ms.locfileid: "77567967"
 |⇟|**向下翻页** (**Pg Dn**)|
 |⌫|**删除** (**Backspace**)|
 |⌦|**向前删除**|
-|⏎|**Return**|
+|⏎|**返回值**|
 |←→↑↓|**箭头键**|
-|↖|**Home**|
+|↖|**主页**|
 |↘|**End**|
 |␣|**空格键**|
-|⇥|Tab |
+|⇥|**选项卡**|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Studio 中的键盘快捷键 (Windows)](/visualstudio/ide/tips-and-tricks-for-visual-studio)

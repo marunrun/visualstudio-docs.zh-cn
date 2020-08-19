@@ -1,7 +1,7 @@
 ---
 title: 文件和文件夹的信任设置
 description: 了解如何更改文件和文件夹的信任设置以确保 Visual Studio 的安全。
-author: abuchholtzau
+author: 2percentsilk
 ms.author: allisb
 ms.date: 09/05/2018
 ms.topic: reference
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - mark of the web
 - trusted files
 - trusted folders
-ms.openlocfilehash: 011673bca7be569b5b350dc264148d5a7890d39c
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 492a94962d255a9d18dcabdababf7fa6a540ada1
+ms.sourcegitcommit: 935e1388281df0f04147802606b5cb7f513d45ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62789617"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88197383"
 ---
 # <a name="configure-trust-settings-for-files-and-folders"></a>配置文件和文件夹的信任设置
 

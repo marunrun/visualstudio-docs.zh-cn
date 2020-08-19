@@ -6,18 +6,19 @@ ms.author: ghogen
 ms.date: 08/15/2019
 ms.technology: vs-azure
 ms.topic: reference
-ms.openlocfilehash: 07dd9dd4c5c61014eecf245719b142cdbaecbc38
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: de0e3cc4e563f7082b91b904a110996cdb85b3b4
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85283328"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88247973"
 ---
 # <a name="container-tools-launch-settings"></a>容器工具启动设置
 
 在 ASP.NET Core 项目的“属性”文件夹中，可以找到 launchSettings.json 文件，其中包含用于控制如何在开发计算机上启动 Web 应用的设置  。 有关如何在 ASP.NET 开发中使用此文件的详细信息，请参阅[在 ASP.NET Core 中使用多个环境](/aspnet/core/fundamentals/environments?view=aspnetcore-2.2)。 在“launchSettings.json”中，Docker 部分中的设置与 Visual Studio 处理容器化应用的方式相关   。
 
 ::: moniker range="vs-2017"
+
 ```json
     "Docker": {
       "commandName": "Docker",

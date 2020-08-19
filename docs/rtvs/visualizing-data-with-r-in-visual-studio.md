@@ -8,12 +8,12 @@ ms.author: kraigb
 manager: jillfra
 ms.workload:
 - data-science
-ms.openlocfilehash: a48ad7800f8ea2b992e848cfbf6b4fdac99b2062
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: fb16f4a573a7b905484982871dc838143b125591
+ms.sourcegitcommit: d281d2a04a5bc302650eebf369946d8f101e59dd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62811039"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88144696"
 ---
 # <a name="create-visual-data-plots-with-r"></a>使用 R 创建可视数据图
 
@@ -21,9 +21,14 @@ ms.locfileid: "62811039"
 
 ![绘制英雄形象](media/plotting-hero-image.png)
 
-|   |   |
-|---|---|
-| ![视频的摄像机图标](../install/media/video-icon.png "观看视频") | [观看视频 (youtube.com)](https://www.youtube.com/watch?v=ZTbKmz5RSgY) 了解使用 R 进行绘制（2 分 02 秒）。 |
+:::row:::
+    :::column:::
+        ![视频的摄像机图标](../install/media/video-icon.png "观看视频")
+    :::column-end:::
+    :::column:::
+        [观看视频 (youtube.com)](https://www.youtube.com/watch?v=ZTbKmz5RSgY) 了解使用 R 进行绘制（2 分 02 秒）。
+    :::column-end:::
+:::row-end:::
 
 ## <a name="the-plot-window"></a>绘图窗口
 

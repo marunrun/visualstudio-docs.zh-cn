@@ -10,12 +10,12 @@ ms.author: crdun
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: 32766fdf69136f3882186bbcad08aaf83d2e573e
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.openlocfilehash: a8f3e183bd72e9894eae55a5ed7c4f9322d44953
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85815741"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88250100"
 ---
 # <a name="get-started-with-visual-studio-tools-for-unity"></a>Visual Studio Tools for Unity 入门
 
@@ -66,13 +66,11 @@ ms.locfileid: "85815741"
 
 1. 单击安装程序窗口右下角的“修改”（如已安装）或“安装”（适用于新安装）。
 
-
 #### <a name="check-for-updates-to-visual-studio"></a>检查 Visual Studio 的更新
 
 建议检查 Visual Studio 中的更新，确保可访问最新工具和功能。 这不会中断 Unity 项目。
 
 - [更新 Visual Studio](../install/update-visual-studio.md)
-
 
 ## <a name="configure-unity-for-use-with-visual-studio"></a>配置 Unity 以与 Visual Studio 一起使用
 
@@ -98,7 +96,6 @@ ms.locfileid: "85815741"
    ![选择 Visual Studio](media/vs-2019/vstu-unity-external-tools.png)
    :::moniker-end
 
-
 4. 如果已选择**Browse...** ，请导航到 Visual Studio 安装目录中的**Common7/IDE**目录，然后选择**devenv.exe**。 然后单击**Open**。
 
    :::moniker range="vs-2017"
@@ -123,7 +120,6 @@ ms.locfileid: "85815741"
 > [!NOTE]
 > Visual Studio Tools for Unity 要求 Unity 5.2 和更高版本，以及支持扩展的 Visual Studio 版本，例如，Visual Studio Community、Professional、Premium 或 Enterprise。 若要验证你安装的 Unity 是否启用了 Visual Studio Tools for Unity，请从“帮助”菜单中选择“关于 Unity”，并在对话框左下角查看“Microsoft Visual Studio Tools for Unity 已启用”文本。
 > ![关于 Unity](media/vs-2019/vstu-about-unity.png)
-
 
 ## <a name="next-steps"></a>后续步骤
 

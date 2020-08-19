@@ -28,12 +28,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5970e7e4408c826058cb27590254b278d4cdb9b7
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: f4b4a90cc06396f9fb6afb8a356385e966ed1b3d
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85281001"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88249210"
 ---
 # <a name="attach-to-running-processes-with-the-visual-studio-debugger"></a>使用 Visual Studio 调试器附加到正在运行的进程
 
@@ -199,15 +199,13 @@ ms.locfileid: "85281001"
         ![连接到远程系统](../debugger/media/connect-remote-system.png "连接到远程系统")
         1. 成功连接到 SSH 或守护程序后，选择要附加到的正在运行的容器，然后点击“确定”。
 
-    
     1. ***通过 [Docker 守护程序](https://docs.docker.com/engine/reference/commandline/dockerd/)将目标设置为正在运行进程的远程容器***
         1. 在“Docker 主机(可选)”下指定守护程序地址（即通过 TCP、IP 等），然后单击刷新链接。
         1. 成功连接到守护程序后，选择要附加到的正在运行的容器，然后点击“确定”。
 
 4. 从“可用进程”列表中选择相应的容器进程并选择“附加”，开始在 Visual Studio 中调试 C# 容器进程！
 
-    ![已完成的 Docker 附加菜单](../debugger/media/docker-attach-complete.png "已完成的 Linux Docker 附加菜单")
-    
+    ![已完成的 Docker 附加菜单](../debugger/media/docker-attach-complete.png "已完成的 Linux Docker 附加菜单")    
 
 ## <a name="attach-to-a-process-running-on-a-windows-docker-container"></a><a name="BKMK_Windows_Docker_Attach"></a> 附加到正在 Windows Docker 容器上运行的进程
 
@@ -238,10 +236,8 @@ ms.locfileid: "85281001"
 4. 从“可用进程”列表中选择相应的容器进程并选择“附加”，以开始调试 C# 容器进程。
 
     ![已完成的 Docker 附加菜单](../debugger/media/docker-attach-complete-windows.png "已完成的 Windows Docker 附加菜单")
-    
 
 5.  从可用进程列表中选择相应的容器进程并选择“附加”，以开始调试 C# 容器进程。
-
 
 ::: moniker-end
 

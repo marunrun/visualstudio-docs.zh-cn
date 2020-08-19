@@ -11,12 +11,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d4689985d159bd832bc3cadfb54eb17fae2ae71a
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 020983182706bd6d9382f4d0bd4885ffa0f86f52
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84183660"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88247585"
 ---
 # <a name="msbuild-items"></a>MSBuild 项
 
@@ -338,7 +338,7 @@ Output:
 -->
 ```
 
-##  <a name="updating-metadata-on-items-in-an-itemgroup-outside-of-a-target"></a>更新目标外部 ItemGroup 中项的元数据
+## <a name="updating-metadata-on-items-in-an-itemgroup-outside-of-a-target"></a>更新目标外部 ItemGroup 中项的元数据
 
 目标外部的项可通过 `Update` 属性更新其现有元数据。 此属性不适用于目标下的项。
 

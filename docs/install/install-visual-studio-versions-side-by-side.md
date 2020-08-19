@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: ornellaalt
 ms.author: ornella
 manager: jillfra
-ms.openlocfilehash: a2b77315363c404cd0647555e5a6ad21d36ac86b
-ms.sourcegitcommit: 9a7fb8556a5f3dbb4459122fefc7e7a8dfda753a
+ms.openlocfilehash: 717a9cd3f4157c276ce7d0dd5c41cac625581ba6
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234986"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88250249"
 ---
 # <a name="install-visual-studio-versions-side-by-side"></a>并排安装 Visual Studio 版本
 
@@ -57,9 +57,10 @@ ms.locfileid: "87234986"
    * 对于 Visual Studio Professional，应与 vs_professional.exe 匹配或类似
    * 对于 Visual Studio Enterprise，应与 vs_enterprise.exe 匹配或类似
 
-```
-vs_Enterprise.exe --installPath "C:\Program Files (x86)\Microsoft Visual Studio\<2019 AddNewPath>"
-```
+   ```
+   vs_Enterprise.exe --installPath "C:\Program Files (x86)\Microsoft Visual Studio\<2019 AddNewPath>"
+   ```
+
 4. 按照安装程序对话框选择安装所需的组件。 有关详细信息，请参阅[安装 Visual Studio](install-visual-studio.md#step-4---choose-workloads)。
 
 ## <a name="net-framework-versions-and-side-by-side-installations"></a>.NET Framework 版本和并行安装
