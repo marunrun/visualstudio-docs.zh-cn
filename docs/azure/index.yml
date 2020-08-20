@@ -10,14 +10,14 @@ metadata:
   ms.topic: landing-page
   ms.date: 12/05/2019
   ms.author: ghogen
-  ms.openlocfilehash: 7d993a357094f52bc633da7e6fd22540a613c338
-  ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+  ms.openlocfilehash: 0ad3a0135b8e5ca955d9dad2301933133bbd05e7
+  ms.sourcegitcommit: 3ef987e99616c3eecf4731bf5ac89e16238e68aa
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 03/21/2020
-  ms.locfileid: "76022302"
+  ms.lasthandoff: 08/20/2020
+  ms.locfileid: "88639323"
 landingContent:
-- title: 部署到 Azure 应用服务
+- title: 部署到 Azure App Service
   linkLists:
   - linkListType: tutorial
     links:
@@ -71,20 +71,20 @@ landingContent:
   linkLists:
   - linkListType: tutorial
     links:
-    - text: Azure 存储
-      url: vs-azure-tools-connected-services-storage.md
-    - text: Azure Key Vault
-      url: /azure/key-vault/vs-key-vault-add-connected-service
     - text: Azure Active Directory
       url: /azure/active-directory/develop/vs-active-directory-add-connected-service
-    - text: 认知服务 - 文本分析
-      url: /azure/cognitive-services/text-analytics/vs-text-connected-service
-    - text: 认知服务 - 必应新闻搜索
-      url: /azure/cognitive-services/bing-news-search/vs-bing-news-search-connected-service
-    - text: 认知服务 - 人脸 API
-      url: /azure/cognitive-services/face/vs-face-connected-service
-    - text: 认知服务 - 计算机视觉
-      url: /azure/cognitive-services/computer-vision/vs-computer-vision-connected-service
+    - text: 用于 Redis 的 Azure 缓存
+      url: azure-cache-for-redis-add-connected-service.md
+    - text: Azure CosmosDB
+      url: azure-cosmosdb-add-connected-service.md
+    - text: Azure Key Vault
+      url: /azure/key-vault/vs-key-vault-add-connected-service
+    - text: Azure SignalR
+      url: azure-signalr-add-connected-service.md
+    - text: Azure SQL Database
+      url: azure-sql-database-add-connected-service.md
+    - text: Azure 存储
+      url: vs-azure-tools-connected-services-storage.md
 - title: Azure 云服务
   linkLists:
   - linkListType: how-to-guide
@@ -99,7 +99,7 @@ landingContent:
       url: vs-azure-tools-publishing-a-cloud-service.md
     - text: 监视和诊断在 Azure 中运行的云服务和虚拟机
       url: vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines.md
-- title: 云资源管理器
+- title: Cloud Explorer
   linkLists:
   - linkListType: how-to-guide
     links:
