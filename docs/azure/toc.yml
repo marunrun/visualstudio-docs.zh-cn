@@ -17,12 +17,22 @@
 - name: 连接到 Azure 服务
   expanded: false
   items:
-    - name: 添加 Azure 存储
-      href: vs-azure-tools-connected-services-storage.md
-    - name: 添加 Azure Key Vault
-      href: /azure/key-vault/vs-key-vault-add-connected-service?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json
     - name: 添加 Azure Active Directory (AD)
       href: /azure/active-directory/develop/vs-active-directory-add-connected-service?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json
+    - name: 添加 Azure App Insights
+      href: azure-app-insights-add-connected-service.md
+    - name: 添加 Azure Cache for Redis
+      href: azure-cache-for-redis-add-connected-service.md
+    - name: 添加 Azure CosmosDB
+      href: azure-cosmosdb-add-connected-service.md
+    - name: 添加 Azure Key Vault
+      href: /azure/key-vault/vs-key-vault-add-connected-service?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json
+    - name: 添加 Azure SignalR
+      href: azure-signalr-add-connected-service.md
+    - name: 添加 Azure SQL 数据库
+      href: azure-sql-database-add-connected-service.md
+    - name: 添加 Azure 存储
+      href: vs-azure-tools-connected-services-storage.md
 - name: Azure 云服务开发
   expanded: false
   items:
