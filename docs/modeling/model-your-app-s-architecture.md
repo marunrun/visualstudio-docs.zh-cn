@@ -1,5 +1,5 @@
 ---
-title: 为应用程序&#39;建模
+title: 为 &apos; 应用程序建模
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,17 +9,17 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ba455730ddac9b2a02b8f0580711499d6a779f49
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 449f528264f2101a45bc809a5002ce4e88659d05
+ms.sourcegitcommit: de98ed7edc81383e47b87ae6e61143fbbbe7bc56
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75590223"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88711724"
 ---
-# <a name="model-your-app39s-architecture"></a>为应用程序&#39;建模
-为了帮助确保你的软件系统或应用程序满足用户的需求，你可以在 Visual Studio 中创建模型，作为你的软件系统或应用程序的总体结构和行为说明的一部分。 使用模型，也可以描述在整个设计中使用的模式。 这些模型可你帮助了解现有的体系结构、讨论更改和清楚地传达你的意图。
+# <a name="model-your-app39s-architecture"></a>为应用建模&#39;的体系结构
+若要帮助确保软件系统或应用程序满足用户的需求，你可以在 Visual Studio 中创建模型，将其作为软件系统或应用程序的整体结构和行为的说明的一部分。 使用模型，也可以描述在整个设计中使用的模式。 这些模型可你帮助了解现有的体系结构、讨论更改和清楚地传达你的意图。
 
- 若要查看支持此功能的 Visual Studio 版本，请参阅[体系结构和建模工具的版本支持](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)。
+ 若要查看支持此功能的 Visual Studio 的版本，请参阅 [体系结构和建模工具的版本支持](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)。
 
  模型的目的是减少自然语言说明中的歧义，并帮助你和同事对设计进行可视化以及讨论备选设计。 模型应与其他文档或讨论一起使用。 就其本身而言，模型不表示该体系结构的完整规范。
 
@@ -32,7 +32,7 @@ ms.locfileid: "75590223"
 
 - 在组件的整个设计中使用的[设计模式](#Patterns)和约定。 一种描述实现编程目标的特定方法的模式。 通过在整个设计中使用相同的模式，你的团队可以减少进行更改和开发新软件的成本。
 
-## <a name="Structure"></a>高级设计
+## <a name="high-level-design"></a><a name="Structure"></a> 高级设计
  高级设计描述你的系统的主要组件以及这些组件彼此之间如何交互以实现设计目标。 以下列表中的活动将参与开发高级设计，尽管并不一定按特定顺序参与。
 
  如果要更新现有代码，可以通过介绍主要组件开始。 请确保你了解对用户需求所做的任何更改，然后添加或修改组件之间的交互。 如果你正在开发新系统，请通过了解用户需求的主要功能开始。 然后可以探索主要用例的交互序列，然后将序列合并到组件设计中。
@@ -45,8 +45,8 @@ ms.locfileid: "75590223"
 
 - 组件和接口的数据模型。 可以绘制类图来描述组件之间传递的信息和组件内存储的信息。
 
-## <a name="Requirements"></a>了解要求
- 开发完整应用程序的高级设计时结合需求模型或用户需求的其他说明最为高效。 有关要求模型的详细信息，请参阅[模型用户需求](../modeling/model-user-requirements.md)。
+## <a name="understanding-the-requirements"></a><a name="Requirements"></a> 了解要求
+ 开发完整应用程序的高级设计时结合需求模型或用户需求的其他说明最为高效。 有关要求模型的详细信息，请参阅 [模型用户需求](../modeling/model-user-requirements.md)。
 
  如果你正在开发的系统是一个更大系统中的组件，则你的部分或全部需求可能会体现在编程接口中。
 
@@ -64,7 +64,7 @@ ms.locfileid: "75590223"
 
   应放入要求或体系结构模型中的详细信息的量取决于项目的规模以及团队的大小和分布。 执行短项目的小型团队可能仅需要绘制业务概念和一些设计模式的类图；而跨多个区域分布的大项目会需要明显更多的详细信息。
 
-## <a name="BigDecisions"></a>体系结构模式
+## <a name="architectural-patterns"></a><a name="BigDecisions"></a> 体系结构模式
  在开发早期，你需要选择设计所依赖的主要技术和元素。 必须在其中作出这些选择的领域包括：
 
 - 基本技术选择，例如数据库和文件系统之间的选择，以及网络应用程序与 web 客户端之间的选择，等等。
@@ -77,7 +77,7 @@ ms.locfileid: "75590223"
 
   做出的选择会影响你如何使用和解释体系结构模型。 例如，在使用数据库的系统中，类图中的关联可能表示数据库中的关系或外键，然而在基于 XML 文件的系统中，关联可能指示使用 XPath 的交叉引用。 在分布式系统中，序列图中的消息可能表示线路消息；在独立的应用程序中，它们可能表示函数调用。
 
-## <a name="Patterns"></a>设计模式
+## <a name="design-patterns"></a><a name="Patterns"></a> 设计模式
  设计模式是如何设计软件的某个特定方面的大纲，尤其是在系统的不同部件中重复出现的那个方面。 通过在项目之间采用一种统一的方法，可以降低设计成本、确保用户界面中的一致性，并降低理解和更改代码的成本。
 
  一些常规设计模式（例如“观察者”）是众所周知且广泛适用的。 此外，还有仅适用于你的项目的模式。 例如，在 web 销售系统中，代码中会有几项操作对客户订单进行更改。 若要确保订单的状态在每个阶段都准确显示，则所有这些操作都必须遵循特定的协议来更新数据库。
@@ -88,7 +88,7 @@ ms.locfileid: "75590223"
 
  设计模式在文档中说明，并且通常包含以下几部分：
 
-- 名称。
+- 名称：
 
 - 它所适用的上下文的说明。 何种标准应使开发人员考虑应用这种模式？
 
