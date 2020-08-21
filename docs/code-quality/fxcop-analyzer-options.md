@@ -1,5 +1,5 @@
 ---
-title: FxCop 分析器配置选项
+title: .NET 代码质量分析器配置选项
 ms.date: 09/23/2019
 ms.topic: reference
 author: mikejo5000
@@ -7,21 +7,19 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7d6b56bec2174ca71cc66f5424b7bdc309330d95
-ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
+ms.openlocfilehash: 0370688b53e87cf6ea1f5079d2e5c706777dd0c7
+ms.sourcegitcommit: de98ed7edc81383e47b87ae6e61143fbbbe7bc56
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88248802"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88706563"
 ---
-# <a name="rule-scope-options-for-fxcop-analyzers"></a>FxCop 分析器的规则作用域选项
+# <a name="rule-scope-options-for-net-code-quality-analyzers"></a>.NET 代码质量分析器的规则作用域选项
 
-某些 FxCop 分析器规则使你可以优化它们应应用到的基本代码部分。 此页列出可用的范围配置选项、其允许的值以及可应用这些选项的规则。 若要使用这些选项，请在 [EditorConfig 文件](../ide/create-portable-custom-editor-options.md#add-an-editorconfig-file-to-a-project)中指定它们。
-
-从 [FxCopAnalyzers](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers) NuGet 包的版本2.6.3 开始提供这些配置选项。
+某些 .NET 代码质量分析器规则使你可以优化它们应应用到的基本代码部分。 此页列出可用的范围配置选项、其允许的值以及可应用这些选项的规则。 若要使用这些选项，请在 [EditorConfig 文件](../ide/create-portable-custom-editor-options.md#add-an-editorconfig-file-to-a-project)中指定它们。
 
 > [!TIP]
-> 若要查看可用于给定版本的 FxCopAnalyzers 包的选项的完整列表，请查看包的*文档*文件夹中的*Analyzer Configuration.md*文件。 文件位于 *% USERPROFILE% \\ . nuget\packages\microsoft.codeanalysis.fxcopanalyzers \\ \<version\> \documentation\Analyzer Configuration.md*。 此配置文档文件包含在包的每个版本中，从版本2.6.5 开始。 下面是一个示例，说明如何在 *Analyzer Configuration.md* 文件中记录一个选项：
+> 若要查看可用选项的完整列表，请参阅此 [分析器 Configuration.md 文件](https://github.com/dotnet/roslyn-analyzers/blob/master/docs/Analyzer%20Configuration.md)。 下面是一个示例，说明如何在 *Analyzer Configuration.md* 文件中记录一个选项：
 >
 > 选项名称： `sufficient_IterationCount_for_weak_KDF_algorithm`\
 > 选项值：整数值 \
