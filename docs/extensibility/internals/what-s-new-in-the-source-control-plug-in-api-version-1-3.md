@@ -1,5 +1,5 @@
 ---
-title: 源代码管理插件 API 版本 1.3 中&#39;新增功能 |微软文档
+title: '&apos;源代码管理插件 API 版本1.3 中的新增功能 |Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,29 +11,29 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9654f1f3ae6d4a3d73ddc3afca2977a57a98297d
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: ec24e9ee3079d3b02ac13759b6ab5bdee8c07a84
+ms.sourcegitcommit: de98ed7edc81383e47b87ae6e61143fbbbe7bc56
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80703366"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88706446"
 ---
-# <a name="what39s-new-in-the-source-control-plug-in-api-version-13"></a>源控制插件 API 版本 1.3 中&#39;新增功能
-源代码管理插件 API 版本 1.3 引入了以下新功能，以提供更高级的控制。
+# <a name="what39s-new-in-the-source-control-plug-in-api-version-13"></a>源代码管理插件 API 版本1.3 中的新增功能&#39;
+源代码管理插件 API 版本1.3 引入了以下新函数来提供更高级的控件。
 
 ## <a name="changes"></a>更改
- 以下功能是源代码管理插件 API 版本 1.3 的新功能：
+ 以下函数是源代码管理插件 API 版本1.3 中的新增功能：
 
 |函数|概述|
 |--------------|--------------|
 |[SccGetExtendedCapabilities](../../extensibility/sccgetextendedcapabilities-function.md)|允许报告其他功能位|
-|[SccEnumChangedFiles](../../extensibility/sccenumchangedfiles-function.md)|允许检查版本控制数据库中具有较新版本的文件，而不是本地磁盘上的文件|
-|[SccQueryChanges](../../extensibility/sccquerychanges-function.md)|允许检查指定文件的名称更改状态（重命名、添加和删除）|
+|[SccEnumChangedFiles](../../extensibility/sccenumchangedfiles-function.md)|允许检查版本控制数据库中具有比本地磁盘更高的版本的文件|
+|[SccQueryChanges](../../extensibility/sccquerychanges-function.md)|允许检查指定文件的名称更改状态 (重命名、添加和删除) |
 |[SccPopulateDirList](../../extensibility/sccpopulatedirlist-function.md)|允许检查版本控制数据库中的目录和文件|
-|[SccAddFilesFromSCC](../../extensibility/sccaddfilesfromscc-function.md)|将指定的文件列表从版本控制数据库添加到当前项目|
-|[SccBackgroundGet](../../extensibility/sccbackgroundget-function.md)|执行指定文件的静默"获取"（不显示用户界面）|
+|[SccAddFilesFromSCC](../../extensibility/sccaddfilesfromscc-function.md)|将版本控制数据库中指定的文件列表添加到当前项目|
+|[SccBackgroundGet](../../extensibility/sccbackgroundget-function.md)|执行指定文件的无提示 "Get" (不显示用户界面) |
 |[SccGetUserOption](../../extensibility/sccgetuseroption-function.md)|允许访问特定于用户的选项|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [入门](../../extensibility/internals/getting-started-with-source-control-plug-ins.md)
 - [源代码管理插件 API 版本 1.2 中的新增功能](../../extensibility/internals/what-s-new-in-the-source-control-plug-in-api-version-1-2.md)

@@ -11,26 +11,26 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 51c125942f82b43cf786591bc0e364764dc1965e
-ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
+ms.openlocfilehash: f85c17321defe08dc96ccc04bc9dea717e3b4183
+ms.sourcegitcommit: de98ed7edc81383e47b87ae6e61143fbbbe7bc56
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88250543"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88706511"
 ---
 # <a name="how-to-generate-code-metrics-data"></a>如何：生成代码度量数据
 
 可以通过以下三种方式生成代码度量数据：
 
-- 通过安装 [FxCop 分析器](#fxcop-analyzers-code-metrics-rules) 并启用四个代码度量值 (可维护性) 其包含的规则。
+- 通过启用 [.net 代码质量分析器](#net-code-quality-analyzers-code-metrics-rules) 并启用四个代码度量值 (可维护性) 其包含的规则。
 
 - 选择 Visual Studio 中的 " [**分析**  >  **计算代码度量值**](#calculate-code-metrics-menu-command) " 菜单命令。
 
 - 在 c # 和 Visual Basic 项目的 [命令行](#command-line-code-metrics) 中。
 
-## <a name="fxcop-analyzers-code-metrics-rules"></a>FxCop 分析器代码度量规则
+## <a name="net-code-quality-analyzers-code-metrics-rules"></a>.NET 代码质量分析器代码度量规则
 
-[FxCopAnalyzers NuGet 包](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers)包含多个代码度量[分析器](roslyn-analyzers-overview.md)规则：
+.NET 代码质量分析器包含多个代码度量 [分析器](roslyn-analyzers-overview.md) 规则：
 
 - [CA1501](ca1501-avoid-excessive-inheritance.md)
 - [CA1502](ca1502.md)
@@ -50,7 +50,7 @@ ms.locfileid: "88250543"
 
 ### <a name="configuration"></a>配置
 
-您可以配置 FxCop 分析器包中的代码度量规则的触发阈值。
+你可以配置触发代码度量规则的阈值。
 
 1. 创建文本文件。 例如，你可以将其命名为 *CodeMetricsConfig.txt*。
 
