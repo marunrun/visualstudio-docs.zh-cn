@@ -7,12 +7,12 @@ ms.assetid: b331c837-3524-42b7-820e-b4fdd5e12793
 ms.date: 03/03/2020
 ms.topic: conceptual
 description: Microsoft 产品和服务协议 (MPSA) 中的 Visual Studio 订阅
-ms.openlocfilehash: d38da1784eb543519f1a36ba7342f0b13ab2b1ac
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 6ce2208e6d1028e1e697b216d41cdd825dfc0d33
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85289347"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88247320"
 ---
 # <a name="visual-studio-subscriptions-in-a-microsoft-products-and-services-agreement-mpsa"></a>Microsoft 产品和服务协议 (MPSA) 中的 Visual Studio 订阅
 如果已通过 MPSA 计划购买 Visual Studio 订阅，在成为 Visual Studio 订阅管理员并向用户分配订阅之前，需要注意一些事项。 如果你已被设置为管理员，则可以直接转到 Visual Studio 订阅[管理门户](https://manage.visualstudio.com/)。
@@ -39,14 +39,14 @@ MPSA 客户现在通过名为[业务中心](https://businessaccount.microsoft.co
 
 满足上述标准后，你可按以下步骤继续将购买帐户关联到租户。
 1. 登录[业务中心](https://businessaccount.microsoft.com/Customer)。
-2. 单击“帐户”选项卡并选择“关联域”   。
+2. 选择“帐户”选项卡，然后选择“关联域” 。
 3. 选择“购买帐户”（如有多个购买帐户）  。
 4. 选择“租户”（即 contoso.onmicrosoft.com）  。
-5. 单击“关联域”  。
+5. 选择“关联域”。
 
 通常情况下，关联后，系统会在几分钟内将满足标准的所有用户都设置为 Visual Studio 订阅管理员。 但是有时可能需要长达 24 小时。 设置租户后，你便能访问 Visual Studio 订阅管理门户。 如果花费的时间超过 24 小时，请按照以下步骤联系 MPSA 支持部门：
 1. 连接到 <https://www.microsoft.com/licensing/mpsa/default>
-2. 在页面顶部单击“更多”菜单  。 
+2. 在页面顶部选择“更多”菜单。 
 3. 选择“支持” 
 4. 选择“许可支持” 
 5. 请选择最适合你的需求的支持选项。 

@@ -5,12 +5,12 @@ author: madskristensen
 ms.author: madsk
 ms.date: 11/19/2019
 ms.topic: conceptual
-ms.openlocfilehash: 2e5718740b9219ee988859e530591305394fb239
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 50d1ed4edd2e1fa52661995f4d72466646dfd879
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85284303"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88250510"
 ---
 # <a name="how-to-increase-the-chances-of-a-performance-issue-being-fixed"></a>如何提高解决性能问题的几率
 
@@ -32,15 +32,15 @@ Visual Studio 是一个大型的综合平台，支持多种语言、项目类型
 
 下面介绍了在没有合适诊断文件的情况下难以诊断的问题。 在确定了与你的问题最相符的情况之后，请按照针对这种情况的反馈步骤进行操作。
 
--   [故障：](#crashes)进程 (Visual Studio) 意外终止时发生故障。
+- [故障：](#crashes)进程 (Visual Studio) 意外终止时发生故障。
 
--   [无响应：](#unresponsiveness)VS 长时间处于无响应状态。
+- [无响应：](#unresponsiveness)VS 长时间处于无响应状态。
 
--   [运行缓慢问题：](#slowness-and-high-cpu-issues)VS 中的任何特定操作都比预期慢
+- [运行缓慢问题：](#slowness-and-high-cpu-issues)VS 中的任何特定操作都比预期慢
 
--   [CPU 使用率过高：](#slowness-and-high-cpu-issues)CPU 使用率长时间高乎寻常
+- [CPU 使用率过高：](#slowness-and-high-cpu-issues)CPU 使用率长时间高乎寻常
 
--   [进程外问题：](#out-of-process-issues)Visual Studio 附属进程导致的问题
+- [进程外问题：](#out-of-process-issues)Visual Studio 附属进程导致的问题
 
 ## <a name="crashes"></a>故障
 进程 (Visual Studio) 意外终止时发生故障。
@@ -57,14 +57,13 @@ Visual Studio 是一个大型的综合平台，支持多种语言、项目类型
 
 对于这类问题，请按照“[如何报告问题](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)”中的步骤进行操作，并确保包含：
 
--   问题重现步骤
+- 问题重现步骤
 
--   上述独立重现项目。 如果无法独立重现，请包含：
+- 上述独立重现项目。 如果无法独立重现，请包含：
 
-    -   打开的项目的语言（C\#、C++ 等）
+  - 打开的项目的语言（C\#、C++ 等）
 
-    -   项目类型（控制台应用程序、ASP.NET 等）
-
+  - 项目类型（控制台应用程序、ASP.NET 等）
 
 > [!NOTE]
 > **最有价值的反馈：** 对于这种情况，最有价值的反馈是一组问题重现步骤和示例源代码。
@@ -99,11 +98,11 @@ reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Windows Error Reporting\L
 
 然后，使用 Visual Studio 的“报告问题…”功能。 利用该功能，可以附加相应的转储。
 
-1.  找到当前报告的故障的转储文件（查找具有正确创建时间的文件）
+1. 找到当前报告的故障的转储文件（查找具有正确创建时间的文件）
 
-2.  如果可能，请在提交反馈之前压缩文件 (\*.zip) 以减小其大小
+2. 如果可能，请在提交反馈之前压缩文件 (\*.zip) 以减小其大小
 
-3.  按照[如何报告问题](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)中的步骤操作，并将堆转储附加到新的反馈项。
+3. 按照“[如何报告问题](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)”中的步骤操作，并将堆转储附加到新的反馈项。
 
 > [!NOTE] 
 > **最有价值的反馈：** 对于这种情况，最有价值的反馈是发生故障时捕获的堆转储。
@@ -135,33 +134,33 @@ VS 长时间处于无响应状态。
 
 为了在捕获性能时获得最佳结果，请执行以下步骤：
 
-1.  如果尚未运行，请打开 Visual Studio 的副本，在其中重现相关问题
+1. 如果尚未运行，请打开 Visual Studio 的副本，在其中重现相关问题
 
-    -   设置好所有内容，以重现该问题。 例如，如果需要加载特定的项目并打开特定文件，请确保完成这两个步骤后再继续操作。
+    - 设置好所有内容，以重现该问题。 例如，如果需要加载特定的项目并打开特定文件，请确保完成这两个步骤后再继续操作。
 
-    -   如果未报告特定于加载解决方案的问题，打开解决方案后尝试等待 5-10 分钟（或更长时间，具体取决于解决方案大小），然后再记录性能跟踪  。 解决方案加载过程会生成大量数据，因此等待几分钟可帮助我们专注于处理当前报告的特定问题。
+    - 如果未报告特定于加载解决方案的问题，打开解决方案后尝试等待 5-10 分钟（或更长时间，具体取决于解决方案大小），然后再记录性能跟踪  。 解决方案加载过程会生成大量数据，因此等待几分钟可帮助我们专注于处理当前报告的特定问题。
 
-2.  启动 Visual Studio 的第二个副本，但不打开解决方案 
+2. 启动 Visual Studio 的第二个副本，但不打开解决方案 
 
-3.  在 Visual Studio 的新副本中，打开“报告问题”工具 
+3. 在 Visual Studio 的新副本中，打开“报告问题”工具 
 
-4.  按照[如何报告问题](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)中的步骤操作，直到完成“提供跟踪和堆转储（可选）”步骤。
+4. 按照[如何报告问题](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)中的步骤操作，直到完成“提供跟踪和堆转储（可选）”步骤。
 
-5.  选择记录 Visual Studio 的第一个副本（即遇到性能问题的副本）并开始记录。
+5. 选择记录 Visual Studio 的第一个副本（即遇到性能问题的副本）并开始记录。
 
-    -   步骤记录器应用程序随即显示并开始记录。
+    - 步骤记录器应用程序随即显示并开始记录。
 
-    -   在记录过程中，在 Visual Studio 的第一个副本中执行有问题的操作  。 如果在记录的时间内未出现特定的性能问题，则很难将其解决。
+    - 在记录过程中，在 Visual Studio 的第一个副本中执行有问题的操作  。 如果在记录的时间内未出现特定的性能问题，则很难将其解决。
 
-    -   如果操作短于 30 秒并且可以轻松重现，请重现该操作以进一步演示问题。
+    - 如果操作短于 30 秒并且可以轻松重现，请重现该操作以进一步演示问题。
 
-    -   大多数情况下，60 秒的跟踪足以演示问题，尤其是在有问题的操作持续（或重复） 30 秒以上时。 可以根据需要调整持续时间，以捕获要修复的行为。
+    - 大多数情况下，60 秒的跟踪足以演示问题，尤其是在有问题的操作持续（或重复） 30 秒以上时。 可以根据需要调整持续时间，以捕获要修复的行为。
 
-6.  对于运行缓慢的操作或 CPU 使用率过高的事件，当它们完成后，立即在步骤记录器中单击“停止记录”。 处理性能跟踪可能需要几分钟时间。
+6. 对于运行缓慢的操作或 CPU 使用率过高的事件，当它们完成后，立即在步骤记录器中单击“停止记录”。 处理性能跟踪可能需要几分钟时间。
 
-7.  完成后，需要在反馈中添加多个附件。 附加可帮助重现问题的其他文件（示例项目、屏幕截图、视频等）。
+7. 完成后，需要在反馈中添加多个附件。 附加可帮助重现问题的其他文件（示例项目、屏幕截图、视频等）。
 
-8.  提交反馈。
+8. 提交反馈。
 
 记录性能跟踪时，如果要报告的运行缓慢的操作或 CPU 使用率过高的事件结束，则立即停止记录。 如果收集的信息过多，最早的信息将被覆盖。 如果在感兴趣的操作之后没有很快（几秒钟内）停止跟踪，有用的跟踪数据将被覆盖。
 
@@ -183,13 +182,13 @@ VS 长时间处于无响应状态。
 
 最能使这些类型的问题付诸实践的是提供可通过以下步骤收集的其他日志：
 
-1.  如果这是直接可重现的问题，请从删除 %temp%/servicehub/logs  文件夹开始。 如果无法重现此问题，请保持此文件夹不变，并忽略以下项目符号：
+1. 如果这是直接可重现的问题，请从删除 %temp%/servicehub/logs  文件夹开始。 如果无法重现此问题，请保持此文件夹不变，并忽略以下项目符号：
 
-    -   将全局环境变量 ServiceHubTraceLevel  设置为“全部” 
-    -   重现此问题。
+    - 将全局环境变量 ServiceHubTraceLevel  设置为“全部” 
+    - 重现此问题。
 
-2.  在[此处](https://www.microsoft.com/download/details.aspx?id=12493)下载 Microsoft Visual Studio 和 .NET Framework 日志收集工具。
-3.  运行该工具。 这会将一个 zip 文件输出到 %temp%/vslogs.zip  。 请将该文件附加到你的反馈。
+2. 在[此处](https://www.microsoft.com/download/details.aspx?id=12493)下载 Microsoft Visual Studio 和 .NET Framework 日志收集工具。
+3. 运行该工具。 这会将一个 zip 文件输出到 %temp%/vslogs.zip  。 请将该文件附加到你的反馈。
 
 ## <a name="see-also"></a>请参阅
 

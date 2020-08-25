@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - azure
-ms.openlocfilehash: 19eca9747fa4e9ef80f7de05799a2cee685ce821
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 461b99261eb88d5267b062cb5d471f1b6ed4ee60
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85285517"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88248033"
 ---
 # <a name="publish-a-web-app-to-azure-app-service-using-visual-studio"></a>使用 Visual Studio 将 Web 应用发布到 Azure 应用服务
 
@@ -39,7 +39,7 @@ ms.locfileid: "85285517"
 
     ![选择发布目标](../deployment/media/quickstart-publish-azure-new.png)
 
-1. 选择“Azure 应用服务(Windows)”，然后选择“下一步”。
+1. 选择“Azure 应用服务(Windows)”，然后选择“下一步” 。
 
     ![选择“Linux 上的 Azure 应用服务”](../deployment/media/quickstart-publish-windows-select-azure-service.png)
 

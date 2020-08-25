@@ -15,16 +15,16 @@ dev_langs:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: aae83c43a106fd68b03a83124ad2ddcea4652c8d
-ms.sourcegitcommit: c620d59578db1b89f80e64ae04b4898bc4ab292d
+ms.openlocfilehash: 981f18857beb83ef2a4902f50985ca8e9f7ed901
+ms.sourcegitcommit: 8e5b0106061bb43247373df33d0850ae68457f5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87375920"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88507951"
 ---
 # <a name="tutorial-extend-a-simple-c-console-app"></a>教程：扩展简单的 C# 控制台应用
 
-在本教程中，你将了解如何使用 Visual Studio 来扩展在第一部分中创建的控制台应用。 你将了解 Visual Studio 中可帮助提高开发者工作效率的一些功能，例如使用高级编辑器功能以及调试。
+在本教程中，你将了解如何使用 Visual Studio 来扩展在第一部分中创建的控制台应用。 你将了解日常开发所需的一些 Visual Studio 功能，例如管理多个项目和引用第三方包。
 
 如果你刚刚完成此系列的[第一部分](tutorial-console.md)，则已具备计算器控制台应用。  要跳过第 1 部分，可以首先从 GitHub 存储库打开项目。 C# 计算器应用位于 [vs-tutorial-samples 存储库](https://github.com/MicrosoftDocs/vs-tutorial-samples)中，因此你只需要按照[教程：打开存储库中的项目](../tutorial-open-project-from-repo.md)中的步骤开始操作即可。
 

@@ -6,12 +6,12 @@ author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.topic: conceptual
-ms.openlocfilehash: 8e7a5a5871b66fd388d7c5a9f774a22163d06729
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 749a267d4fc33153cfc609f331ecd1d269706e12
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75589560"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88249961"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>在 Visual Studio 中禁用 DPI 感知
 
@@ -54,7 +54,7 @@ Visual Studio 中的 Windows 窗体设计器不支持缩放  。 因此，在高
 > - 选择以非 DPI 感知进程的形式重启 Visual Studio 的选项时，如果 Visual Studio 中有未停靠的工具窗口，则这些工具窗口的位置可能会发生更改。
 > - 如果使用默认的 Visual Basic 配置文件，或者在“工具” > “选项” > “项目和解决方案”中取消选择了“创建时保存新项目”选项，则 Visual Studio 以非 DPI 感知进程的形式重启时无法重新打开该项目     。 但是，可以通过在“文件” > “最近使用的项目和解决方案”下选择该项目将其打开   。
 
-在 Windows 窗体设计器中完成操作后，必须以 DPI 感知进程的形式重启 Visual Studio  。 当 Visual Studio 以非 DPI 感知进程的形式运行时，字体可能看起来模糊不清，XAML 设计器等其他设计器中也可能出现显示问题  。 如果在 Visual Studio 以非 DPI 感知模式运行时，将其关闭并重新打开，它会再次变为 DPI 感知。 还可以在信息栏中单击“以 DPI 感知进程的形式重启 Visual Studio”选项  。
+在 Windows 窗体设计器中完成操作后，必须以 DPI 感知进程的形式重启 Visual Studio  。 当 Visual Studio 以非 DPI 感知进程的形式运行时，字体可能看起来模糊不清，XAML 设计器等其他设计器中也可能出现显示问题  。 如果在 Visual Studio 以非 DPI 感知模式运行时，将其关闭并重新打开，它会再次变为 DPI 感知。 还可以在信息栏中选择“以 DPI 感知进程的形式重启 Visual Studio”选项。
 
 ### <a name="add-a-registry-entry"></a>添加注册表项
 

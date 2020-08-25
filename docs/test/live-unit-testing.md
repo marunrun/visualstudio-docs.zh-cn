@@ -8,12 +8,12 @@ author: mikejo5000
 ms.author: mikejo
 ms.workload:
 - dotnet
-ms.openlocfilehash: 185d722f65dce0062dc58a06a05590aacb68138b
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.openlocfilehash: 1084b79fceda34cceed51ae8d4a5a84d7ebfb016
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85906221"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88249901"
 ---
 # <a name="how-to-configure-and-use-live-unit-testing"></a>如何配置和使用 Live Unit Testing
 
@@ -191,16 +191,16 @@ Live Unit Testing 自动运行、更新测试结果与通过“测试资源管�
 
 若要在单元测试中选择单个项目，请在启动 Live Unit Testing 后执行以下操作：
 
-1. 在解决方案资源管理器中右键单击解决方案并依次选择“Live Unit Testing”  >  “排除”以排除整个解决方案  。
-1. 右键单击想要包括在测试中的每个测试项目，然后依次选择“Live Unit Testing”  >  “包括” 。
+1. 在解决方案资源管理器中右键单击解决方案并依次选择“Live Unit Testing” > “排除”以排除整个解决方案  。
+1. 右键单击想要包括在测试中的每个测试项目，然后依次选择“Live Unit Testing” > “包括” 。
 
 ### <a name="exclude-individual-tests-from-the-code-editor-window"></a>从代码编辑器窗口中排除个别测试
 
 可以使用代码编辑器窗口，包括或排除个别测试方法。 在代码编辑器窗口中右键单击测试方法的签名，然后选择以下选项之一：
 
-- “实时测试” > “包括 \<selected method>” 
-- “实时测试” > “排除 \<selected method>” 
-- “实时测试” > “排除 \<selected method> 之外的所有方法” 
+- “Live Unit Testing” > “包括 \<selected method>” 
+- “Live Unit Testing” > “排除 \<selected method>” 
+- “Live Unit Testing” > “排除所有项(\<selected method> 除外)” 
 
 ### <a name="exclude-tests-programmatically"></a>以编程方式排除测试
 

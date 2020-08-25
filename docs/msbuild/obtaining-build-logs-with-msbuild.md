@@ -11,12 +11,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8210ceeb26c3350822d95f85af7689a37894dba9
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: e3dad3a9b157989ecf993cf951f91fc6296ecdf7
+ms.sourcegitcommit: d8609a78b460d4783f5d59c0c89454910a4dbd21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84184050"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88238603"
 ---
 # <a name="obtain-build-logs-with-msbuild"></a>用 MSBuild 获取生成日志
 
@@ -47,7 +47,7 @@ msbuild MyProject.proj -t:go -v:diag
 
 下表显示日志详细级别（列值）如何影响记录的消息类型（行值）。
 
-|                                       | Quiet | 最低 | 普通 | 详细 | 诊断 |
+| 消息类型/详细程度              | Quiet | 最低 | 普通 | 详细 | 诊断 |
 |---------------------------------------|:-----:|:-------:|:------:|:--------:|:----------:|
 | 错误                                |   ✅   |    ✅    |    ✅   |     ✅    |      ✅     |
 | 警告                              |   ✅   |    ✅    |    ✅   |     ✅    |      ✅     |

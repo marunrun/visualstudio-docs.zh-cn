@@ -8,12 +8,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1ce3e41b2fe9dfdb080e23fb4270454bbd57f7ef
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.openlocfilehash: 02f078d9293fa8b02267c5003a92d1d60134e1a4
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85817198"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88249517"
 ---
 # <a name="how-to-edit-xml-files"></a>如何：编辑 XML 文件
 
@@ -22,7 +22,7 @@ XML 编辑器是 XML 文件的新编辑器。 该编辑器可以用于独立的 
 > [!NOTE]
 > XHTML 文档由“HTML 编辑器”处理。
 
-若要编辑 XML 文件，请双击要编辑的文件。
+若要编辑 XML 文件，请打开要编辑的文件。
 
 ## <a name="add-a-new-xml-file-to-a-project"></a>将新的 XML 文件添加到项目中
 
@@ -50,7 +50,7 @@ XML 编辑器是 XML 文件的新编辑器。 该编辑器可以用于独立的 
 
 2. 若要新建 XML 文件，请选择“XML 文件”；若要新建 XSLT 样式表，请选择“XSLT 文件” 。
 
-3. 单击“打开”。
+3. 选择“打开”  。
 
 ## <a name="create-an-empty-project-for-xml-files"></a>为 XML 文件创建空项目
 
@@ -62,7 +62,7 @@ XML 编辑器是 XML 文件的新编辑器。 该编辑器可以用于独立的 
 
 2. 选择所需的代码语言，然后选择“空项目(.NET Framework)”模板。
 
-3. 单击 **“确定”** 。
+3. 选择“确定” 。
 
 ::: moniker-end
 
@@ -70,9 +70,9 @@ XML 编辑器是 XML 文件的新编辑器。 该编辑器可以用于独立的 
 
 1. 从“文件”菜单中选择“新建”>“项目”  。
 
-2. 在模板搜索框中输入“空项目”，选择“空项目(.NET Framework)”模板，然后单击“下一步”。
+2. 在模板搜索框中输入“空项目”，选择“空项目(.NET Framework)”模板，然后选择“下一步”  。
 
-3. 单击 **“创建”** 。
+3. 选择“创建”。
 
 ::: moniker-end
 

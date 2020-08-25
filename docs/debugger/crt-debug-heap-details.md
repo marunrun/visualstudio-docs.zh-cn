@@ -73,12 +73,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d09319e412d693fc9df95d9ae9b9773f0869afc3
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 22307c44e4f82056887fadf6e8fde9e1449a19a5
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72745630"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88247943"
 ---
 # <a name="crt-debug-heap-details"></a>CRT 调试堆详细信息
 本主题详细描述了 CRT 调试堆。
@@ -223,7 +223,7 @@ _CrtSetDbgFlag( tmpFlag );
 
 ![返回页首](../debugger/media/pcs_backtotop.png "PCS_BackToTop") [内容](#BKMK_Contents)
 
-## <a name="new-delete-and-_client_blocks-in-the-c-debug-heap"></a><a name="BKMK_new__delete__and__CLIENT_BLOCKs_in_the_C___debug_heap"></a> C++ 调试堆中的 new、delete 和 _CLIENT_BLOCK
+## <a name="new-delete-and-_client_blocks-in-the-c-debug-heap"></a><a name="BKMK_new__delete__and__CLIENT_BLOCKs_in_the_C___debug_heap"></a> C++ 调试堆中的 new、delete 和 \_CLIENT\_BLOCK
 C 运行库的调试版本包含 C++ `new` 和 `delete` 运算符的调试版本。 如果使用 `_CLIENT_BLOCK` 分配类型，则必须直接调用 `new` 运算符的调试版本，或者创建可在调试模式中替换 `new` 运算符的宏，如下面的示例所示：
 
 ```cpp

@@ -7,12 +7,12 @@ ms.assetid: 64455e79-229a-42f0-9d65-c2cca8ab8513
 ms.date: 03/07/2020
 ms.topic: how-to
 description: 了解如何与订阅管理员联系以获取有关问题的帮助。
-ms.openlocfilehash: 1ee5b5091c9321a76117f7d7e1c232973f3c2dd5
-ms.sourcegitcommit: b8ce85a6d9c7fcceaad0fba625202f5ecf8f368c
+ms.openlocfilehash: d3469fa5c8ba69cf5a4d4dab6d5c4b6be070f4d8
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87434257"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88247431"
 ---
 # <a name="get-assistance-from-your-subscriptions-administrator"></a>获取订阅管理员的帮助
 如果 Visual Studio 订阅是由你的工作或学校提供的，那么它很可能是由订阅管理员或“管理员”分配给你的。  管理员可以分配或删除订阅，更改登录电子邮件地址，确定你是否能够下载软件以及执行与订阅相关的其他功能。
@@ -21,13 +21,13 @@ ms.locfileid: "87434257"
 
 ## <a name="how-to-contact-your-admin"></a>如何联系你的管理员
 1. 在 <https://my.visualstudio.com> 登录到订阅者门户
-2. 单击“订阅”选项卡  。 
-3. 单击右上方的“联系我的管理员”按钮  。 
+2. 选择 **“订阅”** 选项卡。 
+3. 选择右上方的“联系我的管理员”按钮。 
    > [!div class="mx-imgBorder"]
-   > ![联系我的管理员](_img/contact-my-admin/contact-my-admin-button.png "单击“联系我的管理员”按钮，输入消息，然后单击“发送”。")
+   > ![联系我的管理员](_img/contact-my-admin/contact-my-admin-button.png "选择“联系我的管理员”按钮，输入消息，然后选择“发送”。")
 4. 输入管理员的消息。
-5. 如果想要接收发送给管理员的消息副本，请单击“向我发送副本”复选框  。 
-6. 最后，单击“发送”  。
+5. 如果想要接收发送给管理员的消息副本，请选择“向我发送副本”复选框。 
+6. 最后，选择“发送”。
 
 > [!NOTE]
 > **超级管理员：** 要设置发送“与管理员联系”请求的电子邮件地址，请在[协议首选项](admin-prefs.md#contact-email-address)中指定该地址。

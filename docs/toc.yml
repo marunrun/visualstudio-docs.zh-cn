@@ -902,7 +902,7 @@
     - name: 自定义 IDE
       displayName: Personalize
       href: ide/personalizing-the-visual-studio-ide.md
-    - name: 快速入门：个性化设置主题和文本颜色
+    - name: 个性化设置颜色主题和文本
       href: ide/quickstart-personalize-the-ide.md
     - name: 环境设置
       displayName: profiles
@@ -1409,6 +1409,8 @@
       href: ide/whats-new-visual-studio-2017.md
     - name: Visual Studio 2019 中的新增功能
       href: ide/whats-new-visual-studio-2019.md
+    - name: Visual Studio 新增功能文档
+      href: ide/whats-new-visual-studio-docs.md
     - name: 发行说明和系统要求
       items:
         - name: 发行节奏

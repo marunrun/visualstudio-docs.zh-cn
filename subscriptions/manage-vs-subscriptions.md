@@ -7,12 +7,12 @@ ms.assetid: 196c6d04-9a33-47d5-b0f1-038e7c3a7ac9
 ms.date: 03/09/2020
 ms.topic: conceptual
 description: 了解如何充分利用 Visual Studio 订阅
-ms.openlocfilehash: 19b4bd7c6fce88aa99b336d98d6bf471509af556
-ms.sourcegitcommit: b8ec700fc4c14c68c6ce280f29c19870261990d8
+ms.openlocfilehash: da78c4f9212341636d85453ad19dde549ddb0e20
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87453679"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88248431"
 ---
 # <a name="managing-subscriptions"></a>管理订阅
 
@@ -30,10 +30,10 @@ Visual Studio 订阅门户将所有 Visual Studio 订阅和程序汇集到一个
 
 ### <a name="to-switch-between-subscriptions-you-can"></a>要在两个订阅之间进行转换，可以：
 
-- 单击右上角的下拉列表，然后从列表中选择订阅
-- 单击“订阅”选项卡，然后单击所需订阅
+- 选择右上角的下拉列表，然后从列表中选择订阅
+- 选择“订阅”选项卡，然后选择所需订阅
   > [!div class="mx-imgBorder"]
-  > ![切换订阅](_img/manage-vs-subscriptions/change-subscription-resized.png "单击“订阅”选项卡以查看有关所有订阅的详细信息，并在各订阅之间进行切换。")
+  > ![切换订阅](_img/manage-vs-subscriptions/change-subscription-resized.png "选择“订阅”选项卡以查看有关所有订阅的详细信息，并在各订阅之间进行切换。")
 
 ### <a name="if-your-subscription-is-not-visible"></a>如果订阅不可见...
 
@@ -68,17 +68,17 @@ Visual Studio 订阅门户将所有 Visual Studio 订阅和程序汇集到一个
 
 个人资料中的联系人信息和首选项可以轻松更改。
 
-1. 在订阅者门户的右上角单击你的名字。
-2. 单击“编辑个人资料”按钮  。
+1. 在订阅者门户的右上角选择你的名字。
+2. 选择“编辑个人资料”按钮。
 3. 在“关于”选项卡上，可以更改姓名、电子邮件、国家/地区、个人资料图片和联系人首选项  。 在“首选项”选项卡上，可以选择首选语言、日期和时间模式、时区，以及用户界面主题。 
-4. 完成更改后，单击“保存”  。
-5. 单击浏览器的“返回”按钮以返回到“权益”页  。
+4. 完成更改后，选择“保存”。
+5. 选择浏览器的“返回”按钮以返回到“权益”页。
 
 ### <a name="setting-communications-preferences"></a>设置通信首选项
 若想要收到关于你的订阅和权益的定期更新，其中包括每月 Visual Studio 订阅新闻稿，请选中 Visual Studio 个人资料中的“Visual Studio 订阅”框，来[更新首选项](https://app.vsaex.visualstudio.com/me?workflowID=devprogram&tab=edit)。 可以随时更改这些首选项，或取消订阅。 
 
    > [!div class="mx-imgBorder"]
-   > ![设置首选项](_img/manage-vs-subscriptions/change-prefs.png "勾选“Visual Studio 订阅计划电子邮件”复选框以接收更新。")
+   > ![设置首选项](_img/manage-vs-subscriptions/change-prefs.png "选中“Visual Studio 订阅计划电子邮件”复选框以接收更新。")
    
 ### <a name="linking-my-subscription-to-existing-azure-devops-services-or-azure-subscriptions"></a>将订阅链接到现有的 Azure DevOps Services 或 Azure 订阅
 如果使用个人 Microsoft 帐户 (MSA) 登录到订阅，并且拥有使用由 Azure 管理的工作或学校帐户的订阅（该订阅包含 Azure DevOps Services 或 Microsoft Azure），则可以链接这两个订阅。 这被称为“备用帐户”，借助此帐户，用户可以继续使用 MSA 登录到订阅，同时访问与学校或工作帐户相关联的现有 Azure、Azure DevOps Services 或 IDE 资源。
@@ -88,11 +88,11 @@ Visual Studio 订阅门户将所有 Visual Studio 订阅和程序汇集到一个
 添加备用帐户：
 
 1. 使用 Microsoft 帐户 (MSA) 登录到[订阅者门户](https://my.visualstudio.com?wt.mc_id=o~msft~docs)
-2. 单击“订阅”选项卡  。
+2. 选择 **“订阅”** 选项卡。
 3. 在“相关链接”下，选择“添加备用帐户”   。
-4. 输入工作或学校帐户的电子邮件地址，然后单击“添加”  。
+4. 输入工作或学校帐户的电子邮件地址，然后选择“添加”。
 
-添加备用帐户后，就可随时通过单击“订阅”标签并在“相关链接”部分选择相应的选项来更新或删除该帐户   。
+添加备用帐户后，就可随时通过选择“订阅”选项卡并在“相关链接”部分选择相应的选项来更新或删除该帐户 。
 
 ## <a name="frequently-asked-questions"></a>常见问题
 

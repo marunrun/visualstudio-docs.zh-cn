@@ -7,12 +7,12 @@ ms.assetid: 21e0471d-ad59-4d21-9c6f-13f7147569af
 ms.date: 03/24/2020
 ms.topic: conceptual
 description: 云订阅的计费问题。
-ms.openlocfilehash: a9845078a17425322dfd86bf417daa24238c7b0f
-ms.sourcegitcommit: dfa9476b69851c28b684ece66980bee735fef8fd
+ms.openlocfilehash: d09d9d4a3b21d0b96f0664451323dcc523d73cb3
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80273824"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88249387"
 ---
 # <a name="visual-studio-cloud-subscriptions-billing-faq"></a>Visual Studio 云订阅计费常见问题解答
 请确保[比较云订阅权益和定价](https://visualstudio.microsoft.com/vs/pricing/)，了解每种 Visual Studio 订阅的权益，云订阅与标准 Visual Studio 订阅之间的不同之处，以及订阅者权益的相关详细信息等。
@@ -34,7 +34,7 @@ ms.locfileid: "80273824"
 答：可以。 你需要是为你的 EA 创建的 Azure 订阅的所有者或参与者。 请确保直接在 Visual Studio Marketplace 中购买 Visual Studio 云订阅。 不能使用采购订单购买 Visual Studio 云订阅。
 
 ### <a name="q-how-can-i-tell-whether-i-have-the-necessary-privileges-to-buy-services-in-the-visual-studio-marketplace-through-my-organizations-enterprise-agreement"></a>问：如何通过组织的企业协议判断是否具有在 Visual Studio Marketplace 中购买服务所需的权限？
-答：确定是否拥有正确权限的最简单方法是单击“购买”按钮，查看 Visual Studio Marketplace 中提供的服务  。
+答：确定是否拥有正确权限的最简单方法是选择“购买”按钮，查看 Visual Studio Marketplace 中提供的服务。
 需要从出现的当前链接到登录名的 Azure 订阅列表中选择一个 Azure 订阅（即计费帐户）。
 由于 Azure 订阅的名称默认为计费帐户的类型（“即用即付”、“企业协议”等），因此通常很容易判断 Azure 订阅是否为企业协议的一部分。
 

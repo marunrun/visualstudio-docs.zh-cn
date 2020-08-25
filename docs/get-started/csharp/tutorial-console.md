@@ -15,12 +15,12 @@ dev_langs:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 00798f5eb7261df0a039c82566018cbb0efe710a
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 691e6c3b994649a9f0fa2d0e92a990f317a16208
+ms.sourcegitcommit: 8e5b0106061bb43247373df33d0850ae68457f5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84183283"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88508173"
 ---
 # <a name="tutorial-create-a-simple-c-console-app-in-visual-studio"></a>教程：在 Visual Studio 中创建一个简单的 C# 控制台应用程序
 
@@ -600,10 +600,10 @@ namespace Calculator
 
 ## <a name="next-steps"></a>后续步骤
 
-恭喜你完成本教程！ 若要了解详情，请继续学习后续教程。
+继续学习本教程的第二部分：
 
 > [!div class="nextstepaction"]
-> [继续学习更多 C# 教程](/dotnet/csharp/tutorials/)
+> [继续学习第 2 部分](tutorial-console-part-2.md)
 
 ## <a name="see-also"></a>请参阅
 

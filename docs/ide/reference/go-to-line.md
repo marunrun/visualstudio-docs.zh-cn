@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0ac8b07e5e788a258e39cce5209b33c0190b08bf
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 643da538626395434c1269e2294d90b332c564e2
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75569187"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88249879"
 ---
 # <a name="go-to-line-dialog-box"></a>“转到行”对话框
 
@@ -28,7 +28,7 @@ ms.locfileid: "75569187"
 
 ## <a name="line-number-1---n"></a>行号 (1 - \<n>)
 
-在“行号 (1 - \<n>)”对话框中，输入想要移动到的活动文档中的行号。 输入的数量必须在 1 到当前文档最后的行号之间。
+在“行号(1 - \<n>)”对话框中，输入想要移动到的活动文档中的行号。 输入的数量必须在 1 到当前文档最后的行号之间。
 
 ## <a name="see-also"></a>另请参阅
 
@@ -36,3 +36,4 @@ ms.locfileid: "75569187"
 - [在代码中设置书签](../../ide/setting-bookmarks-in-code.md)
 - [查找和替换文本](../../ide/finding-and-replacing-text.md)
 - [代码编辑器功能](../../ide/writing-code-in-the-code-and-text-editor.md)
+- [“转到”命令](go-to-command.md)
