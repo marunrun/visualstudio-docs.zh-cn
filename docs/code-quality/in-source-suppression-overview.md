@@ -14,12 +14,12 @@ dev_langs:
 - CPP
 ms.workload:
 - multiple
-ms.openlocfilehash: 4f7ff64d43714fa69c2543a9bb12bb3cd12826c8
-ms.sourcegitcommit: de98ed7edc81383e47b87ae6e61143fbbbe7bc56
+ms.openlocfilehash: f1cc2fd460a2087eaaac40abbb1ba04c8126a9aa
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88706485"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88800848"
 ---
 # <a name="suppress-code-analysis-warnings"></a>禁止显示代码分析警告
 
@@ -35,7 +35,7 @@ ms.locfileid: "88706485"
 ::: moniker range="vs-2017"
 
 > [!NOTE]
-> 如果将项目迁移到 Visual Studio 2017，可能会突然遇到大量代码分析警告。 如果你尚未准备好修复警告，则可以通过选择 "**分析**" "  >  **运行代码分析" 和 "取消活动问题**" 来取消所有这些警告。
+> 如果将项目迁移到 Visual Studio 2017，可能会突然遇到大量代码分析警告。 如果尚未准备好修复警告，则可以通过选择 "**分析**" "  >  **运行代码分析" 并取消 "活动问题**" 来取消所有这些警告。
 >
 > ![在 Visual Studio 中运行代码分析并取消问题](media/suppress-active-issues.png)
 
@@ -44,13 +44,13 @@ ms.locfileid: "88706485"
 ::: moniker range=">=vs-2019"
 
 > [!NOTE]
-> 如果将项目迁移到 Visual Studio 2019，可能会突然遇到大量代码分析警告。 如果尚未准备好修复警告，可以通过选择 "**分析**  >  **生成并取消活动问题**" 来取消所有这些警告。
+> 如果将项目迁移到 Visual Studio 2019，可能会突然遇到大量代码分析警告。 如果尚未准备好修复警告，则可以通过选择 "**分析**  >  **生成并取消活动问题**" 来禁止显示这些警告。
 
 ::: moniker-end
 
 ## <a name="suppressmessage-attribute"></a>SuppressMessage 特性
 
-如果从**错误列表**中的 "代码分析" 警告的上下文或右键单击菜单中选择 "**隐藏**"，则 <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> 会在代码或项目的全局禁止显示文件中添加特性。
+如果从上下文中选择 " **取消** " 或右键单击 (或选择并按住 **错误列表**中 "代码分析" 警告的) 菜单，则 <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> 会在代码或项目的全局禁止显示文件中添加特性。
 
 该 <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> 属性具有以下格式：
 
@@ -195,7 +195,7 @@ dotnet_diagnostic.CS1591.severity = none
 > [!NOTE]
 > `GeneratedCodeAttribute`当应用于整个程序集或单个参数时，代码分析将忽略。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.Scope>
 - <xref:System.Diagnostics.CodeAnalysis>
