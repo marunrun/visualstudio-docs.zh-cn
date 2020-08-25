@@ -7,12 +7,12 @@ ms.date: 05/03/2018
 ms.technology: vs-ide-general
 ms.assetid: F898CB6E-05ED-44CD-8DB6-427B2592CCC6
 ms.topic: how-to
-ms.openlocfilehash: 008052c9b78f93b84e650329cd7ebaf6200d21f1
-ms.sourcegitcommit: 5335a9864d5747bc917ed28d4ebeade3076b10e7
+ms.openlocfilehash: 26575367d7aff2b92c64dc5d07068b4900b24e7f
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "85950522"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88249533"
 ---
 # <a name="create-razor-web-apps"></a>创建 Razor Web 应用
 
@@ -48,10 +48,10 @@ Razor Web 应用包含以下组件。
 ### <a name="pages-folder"></a>Pages 文件夹
 
 此文件夹包含项目的网页，以及每个网页的代码隐藏：
-   - \*.cshtml 文件对应 HTML 标记和 Razor 语法。
-   - \*.cshtml.cs 文件对应用于处理页面事件的 C# 代码隐藏。
+- \*.cshtml 文件对应 HTML 标记和 Razor 语法。
+- \*.cshtml.cs 文件对应用于处理页面事件的 C# 代码隐藏。
 
-支持文件的名称以下划线开头。 例如，_Layout.cshtml 文件可配置所有页面通用的 UI 元素。 此文件设置页面顶部的导航菜单和页面底部的版权声明。 有关详细信息，请参阅 [ASP.NET Core 中的布局](/aspnet/core/mvc/views/layout)。
+支持文件的名称以下划线开头。 例如，\_Layout.cshtml 文件可配置所有页面通用的 UI 元素。 此文件设置页面顶部的导航菜单和页面底部的版权声明。 有关详细信息，请参阅 [ASP.NET Core 中的布局](/aspnet/core/mvc/views/layout)。
 
 ### <a name="launch-settings"></a>启动设置
 

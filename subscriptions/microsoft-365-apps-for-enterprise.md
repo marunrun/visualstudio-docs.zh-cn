@@ -7,12 +7,12 @@ ms.assetid: d1257931-392a-4a65-bf26-177737505122
 ms.date: 06/24/2020
 ms.topic: how-to
 description: 了解和安装 Microsoft 365 应用企业版
-ms.openlocfilehash: 341598e323b004463d9af2f1b18d5096dea9f3b2
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.openlocfilehash: 8ece49244d5bdecadc5992cda4e56d0785666e2a
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902980"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88250745"
 ---
 # <a name="microsoft-365-apps-for-enterprise-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 Microsoft 365 应用企业版
 Microsoft 365 应用企业版（旧称 Office 365 Pro Plus）在选定的 Visual Studio 订阅中提供。 
@@ -26,29 +26,29 @@ Microsoft 365 应用企业版（旧称 Office 365 Pro Plus）在选定的 Visual
 激活 Microsoft 365 应用企业版订阅的流程很简单。  按以下步骤激活订阅并安装应用程序：
 
 1. 通过 [https://my.visualstudio.com](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) 登录到 Visual Studio 订阅
-1. 找到 Microsoft 365 应用企业版磁贴，然后单击“激活”。
+1. 找到 Microsoft 365 应用企业版磁贴，然后选择“激活”。
    > [!div class="mx-imgBorder"]
-   > ![Microsoft 365 应用企业版磁贴](_img/microsoft-365-apps-for-enterprise/tile-activate.png "单击“激活”开始使用订阅。")
+   > ![Microsoft 365 应用企业版磁贴](_img/microsoft-365-apps-for-enterprise/tile-activate.png "选择“激活”开始使用订阅。")
 
-1. 在“欢迎使用”对话框中，输入所需的个人联系信息，然后单击“下一步”。
+1. 在“欢迎使用”对话框中，输入所需的个人联系信息，然后选择“下一步”。
    > [!div class="mx-imgBorder"]
    > ![Microsoft 365 应用企业版客户信息](_img/microsoft-365-apps-for-enterprise/get-to-know-you.png "输入联系信息")
 
-1. 在“创建用户 ID”对话框中，创建租户的用户名和密码，然后单击“创建帐户”。
+1. 在“创建用户 ID”对话框中，创建租户的用户名和密码，然后选择“创建帐户”。
    > [!div class="mx-imgBorder"]
    > ![Microsoft 365 应用企业版用户 ID 创建](_img/microsoft-365-apps-for-enterprise/create-your-user-id.png "创建用户 ID 和密码")
 
-1. 接下来，需要输入代码以证明不是机器人。  可以通过短信接收代码。  输入验证码，然后单击“下一步”。 
+1. 接下来，需要输入代码以证明不是机器人。  可以通过短信接收代码。  输入代码，然后选择“下一步”。 
    > [!div class="mx-imgBorder"]
    > ![Microsoft 365 应用企业版 - 证明你不是机器人](_img/microsoft-365-apps-for-enterprise/prove-youre-not-a-robot.png "请求并输入代码以继续")
 
-1. 成功创建帐户后会看到一个对话框，其中显示了 Office 门户的登录页面以及你的新用户 ID。  记下此信息以供后续使用，然后单击“启动安装”即可开始安装 Microsoft 365 应用。
+1. 成功创建帐户后会看到一个对话框，其中显示了 Office 门户的登录页面以及你的新用户 ID。  记下此信息以供后续使用，然后选择“启动安装”即可开始安装 Microsoft 365 应用。
    > [!div class="mx-imgBorder"]
    > ![Microsoft 365 应用企业版 - 保存此信息](_img/microsoft-365-apps-for-enterprise/save-this-info.png "保存新的用户 ID，以及指向 Office 门户的链接。")
 
-1. 你将自动登录到 Office 门户，现在即可安装应用程序。  单击“安装”按钮开始安装。
+1. 你将自动登录到 Office 门户，现在即可安装应用程序。  选择“安装”按钮开始安装。
    > [!div class="mx-imgBorder"]
-   > ![Microsoft 365 应用企业版 - 安装](_img/microsoft-365-apps-for-enterprise/install-your-office-apps.png "单击“安装”按钮以安装应用程序。")
+   > ![Microsoft 365 应用企业版 - 安装](_img/microsoft-365-apps-for-enterprise/install-your-office-apps.png "选择“安装”按钮以安装应用程序。")
 1. 按照提示安装所选应用。  
 
 ## <a name="eligibility"></a>资格

@@ -10,12 +10,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 04895e3dd72a7cb4f0373c970db0f12582506ef9
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 3c5cb51232457a43200c8a71ace51cc4b8a63e02
+ms.sourcegitcommit: 8e5b0106061bb43247373df33d0850ae68457f5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85285551"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88507981"
 ---
 # <a name="run-a-unit-test-as-a-64-bit-process"></a>将单元测试作为 64 位进程运行
 
@@ -30,7 +30,7 @@ ms.locfileid: "85285551"
    ::: moniker-end
 
     > [!TIP]
-    > 为了最大限度地提高灵活性，请使用“任何 CPU”  配置来编译测试项目。 然后，可以在 32 位和 64 位代理上运行。 使用“64 位”  配置编译测试项目毫无优势可言。
+    > 为了最大限度地提高灵活性，请使用“任何 CPU”  配置来编译测试项目。 然后，可以在 32 位和 64 位代理上运行。 除非要调用仅 64 位支持的代码，否则使用 64 位配置编译测试项目不具有任何优势。
 
 2. 将单元测试设置为作为 64 位进程运行。
 

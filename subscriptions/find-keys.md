@@ -7,12 +7,12 @@ ms.assetid: da8df006-4896-4ff9-b487-698d78deabc3
 ms.date: 07/30/2020
 ms.topic: conceptual
 description: 了解如何在 Visual Studio 订阅中查找、声明和导出产品密钥
-ms.openlocfilehash: 8ee21c544a44bfd5eca831cdc9fd1c8e00adb35b
-ms.sourcegitcommit: b8ec700fc4c14c68c6ce280f29c19870261990d8
+ms.openlocfilehash: e9be61db1f72684dcff12d015ec5180607b41977
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87453753"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88250739"
 ---
 # <a name="finding-and-claiming-product-keys-in-visual-studio-subscriptions"></a>在 Visual Studio 订阅中查找和声明产品密钥
 本文介绍如何从 https://my.visualstudio.com/productkeys 中查找、声明和导出产品密钥。  有关使用密钥激活产品、密钥的零售和批量许可版本以及每日产品密钥索取上限的详细信息，请访问[产品密钥概述](product-keys.md)。
@@ -20,7 +20,7 @@ ms.locfileid: "87453753"
 ## <a name="locating-and-claiming-product-keys"></a>查找并索取产品密钥
 必须登录你的 Visual Studio 订阅才能查看产品密钥。 可在如下所示的“[下载](https://my.visualstudio.com/downloads)”页中，选择某一特定产品的蓝色“获取密钥”链接来查找单个产品密钥。  所有密钥都可在“[产品密钥](https://my.visualstudio.com/productkeys?wt.mc_id=o~msft~docs)”页查找到。 如果一个产品有多个密钥，会在下载项的“注释”列中显示注释，帮助你确定应使用哪个密钥。
 > [!div class="mx-imgBorder"]
-> ![从“下载”页获取密钥](_img/product-keys/download-get-key.png "单击任何下载内容“信息”页上的“获取密钥”以获取该产品的密钥。")
+> ![从“下载”页获取密钥](_img/product-keys/download-get-key.png "选择任何下载内容“信息”页上的“获取密钥”以获取该产品的密钥。")
 
 某些产品将其多个版本捆绑到单次下载中。 在这种情况下，输入的产品密钥决定安装的产品版本。
 某些密钥会自动提供，例如“静态”密钥，同一个密钥可以根据需要使用无数次，因为不需要激活。 其他密钥必须通过选择该产品的“获取密钥”链接来索取。
@@ -50,7 +50,7 @@ ms.locfileid: "87453753"
 
 索取产品密钥：
 1. 登录到你的 Visual Studio 订阅。  必须登录才能下载产品或索取产品密码。
-2. 单击“[产品密钥](https://my.visualstudio.com/productkeys?wt.mc_id=o~msft~docs)”选项卡。
+2. 选择[产品密钥](https://my.visualstudio.com/productkeys?wt.mc_id=o~msft~docs)选项卡。
 3. 产品密钥根据产品名称按字母顺序列出。  可以向下滚动到所需产品的名称，也可以使用页面顶部的搜索栏进行搜索。
 > [!div class="mx-imgBorder"]
 > ![搜索产品密钥](_img/product-keys/search-keys.png "滚动到所需的产品，或使用搜索框快速查找任何产品。")
@@ -64,7 +64,7 @@ ms.locfileid: "87453753"
 > [!IMPORTANT]
 > 如果订阅到期，则无法索取新的密钥或导出已索取的密钥。
 
-若要导出密钥，只需单击“产品密钥”页最右侧的“导出所有密钥”链接。  此时将创建名为 KeysExport.xml 的 .xml 文件，可选择打开或保存该文件。  你需要使用能够处理 .xml 文件的应用程序来打开此文件。  例如，可以将该文件作为 Excel 中的只读工作簿打开。
+要导出密钥，只需选择“产品密钥”页面最右侧的“导出所有密钥”链接。  此时将创建名为 KeysExport.xml 的 .xml 文件，可选择打开或保存该文件。  你需要使用能够处理 .xml 文件的应用程序来打开此文件。  例如，可以将该文件作为 Excel 中的只读工作簿打开。
 
 ## <a name="see-also"></a>请参阅
 - [Visual Studio 文档](https://docs.microsoft.com/visualstudio/)

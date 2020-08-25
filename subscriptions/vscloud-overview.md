@@ -7,12 +7,12 @@ ms.assetid: af1f7888-6942-4515-9475-0928ecf49dab
 ms.date: 03/24/2020
 ms.topic: overview
 description: 按月或按年租赁 Visual Studio Professional 或 Visual Studio Enterprise，无需任何长期协定。
-ms.openlocfilehash: 8824ff5f233f580d49fe91f79e6f3d348391ab68
-ms.sourcegitcommit: 5e82a428795749c594f71300ab03a935dc1d523b
+ms.openlocfilehash: 5f289c5eb51ccaf95c88bc7e2d66a4be5e904e03
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86211638"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88248341"
 ---
 # <a name="buy-visual-studio-professional-and-visual-studio-enterprise-cloud-subscriptions"></a>购买 Visual Studio Professional 和 Visual Studio Enterprise 云订阅
 可从 [Visual Studio Marketplace](https://marketplace.visualstudio.com) 购买 [Visual Studio Professional 和 Visual Studio Enterprise 订阅](https://visualstudio.microsoft.com/subscriptions/)。 这些称为“云订阅”。
@@ -65,15 +65,15 @@ ms.locfileid: "86211638"
 若要取消订阅，只需将协议的订阅数量设置为零 (0) 即可。  按照下列步骤操作以减少订阅数量：
 1. 登录到 <https://manage.visualstudio.com>
 1. 如果有多个协议，请从下拉列表中选择所需的协议。
-1. 单击左上角的“概述”图标以显示有关订阅的信息。  
+1. 选择左上角的“概述”图标以显示有关订阅的信息。  
 > [!div class="mx-imgBorder"]
-> ![显示订阅概述](_img/buy-vs-subscriptions/overview-button.png "单击“概述”按钮以显示订阅详细信息")
+> ![显示订阅概述](_img/buy-vs-subscriptions/overview-button.png "选择“概述”按钮以显示订阅详细信息")
 
-4. 找到要取消的订阅的条目，然后单击“更改数量”。
+4. 找到要取消的订阅的条目，然后选择“更改数量”。
 1. 将数量设置为零 (0)。 你的订阅在计划的计费日期之前将被保留，但在到达计费日期时将不会续订。   
 
 > [!div class="mx-imgBorder"]
-> ![更改订阅](_img/buy-vs-subscriptions/manage-subscriptions.png "单击“更改数量”以取消订阅")
+> ![更改订阅](_img/buy-vs-subscriptions/manage-subscriptions.png "选择“更改数量”以取消订阅")
 
 ## <a name="frequently-asked-questions"></a>常见问题
 

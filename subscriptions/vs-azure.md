@@ -7,12 +7,12 @@ ms.assetid: 872c5746-5357-4764-949b-aa525a0adf1a
 ms.date: 04/28/2020
 ms.topic: how-to
 description: 了解如何激活 Visual Studio 订阅中包含的 Azure 开发测试个人额度权益。
-ms.openlocfilehash: 3c529b746d647f0f26306e89c56c73171ba50c1d
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.openlocfilehash: 276475393de374970685202079831bb06bedea6f
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902921"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88247327"
 ---
 # <a name="use-microsoft-azure-in-visual-studio-subscriptions"></a>在 Visual Studio 订阅中使用 Microsoft Azure
 Visual Studio 订阅者无需额外付费即可使用 Microsoft Azure。  通过[每月 Azure 开发测试个人额度](https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/)，可将 Azure 用作开发/测试的个人沙盒。  你可以预配虚拟机、云服务和其他 Azure 资源。  信用额度因订阅级别而异。
@@ -20,19 +20,19 @@ Visual Studio 订阅者无需额外付费即可使用 Microsoft Azure。  通过
 ## <a name="activation-steps"></a>激活步骤
 1. 登录到 [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)。
 
-2. 在“权益”页上的“工具”部分中找到“Azure”磁贴，然后单击“权益”磁贴底部的“激活”链接。
+2. 在“权益”页上的“工具”部分中找到“Azure”磁贴，然后选择“权益”磁贴底部的“激活”链接。
    > [!div class="mx-imgBorder"]
    > ![Azure 磁贴](_img/vs-azure/vs-azure-tile.png)
 
-3. 如果没有现有的 Azure 订阅，系统将要求你填写所需信息以创建 Azure 订阅。  第一步是提供个人信息，然后单击“下一步”。
+3. 如果没有现有的 Azure 订阅，系统将要求你填写所需信息以创建 Azure 订阅。  第一步是提供个人信息，然后选择“下一步”。
    > [!div class="mx-imgBorder"]
    > ![Azure 注册](_img/vs-azure/vs-azure-about-you.png)
 
-4. 接下来，需要使用简单的验证码验证身份。 提供电话号码，并选择是通过短信还是电话接收代码。  输入收到的代码，单击“验证代码”。   
+4. 接下来，需要使用简单的验证码验证身份。 提供电话号码，并选择是通过短信还是电话接收代码。  输入收到的代码，选择“验证代码”。   
    > [!div class="mx-imgBorder"]
    > ![Azure 准备工作](_img/vs-azure/vs-azure-identity.png)
 
-5. 最后一步，单击复选框以接受条款，然后单击“注册”。  就这么简单！
+5. 最后一步，选中复选框以接受条款，然后选择“注册”。  就这么简单！
    > [!div class="mx-imgBorder"]
    > ![Azure 准备工作](_img/vs-azure/vs-azure-agreement.png)
 

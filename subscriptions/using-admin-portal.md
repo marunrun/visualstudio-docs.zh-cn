@@ -7,12 +7,12 @@ ms.assetid: 4c099fe8-883e-4789-9468-387ce5697dfe
 ms.date: 03/03/2020
 ms.topic: overview
 description: 了解如何开始在订阅管理门户中管理组织的 Visual Studio 订阅。
-ms.openlocfilehash: 94ce9e8ceec46403ef816c39115a5418f1ee9e03
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.openlocfilehash: 7687a899b1c10e95ce161973c0d84701ce91fde6
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902950"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88249857"
 ---
 # <a name="overview-of-the-visual-studio-subscriptions-administrator-portal"></a>Visual Studio 订阅管理员门户概述
 
@@ -42,7 +42,7 @@ Visual Studio 订阅管理门户提供了集中管理组织订阅的工具。
 
 在页面左上方有几个图标，你可选择它们来显示订阅分配概述、协议详细信息和最大用量报表。
 
-要详细了解已购买、已分配以及对于每个协议来说仍可在组织中使用的订阅许可证数量，请单击顶部图标来启用滑出面板。
+要详细了解已购买、已分配以及对于每个协议来说仍可在组织中使用的订阅许可证数量，请选择顶部图标来启用滑出面板。
 > [!div class="mx-imgBorder"]
 > ![Visual Studio 订阅管理员门户订阅者页](_img/using-admin-portal/subscribers-page.png)
 

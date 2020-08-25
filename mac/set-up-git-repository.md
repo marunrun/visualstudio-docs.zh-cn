@@ -6,12 +6,12 @@ ms.author: johmil
 ms.date: 05/13/2020
 ms.assetid: E992FA1D-B2AD-4A28-ADC6-47E4FC471060
 ms.topic: how-to
-ms.openlocfilehash: 9d6fd5ffefcd6696fa67302a8d59fd46e498a472
-ms.sourcegitcommit: 5335a9864d5747bc917ed28d4ebeade3076b10e7
+ms.openlocfilehash: bc981530f5493ce1899de1c888e20129c7ae0f8c
+ms.sourcegitcommit: 2946d802aec1418e87bfa779d81834eeb7be5c9d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "85950597"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88214692"
 ---
 # <a name="set-up-a-git-repository"></a>设置 Git 存储库
 
@@ -55,7 +55,7 @@ Git 是分布式版本控制系统，使团队可以同时在同一文档上工�
 
 3. 选择“从已注册中选择”选项卡，然后按“添加”按钮 ：
 
-    ![](media/version-control-git5.png)
+    ![“添加已注册的存储库”对话框。](media/version-control-git5.png)
 
 4. 输入要在本地显示的存储库名称，然后粘贴步骤 #3 中的 URL。 “存储库配置”对话框应如下所示。 按“确定”：
 

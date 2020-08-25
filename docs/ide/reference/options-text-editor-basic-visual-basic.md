@@ -1,6 +1,6 @@
 ---
 title: “选项”>“文本编辑器”>“基本(VB)”>“高级”
-ms.date: 01/16/2019
+ms.date: 08/12/2020
 ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Visual_Basic.Editor
@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - Basic Text Editor Options dialog box
 ms.assetid: 5a8cafca-f7b4-4a2d-92ce-6894a7673d00
-author: TerryGLee
-ms.author: tglee
+author: akhera99
+ms.author: midumont
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 562358ca90e223a07926aaa383ded41a5f7557cc
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 778cd1f9c126b176cafad8b33a147d284bea1b67
+ms.sourcegitcommit: 2946d802aec1418e87bfa779d81834eeb7be5c9d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79431470"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88214643"
 ---
 # <a name="options-text-editor-basic-visual-basic-advanced"></a>“选项”>“文本编辑器”>“基本(Visual Basic)”>“高级”
 在“选项”  （“工具”  菜单）对话框中“文本编辑器”  文件夹的“基本”  文件夹内，“VB 专用”  属性页包含以下属性：
@@ -79,6 +79,13 @@ ms.locfileid: "79431470"
 
 ## <a name="editor-help"></a>编辑器帮助
 
+::: moniker range=">=vs-2019"
+**内联参数名称提示**    
+如果选择此选项，则会在函数调用中的每个参数之前插入文本、强制转换文本和对象实例化的参数名称提示。  
+
+![Visual Basic 的内联参数名称提示](media/inline-parameter-name-hints-visualbasic.png)
+::: moniker-end
+
 **整齐排列代码（重新设置格式）** 文本编辑器会适当地重新设置代码格式。 选定此选项后，代码编辑器会：
 
 - 将代码与正确的制表符位置对齐
@@ -97,7 +104,7 @@ ms.locfileid: "79431470"
 
 **自动插入最终构造**
 
-例如，如果你键入过程声明的第一行 `Sub Main` 并按 Enter  ，文本编辑器就会添加匹配的 `End Sub` 行。 同样，如果添加一个 [For](/dotnet/visual-basic/language-reference/statements/for-next-statement) 循环，文本编辑器会添加一个匹配的 `Next` 语句。 选定此选项后，代码编辑器会自动添加最终构造。
+例如，如果你键入过程声明的第一行 `Sub Main` 并按 Enter，文本编辑器就会添加匹配的 `End Sub` 行。 同样，如果添加一个 [For](/dotnet/visual-basic/language-reference/statements/for-next-statement) 循环，文本编辑器会添加一个匹配的 `Next` 语句。 选定此选项后，代码编辑器会自动添加最终构造。
 
 **自动插入 Interface 和 MustOverride 成员**
 

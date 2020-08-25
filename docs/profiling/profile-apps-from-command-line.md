@@ -14,12 +14,12 @@ manager: jillfra
 monikerRange: '>= vs-2019'
 ms.workload:
 - multiple
-ms.openlocfilehash: ba5915e687bd4e1f6afb200f4ca3e7a866c6151c
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 56007fcb3b951f9b313a25092e89c234d52eb15e
+ms.sourcegitcommit: 8e5b0106061bb43247373df33d0850ae68457f5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85285839"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88507994"
 ---
 # <a name="measure-application-performance-from-the-command-line"></a>从命令行测量应用程序性能
 
@@ -41,9 +41,9 @@ ms.locfileid: "85285839"
 
 1. 启动 Notepad，并打开任务管理器来获取其进程 ID (PID)。 在任务管理器中，找到“详细信息”选项卡中的 PID。
 
-1. 打开命令提示符，切换到包含集合代理可执行文件的目录（通常在此处）。
+1. 打开命令提示符，切换到包含集合代理可执行文件的目录，通常在此处（对于 Visual Studio Enterprise）。
 
-   ```<Visual Studio installation folder>\2019\Preview\Team Tools\DiagnosticsHub\Collector\```
+   ```<Visual Studio installation folder>\2019\Enterprise\Team Tools\DiagnosticsHub\Collector\```
 
 1. 通过键入以下命令，启动 VSDiagnostics.exe。
 
@@ -54,8 +54,14 @@ ms.locfileid: "85285839"
    必须包含的参数是：
 
    * \<*id*> 标识收集会话。 ID 必须为介于 1 - 255 之间的数字。
-   * \<*pid*>，要分析的进程的 PID 在本例中是在步骤 1 中找到的 PID
+   * \<*pid*>，要分析的进程的 PID 在本例中是在步骤 1 中找到的 PID。
    * \<*configFile*>，要启动的集合代理的配置文件。 有关详细信息，请参阅[代理的配置文件](#config_file)。
+
+   例如，可以将以下命令用于 CPUUsageBase 代理，方法是按之前所述替换 pid。
+
+   ```cmd
+   VSDiagnostics.exe start 1 /attach:<pid> /loadConfig:AgentConfigs\CPUUsageLow.json
+   ```
 
 1. 重设 Notepad 大小，或在其中键入内容，以确保收集一些有趣的分析信息。
 
@@ -65,7 +71,9 @@ ms.locfileid: "85285839"
    VSDiagnostics.exe stop <id> /output:<path to file>
    ```
 
-1. 转到上一个命令的文件输出，并在 Visual Studio 中打开它以检查收集的信息。
+1. 找到上一个命令的 .diagsession 文件输出，并在 Visual Studio 中打开它（“文件” > “打开”）以检查收集的信息 。
+
+   要分析结果，请参阅相应的性能工具文档。 例如，这可能是 [CPU 使用情况](../profiling/cpu-usage.md)、[.NET 对象分配工具](../profiling/dotnet-alloc-tool.md)或[数据库](../profiling/analyze-database.md)工具。
 
 ## <a name="agent-configuration-files"></a><a name="config_file"></a> 代理配置文件
 

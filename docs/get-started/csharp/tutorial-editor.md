@@ -12,14 +12,14 @@ dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: 72a74c967849703feeb427d89891a023326ca6b7
-ms.sourcegitcommit: 9a7fb8556a5f3dbb4459122fefc7e7a8dfda753a
+ms.openlocfilehash: 8122f42fb5d2ec4c31ec553407b644e59e9f4418
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234960"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88248287"
 ---
-# <a name="learn-to-use-the-code-editor-with-c"></a>了解如何将代码编辑器用于 C#
+# <a name="learn-to-use-the-code-editor-with-c"></a>了解如何将代码编辑器用于 C\#
 
 在这个 10 分钟的 Visual Studio 代码编辑器简介中，我们会向文件添加代码，了解 Visual Studio 编写、导航和了解 C# 代码的简便方法。
 

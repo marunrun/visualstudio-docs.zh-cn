@@ -8,12 +8,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 45632967c39348e8dc78dc3e2fb95227dcd86d7d
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 4b3d50f8fcad0294adec032322229e9dd6cedac2
+ms.sourcegitcommit: 8e5b0106061bb43247373df33d0850ae68457f5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85285880"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88508075"
 ---
 # <a name="run-profiling-tools-with-or-without-the-debugger"></a>运行带/不带调试器的分析工具
 
@@ -89,88 +89,4 @@ Visual Studio 提供了性能测量值和分析工具选择。 某些工具（�
 
 ## <a name="collect-profiling-data-from-the-command-line"></a>通过命令行收集分析数据
 
-若要从命令行测量性能数据，可以使用 Visual Studio 或远程工具随附的 VSDiagnostics.exe。 这适用于在未安装 Visual Studio 的系统上捕获性能跟踪，或用于编写性能跟踪集合的脚本。 使用 VSDiagnostics.exe 时，会开始一个诊断会话，该会话将捕获并存储分析数据，直到该工具停止。 此时，该数据将被导出到 .diagsession 文件中，你可以在 Visual Studio 中打开此文件以分析结果。
-
-### <a name="launch-an-application"></a>启动应用程序
-
-1. 打开命令提示符，切换到包含 VSDiagnostics.exe 的目录：
-
-   ```
-   <Visual Studio Install Folder>\Team Tools\DiagnosticsHub\Collector\
-   ```
-
-2. 使用以下命令启动 VSDiagnostics.exe：
-
-   ```
-   VSDiagnostics.exe start <id> /launch:<appToLaunch> /loadConfig:<configFile>
-   ```
-
-   必须包括以下参数：
-
-   - \<id\>：标识收集会话。 ID 必须为介于 1 - 255 之间的数字。
-   - \<appToLaunch\>：要启动和分析的可执行文件。
-   - \<configFile\>：要启动的集合代理的配置文件。
-
-3. 若要停止收集并查看结果，请按照本文后面的“停止收集”部分中的步骤进行操作。
-
-### <a name="attach-to-an-existing-application"></a>附加到现有应用程序
-
-1. 打开应用程序（如记事本），并打开“任务管理器”来获取其进程 ID (PID)。 在“任务管理器”中，找到“详细信息” ****  选项卡中的 PID。
-2. 打开命令提示符，切换到包含集合代理可执行文件的目录。 通常在此处：
-
-   ```
-   <Visual Studio installation folder>\2019\Preview\Team Tools\DiagnosticsHub\Collector\
-   ```
-
-3. 通过键入以下命令，启动 VSDiagnostics.exe 文件。
-
-   ```
-   VSDiagnostics.exe start <id> /attach:<pid> /loadConfig:<configFile>
-   ```
-
-   必须包括以下参数：
-
-   - \<id\>：标识收集会话。 ID 必须为介于 1 - 255 之间的数字。
-   - \<pid\>：要分析的进程的 PID 在本例中是在步骤 1 中找到的 PID。
-   - \<configFile\>：要启动的集合代理的配置文件。 有关详细信息，请参阅 [代理的配置文件](../profiling/profile-apps-from-command-line.md)。
-
-4. 若要停止收集并查看结果，请按照下一节中的步骤进行操作。
-
-### <a name="stop-collection"></a>停止收集
-
-1. 通过键入以下命令，停止收集会话并将输出发送到文件。
-
-   ```
-   VSDiagnostics.exe stop <id> /output:<path to file>
-   ```
-
-2. 转到上一个命令的文件输出，并在 Visual Studio 中打开它以检查收集的信息。
-
-## <a name="agent-configuration-files"></a>代理配置文件
-
-集合代理是可互换的组件，可根据要测量的内容收集不同类型的数据。
-为方便起见，可以将该信息存储在代理配置文件中。 配置文件是至少包含 .dll 文件的名称及其 COM CLSID 的 .json 文件。 以下是可以在以下文件夹中找到的示例配置文件：
-
-```
-<Visual Studio installation folder>\Team Tools\DiagnosticsHub\Collector\AgentConfigs\
-```
-
-请参阅以下链接以下载和查看代理配置文件：
-
-- https://aka.ms/vs/diaghub/agentconfig/cpubase
-- https://aka.ms/vs/diaghub/agentconfig/cpuhigh
-- https://aka.ms/vs/diaghub/agentconfig/cpulow
-- https://aka.ms/vs/diaghub/agentconfig/database
-- https://aka.ms/vs/diaghub/agentconfig/dotnetasyncbase
-- https://aka.ms/vs/diaghub/agentconfig/dotnetallocbase
-- https://aka.ms/vs/diaghub/agentconfig/dotnetalloclow
-
-CpuUsage 配置（基本/高/低），对应于为 [CPU 使用情况](../profiling/cpu-usage.md)分析工具收集的数据。
-DotNetObjectAlloc 配置（基本/低），对应于为 [.NET 对象分配工具](../profiling/dotnet-alloc-tool.md)收集的数据。
-
-基本/低/高配置是指采样率。 例如，低为 100 样本/秒，高为 4000 样本/秒。
-为了使 VSDiagnostics.exe 工具用于集合代理，它需要用于适当代理的 DLL 和 COM CLSID。 代理也可能具有其他配置选项。 如果使用不带配置文件的代理，请使用以下命令中的格式：
-
-```
-VSDiagnostics.exe start <id> /attach:<pid> /loadAgent:<agentCLSID>;<agentName>[;<config>]
-```
+若要从命令行测量性能数据，可以使用 Visual Studio 或远程工具随附的 VSDiagnostics.exe。 这适用于在未安装 Visual Studio 的系统上捕获性能跟踪，或用于编写性能跟踪集合的脚本。 有关详细说明，请参阅[从命令行测量应用程序性能](../profiling/profile-apps-from-command-line.md)。

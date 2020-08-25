@@ -10,14 +10,14 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: f48e7a8be8d902a487ae4f7fdac9e6d85f7b5517
-ms.sourcegitcommit: b8ec700fc4c14c68c6ce280f29c19870261990d8
+ms.openlocfilehash: a033c0fe1fd80edc7959c5f49993714982ecc805
+ms.sourcegitcommit: d8609a78b460d4783f5d59c0c89454910a4dbd21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87453755"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88238175"
 ---
-# <a name="learn-to-use-the-code-editor"></a>了解如何使用代码编辑器
+# <a name="learn-to-use-the-code-editor-for-javascript"></a>了解如何使用 JavaScript 版代码编辑器
 
 这一简短的 Visual Studio 代码编辑器简介演示了如何使用 Visual Studio 更轻松地编写、导航和理解 C# 代码。
 

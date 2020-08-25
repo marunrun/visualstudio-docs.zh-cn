@@ -1,18 +1,18 @@
 ---
 title: 有关提高性能的提示
-ms.date: 08/14/2018
+ms.date: 08/13/2020
 ms.topic: conceptual
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e3cd7fe9781048f6612ff6bd81c0bf0cbc00a30b
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: f90faadeaf9e1f8965aea7850fa1a12bb43b183c
+ms.sourcegitcommit: 2946d802aec1418e87bfa779d81834eeb7be5c9d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79307249"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88214593"
 ---
 # <a name="visual-studio-performance-tips-and-tricks"></a>Visual Studio 性能提示和技巧
 
@@ -117,11 +117,25 @@ Visual Studio 会自动重新打开上一个会话中处于打开状态的文档
 
    ::: moniker-end
 
+- **禁用地图模式**
+
+    [地图模式](how-to-track-your-code-by-customizing-the-scrollbar.md#display-modes)在滚动条上以缩图形式显示代码行。 地图模式默认处于启用状态。
+
+    要禁用地图模式，请依次转到“工具” > “选项” > “文本编辑器” > “所有语言” > “滚动条”，然后在“行为”部分中，取消选择“使用垂直滚动条的地图模式”选项      。
+
+- **禁用自动换行**
+
+    [自动换行](./reference/how-to-manage-word-wrap-in-the-editor.md)显示长代码行中超出代码编辑器窗口当前宽度的部分。 自动换行默认处于打开状态。
+
+    要针对当前正在处理的项目禁用自动换行，请转到“编辑” > “高级” > “自动换行”  。 （你可以使用相同的菜单命令来切换此设置。）
+
+    要针对所有项目禁用自动换行，请转到“工具” > “选项” > “常规” > “文本编辑器” > “所有语言” > “常规”，然后在“设置”部分中，取消选择“自动换行”选项       。
+
 - **禁用 XAML 设计器**
 
-    默认情况下，XAML 设计器处于启用状态，但是只会在打开 .xaml  文件时占用资源。 如果使用 XAML 文件，但不希望使用设计器功能，请禁用此功能以释放内存。
+    默认情况下，XAML 设计器处于启用状态，但是只会在打开 .xaml** 文件时占用资源。 如果使用 XAML 文件，但不希望使用设计器功能，请禁用此功能以释放内存。
 
-    要禁用 XAML  设计器，请转到“工具”   > “选项”   > “XAML 设计器”   > “启用 XAML 设计器”  ，然后取消选择该选项。
+    要禁用 XAML 设计器，请转到“工具” > “选项” > “XAML 设计器” > “启用 XAML 设计器”，然后取消选择该选项   。
 
 - **删除工作负载**
 
@@ -129,9 +143,9 @@ Visual Studio 会自动重新打开上一个会话中处于打开状态的文档
 
 ## <a name="force-a-garbage-collection"></a>强制垃圾回收
 
-CLR 使用垃圾回收内存管理系统。 在此系统中，内存有时会被不再需要的对象占用。 这一状态是临时的，垃圾回收器会基于其性能和资源使用情况试探法释放此内存。 可通过在 Visual Studio 中使用热键强制 CLR 回收任何未使用的内存。 如果有大量垃圾等待回收并已强制垃圾回收，可在“任务管理器”中看到 devenv.exe 进程的内存使用率降低。 很少需要使用此方法。 但是，在完成一个资源占用较高的操作（如完整生成、调试会话或解决方案打开事件）后，此方法有助于确定进程实际在使用的内存量。 由于 Visual Studio 属于混合型（托管和本机），因此本机分配器和垃圾回收器有时可能会竞争有限的内存资源。 在内存使用率较高的情况下，这可能有助于强制垃圾回收器运行。
+CLR 使用垃圾回收内存管理系统。 在此系统中，内存有时会被不再需要的对象占用。 这一状态是临时的，垃圾回收器会基于其性能和资源使用情况试探法释放此内存。 可通过在 Visual Studio 中使用热键强制 CLR 回收任何未使用的内存。 如果有大量垃圾等待回收并已强制垃圾回收，可在“任务管理器”**** 中看到 devenv.exe** 进程的内存使用率降低。 很少需要使用此方法。 但是，在完成一个资源占用较高的操作（如完整生成、调试会话或解决方案打开事件）后，此方法有助于确定进程实际在使用的内存量。 由于 Visual Studio 属于混合型（托管和本机），因此本机分配器和垃圾回收器有时可能会竞争有限的内存资源。 在内存使用率较高的情况下，这可能有助于强制垃圾回收器运行。
 
-要强制垃圾回收，请使用热键：Ctrl+Alt+Shift+F12、Ctrl+Alt+Shift+F12（按两次）。
+要强制垃圾回收，请使用热键：Ctrl+Alt+Shift+F12，Ctrl+Alt+Shift+F12（按两次）       。
 
 如果强制垃圾回收确实可让方案正常工作，请通过 Visual Studio 反馈工具提交报告，因为这一行为可能是一个 Bug。
 

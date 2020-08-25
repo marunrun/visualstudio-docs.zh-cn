@@ -11,12 +11,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 9f4c165f3e882cea71ee4aaff9f2358c27ce6a2b
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: fa59197e584c6c8062c13354178f883b60b36442
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "62957222"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88250561"
 ---
 # <a name="step-4-use-the-full-flask-web-project-template"></a>步骤 4：使用完整的 Flask Web 项目模板
 
@@ -235,5 +235,5 @@ block content
 ## <a name="go-deeper"></a>深入了解
 
 - [编写你的第一个 Flask 应用，第 4 部分 - 窗体和通用视图](https://docs.djangoproject.com/en/2.0/intro/tutorial04/) (docs.djangoproject.com)
-- [GitHub 上的 Jade（文档）](https://github.com/liuliqiang/pyjade)(github.com)(github.com)
+- [GitHub 上的 Jade（文档）](https://github.com/liuliqiang/pyjade)(github.com)
 - GitHub 上的教程源代码：[Microsoft/python-sample-vs-learning-flask](https://github.com/Microsoft/python-sample-vs-learning-flask)

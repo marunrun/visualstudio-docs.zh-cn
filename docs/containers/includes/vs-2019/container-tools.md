@@ -7,12 +7,12 @@ ms.date: 02/01/2019
 ms.prod: visual-studio-dev16
 ms.technology: vs-azure
 ms.topic: include
-ms.openlocfilehash: d6d519483b350f2c1086c76bc17522b71a435fe9
-ms.sourcegitcommit: cc58ca7ceae783b972ca25af69f17c9f92a29fc2
+ms.openlocfilehash: fc549951e9c6b6d208c478f37126238e91f6f039
+ms.sourcegitcommit: 2c26d6e6f2a5c56ae5102cdded7b02f2d0fd686c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389928"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88186332"
 ---
 使用 Visual Studio，可以轻松地生成、调试和运行容器化的 .NET、ASP.NET 和 ASP.NET Core 应用并将其发布到 Azure 容器注册表 (ACR)、Docker Hub、Azure 应用服务或你自己的容器注册表。 本文介绍如何将 ASP.NET Core 应用发布到 ACR。
 
@@ -42,27 +42,27 @@ ms.locfileid: "81389928"
 
 Dockerfile，用于创建最终 Docker 映像的方案，已在项目中创建  。 请参阅 [Dockerfile 引用](https://docs.docker.com/engine/reference/builder/)，了解其中的命令：
 
-```
-FROM microsoft/dotnet:2.2-aspnetcore-runtime-stretch-slim AS base
+```dockerfile
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-nanoserver-1903 AS base
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-FROM microsoft/dotnet:2.2-sdk-stretch AS build
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1-nanoserver-1903 AS build
 WORKDIR /src
-COPY ["HelloDockerTools/HelloDockerTools.csproj", "HelloDockerTools/"]
-RUN dotnet restore "HelloDockerTools/HelloDockerTools.csproj"
+COPY ["WebApplication1/WebApplication1.csproj", "WebApplication1/"]
+RUN dotnet restore "WebApplication1/WebApplication1.csproj"
 COPY . .
-WORKDIR "/src/HelloDockerTools"
-RUN dotnet build "HelloDockerTools.csproj" -c Release -o /app
+WORKDIR "/src/WebApplication1"
+RUN dotnet build "WebApplication1.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "HelloDockerTools.csproj" -c Release -o /app
+RUN dotnet publish "WebApplication1.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
-COPY --from=publish /app .
-ENTRYPOINT ["dotnet", "HelloDockerTools.dll"]
+COPY --from=publish /app/publish .
+ENTRYPOINT ["dotnet", "WebApplication1.dll"]
 ```
 
 前面的 Dockerfile 基于 [microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) 映像，并包括通过构建项目并将其添加到容器中修改基本映像的说明  。 如果使用的是 .NET Framework，则基本映像将有所不同。
@@ -71,7 +71,7 @@ ENTRYPOINT ["dotnet", "HelloDockerTools.dll"]
 
 ## <a name="debug"></a>调试
 
-在工具栏的调试下拉列表中选择“Docker”  ，然后开始调试应用。 你可能会看到提示信任证书的消息；选择信任证书以继续。
+在工具栏的调试下拉列表中选择“Docker”，然后开始调试应用。 你可能会看到提示信任证书的消息；选择信任证书以继续。
 
 “输出”  窗口中的“容器工具”  选项显示正在进行的操作。 第一次时，可能需要一些时间来下载基本映像，但在后续运行时速度要快得多。
 
@@ -96,10 +96,16 @@ ENTRYPOINT ["dotnet", "HelloDockerTools.dll"]
 
 完成应用程序的开发和调试循环后，可以创建应用程序的生产映像。
 
-1. 将配置下拉列表更改为“发布”  ，然后生成应用。
-1. 在解决方案资源管理器中右键单击项目，并选择“发布”   。
-1. 在发布目标对话框上，选择“容器注册表”选项卡  。
-1. 选择“创建新的 Azure 容器注册表”并单击“发布”   。
+1. 将配置下拉列表更改为“发布”，然后生成应用。
+1. 在解决方案资源管理器中右键单击项目，并选择“发布” 。
+1. 在“发布”对话框中，选择“Docker 容器注册表”选项卡 。
+
+   ![“‘发布’对话框 - 选择‘Docker 容器注册表’”的屏幕截图](../../media/container-tools/vs-2019/docker-container-registry.png)
+
+1. 选择“新建 Azure 容器注册表”。
+
+   ![“‘发布’对话框 - 选择‘新建 Azure 容器注册表’”的屏幕截图](../../media/container-tools/vs-2019/select-existing-or-create-new-azure-container-registry.png)
+
 1. 在“创建新 Azure 容器注册表”中填写所需的值  。
 
     | 设置      | 建议的值  | 描述                                |
@@ -112,9 +118,13 @@ ENTRYPOINT ["dotnet", "HelloDockerTools.dll"]
 
     ![Visual Studio 的创建 Azure 容器注册表对话框][0]
 
-1. 单击“创建” 
+1. 单击 **“创建”** 。 现在，“发布”对话框显示已创建的注册表。
 
-   ![显示成功发布的屏幕截图](../../media/container-tools/publish-succeeded.png)
+   ![显示已创建的 Azure 容器注册表的“发布”对话框的屏幕截图](../../media/container-tools/vs-2019/created-azure-container-registry.png)
+
+1. 选择“完成”，以完成将容器映像发布到 Azure 中新创建的注册表的过程。
+
+   ![显示成功发布的屏幕截图](../../media/container-tools/vs-2019/publish-succeeded.png)
 
 ## <a name="next-steps"></a>后续步骤
 

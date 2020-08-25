@@ -1,21 +1,21 @@
 ---
 title: 选项，文本编辑器，C#，高级
-ms.date: 01/16/2019
+ms.date: 08/12/2020
 ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.CSharp.Outlining
 - VS.ToolsOptionsPages.Text_Editor.CSharp.Advanced
-author: TerryGLee
-ms.author: tglee
+author: akhera99
+ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: ff42473c6f56d69a56cfbd811f2687ba544c7c5e
-ms.sourcegitcommit: 4d932000a0f7e79c9475fe66c02fe9addcd7e47a
+ms.openlocfilehash: b8e515058b17205a65bab401c7b31c7205aa55bc
+ms.sourcegitcommit: 2946d802aec1418e87bfa779d81834eeb7be5c9d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86181061"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88214670"
 ---
 # <a name="options-text-editor-c-advanced"></a>选项，文本编辑器，C#，高级
 
@@ -128,7 +128,13 @@ ms.locfileid: "86181061"
 如果选中这些复选框，可以在代码中的大括号 ({}) 之间显示虚竖线。 然后，就可以轻松查看声明级构造和代码级构造的各个代码块了。
 
 ## <a name="editor-help"></a>编辑器帮助
-
+::: moniker range=">=vs-2019"
+- 内联参数名称提示 
+    
+    如果选择此选项，则会在函数调用中的每个参数之前插入文本、强制转换文本和对象实例化的参数名称提示。  
+    
+    ![CSharp 的内联参数名称提示](media/inline-parameter-name-hints-csharp.png)
+::: moniker-end
 - 为 /// 生成 XML 文档注释
 
    选中后，在键入 `///` 命令说明后为 XML 文档注释插入 XML 元素。 有关 XML 文档的详细信息，请参阅 [XML 文档注释（C# 编程指南）](/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments)。

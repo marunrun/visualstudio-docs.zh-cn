@@ -10,12 +10,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: d7bd89f8e7840db8615c74170bb5cb9998aeb678
-ms.sourcegitcommit: b8ec700fc4c14c68c6ce280f29c19870261990d8
+ms.openlocfilehash: 58603db021d7aeebe3272711e5ba92d96eb22075
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87454614"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88250173"
 ---
 # <a name="compile-typescript-code-nodejs"></a>编译 TypeScript 代码 (Node.js)
 
@@ -109,7 +109,7 @@ ms.locfileid: "87454614"
 
    尽管应用程序会在运行时自动生成，但我们想要查看在生成过程中发生的一些事情：
 
-   如果生成了源映射，请打开在“outDir”选项中指定的文件夹，并找到生成的 *.js 文件以及生成的 *js.map 文件。
+   如果生成了源映射，请打开在“outDir”选项中指定的文件夹，并找到生成的 \*.js 文件以及生成的 \*js.map 文件。
 
    [调试](../javascript/debug-nodejs.md)需要源映射文件。
 

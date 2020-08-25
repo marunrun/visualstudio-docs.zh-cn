@@ -7,12 +7,12 @@ ms.assetid: c2853359-18fd-4be4-97a6-02230c862f92
 ms.date: 05/10/2020
 ms.topic: how-to
 description: 了解管理员如何使用批量添加功能或 Microsoft Azure Active Directory 组将许可证分配给多个订阅者
-ms.openlocfilehash: 8bda423ccd5362fba6389195814a44cca286b5a7
-ms.sourcegitcommit: 9a7fb8556a5f3dbb4459122fefc7e7a8dfda753a
+ms.openlocfilehash: da7ce369e1d9aaa13b0c346005914b7f64ceb780
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87235129"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88249621"
 ---
 # <a name="assign-subscriptions-to-multiple-users"></a>将订阅分配给多个用户
 你可以在订阅管理门户中一次添加一个多个用户，也可以采用大用户组形式添加。  要添加各个用户，请参阅[添加单个用户](assign-license.md)。
@@ -28,7 +28,7 @@ ms.locfileid: "87235129"
 
 1. 若要一次添加多个订阅者，请导航到“管理订阅者”选项卡。选择“添加”选项卡，然后选择下拉列表中的“批量添加”。  
 
-1. 批量添加功能会使用 Microsoft Excel 模板上传订阅者信息。 在“上传多个订阅者”对话框中，单击“下载”下载模板。
+1. 批量添加功能会使用 Microsoft Excel 模板上传订阅者信息。 在“上传多个订阅者”对话框中，选择“下载”下载模板。
    > [!div class="mx-imgBorder"]
    > ![下载 Excel 模板以上传多个订阅者](media/download-template-upload-subscribers.png "下载空白 Excel 模板，开始批量分配过程。")
    >
@@ -48,13 +48,13 @@ ms.locfileid: "87235129"
     - 确保填写所有必填字段。 
     - 检查“错误消息”列。  如果列出了任何错误，请先修复这些错误，然后再尝试上传文件。 
 
-1. 返回到 Visual Studio 订阅管理门户。 在“上传多个订阅者”对话框中，单击“浏览” 。
+1. 返回到 Visual Studio 订阅管理门户。 在“上传多个订阅者”对话框中，选择“浏览” 。
    > [!div class="mx-imgBorder"]
    > ![浏览到之前保存的模板以上传多个订阅者](media/bulk-add-browse-saved-template.png "你可以浏览到文件位置，或将其拖放到此对话框中。")
 
-1. 导航到之前保存的 Excel 文件，然后单击“确定”。
+1. 导航到之前保存的 Excel 文件，然后选择“确定”。
    > [!div class="mx-imgBorder"]
-   > ![上传 Excel 模板以上传多个订阅者](media/bulk-upload-subscribers.png "此处将显示包含你的数据的模板。单击“确定”开始上传。")
+   > ![上传 Excel 模板以上传多个订阅者](media/bulk-upload-subscribers.png "此处将显示包含你的数据的模板。选择“确定”开始上传。")
 
     将显示上传进度对话框。
 
@@ -66,8 +66,8 @@ ms.locfileid: "87235129"
    1. 打开你创建的 Excel 文件、更正问题，然后保存文件。
    0. 返回到管理门户，再选择“添加”。
    0. 选择“批量添加”。
-   0. 由于你已保存 Excel 文件，因此无需下载模板。  单击“浏览”，找到刚才保存的文件，然后单击“打开” 。
-   0. 单击 **“确定”** 。
+   0. 由于你已保存 Excel 文件，因此无需下载模板。  选择“浏览”，找到刚才保存的文件，然后选择“打开” 。
+   0. 选择“确定” 。
 
 
     上传成功后，系统会显示订阅者列表和一条确认消息。
@@ -109,7 +109,7 @@ ms.locfileid: "87235129"
    > [!div class="mx-imgBorder"]
    > ![选择 Azure AD 组](_img/assign-license-bulk/bulk-add-aad-details.png "选择 Azure AD 组的名称以添加该组中的订阅者。")
 
-6. 单击“添加”，然后单击“确认”。 
+6. 选择“添加”，然后选择“确认” 。 
 
 7. 若要查看添加的组，请滚动到用户列表的底部。  
 

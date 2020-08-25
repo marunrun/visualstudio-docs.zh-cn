@@ -7,12 +7,12 @@ ms.assetid: 83efe4ee-9a9d-4776-b27c-852d89dadafd
 ms.date: 03/09/2020
 ms.topic: how-to
 description: 对于 MPN 合作伙伴而言，如何将 Visual Studio 订阅分配到最终用户。
-ms.openlocfilehash: fc35178a0d66a048a41ee04d27ae2993949972c8
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.openlocfilehash: e6e15ed5893ce15d162d69b3bff4471c01633065
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902870"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88250718"
 ---
 # <a name="manage-visual-studio-subscriptions-offered-through-the-microsoft-partner-network-mpn"></a>管理通过 Microsoft 合作伙伴网络 (MPN) 提供的 Visual Studio 订阅
 具备相应资格或在 MPN 中购买了Action Pack 的合作伙伴可以使用 Visual Studio 订阅。 这些订阅按用户授权，并且仅在分配给为合作伙伴公司工作的特定命名用户时才有效。
@@ -29,7 +29,7 @@ Microsoft Action Pack 订阅者和 Visual Studio 订阅
 6. 选择“特权” 
 7. 选择“Visual Studio 订阅”  （注意：Visual Studio 订阅更新挂起）
 8. 选择所需的“个人” 
-9. 单击“提交” 
+9. 选择“提交”
 10. 个人将收到一封电子邮件
 11. 指定个人可访问 [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) 进行登录
 12. 可能会显示 Visual Studio 个人资料页，包括以下内容：
@@ -43,7 +43,7 @@ Microsoft Action Pack 订阅者和 Visual Studio 订阅
 2. 选择“特权” 
 3. 选择“MSDN 订阅”（注意：这即将重新标记为“Visual Studio 订阅”） 
 4. 找到所需的“个人” 
-5. 单击“提交” 
+5. 选择“提交”
 6. 个人将收到一封电子邮件
 7. 指定个人可访问 [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) 进行登录
 8. 可能会显示 Visual Studio 个人资料页

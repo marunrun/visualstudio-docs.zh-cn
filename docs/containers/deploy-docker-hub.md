@@ -8,12 +8,13 @@ ms.devlang: dotnet
 ms.topic: how-to
 ms.date: 07/23/2019
 ms.author: ghogen
-ms.openlocfilehash: f1c02e1fdc0c72ac23cb65605f324608a7fc33d7
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+monikerRange: '>=vs-2019'
+ms.openlocfilehash: cd17726d5ba09dcb901fd529e6bdfd97dee52f31
+ms.sourcegitcommit: 2c26d6e6f2a5c56ae5102cdded7b02f2d0fd686c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85536885"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88168618"
 ---
 # <a name="deploy-to-docker-hub"></a>部署到 Docker Hub
 
@@ -29,9 +30,13 @@ Docker Hub 为映像存储库提供了一种便利的托管服务。 可以轻�
 
 1. 右键单击项目节点，然后选择“发布...”。显示部署选项的屏幕随即出现。
 
-   ![部署选项的屏幕截图](media/deploy-docker-hub/container-tools-docker-hub-deploy.png)
+   ![部署选项的屏幕截图](media/container-tools/vs-2019/docker-container-registry.png)
 
-1. 在“选取发布目标”下，选择“容器注册表”，然后选择“Docker Hub”  。 系统随即显示“Docker Hub”对话框。
+1. 选择“Docker 容器注册表”，然后选择“Docker Hub” 。
+
+   ![“‘发布’对话框 - 选择‘Docker Hub’”的屏幕截图](media/deploy-docker-hub/container-tools-docker-hub-deploy.png)
+
+1. 输入 Docker 凭据。
 
    ![Docker Hub 对话框的屏幕截图](media/deploy-docker-hub/container-tools-docker-hub-credentials.png)
 

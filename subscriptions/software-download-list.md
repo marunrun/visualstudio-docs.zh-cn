@@ -7,12 +7,12 @@ ms.assetid: c2878e28-eb5d-4adb-8d7d-a95ffea703a9
 ms.date: 03/11/2020
 ms.topic: how-to
 description: 查找 Visual Studio 订阅随附的软件下载列表。
-ms.openlocfilehash: debf1904fc502f15f4fd6f52cc38e29a84dc763a
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.openlocfilehash: 767d53c38aeaa9a9717ecacffcc08813950c008a
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85906102"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88250689"
 ---
 # <a name="what-software-is-available-for-download"></a>有什么软件可供下载？
 
@@ -23,10 +23,10 @@ ms.locfileid: "85906102"
 2. 登录到订阅。 （了解有关使用你的 [Microsoft 帐户](sign-in-msa.md)、[工作或学校帐户](sign-in-work.md)或 [GitHub](sign-in-github.md) 凭据登录的详细信息。）
 3. 登录成功后，你将能够搜索所需的下载内容。  此外，你还可以看到一个热门下载列表，可以通过数个标准中的任何一个进行排序。
 
-要快速查找产品，请使用页面顶部的“搜索”功能或单击左侧的其他产品类型。
+要快速查找产品，请使用页面顶部的“搜索”功能或选择左侧的其他产品类型。
 
 > [!TIP]
-> 如果正在查找产品密钥，请在页面顶部单击“产品密钥”选项卡  。
+> 如果正在查找产品密钥，请在页面顶部选择“产品密钥”选项卡。
 
 同时你还可以针对每个订阅类型下载 Excel 电子表格，其中包含[可用软件标题](https://download.microsoft.com/download/1/5/4/15454442-CF17-47B9-A65D-DF84EF88511B/Visual_Studio_by_Subscription_Level.xlsx)的大量列表。
 

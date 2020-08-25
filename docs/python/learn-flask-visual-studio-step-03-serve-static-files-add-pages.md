@@ -11,14 +11,14 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 5aa952a00075cdad262803140ab4c0360f0c62a0
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: 69fd704976ee941cb053d75040a3d3ec7871a380
+ms.sourcegitcommit: d8609a78b460d4783f5d59c0c89454910a4dbd21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "72985181"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88238737"
 ---
-# <a name="step-3-serve-static-files-add-pages-and-use-template-inheritance"></a>步骤 3：提供静态文件、添加页面和使用模板继承
+# <a name="step-3-serve-static-files-add-pages-and-use-template-inheritance-with-flask-app"></a>步骤 3：通过 Flask 应用提供静态文件、添加页面和使用模板继承
 
 上一步：[使用视图和页面模板创建 Flask 应用](learn-flask-visual-studio-step-02-create-app.md)
 

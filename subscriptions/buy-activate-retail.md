@@ -7,12 +7,12 @@ ms.assetid: 76654645-08ee-445d-b9ee-123126d1f0fb
 ms.date: 04/13/2020
 ms.topic: how-to
 description: 了解如何在 Microsoft Store 中购买 Visual Studio 订阅，以及如何在 Visual Studio 订阅门户中激活该订阅。
-ms.openlocfilehash: 217c19ea0f8c4a793fc11a84eaa8f276960af3da
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.openlocfilehash: f6fdb8dcc8b0e3eaa5e67692e7c3dd92f1467c5a
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85903104"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88247484"
 ---
 # <a name="visual-studio-subscriptions-are-available-through-the-microsoft-store"></a>Visual Studio 订阅可通过 Microsoft Store 获得
 Visual Studio 订阅可通过多种渠道获得，包括 [批量许可](https://www.microsoft.com/licensing/default)、云解决方案提供商、[Visual Studio Marketplace](https://marketplace.visualstudio.com/subscriptions) 和 Microsoft Store。  本文将探讨如何通过 [Microsoft Store](https://www.microsoft.com/store/collections/visualstudio) 购买和激活订阅。  
@@ -33,15 +33,15 @@ Visual Studio 订阅可通过多种渠道获得，包括 [批量许可](https://
 ## <a name="how-to-activate-subscriptions"></a>如何激活订阅
 通过 Microsoft Store 购买了 Visual Studio 订阅后，可从付款“确认页”或在购买后收到的“确认电子邮件”中开始激活过程。
 
-1. 在确认电子邮件或购买确认页上，单击“单击此处登录”  。
+1. 在确认电子邮件或购买确认页上，选择“单击此处登录”。
 2. 你将重定向到 [https://my.visualstudio.com/subscriptions/activate](https://my.visualstudio.com/subscriptions/activate?wt.mc_id=o~msft~docs)。
-3. 输入访问 Visual Studio 订阅所需的电子邮件地址，单击“继续”  。
+3. 输入访问 Visual Studio 订阅所需的电子邮件地址，选择“继续”。
 4. 你可能会被重定向到两个不同登录页的其中一个，具体要取决于你使用的帐户类型：
     - 使用其个人“Microsoft 帐户”(MSA) 的订阅者将看到 Microsoft 帐户密码页。
     - 使用其工作/学校帐户的订阅者将被重定向到其组织的登录页。
 5. 输入密码或完成组织的登录要求。
 6. 成功登录后，将显示“激活 Visual Studio 订阅”窗口。
-7. 输入付款“确认页”或“确认电子邮件”提供的“产品密钥”信息，然后单击“激活”  。
+7. 输入付款“确认页”或“确认电子邮件”提供的“产品密钥”信息，然后选择“激活”。
 8. 该订阅现应在[“订阅”](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs)页上显示，并且你应能够访问所有订阅权益。
 
 ## <a name="support-for-microsoft-store"></a>对 Microsoft Store 的支持

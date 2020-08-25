@@ -7,12 +7,12 @@ ms.assetid: 2249b32a-46d7-4e29-b543-4769c71ceda6
 ms.date: 02/17/2020
 ms.topic: conceptual
 description: 了解新的 Visual Studio + GitHub 套餐
-ms.openlocfilehash: d2d4e3d3bef5b4e9c6f7cb4ba93f8b62cc13275a
-ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
+ms.openlocfilehash: a87c6927f57e4a5e997fc396382045d6a5f4c03e
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80232787"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88248180"
 ---
 # <a name="introducing-visual-studio-subscriptions-with-github-enterprise"></a>带有 GitHub Enterprise 的 Visual Studio 订阅简介  
 
@@ -66,7 +66,7 @@ ms.locfileid: "80232787"
 答：GitHub 订阅设置过程可能需要一段时间。  如果你等待了很久但未收到任何消息，则可能需要与 GitHub 管理员联系。  可能是你的管理员仍在进行处理或选择不向你分配 GitHub 订阅。 
 
 ### <a name="q--how-do-i-reach-my-github-administrator"></a>问：如何与我的 GitHub 管理员联系？
-答：如果你正在使用 GitHub Enterprise Server，则可单击客户端底部显示的**支持**链接与你的管理员联系。
+答：如果你正在使用 GitHub Enterprise Server，则可选择客户端底部显示的“支持”链接与管理员联系。
 
 ### <a name="q-do-i-get-the-full-visual-studio-subscription-professional-or-enterprise-or-do-i-just-get-the-ide-with-this-offering"></a>问：我会获得完整的 Visual Studio 订阅（Professional 或 Enterprise）还是只获得带有此产品/服务的 IDE？
 答：除了 GitHub Enterprise 订阅，你还将获得完整的 Visual Studio 订阅。  如同单独购买订阅时一样，你将获得这些订阅随附的软件下载、云服务、技术支持和合作伙伴权益等各项权益。
