@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: df9d345e8557f10d764dce6e56c7491d2c026747
-ms.sourcegitcommit: 0d3d157949b539c78bc101a3c3b456bbcb5af7de
+ms.openlocfilehash: 22f6f80a7e4c8c8c3f91fa436361ff37405893bd
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88286648"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88800965"
 ---
 # <a name="install-fxcop-analyzers-in-visual-studio"></a>在 Visual Studio 中安装 FxCop 分析器
 
@@ -22,17 +22,17 @@ Microsoft 创建了一组名为 [CodeAnalysis](https://www.nuget.org/packages/Mi
 
 您可以将这些 FxCop 分析器作为 NuGet 包或 VSIX 扩展安装到 Visual Studio。 若要了解每个的优缺点，请参阅 [NuGet 包与 VSIX 扩展](roslyn-analyzers-overview.md#nuget-package-versus-vsix-extension)。
 
-## <a name="nuget-package"></a>NuGet 程序包
+## <a name="nuget-package"></a>NuGet 包
 
 ::: moniker range=">=vs-2019"
 
 在 Visual Studio 2019 版本16.3 及更高版本中，你可以直接从项目的代码分析属性页安装 [CodeAnalysis FxCopAnalyzers](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers) NuGet 包：
 
-1. 右键单击 " **解决方案资源管理器**中的项目节点，选择" **属性**"，然后选择" **代码分析** "选项卡。
+1. 右键单击 (或选择并按住) **解决方案资源管理器**上的项目节点，选择 " **属性**"，然后单击 " **代码分析** " 选项卡。
 
    ![在 Visual Studio 的 "属性" 页中安装 FxCop 分析器包](media/install-fxcop-properties-page.png)
 
-2. 选择“安装”  。
+2. 选择“安装”。
 
    Visual Studio 将安装最新版本的 CodeAnalysis。 FxCopAnalyzers 程序包。 程序集显示在 "**引用**分析器" 下**解决方案资源管理器**中  >  **Analyzers**。
 
@@ -59,7 +59,7 @@ Microsoft 创建了一组名为 [CodeAnalysis](https://www.nuget.org/packages/Mi
 
 ### <a name="custom-installation"></a>自定义安装
 
-对于自定义安装，例如，若要指定不同版本的包，请在项目的 "代码分析" 属性页上选择省略号 ( ") " 按钮。 此按钮会将 "FxCopAnalyzers" 作为搜索字符串打开 NuGet 包管理器。
+例如，对于自定义安装，若要指定不同版本的包，请在项目的 "代码分析" 属性页上选择省略号 ( ") " 按钮。 此按钮会将 "FxCopAnalyzers" 作为搜索字符串打开 NuGet 包管理器。
 
 ![从 Visual Studio 中的 "属性" 页安装自定义 FxCop 分析器包](media/install-fxcop-properties-page-ellipsis.png)
 
@@ -153,7 +153,7 @@ Microsoft 创建了一组名为 [CodeAnalysis](https://www.nuget.org/packages/Mi
 
 ::: moniker-end
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [Visual Studio 中的代码分析器概述](../code-quality/roslyn-analyzers-overview.md)
 - [在 Visual Studio 中使用代码分析器](../code-quality/use-roslyn-analyzers.md)

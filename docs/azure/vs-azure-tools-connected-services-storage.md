@@ -9,19 +9,19 @@ ms.workload: azure-vs
 ms.topic: how-to
 ms.date: 08/13/2020
 ms.author: ghogen
-ms.openlocfilehash: 4a1b7bcc8b95b30ea3737dc2561c5abb280e2b5c
-ms.sourcegitcommit: 3ef987e99616c3eecf4731bf5ac89e16238e68aa
+ms.openlocfilehash: f2f55a149420205435d9f64ea1f66c8c6854ec38
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88639398"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88800510"
 ---
 # <a name="adding-azure-storage-by-using-visual-studio-connected-services"></a>使用 Visual Studio 连接服务添加 Azure 存储
 
 使用 Visual Studio，可以使用 **连接的服务** 功能将以下任何内容连接到 Azure 存储：
 
 - .NET Framework 控制台应用
-- ASP.NET MVC ( .NET Framework)  
+- ASP.NET MVC ( .NET Framework) 
 - ASP.NET Core
 - .NET Core (包括控制台应用程序、WPF、Windows 窗体、类库) 
 - .NET Core 辅助角色
@@ -45,7 +45,7 @@ ms.locfileid: "88639398"
 
 1. 在 Visual Studio 中打开项目。
 
-1. 在 **解决方案资源管理器**中，右键单击 " **连接的服务** " 节点，然后从上下文菜单中选择 " **添加连接的服务**"。
+1. 在 **解决方案资源管理器**中，右键单击 " **连接的服务** " 节点，然后从上下文菜单中选择 " **添加连接服务**"。
 
     ![添加 Azure 连接服务](./media/vs-azure-tools-connected-services-storage/add-connected-service.png)
 
@@ -117,7 +117,7 @@ ms.locfileid: "88639398"
 1. 该存储连接服务会显示在项目的“服务引用”**** 节点下。
 :::moniker-end
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [Azure 存储论坛](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuredata)
 - [Azure 存储文档](/azure/storage/)
