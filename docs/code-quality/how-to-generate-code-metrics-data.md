@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ab0bbed64f9f85b8b508c3fe14fda4ec59d45f10
-ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
+ms.openlocfilehash: 145525dc12070d98dae83d592ae86a675bb605d2
+ms.sourcegitcommit: 4d7c883ea3eedd795eeb4a9d3bd3dee82c8e093e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88800952"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88893406"
 ---
 # <a name="how-to-generate-code-metrics-data"></a>如何：生成代码度量数据
 
@@ -72,7 +72,7 @@ ms.locfileid: "88800952"
 
 ## <a name="calculate-code-metrics-menu-command"></a>"计算代码度量值" 菜单命令
 
-转到 "**分析**  >  **计算代码度量值**" 菜单，为 IDE 中的一个或所有打开的项目生成代码度量值。
+使用 "**分析**  >  **计算代码度量值**" 菜单为 IDE 中的一个或所有打开的项目生成代码度量值。
 
 ### <a name="generate-code-metrics-results-for-an-entire-solution"></a>为整个解决方案生成代码度量结果
 
@@ -80,7 +80,7 @@ ms.locfileid: "88800952"
 
 - 从菜单栏中，选择 "**分析**  >  为解决方案**计算代码度量值**"  >  **For Solution**。
 
-- 在 **解决方案资源管理器**中，选择并按住 (或右键单击解决方案) ，然后选择 " **计算代码度量值**"。
+- 在 **解决方案资源管理器**中，右键单击解决方案，然后选择 " **计算代码度量值**"。
 
 - 在 " **代码度量值结果** " 窗口中，选择 " **计算解决方案的代码度量值** " 按钮。
 
