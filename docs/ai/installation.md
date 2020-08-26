@@ -10,12 +10,12 @@ ms.date: 11/13/2017
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: a83deb968811159cfaeddaf537624e21b37e98c7
-ms.sourcegitcommit: 9c1cecaff4d9955276eee7865b78d47679dd1e2a
+ms.openlocfilehash: ffa8c7634c0d97dd24ff69814ae73ad5ff12928b
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80638576"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88800198"
 ---
 # <a name="installation"></a>安装
 
@@ -34,10 +34,9 @@ ms.locfileid: "80638576"
 2. 在“扩展和更新”  对话框的左侧，选择“联机”  。
 3. 在右上角的搜索框中，键入或输入“tools for ai”。
 4. 从结果中选择“Visual Studio Tools for AI”  。
-5. 单击 **“下载”** 。
+5. 选择“下载”。
 
 ## <a name="prepare-your-local-machine"></a>准备本地计算机
-
 在本地计算机上定型深度学习模型前，请先确保已安装适用的先决条件工具。 这包括确保已安装 NVIDIA GPU（若有）的最新驱动程序和库。 还要确保已安装 Python 和 Python 库（如 NumPy、SciPy），以及你打算在项目中使用的相应深度学习框架（如 Microsoft Cognitive Toolkit (CNTK)、TensorFlow、Caffe2、MXNet、Keras、Theano、PyTorch 和 Chainer）。
 
 > [!NOTE]
