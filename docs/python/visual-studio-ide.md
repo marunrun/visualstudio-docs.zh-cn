@@ -11,12 +11,12 @@ dev_langs:
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: b97655efac3fc42f5e5790e32c97de169e61a6b5
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.openlocfilehash: 943c0567e3726d014f7dae01915916864e09ed9b
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85520583"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801641"
 ---
 # <a name="welcome-to-the-visual-studio-ide--python"></a>欢迎使用 Visual Studio IDE | Python
 
@@ -95,8 +95,8 @@ Visual Studio 中的一些常用功能可帮助你在开发软件时提高工作
 ::: moniker-end
 
 - [使用 Visual Studio 进行协作](/visualstudio/liveshare/)
-  
-    使用 Visual Studio Live Share，无论使用什么编程语言或要生成哪种类型的应用，均可以与他人实时协作进行编辑和调试。 
+
+    使用 Visual Studio Live Share，无论使用什么编程语言或要生成哪种类型的应用，均可以与他人实时协作进行编辑和调试。
 
 - [Python 交互式 REPL](python-interactive-repl-in-visual-studio.md)
 
