@@ -8,12 +8,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2d520c92e84286ab05f13ad140a9e2e5a3454e09
-ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
+ms.openlocfilehash: eb6bcd63896a11f9ca1eabddddc17b3e52865e5b
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88248575"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801251"
 ---
 # <a name="create-custom-project-and-item-templates"></a>创建自定义项目和项模板
 
@@ -72,7 +72,7 @@ Visual Studio SDK 中有可用于创建自定义项目模板和自定义项模�
 
 1. 创建 VSIX 项目。 有关详细信息，请参阅 [VSIX 项目模板](../extensibility/vsix-project-template.md)。
 
-2. 将 VSIX 项目设置为启动项目。 在解决方案资源管理器中，选择 VSIX 项目节点，选择它并按住（或右键单击），然后选择“设为启动项目” 。
+2. 将 VSIX 项目设置为启动项目。 在“解决方案资源管理器”中，选择 VSIX 项目节点，单击右键，然后选择“设为启动项目” 。
 
 3. 将“项目模板”项目设置为 VSIX 项目的资产。 打开 .vsixmanifest 文件。 转到“资产”选项卡，然后选择“新建” 。
 
