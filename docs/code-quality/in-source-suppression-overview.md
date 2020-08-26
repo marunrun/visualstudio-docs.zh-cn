@@ -14,12 +14,12 @@ dev_langs:
 - CPP
 ms.workload:
 - multiple
-ms.openlocfilehash: f1cc2fd460a2087eaaac40abbb1ba04c8126a9aa
-ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
+ms.openlocfilehash: 745bc0c53738370816ad74be9249b721f236ad87
+ms.sourcegitcommit: 4d7c883ea3eedd795eeb4a9d3bd3dee82c8e093e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88800848"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88893367"
 ---
 # <a name="suppress-code-analysis-warnings"></a>禁止显示代码分析警告
 
@@ -50,7 +50,7 @@ ms.locfileid: "88800848"
 
 ## <a name="suppressmessage-attribute"></a>SuppressMessage 特性
 
-如果从上下文中选择 " **取消** " 或右键单击 (或选择并按住 **错误列表**中 "代码分析" 警告的) 菜单，则 <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> 会在代码或项目的全局禁止显示文件中添加特性。
+如果从**错误列表**中的 "代码分析" 警告的上下文或右键单击菜单中选择 "**隐藏**"，则 <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> 会在代码或项目的全局禁止显示文件中添加特性。
 
 该 <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> 属性具有以下格式：
 

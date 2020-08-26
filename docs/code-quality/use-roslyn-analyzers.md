@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: edb9cb30be9d62a533e6d011cbb8d0436ef898b1
-ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
+ms.openlocfilehash: 2b6dd5269868f02582472bee86f19d23719c9a5b
+ms.sourcegitcommit: 4d7c883ea3eedd795eeb4a9d3bd3dee82c8e093e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88801602"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88893419"
 ---
 # <a name="use-code-analyzers"></a>使用代码分析器
 
@@ -28,11 +28,11 @@ ms.locfileid: "88801602"
 
 ![解决方案资源管理器中的分析器节点](media/analyzers-expanded-in-solution-explorer.png)
 
-您可以在 " **属性** " 窗口中查看诊断的属性，包括其说明和默认严重性。 若要查看属性，请右键单击 (或选择并按住规则) 并选择 "**属性**"，或选择规则，然后选择 " **Alt** + **Enter**"。
+您可以在 " **属性** " 窗口中查看诊断的属性，包括其说明和默认严重性。 若要查看属性，请右键单击规则，然后选择 "**属性**"，或选择规则，并按**Alt** + **enter**。
 
 ![属性窗口中的诊断属性](media/analyzer-diagnostic-properties.png)
 
-若要查看诊断的联机文档，请右键单击 (或选择并按住诊断) ，然后选择 " **查看帮助**"。
+若要查看诊断的联机文档，请右键单击该诊断，然后选择 " **查看帮助**"。
 
 **解决方案资源管理器**中的每个诊断旁边的图标对应于在编辑器中打开的规则集中显示的图标：
 
@@ -225,7 +225,7 @@ Visual Studio 提供了一种简便的方法，可用于在 " [快速操作](../
 
 Visual Studio 还提供了一种简便的方法来配置 "错误列表" 上下文菜单中的规则严重性。
 
-1. 发生冲突后，右键单击 (或选择并按住) "错误列表" 中的诊断条目。
+1. 发生冲突后，右键单击 "错误列表" 中的诊断条目。
 
 2. 从上下文菜单中，选择 " **设置严重性**"。
 
@@ -242,12 +242,12 @@ Visual Studio 还提供了一种简便的方法来配置 "错误列表" 上下�
 
 ### <a name="set-rule-severity-from-solution-explorer"></a>设置解决方案资源管理器的规则严重性
 
-1. 在解决方案资源管理器中，选择 "**引用**  >  **分析器**" (或 "适用于 .net Core 项目的**依赖项**  >  **分析器**) "。
+1. 在解决方案资源管理器中，展开 "**引用**  >  **分析器**" (或 "适用于 .net Core 项目的**依赖项**  >  **分析器**) "。
 
 2. 展开包含要为其设置严重性的规则的程序集。
 
 ::: moniker range=">=vs-2019"
-3. 右键单击 (或选择并按住规则) 并选择 " **设置严重性**"。 在上下文菜单中，选择 "严重性" 选项之一。
+3. 右键单击该规则，然后选择 " **设置严重性**"。 在上下文菜单中，选择 "严重性" 选项之一。
 
    Visual Studio 将向 EditorConfig 文件中添加一个条目，以将规则配置为请求的级别。 如果你的项目使用规则集文件而不是 EditorConfig 文件，则会将严重性条目添加到规则集文件中。
 
@@ -256,7 +256,7 @@ Visual Studio 还提供了一种简便的方法来配置 "错误列表" 上下�
 ::: moniker-end
 
 ::: moniker range="vs-2017"
-3. 右键单击 (或选择并按住规则) 并选择 " **设置规则集严重性**"。 在上下文菜单中，选择 "严重性" 选项之一。
+3. 右键单击该规则，然后选择 " **设置规则集严重性**"。 在上下文菜单中，选择 "严重性" 选项之一。
 
    规则的严重性保存在活动规则集文件中。
 ::: moniker-end
@@ -267,7 +267,7 @@ Visual Studio 还提供了一种简便的方法来配置 "错误列表" 上下�
 
 1. 通过以下方式之一打开活动规则集文件：
 
-- 在**解决方案资源管理器**中，双击该文件，右键单击 (或选择并按住) **引用**  >  **分析器**节点，然后选择 "**打开活动规则集**"。
+- 在**解决方案资源管理器**中，双击该文件，右键单击 "**引用**  >  **分析器**节点"，然后选择 "**打开活动规则集**"。
 - 在项目的 " **代码分析** " 属性页上，选择 " **打开** "。
 
   如果这是你第一次编辑规则集，则 Visual Studio 会生成默认规则集文件的副本，并将其命名为* \<projectname> 规则*集，并将其添加到你的项目中。 此自定义规则集还会成为项目的活动规则集。
@@ -336,13 +336,13 @@ Visual Studio 还提供了一种简便的方法来配置 "错误列表" 上下�
 
 - 从 **代码编辑器**
 
-  将光标放在包含冲突的代码行中，然后选择 " **Ctrl** + **Period )  (** " 以打开 "**快速操作**" 菜单。 选择**Suppress CAXXXX**  >  **"在源/禁止显示文件中**取消 CAXXXX"。
+  将光标放在包含冲突的代码行中，然后按**Ctrl** + **Period (。 ) **打开 "**快速操作**" 菜单。 选择**Suppress CAXXXX**  >  **"在源/禁止显示文件中**取消 CAXXXX"。
 
   ![禁止显示 "快速操作" 菜单中的诊断](media/suppress-diagnostic-from-editor.png)
 
 - 从 **错误列表**
 
-  选择要禁止显示的规则，然后右键单击 (或选择并按住) ，然后选择 "在**Suppress**  >  **源/隐藏文件**中取消"。
+  选择要禁止显示的规则，然后右键单击并选择 "在**Suppress**  >  **源/隐藏文件**中取消"。
 
   - 如果在 " **源" 中**取消，则会打开 " **预览更改** " 对话框，并显示 c # [#pragma 警告](/dotnet/csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning) 或 Visual Basic 添加到源代码中 [#Disable 警告](/dotnet/visual-basic/language-reference/directives/directives) 指令的预览。
 

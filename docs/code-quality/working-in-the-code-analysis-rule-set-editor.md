@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 796818d376df477df84f845b5b0a17ace60bd1f2
-ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
+ms.openlocfilehash: d1e53df97c0535f59d0b96e9608ad55f2cb5ab21
+ms.sourcegitcommit: 4d7c883ea3eedd795eeb4a9d3bd3dee82c8e093e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88801537"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88893302"
 ---
 # <a name="use-the-code-analysis-rule-set-editor"></a>使用代码分析规则集编辑器
 
@@ -38,7 +38,7 @@ ms.locfileid: "88801537"
    > [!TIP]
    > 您可以更改规则在 " **分组依据** " 下拉的分组方式。
 
-- 在组的 " **操作** " 字段中，指定要应用于组中的所有规则的操作。
+- 单击组的 " **操作** " 字段，指定要应用于组中的所有规则的操作。
 
 - 选中或清除单个规则的复选框。 选中规则的复选框后，规则将设置为 **警告** 操作。
 
@@ -71,7 +71,7 @@ ms.locfileid: "88801537"
 |-----------|-----------------|
 |**ID**|规则的标识符。|
 |**类别**|除了规则集中的成员身份外，代码分析规则还按类别分组。 有关详细信息，请参阅 [代码分析警告](../code-quality/code-analysis-for-managed-code-warnings.md)。|
-|**Name**|规则的标题。|
+|**名称**|规则的标题。|
 |**Namespace**|规则的命名空间。|
 |**目标类型**|指示规则是适用于本机、托管代码还是数据库代码。|
 |**操作**|代码分析运行中违反规则时执行的操作。 可以编辑 " **操作** " 字段。|

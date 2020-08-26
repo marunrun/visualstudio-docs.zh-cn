@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 22f6f80a7e4c8c8c3f91fa436361ff37405893bd
-ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
+ms.openlocfilehash: d789299212ec7420f40135dd655056f16b6e4f35
+ms.sourcegitcommit: 4d7c883ea3eedd795eeb4a9d3bd3dee82c8e093e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88800965"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88893341"
 ---
 # <a name="install-fxcop-analyzers-in-visual-studio"></a>在 Visual Studio 中安装 FxCop 分析器
 
@@ -28,7 +28,7 @@ Microsoft 创建了一组名为 [CodeAnalysis](https://www.nuget.org/packages/Mi
 
 在 Visual Studio 2019 版本16.3 及更高版本中，你可以直接从项目的代码分析属性页安装 [CodeAnalysis FxCopAnalyzers](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers) NuGet 包：
 
-1. 右键单击 (或选择并按住) **解决方案资源管理器**上的项目节点，选择 " **属性**"，然后单击 " **代码分析** " 选项卡。
+1. 右键单击 " **解决方案资源管理器**中的项目节点，选择" **属性**"，然后选择" **代码分析** "选项卡。
 
    ![在 Visual Studio 的 "属性" 页中安装 FxCop 分析器包](media/install-fxcop-properties-page.png)
 
@@ -72,7 +72,7 @@ Microsoft 创建了一组名为 [CodeAnalysis](https://www.nuget.org/packages/Mi
 
 | Visual Studio 版本 | FxCop 分析器包版本 |
 | - | - |
-| Visual Studio 2019 (所有版本)  | [latest](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/) | 
+| Visual Studio 2019 (所有版本)  | [latest](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/) |
 | Visual Studio 2017 版本 15.9 | [2.9.10](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/2.9.10) |
 | Visual Studio 2017 版本15.5 到15。8 | [2.6.4](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/2.6.4) |
 | Visual Studio 2017 版本15.3 到15。4 | [2.3.0-beta1](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/2.3.0-beta1) |
