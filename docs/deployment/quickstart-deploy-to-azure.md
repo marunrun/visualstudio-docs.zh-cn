@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - azure
-ms.openlocfilehash: 461b99261eb88d5267b062cb5d471f1b6ed4ee60
-ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
+ms.openlocfilehash: deef5aeaa802d5f5b46ba81f711173dc81a32357
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88248033"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88800302"
 ---
 # <a name="publish-a-web-app-to-azure-app-service-using-visual-studio"></a>使用 Visual Studio 将 Web 应用发布到 Azure 应用服务
 
@@ -31,7 +31,7 @@ ms.locfileid: "88248033"
 
 ## <a name="publish-to-azure-app-service-on-windows"></a>发布到 Windows 上的 Azure 应用服务
 
-1. 在解决方案资源管理器中，右键单击该项目并选择“发布”（或使用“生成” > “发布”菜单项）  。
+1. 在解决方案资源管理器中，右键单击该项目节点，并选择“发布”（或使用“生成” > “发布”菜单项）  。
 
     ![解决方案资源管理器中项目上下文菜单上的“发布”命令](../deployment/media/quickstart-publish.png "选择发布")
 
@@ -51,7 +51,7 @@ ms.locfileid: "88248033"
 
     ![选择 Azure 应用服务](../deployment/media/quickstart-publish-windows-create-new-dialog.png)
 
-1. 在“发布”对话框中，将自动选择新创建的实例。 准备就绪后，单击“完成”。
+1. 在“发布”对话框中，将自动选择新创建的实例。 准备就绪后，选择“完成”。
 
     ![选择 Azure 应用服务](../deployment/media/quickstart-publish-windows-select-instance.png)
 

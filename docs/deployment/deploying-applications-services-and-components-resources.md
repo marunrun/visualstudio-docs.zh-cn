@@ -1,7 +1,8 @@
 ---
-title: 部署概述 | Microsoft Docs
-ms.custom: seodec18
-ms.date: 06/22/2018
+title: 将 Visual Studio 应用部署到文件夹、IIS、Azure 或其他目标
+description: 详细了解如何使用发布向导发布应用的选项
+ms.custom: contperfq1
+ms.date: 08/21/2020
 ms.topic: overview
 dev_langs:
 - FSharp
@@ -13,14 +14,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ff5091a7ca7136cd8b62f75ee7f317b1e5b1f3be
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 7125be46a894072f034bf1fce3060d2bda564aff
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84173717"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88800823"
 ---
-# <a name="overview-of-deployment-in-visual-studio"></a>Visual Studio 中的部署概述
+# <a name="deploy-your-app-to-a-folder-iis-azure-or-another-destination"></a>将应用部署到文件夹、IIS、Azure 或其他目标
 
 通过部署应用程序、服务或组件，你可以将其分发以便安装于其他计算机、设备、服务器或云中。 你需要在 Visual Studio 中为所需的部署类型选择适当的方法。
 
@@ -35,11 +36,19 @@ ms.locfileid: "84173717"
 - [Azure](#azure)
 - [Docker 容器注册表](#docker-container-registry)
 - [文件夹](#folder)
-- [自定义目标 (IIS、FTP)](#Custom targets (IIS、FTP))
-
-在“发布”选项卡上，可以选择现有发布配置文件、导入现有发布配置文件或使用此处所述的选项新建发布配置文件。 若要查看教程了解 IDE 中针对不同应用类型的发布选项，请参阅[初探部署](../deployment/deploying-applications-services-and-components.md)。
+- [FTP/FTPS 服务器](#ftpftps-server)
+- [Web 服务器 (IIS)](#web-server-iis)
+- [导入配置文件](#import-profile)
 
 ## <a name="azure"></a>Azure 
+
+当你选择 Azure 时，可以在以下选项中进行选择：
+
+- 在 Windows、Linux 上运行或作为 Docker 映像运行的 Azure 应用服务
+- 部署到 Azure 容器注册表的 Docker 映像
+- Azure 虚拟机
+
+![选择一项 Azure 服务](../deployment/media/quickstart-choose-azure-service.png)
 
 ### <a name="azure-app-service"></a>Azure 应用服务
 
@@ -47,7 +56,7 @@ ms.locfileid: "84173717"
 
 用户可通过为包含的应用服务选择[定价层或计划](/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview)来确定应用服务具有的计算能力。 而且不必更改定价层就能让多个 Web 应用（和其他应用类型）共享同一个应用服务。 例如，可以在同一个应用服务上同时托管开发、过渡和生产 Web 应用。
 
-### <a name="when-to-choose-azure-app-service"></a>何时选用 Azure 应用服务
+#### <a name="when-to-choose-azure-app-service"></a>何时选用 Azure 应用服务
 
 - 希望部署可通过 Internet 访问的 Web 应用程序。
 - 希望根据需求自动缩放 Web 应用程序，而无需重新部署。
@@ -56,7 +65,18 @@ ms.locfileid: "84173717"
 
 > 如果想在自己的数据中心或其他本地计算机中使用 Azure 应用服务，可以使用 [Azure 堆栈](https://azure.microsoft.com/overview/azure-stack/)来实现。
 
-有关发布到应用服务的详细信息，请参阅[快速入门 - 发布到 Azure 应用服务](quickstart-deploy-to-azure.md)和[快速入门 - 将 ASP.NET Core 发布到 Linux](quickstart-deploy-to-linux.md)。
+有关发布到应用服务的详细信息，请参阅以下链接：
+- [快速入门 - 发布到 Azure 应用服务](quickstart-deploy-to-azure.md)和[快速入门 - 将 ASP.NET Core 发布到 Linux](quickstart-deploy-to-linux.md)。
+- [对 Azure 应用服务和 IIS 上的 ASP.NET Core 进行故障排除](/aspnet/core/test/troubleshoot-azure-iis)。
+
+### <a name="azure-container-registry"></a>Azure 容器注册表
+
+使用 [Azure 容器注册表](/azure/container-registry/)，可以在专用注册表中为所有类型的容器部署生成、存储和管理 Docker 容器映像与项目。
+
+#### <a name="when-to-choose-azure-container-registry"></a>何时选择 Azure 容器注册表
+
+- 有现成的 Docker 容器开发和部署管道。
+- 要在 Azure 中生成 Docker 容器映像。
 
 ### <a name="azure-virtual-machines"></a>Azure 虚拟机
 
@@ -66,7 +86,7 @@ ms.locfileid: "84173717"
 
 有关其他信息，请参阅 Azure 应用服务、Azure 虚拟机以及可通过 Visual Studio 中的“自定义”选项设置为部署目标的其他 Azure 服务之间的[详细比较](https://azure.microsoft.com/documentation/articles/choose-web-site-cloud-service-vm/)。
 
-### <a name="when-to-choose-azure-app-virtual-machines"></a>何时选用 Azure 应用虚拟机
+#### <a name="when-to-choose-azure-virtual-machines"></a>何时选择 Azure 虚拟机
 
 - 希望部署可通过 Internet 访问的 Web 应用程序，并能完全控制所分配 IP 地址的生存期。
 - 需要在服务器上进行计算机级别的自定义设置，其中包括诸如专用数据库系统、特定网络配置、磁盘分区之类的附加软件。
@@ -99,26 +119,61 @@ ms.locfileid: "84173717"
 
 有关详细信息，请参阅[快速入门 - 部署到本地文件夹](quickstart-deploy-to-local-folder.md)
 
-## <a name="custom-targets-iis-ftp"></a>自定义目标 (IIS、FTP)
+## <a name="ftpftps-server"></a>FTP/FTPS 服务器
 
-利用自定义目标，可以将应用程序部署到 Azure 应用服务、Azure 虚拟机或本地文件系统以外的目标。 它可以部署到你有权访问的文件系统或任何其他服务器（Internet 或 Intranet），包括其他云服务上的服务器。 它可以与 Web 部署（文件或 .ZIP）和 FTP 配合使用。
+使用 FTP/FTPS 服务器可以将应用程序部署到 Azure 以外的服务器。 它可以部署到你有权访问的文件系统或任何其他服务器（Internet 或 Intranet），包括其他云服务上的服务器。 它可以与 Web 部署（文件或 .ZIP）和 FTP 配合使用。
 
-如果选择自定义目标，Visual Studio 会提示输入配置文件名称，然后收集包括目标服务器或位置、站点名称和凭据在内的其他**连接**信息。 可以在“设置”选项卡上控制以下行为：
+如果选择 FTP/FTPS 服务器，Visual Studio 会提示输入配置文件名称，然后收集包括目标服务器或位置、站点名称和凭据在内的其他连接信息。 可以在“设置”选项卡上控制以下行为：
 
 - 要部署的配置。
 - 是否从目标中删除现有文件。
 - 是否在发布期间预编译。
 - 是否要从部署中排除 App_Data 文件夹中的文件。
 
-可以在 Visual Studio 中创建任意数量的自定义部署配置文件，从而使得能够管理设置不同的配置文件。
+可以在 Visual Studio 中创建任意数量的 FTP/FTPS 部署配置文件，从而管理设置不同的配置文件。
 
-### <a name="when-to-choose-custom-deployment"></a>何时选用自定义部署
+### <a name="when-to-choose-ftpftps-server-deployment"></a>何时选择 FTP/FTPS 服务器部署
 
 - 在除 Azure 以外的可通过 URL 访问的提供程序上使用云服务。
 - 希望用来进行部署的凭据不是在 Visual Studio 中所用的凭据或直接与 Azure 帐户相关联的凭据。
 - 希望在每次部署时从目标中删除文件。
 
-有关详细信息，请参阅[快速入门 - 部署到网站](quickstart-deploy-to-a-web-site.md)
+## <a name="web-server-iis"></a>Web 服务器 (IIS)
+
+使用 IIS Web 服务器可以将应用程序部署到 Azure 以外的其他 Web 服务器。 它可以部署到你有权访问的 IIS 服务器（Internet 或 Intranet），包括其他云服务上的服务器。 它可以与 Web 部署或 Web 部署包一起使用。
+
+如果选择 IIS Web 服务器，Visual Studio 会提示输入配置文件名称，然后收集包括目标服务器或位置、站点名称和凭据在内的其他连接信息。 可以在“设置”选项卡上控制以下行为：
+
+- 要部署的配置。
+- 是否从目标中删除现有文件。
+- 是否在发布期间预编译。
+- 是否要从部署中排除 App_Data 文件夹中的文件。
+
+可以在 Visual Studio 中创建任意数量的 IIS Web 服务器部署配置文件，从而管理设置不同的配置文件。
+
+### <a name="when-to-choose-web-server-iis-deployment"></a>何时选择 Web 服务器 (IIS) 部署
+
+- 要使用 IIS 发布可通过 URL 访问的站点或服务。
+- 希望用来进行部署的凭据不是在 Visual Studio 中所用的凭据或直接与 Azure 帐户相关联的凭据。
+- 希望在每次部署时从目标中删除文件。
+
+有关详细信息，请参阅[快速入门 - 部署到网站](quickstart-deploy-to-a-web-site.md)。 有关排查 IIS 上的 ASP.NET Core 故障的帮助信息，请参阅[排查 Azure 应用服务和 IIS 上的 ASP.NET Core 故障](/aspnet/core/test/troubleshoot-azure-iis)。
+
+## <a name="import-profile"></a>导入配置文件
+
+在发布到 IIS 或 Azure 应用服务时，可以导入配置文件。 可以使用发布设置文件 (\*.publishsettings)  配置部署。 发布设置文件由 IIS 或 Azure 应用服务创建，或者可手动创建，然后可将其导入 Visual Studio。
+
+使用发布设置文件可以简化部署配置，与手动配置每个部署配置文件相比，在团队环境中效果更好。
+
+### <a name="when-to-choose-import-profile"></a>何时选择导入配置文件
+
+- 要发布到 IIS 并且要简化部署配置时。
+- 要发布到 IIS 或 Azure 应用服务，并且需要加快部署配置速度，以便重用或让团队成员发布到同一服务时。
+
+有关详细信息，请参阅以下主题：
+
+- [导入发布设置并部署到 IIS](tutorial-import-publish-settings-iis.md)
+- [导入发布设置并部署到 Azure](tutorial-import-publish-settings-azure.md)
 
 ## <a name="next-steps"></a>后续步骤
 

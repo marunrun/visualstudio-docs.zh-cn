@@ -17,12 +17,12 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: d900c0f51b14450f38caf06738739daef2549235
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: f6d069bfa462b8aa75fc9247c08b3662c4a445fd
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "77580099"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801797"
 ---
 # <a name="tutorial-create-your-first-aspnet-core-app-using-entity-framework-with-visual-studio-2019"></a>教程：使用实体框架和 Visual Studio 2019 创建首个 ASP.NET Core 应用
 
@@ -85,7 +85,7 @@ Visual Studio 可用于许多不同类型的开发，工作负载使你可以轻
 
 - 不进行身份验证。
 - 个人用户帐户。 这些存储在本地或基于 Azure 的数据库。
-- 工作或学校帐户。 此选项使用 Active Directory、Azure AD 或 Office 365 进行身份验证。
+- 工作或学校帐户。 此选项使用 Active Directory、Azure AD 或 Microsoft 365 进行身份验证。
 - Windows 身份验证。 适用于 Intranet 应用程序。
 
 选择无身份验证的标准 Web 应用程序模板，然后单击“创建”  。

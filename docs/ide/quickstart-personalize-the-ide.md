@@ -1,22 +1,24 @@
 ---
-title: 设置颜色主题和字体
-ms.date: 03/23/2020
-ms.topic: quickstart
+title: 设置 Visual Studio 深色主题并更改文本颜色
+description: 了解如何在代码编辑器中将默认 Visual Studio 颜色主题更改为深色模式，以及如何更改字体颜色。
+ms.date: 08/20/2020
+ms.topic: how-to
+ms.custom: contperfq1
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2c0b7b4e439f33e4e2eed8609d7e85e098068aea
-ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
+ms.openlocfilehash: d58bf3a00d3db208abfad23a67bd115914f14a15
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80233154"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801394"
 ---
-# <a name="personalize-the-visual-studio-ide-and-editor"></a>个性化设置 Visual Studio IDE 和编辑器
+# <a name="how-to-personalize-the-visual-studio-ide-and-the-editor"></a>如何：个性化设置 Visual Studio IDE 和编辑器
 
-在这个 5-10 分钟的教程中，我们将选择深色主题来自定义 Visual Studio 颜色主题。 我们还将在文本编辑器中为两种不同类型的文本自定义颜色。
+本操作指南文章介绍了如何将 Visual Studio 颜色主题从默认的蓝色主题自定义为深色主题。 然后，介绍如何在代码编辑器中为两种不同类型的文本自定义颜色。
 
 ::: moniker range="vs-2017"
 
@@ -30,7 +32,7 @@ ms.locfileid: "80233154"
 
 ::: moniker-end
 
-## <a name="set-the-color-theme"></a>设置颜色主题
+## <a name="set-the-color-theme-for-the-ide"></a>设置 IDE 的颜色主题
 
 Visual Studio 用户界面的默认颜色主题命名为“蓝色”  。 让我们将其更改为“深色”  。
 
@@ -66,7 +68,7 @@ Visual Studio 用户界面的默认颜色主题命名为“蓝色”  。 让我
 
 ::: moniker-end
 
-## <a name="change-text-color"></a>更改文本颜色
+## <a name="change-text-colors-in-the-editor"></a>在编辑器中更改文本颜色
 
 现在我们将为编辑器自定义一些文本颜色。 首先，让我们创建新的 XML 文件来查看默认颜色。
 
@@ -124,9 +126,10 @@ Visual Studio 用户界面的默认颜色主题命名为“蓝色”  。 让我
 
    ![使用新的字体颜色的 XML 文件](media/quickstart-personalize-xml-file-new-colors.png)
 
-我们探讨了几种在 Visual Studio 中自定义颜色的方法。 希望你继续深入了解  “选项”对话框中的其他自定义选项，以真正使 Visual Studio 为你所用。
+我们探讨了几种在 Visual Studio 中自定义颜色的方法。 建议继续深入了解[“选项”](../ide/reference/fonts-and-colors-environment-options-dialog-box.md)对话框中的其他自定义选项，以真正使 Visual Studio 为你所用。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [自定义编辑器](../ide/how-to-change-text-case-in-the-editor.md)
+- [如何：在 Visual Studio 中更改字体、颜色和主题](../ide/how-to-change-fonts-and-colors-in-visual-studio.md)
+- [如何：在编辑器中更改文本大小写](../ide/how-to-change-text-case-in-the-editor.md)
 - [Visual Studio IDE 概述](../get-started/visual-studio-ide.md)

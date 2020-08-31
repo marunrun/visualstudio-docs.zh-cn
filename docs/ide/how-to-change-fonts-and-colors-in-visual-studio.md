@@ -1,7 +1,9 @@
 ---
-title: 更改字体和颜色
-ms.date: 06/01/2020
+title: 更改主题、字体、文本和对比度以提供辅助功能
+description: 了解如何更改 Visual Studio 颜色主题、字体颜色、文本大小和额外的对比度颜色，以提供辅助功能。
+ms.date: 08/20/2020
 ms.topic: how-to
+ms.custom: contperfq1
 helpviewer_keywords:
 - Visual Studio, color themes
 - color themes, Visual Studio
@@ -11,16 +13,16 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0eb2373117b382cb19f374581ada45a5732b9c4c
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: b2410974ed95b1aa8dca3dc3e31a39c39df2d4a0
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85284669"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801433"
 ---
-# <a name="how-to-change-fonts-and-colors-in-visual-studio"></a>如何：在 Visual Studio 中更改字体和颜色
+# <a name="how-to-change-fonts-colors-and-themes-in-visual-studio"></a>如何：在 Visual Studio 中更改字体、颜色和主题
 
-可以通过多种方式在 Visual Studio 中更改字体和颜色。 例如，可以将默认的蓝色主题更改为深色主题（也称为“深色模式”）。而且，可以将默认字体和文本大小更改为不同的字体和大小。
+可以通过多种方式在 Visual Studio 中更改字体和颜色。 例如，可以将默认的蓝色主题更改为深色主题（也称为“深色模式”）。 如果最适合你的需求，还可以选择一个额外的对比度主题。 另外，还可以在 IDE 和代码编辑器中更改默认字体和文本大小。
 
 ## <a name="change-the-color-theme"></a>更改颜色主题
 
@@ -122,5 +124,6 @@ ms.locfileid: "85284669"
 
 ## <a name="see-also"></a>请参阅
 
-- [更改代码编辑器中的字体和颜色](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md)
+- [如何：在 Visual Studio 中更改编辑器中的字体和颜色](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md)
 - [Visual Studio 代码编辑器的功能](../ide/writing-code-in-the-code-and-text-editor.md)
+- [个性化设置 Visual Studio IDE 和编辑器](../ide/quickstart-personalize-the-ide.md)

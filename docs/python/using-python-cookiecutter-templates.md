@@ -10,18 +10,18 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 026953ff52f4aa5c34dd4656432fed8ef2a48580
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.openlocfilehash: 2d58462b90039e14ae98fe450812ca4cfdb6cbbd
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85535143"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801576"
 ---
 # <a name="use-the-cookiecutter-extension"></a>使用 Cookiecutter 扩展
 
 [Cookiecutter](https://cookiecutter.readthedocs.io/en/latest/) 可提供图形用户界面，用于发现模板、输入模板选项以及创建项目和文件。 Cookiecutter 随附在 Visual Studio 2017 及更高版本中，在 Visual Studio 早期版本中可单独安装。
 
-Cookiecutter 需要 Python 3.3 或更高版本（32 位或 64 位）或者 Anaconda 3 4.2 或更高版本（32 位或 64 位）。 如果适用的 Python 解释器不可用，Visual Studio 将显示警告。 如果 Visual Studio 运行时安装 Python 解释器，请单击Cookiecutter 工具栏上的“主页”  按钮，检测新安装的解释器。 （请参阅 [Python 环境](managing-python-environments-in-visual-studio.md)了解有关整体环境的详细信息。）
+Cookiecutter 需要 Python 3.3 或更高版本（32 位或 64 位）或者 Anaconda 3 4.2 或更高版本（32 位或 64 位）。 如果适用的 Python 解释器不可用，Visual Studio 将显示警告。 如果在 Visual Studio 运行时安装 Python 解释器，请选择 Cookiecutter 工具栏上的“主页”按钮，检测新安装的解释器。 （请参阅 [Python 环境](managing-python-environments-in-visual-studio.md)了解有关整体环境的详细信息。）
 
 安装后，选择“视图”   > “Cookiecutter 资源管理器”  打开其窗口：
 
@@ -99,7 +99,7 @@ Cookiecutter 主页上显示可选择的模板列表，分为以下几组：
 | --- | --- |
 | 标签 | 指定编辑器上方显示的关于变量的内容，而不是变量名称。 |
 | 说明 | 指定编辑控件上显示的工具提示，而不是该变量的默认值。 |
-| URL | 将标签转换为超链接，并使用工具提示显示该 URL。 单击超链接将打开用户默认浏览器，并转到该 URL。 |
+| URL | 将标签转换为超链接，并使用工具提示显示该 URL。 选择超链接将打开用户默认浏览器，并转到该 URL。 |
 | 选择器 | 允许为变量自定义编辑器。 目前支持以下选择器：<ul><li>`string`：标准文本框，默认用于符串。</li><li>`list`：标准组合框，默认用于列表。</li><li>`yesno`：在 `y` 和 `n` 之间进行选择的组合框，用于字符串。</li><li>`odbcConnection`：具有“...”  按钮的文本框，可用于打开数据库连接对话框。</li></ul> |
 
 例如：

@@ -7,23 +7,23 @@ ms.assetid: b331c837-3524-42b7-820e-b4fdd5e12793
 ms.date: 03/03/2020
 ms.topic: conceptual
 description: Microsoft 产品和服务协议 (MPSA) 中的 Visual Studio 订阅
-ms.openlocfilehash: 6ce2208e6d1028e1e697b216d41cdd825dfc0d33
-ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
+ms.openlocfilehash: 90bfb27fcb80910f6add41c30d4c03ece1520ef4
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88247320"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801459"
 ---
 # <a name="visual-studio-subscriptions-in-a-microsoft-products-and-services-agreement-mpsa"></a>Microsoft 产品和服务协议 (MPSA) 中的 Visual Studio 订阅
 如果已通过 MPSA 计划购买 Visual Studio 订阅，在成为 Visual Studio 订阅管理员并向用户分配订阅之前，需要注意一些事项。 如果你已被设置为管理员，则可以直接转到 Visual Studio 订阅[管理门户](https://manage.visualstudio.com/)。
 
-MPSA 客户现在通过名为[业务中心](https://businessaccount.microsoft.com/Customer)的新门户管理通过 MPSA 购买的资产，该门户支持与批量许可服务中心 (VLSC) 类似的功能。 其中包括查看许可证摘要、订单、下载内容、密钥、用户等。但 MPSA 中 Visual Studio 订阅的行为与云服务非常相似。 业务中心还使用工作帐户（而不是 Microsoft 帐户 (MSA)）登录。 如果组织在使用 Office 365 或 Azure Active Directory 等云服务，且这两项服务中的任意一项使用了你的电子邮件，则该电子邮件已经是工作帐户。 在这种情况下，可以使用现有密码注册到业务中心。 如果组织未使用云服务，且你的电子邮件不是工作帐户，你可以使用该电子邮件注册到业务中心。
+MPSA 客户现在通过名为[业务中心](https://businessaccount.microsoft.com/Customer)的新门户管理通过 MPSA 购买的资产，该门户支持与批量许可服务中心 (VLSC) 类似的功能。 其中包括查看许可证摘要、订单、下载内容、密钥、用户等。但 MPSA 中 Visual Studio 订阅的行为与云服务非常相似。 业务中心还使用工作帐户（而不是 Microsoft 帐户 (MSA)）登录。 如果组织在使用 Microsoft 365 或 Azure Active Directory 等云服务，且这两项服务中的任意一项使用了你的电子邮件，则该帐户已经是工作帐户。 在这种情况下，可以使用现有密码注册到业务中心。 如果组织未使用云服务，且你的电子邮件不是工作帐户，你可以使用该电子邮件注册到业务中心。
 
 此外，在你成为 Visual Studio 订阅管理员后，应在 Visual Studio 订阅[管理门户](https://manage.visualstudio.com/)中将订阅分配给订阅者。 在 MPSA 中，必须将 Visual Studio 订阅设置为其各自的管理门户，即 Visual Studio 订阅管理门户。 为此，需要将购买帐户关联到租户（即 contoso.onmicrosoft.com）。
 
 请注意，存在两种类型的租户（托管租户和非托管租户）。 托管租户是指已经以组织管理员的身份对其进行管理的租户。
 
-非托管租户是未分配任何管理员的租户，不适用于 Office 365 等联机服务。 使用非工作帐户的电子邮件注册到业务中心时也会创建非托管租户。 如果注册到业务中心时系统要求创建密码，则表明该电子邮件不是工作帐户，并将创建一个非托管帐户。
+非托管租户是未分配任何管理员的租户，不适用于 Microsoft 365 等联机服务。 使用非工作帐户的电子邮件注册到业务中心时也会创建非托管租户。 如果注册到业务中心时系统要求创建密码，则表明该电子邮件不是工作帐户，并将创建一个非托管帐户。
 
 完成租户关联之前，成为 Visual Studio 订阅管理员需满足以下几个要求/执行以下几个步骤。
 

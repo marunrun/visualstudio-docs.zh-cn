@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f8bd1bc11d42d8aed0b816a667fe5adcc139a42c
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.openlocfilehash: e91745b8910a9e87ccd4a22fe09c6764a2ab4c6a
+ms.sourcegitcommit: de98ed7edc81383e47b87ae6e61143fbbbe7bc56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85459917"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88706524"
 ---
 # <a name="error-you-do-not-have-permission-to-inspect-the-process39s-identity"></a>错误：你没有检查进程标识的权限
 您没有检查进程标识的权限。 这可能是您系统的配置造成的。

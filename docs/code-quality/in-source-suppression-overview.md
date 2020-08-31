@@ -1,12 +1,12 @@
 ---
-title: 禁止显示代码分析警告
-ms.date: 12/01/2018
+title: 禁止显示代码分析冲突
+ms.date: 08/27/2020
 ms.topic: conceptual
 helpviewer_keywords:
 - source suppression, code analysis
 - code analysis, source suppression
-author: mikejo5000
-ms.author: mikejo
+author: mikadumont
+ms.author: midumont
 manager: jillfra
 dev_langs:
 - CSharp
@@ -14,14 +14,14 @@ dev_langs:
 - CPP
 ms.workload:
 - multiple
-ms.openlocfilehash: 745bc0c53738370816ad74be9249b721f236ad87
-ms.sourcegitcommit: 4d7c883ea3eedd795eeb4a9d3bd3dee82c8e093e
+ms.openlocfilehash: aa650197f291c48c0c025563098181ea1cfa19a7
+ms.sourcegitcommit: 016bcdc7cd3e3619457beb321800e98544efb6c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88893367"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89091433"
 ---
-# <a name="suppress-code-analysis-warnings"></a>禁止显示代码分析警告
+# <a name="suppress-code-analysis-violations"></a>禁止显示代码分析冲突
 
 它通常用于指示警告不适用。 这向团队成员表明代码已评审，并且可以禁止显示该警告。  (ISS) 中的源代码中禁止 <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> 显示警告。 特性可放置在生成警告的代码段附近。 可以 <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> 通过在源文件中键入来将其添加到源文件中，也可以使用 **错误列表** 中的警告的快捷菜单来自动添加该属性。
 
@@ -195,7 +195,7 @@ dotnet_diagnostic.CS1591.severity = none
 > [!NOTE]
 > `GeneratedCodeAttribute`当应用于整个程序集或单个参数时，代码分析将忽略。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.Scope>
 - <xref:System.Diagnostics.CodeAnalysis>

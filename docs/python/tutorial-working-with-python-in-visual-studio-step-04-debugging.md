@@ -11,12 +11,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 3f6464986cb94ffa3ab3cc9264ab818112046ea9
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: d7fe5a8b2275248c0fc68f9237e9e259973c567b
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "63002785"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801719"
 ---
 # <a name="step-4-run-code-in-the-debugger"></a>步骤 4：在调试器中运行代码
 
@@ -79,7 +79,7 @@ ms.locfileid: "63002785"
 
 1. 继续单步执行（跳过过程）代码几次，观察“局部变量”  或“自动”  窗口中的值如何变化。
 
-1. 在“局部变量”  或“自动”  窗口中，双击 `i` 或 `s` 变量的“值”  列，以编辑值。 按 Enter  或在该值外单击以应用任何更改。
+1. 在“局部变量”  或“自动”  窗口中，双击 `i` 或 `s` 变量的“值”  列，以编辑值。 按 Enter 或单击该值外的任意位置以应用任何更改。
 
 1. 继续使用“单步执行(进入过程)”  单步调试代码。 “单步执行(进入过程)”  是指调试器进入它有相关调试信息的任何函数调用内，比如 `make_dot_string`。 进入 `make_dot_string` 后，可以检查其局部变量并专门单步调试其代码。
 
@@ -93,7 +93,7 @@ ms.locfileid: "63002785"
 
     ![设定断点条件](media/vs-getting-started-python-21-debugging4.png)
 
-1. 若要一直运行程序直到结束，请右键单击并选择“禁用断点”  (Ctrl  +F9  ) 以禁用断点。 然后选择“继续”  （或按 F5  ）运行程序。 程序结束时，Visual Studio 会停止其调试会话，并恢复为其编辑模式。 请注意，也可以通过单击表示断点的点来删除断点，但这样也会删除设置好的所有条件。
+1. 若要一直运行程序直到结束，请右键单击边距中的点，并选择“禁用断点” (Ctrl+F9) 以禁用断点。 然后选择“继续”  （或按 F5  ）运行程序。 程序结束时，Visual Studio 会停止其调试会话，并恢复为其编辑模式。 请注意，要删除断点，还可以选择该点或右键单击该点并选择“删除断点”，但这也会删除已设置的所有条件。
 
 > [!Tip]
 > 在某些情况下，比如无法启动 Python 解释器自身，输出窗口可能短暂出现后就自动关闭，使用户没有机会查看任何错误消息。 如果出现这种情况，请在“解决方案资源管理器”  中右键单击项目，选择“属性”  ，选择“调试”  选项卡，然后将 `-i` 添加到“解释器参数”  字段。 此参数会使解释器在程序完成后进入交互模式，从而使窗口保持打开状态，直到按 Ctrl+Z > Enter 退出为止    。

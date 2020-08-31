@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d1721196becf1f746d81fa7e3d4ff5f0371e3f57
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.openlocfilehash: 94effc8a5f75e7b38fb7275d175eb324c479a7a9
+ms.sourcegitcommit: de98ed7edc81383e47b87ae6e61143fbbbe7bc56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85460773"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88711633"
 ---
 # <a name="error-the-target-process-exited-with-code-39code39-while-evaluating-the-function-39function39"></a>错误：评估函数“function”时，目标进程退出并生成代码“code”
 

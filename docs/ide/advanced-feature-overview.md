@@ -7,12 +7,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f65ce2b986114dc553b87db846262c931d74b4c0
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 0785686c9292e346c698c6f2b233cfe20edf796a
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "78235194"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88800757"
 ---
 # <a name="features-of-visual-studio"></a>Visual Studio 的功能
 
@@ -90,7 +90,7 @@ Web 推动着现代社会前进，Visual Studio 可以帮助你编写 Web 应用
 
 ## <a name="connect-to-databases"></a>连接到数据库
 
-服务器资源管理器有助于你浏览和管理本地、远程以及 Azure、Salesforce.com、Office 365 和网站上的 SQL Server 实例及资产  。 若要打开“服务器资源管理器”  ，请依次选择主菜单上的“视图”   > “服务器资源管理器”  。 有关使用服务器资源管理器的详细信息，请参阅[添加新连接](../data-tools/add-new-connections.md)。
+服务器资源管理器有助于你浏览和管理本地、远程以及 Azure、Salesforce.com、Microsoft 365 和网站上的 SQL Server 实例及资产。 若要打开“服务器资源管理器”  ，请依次选择主菜单上的“视图”   > “服务器资源管理器”  。 有关使用服务器资源管理器的详细信息，请参阅[添加新连接](../data-tools/add-new-connections.md)。
 
 [SQL Server Data Tools (SSDT)](/sql/ssdt/download-sql-server-data-tools-ssdt) 是一个适用于 SQL Server、Azure SQL 数据库和 Azure SQL 数据仓库的强大的开发环境。 通过它可以生成、调试、维护和重构数据库。 可使用数据库项目，或直接使用已连接的数据库实例（本地或非本地）。
 

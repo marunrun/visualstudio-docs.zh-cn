@@ -7,16 +7,16 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 872089158b6e4dc0b55c26ad187e3b68d0501f26
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: abca888cda2d309951d6b8921cfd2078972ce195
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77027596"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88800224"
 ---
 # <a name="work-with-multiple-user-accounts"></a>Work with multiple user accounts
 
-如果有多个 Microsoft 帐户和/或单位或学校帐户，可将它们全部添加到 Visual Studio，以便可从任何帐户访问资源，而无需单独登录到这些帐户。 Azure、Application Insights、Azure DevOps 和 Office 365 服务都支持简化的登录体验。
+如果有多个 Microsoft 帐户和/或单位或学校帐户，可将它们全部添加到 Visual Studio，以便可从任何帐户访问资源，而无需单独登录到这些帐户。 Azure、Application Insights、Azure DevOps 和 Microsoft 365 服务都支持简化的登录体验。
 
 将多个帐户添加到一台计算机上之后，如果你在另一台计算机上登录到 Visual Studio，则该组帐户会随你一起漫游。
 
@@ -53,7 +53,7 @@ ms.locfileid: "77027596"
 
 ### <a name="access-azure-active-directory-in-a-web-project"></a>在 Web 项目中访问 Azure Active Directory
 
-Azure Active Directory (AAD) 支持 ASP.NET MVC web 应用中的最终用户单一登录或 Web API 服务中的 AD 身份验证。 域身份验证与单个用户帐户身份验证不同。 有权访问 Active Directory 域的用户可以使用其现有的 AAD 帐户连接到 web 应用程序。 Office 365 应用还可以使用域身份验证。
+Azure Active Directory (AAD) 支持 ASP.NET MVC web 应用中的最终用户单一登录或 Web API 服务中的 AD 身份验证。 域身份验证与单个用户帐户身份验证不同。 有权访问 Active Directory 域的用户可以使用其现有的 AAD 帐户连接到 web 应用程序。 Microsoft 365 应用还可以使用域身份验证。
 
 ::: moniker range="vs-2017"
 

@@ -7,18 +7,18 @@ ms.assetid: 176c7f11-b19d-49e9-a6dd-b2e5da5e8480
 ms.date: 03/11/2020
 ms.topic: conceptual
 description: 了解登录 Visual Studio 订阅时可能出现的问题
-ms.openlocfilehash: de27f64f1d5c83ed01a1e561f4921dbed53c479c
-ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
+ms.openlocfilehash: 5d8a71115cd1a1aa7d850945806c22a64e7721cc
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80233246"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801875"
 ---
 # <a name="issues-signing-in-to-visual-studio-subscriptions"></a>登录 Visual Studio 订阅时遇到的问题
 若要使用 Visual Studio 订阅，必须先登录。  根据订阅，你可能已使用 Microsoft 帐户 (MSA) 或 Azure Active Directory (AAD) 标识进行设置。  本文讨论了在登录订阅时可能遇到的一些问题。
 
 ## <a name="microsoft-accounts-msa-cannot-be-created-using-workschool-email-addresses"></a>无法使用工作/学校电子邮件地址创建 Microsoft 帐户 (MSA)
-在 Azure AD 中配置电子邮件域时，不再允许使用工作/学校电子邮件地址创建新的个人 Microsoft 帐户 (MSA)。 这是什么意思呢？ 如果你的组织在使用 Microsoft 365 的 Office 365 或其他业务服务时依赖于 Azure AD，且你已向 Azure AD 租户添加了域名，则用户将无法再使用你域中的电子邮件地址创建新的个人 Microsoft 帐户。
+在 Azure AD 中配置电子邮件域时，不再允许使用工作/学校电子邮件地址创建新的个人 Microsoft 帐户 (MSA)。 这是什么意思呢？ 如果你的组织使用的是 Microsoft 365 或来自 Microsoft 的其他依赖 Azure AD 的业务服务，且你已向 Azure AD 租户添加了域名，则用户将无法再使用你域中的电子邮件地址创建新的个人 Microsoft 帐户。
 
 ### <a name="why-was-this-change-made"></a>为什么要进行此更改？
 将工作地址作为用户名的个人 Microsoft 帐户会出现许多最终用户和 IT 部门的问题。 例如：
@@ -40,7 +40,7 @@ ms.locfileid: "80233246"
    > ![支持工作或学校帐户](_img/sign-in-issues/existing-account.png)
 
 ### <a name="are-existing-accounts-affected"></a>现有帐户是否受影响？
-此处描述的注册块仅阻止创建新帐户。 它对已拥有工作/学校电子邮件地址的 Microsoft 帐户的用户没有影响。 如果你已处于这种情况，我们已改进，你可以更轻松地重命名个人 Microsoft 帐户。 这篇[支持文章](https://windows.microsoft.com/en-US/Windows/rename-personal-microsoft-account)提供了简单的逐步指导。 重命名个人 Microsoft 帐户意味着更改用户名，不会影响工作电子邮件或登录到业务服务（如 Office 365）的方式。 它也不会影响个人资料 - 只是改变了登录方式。 你可以使用其他（个人）电子邮件地址，从 Microsoft 获取新的 @outlook.com 电子邮件地址，或将电话号码用作新用户名。
+此处描述的注册块仅阻止创建新帐户。 它对已拥有工作/学校电子邮件地址的 Microsoft 帐户的用户没有影响。 如果你已处于这种情况，我们已改进，你可以更轻松地重命名个人 Microsoft 帐户。 这篇[支持文章](https://windows.microsoft.com/en-US/Windows/rename-personal-microsoft-account)提供了简单的逐步指导。 重命名个人 Microsoft 帐户意味着更改用户名，不会影响工作电子邮件或登录到业务服务（如 Microsoft 365）的方式。 它也不会影响个人资料 - 只是改变了登录方式。 你可以使用其他（个人）电子邮件地址，从 Microsoft 获取新的 @outlook.com 电子邮件地址，或将电话号码用作新用户名。
 
 > [!NOTE]
 > 如果 IT 部门要求使用工作/学校电子邮件创建个人 Microsoft 帐户，例如访问 Microsoft 业务服务（如顶级支持），请在重命名帐户之前与管理团队联系。

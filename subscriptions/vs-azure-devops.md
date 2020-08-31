@@ -7,12 +7,12 @@ ms.assetid: fe826200-9600-4b29-a64e-0d66ba3caf3d
 ms.date: 07/22/2020
 ms.topic: conceptual
 description: 了解如何以 Visual Studio 订阅者身份使用 Azure DevOps。
-ms.openlocfilehash: 591e6a3d781a17a292664847d6173aa371ff1a17
-ms.sourcegitcommit: 8c4dc60b665e7065a5231d6b61380731221d9fc5
+ms.openlocfilehash: 9f715cf5b9bd0278073b4a5f19a0f0a4f6a7a423
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87115325"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801069"
 ---
 # <a name="azure-devops-benefits-for-visual-studio-subscribers"></a>Visual Studio 订阅者的 Azure DevOps 权益
 作为权益，有效 Visual Studio 订阅者可使用订阅随附的一系列 Azure DevOps 功能。 可以在所属的每个 Azure DevOps 组织中使用这些相同的功能，无论你是创建了组织，还是被其他人添加到组织中。
@@ -23,7 +23,7 @@ ms.locfileid: "87115325"
    > ![Azure DevOps 磁贴](_img/vs-azure-devops/vs-azure-devops-tile.png)
 
    
-如果你使用激活 Visual Studio 订阅所用的标识或[备用标识](vs-alternate-identity.md)登录 Azure DevOps，我们会自动识别这一点。  这样，你还能添加工作或学校帐户（登录 Visual Studio、Office 365 或公司/学校网络时使用的帐户），以使用个人帐户和工作或学校帐户访问 Azure DevOps。
+如果你使用激活 Visual Studio 订阅所用的标识或[备用标识](vs-alternate-identity.md)登录 Azure DevOps，我们会自动识别这一点。  这样，你还能添加工作或学校帐户（登录 Visual Studio、Microsoft 365 或公司/学校网络时使用的帐户），以使用个人帐户和工作或学校帐户访问 Azure DevOps。
 
 [注册免费 Azure DevOps 组织](https://visualstudio.microsoft.com/team-services/)
 

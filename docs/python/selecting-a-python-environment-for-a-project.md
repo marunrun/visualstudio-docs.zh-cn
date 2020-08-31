@@ -10,12 +10,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 8bcb349f8ff99d1567bf94b83a96be6b2824c208
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.openlocfilehash: 11808eeabee4d45d1d3d3b1b5cd5d6636249e7cb
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85520466"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801199"
 ---
 # <a name="how-to-select-a-python-environment-for-a-project"></a>如何选择用于项目的 Python 环境
 
@@ -46,7 +46,7 @@ Visual Studio 中所有新的 Python 项目最初都被配置为使用默认的�
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
-若要更改项目的环境，请右键单击“Python 环境”节点，然后选择“添加环境”，或从 Python 工具栏的环境下拉列表中选择“添加环境”。
+要更改项目环境，请右键单击“Python 环境”节点，然后选择“添加环境”。 还可以从 Python 工具栏中的“环境”下拉列表选择“添加环境”。
 
 在“添加环境”对话框中，选择“现有环境”选项卡，然后从“环境”下拉列表中选择新环境：
 

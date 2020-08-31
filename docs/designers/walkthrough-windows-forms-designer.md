@@ -7,12 +7,12 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 11f8480a3a48c1fdee514deb51411e2623055f09
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.openlocfilehash: 831e0216bcecff2e9ac6551184ddbfda56a4b525
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85816457"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801290"
 ---
 # <a name="tutorial-get-started-with-windows-forms-designer"></a>教程：Windows 窗体设计器入门
 
@@ -43,7 +43,7 @@ Windows 窗体设计器提供了许多用于生成 Windows 窗体应用程序的
 
    ::: moniker-end
 
-2. 若要重命名文件，请在“解决方案资源管理器”中，右键选择“UserControl1.vb”或“UserControl1.cs”，选择“重命名”并将文件名更改为 DemoCalculator.vb 或 DemoCalculator.cs   。 当系统询问是否重命名对代码元素“UserControl1”的所有引用时，选择“是”。
+2. 若要重命名文件，请在“解决方案资源管理器”中，右键单击“UserControl1.vb”或“UserControl1.cs”，选择“重命名”并将文件名更改为 DemoCalculator.vb 或 DemoCalculator.cs   。 当系统询问是否重命名对代码元素“UserControl1”的所有引用时，选择“是”。
 
 Windows 窗体设计器显示 DemoCalculator 控件的设计器图面。 在此视图中，可以通过从“工具箱”中选择控件和组件，并将其置于设计器图面，来以图形方式设计控件的外观。 有关自定义控件的详细信息，请参阅[各种自定义控件](/dotnet/framework/winforms/controls/varieties-of-custom-controls)。
 
@@ -111,7 +111,7 @@ DemoCalculator 控件包含多个 Windows 窗体控件。 在此过程中，将�
 
 现在，已设置控件的布局，可以使用按钮和显示填充 DemoCalculator 控件。
 
-1. 在“工具箱”中，双击 `TextBox` 控件图标。
+1. 在“工具箱”中，选择“`TextBox`”控件图标。
 
    将 `TextBox` 控件置于 `TableLayoutPanel` 控件的第一个单元格中。
 
@@ -129,11 +129,11 @@ DemoCalculator 控件包含多个 Windows 窗体控件。 在此过程中，将�
 
 6. 选择 `TableLayoutPanel` 控件。
 
-7. 在“工具箱”中，双击 `Button` 图标。
+7. 在“工具箱”中，选择“`Button`”图标。
 
    将 `Button` 控件置于 `TableLayoutPanel` 控件的下一个打开单元格中。
 
-8. 在“工具箱”中，双击 `Button` 图标四次以填充 `TableLayoutPanel` 控件的第二行。
+8. 在“工具箱”中，选择“`Button`”图标四次以填充 `TableLayoutPanel` 控件的第二行。
 
 9. 在按住 Shift 键的同时选择所有五个 `Button` 控件，来选中这些控件。 按 Ctrl+C 将 `Button` 控件复制到剪贴板。
 
@@ -161,7 +161,7 @@ DemoCalculator 控件包含多个 Windows 窗体控件。 在此过程中，将�
 
    “文档大纲”窗口显示 DemoCalculator 控件及其构成控件的树视图。 `SplitContainer` 等容器控件将其子控件显示为树中的子节点。 还可以使用“文档大纲”窗口重命名控件。
 
-2. 在“文档大纲” 窗口中，右键选择“button1”，然后选择“重命名”。 将其名称更改为 sevenButton。
+2. 在“文档大纲”窗口中，右键单击“button1”，然后选择“重命名”。 将其名称更改为 sevenButton。
 
 3. 使用“文档大纲”窗口，根据以下列表将 `Button` 控件的名称从设计器生成的名称重命名为生产名称：
 
@@ -247,11 +247,11 @@ DemoCalculator 控件包含多个 Windows 窗体控件。 在此过程中，将�
 
 ## <a name="implement-event-handlers"></a>实现事件处理程序
 
-DemoCalculator 控件上的按钮具有可用于实现大部分计算器逻辑的事件处理程序。 借助 Windows 窗体设计器，只需双击一次即可为所有按钮实现所有事件处理程序的存根。
+DemoCalculator 控件上的按钮具有可用于实现大部分计算器逻辑的事件处理程序。 借助 Windows 窗体设计器，只需选择一次即可为所有按钮实现所有事件处理程序的存根。
 
 1. 在设计器图面上，通过在按住 Shift 键的同时选择所有 `Button` 控件来选中它们。
 
-2. 双击其中一个 `Button` 控件。
+2. 选择其中一个 `Button` 控件。
 
    由设计器生成的事件处理程序将打开“代码编辑器”。
 
@@ -277,7 +277,7 @@ DemoCalculator 控件可在其他复合控件或窗体上使用。 以下过程�
 
 2. 在“解决方案资源管理器”中，右键单击“DemoCalculatorTest”项目，然后选择“添加引用”以打开“添加引用”对话框。
 
-3. 选择“项目”选项卡，然后双击 DemoCalculatorLib 项目以将引用添加到测试项目。
+3. 转到“项目”选项卡，然后选择 DemoCalculatorLib 项目以将引用添加到测试项目。
 
 4. 在“解决方案资源管理器”中，右键单击“DemoCalculatorTest”，然后选择“设置为启动项目”。
 
@@ -297,7 +297,7 @@ DemoCalculator 控件可在其他复合控件或窗体上使用。 以下过程�
 
 4. 围绕 DemoCalculator 控件移动 `Button` 控件，并观察对齐线的显示位置。 可以使用此功能精确而轻松地对齐控件。 完成后，删除 `Button` 控件。
 
-5. 右键选择 DemoCalculator 控件，然后选择“属性”。
+5. 右键单击 DemoCalculator 控件，然后选择“属性”。
 
 6. 将 `Dock` 属性的值更改为 `Fill`。
 

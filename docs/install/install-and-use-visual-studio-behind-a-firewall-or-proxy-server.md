@@ -17,12 +17,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 05f2984f135ef363d1a5acfb55f4705404f4ea7d
-ms.sourcegitcommit: c620d59578db1b89f80e64ae04b4898bc4ab292d
+ms.openlocfilehash: 5692589192ee4377194f6c42c25d391636f5f42a
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87375854"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88800237"
 ---
 # <a name="install-and-use-visual-studio-and-azure-services-behind-a-firewall-or-proxy-server"></a>在防火墙或代理服务器后面安装和使用 Visual Studio 和 Azure 服务
 
@@ -110,7 +110,7 @@ ms.locfileid: "87375854"
 | Cookiecutter<br>资源管理器模板<br>发现 <br><br>Cookiecutter <br>资源管理器项目<br> 创建 | api.github.com <br>raw.githubusercontent.com <br>go.microsoft.com<br><br>pypi.org <br> pypi.python.org | https/443<br> | 用于从我们建议的源和 github 存储库发现联机模板 <br><br>用于从 cookiecutter 模板创建一个项目，要求从 Python 包索引 (PyPI) 一次性按需安装 cookiecutter Python 包 |
 | Python 包 <br>发现<br><br>Python 包 <br>管理<br><br>新建 <br>Python <br> 项目 <br>模板 | pypi.org<br> <br>pypi.python.org <br>bootstrap.pypa.io<br><br>go.microsoft.com | https/443 | 提供搜索 pip 包的能力<br><br>用于自动安装 pip（如缺失） <br><br>用于将以下 Python 项目模板解析为 cookiecutter 模板 URL：<br> - 分类器项目<br>- 聚类分析项目 <br> - 回归项目 <br> - 使用 PyKinect 的 PyGame <br> - Pyvot 项目 |
 | Office Web <br>Add-in — 外接程序 <br> file:/// <br>确认 <br>服务 | verificationservice.osi.office.net | https/443 | 用于验证 Office Web 外接程序的清单 |
-| SharePoint 和 <br>Office 外接程序 | sharepoint.com<br> office365.com<br> microsoftonline.com <br> outlook.com | https/443 | 用于将 SharePoint 和 Office 外接程序发布到 SharePoint Online 和 Office 365 并对其进行测试 |
+| SharePoint 和 <br>Office 外接程序 | sharepoint.com<br> microsoft.com/microsoft-365<br> microsoftonline.com <br> outlook.com | https/443 | 用于将 SharePoint 和 Office 加载项发布到 SharePoint Online 和 Microsoft 365 并对其进行测试 |
 | 工作流管理器 <br>测试服务<br> 主机 | | http/12292 | 自动创建的防火墙规则，用于测试带工作流的 SharePoint 外接程序 |
 | 自动收集 <br>可靠性统计信息 <br>和其他 <br>客户体验 <br>改善计划 (CEIP)<br> 面向 Azure SDK 和 <br>面向 SQL 工具 <br><br> | vortex.data.microsoft.com<br> <br>dc.services.visualstudio.com | https/443 | 用于将可靠性统计信息（故障/无响应数据）从用户发送到 Microsoft。 在启用了 Windows 错误报告的情况下，仍将上传实际故障/无响应转储；只会禁止统计信息； <br>用于向 Visual Studio 显示 Azure Tools SDK 扩展的匿名使用模式，并向 Visual Studio 显示 SQL 工具的使用模式 |
 | Visual Studio <br> 客户体验 <br>改善计划 (CEIP) <br><br>PerfWatson.exe | vortex.data.microsoft.com<br>dc.services.visualstudio.com<br>visualstudio-devdiv-c2s.msedge.net<br>az667904.vo.msecnd.net <br>scus-breeziest-in.cloudapp.net<br> | https/443 | 用于收集匿名使用模式和错误日志 <br><br>用于跟踪 UI 冻结问题 |
@@ -118,7 +118,7 @@ ms.locfileid: "87375854"
 | 更新的 Web 发布工具 <br>检查和扩展 <br>建议 | marketplace.visualstudio.com | https/443 | 用于检查已更新发布工具的可用性。 如果禁用，则可能不会显示用于 Web 发布的潜在建议扩展 |
 | 更新的 Azure 资源 <br>创建终结点信息 | \*.blob.core.windows.net | https/443 | 用于更新在为某些 Azure 服务创建 Azure 资源时使用的终结点。 如果禁用，则改为使用在终结点位置中最后一次下载或生成的资源 |
 | 远程调试和 <br>远程分析 <br>Azure 网站 | &#42;.cloudapp.net <br> &#42;.azurewebsites.net | 4022 | 用于将远程调试器附加到 Azure 网站。 如果禁用，将远程调试器附加到 Azure 网站将不起作用 |
-| Active Directory <br>Graph | graph.windows.net | https/443 | 用于预配新的 Azure Active Directory 应用程序。 也由 Office 365 MSGraph - 已连接的服务提供程序使用 |
+| Active Directory <br>Graph | graph.windows.net | https/443 | 用于预配新的 Azure Active Directory 应用程序。 也由 Microsoft 365 MSGraph（已连接的服务提供程序）使用 |
 | Azure Functions <br>CLI 更新 <br>检查 | functionscdn.azureedge.net | https/443 | 用于检查 Azure Functions CLI 的更新版本。 如果禁用，将改为使用 CLI 的缓存副本（或 Azure Functions 组件提供的副本） |
 | Cordova | npmjs.org<br>gradle.org | http/80 &<br/>https/443 | HTTP 用于在生成期间下载 Gradle；HTTP 用于包含项目中的 Cordova 插件 |
 | Cloud Explorer | 1. &#60;clusterendpoint&#62; <br>Service Fabric <br>2. &#60;management endpoint&#62;<br>常规 Cloud Exp <br>3. &#60;graph endpoint&#62;<br>常规 Cloud Exp<br>4. &#60;storage account endpoint&#62;<br>存储节点 <br>5. &#60;Azure portal URLs&#62;<br>常规 Cloud Exp <br>6. &#60;key vault endpoints&#62; <br>Azure 资源管理器 VM 节点<br>7. &#60;PublicIPAddressOfCluster&#62;<br>Service Fabric 远程调试和 ETW 跟踪 | <br>1. https/19080<br>2. https/443<br>3. https/443<br>4. https/443<br>5. https/443<br>6. https/443<br>7. tcp/dynamic | 1.示例：test12.eastus.cloudapp.com<br>2.检索订阅并检索/管理 Azure 资源<br>3.检索 Azure Stack 订阅<br>4.管理存储资源（示例：mystorageaccount.blob.core.windows.net）<br>5.“在门户中打开”上下文菜单选项（在 Azure 门户中打开资源）<br>6.创建并使用 Key Vault 进行 VM 调试（示例：myvault.vault.azure.net） <br><br>7.基于群集中的节点数和可用端口动态分配端口块。 <br><br>一个端口块将尝试获取至少 10 个端口的 3 倍数量的节点。<br><br>对于流式处理跟踪，将尝试从 810 获取端口块。 如果任何端口块都已被使用，则尝试获取下一个端口块，依次类推。 （如果负载均衡器为空，则很可能使用来自 810 的端口） <br><br>对于调试是同样道理，将保留四个端口块集： <br>- connectorPort:30398, <br>- forwarderPort:31398, <br>- forwarderPortx86:31399,<br>- fileUploadPort:32398<br> |

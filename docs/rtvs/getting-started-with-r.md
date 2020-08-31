@@ -8,12 +8,12 @@ ms.author: kraigb
 manager: jillfra
 ms.workload:
 - data-science
-ms.openlocfilehash: df46a2731f9923d85a16082f96c44947099db592
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: be0ba7b32af5247bb0dccccb68d900cb6797cc13
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "63000493"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801173"
 ---
 # <a name="get-started-with-r-tools-for-visual-studio"></a>Visual Studio 中的 R 工具入门
 
@@ -137,7 +137,7 @@ Visual Studio 的一个主要优势就是它的调试 UI。 RTVS 构建于这一
 
 1. 开始前，请重置当前工作区，使用“R 工具” > “会话” > “重置”菜单命令清除到目前为止完成的所有内容。 默认情况下，在交互窗口中执行的所有操作都将累加到当前会话，然后还会供调试器使用。 通过重置会话，可确保调试会话启动时无预先存在的数据。 但是，重置命令不会影响 script.R 源文件，因为该文件在工作区之外进行管理和保存   。
 
-1. 使用上一节中创建的 script.R 文件，在以 `pop <-` 开头的行上设置断点，方法是将插入符号放置于该行中，然后按 F9，或选择“调试” > “切换断点”菜单命令。 或者，只需在该行的左边距（或装订线）处单击，该边距（或装订线）中将出现一个红色断点：
+1. 使用上一节中创建的 script.R 文件，在以 `pop <-` 开头的行上设置断点，方法是将插入符号放置于该行中，然后按 F9，或选择“调试” > “切换断点”菜单命令。 或者，在该行的左边距（或装订线）处单击，该边距（或装订线）中将出现一个红色断点：
 
     ![在编辑器中设置断点](media/getting-started-11-debug1.png)
 

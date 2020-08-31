@@ -11,12 +11,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 5e2644ccfff0e7c653f4ce2680299aea95a55ef9
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: 32e85f39c4acf9466def24bcfea59bbfd6807a1b
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "79372896"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801654"
 ---
 # <a name="step-5-install-packages-in-your-python-environment"></a>步骤 5：在 Python 环境中安装程序包
 
@@ -31,11 +31,11 @@ Python 开发者社区制作了数千个有用的程序包，用户可以将它�
    ![“Python 环境”窗口](media/environments/environments-default-view-2019.png)
 
    > [!NOTE]
-   > 还可单击“解决方案资源管理器”窗口，再使用 Ctrl+K 或 Ctrl+` 键盘快捷方式打开“Python 环境”窗口。 如果快捷方式不起作用，并且在菜单中找不到“Python 环境”窗口，则可能是你未安装 Python 工作负载。 有关如何安装 Python 的指南，请参阅[如何在 Visual Studio 中安装 Python 支持](installing-python-support-in-visual-studio.md)。
+   > 还可选择“解决方案资源管理器”窗口，再使用 Ctrl+K 或 Ctrl+` 键盘快捷方式打开“Python 环境”窗口。 如果快捷方式不起作用，并且在菜单中找不到“Python 环境”窗口，则可能是你未安装 Python 工作负载。 有关如何安装 Python 的指南，请参阅[如何在 Visual Studio 中安装 Python 支持](installing-python-support-in-visual-studio.md)。
 
 2. 通过环境的“概述”  选项卡，可以快速访问该环境的交互  窗口以及安装文件夹和解释器。 例如，选择“打开交互窗口”  ，会在 Visual Studio 中显示该特定环境的交互  窗口。
 
-3. 现在，通过选择“文件” > “新建” > “项目”来创建新项目，然后选择“Python 应用程序”模板     。 在随即出现的代码文件中，粘贴以下代码来创建像之前的教程步骤一样的余弦波，只不过这次以图形方式绘制。 或者，可使用之前创建的项目并替换代码。 
+3. 现在，通过选择“文件” > “新建” > “项目”来创建新项目，然后选择“Python 应用程序”模板     。 在随即出现的代码文件中，粘贴以下代码来创建像之前的教程步骤一样的余弦波，只不过这次以图形方式绘制。 或者，可使用之前创建的项目并替换代码。
 
     ```python
     from math import radians
@@ -50,7 +50,7 @@ Python 开发者社区制作了数千个有用的程序包，用户可以将它�
     main()
     ```
 
-4. 打开 Python 项目后，还可右键单击 Python 环境，再选择“查看所有 Python 环境”，从解决方案资源管理器中打开“Python 环境”窗口**V**
+4. 打开 Python 项目后，还可右键单击 Python 环境，再选择“查看所有 Python 环境”，从解决方案资源管理器中打开“Python 环境”窗口 
 
    ![环境](media/environments/environments-view-all-2019.png)
 
@@ -60,7 +60,7 @@ Python 开发者社区制作了数千个有用的程序包，用户可以将它�
 
 ## <a name="install-packages-using-the-python-environments-window"></a>使用“Python 环境”窗口安装包
 
-1. 在“Python 环境”窗口中，为新的 Python 环境单击默认环境，然后选择“包”选项卡  。然后，你将看到环境中当前已安装的包的列表。
+1. 在“Python 环境”窗口中，为新的 Python 环境选择默认环境，然后选择“包”选项卡。然后，你将看到环境中当前已安装的包的列表。
 
    ![环境中安装的程序包](media/environments/environments-installed-packages-2019.png)
 
@@ -76,7 +76,7 @@ Python 开发者社区制作了数千个有用的程序包，用户可以将它�
 
    > [!NOTE]
    > 环境下方可能会出现一个小进度栏，指示 Visual Studio 正在为新安装的程序包生成 IntelliSense 数据库。 “IntelliSense”  选项卡也显示了更多详细信息。 请注意，完成该数据库之前，编辑器中的自动完成和语法检查等 IntelliSense 功能针对该程序包处于非活动状态。
-   > 
+   >
    > Visual Studio 2017 15.6 及更高版本采用不同且更快的方法来使用 IntelliSense，并在“IntelliSense”选项卡上显示一条简要介绍此内容的消息  。
 
 ## <a name="run-the-program"></a>运行程序

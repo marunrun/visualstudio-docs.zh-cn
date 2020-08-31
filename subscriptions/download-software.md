@@ -7,12 +7,12 @@ ms.assetid: e2f2619c-7736-47e5-a066-5940d5994db9
 ms.date: 07/29/2020
 ms.topic: conceptual
 description: 了解如何在 Visual Studio 订阅中查找和下载 Microsoft 软件标题
-ms.openlocfilehash: aa0784694b3407c621e8efb1916ed5fe41aee0c7
-ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
+ms.openlocfilehash: d1d885bbe9322f6d15cecff7e44d879aceb63d4c
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88248230"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801823"
 ---
 # <a name="downloading-software-titles-in-visual-studio-subscriptions"></a>下载 Visual Studio 订阅中的软件标题
 根据你所订阅的 Visual Studio，你可以获得各种各样的 Microsoft 软件标题。  本文将概述如何查找和下载所需的软件，以便最大限度地利用订阅。 
@@ -22,7 +22,7 @@ ms.locfileid: "88248230"
 如果你的订阅是由工作或学校提供的，则订阅管理员将控制你是否有权访问下载。 如果禁用对下载的访问权限，则还会禁用对产品密钥的访问权限。 如果你无权访问但却需要访问下载和产品密钥，请[联系管理员](contact-my-admin.md)。
 
 > [!NOTE]
-> 我们注意到一个有关 Office 365 产品密钥可用性的问题。  我们正在调查其原因，并将在问题解决后更新本文。 
+> 我们注意到一个有关 Microsoft 365 产品密钥可用性的问题。  我们正在调查其原因，并将在问题解决后更新本文。 
 
 ## <a name="how-do-i-find-downloads-in-the-subscriber-portal"></a>如何在订阅者门户中找到下载内容？
 访问[下载](https://my.visualstudio.com/downloads/featured?wt.mc_id=o~msft~docs)页时，可以看到按产品类型分组的热门下载。  可以在所示的热门下载中选择一项产品，也可以使用页面顶部的搜索栏搜索任何产品。
