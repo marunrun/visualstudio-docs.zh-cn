@@ -11,12 +11,12 @@ ms.workload:
 - python
 - data-science
 monikerRange: '>= vs-2019'
-ms.openlocfilehash: ab234d9482cf9cbab49c15167ea45aff9ac2c7e6
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: a7bf174191a6a2fb013aa3d25880b01bc2e7f070
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "62431065"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801667"
 ---
 # <a name="quickstart-open-and-run-python-code-in-a-folder"></a>快速入门：打开并运行文件夹中的 Python 代码
 
@@ -77,7 +77,7 @@ ms.locfileid: "62431065"
     ![用于 Python 文件的“调试和启动设置”命令](media/quickstart-open-folder/10-select-debugger.png)
 
     > [!Note]
-    > 如果没有看到“默认”  选项，请确保在选择“调试和启动设置”命令时右键单击了 Python .py  文件  。 Visual Studio 利用文件类型来确定要显示的调试程序选项。
+    > 如果没有看到“默认”选项，请确保在选择“调试和启动设置”命令时选择了 Python .py 文件。 Visual Studio 利用文件类型来确定要显示的调试程序选项。
 
 1. Visual Studio 会打开名为 launch.vs.json 的文件  ，该文件位于隐藏的 .vs  文件夹中。 此文件描述项目的调试上下文。 若要指定工作目录，请为 `"workingDirectory"` 添加一个值，如 python-koans 示例的 `"workingDirectory": "python3"` 中所示：
 

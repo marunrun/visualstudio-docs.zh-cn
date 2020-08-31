@@ -7,12 +7,12 @@ ms.assetid: 383fc910-3f4c-474a-a3f8-0f13525f05e9
 ms.date: 03/26/2020
 ms.topic: how-to
 description: 了解有关所选 Visual Studio 订阅中随附的 Power BI Pro 订阅。
-ms.openlocfilehash: dd16d8f28f78a7496ad3c93ab1db8eb51ebcf43b
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.openlocfilehash: 9a16e827c45e600ff3b5edc8579b5941aa80ca90
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902999"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801680"
 ---
 # <a name="power-bi-pro-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 Power BI Pro
 
@@ -29,7 +29,7 @@ ms.locfileid: "85902999"
    > [!div class="mx-imgBorder"]
    > ![Power BI Pro 权益磁贴](_img/vs-pbi/vs-pbi-tile.png)
 
-3. 如果已激活某些其他的订阅权益（如 Office 365 开发人员订阅或企业移动性 + 安全性），那么你可能已拥有一个帐户。  如果找到现有帐户，则必须将你的 Power BI Pro 订阅添加到现有帐户或注册一个新帐户。  强烈建议将其添加到现有帐户，以便可以使用单个用户 ID 访问各种权益。
+3. 如果已激活某些其他的订阅权益（如 Microsoft 365 开发人员订阅或企业移动性 + 安全性），那么你可能已拥有一个帐户。  如果找到现有帐户，则必须将你的 Power BI Pro 订阅添加到现有帐户或注册一个新帐户。  强烈建议将其添加到现有帐户，以便可以使用单个用户 ID 访问各种权益。
    > [!div class="mx-imgBorder"]
    > ![Power BI Pro 权益：现有帐户](_img/vs-pbi/vs-pbi-existing-account.png)
 
@@ -55,9 +55,9 @@ ms.locfileid: "85902999"
     > [!div class="mx-imgBorder"]
     > ![Power BI Pro 权益：联系人信息](_img/vs-pbi/vs-pbi-payment-blurred-cropped.png)
 
-11. 下一页确认你已准备好开始使用 Power BI Pro。  该页面将提供登录页的链接。  建议记录下登录页的链接和用户 ID。  （系统还会根据设置帐户时提供的地址向你发送一封欢迎电子邮件。）你还可以看到一个自动的 Office 365 助手窗口，如果存在任何问题，都可使用该窗口。  单击“立即开始”继续  。
+11. 下一页确认你已准备好开始使用 Power BI Pro。  该页面将提供登录页的链接。  建议记录下登录页的链接和用户 ID。  （系统还会根据设置帐户时提供的地址向你发送一封欢迎电子邮件。）你还可以看到一个自动显示的 Microsoft 365 助手窗口，如果存在任何问题，都可使用该窗口。  单击“立即开始”继续  。
 
-12. 现在，你已设置好 Power BI Pro 帐户，随即将看到 Office 365 管理中心，在这里可以管理用户和域、安装 Office 软件并了解有关 Office 365 的信息。  就这么简单！  一切都已就绪。
+12. 现在，你已设置好 Power BI Pro 帐户，随即将看到 Microsoft 365 管理中心，在这里可以管理用户和域、安装 Office 软件并了解有关 Microsoft 365 的信息。  就这么简单！  一切都已就绪。
 
 ## <a name="eligibility"></a>资格
 
@@ -91,7 +91,7 @@ ms.locfileid: "85902999"
 - 此 Power BI Pro 权益无法用于政府租户。
 
 ### <a name="q--when-i-try-to-activate-power-bi-pro-i-get-a-message-you-already-have-an-account-through-work--can-i-still-use-the-benefit"></a>问：当我尝试激活 Power BI Pro 时，收到一条消息“你已经通过工作获得帐户”。  我仍可以使用此权益吗？
-答：可以。  消息表明你登录到一个已有活动 Office 365 租户的域，而你不是其中的管理员。  若要将 Power BI Pro 添加到租户，你必须是该租户的管理员。  要解决此问题，请按照以下步骤创建自己的租户。
+答：可以。  消息表明你登录到一个已有活动 Microsoft 365 租户的域，而你不是其中的管理员。  若要将 Power BI Pro 添加到租户，你必须是该租户的管理员。  要解决此问题，请按照以下步骤创建自己的租户。
 1. 看到你已经通过工作获得帐户的消息时，请点击“新建帐户”  。
 
 2. 在下一个屏幕上，提供联系信息，然后单击“下一步”  。

@@ -10,16 +10,16 @@ ms.author: crdun
 manager: crdun
 ms.workload:
 - multiple
-ms.openlocfilehash: c7f40f656b533949748a7eb2ab88ea3d2b1d5923
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 0e0f589ae3c6daa48a9bea6d8a0b561d7b8de337
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "78234977"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801589"
 ---
 # <a name="cross-platform-mobile-development-in-visual-studio"></a>Visual Studio 中的跨平台移动开发
 
-可使用 Visual Studio 生成适用于 Android、iOS 和 Windows 设备的应用。  设计应用时，可使用 Visual Studio 中的工具轻松添加连接的服务（如 Office 365、Azure App Service 和 Application Insights）。
+可使用 Visual Studio 生成适用于 Android、iOS 和 Windows 设备的应用。  设计应用时，可使用 Visual Studio 中的工具轻松添加连接的服务（如 Microsoft 365、Azure 应用服务和 Application Insights）。
 
 使用 C# 和 .NET Framework、HTML 和 JavaScript 或者 C++ 生成应用。 还可共享代码、字符串和图像，某些情况下甚至可共享用户界面。
 
@@ -40,7 +40,7 @@ ms.locfileid: "78234977"
 |[了解 Visual Studio 中的通用 Windows 应用](https://visualstudio.microsoft.com/vs/universal-windows-platform/) (VisualStudio.com)|
 |[了解 Swift 与 C# 之间的相似之处](https://aka.ms/scposter) (download.microsoft.com)|
 
-### <a name="AndroidHTML"></a>通过单个基本代码面向 Android、iOS 和 Windows
+### <a name="target-android-ios-and-windows-from-a-single-code-base"></a><a name="AndroidHTML"></a>通过单个基本代码面向 Android、iOS 和 Windows
 
  可使用 C# 或 F# 生成面向 Android、iOS 和 Windows 的本机应用（目前不支持 Visual Basic）。  首先，请安装 Visual Studio，在安装程序中选择“使用 .NET 的移动开发”选项  。
 
@@ -56,7 +56,7 @@ ms.locfileid: "78234977"
 
  根据应用设计的复杂性，可以考虑使用项目模板“移动应用”  组中的 **Xamarin.Forms** 模板生成应用。 Xamarin.Forms 是一个 UI 工具包，可用于创建在 Android、iOS 和 Windows 之间共享的单一界面。  编译 Xamarin.Forms 解决方案时，会分别获得一个 Android 应用、iOS 应用和 Windows 应用。 有关更多详细信息，请参阅[了解关于使用 Xamarin 进行移动开发的信息](/xamarin/cross-platform/get-started/introduction-to-mobile-development/)和 [Xamarin.Forms 文档](/xamarin/xamarin-forms/)。
 
-#### <a name="ShareHTML"></a> 在 Android、iOS 和 Windows 应用间共享代码
+#### <a name="share-code-between-android-ios-and-windows-apps"></a><a name="ShareHTML"></a> 在 Android、iOS 和 Windows 应用间共享代码
 
  如果不使用 Xamarin.Forms 并选择为每个平台单独设计，可在平台项目（Android、iOS 和 Windows）之间共享大多数的非 UI 代码。 这包括所有的业务逻辑、云集成、数据库访问和其他所有面向 .NET 框架的代码。 唯一不能共享的代码是面向特定平台的代码。
 
@@ -69,7 +69,7 @@ ms.locfileid: "78234977"
 |[共享代码选项](/xamarin/cross-platform/app-fundamentals/code-sharing/) (Xamarin) |
 |[.NET 的代码共享选项](/dotnet/standard/cross-platform/) |
 
-### <a name="WindowsHTML"></a>面向 Windows 10 设备
+### <a name="target-windows-10-devices"></a><a name="WindowsHTML"></a>面向 Windows 10 设备
 
  ![Windows 设备](../cross-platform/media/windowsdevices.png "Windows 设备")
 
@@ -86,7 +86,7 @@ ms.locfileid: "78234977"
 
 ::: moniker range="vs-2017"
 
-## <a name="HTML"></a>构建面向 Android、iOS 和 Windows 的应用 (HTML/JavaScript)
+## <a name="build-an-app-for-android-ios-and-windows-htmljavascript"></a><a name="HTML"></a>构建面向 Android、iOS 和 Windows 的应用 (HTML/JavaScript)
 
  ![Windows、iOS 和 Android 设备](../cross-platform/media/homedevices.png "Windows、iOS 和 Android 设备")
 
@@ -168,6 +168,6 @@ ms.locfileid: "78234977"
 
 ## <a name="see-also"></a>请参阅
 
-- [向 Visual Studio 项目添加 Office 365 API](/office/developer-program/office-365-developer-program)
+- [向 Visual Studio 项目添加 Microsoft 365 API](/office/developer-program/office-365-developer-program)
 - [Azure App Service - 移动应用](https://azure.microsoft.com/services/app-service/mobile/)
 - [Visual Studio App Center](/appcenter)

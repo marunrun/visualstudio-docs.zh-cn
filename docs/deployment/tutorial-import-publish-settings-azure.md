@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cd316956f8e6c385cd59c017af50452b07537dc6
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 6d2c52d6db6ca3001712a692a1de059834c975ae
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84183309"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801706"
 ---
 # <a name="publish-an-application-to-azure-app-service-by-importing-publish-settings-in-visual-studio"></a>通过在 Visual Studio 中导入发布设置将应用程序发布到 Azure 应用服务
 
@@ -57,15 +57,15 @@ ms.locfileid: "84183309"
 
 1. 在运行 Visual Studio 的计算机上，创建新项目。
 
-    选择正确的模板。 在此示例中，选择“ASP.NET Web 应用程序(.NET Framework)”或“ASP.NET Core Web 应用程序”（仅限 C#），然后单击“确定”  。
+    选择正确的模板。 在此示例中，选择“ASP.NET Web 应用程序(.NET Framework)”或“ASP.NET Core Web 应用程序”（仅限 C#），然后选择“确定”  。
 
-    如果没有看到指定的项目模板，请单击“新建项目”对话框左侧窗格中的“打开 Visual Studio 安装程序”链接 。 Visual Studio 安装程序启动。 安装“ASP.NET 和 Web 开发”工作负载。
+    如果没有看到指定的项目模板，请转到“新建项目”对话框左侧窗格中的“打开 Visual Studio 安装程序”链接 。 Visual Studio 安装程序启动。 安装“ASP.NET 和 Web 开发”工作负载。
 
     选择的项目模板（ASP.NET 或 ASP.NET Core）必须与安装在 Web 服务器上的 ASP.NET 版本相对应。
 
-1. 选择“MVC”(.NET Framework) 或“Web 应用程序(模型-视图-控制器)”（适用于 .NET Core），并确保已选中“无身份验证”，然后单击“确定”   。
+1. 选择“MVC”(.NET Framework) 或“Web 应用程序(模型-视图-控制器)”（适用于 .NET Core），并确保已选中“无身份验证”，然后选择“确定”   。
 
-1. 键入名称（例如“MyWebApp”），然后单击“确定” 。
+1. 键入名称（例如“MyWebApp”），然后选择“确定” 。
 
     Visual Studio 随即创建项目。
 
@@ -75,7 +75,7 @@ ms.locfileid: "84183309"
 
 1. 在 Azure 门户中打开 Azure 应用服务。
 
-1. 单击“获取发布配置文件”并本地保存配置文件。
+1. 转到“获取发布配置文件”并在本地保存配置文件。
 
     ![获取发布配置文件](../deployment/media/tutorial-azure-app-service-get-publish-profile.png)
 

@@ -1,16 +1,17 @@
 ---
-title: 在防火墙或代理服务器后面安装和使用 Visual Studio for Mac
+title: 在有防火墙或代理服务器的情况下安装和使用 Visual Studio for Mac
+titleSuffix: ''
 description: 本文档列出了必须在防火墙中允许的主机，以便 Visual Studio for Mac（及其工作负载，包括 Xamarin）能够在企业环境中正常运行。
 ms.assetid: 79C0F1A3-0C13-4E55-A820-1138A4082B77
 author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 09/18/2019
-ms.openlocfilehash: 817fce7958ce2b3e4bc3684e639197da8f69e40d
-ms.sourcegitcommit: 2ce59c2ffeba5ba7f628c2e6c75cba4731deef8a
+ms.openlocfilehash: 25a4597c8d523b63e7ceb0cf8b5eff71af58071a
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "85938983"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88800406"
 ---
 # <a name="install-and-use-visual-studio-for-mac-behind-a-firewall-or-proxy-server"></a>在防火墙或代理服务器后面安装和使用 Visual Studio for Mac
 

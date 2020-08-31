@@ -7,19 +7,19 @@ ms.assetid: 872c5746-5357-4764-949b-aa525a0adf1a
 ms.date: 04/20/2020
 ms.topic: conceptual
 description: 了解如何通过 Visual Studio 订阅利用 Microsoft Windows 虚拟桌面
-ms.openlocfilehash: b84527f7bdaf3e9218585bd52af0743ef23a5637
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 865e18d7b8672520fcb771a1db56141fb6fd9f0a
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84183582"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88800601"
 ---
 # <a name="access-windows-virtual-desktop-in-subscriptions"></a>在订阅中访问 Windows 虚拟桌面 
 Visual Studio 订阅者现在可以将其 Azure 开发/测试个人额度用于 Microsoft Windows 虚拟桌面服务。  
-Windows 虚拟桌面是在云中运行的综合性桌面和应用虚拟化服务。 这是唯一一种可提供简化管理、多会话 Windows 10、对 Office 365 专业增强版的优化以及对远程桌面服务 (RDS) 环境的支持的虚拟桌面基础结构 (VDI)。 只需几分钟即可在 Azure 上部署和缩放 Windows 桌面和应用，并获得内置的安全性和符合性功能。
+Windows 虚拟桌面是在云中运行的综合性桌面和应用虚拟化服务。 这是唯一一种可提供简化管理、多会话 Windows 10、对 Microsoft 365 企业应用版的优化以及对远程桌面服务 (RDS) 环境的支持的虚拟桌面基础结构 (VDI)。 只需几分钟即可在 Azure 上部署和缩放 Windows 桌面和应用，并获得内置的安全性和符合性功能。
 下面是在 Azure 中运行 Windows 虚拟桌面时可以执行的操作：
 - 设置多会话 Windows 10 部署，使整个 Windows 10 操作系统获得可伸缩性
-- 虚拟化 Office 365 ProPlus，并将其优化为可在多用户虚拟方案中运行
+- 虚拟化 Microsoft 365 应用企业版，并对其进行优化，使其可在多用户虚拟场景中运行
 - 为 Windows 7 虚拟桌面提供免费的扩展安全更新
 - 将现有的远程桌面服务 (RDS) 和 Windows Server 桌面与应用迁移到任何计算机
 - 虚拟化桌面和应用

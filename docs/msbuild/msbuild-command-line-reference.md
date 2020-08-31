@@ -17,12 +17,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b2074c4f15daf6a5ee5986a473ad98d7868409a3
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: a393afa3346b42786ff352dc0c2d48ea6c8b1152
+ms.sourcegitcommit: 3ef987e99616c3eecf4731bf5ac89e16238e68aa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85289256"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88639375"
 ---
 # <a name="msbuild-command-line-reference"></a>MSBuild 命令行参考
 
@@ -47,7 +47,7 @@ MSBuild.exe [Switches] [ProjectFile]
 |开关|缩写形式|描述|
 |------------|----------------|-----------------|
 |-detailedSummary|-ds|在生成日志末尾显示有关生成的配置以及如何将它们安排到节点中的详细信息。|
-|-graphBuild[:`True` or `False`]|-graph[:`True` or `False`]|使 MSBuild 构造和生成项目图。 构图涉及标识对窗体依赖项的项目引用。 生成该图涉及到尝试在引用它们的项目之前生成项目引用，这不同于传统的 MSBuild 计划。|
+|-graphBuild[:`True` or `False`]|-graph[:`True` or `False`]|使 MSBuild 构造和生成项目图。 构图涉及标识对窗体依赖项的项目引用。 生成该图涉及到尝试在引用它们的项目之前生成项目引用，这不同于传统的 MSBuild 计划。 需要 MSBuild 16 或更高版本。|
 |-help|/? 或 -h|显示用法信息。 以下命令是一个示例：<br /><br /> `msbuild.exe -?`|
 |-ignoreProjectExtensions: `extensions`|-ignore: `extensions`|确定要生成的项目文件时忽略指定扩展名。 使用分号或逗号分隔多个扩展名，如以下示例所示：<br /><br /> `-ignoreprojectextensions:.vcproj,.sln`|
 |-interactive[:`True` or `False`]|-|指示允许生成中的操作与用户交互。  不要在不期望交互的自动方案中使用此参数。 指定 -interactive 等效于指定 -interactive:true。  使用此参数重写来自响应文件的值。

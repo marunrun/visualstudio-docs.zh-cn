@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 80c27ef642697a8514a0809095b980d8c38a47d8
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.openlocfilehash: 5c94d605459720722b0e1360ab3a56539667d51e
+ms.sourcegitcommit: de98ed7edc81383e47b87ae6e61143fbbbe7bc56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85460860"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88706628"
 ---
 # <a name="error-debugging-isn39t-possible-because-a-kernel-debugger-is-enabled-on-the-system"></a>错误：无法进行调试，因为系统上已启用内核调试程序
 调试托管代码时，你可能会收到以下错误消息：

@@ -10,12 +10,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: ea735dd5cc3da8d5509961dbc8b27eb6106fd2af
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.openlocfilehash: be93ac7b8bc0659da522abcf6000d97ec05d46b9
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85520557"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801329"
 ---
 # <a name="refactor-python-code"></a>重构 Python 代码
 
@@ -71,7 +71,7 @@ Visual Studio 尝试筛选出实际未在模块中定义的成员，例如导入
 
 编写代码时，可对根本未使用的模块使用 `import` 语句结尾。 因为 Visual Studio 可对代码进行分析，因此它可自动确定是否需要 `import` 语句，方法是查看所导入名称在出现语句的位置下方是否被使用。
 
-在编辑器中右键单击任意位置，然后选择“删除导入”  ，这将为你提供从“所有范围”  或仅“当前范围”  中删除的选项：
+在编辑器中右键单击任意位置，然后选择“删除导入”，这将为你提供从“所有范围”或仅“当前范围”中删除的选项：
 
 ![删除导入菜单](media/code-refactor-remove-imports-1.png)
 

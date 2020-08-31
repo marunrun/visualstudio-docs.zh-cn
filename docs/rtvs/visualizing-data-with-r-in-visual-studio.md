@@ -8,12 +8,12 @@ ms.author: kraigb
 manager: jillfra
 ms.workload:
 - data-science
-ms.openlocfilehash: fb16f4a573a7b905484982871dc838143b125591
-ms.sourcegitcommit: d281d2a04a5bc302650eebf369946d8f101e59dd
+ms.openlocfilehash: dbb3984385e0042c669f8aad1d5bb4a2f64de917
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88144696"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801615"
 ---
 # <a name="create-visual-data-plots-with-r"></a>使用 R 创建可视数据图
 
@@ -71,7 +71,7 @@ ms.locfileid: "88144696"
 
 绘图也是独立的对象，这意味着可以使用鼠标拖放或使用右键单击上下文菜单和“编辑”菜单上的“复制”、“剪切”和“粘贴”命令，在绘图窗口间复制或移动绘图     。
 
-拖放的默认行为是复制；按住 Shift 键进行拖放则是移动  。
+拖放的默认行为是复制；按下 Shift 键进行拖放则是移动。
 
 ## <a name="plot-history"></a>绘图历史记录
 
@@ -82,7 +82,7 @@ ms.locfileid: "88144696"
 
 ![绘图历史记录窗口](media/plotting-plot-history-window.png)
 
-若要在其关联的窗口中打开绘图，请双击并选中该绘图，然后选择“显示绘图”工具栏按钮，或右键单击并选择“显示绘图”   。 还可选中单个绘图，并从右键单击上下文或“编辑”  菜单进行复制、剪切或删除。
+若要在其关联的窗口中打开绘图，请双击并选中该绘图，然后选择“显示绘图”工具栏按钮。 或者右键单击绘图并选择“显示绘图”。 还可选中单个绘图，并从上下文或“编辑”菜单进行复制、剪切或删除。
 
 所有窗口的绘图历史记录的生命周期取决于交互 R 会话的生命周期。 如果重置 R 会话，或者退出并重启 Visual Studio，会重置绘图历史记录。
 

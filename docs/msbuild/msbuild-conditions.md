@@ -18,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fea7763bf1cbce5fac36ce2cd5e54c40e1da989a
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 5994e3f5b17f50d707c4c5a00666d60c2efd3184
+ms.sourcegitcommit: de98ed7edc81383e47b87ae6e61143fbbbe7bc56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85289230"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88711698"
 ---
 # <a name="msbuild-conditions"></a>MSBuild 条件
 
@@ -57,6 +57,12 @@ MSBuild 支持一组特定的条件，只要允许使用 `Condition` 属性，�
 
 </Project>
 ```
+
+在 MSBuild 项目文件中，没有真正的布尔类型。 布尔数据用属性表示，这些属性可能是空的，也可能设置为任何值。 因此，`'$(Prop)' == 'true'` 表示“如果 Prop 是 `true`，但 `'$(Prop)' != 'false'` 表示“如果 Prop 是 `true` 或者未设置，或者设置为其他内容。”
+
+布尔逻辑只在条件的上下文中计算，因此，像 `<Prop2>'$(Prop1)' == 'true'</Prop>` 这样的属性设置是以（变量扩展后的）字符串的形式来表示的，而不是以布尔值的形式来计算。  
+
+MSBuild 实现了一些特殊的处理规则，使其更容易处理用作布尔值的字符串属性。 接受布尔文本，因此 `Condition="true"` 和 `Condition="false"` 按预期方式工作。 MSBuild 还包括支持布尔求反运算符的特殊规则。 因此，如果 `$(Prop)` 为“true”，则 `!$(Prop)` 展开为 `!true`，这等于 `false`，与您预期的相同。
 
 ## <a name="see-also"></a>请参阅
 

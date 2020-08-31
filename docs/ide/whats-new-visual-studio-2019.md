@@ -2,7 +2,7 @@
 title: Visual Studio 2019 中的新增功能
 titleSuffix: ''
 description: 了解 Visual Studio 2019 中的新增功能。
-ms.date: 08/05/2020
+ms.date: 08/21/2020
 helpviewer_keywords:
 - Visual Studio, what's new
 - what's new [Visual Studio]
@@ -15,12 +15,12 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 333bb9ca24579758112199c13d5a4af3f60d6058
-ms.sourcegitcommit: d21f1a028628d0221b567ba496690b3b68cfded7
+ms.openlocfilehash: 389315d7ec48c85fbab96b5270cbcef54faf7e8e
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87818581"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801056"
 ---
 # <a name="whats-new-in-visual-studio-2019"></a>Visual Studio 2019 中的新增功能
 
@@ -152,7 +152,7 @@ Visual Studio 2019 中会默认安装此服务。
 
 我们正在推出一个新的扩展，你可以下载该扩展与 Visual Studio 2019 一起使用。 使用此新扩展，可以查看、运行甚至调试团队的拉取请求，而无需离开 Visual Studio。 我们支持 GitHub 和 Azure DevOps 存储库中的代码。
 
-   ![Visual Studio 2019 中新启动窗口的屏幕截图](media/vs-2019/pr-experience.png)
+   ![Visual Studio 2019 中的新“拉取请求”扩展的屏幕截图](media/vs-2019/pr-experience.png)
 
 有关详细信息，请参阅 [Code reviews using the Visual Studio Pull Requests extension](https://devblogs.microsoft.com/visualstudio/code-reviews-using-the-visual-studio-pull-requests-extension/)（使用 Visual Studio 拉取请求扩展的代码评审）博客文章。
 
@@ -241,9 +241,9 @@ Visual Studio 2019 中会默认安装此服务。
 * [Visual Studio 2019 发行说明](/visualstudio/releases/2019/release-notes/)
 * [Visual Studio 2019 for Mac 发行说明](/visualstudio/releasenotes/vs2019-mac-relnotes/)
 * [Visual Studio 2019 SDK 的新增功能](../extensibility/whats-new-visual-studio-2019-sdk.md)
-* [Visual Studio 中 C++ 的新增功能](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio.md)
-* [C# 8.0 的新增功能](/dotnet/csharp/whats-new/csharp-8.md)
-* [.NET Core 3.1 的新增功能](/dotnet/core/whats-new/dotnet-core-3-1.md)
-* [.NET Framework 中的新增功能](/dotnet/framework/whats-new.md)
+* [Visual Studio 中 C++ 的新增功能](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio/)
+* [C# 8.0 的新增功能](/dotnet/csharp/whats-new/csharp-8/)
+* [.NET Core 3.1 的新增功能](/dotnet/core/whats-new/dotnet-core-3-1/)
+* [.NET Framework 中的新增功能](/dotnet/framework/whats-new/)
 * [Microsoft Build 会议](https://www.microsoft.com/build)
 * [Microsoft Ignite 会议](https://www.microsoft.com/ignite)

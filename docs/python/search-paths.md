@@ -10,12 +10,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 3a23afff970405bf7ae1bbd1c8aad326eb133780
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.openlocfilehash: 10430c6eba57c97dd46a706d0ec2f532cd08d4f3
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85520375"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801160"
 ---
 # <a name="how-visual-studio-uses-python-search-paths"></a>Visual Studio 如何使用 Python 搜索路径
 
@@ -29,7 +29,7 @@ ms.locfileid: "85520375"
 
 因此，Visual Studio 提供了一种方法，可直接在环境和项目中指定搜索路径。 在 Visual Studio 中运行或调试的代码会接收 `PYTHONPATH` 值（和其他等效变量）中的搜索路径。 通过添加搜索路径，Visual Studio 会在需要时检查这些位置中的库并为它们构建 IntelliSense 数据库（Visual Studio 2017 版本 15.5 及更早版本；构建数据库需要一些时间，具体取决于库的数量）。
 
-若要添加搜索路径，请转到“解决方案资源管理器”，展开项目节点，右键单击搜索路径，选择“将文件夹添加到搜索路径”    ：
+若要添加搜索路径，请转到“解决方案资源管理器”，展开项目节点，右键单击搜索路径，并选择“将文件夹添加到搜索路径”  ：
 
 ::: moniker range="vs-2017"
 ![解决方案资源管理器中搜索路径上的“将文件夹添加到搜索路径”命令](media/search-paths-command.png)

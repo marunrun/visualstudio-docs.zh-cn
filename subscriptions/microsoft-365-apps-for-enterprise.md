@@ -7,17 +7,17 @@ ms.assetid: d1257931-392a-4a65-bf26-177737505122
 ms.date: 06/24/2020
 ms.topic: how-to
 description: 了解和安装 Microsoft 365 应用企业版
-ms.openlocfilehash: 8ece49244d5bdecadc5992cda4e56d0785666e2a
-ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
+ms.openlocfilehash: eb9f87273cbd8439f5053f60411e41fac41e4161
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88250745"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88800809"
 ---
 # <a name="microsoft-365-apps-for-enterprise-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 Microsoft 365 应用企业版
 Microsoft 365 应用企业版（旧称 Office 365 Pro Plus）在选定的 Visual Studio 订阅中提供。 
 
-出色地完成工作。 使用不断更新的应用随时随地工作。 Office 365 Pro Plus 订阅随附以下高级应用：Word、Excel、PowerPoint、OneNote、Outlook、Publisher 和 Access（Publisher 和 Access 仅适用于电脑）。 这些应用可安装在多台设备上，包括 PC、Mac、iPad、iPhone、Android 平板电脑和 Android 手机。 借助订阅，可获取最新版应用，并自动接收已发布的更新。
+出色地完成工作。 使用不断更新的应用随时随地工作。 Microsoft 365 企业应用版订阅随附以下高级应用：Word、Excel、PowerPoint、OneNote、Outlook、Publisher 和 Access（Publisher 和 Access 仅适用于 PC）。 这些应用可安装在多台设备上，包括 PC、Mac、iPad、iPhone、Android 平板电脑和 Android 手机。 借助订阅，可获取最新版应用，并自动接收已发布的更新。
 
 > [!NOTE]
 > Microsoft 365 应用企业版包含在 Visual Studio 订阅中时，可将其用于生产。  
