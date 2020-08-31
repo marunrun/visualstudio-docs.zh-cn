@@ -295,12 +295,12 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 485d3a066ec7d6044082367c36136db8bea03362
-ms.sourcegitcommit: 016bcdc7cd3e3619457beb321800e98544efb6c9
+ms.openlocfilehash: 61c15689e92132d4e3e089823bc94fc90852d4ed
+ms.sourcegitcommit: c4212f40df1a16baca1247cac2580ae699f97e4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89091481"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89176060"
 ---
 # <a name="code-analysis-warnings-for-managed-code-by-checkid"></a>托管代码的代码分析警告（按 CheckId）
 
@@ -440,7 +440,7 @@ ms.locfileid: "89091481"
 | CA1801 | [CA1801:检查未使用的参数](../code-quality/ca1801.md) | 方法签名包含一个没有在方法体中使用的参数。 |
 | CA1802 |[CA1802:在合适的位置使用文本](../code-quality/ca1802.md) |某个字段被声明为 static 和 read-only（在 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 中为 Shared 和 ReadOnly），并使用可在编译时计算的值初始化。 由于分配给目标字段的值是在编译时可的，因此将声明更改为) 字段中的 const (Const， [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 以便在编译时而不是在运行时计算该值。 |
 | CA1804 | [CA1804:移除未使用的局部变量](../code-quality/ca1804.md) | 未使用的局部变量和不必要的赋值会增加程序集的大小并降低性能。 |
-| CA1805 | [CA1805：避免进行不必要的初始化](../code-quality/ca1805.md) | 在运行构造函数之前，.NET 运行时将引用类型的所有字段初始化为其默认值。 在大多数情况下，显式将字段初始化为其默认值是冗余的，这会增加维护成本，并可能会降低性能 (例如，通过增加) 的程序集大小。 |
+| CA1805 | [CA1805：不必要地初始化](../code-quality/ca1805.md) | 在运行构造函数之前，.NET 运行时将引用类型的所有字段初始化为其默认值。 在大多数情况下，显式将字段初始化为其默认值是冗余的，这会增加维护成本，并可能会降低性能 (例如，通过增加) 的程序集大小。 |
 | CA1806 | [CA1806:不要忽略方法结果](../code-quality/ca1806.md) | 创建一个新对象，但从不使用该对象；或者调用会创建并返回一个新字符串的方法，但从不使用这个新字符串；或者 COM 或 P/Invoke 方法返回一个从不使用的 HRESULT 或错误代码。 |
 | CA1809 |[CA1809:避免过多的局部变量](../code-quality/ca1809.md) | 优化性能的常见方法是将值存储于处理器寄存器，而不是内存中，这称为“注册值”。 若要提高所有的局部变量都能注册的机会，应将局部变量的数目限制在 64 个以内。 |
 | CA1810 | [CA1810:以内联方式初始化引用类型的静态字段](../code-quality/ca1810.md) | 当一个类型声明显式静态构造函数时，实时 (JIT) 编译器会向该类型的每个静态方法和实例构造函数中添加一项检查，以确保之前已调用该静态构造函数。 静态构造函数检查会降低性能。 |
@@ -577,6 +577,7 @@ ms.locfileid: "89091481"
 | CA2245 | [CA2245:请勿将属性分配给其自身](../code-quality/ca2245.md) | 属性意外分配给自身。 |
 | CA2246 | [CA2246:请勿在同一语句中分配符号及其成员](../code-quality/ca2246.md) | 不建议在同一语句中分配符号及其成员（即，字段或属性）。 如果成员访问权限打算在赋值前使用符号的旧值，或者在此语句的赋值中使用新值，则不清楚。 |
 | CA2247 | [CA2247：传递到 TaskCompletionSource 构造函数的参数应为 TaskCreationOptions 枚举，而不是 System.threading.tasks.taskcontinuationoptions 枚举。](../code-quality/ca2247.md) | TaskCompletionSource 具有采用 TaskCreationOptions 的构造函数，这些构造函数控制基础任务，以及采用任务中存储的对象状态的构造函数。  意外传递 System.threading.tasks.taskcontinuationoptions 而不是 TaskCreationOptions 将导致调用将选项视为状态。 |
+| CA2249 | [CA2249： CA2249：请考虑使用字符串。包含而不是字符串。 IndexOf](../code-quality/ca2249.md) | 对结果的调用 `string.IndexOf` （其中，用于检查是否存在子字符串）可以替换为 `string.Contains` 。 |
 | CA5122 | [CA5122 P/Invoke 声明不应是安全关键的](../code-quality/ca5122.md) | 当方法执行安全敏感性操作时，将被标记为 SecuritySafeCritical，但透明代码使用它们也是安全的。 透明代码决不能通过通过 P/Invoke 直接调用本机代码。 因此，将 P/Invoke 标记为安全关键将使透明代码无法调用它，并且会误导安全分析。 |
 | CA5359 | [CA5359 不禁用证书验证](../code-quality/ca5359.md) | 证书可以帮助验证服务器的身份。 客户端应验证服务器证书，以确保将请求发送到目标服务器。 如果 Servicepointmanager.servercertificatevalidationcallback 始终返回 `true` ，则任何证书将通过验证。 |
 | CA5360 | [CA5360 不调用反序列化中的危险方法](../code-quality/ca5360.md) | 不受信任的反序列化是指使用不受信任的数据来滥用应用程序逻辑的漏洞，导致拒绝服务 (DoS) 攻击，甚至在反序列化时执行任意代码。 当应用程序对其控制下的不受信任的数据进行反序列化时，恶意用户经常会滥用这些反序列化功能。 具体而言，就是在反序列化过程中调用危险方法。 成功的反反序列化攻击可能会允许攻击者发起攻击，如 DoS 攻击、身份验证绕过和远程代码执行。 |
