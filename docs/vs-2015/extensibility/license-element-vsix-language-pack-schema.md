@@ -8,12 +8,12 @@ ms.assetid: 57dac3b7-0cdd-405c-9af5-30ed9ca45e53
 caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 91f0792f64e09292836a3b2d60f669c67903b3a7
-ms.sourcegitcommit: d9254e54079ae01cdf2d07b11f988faf688f80fc
+ms.openlocfilehash: f1299d97cbda78049732d3367a9231272397e2ec
+ms.sourcegitcommit: 26178b116cbf7353fee6ca989b8d872114f7b405
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88114162"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89284377"
 ---
 # <a name="license-element-vsix-language-pack-schema"></a>License 元素（VSIX 语言包架构）
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -33,13 +33,13 @@ ms.locfileid: "88114162"
   
 |特性|说明|  
 |---------------|-----------------|  
-|None||  
+|无||  
   
 ### <a name="child-elements"></a>子元素  
   
 |元素|说明|  
 |-------------|-----------------|  
-|None||  
+|无||  
   
 ### <a name="parent-elements"></a>父元素  
   
@@ -54,39 +54,13 @@ ms.locfileid: "88114162"
  如果定义了该 `License` 元素，则在安装过程中将显示指定许可证文件的文本，并且用户必须接受许可证才能继续。  
   
 ## <a name="element-information"></a>元素信息  
-
-:::row:::
-    :::column:::
-        命名空间  
-    :::column-end:::
-    :::column:::
-        `http://schemas.microsoft.com/developer/vsx-schema-lp/2010`
-    :::column-end:::
-:::row-end:::
-:::row:::
-    :::column:::
-        架构名称
-    :::column-end:::
-    :::column:::
-        VSIX 语言包架构
-    :::column-end:::
-:::row-end:::
-:::row:::
-    :::column:::
-        验证文件
-    :::column-end:::
-    :::column:::
-        VSIXLanguagePackSchema
-    :::column-end:::
-:::row-end:::
-:::row:::
-    :::column:::
-        可以为空
-    :::column-end:::
-    :::column:::
-        不适用
-    :::column-end:::
-:::row-end:::
+  
+|                 |                                                           |
+|-----------------|-----------------------------------------------------------|
+|    命名空间    | `http://schemas.microsoft.com/developer/vsx-schema-lp/2010` |
+|   架构名称   |                 VSIX 语言包架构                 |
+| 验证文件 |                VSIXLanguagePackSchema                 |
+|  可以为空   |                      不适用                       |
   
 ## <a name="see-also"></a>另请参阅  
  [VSX 语言包架构引用](../extensibility/vsx-language-pack-schema-reference.md)   
