@@ -10,12 +10,12 @@ metadata:
   author: Mikejo5000
   ms.author: mikejo
   ms.date: 10/15/2019
-  ms.openlocfilehash: 2bafba53a131ca440b7d1e9cb68d18ac0ac833dd
-  ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+  ms.openlocfilehash: 94dcd1cf66ed1893a8cdfd069314d689cb1e9329
+  ms.sourcegitcommit: 016bcdc7cd3e3619457beb321800e98544efb6c9
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 06/27/2020
-  ms.locfileid: "85462091"
+  ms.lasthandoff: 08/29/2020
+  ms.locfileid: "89091392"
 landingContent:
 - title: 分析 C 和 C++ 代码
   linkLists:
@@ -27,7 +27,7 @@ landingContent:
     links:
     - text: C++ 代码分析警告
       url: code-analysis-for-c-cpp-warnings.md
-- title: 分析托管代码的质量
+- title: .NET 代码质量分析
   linkLists:
   - linkListType: overview
     links:
@@ -41,17 +41,17 @@ landingContent:
       url: analyzers-faq.md
   - linkListType: how-to-guide
     links:
-    - text: 安装 FxCop 分析器
+    - text: 配置代码质量分析
       url: install-fxcop-analyzers.md
   - linkListType: reference
     links:
-    - text: 托管代码分析警告
+    - text: .NET 代码质量规则
       url: code-analysis-for-managed-code-warnings.md
-- title: 分析托管代码样式
+- title: .NET 代码样式分析
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: 分析代码样式
+    - text: 配置代码样式分析
       url: ../ide/create-portable-custom-editor-options.md
 - title: 测量代码复杂性
   linkLists:
