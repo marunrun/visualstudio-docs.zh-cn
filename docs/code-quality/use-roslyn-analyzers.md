@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2b6dd5269868f02582472bee86f19d23719c9a5b
-ms.sourcegitcommit: 4d7c883ea3eedd795eeb4a9d3bd3dee82c8e093e
+ms.openlocfilehash: e20427ae3d64a485bb25da2f4482bbbec51e3dda
+ms.sourcegitcommit: 26178b116cbf7353fee6ca989b8d872114f7b405
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88893419"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89219772"
 ---
 # <a name="use-code-analyzers"></a>使用代码分析器
 
@@ -102,6 +102,9 @@ ms.locfileid: "88893419"
 - 为所有分析器规则设置规则严重性：
 
 `dotnet_analyzer_diagnostic.severity = <severity>`
+
+> [!NOTE]
+> 用于一次性配置多个分析器规则的项仅适用于 *默认启用*的规则。 在分析器包中默认标记为禁用的分析器规则必须通过显式 `dotnet_diagnostic.<rule ID>.severity = <severity>` 项启用。
 
 如果你有多个适用于特定规则 ID 的条目，则选择适用项的优先顺序如下：
 
@@ -392,7 +395,7 @@ msbuild myproject.csproj /target:rebuild /verbosity:minimal
 <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.0" PrivateAssets="all" />
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Studio 中的代码分析器概述](../code-quality/roslyn-analyzers-overview.md)
 - [提交代码分析器 bug](https://github.com/dotnet/roslyn-analyzers/issues)

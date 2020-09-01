@@ -10,22 +10,22 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 84b37bce062ec5f1f406bc6ef9f6507399820af9
-ms.sourcegitcommit: 596f92fcc84e6f4494178863a66aed85afe0bb08
+ms.openlocfilehash: c3d9c1dfa45251d0f64a93bb9a5142dcec76b7c7
+ms.sourcegitcommit: 26178b116cbf7353fee6ca989b8d872114f7b405
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82189471"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89219720"
 ---
 # <a name="fxcop-rule-port-status"></a>Fxcop 规则端口状态
 
-如果以前在 Visual Studio 中使用了静态代码分析，则可能想知道哪些规则在当前实现中作为[FxCop 分析器](install-fxcop-analyzers.md)提供。 此页列出了已移植的规则以及尚未移植的规则，以及是否有计划对它们进行端口。
+如果以前在 Visual Studio 中使用了静态代码分析，则可能想知道哪些规则在当前实现中作为 [FxCop 分析器](install-fxcop-analyzers.md)提供。 此页列出了已移植的规则以及尚未移植的规则，以及是否有计划对它们进行端口。
 
 ## <a name="ported-rules"></a>移植的规则
 
-Roslyn 存储库中自动[生成的文档页面](https://github.com/dotnet/roslyn-analyzers/blob/master/src/Microsoft.CodeAnalysis.FxCopAnalyzers/Microsoft.CodeAnalysis.FxCopAnalyzers.md)具有已移植到 FxCop 分析器的最新规则列表。 该页还包含其他信息，例如是否默认启用规则，以及是否有关联的*代码修复*。 （[代码修复](../ide/quick-actions.md)是 Visual Studio 的灯泡图标菜单中提供的一次单击的修复程序。）
+Roslyn 存储库中自动 [生成的文档页面](https://github.com/dotnet/roslyn-analyzers/blob/master/src/Microsoft.CodeAnalysis.FxCopAnalyzers/Microsoft.CodeAnalysis.FxCopAnalyzers.md) 具有已移植到 FxCop 分析器的最新规则列表。 该页还包含其他信息，例如是否默认启用规则，以及是否有关联的 *代码修复*。  ([代码修补程序](../ide/quick-actions.md) 是 Visual Studio 的灯泡图标菜单中提供的单击一次修复。 ) 
 
-截止到此页上的日期，已移植到[fxcop 分析器](install-fxcop-analyzers.md)的 fxcop 规则列表包括：
+截止到此页上的日期，已移植到 [fxcop 分析器](install-fxcop-analyzers.md) 的 fxcop 规则列表包括：
 
 规则 ID | 标题
 --------|---------
@@ -57,7 +57,7 @@ Roslyn 存储库中自动[生成的文档页面](https://github.com/dotnet/rosly
 [CA1050](ca1050.md) | 在命名空间中声明类型
 [CA1051](ca1051.md) | 不要声明可见实例字段
 [CA1052](ca1052.md) | 静态容器类型应为 static 或 NotInheritable
-[CA1053](ca1053.md) | 静态容器类型不应具有构造函数（CA1053 是用于 FxCop 分析器的[CA1052](ca1052.md)的一部分）
+[CA1053](ca1053.md) | 静态容器类型不应具有构造函数 (CA1053 是 FxCop 分析器的 [CA1052](ca1052.md) 的一部分) 
 [CA1054](ca1054.md) | Uri 参数不应为字符串
 [CA1055](ca1055.md) | Uri 返回值不应是字符串
 [CA1056](ca1056.md) | Uri 属性不应是字符串
@@ -68,14 +68,14 @@ Roslyn 存储库中自动[生成的文档页面](https://github.com/dotnet/rosly
 [CA1063](ca1063.md) | 正确实现 IDisposable
 [CA1064](ca1064.md) | 异常应该是公共的
 [CA1065](ca1065.md) | 不要在意外的位置引发异常
-[CA1066](ca1066.md) | 类型{0}应实现 IEquatable\<T> 因为它重写 Equals
-[CA1067](ca1067.md) | 实现 IEquatable\<T 时重写对象 Equals （对象）>
+[CA1066](ca1066.md) | 类型 {0} 应实现 IEquatable \<T> ，因为它重写 Equals
+[CA1067](ca1067.md) | 实现 IEquatable 时，重写对象等于)  (对象\<T>
 [CA1068](ca1068.md) | CancellationToken 参数必须最后出现
 CA1200 | 不要使用带前缀的 cref 标记
 [CA1303](ca1303.md) | 请不要将文本作为本地化参数传递
 [CA1304](ca1304.md) | 指定 CultureInfo
 [CA1305](ca1305.md) | 指定 IFormatProvider
-[CA1307](ca1307.md) | 指定 StringComparison
+[CA1307](ca1307.md) | 为清楚起见指定 StringComparison
 [CA1308](ca1308.md) | 将字符串规范化为大写
 [CA1309](ca1309.md) | 使用序号字符串比较
 [CA1401](ca1401.md) | P/Invokes 应该是不可见的
@@ -119,7 +119,7 @@ CA1826 | 不要对可编制索引的集合使用可枚举方法。 改为直接�
 [CA2000](ca2000.md) | 丢失范围之前释放对象
 [CA2002](ca2002.md) | 不要锁定具有弱标识的对象
 [CA2007](ca2007.md) | 考虑在等待的任务上调用 ConfigureAwait
-CA2008 | 不要在不传递 TaskScheduler 的情况下创建任务
+[CA2008](ca2008.md) | 不要在不传递 TaskScheduler 的情况下创建任务
 CA2009 | 不要对 ImmutableCollection 值调用 ToImmutableCollection
 CA2010 | 始终使用由 PreserveSigAttribute 标记的方法返回的值
 [CA2100](ca2100.md) | 检查 SQL 查询是否存在安全漏洞
@@ -205,11 +205,11 @@ CA9999 | 分析器版本不匹配
 
 ## <a name="unported-rules"></a>Unported 规则
 
-尚未移植到[FxCop 分析器](install-fxcop-analyzers.md)的规则集包括尚未但仍[可移植](#rules-that-may-be-ported)的规则，以及不推荐使用且[不会移植](#deprecated-rules)的规则。
+尚未移植到 [FxCop 分析器](install-fxcop-analyzers.md) 的规则集包括尚未但仍 [可移植](#rules-that-may-be-ported)的规则，以及不推荐使用且 [不会移植](#deprecated-rules)的规则。
 
 ### <a name="rules-that-may-be-ported"></a>可移植的规则
 
-以下 FxCop 旧分析规则尚未实现为分析器，但仍可能是。 这可能是由于技术原因导致的，或者只是规则的优先级较低。 有关每个规则的移植状态的详细信息，请单击 "**跟踪问题**" 列中的链接。
+以下 FxCop 旧分析规则尚未实现为分析器，但仍可能是。 这可能是由于技术原因导致的，或者只是规则的优先级较低。 有关每个规则的移植状态的详细信息，请单击 " **跟踪问题** " 列中的链接。
 
 规则 ID | 跟踪问题
 --- | ---
@@ -272,7 +272,7 @@ CA9999 | 分析器版本不匹配
 
 ### <a name="deprecated-rules"></a>弃用的规则
 
-以下 FxCop 旧分析规则已弃用，不能作为分析器实现。 有关详细信息，可以在[roslyn-分析器 GitHub 问题页](https://github.com/dotnet/roslyn-analyzers/issues?utf8=%E2%9C%93&q=is:issue+label:FxCop-Port)上按规则 ID （例如**CA1009**）进行搜索。
+以下 FxCop 旧分析规则已弃用，不能作为分析器实现。 有关详细信息，你可以在[roslyn-分析器 GitHub 问题页](https://github.com/dotnet/roslyn-analyzers/issues?utf8=%E2%9C%93&q=is:issue+label:FxCop-Port)上按规则 ID (搜索，例如**CA1009**) 。
 
 - [CA1009](ca1009.md)
 - [CA1020](ca1020.md)
@@ -338,7 +338,7 @@ CA9999 | 分析器版本不匹配
 - [CA2210](ca2210.md)
 - [CA2220](ca2220.md)
 - [CA2221](ca2221.md)
-- [CA2222](ca2222.md) （[理由](https://github.com/dotnet/roslyn-analyzers/issues/1378)）
+- [CA2222](ca2222.md) ([理由](https://github.com/dotnet/roslyn-analyzers/issues/1378)) 
 - [CA2223](ca2223.md)
 - [CA2228](ca2228.md)
 - [CA2230](ca2230.md)

@@ -84,6 +84,7 @@ f1_keywords:
 - CA1307
 - CA1308
 - CA1309
+- CA1310
 - CA1400
 - CA1401
 - CA1402
@@ -173,6 +174,7 @@ f1_keywords:
 - CA1833
 - CA1835
 - CA1836
+- CA1837
 - CA1838
 - CA1900
 - CA1901
@@ -184,6 +186,7 @@ f1_keywords:
 - CA2004
 - CA2006
 - CA2007
+- CA2008
 - CA2009
 - CA2011
 - CA2012
@@ -295,12 +298,12 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 485d3a066ec7d6044082367c36136db8bea03362
-ms.sourcegitcommit: 016bcdc7cd3e3619457beb321800e98544efb6c9
+ms.openlocfilehash: 05937cef7187726134a7116edae4d74ee004de1d
+ms.sourcegitcommit: 26178b116cbf7353fee6ca989b8d872114f7b405
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89091481"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89219746"
 ---
 # <a name="code-analysis-warnings-for-managed-code-by-checkid"></a>托管代码的代码分析警告（按 CheckId）
 
@@ -382,9 +385,10 @@ ms.locfileid: "89091481"
 | CA1304 | [CA1304:指定 CultureInfo](../code-quality/ca1304.md) | 某方法或构造函数调用的成员有一个接受 System.Globalization.CultureInfo 参数的重载，但该方法或构造函数没有调用接受 CultureInfo 参数的重载。 如果未提供 CultureInfo 或 System.IFormatProvider 对象，则重载成员提供的默认值可能不会在所有区域设置中产生您想要的效果。 |
 | CA1305 | [CA1305:指定 IFormatProvider](../code-quality/ca1305.md) | 某方法或构造函数调用的一个或多个成员有接受 System.IFormatProvider 参数的重载，但该方法或构造函数没有调用接受 IFormatProvider 参数的重载。 如果未提供 System.Globalization.CultureInfo 或 IFormatProvider 对象，则重载成员提供的默认值可能不会在所有区域设置中产生您想要的效果。 |
 | CA1306 | [CA1306:设置数据类型的区域设置](../code-quality/ca1306.md) | 区域设置决定数据的区域性特定显示元素，例如，数值、货币符号和排序顺序所用的格式。 在创建 DataTable 或 DataSet 时，应显式设置区域设置。 |
-| CA1307 | [CA1307:指定 StringComparison](../code-quality/ca1307.md) | 字符串比较运算使用不设置 StringComparison 参数的方法重载。 |
+| CA1307 | [CA1307：为清楚起见指定 StringComparison](../code-quality/ca1307.md) | 字符串比较运算使用不设置 StringComparison 参数的方法重载。 |
 | CA1308 |[CA1308:将字符串规范化为大写](../code-quality/ca1308.md) | 字符串应正常化为大写字母。 少量字符转换为小写字母后不能再转换回来。 |
 | CA1309 | [CA1309:使用按顺序的 StringComparison](../code-quality/ca1309.md) | 非语义的字符串比较运算不会将 StringComparison 参数设置为 Ordinal 或 OrdinalIgnoreCase。 因此，通过将参数显式设置为 StringComparison.Ordinal 或 StringComparison.OrdinalIgnoreCase，通常可以提高代码的速度、正确性和可靠性。 |
+| CA1310 | [CA1310：指定 StringComparison 的正确性](../code-quality/ca1310.md) | 在默认情况下，字符串比较操作使用未设置 StringComparison 参数并使用特定于区域性的字符串比较的方法重载。 |
 | CA1400 | [CA1400： P/Invoke 入口点应该存在](../code-quality/ca1400.md) |公共或受保护方法标有 System.Runtime.InteropServices.DllImportAttribute 特性。 未能找到非托管库，或者未能将方法与库中的函数匹配。 |
 | CA1401 | [CA1401： P/Invoke 应不可见](../code-quality/ca1401.md) | 公共类型中的公共或受保护方法具有 System.Runtime.InteropServices.DllImportAttribute 特性（还在 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 中由 Declare 关键字实现）。 这些方法不能公开。 |
 | CA1402 |[CA1402:避免在 COM 可见接口中进行重载](../code-quality/ca1402.md) | 在向 COM 客户端公开重载的方法时，只有第一个方法重载保留其名称。 对于后续重载，将为其指定唯一名称，方法是在其名称后面追加一个下划线字符 (_) 和一个与该重载的声明顺序对应的整数。 |
@@ -440,7 +444,7 @@ ms.locfileid: "89091481"
 | CA1801 | [CA1801:检查未使用的参数](../code-quality/ca1801.md) | 方法签名包含一个没有在方法体中使用的参数。 |
 | CA1802 |[CA1802:在合适的位置使用文本](../code-quality/ca1802.md) |某个字段被声明为 static 和 read-only（在 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 中为 Shared 和 ReadOnly），并使用可在编译时计算的值初始化。 由于分配给目标字段的值是在编译时可的，因此将声明更改为) 字段中的 const (Const， [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 以便在编译时而不是在运行时计算该值。 |
 | CA1804 | [CA1804:移除未使用的局部变量](../code-quality/ca1804.md) | 未使用的局部变量和不必要的赋值会增加程序集的大小并降低性能。 |
-| CA1805 | [CA1805：避免进行不必要的初始化](../code-quality/ca1805.md) | 在运行构造函数之前，.NET 运行时将引用类型的所有字段初始化为其默认值。 在大多数情况下，显式将字段初始化为其默认值是冗余的，这会增加维护成本，并可能会降低性能 (例如，通过增加) 的程序集大小。 |
+| CA1805 | [CA1805：不必要地初始化](../code-quality/ca1805.md) | 在运行构造函数之前，.NET 运行时将引用类型的所有字段初始化为其默认值。 在大多数情况下，显式将字段初始化为其默认值是冗余的，这会增加维护成本，并可能会降低性能 (例如，通过增加) 的程序集大小。 |
 | CA1806 | [CA1806:不要忽略方法结果](../code-quality/ca1806.md) | 创建一个新对象，但从不使用该对象；或者调用会创建并返回一个新字符串的方法，但从不使用这个新字符串；或者 COM 或 P/Invoke 方法返回一个从不使用的 HRESULT 或错误代码。 |
 | CA1809 |[CA1809:避免过多的局部变量](../code-quality/ca1809.md) | 优化性能的常见方法是将值存储于处理器寄存器，而不是内存中，这称为“注册值”。 若要提高所有的局部变量都能注册的机会，应将局部变量的数目限制在 64 个以内。 |
 | CA1810 | [CA1810:以内联方式初始化引用类型的静态字段](../code-quality/ca1810.md) | 当一个类型声明显式静态构造函数时，实时 (JIT) 编译器会向该类型的每个静态方法和实例构造函数中添加一项检查，以确保之前已调用该静态构造函数。 静态构造函数检查会降低性能。 |
@@ -467,6 +471,7 @@ ms.locfileid: "89091481"
 | CA1833 |[CA1833:使用 AsSpan 或 AsMemory 而不是基于范围的索引器来获取数组的 Span 或 Memory 部分](../code-quality/ca1833.md) | 在数组上使用范围索引器并将值隐式赋值给 <xref:System.Span%601> 或类型时 <xref:System.Memory%601> ， <xref:System.Runtime.CompilerServices.RuntimeHelpers.GetSubArray%2A> 将使用方法而不是 <xref:System.Span%601.Slice%2A?#System_Span_1_Slice_System_Int32_System_Int32_> ，这将生成数组的请求部分的副本。 |
 | CA1835 |[CA1835：首选 "ReadAsync" 和 "WriteAsync" 的基于 Memory' 的重载](../code-quality/ca1835.md) | "Stream" 有一个 "ReadAsync" 重载，该重载采用 "Memory &lt; byte &gt; " 作为第一个参数，而 "WriteAsync" 重载采用 "ReadOnlyMemory &lt; Byte &gt; " 作为第一个参数。 更愿意调用基于内存的重载，这些重载更有效。 |
 | CA1836 |[CA1836：优先 `IsEmpty` `Count` 使用（如果可用）](../code-quality/ca1836.md) | 首选 `IsEmpty` 比、或更有效的属性， `Count` `Length` <xref:System.Linq.Enumerable.Count%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29> <xref:System.Linq.Enumerable.LongCount%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29> 以确定对象是否包含任何项。 |
+| CA1837 | [CA1837：使用 `Environment.ProcessId` 而不是 `Process.GetCurrentProcess().Id`](../code-quality/ca1837.md) | `Environment.ProcessId` 比更简单、更快 `Process.GetCurrentProcess().Id` 。 |
 | CA1838 | [CA1838：避免 `StringBuilder` P/invoke 参数](../code-quality/ca1838.md) | "StringBuilder" 的封送处理始终创建本机缓冲区副本，从而导致一个封送处理操作有多个分配。 |
 | CA1900 | [CA1900:值类型字段应为可移植字段](../code-quality/ca1900.md) | 此规则对以下项进行检查：当用显式布局声明的结构封送到 64 位操作系统上的非托管代码时，是否正确对齐。 |
 | CA1901 | [CA1901： P/Invoke 声明应为可移植声明](../code-quality/ca1901.md) | 此规则计算 P/Invoke 的每个参数和返回值的大小，还验证它们在封送到 32 位和 64 位操作系统上的非托管代码时参数的大小是否正确。 |
@@ -478,6 +483,7 @@ ms.locfileid: "89091481"
 | CA2004 | [CA2004:移除对 GC.KeepAlive 的调用](../code-quality/ca2004.md) | 如果转换为使用 SafeHandle，请移除所有对 GC.KeepAlive (object) 的调用。 在这种情况下，类不必调用 GC.KeepAlive。 这将假定它们没有终结器，而只是依赖 SafeHandle 来为它们完成 OS 句柄。 |
 | CA2006 | [CA2006:使用 SafeHandle 封装本机资源](../code-quality/ca2006.md) | 在托管代码中使用 IntPtr 可能意味着潜在的安全性和可靠性方面的问题。 必须检查所有使用 IntPtr 之处，以确定是否需要在该处使用 SafeHandle 或类似的技术。 |
 | CA2007 | [CA2007：不直接等待任务](ca2007.md) | 异步方法会[awaits](/dotnet/csharp/language-reference/keywords/await)直接等待 <xref:System.Threading.Tasks.Task> 。 当异步方法直接等待时 <xref:System.Threading.Tasks.Task> ，延续将在创建任务的同一线程中发生。 此行为在性能方面可能会很大，并且可能会在 UI 线程上导致死锁。 请考虑调用 <xref:System.Threading.Tasks.Task.ConfigureAwait(System.Boolean)?displayProperty=nameWithType> 以通知你的继续符。 |
+| CA2008 | [CA2008：不通过 TaskScheduler 创建任务](ca2008.md) | 任务创建或继续操作使用未指定参数的方法重载 <xref:System.Threading.Tasks.TaskScheduler> 。 |
 | CA2009 | [CA2009：请勿对 ImmutableCollection 值调用 ToImmutableCollection](ca2009.md) | `ToImmutable` 不必要地对命名空间中的不可变集合调用方法 <xref:System.Collections.Immutable> 。 |
 | CA2011 | [CA2011:请勿在其资源库中分配属性](ca2011.md) | 属性在其自身的 [set 访问器](/dotnet/csharp/programming-guide/classes-and-structs/using-properties#the-set-accessor)中被意外赋值。 |
 | CA2012 | [CA2012:正确使用 ValueTask](ca2012.md) | 从成员调用返回的 ValueTasks 将直接等待。  多次尝试使用 ValueTask 或在已知完成前直接访问一个结果可能会导致异常或损坏。  忽略此类 ValueTask 可能表明出现功能 bug，并可能会降低性能。 |
@@ -577,6 +583,7 @@ ms.locfileid: "89091481"
 | CA2245 | [CA2245:请勿将属性分配给其自身](../code-quality/ca2245.md) | 属性意外分配给自身。 |
 | CA2246 | [CA2246:请勿在同一语句中分配符号及其成员](../code-quality/ca2246.md) | 不建议在同一语句中分配符号及其成员（即，字段或属性）。 如果成员访问权限打算在赋值前使用符号的旧值，或者在此语句的赋值中使用新值，则不清楚。 |
 | CA2247 | [CA2247：传递到 TaskCompletionSource 构造函数的参数应为 TaskCreationOptions 枚举，而不是 System.threading.tasks.taskcontinuationoptions 枚举。](../code-quality/ca2247.md) | TaskCompletionSource 具有采用 TaskCreationOptions 的构造函数，这些构造函数控制基础任务，以及采用任务中存储的对象状态的构造函数。  意外传递 System.threading.tasks.taskcontinuationoptions 而不是 TaskCreationOptions 将导致调用将选项视为状态。 |
+| CA2249 | [CA2249： CA2249：请考虑使用字符串。包含而不是字符串。 IndexOf](../code-quality/ca2249.md) | 对结果的调用 `string.IndexOf` （其中，用于检查是否存在子字符串）可以替换为 `string.Contains` 。 |
 | CA5122 | [CA5122 P/Invoke 声明不应是安全关键的](../code-quality/ca5122.md) | 当方法执行安全敏感性操作时，将被标记为 SecuritySafeCritical，但透明代码使用它们也是安全的。 透明代码决不能通过通过 P/Invoke 直接调用本机代码。 因此，将 P/Invoke 标记为安全关键将使透明代码无法调用它，并且会误导安全分析。 |
 | CA5359 | [CA5359 不禁用证书验证](../code-quality/ca5359.md) | 证书可以帮助验证服务器的身份。 客户端应验证服务器证书，以确保将请求发送到目标服务器。 如果 Servicepointmanager.servercertificatevalidationcallback 始终返回 `true` ，则任何证书将通过验证。 |
 | CA5360 | [CA5360 不调用反序列化中的危险方法](../code-quality/ca5360.md) | 不受信任的反序列化是指使用不受信任的数据来滥用应用程序逻辑的漏洞，导致拒绝服务 (DoS) 攻击，甚至在反序列化时执行任意代码。 当应用程序对其控制下的不受信任的数据进行反序列化时，恶意用户经常会滥用这些反序列化功能。 具体而言，就是在反序列化过程中调用危险方法。 成功的反反序列化攻击可能会允许攻击者发起攻击，如 DoS 攻击、身份验证绕过和远程代码执行。 |
