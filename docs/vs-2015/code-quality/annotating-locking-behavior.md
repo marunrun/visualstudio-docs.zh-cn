@@ -34,10 +34,10 @@ author: corob-msft
 ms.author: corob
 manager: jillfra
 ms.openlocfilehash: 00d3c90ce7e21ab4e9852ed937481103c351609b
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77271589"
 ---
 # <a name="annotating-locking-behavior"></a>对锁定行为进行批注
@@ -51,7 +51,7 @@ ms.locfileid: "77271589"
   
  并发 SAL 批注用于帮助您指定锁定的副作用、锁定责任、数据保护、锁的顺序层次结构，以及其他预期的锁定行为。 通过将隐式规则设置为显式，SAL 并发批注可提供一致方式，用于说明代码使用锁定规则的方式。 并发批注还可增强代码分析工具查找争用条件、死锁、不匹配的同步操作和其他细微并发错误的能力。  
   
-## <a name="general-guidelines"></a>一般性指导  
+## <a name="general-guidelines"></a>通用准则  
  通过使用批注，您可以显式声明在实现（被调用方）和客户端（调用方）之间通过函数定义隐式使用的协定，并表明程序中可进一步改进分析的固定条件及其他属性。  
   
  SAL 支持许多不同类型的锁定基元，例如临界区、互斥锁、自旋锁和其他资源对象。 许多并发批注采用锁表达式作为参数。 按照约定，锁由基础锁对象的路径表达式表示。  
@@ -109,10 +109,10 @@ ms.locfileid: "77271589"
 |`_Write_guarded_by_(expr)`|批注变量并表明变量每次受到修改时，`expr` 命名的锁对象的锁计数至少为 1。|  
   
 ## <a name="see-also"></a>另请参阅  
- [使用 SAL 注释减少 C/C++代码缺陷](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)   
+ [使用 SAL 注释减少 C/c + + 代码缺陷](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)   
  [了解 SAL](../code-quality/understanding-sal.md)   
- [批注函数参数和返回值](../code-quality/annotating-function-parameters-and-return-values.md)   
- [批注函数行为](../code-quality/annotating-function-behavior.md)   
+ [注释函数参数和返回值](../code-quality/annotating-function-parameters-and-return-values.md)   
+ [注释函数行为](../code-quality/annotating-function-behavior.md)   
  [批注结构和类](../code-quality/annotating-structs-and-classes.md)   
  [指定何时以及在何处应用批注](../code-quality/specifying-when-and-where-an-annotation-applies.md)   
  [内部函数](../code-quality/intrinsic-functions.md)   

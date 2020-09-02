@@ -17,19 +17,19 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: b5f55de910eb77ec7ccbd205b78d5c95039e6b39
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72651873"
 ---
 # <a name="how-to-locate-and-organize-project-and-item-templates"></a>如何：查找和组织项目模板和项模板
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-必须将模板文件放置在 Visual Studio 能够识别的位置，这样“新建项目”和“添加新项”对话框中才会显示这些模板。 可以为模板创建自定义子类别，以使用户界面中也显示这些子类别。
+必须将模板文件放置在 Visual Studio 能够识别的位置，这样“新建项目”和“添加新项”对话框中才会显示这些模板********。 可以为模板创建自定义子类别，以使用户界面中也显示这些子类别。
 
 ## <a name="locating-templates"></a>查找模板
- 默认情况下，Visual Studio 将搜索项目和项模板的两个位置。 如果这两个位置存在包含 .vstemplate 文件的压缩文件，则“新建项目”或“添加新项”对话框中将显示一个模板。
+ 默认情况下，Visual Studio 将搜索项目和项模板的两个位置。 如果这两个位置存在包含 .vstemplate 文件的压缩文件，则“新建项目”或“添加新项”对话框中将显示一个模板********。
 
 ### <a name="installed-templates"></a>已安装的模板
  默认情况下，与产品一起安装的模板位于以下位置：
@@ -53,18 +53,18 @@ ms.locfileid: "72651873"
 
   C:\Documents and Settings\UserName\My Documents\\<Visual Studio version\>\Templates\ProjectTemplates\Visual C#\
 
-  自定义模板不包含已本地化模板的子目录。 可在“环境\项目和解决方案”下的“选项”对话框中更改自定义模板的默认目录。
+  自定义模板不包含已本地化模板的子目录。 可在“环境\项目和解决方案”下的“选项”对话框中更改自定义模板的默认目录********。
 
 ## <a name="organizing-templates"></a>组织模板
- “新建项目”和“添加新项”对话框中的类别反映存在于已安装模板位置和自定义模板位置的目录结构。 可以修改这些目录结构，以需要的方式组织模板。
+ “新建项目”和“添加新项”对话框中的类别反映存在于已安装模板位置和自定义模板位置的目录结构********。 可以修改这些目录结构，以需要的方式组织模板。
 
 > [!NOTE]
 > 不能在编程语言级别创建新类别。 只能在每种语言中创建新类别。
 
- 如果特定语言的已安装模板和自定义模板的目录结构不同（即一个文件夹下具有另一个文件夹下不存在的目录），则“新建项目”对话框中显示的类别集将是所有类别的合并。
+ 如果特定语言的已安装模板和自定义模板的目录结构不同（即一个文件夹下具有另一个文件夹下不存在的目录），则“新建项目”对话框中显示的类别集将是所有类别的合并****。
 
 ### <a name="organizing-installed-templates"></a>组织已安装的模板
- 可以通过在编程语言文件夹中创建子目录来组织已安装的模板。 这些子目录以每种语言内虚拟文件夹的形式显示在“新建项目”和“添加新项”对话框中。
+ 可以通过在编程语言文件夹中创建子目录来组织已安装的模板。 这些子目录以每种语言内虚拟文件夹的形式显示在“新建项目”和“添加新项”对话框中********。
 
 ##### <a name="to-create-new-installed-project-template-categories"></a>如要新建已安装的项目模板类别
 
@@ -76,15 +76,15 @@ ms.locfileid: "72651873"
 
 3. 关闭 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的所有实例。
 
-4. 在“启动”菜单上，单击“运行”，键入“cmd”，然后单击“确定”。
+4. 在“启动”菜单上，单击“运行”，键入“cmd”，然后单击“确定”****************。
 
-5. 在命令提示符处，找到包含 devenv.exe 的目录，然后键入“devenv /installvstemplates”。
+5. 在命令提示符处，找到包含 devenv.exe 的目录，然后键入“devenv /installvstemplates”****。
 
 6. 运行 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]。
 
-7. 在 **“文件”** 菜单上，单击 **“新建”** ，然后单击 **“项目”** 。
+7. 在“文件”**** 菜单上，单击“新建”****，然后单击“项目”****。
 
-8. 验证确认 Office 类别显示在 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 下“项目类型”窗格中的“新建项目”对话框中。
+8. 验证确认 Office 类别显示在 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 下“项目类型”窗格中的“新建项目”对话框中********。
 
    还可以将项目项模板的子集分组到自定义文件夹中。
 
@@ -98,20 +98,20 @@ ms.locfileid: "72651873"
 
 3. 关闭 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的所有实例。
 
-4. 在“启动”菜单上，单击“运行”，键入“cmd”，然后单击“确定”。
+4. 在“启动”菜单上，单击“运行”，键入“cmd”，然后单击“确定”****************。
 
-5. 在命令提示符处，找到包含 devenv.exe 的目录，然后键入“devenv /setup”。
+5. 在命令提示符处，找到包含 devenv.exe 的目录，然后键入“devenv /setup”****。
 
 6. 运行 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]。
 
 7. 创建项目或打开现有项目。
 
-8. 在 **“项目”** 菜单上，单击 **“添加新项”** 。
+8. 在 **“项目”** 菜单上，单击 **“添加新项”**。
 
-9. 验证确认 Web 类别显示在“项目类型”窗格的“添加新项”对话框中。
+9. 验证确认 Web 类别显示在“项目类型”窗格的“添加新项”对话框中********。
 
 ### <a name="organizing-custom-templates"></a>组织自定义模板
- 可以通过在自定义模板位置添加新文件夹，将自定义模板组织到它们自己的类别中。 “新建项目”对话框将反映出对模板类别所做的任何更改。
+ 可以通过在自定义模板位置添加新文件夹，将自定义模板组织到它们自己的类别中。 “新建项目”对话框将反映出对模板类别所做的任何更改****。
 
 ##### <a name="to-create-new-custom-project-template-categories"></a>如要新建自定义项目模板类别
 
@@ -121,9 +121,9 @@ ms.locfileid: "72651873"
 
 2. 将此类别的所有模板放入新文件夹。
 
-3. 在 **“文件”** 菜单上，单击 **“新建”** ，然后单击 **“项目”** 。
+3. 在“文件”**** 菜单上，单击“新建”****，然后单击“项目”****。
 
-4. 验证确认 HelloWorld 类别显示在 [!INCLUDE[csprcs](../includes/csprcs-md.md)] 下“项目类型”窗格中的“新建项目”对话框中。
+4. 验证确认 HelloWorld 类别显示在 [!INCLUDE[csprcs](../includes/csprcs-md.md)] 下“项目类型”窗格中的“新建项目”对话框中********。
 
    还可以将自定义项模板的子集分组到自定义文件夹中。
 
@@ -137,9 +137,9 @@ ms.locfileid: "72651873"
 
 3. 创建项目或打开现有项目。
 
-4. 在 **“项目”** 菜单上，单击 **“添加新项”** 。
+4. 在 **“项目”** 菜单上，单击 **“添加新项”**。
 
-5. 验证确认 HelloWorld 类别显示在“项目类型”窗格中的“添加新项”对话框中。
+5. 验证确认 HelloWorld 类别显示在“项目类型”窗格中的“添加新项”对话框中********。
 
 ### <a name="displaying-templates-in-parent-categories"></a>在父类别中显示模板
  可以通过使用 .vstemplate 文件中的 `NumberOfParentCategoriesToRollUp` 元素允许子类别中的模板显示在其父类别中。 对于项目模板和项模板，操作步骤相同。
@@ -166,11 +166,11 @@ ms.locfileid: "72651873"
 
 5. 保存并关闭 .vstemplate 文件。
 
-6. 选择模板中的文件，右键单击所选文件，单击“发送至”，然后单击“压缩的文件夹(zip 格式)”。 这些文件被压缩到一个 .zip 文件中。
+6. 选择模板中的文件，右键单击所选文件，单击“发送至”，然后单击“压缩的文件夹(zip 格式)”********。 这些文件被压缩到一个 .zip 文件中。
 
 7. 删除解压缩的模板文件和旧的 .zip 模板文件。
 
 8. 将新的 .zip 文件放入曾容纳已删除 .zip 文件的目录。
 
-## <a name="see-also"></a>请参阅
- [自定义模板](../ide/customizing-project-and-item-templates.md) [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md) [NumberOfParentCategoriesToRollUp （visual Studio 模板）](../extensibility/numberofparentcategoriestorollup-visual-studio-templates.md) [如何：创建项目模板](../ide/how-to-create-project-templates.md)[如何：创建项模板](../ide/how-to-create-item-templates.md)
+## <a name="see-also"></a>另请参阅
+ [自定义模板](../ide/customizing-project-and-item-templates.md) [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md) [NumberOfParentCategoriesToRollUp (visual Studio 模板) ](../extensibility/numberofparentcategoriestorollup-visual-studio-templates.md) [如何：创建项目模板](../ide/how-to-create-project-templates.md)[如何：创建项模板](../ide/how-to-create-item-templates.md)

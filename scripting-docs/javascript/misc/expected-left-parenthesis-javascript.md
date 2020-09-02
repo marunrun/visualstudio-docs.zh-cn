@@ -1,5 +1,5 @@
 ---
-title: 应输入 "（" （JavaScript） |Microsoft Docs
+title: 需要 " (" (JavaScript) |Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
@@ -15,10 +15,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: adcabbe0b1d7ca7d0298202b5242049b86f8229a
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85817094"
 ---
 # <a name="expected--javascript"></a>应有“(”(JavaScript)

@@ -1,5 +1,5 @@
 ---
-title: IDebugPortSupplier3::EnumPersistedPorts |Microsoft Docs
+title: IDebugPortSupplier3：： EnumPersistedPorts |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 944159ead89166c8452775bd6522a7c441094ad0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68188194"
 ---
 # <a name="idebugportsupplier3enumpersistedports"></a>IDebugPortSupplier3::EnumPersistedPorts
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-此方法检索一个对象，允许的保留端口的列表的枚举。  
+此方法检索允许枚举持久端口列表的对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,18 +42,18 @@ int EnumPersistedPorts(
   
 #### <a name="parameters"></a>参数  
  `PortNames`  
- [in]一个[BSTR_ARRAY](../../../extensibility/debugger/reference/bstr-array.md)结构，其中包含要查找并返回在持久化端口之间的端口名称的列表。 将返回与这些名称仅这些持久化的端口。  
+ 中一个 [BSTR_ARRAY](../../../extensibility/debugger/reference/bstr-array.md) 结构，它包含要在持久端口中查找和返回的端口名称的列表。 仅返回具有这些名称的已保留端口。  
   
  `ppEnum`  
- [out]实现的对象[IEnumDebugPorts2](../../../extensibility/debugger/reference/ienumdebugports2.md)接口。  
+ 弄实现 [IEnumDebugPorts2](../../../extensibility/debugger/reference/ienumdebugports2.md) 接口的对象。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
 ## <a name="remarks"></a>备注  
- 端口提供程序实例化，并保存时销毁端口提供程序时加载持久化的端口。  
+ 在实例化端口供应商时加载持久化端口，并在销毁端口供应商时保存。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugPortSupplier3](../../../extensibility/debugger/reference/idebugportsupplier3.md)   
  [IEnumDebugPorts2](../../../extensibility/debugger/reference/ienumdebugports2.md)   
  [BSTR_ARRAY](../../../extensibility/debugger/reference/bstr-array.md)

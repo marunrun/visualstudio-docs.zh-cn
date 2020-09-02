@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 98d764bae48fb7deaa3f3cf917b0d4c8baab185b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72651370"
 ---
 # <a name="managing-assembly-and-manifest-signing"></a>管理程序集签名和清单签名
@@ -54,7 +54,7 @@ ms.locfileid: "72651370"
    通常不应该对可执行文件进行签名。 强命名组件无法引用与应用程序一同部署的非强命名组件。 Visual Studio 不会对应用程序可执行文件进行签名，但会对指向弱命名可执行文件的应用程序清单进行签名。 通常应避免对应用程序专用的组件进行签名，因为签名可能增加管理依赖项的难度。
 
 ## <a name="how-to-sign-an-assembly-in-visual-studio"></a>如何对 Visual Studio 中的程序集进行签名
- 若要对应用程序或组件进行签名，可使用项目属性窗口中的“签名”  选项卡（在“解决方案资源管理器”  中，右键单击项目节点并选择“属性”  ，或在“快速启动”  窗口中键入 **project properties**，或在“解决方案资源管理器”  窗口中按 ALT + ENTER）。 选择“签名”  选项卡，然后选中“为程序集签名”  复选框。
+ 若要对应用程序或组件进行签名，可使用项目属性窗口中的“签名”**** 选项卡（在“解决方案资源管理器”**** 中，右键单击项目节点并选择“属性”****，或在“快速启动”**** 窗口中键入 **project properties**，或在“解决方案资源管理器”**** 窗口中按 ALT + ENTER）。 选择“签名”**** 选项卡，然后选中“为程序集签名”**** 复选框。
 
  指定密钥文件。 如果选择新建密钥文件，请注意，新密钥文件始终以 .pfx 格式创建。 需要为新文件设置名称和密码。
 
@@ -63,9 +63,9 @@ ms.locfileid: "72651370"
 
  也可以指向已创建的密钥。 有关创建密钥的详细信息，请参阅[如何：创建公钥/私钥对](https://msdn.microsoft.com/library/05026813-f3bd-4d7c-9e0b-fc588eb3d114)。
 
- 如果仅对公钥具有访问权限，可以使用延迟签名来推迟分配密钥。 可通过选择“仅延迟签名”  复选框来启用延迟签名。 延迟签名的项目不会运行也不能进行调试。 但是，可以使用 [Sn.exe（强名称工具）](https://msdn.microsoft.com/library/c1d2b532-1b8e-4c7a-8ac5-53b801135ec6)及 `-Vr` 选项，在开发过程中跳过验证。
+ 如果仅对公钥具有访问权限，可以使用延迟签名来推迟分配密钥。 可通过选择“仅延迟签名”**** 复选框来启用延迟签名。 延迟签名的项目不会运行也不能进行调试。 但是，可以使用 [Sn.exe（强名称工具）](https://msdn.microsoft.com/library/c1d2b532-1b8e-4c7a-8ac5-53b801135ec6)及 `-Vr` 选项，在开发过程中跳过验证。
 
  有关对清单进行签名的详细信息，请参阅[如何：对应用程序和部署清单进行签名](../ide/how-to-sign-application-and-deployment-manifests.md)。
 
 ## <a name="see-also"></a>另请参阅
- [强名称程序集](https://msdn.microsoft.com/library/d4a80263-f3e0-4d81-9b61-f0cbeae3797b)[强名称程序集（程序集签名C++）（/cli）](https://msdn.microsoft.com/library/c337cd3f-e5dd-4c6f-a1ad-437e85dba1cc)
+ [强命名程序集](https://msdn.microsoft.com/library/d4a80263-f3e0-4d81-9b61-f0cbeae3797b)[强名称程序集 (程序集签名)  (c + +/cli) ](https://msdn.microsoft.com/library/c337cd3f-e5dd-4c6f-a1ad-437e85dba1cc)

@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: f633fe4633ba92b1054aec7f516a6a0921bc64ca
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62563710"
 ---
-# <a name="idiaframedatagetlengthparams"></a>IDiaFrameData::get_lengthParams
+# <a name="idiaframedataget_lengthparams"></a>IDiaFrameData::get_lengthParams
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-检索的参数推送到堆栈上的字节数。  
+检索推送到堆栈上的参数的字节数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,14 +35,14 @@ HRESULT get_lengthParams ( 
   
 #### <a name="parameters"></a>参数  
  `pRetVal`  
- [out]返回参数的字节数。  
+ 弄返回参数的字节数。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回 `S_OK`。 返回`S_FALSE`如果此属性不受支持。 否则，返回错误代码。  
+ 如果成功，则返回 `S_OK`。 `S_FALSE`如果此属性不受支持，则返回。 否则，返回错误代码。  
   
 ## <a name="remarks"></a>备注  
- 中的计划字符串解释通常使用此方法返回的值 (请参阅[idiaframedata:: Get_program](../../debugger/debug-interface-access/idiaframedata-get-program.md)程序字符串的定义的方法)。  
+ 此方法返回的值通常用在程序字符串的解释中 (有关程序字符串的定义，请参阅 [IDiaFrameData：： get_program](../../debugger/debug-interface-access/idiaframedata-get-program.md) 方法) 。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)   
  [IDiaFrameData::get_program](../../debugger/debug-interface-access/idiaframedata-get-program.md)

@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 9a3b35e05108db879b365b9cafc39cacdf843397
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72668557"
 ---
 # <a name="multiple-dsls-in-one-solution"></a>一个解决方案中的多个 DSL
@@ -21,13 +21,13 @@ ms.locfileid: "72668557"
 
 可将多个 DSL 打包为单个解决方案的一部分，以便可同时安装它们。
 
- 可使用多种技术集成多个 DSL。 有关详细信息，请参阅[使用 Visual Studio 集成模型 Modelbus](../modeling/integrating-models-by-using-visual-studio-modelbus.md)和[如何：添加拖放处理程序](../modeling/how-to-add-a-drag-and-drop-handler.md)和[自定义复制行为](../modeling/customizing-copy-behavior.md)。
+ 可使用多种技术集成多个 DSL。 有关详细信息，请参阅 [使用 Visual Studio 集成模型 Modelbus](../modeling/integrating-models-by-using-visual-studio-modelbus.md) 和 [如何：添加拖放处理程序](../modeling/how-to-add-a-drag-and-drop-handler.md) 和 [自定义复制行为](../modeling/customizing-copy-behavior.md)。
 
 ### <a name="to-build-more-than-one-dsl-in-the-same-solution"></a>在同一个解决方案中生成多个 DSL
 
 1. 创建两个或多个 DSL 解决方案和一个 VSIX 项目，并将所有项目添加到单个解决方案。
 
-   - 若要创建新的 VSIX 项目：在 "**新建项目**" 对话框中，选择 "**视觉对象C#** "、"**扩展性**"、" **VSIX 项目**"。
+   - 若要创建新的 VSIX 项目：在 " **新建项目** " 对话框中，选择 " **Visual c #**"、" **扩展性**"、" **VSIX 项目**"。
 
    - 在 VSIX 解决方案目录中创建两个或多个 DSL 解决方案。
 
@@ -35,9 +35,9 @@ ms.locfileid: "72668557"
 
         确保使用不同的文件名扩展创建每个 DSL。
 
-   - 更改**Dsl**和**DslPackage**项目的名称，使其完全不同。 例如：`Dsl1`、`DslPackage1`、`Dsl2`、`DslPackage2`。
+   - 更改 **Dsl** 和 **DslPackage** 项目的名称，使其完全不同。 例如：`Dsl1`、`DslPackage1`、`Dsl2`、`DslPackage2`。
 
-   - 在每个**DslPackage \* \ source.extension.tt**中，将以下行更新为正确的 Dsl 项目名称：
+   - 在每个 **DslPackage \* \ source.extension.tt**中，将以下行更新为正确的 Dsl 项目名称：
 
         `string dslProjectName = "Dsl2";`
 
@@ -47,19 +47,19 @@ ms.locfileid: "72668557"
 
 2. 合并 DSL 的 VSIX 清单：
 
-   1. 打开_YourVsixProject_ **\source.extension.manifest**。
+   1. 打开 _YourVsixProject_**\source.extension.manifest**。
 
-   2. 对于每个 DSL，选择 "**添加内容**" 并添加：
+   2. 对于每个 DSL，选择 " **添加内容** " 并添加：
 
-       - 将项目作为**MEF 组件**`Dsl*`
+       - `Dsl*`作为**MEF 组件**的项目
 
-       - 将项目作为**MEF 组件**`DslPackage*`
+       - `DslPackage*`作为**MEF 组件**的项目
 
-       - 将项目作为**VS 包**`DslPackage*`
+       - `DslPackage*` 项目即 **VS 包**
 
 3. 生成解决方案。
 
-   生成的 VSIX 将安装这两个 DSL。 可以使用 F5 测试它们，或将_YourVsixProject_ **\bin\Debug \\ 部署 \*。**
+   生成的 VSIX 将安装这两个 DSL。 可以使用 F5 测试它们，或部署_YourVsixProject_**\bin\Debug \\ \* **。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [使用 Visual Studio 集成模型 Modelbus](../modeling/integrating-models-by-using-visual-studio-modelbus.md) [如何：添加拖放处理程序](../modeling/how-to-add-a-drag-and-drop-handler.md)[自定义复制行为](../modeling/customizing-copy-behavior.md)

@@ -12,10 +12,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 10d63e85a7e0b97b588b368318eb7d040694c72b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68157335"
 ---
 # <a name="modules-view---net-memory-instrumentation-data"></a>“模块”视图 - .NET 内存检测数据
@@ -27,7 +27,7 @@ ms.locfileid: "68157335"
   
 |列|说明|  
 |------------|-----------------|  
-|**名称**|函数或模块的名称。|  
+|**Name**|函数或模块的名称。|  
 |**函数行号**|此函数在源文件中的起始行号。|  
 |**调用数**|对此函数或模块进行的调用总数。|  
 |**源文件**|包含此函数的定义的源文件。|  
@@ -101,6 +101,6 @@ ms.locfileid: "68157335"
 |**最短应用程序独占时间**|-   对于函数，是对此模块或函数的调用的最短应用程序独占时间。<br />-   对于模块，是对此模块中函数的所有调用的最短应用程序独占时间。|  
   
 ## <a name="see-also"></a>另请参阅  
- [“模块”视图 - 采样](../profiling/modules-view-dotnet-memory-sampling-data.md)   
- [“模块”视图](../profiling/modules-view-instrumentation-data.md)   
+ ["模块" 视图-采样](../profiling/modules-view-dotnet-memory-sampling-data.md)   
+ [模块视图](../profiling/modules-view-instrumentation-data.md)   
  [“模块”视图](../profiling/modules-view-sampling-data.md)

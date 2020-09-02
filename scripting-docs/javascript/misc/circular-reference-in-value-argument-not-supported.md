@@ -16,10 +16,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: 633ed9c37e8ccde0844205910a8fa2dc12d91414
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85817614"
 ---
 # <a name="circular-reference-in-value-argument-not-supported"></a>不支持在值自变量中进行循环引用
@@ -42,7 +42,7 @@ mary.brother = john;
 var error = JSON.stringify(john);  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [JSON 对象](../../javascript/reference/json-object-javascript.md)   
  [JSON。 parse 函数](../../javascript/reference/json-parse-function-javascript.md)   
  [JavaScript 运行时错误](../../javascript/reference/javascript-run-time-errors.md)

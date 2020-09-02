@@ -1,5 +1,5 @@
 ---
-title: IDebugExpression2 | Microsoft Docs
+title: IDebugExpression2 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 15
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: ec8b26f422ca39b771a47f8eb60ee862d7d388f9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62568364"
 ---
 # <a name="idebugexpression2"></a>IDebugExpression2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-此接口表示分析的表达式可供绑定和评估。  
+此接口表示已分析的表达式可用于绑定和计算。  
   
 ## <a name="syntax"></a>语法  
   
@@ -30,35 +30,35 @@ ms.locfileid: "62568364"
 IDebugExpression2 : IUnknown  
 ```  
   
-## <a name="notes-for-implementers"></a>实施者的说明  
- 调试引擎 (DE) 实现此接口来表示可供计算的已分析的表达式。  
+## <a name="notes-for-implementers"></a>实施者注意事项  
+ 调试引擎 (DE) 实现此接口，以表示可以进行计算的已分析表达式。  
   
-## <a name="notes-for-callers"></a>调用方的说明  
- 调用[ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md)返回此接口。 [GetExpressionContext](../../../extensibility/debugger/reference/idebugstackframe2-getexpressioncontext.md)将返回[IDebugExpressionContext2](../../../extensibility/debugger/reference/idebugexpressioncontext2.md)接口。 仅当已暂停正在调试的程序和堆栈帧是可用时，这些接口进行访问。  
+## <a name="notes-for-callers"></a>调用方说明  
+ 对 [ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) 的调用返回此接口。 [GetExpressionContext](../../../extensibility/debugger/reference/idebugstackframe2-getexpressioncontext.md) 返回 [IDebugExpressionContext2](../../../extensibility/debugger/reference/idebugexpressioncontext2.md) 接口。 仅当正在调试的程序已暂停且堆栈帧可用时，才能访问这些接口。  
   
 ## <a name="methods-in-vtable-order"></a>Vtable 顺序中的方法  
- 下表显示的方法`IDebugExpression2`。  
+ 下表显示的方法 `IDebugExpression2` 。  
   
-|方法|描述|  
+|方法|说明|  
 |------------|-----------------|  
-|[EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md)|以异步方式计算此表达式的值。|  
-|[Abort](../../../extensibility/debugger/reference/idebugexpression2-abort.md)|结束异步表达式求值。|  
-|[EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md)|以同步方式计算此表达式的值。|  
+|[EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md)|以异步方式计算此表达式。|  
+|[中断](../../../extensibility/debugger/reference/idebugexpression2-abort.md)|结束异步表达式计算。|  
+|[EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md)|同步计算此表达式。|  
   
 ## <a name="remarks"></a>备注  
- 会话调试管理器 (SDM) 时已停止程序，从通过调用 DE 获取堆栈帧[EnumFrameInfo](../../../extensibility/debugger/reference/idebugthread2-enumframeinfo.md)。 然后调用 SDM [GetExpressionContext](../../../extensibility/debugger/reference/idebugstackframe2-getexpressioncontext.md)若要获取[IDebugExpressionContext2](../../../extensibility/debugger/reference/idebugexpressioncontext2.md)接口。 随后调用[ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md)若要创建`IDebugExpression2`接口，它表示分析可供计算的表达式。  
+ 当程序停止时，会话调试管理器 (SDM) 通过调用 [EnumFrameInfo](../../../extensibility/debugger/reference/idebugthread2-enumframeinfo.md)从 DE 获取堆栈帧。 SDM 随后调用 [GetExpressionContext](../../../extensibility/debugger/reference/idebugstackframe2-getexpressioncontext.md) 以获取 [IDebugExpressionContext2](../../../extensibility/debugger/reference/idebugexpressioncontext2.md) 接口。 接下来，调用 [ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) 以创建 `IDebugExpression2` 接口，该接口表示可进行计算的已分析表达式。  
   
- SDM 拨打[EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md)或[EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md)进行实际计算表达式并生成值。  
+ SDM 调用 [EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) 或 [EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) 以实际计算表达式，并生成一个值。  
   
- 实现中`IDebugExpressionContext2::ParseText`，DE 使用 COM 的`CoCreateInstance`函数来实例化的表达式计算器，并获取[IDebugExpressionEvaluator](../../../extensibility/debugger/reference/idebugexpressionevaluator.md)接口 (请参阅中的示例`IDebugExpressionEvaluator`接口)。 然后调用 DE[分析](../../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md)来获取[IDebugParsedExpression](../../../extensibility/debugger/reference/idebugparsedexpression.md)接口。 实现中使用此接口`IDebugExpression2::EvaluateSync`和`IDebugExpression2::EvaluateAsync`执行计算。  
+ 在的实现中 `IDebugExpressionContext2::ParseText` ，DE 使用 COM 的 `CoCreateInstance` 函数实例化表达式计算器并获取 [IDebugExpressionEvaluator](../../../extensibility/debugger/reference/idebugexpressionevaluator.md) 接口 (参见接口) 中的示例 `IDebugExpressionEvaluator` 。 然后，调用 [Parse](../../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md) 以获取 [IDebugParsedExpression](../../../extensibility/debugger/reference/idebugparsedexpression.md) 接口。 此接口在的实现中使用 `IDebugExpression2::EvaluateSync` ， `IDebugExpression2::EvaluateAsync` 用于执行计算。  
   
 ## <a name="requirements"></a>要求  
- 标头： msdbg.h  
+ 标头： msdbg  
   
- 命名空间:Microsoft.VisualStudio.Debugger.Interop  
+ 命名空间： VisualStudio  
   
- 程序集：Microsoft.VisualStudio.Debugger.Interop.dll  
+ 程序集： Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [核心接口](../../../extensibility/debugger/reference/core-interfaces.md)   
  [GetExpression](../../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2-getexpression.md)

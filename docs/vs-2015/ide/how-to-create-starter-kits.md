@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: f9df8d85c600cd383a9a9059e689e6cb9f232d8f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72668032"
 ---
 # <a name="how-to-create-starter-kits"></a>如何：创建初学者工具包
@@ -47,9 +47,9 @@ ms.locfileid: "72668032"
 
  以下主题包含有关创建模板的信息。
 
- [如何：创建项目模板](../ide/how-to-create-project-templates.md)介绍如何使用 "**导出模板**向导" 创建模板。
+ [如何：创建项目模板](../ide/how-to-create-project-templates.md) 介绍如何使用 " **导出模板** 向导" 创建模板。
 
- [如何：更新现有模板](../ide/how-to-update-existing-templates.md)描述如何编辑已导出的模板。 使用此过程修改 .vstemplate 文件以自定义你的初学者工具包。
+ [如何：更新现有模板](../ide/how-to-update-existing-templates.md) 描述如何编辑已导出的模板。 使用此过程修改 .vstemplate 文件以自定义你的初学者工具包。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [创建项目和项模板](../ide/creating-project-and-item-templates.md)[自定义模板](../ide/customizing-project-and-item-templates.md) [Visual Studio 模板架构引用](../extensibility/visual-studio-template-schema-reference.md)

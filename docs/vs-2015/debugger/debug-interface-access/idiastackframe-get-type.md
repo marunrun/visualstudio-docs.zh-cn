@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: b4b0653de51ece59584076def76988958ae612d5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68144746"
 ---
-# <a name="idiastackframegettype"></a>IDiaStackFrame::get_type
+# <a name="idiastackframeget_type"></a>IDiaStackFrame::get_type
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-检索的帧类型。  
+检索帧类型。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,11 +35,11 @@ HRESULT get_type ( 
   
 #### <a name="parameters"></a>参数  
  `pRetVal`  
- [out]返回一个值从[StackFrameTypeEnum 枚举](../../debugger/debug-interface-access/stackframetypeenum.md)枚举。  
+ 弄返回 [StackFrameTypeEnum 枚举](../../debugger/debug-interface-access/stackframetypeenum.md) 枚举中的一个值。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回 `S_OK`。 返回`S_FALSE`如果不支持的属性。 否则，返回错误代码。  
+ 如果成功，则返回 `S_OK`。 `S_FALSE`如果该属性不受支持，则返回。 否则，返回错误代码。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)   
  [StackFrameTypeEnum 枚举](../../debugger/debug-interface-access/stackframetypeenum.md)

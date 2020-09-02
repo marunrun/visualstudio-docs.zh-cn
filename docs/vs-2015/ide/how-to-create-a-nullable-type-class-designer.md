@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 438f84a172c7e0a2d0dc957c578adc568a46495f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72668149"
 ---
 # <a name="how-to-create-a-nullable-type-class-designer"></a>如何：创建可以为 null 的类型（类设计器）
@@ -24,7 +24,7 @@ ms.locfileid: "72668149"
 
 某些值类型并不是始终具有（或需要）定义的值。 这是数据库中的常见做法，数据库中某些字段可能没有分配任何值。 例如，可以向某个数据库字段分配 null 值，表示尚未向其分配值。
 
- 可以为 null 的类型是一种扩展的值类型，以便其可为该类型采用典型范围内的值，也可以采用 null 值。 例如，对于一个可以为 null 的 `Int32`（也以 Null\<Int32> 表示），可以为其分配从 -2147483648 到 2147483647 之间的任何值，或可为其分配 null 值。 可以为 Nullable\<bool> 分配的值包括 `True`、`False` 或 null（不分配任何值）。
+ 可以为 null 的类型是一种扩展的值类型，以便其可为该类型采用典型范围内的值，也可以采用 null 值。 例如，对于一个可以为 null 的 `Int32`（也以 Nullable\<Int32> 表示），可为其分配从 -2147483648 到 2147483647 之间的任何值，或可为其分配 null 值。 可为 Nullable\<bool> 分配的值包括 `True`、`False` 或 null（不分配任何值）。
 
  可以为 null 的类型是 <xref:System.Nullable%601> 结构的实例。 可以为 null 的类型的每个实例都有两个公共只读属性，`HasValue` 和 `Value`：
 
@@ -44,15 +44,15 @@ ms.locfileid: "72668149"
 
 1. 在类图中，展开现有类，或创建一个新类。
 
-2. 若要将类添加到项目，请在“类图”菜单上，单击“添加”，然后单击“添加类”。
+2. 若要将类添加到项目，请在“类图”**** 菜单上，单击“添加”****，然后单击“添加类”****。
 
 3. 若要展开类形状，请在“类图”菜单上，单击“展开”。
 
-4. 选择类形状。 请在“类图”菜单上，单击“添加”，然后单击“字段”。 将在类形状以及“类详细信息”窗口中显示默认名称为“字段”的新字段。
+4. 选择类形状。 请在“类图”**** 菜单上，单击“添加”****，然后单击“字段”****。 将在类形状以及“类详细信息”窗口中显示默认名称为“字段”的新字段。
 
 5. 在“类详细信息”窗口的“名称”列中（或类形状中），将新字段的名称更改为有效且有意义的名称。
 
-6. 在“类详细信息”窗口的“类型”列中，声明该类型为可以为 null 的类型，如以下代码所示：
+6. 在“类详细信息”**** 窗口的“类型”**** 列中，声明该类型为可以为 null 的类型，如以下代码所示：
 
     ```csharp
     // Declare a nullable type in Visual C#:
@@ -81,5 +81,5 @@ ms.locfileid: "72668149"
 
 5. 右键单击类形状，然后单击“类详细信息”。 可以在“类详细信息”窗口中查看或修改新类型的属性。
 
-## <a name="see-also"></a>请参阅
- [使用可以为 null 的类型](https://msdn.microsoft.com/library/0bacbe72-ce15-4b14-83e1-9c14e6380c28)<xref:System.Nullable%601>[可以为](https://msdn.microsoft.com/library/e473cb01-28ca-42be-9cea-f717055d72c6)null[的类型如何：标识可以为 null 的类型](https://msdn.microsoft.com/library/d4b67ee2-66e8-40c1-ae9d-545d32c71387)[为 null 的值类型](https://msdn.microsoft.com/library/9ac3b602-6f96-4e6d-96f7-cd4e81c468a6)
+## <a name="see-also"></a>另请参阅
+ <xref:System.Nullable%601>[使用可以为](https://msdn.microsoft.com/library/0bacbe72-ce15-4b14-83e1-9c14e6380c28)null 的类型的[可以为](https://msdn.microsoft.com/library/e473cb01-28ca-42be-9cea-f717055d72c6)null[的类型如何：标识可以为 null 的类型](https://msdn.microsoft.com/library/d4b67ee2-66e8-40c1-ae9d-545d32c71387)[可以为 null](https://msdn.microsoft.com/library/9ac3b602-6f96-4e6d-96f7-cd4e81c468a6)

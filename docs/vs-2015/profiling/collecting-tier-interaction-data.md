@@ -17,10 +17,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: a20266c870316be9b6be67e661d13eb4e6fdbaee
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62568042"
 ---
 # <a name="collecting-tier-interaction-data"></a>收集层交互数据
@@ -42,11 +42,11 @@ ms.locfileid: "62568042"
   
 ### <a name="to-add-tier-interaction-data-to-a-profiling-run-by-using-the-performance-session-property-pages"></a>使用性能会话属性页将层交互数据添加到分析运行中  
   
-1. 在“性能资源管理器”中，从上下文菜单中选择“属性”。  
+1. 在“性能资源管理器”中，从上下文菜单中选择“属性”  。  
   
-2. 选择“层交互”页，然后选中“启用层交互分析”复选框。  
+2. 选择“层交互”  页，然后选中“启用层交互分析”  复选框。  
   
-3. 在“性能资源管理器”中，选择“目标”节点，然后指定要分析的项目、可执行文件或网站。  
+3. 在“性能资源管理器”中，选择“目标”  节点，然后指定要分析的项目、可执行文件或网站。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [“层交互”视图](../profiling/tier-interactions-view.md)

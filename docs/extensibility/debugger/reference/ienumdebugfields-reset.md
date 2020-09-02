@@ -1,5 +1,5 @@
 ---
-title: IEnum调试字段：重置 |微软文档
+title: IEnumDebugFields：： Reset |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: be33249ef583776f613c6716143249e3ce31bc8d
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80716845"
 ---
 # <a name="ienumdebugfieldsreset"></a>IEnumDebugFields::Reset
@@ -36,14 +36,14 @@ int Reset();
 ```
 
 #### <a name="parameters"></a>参数
- 无
+ None
 
 ## <a name="return-value"></a>返回值
- 如果成功，返回`S_OK`;否则，返回错误代码。
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。
 
 ## <a name="remarks"></a>备注
- 调用此方法后，下一个调用[Next](../../../extensibility/debugger/reference/ienumdebugfields-next.md)将返回枚举的第一个元素。
+ 调用此方法后，下 [一次调用将返回枚举](../../../extensibility/debugger/reference/ienumdebugfields-next.md) 的第一个元素。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)
-- [下一步](../../../extensibility/debugger/reference/ienumdebugfields-next.md)
+- [下一页](../../../extensibility/debugger/reference/ienumdebugfields-next.md)
