@@ -11,39 +11,39 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 4d88cd0c20a8bbb29fee6b35d65813fd81f2eeb6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68192631"
 ---
 # <a name="managing-configuration-options"></a>管理配置选项
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-当你创建新的项目类型时，您必须管理项目和解决方案配置设置以确定如何在将生成项目，打包、 部署和运行。 以下主题讨论项目和解决方案配置。  
+当你创建新的项目类型时，你必须管理项目和解决方案配置设置，这些设置确定如何生成、打包、部署和运行你的项目。 以下主题讨论项目和解决方案配置。  
   
 ## <a name="in-this-section"></a>本节内容  
  [概述](../../extensibility/internals/configuration-options-overview.md)  
- 介绍如何在项目[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]可以支持多个配置。  
+ 描述中的项目如何 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 支持多个配置。  
   
  [属性页](../../extensibility/internals/property-pages.md)  
- 说明用户可以查看和使用属性页更改项目的配置依赖属性和独立的属性。  
+ 说明用户可以使用属性页查看和更改项目配置依赖属性和独立属性。  
   
  [解决方案配置](../../extensibility/internals/solution-configuration.md)  
- 提供有关解决方案配置中存储的内容和解决方案配置如何直接的行为的信息**启动**并**生成**命令。  
+ 提供有关解决方案配置中存储的内容的信息，以及解决方案配置如何定向 **启动** 和 **生成** 命令的行为。  
   
  [项目配置对象](../../extensibility/internals/project-configuration-object.md)  
- 介绍了项目配置对象管理到 UI 的配置信息的显示方式。  
+ 说明项目配置对象如何管理向 UI 显示的配置信息。  
   
  [用于生成的项目配置](../../extensibility/internals/project-configuration-for-building.md)  
- 介绍如何通过管理特定解决方案的解决方案配置的列表**解决方案配置**对话框。  
+ 说明如何通过 " **解决方案配置** " 对话框管理特定解决方案的解决方案配置列表。  
   
  [用于管理部署的项目配置](../../extensibility/internals/project-configuration-for-managing-deployment.md)  
- 定义部署，并且两种方法的行为[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]支持支持部署的项目。  
+ 定义部署的行为，并通过两种方式 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 支持支持部署的项目。  
   
  [用于输出的项目配置](../../extensibility/internals/project-configuration-for-output.md)  
- 说明的生成过程的每一种配置可以支持的接口和方法的输出项便可提供。  
+ 介绍每个配置可以支持的生成过程，以及可使输出项可用的接口和方法。  
   
 ## <a name="related-sections"></a>相关章节  
  [项目类型](../../extensibility/internals/project-types.md)  
- 基本构建块的形式提供的项目概述[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]集成的开发环境 (IDE)。 提供了指向介绍项目生成和编译代码的控制的其他主题的链接。
+ 提供项目概述，作为集成开发环境的基本构建基块 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] (IDE) 。 向说明项目如何控制生成和编译代码的其他主题提供了链接。

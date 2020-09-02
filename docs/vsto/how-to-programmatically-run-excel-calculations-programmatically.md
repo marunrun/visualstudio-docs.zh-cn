@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: a02e86864065d2c626de2f6e7fea7528554f1391
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85547376"
 ---
 # <a name="how-to-programmatically-run-excel-calculations"></a>如何：以编程方式运行 Excel 计算
@@ -56,7 +56,7 @@ ms.locfileid: "85547376"
      [!code-csharp[Trin_VstcoreExcelAutomationAddIn#31](../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs#31)]
      [!code-vb[Trin_VstcoreExcelAutomationAddIn#31](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#31)]
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [使用范围](../vsto/working-with-ranges.md)
 - [NamedRange 控件](../vsto/namedrange-control.md)
 - [Office 解决方案中的可选参数](../vsto/optional-parameters-in-office-solutions.md)

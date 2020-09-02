@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: c3d9c1dfa45251d0f64a93bb9a5142dcec76b7c7
-ms.sourcegitcommit: 26178b116cbf7353fee6ca989b8d872114f7b405
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "89219720"
 ---
 # <a name="fxcop-rule-port-status"></a>Fxcop 规则端口状态
@@ -27,7 +27,7 @@ Roslyn 存储库中自动 [生成的文档页面](https://github.com/dotnet/rosl
 
 截止到此页上的日期，已移植到 [fxcop 分析器](install-fxcop-analyzers.md) 的 fxcop 规则列表包括：
 
-规则 ID | 标题
+规则 ID | Title
 --------|---------
 [CA1000](ca1000.md) | 不要在泛型类型中声明静态成员
 [CA1001](ca1001.md) | 具有可释放字段的类型应该是可释放的

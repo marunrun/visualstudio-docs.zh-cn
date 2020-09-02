@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: d89c0dcad23a91ec6057311b9afde7d6d4702772
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72656758"
 ---
 # <a name="error-messages-in-workflow-designer"></a>工作流设计器中的错误消息
@@ -36,7 +36,7 @@ ms.locfileid: "72656758"
 
    无效的表达式和未满足的验证约束不会导致工作流无法生成。 会成功生成工作流，但在运行时将引发 <xref:System.Activities.InvalidWorkflowException>。 如果 XAML 文件中存在错误，生成将失败。
 
-   在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中，当加载工作流时，它的错误将显示在**错误列表**中。 若要导航到作为错误源的活动，请在**错误列表**中双击错误。
+   在中 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ，加载工作流时，它的错误将显示在 **错误列表**中。 若要导航到作为错误源的活动，请在 **错误列表**中双击错误。
 
 ### <a name="expression-errors"></a>表达式错误
  无效表达式用红色圆圈表示，并且该表达式旁有一个白色感叹号。 悬停在此图标上将显示描述错误来源的工具提示。 在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 内，单击该表达式可查看对错误来源加下划线的行。 悬停在此加下划线的文本上将显示描述错误来源的工具提示。

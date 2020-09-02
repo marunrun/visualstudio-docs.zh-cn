@@ -7,12 +7,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 33eb146ce36bfa36dbe28fdcec0f7dfb85daa59b
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: aa4a768f8ebd8b39918fa3ba51d4eb9b3f773151
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84184076"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89219759"
 ---
 # <a name="productivity-guide-for-visual-studio"></a>Visual Studio 实用指南
 
@@ -24,7 +24,7 @@ ms.locfileid: "84184076"
 
 你可以通过快速搜索所需的任何内容（包括命令、设置、文档和安装选项）来节省在菜单中进行探索的时间。 请在 Visual Studio 的搜索结果中查看命令的键盘快捷方式，以便更轻松记住它们。 
 
-- **使用任务列表模拟代码**。 如果没有足够的请求来完成某个代码段，请使用“任务列表”跟踪使用 `TODO` 和 `HACK` 令牌或自定义令牌的代码注释，并管理直接导向代码中预定义位置的快捷方式。 有关详细信息，请参阅[使用任务列表](../ide/using-the-task-list.md.)。
+- **使用任务列表模拟代码**。 如果没有足够的请求来完成某个代码段，请使用“任务列表”跟踪使用 `TODO` 和 `HACK` 令牌或自定义令牌的代码注释，并管理直接导向代码中预定义位置的快捷方式。 有关详细信息，请参阅[使用任务列表](../ide/using-the-task-list.md)。
 
 - **使用解决方案资源管理器快捷方式**。 如果你不熟悉 Visual Studio，这些快捷方式将派上用场，能够在你加快新代码库的速度时为你节省时间。 有关快捷方式的完整列表，请参阅 [Visual Studio 中的默认键盘快捷方式](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_solutionexplorerGLOBAL)。
 

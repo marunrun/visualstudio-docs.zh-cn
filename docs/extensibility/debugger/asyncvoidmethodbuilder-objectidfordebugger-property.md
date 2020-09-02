@@ -1,5 +1,5 @@
 ---
-title: 异步虚无方法生成器.objectidfor调试器属性 |微软文档
+title: AsyncVoidMethodBuilder. ObjectIdForDebugger 属性 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,20 +11,20 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 96000c91d3134bc527ff5651d5a8872fd48c1a66
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80739308"
 ---
-# <a name="asyncvoidmethodbuilderobjectidfordebugger-property"></a>异步VoidmethodBuilder.objectidforDebugger属性
-获取可用于唯一标识调试器此生成器的对象。
+# <a name="asyncvoidmethodbuilderobjectidfordebugger-property"></a>AsyncVoidMethodBuilder. ObjectIdForDebugger 属性
+获取一个对象，该对象可用于将此生成器唯一标识到调试器。
 
- **命名空间：**<xref:System.Runtime.CompilerServices?displayProperty=fullName>
+ **命名空间：** <xref:System.Runtime.CompilerServices?displayProperty=fullName>
 
- **程序集**：mscorlib（在 mscorlib.dll 中）
+ **Assembly：** mscorlib (mscorlib.dll) 
 
- 由于您无法从 .NET 框架访问此内部成员，因此在通用中间语言 （CIL） 中提供了以下语法。
+ 由于无法从 .NET Framework 访问此内部成员，因此在公共中间语言 (CIL) 中提供了以下语法。
 
 ## <a name="syntax"></a>语法
 
@@ -32,6 +32,6 @@ ms.locfileid: "80739308"
 private object ObjectIdForDebugger
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - <xref:System.Runtime.CompilerServices.AsyncVoidMethodBuilder>
-- [.NET 框架的并行扩展内部](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)
+- [.NET Framework 的并行扩展内部机制](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)

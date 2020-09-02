@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 6dd4f4ada36be4ef7b70f4f32d659abb10c8a62a
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85547207"
 ---
 # <a name="how-to-create-and-modify-custom-document-properties"></a>如何：创建和修改自定义文档属性
@@ -37,7 +37,7 @@ ms.locfileid: "85547207"
 ## <a name="robust-programming"></a>可靠编程
  尝试访问未定义的属性的 `Value` 属性会引发异常。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [程序 VSTO 外接程序](../vsto/programming-vsto-add-ins.md)
 - [程序文档级自定义项](../vsto/programming-document-level-customizations.md)
 - [如何：读取和写入文档属性](../vsto/how-to-read-from-and-write-to-document-properties.md)

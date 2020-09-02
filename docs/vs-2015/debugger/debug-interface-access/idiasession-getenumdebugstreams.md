@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 92273a2a839686511994dc7ee92335b2c9a411b4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68192334"
 ---
 # <a name="idiasessiongetenumdebugstreams"></a>IDiaSession::getEnumDebugStreams
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-检索一个枚举的调试数据流的序列。  
+检索调试数据流的枚举序列。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,11 +35,11 @@ HRESULT getEnumDebugStreams ( 
   
 #### <a name="parameters"></a>参数  
  `ppEnumDebugStreams`  
- [out]返回[IDiaEnumDebugStreams](../../debugger/debug-interface-access/idiaenumdebugstreams.md)对象，其中包含调试流的列表。  
+ 弄返回一个 [IDiaEnumDebugStreams](../../debugger/debug-interface-access/idiaenumdebugstreams.md) 对象，该对象包含一个调试流的列表。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDiaSession](../../debugger/debug-interface-access/idiasession.md)   
  [IDiaEnumDebugStreams](../../debugger/debug-interface-access/idiaenumdebugstreams.md)
