@@ -1,5 +1,5 @@
 ---
-title: IDebugProgram2::Detach | Microsoft Docs
+title: IDebugProgram2：:D etach |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 922c3d4df6332fc5b9bc5b264c4d46b3f1b91805
-ms.sourcegitcommit: da4079f5b6ec884baf3108cbd0519d20cb64c70b
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62549319"
 ---
 # <a name="idebugprogram2detach"></a>IDebugProgram2::Detach
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-从该程序的调试引擎中分离。  
+从程序分离调试引擎。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,10 +37,10 @@ int Detach();
 ```  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
 ## <a name="remarks"></a>备注  
- 分离的程序继续运行，但它不再是调试会话的一部分。 没有更多程序调试事件发送后分离调试引擎。  
+ 分离的程序将继续运行，但不再是调试会话的一部分。 分离调试引擎后，不会再发送程序调试事件。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)

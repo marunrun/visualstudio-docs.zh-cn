@@ -14,10 +14,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 238d821795aaa4e9ef0ac06e117316450b46fda4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68145376"
 ---
 # <a name="utilization-view"></a>使用率视图
@@ -29,7 +29,7 @@ ms.locfileid: "68145376"
   
  此图显示目标进程、空闲进程和系统进程所使用的时间（在 x 轴上）和平均的逻辑核心数量。 （空闲进程显示空闲内核。 系统进程是 Windows 中可代表其他进程执行工作的进程。）在系统上运行的剩余进程组成了所有剩余核心的使用率。  
   
- 逻辑核心数显示在 Y 轴上。 Windows 将硬件中的多线程并行处理支持视为逻辑核心（例如，超线程）。 因此，具有 4 核处理器且每核心支持两个硬件线程的系统显示为 8 逻辑核心的系统。 这同样也适用于“核心”视图。 有关详细信息，请参阅[“核心”视图](../profiling/cores-view.md)。  
+ 逻辑核心数显示在 Y 轴上。 Windows 将硬件中的多线程并行处理支持视为逻辑核心（例如，超线程）。 因此，具有 4 核处理器且每核心支持两个硬件线程的系统显示为 8 逻辑核心的系统。 这同样也适用于“核心”视图。 有关详细信息，请参阅 [内核视图](../profiling/cores-view.md)。  
   
  GPU 活动关系图显示随着时间的推移，使用中的 DirectX 引擎数。  如果引擎正在处理 DMA 数据包，它则正在使用中。  该关系图不会显示特定的 DirectX 引擎（例如，3D 引擎、视频引擎等）。  
   
@@ -53,4 +53,4 @@ ms.locfileid: "68145376"
   
 ## <a name="see-also"></a>另请参阅  
  [并发可视化工具](../profiling/concurrency-visualizer.md)   
- [“核心”视图](../profiling/cores-view.md)
+ [内核视图](../profiling/cores-view.md)

@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: c1d7cb8ccf56ba3caf039f82618cce8df8b6e1dc
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68197539"
 ---
-# <a name="idiaframedatagetaddressoffset"></a>IDiaFrameData::get_addressOffset
+# <a name="idiaframedataget_addressoffset"></a>IDiaFrameData::get_addressOffset
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-检索在框架的代码地址偏移量的部分。  
+检索帧的代码地址的偏移量部分。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,10 +35,10 @@ HRESULT get_addressOffset ( 
   
 #### <a name="parameters"></a>参数  
  `pRetVal`  
- [out]返回框架的代码地址的偏移量的部分。  
+ 弄返回帧的代码地址的偏移量部分。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回 `S_OK`。 返回`S_FALSE`如果此属性不受支持。 否则，返回错误代码。  
+ 如果成功，则返回 `S_OK`。 `S_FALSE`如果此属性不受支持，则返回。 否则，返回错误代码。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)

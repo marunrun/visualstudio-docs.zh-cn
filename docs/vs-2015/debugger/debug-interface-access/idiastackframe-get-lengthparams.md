@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 079e510a5cf01d17251a8933448ca479f5f93041
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62563505"
 ---
-# <a name="idiastackframegetlengthparams"></a>IDiaStackFrame::get_lengthParams
+# <a name="idiastackframeget_lengthparams"></a>IDiaStackFrame::get_lengthParams
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-检索的参数推送到堆栈上的字节数。  
+检索推送到堆栈上的参数的字节数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,10 +35,10 @@ HRESULT get_lengthParams ( 
   
 #### <a name="parameters"></a>参数  
  `pRetVal`  
- [out]返回参数的字节数。  
+ 弄返回参数的字节数。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回 `S_OK`。 返回`S_FALSE`如果不支持的属性。 否则，返回错误代码。  
+ 如果成功，则返回 `S_OK`。 `S_FALSE`如果该属性不受支持，则返回。 否则，返回错误代码。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)

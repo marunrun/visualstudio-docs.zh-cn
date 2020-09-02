@@ -10,16 +10,16 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: ffff52722fe27f2761307dcb2acd874d3849fdbd
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72647026"
 ---
 # <a name="mixed-recommended-rules-rule-set"></a>“混合建议规则”规则集
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Microsoft 混合推荐的规则重点介绍支持公共语言运行时的C++项目中最常见和最关键的问题，包括潜在的安全漏洞、应用程序崩溃和其他重要的逻辑和设计错误。 应在为支持公共语言运行时的C++项目创建的任何自定义规则集中包含此规则集。 此规则集设计用于配置 Visual Studio Professional 版本和更高版本。
+Microsoft 混合推荐的规则重点介绍支持公共语言运行时的 c + + 项目中最常见和最关键的问题，包括潜在的安全漏洞、应用程序崩溃和其他重要的逻辑和设计错误。 应在为支持公共语言运行时的 c + + 项目创建的任何自定义规则集中包含此规则集。 此规则集设计用于配置 Visual Studio Professional 版本和更高版本。
 
 |                                                              规则                                                              |                                                             描述                                                             |
 |--------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
@@ -155,23 +155,23 @@ Microsoft 混合推荐的规则重点介绍支持公共语言运行时的C++项�
 |                                              [C26140](../code-quality/c26140.md)                                               |                                                  并发 SAL 批注错误                                                   |
 |                                              [C28020](../code-quality/c28020.md)                                               |                                               此调用中的表达式不为 true                                               |
 |                                              [C28021](../code-quality/c28021.md)                                               |                                           批注的参数必须为指针型                                           |
-|                                              [C28022](../code-quality/c28022.md)                                               |            此函数上的函数类与用于定义此函数的 typedef 上的函数类不匹配。            |
-|                                              [C28023](../code-quality/c28023.md)                                               |         分配或传递的函数应具有至少一个类的 \_Function_class \_ 批注         |
-|                                              [C28024](../code-quality/c28024.md)                                               | 向其分配的函数指针是用函数类（不包含在函数类列表中）进行批注的。 |
+|                                              [C28022](../code-quality/c28022.md)                                               |            此函数的函数类 (es) 与用于定义它的 typedef 上的函数类 (es) 不匹配。            |
+|                                              [C28023](../code-quality/c28023.md)                                               |         分配或传递的函数应该 \_ \_ 至少有一个 (es 类的 Function_class 批注)          |
+|                                              [C28024](../code-quality/c28024.md)                                               | 向其分配的函数指针是用函数类进行批注的，函数类不包含在函数类中 (es) 列表。 |
 |                                              [C28039](../code-quality/c28039.md)                                               |                                     实参的类型应与类型完全匹配                                      |
 |                                              [C28112](../code-quality/c28112.md)                                               |            通过互锁函数访问的变量必须始终通过联锁函数访问。            |
 |                                              [C28113](../code-quality/c28113.md)                                               |                                       通过互锁函数访问本地变量                                        |
 |                                              [C28125](../code-quality/c28125.md)                                               |                                     必须从 try/except 块中调用函数                                      |
-|                                              [C28137](../code-quality/c28137.md)                                               |                                    变量参数应为（文本）常量                                     |
+|                                              [C28137](../code-quality/c28137.md)                                               |                                    变量参数应是 (文本) 常量                                     |
 |                                              [C28138](../code-quality/c28138.md)                                               |                                          常数参数应改为变量                                           |
 |                                              [C28159](../code-quality/c28159.md)                                               |                                              请考虑改用其他函数。                                               |
 |                                              [C28160](../code-quality/c28160.md)                                               |                                                          错误批注                                                           |
 |                                              [C28163](../code-quality/c28163.md)                                               |                                 绝不应从 try/except 块中调用函数                                  |
-|                                              [C28164](../code-quality/c28164.md)                                               |             正在将参数传递给需要指向对象的指针的函数（而不是指向指针的指针）             |
+|                                              [C28164](../code-quality/c28164.md)                                               |             参数被传递到一个函数，该函数需要指向对象的指针 (不是指向指针的指针)              |
 |                                              [C28182](../code-quality/c28182.md)                                               |                    取消引用 NULL 指针。 该指针包含与另一指针相同的 NULL 值。                     |
 |                                              [C28183](../code-quality/c28183.md)                                               |                          参数可以是一个值，并且是在指针中找到的值的副本                           |
 |                                              [C28193](../code-quality/c28193.md)                                               |                                          变量保存一个必须检查的值                                           |
-|                                              [C28196](../code-quality/c28196.md)                                               |                            不满足要求。 （该表达式的计算结果不为 true。）                            |
+|                                              [C28196](../code-quality/c28196.md)                                               |                            不满足要求。  (表达式的计算结果不为 true。 )                             |
 |                                              [C28202](../code-quality/c28202.md)                                               |                                               非法引用非静态成员                                                |
 |                                              [C28203](../code-quality/c28203.md)                                               |                                                对类成员的不明确的引用。                                                 |
 |                                              [C28205](../code-quality/c28205.md)                                               |                                      在非法上下文中使用的 \_Success\_ 或 \_On_failure\_                                       |

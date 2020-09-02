@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: e2481693961dd03815381e9f71ee67cb73464bdf
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72646928"
 ---
 # <a name="step-8-add-a-method-to-verify-whether-the-player-won"></a>步骤 8：添加方法以验证玩家是否获胜
@@ -37,10 +37,10 @@ ms.locfileid: "72646928"
 
 3. 保存并运行程序。 玩游戏并匹配所有图标。 当你获胜时，该程序将显示一个祝贺性的 MessageBox（如下图所示），然后关闭该框。
 
-     ![与 MessageBox 匹配游戏](../ide/media/express-tut4step8.png "Express_Tut4Step8")与 MessageBox 匹配游戏
+     ![与 MessageBox 匹配游戏](../ide/media/express-tut4step8.png "Express_Tut4Step8") 与 MessageBox 匹配游戏
 
 ### <a name="to-continue-or-review"></a>继续或查看
 
-- 要转到下一个教程步骤，请参阅[步骤 9：尝试其他功能](../ide/step-9-try-other-features.md)。
+- 若要继续学习下一个教程，请参阅 [步骤9：尝试其他功能](../ide/step-9-try-other-features.md)。
 
-- 要返回到上一个教程步骤，请参阅[步骤 7：保持对可见](../ide/step-7-keep-pairs-visible.md)。
+- 若要返回上一个教程步骤，请参阅 [步骤7：保持对可见](../ide/step-7-keep-pairs-visible.md)。

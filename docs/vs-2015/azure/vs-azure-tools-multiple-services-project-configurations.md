@@ -12,11 +12,11 @@ ms.topic: conceptual
 ms.date: 11/11/2017
 ms.author: ghogen
 ms.openlocfilehash: 59996180661806eee60d18ab4b7b5fd26f4a2e7b
-ms.sourcegitcommit: 95f26af1da51d4c83ae78adcb7372b32364d8a2b
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79301457"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89312738"
 ---
 # <a name="configuring-your-azure-project-in-visual-studio-to-use-multiple-service-configurations"></a>使用多种服务配置来配置 Visual Studio 中的 Azure 项目
 
@@ -41,13 +41,13 @@ Visual Studio 中的 Azure 云服务项目包括三个配置文件：`ServiceDef
 
 将“实例计数”属性设置为服务应为此角色运行的实例的数目。****
 
-将“VM 大小”属性设置为“特小”、“小”、“中”、“大”或“特大”。************************  有关详细信息，请参阅[云服务的大小](/azure/cloud-services/cloud-services-sizes-specs)。
+将“VM 大小”属性设置为“特小”、“小”、“中”、“大”或“特大”。************************  有关详细信息，请参阅 [云服务的大小](/azure/cloud-services/cloud-services-sizes-specs)。
 
 ### <a name="startup-action-web-role-only"></a>启动操作（仅适用于 Web 角色）
 
 设置此属性可指定在开始调试时，Visual Studio 应为 HTTP 终结点、HTTPS 终结点还是两者启动 Web 浏览器。
 
-仅当已为角色定义 HTTPS**终结点时，HTTPS 终结点**选项才可用。 可以在“终结点”属性页上定义 HTTPS 终结点。****
+仅当已为角色定义 HTTPS 终结点时， **https 终结点** 选项才可用。 可以在“终结点”属性页上定义 HTTPS 终结点。****
 
 如果已添加 HTTPS 终结点，则将默认启用“HTTPS 终结点”选项，Visual Studio 除了为 HTTP 终结点启动浏览器之外，还会在开始调试时为此终结点启动浏览器，假定这两个启动选项均已启用。
 
@@ -55,7 +55,7 @@ Visual Studio 中的 Azure 云服务项目包括三个配置文件：`ServiceDef
 
 默认情况下，将对 Web 角色启用诊断。 Azure 云服务项目和存储帐户都设置为使用本地存储模拟器。 准备好部署到 Azure 后，可以选择生成器按钮 (…****) 以改用 Azure 存储。 可以根据需要或自动计划的间隔，将诊断数据传输到存储帐户。 有关 Azure 诊断的详细信息，请参阅[在 Azure 云服务和虚拟机中启用诊断](/azure/cloud-services/cloud-services-dotnet-diagnostics)。
 
-## <a name="settings-page"></a>“设置”页
+## <a name="settings-page"></a>设置页面
 
 在“设置”**** 页上，可以将设置以名称/值对形式添加到配置中。 角色中运行的代码可以使用 [Azure 托管库](/previous-versions/azure/dn602775(v=azure.11))提供的类（具体而言，[GetConfigurationSettingValue](/previous-versions/azure/reference/ee772857(v=azure.100)) 方法），在运行时读取配置设置的值。
 

@@ -10,10 +10,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 77868ea7082c1b9118b70062f19195d94b4ca20a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68145548"
 ---
 # <a name="threadon-and-threadoff"></a>ThreadOn 和 ThreadOff
@@ -31,7 +31,7 @@ VSPerfCmd.exe **ThreadOff** 和 **ThreadOn** 子命令只能在使用检测方�
   
 - **ThreadOn** 将线程启动/停止计数立即设置为 1，从而继续分析。  
   
-  有关更多信息，请参阅[分析工具 API](../profiling/profiling-tools-apis.md)。  
+  有关详细信息，请参阅 [分析工具 api](../profiling/profiling-tools-apis.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,13 +47,13 @@ VSPerfCmd.exe /{ThreadOff|ThreadOn}:TID [Options]
 ## <a name="valid-options"></a>有效选项  
  可以在包含以下子命令的命令行上指定 **ThreadOn** 和 **ThreadOff**。  
   
- **Start:** `Method`  
+ **开始时间：**`Method`  
  初始化命令行分析会话并设置指定的分析方法。  
   
  **GlobalOff**&#124;**GlobalOn**  
  停止或启动对命令行分析会话中所有进程的分析。  
   
- {**ProcessOff**|**ProcessOn**} **:** `TID`  
+ {**ProcessOff**&#124;**ProcessOn**}**:**`TID`  
  停止或启动对指定进程的分析。  
   
 ## <a name="example"></a>示例  

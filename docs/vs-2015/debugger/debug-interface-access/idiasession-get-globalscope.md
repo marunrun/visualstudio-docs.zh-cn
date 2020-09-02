@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: b2b7b67ca3943f84a270873dfbdeb9b353b4e7e0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68145067"
 ---
-# <a name="idiasessiongetglobalscope"></a>IDiaSession::get_globalScope
+# <a name="idiasessionget_globalscope"></a>IDiaSession::get_globalScope
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-检索对全局范围内的引用。  
+检索对全局范围的引用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,12 +35,12 @@ HRESULT get_globalScope ( 
   
 #### <a name="parameters"></a>参数  
  `pRetVal`  
- [out]返回[IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)表示全局范围内的对象。  
+ 弄返回一个 [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) 对象，该对象表示全局范围。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
-## <a name="see-also"></a>请参阅  
- [Exe](../../debugger/debug-interface-access/exe.md)   
+## <a name="see-also"></a>另请参阅  
+ [.Exe](../../debugger/debug-interface-access/exe.md)   
  [IDiaSession](../../debugger/debug-interface-access/idiasession.md)   
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
