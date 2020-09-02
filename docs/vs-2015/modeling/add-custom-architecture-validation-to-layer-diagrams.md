@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 0b5ebe4e38878df209ab6065b1dbca88cd8404b2
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72655309"
 ---
 # <a name="add-custom-architecture-validation-to-layer-diagrams"></a>向层关系图添加自定义体系结构验证
@@ -23,7 +23,7 @@ ms.locfileid: "72655309"
 
 在 Visual Studio 中，用户可以对照层模型验证项目中的源代码，以便他们可以验证源代码是否符合层关系图上的依赖关系。 有标准的验证算法，但你可以定义自己的验证扩展。
 
- 当用户在层关系图上选择“验证体系结构” 命令时，会调用标准验证方法，接着会调用已安装的任意验证扩展。
+ 当用户在层关系图上选择“验证体系结构” **** 命令时，会调用标准验证方法，接着会调用已安装的任意验证扩展。
 
 > [!NOTE]
 > 层关系图中的验证与 UML 关系图中的验证不同。 在层关系图中，主要目的是将关系图与解决方案中其他部分的程序代码进行比较。
@@ -41,9 +41,9 @@ ms.locfileid: "72655309"
 
 #### <a name="to-define-an-extension-by-using-a-project-template"></a>若要使用项目模板定义扩展
 
-1. 使用“文件” 菜单上的“新建项目” 命令，在新的解决方案中创建项目。
+1. 使用“文件” **** 菜单上的“新建项目” **** 命令，在新的解决方案中创建项目。
 
-2. 在“新建项目” 对话框中的“项目建模”下，选择“层设计器验证扩展”。
+2. 在“新建项目” **** 对话框中的“项目建模” **** 下，选择“层设计器验证扩展” ****。
 
     该模板将创建包含一个小型示例的项目。
 
@@ -51,7 +51,7 @@ ms.locfileid: "72655309"
    > 若要 makethe 模板工作正常：
    >
    > - 编辑对 `LogValidationError` 的调用，以删除可选参数 `errorSourceNodes` 和 `errorTargetNodes`。
-   >   - 如果使用自定义属性，请将 "[向层关系图添加自定义属性](../modeling/add-custom-properties-to-layer-diagrams.md)" 中所述的更新。
+   >   - 如果使用自定义属性，请将 " [向层关系图添加自定义属性](../modeling/add-custom-properties-to-layer-diagrams.md)" 中所述的更新。
 
 3. 编辑代码以定义验证。 有关详细信息，请参阅 [验证编程](#programming)。
 
@@ -60,44 +60,44 @@ ms.locfileid: "72655309"
    > [!NOTE]
    > 将仅在特定情况下调用你的方法，且断点将不会自动工作。 有关详细信息，请参阅 [调试层验证](#debugging)。
 
-5. 若要在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的主实例中或在另一台计算机上安装扩展，请在*bin \\* 中找到 **.vsix**文件。 将此文件复制到想在其上安装它的计算机，然后双击它。 若要卸载它，请使用“工具” 菜单上的“扩展和更新” 。
+5. 若要在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]的主实例中或在另一台计算机上安装扩展，请找到 **bin\*** 中的 *.vsix\\*。 将此文件复制到想在其上安装它的计算机，然后双击它。 若要卸载它，请使用“工具” **** 菜单上的“扩展和更新” **** 。
 
 ## <a name="adding-a-layer-validator-to-a-separate-vsix"></a>向单独的 VSIX 添加层验证程序
- 如果要创建一个包含层验证程序、命令和其他扩展的 VSIX，建议创建一个项目来定义该 VSIX，并分隔项目和处理程序。 有关其他类型的建模扩展的信息，请参阅[扩展 UML 模型和关系图](../modeling/extend-uml-models-and-diagrams.md)。
+ 如果要创建一个包含层验证程序、命令和其他扩展的 VSIX，建议创建一个项目来定义该 VSIX，并分隔项目和处理程序。 有关其他类型的建模扩展的信息，请参阅 [扩展 UML 模型和关系图](../modeling/extend-uml-models-and-diagrams.md)。
 
 #### <a name="to-add-layer-validation-to-a-separate-vsix"></a>向单独的 VSIX 添加层验证
 
-1. 在新的或现有 Visual Studio 解决方案中创建类库项目。 在“新建项目” 对话框中，单击“Visual C#” ，然后单击“类库”。 此项目将包含层验证类。
+1. 在新的或现有 Visual Studio 解决方案中创建类库项目。 在“新建项目” **** 对话框中，单击“Visual C#” **** ，然后单击“类库” ****。 此项目将包含层验证类。
 
 2. 在解决方案中标识或创建 VSIX 项目。 VSIX 项目包含名为 **source.extension.vsixmanifest**的文件。 如果必须添加一个 VSIX 项目，请遵循下列步骤：
 
-    1. 在“新建项目” 对话框中，依次选择“Visual C#”、“扩展性”、“VSIX 项目”。
+    1. 在“新建项目” **** 对话框中，依次选择“Visual C#” ****、“扩展性” ****、“VSIX 项目” ****。
 
-    2. 在“解决方案资源管理器”中，在 VSIX 项目的快捷菜单上，选择“设为启动项目”。
+    2. 在“解决方案资源管理器” **** 中，在 VSIX 项目的快捷菜单上，选择“设为启动项目” ****。
 
-3. 在 **source.extension.vsixmanifest**中的“资产”下，将层验证项目添加为 MEF 组件：
+3. 在 **source.extension.vsixmanifest**中的“资产” **** 下，将层验证项目添加为 MEF 组件：
 
-    1. 选择 **“新建”** 。
+    1. 选择“新建”。****
 
-    2. 在“添加新资产” 对话框中，进行如下设置：
+    2. 在“添加新资产” **** 对话框中，进行如下设置：
 
-         **类型** = **Microsoft.VisualStudio.MefComponent**
+         **类型**  = **VisualStudio. microsoft.visualstudio.mefcomponent**
 
-          = **当前解决方案中的项目**
+         **源**  = **当前解决方案中的项目**
 
-         **项目** = *你的验证程序项目*
+         **项目**  = *验证程序项目*
 
 4. 还必须将其添加为层验证：
 
-    1. 选择 **“新建”** 。
+    1. 选择“新建”。****
 
-    2. 在“添加新资产” 对话框中，进行如下设置：
+    2. 在“添加新资产” **** 对话框中，进行如下设置：
 
-         **类型** = **Microsoft.VisualStudio.ArchitectureTools.Layer.Validator**。 这并不是下拉列表中的选项。 必须从键盘输入。
+         **类型**  = **VisualStudio. microsoft.visualstudio.architecturetools.layer.validator**。 这并不是下拉列表中的选项。 必须从键盘输入。
 
-          = **当前解决方案中的项目**
+         **源**  = **当前解决方案中的项目**
 
-         **项目** = *你的验证程序项目*
+         **项目**  = *验证程序项目*
 
 5. 返回层验证项目，并添加以下项目引用：
 
@@ -119,9 +119,9 @@ ms.locfileid: "72655309"
 
 8. 若要在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]的主实例中或在另一台计算机上安装扩展，请找到 **bin\*** 目录中找到 **.vsix** 文件。 将此文件复制到想在其上安装 VSIX 的计算机。 在 Windows 资源管理器中双击该 VSIX 文件。 （Windows 8 中为文件资源管理器。）
 
-     若要卸载它，请使用“工具” 菜单上的“扩展和更新” 。
+     若要卸载它，请使用“工具” **** 菜单上的“扩展和更新” **** 。
 
-## <a name="programming"></a> 验证编程
+## <a name="programming-validation"></a><a name="programming"></a> 验证编程
  若要定义层验证扩展，可以定义一个具有以下特征的类：
 
 - 声明的大体形式如下：
@@ -149,7 +149,7 @@ ms.locfileid: "72655309"
   > [!WARNING]
   > 不要使用 `LogValidationError`的可选参数。
 
-  用户调用“验证体系结构” 菜单命令时，层运行时系统将分析层及其项目以生成图形。 图形包含四个部分：
+  用户调用“验证体系结构” **** 菜单命令时，层运行时系统将分析层及其项目以生成图形。 图形包含四个部分：
 
 - 表示为图形中节点和链接的 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 解决方案的层模型。
 
@@ -190,7 +190,7 @@ ms.locfileid: "72655309"
 
   代码中从层到元素的链接具有“Represents”类别。
 
-## <a name="debugging"></a> 调试验证
+## <a name="debugging-validation"></a><a name="debugging"></a> 调试验证
  若要调试你的层验证扩展，请按 Ctrl + F5。 将打开 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的实验实例。 在本例中，将打开或创建一个层模型。 此模型必须与代码相关联，并且必须具有至少一个依赖项。
 
 ### <a name="test-with-a-solution-that-contains-dependencies"></a>使用包含依赖项的解决方案进行测试
@@ -203,21 +203,21 @@ ms.locfileid: "72655309"
   首次启动 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的实验实例来测试验证扩展时，请打开或创建具有这些特征的解决方案。
 
 ### <a name="run-clean-solution-before-validate-architecture"></a>在验证体系结构之前运行清理解决方案
- 每当你更新验证代码时，请先在实验解决方案中的“生成” 菜单上使用“清理解决方案” 命令，然后再测试“验证”命令。 这是必要的，因为将缓存验证的结果。 如果还未更新测试层关系图或其代码，则不会执行验证方法。
+ 每当你更新验证代码时，请先在实验解决方案中的“生成” **** 菜单上使用“清理解决方案” **** 命令，然后再测试“验证”命令。 这是必要的，因为将缓存验证的结果。 如果还未更新测试层关系图或其代码，则不会执行验证方法。
 
 ### <a name="launch-the-debugger-explicitly"></a>显式启动调试器
  验证在单独的进程中运行。 因此，不会触发验证方法中的断点。 验证开始后，必须将调试器显式附加到进程。
 
  若要将调试器附加到验证进程，请在验证方法的开头插入一个对 `System.Diagnostics.Debugger.Launch()` 的调用。 出现调试对话框时，选择 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]的主实例。
 
- 或者，可以插入一个对 `System.Windows.Forms.MessageBox.Show()`的调用。 出现消息框时，转到 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的主实例，并在“调试” 菜单上单击“附加到进程”。 选择名为 **Graphcmd.exe**的进程。
+ 或者，可以插入一个对 `System.Windows.Forms.MessageBox.Show()`的调用。 出现消息框时，转到 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的主实例，并在“调试” **** 菜单上单击“附加到进程” ****。 选择名为 **Graphcmd.exe**的进程。
 
- 始终通过按 Ctrl + F5（“开始执行(不调试)”）启动实验实例。
+ 始终通过按 Ctrl + F5（“开始执行(不调试)”****）启动实验实例。
 
 ### <a name="deploying-a-validation-extension"></a>部署验证扩展
- 若要在安装了适当版本的 Visual Studio 的计算机上安装验证扩展，请打开目标计算机上的 VSIX 文件。 若要在安装了 [!INCLUDE[esprbuild](../includes/esprbuild-md.md)] 的计算机上进行安装，则必须将 VSIX 内容手动解压到 Extensions 文件夹中。 有关详细信息，请参阅[部署层模型扩展](../modeling/deploy-a-layer-model-extension.md)。
+ 若要在安装了适当版本的 Visual Studio 的计算机上安装验证扩展，请打开目标计算机上的 VSIX 文件。 若要在安装了 [!INCLUDE[esprbuild](../includes/esprbuild-md.md)] 的计算机上进行安装，则必须将 VSIX 内容手动解压到 Extensions 文件夹中。 有关详细信息，请参阅 [部署层模型扩展](../modeling/deploy-a-layer-model-extension.md)。
 
-## <a name="example"></a> Example code
+## <a name="example-code"></a><a name="example"></a> 示例代码
 
 ```csharp
 using System;
@@ -278,5 +278,5 @@ namespace Validator3
 }
 ```
 
-## <a name="see-also"></a>请参阅
- [扩展层关系图](../modeling/extend-layer-diagrams.md)
+## <a name="see-also"></a>另请参阅
+ [Extend layer diagrams](../modeling/extend-layer-diagrams.md)
