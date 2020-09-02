@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 3f783161865092f714955b65e6f2fa4791741cbe
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72664292"
 ---
 # <a name="l2dbformxamlcs-source-code"></a>L2DBForm.xaml.cs Source Code
@@ -37,7 +37,7 @@ ms.locfileid: "72664292"
 
 - 第一个条件语句用于输入验证。
 
-- 第二个语句根据用户在“添加新书籍”用户界面 (UI) 区域中输入的字符串值新建 <xref:System.Xml.Linq.XElement>。
+- 第二个语句根据用户在“添加新书籍”**** 用户界面 (UI) 区域中输入的字符串值新建 <xref:System.Xml.Linq.XElement>。
 
 - 最后一个语句将此新书籍元素添加到 L2DBForm.xaml 中的数据提供程序。 因此，动态数据绑定将用此新项自动更新 UI；不需要用户提供额外的代码。
 
@@ -62,7 +62,7 @@ ms.locfileid: "72664292"
 
 ## <a name="example"></a>示例
 
-### <a name="description"></a>描述
+### <a name="description"></a>说明
 
 ### <a name="code"></a>代码
 
@@ -137,5 +137,5 @@ namespace LinqToXmlDataBinding {
 ### <a name="comments"></a>注释
  有关这些处理程序的关联 XAML 源，请参阅 [L2DBForm.xaml 源代码](../designers/l2dbform-xaml-source-code.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [演练： LinqToXmlDataBinding 示例](../designers/walkthrough-linqtoxmldatabinding-example.md) [l2dbform.xaml](../designers/l2dbform-xaml-source-code.md)

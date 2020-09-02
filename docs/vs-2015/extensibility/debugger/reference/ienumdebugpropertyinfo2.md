@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugPropertyInfo2 | Microsoft Docs
+title: IEnumDebugPropertyInfo2 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: ee305083957f6d2f2ada09aec1747497fcf6db68
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68147827"
 ---
 # <a name="ienumdebugpropertyinfo2"></a>IEnumDebugPropertyInfo2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-此接口枚举[DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md)结构。  
+此接口枚举 [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) 结构。  
   
 ## <a name="syntax"></a>语法  
   
@@ -30,34 +30,34 @@ ms.locfileid: "68147827"
 IEnumDebugPropertyInfo2 : IUnknown  
 ```  
   
-## <a name="notes-for-implementers"></a>实施者的说明  
- 调试引擎 (DE) 实现此接口来表示特定属性的信息。  
+## <a name="notes-for-implementers"></a>实施者注意事项  
+ 调试引擎 (DE) 实现此接口，以表示特定属性的信息。  
   
-## <a name="notes-for-callers"></a>调用方的说明  
- 调用[EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md)获取此接口表示特定属性的子级。 调用[EnumProperties](../../../extensibility/debugger/reference/idebugstackframe2-enumproperties.md)获取此接口表示特定堆栈帧的属性。  
+## <a name="notes-for-callers"></a>调用方说明  
+ 调用 [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) 可获取表示特定属性的子元素的此接口。 调用 [EnumProperties](../../../extensibility/debugger/reference/idebugstackframe2-enumproperties.md) 可获取表示特定堆栈帧属性的此接口。  
   
 ## <a name="methods-in-vtable-order"></a>Vtable 顺序中的方法  
- 下表显示的方法`IEnumDebugPropertyInfo2`。  
+ 下表显示的方法 `IEnumDebugPropertyInfo2` 。  
   
-|方法|描述|  
+|方法|说明|  
 |------------|-----------------|  
-|[下一页](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2-next.md)|检索指定的数目的[DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md)枚举序列中的结构。|  
-|[Skip](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2-skip.md)|跳过指定的数目的[DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md)枚举序列中的结构。|  
-|[Reset](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2-reset.md)|将枚举序列重置到开头。|  
-|[Clone](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2-clone.md)|创建一个包含当前枚举数形式的相同枚举状态的枚举器。|  
-|[GetCount](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2-getcount.md)|获取数[DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md)枚举器中的结构。|  
+|[下一页](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2-next.md)|检索枚举序列中指定数目的 [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) 结构。|  
+|[Skip](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2-skip.md)|跳过枚举序列中指定数目的 [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) 结构。|  
+|[重置](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2-reset.md)|将枚举序列重置到开始处。|  
+|[克隆](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2-clone.md)|创建与当前枚举数包含相同枚举状态的枚举数。|  
+|[GetCount](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2-getcount.md)|获取枚举器中 [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) 结构的数目。|  
   
 ## <a name="remarks"></a>备注  
- 一般情况下，属性是层次结构的名称、 值、 地址和类型，可以包含的信息，以及适用于关联的属性对象或堆栈帧的任何其他信息。 请参阅[IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)的更多详细信息。  
+ 通常，属性是信息的层次结构，其中可以包含名称、值、地址和类型，以及任何适用于关联的属性对象或堆栈帧的其他信息。 有关更多详细信息，请参阅 [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) 。  
   
 ## <a name="requirements"></a>要求  
- 标头： msdbg.h  
+ 标头： msdbg  
   
- 命名空间:Microsoft.VisualStudio.Debugger.Interop  
+ 命名空间： VisualStudio  
   
- 程序集：Microsoft.VisualStudio.Debugger.Interop.dll  
+ 程序集： Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [核心接口](../../../extensibility/debugger/reference/core-interfaces.md)   
  [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md)   
  [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)   

@@ -12,10 +12,10 @@ ms.topic: conceptual
 ms.date: 03/06/2017
 ms.author: ghogen
 ms.openlocfilehash: bc56163c5fe2e6f52eed7db1d75d8e6194dfce7f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62989823"
 ---
 # <a name="configure-an-azure-cloud-service-project-with-visual-studio"></a>使用 Visual Studio 配置 Azure 云服务项目
@@ -28,23 +28,23 @@ ms.locfileid: "62989823"
 ## <a name="steps-to-configure-an-azure-cloud-service-project"></a>配置 Azure 云服务项目的步骤
 1. 在 Visual Studio 中打开或创建 Azure 云服务项目
 
-1. 在“解决方案资源管理器”中右键单击项目，并从上下文菜单中选择“属性”。
+1. 在“解决方案资源管理器”中右键单击项目，并从上下文菜单中选择“属性”。********
 
-1. 在项目的属性页中，选择“开发”选项卡。
+1. 在项目的属性页中，选择“开发”选项卡。****
 
     ![“项目属性”菜单](./media/vs-azure-tools-configuring-an-azure-project/solution-explorer-project-properties-menu.png)
 
-1. 将“删除现有部署前提示”设为“True”。 此设置有助于确保不会意外删除 Azure 中的现有部署
+1. 将“删除现有部署前提示”**** 设为“True”****。 此设置有助于确保不会意外删除 Azure 中的现有部署
 
 1. 若要指示在本地运行或调试云服务时要使用的服务配置，请选择所需**服务配置**。 有关如何修改角色的服务配置的详细信息，请参阅[如何使用 Visual Studio 配置 Azure 云服务的角色](./vs-azure-tools-configure-roles-for-cloud-service.md)。
 
-1. 要在本地运行或调试云服务时启动 Azure 存储模拟器，请将“启动 Azure 存储模拟器”设为“True”。
+1. 要在本地运行或调试云服务时启动 Azure 存储模拟器，请将“启动 Azure 存储模拟器”**** 设为“True”****。
 
-1. 要确保在出现包验证错误时无法发布，请将“将警告视为错误”设为“True”。
+1. 要确保在出现包验证错误时无法发布，请将“将警告视为错误”**** 设为“True”****。
 
-1. 要确保 Web 角色每次在 IIS Express 中本地启动时都使用同一端口，请将“使用 Web 项目端口”设为“True”。
+1. 要确保 Web 角色每次在 IIS Express 中本地启动时都使用同一端口，请将“使用 Web 项目端口”**** 设为“True”****。
 
-1. 从 Visual Studio 工具栏中，选择“保存”。
+1. 从 Visual Studio 工具栏中，选择“保存”****。
 
 ## <a name="next-steps"></a>后续步骤
 - [使用多种服务配置来配置 Azure 项目](vs-azure-tools-multiple-services-project-configurations.md)

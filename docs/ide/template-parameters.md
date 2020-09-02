@@ -11,19 +11,19 @@ author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.openlocfilehash: 7076e8f5718e44cc382eb0768e6456dbd6ee5664
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "78169360"
 ---
 # <a name="template-parameters"></a>模板参数
 
-实例化模板时，可替换模板中的值。 若要设置此功能，请使用模板参数  。 模板参数可用于替换值，例如模板中的类名和命名空间。 当用户添加新项或项目时，后台运行的模板向导会替换这些参数。
+实例化模板时，可替换模板中的值。 若要设置此功能，请使用模板参数**。 模板参数可用于替换值，例如模板中的类名和命名空间。 当用户添加新项或项目时，后台运行的模板向导会替换这些参数。
 
 ## <a name="declare-and-enable-template-parameters"></a>声明和启用模板参数
 
-模板参数以 $参数$ 的格式进行声明  。 例如：
+模板参数以 $参数$ 的格式进行声明**。 例如：
 
 - $safeprojectname$
 
@@ -33,7 +33,7 @@ ms.locfileid: "78169360"
 
 ### <a name="enable-parameter-substitution-in-templates"></a>在模板中启用参数替换
 
-1. 在模板的 .vstemplate  文件中，找到与要为之启用参数替换的项对应的 `ProjectItem` 元素。
+1. 在模板的 .vstemplate 文件中，找到与要为之启用参数替换的项对应的 `ProjectItem` 元素。
 
 1. 将 `ReplaceParameters` 元素的 `ProjectItem` 属性设置为 `true`。
 
@@ -47,10 +47,10 @@ ms.locfileid: "78169360"
 
 下表列出可供任何模板使用的保留的模板参数：
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
 |clrversion|公共语言运行时 (CLR) 的当前版本。|
-|ext_*|将 `ext_` 前缀添加到任何参数，以引用父模板的变量。 例如 `ext_safeprojectname`。|
+|ext_*|将 `ext_` 前缀添加到任何参数，以引用父模板的变量。 例如，`ext_safeprojectname`。|
 |guid[1-10]|一个用于替换项目文件中的项目 GUID 的 GUID。 可指定最多 10 个唯一的 GUID（例如，`guid1`）。|
 |itemname|在其中使用参数的文件的名称。|
 |machinename|当前的计算机名称（例如，Computer01）。|
@@ -106,7 +106,7 @@ namespace $safeprojectname$
 }
 ```
 
-引用文件时，在项目模板的 .vstemplate  文件中添加 `ReplaceParameters="true"` 属性：
+引用文件时，在项目模板的 .vstemplate 文件中添加 `ReplaceParameters="true"` 属性：
 
 ```xml
 <TemplateContent>
@@ -117,7 +117,7 @@ namespace $safeprojectname$
 </TemplateContent>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [如何：替换模板中的参数](how-to-substitute-parameters-in-a-template.md)
 - [自定义模板](../ide/customizing-project-and-item-templates.md)

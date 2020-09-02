@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 9d02d4cfede6ed3499d09ff58e4454c1ef9cbe0d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72651008"
 ---
 # <a name="symbol-path-command"></a>“符号路径”命令
@@ -33,7 +33,7 @@ ms.locfileid: "72651008"
 Debug.SymbolPath pathname1;pathname2;... pathnameN
 ```
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
  `pathname`（可选）。 调试器路径列表的分号分隔列表，用于搜索符号。
 
 ## <a name="remarks"></a>备注

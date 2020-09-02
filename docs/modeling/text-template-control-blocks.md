@@ -10,10 +10,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: ef39e82ea1abe95b3bea799545ed7fbf5b766fd3
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75591783"
 ---
 # <a name="text-template-control-blocks"></a>文本模板控制块
@@ -141,11 +141,11 @@ Some text.
 ```
 
 ## <a name="how-to-use-control-blocks"></a>如何使用控制块
- 将单个模块中所有标准和表达式控制块中的所有代码（包括包含模板中的所有代码）组合在一起，以便形成所生成代码的 `TransformText()` 方法。 （有关包含带有 `include` 指令的其他文本模板的详细信息，请参阅[T4 文本模板指令](../modeling/t4-text-template-directives.md)。）
+ 将单个模块中所有标准和表达式控制块中的所有代码（包括包含模板中的所有代码）组合在一起，以便形成所生成代码的 `TransformText()` 方法。  (有关将其他文本模板包含在指令中的详细信息 `include` ，请参阅 [T4 文本模板指令](../modeling/t4-text-template-directives.md)。 ) 
 
  在使用控制块时，请记住考虑以下事项：
 
-- **语言。** 你可以使用文本模板中的 C# 或 Visual Basic 代码。 默认语言为 C#，但你可以使用 `template` 指令的 `language` 参数指定 Visual Basic。 （有关 `template` 指令的详细信息，请参阅[T4 文本模板指令](../modeling/t4-text-template-directives.md)。）
+- **语言.** 你可以使用文本模板中的 C# 或 Visual Basic 代码。 默认语言为 C#，但你可以使用 `template` 指令的 `language` 参数指定 Visual Basic。  (有关指令的详细信息 `template` ，请参阅 [T4 文本模板指令](../modeling/t4-text-template-directives.md)。 ) 
 
      控制块中使用的语言与文本模板中生成的文本的语言或格式无关。 你可以使用 Visual Basic 代码生成 C#，反之亦然。
 
@@ -155,7 +155,7 @@ Some text.
 
      当你对局部变量进行声明时，尤其是当包括多个文本模板时，将局部变量初始化为合理的值也是一种不错的方法。
 
-- **控制块的嵌套。** 控制块之间可能无法相互嵌套在各自内部。 在打开另一个控制块之前，必须始终终止给定的控制块。 例如，下面的示例演示了如何将表达式块中的部分文本作为标准控制块的一部分打印。
+- **嵌套控制块。** 控制块之间可能无法相互嵌套在各自内部。 在打开另一个控制块之前，必须始终终止给定的控制块。 例如，下面的示例演示了如何将表达式块中的部分文本作为标准控制块的一部分打印。
 
     ```
     <#

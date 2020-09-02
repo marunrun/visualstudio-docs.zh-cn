@@ -10,16 +10,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: fc0ec53c35f87751efe78359f582e5f4297143c9
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72664268"
 ---
 # <a name="l2dbformxaml-source-code"></a>L2DBForm.xaml 源代码
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-本主题包含并介绍了[使用 LINQ to XML 的 WPF 数据绑定示例](../designers/wpf-data-binding-using-linq-to-xml-example.md)的 XAML 源文件，即 L2DBForm.xaml。
+本主题包含和描述 [使用 LINQ to XML 示例 l2dbform.xaml 的 WPF 数据绑定](../designers/wpf-data-binding-using-linq-to-xml-example.md)的 XAML 源文件。
 
 ## <a name="overall-ui-structure"></a>总体 UI 结构
  和典型的 WPF 项目一样，此文件包含一个父元素，该元素是一个与 <xref:System.Windows.Window> 命名空间中的派生类 `L2XDBFrom` 相关联的 `LinqToXmlDataBinding` XML 元素。
@@ -84,7 +84,7 @@ Text="{Binding Path=Attribute[id].Value}"...Text="{Binding Path=Value}"
 
 ## <a name="example"></a>示例
 
-### <a name="description"></a>描述
+### <a name="description"></a>说明
 
 > [!NOTE]
 > 建议您将下面的代码复制到代码编辑器（如 Visual Studio 中的 C# 源代码编辑器）中，以便更易于跟踪行号。
@@ -239,7 +239,7 @@ Text="{Binding Path=Attribute[id].Value}"...Text="{Binding Path=Value}"
 ```
 
 ### <a name="comments"></a>注释
- 有关与 WPF UI 元素相关联的事件处理程序的 C# 源代码，请参阅 [L2DBForm.xaml.cs Source Code](../designers/l2dbform-xaml-cs-source-code.md)。
+ 有关与 WPF UI 元素相关联的事件处理程序的 c # 源代码，请参阅 [L2DBForm.xaml.cs 源代码](../designers/l2dbform-xaml-cs-source-code.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [演练： LinqToXmlDataBinding 示例](../designers/walkthrough-linqtoxmldatabinding-example.md) [L2DBForm.xaml.cs 源代码](../designers/l2dbform-xaml-cs-source-code.md)

@@ -24,23 +24,23 @@ caps.latest.revision: 37
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 0f981b76d471658fe82e874901ad784a17841891
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63446430"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64778372"
 ---
 # <a name="how-to-use-a-visualizer"></a>如何：使用可视化工具
-您可以使用可视化工具，以对变量或对象的数据类型有意义的方式来显示该变量或对象的内容。 您可以通过使用可视化工具**数据提示**即**监视**窗口中，**自动**窗口中，或**局部变量**窗口。  
+您可以使用可视化工具，以对变量或对象的数据类型有意义的方式来显示该变量或对象的内容。 可以通过 **数据提示**、" **监视** " 窗口 **、"自动** " 窗口或 " **局部变量** " 窗口使用可视化工具。  
   
  Compact Framework 上不支持可视化工具。  
   
 > [!NOTE]
-> 在中**Store**应用，仅在标准文本支持 HTML、 XML 和 JSON 可视化工具。 不支持自定义（用户创建的）可视化工具。  
+> 在应用 **商店** 应用中，仅支持标准文本、HTML、XML 和 JSON 可视化工具。 不支持自定义（用户创建的）可视化工具。  
   
 ### <a name="to-open-a-visualizer"></a>打开可视化工具  
   
-1. 单击显示中的变量名旁边的放大镜图标**数据提示**即**监视**窗口中，或在**自动**，**局部变量**，或**快速监视**窗口。  
+1. 单击 "**数据提示**"、"**监视**" 窗口或 "自动"、"**局部变量**"**或 "****快速监视**" 窗口中的变量名称旁边显示的放大镜图标。  
   
      将会显示可视化工具列表。  
   
@@ -52,13 +52,13 @@ ms.locfileid: "63446430"
   
      远程计算机和本地计算机上的 DLL 路径必须相同。 此路径可为下列任一位置：  
   
-     *Visual Studio 安装路径* `\Common7\Packages\Debugger\Visualizers`  
+     *Visual Studio 安装路径*`\Common7\Packages\Debugger\Visualizers`  
   
-     或  
+     - 或 -  
   
-     `My Documents\Visual Studio 2010\Visualizers` *Visual Studio 版本* `\Visualizers`  
+     `My Documents\Visual Studio 2010\Visualizers`*Visual Studio 版本*`\Visualizers`  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建自定义可视化工具](../debugger/create-custom-visualizers-of-data.md)   
  [如何：安装可视化工具](../debugger/how-to-install-a-visualizer.md)   
  [如何：编写可视化工具](../debugger/how-to-write-a-visualizer.md)   

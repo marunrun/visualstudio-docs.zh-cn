@@ -16,20 +16,20 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 1313c5ee79a7a13d3eb937a3431b13ea393857d1
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85544516"
 ---
 # <a name="ca1030-use-events-where-appropriate"></a>CA1030:在适用处使用事件
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|Item|值|
+|项|值|
 |-|-|
 |TypeName|UseEventsWhereAppropriate|
 |CheckId|CA1030|
-|Category|Microsoft. Design|
+|类别|Microsoft. Design|
 |是否重大更改|不间断|
 
 ## <a name="cause"></a>原因
