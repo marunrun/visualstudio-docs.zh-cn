@@ -13,10 +13,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 4b39ac28776b1af71e2cccb601776f5518ff9e99
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68176623"
 ---
 # <a name="collecting-detailed-timing-data-for-a-stand-alone-application-by-using-the-profiler-command-line"></a>使用探查器命令行收集独立应用程序的详细计时数据
@@ -24,12 +24,12 @@ ms.locfileid: "68176623"
 
 本部分介绍从命令行使用检测方法收集客户端（独立）组件的详细性能数据的步骤和选项。  
   
-## <a name="common-tasks"></a>常规任务  
+## <a name="common-tasks"></a>常见任务  
   
 |任务|相关的内容|  
 |----------|---------------------|  
-|**使用检测分析 .NET Framework 应用程序**|-   [如何：检测 .NET 组件，并收集详细计时数据](../profiling/how-to-instrument-a-stand-alone-dotnet-framework-component-and-collect-timing-data-with-the-profiler-from-the-command-line.md)|  
-|**使用检测分析 C/C++ 应用程序**|-   [如何：检测本机组件，并收集详细计时数据](../profiling/how-to-instrument-a-native-stand-alone-component-and-collect-timing-data-with-the-profiler-from-the-command-line.md)|  
+|**使用检测分析 .NET Framework 应用程序**|-   [如何：检测 .NET 组件并收集详细计时数据](../profiling/how-to-instrument-a-stand-alone-dotnet-framework-component-and-collect-timing-data-with-the-profiler-from-the-command-line.md)|  
+|**使用检测分析 C/C++ 应用程序**|-   [如何：检测本机组件和收集详细计时数据](../profiling/how-to-instrument-a-native-stand-alone-component-and-collect-timing-data-with-the-profiler-from-the-command-line.md)|  
 |**添加层交互数据**|-   [收集层交互数据](../profiling/adding-tier-interaction-data-from-the-command-line.md)|  
   
 ## <a name="related-tasks"></a>Related Tasks  
@@ -38,7 +38,7 @@ ms.locfileid: "68176623"
   
 |任务|相关内容|  
 |----------|---------------------|  
-|**使用采样分析应用程序**|-   [使用采样法收集应用程序统计信息](../profiling/collecting-application-statistics-for-stand-alone-applications-by-using-the-profiler-command-line.md)|  
+|**使用采样分析应用程序**|-   [使用采样收集应用程序统计信息](../profiling/collecting-application-statistics-for-stand-alone-applications-by-using-the-profiler-command-line.md)|  
 |**分析 .NET 内存分配和垃圾回收**|-   [收集 .NET Framework 内存数据](../profiling/collecting-dotnet-framework-memory-data-for-stand-alone-applications-by-using-the-profiler-command-line.md)|  
 |**分析资源争用和线程活动**|-   [收集并发数据](../profiling/collecting-concurrency-data-for-stand-alone-applications-by-using-the-profiler-command-line.md)|  
   
@@ -53,4 +53,4 @@ ms.locfileid: "68176623"
  [检测方法数据视图](../profiling/instrumentation-method-data-views.md)  
   
 ## <a name="reference"></a>参考  
- [命令行分析工具参考](../profiling/command-line-profiling-tools-reference.md)
+ [命令行分析工具引用](../profiling/command-line-profiling-tools-reference.md)

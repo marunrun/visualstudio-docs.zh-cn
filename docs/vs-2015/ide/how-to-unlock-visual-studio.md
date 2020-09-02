@@ -11,10 +11,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: a71a045661c48fd36733ecd8d2266470667a5c35
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670598"
 ---
 # <a name="how-to-unlock-visual-studio"></a>如何解锁 Visual Studio
@@ -38,7 +38,7 @@ ms.locfileid: "72670598"
 
 ## <a name="to-unlock-visual-studio-with-a-product-key"></a>使用产品密钥解锁 Visual Studio
 
-1. 选择“文件”>“帐户设置”  ，打开“帐户设置”对话框并单击“使用产品密钥获得许可”  链接。
+1. 选择“文件”>“帐户设置”****，打开“帐户设置”对话框并单击“使用产品密钥获得许可”**** 链接。
 
 2. 在提供的空白处输入产品密钥。
 
@@ -50,7 +50,7 @@ ms.locfileid: "72670598"
 ### <a name="updating-stale-licenses"></a>更新过期的许可证
  你可能已见到过以下信息 - 许可证在 Visual Studio 中即将过时。
 
- ![Visual Studio“用户信息”对话框](../ide/media/vs2013-userinfo.png "|::ref1::|")
+ ![Visual Studio“用户信息”对话框](../ide/media/vs2013-userinfo.png "VS2013_UserInfo")
 
  此消息表示你的订阅可能仍将有效，但 Visual Studio 用来保持订阅更新的许可证令牌尚未刷新，且由于以下原因之一已过时：
 
@@ -70,7 +70,7 @@ ms.locfileid: "72670598"
 
 1. 续订你的订阅 若要查看有关正在使用的许可证的详细信息，请转到“文件”>“帐户设置”对话框，然后在该对话框的右侧查看许可证信息。
 
-2. 如果拥有另一个与不同的帐户相关联的订阅，请通过单击“添加帐户...”链接，将该帐户添加到“文件”>“帐户设置”对话框左侧的“所有帐户” 列表中。
+2. 如果拥有另一个与不同的帐户相关联的订阅，请通过单击“添加帐户...”链接，将该帐户添加到“文件”>“帐户设置”对话框左侧的“所有帐户” 链接。
 
 ## <a name="see-also"></a>另请参阅
  [登录 Visual Studio](../ide/signing-in-to-visual-studio.md)

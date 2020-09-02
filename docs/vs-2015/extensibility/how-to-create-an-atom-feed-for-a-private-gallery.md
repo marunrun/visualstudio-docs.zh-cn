@@ -1,5 +1,5 @@
 ---
-title: 如何：创建 Atom 馈送专用库 |Microsoft Docs
+title: 如何：创建专用库的 Atom 馈送 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,31 +12,31 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: f6d4ba78028774e8fbf8e281afa2855781dab43a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68204214"
 ---
-# <a name="how-to-create-an-atom-feed-for-a-private-gallery"></a>如何：为专用库创建 Atom 馈送
+# <a name="how-to-create-an-atom-feed-for-a-private-gallery"></a>如何：创建专用库的 Atom 源
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-您可以创建 Atom (RSS) 源到 intranet 位置包含扩展并添加到的源**扩展和更新**作为专用库。 有关详细信息，请参阅[专用库](../extensibility/private-galleries.md)。  
+你可以创建 Atom (RSS) 源到包含扩展的 intranet 位置，并将源添加到作为专用库的 **扩展和更新** 。 有关详细信息，请参阅 [私有库](../extensibility/private-galleries.md)。  
   
 ## <a name="creating-an-atom-feed"></a>创建 Atom 馈送  
- 若要创建 Atom 馈送作为专用库，你首先收集有关你的扩展 （.vsix 文件） 到一个文件夹。 您可以将它们组织到子文件夹的前提。 您将需要以下资源：  
+ 若要创建作为专用库的 Atom 源，首先需要将扩展 ( .vsix 文件收集) 到文件夹中。 如果需要，可以将它们组织到子文件夹中。 还需要以下资源：  
   
-- 提供扩展作为专用库 atom.xml 文件。 有关如何连接到 atom.xml 文件信息**扩展和更新**，请参阅[专用库](../extensibility/private-galleries.md)。  
+- 一个 atom.xml 文件，该文件可将扩展作为专用库提供。 有关如何将 atom.xml 文件连接到 **扩展和更新**的信息，请参阅 [私有库](../extensibility/private-galleries.md)。  
   
-- 包含已从扩展插件 （例如，屏幕截图） 中提取任何图像文件的文件夹。 Atom.xml 文件，使他们能够在包含这些图像的相对链接**扩展和更新**。  
+- 一个文件夹，其中包含从扩展中提取的任何图像文件 (例如，屏幕截图) 。 atom.xml 文件包含指向这些映像的相对链接，以便它们可用于 **扩展和更新**。  
   
-  例如，假设您到文件夹收集了以下两个扩展：  
+  例如，假设你已将以下两个扩展收集到一个文件夹中：  
   
-- Template_Wizard_239.vsix，这是一个空的 VSIX 项目模板。  
+- Template_Wizard_239 .vsix，它是一个空的 VSIX 项目模板。  
   
-- SelectionHighlight.vsix，这是一个工具，可突出显示所选单词的所有实例。  
+- SelectionHighlight，它是用于突出显示所选单词的所有实例的工具。  
   
-  Atom.xml 文件的内容将类似于下面的示例：  
+  atom.xml 文件的内容将与以下示例类似：  
   
 ```  
   <?xml version="1.0" encoding="utf-8" ?>   
@@ -73,7 +73,7 @@ ms.locfileid: "68204214"
   
 ```  
   
- 请注意，这两个链接标记引用的映像的生成文件夹中的屏幕截图。  
+ 请注意，这两个链接标记指的是生成的图像文件夹中的屏幕截图。  
   
-## <a name="see-also"></a>请参阅  
- [专用库](../extensibility/private-galleries.md)
+## <a name="see-also"></a>另请参阅  
+ [Private Galleries](../extensibility/private-galleries.md)

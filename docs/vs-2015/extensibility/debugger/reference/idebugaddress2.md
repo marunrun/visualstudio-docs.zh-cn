@@ -1,5 +1,5 @@
 ---
-title: IDebugAddress2 | Microsoft Docs
+title: IDebugAddress2 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: ca14e6236fc7e12ea259b97f7f2ddb69fe052f55
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65692844"
 ---
 # <a name="idebugaddress2"></a>IDebugAddress2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-此接口提供访问该对象所属的地址的进程 ID 表示通过此接口。  
+此接口提供对拥有其地址由此接口表示的对象的进程 ID 的访问。  
   
 ## <a name="syntax"></a>语法  
   
@@ -30,26 +30,26 @@ ms.locfileid: "65692844"
 IDebugAddress2 : IDebugAddress  
 ```  
   
-## <a name="notes-for-implementers"></a>实施者的说明  
- 符号提供程序实现此接口上实现的相同对象[IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md)接口。 此接口提供对拥有此地址与相关的对象的进程的 ID 的访问。  
+## <a name="notes-for-implementers"></a>实施者注意事项  
+ 符号提供程序在实现 [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) 接口的同一对象上实现此接口。 此接口提供对拥有与此地址相关的对象的进程的 ID 的访问。  
   
-## <a name="notes-for-callers"></a>调用方的说明  
- 使用[QueryInterface](https://msdn.microsoft.com/library/62fce95e-aafa-4187-b50b-e6611b74c3b3)若要获取此接口从[IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md)接口。  
+## <a name="notes-for-callers"></a>调用方说明  
+ 使用 [QueryInterface](https://msdn.microsoft.com/library/62fce95e-aafa-4187-b50b-e6611b74c3b3) 从 [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) 接口获取此接口。  
   
-## <a name="methods-in-vtable-order"></a>Vtable 顺序中的方法  
- 除了继承的方法之外[IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md)接口，此接口实现了以下方法：  
+## <a name="methods-in-vtable-order"></a>Vtable 顺序的方法  
+ 除了继承自 [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) 接口的方法之外，此接口还实现以下方法：  
   
-|方法|描述|  
+|方法|说明|  
 |------------|-----------------|  
-|[GetProcessID](../../../extensibility/debugger/reference/idebugaddress2-getprocessid.md)|检索拥有该接口表示的对象的进程的 ID。|  
+|[GetProcessID](../../../extensibility/debugger/reference/idebugaddress2-getprocessid.md)|检索拥有此接口所表示的对象的进程的 ID。|  
   
 ## <a name="requirements"></a>要求  
- 标头： sh.h  
+ 标头： sh。h  
   
- 命名空间:Microsoft.VisualStudio.Debugger.Interop  
+ 命名空间： VisualStudio  
   
- 程序集：Microsoft.VisualStudio.Debugger.Interop.dll  
+ 程序集： Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [符号提供程序接口](../../../extensibility/debugger/reference/symbol-provider-interfaces.md)   
  [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md)

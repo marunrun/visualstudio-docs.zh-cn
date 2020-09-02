@@ -1,5 +1,5 @@
 ---
-title: LAUNCH_FLAGS |微软文档
+title: LAUNCH_FLAGS |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: f18fb850641391f451f5eedb08b7130566dd4de3
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80714709"
 ---
 # <a name="launch_flags"></a>LAUNCH_FLAGS
@@ -48,28 +48,28 @@ public enum enum_LAUNCH_FLAGS {
 
 ## <a name="fields"></a>字段
 `LAUNCH_DEBUG`\
-启动调试过程。
+启动调试进程。
 
 `LAUNCH_NODEBUG`\
-启动进程而不调试它。
+在不调试的情况下启动进程。
 
 `LAUNCH_ENABLE_ENC`\
-弃用，请勿使用。
+不推荐使用，请不要使用。
 
 `LAUNCH_MERGE_ENV`\
-启动进程并将环境与启动主机合并。
+启动进程，并将环境与启动主机合并。
 
 ## <a name="remarks"></a>备注
-这些值作为参数传递给[Launch 暂停](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md)方法。
+这些值作为参数传递给 [LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md) 方法。
 
-这些标志可以稍微结合`OR`。
+这些标志可以与按位组合 `OR` 。
 
 ## <a name="requirements"></a>要求
-标题： msdbg.h
+标头： msdbg
 
-命名空间：微软.VisualStudio.调试器.互通
+命名空间： VisualStudio
 
-程序集：微软.VisualStudio.调试器.Interop.dll
+程序集： Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [枚举](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
