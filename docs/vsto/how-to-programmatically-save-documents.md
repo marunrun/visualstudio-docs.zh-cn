@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 464d131261ecfb0a64a3ca279007ff9332cdb2e4
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85537587"
 ---
 # <a name="how-to-programmatically-save-documents"></a>如何：以编程方式保存文档
@@ -56,7 +56,7 @@ ms.locfileid: "85537587"
 使用 `SaveAs` 方法可使用新名称保存文档。 你可以在 <xref:Microsoft.Office.Tools.Word.Document> 文档级 word 项目中使用宿主项的此方法，或者 <xref:Microsoft.Office.Interop.Word.Document> 在任意 Word 项目中使用本机对象的此方法。 此方法要求指定新文件名，但其他参数是可选的。
 
 > [!NOTE]
-> 如果在的事件处理程序中显示 "**另存**为" 对话框， <xref:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.DocumentBeforeSave> `ThisDocument` 并将*Cancel*参数设置为**false**，则应用程序可能会意外退出。 如果将 "*取消*" 参数设置为 " **true**"，则会出现一条错误消息，指示已禁用自动保存。
+> 如果在的事件处理程序中显示 " **另存** 为" 对话框， <xref:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.DocumentBeforeSave> `ThisDocument` 并将 *Cancel* 参数设置为 **false**，则应用程序可能会意外退出。 如果将 " *取消* " 参数设置为 " **true**"，则会出现一条错误消息，指示已禁用自动保存。
 
 ### <a name="to-save-the-document-associated-with-a-document-level-customization-with-a-new-name"></a>使用新名称保存与文档级自定义项关联的文档
 
@@ -75,7 +75,7 @@ ms.locfileid: "85537587"
      下面的代码示例使用新名称保存活动文档。 若要使用此代码模板，请从项目中的 `ThisDocument` 或 `ThisAddIn` 类运行它。
 
     > [!NOTE]
-    > <xref:Microsoft.Office.Interop.Word._Document.SaveAs%2A>如果目标目录不存在，或者保存文件时存在其他问题，则该方法将引发异常。 最佳做法是使用**try .。。** 围绕 <xref:Microsoft.Office.Interop.Word._Document.SaveAs%2A> 方法或调用方法内部的 catch 块。
+    > <xref:Microsoft.Office.Interop.Word._Document.SaveAs%2A>如果目标目录不存在，或者保存文件时存在其他问题，则该方法将引发异常。 最佳做法是使用 **try .。。** 围绕 <xref:Microsoft.Office.Interop.Word._Document.SaveAs%2A> 方法或调用方法内部的 catch 块。
 
      [!code-vb[Trin_VstcoreWordAutomationAddIn#10](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#10)]
      [!code-csharp[Trin_VstcoreWordAutomationAddIn#10](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#10)]
@@ -84,11 +84,11 @@ ms.locfileid: "85537587"
 
 此代码示例要求满足以下条件：
 
-- 若要按名称保存文档，名为*NewDocument.doc*的文档必须存在于驱动器 C 上名为*Test*的目录中。
+- 若要按名称保存文档，名为 *NewDocument.doc* 的文档必须存在于驱动器 C 上名为 *Test* 的目录中。
 
 - 若要保存具有新名称的文档，驱动器 C 上必须存在一个名为 " *Test* " 的目录。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [如何：以编程方式关闭文档](../vsto/how-to-programmatically-close-documents.md)
 - [如何：以编程方式打开现有文档](../vsto/how-to-programmatically-open-existing-documents.md)

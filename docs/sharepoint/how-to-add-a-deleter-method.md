@@ -20,27 +20,28 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: dd97d28936e9f0cc50e9064fdc1a6a64bb20fc77
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86017045"
 ---
 # <a name="how-to-add-a-deleter-method"></a>如何：添加删除器方法
-  您可以通过向模型中添加删除器方法，使最终用户能够从 SharePoint 站点上的外部列表中删除数据记录。 有关详细信息，请参阅[设计业务数据连接模型](../sharepoint/designing-a-business-data-connectivity-model.md)。
+  您可以通过向模型中添加删除器方法，使最终用户能够从 SharePoint 站点上的外部列表中删除数据记录。 有关详细信息，请参阅 [设计业务数据连接模型](../sharepoint/designing-a-business-data-connectivity-model.md)。
 
 ### <a name="to-create-a-deleter-method"></a>创建删除器方法
 
-1. 在**BDC 设计器**中选择一个实体。
+1. 在 **BDC 设计器**中选择一个实体。
 
 2. 在菜单栏上，选择 "**查看**  >  **其他 Windows**  >  **BDC 方法详细信息**"。
 
-    此时将打开 " **BDC 方法详细信息**" 窗口。 有关此窗口的详细信息，请参阅[BDC 模型设计工具概述](../sharepoint/bdc-model-design-tools-overview.md)。
+    此时将打开 " **BDC 方法详细信息** " 窗口。 有关此窗口的详细信息，请参阅 [BDC 模型设计工具概述](../sharepoint/bdc-model-design-tools-overview.md)。
 
-3. 在 "**添加方法**" 列表中，选择 "**创建删除器方法**"。
+3. 在 " **添加方法** " 列表中，选择 " **创建删除器方法**"。
 
-    Visual Studio 将以下元素添加到模型中。 这些元素出现在 " **BDC 方法详细信息**" 窗口中。
+    Visual Studio 将以下元素添加到模型中。 这些元素出现在 " **BDC 方法详细信息** " 窗口中。
 
-   - 名为**Delete**的方法。
+   - 名为 **Delete**的方法。
 
    - 方法的输入参数。
 
@@ -48,11 +49,11 @@ ms.locfileid: "86017045"
 
    - 方法的方法实例。
 
-     有关详细信息，请参阅[设计业务数据连接模型](../sharepoint/designing-a-business-data-connectivity-model.md)。
+     有关详细信息，请参阅 [设计业务数据连接模型](../sharepoint/designing-a-business-data-connectivity-model.md)。
 
-4. 在**解决方案资源管理器**中，打开为实体生成的服务代码文件的快捷菜单，然后选择 "**查看代码**"。
+4. 在 **解决方案资源管理器**中，打开为实体生成的服务代码文件的快捷菜单，然后选择 " **查看代码**"。
 
-    实体服务代码文件将在代码编辑器中打开。 有关实体服务代码文件的详细信息，请参阅[创建业务数据连接模型](../sharepoint/creating-a-business-data-connectivity-model.md)。
+    实体服务代码文件将在代码编辑器中打开。 有关实体服务代码文件的详细信息，请参阅 [创建业务数据连接模型](../sharepoint/creating-a-business-data-connectivity-model.md)。
 
 5. 向删除器方法添加代码以删除记录。 下面的示例通过使用 SQL Server 的 AdventureWorks 示例数据库，从销售订单中删除行项。
 

@@ -15,23 +15,23 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 25a721c77269837ad8d158db186274586ad638df
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68150819"
 ---
 # <a name="optimizing-menu-and-toolbar-commands"></a>优化菜单和工具栏命令
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Vspackage 和到其相应命令添加[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]可能会导致很拥挤的 UI。 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 提供的方法，帮助最小化 UI 命令混淆。  
+添加 Vspackage 及其相应的命令 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 可能会导致拥挤的 UI。 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 提供有助于最大程度地减少 UI 命令混淆的方法。  
   
 ## <a name="in-this-section"></a>本节内容  
  [提供可用命令](../../extensibility/internals/making-commands-available.md)  
- 提供有关最大程度减少排满的通用准则[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]UI 时添加的 Vspackage。  
+ 提供有关在添加 Vspackage 时最大限度地减少 UI crowding 的一般准则 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 。  
   
  [放置指南](../../extensibility/internals/command-placement-guidelines.md)  
- 提供用于实现命令集的大小根据 VSPackage 的特定准则。  
+ 提供根据命令集的大小实现 VSPackage 的特定准则。  
   
 ## <a name="related-sections"></a>相关章节  
  [命令、菜单和工具栏](../../extensibility/internals/commands-menus-and-toolbars.md)  
