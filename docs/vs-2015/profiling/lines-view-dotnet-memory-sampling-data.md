@@ -12,10 +12,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 251dc4279530c2d10ba8b404ee515824d0671037
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62579978"
 ---
 # <a name="lines-view---net-memory-sampling-data"></a>“行”视图 - .NET 内存采样数据
@@ -57,11 +57,11 @@ ms.locfileid: "62579978"
 |**源行结束**|源文件中发生分配的结束行号。|  
 |**源字符开始**|发生分配的源文件行中起始字符的偏移量。|  
 |**源字符结束**|发生分配的源文件行中结束字符的偏移量。|  
-|**行名**|由探查器生成的行标识符，语法为：`Source File`**;[**`Line Number Start`**,**`Character Start`**]->;[**`Line Number Start,Character Start`**]**|  
+|**行名**|由探查器生成的行标识符，语法为：`Source File` **;[** `Line Number Start` **,** `Character Start` **]->;[** `Line Number Start,Character Start` **]**|  
 |**独占分配数**|此行中创建的对象总数。|  
 |**独占分配数百分比**|在分析运行期间创建的，此行中分配的所有对象数的百分比。|  
 |**独占字节数**|在分析运行期间分配的，此行中分配的所有内存字节数的百分比。|  
 |**独占字节数百分比**|在分析运行期间分配的，此行中分配的所有内存字节数的百分比。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [“行”视图](../profiling/lines-view-sampling-data.md)

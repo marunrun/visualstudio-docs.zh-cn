@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.date: 11/11/2016
 ms.author: ghogen
 ms.openlocfilehash: 8b4b7a05de87ab8b70046b51fe9f256f05d3aee5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62572280"
 ---
 # <a name="publish-webapplicationvm-windows-powershell-script"></a>Publish-WebApplicationVM（Windows PowerShell 脚本）
@@ -30,82 +30,82 @@ Publish-WebApplicationVM
 -Verbose
 ```
 
-### <a name="configuration"></a>Configuration
+### <a name="configuration"></a>配置
 描述部署详细信息的 JSON 配置文件的路径。
 
 | 别名 | 无 |
 | --- | --- |
-| 是否必需？ |true |
-| 位置 |指定 |
+| 必需？ |true |
+| 位置 |所指定位置 |
 | 默认值 |无 |
-| 接受管道输入？ |False |
-| 接受通配符？ |False |
+| 接受管道输入？ |false |
+| 接受通配符？ |false |
 
 ### <a name="subscriptionname"></a>SubscriptionName
 要在其中创建虚拟机的 Azure 订阅的名称。
 
 | 别名 | 无 |
 | --- | --- |
-| 是否必需？ |False |
-| 位置 |指定 |
+| 必需？ |false |
+| 位置 |所指定位置 |
 | 默认值 |使用订阅文件中的第一个订阅 |
-| 接受管道输入？ |False |
-| 接受通配符？ |False |
+| 接受管道输入？ |false |
+| 接受通配符？ |false |
 
 ### <a name="webdeploypackage"></a>WebDeployPackage
 要发布到虚拟机的 Web 部署包的路径。 可以在 Visual Studio 中使用“发布 Web”向导来创建此包。 请参阅[如何：在 Visual Studio 中创建 Web 部署包](https://msdn.microsoft.com/library/dd465323.aspx)。
 
 | 别名 | 无 |
 | --- | --- |
-| 是否必需？ |False |
-| 位置 |指定 |
+| 必需？ |false |
+| 位置 |所指定位置 |
 | 默认值 |无 |
-| 接受管道输入？ |False |
-| 接受通配符？ |False |
+| 接受管道输入？ |false |
+| 接受通配符？ |false |
 
 ### <a name="allowuntrusted"></a>AllowUntrusted
 如果为 true，则允许使用未被受信任的根证书颁发机构签署的证书。
 
 | 别名 | 无 |
 | --- | --- |
-| 是否必需？ |False |
-| 位置 |指定 |
-| 默认值 |False |
-| 接受管道输入？ |False |
-| 接受通配符？ |False |
+| 必需？ |false |
+| 位置 |所指定位置 |
+| 默认值 |false |
+| 接受管道输入？ |false |
+| 接受通配符？ |false |
 
 ### <a name="vmpassword"></a>VMPassword
 虚拟机帐户的凭据。 示例：-VMPassword @{Name = "admin"; Password = "password"}
 
 | 别名 | 无 |
 | --- | --- |
-| 是否必需？ |False |
-| 位置 |指定 |
+| 必需？ |false |
+| 位置 |所指定位置 |
 | 默认值 |无 |
-| 接受管道输入？ |False |
-| 接受通配符？ |否 |
+| 接受管道输入？ |false |
+| 接受通配符？ |false |
 
 ### <a name="databaseserverpassword"></a>DatabaseServerPassword
 Azure 中的 SQL 数据库的凭据。 示例：-DatabaseServerPassword @{Name = "admin"; Password = "password"}
 
 | 别名 | 无 |
 | --- | --- |
-| 是否必需？ |False |
-| 位置 |指定 |
+| 必需？ |false |
+| 位置 |所指定位置 |
 | 默认值 |无 |
-| 接受管道输入？ |False |
-| 接受通配符？ |False |
+| 接受管道输入？ |false |
+| 接受通配符？ |false |
 
 ### <a name="sendhostmessagestooutput"></a>SendHostMessagesToOutput
 如果为 true，则将来自脚本的消息打印到输出流。
 
 | 别名 | 无 |
 | --- | --- |
-| 是否必需？ |False |
-| 位置 |指定 |
-| 默认值 |False |
-| 接受管道输入？ |False |
-| 接受通配符？ |False |
+| 必需？ |false |
+| 位置 |所指定位置 |
+| 默认值 |false |
+| 接受管道输入？ |false |
+| 接受通配符？ |false |
 
 ## <a name="remarks"></a>备注
 有关如何使用脚本创建开发和测试环境的完整说明，请参阅[使用 Windows PowerShell 脚本发布到开发和测试环境](vs-azure-tools-publishing-using-powershell-scripts.md)。

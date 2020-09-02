@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: ddf479a2da74803916b7afc1945eb610d6b0e668
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62576628"
 ---
-# <a name="idiasectioncontribgetcomdat"></a>IDiaSectionContrib::get_comdat
+# <a name="idiasectioncontribget_comdat"></a>IDiaSectionContrib::get_comdat
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-检索一个标志，指示了 COMDAT 记录的部分。  
+检索一个标志，该标志指示节是否为 COMDAT 记录。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,13 +35,13 @@ HRESULT get_comdat ( 
   
 #### <a name="parameters"></a>参数  
  `pRetVal`  
- [out]返回`TRUE`的部分是 COMDAT 记录; 否则，返回`FALSE`。  
+ 弄 `TRUE` 如果该节是 COMDAT 记录，则返回; 否则返回 `FALSE` 。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回 `S_OK`。 返回`S_FALSE`如果此属性不受支持。 否则，返回错误代码。  
+ 如果成功，则返回 `S_OK`。 `S_FALSE`如果此属性不受支持，则返回。 否则，返回错误代码。  
   
 ## <a name="remarks"></a>备注  
- COMDAT 记录是使封装的函数的链接器可见的通用对象文件格式 (COFF) 记录。  
+ COMDAT 记录是 (COFF) 记录的常见对象文件格式，它使包函数对链接器可见。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

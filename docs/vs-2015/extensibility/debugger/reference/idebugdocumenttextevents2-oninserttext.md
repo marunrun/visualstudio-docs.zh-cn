@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentTextEvents2::onInsertText | Microsoft Docs
+title: IDebugDocumentTextEvents2：： onInsertText |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 44a4c4d70947d1e465cae7c590155cd9e2b3d11e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62569291"
 ---
 # <a name="idebugdocumenttextevents2oninserttext"></a>IDebugDocumentTextEvents2::onInsertText
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-通知调试包到文档中插入文本。  
+通知调试包文本已插入到文档中。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,14 +42,14 @@ int onInsert( 
   
 #### <a name="parameters"></a>参数  
  `pos`  
- [in]一个[TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md)结构，它指示在插入文本的位置。  
+ 中一个 [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) 结构，它指示文本的插入位置。  
   
  `dwNumToInsert`  
- [in]指定已插入文本的字符的数。  
+ 中指定插入的文本的字符数。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugDocumentTextEvents2](../../../extensibility/debugger/reference/idebugdocumenttextevents2.md)   
  [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md)

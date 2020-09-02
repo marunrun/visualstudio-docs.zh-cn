@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: c8ff78c38ad077084b3dea9c96e3251ffddb2206
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62573009"
 ---
-# <a name="idiastackframegetrawlvarinstancevalue"></a>IDiaStackFrame::get_rawLVarInstanceValue
+# <a name="idiastackframeget_rawlvarinstancevalue"></a>IDiaStackFrame::get_rawLVarInstanceValue
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-此方法作为原始字节检索指定的本地变量的值。  
+此方法检索指定局部变量的值作为原始字节。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,19 +38,19 @@ HRESULT get_rawLVarInstanceValue(
   
 #### <a name="parameters"></a>参数  
  `pInstance`  
- [in]`IDiaLVarInstance`对象，表示要获取其值的本地变量的实例。  
+ 中一个 `IDiaLVarInstance` 对象，该对象表示要获取其值的局部变量的实例。  
   
  `cbDataMax`  
- [in]指向的缓冲区中的字节的最大数目`pbData`。 这可以是 8 个字节的最大值 (`sizeof(ULONGLONG)`)。  
+ 中所指向的缓冲区中的最大字节数 `pbData` 。 最大 () ，最多可为8个字节 `sizeof(ULONGLONG)` 。  
   
  `pcbData`  
- [out]返回的实际存储在缓冲区中的字节数。  
+ 弄返回缓冲区中存储的实际字节数。  
   
  `pbData`  
- [out]若要使用数据填充缓冲区。 该类型不能为 `NULL`。  
+ 弄要用数据填充的缓冲区。 该类型不能为 `NULL`。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)

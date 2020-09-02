@@ -12,10 +12,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 8cb6b8191b39bfc79615bf0bbcd4fb469395f8d8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62583153"
 ---
 # <a name="lines-view---contention-data"></a>“行”视图 — 争用数据
@@ -41,7 +41,7 @@ ms.locfileid: "62583153"
   
   下表介绍“行视图”报告中的各列。  
   
-|列|说明|  
+|列|描述|  
 |------------|-----------------|  
 |**独占阻塞的时间**|因争用事件而阻滞此语句执行语句中代码的时间长度。 不包括语句所调用的函数中的阻塞时间。|  
 |**独占阻塞的时间百分比**|语句的独占阻塞时间占进程中所有阻塞时间的百分比。|  
@@ -53,7 +53,7 @@ ms.locfileid: "62583153"
 |**非独占阻塞的时间百分比**|语句的非独占阻塞时间占进程中所有阻塞时间的百分比。|  
 |**非独占争用**|阻滞此语句及其中所调用函数执行的次数。|  
 |**非独占争用数百分比**|此语句的非独占争用数占进程中所有争用事件数的百分比。|  
-|**行名**|由探查器生成的行标识符。 标识符使用以下语法：`SourceFile`**;[**`LineNumberStart`**,**`CharacterStart`**]->;[**`LineNumberEnd`**,**`CharacterEnd`**]**|  
+|**行名**|由探查器生成的行标识符。 标识符使用以下语法：`SourceFile` **;[** `LineNumberStart` **,** `CharacterStart` **]->;[** `LineNumberEnd` **,** `CharacterEnd` **]**|  
 |**函数行号**|此函数在源文件中的起始行号。|  
 |**模块名**|语句所在模块的名称。|  
 |**模块路径**|语句所在模块的路径。|  
@@ -65,8 +65,8 @@ ms.locfileid: "62583153"
 |**源行开始**|该语句在源文件中的起始行号。|  
 |**源行结束**|该语句在源文件中的结束行号。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [如何：自定义报告视图列](../profiling/how-to-customize-report-view-columns.md)   
- [“行”视图](../profiling/lines-view.md)   
- [“行”视图 - 采样](../profiling/lines-view-dotnet-memory-sampling-data.md)   
+ [行视图](../profiling/lines-view.md)   
+ ["行" 视图-采样](../profiling/lines-view-dotnet-memory-sampling-data.md)   
  [“行”视图](../profiling/lines-view-sampling-data.md)
