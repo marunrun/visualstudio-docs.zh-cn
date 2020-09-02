@@ -11,32 +11,32 @@ caps.latest.revision: 40
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: d14e60ec28fb5f8ba80f9986c4316058539b35e6
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65695024"
 ---
 # <a name="creating-a-settings-category"></a>创建设置类别
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-在本演练中创建 Visual Studio 设置类别和使用它来保存到的值并设置文件中还原值。 设置类别是一组显示为"自定义设置点;"的相关属性也就是说，作为中的复选框**导入和导出设置**向导。 (您可以在找到它**工具**菜单。)设置进行保存或还原为类别，以及各项设置不会显示在该向导。 有关详细信息，请参阅 [在 Visual Studio 中自定义开发设置](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+在本演练中，您将创建一个 Visual Studio 设置类别，并使用它将值保存到并从设置文件还原值。 设置类别是一组显示为 "自定义设置点" 的相关属性;即 **导入和导出设置** 向导中的复选框。  (你可以在 " **工具** " 菜单上找到它。 ) 设置保存或还原为类别，并且不会在向导中显示各个设置。 有关详细信息，请参阅 [在 Visual Studio 中自定义开发设置](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
- 通过从它派生来创建设置类别<xref:Microsoft.VisualStudio.Shell.DialogPage>类。  
+ 您可以通过从类中派生来创建设置类别 <xref:Microsoft.VisualStudio.Shell.DialogPage> 。  
   
- 若要开始本演练，必须先完成第一部分[创建选项页](../extensibility/creating-an-options-page.md)。 生成的选项属性网格可以检查和更改类别中的属性。 在设置文件中保存的属性类别后，您将检查文件以查看如何存储属性值。  
+ 若要开始本演练，必须先完成 " [创建选项" 页面](../extensibility/creating-an-options-page.md)的第一个部分。 "生成的选项" 属性网格使你可以检查和更改类别中的属性。 将属性类别保存到设置文件中后，将检查该文件以查看属性值的存储方式。  
   
-## <a name="prerequisites"></a>系统必备  
- 从 Visual Studio 2015 开始，您并不安装 Visual Studio SDK 从下载中心获得。 它是作为 Visual Studio 安装程序中的可选功能包含在内。 此外可以在以后安装 VS SDK。 有关详细信息，请参阅[安装 Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md)。  
+## <a name="prerequisites"></a>先决条件  
+ 从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。  
   
 ## <a name="creating-a-settings-category"></a>创建设置类别  
- 在本部分中，使用自定义设置点来保存和还原设置类别的值。  
+ 在本部分中，将使用自定义设置点保存和还原 "设置" 类别的值。  
   
-#### <a name="to-create-a-settings-category"></a>若要创建设置类别  
+#### <a name="to-create-a-settings-category"></a>创建设置类别  
   
-1. 完成[创建选项页](../extensibility/creating-an-options-page.md)。  
+1. 完成 " [创建选项" 页](../extensibility/creating-an-options-page.md)。  
   
-2. 打开 VSPackage.resx 文件并添加以下三个字符串资源：  
+2. 打开 VSPackage 文件并添加以下三个字符串资源：  
   
     |名称|值|  
     |----------|-----------|  
@@ -44,12 +44,12 @@ ms.locfileid: "65695024"
     |107|我的设置|  
     |108|OptionInteger 和 OptionFloat|  
   
-     该名称的类别"My Category"、 对象"我的设置"，和类别说明"OptionInteger 和 OptionFloat"，这将创建资源。  
+     这会创建将类别命名为 "我的类别"、对象 "我的设置" 和类别说明 "OptionInteger and OptionFloat" 的资源。  
   
     > [!NOTE]
-    > 这三个字段，仅类别名称不会显示在导入和导出设置向导中。  
+    > 在这三种情况下，"导入和导出设置向导" 中将不显示类别名称。  
   
-3. 在 MyToolsOptionsPackage.cs，添加`float`名为属性`OptionFloat`到`OptionPageGrid`类，如以下示例所示。  
+3. 在 MyToolsOptionsPackage.cs 中，将一个 `float` 名为的属性添加 `OptionFloat` 到 `OptionPageGrid` 类，如下面的示例中所示。  
   
     ```csharp  
     public class OptionPageGrid : DialogPage  
@@ -77,51 +77,51 @@ ms.locfileid: "65695024"
     ```  
   
     > [!NOTE]
-    > `OptionPageGrid`现在名为"My Category"类别包含两个属性，`OptionInteger`和`OptionFloat`。  
+    > `OptionPageGrid`名为 "My category" 的类别现在包含两个属性，即 `OptionInteger` 和 `OptionFloat` 。  
   
-4. 添加<xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute>到`MyToolsOptionsPackage`类并为其提供 CategoryName"My Category"，为其提供的对象名"我的设置"，并将 isToolsOptionPage 设置为 true。 设置 categoryResourceID、 objectNameResourceID 和 DescriptionResourceID 为 Id 前面创建的相应字符串资源。  
+4. 将添加 <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute> 到 `MyToolsOptionsPackage` 类，并将其命名为 "my Category"，为其指定 ObjectName "my Settings"，并将 isToolsOptionPage 设置为 true。 将 categoryResourceID、objectNameResourceID 和 DescriptionResourceID 设置为前面创建的相应字符串资源 Id。  
   
     ```csharp  
     [ProvideProfileAttribute(typeof(OptionPageGrid),   
         "My Category", "My Settings", 106, 107, isToolsOptionPage:true, DescriptionResourceID = 108)]  
     ```  
   
-5. 生成项目并启动调试。 在实验实例中应看到**我的网格页**现在具有整数和浮点值。  
+5. 生成项目并启动调试。 在实验实例中，应会看到 **"我的网格" 页** 现在包含整数值和浮点值。  
   
 ## <a name="examining-the-settings-file"></a>检查设置文件  
- 在本部分中，您将属性类别值导出到设置文件。 检查文件，然后返回到的属性类别导入值。  
+ 在本部分中，将属性类别值导出到设置文件。 检查该文件，然后将这些值导入回属性类别。  
   
 1. 通过按 F5 在调试模式下启动项目。 这将启动实验实例。  
   
-2. 打开**工具 / 选项**对话框。  
+2. 打开 " **工具/选项** " 对话框。  
   
-3. 在树视图中的左窗格中，展开**My Category** ，然后单击**我的网格页**。  
+3. 在左侧窗格中的树视图中，展开 **"我的类别** "，然后单击 **"我的网格" 页**。  
   
-4. 更改的值**OptionFloat**为 3.1416 和**OptionInteger**到 12。 单击 **“确定”**。  
+4. 将 **OptionFloat** 的值更改为3.1416，将 **OptionInteger** 更改为12。 单击 **“确定”** 。  
   
 5. 在“工具”菜单上，单击“导入和导出设置”。  
   
-     **导入和导出设置**向导显示。  
+     此时将显示 **导入和导出设置** 向导。  
   
-6. 请确保**导出选定的环境设置**已选中，然后单击**下一步**。  
+6. 确保选中 " **导出所选环境设置** "，然后单击 " **下一步**"。  
   
-     **选择要导出的设置**页将出现。  
+     此时将显示 " **选择要导出的设置** " 页。  
   
-7. 单击**我的设置**。  
+7. 单击 **"我的设置"**。  
   
-     **描述**更改为**OptionInteger 和 OptionFloat**。  
+     **说明**更改为 " **OptionInteger" 和 "OptionFloat**"。  
   
-8. 请确保**我的设置**是唯一的类别，选择，然后单击**下一步**。  
+8. 请确保 " **我的设置** " 是所选的唯一类别，然后单击 " **下一步**"。  
   
-     **名称设置文件**页将出现。  
+     显示 **设置文件** 页的名称。  
   
-9. 将新的设置文件`MySettings.vssettings`并将其保存在相应的目录中。 单击 **“完成”**。  
+9. 命名新的设置文件 `MySettings.vssettings` 并将其保存到相应的目录中。 单击“完成”。  
   
-     **导出完成**页将报告已成功导出你的设置。  
+     " **导出完成** " 页将报告你的设置已成功导出。  
   
-10. 上**文件**菜单，依次指向**打开**，然后单击**文件**。 找到`MySettings.vssettings`并将其打开。  
+10. 在“文件”**** 菜单中，指向“打开”****，再单击“文件”****。 找到 `MySettings.vssettings` 并打开它。  
   
-     您可以找到导出的文件 （你 Guid 将不同） 的以下部分中的属性类别。  
+     你可以在文件的以下部分中找到导出的属性类别 (你的 Guid 将) 不同。  
   
     ```  
     <Category name="My Category_My Settings"   
@@ -134,24 +134,24 @@ ms.locfileid: "65695024"
     </Category>  
     ```  
   
-     请注意，通过添加类别名称的对象名称后跟一条下划线来形成完整类别名称。 OptionFloat 和 OptionInteger 显示在类别中，以及其导出的值。  
+     请注意，通过将下划线添加到类别名称后接对象名称，来形成完整的类别名称。 "OptionFloat" 和 "OptionInteger" 显示在 "类别" 中，及其导出值。  
   
-11. 关闭而不更改其设置文件。  
+11. 关闭设置文件而不进行更改。  
   
-12. 上**工具**菜单上，单击**选项**，展开**My Category**，单击**我的网格页**然后更改的值**OptionFloat**为 1.0 并**OptionInteger**为 1。 单击 **“确定”**。  
+12. 在 " **工具** " 菜单上，依次单击 " **选项**"、 **"我的类别**"、" **我的网格" 页** ，然后将 **OptionFloat** 的值更改为1.0，并将 **OptionInteger** 更改为1。 单击 **“确定”** 。  
   
-13. 上**工具**菜单上，单击**导入和导出设置**，选择**导入选定的环境设置**，然后单击**下一步**。  
+13. 单击 " **工具** " 菜单上的 " **导入和导出设置**"，选择 " **导入选定的环境设置**"，然后单击 " **下一步**"  
   
-     **保存当前设置**页将出现。  
+     此时将显示 " **保存当前设置** " 页。  
   
-14. 选择**否，仅导入新设置**，然后单击**下一步**。  
+14. 选择 **"否，仅导入新设置"** ，然后单击 " **下一步**"。  
   
-     **选择要导入的设置集合**页将出现。  
+     此时将显示 " **选择要导入的设置集合** " 页。  
   
-15. 选择`MySettings.vssettings`文件中**我的设置**节点的树视图。 如果文件未出现在树视图中，单击**浏览**并找到它。 单击 **“下一步”**。  
+15. 选择 `MySettings.vssettings` 树视图的 " **我的设置** " 节点中的文件。 如果该文件未出现在树视图中，请单击 " **浏览** " 并找到该文件。 单击“配置目录分区”  。  
   
-     **选择要导入的设置**对话框随即出现。  
+     此时将显示 " **选择要导入的设置** " 对话框。  
   
-16. 请确保**我的设置**已选中，然后单击**完成**。 当**导入完整**页面出现后，单击**关闭**。  
+16. 请确保选择 **"我的设置** "，然后单击 " **完成**"。 出现 " **导入完成** " 页后，单击 " **关闭**"。  
   
-17. 上**工具**菜单上，单击**选项**，展开**My Category**，单击**我的网格页**并验证是否具有的属性类别值已还原。
+17. 在 " **工具** " 菜单上，依次单击 " **选项**"、 **"我的类别**"、" **我的网格页** " 和 "验证属性类别值已还原"。

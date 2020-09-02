@@ -1,5 +1,5 @@
 ---
-title: 如何：调试内联程序集代码 |Microsoft Docs
+title: 如何：调试内联程序集代码 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -22,10 +22,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 0dde41d1ccee5b63c5cd84862ba4f4ffe51745d2
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65696247"
 ---
 # <a name="how-to-debug-inline-assembly-code"></a>如何：调试内联程序集代码
@@ -34,7 +34,7 @@ ms.locfileid: "65696247"
 备注
 > 显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你的当前设置或版本。 若要更改设置，请在“工具”菜单上选择“导入和导出设置”。 有关详细信息，请参阅 [在 Visual Studio 中自定义开发设置](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
- 调试器提供了两个用于调试内联程序集代码的窗口，即“反汇编”窗口和“寄存器”窗口。  
+ 调试器提供了两个用于调试内联程序集代码的窗口，即“反汇编”窗口和“寄存器”窗口 。  
   
 ## <a name="procedure"></a>过程  
   
@@ -44,6 +44,6 @@ ms.locfileid: "65696247"
   
 2. 使用“寄存器”窗口查看寄存器内容。  
   
-## <a name="see-also"></a>请参阅  
- [调试器安全](../debugger/debugger-security.md)   
+## <a name="see-also"></a>另请参阅  
+ [调试器安全性](../debugger/debugger-security.md)   
  [调试本机代码](../debugger/debugging-native-code.md)

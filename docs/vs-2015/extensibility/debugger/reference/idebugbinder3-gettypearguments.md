@@ -1,5 +1,5 @@
 ---
-title: IDebugBinder3::GetTypeArguments |Microsoft Docs
+title: IDebugBinder3：： GetTypeArguments |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,10 +13,10 @@ caps.latest.revision: 8
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 1f7b6038013370ad85a665d9899d367e621aa991
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68192285"
 ---
 # <a name="idebugbinder3gettypearguments"></a>IDebugBinder3::GetTypeArguments
@@ -47,27 +47,27 @@ int GetTypeArguments(
 
  `skip`
 
- [in]若要获取参数类型之前跳过的字段数。
+ 中获取参数类型之前要跳过的字段数。
 
  `count`
 
- [in]要返回的参数字段数 (还指定的大小`ppFields`数组)。
+ 中要返回的参数字段数 (还指定 `ppFields` 数组) 的大小。
 
  `ppFields`
 
- [in、 out]会在此方法返回填充的字段的数组。
+ [in，out]将在返回此方法时填充的字段数组。
 
  `pFetched`
 
- [out]返回的自变量类型的字段数实际上 （可选）。
+ 弄实际返回的参数类型字段数 (可选) 。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回`S_OK`; 否则为返回错误代码。
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。
 
 ## <a name="remarks"></a>备注
- 自变量类型的数即可获得事先[GetTypeArgumentCount](../../../extensibility/debugger/reference/idebugbinder3-gettypeargumentcount.md)。
+ 可以事先通过 [GetTypeArgumentCount](../../../extensibility/debugger/reference/idebugbinder3-gettypeargumentcount.md)获取参数类型的数目。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md)
 - [GetTypeArgumentCount](../../../extensibility/debugger/reference/idebugbinder3-gettypeargumentcount.md)

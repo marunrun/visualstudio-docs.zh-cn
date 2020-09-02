@@ -14,10 +14,10 @@ caps.latest.revision: 29
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: d6a4f7f1631ac4bfc651f5df347db010cf47a656
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657140"
 ---
 # <a name="using-the-assert-classes"></a>使用 Assert 类
@@ -59,5 +59,5 @@ ms.locfileid: "72657140"
 
  如果想要让测试方法验证期望由开发代码中的方法引发的异常确实是在该方法中引发的，请使用 ExpectedExceptionAttribute 属性修饰测试方法。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  <xref:Microsoft.VisualStudio.TestTools.UnitTesting>[为现有代码创建和运行单元测试](https://msdn.microsoft.com/e8370b93-085b-41c9-8dec-655bd886f173)

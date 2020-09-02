@@ -1,5 +1,5 @@
 ---
-title: IDebugBinder::ResolveRuntimeType |Microsoft Docs
+title: IDebugBinder：： ResolveRuntimeType |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 69b1418c76e01b87bcd6d992a82ce58287e79ceb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68192292"
 ---
 # <a name="idebugbinderresolveruntimetype"></a>IDebugBinder::ResolveRuntimeType
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-此方法确定一个对象的运行时类型。  
+此方法确定对象的运行时类型。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,18 +42,18 @@ int ResolveRuntimeType(
   
 #### <a name="parameters"></a>参数  
  `pObject`  
- [in][IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)会得到解决。  
+ 中要解析的 [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) 。  
   
  `ppResolved`  
- [out]返回作为对象的类型[IDebugField](../../../extensibility/debugger/reference/idebugfield.md)。  
+ 弄以 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)的形式返回对象的类型。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
 ## <a name="remarks"></a>备注  
- 在编译时，始终不知道对象的运行时类型。 例如，使用多态性，参数可以被传递到函数作为其基本类，如按钮类。 实际自变量可能是派生的类，如单选按钮类。  
+ 对象的运行时类型在编译时并非始终是已知的。 例如，使用多态性，可以将参数作为其基类（如 button 类）传递给函数。 实参可以是派生类，如单选按钮类。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md)   
  [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)   
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

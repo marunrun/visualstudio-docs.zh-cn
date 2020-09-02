@@ -1,5 +1,5 @@
 ---
-title: MFC 调试技术 |Microsoft Docs
+title: MFC 调试方法 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -28,10 +28,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 3c795e978de3911b3c5e815583c32e878fd7b173
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65696905"
 ---
 # <a name="mfc-debugging-techniques"></a>MFC 调试方法
@@ -39,7 +39,7 @@ ms.locfileid: "65696905"
 
 如果要调试 MFC 程序，这些调试技术可能会有用。  
   
-## <a name="BKMK_In_this_topic"></a> 在本主题中  
+## <a name="in-this-topic"></a><a name="BKMK_In_this_topic"></a> 在本主题中  
  [AfxDebugBreak](#BKMK_AfxDebugBreak)  
   
  [TRACE 宏](#BKMK_The_TRACE_macro)  
@@ -64,7 +64,7 @@ ms.locfileid: "65696905"
   
   - [生成带有选定模块的调试信息的 MFC 应用程序](#BKMK_Building_an_MFC_app_with_debug_information_for_selected_modules)  
   
-## <a name="BKMK_AfxDebugBreak"></a> AfxDebugBreak  
+## <a name="afxdebugbreak"></a><a name="BKMK_AfxDebugBreak"></a> AfxDebugBreak  
  MFC 提供特殊的 [AfxDebugBreak](https://msdn.microsoft.com/library/c4cd79b9-9327-4db5-a9d6-c4004a92aa30) 函数，以供在源代码中对断点进行硬编码：  
   
 ```  
@@ -84,7 +84,7 @@ _asm int 3
   
  [在本主题中](#BKMK_In_this_topic)  
   
-## <a name="BKMK_The_TRACE_macro"></a> TRACE 宏  
+## <a name="the-trace-macro"></a><a name="BKMK_The_TRACE_macro"></a> TRACE 宏  
  若要在调试器的 [“输出”窗口](../ide/reference/output-window.md)中显示来自程序的消息，可以使用 [ATLTRACE](https://msdn.microsoft.com/library/c796baa5-e2b9-4814-a27d-d800590b102e) 宏或 MFC [TRACE](https://msdn.microsoft.com/library/7b6f42d8-b55a-4bba-ab04-c46251778e6f) 宏。 与 [断言](../debugger/c-cpp-assertions.md)类似，跟踪宏只在程序的“Debug”版本中起作用，在“Release”版本中编译时将消失。  
   
  下面的示例显示几种 **TRACE** 宏的用法。 与 `printf`类似， **TRACE** 宏可处理许多参数。  
@@ -117,10 +117,10 @@ TRACE( _T("This is a test of the TRACE macro that uses a TCHAR string: %s %d\n")
   
  [在本主题中](#BKMK_In_this_topic)  
   
-## <a name="BKMK_Memory_leak_detection_in_MFC"></a> 在 MFC 中检测内存泄漏  
+## <a name="detecting-memory-leaks-in-mfc"></a><a name="BKMK_Memory_leak_detection_in_MFC"></a> 在 MFC 中检测内存泄漏  
  MFC 提供一些类和函数来检测曾经被分配但从未释放的内存。  
   
-### <a name="BKMK_Tracking_memory_allocations"></a> 跟踪内存分配  
+### <a name="tracking-memory-allocations"></a><a name="BKMK_Tracking_memory_allocations"></a> 跟踪内存分配  
  在 MFC 中，可以使用 [DEBUG_NEW](https://msdn.microsoft.com/library/9b379344-4093-4bec-a3eb-e0d8a63ada9d) 宏代替 **new** 运算符来帮助定位内存泄漏。 在程序的“Debug”版本中， `DEBUG_NEW` 将为所分配的每个对象跟踪文件名和行号。 当编译程序的“Release”版本时， `DEBUG_NEW` 将解析为不包含文件名和行号信息的简单 **new** 操作。 因此，在程序的“Release”版本中不会造成任何速度损失。  
   
  如果不想重写整个程序来使用 `DEBUG_NEW` 代替 **new**，则可以在源文件中定义下面的宏：  
@@ -135,7 +135,7 @@ TRACE( _T("This is a test of the TRACE macro that uses a TCHAR string: %s %d\n")
   
  [在本主题中](#BKMK_In_this_topic)  
   
-### <a name="BKMK_Enabling_memory_diagnostics"></a> 启用内存诊断  
+### <a name="enabling-memory-diagnostics"></a><a name="BKMK_Enabling_memory_diagnostics"></a> 启用内存诊断  
  必须先启用诊断跟踪，然后才能使用内存诊断功能。  
   
  **启用或禁用内存诊断**  
@@ -146,7 +146,7 @@ TRACE( _T("This is a test of the TRACE macro that uses a TCHAR string: %s %d\n")
   
 - 如果希望对内存诊断功能进行更精确的控制，可以通过设置 MFC 全局变量 [afxMemDF](https://msdn.microsoft.com/library/cf117501-5446-4fce-81b3-f7194bc95086)的值，来有选择地打开和关闭单个内存诊断功能。 该变量可以具有下列值（由枚举类型 **afxMemDF**所指定）。  
   
-  |值|描述|  
+  |“值”|描述|  
   |-----------|-----------------|  
   |**allocMemDF**|打开诊断内存分配器（默认）。|  
   |**delayFreeMemDF**|在调用 `delete` 或 `free` 时延迟释放内存，直到程序退出。 这将使你的程序分配可能的最大内存量。|  
@@ -160,7 +160,7 @@ TRACE( _T("This is a test of the TRACE macro that uses a TCHAR string: %s %d\n")
   
   [在本主题中](#BKMK_In_this_topic)  
   
-### <a name="BKMK_Taking_memory_snapshots"></a> 拍摄内存快照  
+### <a name="taking-memory-snapshots"></a><a name="BKMK_Taking_memory_snapshots"></a> 拍摄内存快照  
   
 1. 创建一个 [CMemoryState](https://msdn.microsoft.com/8fade6e9-c6fb-4b2a-8565-184a912d26d2) 对象并调用 [CMemoryState::Checkpoint](https://msdn.microsoft.com/library/b2d80fea-3d21-457e-816d-b035909bf21a) 成员函数。 这将创建第一个内存快照。  
   
@@ -191,13 +191,13 @@ TRACE( _T("This is a test of the TRACE macro that uses a TCHAR string: %s %d\n")
    #endif  
    ```  
   
-    请注意，内存检查语句由 `#ifdef`[_DEBUG](https://msdn.microsoft.com/library/a9901568-4846-4731-a404-399d947e2e7a)/  **#endif** 块括起来，这样就只能在程序的调试版本中对它们进行编译。  
+    请注意，内存检查语句由 `#ifdef` [_DEBUG](https://msdn.microsoft.com/library/a9901568-4846-4731-a404-399d947e2e7a) /  **#endif**块括起来，以便仅在程序的调试版本中进行编译。  
   
     既然已经知道存在内存泄漏，便可以使用另一个成员函数 [CMemoryState::DumpStatistics](https://msdn.microsoft.com/library/90d5f281-b92f-4725-a996-23ab94cf4b5d) ，该函数将有助于对其进行定位。  
   
    [在本主题中](#BKMK_In_this_topic)  
   
-### <a name="BKMK_Viewing_memory_statistics"></a> 查看内存统计信息  
+### <a name="viewing-memory-statistics"></a><a name="BKMK_Viewing_memory_statistics"></a> 查看内存统计信息  
  [CMemoryState::Difference](https://msdn.microsoft.com/library/aba69e2f-71dd-4255-99b5-3da2e56a0c9c) 函数监视两个内存状态对象，并检测起始状态和结束状态之间未从堆释放的所有对象。 在拍摄内存快照并使用 `CMemoryState::Difference`对它们进行比较后，可以调用 [CMemoryState::DumpStatistics](https://msdn.microsoft.com/library/90d5f281-b92f-4725-a996-23ab94cf4b5d) 来获取有关尚未释放的对象的信息。  
   
  请看下面的示例：  
@@ -232,8 +232,8 @@ Total allocations: 67 bytes
   
  [在本主题中](#BKMK_In_this_topic)  
   
-### <a name="BKMK_Taking_object_dumps"></a> 采用对象转储  
- 在 MFC 程序中，可以使用[cmemorystate:: Dumpallobjectssince](https://msdn.microsoft.com/library/a7f89034-bca4-4786-88d5-1571a5425ab2)来转储堆上尚未释放的所有对象的说明。 `DumpAllObjectsSince` 转储从最后一个 [CMemoryState::Checkpoint](https://msdn.microsoft.com/library/b2d80fea-3d21-457e-816d-b035909bf21a)。 如果未发生 `Checkpoint` 调用，则 `DumpAllObjectsSince` 将转储当前在内存中的所有对象和非对象。  
+### <a name="taking-object-dumps"></a><a name="BKMK_Taking_object_dumps"></a> 采用对象转储  
+ 在 MFC 程序中，可以使用 [CMemoryState::DumpAllObjectsSince](https://msdn.microsoft.com/library/a7f89034-bca4-4786-88d5-1571a5425ab2) 来转储堆上尚未释放的所有对象的描述。 `DumpAllObjectsSince` 转储从最后一个 [CMemoryState::Checkpoint](https://msdn.microsoft.com/library/b2d80fea-3d21-457e-816d-b035909bf21a)。 如果未发生 `Checkpoint` 调用，则 `DumpAllObjectsSince` 将转储当前在内存中的所有对象和非对象。  
   
 > [!NOTE]
 > 必须先 [启用诊断跟踪](../debugger/mfc-debugging-techniques.md#BKMK_Enabling_memory_diagnostics)，然后才能使用 MFC 对象转储。  
@@ -278,7 +278,7 @@ Phone #: 581-0215
   
  [在本主题中](#BKMK_In_this_topic)  
   
-#### <a name="BKMK_Interpreting_memory_dumps"></a> 解释内存转储  
+#### <a name="interpreting-memory-dumps"></a><a name="BKMK_Interpreting_memory_dumps"></a> 解释内存转储  
  查看此对象转储的更详细信息：  
   
 ```  
@@ -361,7 +361,7 @@ Phone #: 581-0215
   
  [在本主题中](#BKMK_In_this_topic)  
   
-#### <a name="BKMK_Customizing_object_dumps"></a> 自定义对象转储  
+#### <a name="customizing-object-dumps"></a><a name="BKMK_Customizing_object_dumps"></a> 自定义对象转储  
  当从 [CObject](https://msdn.microsoft.com/library/95e9acd3-d9eb-4ac0-b52b-ca4a501a7a3a)派生类时，在使用 `Dump` DumpAllObjectsSince [将对象转储到](https://msdn.microsoft.com/library/a7f89034-bca4-4786-88d5-1571a5425ab2) “输出”窗口 [时，可以重写](../ide/reference/output-window.md)成员函数以提供附加信息。  
   
  `Dump` 函数将对象的成员变量的文本化表示形式写入转储上下文 ([CDumpContext](https://msdn.microsoft.com/library/98c52b2d-14b5-48ed-b423-479a4d1c60fa))。 转储上下文类似于 I/O 流。 可以使用追加运算符 ( **<<** ) 向 `CDumpContext`。  
@@ -416,18 +416,18 @@ pMyPerson->Dump( afxDump );
   
  [在本主题中](#BKMK_In_this_topic)  
   
-## <a name="BKMK_Reducing_the_size_of_an_MFC_Debug_build"></a> 减小 MFC 调试生成的大小  
+## <a name="reducing-the-size-of-an-mfc-debug-build"></a><a name="BKMK_Reducing_the_size_of_an_MFC_Debug_build"></a> 减小 MFC 调试生成的大小  
  大型 MFC 应用程序的调试信息会占用大量磁盘空间。 你可以使用以下过程之一减小该大小：  
   
-1. 重新生成 MFC 库使用[/Z7、 /Zi、 /ZI （调试信息格式）](https://msdn.microsoft.com/library/ce9fa7e1-0c9b-47e3-98ea-26d1a16257c8)选项，而不是 **/z7**。 这些选项生成单个程序数据库 (PDB) 文件，该文件包含整个库的调试信息，减少了冗遇并节省了空间。  
+1. 使用 [/Z7、/Zi、/ZI（调试信息格式）](https://msdn.microsoft.com/library/ce9fa7e1-0c9b-47e3-98ea-26d1a16257c8)选项而不是 /Z7 来重新生成 MFC 库。 这些选项生成单个程序数据库 (PDB) 文件，该文件包含整个库的调试信息，减少了冗遇并节省了空间。  
   
-2. 重新生成没有调试信息的 MFC 库 (没有[/Z7、 /Zi、 /ZI （调试信息格式）](https://msdn.microsoft.com/library/ce9fa7e1-0c9b-47e3-98ea-26d1a16257c8)选项)。 在此情况下，缺少调试信息将妨碍你在 MFC 库代码内使用大多数调试器功能，但由于 MFC 库已完全调试，所以可能不会有问题。  
+2. 重新生成没有调试信息的 MFC 库（没有 [/Z7、/Zi、/ZI（调试信息格式）](https://msdn.microsoft.com/library/ce9fa7e1-0c9b-47e3-98ea-26d1a16257c8)选项）。 在此情况下，缺少调试信息将妨碍你在 MFC 库代码内使用大多数调试器功能，但由于 MFC 库已完全调试，所以可能不会有问题。  
   
 3. 生成你自己的只带有选定模块的调试信息的应用程序，如下所述。  
   
    [在本主题中](#BKMK_In_this_topic)  
   
-### <a name="BKMK_Building_an_MFC_app_with_debug_information_for_selected_modules"></a> 生成带有选定模块的调试信息的 MFC 应用程序  
+### <a name="building-an-mfc-app-with-debug-information-for-selected-modules"></a><a name="BKMK_Building_an_MFC_app_with_debug_information_for_selected_modules"></a> 生成带有选定模块的调试信息的 MFC 应用程序  
  生成带有 MFC 调试库的选定模块以后，你便可以在这些模块中使用单步执行和其他调试功能。 该过程同时利用 Visual C++ 生成文件的“Debug”模式和“Release”模式，从而使得有必要进行下面所描述的更改（也使得在需要完全发布版本时必须进行“全部重新生成”）。  
   
 1. 在“解决方案资源管理器”中，选择项目。  
@@ -436,9 +436,9 @@ pMyPerson->Dump( afxDump );
   
 3. 首先，将创建一个新的项目配置。  
   
-   1. 在“\<项目> 属性页”对话框中，单击“配置管理器”按钮   。  
+   1. 在 " ** \<Project> 属性页**" 对话框中，单击 " **Configuration Manager** " 按钮。  
   
-   2. 在 [“配置管理器”对话框](https://msdn.microsoft.com/fa182dca-282e-4ae5-bf37-e155344ca18b)中，在网格中定位你的项目。 在“配置”列中，选择“\<新建...>”   。  
+   2. 在 [“配置管理器”对话框](https://msdn.microsoft.com/fa182dca-282e-4ae5-bf37-e155344ca18b)中，在网格中定位你的项目。 在 " **配置** " 列中，选择 **\<New...>** 。  
   
    3. 在 [“新建项目配置”对话框](https://msdn.microsoft.com/cca616dc-05a6-4fe3-bdc1-40c72a66f2be)中的 **“项目配置名”** 框中键入新配置的名称，如“Partial Debug”（部分调试）。  
   
@@ -478,7 +478,7 @@ pMyPerson->Dump( afxDump );
   
    6. 单击 **“调试信息格式”** 设置并为调试信息选择所需选项（通常为 **“/ZI”** ）。  
   
-   7. 如果要使用应用程序向导生成的应用程序或具有预编译头，则在编译其他模块以前必须关闭预编译头或重新编译预编译头。 否则，将收到警告 C4650 和错误消息 C2855。 通过更改“\<项目> 属性”对话框中的“创建/使用预编译标头”设置，可关闭预编译标头（该设置位于“配置属性”文件夹下的“C/C++”子文件夹中的“预编译标头”类别中）      。  
+   7. 如果要使用应用程序向导生成的应用程序或具有预编译头，则在编译其他模块以前必须关闭预编译头或重新编译预编译头。 否则，将收到警告 C4650 和错误消息 C2855。 可以通过在 " ** \<Project> 属性**" 对话框中更改 "**创建/使用预编译标头**" 设置来关闭预编译标头， (**配置属性**"文件夹、 **c/c + +** 子文件夹、"**预编译头**"类别) 。  
   
 7. 从 **“生成”** 菜单中选定 **“生成”** 以重新生成已过期的项目文件。  
   
@@ -486,5 +486,5 @@ pMyPerson->Dump( afxDump );
   
    [在本主题中](#BKMK_In_this_topic)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [调试 Visual C++](../debugger/debugging-native-code.md)

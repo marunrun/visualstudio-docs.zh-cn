@@ -9,10 +9,10 @@ caps.latest.revision: 8
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: e8b3ea10b96a63bd18098030dc884ac3f3383353
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657184"
 ---
 # <a name="using-microsoftvisualstudiotesttoolsunittesting-members-in-unit-tests"></a>在单元测试中使用 Microsoft.VisualStudio.TestTools.UnitTesting 成员
@@ -88,7 +88,7 @@ ms.locfileid: "72657184"
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedExceptionAttribute>
 
 ## <a name="the-testcontext-class"></a>TestContext 类
- 以下特性和分配给它们的值会出现在特定测试方法的 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 属性窗口中。 这些属性不旨在通过单元测试的代码进行访问。 相反，它们会影响使用或运行单元测试的方法（由你通过 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] IDE 使用或运行，或由 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 测试引擎测试或运行）。例如，其中一些属性在“测试管理器”窗口和“测试结果”窗口中显示为列，这意味着可以使用它们对测试和测试结果进行分组和排序。 这样一个属性是 TestPropertyAttribute，可用于将任意元数据添加到单元测试。 例如，可以通过使用 `[TestProperty("TestPass", "Accessibility")]` 标记单元测试，来使用该属性存储此测试所涵盖的测试轮次的名称。 还可以使用它存储它属于的测试类型的指示器： `[TestProperty("TestKind", "Localization")]`。 使用此特性创建的属性以及分配的属性值都会显示在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 属性窗口中的标题“测试特定的”下。
+ 以下特性和分配给它们的值会出现在特定测试方法的 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 属性窗口中。 这些属性不旨在通过单元测试的代码进行访问。 相反，它们会影响使用或运行单元测试的方法（由你通过 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] IDE 使用或运行，或由 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 测试引擎测试或运行）。例如，其中一些属性在“测试管理器”窗口和“测试结果”窗口中显示为列，这意味着可以使用它们对测试和测试结果进行分组和排序。 这样一个属性是 TestPropertyAttribute，可用于将任意元数据添加到单元测试。 例如，可以通过使用 `[TestProperty("TestPass", "Accessibility")]` 标记单元测试，来使用该属性存储此测试所涵盖的测试轮次的名称。 还可以使用它存储它属于的测试类型的指示器： `[TestProperty("TestKind", "Localization")]`。 使用此特性创建的属性以及分配的属性值都会显示在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 属性窗口中的标题“测试特定的”**** 下。
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.OwnerAttribute>
 
@@ -124,6 +124,6 @@ ms.locfileid: "72657184"
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateType>
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting>
