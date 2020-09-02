@@ -14,10 +14,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 33ff14ce88f2032b998214ed11310a15550321dc
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68199804"
 ---
 # <a name="how-to-choose-collection-methods"></a>如何：选择收集方法
@@ -29,7 +29,7 @@ ms.locfileid: "68199804"
   
 - [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)], [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)], [!INCLUDE[vsPro](../includes/vspro-md.md)]  
   
-  可以使用性能会话“方法”  属性指定最适合应用程序的收集方法。 可从“性能向导”、“性能资源管理器”或性能会话的“属性”页中选择收集方法。 有关使用命令行工具的详细信息，请参阅[命令行分析](../profiling/using-the-profiling-tools-from-the-command-line.md)。  
+  可以使用性能会话“方法”属性指定最适合应用程序的收集方法。 可从“性能向导”、“性能资源管理器”或性能会话的“属性”页中选择收集方法。 有关使用命令行工具的详细信息，请参阅[命令行分析](../profiling/using-the-profiling-tools-from-the-command-line.md)。  
   
 ## <a name="performance-wizard"></a>性能向导  
   
@@ -48,7 +48,7 @@ ms.locfileid: "68199804"
   
 #### <a name="to-select-a-collection-method-using-performance-explorer"></a>使用“性能资源管理器”选择收集方法  
   
-1. 在“性能资源管理器”  工具栏上，单击“方法”  下拉列表旁的箭头。  
+1. 在“性能资源管理器”工具栏上，单击“方法”下拉列表旁的箭头。  
   
 2. 单击想选择的收集方法。  
   
@@ -56,13 +56,13 @@ ms.locfileid: "68199804"
   
 #### <a name="to-select-the-sampling-or-instrumentation-method-using-performance-session-properties"></a>使用性能会话属性选择采样或检测方法  
   
-1. 在“性能资源管理器”  中，选择性能会话。  
+1. 在“性能资源管理器”中，选择性能会话。  
   
      性能会话文件的扩展名为 .psess。  
   
-2. 右键单击性能会话，然后单击“属性”  。  
+2. 右键单击性能会话，然后单击“属性”。  
   
-3. 在“属性页”  中，单击“常规”  。  
+3. 在“属性页”中，单击“常规”。  
   
 4. 单击想选择的收集方法。  
   
@@ -72,31 +72,31 @@ ms.locfileid: "68199804"
   
 #### <a name="to-select-net-memory-data-collection-by-using-performance-session-properties"></a>使用性能会话属性选择 .NET 内存数据收集  
   
-1. 在“性能资源管理器”  中，选择性能会话。  
+1. 在“性能资源管理器”中，选择性能会话。  
   
      性能会话文件的扩展名为 .psess。  
   
-2. 右键单击性能会话，然后单击“属性”  。  
+2. 右键单击性能会话，然后单击“属性”。  
   
-3. 在“属性页”  中，单击“常规”  。  
+3. 在“属性页”中，单击“常规”。  
   
-4. 单击“采样”  或“检测”  。  
+4. 单击“采样”或“检测”。  
   
-5. 单击“收集 .NET 对象分配信息”  收集 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 对象分配的大小和数量。  
+5. 单击“收集 .NET 对象分配信息”**** 收集 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 对象分配的大小和数量。  
   
-6. （可选）单击“同时收集 .NET 对象的生存期信息”  收集有关对象内存回收在其中的垃圾回收生成的数据。  
+6. （可选）单击“同时收集 .NET 对象的生存期信息”收集有关对象内存回收在其中的垃圾回收生成的数据。  
   
      有关收集 .NET 内存数据时其他可用选项的信息，请参阅[收集 .NET 内存分配数据和生存期数据](../profiling/collecting-dotnet-memory-allocation-and-lifetime-data.md)。  
   
 #### <a name="to-select-concurrency-data-collection-by-using-performance-session-properties"></a>使用性能会话属性选择并发数据收集  
   
-1. 在“性能资源管理器”  中，右键单击性能会话，然后单击“属性”  。  
+1. 在“性能资源管理器” 中，右键单击性能会话，然后单击“属性” 。  
   
-2. 在“属性页”  中，单击“常规”  。  
+2. 在“属性页”中，单击“常规”。  
   
-3. 单击“并发”  。  
+3. 单击“并发”。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [配置性能会话](../profiling/configuring-performance-sessions.md)   
  [了解采样数据值](../profiling/understanding-sampling-data-values.md)   
  [性能会话属性](../profiling/performance-session-properties.md)

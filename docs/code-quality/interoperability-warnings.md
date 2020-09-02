@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 74bffffa2b4f95aeab20438199bb19693a1a3b94
-ms.sourcegitcommit: 9a7fb8556a5f3dbb4459122fefc7e7a8dfda753a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "87235116"
 ---
 # <a name="interoperability-warnings"></a>互操作性警告
@@ -30,7 +30,7 @@ ms.locfileid: "87235116"
 | 规则 | 描述 |
 | - | - |
 | [CA1400： P/Invoke 入口点应该存在](../code-quality/ca1400.md) | 公共或受保护方法标有 System.Runtime.InteropServices.DllImportAttribute 特性。 未能找到非托管库，或者未能将方法与库中的函数匹配。 |
-| [CA1401： P/Invoke 应不可见](../code-quality/ca1401.md) | 公共类型中的公共或受保护方法具有 System.Runtime.InteropServices.DllImportAttribute 属性（也由 Visual Basic 中的 Declare 关键字实现）。 这些方法不能公开。 |
+| [CA1401： P/Invoke 应不可见](../code-quality/ca1401.md) | 公共类型中的公共或受保护方法具有 System.Runtime.InteropServices.DllImportAttribute 特性 (也由 Visual Basic) 中的 Declare 关键字实现。 这些方法不能公开。 |
 | [CA1402:避免在 COM 可见接口中进行重载](../code-quality/ca1402.md) | 在向 COM 客户端公开重载的方法时，只有第一个方法重载保留其名称。 对于后续重载，将为其指定唯一名称，方法是在其名称后面追加一个下划线字符 (_) 和一个与该重载的声明顺序对应的整数。 |
 | [CA1403:自动布局类型不应对 COM 可见](../code-quality/ca1403.md) | COM 可见值类型是使用设置为 LayoutKind 的 InteropServices. StructLayoutAttribute 特性标记的。这些类型的布局在 .NET 版本之间可能会发生变化，这会中断需要特定布局的 COM 客户端。 |
 | [CA1404：紧接在 P/Invoke 之后调用 GetLastError](../code-quality/ca1404.md) | 对 GetLastWin32Error 方法或等效的 [!INCLUDE[TLA2#tla_win32](../code-quality/includes/tla2sharptla_win32_md.md)] GetLastError 函数进行调用，并且直接上一个调用不是平台调用方法。 |

@@ -1,5 +1,5 @@
 ---
-title: SupportsLanguageDropDown 元素 （Visual Studio 模板） |Microsoft Docs
+title: " (Visual Studio 模板) 的 SupportsLanguageDropDown 元素 |Microsoft Docs"
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -14,19 +14,19 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 53703d6178c81758650fdd00aada0a5952734caa
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68160489"
 ---
 # <a name="supportslanguagedropdown-element-visual-studio-templates"></a>SupportsLanguageDropDown 元素（Visual Studio 模板）
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-指定 Web 项目模板是完全相同的多个语言，以及是否**语言**上启用选项**添加新项**对话框。  
+指定对于多种语言，Web 项模板是否相同，以及是否在 "**添加新项**" 对话框中启用了**Language**选项。  
   
- \<VSTemplate >  
- \<TemplateData >  
+ \<VSTemplate>  
+ \<TemplateData>  
  \<SupportsLanguageDropDown>  
   
 ## <a name="syntax"></a>语法  
@@ -53,17 +53,17 @@ ms.locfileid: "68160489"
 ## <a name="text-value"></a>文本值  
  需要一个文本值。  
   
- 文本必须是`true`或`false`，以指示是否**语言**选项才可用**添加新项**对话框。  
+ 文本必须是 `true` 或 `false` ，指示是否可从 "**添加新项**" 对话框中使用 "**语言**" 选项。  
   
 ## <a name="remarks"></a>备注  
  `SupportsLanguageDropDown` 是可选元素。 默认值为 `false`。  
   
- `SupportsLanguageDropDown`元素功能仅适用于 Web 项目模板。  
+ `SupportsLanguageDropDown`元素仅适用于 Web 项模板。  
   
- 如果此元素的值设置为`true`，则项模板是完全相同的所有编程语言和**语言**中启用选项**添加新项**对话框。 此选项，可选择你想要从模板创建的新项的编程语言。  
+ 如果此元素的值设置为 `true` ，则该项模板对于所有编程语言均相同，并且在 "**添加新项**" 对话框中启用了 "**语言**" 选项。 利用此选项，您可以选择要从模板创建的新项的编程语言。  
   
 ## <a name="example"></a>示例  
- 下面的示例指定要显示**语言**下拉列表选项。  
+ 下面的示例指定显示 " **语言** " 下拉选项。  
   
 ```  
 <VSTemplate Version="3.0.0" Type="Project"  
@@ -87,6 +87,6 @@ ms.locfileid: "68160489"
 </VSTemplate>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)   
  [创建项目和项模板](../ide/creating-project-and-item-templates.md)

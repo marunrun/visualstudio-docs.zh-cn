@@ -1,5 +1,5 @@
 ---
-title: IDebugProcess2：：枚举程序 |微软文档
+title: IDebugProcess2：： EnumPrograms |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 56b1c939802406394bdf09e3cfa8c76f5103d974
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80724083"
 ---
 # <a name="idebugprocess2enumprograms"></a>IDebugProcess2::EnumPrograms
-检索此过程中包含的所有程序的列表。
+检索此进程包含的所有程序的列表。
 
 ## <a name="syntax"></a>语法
 
@@ -41,11 +41,11 @@ int EnumPrograms( 
 
 ## <a name="parameters"></a>参数
 `ppEnum`\
-[出]返回包含进程中所有程序的列表的[IEnumDebug程序2](../../../extensibility/debugger/reference/ienumdebugprograms2.md)对象。
+弄返回一个 [IEnumDebugPrograms2](../../../extensibility/debugger/reference/ienumdebugprograms2.md) 对象，该对象包含进程中的所有程序的列表。
 
 ## <a name="return-value"></a>返回值
- 如果成功，返回`S_OK`;否则，返回错误代码。
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)
 - [IEnumDebugPrograms2](../../../extensibility/debugger/reference/ienumdebugprograms2.md)
