@@ -1,5 +1,5 @@
 ---
-title: IDebugExpressionEvaluator2::SetCorPath |Microsoft Docs
+title: IDebugExpressionEvaluator2：： SetCorPath |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,16 +12,16 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: c1508c7c0936f8ed8d92852e5b75c073cb9d85a4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68179911"
 ---
 # <a name="idebugexpressionevaluator2setcorpath"></a>IDebugExpressionEvaluator2::SetCorPath
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-公共语言运行时 (CLR) 加载在调试器中设置的路径。  
+设置 (CLR) 加载到调试器中的公共语言运行时的路径。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,13 +39,13 @@ int SetCorPath(
   
 #### <a name="parameters"></a>参数  
  `pcstrCorPath`  
- [in]在调试器中加载到 CLR 的路径。  
+ 中调试器中加载的 CLR 的路径。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何实现此方法对于**ExpressionEvaluatorPackage**对象，它公开[IDebugExpressionEvaluator2](../../../extensibility/debugger/reference/idebugexpressionevaluator2.md)接口。  
+ 下面的示例演示如何为公开[IDebugExpressionEvaluator2](../../../extensibility/debugger/reference/idebugexpressionevaluator2.md)接口的**ExpressionEvaluatorPackage**对象实现此方法。  
   
 ```cpp#  
 STDMETHODIMP ExpressionEvaluatorPackage::SetCorPath(LPCOLESTR pcstrCorPath)  
@@ -125,5 +125,5 @@ STDMETHODIMP ExpressionEvaluatorPackage::SetCorPath(LPCOLESTR pcstrCorPath)
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugExpressionEvaluator2](../../../extensibility/debugger/reference/idebugexpressionevaluator2.md)

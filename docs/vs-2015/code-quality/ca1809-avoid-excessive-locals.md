@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: d39c8d9d09cf457738df87e3c2e6e109f7bc1696
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85543853"
 ---
 # <a name="ca1809-avoid-excessive-locals"></a>CA1809:避免过多的局部变量
@@ -36,7 +36,7 @@ ms.locfileid: "85543853"
  成员包含64个以上的局部变量，其中一些变量可能是编译器生成的。
 
 ## <a name="rule-description"></a>规则描述
- 常见的性能优化是将值存储在处理器寄存器中而不是存储在内存中，这称为*局部变量*。 公共语言运行时最多可考虑64的 enregistration 局部变量。 不 enregistered 的变量会放置在堆栈上，并且在操作之前必须移到寄存器。 若要允许所有本地变量获取 enregistered，请将局部变量的数目限制为64。
+ 常见的性能优化是将值存储在处理器寄存器中而不是存储在内存中，这称为 *局部变量* 。 公共语言运行时最多可考虑64的 enregistration 局部变量。 不 enregistered 的变量会放置在堆栈上，并且在操作之前必须移到寄存器。 若要允许所有本地变量获取 enregistered，请将局部变量的数目限制为64。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
  若要修复与此规则的冲突，请重构实现以使用不超过64的局部变量。

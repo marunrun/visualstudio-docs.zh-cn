@@ -15,20 +15,20 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 9b9013d41ac4d5ca890e7cc9e09b5eb9415cb640
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65691333"
 ---
 # <a name="querying-the-pdb-file"></a>查询 .Pdb 文件
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-程序数据库文件 (扩展名为.pdb) 是包含类型和符号化调试信息编译和链接项目的过程中收集的二进制文件。 在编译 C 时创建 PDB 文件 /C++带有程序 **/ZI**或 **/Zi**或[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]， [!INCLUDE[csprcs](../../includes/csprcs-md.md)]，或[!INCLUDE[jsprjscript](../../includes/jsprjscript-md.md)]带有程序 **/调试**选项。 对象文件包含到调试信息的.pdb 文件的引用。 Pdb 文件的详细信息，请参阅[PDB 文件](https://msdn.microsoft.com/1761c84e-8c2c-4632-9649-b5f99964ed3f)。 DIA 应用程序可以使用以下常规步骤以获取有关各种符号、 对象和对可执行映像中的数据元素的详细信息。  
+程序数据库文件 (扩展 .pdb) 是一个二进制文件，其中包含在编译和链接项目的过程中收集的类型和符号调试信息。 当使用 **/zi** 或 **/zi** 编译 C/c + + 程序或 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] [!INCLUDE[jsprjscript](../../includes/jsprjscript-md.md)] 使用 **/Debug** 选项来编译 C/c + + 程序时，将创建 PDB 文件。 对于调试信息，对象文件包含对 .pdb 文件的引用。 有关 pdb 文件的详细信息，请参阅 [Pdb 文件](https://msdn.microsoft.com/1761c84e-8c2c-4632-9649-b5f99964ed3f)。 DIA 应用程序可以使用以下常规步骤来获取有关可执行映像中各种符号、对象和数据元素的详细信息。  
   
-### <a name="to-query-the-pdb-file"></a>查询.pdb 文件  
+### <a name="to-query-the-pdb-file"></a>查询 .pdb 文件  
   
-1. 通过创建获得数据源[IDiaDataSource](../../debugger/debug-interface-access/idiadatasource.md)接口。  
+1. 通过创建 [IDiaDataSource](../../debugger/debug-interface-access/idiadatasource.md) 接口获取数据源。  
   
     ```cpp#  
     CComPtr<IDiaDataSource> pSource;  
@@ -44,7 +44,7 @@ ms.locfileid: "65691333"
     }  
     ```  
   
-2. 调用[idiadatasource:: Loaddatafrompdb](../../debugger/debug-interface-access/idiadatasource-loaddatafrompdb.md)或[idiadatasource:: Loaddataforexe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md)加载调试信息。  
+2. 调用 [IDiaDataSource：： loadDataFromPdb](../../debugger/debug-interface-access/idiadatasource-loaddatafrompdb.md) 或 [IDiaDataSource：： loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) 加载调试信息。  
   
     ```cpp#  
     wchar_t wszFilename[ _MAX_PATH ];  
@@ -58,7 +58,7 @@ ms.locfileid: "65691333"
     }  
     ```  
   
-3. 调用[idiadatasource:: Opensession](../../debugger/debug-interface-access/idiadatasource-opensession.md)以打开[IDiaSession](../../debugger/debug-interface-access/idiasession.md)来获取调试信息的访问权限。  
+3. 调用 [IDiaDataSource：： openSession](../../debugger/debug-interface-access/idiadatasource-opensession.md) 以打开 [IDiaSession](../../debugger/debug-interface-access/idiasession.md) 以获取对调试信息的访问。  
   
     ```cpp#  
     CComPtr<IDiaSession> psession;  
@@ -68,7 +68,7 @@ ms.locfileid: "65691333"
     }  
     ```  
   
-4. 使用中的方法`IDiaSession`查询数据源中的符号。  
+4. 使用中的方法 `IDiaSession` 可以查询数据源中的符号。  
   
     ```cpp#  
     CComPtr<IDiaSymbol> pglobal;  
@@ -78,7 +78,7 @@ ms.locfileid: "65691333"
     }  
     ```  
   
-5. 使用`IDiaEnum*`调试信息的接口枚举和浏览符号或其他元素。  
+5. 使用 `IDiaEnum*` 接口枚举和扫描调试信息的符号或其他元素。  
   
     ```cpp#  
     CComPtr<IDiaEnumTables> pTables;  
@@ -93,5 +93,5 @@ ms.locfileid: "65691333"
     }  
     ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDiaDataSource](../../debugger/debug-interface-access/idiadatasource.md)

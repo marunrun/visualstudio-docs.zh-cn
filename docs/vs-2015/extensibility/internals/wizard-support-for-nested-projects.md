@@ -13,23 +13,23 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 206fd12ea8f198e1659a49ed566e726e49878c53
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68180338"
 ---
 # <a name="wizard-support-for-nested-projects"></a>嵌套项目的向导支持
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-IDE 将运行两个向导，可以实现嵌套项目的父项目：**新的项目**向导并**添加项**向导。  
+IDE 运行可实现嵌套项目的父项目的两个向导： " **新建项目** " 向导和 " **添加项** 向导"。  
   
- 如果用户启动**新的项目**向导通过选择**添加项目**，然后单击**新项目**文件菜单或通过选择**添加**右键单击**新的项目**在解决方案资源管理器，IDE 将运行**AddProject**命令和父项目的实施**AddProject**命令返回模板项目文件中或具有组的上下文参数的向导 (.vsz) 文件。  
+ 如果用户通过在 "文件" 菜单上选择 "**添加项目**" 并单击 "**新建项目**"，或在解决方案资源管理器中选择 "**添加**" 并右键单击 "**新建项目**" 来启动 "**新建**项目" 向导，则 IDE 将运行**AddProject**命令， **AddProject**命令的父项目实现将返回模板项目文件或 ( .vsz) 文件，其中包含一组上下文参数。  
   
- 同样，父项目的实现**AddItem**向导返回具有一组不同的上下文参数的.vsz 文件。  
+ 同样，一个父项目的 **AddItem** 向导实现返回一个 .vsz 文件，该文件具有一组不同的上下文参数。  
   
- 有关向导的详细信息，请参阅[向导 (。在 Vsz) 文件](../../extensibility/internals/wizard-dot-vsz-file.md)，[上下文参数](../../extensibility/internals/context-parameters.md)并[注册项目和项模板](../../extensibility/internals/registering-project-and-item-templates.md)。  
+ 有关向导的详细信息，请参阅 [向导 (。.Vsz) 文件](../../extensibility/internals/wizard-dot-vsz-file.md)、 [上下文参数](../../extensibility/internals/context-parameters.md) 和 [注册项目和项模板](../../extensibility/internals/registering-project-and-item-templates.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy>   
  [嵌套项目](../../extensibility/internals/nesting-projects.md)

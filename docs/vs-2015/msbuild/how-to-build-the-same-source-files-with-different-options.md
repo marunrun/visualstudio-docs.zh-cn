@@ -15,10 +15,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 8bf76967363f4c0d97d93c895fbeb6209c8503f0
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "67821673"
 ---
 # <a name="how-to-build-the-same-source-files-with-different-options"></a>如何：使用不同选项生成相同的源文件
@@ -29,7 +29,7 @@ ms.locfileid: "67821673"
 ## <a name="using-properties-to-modify-projects"></a>使用属性来修改项目  
  `Property` 元素定义在项目文件中多次引用的变量，如临时目录的位置，或者设置在多项配置中使用的属性的值，如调试版本和发布版本。 有关属性的详细信息，请参阅 [MSBuild 属性](msbuild-properties1.md)。  
   
- 属性可用于你的生成的配置更改，而无需更改项目文件。 `Property` 元素和 `PropertyGroup` 元素的 `Condition` 属性允许你更改属性的值。 有关 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 条件的详细信息，请参阅[条件](../msbuild/msbuild-conditions.md)。  
+ 属性可用于你的生成的配置更改，而无需更改项目文件。 `Property` 元素和 `PropertyGroup` 元素的 `Condition` 属性允许你更改属性的值。 有关条件的详细信息 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] ，请参阅 [条件](../msbuild/msbuild-conditions.md)。  
   
 #### <a name="to-set-a-group-of-properties-based-on-another-property"></a>设置一组属性（基于另一个属性）  
   
@@ -51,11 +51,11 @@ ms.locfileid: "67821673"
     ```  
   
 ## <a name="specifying-properties-on-the-command-line"></a>在命令行上指定属性  
- 你的项目文件编写为接受多个配置后，你需要能够在生成项目时更改这些配置。 通过允许在命令行上使用 **/property** 或 **/p** 开关来指定属性，[!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 可以提供此功能。  
+ 你的项目文件编写为接受多个配置后，你需要能够在生成项目时更改这些配置。 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 通过允许使用 **/property** 或 **/p** 开关在命令行上指定属性来提供此功能。  
   
 #### <a name="to-set-a-project-property-at-the-command-line"></a>在命令行中设置项目属性  
   
-- 使用 **/property** 开关以及属性和属性值。 例如:  
+- 将 **/property** 开关与属性和属性值一起使用。 例如：  
   
     ```  
     msbuild file.proj /property:Flavor=Debug  
@@ -69,19 +69,19 @@ ms.locfileid: "67821673"
   
 #### <a name="to-specify-more-than-one-project-property-at-the-command-line"></a>在命令行上指定多个项目属性  
   
-- 多次使用 **/property** 或 **/p** 开关以及属性和属性值，或者使用一个 **/property** 或 **/p** 开关并使用分号 (;) 分隔多个属性。 例如：  
+- 使用 **/property** 或 **/p** 开关多次使用属性和属性值，或者使用一个 **/property** 或 **/p** 开关并使用分号 (; ) 分隔多个属性。 例如：  
   
   ```  
   msbuild file.proj /p:Flavor=Debug;Platform=x86  
   ```  
   
-   \- 或-  
+   \- 或 -  
   
   ```  
   msbuild file.proj /p:Flavor=Debug /p:Platform=x86  
   ```  
   
-  环境变量也被视为属性，并且由 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 自动合并。 有关使用环境变量的详细信息，请参阅[如何：在生成中使用环境变量](../msbuild/how-to-use-environment-variables-in-a-build.md)。  
+  环境变量也被视为属性，并且由 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 自动合并。 有关使用环境变量的详细信息，请参阅 [如何：在生成中使用环境变量](../msbuild/how-to-use-environment-variables-in-a-build.md)。  
   
   在命令行中指定的属性值将优先于任何在项目文件中为同一属性设置的值，而项目文件中的值优先于环境变量中的值。  
   
@@ -185,8 +185,8 @@ ToolsVersion="4.0" TreatAsLocalProperty="Color">
 -->  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
 [MSBuild](msbuild.md)  
  [MSBuild 概念](../msbuild/msbuild-concepts.md)   
- [MSBuild 参考](../msbuild/msbuild-reference.md)   
- [Project 元素 (MSBuild)](../msbuild/project-element-msbuild.md)
+ [MSBuild 引用](../msbuild/msbuild-reference.md)   
+ [项目元素 (MSBuild) ](../msbuild/project-element-msbuild.md)

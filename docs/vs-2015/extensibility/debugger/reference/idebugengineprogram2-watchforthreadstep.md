@@ -1,5 +1,5 @@
 ---
-title: IDebugEngineProgram2::WatchForThreadStep |Microsoft Docs
+title: IDebugEngineProgram2：： WatchForThreadStep |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 59489af368c2e95a2d3cc93edbd6f7ab02a1c156
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68195652"
 ---
 # <a name="idebugengineprogram2watchforthreadstep"></a>IDebugEngineProgram2::WatchForThreadStep
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-监视是否执行 （或停止监视执行） 的给定线程上发生。  
+监视执行 (或停止监视执行) 在给定线程上发生。  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,25 +46,25 @@ int WatchForThreadStep( 
   
 #### <a name="parameters"></a>参数  
  `pOriginatingProgram`  
- [in][IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)对象，表示正在单步执行程序。  
+ 中表示正在进行的程序的 [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) 对象。  
   
  `dwTid`  
- [in]指定要监视的线程标识符。  
+ 中指定要监视的线程的标识符。  
   
  `fWatch`  
- [in]非零 (`TRUE`) 表示开始观看由标识的线程上执行`dwTid`; 否则为零 (`FALSE`) 方法停止执行上观看`dwTid`。  
+ 中非零 (`TRUE`) 表示开始监视由标识的线程上的执行 `dwTid` ; 否则，零 (`FALSE`) 表示停止在上监视执行 `dwTid` 。  
   
  `dwFrame`  
- [in]指定一个帧索引，它控制的步骤类型。 在这种值为零 (0)、 步骤类型是"单步执行"和线程标识时，应停止该程序`dwTid`执行。 当`dwFrame`为非零，步骤类型是"逐过程"，并且仅当线程标识，该程序应停止`dwTid`中的索引是等于或更高版本上比堆栈帧运行`dwFrame`。  
+ 中指定控制步骤类型的帧索引。 如果此值为零 (0) ，则步骤类型为 "单步执行"，并在通过执行识别的线程时，程序应停止 `dwTid` 。 如果 `dwFrame` 为非零，则步骤类型为 "逐过程"，程序应仅在 `dwTid` 其索引与堆栈上的索引等于或高于的帧中运行时才应停止 `dwFrame` 。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
 ## <a name="remarks"></a>备注  
- 当会话调试管理器 (SDM) 步骤的程序，由标识`pOriginatingProgram`参数，它通过调用此方法通知所有其他附加的程序。  
+ 当会话调试管理器 (SDM) 执行由参数标识的程序时， `pOriginatingProgram` 它会通过调用此方法通知所有其他附加程序。  
   
- 此方法是仅适用于单步执行同一个线程。  
+ 此方法仅适用于线程单步执行。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugEngineProgram2](../../../extensibility/debugger/reference/idebugengineprogram2.md)   
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentTextEvents2::onReplaceText |Microsoft Docs
+title: IDebugDocumentTextEvents2：： onReplaceText |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 6a24b5198528b11c688043b9ddc353eb14c1f3aa
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68149315"
 ---
 # <a name="idebugdocumenttextevents2onreplacetext"></a>IDebugDocumentTextEvents2::onReplaceText
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-通知已替换文本为文档中调试包。  
+通知调试包文本已在文档中被替换。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,16 +40,16 @@ int onReplaceText( 
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>参数  
  `pos`  
- [in]一个[TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md)指示已替换文本。  
+ 中一个 [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) ，指示文本的替换位置。  
   
  `dwNumToReplace`  
- [in]指定已替换为文本的字符的数。  
+ 中指定替换的文本的字符数。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugDocumentTextEvents2](../../../extensibility/debugger/reference/idebugdocumenttextevents2.md)   
  [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md)
