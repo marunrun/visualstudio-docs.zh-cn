@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 8c066e183d60a1f7d967cafa1114d6241b28caa4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68165494"
 ---
 # <a name="idiasessionfindlinesbyrva"></a>IDiaSession::findLinesByRVA
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-检索包含指定的相对虚拟地址 (RVA) 的行中指定的编译单位。  
+检索指定编译单位中包含 (RVA) 指定的相对虚拟地址的行。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,21 +35,21 @@ HRESULT findLinesByRVA ( 
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>参数  
  `rva`  
- [in]RVA 作为指定的地址。  
+ 中指定作为 RVA 的地址。  
   
  `length`  
- [in]指定要与此查询包含的地址范围的字节数。  
+ 中指定包含此查询的地址范围的字节数。  
   
  `ppResult`  
- [out]返回[IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)对象，其中包含一系列的行号，包括指定的地址范围。  
+ 弄返回一个 [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md) 对象，该对象包含涵盖指定地址范围的所有行号的列表。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
 ## <a name="example"></a>示例  
- 此示例演示获取包含在指定的函数使用函数的相对虚拟地址和长度的所有行号的函数。  
+ 此示例演示一个函数，该函数使用函数的相对虚拟地址和长度获取指定函数中包含的所有行号。  
   
 ```cpp#  
 IDiaEnumLineNumbers* GetLineNumbersByRVA(IDiaSymbol *pFunc, IDiaSession *pSession)  
@@ -67,6 +67,6 @@ IDiaEnumLineNumbers* GetLineNumbersByRVA(IDiaSymbol *pFunc, IDiaSession *pSessio
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)   
  [IDiaSession](../../debugger/debug-interface-access/idiasession.md)

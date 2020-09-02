@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramHost2::GetHostId |Microsoft Docs
+title: IDebugProgramHost2：： GetHostId |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,10 +13,10 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 4e7421ceed436f90612889ba7b80a21ee3079c2c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68165145"
 ---
 # <a name="idebugprogramhost2gethostid"></a>IDebugProgramHost2::GetHostId
@@ -40,11 +40,11 @@ int GetHostId( 
   
 #### <a name="parameters"></a>参数  
  `pdwId`  
- [in、 out][AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md)使用的进程标识符信息填充的结构。  
+ [in，out]使用进程标识符信息填充的 [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) 结构。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugProgramHost2](../../../extensibility/debugger/reference/idebugprogramhost2.md)   
  [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md)

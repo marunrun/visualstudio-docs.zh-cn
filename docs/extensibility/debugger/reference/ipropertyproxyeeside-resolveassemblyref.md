@@ -1,5 +1,5 @@
 ---
-title: IProperty 代理EESide：：解析装配资源 |微软文档
+title: IPropertyProxyEESide：： ResolveAssemblyRef |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: c54945b0c89fb9608fab6aa70dcc63a7c6ae42df
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80714877"
 ---
 # <a name="ipropertyproxyeesideresolveassemblyref"></a>IPropertyProxyEESide::ResolveAssemblyRef
@@ -49,27 +49,27 @@ int ResolveAssemblyRef(
 
 ## <a name="parameters"></a>参数
 `assemName`\
-[在]要解析的程序集的名称。
+中要解析的程序集的名称。
 
 `assemBytes`\
-[出]返回包含与引用关联的程序集字节的[IEEData 存储](../../../extensibility/debugger/reference/ieedatastorage.md)对象。
+弄返回一个 [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) 对象，该对象包含与引用关联的程序集字节。
 
 `assemPdb`\
-[出]返回包含`IEEDataStorage`符号存储与此引用关联的数据的对象。
+弄返回一个 `IEEDataStorage` 对象，该对象包含与此引用关联的符号存储区数据。
 
 `assemLocation`\
-[出]返回此引用的路径位置。
+弄返回此引用的路径位置。
 
 `alr`\
-[出]从[ASSEMBLYLOCE](../../../extensibility/debugger/reference/assemblylocresolution.md)解析枚举中返回一个值，指示此引用程序集的位置。
+弄返回 [ASSEMBLYLOCRESOLUTION](../../../extensibility/debugger/reference/assemblylocresolution.md) 枚举中的一个值，该值指示此引用的程序集的位置。
 
 ## <a name="return-value"></a>返回值
- 如果成功，返回`S_OK`;否则，返回错误代码。
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。
 
 ## <a name="remarks"></a>备注
- 此方法通常不由自定义表达式赋值器实现。
+ 此方法通常不是由自定义表达式计算器实现的。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IPropertyProxyEESide](../../../extensibility/debugger/reference/ipropertyproxyeeside.md)
 - [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md)
 - [ASSEMBLYLOCRESOLUTION](../../../extensibility/debugger/reference/assemblylocresolution.md)

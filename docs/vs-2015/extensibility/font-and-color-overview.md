@@ -12,73 +12,73 @@ caps.latest.revision: 23
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 0a20cfa2372b1e55652ffcebe6d173cff86140a6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68204343"
 ---
 # <a name="font-and-color-overview"></a>字体和颜色概述
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-本主题讨论中的文本字体和颜色设置[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]集成的开发环境 (IDE)。 它还引入了类别和显示项的概念并介绍 Vspackage 和核心编辑器如何使用文本特性。  
+本主题讨论 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 集成开发环境中 (IDE) 的文本字体和颜色设置。 它还介绍了类别和显示项的概念，并介绍了 Vspackage 和核心编辑器使用文本属性的方式。  
   
-## <a name="the-fonts-and-colors-property-page"></a>字体和颜色属性页  
- 你可以管理属性中显示的文本[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]集成的开发环境 (IDE) 通过**字体和颜色**属性页。 若要查找**字体和颜色**属性页上，在**工具**菜单中，单击**选项**。 展开**环境**，然后单击**字体和颜色**。  
+## <a name="the-fonts-and-colors-property-page"></a>"字体和颜色" 属性页  
+ 您可以 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 通过 " **字体和颜色** " 属性页 (IDE) 来管理集成开发环境中显示的文本的属性。 若要查找 " **字体和颜色** " 属性页，请在 " **工具** " 菜单上单击 " **选项**"。 展开“环境”****，再单击“字体和颜色”****。  
   
 ## <a name="categories-and-display-items"></a>类别和显示项  
- 字体和颜色分为**类别**并**显示项**。  
+ 字体和颜色组织为 **类别** 和 **显示项**。  
   
-- 一个**类别**是大量的逻辑或功能容器**显示项**。  
+- **类别**是多个**显示项**的逻辑或功能容器。  
   
-   一系列**类别**处于**显示其设置**的下拉列表框**字体和颜色**属性页。  
+   **类别**列表位于 "**字体和颜色**" 属性页的 "**显示其设置**" 下拉框中。  
   
-- 一个**显示项**是如注释、 字符串或将时显示着色的控制结构的定义完善的文本实体。  
+- **显示项**是定义良好的文本实体，如注释、字符串或显示时要着色的控制结构。  
   
-  每个**显示项**唯一定义内**类别**包含它。 因此，多个**类别**可以**显示项**具有相同的名称。  
+  每个 **显示项** 在包含它的 **类别** 中唯一定义。 因此，多个 **类别** 可以有一个具有相同名称的 **显示项** 。  
   
-## <a name="vspackage-control-of-fonts-and-colors"></a>VSPackage 控制的字体和颜色  
- [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)]允许 Vspackage 到：  
+## <a name="vspackage-control-of-fonts-and-colors"></a>字体和颜色的 VSPackage 控件  
+ [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)]允许 vspackage：  
   
-- 定义字体和颜色**类别**。  
+- 定义字体和颜色 **类别**。  
   
-- 指定的字体和颜色用于呈现**显示项**。  
+- 指定用于呈现 **显示项**的字体和颜色。  
   
-- 与之交互**字体和颜色**属性页。  
+- 与 " **字体和颜色** " 属性页交互。  
   
-- 聚合多个**类别**成组。  
+- 将多个 **类别** 聚合到组中。  
   
 - 保留默认设置中的更改。  
   
-  有两种方法中的字体和颜色选择与交互[!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)]。  
+  可以通过两种方式与中的字体和颜色选择交互 [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)] 。  
   
-- 一种方法称为*语法着色*。 使用自定义现有的 vspackage[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]编辑器实现的语言服务和创建编辑器的源。  
+- 一种方法称为 *语法着色*。 它由 VSPackage 用于自定义现有 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 编辑器以实现语言服务并创建源编辑器。  
   
-   只有一个**类别**即支持此机制，则**文本编辑器**。  
+   只有一个 **类别** 支持此机制，即 **文本编辑器**。  
   
-- 更多常规的替代方法支持所有其他**类别**和显示文本时在源编辑器之外的用户界面组件。 有关详细信息，请参阅 <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorDefaultsProvider> 。  
+- 更常规的替代方法在显示文本时支持除源编辑器之外的所有其他 **类别** 和用户界面组件。 有关详细信息，请参阅 <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorDefaultsProvider>。  
   
 ## <a name="core-editor-text-settings"></a>核心编辑器文本设置  
- 核心编辑器的语言服务对象的字体和颜色设置受**文本 EditorCategory**中找到**显示其设置**的下拉列表框**字体和颜色**属性页。  
+ 语言服务对象的核心编辑器的字体和颜色设置由 "**字体和颜色**" 属性页的 "**显示其设置**" 下拉框中的**文本 EditorCategory**控制。  
   
- 使用编辑器时, 应使用专用的字体和颜色控制机制的语言服务都会提供控制和扩展**文本编辑器**设置。 该机制称为*语法着色，大*，并提供：  
+ 使用编辑器时，应使用语言服务提供的专用字体和颜色控制机制来控制和扩展 **文本编辑器** 设置。 此机制称为 *语法着色* ，并提供：  
   
-- 一种用于管理的字体和颜色显示项的简化的方法。  
+- 用于管理显示项的字体和颜色的简化方法。  
   
    有关详细信息，请参阅 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems> 和 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorableItem>。  
   
-- 一种明确定义和优化着色机制。  
+- 定义完善并经过优化的着色机制。  
   
    有关详细信息，请参阅 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer>。  
   
-- 可以使用内置的显示项从**文本 EditorCategory**和对其进行扩展。  
+- 既可使用 **文本 EditorCategory** 中的内置显示项，也可对其进行扩展。  
   
-   有关详细信息，请参阅[如何：使用内置的可着色项](../extensibility/internals/how-to-use-built-in-colorable-items.md)并[自定义可着色项](../extensibility/internals/custom-colorable-items.md)。  
+   有关详细信息，请参阅 [如何：使用内置可着色项](../extensibility/internals/how-to-use-built-in-colorable-items.md) 和 [自定义可着色项](../extensibility/internals/custom-colorable-items.md)。  
   
-- 自动持久化的当前状态的两个内置和自定义显示的项**文本编辑器**类别。  
+- 内置和自定义显示项的当前状态与 **文本编辑器** 类别的自动持久性。  
   
-  有关详细信息的语法着色，请参阅[旧版语言服务中的语法着色](../extensibility/internals/syntax-coloring-in-a-legacy-language-service.md)。  
+  有关语法着色的详细信息，请参阅 [旧版语言服务中的语法着色](../extensibility/internals/syntax-coloring-in-a-legacy-language-service.md)。  
   
-## <a name="see-also"></a>请参阅  
- [在编辑器中的旧接口](../extensibility/legacy-interfaces-in-the-editor.md)   
+## <a name="see-also"></a>另请参阅  
+ [编辑器中的旧接口](../extensibility/legacy-interfaces-in-the-editor.md)   
  [在旧版语言服务中进行语法着色](../extensibility/internals/syntax-coloring-in-a-legacy-language-service.md)
