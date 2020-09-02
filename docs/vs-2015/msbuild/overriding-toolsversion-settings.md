@@ -13,10 +13,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 468561a627a3ad7eb477328b5afef794c7acf2c7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68199946"
 ---
 # <a name="overriding-toolsversion-settings"></a>重写 ToolsVersion 设置
@@ -97,7 +97,7 @@ msbuild.exe someproj.proj /tv:12.0 /p:Configuration=Debug
       MSBuildToolsPath:    C:\Windows\Microsoft.NET\Framework\v2.0.50727  
     ```  
   
-## <a name="order-of-precedence"></a>优先级顺序  
+## <a name="order-of-precedence"></a>优先顺序  
  用于确定 `ToolsVersion` 的优先级顺序从高到低是：  
   
 1. 用于生成项目的 MSBuild 任务的 `ToolsVersion` 属性（如果有）。  
@@ -114,7 +114,7 @@ msbuild.exe someproj.proj /tv:12.0 /p:Configuration=Debug
   
     2. MSBuild.exe.config 文件中的默认工具版本。  
   
-    3. 注册表中的默认工具版本。 有关详细信息，请参阅[标准和自定义工具集配置](../msbuild/standard-and-custom-toolset-configurations.md)。  
+    3. 注册表中的默认工具版本。 有关详细信息，请参阅 [标准和自定义工具集配置](../msbuild/standard-and-custom-toolset-configurations.md)。  
   
 6. 如果未设置环境变量 `MSBUILDLEGACYDEFAULTTOOLSVERSION`，则使用以下步骤：  
   
@@ -127,7 +127,7 @@ msbuild.exe someproj.proj /tv:12.0 /p:Configuration=Debug
     4. 否则，使用当前 `ToolsVersion`。  
   
 ## <a name="see-also"></a>另请参阅  
- [多目标](../msbuild/msbuild-multitargeting-overview.md)   
+ [多定向](../msbuild/msbuild-multitargeting-overview.md)   
  [MSBuild 概念](../msbuild/msbuild-concepts.md)   
- [工具集 (ToolsVersion)](../msbuild/msbuild-toolset-toolsversion.md)   
+ [工具集 (ToolsVersion) ](../msbuild/msbuild-toolset-toolsversion.md)   
  [标准和自定义工具集配置](../msbuild/standard-and-custom-toolset-configurations.md)

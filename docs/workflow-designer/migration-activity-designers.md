@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: eeeb9ffb92b2bf97513923bdef901dacd1a9a67a
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "73189727"
 ---
 # <a name="migration-activity-designers"></a>迁移活动设计器
@@ -31,7 +31,7 @@ ms.locfileid: "73189727"
 
 - [使用活动设计器](control-flow-activity-designers.md)
 
-- [Messaging](../workflow-designer/messaging-activity-designers.md)
+- [消息传送](../workflow-designer/messaging-activity-designers.md)
 
 - [运行时](../workflow-designer/runtime-activity-designers.md)
 
@@ -39,6 +39,6 @@ ms.locfileid: "73189727"
 
 - [事务](../workflow-designer/transaction-activity-designers.md)
 
-- [收集](../workflow-designer/collection-activity-designers.md)
+- [集合](../workflow-designer/collection-activity-designers.md)
 
 - [错误处理](../workflow-designer/error-handling-activity-designers.md)

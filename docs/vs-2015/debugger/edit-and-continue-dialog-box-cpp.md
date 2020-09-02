@@ -21,10 +21,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: efd6d9a6628c5d5052d2195e08074e7688a71f92
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65704162"
 ---
 # <a name="edit-and-continue-dialog-box-c"></a>“编辑并继续”对话框 (C++)
@@ -34,5 +34,5 @@ ms.locfileid: "65704162"
   
  可以在进行调试时编辑代码以修复错误、停止调试并修复代码或是忽略错误并继续调试。 如果继续操作而不进行修复，则不会立即应用代码更改。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [“选项”对话框 ->“调试”->“编辑并继续”](https://msdn.microsoft.com/library/009d225f-ef65-463f-a146-e4c518f86103)

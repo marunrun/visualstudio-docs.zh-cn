@@ -15,10 +15,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: 6390e25f6d2840f22588df124b65e08b7b37ea18
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85815716"
 ---
 # <a name="the-use-of-a-future-reserved-word-for-an-identifier-is-invalid"></a>使用未来保留字作为标识符是无效的
@@ -26,4 +26,4 @@ ms.locfileid: "85815716"
   
  不能使用将来保留字作为变量、函数或其他用户定义的标识符的名称。  
   
- 有关将来保留字的详细信息，请参阅[JavaScript 未来保留字](../../javascript/reference/javascript-future-reserved-words.md)。
+ 有关将来保留字的详细信息，请参阅 [JavaScript 未来保留字](../../javascript/reference/javascript-future-reserved-words.md)。

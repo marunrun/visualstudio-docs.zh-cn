@@ -14,30 +14,30 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 3a06be4ef0a69ec173f171ba202f1f479448b1ca
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68153650"
 ---
 # <a name="program-nodes"></a>程序节点
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-在调试器体系结构，方面**程序节点**:  
+就调试器体系结构而言， **程序节点**：  
   
-- 是一个程序的轻型说明。  
+- 是对程序的轻型说明。  
   
-- 可以标识本身和它正在运行，并且可以附加到另一个地址，分离，描述创建它，如果有的调试引擎 (DE) 的过程。  
+- 可以标识自身及其在其中运行的进程，并可以将其附加到，也可以将其与创建的调试引擎 (DE) （如果有）。  
   
-- 为由[IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md)接口，通常由 DE 或端口。 程序节点添加到端口通过调用[AddProgramNode](../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md)。 当程序节点添加到端口后时，它被添加到包含此程序节点表示程序进程。  
+- 由 [IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md) 接口表示，通常由 DE 或端口创建。 通过调用 [AddProgramNode](../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md)将程序节点添加到端口。 将程序节点添加到端口后，会将该节点添加到包含此程序节点所表示的程序的进程中。  
   
-  调试会话已启动一段时间，具体取决于调试包的实现后程序节点用于创建相应的程序。 在其程序中查询一个过程，将枚举程序，另一个用于每个程序节点。  
+  在调试会话启动之后的某个时间段，根据调试包的实现，程序节点用于创建相应的程序。 查询进程时，会枚举程序，每个程序节点各有一个。  
   
-  程序附加到之前，IDE 将要求仅该程序的轻型的描述。 可以从程序节点中获取此信息。 一旦程序附加到，IDE 将需要显示更多详细的信息，例如，在程序中运行的所有线程的列表。 从程序自身获取此信息。  
+  将程序附加到之前，IDE 只需要程序的轻型说明。 可以从程序节点获取此信息。 将程序附加到后，IDE 需要显示更多详细信息，如程序中运行的所有线程的列表。 此信息是从程序本身获取的。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [程序](../../extensibility/debugger/programs.md)   
- [进程](../../extensibility/debugger/processes.md)   
+ [工艺](../../extensibility/debugger/processes.md)   
  [调试引擎](../../extensibility/debugger/debug-engine.md)   
  [调试器概念](../../extensibility/debugger/debugger-concepts.md)   
  [IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md)   

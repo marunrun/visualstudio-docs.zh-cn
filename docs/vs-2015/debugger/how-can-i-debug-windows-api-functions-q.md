@@ -24,10 +24,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 8c5fd73eb64c79ac9476c0036b9f2d709294d178
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65704583"
 ---
 # <a name="how-can-i-debug-windows-api-functions"></a>如何调试 Windows API 函数？
@@ -43,8 +43,8 @@ ms.locfileid: "65704583"
     {,,USER32.DLL}_MessageBeep@4  
     ```  
   
-     若要获取修饰的名，请参阅[查看修饰名](https://msdn.microsoft.com/f79e2717-a4db-4d12-a689-69830cce2be0)。  
+     若要获取修饰名，请参阅[查看修饰名](https://msdn.microsoft.com/f79e2717-a4db-4d12-a689-69830cce2be0)。  
   
-## <a name="see-also"></a>请参阅  
- [调试本机代码常见问题](../debugger/debugging-native-code-faqs.md)   
+## <a name="see-also"></a>另请参阅  
+ [调试本机代码常见问题解答](../debugger/debugging-native-code-faqs.md)   
  [调试本机代码](../debugger/debugging-native-code.md)

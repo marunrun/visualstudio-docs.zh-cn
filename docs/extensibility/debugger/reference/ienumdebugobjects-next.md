@@ -1,5 +1,5 @@
 ---
-title: IEnum调试对象：：下一个 |微软文档
+title: IEnumDebugObjects：： Next |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 99b2bc35b63a4e97f888365f1d11231ae620b69c
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80716335"
 ---
 # <a name="ienumdebugobjectsnext"></a>IEnumDebugObjects::Next
-此方法从枚举返回下一组元素。
+此方法返回枚举中的下一组元素。
 
 ## <a name="syntax"></a>语法
 
@@ -45,17 +45,17 @@ int Next(
 
 ## <a name="parameters"></a>参数
 `celt`\
-[在]要检索的元素数。 还指定`rgelt`数组的最大大小。
+中要检索的元素的数目。 还指定数组的最大大小 `rgelt` 。
 
 `rgelt`\
-[进出]要填充的[IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)元素的数组。
+[in，out]要填充的 [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) 元素的数组。
 
 `pceltFetched`\
-[出]返回 中`rgelt`实际返回的元素数。
+弄返回中实际返回的元素数 `rgelt` 。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回 `S_OK`。 如果`S_FALSE`返回的元素数少于请求的元素数，则返回;否则，返回错误代码。
+ 如果成功，则返回 `S_OK`。 `S_FALSE`如果返回的元素数少于所请求的数目，则返回; 否则返回错误代码。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IEnumDebugObjects](../../../extensibility/debugger/reference/ienumdebugobjects.md)
 - [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)

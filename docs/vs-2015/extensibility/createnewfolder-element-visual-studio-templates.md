@@ -1,5 +1,5 @@
 ---
-title: CreateNewFolder 元素 （Visual Studio 模板） |Microsoft Docs
+title: " (Visual Studio 模板) 的 CreateNewFolder 元素 |Microsoft Docs"
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -13,10 +13,10 @@ caps.latest.revision: 15
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 7401ed7ed097c6e20bf4cd0bbf30820bcb33b514
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68184260"
 ---
 # <a name="createnewfolder-element-visual-studio-templates"></a>CreateNewFolder 元素（Visual Studio 模板）
@@ -24,8 +24,8 @@ ms.locfileid: "68184260"
 
 确定是否检查要创建项目的目标目录不存在。 如果该目录存在，则为项目创建新目录。 该设置通常由所有通用项目类型用来确定是否在新目录中创建新项目的 `NewProjectRequiresNewFolder(VsTemplate)` 注册表标志 (`HKEY_LOCAL_MACHINE/SOFTWARE(/Wow6432Node)/Microsoft/VisualStudio/<version number>/Projects/<project GUID>`) 重写。  
   
- \<VSTemplate >  
- \<TemplateData >  
+ \<VSTemplate>  
+ \<TemplateData>  
  \<CreateNewFolder>  
   
 ## <a name="syntax"></a>语法  
@@ -92,6 +92,6 @@ ms.locfileid: "68184260"
 </VSTemplate>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)   
  [创建项目和项模板](../ide/creating-project-and-item-templates.md)

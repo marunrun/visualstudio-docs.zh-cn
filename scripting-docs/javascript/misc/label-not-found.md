@@ -15,10 +15,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: 3af2451efdea5ac3f71ae17fc5919e9f443e86db
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85815755"
 ---
 # <a name="label-not-found"></a>未找到标签
@@ -28,9 +28,9 @@ ms.locfileid: "85815755"
   
 - 请检查以确保你未拼写标签名称。  
   
-- 确保对当前作用域中定义的标签进行所有标签引用（这包括前向定义）。  
+- 确保对当前作用域中定义的标签进行所有标签引用 (这包括转发定义) 。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [标记语句](../../javascript/reference/labeled-statement-javascript.md)   
  [switch 语句](../../javascript/reference/switch-statement-javascript.md)   
  [break 语句](../../javascript/reference/break-statement-javascript.md)   

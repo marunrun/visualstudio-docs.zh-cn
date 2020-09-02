@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: c56a9ab8b46f8f7ee36875dda507cb9f288136cf
-ms.sourcegitcommit: 186c0c250d85ac74274fa1e438b4c7c7108d8a36
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86875600"
 ---
 # <a name="dowhile-activity-designer"></a>DoWhile 活动设计器
@@ -27,7 +27,7 @@ ms.locfileid: "86875600"
 
 |属性名称|必选|使用情况|
 |-|--------------|-|
-|<xref:System.Activities.Statements.DoWhile.Body%2A>|错误|当条件为**true**时要执行的活动。 若要添加 <xref:System.Activities.Statements.DoWhile.Body%2A> 活动，请将活动从 "工具箱" 拖放到 " **DoWhile** " 活动设计器上的 "**正文**" 框中，其中包含提示文本 "将活动放在此处"。|
+|<xref:System.Activities.Statements.DoWhile.Body%2A>|错误|当条件为 **true**时要执行的活动。 若要添加 <xref:System.Activities.Statements.DoWhile.Body%2A> 活动，请将活动从 "工具箱" 拖放到 " **DoWhile** " 活动设计器上的 "**正文**" 框中，其中包含提示文本 "将活动放在此处"。|
 |<xref:System.Activities.Statements.DoWhile.Condition%2A>|正确|每次循环迭代后要计算的条件。 若要设置 <xref:System.Activities.Statements.DoWhile.Condition%2A> ，请在 " **DoWhile** " 活动设计器或属性网格中的 "**条件**" 框中键入 Visual Basic 表达式。|
 
 ## <a name="see-also"></a>另请参阅

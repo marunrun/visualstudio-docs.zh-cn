@@ -8,10 +8,10 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: 0370688b53e87cf6ea1f5079d2e5c706777dd0c7
-ms.sourcegitcommit: de98ed7edc81383e47b87ae6e61143fbbbe7bc56
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88706563"
 ---
 # <a name="rule-scope-options-for-net-code-quality-analyzers"></a>.NET 代码质量分析器的规则作用域选项
@@ -24,7 +24,7 @@ ms.locfileid: "88706563"
 > 选项名称： `sufficient_IterationCount_for_weak_KDF_algorithm`\
 > 选项值：整数值 \
 > 默认值：默认情况下，每个可配置规则 ( "100000"，默认情况下，大多数规则) \
-> 示例： `dotnet_code_quality.CA5387.sufficient_IterationCount_for_weak_KDF_algorithm = 100000`
+> 示例：`dotnet_code_quality.CA5387.sufficient_IterationCount_for_weak_KDF_algorithm = 100000`
 
 ## <a name="api_surface"></a>api_surface
 
@@ -62,7 +62,7 @@ ms.locfileid: "88706563"
 | - | - | - | - |
 | 为应分析的 Api 指定必需的修饰符 | 以下允许的修饰符表中的一个或多个值<br/><br/>使用逗号 ( 分隔多个值，)  | 取决于每个规则 | [CA1802](ca1802.md) |
 
-| 允许的修饰符 | 摘要 |
+| 允许的修饰符 | 总结 |
 | --- | --- |
 | `none` | 无修饰符要求 |
 | `static` 或 `Shared` | 必须在 Visual Basic 中声明为 "static" ( "Shared")  |

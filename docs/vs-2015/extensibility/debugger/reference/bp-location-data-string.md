@@ -1,5 +1,5 @@
 ---
-title: BP_LOCATION_DATA_STRING | Microsoft Docs
+title: BP_LOCATION_DATA_STRING |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 82caf285d73ab1b9b49b9546012bbb45f25c3320
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68153439"
 ---
-# <a name="bplocationdatastring"></a>BP_LOCATION_DATA_STRING
+# <a name="bp_location_data_string"></a>BP_LOCATION_DATA_STRING
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-用于设置数据断点的基于用户可以从集成的开发环境 (IDE) 中输入的字符串。  
+用于设置数据断点，这些断点基于用户可在集成开发环境中输入的字符串 (IDE) 。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,28 +37,28 @@ typedef struct _BP_LOCATION_DATA_STRING { 
   
 ## <a name="members"></a>成员  
  `pThread`  
- [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)对象，表示该断点发生时所在的线程。  
+ [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)对象，它表示发生断点的线程。  
   
  `bstrContext`  
- 在代码内的断点，通常显示调用堆栈上的方法或函数名称的上下文。  
+ 代码内断点的上下文，通常是在调用堆栈上显示的方法或函数名称。  
   
  `bstrDataExpr`  
- 用户输入的数据字符串以设置断点。  
+ 用户输入的用于设置断点的数据字符串。  
   
  `dwNumElements`  
- 断点发生的数据字符串中的元素数。  
+ 发生断点的数据字符串中的元素数。  
   
 ## <a name="remarks"></a>备注  
- 此结构是的成员[BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md)结构作为联合的一部分。  
+ 此结构是作为联合的一部分的 [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) 结构的成员。  
   
 ## <a name="requirements"></a>要求  
- 标头： msdbg.h  
+ 标头： msdbg  
   
- 命名空间:Microsoft.VisualStudio.Debugger.Interop  
+ 命名空间： VisualStudio  
   
- 程序集：Microsoft.VisualStudio.Debugger.Interop.dll  
+ 程序集： Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [结构和联合](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md)   
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)
