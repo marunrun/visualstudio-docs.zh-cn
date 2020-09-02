@@ -20,10 +20,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: da32f0bfce9edf652e19df6b68bc51ed92624d80
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65699023"
 ---
 # <a name="getwinfxpath-task"></a>GetWinFXPath 任务
@@ -33,14 +33,14 @@ ms.locfileid: "65699023"
   
 ## <a name="task-parameters"></a>任务参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |`WinFXPath`|可选的 **String** 输出参数。<br /><br /> 指定 [!INCLUDE[TLA2#tla_winfx](../includes/tla2sharptla-winfx-md.md)] 运行时的实际路径。|  
 |`WinFXNativePath`|必需的 **String** 参数。<br /><br /> 指定本机 [!INCLUDE[TLA2#tla_titlewinfx](../includes/tla2sharptla-titlewinfx-md.md)] 运行时的路径。|  
 |`WinFXWowPath`|必需的 **String** 参数。<br /><br /> 指定 64 位系统上 32 位 **Windows on Windows** 模块中的 [!INCLUDE[TLA#tla_winfx](../includes/tlasharptla-winfx-md.md)] 程序集的路径。|  
   
 ## <a name="remarks"></a>备注  
- 如果在 64 位处理器上执行 <xref:Microsoft.Build.Tasks.Windows.GetWinFXPath> 任务，则 WinFXPath 参数会设置为 WinFXWowPath 参数中存储的路径；否则，WinFXPath 参数会设置为 WinFXNativePath 参数中存储的路径。  
+ 如果在 64 位处理器上执行 <xref:Microsoft.Build.Tasks.Windows.GetWinFXPath> 任务，则 WinFXPath  参数会设置为 WinFXWowPath  参数中存储的路径；否则，WinFXPath  参数会设置为 WinFXNativePath  参数中存储的路径。  
   
 ## <a name="example"></a>示例  
  如下示例演示了如何使用 **GetWinFXPath** 任务来检测 [!INCLUDE[TLA2#tla_titlewinfx](../includes/tla2sharptla-titlewinfx-md.md)] 运行时的本机路径。  
@@ -59,9 +59,9 @@ ms.locfileid: "65699023"
 </Project>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [WPF MSBuild 引用](../msbuild/wpf-msbuild-reference.md)   
- [任务参考](../msbuild/wpf-msbuild-task-reference.md)   
- [MSBuild 参考](../msbuild/msbuild-reference.md)   
- [任务参考](../msbuild/msbuild-task-reference.md)   
+## <a name="see-also"></a>另请参阅  
+ [WPF MSBuild 参考](../msbuild/wpf-msbuild-reference.md)   
+ [任务引用](../msbuild/wpf-msbuild-task-reference.md)   
+ [MSBuild 引用](../msbuild/msbuild-reference.md)   
+ [任务引用](../msbuild/msbuild-task-reference.md)   
  [Building a WPF Application (WPF)](https://msdn.microsoft.com/library/a58696fd-bdad-4b55-9759-136dfdf8b91c)（生成 WPF 应用程序 (WPF)）

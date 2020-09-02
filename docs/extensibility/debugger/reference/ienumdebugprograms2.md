@@ -1,5 +1,5 @@
 ---
-title: IEnum调试程序2 |微软文档
+title: IEnumDebugPrograms2 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,14 +13,14 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 1717397d9ff073642c7b6bc25ad85babe76d684c
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80715573"
 ---
 # <a name="ienumdebugprograms2"></a>IEnumDebugPrograms2
-此接口枚举在当前调试会话中运行的程序。
+此接口枚举当前调试会话中正在运行的程序。
 
 ## <a name="syntax"></a>语法
 
@@ -28,42 +28,42 @@ ms.locfileid: "80715573"
 IEnumDebugPrograms2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>实施者说明
- 调试引擎 （DE） 实现此接口，以提供 DE 正在调试的程序的列表。
+## <a name="notes-for-implementers"></a>实施者注意事项
+ 调试引擎 (DE) 实现此接口，以提供由 DE 调试的程序列表。
 
-## <a name="notes-for-callers"></a>呼叫者备注
- Visual Studio 调用[枚举程序](../../../extensibility/debugger/reference/idebugprocess2-enumprograms.md)以获取此接口。 [视觉工作室不使用枚举程序](../../../extensibility/debugger/reference/idebugengine2-enumprograms.md)。
+## <a name="notes-for-callers"></a>调用方说明
+ Visual Studio 将调用 [EnumPrograms](../../../extensibility/debugger/reference/idebugprocess2-enumprograms.md) 来获取此接口。 Visual Studio 不使用[EnumPrograms](../../../extensibility/debugger/reference/idebugengine2-enumprograms.md) 。
 
 ## <a name="methods-in-vtable-order"></a>Vtable 顺序中的方法
- 下表显示了 的方法`IEnumDebugPrograms2`。
+ 下表显示的方法 `IEnumDebugPrograms2` 。
 
-|方法|描述|
+|方法|说明|
 |------------|-----------------|
-|[下一步](../../../extensibility/debugger/reference/ienumdebugprograms2-next.md)|在枚举序列中检索指定数量的程序。|
-|[跳](../../../extensibility/debugger/reference/ienumdebugprograms2-skip.md)|在枚举序列中跳过指定数量的程序。|
-|[重置](../../../extensibility/debugger/reference/ienumdebugprograms2-reset.md)|将枚举序列重置为开头。|
-|[克隆](../../../extensibility/debugger/reference/ienumdebugprograms2-clone.md)|创建与当前枚举器相同的枚举状态的枚举器。|
+|[下一页](../../../extensibility/debugger/reference/ienumdebugprograms2-next.md)|检索枚举序列中指定数量的程序。|
+|[Skip](../../../extensibility/debugger/reference/ienumdebugprograms2-skip.md)|跳过枚举序列中指定数量的程序。|
+|[重置](../../../extensibility/debugger/reference/ienumdebugprograms2-reset.md)|将枚举序列重置到开始处。|
+|[克隆](../../../extensibility/debugger/reference/ienumdebugprograms2-clone.md)|创建与当前枚举数包含相同枚举状态的枚举数。|
 |[GetCount](../../../extensibility/debugger/reference/ienumdebugprograms2-getcount.md)|获取枚举器中的程序数。|
 
 ## <a name="remarks"></a>备注
- Visual Studio 使用此界面：
+ Visual Studio 使用此接口来执行以下操作：
 
-- 填充**模块**窗口（通过调用[EnumProgram，](../../../extensibility/debugger/reference/idebugprocess2-enumprograms.md)然后在每个程序上调用[EnumModule）。](../../../extensibility/debugger/reference/idebugprogram2-enummodules.md)
+- 通过调用[EnumPrograms](../../../extensibility/debugger/reference/idebugprocess2-enumprograms.md)并在每个程序) 上调用[EnumModules](../../../extensibility/debugger/reference/idebugprogram2-enummodules.md)来填充 "**模块**" 窗口 (。
 
-- 填充**附加到进程**列表（通过调用`IDebugProcess2::EnumPrograms`，然后调用每个[IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) [接口上的查询接口](/cpp/atl/queryinterface)以获取[IDebugEngineProgram2](../../../extensibility/debugger/reference/idebugengineprogram2.md)接口）。
+- 通过调用**Attach to Process** `IDebugProcess2::EnumPrograms` 并在每个[IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)接口上调用[QueryInterface](/cpp/atl/queryinterface)来填充 "附加到进程" 列表 (，以获取[IDebugEngineProgram2](../../../extensibility/debugger/reference/idebugengineprogram2.md)接口) 。
 
-- 生成可以调试过程中每个程序的 D 的 D 列表（使用[GetEngineInfo）。](../../../extensibility/debugger/reference/idebugprogram2-getengineinfo.md)
+- 生成一个 DEs 列表，以使用 [GetEngineInfo](../../../extensibility/debugger/reference/idebugprogram2-getengineinfo.md)) 在进程 (调试每个程序。
 
-- 对每个程序应用编辑和继续 （ENC） 更新（通过调用 IDebugProcess2：：：枚举程序，然后调用[GetENCUpdate](../../../extensibility/debugger/reference/idebugprogram2-getencupdate.md)）。
+- 通过调用 IDebugProcess2：： EnumPrograms 并调用 [GetENCUpdate](../../../extensibility/debugger/reference/idebugprogram2-getencupdate.md)) ，将 "编辑并继续" (ENC 应用于每个程序 (的更新) 更新。
 
 ## <a name="requirements"></a>要求
- 标题： msdbg.h
+ 标头： msdbg
 
- 命名空间：微软.VisualStudio.调试器.互通
+ 命名空间： VisualStudio
 
- 程序集：微软.VisualStudio.调试器.Interop.dll
+ 程序集： Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [核心接口](../../../extensibility/debugger/reference/core-interfaces.md)
 - [EnumPrograms](../../../extensibility/debugger/reference/idebugengine2-enumprograms.md)
 - [EnumPrograms](../../../extensibility/debugger/reference/idebugprocess2-enumprograms.md)

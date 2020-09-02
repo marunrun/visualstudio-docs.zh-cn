@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 621051c827b08e66d68bc348401c2a939e279bcf
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85538081"
 ---
 # <a name="how-to-programmatically-add-pictures-and-word-art-to-documents"></a>如何：以编程方式向文档中添加图片和艺术字
@@ -35,11 +35,11 @@ ms.locfileid: "85538081"
 
 1. 将光标置于文档中要插入图片的位置。
 
-2. 单击功能区的 "**插入**" 选项卡。
+2. 单击功能区的 " **插入** " 选项卡。
 
-3. 在 "**插图**" 组中，单击 "**图片**"。
+3. 在 " **插图** " 组中，单击 " **图片**"。
 
-4. 在 "**插入图片**" 对话框中，导航到要插入的图片，然后单击 "**插入**"。
+4. 在 " **插入图片** " 对话框中，导航到要插入的图片，然后单击 " **插入**"。
 
      图片将被添加到文档中光标当前所在的位置。
 
@@ -60,11 +60,11 @@ ms.locfileid: "85538081"
 
 1. 将光标置于文档中要插入艺术字的位置。
 
-2. 单击功能区的 "**插入**" 选项卡。
+2. 单击功能区的 " **插入** " 选项卡。
 
-3. 在 "**文本**" 组中，单击 "**艺术字**"，然后选择 "艺术字" 样式。
+3. 在 " **文本** " 组中，单击 " **艺术字**"，然后选择 "艺术字" 样式。
 
-4. 将想要在文档中显示的文本添加到 "**编辑艺术字文本**" 对话框中，然后单击 **"确定"**。
+4. 将想要在文档中显示的文本添加到 " **编辑艺术字文本** " 对话框中，然后单击 **"确定"**。
 
      这样文本就会添加到文档中，并应用选定的艺术字样式。
 
@@ -97,7 +97,7 @@ ms.locfileid: "85538081"
 
 ## <a name="compile-the-code"></a>编译代码
 
-- 驱动器 C 上必须存在一个名为*SamplePicture.jpg*的照片。
+- 驱动器 C 上必须存在一个名为 *SamplePicture.jpg* 的照片。
 
 ## <a name="see-also"></a>另请参阅
 - [如何：以编程方式打开现有文档](../vsto/how-to-programmatically-open-existing-documents.md)

@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: cbb68855832e84150b81c8a8a6fde47bf9433edc
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85547701"
 ---
 # <a name="ca2135-level-2-assemblies-should-not-contain-linkdemands"></a>CA2135:级别 2 程序集不应包含 LinkDemand
@@ -32,7 +32,7 @@ ms.locfileid: "85547701"
  类或类成员正在 <xref:System.Security.Permissions.SecurityAction> 使用级别2安全的应用程序中使用。
 
 ## <a name="rule-description"></a>规则描述
- 在级别为 2 的安全规则集中已弃用 LinkDemand。 使用特性标记方法、类型和字段，而不是使用 Linkdemand 在实时（JIT）编译时强制安全性 <xref:System.Security.SecurityCriticalAttribute> 。
+ 在级别为 2 的安全规则集中已弃用 LinkDemand。 使用属性标记方法、类型和字段，而不是使用 Linkdemand 在实时 (JIT) 编译时强制执行安全性 <xref:System.Security.SecurityCriticalAttribute> 。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
  若要修复与此规则的冲突，请删除 <xref:System.Security.Permissions.SecurityAction> 并使用特性标记类型或成员 <xref:System.Security.SecurityCriticalAttribute> 。

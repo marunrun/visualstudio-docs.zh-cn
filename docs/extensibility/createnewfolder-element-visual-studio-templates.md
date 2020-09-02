@@ -1,5 +1,5 @@
 ---
-title: 创建新文件夹元素（可视化工作室模板） |微软文档
+title: " (Visual Studio 模板) 的 CreateNewFolder 元素 |Microsoft Docs"
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,16 +14,17 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 860f4df3e69a568a3e391da4d7437d9a5fd83f15
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80739670"
 ---
-# <a name="createnewfolder-element-visual-studio-templates"></a>创建新文件夹元素（可视化工作室模板）
+# <a name="createnewfolder-element-visual-studio-templates"></a> (Visual Studio 模板的 CreateNewFolder 元素) 
 确定是否检查要创建项目的目标目录不存在。 如果该目录存在，则为项目创建新目录。 该设置通常由所有通用项目类型用来确定是否在新目录中创建新项目的 `NewProjectRequiresNewFolder(VsTemplate)` 注册表标志 (`HKEY_LOCAL_MACHINE/SOFTWARE(/Wow6432Node)/Microsoft/VisualStudio/<version number>/Projects/<project GUID>`) 重写。
 
- \<模板>\<模板数据>\<创建新文件夹>
+ \<VSTemplate> \<TemplateData>
+ \<CreateNewFolder>
 
 ## <a name="syntax"></a>语法
 
@@ -49,7 +50,7 @@ ms.locfileid: "80739670"
 
 |元素|描述|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|必需元素。<br /><br /> 将此模板分类并定义此模板在 **“新建项目”** 或 **“添加新项”** 对话框中的显示方式。|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|必需的元素。<br /><br /> 将此模板分类并定义此模板在 **“新建项目”** 或 **“添加新项”** 对话框中的显示方式。|
 
 ## <a name="text-value"></a>文本值
  需要一个文本值。
@@ -57,7 +58,7 @@ ms.locfileid: "80739670"
  此文本必须是 `true` 或 `false`，以指示从此模板创建项目时是否应创建一个新的容器文件夹。
 
 ## <a name="remarks"></a>备注
- `CreateNewFolder` 是可选元素。 默认值为 `true`。
+ `CreateNewFolder` 是可选元素。 默认值是 `true`。
 
  `CreateNewFolder` 元素中指定的值仅由 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 使用（如果基础项目系统支持它）。
 
@@ -90,5 +91,5 @@ ms.locfileid: "80739670"
 ```
 
 ## <a name="see-also"></a>请参阅
-- [可视化工作室模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
+- [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
 - [创建项目和项模板](../ide/creating-project-and-item-templates.md)

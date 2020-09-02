@@ -16,24 +16,24 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 757d66ef719b3a1f39a9164dfd50ce1fcf8799db
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85547792"
 ---
 # <a name="ca1800-do-not-cast-unnecessarily"></a>CA1800:避免进行不必要的强制转换
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|Item|值|
+|项|值|
 |-|-|
 |TypeName|DoNotCastUnnecessarily|
 |CheckId|CA1800|
-|Category|Microsoft. 性能|
+|类别|Microsoft. 性能|
 |是否重大更改|不间断|
 
 ## <a name="cause"></a>原因
- 方法对其一个参数或局部变量执行重复强制转换。 对于此规则的完整分析，必须使用调试信息生成经过测试的程序集，并且关联的程序数据库（.pdb）文件必须可用。
+ 方法对其一个参数或局部变量执行重复强制转换。 对于此规则的完整分析，必须使用调试信息生成经过测试的程序集， () 文件必须可用。
 
 ## <a name="rule-description"></a>规则描述
  重复强制转换会降低性能，特别是在精简的迭代语句中执行强制转换时。 对于显式重复强制转换操作，将强制转换的结果存储在局部变量中，并使用局部变量而不是重复的强制转换运算。
