@@ -14,10 +14,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 38de89b9774ac20f67b91e4ba864534122f4cdb0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62580832"
 ---
 # <a name="basictype"></a>BasicType
@@ -52,66 +52,66 @@ enum BasicType { 
   
 ## <a name="elements"></a>元素  
  btNoType  
- 不指定任何基本类型。  
+ 未指定基本类型。  
   
  btVoid  
- 基本类型是`void`。  
+ 基本类型是 `void` 。  
   
  btChar  
- 基本类型是`char`(C /C++类型)。  
+ 基本类型为 `char`)  (c/c + + 类型。  
   
  btWChar  
- 基本类型是宽 (Unicode) 字符 (`WCHAR`)。  
+ 基本类型是 (Unicode) 字符 (`WCHAR`) 。  
   
  btInt  
- 基本类型是`signed int`(C /C++类型)。  
+ 基本类型为 `signed int`)  (c/c + + 类型。  
   
  btUInt  
- 基本类型是`unsigned int`(C /C++类型)。  
+ 基本类型为 `unsigned int`)  (c/c + + 类型。  
   
  btFloat  
- 基本类型是一个浮点数 (`FLOAT`)。  
+ 基本类型是 () 的浮点数 `FLOAT` 。  
   
  btBCD  
- 基本类型是二进制编码的十进制数字 (`BCD`)。  
+ 基本类型是二进制编码的十进制 (`BCD`) 。  
   
  btBool  
- 基本类型是一个布尔值 (`BOOL`)。  
+ 基本类型是布尔 (`BOOL`) 。  
   
  btLong  
- 基本类型是`long int`(C /C++类型)。  
+ 基本类型为 `long int`)  (c/c + + 类型。  
   
  btULong  
- 基本类型是`unsigned long int`(C /C++类型)。  
+ 基本类型为 `unsigned long int`)  (c/c + + 类型。  
   
  btCurrency  
- 基本类型是货币。  
+ 基本类型为 currency。  
   
  btDate  
- 基本类型是日期/时间 (`DATE`)。  
+ 基本类型是日期/时间 (`DATE`) 。  
   
  btVariant  
- 基本类型是变量类型结构 (`VARIANT`)。  
+ 基本类型是 () 的变量类型结构 `VARIANT` 。  
   
  btComplex  
- 基本类型是一个复杂的数字。  
+ 基本类型为复数。  
   
  btBit  
- 一些基本类型。  
+ 基本类型是一位。  
   
  btBSTR  
- 基本类型是一个基本或二进制字符串 (`BSTR`)。  
+ 基本类型是基本或二进制字符串 (`BSTR`) 。  
   
  btHresult  
- 基本类型是`HRESULT`。  
+ 基本类型是 `HRESULT` 。  
   
 ## <a name="remarks"></a>备注  
- 返回此枚举中的值[idiasymbol:: Get_basetype](../../debugger/debug-interface-access/idiasymbol-get-basetype.md)方法。  
+ 此枚举中的值由 [IDiaSymbol：： get_baseType](../../debugger/debug-interface-access/idiasymbol-get-basetype.md) 方法返回。  
   
 ## <a name="requirements"></a>要求  
- 标头： cvconst.h  
+ 标头： cvconst  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [枚举和结构](../../debugger/debug-interface-access/enumerations-and-structures.md)   
- [IDiaSymbol::get_baseType](../../debugger/debug-interface-access/idiasymbol-get-basetype.md)   
+ [IDiaSymbol：： get_baseType](../../debugger/debug-interface-access/idiasymbol-get-basetype.md)   
  [IDiaSymbol::get_length](../../debugger/debug-interface-access/idiasymbol-get-length.md)

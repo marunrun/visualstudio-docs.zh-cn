@@ -1,5 +1,5 @@
 ---
-title: 预先选择 C# 中的完成列表项 |Microsoft Docs
+title: 'C # 中预选择的完成列表项 |Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: devlang-csharp
@@ -13,11 +13,11 @@ author: BillWagner
 ms.author: wiwagn
 manager: jillfra
 ms.openlocfilehash: 9ba9e17ba659d1148be9f3e05c3a7372d0496d09
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62810588"
 ---
 # <a name="pre-selected-completion-list-items-in-c"></a>C# 中预选择的完成列表项 #
-此内容已移动到[C# 中完成列表](../misc/completion-lists-in-csharp.md)
+此内容已移动到 [c # 中的完成列表](../misc/completion-lists-in-csharp.md)

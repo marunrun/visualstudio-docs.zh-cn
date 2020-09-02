@@ -1,5 +1,5 @@
 ---
-title: '&lt;计划&gt;元素 （引导程序） |Microsoft Docs'
+title: '&lt;&gt; (引导程序) 计划元素 |Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -16,14 +16,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a2f6e4ae90dbd36dab4f4df7f72d5ecf57ee04b1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62927327"
 ---
-# <a name="ltschedulesgt-element-bootstrapper"></a>&lt;计划&gt;元素 （引导程序）
-`Schedules`元素包含`Schedule`元素，用于定义在定义的命令的特定时间`Command`元素应运行。
+# <a name="ltschedulesgt-element-bootstrapper"></a>&lt;计划 &gt; 元素 (引导程序) 
+`Schedules`元素包含 `Schedule` 元素，这些元素定义应在哪些特定时间运行元素定义的命令 `Command` 。
 
 ## <a name="syntax"></a>语法
 
@@ -40,28 +40,28 @@ ms.locfileid: "62927327"
 ```
 
 ## <a name="elements-and-attributes"></a>元素和属性
- `Schedules`元素是子元素的`Product`元素。 每个`Product`元素可能具有最多一个`Schedules`元素。 `Schedules` 元素没有属性。
+ `Schedules`元素是元素的子元素 `Product` 。 每个 `Product` 元素最多只能有一个 `Schedules` 元素。 `Schedules` 元素没有属性。
 
 ## <a name="schedule"></a>计划
- `Schedule`元素是子元素的`Schedules`元素。 一个`Schedules`元素必须至少一个`Schedule`元素。
+ `Schedule`元素是元素的子元素 `Schedules` 。 `Schedules`元素必须至少有一个 `Schedule` 元素。
 
  `Schedule` 具有以下属性。
 
-|特性|描述|
+|特性|说明|
 |---------------|-----------------|
-|`Name`|必需。 计划项的名称。 这对应于`ScheduleName`属性的`Command`元素。 当`Command`引用指定的计划，在所指示的时间，将仅执行`Schedule`元素。 此外可能与之关联的计划`FailIf`和`BypassIf`元素，将这些条件测试限制为按指定计划执行。 有关详细信息，请参阅[\<命令 > 元素](../deployment/commands-element-bootstrapper.md)。|
+|`Name`|必需。 计划项的名称。 这与元素的 `ScheduleName` 属性相对应 `Command` 。 当 `Command` 引用命名计划时，它将仅在该元素指示的时间执行 `Schedule` 。 计划还可能与 `FailIf` 和 `BypassIf` 元素关联，这些元素限制这些条件测试按指定的计划执行。 有关详细信息，请参阅 [\<Commands> 元素](../deployment/commands-element-bootstrapper.md)。|
 
- 给定`Schedule`元素可能具有一个以下子节点。
+ 某个给定 `Schedule` 元素可能正好具有以下子级之一。
 
 ## <a name="buildlist"></a>BuildList
- `BuildList`元素指示安装程序以引导应用程序启动后立即执行命令。
+ `BuildList`元素指示安装程序在启动引导应用程序之后立即执行命令。
 
 ## <a name="beforepackage"></a>BeforePackage
- `BeforePackage`元素指示安装程序来安装指定的包之前执行命令。
+ `BeforePackage`元素指示安装程序在安装指定的包之前执行命令。
 
 ## <a name="afterpackage"></a>AfterPackage
- `AfterPackage`元素指示要执行的命令之后安装指定的包, 的安装程序。
+ `AfterPackage`元素指示安装程序在安装指定的包后执行命令。
 
-## <a name="see-also"></a>请参阅
-- [\<产品 > 元素](../deployment/product-element-bootstrapper.md)
+## <a name="see-also"></a>另请参阅
+- [\<Product> element](../deployment/product-element-bootstrapper.md)
 - [产品和包架构引用](../deployment/product-and-package-schema-reference.md)

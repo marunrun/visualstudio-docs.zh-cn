@@ -20,10 +20,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: adbddc2fb36e5036e535dfc1049945187fe14ed0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62558484"
 ---
 # <a name="warning-task"></a>Warning 任务
@@ -34,7 +34,7 @@ ms.locfileid: "62558484"
 ## <a name="parameters"></a>参数  
  下表描述了 `Warning` 任务的参数。  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |`Code`|可选 `String` 参数。<br /><br /> 与警告相关联的警告代码。|  
 |`File`|可选 `String` 参数。<br /><br /> 指定相关文件（如果有）。 如果未提供任何文件，则使用包含 Warning 任务的文件。|  
@@ -44,9 +44,9 @@ ms.locfileid: "62558484"
 ## <a name="remarks"></a>备注  
  `Warning` 任务使 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 项目可以在继续下一个生成步骤之前，先检查必需的配置或属性是否存在。  
   
- 当 `Warning` 任务的 `Condition` 参数的计算结果为 `true` 时，将记录 `Text` 参数的值，并继续执行生成操作。 如果 `Condition` 参数不存在，则记录警告文本。 有关日志记录的详细信息，请参阅[获取生成日志](../msbuild/obtaining-build-logs-with-msbuild.md)。  
+ 当 `Warning` 任务的 `Condition` 参数的计算结果为 `true` 时，将记录 `Text` 参数的值，并继续执行生成操作。 如果 `Condition` 参数不存在，则记录警告文本。 有关日志记录的详细信息，请参阅 [获取生成日志](../msbuild/obtaining-build-logs-with-msbuild.md)。  
   
- 除上面列出的参数外，此任务还从 <xref:Microsoft.Build.Tasks.TaskExtension> 类继承参数，后者自身继承自 <xref:Microsoft.Build.Utilities.Task> 类。 有关这些其他参数的列表及其说明的信息，请参阅 [TaskExtension Base Class](../msbuild/taskextension-base-class.md)。  
+ 除上面列出的参数外，此任务还从 <xref:Microsoft.Build.Tasks.TaskExtension> 类继承参数，后者自身继承自 <xref:Microsoft.Build.Utilities.Task> 类。 有关这些其他参数及其说明的列表，请参阅 [TaskExtension 基类](../msbuild/taskextension-base-class.md)。  
   
 ## <a name="example"></a>示例  
  以下代码示例检查在命令行上设置的属性。 如果未设置任何属性，则项目将引发警告事件，并记录 `Warning` 任务的 `Text` 参数的值。  
@@ -65,6 +65,6 @@ ms.locfileid: "62558484"
 </Project>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [获取生成日志](../msbuild/obtaining-build-logs-with-msbuild.md)   
  [项目文件架构参考](../msbuild/msbuild-project-file-schema-reference.md)

@@ -12,10 +12,10 @@ ms.topic: conceptual
 ms.date: 03/21/2017
 ms.author: ghogen
 ms.openlocfilehash: a75e83e3fb2ac43b4fa1d658c7e2a08ec1ae3c1a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62831272"
 ---
 # <a name="using-the-visual-studio-publish-azure-application-wizard"></a>使用 Visual Studio“发布 Azure 应用程序”向导 | Microsoft Docs
@@ -33,21 +33,21 @@ ms.locfileid: "62831272"
 
 1. 在 Visual Studio 中创建或打开 Azure 云服务项目。
 
-1. 在“解决方案资源管理器”中右键单击项目，并从上下文菜单中选择“发布”。
+1. 在“解决方案资源管理器”中右键单击项目，并从上下文菜单中选择“发布”********。
 
 **如果使用的是未为 Azure 启用的 Web 应用程序项目：**
 
 1. 在 Visual Studio 中创建或打开 Azure 云服务项目。
 
-1. 在“解决方案资源管理器”中右键单击项目，并从上下文菜单中选择“转换” > “转换为 Azure 云服务项目”。
+1. 在“解决方案资源管理器”**** 中右键单击项目，并从上下文菜单中选择“转换”**** > “转换为 Azure 云服务项目”****。
 
-1. 在“解决方案资源管理器”中右键单击新创建的 Azure 项目，并从上下文菜单中选择“发布”。
+1. 在“解决方案资源管理器”中右键单击新创建的 Azure 项目，并从上下文菜单中选择“发布”********。
 
 ## <a name="sign-in-page"></a>登录页
 
 ![登录页](./media/vs-azure-tools-publish-azure-application-wizard/sign-in.png)
 
-**帐户** - 选择一个帐户，或者在帐户下拉列表中选择“添加帐户”。
+**帐户** - 选择一个帐户，或者在帐户下拉列表中选择“添加帐户”****。
 
 **选择订阅** - 选择要用于部署的订阅。
 
@@ -55,17 +55,17 @@ ms.locfileid: "62831272"
 
 ![通用设置](./media/vs-azure-tools-publish-azure-application-wizard/settings-common-settings.png)
 
-**云服务** - 使用下拉列表选择现有的云服务，或者选择“&lt;新建>”创建一个云服务。 每个云服务的数据中心均显示在括号中。 建议云服务的数据中心位置与存储帐户的数据中心位置相同（高级设置）。
+**云服务** - 使用下拉列表选择现有的云服务，或者选择“&lt;新建>”**** 创建一个云服务。 每个云服务的数据中心均显示在括号中。 建议云服务的数据中心位置与存储帐户的数据中心位置相同（高级设置）。
 
-**环境** - 选择“生产”或“过渡”。 如果要在测试环境中部署应用程序，请选择过渡环境。
+**环境** - 选择“生产”**** 或“过渡”****。 如果要在测试环境中部署应用程序，请选择过渡环境。
 
-**生成配置** - 选择“调试”或“发布”。
+**生成配置** - 选择“调试”或“发布”。********
 
-**服务配置** - 选择“云”或“本地”。
+**服务配置** - 选择“云”或“本地”。********
 
 **为所有角色启用远程桌面** - 如果希望能够远程连接到服务，请选中此选项。 此选项主要用于故障排除。 有关详细信息，请参阅[使用 Visual Studio 为 Azure 云服务中的角色启用远程桌面连接](/azure/cloud-services/cloud-services-role-enable-remote-desktop-visual-studio)。
 
-**为所有 Web 角色启用 Web 部署** - 选中此选项为服务启用 Web 部署。 还必须选择“为所有角色启用远程桌面”选项才能使用此功能。 有关详细信息，请参阅[使用 Visual Studio 发布云服务](vs-azure-tools-publishing-a-cloud-service.md)。
+**为所有 Web 角色启用 Web 部署** - 选中此选项为服务启用 Web 部署。 还必须选择“为所有角色启用远程桌面”**** 选项才能使用此功能。 有关详细信息，请参阅[使用 Visual Studio 发布云服务](vs-azure-tools-publishing-a-cloud-service.md)。
 
 ## <a name="settings-page---advanced-settings-tab"></a>“设置”页 -“高级设置”选项卡
 
@@ -81,7 +81,7 @@ Azure 存储帐户将存储应用程序部署的包。 部署应用程序之后�
 
 **部署更新** - 如果希望仅部署更新的组件，请选择此选项。 这种部署类型比完整部署更快速。 如果要保留云服务的不变虚拟 IP 地址，则应选中此项。
 
-**部署更新 - 设置** - 此对话框用于进一步指定要更新角色的方式。 如果选择“增量更新”，则会一个接一个地更新应用程序的每个实例，以使应用程序始终可用。 如果选择“同时更新”，则会同时更新应用程序的所有实例。 同时更新速度更快，但在更新过程中服务可能不可用。
+**部署更新 - 设置** - 此对话框用于进一步指定要更新角色的方式。 如果选择“增量更新”****，则会一个接一个地更新应用程序的每个实例，以使应用程序始终可用。 如果选择“同时更新”****，则会同时更新应用程序的所有实例。 同时更新速度更快，但在更新过程中服务可能不可用。
 
 ![部署设置](./media/vs-azure-tools-publish-azure-application-wizard/deployment-settings.png)
 
@@ -101,14 +101,14 @@ Azure 存储帐户将存储应用程序部署的包。 部署应用程序之后�
 
 ![总结](./media/vs-azure-tools-publish-azure-application-wizard/summary.png)
 
-**目标配置文件** - 可以选择基于所选的设置创建发布配置文件。 例如，可以创建一个配置文件用于测试环境，并创建另一个配置文件用于生产环境。 若要保存此配置文件，请选择“保存”图标。 向导将创建配置文件并将它保存在 Visual Studio 项目中。 要修改配置文件名称，请打开“目标概况”列表，并选择“&lt;管理…&gt;”。
+**目标配置文件** - 可以选择基于所选的设置创建发布配置文件。 例如，可以创建一个配置文件用于测试环境，并创建另一个配置文件用于生产环境。 要保存此配置文件，请选择 **“保存”** 图标。 向导将创建配置文件并将它保存在 Visual Studio 项目中。 若要修改配置文件名称，请打开 "**目标配置文件**" 列表，然后选择 " ** &lt; 管理 &gt; ...**"。
 
    > [!Note]
    > 发布配置文件将出现在 Visual Studio 的解决方案资源管理器中，配置文件设置将写入扩展名为.azurePubxml 的文件。 设置将保存为 XML 标记的属性。
 
 ## <a name="publishing-your-application"></a>发布应用程序
 
-配置项目部署的所有设置后，请选择对话框底部的“发布”。 可以在 Visual Studio 的“输出”窗口中监视过程状态。
+配置项目部署的所有设置后，请选择对话框底部的“发布”****。 你可以在 Visual Studio 的 **“输出”** 窗口中监视进程状态。
 
 ## <a name="next-steps"></a>后续步骤
 

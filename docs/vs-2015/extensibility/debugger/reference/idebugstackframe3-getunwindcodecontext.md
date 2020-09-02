@@ -1,5 +1,5 @@
 ---
-title: IDebugStackFrame3::GetUnwindCodeContext | Microsoft Docs
+title: IDebugStackFrame3：： GetUnwindCodeContext |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 7
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: c5a3fdaf9ca21841a43041f0ad5c1dc7b1507085
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62546884"
 ---
 # <a name="idebugstackframe3getunwindcodecontext"></a>IDebugStackFrame3::GetUnwindCodeContext
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-返回代码上下文表示的位置，如果一个堆栈展开操作发生。  
+如果堆栈展开操作发生，则返回表示位置的代码上下文。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,14 +40,14 @@ int GetUnwindCodeContext(
   
 #### <a name="parameters"></a>参数  
  `ppCodeContext`  
- [out]返回[IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md)对象，表示代码上下文位置，如果发生堆栈展开。  
+ 弄返回一个 [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) 对象，该对象表示发生堆栈展开时的代码上下文位置。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
 ## <a name="remarks"></a>备注  
- 尽管此方法可能会在堆栈展开之后返回位置的代码上下文，它并不意味着堆栈展开实际上可以发生在当前堆栈帧。  
+ 尽管此方法可能会在堆栈展开后返回位置的代码上下文，但并不一定意味着堆栈展开实际上可以在当前堆栈帧中发生。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugStackFrame3](../../../extensibility/debugger/reference/idebugstackframe3.md)   
  [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md)

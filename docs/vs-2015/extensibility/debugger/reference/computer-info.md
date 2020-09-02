@@ -11,16 +11,16 @@ caps.latest.revision: 7
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: b7b5c49aea62ff1f7cb6416f7e02f7e7a3c0a166
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62561625"
 ---
-# <a name="computerinfo"></a>COMPUTER_INFO
+# <a name="computer_info"></a>COMPUTER_INFO
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-描述在其运行调试器的计算机。  
+描述运行调试器的计算机。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,7 +44,7 @@ public struct COMPUTER_INFO
   
 ## <a name="terms"></a>术语  
  wProcessorArchitecture  
- 标识微处理器体系的结构。  
+ 标识微处理器的体系结构。  
   
  wSuiteMask  
  标识套件掩码。  
@@ -53,15 +53,15 @@ public struct COMPUTER_INFO
  操作系统版本号。  
   
 ## <a name="remarks"></a>备注  
- 返回此结构[GetComputerInfo](../../../extensibility/debugger/reference/idebugwindowscomputerport2-getcomputerinfo.md)方法。  
+ 此结构由 [GetComputerInfo](../../../extensibility/debugger/reference/idebugwindowscomputerport2-getcomputerinfo.md) 方法返回。  
   
 ## <a name="requirements"></a>要求  
- 标头：Msdbg.h  
+ 标头： Msdbg  
   
- 命名空间:Microsoft.VisualStudio.Debugger.Interop  
+ 命名空间： VisualStudio  
   
- 程序集：Microsoft.VisualStudio.Debugger.Interop.dll  
+ 程序集： Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [结构和联合](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [GetComputerInfo](../../../extensibility/debugger/reference/idebugwindowscomputerport2-getcomputerinfo.md)
