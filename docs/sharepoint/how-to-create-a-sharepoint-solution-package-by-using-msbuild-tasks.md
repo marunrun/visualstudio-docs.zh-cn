@@ -13,13 +13,14 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: c59a38e1153a57c1bd886121eeac244075045a42
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86017007"
 ---
 # <a name="how-to-create-a-sharepoint-solution-package-by-using-msbuild-tasks"></a>如何：使用 MSBuild 任务创建 SharePoint 解决方案包
-  可以在开发计算机上使用命令行 MSBuild 任务来生成、清理和验证 SharePoint 包（*.wsp*）。 你还可以使用这些命令通过在生成计算机上使用 Team Foundation Server 来自动执行生成过程。
+  可以在开发计算机上使用命令行 MSBuild 任务来生成、清理和验证 SharePoint 包 (*.wsp*) 。 你还可以使用这些命令通过在生成计算机上使用 Team Foundation Server 来自动执行生成过程。
 
 ## <a name="build-a-sharepoint-package"></a>生成 SharePoint 包
 
@@ -29,7 +30,7 @@ ms.locfileid: "86017007"
 
 2. 更改为 SharePoint 项目所在的目录。
 
-3. 输入以下命令为项目创建包。 将*ProjectFileName*替换为项目的名称。
+3. 输入以下命令为项目创建包。 将 *ProjectFileName* 替换为项目的名称。
 
     ```cmd
     msbuild /t:Package ProjectFileName
@@ -50,7 +51,7 @@ ms.locfileid: "86017007"
 
 2. 更改为 SharePoint 项目所在的目录。
 
-3. 输入以下命令来清理项目的包。 将*ProjectFileName*替换为项目的名称。
+3. 输入以下命令来清理项目的包。 将 *ProjectFileName* 替换为项目的名称。
 
     ```cmd
     msbuild /t:CleanPackage ProjectFileName
@@ -71,7 +72,7 @@ ms.locfileid: "86017007"
 
 2. 更改为 SharePoint 项目所在的目录。
 
-3. 输入以下命令以验证项目的包。 将*ProjectFileName*替换为项目的名称。
+3. 输入以下命令以验证项目的包。 将 *ProjectFileName* 替换为项目的名称。
 
     ```cmd
     msbuild /t:ValidatePackage ProjectFileName
@@ -92,7 +93,7 @@ ms.locfileid: "86017007"
 
 2. 更改为 SharePoint 项目所在的目录。
 
-3. 输入以下命令，为项目设置包中的属性。 将*PropertyName*替换为要设置的属性。
+3. 输入以下命令，为项目设置包中的属性。 将 *PropertyName* 替换为要设置的属性。
 
     ```cmd
     msbuild /property:PropertyName=Value

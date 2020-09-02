@@ -13,60 +13,60 @@ author: corob-msft
 ms.author: corob
 manager: jillfra
 ms.openlocfilehash: 3a49859a8cd1c4ffb01f93bf2539fc16c42f8c4c
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77277881"
 ---
 # <a name="demo-sample"></a>演示示例
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-下面的过程演示如何创建演练的示例[：分析 C/C++代码中的缺陷](../code-quality/walkthrough-analyzing-c-cpp-code-for-defects.md)。 这些过程将创建：  
+以下过程说明如何为演练创建示例 [：分析 C/c + + 代码中的缺陷](../code-quality/walkthrough-analyzing-c-cpp-code-for-defects.md)。 这些过程将创建：  
   
-- [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 名为 CppDemo 的解决方案。  
+- [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]名为 CppDemo 的解决方案。  
   
 - 名为 CodeDefects 的静态库项目。  
   
 - 名为 Annotations 的静态库项目。  
   
-  这些过程还为静态库的标头和 .cpp 文件提供代码。  
+  这些过程还提供了标头代码以及静态库的 .cpp 文件。  
   
 ### <a name="create-the-cppdemo-solution-and-the-codedefects-project"></a>创建 CppDemo 解决方案和 CodeDefects 项目  
   
-1. 单击“文件”菜单，指向“新建”，然后单击“新建项目”。  
+1. 单击“文件”菜单，指向“新建”，然后单击“新建项目”************。  
   
-2. 在“项目类型”树列表中，如果 Visual C++ 不是 VS 中的默认语言，则展开“其他语言”。  
+2. 在“项目类型”树列表中，如果 Visual C++ 不是 VS 中的默认语言，则展开“其他语言”********。  
   
-3. 展开“Visual C++”，然后单击“常规”。  
+3. 展开“Visual C++”，然后单击“常规”********。  
   
-4. 在“模板”中单击“空项目”。  
+4. 在“模板”中单击“空项目”********。  
   
-5. 在“名称”文本框中，键入“CodeDefects”。  
+5. 在“名称”文本框中，键入“CodeDefects”********。  
   
-6. 选择“为解决方案创建目录”复选框。  
+6. 选择“为解决方案创建目录”复选框****。  
   
-7. 在“解决方案名称”文本框中，键入“CppDemo”。  
+7. 在 " **解决方案名称** " 文本框中，键入 **CppDemo**。  
   
 ### <a name="configure-the-codedefects-project-as-a-static-library"></a>将 CodeDefects 项目配置为静态库  
   
-1. 在“解决方案资源管理器”中右键单击 CodeDefects，再单击“属性”。  
+1. 在“解决方案资源管理器”中右键单击 CodeDefects，再单击“属性”********。  
   
-2. 展开“配置属性”，然后单击“常规”。  
+2. 展开“配置属性”，然后单击“常规”********。  
   
-3. 在“常规”列表中，选择“目标扩展”旁边的列中的文本，然后键入“.lib”。  
+3. 在“常规”列表中，选择“目标扩展”旁边的列中的文本，然后键入“.lib”************。  
   
-4. 在“项目默认值”中，单击“配置类型”旁边的列，然后单击“静态库(.lib)”。  
+4. 在“项目默认值”中，单击“配置类型”旁边的列，然后单击“静态库(.lib)”************。  
   
 ### <a name="add-the-header-and-source-file-to-the-codedefects-project"></a>将标头和源文件添加到 CodeDefects 项目  
   
-1. 在解决方案资源管理器中，展开 CodeDefects，右键单击“头文件”，单击“添加”，然后单击“新项”。  
+1. 在解决方案资源管理器中，展开 CodeDefects，右键单击“头文件”，单击“添加”，然后单击“新项”****************。  
   
-2. 在“添加新项”对话框中，单击“代码”，然后单击“头文件(.h)”。  
+2. 在“添加新项”对话框中，单击“代码”，然后单击“头文件(.h)”************。  
   
-3. 在“名称”框中，键入“Bug.cpp”，然后单击“添加”。  
+3. 在“名称”框中，键入“Bug.cpp”，然后单击“添加”************。  
   
-4. 复制以下代码，并将其粘贴到 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 编辑器中的**Bug .cpp**文件中。  
+4. 复制以下代码，并将其粘贴到编辑器中的 **Bug .cpp** 文件中 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 。  
   
     ```  
     #include <windows.h>  
@@ -88,13 +88,13 @@ ms.locfileid: "77277881"
     const int ACCOUNT_DOMAIN_LEN = 128;  
     ```  
   
-5. 在解决方案资源管理器中，右键单击“源文件”，指向“新建”，然后单击“新项”。  
+5. 在解决方案资源管理器中，右键单击“源文件”，指向“新建”，然后单击“新项”************。  
   
-6. 在“添加新项”对话框中，单击“C++ 文件(.cpp)”  
+6. 在“添加新项”对话框中，单击“C++ 文件(.cpp)”********  
   
-7. 在“名称”框中，键入“Bug.cpp”，然后单击“添加”。  
+7. 在“名称”框中，键入“Bug.cpp”，然后单击“添加”************。  
   
-8. 复制以下代码，并将其粘贴到 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 编辑器中的 Bug .h 文件中。  
+8. 复制以下代码，并将其粘贴到编辑器中的 Bug .h 文件中 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 。  
   
     ```  
     #include <stdlib.h>  
@@ -154,33 +154,33 @@ ms.locfileid: "77277881"
     }  
     ```  
   
-9. 单击“文件”菜单，然后单击“全部保存”。  
+9. 单击“文件”菜单，然后单击“全部保存”********。  
   
 ### <a name="add-the-annotations-project-and-configure-it-as-a-static-library"></a>添加 Annotations 项目并将其配置为静态库  
   
-1. 在解决方案资源管理器中，单击“CppDemo”，指向“添加”，然后单击“新项目”。  
+1. 在解决方案资源管理器中，单击“CppDemo”，指向“添加”，然后单击“新项目”************。  
   
-2. 在“添加新项目”对话框中，展开 Visual C++，单击“常规”，然后单击“空项目”。  
+2. 在“添加新项目”对话框中，展开 Visual C++，单击“常规”，然后单击“空项目”************。  
   
-3. 在“名称”文本框中，键入“Annotations”，然后单击“添加”。  
+3. 在“名称”文本框中，键入“Annotations”，然后单击“添加”************。  
   
-4. 在解决方案资源管理器中，右键单击“Annotations”，然后单击“属性”。  
+4. 在解决方案资源管理器中，右键单击“Annotations”，然后单击“属性”********。  
   
-5. 展开“配置属性”，然后单击“常规”。  
+5. 展开“配置属性”，然后单击“常规”********。  
   
-6. 在“常规”列表中，选择“目标扩展”旁边的列中的文本，然后键入“.lib”。  
+6. 在“常规”列表中，选择“目标扩展”旁边的列中的文本，然后键入“.lib”************。  
   
-7. 在“项目默认值”中，单击“配置类型”旁边的列，然后单击“静态库(.lib)”。  
+7. 在“项目默认值”中，单击“配置类型”旁边的列，然后单击“静态库(.lib)”************。  
   
 ### <a name="add-the-header-file-and-source-file-to-the-annotations-project"></a>将头文件和源文件添加到 Annotations 项目  
   
-1. 在解决方案资源管理器中，展开“Annotations”，右键单击“头文件”，单击“添加”，然后单击“新项”。  
+1. 在解决方案资源管理器中，展开“Annotations”，右键单击“头文件”，单击“添加”，然后单击“新项”****************。  
   
-2. 在“添加新项”对话框中，单击“头文件(.h)”。  
+2. 在“添加新项”对话框中，单击“头文件(.h)”********。  
   
-3. 在“名称”框中，键入“annotations.h”，然后单击“添加”。  
+3. 在“名称”框中，键入“annotations.h”，然后单击“添加”************。  
   
-4. 复制以下代码，并将其粘贴到 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 编辑器中的**批注 .h**文件中。  
+4. 复制以下代码，并将其粘贴到编辑器中的 **批注 .h** 文件中 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 。  
   
     ```  
     #include <CodeAnalysis/SourceAnnotations.h>  
@@ -197,13 +197,13 @@ ms.locfileid: "77277881"
   
     ```  
   
-5. 在解决方案资源管理器中，右键单击“源文件”，指向“新建”，然后单击“新项”。  
+5. 在解决方案资源管理器中，右键单击“源文件”，指向“新建”，然后单击“新项”************。  
   
-6. 在“添加新项”对话框中，单击“代码”，然后单击“C++文件(.cpp)”  
+6. 在“添加新项”对话框中，单击“代码”，然后单击“C++文件(.cpp)”************  
   
-7. 在“名称”框中，键入“annotations.cpp”，然后单击“添加”。  
+7. 在“名称”框中，键入“annotations.cpp”，然后单击“添加”************。  
   
-8. 复制以下代码，并将其粘贴到 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 编辑器中的**注释 .cpp**文件中。  
+8. 复制以下代码，并将其粘贴到编辑器中的 **注释 .cpp** 文件中 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 。  
   
     ```  
     #include <CodeAnalysis/SourceAnnotations.h>  
@@ -232,4 +232,4 @@ ms.locfileid: "77277881"
   
     ```  
   
-9. 单击“文件”菜单，然后单击“全部保存”。
+9. 单击“文件”菜单，然后单击“全部保存”********。
