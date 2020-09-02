@@ -1,5 +1,5 @@
 ---
-title: IDebugSymbolProviderDirect::GetCurrentModulesInfo | Microsoft Docs
+title: IDebugSymbolProviderDirect：： GetCurrentModulesInfo |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,10 +12,10 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 4ce4473fca76424f3b737d530997f766da7b219d
-ms.sourcegitcommit: da4079f5b6ec884baf3108cbd0519d20cb64c70b
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62421910"
 ---
 # <a name="idebugsymbolproviderdirectgetcurrentmodulesinfo"></a>IDebugSymbolProviderDirect::GetCurrentModulesInfo
@@ -47,22 +47,22 @@ int GetCurrentModulesInfo(
   
 #### <a name="parameters"></a>参数  
  `pCount`  
- [in]中的模块数`ppGuids`数组。  
+ 中数组中的模块数 `ppGuids` 。  
   
  `ppGuids`  
- [in]数组，其中包含的模块的唯一标识符。  
+ 中数组，其中包含模块的唯一标识符。  
   
  `pADIds`  
- [in]应用程序域标识符。  
+ 中应用程序域的标识符。  
   
  `pCurrentState`  
- [in]符号组当前状态。  
+ 中符号组的当前状态。  
   
  `ppCDModItfs`  
- [out]返回一个对象，包含符号组中的模块。  
+ 弄返回一个对象，该对象包含符号组中的模块。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugSymbolProviderDirect](../../../extensibility/debugger/reference/idebugsymbolproviderdirect.md)

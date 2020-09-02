@@ -13,10 +13,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 132a3cb5f7d4257aa0728960cb5bfd50c5ee3066
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62419984"
 ---
 # <a name="comparing-performance-data-files"></a>比较性能数据文件
@@ -30,7 +30,7 @@ ms.locfileid: "62419984"
   
  探查器数据的比较可基于代码中的函数、应用程序中的模块、行、指令指针 (IP) 和类型。  
   
- 可用于比较的分析数据包括列中显示的信息。 有关这些列名称的定义，请参阅[性能报告视图](../profiling/performance-report-views.md)。  
+ 可用于比较的分析数据包括列中显示的信息。 有关这些列名的定义，请参阅 [性能报告视图](../profiling/performance-report-views.md)。  
   
  可设置阈值以降噪并筛选出未按指定量更改的行的比较表视图中的任何数据。  
   

@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 08661272bea779ff0789619d58bf6f2837a21917
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62538308"
 ---
 # <a name="idiapropertystoragereadlong"></a>IDiaPropertyStorage::ReadLONG
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-读取`LONG`属性组中的值。  
+读取 `LONG` 属性集中的值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,16 +36,16 @@ HRESULT ReadDLONG ( 
   
 #### <a name="parameters"></a>参数  
  `id`  
- [in]要读取的属性的标识符 (`PROPID`定义为 WTypes.h 中`ULONG`)。  
+ 中要读取的属性的标识符 (`PROPID` 在 WTypes 中定义为 `ULONG`) 。  
   
  `pValue`  
- [out]返回属性值。  
+ 弄返回属性值。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则返回错误代码。 返回`E_INVALIDARG`如果该属性的类型不是`LONG`。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。 `E_INVALIDARG`如果该属性的类型不是，则返回 `LONG` 。  
   
 ## <a name="remarks"></a>备注  
- 一个`LONG`定义由 Windows 作为 32 位有符号整数。  
+ `LONG`由 Windows 定义为32位有符号整数。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md)

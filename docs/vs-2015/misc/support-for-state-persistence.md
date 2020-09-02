@@ -12,35 +12,35 @@ ms.assetid: d25866f2-8d1f-477f-8aa5-3af3fbbf6e97
 caps.latest.revision: 15
 manager: jillfra
 ms.openlocfilehash: 6dc542d2e410b79a21e436a1881c06bd3cc4eef8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62434314"
 ---
 # <a name="support-for-state-persistence"></a>状态持久性支持
-[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 可以维护公共对象的状态。 例如，解决方案和项目属性将保存到和从解决方案和项目文件中还原。 可以导出到和从设置文件导入用户设置。  
+[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 可以维护公共对象的状态。 例如，解决方案和项目属性保存到解决方案和项目文件，并从中还原。 用户设置可以导出到设置文件并从其导入。  
   
- Vspackage 通常依赖于本地存储区，在系统注册表中或在当前用户或计算机的应用程序数据文件夹中。 对于存储，如整数和字符串，需要少量的空间的值通常存储在系统注册表中。 对于存储，如位图，需要大量空间的值保存在文件中。 文件的路径可以本身保存在系统注册表中。 持久性机制必须有权访问本地存储。  
+ Vspackage 通常依赖于本地存储，无论是在系统注册表中还是在当前用户或计算机的应用程序数据文件夹中。 对于存储需要少量空间（如整数和字符串）的值通常存储在系统注册表中。 需要大量存储空间（如位图）的值将保存在文件中。 文件路径本身可保存在系统注册表中。 持久性机制必须具有访问本地存储区的权限。  
   
-## <a name="support-for-locating-local-storage"></a>查找本地存储的支持  
- <xref:Microsoft.VisualStudio.Shell.Package>类提供支持在当前用户或计算机的系统注册表或应用程序数据文件夹中查找状态信息。  
+## <a name="support-for-locating-local-storage"></a>支持查找本地存储  
+ <xref:Microsoft.VisualStudio.Shell.Package>类提供对当前用户或计算机的系统注册表或应用程序数据文件夹中的状态信息的支持。  
   
  <xref:Microsoft.VisualStudio.Shell.Package.ApplicationRegistryRoot%2A>  
- 返回本地计算机的注册表根目录的路径[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]，例如，HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\8.0Exp。  
+ 返回本地计算机的注册表根目录的路径 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ，例如 HKEY_LOCAL_MACHINE \software\microsoft\visualstudio\8.0exp。  
   
- 从获取本地注册表根<xref:Microsoft.VisualStudio.Shell.Interop.SVsShell>服务。 如果这是不可用，会从获取<xref:Microsoft.VisualStudio.Shell.DefaultRegistryRootAttribute>VSPackage 的属性。  
+ 本地注册表根是从服务获取的 <xref:Microsoft.VisualStudio.Shell.Interop.SVsShell> 。 如果这不可用，则从 <xref:Microsoft.VisualStudio.Shell.DefaultRegistryRootAttribute> VSPackage 的属性获取。  
   
  <xref:Microsoft.VisualStudio.Shell.Package.UserRegistryRoot%2A>  
- 返回当前用户的 （每台计算机） 的路径的注册表根[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]，例如，HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0Exp。  
+ 返回 (每台计算机的当前用户的路径，) 注册表根目录 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ，例如 HKEY_CURRENT_USER \software\microsoft\visualstudio\8.0exp。  
   
- 从获取本地注册表根<xref:Microsoft.VisualStudio.Shell.Interop.SVsShell>服务。 如果这是不可用，则是由 VSPackage 的 DefaultLocalRegistryRoot 属性获得。  
+ 本地注册表根是从服务获取的 <xref:Microsoft.VisualStudio.Shell.Interop.SVsShell> 。 如果这不可用，则将从 VSPackage 的 DefaultLocalRegistryRoot 属性中获取。  
   
  <xref:Microsoft.VisualStudio.Shell.Package.UserDataPath%2A>  
- 返回用作公共储存库的目录的路径[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]例如，C:\Documents and Settings 的当前漫游用户数据\\*YourAccountName*\applicationVisualStudio\8.0Exp。  
+ 返回作为当前漫游用户的数据的公共存储库的目录的路径 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ，例如，c:\documents and 和 Settings \\ *YourAccountName*\Application Data\Microsoft\VisualStudio\8.0Exp。  
   
  <xref:Microsoft.VisualStudio.Shell.Package.UserLocalDataPath%2A>  
- 返回用作公共储存库的目录的路径[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]的当前非漫游用户数据，例如，C:\Documents and Settings\\*YourAccountName*settings\applicationData\Microsoft\VisualStudio\8.0Exp。  
+ 返回用作当前非漫游用户的数据的公共存储库的目录的路径 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ，例如，c:\documents and 和 Settings \\ *YourAccountName*\Local Settings\Application Data\Microsoft\VisualStudio\8.0Exp。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [VSPackage 状态](../misc/vspackage-state.md)

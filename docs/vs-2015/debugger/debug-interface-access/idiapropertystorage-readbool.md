@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 64eee421a5ed5bd46a64b51694d913a4f2dc4d41
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62538871"
 ---
 # <a name="idiapropertystoragereadbool"></a>IDiaPropertyStorage::ReadBOOL
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-读取`BOOL`属性组中的值。  
+读取 `BOOL` 属性集中的值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,16 +36,16 @@ HRESULT ReadBOOL ( 
   
 #### <a name="parameters"></a>参数  
  `id`  
- [in]要读取的属性的标识符 (`PROPID`定义为 WTypes.h 中`ULONG`)。  
+ 中要读取的属性的标识符 (`PROPID` 在 WTypes 中定义为 `ULONG`) 。  
   
  `pValue`  
- [out]返回属性值。  
+ 弄返回属性值。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则返回错误代码。 返回`E_INVALIDARG`如果该属性的类型不是`BOOL`。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。 `E_INVALIDARG`如果该属性的类型不是，则返回 `BOOL` 。  
   
 ## <a name="remarks"></a>备注  
- 一致的结果，将解释`BOOL`值，以便非零值都`TRUE`零值为`FALSE`。  
+ 为了保持一致的结果，请解释 `BOOL` 该值，使非零值为 `TRUE` ，零为 `FALSE` 。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md)

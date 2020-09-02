@@ -1,5 +1,5 @@
 ---
-title: '&lt;assemblyIdentity&gt;元素 （ClickOnce 应用程序） |Microsoft Docs'
+title: '&lt;&gt; (ClickOnce 应用程序) 的 assemblyIdentity 元素 |Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-deployment
@@ -18,16 +18,16 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 5bde22809af69071f5484e25717a5aea7d78a603
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62428529"
 ---
-# <a name="ltassemblyidentitygt-element-clickonce-application"></a>&lt;assemblyIdentity&gt;元素 （ClickOnce 应用程序）
+# <a name="ltassemblyidentitygt-element-clickonce-application"></a>&lt;&gt; (ClickOnce 应用程序的 assemblyIdentity 元素) 
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-标识应用程序部署在[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]部署。  
+标识部署中部署的应用程序 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,20 +43,20 @@ ms.locfileid: "62428529"
 ```  
   
 ## <a name="elements-and-attributes"></a>元素和属性  
- `assemblyIdentity`元素是必需的。 它不包含任何子元素，并具有以下属性。  
+ `assemblyIdentity` 元素是必需的。 它不包含任何子元素，并且具有以下属性。  
   
-|特性|描述|  
+|特性|说明|  
 |---------------|-----------------|  
-|`Name`|必需。 标识应用程序的名称。<br /><br /> 如果`Name`包含特殊字符，如单引号或双引号引起来，应用程序可能无法激活。|  
-|`Version`|必需。 采用以下格式指定该应用程序的版本号： `major.minor.build.revision`|  
-|`publicKeyToken`|可选。 指定表示最后 8 个字节的 16 字符的十六进制字符串`SHA-1`的应用程序集签名的公钥的哈希值。 使用对目录进行签名的公钥必须为 2048 位或更高版本。<br /><br /> 尽管为程序集签名是可选但建议，但此属性是必需的。 如果程序集未签名，你应从自签名的程序集复制值或使用"虚拟"值均为零。|  
-|`processorArchitecture`|必需。 指定的处理器。 有效的值是`msil`适用于所有处理器`x86`的 32 位 Windows`IA64`为 64 位 Windows 和`Itanium`Intel 64 位 Itanium 处理器。|  
-|`language`|必需。 标识两个部分语言代码 (例如， `en-US`) 的程序集。 此元素处于`asmv2`命名空间。 如果未指定，默认值是`neutral`。|  
+|`Name`|必需。 标识应用程序的名称。<br /><br /> 如果 `Name` 包含特殊字符（如单引号或双引号），则应用程序可能无法激活。|  
+|`Version`|必需。 按以下格式指定应用程序的版本号： `major.minor.build.revision`|  
+|`publicKeyToken`|可选。 指定16个字符的十六进制字符串，该字符串表示 `SHA-1` 用于对应用程序或程序集进行签名的公钥的哈希值的最后8个字节。 用于对目录进行签名的公钥必须是2048或更高版本。<br /><br /> 尽管建议为程序集签名，但这是可选的，但此属性是必需的。 如果程序集是无符号的，则应从自签名的程序集复制一个值，或使用 "虚拟" 值全部为零。|  
+|`processorArchitecture`|必需。 指定处理器。 有效值适用于 `msil` 所有处理器，适用于 `x86` 32 位 windows， `IA64` 适用于64位 windows， `Itanium` 适用于 Intel 64 位 Itanium 处理器。|  
+|`language`|必需。 标识程序集的两部分语言代码 (例如 `en-US`) 。 此元素位于 `asmv2` 命名空间中。 如果未指定，则默认值为 `neutral` 。|  
   
 ## <a name="examples"></a>示例  
   
-### <a name="description"></a>描述  
- 下面的代码示例演示`assemblyIdentity`中的元素[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]应用程序清单。 此代码示例摘自[ClickOnce 应用程序清单](../deployment/clickonce-application-manifest.md)。  
+### <a name="description"></a>说明  
+ 下面的代码示例演示 `assemblyIdentity` [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 应用程序清单中的元素。 此代码示例是 [ClickOnce 应用程序清单](../deployment/clickonce-application-manifest.md)中提供的一个更大示例的一部分。  
   
 ### <a name="code"></a>代码  
   
@@ -70,6 +70,6 @@ ms.locfileid: "62428529"
   type="win32" />  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [ClickOnce 应用程序清单](../deployment/clickonce-application-manifest.md)   
  [\<assemblyIdentity> 元素](../deployment/assemblyidentity-element-clickonce-deployment.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugComPlusSymbolProvider2::LoadSymbolsFromCallback | Microsoft Docs
+title: IDebugComPlusSymbolProvider2：： LoadSymbolsFromCallback |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,16 +12,16 @@ caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 108d50788992eb8316811bb5d9c7d327c3d62eda
-ms.sourcegitcommit: 0cd282a7584b9bfd4df7882f8fdf3ad8a270e219
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62540558"
 ---
 # <a name="idebugcomplussymbolprovider2loadsymbolsfromcallback"></a>IDebugComPlusSymbolProvider2::LoadSymbolsFromCallback
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-加载调试符号使用指定的回调方法。  
+使用指定的回调方法加载调试符号。  
   
 ## <a name="syntax"></a>语法  
   
@@ -51,31 +51,31 @@ int LoadSymbolsFromCallback(
   
 #### <a name="parameters"></a>参数  
  `ulAppDomainID`  
- [in]应用程序域的标识符。  
+ 中应用程序域的标识符。  
   
  `guidModule`  
- [in]该模块的唯一标识符。  
+ 中模块的唯一标识符。  
   
  `pUnkMetadataImport`  
- [in]包含符号元数据的对象。  
+ 中包含符号元数据的对象。  
   
  `pUnkCorDebugModule`  
- [in]对象，它实现[ICorDebugModule 接口](/dotnet/framework/unmanaged-api/debugging/icordebugmodule-interface)。  
+ 中实现 [ICorDebugModule 接口](/dotnet/framework/unmanaged-api/debugging/icordebugmodule-interface)的对象。  
   
  `bstrModuleName`  
- [in]模块的名称。  
+ 中模块的名称。  
   
  `bstrSymSearchPath`  
- [in]搜索符号文件的路径。  
+ 中要搜索符号文件的路径。  
   
  `pCallback`  
- [in]对象，该对象表示的回调方法。  
+ 中表示回调方法的对象。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何实现此方法对于**CDebugSymbolProvider**对象，它公开[IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md)接口。  
+ 下面的示例演示如何为公开[IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md)接口的**CDebugSymbolProvider**对象实现此方法。  
   
 ```cpp#  
 HRESULT CDebugSymbolProvider::LoadSymbolsFromCallback(  
@@ -168,5 +168,5 @@ Error:
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md)

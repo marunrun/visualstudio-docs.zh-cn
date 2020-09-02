@@ -11,30 +11,30 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: b012136c30f72cfdddadfc1a370ed76f567afffd
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62429907"
 ---
 # <a name="project-priority"></a>项目优先级
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-项目项通常是解决方案中只有一个项目的成员。 因此，IDE 可以轻松地确定使用哪个项目打开的项。 但是，如果项是多个项目的成员，IDE 将使用优先级方案来确定打开的项的最佳项目。  
+项目项通常是解决方案中的一个项目的成员。 因此，IDE 可以轻松确定用于打开项的项目。 但是，如果项是多个项目的成员，则 IDE 将使用优先级方案来确定用于打开该项的最佳项目。  
   
- 以下列表显示项目优先级方案：  
+ 下面的列表显示项目优先级方案：  
   
-- IDE 调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsProject2.IsDocumentInProject%2A>解决方案来确定文档是否为该项目的成员的每个项目的方法。  
+- IDE 为 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject2.IsDocumentInProject%2A> 解决方案中的每个项目调用方法，以确定该文档是否为该项目的成员。  
   
-- 如果文档是项目的成员，项目将响应优先级 project 为根据其处理该文档。 例如，语言项目会使用其语言源文件的高优先级进行响应，但使用不用作其生成过程的一部分的无法识别的文件类型较低优先级进行响应。  
+- 如果文档是项目的成员，则该项目将根据其对该文档的处理分配的优先级进行响应。 例如，语言项目对其语言源文件做出高优先级的响应，但对无法识别的文件类型（不会在生成过程中使用）的优先级进行响应。  
   
-- 为文档提供自定义、 特定于项目的编辑器或设计器的项目还收到了高优先级。  
+- 为文档提供自定义的特定于项目的编辑器或设计器的项目也具有高优先级。  
   
-- <xref:Microsoft.VisualStudio.Shell.Interop.VSDOCUMENTPRIORITY>枚举提供文档的优先级值。  
+- <xref:Microsoft.VisualStudio.Shell.Interop.VSDOCUMENTPRIORITY>枚举提供文档优先级值。  
   
-- 指定的最高优先级的项目有打开的文档的上下文。 如果两个项目返回相同的优先级值，请将首选活动项目。 如果解决方案中没有项目做出响应，它可以打开的文档，IDE 会将文档放在杂项文件项目中。 有关详细信息，请参阅[杂项文件项目](../../extensibility/internals/miscellaneous-files-project.md)。  
+- 指定最高优先级的项目将被赋予上下文来打开文档。 如果两个项目返回相同的优先级值，则首选活动项目。 如果解决方案中没有项目响应它可以打开文档，IDE 会将文档放入 "杂项文件" 项目。 有关详细信息，请参阅 [杂项文件项目](../../extensibility/internals/miscellaneous-files-project.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [杂项文件项目](../../extensibility/internals/miscellaneous-files-project.md)   
- [如何：打开编辑器的打开的文档](../../extensibility/how-to-open-editors-for-open-documents.md)   
+ [如何：打开打开的文档的编辑器](../../extensibility/how-to-open-editors-for-open-documents.md)   
  [添加项目和项目项模板](../../extensibility/internals/adding-project-and-project-item-templates.md)
