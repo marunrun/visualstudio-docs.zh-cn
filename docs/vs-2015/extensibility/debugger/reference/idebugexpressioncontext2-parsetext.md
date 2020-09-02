@@ -1,5 +1,5 @@
 ---
-title: IDebugExpressionContext2::ParseText |Microsoft Docs
+title: IDebugExpressionContext2：:P arseText |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 1fbd9252663f766035f628946e6aa93b1c00322a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68158383"
 ---
 # <a name="idebugexpressioncontext2parsetext"></a>IDebugExpressionContext2::ParseText
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-分析中以供以后计算的文本形式的表达式。  
+分析文本窗体中的表达式，以便以后进行计算。  
   
 ## <a name="syntax"></a>语法  
   
@@ -50,33 +50,33 @@ int ParseText( 
   
 #### <a name="parameters"></a>参数  
  `pszCode`  
- [in]要分析的表达式。  
+ 中要分析的表达式。  
   
  `dwFlags`  
- [in]中的标志的组合[PARSEFLAGS](../../../extensibility/debugger/reference/parseflags.md)控制分析的枚举。  
+ 中 [PARSEFLAGS](../../../extensibility/debugger/reference/parseflags.md) 枚举中用于控制分析的标志的组合。  
   
  `nRadix`  
- [in]若要在分析中的任何数字信息中使用的基数`pszCode`。  
+ 中用于分析中的任何数字信息的基数 `pszCode` 。  
   
  `ppExpr`  
- [out]返回[IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md)对象，表示已分析的表达式，即准备好进行绑定和评估。  
+ 弄返回表示已分析的表达式的 [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md) 对象，该表达式可用于绑定和计算。  
   
  `pbstrError`  
- [out]如果表达式包含错误，则返回错误消息。  
+ 弄如果表达式包含错误，则返回错误消息。  
   
  `pichError`  
- [out]返回中的错误的字符索引`pszCode`如果表达式包含错误。  
+ 弄如果表达式包含错误，则返回中的错误的字符索引 `pszCode` 。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
 ## <a name="remarks"></a>备注  
- 调用此方法时，调试引擎 (DE) 应分析表达式，并验证正确。 `pbstrError`和`pichError`可能填充参数，如果表达式无效。  
+ 调用此方法时，调试引擎 (DE) 应分析表达式并验证它是否正确。 `pbstrError` `pichError` 如果表达式无效，则可以填写和参数。  
   
- 请注意，不会计算表达式，只能分析。 稍后调用[EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md)或[EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md)方法计算已分析的表达式的值。  
+ 请注意，不计算表达式，仅分析。 稍后对 [EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) 或 [EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) 方法的调用将计算分析后的表达式。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何实现此方法对于简单`CEnvBlock`公开的对象[IDebugExpressionContext2](../../../extensibility/debugger/reference/idebugexpressioncontext2.md)接口。 此示例将视为的表达式无法被分析为环境变量的名称，并从该变量中检索值。  
+ 下面的示例演示如何为 `CEnvBlock` 公开 [IDebugExpressionContext2](../../../extensibility/debugger/reference/idebugexpressioncontext2.md) 接口的简单对象实现此方法。 此示例将表达式视为环境变量的名称，并从该变量检索值。  
   
 ```cpp#  
 HRESULT CEnvBlock::ParseText(  
@@ -124,7 +124,7 @@ HRESULT CEnvBlock::ParseText(
 }    
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugExpressionContext2](../../../extensibility/debugger/reference/idebugexpressioncontext2.md)   
  [PARSEFLAGS](../../../extensibility/debugger/reference/parseflags.md)   
  [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md)   

@@ -1,5 +1,5 @@
 ---
-title: '&#39;设计的新内容'
+title: 用于设计的新&#39;
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-modeling
@@ -14,13 +14,13 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 6c68db12f8ecea523327250fec1f600639a2f267
-ms.sourcegitcommit: 95f26af1da51d4c83ae78adcb7372b32364d8a2b
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79301283"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89315325"
 ---
-# <a name="whats-new-for-design-in-visual-studio-in-visual-studio-2015"></a>视觉工作室 2015 可视化工作室中的新设计内容
+# <a name="whats-new-for-design-in-visual-studio-in-visual-studio-2015"></a>Visual studio 2015 中用于设计的新增功能
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 此版本的 Visual Studio 包括以下改进以帮助你更好地理解并设计代码。
 
@@ -30,7 +30,7 @@ ms.locfileid: "79301283"
 
  在最终 (RTM) 版本中，通过将命令组合为与选择、编辑、管理组和更改组内容的布局相关的部分，代码元素和链接的快捷菜单变得更加易于使用。 另请注意，测试项目的显示风格与其他项目不同，并且我们将代码图中的元素图标更新到了更合适的版本。
 
- ![显示新代码映射上的选定项](../ide/media/codemapsshowonnewmap.png "代码映射显示新地图")
+ ![显示新代码映射上的选定项](../ide/media/codemapsshowonnewmap.png "CodeMapsShowOnNewMap")
 
  其他改进包括：
 
@@ -58,24 +58,24 @@ ms.locfileid: "79301283"
 
   **此版本中其他设计和建模更改：**
 
-- **图层图**。 使用类视图和对象浏览器更新这些关系图。 为满足软件设计要求，使用层关系图来描述软件所需的依赖项。 通过查找不满足这些约束条件的代码以及使用此基线验证未来的代码，使代码与此设计保持一致。
+- **层关系图**。 使用类视图和对象浏览器更新这些关系图。 为满足软件设计要求，使用层关系图来描述软件所需的依赖项。 通过查找不满足这些约束条件的代码以及使用此基线验证未来的代码，使代码与此设计保持一致。
 
 - **UML 关系图**。 不再能够根据代码创建 UML 类图和序列图。 但你仍可使用新的 UML 元素创建这些关系图。
 
 - **体系结构资源管理器**。 不再能够使用体系结构资源管理器创建关系图。 但你仍可使用解决方案资源管理器。
 
-## <a name="edition-support-for-architecture-and-modeling-tools"></a><a name="VersionSupport"></a>对体系结构和建模工具的版式支持
+## <a name="edition-support-for-architecture-and-modeling-tools"></a><a name="VersionSupport"></a> 对体系结构和建模工具的版本支持
 
-Visual Studio 2015 有多种版本版本。 并非所有这些都为体系结构和建模工具提供支持。 下表显示每个工具的可用性。
+Visual Studio 2015 提供多种版本。 并非所有这些都提供对体系结构和建模工具的支持。 下表显示每个工具的可用性。
 
-|**功能**|**企业**|**专业版**|**社区**|**Express**|
+|**功能**|**企业**|**Professional**|**社区**|**Express**|
 |-----------------|--------------------|----------------------|-------------------|-----------------|
-|**代码映射**|是|仅支持读取和筛选代码映射、添加新的泛型节点以及从所选内容创建新的定向图形。|-|-|
+|**代码图**|是|仅支持读取和筛选代码映射、添加新的泛型节点，以及通过选择创建新的定向关系图。|-|-|
 |**UML 类图**|是|-|-|-|
 |**UML 序列图**|是|-|-|-|
 |**UML 用例图**|是|-|-|-|
-|**UML 活动图表**|是|-|-|-|
+|**UML 活动图**|是|-|-|-|
 |**UML 组件图**|是|-|-|-|
-|**层图**|是|-|-|-|
-|**定向图**（DGML 图表）|是|是|-|-|
+|**层关系图**|是|-|-|-|
+| (DGML 关系图的**定向关系**图) |是|是|-|-|
 |**代码克隆**|是|-|-|-|

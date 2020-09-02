@@ -14,10 +14,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 4bbed9d8c4725b6bd497377d4a9dee22f2f8573d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68145486"
 ---
 # <a name="ui-processing-time"></a>UI 处理时间
@@ -30,4 +30,4 @@ ms.locfileid: "68145486"
  UI 处理类别对于了解 GUI 应用程序的响应能力很重要，非常适合依赖 UI 响应能力的应用程序。 例如，如果应用程序中的 UI 线程能够将 100% 的时间用于 UI 处理，则该应用程序的响应速度可能会非常快。 但是，如果 UI 线程花费了大量时间在其他类别上，则需查找根本原因并考虑降低该线程上的非 UI 类别。  
   
 ## <a name="see-also"></a>另请参阅  
- [线程视图](../profiling/threads-view-parallel-performance.md)
+ [“线程”视图](../profiling/threads-view-parallel-performance.md)

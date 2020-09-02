@@ -1,0 +1,150 @@
+- name: Visual Studio for Mac
+  href: /visualstudio/mac/
+- name: IDE 教程
+  href: ide-tour.md
+- name: 安装
+  href: installation.md
+  items:
+    - name: 在防火墙或代理的保护下进行安装和使用
+      href: /visualstudio/mac/install-behind-a-firewall-or-proxy-server
+    - name: 安装预览版
+      href: /visualstudio/mac/install-preview
+    - name: 更新
+      href: /visualstudio/mac/update
+    - name: 更新到 Visual Studio 2019 for Mac
+      href: /visualstudio/mac/update-vsmac-8.0
+    - name: 卸载
+      href: /visualstudio/mac/uninstall
+- name: 用户帐户
+  href: /visualstudio/mac/user-accounts
+  items:
+    - name: 登录
+      href: /visualstudio/mac/signing-in
+    - name: 启用订阅
+      href: /visualstudio/mac/enable-subscription
+- name: 自定义 IDE
+  href: /visualstudio/mac/customizing-the-ide
+  items:
+    - name: 扩展 Visual Studio for Mac
+      href: /visualstudio/mac/extending-visual-studio-mac
+- name: 项目和解决方案
+  href: /visualstudio/mac/projects-and-solutions
+  items:
+    - name: 创建新项目
+      href: /visualstudio/mac/create-new-projects
+    - name: 添加和删除项目项
+      href: /visualstudio/mac/add-and-remove-project-items
+    - name: 管理解决方案和项目属性
+      href: /visualstudio/mac/managing-solutions-and-project-properties
+    - name: 管理项目中的引用
+      href: /visualstudio/mac/managing-references-in-a-project
+      items:
+        - name: 演练 - 在项目中包括 NuGet 包
+          href: /visualstudio/mac/nuget-walkthrough
+    - name: 管理应用资源
+      href: /visualstudio/mac/managing-app-resources
+    - name: 如何：打开多个解决方案或实例
+      href: /visualstudio/mac/open-multiple-solutions
+- name: 源编辑器
+  href: /visualstudio/mac/source-editor
+  items:
+    - name: 重构
+      href: /visualstudio/mac/refactoring
+    - name: 注释
+      href: /visualstudio/mac/comments
+    - name: 编辑器行为
+      href: /visualstudio/mac/editor-behavior
+    - name: 任务注释
+      href: /visualstudio/mac/task-comments
+    - name: 代码片段
+      href: /visualstudio/mac/snippets
+    - name: 块选择
+      href: /visualstudio/mac/block-selection
+    - name: 编辑器主题
+      href: /visualstudio/mac/editor-themes
+    - name: EditorConfig
+      href: /visualstudio/mac/editorconfig
+    - name: 注释键盘快捷方式
+      href: /visualstudio/mac/keyboard-shortcuts
+- name: 调试
+  href: /visualstudio/mac/debugging
+  items:
+    - name: 数据可视化
+      href: /visualstudio/mac/data-visualizations
+- name: 编译和生成
+  href: /visualstudio/mac/compiling-and-building
+  items:
+    - name: 生成和清理项目和解决方案
+      href: /visualstudio/mac/building-and-cleaning-projects-and-solutions
+    - name: 生成操作
+      href: /visualstudio/mac/build-actions
+    - name: 自定义生成系统
+      href: /visualstudio/mac/customizing-build-system
+    - name: 配置
+      href: /visualstudio/mac/configurations
+      items:
+        - name: 创建和编辑配置
+          href: /visualstudio/mac/create-and-edit-configurations
+- name: 版本控制
+  href: /visualstudio/mac/version-control
+  items:
+    - name: TF 版本控制
+      href: /visualstudio/mac/tf-version-control
+    - name: 设置 Git 存储库
+      href: /visualstudio/mac/set-up-git-repository
+    - name: 使用 Git
+      href: /visualstudio/mac/working-with-git
+    - name: 设置 Subversion 存储库
+      href: /visualstudio/mac/set-up-subversion-repository
+    - name: 使用 Subversion
+      href: /visualstudio/mac/working-with-subversion
+- name: Web 应用部署
+  href: /visualstudio/mac/web-app-deployment
+  items:
+    - name: 发布到 Azure 应用服务
+      href: /visualstudio/mac/publish-app-svc
+    - name: 发布到文件夹
+      href: /visualstudio/mac/publish-folder
+- name: 工作负载
+  href: /visualstudio/mac/workloads
+  items:
+    - name: ASP.NET Core
+      href: /visualstudio/mac/asp-net-core
+      items:
+        - name: Razor
+          href: /visualstudio/mac/razor
+        - name: Javascript
+          href: /visualstudio/mac/javascript
+    - name: Azure
+      href: /visualstudio/mac/azure-workload
+      items:
+        - name: Azure Functions 简介
+          href: /visualstudio/mac/azure-functions
+        - name: 教程：Azure Functions
+          href: /visualstudio/mac/azure-functions-lab
+        - name: 连接的服务
+          href: /visualstudio/mac/connected-services
+    - name: Unity 游戏开发
+      href: /visualstudio/mac/unity-tools
+      items:
+        - name: 安装
+          href: /visualstudio/mac/setup-vsmac-tools-unity
+        - name: 使用 Unity 工具
+          href: /visualstudio/mac/using-vsmac-tools-unity
+        - name: 在 Unity 中使用 .NET 4.x
+          href: /visualstudio/cross-platform/unity-scripting-upgrade/?context=visualstudio/mac/context
+        - name: 更改日志
+          href: /visualstudio/cross-platform/change-log-visual-studio-tools-for-unity-mac/?context=visualstudio/mac/context
+    - name: 使用 Xamarin 的移动应用
+      href: /visualstudio/mac/xamarin
+- name: 可访问性
+  href: /visualstudio/mac/accessibility
+- name: 疑难解答
+  href: /visualstudio/mac/troubleshooting
+  items:
+    - name: Visual Studio 客户体验改善计划
+      href: /visualstudio/mac/visual-studio-experience-improvement-program
+    - name: 报告问题
+      href: /visualstudio/mac/report-a-problem
+    - name: 疑难解答：更新程序在检索信息时发生错误
+      href: updater-troubleshooting.md

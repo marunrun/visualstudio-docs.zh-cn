@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: f23ca72f8251cca26e2b636978fdb25ab302962d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72667927"
 ---
 # <a name="how-to-export-class-diagrams-as-images-class-designer"></a>如何：将类关系图导出为图像（类设计器）
@@ -27,15 +27,15 @@ ms.locfileid: "72667927"
 
 1. 打开你的类图 (.cd) 文件。
 
-2. 通过“类图”菜单或关系图面快捷菜单，选择“将关系图导出为图像”。
+2. 通过“类图”**** 菜单或关系图面快捷菜单，选择“将关系图导出为图像”****。
 
 3. 选择关系图。
 
 4. 选择所需格式。
 
-5. 选择“导出”来完成导出。
+5. 选择“导出”**** 来完成导出。
 
      若要自动更新从其他文档链接的导出图像，请在 Visual Studio 中再次导出该关系图。
 
-## <a name="see-also"></a>请参阅
- [如何：打印类图（类设计器）](../ide/how-to-print-class-diagrams-class-designer.md) [使用类图（类设计器）](../ide/working-with-class-diagrams-class-designer.md)
+## <a name="see-also"></a>另请参阅
+ [如何： (类设计器打印类图) ](../ide/how-to-print-class-diagrams-class-designer.md)使用[类图 (类设计器](../ide/working-with-class-diagrams-class-designer.md)) 

@@ -16,10 +16,10 @@ author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.openlocfilehash: ed9d33501644c6fa7252dffa758f92c0919653b1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62546897"
 ---
 # <a name="uninstall-visual-studio"></a>卸载 Visual Studio
@@ -31,11 +31,11 @@ ms.locfileid: "62546897"
 
 ## <a name="uninstall-visual-studio-by-using-the-standard-uninstallation-method"></a>使用“标准”卸载方法卸载 Visual Studio
 
-1. 在“控制面板”上的“程序和功能”页中，选择要卸载的产品版本，然后选择“更改”。
+1. 在“控制面板”上的“程序和功能”页中，选择要卸载的产品版本，然后选择“更改”************。
 
-2. 在安装向导中，选择“卸载”，再选择“是”，然后在向导中按照其余说明进行操作。
+2. 在安装向导中，选择“卸载”，再选择“是”，然后在向导中按照其余说明进行操作********。
 
-   此标准或默认方法将留下首次安装 Visual Studio 时最初安装的某些项（例如，Microsoft .NET Framework、Microsoft Visual C++ 可再发行组件、Microsoft SQL Server 等）。   由于其他许多应用程序依赖于这些已安装的项，因此我们会保留这些项。 但是，如果也要将其删除，请选择“程序和功能”中对应的条目，然后逐个进行删除。
+   此标准或默认方法将留下首次安装 Visual Studio 时最初安装的某些项（例如，Microsoft .NET Framework、Microsoft Visual C++ 可再发行组件、Microsoft SQL Server 等）。   由于其他许多应用程序依赖于这些已安装的项，因此我们会保留这些项。 但是，如果也要将其删除，请选择“程序和功能”**** 中对应的条目，然后逐个进行删除。
 
 ## <a name="uninstall-visual-studio-and-all-other-related-files-that-is-to-uninstall-almost-everything"></a>卸载 Visual Studio 和所有其他相关文件（即，卸载几乎所有项）
 
@@ -49,7 +49,7 @@ ms.locfileid: "62546897"
      例如，运行 ```vs_enterprise.exe /uninstall /force```，这将删除 Visual Studio 以及留在默认卸载中的大部分核心组件。 但是，不会删除 Visual Studio 附加产品和扩展可以安装的所有其他内容（例如，Visual Studio 更新和其他可选组件）。
 
     > [!TIP]
-    > 或者，可以使用“卸载程序总数”工具来删除 Visual Studio 或 Visual Studio 更新可能已安装的所有项。 也就是说，任何版本的 Visual Studio 2013 或更高版本。 若要获取详细信息，请参阅 GitHub 上的 [Visual Studio 卸载程序工具](https://github.com/Microsoft/VisualStudioUninstaller/releases)。
+    > 或者，可以使用“卸载程序总数”**** 工具来删除 Visual Studio 或 Visual Studio 更新可能已安装的所有项。 也就是说，任何版本的 Visual Studio 2013 或更高版本。 若要获取详细信息，请参阅 GitHub 上的 [Visual Studio 卸载程序工具](https://github.com/Microsoft/VisualStudioUninstaller/releases)。
 
 ## <a name="uninstall-visual-studio-in-silent-or-passive-modes-that-is-to-uninstall-from-source"></a>在无提示或被动模式下卸载 Visual Studio（即，从源中卸载）
 
@@ -57,7 +57,7 @@ ms.locfileid: "62546897"
 
 2. 输入以下参数：
 
-     DVDRoot \\<Installation File\> \</quiet&#124;/passive> [/norestart]/uninstall
+     *DVDRoot* \\<安装文件 \> \</quiet&#124;/passive> [/norestart]/uninstall
 
 ## <a name="roll-back-to-a-previous-version-or-release-of--visual-studio"></a>回滚到早期版本的 Visual Studio
 

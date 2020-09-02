@@ -9,10 +9,10 @@ caps.latest.revision: 17
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: cc3560c1cbcebea9f61465240cd4e2c7a0f811f7
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72667466"
 ---
 # <a name="using-emulators-to-isolate-unit-tests-for-sharepoint-2010-applications"></a>使用模拟器分离 Sharepoint 2010 应用程序的单元测试
@@ -22,8 +22,8 @@ Microsoft.SharePoint.Emulators 包提供了一组帮助你对 Microsoft SharePoi
 
  现有测试方法和类可以轻松转换为在仿真程序上下文中运行。 此功能允许你创建两用测试。 两用测试可以在针对实际 SharePoint API 的整体测试与使用仿真程序的独立单元测试之间切换。
 
-## <a name="BKMK_In_this_topic"></a> 在本主题中
- [惠?](#BKMK_Requirements)
+## <a name="in-this-topic"></a><a name="BKMK_In_this_topic"></a> 在本主题中
+ [要求](#BKMK_Requirements)
 
  [AppointmentsWebPart 示例](#BKMK_The_AppointmentsWebPart_example)
 
@@ -31,21 +31,21 @@ Microsoft.SharePoint.Emulators 包提供了一组帮助你对 Microsoft SharePoi
 
 - [将仿真器包添加到测试项目](#BKMK_Adding_the_Emulators_package_to_a_test_project)
 
-- [运行启用了仿真的测试方法](#BKMK__Running_a_test_method_in_the_emulation_context)
+- [使用模拟运行测试方法](#BKMK__Running_a_test_method_in_the_emulation_context)
 
-  [创建两用类和方法](#BKMK_Creating_dual_use_classes_and_methods)
+  [创建双重使用的类和方法](#BKMK_Creating_dual_use_classes_and_methods)
 
   [使用 TestInitialize 和 TestCleanup 特性创建两用测试类](#BKMK_Using_TestInitialize_and_TestCleanup_attributes_to_create_a_dual_use_test_class)
 
   [处理未仿真的 SharePoint 方法](#BKMK_Handling_non_emulated_SharePoint_methods)
 
-  [有关从头开始编写仿真测试的概述](#BKMK_Writing_emulation_tests_from_scratch__and_a_summary)
+  [从头开始编写仿真测试和摘要](#BKMK_Writing_emulation_tests_from_scratch__and_a_summary)
 
   [示例](#BKMK_Example)
 
   [仿真的 SharePoint 类型](#BKMK_Emulated_SharePoint_types)
 
-## <a name="BKMK_Requirements"></a> 要求
+## <a name="requirements"></a><a name="BKMK_Requirements"></a> 要求
 
 - Microsoft SharePoint 2010（SharePoint 2010 服务器或 SharePoint 2010 Foundation）
 
@@ -55,7 +55,7 @@ Microsoft.SharePoint.Emulators 包提供了一组帮助你对 Microsoft SharePoi
 
   你还应该熟悉一下 [Visual Studio 中的单元测试基础知识](../test/unit-test-basics.md)以及 [Microsoft Fakes](../test/isolating-code-under-test-with-microsoft-fakes.md) 的一些知识。
 
-## <a name="BKMK_The_AppointmentsWebPart_example"></a>AppointmentsWebPart 示例
+## <a name="the-appointmentswebpart-example"></a><a name="BKMK_The_AppointmentsWebPart_example"></a> AppointmentsWebPart 示例
  AppointmentsWebPart 允许你查看和管理 SharePoint 约会列表。
 
  ![约会 Web 部件](../test/media/ut-emulators-appointmentswebpart.png "UT_EMULATORS_AppointmentsWebPart")
@@ -66,9 +66,9 @@ Microsoft.SharePoint.Emulators 包提供了一组帮助你对 Microsoft SharePoi
 
 - `GetAppointmentsForToday` 方法返回今天的约会详细信息。
 
-  [主题内容](#BKMK_In_this_topic)
+  [在本主题中](#BKMK_In_this_topic)
 
-## <a name="BKMK_Converting_an_existing_test"></a>转换现有测试
+## <a name="converting-an-existing-test"></a><a name="BKMK_Converting_an_existing_test"></a> 转换现有测试
  在 SharePoint 组件中方法的典型测试中，测试方法在 SharePoint Foundation 中创建一个临时站点，并将 SharePoint 组件添加到待测试代码所需的站点。 然后测试方法创建并运用组件的实例。 在测试结束时，该站点被撤销。
 
  待测试代码的 `ScheduleAppointment` 方法可能是为该组件编写的第一批方法中的一个：
@@ -136,25 +136,25 @@ public void ScheduleAppointmentReturnsTrueWhenNewAppointmentIsCreated()
 
  Microsoft SharePoint 仿真程序为你提供了一组对象和方法“加倍”，以模仿最常见 SharePoint API 的行为。 仿真方法是不需要运行 SharePoint 的 SharePoint API 的轻量实现。 通过使用 Microsoft Fakes 将对 SharePoint API 的调用绕到 SharePoint 仿真程序的方法加倍，你可以隔离测试并确保正测试所需的代码。 当调用非仿真 SharePoint 方法时，可以使用 Fakes 直接创建所需的行为。
 
- [主题内容](#BKMK_In_this_topic)
+ [在本主题中](#BKMK_In_this_topic)
 
-### <a name="BKMK_Adding_the_Emulators_package_to_a_test_project"></a>将仿真器包添加到测试项目
+### <a name="adding-the-emulators-package-to-a-test-project"></a><a name="BKMK_Adding_the_Emulators_package_to_a_test_project"></a>将仿真器包添加到测试项目
  将 SharePoint 仿真程序添加到测试项目：
 
 1. 在解决方案资源管理器中选择测试项目。
 
-2. 选择快捷菜单中的“管理 NuGet 包...”。
+2. 选择快捷菜单中的“管理 NuGet 包...”****。
 
-3. 在“联机”分类中搜索“`Microsoft.SharePoint.Emulators`”，然后选择“安装”。
+3. 在“联机”**** 分类中搜索“`Microsoft.SharePoint.Emulators`”，然后选择“安装”****。
 
-   ![Sharepoint 仿真程序 NuGet 包](../test/media/ut-emulators-nuget.png "UT_EMULATORS_Nuget")
+   ![Sharepoint 仿真器 NuGet 包](../test/media/ut-emulators-nuget.png "UT_EMULATORS_Nuget")
 
-   [主题内容](#BKMK_In_this_topic)
+   [在本主题中](#BKMK_In_this_topic)
 
-### <a name="BKMK__Running_a_test_method_in_the_emulation_context"></a>运行启用了仿真的测试方法
+### <a name="running-a-test-method-with-emulation"></a><a name="BKMK__Running_a_test_method_in_the_emulation_context"></a>运行启用了仿真的测试方法
  安装包会向项目添加对所需库的引用。 为便于在现有测试类中使用仿真程序，请添加命名空间 `Microsoft.SharePoint.Emulators` 和 `Microsoft.QualityTools.Testing.Emulators`。
 
- 若要在测试方法中支持仿真，请将方法主体包装到创建`SharePointEmulationScope` 对象的 `using` 语句中。 例如:
+ 若要在测试方法中支持仿真，请将方法主体包装到创建`SharePointEmulationScope` 对象的 `using` 语句中。 例如：
 
 ```csharp
 
@@ -186,11 +186,11 @@ public void ScheduleAppointmentReturnsTrueWhenNewAppointmentIsCreated()
 
  执行测试方法时，仿真程序运行时将调用 Microsoft Fakes 以将代码动态注入 SharePoint 方法，从而将对这些方法的调用转移到 Microsoft.SharePoint.Fakes.dll 中声明的委托。 Microsoft.SharePoint.Emulators.dll 实现仿真方法的委托，以非常接近地模拟实际的 SharePoint 行为。 当测试方法或待测试的组件调用 SharePoint 方法时，导致的行为将是仿真。
 
- ![仿真器执行流程](../test/media/ut-emulators-flowchart.png "UT_EMULATORS_FlowChart")
+ ![仿真器执行流](../test/media/ut-emulators-flowchart.png "UT_EMULATORS_FlowChart")
 
- [主题内容](#BKMK_In_this_topic)
+ [在本主题中](#BKMK_In_this_topic)
 
-## <a name="BKMK_Creating_dual_use_classes_and_methods"></a>创建两用类和方法
+## <a name="creating-dual-use-classes-and-methods"></a><a name="BKMK_Creating_dual_use_classes_and_methods"></a>创建两用类和方法
  若要创建可同时用于针对实际 SharePoint API 的整体测试以及使用仿真程序的独立单元测试的方法，请使用重载构造函数 `SharePointEmulationScope(EmulationMode)` 包装你的测试方法代码。 `EmulationMode` 枚举的两个值指定作用域是否使用仿真程序 (`EmulationMode.Enabled`) 或作用域是否使用 SharePoint API (`EmulationMode.Passthrough`)。
 
  例如，下面的示例演示如何将上一个测试修改为两用：
@@ -225,9 +225,9 @@ public void ScheduleAppointmentReturnsTrueWhenNewAppointmentIsCreated()
 }
 ```
 
- [主题内容](#BKMK_In_this_topic)
+ [在本主题中](#BKMK_In_this_topic)
 
-## <a name="BKMK_Using_TestInitialize_and_TestCleanup_attributes_to_create_a_dual_use_test_class"></a>使用 TestInitialize 和 TestCleanup 特性创建两用测试类
+## <a name="using-testinitialize-and-testcleanup-attributes-to-create-a-dual-use-test-class"></a><a name="BKMK_Using_TestInitialize_and_TestCleanup_attributes_to_create_a_dual_use_test_class"></a> 使用 TestInitialize 和 TestCleanup 特性创建双重使用测试类
  如果你在使用 `SharePointEmulationScope` 的类中运行全部或大部分测试，则可以利用类级别技术来设置仿真模式。
 
 - 使用 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestInitializeAttribute> 和 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestCleanupAttribute> 特性化的测试类方法可以创建和销毁该作用域。
@@ -292,9 +292,9 @@ namspace MySPAppTests
 
 ```
 
- [主题内容](#BKMK_In_this_topic)
+ [在本主题中](#BKMK_In_this_topic)
 
-## <a name="BKMK_Handling_non_emulated_SharePoint_methods"></a>处理未仿真的 SharePoint 方法
+## <a name="handling-non-emulated-sharepoint-methods"></a><a name="BKMK_Handling_non_emulated_SharePoint_methods"></a> 处理非仿真 SharePoint 方法
  并非所有 SharePoint 类型都是仿真的，并非某些仿真类型中的所有方法都是仿真的。 如果待测试的代码调用非仿真 SharePoint 方法，该方法将引发 `NotSupportedException` 异常。 发生异常时，需要添加该 SharePoint 方法的 Fakes 填充码。
 
  **设置 Sharepoint Fakes**
@@ -383,9 +383,9 @@ public void GetAppointmentsForTodayReturnsOnlyTodaysAppointments()
 
  在此方法中，我们首先测试是否支持仿真。 如果是，我们将为 `SPList` 列表创建一个 Fakes 填充码对象，然后创建一个方法并将其分配给其 `GetItemsSPQuery` 委托。 委托使用 Fakes `Bind` 方法将正确的列表项添加到返回到调用方的 `ShimSPListItemCollection`。
 
- [主题内容](#BKMK_In_this_topic)
+ [在本主题中](#BKMK_In_this_topic)
 
-## <a name="BKMK_Writing_emulation_tests_from_scratch__and_a_summary"></a>有关从头开始编写仿真测试的概述
+## <a name="writing-emulation-tests-from-scratch-and-a-summary"></a><a name="BKMK_Writing_emulation_tests_from_scratch__and_a_summary"></a>有关从头开始编写仿真测试的概述
  虽然前述章节中介绍的创建仿真和两用测试的技术假设你要转换现有测试，但你也可以使用这些技术来从头开始编写测试。 下面的列表总结了这些技术：
 
 - 若要在测试项目中使用仿真程序，请向项目添加 Microsoft.SharePoint.Emulators NuGet 包。
@@ -400,9 +400,9 @@ public void GetAppointmentsForTodayReturnsOnlyTodaysAppointments()
 
 - 如果测试类中的全部或大部分测试方法都在仿真上下文中执行，则可以使用类级别的 `TestInitialize` 特性化方法来创建 `SharePointEmulationScope` 对象，使用类级别的字段来设置仿真模式。 这将帮助你实现仿真模式更改的自动化。 然后，使用 `TestCleanup` 特性化方法来释放作用域对象。
 
-  [主题内容](#BKMK_In_this_topic)
+  [在本主题中](#BKMK_In_this_topic)
 
-## <a name="BKMK_Example"></a> 示例
+## <a name="example"></a><a name="BKMK_Example"></a> 示例
  下面是最后一个示例，示例中整合了上述的 SharePoint 仿真程序技术：
 
 ```csharp
@@ -522,7 +522,7 @@ namspace MySPAppTests
 
 ```
 
-## <a name="BKMK_Emulated_SharePoint_types"></a>仿真的 SharePoint 类型
+## <a name="emulated-sharepoint-types"></a><a name="BKMK_Emulated_SharePoint_types"></a>仿真的 SharePoint 类型
  [Microsoft.SharePoint.SPField](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPField)
 
  [Microsoft.SharePoint.SPFieldIndex](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFieldIndex)
@@ -585,7 +585,7 @@ namspace MySPAppTests
 
  [Microsoft.SharePoint.SPWebCollection](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPWebCollection)
 
- [主题内容](#BKMK_In_this_topic)
+ [在本主题中](#BKMK_In_this_topic)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [单元测试代码](../test/unit-test-your-code.md)[通过编码的 UI 测试来测试 Sharepoint 2010 应用程序](../test/testing-sharepoint-2010-applications-with-coded-ui-tests.md) [Web 性能和负载测试 SharePoint 2010 和 2013](https://msdn.microsoft.com/library/20c2e469-0e4e-4296-a739-c0e8fff36e54) [开发 sharepoint 解决方案](https://msdn.microsoft.com/library/059bce0f-c301-4234-a0b4-9c14b7cdfa3e)的应用程序

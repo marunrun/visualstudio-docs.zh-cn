@@ -15,10 +15,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: f7bf12e9f6c90ce544205370a8ed26440388b0a6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68187019"
 ---
 # <a name="assigntargetpath-task"></a>AssignTargetPath 任务
@@ -36,7 +36,7 @@ ms.locfileid: "68187019"
 |`AssignedFiles`|Optional<br /><br /> <xref:Microsoft.Build.Framework.ITaskItem> `[]` 输出参数。<br /><br /> 包含生成的文件列表。|  
   
 ## <a name="remarks"></a>备注  
- 除上面列出的参数外，此任务还从 <xref:Microsoft.Build.Tasks.TaskExtension> 类继承参数，后者自身继承自 <xref:Microsoft.Build.Utilities.Task> 类。 有关这些其他参数的列表及其说明的信息，请参阅 [TaskExtension Base Class](../msbuild/taskextension-base-class.md)。  
+ 除上面列出的参数外，此任务还从 <xref:Microsoft.Build.Tasks.TaskExtension> 类继承参数，后者自身继承自 <xref:Microsoft.Build.Utilities.Task> 类。 有关这些其他参数及其说明的列表，请参阅 [TaskExtension 基类](../msbuild/taskextension-base-class.md)。  
   
 ## <a name="example"></a>示例  
  下例执行 `AssignTargetPath` 任务以对项目进行配置。  
@@ -55,5 +55,5 @@ RootFolder="Resources"
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [任务](../msbuild/msbuild-tasks.md)   
- [任务参考](../msbuild/msbuild-task-reference.md)
+ [操作](../msbuild/msbuild-tasks.md)   
+ [任务引用](../msbuild/msbuild-task-reference.md)
