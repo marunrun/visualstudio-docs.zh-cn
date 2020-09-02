@@ -10,10 +10,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 5f13921dea810ab2185e626cc2889f339d9d174f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62537175"
 ---
 # <a name="creating-basic-profiling-reports-from-the-command-line"></a>从命令行创建基本分析报告
@@ -27,7 +27,7 @@ ms.locfileid: "62537175"
  **VSPerfReport** `VSPFile` **/Summary:All**  
  生成所有适用于 .vsp 或 .vsps 文件的报告。  
   
- **VSPerfReport** `VSPFile` **/Summary:**`ReportType`[,`ReportType`...]  
+ **VSPerfReport** `VSPFile`**/Summary：** `ReportType`[,`ReportType`...]  
  生成指定的报告类型。  
   
  **VSPerfReport** `VSPFile` **/CallTrace**  
@@ -42,15 +42,15 @@ ms.locfileid: "62537175"
 |**Function**|按函数列出分析数据。|-   [采样数据](../profiling/functions-view-sampling-data.md)<br />-   [检测数据](../profiling/functions-view-instrumentation-data.md)<br />-   [.NET 内存采样数据](../profiling/functions-view-dotnet-memory-sampling-data.md)<br />-   [.NET 内存检测数据](../profiling/functions-view-dotnet-memory-instrumentation-data.md)<br />-   [争用数据](../profiling/functions-view-contention-data.md)|  
 |**CallTree**|表示分析运行期间函数的执行路径和分析数据。|-   [检测数据](../profiling/call-tree-view-instrumentation-data.md)<br />-   [采样数据](../profiling/call-tree-view-sampling-data.md)<br />-   [.NET 内存采样数据](../profiling/call-tree-view-dotnet-memory-sampling-data.md)<br />-   [.NET 内存检测数据](../profiling/call-tree-view-dotnet-memory-instrumentation-data.md)<br />-   [争用数据](../profiling/call-tree-view-contention-data.md)|  
 |**计数器**|列出分析运行期间所收集的分析标记和 Windows 性能计数器值。|-   [标记视图](../profiling/marks-view.md)|  
-|**Ip**|按说明列出分析数据。|-   [采样数据](../profiling/instruction-pointers-ips-view-sampling-data.md)<br />-   [.NET 内存采样数据](../profiling/instruction-pointers-ips-view-dotnet-memory-sampling-data.md)<br />-   [争用数据](../profiling/instruction-pointers-ips-view-contention-data.md)|  
-|**Life**|列出所分配对象的生存期。|-   [“对象生存期”视图](../profiling/object-lifetime-view.md)|  
-|**Line**|按源代码行列出分析数据。|-   [采样数据](../profiling/lines-view-sampling-data.md)<br />-   [.NET 内存采样数据](../profiling/lines-view-dotnet-memory-sampling-data.md)<br />-   [争用数据](../profiling/lines-view-contention-data.md)|  
-|**Header**|分析数据文件标头信息。|特定于文件。|  
+|**Lip**|按说明列出分析数据。|-   [采样数据](../profiling/instruction-pointers-ips-view-sampling-data.md)<br />-   [.NET 内存采样数据](../profiling/instruction-pointers-ips-view-dotnet-memory-sampling-data.md)<br />-   [争用数据](../profiling/instruction-pointers-ips-view-contention-data.md)|  
+|**Life**|列出所分配对象的生存期。|-   [对象生存期视图](../profiling/object-lifetime-view.md)|  
+|**线条**|按源代码行列出分析数据。|-   [采样数据](../profiling/lines-view-sampling-data.md)<br />-   [.NET 内存采样数据](../profiling/lines-view-dotnet-memory-sampling-data.md)<br />-   [争用数据](../profiling/lines-view-contention-data.md)|  
+|**标头**|分析数据文件标头信息。|特定于文件。|  
 |**标记**|分析运行期间收集的分析标记。|-   [标记视图](../profiling/marks-view.md)|  
 |**模块**|列出模块的分析数据。|-   [采样数据](../profiling/modules-view-sampling-data.md)<br />-   [检测数据](../profiling/modules-view-instrumentation-data.md)<br />-   [.NET 内存采样数据](../profiling/modules-view-dotnet-memory-sampling-data.md)<br />-   [.NET 内存检测数据](../profiling/modules-view-dotnet-memory-instrumentation-data.md)<br />-   [争用数据](../profiling/modules-view-contention-data.md)|  
-|**Process**|列出进程的分析数据。|-   [“进程”视图](../profiling/process-view.md)<br />-   [争用数据](../profiling/process-view-contention-data.md)|  
-|**线程**|列出线程的分析数据。|-   [“进程”视图](../profiling/process-view.md)|  
-|**Type**|按类型列出分配分析数据。|-   [“分配”视图](../profiling/dotnet-memory-allocations-view.md)|  
-|**Contention**|资源争用。|-   [资源争用](../profiling/resource-contentions-view-contention-data.md)|  
+|**处理**|列出进程的分析数据。|-   [进程视图](../profiling/process-view.md)<br />-   [争用数据](../profiling/process-view-contention-data.md)|  
+|**线程**|列出线程的分析数据。|-   [进程视图](../profiling/process-view.md)|  
+|**类型**|按类型列出分配分析数据。|-   [分配视图](../profiling/dotnet-memory-allocations-view.md)|  
+|**争议**|资源争用。|-   [资源争用](../profiling/resource-contentions-view-contention-data.md)|  
 |**RuleWarnings**|列出性能规则问题。|-   列出规则问题的 CheckId、描述和源代码位置。|  
 |**ETW**|列出分析运行期间收集的 Windows 事件跟踪 (ETW) 事件。|-   [ETW 报告](../profiling/event-tracing-for-windows-etw-report.md)|

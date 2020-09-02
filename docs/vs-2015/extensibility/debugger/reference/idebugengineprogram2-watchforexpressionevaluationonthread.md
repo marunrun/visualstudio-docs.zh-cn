@@ -1,5 +1,5 @@
 ---
-title: IDebugEngineProgram2::WatchForExpressionEvaluationOnThread |Microsoft Docs
+title: IDebugEngineProgram2：： WatchForExpressionEvaluationOnThread |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: ebc513ead1ae911147217becd8f541cb11cd5585
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62431467"
 ---
 # <a name="idebugengineprogram2watchforexpressionevaluationonthread"></a>IDebugEngineProgram2::WatchForExpressionEvaluationOnThread
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-允许 （或不允许） 表达式计算，即使程序已停止，在给定的线程上发生。  
+允许 (或不允许) 表达式计算在给定线程上发生，即使程序已停止也是如此。  
   
 ## <a name="syntax"></a>语法  
   
@@ -48,29 +48,29 @@ int WatchForExpressionEvaluationOnThread( 
   
 #### <a name="parameters"></a>参数  
  `pOriginatingProgram`  
- [in][IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)对象，表示计算表达式的程序。  
+ 中表示计算表达式的程序的 [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) 对象。  
   
  `dwTid`  
- [in]指定线程的标识符。  
+ 中指定线程的标识符。  
   
  `dwEvalFlags`  
- [in]中的标志的组合[EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md)指定计算的执行方式的枚举。  
+ 中 [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md) 枚举中的标志的组合，该枚举指定如何执行计算。  
   
  `pExprCallback`  
- [in][IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)要用来发送在表达式计算期间发生的调试事件的对象。  
+ 中用于发送在表达式计算过程中发生的调试事件的 [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) 对象。  
   
  `fWatch`  
- [in]如果非零值 (`TRUE`)，由标识的线程上允许表达式评估`dwTid`; 否则为零 (`FALSE`) 不允许该线程上的表达式计算。  
+ 中如果 () 非零 `TRUE` ，则允许对由标识的线程进行表达式计算 `dwTid` ; 否则，零 (`FALSE`) 在该线程上不允许使用表达式计算。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
 ## <a name="remarks"></a>备注  
- 当会话调试管理器 (SDM) 要求的程序，由标识`pOriginatingProgram`参数，以计算表达式，它通过调用此方法将通知所有其他附加的程序。  
+ 当会话调试管理器 (SDM) 请求由参数标识的程序时， `pOriginatingProgram` 它会通过调用此方法通知所有其他附加程序。  
   
- 在一个程序中的表达式计算可能会导致代码运行在另一个，由于函数求值或任何评估`IDispatch`属性。 因此，此方法允许运行并完成即使线程可能会停止此程序中的表达式计算。  
+ 由于函数求值或对任何属性的计算，一个程序中的表达式计算可能会导致代码在其他程序中运行 `IDispatch` 。 因此，此方法允许表达式计算运行并完成，即使此程序中的线程可能已停止也是如此。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugEngineProgram2](../../../extensibility/debugger/reference/idebugengineprogram2.md)   
  [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md)   
  [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)   

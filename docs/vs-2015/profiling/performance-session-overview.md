@@ -13,10 +13,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: ce2c8f124b30d7ff85a96d857894bd84578b318c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62422105"
 ---
 # <a name="performance-session-overview"></a>性能会话概述
@@ -52,14 +52,14 @@ ms.locfileid: "62422105"
   可以在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 项目中配置性能会话作为项目解决方案的一部分，也可以通过 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] IDE 分析任意二进制文件。 可以在性能会话属性页中指定会话属性，也可以使用分析向导。  
   
 ## <a name="collect-profiling-data"></a>收集分析数据  
- 从“性能资源管理器”开始收集分析数据。 可以暂停和恢复分析以限制收集的数据量。 还可以附加到已在运行的进程。  
+ 从“性能资源管理器”  开始收集分析数据。 可以暂停和恢复分析以限制收集的数据量。 还可以附加到已在运行的进程。  
   
- 应用程序启动之后，“数据收集控件”窗口会立即出现在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] IDE 中。 从“数据收集控件”窗口，可以通过暂停和恢复收集过程来分析应用程序的特定部分。 还可以使用“数据收集控件”窗口将标记插入到收集的数据中。 标记是用户定义的数据点，在配置文件视图中显示，可以用于筛选分析数据。  
+ 应用程序启动之后，“数据收集控件”  窗口会立即出现在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] IDE 中。 从“数据收集控件”  窗口，可以通过暂停和恢复收集过程来分析应用程序的特定部分。 还可以使用“数据收集控件”  窗口将标记插入到收集的数据中。 标记是用户定义的数据点，在配置文件视图中显示，可以用于筛选分析数据。  
   
  当目标应用程序关闭时，分析工具会生成分析数据文件 (*.vsp)，并在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] IDE 中显示“摘要报告”视图。  
   
 ## <a name="analyze-the-data-and-identify-performance-issues"></a>分析数据并确定性能问题  
- 结束分析运行时，数据会进行分析，摘要会显示在分析工具“性能报告”视图窗口中。 会为目标应用程序的调用堆栈和各个函数收集分析数据。 报告视图显示应用程序的进程、线程、模块、函数和源代码行的数据范围的性能分析。 函数的分析数据值包括以下这些：  
+ 结束分析运行时，数据会进行分析，摘要会显示在分析工具“性能报告”  视图窗口中。 会为目标应用程序的调用堆栈和各个函数收集分析数据。 报告视图显示应用程序的进程、线程、模块、函数和源代码行的数据范围的性能分析。 函数的分析数据值包括以下这些：  
   
 - 在函数以及函数调用的子函数中所用的总时间（非独占值）。  
   
@@ -76,6 +76,6 @@ ms.locfileid: "62422105"
 ## <a name="generate-a-report-of-the-results"></a>生成结果的报告  
  可以将任何性能报告视图的行粘贴到电子邮件和电子表格中，并且可以生成包含一个或多个视图的数据的报告。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [概述](../profiling/overviews-performance-tools.md)   
  [演练：确定性能问题](../profiling/walkthrough-identifying-performance-problems.md)

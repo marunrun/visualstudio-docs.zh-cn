@@ -1,5 +1,5 @@
 ---
-title: IDebugExpressionEvaluator2::PreloadModules | Microsoft Docs
+title: IDebugExpressionEvaluator2：:P reloadModules |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,10 +12,10 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: d6d7236f19032fa0767a050ac84afe4b4e1585f0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62540233"
 ---
 # <a name="idebugexpressionevaluator2preloadmodules"></a>IDebugExpressionEvaluator2::PreloadModules
@@ -39,16 +39,16 @@ int PreloadModules (
   
 #### <a name="parameters"></a>参数  
  `pSym`  
- [in]将为其预加载模块符号提供程序。  
+ 中将为其预加载模块的符号提供程序。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
 ## <a name="remarks"></a>备注  
- 执行托管进程附加操作时使用此可选方法。 它使 EE 有机会来作为附加的一部分预热。  
+ 当您执行宿主进程附加时，将使用此可选方法。 它为该连接提供了 "预热" 的机会。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何实现此方法对于**ExpressionEvaluatorPackage**对象，它公开[IDebugExpressionEvaluator2](../../../extensibility/debugger/reference/idebugexpressionevaluator2.md)接口。  
+ 下面的示例演示如何为公开[IDebugExpressionEvaluator2](../../../extensibility/debugger/reference/idebugexpressionevaluator2.md)接口的**ExpressionEvaluatorPackage**对象实现此方法。  
   
 ```cpp#  
 STDMETHODIMP ExpressionEvaluatorPackage::PreloadModules  
@@ -76,5 +76,5 @@ Error:
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugExpressionEvaluator2](../../../extensibility/debugger/reference/idebugexpressionevaluator2.md)

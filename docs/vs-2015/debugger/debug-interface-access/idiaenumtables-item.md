@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 9eec94a5a02eda8fe9b1b3bf8f76f5050ab1e020
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62423863"
 ---
 # <a name="idiaenumtablesitem"></a>IDiaEnumTables::Item
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-检索通过索引或名称的表。  
+通过索引或名称检索表。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,16 +36,16 @@ HRESULT Item ( 
   
 #### <a name="parameters"></a>参数  
  `index`  
- [in]索引或名称[IDiaTable](../../debugger/debug-interface-access/idiatable.md)要检索。 如果使用整数变量，则它必须是介于 0 到`count`-1，其中`count`与返回的[idiaenumtables:: Get_count](../../debugger/debug-interface-access/idiaenumtables-get-count.md)方法。  
+ 中要检索的 [IDiaTable](../../debugger/debug-interface-access/idiatable.md) 的索引或名称。 如果使用整数变量，则该值必须介于0到 `count` -1 之间，其中 `count` 是 [IDiaEnumTables：： get_Count](../../debugger/debug-interface-access/idiaenumtables-get-count.md) 方法返回的。  
   
  `table`  
- [out]返回[IDiaTable](../../debugger/debug-interface-access/idiatable.md)对象，表示所需的表。  
+ 弄返回一个 [IDiaTable](../../debugger/debug-interface-access/idiatable.md) 对象，该对象表示所需的表。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
 ## <a name="remarks"></a>备注  
- 如果指定的字符串变体，则该字符串命名为特定表。 该名称应是表名称之一中定义[常量 (调试接口访问 SDK)](../../debugger/debug-interface-access/constants-debug-interface-access-sdk.md)。  
+ 如果指定字符串变量，则该字符串将命名特定表。 该名称应为 [ (调试接口访问 SDK) 的常量 ](../../debugger/debug-interface-access/constants-debug-interface-access-sdk.md)中定义的表名称之一。  
   
 ## <a name="example"></a>示例  
   
@@ -57,8 +57,8 @@ IDiaTable* pTable;
 pEnumTables->Item( var, &pTable );  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDiaEnumTables](../../debugger/debug-interface-access/idiaenumtables.md)   
  [IDiaTable](../../debugger/debug-interface-access/idiatable.md)   
- [IDiaEnumTables::get_Count](../../debugger/debug-interface-access/idiaenumtables-get-count.md)   
+ [IDiaEnumTables：： get_Count](../../debugger/debug-interface-access/idiaenumtables-get-count.md)   
  [常量（调试接口访问 SDK）](../../debugger/debug-interface-access/constants-debug-interface-access-sdk.md)

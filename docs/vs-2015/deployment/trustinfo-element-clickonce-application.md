@@ -1,5 +1,5 @@
 ---
-title: '&lt;trustInfo&gt;元素 （ClickOnce 应用程序） |Microsoft Docs'
+title: '&lt;&gt; (ClickOnce 应用程序) 的 trustInfo 元素 |Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-deployment
@@ -24,13 +24,13 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: ca7e19925288b1509fec08235f546b84b4afffef
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62420068"
 ---
-# <a name="lttrustinfogt-element-clickonce-application"></a>&lt;trustInfo&gt;元素 （ClickOnce 应用程序）
+# <a name="lttrustinfogt-element-clickonce-application"></a>&lt;&gt; (ClickOnce 应用程序的 trustInfo 元素) 
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 描述应用程序要在客户端计算机上运行所需的最低安全权限。  
@@ -72,7 +72,7 @@ ms.locfileid: "62420068"
 ## <a name="elements-and-attributes"></a>元素和属性  
  `trustInfo` 元素是必需的，它位于 `asm.v2` 命名空间中。 它没有属性，并包含下列元素。  
   
-## <a name="security"></a>安全性  
+## <a name="security"></a>security  
  必需。 此元素是 `trustInfo` 元素的子元素。 它包含 `applicationRequestMinimum` 元素，但没有属性。  
   
 ## <a name="applicationrequestminimum"></a>applicationRequestMinimum  
@@ -145,7 +145,7 @@ ms.locfileid: "62420068"
   
 - `Level`  
   
-     必需。 标识应用程序正在请求的安全级别。 可能的值有：  
+     必需。 标识应用程序正在请求的安全级别。 可能的值包括：  
   
      `asInvoker`，不请求其他权限。 此级别不需要其他信任提示。  
   
@@ -164,7 +164,7 @@ ms.locfileid: "62420068"
   
  将授予所有使用 `defaultAssemblyRequest` 和 `assemblyRequest` 请求的权限，而无需提示用户该部署清单是否具有有效的信任许可证。  
   
- 有关权限提升的详细信息，请参阅[保护 ClickOnce 应用程序](../deployment/securing-clickonce-applications.md)。 有关策略部署的详细信息，请参阅 [Trusted Application Deployment Overview](../deployment/trusted-application-deployment-overview.md)。  
+ 有关权限提升的详细信息，请参阅 [保护 ClickOnce 应用程序](../deployment/securing-clickonce-applications.md)。 有关策略部署的详细信息，请参阅 [Trusted Application Deployment Overview](../deployment/trusted-application-deployment-overview.md)。  
   
 ## <a name="examples"></a>示例  
  下面的三个代码示例说明了默认命令的安全区域的 `trustInfo` 元素 - Internet、LocalIntranet 和 FullTrust - 用于 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 部署的应用程序清单中。  
@@ -270,6 +270,6 @@ ms.locfileid: "62420068"
 </trustInfo>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [受信任的应用程序部署概述](../deployment/trusted-application-deployment-overview.md)   
- [ndptecclick](../deployment/clickonce-application-manifest.md)
+ [ClickOnce 应用程序清单](../deployment/clickonce-application-manifest.md)

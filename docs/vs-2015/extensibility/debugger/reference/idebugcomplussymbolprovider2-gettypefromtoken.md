@@ -1,5 +1,5 @@
 ---
-title: 'IDebugComPlusSymbolProvider2:: GetTypeFromToken |Microsoft Docs'
+title: IDebugComPlusSymbolProvider2：： GetTypeFromToken |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,10 +12,10 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 1fa5e258390040fc70c0538c929a166984c3a7b0
-ms.sourcegitcommit: f369ff7e84b0216f01570a486c7be80ca6d0e61a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62540555"
 ---
 # <a name="idebugcomplussymbolprovider2gettypefromtoken"></a>IDebugComPlusSymbolProvider2::GetTypeFromToken
@@ -54,10 +54,10 @@ int GetTypeFromToken(
  中要检索的类型的标记。  
   
  `ppField`  
- 弄返回由[IDebugField](../../../extensibility/debugger/reference/idebugfield.md)表示的类型。  
+ 弄返回由 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)表示的类型。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功, 则`S_OK`返回; 否则返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何为公开[IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md)接口的**CDebugSymbolProvider**对象实现此方法。  
@@ -88,5 +88,5 @@ Error:
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md)

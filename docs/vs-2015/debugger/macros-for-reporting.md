@@ -1,5 +1,5 @@
 ---
-title: 用于报告的宏 |Microsoft Docs
+title: 用于报告的宏 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -25,21 +25,21 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: e4aee33d571f95e24a359fa2bc7e12ae8d64eae0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62431623"
 ---
 # <a name="macros-for-reporting"></a>用于报告的宏
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-可以使用 **_RPTn**，并 **_RPTFn**在 CRTDBG 中定义的宏。H、 要替换的使用`printf`语句进行调试。 这些宏自动不会显示在你的发布生成何时 **_DEBUG**未定义，因此无需将它们括在 **#ifdef**s。  
+可以使用 CRTDBG.H 中定义的 **_RPTn**和 **_RPTFn** 宏。H，用来替换语句的使用 `printf` 。 未定义 **_DEBUG** 时，这些宏会自动消失于发行版本中，因此不需要将它们包含在 **#ifdef**中。  
   
 |宏|描述|  
 |-----------|-----------------|  
-|_RPT0、_RPT1、_RPT2、_RPT3、_RPT4|向四个自变量输出一个消息字符串和零。 对于从 _RPT1 到 _RPT4，消息字符串作为参数的 printf 样式的格式化字符串。|  
-|**_RPTF0**, **_RPTF1**, **,_RPTF2**, **_RPTF4**|与相同 **_RPTn** ，但这些宏还输出宏所在的位置的文件名称和行号。|  
+|_RPT0、_RPT1、_RPT2、_RPT3、_RPT4    |向四个自变量输出一个消息字符串和零。 对于从 _RPT1 到 _RPT4，消息字符串作为参数的 printf 样式的格式化字符串。|  
+|**_RPTF0**， **_RPTF1**， **，_RPTF2**， **_RPTF4**|与 **_RPTn** 相同，但这些宏还输出宏所在的文件名和行号。|  
   
  请看下面的示例：  
   
@@ -74,7 +74,7 @@ if (someVar > MAX_SOMEVAR) _RPTF2(_CRT_WARN, "In NameOfThisFunc( ), someVar= %d,
 #endif  
 ```  
   
- 调用一次**ALERT_IF2**无法执行的所有功能**printf**在本主题开头的代码：  
+ 一次调用 **ALERT_IF2** 可以在本主题的开头执行 **printf** 代码的所有函数：  
   
 ```  
 ALERT_IF2(someVar > MAX_SOMEVAR, "OVERFLOW! In NameOfThisFunc( ),   
@@ -83,5 +83,5 @@ someVar=%d, otherVar=%d.\n", someVar, otherVar );
   
  因为可以方便地更改自定义宏，以便向不同目标报告或多或少的信息（取决于怎样更方便），所以该方法在调试要求不断发展时尤其有用。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [CRT 调试方法](../debugger/crt-debugging-techniques.md)

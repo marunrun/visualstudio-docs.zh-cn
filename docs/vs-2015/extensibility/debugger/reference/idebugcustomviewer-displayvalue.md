@@ -1,5 +1,5 @@
 ---
-title: IDebugCustomViewer::DisplayValue | Microsoft Docs
+title: IDebugCustomViewer：:D isplayValue |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,10 +13,10 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: bda4c60e9164ae195c0e3ba49893b1a818c66f14
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62421367"
 ---
 # <a name="idebugcustomviewerdisplayvalue"></a>IDebugCustomViewer::DisplayValue
@@ -46,26 +46,26 @@ int DisplayValue(
   
 #### <a name="parameters"></a>参数  
  `hwnd`  
- [in]父窗口  
+ 中父窗口  
   
  `dwID`  
- [in]支持多个类型的自定义查看器的 ID。  
+ 中支持多种类型的自定义查看器的 ID。  
   
  `pHostServices`  
  [in] 保留。 始终设置为 null。  
   
  `pDebugProperty`  
- [in]可用于检索要显示的值的接口。  
+ 中可用于检索要显示的值的接口。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
 ## <a name="remarks"></a>备注  
- 显示的"modal"在于此方法将创建必要的窗口，显示的值，等待输入，并关闭窗口，然后再返回给调用方所有。 这意味着该方法必须处理的显示属性的值，从创建一个用于输出，等待用户输入，到销毁窗口的窗口的所有方面。  
+ 显示是 "模式"，此方法将在返回到调用方之前创建所需的窗口、显示值、等待输入并关闭窗口。 这意味着该方法必须处理显示属性值的所有方面，从创建用于输出的窗口到等待用户输入来销毁窗口。  
   
- 若要支持上更改的值给定[IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md)对象，可以使用[SetValueAsStringWithError](../../../extensibility/debugger/reference/idebugproperty3-setvalueasstringwitherror.md)方法 — 如果值可以表示为一个字符串。 否则，将创建一个自定义接口所需 — 独占向表达式计算器实施这`DisplayValue`方法，实现对同一对象`IDebugProperty3`接口。 此自定义接口将提供用于更改数据的任意大小或复杂性的方法。  
+ 若要支持更改给定 [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) 对象上的值，可以使用 [SetValueAsStringWithError](../../../extensibility/debugger/reference/idebugproperty3-setvalueasstringwitherror.md) 方法（如果值可以表示为字符串）。 否则，必须 `DisplayValue` 在实现接口的同一对象上创建自定义接口，该接口独占到实现此方法的表达式计算器 `IDebugProperty3` 。 此自定义接口将提供用于更改任意大小或复杂性的数据的方法。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugCustomViewer](../../../extensibility/debugger/reference/idebugcustomviewer.md)   
  [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md)   
  [SetValueAsStringWithError](../../../extensibility/debugger/reference/idebugproperty3-setvalueasstringwitherror.md)

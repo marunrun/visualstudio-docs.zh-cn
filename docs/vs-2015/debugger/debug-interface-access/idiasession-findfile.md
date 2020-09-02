@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 1e791bc09ba3dd4f1811c650926eadb0f7f0462a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62431636"
 ---
 # <a name="idiasessionfindfile"></a>IDiaSession::findFile
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-检索由编译单位和名称的源文件。  
+按编译单位和名称检索源文件。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,19 +38,19 @@ HRESULT findFile ( 
   
 #### <a name="parameters"></a>参数  
  `pCompiland`  
- [in][IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)对象，表示用于搜索的作为上下文将编译单位。 将此参数设置为`NULL`在所有编译单位中查找源文件。  
+ 中表示要用作搜索上下文的编译单位的 [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) 对象。 将此参数设置为 `NULL` 可以在所有 compiland 中查找源文件。  
   
  `name`  
- [in]指定要检索的源文件的名称。 将此参数设置为`NULL`所有源要检索的文件。  
+ 中指定要检索的源文件的名称。 将此参数设置为可 `NULL` 检索所有源文件。  
   
  `option`  
- [in]指定应用于名称搜索的比较选项。 中的值[NameSearchOptions 枚举](../../debugger/debug-interface-access/namesearchoptions.md)枚举可以单独或组合使用。  
+ 中指定应用于名称搜索的比较选项。 [NameSearchOptions 枚举](../../debugger/debug-interface-access/namesearchoptions.md)枚举中的值可以单独使用，也可以组合使用。  
   
  `ppResult`  
- [out]返回[IDiaEnumSourceFiles](../../debugger/debug-interface-access/idiaenumsourcefiles.md)检索包含源文件的列表的对象。  
+ 弄返回一个 [IDiaEnumSourceFiles](../../debugger/debug-interface-access/idiaenumsourcefiles.md) 对象，该对象包含检索到的源文件的列表。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
 ## <a name="example"></a>示例  
   
@@ -59,7 +59,7 @@ IDiaEnumSourceFiles* pEnum;
 pSession->findFile( NULL, L"sourcefile.cpp", nsFNameExt, &pEnum );  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDiaEnumSourceFiles](../../debugger/debug-interface-access/idiaenumsourcefiles.md)   
  [IDiaSession](../../debugger/debug-interface-access/idiasession.md)   
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   

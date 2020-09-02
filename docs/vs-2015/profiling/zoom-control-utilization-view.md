@@ -14,10 +14,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: f018388abc91bc26f1bef30d066a9b6d8aa6f097
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62422664"
 ---
 # <a name="zoom-control-utilization-view"></a>“缩放”控件（使用率视图）
@@ -27,5 +27,5 @@ ms.locfileid: "62422664"
   
  在 CPU 使用率图表或 GPU 活动图中，可以拖动鼠标指针创建一个突出显示的区域。 释放鼠标按钮后，视图会放大选定的范围。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用率视图](../profiling/utilization-view.md)

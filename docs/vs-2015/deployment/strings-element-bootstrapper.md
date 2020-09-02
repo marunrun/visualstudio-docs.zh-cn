@@ -1,5 +1,5 @@
 ---
-title: '&lt;字符串&gt;元素 （引导程序） |Microsoft Docs'
+title: '&lt;&gt; (引导程序) 的字符串元素 |Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-deployment
@@ -20,16 +20,16 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: dd799020e50121e2f3e9a6ba7ad90fd79a1241cb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62421520"
 ---
-# <a name="ltstringsgt-element-bootstrapper"></a>&lt;字符串&gt;元素 （引导程序）
+# <a name="ltstringsgt-element-bootstrapper"></a>&lt; (引导程序的字符串 &gt; 元素) 
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-定义产品名称、 包名称和安装错误消息的本地化的字符串。  
+定义产品名称、包名称和安装错误消息的本地化字符串。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,19 +43,19 @@ ms.locfileid: "62421520"
 ```  
   
 ## <a name="elements-and-attributes"></a>元素和属性  
- `Strings`元素是子元素的`Package`元素。 它没有任何属性。  
+ `Strings`元素是元素的子元素 `Package` 。 它没有属性。  
   
 ## <a name="string"></a>String  
- `String`元素是子元素的`Strings`元素。 一个`Strings`元素可能具有一个或多个`String`元素。  
+ `String`元素是元素的子元素 `Strings` 。 `Strings`元素可以有一个或多个 `String` 元素。  
   
  `String` 具有以下属性。  
   
-|特性|描述|  
+|特性|说明|  
 |---------------|-----------------|  
 |`Name`|必需。 字符串的名称。|  
   
 ## <a name="example"></a>示例  
- 下面的代码示例指定了所有的英文字符串[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]安装程序。  
+ 下面的代码示例指定安装程序的所有英文字符串 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 。  
   
 ```  
 <Strings>  
@@ -76,5 +76,5 @@ ms.locfileid: "62421520"
 </Strings>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [\<Package> 元素](../deployment/package-element-bootstrapper.md)
