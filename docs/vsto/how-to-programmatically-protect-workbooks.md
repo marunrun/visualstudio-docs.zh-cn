@@ -18,18 +18,18 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: ee7444c63c2d774e9b22ea612049f09429729c79
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85537626"
 ---
 # <a name="how-to-programmatically-protect-workbooks"></a>如何：以编程方式保护工作簿
-  您可以保护 Microsoft Office Excel 工作簿，使用户不能添加或删除工作表，也不能以编程方式取消保护工作簿。 您可以根据需要指定密码，指示是否要保护结构（以便用户无法移动工作表），并指示是否要保护工作簿的 windows。
+  您可以保护 Microsoft Office Excel 工作簿，使用户不能添加或删除工作表，也不能以编程方式取消保护工作簿。 您可以选择指定一个密码，指出您是否希望 (受保护的结构，以使用户不能在) 周围移动工作表，并指示是否要保护工作簿的 windows。
 
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]
 
- 保护工作簿不会阻止用户编辑单元格。 若要保护数据，必须保护工作表。 有关详细信息，请参阅[如何：以编程方式保护工作表](../vsto/how-to-programmatically-protect-worksheets.md)。
+ 保护工作簿不会阻止用户编辑单元格。 若要保护数据，必须保护工作表。 有关详细信息，请参阅 [如何：以编程方式保护工作表](../vsto/how-to-programmatically-protect-worksheets.md)。
 
  下面的代码示例使用变量来包含从用户获取的密码。
 

@@ -1,5 +1,5 @@
 ---
-title: '&lt;update &gt; 元素（Visual Studio 中的 Office 开发）'
+title: '&lt;&gt; (Visual Studio 中的 Office 开发更新元素) '
 ms.date: 02/02/2017
 ms.topic: reference
 dev_langs:
@@ -15,13 +15,13 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 241bddb8c79a01bb1ba6921486a4dc46d99940cc
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85537379"
 ---
-# <a name="ltupdategt-element-office-development-in-visual-studio"></a>&lt;update &gt; 元素（Visual Studio 中的 Office 开发）
+# <a name="ltupdategt-element-office-development-in-visual-studio"></a>&lt;&gt; (Visual Studio 中的 Office 开发更新元素) 
   `update`元素指定解决方案检查更新的时间间隔。
 
 ## <a name="syntax"></a>语法
@@ -71,7 +71,7 @@ ms.locfileid: "85537379"
 ## <a name="example-of-setting-a-default-update-interval"></a>设置默认更新间隔的示例
 
 ### <a name="description"></a>说明
- 下面的代码示例演示 `update` Office 解决方案的应用程序清单中的元素。 此代码示例是[Office 解决方案的应用程序清单](../vsto/application-manifests-for-office-solutions.md)中提供的一个更大示例的一部分。
+ 下面的代码示例演示 `update` Office 解决方案的应用程序清单中的元素。 此代码示例是 [Office 解决方案的应用程序清单](../vsto/application-manifests-for-office-solutions.md)中提供的一个更大示例的一部分。
 
 ### <a name="code"></a>代码
 
@@ -81,7 +81,7 @@ ms.locfileid: "85537379"
 </vstav3:update>
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [使用 ClickOnce 部署 Office 解决方案](../vsto/deploying-an-office-solution-by-using-clickonce.md)
 - [Office 解决方案的应用程序清单](../vsto/application-manifests-for-office-solutions.md)

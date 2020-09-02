@@ -1,5 +1,5 @@
 ---
-title: 自定义参数元素（可视化工作室模板） |微软文档
+title: " (Visual Studio 模板) 的 CustomParameter 元素 |Microsoft Docs"
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,14 +14,14 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 9063a354f03b896e189566e8d84a18caf7509db8
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80739430"
 ---
-# <a name="customparameter-element-visual-studio-templates"></a>自定义参数元素（可视化工作室模板）
-包含自定义参数名称和值，用于从模板创建项目或项时使用。
+# <a name="customparameter-element-visual-studio-templates"></a> (Visual Studio 模板的 CustomParameter 元素) 
+包含从模板创建项目或项时要使用的自定义参数名和值。
 
 ## <a name="syntax"></a>语法
 
@@ -34,9 +34,9 @@ ms.locfileid: "80739430"
 
 ### <a name="attributes"></a>特性
 
-|特性|描述|
+|特性|说明|
 |---------------|-----------------|
-|`Name`|必需。 参数的名称。 参数的格式是 $*名称*$。|
+|`Name`|必需。 参数的名称。 参数的格式为 $*name*$。|
 |`Value`|必需。 参数的替换值。|
 
 ### <a name="child-elements"></a>子元素
@@ -44,15 +44,15 @@ ms.locfileid: "80739430"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
-|[CustomParameters](../extensibility/customparameters-element-visual-studio-templates.md)|对向导进行参数替换时要传递给模板向导的自定义参数进行分组。|
+|[CustomParameters](../extensibility/customparameters-element-visual-studio-templates.md)|在向导进行参数替换时，将要传递给模板向导的自定义参数分组。|
 
 ## <a name="remarks"></a>备注
- 当模板包含`CustomParameter`元素时，每个实例的属性`Name`都将替换为创建的项目或项`Value`文件中的属性。
+ 如果模板包含 `CustomParameter` 元素，则每个实例都会将 `Name` 属性替换为 `Value` 所创建项目或项文件中的属性。
 
 ## <a name="example"></a>示例
- 下面的示例演示如何在模板中使用多个自定义参数。 当从具有以下自定义参数的模板创建项目或项时`$color1$`，模板文件中的所有实例将`$color2$`分别替换为`Red`和`Blue`。
+ 下面的示例演示如何在模板中使用多个自定义参数。 使用以下自定义参数从模板创建项目或项时， `$color1$` 模板文件中和的所有实例 `$color2$` 将分别替换为 `Red` 和 `Blue` 。
 
 ```
 <CustomParameters>
@@ -61,7 +61,7 @@ ms.locfileid: "80739430"
 </CustomParameters>
 ```
 
-## <a name="see-also"></a>请参阅
-- [自定义参数元素（可视化工作室模板）](../extensibility/customparameters-element-visual-studio-templates.md)
+## <a name="see-also"></a>另请参阅
+- [ (Visual Studio 模板的 CustomParameters 元素) ](../extensibility/customparameters-element-visual-studio-templates.md)
 - [模板参数](../ide/template-parameters.md)
-- [可视化工作室模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
+- [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)

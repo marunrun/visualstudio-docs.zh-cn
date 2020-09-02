@@ -14,10 +14,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: e975986a03e7005835653dc98931fc9a44681e28
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65700484"
 ---
 # <a name="concurrency-namespace-concurrency-visualizer"></a>Concurrency 命名空间（并发可视化工具）
@@ -35,12 +35,12 @@ namespace Concurrency;
   
 ### <a name="namespaces"></a>命名空间  
   
-|名称|描述|  
+|名称|说明|  
 |----------|-----------------|  
 |[diagnostic 命名空间](../profiling/diagnostic-namespace.md)|`diagnostics` 命名空间提供用于发出并行可视化工具标记的功能。|  
   
 ## <a name="requirements"></a>要求  
  **标头：** cvmarkersobj.h  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [C 库参考](../profiling/c-library-reference.md)

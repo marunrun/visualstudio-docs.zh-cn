@@ -15,15 +15,15 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: ef5ccc0cf432a5c6782b76c4623bfdc55f66a8b5
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85538550"
 ---
 # <a name="code-analysis-application-errors"></a>代码分析应用程序错误
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-本部分是托管代码分析工具生成的错误消息的引用。 若要获取特定错误消息的相关帮助，请在索引的 "**查找**" 框中键入错误号。
+本部分是托管代码分析工具生成的错误消息的引用。 若要获取特定错误消息的相关帮助，请在索引的 " **查找** " 框中键入错误号。
 
 ## <a name="in-this-section"></a>本节内容
 
@@ -48,7 +48,7 @@ ms.locfileid: "85538550"
 |[CA0066](ca0066.md)|为 **/targetframeworkversion**提供的值 "*VersionID*" 不是已识别的版本。|
 |[CA0067](ca0067.md)|找不到目录。|
 |[CA0068](ca0068.md)|找不到目标程序集 *"AssemblyName"* 的调试信息。|
-|[CA0069](ca0069.md)|使用备用平台。 找不到*FrameworkVersion1* 。 改为使用*FrameworkVersion2* 。 为获得最佳分析结果，请确保安装了正确的 .NET Framework。|
+|[CA0069](ca0069.md)|使用备用平台。 找不到*FrameworkVersion1* 。 改为使用 *FrameworkVersion2* 。 为获得最佳分析结果，请确保安装了正确的 .NET Framework。|
 |[CA0070](ca0070.md)|由于安全权限的原因，无法加载程序集或类型。|
 |[CA0501](ca0501.md)|无法读取输出报告。|
 |[CA0502](ca0502.md)|语言不受支持。|

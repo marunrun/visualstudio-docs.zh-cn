@@ -17,10 +17,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 434cfc541da3c670d8d444b9a4259b33476a17d8
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670513"
 ---
 # <a name="how-to-visualize-a-collection-association-class-designer"></a>如何：可视化集合关联（类设计器）
@@ -34,9 +34,9 @@ ms.locfileid: "72670513"
 
 2. 在类图中扩展类，以便显示属性和字段。
 
-3. 在类中，右键单击该字段或属性，然后选择“显示为集合关联”。
+3. 在类中，右键单击该字段或属性，然后选择“显示为集合关联”****。
 
      此属性或字段将显示为链接到已收集类型的关联行。
 
-## <a name="see-also"></a>请参阅
- [如何：创建类型之间的关联（类设计器）](../ide/how-to-create-associations-between-types-class-designer.md) [设计类和类型（类设计器）](../ide/designing-classes-and-types-class-designer.md) [查看类型和关系（类设计器）](../ide/viewing-types-and-relationships-class-designer.md)
+## <a name="see-also"></a>另请参阅
+ [如何：创建类型之间的关联 (类设计器) ](../ide/how-to-create-associations-between-types-class-designer.md) [设计类和类型 (类设计器](../ide/designing-classes-and-types-class-designer.md)) [查看类型和关系 (类设计器](../ide/viewing-types-and-relationships-class-designer.md)) 

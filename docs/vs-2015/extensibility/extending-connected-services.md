@@ -9,13 +9,13 @@ caps.latest.revision: 4
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 1961b3f67f07f5d3015e7891786b6b213c8e8852
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68204582"
 ---
 # <a name="extending-connected-services"></a>扩展连接的服务
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-在 Visual Studio 连接服务 SDK 可让服务提供商创建应用程序开发人员可以轻松地添加到自己的项目无需离开 Visual Studio IDE 的 Visual Studio 扩展。
+Visual Studio 连接的服务 SDK 允许服务提供程序创建 Visual Studio 扩展，应用开发人员可以轻松地将其添加到项目中，而无需离开 Visual Studio IDE。

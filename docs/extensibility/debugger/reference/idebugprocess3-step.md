@@ -16,17 +16,17 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 054cfc305400e3916ed7ba796a74370dfc2c77a5
-ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86386688"
 ---
 # <a name="idebugprocess3step"></a>IDebugProcess3::Step
 使进程单步执行一条指令或语句。
 
 > [!NOTE]
-> 应使用此方法而不是[步骤](../../../extensibility/debugger/reference/idebugprogram2-step.md)。
+> 应使用此方法而不是 [步骤](../../../extensibility/debugger/reference/idebugprogram2-step.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -48,13 +48,13 @@ int Step(
 
 ## <a name="parameters"></a>参数
 `pThread`\
-中一个[IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)对象，表示正在逐步进行的线程。
+中一个 [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) 对象，表示正在逐步进行的线程。
 
 `sk`\
-中[STEPKIND](../../../extensibility/debugger/reference/stepkind.md)值之一。
+中 [STEPKIND](../../../extensibility/debugger/reference/stepkind.md) 值之一。
 
 `step`\
-中[STEPUNIT](../../../extensibility/debugger/reference/stepunit.md)值之一。
+中 [STEPUNIT](../../../extensibility/debugger/reference/stepunit.md) 值之一。
 
 ## <a name="return-value"></a>返回值
  如果成功，将返回 S_OK;否则，将返回错误代码。
@@ -62,7 +62,7 @@ int Step(
 ## <a name="remarks"></a>备注
  如果线程之间存在任何线程同步或通信，则进程中的其他线程应在单步执行时运行。
 
- **警告**处理此调用时，不要将停止事件或即时（同步）事件发送到[事件](../../../extensibility/debugger/reference/idebugeventcallback2-event.md);否则，调试器可能会停止响应。
+ **警告** 处理此调用时，不要将停止事件或立即 (同步) 事件发送到 [事件](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) ;否则，调试器可能会停止响应。
 
 ## <a name="see-also"></a>另请参阅
 - [IDebugProcess3](../../../extensibility/debugger/reference/idebugprocess3.md)
