@@ -9,16 +9,16 @@ caps.latest.revision: 7
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 7f02c3fe2e3d8fa67cb8a996ba14dddce7b1a3a8
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657068"
 ---
 # <a name="writing-unit-tests-for-the-net-framework-with-the-microsoft-unit-test-framework-for-managed-code"></a>用 Microsoft 适用于托管代码的单元测试框架编写 .NET Framework 的单元测试
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-本部分[演练：为托管代码创建和运行单元测试](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)
+本部分 [演练：为托管代码创建和运行单元测试](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)
 
  [快速入门：通过测试资源管理器进行测试驱动开发](../test/quick-start-test-driven-development-with-test-explorer.md)
 

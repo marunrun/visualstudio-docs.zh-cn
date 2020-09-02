@@ -12,10 +12,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: e531d2d2a41cc9ceaa3b6ba39c6d77a166cfae83
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68193676"
 ---
 # <a name="flag-markers"></a>标志标记
@@ -42,7 +42,7 @@ ms.locfileid: "68193676"
 警报标记  
   
 ## <a name="aggregation-flags"></a>聚合标志  
- 有时，并发可视化工具中标志的发生时间过于接近，导致无法单独绘制。 发生这种情况时，将显示代表基础标志的灰色聚合标志  。 当将鼠标指针放在这些图标上时，工具提示将显示所代表的基础标志数量。 若要查看这些标志，请将其放大。 如果一直放大但仍显示聚合标志，则可以在[标记报表](../profiling/markers-report.md)中查看基础标志。  
+ 有时，并发可视化工具中标志的发生时间过于接近，导致无法单独绘制。 发生这种情况时，将显示代表基础标志的灰色聚合标志**。 当将鼠标指针放在这些图标上时，工具提示将显示所代表的基础标志数量。 若要查看这些标志，请将其放大。 如果一直放大但仍显示聚合标志，则可以在[标记报表](../profiling/markers-report.md)中查看基础标志。  
   
  聚合标志以不同的大小绘制。 标志的大小取决于聚合中最重要的标志所具有的重要性级别。 下图按重要性从低到高显示聚合标志。  
   

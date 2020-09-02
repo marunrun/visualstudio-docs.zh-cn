@@ -13,16 +13,16 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 4815a1e42b98fba812e8a3c2a53516bff16081db
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68204821"
 ---
 # <a name="threadproperties"></a>THREADPROPERTIES
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-介绍在线程的属性。  
+介绍线程的属性。  
   
 ## <a name="syntax"></a>语法  
   
@@ -52,37 +52,37 @@ public struct THREADPROPERTIES { 
   
 ## <a name="members"></a>成员  
  dwFields  
- 中的标志的组合[THREADPROPERTY_FIELDS](../../../extensibility/debugger/reference/threadproperty-fields.md)描述此结构中的哪些字段有效的枚举。  
+ [THREADPROPERTY_FIELDS](../../../extensibility/debugger/reference/threadproperty-fields.md)枚举中的标志的组合，用于描述此结构中的哪些字段有效。  
   
  dwThreadId  
- 线程 id。  
+ 线程 ID。  
   
  dwSuspendCount  
- 在线程挂起计数。  
+ 线程挂起计数。  
   
  dwThreadState  
- 中的值[THREADSTATE](../../../extensibility/debugger/reference/threadstate.md)枚举，指示操作系统线程的状态。  
+ [THREADSTATE](../../../extensibility/debugger/reference/threadstate.md)枚举中的一个值，该值指示操作线程的状态。  
   
  bstrPriority  
- 一个字符串，指定线程的优先级。例如，"高于正常"、"Normal"或者"时间关键"。  
+ 指定线程优先级的字符串;例如，"高于正常"、"正常" 或 "时间严重"。  
   
  bstName  
  线程名称。  
   
  bstrLocation  
- 线程位置 （通常最顶层的堆栈帧），通常都表示为当前暂停执行方法的名称。  
+ 线程位置通常 (最顶层堆栈帧) ，通常表示为当前暂停执行的方法的名称。  
   
 ## <a name="remarks"></a>备注  
- 此结构通过调用来填充[GetThreadProperties](../../../extensibility/debugger/reference/idebugthread2-getthreadproperties.md)方法。 因此返回的信息通常用于填充**线程**窗口。  
+ 此结构由对 [GetThreadProperties](../../../extensibility/debugger/reference/idebugthread2-getthreadproperties.md) 方法的调用填充。 返回的信息通常用于填充 " **线程** " 窗口。  
   
 ## <a name="requirements"></a>要求  
- 标头： msdbg.h  
+ 标头： msdbg  
   
- 命名空间:Microsoft.VisualStudio.Debugger.Interop  
+ 命名空间： VisualStudio  
   
- 程序集：Microsoft.VisualStudio.Debugger.Interop.dll  
+ 程序集： Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [结构和联合](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [GetThreadProperties](../../../extensibility/debugger/reference/idebugthread2-getthreadproperties.md)   
  [THREADPROPERTY_FIELDS](../../../extensibility/debugger/reference/threadproperty-fields.md)   

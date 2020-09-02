@@ -1,5 +1,5 @@
 ---
-title: 数据集可视化工具对话框 |Microsoft Docs
+title: “数据集可视化工具”对话框 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -26,10 +26,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 829363dcbf5e8cc4a9151f369d6b0191fc282d44
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65697842"
 ---
 # <a name="dataset-visualizer-dialog-box"></a>“数据集可视化工具”对话框
@@ -43,8 +43,8 @@ ms.locfileid: "65697842"
  表  
  使用此下拉列表框在要对其进行可视化处理的数据集中选择一个表。  
   
-## <a name="see-also"></a>请参阅  
- [调试器安全](../debugger/debugger-security.md)   
+## <a name="see-also"></a>另请参阅  
+ [调试器安全性](../debugger/debugger-security.md)   
  [创建自定义可视化工具](../debugger/create-custom-visualizers-of-data.md)   
  [变量窗口](https://msdn.microsoft.com/library/ce0a67f6-2502-4b7a-ba45-cc32f8aeba3e)   
  [查看数据提示中的数据值](../debugger/view-data-values-in-data-tips-in-the-code-editor.md)

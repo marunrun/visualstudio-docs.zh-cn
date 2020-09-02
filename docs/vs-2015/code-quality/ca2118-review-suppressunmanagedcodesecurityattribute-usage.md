@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: bc0e88265245d795697d32a9e6a95909c0415259
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85538653"
 ---
 # <a name="ca2118-review-suppressunmanagedcodesecurityattribute-usage"></a>CA2118:检查 SuppressUnmanagedCodeSecurityAttribute 用法
@@ -36,9 +36,9 @@ ms.locfileid: "85538653"
  公共或受保护的类型或成员具有 <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute?displayProperty=fullName> 属性。
 
 ## <a name="rule-description"></a>规则描述
- <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute>为使用 COM 互操作或平台调用执行非托管代码的成员更改默认的安全系统行为。 通常，系统为非托管代码权限进行[数据和建模](https://msdn.microsoft.com/library/8c37635d-e2c1-4b64-a258-61d9e87405e6)。 此要求在运行时针对每个成员调用发生，并检查调用堆栈中的每个调用方是否有权限。 当存在属性时，系统会对权限进行[链接要求](https://msdn.microsoft.com/library/a33fd5f9-2de9-4653-a4f0-d9df25082c4d)：调用调用程序时，将检查直接调用方的权限。
+ <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> 为使用 COM 互操作或平台调用执行非托管代码的成员更改默认的安全系统行为。 通常，系统为非托管代码权限进行 [数据和建模](https://msdn.microsoft.com/library/8c37635d-e2c1-4b64-a258-61d9e87405e6) 。 此要求在运行时针对每个成员调用发生，并检查调用堆栈中的每个调用方是否有权限。 当存在属性时，系统会对权限进行 [链接要求](https://msdn.microsoft.com/library/a33fd5f9-2de9-4653-a4f0-d9df25082c4d) ：调用调用程序时，将检查直接调用方的权限。
 
- 该特性主要用于提高性能；不过，提高性能的同时会显著增加安全风险。 如果将属性放置在调用本机方法的公共成员上，调用堆栈中的调用方（而不是直接调用方）不需要非托管代码权限即可执行非托管代码。 根据公共成员的操作和输入处理，它可能会允许不受信任的调用方访问通常限制为可信代码的功能。
+ 该特性主要用于提高性能；不过，提高性能的同时会显著增加安全风险。 如果将属性放置在调用本机方法的公共成员上，调用堆栈中的调用方 (不是直接调用方，) 不需要非托管代码权限即可执行非托管代码。 根据公共成员的操作和输入处理，它可能会允许不受信任的调用方访问通常限制为可信代码的功能。
 
  [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]依赖安全检查来阻止调用方获取对当前进程的地址空间的直接访问。 由于此属性会跳过正常的安全性，因此，如果代码可用于读取或写入进程的内存，则代码会带来严重的威胁。 请注意，此风险并不局限于有意提供对处理内存的访问的方法;在任何情况下，恶意代码都可以通过任何方式获取访问权限，例如，提供令人吃惊、格式不正确或无效的输入。
 

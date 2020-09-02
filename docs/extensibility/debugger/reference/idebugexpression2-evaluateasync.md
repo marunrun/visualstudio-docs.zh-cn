@@ -1,5 +1,5 @@
 ---
-title: IDebugExpression2：：评估同步 |微软文档
+title: IDebugExpression2：： EvaluateAsync |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 2cd1eba56f8e3c5a1a779acc3330790e9ba2bc96
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80729751"
 ---
 # <a name="idebugexpression2evaluateasync"></a>IDebugExpression2::EvaluateAsync
-此方法异步计算表达式。
+此方法以异步方式计算表达式。
 
 ## <a name="syntax"></a>语法
 
@@ -43,23 +43,23 @@ int EvaluateAsync(
 
 ## <a name="parameters"></a>参数
 `dwFlags`\
-[在][EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md)枚举中的标志的组合，用于控制表达式计算。
+中用于控制表达式计算的 [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md) 枚举中的标志的组合。
 
 `pExprCallback`\
-[在]此参数始终为空值。
+中此参数始终为 null 值。
 
 ## <a name="return-value"></a>返回值
-如果成功，返回`S_OK`;否则返回错误代码。 典型的错误代码是：
+如果成功， `S_OK` 则返回; 否则返回错误代码。 典型的错误代码是：
 
-|错误|描述|
+|错误|说明|
 |-----------|-----------------|
-|E_EVALUATE_BUSY_WITH_EVALUATION|目前正在计算另一个表达式，并且不支持同时计算表达式。|
+|E_EVALUATE_BUSY_WITH_EVALUATION|当前正在计算另一个表达式，但不支持同时表达式计算。|
 
 ## <a name="remarks"></a>备注
-此方法应在开始表达式计算后立即返回。 成功计算表达式后，必须将[IDebugExpressionExpression 评估完成事件2](../../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2.md)发送到[IDebugEvent 回调2](../../../extensibility/debugger/reference/idebugeventcallback2.md)事件回调，通过[附加](../../../extensibility/debugger/reference/idebugprogram2-attach.md)或[附加](../../../extensibility/debugger/reference/idebugengine2-attach.md)提供。
+此方法在开始表达式计算后应立即返回。 成功计算表达式时，必须将[IDebugExpressionEvaluationCompleteEvent2](../../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2.md)发送到通过[附加](../../../extensibility/debugger/reference/idebugprogram2-attach.md)或[附加](../../../extensibility/debugger/reference/idebugengine2-attach.md)提供的[IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)事件回调。
 
 ## <a name="example"></a>示例
-下面的示例演示如何实现[IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md)接口的简单`CExpression`对象实现此方法。
+下面的示例演示如何对 `CExpression` 实现 [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md) 接口的简单对象实现此方法。
 
 ```cpp
 HRESULT CExpression::EvaluateAsync(EVALFLAGS dwFlags,
@@ -75,7 +75,7 @@ HRESULT CExpression::EvaluateAsync(EVALFLAGS dwFlags,
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md)
 - [IDebugExpressionEvaluationCompleteEvent2](../../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2.md)
 - [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md)
