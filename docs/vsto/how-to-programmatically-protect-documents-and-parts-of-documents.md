@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 4654a2c218470e0d5e2a1ddd54a88de5c4546f7b
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85537834"
 ---
 # <a name="how-to-programmatically-protect-documents-and-parts-of-documents"></a>如何：以编程方式保护文档和文档的某些部分
@@ -29,9 +29,9 @@ ms.locfileid: "85537834"
  还可以将文档的特定区域标记为例外，使指定用户只能编辑文档的这些区域。 例如，你可能希望保护整个文档，但某个特定的书签除外。 可选择添加密码，这样一来，除非用户知道此密码，否则无法删除文档保护。
 
 > [!NOTE]
-> 下面的示例未使用密码保护；但是，在添加文档保护时，你可能想考虑使用密码。 有关详细信息，请参阅[Office 开发示例和演练](../vsto/office-development-samples-and-walkthroughs.md)中的文档保护程序示例。
+> 下面的示例未使用密码保护；但是，在添加文档保护时，你可能想考虑使用密码。 有关详细信息，请参阅 [Office 开发示例和演练](../vsto/office-development-samples-and-walkthroughs.md)中的文档保护程序示例。
 
- 你也可以使用内容控件来保护文档的各个部分。 有关详细信息，请参阅[如何：使用内容控件保护文档的各个部分](../vsto/how-to-protect-parts-of-documents-by-using-content-controls.md)。
+ 你也可以使用内容控件来保护文档的各个部分。 有关详细信息，请参阅 [如何：使用内容控件保护文档的各个部分](../vsto/how-to-protect-parts-of-documents-by-using-content-controls.md)。
 
 ## <a name="protect-a-document-that-is-part-of-a-document-level-customization"></a>保护属于文档级自定义项的文档
 

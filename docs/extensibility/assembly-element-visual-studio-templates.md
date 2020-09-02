@@ -1,5 +1,5 @@
 ---
-title: 装配元件（可视化工作室模板） |微软文档
+title: " (Visual Studio 模板) 的 Assembly 元素 |Microsoft Docs"
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -15,16 +15,19 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: c80044657b16448ba4567fff839274226985fa14
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80740044"
 ---
-# <a name="assembly-element-visual-studio-templates"></a>装配元件（可视化工作室模板）
-指定有关程序集的信息，模板用于将该程序集的引用添加到项目。
+# <a name="assembly-element-visual-studio-templates"></a>Visual Studio 模板 (Assembly 元素) 
+指定有关程序集的信息，模板使用该程序集将该程序集的引用添加到项目。
 
- \<模板>\<模板内容>\<参考>\<参考>\<程序集>
+ \<VSTemplate> \<TemplateContent>
+ \<References>
+ \<Reference>
+ \<Assembly>
 
 ## <a name="syntax"></a>语法
 
@@ -43,14 +46,14 @@ ms.locfileid: "80740044"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
-|[参考](../extensibility/reference-element-visual-studio-templates.md)|指定向项目添加项时要添加的程序集引用。|
+|[引用](../extensibility/reference-element-visual-studio-templates.md)|指定向项目添加项时要添加的程序集引用。|
 
 ## <a name="text-value"></a>文本值
  需要一个文本值。
 
- 此文本指定在实例化项目模板时要添加到项目的程序集。 必须通过以下方式之一指定此程序集名称：
+ 此文本指定在实例化项模板时要添加到项目的程序集。 必须通过以下方式之一指定此程序集名称：
 
 - 作为完整的程序集名称。 例如：
 
@@ -60,7 +63,7 @@ ms.locfileid: "80740044"
     </Assembly>
     ```
 
-- 作为简单的文本引用。 例如：
+- 作为简单文本引用。 例如：
 
     ```
     <Assembly> System </Assembly>
@@ -69,10 +72,10 @@ ms.locfileid: "80740044"
 ## <a name="remarks"></a>备注
  `Assembly` 是 `Reference` 的必需子元素。
 
- `References,`和`Reference``Assembly`元素只能在 具有`Type`属性值 的`Item` *.vstemplate*文件中使用。
+ `Reference` `References,` `Assembly` *.vstemplate*只有 `Type` 属性值为的 .vstemplate 文件中才能使用、和元素 `Item` 。
 
 ## <a name="example"></a>示例
- 下面的示例说明了项模板`TemplateContent`的元素。 此 XML 添加对*System.dll*和*System.Data.dll*程序集的引用。
+ 下面的示例演示 `TemplateContent` 项模板的元素。 此 XML 添加对 *System.dll* 和 *System.Data.dll* 程序集的引用。
 
 ```
 <TemplateContent>
@@ -93,5 +96,5 @@ ms.locfileid: "80740044"
 ```
 
 ## <a name="see-also"></a>请参阅
-- [可视化工作室模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
+- [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
 - [创建项目和项模板](../ide/creating-project-and-item-templates.md)

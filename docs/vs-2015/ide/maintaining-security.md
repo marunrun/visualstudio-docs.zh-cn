@@ -17,10 +17,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 6111900fb4c7b12a6238046fd27c3f6dad9d15ae
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75848332"
 ---
 # <a name="maintaining-security"></a>维护安全性
@@ -30,12 +30,12 @@ ms.locfileid: "75848332"
 
  此外，你不仅必须对自己的应用程序保持警惕，还必须随时了解运行应用程序的平台以及应用程序所依赖的其他产品的安全威胁和漏洞。
 
- [安全、隐私和帐户](https://windows.microsoft.com/windows/security-privacy-accounts-help#security-privacy-accounts-help=windows-8&v0h=winrttab1&v1h=win8tab1&v2h=win7tab1&v3h=winvistatab1)获取有关安全、隐私和用户帐户的帮助，包括有关病毒、密码、家长控制、防火墙和驱动器加密的信息。
+ [安全、隐私和帐户](https://windows.microsoft.com/windows/security-privacy-accounts-help#security-privacy-accounts-help=windows-8&v0h=winrttab1&v1h=win8tab1&v2h=win7tab1&v3h=winvistatab1) 获取有关安全、隐私和用户帐户的帮助，包括有关病毒、密码、家长控制、防火墙和驱动器加密的信息。
 
- [Microsoft 安全公告搜索](/security-updates/)此页可让你轻松找到以前发布的公告。 安全公告旨在为 IT 专业人员提供有关安全更新的详细信息。
+ [Microsoft 安全公告搜索](/security-updates/) 此页可让你轻松找到以前发布的公告。 安全公告旨在为 IT 专业人员提供有关安全更新的详细信息。
 
- [Windows Server 2003 安全指南]（/previous-versions/tn-archive/cc163140 （v = technet）提供必要的指导，使 IT 专业人员能够安全地运行 Windows Server 2003 环境，同时确保适当的人员正确访问正确的内容。
+ [Windows Server 2003 Security Guide] (/previous-versions/tn-archive/cc163140 (v = technet. 10) 提供 IT 专业人员安全运行 Windows Server 2003 环境所需的指导，同时确保适当的人员能够正确访问正确的内容。
 
- [企业安全性最佳方案](/previous-versions/tn-archive/cc750076%28v%3dtechnet.10%29)白皮书的集合，重点介绍企业网络中安全性的不同方面。
+ [企业安全性最佳方案](/previous-versions/tn-archive/cc750076%28v%3dtechnet.10%29) 白皮书的集合，重点介绍企业网络中安全性的不同方面。
 
- [Microsoft 基准安全分析器](/windows/security/threat-protection/mbsa-removal-and-guidance)Microsoft 基准安全分析器（MBSA）是一种工具，使个人家庭用户、企业用户或管理员可以扫描一个或多个基于 Windows 的计算机，以检查常见的安全配置错误。
+ [Microsoft 基准安全分析器](/windows/security/threat-protection/mbsa-removal-and-guidance) Microsoft 基准安全分析器 (MBSA) 是一种工具，使个人家庭用户、企业用户或管理员能够扫描一台或多台基于 Windows 的计算机上的常见安全配置错误。

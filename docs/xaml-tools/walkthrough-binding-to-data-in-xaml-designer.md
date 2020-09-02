@@ -11,10 +11,10 @@ author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.openlocfilehash: f57d4f24348ff805669832ce6db9e8e4e79e4569
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85330753"
 ---
 # <a name="walkthrough-bind-to-data-in-xaml-designer"></a>演练：在 XAML 设计器中绑定数据
@@ -23,13 +23,13 @@ ms.locfileid: "85330753"
 
 ## <a name="to-create-a-class-to-use-as-a-data-source"></a>若要创建类用作数据源，请执行以下操作
 
-1. 在“文件”菜单上，选择“新建” > “项目”************。
+1. 在“文件”菜单上，选择“新建” > “项目”  。
 
 1. 在“新建项目”对话框中，选择“Visual C#”或“Visual Basic”节点，展开“Windows 桌面”节点，然后选择“WPF 应用程序”模板********************。
 
 1. 将项目命名为“BindingTest”，然后选择“确定”按钮********。
 
-1. 打开**MainWindow.xaml.cs** （或**mainwindow.xaml**）文件，并添加以下代码。 在 C# 中，将这段代码添加到 `BindingTest` 命名空间中（在文件中的最后一个右括号之前）。 在 Visual Basic 中，添加新类即可。
+1. 打开 **MainWindow.xaml.cs** (或 **mainwindow.xaml**) 文件，并添加以下代码。 在 C# 中，将这段代码添加到 `BindingTest` 命名空间中（在文件中的最后一个右括号之前）。 在 Visual Basic 中，添加新类即可。
 
    ```csharp
    public class ShoppingCart : DependencyObject
@@ -69,7 +69,7 @@ ms.locfileid: "85330753"
 
 ## <a name="to-bind-the-itemcount-property-to-a-textblock-control"></a>若要将 ItemCount 属性绑定到 TextBlock 控件，请执行以下操作
 
-1. 在解决方案资源管理器中，打开**mainwindow.xaml**的快捷菜单，然后选择 "**视图设计器**"。
+1. 在解决方案资源管理器中，打开 **mainwindow.xaml** 的快捷菜单，然后选择 " **视图设计器**"。
 
 1. 在工具箱中，选择[网格](xref:Windows.UI.Xaml.Controls.Grid)控件，并将其添加到窗体。
 
@@ -91,11 +91,11 @@ ms.locfileid: "85330753"
 
      ![“创建数据绑定”对话框](../designers/media/xaml_create_data_binding.png)
 
-1. 按**F5**运行应用。
+1. 按 **F5** 运行应用。
 
      该 `TextBlock` 控件应显示默认值 0 作为文本。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [使用 XAML 设计器创建 UI](../xaml-tools/creating-a-ui-by-using-xaml-designer-in-visual-studio.md)
 - [添加值转换器”对话框](https://msdn.microsoft.com/library/c5f3d110-a541-4b55-8bca-928f77778af8)

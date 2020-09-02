@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty3::SetValueAsStringWithError |Microsoft Docs
+title: IDebugProperty3：： SetValueAsStringWithError |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 58b2c487e0259ec2381638c77608f8773af3e159
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68193381"
 ---
 # <a name="idebugproperty3setvalueasstringwitherror"></a>IDebugProperty3::SetValueAsStringWithError
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-设置此属性的值并返回错误消息，如有必要。  
+如果需要，设置此属性的值并返回错误消息。  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,25 +46,25 @@ int SetValueAsStringWithError(
   
 #### <a name="parameters"></a>参数  
  `pszValue`  
- [in]若要设置的值。  
+ 中要设置的值。  
   
  `dwRadix`  
- [in]正在设置的值的基数。  
+ 中所设置的值的基数。  
   
  `dwTimeout`  
- [in]等待要设置的值的时间长度 (`INFINITE`表示永远等待)。  
+ 中等待设置值所用的时间长度 (`INFINITE` 意味着永远) 等待。  
   
  `errorString`  
- [out]如果有错的值设置，它将保存失败的原因。  
+ 弄如果设置值时发生错误，则会保存失败的原因。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
 ## <a name="remarks"></a>备注  
- 传入的值可以是要计算的表达式。  
+ 传入值可以是要计算的表达式。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何实现此方法对于**CProperty**对象，它公开[IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md)接口。  
+ 下面的示例演示如何为公开[IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md)接口的**CProperty**对象实现此方法。  
   
 ```cpp#  
 HRESULT CProperty::SetValueAsStringWithError(   
@@ -168,5 +168,5 @@ HRESULT CProperty::SetValueAsStringWithError(
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md)

@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: c713759a8ea75eed3048469327f962668efa4f70
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657643"
 ---
 # <a name="link-a-use-case-to-documents-and-diagrams"></a>将用例链接到文档和关系图
@@ -52,7 +52,7 @@ ms.locfileid: "72657643"
 
 3. 将关系图或文件从解决方案资源管理器拖动到用例图的空白部分。
 
-4. 使用**依赖关系**从项目连接到用例。
+4. 使用 **依赖关系**从项目连接到用例。
 
 ### <a name="to-link-to-a-solution-file-such-as-a-word-document-or-powerpoint-presentation"></a>若要链接到诸如 Word 文档或 PowerPoint 演示文稿等解决方案文件
 
@@ -60,9 +60,9 @@ ms.locfileid: "72657643"
 
     1. 将该 Word 文档移入解决方案所在的 Windows 文件夹。
 
-    2. 在解决方案资源管理器中，右键单击解决方案，指向 "**添加**"，然后单击 "**现有项**"。
+    2. 在解决方案资源管理器中，右键单击解决方案，指向 " **添加**"，然后单击 " **现有项**"。
 
-    3. 导航到 Word 文档，然后单击 "**添加**"。
+    3. 导航到 Word 文档，然后单击 " **添加**"。
 
          该 Word 文档将显示在解决方案资源管理器的解决方案文件夹中。
 
@@ -70,18 +70,18 @@ ms.locfileid: "72657643"
 
      随即显示新项目。
 
-3. 使用**依赖关系**从项目连接到用例。
+3. 使用 **依赖关系**从项目连接到用例。
 
 ### <a name="to-link-to-a-shared-document-onenote-element-or-web-page"></a>若要链接到共享文档、OneNote 元素或网页
 
-1. 获取的共享元素的 URL。 例如，这可以是网络文件路径的开头为 "\\ \\"、网页或 Sharepoint URL （以 "http://" 开头），也可以是指向 OneNote 分区、页面或段落开始 "onenote：" 的链接。
+1. 获取的共享元素的 URL。 例如，这可以是网络文件路径开始 " \\ \\ "，或以 "http://" 开头的网页或 Sharepoint URL，也可以是指向 onenote 节、页面或段落开始 "onenote：" 的链接。
 
-2. 在 "工具箱" 中，单击 "**项目**"，然后在用例图中单击。
+2. 在 "工具箱" 中，单击 " **项目** "，然后在用例图中单击。
 
-3. 选择新的项目后，将 URL 键入或粘贴到**Hyperlink**属性中。
+3. 选择新的项目后，将 URL 键入或粘贴到 **Hyperlink** 属性中。
 
     > [!NOTE]
-    > 如果要提供文件路径，最好在公共工作区（从 "\\ \\"）或 Visual Studio 解决方案内的文件中选择文件。 这可以确保文件路径在其他团队成员的计算机上或该解决方案被移动后仍将有效。 若要向解决方案中添加文档（如 Word 文档），请右键单击 "解决方案资源管理器中的解决方案，指向"**添加**"，然后单击"**现有项**"。
+    > 如果要提供文件路径，最好在公共工作区中选择一个文件 (以 " \\ \\ " ) 开头，或在 Visual Studio 解决方案中选择一个文件。 这可以确保文件路径在其他团队成员的计算机上或该解决方案被移动后仍将有效。 若要向解决方案中添加文档（如 Word 文档），请右键单击 "解决方案资源管理器中的解决方案，指向" **添加** "，然后单击" **现有项**"。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [Uml 用例图：引用](../modeling/uml-use-case-diagrams-reference.md) [uml 用例图：准则](../modeling/uml-use-case-diagrams-guidelines.md)[编辑 uml 模型和关系图](../modeling/edit-uml-models-and-diagrams.md)[为应用程序创建模型](../modeling/create-models-for-your-app.md)

@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - uwp
 ms.openlocfilehash: d5d40878e40641b9a54a411af122f6207a02a7a1
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85331032"
 ---
 # <a name="debug-xaml-in-blend"></a>在 Blend 中调试 XAML
@@ -46,13 +46,13 @@ XAML 语法错误的某些常见原因如下：
 
 #### <a name="to-create-a-project"></a>创建项目
 
-1. 在 Blend 中，打开 "**文件**" 菜单，然后单击 "**新建项目**"。
+1. 在 Blend 中，打开 " **文件** " 菜单，然后单击 " **新建项目**"。
 
     在“新建项目”对话框中，左侧会显示项目类型列表****。 单击一种项目类型后，右侧将显示与该类型关联的项目模板。
 
 2. 在项目类型列表中，单击 " **Windows 通用**"。
 
-3. 在项目模板列表中，单击 "**空白应用（通用 Windows）**"。
+3. 在项目模板列表中，单击 " **空白应用" (通用 Windows) **。
 
 4. 在“名称”文本框中，键入 `DebuggingSample`****。 
 
@@ -116,10 +116,10 @@ XAML 语法错误的某些常见原因如下：
 
 ## <a name="debug-in-visual-studio"></a>在 Visual Studio 中进行调试
 
-您可以在 Visual Studio 中打开 Blend 项目，以便更轻松地在应用程序中调试代码。 若要在 Visual Studio 中打开 Blend 项目，请在 "**项目**" 面板中右键单击该项目，然后单击 "**在 Visual studio 中编辑**"。 在 Visual Studio 中完成调试会话后，按 Ctrl + Shift + S 保存所有更改，然后切换回 Blend。 系统将提示你重新加载该项目。 单击 **"是" 以**继续在 Blend 中工作。
+您可以在 Visual Studio 中打开 Blend 项目，以便更轻松地在应用程序中调试代码。 若要在 Visual Studio 中打开 Blend 项目，请在 " **项目** " 面板中右键单击该项目，然后单击 " **在 Visual studio 中编辑**"。 在 Visual Studio 中完成调试会话后，按 Ctrl + Shift + S 保存所有更改，然后切换回 Blend。 系统将提示你重新加载该项目。 单击 **"是" 以** 继续在 Blend 中工作。
 
-有关调试应用的详细信息，请参阅[在 Visual Studio 中调试 UWP 应用](../debugger/debugging-windows-store-and-windows-universal-apps.md)。
+有关调试应用的详细信息，请参阅 [在 Visual Studio 中调试 UWP 应用](../debugger/debugging-windows-store-and-windows-universal-apps.md)。
 
 ## <a name="get-help"></a>获取帮助
 
-如果需要更多帮助调试混合应用，可以在[UWP 应用社区论坛](https://social.msdn.microsoft.com/Forums/windowsapps/home?category=windowsapps)中搜索与问题相关的帖子或发布问题。
+如果需要更多帮助调试混合应用，可以在 [UWP 应用社区论坛](https://social.msdn.microsoft.com/Forums/windowsapps/home?category=windowsapps) 中搜索与问题相关的帖子或发布问题。

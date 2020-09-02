@@ -1,5 +1,5 @@
 ---
-title: 生成加载属性和元素（可视化工作室模板）
+title: " (Visual Studio 模板的 BuildOnLoad 属性和元素) "
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -15,15 +15,15 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 3be4016822ccaaae2f1352f91ecc10f09273a889
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80739946"
 ---
-# <a name="buildonload-attribute-and-element"></a>生成加载属性和元素
+# <a name="buildonload-attribute-and-element"></a>BuildOnLoad 特性和元素
 
-指定是否在项目创建后立即生成项目。 **BuildOnLoad**既是一个属性，也是一个元素。
+指定在创建项目后是否立即生成项目。 **BuildOnLoad** 既是属性又是元素。
 
 元素层次结构：
 
@@ -47,15 +47,15 @@ ms.locfileid: "80739946"
 
 ## <a name="text-value"></a>文本值
 
-**生成加载**元素需要文本值。 文本必须为 或`true``false`，指示是否在创建项目后立即生成项目。
+**BuildOnLoad**元素需要文本值。 文本必须是 `true` 或 `false` ，指示在创建项目后是否立即生成该项目。
 
 ## <a name="remarks"></a>备注
 
-**生成加载**是一个可选属性。 默认值为 `false`。
+**BuildOnLoad** 是一个可选属性。 默认值为 `false`。
 
 ## <a name="example"></a>示例
 
-以下示例说明了当**BuildOnLoad**用作元素时 C# 模板的元数据：
+下面的示例演示了在 **BuildOnLoad** 用作元素时 c # 模板的元数据：
 
 ```xml
 <VSTemplate Type="Project" Version="3.0.0"
@@ -84,7 +84,7 @@ ms.locfileid: "80739946"
 
 ## <a name="see-also"></a>请参阅
 
-- [生成项目加载元素](buildprojectonload-element-visual-studio-templates.md)
-- [模板内容元素](../extensibility/templatecontent-element-visual-studio-templates.md)
+- [BuildProjectOnload 元素](buildprojectonload-element-visual-studio-templates.md)
+- [TemplateContent 元素](../extensibility/templatecontent-element-visual-studio-templates.md)
 - [创建项目和项模板](../ide/creating-project-and-item-templates.md)
-- [可视化工作室模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
+- [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
