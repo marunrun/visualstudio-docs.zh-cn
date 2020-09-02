@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 980c49aafba55e29714d786e492f7bb37a8ca621
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72646751"
 ---
 # <a name="visual-c-typedefs-in-class-designer"></a>类设计器中的 Visual C++ Typedef
@@ -56,7 +56,7 @@ typedef class coord
 
  类和结构可在其自身内声明嵌套的 typedef；因此，类和结构的形状可以将嵌套的 typedef 声明显示为嵌套形状。
 
- Typedef 形状支持上下文菜单中的“显示为关联”  和“显示为集合关联”  命令。
+ Typedef 形状支持上下文菜单中的“显示为关联”**** 和“显示为集合关联”**** 命令。
 
  下面列举了类设计器支持的部分 typdef 类型：
 
@@ -107,7 +107,7 @@ class A {
 
  typedef
 
- 右键单击某个 typedef 形状，然后单击“显示为关联”  ，将显示该 typedef 或类以及联接这两个形状的线（类似于关联行）的**别名**。
+ 右键单击某个 typedef 形状，然后单击“显示为关联”****，将显示该 typedef 或类以及联接这两个形状的线（类似于关联行）的**别名**。
 
  `typedef B MyB;`
 
@@ -201,4 +201,4 @@ class A {
  -> MyIntVect
 
 ## <a name="see-also"></a>另请参阅
- [使用C++ Visual Code （类设计器）](../ide/working-with-visual-cpp-code-class-designer.md) [（NOTINBUILD） typedef 说明符](https://msdn.microsoft.com/cc96cf26-ba93-4179-951e-695d1f5fdcf1)
+ 使用[Visual C++ 代码 (类设计器) ](../ide/working-with-visual-cpp-code-class-designer.md) [ (NOTINBUILD) typedef 说明符](https://msdn.microsoft.com/cc96cf26-ba93-4179-951e-695d1f5fdcf1)

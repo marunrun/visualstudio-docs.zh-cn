@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: f7f7efb0acf6611346abe67a7a94e5c221919665
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72646979"
 ---
 # <a name="step-7-add-multiplication-and-division-problems"></a>步骤 7：添加乘法和除法问题
@@ -49,10 +49,10 @@ ms.locfileid: "72646979"
 
      如下图所示，测验对象必须回答四个问题才能完成测验。
 
-     ![包含四个问题的数学测验](../ide/media/express-finishedquiz.png "Express_FinishedQuiz")包含四个问题的数学测验
+     ![包含四个问题的数学测验](../ide/media/express-finishedquiz.png "Express_FinishedQuiz") 包含四个问题的数学测验
 
 ### <a name="to-continue-or-review"></a>继续或查看
 
-- 若要转到下一个教程，请参阅[步骤 8：自定义测验](../ide/step-8-customize-the-quiz.md)。
+- 若要继续学习下一个教程，请参阅 [步骤8：自定义测验](../ide/step-8-customize-the-quiz.md)。
 
-- 若要返回上一个教程，请参阅[步骤 6：添加减法问题](../ide/step-6-add-a-subtraction-problem.md)。
+- 若要返回上一个教程步骤，请参阅 [步骤6：添加减法问题](../ide/step-6-add-a-subtraction-problem.md)。

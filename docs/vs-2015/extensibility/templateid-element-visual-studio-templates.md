@@ -1,5 +1,5 @@
 ---
-title: TemplateID 元素 （Visual Studio 模板） |Microsoft Docs
+title: " (Visual Studio 模板) 的 TemplateID 元素 |Microsoft Docs"
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -14,20 +14,20 @@ caps.latest.revision: 16
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: f1a52b360994c53eef69ceafa45828ec1020be16
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68186427"
 ---
 # <a name="templateid-element-visual-studio-templates"></a>TemplateID 元素（Visual Studio 模板）
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-指定到项模板由一组分类的项模板的标识符[TemplateGroupID](../extensibility/templategroupid-element-visual-studio-templates.md)元素。  
+指定由 [TemplateGroupID](../extensibility/templategroupid-element-visual-studio-templates.md) 元素分类到一组项模板的项模板的标识符。  
   
- \<VSTemplate >  
- \<TemplateData >  
- \<TemplateID >  
+ \<VSTemplate>  
+ \<TemplateData>  
+ \<TemplateID>  
   
 ## <a name="syntax"></a>语法  
   
@@ -51,15 +51,15 @@ ms.locfileid: "68186427"
 |[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|必需的元素。<br /><br /> 将此模板分类并定义此模板在 **“新建项目”** 或 **“添加新项”** 对话框中的显示方式。|  
   
 ## <a name="text-value"></a>文本值  
- 一个`string`，表示到项模板由一组分类的项模板的标识符`TemplateGroupID`元素。  
+ 一个 `string` ，它表示由元素分类到一组项模板中的项模板的标识符 `TemplateGroupID` 。  
   
 ## <a name="remarks"></a>备注  
  `TemplateID` 是可选元素。  
   
- 如果.vstemplate 文件中省略`TemplateID`元素，则[名称](../extensibility/name-element-visual-studio-templates.md)元素用作模板标识符。  
+ 如果 .vstemplate 文件省略了 `TemplateID` 元素，则 [Name](../extensibility/name-element-visual-studio-templates.md) 元素将用作模板的标识符。  
   
- 值`TemplateID`元素使用与项目系统注册 (HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\11.0\Projects\\) 中显示的筛选器模板**添加新项**对话框。  
+ 元素的值 `TemplateID` 与项目系统注册 (HKEY_LOCAL_MACHINE \software\microsoft\visualstudio\11.0\projects) 一起用于筛选在 \\ " **添加新项** " 对话框中显示的模板。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)   
  [创建项目和项模板](../ide/creating-project-and-item-templates.md)

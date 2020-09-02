@@ -30,7 +30,7 @@
               href: disable-code-analysis.md
             - name: 禁止显示代码分析
               href: in-source-suppression-overview.md
-        - name: 常见问题解答
+        - name: 常见问题
           href: analyzers-faq.md
     - name: 旧版分析
       items:
@@ -372,12 +372,14 @@
                   href: ca1305.md
                 - name: 'CA1306:设置数据类型的区域设置'
                   href: ca1306.md
-                - name: 'CA1307:指定 StringComparison'
+                - name: 'CA1307:为了清晰起见，请指定 StringComparison'
                   href: ca1307.md
                 - name: 'CA1308:将字符串规范化为大写'
                   href: ca1308.md
                 - name: 'CA1309:使用按顺序的 StringComparison'
                   href: ca1309.md
+                - name: CA1310：为了确保正确，请指定 StringComparison
+                  href: ca1310.md
                 - name: 'CA2101:指定对 P-Invoke 字符串自变量进行封送处理'
                   href: ca2101.md
             - name: 互操作性警告
@@ -569,6 +571,8 @@
                   href: ca1835.md
                 - name: 'CA1836:可用时最好使用 IsEmpty (而不是 Count)'
                   href: ca1836.md
+                - name: CA1837：使用 Environment.ProcessId 而不是 Process.GetCurrentProcess().Id
+                  href: ca1837.md
                 - name: CA1838：不要对 P/Invoke 使用 StringBuilder 参数
                   href: ca1838.md
             - name: 可移植性警告
@@ -601,6 +605,8 @@
                   href: ca2006.md
                 - name: CA2007：不直接等待任务
                   href: ca2007.md
+                - name: CA2008：不要在未传递 TaskScheduler 的情况下创建任务
+                  href: ca2008.md
                 - name: CA2009：请勿对 ImmutableCollection 值调用 ToImmutableCollection
                   href: ca2009.md
                 - name: 'CA2011:请勿在其资源库中分配属性'
@@ -985,6 +991,8 @@
                   href: ca2247.md
                 - name: 'CA2248:向 Enum.HasFlag 提供正确的 enum 参数'
                   href: ca2248.md
+                - name: CA2249：请考虑使用 String.Contains 而不是 String.IndexOf
+                  href: ca2249.md
             - name: 自动功能挂起
               href: automatic-feature-suspension.md
             - name: 发布警告

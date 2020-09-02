@@ -14,17 +14,17 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 1717c17a3a881d138b566f37e07456ded16f22c5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68197723"
 ---
 # <a name="export-button-concurrency-visualizer"></a>“导出”按钮（并发可视化工具）
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-通过“导出”按钮，可以将调用堆栈作为 .csv 文件导出，以用于自己的记录或与其他工具（如 Microsoft Excel）一起使用  。  
+通过“导出”按钮，可以将调用堆栈作为 .csv 文件导出，以用于自己的记录或与其他工具（如 Microsoft Excel）一起使用****。  
   
 ## <a name="see-also"></a>另请参阅  
  [并发可视化工具](../profiling/concurrency-visualizer.md)   
- [线程视图](../profiling/threads-view-parallel-performance.md)
+ [“线程”视图](../profiling/threads-view-parallel-performance.md)

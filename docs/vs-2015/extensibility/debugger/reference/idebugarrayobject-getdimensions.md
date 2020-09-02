@@ -1,5 +1,5 @@
 ---
-title: 'IDebugArrayObject:: GetDimensions |Microsoft Docs'
+title: IDebugArrayObject：： GetDimensions |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,10 +13,10 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 09902c60f87cfb92d0f0778fcbd106ade4d8dac4
-ms.sourcegitcommit: 9cfd3ef6c65f671a26322320818212a1ed5955fe
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68197777"
 ---
 # <a name="idebugarrayobjectgetdimensions"></a>IDebugArrayObject::GetDimensions
@@ -45,13 +45,13 @@ int GetDimensions(
  中要检索的维度数。  
   
  `dwDimensions`  
- [in, out]用每个维度的大小填充的数组。 `dwCount`指定`dwDimensions`数组的最大大小。  
+ [in，out]用每个维度的大小填充的数组。 `dwCount` 指定数组的最大大小 `dwDimensions` 。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功, 则返回 S_OK;否则, 将返回错误代码。  
+ 如果成功，将返回 S_OK;否则，将返回错误代码。  
   
 ## <a name="remarks"></a>备注  
- 多维数组每个维度的大小可以不同。 例如, 假设有一个三维数组`myarray[3][2][6]`, 则`dwDimensions`此方法会在参数中按顺序返回3、2和6。  
+ 多维数组每个维度的大小可以不同。 例如，假设有一个三维数组 `myarray[3][2][6]` ，则此方法会在 `dwDimensions` 参数中按顺序返回3、2和6。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugArrayObject](../../../extensibility/debugger/reference/idebugarrayobject.md)

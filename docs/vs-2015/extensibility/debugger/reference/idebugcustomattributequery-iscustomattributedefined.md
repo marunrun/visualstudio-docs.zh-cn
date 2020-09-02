@@ -1,5 +1,5 @@
 ---
-title: IDebugCustomAttributeQuery::IsCustomAttributeDefined |Microsoft Docs
+title: IDebugCustomAttributeQuery：： IsCustomAttributeDefined |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,16 +12,16 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 392067356cdc50b55ddf99b7342d76e1dcd02b09
-ms.sourcegitcommit: da4079f5b6ec884baf3108cbd0519d20cb64c70b
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62568455"
 ---
 # <a name="idebugcustomattributequeryiscustomattributedefined"></a>IDebugCustomAttributeQuery::IsCustomAttributeDefined
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-确定是否定义了指定的自定义特性。  
+确定是否定义了指定的自定义属性。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,13 +39,13 @@ int IsCustomAttributeDefined(
   
 #### <a name="parameters"></a>参数  
  `pszCustomAttributeName`  
- [in]自定义特性的名称。  
+ 中自定义属性的名称。  
   
 ## <a name="return-value"></a>返回值  
- 如果定义自定义属性，则返回`S_OK`; 否则为返回`S_FALSE`。  
+ 如果定义了自定义特性， `S_OK` 则返回; 否则返回 `S_FALSE` 。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何实现此方法对于**CDebugClassFieldSymbol**对象，它公开[IDebugCustomAttributeQuery](../../../extensibility/debugger/reference/idebugcustomattributequery.md)接口。  
+ 下面的示例演示如何为公开[IDebugCustomAttributeQuery](../../../extensibility/debugger/reference/idebugcustomattributequery.md)接口的**CDebugClassFieldSymbol**对象实现此方法。  
   
 ```cpp#  
 HRESULT CDebugClassFieldSymbol::IsCustomAttributeDefined(  
@@ -84,5 +84,5 @@ Error:
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugCustomAttributeQuery](../../../extensibility/debugger/reference/idebugcustomattributequery.md)
