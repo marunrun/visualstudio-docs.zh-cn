@@ -16,20 +16,20 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 03d21a824d2d3a9151dad139575f32e3417cbd39
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85546830"
 ---
 # <a name="ca1043-use-integral-or-string-argument-for-indexers"></a>CA1043:将整型或字符串参数用于索引器
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|Item|值|
+|项|值|
 |-|-|
 |TypeName|UseIntegralOrStringArgumentForIndexers|
 |CheckId|CA1043|
-|Category|Microsoft. Design|
+|类别|Microsoft. Design|
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因

@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 145525dc12070d98dae83d592ae86a675bb605d2
-ms.sourcegitcommit: 4d7c883ea3eedd795eeb4a9d3bd3dee82c8e093e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88893406"
 ---
 # <a name="how-to-generate-code-metrics-data"></a>如何：生成代码度量数据
@@ -48,7 +48,7 @@ ms.locfileid: "88893406"
 </RuleSet>
 ```
 
-### <a name="configuration"></a>配置
+### <a name="configuration"></a>Configuration
 
 你可以配置触发代码度量规则的阈值。
 
@@ -336,7 +336,7 @@ Visual Studio 2015 附带了一个命令行代码度量工具，该工具也称�
 
 其他指标（例如 `CyclomaticComplexity` 和） `MaintainabilityIndex` 使用与 *Metrics.exe*以前版本相同的公式，但新的工具会对 (逻辑源指令的数量进行计数， `IOperations` 而不是) 中间语言 (IL) 说明。 这些数字将与 Visual Studio IDE 和以前版本的 *Metrics.exe*生成的数字略有不同。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用 "代码度量结果" 窗口](../code-quality/working-with-code-metrics-data.md)
 - [代码度量值](../code-quality/code-metrics-values.md)

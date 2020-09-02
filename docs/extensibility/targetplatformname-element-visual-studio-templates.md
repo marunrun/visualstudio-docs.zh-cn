@@ -1,5 +1,5 @@
 ---
-title: 目标平台名称元素（可视化工作室模板） |微软文档
+title: " (Visual Studio 模板) 的 TargetPlatformName 元素 |Microsoft Docs"
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -10,10 +10,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: db5e9d4f44af242e76bd446a25d3bbc533b56854
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80699264"
 ---
 # <a name="targetplatformname-element-visual-studio-templates"></a>TargetPlatformName 元素（Visual Studio 模板）
@@ -35,7 +35,7 @@ ms.locfileid: "80699264"
 
 ### <a name="child-elements"></a>子元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
 |[RequiredPlatformVersion](../extensibility/requiredplatformversion-element-visual-studio-templates.md)|指定项目模板面向的操作系统版本。|
 
@@ -64,6 +64,6 @@ ms.locfileid: "80699264"
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>请参阅
-- [创建项目和项目模板](../ide/creating-project-and-item-templates.md)
+## <a name="see-also"></a>另请参阅
+- [创建项目和项模板](../ide/creating-project-and-item-templates.md)
 - [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)

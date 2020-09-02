@@ -1,5 +1,5 @@
 ---
-title: 如何：在本机代码中设置线程名称 |Microsoft Docs
+title: 如何：在本机代码中设置线程名称 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -21,10 +21,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 37554c8ba72257ee78b219774425c7e8acb305a2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68156666"
 ---
 # <a name="how-to-set-a-thread-name-in-native-code"></a>如何：在本机代码中设置线程名称
@@ -67,7 +67,7 @@ void SetThreadName(DWORD dwThreadID, const char* threadName) {
   
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [调试多线程应用程序](../debugger/debug-multithreaded-applications-in-visual-studio.md)   
- [查看调试器中的数据](../debugger/viewing-data-in-the-debugger.md)   
+ [在调试器中查看数据](../debugger/viewing-data-in-the-debugger.md)   
  [如何：在托管代码中设置线程名称](../debugger/how-to-set-a-thread-name-in-managed-code.md)

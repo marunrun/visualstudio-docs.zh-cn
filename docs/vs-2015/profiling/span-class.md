@@ -14,10 +14,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: bd9775bf03754913aea84f41e9878e755ff15d95
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68198364"
 ---
 # <a name="span-class"></a>span 类
@@ -35,7 +35,7 @@ class span;
   
 ### <a name="public-constructors"></a>公共构造函数  
   
-|name|说明|  
+|“属性”|描述|  
 |----------|-----------------|  
 |[span::span 构造函数](../profiling/span-span-constructor.md)|初始化 `span` 类的新实例。|  
 |[span::~span 析构函数](../profiling/span-tilde-span-destructor.md)|销毁 `span` 对象并释放其资源。|  
@@ -49,4 +49,4 @@ class span;
  **命名空间：** Concurrency::diagnostic  
   
 ## <a name="see-also"></a>另请参阅  
- [diagnostic 命名空间](../profiling/diagnostic-namespace.md)
+ [诊断命名空间](../profiling/diagnostic-namespace.md)

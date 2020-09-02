@@ -1,5 +1,5 @@
 ---
-title: 支持主页面元素（可视化工作室模板） |微软文档
+title: " (Visual Studio 模板) 的 SupportsMasterPage 元素 |Microsoft Docs"
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -15,16 +15,17 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 384672303d00b72431820b98fa02d09e440a1de5
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80699452"
 ---
 # <a name="supportsmasterpage-element-visual-studio-templates"></a>SupportsMasterPage 元素（Visual Studio 模板）
-指定在"**添加新项目**"对话框上是否启用了 **"选择母版页**"复选框。
+指定是否在 "**添加新项**" 对话框中启用 "**选择母版页**" 复选框。
 
- \<VS模板>\<模板数据>\<支持主页面>
+ \<VSTemplate> \<TemplateData>
+ \<SupportsMasterPage>
 
 ## <a name="syntax"></a>语法
 
@@ -45,20 +46,20 @@ ms.locfileid: "80699452"
 
 |元素|描述|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|指定对模板进行分类的数据，并定义模板在 **"新项目**"或"**新项目"** 对话框中的显示方式。|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|指定对模板进行分类的数据，并定义它在 " **新建项目** " 或 " **新建项** " 对话框中的显示方式。|
 
 ## <a name="text-value"></a>文本值
  需要一个文本值。
 
- 文本必须为 或`true``false`，指示"**添加新项目**"对话框上是否启用"**选择母版页**"复选框。
+ 文本必须是 `true` 或 `false` ，指示是否在 "**添加新项**" 对话框中启用了 "**选择母版页**" 复选框。
 
 ## <a name="remarks"></a>备注
- `SupportsMasterPage` 是可选元素。 默认值为 `false`。
+ `SupportsMasterPage` 是可选元素。 默认值是 `false`。
 
- 该`SupportsMasterPage`元素仅适用于 Web 项模板。
+ `SupportsMasterPage`元素仅适用于 Web 项模板。
 
 ## <a name="example"></a>示例
- 下面的示例演示了包含对母版页的支持的 Web 项目的元数据。
+ 下面的示例演示了包含母版页支持的 Web 项目的元数据。
 
 ```
 <VSTemplate Version="3.0.0" Type="Project"
@@ -82,6 +83,6 @@ ms.locfileid: "80699452"
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
-- [创建项目和项目模板](../ide/creating-project-and-item-templates.md)
+- [创建项目和项模板](../ide/creating-project-and-item-templates.md)

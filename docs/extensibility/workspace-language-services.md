@@ -1,5 +1,5 @@
 ---
-title: 工作区和 Visual Studio 中的语言服务 |Microsoft Docs
+title: Visual Studio 中的工作区和语言服务 |Microsoft Docs
 ms.date: 02/21/2018
 ms.topic: conceptual
 author: vukelich
@@ -8,56 +8,56 @@ manager: viveis
 ms.workload:
 - vssdk
 ms.openlocfilehash: 2893ae2bcd70ff317ba799fea6cfd2751c685731
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62952687"
 ---
 # <a name="workspaces-and-language-services"></a>工作区和语言服务
 
-语言服务可以提供[打开文件夹](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md)用户相同的丰富的语言功能它们是用于在使用解决方案和项目。 自激活语言服务，可能会根据文件扩展名或打开文档的内容，但此"松散文件"语言服务仅限于语法突出显示。 所需的其他信息以编辑/查看源代码时提供更丰富的体验。 每个语言服务已初始化为其自身 API 文档的此额外的上下文数据。 这通常是由紧密耦合到语言服务和生成系统的项目系统进行管理。
+语言服务可以为 [打开的文件夹](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md) 用户提供使用解决方案和项目时所用的相同丰富的语言功能。 尽管此 "松散文件" 语言服务仅限于语法突出显示，但语言服务可能基于打开文档的文件扩展名或内容自行激活。 若要在编辑/检查源代码时提供更丰富的体验，需要额外的信息。 每个语言服务都有自己的 API，用于使用文档的这一额外的上下文数据进行初始化。 这通常由项目系统管理，该系统与语言服务和生成系统紧密耦合。
 
 ## <a name="initialization"></a>初始化
 
-在中[工作区](workspaces.md)，语言服务由初始化<xref:Microsoft.VisualStudio.Workspace.Intellisense.ILanguageServiceProvider>扩展点，仅在该语言服务中专门一无所知生成创作。 在这种方式，语言服务所有者可以维护单个打开文件夹 （例如 MSBuild，生成文件等） 在生成期间运行其编译器的文件夹和文件中存在任何多少模式扩展。 当磁盘上更改了的文件从其创建的文件上下文并刷新文件上下文时，语言服务提供程序将通知的更新的文件上下文集。 语言服务提供商然后可以更新其模型。
+在 [工作区](workspaces.md)中，语言服务由 <xref:Microsoft.VisualStudio.Workspace.Intellisense.ILanguageServiceProvider> 仅在该语言服务中专用化的扩展点进行初始化，并且不知道生成创作的内容。 通过这种方式，语言服务所有者可以维护单个打开的文件夹扩展，无论文件夹和文件中有多少个模式，在生成 (例如 MSBuild、生成文件等 ) 中。 在磁盘上更改从中创建文件上下文的文件并刷新文件上下文时，语言服务提供程序将收到更新的文件上下文集的通知。 然后，语言服务提供程序可以更新其模型。
 
-当在编辑器中打开文档时，Visual Studio 只考虑语言需要可以为其找到匹配的文件上下文提供程序的文件上下文类型的服务提供程序。 它然后将传递的文件上下文从匹配的提供程序到所选的语言服务提供商通过`ILanguageServiceProvider.InitializeAsync`。 语言服务提供程序文件的上下文数据是语言服务提供程序的实现细节，但预期的用户体验是为此提供更丰富的语言服务的对待打开的文档。
+当在编辑器中打开文档时，Visual Studio 只会考虑需要文件上下文类型的语言服务提供程序，可以为其找到匹配的文件上下文提供程序。 然后，它会通过从匹配提供程序 (s) 将) 的文件 (上下文传递到选定的语言服务提供程序 `ILanguageServiceProvider.InitializeAsync` 。 语言服务提供程序对该文件上下文数据所做的操作是语言服务提供程序的实现细节，但预期的用户体验是该文档的更丰富的语言服务。
 
 ## <a name="using-ilanguageserviceprovider"></a>使用 ILanguageServiceProvider
 
-使用创建的文件上下文时，将会通知语言服务`ContextType`相匹配的一个`SupportedContextTypes`语言 server 的值将导出的属性。
+当创建的文件上下文与 `ContextType` `SupportedContextTypes` 语言服务器导出属性的值之一匹配时，将通知语言服务。
 
-若要支持的语言服务，将需要一个扩展：
+若要支持语言服务，扩展将需要：
 
-- 一个唯一`Guid`。 这将用于`SupportedContextTypes`属性的参数并在`FileContext`对象。
+- 唯一的 `Guid` 。 这将用于 `SupportedContextTypes` 属性参数和 `FileContext` 对象中。
 - 语言文件上下文
   - 提供程序工厂
-    - `ExportFileContextProviderAttribute` 与上述属性生成的唯一`Guid`中 `SupportedContextTypes`
+    - `ExportFileContextProviderAttribute`具有以上唯一生成的属性 `Guid``SupportedContextTypes`
     - 实现 `IWorkspaceProviderFactory<IFileContextProvider>`
-  - 提供程序实现 `IFileContextProvider.GetContextsForFileAsync`
-    - 构造一个新`FileContext`与`contextType`作为唯一生成的构造函数参数 `Guid`
-    - 使用`Context`属性的`FileContext`为提供的其他数据 `ILanguageServiceProvider`
+  - 的提供程序实现 `IFileContextProvider.GetContextsForFileAsync`
+    - `FileContext`使用构造函数参数构造一个新生成的新 `contextType``Guid`
+    - 使用 `Context` 的属性将 `FileContext` 其他数据添加到 `ILanguageServiceProvider`
 - 语言服务
   - 提供程序工厂
-    - `ExportLanguageServiceProvider` 与上述属性生成的唯一`Guid`中 `SupportedContextTypes`
+    - `ExportLanguageServiceProvider`具有以上唯一生成的属性 `Guid``SupportedContextTypes`
     - 实现 `IWorkspaceProviderFactory<ILanguageServiceProvider>`
   - 提供程序
     - 实现 `ILanguageServiceProvider`
-    - 使用`ILanguageServiceProvider.InitializeAsync`以便在打开文件时提供的参数的语言服务
-    - 使用`ILanguageServiceProvider.UninitializeAsync`若要禁用文件关闭时提供的参数的语言服务
+    - 用于在 `ILanguageServiceProvider.InitializeAsync` 打开文件时为提供的参数启用语言服务
+    - `ILanguageServiceProvider.UninitializeAsync`当文件关闭时，使用为提供的参数禁用语言服务
 
 >[!WARNING]
->`ILanguageServiceProvider`可能由工作区在主线程上调用方法。 请考虑将安排在另一个线程以避免引入 UI 将延迟的工作。
+>此 `ILanguageServiceProvider` 方法可能会由主线程上的工作区调用。 请考虑在不同的线程上计划工作，以避免引入 UI 延迟。
 
 ## <a name="language-server-protocol"></a>语言服务器协议
 
-`Microsoft.VisualStudio.Workspace.*` Api 不使语言服务中打开文件夹的唯一方法。 另一种方法是使用语言服务器。 详细信息，请阅读有关[语言服务器协议](language-server-protocol.md)。
+`Microsoft.VisualStudio.Workspace.*`Api 不是在打开的文件夹中启用您的语言服务的唯一方法。 另一种方法是使用语言服务器。 有关详细信息，请参阅 [语言服务器协议](language-server-protocol.md)。
 
-## <a name="related-interfaces"></a>相关的接口
+## <a name="related-interfaces"></a>相关接口
 
-- <xref:Microsoft.VisualStudio.Workspace.Intellisense.ILanguageServiceProvider> 打开或关闭以进行编辑文件类型匹配的文件时调用。
+- <xref:Microsoft.VisualStudio.Workspace.Intellisense.ILanguageServiceProvider> 当打开或关闭匹配文件类型的文件进行编辑时，将调用。
 
 ## <a name="next-steps"></a>后续步骤
 
-* [工作区生成](workspace-build.md)-打开文件夹支持构建如 MSBuild 和生成文件系统。
+* [工作区生成](workspace-build.md) -打开文件夹支持 MSBuild 和生成文件等生成系统。
