@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 6ae3f1d74a482192d3782aaa87baa816694abcf4
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670790"
 ---
 # <a name="how-to-restore-c-refactoring-snippets"></a>如何：还原 C# 重构代码段
@@ -30,23 +30,23 @@ C# 重构操作依赖于在以下目录中找到的代码片段：
 
 ### <a name="to-verify-c-refactoring-snippets-are-available-through-the-code-snippet-manager"></a>若要通过代码片段管理器验证 C# 重构代码片段是否可用
 
-1. 在“工具”  菜单中，选择“代码片段管理器”  。
+1. 在“工具”**** 菜单中，选择“代码片段管理器”****。
 
-2. 在“代码片段管理器”  对话框中，从“语言”  下拉列表中选择“Visual C#”  。
+2. 在“代码片段管理器”**** 对话框中，从“语言”**** 下拉列表中选择“Visual C#”****。
 
-     “重构”  文件夹应出现在树视图文件夹列表中。
+     “重构”**** 文件夹应出现在树视图文件夹列表中。
 
 ### <a name="to-restore-refactoring-see-comment-in-code-snippet-manager"></a>若要还原重构，请参阅“代码片段管理器”中的注释
 
-1. 若“重构”  文件夹未出现在“代码片段管理器”的树视图文件夹列表中，则使用此过程将重构代码片段添加回“代码片段管理器”中。
+1. 若“重构”**** 文件夹未出现在“代码片段管理器”的树视图文件夹列表中，则使用此过程将重构代码片段添加回“代码片段管理器”中。
 
-2. 在“工具”  菜单中，选择“代码片段管理器”  。
+2. 在“工具”**** 菜单中，选择“代码片段管理器”****。
 
-3. 在“代码片段管理器”  对话框中，从“语言”  下拉列表中选择“Visual C#”  。
+3. 在“代码片段管理器”**** 对话框中，从“语言”**** 下拉列表中选择“Visual C#”****。
 
-4. 单击 **添加**。 将出现“代码片段目录”  对话框，该对话框可帮助查找和指定要添加回“代码片段管理器”的目录。
+4. 单击“添加”。 将出现“代码片段目录”**** 对话框，该对话框可帮助查找和指定要添加回“代码片段管理器”的目录。
 
-5. 查找“重构”  文件夹，其目录路径为：
+5. 查找“重构”**** 文件夹，其目录路径为：
 
      *安装目录*\Microsoft Visual Studio 14.0\VC#\Snippets\\*language ID*\Refactoring
 
@@ -54,7 +54,7 @@ C# 重构操作依赖于在以下目录中找到的代码片段：
 
      C:\Program Files\Microsoft Visual Studio 14.0\VC#\Snippets\1033\Refactoring。
 
-6. 单击“代码片段目录”  对话框中的“打开”  ，然后在“代码片段管理器”中单击“确定”  。
+6. 单击“代码片段目录”**** 对话框中的“打开”****，然后在“代码片段管理器”中单击“确定”****。
 
 ## <a name="see-also"></a>另请参阅
- [Visual C#代码段](../ide/visual-csharp-code-snippets.md)[重构（C#）](../csharp-ide/refactoring-csharp.md) [代码段](../ide/code-snippets.md)
+ [Visual c # 代码片段](../ide/visual-csharp-code-snippets.md)[重构 (c # ) ](../csharp-ide/refactoring-csharp.md) [代码片段](../ide/code-snippets.md)

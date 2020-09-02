@@ -1,5 +1,5 @@
 ---
-title: 命令放置元素 |微软文档
+title: CommandPlacement 元素 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,16 +12,16 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: dcf9f23b5e860b895baa4c2a7a783f2ee15fcc77
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80739744"
 ---
-# <a name="commandplacement-element"></a>命令放置元素
-"命令放置"元素允许按钮、组和菜单包含在多个组或菜单中。 通过使用 Command放置元素，您不必完全重新定义这些项目，以修改用户界面的外观。
+# <a name="commandplacement-element"></a>CommandPlacement 元素
+CommandPlacement 元素允许在多个组或菜单中包含按钮、组和菜单。 使用 CommandPlacement 元素时，无需完全重新定义这些项即可修改用户界面的外观。
 
- 有关详细信息，请参阅[创建可重用的按钮组](../extensibility/creating-reusable-groups-of-buttons.md)。
+ 有关详细信息，请参阅 [创建可重用的按钮组](../extensibility/creating-reusable-groups-of-buttons.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -36,24 +36,24 @@ ms.locfileid: "80739744"
 
 ### <a name="attributes"></a>特性
 
-|特性|描述|
+|特性|说明|
 |---------------|-----------------|
-|guid|必需。 命令集的 guid，如[符号元素](../extensibility/symbols-element.md)中定义的那样。|
-|id|必需。 要放置的菜单、组或命令的 ID，如 中`Symbols Element`定义的那样。|
+|guid|必需。 在 [符号元素](../extensibility/symbols-element.md)中定义的命令集的 guid。|
+|id|必需。 要放置的菜单、组或命令的 id，如中所定义 `Symbols Element` 。|
 |priority|必需。 确定项在其父元素中的可视位置。|
-|条件|可选。 请参阅[条件属性](../extensibility/vsct-xml-schema-conditional-attributes.md)。|
+|条件|可选。 请参阅 [条件 Aattributes](../extensibility/vsct-xml-schema-conditional-attributes.md)。|
 
 ### <a name="child-elements"></a>子元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
 |Parent|必需。 承载要放置的项的菜单或组。|
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
-|[命令放置元素](../extensibility/commandplacements-element.md)|指定命令放置和命令放置元素的组。|
+|[CommandPlacements 元素](../extensibility/commandplacements-element.md)|指定 CommandPlacements 和 CommandPlacement 元素的组。|
 
 ## <a name="example"></a>示例
 
@@ -66,6 +66,6 @@ ms.locfileid: "80739744"
 </CommandPlacements>
 ```
 
-## <a name="see-also"></a>请参阅
-- [命令放置元素](../extensibility/commandplacements-element.md)
-- [可视化工作室命令表 （.vsct） 文件](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+## <a name="see-also"></a>另请参阅
+- [CommandPlacements 元素](../extensibility/commandplacements-element.md)
+- [Visual Studio 命令表 ( .vsct) 文件](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugTypeFieldBuilder::CreatePrimitive |Microsoft Docs
+title: IDebugTypeFieldBuilder：： CreatePrimitive |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,16 +12,16 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 5b3119f6fda1b178232c668951b0a5c15004b119
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68152926"
 ---
 # <a name="idebugtypefieldbuildercreateprimitive"></a>IDebugTypeFieldBuilder::CreatePrimitive
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-创建表示基元类型的对象。  
+创建一个表示基元类型的对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,13 +41,13 @@ int CreatePrimitive (
   
 #### <a name="parameters"></a>参数  
  `dwElementType`  
- [in]值从[CorElementType 枚举](/dotnet/framework/unmanaged-api/metadata/corelementtype-enumeration)表示基元类型。  
+ 中表示基元类型的 [CorElementType 枚举](/dotnet/framework/unmanaged-api/metadata/corelementtype-enumeration) 的值。  
   
  `pTypeField`  
- [out]返回新类型的 IDebugField 接口。  
+ 弄返回新类型的 IDebugField 接口。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugTypeFieldBuilder](../../../extensibility/debugger/reference/idebugtypefieldbuilder.md)

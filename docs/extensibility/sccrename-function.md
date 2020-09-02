@@ -1,5 +1,5 @@
 ---
-title: sccrename 函数 |微软文档
+title: SccRename 函数 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,14 +13,14 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 88a917e43729b3049e488264c260f8455ab08fe4
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80700429"
 ---
 # <a name="sccrename-function"></a>SccRename 函数
-此函数重命名源代码管理系统中的文件。
+此函数将重命名源代码管理系统中的文件。
 
 ## <a name="syntax"></a>语法
 
@@ -36,19 +36,19 @@ SCCRTN SccRename(
 #### <a name="parameters"></a>参数
  pvContext
 
-[在]源代码管理插件上下文结构。
+中源代码管理插件上下文结构。
 
- hwnd
+ hWnd
 
-[在]源控件插件可以用作它提供的任何对话框的父级的 IDE 窗口句柄。
+中IDE 窗口的句柄，源代码管理插件可将其用作它所提供的所有对话框的父级。
 
- lpFile名称
+ lpFileName
 
-[在]要重命名的文件的完全限定文件名。
+中要重命名的文件的完全限定文件名。
 
- lp 新名称
+ lpNewName
 
-[在]完全限定的新名称。 如果目录路径不同，则文件已从一个子目录移动到另一个子目录。
+中完全限定的新名称。 如果目录路径不同，则文件已从一个子目录移到另一个子目录。
 
 ## <a name="return-value"></a>返回值
  此函数的源代码管理插件实现应返回以下值之一：
@@ -56,16 +56,16 @@ SCCRTN SccRename(
 |值|说明|
 |-----------|-----------------|
 |SCC_OK|重命名操作已成功完成。|
-|SCC_E_PROJNOTOPEN|项目在源代码管理下不开放。|
-|SCC_E_FILENOTCONTROLLED|该文件不受源代码管理。|
-|SCC_E_ACCESSFAILURE|访问源代码管理系统时出现问题，可能是由于网络或争用问题。|
+|SCC_E_PROJNOTOPEN|未在源代码管理下打开该项目。|
+|SCC_E_FILENOTCONTROLLED|此文件不受源代码管理。|
+|SCC_E_ACCESSFAILURE|访问源代码管理系统时出现问题，可能是由于网络或争用问题导致的。|
 |SCC_E_NOTAUTHORIZED|用户无权完成此操作。|
-|SCC_E_COULDNOTCREATEPROJECT|无法作为重命名过程的一部分创建项目。|
-|SCC_E_OPNOTPERFORMED|未执行操作。|
-|SCC_E_NONSPECIFICERROR|发生未指定或常规错误。|
+|SCC_E_COULDNOTCREATEPROJECT|无法将该项目作为重命名过程的一部分来创建。|
+|SCC_E_OPNOTPERFORMED|未执行此操作。|
+|SCC_E_NONSPECIFICERROR|出现未指定的错误或常规错误。|
 
 ## <a name="remarks"></a>备注
- 此功能可用于重命名文件或将其从一个位置移动到源代码管理系统中的另一个位置。 源代码管理插件不应尝试访问磁盘上的文件。 IDE 负责重命名本地文件。
+ 此函数可用于重命名文件，或将其从源控制系统中的一个位置移动到另一个位置。 源代码管理插件不应尝试访问磁盘上的文件。 重命名本地文件是 IDE 的责任。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [源代码管理插件 API 函数](../extensibility/source-control-plug-in-api-functions.md)

@@ -1,5 +1,5 @@
 ---
-title: 事件源 (Visual Studio SDK) |Microsoft Docs
+title: Visual Studio SDK)  (事件源 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,19 +11,19 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 7a01216f8580e5c366cc6072448a0cf7ef4e6d69
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68152803"
 ---
 # <a name="event-sources-visual-studio-sdk"></a>事件源 (Visual Studio SDK)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-有两个源的事件： 调试引擎 (DE) 和会话调试管理器 (SDM)。 从设备发送的事件具有一个非 NULL 引擎，而从 SDM 发送事件都具有一个 NULL 引擎。  
+事件有两个源：调试引擎 (DE) 和会话调试管理器 (SDM) 。 从 DE 发送的事件具有非 NULL 引擎，而从 SDM 发送的事件具有 NULL 引擎。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何发送**IDebugProgramCreateEvent2**从到 SDM DE。  
+ 下面的示例演示如何将 **IDebugProgramCreateEvent2** 从 DE 发送到 SDM。  
   
 ```  
 CDebugProgramCreateEvent* pProgramCreateEvent = new CDebugProgramCreateEvent();  
@@ -74,5 +74,5 @@ HRESULT CEvent::SendAsynchronousEvent(IDebugEventCallback2 *pCallback, IDebugEng
   
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [发送事件](../../extensibility/debugger/sending-events.md)

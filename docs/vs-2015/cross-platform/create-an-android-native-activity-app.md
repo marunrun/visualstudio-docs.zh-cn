@@ -12,10 +12,10 @@ author: corob-msft
 ms.author: corob
 manager: jillfra
 ms.openlocfilehash: e554c7b97c2feac031510cfdd0894d29b4ba85eb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68151023"
 ---
 # <a name="create-an-android-native-activity-app"></a>创建 Android 本机活动应用
@@ -27,19 +27,19 @@ ms.locfileid: "68151023"
  [创建新的本机活动项目](#Create)   
  [生成和运行默认的 Android 本机活动应用](#BuildHello)  
   
-## <a name="req"></a> 要求  
+## <a name="requirements"></a><a name="req"></a> 要求  
  在创建 Android 本机活动应用前，你必须确保已满足所有系统要求，并在 Visual Studio 2015 中安装了 Visual C++ 移动开发选项。 有关详细信息，请参阅 [Install Visual C++ for Cross-Platform Mobile Development](../cross-platform/install-visual-cpp-for-cross-platform-mobile-development.md)。 确保所需的第三方工具和 SDK 包括在安装中，且已安装适用于 Android 的 Microsoft Visual Studio 仿真程序。  
   
-## <a name="Create"></a> 创建新的本机活动项目  
+## <a name="create-a-new-native-activity-project"></a><a name="Create"></a> 创建新的本机活动项目  
  在本教程中，首先将创建一个新的 Android 本机活动项目，然后在适用于 Android 的 Visual Studio 仿真程序中生成并运行默认应用。  
   
-#### <a name="to-create-a-new-project"></a>创建新项目  
+#### <a name="to-create-a-new-project"></a>创建新项目的步骤  
   
-1. 打开 Visual Studio。 在菜单栏上，依次选择“文件”  、“新建”  、“项目”  。  
+1. 打开 Visual Studio 在菜单栏上，依次选择“文件” 、“新建” 、“项目” 。  
   
-2. 在 **新项目** 对话框中，在 **模板**下，选择 **Visual C++** 、 **跨平台**，然后选择 **本机活动应用程序 (Android)** 模板。  
+2. 在 **新项目** 对话框中，在 **模板**下，选择 **Visual C++**、 **跨平台**，然后选择 **本机活动应用程序 (Android)** 模板。  
   
-3. 为应用提供一个名称（如 `MyAndroidApp`），然后选择“确定”  。  
+3. 为应用提供一个名称（如 `MyAndroidApp`），然后选择“确定”****。  
   
     ![创建本机活动项目](../cross-platform/media/cppmdd-newproject.PNG "CppMDD_NewProject")  
   
@@ -53,18 +53,18 @@ ms.locfileid: "68151023"
   
 - **MyAndroidApp.Packaging** 创建 .apk 文件，用于 Android 设备或仿真程序上的开发。 这包括在此设置清单属性的资源和 AndroidManifest.xml 文件。 它还包括控制 Ant 生成过程的 build.xml 文件。 默认情况下，它被设置为启动项目，因此可从 Visual Studio 直接部署和运行它。  
   
-## <a name="BuildHello"></a> 生成和运行默认的 Android 本机活动应用  
+## <a name="build-and-run-the-default-android-native-activity-app"></a><a name="BuildHello"></a> 生成和运行默认的 Android 本机活动应用  
  生成并运行由此模板生成的应用，以验证你的安装和设置。 对于此初始测试，在其中一个由适用于 Android 的 Visual Studio 仿真程序安装的设备配置文件上运行该应用。 如果想要在其他目标上测试应用，可加载目标仿真程序或将设备连接到计算机。  
   
 #### <a name="to-build-and-run-the-default-native-activity-app"></a>生成并运行默认本机活动应用  
   
-1. 如果尚未选中，则从“解决方案平台”  下拉列表中选择“x86”  。  
+1. 如果尚未选择该选项，请从 "**解决方案平台**" 下拉列表中选择 " **x86** "。  
   
-     ![解决方案平台下拉列表 x86 选择](../cross-platform/media/cppmdd-rc-na-solution-x86.png "CPPMDD_RC_NA_Solution_x86")  
+     ![解决方案平台下拉 x86 选择](../cross-platform/media/cppmdd-rc-na-solution-x86.png "CPPMDD_RC_NA_Solution_x86")  
   
-     如果未显示“解决方案平台”列表，则从“添加/删除按钮”  列表中选择“解决方案平台”  ，然后选择你的平台。   
+     如果未显示 "**解决方案平台**" 列表，请从 "**添加/删除按钮**" 列表中选择 "**解决方案平台**"，然后选择平台。  
   
-2. 在菜单栏上，依次选择 **“生成”** 、 **“生成解决方案”** 。  
+2. 在菜单栏上，依次选择 **“生成”**、 **“生成解决方案”**。  
   
      “输出”窗口显示针对解决方案中两个项目的生成过程的输出。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "68151023"
   
      这就是默认应用在适用于 Android 的 Visual Studio 仿真程序中的样子。  
   
-     ![运行你的应用的仿真程序](../cross-platform/media/cppmdd-emulator-running-app.PNG "CppMDD_Emulator_Running_App")  
+     ![运行你的应用的仿真器](../cross-platform/media/cppmdd-emulator-running-app.PNG "CppMDD_Emulator_Running_App")  
   
      Visual Studio 启动仿真程序，需要几秒钟时间来加载和部署你的代码。 一旦你的应用启动，你可以设置断点，并使用调试器逐步调试代码，检查局部变量并监视值。  
   

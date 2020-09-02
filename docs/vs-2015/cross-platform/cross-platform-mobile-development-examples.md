@@ -12,13 +12,13 @@ author: corob-msft
 ms.author: corob
 manager: jillfra
 ms.openlocfilehash: c129634dd2421809d5ac15eb930f07c94d8b39f3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68151005"
 ---
-# <a name="cross-platform-mobile-development-examples"></a>跨平台移动开发示例
+# <a name="cross-platform-mobile-development-examples"></a>Cross-Platform Mobile Development Examples
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Visual C++ 安装的用于跨平台移动开发的若干模板生成完整的示例，你可以使用这些示例进行学习。 此外，Windows 开发人员中心有若干示例应用程序，你可以在 Visual Studio 中下载并试用。  
@@ -51,6 +51,6 @@ Visual C++ 安装的用于跨平台移动开发的若干模板生成完整的示
   
    此示例是 Android NDK test-libstdc++ 示例的端口，专用于 Visual Studio 2015。 此示例是开发人员了解如何使用标准库的良好开端。  
   
-  若要在 Visual Studio 中打开其中一个示例，请下载 zip 文件并在资源管理器中打开所下载文件的“属性”  页。 选择“解除阻止”  按钮，然后选择“确定”  。 将 zip 文件的内容解压缩到一个方便的位置，然后在解压缩后的示例中打开 C++ 文件夹，并打开解决方案文件。  
+  若要在 Visual Studio 中打开其中一个示例，请下载 zip 文件并在资源管理器中打开所下载文件的“属性” **** 页。 选择“解除阻止” **** 按钮，然后选择“确定” ****。 将 zip 文件的内容解压缩到一个方便的位置，然后在解压缩后的示例中打开 C++ 文件夹，并打开解决方案文件。  
   
-  若要生成示例，请按 F7，或在菜单栏上依次选择“生成”  、“生成解决方案”  。
+  若要生成示例，请按 F7，或在菜单栏上依次选择“生成” ****、“生成解决方案” ****。

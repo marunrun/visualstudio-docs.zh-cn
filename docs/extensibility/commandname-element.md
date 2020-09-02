@@ -1,5 +1,5 @@
 ---
-title: 命令名称元素 |微软文档
+title: CommandName 元素 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,14 +12,14 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 8152942d015e21b1b80f735fd921a5ddde3674d5
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80739746"
 ---
-# <a name="commandname-element"></a>命令名称元素
-该`CommandName`元素指定"**选项**"对话框中的键盘类别中以及 **"自定义"** 对话框中的 **"命令"** 列表中显示的文本。
+# <a name="commandname-element"></a>CommandName 元素
+`CommandName`元素指定在 "**选项**" 对话框的 "键盘" 类别和 "**自定义**" 对话框的 "**命令**" 列表中显示的文本。
 
 ## <a name="syntax"></a>语法
 
@@ -38,9 +38,9 @@ ms.locfileid: "80739746"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
-|[字符串元素](../extensibility/strings-element.md)|对文本元素（如`ButtonText`和`CommandName`）|
+|[Strings 元素](../extensibility/strings-element.md)|组合文本元素，例如 `ButtonText` 和 `CommandName` 。|
 
-## <a name="see-also"></a>请参阅
-- [可视化工作室命令表 （.vsct） 文件](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+## <a name="see-also"></a>另请参阅
+- [Visual Studio 命令表 ( .vsct) 文件](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
