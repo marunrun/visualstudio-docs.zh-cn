@@ -1,5 +1,5 @@
 ---
-title: IDebugThread2::EnumFrameInfo |Microsoft Docs
+title: IDebugThread2：： EnumFrameInfo |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,10 +13,10 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: efda31daae198befbda35803ef71e1d0322e9bbd
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68153087"
 ---
 # <a name="idebugthread2enumframeinfo"></a>IDebugThread2::EnumFrameInfo
@@ -44,21 +44,21 @@ int EnumFrameInfo ( 
   
 #### <a name="parameters"></a>参数  
  `dwFieldSpec`  
- [in]中的标志的组合[FRAMEINFO_FLAGS](../../../extensibility/debugger/reference/frameinfo-flags.md)枚举，用于指定的哪些字段[FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md)结构是要填写。指定`FIF_FUNCNAME_FORMAT`标志设置为一个字符串的格式的函数名称。  
+ 中 [FRAMEINFO_FLAGS](../../../extensibility/debugger/reference/frameinfo-flags.md) 枚举中的标志的组合，用于指定要填写 [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md) 结构的哪些字段。指定 `FIF_FUNCNAME_FORMAT` 用于将函数名称设置为单个字符串的标志。  
   
  `nRadix`  
- [in]设置格式的枚举数中的数字信息时使用的基数。  
+ 中格式化枚举器中的数值信息时使用的基数。  
   
  `ppEnum`  
- [out]返回[IEnumDebugFrameInfo2](../../../extensibility/debugger/reference/ienumdebugframeinfo2.md)对象，其中包含一系列[FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md)结构描述的堆栈帧。  
+ 弄返回一个 [IEnumDebugFrameInfo2](../../../extensibility/debugger/reference/ienumdebugframeinfo2.md) 对象，该对象包含描述堆栈帧的 [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md) 结构的列表。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
 ## <a name="remarks"></a>备注  
- 使用第一次枚举的当前帧和上一次枚举的最早帧中顺序，列举了线程的帧。  
+ 线程的帧按顺序枚举，当前帧首先枚举，最后枚举最早的帧。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)   
  [FRAMEINFO_FLAGS](../../../extensibility/debugger/reference/frameinfo-flags.md)   
  [IEnumDebugFrameInfo2](../../../extensibility/debugger/reference/ienumdebugframeinfo2.md)   

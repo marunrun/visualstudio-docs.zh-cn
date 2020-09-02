@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty2::GetReference |Microsoft Docs
+title: IDebugProperty2：： GetReference |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 73f6bb556c3f18c8327985ac7c46b77a3a6d2c01
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68193481"
 ---
 # <a name="idebugproperty2getreference"></a>IDebugProperty2::GetReference
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-返回对该属性的值的引用。  
+返回对该属性值的引用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,11 +40,11 @@ int GetReference(
   
 #### <a name="parameters"></a>参数  
  `ppRererence`  
- [out]返回[IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)对象，表示对属性的值的引用。  
+ 弄返回一个 [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) 对象，该对象表示对属性值的引用。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码，通常`E_NOTIMPL`或`E_GETREFERENCE_NO_REFERENCE`。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码，通常为 `E_NOTIMPL` 或 `E_GETREFERENCE_NO_REFERENCE` 。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)   
  [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)

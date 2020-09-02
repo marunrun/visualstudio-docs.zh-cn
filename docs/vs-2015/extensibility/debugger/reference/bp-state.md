@@ -1,5 +1,5 @@
 ---
-title: BP_STATE | Microsoft Docs
+title: BP_STATE |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: a4de23d462136ad417859d7064fef6b4ace7e59c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68153250"
 ---
-# <a name="bpstate"></a>BP_STATE
+# <a name="bp_state"></a>BP_STATE
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-指定绑定断点存在以及它是否已启用。  
+指定绑定断点是否存在，还指定是否已启用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -50,7 +50,7 @@ public enum enum_BP_STATE { 
  指定不存在任何断点。  
   
  BPS_DELETED  
- 指定已删除的断点。  
+ 指定已删除断点。  
   
  BPS_DISABLED  
  指定禁用断点。  
@@ -59,15 +59,15 @@ public enum enum_BP_STATE { 
  指定启用断点。  
   
 ## <a name="remarks"></a>备注  
- 返回从[GetState](../../../extensibility/debugger/reference/idebugboundbreakpoint2-getstate.md)方法。  
+ 从 [GetState](../../../extensibility/debugger/reference/idebugboundbreakpoint2-getstate.md) 方法返回。  
   
 ## <a name="requirements"></a>要求  
- 标头： msdbg.h  
+ 标头： msdbg  
   
- 命名空间:Microsoft.VisualStudio.Debugger.Interop  
+ 命名空间： VisualStudio  
   
- 程序集：Microsoft.VisualStudio.Debugger.Interop.dll  
+ 程序集： Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>请参阅  
- [枚举](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>另请参阅  
+ [计数](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [GetState](../../../extensibility/debugger/reference/idebugboundbreakpoint2-getstate.md)

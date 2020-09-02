@@ -11,10 +11,10 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: b4ac6fa753be7672f1e698bda231bd11217c10d4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68152730"
 ---
 # <a name="getscheduledtasksfordebugger-method"></a>GetScheduledTasksForDebugger 方法
@@ -24,9 +24,9 @@ ms.locfileid: "68152730"
   
  **命名空间：** <xref:System.Threading.Tasks?displayProperty=fullName>  
   
- **程序集：** mscorlib （在 mscorlib.dll 中)  
+ **Assembly：** mscorlib (mscorlib.dll)   
   
- 无法从.NET Framework 来访问此内部成员，因为以下语法提供通用中间语言 (CIL)。  
+ 由于无法从 .NET Framework 访问此内部成员，因此在公共中间语言 (CIL) 中提供了以下语法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,7 +38,7 @@ ms.locfileid: "68152730"
  所有计划任务的数组。 每个任务正在执行或已完成执行。  
   
 ## <a name="remarks"></a>备注  
- 此方法不是线程安全，因此不应与其他实例同时<xref:System.Threading.Tasks.TaskScheduler>它时，应调用从调试器仅在调试器已挂起的所有其他线程。  
+ 此方法不是线程安全的，不应与它的其他实例一起使用 <xref:System.Threading.Tasks.TaskScheduler> 。仅当调试器挂起了所有其他线程时，才应从调试器调用此方法。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [TaskScheduler 类](../../extensibility/debugger/taskscheduler-class-internal-members.md)

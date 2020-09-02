@@ -1,5 +1,5 @@
 ---
-title: IDebugThread2::GetName |Microsoft Docs
+title: IDebugThread2：： GetName |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,10 +13,10 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 509db8c30aabd8a4163ea433bb06a99d4bfa2fb9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68153043"
 ---
 # <a name="idebugthread2getname"></a>IDebugThread2::GetName
@@ -40,14 +40,14 @@ int GetName ( 
   
 #### <a name="parameters"></a>参数  
  `pbstrName`  
- [out]返回线程的名称。  
+ 弄返回线程的名称。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
 ## <a name="remarks"></a>备注  
- 检索到的名称始终是可显示的名称，此名称描述该线程。 线程名称可能派生自的运行时体系结构支持命名的线程，也可能被派生自的调试引擎的名称。 或者，可以通过调用设置线程名称[SetThreadName](../../../extensibility/debugger/reference/idebugthread2-setthreadname.md)方法。  
+ 检索到的名称始终是一个可以显示的名称，此名称描述了该线程。 线程名称可能派生自支持命名线程的运行时结构，也可能是从调试引擎派生的名称。 或者，可以通过调用 [SetThreadName](../../../extensibility/debugger/reference/idebugthread2-setthreadname.md) 方法来设置线程的名称。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)   
  [SetThreadName](../../../extensibility/debugger/reference/idebugthread2-setthreadname.md)

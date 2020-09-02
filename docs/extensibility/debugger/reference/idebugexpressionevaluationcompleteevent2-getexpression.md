@@ -1,5 +1,5 @@
 ---
-title: IDebug表达式评估完成事件2：：获取表达式 |微软文档
+title: IDebugExpressionEvaluationCompleteEvent2：： System.componentmodel.design.serialization.codedomserializerbase.getexpression |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 0c6ed79edadf9191604291a4c6f0f07b0aa1f0dd
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80729590"
 ---
 # <a name="idebugexpressionevaluationcompleteevent2getexpression"></a>IDebugExpressionEvaluationCompleteEvent2::GetExpression
@@ -41,15 +41,15 @@ int GetExpression( 
 
 ## <a name="parameters"></a>参数
 `ppExpr`\
-[出]返回表示已解析的表达式的[IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md)对象。
+弄返回一个 [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md) 对象，该对象表示已分析的表达式。
 
 ## <a name="return-value"></a>返回值
- 如果成功，返回`S_OK`;否则，返回错误代码。
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。
 
 ## <a name="remarks"></a>备注
- 此方法返回在调用[ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md)方法时创建的对象。
+ 此方法返回在对 [ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) 方法的调用中创建的对象。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IDebugExpressionEvaluationCompleteEvent2](../../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2.md)
 - [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md)
 - [ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md)

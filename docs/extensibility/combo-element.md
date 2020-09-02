@@ -1,5 +1,5 @@
 ---
-title: 组合元素 |微软文档
+title: 组合元素 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,14 +12,14 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 18ff9d9e20ec221a86f1cce5f9c43a4e47ed6dc2
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80739817"
 ---
 # <a name="combo-element"></a>组合元素
-定义显示在组合框中的命令。 组合框有四种，如下所示：下拉康博、动态康波、指数康博和MRUCombo。
+定义在组合框中显示的命令。 有四种类型的组合框，如下所示： DropDownCombo、DynamicCombo、IndexCombo 和 MRUCombo。
 
 ## <a name="syntax"></a>语法
 
@@ -36,30 +36,30 @@ ms.locfileid: "80739817"
 
 ### <a name="attributes"></a>特性
 
-|特性|描述|
+|特性|说明|
 |---------------|-----------------|
 |guid|必需。 GUID/ID 命令标识符的 GUID。|
 |id|必需。 GUID/ID 命令标识符的 ID。|
-|默认宽度|必需。 指定组合框像素宽度的整数。|
-|id命令列表|必需。 发送到活动命令目标的 ID，用于检索要在组合框中显示的项目列表。 ID 将与控件位于相同的 GUID 作用域中。|
-|priority|可选。 指定优先级的数值。|
-|type|可选。 指定按钮类型的枚举值。<br /><br /> 如果未给出，则使用按钮。<br /><br /> 下拉康博<br /> VS包装负责填写此组合框的内容。 用户无法在此下拉列表的文本框中键入任何内容。<br /><br /> 动态通信<br /> VS包装负责填写此组合框的内容。 用户可以编辑此组合，也可以选择其中的项目。<br /><br /> 索引孔博<br /> 与 DynamicCombo 相同，只不过它提高了项的索引，而不是其文本。<br /><br /> MRUCombo<br /> 由代表 VSPackage 的集成开发环境 （IDE） 填充。  用户可以在此组合框中进行编辑。 IDE 最多记住每个组合框的最后 16 个条目。<br /><br /> 当用户在组合框中选择某些内容或输入新内容时，IDE 会通知相应的 VSPackage。|
-|条件|可选。 请参阅[条件属性](../extensibility/vsct-xml-schema-conditional-attributes.md)。|
+|defaultWidth|必需。 一个整数，指定组合框的像素宽度。|
+|idCommandList|必需。 发送到活动命令目标的 ID，用于检索要在组合框中显示的项的列表。 该 ID 将与控件位于同一 GUID 范围内。|
+|priority|可选。 一个指定优先级的数值。|
+|type|可选。 一个枚举值，该值指定按钮的类型。<br /><br /> 如果未提供，则使用按钮。<br /><br /> DropDownCombo<br /> VSPackage 负责填充此组合框的内容。 用户不能在此下拉框的文本框中键入任何内容。<br /><br /> DynamicCombo<br /> VSPackage 负责填充此组合框的内容。 用户可以编辑此组合，还可以选择其中的项。<br /><br /> IndexCombo<br /> 与 DynamicCombo 相同，不同之处在于它会引发项（而不是其文本）的索引。<br /><br /> MRUCombo<br /> 由集成开发环境 (IDE) 代表 VSPackage 进行填充。  用户可在此组合框中进行编辑。 IDE 将为每个组合框最多记住最后16个条目。<br /><br /> 当用户在组合框中选择一些内容或输入一些新内容时，IDE 将通知相应的 VSPackage。|
+|条件|可选。 请参阅 [条件特性](../extensibility/vsct-xml-schema-conditional-attributes.md)。|
 
 ### <a name="child-elements"></a>子元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
 |Parent|可选。 按钮的父元素。|
-|命令标志|必需。 请参阅[命令标志元素](../extensibility/command-flag-element.md)。 按钮的有效命令 Flag 值如下所示。<br /><br /> - 区分大小写<br /><br /> - 命令井只<br /><br /> - 默认禁用<br /><br /> - 默认不可见<br /><br /> - 动态可见性<br /><br /> - 过滤器键<br /><br /> - 图标和文本<br /><br /> - 无自动完成<br /><br /> - 无按钮定制<br /><br /> - 无定制<br /><br /> - 无键定制<br /><br /> - 横向拉伸|
-|字符串|必需。 请参阅[字符串元素](../extensibility/strings-element.md)。 必须定义子按钮文本元素。|
+|CommandFlag|必需。 请参阅 [命令标志元素](../extensibility/command-flag-element.md)。 按钮的有效 CommandFlag 值如下所示。<br /><br /> -CaseSensitive<br /><br /> - CommandWellOnly<br /><br /> - DefaultDisabled<br /><br /> - DefaultInvisible<br /><br /> - DynamicVisibility<br /><br /> -筛选键<br /><br /> - IconAndText<br /><br /> - NoAutoComplete<br /><br /> - NoButtonCustomize<br /><br /> - NoCustomize<br /><br /> - NoKeyCustomize<br /><br /> - StretchHorizontally|
+|字符串|必需。 请参阅 [字符串元素](../extensibility/strings-element.md)。 必须定义子 ButtonText 元素。|
 |Annotation|可选注释。|
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
-|[命令元素](../extensibility/commands-element.md)|表示 VSPackage 工具栏上的命令集合。|
+|[命令元素](../extensibility/commands-element.md)|表示 VSPackage 工具栏上命令的集合。|
 
 ## <a name="example"></a>示例
 
@@ -83,5 +83,5 @@ ms.locfileid: "80739817"
 </Combo>
 ```
 
-## <a name="see-also"></a>请参阅
-- [可视化工作室命令表 （.vsct） 文件](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+## <a name="see-also"></a>另请参阅
+- [Visual Studio 命令表 ( .vsct) 文件](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

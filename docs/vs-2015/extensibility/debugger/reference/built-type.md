@@ -1,5 +1,5 @@
 ---
-title: BUILT_TYPE | Microsoft Docs
+title: BUILT_TYPE |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 8
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 6becf886d361e203dca313a7aa1dfdf166aa4614
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68153174"
 ---
-# <a name="builttype"></a>BUILT_TYPE
+# <a name="built_type"></a>BUILT_TYPE
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-此结构指定从元数据字段类型有关的信息。  
+此结构指定了来自元数据的字段类型的相关信息。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,25 +44,25 @@ public struct BUILT_TYPE {
   
 #### <a name="parameters"></a>参数  
  ulAppDomainID  
- 符号所来自的应用程序 ID。 这用于唯一标识应用程序的实例。  
+ 符号所源自的应用程序的 ID。 用于唯一标识应用程序的实例。  
   
  guidModule  
  包含此字段的模块的 GUID。  
   
  pUnderlyingField  
- [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)标识与此生成的字段关联的基础字段对象。  
+ 一个 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) 对象，该对象标识与此生成字段关联的基础字段。  
   
 ## <a name="remarks"></a>备注  
- 此结构显示为中的联合的一部分[TYPE_INFO](../../../extensibility/debugger/reference/type-info.md)结构时`dwKind`字段`TYPE_INFO`结构设置为`TYPE_KIND_BUILT`(从值[dwTYPE_KIND](../../../extensibility/debugger/reference/dwtype-kind.md)枚举）。  
+ 当结构的[TYPE_INFO](../../../extensibility/debugger/reference/type-info.md) `dwKind` 字段 `TYPE_INFO` 设置为 `TYPE_KIND_BUILT` 从[dwTYPE_KIND](../../../extensibility/debugger/reference/dwtype-kind.md)枚举) 中的值 (时，此结构显示为 TYPE_INFO 结构中联合的一部分。  
   
 ## <a name="requirements"></a>要求  
- 标头： sh.h  
+ 标头： sh。h  
   
- 命名空间:Microsoft.VisualStudio.Debugger.Interop  
+ 命名空间： VisualStudio  
   
- 程序集：Microsoft.VisualStudio.Debugger.Interop.dll  
+ 程序集： Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [结构和联合](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md)   
  [dwTYPE_KIND](../../../extensibility/debugger/reference/dwtype-kind.md)   

@@ -1,5 +1,5 @@
 ---
-title: 属性窗口概述 |Microsoft Docs
+title: "\"属性\" 窗口概述 |Microsoft Docs"
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,45 +11,45 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: fd4be229338d1a09c22b4d81384dc90f0544fa39
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65700746"
 ---
 # <a name="properties-window-overview"></a>属性窗口概述
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-**属性**窗口用于显示在 windows 中可用的两个主要类型中选择的对象的属性[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]集成的开发环境 (IDE)。 Windows 这两种类型是：  
+" **属性** " 窗口用于显示在 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 集成开发环境 (IDE) 中可用的两种主要类型的 windows 中所选对象的属性。 这两种类型的窗口是：  
   
-- 如解决方案资源管理器、 类视图和对象浏览器的工具窗口  
+- 工具窗口，如解决方案资源管理器、类视图和对象浏览器  
   
-- 包含此类编辑器和设计器为窗体设计器、 XML 编辑器和 HTML 编辑器的文档窗口  
+- 文档窗口，其中包含这些编辑器和设计器作为窗体设计器、XML 编辑器和 HTML 编辑器  
   
-## <a name="using-the-properties-window"></a>使用属性窗口  
- **属性**窗口显示单个或多个选定的项的属性。 如果选择了多个项，会显示所有选定对象的所有属性的交集。  
+## <a name="using-the-properties-window"></a>使用 "属性" 窗口  
+ " **属性** " 窗口显示单个或多个选定项的属性。 如果选择了多个项，则会显示所有选定对象的所有属性的交集。  
   
- 中会显示与所选对象中的窗体设计窗口或 HTML 编辑器使用 COM + 元数据相关的事件**属性**窗口。 例如，可以选择一个按钮，并显示其关联的事件，如`OnClick`事件，可以链接到该按钮。  
+ 在 " **属性** " 窗口中显示与窗体设计窗口内的所选对象或使用 com + 元数据的 HTML 编辑器相关的事件。 例如，您可以选择一个按钮并显示其关联事件，例如 `OnClick` 事件，这些事件可以链接到该按钮。  
   
- 在显示事件**属性**窗口主要用于绑定到代码的对象。 如果正在编辑没有执行任何操作，代码的文件格式，您都不会有任何事件。 中仅显示事件**属性**窗口时运行代码，并具有特定的对象关联的某些事件之间的绑定。 此示例将代码隐藏所选对象时激活该对象执行。  
+ " **属性** " 窗口中显示的事件主要用于绑定到代码的对象。 如果正在编辑的文件格式不包含任何与代码有关的内容，则不会有任何事件。 当运行代码和特定的事件与特定对象相关联时，事件仅显示在 " **属性** " 窗口中。 这种情况的一个示例是在激活对象时执行的所选对象的代码。  
   
- 下表列出了使用的主接口**属性**窗口。  
+ 下表列出了 " **属性** " 窗口使用的主要接口。  
   
-|接口名称|描述|  
+|接口名称|说明|  
 |--------------------|-----------------|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.ICategorizeProperties>|提供了一系列为类别**属性**窗口，并将每个属性映射到某个类别。|  
-|[IDispatch 接口](https://msdn.microsoft.com/ebbff4bc-36b2-4861-9efa-ffa45e013eb5)|公开对象的方法和属性到编程的工具和其他应用程序支持自动化。|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IProvidePropertyBuilder>|提供了名为的省略号 （...） 按钮*生成器*的打开模式对话框窗口本身的对象实现。 在文本字段中用户无法轻松地键入一个值时使用。 例如，它可能会用于打开颜色选取器，用于确定为你的 RGB 值。|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer>|提供对用于更新中显示信息的对象的访问**属性**窗口。 <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> 是为每个窗口，其中包含要显示相关属性与可选择对象实现的 Vspackage。|  
-|<xref:Microsoft.VisualStudio.OLE.Interop.ITypeInfo>|提供有关如方法的对象类型的接口和结构的字段的信息。|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection>|允许 Vspackage 接收通知的选中内容事件以及如何检索有关当前项目层次结构、 项、 元素值和命令 UI 上下文信息。|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsMultiItemSelect>|提供有权访问多个选择的环境。|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing>|用于提供对某些属性中显示的本地化的名称**属性**窗口。|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsSelectionEvents>|通知对当前所选内容中，元素值或命令 UI 上下文的更改已注册的 Vspackage。|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackSelectionEx>|发送通知的当前选定内容中更改环境，并提供对与新的所选内容相关的层次结构和项信息的访问。|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.ICategorizeProperties>|提供 " **属性** " 窗口的类别列表，并将每个属性映射到一个类别。|  
+|[IDispatch 接口](https://msdn.microsoft.com/ebbff4bc-36b2-4861-9efa-ffa45e013eb5)|向支持自动化的编程工具和其他应用程序公开对象的方法和属性。|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IProvidePropertyBuilder>|提供省略号 ( ... ) 称为 *生成器* 的按钮，这些按钮用于打开由对象本身实现的模式对话框窗口。 当用户在文本字段中无法轻松地键入值时使用。 例如，它可用于打开一个颜色选取器，用于确定您的 RGB 值。|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer>|提供对用于更新 " **属性** " 窗口中显示的信息的对象的访问。 <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> 为每个窗口实现 Vspackage，其中包含具有要显示的相关属性的可选择对象。|  
+|<xref:Microsoft.VisualStudio.OLE.Interop.ITypeInfo>|提供有关对象类型（如接口的方法和结构的字段）的信息。|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection>|允许 Vspackage 接收选择事件的通知，并检索有关当前项目层次结构、项、元素值和命令 UI 上下文的信息。|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsMultiItemSelect>|为环境提供对多个选择的访问。|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing>|用于在 " **属性** " 窗口中显示的某些属性上提供本地化的名称。|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsSelectionEvents>|通知注册的 Vspackage 当前选择、元素值或命令 UI 上下文的更改。|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackSelectionEx>|向环境通知当前所选内容的更改，并提供对与新选择相关的层次结构和项信息的访问权限。|  
   
- 有关详细信息`IDispatch`，请参阅 MSDN 库。  
+ 有关的详细信息 `IDispatch` ，请参阅 MSDN library。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [扩展属性](../../extensibility/internals/extending-properties.md)   
- [属性窗口字段和界面](../../extensibility/internals/properties-window-fields-and-interfaces.md)
+ [Properties Window Fields and Interfaces](../../extensibility/internals/properties-window-fields-and-interfaces.md)

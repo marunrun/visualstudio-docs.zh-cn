@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: c099839cda87819ec0ec7932c2b2e6aa7698fa52
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670880"
 ---
 # <a name="how-to-edit-xml-files"></a>如何：编辑 XML 文件
@@ -30,43 +30,43 @@ ms.locfileid: "72670880"
 
 ### <a name="to-add-a-new-xml-file-to-a-project"></a>向项目中添加新的 XML 文件
 
-1. 从 "**项目**" 菜单中，选择 "**添加新项**"。
+1. 从“项目”菜单中选择“添加新项” 。
 
-2. 从 "**模板**" 窗格中选择 " **XML 文件**"。
+2. 在“模板”窗格中选择“XML 文件” 。
 
-3. 在 "**名称**" 字段中输入文件名，然后按 "**添加**"。
+3. 在“名称”字段中输入文件名，然后按“添加” 。
 
      该 XML 文件将添加到项目中并在“XML 编辑器”中打开。 该文件包含默认的 XML 声明 `<?xml version="1.0" encoding="utf-8" ?>`。
 
 ### <a name="to-add-an-existing-xml-file-to-a-project"></a>向项目中添加现有的 XML 文件
 
-1. 从 "**项目**" 菜单中，选择 "**添加现有项**"。
+1. 从“项目”菜单中选择“添加现有项” 。
 
-     此时将显示 "**添加现有项**" 对话框。
+     此时出现“添加现有项”对话框。
 
-2. 选择 XML 文件，然后按 "**添加**"。
+2. 选择 XML 文件，然后按“添加”。
 
 ### <a name="to-create-a-new-xml-or-xslt-file"></a>新建 XML 或 XSLT 文件
 
-1. 从 "**文件**" 菜单中选择 "**新建**"。
+1. 在“文件”菜单中，选择“新建” 。
 
-     此时将显示 "**新建文件**" 对话框。
+     此时将显示 **“新建文件”** 对话框。
 
-2. 选择 " **Xml 文件**" 以创建新的 xml 文件;或者，选择 " **Xslt 文件**" 以创建新的 xslt 样式表。
+2. 若要新建 XML 文件，请选择“XML 文件”；若要新建 XSLT 样式表，请选择“XSLT 文件” 。
 
 3. 单击“打开”。
 
 ### <a name="to-create-a-project-for-xml-files"></a>为 XML 文件创建项目
 
-1. 从 "**文件**" 菜单中选择 "**新建**"，然后选择 "**项目**"。
+1. 从“文件”**** 菜单，选择“新建”****，然后选择“项目”****。
 
      此时将出现“新建项目”对话框。
 
-2. 选择所选的代码语言，选择 "**空项目**"，然后单击 **"确定"** 。
+2. 选择所选的代码语言，选择 " **空项目**"，然后单击 **"确定"**。
 
 3. 将 XML 文件添加到项目中。
 
      “XML 编辑器”找到您添加到此项目中的架构，并在此项目打开时，使用这些架构在您编辑的任何 XML、架构或 XSLT 文件中进行验证和 IntelliSense。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [Xml 编辑器](../xml-tools/xml-editor.md) [xml 文档属性，"属性" 窗口](../xml-tools/xml-document-properties-properties-window.md)[如何：从 xml 文档创建 xml 架构](../xml-tools/how-to-create-an-xml-schema-from-an-xml-document.md)

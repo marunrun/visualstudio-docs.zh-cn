@@ -1,5 +1,5 @@
 ---
-title: IDebugPortNotify2 | Microsoft Docs
+title: IDebugPortNotify2 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 18edddd698953bf71febb8f9f2f1bac704205120
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65703923"
 ---
 # <a name="idebugportnotify2"></a>IDebugPortNotify2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-此接口注册或注销可以与它所在的端口进行调试的程序。  
+此接口可注册或取消注册可使用运行该程序的端口进行调试的程序。  
   
 ## <a name="syntax"></a>语法  
   
@@ -30,30 +30,30 @@ ms.locfileid: "65703923"
 IDebugPortNotify2 : IUnknown  
 ```  
   
-## <a name="notes-for-implementers"></a>实施者的说明  
- 自定义端口提供程序实现此接口以支持添加和删除与该端口的程序。 它通常实现的相同对象上实现[IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md)接口。  
+## <a name="notes-for-implementers"></a>实施者注意事项  
+ 自定义端口供应商实现此接口，以支持从端口添加和删除程序。 它通常在实现 [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) 接口的同一对象上实现。  
   
-## <a name="notes-for-callers"></a>调用方的说明  
- 调用[QueryInterface](https://msdn.microsoft.com/library/62fce95e-aafa-4187-b50b-e6611b74c3b3)上`IDebugPort2`接口返回此接口。 此外，调用[GetPortNotify](../../../extensibility/debugger/reference/idebugdefaultport2-getportnotify.md)返回此接口。 调试引擎可以看到此接口的参数作为[WatchForProviderEvents](../../../extensibility/debugger/reference/idebugprogramprovider2-watchforproviderevents.md)。  
+## <a name="notes-for-callers"></a>调用方说明  
+ 对接口的 [QueryInterface](https://msdn.microsoft.com/library/62fce95e-aafa-4187-b50b-e6611b74c3b3) 的调用 `IDebugPort2` 返回此接口。 此外，对 [GetPortNotify](../../../extensibility/debugger/reference/idebugdefaultport2-getportnotify.md) 的调用返回此接口。 调试引擎可以将此接口查看为 [WatchForProviderEvents](../../../extensibility/debugger/reference/idebugprogramprovider2-watchforproviderevents.md)的参数。  
   
 ## <a name="methods-in-vtable-order"></a>Vtable 顺序中的方法  
- 下表显示的方法`IDebugPortNotify2`。  
+ 下表显示的方法 `IDebugPortNotify2` 。  
   
-|方法|描述|  
+|方法|说明|  
 |------------|-----------------|  
-|[AddProgramNode](../../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md)|可调试的程序注册到的端口运行。|  
-|[RemoveProgramNode](../../../extensibility/debugger/reference/idebugportnotify2-removeprogramnode.md)|可以从其运行的端口进行调试的程序中注销。|  
+|[AddProgramNode](../../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md)|注册一个程序，该程序可以使用其运行所在的端口进行调试。|  
+|[RemoveProgramNode](../../../extensibility/debugger/reference/idebugportnotify2-removeprogramnode.md)|取消注册可从运行该程序的端口进行调试的程序。|  
   
 ## <a name="remarks"></a>备注  
- 除非调试端口的方法可以知道加载或卸载程序时，自定义端口提供程序必须实现此接口。 使用此接口跟踪加载调试通过特定端口的所有程序。  
+ 除非调试端口有办法知道加载或卸载程序的时间，否则自定义端口提供程序必须实现此接口。 使用此接口跟踪为通过特定端口进行调试而加载的所有程序。  
   
 ## <a name="requirements"></a>要求  
- 标头： msdbg.h  
+ 标头： msdbg  
   
- 命名空间:Microsoft.VisualStudio.Debugger.Interop  
+ 命名空间： VisualStudio  
   
- 程序集：Microsoft.VisualStudio.Debugger.Interop.dll  
+ 程序集： Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [核心接口](../../../extensibility/debugger/reference/core-interfaces.md)   
  [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)

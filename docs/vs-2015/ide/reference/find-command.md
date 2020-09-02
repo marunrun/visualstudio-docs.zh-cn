@@ -15,16 +15,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 6ce0e4a3aaca752cbdeda0a83e469977306c3404
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657684"
 ---
 # <a name="find-command"></a>“查找”命令
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-要搜索文件，请使用“查找和替换”窗口的“在文件中查找”选项卡上的可用选项子集   。
+要搜索文件，请使用“查找和替换”窗口的“在文件中查找”选项卡上的可用选项子集 。
 
 ## <a name="syntax"></a>语法
 
@@ -33,7 +33,7 @@ Edit.Find findwhat [/case] [/doc | /proc | /open | /sel]
 [/markall] [/options] [/reset] [/up] [/wild | /regex] [/word]
 ```
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
  `findwhat`（必需）。 要匹配的文本。
 
 ## <a name="switches"></a>开关
