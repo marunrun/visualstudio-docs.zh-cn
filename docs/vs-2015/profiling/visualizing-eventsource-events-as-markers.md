@@ -10,10 +10,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: a8cd0f0e5a420155cfc6786e4a8542bc59f93ece
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65690207"
 ---
 # <a name="visualizing-eventsource-events-as-markers"></a>将 EventSource 事件作为标记可视化
@@ -32,16 +32,16 @@ ms.locfileid: "65690207"
   
 3. 在所有其他情况下，事件均被视为消息。  
   
-### <a name="importance"></a>重要性  
+### <a name="importance"></a>Importance  
  下表定义了事件级别映射到标记重要性的方式。  
   
 |ETW 级别|并发可视化工具重要性|  
 |---------------|---------------------------------------|  
-|win:LogAlways|普通|  
+|win:LogAlways|一般|  
 |win:Critical|严重|  
 |win:Error|严重|  
 |win:Warning|高|  
-|win:Informational|普通|  
+|win:Informational|一般|  
 |win:Verbose|低|  
 |大于 win:verbose|低|  
   
@@ -51,7 +51,7 @@ ms.locfileid: "65690207"
 ### <a name="category"></a>类别  
  如果级别为 win:Critical 或 win:Error，则类别为警报 (-1)。 否则，类别为默认值 (0)。  
   
-### <a name="text"></a>Text  
+### <a name="text"></a>文本  
  如果为事件定义了 printf 类型的格式化文本消息，它将显示为标记的说明。 否则，说明则是该事件的名称和每个负载字段的值。  
   
 ## <a name="customizing-visualization-of-eventsource-events"></a>EventSource 事件的自定义可视化效果  
@@ -68,16 +68,16 @@ ms.locfileid: "65690207"
 |3|Flag|  
 |所有其他值|消息|  
   
-### <a name="importance"></a>重要性  
+### <a name="importance"></a>Importance  
  可以使用 `cvImportance` 字段（一个字节）控制 EventSource 事件的重要性设置。 但是，我们建议通过使用其级别来控制事件显示的重要性。  
   
 |cvImportance 值|并发可视化工具重要性|  
 |------------------------|---------------------------------------|  
-|0|普通|  
+|0|一般|  
 |1|严重|  
 |2|高|  
 |3|高|  
-|4|普通|  
+|4|一般|  
 |5|低|  
 |所有其他值|低|  
   
@@ -87,7 +87,7 @@ ms.locfileid: "65690207"
 ### <a name="category"></a>类别  
  使用 `cvCategory` 字段（一个字节）控制并发可视化工具给予 EventSource 事件的类别。  
   
-### <a name="text"></a>Text  
+### <a name="text"></a>文本  
  使用 `cvTextW` 字段（一个字符串）控制并发可视化工具给予 EventSource 事件的说明。  
   
 ### <a name="spanid"></a>SpanID  
@@ -96,5 +96,5 @@ ms.locfileid: "65690207"
 > [!NOTE]
 > 不支持以下操作：使用 SpanID 以嵌套范围，允许它们部分重叠在同一线程上或允许它们以一个线程开始并以另一个线程结束。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [并发可视化工具标记](../profiling/concurrency-visualizer-markers.md)

@@ -12,15 +12,15 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 0ddfe2b61c8ef08d77fbb7c841b3bb69c167af2f
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85903734"
 ---
 # <a name="create-custom-editors-and-designers"></a>创建自定义编辑器和设计器
 
-Visual Studio 集成开发环境（IDE）可以托管不同类型的编辑器：
+Visual Studio 集成开发环境 (IDE) 可托管不同类型的编辑器：
 
 - Visual Studio 核心编辑器
 
@@ -34,7 +34,7 @@ Visual Studio 集成开发环境（IDE）可以托管不同类型的编辑器：
 
 ## <a name="types-of-editor"></a>编辑器类型
 
-有关 Visual Studio 核心编辑器的信息，请参阅[扩展编辑器和语言服务](../extensibility/extending-the-editor-and-language-services.md)。
+有关 Visual Studio 核心编辑器的信息，请参阅 [扩展编辑器和语言服务](../extensibility/extending-the-editor-and-language-services.md)。
 
 ### <a name="custom-editors"></a>自定义编辑器
  自定义编辑器是设计用于在专用环境中工作的编辑器。 例如，可以创建一个编辑器，该编辑器的函数将数据读写到特定存储库，如 Microsoft Exchange 服务器。 如果你希望编辑器仅适用于你的项目类型，或者需要仅具有几个特定命令的编辑器，请选择自定义编辑器。 但请注意，用户将无法使用自定义编辑器编辑标准 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 项目。
@@ -59,13 +59,13 @@ Visual Studio 集成开发环境（IDE）可以托管不同类型的编辑器：
 
 - 您的编辑器是否需要承载 ActiveX 控件？
 
-   如果编辑器承载 ActiveX 控件，则按[就地激活](/visualstudio/misc/in-place-activation?view=vs-2015)中所述，实现就地激活编辑器。 如果它没有承载 ActiveX 控件，则使用简化的嵌入编辑器，或自定义 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 默认编辑器。
+   如果编辑器承载 ActiveX 控件，则按 [就地激活](/visualstudio/misc/in-place-activation?view=vs-2015)中所述，实现就地激活编辑器。 如果它没有承载 ActiveX 控件，则使用简化的嵌入编辑器，或自定义 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 默认编辑器。
 
 - 编辑器是否支持多个视图？ 如果希望编辑器的视图与默认编辑器同时可见，则必须支持多个视图。
 
-   如果编辑器需要支持多个视图，则编辑器的文档数据和文档视图对象必须是单独的对象。 有关详细信息，请参阅[支持多个文档视图](../extensibility/supporting-multiple-document-views.md)。
+   如果编辑器需要支持多个视图，则编辑器的文档数据和文档视图对象必须是单独的对象。 有关详细信息，请参阅 [支持多个文档视图](../extensibility/supporting-multiple-document-views.md)。
 
-   如果编辑器支持多个视图，是否打算将 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 核心编辑器的文本缓冲区实现（ <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer> 对象）用于文档数据对象？ 也就是说，您是否希望使用核心编辑器同时支持您的编辑器视图 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ？ 执行此操作的功能是窗体设计器的基础。
+   如果编辑器支持多个视图，是否打算为 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 文档数据对象使用 (对象) 的核心编辑器文本缓冲区实现 <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer> ？ 也就是说，您是否希望使用核心编辑器同时支持您的编辑器视图 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ？ 执行此操作的功能是窗体设计器的基础。
 
 - 如果需要托管外部编辑器，是否可以在中嵌入编辑器 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ？
 
@@ -102,6 +102,6 @@ Visual Studio 集成开发环境（IDE）可以托管不同类型的编辑器：
 [扩展 Visual Studio 的其他部分](../extensibility/extending-other-parts-of-visual-studio.md)\
 说明如何创建与的其余部分匹配的 UI 元素 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory>

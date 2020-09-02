@@ -11,17 +11,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 1e4ef16ef88e871778fd4e0c755ffb156c374109
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75592030"
 ---
 # <a name="find-references-in-your-code"></a>在代码中查找引用
 
 可以使用“查找所有引用”命令在整个代码库中查找引用特定码位元素的位置  。 在你想要查找其引用的元素的上下文（右键单击）菜单中可以使用“查找所有引用”命令  。 或者，如果使用键盘，请按 Shift + F12  。
 
-结果显示在名为“\<元素> 引用”的工具窗口中，其中“元素”是要搜索的项名称。 使用“引用”窗口里的工具栏，可以： 
+结果显示在名为 \<element> references 的工具窗口中，其中 element 是要搜索的项名称。 使用“引用”窗口里的工具栏，可以： 
 - 在下拉列表框中更改搜索的范围。 选择仅在已更改的文档中进行查找，一直到查找完整个解决方案。
 - 通过选择“复制”  按钮，复制引用的选定项。
 - 通过选择按钮转到列表中的下一或上一位置，或按 F8 和 Shift + F8 键来完成此操作   。

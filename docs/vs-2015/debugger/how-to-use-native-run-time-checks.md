@@ -1,5 +1,5 @@
 ---
-title: 如何：使用本机运行时检查 |Microsoft Docs
+title: 如何：使用本机运行时检查 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -42,10 +42,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: b50dda3e31e27fa5d177c3b0ba2790babd2a660f
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65685861"
 ---
 # <a name="how-to-use-native-run-time-checks"></a>如何：使用本机运行时检查
@@ -65,7 +65,7 @@ ms.locfileid: "65685861"
   
   如果使用带有优化 ( **/RTC** ) 版本的 **/O**，将导致编译器错误。 如果在优化版本中使用 `runtime_checks` 杂注，则该杂注无效。  
   
-  调试启用了运行时检查的程序时，如果出现运行时错误，该程序的默认操作是停止并切换到调试器。 可以更改任何运行时检查的此默认行为。 有关详细信息，请参阅[管理调试器的异常](../debugger/managing-exceptions-with-the-debugger.md)。  
+  调试启用了运行时检查的程序时，如果出现运行时错误，该程序的默认操作是停止并切换到调试器。 可以更改任何运行时检查的此默认行为。 有关详细信息，请参阅[使用调试器管理异常](../debugger/managing-exceptions-with-the-debugger.md)。  
   
   下面的过程介绍了如何在调试版本中启用本机运行时检查，以及如何修改本机运行时检查的行为。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "65685861"
   
 - 使用 `runtime_checks` 杂注。  
   
-## <a name="see-also"></a>请参阅  
- [在 Visual Studio 中进行调试](../debugger/debugging-in-visual-studio.md)   
+## <a name="see-also"></a>另请参阅  
+ [在 Visual Studio 中调试](../debugger/debugging-in-visual-studio.md)   
  [runtime_checks](https://msdn.microsoft.com/library/ae50b43f-f88d-47ad-a2db-3389e9e7df5b)   
  [运行时错误检查](https://msdn.microsoft.com/library/c965dd01-57ad-4a3c-b1d6-5aa04f920501)

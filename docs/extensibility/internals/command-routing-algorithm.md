@@ -1,5 +1,5 @@
 ---
-title: 命令路由算法 |微软文档
+title: 命令传送算法 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,35 +12,35 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: af8d3e53e09214ce36a80ca18856085dfb2bb746
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80709541"
 ---
-# <a name="command-routing-algorithm"></a>命令路由算法
-在 Visual Studio 中，命令由许多不同的组件处理。 命令从最里面的上下文（基于当前选择）路由到最外层（也称为全局）上下文。 有关详细信息，请参阅[命令可用性](../../extensibility/internals/command-availability.md)。
+# <a name="command-routing-algorithm"></a>命令传送算法
+在 Visual Studio 中，命令由许多不同的组件进行处理。 命令从最内层的上下文路由，该上下文基于当前所选内容，到最外面的 (（也称为全局) 上下文）。 有关详细信息，请参阅 [命令可用性](../../extensibility/internals/command-availability.md)。
 
 ## <a name="order-of-command-resolution"></a>命令解析顺序
- 命令通过以下级别的命令上下文传递：
+ 命令通过以下命令上下文级别传递：
 
-1. 加载项：环境首先向存在的任何加载项提供命令。
+1. 外接程序：环境首先向存在的任何外接程序提供命令。
 
-2. 优先级命令：这些命令使用<xref:Microsoft.VisualStudio.Shell.Interop.IVsRegisterPriorityCommandTarget>注册。 它们被调用在 Visual Studio 中的每个命令，并且按注册顺序调用。
+2. 优先级命令：这些命令是使用注册的 <xref:Microsoft.VisualStudio.Shell.Interop.IVsRegisterPriorityCommandTarget> 。 为 Visual Studio 中的每个命令调用它们，并按它们的注册顺序调用它们。
 
-3. 上下文菜单命令：首先向提供给上下文菜单的命令目标提供位于上下文菜单上的命令，然后提供给典型的路由。
+3. 上下文菜单命令：位于上下文菜单上的命令首先向向上下文菜单提供的命令目标提供，并在该位置之后提供给典型路由。
 
-4. 工具栏设置命令目标：调用 时将注册这些命令目标<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell4.SetupToolbar2%2A>。 参数`pCmdTarget`可以是`null`。 如果不是`null`，则此命令目标用于更新所设置工具栏上的任何命令。 如果 shell 正在设置工具栏，则它会将窗口框架作为 传递`pCmdTarget`，以便工具栏上的命令的所有更新都流过窗口框架，即使它不在焦点中也是如此。
+4. 工具栏设置命令目标：调用时注册这些命令目标 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell4.SetupToolbar2%2A> 。 `pCmdTarget`参数可以是 `null` 。 如果不是 `null` ，则使用此命令 target 来更新位于所设置的工具栏上的所有命令。 如果 shell 设置了工具栏，则会将窗口框架作为传递， `pCmdTarget` 以便对工具栏上的命令进行的所有更新都流过窗口框架，即使未处于焦点状态也是如此。
 
-5. 工具窗口：工具窗口通常实现<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane>接口，它也应该实现<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>接口，以便 Visual Studio 可以在工具窗口处于活动状态窗口时获取命令目标。 但是，如果具有焦点的工具窗口是**Project**窗口，则该命令将路由到所选项<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy>的常见父级接口。 如果此选择跨越多个项目，则命令将路由到<xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution>层次结构。 接口<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy>包含与<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.QueryStatusCommand%2A><xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>接口上的相应<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.ExecCommand%2A>命令类似的 和 方法。
+5. 工具窗口：工具窗口通常实现 <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane> 接口，还应实现 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> 接口，以便在工具窗口为活动窗口时，Visual Studio 可以获得命令目标。 但是，如果具有焦点的工具窗口是 " **项目** " 窗口，则该命令将路由到作为 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy> 所选项的公共父对象的接口。 如果此选择跨多个项目，则将命令路由到 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution> 层次结构。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy>接口包含 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.QueryStatusCommand%2A> 与 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.ExecCommand%2A> 接口上的相应命令相似的和方法 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> 。
 
-6. 文档窗口：如果命令在其 *.vsct*文件中设置了`RouteToDocs`标志，Visual Studio 会查找文档视图对象上的命令目标，该对象是<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane>接口的实例或文档对象的实例（通常是<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLines>接口或<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer>接口）。 如果文档视图对象不支持该命令，Visual Studio 会将命令路由到返回<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>的接口。 （这是文档数据对象的可选接口。
+6. 文档窗口：如果命令在 `RouteToDocs` *.vsct* 文件中设置了标志，则 Visual Studio 将在文档视图对象上查找命令目标，该对象既可以是接口的实例，也可以是 <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane> 文档对象的实例， (通常是 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLines> 接口或 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer>) 接口。 如果文档视图对象不支持命令，则 Visual Studio 会将命令路由到返回的 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> 接口。  (这是文档数据对象的可选接口。 ) 
 
-7. 当前层次结构：当前层次结构可以是拥有活动文档窗口的项目或**解决方案资源管理器**中选择的层次结构。 Visual Studio 查找<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>在当前层次结构或活动层次结构上实现的接口。 层次结构应支持每当层次结构处于活动状态时有效的命令，即使项目项的文档窗口具有焦点也是如此。 但是，必须使用<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy>接口及其<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.QueryStatusCommand%2A>及其及其方法<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.ExecCommand%2A>支持仅在**解决方案资源管理器**具有焦点时应用的命令。
+7. 当前层次结构：当前层次结构可以是拥有活动文档窗口的项目，也可以是在 **解决方案资源管理器**中选择的层次结构。 Visual Studio 将查找 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> 在当前或活动层次结构上实现的接口。 层次结构应支持在层次结构处于活动状态时有效的命令，即使项目项的文档窗口具有焦点也是如此。 但是，仅当 **解决方案资源管理器** 具有焦点时，才必须使用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy> 接口及其 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.QueryStatusCommand%2A> 和方法来支持命令 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.ExecCommand%2A> 。
 
-     **剪切**、**复制**、**粘贴**、**删除**、**重命名**、**输入**和**双击**命令需要特殊处理。 有关如何在层次结构中处理**删除**和**删除**命令的信息，<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyDeleteHandler>请参阅接口。
+     **剪切**、 **复制**、 **粘贴**、 **删除**、 **重命名**、 **输入**和 **DoubleClick** 命令需要特殊处理。 有关如何处理层次结构中 **删除** 和 **删除** 命令的信息，请参阅 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyDeleteHandler> 接口。
 
-8. 全局：如果命令未由前面提到的上下文处理，Visual Studio 会尝试将其路由到拥有实现接口的命令的<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>VSPackage。 如果 VSPackage 尚未加载，则 Visual Studio 调用<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A>该方法时不会加载它。 仅当调用<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A>方法时，才会加载 VSPackage。
+8. 全局：如果命令尚未由前面提到的上下文处理，Visual Studio 会尝试将其路由到拥有实现接口的命令的 VSPackage <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> 。 如果尚未加载 VSPackage，则在 Visual Studio 调用方法时不会加载它 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> 。 VSPackage 仅在调用方法时加载 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> 。
 
 ## <a name="see-also"></a>请参阅
 - [命令设计](../../extensibility/internals/command-design.md)

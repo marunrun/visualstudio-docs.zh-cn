@@ -1,5 +1,5 @@
 ---
-title: 调试器安全 |Microsoft Docs
+title: 调试器安全性 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -19,10 +19,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: c1c56b3081f9e74ff9ab864639772c18bd758df6
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65686780"
 ---
 # <a name="debugger-security"></a>调试器安全
@@ -40,7 +40,7 @@ ms.locfileid: "65686780"
 ### <a name="managed-debugging-security"></a>托管调试安全  
  下面是一些适用于所有托管调试的常规建议。  
   
-- 附加到非信任用户的进程时要小心：当这样做时，你假定它是可以信赖的。 尝试附加到非信任用户的进程时，将出现一个安全警告对话框确认，询问是否希望附加到该进程。 “信任用户”包括你以及在安装了 .NET Framework 的计算机上通常定义的一组标准用户，如“aspnet” 、“localsystem” 、“networkservice” 和“localservice” 。 有关详细信息，请参阅[安全警告：附加到不受信任的用户所拥有的进程可能很危险。以下信息看上去可疑或者你不确定，如果未附加到此进程](/visualstudio/debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user?view=vs-2015)。  
+- 附加到非信任用户的进程时要小心：当这样做时，你假定它是可以信赖的。 尝试附加到非信任用户的进程时，将出现一个安全警告对话框确认，询问是否希望附加到该进程。 “信任用户”包括你以及在安装了 .NET Framework 的计算机上通常定义的一组标准用户，如“aspnet” 、“localsystem” 、“networkservice” 和“localservice” 。 有关详细信息，请参阅[安全警告：附加到不受信任的用户所拥有的进程可能很危险。如果以下信息看起来可疑或你对此无法确定，请勿附加到此进程](/visualstudio/debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user?view=vs-2015)。  
   
 - 从 Internet 下载项目并将其加载到 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]时要小心。 即使没有进行调试这样做也很冒险。 这样做时，你假定该项目和它包含的代码是可以信赖的。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "65686780"
   
  Visual Studio 远程调试监视器 (msvsmon.exe) 用于远程调试，有若干对其进行配置的安全建议。 由于无身份验证模式不安全，因此配置身份验证模式的首选方式是 Windows 身份验证。  
   
- ![错误对话框](../debugger/media/dbg-err-remotepermissionschanged.png "DBG_ERR_RemotePermissionsChanged")  
+ ![“错误”对话框](../debugger/media/dbg-err-remotepermissionschanged.png "DBG_ERR_RemotePermissionsChanged")  
   
  在使用 Windows 身份验证模式时，请注意，授予非信任用户连接到 msvsmon 的权限是危险的，因为这将向用户授予你在计算机上拥有的所有权限。  
   
@@ -80,8 +80,8 @@ ms.locfileid: "65686780"
   
   请参阅[指定符号 (.pdb) 和源文件](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [调试器设置和准备](../debugger/debugger-settings-and-preparation.md)   
- [Debugger Basics](../debugger/debugger-basics.md) （调试器基础知识）  
- [安全警告：附加到不受信任的用户所拥有的进程可能很危险。如果以下信息看起来可疑或你对此无法确定，请勿附加到此进程](/visualstudio/debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user?view=vs-2015)   
+ [调试器基础知识](../debugger/debugger-basics.md)   
+ [安全警告：附加到不受信任的用户所拥有的进程可能很危险。如果以下信息看上去可疑或无法确定，请不要附加到此进程](/visualstudio/debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user?view=vs-2015)   
  [安全警告：调试器必须执行不受信任的命令](../debugger/security-warning-debugger-must-execute-untrusted-command.md)

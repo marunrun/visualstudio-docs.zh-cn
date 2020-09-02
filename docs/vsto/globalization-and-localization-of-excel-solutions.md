@@ -13,14 +13,14 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: f37ddcbbd3145fc96cd8081d7a1df524ef7ea8ec
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72986046"
 ---
 # <a name="globalization-and-localization-of-excel-solutions"></a>Excel 解决方案的全球化和本地化
-  本节包含有关 Microsoft Office Excel 解决方案的特殊注意事项的信息，这些解决方案将在具有 Windows 非英语设置的计算机上运行。 全球化和本地化 Microsoft Office 解决方案过程中所遇到的大多数问题与使用 Visual Studio 创建其他各种解决方案时遇到的问题相同。 有关一般信息，请参阅[全球化和本地化应用程序](../ide/globalizing-and-localizing-applications.md)。
+  本节包含有关 Microsoft Office Excel 解决方案的特殊注意事项的信息，这些解决方案将在具有 Windows 非英语设置的计算机上运行。 全球化和本地化 Microsoft Office 解决方案过程中所遇到的大多数问题与使用 Visual Studio 创建其他各种解决方案时遇到的问题相同。 有关一般信息，请参阅 [全球化和本地化应用程序](../ide/globalizing-and-localizing-applications.md)。
 
  默认情况下，只要使用托管代码传递或操作的所有数据的格式都是使用“英语（美国）”格式设置进行设置的，Microsoft Office Excel 的宿主控件在任何 Windows 区域设置中均可正确工作。 在面向 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)]的项目中，此行为由公共语言运行时 (CLR) 控制。
 
@@ -47,7 +47,7 @@ ms.locfileid: "72986046"
  还必须确保与文档文本交互的任何代码部分都与文本的语言保持匹配，并确保书签、命名范围以及其他显示字段能够适应 Office 文档的重新格式化，针对不同语法和文本长度进行调整时需要该 Office 文档。 对于包含相对较少文本的文档模板，可以考虑在资源文件中存储文本，然后在运行时加载该文本。
 
 ### <a name="text-direction"></a>文本方向
- 在 Excel 中，可以将工作表的属性设置为从右向左呈现文本。 放置在设计器上的宿主控件或任何具有 `RightToLeft` 属性的控件将在运行时自动匹配这些设置。 Word 没有针对双向文本的文档设置（您只是更改文本的对齐方式），因此这些控件不能映射到此设置。 相反，必须为每个控件设置文本对齐方式。 可以编写代码来遍历所有控件，并强制这些控件从右向左呈现文本。
+ 在 Excel 中，可以将工作表的属性设置为从右向左呈现文本。 放置在设计器上的宿主控件或任何具有 `RightToLeft` 属性的控件将在运行时自动匹配这些设置。 Word 没有针对双向文本的文档设置 (只更改文本) 的对齐方式，因此无法将控件映射到此设置。 相反，必须为每个控件设置文本对齐方式。 可以编写代码来遍历所有控件，并强制这些控件从右向左呈现文本。
 
 ### <a name="change-culture"></a>更改区域性
  文档级自定义项代码通常将共享 Excel 的主 UI 线程，因此，对线程区域性的任何更改都将影响在该线程上运行的所有其他内容；更改不会限制为针对自定义项。
@@ -55,9 +55,9 @@ ms.locfileid: "72986046"
  Windows 窗体控件在主机应用程序启动应用程序级 VSTO 外接程序之前进行初始化。 在这些情况下，应在设置 UI 控件之前更改区域性。
 
 ## <a name="install-the-language-packs"></a>安装语言包
- 如果 Windows 具有非英语设置，则可安装 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] 来以 Windows 使用的语言查看 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] 消息。 如果最终用户使用 Windows 的非英语设置来运行你的解决方案，则他们必须具有相应的语言包来以 Windows 使用的语言查看运行时消息。 可从[Microsoft 下载中心](https://www.microsoft.com/download)获取 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] 语言包。
+ 如果 Windows 具有非英语设置，则可安装 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] 来以 Windows 使用的语言查看 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] 消息。 如果最终用户使用 Windows 的非英语设置来运行你的解决方案，则他们必须具有相应的语言包来以 Windows 使用的语言查看运行时消息。 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]可从[Microsoft 下载中心](https://www.microsoft.com/download)获得语言包。
 
- 此外，可再发行的.NET Framework 语言包是 ClickOnce 消息所必需的。 可从[Microsoft 下载中心](https://www.microsoft.com/download)获取 .NET Framework 语言包。
+ 此外，可再发行的.NET Framework 语言包是 ClickOnce 消息所必需的。 可从 [Microsoft 下载中心](https://www.microsoft.com/download)获取 .NET Framework 语言包。
 
 ## <a name="regional-settings-and-excel-com-calls"></a>区域设置和 Excel COM 调用
  每当托管客户端对 COM 对象调用一个方法并且需要传入特定于区域性的信息时，它都使用与当前线程区域设置匹配的 <xref:System.Globalization.CultureInfo.CurrentCulture%2A> （区域设置）来执行这些操作。 默认情况下，当前线程区域设置是从用户的区域设置继承而来的。 但是，当你从使用 Visual Studio 中的 Office 开发工具创建的 Excel 解决方案中调用 Excel 对象模型时，会自动将英语（美国）数据格式（区域设置 ID 1033）传递到 Excel 对象模型。 在将数据传递到 Microsoft Office Excel 或从项目代码中读取数据之前，必须使用英语（美国）数据格式对具有区分区域设置格式的所有数据（如日期和货币）进行格式设置。
@@ -77,7 +77,7 @@ Application.ActiveCell.Value2 = "05/12/04"
 
  当在通过 Visual Studio 中的 Office 开发工具创建的解决方案中使用，并通过 COM 互操作传递到 Excel 时，相同的代码在日期格式为 en-US 样式时会产生相同的结果。
 
- 例如:
+ 例如：
 
  [!code-vb[Trin_VstcoreCreatingExcel#6](../vsto/codesnippet/VisualBasic/Trin_VstcoreCreatingExcelVB/Sheet1.vb#6)]
  [!code-csharp[Trin_VstcoreCreatingExcel#6](../vsto/codesnippet/CSharp/Trin_VstcoreCreatingExcelCS/Sheet1.cs#6)]
@@ -95,7 +95,7 @@ Application.ActiveCell.Value2 = "05/12/04"
 ### <a name="applications-that-use-external-data"></a>使用外部数据的应用程序
  对于打开或以其他方式使用外部数据（如包含从旧系统中导出的逗号分隔值的文件（CSV 文件））的任何代码，如果这些文件是使用除 en-US 格式之外的任何格式导出的，则这些代码也会受到影响。 由于数据库中的所有值都应为二进制格式，因此只要数据库不将日期作为字符串存储且不执行不使用二进制格式的操作，数据库访问就不会受到影响。 另外，如果使用 Excel 中的数据构造 SQL 查询，则可能需要根据使用的函数来确保数据为 en-US 格式。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [如何：面向 Office 多语言用户界面](../vsto/how-to-target-the-office-multilingual-user-interface.md)
 - [设计和创建 Office 解决方案](../vsto/designing-and-creating-office-solutions.md)

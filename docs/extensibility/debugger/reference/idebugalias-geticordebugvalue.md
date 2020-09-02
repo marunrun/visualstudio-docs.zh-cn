@@ -1,5 +1,5 @@
 ---
-title: IDebugAlias：获取ICordebug值 |微软文档
+title: IDebugAlias：： GetICorDebugValue |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: fd01785fee7ce65296bac940fb19819415139d53
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80736475"
 ---
 # <a name="idebugaliasgeticordebugvalue"></a>IDebugAlias::GetICorDebugValue
@@ -41,13 +41,13 @@ int GetICorDebugValue(
 
 ## <a name="parameters"></a>参数
 `ppUnk`\
-[出]`IUnknown`表示与此别名关联的值的接口。 可以查询接口的此`ICorDebugValue`接口。
+[out] `IUnknown` 表示与此别名关联的值的接口。 可以查询此接口的接口 `ICorDebugValue` 。
 
 ## <a name="return-value"></a>返回值
- 如果成功，返回S_OK;否则，返回错误代码。
+ 如果成功，将返回 S_OK;否则，将返回错误代码。
 
 ## <a name="remarks"></a>备注
- 此方法仅适用于托管值（`ICorDebugValue`是 .NET 框架中可用的接口，并在 cordebug.idl 文件中的 .NET 框架 SDK 中定义）。
+ 此方法仅适用于托管值 (`ICorDebugValue` 是 .NET Framework 中可用的接口，并且在 cordebug.idl 文件) 的 .NET FRAMEWORK SDK 中定义。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md)

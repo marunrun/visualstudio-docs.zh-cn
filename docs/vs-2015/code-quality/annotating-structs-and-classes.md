@@ -25,10 +25,10 @@ author: corob-msft
 ms.author: corob
 manager: jillfra
 ms.openlocfilehash: 6db2202971facb0419db68c04835c8d5c848f528
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77271582"
 ---
 # <a name="annotating-structs-and-classes"></a>批注结构和类
@@ -40,25 +40,25 @@ ms.locfileid: "77271582"
   
 - `_Field_range_(low, high)`  
   
-     该字段的范围是从 `low` 到 `high`。  等效于使用合适的前置或后置条件应用于批注对象的 `_Satisfies_(_Curr_ >= low && _Curr_ <= high)`。  
+     该字段处于 (包含) 从到的范围 `low` `high` 。  等效于 `_Satisfies_(_Curr_ >= low && _Curr_ <= high)` 使用合适的前置或后置条件应用于带批注的对象。  
   
-- `_Field_size_(size)`、`_Field_size_opt_(size)`、`_Field_size_bytes_(size)`、`_Field_size_bytes_opt_(size)`  
+- `_Field_size_(size)`, `_Field_size_opt_(size)`, `_Field_size_bytes_(size)`, `_Field_size_bytes_opt_(size)`  
   
-     在 `size`指定的元素（或字节）内具有可写大小的字段。  
+     在元素中具有可写大小的字段 (或字节) ，由指定 `size` 。  
   
-- `_Field_size_part_(size, count)`、`_Field_size_part_opt_(size, count)`、`_Field_size_bytes_part_(size, count)``_Field_size_bytes_part_opt_(size, count)`  
+- `_Field_size_part_(size, count)`, `_Field_size_part_opt_(size, count)`,         `_Field_size_bytes_part_(size, count)`, `_Field_size_bytes_part_opt_(size, count)`  
   
-     在 `size`指定的元素（或字节）中具有可写大小的字段，以及可读的元素（字节）的 `count`。  
+     一个字段，该字段在元素中具有可写的大小 (或指定的字节) `size` ，以及 `count` 这些元素的 (字节) 可读的。  
   
-- `_Field_size_full_(size)`、`_Field_size_full_opt_(size)`、`_Field_size_bytes_full_(size)`、`_Field_size_bytes_full_opt_(size)`  
+- `_Field_size_full_(size)`, `_Field_size_full_opt_(size)`, `_Field_size_bytes_full_(size)`, `_Field_size_bytes_full_opt_(size)`  
   
-     在 `size`指定的元素（或字节）中具有可读和可写大小的字段。  
+     在元素中具有可读和可写大小的字段 (或) ，由指定 `size` 。  
   
 - `_Struct_size_bytes_(size)`  
   
-     在 `size`指定的元素（或字节）中具有可读和可写大小的字段。  
+     在元素中具有可读和可写大小的字段 (或) ，由指定 `size` 。  
   
-     适用于 struct 或类声明。  指示该类型的有效对象可能大于声明的类型，以及 `size`指定的字节数。  例如：  
+     适用于 struct 或类声明。  指示该类型的有效对象可能大于声明的类型，以及所指定的字节数 `size` 。  例如：  
   
     ```cpp  
   
@@ -70,17 +70,17 @@ ms.locfileid: "77271582"
   
     ```  
   
-     然后，将 `MyStruct *` 类型的参数 `pM` 的缓冲区大小（以字节为单位）为：  
+     然后，将类型为的参数的缓冲区大小（以字节为单位）为 `pM` `MyStruct *` ：  
   
     ```cpp  
     min(pM->nSize, sizeof(MyStruct))  
     ```  
   
 ## <a name="see-also"></a>另请参阅  
- [使用 SAL 注释减少 C/C++代码缺陷](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)   
+ [使用 SAL 注释减少 C/c + + 代码缺陷](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)   
  [了解 SAL](../code-quality/understanding-sal.md)   
- [批注函数参数和返回值](../code-quality/annotating-function-parameters-and-return-values.md)   
- [批注函数行为](../code-quality/annotating-function-behavior.md)   
+ [注释函数参数和返回值](../code-quality/annotating-function-parameters-and-return-values.md)   
+ [注释函数行为](../code-quality/annotating-function-behavior.md)   
  [批注锁定行为](../code-quality/annotating-locking-behavior.md)   
  [指定何时以及在何处应用批注](../code-quality/specifying-when-and-where-an-annotation-applies.md)   
  [内部函数](../code-quality/intrinsic-functions.md)   

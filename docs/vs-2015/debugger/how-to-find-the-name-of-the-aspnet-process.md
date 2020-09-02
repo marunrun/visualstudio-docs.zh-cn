@@ -18,10 +18,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 53072013c1665687262d30f4a0c2720641c920be
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65685967"
 ---
 # <a name="how-to-find-the-name-of-the-aspnet-process"></a>如何：查找 ASP.NET 进程的名称
@@ -33,7 +33,7 @@ ms.locfileid: "65685967"
   
 - 如果正在运行 IIS 的早期版本，则该进程的名称为 aspnet_wp.exe。  
   
-  通过使用生成的应用程序[!INCLUDE[vsprvslong](../includes/vsprvslong-md.md)]或更高版本，[!INCLUDE[vstecasp](../includes/vstecasp-md.md)]代码可以驻留在文件系统上并在测试服务器 WebDev.WebServer.exe 下运行。 在这种情况下，必须附加到 WebDev.WebServer.exe 而不是 [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] 进程。 此方案仅适用于本地调试。  
+  对于使用 [!INCLUDE[vsprvslong](../includes/vsprvslong-md.md)] 或更高版本生成的应用程序， [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] 代码可驻留在文件系统上并在测试服务器 WebDev.WebServer.exe 下运行。 在这种情况下，必须附加到 WebDev.WebServer.exe 而不是 [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] 进程。 此方案仅适用于本地调试。  
   
   当原来的 ASP 应用程序在进程内运行时，它们会在 IIS 进程 inetinfo.exe 内部运行。  
   
@@ -42,28 +42,28 @@ ms.locfileid: "65685967"
   
 ### <a name="to-determine-whether-project-code-resides-on-the-file-system-or-iis"></a>确定项目代码驻留在文件系统上还是 IIS 上  
   
-1. 在 Visual Studio 中打开**解决方案资源管理器**如果已打开。  
+1. 在 Visual Studio 中，打开 **解决方案资源管理器** （如果尚未打开）。  
   
 2. 选择包含该应用程序名称的顶部节点。  
   
-3. 如果**属性**窗口标题包含文件路径，则应用程序代码驻留在文件系统。  
+3. 如果 " **属性** " 窗口标题包含文件路径，则应用程序代码驻留在文件系统上。  
   
-     否则为**属性**窗口标题将包含 Web 站点的名称。  
+     否则，" **属性** " 窗口标题将包含网站的名称。  
   
 ### <a name="to-determine-the-iis-version-under-which-the-application-is-running"></a>确定应用程序正在哪个 IIS 版本下运行  
   
-1. 查找**管理工具**并运行它。 根据您的操作系统，这可能是中的一个图标**Control Panel**，或当您单击时出现的菜单项**启动**。  
+1. 查找 " **管理工具** " 并运行它。 根据您的操作系统，这可能是 **控制面板**中的图标，或单击 " **启动**" 时显示的菜单项。  
   
-     在 Windows XP 中，**控制面板**可以采用分类视图或经典视图。 您需要在类别视图中，单击**切换到经典视图**或**性能和维护**以查看**管理工具**图标。  
+     在 Windows XP 中， **"控制面板"** 可以在 "类别" 视图或 "经典" 视图中。 在类别视图中，必须单击 " **切换到经典视图** " 或 " **性能和维护** " 才能看到 " **管理工具** " 图标。  
   
-2. 从**管理工具**，运行 Internet Information Services。 将出现一个 MMC 对话框。  
+2. 从 " **管理工具**" 中，运行 Internet Information Services。 将出现一个 MMC 对话框。  
   
 3. 如果左侧窗格中列出了多个计算机，请选择驻留了该应用程序代码的那个计算机。  
   
-4. IIS 版本处于**版本**的右窗格中的列。  
+4. IIS 版本位于右窗格的 " **版本** " 列中。  
   
-## <a name="see-also"></a>请参阅  
- [远程调试 Web 应用程序的必备组件](../debugger/prerequistes-for-remote-debugging-web-applications.md)   
+## <a name="see-also"></a>另请参阅  
+ [远程调试 Web 应用程序的先决条件](../debugger/prerequistes-for-remote-debugging-web-applications.md)   
  [系统要求](../debugger/aspnet-debugging-system-requirements.md)   
- [调试 ASP.NET 的准备工作](../debugger/preparing-to-debug-aspnet.md)   
+ [准备调试 ASP.NET](../debugger/preparing-to-debug-aspnet.md)   
  [调试 Web 应用程序和脚本](../debugger/debugging-web-applications-and-script.md)
