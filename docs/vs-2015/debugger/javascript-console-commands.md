@@ -1,5 +1,5 @@
 ---
-title: JavaScript 控制台命令 |Microsoft Docs
+title: JavaScript 控制台命令 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -19,20 +19,20 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: d5c4223699c720750514aaf2b9abc18b34ae4269
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65690586"
 ---
 # <a name="javascript-console-commands"></a>JavaScript Console commands
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-适用于 Windows 和 Windows Phone] (../Image/windows_and_phone_content.png"windows_and_phone_content")  
+适用于 Windows 和 Windows Phone] (。将 windows_and_phone_content.png "windows_and_phone_content" )   
   
- 你可以在 Visual Studio 的“JavaScript 控制台”窗口中使用命令发送消息和执行其他任务。 有关演示如何使用该窗口的示例，请参阅[快速入门：调试 JavaScript](../debugger/quickstart-debug-javascript-using-the-console.md)。 本主题中的信息适用于 Windows 应用商店应用、Windows Phone 应用商店应用，以及使用 Visual Studio Tools for Apache Cordova 创建的应用。 有关 Cordova 应用中受支持控制台命令的信息，请参阅 [Debug Your App](https://msdn.microsoft.com/library/c2a4a1d4-a4e8-47ec-811f-ad207c54f4d1)。 有关在 Internet Explorer F12 工具中使用控制台的信息，请参阅 [本主题](https://msdn.microsoft.com/library/ie/dn255006.aspx)。  
+ 你可以在 Visual Studio 的“JavaScript 控制台”窗口中使用命令发送消息和执行其他任务。 有关演示如何使用该窗口的示例，请参阅 [快速入门：调试 JavaScript](../debugger/quickstart-debug-javascript-using-the-console.md)。 本主题中的信息适用于 Windows 应用商店应用、Windows Phone 应用商店应用，以及使用 Visual Studio Tools for Apache Cordova 创建的应用。 有关 Cordova 应用中受支持控制台命令的信息，请参阅 [Debug Your App](https://msdn.microsoft.com/library/c2a4a1d4-a4e8-47ec-811f-ad207c54f4d1)。 有关在 Internet Explorer F12 工具中使用控制台的信息，请参阅 [本主题](https://msdn.microsoft.com/library/ie/dn255006.aspx)。  
   
- 如果 JavaScript 控制台窗口已关闭，则可以打开它通过选择 Visual Studio 中调试时，**调试** > **Windows** > **JavaScript控制台**。  
+ 如果“JavaScript 控制台”窗口已关闭，可在 Visual Studio 中调试时，选择“调试” > “窗口” > “JavaScript 控制台”将其打开  。  
   
 > [!NOTE]
 > 如果该窗口在调试会话期间不可用，请确保在项目的“调试”属性中将调试器类型设置为 **“脚本”** 。  
@@ -45,7 +45,7 @@ ms.locfileid: "65690586"
 > [!TIP]
 > 较旧版本的 Visual Studio 不支持完整的命令集。 使用控制台对象上的 IntelliSense 快速获取有关支持命令的信息。  
   
-|命令|描述|示例|  
+|命令|说明|示例|  
 |-------------|-----------------|-------------|  
 |`assert(expression, message)`|如果 `expression` 计算结果为 **false**，则发送消息。|`console.assert((x == 1), "assert message: x != 1");`|  
 |`clear()`|清除控制台窗口中的消息（包括脚本错误消息）以及控制台窗口中显示的脚本。 不清除你在控制台输入提示中输入的脚本。|`console.clear();`|  
@@ -71,7 +71,7 @@ ms.locfileid: "65690586"
 ## <a name="miscellaneous-commands"></a>杂项命令  
  JavaScript 控制台窗口中也提供这些命令（它们不能通过代码启用）。  
   
-|命令|描述|示例|  
+|命令|说明|示例|  
 |-------------|-----------------|-------------|  
 |`$0`, `$1`, `$2`, `$3`, `$4`|将指定元素返回到控制台窗口。 `$0` 返回当前在 DOM 资源管理器中选择的元素，`$1` 返回以前在 DOM 资源管理器中选择的元素，依此类推，最多可返回第四个以前选择的元素。|$3|  
 |`$(id)`|按 ID 返回元素。 这是 `document.getElementById(id)`的快捷方式命令，其中 `id` 是一个表示元素 ID 的字符串。|`$("contenthost")`|  
@@ -91,9 +91,9 @@ if (console && console.log) {
 ```  
   
 ## <a name="examining-objects-in-the-javascript-console-window"></a>检查“JavaScript 控制台”窗口中的对象  
- 使用“JavaScript 控制台”窗口时，你可以与范围内的任何对象进行交互。 若要检查控制台窗口中超出范围的对象，请在代码中使用 `console.log` 、 `console.dir`或其他命令。 当对象在范围内时，你还可以在代码中设置断点（**“断点”** > **Insert “断点”**），从控制台窗口与对象进行交互。  
+ 使用“JavaScript 控制台”窗口时，你可以与范围内的任何对象进行交互。 若要检查控制台窗口中超出范围的对象，请在代码中使用 `console.log` 、 `console.dir`或其他命令。 当对象在范围内时，你还可以在代码中设置断点（ **“断点”**  > **Insert “断点”** ），从控制台窗口与对象进行交互。  
   
-## <a name="ConsoleLog"></a>格式化 console.log 输出  
+## <a name="formatting-consolelog-output"></a><a name="ConsoleLog"></a>格式化 console.log 输出  
  若将多个参数传递给 `console.log`，则控制台将这些参数视为数组并连接输出。  
   
 ```javascript  
@@ -137,6 +137,6 @@ console.log("%s is %f years old!", user.first, user.age);
 // Fred is 10.01 years old!  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [快速入门：调试 JavaScript](../debugger/quickstart-debug-javascript-using-the-console.md)   
  [快速入门：调试 HTML 和 CSS](../debugger/quickstart-debug-html-and-css.md)

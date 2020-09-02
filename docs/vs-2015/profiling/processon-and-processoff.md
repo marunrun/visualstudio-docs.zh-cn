@@ -10,10 +10,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 77e21a280700520b6861dd42e01a4aefa4faa704
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68180206"
 ---
 # <a name="processon-and-processoff"></a>ProcessOn 和 ProcessOff
@@ -45,24 +45,24 @@ VSPerfCmd.exe /{ProcessOff|ProcessOn}:PID [Options]
  要启动或停止的进程的整数标识符。 进程 ID 列在 Windows 任务管理器的“进程”选项卡上。  
   
 ## <a name="required-subcommands"></a>需要的子命令  
- 无  
+ None  
   
 ## <a name="valid-subcommands"></a>有效的子命令  
  可以在包含以下子命令的命令行上指定 **ProcessOn** 和 **ProcessOff**。  
   
- **Start:** `Method`  
+ **开始时间：**`Method`  
  初始化命令行分析会话并设置指定的分析方法。  
   
- **Launch：** `AppName`  
+ **启动：**`AppName`  
  启动指定的应用程序并开始使用采样方法进行分析。  
   
- **Attach:** `PID`  
+ **附加：**`PID`  
  开始分析指定的进程。  
   
  **GlobalOff**&#124;**GlobalOn**  
  停止或启动对命令行分析会话中所有进程的分析。  
   
- {**ThreadOff**|**ThreadOn**} **:** `TID`  
+ {**ThreadOff**&#124;**ThreadOn**}**:**`TID`  
  停止或启动对指定线程的分析（仅限检测方法）。  
   
 ## <a name="example"></a>示例  

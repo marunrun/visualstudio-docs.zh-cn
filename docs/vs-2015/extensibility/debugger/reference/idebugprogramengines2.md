@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramEngines2 | Microsoft Docs
+title: IDebugProgramEngines2 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 1383599231f8f0f0dca39a7c2fa514aca6f6fdb3
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65688953"
 ---
 # <a name="idebugprogramengines2"></a>IDebugProgramEngines2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-此接口由程序节点用于指定所有可能的调试引擎 (DE)，可以调试该程序。  
+程序节点使用此接口来指定可调试此程序 (DE) 的所有可能的调试引擎。  
   
 ## <a name="syntax"></a>语法  
   
@@ -30,31 +30,31 @@ ms.locfileid: "65688953"
 IDebugProgramEngines2 : IUnknown  
 ```  
   
-## <a name="notes-for-implementers"></a>实施者的说明  
- DE 或自定义端口提供程序实现此接口上实现的相同对象[IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)以支持建立特定部署要用于特定的程序。  
+## <a name="notes-for-implementers"></a>实施者注意事项  
+ 一个 DE 或自定义端口提供程序在实现 [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) 的同一对象上实现此接口，以便支持建立特定的用于特定程序的 DE。  
   
-## <a name="notes-for-callers"></a>调用方的说明  
- 调用[QueryInterface](https://msdn.microsoft.com/library/62fce95e-aafa-4187-b50b-e6611b74c3b3)上`IDebugProgramNode2`接口，以获得此接口。  
+## <a name="notes-for-callers"></a>调用方说明  
+ 在接口上调用 [QueryInterface](https://msdn.microsoft.com/library/62fce95e-aafa-4187-b50b-e6611b74c3b3) `IDebugProgramNode2` 以获取此接口。  
   
 ## <a name="methods-in-vtable-order"></a>Vtable 顺序中的方法  
- 下表显示的方法`IDebugProgramEngines2`。  
+ 下表显示的方法 `IDebugProgramEngines2` 。  
   
-|方法|描述|  
+|方法|说明|  
 |------------|-----------------|  
-|[EnumPossibleEngines](../../../extensibility/debugger/reference/idebugprogramengines2-enumpossibleengines.md)|指示可以调试该程序的所有可能的 DEs。|  
-|[SetEngine](../../../extensibility/debugger/reference/idebugprogramengines2-setengine.md)|选择要用于调试此程序 DE。|  
+|[EnumPossibleEngines](../../../extensibility/debugger/reference/idebugprogramengines2-enumpossibleengines.md)|指示可调试此程序的所有可能的 DEs。|  
+|[SetEngine](../../../extensibility/debugger/reference/idebugprogramengines2-setengine.md)|选择用于调试此程序的 DE。|  
   
 ## <a name="remarks"></a>备注  
- 一旦用户选择部署后，选择是否已注册程序节点通过调用[SetEngine](../../../extensibility/debugger/reference/idebugprogramengines2-setengine.md)。 所选的引擎将成为由返回的引擎[GetEngineInfo](../../../extensibility/debugger/reference/idebugprogramnode2-getengineinfo.md)。  
+ 一旦用户选择了 DE 后，就会调用 [SetEngine](../../../extensibility/debugger/reference/idebugprogramengines2-setengine.md)，将该选项注册到 "程序" 节点。 所选引擎将成为 [GetEngineInfo](../../../extensibility/debugger/reference/idebugprogramnode2-getengineinfo.md)返回的引擎。  
   
 ## <a name="requirements"></a>要求  
- 标头： msdbg.h  
+ 标头： msdbg  
   
- 命名空间:Microsoft.VisualStudio.Debugger.Interop  
+ 命名空间： VisualStudio  
   
- 程序集：Microsoft.VisualStudio.Debugger.Interop.dll  
+ 程序集： Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [核心接口](../../../extensibility/debugger/reference/core-interfaces.md)   
  [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)   
  [GetEngineInfo](../../../extensibility/debugger/reference/idebugprogramnode2-getengineinfo.md)

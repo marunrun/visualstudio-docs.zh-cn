@@ -22,10 +22,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 4cb670ab52e321f15c5b009c66ca40623409f10a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72662388"
 ---
 # <a name="options-text-editor-all-languages-tabs"></a>选项，文本编辑器，所有语言，选项卡
@@ -51,13 +51,13 @@ ms.locfileid: "72662388"
  例如，括在左括号 ({) 和右括号 (}) 之间的行可能从对齐括号的位置自动缩进一个额外的制表位。
 
 ## <a name="tabs"></a>制表符
- 选项卡大小设置制表位之间的距离（以空格为间隔）。 默认值为 4 个空格。
+ 制表符大小 设置制表位之间的距离（以空格为单位）。 默认为四个空格。
 
- 缩进大小设置自动缩进的大小（以空格为间隔）。 默认值为 4 个空格。 将插入制表符和/或空格字符来填充指定的大小。
+ 缩进大小 设置自动缩进的大小（以空格为单位）。 默认为四个空格。 可能会插入制表符、空格字符，或同时插入这二者，以填充为指定大小。
 
- 插入空格如果选中，缩进操作只插入空格字符，而不插入制表符。 例如，如果“缩进大小”设置为 5，则每当按 Tab 键或单击“格式设置”工具栏上的“增加缩进”按钮时，都会插入五个空格字符    。
+ 插入空格如果选中，缩进操作只插入空格字符，而不插入制表符。 例如，如果“缩进大小”设置为 5，则每当按 Tab 键或单击“格式设置”工具栏上的“增加缩进”按钮时，都会插入五个空格字符************。
 
- 保留选项卡选择后，缩进操作会插入尽可能多的制表符。 每个制表符都会填充“制表符大小”中指定的空格数  。 如果“缩进大小”不是“制表符大小”的偶数倍，则会添加空格字符以填充差额   。
+ 保留选项卡选择后，缩进操作会插入尽可能多的制表符。 每个制表符都会填充 " **制表符大小**" 中指定的空格数。 如果“缩进大小”不是“制表符大小”的偶数倍，则会添加空格字符以填充差额********。
 
 ## <a name="see-also"></a>另请参阅
  [选项，文本编辑器，所有语言](../../ide/reference/options-text-editor-all-languages.md)[常规，环境，选项对话框](../../ide/reference/general-environment-options-dialog-box.md)

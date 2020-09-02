@@ -11,23 +11,23 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: be826b73e28a73216ea88ceba8e23eb1e9ea457b
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85903812"
 ---
 # <a name="create-an-options-page"></a>创建选项页
 
 本演练将创建一个简单的 "工具/选项" 页，该页使用属性网格来检查和设置属性。
 
- 若要将这些属性保存到并从设置文件还原它们，请执行以下步骤，然后参阅[创建设置类别](../extensibility/creating-a-settings-category.md)。
+ 若要将这些属性保存到并从设置文件还原它们，请执行以下步骤，然后参阅 [创建设置类别](../extensibility/creating-a-settings-category.md)。
 
  MPF 提供了两个类来帮助你创建工具选项页、 <xref:Microsoft.VisualStudio.Shell.Package> 类和 <xref:Microsoft.VisualStudio.Shell.DialogPage> 类。 通过为类创建子类，创建 VSPackage 以为这些页面提供容器 `Package` 。 可以通过从类派生来创建每个 "工具选项" 页 `DialogPage` 。
 
 ## <a name="prerequisites"></a>必备条件
 
- 从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅[安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
+ 从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
 
 ## <a name="create-a-tools-options-grid-page"></a>创建 "工具选项" 网格页
 
@@ -35,13 +35,13 @@ ms.locfileid: "85903812"
 
 ### <a name="to-create-the-vsix-project-and-add-a-vspackage"></a>创建 VSIX 项目并添加 VSPackage
 
-1. 每个 Visual Studio 扩展都从一个 VSIX 部署项目开始，该项目将包含扩展资产。 创建一个 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 名为的 VSIX 项目 `MyToolsOptionsExtension` 。 可以通过搜索 "vsix" 在 "**新建项目**" 对话框中找到 VSIX 项目模板。
+1. 每个 Visual Studio 扩展都从一个 VSIX 部署项目开始，该项目将包含扩展资产。 创建一个 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 名为的 VSIX 项目 `MyToolsOptionsExtension` 。 可以通过搜索 "vsix" 在 " **新建项目** " 对话框中找到 VSIX 项目模板。
 
-2. 通过添加名为的 Visual Studio 包项模板来添加 VSPackage `MyToolsOptionsPackage` 。 在**解决方案资源管理器**中，右键单击项目节点，然后选择 "**添加**  >  **新项**"。 在 "**添加新项" 对话框**中，选择 " **visual c # 项**" "  >  **扩展性**"，然后选择 " **visual Studio 包**"。 在对话框底部的 "**名称**" 字段中，将文件名更改为 `MyToolsOptionsPackage.cs` 。 有关如何创建 VSPackage 的详细信息，请参阅[使用 VSPackage 创建扩展](../extensibility/creating-an-extension-with-a-vspackage.md)。
+2. 通过添加名为的 Visual Studio 包项模板来添加 VSPackage `MyToolsOptionsPackage` 。 在**解决方案资源管理器**中，右键单击项目节点，然后选择 "**添加**  >  **新项**"。 在 "**添加新项" 对话框**中，选择 " **visual c # 项**" "  >  **扩展性**"，然后选择 " **visual Studio 包**"。 在对话框底部的 " **名称** " 字段中，将文件名更改为 `MyToolsOptionsPackage.cs` 。 有关如何创建 VSPackage 的详细信息，请参阅 [使用 VSPackage 创建扩展](../extensibility/creating-an-extension-with-a-vspackage.md)。
 
 ### <a name="to-create-the-tools-options-property-grid"></a>创建 "工具选项" 属性网格
 
-1. 在代码编辑器中打开*MyToolsOptionsPackage*文件。
+1. 在代码编辑器中打开 *MyToolsOptionsPackage* 文件。
 
 2. 添加以下 using 语句。
 
@@ -97,17 +97,17 @@ ms.locfileid: "85903812"
 
 6. 生成项目并启动调试。
 
-7. 在 Visual Studio 的实验实例中，单击 "**工具**" 菜单上的 "**选项**"。
+7. 在 Visual Studio 的实验实例中，单击 " **工具** " 菜单上的 " **选项**"。
 
-     在左侧窗格中，应会看到 **"我的类别**"。 （选项类别按字母顺序列出，因此它应显示在列表中的下一半。）打开 **"我的类别**"，然后单击 **"我的网格" 页**。 选项网格将显示在右窗格中。 "属性" 类别为 "**我的选项**"，属性名称为 **"我的整数" 选项**。 属性说明 "**我的整数" 选项**显示在窗格的底部。 将值从其初始值256更改为其他值。 单击 **"确定"**，然后重新打开**网格页**。 您可以看到新值仍然存在。
+     在左侧窗格中，应会看到 **"我的类别**"。  (选项类别按字母顺序列出，因此它应显示在列表中的下一半。 ) 打开 **"我的类别** "，然后单击 **"我的网格" 页**。 选项网格将显示在右窗格中。 "属性" 类别为 " **我的选项**"，属性名称为 **"我的整数" 选项**。 属性说明 " **我的整数" 选项**显示在窗格的底部。 将值从其初始值256更改为其他值。 单击 **"确定"**，然后重新打开 **网格页**。 您可以看到新值仍然存在。
 
-     还可以通过 Visual Studio 的搜索框使用 "选项" 页。 在 IDE 顶部附近的 "搜索" 框中，键入 **"我的类别**"，将看到 "我的**网格" 页**在结果中列出 >。
+     还可以通过 Visual Studio 的搜索框使用 "选项" 页。 在 IDE 顶部附近的 "搜索" 框中，键入 **"我的类别** "，将看到 "我的 **网格" 页** 在结果中列出 >。
 
 ## <a name="create-a-tools-options-custom-page"></a>创建 "工具选项" 自定义页面
 
  在本部分中，将使用自定义 UI 创建 "工具选项" 页。 使用此页可以显示和更改属性的值。
 
-1. 在代码编辑器中打开*MyToolsOptionsPackage*文件。
+1. 在代码编辑器中打开 *MyToolsOptionsPackage* 文件。
 
 2. 添加以下 using 语句。
 
@@ -160,11 +160,11 @@ ms.locfileid: "85903812"
     public sealed class MyToolsOptionsPackage : Package
     ```
 
-6. 将名为 MyUserControl 的新**用户控件**添加到项目。
+6. 将名为 MyUserControl 的新 **用户控件** 添加到项目。
 
-7. 向用户控件添加**TextBox**控件。
+7. 向用户控件添加 **TextBox** 控件。
 
-     在 "**属性**" 窗口的工具栏上，单击 "**事件**" 按钮，然后双击 "**离开**" 事件。 新的事件处理程序显示在*MyUserControl.cs*代码中。
+     在 " **属性** " 窗口的工具栏上，单击 " **事件** " 按钮，然后双击 " **离开** " 事件。 新的事件处理程序显示在 *MyUserControl.cs* 代码中。
 
 8. 向 `OptionsPage` control 类添加公共字段 `Initialize` 和方法，并更新事件处理程序，以将选项值设置为文本框的内容：
 
@@ -223,15 +223,15 @@ ms.locfileid: "85903812"
 
 11. 在实验实例中，单击 "**工具**" "  >  **选项**"。
 
-12. 查找**我的类别**，然后查找**我的自定义页面**。
+12. 查找 **我的类别** ，然后查找 **我的自定义页面**。
 
-13. 更改**OptionString**的值。 单击 **"确定"**，然后重新打开**自定义页面**。 您可以看到新值已保存。
+13. 更改 **OptionString**的值。 单击 **"确定"**，然后重新打开 **自定义页面**。 您可以看到新值已保存。
 
 ## <a name="access-options"></a>访问选项
 
  在本部分中，将从承载 "关联的工具选项" 页的 VSPackage 获取选项的值。 可以使用相同的方法来获取任何公共属性的值。
 
-1. 在包代码文件中，将名为**OptionInteger**的公共属性添加到**MyToolsOptionsPackage**类。
+1. 在包代码文件中，将名为 **OptionInteger** 的公共属性添加到 **MyToolsOptionsPackage** 类。
 
     ```csharp
     public int OptionInteger
@@ -245,11 +245,11 @@ ms.locfileid: "85903812"
 
     ```
 
-     此代码调用 <xref:Microsoft.VisualStudio.Shell.Package.GetDialogPage%2A> 来创建或检索 `OptionPageGrid` 实例。 `OptionPageGrid`调用 <xref:Microsoft.VisualStudio.Shell.DialogPage.LoadSettingsFromStorage%2A> 以加载其选项，这些选项是公共属性。
+     此代码调用 <xref:Microsoft.VisualStudio.Shell.Package.GetDialogPage%2A> 来创建或检索 `OptionPageGrid` 实例。 `OptionPageGrid` 调用 <xref:Microsoft.VisualStudio.Shell.DialogPage.LoadSettingsFromStorage%2A> 以加载其选项，这些选项是公共属性。
 
-2. 现在，添加一个名为**MyToolsOptionsCommand**的自定义命令项模板以显示值。 在 "**添加新项**" 对话框中，选择 " **Visual c #**  >  **扩展性**" 并选择 "**自定义命令**"。 在窗口底部的 "**名称**" 字段中，将命令文件名更改为*MyToolsOptionsCommand.cs*。
+2. 现在，添加一个名为 **MyToolsOptionsCommand** 的自定义命令项模板以显示值。 在 "**添加新项**" 对话框中，选择 " **Visual c #**  >  **扩展性**" 并选择 "**自定义命令**"。 在窗口底部的 " **名称** " 字段中，将命令文件名更改为 *MyToolsOptionsCommand.cs*。
 
-3. 在*MyToolsOptionsCommand*文件中，将命令的方法的主体替换 `ShowMessageBox` 为以下内容：
+3. 在 *MyToolsOptionsCommand* 文件中，将命令的方法的主体替换 `ShowMessageBox` 为以下内容：
 
     ```csharp
     private void ShowMessageBox(object sender, EventArgs e)
@@ -262,10 +262,10 @@ ms.locfileid: "85903812"
 
 4. 生成项目并启动调试。
 
-5. 在实验实例中，单击 "**工具**" 菜单上的 "**调用 MyToolsOptionsCommand**"。
+5. 在实验实例中，单击 " **工具** " 菜单上的 " **调用 MyToolsOptionsCommand**"。
 
      将显示一个消息框，其中显示的当前值 `OptionInteger` 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [选项和选项页](../extensibility/internals/options-and-options-pages.md)

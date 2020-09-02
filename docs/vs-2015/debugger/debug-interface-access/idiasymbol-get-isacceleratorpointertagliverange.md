@@ -12,16 +12,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 5a53faf8c9395867b570909ac4d34cf329da12c6
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68149445"
 ---
-# <a name="idiasymbolgetisacceleratorpointertagliverange"></a>IDiaSymbol::get_isAcceleratorPointerTagLiveRange
+# <a name="idiasymbolget_isacceleratorpointertagliverange"></a>IDiaSymbol::get_isAcceleratorPointerTagLiveRange
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-检索一个标志，指示符号是否对应于*定义范围符号*标记组件的指针的变量中的代码编译为C++AMP 快捷键。 定义范围符号是地址的范围变量的位置。  
+检索一个标志，该标志指示该符号是否与 *为 C++ AMP* 加速器编译的代码中的指针变量的标记组件相对应。 定义范围符号是某个地址范围的变量位置。  
   
 ## <a name="syntax"></a>语法  
   
@@ -30,12 +30,12 @@ HRESULT get_isAcceleratorPointerTagLiveRange(
    BOOL* pFlag);  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>参数  
  `pFlag`  
- [out]一个指向`BOOL`，该值指示符号是否对应于定义范围符号。  
+ 弄指向 `BOOL` 的指针，该指针指示符号是否对应于定义范围符号。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回`S_FALSE`或错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回 `S_FALSE` 错误代码。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

@@ -1,5 +1,5 @@
 ---
-title: '&lt;字符串&gt;元素 （引导程序） |Microsoft Docs'
+title: '&lt;&gt; (引导程序) 的字符串元素 |Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -19,14 +19,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a8bc56bf980bba6326b3615b6892ec555b795ec8
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "66747413"
 ---
-# <a name="ltstringsgt-element-bootstrapper"></a>&lt;字符串&gt;元素 （引导程序）
-定义产品名称、 包名称和安装错误消息的本地化的字符串。
+# <a name="ltstringsgt-element-bootstrapper"></a>&lt; (引导程序的字符串 &gt; 元素) 
+定义产品名称、包名称和安装错误消息的本地化字符串。
 
 ## <a name="syntax"></a>语法
 
@@ -40,19 +40,19 @@ ms.locfileid: "66747413"
 ```
 
 ## <a name="elements-and-attributes"></a>元素和属性
- `Strings`元素是子元素的`Package`元素。 它没有任何属性。
+ `Strings`元素是元素的子元素 `Package` 。 它没有属性。
 
-## <a name="string"></a>String
- `String`元素是子元素的`Strings`元素。 一个`Strings`元素可能具有一个或多个`String`元素。
+## <a name="string"></a>字符串
+ `String`元素是元素的子元素 `Strings` 。 `Strings`元素可以有一个或多个 `String` 元素。
 
  `String` 具有以下属性。
 
-|特性|描述|
+|特性|说明|
 |---------------|-----------------|
 |`Name`|必需。 字符串的名称。|
 
 ## <a name="example"></a>示例
- 下面的代码示例指定英语字符串的所有.NET Framework 安装程序。
+ 下面的代码示例指定 .NET Framework 安装程序的所有英文字符串。
 
 ```xml
 <Strings>
@@ -73,5 +73,5 @@ ms.locfileid: "66747413"
 </Strings>
 ```
 
-## <a name="see-also"></a>请参阅
-- [\<包 > 元素](../deployment/package-element-bootstrapper.md)
+## <a name="see-also"></a>另请参阅
+- [\<Package> element](../deployment/package-element-bootstrapper.md)

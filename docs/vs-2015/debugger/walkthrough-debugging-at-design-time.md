@@ -24,22 +24,22 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 54466cc3561c194199bbad2b35cd00433da2b0f3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68149419"
 ---
 # <a name="walkthrough-debugging-at-design-time"></a>演练：在设计时调试
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-可以使用 Visual Studio**即时**窗口在你的应用程序未运行时执行函数或子例程。 如果函数或子例程包含断点，Visual Studio 将在相应的点中断执行。 随后即可使用调试器窗口检查程序状态。 此功能称为在设计时调试。  
+当应用程序未运行时，可以使用 Visual Studio 的 " **即时** " 窗口来执行函数或子例程。 如果函数或子例程包含断点，则 Visual Studio 将在适当的点中断执行。 随后即可使用调试器窗口检查程序状态。 此功能称为“在设计时调试”。  
   
  下面的过程演示如何使用此功能。  
   
-### <a name="to-hit-breakpoints-from-the-immediate-window"></a>以命中断点，从即时窗口  
+### <a name="to-hit-breakpoints-from-the-immediate-window"></a>从 "即时" 窗口命中断点  
   
-1. 将以下代码粘贴到 Visual Basic 控制台应用程序：  
+1. 将以下代码粘贴到 Visual Basic 控制台应用程序中：  
   
     ```  
     Module Module1  
@@ -63,24 +63,24 @@ ms.locfileid: "68149419"
     End Module  
     ```  
   
-2. 在读取时，在行上设置断点`s="Add BreakPoint Here"`。  
+2. 在读取、的行上设置断点 `s="Add BreakPoint Here"` 。  
   
-3. 键入以下内容中的**即时**窗口： `?MyFunction<enter>`  
+3. 在 " **即时** " 窗口中键入以下内容： `?MyFunction<enter>`  
   
-4. 验证命中断点和调用堆栈准确。  
+4. 验证是否命中了断点，以及调用堆栈是否准确。  
   
-5. 上**调试**菜单上，单击**继续**，并验证是否仍处于设计模式。  
+5. 在 " **调试** " 菜单上，单击 " **继续**"，然后验证是否仍处于设计模式。  
   
-6. 键入以下内容中的**即时**窗口： `?MyFunction<enter>`  
+6. 在 " **即时** " 窗口中键入以下内容： `?MyFunction<enter>`  
   
-7. 键入以下内容中的**即时**窗口： `?MySub<enter>`  
+7. 在 " **即时** " 窗口中键入以下内容： `?MySub<enter>`  
   
-8. 验证是否命中了断点，并检查静态变量的值`i`中**局部变量**窗口。 它应具有的值为 3。  
+8. 验证是否已命中断点，并检查 `i` " **局部变量** " 窗口中静态变量的值。 它的值应为3。  
   
-9. 验证调用堆栈准确。  
+9. 验证调用堆栈是否准确。  
   
-10. 上**调试**菜单上，单击**继续**，并验证是否仍处于设计模式。  
+10. 在 " **调试** " 菜单上，单击 " **继续**"，然后验证是否仍处于设计模式。  
   
-## <a name="see-also"></a>请参阅  
- [调试器安全](../debugger/debugger-security.md)   
+## <a name="see-also"></a>另请参阅  
+ [调试器安全性](../debugger/debugger-security.md)   
  [调试器基础知识](../debugger/debugger-basics.md)

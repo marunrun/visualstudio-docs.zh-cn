@@ -12,10 +12,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: e43541ddb75b067faa23437d315ce5f239256b1a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68180229"
 ---
 # <a name="process-view---contention-data"></a>“进程”视图 - 争用数据
@@ -27,7 +27,7 @@ ms.locfileid: "68180229"
   
  下表说明“进程”视图表中各列的值。  
   
-|列|说明|  
+|列|描述|  
 |------------|-----------------|  
 |**开始时间**|从分析开始到进程或线程启动的毫秒数或处理器周期数。|  
 |**阻塞的时间**|在此期间阻止进程或线程的函数执行的总时间。|  
@@ -37,8 +37,8 @@ ms.locfileid: "68180229"
 |**结束时间**|从分析开始到进程或线程结束的毫秒数或处理器周期数。|  
 |**ID**|进程或线程的系统生成的标识符。|  
 |**生存时间**|从进程或线程启动到进程或线程结束或分析结束的毫秒数或处理器周期数。|  
-|**类型**|行的类型（进程或线程）。<br /><br /> 仅在 **VSReport** 命令行报表中。 有关详细信息，请参阅 [VSPerfReport](../profiling/vsperfreport.md)。|  
-|**名称**|进程或线程的名称。|  
+|**Type**|行的类型（进程或线程）。<br /><br /> 仅在 **VSReport** 命令行报表中。 有关详细信息，请参阅 [VSPerfReport](../profiling/vsperfreport.md)。|  
+|**Name**|进程或线程的名称。|  
 |**唯一 ID**|探查器生成的标识符，对进程或线程是唯一的。|  
   
 ## <a name="see-also"></a>另请参阅  

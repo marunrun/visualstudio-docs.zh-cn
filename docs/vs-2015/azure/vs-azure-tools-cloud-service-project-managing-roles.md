@@ -12,10 +12,10 @@ ms.topic: conceptual
 ms.date: 03/21/2017
 ms.author: ghogen
 ms.openlocfilehash: 63258f74f295078828d9af2f1f6d8fc2d500b8da
-ms.sourcegitcommit: 3cc73e74921a9ceb622542e0e263abeebc455c00
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/08/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "67624496"
 ---
 # <a name="managing-roles-in-azure-cloud-services-with-visual-studio"></a>使用 Visual Studio 管理 Azure 云服务中的角色
@@ -26,9 +26,9 @@ ms.locfileid: "67624496"
 
 1. 在 Visual Studio 中创建或打开 Azure 云服务项目。
 
-1. 在“解决方案资源管理器”  中，展开项目节点
+1. 在“解决方案资源管理器”**** 中，展开项目节点
 
-1. 右键单击“角色”  节点以显示上下文菜单。 从上下文菜单中，选择“添加”  ，并从当前解决方案中选择现有 Web 角色或辅助角色，或创建新的 Web 或辅助角色项目。 还可以选择适当的项目（如 ASP.NET Web 应用程序项目），然后将其与角色项目相关联。
+1. 右键单击“角色”**** 节点以显示上下文菜单。 从上下文菜单中，选择“添加”****，并从当前解决方案中选择现有 Web 角色或辅助角色，或创建新的 Web 或辅助角色项目。 还可以选择适当的项目（如 ASP.NET Web 应用程序项目），然后将其与角色项目相关联。
 
     ![向 Azure 云服务项目添加角色的菜单选项](./media/vs-azure-tools-cloud-service-project-managing-roles/add-role.png)
 
@@ -37,18 +37,18 @@ ms.locfileid: "67624496"
 
 1. 在 Visual Studio 中创建或打开 Azure 云服务项目。
 
-1. 在“解决方案资源管理器”  中，展开项目节点
+1. 在“解决方案资源管理器”**** 中，展开项目节点
 
-1. 展开“角色”  节点。
+1. 展开“角色”**** 节点。
 
-1. 右键单击要删除的节点，并从上下文菜单中选择“删除”  。
+1. 右键单击要删除的节点，并从上下文菜单中选择“删除”****。
 
     ![向 Azure 云服务添加角色的菜单选项](./media/vs-azure-tools-cloud-service-project-managing-roles/remove-role.png)
 
 ## <a name="readding-a-role-to-an-azure-cloud-service-project"></a>将角色重新添加到 Azure 云服务项目
 如果从云服务项目中删除了角色，但后来又决定将该角色添加回项目中，则只会添加角色声明和基本特性，如终结点和诊断信息。 不会向 `ServiceDefinition.csdef` 文件或 `ServiceConfiguration.cscfg` 文件添加其他资源或引用。 如果想添加此类信息，则需要将其手动添加回这些文件中。
 
-例如，你可能删除了 Web 服务角色，但后来又决定将此角色添加回解决方案中。 如果这样做，会出现错误。 为了防止出现此错误，必须将以下 XML 中显示的 `<LocalResources>` 元素添加回 `ServiceDefinition.csdef` 文件中。 使用添加回项目中的 Web 服务角色的名称作为 \<LocalStorage> 元素的名称特性的一部分  。 在此示例中，Web 服务角色的名称为 **WCFServiceWebRole1**。
+例如，你可能删除了 Web 服务角色，但后来又决定将此角色添加回解决方案中。 如果这样做，会出现错误。 为了防止出现此错误，必须将以下 XML 中显示的 `<LocalResources>` 元素添加回 `ServiceDefinition.csdef` 文件中。 使用添加回项目中的 web 服务角色的名称作为元素的名称属性的一部分 **\<LocalStorage>** 。 在此示例中，Web 服务角色的名称为 **WCFServiceWebRole1**。
 
 ```xml
 <WebRole name="WCFServiceWebRole1">

@@ -127,16 +127,16 @@ author: corob-msft
 ms.author: corob
 manager: jillfra
 ms.openlocfilehash: 71854388f3fb1c5eaea7d40ed2757af9cecacf1a
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85543801"
 ---
 # <a name="annotating-function-parameters-and-return-values"></a>对函数参数和返回值进行批注
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-本文介绍了简单函数参数（标量）的批注的典型用法，以及大多数类型的缓冲区。  本文还介绍了批注的常见用法模式。 有关与函数相关的其他注释，请参阅[注释函数行为](../code-quality/annotating-function-behavior.md)  
+本文介绍了简单函数参数（标量）的批注的典型用法，以及大多数类型的缓冲区。  本文还介绍了批注的常见用法模式。 有关与函数相关的其他注释，请参阅 [注释函数行为](../code-quality/annotating-function-behavior.md)  
   
 ## <a name="pointer-parameters"></a>指针参数  
  对于下表中的批注，当批注指针参数时，如果指针为 null，则分析器将报告错误。  这适用于指针和指向的任何数据项。  
@@ -177,17 +177,17 @@ ms.locfileid: "85543801"
   
 - `_In_reads_or_z_(s)`  
   
-     指向数组的指针，该数组以 null 值终止或具有已知的大小，或者两者都具有已知的大小。 直到空终止符的元素，或者， `s` 如果没有空终止符，则必须在预状态中有效。  如果大小是已知的（以字节为单位），则 `s` 按元素大小进行缩放。  （用于 `strn` 系列。）  
+     指向数组的指针，该数组以 null 值终止或具有已知的大小，或者两者都具有已知的大小。 直到空终止符的元素，或者， `s` 如果没有空终止符，则必须在预状态中有效。  如果大小是已知的（以字节为单位），则 `s` 按元素大小进行缩放。  用于系列的 (`strn` 。 )   
   
 - `_Out_writes_(s)`  
   
      `_Out_writes_bytes_(s)`  
   
-     一个指针，指向 `s` 将由函数编写的元素数组（resp）。  数组元素不必在预处理中有效，并且在 post 状态中有效的元素数是未指定的。  如果参数类型上存在批注，则它们将在 post 状态下应用。 例如，考虑下面的代码。  
+     一个指针，指向 `s` 由函数写入)  (的元素数组。  数组元素不必在预处理中有效，并且在 post 状态中有效的元素数是未指定的。  如果参数类型上存在批注，则它们将在 post 状态下应用。 例如，考虑下面的代码。  
   
      `typedef _Null_terminated_ wchar_t *PWSTR; void MyStringCopy(_Out_writes_ (size) PWSTR p1,    _In_ size_t size,    _In_ PWSTR p2);`  
   
-     在此示例中，调用方 `size` 为提供元素的缓冲区 `p1` 。  `MyStringCopy`使其中一些元素有效。 更重要的 `_Null_terminated_` 是，上的批注 `PWSTR` 表示 `p1` 在 post 状态下以 null 结尾。  通过这种方式，有效元素的数目仍是明确定义的，但不需要特定元素计数。  
+     在此示例中，调用方 `size` 为提供元素的缓冲区 `p1` 。  `MyStringCopy` 使其中一些元素有效。 更重要的 `_Null_terminated_` 是，上的批注 `PWSTR` 表示 `p1` 在 post 状态下以 null 结尾。  通过这种方式，有效元素的数目仍是明确定义的，但不需要特定元素计数。  
   
      `_bytes_`变体提供的大小以字节为单位，而不是元素。 仅在无法将大小表示为元素时使用此值。  例如， `char` `_bytes_` 仅当使用的类似函数时，字符串才使用变体 `wchar_t` 。  
   
@@ -273,19 +273,19 @@ ms.locfileid: "85543801"
   
 - `_In_reads_to_ptr_(p)`  
   
-     指向数组的指针，该数组的表达式 `p` `_Curr_` （即 `p` 减号 `_Curr_` ）由相应的语言标准定义。  之前的元素 `p` 必须在预状态中有效。  
+     指向数组的指针，该数组的表达式 `p` – `_Curr_` (即 `p` 减去 `_Curr_`) 由适当的语言标准定义。  之前的元素 `p` 必须在预状态中有效。  
   
 - `_In_reads_to_ptr_z_(p)`  
   
-     指向以 null 结尾的数组的指针，该表达式的 `p` 表达式 `_Curr_` （即 `p` 减号 `_Curr_` ）由相应的语言标准定义。  之前的元素 `p` 必须在预状态中有效。  
+     指向以 null 结尾的数组的指针，该数组的表达式 `p` – `_Curr_` (即 `p` 减去 `_Curr_`) 由适当的语言标准定义。  之前的元素 `p` 必须在预状态中有效。  
   
 - `_Out_writes_to_ptr_(p)`  
   
-     指向数组的指针，该数组的表达式 `p` `_Curr_` （即 `p` 减号 `_Curr_` ）由相应的语言标准定义。  之前的元素不必 `p` 处于预处理状态，并且在 post 状态中必须有效。  
+     指向数组的指针，该数组的表达式 `p` – `_Curr_` (即 `p` 减去 `_Curr_`) 由适当的语言标准定义。  之前的元素不必 `p` 处于预处理状态，并且在 post 状态中必须有效。  
   
 - `_Out_writes_to_ptr_z_(p)`  
   
-     指向以 null 结尾的数组的指针，该表达式的 `p` 表达式 `_Curr_` （即 `p` 减号 `_Curr_` ）由相应的语言标准定义。  之前的元素不必 `p` 处于预处理状态，并且在 post 状态中必须有效。  
+     指向以 null 结尾的数组的指针，该数组的表达式 `p` – `_Curr_` (即 `p` 减去 `_Curr_`) 由适当的语言标准定义。  之前的元素不必 `p` 处于预处理状态，并且在 post 状态中必须有效。  
   
 ## <a name="optional-pointer-parameters"></a>可选指针参数  
  当指针参数批注包含时 `_opt_` ，它指示参数可以为 null。 否则，批注的执行与不包含的版本相同 `_opt_` 。 下面列出了 `_opt_` 指针参数批注的变体：  
@@ -467,7 +467,7 @@ ms.locfileid: "85543801"
   
      `_Field_range_(low, hi)`  
   
-     参数、字段或结果的范围（包含）从 `low` 到到 `hi` 。  等效于 `_Satisfies_(_Curr_ >= low && _Curr_ <= hi)` 应用于批注对象的，以及相应的前置状态或后状态条件。  
+     参数、字段或结果在范围 (包含) 从 `low` 到 `hi` 。  等效于 `_Satisfies_(_Curr_ >= low && _Curr_ <= hi)` 应用于批注对象的，以及相应的前置状态或后状态条件。  
   
     > [!IMPORTANT]
     > 尽管名称包含 "in" 和 "out"，但和的语义 `_In_` 并 `_Out_` 不适**not**用于这些注释。  

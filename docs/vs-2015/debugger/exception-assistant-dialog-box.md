@@ -1,5 +1,5 @@
 ---
-title: 异常助手对话框 |Microsoft Docs
+title: "\"异常助手\" 对话框 |Microsoft Docs"
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -24,23 +24,23 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 5019547d2e06684b51f1513445521eca0e5143e1
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65702872"
 ---
 # <a name="exception-assistant-dialog-box"></a>“异常助手”对话框
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-**异常助手**引发运行时异常时，对话框随即出现。 **异常助手**显示异常类型、 提供的其他信息以及指向故障排除提示、 可用于搜索其他联机帮助和允许用户执行某些操作，如查看异常的详细信息。  
+引发运行时异常时，将出现 " **异常助手** " 对话框。 **异常助手**显示异常的类型，提供其他信息和故障排除提示的链接，提供一种联机搜索其他帮助的方法，并允许用户执行特定操作，例如查看异常的详细信息。  
   
 ## <a name="task-list"></a>任务列表  
- 若要查看进行故障排除遇到的异常类型的处理的主题，请单击中显示的提示消息之一**故障排除提示**窗格。  
+ 若要查看有关解决所遇到的异常类型问题的主题，请单击 " **故障排除提示** " 窗格中显示的 tip 消息之一。  
   
  若要执行与该异常相关的操作，请单击操作窗格中显示的操作之一。  
   
- 有关如何启用或禁用异常助手的信息，请参阅[General，Debugging，Options Dialog Box](../debugger/general-debugging-options-dialog-box.md)。  
+ 有关如何启用或禁用异常助手的信息，请参阅 " [常规"、"调试"、"选项" 对话框](../debugger/general-debugging-options-dialog-box.md)。  
   
 ## <a name="user-interface-element-list"></a>用户界面元素列表  
  **异常的类型**  
@@ -55,11 +55,11 @@ ms.locfileid: "65702872"
  **操作**  
  列出可执行的操作（例如，查看有关异常对象的详细信息）。  
   
- **在线获取帮助**  
+ **获取联机帮助**  
  使您可以搜索其他联机帮助。  
   
-## <a name="see-also"></a>请参阅  
- [调试器安全](../debugger/debugger-security.md)   
+## <a name="see-also"></a>另请参阅  
+ [调试器安全性](../debugger/debugger-security.md)   
  [使用异常助手](https://msdn.microsoft.com/library/e0a78c50-7318-4d54-af51-40c00aea8711)   
- [如何：使用异常助手纠正运行时错误](https://msdn.microsoft.com/library/23b08d45-7b20-42c9-bdc9-fb3157ad823b)   
+ [如何：用异常助手纠正运行时错误](https://msdn.microsoft.com/library/23b08d45-7b20-42c9-bdc9-fb3157ad823b)   
  [错误类型](https://msdn.microsoft.com/library/3048aabf-8c97-4e13-9150-853769cb5f6f)
