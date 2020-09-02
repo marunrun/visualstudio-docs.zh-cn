@@ -10,16 +10,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 87c2571926b92e59ae03e5e988bbf535474dc6d0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68144575"
 ---
 # <a name="togglehud"></a>ToggleHUD
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-切换图形诊断*HUD* （显示） 覆盖打开或关闭。  
+打开或关闭图形诊断的 HUD（平视显示）覆盖。  
   
 ## <a name="syntax"></a>语法  
   
@@ -28,6 +28,6 @@ void ToggleHUD();
 ```  
   
 ## <a name="remarks"></a>备注  
- 图像诊断 HUD 显示在正在图形诊断下运行的应用的左上角。 它将显示有关应用程序、 图形信息捕获，以及通过调用添加的消息的运行时信息[AddMessage](../debugger/addmessage.md)成员函数。  
+ 图像诊断 HUD 显示在正在图形诊断下运行的应用的左上角。 它显示有关此应用和图形信息捕获的运行时信息，以及通过调用 [AddMessage](../debugger/addmessage.md) 成员函数添加的消息。  
   
- 若要切换 HUD，您不必主动捕获图形信息-也就是说，它可以通过的实例切换`VsgDbg`类，但[Init](../debugger/init.md)成员函数无需首先调用。
+ 若要切换 HUD，不必主动捕获图形信息 - 也就是说，它可通过 `VsgDbg` 类的实例开关，但首先不必调用 [Init](../debugger/init.md) 成员函数。

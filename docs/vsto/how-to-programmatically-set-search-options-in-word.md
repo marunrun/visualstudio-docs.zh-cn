@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 434dfc85ed6c4e03c7c610a497bd063ce1826c62
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85546986"
 ---
 # <a name="how-to-programmatically-set-search-options-in-word"></a>如何：以编程方式在 Word 中设置搜索选项
@@ -38,7 +38,7 @@ ms.locfileid: "85546986"
 
 ### <a name="to-set-search-options-using-a-find-object"></a>使用 Find 对象设置搜索选项
 
-1. 设置对象的属性 <xref:Microsoft.Office.Interop.Word.Find> ，以便通过文本 "**查找我**" 向前搜索所选内容。
+1. 设置对象的属性 <xref:Microsoft.Office.Interop.Word.Find> ，以便通过文本 " **查找我**" 向前搜索所选内容。
 
      [!code-vb[Trin_VstcoreWordAutomation#76](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#76)]
 
@@ -47,7 +47,7 @@ ms.locfileid: "85546986"
 
 ### <a name="to-set-search-options-using-execute-method-arguments"></a>使用执行方法参数设置搜索选项
 
-1. 将搜索条件作为方法的参数传递 <xref:Microsoft.Office.Interop.Word.Find.Execute%2A> ，以通过文本的选择向前搜索 "**查找我**"。
+1. 将搜索条件作为方法的参数传递 <xref:Microsoft.Office.Interop.Word.Find.Execute%2A> ，以通过文本的选择向前搜索 " **查找我**"。
 
      [!code-vb[Trin_VstcoreWordAutomation#77](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#77)]
      [!code-csharp[Trin_VstcoreWordAutomation#77](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#77)]

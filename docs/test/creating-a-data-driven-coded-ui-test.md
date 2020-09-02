@@ -201,7 +201,7 @@ ms.locfileid: "75595353"
 
 ## <a name="q--a"></a>问题解答
 
-### <a name="CreateDataDrivenCUIT_QA_DataSourceAttributes"></a>其他数据源类型（如 SQL Express 或 XML）具有哪些数据源属性？
+### <a name="what-are-the-data-source-attributes-for-other-data-source-types-such-as-sql-express-or-xml"></a><a name="CreateDataDrivenCUIT_QA_DataSourceAttributes"></a>其他数据源类型（如 SQL Express 或 XML）具有哪些数据源属性？
 
 **答：** 你可以将下表中的示例数据源字符串复制到你的代码中并进行必要的自定义，然后就可以使用了。
 

@@ -14,13 +14,13 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: a4451a7b222b66f0fe5bea2b0e5f2b8499c9033c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68198380"
 ---
-# <a name="markerimportance-enumeration"></a>marker_importance 枚举
+# <a name="marker_importance-enumeration"></a>marker_importance 枚举
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 表示并发可视化工具标记的重要性级别。  
@@ -35,7 +35,7 @@ enum marker_importance;
   
 ### <a name="values"></a>值  
   
-|name|说明|  
+|“属性”|描述|  
 |----------|-----------------|  
 |`critical_importance`|指定该标记具有关键重要性。|  
 |`high_importance`|指定该标记具有高重要性。|  
@@ -48,4 +48,4 @@ enum marker_importance;
  **命名空间：** Concurrency::diagnostic  
   
 ## <a name="see-also"></a>另请参阅  
- [diagnostic 命名空间](../profiling/diagnostic-namespace.md)
+ [诊断命名空间](../profiling/diagnostic-namespace.md)

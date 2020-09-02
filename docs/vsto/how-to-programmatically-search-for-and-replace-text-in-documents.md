@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 18a50d6d4ef52a0c50be0b72b4cab5706da4e2db
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85547038"
 ---
 # <a name="how-to-programmatically-search-for-and-replace-text-in-documents"></a>如何：以编程方式在文档中搜索和替换文本
@@ -74,7 +74,7 @@ ms.locfileid: "85547038"
     [!code-vb[Trin_VstcoreWordAutomationAddIn#72](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#72)]
     [!code-csharp[Trin_VstcoreWordAutomationAddIn#72](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#72)]
 
-2. 使用 <xref:Microsoft.Office.Interop.Word.Range.Find%2A> 对象的属性 <xref:Microsoft.Office.Interop.Word.Range> ，首先清除任何现有的格式设置选项，然后搜索字符串 "**查找我**"。
+2. 使用 <xref:Microsoft.Office.Interop.Word.Range.Find%2A> 对象的属性 <xref:Microsoft.Office.Interop.Word.Range> ，首先清除任何现有的格式设置选项，然后搜索字符串 " **查找我**"。
 
     [!code-vb[Trin_VstcoreWordAutomation#73](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#73)]
     [!code-csharp[Trin_VstcoreWordAutomation#73](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#73)]
@@ -97,7 +97,7 @@ ms.locfileid: "85547038"
    [!code-csharp[Trin_VstcoreWordAutomationAddIn#71](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#71)]
 
 ## <a name="search-for-and-replace-text-in-documents"></a>搜索和替换文档中的文本
- 下面的代码搜索当前所选内容，并将找到**的字符串的**所有匹配项替换为**找到**的字符串。
+ 下面的代码搜索当前所选内容，并将找到 **的字符串的** 所有匹配项替换为 **找到**的字符串。
 
 ### <a name="to-search-for-and-replace-text-in-documents"></a>在文档中搜索并替换文本
 
@@ -108,7 +108,7 @@ ms.locfileid: "85547038"
 
      <xref:Microsoft.Office.Interop.Word.Find> 类具有 <xref:Microsoft.Office.Interop.Word.Find.ClearFormatting%2A> 方法，而 <xref:Microsoft.Office.Interop.Word.Replacement> 类也具有自己的 <xref:Microsoft.Office.Interop.Word.Replacement.ClearFormatting%2A> 方法。 执行查找和替换操作时，必须同时使用这两个对象的 ClearFormatting 方法。 如果仅在 <xref:Microsoft.Office.Interop.Word.Find> 对象上使用该方法，则可能会在替换文本中得到意外的结果。
 
-2. 使用 <xref:Microsoft.Office.Interop.Word.Find> 对象的 <xref:Microsoft.Office.Interop.Word.Find.Execute%2A> 方法来替换每个找到的项。 若要指定要替换的项，请使用*replace*参数。 此参数可能是以下 <xref:Microsoft.Office.Interop.Word.WdReplace> 值之一：
+2. 使用 <xref:Microsoft.Office.Interop.Word.Find> 对象的 <xref:Microsoft.Office.Interop.Word.Find.Execute%2A> 方法来替换每个找到的项。 若要指定要替换的项，请使用 *replace* 参数。 此参数可能是以下 <xref:Microsoft.Office.Interop.Word.WdReplace> 值之一：
 
     - <xref:Microsoft.Office.Interop.Word.WdReplace.wdReplaceAll> 将替换所有找到的项。
 

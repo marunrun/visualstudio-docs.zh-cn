@@ -10,21 +10,21 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: fbe09c242fce137d90b90ff2d6c547cee1ed2dc7
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75595392"
 ---
 # <a name="respond-to-and-propagate-changes"></a>响应并传播更改
 
 创建、删除或更新元素时，您可以编写将更改传播到模型的其他部分的代码，或者编写为外部资源（如文件、数据库或其他组件）的代码。
 
-## <a name="reference"></a>引用
+## <a name="reference"></a>参考
 
 作为指导原则，请按以下顺序考虑这些技术：
 
-|技术|方案|更多相关信息|
+|方法|方案|更多信息|
 |-|-|-|
 |定义计算域属性。|值由模型中的其他属性计算的域属性。 例如，价格是相关元素的价格之和。|[计算的和自定义的存储属性](../modeling/calculated-and-custom-storage-properties.md)|
 |定义自定义存储域属性。|存储在模型的其他部分或外部的域属性。 例如，可以将表达式字符串分析为模型中的树。|[计算的和自定义的存储属性](../modeling/calculated-and-custom-storage-properties.md)|
@@ -44,13 +44,13 @@ ms.locfileid: "75595392"
 
 使用存储事件将模型与存储外部的对象进行同步，并使用规则来保持存储中的一致性。
 
-- **创建自定义规则**您可以创建自定义规则作为抽象规则的派生类。 还必须通知框架有关自定义规则。 有关详细信息，请参阅[规则将传播的更改中的模式](../modeling/rules-propagate-changes-within-the-model.md)。
+- **创建自定义规则** 您可以创建自定义规则作为抽象规则的派生类。 还必须通知框架有关自定义规则。 有关详细信息，请参阅 [规则在模型内部传播更改](../modeling/rules-propagate-changes-within-the-model.md)。
 
-- **订阅事件**在订阅事件之前，请创建事件处理程序和委托。 然后，使用 <xref:Microsoft.VisualStudio.Modeling.Store.EventManagerDirectory%2A>属性订阅该事件。 有关详细信息，请参阅[事件处理程序在模型外部传播更改](../modeling/event-handlers-propagate-changes-outside-the-model.md)。
+- **订阅事件** 在订阅事件之前，请创建事件处理程序和委托。 然后使用 <xref:Microsoft.VisualStudio.Modeling.Store.EventManagerDirectory%2A> 属性订阅该事件。 有关详细信息，请参阅 [事件处理程序在模型外部传播更改](../modeling/event-handlers-propagate-changes-outside-the-model.md)。
 
-- **撤消更改**撤消事务时，将引发事件，但不会应用规则。 如果规则更改了某个值，而您撤消了该更改，则在撤消操作期间，该值将重置为原始值。 引发事件时，必须手动将值更改回其原始值。 若要了解有关事务和撤消的详细信息，请参阅[如何：使用事务更新模型](../modeling/how-to-use-transactions-to-update-the-model.md)。
+- **撤消更改** 撤消事务时，将引发事件，但不会应用规则。 如果规则更改了某个值，而您撤消了该更改，则在撤消操作期间，该值将重置为原始值。 引发事件时，必须手动将值更改回其原始值。 若要了解有关事务和撤消的详细信息，请参阅 [如何：使用事务更新模型](../modeling/how-to-use-transactions-to-update-the-model.md)。
 
-- **将事件参数传递到规则和事件**事件和规则都传递有 `EventArgs` 参数，该参数包含有关模型如何更改的信息。
+- **将事件参数传递到规则和事件** 事件和规则都被传递了一个 `EventArgs` 参数，该参数包含有关模型如何更改的信息。
 
 ## <a name="see-also"></a>另请参阅
 

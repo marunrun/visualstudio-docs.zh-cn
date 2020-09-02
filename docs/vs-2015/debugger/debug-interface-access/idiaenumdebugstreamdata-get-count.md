@@ -1,5 +1,5 @@
 ---
-title: 'Idiaenumdebugstreamdata:: Get_count |Microsoft Docs'
+title: IDiaEnumDebugStreamData：： get_Count |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: a07151e7670f712e20613c675093a17edc66b608
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68198561"
 ---
-# <a name="idiaenumdebugstreamdatagetcount"></a>IDiaEnumDebugStreamData::get_Count
+# <a name="idiaenumdebugstreamdataget_count"></a>IDiaEnumDebugStreamData::get_Count
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-检索调试数据流中的记录数。  
+检索调试数据流中的数字记录。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,11 +35,11 @@ HRESULT get_Count ( 
   
 #### <a name="parameters"></a>参数  
  pRetVal  
- [out，retval]返回记录的数。  
+ [out，retval]返回记录数。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md)   
  [IDiaEnumDebugStreamData::Item](../../debugger/debug-interface-access/idiaenumdebugstreamdata-item.md)

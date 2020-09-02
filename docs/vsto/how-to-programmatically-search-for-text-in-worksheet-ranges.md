@@ -15,14 +15,14 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 4d35d24f9132a9b279316b53fbb13e3bfa094994
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85547025"
 ---
 # <a name="how-to-programmatically-search-for-text-in-worksheet-ranges"></a>如何：以编程方式在工作表范围内搜索文本
-  <xref:Microsoft.Office.Interop.Excel.Range.Find%2A>对象的方法 <xref:Microsoft.Office.Interop.Excel.Range> 使您能够在范围内搜索文本。 此文本还可以是工作表单元格（如或）中可能出现的任何错误字符串 `#NULL!` `#VALUE!` 。 有关错误字符串的详细信息，请参阅[单元错误值](/office/vba/excel/Concepts/Cells-and-Ranges/cell-error-values)。
+  <xref:Microsoft.Office.Interop.Excel.Range.Find%2A>对象的方法 <xref:Microsoft.Office.Interop.Excel.Range> 使您能够在范围内搜索文本。 此文本还可以是工作表单元格（如或）中可能出现的任何错误字符串 `#NULL!` `#VALUE!` 。 有关错误字符串的详细信息，请参阅 [单元错误值](/office/vba/excel/Concepts/Cells-and-Ranges/cell-error-values)。
 
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]
 
@@ -48,7 +48,7 @@ ms.locfileid: "85547025"
     [!code-csharp[Trin_VstcoreExcelAutomation#60](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#60)]
     [!code-vb[Trin_VstcoreExcelAutomation#60](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#60)]
 
-4. 将第一个找到的范围（ `firstFind` ）与 "**无**" 比较。 如果 `firstFind` 不包含值，则代码将存储找到的范围（ `currentFind` ）。
+4. 将)  (第一个找到的范围与 " `firstFind` **无**" 比较。 如果 `firstFind` 不包含值，则代码会将找到的范围存储 (`currentFind`) 。
 
     [!code-csharp[Trin_VstcoreExcelAutomation#61](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#61)]
     [!code-vb[Trin_VstcoreExcelAutomation#61](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#61)]
