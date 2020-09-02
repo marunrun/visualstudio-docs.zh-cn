@@ -15,10 +15,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: 3de7f224b6ff40f1606f9593704f799cd64d32da
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85816054"
 ---
 # <a name="undefined-identifier"></a>未定义标识符
@@ -32,8 +32,8 @@ ms.locfileid: "85816054"
   
 ### <a name="to-correct-this-error"></a>更正此错误  
   
-- 用**var**语句声明变量（如 `var` x：）。  
+- 用 **var** 语句声明变量， (如 `var` x; ) 中所示。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [变化](../../javascript/variables-javascript.md)   
  [变量范围](../../javascript/advanced/variable-scope-javascript.md)

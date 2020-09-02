@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: dbafba72829a5dff8dd5665b6271088a3f9339db
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72663870"
 ---
 # <a name="xattribute-class-dynamic-properties"></a>XAttribute 类动态属性
@@ -23,9 +23,9 @@ ms.locfileid: "72663870"
 
 ## <a name="in-this-section"></a>本节内容
 
-|主题|描述|
+|主题|说明|
 |-----------|-----------------|
-|[“值”](../designers/value-xattribute-dynamic-property.md)|获取或设置 XML 属性的值。|
+|[值](../designers/value-xattribute-dynamic-property.md)|获取或设置 XML 属性的值。|
 
-## <a name="see-also"></a>请参阅
- <xref:System.Xml.Linq.XAttribute?displayProperty=fullName> [LINQ to XML 动态属性](../designers/linq-to-xml-dynamic-properties.md) [System.xml.linq.xelement> 类动态属性](../designers/xelement-class-dynamic-properties.md)
+## <a name="see-also"></a>另请参阅
+ <xref:System.Xml.Linq.XAttribute?displayProperty=fullName>[LINQ to XML 动态属性](../designers/linq-to-xml-dynamic-properties.md) [System.xml.linq.xelement> 类动态属性](../designers/xelement-class-dynamic-properties.md)

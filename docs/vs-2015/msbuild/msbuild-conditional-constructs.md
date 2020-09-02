@@ -24,16 +24,16 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: b7b22f63d5d3d6e0b1f7789561029bbfbfb4cdf4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68143772"
 ---
 # <a name="msbuild-conditional-constructs"></a>MSBuild 的条件构造
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-[!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 为非此即彼的处理机制提供 [Choose](../msbuild/choose-element-msbuild.md)、[When](../msbuild/when-element-msbuild.md) 和 [Otherwise](../msbuild/otherwise-element-msbuild.md) 元素。  
+[!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 提供一种机制，用于通过 [选择](../msbuild/choose-element-msbuild.md)、 [When](../msbuild/when-element-msbuild.md)和 [其他](../msbuild/otherwise-element-msbuild.md) 元素进行处理。  
   
 ## <a name="using-the-choose-element"></a>使用 Choose 元素  
  `Choose` 元素包含一系列具有 `Condition` 属性的 `When` 元素，这些元素按照从顶部到底部的顺序进行测试，直到一个元素的计算结果为 `true`。 如果多个 `When` 元素的计算结果为 `true`，则只使用第一个。 如果 `When` 元素的任何条件的计算结果均为 `true`，则评估 `Otherwise` 元素（如存在）。  
@@ -80,7 +80,7 @@ ms.locfileid: "68143772"
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Choose 元素 (MSBuild)](../msbuild/choose-element-msbuild.md)   
- [When 元素 (MSBuild)](../msbuild/when-element-msbuild.md)   
- [Otherwise 元素 (MSBuild)](../msbuild/otherwise-element-msbuild.md)   
- [MSBuild 参考](../msbuild/msbuild-reference.md)
+ [选择元素 (MSBuild) ](../msbuild/choose-element-msbuild.md)   
+ [当元素 (MSBuild) ](../msbuild/when-element-msbuild.md)   
+ [否则为 (MSBuild) 的元素 ](../msbuild/otherwise-element-msbuild.md)   
+ [MSBuild 引用](../msbuild/msbuild-reference.md)

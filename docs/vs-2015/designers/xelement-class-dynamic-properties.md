@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 48ff478964d88d1f2008043d399c879291730011
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72663829"
 ---
 # <a name="xelement-class-dynamic-properties"></a>XElement 类动态属性
@@ -25,12 +25,12 @@ ms.locfileid: "72663829"
 
 |主题|说明|
 |-----------|-----------------|
-|[特性](../designers/attribute-xelement-dynamic-property.md)|获取一个索引器，用于检索与指定扩展名对应的属性。|
-|[元素](../designers/element-xelement-dynamic-property.md)|获取一个索引器，用于检索与指定扩展名对应的子元素。|
+|[Attribute](../designers/attribute-xelement-dynamic-property.md)|获取一个索引器，用于检索与指定扩展名对应的属性。|
+|[Element](../designers/element-xelement-dynamic-property.md)|获取一个索引器，用于检索与指定扩展名对应的子元素。|
 |[元素](../designers/elements-xelement-dynamic-property.md)|获取一个索引器，用于检索与指定扩展名匹配的当前元素的子元素。|
 |[子代](../designers/descendants-xelement-dynamic-property.md)|获取一个索引器，用于检索与指定扩展名匹配的当前元素的所有子代元素。|
 |[值](../designers/value-xelement-dynamic-property.md)|获取或设置一个元素的内容。|
 |[Xml](../designers/xml-xelement-dynamic-property.md)|获取元素的未格式化的 XML 表示形式。|
 
 ## <a name="see-also"></a>另请参阅
- <xref:System.Xml.Linq.XElement?displayProperty=fullName> [LINQ to XML 动态属性](../designers/linq-to-xml-dynamic-properties.md) [System.xml.linq.xattribute> 类动态属性](../designers/xattribute-class-dynamic-properties.md)
+ <xref:System.Xml.Linq.XElement?displayProperty=fullName>[LINQ to XML 动态属性](../designers/linq-to-xml-dynamic-properties.md) [System.xml.linq.xattribute> 类动态属性](../designers/xattribute-class-dynamic-properties.md)

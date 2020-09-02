@@ -15,18 +15,18 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: 1b0eb1d7a53614f48daaf6459aaadee594b6fa11
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85816171"
 ---
 # <a name="the-number-of-fractional-digits-is-out-of-range"></a>小数位数超出范围
-您尝试将无效参数传递给**toExponential**。 函数**toExponential （）** 的参数必须介于0和20（含）之间。  
+您尝试将无效参数传递给 **toExponential**。 函数 **toExponential ( # B1 ** 的参数必须介于0和 20 (包含) 之间。  
   
 ### <a name="to-correct-this-error"></a>更正此错误  
   
-- 请确保**toExponential （）** 的参数不太大或太小。  
+- 请确保 ToExponential 的参数 ** ( # B1 ** 不太大或太小。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [toExponential 方法 (Number)](../../javascript/reference/toexponential-method-number-javascript.md)

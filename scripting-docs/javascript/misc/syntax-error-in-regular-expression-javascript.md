@@ -1,5 +1,5 @@
 ---
-title: 正则表达式中的语法错误（JavaScript） |Microsoft Docs
+title: " (JavaScript) 的正则表达式中有语法错误 |Microsoft Docs"
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
@@ -15,10 +15,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: 192f9a5ca9928e4c325d67c340276ef12de14686
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85816184"
 ---
 # <a name="syntax-error-in-regular-expression-javascript"></a>正则表达式中有语法错误 (JavaScript)
@@ -28,7 +28,7 @@ ms.locfileid: "85816184"
   
 - 确保正则表达式搜索字符串的结构符合 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 正则表达式语法。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [正则表达式对象](../../javascript/reference/regular-expression-object-javascript.md)   
- [正则表达式语法（JavaScript）](https://msdn.microsoft.com/library/1400241x)   
+ [JavaScript)  (正则表达式语法 ](https://msdn.microsoft.com/library/1400241x)   
  [compile 方法 (Regular Expression)](../../javascript/reference/compile-method-regular-expression-javascript.md)

@@ -13,16 +13,16 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: e78975acab0bf30f1f188cdd7b6454fd6e74ce6f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68143722"
 ---
 # <a name="sccrename-function"></a>SccRename 函数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-此函数重命名源代码管理系统中的文件。  
+此函数将重命名源代码管理系统中的文件。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,33 +37,33 @@ SCCRTN SccRename(
   
 #### <a name="parameters"></a>参数  
  pvContext  
- [in]源控制插件上下文结构。  
+ 中源代码管理插件上下文结构。  
   
  hWnd  
- [in]它提供了任何对话框，父级可以使用源代码管理插件，则 IDE 窗口的句柄。  
+ 中IDE 窗口的句柄，源代码管理插件可将其用作它所提供的所有对话框的父级。  
   
  lpFileName  
- [in]要重命名该文件的完全限定的文件名。  
+ 中要重命名的文件的完全限定文件名。  
   
  lpNewName  
- [in]完全限定的新名称。 如果不同的目录路径，然后在文件已从一个子目录到另一个。  
+ 中完全限定的新名称。 如果目录路径不同，则文件已从一个子目录移到另一个子目录。  
   
 ## <a name="return-value"></a>返回值  
- 此函数的源控制插件实现应返回以下值之一：  
+ 此函数的源代码管理插件实现应返回以下值之一：  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |SCC_OK|重命名操作已成功完成。|  
-|SCC_E_PROJNOTOPEN|不受源代码管理打开项目时。|  
-|SCC_E_FILENOTCONTROLLED|文件不是源代码管理下。|  
-|SCC_E_ACCESSFAILURE|访问源代码管理系统，很可能是由于网络或争用问题时出现问题时。|  
-|SCC_E_NOTAUTHORIZED|未授权用户来完成此操作。|  
-|SCC_E_COULDNOTCREATEPROJECT|重命名过程的一部分，无法创建项目。|  
-|SCC_E_OPNOTPERFORMED|不执行此操作。|  
-|SCC_E_NONSPECIFICERROR|未指定或常规时出错。|  
+|SCC_E_PROJNOTOPEN|未在源代码管理下打开该项目。|  
+|SCC_E_FILENOTCONTROLLED|此文件不受源代码管理。|  
+|SCC_E_ACCESSFAILURE|访问源代码管理系统时出现问题，可能是由于网络或争用问题导致的。|  
+|SCC_E_NOTAUTHORIZED|用户无权完成此操作。|  
+|SCC_E_COULDNOTCREATEPROJECT|无法将该项目作为重命名过程的一部分来创建。|  
+|SCC_E_OPNOTPERFORMED|未执行此操作。|  
+|SCC_E_NONSPECIFICERROR|出现未指定的错误或常规错误。|  
   
 ## <a name="remarks"></a>备注  
- 此函数可用于重命名文件或它从一个位置移动到另一个源代码管理系统中。 源代码管理插件不应尝试访问磁盘上的文件。 它负责 IDE 的本地文件重命名。  
+ 此函数可用于重命名文件，或将其从源控制系统中的一个位置移动到另一个位置。 源代码管理插件不应尝试访问磁盘上的文件。 重命名本地文件是 IDE 的责任。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [源代码管理插件 API 函数](../extensibility/source-control-plug-in-api-functions.md)
