@@ -1,5 +1,5 @@
 ---
-title: Spy + + 视图 |Microsoft Docs
+title: Spy++ 视图 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -13,26 +13,26 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 91d62f251af2fd2f7c029712e4f15874a68de177
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68153865"
 ---
 # <a name="spy-views"></a>Spy++ 视图
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Spy + + 在计算机上显示的树视图的 windows、 消息、 进程和线程可用。  
+Spy++ 显示计算机上可用的窗口、消息、进程和线程的树状视图。  
   
 ## <a name="in-this-section"></a>本节内容  
  [窗口视图](../debugger/windows-view.md)  
- 显示可用的窗口和控件的树视图。  
+ 显示可用窗口和控件的树视图。  
   
  [消息视图](../debugger/messages-view.md)  
- 显示与窗口、 进程或线程关联的消息流。  
+ 显示与窗口、进程或线程关联的消息流。  
   
  [进程视图](../debugger/processes-view.md)  
- 显示活动流程的树视图。  
+ 显示活动进程的树视图。  
   
  [线程视图](../debugger/threads-view.md)  
  显示活动线程的树视图。  
@@ -45,4 +45,4 @@ Spy + + 在计算机上显示的树视图的 windows、 消息、 进程和线�
  介绍 Spy + + 工具，并说明如何使用它。  
   
  [Spy++ 参考](../debugger/spy-increment-reference.md)  
- 包含描述每个 Spy + + 菜单和对话框的章节。
+ 包括介绍每个 Spy + + 菜单和对话框的部分。

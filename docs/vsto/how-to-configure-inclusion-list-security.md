@@ -14,14 +14,14 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 459cf3f33197939a916a5f11a94bbaf09e8142e3
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85541630"
 ---
 # <a name="how-to-configure-inclusion-list-security"></a>如何：配置包含列表安全性
-  如果你具有管理员权限，则可以配置 [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] 信任提示，以控制最终用户是否可以选择通过将信任决策保存到包含列表来安装 Office 解决方案。 有关包含列表的信息，请参阅[使用包含列表信任 Office 解决方案](../vsto/trusting-office-solutions-by-using-inclusion-lists.md)。
+  如果你具有管理员权限，则可以配置 [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] 信任提示，以控制最终用户是否可以选择通过将信任决策保存到包含列表来安装 Office 解决方案。 有关包含列表的信息，请参阅 [使用包含列表信任 Office 解决方案](../vsto/trusting-office-solutions-by-using-inclusion-lists.md)。
 
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]
 
@@ -42,7 +42,7 @@ ms.locfileid: "85541630"
 
     1. 单击 **“启动”** ，再单击 **“运行”** 。
 
-    2. 在 "**打开**" 框中，键入**regedt32.exe**，然后单击 **"确定"**。
+    2. 在 " **打开** " 框中，键入 **regedt32.exe**，然后单击 **"确定"**。
 
 2. 找到以下注册表项：
 
@@ -50,7 +50,7 @@ ms.locfileid: "85541630"
 
      如果该键不存在，请创建它。
 
-3. 将以下子项添加为**字符串值**（如果它们尚不存在）以及关联的值。
+3. 将以下子项添加为 **字符串值**（如果它们尚不存在）以及关联的值。
 
     |字符串值子项|值|
     |-------------------------|-----------|
@@ -60,7 +60,7 @@ ms.locfileid: "85541630"
     |**LocalIntranet**|**已启用**|
     |**TrustedSites**|**已启用**|
 
-     默认情况下， **Internet**的值为**AuthenticodeRequired** ， **UntrustedSites**的值为**Disabled**。
+     默认情况下， **Internet** 的值为 **AuthenticodeRequired** ， **UntrustedSites** 的值为 **Disabled**。
 
 ### <a name="to-enable-the-inclusion-list-programmatically"></a>以编程方式启用包含列表
 
@@ -101,7 +101,7 @@ ms.locfileid: "85541630"
 
     1. 单击 **“启动”** ，再单击 **“运行”** 。
 
-    2. 在 "**打开**" 框中，键入**regedt32.exe**，然后单击 **"确定"**。
+    2. 在 " **打开** " 框中，键入 **regedt32.exe**，然后单击 **"确定"**。
 
 2. 找到以下注册表项：
 
@@ -109,7 +109,7 @@ ms.locfileid: "85541630"
 
      如果该键不存在，请创建它。
 
-3. 将以下子项添加为**字符串值**（如果它们尚不存在）以及关联的值。
+3. 将以下子项添加为 **字符串值**（如果它们尚不存在）以及关联的值。
 
     |字符串值子项|值|
     |-------------------------|-----------|
@@ -119,7 +119,7 @@ ms.locfileid: "85541630"
     |**LocalIntranet**|**AuthenticodeRequired**|
     |**TrustedSites**|**AuthenticodeRequired**|
 
-     默认情况下， **Internet**的值为**AuthenticodeRequired** ， **UntrustedSites**的值为**Disabled**。
+     默认情况下， **Internet** 的值为 **AuthenticodeRequired** ， **UntrustedSites** 的值为 **Disabled**。
 
 ### <a name="to-restrict-the-inclusion-list-programmatically"></a>以编程方式限制包含列表
 
@@ -160,13 +160,13 @@ ms.locfileid: "85541630"
 
     1. 单击 **“启动”** ，再单击 **“运行”** 。
 
-    2. 在 "**打开**" 框中，键入**regedt32.exe**，然后单击 **"确定"**。
+    2. 在 " **打开** " 框中，键入 **regedt32.exe**，然后单击 **"确定"**。
 
 2. 如果此注册表项尚不存在，请创建以下注册表项：
 
      **\HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\\.NETFramework\Security\TrustManager\PromptingLevel**
 
-3. 将以下子项添加为**字符串值**（如果它们尚不存在）以及关联的值。
+3. 将以下子项添加为 **字符串值**（如果它们尚不存在）以及关联的值。
 
     |字符串值子项|值|
     |-------------------------|-----------|
@@ -207,6 +207,6 @@ ms.locfileid: "85541630"
 
 3. 生成并运行应用程序。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [使用包含列表信任 Office 解决方案](../vsto/trusting-office-solutions-by-using-inclusion-lists.md)
 - [保护 Office 解决方案](../vsto/securing-office-solutions.md)

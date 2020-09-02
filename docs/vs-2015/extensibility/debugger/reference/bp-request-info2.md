@@ -1,5 +1,5 @@
 ---
-title: BP_REQUEST_INFO2 | Microsoft Docs
+title: BP_REQUEST_INFO2 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 65edef6585fd8367c6fb23c291bf4e8376de8861
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68153351"
 ---
-# <a name="bprequestinfo2"></a>BP_REQUEST_INFO2
+# <a name="bp_request_info2"></a>BP_REQUEST_INFO2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-包含实现一个断点，包括供应商的 GUID、 约束和跟踪点所需的信息。  
+包含实现断点所需的信息，包括供应商 GUID、约束和跟踪点。  
   
 ## <a name="syntax"></a>语法  
   
@@ -64,55 +64,55 @@ public struct BP_REQUEST_INFO2 {
   
 ## <a name="members"></a>成员  
  `dwFields`  
- 中的标志的组合[BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md)枚举，用于指定哪些字段填写。  
+ [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md)枚举中的标志的组合，用于指定要填写的字段。  
   
  `guidLanguage`  
  语言 GUID。  
   
  `bpLocation`  
- [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md)结构，它指定的断点位置的类型。  
+ [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md)结构，它指定断点位置的类型。  
   
  `pProgram`  
- [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)表示应用程序中发生断点的对象。  
+ [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)对象，表示在其中发生断点的应用程序。  
   
  `bstrProgramName`  
- 断点发生的应用程序的名称。  
+ 发生断点的应用程序的名称。  
   
  `pThread`  
- [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)对象，表示该断点所在的线程。  
+ [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)对象，表示在其中发生断点的线程。  
   
  `bstrThreadName`  
- 断点所在的线程的名称。  
+ 发生断点的线程的名称。  
   
  `bpCondition`  
- [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md)结构，它描述将在其下触发断点的条件。  
+ 描述引发断点的条件的 [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md) 结构。  
   
  `bpPassCount`  
- [BP_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md)结构，其中包含断点的传递计数信息。  
+ [BP_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md)结构，它包含断点的传递计数信息。  
   
  `dwFlags`  
- 中的标志的组合[BP_FLAGS](../../../extensibility/debugger/reference/bp-flags.md)枚举，用于指定请求的断点的标志。  
+ [BP_FLAGS](../../../extensibility/debugger/reference/bp-flags.md)枚举中的标志的组合，该枚举指定请求的断点的标志。  
   
  `guidVendor`  
- 供应商的 GUID。 可能是一个 null 值。  
+ 供应商的 GUID。 可以为 null 值。  
   
  `bstrConstraint`  
- 断点约束的名称。 可能是一个 null 值。  
+ 断点约束的名称。 可以为 null 值。  
   
  `bstrTracepoint`  
- 跟踪点的名称。 可能是一个 null 值。  
+ 跟踪点的名称。 可以为 null 值。  
   
 ## <a name="remarks"></a>备注  
- 返回此结构[GetRequestInfo2](../../../extensibility/debugger/reference/idebugbreakpointrequest3-getrequestinfo2.md)方法。  
+ 此结构由 [GetRequestInfo2](../../../extensibility/debugger/reference/idebugbreakpointrequest3-getrequestinfo2.md) 方法返回。  
   
 ## <a name="requirements"></a>要求  
- 标头： msdbg.h  
+ 标头： msdbg  
   
- 命名空间:Microsoft.VisualStudio.Debugger.Interop  
+ 命名空间： VisualStudio  
   
- 程序集：Microsoft.VisualStudio.Debugger.Interop.dll  
+ 程序集： Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [结构和联合](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [GetRequestInfo2](../../../extensibility/debugger/reference/idebugbreakpointrequest3-getrequestinfo2.md)   
  [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md)   

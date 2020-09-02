@@ -1,5 +1,5 @@
 ---
-title: 调试 Web 应用程序 |Microsoft Docs
+title: 调试 Web 应用程序 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -20,10 +20,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: d11969ecfbe9a7e3fd02ad289b0de95512b0b8f4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68177498"
 ---
 # <a name="debugging-web-applications"></a>调试 Web 应用程序
@@ -33,7 +33,7 @@ ms.locfileid: "68177498"
   
 ## <a name="in-this-section"></a>本节内容  
  [如何：调试 Web 应用程序](../debugger/how-to-debug-web-applications.md)  
- 描述如何调试[!INCLUDE[vstecasp](../includes/vstecasp-md.md)]仍处于开发阶段的项目。  
+ 描述如何调试 [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] 仍在开发中的项目。  
   
  [调试已部署的 Web 应用程序](../debugger/debugging-deployed-web-applications.md)  
  说明如何调试已经部署的 [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Web 应用程序。  
@@ -54,8 +54,8 @@ ms.locfileid: "68177498"
  [调试已部署的 Web 应用程序](../debugger/debugging-deployed-web-applications.md)  
  说明如何调试已经部署的 [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Web 应用程序。  
   
-## <a name="see-also"></a>请参阅  
- [Debugging Web Applications and Script](../debugger/debugging-web-applications-and-script.md) （调试 Web 应用程序和脚本）  
+## <a name="see-also"></a>另请参阅  
+ [调试 Web 应用程序和脚本](../debugger/debugging-web-applications-and-script.md)   
  [调试器设置和准备](../debugger/debugger-settings-and-preparation.md)   
- [Debugger Basics](../debugger/debugger-basics.md) （调试器基础知识）  
+ [调试器基础知识](../debugger/debugger-basics.md)   
  [在 Visual Studio 中进行调试](../debugger/debugging-in-visual-studio.md)

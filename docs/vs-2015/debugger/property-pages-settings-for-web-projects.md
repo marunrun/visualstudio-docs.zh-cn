@@ -22,16 +22,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 3cb7cd3f8c3678d37feb2267f68ab5d2b3d970e0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68150858"
 ---
 # <a name="property-pages-settings-for-web-projects"></a>Web 项目的属性页设置
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-如[调试和发布配置](../debugger/how-to-set-debug-and-release-configurations.md)中所述，可以在“属性页”对话框中更改网站调试配置的属性设置  。 下表显示“属性页”对话框中与调试器有关的设置的位置  。  
+如[调试和发布配置](../debugger/how-to-set-debug-and-release-configurations.md)中所述，可以在“属性页”对话框中更改网站调试配置的属性设置。 下表显示“属性页”对话框中与调试器有关的设置的位置。  
   
 ### <a name="configuration-properties-folder-start-options-category"></a>“配置属性”文件夹（“启动选项”类别）  
   
@@ -49,10 +49,10 @@ ms.locfileid: "68150858"
 |**使用默认的 Web 服务器**|表示使用默认的 Web 服务器。|  
 |**使用自定义服务器**|允许您输入要用作服务器的基 URL。|  
 |**调试器**|将与要进行的调试类型相关的选项归为一组的标题。|  
-|**ASP.NET 调试**|启用为 [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] 开发平台编写的服务器页的调试。 必须在“启动 URL”中指定一个 URL  。|  
+|**ASP.NET 调试**|启用为 [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] 开发平台编写的服务器页的调试。 必须在“启动 URL”中指定一个 URL。|  
 |**本机代码调试**|使你能够从托管应用程序中调试对本机（非托管）Win32 代码的调用。|  
 |**SQL Server 调试**|允许对 SQL Server 数据库对象进行调试。|  
 |**Silverlight 调试**|允许调试 Silverlight 组件。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [调试器设置和准备](../debugger/debugger-settings-and-preparation.md)

@@ -1,5 +1,5 @@
 ---
-title: 注册的自定义调试引擎 |Microsoft Docs
+title: 注册自定义调试引擎 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,30 +11,30 @@ caps.latest.revision: 7
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 9cf06e881034b980b8e40e095779007b3c7fa6f6
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65703605"
 ---
 # <a name="registering-a-custom-debug-engine"></a>注册自定义调试引擎
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-调试引擎必须将自身注册为 COM 约定的类工厂，以及通过 Visual Studio 注册通过 Visual Studio 注册表子项。  
+调试引擎必须在 COM 约定后将自身注册为类工厂，并通过 Visual Studio 注册表子项注册到 Visual Studio。  
   
 > [!NOTE]
-> 如何注册调试引擎的示例可以找到在 TextInterpreter 示例中，作为一部分生成[教程：生成调试引擎使用 ATL COM](https://msdn.microsoft.com/9097b71e-1fe7-48f7-bc00-009e25940c24)。  
+> 有关如何注册调试引擎的示例，请参阅 TextInterpreter 示例，该示例作为教程的一部分生成 [：使用 ATL COM 构建调试引擎](https://msdn.microsoft.com/9097b71e-1fe7-48f7-bc00-009e25940c24)。  
   
 ## <a name="dll-server-process"></a>DLL 服务器进程  
- 通常情况下，调试引擎 DLL 中实现其自身作为 COM 服务器。 这意味着，调试引擎必须类工厂的 CLSID 向 COM 注册 Visual Studio 才能访问它。 然后调试引擎必须自身注册 Visual Studio 自身建立任何属性 （也称为度量值） 调试引擎支持。 写入调试引擎的 Visual Studio 注册表子项的度量值的选择取决于调试引擎支持的功能。  
+ 通常，调试引擎在其自己的 DLL 中作为 COM 服务器实现。 这意味着，在 Visual Studio 可以访问之前，调试引擎必须向 COM 注册其类工厂的 CLSID。 然后，调试引擎必须自行向 Visual Studio 进行注册，以便建立任何属性 (也称为调试引擎支持) 指标。 为调试引擎写入 Visual Studio 注册表子项的度量值的选择取决于调试引擎支持的功能。  
   
- [以便进行调试的 SDK 帮助程序](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)描述不仅注册表位置必须注册的调试引擎; 它还介绍了 dbgmetric.lib 库，其中包含大量有用的函数并声明C++，使开发人员操作更容易注册表。  
+ [用于调试的 SDK 帮助](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) 器不仅描述注册调试引擎所需的注册表位置;它还介绍了 dbgmetric 库，其中包含许多适用于 c + + 开发人员的有用函数和声明，使操作更容易。  
   
 ### <a name="example"></a>示例  
- 以下是典型示例 （从 TextInterpreter 示例） 演示如何使用`SetMetric`函数 （从 dbgmetric.lib)，以注册 Visual Studio 调试引擎。 Dbgmetric.lib 中也定义了所传递的度量值。  
+ 下面是 TextInterpreter 示例中的一个典型示例 () 演示如何使用 `SetMetric` dbgmetric) 中的函数 (向 Visual Studio 注册调试引擎。 还会在 dbgmetric 中定义要传递的指标。  
   
 > [!NOTE]
-> TextInterpreter 是一种基本的调试引擎;它不实现，并因此不会注册 — 任何其他功能。 更完整的调试引擎必须一整个系列`SetMetric`调用或其等效项，一个用于调试引擎的每个功能支持。  
+> TextInterpreter 是一个基本的调试引擎;它不实现，因此不会注册任何其他功能。 一个更完整的调试引擎可能有一个 `SetMetric` 或其等效的调用的完整列表，一个用于调试引擎支持的每个功能。  
   
 ```  
 // Define base registry subkey to Visual Studio.  
@@ -50,7 +50,7 @@ HRESULT CTextInterpreterModule::RegisterServer(BOOL bRegTypeLib, const CLSID * p
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建自定义调试引擎](../../extensibility/debugger/creating-a-custom-debug-engine.md)   
- [用于调试的 SDK 帮助程序](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)   
- [教程：生成调试引擎使用 ATL COM](https://msdn.microsoft.com/9097b71e-1fe7-48f7-bc00-009e25940c24)
+ [SDK 调试帮助程序](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)   
+ [教程：使用 ATL COM 构建调试引擎](https://msdn.microsoft.com/9097b71e-1fe7-48f7-bc00-009e25940c24)

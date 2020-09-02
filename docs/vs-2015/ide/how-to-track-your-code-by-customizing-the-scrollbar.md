@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: a852b0e5ac6c6a677caab97279a0b0cb0299d27f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670639"
 ---
 # <a name="how-to-track-your-code-by-customizing-the-scrollbar"></a>How to: Track Your Code by Customizing the Scrollbar
@@ -25,9 +25,9 @@ ms.locfileid: "72670639"
 
 1. 可设置滚动条，以显示代码更改、断点、错误和书签。
 
-     打开 "**滚动条**" 选项页（ **"工具"、"选项文本编辑器"。"所有语言**" 或特定语言，或在 "快速启动" 窗口中键入**滚动条**）。
+     打开 " **滚动条** 选项" 页 (**工具 "、" 选项 "" 文本编辑器 "。所有语言** 或特定语言，或在 "快速启动" 窗口中键入  **滚动条**) 。
 
-2. 选择“在垂直滚动条上方显示注释”，然后选择要查看的注释。 （“标记”选项包括断点和书签。）
+2. 选择“在垂直滚动条上方显示注释”，然后选择要查看的注释****。  (**标记** 选项包括断点和书签。 ) 
 
 3. 现在试试看。打开大的代码文件，并替换文件中多个位置发生的内容。 滚动条将显示替换的效果，从而在替换了不应替换的内容时可撤回更改。
 
@@ -37,20 +37,20 @@ ms.locfileid: "72670639"
 
      下面是替换字符串的所有实例后滚动条的外观。 将立即看到操作导致了一些问题。
 
-     ![替换包含错误的字符串后的滚动条](../ide/media/enhancedscrollbarreplace.png "EnhancedScrollbarReplace")
+     ![替换字符串并发生错误后的滚动条](../ide/media/enhancedscrollbarreplace.png "EnhancedScrollbarReplace")
 
 ### <a name="to-set-the-display-mode-for-the-scroll-bar"></a>设置滚动条的显示模式
 
 1. 滚动条具有两种模式：条状模式（默认）和映射模式。 条状模式只显示滚动条上的注释指示器。 映射模式下，在滚动条上表示代码行。 可选择它们的宽度，以及将指针停留在它们上时是否显示基础代码。 单击滚动条上的某个位置时，游标将移到代码中的该位置。 折叠区域所带的阴影不同；双击这些区域可将其展开。
 
-     在“滚动条”选项页上，选择“使用垂直滚动条的条状模式”或“使用垂直滚动条的映射模式”。 可在“源概述”下拉列表中选择宽度。
+     在“滚动条”选项页上，选择“使用垂直滚动条的条状模式”或“使用垂直滚动条的映射模式”************。 可以在 " **源概述** " 下拉列表中选择宽度。
 
      下面是启用映射模式且宽度设置为“中等”时搜索示例的外观：
 
-     ![映射模式下的滚动条](../ide/media/enhancedscrollbar.png "EnhancedScrollbar")
+     ![映射模式中的滚动条](../ide/media/enhancedscrollbar.png "EnhancedScrollbar")
 
-2. 映射模式下，若要在滚动条上上下移动游标时启用代码预览，选择“显示预览工具提示”选项。 下面是它的外观：
+2. 映射模式下，若要在滚动条上上下移动游标时启用代码预览，选择“显示预览工具提示”选项****。 其如下所示：
 
-     ![带有工具提示的滚动条](../ide/media/enhancedscrollbarsearchtooltip.png "EnhancedScrollbarSearchTooltip")
+     ![显示工具提示的滚动条](../ide/media/enhancedscrollbarsearchtooltip.png "EnhancedScrollbarSearchTooltip")
 
-     如果要保留映射模式滚动行为和预览工具提示，但不需要看到源代码概述，可将“源概述”设置为“关闭”。
+     如果要保留映射模式滚动行为和预览工具提示，但不希望查看源代码概述，可将 " **源概述** " 设置为 " **关闭**"。

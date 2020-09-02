@@ -24,13 +24,13 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 16a533b27e619526edab71374d922e68baf0a4b0
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65702684"
 ---
-# <a name="how-to-debug-native-dlls"></a>如何：调试本机 Dll
+# <a name="how-to-debug-native-dlls"></a>如何：调试本机 DLL
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 > [!NOTE]
@@ -44,24 +44,24 @@ ms.locfileid: "65702684"
   
 - 用于创建 DLL 本身的项目。  
   
-  如果有用于创建可执行文件的项目，则从该项目开始调试。 然后可以打开 DLL 的源文件，并在该文件中设置断点，即使它不是用于创建可执行文件的项目的一部分。 有关详细信息，请参见[断点](https://msdn.microsoft.com/fe4eedc1-71aa-4928-962f-0912c334d583)  
+  如果有用于创建可执行文件的项目，则从该项目开始调试。 然后可以打开 DLL 的源文件，并在该文件中设置断点，即使它不是用于创建可执行文件的项目的一部分。 有关详细信息，请参阅[断点](https://msdn.microsoft.com/fe4eedc1-71aa-4928-962f-0912c334d583)。  
   
   如果从创建 DLL 的项目开始调试，则必须指定在调试 DLL 时要使用的可执行文件。  
   
 ### <a name="to-specify-an-executable-for-the-debug-session"></a>为调试会话指定可执行文件  
   
-1. 在中**解决方案资源管理器**，选择创建 DLL 的项目。  
+1. 在 **解决方案资源管理器**中，选择用于创建 DLL 的项目。  
   
-2. 从**视图**菜单中，选择**属性页**。  
+2. 从 " **视图** " 菜单中选择 "**属性页**"。  
   
-3. 在中**属性页**对话框中，打开**配置属性**文件夹，然后选择**调试**类别。  
+3. 在 " **属性页** " 对话框中，打开 " **配置属性** " 文件夹并选择 " **调试** " 类别。  
   
-4. 在中**命令**框中，指定容器的路径名称。 例如，C:\Program Files\MyApplication\MYAPP.EXE。  
+4. 在 " **命令** " 框中，指定容器的路径名称。 例如，C:\Program Files\MyApplication\MYAPP.EXE。  
   
-5. 在中**命令参数**框中，指定可执行文件的任何必需参数。  
+5. 在 " **命令参数** " 框中，为可执行文件指定任何必需的参数。  
   
-   如果未指定中的可执行文件_项目_**属性页**对话框中，[调试会话对话框可执行文件](../debugger/executable-for-debugging-session-dialog-box.md)启动调试时出现。  
+   如果在 " _项目_**属性页** " 对话框中未指定可执行文件，则在开始调试时将出现 " [调试会话的可执行文件" 对话框](../debugger/executable-for-debugging-session-dialog-box.md) 。  
   
-## <a name="see-also"></a>请参阅  
- [调试器安全](../debugger/debugger-security.md)   
+## <a name="see-also"></a>另请参阅  
+ [调试器安全性](../debugger/debugger-security.md)   
  [在 Visual Studio 中进行调试](../debugger/debugging-in-visual-studio.md)

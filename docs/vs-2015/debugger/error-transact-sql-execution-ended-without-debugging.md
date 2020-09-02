@@ -1,5 +1,5 @@
 ---
-title: 错误：TRANSACT-SQL 执行未经调试便已结束 |Microsoft Docs
+title: 错误：Transact-SQL 执行未经调试便已结束 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -18,10 +18,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: cdfcaa42c55f87711b0889c6a67d1a4799b84fed
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65681078"
 ---
 # <a name="error-transact-sql-execution-ended-without-debugging"></a>错误：Transact-SQL 执行未经调试便已结束
@@ -43,14 +43,14 @@ ms.locfileid: "65681078"
   
   若要纠正此错误，可能需要：  
   
-- 验证权限设置。 有关详细信息，请参阅[如何：设置 SQL Server 权限以进行调试](https://msdn.microsoft.com/84e088d0-0409-41d4-841b-f5d4b0fda414)。  
+- 验证权限设置。 有关详细信息，请参阅[如何：设置 SQL Server 调试权限](https://msdn.microsoft.com/84e088d0-0409-41d4-841b-f5d4b0fda414)。  
   
 - 如果设置正确，请确保 SQL 调试也正确。  
   
 - 请咨询网络或数据库管理员。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [设置 SQL 调试](https://msdn.microsoft.com/3db09e68-edcc-42de-9c22-4e97cfd55ab3)   
- [如何：设置 SQL Server 权限以进行调试](https://msdn.microsoft.com/84e088d0-0409-41d4-841b-f5d4b0fda414)   
+ [如何：设置用于调试的 SQL Server 权限](https://msdn.microsoft.com/84e088d0-0409-41d4-841b-f5d4b0fda414)   
  [调试器设置和准备](../debugger/debugger-settings-and-preparation.md)   
  [远程调试](../debugger/remote-debugging.md)

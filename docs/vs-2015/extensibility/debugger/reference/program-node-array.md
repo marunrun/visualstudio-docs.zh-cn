@@ -1,5 +1,5 @@
 ---
-title: PROGRAM_NODE_ARRAY | Microsoft Docs
+title: PROGRAM_NODE_ARRAY |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: ffbefd03bccc215dd68c30bae3cebb28c85654d0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68204997"
 ---
-# <a name="programnodearray"></a>PROGRAM_NODE_ARRAY
+# <a name="program_node_array"></a>PROGRAM_NODE_ARRAY
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-包含描述程序感兴趣的对象的数组。  
+包含一个对象的数组，这些对象描述相关的程序。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,22 +42,22 @@ public struct tagPROGRAM_NODE_ARRAY {
   
 ## <a name="members"></a>成员  
  dwCount  
- 中的对象数`Members`数组。  
+ 数组中的对象数 `Members` 。  
   
  成员  
- 一个数组[IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)描述所请求的程序的对象。  
+ 描述所请求程序的 [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) 对象的数组。  
   
 ## <a name="remarks"></a>备注  
- 此结构是的一部分[PROVIDER_PROCESS_DATA](../../../extensibility/debugger/reference/provider-process-data.md)结构，这反过来调用填写[GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md)方法。  
+ 此结构是 [PROVIDER_PROCESS_DATA](../../../extensibility/debugger/reference/provider-process-data.md) 结构的一部分，该结构进而通过调用 [GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md) 方法来填充。  
   
 ## <a name="requirements"></a>要求  
- 标头： msdbg.h  
+ 标头： msdbg  
   
- 命名空间:Microsoft.VisualStudio.Debugger.Interop  
+ 命名空间： VisualStudio  
   
- 程序集：Microsoft.VisualStudio.Debugger.Interop.dll  
+ 程序集： Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [结构和联合](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [PROVIDER_PROCESS_DATA](../../../extensibility/debugger/reference/provider-process-data.md)   
  [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)   

@@ -11,14 +11,14 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 13a6748e2e3b66f581a3c72c1f847e0329189e64
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85537327"
 ---
 # <a name="setwefprocessid-method"></a>SetWefProcessId 方法
-  提供将运行 Web 扩展框架（WEF）内容的进程标识符。
+  提供将 (WEF) 内容运行 Web 扩展框架的进程标识符。
 
 ## <a name="syntax"></a>语法
 
@@ -30,7 +30,7 @@ HRESULT SetWefProcessId(
 
 #### <a name="parameters"></a>参数
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
 |*dwProcessId*|将用于运行 WEF 内容的进程标识符。|
 

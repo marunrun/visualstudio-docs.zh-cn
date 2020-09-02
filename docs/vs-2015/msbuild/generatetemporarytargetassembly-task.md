@@ -20,10 +20,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 2ce412fdeb8d466708f3231cba14718d13720c69
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65676653"
 ---
 # <a name="generatetemporarytargetassembly-task"></a>GenerateTemporaryTargetAssembly 任务
@@ -33,7 +33,7 @@ ms.locfileid: "65676653"
   
 ## <a name="task-parameters"></a>任务参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |`AssemblyName`|必需的 **String** 参数。<br /><br /> 指定为项目生成的程序集的短名称，该名称同时也是临时生成的目标程序集的名称。 例如，如果项目生成一个名为 **WinExeAssembly.exe** 的 [!INCLUDE[TLA#tla_mswin](../includes/tlasharptla-mswin-md.md)] 可执行文件，则 **AssemblyName** 参数的值为 **WinExeAssembly**。|  
 |`CompileTargetName`|必需的 **String** 参数。<br /><br /> 指定用于从源代码文件生成程序集的 [!INCLUDE[TLA#tla_msbuild](../includes/tlasharptla-msbuild-md.md)] 目标的名称。 **CompileTargetName** 的典型值为 **CoreCompile**。|  
@@ -73,10 +73,10 @@ ms.locfileid: "65676653"
 </Project>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [WPF MSBuild 引用](../msbuild/wpf-msbuild-reference.md)   
- [任务参考](../msbuild/wpf-msbuild-task-reference.md)   
- [MSBuild 参考](../msbuild/msbuild-reference.md)   
- [任务参考](../msbuild/msbuild-task-reference.md)   
- [Building a WPF Application (WPF)](https://msdn.microsoft.com/library/a58696fd-bdad-4b55-9759-136dfdf8b91c) （生成 WPF 应用程序 (WPF)）  
- [WPF XAML Browser Applications Overview](https://msdn.microsoft.com/library/3a7a86a8-75d5-4898-96b9-73da151e5e16)（WPF XAML 浏览器应用程序概述）
+## <a name="see-also"></a>另请参阅  
+ [WPF MSBuild 参考](../msbuild/wpf-msbuild-reference.md)   
+ [任务引用](../msbuild/wpf-msbuild-task-reference.md)   
+ [MSBuild 引用](../msbuild/msbuild-reference.md)   
+ [任务引用](../msbuild/msbuild-task-reference.md)   
+ [生成 wpf 应用程序 (WPF) ](https://msdn.microsoft.com/library/a58696fd-bdad-4b55-9759-136dfdf8b91c)   
+ [WPF XAML 浏览器应用程序概述](https://msdn.microsoft.com/library/3a7a86a8-75d5-4898-96b9-73da151e5e16)

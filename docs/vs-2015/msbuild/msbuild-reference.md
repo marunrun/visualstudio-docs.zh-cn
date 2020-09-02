@@ -17,10 +17,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 8dfa8314ffe8f174422519ba549d9949cc36b764
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65683010"
 ---
 # <a name="msbuild-reference"></a>MSBuild 参考
@@ -32,7 +32,7 @@ ms.locfileid: "65683010"
  [项目文件架构参考](../msbuild/msbuild-project-file-schema-reference.md)  
  介绍组成 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 文件格式的 XML 元素。  
   
- [任务参考](../msbuild/msbuild-task-reference.md)  
+ [任务引用](../msbuild/msbuild-task-reference.md)  
  介绍包含在 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 中的一些典型任务。  
   
  [条件](../msbuild/msbuild-conditions.md)  
@@ -47,16 +47,16 @@ ms.locfileid: "65683010"
  [常用的 MSBuild 项目属性](../msbuild/common-msbuild-project-properties.md)  
  描述所有项目类型通用的项目属性，以及特定项目类型常用的属性。  
   
- [常用的 MSBuild 项目项](../msbuild/common-msbuild-project-items.md)  
+ [常见的 MSBuild 项目项](../msbuild/common-msbuild-project-items.md)  
  描述所有项目类型通用的项目项，以及特定项目类型常用的项。  
   
  [命令行参考](../msbuild/msbuild-command-line-reference.md)  
  描述可与 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)].exe 配合使用的参数和开关。  
   
- [.Targets 文件](../msbuild/msbuild-dot-targets-files.md)  
+ [.目标文件](../msbuild/msbuild-dot-targets-files.md)  
  描述包含在 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 中的 .Target 文件。  
   
- [常见项元数据](../msbuild/msbuild-well-known-item-metadata.md)  
+ [众所周知的项元数据](../msbuild/msbuild-well-known-item-metadata.md)  
  列出每个与项一起创建的元数据。  
   
  [响应文件](../msbuild/msbuild-response-files.md)  

@@ -9,10 +9,10 @@ caps.latest.revision: 8
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 097193ea29f5f21aed09ed5ffa9f0cb331327b84
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657263"
 ---
 # <a name="upgrade-visual-studio-2010-unit-test-projects"></a>升级 Visual Studio 2010 单元测试项目
@@ -29,7 +29,7 @@ ms.locfileid: "72657263"
 > Visual Studio 2010 不能打开面向 11.0 工具集的 C++/CLI 项目，即使用 Visual Studio 2012 创建的项目。 此限制适用于所有 C++/CLI 项目，而不仅仅是 C++/CLI 单元测试项目。
 
 > [!NOTE]
-> 可以从命令行使用 vstest.console.exe 命令运行新的单元测试。 有关使用 vstest.console.exe 的详细信息，请参阅 [VSTest.Console.exe 命令行选项](https://msdn.microsoft.com/library/52e1689d-b1a8-4589-bd98-99a55acd0a11)，或使用帮助开关运行命令：**vstest.console.exe /?** 。 使用 MStest.exe 可以继续运行现有的单元测试。 有关详细信息，请参阅[使用 MSTest 从命令行运行自动测试](https://msdn.microsoft.com/library/39b61ad0-0055-44b5-963f-25d8a6b51581)和 [MSTest.exe 命令行选项](https://msdn.microsoft.com/library/8813ba7f-e790-4e92-9f91-7080508a1c36)。
+> 可以从命令行使用 vstest.console.exe 命令运行新的单元测试。 有关使用 vstest.console.exe 的详细信息，请参阅 [VSTest.Console.exe 命令行选项](https://msdn.microsoft.com/library/52e1689d-b1a8-4589-bd98-99a55acd0a11)，或使用帮助开关运行命令：**vstest.console.exe /?**。 使用 MStest.exe 可以继续运行现有的单元测试。 有关详细信息，请参阅[使用 MSTest 从命令行运行自动测试](https://msdn.microsoft.com/library/39b61ad0-0055-44b5-963f-25d8a6b51581)和 [MSTest.exe 命令行选项](https://msdn.microsoft.com/library/8813ba7f-e790-4e92-9f91-7080508a1c36)。
 
  另一个重要的变化为新的测试资源管理器。 在 [!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)] 中，您在 Visual Studio 早期版本中可能比较熟悉的一些测试窗口已遭弃用，例如“测试视图”窗口。 测试资源管理器旨在为开发人员和团队提供更好的支持，帮助其将单元测试纳入软件开发实践中。 有关详细信息，请参阅[使用测试资源管理器运行单元测试](../test/run-unit-tests-with-test-explorer.md)。
 
@@ -38,10 +38,10 @@ ms.locfileid: "72657263"
 
 |单元测试功能|问题|解决方案|
 |-----------------------------|-----------|--------------|
-|测试列表（.vsmdi 文件）在 [!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)] 中已遭弃用。|你无法再创建新的测试列表（.vsmdi 文件），也无法通过 Visual Studio 运行测试列表。 **提示：** 测试类别比 Microsoft Visual Studio 早期版本中的测试列表功能具有更大的灵活性。 可以在测试类别中使用逻辑运算符，从而运行来自多个类别的测试，或将运行的测试仅限于属于多个类别的测试。 此外，在创建测试方法时很容易添加测试类别，创建测试方法后也无需维护测试列表。 通过使用测试类别，你无需签入和签出用于维护测试列表的“\<解决方案名称>.vsmdi”文件。 有关详细信息，请参阅[定义对测试进行分组的测试类别](https://msdn.microsoft.com/library/2c26a648-f068-4d60-99b6-b9747b7bdbc9)。|-   为了继续兼容采用测试列表的现有测试项目，你仍可以使用 Visual Studio 编辑 .vsmdi 文件。<br />-   尽管无法使用 Visual Studio 运行迁移的测试列表，但你仍可以从命令行使用 mstest.exe 命令来运行。 有关详细信息，请参阅[如何：从命令行使用 MSTest 运行自动测试](https://msdn.microsoft.com/library/39b61ad0-0055-44b5-963f-25d8a6b51581)<br />-   如果你在生成定义中使用的是测试列表，则可以继续使用它。 有关详细信息，请参阅[如何：在生成应用程序之后配置和运行计划的测试](https://msdn.microsoft.com/32acfeb1-b1aa-4afb-8cfe-cc209e6183fd)和[在生成过程中运行测试](https://msdn.microsoft.com/library/d05743a1-c5cf-447e-bed9-bed3cb595e38)。|
+|测试列表（.vsmdi 文件）在 [!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)] 中已遭弃用。|你无法再创建新的测试列表（.vsmdi 文件），也无法通过 Visual Studio 运行测试列表。 **提示：** 测试类别比 Microsoft Visual Studio 早期版本中的测试列表功能具有更大的灵活性。 可以在测试类别中使用逻辑运算符，从而运行来自多个类别的测试，或将运行的测试仅限于属于多个类别的测试。 此外，在创建测试方法时很容易添加测试类别，创建测试方法后也无需维护测试列表。 通过使用测试类别，您无需签入和签出用于维护测试列表的** \<solution name> vsmdi**文件。 有关详细信息，请参阅[定义对测试进行分组的测试类别](https://msdn.microsoft.com/library/2c26a648-f068-4d60-99b6-b9747b7bdbc9)。|-   为了继续兼容采用测试列表的现有测试项目，你仍可以使用 Visual Studio 编辑 .vsmdi 文件。<br />-   尽管无法使用 Visual Studio 运行迁移的测试列表，但你仍可以从命令行使用 mstest.exe 命令来运行。 有关详细信息，请参阅[如何：从命令行使用 MSTest 运行自动测试](https://msdn.microsoft.com/library/39b61ad0-0055-44b5-963f-25d8a6b51581)<br />-   如果你在生成定义中使用的是测试列表，则可以继续使用它。 有关详细信息，请参阅[如何：在生成应用程序之后配置和运行计划的测试](https://msdn.microsoft.com/32acfeb1-b1aa-4afb-8cfe-cc209e6183fd)和[在生成过程中运行测试](https://msdn.microsoft.com/library/d05743a1-c5cf-447e-bed9-bed3cb595e38)。|
 |专用访问器在 [!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)] 中已遭弃用。<br /><br /> 在 Visual Studio 的早期版本中，您可以使用 Publicize 指定内部应用程序编程接口 (API)，并创建可在测试中调用的公共对应 API，后者将调用产品的内部 API。 然后，您可以使用代码创建测试存根，并在此存根内生成代码片段。|您无法再创建专用访问器。|<ul><li>Visual Studio 2010 测试项目将在 [!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)] 中编译和运行。 生成版本将包含输出警告。</li><li>如果仍需要测试内部 API，则可以使用以下选项：<br /><br /> <ul><li>使用 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject> 类可帮助访问代码中的内部和私有 API。 这可以在 Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll 程序集中找到。</li><li>创建能够反射代码以访问内部或私有 API 的反射框架。</li><li>如果您尝试访问的代码是内部代码，则可以使用 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 访问 API，以便测试代码能够访问内部 API。</li></ul></li></ul>|
 |消除测试影响|||
 |通过测试资源管理器中的 TRX 日志共享运行结果。||你仍可以从命令行和 Team Build 获取 TRX 日志。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [移植、迁移和升级 Visual Studio 项目](../porting/porting-migrating-and-upgrading-visual-studio-projects.md)[单元测试代码](../test/unit-test-your-code.md)[从 visual Studio 的早期版本升级测试](https://msdn.microsoft.com/e9c8b7f6-bd72-448e-8edb-d090dcc5cf52)[从 Visual studio 2010 升级编码的 UI 测试](../test/upgrading-coded-ui-tests-from-visual-studio-2010.md)

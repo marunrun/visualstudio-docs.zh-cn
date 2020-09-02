@@ -18,14 +18,14 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 15cfb7ebf2f4f71e892820206f0dd1d006639992
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85547506"
 ---
 # <a name="how-to-permit-code-to-run-behind-documents-with-restricted-permissions"></a>如何：允许代码在具有受限权限的文档的后台运行
-  您可以使用 Microsoft Office 的信息 Rights Management （IRM）功能来限制对文档或工作簿的权限。 默认情况下，不允许运行受限 Microsoft Office Word 文档或 Microsoft Office Excel 工作簿的隐藏代码。 你可以更改默认值，以便托管代码扩展可以访问对象模型，你的解决方案将工作。
+  您可以使用 Microsoft Office 的 Rights Management (IRM) 功能的信息来限制对文档或工作簿的权限。 默认情况下，不允许运行受限 Microsoft Office Word 文档或 Microsoft Office Excel 工作簿的隐藏代码。 你可以更改默认值，以便托管代码扩展可以访问对象模型，你的解决方案将工作。
 
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]
 
@@ -35,14 +35,14 @@ ms.locfileid: "85547506"
 
 1. 在 Word 或 Excel 中打开文档或工作簿。
 
-2. 单击 "**文件**" 选项卡，指向 "**准备**"，指向 "**限制权限**"，然后单击 "**受限访问**"。
+2. 单击 " **文件** " 选项卡，指向 " **准备**"，指向 " **限制权限**"，然后单击 " **受限访问**"。
 
    > [!NOTE]
    > 首次使用时，系统将提示您安装 Windows Rights Management 客户端。 安装客户端后，你可能需要重复这些步骤。
 
-3. 在 "**权限**" 对话框中，选择 "**限制对此文档的权限**"，然后单击 "**更多选项**"。
+3. 在 " **权限** " 对话框中，选择 " **限制对此文档的权限**"，然后单击 " **更多选项**"。
 
-4. 在 "**用户的其他权限**" 下，选择 "**以编程方式访问内容**"。
+4. 在 " **用户的其他权限**" 下，选择 " **以编程方式访问内容**"。
 
    Word 或 Excel 将允许以编程方式访问对象模型。
 

@@ -12,10 +12,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 7ed0d8a2ccf8e33b493ddcb71f9ce3a794a06862
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68150745"
 ---
 # <a name="call-tree-view---net-memory-sampling-data"></a>“调用树”视图 - .NET 内存采样数据
@@ -54,6 +54,6 @@ ms.locfileid: "68150745"
 |**独占字节数百分比**|分析运行期间分配的属于此函数的独占分配的所有内存字节数的百分比。|  
   
 ## <a name="see-also"></a>另请参阅  
- [“调用关系树”视图 - 检测](../profiling/call-tree-view-dotnet-memory-instrumentation-data.md)   
- [“调用关系树”视图](../profiling/call-tree-view-sampling-data.md)   
+ ["调用关系树" 视图-检测](../profiling/call-tree-view-dotnet-memory-instrumentation-data.md)   
+ [调用关系树视图](../profiling/call-tree-view-sampling-data.md)   
  [“调用关系树”视图](../profiling/call-tree-view-instrumentation-data.md)

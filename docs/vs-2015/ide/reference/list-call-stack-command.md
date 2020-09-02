@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 9c44ac18468fbd26adab2cf973a21df58ebb28c1
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657660"
 ---
 # <a name="list-call-stack-command"></a>“列出调用堆栈”命令
@@ -36,33 +36,33 @@ Debug.ListCallStack [/Count:number] [/ShowTypes:yes|no]
 [/ShowExternalCode:yes|no] [Thread:n] [index]
 ```
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
  `index`（可选）。 设置当前堆栈帧且不显示任何输出。
 
 ## <a name="switches"></a>开关
  每个开关都可以使用其完整形式或缩写形式来调用。
 
- /Count： `number` [或]/C： `number` 可选。 要显示的调用堆栈的最大数量。 默认值为无限制。
+ /Count： `number` [or]/c： `number` Optional。 要显示的调用堆栈的最大数量。 默认值为无限制。
 
- /ShowTypes： `yes`&#124; `no` [或]/t： `yes`&#124; `no` 可选。 指定是否显示参数类型。 默认值是 `yes`。
+ /ShowTypes： `yes`&#124;`no` [或]/t： `yes`&#124;`no` 可选。 指定是否显示参数类型。 默认值为 `yes`。
 
- /ShowNames： `yes`&#124; `no` [或]/n： `yes`&#124; `no` 可选。 指定是否显示参数名称。 默认值是 `yes`。
+ /ShowNames： `yes`&#124;`no` [或]/n： `yes`&#124;`no` 可选。 指定是否显示参数名称。 默认值为 `yes`。
 
- /ShowValues： `yes`&#124; `no` [或]/v： `yes`&#124; `no` 可选。 指定是否显示参数值。 默认值是 `yes`。
+ /ShowValues： `yes`&#124;`no` [或]/v： `yes`&#124;`no` 可选。 指定是否显示参数值。 默认值为 `yes`。
 
- /ShowModule： `yes`&#124; `no` [或]/m： `yes`&#124; `no` 可选。 指定是否显示模块名称。 默认值是 `yes`。
+ /ShowModule： `yes`&#124;`no` [或]/m： `yes`&#124;`no` 可选。 指定是否显示模块名称。 默认值为 `yes`。
 
- /ShowLineOffset： `yes`&#124; `no` [or]/#： `yes`&#124; `no` 可选。 指定是否显示线偏移。 默认值是 `no`。
+ /ShowLineOffset： `yes`&#124;`no` [或]/#： `yes`&#124;`no` 可选。 指定是否显示线偏移。 默认值为 `no`。
 
- /ShowByteOffset： `yes`&#124; `no` [或]/b： `yes`&#124; `no` 可选。 指定是否显示字节偏移。 默认值是 `no`。
+ /ShowByteOffset： `yes`&#124;`no` [或]/b： `yes`&#124;`no` 可选。 指定是否显示字节偏移。 默认值为 `no`。
 
- /ShowLanguage： `yes`&#124; `no` [或]/l： `yes`&#124; `no` 可选。 指定是否显示语言。 默认值是 `no`。
+ /ShowLanguage： `yes`&#124;`no` [或]/l： `yes`&#124;`no` 可选。 指定是否显示语言。 默认值为 `no`。
 
- /IncludeCallsAcrossThreads： `yes`&#124; `no` [或]/i： `yes`&#124; `no` 可选。 指定是否包括对其他线程的调用或包括来自其他线程的调用。 默认值是 `no`。
+ /IncludeCallsAcrossThreads： `yes`&#124;`no` [或]/i： `yes`&#124;`no` 可选。 指定是否包括对其他线程的调用或包括来自其他线程的调用。 默认值为 `no`。
 
- /ShowExternalCode： `yes`&#124; `no` 可选。 指定是否为调用堆栈显示“仅我的代码”。 “仅我的代码”关闭时，将显示所有非用户代码。 “仅我的代码”开启时，非用户代码在调用堆栈输出中显示为 `[external]`。
+ /ShowExternalCode： `yes`&#124;`no` 可选。 指定是否为调用堆栈显示“仅我的代码”。 “仅我的代码”关闭时，将显示所有非用户代码。 “仅我的代码”开启时，非用户代码在调用堆栈输出中显示为 `[external]`。
 
- Thread： `n` 可选的。 显示线程 `n` 的调用堆栈。 如果没有指定线程，则显示当前线程的调用堆栈。
+ Thread： `n` Optional。 显示线程 `n` 的调用堆栈。 如果没有指定线程，则显示当前线程的调用堆栈。
 
 ## <a name="remarks"></a>备注
  对参数或开关所做的更改将应用于对此命令的将来的调用。 如果发出 Debug.ListCallStackby 本身，则显示整个调用堆栈。 如果指定一个索引，例如，

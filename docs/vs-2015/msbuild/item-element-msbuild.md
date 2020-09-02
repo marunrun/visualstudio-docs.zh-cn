@@ -18,10 +18,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: cc3d606bb890b5f95089bfc7b1e83b2d34cd56ba
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68192602"
 ---
 # <a name="item-element-msbuild"></a>Item 元素 (MSBuild)
@@ -50,7 +50,7 @@ ms.locfileid: "68192602"
   
 ### <a name="attributes"></a>特性  
   
-|特性|说明|  
+|特性|描述|  
 |---------------|-----------------|  
 |`Include`|必需的特性。<br /><br /> 项列表中要包含的文件或通配符。|  
 |`Exclude`|可选特性。<br /><br /> 项列表中要排除的文件或通配符。|  
@@ -62,20 +62,20 @@ ms.locfileid: "68192602"
   
 ### <a name="child-elements"></a>子元素  
   
-|元素|说明|  
+|元素|描述|  
 |-------------|-----------------|  
 |[ItemMetadata](../msbuild/itemmetadata-element-msbuild.md)|用户定义的包含项元数据值的项元数据键。 项中可能没有或有一些 `ItemMetadata` 元素。|  
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|说明|  
+|元素|描述|  
 |-------------|-----------------|  
 |[ItemGroup](../msbuild/itemgroup-element-msbuild.md)|为项进行元素分组。|  
   
 ## <a name="remarks"></a>备注  
  `Item` 元素定义输入到生成系统的输入，并且根据其用户定义的集合名被分组到项集合。 这些项集合可用作[任务](../msbuild/msbuild-tasks.md)的参数，这些任务使用集合中的各个项来执行生成过程的步骤。 有关详细信息，请参阅[项](../msbuild/msbuild-items.md)。  
   
- 使用表示法 `@(`*myType*`)` 可使类型 *myType* 的项的集合扩展为以分号分隔的字符串列表，并将传递给参数。 如果参数的类型为 `string`，则参数的值是以分号分隔的元素列表。 如果此参数是一个字符串数组 (`string[]`)，则根据分号的位置将每个元素插入到数组中。 如果任务参数的类型为 <xref:Microsoft.Build.Framework.ITaskItem>`[]`，则值是项集合的内容以及附加的任何元数据。 如需通过使用分号之外的其他字符来分隔每个项，请使用语法 `@(`*myType*`, '`*separator*`')`。  
+ 使用表示法 `@(` *myType* `)` 可以将*myType*类型的项的集合扩展为以分号分隔的字符串列表，并将其传递给参数。 如果参数的类型为 `string`，则参数的值是以分号分隔的元素列表。 如果此参数是一个字符串数组 (`string[]`)，则根据分号的位置将每个元素插入到数组中。 如果任务参数的类型为 <xref:Microsoft.Build.Framework.ITaskItem>`[]`，则值是项集合的内容以及附加的任何元数据。 若要使用分号以外的其他字符来分隔每个项，请使用语法 `@(` *myType* `, '` *分隔符* `')` 。  
   
  [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 引擎能够计算通配符（如 `*` 和 `?`）和递归通配符（如 `/**/*.cs`）。 有关详细信息，请参阅[项](../msbuild/msbuild-items.md)。  
   

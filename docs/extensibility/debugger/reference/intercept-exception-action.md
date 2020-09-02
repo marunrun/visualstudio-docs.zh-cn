@@ -1,5 +1,5 @@
 ---
-title: INTERCEPT_EXCEPTION_ACTION |微软文档
+title: INTERCEPT_EXCEPTION_ACTION |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: cc44a4fc5264566468777749d5732662ba81ed6d
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80715067"
 ---
 # <a name="intercept_exception_action"></a>INTERCEPT_EXCEPTION_ACTION
-指定在拦截异常时要执行的操作。
+指定截获异常时要执行的操作。
 
 ## <a name="syntax"></a>语法
 
@@ -45,17 +45,17 @@ public enum enum_INTERCEPT_EXCEPTION_ACTION
 ## <a name="parameters"></a>参数
 
 `IEA_INTERCEPT`\
-启用拦截当前异常。 这是当前支持的唯一值，必须指定。
+启用截获当前异常。 这是目前支持的唯一值，并且必须指定。
 
 ## <a name="remarks"></a>备注
-这些值将传递到[拦截电流异常](../../../extensibility/debugger/reference/idebugstackframe3-interceptcurrentexception.md)方法。
+这些值将传递到 [InterceptCurrentException](../../../extensibility/debugger/reference/idebugstackframe3-interceptcurrentexception.md) 方法中。
 
 ## <a name="requirements"></a>要求
-标题： msdbg.h
+标头： msdbg
 
-命名空间：微软.VisualStudio.调试器.互通
+命名空间： VisualStudio
 
-程序集：微软.VisualStudio.调试器.Interop.dll
+程序集： Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [枚举](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

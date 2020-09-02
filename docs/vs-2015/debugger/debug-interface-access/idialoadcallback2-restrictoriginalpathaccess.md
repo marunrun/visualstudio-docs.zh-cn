@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 970a188b5d72353dbb3ccf64fd74f3354f1ba888
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68151948"
 ---
 # <a name="idialoadcallback2restrictoriginalpathaccess"></a>IDiaLoadCallback2::RestrictOriginalPathAccess
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-确定是否可以在原始的调试目录中的.pdb 文件。  
+确定是否可以在原始调试目录中查找 .pdb 文件。  
   
 ## <a name="syntax"></a>语法  
   
@@ -32,10 +32,10 @@ HRESULT RestrictOriginalPathAccess ();
 ```  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
 ## <a name="remarks"></a>备注  
- 以外的任何返回代码`S_OK`可以防止查找原始的调试目录中的.pdb 文件。 原始的调试目录是编译为可执行文件时启用调试符号文件的路径。 此路径不一定是可执行文件所在的路径相同。  
+ 除以外的任何返回代码 `S_OK` 都禁止在原始调试目录中查找 .pdb 文件。 初始调试目录是打开调试时编译到可执行文件中的符号文件的路径。 此路径不一定与可执行文件所在的路径相同。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDiaLoadCallback2](../../debugger/debug-interface-access/idialoadcallback2.md)

@@ -21,10 +21,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 5fd8175911def7fb1b63dc63d967c404d649e9e4
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65703692"
 ---
 # <a name="uidmanager-task"></a>UidManager 任务
@@ -38,7 +38,7 @@ ms.locfileid: "65703692"
 |---------------|-----------------|  
 |`IntermediateDirectory`|可选 **String** 参数。<br /><br /> 指定用于备份由 **MarkupFiles** 参数指定的源 [!INCLUDE[TLA2#tla_xaml](../includes/tla2sharptla-xaml-md.md)] 文件的目录。|  
 |`MarkupFiles`|必需的 **ITaskItem[]** 参数。<br /><br /> 指定要包含的源 [!INCLUDE[TLA2#tla_xaml](../includes/tla2sharptla-xaml-md.md)]文件，以用于 UID 检查、更新或删除。|  
-|`Task`|必需的 **String** 参数。<br /><br /> 指定想要执行的 UID 管理任务。 有效选项为“检查”、“更新”或“删除”。|  
+|`Task`|必需的 **String** 参数。<br /><br /> 指定想要执行的 UID 管理任务。 有效选项为“检查”  、“更新”  或“删除”  。|  
   
 ## <a name="example"></a>示例  
  下例使用 <xref:Microsoft.Build.Tasks.Windows.UidManager> 任务来检查指定的源 [!INCLUDE[TLA2#tla_xaml](../includes/tla2sharptla-xaml-md.md)] 文件是否包含具有适当 UID 的 [!INCLUDE[TLA2#tla_xaml](../includes/tla2sharptla-xaml-md.md)] 元素。  
@@ -57,10 +57,10 @@ ms.locfileid: "65703692"
 </Project>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [WPF MSBuild 引用](../msbuild/wpf-msbuild-reference.md)   
- [任务参考](../msbuild/wpf-msbuild-task-reference.md)   
- [MSBuild 参考](../msbuild/msbuild-reference.md)   
- [任务参考](../msbuild/msbuild-task-reference.md)   
- [Building a WPF Application (WPF)](https://msdn.microsoft.com/library/a58696fd-bdad-4b55-9759-136dfdf8b91c) （生成 WPF 应用程序 (WPF)）  
- [如何：本地化应用程序](https://msdn.microsoft.com/library/5001227e-9326-48a4-9dcd-ba1b89ee6653)
+## <a name="see-also"></a>另请参阅  
+ [WPF MSBuild 参考](../msbuild/wpf-msbuild-reference.md)   
+ [任务引用](../msbuild/wpf-msbuild-task-reference.md)   
+ [MSBuild 引用](../msbuild/msbuild-reference.md)   
+ [任务引用](../msbuild/msbuild-task-reference.md)   
+ [生成 wpf 应用程序 (WPF) ](https://msdn.microsoft.com/library/a58696fd-bdad-4b55-9759-136dfdf8b91c)   
+ [如何：对应用程序进行本地化](https://msdn.microsoft.com/library/5001227e-9326-48a4-9dcd-ba1b89ee6653)

@@ -17,10 +17,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 39272790b6ef366c64d45e0aea238606d0b62bf4
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85538631"
 ---
 # <a name="ca2224-override-equals-on-overloading-operator-equals"></a>CA2224:重载相等运算符时重写 Equals 方法
@@ -49,8 +49,8 @@ ms.locfileid: "85538631"
 
 ## <a name="examples-of-inconsistent-equality-definitions"></a>不一致的相等性定义的示例
 
-### <a name="description"></a>描述
- 下面的示例演示一个具有不一致的相等定义的类型。 `BadPoint`通过提供相等运算符的自定义实现来更改相等性的含义，但不会重写， <xref:System.Object.Equals%2A> 使其行为完全相同。
+### <a name="description"></a>说明
+ 下面的示例演示一个具有不一致的相等定义的类型。 `BadPoint` 通过提供相等运算符的自定义实现来更改相等性的含义，但不会重写， <xref:System.Object.Equals%2A> 使其行为完全相同。
 
 ### <a name="code"></a>代码
  [!code-csharp[FxCop.Usage.OperatorEqualsRequiresEquals#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.OperatorEqualsRequiresEquals/cs/FxCop.Usage.OperatorEqualsRequiresEquals.cs#1)]
@@ -62,7 +62,7 @@ ms.locfileid: "85538631"
 
  本示例生成以下输出。
 
- **a = （[0] 1，1）和 b = （[1] 2，2）相等？否** 
+ **a = ( [0] 1，1) ，b = ( [1] 2，2) 相等？否** 
  **a = = b？没有** 
  **a1 和 a 相等？是** 
  **a1 = = a？是** 
@@ -80,7 +80,7 @@ ms.locfileid: "85538631"
 
  本示例生成以下输出。
 
- **a = （1，1）和 b = （2，2）相等？否** 
+ **a = (1，1) ，b = (2，2) 相等？否** 
  **a = = b？没有** 
  **a1 和 a 相等？是** 
  **a1 = = a？是** 
@@ -88,8 +88,8 @@ ms.locfileid: "85538631"
  **b = = bcopy？是**
 ## <a name="class-example"></a>类示例
 
-### <a name="description"></a>描述
- 下面的示例演示违反此规则的类（引用类型）。
+### <a name="description"></a>说明
+ 下面的示例显示了一个类， (引用类型) 与此规则冲突。
 
 ### <a name="code"></a>代码
  [!code-csharp[FxCop.Usage.OverrideEqualsClassViolation#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.OverrideEqualsClassViolation/cs/FxCop.Usage.OverrideEqualsClassViolation.cs#1)]
@@ -101,8 +101,8 @@ ms.locfileid: "85538631"
 
 ## <a name="structure-example"></a>结构示例
 
-### <a name="description"></a>描述
- 下面的示例演示违反此规则的结构（值类型）。
+### <a name="description"></a>说明
+ 下面的示例演示违反此规则 (值类型) 的结构。
 
 ### <a name="code"></a>代码
  [!code-csharp[FxCop.Usage.OverrideEqualsStructViolation#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.OverrideEqualsStructViolation/cs/FxCop.Usage.OverrideEqualsStructViolation.cs#1)]

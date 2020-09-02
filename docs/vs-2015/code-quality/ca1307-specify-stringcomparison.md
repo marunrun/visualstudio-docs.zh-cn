@@ -16,20 +16,20 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 033d8f0e22ec040ffb10821993a5a9c647ee401e
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85538913"
 ---
 # <a name="ca1307-specify-stringcomparison"></a>CA1307:指定 StringComparison
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|Item|值|
+|项|值|
 |-|-|
 |TypeName|SpecifyStringComparison|
 |CheckId|CA1307|
-|Category|Microsoft 全球化|
+|类别|Microsoft 全球化|
 |是否重大更改|不间断|
 
 ## <a name="cause"></a>原因

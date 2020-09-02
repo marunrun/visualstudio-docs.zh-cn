@@ -13,16 +13,16 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 6078f0fd90855c432b333fd5967367460d0a364e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68200026"
 ---
 # <a name="sccpopulatedirlist-function"></a>SccPopulateDirList 函数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-此函数将确定哪些目录和 （可选） 文件存储在源代码管理，提供要检查的目录的列表。  
+给定要检查的目录列表，此函数确定哪些目录和 (可) 选择将文件存储在源代码管理中。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,36 +39,36 @@ SCCRTN SccPopulateDirList(
   
 #### <a name="parameters"></a>参数  
  pContext  
- [in]源控件插件上下文指针。  
+ 中源代码管理插件上下文指针。  
   
  nDirs  
- [in]中的目录路径数量`lpDirPaths`数组。  
+ 中数组中目录路径的数目 `lpDirPaths` 。  
   
  lpDirPaths  
- [in]若要检查的目录路径的数组。  
+ 中要检查的目录路径的数组。  
   
  pfnPopulate  
- [in]要为每个目录路径和 （可选） 中的文件名调用的回调函数`lpDirPaths`(请参阅[POPDIRLISTFUNC](../extensibility/popdirlistfunc.md)有关详细信息)。  
+ 中为每个目录路径调用的回调函数，并 (可以选择在 (中) 文件名， `lpDirPaths` 请参阅 [POPDIRLISTFUNC](../extensibility/popdirlistfunc.md) 了解详细信息) 。  
   
  pvCallerData  
- [in]要传递的值保持不变的回调函数。  
+ 中将以不更改的形式传递给回调函数的值。  
   
- fOptions  
- [in]控制处理目录的方式的值的组合 (请参阅的"PopulateDirList 标志"部分[位标志由特定命令](../extensibility/bitflags-used-by-specific-commands.md)有关可能的值)。  
+ 用于  
+ 中用于控制如何处理目录的值的组合 (参见 [特定命令使用的 Bitflags](../extensibility/bitflags-used-by-specific-commands.md) 的 "PopulateDirList 标志" 部分，以查找可能的值) 。  
   
 ## <a name="return-value"></a>返回值  
- 此函数的源控制插件实现应返回以下值之一：  
+ 此函数的源代码管理插件实现应返回以下值之一：  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
-|SCC_OK|已成功完成操作。|  
+|SCC_OK|已成功完成该操作”。|  
 |SCC_E_UNKNOWNERROR|出现了错误。|  
   
 ## <a name="remarks"></a>备注  
- 仅这些目录和 （可选） 实际上是在源控件存储库中的文件名称传递到回调函数。  
+ 仅在源代码管理存储库中实际具有的这些目录和 (（可选）) 文件名称将传递给回调函数。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [源代码管理插件 API 函数](../extensibility/source-control-plug-in-api-functions.md)   
- [使用特定命令的位标志](../extensibility/bitflags-used-by-specific-commands.md)   
+ [特定命令使用的 Bitflags](../extensibility/bitflags-used-by-specific-commands.md)   
  [POPDIRLISTFUNC](../extensibility/popdirlistfunc.md)   
  [错误代码](../extensibility/error-codes.md)

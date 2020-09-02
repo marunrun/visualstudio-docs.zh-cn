@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 820f4ac8b154579664e01b12aa8146e4668cc17b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670669"
 ---
 # <a name="how-to-specify-build-events-visual-basic"></a>如何：指定生成事件 (Visual Basic)
@@ -36,7 +36,7 @@ Visual Basic 中的生成事件可用于运行脚本、宏或用作作为编译�
 
 #### <a name="to-specify-a-build-event"></a>指定生成事件
 
-1. 在“解决方案资源管理器”中选择了项目的情况下，在“项目” 菜单上单击“属性”。
+1. 在“解决方案资源管理器” 中选择了项目的情况下，在“项目”  菜单上单击“属性” 。
 
 2. 单击“编译”选项卡。
 
@@ -128,11 +128,11 @@ Visual Basic 中的生成事件可用于运行脚本、宏或用作作为编译�
 
 1. 为要发布的项目创建 Windows 应用程序。 在“文件”菜单上，单击“新建”，然后单击“项目”。
 
-2. 在“新建项目”对话框的“Visual Basic”节点中，依次选择“Windows”、“Windows 应用程序”模板。 将项目命名为 `VBWinApp`。
+2. 在“新建项目”**** 对话框的“Visual Basic”**** 节点中，依次选择“Windows”****、“Windows 应用程序”**** 模板。 将项目命名为 `VBWinApp`。
 
 3. 在“解决方案资源管理器”中选择一个项目，然后在“项目”菜单上单击“属性”。
 
-4. 在项目设计器中，转到“发布”页面，并将“发布位置”设置为 `C:\TEMP\`。
+4. 在项目设计器中，转到“发布”**** 页面，并将“发布位置”**** 设置为 `C:\TEMP\`。
 
 5. 单击“立即发布”以发布项目。
 
@@ -144,7 +144,7 @@ Visual Basic 中的生成事件可用于运行脚本、宏或用作作为编译�
     <os majorVersion="4" minorVersion="10" buildNumber="0" servicePackMajor="0" />
     ```
 
-6. 在项目设计器中，转到“编译”选项卡，然后单击“生成事件”按钮以打开“生成事件”对话框。
+6. 在项目设计器中，切换到 " **编译** " 选项卡，然后单击 " **生成事件** " 按钮以打开 " **生成事件** " 对话框。
 
 7. 在“生成后事件命令行”框中，输入以下命令：
 
@@ -164,5 +164,5 @@ Visual Basic 中的生成事件可用于运行脚本、宏或用作作为编译�
     <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
     ```
 
-## <a name="see-also"></a>请参阅
- [管理编译属性](https://msdn.microsoft.com/94308881-f10f-4caf-a729-f1028e596a2c)[编译页，项目设计器（Visual Basic）](../ide/reference/compile-page-project-designer-visual-basic.md) [发布页，项目设计器](../ide/reference/publish-page-project-designer.md)[预生成事件/生成后事件命令行对话框](../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md)[如何：指定生成事件C#（）](../ide/how-to-specify-build-events-csharp.md)
+## <a name="see-also"></a>另请参阅
+ [管理编译属性](https://msdn.microsoft.com/94308881-f10f-4caf-a729-f1028e596a2c) ["编译" 页，"项目设计器" (Visual Basic) ](../ide/reference/compile-page-project-designer-visual-basic.md) ["发布" 页，"项目设计器](../ide/reference/publish-page-project-designer.md)[预生成事件/生成后事件命令行" 对话框](../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md)[如何：指定生成事件 (c # ) ](../ide/how-to-specify-build-events-csharp.md)

@@ -12,10 +12,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: eb49e6c51c1e51d002683099797d940cb2d24556
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65682360"
 ---
 # <a name="walkthrough-creating-an-msbuild-project-file-from-scratch"></a>演练：从头开始创建 MSBuild 项目文件
@@ -56,7 +56,7 @@ ms.locfileid: "65682360"
   
 1. 在命令提示符下，浏览到要在其中创建应用程序的文件夹，例如，\My Documents\ 或 \Desktop\\。  
   
-2. 键入 **md HelloWorld** 创建名为 \HelloWorld\\ 的子文件夹。  
+2. 键入 **Md HelloWorld** 以创建名为 \HelloWorld 的子文件夹 \\ 。  
   
 3. 键入 **cd HelloWorld** 切换到该新文件夹。  
   
@@ -173,7 +173,7 @@ ms.locfileid: "65682360"
   
 #### <a name="to-build-the-application"></a>生成应用程序  
   
-1. 在命令提示符处，键入 **msbuild helloworld.csproj /t:Build**。  
+1. 在命令提示符处，键入 **msbuild helloworld/t： Build**。  
   
      此操作将调用 Visual C# 编译器来创建 Helloworld 应用程序，从而生成 Helloworld 项目文件的 Build 目标。  
   
@@ -184,7 +184,7 @@ ms.locfileid: "65682360"
 > [!NOTE]
 > 可以通过提高详细信息级别来查看有关生成的更多详细级别。 要将详细级别设置为“详细”，请在命令提示符下键入以下任一命令：  
 >   
-> **msbuild helloworld.csproj /t:Build /verbosity:detailed**  
+> **msbuild helloworld/t： Build/verbosity：详尽**  
   
 ## <a name="adding-build-properties"></a>添加生成属性  
  可以将生成属性添加到项目文件中，从而进一步控制生成。 现在添加以下属性：  
@@ -260,11 +260,11 @@ ms.locfileid: "65682360"
   
 #### <a name="to-test-the-build-properties"></a>测试生成属性  
   
-1. 在命令提示符处，键入 **msbuild helloworld.csproj /t:Build**。  
+1. 在命令提示符处，键入 **msbuild helloworld/t： Build**。  
   
      这将创建 \Bin\ 文件夹，然后调用 Visual C# 编译器创建 MSBuildSample 应用程序，并将其放在 \Bin\ 文件夹中。  
   
-2. 要验证是否已创建 \Bin\ 文件夹，以及该文件夹是否包含 MSBuildSample 应用程序，请键入 **dir Bin**。  
+2. 若要验证是否已创建 \Bin\ 文件夹，并且它包含 MSBuildSample 应用程序，请键入 **Dir Bin**。  
   
 3. 键入 **Bin\MSBuildSample** 测试应用程序。  
   
@@ -335,31 +335,31 @@ ms.locfileid: "65682360"
   
 #### <a name="to-test-the-build-targets"></a>测试生成目标  
   
-1. 在命令提示符处，键入 **msbuild helloworld.csproj /p:AssemblyName=Greetings**。  
+1. 在命令提示符处，键入 **msbuild helloworld/p： AssemblyName = 问候语**。  
   
-     由于未使用 **/t** 开关显式设置目标，因此 MSBuild 将运行默认的 Build 目标。 **/p** 开关将替代 `AssemblyName` 属性，并为其指定新值 `Greetings`。 这将导致在 \Bin\ 文件夹中创建一个新应用程序 Greetings.exe。  
+     由于未使用 **/t** 开关显式设置目标，因此 MSBuild 将运行默认的生成目标。 **/P**开关将重写 `AssemblyName` 属性，并为其赋予新值 `Greetings` 。 这将导致在 \Bin\ 文件夹中创建一个新应用程序 Greetings.exe。  
   
-2. 要验证 \Bin\ 文件夹是否同时包含 MSBuildSample 应用程序和新的 Greetings 应用程序，请键入 **dir Bin**。  
+2. 若要验证 \Bin\ 文件夹是否同时包含 MSBuildSample 应用程序和新的问候语应用程序，请键入 **Dir Bin**。  
   
 3. 键入 **Bin\Greetings** 测试 Greetings 应用程序。  
   
      显示的消息应为 **Hello, world!** 。  
   
-4. 键入 **msbuild helloworld.csproj /t:clean** 删除 MSBuildSample 应用程序。  
+4. 通过键入 **msbuild helloworld/t： clean**删除 MSBuildSample 应用程序。  
   
      这将运行 Clean 任务，以删除具有默认 `AssemblyName` 属性值 `MSBuildSample` 的应用程序。  
   
-5. 键入 **msbuild helloworld.csproj /t:clean /p:AssemblyName=Greetings** 删除 Greetings 应用程序。  
+5. 通过键入 **msbuild helloworld/t： clean/p： AssemblyName = 问候语**来删除问候语应用程序。  
   
      这将运行 Clean 任务，以删除具有指定 **AssemblyName** 属性值 `Greetings` 的应用程序。  
   
-6. 要验证 \Bin\ 文件夹现在是否为空，请键入 **dir Bin**。  
+6. 若要验证 \Bin\ 文件夹是否为空，请键入 **Dir Bin**。  
   
 7. 键入 **msbuild**。  
   
      尽管未指定项目文件，但 MSBuild 会生成 helloworld.csproj 文件，因为当前文件夹中只有一个项目文件。 这将导致在 \Bin\ 文件夹中创建 MSBuildSample 应用程序。  
   
-     要验证 \Bin\ 文件夹是否包含 MSBuildSample 应用程序，请键入 **dir Bin**。  
+     若要验证 \Bin\ 文件夹是否包含 MSBuildSample 应用程序，请键入 **Dir Bin**。  
   
 ## <a name="building-incrementally"></a>以增量方式生成  
  可以指示 MSBuild 仅在目标所依赖的源文件或目标文件发生更改时才生成目标。 MSBuild 使用文件的时间戳来确定文件是否已更改。  
@@ -383,11 +383,11 @@ ms.locfileid: "65682360"
     </Target>  
     ```  
   
-2. 在命令提示符下，键入 **msbuild /v:d** 测试 Build 目标。  
+2. 通过在命令提示符处键入 **msbuild/v： d** 来测试生成目标。  
   
      请记住，helloworld.csproj 是默认项目文件，并且 Build 为默认目标。  
   
-     **/v:d** 开关指定生成过程的详细说明。  
+     **/V： d**开关指定生成过程的详细说明。  
   
      此时应显示以下各行：  
   
@@ -477,9 +477,9 @@ ms.locfileid: "65682360"
 </Project>  
 ```  
   
-## <a name="whats-next"></a>接下来的内容  
+## <a name="whats-next"></a>接下来该做什么？  
  Visual Studio 能够自动执行本演练中演示的大部分工作。 若要了解如何使用 Visual Studio 来创建、编辑、生成和测试 MSBuild 项目文件，请参阅[演练：使用 MSBuild](../msbuild/walkthrough-using-msbuild.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
 [MSBuild 概述](msbuild.md)  
- [MSBuild 参考](../msbuild/msbuild-reference.md)
+ [MSBuild 引用](../msbuild/msbuild-reference.md)

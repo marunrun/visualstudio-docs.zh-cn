@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 54036b985c90be926eaa56f6ebe60d1f3903e0b2
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657315"
 ---
 # <a name="uml-model-element-types"></a>UML 模型元素类型
@@ -194,5 +194,5 @@ Classes.IElement
              : Classes.IRedefinableElement
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [定义用于扩展 uml 的配置文件](../modeling/define-a-profile-to-extend-uml.md)为 uml[模型定义验证约束](../modeling/define-validation-constraints-for-uml-models.md)[用于 Uml 建模扩展性的 API 参考](../modeling/api-reference-for-uml-modeling-extensibility.md)

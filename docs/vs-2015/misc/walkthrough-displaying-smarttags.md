@@ -10,26 +10,26 @@ ms.assetid: 10bb4f69-b259-41f0-b91a-69b04385d9a5
 caps.latest.revision: 31
 manager: jillfra
 ms.openlocfilehash: 116f76324a2150413c0ae6d08bc99e114efcc50e
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63436515"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64805585"
 ---
 # <a name="walkthrough-displaying-smarttags"></a>演练：显示智能标记
-为支持灯泡已弃用智能标记。 请参阅[演练：显示灯泡建议](../extensibility/walkthrough-displaying-light-bulb-suggestions.md)。  
+为支持灯泡已弃用智能标记。 请参阅 [Walkthrough: Displaying Light Bulb Suggestions](../extensibility/walkthrough-displaying-light-bulb-suggestions.md)。  
   
- 智能标记是文本上的标记，展开即可显示一组操作。 例如，在 Visual Basic 或 Visual C# 项目中，重命名变量名称等标识符时，单词下方将出现一条红线。 将指针移到下划线上时，指针旁将出现一个按钮。 如果单击该按钮，则会显示建议的操作，例如“将 IsRead 重命名为 IsReady” 。 如果单击该操作，则项目中对 **IsRead** 的所有引用均将重命名为 **IsReady**。  
+ 智能标记是文本上的标记，展开即可显示一组操作。 例如，在 Visual Basic 或 Visual C# 项目中，重命名变量名称等标识符时，单词下方将出现一条红线。 将指针移到下划线上时，指针旁将出现一个按钮。 如果单击该按钮，则会显示建议的操作，例如“将 IsRead 重命名为 IsReady” ****。 如果单击该操作，则项目中对 **IsRead** 的所有引用均将重命名为 **IsReady**。  
   
  虽然智能标记是编辑器中 IntelliSense 实现的一部分，但是你可以通过子类化 <xref:Microsoft.VisualStudio.Language.Intellisense.SmartTag>，然后实现 <xref:Microsoft.VisualStudio.Text.Tagging.ITagger%601> 接口和 <xref:Microsoft.VisualStudio.Text.Tagging.IViewTaggerProvider> 接口来实现智能标记。  
   
 > [!NOTE]
 > 可以采用类似的方式实现其他类型的标记。  
   
- 下面的演练演示如何创建一个智能标记，将显示在当前单词上并且具有两个建议的操作：**将转换为大写**并**转换为小写**。  
+ 下面的演练演示如何创建出现在当前单词上并且具有以下两个建议操作的智能标记：“转换为大写” **** 和“转换为小写” ****。  
   
-## <a name="prerequisites"></a>系统必备  
- 要按照本演练的步骤操作，必须安装 Visual Studio SDK。 有关详细信息，请参阅[Visual Studio SDK](../extensibility/visual-studio-sdk.md)。  
+## <a name="prerequisites"></a>先决条件  
+ 要按照本演练的步骤操作，必须安装 Visual Studio SDK。 有关详细信息，请参阅 [Visual STUDIO SDK](../extensibility/visual-studio-sdk.md)。  
   
 ## <a name="creating-a-managed-extensibility-framework-mef-project"></a>创建 Managed Extensibility Framework (MEF) 项目  
   
@@ -39,11 +39,11 @@ ms.locfileid: "63436515"
   
 2. 在 VSIX 清单编辑器中打开 source.extension.vsixmanifest 文件。  
   
-3. 确保“资产”  部分包含 `Microsoft.VisualStudio.MefComponent` 类型，“源”  设置为 `A project in current solution`，并且“项目”  设置为 SmartTagTest.dll。  
+3. 确保“资产” **** 部分包含 `Microsoft.VisualStudio.MefComponent` 类型，“源” **** 设置为 `A project in current solution`，并且“项目” **** 设置为 SmartTagTest.dll。  
   
 4. 保存并关闭 source.extension.vsixmanifest。  
   
-5. 将以下引用添加到项目，并将“CopyLocal”  设置为 `false`：  
+5. 将以下引用添加到项目，并将“CopyLocal” **** 设置为 `false`：  
   
      Microsoft.VisualStudio.Language.Intellisense  
   
@@ -180,7 +180,7 @@ ms.locfileid: "63436515"
   
      指针旁将出现一个按钮。  
   
-5. 当单击按钮时，应显示两个建议的操作：**将转换为大写**并**转换为小写**。 如果单击第一个操作，则当前单词中的所有文本都将转换为大写。 如果单击第二个操作，则所有文本都将转换为小写。  
+5. 单击该按钮时，将显示以下两个建议的操作：“转换为大写” **** 和“转换为小写” ****。 如果单击第一个操作，则当前单词中的所有文本都将转换为大写。 如果单击第二个操作，则所有文本都将转换为小写。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [演练：将内容类型链接到文件扩展名](../extensibility/walkthrough-linking-a-content-type-to-a-file-name-extension.md)

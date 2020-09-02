@@ -24,16 +24,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 4d5b10d3e40d889ffa9e7743d65de487c2d823cf
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65698732"
 ---
 # <a name="edit-and-continue"></a>编辑并继续
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-“编辑并继续”是一种省时的功能，使你能够在程序处于中断模式时更改源代码。 通过选择执行命令如恢复程序执行时**继续**或**步骤**、 编辑和继续自动应用代码更改有一些限制。 这允许你在调试会话期间更改代码，而不是停止程序，重新编译整个程序，再重新启动调试会话。  
+“编辑并继续”是一种省时的功能，使你能够在程序处于中断模式时更改源代码。 当你通过选择一条类似“继续”或“单步执行”的执行命令继续执行程序时，“编辑并继续”会有限制地自动应用代码更改 。 这允许你在调试会话期间更改代码，而不是停止程序，重新编译整个程序，再重新启动调试会话。  
   
  本节包括下列主题：  
   
@@ -45,7 +45,7 @@ ms.locfileid: "65698732"
   
  [执行点](https://msdn.microsoft.com/dd9855a7-b536-4e76-821f-27017829b996)  
   
- [Edit and Continue (Visual C++)](../debugger/edit-and-continue-visual-cpp.md)  
+ [编辑并继续 (Visual C++) ](../debugger/edit-and-continue-visual-cpp.md)  
   
  [编辑并继续 (Visual C#)](../debugger/edit-and-continue-visual-csharp.md)  
   
@@ -53,7 +53,7 @@ ms.locfileid: "65698732"
   
  [F# 不支持“编辑并继续”](../debugger/edit-and-continue-not-supported-for-f-hash.md)  
   
-## <a name="see-also"></a>请参阅  
- [调试器安全](../debugger/debugger-security.md)   
- [“选项”对话框 ->“调试”->“编辑并继续”](https://msdn.microsoft.com/library/009d225f-ef65-463f-a146-e4c518f86103)   
+## <a name="see-also"></a>另请参阅  
+ [调试器安全性](../debugger/debugger-security.md)   
+ ["编辑并继续"、"调试"、"选项" 对话框](https://msdn.microsoft.com/library/009d225f-ef65-463f-a146-e4c518f86103)   
  [调试器基础知识](../debugger/debugger-basics.md)

@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: fd88191baf15837a7862fc447471744977bdf60b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72665878"
 ---
 # <a name="customizing-project-and-item-templates"></a>自定义项目模板和项模板
@@ -32,7 +32,7 @@ ms.locfileid: "72665878"
 
 - 将自定义参数传递给模板以替换现有值。
 
-     有关详细信息，请参阅[如何：替换模板中的参数](../ide/how-to-substitute-parameters-in-a-template.md)。
+     有关详细信息，请参阅 [如何：替换模板中的参数](../ide/how-to-substitute-parameters-in-a-template.md)。
 
 - 自定义根据模板创建项目的向导。
 
@@ -41,7 +41,7 @@ ms.locfileid: "72665878"
 ## <a name="related-sections"></a>相关章节
  [创建项目和项模板](../ide/creating-project-and-item-templates.md)
 
- [如何：模板故障排除](../ide/how-to-troubleshoot-templates.md)
+ [如何：进行模板的故障排除](../ide/how-to-troubleshoot-templates.md)
 
  [如何：创建项目模板](../ide/how-to-create-project-templates.md)
 

@@ -1,5 +1,5 @@
 ---
-title: PromptForSaveOnCreation 元素 （Visual Studio 模板） |Microsoft Docs
+title: " (Visual Studio 模板) 的 PromptForSaveOnCreation 元素 |Microsoft Docs"
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -13,16 +13,16 @@ caps.latest.revision: 19
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: a523190a9e5c143667355c222e0fbe9441cc231a
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65675361"
 ---
 # <a name="promptforsaveoncreation-element-visual-studio-templates"></a>PromptForSaveOnCreation 元素（Visual Studio 模板）
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-指定是否提示用户输入保存位置通过项目**新的项目**对话框中创建项目时。 如果此元素设置为`true`，然后提示用户输入保存位置; 如果`false`，则不会提示。 （即，创建一个临时项目。）  
+指定在创建项目时是否通过 " **新建项目** " 对话框提示用户输入项目保存位置。 如果此元素设置为 `true` ，则会提示用户输入保存位置; 如果为 `false` ，则不提示用户。  (即，将创建一个临时项目。 )   
   
  \<VSTemplate>  
  \<TemplateData>  
@@ -52,15 +52,15 @@ ms.locfileid: "65675361"
 ## <a name="text-value"></a>文本值  
  需要一个文本值。  
   
- 文本必须是`true`或`false`， `true` ，该值指示将提示用户输入保存位置创建新项目时。  
+ 文本必须是 `true` 或 `false` ，表示在 `true` 创建新项目时将提示用户输入保存位置。  
   
 ## <a name="remarks"></a>备注  
- `PromptForSaveOnCreation` 是可选元素。 默认值为 `false`。  
+ `PromptForSaveOnCreation` 是可选元素。 默认值是 `false`。  
   
- 临时项目是指那些可以创建和修改而不在磁盘上保存该项目的内容。 有关详细信息，请参阅[NIB 临时项目](https://msdn.microsoft.com/9cf1944c-7045-44cc-8701-7b0eb4099f2b)。  
+ 临时项目是您可以创建和修改的项目，而无需将该项目的内容保存在磁盘上。 有关详细信息，请参阅 [笔尖临时项目](https://msdn.microsoft.com/9cf1944c-7045-44cc-8701-7b0eb4099f2b)。  
   
 ## <a name="example"></a>示例  
- 下面的示例设置的值`PromptForSaveOnCreation`等于`false`，它指定允许为创建为临时项目的项目。  
+ 下面的示例将的值设置 `PromptForSaveOnCreation` 为 `false` ，它指定允许将项目创建为临时项目。  
   
 ```  
 <VSTemplate Type="Project" Version="3.0.0"  
@@ -87,6 +87,6 @@ ms.locfileid: "65675361"
 </VSTemplate>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)   
  [创建项目和项模板](../ide/creating-project-and-item-templates.md)

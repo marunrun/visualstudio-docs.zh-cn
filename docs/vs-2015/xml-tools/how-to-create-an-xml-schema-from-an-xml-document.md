@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 59e99320b122424e40da64b530bfe9a84a93eae1
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670933"
 ---
 # <a name="how-to-create-an-xml-schema-from-an-xml-document"></a>如何：从 XML 文档创建 XML 架构
@@ -29,7 +29,7 @@ ms.locfileid: "72670933"
 
   然后，将使用创建的架构为 XML 文档提供智能感知。
 
-  有关架构推断引擎的详细信息，请参阅[推断 XML 架构](https://msdn.microsoft.com/library/b18e7ffd-3c04-482d-9934-ba2f6a59b2c9)。
+  有关架构推断引擎的详细信息，请参阅 [推断 XML 架构](https://msdn.microsoft.com/library/b18e7ffd-3c04-482d-9934-ba2f6a59b2c9)。
 
 ### <a name="to-create-an-xml-schema"></a>创建 XML 架构
 
@@ -44,5 +44,5 @@ ms.locfileid: "72670933"
     > [!NOTE]
     > 还可从 "XML 编辑器" 的快捷菜单和 " **xml** " 菜单中获取 "**创建架构**" 命令。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [XML 编辑器](../xml-tools/xml-editor.md)

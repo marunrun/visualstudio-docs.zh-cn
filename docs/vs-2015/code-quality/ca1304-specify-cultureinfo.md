@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: d874d69f36fc8520a7cfbe3e946116c2d85ed88f
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85539056"
 ---
 # <a name="ca1304-specify-cultureinfo"></a>CA1304:指定 CultureInfo
@@ -61,7 +61,7 @@ ms.locfileid: "85539056"
  如果确信默认区域性/格式提供程序是正确的选择，并且代码可维护性不是重要的开发优先级，则可以安全地禁止显示此规则发出的警告。
 
 ## <a name="example"></a>示例
- 在下面的示例中，将 `BadMethod` 导致此规则发生两次冲突。 `GoodMethod`通过将固定区域性传递到 System.string 来更正第一个冲突，并通过将当前区域性传递到来更正第二个冲突， <xref:System.String.ToLower%2A> 因为 `string3` 向用户显示。
+ 在下面的示例中，将 `BadMethod` 导致此规则发生两次冲突。 `GoodMethod` 通过将固定区域性传递到 System.string 来更正第一个冲突，并通过将当前区域性传递到来更正第二个冲突， <xref:System.String.ToLower%2A> 因为 `string3` 向用户显示。
 
  [!code-csharp[FxCop.Globalization.CultureInfo#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Globalization.CultureInfo/cs/FxCop.Globalization.CultureInfo.cs#1)]
 

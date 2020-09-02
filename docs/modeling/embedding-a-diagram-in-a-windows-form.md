@@ -8,10 +8,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 3e81a5ff10cd6e309ffbf17e40ffbaa9ec88f185
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85547623"
 ---
 # <a name="embed-a-diagram-in-a-windows-form"></a>在 Windows 窗体中嵌入图表
@@ -20,7 +20,7 @@ ms.locfileid: "85547623"
 
 ## <a name="embed-a-dsl-diagram-in-a-windows-control"></a>在 Windows 控件中嵌入 DSL 关系图
 
-1. 向 DslPackage 项目添加一个新的**用户控件**文件。
+1. 向 DslPackage 项目添加一个新的 **用户控件** 文件。
 
 2. 向用户控件添加 Panel 控件。 此面板将包含 DSL 关系图。
 
@@ -28,7 +28,7 @@ ms.locfileid: "85547623"
 
      设置控件的定位点属性。
 
-3. 在解决方案资源管理器中，右键单击用户控件文件，然后单击 "**查看代码**"。 将此构造函数和变量添加到代码中：
+3. 在解决方案资源管理器中，右键单击用户控件文件，然后单击 " **查看代码**"。 将此构造函数和变量添加到代码中：
 
     ```csharp
     internal UserControl1(MyDSLDocView docView, Control content)
@@ -63,11 +63,11 @@ ms.locfileid: "85547623"
     } } } }
     ```
 
-5. 若要测试 DSL，请按**F5**并打开示例模型文件。 关系图显示在控件内。 工具箱和其他功能正常工作。
+5. 若要测试 DSL，请按 **F5** 并打开示例模型文件。 关系图显示在控件内。 工具箱和其他功能正常工作。
 
 ## <a name="update-the-form-using-store-events"></a>使用存储事件更新窗体
 
-1. 在窗体设计器中，添加一个名为的**ListBox** `listBox1` 。 这将显示模型中元素的列表。 它使用*存储事件*与模型同步。 有关详细信息，请参阅[事件处理程序在模型外部传播更改](../modeling/event-handlers-propagate-changes-outside-the-model.md)。
+1. 在窗体设计器中，添加一个名为的 **ListBox** `listBox1` 。 这将显示模型中元素的列表。 它使用 *存储事件*与模型同步。 有关详细信息，请参阅 [事件处理程序在模型外部传播更改](../modeling/event-handlers-propagate-changes-outside-the-model.md)。
 
 2. 在自定义代码文件中，重写 DocView 类的其他方法：
 
@@ -137,7 +137,7 @@ ms.locfileid: "85547623"
     }
     ```
 
-4. 若要测试 DSL，请按**F5** ，然后在 Visual Studio 的实验实例中，打开示例模型文件。
+4. 若要测试 DSL，请按 **F5** ，然后在 Visual Studio 的实验实例中，打开示例模型文件。
 
      请注意，列表框显示模型中元素的列表，并且在任何添加或删除之后以及在撤消和重做之后都是正确的。
 

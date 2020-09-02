@@ -11,23 +11,23 @@ caps.latest.revision: 6
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 65404f9fde6c8eeb653ab446595dbca83134703e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68150798"
 ---
 # <a name="outlining-and-hidden-text-in-a-legacy-language-service"></a>旧版语言服务中的大纲显示和隐藏文本
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-大纲显示使可能折叠为单个行的一系列文本行。 例如，在C++的所有方法可以都折叠为单个行，其中显示仅方法签名。 隐藏的文本是可以显示或隐藏的文本行的序列。  
+大纲显示可将一系列文本行折叠成一行。 例如，在 c + + 中，所有方法都可以折叠为单个行，只显示方法签名。 隐藏文本是可以显示或隐藏的文本行的序列。  
   
 ## <a name="in-this-section"></a>本节内容  
  [如何：支持旧版语言服务中的大纲显示](../../extensibility/internals/how-to-support-outlining-in-a-legacy-language-service.md)  
- 介绍如何实现  
+ 说明如何实现  
   
- [如何：提供旧版语言服务中的隐藏文本支持](../../extensibility/internals/how-to-provide-hidden-text-support-in-a-legacy-language-service.md)  
- 介绍隐藏的文本区域的目的，并提供有关如何实现隐藏的文本区域的说明。  
+ [如何：提供旧版语言服务中的隐藏文本](../../extensibility/internals/how-to-provide-hidden-text-support-in-a-legacy-language-service.md)  
+ 说明隐藏文本区域的用途，并提供有关如何实现隐藏文本区域的说明。  
   
  [如何：提供旧版语言服务中扩展的大纲显示支持](../../extensibility/internals/how-to-provide-expanded-outlining-support-in-a-legacy-language-service.md)  
- 介绍扩展对你超出支持的语言的大纲显示支持的两个选项*折叠到定义*命令。
+ 介绍用于扩展对语言的大纲支持的两个选项，但不支持 " *折叠到定义* " 命令。

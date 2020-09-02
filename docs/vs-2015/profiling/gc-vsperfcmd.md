@@ -10,10 +10,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 2bdb28f74dd305dc497521e95d38e00192c21c54
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68193605"
 ---
 # <a name="gc-vsperfcmd"></a>GC (VSPerfCmd)
@@ -32,16 +32,16 @@ VSPerfCmd.exe /Launch:AppName /GC[:{Allocation|Lifetime}] [Options]
 ```  
   
 #### <a name="parameters"></a>参数  
- Allocation   
+ Allocation****  
  默认。 收集 .NET Framework 内存分配数据。  
   
  **生存期**  
  同时收集 .NET Framework 内存分配数据和 .NET Framework 对象生存期数据。  
   
 ## <a name="required-options"></a>必需选项  
-  “GC”选项只能与“Launch”  选项一起使用。  
+ ****“GC”选项只能与“Launch”**** 选项一起使用。  
   
- **Launch：** `AppName`  
+ **启动：**`AppName`  
  启动指定的应用程序并开始使用采样方法进行分析。  
   
 ## <a name="example"></a>示例  

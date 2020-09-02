@@ -1,5 +1,5 @@
 ---
-title: 无效字符（JavaScript） |Microsoft Docs
+title: JavaScript)  (无效的字符 |Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
@@ -15,16 +15,16 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: c2dc3e733afdb4f3d25595e819163ff56e397c6e
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85816938"
 ---
 # <a name="invalid-character-javascript"></a>无效字符 (JavaScript)
-你使用了编译器不能识别为有效的字符（或字符）编写了一个标识符 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 。 有效字符使用以下规则：  
+使用字符 (或字符编写的标识符) 不被编译器识别为有效 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 。 有效字符使用以下规则：  
   
-- 第一个字符必须是 ASCII 字母（大写或小写）或下划线（_）。  
+- 第一个字符必须是大写或小写)  (或下划线 (_) 。  
   
 - 后面的字符可以是 ASCII 字母、数字或下划线。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "85816938"
   
 - 避免使用不属于 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 语言定义的字符。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [变化](../../javascript/variables-javascript.md)   
  [特殊字符](../../javascript/advanced/special-characters-javascript.md)   
  [数据类型](../../javascript/data-types-javascript.md)

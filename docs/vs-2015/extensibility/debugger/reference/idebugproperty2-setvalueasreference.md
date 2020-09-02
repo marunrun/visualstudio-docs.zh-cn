@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty2::SetValueAsReference |Microsoft Docs
+title: IDebugProperty2：： SetValueAsReference |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,10 +13,10 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: a94e3767ee05e39e847af27dc5999fa8bbbe2d44
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68193451"
 ---
 # <a name="idebugproperty2setvalueasreference"></a>IDebugProperty2::SetValueAsReference
@@ -46,27 +46,27 @@ int SetValueAsReference(
   
 #### <a name="parameters"></a>参数  
  `rgpArgs`  
- [in]要传递给托管的代码属性 setter 参数的数组。 如果属性 setter 不采用自变量，或如果此[IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)对象不是此类属性 setter，指`rgpArgs`应为 null 值。 此参数通常是一个 null 值。  
+ 中要传递给托管代码属性 setter 的参数数组。 如果属性资源库不采用参数，或此 [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) 对象不引用此类属性资源库，则 `rgpArgs` 应为 null 值。 此参数通常为 null 值。  
   
  `dwArgCount`  
- [in]中的参数数目`rgpArgs`数组。  
+ 中数组中的参数数量 `rgpArgs` 。  
   
  `pValue`  
- [in]中的窗体的引用[IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)对象，用于设置此属性的值。  
+ 中 [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) 对象形式的引用，它指向用于设置此属性的值。  
   
  `dwTimeout`  
- [in]需要设置值，以毫秒为单位的时间。 典型值为`INFINITE`。 这会影响任何可能的评估需要花费的时间的长度。  
+ 中设置值所需的时间（以毫秒为单位）。 典型值为 `INFINITE` 。 这会影响任何可能的评估所需的时间长度。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码，通常下列项之一：  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码，通常为以下值之一：  
   
-|Error|描述|  
+|错误|说明|  
 |-----------|-----------------|  
 |`E_SETVALUEASREFERENCE_NOTSUPPORTED`|不支持从引用设置值。|  
-|`E_SETVALUE_VALUE_CANNOT_BE_SET`|无法设置值，因为此属性是指一种方法。|  
-|`E_SETVALUE_VALUE_IS_READONLY`|值是只读的不能设置。|  
-|`E_NOTIMPL`|未实现方法。|  
+|`E_SETVALUE_VALUE_CANNOT_BE_SET`|无法设置值，因为此属性引用方法。|  
+|`E_SETVALUE_VALUE_IS_READONLY`|该值为只读，不能设置。|  
+|`E_NOTIMPL`|该方法未实现。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)   
  [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)

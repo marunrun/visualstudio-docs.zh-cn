@@ -1,5 +1,5 @@
 ---
-title: IDebug函数对象2：：创建对象 |微软文档
+title: IDebugFunctionObject2：： CreateObject |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -15,14 +15,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 6de1a30a032919a90fbb3d760837d5eeca00feaf
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80728478"
 ---
 # <a name="idebugfunctionobject2createobject"></a>IDebugFunctionObject2::CreateObject
-创建使用构造函数给定评估标志设置和超时值的对象。
+创建一个对象，该对象使用给定了计算标志设置和超时值的构造函数。
 
 ## <a name="syntax"></a>语法
 
@@ -50,28 +50,28 @@ int CreateObject (
 
 ## <a name="parameters"></a>参数
 `pConstructor`\
-[在]表示要创建对象的构造函数的[IDebug函数对象](../../../extensibility/debugger/reference/idebugfunctionobject.md)。
+中一个 [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) 对象，表示要创建的对象的构造函数。
 
 `dwArgs`\
-[在]数组中的`pArg`参数数。 表示传递给构造函数的参数数。
+中数组中参数的数目 `pArg` 。 表示传递给构造函数的参数的数目。
 
 `pArgs`\
-[在][IDebugObject 对象的](../../../extensibility/debugger/reference/idebugobject.md)数组，表示传递给构造函数的参数。
+中 [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) 对象的数组，这些对象表示传递给构造函数的参数。
 
 `dwEvalFlags`\
-[在][EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md)枚举中的标志组合，用于指定如何执行计算。
+中 [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md) 枚举中的标志的组合，该枚举指定如何执行计算。
 
 `dwTimeout`\
-[在]从此方法返回之前等待的最大时间（以毫秒为单位）。 使用**INFINITE**无限期等待。
+中从此方法返回前等待的最长时间（以毫秒为单位）。 使用 **无限大** 无限期等待。
 
 `ppObject`\
-[出]返回表示新创建对象的**IDebugObject。**
+弄返回表示新创建的对象的 **IDebugObject** 。
 
 ## <a name="return-value"></a>返回值
- 如果成功，返回`S_OK`;否则，返回错误代码。
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。
 
 ## <a name="remarks"></a>备注
- 调用此方法以创建表示类实例的对象，或需要构造函数（即参数）的其他复杂类型。
+ 调用此方法可创建一个对象，该对象表示类的实例，或者需要构造函数的其他复杂类型，即参数。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IDebugFunctionObject2](../../../extensibility/debugger/reference/idebugfunctionobject2.md)

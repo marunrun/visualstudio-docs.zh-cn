@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 5da2e2bf26bb1894987caa8b748181d952bd7c18
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85547831"
 ---
 # <a name="ca1502-avoid-excessive-complexity"></a>CA1502:避免过度复杂
@@ -36,7 +36,7 @@ ms.locfileid: "85547831"
  方法具有过多的圈复杂度。
 
 ## <a name="rule-description"></a>规则描述
- *圈复杂度*通过方法测量线性独立路径的数量，该方法由条件分支的数量和复杂程度决定。 低圈复杂度通常表示一种易于理解、测试和维护的方法。 圈复杂度是通过方法的控制流图形计算得出的，其提供方式如下：
+ *圈复杂度* 通过方法测量线性独立路径的数量，该方法由条件分支的数量和复杂程度决定。 低圈复杂度通常表示一种易于理解、测试和维护的方法。 圈复杂度是通过方法的控制流图形计算得出的，其提供方式如下：
 
  圈复杂度 = 边数-节点数 + 1
 
@@ -44,20 +44,20 @@ ms.locfileid: "85547831"
 
  当圈复杂度大于25时，规则将报告冲突。
 
- 可以在[测量托管代码的复杂性和可维护性](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)中了解有关代码度量值的详细信息，
+ 可以在 [测量托管代码的复杂性和可维护性](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)中了解有关代码度量值的详细信息，
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
  若要修复与此规则的冲突，请重构方法以降低其圈复杂度。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
- 如果复杂性无法轻易降低，并且方法易于理解、测试和维护，则可以安全地禁止显示此规则发出的警告。 具体而言，包含大型 `switch` （ `Select` in）语句的方法 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 是排除的候选项。 在开发周期后期破坏代码的风险，或在以前发布的代码中引入运行时行为的意外更改可能超过重构代码的可维护性优势。
+ 如果复杂性无法轻易降低，并且方法易于理解、测试和维护，则可以安全地禁止显示此规则发出的警告。 特别是， `switch` 在) 语句中包含大型 (的方法 `Select` [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 是排除的候选项。 在开发周期后期破坏代码的风险，或在以前发布的代码中引入运行时行为的意外更改可能超过重构代码的可维护性优势。
 
 ## <a name="how-cyclomatic-complexity-is-calculated"></a>如何计算圈复杂度
  圈复杂度的计算方法为：
 
-- 分支数（如 `if` 、 `while` 和 `do` ）
+-  (的分支数，例如 `if` 、 `while` 和 `do`) 
 
-- 中的 `case` 语句数`switch`
+- 中的 `case` 语句数 `switch`
 
   下面的示例演示具有不同圈复杂度的方法。
 

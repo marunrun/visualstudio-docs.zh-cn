@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 076381c93d11c2d13bdd89ea5c36c0039e15ef71
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85547467"
 ---
 # <a name="how-to-programmatically-automatically-fill-ranges-with-incrementally-changing-data"></a>如何：以编程方式自动用递增变化的数据填充范围
@@ -34,7 +34,7 @@ ms.locfileid: "85547467"
 - 要填充的范围，作为参数传递给 <xref:Microsoft.Office.Interop.Excel.Range.AutoFill%2A> 方法。 此目标范围必须包括包含初始值的范围。
 
     > [!NOTE]
-    > 不能传递 <xref:Microsoft.Office.Tools.Excel.NamedRange> 控件来代替 <xref:Microsoft.Office.Interop.Excel.Range> 。 有关详细信息，请参阅[主机项和主机控件的编程限制](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)。
+    > 不能传递 <xref:Microsoft.Office.Tools.Excel.NamedRange> 控件来代替 <xref:Microsoft.Office.Interop.Excel.Range> 。 有关详细信息，请参阅 [主机项和主机控件的编程限制](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)。
 
 ## <a name="example"></a>示例
  [!code-csharp[Trin_VstcoreExcelAutomation#49](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#49)]
@@ -45,9 +45,9 @@ ms.locfileid: "85547467"
 
  该示例要求填充三个区域：
 
-- B 列将包括5个工作日。 对于初始值，在单元格 B1 中键入**星期一**。
+- B 列将包括5个工作日。 对于初始值，在单元格 B1 中键入 **星期一** 。
 
-- C 列包含5个月。 对于初始值，请在 C1 单元格中键入 " **1 月**"。
+- C 列包含5个月。 对于初始值，请在 C1 单元格中键入 " **1 月** "。
 
 - 列 D 将包含一系列数字，每行递增2。 对于初始值，在单元格 D2 的单元格 D1 和**6**中键入**4** 。
 

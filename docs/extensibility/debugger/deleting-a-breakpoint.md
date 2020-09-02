@@ -1,5 +1,5 @@
 ---
-title: 删除断点 |微软文档
+title: 删除断点 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,20 +12,20 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: a77be200a11eb7b3985a4c1a47e4cddaa543f900
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80738949"
 ---
 # <a name="deleting-a-breakpoint"></a>删除断点
-下面描述了删除挂起的断点时的过程：
+下面描述了删除挂起断点时的过程：
 
 ## <a name="deletion-process"></a>删除过程
- 会话调试管理器 （SDM） 调用[IDebugPendingBreakpoint2：:Delete](../../extensibility/debugger/reference/idebugpendingbreakpoint2-delete.md)方法，以删除挂起的断点和所有绑定断点。
+ 会话调试管理器 (SDM) 调用 [IDebugPendingBreakpoint2：:D e) ](../../extensibility/debugger/reference/idebugpendingbreakpoint2-delete.md) 方法来删除挂起的断点以及从该断点绑定的所有绑定断点。
 
 > [!NOTE]
-> 单个绑定断点也可以通过调用[IDebugBoundBreakpoint2：:Delete](../../extensibility/debugger/reference/idebugboundbreakpoint2-delete.md)删除。
+> 还可以通过调用 [IDebugBoundBreakpoint2：:D e) ](../../extensibility/debugger/reference/idebugboundbreakpoint2-delete.md)删除单个绑定断点。
 
 ## <a name="see-also"></a>请参阅
 - [调用调试器事件](../../extensibility/debugger/calling-debugger-events.md)

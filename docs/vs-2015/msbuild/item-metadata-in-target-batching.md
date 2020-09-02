@@ -14,10 +14,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 9dd6c297e00a305fbd1b13cf0fe0bd4a4f151f6b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68192875"
 ---
 # <a name="item-metadata-in-target-batching"></a>目标批处理中的项元数据
@@ -68,8 +68,8 @@ ms.locfileid: "68192875"
 </Project>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [如何：增量生成](../msbuild/how-to-build-incrementally.md)   
  [批处理](../msbuild/msbuild-batching.md)   
- [Target 元素 (MSBuild)](../msbuild/target-element-msbuild.md)   
+ [目标元素 (MSBuild) ](../msbuild/target-element-msbuild.md)   
  [任务批处理中的项元数据](../msbuild/item-metadata-in-task-batching.md)

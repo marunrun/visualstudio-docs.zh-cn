@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: fe49c928ca3de318410eba56afeae6f4329efed3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670663"
 ---
 # <a name="how-to-substitute-parameters-in-a-template"></a>如何：替换模板中的参数
@@ -36,15 +36,15 @@ ms.locfileid: "72670663"
     ```
 
     > [!NOTE]
-    > 模板参数是以 $参数$ 格式编写的。
+    > 模板参数是以 $参数$ 格式编写的**。
 
 2. 在模板的 .vstemplate 文件中，找到包括此文件的 `ProjectItem` 元素。
 
-3. 将 `ProjectItem` 元素的 `ReplaceParameters` 特性设置为 `true`。 例如:
+3. 将 `ProjectItem` 元素的 `ReplaceParameters` 特性设置为 `true`。 例如：
 
     ```
     <ProjectItem ReplaceParameters="true">Class1.cs</ProjectItem>
     ```
 
-## <a name="see-also"></a>请参阅
- [创建项目和项模板](../ide/creating-project-and-item-templates.md)[模板参数](../ide/template-parameters.md) [Visual studio 模板架构引用](../extensibility/visual-studio-template-schema-reference.md)[项目项元素（visual studio 项模板）](../extensibility/projectitem-element-visual-studio-item-templates.md)
+## <a name="see-also"></a>另请参阅
+ [创建项目和项模板](../ide/creating-project-and-item-templates.md)[模板参数](../ide/template-parameters.md) [visual Studio 模板架构引用](../extensibility/visual-studio-template-schema-reference.md)[项目项元素 (visual studio 项模板) ](../extensibility/projectitem-element-visual-studio-item-templates.md)

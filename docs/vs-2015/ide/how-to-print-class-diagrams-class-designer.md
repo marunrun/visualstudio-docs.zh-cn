@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 318ae5314fe8a33e2c421c9532dafc08ceee3ca6
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72651749"
 ---
 # <a name="how-to-print-class-diagrams-class-designer"></a>如何：打印类关系图（类设计器）
@@ -28,9 +28,9 @@ ms.locfileid: "72651749"
 
 1. 显示类图。 （如有必要，请选中“类图”选项卡以显示类图。）
 
-2. 单击“文件”菜单上的“打印”。
+2. 单击“文件”**** 菜单上的“打印”****。
 
      随即将打印整个类图。 请注意，可能需要调整“页面设置”对话框中的设置，以便按适当大小进行打印。
 
-## <a name="see-also"></a>请参阅
- [如何：将类图元素复制到 Microsoft Office 文档（类设计器）](../ide/how-to-copy-class-diagram-elements-to-a-microsoft-office-document-class-designer.md) [如何：将类关系图导出为图像（类设计器）](../ide/how-to-export-class-diagrams-as-images-class-designer.md)
+## <a name="see-also"></a>另请参阅
+ [如何：将类图元素复制到 Microsoft Office 文档 (类设计器) ](../ide/how-to-copy-class-diagram-elements-to-a-microsoft-office-document-class-designer.md) [如何：将类关系图导出为图像 (类设计器](../ide/how-to-export-class-diagrams-as-images-class-designer.md)) 

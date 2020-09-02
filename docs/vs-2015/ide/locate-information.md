@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 4b381d7fd342a2e56bcf0c90cb52bd4912444113
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72651453"
 ---
 # <a name="locate-information"></a>找到信息
@@ -21,11 +21,11 @@ ms.locfileid: "72651453"
 
 Help Viewer 提供几种不同方式供你在帮助中找到信息。 根据所查找的信息类型，某些策略可能会比其他策略更加有效。
 
-|有关以下内容的信息|使用|
+|有关以下内容的信息|尝试|
 |----------------------------|---------|
 |用户界面的元素|F1 键|
-|目录中与当前主题同一区域的其他主题|工具栏上的“在目录中显示主题”按钮|
-|功能或技术|Index|
+|目录中与当前主题同一区域的其他主题|工具栏上的“在目录中显示主题”**** 按钮|
+|功能或技术|索引|
 |语言元素，如方法和事件|搜索|
 
 ## <a name="in-this-section"></a>本节内容

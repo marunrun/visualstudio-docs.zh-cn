@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 6e2db8596c1c16f5c9fb54a8c7c867b06e997b7b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657713"
 ---
 # <a name="evaluate-statement-command"></a>“计算语句”命令
@@ -32,13 +32,13 @@ ms.locfileid: "72657713"
 Debug.EvaluateStatement text
 ```
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
  `text`（必需）。 要评估的语句。
 
 ## <a name="remarks"></a>备注
- 用于输入 EvaluateStatement 命令的窗口确定是将等号 (=) 解释为比较运算符还是赋值运算符  。
+ 用于输入 EvaluateStatement 命令的窗口确定是将等号 (=) 解释为比较运算符还是赋值运算符****。
 
- 在“命令”窗口中，将等号 (=) 解释为比较运算符  。 例如，如果变量 `a` 和 `b` 的值不同，则命令
+ 在“命令”窗口中，将等号 (=) 解释为比较运算符****。 例如，如果变量 `a` 和 `b` 的值不同，则命令
 
 ```
 >Debug.EvaluateStatement(a=b)
@@ -46,7 +46,7 @@ Debug.EvaluateStatement text
 
  将返回 `false` 的值。
 
- 与此相反，在“即时”窗口中，将等号 (=) 解释为赋值运算符  。 例如，命令
+ 与此相反，在“即时”窗口中，将等号 (=) 解释为赋值运算符****。 例如，命令
 
 ```
 >Debug.EvaluateStatement(a=b)

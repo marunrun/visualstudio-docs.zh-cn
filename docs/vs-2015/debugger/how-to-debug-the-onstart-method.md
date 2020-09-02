@@ -1,5 +1,5 @@
 ---
-title: 如何：调试 OnStart 方法 |Microsoft Docs
+title: 如何：调试 OnStart 方法 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -21,10 +21,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 391b906889dcbe422f7ec227b1d375be82e7ac91
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65700179"
 ---
 # <a name="how-to-debug-the-onstart-method"></a>如何：调试 OnStart 方法
@@ -47,7 +47,7 @@ ms.locfileid: "65700179"
   
      ![OnStartDebug](../debugger/media/onstartdebug.png "OnStartDebug")  
   
-3. 选择“是，调试 \<服务名>。”  
+3. 选择“是，调试 \<service name>”。  
   
 4. 在“实时调试器”窗口中，选择你想要用于调试的 Visual Studio 版本。  
   
@@ -55,6 +55,6 @@ ms.locfileid: "65700179"
   
 5. 将启动 Visual Studio 新实例，并在 `Debugger.Launch()` 方法处停止执行。  
   
-## <a name="see-also"></a>请参阅  
- [调试器安全](../debugger/debugger-security.md)   
+## <a name="see-also"></a>另请参阅  
+ [调试器安全性](../debugger/debugger-security.md)   
  [调试托管代码](../debugger/debugging-managed-code.md)

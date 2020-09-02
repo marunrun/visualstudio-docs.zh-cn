@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 10a849d8545565e450cd099b32a9e3e8f7f11b56
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85537899"
 ---
 # <a name="how-to-programmatically-open-workbooks"></a>如何：以编程方式打开工作簿
@@ -37,7 +37,7 @@ ms.locfileid: "85537899"
 
 - 在 `YourWorkbook.xls` 驱动器 C 上名为的目录中必须存在名为的工作簿 `Test` 。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [使用工作簿](../vsto/working-with-workbooks.md)
 - [如何：以编程方式将文本文件作为工作簿打开](../vsto/how-to-programmatically-open-text-files-as-workbooks.md)
 - [如何：以编程方式创建新的工作簿](../vsto/how-to-programmatically-create-new-workbooks.md)

@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 436a8614c18c296c072d91116143306d898f0436
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85538848"
 ---
 # <a name="ca1407-avoid-static-members-in-com-visible-types"></a>CA1407:避免在 COM 可见类型中使用静态成员
@@ -33,7 +33,7 @@ ms.locfileid: "85538848"
 |是否重大更改|不间断|
 
 ## <a name="cause"></a>原因
- 特别标记为对组件对象模型（COM）可见的类型包含 `public``static` 方法。
+ 特别标记为对组件对象模型可见的类型 (COM) 包含 `public``static` 方法。
 
 ## <a name="rule-description"></a>规则描述
  COM 不支持 `static` 方法。
@@ -69,18 +69,18 @@ namespace Samples
 
 ## <a name="example-violation"></a>示例冲突
 
-### <a name="description"></a>描述
+### <a name="description"></a>说明
  下面的示例演示了 `static` 违反此规则的方法。
 
 ### <a name="code"></a>代码
  [!code-csharp[FxCop.Interoperability.ComVisibleStaticMembersViolation#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Interoperability.ComVisibleStaticMembersViolation/cs/FxCop.Interoperability.ComVisibleStaticMembersViolation.cs#1)]
 
 ### <a name="comments"></a>注释
- 在此示例中，无法从 COM 调用**FromPages**方法。
+ 在此示例中，无法从 COM 调用 **FromPages** 方法。
 
 ## <a name="example-fix"></a>示例修复
 
-### <a name="description"></a>描述
+### <a name="description"></a>说明
  若要解决上一示例中的冲突，可以将方法更改为实例方法，但这在此实例中没有意义。 更好的解决方案是显式应用于 `ComVisible(false)` 方法，以使其他开发人员清楚地看不到 COM 中的方法。
 
  下面的示例适用于 <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute> 方法。

@@ -1,5 +1,5 @@
 ---
-title: IDebugEngine2：：设置注册根 |微软文档
+title: IDebugEngine2：： SetRegistryRoot |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: beba304e846126b262c23c0fc8232f79de5fd794
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80730867"
 ---
 # <a name="idebugengine2setregistryroot"></a>IDebugEngine2::SetRegistryRoot
-设置调试引擎 （DE） 的注册表根。
+设置调试引擎的注册表根 (DE) 。
 
 ## <a name="syntax"></a>语法
 
@@ -41,13 +41,13 @@ int SetRegistryRoot( 
 
 ## <a name="parameters"></a>参数
 `pszRegistryRoot`\
-[在]要使用的注册表根。
+中要使用的注册表根目录。
 
 ## <a name="return-value"></a>返回值
- 如果成功，返回`S_OK`;否则，返回错误代码。
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。
 
 ## <a name="remarks"></a>备注
- 此方法允许[!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]指定 DE 应用于获取注册表设置的备用注册表根;例如，"HKEY_LOCAL_MACHINE_SOFTWARE_微软_VisualStudio_8.0Exp"。
+ 此方法允许 [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] 指定应使用的备用注册表根以获取注册表设置，例如 "HKEY_LOCAL_MACHINE \software\microsoft\visualstudio\8.0exp"。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)

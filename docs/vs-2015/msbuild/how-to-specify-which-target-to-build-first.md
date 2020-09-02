@@ -14,10 +14,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 7d7d47746aed2e663eb1fa25e3bb9ca2c6bed2c9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68178335"
 ---
 # <a name="how-to-specify-which-target-to-build-first"></a>如何：指定首先生成的目标
@@ -30,7 +30,7 @@ ms.locfileid: "68178335"
   
 #### <a name="to-specify-one-initial-target"></a>指定一个初始目标  
   
-- 在 `Project` 元素的 `InitialTargets` 属性中指定默认目标。 例如:  
+- 在 `Project` 元素的 `InitialTargets` 属性中指定默认目标。 例如：  
   
    `<Project InitialTargets="Clean">`  
   
@@ -60,7 +60,7 @@ ms.locfileid: "68178335"
      `<Project DefaultTargets="Clean;Compile">`  
   
 ## <a name="using-the-target-switch"></a>使用 /target 开关  
- 如果未在项目文件中定义默认目标，或者如果你不想使用该默认目标，则可以使用命令行开关 **/target** 来指定不同的目标。 使用 **/target** 开关指定的一个或多个目标将代替 `DefaultTargets` 属性指定的目标运行。 `InitialTargets` 属性中指定的目标将始终首先运行。  
+ 如果项目文件中未定义默认目标，或者不希望使用该默认目标，则可以使用命令行开关 **/target** 指定其他目标。 使用 **/target** 开关指定的目标或目标将运行，而不是由属性指定的目标 `DefaultTargets` 。 `InitialTargets` 属性中指定的目标将始终首先运行。  
   
 #### <a name="to-use-a-target-other-than-the-default-target-first"></a>首先使用非默认目标的目标  
   
@@ -70,11 +70,11 @@ ms.locfileid: "68178335"
   
 #### <a name="to-use-several-targets-other-than-the-default-targets-first"></a>首先使用非默认目标的多个目标  
   
-- 使用 **/target** 命令行开关列出目标，用分号或逗号分隔。 例如：  
+- 使用 **/target** 命令行开关列出以分号或逗号分隔的目标。 例如：  
   
      `msbuild <file name>.proj /t:Clean;Compile`  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
   [MSBuild](msbuild.md)  
- [目标](../msbuild/msbuild-targets.md)   
+ [攻击](../msbuild/msbuild-targets.md)   
  [如何：清理生成](../msbuild/how-to-clean-a-build.md)

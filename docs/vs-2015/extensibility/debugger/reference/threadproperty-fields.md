@@ -1,5 +1,5 @@
 ---
-title: THREADPROPERTY_FIELDS | Microsoft Docs
+title: THREADPROPERTY_FIELDS |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: dc0e0f7cae4aed887809c22bda0cd6a9ed50307f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68204808"
 ---
-# <a name="threadpropertyfields"></a>THREADPROPERTY_FIELDS
+# <a name="threadproperty_fields"></a>THREADPROPERTY_FIELDS
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-指定要检索有关线程的哪些信息。  
+指定要检索的有关线程的信息。  
   
 ## <a name="syntax"></a>语法  
   
@@ -53,41 +53,41 @@ public enum enum_THREADPROPERTY_FIELDS { 
   
 ## <a name="members"></a>成员  
  TPF_ID  
- 初始化/用`dwThreadId`字段[THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md)结构。  
+ 初始化/使用 `dwThreadId` [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md) 结构的字段。  
   
  TPF_SUSPENDCOUNT  
- 初始化/用`dwSuspendCount`字段的`THREADPROPERTIE`S 结构。  
+ 初始化/使用 `dwSuspendCount` S 结构的字段 `THREADPROPERTIE` 。  
   
  TPF_STATE  
- 初始化/用`dwThreadState`字段的`THREADPROPERTIE`S 结构。  
+ 初始化/使用 `dwThreadState` S 结构的字段 `THREADPROPERTIE` 。  
   
  TPF_PRIORITY  
- 初始化/用`bstrPriority`字段的`THREADPROPERTIE`S 结构。  
+ 初始化/使用 `bstrPriority` S 结构的字段 `THREADPROPERTIE` 。  
   
  TPF_NAME  
- 初始化/用`bstrName`字段的`THREADPROPERTIE`S 结构。  
+ 初始化/使用 `bstrName` S 结构的字段 `THREADPROPERTIE` 。  
   
  TPF_LOCATION  
- 初始化/用`bstrLocation`字段的`THREADPROPERTIE`S 结构。  
+ 初始化/使用 `bstrLocation` S 结构的字段 `THREADPROPERTIE` 。  
   
  TPF_ALLFIELDS  
- 指定的所有字段。  
+ 指定所有字段。  
   
 ## <a name="remarks"></a>备注  
- 这些值会作为参数传递[GetThreadProperties](../../../extensibility/debugger/reference/idebugthread2-getthreadproperties.md)方法，以指示的哪些字段[THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md)结构是进行初始化。  
+ 这些值作为参数传递给 [GetThreadProperties](../../../extensibility/debugger/reference/idebugthread2-getthreadproperties.md) 方法，以指示要初始化 [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md) 结构的哪些字段。  
   
- 中还使用这些值`dwFields`的成员`THREADPROPERTIES`结构，用于指示哪些字段是使用，有效。  
+ 这些值还用于 `dwFields` 结构的成员，用于 `THREADPROPERTIES` 指示哪些字段已使用并且有效。  
   
- 可能的按位组合这些标志`OR`。  
+ 这些标志可以与按位组合 `OR` 。  
   
 ## <a name="requirements"></a>要求  
- 标头： msdbg.h  
+ 标头： msdbg  
   
- 命名空间:Microsoft.VisualStudio.Debugger.Interop  
+ 命名空间： VisualStudio  
   
- 程序集：Microsoft.VisualStudio.Debugger.Interop.dll  
+ 程序集： Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>请参阅  
- [枚举](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>另请参阅  
+ [计数](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md)   
  [GetThreadProperties](../../../extensibility/debugger/reference/idebugthread2-getthreadproperties.md)

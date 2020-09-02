@@ -16,22 +16,22 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 3540420d07bd158b19f0b078f01cfdb37ce18beb
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85547545"
 ---
 # <a name="deployment-manifests-for-office-solutions"></a>Office 解决方案的部署清单
   部署清单是一个 XML 文件，用于描述 Office 解决方案的部署设置并标识当前应用程序的版本。
 
- Visual Studio 中的 Office 开发使用 [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] [ClickOnce 部署清单](../deployment/clickonce-deployment-manifest.md)引用中定义的部署清单架构。
+ Visual Studio 中的 Office 开发使用 [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] [ClickOnce 部署清单](../deployment/clickonce-deployment-manifest.md) 引用中定义的部署清单架构。
 
 ## <a name="remarks"></a>备注
  Office 解决方案的部署清单文件标识当前版本和其他部署设置。 它引用应用程序清单，并描述解决方案的当前版本和解决方案中的所有文件。
 
 ## <a name="file-name-syntax"></a>文件名语法
- 部署清单文件的名称必须以 *.vsto*扩展名结束。 尽管它是标准 [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] 部署清单，但扩展不同于使 Visual Studio Tools for Office 运行时能够处理该文件。
+ 部署清单文件的名称必须以 *.vsto* 扩展名结束。 尽管它是标准 [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] 部署清单，但扩展不同于使 Visual Studio Tools for Office 运行时能够处理该文件。
 
 ## <a name="example"></a>示例
  下面的代码示例演示了 Visual Studio Tools for Office 解决方案的部署清单。
@@ -183,6 +183,6 @@ ms.locfileid: "85547545"
 </asmv1:assembly>
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [Office 解决方案的应用程序清单](../vsto/application-manifests-for-office-solutions.md)

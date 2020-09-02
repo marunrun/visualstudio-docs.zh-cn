@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 4485489b48c4d1b03b608c6072cfc859e8bc8f59
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85537340"
 ---
 # <a name="the-workbook-used-to-create-this-project-contains-activex-controls-that-the-designer-cannot-load"></a>用于创建此项目的工作簿包含设计器无法加载的 ActiveX 控件
@@ -28,7 +28,7 @@ ms.locfileid: "85537340"
 
 1. 打开文档或工作簿。
 
-2. 删除在运行时添加的控件。 为此，可以在文档或工作簿中选择它们并按**Delete**键。
+2. 删除在运行时添加的控件。 为此，可以在文档或工作簿中选择它们并按 **Delete** 键。
 
 3. 基于文档或工作簿创建文档级解决方案。
 

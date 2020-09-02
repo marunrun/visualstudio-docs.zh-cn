@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 0097692c77d0b472c808876e9017b514b6416fc6
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85538068"
 ---
 # <a name="how-to-programmatically-add-rows-and-columns-to-word-tables"></a>如何：以编程方式向 Word 表中添加行和列
@@ -37,7 +37,7 @@ ms.locfileid: "85538068"
 > - Word 2010 文档
 > - Word 2010 模板
 >
->   如果要在任何其他类型的项目中执行此任务，则必须添加对该程序集的引用，然后必须使用该**程序集中的**类向表中添加行和列。 有关详细信息，请参阅[如何：通过主互操作程序集面向 Office 应用程序](how-to-target-office-applications-through-primary-interop-assemblies.md)和[Word 2010 主互操作程序集引用](office-primary-interop-assemblies.md)。
+>   如果要在任何其他类型的项目中执行此任务，则必须添加对该程序集的引用，然后必须使用该 **程序集中的** 类向表中添加行和列。 有关详细信息，请参阅 [如何：通过主互操作程序集面向 Office 应用程序](how-to-target-office-applications-through-primary-interop-assemblies.md) 和 [Word 2010 主互操作程序集引用](office-primary-interop-assemblies.md)。
 
 ### <a name="to-add-a-row-to-a-table"></a>向表中添加行
 
@@ -59,7 +59,7 @@ ms.locfileid: "85538068"
 > [!IMPORTANT]
 > 此代码仅在你使用 Word VSTO 外接程序模板创建的项目中运行。
 >
-> 如果要在任何其他类型的项目中执行此任务，则必须添加对该程序集的引用，然后必须使用该**程序集中的**类向表中添加行和列。 有关详细信息，请参阅[如何：通过主互操作程序集面向 Office 应用程序](how-to-target-office-applications-through-primary-interop-assemblies.md)和[Word 2010 主互操作程序集引用](office-primary-interop-assemblies.md)。
+> 如果要在任何其他类型的项目中执行此任务，则必须添加对该程序集的引用，然后必须使用该 **程序集中的** 类向表中添加行和列。 有关详细信息，请参阅 [如何：通过主互操作程序集面向 Office 应用程序](how-to-target-office-applications-through-primary-interop-assemblies.md) 和 [Word 2010 主互操作程序集引用](office-primary-interop-assemblies.md)。
 
 ### <a name="to-add-a-row-to-a-table"></a>向表中添加行
 

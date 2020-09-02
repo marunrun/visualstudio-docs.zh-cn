@@ -1,5 +1,5 @@
 ---
-title: 如何：调试部分信任应用程序 |Microsoft Docs
+title: 如何：调试部分信任的应用程序 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -19,18 +19,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 030fef750cc1e0f0932de32fca1a0ffef56bc8f3
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65704486"
 ---
-# <a name="how-to-debug-a-partial-trust-application"></a>如何：调试部分信任应用程序
+# <a name="how-to-debug-a-partial-trust-application"></a>How to: Debug a Partial Trust Application
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 适用于 Windows 应用程序和控制台应用程序。  
   
- [ClickOnce 安全和部署](../deployment/clickonce-security-and-deployment.md)轻松地部署部分信任应用程序，充分利用[代码访问安全性](https://msdn.microsoft.com/library/859af632-c80d-4736-8d6f-1e01b09ce127)来限制对计算机上的资源的访问。  
+ [ClickOnce 安全和部署](../deployment/clickonce-security-and-deployment.md) 可让你轻松地部署部分信任的应用程序，这些应用程序利用 [代码访问安全性](https://msdn.microsoft.com/library/859af632-c80d-4736-8d6f-1e01b09ce127) 来限制对计算机上资源的访问。  
   
  部分信任的应用程序有可能难以调试，因为这些应用程序的安全权限随安装地点的不同而不同，因此其行为也各不相同。 如果从 Internet 进行安装，则部分信任的应用程序只会有极少的权限； 如果从本地 Intranet 进行安装，则会有更多的权限；如果从本地计算机安装，则会有完全权限。 您还可以有自定义区域和自定义权限。 您可能需要在以上任何一个条件或所有条件下对部分信任的应用程序进行调试。 Visual Studio 幸好也能使这些工作变得容易。  
   
@@ -45,42 +45,42 @@ ms.locfileid: "65704486"
   
 ### <a name="to-choose-a-zone-for-your-partial-trust-application"></a>为部分信任的应用程序选择一个区域  
   
-1. 从**项目**菜单中，选择_Projectname_**属性**。  
+1. 从 " **项目** " 菜单中选择 "项目 _名称_**属性**"。  
   
-2. 在中*Projectname*属性页上，单击**安全**页。  
+2. 在 *项目名称* 属性页中，单击 " **安全性** " 页。  
   
-3. 选择**启用 ClickOnce 安全设置**。  
+3. 选择 " **启用 ClickOnce 安全设置**"。  
   
-4. 下**从中安装应用程序的区域**中，单击下拉列表框，然后选择你想要模拟从要安装的应用程序的区域。  
+4. 在 "要 **从中安装应用程序的区域**" 下，单击下拉列表框，然后选择要模拟从中安装应用程序的区域。  
   
-     **应用程序所需的权限**网格将显示所有可用权限。 选中标记指示授予应用程序的权限。  
+     **应用程序网格所需的权限**将显示所有可用的权限。 选中标记指示授予应用程序的权限。  
   
-5. 如果您选择的区域 **（自定义）**，选择正确的自定义设置中**设置**的列**权限**网格。  
+5. 如果选择的区域** (自定义) **，请在 "**权限**" 网格的 "**设置**" 列中选择正确的自定义设置。  
   
-6. 单击“确定”关闭属性页。  
+6. 单击“确定”关闭属性页****。  
   
 ### <a name="to-add-an-extra-permission-when-a-security-exception-occurs"></a>当发生安全异常时添加额外权限  
   
-1. **异常助手**对话框中会显示消息：**SecurityException 未处理。**  
+1. 出现 " **异常助手** " 对话框，其中显示消息： **SecurityException 未处理。**  
   
-2. 在中**异常助手**对话框中的**操作**，单击**添加到项目的权限**。  
+2. 在 " **异常助手** " 对话框中的 " **操作**" 下，单击 **"向项目添加权限**"。  
   
-3. **重新启动调试**对话框随即出现。  
+3. 此时将显示 " **重新启动调试** " 对话框。  
   
-    - 如果你想要重新启动调试会话使用新的权限，请单击**是**。  
+    - 如果要用新的权限重新启动调试会话，请单击 **"是"**。  
   
-    - 如果不想要重新启动，请单击**否**。  
+    - 如果你不想重新启动，请单击 " **否**"。  
   
 ### <a name="to-view-extra-permissions-added-while-debugging"></a>查看调试时添加的额外权限  
   
-1. 从**项目**菜单中，选择_Projectname_**属性**。  
+1. 从 " **项目** " 菜单中选择 "项目 _名称_**属性**"。  
   
-2. 在中*Projectname*属性页上，单击**安全**页。  
+2. 在 *项目名称* 属性页中，单击 " **安全性** " 页。  
   
-3. 看看**应用程序所需的权限**网格。 您添加任何额外权限有两个图标**包含**列： 的正常复选标记，所有包括的权限都有该和其他图标，看上去像一个含有字母"i"的气球。  
+3. 查看 **应用程序网格所需的权限** 。 你添加的任何额外权限在 " **包含** " 列中都有两个图标：普通复选标记（所有包括的权限都具有）和一个其他图标，该图标看起来像包含字母 "i" 的气球。  
   
-4. 使用垂直滚动条来查看整个**应用程序所需的权限**网格。  
+4. 使用垂直滚动条可以查看 **应用程序网格所需** 的全部权限。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [ClickOnce 安全和部署](../deployment/clickonce-security-and-deployment.md)   
  [调试器安全](../debugger/debugger-security.md)

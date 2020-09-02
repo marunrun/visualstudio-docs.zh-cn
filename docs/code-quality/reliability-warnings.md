@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: db99a9628992c40ef65699fee72d65b891ed1e24
-ms.sourcegitcommit: 26178b116cbf7353fee6ca989b8d872114f7b405
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "89219603"
 ---
 # <a name="reliability-warnings"></a>可靠性警告
@@ -34,7 +34,7 @@ ms.locfileid: "89219603"
 |[CA2004:移除对 GC.KeepAlive 的调用](../code-quality/ca2004.md)|如果要转换到 SafeHandle 使用情况，请删除对 GC 的所有调用。KeepAlive (对象) 。 在这种情况下，类不必调用 GC。KeepAlive，假设它们没有终结器，但依赖于 SafeHandle 来完成它们的操作系统句柄。|
 |[CA2006:使用 SafeHandle 封装本机资源](../code-quality/ca2006.md)|在托管代码中使用 IntPtr 可能意味着潜在的安全性和可靠性方面的问题。 必须检查所有使用 IntPtr 之处，以确定是否需要在该处使用 SafeHandle 或类似的技术。|
 |[CA2007：不直接等待任务](../code-quality/ca2007.md)|异步方法会[awaits](/dotnet/csharp/language-reference/keywords/await)直接等待 <xref:System.Threading.Tasks.Task> 。|
-|[CA2008：不通过 TaskScheduler 创建任务](../code-quality/ca2008.md)|任务创建或继续操作使用未指定参数的方法重载 <xref:System.Threading.Tasks.TaskScheduler> 。|
+|[CA2008：不要在未传递 TaskScheduler 的情况下创建任务](../code-quality/ca2008.md)|任务创建或继续操作使用未指定参数的方法重载 <xref:System.Threading.Tasks.TaskScheduler> 。|
 |[CA2009：请勿对 ImmutableCollection 值调用 ToImmutableCollection](../code-quality/ca2009.md)|`ToImmutable` 不必要地对命名空间中的不可变集合调用方法 <xref:System.Collections.Immutable> 。|
 |[CA2011:请勿在其资源库中分配属性](../code-quality/ca2011.md) | 属性在其自身的 [set 访问器](/dotnet/csharp/programming-guide/classes-and-structs/using-properties#the-set-accessor)中被意外赋值。 |
 |[CA2012:正确使用 ValueTask](../code-quality/ca2012.md) | 从成员调用返回的 ValueTasks 将直接等待。  多次尝试使用 ValueTask 或在已知完成前直接访问一个结果可能会导致异常或损坏。  忽略此类 ValueTask 可能表明出现功能 bug，并可能会降低性能。 |

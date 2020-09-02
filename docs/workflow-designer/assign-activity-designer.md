@@ -11,15 +11,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 83a01c96b64dcd55adfd775efc266063efbab27d
-ms.sourcegitcommit: 186c0c250d85ac74274fa1e438b4c7c7108d8a36
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86875938"
 ---
 # <a name="assign-activity-designer"></a>Assign 活动设计器
 
-"**分配**" 活动设计器用于创建和配置 <xref:System.Activities.Statements.Assign> 活动。
+" **分配** " 活动设计器用于创建和配置 <xref:System.Activities.Statements.Assign> 活动。
 
 ## <a name="the-assign-activity"></a>Assign 活动
 
@@ -27,9 +27,9 @@ ms.locfileid: "86875938"
 
 ### <a name="using-the-assign-activity-designer"></a>使用 Assign 活动设计器
 
-"**分配**" 活动设计器可在 "**工具箱**" 的 "**基元**" 类别中找到，可通过单击 "**工具箱**" 选项卡（或者，从 "**视图**" 菜单中选择 "**工具箱**" 或按 CTRL + ALT + X 来访问）。
+"**分配**" 活动设计器可在 "**工具箱**" 的 "**基元**" 类别中找到，可通过单击 "**工具箱**" 选项卡访问， (或者，从 "**视图**" 菜单中选择 "**工具箱**" 或按 CTRL + ALT + X。 ) 
 
-可以将 "**分配**" 活动设计器从 "**工具箱**" 拖放到所放置活动的工作流设计器表面上，例如中 <xref:System.Activities.Statements.Sequence> 。 删除 " **assign** " 活动设计器将创建一个 <xref:System.Activities.Statements.Assign> 活动，该活动具有 "分配" 的默认**DisplayName** 。 <xref:System.Activities.Activity.DisplayName%2A>可以在 "**分配**" 活动设计器的标头中或在属性网格的 " **DisplayName** " 框中编辑。
+可以将 " **分配** " 活动设计器从 " **工具箱** " 拖放到所放置活动的工作流设计器表面上，例如中 <xref:System.Activities.Statements.Sequence> 。 删除 " **assign** " 活动设计器将创建一个 <xref:System.Activities.Statements.Assign> 活动，该活动具有 "分配" 的默认 **DisplayName** 。 <xref:System.Activities.Activity.DisplayName%2A>可以在 "**分配**" 活动设计器的标头中或在属性网格的 " **DisplayName** " 框中编辑。
 
 ### <a name="the-assign-properties"></a>Assign 属性
 

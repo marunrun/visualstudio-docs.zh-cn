@@ -1,5 +1,5 @@
 ---
-title: 断点错误 |微软文档
+title: 断点错误 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,24 +13,24 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 0766792f19faf7c1933c6576ab41f65ec1b31ae9
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80739215"
 ---
 # <a name="breakpoint-errors"></a>断点错误
-当断点尝试绑定到代码但失败时，下面描述了该过程。
+下面描述了当断点尝试绑定到代码但失败时的过程。
 
-## <a name="troubleshoot-a-breakpoint-error"></a>排除断点错误
+## <a name="troubleshoot-a-breakpoint-error"></a>解决断点错误
 
-1. 调试引擎 （DE） 向会话调试管理器 （SDM） 发送[IDebugBreakpointErrorEvent2。](../../extensibility/debugger/reference/idebugbreakpointerrorevent2.md)
+1. 调试引擎 (DE) 将 [IDebugBreakpointErrorEvent2](../../extensibility/debugger/reference/idebugbreakpointerrorevent2.md) 发送到会话调试管理器 (SDM) 。
 
-2. SDM 调用[IDebugBreakpointErrorEvent2：：获取错误断点](../../extensibility/debugger/reference/idebugbreakpointerrorevent2-geterrorbreakpoint.md)（IDebugErrorBreakpoint2+）`ppErrorBP`以获取错误断点。
+2. SDM 调用 [IDebugBreakpointErrorEvent2：： GetErrorBreakpoint](../../extensibility/debugger/reference/idebugbreakpointerrorevent2-geterrorbreakpoint.md) (IDebugErrorBreakpoint2 * * `ppErrorBP`) 以获取错误断点。
 
-3. SDM 调用[IDebugError 断点2：：获取待定断点](../../extensibility/debugger/reference/idebugerrorbreakpoint2-getpendingbreakpoint.md)以获取错误断点源自的挂起断点。
+3. SDM 调用 [IDebugErrorBreakpoint2：： GetPendingBreakpoint](../../extensibility/debugger/reference/idebugerrorbreakpoint2-getpendingbreakpoint.md) 以获取从中发出错误断点的挂起断点。
 
-4. SDM 调用[IDebugErrorBreakpoint2：：获取断点解析](../../extensibility/debugger/reference/idebugerrorbreakpoint2-getbreakpointresolution.md)，以获取有关错误断点未能绑定的原因。
+4. SDM 调用 [IDebugErrorBreakpoint2：： GetBreakpointResolution](../../extensibility/debugger/reference/idebugerrorbreakpoint2-getbreakpointresolution.md) 以获取错误断点绑定失败的原因。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [调用调试器事件](../../extensibility/debugger/calling-debugger-events.md)

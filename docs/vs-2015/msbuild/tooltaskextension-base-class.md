@@ -17,10 +17,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 41ac1db7348ff993671623214b59113d6210b83e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68193338"
 ---
 # <a name="tooltaskextension-base-class"></a>ToolTaskExtension 基类
@@ -31,12 +31,12 @@ ms.locfileid: "68193338"
 ## <a name="parameters"></a>参数  
  下表介绍基类的参数。  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |<xref:Microsoft.Build.Utilities.Task.BuildEngine%2A>|可选 <xref:Microsoft.Build.Framework.IBuildEngine> 参数。<br /><br /> 指定可供任务使用的生成引擎接口。 生成引擎会自动设置此参数，以允许任务回调到其中。|  
 |<xref:Microsoft.Build.Utilities.Task.BuildEngine2%2A>|可选 <xref:Microsoft.Build.Framework.IBuildEngine2> 参数。<br /><br /> 指定可供任务使用的生成引擎接口。 生成引擎会自动设置此参数，以允许任务回调到其中。<br /><br /> 这是一个便捷属性，使从此类继承的任务作者不必将值从 `IBuildEngine` 强制转换为 `IBuildEngine2`。|  
 |<xref:Microsoft.Build.Utilities.Task.BuildEngine3%2A>|可选 <xref:Microsoft.Build.Framework.IBuildEngine3> 参数。<br /><br /> 指定主机使用的生成引擎接口。|  
-|<xref:Microsoft.Build.Utilities.ToolTask.EchoOff%2A>|可选 `bool` 参数。<br /><br /> 设置为 `true` 时，此任务会将 /Q  传递到 cmd.exe 命令行，以便命令行不会复制到 stdout。|  
+|<xref:Microsoft.Build.Utilities.ToolTask.EchoOff%2A>|可选 `bool` 参数。<br /><br /> 当设置为时 `true` ，此任务将 **/q** 传递到 cmd.exe 命令行，以便命令行不会复制到 stdout。|  
 |<xref:Microsoft.Build.Utilities.ToolTask.EnvironmentVariables%2A>|可选的 `String` 数组参数。<br /><br /> 环境变量对的数组（使用等号分隔）。 这些变量会传递到生成的可执行文件以及（有选择地重写）常规环境块。|  
 |<xref:Microsoft.Build.Utilities.ToolTask.ExitCode%2A>|可选 `Int32` 输出只读参数。<br /><br /> 指定执行的命令提供的退出代码。 如果任务记录了任何错误，但进程的退出代码为 0（成功），则这设置为 -1。|  
 |<xref:Microsoft.Build.Utilities.Task.HostObject%2A>|可选 <xref:Microsoft.Build.Framework.ITaskHost> 参数。<br /><br /> 指定主机对象实例（可以为 null）。 如果主机 IDE 具有与此特定任务关联的主机对象，则生成引擎会设置此属性。|  
@@ -51,5 +51,5 @@ ms.locfileid: "68193338"
 |<xref:Microsoft.Build.Utilities.ToolTask.YieldDuringToolExecution%2A>|可选 `bool` 参数。<br /><br /> 设置为 `true` 时，此任务会在其任务执行时生成节点。|  
   
 ## <a name="see-also"></a>另请参阅  
- [任务参考](../msbuild/msbuild-task-reference.md)   
+ [任务引用](../msbuild/msbuild-task-reference.md)   
  [任务](../msbuild/msbuild-tasks.md)

@@ -1,5 +1,5 @@
 ---
-title: IPropertyProxyEEside：获取托管查看器创建数据 |微软文档
+title: IPropertyProxyEESide：： GetManagedViewerCreationData |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 2e72922b348c8744f10037e199e93f735ff4be8e
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80714967"
 ---
 # <a name="ipropertyproxyeesidegetmanagedviewercreationdata"></a>IPropertyProxyEESide::GetManagedViewerCreationData
@@ -51,30 +51,30 @@ int GetManagedViewerCreationData(
 
 ## <a name="parameters"></a>参数
 `assemName`\
-[出]返回保存此对象的程序集的名称。
+弄返回包含此对象的程序集的名称。
 
 `assemBytes`\
-[出]返回包含此对象的程序集字节的[IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md)对象（如果没有可用的字节，则为空值）。
+弄返回一个 [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) 对象，该对象包含此对象的程序集字节 (如果没有可用字节) ，则此值为 null 值。
 
 `assemPdb`\
-[出]返回包含`IEEDataStorage`此对象符号存储信息的对象（如果没有可用的符号存储，则为空值）。
+弄返回一个 `IEEDataStorage` 对象，该对象包含此对象的符号存储区信息 (如果没有符号存储区) 可用，则此值为 null 值。
 
 `className`\
-[出]返回包含此对象的类名称。
+弄返回包含此对象的类名。
 
 `alr`\
-[出]从["装配"](../../../extensibility/debugger/reference/assemblylocresolution.md)枚举中返回一个值，指示程序集的位置。
+弄返回 [ASSEMBLYLOCRESOLUTION](../../../extensibility/debugger/reference/assemblylocresolution.md) 枚举中的一个值，该值指示程序集的位置。
 
 `replacementOk`\
-[出]如果可以更改此`TRUE`对象的值，则返回非零 （ ）， 如果可以更改此对象的值。如果对象`FALSE`是只读的，则为零 （ ）。
+弄 `TRUE` 如果可以更改此对象的值，则返回非零 () ; `FALSE` 如果对象是只读的，则返回零 () 。
 
 ## <a name="return-value"></a>返回值
- 如果成功，返回`S_OK`;否则，返回错误代码。
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。
 
 ## <a name="remarks"></a>备注
- 此方法由类型可视化器用于实例化托管查看器。
+ 类型可视化工具使用此方法实例化托管查看器。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IPropertyProxyEESide](../../../extensibility/debugger/reference/ipropertyproxyeeside.md)
 - [ASSEMBLYLOCRESOLUTION](../../../extensibility/debugger/reference/assemblylocresolution.md)
 - [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md)

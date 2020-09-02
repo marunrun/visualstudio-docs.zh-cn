@@ -1,5 +1,5 @@
 ---
-title: 错误：远程计算机未显示在远程连接对话框中，|Microsoft Docs
+title: 错误：远程计算机未显示在“远程连接”对话框中 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -15,10 +15,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: a97211c1fa86123a2a7a65f2ff86b0cecac957dc
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65697325"
 ---
 # <a name="error-remote-machine-does-not-appear-in-a-remote-connections-dialog"></a>错误：远程计算机未显示在“远程连接”对话框中
@@ -26,7 +26,7 @@ ms.locfileid: "65697325"
 
 如果远程计算机未显示在“远程连接”对话框中，请检查以下常见原因。  
   
- 如果使用托管的兼容模式，请查看 Visual Studio 2010 文档：[故障排除远程调试的 Visual Studio 2010](https://msdn.microsoft.com/library/2ys11ead\(v=vs.100\).aspx) 。  
+ 如果你使用托管的兼容模式，请检查的 Visual Studio 2010 文档： [远程调试疑难解答 - Visual Studio 2010](https://msdn.microsoft.com/library/2ys11ead\(v=vs.100\).aspx) 。  
   
 ### <a name="common-causes-for-this-error"></a>导致此错误的常见原因  
   
@@ -38,5 +38,5 @@ ms.locfileid: "65697325"
   
 - 防病毒软件正在阻止 Visual Studio 和远程计算机之间的通信。 若要解决此问题，请将防病毒软件配置为允许 Visual Studio 和远程调试器 (msvsmon) 进行通信。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [在设备上安装远程工具](https://msdn.microsoft.com/library/90f45630-0d26-4698-8c1f-63f85a12db9c)

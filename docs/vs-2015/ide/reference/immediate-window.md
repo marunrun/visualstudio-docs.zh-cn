@@ -16,21 +16,21 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 3177c92713f6fdeb9b9b8a47a0da38608714174d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72651292"
 ---
 # <a name="immediate-window"></a>即时窗口
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-**即时**窗口用于调试和计算表达式、执行语句、输出变量值等。 借助即时窗口，用户可输入要在调试期间使用开发语言计算或执行的表达式。 若要显示**即时**窗口，请打开要编辑的项目，然后从“调试”菜单中选择“窗口”，再选择“即时”，或按 CTRL+ALT+I。
+**即时**窗口用于调试和计算表达式、执行语句、输出变量值等。 借助即时窗口，用户可输入要在调试期间使用开发语言计算或执行的表达式。 若要显示**即时**窗口，请打开要编辑的项目，然后从“调试”**** 菜单中选择“窗口”****，再选择“即时”****，或按 CTRL+ALT+I。
 
  用户可使用此窗口发出单个 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 命令。 可用的命令包括 `EvaluateStatement`，该命令可用于为变量赋值。 **即时**窗口还支持 IntelliSense。
 
 ## <a name="displaying-the-values-of-variables"></a>显示变量的值
- 此窗口在调试应用程序时特别有用。 例如，若要检查变量 `varA` 的值，可使用 [Print 命令](../../ide/reference/print-command.md)：
+ 此窗口在调试应用程序时特别有用。 例如，若要检查变量的值 `varA` ，可以使用 [Print 命令](../../ide/reference/print-command.md)：
 
 ```
 >Debug.Print varA
@@ -45,7 +45,7 @@ ms.locfileid: "72651292"
  此命令的这两个版本都将返回变量 `varA` 的值。
 
 > [!NOTE]
-> 若要在**即时**窗口中发出 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 命令，必须以大于号 (>) 作为命令的开头。 若要输入多个命令，请切换到**命令**窗口。
+> 若要在**即时**窗口中发出 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 命令，必须以大于号 (>) 作为命令的开头。 若要输入多个命令，请切换到 **命令** 窗口。
 
 ## <a name="design-time-expression-evaluation"></a>设计时表达式计算
  用户可在设计时使用**即时**窗口执行函数或子例程。
@@ -68,7 +68,7 @@ ms.locfileid: "72651292"
    End Module
    ```
 
-2. 在“调试”菜单中单击“窗口”，然后单击“即时”。
+2. 在“调试”**** 菜单中单击“窗口”****，然后单击“即时”****。
 
 3. 在**即时**窗口中键入 `?MyFunction(2)`，然后按 Enter。
 
@@ -118,9 +118,9 @@ ms.locfileid: "72651292"
 
 #### <a name="to-toggle-first-chance-exception-notifications-in-the-immediate-window"></a>在“即时”窗口中切换首次异常通知开关
 
-1. 在“视图”菜单上单击“其他窗口”，然后单击“输出”。
+1. 在“视图”**** 菜单上单击“其他窗口”****，然后单击“输出”****。
 
-2. 右键单击**输出**窗口的文本区域，然后选择或取消选择“异常消息”。
+2. 右键单击**输出**窗口的文本区域，然后选择或取消选择“异常消息”****。
 
-## <a name="see-also"></a>请参阅
- 在 Visual Studio 调试器中[使用调试器](../../debugger/navigating-through-code-with-the-debugger.md)[命令窗口](../../ide/reference/command-window.md)导航代码[在 Visual studio 中进行调试](../../debugger/debugging-in-visual-studio.md)[基本](../../debugger/debugger-basics.md)[操作演练：在设计时调试](../../debugger/walkthrough-debugging-at-design-time.md) [visual studio 命令别名](../../ide/reference/visual-studio-command-aliases.md)[使用 RegularVisual Studio 中的表达式](../../ide/using-regular-expressions-in-visual-studio.md)
+## <a name="see-also"></a>另请参阅
+ 在 Visual Studio 调试器中[使用调试器](../../debugger/navigating-through-code-with-the-debugger.md)[命令窗口](../../ide/reference/command-window.md)导航代码[在 Visual studio 中进行调试](../../debugger/debugging-in-visual-studio.md)[基本](../../debugger/debugger-basics.md)[操作演练：在设计时调试](../../debugger/walkthrough-debugging-at-design-time.md)Visual Studio[命令别名](../../ide/reference/visual-studio-command-aliases.md)[使用 visual studio 中的正则表达式](../../ide/using-regular-expressions-in-visual-studio.md)

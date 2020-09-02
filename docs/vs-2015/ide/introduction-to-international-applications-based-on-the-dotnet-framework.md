@@ -27,10 +27,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 0d57cee8591196d12e51e58fb0e5e6a4a2cdf94a
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75848367"
 ---
 # <a name="introduction-to-international-applications-based-on-the-net-framework"></a>介绍基于 .NET Framework 的国际应用程序
@@ -46,7 +46,7 @@ ms.locfileid: "75848367"
 
  借助可同时用于 Windows 窗体和 Web 窗体的项目系统，用户可使用程序集资源文件模板构建资源文件、访问资源以及构建项目。 附属程序集将随主程序集一并创建。
 
- 执行本地化应用程序时，其外观由两个区域性值确定。 （区域性  是一组与用户语言、环境和区域性惯例相关的用户首选项信息。）UI 区域性设置确定将加载哪些资源。 UI 区域性在 Web.config 文件和页面指令中设置为 `UICulture`，在 Visual Basic 或 Visual C# 代码中设置为 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A>。 区域性设置确定值的格式，如日期、数字、货币等。 区域性在 Web.config 文件和页面指令中设置为 `Culture`，在 Visual Basic 或 Visual C# 代码中设置为 <xref:System.Globalization.CultureInfo.CurrentCulture%2A>。
+ 执行本地化应用程序时，其外观由两个区域性值确定。  (*区域性* 是一组与用户的语言、环境和文化约定相关的用户首选项信息。 ) UI 区域性设置确定将加载哪些资源。 UI 区域性在 Web.config 文件和页面指令中设置为 `UICulture`，在 Visual Basic 或 Visual C# 代码中设置为 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A>。 区域性设置确定值的格式，如日期、数字、货币等。 区域性在 Web.config 文件和页面指令中设置为 `Culture`，在 Visual Basic 或 Visual C# 代码中设置为 <xref:System.Globalization.CultureInfo.CurrentCulture%2A>。
 
 ## <a name="see-also"></a>另请参阅
  <xref:System.Globalization> <xref:System.Resources>

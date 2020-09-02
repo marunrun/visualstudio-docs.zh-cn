@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 0a41f3f507579cbd2649e33e81d1368fb5404799
-ms.sourcegitcommit: d8609a78b460d4783f5d59c0c89454910a4dbd21
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88238837"
 ---
 # <a name="registering-a-legacy-language-service-2"></a>注册旧版语言服务2
@@ -31,7 +31,7 @@ ms.locfileid: "88238837"
 |----------|----------|-----------|-----------------|
 |（默认值）|REG_SZ|*\<GUID>*|语言服务的 GUID。|
 |LangResID|REG_DWORD|0x0-0xffff|字符串资源标识符 (语言的本地化文本名称的 Resid 标识) 。|
-|程序包|REG_SZ|*\<GUID>*|VSPackage 的 GUID。|
+|包|REG_SZ|*\<GUID>*|VSPackage 的 GUID。|
 |ShowCompletion|REG_DWORD|0-1|指定是否在 "**选项**" 对话框中启用**语句完成**选项。|
 |ShowSmartIndent|REG_DWORD|0-1|指定是否在 "**选项**" 对话框中启用选择**智能**缩进的选项。|
 |RequestStockColors|REG_DWORD|0-1|指定是否使用自定义或默认颜色来为关键字着色。|
@@ -66,7 +66,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\
 
 |名称|类型|范围|说明|
 |----------|----------|-----------|-----------------|
-|（默认值）|REG_SZ|text|默认值可用于记录语言的名称。 此密钥的名称是在 \AD7Metrics\Expression 计算器中具有相应条目的表达式计算器的 GUID *\<VS Reg Root>* 。|
+|（默认值）|REG_SZ|文本|默认值可用于记录语言的名称。 此密钥的名称是在 \AD7Metrics\Expression 计算器中具有相应条目的表达式计算器的 GUID *\<VS Reg Root>* 。|
 
 ### <a name="example"></a>示例
 
@@ -86,8 +86,8 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\
 |名称|类型|范围|说明|
 |----------|----------|-----------|-----------------|
 |（默认值）|REG_SZ|Resid 标识|此选项页的本地化显示名称。 名称可以是文本文本或 # `nnn` ，其中 `nnn` 是指定 VSPackage 的附属 DLL 中的字符串资源 ID。|
-|程序包|REG_SZ|*GUID*|实现此选项页的 VSPackage 的 GUID。|
-|页|REG_SZ|*GUID*|要通过调用方法从 VSPackage 请求的属性页的 GUID <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetPropertyPage%2A> 。 如果此注册表项不存在，则注册表项将描述一个节点，而不是页。|
+|包|REG_SZ|*GUID*|实现此选项页的 VSPackage 的 GUID。|
+|页面|REG_SZ|*GUID*|要通过调用方法从 VSPackage 请求的属性页的 GUID <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetPropertyPage%2A> 。 如果此注册表项不存在，则注册表项将描述一个节点，而不是页。|
 
 ### <a name="example"></a>示例
 
@@ -141,7 +141,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\
 |DisplayName|REG_SZ|Resid 标识|要在 " **打开方式** " 对话框中显示的名称。 名称是字符串资源 ID 或标准格式的名称。|
 |ExcludeDefTextEditor|REG_DWORD|0-1|用于 " **打开方式** " 菜单命令。 如果你不希望在特定文件类型的可用编辑器列表中列出默认文本编辑器，请将此值设置为1。|
 |LinkedEditorGUID|REG_SZ|*\<GUID>*|用于任何可以打开包含代码页支持的文件的语言服务。 例如，当你使用 " **打开方式** " 命令打开 .txt 文件时，提供的选项可用于在不使用编码的情况下使用源代码编辑器。<br /><br /> 子项名称中指定的 GUID 适用于代码页编辑器工厂;此特定注册表项中指定的链接 GUID 用于常规编辑器工厂。 此项的目的是，如果 IDE 不使用默认编辑器打开文件，IDE 将尝试使用列表中的下一个编辑器。 由于此编辑器工厂基本上与失败的编辑器工厂相同，因此下一个编辑器不应为代码页编辑器工厂。|
-|程序包|REG_SZ|*\<GUID>*|显示名称的 Resid 标识的 VSPackage GUID。|
+|包|REG_SZ|*\<GUID>*|显示名称的 Resid 标识的 VSPackage GUID。|
 
 ### <a name="example"></a>示例
 

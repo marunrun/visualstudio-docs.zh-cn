@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 12b04b985d54161343d26cdd32178b67bd6e6b91
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85547233"
 ---
 # <a name="how-to-cache-data-in-a-password-protected-document"></a>如何：在受密码保护的文档中缓存数据
@@ -30,7 +30,7 @@ ms.locfileid: "85547233"
 
 ### <a name="to-cache-data-in-a-word-document-that-is-protected-with-a-password"></a>在受密码保护的 Word 文档中缓存数据
 
-1. 在 `ThisDocument` 类中，将要缓存的公共字段或属性标记为。 有关详细信息，请参阅[缓存数据](../vsto/caching-data.md)。
+1. 在 `ThisDocument` 类中，将要缓存的公共字段或属性标记为。 有关详细信息，请参阅 [缓存数据](../vsto/caching-data.md)。
 
 2. 重写 <xref:Microsoft.Office.Tools.Word.DocumentBase.UnprotectDocument%2A> 类中的方法 `ThisDocument` ，并从文档中移除保护。
 
@@ -54,7 +54,7 @@ ms.locfileid: "85547233"
 
 ### <a name="to-cache-data-in-an-excel-workbook-that-is-protected-with-a-password"></a>在受密码保护的 Excel 工作簿中缓存数据
 
-1. 在 `ThisWorkbook` 类或 `Sheet` *n*类中，将要缓存的公共字段或属性标记为。 有关详细信息，请参阅[缓存数据](../vsto/caching-data.md)。
+1. 在 `ThisWorkbook` 类或 `Sheet` *n*类中，将要缓存的公共字段或属性标记为。 有关详细信息，请参阅 [缓存数据](../vsto/caching-data.md)。
 
 2. 重写 <xref:Microsoft.Office.Tools.Excel.WorkbookBase.UnprotectDocument%2A> 类中的方法 `ThisWorkbook` ，并从工作簿中移除保护。
 
@@ -73,7 +73,7 @@ ms.locfileid: "85547233"
 ### <a name="compile-the-code"></a>编译代码
  将此代码添加到 `ThisWorkbook` 项目中的类。 此代码假定密码存储在名为的字段中 `securelyStoredPassword` 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [缓存数据](../vsto/caching-data.md)
 - [如何：缓存数据以便脱机使用或在服务器上使用](../vsto/how-to-cache-data-for-use-offline-or-on-a-server.md)
 - [如何：以编程方式在 Office 文档中缓存数据源](../vsto/how-to-programmatically-cache-a-data-source-in-an-office-document.md)

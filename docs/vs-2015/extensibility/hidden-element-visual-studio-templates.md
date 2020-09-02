@@ -1,5 +1,5 @@
 ---
-title: 隐藏元素 （Visual Studio 模板） |Microsoft Docs
+title: Visual Studio 模板 (的隐藏元素) |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -13,20 +13,20 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 7f5150cda1b1285132fd70cd7bd7fa4572121057
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68204254"
 ---
 # <a name="hidden-element-visual-studio-templates"></a>Hidden 元素（Visual Studio 模板）
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-指定模板是否出现在**新的项目**或**添加新项**对话框。  
+指定模板是否出现在 " **新建项目** " 或 " **添加新项** " 对话框中。  
   
- \<VSTemplate >  
- \<TemplateData >  
- \<隐藏 >  
+ \<VSTemplate>  
+ \<TemplateData>  
+ \<Hidden>  
   
 ## <a name="syntax"></a>语法  
   
@@ -52,12 +52,12 @@ ms.locfileid: "68204254"
 ## <a name="text-value"></a>文本值  
  需要一个文本值。  
   
- 文本必须是`true`或`false`，以指示是否将该模板出现在**新项目**或**添加新项**对话框。  
+ 文本必须是 `true` 或 `false` ，指示模板是否将出现在 " **新建项目** " 或 " **添加新项** " 对话框中。  
   
 ## <a name="remarks"></a>备注  
  `Hidden` 是可选元素。  
   
- 如果不指定的任何其他子元素`TemplateData`元素是必需的。  
+ 如果已指定，则不需要元素的其他子元素 `TemplateData` 。  
   
 ## <a name="example"></a>示例  
  以下示例阐释 [!INCLUDE[csprcs](../includes/csprcs-md.md)] 模板的元数据。  
@@ -87,6 +87,6 @@ ms.locfileid: "68204254"
 </VSTemplate>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)   
  [创建项目和项模板](../ide/creating-project-and-item-templates.md)

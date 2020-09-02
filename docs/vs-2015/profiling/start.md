@@ -10,16 +10,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 83dc76e3e92a05f936d94c8cd0f6a2b9b69e4cc1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68192818"
 ---
 # <a name="start"></a>Start
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-**Start** 选项是一个 VSPerfCmd.exe 选项卡，可将探查器初始化为指定分析方法。  
+Start 选项是一个 VSPerfCmd.exe 选项，可将探查器初始化为指定分析方法****。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,7 +42,7 @@ VSPerfCmd.exe /Start:Method /Output:FileName [Options]
 ## <a name="required-options"></a>必需选项  
  在命令行上指定 **Start** 时，必须指定 **Output** 选项。  
   
- **Output:** `filename`  
+ **输出：**`filename`  
  指定输出文件名。  
   
 ## <a name="exclusive-options"></a>独占选项  
@@ -51,7 +51,7 @@ VSPerfCmd.exe /Start:Method /Output:FileName [Options]
  **CrossSession**&#124;**CS**  
  启用跨进程分析。 同时支持选项名 **CrossSession** 和 **CS**。  
   
- **User:** [`domain\`]`username`  
+ **用户：**[ `domain\` ]`username`  
  使客户端可以用指定帐户访问监视器。  
   
  **WinCounter:** `Path` [**Automark**:`n`]  
@@ -60,7 +60,7 @@ VSPerfCmd.exe /Start:Method /Output:FileName [Options]
 ## <a name="invalid-options"></a>无效选项  
  以下选项不能在命令行上与 **Start** 选项一起使用。  
   
- **Status**  
+ **状态**  
  **Status** 应用于进行分析的进程。 它列出进程和线程及其当前分析状态 (On/Off)。 例如，如果某个进程已停止，则 **Status** 不会在报告中对此进行指示。 **Status** 会显示该进程是否进行分析。  
   
  **Shutdown**[ **:** `Timeout`]  

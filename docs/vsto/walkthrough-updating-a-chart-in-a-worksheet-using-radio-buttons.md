@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: e63d7d09a09fe4c051d8137428fdae90490cbae5
-ms.sourcegitcommit: d8609a78b460d4783f5d59c0c89454910a4dbd21
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88238811"
 ---
 # <a name="walkthrough-updating-a-chart-in-a-worksheet-using-radio-buttons"></a>演练：使用单选按钮更新工作表中的图表
@@ -97,7 +97,7 @@ ms.locfileid: "88238811"
 
 2. 单击 " **浏览** " 按钮，浏览到本演练前面部分创建的工作簿。
 
-3. 单击“确定”。 
+3. 单击“确定”。
 
      Visual Studio 将在设计器中打开新的 Excel 工作簿，并将 **我的 Excel 图表** 项目添加到 **解决方案资源管理器**。
 
@@ -108,7 +108,7 @@ ms.locfileid: "88238811"
 
 1. <xref:Microsoft.Office.Tools.Excel.Chart>在设计器中选择控件，并在 "**属性**" 窗口中更改以下属性。
 
-    |properties|值|
+    |属性|值|
     |--------------|-----------|
     |**名称**|**dataChart**|
     |**HasLegend**|**false**|
@@ -132,28 +132,28 @@ ms.locfileid: "88238811"
 
 2. 从 "**工具箱**" 的 "**公共控件**" 选项卡中，将**单选按钮**控件拖到用户控件，并更改以下属性。
 
-   | properties | 值 |
+   | 属性 | 值 |
    |----------|------------------|
    | **名称** | **columnChart** |
    | **Text** | **柱形图** |
 
 3. 将第二个单选按钮添加到用户控件，并更改以下属性。
 
-   | properties | 值 |
+   | 属性 | 值 |
    |----------|---------------|
    | **名称** | **barChart** |
    | **Text** | **条形图** |
 
 4. 将第三个单选按钮添加到用户控件，并更改以下属性。
 
-   | properties | 值 |
+   | 属性 | 值 |
    |----------|----------------|
    | **名称** | **lineChart** |
    | **Text** | **折线图** |
 
 5. 将第四个单选按钮添加到用户控件，并更改以下属性。
 
-   |properties|值|
+   |属性|值|
    |--------------|-----------|
    |**名称**|**areaBlockChart**|
    |**Text**|**面积图**|

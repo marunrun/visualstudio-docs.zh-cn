@@ -8,10 +8,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 6a4761703610a87818cd1512f96530a0f865faf0
-ms.sourcegitcommit: d8609a78b460d4783f5d59c0c89454910a4dbd21
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88238538"
 ---
 # <a name="get-started-with-domain-specific-languages"></a>域特定语言入门
@@ -61,7 +61,7 @@ Dsl 的一个主体应用程序是生成程序代码、配置文件和其他项�
 
      ![“创建 DSL”对话框](../modeling/media/create_dsldialog.png)
 
-4. 在 " **名称** " 框中，键入 **FamilyTree**。 单击“确定”。 
+4. 在 " **名称** " 框中，键入 **FamilyTree**。 单击“确定”。
 
      " **域特定语言向导** " 将打开，并显示模板 DSL 解决方案列表。
 

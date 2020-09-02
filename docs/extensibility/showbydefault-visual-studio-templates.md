@@ -1,5 +1,5 @@
 ---
-title: 显示默认元素（可视化工作室模板）
+title: " (Visual Studio 模板的 ShowByDefault 元素) "
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -15,16 +15,17 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 711cff06637957b796525543a02bfdd376e04284
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80700098"
 ---
-# <a name="showbydefault-element-visual-studio-templates"></a>显示默认元素（可视化工作室模板）
-如果`false`指定模板将仅在指定的[模板组 ID](../extensibility/templategroupid-element-visual-studio-templates.md)下显示。
+# <a name="showbydefault-element-visual-studio-templates"></a> (Visual Studio 模板的 ShowByDefault 元素) 
+如果 `false` 为，则指定模板将只显示在指定的 [TemplateGroupID](../extensibility/templategroupid-element-visual-studio-templates.md)下。
 
- \<VStemplate>\<模板数据>\<显示默认>
+ \<VSTemplate> \<TemplateData>
+ \<ShowByDefault>
 
 ## <a name="syntax"></a>语法
 
@@ -83,7 +84,7 @@ ms.locfileid: "80700098"
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>请参阅
-- [创建项目和项目模板](../ide/creating-project-and-item-templates.md)
+## <a name="see-also"></a>另请参阅
+- [创建项目和项模板](../ide/creating-project-and-item-templates.md)
 - [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
 - [TemplateGroupID 元素（Visual Studio 模板）](../extensibility/templategroupid-element-visual-studio-templates.md)

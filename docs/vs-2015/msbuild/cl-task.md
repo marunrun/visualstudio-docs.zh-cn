@@ -23,16 +23,16 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 8307bc2c9efcbbab531754cd2d49fa18b04cc48a
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65698640"
 ---
 # <a name="cl-task"></a>CL 任务
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-包装 Visual C++ 编译器工具 cl.exe。 编译器生成可执行 (.exe) 文件、动态链接库 (.dll) 文件或者代码模块 (.netmodule) 文件。 有关详细信息，请参阅[编译器选项](https://msdn.microsoft.com/library/ed3376c8-bef4-4c9a-80e9-3b5da232644c)。  
+包装 Visual C++ 编译器工具 cl.exe。 编译器生成可执行 (.exe) 文件、动态链接库 (.dll) 文件或者代码模块 (.netmodule) 文件。 有关详细信息，请参阅 [编译器选项](https://msdn.microsoft.com/library/ed3376c8-bef4-4c9a-80e9-3b5da232644c)。  
   
 ## <a name="parameters"></a>参数  
  下表描述了 **CL** 任务的参数。 大多数任务参数和若干组参数都对应于命令行选项。  
@@ -43,17 +43,17 @@ ms.locfileid: "65698640"
   
    将目录添加到在其中搜索包含文件的目录列表中。  
   
-   有关详细信息，请参阅 [/I（附加包含目录）](https://msdn.microsoft.com/library/3e9add2a-5ed8-4d15-ad79-5b411e313a49)。  
+   有关详细信息，请参阅 [/i (其他包含目录) ](https://msdn.microsoft.com/library/3e9add2a-5ed8-4d15-ad79-5b411e313a49)。  
   
 - **AdditionalOptions**  
   
    可选 String 参数。  
   
-   命令行选项列表。 例如，“/*option1* /*option2* /*option#*”。 使用此参数可指定未由任何其他任务参数表示的命令行选项。  
+   命令行选项列表。 例如，"/*选项 1*  / *选项 2*  / *选项 #*"。 使用此参数可指定未由任何其他任务参数表示的命令行选项。  
   
-   有关详细信息，请参阅[编译器选项](https://msdn.microsoft.com/library/ed3376c8-bef4-4c9a-80e9-3b5da232644c)。  
+   有关详细信息，请参阅 [编译器选项](https://msdn.microsoft.com/library/ed3376c8-bef4-4c9a-80e9-3b5da232644c)。  
   
-- AdditionalUsingDirectories 可选 String[] 参数。  
+- AdditionalUsingDirectories**** 可选 String[] 参数。  
   
    指定在解析传递给 **#using** 指令的文件引用时编译器将搜索的目录。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "65698640"
   
    创建包含程序集代码的列表文件。  
   
-   有关详细信息，请参阅 [/FA、/Fa（列表文件）](https://msdn.microsoft.com/library/c7507d0e-c69d-44f9-b8e2-d2c398697402)中的 **/Fa** 选项。  
+   有关详细信息，请参阅/Fa 中的 **/Fa** 选项 [、/Fa (列出文件) ](https://msdn.microsoft.com/library/c7507d0e-c69d-44f9-b8e2-d2c398697402)。  
   
 - **AssemblerOutput**  
   
@@ -81,15 +81,15 @@ ms.locfileid: "65698640"
   
   - **NoListing** - *\<none>*  
   
-  - **AssemblyCode** - **/FA**  
+  - **AssemblyCode**  - **/FA**  
   
-  - **AssemblyAndMachineCode** - **/FAc**  
+  - **AssemblyAndMachineCode**  - **/FAc**  
   
-  - **AssemblyAndSourceCode** - **/FAs**  
+  - **AssemblyAndSourceCode**  - **/FAs**  
   
-  - **All** - **/FAcs**  
+  - **全部**  - **/FAcs**  
   
-    有关详细信息，请参阅 [/FA、/Fa（列表文件）](https://msdn.microsoft.com/library/c7507d0e-c69d-44f9-b8e2-d2c398697402)中的 **/FA**、**/FAc**、**/FAs** 和 **/FAcs** 选项。  
+    有关详细信息，请参阅/FA 中的 **/FA**、 **/FAc**、 **/FAs**和 **/FAcs** 选项， [/FA (列出文件) ](https://msdn.microsoft.com/library/c7507d0e-c69d-44f9-b8e2-d2c398697402)。  
   
 - **BasicRuntimeChecks**  
   
@@ -99,13 +99,13 @@ ms.locfileid: "65698640"
   
    指定以下值之一，其中每个值对应于一个命令行选项。  
   
-  - **Default** -                          *\<none>*  
+  - **缺省值** -                          *\<none>*  
   
-  - **StackFrameRuntimeCheck** - **/RTCs**  
+  - **StackFrameRuntimeCheck**  - **/RTCs**  
   
-  - **UninitializedLocalUsageCheck** - **/RTCu**  
+  - **UninitializedLocalUsageCheck**  - **/RTCu**  
   
-  - **EnableFastChecks** -                          **/RTC1**  
+  - **EnableFastChecks**  -                          **/RTC1**  
   
     有关详细信息，请参阅 [/RTC（运行时错误检查）](https://msdn.microsoft.com/library/9702c558-412c-4004-acd5-80761f589368)。  
   
@@ -147,11 +147,11 @@ ms.locfileid: "65698640"
   
    指定以下值之一，其中每个值对应于一个命令行选项。  
   
-  - **Cdecl** - **/Gd**  
+  - **Cdecl**  - **/Gd**  
   
-  - **FastCall** -                          **/Gr**  
+  - **FastCall**  -                          **/Gr**  
   
-  - **StdCall** -                          **/Gz**  
+  - **StdCall**  -                          **/Gz**  
   
     有关详细信息，请参阅 [/Gd、/Gr、/Gv、/Gz（调用约定）](https://msdn.microsoft.com/library/fd3110cb-2d77-49f2-99cf-a03f9ead00a3)。  
   
@@ -163,11 +163,11 @@ ms.locfileid: "65698640"
   
    指定以下值之一，其中每个值对应于一个命令行选项。  
   
-  - **Default** - *\<none>*  
+  - **缺省值** - *\<none>*  
   
-  - **CompileAsC** - **/TC**  
+  - **CompileAsC**  - **/Tc**  
   
-  - **CompileAsCpp** - **/TP**  
+  - **CompileAsCpp**  - **/Tp**  
   
     有关详细信息，请参阅 [/Tc、/Tp、/TC、/TP（指定源文件类型）](https://msdn.microsoft.com/library/7d9d0a65-338b-427c-8b48-fff30e2f9d2b)。  
   
@@ -181,15 +181,15 @@ ms.locfileid: "65698640"
   
   - **false** - *\<none>*  
   
-  - **true** - **/clr**  
+  - **true**  - **/clr**  
   
-  - **Pure** - **/clr:pure**  
+  - **纯**  - **/clr： pure**  
   
-  - **Safe** - **/clr:safe**  
+  - **Safe**  - **/clr： safe**  
   
-  - **OldSyntax** - **/clr:oldSyntax**  
+  - **OldSyntax**  - **/clr： oldSyntax**  
   
-    有关详细信息，请参阅 [/clr（公共语言运行时编译）](https://msdn.microsoft.com/library/fec5a8c0-40ec-484c-a213-8dec918c1d6c)。  
+    有关详细信息，请参阅 [/clr (公共语言运行时编译) ](https://msdn.microsoft.com/library/fec5a8c0-40ec-484c-a213-8dec918c1d6c)。  
   
 - **CreateHotpatchableImage**  
   
@@ -207,11 +207,11 @@ ms.locfileid: "65698640"
   
    指定以下值之一，其中每个值对应于一个命令行选项。  
   
-  - **OldStyle** - **/Z7**  
+  - **旧式**  - **/Z7**  
   
-  - **ProgramDatabase** - **/Zi**  
+  - **ProgramDatabase**  - **/Zi**  
   
-  - **EditAndContinue** - **/ZI**  
+  - **EditAndContinue**  - **/Zi**  
   
     有关详细信息，请参阅 [/Z7、/Zi、/ZI（调试信息格式）](https://msdn.microsoft.com/library/ce9fa7e1-0c9b-47e3-98ea-26d1a16257c8)。  
   
@@ -239,9 +239,9 @@ ms.locfileid: "65698640"
   
    指定以下值之一，其中每个值对应于一个命令行选项。  
   
-  - **StreamingSIMDExtensions** - **/arch:SSE**  
+  - **StreamingSIMDExtensions**  - **/arch： SSE**  
   
-  - **StreamingSIMDExtensions2** - **/arch:SSE2**  
+  - **StreamingSIMDExtensions2**  - **/arch： SSE2**  
   
     有关详细信息，请参阅 [/arch (x86)](https://msdn.microsoft.com/library/9dd5a75d-06e4-4674-aade-33228486078d)。  
   
@@ -265,17 +265,17 @@ ms.locfileid: "65698640"
   
    可选 String 参数。  
   
-   允许你直接向 Microsoft 提供内部编译器错误 (ICE) 信息。 默认情况下，IDE 生成中的设置是“提示”，命令行生成中的设置是“队列”。  
+   允许你直接向 Microsoft 提供内部编译器错误 (ICE) 信息。 默认情况下，IDE 生成中的设置是“提示”****，命令行生成中的设置是“队列”****。  
   
    指定以下值之一，其中每个值对应于一个命令行选项。  
   
-  - **None** - **/errorReport:none**  
+  - **无**  - **/errorReport： none**  
   
-  - **Prompt** - **/errorReport:prompt**  
+  - **提示符**  - **/errorReport： prompt**  
   
-  - **Queue** - **/errorReport:queue**  
+  - **队列**  - **/errorReport： queue**  
   
-  - **Send** - **/errorReport:send**  
+  - **发送**  - **/errorReport：发送**  
   
     有关详细信息，请参阅 [/errorReport（报告内部编译器错误）](https://msdn.microsoft.com/library/819828f8-b0a5-412c-9c57-bf822f17e667)。  
   
@@ -289,11 +289,11 @@ ms.locfileid: "65698640"
   
   - **false** - *\<none>*  
   
-  - **Async** - **/EHa**  
+  - **Async**  - **/Eha**  
   
-  - **Sync** - **/EHsc**  
+  - **同步**  - **/Ehsc**  
   
-  - **SyncCThrow** - **/EHs**  
+  - **SyncCThrow**  - **/Ehs**  
   
     有关详细信息，请参阅 [/EH（异常处理模型）](https://msdn.microsoft.com/library/754b916f-d206-4472-b55a-b6f1b0f2cb4d)。  
   
@@ -313,11 +313,11 @@ ms.locfileid: "65698640"
   
    指定以下值之一，其中每个值对应于一个命令行选项。  
   
-  - **Neither** - *\<none>*  
+  - **但** - *\<none>*  
   
-  - **Size** - **/Os**  
+  - **大小**  - **/Os**  
   
-  - **Speed** - **/Ot**  
+  - **速度**  - **/Ot**  
   
     有关详细信息，请参阅 [/Os、/Ot（代码大小优先、代码速度优先）](https://msdn.microsoft.com/library/9a340806-fa15-4308-892c-355d83cac0f2)。  
   
@@ -337,11 +337,11 @@ ms.locfileid: "65698640"
   
    指定以下值之一，其中每个值对应于一个命令行选项。  
   
-  - **Precise** - **/fp:precise**  
+  - **精确**  - **/fp：精确**  
   
-  - **Strict** - **/fp:strict**  
+  - **严格**  - **/fp： strict**  
   
-  - **Fast** - **/fp:fast**  
+  - **快速**  - **/fp： fast**  
   
     有关详细信息，请参阅 [/fp（指定浮点行为）](https://msdn.microsoft.com/library/10469d6b-e68b-4268-8075-d073f4f5d57e)。  
   
@@ -395,19 +395,19 @@ ms.locfileid: "65698640"
   
 - **InlineFunctionExpansion**  
   
-   可选 **String** 参数。  
+   可选的 **字符串** 参数。  
   
    指定生成的内联函数扩展级别。  
   
    指定以下值之一，其中每个值对应于一个命令行选项。  
   
-  - **Default** - *\<none>*  
+  - **缺省值** - *\<none>*  
   
-  - **Disabled** - **/Ob0**  
+  - **已禁用**  - **/Ob0**  
   
-  - **OnlyExplicitInline** - **/Ob1**  
+  - **OnlyExplicitInline**  - **/Ob1**  
   
-  - **AnySuitable** - **/Ob2**  
+  - **AnySuitable**  - **/Ob2**  
   
     有关详细信息，请参阅 [/Ob（内联函数扩展）](https://msdn.microsoft.com/library/f134e6df-e939-4980-a01d-47425dbc562a)。  
   
@@ -437,7 +437,7 @@ ms.locfileid: "65698640"
   
 - **ObjectFileName**  
   
-   可选 **String** 参数。  
+   可选的 **字符串** 参数。  
   
    指定对象 (.obj) 文件的名称或要使用的目录，而不是默认目录。  
   
@@ -475,25 +475,25 @@ ms.locfileid: "65698640"
   
 - **优化**  
   
-   可选 **String** 参数。  
+   可选的 **字符串** 参数。  
   
    指定各种代码优化的速度和大小。  
   
    指定以下值之一，其中每个值对应于一个命令行选项。  
   
-  - **Disabled** - **/Od**  
+  - **已禁用**  - **/Od**  
   
-  - **MinSpace** - **/O1**  
+  - **MinSpace**  - **/O1**  
   
-  - **MaxSpeed** - **/O2**  
+  - **MaxSpeed**  - **/O2**  
   
-  - **Full** - **/Ox**  
+  - **完整**  - **/Ox**  
   
     有关详细信息，请参阅 [/O 选项（优化代码）](https://msdn.microsoft.com/library/77997af9-5555-4b3d-aa57-6615b27d4d5d)。  
   
 - **PrecompiledHeader**  
   
-   可选 **String** 参数。  
+   可选的 **字符串** 参数。  
   
    在生成期间创建或使用预编译标头 (.pch) 文件。  
   
@@ -501,15 +501,15 @@ ms.locfileid: "65698640"
   
   - **NotUsing** - *\<none>*  
   
-  - **Create** - **/Yc**  
+  - **创建**  - **/Yc**  
   
-  - **Use** - **/Yu**  
+  - **使用**  - **/Yu**  
   
     有关详细信息，请参阅 [/Yc （创建预编译头文件）](https://msdn.microsoft.com/library/47c2e555-b4f5-46e6-906e-ab5cf21f0678)和 [/Yu（使用预编译头文件）](https://msdn.microsoft.com/library/24f1bd0e-b624-4296-a17e-d4b53e374e1f)。 另外，请参阅此表中的 **PrecompiledHeaderFile** 和 **PrecompiledHeaderOutputFile** 参数。  
   
 - **PrecompiledHeaderFile**  
   
-   可选 **String** 参数。  
+   可选的 **字符串** 参数。  
   
    指定要创建或使用的预编译头文件名。  
   
@@ -517,7 +517,7 @@ ms.locfileid: "65698640"
   
 - **PrecompiledHeaderOutputFile**  
   
-   可选 **String** 参数。  
+   可选的 **字符串** 参数。  
   
    指定预编译标头的路径名称，而不是使用默认路径名称。  
   
@@ -591,13 +591,13 @@ ms.locfileid: "65698640"
   
    指定以下值之一，其中每个值对应于一个命令行选项。  
   
-  - **MultiThreaded** - **/MT**  
+  - **多线程**  - **/Mt**  
   
-  - **MultiThreadedDebug** - **/MTd**  
+  - **MultiThreadedDebug**  - **/MTd**  
   
-  - **MultiThreadedDLL** - **/MD**  
+  - **MultiThreadedDLL**  - **/Md**  
   
-  - **MultiThreadedDebugDLL** - **/MDd**  
+  - **MultiThreadedDebugDLL**  - **/MDd**  
   
     有关详细信息，请参阅 [/MD、/MT、/LD（使用运行时库）](https://msdn.microsoft.com/library/cf7ed652-dc3a-49b3-aab9-ad60e5395579)。  
   
@@ -625,7 +625,7 @@ ms.locfileid: "65698640"
   
    有关详细信息，请参阅 [/RTC（运行时错误检查）](https://msdn.microsoft.com/library/9702c558-412c-4004-acd5-80761f589368)中的 **/RTCc** 选项。  
   
-- **Sources**  
+- **源**  
   
    必选 `ITaskItem[]` 参数。  
   
@@ -647,17 +647,17 @@ ms.locfileid: "65698640"
   
    指定以下值之一，其中每个值对应于一个命令行选项。  
   
-  - **Default** - **/Zp1**  
+  - **默认值**  - **/Zp1**  
   
-  - **1Byte** - **/Zp1**  
+  - **1Byte**  - **/Zp1**  
   
-  - **2Bytes** - **/Zp2**  
+  - **2Bytes**  - **/Zp2**  
   
-  - **4Bytes** - **/Zp4**  
+  - **4Bytes**  - **/Zp4**  
   
-  - **8Bytes** - **/Zp8**  
+  - **8Bytes**  - **了/zp8**  
   
-  - **16Bytes** - **/Zp16**  
+  - **16Bytes**  - **/Zp16**  
   
     有关详细信息，请参阅 [/Zp（结构成员对齐）](https://msdn.microsoft.com/library/5242f656-ed9b-48a3-bc73-cfcf3ed2520f)。  
   
@@ -683,7 +683,7 @@ ms.locfileid: "65698640"
   
    将编译器警告的指定列表视为错误。  
   
-   有关详细信息，请参阅 [/w、/W0、/W1、/W2、/W3、/W4、/w1、/w2、/w3、/w4、/Wall、/wd、/we、/wo、/Wv、/WX（警告等级）](https://msdn.microsoft.com/library/d6bc7bf5-c754-4879-909c-8e3a67e2629f)中的 **/we**`n` 选项。  
+   有关详细信息，请参阅 **/we** `n` [/W、/W0、/W1、/W2、/W3、/W4、/W1、/W2、/W3、/W4、/Wall、/wd、/We、/WO、/Wv、/wx (Warning Level) ](https://msdn.microsoft.com/library/d6bc7bf5-c754-4879-909c-8e3a67e2629f)中的/we 选项。  
   
 - **TreatWarningAsError**  
   
@@ -741,19 +741,19 @@ ms.locfileid: "65698640"
   
    指定以下值之一，其中每个值对应于一个命令行选项。  
   
-  - **TurnOffAllWarnings** - **/W0**  
+  - **TurnOffAllWarnings**  - **/W0**  
   
-  - **Level1** - **/W1**  
+  - **级别**  -  1 **/W1**  
   
-  - **Level2** - **/W2**  
+  - **级别 2**  - **/W2**  
   
-  - **Level3** - **/W3**  
+  - **级别 3**  - **/W3**  
   
-  - **Level4** - **/W4**  
+  - **Level4**  - **/W4**  
   
-  - **EnableAllWarnings** - **/Wall**  
+  - **启用**  - **/Wall**  
   
-    有关详细信息，请参阅 [/w、/W0、/W1、/W2、/W3、/W4、/w1、/w2、/w3、/w4、/Wall、/wd、/we、/wo、/Wv、/WX（警告等级）](https://msdn.microsoft.com/library/d6bc7bf5-c754-4879-909c-8e3a67e2629f)中的 **/W**_n_ 选项。  
+    有关详细信息，请参阅[/w、/W0、/W1、/W2、/W3、/W4、/W1、/W2、/W3、/W4、/Wall、/wd、/we、/wo、/Wv、/wx (Warning Level) ](https://msdn.microsoft.com/library/d6bc7bf5-c754-4879-909c-8e3a67e2629f)中的 **/w**_n_选项。  
   
 - **WholeProgramOptimization**  
   
@@ -803,5 +803,5 @@ ms.locfileid: "65698640"
   
 ## <a name="remarks"></a>备注  
   
-## <a name="see-also"></a>请参阅  
- [任务参考](../msbuild/msbuild-task-reference.md)
+## <a name="see-also"></a>另请参阅  
+ [任务引用](../msbuild/msbuild-task-reference.md)

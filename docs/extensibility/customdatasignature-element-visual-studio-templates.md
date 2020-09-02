@@ -1,5 +1,5 @@
 ---
-title: 自定义数据签名元素（可视化工作室模板） |微软文档
+title: " (Visual Studio 模板) 的 CustomDataSignature 元素 |Microsoft Docs"
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -13,16 +13,17 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: ec8bae34da0f007bac65f26c4e442c1d03e56d08
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80739440"
 ---
-# <a name="customdatasignature-element-visual-studio-templates"></a>自定义数据签名元素（可视化工作室模板）
-指定文本签名以查找自定义数据。
+# <a name="customdatasignature-element-visual-studio-templates"></a> (Visual Studio 模板的 CustomDataSignature 元素) 
+指定用于查找自定义数据的文本签名。
 
- \<模板>\<模板数据>\<自定义数据签名>
+ \<VSTemplate> \<TemplateData>
+ \<CustomDataSignature>
 
 ## <a name="syntax"></a>语法
 
@@ -43,7 +44,7 @@ ms.locfileid: "80739440"
 
 |元素|描述|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|必需元素。<br /><br /> 对模板进行分类，并定义如何在 **"新项目**"或"**添加新项目**"对话框中显示模板。|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|必需的元素。<br /><br /> 将模板分类并定义它在 " **新建项目** " 或 " **添加新项** " 对话框中的显示方式。|
 
 ## <a name="text-value"></a>文本值
  需要一个文本值。
@@ -53,6 +54,6 @@ ms.locfileid: "80739440"
 ## <a name="remarks"></a>备注
  `CustomDataSignature` 是可选元素。
 
-## <a name="see-also"></a>请参阅
-- [可视化工作室模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
+## <a name="see-also"></a>另请参阅
+- [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
 - [创建项目和项模板](../ide/creating-project-and-item-templates.md)

@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 279ac7737460c90f86918ae673e8f64ef1215546
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72665885"
 ---
 # <a name="customizing-intellisense-for-requirejs"></a>为 RequireJS 自定义 IntelliSense
@@ -23,14 +23,14 @@ ms.locfileid: "72665885"
 
  默认情况下，Visual Studio 支持非常基本的配置，以支持 RequireJS，但常见的做法是设置你自己的自定义配置设置（即为库定义别名）。 本主题介绍可用于自定义 Visual Studio 几种不同方法，以用于你的项目的独特设置。
 
- 本主题描述了如何执行以下操作：
+ 本主题介绍如何执行以下操作：
 
 - 在 ASP.NET 项目中自定义 RequireJS
 
 - 在 JSProj 项目中自定义用于生成 Apache Cordova 应用、Windows 应用商店应用和 LightSwitch HTML 应用的 RequireJS
 
 ## <a name="customize-requirejs-in-aspnet-projects"></a>在 ASP.NET 项目中自定义 RequireJS
- 你的当前 JavaScript 文件引用名为 require.js 的文件时，将自动启用对 RequireJS 的支持（有关详细信息，请参阅 [JavaScript IntelliSense](../ide/javascript-intellisense.md) 中的“确定 IntelliSense 上下文”部分）。 在 ASP.NET 项目中，引用 require.js 通常通过使用 _references.js 文件中的 /// \<reference/> 指令来完成。
+ 你的当前 JavaScript 文件引用名为 require.js 的文件时，将自动启用对 RequireJS 的支持（有关详细信息，请参阅 [JavaScript IntelliSense](../ide/javascript-intellisense.md) 中的“确定 IntelliSense 上下文”部分）。 在 ASP.NET 项目中，引用 require.js 通常是使用 _references.js 文件中的///指令来完成的 \<reference/> 。
 
 ### <a name="configure-the-data-main-attribute-in-an-aspnet-project"></a>在 ASP.NET 项目中配置 data-main 属性
  为了准确地模拟运行应用时应用的工作情况，JavaScript 编辑器需要知道在设置 require.js 时应首先加载什么文件。 通常使用引用 require.js 的脚本元素上的 `data-main` 属性在你的应用程序 HTML 文件中对此进行配置，如下所示。
@@ -39,14 +39,14 @@ ms.locfileid: "72665885"
 <script src="js/require.js" data-main="js/app.js"></script>
 ```
 
- 在此示例中，data-main (js/app.js) 引用的脚本在 require.js 后立即加载。 立即加载的文件是首次配置 RequireJS 使用情况的最佳位置（使用 `require.config()`）。为了告知 JavaScript 编辑器 `data-main` 在你的应用程序中要使用哪些文件，请添加 `data-main` 属性，然后修改在应用程序中引用 require.js 的 /// \<reference/> 指令。 例如，可以使用以下指令：
+ 在此示例中，data-main (js/app.js) 引用的脚本在 require.js 后立即加载。 立即加载的文件是首次使用) 配置 RequireJS 使用 (的最佳位置 `require.config()` 。若要告诉 JavaScript 编辑器要 `data-main` 在应用程序中使用的文件，请添加 `data-main` 属性，然后修改在 \<reference/> 应用程序中引用 require.js 的///指令。 例如，可以使用以下指令：
 
 ```javascript
 /// <reference path="js/require.js" data-main="js/app.js" />
 ```
 
 ### <a name="configure-the-application-start-page-in-an-aspnet-project"></a>在 ASP.NET 项目中配置应用程序起始页
- 应用运行时，RequireJS 假定文件的相对路径（例如，"。\\ "路径）是相对于加载了需要 .js 库的 HTML 文件的相对路径。 在 Visual Studio 编辑器中编写 ASP.NET 项目的代码时，此起始页是未知的，你需要告知编辑器使用相对文件路径时要使用什么起始页。 为此，请为 /// \<reference/> 指令添加 `start-page` 属性。
+ 应用运行时，RequireJS 假定文件的相对路径 (例如 "... \\ "路径) 相对于加载 require.js 库的 HTML 文件。 在 Visual Studio 编辑器中编写 ASP.NET 项目的代码时，此起始页是未知的，你需要告知编辑器使用相对文件路径时要使用什么起始页。 为此，请将 `start-page` 属性添加到/// \<reference/> 指令中。
 
 ```javascript
 /// <reference path="js/require.js" data-main="js/app.js" start-page="/app/index.html" />
@@ -59,5 +59,5 @@ ms.locfileid: "72665885"
 
  JSProj 项目文件中不需要 ASP.NET 项目所需的自定义步骤。 也就是说，会自动加载引用 require.js 的脚本标记上的 `data-main` 属性使用的脚本文件以配置 require.js。 引用 require.js 的 HTML 文件还用作应用程序的起始页。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [JavaScript IntelliSense](../ide/javascript-intellisense.md)

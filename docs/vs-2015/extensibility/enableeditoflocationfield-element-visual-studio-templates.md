@@ -1,5 +1,5 @@
 ---
-title: EnableEditOfLocationField 元素 （Visual Studio 模板） |Microsoft Docs
+title: " (Visual Studio 模板) 的 EnableEditOfLocationField 元素 |Microsoft Docs"
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -11,19 +11,19 @@ caps.latest.revision: 8
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 6823b462f884e06e1729c9bb4777cc166b34ea7a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68204623"
 ---
 # <a name="enableeditoflocationfield-element-visual-studio-templates"></a>EnableEditOfLocationField 元素（Visual Studio 模板）
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-指定用户可以编辑位置字段。  
+指定用户是否可以编辑位置字段。  
   
- \<VSTemplate >  
- \<TemplateData >  
+ \<VSTemplate>  
+ \<TemplateData>  
  \<EnableEditOfLocationField>  
   
 ## <a name="syntax"></a>语法  
@@ -50,15 +50,15 @@ ms.locfileid: "68204623"
 ## <a name="text-value"></a>文本值  
  需要一个文本值。  
   
- 文本必须是`true`或`false`，则表示用户可以编辑**位置**上的文本框**新项目**对话框。  
+ 文本必须是 `true` 或 `false` ，指示用户是否可以在 "**新建项目**" 对话框中编辑 "**位置**" 文本框。  
   
 ## <a name="remarks"></a>备注  
- `EnableEditOfLocationField` 是可选元素。 默认值是`true`，它允许用户在编辑中的值**位置**中的文本框**新项目**对话框。  
+ `EnableEditOfLocationField` 是可选元素。 默认值为 `true` ，这允许用户在 "**新建项目**" 对话框的 "**位置**" 文本框中编辑值。  
   
- 在中**新的项目**对话框中，**位置**文本框中指定新的项目的保存位置的目录。  
+ 在 " **新建项目** " 对话框中，" **位置** " 文本框指定用于保存新项目的目录。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示的元数据[!INCLUDE[csprcs](../includes/csprcs-md.md)]Windows 应用程序。  
+ 下面的示例演示了 [!INCLUDE[csprcs](../includes/csprcs-md.md)] Windows 应用程序的元数据。  
   
 ```  
 <VSTemplate Type="Project" Version="3.0.0"  
@@ -86,6 +86,6 @@ ms.locfileid: "68204623"
 </VSTemplate>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)   
  [创建项目和项模板](../ide/creating-project-and-item-templates.md)

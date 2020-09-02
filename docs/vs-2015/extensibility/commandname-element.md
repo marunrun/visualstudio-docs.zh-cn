@@ -12,16 +12,16 @@ caps.latest.revision: 6
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 113f420aa4cbbed9454df1ee0c0dd8aafd09a548
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68184315"
 ---
 # <a name="commandname-element"></a>CommandName 元素
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-`CommandName`元素指定的键盘类别中显示的文本**选项**对话框中，然后在**命令**列表中**自定义**对话框框。  
+`CommandName`元素指定在 "**选项**" 对话框的 "键盘" 类别和 "**自定义**" 对话框的 "**命令**" 列表中显示的文本。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,9 +40,9 @@ ms.locfileid: "68184315"
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|描述|  
+|元素|说明|  
 |-------------|-----------------|  
-|[Strings 元素](../extensibility/strings-element.md)|文本元素，如分组`ButtonText`和`CommandName`。|  
+|[Strings 元素](../extensibility/strings-element.md)|组合文本元素，例如 `ButtonText` 和 `CommandName` 。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Visual Studio 命令表格 (.Vsct) 文件](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

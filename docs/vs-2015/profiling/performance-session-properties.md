@@ -14,10 +14,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: cd521a853d9ec8c1a3fee8e50e87217621a73a89
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75848164"
 ---
 # <a name="performance-session-properties"></a>性能会话属性
@@ -25,17 +25,17 @@ ms.locfileid: "75848164"
 
 通过**性能会话**可以配置用于确定如何分析应用程序的设置。 它还存储为分析会话生成的报告。  
   
- **惠?**  
+ **要求**  
   
 - [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)], [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)], [!INCLUDE[vsPro](../includes/vspro-md.md)]  
   
-  可通过运行**性能向导**或通过手动创建会话来创建**性能会话**。 **性能会话**创建之后，**性能会话**会显示在“性能资源管理器”中。  
+  可通过运行**性能向导**或通过手动创建会话来创建**性能会话**。 **性能会话**创建之后，**性能会话**会显示在“性能资源管理器”**** 中。  
   
-  若要查看**性能会话**属性，请在“性能资源管理器”中选择会话名，右键单击它，然后选择“属性”。  
+  若要查看**性能会话**属性，请在“性能资源管理器”**** 中选择会话名，右键单击它，然后选择“属性”****。  
   
   性能会话具有以下属性页：  
   
-## <a name="general"></a>“常规”  
+## <a name="general"></a>常规  
  这些设置使您能够选择分析方法、添加 .NET 对象集合和生存期数据，以及指定默认报告位置和命名约定。  
   
  有关详细信息，请参阅：  
@@ -46,10 +46,10 @@ ms.locfileid: "75848164"
   
  [如何：设置性能数据文件名选项](../profiling/how-to-set-performance-data-file-name-options.md)  
   
-## <a name="launch"></a>从  
+## <a name="launch"></a>启动  
  通过这些设置可以从二进制文件列表进行选择并指定二进制文件的启动顺序。  
   
- 有关详细信息，请参阅[如何：指定要启动的二进制文件](../profiling/how-to-specify-the-binary-to-start.md)  
+ 有关详细信息，请参阅 [如何：指定要启动的二进制文件](../profiling/how-to-specify-the-binary-to-start.md)  
   
 ## <a name="sampling"></a>采样  
  通过这些设置可以选择在将采样用作分析方法时的样本事件和采样间隔。 样本事件用于按指定间隔收集分析数据。 例如，如果样本事件是时钟周期数并且采样间隔设置为 10,000,000，则会在每 1 千万个时钟周期之后收集采样数据。 提供了以下四种类型的样本事件：  
@@ -64,17 +64,17 @@ ms.locfileid: "75848164"
   
 - 可以基于可用性能计数器指定其他样本事件  
   
-  有关详细信息，请参阅[如何：选择采样事件](../profiling/how-to-choose-sampling-events.md)  
+  有关详细信息，请参阅 [如何：选择采样事件](../profiling/how-to-choose-sampling-events.md)  
   
-## <a name="binary"></a>二进制  
+## <a name="binary"></a>Binary  
  通过这些设置可以指定是否要将检测的二进制文件重新定位到另一个位置。 例如，如果在分析 My.DLL 并且未选择重新定位检测的二进制文件，则会创建名为 My.Orig.DLL 的 My.DLL 备份副本。 随后，会通过插入探测以收集数据来修改 My.DLL。 如果决定重新定位检测的二进制文件，则原始二进制文件不会重命名，并且检测的二进制文件会复制到指定位置以供在检测过程中使用。  
   
- 有关详细信息，请参阅[如何：指定要启动的二进制文件](../profiling/how-to-specify-the-binary-to-start.md)  
+ 有关详细信息，请参阅 [如何：指定要启动的二进制文件](../profiling/how-to-specify-the-binary-to-start.md)  
   
 ## <a name="tier-interactions"></a>层交互  
  有关详细信息，请参阅[收集层交互数据](../profiling/collecting-tier-interaction-data.md)  
   
-## <a name="instrumentation"></a>检测信息  
+## <a name="instrumentation"></a>检测  
  通过这些设置可以收集为 [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] 网页中的 JScript 代码收集性能数据，并指定要在检测过程之前或之后发生的任何**检测前**和**检测后**事件。  
   
  有关详细信息，请参阅：  
@@ -86,19 +86,19 @@ ms.locfileid: "75848164"
 ## <a name="cpu-counters"></a>CPU 计数器  
  通过这些设置可以在使用检测分析方法时收集有关 CPU 性能计数器的数据。 可移植性能计数器可在不考虑 CPU 设计或制造商的情况下使用。 平台事件特定于 CPU 设计和制造商。 有关芯片性能计数器的详细信息，请参阅特定处理器文档。  
   
- 有关详细信息，请参阅[如何：收集 CPU 计数器数据](../profiling/how-to-collect-cpu-counter-data.md)  
+ 有关详细信息，请参阅 [如何：收集 CPU 计数器数据](../profiling/how-to-collect-cpu-counter-data.md)  
   
 ## <a name="windows-events"></a>Windows 事件  
  在分析过程中，可以从事件跟踪提供程序收集数据。 可以使用 VSPerfReport.exe 命令行工具 `/calltrace` 选项查看数据。 有关 Windows 事件跟踪 (ETW) 的详细信息，请参阅[关于事件跟踪](https://msdn2.microsoft.com/library/aa363668.aspx)。  
   
  有关详细信息，请参阅：  
   
- [如何：收集 Windows 事件跟踪 (ETW) 数据](../profiling/how-to-collect-event-tracing-for-windows-etw-data.md)  
+ [如何：收集 Windows (ETW) 数据的事件跟踪](../profiling/how-to-collect-event-tracing-for-windows-etw-data.md)  
   
  [VSPerfReport](../profiling/vsperfreport.md)。  
   
 ## <a name="windows-counters"></a>Windows 计数器  
- 通过此选项可以从 Windows 性能监视器计数器收集数据。 若要收集此数据，请选中标记为“收集 Windows 性能计数器”的复选框。 收集间隔可以在“收集间隔”框中设置。 还可以使用“计数器类别”和“实例”。 提供了一些默认 Windows 性能监视器计数器。  
+ 通过此选项可以从 Windows 性能监视器计数器收集数据。 若要收集此数据，请选中标记为“收集 Windows 性能计数器”**** 的复选框。 收集间隔可以在“收集间隔”**** 框中设置。 还可以使用“计数器类别”**** 和“实例”****。 提供了一些默认 Windows 性能监视器计数器。  
   
  有关详细信息，请参阅[如何：收集 Windows 计数器数据](../profiling/how-to-collect-windows-counter-data.md)。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "75848164"
   
  [如何：指定其他检测选项](../profiling/how-to-specify-additional-instrumentation-options.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [概述](../profiling/overviews-performance-tools.md)   
  [配置性能会话](../profiling/configuring-performance-sessions.md)   
  [控制数据收集](../profiling/controlling-data-collection.md)

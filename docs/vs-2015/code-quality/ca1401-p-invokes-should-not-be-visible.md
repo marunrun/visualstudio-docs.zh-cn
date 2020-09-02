@@ -16,27 +16,27 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 9f13669959a5874c74753d304371b8ab7db14d4e
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85547285"
 ---
 # <a name="ca1401-pinvokes-should-not-be-visible"></a>CA1401：P/Invokes 应该是不可见的
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|Item|值|
+|项|值|
 |-|-|
 |TypeName|PInvokesShouldNotBeVisible|
 |CheckId|CA1401|
-|Category|Microsoft. 互操作性|
+|类别|Microsoft. 互操作性|
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
- 公共类型中的公共或受保护方法具有 <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName> 特性（也 `Declare` 在中由关键字实现 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] ）。
+ 公共类型中的公共或受保护方法具有 <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName> 特性 (也由 `Declare`) 中的关键字实现 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 。
 
 ## <a name="rule-description"></a>规则描述
- <xref:System.Runtime.InteropServices.DllImportAttribute>使用特性（或中使用关键字定义的方法）标记的方法 `Declare` [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 使用平台调用服务来访问非托管代码。 这些方法不能公开。 通过使这些方法保持私有或内部，你可以通过允许调用方访问不能调用的非托管 Api 来确保你的库不能用于破坏安全性。
+ 使用特性标记的方法 <xref:System.Runtime.InteropServices.DllImportAttribute> (或使用中的关键字定义的方法 `Declare` [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) 使用平台调用服务来访问非托管代码。 这些方法不能公开。 通过使这些方法保持私有或内部，你可以通过允许调用方访问不能调用的非托管 Api 来确保你的库不能用于破坏安全性。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
  若要修复与此规则的冲突，请更改该方法的访问级别。

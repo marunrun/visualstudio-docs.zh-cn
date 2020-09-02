@@ -14,16 +14,16 @@ caps.latest.revision: 16
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 1b6e74caa9eedd42e25339d62f5837ccfe82d001
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68204374"
 ---
 # <a name="file-status-code-enumerator"></a>文件状态代码枚举器
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-`SccStatus`枚举数包含命名的常量值用于指定源代码管理系统中的文件的状态。 此枚举由[SccQueryInfo](../extensibility/sccqueryinfo-function.md)并`POPLISTFUNC`回调函数 (请参阅[POPLISTFUNC](../extensibility/poplistfunc.md)有关详细信息)。  
+`SccStatus`枚举器包含指定源代码管理系统中文件状态的命名常量值。 此枚举由 [SccQueryInfo](../extensibility/sccqueryinfo-function.md) 和 `POPLISTFUNC` 回调函数使用 (请参阅 [POPLISTFUNC](../extensibility/poplistfunc.md) 了解详细信息) 。  
   
 ## <a name="syntax"></a>语法  
   
@@ -52,52 +52,52 @@ enum SccStatus {
   
 ## <a name="members"></a>成员  
  SCC_STATUS_INVALID  
- 无法获取状态;不依赖于它。  
+ 无法获取状态;不要依赖于它。  
   
  SCC_STATUS_NOTCONTROLLED  
- 文件不是源代码管理下。  
+ 文件不受源代码管理。  
   
  SCC_STATUS_CONTROLLED  
- 文件处于源代码管理下。  
+ 文件受源代码管理。  
   
  SCC_STATUS_CHECKEDOUT  
- 通过在本地磁盘上的当前用户签出。  
+ 由当前用户签出本地磁盘。  
   
  SCC_STATUS_OUTOTHER  
- 由另一个用户签出文件。  
+ 其他用户已签出文件。  
   
  SCC_STATUS_OUTEXCLUSIVE  
  以独占方式签出文件。  
   
  SCC_STATUS_OUTMULTIPLE  
- 通过多个用户签出文件。  
+ 多个用户已签出文件。  
   
  SCC_STATUS_OUTOFDATE  
- 文件不是最新的。  
+ 该文件不是最新的。  
   
  SCC_STATUS_DELETED  
- 已从项目删除文件。  
+ 文件已从项目中删除。  
   
  SCC_STATUS_LOCKED  
- 文件被锁定;不允许更多的版本。  
+ 文件被锁定;不允许更多版本。  
   
  SCC_STATUS_MERGED  
- 文件已合并，但尚不支持固定/验证。  
+ 文件已合并，但尚未修复/验证。  
   
  SCC_STATUS_SHARED  
- 项目之间共享文件。  
+ 文件在项目之间共享。  
   
  SCC_STATUS_PINNED  
  文件共享到显式版本。  
   
  SCC_STATUS_MODIFIED  
- 文件已修改/中断/违反。  
+ 文件已修改/损坏/违反。  
   
  SCC_STATUS_OUTBYUSER  
- 由当前用户签出文件。  
+ 当前用户已签出文件。  
   
  SCC_STATUS_NOMERGE  
- 文件永远不会与合并，无需在 GET 之前保存。  
+ 文件永远不能与合并，并且无需在获取之前保存。  
   
  SCC_STATUS_RESERVED_1  
  保留以供内部使用。  
@@ -105,7 +105,7 @@ enum SccStatus {
  SCC_STATUS_RESERVED_2  
  保留以供内部使用。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [源代码管理插件](../extensibility/source-control-plug-ins.md)   
  [SccQueryInfo](../extensibility/sccqueryinfo-function.md)   
  [POPLISTFUNC](../extensibility/poplistfunc.md)

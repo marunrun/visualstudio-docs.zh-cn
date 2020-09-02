@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 7fe560ae0c639ec8c400719738ea1f52b5315a9a
-ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88247656"
 ---
 # <a name="walkthrough-create-a-web-part-for-sharepoint"></a>演练：为 SharePoint 创建 web 部件
@@ -42,7 +42,7 @@ Web 部件显示数据网格中的雇员。 用户指定包含员工数据的文
     > [!NOTE]
     > 以下说明中的某些 Visual Studio 用户界面元素在计算机上出现的名称或位置可能会不同。 这些元素取决于你所使用的 Visual Studio 版本和你所使用的设置。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](../ide/personalizing-the-visual-studio-ide.md)。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 - 支持的 Microsoft Windows 和 SharePoint 版本。
 
@@ -214,7 +214,7 @@ Web 部件显示数据网格中的雇员。 用户指定包含员工数据的文
 
      所有员工都显示在 Web 部件中。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [为 SharePoint](../sharepoint/creating-web-parts-for-sharepoint.md) 
  创建 web 部件[如何：创建 SharePoint web 部件](../sharepoint/how-to-create-a-sharepoint-web-part.md) 

@@ -1,5 +1,5 @@
 ---
-title: CreateInPlace （Visual Studio 模板） |Microsoft Docs
+title: CreateInPlace (Visual Studio 模板) |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -14,19 +14,19 @@ caps.latest.revision: 8
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: d722aebef0cbcf589185c36cb481a676280d59ff
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68184248"
 ---
 # <a name="createinplace-visual-studio-templates"></a>CreateInPlace（Visual Studio 模板）
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-指定是否要创建项目和在指定位置中，执行参数替换或在一个临时位置执行参数替换，然后将项目保存到指定的位置。  
+指定是在指定位置创建项目并执行参数替换，还是在临时位置中执行参数替换，并将项目保存到指定位置。  
   
- \<VSTemplate >  
- \<TemplateData >  
+ \<VSTemplate>  
+ \<TemplateData>  
  \<CreateInPlace>  
   
 ## <a name="syntax"></a>语法  
@@ -53,7 +53,7 @@ ms.locfileid: "68184248"
 ## <a name="text-value"></a>文本值  
  需要一个文本值。  
   
- 文本必须为 `true` 或 `false`。 如果`true`，创建项目并在中指定的位置执行参数替换**新建项目**对话框。 如果`false`，参数替换执行在一个临时位置，然后将此项目复制到指定位置。  
+ 文本必须为 `true` 或 `false`。 如果为 `true` ，则创建项目并在 " **新建项目** " 对话框中指定的位置执行参数替换。 如果为 `false` ，则在临时位置执行参数替换，然后将该项目复制到指定位置。  
   
 ## <a name="remarks"></a>备注  
  `CreateInPlace` 是可选元素。 默认值为 `true`。  
@@ -86,6 +86,6 @@ ms.locfileid: "68184248"
 </VSTemplate>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建项目和项模板](../ide/creating-project-and-item-templates.md)   
  [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)

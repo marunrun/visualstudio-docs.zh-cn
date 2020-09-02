@@ -7,10 +7,10 @@ caps.latest.revision: 5
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: cb9b02e10a2d263a39e7ae6a150e452ff8321d9f
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85537054"
 ---
 # <a name="manifest-to-code"></a>Manifest to Code
@@ -25,7 +25,7 @@ Manifest to Code 工具是一个控制台应用程序，它将 imagemanifest 文
   
  **参数**  
   
-|**交换机名称**|**备注**|**必需或可选**|  
+|**交换机名称**|**备注**|**必需还是可选**|  
 |-|-|-|  
 |/manifest|用于创建或更新代码包装的图像清单的路径。|必需|  
 |/language|用于生成代码包装的语言。<br /><br /> 有效值： CPP、c + +、CS、CSharp、c #、VB 或 .VSCT，这些值不区分大小写。<br /><br /> 对于 .VSCT language 选项，将忽略/monikerClass、/classAccess 和/namespace 选项。|必需|  
@@ -45,7 +45,7 @@ Manifest to Code 工具是一个控制台应用程序，它将 imagemanifest 文
   
 - ManifestToCode/manifest： D:\MyManifest.imagemanifest/language： .VSCT/imageIdClass： MyImageIds  
   
-## <a name="notes"></a>备注  
+## <a name="notes"></a>说明  
   
 - 建议将此工具与 Manifest from Resources 工具生成的图像清单一起使用。  
   
