@@ -1,5 +1,5 @@
 ---
-title: BP_RESOLUTION_DATA | Microsoft Docs
+title: BP_RESOLUTION_DATA |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,13 +13,13 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: e4e266d1b5d0976ebc910a8228a3724f80001b5a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68153318"
 ---
-# <a name="bpresolutiondata"></a>BP_RESOLUTION_DATA
+# <a name="bp_resolution_data"></a>BP_RESOLUTION_DATA
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
 描述绑定数据断点的结果。  
@@ -46,28 +46,28 @@ public struct BP_RESOLUTION_DATA { 
   
 ## <a name="members"></a>成员  
  `bstrDataExpr`  
- 已绑定数据表达式。  
+ 已绑定的数据表达式。  
   
  `bstrFunc`  
- 函数的名称 （如果有），已在绑定数据断点。  
+ 如果任何) ，数据断点绑定到 (函数的名称。  
   
  `bstrImage`  
- 数据断点具有绑定中的模块 (例如 MyModule.dll) 的名称。  
+ 模块的名称 ( # A0，例如数据断点绑定的) 。  
   
  `dwFlags`  
- 中的值[BP_RES_DATA_FLAGS](../../../extensibility/debugger/reference/bp-res-data-flags.md)描述如何实现数据断点的枚举。  
+ [BP_RES_DATA_FLAGS](../../../extensibility/debugger/reference/bp-res-data-flags.md)枚举中的一个值，描述如何实现数据断点。  
   
 ## <a name="remarks"></a>备注  
- 此结构是的成员[BP_RESOLUTION_LOCATION](../../../extensibility/debugger/reference/bp-resolution-location.md)结构，它是在打开的成员[BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md)由返回结构[GetResolutionInfo](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo.md)方法。  
+ 此结构是[BP_RESOLUTION_LOCATION](../../../extensibility/debugger/reference/bp-resolution-location.md)结构的成员，后者又又是[GetResolutionInfo](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo.md)方法返回的[BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md)结构的成员。  
   
 ## <a name="requirements"></a>要求  
- 标头： msdbg.h  
+ 标头： msdbg  
   
- 命名空间:Microsoft.VisualStudio.Debugger.Interop  
+ 命名空间： VisualStudio  
   
- 程序集：Microsoft.VisualStudio.Debugger.Interop.dll  
+ 程序集： Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [结构和联合](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [BP_RESOLUTION_LOCATION](../../../extensibility/debugger/reference/bp-resolution-location.md)   
  [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md)   

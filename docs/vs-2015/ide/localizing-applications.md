@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 7fa9aa7a4a19ebd5ae45ee84364e71043a28f6be
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72651461"
 ---
 # <a name="localizing-applications"></a>本地化应用程序
@@ -37,10 +37,10 @@ ms.locfileid: "72651461"
  [用于本地化的中性资源语言](../ide/neutral-resources-languages-for-localization.md)介绍 <xref:System.Resources.NeutralResourcesLanguageAttribute> 类，它可指定应用程序主程序集中包含的资源的区域性。
 
 ## <a name="related-sections"></a>相关章节
- [基于 .NET Framework 的国际应用程序简介](../ide/introduction-to-international-applications-based-on-the-dotnet-framework.md)讨论有关使用 Visual Basic 或视觉对象C#为国际市场开发软件的概念。
+ [基于 .NET Framework 的国际应用程序简介](../ide/introduction-to-international-applications-based-on-the-dotnet-framework.md) 讨论有关使用 Visual Basic 或 Visual c # 为国际市场开发软件的概念。
 
  [全球化 Windows 窗体](https://msdn.microsoft.com/library/72f6cd92-83be-45ec-aa37-9cb8e3ebc3c5) 提供有关创建支持多种区域性的 Windows 应用程序的页面链接。
 
- [全球化和本地化](https://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d)提供有关创建支持多种区域性的 Web 应用的页面链接。
+ [全球化和本地化](https://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d) 提供有关创建支持多种区域性的 Web 应用程序的页面的链接。
 
  [开发全球通用应用程序的最佳做法](https://msdn.microsoft.com/library/f08169c7-aad8-4ec3-9a21-9ebd3b89986c)为国际受众提供关于编程的信息（例如设计问题和术语）。

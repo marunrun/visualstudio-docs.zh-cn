@@ -1,5 +1,5 @@
 ---
-title: 在托管代码中的 COM 常量 |Microsoft Docs
+title: 托管代码中的 COM 常量 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,16 +11,16 @@ caps.latest.revision: 17
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: f502f8ac10c28ff8c25433792ab60caf6ee05bfc
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68184431"
 ---
 # <a name="com-constants-in-managed-code"></a>托管代码中的 COM 常量
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-托管包框架 (MPF) 使一些标准的 COM 常量可用于托管代码。 供你参考下面列出了这些常量。  
+托管包框架 (MPF) 使某些标准 COM 常量可用于托管代码。 下面列出了这些常量供你参考。  
   
 ## <a name="boolean-hresult-values"></a>布尔 HRESULT 值  
  <xref:Microsoft.VisualStudio.VSConstants.S_FALSE>  
@@ -91,7 +91,7 @@ ms.locfileid: "68184431"
   
  <xref:Microsoft.VisualStudio.VSConstants.OLE_E_WRONGCOMPOBJ>  
   
-## <a name="ole-dispatch-errors"></a>OLE 调度错误  
+## <a name="ole-dispatch-errors"></a>OLE 派单错误  
  <xref:Microsoft.VisualStudio.VSConstants.DISP_E_ARRAYISLOCKED>  
   
  <xref:Microsoft.VisualStudio.VSConstants.DISP_E_BADCALLEE>  
@@ -128,5 +128,5 @@ ms.locfileid: "68184431"
   
  <xref:Microsoft.VisualStudio.VSConstants.DISP_E_UNKNOWNNAME>  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [错误处理和返回值](../extensibility/error-handling-and-return-values.md)

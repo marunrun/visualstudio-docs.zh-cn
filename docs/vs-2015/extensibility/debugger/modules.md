@@ -12,23 +12,23 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 7a2b2f04e1088b9b06cb05015a6b0b4da5d60927
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68153748"
 ---
 # <a name="modules"></a>模块
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-在调试器体系结构，方面**模块**:  
+就调试器体系结构而言， **模块**如下：  
   
-- 是，如可执行文件或 DLL 的物理容器。  
+- 是一个物理代码容器，如可执行文件或 DLL。  
   
-- 可以重新加载其符号，并描述自身。 模块说明显示在 IDE 的模块窗口中。  
+- 可以重新加载其符号并对其进行描述。 模块说明显示在 IDE 的 "模块" 窗口中。  
   
-- 为由[IDebugModule2](../../extensibility/debugger/reference/idebugmodule2.md)调试引擎来描述该模块创建的接口。  
+- 由调试引擎创建的 [IDebugModule2](../../extensibility/debugger/reference/idebugmodule2.md) 接口表示，用于说明模块。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [调试器概念](../../extensibility/debugger/debugger-concepts.md)   
  [IDebugModule2](../../extensibility/debugger/reference/idebugmodule2.md)

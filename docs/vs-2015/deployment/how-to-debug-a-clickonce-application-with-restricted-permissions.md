@@ -1,5 +1,5 @@
 ---
-title: 如何：调试具有受限权限的 ClickOnce 应用程序 |Microsoft Docs
+title: 如何：使用受限权限调试 ClickOnce 应用程序 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-deployment
@@ -18,13 +18,13 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: d60f88c4d1532a03922f12f21bb9b455ef5d84d8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68153801"
 ---
-# <a name="how-to-debug-a-clickonce-application-with-restricted-permissions"></a>如何：使用受限权限对 ClickOnce 应用程序进行调试
+# <a name="how-to-debug-a-clickonce-application-with-restricted-permissions"></a>How to: Debug a ClickOnce Application with Restricted Permissions
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 作为开发人员，你很可能使用完全信任权限运行开发计算机，因此在调试 ClickOnce 应用程序时不会遇到最终用户在使用受限权限运行它时可能会遇到的相同安全异常。  
@@ -35,34 +35,34 @@ ms.locfileid: "68153801"
   
 ### <a name="to-enable-debugging-with-restricted-permissions"></a>使用受限权限启用调试  
   
-1. 在“解决方案资源管理器”  中选择了项目的情况下，在“项目”  菜单上单击“属性”  。  
+1. 在“解决方案资源管理器” 中选择了项目的情况下，在“项目”  菜单上单击“属性” 。  
   
-2. 在“项目设计器”  中，单击“安全”  选项卡。  
+2. 在“项目设计器” **** 中，单击“安全” **** 选项卡。  
   
-3. 选中“启用 ClickOnce 安全设置”  复选框，然后单击“这是部分可信的应用程序”  选项按钮。  
+3. 选中“启用 ClickOnce 安全设置” **** 复选框，然后单击“这是部分可信的应用程序” **** 选项按钮。  
   
-4. 单击“高级”  按钮。  
+4. 单击“高级”按钮。  
   
-5. 选中“使用选定权限集调试此应用程序”  复选框，然后单击“确定”  。  
+5. 选中“使用选定权限集调试此应用程序” **** 复选框，然后单击“确定” ****。  
   
      调试应用程序时，任何访问不属于权限集一部分的权限的尝试都会引发安全异常。  
   
 ### <a name="to-specify-a-url-for-debugging"></a>指定用于调试的 URL  
   
-1. 在“解决方案资源管理器”  中选择了项目的情况下，在“项目”  菜单上单击“属性”  。  
+1. 在“解决方案资源管理器” 中选择了项目的情况下，在“项目”  菜单上单击“属性” 。  
   
-2. 在“项目设计器”  中，单击“安全”  选项卡。  
+2. 在“项目设计器” **** 中，单击“安全” **** 选项卡。  
   
-3. 选中“启用 ClickOnce 安全设置”  复选框，然后单击“这是部分可信的应用程序”  选项按钮。  
+3. 选中“启用 ClickOnce 安全设置” **** 复选框，然后单击“这是部分可信的应用程序” **** 选项按钮。  
   
-4. 单击“高级”  按钮。  
+4. 单击“高级”按钮。  
   
-5. 选中“使用选定权限集调试此应用程序”  复选框，然后单击“确定”  。  
+5. 选中“使用选定权限集调试此应用程序” **** 复选框，然后单击“确定” ****。  
   
-6. 在“调试此应用程序，就如同它是从以下 URL 位置下载的一样”  文本框中，输入 URL 或网络路径。  
+6. 在“调试此应用程序，就如同它是从以下 URL 位置下载的一样” **** 文本框中，输入 URL 或网络路径。  
   
-## <a name="see-also"></a>请参阅  
- [如何：设置 ClickOnce 应用程序的自定义权限](../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md)   
+## <a name="see-also"></a>另请参阅  
+ [如何：为 ClickOnce 应用程序设置自定义权限](../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md)   
  [保护 ClickOnce 应用程序](../deployment/securing-clickonce-applications.md)   
  [ClickOnce 应用程序的代码访问安全性](../deployment/code-access-security-for-clickonce-applications.md)   
  [保护 ClickOnce 应用程序](../deployment/securing-clickonce-applications.md)
