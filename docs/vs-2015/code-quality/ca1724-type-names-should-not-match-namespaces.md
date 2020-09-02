@@ -16,20 +16,20 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: aa0b73b6608f0dfd5daa4b770b7d780e64704c99
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85544425"
 ---
 # <a name="ca1724-type-names-should-not-match-namespaces"></a>CA1724:类型名不应与命名空间冲突
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|Item|值|
+|项|值|
 |-|-|
 |TypeName|TypeNamesShouldNotMatchNamespaces|
 |CheckId|CA1724|
-|Category|Microsoft。命名|
+|类别|Microsoft。命名|
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因

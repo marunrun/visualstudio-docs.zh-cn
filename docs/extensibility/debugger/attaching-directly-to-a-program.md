@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: dc78234b31b98865f1779dd65d743d4196f9cbf5
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85903267"
 ---
 # <a name="attach-directly-to-a-program"></a>直接附加到程序
@@ -24,19 +24,19 @@ ms.locfileid: "85903267"
 
     这将显示“进程”  对话框。
 
-2. 选择一个进程，然后单击 "**附加**" 按钮。
+2. 选择一个进程，然后单击 " **附加** " 按钮。
 
-    此时将显示 "**附加到进程**" 对话框，其中列出了计算机上安装的所有调试引擎（DEs）。
+    此时将显示 " **附加到进程** " 对话框，其中列出了计算机上 (DEs) 的所有调试引擎。
 
 3. 指定用于调试所选进程的 DEs，然后单击 **"确定"**。
 
    调试包将启动调试会话，并将 DEs 的列表传递给它。 然后，调试会话会将此列表与回调函数一起传递到选定的进程，然后要求进程枚举其正在运行的程序。
 
-   以编程方式为响应用户请求，调试包将实例化会话调试管理器（SDM）并将所选 DEs 的列表传递给它。 除了列表，调试包还将 SDM 传递到[IDebugEventCallback2](../../extensibility/debugger/reference/idebugeventcallback2.md)接口。 调试包通过调用[IDebugProcess2：： Attach](../../extensibility/debugger/reference/idebugprocess2-attach.md)将 DEs 列表传递到选定的进程。 然后，SDM 调用端口上的[IDebugProcess2：： EnumPrograms](../../extensibility/debugger/reference/idebugprocess2-enumprograms.md)来枚举进程中运行的程序。
+   以编程方式为响应用户请求，调试包将会话调试管理器实例化 (SDM) 并将所选 DEs 的列表传递给它。 除了列表，调试包还将 SDM 传递到 [IDebugEventCallback2](../../extensibility/debugger/reference/idebugeventcallback2.md) 接口。 调试包通过调用 [IDebugProcess2：： Attach](../../extensibility/debugger/reference/idebugprocess2-attach.md)将 DEs 列表传递到选定的进程。 然后，SDM 调用端口上的 [IDebugProcess2：： EnumPrograms](../../extensibility/debugger/reference/idebugprocess2-enumprograms.md) 来枚举进程中运行的程序。
 
-   从此时开始，每个调试引擎都附加到程序中，这与[启动后附加](../../extensibility/debugger/attaching-after-a-launch.md)的详细信息完全相同，但有两个例外。
+   从此时开始，每个调试引擎都附加到程序中，这与 [启动后附加](../../extensibility/debugger/attaching-after-a-launch.md)的详细信息完全相同，但有两个例外。
 
-   为提高效率，为与 SDM 共享地址空间而实现的 DEs 进行了分组，以便每个 DE 都具有一组要附加到的程序。 在这种情况下， [IDebugProcess2](../../extensibility/debugger/reference/idebugprocess2.md)调用[IDebugEngine2：： Attach](../../extensibility/debugger/reference/idebugengine2-attach.md) ，并向其传递要附加到的程序数组。
+   为提高效率，为与 SDM 共享地址空间而实现的 DEs 进行了分组，以便每个 DE 都具有一组要附加到的程序。 在这种情况下， [IDebugProcess2](../../extensibility/debugger/reference/idebugprocess2.md) 调用 [IDebugEngine2：： Attach](../../extensibility/debugger/reference/idebugengine2-attach.md) ，并向其传递要附加到的程序数组。
 
    第二个例外是，通过附加到已在运行的程序而发送的启动事件通常不包括入口点事件。
 

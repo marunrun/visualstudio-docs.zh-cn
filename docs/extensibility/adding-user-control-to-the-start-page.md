@@ -14,33 +14,33 @@ ms.workload:
 - vssdk
 monikerRange: vs-2017
 ms.openlocfilehash: 8000c6cc067f61a64c71b8c8ac4f5c0176504cd4
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85903381"
 ---
 # <a name="add-user-control-to-the-start-page"></a>将用户控件添加到起始页
 
-此演练演示如何将 DLL 引用添加到自定义起始页。 该示例将用户控件添加到解决方案，生成用户控件，然后从起始页 *.xaml*文件中引用生成的程序集。 新选项卡承载用户控件，该控件充当基本 Web 浏览器。
+此演练演示如何将 DLL 引用添加到自定义起始页。 该示例将用户控件添加到解决方案，生成用户控件，然后从起始页 *.xaml* 文件中引用生成的程序集。 新选项卡承载用户控件，该控件充当基本 Web 浏览器。
 
-您可以使用相同的过程添加可从 *.xaml*文件调用的任何程序集。
+您可以使用相同的过程添加可从 *.xaml* 文件调用的任何程序集。
 
 ## <a name="add-a-wpf-user-control-to-the-solution"></a>向解决方案中添加 WPF 用户控件
 
-首先，将 Windows Presentation Foundation （WPF）用户控件添加到起始页解决方案。
+首先，将 Windows Presentation Foundation (WPF) 用户控件添加到起始页解决方案。
 
-1. 使用 "[创建自定义起始页](../extensibility/creating-a-custom-start-page.md)" 中创建的创建起始页。
+1. 使用 " [创建自定义起始页](../extensibility/creating-a-custom-start-page.md)" 中创建的创建起始页。
 
-2. 在**解决方案资源管理器**中，右键单击解决方案，单击 "**添加**"，然后单击 "**新建项目**"。
+2. 在 **解决方案资源管理器**中，右键单击解决方案，单击 " **添加**"，然后单击 " **新建项目**"。
 
-3. 在 "**新建项目**" 对话框的左窗格中，展开 " **Visual Basic** " 或 " **Visual c #** " 节点，然后单击 " **Windows**"。 在中间窗格中，选择 " **WPF 用户控件库**"。
+3. 在 " **新建项目** " 对话框的左窗格中，展开 " **Visual Basic** " 或 " **Visual c #** " 节点，然后单击 " **Windows**"。 在中间窗格中，选择 " **WPF 用户控件库**"。
 
 4. 为该控件命名 `WebUserControl` ，然后单击 **"确定"**。
 
 ## <a name="implement-the-user-control"></a>实现用户控件
 
-若要实现 WPF 用户控件，请在 XAML 中生成用户界面（UI），然后使用 c # 或其他 .NET 语言编写代码隐藏事件。
+若要实现 WPF 用户控件，请在 XAML 中 (UI) 生成用户界面，然后使用 c # 或其他 .NET 语言编写代码隐藏事件。
 
 ### <a name="to-write-the-xaml-for-the-user-control"></a>为用户控件编写 XAML
 
@@ -104,7 +104,7 @@ ms.locfileid: "85903381"
 
 ### <a name="to-write-the-code-behind-events-for-the-user-control"></a>为用户控件写入代码隐藏事件
 
-1. 在 XAML 设计器中，双击添加到控件的 "**设置地址**" 按钮。
+1. 在 XAML 设计器中，双击添加到控件的 " **设置地址** " 按钮。
 
     *UserControl1.cs*文件将在代码编辑器中打开。
 
@@ -139,11 +139,11 @@ ms.locfileid: "85903381"
 
 若要使此控件可用于 "起始页" 项目，请在 "起始页" 项目文件中添加对新控件库的引用。 然后，可以将该控件添加到起始页 XAML 标记。
 
-1. 在**解决方案资源管理器**的 "起始页" 项目中，右键单击 "**引用**"，然后单击 "**添加引用**"。
+1. 在 **解决方案资源管理器**的 "起始页" 项目中，右键单击 " **引用** "，然后单击 " **添加引用**"。
 
-2. 在 "**项目**" 选项卡上，选择 " **WebUserControl** "，然后单击 **"确定"**。
+2. 在 " **项目** " 选项卡上，选择 " **WebUserControl** "，然后单击 **"确定"**。
 
-3. 在 **“生成”** 菜单上，单击 **“生成解决方案”** 。
+3. 在“生成”菜单中，单击“生成解决方案”。
 
     生成解决方案使用户控件对解决方案中其他文件的 IntelliSense 可用。
 
@@ -151,7 +151,7 @@ ms.locfileid: "85903381"
 
 ### <a name="to-add-the-control-to-the-markup"></a>向标记添加控件
 
-1. 在**解决方案资源管理器**中，打开起始页 *.xaml*文件。
+1. 在 **解决方案资源管理器**中，打开起始页 *.xaml* 文件。
 
 2. 在 " **XAML** " 窗格中，将以下命名空间声明添加到顶级 <xref:System.Windows.Controls.Grid> 元素。
 
@@ -181,7 +181,7 @@ ms.locfileid: "85903381"
 
 2. 如果起始页引用 Visual Studio 未安装的程序集中的任何控件或类型，请复制这些程序集，然后将其粘贴到_Visual studio 安装文件夹_**\Common7\IDE\PrivateAssemblies \\ **中。
 
-3. 在 Visual Studio 命令提示符处，键入**devenv/Rootsuffix Exp**来打开 Visual studio 的实验实例。
+3. 在 Visual Studio 命令提示符处，键入 **devenv/Rootsuffix Exp** 来打开 Visual studio 的实验实例。
 
 4. 在实验实例中，请切换到 "**工具**  >  **选项**  >  **环境**  >  **启动**" 页，然后从 "**自定义起始页**" 下拉列表中选择您的 XAML 文件。
 
