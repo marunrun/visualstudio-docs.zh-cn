@@ -1,5 +1,5 @@
 ---
-title: NAME_MATCH |微软文档
+title: NAME_MATCH |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 66a0e725f6362034e2d1a9b1df49d2a83d154ce7
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80714303"
 ---
 # <a name="name_match"></a>NAME_MATCH
-选择匹配名称的案例选项。
+选择匹配名称的 case 选项。
 
 ## <a name="syntax"></a>语法
 
@@ -48,7 +48,7 @@ public enum NameMatchOptions { 
  未指定任何选项。
 
  `nmCaseSensitive`\
- 指示要匹配的名称区分大小写。
+ 指示要匹配的名称是区分大小写的。
 
  `nmCaseInsensitive`\
  指示要匹配的名称不区分大小写。
@@ -65,11 +65,11 @@ public enum NameMatchOptions { 
 - [GetMethodFieldsByName](../../../extensibility/debugger/reference/idebugsymbolprovider-getmethodfieldsbyname.md)
 
 ## <a name="requirements"></a>要求
- 标题： sh.h
+ 标头： sh。h
 
- 命名空间：微软.VisualStudio.调试器.互通
+ 命名空间： VisualStudio
 
- 程序集：微软.VisualStudio.调试器.Interop.dll
+ 程序集： Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [枚举](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

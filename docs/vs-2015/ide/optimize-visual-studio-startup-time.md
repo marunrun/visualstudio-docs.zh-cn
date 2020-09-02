@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 0f00bbc7741768852b5928b249dc7035bc440992
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670405"
 ---
 # <a name="optimize-visual-studio-startup-time"></a>优化 Visual Studio 启动时间
@@ -34,7 +34,7 @@ ms.locfileid: "72670405"
 **管理 Visual Studio 性能**对话框有两个类别：**扩展**和**工具窗口**。
 
 ### <a name="control-extensions"></a>控制扩展
-如果某个扩展使 Visual Studio 的启动变慢，那么选择它的一个扩展类型时，此扩展将显示在**管理 Visual Studio 性能**对话框中。 如果对启动时间的影响（在“影响”部分下面列出）很高，令人无法接受，则可以选择“禁用”按钮，以便在启动时始终禁用此扩展。 可以使用扩展管理器或“管理 Visual Studio 性能”对话框重新启用扩展，以用于以后的会话。
+如果某个扩展正在降低 Visual Studio 启动的速度，则当你选择一个扩展类型时，该扩展将显示在 " **管理 Visual Studio 性能" 对话框** 中。 如果对启动时间的影响（在“影响”**** 部分下面列出）很高，令人无法接受，则可以选择“禁用”按钮，以便在启动时始终禁用此扩展。**** 可以使用扩展管理器或“管理 Visual Studio 性能”对话框重新启用扩展，以用于以后的会话。
 
 ![管理 Visual Studio 性能-扩展](../ide/media/vside-perfdialog-extensions.PNG "管理 Visual Studio 性能-扩展")
 
@@ -48,4 +48,4 @@ ms.locfileid: "72670405"
 
 ![管理 Visual Studio 性能-工具窗口](../ide/media/vside-perfdialog-toolwindows.PNG "管理 Visual Studio 性能-工具窗口")
 
-如果你以后改变主意，可以在**管理 Visual Studio 性能**对话框中还原任何选项。 若要打开“管理 Visual Studio 性能”对话框，请在菜单栏上选择“帮助”->“管理 Visual Studio 性能”。
+如果你以后改变主意，可以在**管理 Visual Studio 性能**对话框中还原任何选项。 若要打开“管理 Visual Studio 性能”**** 对话框，请在菜单栏上选择“帮助”****->“管理 Visual Studio 性能”****。

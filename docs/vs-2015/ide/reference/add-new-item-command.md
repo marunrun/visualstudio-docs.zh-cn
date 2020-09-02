@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: e6237ace96799961683b0b0431f5dad3ab679e24
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670199"
 ---
 # <a name="add-new-item-command"></a>“添加新项”命令
@@ -32,13 +32,13 @@ ms.locfileid: "72670199"
 File.AddNewItem [filename] [/t:templatename] [/e:editorname]
 ```
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
  `filename`（可选）。 要添加到解决方案的项的路径和文件名。
 
 ## <a name="switches"></a>开关
  /t: `templatename`（可选）。 指定要创建的文件类型。 如果未给定模板名称，则默认创建一个文本文件。
 
- /t:`templatename` 参数语法反映在“添加新解决方案项”  对话框中找到的信息。 必须输入完整类别，后跟文件类型，类别名称与文件类型用反斜杠 (`\`) 隔开，并将整个字符串括在引号内。
+ /t:`templatename` 参数语法反映在“添加新解决方案项”**** 对话框中找到的信息。 必须输入完整类别，后跟文件类型，类别名称与文件类型用反斜杠 (`\`) 隔开，并将整个字符串括在引号内。
 
  例如，若要创建新的文本文件，对于 /t:`templatename` 参数，应输入以下内容。
 
@@ -46,9 +46,9 @@ File.AddNewItem [filename] [/t:templatename] [/e:editorname]
 /t:"General\Style Sheet"
 ```
 
- /e: `editorname`（可选）。 将在其中打开文件的编辑器的名称。 如果指定该参数，但未提供编辑器名称，则会出现“打开方式”  对话框。
+ /e: `editorname`（可选）。 将在其中打开文件的编辑器的名称。 如果指定该参数，但未提供编辑器名称，则会出现“打开方式”**** 对话框。
 
- /e:`editorname` 参数语法使用“打开方式”  对话框中显示的编辑器名称，并用引号括起来。
+ /e:`editorname` 参数语法使用“打开方式”**** 对话框中显示的编辑器名称，并用引号括起来。
 
  例如，若要在源代码编辑器中打开样式表，对于 /e:`editorname` 参数，应输入以下内容。
 
@@ -64,4 +64,4 @@ File.AddNewItem [filename] [/t:templatename] [/e:editorname]
 ```
 
 ## <a name="see-also"></a>另请参阅
- [Visual studio](../../ide/reference/visual-studio-commands.md) "[命令" 窗口](../../ide/reference/command-window.md)中的["查找/命令" 框](../../ide/find-command-box.md) [visual studio 命令别名](../../ide/reference/visual-studio-command-aliases.md)
+ [Visual studio](../../ide/reference/visual-studio-commands.md) " [命令" 窗口](../../ide/reference/command-window.md)中的 ["查找/命令" 框](../../ide/find-command-box.md) [visual studio 命令别名](../../ide/reference/visual-studio-command-aliases.md)

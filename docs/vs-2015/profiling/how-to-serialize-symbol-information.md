@@ -15,10 +15,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: c4ea056c48525014fffad0243dfeb4dd40a8daa3
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65687012"
 ---
 # <a name="how-to-serialize-symbol-information"></a>如何：序列化符号信息
@@ -28,15 +28,15 @@ ms.locfileid: "65687012"
   
 ### <a name="to-automatically-serialize-symbol-information"></a>自动序列化符号信息  
   
-1. 在 **“工具”** 菜单上，单击 **“选项”**。  
+1. 在 **“工具”** 菜单上，单击 **“选项”** 。  
   
      随即出现“选项”对话框。  
   
 2. 单击“性能工具”。  
   
-3. 在“常规设置”下，选择“自动序列化符号信息”。  
+3. 在“常规设置”下，选择“自动序列化符号信息” 。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [配置性能会话](../profiling/configuring-performance-sessions.md)   
  [如何：引用 Windows 符号信息](../profiling/how-to-reference-windows-symbol-information.md)   
- [如何：保存已分析的报告文件](https://msdn.microsoft.com/0340ddde-caf4-48ac-8af3-d15dcdade556)
+ [如何保存分析的报告文件](https://msdn.microsoft.com/0340ddde-caf4-48ac-8af3-d15dcdade556)

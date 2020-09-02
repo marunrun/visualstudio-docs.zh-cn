@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 41c3fd765977a1f92f5cf125bb64bb7f5b0cd2cc
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72664301"
 ---
 # <a name="keyboard-shortcuts-in-blend"></a>Blend 中的键盘快捷键
@@ -21,27 +21,27 @@ ms.locfileid: "72664301"
 
 项目快捷方式
 
-|若要执行此操作|请执行此操作|
+|要执行此操作|操作|
 |----------------|-------------|
 |创建新项目|Ctrl+Shift+N|
-|打开项目或解决方案（不是站点）|Ctrl+Shift+O|
+|打开项目或解决方案（不是站点）|CTRL+SHIFT+O|
 |关闭解决方案|Ctrl+Shift+C|
-|保存解决方案或站点的副本|Ctrl+Shift+P|
-|将现有项添加到项目|Ctrl+I|
+|保存解决方案或站点的副本|CTRL+SHIFT+P|
+|将现有项添加到项目|CTRL+I|
 |添加对 DLL 的引用 (WPF)|Alt+Shift+R|
 |生成项目|Ctrl+Shift+B|
 |测试项目或站点|F5|
 
 ## <a name="document-shortcuts"></a>文档快捷方式
 
-|若要执行此操作|请执行此操作|
+|要执行此操作|操作|
 |----------------|-------------|
 |在打开的文档之间切换|Ctrl+Tab|
 |保存活动文档|Ctrl+S|
 |保存所有文档|Ctrl+Shift+S|
 |关闭活动文档|Ctrl+W|
 |关闭所有打开的文档|Ctrl+Shift+W|
-|撤消上一项操作|Ctrl+Z|
+|撤消上一项操作|CTRL+Z|
 |重做上一次撤消的操作|Ctrl+Y 或 Ctrl+Shift+Z|
 |创建设计时注释|Ctrl+Shift+T|
 |剪切|Ctrl+X|
@@ -53,9 +53,9 @@ ms.locfileid: "72664301"
 
 ## <a name="object-shortcuts"></a>对象快捷方式
 
-|若要执行此操作|请执行此操作|
+|要执行此操作|操作|
 |----------------|-------------|
-|创建新项目|Ctrl+N|
+|创建新项|Ctrl+N|
 |复制对象|按住 Alt 键并拖动对象|
 |将对象重新定义为父项|将对象拖到版式面板上，并按 Alt 键|
 |编辑控件中的文本|F2（按 Esc 退出）|
@@ -73,9 +73,9 @@ ms.locfileid: "72664301"
 |自动调整宽度|Ctrl+Shift+5|
 |自动调整高度|Ctrl+Shift+6|
 |将对象组合到布局面板中|Ctrl+G|
-|取消组合对象|Ctrl+Shift+G|
+|取消组合对象|CTRL+Shift+G|
 |将选定对象置于顶层|Ctrl+Shift+]|
-|上移一层|Ctrl+]|
+|上移一层|CTRL+]|
 |将所选定象发送到后面|Ctrl+Shift+[|
 |下移一层|Ctrl+[|
 |从选定对象生成用户控件 (WPF)|F8|
@@ -86,36 +86,36 @@ ms.locfileid: "72664301"
 |生成复合路径|Ctrl+8|
 |释放复合路径|Ctrl+Shift+8|
 |锁定选定内容|Ctrl+L|
-|解除对所有对象的锁定|Ctrl+Shift+L|
-|显示选定内容|Ctrl+T|
-|隐藏选定内容|Ctrl+3|
-|选择所有对象|Ctrl+A|
+|解除对所有对象的锁定|CTRL+SHIFT+L|
+|显示选定内容|CTRL+T|
+|隐藏选定内容|CTRL+3|
+|选择所有对象|CTRL + A|
 |取消选择所有对象|Ctrl+Shift+A|
 
 ## <a name="view-shortcuts"></a>视图快捷方式
 
-|若要执行此操作|请执行此操作|
+|要执行此操作|操作|
 |----------------|-------------|
-|在“设计”、“代码”和“拆分”视图之间进行切换|F11|
+|在“设计”****、“代码”**** 和“拆分”**** 视图之间进行切换|F11|
 |在美工板上放大|Ctrl+等于号|
 |在美工板上缩小|Ctrl+减号 (-)|
 |在美工板上放大或缩小|旋转鼠标滚轮|
 |将美工板左移或右移|按住 Shift 并旋转鼠标滚轮|
 |将美工板上移或下移|按住 Ctrl 并旋转鼠标滚轮|
 |调整所选内容以适合屏幕大小|Ctrl+0|
-|以实际大小查看美工板|Ctrl+1|
+|以实际大小查看美工板|CTRL+1|
 |显示或隐藏句柄|F9|
 |显示或隐藏对象边界|Ctrl+Shift+H|
-|在“设计”、“XAML”和“拆分”视图之间进行切换|F11|
+|在“设计”****、“XAML”**** 和“拆分”**** 视图之间进行切换|F11|
 
 ## <a name="workspace-shortcuts"></a>工作区快捷方式
 
-|若要执行此操作|请执行此操作|
+|要执行此操作|操作|
 |----------------|-------------|
-|在“动画”和“设计”工作区之间进行切换|Ctrl+F11|
-|显示或隐藏“资产”面板|Ctrl+句点|
-|显示或隐藏“结果”面板|F12|
+|在“动画”**** 和“设计”**** 工作区之间进行切换|Ctrl+F11|
+|显示或隐藏“资产”**** 面板|Ctrl+句点|
+|显示或隐藏“结果”**** 面板|F12|
 |显示或隐藏所有面板|F4|
 |重置活动工作区布局|Ctrl+Shift+R|
 |平移工作区|按住空格键|
-|临时使用“选择”工具（在其他工具处于选定状态的情况下）|按住 Ctrl|
+|临时使用“选择”**** 工具（在其他工具处于选定状态的情况下）|按住 Ctrl|

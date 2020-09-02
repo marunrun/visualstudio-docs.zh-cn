@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 925220d583695e0116fb5901d92626bfcfa7450f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670542"
 ---
 # <a name="how-to-view-existing-types-class-designer"></a>如何：查看现有类型（类设计器）
@@ -29,7 +29,7 @@ ms.locfileid: "72670542"
 
  你可以查看本地类型和引用类型。 本地类型存在于当前打开的项目中，是可读/写的。 被引用的类型存在于其他项目中或被引用程序集中，是只读的。
 
- 若要设计类图上的新类型，请参阅[如何：使用类设计器创建类型](../ide/how-to-create-types-by-using-class-designer.md)。
+ 若要设计类图上的新类型，请参阅 [如何：使用类设计器创建类型](../ide/how-to-create-types-by-using-class-designer.md)。
 
 ### <a name="to-see-types-in-a-project-on-a-class-diagram"></a>在类图上查看项目中的类型
 
@@ -50,9 +50,9 @@ ms.locfileid: "72670542"
    你还可以将一个或多个类型从类视图中的项目节点拖动到类图中，来查看项目中的类型。
 
 > [!TIP]
-> 如果类视图尚未打开，则从“视图”菜单打开类视图。 有关类视图的详细信息，请参阅[查看类及其成员](https://msdn.microsoft.com/71e9e8f3-261a-4e0c-87bf-5ec48b8bf333)。
+> 如果类视图尚未打开，则从“视图”菜单打开类视图****。 有关类视图的详细信息，请参阅[查看类及其成员](https://msdn.microsoft.com/71e9e8f3-261a-4e0c-87bf-5ec48b8bf333)。
 
- 若要在关系图上的默认位置显示类型，请在类视图中选择一个或多个类型，右击选择的类型，再选择“查看类图”。
+ 若要在关系图上的默认位置显示类型，请在类视图中选择一个或多个类型，右键单击所选类型，然后选择 " **查看类图**"。
 
 > [!NOTE]
 > 如果某个已关闭的类图包含项目中业已存在的类型，则类图会打开以显示该类型形状。 但是，如果没有任何类图包含项目中已存在的类型，则类设计器将在项目内创建一个新的类图，并打开该关系图以显示该类型。
@@ -61,9 +61,9 @@ ms.locfileid: "72670542"
 
 ### <a name="to-display-the-contents-of-a-project-in-a-class-diagram"></a>若要在类图中显示项目的内容
 
-1. 在“解决方案资源管理器”或“类视图”中，右键单击该项目并选择“视图”，然后选择“查看类图”。
+1. 在“解决方案资源管理器”或“类视图”中，右键单击该项目并选择“视图”****，然后选择“查看类图”****。
 
      即会创建一个自动填充的类图。
 
-## <a name="see-also"></a>请参阅
- [如何：查看类型之间的继承（类设计器）](../ide/how-to-view-inheritance-between-types-class-designer.md) [如何：自定义类图（类设计器）](../ide/how-to-customize-class-diagrams-class-designer.md) [查看类型和关系（类设计器）](../ide/viewing-types-and-relationships-class-designer.md)
+## <a name="see-also"></a>另请参阅
+ [如何：查看类型之间的继承 (类设计器) ](../ide/how-to-view-inheritance-between-types-class-designer.md) [如何：自定义类图 (类设计器](../ide/how-to-customize-class-diagrams-class-designer.md)) [查看类型和关系 (类设计器](../ide/viewing-types-and-relationships-class-designer.md)) 

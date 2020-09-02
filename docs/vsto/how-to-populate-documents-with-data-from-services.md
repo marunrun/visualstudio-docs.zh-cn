@@ -15,19 +15,19 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 01e2a83f464576d1ca780daa17c0d9478f0caa14
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85547142"
 ---
 # <a name="how-to-populate-documents-with-data-from-services"></a>如何：用服务中的数据填充文档
 
-访问 Microsoft Office 文档级项目中的数据与访问 Windows 窗体项目中的数据的方式相同。 使用相同的工具和代码将数据引入解决方案，然后即可使用 Windows 窗体控件来显示该数据。 此外，可以利用称为“宿主控件”的控件，该控件是指 Microsoft Office Excel 和 Microsoft Office Word 中借助事件和数据绑定容量进行增强的本地对象。 有关详细信息，请参阅[主机项和主机控件概述](../vsto/host-items-and-host-controls-overview.md)。
+访问 Microsoft Office 文档级项目中的数据与访问 Windows 窗体项目中的数据的方式相同。 使用相同的工具和代码将数据引入解决方案，然后即可使用 Windows 窗体控件来显示该数据。 此外，可以利用称为“宿主控件”的控件，该控件是指 Microsoft Office Excel 和 Microsoft Office Word 中借助事件和数据绑定容量进行增强的本地对象。 有关详细信息，请参阅 [主机项和主机控件概述](../vsto/host-items-and-host-controls-overview.md)。
 
 [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]
 
-下列示例演示了如何在设计时向文档中添加数据绑定控件。 有关如何在运行时在 VSTO 外接程序中添加数据绑定控件的示例，请参阅[演练：在 Vsto 外接程序项目中绑定到服务中的数据](../vsto/walkthrough-binding-to-data-from-a-service-in-a-vsto-add-in-project.md)。
+下列示例演示了如何在设计时向文档中添加数据绑定控件。 有关如何在运行时在 VSTO 外接程序中添加数据绑定控件的示例，请参阅 [演练：在 Vsto 外接程序项目中绑定到服务中的数据](../vsto/walkthrough-binding-to-data-from-a-service-in-a-vsto-add-in-project.md)。
 
 ## <a name="to-populate-a-document-level-project-with-data-from-a-web-service"></a>使用 web 服务中的数据填充文档级项目
 

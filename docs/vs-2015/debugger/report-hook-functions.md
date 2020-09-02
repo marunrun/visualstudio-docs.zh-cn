@@ -1,5 +1,5 @@
 ---
-title: 报表挂钩函数 |Microsoft Docs
+title: 报表挂钩函数 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -26,10 +26,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 0a492a1db8b65cad74d02cec0f43bf0c81461730
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65687511"
 ---
 # <a name="report-hook-functions"></a>报表挂钩函数
@@ -41,16 +41,16 @@ ms.locfileid: "65687511"
 int YourReportHook(int nRptType, char *szMsg, int *retVal);  
 ```  
   
- 将指针传递给 **_CrtSetReportHook**属于类型 **_CRT_REPORT_HOOK**CRTDBG 中定义。H:  
+ 传递给 _CrtSetReportHook 的指针为 _CRT_REPORT_HOOK 类型，如 CRTDBG.H 中所定义：  
   
 ```  
 typedef int (__cdecl *_CRT_REPORT_HOOK)(int, char *, int *);  
 ```  
   
- 当运行库调用挂钩函数时，nRptType参数包含报告类别（_CRT_WARN、_CRT_ERROR 或 _CRT_ASSERT），szMsg 包含指向完全汇编的报告消息字符串的指针，而 retVal 指定 `_CrtDbgReport` 应在生成报告以后继续正常执行还是启动调试器。 （retVal 值为零继续执行，值为 1 为启动调试器。）  
+ 当运行库调用挂钩函数时，nRptType参数包含报告类别（_CRT_WARN、_CRT_ERROR 或 _CRT_ASSERT），szMsg 包含指向完全汇编的报告消息字符串的指针，而 retVal 指定 `_CrtDbgReport` 应在生成报告以后继续正常执行还是启动调试器   。 （retVal 值为零继续执行，值为 1 为启动调试器。）  
   
  如果挂钩完全处理了所讨论的消息，因而不需要进一步的报告，那么应返回 TRUE。 如果返回 FALSE，`_CrtDbgReport` 将以正常方式报告消息。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [编写调试挂钩函数](../debugger/debug-hook-function-writing.md)   
  [crt_dbg2 示例](https://msdn.microsoft.com/21e1346a-6a17-4f57-b275-c76813089167)

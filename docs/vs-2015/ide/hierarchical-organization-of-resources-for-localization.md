@@ -20,10 +20,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 0a79caca18c7813605ff851eea6bda642e6300a0
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72645616"
 ---
 # <a name="hierarchical-organization-of-resources-for-localization"></a>用于本地化的资源的分层组织
@@ -49,5 +49,5 @@ ms.locfileid: "72645616"
 
   ![NeutralSpecificResources 图](../ide/media/vbneutralspecificresources.gif "vbNeutralSpecificResources")
 
-## <a name="see-also"></a>请参阅
- 用于本地化[安全性和本地化附属程序集](../ide/security-and-localized-satellite-assemblies.md)[的非特定资源语言](../ide/neutral-resources-languages-for-localization.md)本地化[应用](../ide/localizing-applications.md)程序[全球化和本地化应用程序](../ide/globalizing-and-localizing-applications.md)[如何：为 Windows 窗体设置区域性和 UI 区域性全球化](https://msdn.microsoft.com/694e049f-0b91-474a-9789-d35124f248f0)[如何：为 ASP.NET 网页全球化设置区域性和 UI 区域性](https://msdn.microsoft.com/library/76091f86-f967-4687-a40f-de87bd8cc9a0)
+## <a name="see-also"></a>另请参阅
+ 用于本地化[安全和本地化附属程序集](../ide/security-and-localized-satellite-assemblies.md)[的非特定资源语言](../ide/neutral-resources-languages-for-localization.md)本地化[应用](../ide/localizing-applications.md)程序[全球化和本地化应用程序](../ide/globalizing-and-localizing-applications.md)如何：为 ASP.NET 设置区域性和[Ui Windows 窗体区域性](https://msdn.microsoft.com/694e049f-0b91-474a-9789-d35124f248f0)[如何：为网页全球化设置区域性和 ui 区域性](https://msdn.microsoft.com/library/76091f86-f967-4687-a40f-de87bd8cc9a0)

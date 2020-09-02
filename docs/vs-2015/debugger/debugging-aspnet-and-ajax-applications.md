@@ -20,10 +20,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: e0645cd28e6124e31e19b03489661c6828799cf4
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65686746"
 ---
 # <a name="debugging-aspnet-and-ajax-applications"></a>调试 ASP.NET 和 AJAX 应用程序
@@ -52,8 +52,8 @@ ms.locfileid: "65686746"
  [IntelliTrace](../debugger/intellitrace.md)  
  使用 IntelliTrace 可记录和评审应用程序的状态的历史记录而不用经常重新启动应用程序，从而加快了代码的调试速度。 您可以查看有关在运行应用程序期间发生的事件和调用的信息，然后在这些时间点上开始调试。 需要 Visual Studio Ultimate。  
   
-## <a name="see-also"></a>请参阅  
- [调试器安全](../debugger/debugger-security.md)   
- [Debugging Web Applications and Script](../debugger/debugging-web-applications-and-script.md) （调试 Web 应用程序和脚本）  
+## <a name="see-also"></a>另请参阅  
+ [调试器安全性](../debugger/debugger-security.md)   
+ [调试 Web 应用程序和脚本](../debugger/debugging-web-applications-and-script.md)   
  [调试器设置和准备](../debugger/debugger-settings-and-preparation.md)   
  [调试器基础知识](../debugger/debugger-basics.md)

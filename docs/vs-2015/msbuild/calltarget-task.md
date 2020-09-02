@@ -18,10 +18,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 9093b35cc444fc0b346f81a91d20afe73bd476cd
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68160422"
 ---
 # <a name="calltarget-task"></a>CallTarget 任务
@@ -32,7 +32,7 @@ ms.locfileid: "68160422"
 ## <a name="task-parameters"></a>任务参数  
  下表描述了 `CallTarget` 任务的参数。  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |`RunEachTargetSeparately`|可选 `Boolean` 输出参数。<br /><br /> 如果为 `true`，则对每个目标调用一次 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 引擎。 如果为 `false`，则调用一次 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 引擎即可生成所有目标。 默认值为 `false`。|  
 |`TargetOutputs`|可选的 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 输出参数。<br /><br /> 包括所有生成目标的输出。|  
@@ -44,7 +44,7 @@ ms.locfileid: "68160422"
   
  如果要生成默认目标，请使用 [MSBuild 任务](../msbuild/msbuild-task.md)，并将 `Projects` 参数设置为等于 `$(MSBuildProjectFile)`。  
   
- 除上面列出的参数外，此任务还从 <xref:Microsoft.Build.Tasks.TaskExtension> 类继承参数，后者自身继承自 <xref:Microsoft.Build.Utilities.Task> 类。 有关这些其他参数的列表及其说明的信息，请参阅 [TaskExtension Base Class](../msbuild/taskextension-base-class.md)。  
+ 除上面列出的参数外，此任务还从 <xref:Microsoft.Build.Tasks.TaskExtension> 类继承参数，后者自身继承自 <xref:Microsoft.Build.Utilities.Task> 类。 有关这些其他参数及其说明的列表，请参阅 [TaskExtension 基类](../msbuild/taskextension-base-class.md)。  
   
 ## <a name="example"></a>示例  
  以下示例从内部 `CallOtherTargets` 调用 `TargetA`。  
@@ -65,5 +65,5 @@ ms.locfileid: "68160422"
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [任务参考](../msbuild/msbuild-task-reference.md)   
+ [任务引用](../msbuild/msbuild-task-reference.md)   
  [目标](../msbuild/msbuild-targets.md)

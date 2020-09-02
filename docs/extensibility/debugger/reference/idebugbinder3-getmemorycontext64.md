@@ -1,5 +1,5 @@
 ---
-title: IDebugBinder3：：获取内存上下文64 |微软文档
+title: IDebugBinder3：： GetMemoryContext64 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -15,14 +15,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 3f76d84f0403a853ae7e297084f8745d7428386a
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80735741"
 ---
 # <a name="idebugbinder3getmemorycontext64"></a>IDebugBinder3::GetMemoryContext64
-将对象位置或 64 位内存地址转换为内存上下文。
+将对象位置或64位内存地址转换为内存上下文。
 
 ## <a name="syntax"></a>语法
 
@@ -44,19 +44,19 @@ int GetMemoryContext64 (
 
 ## <a name="parameters"></a>参数
 `pField`\
-[在]描述要定位的对象的[IDebugField。](../../../extensibility/debugger/reference/idebugfield.md) 如果`NULL`，则`dwConstant`改用。
+中描述要查找的对象的 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) 。 如果为 `NULL` ，则 `dwConstant` 改用。
 
 `uConstant`\
-[在]64 位内存地址，如 0x5000000。
+中64位内存地址，如0x50000000。
 
 `ppMemCxt`\
-[出]返回表示对象地址或内存中地址的[IDebugMemoryMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)接口。
+弄返回表示对象地址的 [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) 接口，或内存中的地址。
 
 ## <a name="return-value"></a>返回值
-如果成功，返回`S_OK`;否则，返回错误代码。
+如果成功， `S_OK` 则返回; 否则返回错误代码。
 
 ## <a name="example"></a>示例
-以下示例创建一个实现[IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md)接口并使用此方法检索内存上下文的对象。
+下面的示例创建一个实现 [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md) 接口的对象，并使用此方法检索内存上下文。
 
 ```cpp
 HRESULT CValueProperty::GetMemoryContext ( IDebugMemoryContext2** out_ppMemoryContext )
@@ -129,5 +129,5 @@ HRESULT CValueProperty::GetMemoryContext ( IDebugMemoryContext2** out_ppMemoryCo
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md)

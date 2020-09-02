@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: f485fb52c2de36e111fe2846a9ee16328ac61c49
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68192402"
 ---
-# <a name="idiainjectedsourcegetobjectfilename"></a>IDiaInjectedSource::get_objectFilename
+# <a name="idiainjectedsourceget_objectfilename"></a>IDiaInjectedSource::get_objectFilename
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-检索到的源已编译的对象文件名称。  
+检索源所编译到的对象文件名。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,10 +35,10 @@ HRESULT get_objectFilename ( 
   
 #### <a name="parameters"></a>参数  
  `pRetVal`  
- [out]返回源已编译到的对象文件名称。  
+ 弄返回源所编译到的对象文件名。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回 `S_OK`。 返回`S_FALSE`如果此属性不受支持。 否则，返回错误代码。  
+ 如果成功，则返回 `S_OK`。 `S_FALSE`如果此属性不受支持，则返回。 否则，返回错误代码。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md)

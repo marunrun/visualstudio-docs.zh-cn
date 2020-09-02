@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: b829f98597afb6ab1430d61022306ec840decb12
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72656745"
 ---
 # <a name="error-handling-activity-designers"></a>错误处理活动设计器
@@ -22,9 +22,9 @@ ms.locfileid: "72656745"
 ## <a name="in-this-section"></a>本节内容
  重新[引发](../workflow-designer/rethrow-activity-designer.md)用于创建和配置 <xref:System.Activities.Statements.Rethrow> 活动。
 
- [Throw](../workflow-designer/throw-activity-designer.md)用于创建和配置 <xref:System.Activities.Statements.Throw> 活动。
+ [Throw](../workflow-designer/throw-activity-designer.md) 用于创建和配置 <xref:System.Activities.Statements.Throw> 活动。
 
- [TryCatch](../workflow-designer/trycatch-activity-designer.md)用于创建和配置 <xref:System.Activities.Statements.TryCatch> 活动。
+ [TryCatch](../workflow-designer/trycatch-activity-designer.md) 用于创建和配置 <xref:System.Activities.Statements.TryCatch> 活动。
 
 ## <a name="reference"></a>参考
 

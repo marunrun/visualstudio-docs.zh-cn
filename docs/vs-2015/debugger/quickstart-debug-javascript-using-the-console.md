@@ -21,16 +21,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: a2256dfde39c761258ffb63ec6bbd9473e1be385
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65687585"
 ---
 # <a name="quickstart-debug-javascript-using-the-console"></a>快速入门：使用控制台调试 JavaScript
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-适用于 Windows 和 Windows Phone] (../Image/windows_and_phone_content.png"windows_and_phone_content")  
+适用于 Windows 和 Windows Phone] (。将 windows_and_phone_content.png "windows_and_phone_content" )   
   
  可以使用 JavaScript 控制台窗口中与使用 JavaScrip 生成的应用商店应用进行交互并对它进行调试。 这些功能支持 [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] 应用、Windows Phone 应用商店应用，以及使用用于 Apache Cordova 的 Visual Studio 工具创建的应用。 有关控制台命令参考的信息，请参见 [JavaScript Console commands](../debugger/javascript-console-commands.md)。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "65687585"
   
   本主题内容：  
   
-- [使用“JavaScript 控制台”窗口进行调试](#InteractiveConsole)  
+- [使用 JavaScript 控制台窗口进行调试](#InteractiveConsole)  
   
 - [交互式调试和中断模式](#InteractiveDebuggingBreakMode)  
   
@@ -61,9 +61,9 @@ ms.locfileid: "65687585"
 > [!TIP]
 > 如果 JavaScript 控制台窗口处于关闭状态，请依次选择“调试” > >  以重新打开它。 该窗口仅在脚本调试会话期间出现。  
   
- 使用“JavaScript 控制台”窗口，你可以在无需停止和重新启动调试器的情况下与应用交互。 有关详细信息，请参阅[刷新应用程序 (JavaScript)](../debugger/refresh-an-app-javascript.md)。 有关其他 JavaScript 调试功能，如使用 DOM 资源管理器和设置断点，请参阅[快速入门：调试 HTML 和 CSS](../debugger/quickstart-debug-html-and-css.md)并[在 Visual Studio 中调试应用](../debugger/debug-store-apps-in-visual-studio.md)。  
+ 使用“JavaScript 控制台”窗口，你可以在无需停止和重新启动调试器的情况下与应用交互。 有关详细信息，请参阅 [刷新应用 (JavaScript)](../debugger/refresh-an-app-javascript.md)。 有关其他 JavaScript 调试功能（例如使用 DOM 资源管理器和设置断点）的信息，请参阅[快速入门：调试 HTML 和 CSS](../debugger/quickstart-debug-html-and-css.md) 和[在 Visual Studio 中调试应用](../debugger/debug-store-apps-in-visual-studio.md)。  
   
-## <a name="InteractiveConsole"></a> 使用“JavaScript 控制台”窗口进行调试  
+## <a name="debug-by-using-the-javascript-console-window"></a><a name="InteractiveConsole"></a> 使用“JavaScript 控制台”窗口进行调试  
  以下步骤会创建一个 `FlipView` 应用并演示如何以交互方式调试 JavaScript 编码错误。  
   
 > [!CAUTION]
@@ -71,9 +71,9 @@ ms.locfileid: "65687585"
   
 #### <a name="to-debug-javascript-code-in-the-flipview-app"></a>调试 FlipView 应用中的 JavaScript 代码  
   
-1. 通过选择 **“文件”** > **“新建项目”**。  
+1. 通过选择 **“文件”**  >  **“新建项目”** 。  
   
-2. 选择 **“JavaScript”** > **“应用商店应用”**，选择 **“Windows 应用程序”** 或“ **Windows Phone 应用程序”**，然后选择 **“空白应用程序”**。  
+2. 选择 " **JavaScript**应用  >  **商店应用**"，选择 " **Windows 应用**" 或 " **Windows Phone 应用**"，然后选择 "**空白应用**"。  
   
 3. 为项目输入名称（如 `FlipViewApp`），然后选择“确定”  以创建应用。  
   
@@ -161,11 +161,11 @@ ms.locfileid: "65687585"
   
      应用会运行，但缺少图像。 JavaScript 控制台窗口中的 APPHOST 错误指示缺少图像。  
   
-9. 与`FlipView`模拟器或 Phone 仿真程序中，类型中运行的应用`Data.items`在控制台窗口输入提示符 (下一步">>"符号)，按 Enter。  
+9. 在 `FlipView` 模拟器或 Phone 仿真程序中运行应用程序时，请 `Data.items` 在 ">>" 符号) 下的控制台窗口输入提示 (键入，然后按 enter。  
   
      `items` 对象的可视化工具会出现在控制台窗口中。 这指示 `items` 对象进行了实例化，并且在当前脚本上下文中可用。 在控制台窗口中，可以在对象的各个节点中单击以查看属性值（或使用箭头键）。 如果向下单击到 `items._data` 对象（如图所示），则会发现其图像源引用不正确（与预期一样）。 该对象中存在的仍是默认图像 (logo.png)，并且有缺少的图像与预期的图像交织在一起。  
   
-     ![JavaScript 控制台窗口](../debugger/media/js-console-window.png "JS_Console_Window")  
+     ![“JavaScript 控制台”窗口](../debugger/media/js-console-window.png "JS_Console_Window")  
   
      另请注意， `items._data` 对象中的项目远比你预期的要多。  
   
@@ -197,7 +197,7 @@ ms.locfileid: "65687585"
   
 13. 选择绿色箭头符号以运行脚本。  
   
-14. 按 Ctrl+Alt+M 以将控制台输入提示切换为单行模式，然后选择 **“清除输入”** （红色“X”）以从输入提示符中删除代码。  
+14. 按 Ctrl + Alt + M 将控制台输入提示切换到单行模式，然后选择 " **清除输入** (红色" X ") 以从输入提示符中删除代码。  
   
 15. 在提示符下，键入 `Data.items.length = 3` ，并按 Enter。 这会从数据中移除额外的元素。  
   
@@ -205,26 +205,26 @@ ms.locfileid: "65687585"
   
 17. 在 DOM 资源管理器中，可以查看更新后的 DIV 元素，并且可以导航到子树中以查找预期的 IMG 元素。  
   
-18. 选择 **“仿真程序 8.1 WVGA 4 英寸 512MB”** > **“停止调试”** 或按 Shift+F5 停止调试，然后修复源代码。  
+18. 选择 **“仿真程序 8.1 WVGA 4 英寸 512MB”**  >  **“停止调试”** 或按 Shift+F5 停止调试，然后修复源代码。  
   
      有关包含更正后的示例代码的完整 default.html 页面，请参阅[调试 HTML、CSS 和 JavaScript 示例代码](../debugger/debug-html-css-and-javascript-sample-code.md)。  
   
-## <a name="InteractiveDebuggingBreakMode"></a> 交互式调试和中断模式  
+## <a name="interactive-debugging-and-break-mode"></a><a name="InteractiveDebuggingBreakMode"></a> 交互式调试和中断模式  
  可以在使用 JavaScript 调试工具（如 JavaScript 控制台窗口）时使用断点和单步执行代码。 当在调试器中运行的程序遇到断点时，调试器会临时挂起程序的执行。 当执行挂起时，程序会从运行模式切换为中断模式。 可以随时恢复执行。  
   
  当程序处于中断模式时，可以使用 JavaScript 控制台窗口运行在当前脚本执行上下文中有效的脚本和命令。 在此过程中，你会使用之前创建的已修复版本的 `FlipView` 应用，来演示中断模式的使用。  
   
 #### <a name="to-set-a-breakpoint-and-debug-the-app"></a>设置断点和调试应用  
   
-1. 在之前创建的 `FlipView` 应用的 default.html 文件中，打开 `updateImages()` 函数的快捷菜单，然后选择 **“断点”** > **“插入断点”**。  
+1. 在之前创建的 `FlipView` 应用的 default.html 文件中，打开 `updateImages()` 函数的快捷菜单，然后选择 **“断点”**  >  **“插入断点”** 。  
   
 2. 在 **“调试”** 工具栏上的 **“启动调试”** 按钮旁的下拉列表中，选择 **“本地计算机”** 或 **“仿真程序 8.1 WVGA 4 英寸 512MB”** 。  
   
-3. 选择 **“仿真程序 8.1 WVGA 4 英寸 512MB”** > **“本地计算机”**，或按 F5。  
+3. 选择 **“仿真程序 8.1 WVGA 4 英寸 512MB”**  >  **“本地计算机”** ，或按 F5。  
   
      当执行过程抵达 `updateImages()` 函数时，应用程序进入中断模式，并以黄色突出显示程序执行的当前行。  
   
-     ![中断模式下使用 JavaScript 控制台](../debugger/media/js-breakmode.png "JS_BreakMode")  
+     ![将中断模式与 JavaScript 控制台一起使用](../debugger/media/js-breakmode.png "JS_BreakMode")  
   
      更改变量的值即可立即影响程序状态，而不会结束当前的调试会话。  
   
@@ -234,7 +234,7 @@ ms.locfileid: "65687585"
   
      下图显示了此时的控件台窗口。  
   
-     ![JavaScript 控制台窗口，其中显示可视化工具](../debugger/media/js-console-function-visualizer.png "JS_Console_Function_Visualizer")  
+     ![显示可视化工具的“JavaScript 控制台”窗口](../debugger/media/js-console-function-visualizer.png "JS_Console_Function_Visualizer")  
   
 6. 将下面这行函数从输出窗口复制到输入提示符下，并将索引值更改为 3：  
   
@@ -250,23 +250,23 @@ ms.locfileid: "65687585"
   
      若要切换回 Visual Studio，请按 F12 或 Alt+Tab。  
   
-## <a name="SinglelineMultilineMode"></a> JavaScript 控制台窗口中的单行模式和多行模式  
+## <a name="single-line-mode-and-multiline-mode-in-the-javascript-console-window"></a><a name="SinglelineMultilineMode"></a> JavaScript 控制台窗口中的单行模式和多行模式  
  JavaScript 控制台窗口的输入提示支持单行模式和多行模式。 本主题中的交互式调试过程提供了使用这两种模式的示例。 可以按  Ctrl+Alt+M 在模式之间切换。  
   
  单行模式提供输入历史记录。 可以使用向上键和向下键在输入历史记录中进行导航。 运行脚本时，单行模式会清除输入提示。 若要在单行模式下运行脚本，请按 Enter。  
   
- 运行脚本时，多行模式不清除输入提示。 从多行模式切换到单行模式时，可以通过按 **“清除输入”** （红色“X”）来清除输入行。 若要在多行模式下运行脚本，请按 Ctrl+Enter 或选择窗口右下角的箭头符号。  
+ 运行脚本时，多行模式不清除输入提示。 从多行模式切换到单行模式时，可以通过按 " **清除输入** " (红色 "X" ) 来清除输入行。 若要在多行模式下运行脚本，请按 Ctrl+Enter 或选择窗口右下角的箭头符号。  
   
-## <a name="Switching"></a> 切换脚本执行上下文  
+## <a name="switching-the-script-execution-context"></a><a name="Switching"></a> 切换脚本执行上下文  
  JavaScript 控制台窗口允许一次与单个执行上下文（表示 Web 平台主机 (WWAHost.exe) 的单个实例）进行交互。 在某些情况下，应用可能会启动主机的另一个实例，例如在使用 `iframe`、共享协定、Web 辅助进程或 `WebView` 控件时。 如果主机的另一个实例正在运行，则可以通过在 **“目标”** 列表中选择执行上下文，在运行应用时选择不同的执行上下文。  
   
  下图显示了“JavaScript 控件台”窗口中的“目标”列表。  
   
- ![面向 JavaScript 控制台窗口中的选择](../debugger/media/js-console-target.png "JS_Console_Target")  
+ ![JavaScript 控制台窗口中的目标选择](../debugger/media/js-console-target.png "JS_Console_Target")  
   
  你也可以使用 `cd` 命令切换执行上下文，但是你必须知道其他执行上下文的名称并且你使用的引用必须在范围内。 **“目标”** 列表提供更好的方式来访问其他执行上下文。  
   
-## <a name="BrowserSupport"></a> 浏览器和平台支持  
+## <a name="browser-and-platform-support"></a><a name="BrowserSupport"></a> 浏览器和平台支持  
  在以下平台上支持 JavaScript 控制台窗口：  
   
 - 使用 JavaScript 和 HTML 的[!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] 和 Windows Phone 应用商店应用  
@@ -275,12 +275,12 @@ ms.locfileid: "65687585"
   
 - 在 [!INCLUDE[win8](../includes/win8-md.md)]上运行的 Internet Explorer 10  
   
-## <a name="see-also"></a>请参阅  
- [Debug apps in Visual Studio](../debugger/debug-store-apps-in-visual-studio.md)   
- [JavaScript Console commands](../debugger/javascript-console-commands.md)   
- [刷新应用 (JavaScript)](../debugger/refresh-an-app-javascript.md)   
- [键盘快捷键](../debugger/keyboard-shortcuts-html-and-javascript.md)   
+## <a name="see-also"></a>另请参阅  
+ [在 Visual Studio 中调试应用](../debugger/debug-store-apps-in-visual-studio.md)   
+ [JavaScript 控制台命令](../debugger/javascript-console-commands.md)   
+ [ (JavaScript 中刷新应用) ](../debugger/refresh-an-app-javascript.md)   
+ [键盘快捷方式](../debugger/keyboard-shortcuts-html-and-javascript.md)   
  [调试 HTML、CSS 和 JavaScript 示例代码](../debugger/debug-html-css-and-javascript-sample-code.md)   
  [快速入门：调试 HTML 和 CSS](../debugger/quickstart-debug-html-and-css.md)   
- [调试 WebView 控件](../debugger/debug-a-webview-control.md)   
+ [调试 Web 视图控件](../debugger/debug-a-webview-control.md)   
  [产品支持和辅助功能](https://msdn.microsoft.com/library/tzbxw1af\(VS.120\).aspx)

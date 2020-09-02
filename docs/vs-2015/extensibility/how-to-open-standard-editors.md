@@ -12,48 +12,48 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 792ac8a0859481fd97b2eaee4bd66753f0460a37
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68204136"
 ---
 # <a name="how-to-open-standard-editors"></a>如何：打开标准编辑器
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-当您打开标准编辑器时，您让 IDE 确定指定的文件类型，而不是指定文件的特定于项目的编辑器的标准编辑器。  
+打开标准编辑器时，可以让 IDE 为指定的文件类型确定标准编辑器，而不是为文件指定特定于项目的编辑器。  
   
- 请完成以下步骤来实现<xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.OpenItem%2A>方法。 这将在标准编辑器中打开项目文件。  
+ 完成以下过程以实现 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.OpenItem%2A> 方法。 这会在标准编辑器中打开项目文件。  
   
-### <a name="to-implement-the-openitem-method-with-a-standard-editor"></a>若要使用标准编辑器实现 OpenItem 方法  
+### <a name="to-implement-the-openitem-method-with-a-standard-editor"></a>使用标准编辑器实现 OpenItem 方法  
   
-1. 调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable>(`RDT_EditLock`) 来确定文档数据对象文件是否已打开。  
+1. 调用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable> (`RDT_EditLock`) 以确定文档数据对象文件是否已打开。  
   
-2. 如果该文件已打开，通过调用 resurface 文件<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.IsDocumentOpen%2A>方法，指定的值`IDO_ActivateIfOpen`为`grfIDO`参数。  
+2. 如果文件已打开，则通过调用方法来 resurface 文件 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.IsDocumentOpen%2A> ，并 `IDO_ActivateIfOpen` 为参数指定值 `grfIDO` 。  
   
-     如果文件已打开，并且该文档拥有的不同于调用项目的项目，您的项目得到从另一个项目正在打开的编辑器是一条警告。 然后显示文件窗口中。  
+     如果文件已打开，并且文档由与调用项目不同的项目所拥有，则您的项目将收到一条警告，指出正在打开的编辑器来自其他项目。 然后，将显示 "文件" 窗口。  
   
-3. 如果文档未打开或未在运行文档表中，调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A>方法 (`OSE_ChooseBestStdEditor`) 以打开该文件的标准编辑器。  
+3. 如果文档未打开或未在正在运行的文档表中，则调用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A> 方法 (`OSE_ChooseBestStdEditor`) 为该文件打开标准编辑器。  
   
-     当调用该方法时，IDE 将执行以下任务：  
+     调用方法时，IDE 会执行以下任务：  
   
-    1. IDE 将扫描编辑器 / {guidEditorType} / 扩展子项中注册表，以确定哪个编辑器可以打开文件，并具有执行此操作的最高优先级。  
+    1. IDE 会在注册表中扫描 editor/{guidEditorType}/Extension 子项，以确定可以打开文件的编辑器，并且具有执行此操作的最高优先级。  
   
-    2. IDE 已确定哪个编辑器可以打开该文件后，IDE 会调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A>。 在编辑器实现此方法的返回信息所需的 IDE 来调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.CreateDocumentWindow%2A>和站点的新打开的文档。  
+    2. IDE 确定可以打开文件的编辑器后，IDE 会调用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A> 。 此方法的编辑器实现将返回 IDE 调用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.CreateDocumentWindow%2A> 和站点新打开的文档所需的信息。  
   
-    3. 最后，IDE 将文档加载使用常规持久性接口，如<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2>。  
+    3. 最后，IDE 使用常用持久性接口（如）加载文档 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2> 。  
   
-    4. 如果 IDE 先前已确定的层次结构或层次结构项是可用，IDE 会调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.GetItemContext%2A>方法的项目获取项目级上下文<xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider>指针将传递回用<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.CreateDocumentWindow%2A>方法调用。  
+    4. 如果 IDE 之前确定层次结构或层次结构项可用，则 IDE 将对项目调用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.GetItemContext%2A> 方法，以获取项目级上下文 <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider> 指针，以通过 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.CreateDocumentWindow%2A> 方法调用传入。  
   
-4. 返回<xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider>指针，指向 IDE 时 IDE 调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.GetItemContext%2A>上你项目中，如果你想要让编辑器获取上下文从你的项目。  
+4. <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider> <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.GetItemContext%2A> 如果希望让编辑器从项目获取上下文，请在 ide 调用项目时返回指向 ide 的指针。  
   
-     执行此步骤允许项目的产品/服务到编辑器的其他服务。  
+     执行此步骤后，项目可以向编辑器提供其他服务。  
   
-     如果在窗口框架中，已成功放置文档视图或文档视图对象，则对象初始化其数据与通过调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2.LoadDocData%2A>。  
+     如果文档视图或文档视图对象已成功放置在窗口框架中，则会通过调用将对象初始化为其数据 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2.LoadDocData%2A> 。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider>   
  [打开和保存项目项](../extensibility/internals/opening-and-saving-project-items.md)   
  [如何：打开项目特定的编辑器](../extensibility/how-to-open-project-specific-editors.md)   
- [如何：打开编辑器的打开的文档](../extensibility/how-to-open-editors-for-open-documents.md)   
+ [如何：打开打开的文档的编辑器](../extensibility/how-to-open-editors-for-open-documents.md)   
  [使用“打开文件”命令显示文件](../extensibility/internals/displaying-files-by-using-the-open-file-command.md)

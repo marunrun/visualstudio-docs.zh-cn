@@ -12,17 +12,17 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 3f89b99f15374ef7e0bbc6964ee1ff521eeb469f
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85903626"
 ---
 # <a name="create-a-breakpoint"></a>创建断点
 下面介绍了创建断点的过程。
 
 ## <a name="methods-in-breakpoint-creation"></a>断点创建中的方法
- 如果加载了绑定断点所需的模块，则会话调试管理器（SDM）将调用以下方法：
+ 加载绑定断点所需的模块时，会话调试管理器 (SDM) 调用以下方法：
 
 1. [IDebugPendingBreakpoint2::Enable](../../extensibility/debugger/reference/idebugpendingbreakpoint2-enable.md)
 

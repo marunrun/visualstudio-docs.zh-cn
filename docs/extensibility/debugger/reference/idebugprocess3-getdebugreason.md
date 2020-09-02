@@ -1,5 +1,5 @@
 ---
-title: IDebugProcess3：：获取调试原因 |微软文档
+title: IDebugProcess3：： GetDebugReason |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 2fa12b74b44761761a08e232a9f3efa845fa73a7
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80723663"
 ---
 # <a name="idebugprocess3getdebugreason"></a>IDebugProcess3::GetDebugReason
@@ -41,10 +41,10 @@ int GetDebugReason(
 
 ## <a name="parameters"></a>参数
 `pReason`\
-[出]从[DEBUG_REASON](../../../extensibility/debugger/reference/debug-reason.md)枚举中返回值。
+弄从 [DEBUG_REASON](../../../extensibility/debugger/reference/debug-reason.md) 枚举返回一个值。
 
 ## <a name="return-value"></a>返回值
- 如果成功，返回`S_OK`;否则，返回错误代码。
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。
 
 ## <a name="see-also"></a>请参阅
 - [IDebugProcess3](../../../extensibility/debugger/reference/idebugprocess3.md)

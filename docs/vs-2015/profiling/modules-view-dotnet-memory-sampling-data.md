@@ -12,10 +12,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: abc5f1f6a15271fa3ec530658add2b6ca3027959
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68160866"
 ---
 # <a name="modules-view---net-memory-sampling-data"></a>“模块”视图 - .NET 内存采样数据
@@ -25,9 +25,9 @@ ms.locfileid: "68160866"
   
  分配内存的语句的源文件行号在 函数节点下列出，执行分配的指令的地址在行节点下列出。 非独占和独占值始终对于行数据和指令数据始终是相同的。  
   
-|列|说明|  
+|列|描述|  
 |------------|-----------------|  
-|**名称**|模块、函数、行号或指令地址的名称。|  
+|**Name**|模块、函数、行号或指令地址的名称。|  
 |**进程 ID**|分析运行的进程 ID (PID)。|  
 |**进程名**|进程的名称。|  
 |**模块名**|函数所在模块的名称。|  
@@ -45,6 +45,6 @@ ms.locfileid: "68160866"
   
 ## <a name="see-also"></a>另请参阅  
  [如何：自定义报告视图列](../profiling/how-to-customize-report-view-columns.md)   
- [“模块”视图 - 检测](../profiling/modules-view-dotnet-memory-instrumentation-data.md)   
- [“模块”视图](../profiling/modules-view-sampling-data.md)   
+ ["模块" 视图-检测](../profiling/modules-view-dotnet-memory-instrumentation-data.md)   
+ [模块视图](../profiling/modules-view-sampling-data.md)   
  [“模块”视图](../profiling/modules-view-instrumentation-data.md)

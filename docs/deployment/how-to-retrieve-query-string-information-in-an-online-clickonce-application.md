@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: d0e177f1d41655ffa6fb6b6bbfa52cfc29d15fd6
-ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85382180"
 ---
 # <a name="how-to-retrieve-query-string-information-in-an-online-clickonce-application"></a>如何：在联机 ClickOnce 应用程序中检索查询字符串信息
@@ -39,7 +39,7 @@ ms.locfileid: "85382180"
 > [!NOTE]
 > 决定启用此功能之前，请参阅本主题后面的“安全性”一节。
 
- 有关如何 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 使用*Mage.exe*或*MageUI.exe*创建部署的信息，请参阅[演练：手动部署 ClickOnce 应用程序](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)。
+ 有关如何 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 使用 *Mage.exe* 或 *MageUI.exe*创建部署的信息，请参阅 [演练：手动部署 ClickOnce 应用程序](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)。
 
 > [!NOTE]
 > 从 .NET Framework 3.5 SP1 开始，可以将命令行参数传递给脱机 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序。 如果要向应用程序提供参数，则可以将参数传入具有 .APPREF-MS 扩展名的快捷方式文件。
@@ -78,5 +78,5 @@ ms.locfileid: "85382180"
 ## <a name="net-framework-security"></a>.NET Framework 安全性
  仅当你计划在使用包含任何恶意字符的输入之前清除它时，才允许向 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序传递 URL 参数。 例如，如果在针对数据库进行的 SQL 查询中未经筛选地使用嵌入有引号、斜杠或分号的字符串，则该字符串可能会执行任意数据操作。 有关查询字符串安全性的详细信息，请参阅[脚本入侵概述](https://msdn.microsoft.com/Library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [保护 ClickOnce 应用程序](../deployment/securing-clickonce-applications.md)

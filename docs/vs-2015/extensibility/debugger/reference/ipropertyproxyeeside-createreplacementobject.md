@@ -1,5 +1,5 @@
 ---
-title: IPropertyProxyEESide::CreateReplacementObject |Microsoft Docs
+title: IPropertyProxyEESide：： CreateReplacementObject |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: c3a21e640d6661f8066609bdc344299ccbd63d52
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68147501"
 ---
 # <a name="ipropertyproxyeesidecreatereplacementobject"></a>IPropertyProxyEESide::CreateReplacementObject
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-创建数据对象的副本特定于表达式计算器 (EE)。  
+创建特定于表达式计算器 (EE) 的数据对象的副本。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,19 +42,19 @@ int CreateReplacementObject(
   
 #### <a name="parameters"></a>参数  
  `dataIn`  
- [in][IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md)包含要复制的数据对象。  
+ 中包含要复制的数据的 [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) 对象。  
   
  `dataOut`  
- [out]返回一个新`IEEDataStorage`对象。  
+ 弄返回一个新的 `IEEDataStorage` 对象。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
 ## <a name="remarks"></a>备注  
- 此方法提供[IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md)对象，表示一个字节数组。 EE 通常没有实现此传入数据对象。 但是，此方法返回的对象始终通过 EE，它允许 EE 实现实现`IEEDataStorage`上任何类所需的接口。  
+ 此方法的 [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) 对象表示字节数组。 此传入数据对象通常不是由 EE 实现的。 但是，此方法返回的对象始终由 EE 实现，这使 EE 可以 `IEEDataStorage` 在所需的任何类上实现接口。  
   
- 请注意，数据提供传入的`IEEDataStorage`对象必须是相同的数据中的传出`IEEDataStorage`对象。  
+ 请注意，传入对象提供的数据 `IEEDataStorage` 在传出对象中必须是相同的数据 `IEEDataStorage` 。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IPropertyProxyEESide](../../../extensibility/debugger/reference/ipropertyproxyeeside.md)   
  [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md)

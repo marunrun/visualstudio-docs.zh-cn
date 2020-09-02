@@ -12,31 +12,31 @@ caps.latest.revision: 36
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 324e74c78f01da47c544b5f640ad0bd9052a1bb4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68160547"
 ---
 # <a name="subscribing-to-an-event"></a>订阅事件
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-此演练说明了如何创建一个工具窗口，运行文档表 (RDT) 中的事件做出响应。 工具窗口承载实现的用户控件<xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents>。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.AdviseRunningDocTableEvents%2A>方法连接到事件接口。  
+本演练介绍如何创建一个工具窗口，该窗口对运行的文档表中的事件进行响应 (RDT) 。 工具窗口承载实现的用户控件 <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents> 。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.AdviseRunningDocTableEvents%2A>方法将接口连接到事件。  
   
-## <a name="prerequisites"></a>系统必备  
- 从 Visual Studio 2015 开始，您并不安装 Visual Studio SDK 从下载中心获得。 它是作为 Visual Studio 安装程序中的可选功能包含在内。 此外可以在以后安装 VS SDK。 有关详细信息，请参阅[安装 Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md)。  
+## <a name="prerequisites"></a>必备条件  
+ 从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。  
   
 ## <a name="subscribing-to-rdt-events"></a>订阅 RDT 事件  
   
-#### <a name="to-create-an-extension-with-a-tool-window"></a>若要使用的工具窗口创建扩展  
+#### <a name="to-create-an-extension-with-a-tool-window"></a>使用工具窗口创建扩展  
   
-1. 创建一个名为项目**RDTExplorer**使用 VSIX 模板，并添加一个名为的自定义工具窗口项模板**RDTExplorerWindow**。  
+1. 使用 VSIX 模板创建名为 **RDTExplorer** 的项目，并添加一个名为 **RDTExplorerWindow**的自定义工具窗口项模板。  
   
-     有关使用工具窗口创建扩展的详细信息，请参阅[与工具窗口创建扩展](../extensibility/creating-an-extension-with-a-tool-window.md)。  
+     有关使用工具窗口创建扩展的详细信息，请参阅 [使用工具窗口创建扩展](../extensibility/creating-an-extension-with-a-tool-window.md)。  
   
-#### <a name="to-subscribe-to-rdt-events"></a>若要订阅 RDT 事件  
+#### <a name="to-subscribe-to-rdt-events"></a>订阅 RDT 事件  
   
-1. 打开 RDTExplorerWindowControl.xaml 文件，并删除名为的按钮`button1`。 添加<xref:System.Windows.Forms.ListBox>控制并接受默认名称。 网格元素应如下所示：  
+1. 打开 RDTExplorerWindowControl 文件并删除名为的按钮 `button1` 。 添加 <xref:System.Windows.Forms.ListBox> 控件并接受默认名称。 Grid 元素应如下所示：  
   
     ```xml  
     <Grid>  
@@ -47,7 +47,7 @@ ms.locfileid: "68160547"
     </Grid>  
     ```  
   
-2. 在代码视图中打开 RDTExplorerWindow.cs 文件。 将以下代码添加到起始位置的文件的 using 语句。  
+2. 在代码视图中打开 RDTExplorerWindow.cs 文件。 将以下 using 语句添加到文件的开头。  
   
     ```csharp  
     using Microsoft.VisualStudio;  
@@ -55,7 +55,7 @@ ms.locfileid: "68160547"
     using Microsoft.VisualStudio.Shell.Interop;  
     ```  
   
-3. 修改`RDTExplorerWindow`类这样的除了派生自<xref:Microsoft.VisualStudio.Shell.ToolWindowPane>类，它实现<xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents>接口。  
+3. 修改 `RDTExplorerWindow` 类，以便除了从类派生以外 <xref:Microsoft.VisualStudio.Shell.ToolWindowPane> ，还实现 <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents> 接口。  
   
     ```csharp  
     public class RDTExplorerWindow : ToolWindowPane, IVsRunningDocTableEvents  
@@ -64,23 +64,23 @@ ms.locfileid: "68160547"
   
 4. 实现 <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents>。  
   
-    - 实现接口。 将光标置于 IVsRunningDocTableEvents 名称。 应会看到灯泡在左边距中。 单击灯泡图标右侧的向下箭头，然后选择**实现接口**。  
+    - 实现接口。 将光标置于 IVsRunningDocTableEvents 名称上。 你应会在左边距中看到灯泡。 单击灯泡右侧的向下箭头，然后选择 " **实现接口**"。  
   
-5. 在接口中每个方法，将为行`throw new NotImplementedException();`与此：  
+5. 在接口中的每个方法中，将行替换 `throw new NotImplementedException();` 为：  
   
     ```csharp  
     return VSConstants.S_OK;  
     ```  
   
-6. 将 cookie 字段添加到 RDTExplorerWindow 类。  
+6. 向 RDTExplorerWindow 类添加一个 cookie 字段。  
   
     ```csharp  
     private uint rdtCookie;   
     ```  
   
-     它将保存返回的 cookie<xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.AdviseRunningDocTableEvents%2A>方法。  
+     这将保存方法返回的 cookie <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.AdviseRunningDocTableEvents%2A> 。  
   
-7. 重写 RDTExplorerWindow 的 initialize （） 方法以注册 RDT 事件。 始终应在 ToolWindowPane 的 initialize （） 方法中，在构造函数中不显示服务。  
+7. 重写 RDTExplorerWindow 的 Initialize ( # A1 方法以注册 RDT 事件。 应始终在 ToolWindowPane 的 Initialize ( # A1 方法中获取服务，而不是在构造函数中获取。  
   
     ```csharp  
     protected override void Initialize()  
@@ -91,9 +91,9 @@ ms.locfileid: "68160547"
     }  
     ```  
   
-     <xref:Microsoft.VisualStudio.Shell.Interop.SVsRunningDocumentTable>服务调用以获得<xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable>接口。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.AdviseRunningDocTableEvents%2A>方法连接到一个对象，实现 RDT 事件<xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents>，在这种情况下，RDTExplorer 对象。  
+     <xref:Microsoft.VisualStudio.Shell.Interop.SVsRunningDocumentTable>调用该服务以获取 <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable> 接口。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.AdviseRunningDocTableEvents%2A>方法将 RDT 事件连接到实现的对象 <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents> ，在本例中为 RDTExplorer 对象。  
   
-8. 更新 RDTExplorerWindow 的 dispose （） 方法。  
+8. 更新 RDTExplorerWindow 的 Dispose ( # A1 方法。  
   
     ```csharp  
     protected override void Dispose(bool disposing)  
@@ -107,9 +107,9 @@ ms.locfileid: "68160547"
     }  
     ```  
   
-     <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.UnadviseRunningDocTableEvents%2A>方法删除之间的连接`RDTExplorer`和 RDT 事件通知。  
+     <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.UnadviseRunningDocTableEvents%2A>方法删除 `RDTExplorer` 和 RDT 事件通知之间的连接。  
   
-9. 将以下行添加到正文<xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents.OnBeforeLastDocumentUnlock%2A>处理程序，再`return`语句。  
+9. 将以下行添加到处理程序的正文 <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents.OnBeforeLastDocumentUnlock%2A> 中，就在 `return` 语句前面。  
   
     ```csharp  
     public int OnBeforeLastDocumentUnlock(uint docCookie, uint dwRDTLockType, uint dwReadLocksRemaining, uint dwEditLocksRemaining)  
@@ -119,7 +119,7 @@ ms.locfileid: "68160547"
     }  
     ```  
   
-10. 将类似的代码行添加到正文<xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents.OnAfterFirstDocumentLock%2A>处理程序和其他你想要在列表框中看到的事件。  
+10. 将类似的行添加到 <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents.OnAfterFirstDocumentLock%2A> 处理程序的正文中，并添加到要在列表框中查看的其他事件。  
   
     ```csharp  
     public int OnAfterFirstDocumentLock(uint docCookie, uint dwRDTLockType, uint dwReadLocksRemaining, uint dwEditLocksRemaining)  
@@ -129,12 +129,12 @@ ms.locfileid: "68160547"
     }  
     ```  
   
-11. 生成项目并启动调试。 将显示 Visual Studio 实验实例。  
+11. 生成项目并启动调试。 出现 Visual Studio 实验实例。  
   
-12. 打开**RDTExplorerWindow** (**视图 / 其他 Windows / RDTExplorerWindow**)。  
+12. 打开 **RDTExplorerWindow** (**View/其他 Windows/RDTExplorerWindow**) 。  
   
-     **RDTExplorerWindow**窗口打开时的空的事件列表。  
+     此时将打开 " **RDTExplorerWindow** " 窗口，其中包含一个空的事件列表。  
   
 13. 打开或创建一个解决方案。  
   
-     作为`OnBeforeLastDocument`和`OnAfterFirstDocument`的事件触发，每个事件的通知会显示在事件列表。
+     `OnBeforeLastDocument` `OnAfterFirstDocument` 触发事件时，事件列表中会出现每个事件的通知。

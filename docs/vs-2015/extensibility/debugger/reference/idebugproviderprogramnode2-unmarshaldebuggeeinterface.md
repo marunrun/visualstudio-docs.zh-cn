@@ -1,5 +1,5 @@
 ---
-title: IDebugProviderProgramNode2::UnmarshalDebuggeeInterface |Microsoft Docs
+title: IDebugProviderProgramNode2：： UnmarshalDebuggeeInterface |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 3007d13ec3eae46511e4775497d0aad5b6325b2b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68146251"
 ---
 # <a name="idebugproviderprogramnode2unmarshaldebuggeeinterface"></a>IDebugProviderProgramNode2::UnmarshalDebuggeeInterface
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-获取跨进程边界的指定的接口。  
+跨进程边界获取指定接口。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,18 +40,18 @@ int UnmarshalDebuggeeInterface(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>参数  
  `riid`  
- [in]若要获取接口的 GUID。  
+ 中要获取的接口的 GUID。  
   
  `ppvObject`  
- [out]返回实现所需的接口的对象。 [C++] 这可以直接向所需的接口类型强制转换。 [C#] 使用<xref:System.Runtime.InteropServices.Marshal.GetObjectForIUnknown%2A>方法以获取所需的接口。  
+ 弄返回实现所需接口的对象。 [C + +] 这可以直接强制转换为所需的接口类型。 [C #] 使用 <xref:System.Runtime.InteropServices.Marshal.GetObjectForIUnknown%2A> 方法获取所需的接口。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
 ## <a name="remarks"></a>备注  
- 当在运行时的调试引擎使用此方法[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]进程空间和正在调试的程序运行的在其自己的进程空间中。  
+ 当调试引擎正在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 进程空间中运行并且正在调试的程序在其自己的进程空间中运行时，将使用此方法。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugProviderProgramNode2](../../../extensibility/debugger/reference/idebugproviderprogramnode2.md)

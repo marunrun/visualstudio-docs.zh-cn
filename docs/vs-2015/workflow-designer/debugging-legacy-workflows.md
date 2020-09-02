@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 40ae0a08e1623e1b90046d164d8bfe04eaf67229
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72656864"
 ---
 # <a name="debugging-legacy-workflows"></a>调试旧版工作流
@@ -27,7 +27,7 @@ ms.locfileid: "72656864"
 > 如果计算机上安装并卸载过 Visual Studio 的多个版本，在以下两种情况下 WF3 调试可能失败：
 >
 > - 设置的断点未命中。
->   - 显示以下消息：
+>   - 将显示以下消息：
 >
 >   **无法在 web 服务器上启动调试。调试程序安装不正确。 无法调试请求的代码类型。 运行安装程序以安装或修复调试器。**
 >
@@ -37,7 +37,7 @@ ms.locfileid: "72656864"
 
 - **断点**：按预期方式工作，但指定了函数名称的活动。
 
-- **调用堆栈**：经过修改，可提供已在工作流实例中执行的活动的大纲。 "**调用堆栈**" 窗口中的条目是执行活动的深度优先搜索。 您可以双击某个项以将焦点放在选定的活动上。
+- **调用堆栈**：经过修改，可提供已在工作流实例中执行的活动的大纲。 " **调用堆栈** " 窗口中的条目是执行活动的深度优先搜索。 您可以双击某个项以将焦点放在选定的活动上。
 
 - **线程**：提供正在调试的工作流实例的实例 ID。
 
@@ -45,7 +45,7 @@ ms.locfileid: "72656864"
 
 - 设计器图面上的条件断点。
 
-- QuickWatch。
+- 快速监视。
 
 - 设置下一语句。
 

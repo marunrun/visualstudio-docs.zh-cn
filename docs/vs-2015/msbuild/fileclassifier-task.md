@@ -19,10 +19,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 2077b1df6d6362c924527e296d36c041e7bd9929
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65693783"
 ---
 # <a name="fileclassifier-task"></a>FileClassifier 任务
@@ -66,9 +66,9 @@ ms.locfileid: "65693783"
 </Project>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [WPF MSBuild 引用](../msbuild/wpf-msbuild-reference.md)   
- [任务参考](../msbuild/wpf-msbuild-task-reference.md)   
- [MSBuild 参考](../msbuild/msbuild-reference.md)   
- [任务参考](../msbuild/msbuild-task-reference.md)   
+## <a name="see-also"></a>另请参阅  
+ [WPF MSBuild 参考](../msbuild/wpf-msbuild-reference.md)   
+ [任务引用](../msbuild/wpf-msbuild-task-reference.md)   
+ [MSBuild 引用](../msbuild/msbuild-reference.md)   
+ [任务引用](../msbuild/msbuild-task-reference.md)   
  [Building a WPF Application (WPF)](https://msdn.microsoft.com/library/a58696fd-bdad-4b55-9759-136dfdf8b91c)（生成 WPF 应用程序 (WPF)）

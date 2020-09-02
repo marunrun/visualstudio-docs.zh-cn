@@ -28,10 +28,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 336a02927374e856a2d6f5a55eb03c5ae1ac7037
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75845182"
 ---
 # <a name="midl-task"></a>MIDL 任务
@@ -54,7 +54,7 @@ ms.locfileid: "75845182"
   
      可选 **String** 参数。  
   
-     命令行选项列表。 例如， **"** _/option1 /option2 /option#_ "。 使用此参数可指定未由任何其他 MIDL 任务参数表示的命令行选项。  
+     命令行选项列表。 例如， **"**_/option1/option2/option #_"。 使用此参数可指定未由任何其他 MIDL 任务参数表示的命令行选项。  
   
      有关详细信息，请参阅 [MSDN](https://msdn.microsoft.com/) 网站上的“MIDL 命令行参考”。  
   
@@ -144,7 +144,7 @@ ms.locfileid: "75845182"
   
      如果为 `true`，则检查枚举值是否在允许的范围内。  
   
-     有关详细信息，请参阅 midl.exe 命令行帮助 ( **/?** ) 中的 **/error enum** 选项。  
+     有关详细信息，请参阅 midl.exe 的命令行帮助 (**/？**) 中的 **/error enum**选项。  
   
 - **ErrorCheckRefPointers**  
   
@@ -314,7 +314,7 @@ ms.locfileid: "75845182"
   
 - **SuppressCompilerWarnings**  
   
-     可选 **Boolean** 参数。  
+     可选的 **布尔** 参数。  
   
      如果为 `true`，则禁止 MIDL 任务的警告消息。  
   
@@ -330,18 +330,18 @@ ms.locfileid: "75845182"
   
 - **TargetEnvironment**  
   
-     可选 **String** 参数。  
+     可选的 **字符串** 参数。  
   
      指定应用程序运行的环境。  
   
      指定以下值之一，其中每个值对应于一个命令行选项。  
   
-    |“值”|命令行选项|  
+    |值|命令行选项|  
     |-----------|--------------------------|  
     |**NotSet**|*\<none>*|  
     |**Win32**|**/env win32**|  
     |**Itanium**|**/env ia64**|  
-    |**X64**|**/env x64**|  
+    |**64**|**/env x64**|  
   
      有关详细信息，请参阅 [MSDN](https://msdn.microsoft.com/) 网站上“MIDL 命令行参考”中的 **/env** 选项。  
   
@@ -353,13 +353,13 @@ ms.locfileid: "75845182"
   
 - **TypeLibFormat**  
   
-     可选 **String** 参数。  
+     可选的 **字符串** 参数。  
   
      指定类型库文件的格式。  
   
      指定以下值之一，其中每个值对应于一个命令行选项。  
   
-    |“值”|命令行选项|  
+    |值|命令行选项|  
     |-----------|--------------------------|  
     |**NewFormat**|**/newtlb**|  
     |**OldFormat**|**/oldtlb**|  
@@ -368,7 +368,7 @@ ms.locfileid: "75845182"
   
 - **TypeLibraryName**  
   
-     可选 **String** 参数。  
+     可选的 **字符串** 参数。  
   
      指定类型库文件的名称。  
   
@@ -402,13 +402,13 @@ ms.locfileid: "75845182"
   
 - **WarningLevel**  
   
-     可选 **String** 参数。  
+     可选的 **字符串** 参数。  
   
      指定要发出的警告的严重性（*警告等级*）。 若值为 0，则不发出任何警告。 否则，如果警告等级数小于或等于指定的值，将发出警告。  
   
      指定以下值之一，其中每个值对应于一个命令行选项。  
   
-    |“值”|命令行选项|  
+    |值|命令行选项|  
     |-----------|--------------------------|  
     |**0**|**/W0**|  
     |**1**|**/W1**|  
@@ -421,4 +421,4 @@ ms.locfileid: "75845182"
 ## <a name="remarks"></a>备注  
   
 ## <a name="see-also"></a>另请参阅  
- [任务参考](../msbuild/msbuild-task-reference.md)
+ [任务引用](../msbuild/msbuild-task-reference.md)

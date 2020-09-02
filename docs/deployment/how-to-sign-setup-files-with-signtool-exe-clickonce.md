@@ -1,5 +1,5 @@
 ---
-title: 如何用 SignTool.exe （ClickOnce）对安装文件进行签名 |Microsoft Docs
+title: 如何将安装程序文件与 SignTool.exe (ClickOnce) 进行签名 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -19,14 +19,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: f9e1911b6e86058b7f078f40fa10ca5e0e4e53c0
-ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85382063"
 ---
 # <a name="how-to-sign-setup-files-with-signtoolexe-clickonce"></a>如何：使用 SignTool.exe (ClickOnce) 对安装文件进行签名
-你可以使用*SignTool.exe*对安装程序（*setup.exe*）进行签名。 此过程有助于确保不会在最终用户计算机上安装经过篡改的文件。
+您可以使用 *SignTool.exe* *setup.exe*)  (对安装程序进行签名。 此过程有助于确保不会在最终用户计算机上安装经过篡改的文件。
 
  默认情况下，ClickOnce 具有签名的清单和一个签名的安装程序。 但是，如果想在以后更改安装程序的参数，则以后必须对该安装程序进行签名。 如果对安装程序签名后更改参数，则签名将会损坏。
 
@@ -36,7 +36,7 @@ ms.locfileid: "85382063"
 
 1. 在开发计算机上，安装想要用于对清单进行签名的证书。
 
-2. 选择**解决方案资源管理器**中的项目。
+2. 选择 **解决方案资源管理器**中的项目。
 
 3. 在“项目”菜单上，单击“ProjectName”属性****** ****。
 
@@ -60,9 +60,9 @@ ms.locfileid: "85382063"
 
 11. 在客户站点，打开命令提示符。
 
-12. 更改为包含 *.exe*文件的目录。
+12. 更改为包含 *.exe* 文件的目录。
 
-13. 用以下命令签署 *.exe*文件：
+13. 用以下命令签署 *.exe* 文件：
 
     ```cmd
     signtool sign /sha1 CertificateHash Setup.exe
@@ -76,5 +76,5 @@ ms.locfileid: "85382063"
     signtool sign /f CertFileName Setup.exe
     ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [如何：对应用程序和部署清单进行重新签名](../deployment/how-to-re-sign-application-and-deployment-manifests.md)

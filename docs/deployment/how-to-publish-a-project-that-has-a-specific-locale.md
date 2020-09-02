@@ -21,10 +21,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 2d3b3aa7c2c56b1175c2f280a96ade78ea17ee55
-ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85382219"
 ---
 # <a name="how-to-publish-a-project-that-has-a-specific-locale"></a>如何：发布具有特定区域设置的项目
@@ -149,7 +149,7 @@ ms.locfileid: "85382219"
 
 4. 使用 Visual Studio IDE 发布 PublishLocales**。
 
-     在“解决方案资源管理器”中选择 PublishLocales******。 在“项目”菜单上选择“属性”********。 在 "项目设计器" 的 "**发布**" 页上，指定的发布位置 **http://localhost/PublishLocales** ，然后单击 "**立即发布**"。
+     在“解决方案资源管理器”中选择 PublishLocales******。 在“项目”菜单上选择“属性”********。 在 "项目设计器" 的 " **发布** " 页上，指定的发布位置 **http://localhost/PublishLocales** ，然后单击 " **立即发布**"。
 
      当出现发布网页时，关闭它。 （对于此步骤，你只需发布该项目，而不必安装它。）
 
@@ -159,9 +159,9 @@ ms.locfileid: "85382219"
 
 6. 发布过程成功后，将生成一条消息，其中显示 " *PublishLocales\PublishLocales.vbproj*的发布已成功。 发布语言为 "en"。在消息框中单击 **"确定"** 。 当发布网页出现时，单击“安装”****。
 
-7. 在*C:\Inetpub\wwwroot\PublishLocales\en*中查找。 除了已本地化的资源 DLL 外，还应看到已安装的文件，例如，清单、setup.exe 和发布网页文件**。 （默认情况下，ClickOnce 在 Exe 和 Dll 上追加了 *.deploy*扩展名; 你可以在部署后删除此扩展。）
+7. 在 *C:\Inetpub\wwwroot\PublishLocales\en*中查找。 除了已本地化的资源 DLL 外，还应看到已安装的文件，例如，清单、setup.exe 和发布网页文件**。 默认情况下，ClickOnce 在 Exe 和 Dll 上追加了 *.deploy* 扩展名; (可以在部署后删除此扩展。 ) 
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [发布 ClickOnce 应用程序](../deployment/publishing-clickonce-applications.md)
 - [宏开发环境](/previous-versions/visualstudio/visual-studio-2010/fb30sxt3(v=vs.100))
 - [Macro 资源管理器窗口](/previous-versions/visualstudio/visual-studio-2010/wwkx67sw(v=vs.100))

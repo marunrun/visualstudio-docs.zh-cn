@@ -1,5 +1,5 @@
 ---
-title: FIELD_KIND | Microsoft Docs
+title: FIELD_KIND |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 15
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: ab972df2cf1b382498d2e57a5ae2e978c7230a34
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65692881"
 ---
-# <a name="fieldkind"></a>FIELD_KIND
+# <a name="field_kind"></a>FIELD_KIND
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-指定字段中包含的种类[IDebugField](../../../extensibility/debugger/reference/idebugfield.md)对象。  
+指定 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) 对象中包含的字段类型。  
   
 ## <a name="syntax"></a>语法  
   
@@ -125,64 +125,64 @@ public enum enum_FIELD_KIND {
   
 ## <a name="members"></a>成员  
  FIELD_KIND_TYPE  
- 指示该字段是仅的类型。  
+ 指示该字段仅为类型。  
   
  FIELD_KIND_SYMBOL  
- 指示该字段是一个符号，与类型、 名称和其他信息。  
+ 指示该字段为符号，其中包含类型、名称和其他信息。  
   
  FIELD_TYPE_PRIMITIVE  
  指示该字段为基元数据类型。  
   
  FIELD_TYPE_STRUCT  
- 指示该字段是一种结构。  
+ 指示该字段为结构。  
   
  FIELD_TYPE_CLASS  
  指示该字段是一个类。  
   
  FIELD_TYPE_INTERFACE  
- 指示该字段是一个接口。  
+ 指示字段是接口。  
   
  FIELD_TYPE_UNION  
- 指示该字段是一个联合。  
+ 指示该字段为联合。  
   
  FIELD_TYPE_ARRAY  
- 指示该字段是一个数组。  
+ 指示该字段为数组。  
   
  FIELD_TYPE_METHOD  
- 指示该字段是一种方法。  
+ 指示该字段是一个方法。  
   
  FIELD_TYPE_BLOCK  
- 指示该字段是一个块。  
+ 指示该字段为块。  
   
  FIELD_TYPE_POINTER  
  指示该字段是一个指针。  
   
  FIELD_TYPE_ENUM  
- 指示该字段是枚举的数据类型。  
+ 指示该字段为枚举数据类型。  
   
  FIELD_TYPE_LABEL  
  指示该字段是一个标签。  
   
  FIELD_TYPE_TYPEDEF  
- 指示该字段是其 typedef。  
+ 指示该字段为 typedef。  
   
  FIELD_TYPE_BITFIELD  
- 指示该字段是一组标志。  
+ 指示该字段是位域。  
   
  FIELD_TYPE_NAMESPACE  
  指示该字段是一个命名空间。  
   
  FIELD_TYPE_MODULE  
- 指示该字段是一个模块。  
+ 指示该字段为模块。  
   
  FIELD_TYPE_DYNAMIC  
- 指示该字段是动态。  
+ 指示该字段是动态的。  
   
  FIELD_TYPE_PROP  
- 指示该字段是一个属性。  
+ 指示此字段为属性。  
   
  FIELD_TYPE_INNERCLASS  
- 指示该字段是一个内部类。  
+ 指示该字段是内部类。  
   
  FIELD_TYPE_REFERENCE  
  指示该字段是一个引用。  
@@ -194,28 +194,28 @@ public enum enum_FIELD_KIND {
  指示该字段是成员。  
   
  FIELD_SYM_LOCAL  
- 指示该字段是本地。  
+ 指示该字段为本地字段。  
   
  FIELD_SYM_PARAMETER  
- 指示该字段是一个参数。  
+ 指示该字段是参数。  
   
  FIELD_SYM_THIS  
- 指示该字段是"this"指针。  
+ 指示该字段为 "this" 指针。  
   
  FIELD_SYM_GLOBAL  
- 指示该字段是全局。  
+ 指示该字段是全局的。  
   
  FIELD_SYM_PROP_GETTER  
  指示该字段检索属性。  
   
  FIELD_SYM_PROP_SETTER  
- 指示该字段将设置属性。  
+ 指示字段设置属性。  
   
  FIELD_SYM_EXTENDED  
  留待将来使用。  
   
  FIELD_KIND_MASK  
- 指示字段类型的掩码。  
+ 指示字段种类的掩码。  
   
  FIELD_TYPE_MASK  
  指示字段类型的掩码。  
@@ -224,19 +224,19 @@ public enum enum_FIELD_KIND {
  指示符号信息的掩码。  
   
 ## <a name="remarks"></a>备注  
- 从调用返回[GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md)方法。  
+ 从对 [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) 方法的调用返回。  
   
- 具体取决于类型的字段中， [QueryInterface](https://msdn.microsoft.com/library/62fce95e-aafa-4187-b50b-e6611b74c3b3)可以在调用[IDebugField](../../../extensibility/debugger/reference/idebugfield.md)更特定形式的接口的接口。 例如，如果[GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md)返回`FIELD_TYPE_METHOD`，然后，可以调用`QueryInterface`上我`DebugField`若要获取[IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)接口。  
+ 根据字段的种类，可以在[IDebugField](../../../extensibility/debugger/reference/idebugfield.md)接口上调用[QueryInterface](https://msdn.microsoft.com/library/62fce95e-aafa-4187-b50b-e6611b74c3b3)以实现更具体的接口形式。 例如，如果 [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) 返回 `FIELD_TYPE_METHOD` ，则可以 `QueryInterface` 在 I 上调用 `DebugField` 来获取 [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md) 接口。  
   
 ## <a name="requirements"></a>要求  
- 标头： sh.h  
+ 标头： sh。h  
   
- 命名空间:Microsoft.VisualStudio.Debugger.Interop  
+ 命名空间： VisualStudio  
   
- 程序集：Microsoft.VisualStudio.Debugger.Interop.dll  
+ 程序集： Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>请参阅  
- [枚举](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>另请参阅  
+ [计数](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [FIELD_MODIFIERS](../../../extensibility/debugger/reference/field-modifiers.md)   
  [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md)   
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

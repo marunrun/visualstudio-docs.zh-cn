@@ -16,20 +16,20 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 54ac9a4d56136d9e981ae038a0b219aa4cb4774e
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85544490"
 ---
 # <a name="ca1404-call-getlasterror-immediately-after-pinvoke"></a>CA1404：紧接在 P/Invoke 之后调用 GetLastError
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|Item|值|
+|项|值|
 |-|-|
 |TypeName|CallGetLastErrorImmediatelyAfterPInvoke|
 |CheckId|CA1404|
-|Category|Microsoft. 互操作性|
+|类别|Microsoft. 互操作性|
 |是否重大更改|不间断|
 
 ## <a name="cause"></a>原因

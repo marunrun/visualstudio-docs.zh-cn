@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 891a5c44159d10aacbb767cbc5376ae1d62252b0
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85547051"
 ---
 # <a name="how-to-programmatically-save-visio-documents"></a>如何：以编程方式保存 Visio 文档
@@ -72,7 +72,7 @@ ms.locfileid: "85547051"
 ## <a name="compile-the-code"></a>编译代码
  此代码示例要求满足以下条件：
 
-- 若要保存具有新名称的文档， `Test` 必须在 "*我的文档*" 文件夹（适用于 windows XP 及更低版本）或 "*文档*" 文件夹（适用于 windows Vista）中找到名为的目录。
+- 若要保存具有新名称的文档，名为的目录 `Test` 必须位于适用于 WINDOWS XP 和) 更早版本的 " *我的文档* " 文件夹 (或 windows Vista)  (的 " *文档* " 文件夹中。
 
 ## <a name="see-also"></a>另请参阅
 - [Visio 解决方案](../vsto/visio-solutions.md)

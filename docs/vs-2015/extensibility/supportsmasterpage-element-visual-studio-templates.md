@@ -1,5 +1,5 @@
 ---
-title: SupportsMasterPage 元素 （Visual Studio 模板） |Microsoft Docs
+title: " (Visual Studio 模板) 的 SupportsMasterPage 元素 |Microsoft Docs"
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -14,19 +14,19 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 051bde61132d286c3941a12c2e970aa2019fc0b7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68160477"
 ---
 # <a name="supportsmasterpage-element-visual-studio-templates"></a>SupportsMasterPage 元素（Visual Studio 模板）
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-指定是否**选择母版页**上启用复选框**添加新项**对话框。  
+指定是否在 "**添加新项**" 对话框中启用 "**选择母版页**" 复选框。  
   
- \<VSTemplate >  
- \<TemplateData >  
+ \<VSTemplate>  
+ \<TemplateData>  
  \<SupportsMasterPage>  
   
 ## <a name="syntax"></a>语法  
@@ -48,20 +48,20 @@ ms.locfileid: "68160477"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|指定将此模板分类并定义中的显示方式的数据**新的项目**或**新项**对话框。|  
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|指定对模板进行分类的数据，并定义它在 " **新建项目** " 或 " **新建项** " 对话框中的显示方式。|  
   
 ## <a name="text-value"></a>文本值  
  需要一个文本值。  
   
- 文本必须是`true`或`false`，以指示是否**选择母版页**上启用复选框**添加新项**对话框。  
+ 文本必须是 `true` 或 `false` ，指示是否在 "**添加新项**" 对话框中启用了 "**选择母版页**" 复选框。  
   
 ## <a name="remarks"></a>备注  
  `SupportsMasterPage` 是可选元素。 默认值为 `false`。  
   
- `SupportsMasterPage`元素功能仅适用于 Web 项目模板。  
+ `SupportsMasterPage`元素仅适用于 Web 项模板。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示包括对母版页的支持的 Web 项目的元数据。  
+ 下面的示例演示了包含母版页支持的 Web 项目的元数据。  
   
 ```  
 <VSTemplate Version="3.0.0" Type="Project"  
@@ -85,6 +85,6 @@ ms.locfileid: "68160477"
 </VSTemplate>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)   
  [创建项目和项模板](../ide/creating-project-and-item-templates.md)

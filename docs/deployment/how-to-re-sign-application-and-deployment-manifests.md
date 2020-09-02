@@ -19,27 +19,27 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 1905ea32a9899a1262e146f264e0a1179f0e8c6e
-ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85382193"
 ---
 # <a name="how-to-re-sign-application-and-deployment-manifests"></a>如何：为应用程序和部署清单重新签名
-对 Windows 窗体应用程序、Windows Presentation Foundation 应用程序（xbap）或 Office 解决方案的应用程序清单中的部署属性进行更改后，你必须使用证书对应用程序清单和部署清单进行重新签名。 此过程有助于确保不会在最终用户计算机上安装经过篡改的文件。
+对 Windows 窗体应用程序的应用程序清单中的部署属性进行更改后，Windows Presentation Foundation 应用程序 (xbap) 或 Office 解决方案，则必须使用证书对应用程序清单和部署清单进行重新签名。 此过程有助于确保不会在最终用户计算机上安装经过篡改的文件。
 
  如果你的客户想要将应用程序和部署清单签名为自己的证书，则可以对清单进行重新签名的另一种情况。
 
 ## <a name="re-sign-the-application-and-deployment-manifests"></a>对应用程序清单和部署清单重新签名
- 此过程假定您已对应用程序清单文件（*.manifest*）进行了更改。 有关详细信息，请参阅[如何：更改部署属性](https://msdn.microsoft.com/library/66052a3a-8127-4964-8147-2477ef5d1472)。
+ 此过程假定您已对应用程序清单 *文件 () * 进行了更改。 有关详细信息，请参阅 [如何：更改部署属性](https://msdn.microsoft.com/library/66052a3a-8127-4964-8147-2477ef5d1472)。
 
 #### <a name="to-re-sign-the-application-and-deployment-manifests-with-mageexe"></a>用 Mage.exe 对应用程序清单和部署清单进行重新签名
 
-1. 打开**Visual Studio 命令提示符**窗口。
+1. 打开 **Visual Studio 命令提示符** 窗口。
 
 2. 将目录更改为包含要签署的清单文件的文件夹。
 
-3. 键入以下命令，对应用程序清单文件进行签名。 将*ManifestFileName*替换为清单文件的名称和扩展名。 将*证书*替换为证书文件的相对或完全限定路径，并将*password*替换为证书的密码。
+3. 键入以下命令，对应用程序清单文件进行签名。 将 *ManifestFileName* 替换为清单文件的名称和扩展名。 将 *证书* 替换为证书文件的相对或完全限定路径，并将 *password* 替换为证书的密码。
 
     ```cmd
     mage -sign ManifestFileName.manifest -CertFile Certificate -Password Password
@@ -67,20 +67,20 @@ ms.locfileid: "85382193"
     mage -update WpfBrowserApplication1.xbap -appmanifest WpfBrowserApplication1.exe.manifest -CertFile ..\WpfBrowserApplication1_TemporaryKey.pfx
     ```
 
-5. （可选）将主部署清单（*发布 \\ \<appname> . 应用程序*）复制到版本部署目录（*publish\Application 文件 \\ \<appname> _ \<version> *）。
+5. （可选）将主部署清单 (*publish \\ \<appname> *) 复制到版本部署目录 (*publish\Application Files \\ \<appname> _ \<version> *) 。
 
 ## <a name="update-and-re-sign-the-application-and-deployment-manifests"></a>更新和重新签名应用程序和部署清单
- 此过程假定你已对应用程序清单文件（*.manifest*）进行了更改，但有其他已更新的文件。 更新文件后，还必须更新表示该文件的哈希。
+ 此过程假定你已对应用程序清单 *文件 () * 进行了更改，但有其他已更新的文件。 更新文件后，还必须更新表示该文件的哈希。
 
 #### <a name="to-update-and-re-sign-the-application-and-deployment-manifests-with-mageexe"></a>更新应用程序和部署清单并将其重新签名 Mage.exe
 
-1. 打开**Visual Studio 命令提示符**窗口。
+1. 打开 **Visual Studio 命令提示符** 窗口。
 
 2. 将目录更改为包含要签署的清单文件的文件夹。
 
-3. 从 "发布输出" 文件夹的文件中删除 *.deploy*文件扩展名。
+3. 从 "发布输出" 文件夹的文件中删除 *.deploy* 文件扩展名。
 
-4. 键入以下命令，将应用程序清单更新为更新的文件的新哈希，并对应用程序清单文件进行签名。 将*ManifestFileName*替换为清单文件的名称和扩展名。 将*证书*替换为证书文件的相对或完全限定路径，并将*password*替换为证书的密码。
+4. 键入以下命令，将应用程序清单更新为更新的文件的新哈希，并对应用程序清单文件进行签名。 将 *ManifestFileName* 替换为清单文件的名称和扩展名。 将 *证书* 替换为证书文件的相对或完全限定路径，并将 *password* 替换为证书的密码。
 
     ```cmd
     mage -update ManifestFileName.manifest -CertFile Certificate -Password Password
@@ -108,9 +108,9 @@ ms.locfileid: "85382193"
     mage -update WpfBrowserApplication1.xbap -appmanifest WpfBrowserApplication1.exe.manifest -CertFile ..\WpfBrowserApplication1_TemporaryKey.pfx
     ```
 
-6. 将 *.deploy*文件扩展名添加回文件（应用程序和部署清单文件除外）。
+6. 将 *.deploy* 文件扩展名添加回文件（应用程序和部署清单文件除外）。
 
-7. （可选）将主部署清单（*发布 \\ \<appname> . 应用程序*）复制到版本部署目录（*publish\Application 文件 \\ \<appname> _ \<version> *）。
+7. （可选）将主部署清单 (*publish \\ \<appname> *) 复制到版本部署目录 (*publish\Application Files \\ \<appname> _ \<version> *) 。
 
 ## <a name="see-also"></a>请参阅
 - [保护 ClickOnce 应用程序](../deployment/securing-clickonce-applications.md)

@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: f3de5272bdb47e0d7d87bad63d5ea0cd6a8b9bef
-ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85382453"
 ---
 # <a name="how-to-disable-url-activation-of-clickonce-applications"></a>如何：禁用 ClickOnce 应用程序的 URL 激活
@@ -29,13 +29,13 @@ ms.locfileid: "85382453"
 
 此方法仅适用于从 Web 服务器安装到用户计算机上的 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序。 它不能用于仅联机应用程序，仅联机应用程序可以通过使用其 URL 启动。 有关仅联机应用程序与已安装应用程序之间的差异的详细信息，请参阅[选择 ClickOnce 部署策略](../deployment/choosing-a-clickonce-deployment-strategy.md)。
 
-此过程使用 Windows 软件开发工具包（SDK）工具 MageUI.exe。 此工具的详细信息，请参阅[MageUI.exe（图形化客户端中的清单生成和编辑工具）](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)。 你还可以使用 Visual Studio 执行此过程。
+此过程使用 Windows 软件开发工具包 (SDK) 工具 MageUI.exe。 此工具的详细信息，请参阅[MageUI.exe（图形化客户端中的清单生成和编辑工具）](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)。 你还可以使用 Visual Studio 执行此过程。
 
 ## <a name="procedure"></a>过程
 
 ### <a name="to-disable-url-activation-for-your-application"></a>禁用应用程序的 URL 激活的步骤
 
-1. 在 MageUI.exe 中打开部署清单。 如果尚未创建一个，请按照[演练：手动部署 ClickOnce 应用程序](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)中的步骤进行操作。
+1. 在 MageUI.exe 中打开部署清单。 如果尚未创建一个，请按照 [演练：手动部署 ClickOnce 应用程序](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)中的步骤进行操作。
 
 2. 选择“部署选项”选项卡****。
 

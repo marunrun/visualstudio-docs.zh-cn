@@ -16,24 +16,24 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: dc8019c97d3c561000f1c6a8d083bee6253face3
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85544399"
 ---
 # <a name="ca1802-use-literals-where-appropriate"></a>CA1802:在合适的位置使用文本
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|Item|值|
+|项|值|
 |-|-|
 |TypeName|UseLiteralsWhereAppropriate|
 |CheckId|CA1802|
-|Category|Microsoft. 性能|
+|类别|Microsoft. 性能|
 |是否重大更改|不间断|
 
 ## <a name="cause"></a>原因
- 字段声明为， `static` 并且 `readonly` `Shared` 使用在 `ReadOnly` [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 编译时可的值进行初始化。
+ 将在) 中 `static` 声明 `readonly` 和 `Shared` (`ReadOnly` 和 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] ，并使用编译时可的值对字段进行初始化。
 
 ## <a name="rule-description"></a>规则描述
  `static``readonly`如果调用声明类型的静态构造函数，则将在运行时计算字段的值。 如果 `static``readonly` 字段在声明时被初始化并且静态构造函数不是显式声明的，则编译器将发出一个静态构造函数来初始化字段。

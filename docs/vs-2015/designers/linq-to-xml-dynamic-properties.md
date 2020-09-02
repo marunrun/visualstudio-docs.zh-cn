@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 6ff0b31512711b8888b05fcfde191c8cb5c47d99
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72664264"
 ---
 # <a name="linq-to-xml-dynamic-properties"></a>LINQ to XML 动态属性
@@ -33,10 +33,10 @@ ms.locfileid: "72664264"
 
 ## <a name="in-this-section"></a>本节内容
 
-|主题|描述|
+|主题|说明|
 |-----------|-----------------|
-|[XAttribute 类动态属性](../designers/xattribute-class-dynamic-properties.md)|提供有关由 <xref:System.Xml.Linq.XAttribute> 类公开的动态属性的详细信息。|
-|[XElement 类动态属性](../designers/xelement-class-dynamic-properties.md)|提供有关由 <xref:System.Xml.Linq.XElement> 类公开的动态属性的详细信息。|
+|[System.xml.linq.xattribute> 类动态属性](../designers/xattribute-class-dynamic-properties.md)|提供有关由 <xref:System.Xml.Linq.XAttribute> 类公开的动态属性的详细信息。|
+|[System.xml.linq.xelement> 类动态属性](../designers/xelement-class-dynamic-properties.md)|提供有关由 <xref:System.Xml.Linq.XElement> 类公开的动态属性的详细信息。|
 
 ## <a name="reference"></a>参考
  <xref:System.Xml.Linq>
@@ -45,5 +45,5 @@ ms.locfileid: "72664264"
 
  <xref:System.Xml.Linq.XAttribute?displayProperty=fullName>
 
-## <a name="see-also"></a>请参阅
- 与[LINQ to XML 概述](../designers/wpf-data-binding-with-linq-to-xml-overview.md) [LINQ 查询介绍C#](https://msdn.microsoft.com/library/37895c02-268c-41d5-be39-f7d936fa88a8)的 Wpf 数据绑定[的 wpf 数据绑定](../designers/wpf-data-binding-with-linq-to-xml.md)（） LINQ to XML
+## <a name="see-also"></a>另请参阅
+ 带有 LINQ to XML wpf 数据绑定的[Wpf 数据绑定](../designers/wpf-data-binding-with-linq-to-xml.md) [LINQ to XML 概述](../designers/wpf-data-binding-with-linq-to-xml-overview.md) [ (c # 的 LINQ 查询简介 ) ](https://msdn.microsoft.com/library/37895c02-268c-41d5-be39-f7d936fa88a8)

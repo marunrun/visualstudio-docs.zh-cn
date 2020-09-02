@@ -12,16 +12,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 829c7a0193ce2742959f677e95dd4a499997cf5b
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68149840"
 ---
-# <a name="idiasymbolgetacceleratorpointertags"></a>IDiaSymbol::get_acceleratorPointerTags
+# <a name="idiasymbolget_acceleratorpointertags"></a>IDiaSymbol::get_acceleratorPointerTags
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-返回对应的所有快捷键指针标记值C++AMP 快捷键存根 （stub） 函数。  
+返回与 C++ AMP 快捷键存根函数相对应的所有快捷键指针标记值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,19 +34,19 @@ HRESULT get_acceleratorPointerTags(
   
 #### <a name="parameters"></a>参数  
  `cnt`  
- [in]输出数组的大小`pPointerTags`。  
+ 中输出数组的大小 `pPointerTags` 。  
   
  `pcnt`  
- [out]Accelerator 指针中的标记的计数C++AMP 快捷键存根 （stub） 函数。  
+ 弄C++ AMP 加速器存根函数中的快捷键指针标记的计数。  
   
  `pPointerTags`  
- [out]一个`DWORD`中的加速器指针标记值填充数组指针C++AMP 快捷键存根 （stub） 函数。  
+ 弄一个 `DWORD` 数组指针，该指针在 C++ AMP 加速器存根函数中用加速器指针标记值填充。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回`S_FALSE`或错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回 `S_FALSE` 错误代码。  
   
 ## <a name="remarks"></a>备注  
- 在调用此方法`IDiaSymbol`接口对应于C++AMP 快捷键存根 （stub） 函数。  
+ 此方法在 `IDiaSymbol` 与 C++ AMP 加速器存根函数相对应的接口上调用。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

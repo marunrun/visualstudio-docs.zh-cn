@@ -10,16 +10,16 @@ ms.assetid: c4ebac40-0374-4dda-948e-06fdda0e9c81
 caps.latest.revision: 8
 manager: jillfra
 ms.openlocfilehash: 64f2afa6e853978e919e466f91475bed1e8d698c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62971285"
 ---
 # <a name="registering-services"></a>注册服务
 若要支持按需加载，服务提供商必须用 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]注册其全球服务。  
   
- 在开发期间，托管服务提供商通过将特性添加到包的源代码，然后在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] IDE中生成包，从而注册服务和服务重写。 这会在生成的程序集上运行 RegPkg.exe 实用程序，注册包并为部署做准备。 有关详细信息，请参阅[如何：注册服务](../misc/how-to-register-a-service.md)。  
+ 在开发期间，托管服务提供商通过将特性添加到包的源代码，然后在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] IDE中生成包，从而注册服务和服务重写。 这会在生成的程序集上运行 RegPkg.exe 实用程序，注册包并为部署做准备。 有关详细信息，请参阅 [如何：注册服务](../misc/how-to-register-a-service.md)。  
   
  非托管服务提供商必须用系统注册表中的服务节或服务重写节中的 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 注册它们提供的服务。 下面的.reg 文件片断演示注册服务 SVsTextManager 的方式：  
   
@@ -47,6 +47,6 @@ ms.locfileid: "62971285"
 regasm /tlb MyAssembly.dll  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [使用并提供服务](../extensibility/using-and-providing-services.md)   
+## <a name="see-also"></a>另请参阅  
+ [使用和提供服务](../extensibility/using-and-providing-services.md)   
  [服务基础知识](../extensibility/internals/service-essentials.md)

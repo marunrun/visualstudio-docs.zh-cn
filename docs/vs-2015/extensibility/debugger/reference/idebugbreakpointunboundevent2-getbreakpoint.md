@@ -1,5 +1,5 @@
 ---
-title: IDebugBreakpointUnboundEvent2::GetBreakpoint |Microsoft Docs
+title: IDebugBreakpointUnboundEvent2：： GetBreakpoint |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 11640da3bcf5ad25aced8bee6fd6d981d658a772
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68160060"
 ---
 # <a name="idebugbreakpointunboundevent2getbreakpoint"></a>IDebugBreakpointUnboundEvent2::GetBreakpoint
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-获取未绑定的断点。  
+获取变为未绑定的断点。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,13 +40,13 @@ int GetBreakpoint( 
   
 #### <a name="parameters"></a>参数  
  `ppBP`  
- [out]返回[IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md)表示未绑定断点的对象。  
+ 弄返回一个 [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md) 对象，该对象表示变为未绑定的断点。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何实现此方法对于**CBreakpointUnboundDebugEventBase**对象，它公开[IDebugBreakpointUnboundEvent2](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2.md)接口。  
+ 下面的示例演示如何为公开[IDebugBreakpointUnboundEvent2](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2.md)接口的**CBreakpointUnboundDebugEventBase**对象实现此方法。  
   
 ```cpp#  
 STDMETHODIMP CBreakpointUnboundDebugEventBase::GetBreakpoint(  
@@ -75,6 +75,6 @@ STDMETHODIMP CBreakpointUnboundDebugEventBase::GetBreakpoint(
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugBreakpointUnboundEvent2](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2.md)   
  [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md)

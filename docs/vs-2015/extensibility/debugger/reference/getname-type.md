@@ -1,5 +1,5 @@
 ---
-title: GETNAME_TYPE | Microsoft Docs
+title: GETNAME_TYPE |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 648f84b106dab7aa6e38cc3e45e59162a216a875
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68160141"
 ---
-# <a name="getnametype"></a>GETNAME_TYPE
+# <a name="getname_type"></a>GETNAME_TYPE
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-指定要从中检索文件的名称类型。  
+指定要检索的文件的名称类型。  
   
 ## <a name="syntax"></a>语法  
   
@@ -53,38 +53,38 @@ public enum enum_GETNAME_TYPE { 
   
 ## <a name="members"></a>成员  
  GN_NAME  
- 指定文档或上下文的友好的名称。  
+ 指定文档或上下文的友好名称。  
   
  GN_FILENAME  
- 指定文档或上下文的完整的路径。  
+ 指定文档或上下文的完整路径。  
   
  GN_BASENAME  
- 指定的基文件名而不是文档或上下文的完整路径。  
+ 指定基文件名，而不是文档或上下文的完整路径。  
   
  GN_MONIKERNAME  
- 名字对象的形式指定文档或上下文的唯一的名称。  
+ 以名字对象的形式指定文档或上下文的唯一名称。  
   
  GN_URL  
- 指定文档或上下文 URL 的名称。  
+ 指定文档或上下文的 URL 名称。  
   
  GN_TITLE  
- 如果存在，请指定文档的标题。  
+ 指定文档的标题（如果有）。  
   
  GN_STARTPAGEURL  
  获取进程的起始页 URL。  
   
 ## <a name="remarks"></a>备注  
- 这些值作为参数传递[GetName](../../../extensibility/debugger/reference/idebugdocument2-getname.md)， [GetName](../../../extensibility/debugger/reference/idebugdocumentcontext2-getname.md)，并[GetName](../../../extensibility/debugger/reference/idebugprocess2-getname.md)方法，以指定名称返回的类型。  
+ 这些值作为参数传递到 [GetName](../../../extensibility/debugger/reference/idebugdocument2-getname.md)、 [GetName](../../../extensibility/debugger/reference/idebugdocumentcontext2-getname.md)和 [GetName](../../../extensibility/debugger/reference/idebugprocess2-getname.md) 方法，以指定要返回的名称的类型。  
   
 ## <a name="requirements"></a>要求  
- 标头： msdbg.h  
+ 标头： msdbg  
   
- 命名空间:Microsoft.VisualStudio.Debugger.Interop  
+ 命名空间： VisualStudio  
   
- 程序集：Microsoft.VisualStudio.Debugger.Interop.dll  
+ 程序集： Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>请参阅  
- [枚举](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>另请参阅  
+ [计数](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [GetName](../../../extensibility/debugger/reference/idebugdocument2-getname.md)   
  [GetName](../../../extensibility/debugger/reference/idebugdocumentcontext2-getname.md)   
  [GetName](../../../extensibility/debugger/reference/idebugprocess2-getname.md)

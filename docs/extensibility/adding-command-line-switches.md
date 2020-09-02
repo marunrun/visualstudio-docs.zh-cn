@@ -14,14 +14,14 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: bb4abf5352ac6ad78852bd3224df0b22784470db
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85903482"
 ---
 # <a name="add-command-line-switches"></a>添加命令行开关
-执行*devenv.exe*时，可以添加适用于 VSPackage 的命令行开关。 使用 <xref:Microsoft.VisualStudio.Shell.ProvideAppCommandLineAttribute> 声明开关的名称及其属性。 在此示例中，为名为**AddCommandSwitchPackage**的 VSPackage 的子类添加了 MySwitch 开关，其中不包含参数，并且 VSPackage 会自动加载。
+执行 *devenv.exe* 时，可以添加适用于 VSPackage 的命令行开关。 使用 <xref:Microsoft.VisualStudio.Shell.ProvideAppCommandLineAttribute> 声明开关的名称及其属性。 在此示例中，为名为 **AddCommandSwitchPackage** 的 VSPackage 的子类添加了 MySwitch 开关，其中不包含参数，并且 VSPackage 会自动加载。
 
 ```csharp
 [ProvideAppCommandLine("MySwitch", typeof(AddCommandSwitchPackage), Arguments = "0", DemandLoad = 1)]
@@ -33,13 +33,13 @@ ms.locfileid: "85903482"
 |-|-|
 | 参数 | 开关的参数数目。 可以是 "*"，也可以是参数列表。 |
 | DemandLoad | 如果此设置为1，则自动加载 VSPackage，否则设置为0。 |
-| HelpString | 要用**devenv/？** 显示的字符串的帮助字符串或资源 ID。 |
+| HelpString | 要用 **devenv/？** 显示的字符串的帮助字符串或资源 ID。 |
 | 名称 | 开关。 |
 | PackageGuid | 包的 GUID。 |
 
  参数的第一个值通常为0或1。 特殊值 "*" 可用于指示命令行的整个余数是参数。 这对于调试用户必须传入调试器命令字符串的方案非常有用。
 
- DemandLoad 值为 `true` （1）或 `false` （0）指示应自动加载 VSPackage。
+ DemandLoad 值为 `true` (1) 或 `false` (0) 指示应自动加载 VSPackage。
 
  HelpString 值是在**devenv/？** 中显示的字符串的资源 ID。 帮助显示。 此值的形式应为 "#nnn"，其中 nnn 是整数。 资源文件中的字符串值应以换行符结尾。
 

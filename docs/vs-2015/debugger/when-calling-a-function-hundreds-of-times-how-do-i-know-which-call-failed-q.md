@@ -30,10 +30,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: fba5032860e21bbd323b8e49d5f32ab9b6f90540
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65688131"
 ---
 # <a name="when-calling-a-function-hundreds-of-times-how-do-i-know-which-call-failed"></a>当一个函数被调用数百次时，如何确定哪次调用失败了？
@@ -51,7 +51,7 @@ CnvtV(int) (no condition) when hit count is equal to 1000 (currently 101)
   
  现在您知道函数在第 101 次调用时失败。 如果重置断点，将命中次数设置为 101，然后再次运行程序，程序将在导致 `CnvtV` 调用失败的位置停止所有该调用。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [调试本机代码常见问题解答](../debugger/debugging-native-code-faqs.md)   
  [设置断点](https://msdn.microsoft.com/fe4eedc1-71aa-4928-962f-0912c334d583)   
  [调试本机代码](../debugger/debugging-native-code.md)

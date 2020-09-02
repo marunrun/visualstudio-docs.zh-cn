@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 8bfbe4b11c22d6cfd147783f9fb662843cf57fe9
-ms.sourcegitcommit: 9a7fb8556a5f3dbb4459122fefc7e7a8dfda753a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "87234947"
 ---
 # <a name="how-to-troubleshoot-services"></a>如何：排除服务故障
@@ -38,9 +38,9 @@ if (log == null) return;
 
 ## <a name="to-troubleshoot-a-service"></a>解决服务问题
 
-1. 检查系统注册表，以查看是否已正确注册该服务。 有关详细信息，请参阅[如何：提供服务](../extensibility/how-to-provide-a-service.md)。
+1. 检查系统注册表，以查看是否已正确注册该服务。 有关详细信息，请参阅 [如何：提供服务](../extensibility/how-to-provide-a-service.md)。
 
-    以下 *.reg*文件片段显示了如何注册 SVsTextManager 服务：
+    以下 *.reg* 文件片段显示了如何注册 SVsTextManager 服务：
 
    ```
    [HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\<version number>\Services\{F5E7E71D-1401-11d1-883B-0000F87579D2}]
@@ -48,7 +48,7 @@ if (log == null) return;
    "Name"="SVsTextManager"
    ```
 
-    在上面的示例中，版本号是的版本 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ，例如12.0 或14.0，密钥 {F5E7E71D-1401-11d1-883B-0000F87579D2} 是服务的服务标识符（SID） SVsTextManager，默认值 {F5E7E720-1401-11d1-883B-0000F87579D2} 是文本管理器 VSPackage 的包 GUID，它提供服务。
+    在上面的示例中，版本号是的版本 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ，例如12.0 或14.0，密钥 {F5E7E71D-1401-11d1-883B-0000F87579D2} 是服务 (SID) 的服务标识符，SVsTextManager，默认值 {F5E7E720-1401-11d1-883B-0000F87579D2} 是文本管理器 VSPackage 的包 GUID，它提供服务。
 
 2. 调用 GetService 时，请使用服务类型，而不是接口类型。 从请求服务时 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ，从 <xref:Microsoft.VisualStudio.Shell.Package> 类型中提取 GUID。 如果满足以下条件，则将找不到服务：
 
@@ -56,7 +56,7 @@ if (log == null) return;
 
    2. 未将任何 GUID 显式分配给接口。 因此，系统会根据需要创建对象的默认 GUID。
 
-3. 确保请求该服务的 VSPackage 已被放置。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]在构造 VSPackage 并在调用之前，站点 <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> 。
+3. 确保请求该服务的 VSPackage 已被放置。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 在构造 VSPackage 并在调用之前，站点 <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> 。
 
     如果 VSPackage 构造函数中有需要服务的代码，请将其移动到 `Initialize` 方法。
 

@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 6b45449f72275ac154a433cad725a2867062cc5e
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85547077"
 ---
 # <a name="how-to-programmatically-save-workbooks"></a>如何：以编程方式保存工作簿
@@ -46,7 +46,7 @@ ms.locfileid: "85547077"
  可以将指定的工作簿保存到新位置或以新名称保存，还可以选择指定文件格式、密码和访问模式等。
 
 > [!NOTE]
-> 在 <xref:Microsoft.Office.Interop.Excel._Application.DisplayAlerts%2A> 使用新路径保存工作簿之前，您可能需要将属性设置为**False** ，因为以某些格式保存需要交互。 如果将此属性设置为**False** ，则 Excel 将使用所有默认值。
+> 在 <xref:Microsoft.Office.Interop.Excel._Application.DisplayAlerts%2A> 使用新路径保存工作簿之前，您可能需要将属性设置为 **False** ，因为以某些格式保存需要交互。 如果将此属性设置为 **False** ，则 Excel 将使用所有默认值。
 
 ### <a name="to-save-a-workbook-associated-with-a-document-level-customization"></a>保存与文档级自定义项关联的工作簿
 
@@ -80,7 +80,7 @@ ms.locfileid: "85547077"
      [!code-vb[Trin_VstcoreExcelAutomationAddIn#5](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#5)]
 
 ## <a name="robust-programming"></a>可靠编程
- 以交互方式取消任何保存或复制工作簿的方法将在代码中引发运行时错误。 例如，如果您的过程调用了 <xref:Microsoft.Office.Tools.Excel.Workbook.SaveAs%2A> 方法但不禁用 Excel 中的提示，并且您的用户在出现提示时单击 "**取消**"，则 Excel 将引发运行时错误。
+ 以交互方式取消任何保存或复制工作簿的方法将在代码中引发运行时错误。 例如，如果您的过程调用了 <xref:Microsoft.Office.Tools.Excel.Workbook.SaveAs%2A> 方法但不禁用 Excel 中的提示，并且您的用户在出现提示时单击 " **取消** "，则 Excel 将引发运行时错误。
 
 ## <a name="see-also"></a>另请参阅
 - [使用工作簿](../vsto/working-with-workbooks.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebug边界突破点2：：启用 |微软文档
+title: IDebugBoundBreakpoint2：： Enable |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,10 +17,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: ed933b1abf67fbe357462e86d54b23e3b19fa548
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80735561"
 ---
 # <a name="idebugboundbreakpoint2enable"></a>IDebugBoundBreakpoint2::Enable
@@ -42,13 +42,13 @@ int Enable( 
 
 ## <a name="parameters"></a>参数
 `fEnable`\
-[在]设置为非零 （`TRUE`） 以启用或 0`FALSE`（ ） 以禁用断点。
+中设置为非零值 (`TRUE`) 启用或为零， (`FALSE`) 禁用断点。
 
 ## <a name="return-value"></a>返回值
-如果成功，返回`S_OK`;否则，返回错误代码。 如果`E_BP_DELETED`绑定断点对象的状态设置为`BPS_DELETED`[（BP_STATE](../../../extensibility/debugger/reference/bp-state.md)枚举的一部分），则返回。
+如果成功， `S_OK` 则返回; 否则返回错误代码。 `E_BP_DELETED`如果绑定断点对象的状态设置为 `BPS_DELETED` [BP_STATE](../../../extensibility/debugger/reference/bp-state.md)枚举)  (部分，则返回。
 
 ## <a name="example"></a>示例
-下面的示例演示如何为公开`CBoundBreakpoint`[IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md)接口的简单对象实现此方法。
+下面的示例演示如何为 `CBoundBreakpoint` 公开 [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md) 接口的简单对象实现此方法。
 
 ```
 HRESULT CBoundBreakpoint::Enable(BOOL fEnable)
@@ -97,6 +97,6 @@ HRESULT CBoundBreakpoint::Enable(BOOL fEnable)
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md)
 - [BP_STATE](../../../extensibility/debugger/reference/bp-state.md)

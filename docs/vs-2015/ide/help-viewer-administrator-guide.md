@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 03cacd8de574de92002b44b237cd84c22e761eaf
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72645576"
 ---
 # <a name="help-viewer-administrator-guide"></a>帮助查看器管理员指南
@@ -25,18 +25,18 @@ ms.locfileid: "72645576"
 
  如果网络环境不允许客户端访问 Internet，则帮助查看器可以从 Intranet 或网络共享部署本地帮助内容。 还可以使用注册表项替代来禁用 Visual Studio IDE 帮助选项（如联机/脱机帮助、首次启动 IDE 时的内容安装、指定 Intranet 内容服务以及管理内容）。
 
- 基本语法如下所示：
+ 基本语法如下：
 
- \<*路径*> \HlpCtntmgr.exe/operation \<*参数*>/catalogname \<*名称*>/locale \<*区域设置*>/sourceuri \< *. .msha 路径或 URL* 0
+ \<*path to*>\HlpCtntmgr.exe/operation \<*argument*> /catalogname \<*name*> /locale \<*locale*> /sourceuri \<*.msha path or URL*>
 
  有关 HlpCtntMgr.exe 命令行语法的详细信息，请参阅 [Help Content Manager 的命令行参数](../ide/command-line-arguments-for-the-help-content-manager.md)。
 
  有关创建内容、创建 Intranet 服务终结点以及相似类型的活动的详细信息，请参阅帮助查看器 SDK。
 
 ## <a name="deploying-local-help-content-from-the-internet"></a>从 Internet 部署本地帮助内容
- 可以使用 MSDN 内容包服务从 Internet 将本地帮助内容部署到客户端计算机。 请使用以下语法：
+ 可以使用 MSDN 内容包服务从 Internet 将本地帮助内容部署到客户端计算机。 使用以下语法：
 
- \\<path to>\v2.2\HlpCtntmgr.exe /operation \<name> /catalogname \<catalog name> /locale \<locale>
+ \\<*指向* # C0\v2.2\HlpCtntmgr.exe/operation \<*name*> /catalogname \<*catalog name*> /locale 的路径 \<*locale*>
 
  有关 HlpCtntMgr.exe 命令行语法的详细信息，请参阅 [Help Content Manager 的命令行参数](../ide/command-line-arguments-for-the-help-content-manager.md)。
 
@@ -60,7 +60,7 @@ ms.locfileid: "72645576"
 
 ##### <a name="to-install-english-content-from-the-internet"></a>从 Internet 安装英语内容
 
-1. 选择“开始”，然后选择“运行”。
+1. 选择“开始”****，然后选择“运行”****。
 
 2. 键入下列命令：
 
@@ -93,25 +93,25 @@ ms.locfileid: "72645576"
 
 ##### <a name="to-uninstall-local-help"></a>卸载本地帮助
 
-1. 在 Help Viewer 中，选择“管理内容”选项卡。
+1. 在 Help Viewer 中，选择“管理内容”**** 选项卡。
 
-2. 在“可用的文档”下，导航到 Visual Studio 文档集。
+2. 在“可用的文档”下，导航到 Visual Studio 文档集****。
 
-3. 选择每个子项旁的“删除”。
+3. 选择每个子项旁的“删除”****。
 
-4. 选择“开始”开始卸载
+4. 选择“开始”开始卸载****
 
-5. 浏览到 n:\ProgramData\Microsoft\HelpLibrary2\Catalogs\VisualStudio12 并验证该文件夹是否仅包含文件 catalogType.xml。
+5. 浏览到 n:\ProgramData\Microsoft\HelpLibrary2\Catalogs\VisualStudio12 并验证该文件夹是否仅包含文件 catalogType.xml**。
 
    一旦移除所有以前安装的本地 Visual Studio 帮助内容，便已准备好下载基本内容集。
 
 ##### <a name="to-download-the-content"></a>下载内容
 
-1. 在 Help Viewer 中，选择“管理内容”选项卡。
+1. 在 Help Viewer 中，选择“管理内容”**** 选项卡。
 
-2. 在“可用的文档”下，导航到要下载的文档集，然后选择“添加”。
+2. 在“可用的文档”下，导航到要下载的文档集，然后选择“添加”********。
 
-3. 选择“启动”。
+3. 选择“启动”****。
 
    接下来，需要对内容进行打包，以便它可以部署到客户端计算机。
 
@@ -127,9 +127,9 @@ ms.locfileid: "72645576"
 
 4. 键入下列命令：
 
-     Xcopy %SYSTEMDRIVE%\ProgramData\Microsoft\HelpLibrary2 \<*文件夹名*>\ /y /e /k /o
+     Xcopy%SYSTEMDRIVE%\ProgramData\Microsoft\HelpLibrary2 \<*foldername*> \/y/e/k/o
 
-     例如： `Xcopy %SYSTEMDRIVE%\ProgramData\Microsoft\HelpLibrary2 c:\VS12Help\ /y /e /k /o`
+     例如：`Xcopy %SYSTEMDRIVE%\ProgramData\Microsoft\HelpLibrary2 c:\VS12Help\ /y /e /k /o`
 
 ### <a name="deploying-the-content"></a>部署内容
 
@@ -141,7 +141,7 @@ ms.locfileid: "72645576"
 
 2. 创建用于包含帮助内容的部署脚本的 .bat 文件。 由于客户端可能对在推送过程中删除的任何文件具有读取锁定，所以应在推送更新之前关闭客户端。
 
-     例如:
+     例如：
 
     ```
     REM - copy pre-ripped content to ProgramData
@@ -201,5 +201,5 @@ ms.locfileid: "72645576"
 
 3. 在要安装帮助内容的本地计算机上运行 bat 文件。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [Help Content manager](../ide/command-line-arguments-for-the-help-content-manager.md) [帮助内容管理器替代](../ide/help-content-manager-overrides.md)的命令行参数

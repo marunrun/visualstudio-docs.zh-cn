@@ -1,5 +1,5 @@
 ---
-title: MODULE_INFO |微软文档
+title: MODULE_INFO |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 59ab4d0bb2a7aaa4b08f616ea0a99be85b521bb0
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80714312"
 ---
 # <a name="module_info"></a>MODULE_INFO
-描述特定模块（DLL、EXE 或程序集）。
+描述特定模块 (DLL、EXE 或程序集) 。
 
 ## <a name="syntax"></a>语法
 
@@ -63,7 +63,7 @@ public struct MODULE_INFO { 
 
 ## <a name="members"></a>成员
  `dwValidFields`\
- [MODULE_INFO_FIELDS](../../../extensibility/debugger/reference/module-info-fields.md)枚举中的标志的组合，用于指定填写哪些字段。
+ [MODULE_INFO_FIELDS](../../../extensibility/debugger/reference/module-info-fields.md)枚举中的标志的组合，用于指定要填写的字段。
 
  `m_bstrName`\
  模块名。
@@ -75,13 +75,13 @@ public struct MODULE_INFO { 
  模块版本。
 
  `m_bstrDebugMessage`\
- 有关模块的可选消息，例如，"无法加载符号"。
+ 有关模块的可选消息，例如 "无法加载符号"。
 
  `m_addrLoadAddress`\
  模块加载地址。
 
  `m_addrPreferredLoadAddress`\
- 模块的首选负载地址。
+ 模块的首选加载地址。
 
  `m_dwSize`\
  模块大小。
@@ -93,22 +93,22 @@ public struct MODULE_INFO { 
  上次修改符号文件的时间。
 
  `m_bstrUrlSymbolLocation`\
- 符号文件的位置（例如，"."）\\在模块中指定。 用作查找模块符号的起始位置。
+ 符号文件的位置 (例如，". \\ "模块中指定 ) 。 用作查找模块符号的起始位置。
 
  `m_dwModuleFlags`\
- 描述模块[MODULE_FLAGS](../../../extensibility/debugger/reference/module-flags.md)枚举的标志的组合。
+ 描述模块的 [MODULE_FLAGS](../../../extensibility/debugger/reference/module-flags.md) 枚举中的标志的组合。
 
 ## <a name="remarks"></a>备注
- 此结构传递给填写它的[GetInfo](../../../extensibility/debugger/reference/idebugmodule2-getinfo.md)方法。
+ 此结构被传递给 [GetInfo](../../../extensibility/debugger/reference/idebugmodule2-getinfo.md) 方法，其中填充了此结构。
 
- 此结构对应于 **"模块"** 窗口中列出的每个模块。
+ 此结构对应于 " **模块** " 窗口中列出的每个模块。
 
 ## <a name="requirements"></a>要求
- 标题： msdbg.h
+ 标头： msdbg
 
- 命名空间：微软.VisualStudio.调试器.互通
+ 命名空间： VisualStudio
 
- 程序集：微软.VisualStudio.调试器.Interop.dll
+ 程序集： Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [结构和联合](../../../extensibility/debugger/reference/structures-and-unions.md)

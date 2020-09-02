@@ -1,5 +1,5 @@
 ---
-title: IDebugPortEx2::LaunchSuspended |Microsoft Docs
+title: IDebugPortEx2：： LaunchSuspended |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,10 +13,10 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 3c5e57c003257650f5ca60d4a7c3d9becea3e776
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68188460"
 ---
 # <a name="idebugportex2launchsuspended"></a>IDebugPortEx2::LaunchSuspended
@@ -54,38 +54,38 @@ int LaunchSuspended( 
   
 #### <a name="parameters"></a>参数  
  `pszExe`  
- [in]若要启动的可执行文件的名称。 这可以是完整路径或相对于工作目录中指定`pszDir`参数。  
+ 中要启动的可执行文件的名称。 此路径可以是完整路径，也可以是在参数中指定的工作目录 `pszDir` 。  
   
  `pszArgs`  
- [in]要传递给可执行文件的参数。 如果没有任何自变量可能为 null 值。  
+ 中要传递给可执行文件的参数。 如果没有参数，则可以为 null 值。  
   
  `pszDir`  
- [in]使用的可执行文件的工作目录的名称。 如果没有工作目录是必需的可能为 null 值。  
+ 中可执行文件使用的工作目录的名称。 如果不需要任何工作目录，则可以为 null 值。  
   
  `bstrEnv`  
- [in]以 null 结尾的字符串后, 跟其他的 NULL 结束符的环境块。  
+ 中以 null 结尾的字符串的环境块，后跟一个其他 NULL 终止符。  
   
  `hStdInput`  
- [in]其他输入流的句柄。 如果不需要重定向，则可能为 0。  
+ 中替代输入流的句柄。 如果不需要重定向，则可以为0。  
   
  `hStdOutput`  
- [in]备用输出流的句柄。 如果不需要重定向，则可能为 0。  
+ 中备用输出流的句柄。 如果不需要重定向，则可以为0。  
   
  `hStdError`  
- [in]备用错误输出流的句柄。 如果不需要重定向，则可能为 0。  
+ 中备用错误输出流的句柄。 如果不需要重定向，则可以为0。  
   
  `ppPortProcess`  
- [out]返回[IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)对象，表示启动的进程。  
+ 弄返回一个 [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) 对象，该对象表示已启动的进程。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
 ## <a name="remarks"></a>备注  
- 此方法应启动的过程，以便它处于挂起状态和未运行任何代码。 [ResumeProcess](../../../extensibility/debugger/reference/idebugportex2-resumeprocess.md)调用方法来继续执行过程。  
+ 此方法应启动进程，使其挂起并且不运行任何代码。 调用 [ResumeProcess](../../../extensibility/debugger/reference/idebugportex2-resumeprocess.md) 方法以恢复进程。  
   
- 此外可以从调试引擎启动程序。 有关详细信息，请参阅[启动程序](../../../extensibility/debugger/launching-a-program.md)。  
+ 还可以从调试引擎启动程序。 有关详细信息，请参阅 [启动程序](../../../extensibility/debugger/launching-a-program.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugPortEx2](../../../extensibility/debugger/reference/idebugportex2.md)   
  [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)   
  [ResumeProcess](../../../extensibility/debugger/reference/idebugportex2-resumeprocess.md)   

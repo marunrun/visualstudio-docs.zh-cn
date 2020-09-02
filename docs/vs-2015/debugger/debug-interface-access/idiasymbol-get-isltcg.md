@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: d355a05ba2d805349a84a842a00b699d6c1ef272
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65696286"
 ---
-# <a name="idiasymbolgetisltcg"></a>IDiaSymbol::get_isLTCG
+# <a name="idiasymbolget_isltcg"></a>IDiaSymbol::get_isLTCG
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-检索一个标志，指定是否[编译单位](../../debugger/debug-interface-access/compiland.md)已链接使用链接器开关[/LTCG （链接时间代码生成）](https://msdn.microsoft.com/library/788c6f52-fdb8-40c2-90af-4026ea2cf2e2)，这样有助于全程序优化。 此开关仅适用于托管代码。  
+检索一个标志，该标志指定是否已将 [编译单位](../../debugger/debug-interface-access/compiland.md) 链接到链接器开关 [/ltcg (链接时代码生成) ](https://msdn.microsoft.com/library/788c6f52-fdb8-40c2-90af-4026ea2cf2e2)，这有助于完全程序优化。 此开关仅适用于托管代码。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,20 +35,20 @@ HRESULT get_iSLTCG(
   
 #### <a name="parameters"></a>参数  
  pFlag  
- [out]返回`TRUE`如果`compiland`已与 /LTCG 链接器开关进行链接; 否则，返回`FALSE`。  
+ 弄 `TRUE` 如果 `compiland` 是与/ltcg 链接器开关链接的，则返回; 否则返回 `FALSE` 。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回`S_FALSE`或错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回 `S_FALSE` 错误代码。  
   
 > [!NOTE]
-> 返回值为`S_FALSE`表示该属性不是可用于符号。  
+> 返回值意味着该 `S_FALSE` 属性对符号不可用。  
   
 ## <a name="requirements"></a>要求  
   
-|需求|描述|  
+|要求|说明|  
 |-----------------|-----------------|  
-|标头：|dia2.h|  
+|标头：|dia2|  
 |版本：|DIA SDK v8.0|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

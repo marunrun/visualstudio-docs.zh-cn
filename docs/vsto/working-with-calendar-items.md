@@ -19,10 +19,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 8d9c0f634ce95814ba746325e8efd67228653775
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "63008724"
 ---
 # <a name="work-with-calendar-items"></a>使用日历项
@@ -35,10 +35,10 @@ ms.locfileid: "63008724"
 |创建日历文件夹并添加约会项。|[如何：以编程方式创建自定义日历](../vsto/how-to-programmatically-create-a-custom-calendar.md)|
 |创建会议请求并发送。|[如何：以编程方式创建会议请求](../vsto/how-to-programmatically-create-a-meeting-request.md)|
 
- 有关 Outlook 任务和 Outlook 对象模型的详细信息，请参阅[Outlook 对象模型概述](../vsto/outlook-object-model-overview.md)。
+ 有关 Outlook 任务和 Outlook 对象模型的详细信息，请参阅 [outlook 对象模型概述](../vsto/outlook-object-model-overview.md)。
 
-## <a name="see-also"></a>请参阅
-- [使用联系人项](../vsto/working-with-contact-items.md)
+## <a name="see-also"></a>另请参阅
+- [处理联系人项](../vsto/working-with-contact-items.md)
 - [使用文件夹](../vsto/working-with-folders.md)
 - [使用邮件项](../vsto/working-with-mail-items.md)
 - [Outlook 解决方案](../vsto/outlook-solutions.md)

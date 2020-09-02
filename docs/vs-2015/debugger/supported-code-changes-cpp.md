@@ -1,5 +1,5 @@
 ---
-title: 支持代码更改 (C++) |Microsoft Docs
+title: 受支持的代码更改 (C++) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -25,10 +25,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: f167b3e9d27145284defa2ff491bb9ce0085f2a3
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65684915"
 ---
 # <a name="supported-code-changes-c"></a>受支持的代码更改 (C++)
@@ -38,7 +38,7 @@ Visual C++ 的“编辑并继续”处理大多数类型的代码更改。 但�
   
  有关在 Visual Studio 中使用 C++ 编辑并继续的信息，请参阅 [Edit and Continue (Visual C++)](../debugger/edit-and-continue-visual-cpp.md) 。  
   
-## <a name="BKMK_Unsupported_changes"></a> 不支持的更改  
+## <a name="unsupported-changes"></a><a name="BKMK_Unsupported_changes"></a> 不支持的更改  
 
 在调试会话期间，不能应用下列 C/C++ 更改：  
   
@@ -68,7 +68,7 @@ Visual C++ 的“编辑并继续”处理大多数类型的代码更改。 但�
   
 - “编辑并继续”不更新静态库。 如果您更改了静态库，则会继续执行老版本，且不发出任何警告。  
   
-## <a name="BKMK_Unsupported_scenarios"></a> 不支持的方案  
+## <a name="unsupported-scenarios"></a><a name="BKMK_Unsupported_scenarios"></a> 不支持的方案  
  在以下调试方案中，C/C++ 的“编辑并继续”不可用：  
   
 - 调试使用 [/Zo（增强优化调试）](https://msdn.microsoft.com/library/eea8d89a-7fe0-4fe1-86b2-7689bbebbd7f)编译的本机应用  
@@ -93,9 +93,9 @@ Visual C++ 的“编辑并继续”处理大多数类型的代码更改。 但�
   
 - 如果由于生成错误无法生成新版本的代码，则对旧版本的代码进行调试。  
   
-## <a name="BKMK_Linking_limitations"></a> 链接限制  
+## <a name="linking-limitations"></a><a name="BKMK_Linking_limitations"></a> 链接限制  
   
-### <a name="BKMK_Linker_options_that_disable_Edit_and_Continue"></a> 禁用“编辑并继续”的链接器选项  
+### <a name="linker-options-that-disable-edit-and-continue"></a><a name="BKMK_Linker_options_that_disable_Edit_and_Continue"></a> 禁用“编辑并继续”的链接器选项  
  下列链接器选项可禁用“编辑并继续”：  
   
 - 设置 **/OPT:REF**、 **/OPT:ICF**或 **/INCREMENTAL:NO** 将禁用“编辑并继续”并发出以下警告：  
@@ -112,7 +112,7 @@ Visual C++ 的“编辑并继续”处理大多数类型的代码更改。 但�
   
 - 设置任何禁止创建程序数据库 (.pdb) 文件的选项都会禁用“编辑并继续”，但不给出任何特定警告。  
   
-### <a name="BKMK_Auto_relinking_limitations"></a> 自动重新链接限制  
+### <a name="auto-relinking-limitations"></a><a name="BKMK_Auto_relinking_limitations"></a> 自动重新链接限制  
  默认情况下，“编辑并继续”在调试会话结束时重新链接到程序，以创建最新的可执行文件。  
   
  如果正在从原始生成位置以外的位置调试，“编辑并继续”不能重新链接程序。 有消息通知您需要手动重新生成。  
@@ -123,25 +123,25 @@ Visual C++ 的“编辑并继续”处理大多数类型的代码更改。 但�
   
  **在“编辑并继续”之后禁用重新链接**  
   
-1. 在 **“调试”** 菜单上，选择 **“选项和设置”**。  
+1. 在 **“调试”** 菜单上，选择 **“选项和设置”** 。  
   
 2. 在 **选项** 对话框中，在 **调试** 节点下，选择 **编辑并继续** 节点。  
   
 3. 清除 **“调试后重新链接代码更改”** 复选框。  
   
-## <a name="BKMK_Precompiled_Header_Limitations"></a> 预编译头限制  
+## <a name="precompiled-header-limitations"></a><a name="BKMK_Precompiled_Header_Limitations"></a> 预编译头限制  
  默认情况下，“编辑并继续”在后台加载并处理预编译头，以加速对代码更改的处理。 加载预编译头需要分配物理内存，如果您正在一台 RAM 有限的计算机上进行编译，这可能会是一个问题。 在调试时，您可以使用 Windows 任务管理器来确定可用的物理内存量，以确定这是否可能有问题。 如果此数量大于预编译头的大小，则“编辑并继续”应没有问题。 如果此数量小于预编译头的大小，可以禁止“编辑并继续”在后台加载预编译头。  
   
  **对“编辑并继续”禁用预编译头的后台加载**  
   
-1. 在 **“调试”** 菜单上，选择 **“选项和设置”**。  
+1. 在 **“调试”** 菜单上，选择 **“选项和设置”** 。  
   
 2. 在 **选项** 对话框中，在 **调试** 节点下，选择 **编辑并继续** 节点。  
   
 3. 清除 **“允许预编译”** 复选框。  
   
-## <a name="BKMK_IDL_Attribute_Limitations"></a> IDL 特性限制  
+## <a name="idl-attribute-limitations"></a><a name="BKMK_IDL_Attribute_Limitations"></a> IDL 特性限制  
  “编辑并继续”不重新生成接口定义 (IDL) 文件。 因此，调试时不反映对 IDL 特性的更改。 若要查看对 IDL 特性更改的结果，必须停止调试并重新生成应用程序。 如果 IDL 特性已更改，“编辑并继续”不生成错误或警告。 有关更多信息，请参见 [IDL 特性](https://msdn.microsoft.com/library/04c596f4-c97b-4952-8053-316678b1d0b6)。  
   
-## <a name="see-also"></a>请参阅  
- [Edit and Continue (Visual C++)](../debugger/edit-and-continue-visual-cpp.md)
+## <a name="see-also"></a>另请参阅  
+ [编辑并继续 (Visual C++) ](../debugger/edit-and-continue-visual-cpp.md)

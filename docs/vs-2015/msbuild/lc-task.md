@@ -20,21 +20,21 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 0bbc6463247142ecde20fb2d054d9bd59304c4ec
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65694113"
 ---
 # <a name="lc-task"></a>LC 任务
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-包装 LC.exe 文件，它可从 .licx 文件生成 .license 文件。 有关 LC.exe 的详细信息，请参阅 [Lc.exe (License Compiler)](https://msdn.microsoft.com/library/2de803b8-495e-4982-b209-19a72aba0460)（Lc.exe（许可证编译器））。  
+包装 LC.exe 文件，它可从 .licx 文件生成 .license 文件。 有关 LC.exe 的详细信息，请参阅 [ (许可证编译器)Lc.exe ](https://msdn.microsoft.com/library/2de803b8-495e-4982-b209-19a72aba0460)。  
   
 ## <a name="parameters"></a>参数  
  下表描述了 `LC` 任务的参数。  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |`LicenseTarget`|必选 <xref:Microsoft.Build.Framework.ITaskItem> 参数。<br /><br /> 指定将为其生成 .licenses 文件的可执行文件。|  
 |`NoLogo`|可选 `Boolean` 参数。<br /><br /> 取消显示 Microsoft 启动版权标志。|  
@@ -69,6 +69,6 @@ ms.locfileid: "65694113"
 </Project>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [任务](../msbuild/msbuild-tasks.md)   
- [任务参考](../msbuild/msbuild-task-reference.md)
+## <a name="see-also"></a>另请参阅  
+ [操作](../msbuild/msbuild-tasks.md)   
+ [任务引用](../msbuild/msbuild-task-reference.md)

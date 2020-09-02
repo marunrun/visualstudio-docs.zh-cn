@@ -8,17 +8,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 2a28bedd01e3a4f6a7a87b025ac9a9a6184da9b2
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75591861"
 ---
 # <a name="t4-import-directive"></a>T4 导入指令
 
-在 Visual Studio T4 文本模板的代码块中，`import` 指令允许你引用另一个命名空间中的元素，而无需提供完全限定的名称。 它等效于 C# 中的 `using` 或 `imports` 中的 [!INCLUDE[vb_current_short](../debugger/includes/vb_current_short_md.md)]。
+在 Visual Studio T4 文本模板的代码块中， `import` 指令允许你引用另一个命名空间中的元素，而无需提供完全限定的名称。 它等效于 C# 中的 `using` 或 `imports` 中的 [!INCLUDE[vb_current_short](../debugger/includes/vb_current_short_md.md)]。
 
-有关编写 T4 文本模板的一般概述，请参阅[编写 T4 文本模板](../modeling/writing-a-t4-text-template.md)。
+有关编写 T4 文本模板的一般概述，请参阅 [编写 T4 文本模板](../modeling/writing-a-t4-text-template.md)。
 
 ## <a name="using-the-import-directive"></a>使用 Import 指令
 

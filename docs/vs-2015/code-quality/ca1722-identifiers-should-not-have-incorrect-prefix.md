@@ -16,20 +16,20 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: a7f4f932f8e2db9a558d7440d8965ce5924043b8
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85544477"
 ---
 # <a name="ca1722-identifiers-should-not-have-incorrect-prefix"></a>CA1722:标识符应采用正确的前缀
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|Item|值|
+|项|值|
 |-|-|
 |TypeName|IdentifiersShouldNotHaveIncorrectPrefix|
 |CheckId|CA1722|
-|Category|Microsoft。命名|
+|类别|Microsoft。命名|
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因

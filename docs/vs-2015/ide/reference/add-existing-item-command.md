@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: c2f636c2a0eb2cfdcebf383fdc7eea70f72cb90e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670224"
 ---
 # <a name="add-existing-item-command"></a>“添加现有项”命令
@@ -32,13 +32,13 @@ ms.locfileid: "72670224"
 File.AddExistingItem filename [/e:editorname]
 ```
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
  `filename`（必需）。 待添加到当前解决方案的项的完整路径、文件名称和扩展名。 如果文件路径或文件名称包含空格，则将整个路径放在引号内。
 
 ## <a name="switches"></a>开关
- /e: `editorname`（可选）。 将在其中打开文件的编辑器的名称。 如果指定该参数，但未提供编辑器名称，则会出现“打开方式”  对话框。
+ /e: `editorname`（可选）。 将在其中打开文件的编辑器的名称。 如果指定该参数，但未提供编辑器名称，则会出现“打开方式”**** 对话框。
 
- /e:`editorname` 参数语法使用“打开方式”  对话框中显示的编辑器名称，并用引号括起来。 例如，若要在源代码编辑器中打开样式表，对于 /e:`editorname` 参数，应输入以下内容。
+ /e:`editorname` 参数语法使用“打开方式”**** 对话框中显示的编辑器名称，并用引号括起来。 例如，若要在源代码编辑器中打开样式表，对于 /e:`editorname` 参数，应输入以下内容。
 
 ```
 /e:"Source Code (text) Editor"
@@ -55,4 +55,4 @@ File.AddExistingItem filename [/e:editorname]
 ```
 
 ## <a name="see-also"></a>另请参阅
- [Visual studio](../../ide/reference/visual-studio-commands.md) "[命令" 窗口](../../ide/reference/command-window.md)中的["查找/命令" 框](../../ide/find-command-box.md) [visual studio 命令别名](../../ide/reference/visual-studio-command-aliases.md)
+ [Visual studio](../../ide/reference/visual-studio-commands.md) " [命令" 窗口](../../ide/reference/command-window.md)中的 ["查找/命令" 框](../../ide/find-command-box.md) [visual studio 命令别名](../../ide/reference/visual-studio-command-aliases.md)

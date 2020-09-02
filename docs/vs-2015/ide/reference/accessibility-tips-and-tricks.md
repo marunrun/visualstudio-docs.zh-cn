@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 4b4c7777600f66f4044588ccae91910143e567f5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670249"
 ---
 # <a name="accessibility-tips-and-tricks"></a>辅助功能提示和技巧
@@ -32,23 +32,23 @@ ms.locfileid: "72670249"
 ## <a name="common-windows-shortcut-key-combinations"></a>常用 Windows 快捷组合键
  在 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 中，可以使用许多标准 Windows 快捷组合键来执行任务。 下面列举了其中一些快捷组合键：
 
-|说明|组合键|
+|说明|键组合|
 |-----------------|---------------------|
 |打开或关闭高对比度|左 **Alt + 左 Shift + PRINT SCREEN**|
 |选中或清除对话框中的复选框选项|**空格键**|
-|显示选定项的属性。 例如，如果选中窗体，则将焦点放在“属性”窗口中，如果选中项目，则打开“属性页”对话框。|**Alt+Enter**|
+|显示选定项的属性。 例如，如果选中窗体，则将焦点放在“属性”窗口中，如果选中项目，则打开“属性页”对话框。|**ALT + ENTER**|
 |在对话框的活动列表（如下拉列表）中显示项|**Alt** + 向下键|
-|在网格的活动下拉列表中显示项|**Shift** + **Alt** + **向下键**|
+|在网格的活动下拉列表中显示项|**移位**  + **ALT**  + **向下键**|
 
 ## <a name="hidden-visual-studio-shortcut-key-combinations"></a>隐藏的 Visual Studio 快捷组合键
  某些功能具有可用的快捷键，但这些快捷键并未显示在“选项”对话框的“环境”\“键盘”窗格上。 这类快捷组合键包括：
 
-|功能|说明|组合键|
+|功能|说明|键组合|
 |-------------|-----------------|---------------------|
-|工具箱窗口|在工具箱选项卡之间移动|**Ctrl** + **向上键**<br /><br /> 和<br /><br /> **Ctrl** + **向下键**|
-|工具箱窗口|将工具箱中的控件添加到窗体或设计器|**Enter**|
-|“选项”对话框 ->“环境”->“键盘”|删除在“按快捷键”  选项中输入的组合键|**Backspace**|
-|所有工具窗口|选择窗口的工具栏上的第一个按钮|**Shift** + **Alt**|
+|工具箱窗口|在工具箱选项卡之间移动|**CTRL**  + **向上键**<br /><br /> 和<br /><br /> **CTRL**  + **向下键**|
+|工具箱窗口|将工具箱中的控件添加到窗体或设计器|**回车**|
+|“选项”对话框 ->“环境”->“键盘”|删除在“按快捷键”**** 选项中输入的组合键|**符**|
+|所有工具窗口|选择窗口的工具栏上的第一个按钮|**移位**  + **ALT**|
 |IDE 工具栏|选择“标准”工具栏上的第一个按钮|**Alt**、**Ctrl** + **Tab** **注意：** 再次按 **Ctrl** + **Tab** 可选择下一个 IDE 工具栏上的第一个按钮。|
 
 ## <a name="see-also"></a>另请参阅
