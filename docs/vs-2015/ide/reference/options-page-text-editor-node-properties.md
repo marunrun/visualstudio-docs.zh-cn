@@ -13,18 +13,18 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 62dddacaea1846c8e5d5da404ad7a16fde90f209
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72662416"
 ---
 # <a name="options-page-text-editor-node-properties"></a>“选项”页 ->“文本编辑器”节点属性
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-本文档描述了与“选项”  对话框的“文本编辑器”  类别 `DTE.Properties("TextEditor", <Property Page>)` 关联的一些页面（或属性集合）。 每个小节的标题都是用于访问 `Properties` 集合的调用，而每个小节中的表都列出了集合中的属性。
+本文档描述了与“选项”**** 对话框的“文本编辑器”**** 类别 `DTE.Properties("TextEditor", <Property Page>)` 关联的一些页面（或属性集合）。 每个小节的标题都是用于访问 `Properties` 集合的调用，而每个小节中的表都列出了集合中的属性。
 
- [控制选项设置](https://msdn.microsoft.com/library/a09ed242-7494-4cde-bbd1-7a8ec617965d)中的 Visual Basic 宏演示了如何为“选项”  对话框的每个页面显示当前选项和值。
+ [控制选项设置](https://msdn.microsoft.com/library/a09ed242-7494-4cde-bbd1-7a8ec617965d)中的 Visual Basic 宏演示了如何为“选项”**** 对话框的每个页面显示当前选项和值。
 
 ## <a name="general"></a>常规
  `DTE.Properties("TextEditor", "General")`
@@ -46,7 +46,7 @@ ms.locfileid: "72662416"
 ## <a name="plain-text"></a>纯文本
  `DTE.Properties("TextEditor", "PlainText")`
 
- 编辑文本文件时，`PlainText` 编辑器选项会影响编辑器设置。 每种编程语言和每个 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 程序包都有其自身特定的**文本编辑器**设置。 例如，若要查看或更改 [!INCLUDE[csprcs](../../includes/csprcs-md.md)] 编辑器设置，请使用 `DTE.Properties("TextEditor", "CSharp") or DTE.Properties("TextEditor", "CSharp-Specific")`。 对于“SQL 脚本”  编辑器设置，请使用 `DTE.Properties("TextEditor", "SQL ")`。
+ 编辑文本文件时，`PlainText` 编辑器选项会影响编辑器设置。 每种编程语言和每个 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 程序包都有其自身特定的**文本编辑器**设置。 例如，若要查看或更改 [!INCLUDE[csprcs](../../includes/csprcs-md.md)] 编辑器设置，请使用 `DTE.Properties("TextEditor", "CSharp") or DTE.Properties("TextEditor", "CSharp-Specific")`。 对于“SQL 脚本”**** 编辑器设置，请使用 `DTE.Properties("TextEditor", "SQL ")`。
 
 |属性项名称|值|说明|
 |------------------------|-----------|-----------------|
@@ -58,7 +58,7 @@ ms.locfileid: "72662416"
 |WordWrapGlyphs|Get/Set (Boolean)|在行的末尾显示标志符号；这表明该行会换到下一行。|
 |EnableLeftClickForURLs|Get/Set (Boolean)|确定编辑器是否为 URL 加下划线，并且是否启用单击鼠标左键时跳转到系统注册的 Web 浏览器中的 URL。|
 |IndentStyle|Get/Set (<xref:EnvDTE.vsIndentStyle>)|确定缩进样式：“默认”、“智能”或“无”。|
-|TabSize|Get/Set (Long)|表示等于一个制表符的空格数。不能将整数设置在 1 至 60（包含 1 和 60）的范围之外。|
+|TabSize|Get/Set (Long)|表示等于制表符的空格数。将介于1到60之间的整数 (包含) 失败。|
 |InsertTabs|Get/Set (Boolean)|如果为 `True`，则缩进时使用 Tab 字符。|
 |IndentSize|Get/Set (Long)|表示等于一个缩进级别的空格数。 不能将整数值设置在 1 至 60（包含 1 和 60）的范围之外。|
 |ShowLineNumbers|Get/Set (Boolean)|确定核心编辑器文档的视图是否在左边距中显示行号。|
@@ -66,4 +66,4 @@ ms.locfileid: "72662416"
 |CutCopyBlankLines|Get/Set (Boolean)|在选中空行时剪切或复制它们。|
 
 ## <a name="see-also"></a>另请参阅
- [控制选项设置](https://msdn.microsoft.com/library/a09ed242-7494-4cde-bbd1-7a8ec617965d)在 "选项页" 选项页[上的属性项的名称](https://msdn.microsoft.com/library/d450422d-47c7-4eeb-9f9f-3286264bc5aa)，"[环境节点属性](../../ide/reference/options-page-environment-node-properties.md)"[选项页，"字体和颜色" 节点属性](../../ide/reference/options-page-fonts-and-colors-node-properties.md)
+ [控制选项设置](https://msdn.microsoft.com/library/a09ed242-7494-4cde-bbd1-7a8ec617965d)在 "选项页" 选项页 [上的属性项的名称](https://msdn.microsoft.com/library/d450422d-47c7-4eeb-9f9f-3286264bc5aa)，" [环境节点属性](../../ide/reference/options-page-environment-node-properties.md)" [选项页，"字体和颜色" 节点属性](../../ide/reference/options-page-fonts-and-colors-node-properties.md)

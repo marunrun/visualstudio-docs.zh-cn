@@ -12,10 +12,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 71593496613c75485fd30481777d0fcc1102c11c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68179587"
 ---
 # <a name="how-to-configure-performance-rules"></a>如何：配置性能规则
@@ -27,11 +27,11 @@ Visual Studio 分析工具的性能警告指示所分析应用程序中可能会
   
 1. 在 **“工具”** 菜单上，单击 **“选项”** 。  
   
-2. 展开“性能工具”  ，然后单击“规则”  。  
+2. 展开“性能工具”，然后单击“规则”。  
   
 3. 若要启用或禁用某个警告，请选择或清除该警告 **ID** 和名称旁边的复选框。  
   
-4. 若要指定规则的警告级别，请单击规则旁边的“操作”  单元格，然后单击警告等级。  
+4. 若要指定规则的警告级别，请单击规则旁边的“操作”单元格，然后单击警告等级。  
   
     - **已禁用** - 禁用规则（等同于清除规则 ID 旁边的复选框）。  
   

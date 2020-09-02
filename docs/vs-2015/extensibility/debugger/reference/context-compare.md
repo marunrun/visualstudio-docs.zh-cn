@@ -13,13 +13,13 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: a9cf283cf7239b5ed74e38ca534538a286a477c2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68179971"
 ---
-# <a name="contextcompare"></a>CONTEXT_COMPARE
+# <a name="context_compare"></a>CONTEXT_COMPARE
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
 指定用于比较两个内存上下文的条件。  
@@ -57,44 +57,44 @@ public enum enum_CONTEXT_COMPARE { 
   
 ## <a name="members"></a>成员  
  CONTEXT_EQUAL  
- 在列表中，它等于目标内存上下文中找到的第一个内存上下文。  
+ 在列表中查找与目标内存上下文相等的第一个内存上下文。  
   
  CONTEXT_LESS_THAN  
- 小于目标内存上下文在列表中找到的第一个内存上下文。  
+ 在列表中查找小于目标内存上下文的第一个内存上下文。  
   
  CONTEXT_GREATER_THAN  
- 在列表的最大目标内存上下文中找到的第一个内存上下文。  
+ 在列表中查找大于目标内存上下文的第一个内存上下文。  
   
  CONTEXT_LESS_THAN_OR_EQUAL  
- 小于或等于目标内存上下文在列表中找到的第一个内存上下文。  
+ 在列表中查找小于或等于目标内存上下文的第一个内存上下文。  
   
  CONTEXT_GREATER_THAN_OR_EQUAL  
- 大于或等于目标内存上下文在列表中找到的第一个内存上下文。  
+ 在列表中查找大于或等于目标内存上下文的第一个内存上下文。  
   
  CONTEXT_SAME_SCOPE  
- 目标内存上下文与同一作用域中在列表中找到的第一个内存上下文。  
+ 在列表中查找与目标内存上下文相同的范围中的第一个内存上下文。  
   
  CONTEXT_SAME_FUNCTION  
- 在与目标内存范围内相同的功能是在列表中找到的第一个内存上下文。  
+ 在列表中查找第一个与目标内存范围处于相同函数的内存上下文。  
   
  CONTEXT_SAME_MODULE  
- 中的目标内存上下文是相同的模块列表中找到的第一个内存上下文。  
+ 在与目标内存上下文相同的模块中查找列表中的第一个内存上下文。  
   
  CONTEXT_SAME_PROCESS  
- 在与目标内存上下文相同的进程列表中找到的第一个内存上下文。  
+ 在列表中查找与目标内存上下文相同的进程中的第一个内存上下文。  
   
 ## <a name="remarks"></a>备注  
- 作为参数传递[比较](../../../extensibility/debugger/reference/idebugmemorycontext2-compare.md)方法。  
+ 作为参数传递给 [Compare](../../../extensibility/debugger/reference/idebugmemorycontext2-compare.md) 方法。  
   
- 这些值用于满足指定的比较条件列表中找到的第一个内存上下文。 内存上下文提供一系列内存上下文来比较本身对通过`IDebugMemoryContext2::Compare`方法。 为其所比较运算符列表中的第一个内存上下文`true`然后返回。  
+ 这些值用于在满足指定比较条件的列表中查找第一个内存上下文。 将为内存上下文提供要与方法进行比较的内存上下文的列表 `IDebugMemoryContext2::Compare` 。 然后返回该列表中比较运算符所属的第一个内存上下文 `true` 。  
   
 ## <a name="requirements"></a>要求  
- 标头： msdbg.h  
+ 标头： msdbg  
   
- 命名空间:Microsoft.VisualStudio.Debugger.Interop  
+ 命名空间： VisualStudio  
   
- 程序集：Microsoft.VisualStudio.Debugger.Interop.dll  
+ 程序集： Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>请参阅  
- [枚举](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
- [Compare](../../../extensibility/debugger/reference/idebugmemorycontext2-compare.md)
+## <a name="see-also"></a>另请参阅  
+ [计数](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [比较](../../../extensibility/debugger/reference/idebugmemorycontext2-compare.md)

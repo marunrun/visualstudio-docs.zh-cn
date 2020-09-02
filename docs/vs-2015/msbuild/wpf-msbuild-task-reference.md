@@ -20,10 +20,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: eb21495954801d55c1db0bb9156a813ab73db683
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65687100"
 ---
 # <a name="wpf-msbuild-task-reference"></a>WPF MSBuild 任务引用
@@ -57,7 +57,7 @@ Windows Presentation Foundation (WPF) 生成进程通过另一组生成任务扩
  检查、更新或删除唯一标识符 (UID)，以对源 [!INCLUDE[TLA2#tla_xaml](../includes/tla2sharptla-xaml-md.md)] 文件中包含的所有 [!INCLUDE[TLA#tla_xaml](../includes/tlasharptla-xaml-md.md)] 元素进行本地化。  
   
  [UpdateManifestForBrowserApplication](../msbuild/updatemanifestforbrowserapplication-task.md)  
- 生成 [!INCLUDE[TLA#tla_xbap](../includes/tlasharptla-xbap-md.md)] 项目时，将\<hostInBrowser /> 元素添加到应用程序清单中 (projectname.exe.manifest)。  
+ **\<hostInBrowser />** 在生成项目时将元素添加到*projectname*应用程序清单中 () 。 [!INCLUDE[TLA#tla_xbap](../includes/tlasharptla-xbap-md.md)]  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [MSBuild](https://msdn.microsoft.com/7c49aba1-ee6c-47d8-9de1-6f29a906e20b)

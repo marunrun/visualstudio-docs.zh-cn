@@ -14,32 +14,32 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: aa8d6f5c47289e66a51653e39d31890f09e8ceb2
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85904197"
 ---
 # <a name="add-a-shortcut-menu-in-a-tool-window"></a>在工具窗口中添加快捷菜单
-本演练将快捷菜单放置在工具窗口中。 快捷菜单是在用户右键单击按钮、文本框或窗口背景时显示的菜单。 快捷菜单上的命令与其他菜单或工具栏上的命令具有相同的行为。 若要支持快捷菜单，请在 *.vsct*文件中指定它并显示，以响应鼠标右键单击。
+本演练将快捷菜单放置在工具窗口中。 快捷菜单是在用户右键单击按钮、文本框或窗口背景时显示的菜单。 快捷菜单上的命令与其他菜单或工具栏上的命令具有相同的行为。 若要支持快捷菜单，请在 *.vsct* 文件中指定它并显示，以响应鼠标右键单击。
 
 工具窗口由继承自的自定义工具窗口类中的 WPF 用户控件组成 <xref:Microsoft.VisualStudio.Shell.ToolWindowPane> 。
 
-本演练演示如何通过在 *.vsct*文件中声明菜单项，然后使用托管包框架在定义该工具窗口的类中实现它们，将快捷菜单创建为 Visual Studio 菜单。 此方法可促进对 Visual Studio 命令、UI 元素和自动化对象模型的访问。
+本演练演示如何通过在 *.vsct* 文件中声明菜单项，然后使用托管包框架在定义该工具窗口的类中实现它们，将快捷菜单创建为 Visual Studio 菜单。 此方法可促进对 Visual Studio 命令、UI 元素和自动化对象模型的访问。
 
-或者，如果快捷菜单不会访问 Visual Studio 功能，则可以 <xref:System.Windows.FrameworkElement.ContextMenu%2A> 在用户控件中使用 XAML 元素的属性。 有关详细信息，请参阅[ContextMenu](/dotnet/framework/wpf/controls/contextmenu)。
+或者，如果快捷菜单不会访问 Visual Studio 功能，则可以 <xref:System.Windows.FrameworkElement.ContextMenu%2A> 在用户控件中使用 XAML 元素的属性。 有关详细信息，请参阅 [ContextMenu](/dotnet/framework/wpf/controls/contextmenu)。
 
-## <a name="prerequisites"></a>必备条件
-从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅[安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
+## <a name="prerequisites"></a>先决条件
+从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
 
 ## <a name="create-the-tool-window-shortcut-menu-package"></a>创建工具窗口快捷菜单包
 
-1. 创建一个名为的 VSIX 项目 `TWShortcutMenu` ，并向其添加一个名为**快捷菜单**的工具窗口模板。 有关创建工具窗口的详细信息，请参阅[使用工具窗口创建扩展](../extensibility/creating-an-extension-with-a-tool-window.md)。
+1. 创建一个名为的 VSIX 项目 `TWShortcutMenu` ，并向其添加一个名为 **快捷菜单** 的工具窗口模板。 有关创建工具窗口的详细信息，请参阅 [使用工具窗口创建扩展](../extensibility/creating-an-extension-with-a-tool-window.md)。
 
 ## <a name="specifying-the-shortcut-menu"></a>指定快捷菜单
 此演练中所示的快捷菜单使用户能够从用于填充工具窗口背景的颜色列表中进行选择。
 
-1. 在*ShortcutMenuPackage .vsct*中，在名为 GuidShortcutMenuPackageCmdSet 的 GuidSymbol 元素中查找，并声明快捷菜单、快捷菜单组和菜单选项。 GuidSymbol 元素现在应如下所示：
+1. 在 *ShortcutMenuPackage .vsct*中，在名为 GuidShortcutMenuPackageCmdSet 的 GuidSymbol 元素中查找，并声明快捷菜单、快捷菜单组和菜单选项。 GuidSymbol 元素现在应如下所示：
 
     ```xml
     <GuidSymbol name="guidShortcutMenuPackageCmdSet" value="{00000000-0000-0000-0000-0000}"> // your GUID here
@@ -112,7 +112,7 @@ ms.locfileid: "85904197"
     </Buttons>
     ```
 
-5. 在*ShortcutMenuCommand.cs*中，添加命令集 GUID、快捷菜单和菜单项的定义。
+5. 在 *ShortcutMenuCommand.cs*中，添加命令集 GUID、快捷菜单和菜单项的定义。
 
     ```csharp
     public const string guidShortcutMenuPackageCmdSet = "00000000-0000-0000-0000-00000000"; // your GUID will differ
@@ -122,21 +122,21 @@ ms.locfileid: "85904197"
     public const int cmdidBlue = 0x104;
     ```
 
-    这些是在*ShortcutMenuPackage*文件的 "符号" 部分中定义的命令 id。 此处不包含上下文组，因为它仅在 *.vsct*文件中是必需的。
+    这些是在 *ShortcutMenuPackage* 文件的 "符号" 部分中定义的命令 id。 此处不包含上下文组，因为它仅在 *.vsct* 文件中是必需的。
 
 ## <a name="implementing-the-shortcut-menu"></a>实现快捷菜单
  本部分实现快捷菜单及其命令。
 
-1. 在*ShortcutMenu.cs*中，工具窗口可以获取菜单命令服务，但它包含的控件不能。 以下步骤演示如何使 menu 命令服务可用于用户控件。
+1. 在 *ShortcutMenu.cs*中，工具窗口可以获取菜单命令服务，但它包含的控件不能。 以下步骤演示如何使 menu 命令服务可用于用户控件。
 
-2. 在*ShortcutMenu.cs*中，添加以下 using 指令：
+2. 在 *ShortcutMenu.cs*中，添加以下 using 指令：
 
     ```csharp
     using Microsoft.VisualStudio.Shell;
     using System.ComponentModel.Design;
     ```
 
-3. 重写工具窗口的 Initialize （）方法以获取菜单命令服务并添加控件，并将菜单命令服务传递给构造函数：
+3. 重写工具窗口的 Initialize ( # A1 方法，以获取菜单命令服务并添加控件，并将菜单命令服务传递给构造函数：
 
     ```csharp
     protected override void Initialize()
@@ -157,7 +157,7 @@ ms.locfileid: "85904197"
     }
     ```
 
-5. 在*ShortcutMenuControl.xaml.cs*中，为 menu 命令服务添加私有字段，并更改控制构造函数以采用菜单命令服务。 然后使用菜单命令服务添加上下文菜单命令。 ShortcutMenuControl 构造函数现在应类似于以下代码。 稍后将定义该命令处理程序。
+5. 在 *ShortcutMenuControl.xaml.cs*中，为 menu 命令服务添加私有字段，并更改控制构造函数以采用菜单命令服务。 然后使用菜单命令服务添加上下文菜单命令。 ShortcutMenuControl 构造函数现在应类似于以下代码。 稍后将定义该命令处理程序。
 
     ```csharp
     public ShortcutMenuControl(OleMenuCommandService service)
@@ -183,7 +183,7 @@ ms.locfileid: "85904197"
     }
     ```
 
-6. 在*ShortcutMenuControl*中，将事件添加 <xref:System.Windows.UIElement.MouseRightButtonDown> 到顶级 <xref:System.Windows.Controls.UserControl> 元素。 XAML 文件现在应如下所示：
+6. 在 *ShortcutMenuControl*中，将事件添加 <xref:System.Windows.UIElement.MouseRightButtonDown> 到顶级 <xref:System.Windows.Controls.UserControl> 元素。 XAML 文件现在应如下所示：
 
     ```vb
     <UserControl x:Class="TWShortcutMenu.ShortcutMenuControl"
@@ -205,7 +205,7 @@ ms.locfileid: "85904197"
     </UserControl>
     ```
 
-7. 在*ShortcutMenuControl.xaml.cs*中，为事件处理程序添加存根。
+7. 在 *ShortcutMenuControl.xaml.cs*中，为事件处理程序添加存根。
 
     ```csharp
     private void MyToolWindow_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
@@ -268,9 +268,9 @@ ms.locfileid: "85904197"
 
 ## <a name="test-the-tool-window-features"></a>测试工具窗口功能
 
-1. 生成项目并启动调试。 将显示实验实例。
+1. 生成项目并启动调试。 这将显示实验实例。
 
-2. 在实验实例中，单击 "**视图"/"其他窗口**"，然后单击 "**快捷菜单**"。 执行此操作应显示工具窗口。
+2. 在实验实例中，单击 " **视图"/"其他窗口**"，然后单击 " **快捷菜单**"。 执行此操作应显示工具窗口。
 
 3. 右键单击工具窗口的 "正文"。 应显示具有颜色列表的快捷菜单。
 

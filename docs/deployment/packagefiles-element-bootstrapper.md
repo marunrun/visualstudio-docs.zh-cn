@@ -1,5 +1,5 @@
 ---
-title: '&lt;PackageFiles&gt;元素 （引导程序） |Microsoft Docs'
+title: '&lt;&gt; (引导程序) 的 PackageFiles 元素 |Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -16,14 +16,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 81a12f400ee870798759237e202d2ca358fefa69
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "66747516"
 ---
-# <a name="ltpackagefilesgt-element-bootstrapper"></a>&lt;PackageFiles&gt;元素 （引导程序）
-`PackageFiles`元素包含`PackageFile`元素，后者定义为执行的安装包`Command`元素。
+# <a name="ltpackagefilesgt-element-bootstrapper"></a>&lt;PackageFiles &gt; 元素 (引导程序) 
+`PackageFiles`元素包含 `PackageFile` 元素，这些元素定义作为元素的结果执行的安装包 `Command` 。
 
 ## <a name="syntax"></a>语法
 
@@ -44,25 +44,25 @@ ms.locfileid: "66747516"
 ## <a name="elements-and-attributes"></a>元素和属性
  `PackageFiles` 元素具有以下属性。
 
-|特性|描述|
+|特性|说明|
 |---------------|-----------------|
-|`CopyAllPackageFiles`|可选。 如果设置为`false`，安装程序将仅下载文件从引用`Command`元素。 如果设置为`true`，将下载所有文件。<br /><br /> 如果设置为`IfNotHomesite`，安装程序的行为相同像`False`如果`ComponentsLocation`设置为`HomeSite`，并将否则具有相同行为像`True`。 此设置可用于允许包本身是引导程序，以在 HomeSite 方案中执行其自己的行为。<br /><br /> 默认值为 `true`。|
+|`CopyAllPackageFiles`|可选。 如果设置为 `false` ，则安装程序将仅下载从元素引用的文件 `Command` 。 如果设置为 `true` ，则将下载所有文件。<br /><br /> 如果设置为 `IfNotHomesite` ，则该安装程序的行为将与 `False` 如果 `ComponentsLocation` 设置为相同， `HomeSite` 否则将表现为与 if 相同 `True` 。 此设置可用于允许自身引导程序的包在 HomeSite 方案中执行其自身的行为。<br /><br /> 默认值为 `true`。|
 
 ## <a name="packagefile"></a>PackageFile
- `PackageFile`元素是子元素的`PackageFiles`元素。 一个`PackageFiles`元素必须至少一个`PackageFile`元素。
+ `PackageFile`元素是元素的子元素 `PackageFiles` 。 `PackageFiles`元素必须至少有一个 `PackageFile` 元素。
 
  `PackageFile` 具有以下属性。
 
-| 特性 | 描述 |
+| 特性 | 说明 |
 |---------------| - |
-| `Name` | 必需。 包文件的名称。 这是名称的`Command`元素将引用此项定义的包将安装在其下的条件。 此值还用作的键`Strings`表以检索这样的工具的本地化的名称[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]将用于描述包。 |
-| `HomeSite` | 可选。 在远程服务器上，如果不包括与安装程序的包的位置。 |
-| `CopyOnBuild` | 可选。 指定引导程序在生成时是否应将复制到磁盘上的包文件。 默认值为 true。 |
-| `PublicKey` | 加密的包的证书签名者的公钥。 如果使用`HomeSite`使用; 否则为可选。 |
-| `Hash` | 可选。 包文件的 SHA1 哈希。 这用于在安装时验证文件的完整性。 如果无法从包文件计算相同的哈希，将不安装包。 |
+| `Name` | 必需。 包文件的名称。 这是在 `Command` 定义包安装条件时，元素将引用的名称。 此值还用作表中的键， `Strings` 以检索 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 将用于描述包的工具（如）的本地化名称。 |
+| `HomeSite` | 可选。 包在远程服务器上的位置（如果安装程序未附带）。 |
+| `CopyOnBuild` | 可选。 指定引导程序是否应在生成时将包文件复制到磁盘。 默认值为 true。 |
+| `PublicKey` | 包的证书签名程序的已加密公钥。 如果使用，则 `HomeSite` 为必需; 否则为可选。 |
+| `Hash` | 可选。 包文件的 SHA1 哈希。 这用于在安装时验证文件的完整性。 如果无法从包文件计算相同的哈希值，则不会安装包。 |
 
 ## <a name="example"></a>示例
- 下面的代码示例定义了用于.NET Framework 可再发行组件包和依赖项，如 Windows 安装程序的包。
+ 下面的代码示例为 .NET Framework 可再发行组件包及其依赖项（如 Windows Installer）定义包。
 
 ```xml
 <PackageFiles>
@@ -73,7 +73,7 @@ ms.locfileid: "66747516"
 </PackageFiles>
 ```
 
-## <a name="see-also"></a>请参阅
-- [\<产品 > 元素](../deployment/product-element-bootstrapper.md)
-- [\<包 > 元素](../deployment/package-element-bootstrapper.md)
+## <a name="see-also"></a>另请参阅
+- [\<Product> element](../deployment/product-element-bootstrapper.md)
+- [\<Package> element](../deployment/package-element-bootstrapper.md)
 - [产品和包架构引用](../deployment/product-and-package-schema-reference.md)

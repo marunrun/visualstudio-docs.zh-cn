@@ -1,5 +1,5 @@
 ---
-title: Web 控件库 （托管代码） |Microsoft Docs
+title: Web 控件库 (托管代码) |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -18,16 +18,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 031f894eb2e117a213f4f9fbbf08ac57a1512d61
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65688167"
 ---
 # <a name="web-control-library-managed-code"></a>Web 控件库（托管代码）
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Web 控件库项目模板创建 DLL。 因为类库是 DLL，所以不能直接运行它。 必须创建嵌入该控件的 [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] 页。 有关详细信息，请参阅[Web 控件库模板](https://msdn.microsoft.com/00666b07-71d2-4ace-a13c-cc130a3ce372)。  
+Web 控件库项目模板创建 DLL。 因为类库是 DLL，所以不能直接运行它。 必须创建嵌入该控件的 [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] 页。 有关详细信息，请参阅 [Web 控件库模板](https://msdn.microsoft.com/00666b07-71d2-4ace-a13c-cc130a3ce372)。  
   
 ### <a name="to-debug-a-web-control-library-method-1"></a>调试 Web 控件库（方法 1）  
   
@@ -43,13 +43,13 @@ Web 控件库项目模板创建 DLL。 因为类库是 DLL，所以不能直接�
   
 6. 打开浏览器窗口，将 URL 指向该测试套。 控件中的断点将被命中，您可以开始调试。  
   
-### <a name="to-debug-a-web-control-library-method-2"></a>若要调试 Web 控件库 (方法 2)  
+### <a name="to-debug-a-web-control-library-method-2"></a>若要调试 Web 控件库 (方法 2)   
   
 1. 创建宿主应用程序项目，并在同一解决方案中创建 Web 控件项目。  
   
-2. 在中**解决方案资源管理器**，右键单击主机应用程序，然后选择**添加引用**。  
+2. 在 **解决方案资源管理器**中，右键单击主机应用程序，然后选择 " **添加引用**"。  
   
 3. 向该 Web 控件项目添加引用。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [ASP.NET Web 应用程序](../debugger/debugging-preparation-aspnet-web-applications.md)

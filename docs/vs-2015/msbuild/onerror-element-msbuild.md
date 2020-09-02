@@ -20,10 +20,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 46f6907bea5954cffae92b41398717a8247350e0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68195662"
 ---
 # <a name="onerror-element-msbuild"></a>OnError 元素 (MSBuild)
@@ -47,7 +47,7 @@ ms.locfileid: "68195662"
   
 ### <a name="attributes"></a>特性  
   
-|特性|说明|  
+|特性|描述|  
 |---------------|-----------------|  
 |`Condition`|可选特性。<br /><br /> 要计算的条件。 有关详细信息，请参阅[条件](../msbuild/msbuild-conditions.md)。|  
 |`ExecuteTargets`|必需的特性。<br /><br /> 任务失败时要执行的目标。 用分号分隔多个目标。 以指定顺序执行多个目标。|  
@@ -64,7 +64,7 @@ ms.locfileid: "68195662"
 ## <a name="remarks"></a>备注  
  如果其中一个 `Target` 元素的任务失败并将 `ContinueOnError` 属性设置为 `ErrorAndStop`（或 `false`），则 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 执行 `OnError` 元素。 任务失败时，执行在 `ExecuteTargets` 属性中指定的目标。 如果目标中存在多个 `OnError` 元素，则在任务失败时将按顺序执行 `OnError` 元素。  
   
- 有关 `ContinueOnError` 属性的详细信息，请参阅 [Task 元素 (MSBuild)](../msbuild/task-element-msbuild.md)。 有关目标的信息，请参阅[目标](../msbuild/msbuild-targets.md)。  
+ 有关属性的信息 `ContinueOnError` ，请参阅 [Task Element (MSBuild) ](../msbuild/task-element-msbuild.md)。 有关目标的信息，请参阅[目标](../msbuild/msbuild-targets.md)。  
   
 ## <a name="example"></a>示例  
  以下代码执行 `TaskOne` 和 `TaskTwo` 任务。 如果 `TaskOne` 失败，[!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 计算 `OnError` 元素并执行 `OtherTarget` 目标。  
