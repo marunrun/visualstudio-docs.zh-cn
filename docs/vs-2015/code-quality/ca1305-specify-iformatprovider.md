@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 025d76f8e946dd3021141d6736c6b4bd40d57170
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85539081"
 ---
 # <a name="ca1305-specify-iformatprovider"></a>CA1305:指定 IFormatProvider
@@ -46,7 +46,7 @@ ms.locfileid: "85539081"
 
 - 如果将向用户显示值，则使用当前区域性。 请参阅 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName>。
 
-- 如果值将由软件存储和访问（保存到文件或数据库），请使用固定区域性。 请参阅 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=fullName>。
+- 如果此值将由软件 (保存并访问) 保存到文件或数据库，请使用固定区域性。 请参阅 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=fullName>。
 
 - 如果您不知道值的目标，请使数据使用者或提供者指定区域性。
 
@@ -61,7 +61,7 @@ ms.locfileid: "85539081"
  如果确信默认区域性/格式提供程序是正确的选择并且代码可维护性不是重要的开发优先级，则可以安全地禁止显示此规则发出的警告。
 
 ## <a name="example"></a>示例
- 在下面的示例中，将 `BadMethod` 导致此规则发生两次冲突。 `GoodMethod`通过将固定区域性传递到来更正第一个冲突 <xref:System.String.Compare%2A> ，并通过将当前区域性传递到来更正第二个冲突， <xref:System.String.ToLower%2A> 因为 `string3` 向用户显示。
+ 在下面的示例中，将 `BadMethod` 导致此规则发生两次冲突。 `GoodMethod` 通过将固定区域性传递到来更正第一个冲突 <xref:System.String.Compare%2A> ，并通过将当前区域性传递到来更正第二个冲突， <xref:System.String.ToLower%2A> 因为 `string3` 向用户显示。
 
  [!code-csharp[FxCop.Globalization.CultureInfo#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Globalization.CultureInfo/cs/FxCop.Globalization.CultureInfo.cs#1)]
 

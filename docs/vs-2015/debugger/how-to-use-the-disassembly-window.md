@@ -1,5 +1,5 @@
 ---
-title: 如何：使用反汇编窗口 |Microsoft Docs
+title: 如何：使用 "反汇编" 窗口 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -26,16 +26,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: c25c3cdeb96abacb4123b2d0a851ac3d4acb0cd5
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65696142"
 ---
-# <a name="how-to-use-the-disassembly-window"></a>如何：使用反汇编窗口
+# <a name="how-to-use-the-disassembly-window"></a>如何：使用“反汇编”窗口
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-此功能是启用了地址级调试后才可用**选项**对话框中，**调试**节点。 但对于脚本或 SQL 调试是不可用的。  
+只有在启用了 " **选项** " 对话框的 " **调试** " 节点的情况下，此功能才可用。 但对于脚本或 SQL 调试是不可用的。  
   
  “反汇编”窗口显示与编译器所创建的指令对应的汇编代码。 如果正在调试托管代码，则这些汇编指令对应于由实时 (JIT) 编译器创建的本机代码，而不是由 Visual Studio 编译器生成的 Microsoft 中间语言 (MSIL)。  
   
@@ -64,18 +64,18 @@ ms.locfileid: "65696142"
   
 ### <a name="to-display-the-disassembly-window"></a>显示“反汇编”窗口  
   
-- 上**调试**菜单中，选择**Windows**，然后单击**反汇编**。  
+- 在 " **调试** " 菜单上，选择 " **Windows**"，然后单击 " **反汇编**"。  
   
      调试器必须正在运行或处于中断模式。  
   
 ### <a name="to-turn-optional-information-on-or-off"></a>打开或关闭可选信息  
   
-- 右键单击**反汇编**窗口中，并设置或清除快捷菜单中的所需的选项。  
+- 右键单击 " **反汇编** " 窗口，然后在快捷菜单中设置或清除所需的选项。  
   
      左边距中的黄色箭头表示当前执行点的位置。 对于本机代码，这对应于 CPU 的程序计数器。 该位置显示程序中将要执行的下一条指令。  
   
-     有关详细信息，请参阅[向上分页或在内存中的向下](../debugger/how-to-page-up-or-down-in-memory.md)。  
+     有关详细信息，请参阅 [在内存中向上或向下分页](../debugger/how-to-page-up-or-down-in-memory.md)。  
   
-## <a name="see-also"></a>请参阅  
- [查看调试器中的数据](../debugger/viewing-data-in-the-debugger.md)   
+## <a name="see-also"></a>另请参阅  
+ [在调试器中查看数据](../debugger/viewing-data-in-the-debugger.md)   
  [如何：使用“寄存器”窗口](../debugger/how-to-use-the-registers-window.md)

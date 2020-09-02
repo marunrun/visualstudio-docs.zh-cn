@@ -1,5 +1,5 @@
 ---
-title: 如何：调试优化的代码 |Microsoft Docs
+title: 如何：调试优化的代码 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -24,10 +24,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 68ce036d420293e8a75bec1b2cac9f9ee8f8fcd2
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65675617"
 ---
 # <a name="how-to-debug-optimized-code"></a>如何：调试优化的代码
@@ -65,19 +65,19 @@ ms.locfileid: "65675617"
   
 2. 在解决方案资源管理器中选择项目。  
   
-3. 在“视图”菜单上，单击“属性页”。  
+3. 在“视图”菜单上，单击“属性页” 。  
   
-4. 在“属性页”对话框中，确保在“配置”下拉列表框中选择了 `Debug`。  
+4. 在“属性页”对话框中，确保在“配置”下拉列表框中选择了 `Debug` 。  
   
 5. 在左边的文件夹视图中，选择“C/C++”文件夹。  
   
 6. 在“C++”文件夹下，选择 `Optimization`。  
   
-7. 在右边的属性列表中找到“`Optimization`”。 它旁边的设置可能显示为 `Disabled (` [/Od](https://msdn.microsoft.com/library/b1ac31b7-e086-4eeb-be5e-488f7513f5f5) `)`。 选择其他选项（`Minimum Size``(`[/O1](https://msdn.microsoft.com/library/2d1423f5-53d9-44da-8908-b33a351656c2)`)`、`Maximum Speed``(`[/O2](https://msdn.microsoft.com/library/2d1423f5-53d9-44da-8908-b33a351656c2)`)`、`Full Optimization``(`[/Ox](https://msdn.microsoft.com/library/3ad7c30b-c615-428c-b1d0-2e024f81c760)`)` 或 `Custom`）之一。  
+7. 在右边的属性列表中找到“`Optimization`”。 它旁边的设置可能显示为 `Disabled (`[/Od](https://msdn.microsoft.com/library/b1ac31b7-e086-4eeb-be5e-488f7513f5f5)`)`。 选择其他选项（`Minimum Size``(`[/O1](https://msdn.microsoft.com/library/2d1423f5-53d9-44da-8908-b33a351656c2)`)`、`Maximum Speed``(`[/O2](https://msdn.microsoft.com/library/2d1423f5-53d9-44da-8908-b33a351656c2)`)`、`Full Optimization``(`[/Ox](https://msdn.microsoft.com/library/3ad7c30b-c615-428c-b1d0-2e024f81c760)`)` 或 `Custom`）之一。  
   
 8. 如果为“`Custom`”选择了“`Optimization`”选项，现在便可为属性列表中显示的其他任何属性设置选项。  
   
-9. 选择配置属性 C /C++，命令行节点的项目属性页中，并添加`(` [/Zo](https://msdn.microsoft.com/library/eea8d89a-7fe0-4fe1-86b2-7689bbebbd7f) `)`到**其他选项**文本框。  
+9. 选择项目属性页中的配置属性、C/C++、命令行节点，并将 `(`[/Zo](https://msdn.microsoft.com/library/eea8d89a-7fe0-4fe1-86b2-7689bbebbd7f)`)` 添加到“其他选项”文本框。  
   
     > [!WARNING]
     > `/Zo` 需要 Visual Studio 2013 Update 3 或更高版本。  
@@ -92,6 +92,6 @@ for (x=0; x<10; x++)
   
  假定在该行设置了一个断点。 可能希望该断点被命中 10 次，但如果代码进行了优化，则只会命中该断点一次。 因为第一个指令将 `x` 的值设置为 0。 编译器认定该指令只需执行一次，将其移出循环。 断点随之移动。 而比较和递增 `x` 的指令仍留在循环内。 查看“反汇编”窗口时，[单步执行单元](https://msdn.microsoft.com/8791dac9-64d1-4bb9-b59e-8d59af1833f9)自动设置为“指令”以允许更大控制，这在逐句通过优化的代码时很有用。  
   
-## <a name="see-also"></a>请参阅  
- [调试器安全](../debugger/debugger-security.md)   
+## <a name="see-also"></a>另请参阅  
+ [调试器安全性](../debugger/debugger-security.md)   
  [调试本机代码](../debugger/debugging-native-code.md)

@@ -1,5 +1,5 @@
 ---
-title: SccEnum更改文件功能 |微软文档
+title: SccEnumChangedFiles 函数 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,14 +13,14 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 0b1826a87b20d6bc92254fc4a86b8e0b756400ec
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80700908"
 ---
-# <a name="sccenumchangedfiles-function"></a>SccEnum 更改文件功能
-给定本地文件的列表，此函数确定哪些文件不同于源代码管理数据库中的相应版本。
+# <a name="sccenumchangedfiles-function"></a>SccEnumChangedFiles 函数
+给定一个本地文件列表，此函数确定哪些文件与源代码管理数据库中对应的版本不同。
 
 ## <a name="syntax"></a>语法
 
@@ -37,23 +37,23 @@ SCCRTN SccEnumChangedFiles(
 ### <a name="parameters"></a>参数
  pContext
 
-[在]源代码管理插件上下文指针。
+中源代码管理插件上下文指针。
 
- hwnd
+ hWnd
 
-[在]源控件插件可以用作它提供的任何对话框的父级的 IDE 窗口句柄。
+中IDE 窗口的句柄，源代码管理插件可将其用作它所提供的所有对话框的父级。
 
  cFiles
 
-[在]`lpFileNames`数组中指定的文件名数。 还指定数组的大小`plIsFileDifferent`。
+中数组中指定的文件名 `lpFileNames` 。 还指定数组的大小 `plIsFileDifferent` 。
 
- lpFile名称
+ lpFileNames
 
-[在]要检查的本地文件名数组。
+中要检查的本地文件名的数组。
 
- plIsFile不同
+ plIsFileDifferent
 
-[进出]指示每个文件差异状态的值数组（数组必须至少有`cFiles`条目）。 非零表示文件不同。
+[in，out]值的数组，这些值指示每个文件 (数组的差异状态必须至少具有 `cFiles`) 条目。 非零表示文件不同。
 
 ## <a name="return-value"></a>返回值
  此函数的源代码管理插件实现应返回以下值之一：
@@ -63,5 +63,5 @@ SCCRTN SccEnumChangedFiles(
 |SCC_OK|操作已成功完成。|
 |SCC_UNSPECIFIEDERROR|常规错误。|
 
-## <a name="see-also"></a>请参阅
-- [源代码管理插件 API 功能](../extensibility/source-control-plug-in-api-functions.md)
+## <a name="see-also"></a>另请参阅
+- [源代码管理插件 API 函数](../extensibility/source-control-plug-in-api-functions.md)

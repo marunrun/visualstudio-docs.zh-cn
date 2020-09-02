@@ -21,10 +21,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 508d1fe33046f6051c9c5c1b8e54036e78ae7d2f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68193350"
 ---
 # <a name="vcmessage-task"></a>VCMessage 任务
@@ -42,7 +42,7 @@ ms.locfileid: "68193350"
 |---------------|-----------------|  
 |**参数**|可选 **String** 参数。<br /><br /> 要显示的消息列表（以分号分隔）。|  
 |**代码**|必需的 **String** 参数。<br /><br /> 限定消息的错误号。|  
-|**Type**|可选 **String** 参数。<br /><br /> 指定要发出的消息类型。 指定 `"Warning"` 发出一条警告消息，或指定 `"Error"` 发出一条错误消息。|  
+|类型 |可选 **String** 参数。<br /><br /> 指定要发出的消息类型。 指定 `"Warning"` 发出一条警告消息，或指定 `"Error"` 发出一条错误消息。|  
   
 ## <a name="see-also"></a>另请参阅  
- [任务参考](../msbuild/msbuild-task-reference.md)
+ [任务引用](../msbuild/msbuild-task-reference.md)
