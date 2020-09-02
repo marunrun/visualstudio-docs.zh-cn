@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 7f967420e37d6337ce6d86cc56524f2751218f56
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72651666"
 ---
 # <a name="visual-c-enumerations-in-class-designer"></a>类设计器中的 Visual C++ 枚举
@@ -46,4 +46,4 @@ enum class CardSuit {
  有关使用 `enum` 类型的更多信息，请参阅[枚举](https://msdn.microsoft.com/library/081829db-5dca-411e-a53c-bffef315bcb3)。
 
 ## <a name="see-also"></a>另请参阅
- [使用 Visual C++ Code （类设计器）](../ide/working-with-visual-cpp-code-class-designer.md) [枚举](https://msdn.microsoft.com/library/081829db-5dca-411e-a53c-bffef315bcb3)
+ 使用[Visual C++ 代码 (类设计器) ](../ide/working-with-visual-cpp-code-class-designer.md) [枚举](https://msdn.microsoft.com/library/081829db-5dca-411e-a53c-bffef315bcb3)

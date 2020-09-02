@@ -11,20 +11,20 @@ caps.latest.revision: 8
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: db77f93fd7f6af16b5358b75b6ffcd5927430653
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62549107"
 ---
 # <a name="how-to-clear-the-undo-stack"></a>如何：清除撤消堆栈
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-下面的以下过程说明如何清除撤消堆栈。  
+下面的过程说明如何清除撤消堆栈。  
   
-### <a name="to-clear-the-undo-stack"></a>若要清除撤消堆栈  
+### <a name="to-clear-the-undo-stack"></a>清除撤消堆栈  
   
-1. 若要清除撤消堆栈使用[IOleUndoManager::DiscardFrom](/windows/desktop/api/ocidl/nf-ocidl-ioleundomanager-discardfrom)方法。 以下是此示例：  
+1. 若要清除撤消堆栈，请使用 [IOleUndoManager：:D iscardfrom](/windows/desktop/api/ocidl/nf-ocidl-ioleundomanager-discardfrom) 方法。 下面是一个示例：  
   
     ```  
     HRESULT CCmdWindow::ClearUndoStack()  
@@ -44,5 +44,5 @@ ms.locfileid: "62549107"
     }  
     ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [如何：实现撤消管理](../extensibility/how-to-implement-undo-management.md)

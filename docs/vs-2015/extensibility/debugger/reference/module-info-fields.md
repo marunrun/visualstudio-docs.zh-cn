@@ -1,5 +1,5 @@
 ---
-title: MODULE_INFO_FIELDS | Microsoft Docs
+title: MODULE_INFO_FIELDS |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,13 +13,13 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: b80235f4ae769acbe3c61ad4b597898ee774d6a9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62547320"
 ---
-# <a name="moduleinfofields"></a>MODULE_INFO_FIELDS
+# <a name="module_info_fields"></a>MODULE_INFO_FIELDS
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
 指定调试模块信息的标志。  
@@ -65,59 +65,59 @@ public enum enum_MODULE_INFO_FIELDS { 
   
 ## <a name="members"></a>成员  
  MIF_NONE  
- 初始化/使用无结构中的字段。  
+ 初始化/不使用结构中的任何字段。  
   
  MIF_NAME  
- 初始化/用`m_bstrName`字段中[MODULE_INFO](../../../extensibility/debugger/reference/module-info.md)结构。  
+ 初始化/使用 `m_bstrName` [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) 结构中的字段。  
   
  MIF_URL  
- 初始化/用`m_bstrUrl`字段中`MODULE_INFO`结构。  
+ 初始化/使用 `m_bstrUrl` 结构中的字段 `MODULE_INFO` 。  
   
  MIF_VERSION  
- 初始化/用`m_bstrVersion`字段中`MODULE_INFO`结构。  
+ 初始化/使用 `m_bstrVersion` 结构中的字段 `MODULE_INFO` 。  
   
  MIF_DEBUGMESSAGE  
- 初始化/用`m_bstrDebugMessage`字段中`MODULE_INFO`结构。  
+ 初始化/使用 `m_bstrDebugMessage` 结构中的字段 `MODULE_INFO` 。  
   
  MIF_LOADADDRESS  
- 初始化/用`m_addrLoadAddress`字段中`MODULE_INFO`结构。  
+ 初始化/使用 `m_addrLoadAddress` 结构中的字段 `MODULE_INFO` 。  
   
  MIF_PREFFEREDADDRESS  
- 初始化/用`m_addrPreferredLoadAddress`字段中`MODULE_INFO`结构。  
+ 初始化/使用 `m_addrPreferredLoadAddress` 结构中的字段 `MODULE_INFO` 。  
   
  MIF_SIZE  
- 初始化/用`m_dwSize`字段中`MODULE_INFO`结构。  
+ 初始化/使用 `m_dwSize` 结构中的字段 `MODULE_INFO` 。  
   
  MIF_LOADORDER  
- 初始化/用`m_dwLoadOrder`字段中`MODULE_INFO`结构。  
+ 初始化/使用 `m_dwLoadOrder` 结构中的字段 `MODULE_INFO` 。  
   
  MIF_TIMESTAMP  
- 初始化/用`m_TimeStamp`字段中`MODULE_INFO`结构。  
+ 初始化/使用 `m_TimeStamp` 结构中的字段 `MODULE_INFO` 。  
   
  MIF_URLSYMBOLLOCATION  
- 初始化/用`m_bstrUrlSymbolLocation`字段中`MODULE_INFO`结构。  
+ 初始化/使用 `m_bstrUrlSymbolLocation` 结构中的字段 `MODULE_INFO` 。  
   
  MIF_FLAGS  
- 初始化/用`m_dwModuleFlags`字段中`MODULE_INFO`结构。  
+ 初始化/使用 `m_dwModuleFlags` 结构中的字段 `MODULE_INFO` 。  
   
  MIF_ALLFIELDS  
- 中的字段的所有初始化/使用`MODULE_INFO`结构。  
+ 初始化/使用结构中的所有字段 `MODULE_INFO` 。  
   
 ## <a name="remarks"></a>备注  
- 这些值会作为参数传递[GetInfo](../../../extensibility/debugger/reference/idebugmodule2-getinfo.md)方法，以指示的哪些字段[MODULE_INFO](../../../extensibility/debugger/reference/module-info.md)结构是进行初始化。  
+ 这些值作为参数传递给 [GetInfo](../../../extensibility/debugger/reference/idebugmodule2-getinfo.md) 方法，以指示要初始化 [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) 结构的哪些字段。  
   
- 中还使用这些值`MODULE_INFO`结构，用于指示哪些字段是使用，有效。  
+ 这些值还在结构中用于 `MODULE_INFO` 指示哪些字段已使用并且有效。  
   
- 可能的按位组合这些标志`OR`。  
+ 这些标志可以与按位组合 `OR` 。  
   
 ## <a name="requirements"></a>要求  
- 标头： msdbg.h  
+ 标头： msdbg  
   
- 命名空间:Microsoft.VisualStudio.Debugger.Interop  
+ 命名空间： VisualStudio  
   
- 程序集：Microsoft.VisualStudio.Debugger.Interop.dll  
+ 程序集： Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>请参阅  
- [枚举](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>另请参阅  
+ [计数](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md)   
  [GetInfo](../../../extensibility/debugger/reference/idebugmodule2-getinfo.md)

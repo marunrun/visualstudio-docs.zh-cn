@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugCustomAttributes::Reset |Microsoft Docs
+title: IEnumDebugCustomAttributes：： Reset |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,10 +13,10 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: ff86808bfd33cf7112091b028140f538932dee28
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62551346"
 ---
 # <a name="ienumdebugcustomattributesreset"></a>IEnumDebugCustomAttributes::Reset
@@ -35,11 +35,11 @@ int Reset();
 ```  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
 ## <a name="remarks"></a>备注  
- 调用此方法下, 一步调用后[下一步](../../../extensibility/debugger/reference/ienumdebugcustomattributes-next.md)方法返回的第一个元素的枚举。  
+ 调用此方法后， [下一次调用的方法将](../../../extensibility/debugger/reference/ienumdebugcustomattributes-next.md) 返回枚举的第一个元素。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IEnumDebugCustomAttributes](../../../extensibility/debugger/reference/ienumdebugcustomattributes.md)   
  [下一页](../../../extensibility/debugger/reference/ienumdebugcustomattributes-next.md)

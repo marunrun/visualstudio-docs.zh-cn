@@ -1,5 +1,5 @@
 ---
-title: DISASSEMBLY_FLAGS | Microsoft Docs
+title: DISASSEMBLY_FLAGS |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,13 +13,13 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: d48fcf9dd941194b56e2c794ad7f5673f8e58421
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68159310"
 ---
-# <a name="disassemblyflags"></a>DISASSEMBLY_FLAGS
+# <a name="disassembly_flags"></a>DISASSEMBLY_FLAGS
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
 指定反汇编的标志。  
@@ -51,35 +51,35 @@ public enum enum_DISASSEMBLY_FLAGS { 
   
 ## <a name="members"></a>成员  
  DF_DOCUMENTCHANGE  
- 指示此指令比前一个不同的文档。  
+ 指示此指令与上一个指令位于不同的文档中。  
   
  DF_DISABLED  
- 指示此指令将不会执行。  
+ 指示将不执行此指令。  
   
  DF_INSTRUCTION_ACTIVE  
- 指示此指令是一个要执行的下一步说明 （可能有多个）。  
+ 指示此指令是要执行的下一个指令 (可能有多个) 。  
   
  DF_DATA  
- 指示此指令实际上是数据 （而不是代码）。  
+ 指示此指令实际上是 (不是代码) 的数据。  
   
  DF_HASSOURCE  
- 指示此指令具有源。 一些说明，如分析或进行垃圾收集代码中，有没有相应的源。  
+ 指示此指令具有源。 某些说明（例如，事件探查或垃圾收集代码）没有相应的源。  
   
  DF_DOCUMENT_CHECKSUM  
- 指示`bstrDocumentUrl`字段后的文档 URL 包含校验和数据。 请参阅备注部分[DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md)校验和数据的存储方式的结构。  
+ 指示 `bstrDocumentUrl` 字段包含文档 URL 后面的校验和数据。 有关校验和数据的存储方式，请参阅 [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) 结构的 "备注" 部分。  
   
 ## <a name="remarks"></a>备注  
- 用作`dwFlags`的成员[DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md)结构。  
+ 用作 `dwFlags` [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) 结构的成员。  
   
- 可能的按位组合这些标志`OR`。  
+ 这些标志可以与按位组合 `OR` 。  
   
 ## <a name="requirements"></a>要求  
- 标头： msdbg.h  
+ 标头： msdbg  
   
- 命名空间:Microsoft.VisualStudio.Debugger.Interop  
+ 命名空间： VisualStudio  
   
- 程序集：Microsoft.VisualStudio.Debugger.Interop.dll  
+ 程序集： Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>请参阅  
- [枚举](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>另请参阅  
+ [计数](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md)

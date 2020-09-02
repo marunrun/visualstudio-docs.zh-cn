@@ -1,5 +1,5 @@
 ---
-title: RequiredPlatformVersion 元素 （Visual Studio 模板） |Microsoft Docs
+title: " (Visual Studio 模板) 的 RequiredPlatformVersion 元素 |Microsoft Docs"
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -9,24 +9,24 @@ caps.latest.revision: 7
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 2e5ba8cfef6674b5603cf03c73619f686338af3c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68159285"
 ---
 # <a name="requiredplatformversion-element-visual-studio-templates"></a>RequiredPlatformVersion 元素（Visual Studio 模板）
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-指定项目模板正常工作所需的操作系统的最低版本。 此元素还用于创建的项目模板[!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)]应用。  
+指定项目模板正常运行所需的操作系统的最低版本。 此元素用于创建应用程序的项目模板 [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] 。  
   
- `RequiredPlatformVersion`值直接与操作系统的版本进行比较。 如果`RequiredPlatformVersion`高于操作系统版本中未显示的模板**新建项目**对话框。 若要指定的模板[!INCLUDE[win8](../includes/win8-md.md)]或更高版本，请设置`RequiredPlatformVersion`6.2.0 到。 若要指定为模板[!INCLUDE[win81](../includes/win81-md.md)]或更高版本，请设置 RequiredPlatformVersion 到 6.3.0。  
+ `RequiredPlatformVersion`该值与操作系统的版本直接进行比较。 如果 `RequiredPlatformVersion` 高于操作系统版本，则该模板不会显示在 " **新建项目** " 对话框中。 若要为 [!INCLUDE[win8](../includes/win8-md.md)] 或更高版本指定模板，请将设置 `RequiredPlatformVersion` 为6.2.0。 若要为 [!INCLUDE[win81](../includes/win81-md.md)] 或更高版本指定模板，请将 RequiredPlatformVersion 设置为6.3.0。  
   
- 指定的模板`RequiredPlatformVersion`= 8 是与以前的客户兼容[!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)]模板。  
+ 指定 `RequiredPlatformVersion` = 8 的模板与以前的客户 [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] 模板兼容。  
   
  VSTemplate  
 TemplateData  
-…..TargetPlatformName  
+.....TargetPlatformName  
 RequiredPlatformVersion  
   
 ## <a name="syntax"></a>语法  
@@ -46,7 +46,7 @@ RequiredPlatformVersion
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|描述|  
+|元素|说明|  
 |-------------|-----------------|  
 |[TemplatePlatformName](../extensibility/templatedata-element-visual-studio-templates.md)|指定项目模板面向的平台。|  
   
@@ -72,7 +72,7 @@ RequiredPlatformVersion
 </VSTemplate>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [TargetPlatformName 元素 （Visual Studio 模板）](../extensibility/targetplatformname-element-visual-studio-templates.md)   
+## <a name="see-also"></a>另请参阅  
+ [ (Visual Studio 模板的 TargetPlatformName 元素) ](../extensibility/targetplatformname-element-visual-studio-templates.md)   
  [创建项目和项模板](../ide/creating-project-and-item-templates.md)   
  [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)

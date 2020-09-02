@@ -12,10 +12,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 9a2553396614cacbc22925f8f7f3a61d56c50541
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68157367"
 ---
 # <a name="modules-view---contention-data"></a>“模块”视图：争用数据
@@ -27,7 +27,7 @@ ms.locfileid: "68157367"
   
  下表介绍争用数据的“模块”视图中各列的值。  
   
-|列|说明|  
+|列|描述|  
 |------------|-----------------|  
 |**独占阻塞的时间**|-   对于函数，为阻塞此函数执行函数体内代码的时间。 不包含此函数调用的函数中的阻塞时间。<br />-   对于模块，为模块中各个函数独占阻塞时间之和。<br />-   对于行或指令，为阻塞此行或指令执行的时间。|  
 |**独占阻塞的时间百分比**|-   对于函数或模块，为此函数或模块的独占阻塞时间占分析运行期间所有阻塞时间的百分比。<br />-   对于行或指令，为阻塞此行或指令执行的时间占分析运行期间所有阻塞时间的百分比。|  
@@ -40,15 +40,15 @@ ms.locfileid: "68157367"
 |**函数行号**|此函数在源文件中的起始行号。|  
 |**模块名**|包含函数、行或指令指针的模块的名称。|  
 |**模块路径**|包含模块、函数、行或指令指针的模块的路径。|  
-|**名称**|模块或函数的名称。|  
+|**Name**|模块或函数的名称。|  
 |**进程 ID**|分析运行的进程 ID (PID)。|  
 |**进程名**|进程的名称。|  
 |**源文件**|此函数的定义所在的源文件。|  
   
 ## <a name="see-also"></a>另请参阅  
  [如何：自定义报告视图列](../profiling/how-to-customize-report-view-columns.md)   
- [“模块”视图](../profiling/modules-view.md)   
- [“模块”视图 - 检测](../profiling/modules-view-dotnet-memory-instrumentation-data.md)   
- [“模块”视图 - 采样](../profiling/modules-view-dotnet-memory-sampling-data.md)   
- [“模块”视图](../profiling/modules-view-instrumentation-data.md)   
+ [模块视图](../profiling/modules-view.md)   
+ ["模块" 视图-检测](../profiling/modules-view-dotnet-memory-instrumentation-data.md)   
+ ["模块" 视图-采样](../profiling/modules-view-dotnet-memory-sampling-data.md)   
+ [模块视图](../profiling/modules-view-instrumentation-data.md)   
  [“模块”视图](../profiling/modules-view-sampling-data.md)

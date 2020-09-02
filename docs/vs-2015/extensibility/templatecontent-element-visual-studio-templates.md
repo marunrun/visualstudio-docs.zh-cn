@@ -1,5 +1,5 @@
 ---
-title: TemplateContent 元素 （Visual Studio 模板） |Microsoft Docs
+title: " (Visual Studio 模板) 的 TemplateContent 元素 |Microsoft Docs"
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -13,10 +13,10 @@ caps.latest.revision: 15
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: fe87bff62c1044442b579664fb789f918a2e6c2d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68186461"
 ---
 # <a name="templatecontent-element-visual-studio-templates"></a>TemplateContent 元素（Visual Studio 模板）
@@ -24,7 +24,7 @@ ms.locfileid: "68186461"
 
 指定模板的内容。  
   
- \<VSTemplate >  
+ \<VSTemplate>  
  \<TemplateContent>  
   
 ## <a name="syntax"></a>语法  
@@ -40,31 +40,31 @@ ms.locfileid: "68186461"
   
 ### <a name="attributes"></a>特性  
   
-|特性|描述|  
+|特性|说明|  
 |---------------|-----------------|  
-|[BuildOnLoad](../extensibility/buildprojectonload-visual-studio-templates.md)|指定是否生成解决方案，从模板创建项目。|  
+|[BuildOnLoad](../extensibility/buildprojectonload-visual-studio-templates.md)|指定从模板创建项目时是否生成解决方案。|  
   
 ### <a name="child-elements"></a>子元素  
   
-|元素|描述|  
+|元素|说明|  
 |-------------|-----------------|  
 |[ProjectCollection](../extensibility/projectcollection-element-visual-studio-templates.md)|可选元素。<br /><br /> 指定多项目模板的组织和内容。|  
-|[Project](../extensibility/project-element-visual-studio-templates.md)|可选元素。<br /><br /> 指定要添加到项目文件或目录。|  
-|[参考资料](../extensibility/references-element-visual-studio-templates.md)|可选元素。<br /><br /> 指定所需的项模板的程序集引用。|  
+|[项目](../extensibility/project-element-visual-studio-templates.md)|可选元素。<br /><br /> 指定要添加到项目中的文件或目录。|  
+|[参考](../extensibility/references-element-visual-studio-templates.md)|可选元素。<br /><br /> 指定项模板所需的程序集引用。|  
 |[ProjectItem](../extensibility/projectitem-element-visual-studio-item-templates.md)|可选元素。<br /><br /> 指定模板中包含的文件。|  
-|[CustomParameters](../extensibility/customparameters-element-visual-studio-templates.md)|可选元素。<br /><br /> 指定从模板创建项目或项时要使用的所有自定义参数。|  
+|[CustomParameters](../extensibility/customparameters-element-visual-studio-templates.md)|可选元素。<br /><br /> 指定从模板创建项目或项时要使用的任何自定义参数。|  
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|描述|  
+|元素|说明|  
 |-------------|-----------------|  
-|[VSTemplate](../extensibility/vstemplate-element-visual-studio-templates.md)|必需的元素。<br /><br /> 包含项目模板、 项模板或初学者工具包的所有元数据。|  
+|[VSTemplate](../extensibility/vstemplate-element-visual-studio-templates.md)|必需的元素。<br /><br /> 包含项目模板、项模板或初学者工具包的所有元数据。|  
   
 ## <a name="remarks"></a>备注  
  `TemplateContent` 是必需的元素。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示用于的项目模板的元数据[!INCLUDE[csprcs](../includes/csprcs-md.md)]应用程序。  
+ 下面的示例演示应用程序的项目模板的元数据 [!INCLUDE[csprcs](../includes/csprcs-md.md)] 。  
   
 ```  
 <VSTemplate Type="Project" Version="3.0.0"  
@@ -90,6 +90,6 @@ ms.locfileid: "68186461"
 </VSTemplate>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)   
  [创建项目和项模板](../ide/creating-project-and-item-templates.md)

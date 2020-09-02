@@ -1,5 +1,5 @@
 ---
-title: IDebugField::GetInfo | Microsoft Docs
+title: IDebugField：： GetInfo |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,10 +13,10 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: b4b4b17242d1d2098c085acae0b88c91ecfb5441
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62547749"
 ---
 # <a name="idebugfieldgetinfo"></a>IDebugField::GetInfo
@@ -42,14 +42,14 @@ int GetInfo(
   
 #### <a name="parameters"></a>参数  
  `dwFields`  
- [in]组合[FIELD_INFO_FIELDS](../../../extensibility/debugger/reference/field-info-fields.md)选择要显示的信息的常量。 如果该字段表示一个符号，这通常是符号名称和类型。  
+ 中选择要显示的信息 [FIELD_INFO_FIELDS](../../../extensibility/debugger/reference/field-info-fields.md) 常量的组合。 如果字段表示符号，则这通常是符号名称和类型。  
   
  `pFieldInfo`  
- [out]返回的信息中提供[FIELD_INFO](../../../extensibility/debugger/reference/field-info.md)结构。  
+ 弄返回所提供的 [FIELD_INFO](../../../extensibility/debugger/reference/field-info.md) 结构中的信息。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)   
  [FIELD_INFO](../../../extensibility/debugger/reference/field-info.md)

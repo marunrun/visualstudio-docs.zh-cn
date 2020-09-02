@@ -13,16 +13,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 816f750148cc30de86fc116f80f64b218b4699d0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68145448"
 ---
 # <a name="understanding-memory-allocation-and-object-lifetime-data-values"></a>了解内存分配数据值和对象生存期数据值
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 分析工具的 .NET 内存分配  分析工具收集有关在分配中创建或在垃圾回收中销毁的对象大小和数量的信息，并收集事件发生时有关函数调用堆栈  的其他信息。 调用堆栈  是一种动态结构，用于存储有关在处理器中执行的函数的信息。  
+[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 分析工具的 .NET 内存分配分析工具收集有关在分配中创建或在垃圾回收中销毁的对象大小和数量的信息，并收集事件发生时有关函数调用堆栈的其他信息。 调用堆栈  是一种动态结构，用于存储有关在处理器中执行的函数的信息。  
   
  **要求**  
   
@@ -35,7 +35,7 @@ ms.locfileid: "68145448"
   
  内存分配事件发生时，探查器会递增调用堆栈中每个函数的样本计数。 收集数据时，调用堆栈上只有一个函数当前在执行自己函数体中的代码。 堆栈上的其他函数是函数调用层次结构中的父级，在等待它们调用的函数返回。  
   
-- 对于分配事件，探查器会递增当前在执行其指令的函数的独占  样本计数。 因为独占样本也是函数的总计（非独占  ）样本的一部分，所以前处于活动状态的函数的非独占样本计数也会递增。  
+- 对于分配事件，探查器会递增当前在执行其指令的函数的独占** 样本计数。 因为独占样本也是函数的总计（非独占**）样本的一部分，所以前处于活动状态的函数的非独占样本计数也会递增。  
   
 - 探查器会递增调用堆栈上所有其他函数的非独占样本计数。  
   

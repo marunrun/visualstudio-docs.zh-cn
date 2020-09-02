@@ -1,5 +1,5 @@
 ---
-title: 错误：调试并不&#39;t 可能由于系统上启用了内核调试器 |Microsoft Docs
+title: 错误：无法进行调试，因为系统上已启用内核调试程序 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -22,13 +22,13 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 4f2f963ad2fbdad9453f6c6b853bc720034f613c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68197079"
 ---
-# <a name="error-debugging-isn39t-possible-because-a-kernel-debugger-is-enabled-on-the-system"></a>错误：调试并不&#39;t 可能由于系统上启用了内核调试器
+# <a name="error-debugging-isn39t-possible-because-a-kernel-debugger-is-enabled-on-the-system"></a>错误：无法进行调试，因为系统上已启用内核调试程序
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 调试托管代码时，你可能会收到以下错误消息：  
@@ -49,15 +49,15 @@ Debugging isn't possible because a kernel debugger is enabled on the system
   
 - 将应用程序升级为使用 CLR 版本 4.0 或 4.5  
   
-     — 或 —  
+     \- 或 -  
   
 - 禁用内核调试，并在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中进行调试。  
   
-     — 或 —  
+     \- 或 -  
   
 - 使用内核调试器而不是 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 进行调试。  
   
-     — 或 —  
+     \- 或 -  
   
 - 在内核调试器中，禁用用户模式异常。  
   
@@ -105,6 +105,6 @@ Debugging isn't possible because a kernel debugger is enabled on the system
   
      `gn`  
   
-## <a name="see-also"></a>请参阅  
- [调试器安全](../debugger/debugger-security.md)   
+## <a name="see-also"></a>另请参阅  
+ [调试器安全性](../debugger/debugger-security.md)   
  [调试托管代码](../debugger/debugging-managed-code.md)

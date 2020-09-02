@@ -11,49 +11,49 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: fc7f68093432c96d496921ea593b6e936bad8302
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68147964"
 ---
 # <a name="binding-breakpoints"></a>绑定断点
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-如果用户设置一个断点，可能是通过按 F9，IDE 表述请求并提示调试会话才能创建断点。  
+如果用户通过按 F9 设置断点，则 IDE 会形成请求，并提示调试会话创建断点。  
   
 ## <a name="setting-a-breakpoint"></a>设置断点  
- 设置断点是一个两步过程，因为代码或数据受影响的断点可能尚不可用。 首先，必须描述断点，，然后，在代码或数据可用，它必须绑定到该代码或数据，按如下所示：  
+ 设置断点的过程分为两个步骤，因为受断点影响的代码或数据可能尚未提供。 首先，必须描述断点，然后在代码或数据可用时，必须将其绑定到该代码或数据，如下所示：  
   
-1. 断点请求从相关的调试引擎 (DEs)，然后绑定到断点的代码或数据变得可用。  
+1.  (DEs) 从相关的调试引擎请求断点，然后将断点绑定到可用的代码或数据。  
   
-2. 断点请求发送到调试会话，将其发送到所有相关的 DEs。 选择来处理断点任何 DE 创建相应的挂起断点。  
+2. 将断点请求发送到调试会话，并将其发送到所有相关的 DEs。 选择处理断点的任何 DE 都将创建一个相应的挂起断点。  
   
-3. 调试会话收集的挂起断点，并将其返回给调试包 （Visual Studio 的调试组件）。  
+3. 调试会话收集挂起的断点，并将其发送回 (Visual Studio) 调试组件的调试包。  
   
-4. 调试包会提示在调试会话将挂起断点绑定到代码或数据。 调试会话将此请求发送到所有相关的 DEs。  
+4. 调试包将提示调试会话将挂起断点绑定到代码或数据。 调试会话将此请求发送到所有相关的 DEs。  
   
-5. 如果 DE 能够将断点绑定，它将发送一个断点绑定事件返回到调试会话。 如果没有，而是发送断点错误事件。  
+5. 如果 DE 能够绑定断点，则会将断点绑定事件发送回调试会话。 否则，将改为发送断点错误事件。  
   
 ## <a name="pending-breakpoints"></a>挂起断点  
- 挂起断点可以绑定到多个代码位置。 例如，线的源代码C++模板可绑定到从模板生成的每个代码序列。 调试会话可以使用断点绑定的事件以枚举在发送该事件的时间绑定到断点的代码上下文。 可以从更高版本，绑定多个代码上下文，因此 DE 可能会发送多个断点绑定为每个绑定请求的事件。 但是，DE 应发送每个绑定请求只能有一个断点错误事件。  
+ 挂起的断点可以绑定到多个代码位置。 例如，c + + 模板的行代码可绑定到每个从模板生成的代码序列。 调试会话可以使用断点绑定事件枚举在发送事件时绑定到断点的代码上下文。 稍后可以绑定更多的代码上下文，因此，可能会为每个绑定请求发送多个断点绑定事件。 但是，每个绑定请求的 DE 只应发送一个断点错误事件。  
   
 ## <a name="implementation"></a>实现  
- 调试包，以编程方式调用会话调试管理器 (SDM) 并为其提供[IDebugBreakpointRequest2](../../extensibility/debugger/reference/idebugbreakpointrequest2.md)包装的接口[BP_REQUEST_INFO](../../extensibility/debugger/reference/bp-request-info.md)结构，它描述若要设置的断点。 尽管断点可以为多种形式，但它们最终解析代码或数据上下文。  
+ 调试包以编程方式调用会话调试管理器 (SDM) ，并为其提供包装[BP_REQUEST_INFO](../../extensibility/debugger/reference/bp-request-info.md)结构的[IDebugBreakpointRequest2](../../extensibility/debugger/reference/idebugbreakpointrequest2.md)接口，该接口描述要设置的断点。 尽管断点可以是多种形式，但它们最终解析为代码或数据上下文。  
   
- SDM 将对每个相关 DE 的此调用传递通过调用其[CreatePendingBreakpoint](../../extensibility/debugger/reference/idebugengine2-creatependingbreakpoint.md)方法。 如果 DE 选择来处理断点，它创建并返回[IDebugPendingBreakpoint2](../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)接口。 SDM 收集这些接口，并将其传递回调试程序包作为单个`IDebugPendingBreakpoint2`接口。  
+ SDM 通过调用其 [CreatePendingBreakpoint](../../extensibility/debugger/reference/idebugengine2-creatependingbreakpoint.md) 方法将此调用传递给每个相关的 DE。 如果取消选择处理断点，则会创建并返回 [IDebugPendingBreakpoint2](../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) 接口。 SDM 收集这些接口，并将它们作为单个接口传递回调试包 `IDebugPendingBreakpoint2` 。  
   
- 到目前为止，已不生成任何事件。  
+ 到目前为止，未生成任何事件。  
   
- 调试包然后尝试将挂起断点的代码或数据绑定通过调用[绑定](../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md)，这由 DE 实现。  
+ 然后，调试包会通过调用由 DE 实现的 [bind](../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md)，尝试将挂起断点绑定到代码或数据。  
   
- 如果绑定断点，将发送 DE [IDebugBreakpointBoundEvent2](../../extensibility/debugger/reference/idebugbreakpointboundevent2.md)调试包的事件接口。 此接口可枚举所有代码上下文 （或单个数据上下文） 通过调用绑定到断点调试包用[EnumBoundBreakpoints](../../extensibility/debugger/reference/idebugbreakpointboundevent2-enumboundbreakpoints.md)，这会返回一个或多个[IDebugBoundBreakpoint2](../../extensibility/debugger/reference/idebugboundbreakpoint2.md)接口。 [GetBreakpointResolution](../../extensibility/debugger/reference/idebugboundbreakpoint2-getbreakpointresolution.md)接口返回[IDebugBreakpointResolution2](../../extensibility/debugger/reference/idebugbreakpointresolution2.md)接口，并且[GetResolutionInfo](../../extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo.md)返回[BP_RESOLUTION_INFO](../../extensibility/debugger/reference/bp-resolution-info.md)包含代码或数据上下文的并集。  
+ 如果绑定了断点，则 DE 会将 [IDebugBreakpointBoundEvent2](../../extensibility/debugger/reference/idebugbreakpointboundevent2.md) 事件接口发送到调试包。 调试包使用此接口来枚举所有代码上下文 (或通过调用 [EnumBoundBreakpoints](../../extensibility/debugger/reference/idebugbreakpointboundevent2-enumboundbreakpoints.md)（它返回一个或多个 [IDebugBoundBreakpoint2](../../extensibility/debugger/reference/idebugboundbreakpoint2.md) 接口）绑定到断点的单个数据上下文) 。 [GetBreakpointResolution](../../extensibility/debugger/reference/idebugboundbreakpoint2-getbreakpointresolution.md)接口返回[IDebugBreakpointResolution2](../../extensibility/debugger/reference/idebugbreakpointresolution2.md)接口， [GetResolutionInfo](../../extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo.md)返回包含代码或数据上下文的[BP_RESOLUTION_INFO](../../extensibility/debugger/reference/bp-resolution-info.md)联合。  
   
- 如果设备不能将断点绑定，则会发送单个[IDebugBreakpointErrorEvent2](../../extensibility/debugger/reference/idebugbreakpointerrorevent2.md)调试包的事件接口。 调试包检索的错误类型 （错误或警告） 和信息性消息，通过调用[GetErrorBreakpoint](../../extensibility/debugger/reference/idebugbreakpointerrorevent2-geterrorbreakpoint.md)后, 跟[GetBreakpointResolution](../../extensibility/debugger/reference/idebugerrorbreakpoint2-getbreakpointresolution.md)和[GetResolutionInfo](../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getresolutioninfo.md)。 这将返回[BP_ERROR_RESOLUTION_INFO](../../extensibility/debugger/reference/bp-error-resolution-info.md)结构，其中包含的错误类型和消息。  
+ 如果 DE 无法绑定断点，则会向调试包发送单个 [IDebugBreakpointErrorEvent2](../../extensibility/debugger/reference/idebugbreakpointerrorevent2.md) 事件接口。 调试包通过调用 [GetErrorBreakpoint](../../extensibility/debugger/reference/idebugbreakpointerrorevent2-geterrorbreakpoint.md)、 [GetBreakpointResolution](../../extensibility/debugger/reference/idebugerrorbreakpoint2-getbreakpointresolution.md) 和 [GetResolutionInfo](../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getresolutioninfo.md)，检索错误类型 (错误或) 警告消息和信息性消息。 这会返回包含错误类型和消息的 [BP_ERROR_RESOLUTION_INFO](../../extensibility/debugger/reference/bp-error-resolution-info.md) 结构。  
   
- 如果 DE 处理断点，但不能将其绑定，它将返回类型的错误`BPET_TYPE_ERROR`。 调试包响应通过显示错误对话框，并在 IDE 将放置在左侧的源代码行的断点标志符号为感叹号标志符号。  
+ 如果 DE 处理断点但无法绑定它，则它会返回类型为的错误 `BPET_TYPE_ERROR` 。 调试包通过显示错误对话框进行响应，而 IDE 在源代码行左侧的断点标志符号内放置感叹号标志符号。  
   
- 如果 DE 处理断点，而不能绑定，但某些其他 DE 可能将其绑定，则会返回警告。 通过将放置在左侧的源代码行的断点标志符号的问题标志符号，IDE 响应。  
+ 如果 DE 处理断点，则无法绑定它，但其他一些 DE 可能会绑定它，它会返回警告。 IDE 通过将问题标志符号放置在源代码行左侧的断点标志符号中来做出响应。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [调试任务](../../extensibility/debugger/debugging-tasks.md)

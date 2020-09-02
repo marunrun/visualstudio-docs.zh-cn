@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 3c6e7550940f9d2efa5ca228123310f1b861ee76
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72651604"
 ---
 # <a name="how-to-synchronize-code-project-rule-sets-with-team-project-check-in-policy"></a>如何：将代码项目规则集与团队项目签入策略同步
@@ -33,23 +33,23 @@ ms.locfileid: "72651604"
 
 ### <a name="to-specify-a-microsoft-standard-rule-set"></a>指定 Microsoft 标准规则集
 
-1. 在**解决方案资源管理器**中，右键单击代码项目，然后单击 "**属性**"。
+1. 在 **解决方案资源管理器**中，右键单击代码项目，然后单击 " **属性**"。
 
-2. 单击 "**代码分析**"。
+2. 单击“代码分析”。
 
-3. 在 "**运行此规则集**" 列表中，单击 "签入策略规则集"。
+3. 在 " **运行此规则集** " 列表中，单击 "签入策略规则集"。
 
 ### <a name="to-specify-a-custom-check-in-policy-rule-set"></a>指定自定义签入策略规则集
 
 1. 如有必要，对指定签入策略的规则集文件执行 get 操作。
 
-2. 在**解决方案资源管理器**中，右键单击代码项目，然后单击 "**属性**"。
+2. 在 **解决方案资源管理器**中，右键单击代码项目，然后单击 " **属性**"。
 
-3. 单击 "**代码分析**"。
+3. 单击“代码分析”。
 
-4. 在 "**运行此规则集**" 列表中，单击 " **\<Browse .。。>** 。
+4. 在 " **运行此规则集** " 列表中，单击 "" **\<Browse...>** 。
 
-5. 在 "**打开**" 对话框中，指定签入策略规则集文件。
+5. 在 " **打开** " 对话框中，指定签入策略规则集文件。
 
 ### <a name="to-create-a-custom-rule-set-for-a-code-project"></a>为代码项目创建自定义规则集
 
@@ -59,12 +59,12 @@ ms.locfileid: "72651604"
 
 3. 使用规则集编辑器添加或删除规则。
 
-     有关详细信息，请参阅[创建自定义规则集](../code-quality/creating-custom-code-analysis-rule-sets.md)。
+     有关详细信息，请参阅 [创建自定义规则集](../code-quality/creating-custom-code-analysis-rule-sets.md)。
 
 4. 将修改后的规则集保存到本地计算机上的规则集文件或 UNC 路径。
 
-5. 打开代码项目的 "属性" 对话框，并显示 "**代码分析**" 页。
+5. 打开代码项目的 "属性" 对话框，并显示 " **代码分析** " 页。
 
-6. 在 "**运行此规则集**" 列表中，单击 " **\<Browse .。。>** 。
+6. 在 " **运行此规则集** " 列表中，单击 "" **\<Browse...>** 。
 
-7. 在 "**打开**" 对话框中，指定规则集文件。
+7. 在 " **打开** " 对话框中，指定规则集文件。

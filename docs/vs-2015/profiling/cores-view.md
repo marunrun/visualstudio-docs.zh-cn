@@ -14,10 +14,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 869980fe7bbb773d566dffd38088b003e3a97a3d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68145637"
 ---
 # <a name="cores-view"></a>内核视图
@@ -32,4 +32,4 @@ ms.locfileid: "68145637"
 ## <a name="see-also"></a>另请参阅  
  [并发可视化工具](../profiling/concurrency-visualizer.md)   
  [使用率视图](../profiling/utilization-view.md)   
- [线程视图](../profiling/threads-view-parallel-performance.md)
+ [“线程”视图](../profiling/threads-view-parallel-performance.md)

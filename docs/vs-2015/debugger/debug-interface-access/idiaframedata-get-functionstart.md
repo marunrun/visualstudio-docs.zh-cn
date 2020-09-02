@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 08029b3abc3ec054cd8244d22d17db7992fa3623
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68186937"
 ---
-# <a name="idiaframedatagetfunctionstart"></a>IDiaFrameData::get_functionStart
+# <a name="idiaframedataget_functionstart"></a>IDiaFrameData::get_functionStart
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-检索一个标志，指示块是否包含一个函数的入口点。  
+检索一个标志，该标志指示块是否包含函数的入口点。  
   
 ## <a name="syntax"></a>语法  
   
@@ -33,15 +33,15 @@ HRESULT get_functionStart ( 
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>参数  
  `pRetVal`  
- [out]返回`TRUE`如果块包含入口点; 否则返回`FALSE`。  
+ 弄 `TRUE` 如果块包含入口点，则返回; 否则返回 `FALSE` 。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回 `S_OK`。 返回`S_FALSE`如果此属性不受支持。 否则，返回错误代码。  
+ 如果成功，则返回 `S_OK`。 `S_FALSE`如果此属性不受支持，则返回。 否则，返回错误代码。  
   
 ## <a name="remarks"></a>备注  
- 很可能不是函数的开始，因为帧代表或插入到一个函数的函数的内联方法的堆栈帧。  
+ 堆栈帧可能不是函数的开头，因为此帧表示插入函数的内联方法或函数。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)

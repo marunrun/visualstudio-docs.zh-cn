@@ -1,5 +1,5 @@
 ---
-title: 图形诊断示例 |Microsoft Docs
+title: 图形诊断示例 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -10,10 +10,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 14b4ac689109e29baa4ee06c668b208d0d5227b0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68159719"
 ---
 # <a name="graphics-diagnostics-examples"></a>图形诊断示例
@@ -55,4 +55,4 @@ ms.locfileid: "68159719"
 ## <a name="debugging-compute-shaders"></a>调试计算着色器  
  可以使用图形诊断调试产生不正确结果的 DirectCompute 计算着色器内核。 借助 DirectCompute，你可以使用 GPU 的计算能力，以并行执行大量数据元素上的计算。 对于某些种类的问题，可以多次执行使用 GPU，速度甚至比良好优化过的 CPU 代码还快。 但是，传统的调试器无法检测在 GPU 上运行的代码。 调试此种代码需要专用工具，这些工具通常特定于供应商，而且可能不会与 Visual Studio 很好地集成。 为了使计算着色器调试在 GPU 范围内更为一致，图形诊断将捕获 DirectCompute 调度事件（包括 Direct3D 呈现事件），以便你可以使用熟悉的工具调试计算着色器代码中的问题。  
   
- 有关演示如何调试由计算着色器中的 bug 导致的模拟问题的方案，请参阅[演练：使用图形诊断来调试计算着色器](../debugger/walkthrough-using-graphics-diagnostics-to-debug-a-compute-shader.md)。
+ 有关演示如何调试由计算着色器中的 Bug 导致的模拟问题的方案，请参阅[演练：使用图形诊断来调试计算着色器](../debugger/walkthrough-using-graphics-diagnostics-to-debug-a-compute-shader.md)。
