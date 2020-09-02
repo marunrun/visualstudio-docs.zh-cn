@@ -7,10 +7,10 @@ ms.topic: how-to
 ms.date: 03/20/2019
 ms.technology: vs-azure
 ms.openlocfilehash: d2b3e2821e7697ad53b10a7148c22140aa1a07af
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85283211"
 ---
 # <a name="how-to-configure-visual-studio-container-tools"></a>如何配置 Visual Studio 容器工具

@@ -16,15 +16,15 @@ dev_langs:
 ms.workload:
 - vssdk
 ms.openlocfilehash: fdc12f0938d3296cf1bfca37d0b9b01e0f2a704a
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85903571"
 ---
 # <a name="add-and-remove-property-pages"></a>添加和删除属性页
 
-项目设计器提供一个集中位置，用于管理中的项目属性、设置和资源 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 。 它在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 集成开发环境（IDE）中显示为一个窗口，并在右侧的选项卡中包含多个窗格。 项目设计器中的窗格（通常称为属性页）因项目类型和语言而异。 可以通过 "**项目**" 菜单上的 "**属性**" 命令访问 "项目设计器"。
+项目设计器提供一个集中位置，用于管理中的项目属性、设置和资源 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 。 它在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 集成开发环境 (IDE) 中显示为一个窗口，并在右侧的选项卡中包含多个窗格。  (通常称为 "项目设计器") 中的 "属性页" 窗格因项目类型和语言而异。 可以通过 "**项目**" 菜单上的 "**属性**" 命令访问 "项目设计器"。
 
 项目子类型通常需要在 "项目设计器" 中显示其他属性页。 同样，某些项目子类型可能要求删除内置属性页。 若要执行任一操作，项目子类型必须实现 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> 接口并重写 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A> 方法。 通过重写此方法并使用 `propId` 包含枚举值之一的参数 <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID2> ，可以筛选、添加或删除项目属性。 例如，你可能需要将页面添加到依赖于配置的属性页。 为此，需要筛选依赖于配置的属性页，然后向现有列表添加新页。
 
@@ -77,7 +77,7 @@ ms.locfileid: "85903571"
     }
     ```
 
-2. 从获取的列表中删除 "**生成事件**" 页 `clsids` 。
+2. 从获取的列表中删除 " **生成事件** " 页 `clsids` 。
 
     ```vb
     Private buildEventsPageGuid As String = "{1E78F8DB-6C07-4D61-A18F-7514010ABD56}"

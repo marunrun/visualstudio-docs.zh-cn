@@ -17,14 +17,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 7630d1b363afa7caeae361f607f4b73929fbba1b
-ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85382401"
 ---
 # <a name="how-to-include-a-data-file-in-a-clickonce-application"></a>如何：将数据文件包括到 ClickOnce 应用程序中
-安装的每个 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序在目标计算机的本地磁盘上都分配有一个数据目录，应用程序可以在其中管理自己的数据。 数据文件可以包含任何类型的文件：文本文件、XML 文件，甚至 Microsoft Access 数据库（*.mdb*）文件。 下面的过程演示如何向应用程序中添加任何类型的数据文件 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 。
+安装的每个 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序在目标计算机的本地磁盘上都分配有一个数据目录，应用程序可以在其中管理自己的数据。 数据文件可以包含任何类型的文件：文本文件、XML 文件，甚至 Microsoft Access*数据库 () 文件。* 下面的过程演示如何向应用程序中添加任何类型的数据文件 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 。
 
 ### <a name="to-include-a-data-file-by-using-mageexe"></a>使用 Mage.exe 包含数据文件
 
@@ -64,19 +64,19 @@ ms.locfileid: "85382401"
 
 2. 通常情况下，应用程序目录将是一个使用部署的当前版本标记的目录，例如，1.0.0.0。
 
-3. 在 "**文件**" 菜单上，单击 "**打开**" 以打开应用程序清单。
+3. 在 " **文件** " 菜单上，单击 " **打开** " 以打开应用程序清单。
 
-4. 选择 "**文件**" 选项卡。
+4. 选择 " **文件** " 选项卡。
 
-5. 在选项卡顶部的文本框中，输入包含应用程序文件的目录，然后单击 "**填充**"。
+5. 在选项卡顶部的文本框中，输入包含应用程序文件的目录，然后单击 " **填充**"。
 
      数据文件将显示在网格中。
 
-6. 将数据文件的 "**文件类型**" 值设置为 "**数据**"。
+6. 将数据文件的 " **文件类型** " 值设置为 " **数据**"。
 
 7. 保存应用程序清单，然后对文件重新签名。
 
-     *MageUI.exe*将提示你对该文件进行重新签名。
+     *MageUI.exe* 将提示你对该文件进行重新签名。
 
 8. 对部署清单进行重新签名
 
