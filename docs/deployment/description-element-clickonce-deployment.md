@@ -1,5 +1,5 @@
 ---
-title: "&lt;description&gt;要素 (ClickOnce 配置) |Microsoft Docs'"
+title: '&lt;description &gt; 元素 (ClickOnce 部署) |Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,14 +17,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 6c359b188894c40f017e3d2a0e06d52de87e9c5f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62928801"
 ---
-# <a name="ltdescriptiongt-element-clickonce-deployment"></a>&lt;说明&gt;元素 （ClickOnce 部署）
-标识用于创建 shell 表示应用程序信息和一个**添加或删除程序**控制面板中的项。
+# <a name="ltdescriptiongt-element-clickonce-deployment"></a>&lt;description &gt; 元素 (ClickOnce 部署) 
+标识用于在 "控制面板" 中创建 shell 存在和 " **添加或删除程序** " 项的应用程序信息。
 
 ## <a name="syntax"></a>语法
 
@@ -39,20 +39,20 @@ ms.locfileid: "62928801"
 ```
 
 ## <a name="elements-and-attributes"></a>元素和属性
- `description` 元素是必需的，它位于 `urn:schemas-microsoft-com:asm.v1` 命名空间中。 它不包含任何子元素，并具有以下属性。
+ `description` 元素是必需的，它位于 `urn:schemas-microsoft-com:asm.v1` 命名空间中。 它不包含任何子元素，并且具有以下属性。
 
-|特性|描述|
+|特性|说明|
 |---------------|-----------------|
-|`publisher`|必需。 标识用于在 Windows 中的图标位置的公司名称**启动**菜单并**添加或删除程序**控件面板中的部署配置进行安装时的项。|
-|`product`|必需。 标识完整的产品名称。 使用作为安装在 Windows 中的图标的头衔**启动**菜单。|
-|`suiteName`|可选。 标识的子文件夹中`publisher`在 Windows 中的文件夹**启动**菜单。|
-|`supportUrl`|可选。 指定所示的支持 URL**添加或删除程序**控制面板中的项。 在 Windows 中的应用程序支持还为创建此 URL 的快捷方式**启动**菜单中，部署配置为安装时。|
+|`publisher`|必需。 将部署配置为安装时，标识用于 Windows **开始** 菜单和 "控制面板" 中 " **添加或删除程序** " 项中的图标位置的公司名称。|
+|`product`|必需。 标识完整的产品名称。 用作在 Windows " **开始** " 菜单中安装的图标的标题。|
+|`suiteName`|可选。 标识 `publisher` Windows " **开始** " 菜单中的文件夹内的子文件夹。|
+|`supportUrl`|可选。 指定在 "控制面板" 的 " **添加或删除程序** " 项中显示的支持 URL。 如果将部署配置为安装，则还会为 Windows " **开始** " 菜单中的应用程序支持创建此 URL 的快捷方式。|
 
 ## <a name="remarks"></a>备注
- Description 元素中所有的部署配置需要。
+ Description 元素在所有部署配置中都是必需的。
 
 ## <a name="example"></a>示例
- 下面的代码示例演示`description`中的元素[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]部署清单。 此代码示例是为提供一个更大示例的一部分[ClickOnce 部署清单](../deployment/clickonce-deployment-manifest.md)主题。
+ 下面的代码示例阐释了 `description` 部署清单中的元素 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 。 此代码示例是为 [ClickOnce 部署清单](../deployment/clickonce-deployment-manifest.md) 主题提供的更大示例的一部分。
 
 ```xml
 <description
@@ -61,5 +61,5 @@ ms.locfileid: "62928801"
   xmlns="urn:schemas-microsoft-com:asm.v1" />
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [ClickOnce 部署清单](../deployment/clickonce-deployment-manifest.md)
