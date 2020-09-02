@@ -14,13 +14,13 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 2d3247fb421800f87740a911563880b70abf3eed
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75844737"
 ---
-# <a name="da0018-32-bit-application-running-at-process-managed-memory-limits"></a>DA0018：运行的 32 位应用程序达到了进程托管内存的限制
+# <a name="da0018-32-bit-application-running-at-process-managed-memory-limits"></a>DA0018：运行的 32 位应用程序达到了进程托管内存限制
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 规则 Id |DA0018 |  
@@ -54,13 +54,13 @@ ms.locfileid: "75844737"
   
 - 优化应用程序对托管内存资源的使用情况  
   
-   或  
+   \- 或 -  
   
 - 采取措施以解除对 32 位进程虚拟内存最大大小的体系结构约束  
   
-  若要优化应用程序对托管内存资源的使用情况，请在 .NET 内存分配分析运行期间收集托管内存分配数据。 查看 [.NET 内存数据视图](../profiling/dotnet-memory-data-views.md)报告，了解应用程序的内存分配模式。  
+  若要优化应用程序对托管内存资源的使用情况，请在 .NET 内存分配分析运行期间收集托管内存分配数据。 查看 [.Net 内存数据视图](../profiling/dotnet-memory-data-views.md) 报告，了解应用程序的内存分配模式。  
   
-  使用[对象生存期视图](../profiling/object-lifetime-view.md)确定哪些程序的数据对象可通过生成并在此被回收。  
+  使用 " [对象生存期" 视图](../profiling/object-lifetime-view.md) 确定哪些程序的数据对象在代中被保留下来，然后从那里回收。  
   
   使用[分配视图](../profiling/dotnet-memory-allocations-view.md)确定这些分配的执行路径。  
   

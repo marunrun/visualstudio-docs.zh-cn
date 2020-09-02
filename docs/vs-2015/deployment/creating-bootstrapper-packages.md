@@ -22,10 +22,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: daf72a4466cd0f02eb6ef3a357276ed690fd26bf
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75845523"
 ---
 # <a name="creating-bootstrapper-packages"></a>创建引导程序包
@@ -70,7 +70,7 @@ ms.locfileid: "75845523"
   
   `package.xml`  
   
-  最后，将可再发行的文件复制到引导程序文件夹位置。 有关详细信息，请参阅 [How to: Create a Localized Bootstrapper Package](../deployment/how-to-create-a-localized-bootstrapper-package.md)。  
+  最后，将可再发行的文件复制到引导程序文件夹位置。 有关详细信息，请参阅 [如何：创建本地化的引导程序包](../deployment/how-to-create-a-localized-bootstrapper-package.md)。  
   
 ```  
 \Program Files\Microsoft Visual Studio 14.0\SDK\Bootstrapper\Packages  
@@ -96,11 +96,11 @@ HKLM\Software\Wow6432Node\Microsoft\GenericBootstrapper\11.0
   
  每个可再发行组件均位于程序包目录下它们自己的子文件夹中。 产品清单和可再发行文件将放置到此子文件夹中。 组件的本地化版本以及程序包清单将放置到根据区域性名称命名的子文件夹中。  
   
- 在将这些文件复制到引导程序文件夹中之后，相应的引导程序包将自动出现在 Visual Studio 的“系统必备”对话框中。 如果你的自定义引导程序包未显示，请关闭并重新打开“系统必备”对话框。 有关详细信息，请参阅 [“系统必备”对话框](../ide/reference/prerequisites-dialog-box.md)。  
+ 在将这些文件复制到引导程序文件夹中之后，相应的引导程序包将自动出现在 Visual Studio 的“系统必备”对话框中。 如果你的自定义引导程序包未显示，请关闭并重新打开“系统必备”对话框。 有关详细信息，请参阅 [先决条件对话框](../ide/reference/prerequisites-dialog-box.md)。  
   
  下表显示由引导程序自动填充的属性。  
   
-|Property|描述|  
+|属性|说明|  
 |--------------|-----------------|  
 |ApplicationName|应用程序的名称。|  
 |ProcessorArchitecture|可执行文件的目标平台的处理器和每字位数。 包括以下值：<br /><br /> -   Intel<br />-   IA64<br />-   AMD64|  
@@ -115,7 +115,7 @@ HKLM\Software\Wow6432Node\Microsoft\GenericBootstrapper\11.0
   
  `%ProgramFiles%\Microsoft.NET\RedistList`  
   
- 可再发行文件列表是一个 XML 文件，你应采用下面的格式命名该文件： *公司名称*.*组件名称*.RedistList.xml。 举例来说，如果组件名为 Datawidgets 且由 Acme 开发，则使用 Acme.DataWidgets.RedistList.xml。 可再发行文件列表的内容的示例可能像下面这样：  
+ 可再发行组件列表是一个 XML 文件，应使用以下格式命名： *公司名称*。*组件名称*.RedistList.xml。 举例来说，如果组件名为 Datawidgets 且由 Acme 开发，则使用 Acme.DataWidgets.RedistList.xml。 可再发行文件列表的内容的示例可能像下面这样：  
   
 ```  
 <?xml version="1.0" encoding="UTF-8"?>  
@@ -124,8 +124,8 @@ HKLM\Software\Wow6432Node\Microsoft\GenericBootstrapper\11.0
 </FileList>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [如何：与 ClickOnce 应用程序一起安装必备组件](../deployment/how-to-install-prerequisites-with-a-clickonce-application.md)   
- [“系统必备”对话框](../ide/reference/prerequisites-dialog-box.md)   
+## <a name="see-also"></a>另请参阅  
+ [如何：将必备组件与 ClickOnce 应用程序一起安装](../deployment/how-to-install-prerequisites-with-a-clickonce-application.md)   
+ ["必备组件" 对话框](../ide/reference/prerequisites-dialog-box.md)   
  [产品和包架构引用](../deployment/product-and-package-schema-reference.md)   
  [使用 Visual Studio 2005 引导程序来开始安装](https://msdn.microsoft.com/magazine/cc163899.aspx)

@@ -12,16 +12,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 7f1bb0af59cfa4c9ee3ba27003f985361cde9241
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68149921"
 ---
 # <a name="idiasymbolfindinlineelinesbyva"></a>IDiaSymbol::findInlineeLinesByVA
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-检索一个枚举，允许客户端进行循环访问，将内联，直接或间接地，此符号中指定的虚拟地址 (VA) 中的所有函数的行号信息。  
+检索一个枚举，该枚举允许客户端循环访问在指定虚拟地址 (VA) 中的此符号内直接或间接内联的所有函数的行号信息。  
   
 ## <a name="syntax"></a>语法  
   
@@ -33,20 +33,20 @@ HRESULT findInlineeLinesByVA ( 
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>参数  
  `va`  
- [in]指定的地址作为弗吉尼亚  
+ 中指定地址作为 VA。  
   
  `length`  
- [in]中的字节数，以覆盖与此查询指定地址范围。  
+ 中指定要用于此查询的地址范围（以字节数为单位）。  
   
  `ppResult`  
- [out]保存`IDiaEnumLineNumbers`对象，其中包含检索到的行号的列表。  
+ 弄包含一个 `IDiaEnumLineNumbers` 对象，该对象包含所检索的行号的列表。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDiaSession](../../debugger/debug-interface-access/idiasession.md)   
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
  [SymTagEnum 枚举](../../debugger/debug-interface-access/symtagenum.md)   

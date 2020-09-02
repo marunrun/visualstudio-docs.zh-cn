@@ -1,5 +1,5 @@
 ---
-title: IEEDataStorage::GetSize |Microsoft Docs
+title: IEEDataStorage：： GetSize |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,10 +13,10 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 0c76ae583d089b23d21664c9e312d2486a14c2aa
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68192127"
 ---
 # <a name="ieedatastoragegetsize"></a>IEEDataStorage::GetSize
@@ -40,14 +40,14 @@ int GetSize(
   
 #### <a name="parameters"></a>参数  
  `size`  
- [out]此对象中包含的字节数。  
+ 弄此对象中包含的字节数。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
 ## <a name="remarks"></a>备注  
- 使用[GetData](../../../extensibility/debugger/reference/ieedatastorage-getdata.md)方法来检索实际数据字节数。  
+ 使用工作 [方式](../../../extensibility/debugger/reference/ieedatastorage-getdata.md) 方法检索实际数据字节。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md)   
  [GetData](../../../extensibility/debugger/reference/ieedatastorage-getdata.md)
