@@ -1,6 +1,6 @@
 ---
 title: 托管代码的代码分析警告
-ms.date: 11/04/2016
+ms.date: 08/31/2020
 ms.topic: reference
 f1_keywords:
 - vc.project.vcfxcoptool.enablefxcop
@@ -10,28 +10,28 @@ helpviewer_keywords:
 - managed code analysis warnings
 - code analysis,managed code
 ms.assetid: 3c2741ff-0d3a-42e6-acd5-d42310bd03c4
-author: mikejo5000
-ms.author: mikejo
+author: mikadumont
+ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 383f488fcc9ebe614257b035732162100b9c7fd2
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.openlocfilehash: a72512eef8490f18f1179ae149b9a39c2ddaad4e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85521051"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89285705"
 ---
-# <a name="code-analysis-for-managed-code-warnings"></a>托管代码的代码分析警告
+# <a name="net-code-analysis-rules"></a>.NET 代码分析规则
 托管代码分析工具可以发出警告，指示托管代码库中存在违反规则的情况。 这些警告将被分类到各个规则领域，例如设计、本地化、性能和安全性。 每个警告表示一次托管代码分析规则冲突。 本部分深入讨论每个托管代码分析警告，并提供相关示例。
 
  下表显示了为每个警告提供的信息类型。
 
-|Item|说明|
+|项|说明|
 |----------|-----------------|
 |类型|规则的 TypeName。|
 |CheckId|规则的唯一标识符。 CheckId 和类别用于源代码中禁止显示警告。|
-|Category|警告类别。|
+|类别|警告类别。|
 |重大更改|规则冲突的修复是否是一项重大更改。 重大更改意味着，在导致冲突的目标上具有依赖关系的程序集不会使用新修复的版本重新编译，或者可能会由于此更改在运行时失败。 如果有多个修补程序，并且至少有一个修复是重大更改，且一个修补程序不是，则同时指定了 "中断" 和 "非换行"。|
 |原因|导致规则生成警告的特定托管代码。|
 |说明|讨论警告背后的问题。|
@@ -42,7 +42,7 @@ ms.locfileid: "85521051"
 
 ## <a name="in-this-section"></a>本节内容
 
-|Category|说明|
+|类别|说明|
 |-|-|
 |[CheckId 的警告](../code-quality/code-analysis-warnings-for-managed-code-by-checkid.md)|列出按 CheckId 排列的所有警告|
 |[加密警告](../code-quality/cryptography-warnings.md)|支持通过正确使用加密机制提高库和应用程序安全的警告。|
