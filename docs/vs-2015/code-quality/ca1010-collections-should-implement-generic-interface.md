@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: b141d755c717ad6650d2a49c98c2b26547066b7a
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545517"
 ---
 # <a name="ca1010-collections-should-implement-generic-interface"></a>CA1010:集合应实现泛型接口
@@ -58,8 +58,8 @@ ms.locfileid: "85545517"
 
 ## <a name="example-violation"></a>示例冲突
 
-### <a name="description"></a>描述
- 下面的示例演示一个派生自非泛型类的类（引用类型），该类与 `CollectionBase` 此规则冲突。
+### <a name="description"></a>说明
+ 下面的示例演示了从非泛型类派生的类 (引用类型) `CollectionBase` ，这违反了此规则。
 
 ### <a name="code"></a>代码
  [!code-csharp[FxCop.Design.CollectionsGenericViolation#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.CollectionsGenericViolation/cs/FxCop.Design.CollectionsGenericViolation.cs#1)]
@@ -69,8 +69,8 @@ ms.locfileid: "85545517"
 
 ## <a name="fix-by-base-class-change"></a>通过基类更改进行修复
 
-### <a name="description"></a>描述
- 下面的示例通过将集合的基类从非泛型 `CollectionBase` 类更改为泛型 `Collection<T>` （ `Collection(Of T)` 在中）类来修复冲突 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 。
+### <a name="description"></a>说明
+ 下面的示例通过将集合的基类从非泛型 `CollectionBase` 类更改为 `Collection<T>` `Collection(Of T)`) 类中的泛型 (来修复冲突 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 。
 
 ### <a name="code"></a>代码
  [!code-csharp[FxCop.Design.CollectionsGenericBase#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.CollectionsGenericBase/cs/FxCop.Design.CollectionsGenericBase.cs#1)]
@@ -80,8 +80,8 @@ ms.locfileid: "85545517"
 
 ## <a name="fix-by-interface-implementation"></a>通过接口实现进行修复
 
-### <a name="description"></a>描述
- 下面的示例通过实现以下泛型接口修复了冲突： `IEnumerable<T>` 、 `ICollection<T>` 和 `IList<T>` （ `IEnumerable(Of T)` 、和 `ICollection(Of T)` `IList(Of T)` 中的 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] ）。
+### <a name="description"></a>说明
+ 下面的示例通过实现以下泛型接口修复了冲突： `IEnumerable<T>` 、 `ICollection<T>` 和 `IList<T>` (`IEnumerable(Of T)` 、 `ICollection(Of T)` 和 `IList(Of T)`) 中 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 。
 
 ### <a name="code"></a>代码
  [!code-csharp[FxCop.Design.CollectionsGenericInterface#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.CollectionsGenericInterface/cs/FxCop.Design.CollectionsGenericInterface.cs#1)]

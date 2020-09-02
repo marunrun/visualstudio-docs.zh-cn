@@ -7,10 +7,10 @@ ms.date: 05/06/2018
 ms.technology: vs-ide-install
 ms.assetid: 26A0DE31-2FBF-4E1B-99FB-083111AA1680
 ms.openlocfilehash: be8f508a0055d4cd7cbacf1c728e6d73c8b281f7
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74984714"
 ---
 # <a name="creating-and-editing-a-custom-editorconfig-file"></a>创建并编辑自定义 EditorConfig 文件
@@ -40,11 +40,11 @@ EditorConfig 还支持 C# 中的[编码约定](/visualstudio/ide/editorconfig-co
 
 1. 在 Visual Studio for Mac 中打开项目。 选择要向其添加 EditorConfig 文件的解决方案或项目节点。 将文件添加到解决方案目录会将 .editorconfig 设置应用于解决方案中的所有项目。
 
-2. 右键单击节点，然后选择“添加”>“新建文件”以打开“新文件”对话框：
+2. 右键单击节点，然后选择“添加”>“新建文件”以打开“新文件”对话框 ：
 
     ![内容菜单项](media/editorconfig-image0.png)
 
-3. 选择“其他”>“空文本文件”，并将其命名为 `.editorconfig`。 按“新建”创建文件并在编辑器中将其打开：
+3. 选择“其他”>“空文本文件”，并将其命名为 `.editorconfig` 。 按“新建”创建文件并在编辑器中将其打开：
 
     ![“新文件”对话框](media/editorconfig-image1.png)
 
@@ -89,7 +89,7 @@ EditorConfig 还支持 C# 中的[编码约定](/visualstudio/ide/editorconfig-co
 
     ![添加新的文件窗口](media/editorconfig-image3b.png)
 
-5. 看到以下对话框时，选择“将文件复制到目录”选项并选择“确定”：
+5. 看到以下对话框时，选择“将文件复制到目录”选项并选择“确定” ：
 
     ![将文件添加到文件夹对话框选项](media/editorconfig-image3.png)
 

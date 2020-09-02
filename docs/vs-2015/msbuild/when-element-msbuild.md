@@ -20,10 +20,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: e23b89ab9aa48a87505eb9b53a8646da06df4931
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68162310"
 ---
 # <a name="when-element-msbuild"></a>When 元素 (MSBuild)
@@ -63,7 +63,7 @@ ms.locfileid: "68162310"
   
 |元素|说明|  
 |-------------|-----------------|  
-|[Choose](../msbuild/choose-element-msbuild.md)|可选元素。<br /><br /> 评估子元素以选择代码的一部分来执行。 `Choose` 元素中可能有零个或零个以上的 `When` 元素。|  
+|[[](../msbuild/choose-element-msbuild.md)|可选元素。<br /><br /> 评估子元素以选择代码的一部分来执行。 `Choose` 元素中可能有零个或零个以上的 `When` 元素。|  
 |[ItemGroup](../msbuild/itemgroup-element-msbuild.md)|可选元素。<br /><br /> 包含一组用户定义的 [Item](../msbuild/item-element-msbuild.md) 元素。 `ItemGroup` 元素中可能有零个或零个以上的 `When` 元素。|  
 |[PropertyGroup](../msbuild/propertygroup-element-msbuild.md)|可选元素。<br /><br /> 包含一组用户定义的 [Property](../msbuild/property-element-msbuild.md) 元素。 `PropertyGroup` 元素中可能有零个或零个以上的 `When` 元素。|  
   
@@ -71,7 +71,7 @@ ms.locfileid: "68162310"
   
 |元素|说明|  
 |-------------|-----------------|  
-|[Choose 元素 (MSBuild)](../msbuild/choose-element-msbuild.md)|评估子元素以选择代码的一部分来执行。|  
+|[选择元素 (MSBuild) ](../msbuild/choose-element-msbuild.md)|评估子元素以选择代码的一部分来执行。|  
   
 ## <a name="remarks"></a>备注  
  如果 `Condition` 属性的计算结果为 true，则 `When` 元素的子级 `ItemGroup` 和 `PropertyGroup` 元素将执行，且跳过所有后续 `When` 元素。  

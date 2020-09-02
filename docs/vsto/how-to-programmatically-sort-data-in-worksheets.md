@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 08fa461dc55bf42857e21a5419cab6a0ff147173
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85546973"
 ---
 # <a name="how-to-programmatically-sort-data-in-worksheets"></a>如何：以编程方式对工作表中的数据进行排序
@@ -36,7 +36,7 @@ ms.locfileid: "85546973"
     [!code-csharp[Trin_VstcoreExcelAutomation#78](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#78)]
     [!code-vb[Trin_VstcoreExcelAutomation#78](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#78)]
 
-   将以下代码放在*Sheet1*或*Sheet1.cs*中以对控件中的数据进行排序 <xref:Microsoft.Office.Tools.Excel.ListObject> 。 该代码假定你在名为 `Sheet1` 的工作表中，具有名为 `fruitList` 的 <xref:Microsoft.Office.Tools.Excel.ListObject>控件。
+   将以下代码放在 *Sheet1* 或 *Sheet1.cs* 中以对控件中的数据进行排序 <xref:Microsoft.Office.Tools.Excel.ListObject> 。 该代码假定你在名为 `Sheet1` 的工作表中，具有名为 `fruitList` 的 <xref:Microsoft.Office.Tools.Excel.ListObject>控件。
 
 ### <a name="to-sort-data-in-a-listobject-control"></a>对 ListObject 控件中的数据进行排序
 

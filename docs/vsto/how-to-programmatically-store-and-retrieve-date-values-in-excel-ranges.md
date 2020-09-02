@@ -20,10 +20,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: e4cea02af59b6b6a8457d964bdce802e1e2b2b84
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85546960"
 ---
 # <a name="how-to-programmatically-store-and-retrieve-date-values-in-excel-ranges"></a>如何：以编程方式在 Excel 范围内存储和检索日期值
@@ -31,10 +31,10 @@ ms.locfileid: "85546960"
 
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]
 
- 如果你在 Visual Studio 中使用 Office 开发工具存储范围为1/1/1900 或之后的日期值，则它将以 OLE 自动化（OA）格式存储。 必须使用 <xref:System.DateTime.FromOADate%2A> 方法检索 OLE 自动化（OA）日期的值。 如果日期早于1/1/1900，则将其存储为字符串。
+ 如果你在 Visual Studio 中使用 Office 开发工具存储范围为1/1/1900 或之后的日期值，则它将以 OLE 自动化 (OA) 格式存储。 必须使用 <xref:System.DateTime.FromOADate%2A> 方法检索 (OA) 日期的 OLE 自动化的值。 如果日期早于1/1/1900，则将其存储为字符串。
 
 > [!NOTE]
-> 对于前两个月1900，Excel 日期不同于 OLE 自动化日期。 如果选中了 " **1904 日期系统**" 选项，则也有不同之处。 下面的代码示例不能解决这些差异。
+> 对于前两个月1900，Excel 日期不同于 OLE 自动化日期。 如果选中了 " **1904 日期系统** " 选项，则也有不同之处。 下面的代码示例不能解决这些差异。
 
 ## <a name="use-a-namedrange-control"></a>使用 NamedRange 控件
 
@@ -63,7 +63,7 @@ ms.locfileid: "85546960"
 
 ### <a name="to-store-a-date-value-in-a-native-excel-range-object"></a>在本机 Excel 范围对象中存储日期值
 
-1. 创建一个 <xref:Microsoft.Office.Interop.Excel.Range> 表示单元格**A1**的。
+1. 创建一个 <xref:Microsoft.Office.Interop.Excel.Range> 表示单元格 **A1**的。
 
      [!code-csharp[Trin_VstcoreExcelAutomationAddIn#25](../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs#25)]
      [!code-vb[Trin_VstcoreExcelAutomationAddIn#25](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#25)]
@@ -80,7 +80,7 @@ ms.locfileid: "85546960"
      [!code-csharp[Trin_VstcoreExcelAutomationAddIn#27](../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs#27)]
      [!code-vb[Trin_VstcoreExcelAutomationAddIn#27](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#27)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [使用范围](../vsto/working-with-ranges.md)
 - [Excel 对象模型概述](../vsto/excel-object-model-overview.md)
 - [NamedRange 控件](../vsto/namedrange-control.md)

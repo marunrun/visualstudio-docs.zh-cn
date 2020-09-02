@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 6134b23e7b398794529ee43a428ee8b8962ccf38
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85546999"
 ---
 # <a name="how-to-programmatically-select-worksheets"></a>如何：以编程方式选择工作表
@@ -28,7 +28,7 @@ ms.locfileid: "85546999"
  如果要在 VSTO 外接程序中选择现有工作表，或者如果工作表是在运行时在文档级自定义项中创建的，则必须使用 <xref:Microsoft.Office.Interop.Excel.Sheets> excel 工作簿的 excel 集合进行访问; 否则，您可以 <xref:Microsoft.Office.Tools.Excel.Worksheet> 直接访问主机项。
 
 ## <a name="use-the-worksheet-host-item"></a>使用工作表主机项
- 在文档级自定义项中，将以下代码添加到*Sheet1 .vb*或*Sheet1.cs*中。
+ 在文档级自定义项中，将以下代码添加到 *Sheet1 .vb* 或 *Sheet1.cs*中。
 
 ### <a name="to-select-the-first-worksheet-in-a-workbook-using-a-host-item"></a>使用主机项选择工作簿中的第一个工作表
 

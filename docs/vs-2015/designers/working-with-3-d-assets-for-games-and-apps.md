@@ -12,19 +12,19 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: e181500beefd32dffb9c0e8a7572a198cc9ff1f2
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75852199"
 ---
-# <a name="working-with-3-d-assets-for-games-and-apps"></a>为游戏和应用使用三维资产
+# <a name="working-with-3-d-assets-for-games-and-apps"></a>为游戏和应用程序使用三维资产
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 本文档介绍了 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 工具，这些工具可用来创建或修改基于 DirectX 的游戏和应用的三维模型、纹理和着色器。
 
 ## <a name="directx-app-development-in-visual-studio"></a>Visual Studio 中的 DirectX 应用开发
- DirectX 应用通常将编程逻辑、DirectX API、高级别着色语言 (HLSL) 程序与音频和三维可视化资产合并在一起，以提供丰富的交互式多媒体体验。[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 包括可用于处理图像和纹理、三维模型和着色器的工具，无需离开 IDE 使用其他工具。 Visual Studio 工具尤其适用于创建占位符资产，该资产可用于添加生产就绪资产前测试代码或生成原型，还可用于调试应用前，检查和修改生产就绪资产。
+ DirectX 应用通常将编程逻辑、DirectX API、高级别着色语言 (HLSL) 程序与音频和三维可视化资产合并在一起，以提供丰富的交互式多媒体体验。[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 包括可用于处理图像和纹理、三维模型和着色器的工具，无需离开 IDE 使用其他工具。 Visual Studio 工具尤其适用于创建占位符资产，该资产可用于添加生产就绪资产前测试代码或生成原型，还可用于调试应用前，检查和修改生产就绪资产  。
 
  以下是关于可在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中处理的各种资产的详细信息。
 
@@ -34,7 +34,7 @@ ms.locfileid: "75852199"
  可以使用 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 图像编辑器处理许多常用类型和格式的图像和纹理。
 
 ### <a name="3-d-models"></a>三维模型
- 三维模型创建游戏和应用中的空间和形状。 按最小的方式，模型将三维空间中点的位置（称为顶点）和索引数据一起编码，以定义表示模型形状的线或三角形。 其他可以与这些顶点关联的数据，例如：颜色信息、常规矢量或应用程序特定的属性。 每个模型还可以定义对象范围的属性，例如，哪一个着色器用于计算对象图面的外观，哪一个纹理应用于它。
+ 三维模型创建游戏和应用中的空间和形状。 最少情况下，模型会将3-d 空间中点的位置（称为 *顶点*）和索引数据一起编码，以定义表示模型形状的线或三角形。 其他可以与这些顶点关联的数据，例如：颜色信息、常规矢量或应用程序特定的属性。 每个模型还可以定义对象范围的属性，例如，哪一个着色器用于计算对象图面的外观，哪一个纹理应用于它。
 
  使用 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 模型编辑器可以处理几种常用格式的三维模型。
 
@@ -44,14 +44,14 @@ ms.locfileid: "75852199"
  可以使用 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 着色器设计器，它是一个基于图形的着色器设计工具，用户可以在不懂 HLSL 编程的情况下创建自定义可视化效果。
 
 > [!NOTE]
-> 有关如何开始 DirectX 编程的详细信息，请参阅 [DirectX](https://msdn.microsoft.com/library/ee663274(VS.85).aspx)。 有关如何调试基于 DirectX 的应用的详细信息，请参阅[图形诊断（调试 DirectX 图形）](../debugger/visual-studio-graphics-diagnostics.md)。
+> 有关如何开始 DirectX 编程的详细信息，请参阅 [DirectX](https://msdn.microsoft.com/library/ee663274(VS.85).aspx)。 有关如何调试基于 DirectX 的应用的详细信息，请参阅 [) 调试 Directx 图形图形诊断 (](../debugger/visual-studio-graphics-diagnostics.md)。
 
 ## <a name="directx-version-compatibility"></a>DirectX 版本兼容性
- [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 使用 DirectX 来呈现二维和三维资产。 可以选择 DirectX 11 呈现器或 Windows 高级光栅化平台 (WARP) 软件呈现器。 DirectX 11 呈现器在 DirectX 11 和 DirectX 10 GPU 上提供高性能、硬件加速呈现。 WARP 呈现器有助于确保资产适用于一系列计算机，其中包括没有新式图形硬件的计算机和具有集成图形硬件的计算机。 有关 WARP 的详细信息，请参见 [Windows 高级光栅化平台 (WARP) 指南](https://msdn.microsoft.com/library/gg615082(VS.85).aspx)。
+ [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 使用 DirectX 来呈现二维和三维资产。 可以选择 DirectX 11 呈现器或 Windows 高级光栅化平台 (WARP) 软件呈现器。 DirectX 11 呈现器在 DirectX 11 和 DirectX 10 GPU 上提供高性能、硬件加速呈现。 WARP 呈现器有助于确保资产适用于一系列计算机，其中包括没有新式图形硬件的计算机和具有集成图形硬件的计算机。 有关弯曲的详细信息，请参阅 [Windows 高级光栅化平台 (弯曲) 指南](https://msdn.microsoft.com/library/gg615082(VS.85).aspx)。
 
 ## <a name="related-topics"></a>相关主题
 
-|职务|描述|
+|标题|说明|
 |-----------|-----------------|
 |[使用纹理和图像](../designers/working-with-textures-and-images.md)|介绍如何使用 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 处理图像和纹理。|
 |[使用三维模型](../designers/working-with-3-d-models.md)|介绍如何使用 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 处理三维模型。|

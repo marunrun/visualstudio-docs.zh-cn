@@ -24,17 +24,17 @@ manager: jillfra
 ms.workload:
 - data-storage
 ms.openlocfilehash: 22d84e9b4beafd64cc629a295bcfa7f9f67afb6d
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85282561"
 ---
 # <a name="directly-access-the-database-with-a-tableadapter"></a>使用 TableAdapter 直接访问数据库
 
-除了 `InsertCommand` 、和外，还会 `UpdateCommand` `DeleteCommand` 创建可直接针对数据库运行的 tableadapter 的方法。 您可以调用这些方法（ `TableAdapter.Insert` 、 `TableAdapter.Update` 和 `TableAdapter.Delete` ）来直接操作数据库中的数据。
+除了 `InsertCommand` 、和外，还会 `UpdateCommand` `DeleteCommand` 创建可直接针对数据库运行的 tableadapter 的方法。 您可以调用这些方法 (`TableAdapter.Insert` 、 `TableAdapter.Update` 和 `TableAdapter.Delete`) 直接在数据库中操作数据。
 
-如果不想创建这些直接方法，请 `GenerateDbDirectMethods` `false` 在 "**属性**" 窗口中将 TableAdapter 的属性设置为。 如果除 TableAdapter 的主查询外，还会将任何查询添加到 TableAdapter，它们是不生成这些方法的独立查询 `DbDirect` 。
+如果不想创建这些直接方法，请 `GenerateDbDirectMethods` `false` 在 " **属性** " 窗口中将 TableAdapter 的属性设置为。 如果除 TableAdapter 的主查询外，还会将任何查询添加到 TableAdapter，它们是不生成这些方法的独立查询 `DbDirect` 。
 
 ## <a name="send-commands-directly-to-a-database"></a>将命令直接发送到数据库
 

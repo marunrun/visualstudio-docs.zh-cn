@@ -1,15 +1,15 @@
 ---
-title: 代码片段
+title: 代码段
 description: 如何使用代码片段在 Visual Studio for Mac 中高效编程
 author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 02/07/2019
 ms.assetid: 0FE27C0C-A861-4133-A74E-8D0505CF5342
 ms.openlocfilehash: 96344b72dd27095f8b9060078112fb767b1338fc
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74984806"
 ---
 # <a name="code-snippets"></a>代码片段
@@ -88,6 +88,6 @@ ms.locfileid: "74984806"
 
 有关详细信息，请参阅 [Visual Studio 代码片段参考](/visualstudio/ide/code-snippets-schema-reference#keywords)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [代码片段（Windows 上的 Visual Studio）](/visualstudio/ide/code-snippets)

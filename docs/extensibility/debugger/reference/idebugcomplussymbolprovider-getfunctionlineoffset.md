@@ -1,5 +1,5 @@
 ---
-title: IDebugComPlus符号提供商：：获取功能线偏移 |微软文档
+title: IDebugComPlusSymbolProvider：： GetFunctionLineOffset |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -15,14 +15,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 52f519259cbd0a79325fb062d630e7c4db757695
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80733879"
 ---
 # <a name="idebugcomplussymbolprovidergetfunctionlineoffset"></a>IDebugComPlusSymbolProvider::GetFunctionLineOffset
-在表示给定行偏移量的函数中检索地址。
+检索表示给定行偏移量的函数中的地址。
 
 ## <a name="syntax"></a>语法
 
@@ -44,19 +44,19 @@ int GetFunctionLineOffset(
 
 ## <a name="parameters"></a>参数
 `pAddress`\
-[在]表示函数的地址。
+中表示函数的地址。
 
 `dwLine`\
-[在]函数开头的行偏移量。
+中函数开头的行偏移量。
 
 `ppNewAddress`\
-[出]表示函数开头行偏移的新地址。
+弄表示从函数开头开始的行偏移量的新地址。
 
 ## <a name="return-value"></a>返回值
-如果成功，返回`S_OK`;否则，返回错误代码。
+如果成功， `S_OK` 则返回; 否则返回错误代码。
 
 ## <a name="example"></a>示例
-下面的示例演示如何为公开[IDebugComPlusSymbol提供程序](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)接口的**CDebugSymbol提供程序**对象实现此方法。
+下面的示例演示如何为公开[IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)接口的**CDebugSymbolProvider**对象实现此方法。
 
 ```cpp
 HRESULT CDebugSymbolProvider::GetFunctionLineOffset(
@@ -103,5 +103,5 @@ Error:
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)

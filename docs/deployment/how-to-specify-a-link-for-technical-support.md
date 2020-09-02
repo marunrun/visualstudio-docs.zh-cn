@@ -21,14 +21,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: e64ef97b8b51f8a943e216bad67ec300026d5654
-ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85382050"
 ---
 # <a name="how-to-specify-a-link-for-technical-support"></a>如何：指定技术支持链接
-发布 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序时，"**支持 URL** " 属性标识一个网页或文件共享，用户可在其中获取有关应用程序的信息。 此属性是可选的;如果提供，URL 将显示在应用程序的 "**添加或删除程序**" 对话框中。
+发布 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序时，" **支持 URL** " 属性标识一个网页或文件共享，用户可在其中获取有关应用程序的信息。 此属性是可选的;如果提供，URL 将显示在应用程序的 " **添加或删除程序** " 对话框中。
 
  可以在 "**项目设计器**" 的 "**发布**" 页上设置 "**支持 URL** " 属性。
 
@@ -38,12 +38,12 @@ ms.locfileid: "85382050"
 
 2. 单击 **“发布”** 选项卡。
 
-3. 单击 "**选项**" 按钮打开 "**发布选项**" 对话框。
+3. 单击 " **选项** " 按钮打开 " **发布选项** " 对话框。
 
-4. 单击 "**说明**"。
+4. 单击 " **说明**"。
 
-5. 在 "**支持 URL** " 字段中，输入网站、网页或 UNC 共享的完全限定路径。
+5. 在 " **支持 URL** " 字段中，输入网站、网页或 UNC 共享的完全限定路径。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [发布 ClickOnce 应用程序](../deployment/publishing-clickonce-applications.md)
 - [如何：使用发布向导发布 ClickOnce 应用程序](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)

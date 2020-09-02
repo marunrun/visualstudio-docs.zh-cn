@@ -1,5 +1,5 @@
 ---
-title: IDebugPort2::GetPortId | Microsoft Docs
+title: IDebugPort2：： GetPortId |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,10 +13,10 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 0a18e8743be6c7459ed877c93a77cec8e564626d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68202920"
 ---
 # <a name="idebugport2getportid"></a>IDebugPort2::GetPortId
@@ -40,10 +40,10 @@ int GetPortId( 
   
 #### <a name="parameters"></a>参数  
  `pguidPort`  
- [out]返回标识该端口的 GUID。  
+ 弄返回用于标识端口的 GUID。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md)

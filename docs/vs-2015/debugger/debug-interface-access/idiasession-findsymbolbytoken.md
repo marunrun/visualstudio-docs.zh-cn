@@ -1,5 +1,5 @@
 ---
-title: 'Idiasession:: Findsymbolbytoken |Microsoft Docs'
+title: IDiaSession：： findSymbolByToken |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: d42be946db927603412670d30e2f4c9a1cab43fd
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68144774"
 ---
 # <a name="idiasessionfindsymbolbytoken"></a>IDiaSession::findSymbolByToken
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-检索包含指定元数据标记的符号。  
+检索包含指定的元数据标记的符号。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,16 +37,16 @@ HRESULT findSymbolByToken ( 
   
 #### <a name="parameters"></a>参数  
  `token`  
- [in]指定标记。  
+ 中指定令牌。  
   
  `symtag`  
- [in]要查找的符号类型。 值取自[SymTagEnum 枚举](../../debugger/debug-interface-access/symtagenum.md)枚举。  
+ 中要查找的符号类型。 值取自 [SymTagEnum 枚举](../../debugger/debug-interface-access/symtagenum.md) 枚举。  
   
  `ppSymbol`  
- [out]返回[IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)检索表示该符号的对象。  
+ 弄返回一个 [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) 对象，该对象表示检索到的符号。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
 ## <a name="example"></a>示例  
   
@@ -55,7 +55,7 @@ IDiaSymbol* pFunc;
 pSession->findSymbolByToken( token, SymTagFunction, &pFunc );  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDiaSession](../../debugger/debug-interface-access/idiasession.md)   
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
  [SymTagEnum 枚举](../../debugger/debug-interface-access/symtagenum.md)

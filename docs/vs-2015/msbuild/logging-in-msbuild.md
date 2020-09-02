@@ -12,10 +12,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 8caf9dcabe46c0d68fabf9e620818f52316e484b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68162329"
 ---
 # <a name="logging-in-msbuild"></a>MSBuild 中的日志记录
@@ -30,10 +30,10 @@ ms.locfileid: "68162329"
  [生成记录器](../msbuild/build-loggers.md)  
  概述创建单处理器记录器所需的步骤。  
   
- [多处理器环境下的日志记录](../msbuild/logging-in-a-multi-processor-environment.md)  
+ [多处理器环境中的日志记录](../msbuild/logging-in-a-multi-processor-environment.md)  
  介绍日志记录在多处理器环境和两个多处理器日志记录模型下的工作原理。  
   
- [编写多处理器感知记录器](../msbuild/writing-multi-processor-aware-loggers.md)  
+ [编写可识别多处理器的记录器](../msbuild/writing-multi-processor-aware-loggers.md)  
  概述如何创建多处理器感知记录器以及如何使用可配置的转发记录器。  
   
  [创建转发记录器](../msbuild/creating-forwarding-loggers.md)  

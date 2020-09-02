@@ -9,11 +9,11 @@ manager: jillfra
 ms.workload:
 - data-science
 ms.openlocfilehash: bcdef95935c0522c8b93a972d7f44fbd7632c53b
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79307051"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89312686"
 ---
 # <a name="create-r-projects-in-visual-studio"></a>在 Visual Studio 中创建 R 项目
 

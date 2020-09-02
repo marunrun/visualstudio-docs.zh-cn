@@ -1,5 +1,5 @@
 ---
-title: '&lt;postAction &gt; 元素（Visual Studio 中的 Office 开发）'
+title: '&lt;&gt;Visual Studio 中的 postAction 元素 (Office 开发) '
 ms.date: 02/02/2017
 ms.topic: reference
 dev_langs:
@@ -15,13 +15,13 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 149aa0cf8543f5b5b1b5ada18a8b2f0e58f063d0
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85546934"
 ---
-# <a name="ltpostactiongt-element-office-development-in-visual-studio"></a>&lt;postAction &gt; 元素（Visual Studio 中的 Office 开发）
+# <a name="ltpostactiongt-element-office-development-in-visual-studio"></a>&lt;&gt;Visual Studio 中的 postAction 元素 (Office 开发) 
   `postAction` 命名空间的 `vstav3` 元素包含与部署后操作（在安装 Office 解决方案后运行）相关联的 `entrypoint` 元素和所有 `postActionData` 元素。
 
 ## <a name="syntax"></a>语法
@@ -51,7 +51,7 @@ ms.locfileid: "85546934"
 ## <a name="post-deployment-action-example"></a>部署后操作示例
 
 ### <a name="description"></a>说明
- 下面的代码示例演示 Office 解决方案的应用程序清单中的 `postAction` 元素，该解决方案是使用 [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]部署的。 此代码示例是[Office 解决方案的应用程序清单](../vsto/application-manifests-for-office-solutions.md)中提供的一个更大示例的一部分。
+ 下面的代码示例演示 Office 解决方案的应用程序清单中的 `postAction` 元素，该解决方案是使用 [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]部署的。 此代码示例是 [Office 解决方案的应用程序清单](../vsto/application-manifests-for-office-solutions.md)中提供的一个更大示例的一部分。
 
 ### <a name="code"></a>代码
 
@@ -70,7 +70,7 @@ ms.locfileid: "85546934"
 </vstav3:postAction>
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [Office 解决方案的应用程序清单](../vsto/application-manifests-for-office-solutions.md)
 - [Office 解决方案的部署清单](../vsto/deployment-manifests-for-office-solutions.md)

@@ -20,10 +20,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: b5aea9c7c7868dfdd9726b86bb344456ebe707d8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68162440"
 ---
 # <a name="itemdefinitiongroup-element-msbuild"></a>ItemDefinitionGroup 元素 (MSBuild)
@@ -48,19 +48,19 @@ ms.locfileid: "68162440"
   
 ### <a name="attributes"></a>特性  
   
-|特性|说明|  
+|特性|描述|  
 |---------------|-----------------|  
 |`Condition`|可选特性。 要计算的条件。 有关详细信息，请参阅[条件](../msbuild/msbuild-conditions.md)。|  
   
 ### <a name="child-elements"></a>子元素  
   
-|元素|说明|  
+|元素|描述|  
 |-------------|-----------------|  
 |[Item](../msbuild/item-element-msbuild.md)|定义生成过程的输入。 `ItemDefinitionGroup` 中可能没有或有一些 `Item` 元素。|  
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|说明|  
+|元素|描述|  
 |-------------|-----------------|  
 |[Project](../msbuild/project-element-msbuild.md)|[!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 项目文件必需的根元素。|  
   

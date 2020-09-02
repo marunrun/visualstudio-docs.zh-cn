@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: f7994f1c0c7281fc9902e15a3fd60293905abc4f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670453"
 ---
 # <a name="index-search-tips"></a>索引搜索提示
@@ -39,7 +39,7 @@ ms.locfileid: "72670453"
 
      例如，如果“debugging inline assembly code”没有显示任何相关条目，请尝试键入“assembly code, debugging inline”。
 
-- 使用带“索引”选项卡的筛选器可以减少结果数。
+- 使用带“索引”**** 选项卡的筛选器可以减少结果数。
 
 ### <a name="syntax-tips"></a>语法提示
  如果没有找到输入的单词或短语条目，请尝试以下操作：
@@ -60,5 +60,5 @@ ms.locfileid: "72670453"
 
      例如，如果输入了动名词 "生成"，请改为尝试 "创建"。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [全文搜索提示](../ide/full-text-search-tips.md)[查找信息](../ide/locate-information.md)
