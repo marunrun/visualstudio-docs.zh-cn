@@ -14,12 +14,12 @@ manager: jillfra
 monikerRange: '>= vs-2019'
 ms.workload:
 - multiple
-ms.openlocfilehash: 56007fcb3b951f9b313a25092e89c234d52eb15e
-ms.sourcegitcommit: 8e5b0106061bb43247373df33d0850ae68457f5e
+ms.openlocfilehash: 6de4291d08b3a6b6897b3ae41562f70fad5372b1
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88507994"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89053424"
 ---
 # <a name="measure-application-performance-from-the-command-line"></a>从命令行测量应用程序性能
 
@@ -92,6 +92,7 @@ ms.locfileid: "88507994"
 - https://aka.ms/vs/diaghub/agentconfig/dotnetasyncbase
 - https://aka.ms/vs/diaghub/agentconfig/dotnetallocbase
 - https://aka.ms/vs/diaghub/agentconfig/dotnetalloclow
+- https://aka.ms/vs/diaghub/agentconfig/dotnetcountersbase
 
 CpuUsage 配置（基本/高/低），对应于为 [CPU 使用情况](../profiling/cpu-usage.md)分析工具收集的数据。
 DotNetObjectAlloc 配置（基本/低），对应于为 [.NET 对象分配工具](../profiling/dotnet-alloc-tool.md)收集的数据。

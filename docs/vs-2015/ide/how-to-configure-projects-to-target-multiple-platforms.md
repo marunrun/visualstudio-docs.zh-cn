@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: bb759faff99b641f24df87f73bc1d3d52b6635cc
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72663560"
 ---
 # <a name="how-to-configure-projects-to-target-multiple-platforms"></a>如何：将项目配置为面向多个平台
@@ -29,18 +29,18 @@ ms.locfileid: "72663560"
 
 #### <a name="to-set-your-configuration-to-target-a-different-platform"></a>将配置设置为面向不同平台
 
-1. 在“生成”菜单上，单击“配置管理器”。
+1. 在“生成”菜单上，单击“配置管理器” 。
 
-2. 在“活动解决方案平台”框中，选择希望解决方案面向的平台，或者选择“\<新建>”创建一个新的平台。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 会编译应用程序，以面向在“配置管理器”对话框中被设置为活动平台的平台。
+2. 在“活动解决方案平台”框中，选择希望解决方案面向的平台，或者选择 \<New> 创建一个新平台。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 会编译应用程序，以面向在“配置管理器”对话框中被设置为活动平台的平台****。
 
 ## <a name="removing-a-platform"></a>删除平台
  如果发现不再需要某个平台，可以使用“配置管理器”对话框将其删除。 此操作会删除你为配置和目标的这个组合所配置的所有解决方案和项目设置。
 
 #### <a name="to-remove-a-platform"></a>删除平台
 
-1. 在“生成”菜单上，单击“配置管理器”。
+1. 在“生成”菜单上，单击“配置管理器” 。
 
-2. 在“活动解决方案平台”框中，选择“\<编辑>”。 “编辑解决方案平台”对话框随即打开。
+2. 在“活动解决方案平台”框中，选择 \<Edit>。 “编辑解决方案平台”对话框随即打开。
 
 3. 单击想要删除的平台，然后单击“删除”。
 
@@ -63,5 +63,5 @@ ms.locfileid: "72663560"
 
    例如，可以将解决方案级别的平台设置为 [!INCLUDE[vcprx64](../includes/vcprx64-md.md)]，并使该解决方案中项目都不面向该平台。 解决方案中可以存在多个项目，并且每个项目面向不同的平台。 如果具有此类解决方案，建议创建一个新的配置并使用描述性名称命名，以免混淆。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [如何：创建和编辑配置](../ide/how-to-create-and-edit-configurations.md)[了解生成配置](../ide/understanding-build-configurations.md)[在 Visual Studio 中生成和清理项目和解决方案](../ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md)

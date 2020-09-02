@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a4659efef9b233284a593fecd5c8404cb2650b0c
-ms.sourcegitcommit: 4d7c883ea3eedd795eeb4a9d3bd3dee82c8e093e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88893263"
 ---
 # <a name="customize-a-rule-set"></a>自定义规则集
@@ -51,7 +51,7 @@ ms.locfileid: "88893263"
 4. 选择 " **打开** " 以在规则集编辑器中显示规则。
 
 > [!NOTE]
-> 如果你有 .NET Core 或 .NET Standard 项目，该过程会稍有不同，因为没有 **代码分析** 属性选项卡。请按照以下步骤将 [预定义规则集复制到你的项目，并将其设置为活动规则集](analyzer-rule-sets.md)。 复制规则集之后，可以 [在 Visual Studio 规则集编辑器中进行编辑](working-in-the-code-analysis-rule-set-editor.md) ，方法是从 **解决方案资源管理器**中打开它。
+> 如果你有 .NET Core 或 .NET Standard 项目，该过程会稍有不同，因为没有 **代码分析** 属性选项卡。按照以下步骤将 [预定义的规则集复制到项目中，并将其设置为活动规则集](analyzer-rule-sets.md)。 复制规则集之后，可以 [在 Visual Studio 规则集编辑器中进行编辑](working-in-the-code-analysis-rule-set-editor.md) ，方法是从 **解决方案资源管理器**中打开它。
 
 ## <a name="create-a-new-rule-set"></a>创建新规则集
 
@@ -61,7 +61,7 @@ ms.locfileid: "88893263"
 
 2. 在 " **新建文件** " 对话框中，选择左侧的 " **常规** " 类别，然后选择 " **代码分析规则集**"。
 
-3. 选择“打开”。
+3. 选择“打开”  。
 
    *新的*文件组文件将在规则集编辑器中打开。
 
@@ -145,7 +145,7 @@ ms.locfileid: "88893263"
 > [!div class="nextstepaction"]
 > [修改规则集编辑器中的规则](../code-quality/working-in-the-code-analysis-rule-set-editor.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [如何：配置托管代码项目的代码分析](../code-quality/how-to-configure-code-analysis-for-a-managed-code-project.md)
 - [代码分析规则集参考](../code-quality/rule-set-reference.md)

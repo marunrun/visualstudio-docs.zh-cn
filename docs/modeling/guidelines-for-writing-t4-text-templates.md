@@ -8,10 +8,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 24c8afd5e34d4957dac3d9f4d5b0e4409ad20895
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75596536"
 ---
 # <a name="guidelines-for-writing-t4-text-templates"></a>T4 文本模板编写准则
@@ -20,7 +20,7 @@ ms.locfileid: "75596536"
 
 ## <a name="guidelines-for-design-time-t4-templates"></a>设计时 T4 模板指南
 
-设计时 T4 模板是在设计时在 Visual Studio 项目中生成代码的模板。 有关详细信息，请参阅[使用 T4 文本模板生成设计时代码](../modeling/design-time-code-generation-by-using-t4-text-templates.md)。
+设计时 T4 模板是在设计时在 Visual Studio 项目中生成代码的模板。 有关详细信息，请参阅 [使用 T4 文本模板生成设计时代码](../modeling/design-time-code-generation-by-using-t4-text-templates.md)。
 
 生成应用程序的可变因素。
 
@@ -46,7 +46,7 @@ ms.locfileid: "75596536"
 
 允许自定义代码：生成分部类。
 
-除生成的代码外，还允许使用自己编写的代码。 代码生成方案不太常见，因为这种情况可能会导致可能出现的所有变体。 因此，您应该会希望添加或重写某些生成的代码。 如果生成的材料采用 .NET 语言（如C#或 Visual Basic），则两个策略特别有用：
+除生成的代码外，还允许使用自己编写的代码。 代码生成方案不太常见，因为这种情况可能会导致可能出现的所有变体。 因此，您应该会希望添加或重写某些生成的代码。 如果生成的材料是 .NET 语言（如 c # 或 Visual Basic），则两个策略特别有用：
 
 - 生成的类应为分部类。 这使您可以将内容添加到生成的代码中。
 
@@ -56,15 +56,15 @@ ms.locfileid: "75596536"
 
 将常见材料移到包含文件或运行时模板中。
 
-若要避免在多个模板中重复使用类似的文本块和代码，请使用 `<#@ include #>` 指令。 有关详细信息，请参阅[T4 Include 指令](../modeling/t4-include-directive.md)。
+若要避免在多个模板中重复使用类似的文本块和代码，请使用 `<#@ include #>` 指令。 有关详细信息，请参阅 [T4 Include 指令](../modeling/t4-include-directive.md)。
 
 您还可以在单独的项目中生成运行时文本模板，然后从设计时模板调用它们。 为此，请使用 `<#@ assembly #>` 指令访问单独的项目。
 
 请考虑将大代码块移到单独的程序集中。
 
-如果有较大的代码块和类功能块，则将此代码移到在单独的项目中编译的方法可能会很有用。 您可以使用 `<#@ assembly #>` 指令访问模板中的代码。 有关详细信息，请参阅[T4 Assembly 指令](../modeling/t4-assembly-directive.md)。
+如果有较大的代码块和类功能块，则将此代码移到在单独的项目中编译的方法可能会很有用。 您可以使用 `<#@ assembly #>` 指令访问模板中的代码。 有关详细信息，请参阅 [T4 Assembly 指令](../modeling/t4-assembly-directive.md)。
 
-您可以将这些方法放在模板可继承的抽象类中。 抽象类必须继承自 <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation?displayProperty=fullName>。 有关详细信息，请参阅[T4 模板指令](../modeling/t4-template-directive.md)。
+您可以将这些方法放在模板可继承的抽象类中。 抽象类必须继承自 <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation?displayProperty=fullName> 。 有关详细信息，请参阅 [T4 模板指令](../modeling/t4-template-directive.md)。
 
 生成代码，而不是配置文件。
 
@@ -76,7 +76,7 @@ ms.locfileid: "75596536"
 
 使用生成的代码文件夹。
 
-将模板和生成的文件放置在一个名为 "**生成的代码**" 的项目文件夹中，以确保它们不是应直接编辑的文件。 如果创建自定义代码来重写或添加到生成的类，请将这些类放在名为 "**自定义代码**" 的文件夹中。 典型项目的结构如下所示：
+将模板和生成的文件放置在一个名为 " **生成的代码**" 的项目文件夹中，以确保它们不是应直接编辑的文件。 如果创建自定义代码来重写或添加到生成的类，请将这些类放在名为 " **自定义代码**" 的文件夹中。 典型项目的结构如下所示：
 
 ```
 MyProject
@@ -91,11 +91,11 @@ MyProject
    AnotherClass.cs
 ```
 
-## <a name="guidelines-for-run-time-preprocessed-t4-templates"></a>运行时（预处理） T4 模板的准则
+## <a name="guidelines-for-run-time-preprocessed-t4-templates"></a>运行时 (预处理) T4 模板的准则
 
 将常见材料移到继承的模板中。
 
-您可以使用继承在 T4 文本模板之间共享方法和文本块。 有关详细信息，请参阅[T4 模板指令](../modeling/t4-template-directive.md)。
+您可以使用继承在 T4 文本模板之间共享方法和文本块。 有关详细信息，请参阅 [T4 模板指令](../modeling/t4-template-directive.md)。
 
 还可以使用包含运行时模板的包含文件。
 
@@ -105,17 +105,17 @@ MyProject
 
 这样做的一个优点是代码更易于编写，因为 IntelliSense 可用。 此外，您还可以在演示和基础逻辑之间实现更好的隔离。
 
-例如，在**MyReportText.tt**中：
+例如，在 **MyReportText.tt**中：
 
 `The total is: <#= ComputeTotal() #>`
 
-在**MyReportText-Methods.cs**中：
+在 **MyReportText-Methods.cs**中：
 
 `private string ComputeTotal() { ... }`
 
 允许自定义代码：提供扩展点。
 
-请考虑在 \<# + 类功能块 # > 中生成虚方法。 这允许在许多上下文中使用单个模板，而无需修改。 您可以构造一个提供最少附加逻辑的派生类，而不是修改模板。 派生类可以是常规代码，也可以是运行时模板。
+请考虑在中生成虚方法 \<#+ class feature blocks #> 。 这允许在许多上下文中使用单个模板，而无需修改。 您可以构造一个提供最少附加逻辑的派生类，而不是修改模板。 派生类可以是常规代码，也可以是运行时模板。
 
 例如，在 MyStandardRunTimeTemplate.tt 中：
 
@@ -139,11 +139,11 @@ class FabrikamTemplate : MyStandardRunTimeTemplate
 
 从文本生成中分离数据。
 
-尝试避免混合计算和文本块。 在每个文本模板中，使用第一个 \<# 代码块 # > 设置变量并执行复杂的计算。 从第一个文本块到模板末尾，或第一个 \<# + 类功能块 # >，避免长表达式，并避免循环和条件，除非它们包含文本块。 这种做法使模板更易于阅读和维护。
+尝试避免混合计算和文本块。 在每个文本模板中，使用第一个 \<# code block #> 设置变量并执行复杂的计算。 从第一个文本块到模板末尾或第一个文本块 \<#+ class feature block #> ，避免出现长表达式，并避免循环和条件，除非它们包含文本块。 这种做法使模板更易于阅读和维护。
 
-请勿使用包含文件的 `.tt`。
+请勿用于 `.tt` 包含文件。
 
-对于包含文件，请使用不同的文件扩展名，例如 `.ttinclude`。 仅将 `.tt` 用于要作为运行时或设计时文本模板处理的文件。 在某些情况下，Visual Studio 会识别 `.tt` 文件，并自动设置其属性进行处理。
+对于包含文件，请使用不同的文件扩展名，例如 `.ttinclude` 。 `.tt`仅对要作为运行时或设计时文本模板处理的文件使用。 在某些情况下，Visual Studio `.tt` 会识别文件并自动设置其属性以进行处理。
 
 以固定原型的形式启动每个模板。
 
@@ -151,7 +151,7 @@ class FabrikamTemplate : MyStandardRunTimeTemplate
 
 请考虑使用类型化模型。
 
-尽管可以为模型创建 XML 架构或数据库架构，但创建域特定语言（DSL）可能会很有用。 DSL 的优点在于，它会生成一个类来表示架构中的每个节点，并使用属性来表示属性。 这意味着您可以根据业务模式进行编程。 例如：
+尽管可以为模型创建 XML 架构或数据库架构，但创建域特定语言 (DSL) 可能会很有用。 DSL 的优点在于，它会生成一个类来表示架构中的每个节点，并使用属性来表示属性。 这意味着您可以根据业务模式进行编程。 例如：
 
 ```
 Team Members:
@@ -167,7 +167,7 @@ Team Members:
 
 但是，对于某些类型的业务要求，澄清复杂的关系和工作流集很重要，关系图是最适合的媒介。 关系图的优点是可以轻松地与用户和其他利益干系人进行讨论。 通过从模型中生成代码来满足业务要求，可以在需求改变时使代码更灵活。
 
-你还可以将自己的关系图类型设计为域特定语言（DSL）。 可从 UML 和 Dsl 生成代码。 有关详细信息，请参阅[体系结构分析和建模](../modeling/analyze-and-model-your-architecture.md)。
+你还可以将自己的关系图类型设计为域特定语言 (DSL) 。 可从 UML 和 Dsl 生成代码。 有关详细信息，请参阅 [体系结构分析和建模](../modeling/analyze-and-model-your-architecture.md)。
 
 ## <a name="see-also"></a>另请参阅
 

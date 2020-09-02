@@ -1,5 +1,5 @@
 ---
-title: 'Idiaenumdebugstreamdata:: Next |Microsoft Docs'
+title: IDiaEnumDebugStreamData：： Next |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 4bdbf58321426890bffd45a08818dc5341bdfc3d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68187399"
 ---
 # <a name="idiaenumdebugstreamdatanext"></a>IDiaEnumDebugStreamData::Next
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-检索指定的数目的枚举序列中的记录。  
+检索枚举序列中指定数目的记录。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,25 +37,25 @@ HRESULT Next ( 
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>参数  
  celt  
- [in]要检索的记录数。  
+ 中要检索的记录数。  
   
  cbData  
- [in]数据缓冲区，以字节为单位的大小。  
+ 中数据缓冲区的大小（以字节为单位）。  
   
  pcbData  
- [out]返回返回的字节数。 如果`data`为 NULL，则`pcbData`的所有请求的记录包含可用数据的字节总数。  
+ 弄返回返回的字节数。 如果 `data` 为 NULL，则 `pcbData` 包含可用于所有请求记录的数据的总字节数。  
   
  data[]  
- [out]是要调试流记录数据填充缓冲区。  
+ 弄要使用调试流记录数据填充的缓冲区。  
   
  pceltFetched  
- [in、 out]返回中的记录数`data`。  
+ [in，out]返回中的记录数 `data` 。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回 `S_OK`。 返回`S_FALSE`如果没有更多记录。 否则，返回错误代码。  
+ 如果成功，则返回 `S_OK`。 `S_FALSE`如果没有其他记录，则返回。 否则，返回错误代码。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md)   
  [IDiaEnumDebugStreams::Next](../../debugger/debug-interface-access/idiaenumdebugstreams-next.md)

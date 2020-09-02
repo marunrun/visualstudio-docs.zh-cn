@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 66d78988ef70e4f991dd02cb16a164cbf48e55f1
-ms.sourcegitcommit: c4212f40df1a16baca1247cac2580ae699f97e4c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "89176073"
 ---
 # <a name="usage-warnings"></a>用法警告
@@ -77,4 +77,4 @@ ms.locfileid: "89176073"
 |[CA2246:请勿在同一语句中分配符号及其成员](../code-quality/ca2246.md)|不建议在同一语句中分配符号及其成员（即，字段或属性）。 如果成员访问权限打算在赋值前使用符号的旧值，或者在此语句的赋值中使用新值，则不清楚。|
 |[CA2247:传递给 TaskCompletionSource 构造函数的参数应为 TaskCreationOptions 枚举，而不是 TaskContinuationOptions 枚举](../code-quality/ca2246.md)|TaskCompletionSource 具有采用 TaskCreationOptions 的构造函数，这些构造函数控制基础任务，以及采用任务中存储的对象状态的构造函数。  意外传递 System.threading.tasks.taskcontinuationoptions 而不是 TaskCreationOptions 将导致调用将选项视为状态。|
 |[CA2248：将正确的 "enum" 参数提供给 "Enum.hasflag\"](../code-quality/ca2248.md)|作为参数传递给方法调用的枚举类型 `HasFlag` 不同于调用枚举类型。|
-|[CA2249：请考虑使用字符串。包含而不是字符串。 IndexOf](../code-quality/ca2249.md)|对结果的调用 `string.IndexOf` （其中，用于检查是否存在子字符串）可以替换为 `string.Contains` 。|
+|[CA2249：请考虑使用 String.Contains 而不是 String.IndexOf](../code-quality/ca2249.md)|对结果的调用 `string.IndexOf` （其中，用于检查是否存在子字符串）可以替换为 `string.Contains` 。|

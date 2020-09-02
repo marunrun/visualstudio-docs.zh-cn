@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: a6a72d1093bc8acd9aae788ff357aee2efeb9e52
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68197639"
 ---
 # <a name="datakind"></a>DataKind
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-指示特定的数据值范围。  
+指示数据值的特定范围。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,41 +44,41 @@ enum DataKind { 
   
 ## <a name="elements"></a>元素  
  DataIsUnknown  
- 不能确定数据符号。  
+ 无法确定数据符号。  
   
  DataIsLocal  
- 数据项是一个本地变量。  
+ 数据项是局部变量。  
   
  DataIsStaticLocal  
- 数据项是一个静态本地变量。  
+ 数据项是一个静态局部变量。  
   
  DataIsParam  
- 数据项是正式的参数。  
+ 数据项是一个形参。  
   
  DataIsObjectPtr  
- 数据项是一个对象指针 (`this`)。  
+ 数据项是 () 的对象指针 `this` 。  
   
  DataIsFileStatic  
- 数据项是一个文件范围内的变量。  
+ 数据项是文件范围的变量。  
   
  DataIsGlobal  
- 数据项是一个全局变量。  
+ 数据项是全局变量。  
   
  DataIsMember  
  数据项是一个对象成员变量。  
   
  DataIsStaticMember  
- 数据项是一个类静态变量。  
+ 数据项是类静态变量。  
   
  DataIsConstant  
- 数据项是常量值。  
+ 数据项是一个常数值。  
   
 ## <a name="remarks"></a>备注  
- 返回此枚举中的值[idiasymbol:: Get_datakind](../../debugger/debug-interface-access/idiasymbol-get-datakind.md)方法。  
+ 此枚举中的值由 [IDiaSymbol：： get_dataKind](../../debugger/debug-interface-access/idiasymbol-get-datakind.md) 方法返回。  
   
 ## <a name="requirements"></a>要求  
- 标头： cvconst.h  
+ 标头： cvconst  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [枚举和结构](../../debugger/debug-interface-access/enumerations-and-structures.md)   
  [IDiaSymbol::get_dataKind](../../debugger/debug-interface-access/idiasymbol-get-datakind.md)

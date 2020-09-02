@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 6a9a15b7284c647cb115c34b5655bdcaa7402ce0
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72663565"
 ---
 # <a name="how-to-change-between-member-notation-and-association-notation-class-designer"></a>如何：在成员表示法与关联表示法之间转换（类设计器）
@@ -33,18 +33,18 @@ ms.locfileid: "72663565"
 
 1. 从“解决方案资源管理器”中的项目节点打开类图 (.cd) 文件。
 
-2. 在类图上的类型形状中，右键单击表示此关联的成员属性或字段，然后选择“显示为关联”。
+2. 在类图上的类型形状中，右键单击表示此关联的成员属性或字段，然后选择“显示为关联”****。
 
     > [!TIP]
-    > 如果在类型形状中没有看到属性或字段，则形状中的隔离舱处于折叠状态。 若要展开类型形状，请双击隔离舱名称或右键单击类型形状，然后选择“展开”。
+    > 如果在类型形状中没有看到属性或字段，则形状中的隔离舱处于折叠状态。 若要展开类型形状，请双击隔离舱名称或右键单击类型形状，然后选择“展开”****。
 
      成员将从类型形状的隔离舱中消失，并将出现连接这两种类型的关联行。 关联行标有属性或字段的名称。
 
 ### <a name="to-change-association-notation-to-member-notation"></a>将关联表示法更改为成员表示法
 
-- 在类图中，右键单击关联行，然后根据情况选择“显示为属性”或“显示为字段”。
+- 在类图中，右键单击关联行，然后根据情况选择“显示为属性”**** 或“显示为字段”****。
 
      关联行将消失，并且属性将显示在类图上类型形状内的相应隔离舱中。
 
-## <a name="see-also"></a>请参阅
- [如何：创建类型之间的继承（类设计器）](../ide/how-to-create-inheritance-between-types-class-designer.md) [如何：查看类型之间的继承（类设计器）](../ide/how-to-view-inheritance-between-types-class-designer.md) [查看类型和关系（类设计器）](../ide/viewing-types-and-relationships-class-designer.md) [如何：可视化集合关联（类设计器）](../ide/how-to-visualize-a-collection-association-class-designer.md)
+## <a name="see-also"></a>另请参阅
+ [如何：创建类型之间的继承 (类设计器) ](../ide/how-to-create-inheritance-between-types-class-designer.md) [如何：查看类型之间的继承 (类设计器](../ide/how-to-view-inheritance-between-types-class-designer.md)) [查看类型和关系 (类设计器](../ide/viewing-types-and-relationships-class-designer.md)) [如何：可视化集合关联 (类设计器](../ide/how-to-visualize-a-collection-association-class-designer.md)) 
