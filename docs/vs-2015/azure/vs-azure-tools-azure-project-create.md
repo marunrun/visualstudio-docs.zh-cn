@@ -12,10 +12,10 @@ ms.topic: conceptual
 ms.date: 03/21/2017
 ms.author: ghogen
 ms.openlocfilehash: c4daf3d92aa08e6dbbb81eac79112772900d08d8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62964015"
 ---
 # <a name="creating-an-azure-cloud-service-project-with-visual-studio"></a>使用 Visual Studio 创建 Azure 云服务项目
@@ -26,9 +26,9 @@ ms.locfileid: "62964015"
 
 1. 以管理员身份启动 Visual Studio。
 
-1. 在主菜单中，选择“文件” > “新建” > “项目”。
+1. 在主菜单上，选择 "**文件**" "  >  **新建**  >  **项目**"。
 
-1. 从 Visual C# 或 Visual Basic 项目模板节点中选择“云”，并从模板列表中选择“Azure 云服务”。
+1. 从 Visual C# 或 Visual Basic 项目模板节点中选择“云”****，并从模板列表中选择“Azure 云服务”****。
 
     ![新建 Azure 云服务](./media/vs-azure-tools-azure-project-create/new-project-wizard-for-cloud-service.png)
 
@@ -36,17 +36,17 @@ ms.locfileid: "62964015"
 
 1. 输入项目的名称和位置以及解决方案的名称。
 
-1. 选择“确定”。
+1. 选择“确定”  。
 
-1. 在“新建 Microsoft Azure 云服务”对话框中，选择要添加的角色，然后选择右箭头按钮以将其添加到解决方案。
+1. 在“新建 Microsoft Azure 云服务”**** 对话框中，选择要添加的角色，然后选择右箭头按钮以将其添加到解决方案。
 
     ![选择新的 Azure 云服务角色](./media/vs-azure-tools-azure-project-create/new-cloud-service.png)
 
-1. 要重命名已添加的角色，请在“新建 Microsoft Azure 云服务”对话框中将鼠标悬停在该角色上，然后从上下文菜单中选择“重命名”。 还可在添加角色后在解决方案（**解决方案资源管理器**中）内对其进行重命名。
+1. 要重命名已添加的角色，请在“新建 Microsoft Azure 云服务”**** 对话框中将鼠标悬停在该角色上，然后从上下文菜单中选择“重命名”****。 还可在添加角色后在解决方案（**解决方案资源管理器**中）内对其进行重命名。
 
     ![重命名 Azure 云服务角色](./media/vs-azure-tools-azure-project-create/new-cloud-service-rename.png)
 
-Visual Studio Azure 项目与解决方案中的角色项目具有关联。 该项目还包括服务定义文件和服务配置文件：
+Visual Studio Azure 项目与解决方案中的角色项目具有关联。 该项目还包括服务定义文件** 和服务配置文件**：
 
 - **服务定义文件** - 定义了应用程序的运行时设置，包括所需角色、终结点和虚拟机大小。
 - **服务配置文件** - 配置了角色有多少实例在运行以及为角色定义的设置的值。

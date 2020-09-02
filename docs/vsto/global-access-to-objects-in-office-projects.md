@@ -31,10 +31,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: f76a2e74315980764a2cdffe67af4403552de7fe
-ms.sourcegitcommit: d293c0e3e9cc71bd4117b6dfd22990d52964addc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88041046"
 ---
 # <a name="global-access-to-objects-in-office-projects"></a>对 Office 项目中对象的全局访问
@@ -51,9 +51,9 @@ ms.locfileid: "88041046"
 
 - `ThisAddIn`VSTO 外接程序项目中的类。 可以通过使用 `Globals.ThisAddIn` 属性访问此对象。
 
-- 项目中通过使用功能区设计器自定义的所有功能区。 可以通过使用 `Globals.Ribbons` 属性访问功能区。 有关详细信息，请参阅[在运行时访问功能区](../vsto/accessing-the-ribbon-at-run-time.md)。
+- 项目中通过使用功能区设计器自定义的所有功能区。 可以通过使用 `Globals.Ribbons` 属性访问功能区。 有关详细信息，请参阅 [在运行时访问功能区](../vsto/accessing-the-ribbon-at-run-time.md)。
 
-- Outlook VSTO 外接程序项目中的所有 Outlook 窗体区域。 可以通过使用 `Globals.FormRegions` 属性访问这些窗体区域。 有关详细信息，请参阅[在运行时访问窗体区域](../vsto/accessing-a-form-region-at-run-time.md)。
+- Outlook VSTO 外接程序项目中的所有 Outlook 窗体区域。 可以通过使用 `Globals.FormRegions` 属性访问这些窗体区域。 有关详细信息，请参阅 [在运行时访问窗体区域](../vsto/accessing-a-form-region-at-run-time.md)。
 
 - 一个工厂对象，该对象使你可在运行时在面向 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)]的项目中创建功能区控件和主机项。 可以通过使用 `Globals.Factory` 属性访问此对象。 此对象是实现以下接口之一的类的实例：
 
@@ -73,7 +73,7 @@ ms.locfileid: "88041046"
  `Globals`在初始化文档或 VSTO 外接程序之前，尝试使用类的代码可能会引发运行时异常。 例如，声明一个类级变量时使用 `Globals` 可能会失败，因为在对声明的对象进行实例化之前，可能不会使用对所有主机项的引用将 `Globals` 类初始化。
 
 > [!NOTE]
-> 永远不会在设计时初始化 `Globals` 类，控件实例由设计器创建。 这意味着，如果您在用户控件类的内部创建使用类的属性的用户控件 `Globals` ，则在尝试使用返回的对象之前，必须检查属性是否返回**null** 。
+> 永远不会在设计时初始化 `Globals` 类，控件实例由设计器创建。 这意味着，如果您在用户控件类的内部创建使用类的属性的用户控件 `Globals` ，则在尝试使用返回的对象之前，必须检查属性是否返回 **null** 。
 
 ## <a name="see-also"></a>另请参阅
 - [在运行时访问功能区](../vsto/accessing-the-ribbon-at-run-time.md)

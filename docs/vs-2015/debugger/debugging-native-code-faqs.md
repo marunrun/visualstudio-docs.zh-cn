@@ -1,5 +1,5 @@
 ---
-title: 调试本机代码常见问题 |Microsoft Docs
+title: 调试本机代码常见问题解答 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -23,10 +23,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 63055cf443f20e353ac87ca3226e9f8208587fb6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68190497"
 ---
 # <a name="debugging-native-code-faqs"></a>调试本机代码常见问题
@@ -52,6 +52,6 @@ ms.locfileid: "68190497"
   
 - [如果在 MFC 中暂停，如何重新回到调用 MFC 的函数？](../debugger/how-to-get-back-to-the-function-that-called-mfc-if-halted.md)  
   
-## <a name="see-also"></a>请参阅  
- [调试器安全](../debugger/debugger-security.md)   
+## <a name="see-also"></a>另请参阅  
+ [调试器安全性](../debugger/debugger-security.md)   
  [调试本机代码](../debugger/debugging-native-code.md)

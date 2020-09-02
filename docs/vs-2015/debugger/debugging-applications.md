@@ -15,10 +15,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 747f96a31ace1267512b9327a0d6aaaf07e02631
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545582"
 ---
 # <a name="debugging-applications"></a>调试应用程序
@@ -28,7 +28,7 @@ ms.locfileid: "85545582"
   
 ## <a name="debugging-for-different-types-of-applications"></a>对不同类型的应用程序进行调试  
   
-|Title|描述|  
+|Title|说明|  
 |-|-|  
 |[调试 Windows 应用商店和 Windows 通用应用](../debugger/debugging-windows-store-and-windows-universal-apps.md)|描述如何调试 Windows 应用商店应用和 Windows 通用应用。|  
 |[调试托管代码](../debugger/debugging-managed-code.md)|描述如何调试托管代码（Visual C#、Visual Basic 和 F3）。|  

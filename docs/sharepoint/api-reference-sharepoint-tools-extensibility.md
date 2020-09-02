@@ -1,5 +1,5 @@
 ---
-title: API 参考 （SharePoint 工具扩展） |Microsoft Docs
+title: " (SharePoint 工具扩展性的 API 参考) |Microsoft Docs"
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -13,14 +13,14 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 37639068b74b5d99864871355a8b9ef36906f6cd
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62987989"
 ---
-# <a name="api-reference-sharepoint-tools-extensibility"></a>API 参考 （SharePoint 工具扩展）
-  本部分包含用于扩展 Visual Studio 中的 SharePoint 工具的 API 参考文档。
+# <a name="api-reference-sharepoint-tools-extensibility"></a> (SharePoint 工具扩展性的 API 参考) 
+  本部分包含有关在 Visual Studio 中扩展 SharePoint 工具的 API 参考文档。
 
 ## <a name="in-this-section"></a>本节内容
  <xref:Microsoft.VisualStudio.SharePoint>
@@ -29,7 +29,7 @@ ms.locfileid: "62987989"
 
  <xref:Microsoft.VisualStudio.SharePoint.Commands>
 
- 包含可用于创建自定义的类型*SharePoint 命令*。 SharePoint 命令是一个用于从 SharePoint 工具扩展中调入 SharePoint 服务器对象模型的方法。
+ 包含可用于创建自定义 *SharePoint 命令*的类型。 SharePoint 命令是一个用于从 SharePoint 工具扩展中调入 SharePoint 服务器对象模型的方法。
 
  <xref:Microsoft.VisualStudio.SharePoint.Deployment>
 
@@ -37,11 +37,11 @@ ms.locfileid: "62987989"
 
  <xref:Microsoft.VisualStudio.SharePoint.Explorer>
 
- 包含用于扩展中的 SharePoint 节点的类型**服务器资源管理器**或定义自己的节点的类型。
+ 包含用来在 **服务器资源管理器** 中扩展 SharePoint 节点或定义您自己的节点类型的类型。
 
  <xref:Microsoft.VisualStudio.SharePoint.Explorer.Extensions>
 
- 包含可用于获取有关内置的信息的类型**服务器资源管理器**表示 SharePoint 站点，例如表示列表、 字段或内容类型的节点上的各个组件的节点。
+ 包含可用于获取有关内置 **服务器资源管理器** 节点的信息的类型，这些节点表示 SharePoint 站点上的单个组件，如表示列表、字段或内容类型的节点。
 
  <xref:Microsoft.VisualStudio.SharePoint.Features>
 
@@ -67,10 +67,10 @@ ms.locfileid: "62987989"
 
  包含用于为 SharePoint 项目自定义功能和包验证行为的类型。
 
-## <a name="see-also"></a>请参阅
-- [引用&#40;SharePoint 工具扩展&#41;](../sharepoint/reference-sharepoint-tools-extensibility.md)
-- [工具扩展的 SharePoint 的编程模型概述](../sharepoint/overview-of-the-programming-model-of-sharepoint-tools-extensions.md)
+## <a name="see-also"></a>另请参阅
+- [SharePoint 工具扩展性 &#40;引用&#41;](../sharepoint/reference-sharepoint-tools-extensibility.md)
+- [SharePoint 工具扩展的编程模型概述](../sharepoint/overview-of-the-programming-model-of-sharepoint-tools-extensions.md)
 - [扩展 SharePoint 项目系统](../sharepoint/extending-the-sharepoint-project-system.md)
-- [扩展服务器资源管理器中的 SharePoint 连接节点](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)
+- [扩展中的 "SharePoint 连接" 节点服务器资源管理器](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)
 - [扩展 SharePoint 打包和部署](../sharepoint/extending-sharepoint-packaging-and-deployment.md)
 - [调入 SharePoint 对象模型](../sharepoint/calling-into-the-sharepoint-object-models.md)

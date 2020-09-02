@@ -1,5 +1,5 @@
 ---
-title: IDebugFunctionObject2::CreateObject |Microsoft Docs
+title: IDebugFunctionObject2：： CreateObject |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,16 +12,16 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: b60801f5288e88795ab75145b9c6120d4308d1c7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68202985"
 ---
 # <a name="idebugfunctionobject2createobject"></a>IDebugFunctionObject2::CreateObject
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-创建使用给定评估标志设置和超时值的构造函数的对象。  
+创建一个对象，该对象使用给定了计算标志设置和超时值的构造函数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -49,28 +49,28 @@ int CreateObject (
   
 #### <a name="parameters"></a>参数  
  `pConstructor`  
- [in][IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md)对象，表示要创建的对象的构造函数。  
+ 中一个 [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) 对象，表示要创建的对象的构造函数。  
   
  `dwArgs`  
- [in]中的参数数量`pArg`数组。 表示传递给构造函数的参数数目。  
+ 中数组中参数的数目 `pArg` 。 表示传递给构造函数的参数的数目。  
   
  `pArgs`  
- [in]一个数组[IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)表示的参数的对象传递给构造函数。  
+ 中 [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) 对象的数组，这些对象表示传递给构造函数的参数。  
   
  `dwEvalFlags`  
- [in]中的标志的组合[EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md)指定计算的执行方式的枚举。  
+ 中 [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md) 枚举中的标志的组合，该枚举指定如何执行计算。  
   
  `dwTimeout`  
- [in]最大时间 （毫秒），此方法返回前等待。 使用**无限**无限期等待。  
+ 中从此方法返回前等待的最长时间（以毫秒为单位）。 使用 **无限大** 无限期等待。  
   
  `ppObject`  
- [out]返回**IDebugObject**表示新创建的对象。  
+ 弄返回表示新创建的对象的 **IDebugObject** 。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
 ## <a name="remarks"></a>备注  
- 调用此方法以创建一个对象，表示一个类或其他复杂类型，它需要是一个参数的构造函数的实例。  
+ 调用此方法可创建一个对象，该对象表示类的实例，或者需要构造函数的其他复杂类型，即参数。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugFunctionObject2](../../../extensibility/debugger/reference/idebugfunctionobject2.md)

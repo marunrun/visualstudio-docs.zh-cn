@@ -17,16 +17,16 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 05ffd1cf32f8c7ea93e63232f7026c6c926f9308
-ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85382167"
 ---
 # <a name="how-to-set-a-custom-log-file-location-for-clickonce-deployment-errors"></a>如何：为 ClickOnce 部署错误设置一个自定义日志文件位置
-[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]维护所有部署的激活日志文件。 这些日志记录与安装和初始化部署有关的任何错误 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 。 默认情况下，将 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 为每个部署激活创建一个日志文件。 它将这些日志文件存储在临时 Internet Files 文件夹中。 发生激活失败时，会向用户显示部署的日志文件，并且用户在结果错误对话框中单击 "**详细信息**"。
+[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 维护所有部署的激活日志文件。 这些日志记录与安装和初始化部署有关的任何错误 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 。 默认情况下，将 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 为每个部署激活创建一个日志文件。 它将这些日志文件存储在临时 Internet Files 文件夹中。 发生激活失败时，会向用户显示部署的日志文件，并且用户在结果错误对话框中单击 " **详细信息** "。
 
- 您可以使用注册表编辑器（**regedit.exe**）来设置自定义日志文件路径，从而为特定客户端更改此行为。 在这种情况下，会 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 将所有部署的激活成功和失败记录到一个文件中。
+ 您可以使用注册表编辑器 (**regedit.exe**) 来设置自定义日志文件路径，从而更改特定客户端的此行为。 在这种情况下，会 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 将所有部署的激活成功和失败记录到一个文件中。
 
 > [!CAUTION]
 > 如果注册表编辑器使用不当，则可能会产生严重问题，导致重新安装操作系统。 请慎用注册表编辑器，风险自负。
