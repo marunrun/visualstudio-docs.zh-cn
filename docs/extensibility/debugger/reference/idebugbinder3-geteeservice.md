@@ -1,5 +1,5 @@
 ---
-title: IDebugBinder3：：获取服务 |微软文档
+title: IDebugBinder3：： GetEEService |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 7c08d7df4a6b05be489f6b9ab06569c085f3b1f8
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80735822"
 ---
 # <a name="idebugbinder3geteeservice"></a>IDebugBinder3::GetEEService
@@ -47,24 +47,24 @@ Int GetEEService(
 
 ## <a name="parameters"></a>参数
 `vendor`\
-[在]`GUID`供应商的 null 值是可以接受的）。
+[in] `GUID` 对于供应商 (可接受) 的 null 值。
 
 `language`\
-[在]`GUID`语言（空值是可以接受的）。
+[in] `GUID` 对于语言 (可以接受) 的 null 值。
 
 `iid`\
-[在]`IID`获得的服务。
+[in] `IID` 要获取的服务的。
 
 `ppService`\
-[出]与请求的服务的接口。
+弄请求的服务的接口。
 
 ## <a name="return-value"></a>返回值
- 如果成功，返回`S_OK`;否则，返回错误代码。
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。
 
 ## <a name="remarks"></a>备注
- 传递[IEE 可视化服务提供程序](../../../extensibility/debugger/reference/ieevisualizerserviceprovider.md)接口 （`IID_IEEVisualizerServiceProvider`）， 以查看类型可视化工具服务是否可用。 `IID` 如果是这样，表达式赋值器可以获取[IEE 可视化器服务](../../../extensibility/debugger/reference/ieevisualizerservice.md)接口以支持类型可视化器。 有关详细信息[，请参阅可视化和查看数据](../../../extensibility/debugger/visualizing-and-viewing-data.md)。
+ 将 `IID` [IEEVisualizerServiceProvider](../../../extensibility/debugger/reference/ieevisualizerserviceprovider.md) 接口的传递 (`IID_IEEVisualizerServiceProvider`) ，以查看类型可视化工具服务是否可用。 如果是这样，表达式计算器可以获取 [IEEVisualizerService](../../../extensibility/debugger/reference/ieevisualizerservice.md) 接口以支持类型可视化工具。 有关详细信息，请参阅 [可视化和查看数据](../../../extensibility/debugger/visualizing-and-viewing-data.md) 。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md)
 - [IEEVisualizerServiceProvider](../../../extensibility/debugger/reference/ieevisualizerserviceprovider.md)
 - [IEEVisualizerService](../../../extensibility/debugger/reference/ieevisualizerservice.md)

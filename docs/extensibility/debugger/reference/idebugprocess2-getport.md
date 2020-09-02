@@ -1,5 +1,5 @@
 ---
-title: IDebugProcess2：：获取端口 |微软文档
+title: IDebugProcess2：： GetPort |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 7ea4d888c1e83e90882e2f42d8ef54ba8f6e34ed
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80723914"
 ---
 # <a name="idebugprocess2getport"></a>IDebugProcess2::GetPort
-获取进程正在运行的端口。
+获取进程正在其上运行的端口。
 
 ## <a name="syntax"></a>语法
 
@@ -41,11 +41,11 @@ int GetPort( 
 
 ## <a name="parameters"></a>参数
 `ppPort`\
-[出]返回表示启动进程的端口的[IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md)对象。
+弄返回一个 [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) 对象，该对象表示启动进程的端口。
 
 ## <a name="return-value"></a>返回值
- 如果成功，返回`S_OK`;否则，返回错误代码。
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)
 - [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md)

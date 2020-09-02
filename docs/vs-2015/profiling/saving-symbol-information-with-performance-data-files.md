@@ -13,16 +13,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: e9d2e8b0414746523d0f76e8266f6463d9c05574
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68160287"
 ---
 # <a name="saving-symbol-information-with-performance-data-files"></a>使用性能数据文件保存符号信息
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-如果使用 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 集成开发环境 (IDE) 分析文件并且计划将 VSP 文件移动到其他计算机，则必须设置性能项目设置以在报告文件中保存或序列化  符号。 这会增加报告文件的大小。 出于以下两个原因，需要序列化符号：  
+如果使用 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 集成开发环境 (IDE) 分析文件并且计划将 VSP 文件移动到其他计算机，则必须设置性能项目设置以在报告文件中保存或序列化** 符号。 这会增加报告文件的大小。 出于以下两个原因，需要序列化符号：  
   
 - 在目标程序集从它们在临时存储中的位置丢失之前，将代码符号嵌入到性能报告中。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "68160287"
   
   可以从 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] IDE 或是从命令行序列化符号：  
   
-- 要在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] IDE 中序列化符号，请指向菜单栏上的“工具”  ，然后单击“选项”  。 在“选项”  窗口中，选择“性能工具”  ，然后选中“自动序列化符号信息”  复选框。  
+- 要在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] IDE 中序列化符号，请指向菜单栏上的“工具”****，然后单击“选项”****。 在“选项”**** 窗口中，选择“性能工具”****，然后选中“自动序列化符号信息”**** 复选框。  
   
 - 保存报告文件时，PACKSYMBOLS 是等效命令行选项。 若要序列化符号，请输入 **vsperfreport /summary:all /packsymbols filename.vsp**。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "68160287"
   
  VsPerfReport -packsymbols -summary:all filename.vsp  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [保存和导出性能工具数据](../profiling/saving-and-exporting-performance-tools-data.md)   
  [如何：引用 Windows 符号信息](../profiling/how-to-reference-windows-symbol-information.md)   
  [VSPerfReport](../profiling/vsperfreport.md)

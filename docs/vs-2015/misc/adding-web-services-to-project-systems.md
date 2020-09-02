@@ -11,24 +11,24 @@ ms.assetid: 8efa078b-68b2-45a2-9be2-44f807bc0d7f
 caps.latest.revision: 8
 manager: jillfra
 ms.openlocfilehash: f5b192be8e5f68ad9314fe08fff963c032013cb0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "63002662"
 ---
 # <a name="adding-web-services-to-project-systems"></a>将 Web 服务添加到项目系统
-一般情况下，XML Web services 是以编程方式的信息返回到项目系统使用 SOAP （简单对象访问协议） 协议的 URL 可寻址资源。 您可以通过使用 Web 服务集成到 VSPackage 项目系统<xref:Microsoft.VisualStudio.Shell.Interop.IVsAddProjectItemDlg2>接口。  
+XML Web 服务通常是 URL 可寻址的资源，它使用 SOAP (简单对象访问协议) 协议将编程信息返回到项目系统。 你可以使用接口将 Web 服务集成到你的 VSPackage 项目系统 <xref:Microsoft.VisualStudio.Shell.Interop.IVsAddProjectItemDlg2> 。  
   
-### <a name="to-add-a-web-service-to-your-project-system"></a>若要将 Web 服务添加到项目系统  
+### <a name="to-add-a-web-service-to-your-project-system"></a>将 Web 服务添加到项目系统  
   
-1. 调用`QueryService`有关<xref:Microsoft.VisualStudio.Shell.Interop.IVsAddProjectItemDlg2>接口通过<xref:Microsoft.VisualStudio.Shell.Interop.SVsAddWebReferenceDlg>服务。  
+1. `QueryService` <xref:Microsoft.VisualStudio.Shell.Interop.IVsAddProjectItemDlg2> 通过服务调用接口 <xref:Microsoft.VisualStudio.Shell.Interop.SVsAddWebReferenceDlg> 。  
   
-2. 调用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsAddWebReferenceDlg2.AddWebReferenceDlg%2A> 方法。 如果您传入`pDiscoverySession`作为参数`NULL`、 为您创建发现会话和会话缓存，这样就可供后续使用<xref:Microsoft.VisualStudio.Shell.Interop.IVsAddWebReferenceDlg2>接口。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsAddWebReferenceDlg2.AddWebReferenceDlg%2A> 方法返回一个指向<xref:Microsoft.VisualStudio.Shell.Interop.IDiscoveryResult2>。  
+2. 调用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsAddWebReferenceDlg2.AddWebReferenceDlg%2A> 方法。 如果以参数的 `pDiscoverySession` 形式传递 `NULL` ，则会为你创建发现会话，并缓存该会话，以便它可供 <xref:Microsoft.VisualStudio.Shell.Interop.IVsAddWebReferenceDlg2> 接口使用。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsAddWebReferenceDlg2.AddWebReferenceDlg%2A> 方法返回指向的指针 <xref:Microsoft.VisualStudio.Shell.Interop.IDiscoveryResult2> 。  
   
-3. 调用 <xref:Microsoft.VisualStudio.Shell.Interop.IDiscoveryResult.AddWebReference%2A> 方法。 在自动化对象中传递为 Web 服务的引用文件夹作为`pUnkWebReferenceFolder`参数。 在 Visual Studio 环境然后会检查 Web 服务是否已存在。 如果不存在 Web 服务，该环境下载，并将 Web 服务添加到一个文件夹和子节点的文件夹的任何其他文件 （如.wsdl 文件）。  
+3. 调用 <xref:Microsoft.VisualStudio.Shell.Interop.IDiscoveryResult.AddWebReference%2A> 方法。 传入作为参数的 Web 服务引用文件夹的自动化对象 `pUnkWebReferenceFolder` 。 然后，Visual Studio 环境会检查 Web 服务是否已存在。 如果 Web 服务不存在，则环境会将 Web 服务下载并添加到文件夹中，并将任何其他文件 (例如 .wsdl 文件) 到文件夹的子节点。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsAddWebReferenceDlg2>   
  <xref:Microsoft.VisualStudio.Shell.Interop.IDiscoveryResult>   
  <xref:Microsoft.VisualStudio.Shell.Interop.IDiscoverySession>   

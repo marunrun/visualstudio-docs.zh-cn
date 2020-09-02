@@ -28,6 +28,7 @@ ms.locfileid: "78263067"
 包含一系列可选参数，这些参数将显示在通过使用 `UsingTask` `TaskFactory` 生成的任务上。 有关详细信息，请参阅 [UsingTask 元素 (MSBuild)](../msbuild/usingtask-element-msbuild.md)。
 
  \<Project> \<UsingTask> \<ParameterGroup>
+ \<ParameterGroup>
 
 ## <a name="syntax"></a>语法
 

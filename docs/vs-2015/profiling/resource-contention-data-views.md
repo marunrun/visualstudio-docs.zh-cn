@@ -13,10 +13,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 1d672d90254626cfef9bd87bfef9dcf2426aa346
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68160302"
 ---
 # <a name="resource-contention-data-views"></a>资源争用数据视图
@@ -28,7 +28,7 @@ ms.locfileid: "68160302"
  [“摘要”视图 - 探查器争用数据](../profiling/resource-contention-data-views.md)  
  显示分析数据的图形时间线，并列出参与大多数阻止事件的函数和资源。  
   
- [“调用关系树”视图](../profiling/call-tree-view-contention-data.md)  
+ [“调用树”视图](../profiling/call-tree-view-contention-data.md)  
  显示表示执行路径的层次结构树和分析运行期间函数的资源争用数据。  
   
  [“模块”视图](../profiling/modules-view-contention-data.md)  
@@ -58,6 +58,6 @@ ms.locfileid: "68160302"
  [“进程”视图](../profiling/process-view-contention-data.md)  
  按进程和线程列出资源争用。  
   
-## <a name="reference"></a>参考  
+## <a name="reference"></a>引用  
  [“函数详细信息”视图](../profiling/function-details-view.md)  
  显示所选函数和调用所选函数及被所选函数调用的函数之间的关系图形图表。

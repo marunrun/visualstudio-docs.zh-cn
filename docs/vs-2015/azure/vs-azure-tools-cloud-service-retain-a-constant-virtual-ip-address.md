@@ -12,10 +12,10 @@ ms.topic: conceptual
 ms.date: 03/21/2017
 ms.author: ghogen
 ms.openlocfilehash: 525b5fe8f2726ab1f7f2ff80abf7bc06937a7a0b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62964203"
 ---
 # <a name="retain-a-constant-virtual-ip-address-for-an-azure-cloud-service"></a>为 Azure 云服务保留固定的虚拟 IP 地址
@@ -29,27 +29,27 @@ ms.locfileid: "62964203"
 ## <a name="update-a-cloud-service-without-changing-its-vip"></a>更新云服务，而不更改其 VIP
 1. 在 Visual Studio 中创建或打开 Azure 云服务项目。 
 
-2. 在“解决方案资源管理器”中，右键单击项目。 在快捷菜单上，选择“发布”。
+2. 在“解决方案资源管理器”中，右键单击项目。 在快捷菜单上，选择“发布”****。
 
     ![发布菜单](./media/vs-azure-tools-cloud-service-retain-a-constant-virtual-ip-address/solution-explorer-publish-menu.png)
 
-3. 在“发布 Azure 应用程序”对话框中，选择要部署的 Azure 订阅。 必要时进行登录，并选择“下一步”。
+3. 在“发布 Azure 应用程序”**** 对话框中，选择要部署的 Azure 订阅。 必要时进行登录，并选择“下一步”****。
 
     ![发布 Azure 应用程序“登录”页](./media/vs-azure-tools-cloud-service-retain-a-constant-virtual-ip-address/azure-publish-signin.png)
 
-4. 在“常用设置”选项卡中，验证要部署到的云服务的名称、“环境”、“生成配置”和“服务配置”是否全部正确。
+4. 在“常用设置”**** 选项卡中，验证要部署到的云服务的名称、“环境”****、“生成配置”**** 和“服务配置”**** 是否全部正确。
 
     ![发布 Azure 应用程序“常用设置”选项卡](./media/vs-azure-tools-cloud-service-retain-a-constant-virtual-ip-address/azure-publish-common-settings.png)
 
-5. 在“高级设置”选项卡上，确认“部署标签”和“存储帐户”正确无误。 确认“失败时删除部署”复选框处于未选中状态，并确认“部署更新”复选框处于选中状态。 通过清除“失败时删除部署”复选框，确保部署期间出错时不会丢失 VIP。 通过选中“部署更新”复选框，确保重新发布应用程序时不会删除部署且不会丢失 VIP。 
+5. 在“高级设置”**** 选项卡上，确认“部署标签”**** 和“存储帐户”**** 正确无误。 确认“失败时删除部署”**** 复选框处于未选中状态，并确认“部署更新”**** 复选框处于选中状态。 通过清除“失败时删除部署”**** 复选框，确保部署期间出错时不会丢失 VIP。 通过选中“部署更新”**** 复选框，确保重新发布应用程序时不会删除部署且不会丢失 VIP。 
 
     ![发布 Azure 应用程序“高级设置”选项卡](./media/vs-azure-tools-cloud-service-retain-a-constant-virtual-ip-address/azure-publish-advanced-settings.png)
 
-6. 若要进一步指定要更新角色的方式，请选择“部署更新”旁边的“设置”。 选择“增量更新”或“同时更新”，并选择“确定”。 选择“增量更新”会逐个更新应用程序的每个实例，以使应用程序始终可用。 选择“同时更新”会同时更新应用程序的所有实例。 同时更新速度更快，但在更新过程中服务可能不可用。 完成后，选择“下一步”。
+6. 若要进一步指定要更新角色的方式，请选择“部署更新”**** 旁边的“设置”****。 选择“增量更新”**** 或“同时更新”****，并选择“确定”****。 选择“增量更新”**** 会逐个更新应用程序的每个实例，以使应用程序始终可用。 选择“同时更新”**** 会同时更新应用程序的所有实例。 同时更新速度更快，但在更新过程中服务可能不可用。 完成后，选择“下一步”****。
 
     ![发布 Azure 应用程序“部署设置”页](./media/vs-azure-tools-cloud-service-retain-a-constant-virtual-ip-address/azure-publish-deployment-update-settings.png)
 
-7. 在“发布 Azure 应用程序”对话框中，选择“下一步”，直到显示“摘要”页。 验证设置，并选择“发布”。
+7. 在“发布 Azure 应用程序”**** 对话框中，选择“下一步”****，直到显示“摘要”**** 页。 验证设置，并选择“发布”****。
 
     ![发布 Azure 应用程序“摘要”页](./media/vs-azure-tools-cloud-service-retain-a-constant-virtual-ip-address/azure-publish-summary.png)
 

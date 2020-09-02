@@ -13,23 +13,23 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 1222e6603ea45e1a4172af84b9062c17a407c28c
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72986150"
 ---
 # <a name="create-vsto-add-ins-for-office-by-using-visual-studio"></a>使用 Visual Studio 创建 VSTO 外接程序
-  可以使用 Visual Studio 中的 Microsoft Office 开发人员工具来创建可扩展 Office 的 .NET Framework 应用程序。 这些应用程序也称为“Office 解决方案” 。
+  可以使用 Visual Studio 中的 Microsoft Office 开发人员工具来创建可扩展 Office 的 .NET Framework 应用程序。 这些应用程序也称为“Office 解决方案” **。
 
  Office 开发人员工具提供了一些功能，可帮助你创建适合于各种业务需求的 Office 解决方案。 这些工具包括项目模板和可视化设计器，前者有助于你通过使用 Visual Basic 或 Visual C# 创建 Office 解决方案，后者有助于你为 Office 解决方案创建自定义用户界面。
 
 [!include[Add-ins note](includes/addinsnote.md)]
 
- 有关 Office 开发的最新信息，请参阅[Microsoft Office 开发人员中心](https://developer.microsoft.com/office/docs)。
+ 有关 Office 开发的最新信息，请参阅 [Microsoft Office 开发人员中心](https://developer.microsoft.com/office/docs)。
 
 ## <a name="in-this-section"></a>本节内容
-- [Visual Studio &#40;中的 Office 开发入门&#41;](getting-started-office-development-in-visual-studio.md)
+- [开始 &#40;Visual Studio 中的 Office 开发&#41;](getting-started-office-development-in-visual-studio.md)
 
  提供一些链接，这些链接指向有关如何配置开发计算机以创建 Office 解决方案、如何开始创建 Office 解决方案以及 Visual Studio 中的 Office 开发的新增功能的信息。
 
@@ -97,25 +97,25 @@ ms.locfileid: "72986150"
 
  提供指向示例应用程序和主题的链接，这些主题提供有关执行常规任务的分步说明。
 
-- [Visual Studio &#40;中的常规参考 Office 开发&#41;](general-reference-office-development-in-visual-studio.md)
+- [Visual Studio 中的常规参考 &#40;Office 开发&#41;](general-reference-office-development-in-visual-studio.md)
 
  提供指向有关 Office 主互操作程序集、清单、用户界面元素和错误消息的详细信息的链接。
 
-- [Visual Studio &#40;中的托管引用 Office 开发&#41;](managed-reference-office-development-in-visual-studio.md)
+- [Visual Studio 中的托管引用 &#40;Office 开发&#41;](managed-reference-office-development-in-visual-studio.md)
 
  提供指向有关在 Office 项目中使用的针对 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]的 API 命名空间和类型的链接。 有关面向 .NET Framework 3.5 的 Office 项目中使用的命名空间和类型的 API 参考文档，请参阅 Visual Studio 2008 文档中的以下参考部分： [2007 系统托管参考](managed-reference-office-development-in-visual-studio.md)。
 
-- [Visual Studio 中&#40;的非托管 API 参考 Office 开发&#41;](unmanaged-api-reference-office-development-in-visual-studio.md)
+- [Visual Studio 中的 Office 开发 &#40;非托管 API 参考&#41;](unmanaged-api-reference-office-development-in-visual-studio.md)
 
  包含一些链接，这些链接指向有关可以使用 COM 接口执行各种操作（例如加载和卸载 Office 应用程序中托管 VSTO 外接程序）方面的信息。
 
 ## <a name="related-sections"></a>相关章节
-- [Visual Studio 开发人员门户中的 Office 开发](https://developer.microsoft.com/office/docs)提供其他资源，例如技术文章、视频和博客。
+- [Visual Studio 开发人员门户中的 Office 开发](https://developer.microsoft.com/office/docs) 提供其他资源，例如技术文章、视频和博客。
 
-- [Visual Studio 开发人员中心](https://visualstudio.microsoft.com/)提供其他 Visual Studio 资源，例如技术文章、视频和博客。
+- [Visual Studio 开发人员中心](https://visualstudio.microsoft.com/) 提供其他 Visual Studio 资源，例如技术文章、视频和博客。
 
-- [MSDN library Microsoft Office 开发部分](/previous-versions/office/office-12/bb726434(v=office.12))MSDN library 的区域，可在其中找到有关开发多个版本的 Office （不特定于使用 Visual Studio 的 Office 开发）的解决方案的文章和参考文档。
+- [MSDN library Microsoft Office 开发部分](/previous-versions/office/office-12/bb726434(v=office.12)) MSDN library 的区域，可在其中找到有关开发多种 Office 版本的解决方案的文章和参考文档 (不特定于使用 Visual Studio 的 Office 开发) 。
 
-- [Visual Studio 中的应用程序开发](https://msdn.microsoft.com/97490c1b-a247-41fb-8f2c-bc4c201eff68)包含指向一些主题的链接，这些主题说明如何使用 Visual Studio 设计、开发、调试和部署 web 应用程序、XML web 服务和传统客户端应用程序。
+- [Visual Studio 中的应用程序开发](https://msdn.microsoft.com/97490c1b-a247-41fb-8f2c-bc4c201eff68) 包含指向一些主题的链接，这些主题说明如何使用 Visual Studio 设计、开发、调试和部署 web 应用程序、XML web 服务和传统客户端应用程序。
 
-- [Visual Studio 中的 .NET Framework 编程](/previous-versions/visualstudio/visual-studio-2010/k1s94fta(v=vs.100))讨论 .NET Framework 在 Visual Basic 和视觉对象C#中的应用程序开发。
+- [Visual Studio 中的 .NET Framework 编程](/previous-versions/visualstudio/visual-studio-2010/k1s94fta(v=vs.100)) 讨论在 Visual Basic 和 Visual c # 中具有 .NET Framework 的应用程序开发。

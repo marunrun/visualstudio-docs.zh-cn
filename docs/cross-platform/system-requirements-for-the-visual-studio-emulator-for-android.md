@@ -28,7 +28,7 @@ ms.locfileid: "77272054"
 > [!IMPORTANT]
 > 仿真器的安装程序会检查运行 Visual Studio Emulator for Android 的先决条件。 如果先决条件不存在将显示警告，但并不需要这些条件。
 
-## <a name="Checklist"></a> 快速清单
+## <a name="quick-checklist"></a><a name="Checklist"></a> 快速清单
 
 以下是 Visual Studio Emulator for Android 运行要求的快速清单。 有关更多详细信息，请参阅本主题的后续章节。
 

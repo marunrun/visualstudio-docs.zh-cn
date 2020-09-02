@@ -16,24 +16,24 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 03918353b66c36698b5d17b332da052b6d95c87a
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85544386"
 ---
 # <a name="ca2108-review-declarative-security-on-value-types"></a>CA2108:检查有关值类型的声明性安全
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|Item|值|
+|项|值|
 |-|-|
 |TypeName|ReviewDeclarativeSecurityOnValueTypes|
 |CheckId|CA2108|
-|Category|Microsoft.Security|
+|类别|Microsoft.Security|
 |是否重大更改|非重大更改|
 
 ## <a name="cause"></a>原因
- 公共或受保护值类型受[数据和建模](https://msdn.microsoft.com/library/8c37635d-e2c1-4b64-a258-61d9e87405e6)或[链接要求](https://msdn.microsoft.com/library/a33fd5f9-2de9-4653-a4f0-d9df25082c4d)保护。
+ 公共或受保护值类型受 [数据和建模](https://msdn.microsoft.com/library/8c37635d-e2c1-4b64-a258-61d9e87405e6) 或 [链接要求](https://msdn.microsoft.com/library/a33fd5f9-2de9-4653-a4f0-d9df25082c4d)保护。
 
 ## <a name="rule-description"></a>规则描述
  值类型在其他构造函数执行之前由其默认构造函数进行分配和初始化。 如果值类型受需求或 LinkDemand 的保护，并且调用方没有满足安全检查要求的权限，则除默认值以外的任何构造函数都将失败，并将引发安全异常。 未解除分配值类型;它保留为其默认构造函数设置的状态。 不要假设传递值类型的实例的调用方有权创建或访问该实例。
