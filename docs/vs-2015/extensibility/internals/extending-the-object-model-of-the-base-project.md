@@ -1,5 +1,5 @@
 ---
-title: 扩展的基础项目对象模型 |Microsoft Docs
+title: 扩展基项目的对象模型 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,24 +13,24 @@ caps.latest.revision: 18
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 7723881bce81824b66a936793175077a0ec67666
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68187169"
 ---
 # <a name="extending-the-object-model-of-the-base-project"></a>扩展基项目的对象模型
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-项目子类型可能会扩展在以下位置中的基础项目的自动化对象模型：  
+项目子类型可以在以下位置扩展基本项目的自动化对象模型：  
   
-- Project.Extender ("\<ProjectSubtypeName >") – 这样，项目子类型与自定义方法从提供对象<xref:EnvDTE.Project>。 项目子类型可以使用自动化扩展程序来公开`Project`对象。 <xref:EnvDTE80.IInternalExtenderProvider>接口实现的主项目子类型聚合器上应提供有关其对象`VSHPROPID_ExtObjectCATID`从<xref:Microsoft.VisualStudio.Shell.Interop.__VSSPROPID2>(对应于`itemid`VSITEMID_ROOT，值从`VSITEMID`) CATID。  
+-  ( " \<ProjectSubtypeName> " ) ，这允许项目子类型使用中的自定义方法来提供对象 <xref:EnvDTE.Project> 。 项目子类型可以使用自动化扩展器来公开 `Project` 对象。 <xref:EnvDTE80.IInternalExtenderProvider>在主项目子类型聚合器上实现的接口应为 `VSHPROPID_ExtObjectCATID` 从 <xref:Microsoft.VisualStudio.Shell.Interop.__VSSPROPID2>) CATID 中的值 VSITEMID_ROOT 的 (提供其对象 `itemid` `VSITEMID` 。  
   
-- ProjectItem.Extender ("\<ProjectSubtypeName >") – 这样，要使用自定义方法提供一个对象，从特定项目子类型<xref:EnvDTE.ProjectItem>在项目中的对象。 项目子类型可以使用自动化扩展程序公开此对象。 <xref:EnvDTE80.IInternalExtenderProvider>主项目子类型聚合器上实现接口，需要提供有关其对象`VSHPROPID_ExtObjectCATID`从<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID2>(对应于所需`VSITEMID`) CATID。  
+- 项目项. 扩展程序 ( " \<ProjectSubtypeName> " ) -这允许项目子类型为对象提供来自项目内特定对象的自定义方法 <xref:EnvDTE.ProjectItem> 。 项目子类型可以使用自动化扩展器来公开此对象。 <xref:EnvDTE80.IInternalExtenderProvider>在主项目子类型聚合器上实现的接口需要为 `VSHPROPID_ExtObjectCATID` <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID2> 对应于所需) CATID 的 from (提供其对象 `VSITEMID` 。  
   
-- Project.Properties – 此集合公开的配置独立属性`Project`对象。 项目属性的详细信息，请参阅<xref:EnvDTE.Project.Properties%2A>。 项目子类型可以使用自动化扩展程序将其属性添加到此集合。 <xref:EnvDTE80.IInternalExtenderProvider>主项目子类型聚合器上实现接口，需要提供有关其对象`VSHPROPID_BrowseObjectCATID`从 VSHPROPID2 (对应于`itemid`VSITEMID_ROOT，值从<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID2>) CATID。  
+- 项目属性–此集合公开对象的配置独立属性 `Project` 。 有关项目属性的详细信息，请参阅 <xref:EnvDTE.Project.Properties%2A> 。 项目子类型可以使用自动化扩展程序将其属性添加到此集合。 <xref:EnvDTE80.IInternalExtenderProvider>在主项目子类型聚合器上实现的接口需要为 VSHPROPID2 提供其对象 `VSHPROPID_BrowseObjectCATID` ， (与 VSITEMID_ROOT 的 `itemid` 值相对应， <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID2>) CATID。  
   
-- Configuration.Properties – 此集合公开为 （例如，调试） 特定的配置项目的配置依赖属性。 有关详细信息，请参阅 <xref:EnvDTE.Configuration>。 项目子类型可以使用自动化扩展程序将其属性添加到此集合。 <xref:EnvDTE80.IInternalExtenderProvider>接口实现的主项目子类型聚合器上提供其对象的 CATID `VSHPROPID_CfgBrowseObjectCATID` (对应于`itemid`的值<xref:Microsoft.VisualStudio.VSConstants.VSITEMID>)。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgBrowseObject>接口用于将一个配置浏览对象与另一种区分开来。  
+- Properties –此集合为特定配置公开项目的配置依赖属性 (例如，调试) 。 有关详细信息，请参阅 <xref:EnvDTE.Configuration>。 项目子类型可以使用自动化扩展程序将其属性添加到此集合。 <xref:EnvDTE80.IInternalExtenderProvider>在主项目子类型聚合器上实现的接口为 CATID (的对象提供 `VSHPROPID_CfgBrowseObjectCATID` 与 `itemid`) 的值对应的对象 <xref:Microsoft.VisualStudio.VSConstants.VSITEMID> 。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgBrowseObject>接口用于区分一个配置浏览对象和另一个。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:Microsoft.VisualStudio.Shell.Interop.__VSFPROPID>

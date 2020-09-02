@@ -1,5 +1,5 @@
 ---
-title: IDebugExpression2::EvaluateSync |Microsoft Docs
+title: IDebugExpression2：： EvaluateSync |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 16
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 602a823e4066aff40d1f6271a20b480bb4a92f5b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68158424"
 ---
 # <a name="idebugexpression2evaluatesync"></a>IDebugExpression2::EvaluateSync
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-此方法以同步方式计算的表达式。  
+此方法同步计算表达式。  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,30 +46,30 @@ int EvaluateSync(
   
 #### <a name="parameters"></a>参数  
  `dwFlags`  
- [in]中的标志的组合[EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md)控制表达式求值的枚举。  
+ 中用于控制表达式计算的 [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md) 枚举中的标志的组合。  
   
  `dwTimeout`  
- [in]最大时间 （毫秒），此方法返回前等待。 使用`INFINITE`无限期等待。  
+ 中从此方法返回前等待的最长时间（以毫秒为单位）。 使用 `INFINITE` 无限期等待。  
   
  `pExprCallback`  
- [in]此参数始终是一个 null 值。  
+ 中此参数始终为 null 值。  
   
  `ppResult`  
- [out]返回[IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)对象，其中包含的表达式计算结果。  
+ 弄返回包含表达式计算结果的 [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) 对象。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则返回错误代码。 一些典型的错误代码为：  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。 一些典型的错误代码是：  
   
-|Error|描述|  
+|错误|说明|  
 |-----------|-----------------|  
-|E_EVALUATE_BUSY_WITH_EVALUATION|当前正在计算另一个表达式，并且不支持同时表达式计算。|  
-|E_EVALUATE_TIMEOUT|计算已超时。|  
+|E_EVALUATE_BUSY_WITH_EVALUATION|当前正在计算另一个表达式，但不支持同时表达式计算。|  
+|E_EVALUATE_TIMEOUT|计算超时。|  
   
 ## <a name="remarks"></a>备注  
- 对于同步的计算，不需要返回到 Visual Studio 评估完成后发送事件。  
+ 对于同步计算，完成评估后无需将事件发送回 Visual Studio。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何实现此方法对于简单`CExpression`对象，它实现[IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md)接口。  
+ 下面的示例演示如何对 `CExpression` 实现 [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md) 接口的简单对象实现此方法。  
   
 ```cpp#  
 HRESULT CExpression::EvaluateSync(EVALFLAGS dwFlags,  
@@ -116,7 +116,7 @@ HRESULT CExpression::EvalExpression(BOOL bSynchronous,
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md)   
  [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md)   
  [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)   

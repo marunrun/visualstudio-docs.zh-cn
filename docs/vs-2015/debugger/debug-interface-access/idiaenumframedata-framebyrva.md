@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 825f72eec5b56fef70019b64d6e599b7c4712ee2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68146509"
 ---
 # <a name="idiaenumframedataframebyrva"></a>IDiaEnumFrameData::frameByRVA
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-按相对虚拟地址 (RVA) 返回一个帧。  
+ (RVA) ，按相对虚拟地址返回帧。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,14 +36,14 @@ HRESULT frameByRVA( 
   
 #### <a name="parameters"></a>参数  
  relativeVirtualAddress  
- [in]感兴趣的帧的 RVA。  
+ 中感兴趣的帧的 RVA。  
   
  框架  
- [out]返回[IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)对象，表示包含提供的地址的帧。  
+ 弄返回一个 [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md) 对象，该对象表示包含提供的地址的帧。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回 `S_OK`。 返回`S_FALSE`如果任何帧数据与指定的地址相不匹配。 否则，返回错误代码。  
+ 如果成功，则返回 `S_OK`。 `S_FALSE`如果没有框架数据与指定地址匹配，则返回。 否则，返回错误代码。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDiaEnumFrameData](../../debugger/debug-interface-access/idiaenumframedata.md)   
  [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)

@@ -10,10 +10,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 3f64364caf914c030fef806c5ae17e90a8368fa3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68157791"
 ---
 # <a name="status"></a>状态
@@ -55,7 +55,7 @@ VSPerfCmd.exe /Status
   
  **Status** 选项显示当前正在分析的每个进程的以下状态信息。  
   
- **Process**  
+ **处理**  
  被分析进程的名称。  
   
  **进程 ID**  
@@ -68,7 +68,7 @@ VSPerfCmd.exe /Status
  用于控制此进程的数据收集的主要内部探查器计数。 该计数必须等于一才能收集数据。 启动/停止计数可以通过探查器 API 以及 VSPerfCmd 选项 **GlobalOn**、**GlobalOff**、**ProcessOn**、**ProcessOff**、**ThreadOn** 和 **ThreadOff** 进行控制。  
   
  **挂起/继续计数**  
- 用于控制此进程的数据收集的辅助内部探查器计数。 该计数必须小于或等于零才能收集数据。 “挂起/继续”  计数只能通过探查器 API 进行控制。  
+ 用于控制此进程的数据收集的辅助内部探查器计数。 该计数必须小于或等于零才能收集数据。 “挂起/继续”**** 计数只能通过探查器 API 进行控制。  
   
  **有监视器访问权限的用户**  
  列出有权访问探查器的用户名。 可以使用 VSPerfCmd.exe **Admin** 选项向其他用户授予访问权  

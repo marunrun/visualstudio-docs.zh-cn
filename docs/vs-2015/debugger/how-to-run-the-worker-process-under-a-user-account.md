@@ -1,5 +1,5 @@
 ---
-title: 如何：辅助角色下运行进程的用户帐户 |Microsoft Docs
+title: 如何：在用户帐户下运行辅助进程 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -21,10 +21,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: ebb8ec1fe10f6fbc5c367cb0ed127e048351b0e4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68157873"
 ---
 # <a name="how-to-run-the-worker-process-under-a-user-account"></a>如何：在用户帐户下运行工作进程
@@ -34,7 +34,7 @@ ms.locfileid: "68157873"
   
 ## <a name="procedure"></a>过程  
   
-#### <a name="to-run-aspnetwpexe-under-a-user-account"></a>以用户帐户运行 aspnet_wp.exe  
+#### <a name="to-run-aspnet_wpexe-under-a-user-account"></a>以用户帐户运行 aspnet_wp.exe  
   
 1. 打开 machine.config 文件，此文件位于计算机上运行时安装路径下的 CONFIG 文件夹中。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "68157873"
   
     将出现 **“选择用户、计算机或组”** 对话框。  
   
-10. 在 **“输入要选择的对象名称”** 框中键入用户名，然后单击 **“确定”** 。 用户名称必须遵循以下格式：域名 \ 用户名。  
+10. 在 **“输入要选择的对象名称”** 框中键入用户名，然后单击 **“确定”** 。 用户名必须遵循以下格式：域名\用户名。  
   
 11. 在 **“临时 ASP.Net 文件的权限项”** 对话框中，授予用户 **“完全控制”** ，然后单击 **“确定”** 以关闭 **“临时 ASP.Net 文件项”** 对话框。  
   
@@ -85,5 +85,5 @@ ms.locfileid: "68157873"
   
 13. 单击 **“确定”** 以关闭 **“临时 ASP.NET 文件属性”** 对话框。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
 [ASP.NET 调试：系统要求](../debugger/aspnet-debugging-system-requirements.md)  

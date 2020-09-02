@@ -1,0 +1,286 @@
+- name: Visual Studio 调试器可扩展性
+  href: visual-studio-debugger-extensibility.md
+- name: 选择调试引擎实施策略
+  href: choosing-a-debug-engine-implementation-strategy.md
+- name: 创建自定义调试引擎
+  href: creating-a-custom-debug-engine.md
+  items:
+    - name: 注册自定义调试引擎
+      href: registering-a-custom-debug-engine.md
+    - name: 启用要进行调试的程序
+      href: enabling-a-program-to-be-debugged.md
+      items:
+        - name: 获取端口
+          href: getting-a-port.md
+        - name: 注册程序
+          href: registering-the-program.md
+        - name: 附加到程序
+          href: attaching-to-the-program.md
+        - name: 基于启动的附件
+          href: launch-based-attachment.md
+        - name: 发送必需事件
+          href: sending-the-required-events.md
+    - name: 执行控件和状态计算
+      href: execution-control-and-state-evaluation.md
+      items:
+        - name: 程序控制
+          href: program-control.md
+        - name: 断点相关的方法
+          href: breakpoint-related-methods.md
+        - name: 调用堆栈计算
+          href: call-stack-evaluation.md
+        - name: 表达式计算
+          href: expression-evaluation-visual-studio-debugging-sdk.md
+        - name: 控件事件
+          href: control-events.md
+    - name: 发送事件
+      href: sending-events.md
+      items:
+        - name: 事件源
+          href: event-sources-visual-studio-sdk.md
+        - name: 支持的事件类型
+          href: supported-event-types.md
+        - name: 事件说明
+          href: event-descriptions.md
+    - name: 终止和分离
+      href: termination-and-detaching.md
+    - name: 调用调试器事件
+      href: calling-debugger-events.md
+      items:
+        - name: 附加到程序和从程序分离
+          href: attaching-and-detaching-to-a-program.md
+        - name: 启动调试器
+          href: launching-the-debugger.md
+        - name: 终止程序
+          href: terminating-a-program.md
+        - name: 创建断点
+          href: creating-a-breakpoint.md
+        - name: 断点绑定或解除绑定时
+          href: when-a-breakpoint-binds-or-becomes-unbound.md
+        - name: 断点错误
+          href: breakpoint-errors.md
+        - name: 命中断点
+          href: hitting-a-breakpoint.md
+        - name: 删除断点
+          href: deleting-a-breakpoint.md
+        - name: 进入中断模式
+          href: entering-break-mode.md
+        - name: 步入中断模式
+          href: stepping-in-break-mode.md
+        - name: 中断模式中的表达式计算
+          href: expression-evaluation-in-break-mode.md
+        - name: 异常处理
+          href: exception-handling-visual-studio-sdk.md
+    - name: 如何：调试自定义调试引擎
+      href: how-to-debug-a-custom-debug-engine.md
+- name: 入门
+  href: getting-started-with-debugger-extensibility.md
+  items:
+    - name: 扩展调试器的路线图
+      href: roadmap-for-extending-the-debugger.md
+    - name: 调试器组件
+      href: debugger-components.md
+      items:
+        - name: 调试包
+          href: debug-package.md
+        - name: 进程调试管理器
+          href: process-debug-manager.md
+        - name: 会话调试管理器
+          href: session-debug-manager.md
+        - name: 调试引擎
+          href: debug-engine.md
+        - name: 操作模式
+          href: operational-modes.md
+        - name: 表达式计算器
+          href: expression-evaluator.md
+        - name: 符号提供程序
+          href: symbol-provider.md
+        - name: 类型可视化工具和自定义查看器
+          href: type-visualizer-and-custom-viewer.md
+    - name: 调试器概念
+      href: debugger-concepts.md
+      items:
+        - name: 调试会话
+          href: debug-session.md
+        - name: 服务器
+          href: servers-visual-studio-sdk.md
+        - name: 端口提供程序
+          href: port-suppliers.md
+        - name: 端口
+          href: ports.md
+        - name: 进程
+          href: processes.md
+        - name: 程序节点
+          href: program-nodes.md
+        - name: 计划
+          href: programs.md
+        - name: 线程数
+          href: threads.md
+        - name: 堆栈帧
+          href: stack-frames.md
+        - name: 模块
+          href: modules.md
+        - name: 断点
+          href: breakpoints-visual-studio-sdk.md
+    - name: 调试器上下文
+      href: debugger-contexts.md
+      items:
+        - name: 代码上下文
+          href: code-context.md
+        - name: 文档位置
+          href: document-position.md
+        - name: 文档上下文
+          href: document-context.md
+        - name: 表达式计算上下文
+          href: expression-evaluation-context.md
+    - name: 调试任务
+      href: debugging-tasks.md
+      items:
+        - name: 安全问题
+          href: security-issues.md
+        - name: 启动程序
+          href: launching-a-program.md
+          items:
+            - name: 通知端口
+              href: notifying-the-port.md
+            - name: 启动后附加
+              href: attaching-after-a-launch.md
+        - name: 直接附加到程序
+          href: attaching-directly-to-a-program.md
+        - name: 启动后发送启动事件
+          href: sending-startup-events-after-a-launch.md
+        - name: 控制执行
+          href: control-of-execution.md
+        - name: 绑定断点
+          href: binding-breakpoints.md
+        - name: 计算表达式
+          href: evaluating-expressions.md
+        - name: 可视化和查看数据
+          href: visualizing-and-viewing-data.md
+- name: 编写 CLR 表达式计算器
+  href: writing-a-common-language-runtime-expression-evaluator.md
+  items:
+    - name: 公共语言运行时和表达式计算
+      href: common-language-runtime-and-expression-evaluation.md
+    - name: 表达式计算器体系结构
+      href: expression-evaluator-architecture.md
+      items:
+        - name: 计算上下文
+          href: evaluation-context.md
+        - name: 键表达式计算器接口
+          href: key-expression-evaluator-interfaces.md
+    - name: 注册表达式计算器
+      href: registering-an-expression-evaluator.md
+    - name: 实现表达式计算器
+      href: implementing-an-expression-evaluator.md
+      items:
+        - name: 表达式计算器实施策略
+          href: expression-evaluator-implementation-strategy.md
+    - name: 显示局部
+      href: displaying-locals.md
+      items:
+        - name: 局部的实现示例
+          href: sample-implementation-of-locals.md
+          items:
+            - name: 实现 GetMethodProperty
+              href: implementing-getmethodproperty.md
+            - name: 枚举局部
+              href: enumerating-locals.md
+            - name: 获取局部属性
+              href: getting-local-properties.md
+            - name: 获取局部值
+              href: getting-local-values.md
+            - name: 计算局部
+              href: evaluating-locals.md
+    - name: 计算监视窗口表达式
+      href: evaluating-a-watch-window-expression.md
+      items:
+        - name: 表达式计算的实现示例
+          href: sample-implementation-of-expression-evaluation.md
+        - name: 计算监视表达式
+          href: evaluating-a-watch-expression.md
+    - name: 更改局部值
+      href: changing-the-value-of-a-local.md
+      items:
+        - name: 更改值的实现示例
+          href: sample-implementation-of-changing-values.md
+    - name: 实现类型可视化工具和自定义查看器
+      href: implementing-type-visualizers-and-custom-viewers.md
+- name: 实现端口提供程序
+  href: implementing-a-port-supplier.md
+  items:
+    - name: 实现和注册端口提供程序
+      href: implementing-and-registering-a-port-supplier.md
+    - name: 所需的端口提供程序接口
+      href: required-port-supplier-interfaces.md
+- name: .NET Framework 的并行扩展内幕
+  href: parallel-extension-internals-for-the-dotnet-framework.md
+  items:
+    - name: Task 类
+      href: task-class-internal-members.md
+      items:
+        - name: m_action 字段
+          href: m-action-field.md
+        - name: m_contingentProperties 字段
+          href: m-contingentproperties-field.md
+        - name: m_parent 字段
+          href: m-parent-field.md
+        - name: m_stateFlags 字段
+          href: m-stateflags-field.md
+        - name: m_stateObject 字段
+          href: m-stateobject-field.md
+        - name: m_taskId 字段
+          href: m-taskid-field.md
+        - name: s_taskIdCounter 字段
+          href: s-taskidcounter-field.md
+        - name: TASK_STATE_CANCELED 字段
+          href: task-state-canceled-field.md
+        - name: TASK_STATE_EXECUTED 字段
+          href: task-state-executed-field.md
+        - name: TASK_STATE_FAULTED 字段
+          href: task-state-faulted-field.md
+        - name: TASK_STATE_RAN_TO_COMPLETION 字段
+          href: task-state-ran-to-completion-field.md
+        - name: TASK_STATE_WAITING_ON_CHILDREN 字段
+          href: task-state-waiting-on-children-field.md
+        - name: SetNotificationForWaitCompletion 方法
+          href: setnotificationforwaitcompletion-method.md
+        - name: NotifyDebuggerOfWaitCompletion 方法
+          href: notifydebuggerofwaitcompletion-method.md
+    - name: TaskScheduler 类
+      href: taskscheduler-class-internal-members.md
+      items:
+        - name: GetScheduledTasksForDebugger 方法
+          href: getscheduledtasksfordebugger-method.md
+        - name: GetTaskSchedulersForDebugger 方法
+          href: gettaskschedulersfordebugger-method.md
+    - name: ContingentProperties 类
+      href: contingentproperties-class-internal-members.md
+      items:
+        - name: m_children 字段
+          href: m-children-field.md
+    - name: AsyncTaskMethodBuilder 结构
+      href: asynctaskmethodbuilder-structure-internal-members.md
+      items:
+        - name: ObjectIdForDebugger 属性
+          href: asynctaskmethodbuilder-objectidfordebugger-property.md
+        - name: m_builder 字段
+          href: asynctaskmethodbuilder-m-builder-field.md
+    - name: AsyncTaskMethodBuilder\<TResult> 结构
+      href: asynctaskmethodbuilder-tresult-structure-internal-members.md
+      items:
+        - name: ObjectIdForDebugger 属性
+          href: asynctaskmethodbuilder-tresult-objectidfordebugger-property.md
+        - name: m_task 字段
+          href: asynctaskmethodbuilder-tresult-m-task-field.md
+    - name: AsyncVoidMethodBuilder 结构
+      href: asyncvoidmethodbuilder-structure-internal-members.md
+      items:
+        - name: ObjectIdForDebugger 属性
+          href: asyncvoidmethodbuilder-objectidfordebugger-property.md
+        - name: m_objectIdForDebugger 字段
+          href: asyncvoidmethodbuilder-m-objectidfordebugger-field.md
+- name: 参考
+  href: reference/reference-visual-studio-debugging-apis.md
+- name: 示例
+  href: visual-studio-debugging-samples.md

@@ -19,15 +19,15 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 1228b75b1e0e579012f0c2a04a100cb615ae1687
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68145703"
 ---
 # <a name="debugger-basics"></a>调试器基础知识
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-Visual Studio 调试程序允许你观察程序的运行时行为并确定逻辑错误的位置。 该调试器可用于所有的 Visual Studio 编程语言及其关联的库。 使用调试程序时，可以中断执行以逐句通过代码和计算应用程序中的变量。
+Visual Studio 调试程序允许你观察程序的运行时行为并确定逻辑错误的位置。 该调试器可用于所有 Visual Studio 编程语言及其关联的库。 使用调试程序时，可以中断执行以逐句通过代码和计算应用程序中的变量。
   
 ## <a name="in-this-section"></a>本节内容  
  [调试程序入门](../debugger/getting-started-with-the-debugger.md)  
@@ -60,5 +60,5 @@ Visual Studio 调试程序允许你观察程序的运行时行为并确定逻辑
  [调试器安全](../debugger/debugger-security.md)  
  描述调试程序的安全实践。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [在 Visual Studio 中进行调试](../debugger/debugging-in-visual-studio.md)

@@ -20,10 +20,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 70bd6623d86ecfa76d3e09de09a8dcfad3d5da20
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68159258"
 ---
 # <a name="removedir-task"></a>RemoveDir 任务
@@ -40,7 +40,7 @@ ms.locfileid: "68159258"
 |`RemovedDirectories`|可选的 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 输出参数。<br /><br /> 包含已成功删除的目录。|  
   
 ## <a name="remarks"></a>备注  
- 除上面列出的参数外，此任务还从 <xref:Microsoft.Build.Tasks.TaskExtension> 类继承参数，后者自身继承自 <xref:Microsoft.Build.Utilities.Task> 类。 有关这些其他参数的列表及其说明的信息，请参阅 [TaskExtension Base Class](../msbuild/taskextension-base-class.md)。  
+ 除上面列出的参数外，此任务还从 <xref:Microsoft.Build.Tasks.TaskExtension> 类继承参数，后者自身继承自 <xref:Microsoft.Build.Utilities.Task> 类。 有关这些其他参数及其说明的列表，请参阅 [TaskExtension 基类](../msbuild/taskextension-base-class.md)。  
   
 ## <a name="example"></a>示例  
  以下示例删除 `OutputDirectory` 和 `DebugDirectory` 属性指定的目录。 这些路径将视为相对于项目目录的路径。  
@@ -62,5 +62,5 @@ ms.locfileid: "68159258"
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [任务](../msbuild/msbuild-tasks.md)   
- [任务参考](../msbuild/msbuild-task-reference.md)
+ [操作](../msbuild/msbuild-tasks.md)   
+ [任务引用](../msbuild/msbuild-task-reference.md)

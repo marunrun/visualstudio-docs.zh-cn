@@ -1,5 +1,5 @@
 ---
-title: IDebugField::GetContainer |Microsoft Docs
+title: IDebugField：： GetContainer |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,10 +13,10 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 6f6c5b0cb1b14ac7cc34e284e2d073fafed9b20e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62547125"
 ---
 # <a name="idebugfieldgetcontainer"></a>IDebugField::GetContainer
@@ -40,14 +40,14 @@ int GetContainer(
   
 #### <a name="parameters"></a>参数  
  `ppContainerField`  
- [out]由返回的容器[IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md)接口。  
+ 弄返回由 [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md) 接口表示的容器。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
 ## <a name="remarks"></a>备注  
- 如果此字段不包含容器，返回的`ppContainerField`值将为 null 值。  
+ 如果此字段不具有容器，则返回的 `ppContainerField` 将为 null 值。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)   
  [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md)

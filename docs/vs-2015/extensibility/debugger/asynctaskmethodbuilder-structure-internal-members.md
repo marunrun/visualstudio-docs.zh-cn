@@ -12,22 +12,22 @@ caps.latest.revision: 6
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 0bfe640654c9de7daac9096aa4d75f5492a8a278
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62555907"
 ---
 # <a name="asynctaskmethodbuilder-structure---internal-members"></a>AsyncTaskMethodBuilder 结构 - 内部成员
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-本主题介绍的内部成员的<xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder>类。 有关此类的常规信息，请参阅<xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder>参考主题。  
+本主题介绍类的内部成员 <xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder> 。 有关此类的常规信息，请参阅 <xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder> 参考主题。  
   
- **Namespace**：<xref:System.Runtime.CompilerServices?displayProperty=fullName>  
+ **命名空间：** <xref:System.Runtime.CompilerServices?displayProperty=fullName>  
   
- **程序集：** mscorlib （在 mscorlib.dll 中)  
+ **Assembly：** mscorlib (mscorlib.dll)   
   
- 无法从.NET Framework 来访问这些内部成员，因为以下语法提供通用中间语言 (CIL)。  
+ 由于无法从 .NET Framework 访问这些内部成员，因此在公共中间语言 (CIL) 中提供了以下语法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,11 +39,11 @@ ms.locfileid: "62555907"
   
 ## <a name="internal-members"></a>内部成员  
   
-|名称|描述|  
+|名称|说明|  
 |----------|-----------------|  
-|[ObjectIdForDebugger 属性](../../extensibility/debugger/asynctaskmethodbuilder-objectidfordebugger-property.md)|获取可用于唯一地标识调试器到此生成器的对象。|  
+|[ObjectIdForDebugger 属性](../../extensibility/debugger/asynctaskmethodbuilder-objectidfordebugger-property.md)|获取一个对象，该对象可用于将此生成器唯一标识到调试器。|  
 |[m_builder 字段](../../extensibility/debugger/asynctaskmethodbuilder-m-builder-field.md)|表示此非泛型实例委托的泛型生成器对象。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder>   
  [.NET Framework 的并行扩展内幕](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)

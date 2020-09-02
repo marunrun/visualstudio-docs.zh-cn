@@ -1,5 +1,5 @@
 ---
-title: 查看菜单命令 |Microsoft Docs
+title: “视图”菜单命令 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -12,19 +12,19 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 6f8efd65c60b28c0ba50419770351d62cb615dec
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68146479"
 ---
 # <a name="view-menu-commands"></a>“视图”菜单命令
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-**视图**菜单提供用于控制命令 Spy + + 用户界面。  
+“视图”菜单提供用于控制 Spy++ 用户界面的命令。  
   
  **字体**  
- 此时将打开**字体**对话框中，您可以在其中选择当前的 Spy + + 视图中存在使用的字体。  
+ 打开 " **字体** " 对话框，您可以在其中选择要在当前 Spy + + 视图中使用的字体。  
   
  **工具栏**  
  隐藏或显示工具栏。  
@@ -33,4 +33,4 @@ ms.locfileid: "68146479"
  隐藏或显示状态栏。  
   
  **属性**  
- 此时将打开**属性**活动视图的对话框。
+ 打开活动视图的 " **属性** " 对话框。

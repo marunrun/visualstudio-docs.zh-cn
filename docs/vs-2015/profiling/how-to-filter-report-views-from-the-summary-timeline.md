@@ -1,5 +1,5 @@
 ---
-title: 如何：从摘要时间线中筛选报表视图 | Microsoft Docs
+title: 如何：从摘要时间线中筛选报告视图 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -10,10 +10,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: ce9b74012be35433c26f8446f36246dbe93f6442
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68146089"
 ---
 # <a name="how-to-filter-report-views-from-the-summary-timeline"></a>如何：从摘要时间线中筛选报告视图
@@ -27,4 +27,4 @@ ms.locfileid: "68146089"
   
      指定的区域会显示为阴影。  
   
-2. 单击“按选定内容筛选”  。
+2. 单击“按选定内容筛选”。

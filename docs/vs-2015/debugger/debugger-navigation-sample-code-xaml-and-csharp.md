@@ -1,5 +1,5 @@
 ---
-title: 调试器导航示例代码 （Xaml 和 C#） |Microsoft Docs
+title: '调试器导航示例代码 (Xaml 和 c # ) |Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -15,16 +15,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 88193fc4ec7061771ebba53139cdc0ecce67dbfb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62552063"
 ---
 # <a name="debugger-navigation-sample-code-xaml-and-c"></a>调试器导航示例代码（XAML 和 C#）
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-本主题中的代码是示例文件[导航调试会话 （Xaml 和 C#）](../debugger/navigate-a-debugging-session-in-visual-studio-xaml-and-csharp.md)主题。  
+本主题中的代码是 [ (Xaml 和 c # ) 主题导航调试会话 ](../debugger/navigate-a-debugging-session-in-visual-studio-xaml-and-csharp.md) 的示例文件。  
   
 ## <a name="sample-code"></a>代码示例  
   

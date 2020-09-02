@@ -1,5 +1,5 @@
 ---
-title: IDebugProcess2 | Microsoft Docs
+title: IDebugProcess2 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 20
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 68f1693bbbda9bbf7622c2378799db4a342be7a5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68187977"
 ---
 # <a name="idebugprocess2"></a>IDebugProcess2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-此接口表示的端口上运行的进程。 如果端口为本地端口，则`IDebugProcess2`通常表示本地计算机上的物理进程。  
+此接口表示在端口上运行的进程。 如果端口为本地端口，则 `IDebugProcess2` 通常表示本地计算机上的物理进程。  
   
 ## <a name="syntax"></a>语法  
   
@@ -30,53 +30,53 @@ ms.locfileid: "68187977"
 IDebugProcess2 : IUnknown  
 ```  
   
-## <a name="notes-for-implementers"></a>实施者的说明  
- 此接口由自定义端口提供程序作为一个组管理程序实现。 此接口必须由端口提供程序实现。  
+## <a name="notes-for-implementers"></a>实施者注意事项  
+ 此接口由自定义端口提供程序实现，以将程序作为组进行管理。 此接口必须由端口提供程序实现。  
   
- 调试引擎还实现此接口，如果它支持启动程序通过[LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md)。  
+ 如果调试引擎支持通过 [LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md)启动程序，则它还会实现此接口。  
   
-## <a name="notes-for-callers"></a>调用方的说明  
- 此接口称为主要由会话调试管理器 (SDM) 以便与一组在此过程中标识的程序进行交互。  
+## <a name="notes-for-callers"></a>调用方说明  
+ 此接口主要由会话调试管理器 (SDM) 调用，以便与在此进程中标识的一组程序进行交互。  
   
- 调用[GetProcess](../../../extensibility/debugger/reference/idebugprogram2-getprocess.md)或[GetProcess](../../../extensibility/debugger/reference/idebugport2-getprocess.md)来获得此接口。 此接口也会返回通过调用`IDebugEngineLaunch2::LaunchSuspended`。  
+ 调用 [GetProcess](../../../extensibility/debugger/reference/idebugprogram2-getprocess.md) 或 [GetProcess](../../../extensibility/debugger/reference/idebugport2-getprocess.md) 以获取此接口。 此接口还通过调用返回 `IDebugEngineLaunch2::LaunchSuspended` 。  
   
 ## <a name="methods-in-vtable-order"></a>Vtable 顺序中的方法  
- 下表显示的方法`IDebugProcess2`。  
+ 下表显示的方法 `IDebugProcess2` 。  
   
-|方法|描述|  
+|方法|说明|  
 |------------|-----------------|  
-|[GetInfo](../../../extensibility/debugger/reference/idebugprocess2-getinfo.md)|获取过程的说明。|  
-|[EnumPrograms](../../../extensibility/debugger/reference/idebugprocess2-enumprograms.md)|枚举包含在此过程中的程序。|  
-|[GetName](../../../extensibility/debugger/reference/idebugprocess2-getname.md)|获取标题、 友好名称或进程的文件名称。|  
-|[GetServer](../../../extensibility/debugger/reference/idebugprocess2-getserver.md)|获取计算机服务器运行此过程的实例。|  
-|[Terminate](../../../extensibility/debugger/reference/idebugprocess2-terminate.md)|终止进程。|  
+|[GetInfo](../../../extensibility/debugger/reference/idebugprocess2-getinfo.md)|获取进程的说明。|  
+|[EnumPrograms](../../../extensibility/debugger/reference/idebugprocess2-enumprograms.md)|枚举此进程中包含的程序。|  
+|[GetName](../../../extensibility/debugger/reference/idebugprocess2-getname.md)|获取进程的标题、友好名称或文件名。|  
+|[GetServer](../../../extensibility/debugger/reference/idebugprocess2-getserver.md)|获取此进程正在其上运行的计算机服务器的实例。|  
+|Terminate|终止进程。|  
 |[附加](../../../extensibility/debugger/reference/idebugprocess2-attach.md)|附加到进程。|  
-|[CanDetach](../../../extensibility/debugger/reference/idebugprocess2-candetach.md)|确定 SDM 可以与进程分离。|  
+|[CanDetach](../../../extensibility/debugger/reference/idebugprocess2-candetach.md)|确定 SDM 是否可以分离进程。|  
 |[分离](../../../extensibility/debugger/reference/idebugprocess2-detach.md)|将调试器与进程分离。|  
 |[GetPhysicalProcessId](../../../extensibility/debugger/reference/idebugprocess2-getphysicalprocessid.md)|获取系统进程标识符。|  
 |[GetProcessId](../../../extensibility/debugger/reference/idebugprocess2-getprocessid.md)|获取此进程的全局唯一标识符。|  
-|[GetAttachedSessionName](../../../extensibility/debugger/reference/idebugprocess2-getattachedsessionname.md)<br /><br /> [弃用]|获取正在调试的进程的会话的名称。<br /><br /> [已弃用。 应始终返回`E_NOTIMPL`。]|  
-|[EnumThreads](../../../extensibility/debugger/reference/idebugprocess2-enumthreads.md)|枚举的进程中运行的线程。|  
-|[CauseBreak](../../../extensibility/debugger/reference/idebugprocess2-causebreak.md)|将请求中此进程停止运行代码的下一步程序。|  
-|[GetPort](../../../extensibility/debugger/reference/idebugprocess2-getport.md)|获取此进程运行的端口。|  
+|[GetAttachedSessionName](../../../extensibility/debugger/reference/idebugprocess2-getattachedsessionname.md)<br /><br /> 弃用|获取正在调试进程的会话的名称。<br /><br /> 弃用. 应始终返回 `E_NOTIMPL` 。]|  
+|[EnumThreads](../../../extensibility/debugger/reference/idebugprocess2-enumthreads.md)|枚举进程中运行的线程。|  
+|[CauseBreak](../../../extensibility/debugger/reference/idebugprocess2-causebreak.md)|请求在此进程中运行代码的下一个程序停止。|  
+|[GetPort](../../../extensibility/debugger/reference/idebugprocess2-getport.md)|获取运行此进程的端口。|  
   
 ## <a name="remarks"></a>备注  
  `IDebugProcess2`包含一个或多个[IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)接口。  
   
 ## <a name="requirements"></a>要求  
- 标头：Msdbg.h  
+ 标头： Msdbg  
   
- 命名空间:Microsoft.VisualStudio.Debugger.Interop  
+ 命名空间： VisualStudio  
   
- 程序集：Microsoft.VisualStudio.Debugger.Interop.dll  
+ 程序集： Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [核心接口](../../../extensibility/debugger/reference/core-interfaces.md)   
  [GetProcess](../../../extensibility/debugger/reference/idebugport2-getprocess.md)   
  [LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md)   
  [GetProcess](../../../extensibility/debugger/reference/idebugprogram2-getprocess.md)   
- [下一步](../../../extensibility/debugger/reference/ienumdebugprocesses2-next.md)   
- [事件](../../../extensibility/debugger/reference/idebugportevents2-event.md)   
+ [一个](../../../extensibility/debugger/reference/ienumdebugprocesses2-next.md)   
+ [引发](../../../extensibility/debugger/reference/idebugportevents2-event.md)   
  [IDebugEngineLaunch2](../../../extensibility/debugger/reference/idebugenginelaunch2.md)   
- [事件](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)   
+ [引发](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)   
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)
