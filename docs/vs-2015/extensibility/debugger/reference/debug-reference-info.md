@@ -13,16 +13,16 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 675373ae1728bbca2cc7a89fdaa8014e6286d8b4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68159325"
 ---
-# <a name="debugreferenceinfo"></a>DEBUG_REFERENCE_INFO
+# <a name="debug_reference_info"></a>DEBUG_REFERENCE_INFO
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-描述的引用。  
+描述引用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -52,37 +52,37 @@ public struct DEBUG_REFERENCE_INFO { 
   
 ## <a name="members"></a>成员  
  dwFields  
- 中的标志的组合[DEBUGREF_INFO_FLAGS](../../../extensibility/debugger/reference/debugref-info-flags.md)枚举，用于指定哪些字段填写。  
+ [DEBUGREF_INFO_FLAGS](../../../extensibility/debugger/reference/debugref-info-flags.md)枚举中的标志的组合，用于指定要填写的字段。  
   
  bstrName  
- 用户指定的名称[IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)对象。  
+ 用户指定的 [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) 对象的名称。  
   
  bstrType  
- 形式的格式化字符串的引用类型。  
+ 格式化字符串形式的引用类型。  
   
  bstrValue  
- 形式的格式化字符串的引用值  
+ 格式字符串形式的引用值  
   
  dwAttrib  
- 中的标志的组合[DBG_ATTRIB_FLAGS](../../../extensibility/debugger/reference/dbg-attrib-flags.md)指定调试属性特性的标志的枚举。  
+ [DBG_ATTRIB_FLAGS](../../../extensibility/debugger/reference/dbg-attrib-flags.md)枚举中的标志的组合，用于指定调试属性特性的标志。  
   
  dwRefType  
- 中的值[REFERENCE_TYPE](../../../extensibility/debugger/reference/reference-type.md)枚举，用于指定引用类型是强还是弱。  
+ [REFERENCE_TYPE](../../../extensibility/debugger/reference/reference-type.md)枚举中的一个值，该值指定引用类型是强类型还是弱引用类型。  
   
  m_pReference  
- [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)对象，它指定的参考信息。  
+ 一个 [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) 对象，它指定引用信息。  
   
 ## <a name="remarks"></a>备注  
- 此结构传递给调用[GetReferenceInfo](../../../extensibility/debugger/reference/idebugreference2-getreferenceinfo.md)要填充的方法。 从列表的一部分，也会返回此结构[IEnumDebugReferenceInfo2](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2.md)接口，反过来，通过调用将返回该值[EnumChildren](../../../extensibility/debugger/reference/idebugreference2-enumchildren.md)方法。  
+ 此结构被传递给 [GetReferenceInfo](../../../extensibility/debugger/reference/idebugreference2-getreferenceinfo.md) 方法的调用以进行填充。 此结构也作为 [IEnumDebugReferenceInfo2](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2.md) 接口中的列表的一部分返回，进而从对 [EnumChildren](../../../extensibility/debugger/reference/idebugreference2-enumchildren.md) 方法的调用返回。  
   
 ## <a name="requirements"></a>要求  
- 标头： msdbg.h  
+ 标头： msdbg  
   
- 命名空间:Microsoft.VisualStudio.Debugger.Interop  
+ 命名空间： VisualStudio  
   
- 程序集：Microsoft.VisualStudio.Debugger.Interop.dll  
+ 程序集： Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [结构和联合](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)   
  [DEBUGREF_INFO_FLAGS](../../../extensibility/debugger/reference/debugref-info-flags.md)   

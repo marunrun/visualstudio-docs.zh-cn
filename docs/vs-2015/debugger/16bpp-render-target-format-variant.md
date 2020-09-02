@@ -1,5 +1,5 @@
 ---
-title: 16bpp 呈现目标格式变量 |Microsoft Docs
+title: 16bpp 呈现器目标格式变体 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -10,10 +10,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 7b315c7ab9bb10d039e81ba26b1beb9c4447a205
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68157573"
 ---
 # <a name="16bpp-render-target-format-variant"></a>16bpp 呈现目标格式变量
@@ -47,7 +47,7 @@ ms.locfileid: "68157573"
  因为 B5G6R5 格式不具有 alpha 通道，所以此变体不会保留 alpha 内容。 如果应用的呈现要求在呈现器目标中使用 alpha 通道，则不能够仅切换到 B5G6R5 格式。  
   
 ## <a name="example"></a>示例  
- **16bpp 呈现器目标格式**变体可以通过使用创建的呈现器目标重现`CreateTexture2D`通过使用如下代码：  
+ 通过使用如下代码，可为使用创建的呈现器目标复制 **16Bpp Render 目标格式** 变量 `CreateTexture2D` ：  
   
 ```  
 D3D11_TEXTURE2D_DESC target_description;  

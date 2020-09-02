@@ -15,10 +15,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: da272529768f3227ce6e0ee3e0ebbf086140dd15
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85816119"
 ---
 # <a name="conditional-compilation-is-turned-off"></a>条件编译已关闭
@@ -36,9 +36,9 @@ ms.locfileid: "85816119"
     /*@cc_on @*/  
     ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [条件编译](../../javascript/advanced/conditional-compilation-javascript.md)   
  [条件编译变量](../../javascript/advanced/conditional-compilation-variables-javascript.md)   
- [@cc_on损益](../../javascript/reference/at-cc-on-statement-javascript.md)   
- [@if损益](../../javascript/reference/at-if-statement-javascript.md)   
- [@set损益](../../javascript/reference/at-set-statement-javascript.md)
+ [@cc_on 损益](../../javascript/reference/at-cc-on-statement-javascript.md)   
+ [@if 损益](../../javascript/reference/at-if-statement-javascript.md)   
+ [@set 损益](../../javascript/reference/at-set-statement-javascript.md)

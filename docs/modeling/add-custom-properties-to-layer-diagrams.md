@@ -10,15 +10,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 3c68d8a75ca8203a790684506ffd44b3d890648a
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85546909"
 ---
 # <a name="add-custom-properties-to-dependency-diagrams"></a>向依赖项关系图添加自定义属性
 
-为依赖关系图编写扩展代码时，可以在依赖项关系图上存储包含任何元素的值。 保存并重新打开关系图时，值将保留。 您还可以在 "**属性**" 窗口中显示这些属性，以便用户可以查看和编辑这些属性。 例如，您可以让用户为每一层指定正则表达式，并编写验证代码来确认每层中的类名称符合用户指定的模式。
+为依赖关系图编写扩展代码时，可以在依赖项关系图上存储包含任何元素的值。 保存并重新打开关系图时，值将保留。 您还可以在 " **属性** " 窗口中显示这些属性，以便用户可以查看和编辑这些属性。 例如，您可以让用户为每一层指定正则表达式，并编写验证代码来确认每层中的类名称符合用户指定的模式。
 
 ## <a name="non-visible-properties"></a>不可见属性
 
@@ -31,14 +31,14 @@ ms.locfileid: "85546909"
 > [!IMPORTANT]
 > 若要显示属性，请在要显示层属性的每台计算机上进行以下更改：
 >
-> 1. 使用 "以**管理员身份运行**" 运行记事本。 打开 *%ProgramFiles%\Microsoft Visual Studio [version] \Common7\IDE\Extensions\Microsoft\Architecture Tools\ExtensibilityRuntime\extension.vsixmanifest*。
-> 2. 在**内容**元素中，添加：
+> 1. 使用 "以 **管理员身份运行**" 运行记事本。 打开 *%ProgramFiles%\Microsoft Visual Studio [version] \Common7\IDE\Extensions\Microsoft\Architecture Tools\ExtensibilityRuntime\extension.vsixmanifest*。
+> 2. 在 **内容** 元素中，添加：
 >
 >     ```xml
 >     <MefComponent>Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.Provider.dll</MefComponent>
 >     ```
 >
-> 3. 在 Visual Studio 应用程序的 "开始" 菜单的 " **Visual Studio Tools** " 部分下，打开**开发人员命令提示**。 输入：
+> 3. 在 Visual Studio 应用程序的 "开始" 菜单的 " **Visual Studio Tools** " 部分下，打开 **开发人员命令提示**。 输入：
 >
 >      `devenv /rootSuffix /updateConfiguration`
 >
@@ -47,7 +47,7 @@ ms.locfileid: "85546909"
 
 **确保你的代码在 VSIX 项目中**
 
-如果您的属性是命令、笔势或验证项目的一部分，则无需添加任何内容。 自定义属性的代码应在 Visual Studio 扩展性项目中定义，并定义为 MEF 组件。 有关详细信息，请参阅[向依赖关系图添加命令和笔势](../modeling/add-commands-and-gestures-to-layer-diagrams.md)或[向依赖项关系图添加自定义体系结构验证](../modeling/add-custom-architecture-validation-to-layer-diagrams.md)。
+如果您的属性是命令、笔势或验证项目的一部分，则无需添加任何内容。 自定义属性的代码应在 Visual Studio 扩展性项目中定义，并定义为 MEF 组件。 有关详细信息，请参阅 [向依赖关系图添加命令和笔势](../modeling/add-commands-and-gestures-to-layer-diagrams.md) 或 [向依赖项关系图添加自定义体系结构验证](../modeling/add-custom-architecture-validation-to-layer-diagrams.md)。
 
 **定义自定义属性**
 
@@ -61,13 +61,13 @@ public class MyProperty : PropertyExtension<ILayerElement>
 }
 ```
 
-可以在[ILayerElement](/previous-versions/ff644511(v=vs.140))或其任何派生类上定义属性，其中包括：
+可以在 [ILayerElement](/previous-versions/ff644511(v=vs.140)) 或其任何派生类上定义属性，其中包括：
 
-- `ILayerModel`-模型
+- `ILayerModel` -模型
 
-- `ILayer`-每个层
+- `ILayer` -每个层
 
-- `ILayerDependencyLink`-层之间的链接
+- `ILayerDependencyLink` -层之间的链接
 
 - `ILayerComment`
 

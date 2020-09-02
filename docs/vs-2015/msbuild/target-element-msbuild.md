@@ -20,10 +20,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: f14815502a33fb7d49a10c2724c57a4a0d86e9f7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68144316"
 ---
 # <a name="target-element-msbuild"></a>Target 元素 (MSBuild)
@@ -63,12 +63,12 @@ ms.locfileid: "68144316"
 |---------------|-----------------|  
 |`Name`|必需的特性。<br /><br /> 目标的名称。|  
 |`Condition`|可选特性。<br /><br /> 要评估的条件。 如果该条件评估结果为 `false`，那么目标不会执行目标主体或任何在 `DependsOnTargets` 属性中设置的目标。 有关条件的详细信息，请参阅[条件](../msbuild/msbuild-conditions.md)。|  
-|`Inputs`|可选特性。<br /><br /> 形成此目标输入的文件。 采用分号分隔多个文件。 将会比较该文件的时间戳与 `Outputs` 中文件的时间戳，从而确定 `Target` 是否为最新。 有关详细信息，请参阅[增量生成](../msbuild/incremental-builds.md)，[如何：增量生成](../msbuild/how-to-build-incrementally.md)，并[转换](../msbuild/msbuild-transforms.md)。|  
-|`Outputs`|可选特性。<br /><br /> 形成此目标输出的文件。 采用分号分隔多个文件。 将会比较该文件的时间戳与 `Inputs` 中文件的时间戳，从而确定 `Target` 是否为最新。 有关详细信息，请参阅[增量生成](../msbuild/incremental-builds.md)，[如何：增量生成](../msbuild/how-to-build-incrementally.md)，并[转换](../msbuild/msbuild-transforms.md)。|  
+|`Inputs`|可选特性。<br /><br /> 形成此目标输入的文件。 采用分号分隔多个文件。 将会比较该文件的时间戳与 `Outputs` 中文件的时间戳，从而确定 `Target` 是否为最新。 有关详细信息，请参阅 [增量生成](../msbuild/incremental-builds.md)、 [如何：增量生成](../msbuild/how-to-build-incrementally.md)和 [转换](../msbuild/msbuild-transforms.md)。|  
+|`Outputs`|可选特性。<br /><br /> 形成此目标输出的文件。 采用分号分隔多个文件。 将会比较该文件的时间戳与 `Inputs` 中文件的时间戳，从而确定 `Target` 是否为最新。 有关详细信息，请参阅 [增量生成](../msbuild/incremental-builds.md)、 [如何：增量生成](../msbuild/how-to-build-incrementally.md)和 [转换](../msbuild/msbuild-transforms.md)。|  
 |`Returns`|可选特性。<br /><br /> 一组可供调用此目标（例如，MSBuild 任务）的任务使用的项。 采用分号分隔多个目标。 如果该文件中的目标没有 `Returns` 属性，则会使用输出属性来实现此目的。|  
 |`KeepDuplicateOutputs`|可选布尔属性。<br /><br /> 如果为 `true`，则会记录对目标的“返回”中的同一项的多个引用。  默认情况下，此属性为 `false`。|  
-|`BeforeTargets`|可选特性。<br /><br /> 分号分隔的目标名称列表。  指定时，表示此目标应在指定的一个或多个目标之前运行。 这样项目作者就可以扩展现有的一组目标，而无需直接对其进行修改。 有关详细信息，请参阅[目标生成顺序](../msbuild/target-build-order.md)。|  
-|`AfterTargets`|可选特性。<br /><br /> 分号分隔的目标名称列表。 指定时，表示此目标应在指定的一个或多个目标之后运行。 这样项目作者就可以扩展现有的一组目标，而无需直接对其进行修改。 有关详细信息，请参阅[目标生成顺序](../msbuild/target-build-order.md)。|  
+|`BeforeTargets`|可选特性。<br /><br /> 分号分隔的目标名称列表。  指定时，表示此目标应在指定的一个或多个目标之前运行。 这样项目作者就可以扩展现有的一组目标，而无需直接对其进行修改。 有关详细信息，请参阅 [目标生成顺序](../msbuild/target-build-order.md)。|  
+|`AfterTargets`|可选特性。<br /><br /> 分号分隔的目标名称列表。 指定时，表示此目标应在指定的一个或多个目标之后运行。 这样项目作者就可以扩展现有的一组目标，而无需直接对其进行修改。 有关详细信息，请参阅 [目标生成顺序](../msbuild/target-build-order.md)。|  
 |`DependsOnTargets`|可选特性。<br /><br /> 必须先执行该目标，才能执行此目标或开始顶级依赖关系分析。 采用分号分隔多个目标。|  
 |`Label`|可选特性。<br /><br /> 可标识系统和用户元素或对其进行排序的标识符。|  
   
@@ -79,7 +79,7 @@ ms.locfileid: "68144316"
 |[Task](../msbuild/task-element-msbuild.md)|创建并执行的 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 任务的实例。 目标中可能有零个或零个以上的任务。|  
 |[PropertyGroup](../msbuild/propertygroup-element-msbuild.md)|包含一组用户定义的 `Property` 元素。 自 .NET Framework 3.5 起，`Target` 元素可能包含 `PropertyGroup` 元素。|  
 |[ItemGroup](../msbuild/itemgroup-element-msbuild.md)|包含一组用户定义的 `Item` 元素。 自 .NET Framework 3.5 起，`Target` 元素可能包含 `ItemGroup` 元素。 有关详细信息，请参阅[项](../msbuild/msbuild-items.md)。|  
-|[OnError](../msbuild/onerror-element-msbuild.md)|对于失败的任务，如果 `ContinueOnError` 属性为 ErrorAndStop（或 `false`），则会出现一个或多个要执行的任务。 目标中可能有零个或零个以上的 `OnError` 元素。 如果存在 `OnError` 元素，则其必须为 `Target` 元素中最后的元素。<br /><br /> 有关 `ContinueOnError` 属性的详细信息，请参阅 [Task 元素 (MSBuild)](../msbuild/task-element-msbuild.md)。|  
+|[OnError](../msbuild/onerror-element-msbuild.md)|对于失败的任务，如果 `ContinueOnError` 属性为 ErrorAndStop（或 `false`），则会出现一个或多个要执行的任务。 目标中可能有零个或零个以上的 `OnError` 元素。 如果存在 `OnError` 元素，则其必须为 `Target` 元素中最后的元素。<br /><br /> 有关属性的信息 `ContinueOnError` ，请参阅 [Task Element (MSBuild) ](../msbuild/task-element-msbuild.md)。|  
   
 ### <a name="parent-elements"></a>父元素  
   
@@ -119,6 +119,6 @@ ms.locfileid: "68144316"
 </Target>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [目标](../msbuild/msbuild-targets.md)   
+## <a name="see-also"></a>另请参阅  
+ [攻击](../msbuild/msbuild-targets.md)   
  [项目文件架构参考](../msbuild/msbuild-project-file-schema-reference.md)

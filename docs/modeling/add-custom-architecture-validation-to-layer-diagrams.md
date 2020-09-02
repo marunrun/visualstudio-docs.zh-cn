@@ -10,17 +10,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 98482eed6c1ed5a8ac2e3bbb7b5ada6af9517c1d
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85546914"
 ---
 # <a name="add-custom-architecture-validation-to-dependency-diagrams"></a>向依赖项关系图添加自定义体系结构验证
 
 在 Visual Studio 中，用户可以对照层模型验证项目中的源代码，以便他们可以验证源代码是否符合依赖关系图上的依赖关系。 有标准的验证算法，但你可以定义自己的验证扩展。
 
-当用户在依赖关系图上选择 "**验证体系结构**" 命令时，将调用标准验证方法，然后调用已安装的任何验证扩展。
+当用户在依赖关系图上选择 " **验证体系结构** " 命令时，将调用标准验证方法，然后调用已安装的任何验证扩展。
 
 > [!NOTE]
 > 在依赖项关系图中，验证的主要目的是将关系图与解决方案中其他部分的程序代码进行比较。
@@ -40,7 +40,7 @@ ms.locfileid: "85546914"
 
 ### <a name="to-define-an-extension-by-using-a-project-template"></a>若要使用项目模板定义扩展
 
-1. 创建新的**层设计器验证扩展**项目。
+1. 创建新的 **层设计器验证扩展** 项目。
 
     该模板将创建包含一个小型示例的项目。
 
@@ -48,7 +48,7 @@ ms.locfileid: "85546914"
    > 若要使模板正常工作：
    >
    > - 编辑对 `LogValidationError` 的调用，以删除可选参数 `errorSourceNodes` 和 `errorTargetNodes`。
-   > - 如果使用自定义属性，请将 "[将自定义属性添加到依赖关系图](../modeling/add-custom-properties-to-layer-diagrams.md)" 中所述的更新。
+   > - 如果使用自定义属性，请将 " [将自定义属性添加到依赖关系图](../modeling/add-custom-properties-to-layer-diagrams.md)" 中所述的更新。
 
 2. 编辑代码以定义验证。 有关详细信息，请参阅 [验证编程](#programming)。
 
@@ -75,11 +75,11 @@ ms.locfileid: "85546914"
 
 ### <a name="to-add-layer-validation-to-a-separate-vsix"></a>向单独的 VSIX 添加层验证
 
-1. 创建新的“类库”项目  。 此项目将包含层验证类。
+1. 创建新的“类库”项目。 此项目将包含层验证类。
 
-2. 在解决方案中查找或创建**VSIX 项目**。 VSIX 项目包含名为 **source.extension.vsixmanifest**的文件。
+2. 在解决方案中查找或创建 **VSIX 项目** 。 VSIX 项目包含名为 **source.extension.vsixmanifest**的文件。
 
-3. 在**解决方案资源管理器**中，在 VSIX 项目的右键单击菜单上，选择 "**设为启动项目**"。
+3. 在 **解决方案资源管理器**中，在 VSIX 项目的右键单击菜单上，选择 " **设为启动项目**"。
 
 4. 在 **source.extension.vsixmanifest**中的“资产” **** 下，将层验证项目添加为 MEF 组件：
 
@@ -107,7 +107,7 @@ ms.locfileid: "85546914"
 
 6. 返回层验证项目，并添加以下项目引用：
 
-    |**参考**|**允许执行的操作**|
+    |**引用**|**允许执行的操作**|
     |-|-|
     |Microsoft.VisualStudio.GraphModel.dll|读取体系结构图|
     |Microsoft.VisualStudio.ArchitectureTools.Extensibility.CodeSchema.dll|读取与层关联的代码 DOM|
@@ -218,7 +218,7 @@ ms.locfileid: "85546914"
 
 若要将调试器附加到验证进程，请在验证方法的开头插入一个对 `System.Diagnostics.Debugger.Launch()` 的调用。 当 "调试" 对话框出现时，选择 Visual Studio 的主实例。
 
-或者，可以插入一个对 `System.Windows.Forms.MessageBox.Show()`的调用。 当消息框出现时，请前往 Visual Studio 的主实例，并在 "**调试**" 菜单上单击 "**附加到进程**"。 选择名为 **Graphcmd.exe**的进程。
+或者，可以插入一个对 `System.Windows.Forms.MessageBox.Show()`的调用。 当消息框出现时，请前往 Visual Studio 的主实例，并在 " **调试** " 菜单上单击 " **附加到进程**"。 选择名为 **Graphcmd.exe**的进程。
 
 始终通过按 Ctrl + F5（“开始执行(不调试)”****）启动实验实例。
 
@@ -226,7 +226,7 @@ ms.locfileid: "85546914"
 
 若要在安装了适当版本的 Visual Studio 的计算机上安装验证扩展，请打开目标计算机上的 VSIX 文件。
 
-## <a name="example-code"></a><a name="example"></a>示例代码
+## <a name="example-code"></a><a name="example"></a> 示例代码
 
 ```csharp
 using System;

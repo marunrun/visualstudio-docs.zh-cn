@@ -1,5 +1,5 @@
 ---
-title: 如何：在托管代码中设置线程名称 |Microsoft Docs
+title: 如何：在托管代码中设置线程名称 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -20,16 +20,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: b800fbd2f39d75f110a059c70b87a203eb72e7d6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68157669"
 ---
 # <a name="how-to-set-a-thread-name-in-managed-code"></a>如何：在托管代码中设置线程名称
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-在 Visual Studio 的任何版本中都可以使用线程命名功能。 线程命名功能对跟踪“线程”  窗口中的线程非常有用。 因为**线程**窗口不可用的 Visual Studio 速成版中，线程命名功能在 Express 版本中的小实用程序。  
+在 Visual Studio 的任何版本中都可以使用线程命名功能。 线程命名功能对跟踪“线程”窗口中的线程非常有用。 由于 " **线程** " 窗口在 Visual Studio Express 版本中不可用，因此线程命名在 Express 版本中没有实用程序。  
   
  若要在托管代码中设置线程名称，请使用 <xref:System.Threading.Thread.Name%2A> 属性。  
   
@@ -55,6 +55,6 @@ Sub Main()
 End Sub  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [调试多线程应用程序](../debugger/debug-multithreaded-applications-in-visual-studio.md)   
  [如何：在本机代码中设置线程名称](../debugger/how-to-set-a-thread-name-in-native-code.md)

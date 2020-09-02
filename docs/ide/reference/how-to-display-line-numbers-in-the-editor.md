@@ -1,6 +1,6 @@
 ---
 title: 显示代码行号
-ms.date: 03/28/2019
+ms.date: 08/28/2020
 ms.topic: how-to
 helpviewer_keywords:
 - line numbers, displaying
@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ff6e0c50ab41f3d18458c736e48b0a4360b8b286
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.openlocfilehash: 02d26a452315f144e52a78d7fcea737d39052f59
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85770366"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89091468"
 ---
 # <a name="how-to-display-line-numbers-in-the-editor"></a>如何：在编辑器中显示行号
 
@@ -32,8 +32,8 @@ ms.locfileid: "85770366"
 
    ![在 VS 编辑器中显示行号的选项](../../ide/reference/media/line-numbers-option.png)
 
-> [!TIP]
-> 行号并未添加到代码中，它们仅供参考之用。 如果要打印行号，请在“打印”  对话框中选中“包括行号”  复选框。
+> [!NOTE]
+> 行号并未添加到代码中，它们仅供参考之用。
 
 ## <a name="see-also"></a>请参阅
 

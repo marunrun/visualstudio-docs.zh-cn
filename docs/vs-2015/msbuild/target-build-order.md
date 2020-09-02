@@ -12,10 +12,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 9ea2068bce101eb27a81da4925e0fef6ffa8c534
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68144278"
 ---
 # <a name="target-build-order"></a>目标生成顺序
@@ -46,7 +46,7 @@ ms.locfileid: "68144278"
   
  导入的项目可能有自己的 `InitialTargets` 属性。 所有初始目标都聚集在一起并按顺序运行。  
   
- 有关详细信息，请参阅[如何：指定首先生成的目标](../msbuild/how-to-specify-which-target-to-build-first.md)。  
+ 有关详细信息，请参阅 [如何：指定要首先生成的目标](../msbuild/how-to-specify-which-target-to-build-first.md)。  
   
 ## <a name="default-targets"></a>默认目标  
  如果未在命令行上显式指定某个目标，[Project](../msbuild/project-element-msbuild.md) 元素的 `DefaultTargets` 属性可指定将生成哪个或哪些目标。  
@@ -57,7 +57,7 @@ ms.locfileid: "68144278"
 <Project DefaultTargets="Clean;Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
 ```  
   
- 可使用 **/target** 开关在命令行上替代默认目标。 以下示例指定运行的 `Build` 目标，然后指定运行的 `Report` 目标。 以此方式指定目标时，将忽略所有默认目标。  
+ 您可以通过在命令行上使用 **/target** 开关来覆盖默认目标。 以下示例指定运行的 `Build` 目标，然后指定运行的 `Report` 目标。 以此方式指定目标时，将忽略所有默认目标。  
   
  `msbuild /target:Build;Report`  
   
@@ -65,7 +65,7 @@ ms.locfileid: "68144278"
   
  导入的项目可能有自己的 `DefaultTargets` 属性。 第一个出现的 `DefaultTargets` 属性将确定要运行的默认目标。  
   
- 有关详细信息，请参阅[如何：指定首先生成的目标](../msbuild/how-to-specify-which-target-to-build-first.md)。  
+ 有关详细信息，请参阅 [如何：指定要首先生成的目标](../msbuild/how-to-specify-which-target-to-build-first.md)。  
   
 ## <a name="first-target"></a>第一个目标  
  如果没有初始目标、默认目标或命令行目标，那么 MSBuild 会先运行项目文件中或任意导入的项目文件中出现的第一个目标。  
@@ -109,7 +109,7 @@ ms.locfileid: "68144278"
   
 1. 运行 `InitialTargets` 目标。  
   
-2. 运行由 **/target** 开关在命令行上指定的目标。 如果未在命令行上指定目标，则运行 `DefaultTargets` 目标。 如果都不存在，则运行出现的第一个目标。  
+2. 使用 **/target** 开关在命令行上指定的目标将运行。 如果未在命令行上指定目标，则运行 `DefaultTargets` 目标。 如果都不存在，则运行出现的第一个目标。  
   
 3. 评估目标的 `Condition` 属性。 如果出现 `Condition` 属性且评估结果为 `false`，那么不会运行该目标，且目标不会对生成造成进一步影响。  
   
@@ -121,5 +121,5 @@ ms.locfileid: "68144278"
   
 7. 执行或跳过目标后，运行 `AfterTargets` 属性中列出的所有目标。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [目标](../msbuild/msbuild-targets.md)

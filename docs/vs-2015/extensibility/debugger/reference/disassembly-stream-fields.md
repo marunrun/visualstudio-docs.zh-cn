@@ -1,5 +1,5 @@
 ---
-title: DISASSEMBLY_STREAM_FIELDS | Microsoft Docs
+title: DISASSEMBLY_STREAM_FIELDS |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: b67ccf926267e3475a43d7f09bf3ccb361dc8484
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68159292"
 ---
-# <a name="disassemblystreamfields"></a>DISASSEMBLY_STREAM_FIELDS
+# <a name="disassembly_stream_fields"></a>DISASSEMBLY_STREAM_FIELDS
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-指定要检索有关反汇编字段信息。  
+指定要检索的有关反汇编字段的信息。  
   
 ## <a name="syntax"></a>语法  
   
@@ -65,60 +65,60 @@ public enum enum_DISASSEMBLY_STREAM_FIELDS { 
   
 ## <a name="members"></a>成员  
  DSF_ADDRESS  
- 初始化/使用`bstrAddress`字段。  
+ 初始化/使用 `bstrAddress` 字段。  
   
  DSF_ADDRESSOFFSET  
- 初始化/使用`bstrAddressOffset`字段。  
+ 初始化/使用 `bstrAddressOffset` 字段。  
   
  DSF_CODEBYTES  
- 初始化/使用`bstrCodeBytes`字段。  
+ 初始化/使用 `bstrCodeBytes` 字段。  
   
  DSF_OPCODE  
- 初始化/使用`bstrOpCode`字段。  
+ 初始化/使用 `bstrOpCode` 字段。  
   
  DSF_OPERANDS  
- 初始化/使用`bstrOperands`字段。  
+ 初始化/使用 `bstrOperands` 字段。  
   
  DSF_SYMBOL  
- 初始化/使用`bstrSymbol`字段。  
+ 初始化/使用 `bstrSymbol` 字段。  
   
  DSF_CODELOCATIONID  
- 初始化/使用`uCodeLocationId`字段。  
+ 初始化/使用 `uCodeLocationId` 字段。  
   
  DSF_POSITION  
- 初始化/用`posBeg`和`posEnd`字段。  
+ 初始化/使用 `posBeg` 和 `posEnd` 字段。  
   
  DSF_DOCUMENTURL  
- 初始化/使用`bstrDocumentUrl`字段。  
+ 初始化/使用 `bstrDocumentUrl` 字段。  
   
  DSF_BYTEOFFSET  
- 初始化/使用`dwByteOffset`字段。  
+ 初始化/使用 `dwByteOffset` 字段。  
   
  DSF_FLAGS  
- 初始化/用`dwFlags`([DISASSEMBLY_FLAGS](../../../extensibility/debugger/reference/disassembly-flags.md)) 字段。  
+ 初始化/使用 " `dwFlags` ([DISASSEMBLY_FLAGS](../../../extensibility/debugger/reference/disassembly-flags.md)) " 字段。  
   
  DSF_OPERANDS_SYMBOLS  
- 包括中的符号名称`bstrOperands`字段。  
+ 在字段中包括符号名称 `bstrOperands` 。  
   
  DSF_ALL  
- 指定为反汇编的流的所有字段。  
+ 指定反汇编流的所有字段。  
   
 ## <a name="remarks"></a>备注  
- 作为参数传递给[读](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md)方法，以指示的哪些字段[DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md)结构是进行初始化。  
+ 作为参数传递给 [Read](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md) 方法，以指示要初始化 [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) 结构的哪些字段。  
   
- 用于`dwFields`的成员`DisassemblyData`结构，用于指示哪些字段是使用，有效时返回该结构。  
+ 用于结构的 `dwFields` 成员，用于 `DisassemblyData` 指示在返回结构时使用和有效的字段。  
   
- 可能的按位组合这些值`OR`。  
+ 这些值可以与按位组合 `OR` 。  
   
 ## <a name="requirements"></a>要求  
- 标头： msdbg.h  
+ 标头： msdbg  
   
- 命名空间:Microsoft.VisualStudio.Debugger.Interop  
+ 命名空间： VisualStudio  
   
- 程序集：Microsoft.VisualStudio.Debugger.Interop.dll  
+ 程序集： Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>请参阅  
- [枚举](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>另请参阅  
+ [计数](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md)   
  [读取](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md)   
  [DISASSEMBLY_FLAGS](../../../extensibility/debugger/reference/disassembly-flags.md)

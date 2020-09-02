@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 1a53d6fed4b2900aa730f4a5c2e04d528b42d1b9
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62419838"
 ---
 # <a name="contribute-to-visual-studio-documentation"></a>参与编辑 Visual Studio 文档
@@ -14,7 +14,7 @@ ms.locfileid: "62419838"
 
 ## <a name="code-of-conduct"></a>行为准则
 
-此项目采用了 [Microsoft 开放源行为准则](https://opensource.microsoft.com/codeofconduct/)。 有关详细信息，请参阅[行为准则常见问题解答](https://opensource.microsoft.com/codeofconduct/faq/)或联系 [opencode@microsoft.com](mailto:opencode@microsoft.com) 提出任何其他问题或意见。
+此项目采用了 [Microsoft 开放源代码行为准则](https://opensource.microsoft.com/codeofconduct/)。 有关详细信息，请参阅[行为准则常见问题解答](https://opensource.microsoft.com/codeofconduct/faq/)或联系 [opencode@microsoft.com](mailto:opencode@microsoft.com) 提出任何其他问题或意见。
 
 ## <a name="how-can-i-contribute"></a>我如何参与？
 
@@ -34,6 +34,6 @@ ms.locfileid: "62419838"
 
 请参阅参与者指南中的[拉取请求](https://docs.microsoft.com/contribute/how-to-write-workflows-major#pull-request-processing)指南。
 
-**说明**
+注意
 
 不主动处理 `docs/vs-2015` 文件夹中的文件，因为这些文件适用于产品的旧版本 Visual Studio 2015。 我们不接受对这些文件进行无关紧要的更改的拉取请求。

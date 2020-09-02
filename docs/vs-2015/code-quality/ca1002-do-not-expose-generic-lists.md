@@ -16,27 +16,27 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 6fcc4ae2a07eb7b1f155d6c65020e2c1a9ddc9f2
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85546843"
 ---
 # <a name="ca1002-do-not-expose-generic-lists"></a>CA1002:不要公开泛型列表
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|Item|值|
+|项|值|
 |-|-|
 |TypeName|DoNotExposeGenericLists|
 |CheckId|CA1002|
-|Category|Microsoft. Design|
+|类别|Microsoft. Design|
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
  类型包含外部可见的成员，该成员是 <xref:System.Collections.Generic.List%601?displayProperty=fullName> 类型、返回 <xref:System.Collections.Generic.List%601?displayProperty=fullName> 类型或其签名包含 <xref:System.Collections.Generic.List%601?displayProperty=fullName> 参数。
 
 ## <a name="rule-description"></a>规则描述
- <xref:System.Collections.Generic.List%601?displayProperty=fullName>是为性能而不是继承而设计的泛型集合。 <xref:System.Collections.Generic.List%601?displayProperty=fullName>不包含使更改继承类的行为变得更简单的虚拟成员。 以下泛型集合是为继承设计的，应公开，而不是公开 <xref:System.Collections.Generic.List%601?displayProperty=fullName> 。
+ <xref:System.Collections.Generic.List%601?displayProperty=fullName> 是为性能而不是继承而设计的泛型集合。 <xref:System.Collections.Generic.List%601?displayProperty=fullName> 不包含使更改继承类的行为变得更简单的虚拟成员。 以下泛型集合是为继承设计的，应公开，而不是公开 <xref:System.Collections.Generic.List%601?displayProperty=fullName> 。
 
 - <xref:System.Collections.ObjectModel.Collection%601?displayProperty=fullName>
 

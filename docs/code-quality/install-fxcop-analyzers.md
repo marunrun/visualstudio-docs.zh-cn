@@ -10,10 +10,10 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: d789299212ec7420f40135dd655056f16b6e4f35
-ms.sourcegitcommit: 4d7c883ea3eedd795eeb4a9d3bd3dee82c8e093e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88893341"
 ---
 # <a name="install-fxcop-analyzers-in-visual-studio"></a>在 Visual Studio 中安装 FxCop 分析器
@@ -22,7 +22,7 @@ Microsoft 创建了一组名为 [CodeAnalysis](https://www.nuget.org/packages/Mi
 
 您可以将这些 FxCop 分析器作为 NuGet 包或 VSIX 扩展安装到 Visual Studio。 若要了解每个的优缺点，请参阅 [NuGet 包与 VSIX 扩展](roslyn-analyzers-overview.md#nuget-package-versus-vsix-extension)。
 
-## <a name="nuget-package"></a>NuGet 包
+## <a name="nuget-package"></a>NuGet 程序包
 
 ::: moniker range=">=vs-2019"
 

@@ -21,10 +21,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 5707ef277892c37cab16f78ac11113194a95e190
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72663501"
 ---
 # <a name="signing-page-project-designer"></a>“项目设计器”->“签名”页
@@ -39,7 +39,7 @@ ms.locfileid: "72663501"
  若要访问“签名”页面，请在“解决方案资源管理器”中选择项目节点，然后在“项目”菜单上单击“属性”。 当“项目设计器”出现时，单击“签名”选项卡。
 
 ## <a name="application-and-deployment-manifest-signing"></a>应用程序和部署清单签名
- **"为 ClickOnce 清单签名"** 复选框选中此复选框可使用公钥/私钥对对应用程序清单和部署清单进行签名。 有关如何执行此操作的详细信息，请参阅[如何：对应用程序和部署清单进行签名](../../ide/how-to-sign-application-and-deployment-manifests.md)。
+ **"为 ClickOnce 清单签名"** 复选框选中此复选框可使用公钥/私钥对对应用程序清单和部署清单进行签名。 有关如何执行此操作的详细信息，请参阅[如何：对应用程序和部署清单签名](../../ide/how-to-sign-application-and-deployment-manifests.md)。
 
  "**从存储中选择**" 按钮用于从当前用户的个人证书存储中选择现有证书。 可以选择其中一个证书来对应用程序和部署清单进行签名。
 
@@ -64,11 +64,11 @@ ms.locfileid: "72663501"
 
  此选项使用 [!INCLUDE[winsdklong](../../includes/winsdklong-md.md)] 提供的 Al.exe 工具对程序集签名。 有关 Al.exe 的详细信息，请参阅[如何：使用强名称为程序集签名](https://msdn.microsoft.com/library/2c30799a-a826-46b4-a25d-c584027a6c67)。
 
- **选择强名称密钥文件**列表，您可以指定用于对程序集进行签名的新的或现有的强名称密钥文件。 选择“\<浏览...>”以选择现有的密钥文件。
+ **选择强名称密钥文件** 列表，您可以指定用于对程序集进行签名的新的或现有的强名称密钥文件。 选择 \<Browse...> 以选择现有的密钥文件。
 
- 选择“\<新建...>”以创建用来对程序集签名的新密钥文件。 将出现“创建强名称密钥”对话框，你可以使用该对话框指定密钥文件名，并使用密码保护密钥文件。 密码长度必须至少为 6 个字符。 如果指定密码，则会创建个人信息交换 (.pfx) 文件；如果不指定密码，则创建强名称密钥 (.snk) 文件。
+ 选择 \<New...> 以创建用来对程序集签名的新密钥文件。 将出现“创建强名称密钥”对话框，你可以使用该对话框指定密钥文件名，并使用密码保护密钥文件。 密码长度必须至少为 6 个字符。 如果指定密码，则会创建个人信息交换 (.pfx) 文件；如果不指定密码，则创建强名称密钥 (.snk) 文件。
 
- **更改密码**按钮更改用于对程序集进行签名的个人信息交换（.pfx）密钥文件的密码。
+ **更改密码** 按钮更改用于对程序集进行签名的个人信息交换 ( .pfx) 密钥文件的密码。
 
  单击“更改密码”将打开“更改密钥密码”对话框。 在此对话框中，“旧密码”为密钥文件的当前密码。 “新密码”长度必须至少为 6 个字符。 密码信息存储在当前用户的 Windows 证书存储区中。
 
@@ -79,5 +79,5 @@ ms.locfileid: "72663501"
 > [!NOTE]
 > 对程序集签名时，可能并不总是有权访问私钥。 例如，一个组织可能具有开发人员不是每天都能访问的严密保护密钥对。 公钥可能可用，但私钥的访问权限仅限于少数几个人。 在这种情况下，你可以使用延迟或部分签名来提供公钥，将私钥的添加延迟到转交该程序集后。
 
-## <a name="see-also"></a>请参阅
- [项目属性参考](../../ide/reference/project-properties-reference.md)管理托管应用程序的[程序集和清单签名](../../ide/managing-assembly-and-manifest-signing.md)[强名称签名](https://msdn.microsoft.com/5fef3490-c519-4363-94fd-8b1ad260dab5)[如何：对应用程序和部署清单进行签名](../../ide/how-to-sign-application-and-deployment-manifests.md)[如何：为程序集签名（Visual Studio）](https://msdn.microsoft.com/f468a7d3-234c-4353-924d-8e0ae5896564)[如何：用强名称](https://msdn.microsoft.com/library/2c30799a-a826-46b4-a25d-c584027a6c67)[命名强名称程序](https://msdn.microsoft.com/library/d4a80263-f3e0-4d81-9b61-f0cbeae3797b)集为程序集签名
+## <a name="see-also"></a>另请参阅
+ [项目属性参考](../../ide/reference/project-properties-reference.md)管理托管应用程序的[程序集和清单签名](../../ide/managing-assembly-and-manifest-signing.md)[强名称签名](https://msdn.microsoft.com/5fef3490-c519-4363-94fd-8b1ad260dab5)[如何：对应用程序和部署清单](../../ide/how-to-sign-application-and-deployment-manifests.md)进行签名[如何：为程序集签名 (Visual Studio) ](https://msdn.microsoft.com/f468a7d3-234c-4353-924d-8e0ae5896564) [如何：为具有强名称](https://msdn.microsoft.com/library/2c30799a-a826-46b4-a25d-c584027a6c67)的程序集签名强名称[程序](https://msdn.microsoft.com/library/d4a80263-f3e0-4d81-9b61-f0cbeae3797b)集

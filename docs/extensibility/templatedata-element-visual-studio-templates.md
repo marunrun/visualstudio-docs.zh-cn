@@ -45,7 +45,7 @@ ms.locfileid: "80699196"
 
 ### <a name="child-elements"></a>子元素
 
-| 元素 | 说明 |
+| 元素 | 描述 |
 | - | - |
 | [名称](../extensibility/name-element-visual-studio-templates.md) | 必需的元素。<br /><br /> 指定模板在 " **新建项目** " 或 " **添加新项** " 对话框中显示的名称。 |
 | [说明](../extensibility/description-element-visual-studio-templates.md) | 必需的元素。<br /><br /> 指定在 " **新建项目** " 或 " **添加新项** " 对话框中显示的模板的说明。 |
@@ -72,7 +72,7 @@ ms.locfileid: "80699196"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[VSTemplate](../extensibility/vstemplate-element-visual-studio-templates.md)|必需的元素。<br /><br /> 包含项目模板、项模板或初学者工具包的所有元数据。|
 
@@ -108,6 +108,6 @@ ms.locfileid: "80699196"
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
 - [创建项目和项模板](../ide/creating-project-and-item-templates.md)

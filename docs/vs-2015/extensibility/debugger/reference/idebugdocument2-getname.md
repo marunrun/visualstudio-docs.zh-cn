@@ -1,5 +1,5 @@
 ---
-title: IDebugDocument2::GetName |Microsoft Docs
+title: IDebugDocument2：： GetName |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 09456b20faf4d5f5ea09baa55e0a7fd78a19a95c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68186654"
 ---
 # <a name="idebugdocument2getname"></a>IDebugDocument2::GetName
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-获取文档的名称中有几种形式之一。  
+获取文档的名称，格式为多个窗体中的一种。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,17 +42,17 @@ int GetName( 
   
 #### <a name="parameters"></a>参数  
  `gnType`  
- [in]中的值[GETNAME_TYPE](../../../extensibility/debugger/reference/getname-type.md)枚举，用于确定要返回名称的类型。  
+ 中 [GETNAME_TYPE](../../../extensibility/debugger/reference/getname-type.md) 枚举中的一个值，该值确定要返回的名称的类型。  
   
  `pbstrFileName`  
- [out]返回包含文档名称的字符串。  
+ 弄返回一个包含文档名称的字符串。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
 ## <a name="remarks"></a>备注  
- 作为一个标题或文件的名称或甚至文件名称的一部分，此方法可以例如，返回的文档的名称。  
+ 例如，此方法可以将文档名称作为标题返回，或以文件名或文件名称的一部分形式返回。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md)   
  [GETNAME_TYPE](../../../extensibility/debugger/reference/getname-type.md)

@@ -10,10 +10,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 65759da4363891c713f906e6cb10f00443bcbceb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68197915"
 ---
 # <a name="args"></a>参数
@@ -31,10 +31,10 @@ VSPerfCmd.exe /Launch:AppName /Args:Arguments [Options]
   
 #### <a name="parameters"></a>参数  
  `Arguments`  
- **Launch** 命令的目标应用程序的参数列表。  
+  Launch 命令的目标应用程序的参数列表****。  
   
 ## <a name="required-options"></a>必需选项  
- **Launch：** `AppName`  
+ **启动：**`AppName`  
  启动指定的应用程序并开始使用采样方法进行分析。  
   
 ## <a name="example"></a>示例  

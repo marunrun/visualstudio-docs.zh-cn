@@ -1,5 +1,5 @@
 ---
-title: '&lt;field &gt; （JavaScript） |Microsoft Docs'
+title: '&lt;&gt; (JavaScript) 的字段 |Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: a3fc786e4d99d1eaff4a8b152ea9496ce8400ff1
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72663857"
 ---
 # <a name="ltfieldgt-javascript"></a>&lt;field&gt; (JavaScript)
@@ -38,23 +38,23 @@ ms.locfileid: "72663857"
 ```
 
 #### <a name="parameters"></a>参数
- `name` 字段或成员的名称。 如果在构造函数中使用 `<field>` 元素，则 `name` 是必需的，并且定义标记应用到的成员。 当 `<field>` 元素直接为字段加批注时，将忽略此属性，并且 Visual Studio 使用的名称是源代码中实际字段的名称。
+ `name` 字段或成员的名称。 如果在 `<field>` 构造函数中使用了元素， `name` 则是必需的，并定义了标记应用到的成员。 当 `<field>` 元素直接为字段加批注时，将忽略此属性，并且 Visual Studio 使用的名称是源代码中实际字段的名称。
 
- `static`（可选）。 指定该字段是否为构造函数的成员或构造函数返回的对象的成员。 设置为 `true` 以将字段视为构造函数的成员。 设置为 `false`，以便将字段视为构造函数返回的对象的成员。
+ `static`（可选）。 指定该字段是否为构造函数的成员或构造函数返回的对象的成员。 设置为 `true` 可将字段视为构造函数的成员。 设置为 `false` 可将字段视为构造函数返回的对象的成员。
 
  `type`（可选）。 字段的数据类型。 类型可以是下列类型之一：
 
-- ECMAScript 5 规范中的 ECMAScript 语言类型，如 `Number` 和 `Object`。
+- ECMAScript 5 规范中的 ECMAScript 语言类型，例如 `Number` 和 `Object` 。
 
 - DOM 对象，例如 `HTMLElement`、`Window` 和 `Document`。
 
 - JavaScript 构造函数。
 
-  `integer`（可选）。 如果 `Number` `type`，则指定该字段是否为整数。 设置为 `true` 以指示该字段为整数;否则，设置为 `false`。 Visual Studio 不使用此属性以提供 IntelliSense 信息。
+  `integer`（可选）。 如果 `type` 为 `Number` ，则指定此字段是否为整数。 如果设置为，则 `true` 指示该字段为整数; 否则设置为 `false` 。 Visual Studio 不使用此属性以提供 IntelliSense 信息。
 
-  `domElement`（可选）。 此属性已弃用；`type` 属性优先于此属性。 此属性指定已记录字段是否为 DOM 元素。 设置为 "`true`" 可指定该字段是 DOM 元素;否则，设置为 `false`。 如果未设置 `type` 特性，并且 `domElement` 设置为 `true`，则在执行语句完成时，IntelliSense 会将文档中的字段作为 `HTMLElement` 处理。
+  `domElement`（可选）。 此属性已弃用；`type` 属性优先于此属性。 此属性指定已记录字段是否为 DOM 元素。 如果设置为，则 `true` 指定该字段为 DOM 元素; 否则设置为 `false` 。 如果 `type` 未设置该属性，并且 `domElement` 设置为 `true` ，则 `HTMLElement` 在执行语句完成时，IntelliSense 会将文档中的字段视为。
 
-  `mayBeNull`（可选）。 指定记录的字段是否可以设置为 null。 设置为 `true`，以指示字段可以设置为 null;否则，设置为 `false`。 默认值为 `false`。 Visual Studio 不使用此属性以提供 IntelliSense 信息。
+  `mayBeNull`（可选）。 指定记录的字段是否可以设置为 null。 如果设置为， `true` 则指示字段可以设置为 null; 否则设置为 `false` 。 默认值为 `false`。 Visual Studio 不使用此属性以提供 IntelliSense 信息。
 
   `elementType`（可选）。 如果 `type` 是 `Array`，此属性指定数组中元素的类型。
 
@@ -66,16 +66,16 @@ ms.locfileid: "72663857"
 
   `helpKeyword`（可选）。 F1 帮助的关键字。
 
-  `locid`（可选）。 有关字段的本地化信息的标识符。 标识符是成员 ID 或对应于 OpenAjax 元数据定义的消息绑定中的 `name` 属性值。 标识符类型取决于 [\<loc>](../ide/loc-javascript.md) 标记中指定的格式。
+  `locid`（可选）。 有关字段的本地化信息的标识符。 标识符是成员 ID 或对应于 OpenAjax 元数据定义的消息绑定中的 `name` 属性值。 标识符类型取决于标记中指定的格式 [\<loc>](../ide/loc-javascript.md) 。
 
-  `value`（可选）。 指定应计算以供 IntelliSense 使用的代码，而不是函数代码本身。 对于 `<field>`，构造函数支持此属性，但对于对象文本不支持。 当字段类型未定义时，可以使用此特性来提供类型信息。 例如，可以使用 `value=’1’` 将字段类型视为数字。
+  `value`（可选）。 指定应计算以供 IntelliSense 使用的代码，而不是函数代码本身。 对于 `<field>` ，构造函数支持此属性，但对于对象文本不支持。 当字段类型未定义时，可以使用此特性来提供类型信息。 例如，可以使用 `value=’1’` 将字段类型视为数字。
 
   `description`（可选）。 字段的说明。
 
 ## <a name="remarks"></a>备注
- 在构造函数中记录字段时，`name` 属性是必需的。 对于所有其他情况，`<field>` 元素的所有属性都是可选的。
+ 在 `name` 构造函数中记录字段时，属性是必需的。 对于所有其他情况，该元素的所有属性 `<field>` 都是可选的。
 
- 在记录构造函数时，`<field>` 元素必须紧跟在字段声明之前。 @No__t_0 特性必须与源代码中使用的字段名称匹配。 对于对象成员，如果 `<field>` 元素紧邻对象成员声明之前出现，则可以省略 `name` 特性。
+ 在记录构造函数时， `<field>` 元素必须紧跟在字段声明之前。 `name`特性必须与源代码中使用的字段名称匹配。 对于对象成员， `name` 如果 `<field>` 元素紧邻对象成员声明之前出现，则可以省略该特性。
 
 ## <a name="example"></a>示例
  下面的代码示例演示如何使用 `<field>` 元素。
@@ -102,7 +102,7 @@ function Engine() {
 ```
 
 ## <a name="example"></a>示例
- 下面的示例演示如何使用 `static` 属性设置为 `true` 的 `<field>` 元素。
+ 下面的示例演示如何使用 `<field>` `static` 属性设置为的元素 `true` 。
 
 ```javascript
 function Engine() {
@@ -116,7 +116,7 @@ Engine.
 ```
 
 ## <a name="example"></a>示例
- 下面的示例演示如何使用 `static` 属性设置为 `false` 的 `<field>` 元素。
+ 下面的示例演示如何使用 `<field>` `static` 属性设置为的元素 `false` 。
 
 ```javascript
 function Engine() {
@@ -131,7 +131,7 @@ eng.
 ```
 
 ## <a name="example"></a>示例
- 下面的示例演示如何将 `<field>` 元素与 `value` 特性结合使用。
+ 下面的示例演示如何将 `<field>` 元素与特性结合使用 `value` 。
 
 ```javascript
 function calculator(a) {

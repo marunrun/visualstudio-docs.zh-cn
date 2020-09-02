@@ -1,5 +1,5 @@
 ---
-title: 导航调试会话 (Xaml 和C#) |Microsoft Docs
+title: '在 Xaml 和 c # )  (导航调试会话 |Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -15,10 +15,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: b5b8d24f01f7882e8c760918119a03a1c489c727
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68156828"
 ---
 # <a name="navigate-a-debugging-session-in-visual-studio-xaml-and-c"></a>在 Visual Studio 中导航调试会话（Xaml 和 C#）
@@ -30,9 +30,9 @@ ms.locfileid: "68156828"
 
  本快速入门的各部分设计为尽可能独立，因此你可以跳过任何包含已熟悉的信息的部分。 你也无需创建示例应用；不过我们确实建议这样做，并且已尽可能简化了过程。
 
- **调试器键盘快捷方式。** Visual Studio 调试器导航同时针对鼠标和键盘进行了优化。 本主题中的许多步骤都在括号备注中包含键盘加速器或快捷键。 例如，(键盘：F5) 指示按 F5 键启动或继续调试器的执行。
+ **调试器键盘快捷方式。** Visual Studio 调试器导航同时针对鼠标和键盘进行了优化。 本主题中的许多步骤都在括号备注中包含键盘加速器或快捷键。 例如，（键盘：F5）指示按 F5 键可启动或继续调试器的执行。
 
-## <a name="in-this-topic"></a>在本主题中
+## <a name="in-this-topic"></a>本主题内容
  你可以学习如何：
 
 - [创建示例应用](#BKMK_CreateTheApplication)
@@ -41,23 +41,23 @@ ms.locfileid: "68156828"
 
 - [单步执行、逐过程执行和跳出执行方法](#BKMK_StepIntoOverOut)
 
-- [设置条件断点、运行到光标处以及可视化变量](#BKMK_ConditionCursorVisualize)
+- [设置条件断点、运行到光标处以及对变量进行可视化](#BKMK_ConditionCursorVisualize)
 
 - [编辑并继续，从异常中恢复](#BKMK_EditContinueRecoverExceptions)
 
-## <a name="BKMK_CreateTheApplication"></a> 创建示例应用
+## <a name="create-the-sample-app"></a><a name="BKMK_CreateTheApplication"></a> 创建示例应用
  调试与代码有关，因此示例应用仅使用 Windows 应用商店应用程序框架创建一个源文件，在该文件中可以查看调试会话导航的工作原理以及如何检查和更改程序状态。 将调用的所有代码都从主页的构造函数进行调用；不添加任何控件，并且不处理任何事件。
 
- **创建默认 C# Windows 应用商店应用。** 打开 Visual Studio。 在主页上，选择 **“新建项目”** 链接。 在“新建项目”对话框中，在 **“已安装”** 列表中选择 **“Visual C#”** ，然后选择 **“Windows 应用商店”** 。 在项目模板列表中，选择 **“应用程序”** 。 Visual Studio 随即创建一个新解决方案和项目，并显示 MainPage.xaml 设计器和 XAML 代码编辑器。
+ **创建默认 C# Windows 应用商店应用。** 打开 Visual Studio 在主页上，选择 **“新建项目”** 链接。 在“新建项目”对话框中，在 **“已安装”** 列表中选择 **“Visual C#”** ，然后选择 **“Windows 应用商店”**。 在项目模板列表中，选择 **“应用程序”**。 Visual Studio 随即创建一个新解决方案和项目，并显示 MainPage.xaml 设计器和 XAML 代码编辑器。
 
- **打开 MainPage.xaml.cs 源文件。** 右键单击 XML 编辑器中的任何位置，然后选择 **“查看代码”** 。 MainPage.xaml.cs 代码隐藏文件随即显示。 请注意，该文件中仅列出一个方法（即 `MainPage()` 构造函数）。
+ **打开 MainPage.xaml.cs 源文件。** 右键单击 XML 编辑器中的任何位置，然后选择 **“查看代码”**。 MainPage.xaml.cs 代码隐藏文件随即显示。 请注意，该文件中仅列出一个方法（即 `MainPage()` 构造函数）。
 
- **将 MainPage 构造函数替换为示例代码。** 删除 MainPage() 方法。 单击以下链接：[调试器导航示例代码 (Xaml 和C#)](../debugger/debugger-navigation-sample-code-xaml-and-csharp.md)，然后将复制中列出的代码C#部分到剪贴板。 (选择**回**在浏览器或帮助查看器以返回到本快速入门页。)在 Visual Studio 编辑器中，在 `partial class MainPage` 块中粘贴代码。 选择 Ctrl + s 以保存文件。
+ **将 MainPage 构造函数替换为示例代码。** 删除 MainPage() 方法。 请访问以下链接： [调试器导航示例代码 (Xaml 和 c # ) ](../debugger/debugger-navigation-sample-code-xaml-and-csharp.md)，然后将 c # 部分中列出的代码复制到剪贴板。  (在浏览器或帮助查看器 **中选择 "** 返回" 以返回此快速启动页。 ) 在 Visual Studio 编辑器中，将代码粘贴到块中 `partial class MainPage` 。 选择 Ctrl + s 以保存文件。
 
  现在可以遵循本主题中的示例进行操作。
 
-## <a name="BKMK_StepInto"></a> 设置和运行到断点、单步执行方法以及检查程序数据
- 您可以启动调试会话的最常见方法是选择**开始调试**从**调试**菜单 (键盘：F5）。 执行随即开始，并一直继续到达到断点、手动挂起执行、发生异常或应用结束。
+## <a name="set-and-run-to-a-breakpoint-step-into-a-method-and-examine-program-data"></a><a name="BKMK_StepInto"></a> 设置和运行到断点、单步执行方法以及检查程序数据
+ 可以用于启动调试会话的最常见方法是从 **“调试”** 菜单中选择 **“启动调试”** （键盘：F5）。 执行随即开始，并一直继续到达到断点、手动挂起执行、发生异常或应用结束。
 
  当在调试器中挂起执行时，可以通过将鼠标悬停在变量上方，在数据提示中查看活动变量的值。 还可以打开“局部变量”和“自动”窗口，以查看活动变量及其当前值的列表。 通过将一个或多个变量添加到监视窗口可以在应用继续执行时关注变量的值。
 
@@ -66,13 +66,13 @@ ms.locfileid: "68156828"
 ### <a name="example-1"></a>示例 1
  在此示例中，你会在 MainPage.xaml.cs 文件的 MainPage 构造函数中设置断点，单步执行第一个方法，查看变量值，然后停止调试。
 
- **设置断点。** 在 MainPage 构造函数中的 `methodTrack = "Main Page";` 语句处设置断点。 选择源代码编辑器的阴影滚动条槽中的行 (键盘：将光标置于该行上并按 F9 键）。
+ **设置断点。** 在 MainPage 构造函数中的 `methodTrack = "Main Page";` 语句处设置断点。 选择源代码编辑器的阴影滚动条槽中的行（键盘：将光标置于该行上并按 F9 键）。
 
  ![单步执行](../debugger/media/dbg-basics-stepinto.png "DBG_Basics_StepInto")
 
  该断点图标将显示在滚动条槽中。
 
- **运行到断点处。** 通过选择来启动调试会话**开始调试**上**调试**菜单 (键盘：F5）。
+ **运行到断点处。** 通过在 **“调试”** 菜单上选择 **“启动调试”** （键盘：F5）。
 
  应用随即开始执行，并恰好在设置了断点的语句前挂起执行。 滚动条槽中的当前行图标标识你的位置，当前语句会突出显示。
 
@@ -80,7 +80,7 @@ ms.locfileid: "68156828"
 
  你现在可控制应用的执行，并且可以在逐步执行程序语句时检查程序状态。
 
- **单步执行方法。** 上**调试**菜单中，选择**单步执行**(键盘：F11)。
+ **单步执行方法。** On the **“启动调试”** 菜单上选择 **“单步执行”** （键盘：F11）。
 
  ![当前行](../debugger/media/dbg-basics-currentline.png "DBG_Basics_CurrentLine")
 
@@ -100,19 +100,19 @@ ms.locfileid: "68156828"
 
   将鼠标悬停在变量 `a`上方。 记下名称、值和数据类型。 将鼠标悬停在变量 `methodTrack`上方。 记下名称、值和数据类型。
 
-  **在“局部变量”窗口中检查变量值。** 在“新建项目” **“启动调试”** 菜单上指向 **“窗口”** ，然后选择 **“局部变量”** 。 （键盘：Alt+ 4)。
+  **在“局部变量”窗口中检查变量值。** On the **“启动调试”** 菜单上指向 **“窗口”**，然后选择 **“局部变量”**。 （键盘：Alt+4）。
 
   ![局部变量窗口](../debugger/media/dbg-basics-localswindow.png "DBG_Basics_LocalsWindow")
 
   “局部变量”窗口是函数的参数和变量的树视图。 对象变量的属性是对象本身的子节点。 `this` 变量是每个对象方法中用于表示对象本身的隐藏参数。 在此例中，它表示 MainPage 类。 因为 `methodTrack` 是 MainPage 类的成员，所以其值和数据类型会在 `this`下方的行中列出。 展开 `this` 节点以查看 `methodTrack` 信息。
 
-  **添加为 methodTrack 变量监视。** `methodWatch` 变量在本快速入门全篇中用于显示示例中调用的方法。 要更加方便地查看变量的值，请将它添加到监视窗口中。 在“局部变量”窗口中右键单击变量名，然后选择 **“添加监视”** 。
+  **为 methodTrack 变量添加监视。** `methodWatch` 变量在本快速入门全篇中用于显示示例中调用的方法。 要更加方便地查看变量的值，请将它添加到监视窗口中。 在“局部变量”窗口中右键单击变量名，然后选择 **“添加监视”**。
 
   ![监视窗口](../debugger/media/dbg-basics-watchwindow.png "DBG_Basics_WatchWindow")
 
-  可以在监视窗口中监视多个变量。 只要挂起执行，便会更新受监视的变量的值（如“局部变量”窗口和数据提示窗口中的值）。 还可以从代码编辑器将变量添加到监视窗口中。 选择要监视的变量，右键单击，然后选择 **“添加监视”** 。
+  可以在监视窗口中监视多个变量。 只要挂起执行，便会更新受监视的变量的值（如“局部变量”窗口和数据提示窗口中的值）。 还可以从代码编辑器将变量添加到监视窗口中。 选择要监视的变量，右键单击，然后选择 **“添加监视”**。
 
-## <a name="BKMK_StepIntoOverOut"></a> 单步执行、逐过程执行和跳出执行方法
+## <a name="step-into-over-and-out-of-methods"></a><a name="BKMK_StepIntoOverOut"></a> 单步执行、逐过程执行和跳出方法
  与单步执行父方法调用的方法相反，逐过程执行方法会执行子方法，然后在父方法继续时在调用方法中挂起执行。 当你熟悉方法的工作方式，并且确定其执行不会影响正在调查的问题时，可以逐过程执行方法。
 
  逐过程执行不包含方法调用的代码行会如同单步执行该行一样执行该行。
@@ -121,30 +121,30 @@ ms.locfileid: "68156828"
 
  逐过程执行和跳出执行函数都会执行函数。
 
- ![执行、 逐过程执行和跳出执行方法的步骤](../debugger/media/dbg-basics-stepintooverout.png "DBG_Basics_StepIntoOverOut")
+ ![单步执行、逐过程执行和跳出执行方法](../debugger/media/dbg-basics-stepintooverout.png "DBG_Basics_StepIntoOverOut")
 
 ### <a name="example-2"></a>示例 2
  在此示例中，你会单步执行、逐过程执行和跳出执行方法。
 
  **在 MainPage 构造函数中调用 Example2 方法。** 编辑 MainPage 构造函数，并将 `methodTrack = String.Empty;` 后的行替换为 `Example2();`。
 
- ![从 Demo 方法中调用 Example2](../debugger/media/dbg-basics-callexample2.png "DBG_Basics_CallExample2")
+ ![从 Demo 方法中调用 Example2 方法](../debugger/media/dbg-basics-callexample2.png "DBG_Basics_CallExample2")
 
- **运行到断点处。** 通过选择来启动调试会话**开始调试**上**调试**菜单 (键盘：F5）。 调试器会在断点处挂起执行。
+ **运行到断点处。** 通过在 **“调试”** 菜单上选择 **“启动调试”** （键盘：F5）。 调试器会在断点处挂起执行。
 
- **逐过程执行代码行。** 上**调试**菜单中，选择**单步跳过**(键盘：F10)。 调试器会按照与单步执行语句相同的方式来执行 `methodTrack = "MainPage";` 语句。
+ **逐过程执行代码行。** 在“新建项目” **“启动调试”** “调试”菜单上，选择“单步执行” **“逐过程”** （键盘：F10）。 调试器会按照与单步执行语句相同的方式来执行 `methodTrack = "MainPage";` 语句。
 
  **单步执行 Example2 和 Example2_A。** 按 F11 键，以单步执行 Example 2 方法。 继续单步执行 Example2 语句，直到达到行 `int x = Example2_A();`。 再次单步执行此行以移动到 Example2_A 的入口点。 继续单步执行 Example2_A 的每个语句，直到返回 Example2。
 
- ![Example2](../debugger/media/dbg-basics-example2.png "DBG_Basics_Example2")
+ ![示例 2](../debugger/media/dbg-basics-example2.png "DBG_Basics_Example2")
 
  **逐过程执行函数。** 请注意，Example2 中的下一行 `int y = Example2_A();` 基本上与上一行相同。 可以安全地逐过程执行此行。 按 F10 键，以从 Example2 的恢复移动到对 Example2_A 的第二次调用。 按 F10 以逐过程执行此方法。 请注意， `methodTrack` 字符串指示两次执行了 Example2_A 方法。 你还会注意到，调试器会立即移动到下一行。 它不会在 Example2 的恢复点处挂起执行。
 
- **跳出函数。** 按 F11 键，以单步执行 Example2_B 方法。 请注意，Example2_B 与 Example2_A 没有太大不同。 若要跳出该方法，请选择**单步跳出**上**调试**菜单 (键盘：Shift + F11）。 请注意， `methodTrack` 变量指示执行了 Example2_B，并且调试器已返回 Example2 的恢复点。
+ **跳出函数。** 按 F11 键，以单步执行 Example2_B 方法。 请注意，Example2_B 与 Example2_A 没有太大不同。 若要跳出该方法，请在 **“调试”** 菜单上选择 **“跳出”** （键盘：Shift + F11）。 请注意， `methodTrack` 变量指示执行了 Example2_B，并且调试器已返回 Example2 的恢复点。
 
- **停止调试。** 在调试菜单上选择停止调试 (键盘：Shift + F5)。 这会结束调试会话。
+ **停止调试。** 在“调试”菜单上，选择“停止调试”（键盘：Shift+F5）。 这会结束调试会话。
 
-## <a name="BKMK_ConditionCursorVisualize"></a> 设置条件断点、运行到光标处以及可视化变量
+## <a name="set-a-conditional-breakpoint-run-to-the-cursor-and-visualize-a-variable"></a><a name="BKMK_ConditionCursorVisualize"></a> 设置条件断点、运行到光标处以及可视化变量
  条件断点指定导致调试器挂起执行的条件。 条件通过可以计算为 true 或 false 的任何代码表达式进行指定。 例如，可以使用条件断点仅在某个变量达到特定值时才检查频繁调用的方法中的程序状态。
 
  运行到光标处如同设置一次性断点。 挂起执行时，可以在源代码中选择某行并继续执行，直到达到所选行。 例如，可以逐步执行方法中的循环并确定该循环中的代码是否正确执行。 可以运行到置于循环执行之后的光标，而不是逐步执行循环的每次迭代。
@@ -158,29 +158,29 @@ ms.locfileid: "68156828"
 
  ![从 Demo 方法中调用 Example3](../debugger/media/dbg-basics-callexample3.png "DBG_Basics_CallExample3")
 
- **运行到断点处。** 通过选择来启动调试会话**开始调试**上**调试**菜单 (键盘：F5）。 调试器会在 MainPage 方法中的断点处挂起执行。
+ **运行到断点处。** 通过在 **“调试”** 菜单上选择 **“启动调试”** （键盘：F5）。 调试器会在 MainPage 方法中的断点处挂起执行。
 
- **单步执行 Example3 方法。** 选择**单步执行**上**调试**菜单 (键盘：F11) 若要将移动到 Example3 方法的入口点。 继续单步执行该方法，直到迭代了 `for` 块的一次或多次循环。 请注意，单步执行所有 1000 次迭代需要较长时间。
+ **单步执行 Example3 方法。** 在 **“单步执行”** 菜单上选择 **“启动调试”** （键盘：F11），以移动到 Example3 方法的入口点。 继续单步执行该方法，直到迭代了 `for` 块的一次或多次循环。 请注意，单步执行所有 1000 次迭代需要较长时间。
 
- **设置条件断点。** 在代码窗口的左滚动条槽中，右键单击行 `x += i;` ，然后选择 **“条件”** 。 选中 **“条件”** 复选框，然后在文本框中输入 `i == 500;` 。 选择 **“为 true”** 选项，然后选择 **“确定”** 。 通过断点可以检查 `for` 循环的第 500 次迭代处的值。
+ **设置条件断点。** 在代码窗口的左滚动条槽中，右键单击行 `x += i;` ，然后选择 **“条件”**。 选中 **“条件”** 复选框，然后在文本框中输入 `i == 500;` 。 选择 **“为 true”** 选项，然后选择 **“确定”**。 通过断点可以检查 `for` 循环的第 500 次迭代处的值。
 
- ![断点条件对话框](../debugger/media/dbg-basics-breakpointcondition.png "DBG_Basics_BreakpointCondition")
+ ![“断点条件”对话框](../debugger/media/dbg-basics-breakpointcondition.png "DBG_Basics_BreakpointCondition")
 
  可以通过其白色十字来识别条件断点图标。
 
  ![条件断点](../debugger/media/dbg-basics-conditionalbreakpoint.png "DBG_Basics_ConditionalBreakpoint")
 
- **运行到断点处。** 在调试菜单上选择继续 (键盘：F5）。 在“局部变量”窗口中，确认 `i` 的当前值是否为 500。 请注意，变量 `s` 表示为单个行，比窗口长得多。
+ **运行到断点处。** 在“调试”菜单上选择“继续”（键盘：F5）。 在“局部变量”窗口中，确认 `i` 的当前值是否为 500。 请注意，变量 `s` 表示为单个行，比窗口长得多。
 
  **可视化字符串变量。** 单击 **的** “值” `s`。
 
  “文本可视化工具”窗口随即出现，字符串的值会显示为多行字符串。
 
- **运行到光标处。** 右键单击行`methodTrack += "->Example3";`，然后选择**运行到光标处**(键盘：将光标移动到行;Ctrl + F10）。 调试器会完成循环迭代，然后在该行处挂起执行。
+ **运行到光标处。** 右键单击行 `methodTrack += "->Example3";` ，然后选择 **“运行到光标处”** （键盘：将光标移动到该行；Ctrl + F10）。 调试器会完成循环迭代，然后在该行处挂起执行。
 
- **停止调试。** 在调试菜单上选择停止调试 (键盘：Shift + F5)。 这会结束调试会话。
+ **停止调试。** 在“调试”菜单上，选择“停止调试”（键盘：Shift+F5）。 这会结束调试会话。
 
-## <a name="BKMK_EditContinueRecoverExceptions"></a> 编辑并继续，从异常中恢复
+## <a name="edit-and-continue-recover-from-an-exception"></a><a name="BKMK_EditContinueRecoverExceptions"></a> 编辑并继续，从异常中恢复
  在某些情况下，当在 Visual Studio 调试器中中断到代码中时，你可以更改变量的值，甚至是语句的逻辑。 此功能称为编辑并继续。
 
  编辑并继续对于在异常处中断的情况特别有用。 可以“展开”执行以将执行移动到恰好位于发生异常之前的点，然后更改有问题的变量或语句并在不引发异常的状态中继续执行当前调试会话，而不是停止并重新启动调试所涉及的较长过程来避免异常。
@@ -194,23 +194,23 @@ ms.locfileid: "68156828"
 
  ![从 Demo 方法中调用 Example4](../debugger/media/dbg-basics-callexample4.png "DBG_Basics_CallExample4")
 
- **运行到异常。** 通过选择来启动调试会话**开始调试**上**调试**菜单 (键盘：F5）。 再次按 F5 以继续执行。 调试器会在 Example4 方法中的异常处挂起执行，并显示异常对话框。
+ **运行到异常。** 通过在 **“调试”** 菜单上选择 **“启动调试”** （键盘：F5）。 再次按 F5 以继续执行。 调试器会在 Example4 方法中的异常处挂起执行，并显示异常对话框。
 
- ![异常对话框](../debugger/media/dbg-basics-exceptiondlg.png "DBG_Basics_ExceptionDlg")
+ ![“异常”对话框](../debugger/media/dbg-basics-exceptiondlg.png "DBG_Basics_ExceptionDlg")
 
  **更改程序逻辑。** 很明显，错误处于 `if` 条件中：当 `x` 等于 0 时，应更改 `x` 的值；当 `x` 不等于零不更改。 选择 **“中断”** 以修复方法的逻辑。 尝试编辑行时，另一个对话框会出现。
 
- ![编辑并继续对话框的](../debugger/media/dbg-basics-editandcontinuedlg.png "DBG_Basics_EditAndContinueDlg")
+ !["编辑并继续" 对话框](../debugger/media/dbg-basics-editandcontinuedlg.png "DBG_Basics_EditAndContinueDlg")
 
  选择 **“编辑”** ，然后将行 `if (x != 0)` 更改为 `if (x == 0)`。 调试器会将对程序逻辑的更改保存到源文件。
 
  **更改变量值。** 在数据提示中或“局部变量”窗口中检查 `x` 的值。 它仍然是 0（零）。 如果尝试执行导致原始异常的语句，则它仅仅再次引发。 可以更改 `x`的值。 在“局部变量”窗口中，双击 **x** 行的 **“值”** 列。 将值从 0 更改为 1。
 
- ![局部变量窗口中编辑值](../debugger/media/dbg-basics-editandcontinuefix.png "DBG_Basics_EditAndContinueFix")
+ ![在局部变量窗口中编辑值](../debugger/media/dbg-basics-editandcontinuefix.png "DBG_Basics_EditAndContinueFix")
 
  按 F11 键，以单步执行之前引发了异常的语句。 请注意，行会执行而不发生错误。 再次按 F11。
 
- **停止调试。** 上**调试**菜单中，选择**停止调试**(键盘：Shift + F5)。 这会结束调试会话。
+ **停止调试。** On the **“启动调试”** 菜单上选择 **Stop “启动调试”ging** （键盘：Shift+F5）。 这会结束调试会话。
 
-## <a name="see-also"></a>请参阅
- [启动调试会话 (VB、 C#，C++和 XAML)](../debugger/start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml.md) [触发器挂起、 继续和后台事件的 Windows 应用商店)](../debugger/how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio.md) [在 Visual Studio 中调试应用](../debugger/debug-store-apps-in-visual-studio.md)
+## <a name="see-also"></a>另请参阅
+ [启动调试会话 (VB、c #、c + + 和 XAML) ](../debugger/start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml.md) [触发 Windows 应用商店的挂起、继续和后台事件) ](../debugger/how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio.md) [在 Visual Studio 中调试应用](../debugger/debug-store-apps-in-visual-studio.md)
