@@ -8,12 +8,12 @@ ms.assetid: 57b7f502-3b04-42d9-90d5-f57772a7c757
 caps.latest.revision: 8
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 64d8430dbcf563ca232d1b8d850678925770219f
-ms.sourcegitcommit: d9254e54079ae01cdf2d07b11f988faf688f80fc
+ms.openlocfilehash: 58e491290122a9d525ff8129333ac0f52ac5f778
+ms.sourcegitcommit: 26178b116cbf7353fee6ca989b8d872114f7b405
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88114165"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89284330"
 ---
 # <a name="localizedname-element-vsix-language-pack-schema"></a>LocalizedName 元素（VSIX 语言包架构）
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -33,13 +33,13 @@ ms.locfileid: "88114165"
   
 |特性|说明|  
 |---------------|-----------------|  
-|None||  
+|无||  
   
 ### <a name="child-elements"></a>子元素  
   
 |元素|说明|  
 |-------------|-----------------|  
-|None||  
+|无||  
   
 ### <a name="parent-elements"></a>父元素  
   
@@ -51,39 +51,13 @@ ms.locfileid: "88114165"
  必需。 目标语言中的语言包的名称。  
   
 ## <a name="element-information"></a>元素信息  
-
-:::row:::
-    :::column:::
-        命名空间
-    :::column-end:::
-    :::column:::
-        `http://schemas.microsoft.com/developer/vsx-schema-lp/2010`
-    :::column-end:::
-:::row-end:::
-:::row:::
-    :::column:::
-        架构名称
-    :::column-end:::
-    :::column:::
-        VSIX 语言包架构
-    :::column-end:::
-:::row-end:::
-:::row:::
-    :::column:::
-        验证文件
-    :::column-end:::
-    :::column:::
-        VSIXLanguagePackSchema
-    :::column-end:::
-:::row-end:::
-:::row:::
-    :::column:::
-        可以为空
-    :::column-end:::
-    :::column:::
-        不适用
-    :::column-end:::
-:::row-end:::
+  
+|                 |                                                           |
+|-----------------|-----------------------------------------------------------|
+|    命名空间    | `http://schemas.microsoft.com/developer/vsx-schema-lp/2010` |
+|   架构名称   |                 VSIX 语言包架构                 |
+| 验证文件 |                VSIXLanguagePackSchema                 |
+|  可以为空   |                      不适用                       |
   
 ## <a name="see-also"></a>另请参阅  
  [VSX 语言包架构引用](../extensibility/vsx-language-pack-schema-reference.md)   

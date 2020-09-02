@@ -8,12 +8,12 @@ ms.assetid: 767f5c22-8b87-49ca-92aa-a7a3f026469f
 caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: cd3ed1477d1c4d345e5fc6f6496d12044d4af244
-ms.sourcegitcommit: d9254e54079ae01cdf2d07b11f988faf688f80fc
+ms.openlocfilehash: e2e1df362fddeab5be98ff90460a8a1a7d4b7876
+ms.sourcegitcommit: 26178b116cbf7353fee6ca989b8d872114f7b405
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88114192"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89284326"
 ---
 # <a name="vsixlanguagepack-element-vsix-language-pack-schema"></a>VSIXLanguagePack 元素（VSIX 语言包架构）
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -59,42 +59,16 @@ ms.locfileid: "88114192"
   
 |元素|说明|  
 |-------------|-----------------|  
-|None||  
+|无||  
   
 ## <a name="element-information"></a>元素信息  
-
-:::row:::
-    :::column:::
-        命名空间
-    :::column-end:::
-    :::column:::
-        `http://schemas.microsoft.com/developer/vsx-schema-lp/2010`
-    :::column-end:::
-:::row-end:::
-:::row:::
-    :::column:::
-        架构名称
-    :::column-end:::
-    :::column:::
-        VSIX 语言包架构
-    :::column-end:::
-:::row-end:::
-:::row:::
-    :::column:::
-        验证文件
-    :::column-end:::
-    :::column:::
-        VSIXLanguagePackSchema
-    :::column-end:::
-:::row-end:::
-:::row:::
-    :::column:::
-        可以为空
-    :::column-end:::
-    :::column:::
-        否
-    :::column-end:::
-:::row-end:::
+  
+|                 |                                                           |
+|-----------------|-----------------------------------------------------------|
+|    命名空间    | `http://schemas.microsoft.com/developer/vsx-schema-lp/2010` |
+|   架构名称   |                 VSIX 语言包架构                 |
+| 验证文件 |                VSIXLanguagePackSchema                 |
+|  可以为空   |                            否                             |
   
 ## <a name="see-also"></a>另请参阅  
  [VSX 语言包架构引用](../extensibility/vsx-language-pack-schema-reference.md)[本地化 Vsix 包](../extensibility/localizing-vsix-packages.md) [vsix 扩展架构1.0 引用](/previous-versions/dd393700(v=vs.110))
