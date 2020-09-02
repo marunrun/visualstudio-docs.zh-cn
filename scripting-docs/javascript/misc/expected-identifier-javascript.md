@@ -1,5 +1,5 @@
 ---
-title: 应为标识符（JavaScript） |Microsoft Docs
+title: JavaScript)  (所需的标识符 |Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
@@ -15,10 +15,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: 71f5e4363481745887371e7d25e308b2856dc00c
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85816522"
 ---
 # <a name="expected-identifier-javascript"></a>应为标识符 (JavaScript)
@@ -36,5 +36,5 @@ ms.locfileid: "85816522"
   
 - 更改表达式，使标识符出现在等号的左侧。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用数组](../../javascript/advanced/using-arrays-javascript.md)

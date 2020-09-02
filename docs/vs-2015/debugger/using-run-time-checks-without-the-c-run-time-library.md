@@ -1,5 +1,5 @@
 ---
-title: 使用无 C 运行时库运行时检查 |Microsoft Docs
+title: 使用无 C 运行库的运行时检查 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -28,16 +28,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 1eefddd21817360736b9f20f74ca3dc8a83683fe
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65684023"
 ---
 # <a name="using-run-time-checks-without-the-c-run-time-library"></a>使用无 C 运行库的运行时检查
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-如果链接无 C 运行时库的应用程序，使用 **/NODEFAULTLIB**，并想要使用运行时检查，则必须链接 runtmchk.lib。  
+如果链接程序而不链接 C 运行库（使用 /NODEFAULTLIB）并希望使用运行时检查，则必须链接 RunTmChk.lib。  
   
  `_RTC_Initialize` 为运行时检查初始化程序。 如果未链接 C 运行库，必须在调用 `_RTC_Initialize` 之前检查是否用运行时错误检查编译了程序：  
   
@@ -69,5 +69,5 @@ extern "C" _RTC_error_fnW __cdecl _CRT_RTC_INITW(
   
  安装了默认错误报告函数后，可以使用 `_RTC_SetErrorFuncW` 安装附加错误报告函数。 有关详细信息，请参阅 [_RTC_SetErrorFuncW](https://msdn.microsoft.com/library/b3e0d71f-1bd3-4c37-9ede-2f638eb3c81a)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [如何：使用本机运行时检查](../debugger/how-to-use-native-run-time-checks.md)

@@ -17,10 +17,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 19fe581985ec173099790311517c0442a9c29c2f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68154109"
 ---
 # <a name="msbuild-task-reference"></a>MSBuild 任务参考
@@ -45,7 +45,7 @@ ms.locfileid: "68154109"
  [ToolTaskExtension 基类](../msbuild/tooltaskextension-base-class.md)  
  向派生自 <xref:Microsoft.Build.Tasks.ToolTaskExtension> 类的任务添加几个参数。  
   
- [AL（程序集链接器）任务](../msbuild/al-assembly-linker-task.md)  
+ [AL (程序集链接器) 任务](../msbuild/al-assembly-linker-task.md)  
  从一个或多个文件（可以是模块，也可以是资源文件）创建一个具有清单的程序集。  
   
  [AspNetCompiler 任务](../msbuild/aspnetcompiler-task.md)  
@@ -69,7 +69,7 @@ ms.locfileid: "68154109"
  [ConvertToAbsolutePath 任务](../msbuild/converttoabsolutepath-task.md)  
  将相对路径或引用转换为绝对路径。  
   
- [Copy 任务](../msbuild/copy-task.md)  
+ [复制任务](../msbuild/copy-task.md)  
  将文件复制到一个新位置。  
   
  [CreateCSharpManifestResourceName 任务](../msbuild/createcsharpmanifestresourcename-task.md)  
@@ -87,10 +87,10 @@ ms.locfileid: "68154109"
  [Csc 任务](../msbuild/csc-task.md)  
  调用 Visual C# 编译器以生成可执行文件、动态链接库或代码模块。  
   
- [Delete 任务](../msbuild/delete-task.md)  
+ [删除任务](../msbuild/delete-task.md)  
  删除指定的文件。  
   
- [Error 任务](../msbuild/error-task.md)  
+ [错误任务](../msbuild/error-task.md)  
  基于评估的条件语句，停止生成操作并记录错误。  
   
  [Exec 任务](../msbuild/exec-task.md)  
@@ -144,10 +144,10 @@ ms.locfileid: "68154109"
  [MakeDir 任务](../msbuild/makedir-task.md)  
  创建目录，并在必要时创建任何父目录。  
   
- [Message 任务](../msbuild/message-task.md)  
+ [消息任务](../msbuild/message-task.md)  
  在生成期间记录消息。  
   
- [Move 任务](../msbuild/move-task.md)  
+ [移动任务](../msbuild/move-task.md)  
  将文件移至新位置。  
   
  [MSBuild 任务](../msbuild/msbuild-task.md)  
@@ -195,7 +195,7 @@ ms.locfileid: "68154109"
  [SignFile 任务](../msbuild/signfile-task.md)  
  使用指定证书签署指定文件。  
   
- [Touch 任务](../msbuild/touch-task.md)  
+ [触控任务](../msbuild/touch-task.md)  
  设置文件的访问和修改时间。  
   
  [UnregisterAssembly 任务](../msbuild/unregisterassembly-task.md)  
@@ -207,7 +207,7 @@ ms.locfileid: "68154109"
  [Vbc 任务](../msbuild/vbc-task.md)  
  调用 Visual Basic 编译器以生成可执行文件、动态链接库或代码模块。  
   
- [Warning 任务](../msbuild/warning-task.md)  
+ [警告任务](../msbuild/warning-task.md)  
  基于评估的条件语句，在生成期间记录警告。  
   
  [WriteCodeFragment 任务](../msbuild/writecodefragment-task.md)  
@@ -223,9 +223,9 @@ ms.locfileid: "68154109"
  将 XPath 查询指定的值设置为 XML 文件。  
   
  [XslTransformation 任务](../msbuild/xsltransformation-task.md)  
- 使用可扩展样式表语言转换 (XSLT)  或编译的 XSLT 转换 XML 输入，并将其输出到一台输出设备或一个文件。  
+ 使用可扩展样式表语言转换 (XSLT) ** 或编译的 XSLT 转换 XML 输入，并将其输出到一台输出设备或一个文件。  
   
-## <a name="see-also"></a>请参阅  
- [MSBuild 参考](../msbuild/msbuild-reference.md)   
+## <a name="see-also"></a>另请参阅  
+ [MSBuild 引用](../msbuild/msbuild-reference.md)   
  [任务写入](../msbuild/task-writing.md)   
  [任务](../msbuild/msbuild-tasks.md)
