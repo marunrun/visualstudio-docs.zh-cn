@@ -1,5 +1,5 @@
 ---
-title: IDebugField::GetAddress |Microsoft Docs
+title: IDebugField：： GetAddress |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,10 +13,10 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 518133af302b5082da85cdf6388e83dda649743e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62547476"
 ---
 # <a name="idebugfieldgetaddress"></a>IDebugField::GetAddress
@@ -40,11 +40,11 @@ int GetAddress(
   
 #### <a name="parameters"></a>参数  
  `ppAddress`  
- [out]返回作为地址[IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md)对象。  
+ 弄将地址作为 [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) 对象返回。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)   
  [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md)

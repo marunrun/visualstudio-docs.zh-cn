@@ -12,10 +12,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: c4cc8d9654fc2d277f0b7c69483ab46aa3209983
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68157614"
 ---
 # <a name="msbuild-targets"></a>MSBuild 目标
@@ -60,7 +60,7 @@ ms.locfileid: "68157614"
   
   目标决不会在一个生成过程中运行两次，即使在生成中有后续目标依赖于该目标。 目标运行后，其在生成中的任务就已完成。  
   
-  有关目标生成顺序的详细信息，请参阅[目标生成顺序](../msbuild/target-build-order.md)。  
+  有关目标生成顺序的详细信息和详细信息，请参阅 [目标生成顺序](../msbuild/target-build-order.md)。  
   
 ## <a name="target-batching"></a>目标批处理  
  目标元素可能具有 `Outputs` 特性，该特性指定 %(元数据) 形式的元数据。 如果是这样，MSBuild 将针对每个唯一元数据值运行一次目标，对具有该元数据值的项进行分组或“批处理”。 例如，应用于对象的  
@@ -98,6 +98,6 @@ Reference: 4.0
   
  如果所有输出项都是最新的，则 MSBuild 将跳过目标，这可以显著加快生成速度。 这称为目标的增量生成。 如果只有部分文件为最新，则 MSBuild 将执行不包含最新项的目标。 这称为目标的部分增量生成。 有关详细信息，请参阅[增量生成](../msbuild/incremental-builds.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [MSBuild 概念](../msbuild/msbuild-concepts.md)   
  [如何：在多个项目文件中使用同一目标](../msbuild/how-to-use-the-same-target-in-multiple-project-files.md)

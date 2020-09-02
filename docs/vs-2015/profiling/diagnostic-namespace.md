@@ -14,10 +14,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: d412cfa5a9b5e7e90aeac3ac6bbb530b0ef48ad0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68157579"
 ---
 # <a name="diagnostic-namespace"></a>diagnostic 命名空间
@@ -35,14 +35,14 @@ namespace diagnostic;
   
 ### <a name="classes"></a>类  
   
-|name|说明|  
+|“属性”|描述|  
 |----------|-----------------|  
 |[marker_series 类](../profiling/marker-series-class.md)|表示由单个提供程序生成的一系列事件通道。|  
 |[span 类](../profiling/span-class.md)|定义应用程序的一个阶段。|  
   
 ### <a name="enumerations"></a>枚举  
   
-|name|说明|  
+|“属性”|描述|  
 |----------|-----------------|  
 |[marker_importance 枚举](../profiling/marker-importance-enumeration.md)|表示并发可视化工具标记的重要性级别。|  
   

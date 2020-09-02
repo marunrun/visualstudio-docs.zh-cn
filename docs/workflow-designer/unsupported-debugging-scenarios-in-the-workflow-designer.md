@@ -9,10 +9,10 @@ ms.workload:
 - multiple
 author: TerryGLee
 ms.openlocfilehash: 77d1318dbdb23516902523e9c7865dad781cb06b
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75593032"
 ---
 # <a name="unsupported-debugging-scenarios-in-the-workflow-designer"></a>工作流设计器中不受支持的调试方案
@@ -27,7 +27,7 @@ ms.locfileid: "75593032"
 
 - 不能使用工作流设计器来调试通过代码创建（未使用工作流设计器）的工作流。
 
-- 无法在 .NET Framework 4 或更高版本中调试在早期版本的 Windows Workflow Foundation （WF）中创建的工作流。
+- 无法在 .NET Framework 4 或更高版本中调试在早期版本的 Windows Workflow Foundation (WF) 中创建的工作流。
 
 - 不能在两个活动或 <xref:System.Activities.Statements.Flowchart> 节点之间的链接上定义断点。
 
@@ -43,7 +43,7 @@ ms.locfileid: "75593032"
 
   - 条件
 
-  - 命中次数
+  - 命中计数
 
   - 命中条件
 
@@ -51,6 +51,6 @@ ms.locfileid: "75593032"
 
   - 数据
 
-  - Process
+  - 流程
 
   - 转到反汇编

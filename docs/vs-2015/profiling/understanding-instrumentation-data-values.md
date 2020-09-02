@@ -13,16 +13,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 703d80da623c4fdb72328565513c6debe80447d1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68145479"
 ---
 # <a name="understanding-instrumentation-data-values"></a>了解检测数据值
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的检测  分析方法会记录所分析应用程序中函数调用、行和指令的详细计时信息  
+[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的检测** 分析方法会记录所分析应用程序中函数调用、行和指令的详细计时信息  
   
  **要求**  
   
@@ -42,11 +42,11 @@ ms.locfileid: "68145479"
   
   对于记录间隔时调用堆栈中的每个函数，探查器分析会将间隔添加到函数的四个数据值中的一个或多个。 分析基于两个条件将间隔添加到函数的数据值：  
   
-- 间隔是在函数的代码中还是在子函数  （函数调用的函数）中出现。  
+- 间隔是在函数的代码中还是在子函数**（函数调用的函数）中出现。  
   
 - 在间隔中是否发生了操作系统事件。  
   
-  函数或数据范围的间隔的数据值称为已用非独占  、已用独占  、应用程序非独占  和应用程序独占  ：  
+  函数或数据范围的间隔的数据值称为已用非独占**、已用独占**、应用程序非独占** 和应用程序独占**：  
   
 - 函数的所有间隔都会添加到已用非独占数据值。  
   

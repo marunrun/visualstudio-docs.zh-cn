@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: ac683ff6e7079478d5b4e642918df4e281a53f0b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72645650"
 ---
 # <a name="full-text-search-tips"></a>全文搜索提示
@@ -34,7 +34,7 @@ ms.locfileid: "72645650"
 
 |语法|说明|
 |------------|-----------------|
-|区分大小写|搜索不区分大小写。 使用大写或小写字符设置搜索条件。 例如，“OLE”和“ole”返回相同的结果。|
+|事例敏感性|搜索不区分大小写。 使用大写或小写字符设置搜索条件。 例如，“OLE”和“ole”返回相同的结果。|
 |字符组合|不能仅搜索单个字母 (a-z) 或单个数字 (0-9)。 如果尝试搜索某些保留字，如“and”、“from”和“with”，它们将被忽略。 有关详细信息，请参阅本主题后面部分的“搜索中忽略的字（停用字）”。|
 |计算顺序|搜索查询从左到右进行求值。|
 
@@ -49,7 +49,7 @@ ms.locfileid: "72645650"
  可利用高级搜索运算符进一步限制搜索结果。 “帮助”包括三类用于筛选全文搜索结果的方式：标题、代码和关键字。 有关详细信息，请参阅[搜索表达式中的高级搜索运算符](../ide/advanced-search-operators-in-search-expressions.md)。
 
 ### <a name="ranking-of-search-results"></a>搜索结果的排名
- 搜索算法应用特定条件在结果列表中对搜索结果进行排名。 通常情况下：
+ 搜索算法应用特定条件在结果列表中对搜索结果进行排名。 一般而言：
 
 1. 标题中包含搜索词的内容排名高于标题中不包含搜索词的内容。
 

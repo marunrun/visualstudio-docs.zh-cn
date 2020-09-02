@@ -15,19 +15,19 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 2d7bb7e0f3dfee3dd1bf3e9b42afd5837a29f6ee
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72646809"
 ---
 # <a name="template-parameters"></a>模板参数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-在对模板进行实例化时，您可以通过在模板中使用参数来替换模板的关键部分的值，如类名和命名空间。 用户在“新建项目”或“添加新项”对话框中单击“确定”时，后台运行的模板向导会替换这些参数    。
+在对模板进行实例化时，您可以通过在模板中使用参数来替换模板的关键部分的值，如类名和命名空间。 用户在“新建项目”或“添加新项”对话框中单击“确定”时，后台运行的模板向导会替换这些参数************。
 
 ## <a name="declaring-and-enabling-template-parameters"></a>声明和启用模板参数
- 模板参数以 $参数$ 的格式进行声明  。 例如:
+ 模板参数以 $参数$ 的格式进行声明**。 例如：
 
 - $safeprojectname$
 
@@ -57,13 +57,13 @@ ms.locfileid: "72646809"
 |---------------|-----------------|
 |`clrversion`|公共语言运行时 (CLR) 的当前版本。|
 |`GUID [1-10]`|一个用于替换项目文件中的项目 GUID 的 GUID。 可指定最多 10 个唯一的 GUID（例如，`guid1)`。|
-|`itemname`|“添加新项”对话框中由用户提供的名称  。|
+|`itemname`|“添加新项”对话框中由用户提供的名称****。|
 |`machinename`|当前的计算机名称（例如，Computer01）。|
-|`projectname`|“新建项目”对话框中由用户提供的名称  。|
+|`projectname`|“新建项目”对话框中由用户提供的名称****。|
 |`registeredorganization`|来自 HKLM\Software\Microsoft\Windows NT\CurrentVersion\RegisteredOrganization 的注册表项值。|
 |`rootnamespace`|当前项目的根命名空间。 此参数仅适用于项模板。|
-|`safeitemname`|用户在“添加新项”对话框中提供的名称，名称中移除了所有的不安全字符和空格  。|
-|`safeprojectname`|用户在“新建项目”对话框中提供的名称，名称中移除了所有的不安全字符和空格  。|
+|`safeitemname`|用户在“添加新项”对话框中提供的名称，名称中移除了所有的不安全字符和空格****。|
+|`safeprojectname`|用户在“新建项目”对话框中提供的名称，名称中移除了所有的不安全字符和空格****。|
 |`time`|以 DD/MM/YYYY 00:00:00 格式表示的当前时间。|
 |`SpecificSolutionName`|解决方案的名称。 在选中“创建解决方案目录”时，`SpecificSolutionName` 具有解决方案名称。 在未选中“创建解决方案目录”时，`SpecificSolutionName` 为空。|
 |`userdomain`|当前的用户域。|

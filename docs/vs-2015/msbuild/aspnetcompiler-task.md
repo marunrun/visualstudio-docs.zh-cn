@@ -20,10 +20,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 1267ddbb093f59eaa60fae0eef2d83f6b7ba2e24
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68187052"
 ---
 # <a name="aspnetcompiler-task"></a>AspNetCompiler 任务
@@ -34,7 +34,7 @@ ms.locfileid: "68187052"
 ## <a name="task-parameters"></a>任务参数  
  下表描述了 `AspNetCompiler` 任务的参数。  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |`AllowPartiallyTrustedCallers`|可选 `Boolean` 参数。<br /><br /> 如果此参数为 `true`，则具有强名称的程序集将允许部分信任的调用方。|  
 |`Clean`|可选的 `Boolean` 参数<br /><br /> 如果此参数为 `true`，则将以全新方式生成预编译的应用程序。 将重新编译任何之前编译的组件。 默认值为 `false`。 此参数对应于 aspnet_compiler.exe 上的 **-c** 开关。|  
@@ -72,5 +72,5 @@ ms.locfileid: "68187052"
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [任务](../msbuild/msbuild-tasks.md)   
- [任务参考](../msbuild/msbuild-task-reference.md)
+ [操作](../msbuild/msbuild-tasks.md)   
+ [任务引用](../msbuild/msbuild-task-reference.md)

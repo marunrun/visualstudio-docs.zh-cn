@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 5ea066aa31cbc1f6408ee55c92a5ca761608f534
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72667816"
 ---
 # <a name="create-elements-and-relationships-in-uml-models"></a>在 UML 模型中创建元素和关系
@@ -35,7 +35,7 @@ ms.locfileid: "72667816"
 ### <a name="obtain-the-owner-of-the-element-you-want-to-create"></a>获取需要创建的元素的所有者
  模型构成单个树，以便每项都有一个所有者，但模型根除外。 模型根属于 `IModel` 类型，这是 `IPackage` 的一种类型。
 
- 如果要创建将在特定关系图（比如用户的当前关系图）中显示的元素，通常应在链接到该关系图的包中进行创建。 例如:
+ 如果要创建将在特定关系图（比如用户的当前关系图）中显示的元素，通常应在链接到该关系图的包中进行创建。 例如：
 
 ```
 IPackage linkedPackage = Context.CurrentDiagram.Element as IPackage;
@@ -43,7 +43,7 @@ IPackage linkedPackage = Context.CurrentDiagram.Element as IPackage;
 
  此表总结了常见模型元素的所有权：
 
-|要创建的元素|Owner|
+|要创建的元素|所有者|
 |---------------------------|-----------|
 |`IActor, IUseCase, IComponent, IClass, IInterface, IEnumeration`<br /><br /> `IActivity, IInteraction`|`IPackage, IModel`|
 |`IAttribute, IOperation`|`IClass, IInterface`|
@@ -52,13 +52,13 @@ IPackage linkedPackage = Context.CurrentDiagram.Element as IPackage;
 |`ILifeline, IMessage, ICombinedFragment`|`IInteraction`|
 
 ### <a name="invoke-the-create-method-on-the-owner"></a>对所有者调用 Create 方法
- 方法名称的格式为： `Create`*OwnedType* `()`。 例如:
+ 方法名称的格式为： `Create` *OwnedType* `()` 。 例如：
 
 ```
 IUseCase usecase1 = linkedPackage.CreateUseCase();
 ```
 
- 某些类型具有更复杂的创建方法，尤其是在序列图中。 请参阅[使用 UML API 编辑 uml 序列图](../modeling/edit-uml-sequence-diagrams-by-using-the-uml-api.md)。
+ 某些类型具有更复杂的创建方法，尤其是在序列图中。 请参阅 [使用 UML API 编辑 uml 序列图](../modeling/edit-uml-sequence-diagrams-by-using-the-uml-api.md)。
 
  对于某些类型的元素，可以使用 `SetOwner(newOwner)` 在其生存期内更改元素的所有者。
 
@@ -93,14 +93,14 @@ using Microsoft.VisualStudio.Uml.Extensions;
 
 3. 设置关系的属性，比如其名称。
 
-     例如:
+     例如：
 
     ```
     IAssociation association = subject.Package.CreateAssociation(subject, observer);
     association .Name = "Observes";
     ```
 
-4. 设置关系各端的属性。 始终有两个 `MemberEnds`。 例如:
+4. 设置关系各端的属性。 始终有两个 `MemberEnds`。 例如：
 
     ```
     association .MemberEnds[0].Name = "subject";   // role name
@@ -129,5 +129,5 @@ anElement.Delete();
 
 - 还将删除关系图上表示它的每个形状。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [扩展 uml 模型和关系图](../modeling/extend-uml-models-and-diagrams.md)[在关系图上显示 uml 模型](../modeling/display-a-uml-model-on-diagrams.md)

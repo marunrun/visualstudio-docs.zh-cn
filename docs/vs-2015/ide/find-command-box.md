@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: b7c5f9c19573a04b1d9a8d7b8c6e9450aef9bc44
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72645733"
 ---
 # <a name="findcommand-box"></a>“查找/命令”框
@@ -29,13 +29,13 @@ ms.locfileid: "72645733"
 
  “查找/命令”框保留最后输入的 20 个项，并将它们显示在下拉列表中  。 选择箭头键可以浏览该列表。
 
- !["&#47;查找" 命令框](../ide/media/findcommandbox.png "|::ref1::|")"查找/命令" 框
+ !["查找&#47;" 命令框](../ide/media/findcommandbox.png "FindCommandBox") "查找/命令" 框
 
 ## <a name="searching-for-text"></a>搜索文本
- 默认情况下，如果在“查找/命令”框中指定了文本，然后选择了 Enter 键，Visual Studio 会使用“在文件中查找”对话框中指定的选项搜索当前文档或工具窗口   。 有关详细信息，请参阅 [Finding and Replacing Text](../ide/finding-and-replacing-text.md)。
+ 默认情况下，当你在 " **查找/命令** " 框中指定文本，然后选择 ENTER 键时，Visual Studio 会使用 "在 **文件中查找** " 对话框中指定的选项搜索当前文档或工具窗口。 有关详细信息，请参阅[查找和替换文本](../ide/finding-and-replacing-text.md)。
 
 ## <a name="entering-commands"></a>输入命令
- 要使用“查找/命令”框发布单个 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 命令或别名，而不是搜索文本，请输入 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 命令，并在该命令前面加一个大于 (>) 符号  。 例如:
+ 要使用“查找/命令”框发布单个 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 命令或别名，而不是搜索文本，请输入 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 命令，并在该命令前面加一个大于 (>) 符号****。 例如:
 
 ```
 >File.NewFile c:\temp\MyFile /t:"General\Text File"

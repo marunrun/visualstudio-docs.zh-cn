@@ -9,10 +9,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: d9f5694ccf48615ebdf7157adc80543b0fbb71eb
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72667677"
 ---
 # <a name="cryptography-warnings"></a>加密警告
@@ -22,5 +22,5 @@ ms.locfileid: "72667677"
 
 |规则|描述|
 |----------|-----------------|
-|[CA5350：请勿使用弱加密算法](../code-quality/ca5350-do-not-use-weak-cryptographic-algorithms.md)|出于多种原因，现今使用弱加密算法和哈希函数，但不应使用它们来保证保密性或它们所保护的数据的完整性。        当此规则在代码中找到 TripleDES、SHA1、或 RIPEMD160 算法时，此规则将触发。|
+|[CA5350:请勿使用弱加密算法](../code-quality/ca5350-do-not-use-weak-cryptographic-algorithms.md)|出于多种原因，现今使用弱加密算法和哈希函数，但不应使用它们来保证保密性或它们所保护的数据的完整性。        当此规则在代码中找到 TripleDES、SHA1、或 RIPEMD160 算法时，此规则将触发。|
 |[CA5351 不使用损坏的加密算法](../code-quality/ca5351-do-not-use-broken-cryptographic-algorithms.md)|损坏的加密算法不安全，强烈建议不要使用。 当此规则在代码中找到 MD5 哈希算法，或者 DES 或 RC2 加密算法时，此规则将触发。|

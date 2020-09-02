@@ -1,5 +1,5 @@
 ---
-title: IDebugStackFrame2::GetPhysicalStackRange | Microsoft Docs
+title: IDebugStackFrame2：： GetPhysicalStackRange |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 99fc1e635691fa290d0a8e4506ef55d677e9ff78
-ms.sourcegitcommit: da4079f5b6ec884baf3108cbd0519d20cb64c70b
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62547645"
 ---
 # <a name="idebugstackframe2getphysicalstackrange"></a>IDebugStackFrame2::GetPhysicalStackRange
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-获取依赖于计算机的形式，与堆栈帧关联的物理地址的范围。  
+获取与堆栈帧关联的物理地址范围的依赖于计算机的表示形式。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,18 +42,18 @@ int GetPhysicalStackRange ( 
   
 #### <a name="parameters"></a>参数  
  `paddrMin`  
- [out]返回与此堆栈帧关联的最小物理地址。  
+ 弄返回与此堆栈帧关联的最小物理地址。  
   
  `paddrMax`  
- [out]返回与此堆栈帧关联的最高的物理地址。  
+ 弄返回与此堆栈帧关联的最高物理地址。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
 ## <a name="remarks"></a>备注  
- 会话调试管理器 (SDM) 使用此方法返回的信息进行排序堆栈帧。  
+ 此方法返回的信息由会话调试管理器 (SDM) 用于对堆栈帧进行排序。  
   
- 假定，调用堆栈向下增长，也就是说，新堆栈帧添加越来越多地较低的内存地址。 运行时体系结构必须提供匹配这一假设的物理堆栈范围。  
+ 假设调用堆栈向下减小，也就是说，新的堆栈帧添加到越来越少的内存地址。 运行时体系结构必须提供与此假设匹配的物理堆栈范围。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)

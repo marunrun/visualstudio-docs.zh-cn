@@ -8,17 +8,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: f7ada5558cfdfaadca5793d9edc61f13a6d4d11b
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75591835"
 ---
 # <a name="t4-template-directive"></a>T4 模板指令
 
 Visual Studio T4 文本模板通常以 `template` 指令开头，该指令指定如何处理模板。 文本模板及其包括的任何文件中不应有多个 template 指令。
 
-有关编写文本模板的一般概述，请参阅[编写 T4 文本模板](../modeling/writing-a-t4-text-template.md)。
+有关编写文本模板的一般概述，请参阅 [编写 T4 文本模板](../modeling/writing-a-t4-text-template.md)。
 
 ## <a name="using-the-template-directive"></a>使用 Template 指令
 
@@ -52,7 +52,7 @@ Visual Studio T4 文本模板通常以 `template` 指令开头，该指令指定
 
 ""，不变的区域性，它是默认值。
 
-表示为 xx-XX 形式字符串的区域性。 例如：en-US、ja-JP、de-CH、de-DE。 有关更多信息，请参见<xref:System.Globalization.CultureInfo?displayProperty=fullName>。
+表示为 xx-XX 形式字符串的区域性。 例如：en-US、ja-JP、de-CH、de-DE。 有关详细信息，请参阅 <xref:System.Globalization.CultureInfo?displayProperty=fullName>。
 
 Culture 特性指定将表达式块转换为文本时要使用的区域性。
 
@@ -68,13 +68,13 @@ debug="true"
 
 `true`
 
-`false`（默认）
+`false`（默认值）
 
 如果 `debug` 特性为 `true`，则中间代码文件将包含使调试器能够更精确地识别模板中出现中断或异常的位置的信息。
 
 对于设计时模板，中间代码文件将写入你的 **% TEMP%** 目录。
 
-若要在调试器中运行设计时模板，请保存文本模板，然后在解决方案资源管理器中打开文本模板的快捷菜单，然后选择 "**调试 T4 模板**"。
+若要在调试器中运行设计时模板，请保存文本模板，然后在解决方案资源管理器中打开文本模板的快捷菜单，然后选择 " **调试 T4 模板**"。
 
 ## <a name="hostspecific-attribute"></a>hostspecific 特性
 
@@ -88,15 +88,15 @@ hostspecific="true"
 
 `true`
 
-`false`（默认）
+`false`（默认值）
 
 `trueFromBase`
 
-如果将此特性的值设置为 `true`，则会将名为 `Host` 的属性添加到由文本模板生成的类中。 该属性是对转换引擎的主机的引用，并声明为[ITextTemplatingEngineHost](/previous-versions/visualstudio/visual-studio-2012/bb126505(v=vs.110))。 如果已经定义了自定义宿主，则可以将其转换为自定义宿主类型。
+如果将此特性的值设置为 `true`，则会将名为 `Host` 的属性添加到由文本模板生成的类中。 该属性是对转换引擎的主机的引用，并声明为 [ITextTemplatingEngineHost](/previous-versions/visualstudio/visual-studio-2012/bb126505(v=vs.110))。 如果已经定义了自定义宿主，则可以将其转换为自定义宿主类型。
 
-因为此属性的类型取决于宿主的类型，所以仅当编写只适用于特定宿主的文本模板时才有用。 它适用于[设计时模板](../modeling/design-time-code-generation-by-using-t4-text-templates.md)，但不适用于[运行时模板](../modeling/run-time-text-generation-with-t4-text-templates.md)。
+因为此属性的类型取决于宿主的类型，所以仅当编写只适用于特定宿主的文本模板时才有用。 它适用于 [设计时模板](../modeling/design-time-code-generation-by-using-t4-text-templates.md)，但不适用于 [运行时模板](../modeling/run-time-text-generation-with-t4-text-templates.md)。
 
-当 `true` `hostspecific` 并且使用的是 Visual Studio 时，可以将 `this.Host` 强制转换为 IServiceProvider，以便访问 Visual Studio 功能。 还可以使用 `Host.ResolvePath(filename)` 来获得项目中文件的绝对路径。 例如：
+当 `hostspecific` 为 `true` 并且你使用的是 visual studio 时，你可以强制转换 `this.Host` 为 IServiceProvider，以访问 visual studio 功能。 还可以使用 `Host.ResolvePath(filename)` 来获得项目中文件的绝对路径。 例如：
 
 ```csharp
 <#@ template debug="false" hostspecific="true" language="C#" #>
@@ -128,11 +128,11 @@ Content of myFile is:
 
 有效值：
 
-`C#`（默认）
+`C#`（默认值）
 
 `VB`
 
-`language` 特性指定用于语句和表达式块中的源代码的语言（[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 或 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]）。 从中生成输出的中间代码文件将使用此语言。 此语言与您的模板生成的语言无关，它可以是任何类型的文本。
+`language`特性指定 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 要用于语句和表达式块中的源代码的语言 (或) 。 从中生成输出的中间代码文件将使用此语言。 此语言与您的模板生成的语言无关，它可以是任何类型的文本。
 
 例如：
 
@@ -156,7 +156,7 @@ Squares of numbers:
 
 ### <a name="inheritance-in-a-run-time-preprocessed-text-template"></a>运行时（预处理过的）文本模板中的继承
 
-可以在运行时文本模板之间使用继承，来创建具有多个派生变量的基本模板。 运行时模板是将 "**自定义工具**" 属性设置为 " **TextTemplatingFilePreprocessor**" 的模板。 运行时模板生成你可以在应用程序中调用的代码，以便创建模板中定义的文本。 有关详细信息，请参阅[带有 T4 文本模板的运行时文本生成](../modeling/run-time-text-generation-with-t4-text-templates.md)。
+可以在运行时文本模板之间使用继承，来创建具有多个派生变量的基本模板。 运行时模板是将 " **自定义工具** " 属性设置为 " **TextTemplatingFilePreprocessor**" 的模板。 运行时模板生成你可以在应用程序中调用的代码，以便创建模板中定义的文本。 有关详细信息，请参阅 [带有 T4 文本模板的运行时文本生成](../modeling/run-time-text-generation-with-t4-text-templates.md)。
 
 如果不指定 `inherits` 特性，则会从您的文本模板生成基类和派生类。 指定 `inherits` 特性时，仅生成派生类。 您可以手动编写基类，但是它必须提供派生类所使用的方法。
 
@@ -231,11 +231,11 @@ This is the common footer.
 
 ### <a name="inheritance-in-a-design-time-text-template"></a>设计时文本模板中的继承
 
-设计时文本模板是**自定义工具**设置为**TextTemplatingFileGenerator**的文件。 该模板将生成代码或文本的输出文件，该文件构成了你的 Visual Studio 项目的一部分。 若要生成输出文件，首先要将模板转换为中间程序代码文件，你通常不会看到该文件。 `inherits` 特性为此中间代码指定基类。
+设计时文本模板是 **自定义工具** 设置为 **TextTemplatingFileGenerator**的文件。 该模板将生成代码或文本的输出文件，该文件构成了你的 Visual Studio 项目的一部分。 若要生成输出文件，首先要将模板转换为中间程序代码文件，你通常不会看到该文件。 `inherits` 特性为此中间代码指定基类。
 
 对于设计时文本模板来说，可以指定从 <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation?displayProperty=fullName> 派生的任何基类。 使用 `<#@assembly#>` 指令来加载包含基类的程序集或项目。
 
-有关详细信息，请参阅[Gareth 的 "博客中的" 文本模板中的继承 "](https://blogs.msdn.microsoft.com/garethj/2011/01/03/vs2010-sp1-t4-template-inheritance-part-i-sample-metadata/)。
+有关详细信息，请参阅 [Gareth 的 "博客中的" 文本模板中的继承 "](https://blogs.msdn.microsoft.com/garethj/2011/01/03/vs2010-sp1-t4-template-inheritance-part-i-sample-metadata/)。
 
 ## <a name="linepragmas-attribute"></a>linePragmas 特性
 
@@ -245,7 +245,7 @@ This is the common footer.
 
 有效值：
 
-`true`（默认）
+`true`（默认值）
 
 `false`
 
@@ -261,7 +261,7 @@ This is the common footer.
 
 有效值：
 
-`public`（默认）
+`public`（默认值）
 
 `internal`
 

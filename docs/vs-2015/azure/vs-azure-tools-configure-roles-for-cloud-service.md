@@ -12,11 +12,11 @@ ms.topic: conceptual
 ms.date: 03/21/2017
 ms.author: ghogen
 ms.openlocfilehash: 810ebfcfb4cb4354c3df4c0d9892a37ca1624256
-ms.sourcegitcommit: 95f26af1da51d4c83ae78adcb7372b32364d8a2b
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79301463"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89315156"
 ---
 # <a name="configure-azure-cloud-service-roles-with-visual-studio"></a>使用 Visual Studio 配置 Azure 云服务角色
 一个 Azure 云服务可以有一个辅助角色或 Web 角色。 对于每个角色，需要定义该角色的设置方式，并配置该角色的运行方式。 若要详细了解云服务中的角色，请观看视频 [Introduction to Azure Cloud Services](https://channel9.msdn.com/Series/Windows-Azure-Cloud-Services-Tutorials/Introduction-to-Windows-Azure-Cloud-Services)（Azure 云服务简介）。
@@ -60,7 +60,7 @@ ms.locfileid: "79301463"
 
 1. 在 Visual Studio 中创建或打开 Azure 云服务项目。
 
-1. 在**解决方案资源管理器中**，展开项目节点。 在“角色”节点下，右键单击要更新的角色，并从上下文菜单中选择“属性”。********
+1. 在 **解决方案资源管理器**中，展开 "项目" 节点。 在“角色”节点下，右键单击要更新的角色，并从上下文菜单中选择“属性”。********
 
     ![解决方案资源管理器中的 Azure 角色上下文菜单](./media/vs-azure-tools-configure-roles-for-cloud-service/solution-explorer-azure-role-context-menu.png)
 
@@ -76,7 +76,7 @@ ms.locfileid: "79301463"
 
     ![更新实例计数](./media/vs-azure-tools-configure-roles-for-cloud-service/role-configuration-properties-page-instance-count.png)
 
-1. 从可视化工作室、工具栏中，选择 **"保存**"。
+1. 从 Visual Studio 工具栏中，选择 " **保存**"。
 
 ## <a name="manage-connection-strings-for-storage-accounts"></a>管理存储帐户的连接字符串
 可添加、删除或修改服务配置的连接字符串。 例如，你可能需要具有 `UseDevelopmentStorage=true` 值的本地服务配置的本地连接字符串。 可能还希望将云服务配置为使用 Azure 中的存储帐户。
@@ -90,11 +90,11 @@ ms.locfileid: "79301463"
 
 1. 在 Visual Studio 中创建或打开 Azure 云服务项目。
 
-1. 在**解决方案资源管理器中**，展开项目节点。 在“角色”节点下，右键单击要更新的角色，并从上下文菜单中选择“属性”。********
+1. 在 **解决方案资源管理器**中，展开 "项目" 节点。 在“角色”节点下，右键单击要更新的角色，并从上下文菜单中选择“属性”。********
 
     ![解决方案资源管理器中的 Azure 角色上下文菜单](./media/vs-azure-tools-configure-roles-for-cloud-service/solution-explorer-azure-role-context-menu.png)
 
-1. 选择“设置”选项卡。****
+1. 选择“设置”选项卡。
 
     ![“设置”选项卡](./media/vs-azure-tools-configure-roles-for-cloud-service/project-properties-settings-tab.png)
 
@@ -116,13 +116,13 @@ ms.locfileid: "79301463"
 
 1. 在“创建存储连接字符串”对话框中，为“连接方式”选择一个选项。******** 然后，遵照所选选项的说明操作：
 
-    - **Microsoft Azure 存储模拟器** - 如果选择此选项，对话框中的剩余设置会被禁用，因为这些设置仅适用于 Azure。 选择“确定”。
-    - **订阅** - 如果选择此选项，请使用下拉列表选择并登录到 Microsoft 帐户，或添加 Microsoft 帐户。 选择 Azure 订阅和 Azure 存储帐户。 选择“确定”。
-    - **手动输入的凭据** - 输入存储帐户名称，以及主密钥或辅助密钥。 选择**连接**选项（建议在大多数情况下使用 HTTPS）。选择 **"确定**"。
+    - **Microsoft Azure 存储模拟器** - 如果选择此选项，对话框中的剩余设置会被禁用，因为这些设置仅适用于 Azure。 选择“确定”  。
+    - **订阅** - 如果选择此选项，请使用下拉列表选择并登录到 Microsoft 帐户，或添加 Microsoft 帐户。 选择 Azure 订阅和 Azure 存储帐户。 选择“确定”  。
+    - **手动输入的凭据** - 输入存储帐户名称，以及主密钥或辅助密钥。 在大多数情况下，建议为 **连接** (HTTPS 选择一个选项。 ) 选择 **"确定"**。
 
 1. 要删除某个连接字符串，请选择该连接字符串，并选择“删除设置”。****
 
-1. 从可视化工作室、工具栏中，选择 **"保存**"。
+1. 从 Visual Studio 工具栏中，选择 " **保存**"。
 
 ## <a name="programmatically-access-a-connection-string"></a>以编程方式访问连接字符串
 
@@ -152,11 +152,11 @@ ms.locfileid: "79301463"
 
 1. 在 Visual Studio 中创建或打开 Azure 云服务项目。
 
-1. 在**解决方案资源管理器中**，展开项目节点。 在“角色”节点下，右键单击要更新的角色，并从上下文菜单中选择“属性”。********
+1. 在 **解决方案资源管理器**中，展开 "项目" 节点。 在“角色”节点下，右键单击要更新的角色，并从上下文菜单中选择“属性”。********
 
     ![解决方案资源管理器中的 Azure 角色上下文菜单](./media/vs-azure-tools-configure-roles-for-cloud-service/solution-explorer-azure-role-context-menu.png)
 
-1. 选择“设置”选项卡。****
+1. 选择“设置”选项卡。
 
     ![“设置”选项卡](./media/vs-azure-tools-configure-roles-for-cloud-service/project-properties-settings-tab.png)
 
@@ -178,7 +178,7 @@ ms.locfileid: "79301463"
 
 1. 要删除某个自定义设置，选择该设置，并选择“删除设置”。****
 
-1. 从可视化工作室、工具栏中，选择 **"保存**"。
+1. 从 Visual Studio 工具栏中，选择 " **保存**"。
 
 ## <a name="programmatically-access-a-custom-settings-value"></a>以编程方式访问自定义设置的值
 
@@ -203,7 +203,7 @@ ms.locfileid: "79301463"
 
 1. 在 Visual Studio 中创建或打开 Azure 云服务项目。
 
-1. 在**解决方案资源管理器中**，展开项目节点。 在“角色”节点下，右键单击要更新的角色，并从上下文菜单中选择“属性”。********
+1. 在 **解决方案资源管理器**中，展开 "项目" 节点。 在“角色”节点下，右键单击要更新的角色，并从上下文菜单中选择“属性”。********
 
     ![解决方案资源管理器中的 Azure 角色上下文菜单](./media/vs-azure-tools-configure-roles-for-cloud-service/solution-explorer-azure-role-context-menu.png)
 
@@ -229,7 +229,7 @@ ms.locfileid: "79301463"
 
 1. 要删除某个本地存储项，请选择该项，并选择“删除本地存储”。****
 
-1. 从可视化工作室、工具栏中，选择 **"保存**"。
+1. 从 Visual Studio 工具栏中，选择 " **保存**"。
 
 ## <a name="programmatically-accessing-local-storage"></a>以编程方式访问本地存储
 

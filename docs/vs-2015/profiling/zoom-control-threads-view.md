@@ -14,10 +14,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 44d816c7107d34cf81369a98ea0c435133e8e4b3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62551936"
 ---
 # <a name="zoom-control-threads-view"></a>缩放控件（线程视图）
@@ -31,8 +31,8 @@ ms.locfileid: "62551936"
 ## <a name="zooming-in-and-out-by-using-the-mouse-wheel"></a>通过使用鼠标滚轮来放大和缩小  
  单击时间线上的任意点（以确保具有鼠标焦点），然后按 CTRL 并滚动鼠标滚轮（向前滚为放大；向后滚为缩小）。  
   
-## <a name="see-also"></a>请参阅  
- [管理色条](../profiling/manage-channels.md)   
- [打开/关闭度量模式](../profiling/measure-mode-on-off.md)   
- [“线程”视图](../profiling/threads-view-parallel-performance.md)   
+## <a name="see-also"></a>另请参阅  
+ [管理通道](../profiling/manage-channels.md)   
+ [开启/关闭度量模式](../profiling/measure-mode-on-off.md)   
+ [线程视图](../profiling/threads-view-parallel-performance.md)   
  [使用率导航器](../profiling/utilization-navigator.md)

@@ -1,5 +1,5 @@
 ---
-title: 如何：自定义报表视图列 | Microsoft Docs
+title: 如何：自定义报告视图列 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -15,10 +15,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: f1f6cf340d7c0ef87f34fc908e075f36eed2962c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68146128"
 ---
 # <a name="how-to-customize-report-view-columns"></a>如何：自定义报告视图列
@@ -50,9 +50,9 @@ Visual Studio Team System Development Edition 中的性能工具与集成开发�
   
 1. 打开报告视图。  
   
-2. 右键单击报告视图图面，然后单击“添加/删除列”  。  
+2. 右键单击报告视图图面，然后单击“添加/删除列”。  
   
-     随即出现“添加/删除列”对话框  。  
+     随即出现“添加/删除列”对话框。  
   
 3. 选择要添加的列。  
   

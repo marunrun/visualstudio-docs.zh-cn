@@ -10,10 +10,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 1e4ca52f631b3e2de9c01daab7e6268c42f20268
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68145613"
 ---
 # <a name="targetclr"></a>TargetCLR
@@ -36,10 +36,10 @@ VSPerfCmd.exe {/Launch:AppName | /Attach:PID} /TargetCLR[:ClrVersion] [Options]
 ## <a name="required-options"></a>必需选项  
   “TargetCLR”选项只能与“启动”  或“附加”  选项一起使用。  
   
- **Launch：** `AppName`  
+ **启动：**`AppName`  
  启动指定的应用程序并开始分析。  
   
- **Attach:** `PID`  
+ **附加：**`PID`  
  开始分析指定的进程。  
   
 ## <a name="example"></a>示例  

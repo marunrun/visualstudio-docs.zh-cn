@@ -14,13 +14,13 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 0efeb7fb0eb481d0b8d62ff4a9ebf9daad98c39f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68147246"
 ---
-# <a name="blocking-time-profile-report"></a>阻塞时间分析报告
+# <a name="blocking-time-profile-report"></a>阻塞时间配置文件报表
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 分析报告提供特定于每个阻塞类别（例如，“I/O”或“同步”）的调用堆栈的合计阻塞时间数据。 优先报告列出抢占当前进程的进程以及抢占实例数。 为了生成阻塞分析报告，工具会收集阻塞 API 调用并将它们累计到调用堆栈树中。 这些报告中显示的数据因当前时间范围、隐藏线程和以下两个可能应用的筛选器而异：  
@@ -36,8 +36,8 @@ ms.locfileid: "68147246"
   
 |列名称|说明|  
 |-----------------|-----------------|  
-|name|调用堆栈每个级别的函数的名称。|  
-|实例数|可见时间段内阻塞调用的实例数。|  
+|名称|调用堆栈每个级别的函数的名称。|  
+|Instances|可见时间段内阻塞调用的实例数。|  
 |非独占阻塞时间|在上滚到此调用堆栈树级别的所有堆栈上所花费的总阻塞时间。 非独占数是此函数的独占阻塞时间及其所有子节点的独占阻塞时间的总和。|  
 |独占阻塞时间|此函数处于最低调用堆栈级别期间所花费的总阻塞时间。 具有较高独占阻塞时间的唯一调用堆栈项可能是相关的函数。|  
 |API/Wait 类别|仅对处于最低调用堆栈级别的函数显示。 如识别阻塞调用的签名，则将提供阻塞 API 的名称。 如果未识别签名，则提供内核所报告的信息。|  
@@ -47,16 +47,16 @@ ms.locfileid: "68147246"
  同步报表显示对在同步上进行阻止的片段的调用，以及每个调用堆栈的合计阻塞时间。 有关详细信息，请参阅[同步时间](../profiling/synchronization-time.md)  
   
 ### <a name="sleep"></a>休眠  
- 休眠报表显示对分配给休眠时间的阻塞时间的调用，以及每个调用堆栈的合计阻塞时间。 有关详细信息，请参阅[休眠时间](../profiling/sleep-time.md)。  
+ 休眠报表显示对分配给休眠时间的阻塞时间的调用，以及每个调用堆栈的合计阻塞时间。 有关详细信息，请参阅 [睡眠时间](../profiling/sleep-time.md)。  
   
 ### <a name="io"></a>I/O  
- I/O 报表显示对在 I/O 上进行阻止的片段的调用，以及每个调用堆栈的合计阻塞时间。 有关详细信息，请参阅 [I/O 时间（“线程”视图）](../profiling/i-o-time-threads-view.md)。  
+ I/O 报表显示对在 I/O 上进行阻止的片段的调用，以及每个调用堆栈的合计阻塞时间。 有关详细信息，请参阅 [I/o Time (Threads) ](../profiling/i-o-time-threads-view.md)。  
   
 ### <a name="memory-management"></a>内存管理  
  内存管理报表显示对在内存管理操作上进行阻止的片段的调用，以及每个调用堆栈的合计阻塞时间。 有关详细信息，请参阅[内存管理时间](../profiling/memory-management-time.md)。  
   
 ### <a name="preemption"></a>优先  
- 优先报告列出抢占当前进程的进程以及实例数。  您可以展开每个进程，查看当前进程中被替换的线程，以及按线程查看抢占实例的明细。 此阻塞报告的可操作性弱于其他报告，因为抢占通常是由操作系统施加于进程的，而不是由代码中的问题而施加。 有关详细信息，请参阅[抢占时间](../profiling/preemption-time.md)。  
+ 优先报告列出抢占当前进程的进程以及实例数。  您可以展开每个进程，查看当前进程中被替换的线程，以及按线程查看抢占实例的明细。 此阻塞报告的可操作性弱于其他报告，因为抢占通常是由操作系统施加于进程的，而不是由代码中的问题而施加。 有关详细信息，请参阅 [抢占时间](../profiling/preemption-time.md)。  
   
 ### <a name="ui-processing"></a>UI 处理  
  UI 处理报表显示对在 UI 处理块上进行阻止的片段的调用，以及每个调用堆栈的合计阻塞时间。 有关详细信息，请参阅 [UI 处理时间](../profiling/ui-processing-time.md)。  

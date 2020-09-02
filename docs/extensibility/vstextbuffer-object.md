@@ -1,5 +1,5 @@
 ---
-title: VSText缓冲区对象 |微软文档
+title: VSTextBuffer 对象 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -14,36 +14,36 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: a5ea44d2b22c96d49f334f2ea33f9db8d69b5eb0
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80697728"
 ---
 # <a name="vstextbuffer-object"></a>VSTextBuffer 对象
-文本缓冲区对象表示 Unicode 文本流，通常与文件关联。 对象<xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer>可以在核心编辑器的上下文之外使用，如向导。
+文本缓冲区对象表示 Unicode 文本流，该流通常与文件相关联。 <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer>对象可用于核心编辑器上下文之外，如向导中所示。
 
- 下表显示了 的`VSTextBuffer`接口。
+ 下表显示了的接口 `VSTextBuffer` 。
 
-|方法|描述|
+|方法|说明|
 |------------|-----------------|
-|[IOleCommand目标](/windows/desktop/api/docobj/nn-docobj-iolecommandtarget)|标准 OLE 接口。 用于在缓冲区中撤消/重做处理。|
-|[IPersist文件](/windows/desktop/api/objidl/nn-objidl-ipersistfile)|标准 OLE 接口。|
-|[I坚持流](/windows/desktop/api/objidl/nn-objidl-ipersiststream)|标准 OLE 接口。|
-|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCompoundAction>|启用创建复合操作（即，在单个撤消/重做单元中分组的操作）。|
+|[IOleCommandTarget](/windows/desktop/api/docobj/nn-docobj-iolecommandtarget)|标准 OLE 接口。 用于在缓冲区中进行撤消/重做处理。|
+|[IPersistFile](/windows/desktop/api/objidl/nn-objidl-ipersistfile)|标准 OLE 接口。|
+|[IPersistStream](/windows/desktop/api/objidl/nn-objidl-ipersiststream)|标准 OLE 接口。|
+|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCompoundAction>|启用 (的 "组合" 操作，即在单个 "撤消/重做" 单元中分组) 的操作。|
 |<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData>|启用由文本缓冲区管理的文档数据的持久性。|
-|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer>|提供基本服务;许多客户端使用。|
+|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer>|提供基本服务;由许多客户端使用。|
 |<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextFind>|用于搜索缓冲区。|
 |<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLines>|使用二维坐标提供读写功能。 继承自 `IVsTextBuffer`。|
 |<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextStream>|使用一维坐标提供读写功能。 继承自 `IVsTextBuffer`。|
-|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextScanner>|提供对缓冲区中文本的快速、面向流的顺序访问。|
-|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsUserData>|提供对属性的通用集合的访问。 最重要的属性是缓冲区的名称或名称。 通过创建 GUID 并将其用作密钥，可以使用此接口将您自己的随机数据存储在缓冲区中。|
+|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextScanner>|为缓冲区中的文本提供快速、面向流的顺序访问。|
+|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsUserData>|提供对属性的泛型集合的访问。 最重要的属性是缓冲区的名称或名字对象。 可以通过创建 GUID 并将其用作密钥，在缓冲区中存储你自己的随机数据。|
 |<xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPointContainer>|支持事件的连接点。|
 
 ## <a name="remarks"></a>备注
- `VSTextBuffer`通常通过`QueryInterface`调用`IVsTextBuffer`找到 。 有关详细信息，请参阅[文本缓冲区](/visualstudio/extensibility/accessing-the-text-buffer-by-using-the-legacy-api?view=vs-2015)。
+ `VSTextBuffer`通常通过对的调用找到 `QueryInterface` `IVsTextBuffer` 。 有关详细信息，请参阅 [文本缓冲区](/visualstudio/extensibility/accessing-the-text-buffer-by-using-the-legacy-api?view=vs-2015)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer>
 - <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextView>
-- [数字编辑](https://www.microsoft.com/download/details.aspx?id=55984)
+- [编辑图形](https://www.microsoft.com/download/details.aspx?id=55984)
