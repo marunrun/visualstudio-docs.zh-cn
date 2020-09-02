@@ -1,5 +1,5 @@
 ---
-title: 使用 DebuggerTypeProxy 特性 |Microsoft Docs
+title: 使用 DebuggerTypeProxy 属性 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -19,16 +19,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: f6e349dd5bea4e0d89c31864960a5438d1e2b13f
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65684076"
 ---
 # <a name="using-debuggertypeproxy-attribute"></a>使用 DebuggerTypeProxy 特性
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-DebuggerTypeProxyAttribute] (assetId:///T:System.Diagnostics.DebuggerTypeProxyAttribute?qualifyHint=False 和自动升级 = True) 指定一个代理或替身，并更改类型的方式显示在调试器窗口。 查看具有代理的变量时，代理将代替“显示”中的原始类型。 调试器变量窗口仅显示代理类型的公共成员。 不会显示私有成员。  
+DebuggerTypeProxyAttribute] (assetId:///T:System.Diagnostics.DebuggerTypeProxyAttribute?qualifyHint=False&自动升级 = True) 指定类型的代理或，并更改类型在调试器窗口中的显示方式。 查看具有代理的变量时，代理将代替“显示”中的原始类型。 调试器变量窗口仅显示代理类型的公共成员。 不会显示私有成员。  
   
  此特性可应用于：  
   
@@ -46,7 +46,7 @@ DebuggerTypeProxyAttribute] (assetId:///T:System.Diagnostics.DebuggerTypeProxyAt
   
   如果在程序集级别使用 <xref:System.Diagnostics.DebuggerTypeProxyAttribute>，则 `Target` 参数将指定代理要替换的类型。  
   
-  有关如何使用与此特性的示例<xref:System.Diagnostics.DebuggerDisplayAttribute>并<xref:System.Diagnostics.DebuggerTypeProxyAttribute>，请参阅[使用 DebuggerDisplay 特性](../debugger/using-the-debuggerdisplay-attribute.md)。  
+  有关如何将此特性与 <xref:System.Diagnostics.DebuggerDisplayAttribute> 和 <xref:System.Diagnostics.DebuggerTypeProxyAttribute> 一起使用的示例，请参阅[使用 DebuggerDisplay 特性](../debugger/using-the-debuggerdisplay-attribute.md)。  
   
 ## <a name="using-generics-with-debuggertypeproxy"></a>将泛型与 DebuggerTypeProxy 一起使用  
  对泛型的支持是有限的。 对于 C#，`DebuggerTypeProxy` 只支持开放类型。 开放类型（也称作“非构造类型”）是一种还未使用其类型参数的自变量实例化的泛型类型。 不支持封闭类型（也称作“构造类型”）。  
@@ -57,12 +57,12 @@ DebuggerTypeProxyAttribute] (assetId:///T:System.Diagnostics.DebuggerTypeProxyAt
   
  如果使用泛型类型作为 `DebuggerTypeProxy` 中的目标，则必须使用该语法。 `DebuggerTypeProxy` 机制将为你推理类型参数。  
   
- C# 中的打开和关闭类型的详细信息请参阅[C# 语言规范](https://msdn.microsoft.com/library/e5d5a5cc-636b-4bff-b9c8-a8edc6207c22)，第 20.5.2 节打开和关闭类型。  
+ 有关 C# 中的开放类型和封闭类型的详细信息，请参阅 [C# 语言规范](https://msdn.microsoft.com/library/e5d5a5cc-636b-4bff-b9c8-a8edc6207c22)中的第 20.5.2 节“开放类型和封闭类型”。  
   
  Visual Basic 没有开放类型语法，因此您无法在 Visual Basic 中执行同样的操作。 而必须使用开放类型名称的字符串表示形式。  
   
  `"Namespace.TypeName'2"`  
   
-## <a name="see-also"></a>请参阅  
- [使用 DebuggerDisplay 属性](../debugger/using-the-debuggerdisplay-attribute.md)   
+## <a name="see-also"></a>另请参阅  
+ [使用 DebuggerDisplay 特性](../debugger/using-the-debuggerdisplay-attribute.md)   
   [使用调试器显示特性增强调试](https://msdn.microsoft.com/library/72bb7aa9-459b-42c4-9163-9312fab4c410)

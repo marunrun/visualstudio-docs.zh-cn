@@ -13,10 +13,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 369c5b75780e9d557dedbde60b5b584c8b3345b3
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65705837"
 ---
 # <a name="adding-tier-interaction-data-from-the-command-line"></a>从命令行添加层交互数据
@@ -30,13 +30,13 @@ ms.locfileid: "65705837"
   
  **Visual Studio 版本**  
   
- 可以使用 [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)]、[!INCLUDE[vsPreLong](../includes/vsprelong-md.md)] 或 [!INCLUDE[vs_pro_current_short](../includes/vs-pro-current-short-md.md)] 收集层交互分析。 但是，只能在 [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)] 和 [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)] 中查看层交互分析数据。  
+ 可以使用 [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)]、[!INCLUDE[vsPreLong](../includes/vsprelong-md.md)] 或 [!INCLUDE[vs_pro_current_short](../includes/vs-pro-current-short-md.md)] 收集层交互分析。 但是，层交互分析数据只能在 [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)] 和 [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)]中查看。  
   
  **在远程计算机上收集 TIP 数据**  
   
- 若要在远程计算机上收集层交互数据，必须从 Visual Studio 计算机的 %VSInstallDir%\Team Tools\Performance Tools\Setups 文件夹中将 vs\_profiler\_\<Platform>\_\<Language>.exe 文件复制到远程计算机上并进行安装。 不能使用 [Visual Studio 远程工具](https://msdn.microsoft.com/library/90f45630-0d26-4698-8c1f-63f85a12db9c) 下载程序包中的分析工具。  
+ 若要收集远程计算机上的层交互数据，必须将**vs \_ 探查器 \_ ** _\<Platform>_ **\_** _\<Language>_ **.exe**文件从 Visual Studio 计算机的 _% VSInstallDir%_**\Team Tools\Performance Tools\Setups**文件夹复制到远程计算机并安装该文件。 不能使用 [Visual Studio 远程工具](https://msdn.microsoft.com/library/90f45630-0d26-4698-8c1f-63f85a12db9c) 下载程序包中的分析工具。  
   
- **TIP 报表**  
+ **TIP 报告**  
   
  只能在 [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)] IDE 中查看层交互数据。 通过 [VSPerfReport](../profiling/vsperfreport.md) 生成的基于文件的层交互报告不可用。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "65705837"
   
 ##### <a name="profiling-a-windows-desktop-application-example"></a>分析 Windows 桌面应用程序示例  
   
-1. 使用管理员特权打开命令提示符窗口。 单击“开始”，指向“所有程序”，再指向“附件”。 右键单击“命令提示符”，然后单击“以管理员身份运行”。  
+1. 使用管理员特权打开命令提示符窗口。 单击“开始”  ，指向“所有程序”  ，再指向“附件”  。 右键单击“命令提示符”  ，然后单击“以管理员身份运行”  。  
   
 2. 初始化 .NET 分析和 TIP 环境变量。 键入以下命令：  
   
@@ -92,7 +92,7 @@ ms.locfileid: "65705837"
   
 1. 必要时请安装该服务。  
   
-2. 使用管理员特权打开命令提示符窗口。 单击“开始”，指向“所有程序”，再指向“附件”。 右键单击“命令提示符”，然后单击“以管理员身份运行”。  
+2. 使用管理员特权打开命令提示符窗口。 单击“开始”  ，指向“所有程序”  ，再指向“附件”  。 右键单击“命令提示符”  ，然后单击“以管理员身份运行”  。  
   
 3. 初始化 .NET 分析环境变量。 键入以下命令：  
   

@@ -18,10 +18,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: a940cf371373d23d98ce8f89005197ee3ea7c309
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65687068"
 ---
 # <a name="wpf-msbuild-reference"></a>WPF MSBuild 参考
@@ -30,10 +30,10 @@ ms.locfileid: "65687068"
 Windows Presentation Foundation (WPF) 将 Microsoft 生成引擎 (MSBuild) 扩展为带有其他生成支持，此部分将介绍这一点。  
   
 ## <a name="in-this-section"></a>本节内容  
- [.Targets 文件](../msbuild/wpf-dot-targets-files.md)  
+ [.目标文件](../msbuild/wpf-dot-targets-files.md)  
  介绍 WPF .Targets 文件。  
   
- [任务参考](../msbuild/wpf-msbuild-task-reference.md)  
+ [任务引用](../msbuild/wpf-msbuild-task-reference.md)  
  列出可用的 WPF 生成任务。  
   
  <xref:Microsoft.Build.Tasks>  
@@ -51,5 +51,5 @@ Windows Presentation Foundation (WPF) 将 Microsoft 生成引擎 (MSBuild) 扩�
  <xref:Microsoft.Build.Tasks.Windows>  
  生成任务窗口程序集。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [MSBuild](https://msdn.microsoft.com/7c49aba1-ee6c-47d8-9de1-6f29a906e20b)

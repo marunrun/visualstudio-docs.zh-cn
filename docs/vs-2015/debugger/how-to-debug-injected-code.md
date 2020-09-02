@@ -1,5 +1,5 @@
 ---
-title: 如何：调试插入的代码 |Microsoft Docs
+title: 如何：调试插入的代码 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -27,10 +27,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: df35a25534961c6ab94891d2da6fe54f05c37a3e
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65681092"
 ---
 # <a name="how-to-debug-injected-code"></a>如何：调试插入的代码
@@ -49,7 +49,7 @@ ms.locfileid: "65681092"
   
 ### <a name="to-turn-on-source-annotation"></a>打开源批注  
   
-- 右键单击“反汇编”窗口，然后从快捷菜单中选定“显示源代码”。  
+- 右键单击“反汇编”窗口，然后从快捷菜单中选定“显示源代码” 。  
   
      如果知道属性在源窗口中的位置，则可以使用快捷菜单在“反汇编”窗口中查找插入的代码。  
   
@@ -61,14 +61,14 @@ ms.locfileid: "65681092"
   
 3. 右键单击并从快捷菜单中选择“转到反汇编”。  
   
-     如果属性位置在当前执行点附近，则可以从“调试”菜单选择“反汇编”窗口。  
+     如果属性位置在当前执行点附近，则可以从“调试”菜单选择“反汇编”窗口 。  
   
 ### <a name="to-view-the-disassembly-code-at-the-current-execution-point"></a>查看当前执行点处的反汇编代码  
   
 1. 调试器必须处于中断模式。  
   
-2. 从“调试”菜单中选择“窗口”，然后单击“反汇编”。  
+2. 从“调试”菜单中选择“窗口”，然后单击“反汇编”  。  
   
-## <a name="see-also"></a>请参阅  
- [调试器安全](../debugger/debugger-security.md)   
+## <a name="see-also"></a>另请参阅  
+ [调试器安全性](../debugger/debugger-security.md)   
  [调试本机代码](../debugger/debugging-native-code.md)

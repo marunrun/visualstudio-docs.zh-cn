@@ -1,5 +1,5 @@
 ---
-title: 使用 DebuggerDisplay 特性 |Microsoft Docs
+title: 使用 DebuggerDisplay 属性 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -19,10 +19,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: aba6feb17a4e7bd4cabfe40bd45480a0f7a9f552
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65683928"
 ---
 # <a name="using-the-debuggerdisplay-attribute"></a>使用 DebuggerDisplay 特性
@@ -41,14 +41,14 @@ ms.locfileid: "65683928"
   
  下表显示 `DebuggerDisplay` 特性的一些可能用法和示例输出。  
   
-|特性|输出显示在 **“值”** 列中|  
+|特性|输出显示在 " **值** " 列中) |  
 |---------------|------------------------------------------------|  
 |`[DebuggerDisplay("x = {x} y = {y}")]`<br /><br /> 在具有 `x` 和 `y`字段的类型上使用。|`x = 5 y = 18`|  
 |`[DebuggerDisplay("String value is {getString()}")]`参数语法在不同的语言中会有所不同。 因此，使用时要小心。|`String value is [5, 6, 6]`|  
   
  `DebuggerDisplay` 还可以接受命名参数。  
   
-|参数|用途|  
+|参数|目标|  
 |----------------|-------------|  
 |`Name`, `Type`|这些参数影响变量窗口的 **“名称”** 和 **“类型”** 列。 （可将它们设置为使用与构造函数相同的语法的字符串。）如果过度使用这些参数或使用这些参数不当，则会导致混乱的输出。|  
 |`Target`, `TargetTypeName`|指定在程序集级别使用该特性时的目标类型。|  
@@ -98,10 +98,10 @@ public sealed class MyClass
 ## <a name="example"></a>示例  
  下面的代码示例演示如何使用 `DebuggerDisplay`以及 `DebuggerBrowseable` 和 `DebuggerTypeProxy`。 在调试器变量窗口（如 **“监视”** 窗口）中查看时，它生成类似以下内容的扩展：  
   
-|**名称**|**“值”**|**Type**|  
+|**Name**|**“值”**|**Type**|  
 |--------------|---------------|--------------|  
 |键|"three"|object {string}|  
-|值|3|object {int}|  
+|“值”|3|object {int}|  
   
 ```csharp  
 [DebuggerDisplay("{value}", Name = "{key}")]  
@@ -179,5 +179,5 @@ class MyHashtable
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [使用 DebuggerTypeProxy 特性](../debugger/using-debuggertypeproxy-attribute.md)[使用调试器显示特性增强调试](https://msdn.microsoft.com/library/72bb7aa9-459b-42c4-9163-9312fab4c410)
+## <a name="see-also"></a>另请参阅  
+ [使用 DebuggerTypeProxy 特性](../debugger/using-debuggertypeproxy-attribute.md)[增强调试和调试器显示特性](https://msdn.microsoft.com/library/72bb7aa9-459b-42c4-9163-9312fab4c410)
