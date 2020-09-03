@@ -19,23 +19,23 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: e89125c8e1dea25ab02fe64c21b8166e9d65194a
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85542215"
 ---
 # <a name="using-the-parallel-stacks-window"></a>使用“并行堆栈”窗口
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-调试多线程应用程序时，"**并行堆栈**" 窗口很有用。 其 "**线程" 视图**显示应用程序中所有线程的调用堆栈信息。 使用该视图可以在线程和这些线程上的堆栈帧之间进行导航。 在托管代码中，"**任务" 视图**显示对象的调用堆栈 <xref:System.Threading.Tasks.Task?displayProperty=fullName> 。 在本机代码中，"**任务" 视图**显示[任务组](https://msdn.microsoft.com/library/42f05ac3-2098-494a-ba84-737fcdcad077)、[并行算法](https://msdn.microsoft.com/library/045dca7b-4d73-4558-a44c-383b88a28473)、[异步代理](https://msdn.microsoft.com/library/6cf6ccc6-87f1-4e14-af15-ea8ba58fef1a)和[轻量级任务](https://msdn.microsoft.com/library/9aba278c-e0c9-4ede-b7c6-fedf7a365d90)的调用堆栈。  
+调试多线程应用程序时，" **并行堆栈** " 窗口很有用。 其 " **线程" 视图** 显示应用程序中所有线程的调用堆栈信息。 使用该视图可以在线程和这些线程上的堆栈帧之间进行导航。 在托管代码中，" **任务" 视图** 显示对象的调用堆栈 <xref:System.Threading.Tasks.Task?displayProperty=fullName> 。 在本机代码中，" **任务" 视图** 显示 [任务组](https://msdn.microsoft.com/library/42f05ac3-2098-494a-ba84-737fcdcad077)、 [并行算法](https://msdn.microsoft.com/library/045dca7b-4d73-4558-a44c-383b88a28473)、 [异步代理](https://msdn.microsoft.com/library/6cf6ccc6-87f1-4e14-af15-ea8ba58fef1a)和 [轻量级任务](https://msdn.microsoft.com/library/9aba278c-e0c9-4ede-b7c6-fedf7a365d90)的调用堆栈。  
   
 ## <a name="threads-view"></a>线程视图  
  下图演示的一个线程从 Main 执行到 A 再执行到 B，然后执行到某个外部代码。 其余两个线程从某个外部代码开始，执行到 A，但其中一个线程继续执行到 B，然后执行到某个外部代码，而另一个线程继续执行到 C，然后执行到某个 AnonymousMethod。  
   
  ![“并行堆栈”窗口中的“线程”视图](../debugger/media/parallel-stacksthread.png "Parallel_StacksThread")  
   
- 在图示中，当前线程的调用路径突出显示为蓝色，活动堆栈帧由黄色箭头表示。 您可以通过在 "**并行堆栈**" 窗口中选择其他方法来更改当前堆栈帧。 这也可能导致切换当前线程，具体取决于所选方法是当前线程的一部分还是属于其他线程。 下表描述了 "**并行堆栈**" 窗口的主要功能，如图所示。  
+ 在图示中，当前线程的调用路径突出显示为蓝色，活动堆栈帧由黄色箭头表示。 您可以通过在 " **并行堆栈** " 窗口中选择其他方法来更改当前堆栈帧。 这也可能导致切换当前线程，具体取决于所选方法是当前线程的一部分还是属于其他线程。 下表描述了 " **并行堆栈** " 窗口的主要功能，如图所示。  
   
 |标注字母|元素名称|说明|  
 |--------------------|------------------|-----------------|  
@@ -44,14 +44,14 @@ ms.locfileid: "85542215"
 |C|箭头线|连接节点，以组成线程的整个调用路径。|  
 |D|节点标头上的工具提示|显示其调用路径共享此节点的每个线程的 ID 和用户定义名称。|  
 |E|方法上下文|表示同一方法中的一个或多个堆栈帧。|  
-|F|方法上下文上的工具提示|在 "线程" 视图中，它会显示与 "**线程**" 窗口类似的表中的所有线程。 在任务视图中，它会显示与 "**并行任务**" 窗口类似的表中的所有任务。|  
+|F|方法上下文上的工具提示|在 "线程" 视图中，它会显示与 " **线程** " 窗口类似的表中的所有线程。 在任务视图中，它会显示与 " **并行任务** " 窗口类似的表中的所有任务。|  
   
- 此外，当图表太大而无法放入窗口时，"并行堆栈" 窗口将在主窗格中显示**鸟瞰**图图标。 单击该图标可在窗口中查看整个关系图。  
+ 此外，当图表太大而无法放入窗口时，"并行堆栈" 窗口将在主窗格中显示 **鸟瞰** 图图标。 单击该图标可在窗口中查看整个关系图。  
   
 ## <a name="method-context-icons"></a>方法上下文图标  
  下表介绍了提供有关活动堆栈帧和当前堆栈帧的信息的图标：  
   
-|图标|描述|  
+|图标|说明|  
 |-|-|
 |![并行堆栈黄色箭头](../debugger/media/icon-parallelyellowarrow.gif "Icon_ParallelYellowArrow")|指示方法上下文包含当前线程的活动堆栈帧。|  
 |![“并行堆栈线程”图标](../debugger/media/icon-parallelthreads.gif "Icon_ParallelThreads")|指示方法上下文包含非当前线程的活动堆栈帧。|  
@@ -62,13 +62,13 @@ ms.locfileid: "85542215"
   
  ![“并行堆栈”窗口中的工具栏](../debugger/media/parallel-stackstoolbar.png "Parallel_StacksToolbar")  
   
-|标注字母|控件|说明|  
+|标注字母|控制|说明|  
 |--------------------|-------------|-----------------|  
 |A|线程/任务组合框|在线程的调用堆栈和任务的调用堆栈之间切换视图。 有关更多信息，请参见“任务视图”和“线程视图”。|  
-|B|仅显示已标记项|仅显示在其他调试窗口中标记的线程的调用堆栈，如 " **GPU 线程**" 窗口和 "**并行监视**" 窗口。|  
+|B|仅显示已标记项|仅显示在其他调试窗口中标记的线程的调用堆栈，如 " **GPU 线程** " 窗口和 " **并行监视** " 窗口。|  
 |C|切换方法视图|在堆栈视图和方法视图之间切换。 有关更多信息，请参见“方法视图”。|  
 |D|自动滚动到当前堆栈帧|自动滚动关系图，以便能够看到当前堆栈帧。 当您从其他窗口更改当前堆栈帧或在大型关系图中命中新断点时，此功能非常有用。|  
-|E|切换缩放控件|显示或隐藏缩放控件。 您还可以通过按 CTRL 并滚动鼠标滚轮来进行缩放，而不考虑缩放控件的可见性，或使用**ctrl + shift + "+"** 进行放大，按**ctrl + shift + "-"** 缩小。按**CTRL + F8**将缩放以适合屏幕大小。|  
+|E|切换缩放控件|显示或隐藏缩放控件。 您还可以通过按 CTRL 并滚动鼠标滚轮来进行缩放，而不考虑缩放控件的可见性，或使用 **ctrl + shift + "+"** 进行放大，按 **ctrl + shift + "-"** 缩小。按 **CTRL + F8** 将缩放以适合屏幕大小。|  
   
 ### <a name="context-menu-items"></a>上下文菜单项  
  下面的图和表介绍在线程视图或任务视图中右击方法上下文时可用的快捷菜单项。 最后六项直接从“调用堆栈”窗口借用而来，并没有引入新行为。  
@@ -91,7 +91,7 @@ ms.locfileid: "85542215"
 |符号设置|显示相应的对话框。|  
   
 ## <a name="tasks-view"></a>任务视图  
- 如果你的应用程序使用 <xref:System.Threading.Tasks.Task?displayProperty=fullName> 对象（托管代码）或 `task_handle` 对象（本机代码）来表示并行，则可以使用 "并行堆栈" 窗口工具栏中的组合框来切换到*任务视图*。 任务视图显示任务（而不是线程）的调用堆栈。 任务视图与线程视图不同，如下所示：  
+ 如果你的应用程序使用 <xref:System.Threading.Tasks.Task?displayProperty=fullName> (托管代码的对象) 或 `task_handle` (本机代码) 的对象来表示并行，则可以使用 "并行堆栈" 窗口工具栏中的组合框切换到 *任务视图*。 任务视图显示任务（而不是线程）的调用堆栈。 任务视图与线程视图不同，如下所示：  
   
 - 不显示未运行任务的线程的调用堆栈。  
   
@@ -103,7 +103,7 @@ ms.locfileid: "85542215"
   
   ![“并行堆栈”窗口中的“任务”视图](../debugger/media/parallel-tasksview.png "Parallel_TasksView")  
   
-  若要查看整个调用堆栈，只需右键单击堆栈帧，然后单击 "**转到线程**" 即可切换回 "线程" 视图。  
+  若要查看整个调用堆栈，只需右键单击堆栈帧，然后单击 " **转到线程**" 即可切换回 "线程" 视图。  
   
   如上表所述，将鼠标指针悬停在方法上下文的上方，即可看到附加信息。 下图显示了线程视图和任务视图的工具提示中的信息。  
   

@@ -13,10 +13,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 750ce3cbcae593aee315998ec8b205a71e004d41
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85543036"
 ---
 # <a name="commentmarkprofile"></a>CommentMarkProfile
@@ -113,4 +113,4 @@ void ExerciseCommentMarkProfile()
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Visual Studio 探查器 API 参考（本机）](../profiling/visual-studio-profiler-api-reference-native.md)
+ [Visual Studio 探查器 API 参考 (本机) ](../profiling/visual-studio-profiler-api-reference-native.md)

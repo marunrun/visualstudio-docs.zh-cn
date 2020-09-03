@@ -9,10 +9,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: afadf41fc753051047e858758bfe0677987d726d
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545062"
 ---
 # <a name="ca5350-do-not-use-weak-cryptographic-algorithms"></a>CA5350:请勿使用弱加密算法
@@ -43,7 +43,7 @@ ms.locfileid: "85545062"
 
 - 对于 TripleDES 加密，请使用 <xref:System.Security.Cryptography.Aes> 加密。
 
-- 对于 SHA1 或 RIPEMD160 哈希函数，请使用[sha-1](https://msdn.microsoft.com/library/windows/desktop/aa382459.aspx)系列中的函数（例如 <xref:System.Security.Cryptography.SHA512> ，、 <xref:System.Security.Cryptography.SHA384> 、 <xref:System.Security.Cryptography.SHA256> ）。
+- 对于 SHA1 或 RIPEMD160 哈希函数，请使用 [sha-1](https://msdn.microsoft.com/library/windows/desktop/aa382459.aspx) 系列中的函数 (例如 <xref:System.Security.Cryptography.SHA512> ， <xref:System.Security.Cryptography.SHA384> <xref:System.Security.Cryptography.SHA256>) 。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
  当数据所需的保护级别不需要安全保证时，请禁止显示此规则的警告。

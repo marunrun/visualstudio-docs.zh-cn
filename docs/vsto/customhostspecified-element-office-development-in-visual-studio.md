@@ -1,5 +1,5 @@
 ---
-title: '&lt;d &gt; 元素（Visual Studio 中的 Office 开发）'
+title: '&lt;&gt;Visual Studio 中的 d 元素 (Office 开发) '
 titleSuffix: ''
 ms.custom: seodec18
 ms.date: 02/02/2017
@@ -17,13 +17,13 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 689848f14b4540a54489b4ea5bbad67e493fe276
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85544906"
 ---
-# <a name="ltcustomhostspecifiedgt-element-office-development-in-visual-studio"></a>&lt;d &gt; 元素（Visual Studio 中的 Office 开发）
+# <a name="ltcustomhostspecifiedgt-element-office-development-in-visual-studio"></a>&lt;&gt;Visual Studio 中的 d 元素 (Office 开发) 
   `customHostSpecified`元素指示此解决方案不是独立应用程序。 Office 解决方案包含 Microsoft Office 应用程序内部承载的组件。
 
 ## <a name="syntax"></a>语法
@@ -40,7 +40,7 @@ ms.locfileid: "85544906"
  此元素没有属性和子元素。
 
 ## <a name="example"></a>示例
- 下面的代码示例演示 `customHostSpecified` Office 解决方案的应用程序清单中的元素。 此代码示例是[Office 解决方案的应用程序清单](../vsto/application-manifests-for-office-solutions.md)中提供的一个更大示例的一部分。
+ 下面的代码示例演示 `customHostSpecified` Office 解决方案的应用程序清单中的元素。 此代码示例是 [Office 解决方案的应用程序清单](../vsto/application-manifests-for-office-solutions.md)中提供的一个更大示例的一部分。
 
 ```xml
 <entryPoint>

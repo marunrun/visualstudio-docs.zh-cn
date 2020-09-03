@@ -1,5 +1,5 @@
 ---
-title: IDSymbol 元素 |微软文档
+title: IDSymbol 元素 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,14 +12,14 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: d02a26a6874165738d917a14986d16d142c01915
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80710379"
 ---
 # <a name="idsymbol-element"></a>IDSymbol 元素
-该`IDSymbol`元素包含表示菜单、组或命令的 GUID：ID 对的 ID。 GUID 来自父`GuidSymbol`元素。 元素`IDSymbol`具有一个`name`属性，该属性为 ID 提供友好名称，该名称包含在`value`属性中。
+`IDSymbol`元素包含表示菜单、组或命令的 GUID： id 对的 id。 GUID 来自父 `GuidSymbol` 元素。 `IDSymbol`元素具有一个 `name` 属性，该属性提供 ID 的友好名称，该名称包含在属性中 `value` 。
 
 ## <a name="syntax"></a>语法
 
@@ -32,7 +32,7 @@ ms.locfileid: "80710379"
 
 ### <a name="attributes"></a>特性
 
-|特性|描述|
+|特性|说明|
 |---------------|-----------------|
 |name|必需。 ID 符号的名称。|
 |值|必需。 ID 符号的数字 ID 值。|
@@ -42,12 +42,12 @@ ms.locfileid: "80710379"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
-|[吉德符号元素](../extensibility/guidsymbol-element.md)|包含表示菜单、组或命令的 GUID：ID 对的 GUID。 对 `IDSymbol` 元素进行分组。|
+|[GuidSymbol 元素](../extensibility/guidsymbol-element.md)|包含表示菜单、组或命令的 GUID： ID 对的 GUID。 对 `IDSymbol` 元素进行分组。|
 
 ## <a name="remarks"></a>备注
- 给定`IDSymbol``GuidSymbol`元素中的每个元素都必须具有唯一的`value`。 但是，`IDSymbol`具有相同值的元素可以存在于包中，只要它们具有不同的父项。
+ `IDSymbol`给定元素中的每个元素 `GuidSymbol` 必须具有唯一的 `value` 。 但是， `IDSymbol` 具有相同值的元素可以存在于包中，只要它们具有不同的父元素。
 
-## <a name="see-also"></a>请参阅
-- [可视化工作室命令表 （.vsct） 文件](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+## <a name="see-also"></a>另请参阅
+- [Visual Studio 命令表 ( .vsct) 文件](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

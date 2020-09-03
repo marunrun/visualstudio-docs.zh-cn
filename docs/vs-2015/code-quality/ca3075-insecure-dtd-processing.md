@@ -9,10 +9,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: d8cd78b529618504b5f14905a764c369da249fe2
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545166"
 ---
 # <a name="ca3075-insecure-dtd-processing"></a>CA3075:不安全的 DTD 处理
@@ -35,13 +35,13 @@ ms.locfileid: "85545166"
 
 - 设置了 XML 中的 <xref:System.Xml.XmlNode.InnerXml%2A> 属性。
 
-- <xref:System.Xml.XmlReaderSettings.DtdProcessing%2A>属性设置为 Parse。
+- <xref:System.Xml.XmlReaderSettings.DtdProcessing%2A> 属性设置为 Parse。
 
 - 使用 <xref:System.Xml.XmlResolver> 而不是 <xref:System.Xml.XmlSecureResolver> 处理不受信任的输入。
 
 - XmlReader。<xref:System.Xml.XmlReader.Create%2A> 使用不安全的 <xref:System.Xml.XmlReaderSettings> 实例或根本不使用任何实例调用方法。
 
-- <xref:System.Xml.XmlReader>是用不安全的默认设置或值创建的。
+- <xref:System.Xml.XmlReader> 是用不安全的默认设置或值创建的。
 
   在这些情况下，结果均相同：来自文件系统或来自处理 XML 的计算机的网络共享的文件都将面临攻击，其随后可能会被用作 DoS 向量。
 
@@ -59,7 +59,7 @@ ms.locfileid: "85545166"
 
 - 如果要处理不受信任的源，请将属性设置  <xref:System.Xml.XmlReaderSettings.ProhibitDtd%2A> 为 **true** ，以禁用 DTD 处理。
 
-- XmlTextReader 类具有完全信任继承要求。 有关详细信息，请参阅 [继承要求](https://msdn.microsoft.com/28b9adbb-8f08-4f10-b856-dbf59eb932d9)。
+- XmlTextReader 类具有完全信任继承要求。 有关详细信息，请参阅 [继承要求](https://msdn.microsoft.com/28b9adbb-8f08-4f10-b856-dbf59eb932d9) 。
 
   .NET 4 及更高版本
 

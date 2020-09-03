@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 05b0d20ba7bd560fc60090bba84b78691bb3e753
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85546089"
 ---
 # <a name="how-to-programmatically-copy-and-paste-shapes-in-a-visio-document"></a>如何：以编程方式在 Visio 文档中复制和粘贴形状
@@ -36,7 +36,7 @@ ms.locfileid: "85546089"
 ## <a name="copy-and-paste-shapes-with-the-same-positions"></a>复制和粘贴具有相同位置的形状
  有关对象模型的详细信息，请参阅 [Microsoft.Office.Interop.Visio.Shape.DrawRectangle](/office/vba/api/Visio.Shape.DrawRectangle)、 [Microsoft.Office.Interop.Visio.Shape.DrawOval](/office/vba/api/Visio.Shape.DrawOval)、 [Microsoft.Office.Interop.Visio.Shape.Copy](/office/vba/api/Visio.Shape.Copy)和 [Microsoft.Office.Interop.Visio.Shape.Paste](/office/vba/api/Visio.Shape.Paste) 方法以及 [Microsoft.Office.Interop.Visio.VisCutCopyPasteCodes.visCopyPasteNoTranslate](/office/vba/api/Visio.viscutcopypastecodes) 标志的 VBA 参考文档。
 
- 如果需要控制粘贴的信息的格式，并（可选）建立到源文件（例如 Microsoft Office Word 文档）的链接，请使用 PasteSpecial 方法。
+ 如果需要控制粘贴的信息的格式，并 (可以选择) 建立指向源文件的链接 (例如，Microsoft Office Word 文档) ，请使用 PasteSpecial 方法。
 
 ### <a name="to-copy-shapes-and-shape-locations-to-another-page"></a>将形状和形状位置复制到另一页
 
@@ -45,7 +45,7 @@ ms.locfileid: "85546089"
      [!code-csharp[Trin_VstcoreVisioAutomationAddIn#15](../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs#15)]
      [!code-vb[Trin_VstcoreVisioAutomationAddIn#15](../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb#15)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [Visio 解决方案](../vsto/visio-solutions.md)
 - [Visio 对象模型概述](../vsto/visio-object-model-overview.md)
 - [使用 Visio 形状](../vsto/working-with-visio-shapes.md)

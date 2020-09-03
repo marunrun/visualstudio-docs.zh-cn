@@ -16,16 +16,16 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 10649b4106a280089fd6b086167c7e92bff1300b
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545244"
 ---
 # <a name="ca1903-use-only-api-from-targeted-framework"></a>CA1903:仅使用目标框架中的 API
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-有关 Visual Studio 的最新文档，请参阅[CA1903：仅使用目标框架中的 API](/visualstudio/code-quality/ca1903-use-only-api-from-targeted-framework)。
+有关 Visual Studio 的最新文档，请参阅 [CA1903：仅使用目标框架中的 API](/visualstudio/code-quality/ca1903-use-only-api-from-targeted-framework)。
 
 |项|值|
 |-|-|
@@ -48,9 +48,9 @@ ms.locfileid: "85545244"
 |.NET Framework 2.0|.NET Framework 2.0 SP1，.NET Framework 2.0 SP2|
 |.NET Framework 3.0|.NET Framework 2.0 SP1，.NET Framework 2.0 SP2，.NET Framework 3.0 SP1，.NET Framework 3.0 SP2|
 |.NET Framework 3.5|.NET Framework 3.5 SP1|
-|.NET Framework 4|不可用|
+|.NET Framework 4|空值|
 
- 若要更改项目的目标框架，请参阅[面向特定 .NET Framework 版本](../ide/targeting-a-specific-dotnet-framework-version.md)。
+ 若要更改项目的目标框架，请参阅 [面向特定 .NET Framework 版本](../ide/targeting-a-specific-dotnet-framework-version.md)。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
  若要删除 Service Pack 的依赖项，请删除新成员或类型的所有使用实例。 如果这是有意的依赖项，请禁止显示此警告或关闭此规则。

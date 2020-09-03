@@ -7,10 +7,10 @@ author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.openlocfilehash: 3f544501a7d8a792af9ddd89c682324a21002c4f
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "82921093"
 ---
 # <a name="work-with-elements-in-xaml-designer"></a>在 XAML 设计器中使用元素
@@ -19,13 +19,13 @@ ms.locfileid: "82921093"
 
 ## <a name="add-an-element-to-a-layout"></a>将元素添加到布局
 
-布局是调整元素在 UI 中的大小和位置的过程**。 若要放置可视元素，必须将这些元素置于布局[面板](xref:Windows.UI.Xaml.Controls.Panel)中。 `Panel` 具有一个子属性，该子属性是 [FrameworkElement](xref:Windows.UI.Xaml.FrameworkElement) 类型的集合。 您可以使用各种`Panel`子元素（如[Canvas](xref:Windows.UI.Xaml.Controls.Canvas)、 [system.windows.controls.stackpanel>](xref:Windows.UI.Xaml.Controls.StackPanel)和[Grid](xref:Windows.UI.Xaml.Controls.Grid)）来充当布局容器以及在页面上放置和排列元素。
+布局是调整元素在 UI 中的大小和位置的过程**。 若要放置可视元素，必须将这些元素置于布局[面板](xref:Windows.UI.Xaml.Controls.Panel)中。 `Panel` 具有一个子属性，该子属性是 [FrameworkElement](xref:Windows.UI.Xaml.FrameworkElement) 类型的集合。 您可以使用各种 `Panel` 子元素（如 [Canvas](xref:Windows.UI.Xaml.Controls.Canvas)、 [system.windows.controls.stackpanel>](xref:Windows.UI.Xaml.Controls.StackPanel)和 [Grid](xref:Windows.UI.Xaml.Controls.Grid)）来充当布局容器以及在页面上放置和排列元素。
 
 默认情况下，`Grid` 面板用作页面或窗体中的顶级布局容器。 可在顶级页面布局内添加布局面板、控件或其他元素。
 
 若要将元素添加到 XAML 设计器中的布局，请执行以下操作之一：
 
-- 双击**工具箱**中的某个元素（或在 "工具箱" 中选择一个元素，然后按**enter**）。
+- 双击 " **工具箱** " 中的某个元素 (或选择工具箱中的某个元素，然后按 **enter**) 。
 
 - 将元素从“工具箱”拖到美工板 ****。
 
@@ -33,7 +33,7 @@ ms.locfileid: "82921093"
 
 ## <a name="change-the-layering-order-of-elements"></a>更改元素的分层顺序
 
-当 XAML 设计器中美工板上有两个元素时，一个元素在分层顺序中将显示在另一个元素之前。 在元素列表底部的 "文档大纲" 窗口中，是最前面的元素（设置了元素的**ZIndex**属性时除外）。 当将元素插入页面、窗体或布局容器时，元素将自动放置在活动容器元素中的其他元素之前。 若要更改元素的顺序，可使用“排序”命令，或将元素拖入文档大纲窗口的对象树中****。
+当 XAML 设计器中美工板上有两个元素时，一个元素在分层顺序中将显示在另一个元素之前。 "文档大纲" 窗口中的元素列表的底部是最前面的元素 (在将元素的 **ZIndex** 属性设置) 时除外。 当将元素插入页面、窗体或布局容器时，元素将自动放置在活动容器元素中的其他元素之前。 若要更改元素的顺序，可使用“排序”命令，或将元素拖入文档大纲窗口的对象树中****。
 
 若要更改其分层顺序，请执行以下操作之一：
 
@@ -59,7 +59,7 @@ ms.locfileid: "82921093"
 
 使用菜单命令对齐两个或多个元素的步骤：
 
-1. 选择要对齐的元素。 选择元素时，可以通过按住**Ctrl**键来选择多个元素。
+1. 选择要对齐的元素。 选择元素时，可以通过按住 **Ctrl** 键来选择多个元素。
 
 2. 在属性窗口中“布局”部分的“HorizontalAlignment”下，选择以下属性之一：“左”、“中心”、“右”或“拉伸”************************。
 
@@ -94,7 +94,7 @@ XAML 设计器中的边距决定了美工板上元素周围的空白区域的大
 
 将元素分组到一个新布局容器的步骤：
 
-1. 选择要分组的元素。 （若要选择多个元素，请按住**Ctrl**键，同时单击它们。）
+1. 选择要分组的元素。  (若要选择多个元素，请按住 **Ctrl** 键，同时单击它们。 ) 
 
 2. 右键单击选定的元素，指向“分组”，然后单击想要在其中放置该组的布局容器的类型****。
 
@@ -107,7 +107,7 @@ XAML 设计器中的边距决定了美工板上元素周围的空白区域的大
 
 可以通过使用“布局重置”命令还原某个元素特定布局属性的默认值。 通过使用此命令可重置元素的边距、对齐方式、宽度、高度和大小，个别重置或同时全部重置均可。
 
-若要重置元素布局，请在 "文档大纲" 窗口或美工板中右键单击该元素，然后选择 "**布局** > **重置** *PropertyName*"，其中*PropertyName*是想要重置的属性（或选择 "全部**布局** > **重置**" 以重置元素的所有布局属性）。
+若要重置元素布局，请在 "文档大纲" 窗口或美工板中右键单击该元素，然后选择 "**布局**  >  **重置** *PropertyName*"，其中*PropertyName*是想要重置的属性 (或选择 "全部**布局**  >  **重置**" 以重置元素的所有布局属性) 。
 
 ## <a name="see-also"></a>另请参阅
 

@@ -13,9 +13,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: c2329efef64e7d8605f8483ff7dce3107cd702fa
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86015499"
 ---
 # <a name="how-to-set-sharepoint-deployment-commands"></a>如何：设置 SharePoint 部署命令
@@ -27,9 +28,9 @@ ms.locfileid: "86015499"
 
 2. 选择 " **SharePoint** " 选项卡。
 
-3. 在 "**预先部署命令行**" 文本框中，输入 MS-DOS 或 MSBuild 命令来自定义此步骤。
+3. 在 " **预先部署命令行** " 文本框中，输入 MS-DOS 或 MSBuild 命令来自定义此步骤。
 
-     例如，若要在部署完成之前列出目录内容，请输入**dir**。
+     例如，若要在部署完成之前列出目录内容，请输入 **dir**。
 
 ### <a name="to-add-a-post-deployment-command"></a>添加后期部署命令
 
@@ -37,9 +38,9 @@ ms.locfileid: "86015499"
 
 2. 选择 " **SharePoint** " 选项卡。
 
-3. 在 "**部署后命令行**" 文本框中，输入 MS-DOS 或 MSBuild 命令来自定义此步骤。
+3. 在 " **部署后命令行** " 文本框中，输入 MS-DOS 或 MSBuild 命令来自定义此步骤。
 
-     例如，若要在部署完成后列出目录内容，请输入**dir**。 若要使用 MSBuild 变量从生成目录中复制程序集，请输入**copy $ （TargetPath） c:\DeploymentDirectory**。
+     例如，若要在部署完成后列出目录内容，请输入 **dir**。 若要使用 MSBuild 变量从生成目录复制程序集，请输入 **copy $ (TargetPath) c:\DeploymentDirectory**。
 
 ## <a name="see-also"></a>另请参阅
 - [打包和部署 SharePoint 解决方案](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)

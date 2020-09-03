@@ -28,7 +28,7 @@
                   href: format-specifiers-in-cpp.md
                 - name: 上下文运算符 (C++)
                   href: context-operator-cpp.md
-                - name: 'C# 中的格式说明符'
+                - name: C# 中的格式说明符
                   href: format-specifiers-in-csharp.md
                 - name: 伪变量
                   href: pseudovariables.md
@@ -118,7 +118,7 @@
                   href: enabling-debug-features-in-visual-cpp-d-debug.md
             - name: Web 项目的属性页设置
               href: property-pages-settings-for-web-projects.md
-            - name: 'C# 调试配置的项目设置'
+            - name: C# 调试配置的项目设置
               href: project-settings-for-csharp-debug-configurations.md
             - name: Project Settings for a Visual Basic Debug Configuration
               href: project-settings-for-a-visual-basic-debug-configuration.md
@@ -170,7 +170,7 @@
                   href: how-to-write-a-visualizer.md
                 - name: 可视化工具体系结构
                   href: visualizer-architecture.md
-                - name: '用 C# 编写可视化工具'
+                - name: 用 C# 编写可视化工具
                   href: walkthrough-writing-a-visualizer-in-csharp.md
                 - name: 用 Visual Basic 编写可视化工具
                   href: walkthrough-writing-a-visualizer-in-visual-basic.md
@@ -204,13 +204,13 @@
               href: edit-and-continue-visual-cpp.md
             - name: 受支持的代码更改 (C++)
               href: supported-code-changes-cpp.md
-        - name: '编辑并继续 (Visual C#)'
+        - name: 编辑并继续 (Visual C#)
           items:
-            - name: '编辑并继续 (Visual C#)'
+            - name: 编辑并继续 (Visual C#)
               href: edit-and-continue-visual-csharp.md
-            - name: '使用“编辑并继续”(C#)'
+            - name: 使用“编辑并继续”(C#)
               href: how-to-use-edit-and-continue-csharp.md
-            - name: '受支持的代码更改 (C#)'
+            - name: 受支持的代码更改 (C#)
               href: supported-code-changes-csharp.md
         - name: 编辑并继续 (Visual Basic)
           items:
@@ -220,7 +220,7 @@
               href: how-to-apply-edits-in-break-mode-with-edit-and-continue.md
             - name: Visual Basic“编辑并继续”中不支持的编辑
               href: unsupported-edits-in-visual-basic-edit-and-continue.md
-        - name: 'F# 不支持“编辑并继续”'
+        - name: F# 不支持“编辑并继续”
           href: edit-and-continue-not-supported-for-f-hash.md
     - name: 使用转储文件
       items:
@@ -396,15 +396,15 @@
                   href: quickstart-debug-javascript-using-the-console.md
                 - name: JavaScript Console commands
                   href: javascript-console-commands.md
-            - name: '启动调试会话（VB、C#、C++ 和 XAML）'
+            - name: 启动调试会话（VB、C#、C++ 和 XAML）
               href: start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml.md
             - name: 在 Blend for Visual Studio 中调试 XAML
               href: debug-xaml-in-blend.md
-            - name: '导航调试会话（Xaml 和 C#）'
+            - name: 导航调试会话（Xaml 和 C#）
               items:
-                - name: '导航调试会话（Xaml 和 C#）'
+                - name: 导航调试会话（Xaml 和 C#）
                   href: navigate-a-debugging-session-in-visual-studio-xaml-and-csharp.md
-                - name: '调试器导航示例代码（XAML 和 C#）'
+                - name: 调试器导航示例代码（XAML 和 C#）
                   href: debugger-navigation-sample-code-xaml-and-csharp.md
             - name: 触发 Windows 应用商店的挂起、继续和后台事件）
               href: how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio.md
@@ -414,9 +414,9 @@
       items:
         - name: 调试托管代码
           href: debugging-managed-code.md
-        - name: 'C#、F# 和 Visual Basic 项目类型'
+        - name: C#、F# 和 Visual Basic 项目类型
           items:
-            - name: 'C#、F# 和 Visual Basic 项目类型'
+            - name: C#、F# 和 Visual Basic 项目类型
               href: debugging-preparation-csharp-f-hash-and-visual-basic-project-types.md
             - name: 建议的属性设置
               href: managed-debugging-recommended-property-settings.md
@@ -454,7 +454,7 @@
               href: how-to-use-the-wpf-tree-visualizer.md
             - name: 显示 WPF 跟踪信息
               href: how-to-display-wpf-trace-information.md
-        - name: '调试 F#'
+        - name: 调试 F#
           href: debugging-f-hash.md
     - name: 调试本机代码
       items:
