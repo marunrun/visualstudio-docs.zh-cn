@@ -12,10 +12,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 66fc8065e81b8b93e73ec034a166e3d5645d4b6b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68184088"
 ---
 # <a name="comparing-properties-and-items"></a>比较属性和项
@@ -56,7 +56,7 @@ MSBuild 属性和项都用于将信息传递给任务、评估条件，以及存
   
  将 CustomBuild 目标添加到目标列表中，为 `BuildDependsOn` 提供值 `BeforeBuild;CoreBuild;AfterBuild;CustomBuild`。  
   
- 从 MSBuild 4.0 开始，弃用目标依赖关系注入。 改用 `AfterTargets` 和 `BeforeTargets` 特性。 有关详细信息，请参阅[目标生成顺序](../msbuild/target-build-order.md)。  
+ 从 MSBuild 4.0 开始，弃用目标依赖关系注入。 改用 `AfterTargets` 和 `BeforeTargets` 特性。 有关详细信息，请参阅 [目标生成顺序](../msbuild/target-build-order.md)。  
   
 ### <a name="conversions-between-strings-and-item-lists"></a>字符串和项列表之间的转换  
  MSBuild 执行项类型之间的转换，并且需要字符串值。 若要查看项列表如何成为字符串值，请思考项类型用作 MSBuild 属性的值时，会发生什么情况：  

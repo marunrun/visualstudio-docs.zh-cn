@@ -1,5 +1,5 @@
 ---
-title: Assembly 元素 （Visual Studio 模板向导扩展） |Microsoft Docs
+title: " (Visual Studio 模板向导扩展) 的 Assembly 元素 |Microsoft Docs"
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -14,20 +14,20 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: d947c0f2996bcaaeff6c6dbf084151237f1fdb3d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68184730"
 ---
 # <a name="assembly-element-visual-studio-template-wizard-extension"></a>Assembly 元素（Visual Studio 模板向导扩展）
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-指定的名称或实现的程序集的强名称`IWizard`接口。  
+指定实现接口的程序集的名称或强名称 `IWizard` 。  
   
- \<VSTemplate >  
+ \<VSTemplate>  
 \<WizardExtension>  
-\<程序集 >  
+\<Assembly>  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,20 +46,20 @@ ms.locfileid: "68184730"
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|描述|  
+|元素|说明|  
 |-------------|-----------------|  
 |[WizardExtension](../extensibility/wizardextension-element-visual-studio-templates.md)|包含用于自定义模板向导的注册元素。|  
   
 ## <a name="text-value"></a>文本值  
  需要一个文本值。  
   
- 此文本指定实现的程序集`IWizard`接口。 此程序集名称必须指定为完整的程序集名称。 例如， `MyAssembly, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11dd0a3a, Custom = null` 。  
+ 此文本指定实现接口的程序集 `IWizard` 。 此程序集名称必须指定为完整的程序集名称。 例如，`MyAssembly, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11dd0a3a, Custom = null`。  
   
 ## <a name="remarks"></a>备注  
  `Assembly` 是 `WizardExtension` 的必需子元素。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示的标准项目模板的元数据[!INCLUDE[csprcs](../includes/csprcs-md.md)]Windows 应用程序。  
+ 下面的示例演示了 Windows 应用程序的标准项目模板的元数据 [!INCLUDE[csprcs](../includes/csprcs-md.md)] 。  
   
 ```  
 <VSTemplate Version="3.0.0" Type="Item"  
@@ -89,7 +89,7 @@ ms.locfileid: "68184730"
 </VSTemplate>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)   
  [创建项目和项模板](../ide/creating-project-and-item-templates.md)   
  [如何：使用向导来处理项目模板](../extensibility/how-to-use-wizards-with-project-templates.md)

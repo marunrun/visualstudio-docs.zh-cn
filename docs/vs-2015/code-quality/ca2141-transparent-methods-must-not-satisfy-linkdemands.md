@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: bee810ed938d316e92095ad47062ed5ad9cd456f
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85546440"
 ---
 # <a name="ca2141transparent-methods-must-not-satisfy-linkdemands"></a>CA2141：透明方法不得满足 LinkDemand
@@ -29,10 +29,10 @@ ms.locfileid: "85546440"
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
- 安全透明方法调用未用（APTCA）特性标记的程序集中的方法 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> ，或者安全透明方法满足某个 <xref:System.Security.Permissions.SecurityAction> `.LinkDemand` 类型或方法的。
+ 安全透明方法调用未用 (APTCA) 特性标记的程序集中的方法 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> ，或者安全透明方法满足某个 <xref:System.Security.Permissions.SecurityAction> `.LinkDemand` 类型或方法的。
 
 ## <a name="rule-description"></a>规则描述
- 满足 LinkDemand 的操作是一种安全敏感的操作，这可能会导致意外的权限提升。 安全透明代码不得满足 Linkdemand，因为它不受与安全关键代码相同的安全审核要求。 安全规则集1级程序集中的透明方法会导致在运行时将其满足的所有 Linkdemand 转换为完全需求，这可能会导致性能问题。 在安全规则集级别2程序集中，如果透明方法尝试满足 LinkDemand，则它们将无法在实时（JIT）编译器中进行编译。
+ 满足 LinkDemand 的操作是一种安全敏感的操作，这可能会导致意外的权限提升。 安全透明代码不得满足 Linkdemand，因为它不受与安全关键代码相同的安全审核要求。 安全规则集1级程序集中的透明方法会导致在运行时将其满足的所有 Linkdemand 转换为完全需求，这可能会导致性能问题。 在安全规则集级别2程序集内，如果透明方法尝试满足 LinkDemand，则它们将无法在实时 (JIT) 编译器中进行编译。
 
  在 usee 级别2安全的程序集中，通过安全透明方法尝试实现 LinkDemand，或在非 APTCA 程序集中调用方法会引发 <xref:System.MethodAccessException> ; 在第1级程序集中，LinkDemand 成为完全要求。
 

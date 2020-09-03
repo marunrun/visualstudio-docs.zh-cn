@@ -1,5 +1,5 @@
 ---
-title: 命令行开关 (Visual Studio SDK) |Microsoft Docs
+title: " (Visual Studio SDK) 的命令行开关 |Microsoft Docs"
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,24 +13,24 @@ caps.latest.revision: 17
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: ea37c105114e915e812a470474ccd8f52609056f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68184351"
 ---
 # <a name="command-line-switches-visual-studio-sdk"></a>命令行开关 (Visual Studio SDK)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Devenv.exe、 启动的可执行文件[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]集成的开发环境 (IDE)，专门用于开发的 Vspackage 支持的命令行开关。 Vspackage 还可以将其自己交换机提供在 Devenv 命令行。 以下主题提供有关如何在 IDE 中使用命令行开关的信息。  
+Devenv.exe，启动 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 集成开发环境 (IDE) 的可执行文件支持专门用于开发 vspackage 的命令行开关。 Vspackage 还可以在 Devenv 命令行中提供自己的开关。 以下主题提供有关如何在 IDE 中使用命令行开关的信息。  
   
 ## <a name="in-this-section"></a>本节内容  
- [VSPackage 开发的 Devenv 命令行开关](../extensibility/devenv-command-line-switches-for-vspackage-development.md)  
- 介绍可用于简化 VSPackage 开发、 调试和部署的 Devenv 命令行开关。  
+ [Devenv 命令行开关，适用于 VSPackage 开发](../extensibility/devenv-command-line-switches-for-vspackage-development.md)  
+ 介绍可用于简化 VSPackage 开发、调试和部署的 Devenv 命令行开关。  
   
  [添加命令行开关](../extensibility/adding-command-line-switches.md)  
- 介绍如何实现、 查找，并读取用户输入的包的命令行开关。  
+ 描述如何为包实现、查找和读取用户输入的命令行开关。  
   
 ## <a name="related-sections"></a>相关章节  
  [Devenv 命令行开关](../ide/reference/devenv-command-line-switches.md)  
- 介绍了如何 Devenv 允许设置各种选项为 IDE，和如何可以编译，生成和调试命令行中的项目。 此外，没有 Devenv 开关的语法和开关的表有关的信息。
+ 介绍 Devenv 如何允许您为 IDE 设置各种选项，以及如何从命令行编译、生成和调试项目。 此外，还提供了有关 Devenv 开关的语法和开关表的信息。

@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 4b72f419331b2a02c55d885a2b8855070698879a
-ms.sourcegitcommit: 1efb6b219ade7c35068b79fbdc573a8771ac608d
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "78167606"
 ---
 # <a name="fxcopcmd-tool-errors"></a>FxCopCmd 工具错误
@@ -27,7 +27,7 @@ FxCopCmd 不会将所有错误视为严重错误。 如果 FxCopCmd 具有足够
 |-----------|-------------------|
 |无错误|0x0|
 |分析错误|0x1|
-|规则异常|0x2|
+|规则例外|0x2|
 |项目加载错误|0x4|
 |程序集加载错误|0x8|
 |规则库加载错误|0x10|
@@ -50,7 +50,7 @@ FxCopCmd 不会将所有错误视为严重错误。 如果 FxCopCmd 具有足够
 - 未指定输出选项或无法写入文件。
 
 > [!NOTE]
-> FxCopCmd 返回代码**程序集引用错误**0x200 本身就是警告而不是错误。 此返回代码指示缺少间接引用，但 FxCopCmd 可以处理它们。 警告意味着某些分析结果可能已泄露。 将**程序集引用错误**视为与任何其他返回代码结合使用时的错误。
+> FxCopCmd 返回代码 **程序集引用错误** 0x200 本身就是警告而不是错误。 此返回代码指示缺少间接引用，但 FxCopCmd 可以处理它们。 警告意味着某些分析结果可能已泄露。 将 **程序集引用错误** 视为与任何其他返回代码结合使用时的错误。
 
 ## <a name="see-also"></a>另请参阅
 

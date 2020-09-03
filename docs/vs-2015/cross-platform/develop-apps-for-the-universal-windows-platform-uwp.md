@@ -10,13 +10,13 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: b3f38f519444de7876046baf242f74a18b8c5a59
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75844372"
 ---
-# <a name="develop-apps-for-the-universal-windows-platform-uwp"></a>开发面向通用 Windows 平台 (UWP) 的应用
+# <a name="develop-apps-for-the-universal-windows-platform-uwp"></a>开发通用 Windows 平台 (UWP) 的应用
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 使用通用 Windows 平台和我们的一项 Windows 核心，可在任何 Windows 10 设备上（从电话到桌面）运行同一应用。 使用 Visual Studio 2015 和通用 Windows 应用开发工具创建这些通用 Windows 应用。
@@ -33,7 +33,7 @@ ms.locfileid: "75844372"
 
  它只是一个协定和版本的集合。 使你能够定位应用运行的环境。 不用再定位到操作系统。 现在你可以将应用定位到一个或多个设备系列。 通过此 [平台指南](https://msdn.microsoft.com/library/windows/apps/dn894631.aspx)了解更多详细信息。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>要求
  通用 Windows 应用开发工具附带了仿真程序，可用于查看应用在不同设备上的显示效果。 如果想要使用这些仿真程序，需要在物理计算机上安装此软件。 物理计算机必须运行 Windows 8.1 (x64) Professional 版本或更高版本，并具有支持客户端 Hyper-V 和二级地址转换 (SLAT) 的处理器。 当 Visual Studio 安装在虚拟机上时，则无法使用仿真程序。
 
  下面是所需软件的列表：

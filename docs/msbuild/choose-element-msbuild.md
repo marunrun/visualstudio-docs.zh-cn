@@ -20,17 +20,22 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: c4f699b4ffc9372af0c803d094390544932d652b
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77634469"
 ---
 # <a name="choose-element-msbuild"></a>Choose 元素 (MSBuild)
 
 评估子元素，选择一组 `ItemGroup` 元素和/或 `PropertyGroup` 元素进行评估。
 
- \<Project> \<Choose> \<When> \<Choose> ...\<Otherwise> \<Choose> ...
+ \<Project> \<Choose>
+ \<When>
+ \<Choose>
+... \<Otherwise>
+ \<Choose>
+...
 
 ## <a name="syntax"></a>语法
 
@@ -51,14 +56,14 @@ ms.locfileid: "77634469"
 
 ### <a name="child-elements"></a>子元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
 |[Otherwise](../msbuild/otherwise-element-msbuild.md)|可选元素。<br /><br /> 当所有 `When` 元素的条件的计算结果为 `false` 时，指定要计算的代码块 `PropertyGroup` 和 `ItemGroup` 元素。 `Choose` 元素中可能没有或只有一个 `Otherwise` 元素，并且它必须是最后一个元素。|
 |[When](../msbuild/when-element-msbuild.md)|必需的元素。<br /><br /> 指定一个可能的代码块供 `Choose` 元素选择。 `Choose` 元素中可能有一个或多个 `When` 元素。|
 
 ### <a name="parent-elements"></a>父元素
 
-| 元素 | 描述 |
+| 元素 | 说明 |
 | - | - |
 | [Otherwise](../msbuild/otherwise-element-msbuild.md) | 当所有 `When` 元素的条件的计算结果为 `false` 时，指定要执行的代码块。 |
 | [Project](../msbuild/project-element-msbuild.md) | MSBuild 项目文件必需的根元素。 |
@@ -117,7 +122,7 @@ ms.locfileid: "77634469"
 </Project>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [条件构造](../msbuild/msbuild-conditional-constructs.md)
 - [项目文件架构参考](../msbuild/msbuild-project-file-schema-reference.md)

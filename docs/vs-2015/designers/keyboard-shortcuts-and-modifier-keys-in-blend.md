@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: f3582dd63b2324b061684f1f6ad446d84734e2d3
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75850146"
 ---
 # <a name="keyboard-shortcuts-and-modifier-keys-in-blend"></a>Blend 中的键盘快捷方式和修改键
@@ -21,15 +21,15 @@ ms.locfileid: "75850146"
 
 通过使用键盘快捷方式，你需要多次单击鼠标按钮完成的操作只需按一次键盘快捷方式即可完成，从而可加快你的工作速度。 [!INCLUDE[blend_first](../includes/blend-first-md.md)] 中的键盘快捷方式分为以下两种类别：
 
-- 访问键 可以使用访问键，即通过按键盘上的特定键来访问菜单命令或对话框中的某个区域。 访问键由当前选定命令或对话框中显示的下划线标识。
+- 访问键 可以使用访问键，即通过按键盘上的特定键来访问菜单命令或对话框中的某个区域****。 访问键由当前选定命令或对话框中显示的下划线标识。
 
-   若要使用访问键，请先按 Alt 或 F10 以显示下划线，然后按特定菜单项或对话框项的对应字母。 或者，你可以通过使用 Tab 键或箭头键在菜单或对话框中导航。 例如，如果在 [!INCLUDE[blend_subs](../includes/blend-subs-md.md)] 中按 Alt，则“文件”菜单中的字母“F”下会出现下划线，以将其标识为访问键。 若要打开项目，你可以按住 Alt，按 F，然后按 O。
+   若要使用访问键，请先按 Alt 或 F10 以显示下划线，然后按特定菜单项或对话框项的对应字母。 或者，你可以通过使用 Tab 键或箭头键在菜单或对话框中导航。 例如，如果在 [!INCLUDE[blend_subs](../includes/blend-subs-md.md)] 中按 Alt，则“文件”菜单中的字母“F”下会出现下划线，以将其标识为访问键********。 若要打开项目，你可以按住 Alt，按 F，然后按 O。
 
-   ![](../designers/media/441d5d67-48ee-4ba3-9e55-1826167e8d64.png "441d5d67-48ee-4ba3-9e55-1826167e8d64")按下 ALT 键后以下划线显示的访问键
+   ![](../designers/media/441d5d67-48ee-4ba3-9e55-1826167e8d64.png "441d5d67-48ee-4ba3-9e55-1826167e8d64")按 Alt 后显示的带下划线的访问键
 
-- 快捷键 可以使用快捷键，即通过按键盘快捷方式来执行操作（例如选择菜单命令或修改工具的行为）。
+- 快捷键 可以使用快捷键，即通过按键盘快捷方式来执行操作（例如选择菜单命令或修改工具的行为）****。
 
-   大多数键盘快捷方式都可以轻松地在 [!INCLUDE[blend_subs](../includes/blend-subs-md.md)] 的用户界面中确定；它们显示在菜单命令的右边。 例如，在“文件”菜单上，“打开项目”菜单命令包括键盘快捷键 Ctrl+Shift+O。 要查看“工具”面板中的工具的快捷键，请将鼠标指针悬停在工具的上方。
+   大多数键盘快捷方式都可以轻松地在 [!INCLUDE[blend_subs](../includes/blend-subs-md.md)] 的用户界面中确定；它们显示在菜单命令的右边。 例如，在“文件”菜单上，“打开项目”菜单命令包括键盘快捷键 Ctrl+Shift+O********。 要查看“工具”面板中的工具的快捷键，请将鼠标指针悬停在工具的上方****。
 
    ![](../designers/media/f147fc85-9fc5-4e8a-8039-bead80a3e595.png "f147fc85-9fc5-4e8a-8039-bead80a3e595")显示在具有快捷方式的菜单项旁边的快捷键
 
@@ -42,4 +42,4 @@ ms.locfileid: "75850146"
 
 - [“笔”工具修改键](../designers/pen-tool-modifier-keys-in-blend.md)
 
-- [“路径选择”工具修改键](../designers/direct-selection-tool-modifier-keys-in-blend.md)
+- [路径选择工具修改键](../designers/direct-selection-tool-modifier-keys-in-blend.md)

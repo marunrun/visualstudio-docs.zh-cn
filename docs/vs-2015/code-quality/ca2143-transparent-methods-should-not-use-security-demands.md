@@ -12,20 +12,20 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: ca8f049da83b99da7d36ebf74e756dd95f738d64
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85546466"
 ---
 # <a name="ca2143-transparent-methods-should-not-use-security-demands"></a>CA2143:透明方法不应使用安全请求
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|Item|值|
+|项|值|
 |-|-|
 |TypeName|TransparentMethodsShouldNotDemand|
 |CheckId|CA2143|
-|Category|Microsoft.Security|
+|类别|Microsoft.Security|
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
