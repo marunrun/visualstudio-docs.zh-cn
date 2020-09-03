@@ -10,18 +10,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 1395aba0ea2f40e0df95435a340f4104c9f25d03
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545621"
 ---
 # <a name="debugger-windows"></a>调试器窗口
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-调试程序时可以打开大多数调试器窗口。 若要查看调试器窗口列表，请设置断点并开始调试。 命中断点并停止执行时，请单击 "**调试"/"窗口**"。  
+调试程序时可以打开大多数调试器窗口。 若要查看调试器窗口列表，请设置断点并开始调试。 命中断点并停止执行时，请单击 " **调试"/"窗口**"。  
   
-|**Window**|**热键**|**请参阅主题**|  
+|**窗口**|**热键**|**请参阅主题**|  
 |-|-|-|  
 |断点|CTRL+ALT+B|[使用断点](../debugger/using-breakpoints.md)|  
 |异常设置|CTRL+ALT+E|[管理调试器的异常](../debugger/managing-exceptions-with-the-debugger.md)|  

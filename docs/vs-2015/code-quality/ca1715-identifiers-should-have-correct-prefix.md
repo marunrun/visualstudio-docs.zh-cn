@@ -16,16 +16,16 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: fe362a58a047c8594d09bc6985c48d16f21d3b76
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545595"
 ---
 # <a name="ca1715-identifiers-should-have-correct-prefix"></a>CA1715:标识符应具有正确的前缀
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-有关 Visual Studio 的最新文档，请参阅[CA1715：标识符应具有正确的前缀](/visualstudio/code-quality/ca1715-identifiers-should-have-correct-prefix)。
+有关 Visual Studio 的最新文档，请参阅 [CA1715：标识符应具有正确的前缀](/visualstudio/code-quality/ca1715-identifiers-should-have-correct-prefix)。
 
 |项|值|
 |-|-|
@@ -37,7 +37,7 @@ ms.locfileid: "85545595"
 ## <a name="cause"></a>原因
  外部可见接口的名称不以大写的 "I" 开头。
 
- \- 或 -
+ - 或 -
 
  外部可见类型或方法的泛型类型参数的名称不以大写 "t" 开头。
 

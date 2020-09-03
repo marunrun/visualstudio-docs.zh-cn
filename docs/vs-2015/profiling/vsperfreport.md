@@ -17,10 +17,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: b7667aac348a6f7b208786191c35afe86542862d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68148233"
 ---
 # <a name="vsperfreport"></a>VSPerfReport
@@ -45,7 +45,7 @@ VSPerfReport [/U] /diff vspfilename1 vspfilename2 [/options]
  `vspfilename1 and vspfilename2` 必须是有效的 .vsp 或.vsps 文件。  
   
 ## <a name="symbol-files"></a>符号文件  
- 为了显示函数名称和行号等符号信息，VSPerfReport 要求访问被分析组件的符号 (.PDB) 文件以及 Windows 符号文件。 有关详细信息，请参阅[如何：指定符号文件位置，从命令行](../profiling/how-to-specify-symbol-file-locations-from-the-command-line.md)。  
+ 为了显示函数名称和行号等符号信息，VSPerfReport 要求访问被分析组件的符号 (.PDB) 文件以及 Windows 符号文件。 有关详细信息，请参阅 [如何：从命令行指定符号文件位置](../profiling/how-to-specify-symbol-file-locations-from-the-command-line.md)。  
   
 ## <a name="general-report-options"></a>常规报表选项  
  下表说明了常规报表格式设置选项和用于选择要报告的数据的选项。  
@@ -92,5 +92,5 @@ VSPerfReport [/U] /diff vspfilename1 vspfilename2 [/options]
 |**DiffColumn:** [*columnname*]|使用此特定列来比较值。 默认为独占样本百分比列。|  
 |**QueryDiffTables**|为提供的两个报表文件列出有效表和列。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [性能报告视图](../profiling/performance-report-views.md)

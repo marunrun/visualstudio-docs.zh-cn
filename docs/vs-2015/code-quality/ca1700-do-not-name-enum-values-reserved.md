@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 57f2a2e5959860a99a921101ff5782f9bce9ace3
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545647"
 ---
 # <a name="ca1700-do-not-name-enum-values-39reserved39"></a>CA1700：不 &#39;保留&#39; 命名枚举值
@@ -40,7 +40,7 @@ ms.locfileid: "85545647"
 
  在将来的版本中，将新成员添加到枚举，而不是使用保留成员。 在大多数情况下，添加新成员不是一项重大更改，只要添加不会导致原始成员的值发生变化。
 
- 在有限的情况下，添加成员是一项重大更改，即使原始成员保留其原始值也是如此。 主要是，不能从现有代码路径返回新成员，而不会中断对 `switch` `Select` [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 包含整个成员列表的返回值使用（in）语句并在默认情况下引发异常的调用方。 第二个问题是：客户端代码可能无法处理反射方法（如）的行为更改 <xref:System.Enum.IsDefined%2A?displayProperty=fullName> 。 相应地，如果新成员必须从现有方法返回，或者由于反射的使用不正确而发生已知的应用程序不兼容性，则唯一的不间断解决方案是：
+ 在有限的情况下，添加成员是一项重大更改，即使原始成员保留其原始值也是如此。 主要是，不能从现有代码路径返回新成员，而不会中断 `switch` `Select` [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 对包含整个成员列表并在默认情况下引发异常的返回值使用)  (的调用方。 第二个问题是：客户端代码可能无法处理反射方法（如）的行为更改 <xref:System.Enum.IsDefined%2A?displayProperty=fullName> 。 相应地，如果新成员必须从现有方法返回，或者由于反射的使用不正确而发生已知的应用程序不兼容性，则唯一的不间断解决方案是：
 
 1. 添加包含原始成员和新成员的新枚举。
 

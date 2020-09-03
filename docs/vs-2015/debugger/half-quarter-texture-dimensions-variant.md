@@ -1,5 +1,5 @@
 ---
-title: Half / Quarter 纹理维度变体 |Microsoft Docs
+title: Half/Quarter 纹理维度变量 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -10,10 +10,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 03485a3b9df9c06b1ef4755a5758cf2c8c997d1e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68161155"
 ---
 # <a name="halfquarter-texture-dimensions-variant"></a>Half/Quarter 纹理维度变量
@@ -46,6 +46,6 @@ ms.locfileid: "68161155"
 ## <a name="example"></a>示例  
  此变体在运行时（调用 `CreateTexture2D` 之前）可调整纹理大小。 我们不建议将此方法用于成品代码，因为完整大小的纹理会消耗更多的磁盘空间，而且此额外步骤会增加应用中的加载次数（对于需要大量要编码的计算资源的压缩纹理而言尤其如此）。 相反，我们建议你通过使用生成管道中包含的图像编辑器或图像处理器，在脱机状态下调整纹理大小。 这些方法将降低磁盘空间需求、消除应用中的运行时开销并提供更多的处理时间，以便你可以在收缩或压缩纹理时保持最佳图像质量。  
   
-## <a name="see-also"></a>请参阅  
- [Mip 贴图生成变量](../debugger/mip-map-generation-variant.md)   
+## <a name="see-also"></a>另请参阅  
+ [Mip 映射代变量](../debugger/mip-map-generation-variant.md)   
  [BC 纹理压缩变量](../debugger/bc-texture-compression-variant.md)

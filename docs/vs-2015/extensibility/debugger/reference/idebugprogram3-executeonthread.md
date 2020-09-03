@@ -1,5 +1,5 @@
 ---
-title: IDebugProgram3::ExecuteOnThread |Microsoft Docs
+title: IDebugProgram3：： ExecuteOnThread |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,16 +11,16 @@ caps.latest.revision: 7
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: cfc64f8ae928b4bb0057a16b8a74c6ddbff588c0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68148636"
 ---
 # <a name="idebugprogram3executeonthread"></a>IDebugProgram3::ExecuteOnThread
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-执行调试程序。 线程将返回以授予用户查看哪个线程执行程序时的调试程序信息。  
+执行调试程序。 返回线程，以便在执行程序时为调试器信息指定用户正在查看哪个线程。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,22 +37,22 @@ int ExecuteOnThread(
   
 #### <a name="parameters"></a>参数  
  `pThread`  
- [in][IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)对象。  
+ 中一个 [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) 对象。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
 ## <a name="remarks"></a>备注  
- 有三种不同方法，调试器可以恢复后停止执行：  
+ 调试器可以使用三种不同的方法在停止后恢复执行：  
   
-- 执行：取消任何上一步骤中，并运行到下一个断点，依此类推。  
+- Execute：取消任何前一步骤，并运行到下一个断点等。  
   
-- 步骤：取消任何旧的步骤，并运行，直到新的步骤完成。  
+- 步骤：取消任何旧步骤，并运行到新步骤完成。  
   
-- 继续：再次运行，并保留任何旧步骤活动。  
+- 继续：再次运行，并使任何旧步骤保持活动状态。  
   
-  在线程传递给`ExecuteOnThread`决定哪个步骤取消时很有用。 如果不知道运行的线程，执行将取消所有步骤。 线程的信息后，只需取消对活动线程的步骤。  
+  `ExecuteOnThread`在确定要取消的步骤时，传递给的线程非常有用。 如果不知道该线程，运行 "执行" 将取消所有步骤。 了解线程后，只需取消活动线程上的步骤。  
   
-## <a name="see-also"></a>请参阅  
- [执行](../../../extensibility/debugger/reference/idebugprogram2-execute.md)   
+## <a name="see-also"></a>另请参阅  
+ [运行](../../../extensibility/debugger/reference/idebugprogram2-execute.md)   
  [IDebugProgram3](../../../extensibility/debugger/reference/idebugprogram3.md)

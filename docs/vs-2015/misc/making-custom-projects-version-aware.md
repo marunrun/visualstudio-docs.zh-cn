@@ -1,5 +1,5 @@
 ---
-title: 使自定义项目版本可区别 |Microsoft Docs
+title: 使自定义项目版本感知 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: devlang-csharp
@@ -8,10 +8,10 @@ ms.assetid: 5233d3ff-6e89-4401-b449-51b4686becca
 caps.latest.revision: 33
 manager: jillfra
 ms.openlocfilehash: 0b29728cffc962b5d09a5adc45f8cac2093b020a
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "67825685"
 ---
 # <a name="making-custom-projects-version-aware"></a>使自定义项目版本可区别
@@ -26,15 +26,15 @@ ms.locfileid: "67825685"
   
 1. `SPUVF_PROJECT_NOREPAIR`：不需要修复。  
   
-2. `VSPUVF_PROJECT_SAFEREPAIR`：使该项目与早期版本兼容，消除与以前版本的产品遇到可能具有的问题。  
+2. `VSPUVF_PROJECT_SAFEREPAIR`：使该项目与早期版本兼容，并消除使用该产品早期版本时可能遇到的问题。  
   
-3. `VSPUVF_PROJECT_UNSAFEREPAIR`：向后兼容，但你可能遇到的问题与以前版本的产品时可能遇到与使该项目。 例如，如果项目依赖于不同的 SDK 版本，则该项目不兼容。  
+3. `VSPUVF_PROJECT_UNSAFEREPAIR`：使该项目向后兼容，并可能遇到使用该产品早期版本时可能遇到的问题。 例如，如果项目依赖于不同的 SDK 版本，则该项目不兼容。  
   
 4. `VSPUVF_PROJECT_ONEWAYUPGRADE`：使该项目与早期版本不兼容。  
   
 5. `VSPUVF_PROJECT_INCOMPATIBLE`：表示当前版本不支持此项目。  
   
-6. `VSPUVF_PROJECT_DEPRECATED`：指示此项目不再受支持。  
+6. `VSPUVF_PROJECT_DEPRECATED`：表示不再支持此项目。  
   
 > [!NOTE]
 > 为避免混淆，设置升级标志时请勿将其合并。 例如，请勿创建 `VSPUVF_PROJECT_SAFEREPAIR | VSPUVF_PROJECT_DEPRECATED`等不明确的升级状态。  
@@ -49,7 +49,7 @@ ms.locfileid: "67825685"
   
  下面是一个有助于总结用兼容性户体验的示例。 如果项目是在早期版本中创建的，而当前版本确定需要升级，则 Visual Studio 将显示要求用户允许更改的对话框。 如果用户同意，则将修改并加载项目。 如果就此关闭并在在早期版本中重新打开该解决方案，则该单向升级的项目将不兼容且不加载。 如果项目仅需要修复（而非升级），则修复后的项目将仍可在这两个版本中打开。  
   
-## <a name="BKMK_Incompat"></a> 将标记为不兼容的项目  
+## <a name="marking-a-project-as-incompatible"></a><a name="BKMK_Incompat"></a> 将项目标记为不兼容  
  你可以将项目标记为与早期版本的 Visual Studio 不兼容。  例如，假设你创建使用 .NET Framework 4.5 功能的项目。 由于不能在 [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]生成此项目，因此可将其标记为不兼容，以防止该版本尝试加载它。  
   
  添加不兼容功能的组件负责将项目标记为不兼容。 该组件必须有权访问表示相关项目的 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> 接口。  
@@ -58,7 +58,7 @@ ms.locfileid: "67825685"
   
 1. 在该组件中，从全局服务 SVsSolution 获取 `IVsAppCompat` 接口。  
   
-     有关详细信息，请参阅 <xref:Microsoft.VisualStudio.Shell.Interop.SVsSolution> 。  
+     有关详细信息，请参阅 <xref:Microsoft.VisualStudio.Shell.Interop.SVsSolution>。  
   
 2. 在该组件中，调用 `IVsAppCompat.AskForUserConsentToBreakAssetCompat`，并向其传递一个表示相关项目的 `IVsHierarchy` 接口的数组。  
   
@@ -120,20 +120,20 @@ IVsProjectUpgradeViaFactory::UpgradeProject_CheckOnly(
   
  如果此方法可将 `pUpgradeRequired` 设置为 TRUE 并返回 `S_OK`，则该结果将被视为“升级”，就像该方法向值 `VSPUVF_PROJECT_ONEWAYUPGRADE`设置了升级标志一样，本主题后面对此进行了描述。 使用此较旧方法支持下列返回值，但仅当 `pUpgradeRequired` 设置为 TRUE 时有效：  
   
-1. `VS_S_PROJECT_SAFEREPAIRREQUIRED`。 此返回值等效于 `pUpgradeRequired` （本主题后面对其进行了描述），会将 `VSPUVF_PROJECT_SAFEREPAIR`值转换为 TRUE。  
+1. `VS_S_PROJECT_SAFEREPAIRREQUIRED`. 此返回值等效于 `pUpgradeRequired` （本主题后面对其进行了描述），会将 `VSPUVF_PROJECT_SAFEREPAIR`值转换为 TRUE。  
   
-2. `VS_S_PROJECT_UNSAFEREPAIRREQUIRED`。 此返回值等效于 `pUpgradeRequired` （本主题后面对此进行了描述），会将 `VSPUVF_PROJECT_UNSAFEREPAIR`值转换为 TRUE  
+2. `VS_S_PROJECT_UNSAFEREPAIRREQUIRED`. 此返回值等效于 `pUpgradeRequired` （本主题后面对此进行了描述），会将 `VSPUVF_PROJECT_UNSAFEREPAIR`值转换为 TRUE  
   
-3. `VS_S_PROJECT_ONEWAYUPGRADEREQUIRED`。 此返回值等效于 `pUpgradeRequired` （本主题后面对其进行了描述），会将 `VSPUVF_PROJECT_ONEWAYUPGRADE`值转换为 TRUE。  
+3. `VS_S_PROJECT_ONEWAYUPGRADEREQUIRED`. 此返回值等效于 `pUpgradeRequired` （本主题后面对其进行了描述），会将 `VSPUVF_PROJECT_ONEWAYUPGRADE`值转换为 TRUE。  
   
    `IVsProjectUpgradeViaFactory4` 和 `IVsProjectFlavorUpgradeViaFactory2` 中的新实现让你可以更精确地指定迁移类型。  
   
 > [!NOTE]
 > 可以缓存 `UpgradeProject_CheckOnly` 方法所进行兼容性检查的结果，以供对 `CreateProject`的后续调用使用。  
   
- 例如，如果为带有 SP1 的 `UpgradeProject_CheckOnly` 项目系统编写的 `CreateProject` 和 [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)] 方法检查项目文件并发现 `<MinimumVisualStudioVersion>` 版本属性为“11.0”，则带有 SP1 的 Visual Studio 2010 不会加载该项目。 此外，“解决方案导航器”  将指示该项目为“不兼容”，并且不会加载它。  
+ 例如，如果为带有 SP1 的 `UpgradeProject_CheckOnly` 项目系统编写的 `CreateProject` 和 [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)] 方法检查项目文件并发现 `<MinimumVisualStudioVersion>` 版本属性为“11.0”，则带有 SP1 的 Visual Studio 2010 不会加载该项目。 此外，“解决方案导航器” **** 将指示该项目为“不兼容”，并且不会加载它。  
   
-## <a name="BKMK_UpgradeLogger"></a> 升级记录器  
+## <a name="the-upgrade-logger"></a><a name="BKMK_UpgradeLogger"></a> 升级记录器  
  对 `IVsProjectUpgradeViaFactory::UpgradeProject` 的调用包含 `IVsUpgradeLogger` 记录器，项目系统和风格将用其提供详细的升级跟踪记录以便故障排除。 如果记录到警告或错误，则 Visual Studio 将显示升级报告。  
   
  编写到升级记录器时，请考虑以下准则：  

@@ -12,10 +12,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 4108e478e9e77a5ed5699b39dfae44884a6befd3
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "67826180"
 ---
 # <a name="property-functions"></a>属性函数
@@ -25,7 +25,7 @@ ms.locfileid: "67826180"
   
  可以在生成脚本中读取系统时间、比较字符串、匹配正则表达式及执行其他操作，而无需使用 MSBuild 任务。 MSBuild 将尝试将字符串转换为数字、将数字转换为字符串，并根据需要进行其他转换。  
   
- **在本主题中：**  
+ **本主题内容：**  
   
 - [属性函数语法](#BKMK_Syntax)  
   
@@ -51,7 +51,7 @@ ms.locfileid: "67826180"
   
 - [MSBuild ValueOrDefault](#BKMK_ValueOrDefault)  
   
-## <a name="BKMK_Syntax"></a>属性函数语法  
+## <a name="property-function-syntax"></a><a name="BKMK_Syntax"></a> 属性函数语法  
  下面列出了三种属性函数；每种函数都有不同的语法：  
   
 - 字符串（实例）属性函数  
@@ -60,13 +60,13 @@ ms.locfileid: "67826180"
   
 - MSBuild 属性函数  
   
-### <a name="BKMK_String"></a>字符串属性函数  
+### <a name="string-property-functions"></a><a name="BKMK_String"></a> 字符串属性函数  
  所有生成属性值都只是字符串值。 可以使用字符串（实例）方法来操作任何属性值。 例如，可以使用以下代码，从表示完整路径的生成属性中提取驱动器名称（前三个字符）：  
   
  `$(ProjectOutputFolder.Substring(0,3))`  
   
-### <a name="BKMK_Static"></a>静态属性函数  
- 在生成脚本中，可以访问许多系统类的静态属性和方法。 要获取静态属性的值，请使用以下语法，其中 *Class* 是系统类的名称，*Property* 是属性的名称。  
+### <a name="static-property-functions"></a><a name="BKMK_Static"></a> 静态属性函数  
+ 在生成脚本中，可以访问许多系统类的静态属性和方法。 若要获取静态属性的值，请使用以下语法，其中 *Class* 是系统类的名称， *property* 是属性的名称。  
   
  `$([Class]::Property)`  
   
@@ -74,7 +74,7 @@ ms.locfileid: "67826180"
   
  `<Today>$([System.DateTime]::Now)</Today>`  
   
- 要调用静态方法，请使用以下语法，其中 *Class* 是系统类的名称，*Method* 是方法的名称，而 *(Parameters)* 是方法的参数列表：  
+ 若要调用静态方法，请使用以下语法，其中 *Class* 是系统类的名称， *method* 是方法的名称， * (参数) * 是方法的参数列表：  
   
  `$([Class]::Method(Parameters))`  
   
@@ -166,8 +166,8 @@ ms.locfileid: "67826180"
   
 - System.IO.File::ReadAllText  
   
-### <a name="BKMK_InstanceMethods"></a>对静态属性调用实例方法  
- 如果访问返回对象实例的静态属性，则可以调用该对象的实例方法。 要调用实例方法，请使用以下语法，其中 *Class* 是系统类的名称，*Property* 是属性的名称，*Method* 是方法的名称，而 *(Parameters)* 是方法的参数列表：  
+### <a name="calling-instance-methods-on-static-properties"></a><a name="BKMK_InstanceMethods"></a> 对静态属性调用实例方法  
+ 如果访问返回对象实例的静态属性，则可以调用该对象的实例方法。 若要调用实例方法，请使用以下语法，其中 *Class* 是系统类的名称， *property* 是属性的名称， *method* 是方法的名称， * (参数) * 是方法的参数列表：  
   
  `$([Class]::Property.Method(Parameters))`  
   
@@ -177,8 +177,8 @@ ms.locfileid: "67826180"
   
  `<Today>$([System.DateTime]::Now.ToString("yyyy.MM.dd"))</Today>`  
   
-### <a name="BKMK_PropertyFunctions"></a>MSBuild 属性函数  
- 可以访问生成中的许多静态方法，以提供算术、按位逻辑和转义字符支持。 可以使用以下语法访问这些方法，其中 *Method* 是方法的名称，*Parameters* 是方法的参数列表。  
+### <a name="msbuild-property-functions"></a><a name="BKMK_PropertyFunctions"></a> MSBuild 属性函数  
+ 可以访问生成中的许多静态方法，以提供算术、按位逻辑和转义字符支持。 您可以使用以下语法访问这些方法，其中 *method* 是方法的名称， *参数* 是方法的参数列表。  
   
  `$([MSBuild]::Method(Parameters))`  
   
@@ -188,7 +188,7 @@ ms.locfileid: "67826180"
   
  下面列出了 MSBuild 属性函数：  
   
-|函数签名|说明|  
+|函数签名|描述|  
 |------------------------|-----------------|  
 |double Add(双精度型值 a, 双精度型值 b)|将两个双精度型值相加。|  
 |long Add(长型值 a, 长型值 b)|将两个长型值相加。|  
@@ -207,7 +207,7 @@ ms.locfileid: "67826180"
 |int BitwiseXor(第一个整型值, 第二个整型值)|对第一个值和第二个值执行按位 `XOR`（第一个值 ^ 第二个值）。|  
 |int BitwiseNot(第一个整型值)|执行按位 `NOT`（~第一个值）。|  
   
-## <a name="BKMK_Nested"></a>嵌套的属性函数  
+## <a name="nested-property-functions"></a><a name="BKMK_Nested"></a> 嵌套的属性函数  
  可将属性函数组合在一起，组成更复杂的函数，如下例所示。  
   
  `$([MSBuild]::BitwiseAnd(32,   $([System.IO.File]::GetAttributes(tempFile))))`  
@@ -216,7 +216,7 @@ ms.locfileid: "67826180"
   
  元数据也可以出现在嵌套的属性函数中。 有关详细信息，请参阅[批处理](../msbuild/msbuild-batching.md)。  
   
-## <a name="BKMK_DoesTaskHostExist"></a>MSBuild DoesTaskHostExist  
+## <a name="msbuild-doestaskhostexist"></a><a name="BKMK_DoesTaskHostExist"></a> MSBuild DoesTaskHostExist  
  MSBuild 中的 `DoesTaskHostExist` 属性函数将返回当前是否针对特定运行时和体系结构值安装了任务宿主。  
   
  此属性函数具有以下语法：  
@@ -225,7 +225,7 @@ ms.locfileid: "67826180"
 $[MSBuild]::DoesTaskHostExist(string theRuntime, string theArchitecture)  
 ```  
   
-## <a name="BKMK_GetDirectoryNameOfFileAbove"></a>MSBuild GetDirectoryNameOfFileAbove  
+## <a name="msbuild-getdirectorynameoffileabove"></a><a name="BKMK_GetDirectoryNameOfFileAbove"></a> MSBuild GetDirectoryNameOfFileAbove  
  MSBuild `GetDirectoryNameOfFileAbove` 属性函数在路径中当前目录的上级目录中查找文件。  
   
  此属性函数具有以下语法：  
@@ -240,7 +240,7 @@ $[MSBuild]::GetDirectoryNameOfFileAbove(string ThePath, string TheFile)
 <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), EnlistmentInfo.props))\EnlistmentInfo.props" Condition=" '$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), EnlistmentInfo.props))' != '' " />  
 ```  
   
-## <a name="BKMK_GetRegistryValue"></a>MSBuild GetRegistryValue  
+## <a name="msbuild-getregistryvalue"></a><a name="BKMK_GetRegistryValue"></a> MSBuild GetRegistryValue  
  MSBuild `GetRegistryValue` 属性函数返回注册表项的值。 此函数采用两个参数（项名称和值名称），并从注册表中返回值。 如果未指定值名称，则返回默认值。  
   
  下面的示例演示如何使用此函数：  
@@ -252,7 +252,7 @@ $([MSBuild]::GetRegistryValue(`HKEY_LOCAL_MACHINE\SOFTWARE\(SampleName)`, `(Samp
   
 ```  
   
-## <a name="BKMK_GetRegistryValueFromView"></a>MSBuild GetRegistryValueFromView  
+## <a name="msbuild-getregistryvaluefromview"></a><a name="BKMK_GetRegistryValueFromView"></a> MSBuild GetRegistryValueFromView  
  MSBuild `GetRegistryValueFromView` 属性函数在给定了注册表项、值以及一个或多个经过排序的注册表视图的情况下，获取系统注册表数据。 该属性函数将按顺序在每个注册表视图中搜索注册表项和值，直至找到它们。  
   
  该属性函数的语法是：  
@@ -277,7 +277,7 @@ $([MSBuild]::GetRegistryValue(`HKEY_LOCAL_MACHINE\SOFTWARE\(SampleName)`, `(Samp
   
  首先在 64 位注册表视图中查找，然后在 32 位注册表视图中查找，以获取 ReferenceAssemblies 项的 SLRuntimeInstallPath 数据。  
   
-## <a name="BKMK_MakeRelative"></a>MSBuild MakeRelative  
+## <a name="msbuild-makerelative"></a><a name="BKMK_MakeRelative"></a> MSBuild MakeRelative  
  MSBuild `MakeRelative` 属性函数将返回第二条路径的相对路径（相对于第一条路径）。 每条路径可以是文件或文件夹。  
   
  此属性函数具有以下语法：  
@@ -306,7 +306,7 @@ Output:
 -->  
 ```  
   
-## <a name="BKMK_ValueOrDefault"></a>MSBuild ValueOrDefault  
+## <a name="msbuild-valueordefault"></a><a name="BKMK_ValueOrDefault"></a> MSBuild ValueOrDefault  
  MSBuild `ValueOrDefault` 属性函数将返回第一个参数，除非它为 null 或空。 如果第一个参数为 null 或空，则该函数将返回第二个参数。  
   
  下面的示例演示如何使用此函数。  

@@ -1,5 +1,5 @@
 ---
-title: 图形状态 |Microsoft Docs
+title: 图形状态 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -12,10 +12,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 87972fe12cb8be78b89261d0aaaa272d9e2d5a14
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "67825580"
 ---
 # <a name="graphics-state"></a>图形状态
@@ -46,15 +46,15 @@ Visual Studio 图形诊断中的“状态”窗口可帮助你了解当前事件
   - **显示固定状态视图**  
   
 > [!IMPORTANT]
-> 必须固定“显示 API 输入状态”或“显示逻辑状态”视图中的状态，以便它在“显示固定状态视图”中显示    。  
+> 必须固定“显示 API 输入状态”或“显示逻辑状态”视图中的状态，以便它在“显示固定状态视图”中显示  。  
   
 ### <a name="state-table-format"></a>状态表格式  
  “状态”窗口显示了多个信息列。  
   
 |列|描述|  
 |------------|-----------------|  
-|名称|状态项的名称。 如果此项表示状态的捆绑包，则可以展开该项以显示它。<br /><br /> 在“API 输入状态视图”和“逻辑状态视图”状态中，缩进名称以显示状态之间的层次结构关系   。<br /><br /> 在“固定状态视图”状态中，完全限定名显示在简单列表中  。|  
-|值|状态项的值。|  
+|“属性”|状态项的名称。 如果此项表示状态的捆绑包，则可以展开该项以显示它。<br /><br /> 在“API 输入状态视图”和“逻辑状态视图”状态中，缩进名称以显示状态之间的层次结构关系 。<br /><br /> 在“固定状态视图”状态中，完全限定名显示在简单列表中。|  
+|“值”|状态项的值。|  
 |类型|状态项的类型。|  
   
 ### <a name="changed-state"></a>已更改的状态  
