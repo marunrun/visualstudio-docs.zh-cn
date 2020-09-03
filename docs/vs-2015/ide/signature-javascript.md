@@ -1,5 +1,5 @@
 ---
-title: '&lt;signature &gt; （JavaScript） |Microsoft Docs'
+title: '&lt;&gt;) 的 JavaScript (Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -13,13 +13,13 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: b4c640c28ada16a8a03943fcd1362d4fd521772c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72671131"
 ---
-# <a name="ltsignaturegt-javascript"></a>&lt;signature &gt; （JavaScript）
+# <a name="ltsignaturegt-javascript"></a>&lt;签名 &gt; (JavaScript) 
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 对函数或方法的一组相关元素进行分组，以提供重载函数的文档。
@@ -33,18 +33,18 @@ ms.locfileid: "72671131"
 ```
 
 #### <a name="parameters"></a>参数
- `externalid`（可选）。 如果 `vsdoc` [\<loc >](../ide/loc-javascript.md)元素的 `format` 属性，则此属性指定用于查找与签名关联的 XML 代码的成员 ID。 与 `locid` 特性不同，此特性指定应加载具有此 ID 的成员中的所有元素。 XML 代码中提供的任何关联的说明信息还将与签名中指定的元素合并在一起。 这使您可以在挎斗文件中指定其他元素（如 `<capability>`），而无需在源文件中指定它们。 `externalid` 是一个可选属性。
+ `externalid`（可选）。 如果 `format` 元素的属性 [\<loc>](../ide/loc-javascript.md) 为，则 `vsdoc` 此属性指定用于查找与签名关联的 XML 代码的成员 ID。 与 `locid` 属性不同，此属性指定应加载具有此 ID 的成员中的所有元素。 XML 代码中提供的任何关联的说明信息还将与签名中指定的元素合并在一起。 这使您可以在挎斗文件中指定其他元素（如 `<capability>` ），而无需在源文件中指定它们。 `externalid` 是一个可选属性。
 
- `externalFile`（可选）。 指定要在其中查找 `externalid` 的文件的名称。 如果没有 `externalid`，则忽略此属性。 这是一个可选属性。 默认值是当前文件的名称，但文件扩展名为 .xml，而不是 .js。 默认情况下，用于本地化的托管资源查找规则用于查找文件。
+ `externalFile`（可选）。 指定要在其中找到的文件的名称 `externalid` 。 如果不存在，则忽略此属性 `externalid` 。 这是可选属性。 默认值是当前文件的名称，但文件扩展名为 .xml，而不是 .js。 默认情况下，用于本地化的托管资源查找规则用于查找文件。
 
  `helpKeyword`（可选）。 F1 帮助的关键字。
 
- `locid`（可选）。 有关字段的本地化信息的标识符。 标识符是成员 ID 或对应于 OpenAjax 元数据定义的消息绑定中的 `name` 属性值。 标识符类型取决于 [\<loc>](../ide/loc-javascript.md) 标记中指定的格式。
+ `locid`（可选）。 有关字段的本地化信息的标识符。 标识符是成员 ID 或对应于 OpenAjax 元数据定义的消息绑定中的 `name` 属性值。 标识符类型取决于标记中指定的格式 [\<loc>](../ide/loc-javascript.md) 。
 
 ## <a name="remarks"></a>备注
- 对 .js 文件中的每个重载函数说明使用一个 `<signature>` 元素，或为指定的每个外部成员 ID 使用一个 `<signature>` 元素。
+ `<signature>`对于 .js 文件中的每个重载函数说明，使用一个元素，或 `<signature>` 为指定的每个外部成员 ID 使用一个元素。
 
- 在任何语句之前，必须将 `<signature>` 元素放在函数体中。 使用[\<summary >](../ide/summary-javascript.md)、 [\<param >](../ide/param-javascript.md)[或 \<returns 元素与](../ide/returns-javascript.md)> 元素 `<signature>` 时，请将其他元素放置在 `<signature>` 块内。
+ `<signature>`元素必须位于函数体中的任何语句前面。 在将 [\<summary>](../ide/summary-javascript.md) 、 [\<param>](../ide/param-javascript.md) 或 [\<returns>](../ide/returns-javascript.md) 元素与元素一起使用时 `<signature>` ，将其他元素放置在 `<signature>` 块内。
 
 ## <a name="example"></a>示例
  下面的代码示例演示如何使用 `<signature>` 元素。

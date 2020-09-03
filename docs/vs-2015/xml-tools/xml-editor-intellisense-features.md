@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 9cd10f9eb0e2899394788c3b19348892837426db
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72669464"
 ---
 # <a name="xml-editor-intellisense-features"></a>XML 编辑器的 IntelliSense 功能
@@ -22,7 +22,7 @@ ms.locfileid: "72669464"
 XML 编辑器提供了完整的 IntelliSense 功能，可与 Visual Studio 中提供的其他语言编辑器相提并论。 本节介绍如何使用 XML 架构定义语言 (XSD) 和 XSLT 文档中的 IntelliSense。
 
 ## <a name="intellisense-in-an-xsd-document"></a>XSD 文档中的 IntelliSense
- 架构与文档关联后，无论何时键入 `"<"` 或单击 "XML 编辑器" 工具栏上的 "**显示对象成员列表**" 按钮，都可以获得预期元素的下拉列表。 有关如何将架构与 XML 文档关联的信息，请参阅[Xml 文档验证](../xml-tools/xml-document-validation.md)。
+ 架构与文档关联之后，可随时键入 `"<"` 或单击 XML 编辑器工具栏上的“显示对象成员列表”按钮来获得预期元素的下拉列表。 有关如何将架构与 XML 文档关联的信息，请参阅 [Xml 文档验证](../xml-tools/xml-document-validation.md)。
 
  在开始标记中键入 SPACE 时，也可以获得一个下拉列表，显示可以添加到当前元素中的所有属性。
 
@@ -45,14 +45,14 @@ XML 编辑器提供了完整的 IntelliSense 功能，可与 Visual Studio 中�
 
 - 给定命名模板的参数名称。
 
-  有关详细信息，请参阅[演练：使用 XSLT IntelliSense](../xml-tools/walkthrough-using-xslt-intellisense.md)主题。
+  有关详细信息，请参见[演练：使用 XSLT IntelliSense](../xml-tools/walkthrough-using-xslt-intellisense.md) 主题。
 
 ## <a name="auto-completion"></a>自动完成
  “XML 编辑器”还通过为您填写必需的 XML 语法，使编辑 XML 更加容易。 例如，如果你键入以下开始标记：
 
  `<book>`
 
- “XML 编辑器”将填写结束标记，并将光标置于开始标记之后。 下面是一个示例（"&#124;" 说明光标位置）：
+ “XML 编辑器”将填写结束标记，并将光标置于开始标记之后。 以下是这种情况的示例（“&#124;”指示光标位置）：
 
  `<book>`&#124;`</book>`
 
@@ -85,9 +85,9 @@ XML 编辑器提供了完整的 IntelliSense 功能，可与 Visual Studio 中�
 
  “XML 编辑器”对下列项执行此操作：
 
-- 匹配的开始标记和结束标记。
+- 匹配的开始和结束标记。
 
-- 任何 "\<" 或 ">" 尖括号对。
+- 任何“\<" or ">”尖括号对。
 
 - 注释的开始和结束。
 
@@ -102,7 +102,7 @@ XML 编辑器提供了完整的 IntelliSense 功能，可与 Visual Studio 中�
 ## <a name="modifying-the-intellisense-options"></a>修改智能感知选项
  默认情况下启用智能感知和自动完成功能。 但是，可以通过修改“工具-选项”设置来更改此选项。
 
- "**杂项**" 页的 "**自动插入**" 部分控制以下行为：
+ “杂项”页的“自动插入”部分控制以下行为 ：
 
 |“属性”|描述|
 |----------|-----------------|
@@ -112,11 +112,11 @@ XML 编辑器提供了完整的 IntelliSense 功能，可与 Visual Studio 中�
 
 #### <a name="to-change-the-auto-completion-behavior"></a>更改自动完成行为
 
-1. 从“工具”菜单中选择“选项”。
+1. 从“工具”菜单中选择“选项” 。
 
-2. 展开 "**文本编辑器**"，展开 " **XML**"，然后选择 "**其他**"。
+2. 展开“文本编辑器”，展开 XML，然后选择“杂项”  。
 
-3. 对 "**自动插入**" 部分进行任何更改，然后单击 **"确定"** 。
+3. 对“自动插入”部分进行所需的更改，然后单击“确定” 。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [使用 IntelliSense](../ide/using-intellisense.md)演练的[XML 编辑器](../xml-tools/xml-editor.md) [：使用 XSLT intellisense](../xml-tools/walkthrough-using-xslt-intellisense.md)

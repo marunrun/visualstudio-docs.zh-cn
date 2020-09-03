@@ -1,5 +1,5 @@
 ---
-title: IPropertyProxyEESide::ResolveAssemblyRef |Microsoft Docs
+title: IPropertyProxyEESide：： ResolveAssemblyRef |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,10 +13,10 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 47c397746a82247a8cb1ee329d56004d013486de
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68199489"
 ---
 # <a name="ipropertyproxyeesideresolveassemblyref"></a>IPropertyProxyEESide::ResolveAssemblyRef
@@ -48,27 +48,27 @@ int ResolveAssemblyRef(
   
 #### <a name="parameters"></a>参数  
  `assemName`  
- [in]要解析的程序集的名称。  
+ 中要解析的程序集的名称。  
   
  `assemBytes`  
- [out]返回[IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md)对象，其中包含与引用关联的程序集字节。  
+ 弄返回一个 [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) 对象，该对象包含与引用关联的程序集字节。  
   
  `assemPdb`  
- [out]返回`IEEDataStorage`对象包含的符号存储与此引用关联的数据。  
+ 弄返回一个 `IEEDataStorage` 对象，该对象包含与此引用关联的符号存储区数据。  
   
  `assemLocation`  
- [out]返回此引用的路径位置。  
+ 弄返回此引用的路径位置。  
   
  `alr`  
- [out]返回一个值从[ASSEMBLYLOCRESOLUTION](../../../extensibility/debugger/reference/assemblylocresolution.md)枚举，指示此引用的程序集的位置。  
+ 弄返回 [ASSEMBLYLOCRESOLUTION](../../../extensibility/debugger/reference/assemblylocresolution.md) 枚举中的一个值，该值指示此引用的程序集的位置。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
 ## <a name="remarks"></a>备注  
- 此方法通常不实现自定义表达式计算器中。  
+ 此方法通常不是由自定义表达式计算器实现的。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IPropertyProxyEESide](../../../extensibility/debugger/reference/ipropertyproxyeeside.md)   
  [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md)   
  [ASSEMBLYLOCRESOLUTION](../../../extensibility/debugger/reference/assemblylocresolution.md)

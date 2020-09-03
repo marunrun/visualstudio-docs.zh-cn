@@ -1,5 +1,5 @@
 ---
-title: '&lt;产品&gt;元素 （引导程序） |Microsoft Docs'
+title: '&lt;&gt; (引导程序) 的产品元素 |Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-deployment
@@ -17,13 +17,13 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: c3c1304a0ff93c58add65f20aa417bb547f5bb31
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68200643"
 ---
-# <a name="ltproductgt-element-bootstrapper"></a>&lt;产品&gt;元素 （引导程序）
+# <a name="ltproductgt-element-bootstrapper"></a>&lt; (引导程序的产品 &gt; 元素) 
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 `Product`元素是产品文件内的顶级 XML 元素。  
@@ -141,14 +141,14 @@ ProductCode
 ```  
   
 ## <a name="elements-and-attributes"></a>元素和属性  
- `Product`元素必需的产品文件中。 它具有以下特性。  
+ `Product`元素在产品文件中是必需的。 它具有以下属性。  
   
-|特性|描述|  
+|特性|说明|  
 |---------------|-----------------|  
-|`ProductCode`|该产品的唯一标识符。|  
+|`ProductCode`|产品的唯一标识符。|  
   
 ## <a name="example"></a>示例  
- 下面的代码示例显示了用于安装的完整的产品文件[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]。  
+ 下面的代码示例演示了用于安装的完整的产品文件 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 。  
   
 ```  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -252,5 +252,5 @@ ProductCode
 </Product>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [产品和包架构引用](../deployment/product-and-package-schema-reference.md)

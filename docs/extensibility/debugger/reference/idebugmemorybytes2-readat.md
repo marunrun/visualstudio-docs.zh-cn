@@ -1,5 +1,5 @@
 ---
-title: IDebug记忆字节2：：阅读AT |微软文档
+title: IDebugMemoryBytes2：： ReadAt |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,14 +17,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: f909ac3d2e2993879e4c24140abbf23c2ee8d545
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80727531"
 ---
 # <a name="idebugmemorybytes2readat"></a>IDebugMemoryBytes2::ReadAt
-从给定位置开始读取字节序列。
+读取从给定位置开始的字节序列。
 
 ## <a name="syntax"></a>语法
 
@@ -50,32 +50,32 @@ int ReadAt(
 
 ## <a name="parameters"></a>参数
 `pStartContext`\
-[在][IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)对象，指定从何处开始读取字节。
+中 [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) 对象，指定开始读取字节的位置。
 
 `dwCount`\
-[在]要读取的字节数。 还指定数组的长度`rgbMemory`。
+中要读取的字节数。 还指定数组的长度 `rgbMemory` 。
 
 `rgbMemory`\
-[进出]填充的字节数组实际读取。
+[in，out]用实际读取的字节填充的数组。
 
 `pdwRead`\
-[出]返回实际读取的连续字节数。
+弄返回实际读取的连续字节数。
 
 `pdwUnreadable`\
-[进出]返回不可读字节的数量。 如果客户端对不可读字节数不感兴趣，则可能是 null 值。
+[in，out]返回不可读字节数。 如果客户端 uninterested 不可读字节数，则可能为 null 值。
 
 ## <a name="return-value"></a>返回值
- 如果成功，返回S_OK;否则，返回错误代码。
+ 如果成功，将返回 S_OK;否则，将返回错误代码。
 
 ## <a name="remarks"></a>备注
- 如果请求 100 个字节，并且前 50 个字节可读，则接下来的 20 个不可读，其余 30 个字节是可读的，则此方法将返回：
+ 如果请求了100字节，并且第一个50是可读的，则下一个20是不可读的，其余30个为可读，此方法返回：
 
- *`pdwRead`= 50
+ *`pdwRead` = 50
 
- *`pdwUnreadable`= 20
+ *`pdwUnreadable` = 20
 
- 在这种情况下，由于`*pdwRead + *pdwUnreadable < dwCount`调用方必须进行额外的调用才能读取原始 100 个请求的剩余 30 个字节，`pStartContext`并且参数中传递的[IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)对象必须提前 70 个。
+ 在这种情况下，由于 `*pdwRead + *pdwUnreadable < dwCount` ，调用方必须执行额外的调用以读取请求的原始100的剩余30个字节，并且参数中传递的 [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) 对象 `pStartContext` 必须由70提前。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md)
 - [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)

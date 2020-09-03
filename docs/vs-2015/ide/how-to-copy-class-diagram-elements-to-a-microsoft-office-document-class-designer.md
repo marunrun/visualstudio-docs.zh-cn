@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: a44b551e5b2a0b145040dc13cb0e624134f56cf6
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72668171"
 ---
 # <a name="how-to-copy-class-diagram-elements-to-a-microsoft-office-document-class-designer"></a>如何：将类图元素复制到 Microsoft Office 文档（类设计器）
@@ -26,21 +26,21 @@ ms.locfileid: "72668171"
 
 ### <a name="to-copy-a-single-element"></a>若要复制的单个元素
 
-- 右键单击该形状，然后选择“复制图像”。
+- 右键单击该形状，然后选择“复制图像”****。
 
 ### <a name="to-copy-several-elements"></a>若要复制多个元素
 
 1. 在关系图上选择要复制的形状。
 
-2. 右键单击选择内容，然后选择“复制图像”。
+2. 右键单击选择内容，然后选择“复制图像”****。
 
 ### <a name="to-copy-all-the-elements-in-a-class-diagram"></a>若要在类图中复制所有元素
 
-1. 右键单击关系图面，然后选择“全选”。 （键盘：Ctrl + A）
+1. 右键单击关系图面，然后选择“全选”****。 （键盘：Ctrl + A****）
 
-2. 在“编辑”菜单上，选择“复制图像”。
+2. 在“编辑”**** 菜单上，选择“复制图像”****。
 
-   还可以选择“复制”而不是“复制图像”。 “复制”将图像复制为常规位图。 “复制图像”将图像复制为大多数 Office 应用程序的显示效果会更好的基于矢量的图像。
+   还可以选择“复制”**** 而不是“复制图像”****。 “复制”**** 将图像复制为常规位图。 “复制图像”**** 将图像复制为大多数 Office 应用程序的显示效果会更好的基于矢量的图像。
 
-## <a name="see-also"></a>请参阅
- [如何：打印类图（类设计器）](../ide/how-to-print-class-diagrams-class-designer.md) [如何：将类图导出为图像（类设计器）](../ide/how-to-export-class-diagrams-as-images-class-designer.md)
+## <a name="see-also"></a>另请参阅
+ [如何： (类设计器打印类图) ](../ide/how-to-print-class-diagrams-class-designer.md) [如何：将类关系图导出为图像 (类设计器](../ide/how-to-export-class-diagrams-as-images-class-designer.md)) 

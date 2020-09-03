@@ -18,10 +18,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: bb46d3bf7096d0a7e14ce3926514d946d7536e2d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72668118"
 ---
 # <a name="how-to-create-associations-between-types-class-designer"></a>如何：创建类型之间的关联（类设计器）
@@ -36,7 +36,7 @@ ms.locfileid: "72668118"
 
 ### <a name="to-define-an-association-line-in-the-class-diagram"></a>在类关系图中定义关联连线
 
-1. 在“工具箱”的“类设计器”下，选择“关联”。
+1. 在“工具箱”的“类设计器”下，选择“关联”****。
 
 2. 在希望以关联关系链接的两个形状之间绘制一条连线。
 
@@ -54,7 +54,7 @@ ms.locfileid: "72668118"
 
 2. 在“类详细信息”窗口或“属性”窗口中，编辑该属性的名称字段，并按 Enter。
 
-     此名称在“类详细信息”窗口中、关联行上、“属性”窗口中和代码中同时得到更新。
+     此名称在“类详细信息”**** 窗口中、关联行上、“属性”窗口中和代码中同时得到更新。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [如何：在成员表示法与关联表示法之间转换（类设计器）](../ide/how-to-change-between-member-notation-and-association-notation-class-designer.md)

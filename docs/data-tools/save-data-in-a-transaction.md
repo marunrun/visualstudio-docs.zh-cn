@@ -18,10 +18,10 @@ manager: jillfra
 ms.workload:
 - data-storage
 ms.openlocfilehash: caeb06ac3f38293b493463ff456e222f148ef93a
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85281625"
 ---
 # <a name="walkthrough-save-data-in-a-transaction"></a>演练：在事务中保存数据
@@ -32,73 +32,73 @@ ms.locfileid: "85281625"
 
 本演练使用 SQL Server Express LocalDB 和 Northwind 示例数据库。
 
-1. 如果没有 SQL Server Express 的 LocalDB，请从[SQL Server Express 下载 "页](https://www.microsoft.com/sql-server/sql-server-editions-express)或通过**Visual Studio 安装程序**安装它。 在 Visual Studio 安装程序中，SQL Server Express LocalDB 可以作为 **.net 桌面开发**工作负荷的一部分安装，也可以作为单个组件安装。
+1. 如果没有 SQL Server Express 的 LocalDB，请从 [SQL Server Express 下载 "页](https://www.microsoft.com/sql-server/sql-server-editions-express)或通过 **Visual Studio 安装程序**安装它。 在 Visual Studio 安装程序中，SQL Server Express LocalDB 可以作为 **.net 桌面开发** 工作负荷的一部分安装，也可以作为单个组件安装。
 
 2. 按照以下步骤安装 Northwind 示例数据库：
 
-    1. 在 Visual Studio 中，打开 " **SQL Server 对象资源管理器**" 窗口。 （SQL Server 对象资源管理器作为 Visual Studio 安装程序中的**数据存储和处理**工作负荷的一部分安装。）展开 " **SQL Server** " 节点。 右键单击 LocalDB 实例，然后选择 "**新建查询**"。
+    1. 在 Visual Studio 中，打开 " **SQL Server 对象资源管理器** " 窗口。  (SQL Server 对象资源管理器在 Visual Studio 安装程序的 **数据存储和处理** 工作负荷中安装。 ) 展开 **SQL Server** 节点。 右键单击 LocalDB 实例，然后选择 " **新建查询**"。
 
        此时将打开查询编辑器窗口。
 
-    2. 将[Northwind transact-sql 脚本](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true)复制到剪贴板。 此 T-sql 脚本从头开始创建 Northwind 数据库，并用数据填充它。
+    2. 将 [Northwind transact-sql 脚本](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true) 复制到剪贴板。 此 T-sql 脚本从头开始创建 Northwind 数据库，并用数据填充它。
 
-    3. 将 T-sql 脚本粘贴到查询编辑器中，然后选择 "**执行**" 按钮。
+    3. 将 T-sql 脚本粘贴到查询编辑器中，然后选择 " **执行** " 按钮。
 
        一小段时间后，查询将完成运行，并创建 Northwind 数据库。
 
 ## <a name="create-a-windows-forms-application"></a>创建 Windows 窗体应用程序
 
-第一步是创建**Windows 窗体应用程序**。
+第一步是创建 **Windows 窗体应用程序**。
 
 1. 在 Visual Studio 的“文件”菜单中，依次选择“新建” > “项目”    。
 
 2. 在左侧窗格中展开 " **Visual c #** " 或 " **Visual Basic** "，然后选择 " **Windows 桌面**"。
 
-3. 在中间窗格中，选择 " **Windows 窗体应用程序**" 项目类型。
+3. 在中间窗格中，选择 " **Windows 窗体应用程序** " 项目类型。
 
-4. 将项目命名为**SavingDataInATransactionWalkthrough**，然后选择 **"确定"**。
+4. 将项目命名为 **SavingDataInATransactionWalkthrough**，然后选择 **"确定"**。
 
      创建“SavingDataInATransactionWalkthrough”项目并将其添加到“解决方案资源管理器”中********。
 
 ## <a name="create-a-database-data-source"></a>创建数据库数据源
 
-此步骤使用 "**数据源配置向导**" 创建基于 `Customers` `Orders` Northwind 示例数据库中的和表的数据源。
+此步骤使用 " **数据源配置向导** " 创建基于 `Customers` `Orders` Northwind 示例数据库中的和表的数据源。
 
-1. 若要打开 "**数据源**" 窗口，请在 "**数据**" 菜单上选择 "**显示数据源**"。
+1. 若要打开 " **数据源** " 窗口，请在 " **数据** " 菜单上选择 " **显示数据源**"。
 
 2. 在“数据源”窗口，选择“添加新数据源”以启动“数据源配置”向导************。
 
-3. 在 "**选择数据源类型**" 屏幕上，选择 "**数据库**"，然后选择 "**下一步**"。
+3. 在 " **选择数据源类型** " 屏幕上，选择 " **数据库**"，然后选择 " **下一步**"。
 
-4. 在 "**选择你的数据连接**" 屏幕上，执行以下操作之一：
+4. 在 " **选择你的数据连接** " 屏幕上，执行以下操作之一：
 
     - 如果下拉列表中包含到 Northwind 示例数据库的数据连接，请选择该连接。
 
-         \- 或 -
+         - 或 -
 
     - 选择“新建连接”以启动“添加/修改连接”对话框，并创建到 Northwind 数据库的连接********。
 
-5. 如果数据库需要密码，请选择该选项以包括敏感数据，然后选择 "**下一步**"。
+5. 如果数据库需要密码，请选择该选项以包括敏感数据，然后选择 " **下一步**"。
 
-6. 在 "将**连接字符串保存到应用程序配置文件**" 屏幕上，选择 "**下一步**"。
+6. 在 "将 **连接字符串保存到应用程序配置文件** " 屏幕上，选择 " **下一步**"。
 
-7. 在 "**选择数据库对象**" 屏幕上，展开 "**表**" 节点。
+7. 在 " **选择数据库对象** " 屏幕上，展开 " **表** " 节点。
 
-8. 选择 `Customers` 和 `Orders` 表，然后选择 "**完成**"。
+8. 选择 `Customers` 和 `Orders` 表，然后选择 " **完成**"。
 
      将“NorthwindDataSet”添加到项目后，“数据源”窗口即会显示 `Customers` 和 `Orders` 表********。
 
 ## <a name="add-controls-to-the-form"></a>向窗体添加控件
 
-可以通过将项从 "**数据源**" 窗口拖到窗体上来创建数据绑定控件。
+可以通过将项从 " **数据源** " 窗口拖到窗体上来创建数据绑定控件。
 
-1. 在 "**数据源**" 窗口中，展开 " **Customers** " 节点。
+1. 在 " **数据源** " 窗口中，展开 " **Customers** " 节点。
 
 2. 将主“Customers”节点从“数据源”窗口拖到“Form1”上************。
 
    用于导航记录的 <xref:System.Windows.Forms.DataGridView> 控件和工具栏（<xref:System.Windows.Forms.BindingNavigator>）将显示在窗体上。 [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md)、、 `CustomersTableAdapter` <xref:System.Windows.Forms.BindingSource> 和 <xref:System.Windows.Forms.BindingNavigator> 显示在组件栏中。
 
-3. 将相关的 " **orders** " 节点（而非 "主**订单**" 节点，但 " **Fax** " 列下的相关子表节点）拖到**CustomersDataGridView**下的窗体中。
+3. 将相关的 " **orders** " 节点 (不是 "主 **订单** " 节点，但 " **Fax** " 列下面的相关子表节点) 到 **CustomersDataGridView**下的窗体中。
 
    窗体上显示一个 <xref:System.Windows.Forms.DataGridView>。 `OrdersTableAdapter`并 <xref:System.Windows.Forms.BindingSource> 显示在组件栏中。
 
@@ -110,7 +110,7 @@ ms.locfileid: "85281625"
 
 1. 在“项目”菜单中，选择“添加引用”。********
 
-2. 选择 "**系统事务**" （位于 " **.net** " 选项卡上），然后选择 **"确定"**。
+2. 选择 " **.net** " 选项卡上的 **" ("**) ，然后选择 **"确定"**。
 
      将“System.Transactions”的引用添加到项目****。
 
@@ -120,7 +120,7 @@ ms.locfileid: "85281625"
 
 ### <a name="to-modify-the-auto-generated-save-code"></a>修改自动生成的保存代码
 
-1. 选择**CustomersBindingNavigator**上的 "**保存**" 按钮（带有软盘图标的按钮）。
+1. 选择**CustomersBindingNavigator**上的 "**保存**" 按钮，将 "软盘" 图标)  (按钮。
 
 2. 将 `CustomersBindingNavigatorSaveItem_Click` 方法替换为以下代码：
 
@@ -129,13 +129,13 @@ ms.locfileid: "85281625"
 
 对相关数据的协调更改的顺序如下：
 
-- 删除子记录。 （在这种情况下，从表中删除记录 `Orders` 。）
+- 删除子记录。  (在这种情况下，请删除表中的记录 `Orders` 。 ) 
 
-- 删除父记录。 （在这种情况下，从表中删除记录 `Customers` 。）
+- 删除父记录。  (在这种情况下，请删除表中的记录 `Customers` 。 ) 
 
-- 插入父记录。 （在这种情况下，请在表中插入记录 `Customers` 。）
+- 插入父记录。  (在这种情况下，请在表中插入记录 `Customers` 。 ) 
 
-- 插入子记录。 （在这种情况下，请在表中插入记录 `Orders` 。）
+- 插入子记录。  (在这种情况下，请在表中插入记录 `Orders` 。 ) 
 
 ### <a name="to-delete-existing-orders"></a>删除现有顺序
 

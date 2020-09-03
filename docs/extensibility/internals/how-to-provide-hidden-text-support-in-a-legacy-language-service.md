@@ -1,5 +1,5 @@
 ---
-title: 在旧语言服务中提供隐藏文本支持
+title: 提供旧版语言服务中的隐藏文本支持
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,35 +13,35 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 8a9d5fe85932f87eb68b6b5a0f5868ebbf8f2b5f
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80707931"
 ---
-# <a name="how-to-provide-hidden-text-support-in-a-legacy-language-service"></a>如何：在旧语言服务中提供隐藏文本支持
-除了大纲区域之外，还可以创建隐藏的文本区域。 隐藏文本区域可以是客户端控制或编辑器控制，并用于完全隐藏文本区域。 编辑器将隐藏区域显示为水平线。 例如 HTML 编辑器中的 **"仅脚本"** 视图。
+# <a name="how-to-provide-hidden-text-support-in-a-legacy-language-service"></a>如何：在旧版语言服务中提供隐藏的文本支持
+除了大纲区域外，还可以创建隐藏的文本区域。 隐藏的文本区域可以是客户端控制的，也可以是由编辑器控制的，用于完全隐藏文本区域。 编辑器将隐藏区域显示为水平线条。 在 HTML 编辑器中，这是 **仅限脚本** 的视图。
 
-## <a name="to-implement-a-hidden-text-region"></a>实现隐藏文本区域
+## <a name="to-implement-a-hidden-text-region"></a>实现隐藏的文本区域
 
-1. 调用`QueryService`<xref:Microsoft.VisualStudio.TextManager.Interop.SVsTextManager>。
+1. 调用 `QueryService` <xref:Microsoft.VisualStudio.TextManager.Interop.SVsTextManager> 。
 
-     这将返回指向<xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextManager>的指针。
+     这会返回指向的指针 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextManager> 。
 
-2. 调用<xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextManager.GetHiddenTextSession%2A>， 传入给定文本缓冲区的指针。 这将确定缓冲区是否已存在隐藏文本会话。
+2. 调用 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextManager.GetHiddenTextSession%2A> ，并传入给定文本缓冲区的指针。 这会确定缓冲区是否已存在隐藏的文本会话。
 
-3. 如果一个已存在，则不需要创建一个指针，并返回指向现有<xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextSession>对象的指针。 使用此指针枚举并创建隐藏的文本区域。 否则，调用<xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextManager.CreateHiddenTextSession%2A>以创建缓冲区的隐藏文本会话。
+3. 如果已存在一个，则不需要创建一个，并返回指向现有对象的指针 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextSession> 。 使用此指针可枚举和创建隐藏的文本区域。 否则，调用 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextManager.CreateHiddenTextSession%2A> 以创建缓冲区的隐藏文本会话。
 
-     返回指向对象的<xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextSession>指针。
+     返回指向对象的指针 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextSession> 。
 
     > [!NOTE]
-    > 调用`CreateHiddenTextSession`时，可以指定隐藏文本客户端（即<xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextClient>。 当用户展开或折叠隐藏文本或大纲时，隐藏文本客户端会通知您。
+    > 调用时， `CreateHiddenTextSession` 可以指定隐藏的文本客户端 (， <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextClient>) 。 当用户展开或折叠隐藏文本或大纲时，隐藏的文本客户端将通知您。
 
-4. 调用<xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextSession.AddHiddenRegions%2A>一次添加一个或多个新大纲区域，在`reHidReg`（<xref:Microsoft.VisualStudio.TextManager.Interop.NewHiddenRegion>） 参数中指定以下信息：
+4. 调用 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextSession.AddHiddenRegions%2A> 以一次添加一个或多个新的大纲区域，同时在 `reHidReg` () 参数中指定以下信息 <xref:Microsoft.VisualStudio.TextManager.Interop.NewHiddenRegion> ：
 
-    1. 在`hrtConcealed`<xref:Microsoft.VisualStudio.TextManager.Interop.NewHiddenRegion>结构`iType`成员中指定 值，以指示您正在创建隐藏区域，而不是大纲区域。
+    1. 在结构的成员中指定的值， `hrtConcealed` `iType` <xref:Microsoft.VisualStudio.TextManager.Interop.NewHiddenRegion> 以指示正在创建隐藏区域，而不是大纲区域。
 
         > [!NOTE]
-        > 隐藏区域时，编辑器会自动在隐藏区域周围显示行，以指示其存在。
+        > 隐藏隐藏区域后，编辑器会自动显示隐藏区域周围的线条以指示它们是否存在。
 
-    2. 指定区域是客户端控制还是`dwBehavior`<xref:Microsoft.VisualStudio.TextManager.Interop.NewHiddenRegion>结构成员中的编辑器控制。 智能大纲实现可以包含编辑器和客户端控制大纲和隐藏文本区域的组合。
+    2. 指定区域在结构的成员中是客户端控制的还是编辑器控制的 `dwBehavior` <xref:Microsoft.VisualStudio.TextManager.Interop.NewHiddenRegion> 。 智能大纲显示实现可以混合使用编辑器和客户端控制的大纲和隐藏的文本区域。

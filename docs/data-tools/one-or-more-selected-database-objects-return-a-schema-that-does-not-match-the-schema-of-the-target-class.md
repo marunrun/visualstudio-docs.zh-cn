@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - data-storage
 ms.openlocfilehash: c4bba0b227321e30f86aa552add245195b34e3b5
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85281898"
 ---
 # <a name="one-or-more-selected-database-objects-return-a-schema-that-does-not-match-the-schema-of-the-target-class"></a>一个或多个所选数据库对象返回与目标类的架构不匹配的架构
@@ -25,7 +25,7 @@ ms.locfileid: "85281898"
 
 1. 单击“确定”关闭对话框****。
 
-2. 选择一个数据库对象，该对象返回与目标类的架构匹配的数据（ **O/R 设计器**中要将数据库对象放到的类）。
+2. 选择一个数据库对象，该对象返回的数据与目标类的架构匹配， (要将数据库对象放置到 **O/R 设计器**) 中的类。
 
 ## <a name="see-also"></a>另请参阅
 

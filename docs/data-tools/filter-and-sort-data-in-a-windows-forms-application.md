@@ -20,10 +20,10 @@ manager: jillfra
 ms.workload:
 - data-storage
 ms.openlocfilehash: 7c420896a883146cf60de414100fc41080220e36
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85282379"
 ---
 # <a name="filter-and-sort-data-in-a-windows-forms-application"></a>在 Windows 窗体应用程序中对数据进行筛选和排序
@@ -33,7 +33,7 @@ ms.locfileid: "85282379"
 您可以通过将属性设置 <xref:System.Windows.Forms.BindingSource.Sort%2A> 为要排序的列名称对数据进行排序; 追加 `DESC` 以降序排序，或按 `ASC` 升序排序。
 
 > [!NOTE]
-> 如果你的应用程序不使用 <xref:System.Windows.Forms.BindingSource> 组件，则可以使用对象对数据进行筛选和排序 <xref:System.Data.DataView> 。 有关详细信息，请参阅[dataview](/dotnet/framework/data/adonet/dataset-datatable-dataview/dataviews)。
+> 如果你的应用程序不使用 <xref:System.Windows.Forms.BindingSource> 组件，则可以使用对象对数据进行筛选和排序 <xref:System.Data.DataView> 。 有关详细信息，请参阅 [dataview](/dotnet/framework/data/adonet/dataset-datatable-dataview/dataviews)。
 
 ## <a name="to-filter-data-by-using-a-bindingsource-component"></a>使用 BindingSource 组件筛选数据
 

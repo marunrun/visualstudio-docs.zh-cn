@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 5c11c952223854ff1b4b963e24615e7abe831496
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72669863"
 ---
 # <a name="deploy-a-layer-model-extension"></a>部署层模型扩展
@@ -29,9 +29,9 @@ ms.locfileid: "72669863"
 
 #### <a name="to-install-the-extension"></a>安装扩展
 
-1. 在包含**源 .vsix 清单**的项目中，打开 "文件资源管理器" 中的 " **\\ \\** "。
+1. 在包含**源 .vsix**的项目中，打开文件资源管理器中的**bin \\ \\ ***。
 
-2. 将 **\* .vsix**文件复制到要安装该扩展的计算机。
+2. 将** \* .vsix**文件复制到要安装该扩展的计算机。
 
 3. 在目标计算机的 Windows 资源管理器中，双击 *.vsix 文件。
 
@@ -39,16 +39,16 @@ ms.locfileid: "72669863"
 
 #### <a name="to-uninstall-the-extension"></a>卸载扩展
 
-1. 在 Visual Studio 的 "**工具**" 菜单上，单击 "**扩展和更新**"。
+1. 在 Visual Studio 的 " **工具** " 菜单上，单击 " **扩展和更新**"。
 
-2. 单击扩展的名称，然后单击 "**卸载**"。
+2. 单击扩展的名称，然后单击 " **卸载**"。
 
 ## <a name="installing-an-extension-on-a-team-foundation-build-server"></a>在 Team Foundation Build 服务器上安装扩展
- 通常情况下，[!INCLUDE[esprbuild](../includes/esprbuild-md.md)] 服务器并未安装 Visual Studio，因此无法通过对其双击来安装 VSIX。 [!INCLUDE[esprbuild](../includes/esprbuild-md.md)] 的安装包括一些允许运行 VSIX 扩展的组件，但你必须手动安装该扩展。
+ [!INCLUDE[esprbuild](../includes/esprbuild-md.md)] 服务器通常不会安装 Visual Studio，因此不能通过双击来安装该 VSIX。 [!INCLUDE[esprbuild](../includes/esprbuild-md.md)] 的安装包括一些允许运行 VSIX 扩展的组件，但你必须手动安装该扩展。
 
-#### <a name="to-install-your-layer-extension-on-a-includeesprbuildincludesesprbuild-mdmd-server"></a>在 [!INCLUDE[esprbuild](../includes/esprbuild-md.md)] 服务器上安装层扩展
+#### <a name="to-install-your-layer-extension-on-a-esprbuild-server"></a>在 [!INCLUDE[esprbuild](../includes/esprbuild-md.md)] 服务器上安装层扩展
 
-1. 将 **.vsix**文件从开发计算机复制到 [!INCLUDE[esprbuild](../includes/esprbuild-md.md)] 计算机。
+1. 将 **.vsix** 文件从开发计算机复制到 [!INCLUDE[esprbuild](../includes/esprbuild-md.md)] 计算机。
 
      将 VSIX 文件置于下列位置之一：
 
@@ -65,11 +65,11 @@ ms.locfileid: "72669863"
          %LocalAppData%\Microsoft\VisualStudio \\ [version] \Extensions\Microsoft
 
         > [!NOTE]
-        > % LocalAppData% 通常为*DriveName*： Users*UserName*AppDataLocal。
+        > % LocalAppData% 通常为 *DriveName*： Users*UserName*AppDataLocal。
 
 2. 将各个 VSIX 文件展开至相同位置的文件夹中：
 
-    1. 将文件扩展名从 **.vsix**改为 **.zip**。
+    1. 将文件扩展名从 **.vsix** 改为 **.zip**。
 
     2. 将 .zip 文件中的内容提取到一个文件夹中。
 

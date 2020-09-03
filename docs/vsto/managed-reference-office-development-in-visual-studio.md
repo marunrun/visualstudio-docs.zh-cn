@@ -1,5 +1,5 @@
 ---
-title: 托管参考（Visual Studio 中的 Office 开发）
+title: 'Visual Studio 中的托管引用 (Office 开发) '
 ms.date: 08/14/2019
 ms.topic: reference
 dev_langs:
@@ -14,14 +14,14 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 29e8a2206432555e58b47691233bd46c49791046
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85519855"
 ---
-# <a name="managed-reference-office-development-in-visual-studio"></a>托管参考（Visual Studio 中的 Office 开发）
-  本部分包含在针对 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](includes/net-v45-md.md)]的 Office 项目中使用的命名空间和类型的 API 参考文档。 有关面向 .NET Framework 3.5 的 Office 项目中使用的命名空间和类型的 API 参考文档，请参阅 Visual Studio 文档中的以下参考部分：[托管参考（Visual studio 中的 Office 开发）](managed-reference-office-development-in-visual-studio.md)。
+# <a name="managed-reference-office-development-in-visual-studio"></a>Visual Studio 中的托管引用 (Office 开发) 
+  本部分包含在针对 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 或 [!INCLUDE[net_v45](includes/net-v45-md.md)]的 Office 项目中使用的命名空间和类型的 API 参考文档。 有关面向 .NET Framework 3.5 的 Office 项目中使用的命名空间和类型的 API 参考文档，请参阅 Visual Studio 文档中的以下参考部分： visual studio [中的 "托管引用" (Office 开发) ](managed-reference-office-development-in-visual-studio.md)"。
 
 [!include[Add-ins note](includes/addinsnote.md)]
 

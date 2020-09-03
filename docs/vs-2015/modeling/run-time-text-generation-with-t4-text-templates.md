@@ -15,16 +15,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 37b8b89f1dfc8d3539101080ebbed20615da2c01
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72671244"
 ---
 # <a name="run-time-text-generation-with-t4-text-templates"></a>使用 T4 文本模板的运行时文本生成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-可以通过使用 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 运行时文本模板，在运行时在应用程序中生成文本字符串。 执行应用程序的计算机不必有 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]。 运行时模板有时称为 "预处理文本模板"，因为在编译时，模板会生成在运行时执行的代码。
+可以通过使用 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 运行时文本模板，在运行时在应用程序中生成文本字符串。 执行应用程序的计算机不必具有 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 。 运行时模板有时称为 "预处理文本模板"，因为在编译时，模板会生成在运行时执行的代码。
 
  每个模板都是文本在生成的字符串中显示的混合形式，以及程序代码的片段。 程序片段为字符串的可变部分提供值，并还控制条件和重复的部分。
 
@@ -53,9 +53,9 @@ This report is Company Confidential.
 
 #### <a name="to-create-a-run-time-text-template"></a>创建运行时文本模板
 
-1. 在解决方案资源管理器中，在项目的快捷菜单上，选择 "**添加**"、"**新建项**"。
+1. 在解决方案资源管理器中，在项目的快捷菜单上，选择 " **添加**"、" **新建项**"。
 
-2. 在 "**添加新项**" 对话框中，选择 "**运行时文本模板**"。 （在 Items\General 中，[!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 在 "**常见**" 下查看。）
+2. 在 " **添加新项** " 对话框中，选择 " **运行时文本模板**"。  (" [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] **常见 Items\General**" 下的 "查找"。 ) 
 
 3. 键入模板文件的名称。
 
@@ -64,7 +64,7 @@ This report is Company Confidential.
 
 4. 选择“添加”。
 
-     将创建一个扩展名为**tt**的新文件。 其 "**自定义工具**" 属性设置为 " **TextTemplatingFilePreprocessor**"。 它包含以下行：
+     将创建一个扩展名为 **tt**的新文件。 其 " **自定义工具** " 属性设置为 " **TextTemplatingFilePreprocessor**"。 它包含以下行：
 
     ```
     <#@ template language="C#" #>
@@ -75,22 +75,22 @@ This report is Company Confidential.
     ```
 
 ## <a name="converting-an-existing-file-to-a-run-time-template"></a>将现有文件转换为运行时模板
- 创建模板的一种好方法是转换输出的现有示例。 例如，如果您的应用程序将生成 HTML 文件，则可以通过创建一个纯 HTML 文件来开始。 请确保其正常工作，且其外观正确。 然后将该项目添加到 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 项目中，并将其转换为模板。
+ 创建模板的一种好方法是转换输出的现有示例。 例如，如果您的应用程序将生成 HTML 文件，则可以通过创建一个纯 HTML 文件来开始。 请确保其正常工作，且其外观正确。 然后将其包含在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 项目中，并将其转换为模板。
 
 #### <a name="to-convert-an-existing-text-file-to-a-run-time-template"></a>将现有文本文件转换为运行时模板
 
-1. 将该文件包含到 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 项目。 在解决方案资源管理器中，在项目的快捷菜单上，选择 "**添加**"、"**现有项**"。
+1. 将该文件包含在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 项目中。 在解决方案资源管理器中，在项目的快捷菜单上，选择 " **添加**"、" **现有项**"。
 
-2. 将文件的 "**自定义工具**" 属性设置为 " **TextTemplatingFilePreprocessor**"。 在解决方案资源管理器的文件的快捷菜单上，选择 "**属性**"。
+2. 将文件的 " **自定义工具** " 属性设置为 " **TextTemplatingFilePreprocessor**"。 在解决方案资源管理器的文件的快捷菜单上，选择 " **属性**"。
 
     > [!NOTE]
-    > 如果已设置该属性，请确保它是**TextTemplatingFilePreprocessor**而不是**TextTemplatingFileGenerator**。 如果包含扩展名为**tt**的文件，则会发生这种情况。
+    > 如果已设置该属性，请确保它是 **TextTemplatingFilePreprocessor** 而不是 **TextTemplatingFileGenerator**。 如果包含扩展名为 **tt**的文件，则会发生这种情况。
 
-3. 将文件扩展名更改为**tt**。 尽管此步骤是可选的，但它有助于避免在不正确的编辑器中打开文件。
+3. 将文件扩展名更改为 **tt**。 尽管此步骤是可选的，但它有助于避免在不正确的编辑器中打开文件。
 
 4. 从文件名的主要部分删除所有空格或标点。 例如，"我的 Web Page.tt" 不正确，但 "MyWebPage.tt" 是正确的。 文件名称将用作生成的代码中的类名。
 
-5. 在文件开头插入以下行。 如果正在 Visual Basic 项目中操作，请将 "C#" 替换为 "VB"。
+5. 在文件开头插入以下行。 如果正在 Visual Basic 项目中操作，请将 "c #" 替换为 "VB"。
 
      `<#@ template language="C#" #>`
 
@@ -104,7 +104,7 @@ This report is Company Confidential.
  Language 参数将取决于项目的语言。
 
 ### <a name="plain-content"></a>纯内容
- 编辑**tt**文件以包含你希望应用程序生成的文本。 例如:
+ 编辑 **tt** 文件以包含你希望应用程序生成的文本。 例如：
 
 ```
 <html><body>
@@ -115,7 +115,7 @@ This report is Company Confidential.
 ```
 
 ### <a name="embedded-program-code"></a>嵌入的程序代码
- 可以在 `<#` 和 `#>` 之间插入程序代码。 例如:
+ 您可以在和之间插入程序代码 `<#` `#>` 。 例如：
 
 ```csharp
 <table>
@@ -141,14 +141,14 @@ This report is Company Confidential.
 
 ```
 
- 请注意，将在 `<# ... #>` 中插入语句，并在 `<#= ... #>` 之间插入表达式。 有关详细信息，请参阅[编写 T4 文本模板](../modeling/writing-a-t4-text-template.md)。
+ 请注意，在 `<# ... #>` 和之间插入语句 `<#= ... #>` 。 有关详细信息，请参阅 [编写 T4 文本模板](../modeling/writing-a-t4-text-template.md)。
 
 ## <a name="using-the-template"></a>使用模板
 
 ### <a name="the-code-built-from-the-template"></a>从模板生成的代码
- 无论何时保存**tt**文件，都将生成一个子 **.cs**或 **.vb**文件。 若要在解决方案资源管理器中查看此文件，请展开**tt**文件节点。 在 Visual Basic 项目中，您将能够在单击解决方案资源管理器工具栏中的 "**显示所有文件**" 后展开该节点。
+ 无论何时保存 **tt** 文件，都将生成一个子 **.cs** 或 **.vb** 文件。 若要在解决方案资源管理器中查看此文件，请展开 **tt** 文件节点。 在 Visual Basic 项目中，您将能够在单击解决方案资源管理器工具栏中的 " **显示所有文件** " 后展开该节点。
 
- 请注意，此子公司文件包含一个分部类，其中包含一个名为 `TransformText()` 的方法。 可以从应用程序中调用此方法。
+ 请注意，此子公司文件包含一个分部类，其中包含一个名为的方法 `TransformText()` 。 可以从应用程序中调用此方法。
 
 ### <a name="generating-text-at-run-time"></a>在运行时生成文本
  在应用程序代码中，可以使用如下所示的调用来生成模板的内容：
@@ -167,7 +167,7 @@ System.IO.File.WriteAllText("outputPage.html", pageContent)
 
 ```
 
- 若要将生成的类放入特定的命名空间，请设置文本模板文件的 "**自定义工具命名空间**" 属性。
+ 若要将生成的类放入特定的命名空间，请设置文本模板文件的 " **自定义工具命名空间** " 属性。
 
 ### <a name="debugging-runtime-text-templates"></a>调试运行时文本模板
  调试和测试运行时文本模板的方式与普通代码相同。
@@ -177,7 +177,7 @@ System.IO.File.WriteAllText("outputPage.html", pageContent)
 ### <a name="passing-parameters-in-the-constructor"></a>在构造函数中传递参数
  通常，模板必须从应用程序的其他部分导入一些数据。 为了使此过程变得简单，模板生成的代码是一个分部类。 您可以在项目中的另一个文件中创建同一个类的另一部分。 该文件可以包含具有参数、属性和函数的构造函数，该构造函数可通过嵌入在模板中的代码和应用程序的其余部分进行访问。
 
- 例如，可以创建单独的文件**MyWebPageCode.cs**：
+ 例如，可以创建单独的文件 **MyWebPageCode.cs**：
 
 ```csharp
 partial class MyWebPage
@@ -186,7 +186,7 @@ partial class MyWebPage
     public MyWebPage(MyData data) { this.m_data = data; }}
 ```
 
- 在模板文件**MyWebPage.tt**中，可以编写：
+ 在模板文件 **MyWebPage.tt**中，可以编写：
 
 ```csharp
 <h2>Sales figures</h2>
@@ -211,7 +211,7 @@ System.IO.File.WriteAllText("outputPage.html", pageContent);
 ```
 
 #### <a name="constructor-parameters-in-visual-basic"></a>Visual Basic 中的构造函数参数
- 在 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 中，单独的**MyWebPageCode**文件包含：
+ 在中 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] ，单独的文件 **MyWebPageCode** 包含：
 
 ```vb
 Namespace My.Templates
@@ -257,7 +257,7 @@ System.IO.File.WriteAllText("outputPage.html", pageContent)
 ```
 
 #### <a name="passing-data-in-template-properties"></a>在模板属性中传递数据
- 将数据传递到模板的另一种方法是将公共属性添加到分部类定义的模板类中。 应用程序可以在调用 `TransformText()` 之前设置属性。
+ 将数据传递到模板的另一种方法是将公共属性添加到分部类定义的模板类中。 应用程序可以在调用之前设置属性 `TransformText()` 。
 
  你还可以将字段添加到分部定义的模板类中。 这使您能够在模板的后续执行之间传递数据。
 
@@ -265,9 +265,9 @@ System.IO.File.WriteAllText("outputPage.html", pageContent)
  许多开发人员更喜欢避免在模板中编写大量代码。 相反，请在与模板文件同名的分部类中定义方法。 从模板调用这些方法。 这样，模板就可以更清楚地显示目标输出字符串的外观。 有关结果外观的讨论可以从创建它所显示的数据的逻辑中分离出来。
 
 ### <a name="assemblies-and-references"></a>程序集和引用
- 如果希望模板代码引用 .NET 或其他程序集（如**system.object**），则应以常规方式将其添加到项目的**引用**。
+ 如果希望模板代码引用 .NET 或其他程序集（如 **System.Xml.dll**），则应以常规方式将其添加到项目的 **引用** 。
 
- 如果要以与 `using` 语句相同的方式导入命名空间，则可以使用 `import` 指令执行此操作：
+ 如果要以与语句相同的方式导入命名空间 `using` ，则可以使用指令执行此 `import` 操作：
 
 ```
 <#@ import namespace="System.Xml" #>
@@ -287,20 +287,20 @@ System.IO.File.WriteAllText("outputPage.html", pageContent)
  Include 指令可用于模板文件文本或包含的文件文本中的任意位置。
 
 ### <a name="inheritance-between-run-time-text-templates"></a>运行时文本模板之间的继承
- 可以通过编写一个基类模板来共享运行时模板之间的内容，该模板可以是抽象的。 使用 `<@#template#>` 指令的 `inherits` 参数引用另一个运行时模板类。
+ 可以通过编写一个基类模板来共享运行时模板之间的内容，该模板可以是抽象的。 使用 `inherits` 指令的参数 `<@#template#>` 引用另一个运行时模板类。
 
 #### <a name="inheritance-pattern-fragments-in-base-methods"></a>继承模式：基方法中的片段
  在下面的示例中使用的模式中，请注意以下几点：
 
-- 基类 `SharedFragments` 在类功能块 `<#+ ... #>` 内定义方法。
+- 基类 `SharedFragments` 定义类功能块中 `<#+ ... #>` 的方法。
 
 - 基类不包含任何可用文本。 相反，其所有文本块都出现在类功能方法中。
 
-- 派生类调用 `SharedFragments` 中定义的方法。
+- 派生类调用中定义的方法 `SharedFragments` 。
 
-- 应用程序调用派生类的 `TextTransform()` 方法，但不会转换基类 `SharedFragments`。
+- 应用程序调用 `TextTransform()` 派生类的方法，但不转换基类 `SharedFragments` 。
 
-- 基类和派生类均为运行时文本模板：即，将**自定义工具**属性设置为**TextTemplatingFilePreprocessor**。
+- 基类和派生类均为运行时文本模板：即，将 **自定义工具** 属性设置为 **TextTemplatingFilePreprocessor**。
 
   **SharedFragments.tt：**
 
@@ -408,7 +408,7 @@ string result = t1.TransformText();
 Console.WriteLine(result);
 ```
 
- **生成的输出：**
+ **结果输出：**
 
 ```
 Here is the description for this derived template:
@@ -420,10 +420,10 @@ End of common template.
 End material for DerivedTemplate1.
 ```
 
-## <a name="related-topics"></a>相关主题
- 设计时模板：如果要使用模板生成将成为应用程序一部分的代码，请参阅[使用 T4 文本模板生成设计时代码](../modeling/design-time-code-generation-by-using-t4-text-templates.md)。
+## <a name="related-topics"></a>“相关主题”
+ 设计时模板：如果要使用模板生成将成为应用程序一部分的代码，请参阅 [使用 T4 文本模板生成设计时代码](../modeling/design-time-code-generation-by-using-t4-text-templates.md)。
 
- 运行时模板可用于在编译时确定模板及其内容的任何应用程序中。 但是，如果想要编写从运行时更改的模板生成文本的 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 扩展，请参阅[在 VS 扩展中调用文本转换](../modeling/invoking-text-transformation-in-a-vs-extension.md)。
+ 运行时模板可用于在编译时确定模板及其内容的任何应用程序中。 但是，如果要编写一个 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 扩展，该扩展从运行时更改的模板生成文本，请参阅 [在 VS 扩展中调用文本转换](../modeling/invoking-text-transformation-in-a-vs-extension.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [代码生成和 T4 文本模板](../modeling/code-generation-and-t4-text-templates.md)[编写 t4 文本](../modeling/writing-a-t4-text-template.md)模板[理解 t4：通过 Oleg Sych 的预处理文本模板](https://github.com/olegsych/T4Toolbox)

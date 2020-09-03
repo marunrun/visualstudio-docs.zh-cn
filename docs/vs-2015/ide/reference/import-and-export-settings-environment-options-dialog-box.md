@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 85f52873f52a822a6f6a79ebea545569dc40bf73
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72671026"
 ---
 # <a name="import-and-export-settings-environment-options-dialog-box"></a>“选项”对话框 ->“环境”->“导入和导出设置”
@@ -23,5 +23,5 @@ ms.locfileid: "72671026"
 
 此页用于指定用户设置文件的保存位置以及是否使用团队设置文件。 有关设置的详细信息，请参阅[在 Visual Studio 中自定义开发设置](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [“选项”对话框 ->“环境”](../../ide/reference/environment-options-dialog-box.md)

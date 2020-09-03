@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 69ebcc264eb3caa68fa0dfd2998613a7c9037b2e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72669776"
 ---
 # <a name="domain-property-value-change-handlers"></a>域属性值更改处理程序
@@ -24,9 +24,9 @@ ms.locfileid: "72669776"
 在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 域特定语言中，当域属性的值发生更改时，将在域属性处理程序中调用 `OnValueChanging()` 和 `OnValueChanged()` 方法。 若要响应更改，可以重写这些方法。
 
 ## <a name="overriding-the-property-handler-methods"></a>重写属性处理程序方法
- 域特定语言的每个域属性都由嵌入在其父域类内的类处理。 其名称遵循格式*PropertyName*PropertyHandler。 可以在文件**Dsl\Generated Code\DomainClasses.cs**中检查此属性处理程序类。 在该类中，在值发生更改前立即调用 `OnValueChanging()`，在值发生更改后立即调用 `OnValueChanged()`。
+ 域特定语言的每个域属性都由嵌入在其父域类内的类处理。 其名称遵循格式 *PropertyName*PropertyHandler。 可以在文件 **Dsl\Generated Code\DomainClasses.cs**中检查此属性处理程序类。 在该类中，在值发生更改前立即调用 `OnValueChanging()`，在值发生更改后立即调用 `OnValueChanged()`。
 
- 例如，假设你有一个名为 `Comment` 的域类，其中包含名为 `Text` 的字符串域属性和一个名为 `TextLengthCount` 的整数属性。 若要导致 `TextLengthCount` 始终包含 `Text` 字符串的长度，可在 Dsl 项目的单独文件中编写以下代码：
+ 例如，假设你有一个名为的域类 `Comment` ，其中包含一个名为的 string 域属性 `Text` 和一个名为的整数属性 `TextLengthCount` 。 若要使 `TextLengthCount` 始终包含字符串的长度 `Text` ，可在 Dsl 项目的单独文件中编写以下代码：
 
 ```
 // Domain Class "Comment":
@@ -63,7 +63,7 @@ public partial class Comment
 
 - 无法使用更改处理程序来修改新值。 如果想要执行此操作（例如，若要将该值限制在特定范围内），请定义 `ChangeRule`。
 
-- 无法将更改处理程序添加到表示关系的角色的属性。 相反，可在关系类上定义 `AddRule` 和 `DeleteRule`。 当创建或更改链接时，将触发这些规则。 有关详细信息，请参阅[规则在模型内部传播更改](../modeling/rules-propagate-changes-within-the-model.md)。
+- 无法将更改处理程序添加到表示关系的角色的属性。 相反，可在关系类上定义 `AddRule` 和 `DeleteRule`。 当创建或更改链接时，将触发这些规则。 有关详细信息，请参阅 [规则在模型内部传播更改](../modeling/rules-propagate-changes-within-the-model.md)。
 
 ### <a name="changes-in-and-out-of-the-store"></a>存储内外的更改
  属性处理程序方法将在已启动更改的事务内部进行调用。 因此，你可以在存储内进行更多更改，而无需打开新事务。 所做的更改可能会导致其他处理程序调用。
@@ -97,14 +97,14 @@ if (newValue > 10)
 ### <a name="alternative-technique-calculated-properties"></a>替代技术：计算属性
  上一示例显示了如何使用 OnValueChanged() 来将值从一个域属性传播到另一个域属性。 每个属性都具有其自己的存储值。
 
- 相反，你可以考虑将派生属性定义为计算属性。 在这种情况下，该属性不具有其自己的存储，并且将定义每当需要其值时要计算的函数。 有关详细信息，请参阅[计算的和自定义的存储属性](../modeling/calculated-and-custom-storage-properties.md)。
+ 相反，你可以考虑将派生属性定义为计算属性。 在这种情况下，该属性不具有其自己的存储，并且将定义每当需要其值时要计算的函数。 有关详细信息，请参阅 [计算的和自定义的存储属性](../modeling/calculated-and-custom-storage-properties.md)。
 
- 除了前面的示例，你还可以将 `TextLengthCount` 的**Kind**字段设置为在 DSL 定义中进行**计算**。 您可以为此域属性提供自己的**Get**方法。 **Get**方法将返回 `Text` 字符串的当前长度。
+ 不是前面的示例，你可以将的 **Kind** 字段设置 `TextLengthCount` 为在 DSL 定义中进行 **计算** 。 您可以为此域属性提供自己的 **Get** 方法。 **Get**方法将返回字符串的当前长度 `Text` 。
 
  但是，计算属性的一个潜在缺点是每当使用该值时都要计算表达式，这可能会出现性能问题。 此外，计算属性上不存在 OnValueChanging() 和 OnValueChanged()。
 
 ### <a name="alternative-technique-change-rules"></a>替代技术：更改规则
- 如果定义 ChangeRule，则它将在事务（属性的值在其中发生更改）的末尾执行。  有关详细信息，请参阅[规则在模型内部传播更改](../modeling/rules-propagate-changes-within-the-model.md)。
+ 如果定义 ChangeRule，则它将在事务（属性的值在其中发生更改）的末尾执行。  有关详细信息，请参阅 [规则在模型内部传播更改](../modeling/rules-propagate-changes-within-the-model.md)。
 
  如果在一个事务中进行了多项更改，则在完成全部更改后才能执行 ChangeRule。 与此相反，OnValue如果尚未执行某些更改，则会执行方法。 根据你想要实现的目的，这可能使 ChangeRule 变得更合适。
 
@@ -144,7 +144,7 @@ public partial class MyDomainModel
 
 ## <a name="example"></a>示例
 
-### <a name="description"></a>描述
+### <a name="description"></a>说明
  以下示例将重写域属性的属性处理程序，并在 `ExampleElement` 域类的属性已发生更改时通知用户。
 
 ### <a name="code"></a>代码

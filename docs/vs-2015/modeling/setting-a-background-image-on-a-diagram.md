@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 2b7d206852101a1d99a08eac710d88e93afe4a04
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72671210"
 ---
 # <a name="setting-a-background-image-on-a-diagram"></a>在图表上设置背景图像
@@ -27,37 +27,37 @@ ms.locfileid: "72671210"
 
 1. 将要用作关系图的背景的图像文件复制到当前项目的 Dsl\Resources 目录中。
 
-2. 在**解决方案资源管理器**中，右键单击 Dsl\Resources 文件夹，指向 "**添加**"，然后单击 "**现有项**"。
+2. 在 **解决方案资源管理器**中，右键单击 Dsl\Resources 文件夹，指向 " **添加**"，然后单击 " **现有项**"。
 
-3. 在 "**添加现有项**" 对话框中，浏览到 Dsl\Resources 文件夹。
+3. 在 " **添加现有项** " 对话框中，浏览到 Dsl\Resources 文件夹。
 
-4. 在 "**文件类型**" 列表中，单击 "**图像文件**"。
+4. 在 " **文件类型** " 列表中，单击 " **图像文件**"。
 
-5. 单击已复制到目录中的图像文件，然后单击 "**添加**"。
+5. 单击已复制到目录中的图像文件，然后单击 " **添加**"。
 
-6. 右键单击 "Dsl"，然后单击 "**属性**" 以打开 Dsl 项目的属性。
+6. 右键单击 "Dsl"，然后单击 " **属性** " 以打开 Dsl 项目的属性。
 
-7. 在 "**资源**" 选项卡上，单击 "**此项目不包含默认资源文件"。单击此处创建一个。**
+7. 在 " **资源** " 选项卡上，单击 " **此项目不包含默认资源文件"。单击此处创建一个。**
 
-8. 通过将图片从**解决方案资源管理器**拖动到 "资源" 窗口中，将图像文件添加到资源文件中。
+8. 通过将图片从 **解决方案资源管理器** 拖动到 "资源" 窗口中，将图像文件添加到资源文件中。
 
 9. 打开“文件”菜单，然后单击该选项以保存项目属性。
 
 10. 验证文件 Dsl\Properties\Resources.resx 是否存在，以及该文件下面是否具有文件 Resources.Designer.cs。
 
-11. 如果缺少 Resources.Designer.cs，请单击**解决方案资源管理器**中的文件资源 .resx。
+11. 如果缺少 Resources.Designer.cs，请单击 **解决方案资源管理器**中的文件资源 .resx。
 
-12. 在“属性” 窗口中，将 `Custom Tool` 属性设置为 `ResXFileCodeGenerator`。
+12. 在“属性” **** 窗口中，将 `Custom Tool` 属性设置为 `ResXFileCodeGenerator`。
 
-13. 在**解决方案资源管理器**中，右键单击 Dsl 项目，指向 "**添加**"，然后单击 "**新建文件夹**"。
+13. 在 **解决方案资源管理器**中，右键单击 Dsl 项目，指向 " **添加**"，然后单击 " **新建文件夹**"。
 
-14. 将文件夹命名为 "**自定义**"。
+14. 将文件夹命名为 " **自定义**"。
 
-15. 右键单击自定义文件夹，指向 "**添加**"，然后单击 "**新建项**"。
+15. 右键单击自定义文件夹，指向 " **添加**"，然后单击 " **新建项**"。
 
-16. 在 "**添加新项**" 对话框的 "**模板**" 列表中，单击 "**代码文件**"。
+16. 在 " **添加新项** " 对话框的 " **模板** " 列表中，单击 " **代码文件**"。
 
-17. 在 "**名称**" 框中，键入 `BackgroundImage.cs`，然后单击 "**添加**"。
+17. 在 " **名称** " 框中键入 `BackgroundImage.cs` ，然后单击 " **添加**"。
 
 18. 将以下代码复制到 BackgroundImage.cs 文件，从而调整命名空间、关系图类名以及图像文件资源名称。
 
@@ -102,7 +102,7 @@ ms.locfileid: "72671210"
     }
     ```
 
-     有关使用程序代码自定义模型的详细信息，请参阅[在程序代码中导航和更新模型](../modeling/navigating-and-updating-a-model-in-program-code.md)。
+     有关使用程序代码自定义模型的详细信息，请参阅 [在程序代码中导航和更新模型](../modeling/navigating-and-updating-a-model-in-program-code.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [定义形状和连接线](../modeling/defining-shapes-and-connectors.md)[自定义文本和图像字段](../modeling/customizing-text-and-image-fields.md)[在程序代码中导航和更新模型在](../modeling/navigating-and-updating-a-model-in-program-code.md)[编写代码以自定义域特定语言](../modeling/writing-code-to-customise-a-domain-specific-language.md)

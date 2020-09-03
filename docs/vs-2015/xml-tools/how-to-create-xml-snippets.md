@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 2e08821f1289927c4183a1639ae37136c220a88c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670911"
 ---
 # <a name="how-to-create-xml-snippets"></a>如何：创建 XML 代码段
@@ -22,28 +22,28 @@ ms.locfileid: "72670911"
 “XML 编辑器”可以用于新建 XML 代码段。 编辑器包括名为“Snippet”的 XML 代码段，是用于新建 XML 代码段的代码段样本。
 
 ## <a name="to-create-a-new-xml-snippet"></a>新建 XML 代码段
- 若要创建新的 XML 代码段，请创建新的 XML 文件并使用 "**插入代码段**" 功能。
+ 要新建 XML 代码片段，请创建一个新的 XML 文件并使用“插入代码段”功能。
 
-1. 在 "**文件**" 菜单上，单击 "**新建**"，然后单击 "**文件**"。
+1. 在“文件”菜单上单击“新建”，再单击“文件”  。
 
-2. 单击 " **XML 文件**"，然后单击 "**打开**"。
+2. 单击“XML 文件”，再单击“打开” 。
 
-3. 右键单击编辑器窗格，然后选择 "**插入代码片段**"。
+3. 在编辑器窗格中右键单击并选择“插入代码段”。
 
-4. 从列表中选择**代码段**，然后按 enter。
+4. 从列表中选择 **代码段** ，然后按 enter。
 
 5. 对新的代码段进行所需的更改。
 
-6. 从 "**文件**" 菜单中选择 "**保存 XMLFile**"。
+6. 在“文件”菜单中选择“保存 XMLFile.xml” 。
 
-     将显示 "**文件另存为**" 对话框。
+     此时出现“文件另存为”对话框。
 
-7. 输入新代码段的名称，然后从 "**保存类型**" 下拉窗口中选择**代码段文件**。
+7. 输入新的代码段的名称，然后从“保存类型”下拉窗口中选择“代码段文件” 。
 
-8. 使用 "**保存**位置" 下拉列表，将文件位置更改为 My Documents\Visual Studio 2005 \ CODE Snippets\XML\My XML 片段文件夹，然后按 "**保存**"。
+8. 使用 " **保存** 位置" 下拉列表，将文件位置更改为 My Documents\Visual Studio 2005 \ CODE Snippets\XML\My XML 片段文件夹，然后按 " **保存**"。
 
 ## <a name="snippet-description"></a>代码段说明
- 本节介绍代码段样本中的一些重要元素。 有关 XML 代码段使用的架构元素的详细信息，请参阅[代码片段架构参考](../ide/code-snippets-schema-reference.md)。
+ 本节介绍代码段样本中的一些重要元素。 有关 XML 代码段使用的架构元素的详细信息，请参阅 [代码片段架构参考](../ide/code-snippets-schema-reference.md)。
 
 ### <a name="snippettype-element"></a>SnippetType 元素
  编辑器支持两种代码段类型：
@@ -55,7 +55,7 @@ ms.locfileid: "72670911"
 </SnippetTypes>
 ```
 
- @No__t_0 类型确定在调用 "**插入代码段**" 命令时是否显示代码段。 @No__t_0 类型确定在调用带命令的**环绕**时是否显示代码段。
+ `Expansion` 类型确定在调用“插入代码段”命令时是否显示代码段。 `SurroundsWith` 类型确定在调用“环绕”命令时是否显示代码段。
 
 ### <a name="code-element"></a>Code 元素
  `Code` 元素定义要在调用代码段时插入的 XML 文本。
@@ -101,7 +101,7 @@ ms.locfileid: "72670911"
 </Literal
 ```
 
- Literal 元素还可以指函数。 "XML 编辑器" 包含名为 " **LookupPrefix**" 的函数。 **LookupPrefix**函数从 XML 文档中从其调用该代码片段的位置查找给定的命名空间 URI，并返回为该命名空间定义的命名空间前缀（如果有），并且它包含冒号（:)在该名称中。 下面是使用**LookupPrefix**函数的 `Literal` 元素的示例。
+ Literal 元素还可以指函数。 "XML 编辑器" 包含名为 " **LookupPrefix**" 的函数。 LookupPrefix 函数从 XML 文档中调用此代码段的位置查找给定的命名空间 URI，并返回为该命名空间定义的命名空间前缀（如果有），包括该名称中的冒号 (:)。 以下是使用 LookupPrefix 函数的 `Literal` 元素示例。
 
 ```
 <Literal Editable="false">
@@ -112,5 +112,5 @@ ms.locfileid: "72670911"
 
  然后，可以在 XML 代码段中的任何其他位置使用该 $prefix$ 变量。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [Xml 代码段](../xml-tools/xml-snippets.md)[如何：使用 xml 代码段](../xml-tools/how-to-use-xml-snippets.md)[如何：从 Xml 架构生成 xml 代码段](../xml-tools/how-to-generate-an-xml-snippet-from-an-xml-schema.md)

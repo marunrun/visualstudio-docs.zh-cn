@@ -10,26 +10,26 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: c095291cd02d591d9e493601b598a63c1ccb6f5b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72669659"
 ---
 # <a name="export-uml-diagrams-to-image-files"></a>将 UML 关系图导出至图像文件
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-可以将 UML 文档从 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 导出到程序控制下的映像中。 例如，你可能希望将此操作作为自动文档生成的一部分加以执行。
+可以将 UML 文档从导出 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 到程序控制下的映像。 例如，你可能希望将此操作作为自动文档生成的一部分加以执行。
 
- 如果想要手动将文档导出为图像，则可以将一个关系图中的形状复制并粘贴到诸如 Word 这样的其他程序中。 还可以将文档打印为 XPS 格式。 有关详细信息，请参阅将[关系图导出为图像](../modeling/export-diagrams-as-images.md)。
+ 如果想要手动将文档导出为图像，则可以将一个关系图中的形状复制并粘贴到诸如 Word 这样的其他程序中。 还可以将文档打印为 XPS 格式。 有关详细信息，请参阅将 [关系图导出为图像](../modeling/export-diagrams-as-images.md)。
 
 ## <a name="saving-an-image"></a>保存图像
  下面的代码定义了一个用于将图像保存到文件的快捷菜单命令（也称为上下文菜单命令）。
 
 > [!NOTE]
-> 若要使此代码以菜单命令方式工作，必须将其合并到 MEF 组件。 有关详细信息，请参阅[在建模图上定义菜单命令](../modeling/define-a-menu-command-on-a-modeling-diagram.md)。
+> 若要使此代码以菜单命令方式工作，必须将其合并到 MEF 组件。 有关详细信息，请参阅 [在建模图上定义菜单命令](../modeling/define-a-menu-command-on-a-modeling-diagram.md)。
 
- 代码优先使用[IShape](/previous-versions/ee789371(v=vs.140))获取基础实现的 <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram>。 此类型具有 <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.CreateBitmap%2A> 方法。
+ 代码优先使用 [IShape](/previous-versions/ee789371(v=vs.140)) 获取 <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram> 基础实现的。 此类型具有 <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.CreateBitmap%2A> 方法。
 
 ```
 namespace SaveToImage
@@ -141,5 +141,5 @@ namespace SaveToImage
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  将[关系图导出为图像](../modeling/export-diagrams-as-images.md)[在建模图上定义菜单命令](../modeling/define-a-menu-command-on-a-modeling-diagram.md)

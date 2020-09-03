@@ -1,5 +1,5 @@
 ---
-title: 项目项元素（Visual Studio 项模板） |Microsoft Docs
+title: 项目项元素 (Visual Studio 项模板) |Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -15,17 +15,17 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 885d0fbb50204f23a30fa43c1ffad45c9d67f829
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85770718"
 ---
-# <a name="projectitem-element-visual-studio-item-templates"></a>项目项元素（Visual Studio 项模板）
+# <a name="projectitem-element-visual-studio-item-templates"></a>项目项元素 (Visual Studio 项模板) 
 指定项模板中包含的文件。
 
 > [!NOTE]
-> `ProjectItem`元素根据模板是用于项目还是项来接受不同的属性。 本主题介绍 `ProjectItem` item 的元素。 有关 `ProjectItem` 项目模板元素的说明，请参阅项目项[元素（Visual Studio 项目模板）](../extensibility/projectitem-element-visual-studio-project-templates.md)。
+> `ProjectItem`元素根据模板是用于项目还是项来接受不同的属性。 本主题介绍 `ProjectItem` item 的元素。 有关 `ProjectItem` 项目模板元素的说明，请参阅 [ (Visual Studio 项目模板) ](../extensibility/projectitem-element-visual-studio-project-templates.md)的项目项元素。
 
  \<VSTemplate> \<TemplateContent>
  \<ProjectItem>
@@ -48,7 +48,7 @@ ms.locfileid: "85770718"
 
 ### <a name="attributes"></a>属性
 
-| 特性 | 说明 |
+| 特性 | 描述 |
 |---------------------| - |
 | `SubType` | 可选特性。<br /><br /> 指定多文件项模板中的项的子类型。 此值用于确定 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 将用于打开项的编辑器。 |
 | `CustomTool` | 可选特性。<br /><br /> 为项目文件中的项设置 CustomTool。 |
@@ -61,7 +61,7 @@ ms.locfileid: "85770718"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
 |[TemplateContent](../extensibility/templatecontent-element-visual-studio-templates.md)|指定模板的内容。|
 
@@ -70,16 +70,16 @@ ms.locfileid: "85770718"
 
  `string`，它表示模板 *.zip*文件中的文件的名称。
 
-## <a name="remarks"></a>注解
- `ProjectItem`是的一个可选子级 `TemplateContent` 。
+## <a name="remarks"></a>备注
+ `ProjectItem` 是的一个可选子级 `TemplateContent` 。
 
- `TargetFileName`特性可用于重命名具有参数的文件。 例如，如果文件*myfile.txt*位于模板 *.zip*文件的根目录中，但你希望根据用户在 "**添加新项**" 对话框中提供的文件名来命名该文件，则应使用以下 XML：
+ `TargetFileName`特性可用于重命名具有参数的文件。 例如，如果文件 *myfile.txt* 位于模板 *.zip* 文件的根目录中，但你希望根据用户在 " **添加新项** " 对话框中提供的文件名来命名该文件，则应使用以下 XML：
 
 ```xml
 <ProjectItem TargetFileName="$fileinputname$.vb">MyFile.vb</ProjectItem>
 ```
 
- 当从该模板创建项时，文件名称将基于用户在 "**添加新项**" 对话框中输入的名称。 这在创建多文件项模板时非常有用。 有关详细信息，请参阅[如何：创建多文件项模板](../ide/how-to-create-multi-file-item-templates.md)和[模板参数](../ide/template-parameters.md)。
+ 当从该模板创建项时，文件名称将基于用户在 " **添加新项** " 对话框中输入的名称。 这在创建多文件项模板时非常有用。 有关详细信息，请参阅 [如何：创建多文件项模板](../ide/how-to-create-multi-file-item-templates.md) 和 [模板参数](../ide/template-parameters.md)。
 
 ## <a name="example"></a>示例
  下面的示例演示了类的标准项模板的元数据 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 。

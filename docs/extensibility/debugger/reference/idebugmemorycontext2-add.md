@@ -1,5 +1,5 @@
 ---
-title: IDebug内存上下文2：：添加 |微软文档
+title: IDebugMemoryContext2：： Add |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,14 +17,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: a21fa2ec6d48bb1d6bf17bbc0d2ebf0d90a25a9f
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80727480"
 ---
 # <a name="idebugmemorycontext2add"></a>IDebugMemoryContext2::Add
-将指定的值添加到当前上下文并返回新上下文。
+将指定的值添加到当前上下文，并返回新的上下文。
 
 ## <a name="syntax"></a>语法
 
@@ -44,18 +44,18 @@ int Add(
 
 ## <a name="parameters"></a>参数
 `dwCount`\
-[在]要添加到当前上下文的值。
+中要添加到当前上下文中的值。
 
 `ppMemCxt`\
-[出]返回新的[IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)对象。
+弄返回一个新的 [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) 对象。
 
 ## <a name="return-value"></a>返回值
- 如果成功，返回`S_OK`;否则，返回错误代码。
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。
 
 ## <a name="remarks"></a>备注
- 内存上下文是地址，因此向地址添加值会产生需要新上下文接口的新地址。
+ 内存上下文是一个地址，因此向地址添加值将产生一个新地址，该地址需要新的上下文接口。
 
- 此方法必须始终生成新上下文，即使生成的地址位于与此上下文关联的内存空间之外也是如此。 唯一的例外是，如果无法为新上下文分配内存，或者是否`ppMemCxt`为空值（这是一个错误）。
+ 此方法必须始终生成新的上下文，即使生成的地址超出与此上下文关联的内存空间。 唯一的例外是，如果不能为新上下文分配任何内存，或者如果 `ppMemCxt` 是 null 值，则为 null 值 (这是) 错误。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)

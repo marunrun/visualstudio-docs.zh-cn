@@ -327,7 +327,7 @@
       href: debugging-a-t4-text-template.md
     - name: T4 文本模板编写准则
       href: guidelines-for-writing-t4-text-templates.md
-    - name: 如何：使用文本模板 ...
+    - name: '如何：使用文本模板 ... '
       href: how-to-dot-dot-dot-with-text-templates.md
     - name: 自定义 T4 文本转换
       items:

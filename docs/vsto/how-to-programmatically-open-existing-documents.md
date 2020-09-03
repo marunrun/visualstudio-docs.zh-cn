@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: eba4d110b06147db384a4d7aafe01c7d9f272ba3
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85519894"
 ---
 # <a name="how-to-programmatically-open-existing-documents"></a>如何：以编程方式打开现有文档
@@ -34,7 +34,7 @@ ms.locfileid: "85519894"
 
 ## <a name="to-open-a-document-as-read-only"></a>以只读方式打开文档
 
-- 调用 <xref:Microsoft.Office.Interop.Word.Documents.Open%2A> 方法，提供文档的路径，并在方法调用中将*ReadOnly*参数设置**为 True** 。
+- 调用 <xref:Microsoft.Office.Interop.Word.Documents.Open%2A> 方法，提供文档的路径，并在方法调用中将 *ReadOnly* 参数设置 **为 True** 。
 
      [!code-vb[Trin_VstcoreWordAutomation#6](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#6)]
      [!code-csharp[Trin_VstcoreWordAutomation#6](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#6)]
@@ -42,7 +42,7 @@ ms.locfileid: "85519894"
 ## <a name="compile-the-code"></a>编译代码
  此代码示例要求满足以下条件：
 
-- 名为*NewDocument.doc*的文档必须存在于驱动器 C 上名为*Test*的目录中。
+- 名为 *NewDocument.doc* 的文档必须存在于驱动器 C 上名为 *Test* 的目录中。
 
 ## <a name="see-also"></a>另请参阅
 - [如何：以编程方式创建新文档](../vsto/how-to-programmatically-create-new-documents.md)

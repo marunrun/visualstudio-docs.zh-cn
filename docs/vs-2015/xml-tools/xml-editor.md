@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: cc49b096bc22a7f95ee1a95e7cbd0b1f2f8603cc
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72669437"
 ---
 # <a name="xml-editor"></a>XML 编辑器
@@ -39,9 +39,9 @@ ms.locfileid: "72669437"
 
 - 文档以大纲方式显示，从而使得可以展开和折叠元素。
 
-- 与[XML 架构资源管理器](../xml-tools/xml-schema-explorer.md)集成。 这可提供 XML 架构的分层视图。
+- 与 [XML 架构资源管理器](../xml-tools/xml-schema-explorer.md)集成。 这可提供 XML 架构的分层视图。
 
-  为众所周知的文件扩展名（如 .xml、.xsd、.xsl 和 .config）调用 XML 编辑器。如果文件似乎包含 XML，还会对任何未知文件扩展名调用此文件。 您也可以使用 "**打开方式**" 选项，然后从列表中选择 "xml 编辑器"，使用 "xml 编辑器" 打开任何文件。
+  为众所周知的文件扩展名（如 .xml、.xsd、.xsl 和 .config）调用 XML 编辑器。如果文件似乎包含 XML，还会对任何未知文件扩展名调用此文件。 您也可以使用 " **打开方式** " 选项，然后从列表中选择 "xml 编辑器"，使用 "xml 编辑器" 打开任何文件。
 
 ## <a name="express-editions"></a>Express Editions
  Visual Studio Express Edition 中无法使用下列 XML 编辑器功能：
@@ -55,22 +55,22 @@ ms.locfileid: "72669437"
 - XML 架构资源管理器。
 
 ## <a name="in-this-section"></a>本节内容
- [XML 文档验证](../xml-tools/xml-document-validation.md)介绍语法检查和验证功能。
+ [XML 文档验证](../xml-tools/xml-document-validation.md) 介绍语法检查和验证功能。
 
- [XML 编辑器的 IntelliSense 功能](../xml-tools/xml-editor-intellisense-features.md)介绍编辑器 IntelliSense 功能。
+ [XML 编辑器的 IntelliSense 功能](../xml-tools/xml-editor-intellisense-features.md) 介绍编辑器 IntelliSense 功能。
 
- [XML 代码段](../xml-tools/xml-snippets.md)介绍如何使用 XML 代码段功能。
+ [XML 代码段](../xml-tools/xml-snippets.md) 介绍如何使用 XML 代码段功能。
 
- [编辑 XSLT 样式表](../xml-tools/editing-xslt-style-sheets.md)介绍 XSLT 编辑体验。
+ [编辑 XSLT 样式表](../xml-tools/editing-xslt-style-sheets.md) 介绍 XSLT 编辑体验。
 
- [架构缓存](../xml-tools/schema-cache.md)列出由 XML 编辑器安装的架构。
+ [架构缓存](../xml-tools/schema-cache.md) 列出由 XML 编辑器安装的架构。
 
- [XML 编辑器组件](../xml-tools/xml-editor-components.md)介绍 XML 编辑器用户界面组件。
+ [XML 编辑器组件](../xml-tools/xml-editor-components.md) 介绍 XML 编辑器用户界面组件。
 
 ## <a name="related-sections"></a>相关章节
- [编辑文本、代码和标记](https://msdn.microsoft.com/0d9c00d7-5df4-48a3-b185-2a265f055439)提供有关文本编辑器的信息。
+ [编辑文本、代码和标记](https://msdn.microsoft.com/0d9c00d7-5df4-48a3-b185-2a265f055439) 提供有关文本编辑器的信息。
 
- [XML 标准参考](https://msdn.microsoft.com/79c78508-c9d0-423a-a00f-672e855de401)提供有关 XML 技术的信息，包括 XML、文档类型定义（DTD）、XML 架构定义语言（XSD）和 XSLT。
+ [XML 标准参考](https://msdn.microsoft.com/79c78508-c9d0-423a-a00f-672e855de401) 提供有关 XML 技术的信息，包括 XML、文档类型定义 (DTD) 、XML 架构定义语言 (XSD) 和 XSLT。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [Visual Studio 中的 XML 工具](../xml-tools/xml-tools-in-visual-studio.md)

@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: fe3f92adea762058b6b4414f0bf9596d77ab698e
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85521311"
 ---
 # <a name="code-analysis-application-errors"></a>代码分析应用程序错误
@@ -47,7 +47,7 @@ ms.locfileid: "85521311"
 |[CA0066](ca0066.md)|为 **/targetframeworkversion**提供的值 "*VersionID*" 不是已识别的版本。|
 |[CA0067](ca0067.md)|找不到目录。|
 |[CA0068](ca0068.md)|找不到目标程序集 *"AssemblyName"* 的调试信息。|
-|[CA0069](ca0069.md)|使用备用平台。 找不到*FrameworkVersion1* 。 改为使用*FrameworkVersion2* 。 为了获得最佳的分析结果，请确保已安装正确的框架版本。|
+|[CA0069](ca0069.md)|使用备用平台。 找不到*FrameworkVersion1* 。 改为使用 *FrameworkVersion2* 。 为了获得最佳的分析结果，请确保已安装正确的框架版本。|
 |[CA0070](ca0070.md)|由于安全权限的原因，无法加载程序集或类型。|
 |[CA0501](ca0501.md)|无法读取输出报告。|
 |[CA0502](ca0502.md)|语言不受支持。|
