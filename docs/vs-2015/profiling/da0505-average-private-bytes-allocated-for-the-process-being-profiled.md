@@ -14,13 +14,13 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 69a7eaeecd65ffdfbd575b59fbea15c476d0fbeb
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75850867"
 ---
-# <a name="da0505-average-private-bytes-allocated-for-the-process-being-profiled"></a>DA0505：为所分析进程分配的平均专用字节数
+# <a name="da0505-average-private-bytes-allocated-for-the-process-being-profiled"></a>DA0505：为所分析的进程分配的平均专用字节数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 规则 Id |DA0505 |  

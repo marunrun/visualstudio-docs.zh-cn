@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 4181fd11e6f1ba86e2965991aab704995210e6bc
-ms.sourcegitcommit: 2c26d6e6f2a5c56ae5102cdded7b02f2d0fd686c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88168731"
 ---
 # <a name="microsoft-help-viewer-sdk"></a>Microsoft Help Viewer SDK
@@ -131,22 +131,22 @@ Visual Studio 署名包支持的控件：
 
 主体 (不包含主题的页眉和页脚) 将包含页面链接、附注部分、可折叠区域、代码片段和特定于语言的文本部分。  请参阅品牌部分，了解有关提供的主题的这些区域的信息。
 
-1. 添加主题标题标记：`<div class="title">Contoso Topic 4</div>`
+1. 添加主题标题标记：  `<div class="title">Contoso Topic 4</div>`
 
-2. 添加便笺部分：`<div class="alert"> add your table tag and text </div>`
+2. 添加便笺部分： `<div class="alert"> add your table tag and text </div>`
 
-3. 添加可折叠区域：`<CollapsibleArea Expanded="1" Title="Collapsible Area Test Heading"> add text  </CollapsibleArea>`
+3. 添加可折叠区域：  `<CollapsibleArea Expanded="1" Title="Collapsible Area Test Heading"> add text  </CollapsibleArea>`
 
-4. 添加代码片段：`<CodeSnippet EnableCopyCode="true" Language="CSharp" ContainsMarkup="false" DisplayLanguage="C#" > a block of code </CodeSnippet>`
+4. 添加代码片段：  `<CodeSnippet EnableCopyCode="true" Language="CSharp" ContainsMarkup="false" DisplayLanguage="C#" > a block of code </CodeSnippet>`
 
-5. 添加特定于代码语言的文本： `<LanguageSpecificText devLangcs="CS" devLangvb="VB" devLangcpp="C++" devLangnu="F#" />` 请注意， `devLangnu=` 允许您输入其他语言。 例如， `devLangnu="Fortran"` 当代码片段 DisplayLanguage = fortran 时显示 fortran
+5. 添加特定于代码语言的文本：  `<LanguageSpecificText devLangcs="CS" devLangvb="VB" devLangcpp="C++" devLangnu="F#" />` 请注意， `devLangnu=` 允许您输入其他语言。 例如， `devLangnu="Fortran"` 当代码片段 DisplayLanguage = fortran 时显示 fortran
 
-6. 添加页面链接：`<a href="ms-xhelp:///?Id=ContosoTopic1">Main Topic</a>`
+6. 添加页面链接： `<a href="ms-xhelp:///?Id=ContosoTopic1">Main Topic</a>`
 
 > [!NOTE]
 > 注意：对于不支持的新 "显示语言" (示例、F #、Cobol、Fortran) 代码段中的代码着色将为单色。
 
-**示例帮助查看器主题**此代码演示如何定义元数据、代码段、可折叠区域和特定于语言的文本。
+**示例帮助查看器主题** 此代码演示如何定义元数据、代码段、可折叠区域和特定于语言的文本。
 
 ```html
 <?xml version="1.0" encoding="utf-8"?>
@@ -292,7 +292,7 @@ F1 流程图：
 
 设置以下注册表值以启用供应商帮助内容的 F1 回退。 F1 回退意味着帮助查看器设置为联机查找 F1 帮助内容，并将供应商内容本地安装到用户的硬盘驱动器上。 即使默认设置为 "联机帮助"，帮助查看器也应查看内容的本地帮助。
 
-1. 在 Help 2.3 注册表项下设置**VendorContent**值：
+1. 在 Help 2.3 注册表项下设置 **VendorContent** 值：
 
    - 对于32位操作系统：
 
@@ -354,7 +354,7 @@ HKEY_LOCAL_MACHINE \SOFTWARE\Wow6432Node\Microsoft\Help\v2.3\Catalogs\VisualStud
 
 值：在零售数据中显示调试输出：是
 
-在 IDE 的 "帮助" 菜单项下，选择 "**调试帮助上下文**"。
+在 IDE 的 "帮助" 菜单项下，选择 " **调试帮助上下文**"。
 
 **内容元数据**
 
@@ -563,25 +563,25 @@ branding.js 文件包含 Visual Studio 帮助查看器品牌元素使用的 Java
 
 品牌包包含一组 HTM 文件，这些文件支持用于传达关键信息以帮助内容用户的方案，例如，主页包含描述安装了哪些内容集的部分，以及在本地主题集中找不到主题的页面。 每个产品都可以修改这些 HTM 文件。  ISO Shell 供应商能够采用默认的品牌包，并更改这些页面的行为和内容以满足他们的需要。  这些文件引用各自的品牌包，以便品牌标记获取 branding.xml 文件中的相应内容。
 
-|**File**|**使用**|**显示的内容源**|
+|**文件**|**使用**|**显示的内容源**|
 |-|-|-|
 |homepage.htm|此页面显示当前已安装的内容，以及任何其他适用于用户内容的消息。  此文件具有附加的元数据属性 "Microsoft.Help.Id" content = "-1"，该属性将此内容置于本地内容目录的顶部。||
-||<META_HOME_PAGE_TITLE_ADD/>|Branding.xml、标记\<HomePageTitle>|
-||<HOME_PAGE_INTRODUCTION_SECTION_ADD/>|Branding.xml、标记\<HomePageIntroduction>|
-||<HOME_PAGE_CONTENT_INSTALL_SECTION_ADD/>|Branding.xml、标记\<HomePageContentInstallText>|
+||<META_HOME_PAGE_TITLE_ADD/>|Branding.xml、标记 \<HomePageTitle>|
+||<HOME_PAGE_INTRODUCTION_SECTION_ADD/>|Branding.xml、标记 \<HomePageIntroduction>|
+||<HOME_PAGE_CONTENT_INSTALL_SECTION_ADD/>|Branding.xml、标记 \<HomePageContentInstallText>|
 ||<HOME_PAGE_BOOKS_INSTALLED_SECTION_ADD/>|\<HomePageInstalledBooks> \<HomePageNoBooksInstalled> 在未安装任何书籍时，标题部分 Branding.xml 标记，即从应用程序生成的数据。|
 ||<HOME_PAGE_SETTINGS_SECTION_ADD/>|标题节 Branding.xml 标记 \<HomePageHelpSettings> ，部分文本 \<HomePageHelpSettingsText> 。|
 |topiccorrupted.htm|如果主题位于本地集中，但出于某种原因无法显示 (损坏的内容) 。||
-||<META_TOPIC_CORRUPTED_TITLE_ADD/>|Branding.xml、标记\<TopicCorruptedTitle>|
-||<TOPIC_CORRUPTED_SECTION_ADD/>|Branding.xml、标记\<TopicCorruptedViewOnlineText>|
+||<META_TOPIC_CORRUPTED_TITLE_ADD/>|Branding.xml、标记 \<TopicCorruptedTitle>|
+||<TOPIC_CORRUPTED_SECTION_ADD/>|Branding.xml、标记 \<TopicCorruptedViewOnlineText>|
 |topicnotfound.htm|在本地内容集中找不到主题，也不能联机使用时||
-||<META_TOPIC_NOT_FOUND_TITLE_ADD/>|Branding.xml、标记\<TopicNotFoundTitle>|
-||<META_TOPIC_NOT_FOUND_ID_ADD/>|Branding.xml、标记\<TopicNotFoundViewOnlineText> + \<TopicNotFoundDownloadContentText>|
-||<TOPIC_NOT_FOUND_SECTION_ADD/>|Branding.xml、标记\<TopicNotFoundText>|
+||<META_TOPIC_NOT_FOUND_TITLE_ADD/>|Branding.xml、标记 \<TopicNotFoundTitle>|
+||<META_TOPIC_NOT_FOUND_ID_ADD/>|Branding.xml、标记 \<TopicNotFoundViewOnlineText> + \<TopicNotFoundDownloadContentText>|
+||<TOPIC_NOT_FOUND_SECTION_ADD/>|Branding.xml、标记 \<TopicNotFoundText>|
 |contentnotinstalled.htm|如果没有为产品安装本地内容。||
-||<META_CONTENT_NOT_INSTALLED_TITLE_ADD/>|Branding.xml、标记\<ContentNotInstalledTitle>|
-||<META_CONTENT_NOT_INSTALLED_ID_ADD/>|Branding.xml、标记\<ContentNotInstalledDownloadContentText>|
-||<CONTENT_NOT_INSTALLED_SECTION_ADD/>|Branding.xml、标记\<ContentNotInstalledText>|
+||<META_CONTENT_NOT_INSTALLED_TITLE_ADD/>|Branding.xml、标记 \<ContentNotInstalledTitle>|
+||<META_CONTENT_NOT_INSTALLED_ID_ADD/>|Branding.xml、标记 \<ContentNotInstalledDownloadContentText>|
+||<CONTENT_NOT_INSTALLED_SECTION_ADD/>|Branding.xml、标记 \<ContentNotInstalledText>|
 
 **CSS 文件**
 
@@ -597,7 +597,7 @@ Visual Studio 帮助查看器署名包包含两个 css 文件，以支持一致�
 
 Visual Studio 内容显示 Visual Studio 徽标和其他图形。  Visual Studio 帮助查看器署名包中图形文件的完整列表如下所示。
 
-|**File**|**使用**|**示例**|
+|**文件**|**使用**|**示例**|
 |-|-|-|
 |clear.gif|用于呈现可折叠区域||
 |footer_slice.gif|页脚显示||
@@ -694,7 +694,7 @@ Visual Studio 内容显示 Visual Studio 徽标和其他图形。  Visual Studio
 
 ### <a name="add-help-to-the-visual-studio-shell-integrated-and-isolated"></a>将帮助添加到 Visual Studio Shell (集成和隔离) 
 
-**简介**
+**介绍**
 
 本演练演示如何将帮助内容纳入 Visual Studio Shell 应用程序，然后将其部署。
 
@@ -741,11 +741,11 @@ Visual Studio 内容显示 Visual Studio 徽标和其他图形。  Visual Studio
 
 若要创建独立的 Shell 扩展：
 
-1. 在 Visual Studio 的 "**文件**" 下，选择 "**新建项目**"，在 "**其他项目类型**" 下，选择 "**扩展性**"，然后选择 " **Visual Studio Shell 独立主机**"。 将项目命名 `ContosoHelpShell` 为) 创建基于 Visual Studio 独立 Shell 模板的扩展性项目。
+1. 在 Visual Studio 的 " **文件**" 下，选择 " **新建项目**"，在 " **其他项目类型** " 下，选择 " **扩展性**"，然后选择 "  **Visual Studio Shell 独立主机**"。 将项目命名 `ContosoHelpShell` 为) 创建基于 Visual Studio 独立 Shell 模板的扩展性项目。
 
-2. 在解决方案资源管理器的 ContosoHelpShellUI 项目的 "资源文件" 文件夹中，打开 System.windows.input.applicationcommands.paste. .vsct。 请确保已将此行注释掉 (搜索 "No_Help" ) ：`<!-- <define name="No_HelpMenuCommands"/> -->`
+2. 在解决方案资源管理器的 ContosoHelpShellUI 项目的 "资源文件" 文件夹中，打开 System.windows.input.applicationcommands.paste. .vsct。 请确保已将此行注释掉 (搜索 "No_Help" ) ： `<!-- <define name="No_HelpMenuCommands"/> -->`
 
-3. 选择 F5 键编译并运行**调试**。 在独立 Shell IDE 的实验实例中，选择 "**帮助**" 菜单。 请确保显示 "**查看帮助**"、"**添加和删除帮助内容**" 和 "**设置帮助首选项**"。
+3. 选择 F5 键编译并运行 **调试**。 在独立 Shell IDE 的实验实例中，选择 " **帮助** " 菜单。 请确保显示 " **查看帮助**"、" **添加和删除帮助内容**" 和 " **设置帮助首选项** "。
 
 4. 在解决方案资源管理器的 ContosHelpShell 项目的 "Shell 自定义项" 文件夹中，打开 ContosoHelpShell. .pkgdef。 若要定义 Contoso 帮助目录，请添加以下行：
 
@@ -773,7 +773,7 @@ Visual Studio 内容显示 Visual Studio 徽标和其他图形。  Visual Studio
     @="{4A791146-19E4-11D3-B86B-00C04F79F802}"
     ```
 
-6. 在解决方案资源管理器的 ContosoHelpShell 解决方案的上下文菜单上，选择 "**属性**" 菜单项。 在 "**配置属性**" 下，选择**Configuration Manager**。 在 "**配置**" 列中，将每个 "调试" 值更改为 "Release"。
+6. 在解决方案资源管理器的 ContosoHelpShell 解决方案的上下文菜单上，选择 " **属性** " 菜单项。 在 " **配置属性**" 下，选择 **Configuration Manager**。 在 " **配置** " 列中，将每个 "调试" 值更改为 "Release"。
 
 7. 生成解决方案。 这会在发布文件夹中创建一组文件，将在下一部分中使用。
 
@@ -785,7 +785,7 @@ Visual Studio 内容显示 Visual Studio 徽标和其他图形。  Visual Studio
 
 3. 将 ContosoHelpShell release 文件夹中的内容复制到 \\ \Program 文件 (x86) \contoso\ 文件夹中。
 
-4. 通过在 "**开始**" 菜单中选择 "**运行**" 并输入来启动注册表编辑器 `Regedit` 。 在注册表编辑器中，选择 "**文件**"，然后选择 "**导入**"。 浏览到 ContosoHelpShell 项目文件夹。 在 ContosoHelpShell 子文件夹中，选择 ContosoHelpShell。
+4. 通过在 "**开始**" 菜单中选择 "**运行**" 并输入来启动注册表编辑器 `Regedit` 。 在注册表编辑器中，选择 " **文件**"，然后选择 " **导入**"。 浏览到 ContosoHelpShell 项目文件夹。 在 ContosoHelpShell 子文件夹中，选择 ContosoHelpShell。
 
 5. 创建内容存储：
 
@@ -808,7 +808,7 @@ Visual Studio 内容显示 Visual Studio 徽标和其他图形。  Visual Studio
 
     C:ProgramDataMicrosoftHelpLibrary2CatalogsVisualStudio15
 
-    [!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)]集成外壳：
+    [!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)] 集成外壳：
 
     C:ProgramDataMicrosoftHelpLibrary2CatalogsVisualStudio15en-US
 
@@ -820,16 +820,16 @@ Visual Studio 内容显示 Visual Studio 徽标和其他图形。  Visual Studio
 
      "C:\Program Files (x86) \Microsoft 帮助 Viewer\v2.3\HlpViewer.exe"/catalogName VisualStudio15/helpQuery method = "page&id = ContosoTopic0"/launchingApp Microsoft，VisualStudio，12。0
 
-10. 从 Contoso 应用根) 启动 Contoso 应用程序 (。 在 ISO Shell 中，选择 "**帮助**" 菜单项，然后将 "**设置帮助首选项**" 更改为 "**使用本地帮助**"。
+10. 从 Contoso 应用根) 启动 Contoso 应用程序 (。 在 ISO Shell 中，选择 " **帮助** " 菜单项，然后将 " **设置帮助首选项** " 更改为 " **使用本地帮助**"。
 
-11. 在 shell 中，选择 "**帮助**" 菜单项，然后单击 "**查看帮助**"。 本地帮助查看器应启动。 选择 "**管理内容**" 选项卡。在 "**安装源**" 下，选择 "**磁盘**" 选项按钮。 选择 " **...** " 按钮，并浏览到包含 Contoso 内容的本地文件夹， (复制到上述步骤) 中的本地文件夹。 选择 Helpcontentsetup.msha. .msha。 Contoso 现在应显示为书籍中的一本书。 选择 "**添加**"，然后选择)  (右下角的 "**更新**" 按钮。
+11. 在 shell 中，选择 " **帮助** " 菜单项，然后单击 " **查看帮助**"。 本地帮助查看器应启动。 选择 " **管理内容** " 选项卡。在 " **安装源**" 下，选择 " **磁盘** " 选项按钮。 选择 " **...** " 按钮，并浏览到包含 Contoso 内容的本地文件夹， (复制到上述步骤) 中的本地文件夹。 选择 Helpcontentsetup.msha. .msha。 Contoso 现在应显示为书籍中的一本书。 选择 " **添加**"，然后选择)  (右下角的 " **更新** " 按钮。
 
 12. 在 Contoso IDE 中，选择 F1 键来测试 F1 功能。
 
 ## <a name="additional-resources"></a>其他资源
 
-有关运行时 API，请参阅[Windows 帮助 API](/previous-versions/windows/desktop/helpapi/helpapi-portal)。
+有关运行时 API，请参阅 [Windows 帮助 API](/previous-versions/windows/desktop/helpapi/helpapi-portal)。
 
-有关如何利用帮助 API 的详细信息，请参阅[帮助查看器代码示例](https://marketplace.visualstudio.com/items?itemName=RobChandlerHelpMVP.HelpViewer20CodeExamples)。
+有关如何利用帮助 API 的详细信息，请参阅 [帮助查看器代码示例](https://marketplace.visualstudio.com/items?itemName=RobChandlerHelpMVP.HelpViewer20CodeExamples)。
 
-你可以在[开发人员社区](https://developercommunity.visualstudio.com/content/idea/post.html?space=8)提交功能建议。
+你可以在 [开发人员社区](https://developercommunity.visualstudio.com/content/idea/post.html?space=8)提交功能建议。

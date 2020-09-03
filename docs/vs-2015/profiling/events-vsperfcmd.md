@@ -10,18 +10,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 0d24fc7a01a8eebe356f37704c1a821332f5dca1
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75850760"
 ---
 # <a name="events-vsperfcmd"></a>Events (VSPerfCmd)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-VSPerfCmd.exe“Events”选项控制 Windows 事件跟踪 (ETW) 日志记录。 会将 ETW 数据保存到独立于探查器数据文件的 .etl 文件中。 可以使用 [VSPerfReport](../profiling/vsperfreport.md) /summary:etw 命令在报告中查看这些数据。  
+VSPerfCmd.exe“Events”**** 选项控制 Windows 事件跟踪 (ETW) 日志记录。 会将 ETW 数据保存到独立于探查器数据文件的 .etl 文件中。 可以使用 [VSPerfReport](../profiling/vsperfreport.md) /summary:etw 命令在报告中查看这些数据。  
   
- 在调用 VSPerfCmd Shutdown 命令停止分析之前，可以随时调用“Events”选项。  
+ 在调用 VSPerfCmd Shutdown  命令停止分析之前，可以随时调用“Events”  选项。  
   
 ## <a name="syntax"></a>语法  
   
@@ -30,7 +30,7 @@ VSPerfCmd.exe /events {On|Off} {Guid|ProviderName} [,Flags[,Level]
 ```  
   
 #### <a name="parameters"></a>参数  
- On&#124;Off  
+ On****&#124;Off****  
  开始或停止收集事件数据。  
   
  `Guid`  
@@ -45,15 +45,15 @@ VSPerfCmd.exe /events {On|Off} {Guid|ProviderName} [,Flags[,Level]
  `Level`  
  指定收集的数据量。 `Level` 由事件提供程序定义。  
   
- “Events”选项将以下内核关键字识别为提供程序名称：  
+ ****“Events”选项将以下内核关键字识别为提供程序名称：  
   
- **Process**  
- 进程事件  
+ **处理**  
+ 处理事件  
   
  **线程**  
  线程事件  
   
- **Image**  
+ **图像**  
  映像加载和卸载事件  
   
  **Disk**  
@@ -68,10 +68,10 @@ VSPerfCmd.exe /events {On|Off} {Guid|ProviderName} [,Flags[,Level]
  **Pagefault**  
  软页错误  
   
- **Network**  
+ **网络**  
  网络事件  
   
- **Registry**  
+ **注册表**  
  注册表访问事件  
   
  请注意，内核提供程序只能处于启用状态。 在监视器关闭之前，既不能禁用它，也不能修改它的标志。  
@@ -86,9 +86,9 @@ C:\<path>VSPerfCmd -events on, \".NET Common Language Runtime\", 0x7fffffff, 5
 ```  
   
 > [!IMPORTANT]
-> 如果不排除启动事件，则由于这些事件未在托管对象格式 (MOF) 文件中列出，它们将在报告中显示为 GUID。 有关详细信息，请参阅 Microsoft 网站上的此页面：[托管对象格式 (MOF) 文件示例](https://msdn.microsoft.com/library/default.aspx)。  
+> 如果不排除启动事件，则由于这些事件未在托管对象格式 (MOF) 文件中列出，它们将在报告中显示为 GUID。 有关详细信息，请参阅 Microsoft 网站上的以下页面： [托管对象格式 (MOF) 文件的示例](https://msdn.microsoft.com/library/default.aspx)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [VSPerfCmd](../profiling/vsperfcmd.md)   
  [分析独立应用程序](../profiling/command-line-profiling-of-stand-alone-applications.md)   
  [分析 ASP.NET Web 应用程序](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
