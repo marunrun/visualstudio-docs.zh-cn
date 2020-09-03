@@ -1,5 +1,5 @@
 ---
-title: IDebugGenericParamField：获取约束 |微软文档
+title: IDebugGenericParamField：： GetConstraints |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -15,10 +15,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 8a078beaac1cf9ef0255ff7b8d0bcbc4f568fdb8
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80728008"
 ---
 # <a name="idebuggenericparamfieldgetconstraints"></a>IDebugGenericParamField::GetConstraints
@@ -44,16 +44,16 @@ int GetConstraints(
 
 ## <a name="parameters"></a>参数
 `cConstraints`\
-[在]约束数。
+中约束的数目。
 
 `ppConstraints`\
-[出]返回包含与此字段关联的约束的数组。
+弄返回一个数组，其中包含与此字段关联的约束。
 
 `pcConstraints`\
-[进出]数组中`ppConstraints`的约束数。
+[in，out]数组中的约束数 `ppConstraints` 。
 
 ## <a name="return-value"></a>返回值
-如果成功，返回`S_OK`;否则，返回错误代码。
+如果成功， `S_OK` 则返回; 否则返回错误代码。
 
 ## <a name="example"></a>示例
 下面的示例演示如何为公开[IDebugGenericParamField](../../../extensibility/debugger/reference/idebuggenericparamfield.md)接口的**CDebugGenericParamFieldType**对象实现此方法。
@@ -151,5 +151,5 @@ Error:
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IDebugGenericParamField](../../../extensibility/debugger/reference/idebuggenericparamfield.md)

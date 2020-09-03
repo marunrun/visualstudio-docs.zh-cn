@@ -1,5 +1,5 @@
 ---
-title: IDebug记忆字节2：：写 at |微软文档
+title: IDebugMemoryBytes2：： WriteAt |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,14 +17,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: ac9113424c6cd5cce230774a6e5335ffa4d4ba77
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80727528"
 ---
 # <a name="idebugmemorybytes2writeat"></a>IDebugMemoryBytes2::WriteAt
-从指定的地址开始，写入指定的内存字节数。
+写入从指定地址开始的指定字节数。
 
 ## <a name="syntax"></a>语法
 
@@ -46,20 +46,20 @@ int WriteAt(
 
 ## <a name="parameters"></a>参数
 `pStartContext`\
-[在][IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)对象，指定从何处开始写入字节。
+中 [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) 对象，指定开始写入字节的位置。
 
 `dwCount`\
-[在]要写入的字节数。
+中要写入的字节数。
 
 `rgbMemory`\
-[在]要写入的字节。 此数组假定为大小中至少`dwCount`字节。
+中要写入的字节数。 假定此数组的大小至少为 `dwCount` 个字节。
 
 ## <a name="return-value"></a>返回值
- 如果成功，返回`S_OK`;否则，如果`S_FALSE`并非所有字节都可以写入或返回错误代码（通常`E_FAIL`），则返回。
+ 如果成功， `S_OK` 则返回; 否则， `S_FALSE` 如果不能写入所有字节，则返回; 否则返回错误代码 (通常 `E_FAIL`) 。
 
 ## <a name="remarks"></a>备注
- 如果起始地址不在此[IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md)对象表示的内存窗口中，则不进行写入并返回 其`E_FAIL`错误代码 -即使写入量重叠到内存空间。
+ 如果起始地址不在此 [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md) 对象所表示的内存窗口中，则不会执行任何写入操作，并且将返回错误代码 `E_FAIL` （即使要写入的量与内存空间重叠）。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md)
 - [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)

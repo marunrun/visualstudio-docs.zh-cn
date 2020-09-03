@@ -1,5 +1,5 @@
 ---
-title: IDebugenumfield：：从价值中获取字符串 |微软文档
+title: IDebugEnumField：： GetStringFromValue |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 5de59c573f7e233ea2aacb0dfa38826051c59373
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80730284"
 ---
 # <a name="idebugenumfieldgetstringfromvalue"></a>IDebugEnumField::GetStringFromValue
@@ -43,16 +43,16 @@ int GetStringFromValue(
 
 ## <a name="parameters"></a>参数
 `value`\
-[在]要获取枚举常量名称的值。
+中要为其获取枚举常量名称的值。
 
 `pbstrValue`\
-[出]返回枚举常量的名称。
+弄返回枚举常量的名称。
 
 ## <a name="return-value"></a>返回值
- 如果成功，返回`S_OK`;否则，如果`S_FALSE`值没有关联名称，则返回，或者返回错误代码。
+ 如果成功， `S_OK` 则返回; 否则， `S_FALSE` 如果值没有关联的名称，则返回; 否则返回错误代码。
 
 ## <a name="remarks"></a>备注
- 如果有多个名称与同一值关联，则将返回枚举中定义的第一个名称。
+ 如果有多个与同一值关联的名称，则将返回在枚举中定义的第一个名称。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IDebugEnumField](../../../extensibility/debugger/reference/idebugenumfield.md)

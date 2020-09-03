@@ -1,5 +1,5 @@
 ---
-title: IDebugGenericParamField：获取索引 |微软文档
+title: IDebugGenericParamField：： GetIndex |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -14,10 +14,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 6b31acd57685058795186fcecb73164218d5ad15
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80727981"
 ---
 # <a name="idebuggenericparamfieldgetindex"></a>IDebugGenericParamField::GetIndex
@@ -39,13 +39,13 @@ int GetIndex(
 
 ## <a name="parameters"></a>参数
 `pIndex`\
-[出]此泛型参数的索引值。
+弄此泛型参数的索引值。
 
 ## <a name="return-value"></a>返回值
-如果成功，返回`S_OK`;否则，返回错误代码。
+如果成功， `S_OK` 则返回; 否则返回错误代码。
 
 ## <a name="remarks"></a>备注
-例如，对于字典（K，V），K 是索引 0，V 是索引 1。
+例如，对于字典 (K，V) ，K 为索引0，V 为索引1。
 
 ## <a name="example"></a>示例
 下面的示例演示如何为公开[IDebugGenericParamField](../../../extensibility/debugger/reference/idebuggenericparamfield.md)接口的**CDebugGenericParamFieldType**对象实现此方法。
@@ -68,5 +68,5 @@ Error:
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IDebugGenericParamField](../../../extensibility/debugger/reference/idebuggenericparamfield.md)

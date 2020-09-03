@@ -1,5 +1,5 @@
 ---
-title: IDebugError 突破点决议2：：获取断点类型 |微软文档
+title: IDebugErrorBreakpointResolution2：： GetBreakpointType |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: f933baed55216054ecfec3b3b4c29f15da652ba4
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80730048"
 ---
 # <a name="idebugerrorbreakpointresolution2getbreakpointtype"></a>IDebugErrorBreakpointResolution2::GetBreakpointType
@@ -41,16 +41,16 @@ int GetBreakpointType(
 
 ## <a name="parameters"></a>参数
 `pBPType`\
-[出]从描述断点类型的[BP_TYPE](../../../extensibility/debugger/reference/bp-type.md)枚举中返回值。
+弄返回 [BP_TYPE](../../../extensibility/debugger/reference/bp-type.md) 枚举中的一个值，该值描述断点的类型。
 
 ## <a name="return-value"></a>返回值
-如果成功，返回`S_OK`;否则，返回错误代码。
+如果成功， `S_OK` 则返回; 否则返回错误代码。
 
 ## <a name="remarks"></a>备注
-此方法返回未能绑定的断点类型，因此需要错误断点事件。
+此方法返回无法绑定的断点的类型，因此需要一个错误断点事件。
 
 ## <a name="example"></a>示例
-下面的示例演示如何为公开`CDebugErrorBreakpointResolution`[IDebugErrorBreakpoint2](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2.md)接口的简单对象实现此方法。
+下面的示例演示如何为 `CDebugErrorBreakpointResolution` 公开 [IDebugErrorBreakpointResolution2](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2.md) 接口的简单对象实现此方法。
 
 ```
 HRESULT CDebugErrorBreakpointResolution::GetBreakpointType(BP_TYPE* pBPType)
@@ -83,6 +83,6 @@ HRESULT CDebugErrorBreakpointResolution::GetBreakpointType(BP_TYPE* pBPType)
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IDebugErrorBreakpointResolution2](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2.md)
 - [BP_TYPE](../../../extensibility/debugger/reference/bp-type.md)

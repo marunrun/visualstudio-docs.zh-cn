@@ -1,5 +1,5 @@
 ---
-title: IDebugEngineProgram2：：：观看线程步骤 |微软文档
+title: IDebugEngineProgram2：： WatchForThreadStep |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: cf0474d527b7c6f1d180201a463f52a0b17d18fa
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80730355"
 ---
 # <a name="idebugengineprogram2watchforthreadstep"></a>IDebugEngineProgram2::WatchForThreadStep
-监视在给定线程上执行（或停止监视执行）。
+监视执行 (或停止监视执行) 在给定线程上发生。
 
 ## <a name="syntax"></a>语法
 
@@ -47,25 +47,25 @@ int WatchForThreadStep( 
 
 ## <a name="parameters"></a>参数
 `pOriginatingProgram`\
-[在][IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)对象，表示正在步进的程序。
+中表示正在进行的程序的 [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) 对象。
 
 `dwTid`\
-[在]指定要监视的线程的标识符。
+中指定要监视的线程的标识符。
 
 `fWatch`\
-[在]非零 （）`TRUE`表示开始在 所`dwTid`标识的线程上监视执行。否则，零`FALSE`（） 表示停止监视在`dwTid`执行 。
+中非零 (`TRUE`) 表示开始监视由标识的线程上的执行 `dwTid` ; 否则，零 (`FALSE`) 表示停止在上监视执行 `dwTid` 。
 
 `dwFrame`\
-[在]指定控制步骤类型的帧索引。 当此值为零 （0）时，步骤类型为"进入"，每当执行标识`dwTid`的线程时，程序都应停止。 当`dwFrame`是非零时，步骤类型为"步长"，并且仅当标识`dwTid`的线程在堆栈上的索引等于或高于`dwFrame`的帧中运行时，程序才应停止。
+中指定控制步骤类型的帧索引。 如果此值为零 (0) ，则步骤类型为 "单步执行"，并在通过执行识别的线程时，程序应停止 `dwTid` 。 如果 `dwFrame` 为非零，则步骤类型为 "逐过程"，程序应仅在 `dwTid` 其索引与堆栈上的索引等于或高于的帧中运行时才应停止 `dwFrame` 。
 
 ## <a name="return-value"></a>返回值
- 如果成功，返回`S_OK`;否则，返回错误代码。
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。
 
 ## <a name="remarks"></a>备注
- 当会话调试管理器 （SDM） 步步由`pOriginatingProgram`参数标识的程序时，它会通过调用此方法通知所有其他附加的程序。
+ 当会话调试管理器 (SDM) 执行由参数标识的程序时， `pOriginatingProgram` 它会通过调用此方法通知所有其他附加程序。
 
- 此方法仅适用于同一线程步进。
+ 此方法仅适用于线程单步执行。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IDebugEngineProgram2](../../../extensibility/debugger/reference/idebugengineprogram2.md)
 - [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)
