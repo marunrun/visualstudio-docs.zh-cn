@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 3c6171a5dedfd6985a6f54e748011bf86e03f4d3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72664653"
 ---
 # <a name="element-xelement-dynamic-property"></a>元素（XElement 动态属性）
@@ -37,5 +37,5 @@ elem.Element[{namespaceName}localName]
 ## <a name="remarks"></a>备注
  此属性等效于 <xref:System.Xml.Linq.XContainer.Element%2A> 类的 <xref:System.Xml.Linq.XContainer?displayProperty=fullName> 方法。
 
-## <a name="see-also"></a>请参阅
- <xref:System.Xml.Linq.XContainer.Element%2A?displayProperty=fullName> [System.xml.linq.xelement> 类动态属性](../designers/xelement-class-dynamic-properties.md)[元素](../designers/elements-xelement-dynamic-property.md)
+## <a name="see-also"></a>另请参阅
+ <xref:System.Xml.Linq.XContainer.Element%2A?displayProperty=fullName>[System.xml.linq.xelement> 类动态属性](../designers/xelement-class-dynamic-properties.md)[元素](../designers/elements-xelement-dynamic-property.md)

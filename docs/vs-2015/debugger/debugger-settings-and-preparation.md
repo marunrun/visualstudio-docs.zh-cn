@@ -1,5 +1,5 @@
 ---
-title: 调试器设置和准备工作 |Microsoft Docs
+title: 调试器设置和准备 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -20,10 +20,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 1199a28d83dc519b40466cda37ed966cc7ee51e4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68198880"
 ---
 # <a name="debugger-settings-and-preparation"></a>调试器设置和准备
@@ -49,7 +49,7 @@ ms.locfileid: "68198880"
  [如何：调试不属于 Visual Studio 解决方案的可执行文件](../debugger/how-to-debug-an-executable-not-part-of-a-visual-studio-solution.md)  
  解释如何调试未作为 Visual Studio 项目的一部分创建的可执行文件。  
   
- [如何：使用 Code Center Premium 源进行调试](../debugger/how-to-debug-with-code-center-premium-source.md)  
+ [如何：调试 Code Center Premium 源代码](../debugger/how-to-debug-with-code-center-premium-source.md)  
  描述如何在 Visual Studio 项目中调试来自 Microsoft Code Center Premium 的源代码。  
   
  [调试 64 位应用程序](../debugger/debug-64-bit-applications.md)  
@@ -61,6 +61,6 @@ ms.locfileid: "68198880"
  [如何：指定用于调试的 .NET Framework 版本](../debugger/how-to-specify-a-dotnet-framework-version-for-debugging.md)  
  描述如何设置注册表项以指示调试器使用哪个版本。  
   
-## <a name="see-also"></a>请参阅  
- [调试器安全](../debugger/debugger-security.md)   
+## <a name="see-also"></a>另请参阅  
+ [调试器安全性](../debugger/debugger-security.md)   
  [在 Visual Studio 中进行调试](../debugger/debugging-in-visual-studio.md)

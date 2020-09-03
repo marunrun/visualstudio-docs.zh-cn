@@ -15,10 +15,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: a9381f990c8a43e848370e1251e163dad81a10e9
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85817341"
 ---
 # <a name="expected-while"></a>应有“while”
@@ -28,6 +28,6 @@ ms.locfileid: "85817341"
   
 - 在 `while` 右大括号后面包含测试语句。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [while 语句](../../javascript/reference/while-statement-javascript.md)   
  [控制程序流](../../javascript/controlling-program-flow-javascript.md)

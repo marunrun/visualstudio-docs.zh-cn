@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 6d1158a12de8b8adfe20fa6d045b756abf8d7b3c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72665498"
 ---
 # <a name="runexit-devenvexe"></a>/Runexit (devenv.exe)
@@ -31,7 +31,7 @@ ms.locfileid: "72665498"
 devenv /runexit {SolutionName|ProjectName}
 ```
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
  `SolutionName`（必需）。 解决方案文件的完整路径和名称。
 
  `ProjectName`（必需）。 项目文件的完整路径和名称。
@@ -41,7 +41,7 @@ devenv /runexit {SolutionName|ProjectName}
 
 - 用双引号将含有空格的字符串引起来。
 
-- “命令”窗口或使用 `/out` 开关指定的任何日志文件中都可显示摘要信息（包括错误）  。
+- “命令”窗口或使用 `/out` 开关指定的任何日志文件中都可显示摘要信息（包括错误）****。
 
 ## <a name="example"></a>示例
  此示例会在最小化的 IDE 中使用活动部署配置运行解决方案 `MySolution`，然后关闭 IDE。
@@ -51,4 +51,4 @@ devenv /runexit "C:\Documents and Settings\someuser\My Documents\Visual Studio\P
 ```
 
 ## <a name="see-also"></a>另请参阅
- [Devenv 命令行开关](../../ide/reference/devenv-command-line-switches.md) [/Run （devenv）](../../ide/reference/run-devenv-exe.md) [/Build （node.js）](../../ide/reference/build-devenv-exe.md) [/Rebuild （](../../ide/reference/rebuild-devenv-exe.md) devenv） [/out （devenv](../../ide/reference/out-devenv-exe.md) ）
+ [Devenv 命令行开关](../../ide/reference/devenv-command-line-switches.md) [/Run ( # A0) ](../../ide/reference/run-devenv-exe.md) [/Build ( # A1) ](../../ide/reference/build-devenv-exe.md) [/Rebuild ( # A2) ](../../ide/reference/rebuild-devenv-exe.md) [/out ( # A3) ](../../ide/reference/out-devenv-exe.md)

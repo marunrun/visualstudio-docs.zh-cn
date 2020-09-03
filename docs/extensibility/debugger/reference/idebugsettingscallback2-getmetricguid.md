@@ -1,5 +1,5 @@
 ---
-title: IDebugSettings 回拨2：：获取MetricGuid |微软文档
+title: IDebugSettingsCallback2：： GetMetricGuid |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -14,14 +14,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 08f03e0d09db17e3dbcda30588191ff3efcb1c41
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80719974"
 ---
 # <a name="idebugsettingscallback2getmetricguid"></a>IDebugSettingsCallback2::GetMetricGuid
-检索指标的唯一标识符（给定其名称）。
+根据给定的名称检索指标的唯一标识符。
 
 ## <a name="syntax"></a>语法
 
@@ -45,19 +45,19 @@ private int GetMetricGuid(
 
 ## <a name="parameters"></a>参数
 `pszType`\
-[在]指标的类型。
+中度量值的类型。
 
 `guidSection`\
-[在]节的唯一标识符。
+中部分的唯一标识符。
 
 `pszMetric`\
-[在]指标的名称。
+中度量值的名称。
 
 `pguidValue`\
-[出]返回指标的唯一标识符。
+弄返回度量值的唯一标识符。
 
 ## <a name="return-value"></a>返回值
- 如果成功，返回`S_OK`;否则，返回错误代码。
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IDebugSettingsCallback2](../../../extensibility/debugger/reference/idebugsettingscallback2.md)

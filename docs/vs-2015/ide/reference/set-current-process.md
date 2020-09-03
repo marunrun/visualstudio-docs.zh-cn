@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: c362d3f5dda5015e91ac88dd8f0abd60a185ba72
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72665467"
 ---
 # <a name="set-current-process"></a>设置当前进程
@@ -30,7 +30,7 @@ ms.locfileid: "72665467"
 Debug.SetCurrentProcess index
 ```
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
  `index`（必需）。 进程的索引。
 
 ## <a name="remarks"></a>备注
@@ -43,4 +43,4 @@ Debug.SetCurrentProcess index
 ```
 
 ## <a name="see-also"></a>另请参阅
- [Visual studio](../../ide/reference/visual-studio-commands.md) "命令"[窗口](../../ide/reference/command-window.md) [visual studio 命令别名](../../ide/reference/visual-studio-command-aliases.md)
+ [Visual studio](../../ide/reference/visual-studio-commands.md) "命令" [窗口](../../ide/reference/command-window.md) [visual studio 命令别名](../../ide/reference/visual-studio-command-aliases.md)

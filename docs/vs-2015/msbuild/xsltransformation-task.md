@@ -18,10 +18,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 1705fd2b79f8b5044aa4ffa0b65801d6db6c7f33
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68198953"
 ---
 # <a name="xsltransformation-task"></a>XslTransformation 任务
@@ -32,7 +32,7 @@ ms.locfileid: "68198953"
 ## <a name="parameters"></a>参数  
  下表描述了 `XslTransformation` 任务的参数。  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |`OutputPaths`|必选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 指定 XML 转换的输出文件。|  
 |`Parameters`|可选 `String` 参数。<br /><br /> 指定 XSLT 输入文档的参数。|  
@@ -43,8 +43,8 @@ ms.locfileid: "68198953"
 |`XslInputPath`|可选 <xref:Microsoft.Build.Framework.ITaskItem> 参数。<br /><br /> 指定 XSLT 输入文件。|  
   
 ## <a name="remarks"></a>备注  
- 除了具有表中列出的参数外，此任务还将从本身继承自 <xref:Microsoft.Build.Utilities.Task> 类的 <xref:Microsoft.Build.Tasks.TaskExtension> 类继承参数。 有关这些其他参数的列表及其说明的信息，请参阅 [TaskExtension Base Class](../msbuild/taskextension-base-class.md)。  
+ 除了具有表中列出的参数外，此任务还将从本身继承自 <xref:Microsoft.Build.Utilities.Task> 类的 <xref:Microsoft.Build.Tasks.TaskExtension> 类继承参数。 有关这些其他参数及其说明的列表，请参阅 [TaskExtension 基类](../msbuild/taskextension-base-class.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [任务](../msbuild/msbuild-tasks.md)   
- [任务参考](../msbuild/msbuild-task-reference.md)
+ [操作](../msbuild/msbuild-tasks.md)   
+ [任务引用](../msbuild/msbuild-task-reference.md)

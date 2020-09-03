@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 383101679827f19b9a85d36f0f5a39eb772c68ec
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72664684"
 ---
 # <a name="elements-xelement-dynamic-property"></a>元素（XElement 动态属性）
@@ -41,5 +41,5 @@ elem.Elements[{namespaceName}localName]
 
  此属性使用延迟执行。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [System.xml.linq.xelement> 类动态属性](../designers/xelement-class-dynamic-properties.md)[元素](../designers/element-xelement-dynamic-property.md)[后代](../designers/descendants-xelement-dynamic-property.md)
