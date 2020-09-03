@@ -1,5 +1,5 @@
 ---
-title: 隐藏元素（可视化工作室模板） |微软文档
+title: Visual Studio 模板 (的隐藏元素) |Microsoft Docs
 ms.date: 04/17/2019
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,15 +14,15 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 9943cefe2b624cede19c05eddd88f155f4aa4c5b
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80711113"
 ---
-# <a name="hidden-element-visual-studio-templates"></a>隐藏元素（可视化工作室模板）
+# <a name="hidden-element-visual-studio-templates"></a>Visual Studio 模板 (隐藏元素) 
 
-指定模板是显示在新项目还是 **"添加新项目"** 对话框中。
+指定模板是否出现在 "新建项目" 或 " **添加新项** " 对话框中。
 
 ```xml
 <VSTemplate>
@@ -53,23 +53,23 @@ ms.locfileid: "80711113"
 
 |元素|描述|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|必需元素。<br /><br /> 将此模板分类并定义此模板在 **“新建项目”** 或 **“添加新项”** 对话框中的显示方式。|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|必需的元素。<br /><br /> 将此模板分类并定义此模板在 **“新建项目”** 或 **“添加新项”** 对话框中的显示方式。|
 
 ## <a name="text-value"></a>文本值
 
 需要一个文本值。
 
-文本必须为 或`true``false`，指示模板是否将显示在 **"新项目**"或 **"添加新项目"** 对话框中。
+文本必须是 `true` 或 `false` ，指示模板是否将出现在 " **新建项目** " 或 " **添加新项** " 对话框中。
 
 ## <a name="remarks"></a>备注
 
 `Hidden` 是可选元素。
 
-如果指定，则不需要`TemplateData`元素的其他子元素。
+如果已指定，则不需要元素的其他子元素 `TemplateData` 。
 
 ## <a name="example"></a>示例
 
-下面的示例说明了 C# 模板的元数据。
+下面的示例演示 c # 模板的元数据。
 
 ```xml
 <VSTemplate Type="Project" Version="3.0.0"
@@ -96,7 +96,7 @@ ms.locfileid: "80711113"
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [模板架构引用](../extensibility/visual-studio-template-schema-reference.md)
+- [模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
 - [创建项目和项模板](../ide/creating-project-and-item-templates.md)

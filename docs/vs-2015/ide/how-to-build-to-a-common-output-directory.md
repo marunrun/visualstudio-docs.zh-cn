@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: f85ff51b93383d2deca409a00a3db130d52b5003
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72645419"
 ---
 # <a name="how-to-build-to-a-common-output-directory"></a>如何：生成到公共输出目录
@@ -29,11 +29,11 @@ ms.locfileid: "72645419"
 
 1. 单击解决方案中的项目。
 
-2. 在“项目”菜单上，单击“属性”。
+2. 在 **“项目”** 菜单上，单击 **“属性”** 。
 
-3. 根据项目的类型，单击“编译”选项卡或“生成”选项卡，并将“输出路径”设置为适用于解决方案中所有项目的文件夹。
+3. 根据项目的类型，单击“编译”选项卡或“生成”选项卡，并将“输出路径”设置为适用于解决方案中所有项目的文件夹    。
 
 4. 为解决方案中的所有项目重复 1-3 步骤。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [编译和生成](../ide/compiling-and-building-in-visual-studio.md)[如何：更改生成输出目录](../ide/how-to-change-the-build-output-directory.md)

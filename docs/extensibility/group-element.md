@@ -1,5 +1,5 @@
 ---
-title: 组元素 |微软文档
+title: Group 元素 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 26479257511d74f122dd4064330f5b6a1e8dadd3
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80711236"
 ---
 # <a name="group-element"></a>Group 元素
@@ -34,25 +34,25 @@ ms.locfileid: "80711236"
 
 ### <a name="attributes"></a>特性
 
-|特性|描述|
+|特性|说明|
 |---------------|-----------------|
 |guid|必需。 GUID/ID 命令标识符的 GUID。|
 |id|必需。 GUID/ID 命令标识符的 ID。|
-|priority|可选。 指定优先级的数值。|
-|条件|可选。 请参阅[条件属性](../extensibility/vsct-xml-schema-conditional-attributes.md)。|
+|priority|可选。 一个指定优先级的数值。|
+|条件|可选。 请参阅 [条件特性](../extensibility/vsct-xml-schema-conditional-attributes.md)。|
 
 ### <a name="child-elements"></a>子元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
 |Parent|可选。 按钮的父元素。|
 |Annotation|可选注释。|
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
-|[组元素](../extensibility/groups-element.md)|包含定义 VSPackage 的命令组的条目。|
+|[Groups 元素](../extensibility/groups-element.md)|包含定义 VSPackage 的命令组的项。|
 
 ## <a name="example"></a>示例
 
@@ -62,5 +62,5 @@ ms.locfileid: "80711236"
 </Group>
 ```
 
-## <a name="see-also"></a>请参阅
-- [可视化工作室命令表 （.vsct） 文件](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+## <a name="see-also"></a>另请参阅
+- [Visual Studio 命令表 ( .vsct) 文件](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

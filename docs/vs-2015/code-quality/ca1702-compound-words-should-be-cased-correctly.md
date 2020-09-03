@@ -16,29 +16,29 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: f9dc15cec4012d2b63eb5f21c25bd709961c95c8
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85544074"
 ---
 # <a name="ca1702-compound-words-should-be-cased-correctly"></a>CA1702:组合词应采用正确的大小写
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-有关 Visual Studio 的最新文档，请参阅[CA1702：复合词应采用正确的大小写](/visualstudio/code-quality/ca1702-compound-words-should-be-cased-correctly)。
+有关 Visual Studio 的最新文档，请参阅 [CA1702：复合词应采用正确的大小写](/visualstudio/code-quality/ca1702-compound-words-should-be-cased-correctly)。
 
-|Item|值|
+|项|值|
 |-|-|
 |TypeName|CompoundWordsShouldBeCasedCorrectly|
 |CheckId|CA1702|
-|Category|Microsoft。命名|
+|类别|Microsoft。命名|
 |是否重大更改|重大-对程序集引发时。<br /><br /> 不间断-在类型参数上触发时。|
 
 ## <a name="cause"></a>原因
  标识符的名称包含多个字词，其中至少有一个单词显示为大小写不正确的组合词。
 
 ## <a name="rule-description"></a>规则描述
- 标识符的名称拆分为基于大小写的单词。 Microsoft 拼写检查器库检查每个连续两个单词的组合。 如果识别，标识符将生成规则冲突。 导致冲突的组合词的示例包括 "CheckSum" 和 "多部分"，分别应以 "Checksum" 和 "多部分" 的大小写形式。 由于以前的常见用法，规则中内置了几个例外，并标记了几个单个字词（如 "Toolbar" 和 "Filename"），其大小写应为两个不同的单词（在本例中为 "ToolBar" 和 "FileName"）。
+ 标识符的名称拆分为基于大小写的单词。 Microsoft 拼写检查器库检查每个连续两个单词的组合。 如果识别，标识符将生成规则冲突。 导致冲突的组合词的示例包括 "CheckSum" 和 "多部分"，分别应以 "Checksum" 和 "多部分" 的大小写形式。 由于以前的常见用法，规则中内置了几个例外，并标记了几个单个字词（如 "Toolbar" 和 "Filename"），其大小写形式应为两个不同的单词 (在本例中为 "ToolBar" 和 "FileName" ) 。
 
  命名约定为面向公共语言运行时的库提供了通用的外观。 这减少了新软件库所需的学习曲线，并使客户可以放心地了解库是由具有开发托管代码的专业技能的人员开发的。
 

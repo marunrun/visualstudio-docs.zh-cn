@@ -6,19 +6,19 @@ author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 10/23/2018
 ms.openlocfilehash: d488d56bdecd2801ecd94a2551c3be0f9834d0d7
-ms.sourcegitcommit: 2ce59c2ffeba5ba7f628c2e6c75cba4731deef8a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85938674"
 ---
 # <a name="install-and-use-visual-studio-for-mac-behind-a-firewall-or-proxy-server"></a>在防火墙或代理服务器后面安装和使用 Visual Studio for Mac
 
 如果你或贵组织使用防火墙或代理服务器等安全措施，则会有可能需要将其添加到“允许列表”的域，以及可能需要打开的端口和协议，以便在安装和使用 Visual Studio for Mac 以及 Azure 服务时获得最佳体验。
 
-- [安装 Visual Studio for Mac](#install-visual-studio-for-mac)  ：这些表包括必须允许连接的域，以便你有权访问 Visual Studio for Mac 的所有功能和工作负载。
+- [安装 Visual Studio for Mac](#install-visual-studio-for-mac)：这些表包括必须允许连接的域，以便你有权访问 Visual Studio for Mac 的所有功能和工作负载。
 
-- [使用 Visual Studio for Mac](#use-visual-studio-for-mac)  ：这些包包括必须允许连接的域，以便你有权访问相关功能。
+- [使用 Visual Studio for Mac](#use-visual-studio-for-mac)：这些包包括必须允许连接的域，以便你有权访问相关功能。
 
 ## <a name="install-visual-studio-for-mac"></a>安装 Visual Studio for Mac
 

@@ -8,10 +8,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: ef7f72010623d20e79a327877a512f0b7352bac5
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85542566"
 ---
 # <a name="share-code-maps"></a>共享代码图
@@ -22,13 +22,13 @@ ms.locfileid: "85542566"
 
 使用“文件” **** 菜单保存代码图。
 
-\- 或 -
+- 或 -
 
 若要将地图保存为特定项目的一部分，请在地图工具栏上**Share**选择 "  >  **将" 移动 \<CodeMapName> 到**"" 共享 "，然后选择要在其中保存地图的项目。
 
 ![将映射移动到另一个项目中](../modeling/media/codemapsmovemapmenu.png)
 
-Visual Studio 将映射保存为 *.dgml*文件，您可以与 Visual Studio Enterprise 和 Visual Studio Professional 的其他用户共享。
+Visual Studio 将映射保存为 *.dgml* 文件，您可以与 Visual Studio Enterprise 和 Visual Studio Professional 的其他用户共享。
 
 > [!NOTE]
 > 在与使用 Visual Studio Professional 的用户共享代码图之前，请确保展开所有组、显示隐藏节点和跨组链接，并检索希望其他人在你的代码图上查看的所有已删除的节点。 否则，其他用户将无法查看这些项目。
@@ -55,8 +55,8 @@ Visual Studio 将映射保存为 *.dgml*文件，您可以与 Visual Studio Ente
 
 2. 浏览到你要保存文件的位置。
 
-3. 对代码图命名。 请确保将 "**保存类型**" 框设置为 " **xps 文件（ \* .xps）**"。 选择 **“保存”** 。
+3. 对代码图命名。 请确保将 " **保存类型** " 框设置为 " **xps 文件 (.xps \*) **。 选择 **“保存”** 。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [映射与代码图的依赖项](../modeling/map-dependencies-across-your-solutions.md)
