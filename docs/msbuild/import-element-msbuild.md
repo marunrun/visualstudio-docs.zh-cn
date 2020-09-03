@@ -19,17 +19,18 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 7d9e66934015c7c4a57c7d7c6911b9ebe02ac536
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "79094495"
 ---
 # <a name="import-element-msbuild"></a>Import 元素 (MSBuild)
 
 将一个项目文件的内容导入其他项目文件中。
 
-\<Project> \<Import>
+\<Project>
+\<Import>
 
 ## <a name="syntax"></a>语法
 
@@ -52,7 +53,7 @@ ms.locfileid: "79094495"
 
 ### <a name="child-elements"></a>子元素
 
- None
+ 无
 
 ### <a name="parent-elements"></a>父元素
 
@@ -65,7 +66,7 @@ ms.locfileid: "79094495"
 
  使用 `Import` 元素可以重复使用对许多项目文件通用的代码。 这样可以更轻松地维护代码，因为对共享的代码进行的任何更新都会传播到导入它的所有项目。
 
- 按照约定，共享导入项目文件会保存为 .targets  文件，但它们是标准 MSBuild 项目文件。 MSBuild 不会阻止导入具有不同文件扩展名的项目，但是我们建议使用 .targets  扩展名以保持一致性。
+ 按照约定，共享导入项目文件会保存为 .targets 文件，但它们是标准 MSBuild 项目文件。 MSBuild 不会阻止导入具有不同文件扩展名的项目，但是我们建议使用 .targets 扩展名以保持一致性。
 
  导入项目中的相对路径会相对于导入项目的目录进行解释。（此段落后面介绍的一些例外情况除外）。 因此，如果项目文件导入位于不同位置的多个项目文件中，则导入项目文件中的相对路径对于每个导入项目会以不同方式进行解释。 有两种例外情况。 一个例外是，在 `Import` 元素中，路径始终相对于包含 `Import` 元素的项目进行解释。 另一个例外是，`UsingTask` 始终解释 `AssemblyFile` 属性相对于包含 `UsingTask` 元素的文件的相对路径。
 
@@ -79,7 +80,7 @@ ms.locfileid: "79094495"
 
  在 .NET Framework 4 中，MSBuild 允许在项目属性中使用通配符。 存在通配符时，找到的所有匹配项会进行排序（实现可再现性），随后它们会按该顺序导入（如同显式设置了该顺序一样）。
 
- 如果要提供一个扩展点，以便其他人可以导入文件而无需将文件名显式添加到导入文件，则这种行为十分有用。 因此，Microsoft.Common.Targets 在文件顶部包含以下行  。
+ 如果要提供一个扩展点，以便其他人可以导入文件而无需将文件名显式添加到导入文件，则这种行为十分有用。 因此，Microsoft.Common.Targets 在文件顶部包含以下行。
 
 ```xml
 <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\$(MSBuildThisFile)\ImportBefore\*" Condition="'$(ImportByWildcardBeforeMicrosoftCommonTargets)' == 'true' and exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\$(MSBuildThisFile)\ImportBefore')"/>
