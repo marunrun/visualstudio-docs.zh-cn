@@ -1,5 +1,5 @@
 ---
-title: False （Windows 脚本技术） |Microsoft Docs
+title: False (Windows 脚本技术) |Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
@@ -18,14 +18,14 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: d97ecad48c8daa9613ea4035c07e82a07c72c077
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85817328"
 ---
 # <a name="false-windows-script-technologies"></a>False（Windows 脚本技术）
 **False**关键字的值等于0。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [True 关键字](../../javascript/misc/true-keyword.md)

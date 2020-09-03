@@ -15,19 +15,19 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: 7ff759681ca3e4f48f264e00f9e376487dfe4d24
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85817302"
 ---
 # <a name="expected-end"></a>应为 " \@ end"
-您尝试创建有条件编译的代码块，但没有在 <strong>@end</strong> 末尾包含语句。 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]通过在块中包含语句，可以有条件地编译 <strong>@if/@end</strong> 。  
+您尝试创建有条件编译的代码块，但没有在 <strong>@end</strong> 末尾包含语句。 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 通过在块中包含语句，可以有条件地编译 <strong>@if/@end</strong> 。  
   
 ### <a name="to-correct-this-error"></a>更正此错误  
   
 - 添加相应的 <strong>@end</strong> 语句。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [条件编译](../../javascript/advanced/conditional-compilation-javascript.md)   
  [条件编译变量](../../javascript/advanced/conditional-compilation-variables-javascript.md)

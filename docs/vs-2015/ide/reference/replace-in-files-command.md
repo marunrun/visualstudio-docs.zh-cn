@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 3d5088366548c9f92d04f1b65a3afc378db29d6a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72665606"
 ---
 # <a name="replace-in-files-command"></a>“在文件中替换”命令
@@ -35,7 +35,7 @@ Edit.ReplaceinFiles findwhat replacewith [/all] [/case]
 [/reset] [/stop] [/sub] [/text2] [/wild] [/word]
 ```
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
  `findwhat`（必需）。 要匹配的文本。
 
  `replacewith`（必需）。 用于替换匹配文本的文本。
@@ -65,18 +65,18 @@ Edit.ReplaceinFiles findwhat replacewith [/all] [/case]
 
  /sub 或 /s（可选）。 搜索在 /lookin:`searchpath` 参数中指定的目录中的子文件夹。
 
- /text2 或 /2（可选）。 在“查找结果 2”窗口中显示替换结果  。
+ /text2 或 /2（可选）。 在“查找结果 2”窗口中显示替换结果****。
 
  /wild 或 /l（可选）。 使用在 `findwhat` 参数中作为表示形式进行预定义的特殊字符来表示字符或字符序列。
 
  /word 或 /w（可选）。 仅搜索全字。
 
 ## <a name="example"></a>示例
- 此示例搜索 `btnCancel` 并将其替换为“我的 visual studio 项目”文件夹中所有 .cls 文件中的 `btnReset` 并在“查找结果 2”窗口显示替换信息  。
+ 此示例搜索 `btnCancel` 并将其替换为“我的 visual studio 项目”文件夹中所有 .cls 文件中的 `btnReset` 并在“查找结果 2”窗口显示替换信息****。
 
 ```
 >Edit.ReplaceinFiles btnCancel btnReset /lookin:"c:/my visual studio projects" /ext:.cls /text2
 ```
 
 ## <a name="see-also"></a>另请参阅
- [查找和替换](../../ide/finding-and-replacing-text.md) ["在文件中替换"](../../ide/replace-in-files.md) [命令窗口](../../ide/reference/command-window.md)"[查找/命令" 框](../../ide/find-command-box.md) [visual studio](../../ide/reference/visual-studio-commands.md)命令[visual studio 命令别名](../../ide/reference/visual-studio-command-aliases.md)
+ [查找和替换](../../ide/finding-and-replacing-text.md) ["在文件中替换"](../../ide/replace-in-files.md) [命令窗口](../../ide/reference/command-window.md)" [查找/命令" 框](../../ide/find-command-box.md) [visual studio](../../ide/reference/visual-studio-commands.md)命令 [visual studio 命令别名](../../ide/reference/visual-studio-command-aliases.md)
