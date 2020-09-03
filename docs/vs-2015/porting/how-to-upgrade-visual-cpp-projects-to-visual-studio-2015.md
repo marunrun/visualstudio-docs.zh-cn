@@ -13,10 +13,10 @@ author: corob-msft
 ms.author: corob
 manager: jillfra
 ms.openlocfilehash: 23461fb1927cfcbf738d2dbcb82e3977b3be265a
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77278724"
 ---
 # <a name="how-to-upgrade-visual-c-projects-to-visual-studio-2015"></a>如何：将 Visual C++ 项目升级到 Visual Studio 2015
@@ -41,7 +41,7 @@ ms.locfileid: "77278724"
   - 你可以通过允许 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 进行本主题稍后所述的更改来更新项目。 如果你的解决方案中的 Visual C++ 项目超过一个，则必须将它们全部更新。
 
     > [!NOTE]
-    > 如果你在系统首次提醒时拒绝更新，则可以稍后在“项目”  菜单上选择“更新 VC++ 项目”  来更新项目。 如果此命令未出现，则不需要更新。
+    > 如果你在系统首次提醒时拒绝更新，则可以稍后在“项目” **** 菜单上选择“更新 VC++ 项目” **** 来更新项目。 如果此命令未出现，则不需要更新。
 
 ## <a name="upgrading-a-visual-c-project"></a>升级 Visual C++ 项目
  如果你允许 [!INCLUDE[vs_dev14](../includes/vs-dev14-md.md)] 自动更新项目，则要进行以下更改：
@@ -54,4 +54,4 @@ ms.locfileid: "77278724"
  如果要继续在 [!INCLUDE[vs_dev14](../includes/vs-dev14-md.md)]中使用自定义的 PlatformToolset，则该工具集必须位于 x86 计算机的 %ProgramFiles%\MSBuild\Microsoft.Cpp\v4.0\Platforms\Win32\PlatformToolsets\ 下，或位于 x64 计算机的 %ProgramFiles (x86)%\MSBuild\Microsoft.Cpp\v4.0\Platforms\Win32\PlatformToolsets\ 下。 有关如何创建自定义 PlatformToolset 的信息，请参见 Visual C++ 团队博客上的 [C++ 本机多目标](https://blogs.msdn.com/b/vcblog/archive/2009/12/08/c-native-multi-targeting.aspx) 。
 
 ## <a name="see-also"></a>另请参阅
- [Visual C++ 移植和升级指南](https://msdn.microsoft.com/library/f5fbcc3d-aa72-41a6-ad9a-a706af2166fb)[移植、迁移和升级 Visual Studio 项目](../porting/porting-migrating-and-upgrading-visual-studio-projects.md)
+ [Visual C++ 移植和升级指南](https://msdn.microsoft.com/library/f5fbcc3d-aa72-41a6-ad9a-a706af2166fb) [移植、迁移和升级 Visual Studio 项目](../porting/porting-migrating-and-upgrading-visual-studio-projects.md)
