@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: e3d90185180cac5f526594650bde0a8f380c7668
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72666527"
 ---
 # <a name="how-to-generate-an-xml-snippet-from-an-xml-schema"></a>如何：从 XML 架构生成 XML 代码段
@@ -51,23 +51,23 @@ ms.locfileid: "72666527"
 
 #### <a name="to-create-a-new-xml-file-and-associate-it-with-an-xml-schema"></a>新建 XML 文件并将其与 XML 架构关联
 
-1. 在 "**文件**" 菜单上，指向 "**新建**"，然后单击 "**文件**"。
+1. 在“文件”菜单上指向“新建”，再单击“文件”  。
 
-2. 在 "**模板**" 窗格中选择 " **XML 文件**"，然后单击 "**打开**"。
+2. 在“模板”窗格中选择“XML 文件”，再单击“打开”  。
 
      新文件将在编辑器中打开。 该文件包含默认的 XML 声明 `<?xml version="1.0" encoding="utf-8">`。
 
-3. 在文档 "属性" 窗口中，单击 "**架构**" 字段上的 "浏览" 按钮（ **...** ）。
+3. 在文档 "属性" 窗口中，单击 "**架构**" 字段上的 "浏览"**按钮 (") "。**
 
-     将显示 " **XSD 架构**" 对话框。
+     此时显示“XSD 架构”对话框。
 
 4. 单击 **添加**。
 
-     随即显示 "**打开 XSD 架构**" 对话框。
+     此时显示“打开 XSD 架构”对话框。
 
-5. 选择该架构文件并单击 "**打开**"。
+5. 选择架构文件并单击“打开”。
 
-6. 单击“确定”。
+6. 单击 **“确定”** 。
 
      现在，XML 架构已与 XML 文档关联。
 
@@ -77,15 +77,15 @@ ms.locfileid: "72666527"
 
 2. 成员列表中显示可能的项：
 
-     **!--** 添加注释。
+     **!--** 用于添加注释。
 
-     **!DOCTYPE**来添加文档类型。
+     **!DOCTYPE** 用于添加文档类型。
 
-     **?** 添加处理指令。
+     **?** 用于添加处理指令。
 
-     **Contact**来添加根元素。
+     **Contact** 用于添加根元素。
 
-3. 从成员列表中选择 "**联系人**"，然后按 enter。
+3. 从成员列表中选择 " **联系人** "，然后按 enter。
 
      编辑器将添加开始标记 `<Contact` 并将光标置于元素名的后面。
 
@@ -153,5 +153,5 @@ ms.locfileid: "72666527"
 </Contact>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [Xml 代码段](../xml-tools/xml-snippets.md)[如何：使用 xml 代码段](../xml-tools/how-to-use-xml-snippets.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebug内存上下文2 |微软文档
+title: IDebugMemoryContext2 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 7d20a1180e1162e7de3aee1c5d69facf8c193910
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80727427"
 ---
 # <a name="idebugmemorycontext2"></a>IDebugMemoryContext2
@@ -28,34 +28,34 @@ ms.locfileid: "80727427"
 IDebugMemoryContext2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>实施者说明
- 调试引擎 （DE） 实现此接口以表示内存中的地址。
+## <a name="notes-for-implementers"></a>实施者注意事项
+ 调试引擎 (DE) 实现此接口以表示内存中的地址。
 
-## <a name="notes-for-callers"></a>呼叫者备注
- 对[获取内存上下文](../../../extensibility/debugger/reference/idebugproperty2-getmemorycontext.md)或[获取内存上下文](../../../extensibility/debugger/reference/idebugreference2-getmemorycontext.md)的调用将返回此接口。 此外，在应用适当的算术运算后，对["添加](../../../extensibility/debugger/reference/idebugmemorycontext2-add.md)["和"减法"](../../../extensibility/debugger/reference/idebugmemorycontext2-subtract.md)的调用将返回此接口的新副本。
+## <a name="notes-for-callers"></a>调用方说明
+ 对 [GetMemoryContext](../../../extensibility/debugger/reference/idebugproperty2-getmemorycontext.md) 或 [GetMemoryContext](../../../extensibility/debugger/reference/idebugreference2-getmemorycontext.md) 的调用返回此接口。 此外，在应用适当的算术运算后，对添加和[减去](../../../extensibility/debugger/reference/idebugmemorycontext2-subtract.md)的调用[将](../../../extensibility/debugger/reference/idebugmemorycontext2-add.md)返回此接口的新副本。
 
 ## <a name="methods-in-vtable-order"></a>Vtable 顺序中的方法
- 下表显示了 的方法`IDebugMemoryContext2`。
+ 下表显示的方法 `IDebugMemoryContext2` 。
 
-|方法|描述|
+|方法|说明|
 |------------|-----------------|
 |[GetName](../../../extensibility/debugger/reference/idebugmemorycontext2-getname.md)|获取此上下文的用户可显示名称。|
 |[GetInfo](../../../extensibility/debugger/reference/idebugmemorycontext2-getinfo.md)|获取描述此上下文的信息。|
-|[添加](../../../extensibility/debugger/reference/idebugmemorycontext2-add.md)|将指定值添加到当前上下文的地址以创建新上下文。|
-|[减去](../../../extensibility/debugger/reference/idebugmemorycontext2-subtract.md)|从当前上下文的地址中减去指定值以创建新上下文。|
-|[比较](../../../extensibility/debugger/reference/idebugmemorycontext2-compare.md)|以比较标志指示的方式比较两个上下文。|
+|[添加](../../../extensibility/debugger/reference/idebugmemorycontext2-add.md)|将指定的值添加到当前上下文的地址，以创建新的上下文。|
+|[减去](../../../extensibility/debugger/reference/idebugmemorycontext2-subtract.md)|从当前上下文的地址减去指定的值以创建新的上下文。|
+|[比较](../../../extensibility/debugger/reference/idebugmemorycontext2-compare.md)|按比较标志所指示的方式对两个上下文进行比较。|
 
 ## <a name="remarks"></a>备注
- Visual Studio 的**内存**窗口调用[GetMemoryContext](../../../extensibility/debugger/reference/idebugproperty2-getmemorycontext.md) `IDebugMemoryContext2`以获取包含用于内存地址的计算表达式的接口。 然后，此上下文将传递到[ReadAt](../../../extensibility/debugger/reference/idebugmemorybytes2-readat.md)和[WriteAt](../../../extensibility/debugger/reference/idebugmemorybytes2-writeat.md)以指定要读取或写入的地址。
+ Visual Studio 的 " **内存** " 窗口调用 [GetMemoryContext](../../../extensibility/debugger/reference/idebugproperty2-getmemorycontext.md) 来获取 `IDebugMemoryContext2` 包含用于内存地址的计算表达式的接口。 然后，将此上下文传递给 [ReadAt](../../../extensibility/debugger/reference/idebugmemorybytes2-readat.md) 和 [WriteAt](../../../extensibility/debugger/reference/idebugmemorybytes2-writeat.md) ，以指定要读取或写入的地址。
 
 ## <a name="requirements"></a>要求
- 标题： msdbg.h
+ 标头： msdbg
 
- 命名空间：微软.VisualStudio.调试器.互通
+ 命名空间： VisualStudio
 
- 程序集：微软.VisualStudio.调试器.Interop.dll
+ 程序集： Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [核心接口](../../../extensibility/debugger/reference/core-interfaces.md)
 - [GetMemoryContext](../../../extensibility/debugger/reference/idebugproperty2-getmemorycontext.md)
 - [GetMemoryContext](../../../extensibility/debugger/reference/idebugreference2-getmemorycontext.md)

@@ -10,16 +10,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 10537fb64e6ae0ebbe185024b76442704437e273
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72668844"
 ---
 # <a name="options-page-debugging-node-properties"></a>“选项”页 ->“调试”节点属性
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-下表描述了与“选项”  对话框的“调试”  类别 `DTE.Properties("Debugging", <Property Page>)` 关联的页面（或属性集合）。
+下表描述了与“选项”**** 对话框的“调试”**** 类别 `DTE.Properties("Debugging", <Property Page>)` 关联的页面（或属性集合）。
 
 ## <a name="general"></a>常规
  `DTE.Properties("Debugging", "General")`
@@ -57,8 +57,8 @@ ms.locfileid: "72668844"
 |属性项名称|值|说明|
 |------------------------|-----------|-----------------|
 |EnableEditAndContinue|Get/Set (Boolean)|确定是否启用“编辑并继续”。 此选项适用于所有支持“编辑并继续”的语言。|
-|InvokedByCommands|Get/Set (Boolean)|确定当用户选择调试命令（例如“单步执行”  或“继续”  ）时，是否自动将“编辑并继续”应用代码更改。 此选项仅适用于本机代码。|
-|InvokedByCommandsAskFirst|Get/Set (Boolean)|确定当用户选择调试命令（例如“单步执行”  或“继续”  ）时，“编辑并继续”是否提示用户授权以应用代码更改。 此选项仅适用于本机代码。|
+|InvokedByCommands|Get/Set (Boolean)|确定当用户选择调试命令（例如“单步执行”**** 或“继续”****）时，是否自动将“编辑并继续”应用代码更改。 此选项仅适用于本机代码。|
+|InvokedByCommandsAskFirst|Get/Set (Boolean)|确定当用户选择调试命令（例如“单步执行”**** 或“继续”****）时，“编辑并继续”是否提示用户授权以应用代码更改。 此选项仅适用于本机代码。|
 |WarnAboutStaleCode|Get/Set (Boolean)|确定当“编辑并继续”导致执行过时或陈旧的代码时，调试器是否发出警告消息。 此选项仅适用于本机代码。|
 |RelinkChangesOnStop|Get/Set (Short)|确定当停止执行应用程序时，Visual Studio 是否重新链接由“编辑并继续”应用的代码更改。 此选项仅适用于本机代码。|
 |AllowPrecompiling|Get/Set (Short)|确定是否允许“编辑并继续”在后台加载预编译标头。 此选项仅适用于本机代码。|
@@ -72,7 +72,7 @@ ms.locfileid: "72668844"
 |JitNative|Get/Set (Boolean)|确定是否为本机代码启用实时调试。|
 |JitScript|Get/Set (Boolean)|确定是否为脚本代码启用实时调试。|
 
-## <a name="native"></a>Native
+## <a name="native"></a>本机
  `DTE.Properties("Debugging", "Native")`
 
 |属性项名称|值|说明|
@@ -81,4 +81,4 @@ ms.locfileid: "72668844"
 |EnableRPC|Get/Set (Boolean)|确定调试器是否可以单步执行 COM 远程过程调用。|
 
 ## <a name="see-also"></a>另请参阅
- [控制选项设置](https://msdn.microsoft.com/library/a09ed242-7494-4cde-bbd1-7a8ec617965d)[在 "选项](https://msdn.microsoft.com/library/d450422d-47c7-4eeb-9f9f-3286264bc5aa)页"[选项页、"字体和颜色" 节点属性](../../ide/reference/options-page-fonts-and-colors-node-properties.md)[选项页、文本编辑器节点属性](../../ide/reference/options-page-text-editor-node-properties.md)"[常规"、"调试"、"选项" 对话框中确定属性项的名称](../../debugger/general-debugging-options-dialog-box.md)"[编辑并继续"、"调试"、"选项" 对话框](https://msdn.microsoft.com/library/009d225f-ef65-463f-a146-e4c518f86103)[实时、调试、"选项" 对话框](../../debugger/just-in-time-debugging-options-dialog-box.md)
+ [控制选项设置](https://msdn.microsoft.com/library/a09ed242-7494-4cde-bbd1-7a8ec617965d)[在 "选项](https://msdn.microsoft.com/library/d450422d-47c7-4eeb-9f9f-3286264bc5aa)页" [、"字体和颜色" 节点属性](../../ide/reference/options-page-fonts-and-colors-node-properties.md)[选项页、"文本编辑器节点属性](../../ide/reference/options-page-text-editor-node-properties.md)" "[常规"、"调试"、"选项" 对话框](../../debugger/general-debugging-options-dialog-box.md)中的 "[编辑并继续"、"调试"、"选项" 对话框](https://msdn.microsoft.com/library/009d225f-ef65-463f-a146-e4c518f86103) [、"调试"、"选项" 对话框](../../debugger/just-in-time-debugging-options-dialog-box.md)中确定属性项的名称

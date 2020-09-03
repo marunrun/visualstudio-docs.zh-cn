@@ -64,9 +64,9 @@
           href: import-an-xcode-project.md
         - name: 在 XCode 和 Visual Studio 之间同步更改
           href: sync-changes-between-xcode-and-visual-studio.md
-        - name: 跨平台移动开发示例
+        - name: Cross-Platform Mobile Development Examples
           href: cross-platform-mobile-development-examples.md
-    - name: 开发通用 Windows 平台 (UWP) 的应用
+    - name: 开发面向通用 Windows 平台 (UWP) 的应用
       href: develop-apps-for-the-universal-windows-platform-uwp.md
     - name: 适用于 Android 的 Visual Studio 仿真程序
       items:

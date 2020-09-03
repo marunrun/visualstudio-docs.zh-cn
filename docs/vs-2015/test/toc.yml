@@ -122,9 +122,9 @@
               href: sample-excel-add-in-for-coded-ui-testing.md
             - name: 示例 Excel Communicator 接口
               href: sample-excel-communicator-interface.md
-            - name: 适用于 Excel 的示例编码的 UI 测试扩展
+            - name: 用于 Excel 的编码的 UI 测试扩展示例
               items:
-                - name: 适用于 Excel 的示例编码的 UI 测试扩展
+                - name: 用于 Excel 的编码的 UI 测试扩展示例
                   href: sample-coded-ui-test-extension-for-excel.md
                 - name: ExtensionPackage 类
                   href: sample-excel-extension-extensionpackage-class.md
@@ -158,7 +158,7 @@
               href: create-and-run-unit-tests-for-a-store-app-in-visual-studio.md
             - name: 对 C++ DLL 进行单元测试
               href: unit-testing-a-visual-cpp-dll-for-store-apps.md
-            - name: '对 C# 代码进行单元测试'
+            - name: 单元测试 C# 代码
               href: unit-testing-visual-csharp-code-in-a-store-app.md
             - name: 在测试资源管理器中运行单元测试
               href: run-unit-tests-for-store-apps-in-visual-studio.md
@@ -166,7 +166,7 @@
           items:
             - name: 使用静态代码分析来分析代码质量
               href: analyze-the-code-quality-of-store-apps-using-visual-studio-static-code-analysis.md
-            - name: '分析 Visual Basic 和 C# 代码质量'
+            - name: 分析 Visual Basic 和 C# 代码质量
               href: analyze-visual-basic-and-csharp-code-quality-in-store-apps-using-visual-studio-static-code-analysis.md
             - name: 分析 C++ 代码质量
               href: analyze-cpp-code-quality-of-store-apps-using-visual-studio-static-code-analysis.md

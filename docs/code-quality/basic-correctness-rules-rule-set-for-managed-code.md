@@ -9,15 +9,15 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: c38d8bc2eefe9c6116f9bde93e475cf332591471
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75573230"
 ---
 # <a name="basic-correctness-rules-rule-set-for-managed-code"></a>托管代码的“基本更正规则”规则集
 
-基本更正规则规则集重点介绍了使用框架 Api 时的逻辑错误和常见错误。 基本更正规则包括 "[托管建议规则](managed-recommended-rules-rule-set-for-managed-code.md)" 规则集中的规则。
+基本更正规则规则集重点介绍了使用框架 Api 时的逻辑错误和常见错误。 基本更正规则包括 " [托管建议规则](managed-recommended-rules-rule-set-for-managed-code.md) " 规则集中的规则。
 
 下表介绍了 Microsoft 基本更正规则集中的所有规则。
 

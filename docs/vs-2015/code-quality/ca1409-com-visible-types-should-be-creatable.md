@@ -16,27 +16,27 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 180a8d6bbc7f035fa0ae2eeafaa4e2c884cddc8d
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85547324"
 ---
 # <a name="ca1409-com-visible-types-should-be-creatable"></a>CA1409:COM 可见类型应该是可创建的
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|Item|值|
+|项|值|
 |-|-|
 |TypeName|ComVisibleTypesShouldBeCreatable|
 |CheckId|CA1409|
-|Category|Microsoft. 互操作性|
+|类别|Microsoft. 互操作性|
 |是否重大更改|不间断|
 
 ## <a name="cause"></a>原因
- 特别标记为对组件对象模型（COM）可见的引用类型包含公共参数化构造函数，但不包含公共默认（无参数）构造函数。
+ 一种引用类型，特别标记为对组件对象模型可见 (COM) 包含公共参数化构造函数，但不包含公共默认 (无参数) 构造函数。
 
 ## <a name="rule-description"></a>规则描述
- COM 客户端不能创建没有公共默认构造函数的类型。 但是，COM 客户端仍然可以访问该类型，如果另一种方法可用于创建类型并将其传递给客户端（例如，通过方法调用的返回值）。
+ COM 客户端不能创建没有公共默认构造函数的类型。 但是，COM 客户端仍然可以访问该类型，如果另一种方法可用于创建类型并将其传递给客户端 (例如，通过方法调用的返回值) 。
 
  规则将忽略派生自的类型 <xref:System.Delegate?displayProperty=fullName> 。
 

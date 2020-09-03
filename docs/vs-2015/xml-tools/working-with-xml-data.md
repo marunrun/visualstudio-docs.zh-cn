@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: a1692403d61c99febd30fe3829e5fadd7dd1c51a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72669499"
 ---
 # <a name="working-with-xml-data"></a>使用 XML 数据
@@ -48,16 +48,16 @@ XML 及其相关技术对 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visua
 > Professional Edition 和 Team Edition 支持 XSLT 调试。
 
 ## <a name="in-this-section"></a>本节内容
- [XML 编辑器](../xml-tools/xml-editor.md)介绍 "XML 编辑器"。
+ [XML 编辑器](../xml-tools/xml-editor.md) 介绍 "XML 编辑器"。
 
- [XML 架构设计器](../xml-tools/xml-schema-designer.md)讨论 XML 架构设计器并使用 XML 架构定义语言（XSD）架构。
+ [XML 架构设计器](../xml-tools/xml-schema-designer.md) 讨论 XML 架构设计器并使用 XML 架构定义语言 (XSD) 架构。
 
 ## <a name="related-sections"></a>相关章节
- [调试 XSLT](../xml-tools/debugging-xslt.md)讨论如何使用 Visual Studio 调试器调试样式表。
+ [调试 XSLT](../xml-tools/debugging-xslt.md) 讨论如何使用 Visual Studio 调试器调试样式表。
 
- [XML 标准参考](https://msdn.microsoft.com/79c78508-c9d0-423a-a00f-672e855de401)提供有关 XML 技术的信息，包括 XML、文档类型定义（DTD）、XML 架构定义语言（XSD）和 XSLT。
+ [XML 标准参考](https://msdn.microsoft.com/79c78508-c9d0-423a-a00f-672e855de401) 提供有关 XML 技术的信息，包括 XML、文档类型定义 (DTD) 、XML 架构定义语言 (XSD) 和 XSLT。
 
- [托管代码中的 XML Web Services](https://msdn.microsoft.com/c9a7dc25-3e68-4723-bfb7-de4320830196)讨论如何创建和部署 XML Web services，以及如何访问 XML Web services。
+ [托管代码中的 XML Web Services](https://msdn.microsoft.com/c9a7dc25-3e68-4723-bfb7-de4320830196) 讨论如何创建和部署 XML Web services，以及如何访问 XML Web services。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [Visual Studio 中的 XML 工具](../xml-tools/xml-tools-in-visual-studio.md)

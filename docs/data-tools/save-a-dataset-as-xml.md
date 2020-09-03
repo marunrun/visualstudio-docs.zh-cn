@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - data-storage
 ms.openlocfilehash: cc8854581903ab58a327ff18be7b3b7c0f860a3b
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85281729"
 ---
 # <a name="save-a-dataset-as-xml"></a>将数据集另存为 XML
@@ -33,7 +33,7 @@ ms.locfileid: "85281729"
 
 ## <a name="to-save-the-data-in-a-dataset-as-xml-to-a-variable"></a>将数据集中的数据以 XML 形式保存到变量
 
-- <xref:System.Data.DataSet.GetXml%2A> 方法返回 <xref:System.String>。 声明类型的变量 <xref:System.String> ，并为其分配方法的结果 <xref:System.Data.DataSet.GetXml%2A> 。
+- <xref:System.Data.DataSet.GetXml%2A> 方法会返回 <xref:System.String>。 声明类型的变量 <xref:System.String> ，并为其分配方法的结果 <xref:System.Data.DataSet.GetXml%2A> 。
 
      [!code-vb[VbRaddataSaving#12](../data-tools/codesnippet/VisualBasic/save-a-dataset-as-xml_1.vb)]
      [!code-csharp[VbRaddataSaving#12](../data-tools/codesnippet/CSharp/save-a-dataset-as-xml_1.cs)]
@@ -45,6 +45,6 @@ ms.locfileid: "85281729"
      [!code-vb[VbRaddataSaving#13](../data-tools/codesnippet/VisualBasic/save-a-dataset-as-xml_2.vb)]
      [!code-csharp[VbRaddataSaving#13](../data-tools/codesnippet/CSharp/save-a-dataset-as-xml_2.cs)]
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [将数据保存回数据库](../data-tools/save-data-back-to-the-database.md)

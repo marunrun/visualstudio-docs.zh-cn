@@ -16,20 +16,20 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 7f273ea5f58babf7a0c04f6b0758732d43aab7db
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85547766"
 ---
 # <a name="ca2107-review-deny-and-permit-only-usage"></a>CA2107:检查 deny 权限和 permit only 权限的使用情况
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|Item|值|
+|项|值|
 |-|-|
 |TypeName|ReviewDenyAndPermitOnlyUsage|
 |CheckId|CA2107|
-|Category|Microsoft.Security|
+|类别|Microsoft.Security|
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
@@ -40,7 +40,7 @@ ms.locfileid: "85547766"
 
  Deny 改变出现的堆栈审核的默认行为，以响应安全要求。 它使你能够指定在拒绝方法的持续时间内不得授予的权限，而不考虑调用堆栈中调用方的实际权限。 如果堆栈审核检测到受 Deny 保护的方法，并且所请求的权限包含在拒绝的权限中，堆栈审核会失败。 PermitOnly 还会改变堆栈审核的默认行为。 它允许代码仅指定可授予的权限，而与调用方的权限无关。 如果堆栈审核检测到由 PermitOnly 保护的方法，并且在 PermitOnly 指定的权限中未包含请求的权限，则堆栈审核会失败。
 
- 应认真评估依赖于这些操作的代码是否存在安全漏洞，因为它们的有用性和微妙行为有限。 请考虑下列各项：
+ 应认真评估依赖于这些操作的代码是否存在安全漏洞，因为它们的有用性和微妙行为有限。 考虑以下情况：
 
 - 拒绝或 PermitOnly 不会影响[链接需求](https://msdn.microsoft.com/library/a33fd5f9-2de9-4653-a4f0-d9df25082c4d)。
 

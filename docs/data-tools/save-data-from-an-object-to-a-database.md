@@ -16,17 +16,17 @@ manager: jillfra
 ms.workload:
 - data-storage
 ms.openlocfilehash: 4afa0d376366b154501e1a0e4488af57b4448a32
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85281651"
 ---
 # <a name="save-data-from-an-object-to-a-database"></a>将数据从对象保存到数据库
 
-可以通过将对象中的值传递给 TableAdapter 的 DBDirect 方法之一（例如），将对象中的数据保存到数据库 `TableAdapter.Insert` 。 有关详细信息，请参阅[TableAdapter](../data-tools/create-and-configure-tableadapters.md)。
+可以通过将对象中的值传递给某个 TableAdapter 的 DBDirect 方法来将对象中的数据保存到数据库中， (例如 `TableAdapter.Insert`) 。 有关详细信息，请参阅 [TableAdapter](../data-tools/create-and-configure-tableadapters.md)。
 
-若要保存对象集合中的数据，请遍历对象的集合（例如，next 循环），并使用 TableAdapter 的方法之一将每个对象的值发送到数据库 `DBDirect` 。
+若要保存对象集合中的数据，请遍历对象的集合， (例如，next 循环) ，并使用 TableAdapter 的方法之一将每个对象的值发送到数据库 `DBDirect` 。
 
 默认情况下， `DBDirect` 方法是在可以直接对数据库运行的 TableAdapter 上创建的。 可以直接调用这些方法，不需要 <xref:System.Data.DataSet> 或 <xref:System.Data.DataTable> 对象对更改进行协调以将更新发送到数据库。
 
@@ -72,10 +72,10 @@ ms.locfileid: "85281651"
      [!code-csharp[VbRaddataSaving#25](../data-tools/codesnippet/CSharp/save-data-from-an-object-to-a-database_3.cs)]
      [!code-vb[VbRaddataSaving#25](../data-tools/codesnippet/VisualBasic/save-data-from-an-object-to-a-database_3.vb)]
 
-## <a name="net-security"></a>.NET 安全性
+## <a name="net-security"></a>.NET 安全
 
 您必须有权在数据库中的表上执行所选的 `INSERT` 、 `UPDATE` 或 `DELETE` 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [将数据保存回数据库](../data-tools/save-data-back-to-the-database.md)

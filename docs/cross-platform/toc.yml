@@ -33,7 +33,7 @@
       href: application-lifecycle-management-alm-with-unity-apps.md
 - name: 使用 C++ 进行跨平台移动开发
   href: /cpp/cross-platform/
-- name: 开发通用 Windows 平台 (UWP) 的应用
+- name: 开发面向通用 Windows 平台 (UWP) 的应用
   href: develop-apps-for-the-universal-windows-platform-uwp.md
 - name: 适用于 Android 的 Visual Studio 仿真程序
   items:

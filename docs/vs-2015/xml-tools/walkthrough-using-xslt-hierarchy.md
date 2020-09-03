@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 46e6acc8f65a9c9589348508f57cc75b04c61ccc
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72669550"
 ---
 # <a name="walkthrough-using-xslt-hierarchy"></a>演练：使用 XSLT 层次结构
@@ -114,5 +114,5 @@ XSLT 层次结构工具简化了诸多 XML 开发任务。 XSLT 样式表通常�
 
 6. 当调试器在指令 `<xsl:include href="xslincludefile.xsl" />` 处停止运行时，请按“逐语句”按钮。 请注意，该调试可在所引用的样式表中继续进行。 该层次结构可见，并且设计器显示正确的路径。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [演练：XSLT 探查器](../xml-tools/walkthrough-xslt-profiler.md)
