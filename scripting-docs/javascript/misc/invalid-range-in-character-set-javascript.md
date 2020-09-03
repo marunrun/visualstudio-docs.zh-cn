@@ -1,5 +1,5 @@
 ---
-title: 字符集范围无效（JavaScript） |Microsoft Docs
+title: " (JavaScript) 的字符集中的范围无效 |Microsoft Docs"
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
@@ -15,10 +15,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: a81634a96fb85584c9176db8c72bfc5c3468dc2c
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85816873"
 ---
 # <a name="invalid-range-in-character-set-javascript"></a>字符集范围无效 (JavaScript)
@@ -33,6 +33,6 @@ var notGood = /[z-a]/;  // An invalid character range - z does not come before a
   
 - 仅使用单个字符编写正则表达式字符集，并确保它们的顺序正确。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [正则表达式对象](../../javascript/reference/regular-expression-object-javascript.md)   
- [正则表达式语法（JavaScript）](https://msdn.microsoft.com/library/1400241x)
+ [JavaScript)  (正则表达式语法 ](https://msdn.microsoft.com/library/1400241x)

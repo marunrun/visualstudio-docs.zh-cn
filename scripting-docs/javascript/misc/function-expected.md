@@ -15,14 +15,14 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: f177bf81a43c45dcff4cef3040c64425ed544057
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85816964"
 ---
 # <a name="function-expected"></a>缺少函数
-尝试对不是对象的对象调用某个**函数原型**方法 `Function` ，或在函数调用上下文中使用了对象。 例如，以下代码会产生此错误，因为**示例**不是函数。  
+尝试对不是对象的对象调用某个 **函数原型** 方法 `Function` ，或在函数调用上下文中使用了对象。 例如，以下代码会产生此错误，因为 **示例** 不是函数。  
   
 ```JavaScript  
 var example = new Object();  // Create a new object called "example".  
@@ -31,10 +31,10 @@ var x = example();           // Try and call example as if it were a function.
   
 ### <a name="to-correct-this-error"></a>更正此错误  
   
-- 仅对对象调用**函数原型**方法 `Function` 。  
+- 仅对对象调用 **函数原型** 方法 `Function` 。  
   
 - 确保使用函数调用运算符 `()` 来仅调用函数。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Function 对象](../../javascript/reference/function-object-javascript.md)   
  [prototype 属性 (Object)](../../javascript/reference/prototype-property-object-javascript.md)

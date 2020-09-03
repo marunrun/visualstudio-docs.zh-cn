@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: b953a97d557e28cce50f554acc03797d4be38220
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85534870"
 ---
 # <a name="ca1408-do-not-use-autodual-classinterfacetype"></a>CA1408:请不要使用 AutoDual ClassInterfaceType
@@ -33,7 +33,7 @@ ms.locfileid: "85534870"
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
- 组件对象模型（COM）可见类型被标记为 <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> 属性设置为的 `AutoDual` 值 <xref:System.Runtime.InteropServices.ClassInterfaceType> 。
+ 组件对象模型 (COM) 可见类型被标记为 <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> 属性设置为的 `AutoDual` 值 <xref:System.Runtime.InteropServices.ClassInterfaceType> 。
 
 ## <a name="rule-description"></a>规则描述
  使用双重接口的类型使客户端可以绑定到特定的接口布局。 如果在将来的版本中对该类型或任何基类型的布局进行更改，将中断绑定到该接口的 COM 客户端。 默认情况下，如果 <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> 未指定属性，则使用仅调度接口。

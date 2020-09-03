@@ -17,10 +17,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: e3de3246980ead0b20d471321a9696451aed81ac
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85534766"
 ---
 # <a name="ca2000-dispose-objects-before-losing-scope"></a>CA2000:丢失范围之前释放对象
@@ -42,7 +42,7 @@ ms.locfileid: "85534766"
 ## <a name="how-to-fix-violations"></a>如何解决冲突
  若要修复与此规则的冲突，请 <xref:System.IDisposable.Dispose%2A> 在对象的所有引用超出范围之前对其调用。
 
- 请注意，可以使用 `using` 语句（ `Using` 中的 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] ）来包装实现的对象 `IDisposable` 。 以这种方式包装的对象将在块关闭时自动释放 `using` 。
+ 请注意，可以使用 `using`) 中 (的语句 `Using` [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 来包装实现的对象 `IDisposable` 。 以这种方式包装的对象将在块关闭时自动释放 `using` 。
 
  在以下情况下，使用语句不足以保护 IDisposable 对象，并可能导致 CA2000 发生。
 
@@ -93,7 +93,7 @@ ms.locfileid: "85534766"
 
  若要解决此问题，可以在项目中禁用 Visual Basic 编译器发出溢出检查，也可以修改代码，如以下 CreateReader2 函数所示。
 
- 若要禁用溢出检查，请在解决方案资源管理器中右键单击项目名称，然后单击 "**属性**"。 单击 "**编译**"，单击 "**高级编译选项**"，然后选中 "**删除整数溢出检查**"。
+ 若要禁用溢出检查，请在解决方案资源管理器中右键单击项目名称，然后单击 " **属性**"。 单击 " **编译**"，单击 " **高级编译选项**"，然后选中 " **删除整数溢出检查**"。
 
 <!-- TODO: review snippet reference  [!CODE [FxCop.Reliability.CA2000.DisposeObjectsBeforeLosingScope.VBOverflow#1](FxCop.Reliability.CA2000.DisposeObjectsBeforeLosingScope.VBOverflow#1)]  -->
 
