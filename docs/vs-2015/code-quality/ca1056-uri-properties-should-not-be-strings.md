@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 87ed8f7a291c95e500196f511c6fec0f38cef68e
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85539407"
 ---
 # <a name="ca1056-uri-properties-should-not-be-strings"></a>CA1056:URI 属性不应是字符串
@@ -36,7 +36,7 @@ ms.locfileid: "85539407"
  类型声明的字符串属性的名称包含 "uri"、"Uri"、"urn"、"Urn"、"url" 或 "Url"。
 
 ## <a name="rule-description"></a>规则描述
- 此规则根据 Pascal 大小写约定将属性名称拆分为标记，并检查每个标记是否等于 "uri"、"Uri"、"urn"、"Urn"、"url" 或 "Url"。 如果存在匹配项，则该规则将假定属性表示统一资源标识符（URI）。 URI 的字符串表示形式容易导致分析和编码错误，并且可造成安全漏洞。 <xref:System.Uri?displayProperty=fullName>类以安全安全的方式提供这些服务。
+ 此规则根据 Pascal 大小写约定将属性名称拆分为标记，并检查每个标记是否等于 "uri"、"Uri"、"urn"、"Urn"、"url" 或 "Url"。 如果存在匹配项，则该规则假定属性表示 (URI) 的统一资源标识符。 URI 的字符串表示形式容易导致分析和编码错误，并且可造成安全漏洞。 <xref:System.Uri?displayProperty=fullName>类以安全安全的方式提供这些服务。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
  若要修复与此规则的冲突，请将属性更改为 <xref:System.Uri> 类型。

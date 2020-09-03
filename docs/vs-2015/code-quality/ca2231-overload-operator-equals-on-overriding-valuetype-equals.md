@@ -17,10 +17,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: f01495e4238461d0b1dfe5a13a208b528df1581f
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85540291"
 ---
 # <a name="ca2231-overload-operator-equals-on-overriding-valuetypeequals"></a>CA2231:重写 ValueType.Equals 时应重载相等运算符
@@ -37,7 +37,7 @@ ms.locfileid: "85540291"
  值类型会重写 <xref:System.Object.Equals%2A?displayProperty=fullName> ，但不实现相等运算符。
 
 ## <a name="rule-description"></a>规则描述
- 在大多数编程语言中，值类型没有对相等运算符（= =）的默认实现。 如果你的编程语言支持运算符重载，则应考虑实现相等运算符。 它的行为应与的行为相同 <xref:System.Object.Equals%2A> 。
+ 在大多数编程语言中，值类型的相等运算符 (= =) 没有默认实现。 如果你的编程语言支持运算符重载，则应考虑实现相等运算符。 它的行为应与的行为相同 <xref:System.Object.Equals%2A> 。
 
  不能在相等运算符的重载实现中使用默认的相等运算符。 这样做将导致堆栈溢出。 若要实现相等运算符，请在实现中使用对象 Equals 方法。 例如：
 

@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: babef652bbfa55d6549cf0e43ddae0920b3ff302
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85539485"
 ---
 # <a name="ca1054-uri-parameters-should-not-be-strings"></a>CA1054:URI 参数不应为字符串
@@ -36,7 +36,7 @@ ms.locfileid: "85539485"
  类型声明一个方法，该方法具有一个字符串参数，该字符串参数的名称中包含 "uri"、"Uri"、"urn"、"Urn"、"url" 或 "Url"，而类型未声明采用参数的对应重载 <xref:System.Uri?displayProperty=fullName> 。
 
 ## <a name="rule-description"></a>规则描述
- 此规则根据 camel 大小写约定将参数名称拆分为标记，并检查每个标记是否等于 "uri"、"Uri"、"urn"、"Urn"、"url" 或 "Url"。 如果有匹配项，则规则假定参数表示统一资源标识符（URI）。 URI 的字符串表示形式容易导致分析和编码错误，并且可造成安全漏洞。 如果方法采用 URI 的字符串表示形式，则应提供采用类的实例的相应重载 <xref:System.Uri> ，这将以安全安全的方式提供这些服务。
+ 此规则根据 camel 大小写约定将参数名称拆分为标记，并检查每个标记是否等于 "uri"、"Uri"、"urn"、"Urn"、"url" 或 "Url"。 如果存在匹配项，则规则假定参数表示 (URI) 的统一资源标识符。 URI 的字符串表示形式容易导致分析和编码错误，并且可造成安全漏洞。 如果方法采用 URI 的字符串表示形式，则应提供采用类的实例的相应重载 <xref:System.Uri> ，这将以安全安全的方式提供这些服务。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
  若要修复与此规则的冲突，请将参数更改为 <xref:System.Uri> 类型; 这是一项重大更改。 或者，提供采用参数的方法的重载 <xref:System.Uri> ; 这是一种不间断更改。

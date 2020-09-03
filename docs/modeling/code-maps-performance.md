@@ -8,10 +8,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 28cb2c4fd74716aa876c57517bb440fda513de5d
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75590535"
 ---
 # <a name="improve-performance-for-code-maps"></a>提高代码图的性能
@@ -22,14 +22,14 @@ ms.locfileid: "75590535"
 
 - 在生成整个解决方案的代码图之前，缩小解决方案范围。
 
-- 通过选择代码图工具栏上的 "**跳过生成**"，关闭解决方案的自动生成。
+- 通过选择代码图工具栏上的 " **跳过生成** "，关闭解决方案的自动生成。
 
-- 通过选择代码图工具栏上的 "**包括父级**" 来关闭自动添加父项。
+- 通过选择代码图工具栏上的 " **包括父级** " 来关闭自动添加父项。
 
    ![跳过“生成和包括父项”按钮](../modeling/media/codemapsfilterskipbuildicons.png)
 
 - 直接编辑代码图文件，以删除不需要的节点和链接。 更改代码图不会影响基础代码。 请参阅 [Customize code maps by editing the DGML files](../modeling/customize-code-maps-by-editing-the-dgml-files.md)。
 
-当项目项的 "**复制到输出目录**" 属性设置为 "**始终复制**" 时，可能需要花费更多时间来创建映射或将项添加到**解决方案资源管理器**的映射。 若要提高性能，请将此属性更改为“如果较新则复制” 或 `PreserveNewest`。 请参阅[增量生成](../msbuild/incremental-builds.md)。
+当项目项的 "**复制到输出目录**" 属性设置为 "**始终复制**" 时，可能需要花费更多时间来创建映射或将项添加到**解决方案资源管理器**的映射。 若要提高性能，请将此属性更改为“如果较新则复制” **** 或 `PreserveNewest`。 请参阅 [增量生成](../msbuild/incremental-builds.md)。
 
 完成的地图只显示成功生成的代码的依赖关系。 如果某些组件出现生成错误，这些错误会出现在代码图上。 在基于代码图做出体系结构决策时，请确保组件实际生成并且具有依赖项。

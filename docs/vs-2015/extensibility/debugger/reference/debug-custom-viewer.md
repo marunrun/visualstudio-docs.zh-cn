@@ -1,5 +1,5 @@
 ---
-title: DEBUG_CUSTOM_VIEWER | Microsoft Docs
+title: DEBUG_CUSTOM_VIEWER |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: d10e0811044d7169eaf46f48f53389fa7b3076ec
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68179171"
 ---
-# <a name="debugcustomviewer"></a>DEBUG_CUSTOM_VIEWER
+# <a name="debug_custom_viewer"></a>DEBUG_CUSTOM_VIEWER
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-标识自定义查看器的结构或类型可视化工具。  
+标识自定义查看器或类型可视化工具的结构。  
   
 ## <a name="syntax"></a>语法  
   
@@ -50,34 +50,34 @@ public struct DEBUG_CUSTOM_VIEWER {
   
 ## <a name="members"></a>成员  
  dwID  
- 一个 ID 来区分多个查看器或实现一个可视化工具`GUID`。  
+ 用于区分由一个或多个实现的查看器的 ID `GUID` 。  
   
  bstrMenuName  
- 将出现在下拉列表菜单文本。  
+ 将显示在下拉菜单中的文本。  
   
  bstrDescription  
- 如果未使用 （必须为 null 值） 的类型可视化工具的自定义查看器的说明。  
+ 如果未使用) ，则自定义查看器或类型可视化工具的说明 (必须为 null 值。  
   
  guidLang  
- 提供的表达式计算器的语言。  
+ 提供表达式计算器的语言。  
   
  guidVendor  
- 提供的表达式计算器的供应商。  
+ 提供表达式计算器的供应商。  
   
  bstrMetric  
- 指标在其下的自定义查看器或类型可视化工具`CLSID`存储。  
+ 用于存储自定义查看器或类型可视化工具的度量值 `CLSID` 。  
   
 ## <a name="remarks"></a>备注  
- 此结构的列表返回通过调用[GetCustomViewerList](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md)方法 (以及由此而[GetCustomViewerList](../../../extensibility/debugger/reference/ieevisualizerservice-getcustomviewerlist.md)方法)。  
+ 此结构的列表由对 [GetCustomViewerList](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md) 方法的调用返回， (，并通过扩展 [) 方法进行](../../../extensibility/debugger/reference/ieevisualizerservice-getcustomviewerlist.md) 。  
   
 ## <a name="requirements"></a>要求  
- 标头： msdbg.h  
+ 标头： msdbg  
   
- 命名空间:Microsoft.VisualStudio.Debugger.Interop  
+ 命名空间： VisualStudio  
   
- 程序集：Microsoft.VisualStudio.Debugger.Interop.dll  
+ 程序集： Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [结构和联合](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [GetCustomViewerList](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md)   
  [GetCustomViewerList](../../../extensibility/debugger/reference/ieevisualizerservice-getcustomviewerlist.md)
