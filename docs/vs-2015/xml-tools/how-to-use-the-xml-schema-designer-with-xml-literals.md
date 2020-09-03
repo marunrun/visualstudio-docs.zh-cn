@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: a9e82cf8387756cb4a4abe8b4c41d082485cdcdc
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72656296"
 ---
 # <a name="how-to-use-the-xml-schema-designer-with-xml-literals"></a>如何：将 XML 架构设计器用于 XML 文本
@@ -25,17 +25,17 @@ ms.locfileid: "72656296"
 
 1. 启动 Visual Studio 2010。
 
-2. 从 "**文件**" 菜单中选择 "**新建**"，然后选择 "**项目**"。 此时将出现“新建项目”对话框。 对于 "**项目类型**"，请选择 **"其他语言"，** 然后选择 " **Visual Basic**"。 对于 "**模板**"，选择 "控制台应用程序"。 然后，在 "**名称**" 字段中键入 `XMLLiterals`，并在 "**位置**" 字段中键入项目位置。 单击“确定”。
+2. 从“文件”**** 菜单，选择“新建”****，然后选择“项目”****。 此时将出现“新建项目”对话框。 对于 " **项目类型**"，请选择 **"其他语言"，** 然后选择 " **Visual Basic**"。 对于 " **模板**"，选择 "控制台应用程序"。 然后，在 `XMLLiterals` "**位置**" 字段中键入**Name**字段和项目位置。 单击" **确定**"。
 
      新项目创建完成。 XMLLiterals 项目包含一个 Visual Basic 源文件：Module1.vb。
 
 ### <a name="to-add-an-existing-xsd-file-to-the-project"></a>向项目中添加现有的 XSD 文件
 
-1. 在记事本中打开一个新的文本文件。从[采购订单架构](../xml-tools/sample-xsd-file-simple-schema.md)中复制 XML 架构示例代码，并将其粘贴到文件中。
+1. 在记事本中打开一个新的文本文件。从 [采购订单架构](../xml-tools/sample-xsd-file-simple-schema.md) 中复制 XML 架构示例代码，并将其粘贴到文件中。
 
 2. 使用文件名 PurchaseOrderSchema.xsd 将文件保存到某个位置。
 
-3. 在解决方案资源管理器中，右键单击项目的名称，选择 "**添加**"，然后选择 "**现有项 ...** "。 此时将显示 "**添加现有项**" 对话框。 浏览到 PurchaseOrderSchema 文件，选择它，然后单击 "**添加**"。
+3. 在解决方案资源管理器中，右键单击项目的名称，选择 " **添加**"，然后选择 " **现有项 ...**"。 此时出现“添加现有项”对话框。 浏览到 PurchaseOrderSchema 文件，选择它，然后单击 " **添加**"。
 
      XMLLiterals 项目现在包含两个文件：Module1.vb 和 PurchaseOrderSchema.xsd。
 
@@ -70,6 +70,6 @@ ms.locfileid: "72656296"
     End Module
     ```
 
-2. 右键单击 XML 文本或 XML 命名空间导入中的任何 XML 节点，然后选择 **"在架构资源管理器中显示"** 。
+2. 在 XML 文本或 XML 命名空间导入中右键单击任意 XML 节点，并选择“在架构资源管理器中显示”。
 
      此时将并排显示 XML 架构资源管理器和带有与 XML 架构集关联的 XML 文本的 Visual Basic 文件。

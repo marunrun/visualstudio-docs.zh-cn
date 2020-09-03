@@ -17,10 +17,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 80a7de83f118b38d9a3c71f1c7e7febf48e0f5bc
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85520505"
 ---
 # <a name="error-the-visual-studio-remote-debugger-service-on-the-target-computer-cannot-connect-back-to-this-computer"></a>错误：目标计算机上的 Visual Studio 远程调试器服务无法重新连接到此计算机 | Microsoft Docs
@@ -47,7 +47,7 @@ ms.locfileid: "85520505"
   
 ### <a name="to-correct-this-error"></a>更正此错误  
   
-1. 确保在远程计算机上正确设置“Visual Studio 远程调试器”服务。 有关详细信息，请参阅[在设备上设置远程工具](https://msdn.microsoft.com/library/90f45630-0d26-4698-8c1f-63f85a12db9c)。  
+1. 确保在远程计算机上正确设置“Visual Studio 远程调试器”服务。 有关详细信息，请参阅 [在设备上设置远程工具](https://msdn.microsoft.com/library/90f45630-0d26-4698-8c1f-63f85a12db9c)。  
   
 2. 以可以访问调试器主机的帐户运行远程调试器服务，如上表所示。  
   

@@ -16,24 +16,24 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: e115b4d327f1ac45673de491ceaffc90941e1111
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85546778"
 ---
 # <a name="ca1047-do-not-declare-protected-members-in-sealed-types"></a>CA1047:不要在密封类型中声明受保护的成员
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|Item|值|
+|项|值|
 |-|-|
 |TypeName|DoNotDeclareProtectedMembersInSealedTypes|
 |CheckId|CA1047|
-|Category|Microsoft. Design|
+|类别|Microsoft. Design|
 |是否重大更改|不间断|
 
 ## <a name="cause"></a>原因
- 公共类型为 `sealed` （ `NotInheritable` 在 Visual basic 中为），并声明受保护的成员或受保护的嵌套类型。 此规则不报告 <xref:System.Object.Finalize%2A> 方法冲突，这些方法必须遵循此模式。
+ 公共类型是 `sealed` `NotInheritable` 在 Visual basic) 中 (，并声明了一个受保护的成员或受保护的嵌套类型。 此规则不报告 <xref:System.Object.Finalize%2A> 方法冲突，这些方法必须遵循此模式。
 
 ## <a name="rule-description"></a>规则描述
  类型声明受保护的成员，使继承类型可以访问或重写该成员。 按照定义，不能从密封类型继承，这意味着不能调用密封类型上的受保护方法。

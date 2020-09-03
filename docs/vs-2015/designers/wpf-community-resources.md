@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 167fc2f80a8eaeddb121d208f714fe134c63a198
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75843882"
 ---
 # <a name="wpf-community-resources"></a>WPF 社区资源
@@ -24,7 +24,7 @@ Microsoft 公开各种社区资源以便于你了解、讨论 Windows Presentati
 ## <a name="community"></a>社区
  [WPF 论坛](https://social.msdn.microsoft.com/forums/en-US/wpf/threads/)
 
- [堆栈溢出](https://stackoverflow.com/questions/tagged/wpf)
+ [Stack Overflow](https://stackoverflow.com/questions/tagged/wpf)
 
  [WPF 团队博客](https://devblogs.microsoft.com/wpf/)
 
@@ -34,4 +34,4 @@ Microsoft 公开各种社区资源以便于你了解、讨论 Windows Presentati
 
 ## <a name="see-also"></a>另请参阅
 
-- [使用 Windows Presentation Foundation 创建新式桌面应用程序](../designers/create-modern-desktop-applications-with-windows-presentation-foundation.md)
+- [使用 Windows Presentation Foundation 创建现代桌面应用程序](../designers/create-modern-desktop-applications-with-windows-presentation-foundation.md)

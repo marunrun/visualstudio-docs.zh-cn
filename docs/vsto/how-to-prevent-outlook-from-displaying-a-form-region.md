@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 90da255beb0a85a302158feb1f9d5cc4981437eb
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85520129"
 ---
 # <a name="how-to-prevent-outlook-from-displaying-a-form-region"></a>如何：防止 Outlook 显示窗体区域
@@ -29,17 +29,17 @@ ms.locfileid: "85520129"
 
 1. 打开要修改的窗体区域的代码文件。
 
-2. 展开**窗体区域工厂**代码区域。
+2. 展开 **窗体区域工厂** 代码区域。
 
-3. 向 `FormRegionInitializing` 事件处理程序添加代码，用于将 <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> 类的属性设置 <xref:Microsoft.Office.Tools.Outlook.FormRegionInitializingEventArgs> 为**true**。
+3. 向 `FormRegionInitializing` 事件处理程序添加代码，用于将 <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> 类的属性设置 <xref:Microsoft.Office.Tools.Outlook.FormRegionInitializingEventArgs> 为 **true**。
 
-   在此示例中，如果联系人项不包含地址，则将 <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> 属性设置为**true**，并且不会显示窗体区域。
+   在此示例中，如果联系人项不包含地址，则将 <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> 属性设置为 **true**，并且不会显示窗体区域。
 
 ## <a name="example"></a>示例
  [!code-csharp[Trin_Outlook_FR_Separate#1](../vsto/codesnippet/CSharp/Trin_Outlook_FR_Separate_O12/MapIt.cs#1)]
  [!code-vb[Trin_Outlook_FR_Separate#1](../vsto/codesnippet/VisualBasic/Trin_Outlook_FR_Separate_O12/MapIt.vb#1)]
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [创建 Outlook 窗体区域](../vsto/creating-outlook-form-regions.md)
 - [演练：设计 Outlook 窗体区域](../vsto/walkthrough-designing-an-outlook-form-region.md)
 - [如何：向 Outlook 外接程序项目添加窗体区域](../vsto/how-to-add-a-form-region-to-an-outlook-add-in-project.md)

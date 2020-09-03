@@ -1,5 +1,5 @@
 ---
-title: 获取本地值 |微软文档
+title: 获取本地值 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,30 +13,30 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 75cc530f13de22a994eff70492f340059d2a5839
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80738610"
 ---
 # <a name="get-local-values"></a>获取本地值
 > [!IMPORTANT]
-> 在 Visual Studio 2015 中，这种实现表达式赋值器的方式被弃用。 有关实现 CLR 表达式赋值器的信息，请参阅[CLR 表达式赋值器](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators)和[托管表达式赋值器示例](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)。
+> 在 Visual Studio 2015 中，不推荐使用这种实现表达式计算器的方式。 有关实现 CLR 表达式计算器的信息，请参阅 [clr 表达式计算器](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) 和 [托管表达式计算器示例](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)。
 
-要获取本地值，Visual Studio 会为该本地工作室调用[GetPropertyInfo。](../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) 在此实现中，类`CFieldProperty`为每个本地实现 IDebugProperty2 接口。
+为了获取本地的值，Visual Studio 会为该本地调用 [GetPropertyInfo](../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) 。 在此实现中，类 `CFieldProperty` 为每个本地实现了 IDebugProperty2 接口。
 
-此实现`IDebugProperty2::GetPropertyInfo`执行以下任务：
+此实现 `IDebugProperty2::GetPropertyInfo` 执行以下任务：
 
-1. 从实例化并初始化类时填充[FIELD_INFO](../../extensibility/debugger/reference/field-info.md)结构获取本地名称、属性和属性。
+1. 在实例化和初始化类时，从 [FIELD_INFO](../../extensibility/debugger/reference/field-info.md) 结构中获取本地的名称、属性和特性。
 
-2. 从[IDebugField](../../extensibility/debugger/reference/idebugfield.md)对象获取本地类型。
+2. 从 [IDebugField](../../extensibility/debugger/reference/idebugfield.md) 对象获取本地的类型。
 
-3. 从`IDebugField`对象获取本地值。 此字段使用[IDebugBinder](../../extensibility/debugger/reference/idebugbinder.md)对象绑定到本地的内存位置，该值从生成的[IDebugObject 对象](../../extensibility/debugger/reference/idebugobject.md)获得。
+3. 从对象中获取本地的值 `IDebugField` 。 此字段使用 [IDebugBinder](../../extensibility/debugger/reference/idebugbinder.md) 对象绑定到本地的内存位置，并从生成的 [IDebugObject](../../extensibility/debugger/reference/idebugobject.md) 对象中获取值。
 
-4. 返回[DEBUG_PROPERTY_INFO](../../extensibility/debugger/reference/debug-property-info.md)结构中的所有请求属性。
+4. 返回 [DEBUG_PROPERTY_INFO](../../extensibility/debugger/reference/debug-property-info.md) 结构中所有请求的属性。
 
 ## <a name="managed-code"></a>托管代码
-此示例显示方法的本地托管`IDebugProperty2::GetPropertyInfo`代码的实现。 它还显示一个帮助器函数，`Field.GetType`用于获取字段的类型。 `Field.GetValue`显示在["评估局部变量](../../extensibility/debugger/evaluating-locals.md)"中。 帮助器函数`Field.MapModifiersToAttributes`（未显示）只需将字段[FIELD_MODIFIERS](../../extensibility/debugger/reference/field-modifiers.md)标志转换为[DBG_ATTRIB_FLAGS](../../extensibility/debugger/reference/dbg-attrib-flags.md)值。
+此示例演示了如何 `IDebugProperty2::GetPropertyInfo` 在托管代码中实现方法的局部变量。 它还显示 helper 函数， `Field.GetType` 该函数用于获取字段的类型。 `Field.GetValue` 在 " [评估局部变量](../../extensibility/debugger/evaluating-locals.md)" 中显示。 `Field.MapModifiersToAttributes` (不显示 helper 函数) 只是将字段的[FIELD_MODIFIERS](../../extensibility/debugger/reference/field-modifiers.md)标志转换为[DBG_ATTRIB_FLAGS](../../extensibility/debugger/reference/dbg-attrib-flags.md)值。
 
 ```csharp
 namespace EEMC
@@ -176,7 +176,7 @@ namespace EEMC
 ```
 
 ## <a name="unmanaged-code"></a>非托管代码
- 此示例显示方法在非托管`IDebugProperty2::GetPropertyInfo`代码中的本地的实现。 它还显示两个帮助器函数`FieldGetType``FieldGetValue`，分别用于获取字段的类型和值。 s`VARIANT`用于字段的值和类型，`VARIANT`因为 可以处理各种值类型。 在此实现中，`FieldGetValue`返回一个[IDebugField](../../extensibility/debugger/reference/idebugfield.md)对象，该对象稍后在调用`FieldGetPrimitiveValue`中转换为值（显示在["评估局部变量](../../extensibility/debugger/evaluating-locals.md)"中）。
+ 此示例演示了如何 `IDebugProperty2::GetPropertyInfo` 在非托管代码中实现方法的局部变量。 它还显示了两个 helper 函数， `FieldGetType` `FieldGetValue` 分别用于获取字段的类型和值。 将 `VARIANT` 用作字段的值，类型为 `VARIANT` 可处理各种值类型。 在此实现中， `FieldGetValue` 返回一个 [IDebugField](../../extensibility/debugger/reference/idebugfield.md) 对象，该对象稍后会转换为对 (的调用中显示的值， `FieldGetPrimitiveValue` 这会在 [评估局部变量](../../extensibility/debugger/evaluating-locals.md)) 中显示。
 
 ```cpp
 STDMETHODIMP CFieldProperty::GetPropertyInfo(
@@ -438,7 +438,7 @@ HRESULT FieldGetValue( in IDebugField* pfield, out VARIANT* pvarValue )
 }
 ```
 
-## <a name="see-also"></a>请参阅
-- [局部变量的样本实现](../../extensibility/debugger/sample-implementation-of-locals.md)
+## <a name="see-also"></a>另请参阅
+- [局部变量的示例实现](../../extensibility/debugger/sample-implementation-of-locals.md)
 - [获取本地属性](../../extensibility/debugger/getting-local-properties.md)
-- [评估上下文](../../extensibility/debugger/evaluation-context.md)
+- [计算上下文](../../extensibility/debugger/evaluation-context.md)

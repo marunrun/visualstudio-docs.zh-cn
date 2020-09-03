@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 85cc90170b2dc665bcdd5acd97860c47ef5a14c4
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74293869"
 ---
 # <a name="managing-application-settings-net"></a>管理应用程序设置 (.NET)
@@ -70,11 +70,11 @@ ms.locfileid: "74293869"
 
 例如，可以将诸如 SpecialSettings.settings 的文件添加到项目中。 虽然 `SpecialSettings` 类未在 `My` 命名空间中公开，但可以使用 **“查看代码”** 读取包含 `Partial Class SpecialSettings`的自定义设置文件。
 
-“设置设计器”首先搜索项目系统创建的 Settings.settings 文件；此文件是“项目设计器”在 **“设置”** 选项卡中显示的默认文件。Settings.settings 位于 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 项目的 My Project 文件夹和 [!INCLUDE[csprcs](../includes/csprcs-md.md)] 项目的 Properties 文件夹中。 然后，“项目设计器”在项目的根文件夹中搜索其他设置文件。 因此，你应当将自定义的设置文件放在此根文件夹中。 如果将 .settings 文件添加到项目中的其他地方，则“项目设计器”将无法找到此文件。
+"设置设计器" 首先搜索项目系统创建的 "设置" 文件;这是 "项目设计器" 在 " **设置** " 选项卡中显示的默认文件。设置。设置位于项目的 My Project 文件夹 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 和项目的 Properties 文件夹中 [!INCLUDE[csprcs](../includes/csprcs-md.md)] 。 然后，“项目设计器”在项目的根文件夹中搜索其他设置文件。 因此，你应当将自定义的设置文件放在此根文件夹中。 如果将 .settings 文件添加到项目中的其他地方，则“项目设计器”将无法找到此文件。
 
 ## <a name="accessing-or-changing-application-settings-at-run-time-in-visual-basic"></a>在运行时访问或更改 Visual Basic 应用程序的设置
 
-在 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 项目中，你可以使用 `My.Settings` 对象在运行时访问应用程序设置。 在 **“设置”** 页上，单击 **“查看代码”** 按钮以查看 Settings.vb 文件。 Settings.vb 定义 `Settings` 类，此类使你能够处理设置类上的以下事件： <xref:System.Configuration.ApplicationSettingsBase.SettingChanging>、 <xref:System.Configuration.ApplicationSettingsBase.PropertyChanged>、 <xref:System.Configuration.ApplicationSettingsBase.SettingsLoaded>和 <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>。 请注意，Settings.vb 中的 `Settings` 类是分部类，其中仅显示用户所有的代码，而不显示整个生成的类。 有关使用 `My.Settings` 对象访问应用程序设置的更多信息，请参阅 [Accessing Application Settings](https://msdn.microsoft.com/library/e38d0cc7-247a-46ca-ba04-f2913f0adb2e)的任何数据类型。
+在 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 项目中，你可以使用 `My.Settings` 对象在运行时访问应用程序设置。 在“设置”页上，单击“查看代码”按钮以查看 Settings.vb 文件********。 Settings.vb 定义 `Settings` 类，此类使你能够处理设置类上的以下事件： <xref:System.Configuration.ApplicationSettingsBase.SettingChanging>、 <xref:System.Configuration.ApplicationSettingsBase.PropertyChanged>、 <xref:System.Configuration.ApplicationSettingsBase.SettingsLoaded>和 <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>。 请注意，Settings.vb 中的 `Settings` 类是分部类，其中仅显示用户所有的代码，而不显示整个生成的类。 有关使用 `My.Settings` 对象访问应用程序设置的更多信息，请参阅 [Accessing Application Settings](https://msdn.microsoft.com/library/e38d0cc7-247a-46ca-ba04-f2913f0adb2e)的任何数据类型。
 
 在运行时用户更改的任何用户范围的设置的值（例如窗体的位置）都存储在 user.config 文件中。 请注意，默认值仍保存在 app.config 中。
 
@@ -98,7 +98,7 @@ Properties.Settings.Default.FirstUserSetting = "abc";
 Properties.Settings.Default.Save();
 ```
 
-有关通过 `Settings` 类访问应用程序设置的常规信息，请参阅 [Application Settings Overview](https://msdn.microsoft.com/library/0dd8bca5-a6bf-4ac4-8eec-5725d08b38dc)（应用程序设置概述）。 有关循环访问设置的信息，请参阅此 [论坛帖子](https://social.msdn.microsoft.com/Forums/en-US/40fbb470-f1e8-4a02-a4a0-9f62b54d0fc4/is-this-possible-propertiessettingsdefault?forum=csharpgeneral)。
+有关通过 `Settings` 类访问应用程序设置的常规信息，请参阅 [Application Settings Overview](https://msdn.microsoft.com/library/0dd8bca5-a6bf-4ac4-8eec-5725d08b38dc)的任何数据类型。 有关循环访问设置的信息，请参阅此 [论坛帖子](https://social.msdn.microsoft.com/Forums/en-US/40fbb470-f1e8-4a02-a4a0-9f62b54d0fc4/is-this-possible-propertiessettingsdefault?forum=csharpgeneral)。
 
 ## <a name="see-also"></a>另请参阅
 

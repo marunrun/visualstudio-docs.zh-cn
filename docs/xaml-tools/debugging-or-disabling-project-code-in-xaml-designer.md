@@ -7,10 +7,10 @@ author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.openlocfilehash: fba240c29cb8142a9ec4b4d28c71112c1974a5b1
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85331067"
 ---
 # <a name="debug-or-disable-project-code-in-xaml-designer"></a>在 XAML 设计器中调试或禁用项目代码
@@ -69,7 +69,7 @@ ms.locfileid: "85331067"
 
 - 在未处理的异常对话框中，选择“单击此处禁用正在运行的项目代码并重载设计器” **** 链接。
 
-- 或者，在**XAML 设计器**的工具栏中，选择 "**禁用项目代码**" 按钮。
+- 或者，在 **XAML 设计器**的工具栏中，选择 " **禁用项目代码** " 按钮。
 
      ![“禁用项目代码”按钮](media/xaml_disablecode.png)
 

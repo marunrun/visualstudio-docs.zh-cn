@@ -1,5 +1,5 @@
 ---
-title: IDebug属性3：：设置值带错误 |微软文档
+title: IDebugProperty3：： SetValueAsStringWithError |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: fb3441dabba1ff13600a9e505eeaec5ae93acd8e
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80721074"
 ---
 # <a name="idebugproperty3setvalueasstringwitherror"></a>IDebugProperty3::SetValueAsStringWithError
-设置此属性的值，并在必要时返回一条错误消息。
+如果需要，设置此属性的值并返回错误消息。
 
 ## <a name="syntax"></a>语法
 
@@ -47,19 +47,19 @@ int SetValueAsStringWithError(
 
 ## <a name="parameters"></a>参数
 `pszValue`\
-[在]要设置的值。
+中要设置的值。
 
 `dwRadix`\
-[在]要设置的值的半径。
+中所设置的值的基数。
 
 `dwTimeout`\
-[在]等待设置值的时间长度（`INFINITE`意味着永远等待）。
+中等待设置值所用的时间长度 (`INFINITE` 意味着永远) 等待。
 
 `errorString`\
-[出]如果设置该值时出现错误，则这保留失败的原因。
+弄如果设置值时发生错误，则会保存失败的原因。
 
 ## <a name="return-value"></a>返回值
-如果成功，返回`S_OK`;否则，返回错误代码。
+如果成功， `S_OK` 则返回; 否则返回错误代码。
 
 ## <a name="remarks"></a>备注
 传入值可以是要计算的表达式。
@@ -169,5 +169,5 @@ HRESULT CProperty::SetValueAsStringWithError(
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md)

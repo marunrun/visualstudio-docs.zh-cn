@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 9e94bedf95b58d9876d37eb496ede0c5ec9a8531
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72985458"
 ---
 # <a name="walkthrough-display-custom-task-panes-with-email-messages-in-outlook"></a>演练：在 Outlook 中用电子邮件显示自定义任务窗格
@@ -28,12 +28,12 @@ ms.locfileid: "72985458"
 
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]
 
- 若要使用多个资源管理器或检查器窗口显示自定义任务窗格，则必须为打开的每个窗口创建自定义任务窗格的实例。 有关 Outlook 窗口中自定义任务窗格的行为的详细信息，请参阅[自定义任务窗格](../vsto/custom-task-panes.md)。
+ 若要使用多个资源管理器或检查器窗口显示自定义任务窗格，则必须为打开的每个窗口创建自定义任务窗格的实例。 有关 Outlook 窗口中自定义任务窗格的行为的详细信息，请参阅 [自定义任务窗格](../vsto/custom-task-panes.md)。
 
 > [!NOTE]
 > 本演练分小段展示 VSTO 外接程序代码以便更容易讨论代码背后的逻辑。
 
- 本演练阐释了以下任务：
+ 本演练演示以下任务：
 
 - 设计自定义任务窗格的用户界面 (UI)。
 
@@ -50,8 +50,8 @@ ms.locfileid: "72985458"
 > [!NOTE]
 > 以下说明中的某些 Visual Studio 用户界面元素在计算机上出现的名称或位置可能会不同。 这些元素取决于你所使用的 Visual Studio 版本和你所使用的设置。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](../ide/personalizing-the-visual-studio-ide.md)。
 
-## <a name="prerequisites"></a>Prerequisites
- 你需要以下组件来完成本演练：
+## <a name="prerequisites"></a>先决条件
+ 您需要满足以下条件才能完成本演练：
 
 - [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]
 
@@ -60,58 +60,58 @@ ms.locfileid: "72985458"
 ## <a name="create-the-project"></a>创建项目
  自定义任务窗格是在 VSTO 外接程序中实现的。首先为 Outlook 创建 VSTO 外接程序项目。
 
-### <a name="to-create-a-new-project"></a>创建新项目
+### <a name="to-create-a-new-project"></a>创建新项目的步骤
 
-1. 创建名为 **OutlookMailItemTaskPane** 的“Outlook 外接程序”项目。 使用“Outlook 外接程序” 项目模板。 有关详细信息，请参阅[如何：在 Visual Studio 中创建 Office 项目](../vsto/how-to-create-office-projects-in-visual-studio.md)。
+1. 创建名为 **OutlookMailItemTaskPane** 的“Outlook 外接程序” **** 项目。 使用“Outlook 外接程序” **** 项目模板。 有关详细信息，请参阅 [如何：在 Visual Studio 中创建 Office 项目](../vsto/how-to-create-office-projects-in-visual-studio.md)。
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 此时将打开 *ThisAddIn.cs* 或 *ThisAddIn.vb* 代码文件，并将“OutlookMailItemTaskPane” 项目添加到“解决方案资源管理器”。
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 此时将打开 *ThisAddIn.cs* 或 *ThisAddIn.vb* 代码文件，并将“OutlookMailItemTaskPane” **** 项目添加到“解决方案资源管理器” ****。
 
 ## <a name="design-the-user-interface-of-the-custom-task-pane"></a>设计自定义任务窗格的用户界面
  自定义任务窗格没有可视化设计器，但你可以设计具有所需 UI 的用户控件。 此 VSTO 外接程序中的自定义任务窗格具有一个包含 <xref:System.Windows.Forms.TextBox> 控件的简单 UI。 稍后在本演练中，你将向自定义任务窗格添加用户控件。
 
 ### <a name="to-design-the-user-interface-of-the-custom-task-pane"></a>若要设计自定义任务窗格的用户界面
 
-1. 在“解决方案资源管理器”中，单击“OutlookMailItemTaskPane” 项目。
+1. 在“解决方案资源管理器” **** 中，单击“OutlookMailItemTaskPane” **** 项目。
 
-2. 在 **“项目”** 菜单上，单击 **“添加用户控件”** 。
+2. 在 **“项目”** 菜单上，单击 **“添加用户控件”**。
 
-3. 在“添加新项” 对话框中，将用户控件的名称更改为 **TaskPaneControl**，然后单击“添加”。
+3. 在“添加新项” **** 对话框中，将用户控件的名称更改为 **TaskPaneControl**，然后单击“添加” ****。
 
      用户控件将在设计器中打开。
 
-4. 从“工具箱” 的“公共控件”选项卡中，将 **TextBox** 控件拖到用户控件中。
+4. 从“工具箱” **** 的“公共控件” **** 选项卡中，将 **TextBox** 控件拖到用户控件中。
 
 ## <a name="design-the-user-interface-of-the-ribbon"></a>设计功能区的用户界面
  此 VSTO 外接程序的目标之一是为用户提供一种从每封电子邮件的功能区隐藏或显示自定义任务窗格的方法。 若要提供用户界面，请创建显示切换按钮的自定义功能区 UI，用户可以单击此按钮以显示或隐藏自定义任务窗格。
 
 ### <a name="to-create-a-custom-ribbon-ui"></a>若要创建自定义功能区 UI
 
-1. 在 **“项目”** 菜单上，单击 **“添加新项”** 。
+1. 在 **“项目”** 菜单上，单击 **“添加新项”**。
 
-2. 在 **“添加新项”** 对话框中，选择 **“功能区(可视化设计器)”** 。
+2. 在 **“添加新项”** 对话框中，选择 **“功能区(可视化设计器)”**。
 
-3. 将新功能区更名为 **ManageTaskPaneRibbon**，然后单击“添加”。
+3. 将新功能区更名为 **ManageTaskPaneRibbon**，然后单击“添加” ****。
 
      *ManageTaskPaneRibbon.cs* 或 *ManageTaskPaneRibbon.vb* 文件将在功能区设计器中打开，并显示一个默认选项卡和组。
 
-4. 在功能区设计器中，单击“Group1”。
+4. 在功能区设计器中，单击“Group1” ****。
 
-5. 在“属性” 窗口中，将“Label”属性 设置为 **Task Pane Manager**。
+5. 在“属性” **** 窗口中，将“Label”属性 **** 设置为 **Task Pane Manager**。
 
-6. 从“工具箱” 的“Office 功能区控件”选项卡中，将 ToggleButton 控件拖到“Task Pane Manager” 组。
+6. 从“工具箱” **** 的“Office 功能区控件” **** 选项卡中，将 ToggleButton 控件拖到“Task Pane Manager” **** 组。
 
-7. 单击“toggleButton1”。
+7. 单击“toggleButton1” ****。
 
-8. 在“属性” 窗口中，将“Label”属性 设置为 **Show Task Pane**。
+8. 在“属性” **** 窗口中，将“Label”属性 **** 设置为 **Show Task Pane**。
 
 ## <a name="display-the-custom-ribbon-user-interface-with-email-messages"></a>用电子邮件显示自定义功能区用户界面
  在本演练中创建的自定义任务窗格设计为仅与包含电子邮件的检查器窗口一起显示。 因此，可将属性设置为仅使用这些窗口显示自定义功能区 UI。
 
 ### <a name="to-display-the-custom-ribbon-ui-with-email-messages"></a>用电子邮件显示自定义功能区 UI
 
-1. 在功能区设计器中，单击“ManageTaskPaneRibbon” 功能区。
+1. 在功能区设计器中，单击“ManageTaskPaneRibbon” **** 功能区。
 
-2. 在“属性” 窗口中，单击“RibbonType”旁边的下拉列表，然后选择 **Microsoft.Outlook.Mail.Compose** 和 **Microsoft.Outlook.Mail.Read**。
+2. 在“属性” **** 窗口中，单击“RibbonType”旁边的下拉列表 ****，然后选择 **Microsoft.Outlook.Mail.Compose** 和 **Microsoft.Outlook.Mail.Read**。
 
 ## <a name="create-a-class-to-manage-inspector-windows-and-custom-task-panes"></a>创建一个类来管理检查器窗口和自定义任务窗格
  在某些情况下，VSTO 外接程序必须标识与特定电子邮件关联的自定义任务窗格。 这些情况包括以下几种：
@@ -122,11 +122,11 @@ ms.locfileid: "72985458"
 
 - 用户单击功能区上的切换按钮时。 在这种情况下，VSTO 外接程序必须隐藏或显示相应的任务窗格。
 
-  若要启用 VSTO 外接程序来跟踪哪个自定义任务窗格与每个打开的电子邮件相关联，请创建一个自定义类，用于包装对 <xref:Microsoft.Office.Interop.Outlook.Inspector> 和 <xref:Microsoft.Office.Tools.CustomTaskPane> 对象的配对。 此类为每封电子邮件创建一个新的自定义任务窗格对象，并在关闭相应的电子邮件时删除自定义任务窗格。
+  若要启用 VSTO 外接程序来跟踪哪个自定义任务窗格与每个打开的电子邮件相关联，请创建一个包装和对象对的自定义类 <xref:Microsoft.Office.Interop.Outlook.Inspector> <xref:Microsoft.Office.Tools.CustomTaskPane> 。 此类为每封电子邮件创建一个新的自定义任务窗格对象，并在关闭相应的电子邮件时删除自定义任务窗格。
 
 ### <a name="to-create-a-class-to-manage-inspector-windows-and-custom-task-panes"></a>创建一个类来管理检查器窗口和自定义任务窗格
 
-1. 在“解决方案资源管理器”中，右键单击“ThisAddIn.cs” 或“ThisAddIn.vb” 文件，然后单击“查看代码”。
+1. 在“解决方案资源管理器” **** 中，右键单击“ThisAddIn.cs” ** 或“ThisAddIn.vb” ** 文件，然后单击“查看代码” ****。
 
 2. 将下面的语句添加到文件的顶部。
 
@@ -148,7 +148,7 @@ ms.locfileid: "72985458"
      [!code-csharp[Trin_OutlookMailItemTaskPane#5](../vsto/codesnippet/CSharp/Trin_OutlookMailItemTaskPane/ThisAddIn.cs#5)]
      [!code-vb[Trin_OutlookMailItemTaskPane#5](../vsto/codesnippet/VisualBasic/Trin_OutlookMailItemTaskPane/ThisAddIn.vb#5)]
 
-6. 将以下方法添加在上一步添加的代码后。 此方法是包含当前电子邮件的 <xref:Microsoft.Office.Interop.Outlook.Inspector> 对象的 <xref:Microsoft.Office.Interop.Outlook.InspectorEvents_Event.Close> 事件的事件处理程序。 此事件处理程序在电子邮件关闭时释放资源。 事件处理程序还会从 `CustomTaskPanes` 集合删除当前的自定义任务窗格。 这有助于在打开下一封电子邮件时阻止自定义任务窗格的多个实例。
+6. 将以下方法添加在上一步添加的代码后。 此方法是 <xref:Microsoft.Office.Interop.Outlook.InspectorEvents_Event.Close> 包含当前电子邮件的对象的事件的事件处理程序 <xref:Microsoft.Office.Interop.Outlook.Inspector> 。 此事件处理程序在电子邮件关闭时释放资源。 事件处理程序还会从 `CustomTaskPanes` 集合删除当前的自定义任务窗格。 这有助于在打开下一封电子邮件时阻止自定义任务窗格的多个实例。
 
      [!code-csharp[Trin_OutlookMailItemTaskPane#6](../vsto/codesnippet/CSharp/Trin_OutlookMailItemTaskPane/ThisAddIn.cs#6)]
      [!code-vb[Trin_OutlookMailItemTaskPane#6](../vsto/codesnippet/VisualBasic/Trin_OutlookMailItemTaskPane/ThisAddIn.vb#6)]
@@ -159,7 +159,7 @@ ms.locfileid: "72985458"
      [!code-vb[Trin_OutlookMailItemTaskPane#7](../vsto/codesnippet/VisualBasic/Trin_OutlookMailItemTaskPane/ThisAddIn.vb#7)]
 
 ## <a name="initialize-and-clean-up-resources-used-by-the-add-in"></a>初始化和清理外接程序使用的资源
- 添加代码到 `ThisAddIn` 类以便在加载 VSTO 外接程序对其进行初始化，并在卸载 VSTO 外接程序时清理其使用的资源。 通过为 <xref:Microsoft.Office.Interop.Outlook.InspectorsEvents_Event.NewInspector> 事件设置事件处理程序并将所有现有的电子邮件传递给此事件处理程序来初始化 VSTO 外接程序。 VSTO 外接程序卸载时，分离事件处理程序并清理 VSTO 外接程序使用的对象。
+ 添加代码到 `ThisAddIn` 类以便在加载 VSTO 外接程序对其进行初始化，并在卸载 VSTO 外接程序时清理其使用的资源。 通过设置事件的事件处理程序 <xref:Microsoft.Office.Interop.Outlook.InspectorsEvents_Event.NewInspector> 并将所有现有的电子邮件传递给此事件处理程序来初始化 VSTO 外接程序。 VSTO 外接程序卸载时，分离事件处理程序并清理 VSTO 外接程序使用的对象。
 
 ### <a name="to-initialize-and-clean-up-resources-used-by-the-vsto-add-in"></a>若要初始化和清理 VSTO 外接程序使用的资源
 
@@ -184,7 +184,7 @@ ms.locfileid: "72985458"
     [!code-csharp[Trin_OutlookMailItemTaskPane#10](../vsto/codesnippet/CSharp/Trin_OutlookMailItemTaskPane/ThisAddIn.cs#10)]
     [!code-vb[Trin_OutlookMailItemTaskPane#10](../vsto/codesnippet/VisualBasic/Trin_OutlookMailItemTaskPane/ThisAddIn.vb#10)]
 
-5. 向 <xref:Microsoft.Office.Interop.Outlook.InspectorsEvents_Event.NewInspector> 类添加以下 `ThisAddIn` 事件处理程序。 如果新 <xref:Microsoft.Office.Interop.Outlook.Inspector> 包含电子邮件，则该方法将创建新的 `InspectorWrapper` 对象的实例以管理电子邮件和相应任务窗格之间的关系。
+5. 向 <xref:Microsoft.Office.Interop.Outlook.InspectorsEvents_Event.NewInspector> 类添加以下 `ThisAddIn` 事件处理程序。 如果新的 <xref:Microsoft.Office.Interop.Outlook.Inspector> 包含电子邮件，则该方法将创建新对象的实例 `InspectorWrapper` 来管理电子邮件和相应的任务窗格之间的关系。
 
     [!code-csharp[Trin_OutlookMailItemTaskPane#11](../vsto/codesnippet/CSharp/Trin_OutlookMailItemTaskPane/ThisAddIn.cs#11)]
     [!code-vb[Trin_OutlookMailItemTaskPane#11](../vsto/codesnippet/VisualBasic/Trin_OutlookMailItemTaskPane/ThisAddIn.vb#11)]
@@ -199,14 +199,14 @@ ms.locfileid: "72985458"
 
 ### <a name="to-build-your-project"></a>若要生成你的项目
 
-1. 在“解决方案资源管理器”中，右键单击 **OutlookMailItemTaskPane** 项目，然后单击“生成”。 验证此项目是否在编译时未发生错误。
+1. 在“解决方案资源管理器” **** 中，右键单击 **OutlookMailItemTaskPane** 项目，然后单击“生成” ****。 验证此项目是否在编译时未发生错误。
 
 ## <a name="synchronize-the-ribbon-toggle-button-with-the-custom-task-pane"></a>将功能区切换按钮与自定义任务窗格同步
  当任务窗格可见时，切换按钮将显示为按下状态，当任务窗格隐藏时，其显示为未按下状态。 若要将按钮状态与自定义任务窗格同步，请修改切换按钮的 <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Click> 事件处理程序。
 
 ### <a name="to-synchronize-the-custom-task-pane-with-the-toggle-button"></a>若要将自定义任务窗格与切换按钮同步
 
-1. 在功能区设计器中，双击“显示任务窗格” 切换按钮。
+1. 在功能区设计器中，双击“显示任务窗格” **** 切换按钮。
 
      Visual Studio 会自动生成名为 `toggleButton1_Click`的事件处理程序，它将处理切换按钮的 <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Click> 事件。 Visual Studio 还将打开代码编辑器中的 *ManageTaskPaneRibbon.cs* 或 *ManageTaskPaneRibbon.vb* 文件。
 
@@ -225,48 +225,48 @@ ms.locfileid: "72985458"
 
 ### <a name="to-test-the-vsto-add-in"></a>若要测试 VSTO 外接程序
 
-1. 按 F5。
+1. 按 **F5**。
 
-2. 在 Outlook 中，单击 "**新建**" 创建新的电子邮件。
+2. 在 Outlook 中，单击 " **新建** " 创建新的电子邮件。
 
-3. 在电子邮件的功能区上，单击 "**外接程序**" 选项卡，然后单击 "**显示任务窗格**" 按钮。
+3. 在电子邮件的功能区上，单击 " **外接程序** " 选项卡，然后单击 " **显示任务窗格** " 按钮。
 
-    使用电子邮件验证标题为 **"我的任务窗格**" 的任务窗格。
+    使用电子邮件验证标题为 **"我的任务窗格** " 的任务窗格。
 
 4. 在任务窗格中，在文本框中键入 **First task pane** 。
 
 5. 关闭任务窗格。
 
-    验证“显示任务窗格” 的状态是否更改，以便此按钮不再按下。
+    验证“显示任务窗格” **** 的状态是否更改，以便此按钮不再按下。
 
-6. 再次单击“显示任务窗格” 按钮。
+6. 再次单击“显示任务窗格” **** 按钮。
 
     验证任务窗格是否打开，并且文本框中是否仍然包含字符串 **First task pane**。
 
-7. 在 Outlook 中，单击 "**新建**" 以创建另一封电子邮件。
+7. 在 Outlook 中，单击 " **新建** " 以创建另一封电子邮件。
 
-8. 在电子邮件的功能区上，单击 "**外接程序**" 选项卡，然后单击 "**显示任务窗格**" 按钮。
+8. 在电子邮件的功能区上，单击 " **外接程序** " 选项卡，然后单击 " **显示任务窗格** " 按钮。
 
-    使用电子邮件验证标题为 "**我的任务窗格**" 的任务窗格，并且此任务窗格中的文本框为空。
+    使用电子邮件验证标题为 " **我的任务窗格** " 的任务窗格，并且此任务窗格中的文本框为空。
 
 9. 在任务窗格中，在文本框中键入 **Second task pane** 。
 
 10. 将焦点更改为第一封电子邮件。
 
-     验证与此电子邮件关联的任务窗格是否仍然在文本框中显示**第一个任务窗格**。
+     验证与此电子邮件关联的任务窗格是否仍然在文本框中显示 **第一个任务窗格** 。
 
-    此 VSTO 外接程序还可以处理更高级的方案，你可以尝试。 例如，你可以通过使用 "**下一项**" 和 "**上一项**" 按钮来测试查看电子邮件的行为。 你还可以在卸载 VSTO 外接程序时测试行为，打开多个电子邮件，然后重新加载 VSTO 外接程序。
+    此 VSTO 外接程序还可以处理更高级的方案，你可以尝试。 例如，你可以通过使用 " **下一项** " 和 " **上一项** " 按钮来测试查看电子邮件的行为。 你还可以在卸载 VSTO 外接程序时测试行为，打开多个电子邮件，然后重新加载 VSTO 外接程序。
 
 ## <a name="next-steps"></a>后续步骤
  可从以下主题了解有关如何创建自定义任务窗格的详细信息：
 
-- 在其他应用程序的 VSTO 外接程序中创建自定义任务窗格。 有关支持自定义任务窗格的应用程序的详细信息，请参阅[自定义任务窗格](../vsto/custom-task-panes.md)。
+- 在其他应用程序的 VSTO 外接程序中创建自定义任务窗格。 有关支持自定义任务窗格的应用程序的详细信息，请参阅 [自定义任务窗格](../vsto/custom-task-panes.md)。
 
-- 通过使用自定义任务窗格自动化 Microsoft Office 应用程序。 有关详细信息，请参阅[演练：从自定义任务窗格中自动执行应用程序](../vsto/walkthrough-automating-an-application-from-a-custom-task-pane.md)。
+- 通过使用自定义任务窗格自动化 Microsoft Office 应用程序。 有关详细信息，请参阅 [演练：从自定义任务窗格中自动执行应用程序](../vsto/walkthrough-automating-an-application-from-a-custom-task-pane.md)。
 
-- 在 Excel 中创建一个可用于隐藏或显示自定义任务窗格的功能区按钮。 有关详细信息，请参阅[演练：使用功能区按钮同步自定义任务窗格](../vsto/walkthrough-synchronizing-a-custom-task-pane-with-a-ribbon-button.md)。
+- 在 Excel 中创建一个可用于隐藏或显示自定义任务窗格的功能区按钮。 有关详细信息，请参阅 [演练：使用功能区按钮同步自定义任务窗格](../vsto/walkthrough-synchronizing-a-custom-task-pane-with-a-ribbon-button.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [自定义任务窗格](../vsto/custom-task-panes.md)
 - [如何：向应用程序添加自定义任务窗格](../vsto/how-to-add-a-custom-task-pane-to-an-application.md)
 - [演练：从自定义任务窗格自动化应用程序](../vsto/walkthrough-automating-an-application-from-a-custom-task-pane.md)

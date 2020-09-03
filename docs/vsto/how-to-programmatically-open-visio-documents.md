@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: eb21d201c282461cbe82005f56bed023bb022209
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85519985"
 ---
 # <a name="how-to-programmatically-open-visio-documents"></a>如何：以编程方式打开 Visio 文档
@@ -46,7 +46,7 @@ ms.locfileid: "85519985"
 ## <a name="compile-the-code"></a>编译代码
  此代码示例要求满足以下条件：
 
-- 名为的 Visio 文档 `myDrawing.vsd` 必须位于 `Test` *My Documents*文件夹（对于 windows XP 及更低版本）或*Documents*文件夹（对于 windows Vista）中名为的目录中。
+- 名为的 Visio 文档 `myDrawing.vsd` 必须位于 `Test` windows XP 和更早) 版本的 " *我的文档* " 文件夹 (中名为的目录中，或 windows Vista)  (的 *documents* 文件夹中。
 
 ## <a name="see-also"></a>另请参阅
 - [Visio 解决方案](../vsto/visio-solutions.md)

@@ -12,27 +12,27 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: ec1c7c94c8a0e6aa233cf21f9b57e093cc430d48
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72655290"
 ---
 # <a name="add-custom-properties-to-layer-diagrams"></a>向层关系图添加自定义属性
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-为层关系图编写扩展代码时，可以存储具有层关系图上任何元素的值。 保存并重新打开关系图时，值将保留。 您还可以在 "**属性**" 窗口中显示这些属性，以便用户可以查看和编辑这些属性。 例如，您可以让用户为每一层指定正则表达式，并编写验证代码来确认每层中的类名称符合用户指定的模式。
+为层关系图编写扩展代码时，可以存储具有层关系图上任何元素的值。 保存并重新打开关系图时，值将保留。 您还可以在 " **属性** " 窗口中显示这些属性，以便用户可以查看和编辑这些属性。 例如，您可以让用户为每一层指定正则表达式，并编写验证代码来确认每层中的类名称符合用户指定的模式。
 
 ## <a name="properties-not-visible-to-the-user"></a>不向用户显示的属性
- 如果仅希望你的代码将值附加到层关系图中的任何元素，则无需定义 MEF 组件。 [ILayerElement](/previous-versions/ff644511(v=vs.140))中有一个名为 `Properties` 的字典。 只需将可封送的值添加到任何层元素的字典。 这些值将保存为层关系图的一部分。 有关详细信息，请参阅[在程序代码中导航和更新层模型](../modeling/navigate-and-update-layer-models-in-program-code.md)。
+ 如果仅希望你的代码将值附加到层关系图中的任何元素，则无需定义 MEF 组件。 ILayerElement 中有一个名为的字典 `Properties` 。 [ILayerElement](/previous-versions/ff644511(v=vs.140)) 只需将可封送的值添加到任何层元素的字典。 这些值将保存为层关系图的一部分。 有关详细信息，请参阅 [在程序代码中导航和更新层模型](../modeling/navigate-and-update-layer-models-in-program-code.md)。
 
 ## <a name="properties-that-the-user-can-edit"></a>用户可以编辑的属性
- **初始准备工作**
+ **初始准备**
 
 > [!IMPORTANT]
 > 要显示属性，您必须对要显示层属性的每台计算机做出以下更改。
 >
->  1. 使用 "以**管理员身份运行**" 运行记事本。 打开 `%ProgramFiles%\Microsoft Visual Studio [version]\Common7\IDE\Extensions\Microsoft\Architecture Tools\ExtensibilityRuntime\extension.vsixmanifest`
+>  1. 使用 "以 **管理员身份运行**" 运行记事本。 打开 `%ProgramFiles%\Microsoft Visual Studio [version]\Common7\IDE\Extensions\Microsoft\Architecture Tools\ExtensibilityRuntime\extension.vsixmanifest`
 >
 >  2. 在 `Content` 元素中，添加：
 >
@@ -40,7 +40,7 @@ ms.locfileid: "72655290"
 >     <MefComponent>Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.Provider.dll</MefComponent>
 >     ```
 >
->  3. 在 Visual Studio 应用程序的 "开始" 菜单的 " **Visual Studio Tools** " 部分下，打开**开发人员命令提示**。
+>  3. 在 Visual Studio 应用程序的 "开始" 菜单的 " **Visual Studio Tools** " 部分下，打开 **开发人员命令提示**。
 >
 >     输入：
 >
@@ -48,11 +48,11 @@ ms.locfileid: "72655290"
 >
 >     `devenv /rootSuffix Exp /updateConfiguration`
 >
->  4. 重新启动 Visual Studio。
+>  4. 重启 Visual Studio。
 
  **确保你的代码在 VSIX 项目中**
 
- 如果您的属性是命令、笔势或验证项目的一部分，则无需添加任何内容。 自定义属性的代码应在 Visual Studio 扩展性项目中定义，并定义为 MEF 组件。 有关详细信息，请参阅[向层关系图添加命令和笔势](../modeling/add-commands-and-gestures-to-layer-diagrams.md)或[向层关系图添加自定义体系结构验证](../modeling/add-custom-architecture-validation-to-layer-diagrams.md)。
+ 如果您的属性是命令、笔势或验证项目的一部分，则无需添加任何内容。 自定义属性的代码应在 Visual Studio 扩展性项目中定义，并定义为 MEF 组件。 有关详细信息，请参阅 [向层关系图添加命令和笔势](../modeling/add-commands-and-gestures-to-layer-diagrams.md) 或 [向层关系图添加自定义体系结构验证](../modeling/add-custom-architecture-validation-to-layer-diagrams.md)。
 
  **定义自定义属性**
 
@@ -67,13 +67,13 @@ public class MyProperty
 }
 ```
 
- 可以在[ILayerElement](/previous-versions/ff644511(v=vs.140))或其任何派生类上定义属性，其中包括：
+ 可以在 [ILayerElement](/previous-versions/ff644511(v=vs.140)) 或其任何派生类上定义属性，其中包括：
 
-- `ILayerModel` - 模型
+- `ILayerModel` -模型
 
-- `ILayer` - 每一层
+- `ILayer` -每个层
 
-- `ILayerDependencyLink` - 层与层之间的链接
+- `ILayerDependencyLink` -层之间的链接
 
 - `ILayerComment`
 
@@ -165,5 +165,5 @@ namespace MyNamespace
 }
 ```
 
-## <a name="see-also"></a>请参阅
- [扩展层关系图](../modeling/extend-layer-diagrams.md)
+## <a name="see-also"></a>另请参阅
+ [Extend layer diagrams](../modeling/extend-layer-diagrams.md)

@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: bc0e6e7e1530abb63beabc6fa4aedd4a0fa985af
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72672339"
 ---
 # <a name="t4-assembly-directive"></a>T4 程序集指令
@@ -21,10 +21,10 @@ ms.locfileid: "72672339"
 
 在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 设计时文本模板中，`assembly` 指令可加载程序集，以便您的模板代码可使用其类型。 该作用类似于在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 项目中添加程序集引用。
 
- 有关编写文本模板的一般概述，请参阅[编写 T4 文本模板](../modeling/writing-a-t4-text-template.md)。
+ 有关编写文本模板的一般概述，请参阅 [编写 T4 文本模板](../modeling/writing-a-t4-text-template.md)。
 
 > [!NOTE]
-> 运行时（预处理）文本模板中不需要 `assembly` 指令。 相反，请将必要的程序集添加到 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 项目的**引用**。
+> 运行时（预处理）文本模板中不需要 `assembly` 指令。 相反，请将必要的程序集添加到项目的 **引用** 中 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 。
 
 ## <a name="using-the-assembly-directive"></a>使用 Assembly 指令
  该指令的语法如下所示：
@@ -35,17 +35,17 @@ ms.locfileid: "72672339"
 
  程序集名称应为以下各项之一：
 
-- GAC 中程序集的强名称，例如 `System.Xml.dll`。 还可以使用长形式，例如 `name="System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"`。 有关更多信息，请参见<xref:System.Reflection.AssemblyName>。
+- GAC 中程序集的强名称，例如 `System.Xml.dll`。 还可以使用长形式，例如 `name="System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"`。 有关详细信息，请参阅 <xref:System.Reflection.AssemblyName>。
 
 - 程序集的绝对路径
 
-  你可以使用 `$(variableName)` 语法引用 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 变量（如 `$(SolutionDir)`），以及使用 `%VariableName%` 来引用环境变量。 例如:
+  你可以使用 `$(variableName)` 语法引用 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 变量（如 `$(SolutionDir)`），以及使用 `%VariableName%` 来引用环境变量。 例如：
 
 ```
 <#@ assembly name="$(SolutionDir)\MyProject\bin\Debug\SomeLibrary.Dll" #>
 ```
 
- 在预处理文本模板中，assembly 指令无效。 相反，请在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 项目的 "**引用**" 部分中包括必要的引用。 有关详细信息，请参阅[带有 T4 文本模板的运行时文本生成](../modeling/run-time-text-generation-with-t4-text-templates.md)。
+ 在预处理文本模板中，assembly 指令无效。 相反，请在项目的 " **引用** " 部分中包括必要的引用 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 。 有关详细信息，请参阅 [带有 T4 文本模板的运行时文本生成](../modeling/run-time-text-generation-with-t4-text-templates.md)。
 
 ## <a name="standard-assemblies"></a>标准程序集
  将自动加载以下程序集，您无需为它们编写程序集指令：
@@ -66,7 +66,7 @@ ms.locfileid: "72672339"
 
 - 包含 DSL 的程序集。
 
-## <a name="msbuild"></a>在 MSBuild 和 Visual Studio 中使用项目属性
+## <a name="using-project-properties-in-both-msbuild-and-visual-studio"></a><a name="msbuild"></a> 在 MSBuild 和 Visual Studio 中使用项目属性
  Visual Studio 宏（如 $(SolutionDir）在 MSBuild 中不起作用。 如果你想要在生成计算机中转换模板，则必须改用项目属性。
 
  编辑 .csproj 或 .vbproj 文件以定义项目属性。 此示例定义一个名为 `myLibFolder` 的属性：
@@ -92,5 +92,5 @@ ms.locfileid: "72672339"
 <#@ assembly name="$(myLibFolder)\MyLib.dll" #>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [T4 包含指令](../modeling/t4-include-directive.md)

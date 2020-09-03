@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 49da7d5e7f6a7731a708accb3d52fb6383ff1017
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72652227"
 ---
 # <a name="anonymous-methods-and-code-analysis"></a>匿名方法和代码分析
@@ -67,9 +67,9 @@ class Class
 ```
 
 ## <a name="inline-anonymous-methods"></a>内联匿名方法
- 声明为字段的内联赋值的匿名方法的警告和度量值与构造函数相关联。 如果将字段声明为 `static` （`Shared` [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]），则警告和度量值将与类构造函数相关联;否则，它们与实例构造函数相关联。
+ 声明为字段的内联赋值的匿名方法的警告和度量值与构造函数相关联。 如果字段 `static` `Shared` 在) 中声明为 ([!INCLUDE[vbprvb](../includes/vbprvb-md.md)] ，则警告和度量值将与类构造函数相关联; 否则，它们与实例构造函数关联。
 
- 例如，在下面的类中，将针对隐式生成的**类**的默认构造函数引发在**anonymousMethod1**的声明中找到的任何警告。 相反，在**anonymousMethod2**中找到的将应用于隐式生成的类构造函数。
+ 例如，在下面的类中，将针对隐式生成的**类**的默认构造函数引发在**anonymousMethod1**的声明中找到的任何警告。 相反，在 **anonymousMethod2** 中找到的将应用于隐式生成的类构造函数。
 
 ```vb
 
@@ -108,7 +108,7 @@ class Class
 
  类可以包含向具有多个构造函数的字段分配值的内联匿名方法。 在这种情况下，警告和指标与所有构造函数相关联，除非该构造函数链接到同一个类中的另一个构造函数。
 
- 例如，在下面的类中，应针对**类（int）** 和**类（字符串）** （而不是针对**类（）** ）引发在**anonymousMethod**的声明中找到的任何警告。
+ 例如，在下面的类中，应针对**类 (int) **和**类 (字符串) **而不是针对**类 ( # B5 **，引发在**anonymousMethod**的声明中找到的任何警告。
 
 ```vb
 
@@ -148,9 +148,9 @@ class Class
 }
 ```
 
- 尽管这可能看起来不到预料，但发生这种情况是因为编译器会为每个未链接到另一个构造函数的构造函数输出一个唯一方法。 由于此行为，必须单独取消**anonymousMethod**中发生的任何冲突。 这也意味着，如果引入了新的构造函数，则还必须针对新构造函数禁止显示先前针对**类（int）** 和**类（字符串）** 取消的警告。
+ 尽管这可能看起来不到预料，但发生这种情况是因为编译器会为每个未链接到另一个构造函数的构造函数输出一个唯一方法。 由于此行为，必须单独取消 **anonymousMethod** 中发生的任何冲突。 这也意味着，如果引入了新的构造函数，则针对 **类 (int) ** 和 **类 (字符串) ** ，还必须针对新的构造函数禁止显示先前禁止显示的警告。
 
- 可以通过以下两种方式之一解决此问题。 可以在所有构造函数链的公共构造函数中声明**anonymousMethod** 。 也可以在由所有构造函数调用的初始化方法中声明它。
+ 可以通过以下两种方式之一解决此问题。 可以在所有构造函数链的公共构造函数中声明 **anonymousMethod** 。 也可以在由所有构造函数调用的初始化方法中声明它。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [分析托管代码质量](../code-quality/analyzing-managed-code-quality-by-using-code-analysis.md)

@@ -1,5 +1,5 @@
 ---
-title: DefaultName 元素 （Visual Studio 模板） |Microsoft Docs
+title: " (Visual Studio 模板) 的 DefaultName 元素 |Microsoft Docs"
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -13,20 +13,20 @@ caps.latest.revision: 16
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 0bc3a18c47b78a312f3bca3762cc4ff3d658a70e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68185291"
 ---
 # <a name="defaultname-element-visual-studio-templates"></a>DefaultName 元素（Visual Studio 模板）
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-在创建时指定 Visual Studio 项目系统将生成的项目或项目的名称。  
+指定 Visual Studio 项目系统在创建项目或项时为其生成的名称。  
   
- \<VSTemplate >  
- \<TemplateData >  
- \<DefaultName >  
+ \<VSTemplate>  
+ \<TemplateData>  
+ \<DefaultName>  
   
 ## <a name="syntax"></a>语法  
   
@@ -59,14 +59,14 @@ ms.locfileid: "68185291"
 ## <a name="remarks"></a>备注  
  `DefaultName` 是可选元素。  
   
- 对于项目，此元素指定将项目存储在磁盘的目录的名称。 对于项，它指定源代码文件的文件名称。  
+ 对于项目，此元素指定在磁盘上存储项目的目录的名称。 对于项，它指定源文件的文件名。  
   
- 在创建项目或项时，你可以修改默认名称使用**名称**选项，这是从可用**新项目**对话框或**添加新项**对话框。  
+ 创建项目或项时，可以使用 " **名称** " 选项（可从 " **新建项目** " 对话框或 " **添加新项** " 对话框获取）修改默认名称。  
   
- 如果不希望项目系统在生成项目或项的默认名称，然后设置[ProvideDefaultName](../extensibility/providedefaultname-element-visual-studio-templates.md)元素`False`。  
+ 如果你不希望项目系统生成项目或项的默认名称，请将 [ProvideDefaultName](../extensibility/providedefaultname-element-visual-studio-templates.md) 元素设置为 `False` 。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示为标准项模板的元数据[!INCLUDE[csprcs](../includes/csprcs-md.md)]类。  
+ 下面的示例演示了类的标准项模板的元数据 [!INCLUDE[csprcs](../includes/csprcs-md.md)] 。  
   
 ```  
 <VSTemplate Type="Item" Version="3.0.0"  
@@ -84,6 +84,6 @@ ms.locfileid: "68185291"
 </VSTemplate>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)   
  [创建项目和项模板](../ide/creating-project-and-item-templates.md)

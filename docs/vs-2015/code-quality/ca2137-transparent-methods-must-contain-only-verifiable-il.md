@@ -12,20 +12,20 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 6219acde1f62c946e08325f4764dc49dde461d2f
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85546570"
 ---
 # <a name="ca2137-transparent-methods-must-contain-only-verifiable-il"></a>CA2137:透明方法只能包含可验证的 IL
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|Item|值|
+|项|值|
 |-|-|
 |TypeName|TransparentMethodsMustBeVerifiable|
 |CheckId|CA2137|
-|Category|Microsoft.Security|
+|类别|Microsoft.Security|
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
@@ -34,7 +34,7 @@ ms.locfileid: "85546570"
 ## <a name="rule-description"></a>规则描述
  在尝试通过安全透明代码执行无法验证的 MSIL（Microsoft 中间语言）时将引发此规则。 但是，此规则不包含完整的 IL 验证程序，而是使用试探法来捕捉 MSIL 验证的大部分冲突。
 
- 若要确保您的代码仅包含可验证的 MSIL，请在程序集上运行[Peverify.exe （Peverify.exe 工具）](https://msdn.microsoft.com/library/f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa) 。 使用 **/transparent**选项运行 peverify.exe，该选项将输出限制为仅可验证的透明方法导致错误。 如果未使用/transparent 选项，则 Peverify.exe 还会验证允许包含无法验证的代码的关键方法。
+ 若要确保您的代码仅包含可验证的 MSIL，请在程序集上运行 [Peverify.exe (Peverify.exe 工具) ](https://msdn.microsoft.com/library/f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa) 。 使用 **/transparent** 选项运行 peverify.exe，该选项将输出限制为仅可验证的透明方法导致错误。 如果未使用/transparent 选项，则 Peverify.exe 还会验证允许包含无法验证的代码的关键方法。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
  若要修复与此规则的冲突，请使用 <xref:System.Security.SecurityCriticalAttribute> 或特性标记方法 <xref:System.Security.SecuritySafeCriticalAttribute> ，或者删除无法验证的代码。

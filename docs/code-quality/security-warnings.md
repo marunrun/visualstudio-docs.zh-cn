@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 9b5a03c9cb7ae7c5a5c81bd452dbb04d8db4c09d
-ms.sourcegitcommit: ed17ca9ae5f92c229c4e46233bcfe0a49d29ec43
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88052617"
 ---
 # <a name="security-warnings"></a>安全警告
@@ -96,8 +96,8 @@ ms.locfileid: "88052617"
 |[CA2354:反序列化对象图中的不安全 DataSet 或 DataTable 可能容易受到远程代码执行攻击](ca2354.md)|使用序列化进行反序列化 <xref:System.Runtime.Serialization.IFormatter?displayProperty=nameWithType> ，强制转换类型的对象图可以包括 <xref:System.Data.DataSet> 或 <xref:System.Data.DataTable> 。|
 |[CA2355:反序列化对象图中的不安全 DataSet 或 DataTable](ca2355.md)|当强制转换或指定类型的对象图可以包含或时进行反序列化 <xref:System.Data.DataSet> <xref:System.Data.DataTable> 。|
 |[CA2356： web 反序列化对象图中的不安全数据集或 DataTable](ca2356.md)|具有或的方法 <xref:System.Web.Services.WebMethodAttribute?displayProperty=nameWithType> <xref:System.ServiceModel.OperationContractAttribute?displayProperty=nameWithType> 具有可引用或的参数 <xref:System.Data.DataSet> <xref:System.Data.DataTable> 。|
-|[CA2361：确保包含 DataSet 的自动生成的类。 ReadXml ( # A1 不与不受信任的数据一起使用](ca2361.md)|<xref:System.Data.DataSet>使用不受信任的输入反序列化时，攻击者可以创建恶意输入来执行拒绝服务攻击。 可能存在未知的远程代码执行漏洞。|
-|[CA2362：自动生成序列化类型中的不安全数据集或 DataTable 可能易受到远程代码执行攻击](ca2362.md)|当反序列化的不受信任的输入 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 并且反序列化的对象图包含 <xref:System.Data.DataSet> 或时 <xref:System.Data.DataTable> ，攻击者可以创建恶意有效负载来执行远程代码执行攻击。|
+|[CA2361：请确保包含 DataSet.ReadXml() 的自动生成的类没有与不受信任的数据一起使用](ca2361.md)|<xref:System.Data.DataSet>使用不受信任的输入反序列化时，攻击者可以创建恶意输入来执行拒绝服务攻击。 可能存在未知的远程代码执行漏洞。|
+|[CA2362：自动生成的可序列化类型中不安全的数据集或数据表易受远程代码执行攻击](ca2362.md)|当反序列化的不受信任的输入 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 并且反序列化的对象图包含 <xref:System.Data.DataSet> 或时 <xref:System.Data.DataTable> ，攻击者可以创建恶意有效负载来执行远程代码执行攻击。|
 |[CA3001：查看 SQL 注入漏洞的代码](../code-quality/ca3001.md)|使用不受信任的输入和 SQL 命令时，请注意 SQL 注入攻击。 SQL 注入攻击可以执行恶意的 SQL 命令，从而降低应用程序的安全性和完整性。|
 |[CA3002：查看 XSS 漏洞的代码](../code-quality/ca3002.md)|处理 web 请求中的不受信任输入时，请注意跨站点脚本 (XSS) 攻击。 XSS 攻击会将不受信任的输入注入原始 HTML 输出，使攻击者可以执行恶意脚本或恶意修改网页中的内容。|
 |[CA3003:查看文件路径注入漏洞的代码](../code-quality/ca3003.md)|当处理 web 请求中的不受信任输入时，请注意在指定文件路径时使用用户控制输入。|
@@ -129,8 +129,8 @@ ms.locfileid: "88052617"
 |[CA5370：将 XmlReader 用于验证读取器](../code-quality/ca5370.md)|处理不受信任的 DTD 和 XML 架构可能会启用加载危险的外部引用。 可以通过将 XmlReader 与安全解析程序结合使用，或者禁用 DTD 和 XML 内联架构处理来限制这种危险加载。|
 |[CA5371：将 XmlReader 用于架构读取](../code-quality/ca5371.md)|处理不受信任的 DTD 和 XML 架构可能会启用加载危险的外部引用。 将 XmlReader 用于安全解析程序或 DTD 和 XML 内联架构处理将会限制这种情况。|
 |[CA5372：将 XmlReader 用于 XPathDocument](../code-quality/ca5372.md)|处理来自不受信任数据的 XML 可能会加载危险的外部引用，这可以通过使用具有安全解析程序的 XmlReader 或禁用 DTD 处理来限制。|
-|[CA5373：请勿使用已过时的密钥派生功能](../code-quality/ca5373.md)|此规则检测弱密钥派生方法和的调用 <xref:System.Security.Cryptography.PasswordDeriveBytes?displayProperty=fullName> `Rfc2898DeriveBytes.CryptDeriveKey` 。 <xref:System.Security.Cryptography.PasswordDeriveBytes?displayProperty=fullName>使用弱算法 PBKDF1。|
-|[CA5374:请勿使用 XslTransform](../code-quality/ca5374.md)|此规则检查 <xref:System.Xml.Xsl.XslTransform?displayProperty=nameWithType> 是否在代码中实例化。 <xref:System.Xml.Xsl.XslTransform?displayProperty=nameWithType>现已过时，不应使用。|
+|[CA5373：请勿使用已过时的密钥派生功能](../code-quality/ca5373.md)|此规则检测弱密钥派生方法和的调用 <xref:System.Security.Cryptography.PasswordDeriveBytes?displayProperty=fullName> `Rfc2898DeriveBytes.CryptDeriveKey` 。 <xref:System.Security.Cryptography.PasswordDeriveBytes?displayProperty=fullName> 使用弱算法 PBKDF1。|
+|[CA5374:请勿使用 XslTransform](../code-quality/ca5374.md)|此规则检查 <xref:System.Xml.Xsl.XslTransform?displayProperty=nameWithType> 是否在代码中实例化。 <xref:System.Xml.Xsl.XslTransform?displayProperty=nameWithType> 现已过时，不应使用。|
 |[CA5375:请勿使用帐户共享访问签名](../code-quality/ca5375.md)|帐户 SAS 可委派对 blob 容器、表、队列以及服务 SAS 不允许的文件共享上的读取、写入和删除操作的访问权限。 但是，它不支持容器级别的策略，并且具有较低的灵活性和对所授予权限的控制权限。 一旦恶意用户获得，您的存储帐户就会容易泄露。|
 |[CA5376:使用 SharedAccessProtocol HttpsOnly](../code-quality/ca5376.md)|SAS 是不能以纯文本形式在 HTTP 上传输的敏感数据。|
 |[CA5377:使用容器级别访问策略](../code-quality/ca5377.md)|容器级别的访问策略可以随时修改或撤消。 它提供了更大的灵活性并控制授予的权限。|

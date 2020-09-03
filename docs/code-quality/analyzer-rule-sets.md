@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 11b99bb08c82725f19f7985a97656edf65f112d5
-ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88800211"
 ---
 # <a name="enable-a-category-of-rules"></a>启用一种类别的规则
@@ -102,7 +102,7 @@ CodeAnalysis. FxCopAnalyzers 分析器包的预定义规则集文件位于 *% US
 
    现在，你只会看到在所选规则集中启用的那些规则的规则冲突。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [分析器常见问题解答](analyzers-faq.md)
 - [.NET Compiler Platform 分析器概述](roslyn-analyzers-overview.md)

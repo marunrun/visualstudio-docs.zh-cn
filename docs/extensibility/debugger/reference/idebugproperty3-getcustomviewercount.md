@@ -1,5 +1,5 @@
 ---
-title: IDebug属性3：：获取自定义查看器计数 |微软文档
+title: IDebugProperty3：： GetCustomViewerCount |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 16cb623f58668362e5e308e1d66dfd6ca7c0fb8c
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80721195"
 ---
 # <a name="idebugproperty3getcustomviewercount"></a>IDebugProperty3::GetCustomViewerCount
-获取可能可用于此属性的自定义查看器数。
+获取可用于此属性的自定义查看器的数目。
 
 ## <a name="syntax"></a>语法
 
@@ -41,15 +41,15 @@ int GetCustomViewerCount(
 
 ## <a name="parameters"></a>参数
 `pcelt`\
-[出]可用于此属性的自定义查看器数。
+弄可用于此属性的自定义查看器的数目。
 
 ## <a name="return-value"></a>返回值
-如果成功，返回`S_OK`;否则，返回错误代码。
+如果成功， `S_OK` 则返回; 否则返回错误代码。
 
 ## <a name="remarks"></a>备注
-为了支持类型可视化工具，此方法将调用转发到[GetCustomViewerCount 方法](../../../extensibility/debugger/reference/ieevisualizerservice-getcustomviewercount.md)。 如果表达式赋值器还支持此属性类型的自定义查看器，则此方法会将自定义查看器的数量添加到返回的值。
+为了支持类型可视化工具，此方法将调用转发到 [GetCustomViewerCount](../../../extensibility/debugger/reference/ieevisualizerservice-getcustomviewercount.md) 方法。 如果表达式计算器还支持此属性类型的自定义查看器，则此方法会将自定义查看器的数量添加到返回值。
 
-有关类型可视化器和自定义查看器之间的差异的详细信息，请参阅[类型可视化器和自定义查看器](../../../extensibility/debugger/type-visualizer-and-custom-viewer.md)。
+有关类型可视化工具和自定义查看器之间的差异的详细信息，请参阅 [类型可视化工具和自定义查看器](../../../extensibility/debugger/type-visualizer-and-custom-viewer.md)。
 
 ## <a name="example"></a>示例
 下面的示例演示如何为公开[IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md)接口的**CProperty**对象实现此方法。
@@ -73,7 +73,7 @@ STDMETHODIMP CProperty::GetCustomViewerCount(ULONG* pcelt)
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md)
 - [GetCustomViewerCount](../../../extensibility/debugger/reference/ieevisualizerservice-getcustomviewercount.md)
 - [类型可视化工具和自定义查看器](../../../extensibility/debugger/type-visualizer-and-custom-viewer.md)

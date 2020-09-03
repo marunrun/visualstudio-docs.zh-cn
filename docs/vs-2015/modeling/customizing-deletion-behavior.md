@@ -14,37 +14,37 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 9d0dcfc5724e87d57d2803b9b64a6eb121314b99
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72655049"
 ---
 # <a name="customizing-deletion-behavior"></a>自定义删除行为
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-删除一个元素通常会导致同时删除相关的元素。 将删除连接到该元素的所有关系以及任何子元素。 此行为称为*删除传播*。 可以自定义删除传播，例如安排删除其他相关元素。 通过编写程序代码，可以根据模型的状态删除传播。 还可能发生其他更改以响应删除。
+删除一个元素通常会导致同时删除相关的元素。 将删除连接到该元素的所有关系以及任何子元素。 此行为称为 *删除传播*。 可以自定义删除传播，例如安排删除其他相关元素。 通过编写程序代码，可以根据模型的状态删除传播。 还可能发生其他更改以响应删除。
 
- 本主题包括以下部分：
+ 本主题包含下列部分：
 
 - [默认删除行为](#default)
 
-- [设置角色的 "传播删除" 选项](#property)
+- [设置角色的“传播删除”选项](#property)
 
-- [重写删除闭包](#closure)–使用此方法，删除可能会导致删除相邻元素。
+- [重写删除闭包](#closure) –使用此方法，删除可能会导致删除相邻元素。
 
 - [使用 OnDeleting 和 OnDeleted](#ondeleting) –使用这些方法，其中的响应可能包括其他操作，例如更新存储内部或外部的值。
 
-- [删除规则](#rules)-使用规则传播应用商店中任何类型的更新，其中一项更改可能会导致其他更改。
+- [删除规则](#rules) -使用规则传播应用商店中任何类型的更新，其中一项更改可能会导致其他更改。
 
-- [删除事件](#rules)–使用存储事件将更新传播到存储区之外（例如，传播到其他 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 文档）。
+- [删除事件](#rules) –使用存储事件将更新传播到存储区之外，例如，传播到其他 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 文档。
 
 - "[取消合并" –使用](#unmerge)"取消合并" 操作撤消将子元素附加到其父级的合并操作。
 
-## <a name="default"></a>默认删除行为
+## <a name="default-deletion-behavior"></a><a name="default"></a> 默认删除行为
  默认情况下，以下规则控制删除传播：
 
-- 如果删除某个元素，也将删除所有嵌入元素。 嵌入元素是作为嵌入关系的目标的元素，而此元素是嵌入关系的源。 例如，如果有一个从**唱片集**到**歌曲**的嵌入关系，则在删除特定相册时，还将删除其所有歌曲。
+- 如果删除某个元素，也将删除所有嵌入元素。 嵌入元素是作为嵌入关系的目标的元素，而此元素是嵌入关系的源。 例如，如果有一个从 **唱片集** 到 **歌曲**的嵌入关系，则在删除特定相册时，还将删除其所有歌曲。
 
      相反，删除 Song 并不会删除 Album。
 
@@ -54,16 +54,16 @@ ms.locfileid: "72655049"
 
 - 不管是在源角色上还是在目标角色上，都将删除连接到该元素的每个关系。 对方角色的元素的角色属性不再包含删除的元素。
 
-## <a name="property"></a>设置角色的 "传播删除" 选项
+## <a name="setting-the-propagate-delete-option-of-a-role"></a><a name="property"></a> 设置角色的 "传播删除" 选项
  可以使删除沿着引用关系传播，或从嵌入子级传播到其父级。
 
 #### <a name="to-set-delete-propagation"></a>设置删除传播
 
-1. 在 DSL 定义关系图上，选择要将传播删除到的*角色*。 该角色由域关系框的左侧或右侧的线表示。
+1. 在 DSL 定义关系图上，选择要将传播删除到的 *角色* 。 该角色由域关系框的左侧或右侧的线表示。
 
     例如，如果想要指定在删除 Album 时，也将删除相关的 Artist，则选择已连接到域类 Artist 的角色。
 
-2. 在属性窗口中，设置 "**传播删除**" 属性。
+2. 在属性窗口中，设置 " **传播删除** " 属性。
 
 3. 按 F5 并验证：
 
@@ -71,22 +71,22 @@ ms.locfileid: "72655049"
 
    - 当删除对方角色的元素时，将删除此关系的实例，也将删除此角色的相关元素。
 
-   还可以在 " **DSL 详细信息**" 窗口中查看 "**传播删除**" 选项。 选择域类，然后在 "DSL 详细信息" 窗口中，通过单击窗口一侧的按钮打开 "**删除行为**" 页。 为每个关系的相反角色显示 "**传播**" 选项。 "**删除样式**" 列指示 "**传播**" 选项是否为其默认设置，但不会有任何不同的效果。
+   还可以在 " **DSL 详细信息**" 窗口中查看 "**传播删除**" 选项。 选择域类，然后在 "DSL 详细信息" 窗口中，通过单击窗口一侧的按钮打开 " **删除行为** " 页。 为每个关系的相反角色显示 " **传播** " 选项。 " **删除样式** " 列指示 " **传播** " 选项是否为其默认设置，但不会有任何不同的效果。
 
 ## <a name="delete-propagation-by-using-program-code"></a>通过使用程序代码删除传播
  DSL 定义文件中的选项仅允许你选择是否将删除传播到邻近内容。 若要实现删除传播的更复杂方案，你可以编写程序代码。
 
 > [!NOTE]
-> 若要将程序代码添加到 DSL 定义，请在**dsl**项目中创建一个单独的代码文件，并写入部分定义以增加生成的代码文件夹中的类。 有关详细信息，请参阅[编写代码以定制域特定语言](../modeling/writing-code-to-customise-a-domain-specific-language.md)。
+> 若要将程序代码添加到 DSL 定义，请在 **dsl** 项目中创建一个单独的代码文件，并写入部分定义以增加生成的代码文件夹中的类。 有关详细信息，请参阅 [编写代码以定制域特定语言](../modeling/writing-code-to-customise-a-domain-specific-language.md)。
 
-## <a name="closure"></a>定义删除关闭
- 如果给定了初始选择，则删除操作将使用_YourModel_**DeleteClosure**类来确定要删除的元素。 它将重复调用 `ShouldVisitRelationship()` 和 `ShouldVisitRolePlayer()`，从而遍历这些关系图。 可以重写这些方法。 ShouldVisitRolePlayer 与链接的标识和一个链接角色的元素一起提供。 它应返回以下值之一：
+## <a name="defining-a-delete-closure"></a><a name="closure"></a> 定义删除关闭
+ 如果给定了初始选择，则删除操作将使用 _YourModel_**DeleteClosure** 类来确定要删除的元素。 它将重复调用 `ShouldVisitRelationship()` 和 `ShouldVisitRolePlayer()`，从而遍历这些关系图。 可以重写这些方法。 ShouldVisitRolePlayer 与链接的标识和一个链接角色的元素一起提供。 它应返回以下值之一：
 
 - **VisitorFilterResult**-应删除元素，然后查看者应继续尝试元素的其他链接。
 
 - **VisitorFilterResult** -不应删除元素，除非另一个查询回复应删除它。
 
-- **VisitorFilterResult** –即使另一个查询回答 **"是"** ，并且遍历者不应尝试该元素的其他链接，也不能删除该元素。
+- **VisitorFilterResult** –即使另一个查询回答 **"是"**，并且遍历者不应尝试该元素的其他链接，也不能删除该元素。
 
 ```
 // When a musician is deleted, delete their albums with a low rating.
@@ -132,18 +132,18 @@ partial class MusicLibDeleteClosure
 
  但是，该技术假设删除在关系图中仅影响其邻近内容：无法使用此方法删除模型的另一部分中的元素。 如果想要添加元素或进行其他更改以响应删除，则不能使用此技术。
 
-## <a name="ondeleting"></a>使用 OnDeleting 和 OnDeleted
+## <a name="using-ondeleting-and-ondeleted"></a><a name="ondeleting"></a> 使用 OnDeleting 和 OnDeleted
  可以在域类或域关系中重写 `OnDeleting()` 或 `OnDeleted()`。
 
-1. 在将要删除元素时，但在该元素的关系已断开连接前，调用 <xref:Microsoft.VisualStudio.Modeling.ModelElement.OnDeleting%2A>。 该元素仍可在其他元素中来回导航，并且仍位于 `store.ElementDirectory` 中。
+1. <xref:Microsoft.VisualStudio.Modeling.ModelElement.OnDeleting%2A> 当要删除某个元素，但在断开其关系之前，将调用。 该元素仍可在其他元素中来回导航，并且仍位于 `store.ElementDirectory` 中。
 
     如果同时删除多个元素，则在执行删除操作前为所有元素调用 OnDeleting。
 
     `IsDeleting` 为 true。
 
-2. 已删除该元素后，调用 <xref:Microsoft.VisualStudio.Modeling.ModelElement.OnDeleted%2A>。 它将保留在 CLR 堆中，以便在需要时可执行“撤消”，但它已与其他元素取消链接并已从 `store.ElementDirectory` 中删除。 对于关系，角色仍引用旧角色扮演者。`IsDeleted` 为 true。
+2. <xref:Microsoft.VisualStudio.Modeling.ModelElement.OnDeleted%2A> 在元素已删除时调用。 它将保留在 CLR 堆中，以便在需要时可执行“撤消”，但它已与其他元素取消链接并已从 `store.ElementDirectory` 中删除。 对于关系，角色仍引用旧角色扮演者。`IsDeleted` 的值为 true 时才有效。
 
-3. 当用户在创建元素后调用“撤消”时，以及在“重做”中重复以前的删除时，将调用 OnDeleting 和 OnDeleted。 使用 `this.Store.InUndoRedoOrRollback` 来避免在这些情况下更新存储元素。 有关详细信息，请参阅[如何：使用事务更新模型](../modeling/how-to-use-transactions-to-update-the-model.md)。
+3. 当用户在创建元素后调用“撤消”时，以及在“重做”中重复以前的删除时，将调用 OnDeleting 和 OnDeleted。 使用 `this.Store.InUndoRedoOrRollback` 来避免在这些情况下更新存储元素。 有关详细信息，请参阅 [如何：使用事务更新模型](../modeling/how-to-use-transactions-to-update-the-model.md)。
 
    例如，以下代码将在删除 Album 的最后一个子级 Song 时删除该 Album：
 
@@ -199,18 +199,18 @@ partial class Artist
 
  当在元素上执行 <xref:Microsoft.VisualStudio.Modeling.ModelElement.Delete%2A> 时，将调用 OnDeleting 和 OnDeleted。 这些方法始终内联执行 – 即在实际删除前后立即执行。 如果代码将删除两个或多个元素，则将在所有元素上按顺序交替调用 OnDeleting 和 OnDeleted。
 
-## <a name="rules"></a>删除规则和事件
+## <a name="deletion-rules-and-events"></a><a name="rules"></a> 删除规则和事件
  作为 OnDelete 处理程序的替代方法，你可以定义删除规则和删除事件。
 
-1. **删除**和**删除**规则仅在事务中触发，而不是在撤消或重做操作。 可以设置它们以进行排队，从而在执行删除的事务末尾执行它们。 Deleting 规则始终在队列中的任何 Deleted 规则之前执行。
+1. **删除** 和 **删除** 规则仅在事务中触发，而不是在撤消或重做操作。 可以设置它们以进行排队，从而在执行删除的事务末尾执行它们。 Deleting 规则始终在队列中的任何 Deleted 规则之前执行。
 
      使用规则来传播仅影响存储中的元素的更改，包括关系、关系图元素及其属性。 通常，Deleting 规则用于传播删除，而 Delete 规则用于创建替换元素和关系。
 
-     有关详细信息，请参阅[规则在模型内部传播更改](../modeling/rules-propagate-changes-within-the-model.md)。
+     有关详细信息，请参阅 [规则在模型内部传播更改](../modeling/rules-propagate-changes-within-the-model.md)。
 
-2. **删除**的存储事件将在事务结束时调用，并在撤消或重做后调用。 因此，它可以用于将删除传播到存储外的对象，例如文件、数据库项或 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中的其他对象。
+2. **删除** 的存储事件将在事务结束时调用，并在撤消或重做后调用。 因此，它可以用于将删除传播到存储外的对象，例如文件、数据库项或 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中的其他对象。
 
-     有关详细信息，请参阅[事件处理程序在模型外部传播更改](../modeling/event-handlers-propagate-changes-outside-the-model.md)。
+     有关详细信息，请参阅 [事件处理程序在模型外部传播更改](../modeling/event-handlers-propagate-changes-outside-the-model.md)。
 
     > [!WARNING]
     > 已删除某个元素后，可以访问其域属性值，但无法导航关系链接。 但是，如果在关系上设置了 Deleted 事件，则还可以访问作为其角色扮演者的两个元素。 因此，如果想要响应模型元素的删除，但不想要访问它链接到的元素，则在关系上而不是模型元素的域类上设置 Delete 事件。
@@ -289,12 +289,12 @@ partial class NestedShapesSampleDocData
 
 ```
 
-## <a name="unmerge"></a>取消合并
- 将子元素附加到其父级的操作称为*merge*。 当从工具箱创建新元素或元素组时、从模型的另一个部分进行移动时，或从剪贴板进行复制时，将会发生此情况。 除了在父级和其新子级之间创建嵌入关系，合并操作还可以设置其他关系、创建辅助元素以及设置元素中的属性值。 合并操作封装在元素合并指令 (EMD) 中。
+## <a name="unmerge"></a><a name="unmerge"></a> 取消合并
+ 将子元素附加到其父级的操作称为 *merge*。 当从工具箱创建新元素或元素组时、从模型的另一个部分进行移动时，或从剪贴板进行复制时，将会发生此情况。 除了在父级和其新子级之间创建嵌入关系，合并操作还可以设置其他关系、创建辅助元素以及设置元素中的属性值。 合并操作封装在元素合并指令 (EMD) 中。
 
- EMD 还封装了互补的取消*合并*或 `MergeDisconnect` 操作。 如果你具有已通过使用合并构造的元素的群集，则建议使用关联的取消合并将元素从该群集中移除（如果想要使剩余元素保留在一致的状态下）。 通常，取消合并操作将使用前面部分中所述的技术。
+ EMD 还封装了互补的取消 *合并* 或 `MergeDisconnect` 操作。 如果你具有已通过使用合并构造的元素的群集，则建议使用关联的取消合并将元素从该群集中移除（如果想要使剩余元素保留在一致的状态下）。 通常，取消合并操作将使用前面部分中所述的技术。
 
- 有关详细信息，请参阅[自定义元素创建和移动](../modeling/customizing-element-creation-and-movement.md)。
+ 有关详细信息，请参阅 [自定义元素创建和移动](../modeling/customizing-element-creation-and-movement.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [自定义复制行为](../modeling/customizing-copy-behavior.md)[自定义元素创建和移动](../modeling/customizing-element-creation-and-movement.md)[编写代码以自定义域特定语言](../modeling/writing-code-to-customise-a-domain-specific-language.md)

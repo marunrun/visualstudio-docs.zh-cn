@@ -1,5 +1,5 @@
 ---
-title: 实施和注册港口供应商 |微软文档
+title: 实现和注册端口供应商 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,19 +12,19 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: efa9cdd8740648b66fe7190177b5fe769c4b2539
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80738531"
 ---
-# <a name="implement-and-register-a-port-supplier"></a>实施和注册端口供应商
-端口供应商的作用是跟踪和供应端口，而端口又管理流程。 当需要创建端口时，将使用 CoCreate 与端口供应商的 GUID 实例化端口供应商（会话调试管理器 [SDM] 将使用用户选择的端口供应商或项目系统指定的端口供应商）。 然后，SDM 调用[CanAddPort](../../extensibility/debugger/reference/idebugportsupplier2-canaddport.md)以查看是否可以添加任何端口。 如果可以添加端口，则通过调用[AddPort](../../extensibility/debugger/reference/idebugportsupplier2-addport.md)并传递描述该端口的[IDebugPortRequest2](../../extensibility/debugger/reference/idebugportrequest2.md)来请求新端口。 `AddPort`返回由[IDebugPort2](../../extensibility/debugger/reference/idebugport2.md)接口表示的新端口。
+# <a name="implement-and-register-a-port-supplier"></a>实现并注册端口供应商
+端口供应商的角色是跟踪和提供端口，进而管理进程。 需要创建端口时，将使用共同 iopalisserverextension 和端口供应商的 GUID 来实例化端口供应商 (会话调试管理器 [SDM] 将使用用户选择的端口供应商或由项目系统) 指定的端口供应商。 然后，SDM 调用 [CanAddPort](../../extensibility/debugger/reference/idebugportsupplier2-canaddport.md) 来查看是否可以添加任何端口。 如果可以添加某个端口，则通过调用 [AddPort](../../extensibility/debugger/reference/idebugportsupplier2-addport.md) 并向其传递描述该端口的 [IDebugPortRequest2](../../extensibility/debugger/reference/idebugportrequest2.md) 来请求一个新端口。 `AddPort` 返回由 [IDebugPort2](../../extensibility/debugger/reference/idebugport2.md) 接口表示的新端口。
 
-## <a name="discussion"></a>讨论区
- 端口由与计算机或调试服务器关联的端口供应商创建。 服务器通过[EnumPortSuppliers](../../extensibility/debugger/reference/idebugcoreserver2-enumportsuppliers.md)方法枚举其端口供应商，端口供应商通过[枚举端口](../../extensibility/debugger/reference/idebugportsupplier2-enumports.md)方法枚举其端口。
+## <a name="discussion"></a>讨论 (Discussion)
+ 端口由与计算机或调试服务器关联的端口提供程序创建。 服务器通过[EnumPortSuppliers](../../extensibility/debugger/reference/idebugcoreserver2-enumportsuppliers.md) 方法枚举其端口供应商，端口供应商通过 [EnumPorts](../../extensibility/debugger/reference/idebugportsupplier2-enumports.md) 方法枚举其端口。
 
- 除了典型的 COM 注册之外，端口供应商还必须将其 CLSID 和名称放在特定的注册表位置，从而在 Visual Studio 中注册。 调用`SetMetric`的调试 SDK 帮助器函数处理此杂务：为要注册的每个项目调用一次，因此：
+ 除了典型的 COM 注册，端口供应商必须通过将其 CLSID 和名称放入特定的注册表位置，将其自身注册到 Visual Studio。 称为处理此操作的调试 SDK helper 函数 `SetMetric` ：为要注册的每个项调用一次：
 
 ```cpp
 SetMetric(metrictypePortSupplier,
@@ -41,7 +41,7 @@ SetMetric(metrictypePortSupplier,
           NULL);
 ```
 
- 端口供应商通过调用`RemoveMetric`（另一个调试 SDK 帮助器函数）对已注册的每个项目一次来取消注册自身，从而：
+ 端口供应商通过调用 `RemoveMetric` 另一个调试 SDK helper 函数) 为注册的每个项 (调用一次来取消注册自身，因此：
 
 ```cpp
 RemoveMetric(metrictypePortSupplier,
@@ -55,11 +55,11 @@ RemoveMetric(metrictypePortSupplier,
 ```
 
 > [!NOTE]
-> [用于调试](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)`SetMetric`的 SDK 帮助`RemoveMetric`器是*dbgmetric.h*中定义的静态函数，并编译为*ad2de.lib*。 `metricCLSID``metricName`和`metrictypePortSupplier`帮助器也在*dbgmetric.h*中定义。
+> [SDK 帮助程序用于调试](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) `SetMetric` ， `RemoveMetric` 是在*dbgmetric*中定义的、编译到*ad2de*中的静态函数。 `metrictypePortSupplier`、 `metricCLSID` 和帮助程序 `metricName` 也是在*dbgmetric*中定义的。
 
- 端口供应商可以通过[GetPort供应商名称](../../extensibility/debugger/reference/idebugportsupplier2-getportsuppliername.md)和[GetPortSupplyId](../../extensibility/debugger/reference/idebugportsupplier2-getportsupplierid.md)的方法分别提供其名称和GUID。
+ 端口供应商可以通过 [GetPortSupplierName](../../extensibility/debugger/reference/idebugportsupplier2-getportsuppliername.md) 和 [GetPortSupplierId](../../extensibility/debugger/reference/idebugportsupplier2-getportsupplierid.md)方法分别提供其名称和 GUID。
 
-## <a name="see-also"></a>请参阅
-- [实施端口供应商](../../extensibility/debugger/implementing-a-port-supplier.md)
-- [用于调试的 SDK 帮助器](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)
-- [港口供应商](../../extensibility/debugger/port-suppliers.md)
+## <a name="see-also"></a>另请参阅
+- [实现端口供应商](../../extensibility/debugger/implementing-a-port-supplier.md)
+- [SDK 调试帮助程序](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)
+- [端口供应商](../../extensibility/debugger/port-suppliers.md)

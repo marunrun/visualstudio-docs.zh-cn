@@ -1,5 +1,5 @@
 ---
-title: IDebug属性3：：获取字符串字符长度 |微软文档
+title: IDebugProperty3：： GetStringCharLength |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: c1a2eb62ab748562acd8f0a894a3675f79981ccc
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80721123"
 ---
 # <a name="idebugproperty3getstringcharlength"></a>IDebugProperty3::GetStringCharLength
-返回关联属性字符串中的字符数。
+返回关联的属性的字符串中的字符数。
 
 ## <a name="syntax"></a>语法
 
@@ -41,15 +41,15 @@ int GetStringCharLength(
 
 ## <a name="parameters"></a>参数
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
-|`pLen`|[出]返回属性字符串中的字符数。|
+|`pLen`|弄返回属性字符串中的字符数。|
 
 ## <a name="return-value"></a>返回值
-如果成功，返回`S_OK`;否则返回错误代码。
+如果成功， `S_OK` 则返回; 否则返回错误代码。
 
 ## <a name="remarks"></a>备注
-通常，此方法用作为[GetStringChars](../../../extensibility/debugger/reference/idebugproperty3-getstringchars.md)方法调用分配缓冲区的前奏。
+通常，此方法用作 prelude，以便为对 [GetStringChars](../../../extensibility/debugger/reference/idebugproperty3-getstringchars.md) 方法的调用分配缓冲区。
 
 ## <a name="example"></a>示例
 下面的示例演示如何为公开[IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md)接口的**CProperty**对象实现此方法。
@@ -94,6 +94,6 @@ STDMETHODIMP CProperty::GetStringCharLength(ULONG *pLen)
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [GetStringChars](../../../extensibility/debugger/reference/idebugproperty3-getstringchars.md)
 - [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md)

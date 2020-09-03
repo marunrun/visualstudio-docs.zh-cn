@@ -10,23 +10,23 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 90794b658204fb955e6dfaebed0377f91d9792ba
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72672532"
 ---
 # <a name="primitives-activity-designers"></a>基元活动设计器
 各基元活动设计器用于创建和配置 <xref:System.Activities.Statements> 命名空间中的多种活动，如 Assign 和 Delay。 本节中包含的主题介绍如何使用 [!INCLUDE[wfd2](../includes/wfd2-md.md)] 活动和模板设计器。
 
 ## <a name="in-this-section"></a>本节内容
- [分配](../workflow-designer/assign-activity-designer.md)用于创建和配置 <xref:System.Activities.Statements.Assign> 活动。
+ [分配](../workflow-designer/assign-activity-designer.md) 用于创建和配置 <xref:System.Activities.Statements.Assign> 活动。
 
- [延迟](../workflow-designer/delay-activity-designer.md)用于创建和配置 <xref:System.Activities.Statements.Delay> 活动。
+ [延迟](../workflow-designer/delay-activity-designer.md) 用于创建和配置 <xref:System.Activities.Statements.Delay> 活动。
 
- [InvokeMethod](../workflow-designer/invokemethod-activity-designer.md)用于创建和配置 <xref:System.Activities.Statements.InvokeMethod> 活动。
+ [InvokeMethod](../workflow-designer/invokemethod-activity-designer.md) 用于创建和配置 <xref:System.Activities.Statements.InvokeMethod> 活动。
 
- [WriteLine](../workflow-designer/writeline-activity-designer.md)用于创建和配置 <xref:System.Activities.Statements.WriteLine> 活动。
+ [WriteLine](../workflow-designer/writeline-activity-designer.md) 用于创建和配置 <xref:System.Activities.Statements.WriteLine> 活动。
 
 ## <a name="reference"></a>参考
 
@@ -35,16 +35,16 @@ ms.locfileid: "72672532"
 
  [流程图](../workflow-designer/flowchart-activity-designers.md)
 
- [Messaging](../workflow-designer/messaging-activity-designers.md)
+ [消息传送](../workflow-designer/messaging-activity-designers.md)
 
  [运行时](../workflow-designer/runtime-activity-designers.md)
 
  [事务](../workflow-designer/transaction-activity-designers.md)
 
- [收集](../workflow-designer/collection-activity-designers.md)
+ [集合](../workflow-designer/collection-activity-designers.md)
 
  [错误处理](../workflow-designer/error-handling-activity-designers.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[使用活动设计器](../workflow-designer/using-the-activity-designers.md)-
+-[使用活动设计器](../workflow-designer/using-the-activity-designers.md)

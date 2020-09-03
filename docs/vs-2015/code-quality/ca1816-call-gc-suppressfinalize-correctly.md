@@ -16,20 +16,20 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 532478a8d6ed6b88347d196b4a74b6f19a38ef85
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85546765"
 ---
 # <a name="ca1816-call-gcsuppressfinalize-correctly"></a>CA1816:正确调用 GC.SuppressFinalize
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|Item|值|
+|项|值|
 |-|-|
 |TypeName|CallGCSuppressFinalizeCorrectly|
 |CheckId|CA1816|
-|Category|Microsoft. 使用情况|
+|类别|Microsoft. 使用情况|
 |是否重大更改|非重大更改|
 
 ## <a name="cause"></a>原因
@@ -38,12 +38,12 @@ ms.locfileid: "85546765"
 
 - 不是调用的实现的方法 <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName> 。
 
-- 方法调用 <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName> 并传递除此外的其他内容（我在 Visual Basic 中）。
+- 方法调用 <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName> 并传递除这 (我在 Visual Basic) 中。
 
 ## <a name="rule-description"></a>规则描述
- 使用 <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> 方法，用户可以在对象变为垃圾回收之前随时释放资源。 如果 <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> 调用方法，它将释放对象的资源。 这使得不需要终止。 <xref:System.IDisposable.Dispose%2A?displayProperty=fullName>应调用 <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName> ，以便垃圾回收器不会调用该对象的终结器。
+ 使用 <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> 方法，用户可以在对象变为垃圾回收之前随时释放资源。 如果 <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> 调用方法，它将释放对象的资源。 这使得不需要终止。 <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> 应调用 <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName> ，以便垃圾回收器不会调用该对象的终结器。
 
- 若要防止具有终结器的派生类型必须重新实现 [IDisposable] （<!-- TODO: review code entity reference <xref:assetId:///System.IDisposable?qualifyHint=True&amp;autoUpgrade=False>  -->）并调用它时，无需终结器的非密封类型仍应调用 <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName> 。
+ 若要阻止具有终结器的派生类型，而不必重新实现 [IDisposable] (<!-- TODO: review code entity reference <xref:assetId:///System.IDisposable?qualifyHint=True&amp;autoUpgrade=False>  -->) 并调用该方法，则不需要终结器的非密封类型仍应调用 <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName> 。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
  若要修复与此规则的冲突，请执行以下操作：
@@ -52,7 +52,7 @@ ms.locfileid: "85546765"
 
  如果该方法不是的实现 <xref:System.IDisposable.Dispose%2A> ，则删除对的调用 <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName> 或将其移动到该类型的 <xref:System.IDisposable.Dispose%2A> 实现。
 
- 更改对的所有调用 <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName> 以传递此项（在 Visual Basic 中为 Me）。
+ 更改对的所有调用 <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName> ，将此 (Visual Basic) 中。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
  仅当 deliberating 使用 <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName> 来控制其他对象的生存期时，才禁止显示此规则发出的警告。 如果的实现不调用，请不要禁止显示此规则发出的警告 <xref:System.IDisposable.Dispose%2A> <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName> 。 在这种情况下，无法取消终止会降低性能，而且不会带来任何好处。

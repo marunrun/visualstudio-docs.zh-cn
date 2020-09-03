@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: aebbedaab7e7ac342f6d6ace191d820f6a0c8090
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85520180"
 ---
 # <a name="getvstosolutionmetadata-function"></a>GetVstoSolutionMetadata 函数
@@ -37,4 +37,4 @@ HRESULT WINAPI GetVstoSolutionMetadata(
 |*ppSolutionInfo*|请勿使用。|
 
 ## <a name="return-value"></a>返回值
- 如果该函数成功，则它将返回**S_OK**。 如果函数失败，则返回错误代码。
+ 如果该函数成功，则它将返回 **S_OK**。 如果函数失败，则返回错误代码。

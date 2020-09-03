@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 344e15b69bf3e8308c62c6fa1074720b0cd7618d
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85520830"
 ---
 # <a name="run-time-text-generation-with-t4-text-templates"></a>使用 T4 文本模板的运行时文本生成
@@ -55,16 +55,16 @@ This report is Company Confidential.
 
 1. 在解决方案资源管理器中，在项目的快捷菜单上，选择 "**添加**  >  **新项**"。
 
-2. 在 "**添加新项**" 对话框中，选择 "**运行时文本模板**"。 （在 Visual Basic 查看**常见项**  > **常规**。）
+2. 在 " **添加新项** " 对话框中，选择 " **运行时文本模板**"。  (在 "**常见项**" "常规" 下 Visual Basic 查看  >  **General**。 ) 
 
 3. 键入模板文件的名称。
 
     > [!NOTE]
     > 模板文件名将用作生成的代码中的类名。 因此，它不应包含空格或标点。
 
-4. 选择 "**添加**"。
+4. 选择“添加”。
 
-    将创建一个扩展名为**tt**的新文件。 其 "**自定义工具**" 属性设置为 " **TextTemplatingFilePreprocessor**"。 它包含以下行：
+    将创建一个扩展名为 **tt**的新文件。 其 " **自定义工具** " 属性设置为 " **TextTemplatingFilePreprocessor**"。 它包含以下行：
 
     ```
     <#@ template language="C#" #>
@@ -82,12 +82,12 @@ This report is Company Confidential.
 
 1. 将该文件包含在 Visual Studio 项目中。 在解决方案资源管理器中，在项目的快捷菜单上，选择 "**添加**  >  **现有项**"。
 
-2. 将文件的 "**自定义工具**" 属性设置为 " **TextTemplatingFilePreprocessor**"。 在解决方案资源管理器的文件的快捷菜单上，选择 "**属性**"。
+2. 将文件的 " **自定义工具** " 属性设置为 " **TextTemplatingFilePreprocessor**"。 在解决方案资源管理器的文件的快捷菜单上，选择 " **属性**"。
 
     > [!NOTE]
-    > 如果已设置该属性，请确保它是**TextTemplatingFilePreprocessor**而不是**TextTemplatingFileGenerator**。 如果包含扩展名为**tt**的文件，则会发生这种情况。
+    > 如果已设置该属性，请确保它是 **TextTemplatingFilePreprocessor** 而不是 **TextTemplatingFileGenerator**。 如果包含扩展名为 **tt**的文件，则会发生这种情况。
 
-3. 将文件扩展名更改为**tt**。 尽管此步骤是可选的，但它有助于避免在不正确的编辑器中打开文件。
+3. 将文件扩展名更改为 **tt**。 尽管此步骤是可选的，但它有助于避免在不正确的编辑器中打开文件。
 
 4. 从文件名的主要部分删除所有空格或标点。 例如，"我的 Web Page.tt" 不正确，但 "MyWebPage.tt" 是正确的。 文件名称将用作生成的代码中的类名。
 
@@ -107,7 +107,7 @@ Language 参数将取决于项目的语言。
 
 ### <a name="plain-content"></a>纯内容
 
-编辑**tt**文件以包含你希望应用程序生成的文本。 例如：
+编辑 **tt** 文件以包含你希望应用程序生成的文本。 例如：
 
 ```html
 <html><body>
@@ -144,13 +144,13 @@ This report is Company Confidential.
 </table>
 ```
 
-请注意，在 `<# ... #>` 和之间插入语句 `<#= ... #>` 。 有关详细信息，请参阅[编写 T4 文本模板](../modeling/writing-a-t4-text-template.md)。
+请注意，在 `<# ... #>` 和之间插入语句 `<#= ... #>` 。 有关详细信息，请参阅 [编写 T4 文本模板](../modeling/writing-a-t4-text-template.md)。
 
 ## <a name="using-the-template"></a>使用模板
 
 ### <a name="the-code-built-from-the-template"></a>从模板生成的代码
 
-保存**tt**文件时，将生成一个子 **.cs**或 **.vb**文件。 若要在**解决方案资源管理器**中查看此文件，请展开**tt**文件节点。 在 Visual Basic 项目中，首先选择**解决方案资源管理器**工具栏中的 "**显示所有文件**"。
+保存 **tt** 文件时，将生成一个子 **.cs** 或 **.vb** 文件。 若要在 **解决方案资源管理器**中查看此文件，请展开 **tt** 文件节点。 在 Visual Basic 项目中，首先选择**解决方案资源管理器**工具栏中的 "**显示所有文件**"。
 
 请注意，该子公司文件包含一个分部类，其中包含一个名为的方法 `TransformText()` 。 可以从应用程序中调用此方法。
 
@@ -170,7 +170,7 @@ Dim pageContent = page.TransformText()
 System.IO.File.WriteAllText("outputPage.html", pageContent)
 ```
 
-若要将生成的类放入特定的命名空间，请设置文本模板文件的 "**自定义工具命名空间**" 属性。
+若要将生成的类放入特定的命名空间，请设置文本模板文件的 " **自定义工具命名空间** " 属性。
 
 ### <a name="debugging-runtime-text-templates"></a>调试运行时文本模板
 
@@ -182,7 +182,7 @@ System.IO.File.WriteAllText("outputPage.html", pageContent)
 
 通常，模板必须从应用程序的其他部分导入一些数据。 为了使此过程变得简单，模板生成的代码是一个分部类。 您可以在项目中的另一个文件中创建同一个类的另一部分。 该文件可以包含具有参数、属性和函数的构造函数，该构造函数可通过嵌入在模板中的代码和应用程序的其余部分进行访问。
 
-例如，可以创建单独的文件**MyWebPageCode.cs**：
+例如，可以创建单独的文件 **MyWebPageCode.cs**：
 
 ```csharp
 partial class MyWebPage
@@ -191,7 +191,7 @@ partial class MyWebPage
     public MyWebPage(MyData data) { this.m_data = data; }}
 ```
 
-在模板文件**MyWebPage.tt**中，可以编写：
+在模板文件 **MyWebPage.tt**中，可以编写：
 
 ```html
 <h2>Sales figures</h2>
@@ -217,7 +217,7 @@ System.IO.File.WriteAllText("outputPage.html", pageContent);
 
 #### <a name="constructor-parameters-in-visual-basic"></a>Visual Basic 中的构造函数参数
 
-在 Visual Basic 中，单独的**MyWebPageCode**文件包含：
+在 Visual Basic 中，单独的 **MyWebPageCode** 文件包含：
 
 ```vb
 Namespace My.Templates
@@ -272,7 +272,7 @@ System.IO.File.WriteAllText("outputPage.html", pageContent)
 
 ### <a name="assemblies-and-references"></a>程序集和引用
 
-如果希望模板代码引用 .NET 或其他程序集（如**System.Xml.dll**），请按常规方式将其添加到项目的**引用**。
+如果希望模板代码引用 .NET 或其他程序集（如 **System.Xml.dll**），请按常规方式将其添加到项目的 **引用** 。
 
 如果要以与语句相同的方式导入命名空间 `using` ，则可以使用指令执行此 `import` 操作：
 
@@ -310,7 +310,7 @@ Include 指令可用于模板文件文本或包含的文件文本中的任意位
 
 - 应用程序调用 `TextTransform()` 派生类的方法，但不转换基类 `SharedFragments` 。
 
-- 基类和派生类均为运行时文本模板;也就是说，"**自定义工具**" 属性设置为**TextTemplatingFilePreprocessor**。
+- 基类和派生类均为运行时文本模板;也就是说，" **自定义工具** " 属性设置为 **TextTemplatingFilePreprocessor**。
 
 **SharedFragments.tt：**
 
@@ -427,13 +427,13 @@ End of common template.
 End material for DerivedTemplate1.
 ```
 
-## <a name="related-topics"></a>相关主题
+## <a name="related-topics"></a>“相关主题”
 
-设计时模板：如果要使用模板生成将成为应用程序一部分的代码，请参阅[使用 T4 文本模板生成设计时代码](../modeling/design-time-code-generation-by-using-t4-text-templates.md)。
+设计时模板：如果要使用模板生成将成为应用程序一部分的代码，请参阅 [使用 T4 文本模板生成设计时代码](../modeling/design-time-code-generation-by-using-t4-text-templates.md)。
 
-可在编译时确定模板及其内容的任何应用程序中使用运行时模板。 但是，如果想要编写一个 Visual Studio 扩展，以便从运行时更改的模板生成文本，请参阅[在 VS 扩展中调用文本转换](../modeling/invoking-text-transformation-in-a-vs-extension.md)。
+可在编译时确定模板及其内容的任何应用程序中使用运行时模板。 但是，如果想要编写一个 Visual Studio 扩展，以便从运行时更改的模板生成文本，请参阅 [在 VS 扩展中调用文本转换](../modeling/invoking-text-transformation-in-a-vs-extension.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [代码生成和 T4 文本模板](../modeling/code-generation-and-t4-text-templates.md)
 - [编写 T4 文本模板](../modeling/writing-a-t4-text-template.md)

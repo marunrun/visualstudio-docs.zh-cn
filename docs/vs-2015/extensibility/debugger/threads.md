@@ -12,24 +12,24 @@ caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 028ad25495ba01d9763c8bec3bbb9c4480d72ff8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68185363"
 ---
-# <a name="threads"></a>线程
+# <a name="threads"></a>线程数
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-在调试器体系结构，方面**线程**:  
+就调试器体系结构而言， **线程**如下：  
   
-- 是计算的基本单位。 线程按顺序执行其上下文中的单一调用堆栈，将从一种代码上下文移到下一步的说明。  
+- 是计算的基本单位。 线程按顺序在单个调用堆栈的上下文中执行其说明，并从一个代码上下文移到下一个调用堆栈。  
   
-- 可以标识本身和它运行在中，可以将名为、 挂起，并且恢复的计划。 线程还可以枚举其关联的堆栈帧，并在某些情况下可以移动到另一个堆栈帧。 给定堆栈帧上下文内的，线程可以返回其关联的逻辑线程，如果有的话。 线程都具有属性，例如挂起计数，可以显示在 IDE 的线程窗口中。  
+- 可以标识自身及其正在其上运行的程序，并且可以命名、挂起和恢复。 线程还可以枚举其关联的堆栈帧，并且在某些情况下，可以将其移动到另一个堆栈帧。 给定堆栈帧的上下文，线程可以返回其关联的逻辑线程（如果有）。 线程具有可在 IDE 的 "线程" 窗口中显示的属性，例如挂起计数。  
   
-- 为由[IDebugThread2](../../extensibility/debugger/reference/idebugthread2.md)接口，通常创建的调试引擎 (DE) 或虚拟机，因此执行程序。  
+- 由 [IDebugThread2](../../extensibility/debugger/reference/idebugthread2.md) 接口表示，此接口通常由调试引擎创建 (取消) 或虚拟机作为执行程序的结果。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [程序](../../extensibility/debugger/programs.md)   
  [堆栈帧](../../extensibility/debugger/stack-frames.md)   
  [调试引擎](../../extensibility/debugger/debug-engine.md)   

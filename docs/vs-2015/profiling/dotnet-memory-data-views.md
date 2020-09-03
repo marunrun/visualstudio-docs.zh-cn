@@ -13,10 +13,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 7d31213dc970fa7cb28c4d4620c6731692db83d2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68185243"
 ---
 # <a name="net-memory-data-views"></a>.NET 内存数据视图
@@ -64,7 +64,7 @@ ms.locfileid: "68185243"
  [“函数”视图 - 检测](../profiling/functions-view-dotnet-memory-instrumentation-data.md)  
  列出分析运行期间检测函数的内存分配数据。  
   
-## <a name="reference"></a>参考  
+## <a name="reference"></a>引用  
  [“函数详细信息”视图](../profiling/function-details-view.md)  
  显示所选函数和调用所选函数及被所选函数调用的函数之间的关系图形图表。  
   
