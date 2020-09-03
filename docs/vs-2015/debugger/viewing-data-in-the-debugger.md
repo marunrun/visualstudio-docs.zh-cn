@@ -1,5 +1,5 @@
 ---
-title: 查看调试器中的数据 |Microsoft Docs
+title: 在调试器中查看数据 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -24,10 +24,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 1ade6c38a8edd73c181a3f135dd5e967901bf63f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68178930"
 ---
 # <a name="viewing-data-in-the-debugger"></a>查看调试器中的数据
@@ -39,9 +39,9 @@ ms.locfileid: "68178930"
  数据提示是用于在调试过程中查看程序中的变量和对象的有关信息的最方便工具之一。 在调试器处于中断模式时，可以在当前范围内查看变量的值，方法是将鼠标指针置于源窗口中的变量上。 有关详细信息，请参阅[查看数据提示中的数据值](../debugger/view-data-values-in-data-tips-in-the-code-editor.md)。  
   
 ## <a name="visualizers"></a>可视化工具  
- 可视化工具是 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 调试器的新组件，通过它可以以有意义的方式查看对象或变量的内容。 例如，可以使用 HTML 可视化工具来查看 HTML 字符串，因为这样可以解释该字符串并在浏览器中显示出来。 你可以通过数据提示、 **“监视”** 窗口、 **“自动”** 窗口、 **“局部变量”** 窗口或 **“快速监视”** 对话框来访问可视化工具。 有关详细信息，请参阅[创建自定义可视化工具](../debugger/create-custom-visualizers-of-data.md)。  
+ 可视化工具是 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 调试器的新组件，通过它可以以有意义的方式查看对象或变量的内容。 例如，可以使用 HTML 可视化工具来查看 HTML 字符串，因为这样可以解释该字符串并在浏览器中显示出来。 你可以通过数据提示、 **“监视”** 窗口、 **“自动”** 窗口、 **“局部变量”** 窗口或 **“快速监视”** 对话框来访问可视化工具。 有关详细信息，请参阅 [创建自定义可视化工具](../debugger/create-custom-visualizers-of-data.md)。  
   
-## <a name="see-also"></a>请参阅  
- [Debugger Basics](../debugger/debugger-basics.md) （调试器基础知识）  
- [“命令”窗口](../ide/reference/command-window.md)   
+## <a name="see-also"></a>另请参阅  
+ [调试器基础知识](../debugger/debugger-basics.md)   
+ [命令窗口](../ide/reference/command-window.md)   
  [调试器安全](../debugger/debugger-security.md)

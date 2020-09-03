@@ -1,5 +1,5 @@
 ---
-title: IDebugComPlus符号提供程序：：更新符号 |微软文档
+title: IDebugComPlusSymbolProvider：： UpdateSymbols |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -15,14 +15,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 20a4fa6f6ec52ee556bd62fe303d0e21e4c56d6a
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80733502"
 ---
 # <a name="idebugcomplussymbolproviderupdatesymbols"></a>IDebugComPlusSymbolProvider::UpdateSymbols
-使用指定数据流中的调试符号更新内存中的调试符号。
+用指定数据流中的调试符号，更新内存中的调试符号。
 
 ## <a name="syntax"></a>语法
 
@@ -44,16 +44,16 @@ int UpdateSymbols (
 
 ## <a name="parameters"></a>参数
 `ulAppDomainID`\
-[在]应用程序域的标识符。
+中应用程序域的标识符。
 
 `guidModule`\
-[在]模块的唯一标识符。
+中模块的唯一标识符。
 
 `pUpdateStream`\
-[在]包含更新的调试符号的数据流。
+中数据流，其中包含更新的调试符号。
 
 ## <a name="example"></a>示例
-下面的示例演示如何为公开[IDebugComPlusSymbol提供程序](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)接口的**CDebugSymbol提供程序**对象实现此方法。
+下面的示例演示如何为公开[IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)接口的**CDebugSymbolProvider**对象实现此方法。
 
 ```cpp
 HRESULT CDebugSymbolProvider::UpdateSymbols(
@@ -92,7 +92,7 @@ Error:
 ```
 
 ## <a name="return-value"></a>返回值
-如果成功，返回`S_OK`;否则，返回错误代码。
+如果成功， `S_OK` 则返回; 否则返回错误代码。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)
