@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 8ec3a38d109de561e3cba77951764dd8dd9479df
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85544763"
 ---
 # <a name="how-to-programmatically-cache-a-data-source-in-an-office-document"></a>如何：以编程方式在 Office 文档中缓存数据源
@@ -30,7 +30,7 @@ ms.locfileid: "85544763"
 
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]
 
- 使用 `StartCaching` 方法将数据对象添加到数据缓存时，无需使用特性声明数据对象 <xref:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedAttribute> 。 但是，数据对象必须满足某些要求才能添加到数据缓存中。 有关详细信息，请参阅[缓存数据](../vsto/caching-data.md)。
+ 使用 `StartCaching` 方法将数据对象添加到数据缓存时，无需使用特性声明数据对象 <xref:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedAttribute> 。 但是，数据对象必须满足某些要求才能添加到数据缓存中。 有关详细信息，请参阅 [缓存数据](../vsto/caching-data.md)。
 
 ## <a name="to-programmatically-cache-a-data-object"></a>以编程方式缓存数据对象
 
@@ -52,9 +52,9 @@ ms.locfileid: "85544763"
      [!code-vb[Trin_VstcoreDataExcel#14](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb#14)]
 
     > [!NOTE]
-    > 不要 `StopCaching` 从 `Shutdown` 文档或工作表的事件的事件处理程序调用。 `Shutdown`当引发事件时，修改数据缓存的时间太晚。 有关事件的详细信息 `Shutdown` ，请参阅[Office 项目中的事件](../vsto/events-in-office-projects.md)。
+    > 不要 `StopCaching` 从 `Shutdown` 文档或工作表的事件的事件处理程序调用。 `Shutdown`当引发事件时，修改数据缓存的时间太晚。 有关事件的详细信息 `Shutdown` ，请参阅 [Office 项目中的事件](../vsto/events-in-office-projects.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [缓存数据](../vsto/caching-data.md)
 - [如何：缓存数据以便脱机使用或在服务器上使用](../vsto/how-to-cache-data-for-use-offline-or-on-a-server.md)

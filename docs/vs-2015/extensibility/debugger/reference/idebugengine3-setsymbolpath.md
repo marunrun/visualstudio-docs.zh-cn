@@ -13,10 +13,10 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: d3ea3086931ab655209a5ca26d4d1527462fb205
-ms.sourcegitcommit: 374f5ec9a5fa18a6d4533fa2b797aa211f186755
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77476796"
 ---
 # <a name="idebugengine3setsymbolpath"></a>IDebugEngine3::SetSymbolPath
@@ -46,15 +46,15 @@ int SetSymbolPath(
   
 |参数|说明|  
 |---------------|-----------------|  
-|`szSymbolSearchPath`|中包含符号搜索路径的字符串。 有关详细信息，请参阅 "备注"。 不能为 Null。|  
-|`szSymbolCachePath`|中包含可在其中缓存符号的本地路径的字符串。 不能为 Null。|  
+|`szSymbolSearchPath`|中包含符号搜索路径的字符串。 有关详细信息，请参阅 "备注"。 不能为 null。|  
+|`szSymbolCachePath`|中包含可在其中缓存符号的本地路径的字符串。 不能为 null。|  
 |`Flags`|中未使用;始终设置为0。|  
   
 ## <a name="return-value"></a>返回值  
  如果成功，将返回 S_OK;否则，将返回错误代码。  
   
 ## <a name="remarks"></a>备注  
- 字符串 `szSymbolSearchPath` 是用分号分隔的一个或多个路径的列表，用于搜索符号。 这些路径可以是本地路径、UNC 样式路径或 URL。 这些路径也可以是不同类型的混合。 如果路径为 UNC （例如 \\\Symserver\Symbols），则调试引擎应确定该路径是否指向符号服务器，并应能够从该服务器加载符号，并将它们缓存到 `szSymbolCachePath`指定的路径中。  
+ 字符串 `szSymbolSearchPath` 是用分号分隔的一个或多个路径的列表，用于搜索符号。 这些路径可以是本地路径、UNC 样式路径或 URL。 这些路径也可以是不同类型的混合。 如果路径为 UNC (例如， \\ \Symserver\Symbols) ，则调试引擎应确定该路径是否指向符号服务器，并应能够从该服务器加载符号，并将它们缓存到指定的路径中 `szSymbolCachePath` 。  
   
  符号路径还可以包含一个或多个缓存位置。 缓存按优先级顺序列出，最高优先级缓存优先，并用 * 符号分隔。 例如：  
   

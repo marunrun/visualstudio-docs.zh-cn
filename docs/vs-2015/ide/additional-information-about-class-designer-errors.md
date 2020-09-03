@@ -30,22 +30,22 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: a095cd909dcd4d378fddc91c9151cf28e34a8ee5
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75852211"
 ---
 # <a name="additional-information-about-class-designer-errors"></a>有关类设计器错误的附加信息
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-类设计器不会跟踪源文件的位置，因此修改项目结构或移动项目中的源文件就可能导致类设计器无法继续对类型（尤其是 typedef 的源类型、基类或关联类型）进行跟踪。 可能会收到错误，如“类设计器无法显示此类型”  。 如果收到错误，要将修改过的或被重新定位的源代码再次拖到类图中以重新显示。
+类设计器不会跟踪源文件的位置，因此修改项目结构或移动项目中的源文件就可能导致类设计器无法继续对类型（尤其是 typedef 的源类型、基类或关联类型）进行跟踪。 可能会收到错误，如“类设计器无法显示此类型”****。 如果收到错误，要将修改过的或被重新定位的源代码再次拖到类图中以重新显示。
 
  你在以下资源中找到关于其他错误和警告的协助：
 
- [使用 Visual C++ Code （类设计器）](../ide/working-with-visual-cpp-code-class-designer.md)包括有关在类图中C++显示的疑难解答信息。
+ 使用[Visual C++ 代码 (类设计器) ](../ide/working-with-visual-cpp-code-class-designer.md)包括有关在类图中显示 c + + 的疑难解答信息。
 
  [Visual Studio 类设计器论坛](https://social.msdn.microsoft.com/Forums/en-US/vsclassdesigner/threads?page=1)提供一个有关类设计器相关问题的论坛。
 
 ## <a name="see-also"></a>另请参阅
- [设计和查看类与类型](../ide/designing-and-viewing-classes-and-types.md)
+ [设计和查看类和类型](../ide/designing-and-viewing-classes-and-types.md)

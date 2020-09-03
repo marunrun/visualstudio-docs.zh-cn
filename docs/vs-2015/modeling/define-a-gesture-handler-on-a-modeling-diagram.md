@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: af4123b24ab9286e306a1034de4416a31ae76f2b
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85533063"
 ---
 # <a name="define-a-gesture-handler-on-a-modeling-diagram"></a>在建模图上定义笔势处理程序
@@ -74,7 +74,7 @@ ms.locfileid: "85533063"
 
     `System.Windows.Forms`
 
-    `Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer` – 仅当扩展层关系图时才需要此项。 有关详细信息，请参阅[扩展层关系图](../modeling/extend-layer-diagrams.md)。
+    `Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer` – 仅当扩展层关系图时才需要此项。 有关详细信息，请参阅 [扩展层关系图](../modeling/extend-layer-diagrams.md)。
 
 3. 将类文件添加到项目中，并将其内容设置为下面的代码。
 
@@ -230,7 +230,7 @@ ms.locfileid: "85533063"
 
          **项目**  = *你的类库项目*
 
-## <a name="executing-the-gesture-handler"></a><a name="Executing"></a>执行笔势处理程序
+## <a name="executing-the-gesture-handler"></a><a name="Executing"></a> 执行笔势处理程序
  出于测试目的，在调试模式下执行笔势处理程序。
 
 #### <a name="to-test-the-gesture-handler"></a>要测试笔势处理程序
@@ -243,7 +243,7 @@ ms.locfileid: "85533063"
 
    - 如果你有多个项目，请确保将 VSIX 项目设置为解决方案的启动项目。
 
-   - 在“解决方案资源管理器”中，在“启动”或“仅项目”的快捷菜单上选择“属性”。 在项目属性编辑器中，选择 "**调试**" 选项卡。请确保 "**启动外部程序**" 字段中的字符串是的完整路径名 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ，通常为：
+   - 在“解决方案资源管理器”中，在“启动”或“仅项目”的快捷菜单上选择“属性”。 在项目属性编辑器中，选择 " **调试** " 选项卡。请确保 " **启动外部程序** " 字段中的字符串是的完整路径名 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ，通常为：
 
         `C:\Program Files\Microsoft Visual Studio [version]\Common7\IDE\devenv.exe`
 
@@ -265,7 +265,7 @@ ms.locfileid: "85533063"
 
 - 尚未为此类型的目标和放置的元素定义内置功能。
 
-## <a name="implementing-the-gesture-handler"></a><a name="Implementing"></a>实现笔势处理程序
+## <a name="implementing-the-gesture-handler"></a><a name="Implementing"></a> 实现笔势处理程序
 
 ### <a name="the-gesture-handler-methods"></a>笔势处理程序方法
  笔势处理程序类实现并导出 <xref:Microsoft.VisualStudio.Modeling.Diagrams.ExtensionEnablement.IGestureExtension>。 以下是需要定义的方法：
@@ -282,7 +282,7 @@ ms.locfileid: "85533063"
 
 - `ShapeElement target`. 用户已将某项拖动到其上的形状或关系图。
 
-    `ShapeElement` 是作为 UML 建模工具的基础的实现中的一个类。 为降低使 UML 模型和关系图处于不一致状态的风险，建议你不要直接使用此类的方法。 相反，在中包装元素 `IShape` ，然后使用在[关系图上显示 UML 模型](../modeling/display-a-uml-model-on-diagrams.md)中所述的方法。
+    `ShapeElement` 是作为 UML 建模工具的基础的实现中的一个类。 为降低使 UML 模型和关系图处于不一致状态的风险，建议你不要直接使用此类的方法。 相反，在中包装元素 `IShape` ，然后使用在 [关系图上显示 UML 模型](../modeling/display-a-uml-model-on-diagrams.md)中所述的方法。
 
   - 要获取 `IShape`：
 
@@ -319,14 +319,14 @@ ms.locfileid: "85533063"
 
      可从 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]的不同部分或从 Windows 桌面将许多不同类型的元素拖动到关系图上。 在 `IDataObject`中按照不同的方式对不同类型的元素进行编码。 若要从其中提取元素，请参考相应类型对象的文档。
 
-     如果源对象是从 UML 模型资源管理器或另一个 UML 关系图拖动的 UML 元素，请参阅[从 IDataObject 获取 UML 模型元素](../modeling/get-uml-model-elements-from-idataobject.md)。
+     如果源对象是从 UML 模型资源管理器或另一个 UML 关系图拖动的 UML 元素，请参阅 [从 IDataObject 获取 UML 模型元素](../modeling/get-uml-model-elements-from-idataobject.md)。
 
 ### <a name="writing-the-code-of-the-methods"></a>编写方法的代码
  有关编写代码以读取和更新模型的详细信息，请参阅 [Programming with the UML API](../modeling/programming-with-the-uml-api.md)。
 
- 有关在拖动操作中访问模型信息的信息，请参阅[从 IDataObject 获取 UML 模型元素](../modeling/get-uml-model-elements-from-idataobject.md)。
+ 有关在拖动操作中访问模型信息的信息，请参阅 [从 IDataObject 获取 UML 模型元素](../modeling/get-uml-model-elements-from-idataobject.md)。
 
- 如果处理的是序列图，另请参阅[使用 UML API 编辑 uml 序列图](../modeling/edit-uml-sequence-diagrams-by-using-the-uml-api.md)。
+ 如果处理的是序列图，另请参阅 [使用 UML API 编辑 uml 序列图](../modeling/edit-uml-sequence-diagrams-by-using-the-uml-api.md)。
 
  除了这些方法的参数之外，你还可以在提供对当前关系图和模型的访问权限的类中声明一个导入属性。
 
@@ -346,9 +346,9 @@ foreach (IDiagram diagram in modelStore.Diagrams) {...}
 foreach (IElement element in modelStore.AllInstances<IUseCase>) {...}
 ```
 
- 有关详细信息，请参阅["导航 UML 模型"](../modeling/navigate-the-uml-model.md)。
+ 有关详细信息，请参阅 ["导航 UML 模型"](../modeling/navigate-the-uml-model.md)。
 
-## <a name="installing-and-uninstalling-an-extension"></a><a name="Installing"></a>安装和卸载扩展
+## <a name="installing-and-uninstalling-an-extension"></a><a name="Installing"></a> 安装和卸载扩展
  你可以在自己的计算机和其他计算机上安装 [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] 扩展。
 
 #### <a name="to-install-an-extension"></a>若要安装扩展
@@ -361,7 +361,7 @@ foreach (IElement element in modelStore.AllInstances<IUseCase>) {...}
 
 2. 将 **.vsix** 文件复制到要安装该扩展的目标计算机。 该计算机可以是自己的计算机或其他计算机。
 
-     目标计算机必须具有 [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] 你在**source.extension.vsixmanifest**中指定的版本之一。
+     目标计算机必须具有 [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] 你在 **source.extension.vsixmanifest**中指定的版本之一。
 
 3. 在目标计算机上，打开 **.vsix** 文件。
 
@@ -384,9 +384,9 @@ foreach (IElement element in modelStore.AllInstances<IUseCase>) {...}
 ## <a name="example"></a><a name="DragExample"></a> 示例
  下面的示例演示如何在序列图中基于从组件图中拖动的组件的部件和端口来创建生命线。
 
- 若要对其进行测试，请按 F5。 这将打开一个 Visual Studio 实验实例。 在此实例中，打开 UML 模型并在组件图上创建一个组件。 向该组件添加一些接口和内部组件部件。 选择接口和部件。 然后，将接口和部件拖动到序列图上。 （从组件图中拖动到序列图的选项卡上，然后向下拖动到序列图中。）将显示每个接口和部件的生命线。
+ 若要对其进行测试，请按 F5。 这将打开一个 Visual Studio 实验实例。 在此实例中，打开 UML 模型并在组件图上创建一个组件。 向该组件添加一些接口和内部组件部件。 选择接口和部件。 然后，将接口和部件拖动到序列图上。  (从组件图中拖动到序列图的选项卡上，然后向下拖动到序列图中。 ) 将为每个接口和部件显示生命线。
 
- 有关将交互绑定到序列图的详细信息，请参阅[使用 UML API 编辑 uml 序列图](../modeling/edit-uml-sequence-diagrams-by-using-the-uml-api.md)。
+ 有关将交互绑定到序列图的详细信息，请参阅 [使用 UML API 编辑 uml 序列图](../modeling/edit-uml-sequence-diagrams-by-using-the-uml-api.md)。
 
 ```
 using System.Collections.Generic;

@@ -14,18 +14,19 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 76375c15077bf672eaba01c840ba406228046435
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86016490"
 ---
 # <a name="walkthrough-create-a-sharepoint-application-page"></a>演练：创建 SharePoint 应用程序页
 
-应用程序页是 ASP.NET 页的专用形式。 应用程序页包含与 SharePoint 母版页合并的内容。 有关详细信息，请参阅[为 SharePoint 创建应用程序页](../sharepoint/creating-application-pages-for-sharepoint.md)。
+应用程序页是 ASP.NET 页的专用形式。 应用程序页包含与 SharePoint 母版页合并的内容。 有关详细信息，请参阅 [为 SharePoint 创建应用程序页](../sharepoint/creating-application-pages-for-sharepoint.md)。
 
 本演练演示如何创建一个应用程序页，然后使用本地 SharePoint 站点对其进行调试。 此页显示每个用户在服务器场中的所有站点中创建或修改的所有项。
 
-本演练阐释了以下任务：
+本演练演示以下任务：
 
 - 创建 SharePoint 项目。
 - 向 SharePoint 项目中添加一个应用程序页。
@@ -42,47 +43,47 @@ ms.locfileid: "86016490"
 
 ## <a name="create-a-sharepoint-project"></a>创建 SharePoint 项目
 
-首先，创建一个**空 SharePoint 项目**。 稍后，您将向此项目中添加一个**应用程序页**项。
+首先，创建一个 **空 SharePoint 项目**。 稍后，您将向此项目中添加一个 **应用程序页** 项。
 
 1. 启动 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]。
 
-2. 打开 "**新建项目**" 对话框，展开想要使用的语言下的 " **Office/SharePoint** " 节点，然后选择 " **SharePoint 解决方案**" 节点。
+2. 打开 " **新建项目** " 对话框，展开想要使用的语言下的 " **Office/SharePoint** " 节点，然后选择 " **SharePoint 解决方案** " 节点。
 
-3. 在 " **Visual Studio 已安装的模板**" 窗格中，选择 " **SharePoint 2010-空项目**" 模板。 将项目命名为**MySharePointProject**，然后选择 **"确定"** 按钮。
+3. 在 " **Visual Studio 已安装的模板** " 窗格中，选择 " **SharePoint 2010-空项目** " 模板。 将项目命名为 **MySharePointProject**，然后选择 **"确定"** 按钮。
 
-     " **SharePoint 自定义向导**" 随即出现。 使用此向导，您可以选择将用于调试项目的站点以及解决方案的信任级别。
+     " **SharePoint 自定义向导** " 随即出现。 使用此向导，您可以选择将用于调试项目的站点以及解决方案的信任级别。
 
-4. 选择 "**部署为场解决方案**" 选项按钮，然后选择 "**完成**" 按钮以接受默认的本地 SharePoint 站点。
+4. 选择 " **部署为场解决方案** " 选项按钮，然后选择 " **完成** " 按钮以接受默认的本地 SharePoint 站点。
 
 ## <a name="create-an-application-page"></a>"创建应用程序" 页
 
-若要创建应用程序页，请向项目添加 "**应用程序页**" 项。
+若要创建应用程序页，请向项目添加 " **应用程序页** " 项。
 
-1. 在**解决方案资源管理器**中，选择 " **MySharePointProject** " 项目。
+1. 在 **解决方案资源管理器**中，选择 " **MySharePointProject** " 项目。
 
 2. 在菜单栏上，选择 "**项目**" "  >  **添加新项**"。
 
-3. 在 "**添加新项**" 对话框中，选择 "**应用程序" 页（仅场解决方案**模板。
+3. 在 " **添加新项** " 对话框中，选择 " **应用程序页 (场仅解决方案** 模板"。
 
-4. 将该页命名为**SearchItems**，然后选择 "**添加**" 按钮。
+4. 将该页命名为 **SearchItems**，然后选择 " **添加** " 按钮。
 
-     Visual Web Developer 设计器会在**源**视图中显示应用程序页，可以在其中查看该页的 HTML 元素。 设计器将为多个控件显示标记 <xref:System.Web.UI.WebControls.Content> 。 每个控件都映射到 <xref:System.Web.UI.WebControls.ContentPlaceHolder> 在默认应用程序母版页中定义的控件。
+     Visual Web Developer 设计器会在 **源** 视图中显示应用程序页，可以在其中查看该页的 HTML 元素。 设计器将为多个控件显示标记 <xref:System.Web.UI.WebControls.Content> 。 每个控件都映射到 <xref:System.Web.UI.WebControls.ContentPlaceHolder> 在默认应用程序母版页中定义的控件。
 
 ## <a name="design-the-layout-of-the-application-page"></a>设计应用程序页的布局
 
-使用 "应用程序页" 项可以使用设计器将 ASP.NET 控件添加到应用程序页。 此设计器与 Visual Web Developer 中使用的设计器相同。 向设计器的 "**源**" 视图添加标签、单选按钮列表和表，然后设置属性，就像设计任何标准 ASP.NET 页一样。
+使用 "应用程序页" 项可以使用设计器将 ASP.NET 控件添加到应用程序页。 此设计器与 Visual Web Developer 中使用的设计器相同。 向设计器的 " **源** " 视图添加标签、单选按钮列表和表，然后设置属性，就像设计任何标准 ASP.NET 页一样。
 
 1. 在菜单栏上，选择 "**视图**  >  **" "工具箱**"。
 
-2. 在 "**工具箱**" 的 "标准" 节点中，执行以下步骤之一：
+2. 在 " **工具箱**" 的 "标准" 节点中，执行以下步骤之一：
 
-    - 打开**标签**项的快捷菜单，选择 "**复制**"，在设计器中的 " **PlaceHolderMain**内容" 控件下打开行的快捷菜单，然后选择 "**粘贴**"。
+    - 打开 **标签** 项的快捷菜单，选择 " **复制**"，在设计器中的 " **PlaceHolderMain** 内容" 控件下打开行的快捷菜单，然后选择 " **粘贴**"。
 
-    - 将 "**标签**" 项从 "**工具箱**" 拖动到 " **PlaceHolderMain** " 内容控件的正文中。
+    - 将 " **标签** " 项从 " **工具箱** " 拖动到 " **PlaceHolderMain** " 内容控件的正文中。
 
-3. 重复上述步骤，将**DropDownList**项和**表**项添加到**PlaceHolderMain**内容控件。
+3. 重复上述步骤，将 **DropDownList** 项和 **表** 项添加到 **PlaceHolderMain** 内容控件。
 
-4. 在设计器中，将 `Text` "标签" 控件的属性值更改为 "**显示所有项**"。
+4. 在设计器中，将 `Text` "标签" 控件的属性值更改为 " **显示所有项**"。
 
 5. 在设计器中，将 `<asp:DropDownList>` 元素替换为以下 XML。
 
@@ -98,7 +99,7 @@ ms.locfileid: "86016490"
 
 像处理任何 ASP.NET 页一样，处理应用程序页中的控件。 在此过程中，您将处理 `SelectedIndexChanged` 下拉列表的事件。
 
-1. 在 "**视图**" 菜单上，选择 "**代码**"。
+1. 在 " **视图** " 菜单上，选择 " **代码**"。
 
      应用程序页代码文件将在代码编辑器中打开。
 
@@ -126,23 +127,23 @@ ms.locfileid: "86016490"
 
 运行该项目时，SharePoint 网站将打开，并显示应用程序页面。
 
-1. 在**解决方案资源管理器**中，打开应用程序页的快捷菜单，然后选择 "**设为启动项**"。
+1. 在 **解决方案资源管理器**中，打开应用程序页的快捷菜单，然后选择 " **设为启动项**"。
 
 2. 选择 F5****。
 
      SharePoint 站点将打开。
 
-3. 在 "应用程序" 页上，选择 "**由我修改**" 选项。
+3. 在 "应用程序" 页上，选择 " **由我修改** " 选项。
 
      应用程序页将刷新并显示您在服务器场中的所有站点中修改的所有项。
 
-4. 在 "应用程序" 页上，在列表中选择 "**由我创建**"。
+4. 在 "应用程序" 页上，在列表中选择 " **由我创建** "。
 
      应用程序页将刷新并显示你在服务器场中的所有站点中创建的所有项。
 
 ## <a name="next-steps"></a>后续步骤
 
-有关 SharePoint 应用程序页的详细信息，请参阅[为 Sharepoint 创建应用程序页](../sharepoint/creating-application-pages-for-sharepoint.md)。
+有关 SharePoint 应用程序页的详细信息，请参阅 [为 Sharepoint 创建应用程序页](../sharepoint/creating-application-pages-for-sharepoint.md)。
 
 可以通过以下主题中的 Visual Web Designer 来了解有关如何设计 SharePoint 页面内容的详细信息：
 

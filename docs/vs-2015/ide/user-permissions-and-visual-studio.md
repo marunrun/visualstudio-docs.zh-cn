@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: aa01cb77e8a003438721984da13f46de350104ea
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75918995"
 ---
 # <a name="user-permissions-and-visual-studio"></a>用户权限与 Visual Studio
@@ -31,14 +31,14 @@ ms.locfileid: "75918995"
 
  作为普通用户，你可以在 Visual Studio IDE 中完成几乎所有操作，但你需要管理员权限才能完成以下任务：
 
-|区域|任务|更多相关信息|
+|领域|任务|更多信息|
 |----------|----------|--------------------------|
 |安装|安装 Visual Studio。|[安装 Visual Studio 2015](../install/install-visual-studio-2015.md)|
 ||从 Visual Studio 的试用版升级。|[如何：从 Visual Studio 的试用版升级](../install/how-to-upgrade-from-a-trial-edition-of-visual-studio.md)|
 ||安装、更新或移除本地 Help 内容。|[安装和管理本地内容](../ide/install-and-manage-local-content.md)|
-|应用程序类型|部署 SharePoint 2010 的解决方案。|[开发 SharePoint 解决方案的需求](https://msdn.microsoft.com/library/ae8ff69d-4540-4380-ab0b-845f7108e89c)|
+|应用程序类型|部署 SharePoint 2010 的解决方案。|[开发 SharePoint 解决方案的要求](https://msdn.microsoft.com/library/ae8ff69d-4540-4380-ab0b-845f7108e89c)|
 ||获取 [!INCLUDE[win8_appstore_long](../includes/win8-appstore-long-md.md)]的开发人员许可证。|[获取开发人员许可证（Windows 应用商店应用）](https://msdn.microsoft.com/library/windows/apps/hh974578.aspx)|
-|工具箱|将经典 COM 控件添加到“工具箱”  。|[使用工具箱](../ide/using-the-toolbox.md)|
+|工具箱|将经典 COM 控件添加到“工具箱”****。|[使用工具箱](../ide/using-the-toolbox.md)|
 |外接程序|安装和使用通过使用 IDE 中的经典 COM 编写的加载项。|[创建外接程序和向导](https://msdn.microsoft.com/library/c5a47c21-6668-4de3-898d-afa969317e73)|
 |生成|使用注册组件的后期生成事件。|[了解自定义生成步骤和生成事件](https://msdn.microsoft.com/library/beb2f017-3e9f-4b2c-9b57-2572fd2628e4)|
 ||在生成 C++ 项目时包括一个注册步骤。|[了解自定义生成步骤和生成事件](https://msdn.microsoft.com/library/beb2f017-3e9f-4b2c-9b57-2572fd2628e4)|
@@ -54,21 +54,21 @@ ms.locfileid: "75918995"
 ## <a name="running-visual-studio-as-an-administrator"></a>以管理员身份运行 Visual Studio
  每次启动 IDE 时，可利用管理权限启动 Visual Studio，或可以修改应用程序快捷方式以便始终利用管理权限运行。 有关详细信息，请参阅 Windows 帮助。
 
-#### <a name="to-run-visual-studio-with-administrative-permissions-on-includewin8includeswin8-mdmd-includewin81includeswin81-mdmd-includewinserver8includeswinserver8-mdmd-or-includewinblue_server_2includeswinblue-server-2-mdmd"></a>在 [!INCLUDE[win8](../includes/win8-md.md)]、[!INCLUDE[win81](../includes/win81-md.md)]、[!INCLUDE[winserver8](../includes/winserver8-md.md)] 或 [!INCLUDE[winblue_server_2](../includes/winblue-server-2-md.md)]上利用管理权限运行 Visual Studio
+#### <a name="to-run-visual-studio-with-administrative-permissions-on-win8-win81-winserver8-or-winblue_server_2"></a>在 [!INCLUDE[win8](../includes/win8-md.md)]、[!INCLUDE[win81](../includes/win81-md.md)]、[!INCLUDE[winserver8](../includes/winserver8-md.md)] 或 [!INCLUDE[winblue_server_2](../includes/winblue-server-2-md.md)]上利用管理权限运行 Visual Studio
 
-1. 在“开始”  屏幕上，键入“Visual Studio”  。 你应会看到你所安装的一个或多个 Visual Studio 版本。
+1. 在“开始”**** 屏幕上，键入“Visual Studio”****。 你应会看到你所安装的一个或多个 Visual Studio 版本。
 
 2. 选择要启动的 Visual Studio 版本，然后调出快捷菜单（显示在屏幕底部）。 选择 **“以管理员身份运行”** 。
 
-     Visual Studio 启动时，标题栏的产品名后显示“(管理员)”  。
+     Visual Studio 启动时，标题栏的产品名后显示“(管理员)”****。
 
-#### <a name="to-run-visual-studio-with-administrative-permissions-on-includewin7includeswin7-mdmd-or-includewinsvr08_r2includeswinsvr08-r2-mdmd"></a>在 [!INCLUDE[win7](../includes/win7-md.md)] 或 [!INCLUDE[winsvr08_r2](../includes/winsvr08-r2-md.md)] 上利用管理权限运行 Visual Studio
+#### <a name="to-run-visual-studio-with-administrative-permissions-on-win7-or-winsvr08_r2"></a>在 [!INCLUDE[win7](../includes/win7-md.md)] 或 [!INCLUDE[winsvr08_r2](../includes/winsvr08-r2-md.md)] 上利用管理权限运行 Visual Studio
 
-1. 在“开始”  菜单上，选择“所有程序”  。
+1. 在“开始”**** 菜单上，选择“所有程序”****。
 
-2. 在 Microsoft Visual Studio  版本  文件夹中，选择 Visual Studio  版本  ，打开快捷菜单，然后选择“以管理员身份运行”  。
+2. 在 **Microsoft Visual Studio 版本** ** 文件夹中，选择 **Visual Studio 版本** **，打开快捷菜单，然后选择“以管理员身份运行”****。
 
-     Visual Studio 启动时，标题栏的产品名后显示“(管理员)”  。
+     Visual Studio 启动时，标题栏的产品名后显示“(管理员)”****。
 
 ## <a name="see-also"></a>另请参阅
- [移植、迁移和升级 Visual Studio 项目](../porting/porting-migrating-and-upgrading-visual-studio-projects.md)[安装 Visual Studio 2015](../install/install-visual-studio-2015.md)
+ [移植、迁移和升级 Visual Studio 项目](../porting/porting-migrating-and-upgrading-visual-studio-projects.md) [安装 Visual Studio 2015](../install/install-visual-studio-2015.md)

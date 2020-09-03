@@ -1,5 +1,5 @@
 ---
-title: 演练：实现代码片段 |Microsoft Docs
+title: 演练：实现代码段 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -9,46 +9,46 @@ caps.latest.revision: 18
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: cb720589bc9bc31b7cf2a04b05559cb9c9d46961
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68201984"
 ---
 # <a name="walkthrough-implementing-code-snippets"></a>演练：实现代码片段
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-可以创建的代码段，并将其包含在编辑器扩展，以便扩展的用户可以将它们添加到其自己的代码。  
+你可以创建代码片段并将它们包含在编辑器扩展中，以便扩展的用户可以将其添加到自己的代码中。  
   
- 代码片段是一段代码或其他可合并的文件中的文本。 若要查看已为特定编程语言中注册的所有代码段**工具**菜单上，单击**代码片段管理器**。 若要插入代码段在文件中，右键单击要代码片段中，单击**插入代码段**或**Surround With**、 找到所需的代码段，然后双击它。 按 TAB 或 SHIFT + TAB 修改代码段的相关部分，然后按 ENTER 或 esc 键来接受它。 有关详细信息，请参阅[代码片段](../ide/code-snippets.md)。  
+ 代码段是可以在文件中合并的代码片段或其他文本。 若要查看已注册特定编程语言的所有代码段，请在 " **工具** " 菜单上单击 " **代码片段管理器**"。 若要在文件中插入代码片段，请右键单击要在其中放置代码段的位置，单击 " **插入代码片段** " 或 " **外侧**代码"，找到所需的代码段，然后双击它。 按 TAB 或 SHIFT + TAB 修改代码段的相关部分，然后按 ENTER 或 ESC 来接受它。 有关详细信息，请参阅[代码片段](../ide/code-snippets.md)。  
   
- 代码段包含在具有.snippet 文件扩展名的 XML 文件中。 代码片段可以包含插入代码段，以便用户可以查找和更改它们之后会突出显示的字段。 代码片段文件还提供了有关的信息**代码片段管理器**，以便它可以正确类别中显示代码段名称。 有关代码段架构信息，请参阅[代码片段架构参考](../ide/code-snippets-schema-reference.md)。  
+ 代码片段包含在具有代码片段文件扩展名的 XML 文件中。 代码段可以包含在插入代码段之后突出显示的字段，以便用户可以查找并更改它们。 代码片段文件还为 **代码片段管理器** 提供信息，以便它可以在正确的类别中显示代码片段名称。 有关代码片段架构的信息，请参阅 [代码片段架构参考](../ide/code-snippets-schema-reference.md)。  
   
- 本演练介绍了如何完成这些任务：  
+ 本演练介绍了如何完成以下任务：  
   
-1. 创建并注册为特定语言的代码段。  
+1. 创建并注册特定语言的代码段。  
   
-2. 添加**插入代码段**向快捷菜单命令。  
+2. 将 " **插入代码段** " 命令添加到快捷菜单。  
   
-3. 实现展开代码片段。  
+3. 实现代码段扩展。  
   
-   此演练基于[演练：显示语句完成](../extensibility/walkthrough-displaying-statement-completion.md)。  
+   本演练基于 [演练：显示语句完成](../extensibility/walkthrough-displaying-statement-completion.md)。  
   
-## <a name="prerequisites"></a>先决条件  
- 从 Visual Studio 2015 开始，您并不安装 Visual Studio SDK 从下载中心获得。 它是作为 Visual Studio 安装程序中的可选功能包含在内。 此外可以在以后安装 VS SDK。 有关详细信息，请参阅[安装 Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md)。  
+## <a name="prerequisites"></a>必备条件  
+ 从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。  
   
-## <a name="creating-and-registering-code-snippets"></a>创建和注册的代码片段  
- 通常情况下，代码片段是与已注册的语言服务相关联。 但是，不需要实现<xref:Microsoft.VisualStudio.Package.LanguageService>注册代码段。 相反，只需在代码片段索引文件中指定一个 GUID，然后使用中的相同 GUID<xref:Microsoft.VisualStudio.Shell.ProvideLanguageCodeExpansionAttribute>添加到你的项目。  
+## <a name="creating-and-registering-code-snippets"></a>创建和注册代码段  
+ 通常，代码片段与注册的语言服务相关联。 但是，您不必实现 <xref:Microsoft.VisualStudio.Package.LanguageService> 来注册代码段。 相反，只需在代码段索引文件中指定一个 GUID，然后在添加到项目的中使用相同的 GUID <xref:Microsoft.VisualStudio.Shell.ProvideLanguageCodeExpansionAttribute> 。  
   
- 以下步骤演示如何创建代码段并将其关联与特定的 GUID。  
+ 以下步骤演示如何创建代码段并将其与特定 GUID 相关联。  
   
 1. 创建以下目录结构：  
   
     **%InstallDir%\TestSnippets\Snippets\1033\\**  
   
-    其中 *%installdir%* 是 Visual Studio 安装文件夹。 （尽管此路径通常用来安装代码片段，你可以指定任何路径）。  
+    其中 *% InstallDir%* 是 Visual Studio 安装文件夹。  (尽管此路径通常用于安装代码段，但你可以指定任何路径。 )   
   
-2. \1033\ 文件夹中创建的.xml 文件并将其命名**TestSnippets.xml**。 （尽管此名称通常用于代码片段索引文件，您可以指定任何名称，只要它具有文件扩展名为.xml。）添加以下文本，然后删除占位符 GUID 并添加您自己。  
+2. 在 \ 1033 \ 文件夹中，创建一个 .xml 文件并将其命名为 **TestSnippets.xml**。  (尽管此名称通常用于代码段索引文件，但你可以指定任何名称，只要它具有 .xml 文件扩展名。 ) 添加以下文本，然后删除占位符 GUID 并添加你自己的名称。  
   
    ```xml  
    <?xml version="1.0" encoding="utf-8" ?>  
@@ -65,7 +65,7 @@ ms.locfileid: "68201984"
    </SnippetCollection>  
    ```  
   
-3. 在代码片段文件夹中创建一个文件，将其命名**测试**`.snippet`，然后添加以下文本：  
+3. 在 "代码段" 文件夹中创建一个文件，将其命名为**test** `.snippet` ，然后添加以下文本：  
   
    ```xml  
    <?xml version="1.0" encoding="utf-8" ?>  
@@ -107,145 +107,145 @@ ms.locfileid: "68201984"
    </CodeSnippets>  
    ```  
   
-   以下步骤说明如何注册的代码段。  
+   以下步骤演示如何注册代码段。  
   
-#### <a name="to-register-code-snippets-for-a-specific-guid"></a>若要为特定 GUID 注册代码片段  
+#### <a name="to-register-code-snippets-for-a-specific-guid"></a>注册特定 GUID 的代码段  
   
-1. 打开**CompletionTest**项目。 有关如何创建此项目的信息，请参阅[演练：显示语句完成](../extensibility/walkthrough-displaying-statement-completion.md)。  
+1. 打开 **CompletionTest** 项目。 有关如何创建此项目的信息，请参阅 [演练：显示语句完成](../extensibility/walkthrough-displaying-statement-completion.md)。  
   
 2. 在项目中，添加对以下程序集的引用：  
   
-    - Microsoft.VisualStudio.TextManager.Interop  
+    - VisualStudio. TextManager  
   
-    - Microsoft.VisualStudio.TextManager.Interop.8.0  
+    - VisualStudio. TextManager. 8。0  
   
-    - microsoft.msxml  
+    - microsoft msxml  
   
-3. 在项目中，打开 source.extension.vsixmanifest 文件中。  
+3. 在项目中，打开 source.extension.vsixmanifest 文件。  
   
-4. 请确保**资产**选项卡包含**VsPackage**内容类型，且**项目**设置为项目的名称。  
+4. 请确保 " **资产** " 选项卡包含 **VsPackage** 内容类型，并且该 **项目** 已设置为项目的名称。  
   
-5. 选择 CompletionTest 项目，然后在属性窗口中设置**生成 Pkgdef 文件**到**true**。 保存项目。  
+5. 选择 CompletionTest 项目，并在 "将 **.Pkgdef 文件生成** 到属性窗口" 设置为 **true**。 保存项目。  
   
-6. 添加静态`SnippetUtilities`到项目的类。  
+6. 将静态类添加 `SnippetUtilities` 到项目。  
   
      [!code-csharp[VSSDKCompletionTest#22](../snippets/csharp/VS_Snippets_VSSDK/vssdkcompletiontest/cs/snippetutilities.cs#22)]
      [!code-vb[VSSDKCompletionTest#22](../snippets/visualbasic/VS_Snippets_VSSDK/vssdkcompletiontest/vb/snippetutilities.vb#22)]  
   
-7. 在 SnippetUtilities 类中，定义一个 GUID，并为其提供 SnippetsIndex.xml 文件中使用的值。  
+7. 在 SnippetUtilities 类中，定义一个 GUID，并为其指定在 SnippetsIndex.xml 文件中使用的值。  
   
      [!code-csharp[VSSDKCompletionTest#23](../snippets/csharp/VS_Snippets_VSSDK/vssdkcompletiontest/cs/snippetutilities.cs#23)]
      [!code-vb[VSSDKCompletionTest#23](../snippets/visualbasic/VS_Snippets_VSSDK/vssdkcompletiontest/vb/snippetutilities.vb#23)]  
   
-8. 添加<xref:Microsoft.VisualStudio.Shell.ProvideLanguageCodeExpansionAttribute>到`TestCompletionHandler`类。 此属性可以添加到项目中的任何公共或内部 （非静态） 类。 (您可能必须添加`using`Microsoft.VisualStudio.Shell 命名空间的语句。)  
+8. 将添加 <xref:Microsoft.VisualStudio.Shell.ProvideLanguageCodeExpansionAttribute> 到 `TestCompletionHandler` 类。 此属性可添加到项目中任何公共或内部 (非静态) 类中。  (可能需要为 `using` VisualStudio 命名空间添加语句 )   
   
      [!code-csharp[VSSDKCompletionTest#24](../snippets/csharp/VS_Snippets_VSSDK/vssdkcompletiontest/cs/snippetutilities.cs#24)]
      [!code-vb[VSSDKCompletionTest#24](../snippets/visualbasic/VS_Snippets_VSSDK/vssdkcompletiontest/vb/snippetutilities.vb#24)]  
   
-9. 生成并运行该项目。 在运行项目时启动的 Visual Studio 的实验实例中，只需注册的代码片段应显示在**代码片段管理器**下**TestSnippets**语言。  
+9. 生成并运行该项目。 在运行项目时启动的 Visual Studio 的实验实例中，你刚注册的代码段应在**TestSnippets**语言下显示在**代码段管理器**中。  
   
-## <a name="adding-the-insert-snippet-command-to-the-shortcut-menu"></a>将插入代码片段命令添加到快捷菜单  
- **插入代码段**命令不会包含文本文件的快捷菜单。 因此，必须启用该命令。  
+## <a name="adding-the-insert-snippet-command-to-the-shortcut-menu"></a>将 "插入代码段" 命令添加到快捷菜单  
+ " **插入代码段** " 命令不包含在文本文件的快捷菜单中。 因此，您必须启用命令。  
   
-#### <a name="to-add-the-insert-snippet-command-to-the-shortcut-menu"></a>若要添加到快捷菜单插入代码段命令  
+#### <a name="to-add-the-insert-snippet-command-to-the-shortcut-menu"></a>将 "插入代码段" 命令添加到快捷菜单  
   
-1. 打开`TestCompletionCommandHandler`类文件。  
+1. 打开 `TestCompletionCommandHandler` 类文件。  
   
-     因为此类实现<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>，则可以激活**插入代码片段**命令，在<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A>方法。 启用该命令之前，请检查，因为自动化函数内部不调用此方法时**插入代码段**单击命令时，它将显示代码片段选取器用户界面 (UI)。  
+     由于此类实现 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> ，因此你可以在方法中激活 " **插入代码段** " 命令 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> 。 启用该命令之前，请检查是否未在自动化函数内调用此方法，因为在单击 " **插入代码段** " 命令时，它将显示 (UI) 的代码段选取器用户界面。  
   
      [!code-csharp[VSSDKCompletionTest#25](../snippets/csharp/VS_Snippets_VSSDK/vssdkcompletiontest/cs/snippetutilities.cs#25)]
      [!code-vb[VSSDKCompletionTest#25](../snippets/visualbasic/VS_Snippets_VSSDK/vssdkcompletiontest/vb/snippetutilities.vb#25)]  
   
-2. 生成并运行该项目。 在实验实例中，打开具有.zzz 文件扩展名的文件，并右键单击任意位置它。 **插入代码段**命令应显示的快捷菜单上。  
+2. 生成并运行该项目。 在实验实例中，打开文件扩展名为 zzz 的文件，然后右键单击其中的任意位置。 " **插入代码段** " 命令应出现在快捷菜单上。  
   
-## <a name="implementing-snippet-expansion-in-the-snippet-picker-ui"></a>在代码片段选取器 UI 中实现展开代码片段  
- 本部分演示如何实现代码片段扩展以使代码片段选取器 UI 时显示**插入代码段**快捷菜单上单击。 当用户键入的代码片段快捷方式并按下 TAB 组合键时，也会扩展代码片段。  
+## <a name="implementing-snippet-expansion-in-the-snippet-picker-ui"></a>在代码段选取器 UI 中实现代码段扩展  
+ 本部分演示如何实现代码片段扩展，以便在快捷菜单上单击 **插入代码段** 时显示代码段选取器 UI。 用户键入代码段快捷方式，然后按 TAB 键时，还会展开代码片段。  
   
- 若要显示的代码片段选取器 UI 并启用导航并接受后插入代码片段，请使用<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A>方法。 插入操作本身由<xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansionClient.OnItemChosen%2A>方法。  
+ 若要显示代码段选取器 UI 并启用导航和插入后代码段接受，请使用 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> 方法。 插入本身由方法进行处理 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansionClient.OnItemChosen%2A> 。  
   
- 代码片段扩展的实现使用旧版<xref:Microsoft.VisualStudio.TextManager.Interop>接口。 转换时从当前的编辑器类到旧代码，请记住，旧式界面使用行号和列号的组合可以在文本缓冲区中，指定位置，但当前类使用一个索引。 因此，如果缓冲区具有每个都有 10 个字符的三行 （加上一个换行符，计为 1 个字符），在第三行的第四个字符位于位置 27 在当前实现中，但它是第 2 行，则位置 3 旧实现中。  
+ 代码片段扩展的实现使用旧 <xref:Microsoft.VisualStudio.TextManager.Interop> 接口。 当您从当前编辑器类转换为旧代码时，请记住，旧接口使用行号和列号的组合在文本缓冲区中指定位置，但当前类使用一个索引。 因此，如果一个缓冲区包含三行，其中每个字符 (加上一个换行符（计数为1个字符) ），则第三行中的第四个字符在当前实现中的位置27，但在旧实现中，它位于第2位置。  
   
-#### <a name="to-implement-snippet-expansion"></a>若要实现展开代码片段  
+#### <a name="to-implement-snippet-expansion"></a>实现代码段扩展  
   
-1. 对包含文件`TestCompletionCommandHandler`类中，添加以下`using`语句。  
+1. 对于包含类的文件 `TestCompletionCommandHandler` ，添加以下 `using` 语句。  
   
      [!code-csharp[VSSDKCompletionTest#26](../snippets/csharp/VS_Snippets_VSSDK/vssdkcompletiontest/cs/snippetutilities.cs#26)]
      [!code-vb[VSSDKCompletionTest#26](../snippets/visualbasic/VS_Snippets_VSSDK/vssdkcompletiontest/vb/snippetutilities.vb#26)]  
   
-2. 请`TestCompletionCommandHandler`类实现<xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansionClient>接口。  
+2. 使 `TestCompletionCommandHandler` 类实现 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansionClient> 接口。  
   
      [!code-csharp[VSSDKCompletionTest#27](../snippets/csharp/VS_Snippets_VSSDK/vssdkcompletiontest/cs/snippetutilities.cs#27)]
      [!code-vb[VSSDKCompletionTest#27](../snippets/visualbasic/VS_Snippets_VSSDK/vssdkcompletiontest/vb/snippetutilities.vb#27)]  
   
-3. 在中`TestCompletionCommandHandlerProvider`类中，导入<xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService>。  
+3. 在 `TestCompletionCommandHandlerProvider` 类中，导入 <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService> 。  
   
      [!code-csharp[VSSDKCompletionTest#28](../snippets/csharp/VS_Snippets_VSSDK/vssdkcompletiontest/cs/testcompletioncommandhandler.cs#28)]
      [!code-vb[VSSDKCompletionTest#28](../snippets/visualbasic/VS_Snippets_VSSDK/vssdkcompletiontest/vb/testcompletioncommandhandler.vb#28)]  
   
-4. 添加一些代码扩展接口的私有字段和<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>。  
+4. 为代码扩展接口和添加一些私有字段 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> 。  
   
      [!code-csharp[VSSDKCompletionTest#29](../snippets/csharp/VS_Snippets_VSSDK/vssdkcompletiontest/cs/snippetutilities.cs#29)]
      [!code-vb[VSSDKCompletionTest#29](../snippets/visualbasic/VS_Snippets_VSSDK/vssdkcompletiontest/vb/snippetutilities.vb#29)]  
   
-5. 构造函数中`TestCompletionCommandHandler`类中，设置以下字段。  
+5. 在类的构造函数中 `TestCompletionCommandHandler` ，设置以下字段。  
   
      [!code-csharp[VSSDKCompletionTest#30](../snippets/csharp/VS_Snippets_VSSDK/vssdkcompletiontest/cs/snippetutilities.cs#30)]
      [!code-vb[VSSDKCompletionTest#30](../snippets/visualbasic/VS_Snippets_VSSDK/vssdkcompletiontest/vb/snippetutilities.vb#30)]  
   
-6. 若要显示的代码片段选取器，当用户单击**插入代码段**命令，将以下代码添加到<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A>方法。 （若要使这种解释更具可读性，exec （） 用于语句完成不显示代码; 相反，将代码块添加到现有的方法。）检查字符的代码后面添加以下代码块。  
+6. 若要在用户单击 " **插入代码段** " 命令时显示代码段选取器，请将以下代码添加到 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> 方法。  (要使此解释更具可读性，则不会显示用于语句完成的 Exec ( # A2 代码;相反，代码块将添加到现有方法。 ) 在用于检查字符的代码后添加以下代码块。  
   
      [!code-csharp[VSSDKCompletionTest#31](../snippets/csharp/VS_Snippets_VSSDK/vssdkcompletiontest/cs/snippetutilities.cs#31)]
      [!code-vb[VSSDKCompletionTest#31](../snippets/visualbasic/VS_Snippets_VSSDK/vssdkcompletiontest/vb/snippetutilities.vb#31)]  
   
-7. 如果代码片段具有可导航的字段，扩展会话保持打开状态直到显式接受扩展;如果代码片段不具有任何字段，该会话已关闭，并且返回作为`null`通过<xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansionManager.InvokeInsertionUI%2A>方法。 在<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A>方法，代码片段选取器在上一步骤中，添加的 UI 代码之后添加以下代码以处理段导航 （当用户在插入代码段后按 TAB 或 SHIFT + TAB）。  
+7. 如果代码段包含可导航的字段，扩展会话将一直保持打开状态，直到显式接受扩展;如果代码段没有字段，则会话将关闭并 `null` 按 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansionManager.InvokeInsertionUI%2A> 方法返回。 在 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> 方法中，在上一步中添加的代码段选取器 UI 代码之后，添加以下代码以处理代码段导航 (当用户在代码段插入) 后按 tab 或 SHIFT + TAB 键。  
   
      [!code-csharp[VSSDKCompletionTest#32](../snippets/csharp/VS_Snippets_VSSDK/vssdkcompletiontest/cs/snippetutilities.cs#32)]
      [!code-vb[VSSDKCompletionTest#32](../snippets/visualbasic/VS_Snippets_VSSDK/vssdkcompletiontest/vb/snippetutilities.vb#32)]  
   
-8. 若要插入代码片段，当用户键入相应的快捷方式并按下 TAB 组合键时，将代码添加到<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A>方法。 私有方法，它将插入代码段将在稍后的步骤中所示。 在上一步中添加的导航代码后面添加以下代码。  
+8. 若要在用户键入相应的快捷方式时插入代码段，然后按 TAB，请将代码添加到 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> 方法。 稍后的步骤会显示插入代码段的私有方法。 将以下代码添加到在上一步中添加的导航代码之后。  
   
      [!code-csharp[VSSDKCompletionTest#33](../snippets/csharp/VS_Snippets_VSSDK/vssdkcompletiontest/cs/snippetutilities.cs#33)]
      [!code-vb[VSSDKCompletionTest#33](../snippets/visualbasic/VS_Snippets_VSSDK/vssdkcompletiontest/vb/snippetutilities.vb#33)]  
   
-9. 实现方法的方法<xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansionClient>接口。 在此实现中，所需的唯一方法是<xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansionClient.EndExpansion%2A>和<xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansionClient.OnItemChosen%2A>。 其他方法应只返回<xref:Microsoft.VisualStudio.VSConstants.S_OK>。  
+9. 实现接口的方法 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansionClient> 。 在此实现中，所需的唯一方法是 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansionClient.EndExpansion%2A> 和 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansionClient.OnItemChosen%2A> 。 其他方法只应返回 <xref:Microsoft.VisualStudio.VSConstants.S_OK> 。  
   
      [!code-csharp[VSSDKCompletionTest#34](../snippets/csharp/VS_Snippets_VSSDK/vssdkcompletiontest/cs/snippetutilities.cs#34)]
      [!code-vb[VSSDKCompletionTest#34](../snippets/visualbasic/VS_Snippets_VSSDK/vssdkcompletiontest/vb/snippetutilities.vb#34)]  
   
-10. 实现 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansionClient.OnItemChosen%2A> 方法。 将在后面的步骤介绍实际插入扩展的帮助器方法。 <xref:Microsoft.VisualStudio.TextManager.Interop.TextSpan>提供了行和列信息，你可以从获取<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>。  
+10. 实现 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansionClient.OnItemChosen%2A> 方法。 稍后的步骤将介绍实际插入扩展的帮助器方法。 <xref:Microsoft.VisualStudio.TextManager.Interop.TextSpan>提供行和列信息，可以从获取这些信息 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> 。  
   
      [!code-csharp[VSSDKCompletionTest#35](../snippets/csharp/VS_Snippets_VSSDK/vssdkcompletiontest/cs/snippetutilities.cs#35)]
      [!code-vb[VSSDKCompletionTest#35](../snippets/visualbasic/VS_Snippets_VSSDK/vssdkcompletiontest/vb/snippetutilities.vb#35)]  
   
-11. 以下专用方法，将插入代码段中，基于该快捷方式或根据标题和路径。 然后，它调用<xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansion.InsertNamedExpansion%2A>方法与该代码段。  
+11. 以下私有方法基于快捷方式或标题和路径插入代码片段。 然后，它 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansion.InsertNamedExpansion%2A> 通过代码段调用方法。  
   
      [!code-csharp[VSSDKCompletionTest#36](../snippets/csharp/VS_Snippets_VSSDK/vssdkcompletiontest/cs/snippetutilities.cs#36)]
      [!code-vb[VSSDKCompletionTest#36](../snippets/visualbasic/VS_Snippets_VSSDK/vssdkcompletiontest/vb/snippetutilities.vb#36)]  
   
 ## <a name="building-and-testing-code-snippet-expansion"></a>生成和测试代码片段扩展  
- 您可以测试是否在项目中的展开代码片段可以正常工作。  
+ 可以测试项目中的代码片段扩展是否正常工作。  
   
 1. 生成解决方案。 在调试器中运行此项目时，Visual Studio 的第二个实例将进行实例化。  
   
 2. 打开一个文本文件并键入一些文本。  
   
-3. 右键单击文本中的某个位置，然后依次**插入代码段**。  
+3. 右键单击文本中的某个位置，然后单击 " **插入代码片段**"。  
   
-4. 片段选取器中的 UI 应显示使用弹出窗口，指出**测试替换字段**。 双击弹出窗口中。  
+4. 代码段选取器 UI 应显示一个弹出窗口，其中显示了 " **测试替换字段**"。 双击弹出窗口。  
   
-     应插入以下代码片段。  
+     应插入以下代码段。  
   
     ```  
     MessageBox.Show("first");  
     MessageBox.Show("second");  
     ```  
   
-     不要按 ENTER 或 esc 键。  
+     不要按 ENTER 或 ESC 键。  
   
-5. 按 TAB 键和 SHIFT + TAB 切换"first"和"第二个"之间。  
+5. 按 TAB 和 SHIFT + TAB 在 "first" 和 "second" 之间切换。  
   
-6. 按 ENTER 或 esc 键以接受插入。  
+6. 按 ENTER 或 ESC 接受插入。  
   
-7. 在文本的不同部分中，键入"test"，然后按选项卡。 由于"test"的代码片段快捷方式，应再次插入代码段。  
+7. 在文本的其他部分中，键入 "test"，然后按 TAB。 由于 "test" 是代码段快捷方式，因此应再次插入代码段。  
   
 ## <a name="next-steps"></a>后续步骤

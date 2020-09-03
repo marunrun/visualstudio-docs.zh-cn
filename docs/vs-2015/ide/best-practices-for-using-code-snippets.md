@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 74da305b69a9561573466d385c5d7b686da3693f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72620328"
 ---
 # <a name="best-practices-for-using-code-snippets"></a>有关使用代码段的最佳做法
@@ -36,7 +36,7 @@ ms.locfileid: "72620328"
 
 - 使用有效文件名。 可使用 <xref:System.Windows.Forms.OpenFileDialog> 和 <xref:System.Windows.Forms.SaveFileDialog> 控件降低使用无效文件名的可能性。 请注意，在用户选择文件和代码操作该文件的时间范围内，可能会删除该文件。 此外，用户可能没有写入该文件的权限。
 
-## <a name="security"></a>安全性
+## <a name="security"></a>安全
  代码片段的安全程度取决于源代码中使用它的位置以及位于代码中后如何对其进行修改。 以下列表包含几个必须考虑的区域。
 
 - 文件和数据库访问
@@ -51,7 +51,7 @@ ms.locfileid: "72620328"
 
 - 将数据传递到脚本编写技术
 
-  有关详细信息，请参阅[保证应用程序的安全](../ide/securing-applications.md)。
+  有关详细信息，请参阅 [保护应用程序](../ide/securing-applications.md)。
 
 ## <a name="downloaded-code-snippets"></a>下载的代码片段
  由 Visual Studio 安装的 IntelliSense 代码片段就其本身而言并非安全隐患。 但它们会在应用程序中带来安全性风险。 应像任何其他下载内容一样，极其谨慎地对待从 Internet 下载的代码片段。

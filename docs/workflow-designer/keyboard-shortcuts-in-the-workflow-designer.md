@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a8892f46585179ae5857d48deffd982e1cfc0dee
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "76115385"
 ---
 # <a name="keyboard-shortcuts-in-the-workflow-designer"></a>工作流设计器中的键盘快捷键
@@ -29,7 +29,7 @@ ms.locfileid: "76115385"
 
 下表汇总了分配给工作流设计器命令的默认键盘快捷方式。
 
-|快捷键|目标|
+|快捷键|用途|
 |-|-------------|
 |Ctrl+E，A|显示或隐藏自变量设计器。|
 |Ctrl+E，C|就地折叠所选择的活动。|
@@ -53,7 +53,7 @@ ms.locfileid: "76115385"
 
 - 若要调整流程图的大小，请使用箭头键移动某个活动经过该流程图的当前边框。 将自动调整流程图的大小。
 
-- 若要将活动设置为开始节点，请使用右键单击菜单中的 "**设置为 StartNode** " 命令。
+- 若要将活动设置为开始节点，请使用右键单击菜单中的 " **设置为 StartNode** " 命令。
 
 - 连接活动：
 
@@ -71,7 +71,7 @@ ms.locfileid: "76115385"
 
 - 如果某对活动无法连接（例如，源活动已具有一个传出连接），则仍会尽可能进行所选作用域内活动之间的其他连接。
 
-- 如果选定内容中包含**FlowDecision** ，并且**FlowDecision**没有传出连接器，则会将该连接器放置在**真正**的分支中。
+- 如果选定内容中包含 **FlowDecision** ，并且 **FlowDecision** 没有传出连接器，则会将该连接器放置在 **真正** 的分支中。
 
 ### <a name="expression-editing"></a>表达式编辑
 

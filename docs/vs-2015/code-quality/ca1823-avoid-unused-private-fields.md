@@ -16,20 +16,20 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 01f2ef59ceb6d10cc33276fdd3e5388f39175f8b
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545296"
 ---
 # <a name="ca1823-avoid-unused-private-fields"></a>CA1823:避免未使用的私有字段
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|Item|值|
+|项|值|
 |-|-|
 |TypeName|AvoidUnusedPrivateFields|
 |CheckId|CA1823|
-|Category|Microsoft. 性能|
+|类别|Microsoft. 性能|
 |是否重大更改|不间断|
 
 ## <a name="cause"></a>原因

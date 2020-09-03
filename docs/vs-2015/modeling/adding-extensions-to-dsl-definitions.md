@@ -10,16 +10,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 5fab56a7738ed7b52760cf20a5bfcc8542ee5a23
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75919063"
 ---
 # <a name="adding-extensions-to-dsl-definitions"></a>向 DSL 定义中添加扩展
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-DSL 定义扩展允许你创建一包扩展到域特定语言（DSL）的扩展。 在 Visual Studio 集成扩展（VSIX）中包含的 DSL 扩展可以与 DSL 相同的方式安装在用户的计算机上。 在运行时可以动态启用和禁用其他功能。 Dsl 无需显式设计为扩展，并且可以在以后或第三方设计扩展，而无需更改扩展 DSL。
+DSL 定义扩展允许你创建一个扩展包，将其扩展到域特定语言 (DSL) 。 可采用与 DSL 相同的方式在用户计算机上安装 DSL 扩展，该扩展包含在 Visual Studio 集成扩展 (VSIX) 中。 在运行时可以动态启用和禁用其他功能。 Dsl 无需显式设计为扩展，并且可以在以后或第三方设计扩展，而无需更改扩展 DSL。
 
  其他功能可能包括：
 
@@ -35,7 +35,7 @@ DSL 定义扩展允许你创建一包扩展到域特定语言（DSL）的扩展�
 
   扩展 DSL 的用户可以创建并保存包含其他功能的实例的模型，并且这些用户可以读取已安装适当扩展的其他用户。 尚未安装此扩展的用户不能使用其他功能，但可以更新和保存模型，而不会丢失其他功能。
 
-  有关此功能的示例代码和详细信息，请参阅[Visual Studio 可视化和建模 SDK](https://www.microsoft.com/en-us/download/details.aspx?id=48148)网站。
+  有关此功能的示例代码和详细信息，请参阅 [Visual Studio 可视化和建模 SDK](https://www.microsoft.com/en-us/download/details.aspx?id=48148) 网站。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [Visual Studio 可视化和建模 SDK](https://www.microsoft.com/en-us/download/details.aspx?id=48148)

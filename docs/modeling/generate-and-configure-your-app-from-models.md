@@ -8,10 +8,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 8ea3fe0027827396a49eec4c6b245a9ea59652b7
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "76114895"
 ---
 # <a name="generate-and-configure-your-app-from-models"></a>从模型中生成并配置你的应用程序
@@ -58,7 +58,7 @@ ms.locfileid: "76114895"
 
      例如，使用一个模型来定义网页之间的导航，并使用不同的模型来定义页面的布局。
 
-- **为需求建模，而不是解决方案。** 设计模型，使其描述用户要求。 与此相反，不要根据实现的可变方面设计表示法。
+- **建立需求而非解决方案的模型。** 设计模型，使其描述用户要求。 与此相反，不要根据实现的可变方面设计表示法。
 
      例如，web 导航模型应表示网页和它们之间的超链接。 Web 导航模型不应在应用程序中表示 HTML 或类的片段。
 

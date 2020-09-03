@@ -11,25 +11,25 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 30bfdd49d871919503be767ea930b3d5f2f0fd95
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85905767"
 ---
 # <a name="how-to-provide-a-service"></a>如何：提供服务
 VSPackage 可以提供其他 Vspackage 可以使用的服务。 若要提供服务，VSPackage 必须向 Visual Studio 注册服务并添加该服务。
 
- <xref:Microsoft.VisualStudio.Shell.Package>类实现 <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider> 和 <xref:System.ComponentModel.Design.IServiceContainer> 。 <xref:System.ComponentModel.Design.IServiceContainer>包含提供按需服务的回叫方法。
+ <xref:Microsoft.VisualStudio.Shell.Package>类实现 <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider> 和 <xref:System.ComponentModel.Design.IServiceContainer> 。 <xref:System.ComponentModel.Design.IServiceContainer> 包含提供按需服务的回叫方法。
 
- 有关服务的详细信息，请参阅[Service essentials](../extensibility/internals/service-essentials.md) 。
+ 有关服务的详细信息，请参阅 [Service essentials](../extensibility/internals/service-essentials.md) 。
 
 > [!NOTE]
 > 当 VSPackage 即将卸载时，Visual Studio 将等待，直到已提供 VSPackage 提供的服务的所有请求。 它不允许对这些服务的新请求。 卸载时，不应显式调用 <xref:Microsoft.VisualStudio.Shell.Interop.IProfferService.RevokeService%2A> 方法来撤消服务。
 
 ## <a name="implement-a-service"></a>实现服务
 
-1. 创建 VSIX 项目（**文件**"  >  **新建**  >  **项目**" "  >  **Visual c #**  >  **扩展性**  >  **VSIX 项目**"）。
+1. 创建 VSIX 项目 (**文件**"  >  **新建**  >  **项目**" "  >  **Visual c #**  >  **扩展性**  >  **VSIX 项目**") 。
 
 2. 将 VSPackage 添加到项目。 在**解决方案资源管理器**中选择项目节点，然后单击 "**添加**  >  **新项**" "  >  **visual c # 项目**  >  **扩展性**" "  >  **visual Studio 包**"。
 

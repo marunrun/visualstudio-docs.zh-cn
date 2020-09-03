@@ -14,14 +14,14 @@ dev_langs:
 - csharp
 - vb
 ms.openlocfilehash: 0eb70e5d39708ffd532fe39d6d597043621158d5
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85904833"
 ---
 # <a name="walkthrough-display-quickinfo-tooltips"></a>演练：显示 QuickInfo 工具提示
-QuickInfo 是一项 IntelliSense 功能，当用户将指针移到方法名称上时，它将显示方法签名和说明。 可以通过定义要为其提供 QuickInfo 说明的标识符，然后创建用于显示内容的工具提示，来实现基于语言的功能（如 QuickInfo）。 可在语言服务的上下文中定义 QuickInfo，或者可以定义自己的文件扩展名和内容类型，并只为该类型显示 QuickInfo，也可以为现有内容类型（如 "text"）显示 QuickInfo。 本演练演示如何为 "文本" 内容类型显示 QuickInfo。
+QuickInfo 是一项 IntelliSense 功能，当用户将指针移到方法名称上时，它将显示方法签名和说明。 可以通过定义要为其提供 QuickInfo 说明的标识符，然后创建用于显示内容的工具提示，来实现基于语言的功能（如 QuickInfo）。 你可以在语言服务的上下文中定义 QuickInfo，或者可以定义自己的文件扩展名和内容类型，并只为该类型显示 QuickInfo，也可以为现有内容类型 (如 "text" ) 显示 QuickInfo。 本演练演示如何为 "文本" 内容类型显示 QuickInfo。
 
  本演练中的 QuickInfo 示例将在用户将指针移到方法名称上时显示工具提示。 此设计要求实现以下四个接口：
 
@@ -33,20 +33,20 @@ QuickInfo 是一项 IntelliSense 功能，当用户将指针移到方法名称�
 
 - 控制器提供程序接口
 
-  源和控制器提供程序是 Managed Extensibility Framework （MEF）组件部件，负责导出源和控制器类，以及导入服务和代理（例如 <xref:Microsoft.VisualStudio.Text.ITextBufferFactoryService> ），后者将创建工具提示文本缓冲区和 <xref:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoBroker> ，这会触发 QuickInfo 会话。
+  源和控制器提供程序 Managed Extensibility Framework (MEF) 组件部件，并负责导出源和控制器类，以及导入服务和代理（例如 <xref:Microsoft.VisualStudio.Text.ITextBufferFactoryService> ），后者将创建工具提示文本缓冲区和，这会 <xref:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoBroker> 触发 QuickInfo 会话。
 
   在此示例中，QuickInfo 源使用方法名称和说明的硬编码列表，但在完整实现中，语言服务和语言文档负责提供该内容。
 
-## <a name="prerequisites"></a>必备条件
- 从 Visual Studio 2015 开始，不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅[安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
+## <a name="prerequisites"></a>先决条件
+ 从 Visual Studio 2015 开始，不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
 
 ## <a name="create-a-mef-project"></a>创建 MEF 项目
 
 ### <a name="to-create-a-mef-project"></a>创建 MEF 项目
 
-1. 创建 c # VSIX 项目。 （在 "**新建项目**" 对话框中，依次选择 " **Visual c #/扩展性**"、" **VSIX 项目**"。）命名解决方案 `QuickInfoTest` 。
+1. 创建 c # VSIX 项目。  (在 " **新建项目** " 对话框中，依次选择 " **Visual c #/扩展性**"、" **VSIX 项目**"。 ) 将解决方案命名为 `QuickInfoTest` 。
 
-2. 将编辑器分类器项模板添加到项目。 有关详细信息，请参阅[使用编辑器项模板创建扩展](../extensibility/creating-an-extension-with-an-editor-item-template.md)。
+2. 将编辑器分类器项模板添加到项目。 有关详细信息，请参阅 [使用编辑器项模板创建扩展](../extensibility/creating-an-extension-with-an-editor-item-template.md)。
 
 3. 删除现有的类文件。
 
@@ -57,7 +57,7 @@ QuickInfo 是一项 IntelliSense 功能，当用户将指针移到方法名称�
 
 1. 添加一个类文件并将其命名为 `TestQuickInfoSource`。
 
-2. 添加对*VisualStudio*的引用。
+2. 添加对 *VisualStudio*的引用。
 
 3. 添加以下 import 语句。
 
@@ -84,7 +84,7 @@ QuickInfo 是一项 IntelliSense 功能，当用户将指针移到方法名称�
      [!code-vb[VSSDKQuickInfoTest#5](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-quickinfo-tooltips_5.vb)]
      [!code-csharp[VSSDKQuickInfoTest#5](../extensibility/codesnippet/CSharp/walkthrough-displaying-quickinfo-tooltips_5.cs)]
 
-8. 由于实现，因此还必须实现 Dispose （）方法 <xref:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoSource> <xref:System.IDisposable> ：
+8. 还必须实现 Dispose ( # A1 方法，因为它 <xref:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoSource> 实现 <xref:System.IDisposable> ：
 
      [!code-vb[VSSDKQuickInfoTest#6](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-quickinfo-tooltips_6.vb)]
      [!code-csharp[VSSDKQuickInfoTest#6](../extensibility/codesnippet/CSharp/walkthrough-displaying-quickinfo-tooltips_6.cs)]

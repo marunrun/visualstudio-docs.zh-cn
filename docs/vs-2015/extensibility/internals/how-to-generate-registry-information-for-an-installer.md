@@ -13,23 +13,23 @@ caps.latest.revision: 20
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: df6ef440202057bb8e0612af0987782fa281c952
-ms.sourcegitcommit: 9a66f1c31cc9eba0b5231af72da1d18761a9c56a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75944252"
 ---
-# <a name="how-to-generate-registry-information-for-an-installer"></a>如何：为安装程序生成注册表信息
+# <a name="how-to-generate-registry-information-for-an-installer"></a>如何：生成安装程序的注册表信息
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-RegPkg 实用程序可用于为托管的 VSPackage 生成注册清单。 清单可以合并到 Windows Installer 安装包中。 RegPkg 还可以生成一个文件，该文件可以包含在基于[WINDOWS INSTALLER XML 工具集](https://documentation.help/WiX-Toolset/index.html)的安装程序源文件中。
+RegPkg.exe 实用工具可用于为托管 VSPackage 生成注册清单。 清单可以合并到 Windows Installer 安装包中。 RegPkg 还可以生成一个文件，该文件可以包含在基于 [WINDOWS INSTALLER XML 工具集](https://documentation.help/WiX-Toolset/index.html)的安装程序源文件中。
   
 > [!IMPORTANT]
-> RegPkg 生成特定于您的开发系统的路径名称，因此，每次使用 RegPkg 时，必须编辑输出，以使用适当的 Windows Installer 格式属性。 例如，InprocServer32 值应为 **[SystemFolder] mscoree.dll** ，而路径应使用 **[#filekey]** 和 **[$componentkey]** 。 以这种方式调整输出支持将 Windows 安装在其他驱动器或不同的目录中的计算机，以及用户可以选择的、本地化的目录名称和路径。 有关详细信息，请参阅 Windows Installer SDK 中的[格式设置](https://msdn.microsoft.com/library/default.asp?url=/library/msi/setup/formatted.asp)。 如果你遵循开发系统路径的 RegPkg 约定（例如 File_*filename*格式的文件 id），则需要进行更少的更改。  
+> RegPkg 生成特定于您的开发系统的路径名称，因此，每次使用 RegPkg 时，必须编辑输出，以使用适当的 Windows Installer 格式属性。 例如，InprocServer32 值应为 **[SystemFolder] mscoree.dll** ，路径应使用 **[#filekey]** 和 **[$componentkey]**。 以这种方式调整输出支持将 Windows 安装在其他驱动器或不同的目录中的计算机，以及用户可以选择的、本地化的目录名称和路径。 有关详细信息，请参阅 Windows Installer SDK 中的 [格式设置](https://msdn.microsoft.com/library/default.asp?url=/library/msi/setup/formatted.asp) 。 如果你遵循开发系统路径的 RegPkg 约定（例如 File_*filename*格式的文件 id），则需要进行更少的更改。  
   
 ### <a name="to-create-a-registration-manifest"></a>创建注册清单  
   
-- 在 **/regfile**开关上运行 RegPkg。 提供任何其他开关、输出文件的名称和 VSPackage 的路径。  
+- 在 **/regfile** 开关上运行 RegPkg。 提供任何其他开关、输出文件的名称和 VSPackage 的路径。  
   
      例如，在命令提示符下，键入如下所示的内容：  
   
@@ -100,7 +100,7 @@ RegPkg 实用程序可用于为托管的 VSPackage 生成注册清单。 清单�
   
 ### <a name="to-create-a-windows-installer-xml-toolset-include-file"></a>创建 Windows Installer XML 工具集包含文件  
   
-- 在 **/wixfile**开关上运行 RegPkg。 提供任何其他开关、输出文件的名称和 VSPackage 的路径。  
+- 在 **/wixfile** 开关上运行 RegPkg。 提供任何其他开关、输出文件的名称和 VSPackage 的路径。  
   
      例如，在命令提示符下，键入如下所示的内容：  
   
@@ -182,6 +182,6 @@ RegPkg 实用程序可用于为托管的 VSPackage 生成注册清单。 清单�
     </Include>  
     ```  
   
-## <a name="see-also"></a>请参阅  
- [注册 vspackage](registering-vspackages.md)   
- [VSPackage](../../extensibility/internals/vspackages.md)
+## <a name="see-also"></a>另请参阅  
+ [注册 Vspackage](registering-vspackages.md)   
+ [VSPackages](../../extensibility/internals/vspackages.md)

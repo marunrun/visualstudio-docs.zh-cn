@@ -16,27 +16,27 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 0b2e8ebcc7720f5cd9dc6c700bcc08b68f89e275
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85542488"
 ---
 # <a name="ca1028-enum-storage-should-be-int32"></a>CA1028:枚举存储应为 Int32
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|Item|值|
+|项|值|
 |-|-|
 |TypeName|EnumStorageShouldBeInt32|
 |CheckId|CA1028|
-|Category|Microsoft. Design|
+|类别|Microsoft. Design|
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
  公共枚举的基础类型不是 <xref:System.Int32?displayProperty=fullName> 。
 
 ## <a name="rule-description"></a>规则描述
- 枚举是一种值类型，它定义一组相关的已命名常数。 默认情况下， <xref:System.Int32?displayProperty=fullName> 数据类型用于存储常量值。 尽管你可以更改此基础类型，但在大多数情况下不需要或建议使用此类型。 请注意，使用小于的数据类型无法显著提高性能 <xref:System.Int32> 。 如果无法使用默认数据类型，则应使用符合公共语言系统（CLS）的整数类型（ <xref:System.Byte> 、、或）之一， <xref:System.Int16> <xref:System.Int32> <xref:System.Int64> 以确保枚举的所有值都可以用符合 CLS 的编程语言表示。
+ 枚举是一种值类型，它定义一组相关的已命名常数。 默认情况下， <xref:System.Int32?displayProperty=fullName> 数据类型用于存储常量值。 尽管你可以更改此基础类型，但在大多数情况下不需要或建议使用此类型。 请注意，使用小于的数据类型无法显著提高性能 <xref:System.Int32> 。 如果无法使用默认数据类型，则应使用一种公共语言系统 (符合 cls) 的整数类型、、 <xref:System.Byte> <xref:System.Int16> 、 <xref:System.Int32> 或， <xref:System.Int64> 以确保枚举的所有值都可以用符合 CLS 的编程语言表示。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
  若要修复与此规则的冲突，除非存在大小或兼容性问题，否则请使用 <xref:System.Int32> 。 对于不太 <xref:System.Int32> 大而无法保存值的情况，请使用 <xref:System.Int64> 。 如果向后兼容性要求较小的数据类型，请使用 <xref:System.Byte> 或 <xref:System.Int16> 。

@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 8d86f4a9ecbdfff451fed21f93c0fe6a7679d471
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85543944"
 ---
 # <a name="ca1813-avoid-unsealed-attributes"></a>CA1813:避免使用非密封特性
@@ -33,7 +33,7 @@ ms.locfileid: "85543944"
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
- 公共类型继承自 <xref:System.Attribute?displayProperty=fullName> ，不是抽象类型，并且不是密封的（ `NotInheritable` 在 Visual Basic 中）。
+ 公共类型继承自 <xref:System.Attribute?displayProperty=fullName> ，它不是抽象的，并且不会 `NotInheritable` 在 Visual Basic) 中密封 (。
 
 ## <a name="rule-description"></a>规则描述
  [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 类库提供用于检索自定义特性的方法。 默认情况下，这些方法在属性继承层次结构中搜索;例如 <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=fullName> ，搜索指定的属性类型或扩展指定属性类型的任何属性类型。 密封属性可在继承层次结构中消除搜索，并可提高性能。

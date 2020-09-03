@@ -16,26 +16,26 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: fe6b90ef971bd00392381f47860d85f34e10dc26
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85544022"
 ---
 # <a name="ca1707-identifiers-should-not-contain-underscores"></a>CA1707:标识符不应包含下划线
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-有关 Visual Studio 的最新文档，请参阅[CA1707：标识符不应包含下划线](/visualstudio/code-quality/ca1707-identifiers-should-not-contain-underscores)。
+有关 Visual Studio 的最新文档，请参阅 [CA1707：标识符不应包含下划线](/visualstudio/code-quality/ca1707-identifiers-should-not-contain-underscores)。
 
-|Item|值|
+|项|值|
 |-|-|
 |TypeName|IdentifiersShouldNotContainUnderscores|
 |CheckId|CA1707|
-|Category|Microsoft。命名|
+|类别|Microsoft。命名|
 |是否重大更改|正在进行-对程序集引发<br /><br /> 无间断-在类型参数上引发|
 
 ## <a name="cause"></a>原因
- 标识符的名称包含下划线（_）字符。
+ 标识符的名称包含下划线 (_) 字符。
 
 ## <a name="rule-description"></a>规则描述
  按照约定，标识符名称不包含下划线 (_) 字符。 规则将检查命名空间、类型、成员和参数。

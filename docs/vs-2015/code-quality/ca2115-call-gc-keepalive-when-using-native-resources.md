@@ -16,20 +16,20 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: c668172ca318000068fb4e90f4848e456c32208d
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85543619"
 ---
 # <a name="ca2115-call-gckeepalive-when-using-native-resources"></a>CA2115:使用本机资源时调用 GC.KeepAlive
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|Item|值|
+|项|值|
 |-|-|
 |TypeName|CallGCKeepAliveWhenUsingNativeResources|
 |CheckId|CA2115|
-|Category|Microsoft.Security|
+|类别|Microsoft.Security|
 |是否重大更改|非重大更改|
 
 ## <a name="cause"></a>原因
@@ -41,7 +41,7 @@ ms.locfileid: "85543619"
  此规则假定 <xref:System.IntPtr> 和 <xref:System.UIntPtr> 字段存储指向非托管资源的指针。 由于终结器的用途是释放非托管资源，因此该规则假定终结器将释放指针字段指向的非托管资源。 此规则还假定方法正在引用指针字段，以将非托管资源传递到非托管代码。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
- 若要修复与此规则的冲突，请将对的调用添加到 <xref:System.GC.KeepAlive%2A> 方法，同时将当前实例（ `this` 在 c # 和 c + + 中）作为参数传递。 将调用定位在必须保护对象不被垃圾回收的代码的最后一行之后。 调用后 <xref:System.GC.KeepAlive%2A> ，该对象再次被视为已准备好进行垃圾回收，假设没有对它的托管引用。
+ 若要修复与此规则的冲突，请将对的调用添加到 <xref:System.GC.KeepAlive%2A> 方法， `this` 并将 c # 和 c + + 中的当前实例 (传递) 为参数。 将调用定位在必须保护对象不被垃圾回收的代码的最后一行之后。 调用后 <xref:System.GC.KeepAlive%2A> ，该对象再次被视为已准备好进行垃圾回收，假设没有对它的托管引用。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
  此规则做出一些可能导致误报的假设。 如果出现以下情况，则可以安全地禁止显示此规则的警告：
@@ -53,7 +53,7 @@ ms.locfileid: "85543619"
   在排除其他消息之前，请仔细查看这些消息。 此规则检测难以重现和调试的错误。
 
 ## <a name="example"></a>示例
- 在下面的示例中，`BadMethod` 不包含对 `GC.KeepAlive` 的调用，因此违反了此规则。 `GoodMethod`包含更正后的代码。
+ 在下面的示例中，`BadMethod` 不包含对 `GC.KeepAlive` 的调用，因此违反了此规则。 `GoodMethod` 包含更正后的代码。
 
 > [!NOTE]
 > 尽管代码可以编译运行，但本示例是伪代码，之所以不引发警告是因为未创建或释放非托管资源。

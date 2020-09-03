@@ -28,6 +28,7 @@ ms.locfileid: "77633611"
 包含用户定义的项元数据键，其中包含项元数据值。 一个项可能具有任意数量的元数据键值对。
 
  \<Project> \<ItemGroup> \<Item>
+ \<Item>
 
 ## <a name="syntax"></a>语法
 

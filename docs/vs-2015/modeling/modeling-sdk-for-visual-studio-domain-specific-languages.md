@@ -13,16 +13,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 4907838720e3a68614e4b9774eb2d7e9fb42ff20
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75916543"
 ---
 # <a name="modeling-sdk-for-visual-studio---domain-specific-languages"></a>Visual Studio 的建模 SDK - 特定于域的语言
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-通过使用 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] （MSDK）的建模 SDK，你可以创建可集成到 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]的功能强大的基于模型的开发工具。 例如，使用 MSDK 创建 UML 工具。 同样，你可以创建一个或多个模型定义并将其集成到工具集中。
+通过使用 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] (MSDK) 的建模 SDK，你可以创建可集成到中的功能强大的基于模型的开发工具 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 。 例如，使用 MSDK 创建 UML 工具。 同样，你可以创建一个或多个模型定义并将其集成到工具集中。
 
  MSDK 的核心是你创建的用于表示业务领域内概念的模型的定义。 你可以使用各种工具环绕模型，例如关系图视图、生成代码和其他项目的功能、用于转换模型的命令和在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中与代码和其他对象进行交互的能力。 在开发模型时，你可以将其与其他模型和工具结合以形成一个以开发为中心的功能强大的工具集。
 
@@ -43,7 +43,7 @@ ms.locfileid: "75916543"
 ## <a name="samples-and-the-latest-information"></a>示例和最新信息
  [下载适用于 Visual Studio 2015 的建模 SDK](https://www.microsoft.com/download/details.aspx?id=48148)
 
- 高级的技术和故障排除指导，请访问[Visual Studio DSL 和建模工具扩展性论坛](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=dslvsarchx)。
+ 有关高级技巧和故障排除的指导，请访问 [Visual STUDIO DSL & 建模工具扩展性论坛](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=dslvsarchx)。
 
 ## <a name="in-this-section"></a>本节内容
  [域特定语言入门](../modeling/getting-started-with-domain-specific-languages.md)

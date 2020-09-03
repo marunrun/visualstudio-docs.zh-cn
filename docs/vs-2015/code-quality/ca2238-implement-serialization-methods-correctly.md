@@ -16,16 +16,16 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 98e825fd5543b928569b99218c9054aff666e0fe
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545140"
 ---
 # <a name="ca2238-implement-serialization-methods-correctly"></a>CA2238:正确实现序列化方法
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-有关 Visual Studio 的最新文档，请参阅[CA2238：正确实现序列化方法](/visualstudio/code-quality/ca2238-implement-serialization-methods-correctly)。
+有关 Visual Studio 的最新文档，请参阅 [CA2238：正确实现序列化方法](/visualstudio/code-quality/ca2238-implement-serialization-methods-correctly)。
 
 |项|值|
 |-|-|

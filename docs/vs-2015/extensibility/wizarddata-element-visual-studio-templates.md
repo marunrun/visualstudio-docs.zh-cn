@@ -1,5 +1,5 @@
 ---
-title: WizardData 元素 （Visual Studio 模板） |Microsoft Docs
+title: " (Visual Studio 模板) 的 WizardData 元素 |Microsoft Docs"
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -14,10 +14,10 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: d7cd59266a69140ba2ea5a7fd1d1b0b0c72f14c2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68201934"
 ---
 # <a name="wizarddata-element-visual-studio-templates"></a>WizardData 元素（Visual Studio 模板）
@@ -25,8 +25,8 @@ ms.locfileid: "68201934"
 
 指定自定义 XML  
   
- \<VSTemplate >  
- \<WizardData >  
+ \<VSTemplate>  
+ \<WizardData>  
   
 ## <a name="syntax"></a>语法  
   
@@ -48,22 +48,22 @@ ms.locfileid: "68201934"
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|描述|  
+|元素|说明|  
 |-------------|-----------------|  
-|[VSTemplate](../extensibility/vstemplate-element-visual-studio-templates.md)|必需的元素。<br /><br /> 包含项目模板、 项模板或初学者工具包的所有元数据。|  
+|[VSTemplate](../extensibility/vstemplate-element-visual-studio-templates.md)|必需的元素。<br /><br /> 包含项目模板、项模板或初学者工具包的所有元数据。|  
   
 ## <a name="text-value"></a>文本值  
  文本值是可选的。  
   
- 此文本指定要传递给指定的自定义向导扩展的自定义 XML [WizardExtension](../extensibility/wizardextension-element-visual-studio-templates.md)元素。  
+ 此文本指定要传递给 [WizardExtension](../extensibility/wizardextension-element-visual-studio-templates.md) 元素中指定的自定义向导扩展的自定义 XML。  
   
 ## <a name="remarks"></a>备注  
- 可以在此元素中指定任何 XML。 XML 将会作为参数传递给自定义向导扩展，允许使用此元素的内容的扩展名。 对此数据不进行任何验证。  
+ 可以在此元素中指定任何 XML。 XML 将作为参数传递到自定义向导扩展，允许扩展使用此元素的内容。 不对此数据执行任何验证。  
   
- 内容`WizardData`元素将传递不变，作为参数的字符串字典中的参数内`IWizard.RunStarted`方法。 参数的名称为 $WizardData$。  
+ 元素的内容在 `WizardData` 方法中参数的字符串字典中以参数的形式传递，并保持不变 `IWizard.RunStarted` 。 参数的名称为 $WizardData $。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示的标准项目模板的元数据[!INCLUDE[csprcs](../includes/csprcs-md.md)]Windows 应用程序。  
+ 下面的示例演示了 Windows 应用程序的标准项目模板的元数据 [!INCLUDE[csprcs](../includes/csprcs-md.md)] 。  
   
 ```  
 <VSTemplate Version="3.0.0" Type="Item"  
@@ -96,8 +96,8 @@ ms.locfileid: "68201934"
 </VSTemplate>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)   
  [创建项目和项模板](../ide/creating-project-and-item-templates.md)   
- [WizardExtension 元素 （Visual Studio 模板）](../extensibility/wizardextension-element-visual-studio-templates.md)   
+ [ (Visual Studio 模板的 WizardExtension 元素) ](../extensibility/wizardextension-element-visual-studio-templates.md)   
  [如何：使用向导来处理项目模板](../extensibility/how-to-use-wizards-with-project-templates.md)

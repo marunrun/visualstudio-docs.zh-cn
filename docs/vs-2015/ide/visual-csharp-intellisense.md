@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 36803dfbba7ea6d6d2a869fb94c05105ed4af15d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72643339"
 ---
 # <a name="visual-c-intellisense"></a>Visual C# IntelliSense
@@ -40,19 +40,19 @@ ms.locfileid: "72643339"
 
   C# 中的完成列表也足够智能，可筛选出不相关的标记，并可基于上下文预先选择标记。 有关详细信息，请参阅 [C# 中经过筛选的完成列表](../misc/filtered-completion-lists-in-csharp.md)和 [C# 中预选择的完成列表项](../misc/pre-selected-completion-list-items-in-csharp.md)。
 
-### <a name="CodeSnippets"></a> 完成列表中的代码片段
+### <a name="code-snippets-in-completion-lists"></a><a name="CodeSnippets"></a> 完成列表中的代码片段
  在 Visual C# 中，完成列表包含代码片段，可助你将预定义的代码体轻松插入程序。 代码片段作为片段的 [Shortcut 元素（Intellisense 代码片段）](https://msdn.microsoft.com/052cc97a-5c70-42f8-b398-4c3adf670cfa)出现在完成列表中。  若要了解 Visual C# 中默认情况下可用的代码片段，请参阅 [Visual C# 代码片段](../ide/visual-csharp-code-snippets.md)。
 
-### <a name="Keywords"></a> 完成列表中的语言关键字
- 在 Visual C# 中，完成列表还包括语言关键字。 若要了解 C# 语言关键字，请参阅 [C# 关键字](https://msdn.microsoft.com/library/e929b0f2-4b92-4d37-8060-23d323b098ad)。
+### <a name="language-keywords-in-completion-lists"></a><a name="Keywords"></a> 完成列表中的语言关键字
+ 在 Visual C# 中，完成列表还包括语言关键字。 有关 c # 语言关键字的详细信息，请参阅 [c # 关键字](https://msdn.microsoft.com/library/e929b0f2-4b92-4d37-8060-23d323b098ad)。
 
-### <a name="ExtensionMethods"></a> 完成列表中的扩展方法
+### <a name="extension-methods-in-completion-lists"></a><a name="ExtensionMethods"></a> 完成列表中的扩展方法
  在 Visual C# 中，完成列表包含位于作用域的扩展方法。
 
 > [!NOTE]
 > 完成列表不显示 <xref:System.String> 对象的所有扩展方法。
 
- 扩展方法使用不同于实例方法的图标。 若要了解列表图标的列表，请参阅[类视图和对象浏览器图标](../ide/class-view-and-object-browser-icons.md)。 当具有相同名称的实例方法和扩展方法都处于作用域时，完成列表将显示扩展方法图标。
+ 扩展方法使用不同于实例方法的图标。 有关列表图标的列表，请参阅 [类视图和对象浏览器图标](../ide/class-view-and-object-browser-icons.md)。 当具有相同名称的实例方法和扩展方法都处于作用域时，完成列表将显示扩展方法图标。
 
 ### <a name="filtered-completion-lists"></a>经过筛选的完成列表
  IntelliSense 使用筛选器从完成列表中删除不必要的成员。
@@ -65,9 +65,9 @@ ms.locfileid: "72643339"
 
 - `as` 和 `is` 运算符。
 
-- **Catch 子句**。
+- **Catch 子句。**
 
-- **对象初始值设定项**：完成列表中将仅列出可进行初始化的成员。
+- **对象初始值设定项：** 只有可进行初始化的成员才会出现在完成列表中。
 
 - **新关键字**：键入 `new` 并按空格键后，将显示完成列表。 基于代码的上下文将在列表中自动选择项。 例如，自动为声明和方法中的 return 语句在完成列表中选择项。
 
@@ -92,17 +92,17 @@ ms.locfileid: "72643339"
 
  ![使用智能标记图像添加](../ide/media/addusesmart.gif "AddUseSmart")
 
- 然后可以通过从“IntelliSense”菜单或上下文菜单的“解析”子菜单中选择“添加 using”来对其进行调用，或通过智能标记调用“添加 using”。 只有当光标位于未绑定的类型上或靠近它时，才可见智能标记。
+ 然后可以通过从“IntelliSense”**** 菜单或上下文菜单的“解析”**** 子菜单中选择“添加 using”来对其进行调用，或通过智能标记调用“添加 using”。 只有当光标位于未绑定的类型上或靠近它时，才可见智能标记。
 
- ![使用智能标记扩展图像添加](../ide/media/addusesmartexp.gif "AddUseSmartExp")
+ ![使用智能标记展开图像添加](../ide/media/addusesmartexp.gif "AddUseSmartExp")
 
 ### <a name="organize-usings"></a>组织 using
- “组织 Using”选项对 `using` 和 `extern` 声明进行排序和删除，而无需更改源代码的行为。 一段时间后，由于不必要和未经组织的`using`指令，源文件可能会变得臃肿且难以读取。 “组织 Using”选项通过删除未使用的 `using` 指令来压缩源代码，并通过对其进行排序提高可读性。
+ “组织 Using”**** 选项对 `using` 和 `extern` 声明进行排序和删除，而无需更改源代码的行为。 一段时间后，由于不必要和未经组织的`using`指令，源文件可能会变得臃肿且难以读取。 “组织 Using”**** 选项通过删除未使用的 `using` 指令来压缩源代码，并通过对其进行排序提高可读性。
 
- 若要查看 Visual Studio IDE 中的可用选项，请在“编辑”菜单上，指向“IntelliSense”，然后指向“组织 Using”。 IDE 提供了以下选项来组织和删除`usings`指令：
+ 若要查看 Visual Studio IDE 中的可用选项，请在“编辑”**** 菜单上，指向“IntelliSense”****，然后指向“组织 Using”****。 IDE 提供了以下选项来组织和删除`usings`指令：
 
 ### <a name="implement-interface"></a>实现接口
- IntelliSense 提供了一个选项，可帮助你在使用代码编辑器时实现[接口](https://msdn.microsoft.com/library/7da38e81-4f99-4bc5-b07d-c986b687eeba)。 通常情况下，若要正确实现接口，必须为类中接口的每个成员创建一个方法声明。 通过使用 IntelliSense，在类声明中键入接口名称后，将显示一个智能标记。 智能标记为你提供通过使用显式或隐式命名自动实现接口的选项。 在显式命名下，方法声明具有接口名称；在隐式命名下，方法声明不表示其所属的接口。 只有通过接口实例（而不是类实例）才能访问显式命名的接口方法。 有关详细信息，请参阅[显式接口实现](https://msdn.microsoft.com/library/181c901f-0d4c-4f29-97fc-895079617bf2)。
+ IntelliSense 提供了一个选项，可帮助您在使用代码编辑器时实现 [接口](https://msdn.microsoft.com/library/7da38e81-4f99-4bc5-b07d-c986b687eeba) 。 通常情况下，若要正确实现接口，必须为类中接口的每个成员创建一个方法声明。 通过使用 IntelliSense，在类声明中键入接口名称后，将显示一个智能标记。 智能标记为你提供通过使用显式或隐式命名自动实现接口的选项。 在显式命名下，方法声明具有接口名称；在隐式命名下，方法声明不表示其所属的接口。 只有通过接口实例（而不是类实例）才能访问显式命名的接口方法。 有关详细信息，请参阅 [显式接口实现](https://msdn.microsoft.com/library/181c901f-0d4c-4f29-97fc-895079617bf2)。
 
  实现接口将生成满足接口所需的最小数量的方法存根。 如果基类实现部分接口，则不会重新生成这些存根。
 
@@ -112,7 +112,7 @@ ms.locfileid: "72643339"
  通过“实现抽象基类”功能生成的方法存根将由文件 MethodStub.snippet 中定义的代码片段进行建模。 代码片段是可修改的。 有关详细信息，请参阅[演练：创建代码片段](../ide/walkthrough-creating-a-code-snippet.md)。
 
 ### <a name="generate-from-usage"></a>使用时生成
- 通过“使用时生成”功能，用户能够在定义类和成员之前使用它们。 你可以为想要使用但尚未定义的任何类、构造函数、方法、属性、字段或枚举生成存根。 可以生成新的类型和成员而无需离开你在代码中的当前位置。 这将使工作流的中断降至最低。
+ 通过“使用时生成”**** 功能，用户能够在定义类和成员之前使用它们。 你可以为想要使用但尚未定义的任何类、构造函数、方法、属性、字段或枚举生成存根。 可以生成新的类型和成员而无需离开你在代码中的当前位置。 这将使工作流的中断降至最低。
 
  每个未定标识符下都显示一条波浪下划线。 将鼠标指针停留在标识符上时，工具提示中将显示一条错误消息。
 
@@ -122,7 +122,7 @@ ms.locfileid: "72643339"
 
 - 单击未定义的标识符，然后按 CTRL+. （句点）。
 
-- 右键单击未定义的标识符，然后单击“生成”。
+- 右键单击未定义的标识符，然后单击“生成”****。
 
   显示的选项可包括以下选项：
 
@@ -134,7 +134,7 @@ ms.locfileid: "72643339"
 
 - **生成类**
 
-- **生成新类型**（对于类、结构、接口或枚举）
+- 为类、结构、接口或枚举**生成新类型** () 
 
 ## <a name="generate-event-handlers"></a>生成事件处理程序
  在代码编辑器中，IntelliSense 可帮助你将方法（事件处理程序）挂钩到事件字段。
@@ -153,9 +153,9 @@ ms.locfileid: "72643339"
  如果按 TAB 键，IntelliSense 将引出具有正确签名的方法并将光标放在事件处理程序的正文中。
 
 > [!NOTE]
-> 使用“视图”菜单上的“向后导航”命令 (Ctrl+-) 可返回到事件挂钩语句。
+> 使用“视图”**** 菜单上的“向后导航”**** 命令 (Ctrl+-) 可返回到事件挂钩语句。
 
  下面的任务演示 IntelliSense 如何自动将名为 `button1_Click` 的事件处理程序挂钩到名为 `button1.Click` 的事件字段。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [Visual Studio IDE](../ide/visual-studio-ide.md)

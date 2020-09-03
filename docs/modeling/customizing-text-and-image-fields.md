@@ -8,10 +8,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 29210ec667bffd6b632bcfbee0b87c0cbb2d5f38
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85542709"
 ---
 # <a name="customizing-text-and-image-fields"></a>自定义文本和图像字段
@@ -88,7 +88,7 @@ public virtual StyleSetResourceId GetFontId(ShapeElement parentShape)
  如果不是，则重写 `InitializeShapeFields` shape 类的方法，并将值分配给 `Default...` 文本字段的适当属性。
 
 > [!WARNING]
-> 若要重写 `InitializeShapeFields()` ，必须将 shape 类的 "**生成双向派生**" 属性设置为 `true` DSL 定义中的。
+> 若要重写 `InitializeShapeFields()` ，必须将 shape 类的 " **生成双向派生** " 属性设置为 `true` DSL 定义中的。
 
  在此示例中，形状具有一个文本字段，该字段将用于用户注释。 我们想要使用标准注释字体。 由于它是样式集中的标准字体，因此可以设置默认字体 id：
 
@@ -110,7 +110,7 @@ public virtual StyleSetResourceId GetFontId(ShapeElement parentShape)
 
  下面的示例使文本字段的字体依赖于形状的模型元素的布尔域属性的状态。
 
- 若要运行此示例代码，请使用最小语言模板创建新的 DSL 解决方案。 向 ExampleElement 域类添加 Boolean 域属性 `AlternateState` 。 向 ExampleShape 类添加一个图标修饰器，并将其图像设置为一个位图文件。 单击 "**转换所有模板**"。 在 DSL 项目中添加一个新的代码文件，并插入以下代码。
+ 若要运行此示例代码，请使用最小语言模板创建新的 DSL 解决方案。 向 ExampleElement 域类添加 Boolean 域属性 `AlternateState` 。 向 ExampleShape 类添加一个图标修饰器，并将其图像设置为一个位图文件。 单击 " **转换所有模板**"。 在 DSL 项目中添加一个新的代码文件，并插入以下代码。
 
  若要测试代码，请按 F5，然后在调试解决方案中，打开示例关系图。 应显示图标的默认状态。 选择该形状，然后在 "属性窗口中，更改" **AlternateState** "属性的值。 元素名称的字体将更改。
 
@@ -168,7 +168,7 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
 ```
 
 ## <a name="style-sets"></a>样式集
- 前面的示例演示如何将文本字段更改为任何可用的字体。 但是，更可取的方法是将其更改为与形状或应用程序关联的一组样式中的一个。 为此，请重写 <xref:Microsoft.VisualStudio.Modeling.Diagrams.TextField.GetFontId%2A> 或 GetTextBrushId （）。
+ 前面的示例演示如何将文本字段更改为任何可用的字体。 但是，更可取的方法是将其更改为与形状或应用程序关联的一组样式中的一个。 为此，请重写 <xref:Microsoft.VisualStudio.Modeling.Diagrams.TextField.GetFontId%2A> 或 GetTextBrushId ( # A1。
 
  另外，请考虑通过重写来更改形状的样式集 <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.InitializeResources%2A> 。 这会影响为所有形状字段更改字体和画笔。
 
@@ -181,7 +181,7 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
 
 #### <a name="to-create-a-subclass-of-imagefield"></a>创建 ImageField 的子类
 
-1. 在 DSL 定义中设置父形状类的 "**生成双重派生**" 属性。
+1. 在 DSL 定义中设置父形状类的 " **生成双重派生** " 属性。
 
 2. 重写 `InitializeShapeFields` shape 类的方法。
 
@@ -197,7 +197,7 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
 > [!WARNING]
 > 此示例演示如何生成动态图像修饰器。 但是，如果您只想在一个或两个图像之间切换，具体取决于模型变量的状态，创建多个图像修饰器更简单，在形状上的同一位置找到它们，然后将可见性筛选器设置为依赖于模型变量的特定值。 若要设置此筛选器，请选择 DSL 定义中的形状映射，打开 "DSL 详细信息" 窗口，然后单击 "修饰器" 选项卡。
 
- 若要运行此示例代码，请使用最小语言模板创建新的 DSL 解决方案。 向 ExampleElement 域类添加 Boolean 域属性 `AlternateState` 。 向 ExampleShape 类添加一个图标修饰器，并将其图像设置为一个位图文件。 单击 "**转换所有模板**"。 在 DSL 项目中添加一个新的代码文件，并插入以下代码。
+ 若要运行此示例代码，请使用最小语言模板创建新的 DSL 解决方案。 向 ExampleElement 域类添加 Boolean 域属性 `AlternateState` 。 向 ExampleShape 类添加一个图标修饰器，并将其图像设置为一个位图文件。 单击 " **转换所有模板**"。 在 DSL 项目中添加一个新的代码文件，并插入以下代码。
 
  若要测试代码，请按 F5，然后在调试解决方案中，打开示例关系图。 应显示图标的默认状态。 选择该形状，然后在 "属性窗口中，更改" **AlternateState** "属性的值。 然后，该图标会在该形状上显示旋转到90度。
 

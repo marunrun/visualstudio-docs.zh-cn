@@ -16,20 +16,20 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: b5e078fc1bb7fe247d541e7695e98c2de76c2466
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85544061"
 ---
 # <a name="ca1704-identifiers-should-be-spelled-correctly"></a>CA1704:标识符应正确拼写
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|Item|值|
+|项|值|
 |-|-|
 |TypeName|IdentifiersShouldBeSpelledCorrectly|
 |CheckId|CA1704|
-|Category|Microsoft。命名|
+|类别|Microsoft。命名|
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
@@ -48,16 +48,16 @@ ms.locfileid: "85544061"
 
 - 删除嵌入的符号。 例如，对于&切分 "设置为" format "。
 
-  默认情况下，使用英语（en）版本的拼写检查器。 当前没有其他语言词典可用。
+  默认情况下，使用英语 (en) 版本的拼写检查器。 当前没有其他语言词典可用。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
- 若要修复与此规则的冲突，请更正单词的拼写，或将该词添加到名为 CustomDictionary.xml 的自定义字典中。 将字典放置在工具的安装目录、项目目录或与用户配置文件（%USERPROFILE%\Application Data ...）下的工具关联的目录中 \\ 。若要了解如何将自定义字典添加到中的项目 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ，请参阅[如何：自定义代码分析字典](../code-quality/how-to-customize-the-code-analysis-dictionary.md)
+ 若要修复与此规则的冲突，请更正单词的拼写，或将该词添加到名为 CustomDictionary.xml 的自定义字典中。 将字典放置在工具的安装目录中、项目目录中，或放置在与 (%USERPROFILE%\Application Data ... ) 的用户配置文件下的工具关联的目录中。 \\若要了解如何将自定义字典添加到中的项目 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ，请参阅 [如何：自定义代码分析字典](../code-quality/how-to-customize-the-code-analysis-dictionary.md)
 
 - 添加不应在字典/字词/识别路径下产生冲突的单词。
 
 - 添加应在字典/字词/无法识别的路径下引发冲突的单词。
 
-- 添加在字典/字词/弃用路径下应标记为过时的字词。 有关详细信息，请参阅相关规则主题[CA1726：使用首选字词](../code-quality/ca1726-use-preferred-terms.md)。
+- 添加在字典/字词/弃用路径下应标记为过时的字词。 有关详细信息，请参阅相关规则主题 [CA1726：使用首选字词](../code-quality/ca1726-use-preferred-terms.md)。
 
 - 将例外项大小写规则添加到字典/缩写词/CasingExceptions 路径中。
 

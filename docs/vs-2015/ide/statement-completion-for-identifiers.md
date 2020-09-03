@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: f5e52bf174e5a41d79fa23bfca39121db668e40e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72643862"
 ---
 # <a name="statement-completion-for-identifiers"></a>适用于标识符的语句结束
@@ -52,13 +52,13 @@ JavaScript 不允许显式键入变量声明。 因此，IntelliSense 不能始�
 
    如果 IntelliSense 引擎可以确定应调用事件（通常通过使用 `addEventListener` 活动文档中的事件），则提供更准确的 IntelliSense 信息。
 
-  当 IntelliSense 无法标识对象时，IntelliSense 引擎将使用活动文档中的命名实体或标识符填充完成列表。 当完成列表包含这些标识符时，它们旁边会出现信息图标。 此外，每个标识符的工具提示将指示该表达式是未知的。 下图显示了无法标识的对象类型 `light` 的语句完成选项，因为未定义对象及其属性。 但是，`intensity` 属性在标识符列表中可用，因为它已在 `illuminate` 函数中使用。
+  当 IntelliSense 无法标识对象时，IntelliSense 引擎将使用活动文档中的命名实体或标识符填充完成列表。 当完成列表包含这些标识符时，它们旁边会出现信息图标。 此外，每个标识符的工具提示将指示该表达式是未知的。 下图显示了无法标识的对象类型的语句完成选项， `light` 因为未定义对象及其属性。 但是，该 `intensity` 属性在标识符列表中可用，因为它已在函数中使用 `illuminate` 。
 
   **无法识别的对象的完成选项**
 
-  ![适用于标识符的 JavaScript IntelliSense](../ide/media/js-intellisense-identifiers.png "|::ref1::|")
+  ![适用于标识符的 JavaScript IntelliSense](../ide/media/js-intellisense-identifiers.png "js_intellisense_identifiers")
 
-  可以通过使用 XML 文档注释或 JavaScript IntelliSense 扩展性功能，替代对象的完成列表。 使用这些功能时，可以提供类型信息，并提供更具描述性的 IntelliSense 信息，在其他情况下可能无法使用。 有关详细信息，请参阅[扩展 JavaScript IntelliSense](../ide/extending-javascript-intellisense.md)和[创建 XML 文档注释](../ide/create-xml-documentation-comments-for-javascript-intellisense.md)。
+  可以通过使用 XML 文档注释或 JavaScript IntelliSense 扩展性功能，替代对象的完成列表。 使用这些功能时，可以提供类型信息，并提供更具描述性的 IntelliSense 信息，在其他情况下可能无法使用。 有关详细信息，请参阅 [扩展 JavaScript IntelliSense](../ide/extending-javascript-intellisense.md) 和 [创建 XML 文档注释](../ide/create-xml-documentation-comments-for-javascript-intellisense.md)。
 
 ## <a name="see-also"></a>另请参阅
  [JavaScript IntelliSense](../ide/javascript-intellisense.md)

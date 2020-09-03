@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 1d69e705e8f537ba3636422ad6883a7633e03322
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85544880"
 ---
 # <a name="how-to-add-xmlmappedrange-controls-to-worksheets"></a>如何：向工作表添加 XMLMappedRange 控件
@@ -34,31 +34,31 @@ ms.locfileid: "85544880"
 
 2. 打开要在其中添加控件的工作表。
 
-3. 在 "**开发人员**" 选项卡上，单击 "**源**"。
+3. 在 " **开发人员** " 选项卡上，单击 " **源**"。
 
     > [!NOTE]
-    > 如果功能区上不显示 "**开发人员**" 选项卡，则必须启用它。 有关详细信息，请参阅[如何：在功能区上显示 "开发人员" 选项卡](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)。
+    > 如果功能区上不显示 " **开发人员** " 选项卡，则必须启用它。 有关详细信息，请参阅 [如何：在功能区上显示 "开发人员" 选项卡](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)。
 
-     此时将显示 " **XML 源**" 任务窗格。
+     此时将显示 " **XML 源** " 任务窗格。
 
-4. 在 " **Xml 源**" 任务窗格中，单击 " **xml Maps**"。
+4. 在 " **Xml 源** " 任务窗格中，单击 " **xml Maps**"。
 
-5. 在 " **XML 映射**" 对话框中，单击 "**添加**"。
+5. 在 " **XML 映射** " 对话框中，单击 " **添加**"。
 
-     此时将显示 " **XML 源**" 对话框。
+     此时将显示 " **XML 源** " 对话框。
 
-6. 从 " **Xml 源**" 对话框中选择一个 xml 架构，并单击 "**打开**"。
+6. 从 " **Xml 源** " 对话框中选择一个 xml 架构，并单击 " **打开**"。
 
-     架构将添加到 " **XML 映射**" 对话框中。
+     架构将添加到 " **XML 映射** " 对话框中。
 
-7. 在 " **XML 映射**" 对话框中，单击 **"确定"**。
+7. 在 " **XML 映射** " 对话框中，单击 **"确定"**。
 
-8. 将 " **XML 源**" 任务窗格中的元素拖到工作表上的单元格中。
+8. 将 " **XML 源** " 任务窗格中的元素拖到工作表上的单元格中。
 
      <xref:Microsoft.Office.Tools.Excel.XmlMappedRange>创建并将其添加到项目。
 
     > [!NOTE]
-    > 如果从 " **XML 源**" 任务窗格中拖动父元素， <xref:Microsoft.Office.Tools.Excel.ListObject> 则会创建一个控件。
+    > 如果从 " **XML 源** " 任务窗格中拖动父元素， <xref:Microsoft.Office.Tools.Excel.ListObject> 则会创建一个控件。
 
 ## <a name="see-also"></a>请参阅
 - [XmlMappedRange 控件](../vsto/xmlmappedrange-control.md)

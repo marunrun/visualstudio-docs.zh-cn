@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 0ee7ce7c4e9edad9d941b4a70b2a199a37130e43
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85543983"
 ---
 # <a name="ca1710-identifiers-should-have-correct-suffix"></a>CA1710:标识符应具有正确的后缀
@@ -46,7 +46,7 @@ ms.locfileid: "85543983"
 |--------------------------|------------|
 |<xref:System.Attribute?displayProperty=fullName>|特性|
 |<xref:System.EventArgs?displayProperty=fullName>|EventArgs|
-|<xref:System.Exception?displayProperty=fullName>|例外|
+|<xref:System.Exception?displayProperty=fullName>|异常|
 |<xref:System.Collections.ICollection?displayProperty=fullName>|集合|
 |<xref:System.Collections.IDictionary?displayProperty=fullName>|字典|
 |<xref:System.Collections.IEnumerable?displayProperty=fullName>|集合|
@@ -56,14 +56,14 @@ ms.locfileid: "85543983"
 |<xref:System.Collections.Generic.IDictionary%602?displayProperty=fullName>|字典|
 |<xref:System.Data.DataSet?displayProperty=fullName>|数据集|
 |<xref:System.Data.DataTable?displayProperty=fullName>|集合或 DataTable|
-|<xref:System.IO.Stream?displayProperty=fullName>|Stream|
+|<xref:System.IO.Stream?displayProperty=fullName>|流|
 |<xref:System.Security.IPermission?displayProperty=fullName>|权限|
 |<xref:System.Security.Policy.IMembershipCondition?displayProperty=fullName>|条件|
 |事件处理程序委托。|EventHandler|
 
  实现 <xref:System.Collections.ICollection> 并且是一种通用类型的数据结构（如字典、堆栈或队列）的类型是允许的名称，这些名称提供有关类型的预期用法的有用信息。
 
- 实现和的类型 <xref:System.Collections.ICollection> 是特定项的集合，其名称以单词 "collection" 结尾。 例如，对象的集合的 <xref:System.Collections.Queue> 名称为 "QueueCollection"。 "Collection" 后缀表示可以使用 `foreach` （ `For Each` in）语句枚举集合的成员 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 。
+ 实现和的类型 <xref:System.Collections.ICollection> 是特定项的集合，其名称以单词 "collection" 结尾。 例如，对象的集合的 <xref:System.Collections.Queue> 名称为 "QueueCollection"。 "Collection" 后缀表示可以通过 `foreach` `For Each` 在) 语句中使用 (来枚举集合的成员 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 。
 
  实现的类型的 <xref:System.Collections.IDictionary> 名称以单词 "Dictionary" 结尾，即使该类型还实现了 <xref:System.Collections.IEnumerable> 或 <xref:System.Collections.ICollection> 。 "集合" 和 "字典" 后缀命名约定使用户能够区分以下两个枚举模式。
 
@@ -85,7 +85,7 @@ foreach(SomeType x in SomeDictionary.Values) { }
  重命名该类型，使其具有正确的字词后缀。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
- 如果类型是可能被扩展的通用数据结构，或者将保留任意一组不同的项，则可以安全地禁止显示警告以使用 "集合" 后缀。 在这种情况下，提供有关实现、性能或数据结构的其他特征的有用信息的名称可能有意义（例如，BinaryTree）。 在类型表示特定类型的集合的情况下（例如，StringCollection），请勿禁止显示此规则的警告，因为后缀指示可以使用语句来枚举该类型 `foreach` 。
+ 如果类型是可能被扩展的通用数据结构，或者将保留任意一组不同的项，则可以安全地禁止显示警告以使用 "集合" 后缀。 在这种情况下，提供有关实现、性能或数据结构的其他特征的有用信息的名称可能 (例如，BinaryTree) 。 如果类型表示特定类型的集合 (例如，StringCollection) ，请不要禁止显示此规则发出的警告，因为后缀指示可以使用语句枚举该类型 `foreach` 。
 
  对于其他后缀，不要禁止显示此规则发出的警告。 后缀允许从类型名称中清晰地使用预期用法。
 

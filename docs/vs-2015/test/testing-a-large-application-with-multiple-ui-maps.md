@@ -12,10 +12,10 @@ caps.latest.revision: 24
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 2f6936811ea753d66d212facdda627930fb1ab10
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72672124"
 ---
 # <a name="testing-a-large-application-with-multiple-ui-maps"></a>使用多个 UI 映射测试大型应用程序
@@ -27,7 +27,7 @@ ms.locfileid: "72672124"
 
 - Visual Studio Enterprise
 
-  创建新的编码的 UI 测试时，[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 测试框架会在[UIMap](/previous-versions/dd580454(v=vs.140))类中默认生成测试代码。 若要详细了解如何录制编码的 UI 测试，请参阅[创建编码的 UI 测试](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate)和[编码的 UI 测试剖析](../test/anatomy-of-a-coded-ui-test.md)。
+  当你创建新的编码的 UI 测试时， [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 测试框架默认情况下会在 [UIMap](/previous-versions/dd580454(v=vs.140)) 类中生成测试代码。 若要详细了解如何录制编码的 UI 测试，请参阅[创建编码的 UI 测试](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate)和[编码的 UI 测试剖析](../test/anatomy-of-a-coded-ui-test.md)。
 
   为 UI 映射生成的代码针对与测试交互的每个对象都包含一个类。 对于每个生成的方法，都会专门为该方法生成方法参数的伴生类。 如果应用程序中存在大量对象、页以及窗体和控件，UI 映射可能会变得很大。 而且，如果多个人正在执行测试，则只有一个大型 UI 映射文件的应用程序会变得难以操作。
 
@@ -50,28 +50,28 @@ ms.locfileid: "72672124"
 
 #### <a name="to-add-a-ui-map-to-your-coded-ui-test-project"></a>向编码的 UI 测试项目中添加 UI 映射
 
-1. 若要在编码的 UI 测试项目中创建用于存储所有 UI 映射的文件夹，请在“解决方案资源管理器”中右键单击编码的 UI 测试项目文件，指向“添加”，然后选择“新建文件夹”。 例如，可将其命名为 `UIMaps`。
+1. 若要在编码的 UI 测试项目中创建用于存储所有 UI 映射的文件夹，请在“解决方案资源管理器”**** 中右键单击编码的 UI 测试项目文件，指向“添加”****，然后选择“新建文件夹”****。 例如，可将其命名为 `UIMaps`。
 
     新文件夹显示在编码的 UI 测试项目下面。
 
-2. 右键单击“`UIMaps`”文件夹，指向“添加”，然后选择“新建项”。
+2. 右键单击“`UIMaps`”文件夹，指向“添加”  ，然后选择“新建项”  。
 
-    随即出现“添加新项”对话框。
+    随即出现“添加新项”  对话框。
 
    > [!NOTE]
    > 若要添加新的编码 UI 测试映射，你必须在编码的 UI 测试项目中。
 
-3. 选择列表中的“编码的 UI 测试映射”。
+3. 选择列表中的“编码的 UI 测试映射”  。
 
-    在“名称”框中，输入新 UI 映射的名称。 使用该映射将表示的组件或页的名称，例如，`HomePageMap`。
+    在“名称”  框中，输入新 UI 映射的名称。 使用该映射将表示的组件或页的名称，例如，`HomePageMap`。
 
-4. 选择“添加”。
+4. 选择“添加”  。
 
-    此时，“[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]”窗口最小化，同时显示“编码的 UI 测试生成器”对话框。
+    此时，“[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]”窗口最小化，同时显示“编码的 UI 测试生成器”**** 对话框。
 
-5. 录制第一个方法的操作，然后选择“生成代码”。
+5. 录制第一个方法的操作，然后选择“生成代码”  。
 
-6. 录制第一个组件或页面的所有操作和断言并将它们分入方法后，关闭“编码的 UI 测试生成器”对话框。
+6. 录制第一个组件或页面的所有操作和断言并将它们分入方法后，关闭“编码的 UI 测试生成器”  对话框。
 
 7. 继续创建 UI 映射。 为每个组件录制操作和断言并将它们分组为方法，然后生成代码。
 
@@ -138,7 +138,7 @@ namespace ContosoProject
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [UIMap](/previous-versions/dd580454(v=vs.140))
 - <xref:Microsoft.VisualStudio.TestTools.UITesting.BrowserWindow.CopyFrom%2A>

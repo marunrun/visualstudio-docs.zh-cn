@@ -16,19 +16,19 @@ manager: jillfra
 ms.workload:
 - data-storage
 ms.openlocfilehash: 91dbe04c85491a38a221edfb064702085136780f
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85283016"
 ---
 # <a name="add-validation-to-an-n-tier-dataset"></a>向 n 层数据集添加验证
-向分隔到 n 层解决方案中的数据集添加验证与向单文件数据集（单个项目中的数据集）添加验证基本相同。 对数据执行验证的建议位置是在表的 <xref:System.Data.DataTable.ColumnChanging> 和/或 <xref:System.Data.DataTable.RowChanging> 事件中。
+向分隔到 n 层解决方案中的数据集添加验证与将验证添加到单个项目)  (数据集的方式基本相同。 对数据执行验证的建议位置是在表的 <xref:System.Data.DataTable.ColumnChanging> 和/或 <xref:System.Data.DataTable.RowChanging> 事件中。
 
-数据集提供了创建分部类的功能，你可以将用户代码添加到数据集中的数据表的列和行变化事件。 有关将代码添加到 n 层解决方案中的数据集的详细信息，请参阅在[n 层应用程序中将代码添加到数据集](../data-tools/add-code-to-datasets-in-n-tier-applications.md)，并[将代码添加到 n 层应用程序中的 tableadapter](../data-tools/add-code-to-tableadapters-in-n-tier-applications.md)。 有关分部类的详细信息，请参阅[如何：将类拆分为分部类（类设计器）](../ide/class-designer/how-to-split-a-class-into-partial-classes.md)或[分部类和方法](/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods)。
+数据集提供了创建分部类的功能，你可以将用户代码添加到数据集中的数据表的列和行变化事件。 有关将代码添加到 n 层解决方案中的数据集的详细信息，请参阅在 [n 层应用程序中将代码添加到数据集](../data-tools/add-code-to-datasets-in-n-tier-applications.md)，并 [将代码添加到 n 层应用程序中的 tableadapter](../data-tools/add-code-to-tableadapters-in-n-tier-applications.md)。 有关分部类的详细信息，请参阅 [如何：将类拆分为分部类 (类设计器) ](../ide/class-designer/how-to-split-a-class-into-partial-classes.md) 或 [分部类和方法](/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods)。
 
 > [!NOTE]
-> 将数据集与 Tableadapter 分离时（通过设置 "**数据集项目**" 属性），将不会自动移动项目中的现有部分数据集类。 必须将现有部分数据集类手动移动到数据集项目。
+> 如果通过将 **数据集项目** 属性设置) 将数据集从 tableadapter (分离，则项目中的现有部分数据集类将不会自动移动。 必须将现有部分数据集类手动移动到数据集项目。
 
 > [!NOTE]
 > 数据集设计器不会为和事件自动创建 c # 中的事件处理程序 <xref:System.Data.DataTable.ColumnChanging> <xref:System.Data.DataTable.RowChanging> 。 必须手动创建一个事件处理程序，并将事件处理程序挂钩到基础事件。 下面的过程介绍如何在 Visual Basic 和 c # 中创建所需的事件处理程序。
@@ -36,7 +36,7 @@ ms.locfileid: "85283016"
 ## <a name="validate-changes-to-individual-columns"></a>验证对单个列所做的更改
 通过处理事件来验证各个列中的值 <xref:System.Data.DataTable.ColumnChanging> 。 <xref:System.Data.DataTable.ColumnChanging>当修改列中的值时，将引发事件。 <xref:System.Data.DataTable.ColumnChanging>双击**数据集设计器**上所需的列，为事件创建事件处理程序。
 
-第一次双击列时，设计器将生成事件的事件处理程序 <xref:System.Data.DataTable.ColumnChanging> 。 `If...Then`还会创建一个语句，用于测试特定列。 例如，当您双击 Northwind Orders 表中的 "**要求**的" 列时，将生成以下代码：
+第一次双击列时，设计器将生成事件的事件处理程序 <xref:System.Data.DataTable.ColumnChanging> 。 `If...Then`还会创建一个语句，用于测试特定列。 例如，当您双击 Northwind Orders 表中的 " **要求** 的" 列时，将生成以下代码：
 
 ```vb
 Private Sub OrdersDataTable_ColumnChanging(ByVal sender As System.Object, ByVal e As System.Data.DataColumnChangeEventArgs) Handles Me.ColumnChanging
@@ -53,16 +53,16 @@ End Sub
 
 #### <a name="to-add-validation-during-changes-to-individual-column-values"></a>在对单个列值的更改过程中添加验证
 
-1. 在**解决方案资源管理器**中双击 *.xsd*文件，打开数据集。 有关详细信息，请参阅[演练：在数据集设计器中创建数据集](walkthrough-creating-a-dataset-with-the-dataset-designer.md)。
+1. 在**解决方案资源管理器**中双击 *.xsd*文件，打开数据集。 有关详细信息，请参阅 [演练：在数据集设计器中创建数据集](walkthrough-creating-a-dataset-with-the-dataset-designer.md)。
 
 2. 双击要验证的列。 此操作创建 <xref:System.Data.DataTable.ColumnChanging> 事件处理程序。
 
     > [!NOTE]
-    > 数据集设计器不会自动为 c # 事件创建事件处理程序。 下一节包含处理 c # 中的事件所需的代码。 `SampleColumnChangingEvent`在方法中创建并挂钩到 <xref:System.Data.DataTable.ColumnChanging> 事件 <xref:System.Data.DataTable.EndInit%2A> 。
+    > 数据集设计器不会自动为 c # 事件创建事件处理程序。 下一节包含处理 c # 中的事件所需的代码。 `SampleColumnChangingEvent` 在方法中创建并挂钩到 <xref:System.Data.DataTable.ColumnChanging> 事件 <xref:System.Data.DataTable.EndInit%2A> 。
 
 3. 添加代码以验证是否 `e.ProposedValue` 包含满足你的应用程序要求的数据。 如果建议的值是不可接受的，则设置列以指示它包含错误。
 
-     下面的代码示例验证 "**数量**" 列是否包含大于0的值。 如果**数量**小于或等于0，则将列设置为错误。 `Else`如果**数量**大于0，子句将清除错误。 列更改事件处理程序中的代码应类似于以下内容：
+     下面的代码示例验证 " **数量** " 列是否包含大于0的值。 如果 **数量** 小于或等于0，则将列设置为错误。 `Else`如果**数量**大于0，子句将清除错误。 列更改事件处理程序中的代码应类似于以下内容：
 
     ```vb
     If (e.Column.ColumnName = Me.QuantityColumn.ColumnName) Then
@@ -110,7 +110,7 @@ End Sub
 
 #### <a name="to-add-validation-during-changes-to-whole-rows"></a>在对整行的更改过程中添加验证
 
-1. 在**解决方案资源管理器**中双击 *.xsd*文件，打开数据集。 有关详细信息，请参阅[演练：在数据集设计器中创建数据集](walkthrough-creating-a-dataset-with-the-dataset-designer.md)。
+1. 在**解决方案资源管理器**中双击 *.xsd*文件，打开数据集。 有关详细信息，请参阅 [演练：在数据集设计器中创建数据集](walkthrough-creating-a-dataset-with-the-dataset-designer.md)。
 
 2. 在设计器上双击数据表的标题栏。
 

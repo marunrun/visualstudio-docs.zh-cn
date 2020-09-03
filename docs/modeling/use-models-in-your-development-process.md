@@ -10,27 +10,27 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 601a49126dd266b6c080b4d79cd215616321837a
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "76115051"
 ---
 # <a name="use-models-in-your-development-process"></a>在你的开发过程中使用模型
 
-在 Visual Studio 中，你可以使用模型帮助你理解和更改系统、应用程序或组件。 模型能帮助你可视化系统工作的环境、阐明用户需求、定义你系统的体系结构、分析代码并确保你的代码符合要求。 请参阅第[9 频道视频：通过建模改进体系结构](https://channel9.msdn.com/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012-Improving-architecture-through-modeling)。
+在 Visual Studio 中，你可以使用模型帮助你理解和更改系统、应用程序或组件。 模型能帮助你可视化系统工作的环境、阐明用户需求、定义你系统的体系结构、分析代码并确保你的代码符合要求。 请参阅第 [9 频道视频：通过建模改进体系结构](https://channel9.msdn.com/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012-Improving-architecture-through-modeling)。
 
 若要查看支持每种类型的模型的 Visual Studio 版本，请参阅 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)。
 
 模型可以通过几种方式帮助你：
 
-- 绘制建模图可帮助明确需求、体系结构和高级设计中所涉及的概念。 有关详细信息，请参阅[模型用户需求](../modeling/model-user-requirements.md)。
+- 绘制建模图可帮助明确需求、体系结构和高级设计中所涉及的概念。 有关详细信息，请参阅 [模型用户需求](../modeling/model-user-requirements.md)。
 
 - 使用模型可帮助你揭示需求中的不一致性。
 
-- 使用模型通信可帮助你沟通重要概念时比使用自然语言更明确。 有关详细信息，请参阅为[应用程序的体系结构建模](../modeling/model-your-app-s-architecture.md)。
+- 使用模型通信可帮助你沟通重要概念时比使用自然语言更明确。 有关详细信息，请参阅为 [应用程序的体系结构建模](../modeling/model-your-app-s-architecture.md)。
 
-- 有时可使用模型生成代码或其他项目（如数据库架构或文档）。 例如，Visual Studio 的建模组件是从模型生成的。 有关详细信息，请参阅[从模型生成和配置应用](../modeling/generate-and-configure-your-app-from-models.md)。
+- 有时可使用模型生成代码或其他项目（如数据库架构或文档）。 例如，Visual Studio 的建模组件是从模型生成的。 有关详细信息，请参阅 [从模型生成和配置应用](../modeling/generate-and-configure-your-app-from-models.md)。
 
 你可以在从极端敏捷到崇礼的各种流程中使用模型。
 
@@ -42,7 +42,7 @@ ms.locfileid: "76115051"
 
 如果你的项目很大，并且团队遍布全球各个位置，与使用纯文本相比，你可以使用模型来帮助更有效地沟通需求和体系结构。
 
-在这两种情况下，创建模型几乎总是会导致不一致和多义性的显著降低。 不同的利益干系人经常会对系统工作的业务领域有不同的理解，并且不同的开发人员经常会对系统的工作方式有不同的理解。 通常使用模型作为讨论的焦点来揭示这些不同之处。 有关如何使用模型来减少不一致的详细信息，请参阅[模型用户需求](../modeling/model-user-requirements.md)。
+在这两种情况下，创建模型几乎总是会导致不一致和多义性的显著降低。 不同的利益干系人经常会对系统工作的业务领域有不同的理解，并且不同的开发人员经常会对系统的工作方式有不同的理解。 通常使用模型作为讨论的焦点来揭示这些不同之处。 有关如何使用模型来减少不一致的详细信息，请参阅 [模型用户需求](../modeling/model-user-requirements.md)。
 
 ## <a name="use-models-with-other-artifacts"></a>将模型与其他项目一起使用
 
@@ -86,7 +86,7 @@ ms.locfileid: "76115051"
 
 - 每次迭代接近结束时，举办一次需求研讨会，以详细定义将在下个迭代中开发的需求或用户情景。 邀请能够确定优先级的用户和业务利益干系人，以及开发人员和系统测试员。 允许用三个小时为一个 2 周的迭代定义需求。
 
-- 该研讨会的目标是使每个人就下个迭代结束时将完成的内容达成一致。 将模型用作一种工具来帮助阐明需求。 该研讨会的输出是一个迭代积压工作（backlog），即 Team Foundation 中的开发任务列表和 [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)]中的测试套件。
+- 该研讨会的目标是使每个人就下个迭代结束时将完成的内容达成一致。 将模型用作一种工具来帮助阐明需求。 讨论会的输出是一个迭代积压工作（backlog），即中 Team Foundation 和测试套件中的开发任务列表 [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)] 。
 
 - 在需求研讨会中，仅在你需要为开发任务确定估计值的范围内讨论设计。 否则，请保持讨论用户可以直接体验的系统行为。 保持需求模型与体系结构模型分开。
 
@@ -98,13 +98,13 @@ ms.locfileid: "76115051"
 
 你可以将任意元素链接到工作项，但最有用的元素如下所示：
 
-- 描述业务规则或服务质量要求的注释。 有关详细信息，请参阅[模型用户需求](../modeling/model-user-requirements.md)。
+- 描述业务规则或服务质量要求的注释。 有关详细信息，请参阅 [模型用户需求](../modeling/model-user-requirements.md)。
 
 ### <a name="link-model-to-tests"></a>将模型链接到测试
 
 使用需求模型来指导验收测试的设计。 在开发工作进行的同时创建这些测试。
 
-若要了解有关此方法的详细信息，请参阅[从模型开发测试](../modeling/develop-tests-from-a-model.md)。
+若要了解有关此方法的详细信息，请参阅 [从模型开发测试](../modeling/develop-tests-from-a-model.md)。
 
 ### <a name="estimate-remaining-work"></a>估计剩余工作
 
@@ -116,7 +116,7 @@ ms.locfileid: "76115051"
 
 模型具有与软件相关的一系列抽象。 最具体的模型直接表示程序代码，而最抽象的模型表示可能会或可能不会在代码中表示的业务概念。
 
-可以通过多种类型的关系图中查看模型。 有关模型和关系图的信息，请参阅为[应用程序创建模型](../modeling/create-models-for-your-app.md)。
+可以通过多种类型的关系图中查看模型。 有关模型和关系图的信息，请参阅为 [应用程序创建模型](../modeling/create-models-for-your-app.md)。
 
 不同类型的关系图可用于描述不同抽象级别的设计。 许多关系图类型可用于多个级别。 此表显示可以如何使用每种类型的关系图。
 
@@ -129,20 +129,20 @@ ms.locfileid: "76115051"
 
 ## <a name="external-resources"></a>外部资源
 
-|**类别**|**Links**|
+|**类别**|**链接**|
 |-|-|
-|**视频**|![链接到视频](../data-tools/media/playvideo.gif) [MSDN 如何实现视频：如何创建和使用 UML 模型和关系图（Visual Studio 2010 旗舰版）](/previous-versions/visualstudio/visual-studio-2010/dd831853(v=vs.100))<br /><br /> ![链接到视频](../data-tools/media/playvideo.gif) 第[9 频道：通过 Visual Studio 2010 的 UML](https://channel9.msdn.com/blogs/clinted/uml-with-vs-2010-part-1-brainstorming-a-project)<br /><br /> ![链接到视频](../data-tools/media/playvideo.gif) [MSDN 如何实现系列： UML 工具和扩展性（Visual Studio 2010 旗舰版）](/previous-versions/visualstudio/visual-studio-2010/dd831853(v=vs.100))|
+|**视频**|![链接到视频 ](../data-tools/media/playvideo.gif) [MSDN 如何实现视频：如何创建和使用 UML 模型和关系图 (Visual Studio 2010 旗舰版) ](/previous-versions/visualstudio/visual-studio-2010/dd831853(v=vs.100))<br /><br /> ![视频 ](../data-tools/media/playvideo.gif) [通道9： UML 与 Visual Studio 2010 的](https://channel9.msdn.com/blogs/clinted/uml-with-vs-2010-part-1-brainstorming-a-project)链接<br /><br /> ![链接到视频 ](../data-tools/media/playvideo.gif) [MSDN 如何实现系列： UML 工具和扩展性 (Visual Studio 2010 旗舰版) ](/previous-versions/visualstudio/visual-studio-2010/dd831853(v=vs.100))|
 |**论坛**|- [Visual Studio 可视化和建模工具](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vsarch)<br />- [Visual Studio 可视化和建模 SDK（DSL 工具）](https://social.msdn.microsoft.com/Forums/home?forum=dslvsarchx)|
-|**Blogs**|[Microsoft DevOps](https://devblogs.microsoft.com/devops/)|
+|**博客**|[Microsoft DevOps](https://devblogs.microsoft.com/devops/)|
 |**技术文章和日志**|[MSDN 体系结构中心](/previous-versions/dn630665(v=msdn.10))<br /><br /> [Visual Studio 体系结构工具指南](../modeling/visual-studio-architecture-tooling-guidance.md)|
 
 ## <a name="see-also"></a>另请参阅
 
 - [在敏捷开发中使用模型](https://msdn.microsoft.com/592ac27c-3d3e-454a-9c38-b76658ed137f)
-- [为应用程序创建模型](../modeling/create-models-for-your-app.md)
+- [为你的应用程序创建模型](../modeling/create-models-for-your-app.md)
 - [建立用户需求模型](../modeling/model-user-requirements.md)
 - [应用体系结构建模](../modeling/model-your-app-s-architecture.md)
 - [基于模型开发测试](../modeling/develop-tests-from-a-model.md)
-- [安排建模解决方案](../modeling/structure-your-modeling-solution.md)
+- [安排你的建模解决方案](../modeling/structure-your-modeling-solution.md)
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]

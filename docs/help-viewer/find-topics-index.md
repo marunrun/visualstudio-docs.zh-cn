@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: ff72fc3e65b48e195c8ffc9587bdbb3c5fc382be
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85284953"
 ---
 # <a name="find-topics-by-using-the-help-viewer-index"></a>使用 Help Viewer 索引查找主题
@@ -45,7 +45,7 @@ ms.locfileid: "85284953"
 
 使用索引是一个简单的过程；但是，了解如何以最佳方式输入关键字可以使索引搜索更高效。
 
-### <a name="general-guidelines"></a>一般指南
+### <a name="general-guidelines"></a>一般性指导
 
 - 滚动浏览索引条目。 并非所有主题的索引编制方式都相同，最能为用户提供帮助的主题在列表中的排名可能会高于或低于预期。
 

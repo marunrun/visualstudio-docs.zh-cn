@@ -8,10 +8,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: f8bdaea1267d0bf69078aec5739291e72db8dfda
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85532606"
 ---
 # <a name="how-to-migrate-a-domain-specific-language-to-a-new-version"></a>如何：将域特定语言迁移至新版本
@@ -24,11 +24,11 @@ ms.locfileid: "85532606"
  **% Program Files%\Microsoft Visual Studio 2010 SDK\VisualStudioIntegration\Tools\DSLTools\DslProjectsMigrationTool.exe**
 
 ## <a name="before-you-migrate-your-dsl-projects"></a>迁移 DSL 项目之前
- 迁移工具会修改 Visual Studio 项目文件（**.csproj**）和解决方案文件（**.sln**）。
+ 迁移工具会修改 Visual Studio 项目文件 (**.csproj**) 和解决方案文件 (**.sln**) 。
 
 #### <a name="to-prepare-projects-for-migration"></a>准备要迁移的项目。
 
-- 请确保可以写入 **.csproj**和 **.sln**文件。 如果它们处于源代码管理下，请确保它们已签出。
+- 请确保可以写入 **.csproj** 和 **.sln** 文件。 如果它们处于源代码管理下，请确保它们已签出。
 
 - 创建要迁移的文件夹的副本。
 
@@ -38,15 +38,15 @@ ms.locfileid: "85532606"
 
 1. 启动 DSL 迁移工具。
 
-   - 您可以在 Windows 资源管理器（或文件资源管理器）中双击该工具，或从命令提示符处启动该工具。 该工具位于以下位置：
+   - 您可以在 Windows 资源管理器中双击该工具 (或文件资源管理器) ，或从命令提示符处启动该工具。 该工具位于以下位置：
 
         **%ProgramFiles%\Microsoft Visual Studio 2010 SDK\VisualStudioIntegration\Tools\DSLTools\DslProjectsMigrationTool.exe**
 
 2. 选择包含要转换的解决方案和项目的文件夹。
 
-   - 在工具顶部的框中输入路径，或单击 "**浏览**"。
+   - 在工具顶部的框中输入路径，或单击 " **浏览**"。
 
-     迁移工具显示定义或使用 Dsl 的项目的树。 该树包括使用**VisualStudio**或**TextTemplating**程序集的每个项目。
+     迁移工具显示定义或使用 Dsl 的项目的树。 该树包括使用 **VisualStudio** 或 **TextTemplating** 程序集的每个项目。
 
 3. 查看项目树，并取消选中不希望转换的项目。
 
@@ -57,9 +57,9 @@ ms.locfileid: "85532606"
 
 4. 转换项目。
 
-   1. 单击 "**转换**"。
+   1. 单击 " **转换**"。
 
-        在转换每个项目文件之前， _project_**. .csproj**的副本另_存为_**vs2008**
+        在转换每个项目文件之前， _project_**. .csproj** 的副本另 _存为_**vs2008**
 
         每个解决方案的_solution_**副本均保存为** _solution_**vs2008。**
 
@@ -71,10 +71,10 @@ ms.locfileid: "85532606"
 
    1. 打开解决方案。
 
-   2. 单击解决方案资源管理器标题中的 "**转换所有模板**" 按钮。
+   2. 单击解决方案资源管理器标题中的 " **转换所有模板** " 按钮。
 
        > [!NOTE]
-       > 可以不必要地执行此步骤。 有关详细信息，请参阅[如何自动转换所有模板](/previous-versions/visualstudio/visual-studio-2012/ff521399\(v\=vs.110\))。
+       > 可以不必要地执行此步骤。 有关详细信息，请参阅 [如何自动转换所有模板](/previous-versions/visualstudio/visual-studio-2012/ff521399\(v\=vs.110\))。
 
 6. 更新转换后的项目中的自定义代码。
 

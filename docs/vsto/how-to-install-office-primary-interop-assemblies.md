@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: b6f90b568f98abe5026525a60723efb59f737235
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85544776"
 ---
 # <a name="how-to-install-office-primary-interop-assemblies"></a>如何：安装 Office 主互操作程序集
@@ -29,12 +29,12 @@ ms.locfileid: "85544776"
 
 1. 确保具有不超过 2.0 版本的 .NET Framework。
 
-2. 安装 Microsoft Office 并确保为要扩展的应用程序选择了 " **.Net 可编程性支持**" 功能（默认安装中包含此功能）。
+2. 安装 Microsoft Office 并确保为要扩展的应用程序选择 " **.Net 可编程性支持** " 功能 (此功能包含在默认的安装) 中。
 
     > [!WARNING]
     > 默认情况下，当你生成 PIA 时，PIA 嵌入到你的解决方案中，因此你不必将 Pia 分发给用户作为使用 VSTO 外接程序或自定义项的先决条件。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [Office 主互操作程序集](../vsto/office-primary-interop-assemblies.md)
 - [如何：通过主互操作程序集面向 Office 应用程序](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md)
 - [如何：将计算机配置为开发 Office 解决方案](../vsto/how-to-configure-a-computer-to-develop-office-solutions.md)

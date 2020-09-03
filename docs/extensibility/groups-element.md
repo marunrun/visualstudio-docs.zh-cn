@@ -1,5 +1,5 @@
 ---
-title: 组元素 |微软文档
+title: Groups 元素 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,14 +12,14 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: a6383c3c7a28f9aa7778fddcbfe36b237d21323f
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80711179"
 ---
 # <a name="groups-element"></a>Groups 元素
-包含定义 VSPackage 的命令组的条目。
+包含定义 VSPackage 的命令组的项。
 
 ## <a name="syntax"></a>语法
 
@@ -35,22 +35,22 @@ ms.locfileid: "80711179"
 
 ### <a name="attributes"></a>特性
 
-|特性|描述|
+|特性|说明|
 |---------------|-----------------|
-|条件|可选。 请参阅[条件属性](../extensibility/vsct-xml-schema-conditional-attributes.md)。|
+|条件|可选。 请参阅 [条件特性](../extensibility/vsct-xml-schema-conditional-attributes.md)。|
 
 ### <a name="child-elements"></a>子元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
-|[组元素](../extensibility/group-element.md)|表示单个命令组。|
-|[组元素](../extensibility/groups-element.md)|包含定义 VSPackage 的命令组的条目。|
+|[Group 元素](../extensibility/group-element.md)|表示单个命令组。|
+|[Groups 元素](../extensibility/groups-element.md)|包含定义 VSPackage 的命令组的项。|
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
-|[命令元素](../extensibility/commands-element.md)|表示 VSPackage 工具栏上的命令集合。|
+|[命令元素](../extensibility/commands-element.md)|表示 VSPackage 工具栏上命令的集合。|
 
 ## <a name="example"></a>示例
 
@@ -62,6 +62,6 @@ ms.locfileid: "80711179"
 </Groups>
 ```
 
-## <a name="see-also"></a>请参阅
-- [VS包如何添加用户界面元素](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
+## <a name="see-also"></a>另请参阅
+- [Vspackage 如何添加用户界面元素](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
 - [命令、菜单和工具栏](../extensibility/internals/commands-menus-and-toolbars.md)

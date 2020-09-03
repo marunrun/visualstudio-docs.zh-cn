@@ -1,5 +1,5 @@
 ---
-title: IDebugObject：仅读取 |微软文档
+title: IDebugObject：： IsReadOnly |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 19546550f916e9d42adf634b0d85958ce9697d28
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80726410"
 ---
 # <a name="idebugobjectisreadonly"></a>IDebugObject::IsReadOnly
-确定此对象是否为只读对象。
+确定此对象是否为只读。
 
 ## <a name="syntax"></a>语法
 
@@ -41,13 +41,13 @@ int IsReadOnly(
 
 ## <a name="parameters"></a>参数
 `pfIsReadOnly`\
-[出]如果此对象是只`TRUE`读的，则返回非零 （ ）， 如果此对象是只读的，否则，返回零`FALSE`（）。
+弄 `TRUE` 如果此对象是只读的，则返回非零 () ; 否则，将返回零 (`FALSE`) 。
 
 ## <a name="return-value"></a>返回值
- 如果成功，返回S_OK;否则，返回错误代码。
+ 如果成功，将返回 S_OK;否则，将返回错误代码。
 
 ## <a name="remarks"></a>备注
- 只读对象在创建后不能更改其值。
+ 创建只读对象后，其值不能更改。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)

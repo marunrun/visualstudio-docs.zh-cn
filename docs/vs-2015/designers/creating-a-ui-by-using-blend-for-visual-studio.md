@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 1a65f42dafca696bfa638964b825410b576d4845
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85544282"
 ---
 # <a name="creating-a-ui-by-using-blend-for-visual-studio"></a>使用 Blend for Visual Studio 创建 UI
@@ -45,7 +45,7 @@ Blend for Visual Studio 可帮助设计基于 XAML 的 Windows 桌面、Web、[W
 
  ![“工具”面板](../designers/media/blend5toolspanel.png "Blend5Toolspanel")
 
-|映像|工具类型|映像|工具类型|
+|图像|工具类型|图像|工具类型|
 |-|-|-|-|
 |![](../designers/media/b1-1.png "B1_1")|**选择工具** - 选择对象和路径。<br /><br /> 使用“直接选择”**** 工具可选择嵌套对象和路径段。|![标注 A](../designers/media/b5-label-a.png "b5_label_A")|**渐变和画笔工具**|
 |![](../designers/media/b1-2.png "B1_2")|**视图工具** - 调整美工板的视图，例如平移和缩放。|![标注 B](../designers/media/b5-label-b.png "b5_label_B")|**路径工具**|
@@ -57,11 +57,11 @@ Blend for Visual Studio 可帮助设计基于 XAML 的 Windows 桌面、Web、[W
  **观看短片：** ![配置已安装的功能](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [工具栏](https://www.youtube.com/watch?v=VkdUJcvoo54&list=PLBDF977B2F1DAB358&index=4)。
 
 ## <a name="tour-of-the-assets-panel"></a><a name="Assets"></a>“资产”面板概览
- 可在“资产”**** 面板中找到所有控件，它类似于 Visual Studio 中的“工具箱”****。 除了控件外，您还可以在 "**资产**" 面板中找到可以添加到美工板的所有内容，包括样式、媒体、行为和效果。
+ 可在“资产”**** 面板中找到所有控件，它类似于 Visual Studio 中的“工具箱”****。 除了控件外，您还可以在 " **资产** " 面板中找到可以添加到美工板的所有内容，包括样式、媒体、行为和效果。
 
  ![“资产”面板](../designers/media/blend5-assets-panel.png "Blend5_Assets_panel")
 
-|映像|说明|
+|图像|说明|
 |-|-|
 |![](../designers/media/b1-1.png "B1_1")|**搜索框** - 可在“搜索”**** 框中键入值来筛选资产列表。|
 |![](../designers/media/b1-2.png "B1_2")|**网格模式和列表模式** - 在资产的“网格模式”**** 视图和“列表模式”**** 视图之间切换。|
@@ -69,16 +69,16 @@ Blend for Visual Studio 可帮助设计基于 XAML 的 Windows 桌面、Web、[W
 |![](../designers/media/b1-4.png "B1_4")|**样式** - 显示资源字典中包含的所有样式。|
 |![](../designers/media/b1-5.png "B1_5")|**说明** - 查看所选资产类别或子类别的说明。|
 
-## <a name="tour-of-the-objects-and-timeline-panel"></a><a name="Objects"></a>对象和时间线面板教程
+## <a name="tour-of-the-objects-and-timeline-panel"></a><a name="Objects"></a> 对象和时间线面板教程
  使用此面板可在美工板上组织对象以及（如果需要）对它们进行动画处理。
 
  ![动画模式中的“对象和时间线”面板](../designers/media/b5-object-timeline-animation.png "b5_object_timeline_animation")
 
-|映像|说明|
+|图像|说明|
 |-|-|
 |![](../designers/media/b1-1.png "B1_1")|**对象视图** - 查看文档的可视树。 可以深化到不同级别的详细信息。 还可以添加层以便进一步在美工板上组织对象。 通过这种方式可以将它们作为组进行锁定和隐藏。|
-|![](../designers/media/b1-2.png "B1_2")|**记录模式指示器**查看是否在时间线中记录属性更改。|
-|![](../designers/media/b1-3.png "B1_3")|**情节提要选取器**查看已创建的情节提要的列表。|
+|![](../designers/media/b1-2.png "B1_2")|**记录模式指示器** 查看是否在时间线中记录属性更改。|
+|![](../designers/media/b1-3.png "B1_3")|**情节提要选取器** 查看已创建的情节提要的列表。|
 |![](../designers/media/b1-4.png "B1_4")|**关闭情节提要** - 关闭当前情节提要。|
 |![](../designers/media/b1-5.png "B1_5")|**情节提要选项** - 创建、复制、反向、删除、重命名或关闭情节提要。|
 |![](../designers/media/b1-6.png "B1_6")|**播放控件** - 在时间线中导航。 也可拖动播放指针来定位（或*推移*）时间线。|
@@ -93,7 +93,7 @@ Blend for Visual Studio 可帮助设计基于 XAML 的 Windows 桌面、Web、[W
 |![](../designers/media/b1-15.png "B1_15")|**时间线缩放** - 设置时间线的缩放分辨率。 通过放大，可以编辑动画的更多细节；而通过缩小，可更全面地显示在更长时间段内发生的情况。 如果进行放大，但无法在所需时间位置设置关键帧，请验证设置的对齐分辨率是否足够高。|
 |![标注 16](../designers/media/b5-label-16.png "b5_label_16")|**时间线构成区域** - 查看时间线，并通过拖动关键帧或通过其快捷菜单移动关键帧。|
 
-## <a name="tour-of-the-properties-panel"></a><a name="Properties"></a>"属性" 面板教程
+## <a name="tour-of-the-properties-panel"></a><a name="Properties"></a> "属性" 面板教程
  使用此面板可查看和修改对象的属性。 还可以直接在美工板上设置它们。 若如此操作，则“属性”**** 面板中将反映出属性更改。
 
  ![“属性”面板](../designers/media/blend5-properties-panel.png "Blend5_properties_panel")

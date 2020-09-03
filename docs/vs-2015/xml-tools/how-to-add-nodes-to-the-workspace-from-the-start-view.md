@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 5bf0301f9b97bf6a7ca76f72f832c635a0dbb128
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72656382"
 ---
 # <a name="how-to-add-nodes-to-the-workspace-from-the-start-view"></a>如何：从起始视图向工作区中添加节点
@@ -23,14 +23,14 @@ ms.locfileid: "72656382"
 
 ### <a name="to-add-nodes-to-the-workspace-from-the-start-view"></a>从起始视图向工作区中添加节点
 
-1. 按照[如何：创建和编辑 XSD 架构文件](../xml-tools/how-to-create-and-edit-an-xsd-schema-file.md)中的步骤操作。
+1. 按照 [如何：创建和编辑 XSD 架构文件](../xml-tools/how-to-create-and-edit-an-xsd-schema-file.md)中的步骤操作。
 
-2. 右键单击 "XML 编辑器"，然后选择 "**视图设计器**"。
+2. 右键单击 "XML 编辑器"，然后选择 " **视图设计器**"。
 
      此时将显示起始视图。
 
-     请注意，在 "**架构集详细信息**" 部分中有两（**2**）个 "**全局复杂类型**"。
+     请注意，“架构集详细信息”部分中有两 (2) 个“全局复杂类型”  。
 
-3. 单击 "**全局复杂类型**" 标题右侧的 "**添加**" 链接。
+3. 单击“全局复杂类型”标题右侧的“添加”链接 。
 
      此时，`USAddress` 和 `PurchaseOrderType` 复杂类型节点将显示在图形视图的设计图面上。

@@ -30,6 +30,7 @@ ms.locfileid: "77633078"
 对于某失败的任务，如果 `ContinueOnError` 属性为 `false`，则会出现一个或多个要执行的目标。
 
  \<Project> \<Target> \<OnError>
+ \<OnError>
 
 ## <a name="syntax"></a>语法
 

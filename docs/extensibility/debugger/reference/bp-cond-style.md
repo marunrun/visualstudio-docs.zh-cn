@@ -1,5 +1,5 @@
 ---
-title: BP_COND_STYLE |微软文档
+title: BP_COND_STYLE |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: ca704ca186308ea9e44c4fa7edc6617cbac806eb
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80738113"
 ---
 # <a name="bp_cond_style"></a>BP_COND_STYLE
-指定挂起和绑定断点的断点条件样式。
+为挂起断点和绑定断点指定断点条件样式。
 
 ## <a name="syntax"></a>语法
 
@@ -46,23 +46,23 @@ public enum enum_BP_COND_STYLE {
 
 ## <a name="fields"></a>字段
 `BP_COND_NONE`\
-到达断点位置时触发断点。 未指定断点条件。
+当到达断点的位置时，将激发断点。 未指定断点条件。
 
 `BP_COND_WHEN_TRUE`\
-仅当与断点关联的条件表达式计算到`true`时，才触发断点。
+仅当与断点关联的条件表达式的计算结果为时，才引发断点 `true` 。
 
 `BP_COND_WHEN_CHANGED`\
-仅当与断点关联的条件表达式的值与其以前的计算相比发生更改时，才触发断点。
+仅当与断点关联的条件表达式的值与以前的计算发生了更改时，才会激发断点。
 
 ## <a name="remarks"></a>备注
-用于[BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md)结构`styleCondition`的成员。
+用于 `styleCondition` [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md) 结构的成员。
 
 ## <a name="requirements"></a>要求
-标题： msdbg.h
+标头： msdbg
 
-命名空间：微软.VisualStudio.调试器.互通
+命名空间： VisualStudio
 
-程序集：微软.VisualStudio.调试器.Interop.dll
+程序集： Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [枚举](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

@@ -10,10 +10,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 778912c3149f9f146c01dbab15afa4fabeaa49b8
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75852261"
 ---
 # <a name="javascript-in-visual-studio"></a>Visual Studio 中的 JavaScript
@@ -41,17 +41,17 @@ JavaScript 是 Visual Studio 中的一级语言。 当你在 Visual Studio IDE �
 ## <a name="whats-new-in-javascript"></a>JavaScript 的新增功能
  下表列出了 JavaScript 的新增功能。
 
-|功能|描述|
+|功能|说明|
 |-------------|-----------------|
 |类|新语法支持[类](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/class)的声明。|
 |承诺|通过[承诺](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)可以实现更轻松、更干净的异步编码。 支持承诺构造函数，以及 `all` 和 `race` 实用工具方法。|
-|Iterators|现在可以循环访问可迭代对象（包括数组、类似数组的对象和迭代器），从而使用要对每个非重复属性的值执行的语句来调用自定义迭代挂钩。 有关详细信息，请参阅[迭代器和生成器](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Iterators_and_Generators)。 **注意：** 尚不支持生成器。|
+|迭代器|现在可以循环访问可迭代对象（包括数组、类似数组的对象和迭代器），从而使用要对每个非重复属性的值执行的语句来调用自定义迭代挂钩。 有关详细信息，请参阅[迭代器和生成器](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Iterators_and_Generators)。 **注意：** 尚不支持生成器。|
 |箭头函数|箭头函数 (=>) 为采用词法 `this` 绑定的 `function` 关键字提供速记形式语法。|
 |用于内置对象的新方法|[Array 对象](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)、[Math 对象](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math)、[Number 对象](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)、[Object 对象](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)和 [String 对象](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)内置对象包括许多用于操作和检测数据的新实用工具函数和属性。|
 |对象文字增强功能|对象现在针对其值初始化为同名变量的属性支持计算属性、简洁方法定义和速记形式语法。 有关详细信息，请参阅[创建对象](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)。|
 |代理|[代理](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Proxy)可实现对象的自定义行为。|
 |Rest 参数|通过 Rest 参数可以将函数调用中的连续自变量转换为数组。 有关详细信息，请参阅[函数](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Function)。|
-|Spread 运算符|[spread 运算符](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Spread_operator) (`…`) 将可迭代表达式扩展为各个自变量。 例如，`a.b(…array)` 与 `a.b.apply(a, array)` 近似相同。|
+|Spread 运算符| ([spread operator](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Spread_operator) `…`) 将可迭代表达式扩展为各个参数。 例如，`a.b(…array)` 与 `a.b.apply(a, array)` 近似相同。|
 |符号|[符号](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol)对象允许将属性添加现有对象，而不可能干扰现有对象属性、不存在任何意外的可见性并且不存在其他代码进行的任何其他不协调添加。|
 |模板字符串|[模板字符串](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Template_literals)是允许要进行计算并与字符串连接的表达式使用的字符串。|
 |Unicode 增强功能|对 Unicode 支持进行了改进。 例如，一种新的转义序列格式支持 astral 码位（包含四个以上十六进制数字的码位）。 有关详细信息，请参阅[特殊字符](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Regular_Expressions#Types_of_special_characters)。|

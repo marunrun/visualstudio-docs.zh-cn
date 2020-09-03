@@ -8,17 +8,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: aa5b3166606312bb74560f207e6e1d0e6065bb2c
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85532581"
 ---
 # <a name="how-to-extend-the-domain-specific-language-designer"></a>如何：扩展域特定语言设计器
 
-你可以对用于编辑 DSL 定义的设计器进行扩展。 可以进行的扩展类型包括添加菜单命令、添加拖放和双击笔势的处理程序，以及在特定类型的值或关系发生更改时触发的规则。 可以将扩展打包为 Visual Studio 集成扩展（VSIX），并将其分发给其他用户。
+你可以对用于编辑 DSL 定义的设计器进行扩展。 可以进行的扩展类型包括添加菜单命令、添加拖放和双击笔势的处理程序，以及在特定类型的值或关系发生更改时触发的规则。 可以将扩展打包为 Visual Studio 集成扩展 (VSIX) 并分发给其他用户。
 
-有关此功能的示例代码和详细信息，请参阅 Visual Studio[可视化和建模 SDK](https://code.msdn.microsoft.com/Visualization-and-Modeling-313535db)。
+有关此功能的示例代码和详细信息，请参阅 Visual Studio [可视化和建模 SDK](https://code.msdn.microsoft.com/Visualization-and-Modeling-313535db)。
 
 ## <a name="set-up-the-solution"></a>设置解决方案
 
@@ -26,19 +26,19 @@ ms.locfileid: "85532581"
 
 ### <a name="to-create-a-dsl-designer-extension-solution"></a>创建 DSL 设计器扩展解决方案
 
-1. 使用**类库项目模板**创建一个新项目。 此项目将包含你的扩展的代码。
+1. 使用 **类库项目模板** 创建一个新项目。 此项目将包含你的扩展的代码。
 
-2. 创建新的**VSIX 项目**项目。
+2. 创建新的 **VSIX 项目** 项目。
 
-     选择 "**添加到解决方案**"。
+     选择 " **添加到解决方案**"。
 
-     *Source.extension.vsixmanifest*在 VSIX 清单编辑器中打开。
+     *Source.extension.vsixmanifest* 在 VSIX 清单编辑器中打开。
 
-3. 在 "内容" 字段上方，单击 "**添加内容**"。
+3. 在 "内容" 字段上方，单击 " **添加内容**"。
 
-4. 在 "**添加内容**" 对话框中，将 "**选择内容类型**" 设置为 " **MEF 组件**"，并将 "**项目**" 设置为类库项目。
+4. 在 " **添加内容** " 对话框中，将 " **选择内容类型** " 设置为 " **MEF 组件**"，并将 " **项目** " 设置为类库项目。
 
-5. 单击 "**选择版本**" 并确保选中**Visual Studio Enterprise** 。
+5. 单击 " **选择版本** " 并确保选中 **Visual Studio Enterprise** 。
 
 6. 请确保 VSIX 项目是解决方案的启动项目。
 
@@ -70,13 +70,13 @@ ms.locfileid: "85532581"
 
 1. 在 \\ bin 中的 vsix 项目中 * 查找 vsix 安装文件 \\ \*
 
-2. 将此文件复制到目标计算机，然后在 Windows 资源管理器（或文件资源管理器）中双击它。
+2. 将此文件复制到目标计算机，然后在 Windows 资源管理器中 (或文件资源管理器) 中，双击该文件。
 
      此时将打开 Visual Studio 扩展管理器以确认是否已安装该扩展。
 
 若要卸载扩展，请执行以下步骤：
 
-1. 在 Visual Studio 的 "**工具**" 菜单上，单击 "**扩展管理器**"。
+1. 在 Visual Studio 的 " **工具** " 菜单上，单击 " **扩展管理器**"。
 
 2. 选择扩展并将其删除。
 

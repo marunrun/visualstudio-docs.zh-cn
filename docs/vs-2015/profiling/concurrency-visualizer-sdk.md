@@ -12,10 +12,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: ed93d852e385a6130cd37b0f66c99b4f0ab467bc
-ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "82586804"
 ---
 # <a name="concurrency-visualizer-sdk"></a>并发可视化工具 SDK
@@ -84,7 +84,7 @@ ms.locfileid: "82586804"
 
 #### <a name="to-use-a-new-marker-provider-in-a-c-or-c-project"></a>在 C++ 或 C 项目中使用新的标记提供程序
 
-1. 使用 `CvInitProvider` 函数初始化 PCV_PROVIDER。 构造函数采用 GUID * 并 PCV_PROVIDER\*。
+1. 使用 `CvInitProvider` 函数初始化 PCV_PROVIDER。 构造函数采用 GUID * 并 PCV_PROVIDER \* 。
 
 2. 若要注册该提供程序，请打开[高级设置](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md)对话框。 选择“标记”  选项卡，然后选择“添加新提供程序”  按钮。 在此对话框中，输入用于创建该提供程序和该提供程序说明的 GUID。
 

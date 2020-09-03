@@ -16,16 +16,16 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 14c50ed94f05401cc5575af9f8b98472c35b261d
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85543996"
 ---
 # <a name="ca1709-identifiers-should-be-cased-correctly"></a>CA1709:标识符的大小写应当正确
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-有关 Visual Studio 的最新文档，请参阅[CA1709：标识符应采用正确的大小写](/visualstudio/code-quality/ca1709-identifiers-should-be-cased-correctly)。
+有关 Visual Studio 的最新文档，请参阅 [CA1709：标识符应采用正确的大小写](/visualstudio/code-quality/ca1709-identifiers-should-be-cased-correctly)。
 
 |项|值|
 |-|-|
@@ -62,7 +62,7 @@ ms.locfileid: "85543996"
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
  如果你有自己的命名约定，或者标识符表示正确的名称（例如，公司或技术的名称），则可以安全地禁止显示此警告。
 
- 您还可以将特定的词、缩写和首字母缩写添加到代码分析自定义字典中。 自定义字典中指定的条款将不会导致违反此规则。 有关详细信息，请参阅[如何：自定义代码分析字典](../code-quality/how-to-customize-the-code-analysis-dictionary.md)
+ 您还可以将特定的词、缩写和首字母缩写添加到代码分析自定义字典中。 自定义字典中指定的条款将不会导致违反此规则。 有关详细信息，请参阅 [如何：自定义代码分析字典](../code-quality/how-to-customize-the-code-analysis-dictionary.md)
 
 ## <a name="related-rules"></a>相关规则
  [CA1708:标识符应以大小写之外的差别进行区分](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)

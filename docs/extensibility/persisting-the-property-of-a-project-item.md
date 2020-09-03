@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 224a1e4f5f5d56022ae7c1e0572ca648b9a5aa6b
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85906197"
 ---
 # <a name="persist-the-property-of-a-project-item"></a>保留项目项的属性
@@ -23,7 +23,7 @@ ms.locfileid: "85906197"
 
  将属性保存在项目文件中的第一步是获取作为接口的项目的层次结构 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> 。 可以通过使用自动化或使用来获取此接口 <xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection> 。 获取接口后，可以使用它来确定当前选择的项目项。 获得项目项 ID 后，可以使用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage.SetItemAttribute%2A> 添加属性。
 
- 在下面的过程中，将*VsPkg.cs*属性 `Author` 与 `Tom` 项目文件中的值保持一致。
+ 在下面的过程中，将 *VsPkg.cs* 属性 `Author` 与 `Tom` 项目文件中的值保持一致。
 
 ## <a name="to-obtain-the-project-hierarchy-with-the-dte-object"></a>用 DTE 对象获取项目层次结构
 
@@ -117,12 +117,12 @@ ms.locfileid: "85906197"
 
 1. 启动 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ，然后打开或创建一个解决方案。
 
-2. 在**解决方案资源管理器**中选择项目项 "VsPkg.cs"。
+2. 在 **解决方案资源管理器**中选择项目项 "VsPkg.cs"。
 
 3. 使用断点或以其他方式确定是否已加载 VSPackage 并运行 SetItemAttribute。
 
    > [!NOTE]
-   > 可以在 UI 上下文中 autoload VSPackage <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.SolutionExists_guid> 。 有关详细信息，请参阅[Load vspackage](../extensibility/loading-vspackages.md)。
+   > 可以在 UI 上下文中 autoload VSPackage <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.SolutionExists_guid> 。 有关详细信息，请参阅 [Load vspackage](../extensibility/loading-vspackages.md)。
 
 4. 关闭 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ，然后在记事本中打开项目文件。 你应看到 \<Author> 带有值 Tom 的标记，如下所示：
 

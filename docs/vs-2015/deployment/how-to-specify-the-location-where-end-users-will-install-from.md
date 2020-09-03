@@ -19,22 +19,22 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 82181d906adc3454dfe77ef4fb21d8bdf99df16f
-ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/22/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77557986"
 ---
 # <a name="how-to-specify-the-location-where-end-users-will-install-from"></a>如何：指定最终用户将从中进行安装的位置
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-发布 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 应用程序时，用户下载和安装应用程序的位置并不一定是最初发布应用程序的位置。 例如，在某些组织中，开发人员可能会将应用程序发布到暂存服务器，然后管理员会将该应用程序移动到 Web 服务器。  
+在发布 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 应用程序时，用户下载和安装应用程序的位置不一定是最初发布应用程序的位置。 例如，在某些组织中，开发人员可能会将应用程序发布到暂存服务器，然后管理员会将该应用程序移动到 Web 服务器。  
   
- 在这种情况下，你可以使用 `Installation URL` 属性指定用户将在其中下载应用程序的 Web 服务器。 这是必需的，以便应用程序清单知道在何处查找更新。  
+ 在这种情况下，可以使用 `Installation URL` 属性来指定用户下载应用程序时将使用的 Web 服务器。 这是必需的，以便应用程序清单知道在何处查找更新。  
   
- `Installation URL` 属性可以在 "**项目设计器**" 的 "**发布**" 页上进行设置。  
+ `Installation URL`可以在 "**项目设计器**" 的 "**发布**" 页上设置属性。  
   
- **注意**还可以使用**发布向导**设置 `Installation URL` 属性。 有关详细信息，请参阅[如何：使用发布向导发布 ClickOnce 应用程序](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)。  
+ **注意**`Installation URL`还可以使用**发布向导**来设置属性。 有关详细信息，请参阅 [如何：使用发布向导发布 ClickOnce 应用程序](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)。  
   
 ### <a name="to-specify-an-installation-url"></a>指定安装 URL  
   
@@ -42,7 +42,7 @@ ms.locfileid: "77557986"
   
 2. 单击 **“发布”** 选项卡。  
   
-3. 在 "安装 URL" 字段中，使用格式 `https://www.contoso.com/ApplicationName`或 UNC 路径（格式为 `\\Server\ApplicationName`）输入安装位置。  
+3. 在 "安装 URL" 字段中，使用格式输入完全限定的 URL `https://www.contoso.com/ApplicationName` ，或使用格式的 UNC 路径输入安装位置 `\\Server\ApplicationName` 。  
   
 ## <a name="see-also"></a>另请参阅  
  [如何：指定 Visual Studio 复制文件的位置](../deployment/how-to-specify-where-visual-studio-copies-the-files.md)   

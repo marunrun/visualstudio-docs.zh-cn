@@ -15,25 +15,25 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 21fdc15b161b7d1cef30effe82e518a174bc9666
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72619551"
 ---
 # <a name="create-xml-documentation-comments-for-javascript-intellisense"></a>为 JavaScript IntelliSense 创建 XML 文档注释
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-*XML 文档注释*是添加到脚本中的 JavaScript 注释，用于提供有关代码元素（如函数、字段和变量）的信息。 在 Visual Studio 中，当你引用脚本函数时，这些文本说明与 IntelliSense 一起显示。
+*XML 文档注释* 是添加到脚本中的 JavaScript 注释，用于提供有关代码元素（如函数、字段和变量）的信息。 在 Visual Studio 中，当你引用脚本函数时，这些文本说明与 IntelliSense 一起显示。
 
- 本主题提供有关使用 XML 文档注释的基本教程。 有关使用其他元素（如[\<var >](../ide/var-javascript.md)和[\<value >](../ide/value-javascript.md)）的信息，以及有关其他代码示例的信息，请参阅[XML 文档注释](../ide/xml-documentation-comments-javascript.md)。 有关为异步回调（如 `Promise`）提供 IntelliSense 信息的信息，请参阅[\<returns >](../ide/returns-javascript.md)。
+ 本主题提供有关使用 XML 文档注释的基本教程。 有关使用其他元素（如 [\<var>](../ide/var-javascript.md) 和 [\<value>](../ide/value-javascript.md) ）的信息，以及有关其他代码示例的信息，请参阅 [XML 文档注释](../ide/xml-documentation-comments-javascript.md)。 有关为异步回调（例如）提供 IntelliSense 信息的信息 `Promise` ，请参阅 [\<returns>](../ide/returns-javascript.md) 。
 
 > [!NOTE]
 > XML 文档注释只能从引用的文件、程序集和服务中提供。
 
 ### <a name="to-create-xml-documentation-comments-for-a-javascript-function"></a>为 JavaScript 函数创建 XML 文档注释
 
-- 在函数中，添加[\<summary >](../ide/summary-javascript.md)、 [\<param >](../ide/param-javascript.md)和[\<returns](../ide/returns-javascript.md) > 元素，并在每个元素前面加上三个斜杠标记（///）。
+- 在函数中，添加 [\<summary>](../ide/summary-javascript.md) 、 [\<param>](../ide/param-javascript.md) 和 [\<returns>](../ide/returns-javascript.md) 元素，并在每个元素前面加上三个斜杠标记 (///) 。
 
     > [!NOTE]
     > 每个元素必须在一行上。
@@ -62,9 +62,9 @@ ms.locfileid: "72619551"
 
 ### <a name="to-create-xml-documentation-comments-for-a-javascript-field"></a>为 JavaScript 字段创建 XML 文档注释
 
-- 在构造函数或对象定义中，添加一个[\<field >](../ide/field-javascript.md)元素，该元素前面有三个斜杠标记（///）。
+- 在构造函数或对象定义中，添加一个 [\<field>](../ide/field-javascript.md) 元素，该元素前面有三个斜线标记 (///) 。
 
-     下面的示例演示如何在构造函数中使用 `<field>` 元素。 有关其他示例，请参阅[\<field >](../ide/field-javascript.md)。
+     下面的示例演示如何 `<field>` 在构造函数中使用元素。 有关其他示例，请参阅 [\<field>](../ide/field-javascript.md) 。
 
     ```javascript
     function Engine() {
@@ -87,7 +87,7 @@ ms.locfileid: "72619551"
 
 ### <a name="to-create-xml-documentation-comments-for-an-overloaded-function"></a>为重载函数创建 XML 文档注释
 
-1. 在函数中，为每个重载添加一个[\<signature >](../ide/signature-javascript.md)元素。 在这些元素中，添加其他元素，例如 `<summary>`、`<param>` 和 `<returns>`，并在每个元素前面加上三个斜杠标记（///）。
+1. 在函数中， [\<signature>](../ide/signature-javascript.md) 为每个重载添加一个元素。 在这些元素中，添加其他元素，例如 `<summary>` 、 `<param>` 和，并在 `<returns>` 每个元素前面加上三个斜杠标记 (//) 。
 
      下面的示例演示一个重载的 JavaScript 函数。 在此示例中，重载不同于参数类型。
 
@@ -118,9 +118,9 @@ ms.locfileid: "72619551"
 1. 创建一个 XML 文件，该文件包含 OpenAjax MessageBundle 格式的文档注释。
 
     > [!IMPORTANT]
-    > 建议采用 MessageBundle 格式。 Microsoft Ajax 或 winmd 文件中不支持此格式。 有关使用替代 `VSDoc` 格式的信息，请参阅[\<loc >](../ide/loc-javascript.md)。
+    > 建议采用 MessageBundle 格式。 Microsoft Ajax 或 winmd 文件中不支持此格式。 有关使用替代格式的信息 `VSDoc` ，请参阅 [\<loc>](../ide/loc-javascript.md) 。
 
-     下面的示例显示挎斗文件中包含本地化 IntelliSense 信息的内容。 这是位于特定于区域性的文件夹中的 XML 文件，如 JA。 文件夹必须与包含 `<loc>` 元素的 .js 文件位于同一位置。 XML 文件的文件名必须与 `<loc>` 元素中指定的 `filename` 参数匹配。
+     下面的示例显示挎斗文件中包含本地化 IntelliSense 信息的内容。 这是位于特定于区域性的文件夹中的 XML 文件，如 JA。 文件夹必须与包含元素的 .js 文件位于同一位置 `<loc>` 。 XML 文件的文件名必须与 `filename` 元素中指定的参数匹配 `<loc>` 。
 
     ```
     <messagebundle>
@@ -131,14 +131,14 @@ ms.locfileid: "72619551"
 
     ```
 
-2. 在 .js 文件中，添加以下代码。 @No__t_0 元素必须在任何脚本之前声明，并遵循与 `<reference>` 元素相同的使用规则。 有关详细信息，请参阅[JavaScript IntelliSense](../ide/javascript-intellisense.md)和[\<loc >](../ide/loc-javascript.md)。
+2. 在 .js 文件中，添加以下代码。 `<loc>`元素必须在任何脚本之前声明，并遵循与元素相同的使用规则 `<reference>` 。 有关详细信息，请参阅 [JavaScript IntelliSense](../ide/javascript-intellisense.md) 和 [\<loc>](../ide/loc-javascript.md) 。
 
     ```javascript
     /// <loc filename="messageFilename.xml" format="messagebundle"/>
 
     ```
 
-3. 在 .js 文件中，添加 XML 文档元素和默认说明。 设置 `locid` 属性值以与挎斗文件中的相应 `name` 属性值相匹配。 默认说明将替换为本地化的 IntelliSense 信息（如果可用）。
+3. 在 .js 文件中，添加 XML 文档元素和默认说明。 将 `locid` 属性值设置为与 `name` 挎斗文件中的相应属性值相匹配。 默认说明将替换为本地化的 IntelliSense 信息（如果可用）。
 
     ```javascript
     function add(a,b)
@@ -156,5 +156,5 @@ ms.locfileid: "72619551"
     add(
     ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [JavaScript intellisense](../ide/javascript-intellisense.md) [XML 文档注释](../ide/xml-documentation-comments-javascript.md)[钢笔尖：演练： JavaScript IntelliSense in ASP.NET](https://msdn.microsoft.com/4f6e0cc2-7f48-4dbf-abb0-7fb743a2d05b)

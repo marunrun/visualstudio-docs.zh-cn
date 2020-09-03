@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: d8ec7d6508ec025a2b2005754da03bdd4db38943
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74300268"
 ---
 # <a name="compiling-and-building-in-visual-studio"></a>在 Visual Studio 中编译和生成
@@ -29,11 +29,11 @@ ms.locfileid: "74300268"
 ## <a name="choosing-a-build-method"></a>选择一种生成方法
  您可以在命令提示符处使用 IDE 中的默认生成选项或使用 Team Foundation Build 来生成应用程序。 其中的每个选项都将 MSBuild 用作基础技术，并且每种方法都有特定的好处，如下表所示。
 
-|生成方法|优点|获取详细信息|
+|生成方法|优点|更多信息|
 |------------------|--------------|--------------------------|
 |使用 IDE|-   可以更轻松地创建并立即运行生成。<br />-   可以运行 C++ 和 C# 项目的多处理器生成。<br />-   可以自定义生成系统的某些方面。|[在 Visual Studio 中生成和清理项目和解决方案](../ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md)|
 |运行 MSBuild 命令行|-   可以生成项目，而无需安装 Visual Studio。<br />-   可以运行所有项目类型的多处理器生成。<br />-   可以自定义生成系统的大多数区域。|[MSBuild](../msbuild/msbuild.md)|
-|使用 Team Foundation Build|-   可以将生成过程自动化。 例如，您可以在夜间或每次签入此代码时生成一个或多个项目。 还可以在共享的生成服务器而不是开发计算机上生成项目。<br />-   可以快速指定要生成的代码、要运行的测试和其他常用选项。<br />-   可以修改生成工作流，并根据需要创建生成活动以执行深层的自定义任务。|[生成应用程序](/azure/devops/pipelines/index)|
+|使用 Team Foundation Build|-   可以将生成过程自动化。 例如，您可以在夜间或每次签入此代码时生成一个或多个项目。 还可以在共享的生成服务器而不是开发计算机上生成项目。<br />-   可以快速指定要生成的代码、要运行的测试和其他常用选项。<br />-   可以修改生成工作流，并根据需要创建生成活动以执行深层的自定义任务。|[构建应用程序](/azure/devops/pipelines/index)|
 
 ## <a name="building-from-the-ide"></a>从 IDE 生成
  创建一个项目时，将为此项目定义默认生成配置，并为其分配解决方案生成配置以便为生成提供上下文。 解决方案配置定义如何生成和部署解决方案中的项目。 项目配置是一组项目属性，这些属性对于平台和生成类型是唯一的（例如，Release Win32）。 您可以编辑这些默认配置，并且可以创建您自己的配置。 有关详细信息，请参阅[项目设计器介绍](https://msdn.microsoft.com/898dd854-c98d-430c-ba1b-a913ce3c73d7)和 [NIB 如何：修改项目属性和配置设置](https://msdn.microsoft.com/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)。
@@ -52,5 +52,5 @@ ms.locfileid: "74300268"
 
 - 通过使用并行生成改进生成性能。 有关详细信息，请参阅[并行生成多个项目](../msbuild/building-multiple-projects-in-parallel-with-msbuild.md)或博客文章 [Tuning C++ build parallelism](https://blogs.msdn.microsoft.com/msbuild/2010/03/07/tuning-c-build-parallelism-in-vs2010/)（调整 C++ 并行生成）。
 
-## <a name="see-also"></a>请参阅
- [演练：生成应用程序](../ide/walkthrough-building-an-application.md)[了解生成配置](../ide/understanding-build-configurations.md)[了解生成平台](../ide/understanding-build-platforms.md)[构建 （编译） 网站项目](https://msdn.microsoft.com/library/a9cbb88c-8fff-4c67-848b-98fbfd823193) [如何：创建和删除项目依赖项](../ide/how-to-create-and-remove-project-dependencies.md)
+## <a name="see-also"></a>另请参阅
+ [演练：生成应用程序](../ide/walkthrough-building-an-application.md) [了解生成配置](../ide/understanding-build-configurations.md) [了解生成平台](../ide/understanding-build-platforms.md) [构建 （编译） 网站项目](https://msdn.microsoft.com/library/a9cbb88c-8fff-4c67-848b-98fbfd823193) [如何：创建和删除项目依赖项](../ide/how-to-create-and-remove-project-dependencies.md)

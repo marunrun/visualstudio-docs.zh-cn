@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 4581d7ea0b40e2b6b519f0beafaee8744e0b46c1
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85284914"
 ---
 # <a name="how-to-search-for-topics"></a>如何：搜索主题
@@ -30,7 +30,7 @@ ms.locfileid: "85284914"
     > [!NOTE]
     > 在“Viewer 选项”**** 对话框中，可以指定附加首选项，比如一次显示的搜索结果最大数量，以及主要区域设置不是英语时是否包含英语内容。
 
-3. 选择**Enter**键。
+3. 选择 **Enter** 键。
 
      默认情况下，一次搜索最多返回 200 个命中结果，并显示在搜索结果区域中。 每个结果的附加版本信息可能会根据内容显示。
 
@@ -40,7 +40,7 @@ ms.locfileid: "85284914"
 
 了解语法对查询的影响后，可以让搜索目的性更强，仅返回你感兴趣的主题。 语法包括特殊字符、保留字和筛选器。 本主题提供提示、过程和详细的语法信息，帮助你更好地利用查询。
 
-### <a name="general-guidelines"></a>一般指南
+### <a name="general-guidelines"></a>一般性指导
 
 下表包括在帮助中进行搜索查询的一些基本规则和指南。
 
@@ -56,7 +56,7 @@ ms.locfileid: "85284914"
 
 > [!IMPORTANT]
 > - 不支持短语搜索。 如果在搜索字符串中指定多个单词，返回的主题将包含所有指定的单词，但不一定是确切指定的短语。
-> - 使用逻辑运算符指定搜索短语中各单词之间的关系。 可以使用逻辑运算符（如 AND、OR NOT 和 NEAR）进一步优化搜索。 例如，如果搜索“declaring NEAR union”，搜索结果将包括包含“declaring”和“union”单词的主题，除这两个词之外，仅有几个单词。 有关详细信息，请参阅[搜索表达式中的逻辑运算符](../help-viewer/logical-operators-search-expressions.md)。
+> - 使用逻辑运算符指定搜索短语中各单词之间的关系。 可以使用逻辑运算符（如 AND、OR NOT 和 NEAR）进一步优化搜索。 例如，如果搜索“declaring NEAR union”，搜索结果将包括包含“declaring”和“union”单词的主题，除这两个词之外，仅有几个单词。 有关详细信息，请参阅 [搜索表达式中的逻辑运算符](../help-viewer/logical-operators-search-expressions.md)。
 
 ### <a name="filters"></a>筛选器
 
@@ -72,7 +72,7 @@ ms.locfileid: "85284914"
 
 3. 包含较多搜索词的内容排名高于包含较少搜索词的内容。
 
-### <a name=""></a><a name="stopwords">搜索中忽略的单词（非索引字）</a>
+### <a name=""></a><a name="stopwords"> 搜索中忽略的单词 (停止词) </a>
 
 全文索引搜索期间，会自动忽略经常出现的单词或数字（有时也称停用字）。 例如，如果搜索短语“pass through”，搜索结果将显示包含“pass”而非“through”的主题。
 

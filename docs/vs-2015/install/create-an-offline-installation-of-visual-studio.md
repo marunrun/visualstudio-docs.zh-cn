@@ -14,10 +14,10 @@ author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.openlocfilehash: a6a9707d517a8a43d9a9ca156a5f7291ecee9bee
-ms.sourcegitcommit: 7b60e81414a82c6d34f6de1a1f56115c9cd26943
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "81445059"
 ---
 # <a name="create-an-offline-installation-of-visual-studio"></a>创建 Visual Studio 的脱机安装
@@ -36,17 +36,17 @@ ms.locfileid: "81445059"
 
 1. 选择要从 [My.VisualStudio.com](https://my.visualstudio.com/downloads?q=visual%20studio%20Enterprise%202015) 下载页安装的 Visual Studio 版本。
 
-2. 将安装程序下载到文件系统上的某个位置后，运行“\<executable name> /layout”。
+2. 将安装程序下载到文件系统中的某个位置后，请运行 " \<executable name> /layout"。
 
      例如，运行：`vs_enterprise.exe /layout D:\VisualStudio2015`
 
      通过使用 `/layout` 开关，你可以下载几乎所有安装包，而不仅仅是下载适用于下载计算机的安装包。 此方法可为你提供在任何地方运行此安装程序所需的文件，如果想安装原来没有安装的组件，这种方法可能会很有用。
 
-3. 运行此命令后，将出现一个对话框，可用于更改脱机安装布局所驻留的文件夹。   接下来，单击 **"下载**"按钮。
+3. 运行此命令后，将出现一个对话框，可用于更改脱机安装布局所驻留的文件夹。   接下来，单击 " **下载** " 按钮。
 
-     当包下载成功时，您应该会看到一条消息，指出 **"设置成功！已成功获取所有指定的组件。**
+     当包下载成功时，应会看到一条消息，显示 " **安装成功！已成功获取所有指定组件。**
 
-4. 找到之前指定的文件夹。 （例如，找到 D：\VisualStudio2015。此文件夹包含复制到共享位置或安装媒体所需的一切。
+4. 找到之前指定的文件夹。  (例如，找到 "D:\VisualStudio2015." ) 此文件夹包含需要复制到共享位置或安装媒体的所有内容。
 
     > [!CAUTION]
     > 目前，Android SDK 不支持脱机安装体验。 如果在未连接到 Internet 的计算机上安装 Android SDK 安装程序项，则安装可能失败。 有关详细信息，请参阅本主题中的“脱机安装疑难解答”部分。
@@ -61,7 +61,7 @@ ms.locfileid: "81445059"
 
 | 组件或包 | 解决方案 |
 |-|-|
-| Dotfuscator 和 Analytics 社区版 5.19.1（Visual Studio 社区版、专业版和企业版，已在 Windows 7 SP1**** 和 Windows Server 2008 R2**** 上安装） | 如果脱机计算机正在运行 Windows 7 SP1**** 或 Windows Server 2008 R2****，则在安装 Visual Studio 2015 之前，必须执行以下步骤：<br /><br /> 1. 配置文件或 Web 服务器以下载 CTL 文件。<br /><br /> 2. 重定向断开的环境的 Microsoft 自动更新 URL。<br /><br /> 有关详细信息，请参阅 Microsoft TechNet 网站上的[配置受信任的根和不允许的证书](https://technet.microsoft.com/library/dn265983.aspx)页。 |
+| Dotfuscator 和 Analytics 社区版 5.19.1（Visual Studio 社区版、专业版和企业版，已在 Windows 7 SP1**** 和 Windows Server 2008 R2**** 上安装） | 如果脱机计算机正在运行 Windows 7 SP1**** 或 Windows Server 2008 R2****，则在安装 Visual Studio 2015 之前，必须执行以下步骤：<br /><br /> 1. 配置文件或 web 服务器以下载 CTL 文件。<br /><br /> 2. 为断开连接的环境重定向 Microsoft 自动更新 URL。<br /><br /> 有关详细信息，请参阅 Microsoft TechNet 网站上的[配置受信任的根和不允许的证书](https://technet.microsoft.com/library/dn265983.aspx)页。 |
 | Android SDK 安装程序（API 级别） | 必须连接 Internet 才能安装 Android SDK（API 级别）包。 如果处于受限网络上，则在安装 Visual Studio 时必须允许访问以下 URL：<br /><br /> -   `https://dl.google.com:443`<br />-   `https://dl-ssl.google.com:443`<br />-   `https://dl-ssl.google.com/android/repository/*`<br /> <br />有关如何使用代理设置解决可能的问题的详细信息，请参阅 [Visual Studio 2015 install failures (Android SDK Setup) behind a Proxy](https://blogs.msdn.microsoft.com/peterhauge/2016/09/22/visual-studio-2015-install-failures-android-sdk-setup-behind-a-proxy/)（使用代理时的 Visual Studio 2015 安装故障（Android SDK 安装程序））博客文章。 |
 | Visual Studio 扩展性项模板<br /><br /> 适用于 Visual Studio 的 GitHub 扩展<br /><br /> Visual Studio 的 PowerShell 工具 | 如果在安装 Visual Studio 2015 时未连接到 Internet，则可以使用特殊离线源来生成脱机安装布局。 注意：**** 此特殊源包含 Visual Studio 2015 的最新更新。 <br /><br /> 若要创建特殊离线源，请运行以下命令：/layout *Drive:* \VisualStudio2015 /overridefeeduri *URL-to-feed-xml*<br /><br /> 例如，对于英语语言的 Visual Studio 2015 Enterprise 特殊离线源，请运行：<br /><br /> `vs_enterprise_ENU.exe /layout D:\VisualStudio2015 /overridefeeduri "https://go.microsoft.com/fwlink/?LinkID=785882&clcid0x409"`<br /><br /> 有关可用于以所选语言创建特殊离线源的 URL 的完整列表，请参阅下表。 |
 

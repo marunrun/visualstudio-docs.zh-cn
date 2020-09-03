@@ -10,10 +10,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 58d447526d83fec406b6fc20a08edcec37de89ae
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85532517"
 ---
 # <a name="how-to-intercept-a-click-on-a-shape-or-decorator"></a>如何：截获对形状或修饰器的单击
@@ -119,13 +119,13 @@ public partial class MyShape // change
 ## <a name="intercepting-clicks-and-drags-on-compartmentshape-lists"></a>截获 CompartmentShape 列表上的单击和拖动
  下面的示例允许用户通过拖动隔离舱形状中的项对其进行重新排序。 运行此代码的步骤：
 
-1. 使用 "**类图**" 解决方案模板创建新的 DSL 解决方案。
+1. 使用 " **类图** " 解决方案模板创建新的 DSL 解决方案。
 
     你还可以使用自己的解决方案，其中包含隔离舱形状。 此代码假定形状表示的模型元素和隔离舱列表项中的元素之间存在嵌入关系。
 
-2. 设置隔离舱形状的 "**生成双重派生**" 属性。
+2. 设置隔离舱形状的 " **生成双重派生** " 属性。
 
-3. 将此代码添加到**Dsl**项目的文件中。
+3. 将此代码添加到 **Dsl** 项目的文件中。
 
 4. 在此代码中调整域类和形状名称，以匹配你自己的 DSL。
 

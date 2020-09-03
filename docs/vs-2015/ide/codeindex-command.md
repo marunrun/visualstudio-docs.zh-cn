@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 070106dc4db0f5200c1346bbbf8c0b653aa104e5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72619681"
 ---
 # <a name="codeindex-command"></a>CodeIndex 命令
@@ -25,7 +25,7 @@ ms.locfileid: "72619681"
 
 使用 **CodeIndex** 命令管理 Team Foundation Server 中的代码索引。 例如，你可能希望重置该索引以修复 CodeLens 信息，或关闭索引以调查服务器性能问题。
 
- **所需权限**
+ **所需的权限**
 
  若要使用 **CodeIndex** 命令，必须是“Team Foundation Administrators”  安全组的成员。 请参阅 [Team Foundation Server 权限参考](https://msdn.microsoft.com/library/39997de5-b7fb-4777-b779-07de0543abe6)。
 
@@ -40,13 +40,13 @@ TFSConfig CodeIndex /indexingStatus | /setIndexing:[ on | off | keepupOnly ] | /
 
 #### <a name="parameters"></a>参数
 
-|**参数**|**说明**|
+|**参数**|**描述**|
 |------------------|---------------------|
 |`CollectionName`|指定团队项目集合的名称。 如果名称包含空格，则用引号将该名称引起来，例如“Fabrikam 网站”。|
 |`CollectionId`|指定团队项目集合的标识号。|
 |`ServerPath`|指定代码文件的路径。|
 
-|**选项**|**说明**|
+|**选项**|**描述**|
 |----------------|---------------------|
 |**/indexingStatus**|显示代码索引服务的状态和配置。|
 |**/setIndexing:** [ on &#124; off &#124; keepupOnly ]|-   **on**：开始为所有变更集创建索引。<br />-   **off**：停止为所有变更集创建索引。<br />-   **keepupOnly**：停止为之前创建的变更集创建索引，开始仅为新的变更集创建索引。|

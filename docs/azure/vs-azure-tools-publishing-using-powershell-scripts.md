@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.date: 11/11/2016
 ms.author: ghogen
 ms.openlocfilehash: 25943a6b3edc1a55c6d27d3c2737a9893edf5032
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "84179955"
 ---
 # <a name="using-windows-powershell-scripts-to-publish-to-dev-and-test-environments"></a>使用 Windows PowerShell 脚本发布到开发和测试环境
@@ -250,7 +250,7 @@ JSON 文件是在 **Configurations** 文件夹中创建的，其中包含的配�
         #Write a function to build and package your web application
     ```
 
-    若要生成 Web 应用程序，请使用 MsBuild.exe。 有关帮助，请参阅[MSBuild 命令行参考](../msbuild/msbuild-command-line-reference.md)
+    若要生成 Web 应用程序，请使用 MsBuild.exe。 有关帮助，请参阅 [MSBuild 命令行参考](../msbuild/msbuild-command-line-reference.md)
 
     ```powershell
     Write-VerboseWithTime 'Build-WebDeployPackage: Start'
@@ -306,11 +306,11 @@ return $WebDeployPackage
     若要自动测试应用程序，请向 `Test-WebApplication` 添加代码。 请务必取消注释 **Publish-WebApplication.ps1** 中调用这些函数的行。 如果不提供实现，则可以使用 Visual Studio 手动生成项目，并运行发布脚本来发布到 Azure。
 
 ## <a name="publishing-function-summary"></a>发布函数摘要
-若要获取可在 Windows PowerShell 命令提示符处使用的函数的相关帮助，请使用 `Get-Help function-name` 命令。 帮助中包含参数帮助和示例。 相同的帮助文本也位于脚本源文件**azurewebapppublishmodule.psm1. hbase-runner.psm1**和**publish-webapplication.ps1**中。 脚本和帮助已使用 Visual Studio 语言本地化。
+若要获取可在 Windows PowerShell 命令提示符处使用的函数的相关帮助，请使用 `Get-Help function-name` 命令。 帮助中包含参数帮助和示例。 同一帮助文本还在脚本源文件 **azurewebapppublishmodule.psm1. hbase-runner.psm1** 和 **Publish-WebApplication.ps1**中。 脚本和帮助已使用 Visual Studio 语言本地化。
 
 **AzureWebAppPublishModule**
 
-| 功能名称 | 说明 |
+| 函数名称 | 说明 |
 | --- | --- |
 | Add-AzureSQLDatabase |创建新的 Azure SQL 数据库。 |
 | Add-AzureSQLDatabases |基于 Visual Studio 生成的 JSON 配置文件中的值创建 Azure SQL 数据库。 |
@@ -322,7 +322,7 @@ return $WebDeployPackage
 | Find-AzureVM |获取指定的 Azure 虚拟机。 |
 | Format-DevTestMessageWithTime |在消息的前面添加日期和时间。 此函数适用于写入到错误流和详细流的消息。 |
 | Get-AzureSQLDatabaseConnectionString |汇编一个连接字符串以连接到 Azure SQL 数据库。 |
-| Get-AzureVMStorage |返回*指定的位置或地缘组中名称模式为 "开发测试" （不区分大小写）的第一个存储帐户的名称。如果 "开发测试*" 存储帐户与该位置或地缘组不匹配，该函数将忽略该帐户。 指定一个位置或地缘组。 |
+| Get-AzureVMStorage |返回*指定的位置或地缘组中名称模式为 "开发测试" () 不区分大小写的第一个存储帐户的名称。如果 "开发测试*" 存储帐户与该位置或地缘组不匹配，该函数将忽略该帐户。 指定一个位置或地缘组。 |
 | Get-MSDeployCmd |返回一个用于运行 MsDeploy.exe 工具的命令。 |
 | New-AzureVMEnvironment |在订阅中查找或创建与 JSON 配置文件中的值匹配的虚拟机。 |
 | Publish-WebPackage |使用 MsDeploy.exe 和 Web 发布包 .Zip 文件将资源部署到网站。 此函数不生成任何输出。 如果调用 MSDeploy.exe 失败，该函数将引发异常。 若要获取更详细的输出，请使用 **-Verbose** 选项。 |
@@ -339,7 +339,7 @@ return $WebDeployPackage
 
 **Publish-WebApplication**
 
-| 功能名称 | 说明 |
+| 函数名称 | 说明 |
 | --- | --- |
 | New-AzureWebApplicationEnvironment |创建 Azure 资源，例如网站或虚拟机。 |
 | New-WebDeployPackage |未实现此函数。 可以在此函数中添加命令以生成项目。 |

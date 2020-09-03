@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 06a22161068dd7604fe7bb4153e322c0954b89d2
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85533013"
 ---
 # <a name="display-a-uml-model-on-diagrams"></a>在关系图上显示 UML 模型
@@ -36,10 +36,10 @@ ms.locfileid: "85533013"
 
 - [示例：用于对齐形状的命令](#AlignCommand)
 
-## <a name="to-display-an-element-on-a-diagram"></a><a name="Display"></a>若要在关系图上显示元素
+## <a name="to-display-an-element-on-a-diagram"></a><a name="Display"></a> 若要在关系图上显示元素
  创建用例或操作等元素时，用户可以在 UML 模型资源管理器中看到它，但它并不始终自动显示在关系图中。 在某些情况下，必须编写代码才能显示它。 下表总结了备选项。
 
-|元素的类型|例如|若要显示它，你的代码必须|
+|元素的类型|例如：|若要显示它，你的代码必须|
 |---------------------|-----------------|-------------------------------------|
 |分类器|`Class`<br /><br /> `Component`<br /><br /> `Actor`<br /><br /> `Use Case`|在指定关系图上创建关联的形状。 你可以为每个分类器创建任意数目的形状。<br /><br /> `diagram.Display<modelElementType>`<br /><br /> `(modelElement, parentShape,`<br /><br /> `xPosition , yPosition);`<br /><br /> 对于位于关系图顶级的形状，将 `parentShape` 设置为 `null`。<br /><br /> 若要显示形状内部的形状：<br /><br /> `IShape<IUseCase> usecaseShape =`<br /><br /> `useCaseDiagram.Display`<br /><br /> `(useCase,`<br /><br /> `subsystemShape,`<br /><br /> `subsystemShape.XPosition + 5,`<br /><br /> `subsystemShape.YPosition + 5);`**注意：** 如果在**ILinkedUndo**事务中执行显示，则该方法有时不返回 `IShape` 。 但形状创建无误，且可使用 `IElement.Shapes().` 进行访问|
 |分类器的子级|属性、操作、<br /><br /> 部件、端口|自动 - 无需任何代码。<br /><br /> 它显示为父级的一部分。|
@@ -47,14 +47,14 @@ ms.locfileid: "85533013"
 |行为的子级|生命线、消息、操作、对象节点|自动 - 无需任何代码。<br /><br /> 如果父级绑定到了关系图，则将显示它。|
 |关系|关联、泛化、流、依赖关系|自动 - 无需任何代码。<br /><br /> 它将在显示两端的每个关系图上显示。|
 
-## <a name="accessing-the-shapes-that-represent-an-element"></a><a name="GetShapes"></a>访问表示元素的形状
+## <a name="accessing-the-shapes-that-represent-an-element"></a><a name="GetShapes"></a> 访问表示元素的形状
  表示元素属于以下类型的形状：
 
  `IShape`
 
  `IShape<` *ElementType* `>`
 
- 其中*ElementType*是模型元素（如或）的类型 `IClass` `IUseCase` 。
+ 其中 *ElementType* 是模型元素（如或）的类型 `IClass` `IUseCase` 。
 
 |语法|说明|
 |-|-|
@@ -68,16 +68,16 @@ ms.locfileid: "85533013"
 |`IShape iShape = ...;`<br /><br /> `IShape<IClass> classShape = iShape.ToIShape<IClass>();`<br /><br /> `IClass aClass = classShape.Element;`|将泛型 `IShape` 转换为强类型 `IShape<IElement>`。|
 |`IShape<IClassifier> classifierShape;`<br /><br /> `IShape<IUseCase> usecaseShape =`<br /><br /> `classifierShape.ToIShape<IUseCase>();`|将形状从一个参数化形状类型转换到另一个类型。|
 
-## <a name="moving-and-resizing-shapes"></a><a name="Moving"></a>移动形状并调整其大小
+## <a name="moving-and-resizing-shapes"></a><a name="Moving"></a> 移动形状并调整其大小
 
 |语法|说明|
 |-|-|
 |`anIShape.Move(x, y, [width], [height])`|移动形状或调整其大小。|
 |`IDiagram.EnsureVisible( IEnumerable<IShape> shapes, bool zoomToFit = false)`|激活窗口并滚动关系图，以便所有给定形状均可见。 这些形状必须都位于关系图上。 如果 `zoomToFit` 为 true，则将在必要时扩展关系图，使所有形状可见。|
 
- 有关示例，请参阅[定义对齐方式命令](#AlignCommand)。
+ 有关示例，请参阅 [定义对齐方式命令](#AlignCommand)。
 
-## <a name="to-remove-a-shape-from-a-diagram"></a><a name="Removing"></a>从关系图中删除形状
+## <a name="to-remove-a-shape-from-a-diagram"></a><a name="Removing"></a> 从关系图中删除形状
  可以删除某些类型的元素的形状而不删除元素本身。
 
 |模型元素|若要删除形状|
@@ -86,7 +86,7 @@ ms.locfileid: "85533013"
 |行为：交互或活动|可以从项目中删除关系图。 使用 `IDiagram.FileName` 获取路径。<br /><br /> 这不会从模型中删除行为。|
 |任何其他形状|不能从关系图中显式删除其他形状。 如果从模型中删除元素，或从关系图中删除父形状，形状将自动消失。|
 
-## <a name="opening-and-creating-diagrams"></a><a name="Opening"></a>打开并创建关系图
+## <a name="opening-and-creating-diagrams"></a><a name="Opening"></a> 打开并创建关系图
 
 ### <a name="to-access-the-users-current-diagram-from-a-command-or-gesture-extension"></a>若要从命令或笔势扩展访问用户的当前关系图
  在类中声明此导入的属性：
@@ -104,7 +104,7 @@ ms.locfileid: "85533013"
 > [!NOTE]
 > `IDiagram`（及其 `IClassDiagram` 等子类型）的实例只在你正在处理的命令中有效。 不建议在控件返回至用户时仍存在的变量中保留 `IDiagram` 对象。
 
- 有关详细信息，请参阅[在建模图上定义菜单命令](../modeling/define-a-menu-command-on-a-modeling-diagram.md)。
+ 有关详细信息，请参阅 [在建模图上定义菜单命令](../modeling/define-a-menu-command-on-a-modeling-diagram.md)。
 
 ### <a name="to-obtain-a-list-of-open-diagrams"></a>若要获取打开关系图的列表
  项目中当前打开的关系图的列表：
@@ -162,10 +162,10 @@ foreach (ProjectItem item in project.ProjectItems)
 IModelStore modelStore = (project as IModelingProject).Store;
 ```
 
-## <a name="example-command-for-aligning-shapes"></a><a name="AlignCommand"></a>示例：用于对齐形状的命令
+## <a name="example-command-for-aligning-shapes"></a><a name="AlignCommand"></a> 示例：用于对齐形状的命令
  以下代码实现可准确对齐形状的菜单命令。 用户必须先将两个或更多形状在垂直或水平方向上大致对齐。 然后才能使用对齐命令使它们居中对齐。
 
- 若要使此命令可用，请将此代码添加到菜单命令项目，然后将生成的扩展部署到用户。 有关详细信息，请参阅[在建模图上定义菜单命令](../modeling/define-a-menu-command-on-a-modeling-diagram.md)。
+ 若要使此命令可用，请将此代码添加到菜单命令项目，然后将生成的扩展部署到用户。 有关详细信息，请参阅 [在建模图上定义菜单命令](../modeling/define-a-menu-command-on-a-modeling-diagram.md)。
 
 ```csharp
 using System;

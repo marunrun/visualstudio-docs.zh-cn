@@ -19,10 +19,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: d84515c2c3159b61b96f77555b23eef0df0ae961
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85543476"
 ---
 # <a name="how-to-open-office-solutions-without-running-code"></a>如何：打开 Office 解决方案但不运行代码
@@ -39,7 +39,7 @@ ms.locfileid: "85543476"
 - 在按住**Shift**键的同时打开 "**文件**" 菜单中的文档和工作簿，以防止 Word 和 Excel 在文档打开时引发初始化事件。
 
     > [!NOTE]
-    > 如果从 "**入门**任务窗格打开文档或工作簿，则按住**Shift**不会绕过代码。 而且，按住 SHIFT 不会阻止在打开文档后引发事件。
+    > 如果从 " **入门** 任务窗格打开文档或工作簿，则按住 **Shift** 不会绕过代码。 而且，按住 SHIFT 不会阻止在打开文档后引发事件。
 
      如果要在不运行代码的情况下打开文档并更改文档，则此方法非常有用。
 

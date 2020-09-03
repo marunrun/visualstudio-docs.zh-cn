@@ -11,18 +11,18 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a7236c074bda17023c989c744042db2de4046558
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85532491"
 ---
 # <a name="how-to-modify-a-standard-menu-command-in-a-domain-specific-language"></a>如何：使用域特定语言修改标准的菜单命令
 
-可修改某些在 DSL 中自动定义的标准命令的行为。 例如，可以修改**Cut** ，使其不包括敏感信息。 若要实现此目的，请重写命令集类中的方法。 这些类定义在 DslPackage 项目的 CommandSet.cs 文件中，并派生自 <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet>。
+可修改某些在 DSL 中自动定义的标准命令的行为。 例如，可以修改 **Cut** ，使其不包括敏感信息。 若要实现此目的，请重写命令集类中的方法。 这些类定义在 DslPackage 项目的 CommandSet.cs 文件中，并派生自 <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet>。
 
 > [!NOTE]
-> 如果要创建自己的菜单命令，请参阅[如何：将命令添加到快捷菜单](../modeling/how-to-add-a-command-to-the-shortcut-menu.md)。
+> 如果要创建自己的菜单命令，请参阅 [如何：将命令添加到快捷菜单](../modeling/how-to-add-a-command-to-the-shortcut-menu.md)。
 
 ## <a name="what-commands-can-you-modify"></a>可以修改哪些命令？
 
@@ -53,7 +53,7 @@ ms.locfileid: "85532491"
 
      `{ ...  internal partial class Language1CommandSet : ...`
 
-2. 在**DslPackage**中，创建一个名为 "**自定义代码**" 的文件夹。 在此文件夹中，创建一个名为的新类文件 `CommandSet.cs` 。
+2. 在 **DslPackage**中，创建一个名为 " **自定义代码**" 的文件夹。 在此文件夹中，创建一个名为的新类文件 `CommandSet.cs` 。
 
 3. 在该新文件中，编写具有与生成的分部类相同的命名空间和名称的分部声明。 例如：
 
@@ -123,7 +123,7 @@ protected override void ProcessOnMenuDeleteCommand()
 }
 ```
 
-如果你的代码将对“存储”进行更改（例如创建、删除或更新元素或链接），则必须在事务内进行这些更改。 有关详细信息，请参阅[如何创建和更新模型元素](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md)。
+如果你的代码将对“存储”进行更改（例如创建、删除或更新元素或链接），则必须在事务内进行这些更改。 有关详细信息，请参阅 [如何创建和更新模型元素](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md)。
 
 ### <a name="write-the-code-of-the-methods"></a>编写方法的代码
 
@@ -131,19 +131,19 @@ protected override void ProcessOnMenuDeleteCommand()
 
 - `this.CurrentSelection`. 用户右键单击的形状始终包含在此形状和连接符列表中。 如果用户单击关系图的空白部分，则“关系图”是该列表中的唯一成员。
 
-- `this.IsDiagramSelected()` - `true`如果用户单击了关系图的空白部分，则为。
+- `this.IsDiagramSelected()` - `true` 如果用户单击了关系图的空白部分，则为。
 
 - `this.IsCurrentDiagramEmpty()`
 
-- `this.IsSingleSelection()`-用户未选择多个形状
+- `this.IsSingleSelection()` -用户未选择多个形状
 
-- `this.SingleSelection`-用户右键单击的形状或关系图
+- `this.SingleSelection` -用户右键单击的形状或关系图
 
-- `shape.ModelElement as MyLanguageElement`-由形状表示的模型元素。
+- `shape.ModelElement as MyLanguageElement` -由形状表示的模型元素。
 
-有关如何从元素导航到元素以及如何创建对象和链接的详细信息，请参阅[在程序代码中导航和更新模型](../modeling/navigating-and-updating-a-model-in-program-code.md)。
+有关如何从元素导航到元素以及如何创建对象和链接的详细信息，请参阅 [在程序代码中导航和更新模型](../modeling/navigating-and-updating-a-model-in-program-code.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - <xref:System.ComponentModel.Design.MenuCommand>
 - [编写代码以自定义域特定语言](../modeling/writing-code-to-customise-a-domain-specific-language.md)

@@ -16,14 +16,14 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: c56527f18857ad3c4ac82060ffd5794b72ac017c
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85543255"
 ---
 # <a name="how-to-programmatically-send-email"></a>如何：以编程方式发送电子邮件
-  此示例向其电子邮件地址中具有域名**example.com**的联系人发送电子邮件。
+  此示例向其电子邮件地址中具有域名 **example.com** 的联系人发送电子邮件。
 
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]
 
@@ -35,10 +35,10 @@ ms.locfileid: "85543255"
 ## <a name="compile-the-code"></a>编译代码
  此示例需要：
 
-- 其电子邮件地址中具有域名**example.com**的联系人。
+- 其电子邮件地址中具有域名 **example.com** 的联系人。
 
 ## <a name="robust-programming"></a>可靠编程
- 请勿删除搜索域名**example.com**的筛选器代码。 如果删除筛选器，你的解决方案将向你的所有联系人发送电子邮件。
+ 请勿删除搜索域名 **example.com**的筛选器代码。 如果删除筛选器，你的解决方案将向你的所有联系人发送电子邮件。
 
 ## <a name="see-also"></a>另请参阅
 - [使用邮件项](../vsto/working-with-mail-items.md)

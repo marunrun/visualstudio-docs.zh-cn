@@ -9,30 +9,30 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: fd2e8a41ef4b9708df079e94bcac8b8c06189116
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85536105"
 ---
 # <a name="fonts-and-formatting-for-visual-studio"></a>Visual Studio 的字体和格式
-## <a name="the-environment-font"></a><a name="BKMK_TheEnvironmentFont"></a>环境字体
+## <a name="the-environment-font"></a><a name="BKMK_TheEnvironmentFont"></a> 环境字体
  Visual Studio 中的所有字体都必须向用户公开，以便进行自定义。 这主要通过 "**工具 > 选项**" 对话框中的 "**字体和颜色**" 页完成。 字体设置的三种主要类别是：
 
-- **环境字体**-IDE （集成开发环境）的主要字体，适用于所有界面元素，包括对话框、菜单、工具窗口和文档窗口。 默认情况下，环境字体与当前版本的 Windows 中显示为 9 pt Segoe UI 的系统字体相关联。 为所有接口元素使用一种字体，有助于确保整个 IDE 中的字体外观一致。
+- **环境字体** -IDE (集成开发环境的主要字体) ，用于所有界面元素，包括对话框、菜单、工具窗口和文档窗口。 默认情况下，环境字体与当前版本的 Windows 中显示为 9 pt Segoe UI 的系统字体相关联。 为所有接口元素使用一种字体，有助于确保整个 IDE 中的字体外观一致。
 
-- **文本编辑器**-可以在 "**工具" > 选项**的 "文本编辑器" 页中自定义在代码和其他基于文本的编辑器中呈现的元素。
+- **文本编辑器** -可以在 " **工具" > 选项**的 "文本编辑器" 页中自定义在代码和其他基于文本的编辑器中呈现的元素。
 
-- **特定集合**-提供其界面元素的用户自定义的设计器窗口可能会在**工具 > 选项**的 "设置" 页中公开其设计图面的特定字体。
+- **特定集合** -提供其界面元素的用户自定义的设计器窗口可能会在 **工具 > 选项**的 "设置" 页中公开其设计图面的特定字体。
 
 ### <a name="editor-font-customization-and-resizing"></a>编辑器字体自定义和调整大小
  用户经常会根据自己的偏好来扩大或缩小编辑器中文本的大小和/或颜色，而与常规用户界面无关。 由于环境字体用于可能出现在编辑器/设计器中或作为编辑器/设计器一部分的元素，因此，在更改其中一种字体分类时，请务必记下预期的行为。
 
- 当创建显示在编辑器中但不包含在*内容*中的 UI 元素时，必须使用环境字体，而不是文本字体，以便元素以可预测的方式调整大小。
+ 当创建显示在编辑器中但不包含在 *内容*中的 UI 元素时，必须使用环境字体，而不是文本字体，以便元素以可预测的方式调整大小。
 
 1. 对于编辑器中的代码文本，用代码文本字体设置调整大小并响应编辑器文本的缩放级别。
 
-2. 接口的所有其他元素应绑定到环境字体设置，并对环境中的任何全局更改做出响应。 这包括（但不限于）：
+2. 接口的所有其他元素应绑定到环境字体设置，并对环境中的任何全局更改做出响应。 这包括但不限于：
 
     - 上下文菜单中的文本
 
@@ -43,7 +43,7 @@ ms.locfileid: "85536105"
 ### <a name="accessing-the-environment-font"></a>访问环境字体
  在本机代码或 WinForms 代码中，可以通过在 `IUIHostLocale::GetDialogFont` 从服务查询接口后调用方法来访问环境字体 `SID_SUIHostLocale` 。
 
- 对于 Windows Presentation Foundation （WPF），从 shell 的 `DialogWindow` 类而不是 WPF 的类派生对话框窗口类 `Window` 。
+ 对于 Windows Presentation Foundation (WPF) ，从 shell 的 `DialogWindow` 类而不是 WPF 的类派生对话框窗口类 `Window` 。
 
  在 XAML 中，代码如下所示：
 
@@ -67,9 +67,9 @@ internal partial class WebConfigModificationWindow : DialogWindow
 }
 ```
 
- （替换 `Microsoft.VisualStudio.Shell.11.0` 为当前版本的 MPF dll。）
+  (替换 `Microsoft.VisualStudio.Shell.11.0` 为 MPF dll 的当前版本。 ) 
 
- 若要显示该对话框，请对类调用 " `ShowModal()` " `ShowDialog()` 。 `ShowModal()`在 shell 中设置正确的模式状态，确保对话框在父窗口中居中，依此类推。
+ 若要显示该对话框，请对类调用 " `ShowModal()` " `ShowDialog()` 。 `ShowModal()` 在 shell 中设置正确的模式状态，确保对话框在父窗口中居中，依此类推。
 
  代码如下所示:
 
@@ -78,20 +78,20 @@ MyWindow window = new MyWindow();
 window.ShowModal()
 ```
 
- `ShowModal`返回布尔值？ （可为 null 的布尔值） `DialogResult` ，可在需要时使用。 如果对话框已**关闭，则**返回值为 true。
+ `ShowModal` 返回布尔值？  (可以为 null 的布尔值) `DialogResult` ，可在需要时使用。 如果对话框已 **关闭，则**返回值为 true。
 
- 如果需要显示某些不是对话框并且自行承载的 WPF UI （ `HwndSource` 如弹出窗口或 Win32/WinForms 父窗口的 WPF 子窗口），则需要在 `FontFamily` `FontSize` WPF 元素的根元素上设置和。 （Shell 在主窗口上设置属性，但它们不会被继承 `HWND` ）。 Shell 提供属性可以绑定到的资源，如下所示：
+ 如果需要显示某些不是对话框并且自行承载的 WPF UI （ `HwndSource` 如弹出窗口或 Win32/WinForms 父窗口的 WPF 子窗口），则需要在 `FontFamily` `FontSize` WPF 元素的根元素上设置和。  (shell 在主窗口上设置属性，但不会在) 之前继承它们 `HWND` 。 Shell 提供属性可以绑定到的资源，如下所示：
 
 ```xaml
 <Setter Property="FontFamily" Value="{DynamicResource VsFont.EnvironmentFontFamily}" />
 <Setter Property="FontSize" Value="{DynamicResource VsFont.EnvironmentFontSize}" />
 ```
 
-### <a name="formatting-scalingbolding-reference"></a><a name="BKMK_Formatting"></a>格式设置（缩放/粗体）参考
- 某些对话框要求使用特定文本作为粗体或除环境字体之外的其他大小。 以前，大于环境字体的字体编码为 " `environment font +2` " 或类似。 使用提供的代码段将支持高 DPI 监视器，并确保显示文本始终以正确的大小和权重显示（如浅或 Semilight）。
+### <a name="formatting-scalingbolding-reference"></a><a name="BKMK_Formatting"></a> 格式 (缩放/粗体) 引用
+ 某些对话框要求使用特定文本作为粗体或除环境字体之外的其他大小。 以前，大于环境字体的字体编码为 " `environment font +2` " 或类似。 使用提供的代码片段将支持高 DPI 监视器，并确保显示文本始终以正确的大小和权重显示， (如光源或 Semilight) 。
 
 > [!NOTE]
-> 在应用格式设置之前，请确保遵循[文本样式](../../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md#BKMK_TextStyle)中的指南。 * *
+> 在应用格式设置之前，请确保遵循 [文本样式](../../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md#BKMK_TextStyle)中的指南。 * *
 
  若要缩放环境字体，请设置 TextBlock 或标签的样式，如所示。 正确使用的每个代码片段都将生成正确的字体，包括适当的大小和权重变体。
 
@@ -107,13 +107,13 @@ xmlns:vsui="clr-namespace:Microsoft.VisualStudio.Shell;assembly=Microsoft.Visual
 
 ::: moniker range="vs-2017"
 
-用于 **：** （罕见）唯一品牌 UI，如起始页
+**使用：** (罕见) 唯一的品牌化 UI，如起始页中所示
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-用于 **：** （罕见）唯一品牌 UI
+**使用：** (罕见) 唯一品牌的 UI
 
 ::: moniker-end
 
@@ -134,7 +134,7 @@ label.SetResourceReference(Label.StyleProperty,  
 ```
 
 #### <a name="310-environment-font--light"></a>310% 环境字体 + 浅色
- **显示为：** 28 Pt Segoe UI 浅色**用途：** 大型签名对话框标题，报表中的主标题
+ **显示为：** 28 Pt Segoe UI 浅色 **用途：** 大型签名对话框标题，报表中的主标题
 
  **过程代码：** 其中 `textBlock` ，是以前定义的 TextBlock， `label` 是以前定义的标签：
 
@@ -153,7 +153,7 @@ label.SetResourceReference(Label.StyleProperty,  
 ```
 
 #### <a name="200-environment-font--semilight"></a>200% 环境字体 + Semilight
- **显示为：** 18 Pt Segoe UI Semilight**使用：** 子标题，小型和中型对话框中的标题
+ **显示为：** 18 Pt Segoe UI Semilight **使用：** 子标题，小型和中型对话框中的标题
 
  **过程代码：** 其中 `textBlock` ，是以前定义的 TextBlock， `label` 是以前定义的标签：
 
@@ -172,7 +172,7 @@ label.SetResourceReference(Label.StyleProperty,  
 ```
 
 #### <a name="155-environment-font"></a>155% 环境字体
- **显示为：** 14 Pt Segoe UI**使用：** 文档好的 UI 或报表中的节标题
+ **显示为：** 14 Pt Segoe UI **使用：** 文档好的 UI 或报表中的节标题
 
  **过程代码：** 其中 `textBlock` ，是以前定义的 TextBlock， `label` 是以前定义的标签：
 
@@ -191,7 +191,7 @@ label.SetResourceReference(Label.StyleProperty,  
 ```
 
 #### <a name="133-environment-font"></a>133% 环境字体
- **显示为：** 12 Pt Segoe UI**使用：** 签名对话框中较小的子标题和文档好 UI
+ **显示为：** 12 Pt Segoe UI **使用：** 签名对话框中较小的子标题和文档好 UI
 
  **过程代码：** 其中 `textBlock` ，是以前定义的 TextBlock， `label` 是以前定义的标签：
 
@@ -210,7 +210,7 @@ label.SetResourceReference(Label.StyleProperty,  
 ```
 
 #### <a name="122-environment-font"></a>122% 环境字体
- **显示为：** 11 Pt Segoe UI**使用：** 签名对话框中的节标题，树视图中的顶级节点，垂直选项卡导航
+ **显示为：** 11 Pt Segoe UI **使用：** 签名对话框中的节标题，树视图中的顶级节点，垂直选项卡导航
 
  **过程代码：** 其中 `textBlock` ，是以前定义的 TextBlock， `label` 是以前定义的标签：
 
@@ -229,7 +229,7 @@ label.SetResourceReference(Label.StyleProperty,  
 ```
 
 #### <a name="environment-font--bold"></a>环境字体 + 粗体
- **显示为：** 加粗 9 Pt Segoe UI 用于签名对话框、报表和文档用户界面中**的**标签和副标题
+ **显示为：** 加粗 9 Pt Segoe UI 用于签名对话框、报表和文档用户界面中 **的** 标签和副标题
 
  **过程代码：** 其中 `textBlock` ，是以前定义的 TextBlock， `label` 是以前定义的标签：
 
@@ -289,11 +289,11 @@ protected static void SetFontStyles(Control topControl, Control parent, Font ref
  使用此代码可保证在更新窗体的字体时，控件的字体也会更新。 还应从窗体的构造函数中调用此方法，因为对话框可能无法获取的实例 `IUIService` ，并且该 `FontChanged` 事件永远不会激发。 挂钩 `FontChanged` 会允许对话框动态选取新字体，即使该对话框已打开。
 
 ### <a name="testing-the-environment-font"></a>测试环境字体
- 若要确保 UI 使用环境字体并遵守大小设置，请打开 "工具" **> 选项 > 环境 > 字体和颜色**，然后在 "显示其设置：" 下拉菜单下选择 "环境字体"。
+ 若要确保 UI 使用环境字体并遵守大小设置，请打开 "工具" **> 选项 > 环境 > 字体和颜色** ，然后在 "显示其设置：" 下拉菜单下选择 "环境字体"。
 
  !["工具选项" 对话框中的字体和颜色设置 &gt;](../../extensibility/ux-guidelines/media/0201-a_optionsfonts.png "0201-a_OptionsFonts")<br />"工具选项" 对话框中的字体和颜色设置 &gt;
 
- 将字体设置为与默认值不同的内容。 若要使其很明显不会更新的 UI，请选择带衬线的字体（如 "New Roman"）并设置一个非常大的大小。 然后测试 UI，以确保其符合环境。 下面是使用 "许可证" 对话框的示例：
+ 将字体设置为与默认值不同的内容。 若要使其很明显不会更新的 UI，请选择带衬线的字体 (如 "New Roman" ) 并设置一个非常大的大小。 然后测试 UI，以确保其符合环境。 下面是使用 "许可证" 对话框的示例：
 
  ![不遵守环境字体的 UI 文本的示例](../../extensibility/ux-guidelines/media/0201-b_wrongfontdialog.png "0201-b_WrongFontDialog")<br />不遵守环境字体的 UI 文本的示例
 
@@ -301,8 +301,8 @@ protected static void SetFontStyles(Control topControl, Control parent, Font ref
 
  若要重置字体，请在 "工具" **> 选项 "> 环境 > 字体和颜色**" 下，单击 "使用默认值"。
 
-## <a name="text-style"></a><a name="BKMK_TextStyle"></a>文本样式
- 文本样式指的是字体大小、粗细和大小写。 有关实现指南，请参阅[环境字体](../../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md#BKMK_TheEnvironmentFont)。
+## <a name="text-style"></a><a name="BKMK_TextStyle"></a> 文本样式
+ 文本样式指的是字体大小、粗细和大小写。 有关实现指南，请参阅 [环境字体](../../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md#BKMK_TheEnvironmentFont)。
 
 ### <a name="text-casing"></a>文本大小写
 
@@ -365,11 +365,11 @@ protected static void SetFontStyles(Control topControl, Control parent, Font ref
 2. **所有其他 UI 元素**，包括标签、复选框、单选按钮和列表框项。 示例： "选择列表中的所有项目"
 
 ### <a name="text-formatting"></a>文本格式
- Visual Studio 2013 中的默认文本格式设置由[环境字体](../../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md#BKMK_TheEnvironmentFont)控制。 此服务可帮助确保整个 IDE （集成开发环境）中的字体外观一致，并且你必须使用它来保证用户的一致体验。
+ Visual Studio 2013 中的默认文本格式设置由 [环境字体](../../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md#BKMK_TheEnvironmentFont)控制。 此服务帮助确保整个 IDE 中的字体外观 (集成开发环境) ，你必须使用它来保证用户的一致体验。
 
  Visual Studio 字体服务使用的默认大小来自 Windows，并显示为 9 pt。
 
- 可以将格式设置应用于环境字体。 本主题介绍使用样式的方式和位置。 有关实现的信息，请参阅[环境字体](../../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md#BKMK_TheEnvironmentFont)。
+ 可以将格式设置应用于环境字体。 本主题介绍使用样式的方式和位置。 有关实现的信息，请参阅 [环境字体](../../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md#BKMK_TheEnvironmentFont)。
 
 #### <a name="bold-text"></a>粗体文本
  在 Visual Studio 中，粗体文本会慎用，应保留为：
@@ -389,11 +389,11 @@ protected static void SetFontStyles(Control topControl, Control parent, Font ref
 #### <a name="italics"></a>斜体
  Visual Studio 不使用斜体或粗体斜体文本。
 
-#### <a name="color"></a>颜色
+#### <a name="color"></a>Color
 
-- 为超链接（导航和命令）保留蓝色，不应用于方向。
+- 将为 (导航和命令) 的超链接保留蓝色，不应将其用于方向。
 
-- 更大的标题（环境字体 x 155% 或更高）可用于以下目的：
+- 更大的标题 (环境字体 x 155% 或更高的) 可用于以下目的：
 
   - 向 visual Studio UI 签名提供视觉吸引力
 
@@ -403,14 +403,14 @@ protected static void SetFontStyles(Control topControl, Control parent, Font ref
 
 - 标题中的颜色应利用现有的 Visual Studio 品牌颜色，主要为紫色 #FF68217A。
 
-- 在标题中使用颜色时，必须遵守[Windows 颜色准则](/windows/desktop/uxguide/vis-color)，包括对比度和其他辅助功能注意事项。
+- 在标题中使用颜色时，必须遵守 [Windows 颜色准则](/windows/desktop/uxguide/vis-color)，包括对比度和其他辅助功能注意事项。
 
 ### <a name="font-size"></a>字体大小
  Visual Studio UI 设计功能具有更好的空白外观，具有更多空白。 如果可能，则会减少或删除 chrome 和 title 栏。 尽管 Visual Studio 中的信息密度是必需的，但版式仍非常重要，重点强调更开放的行距和字体大小和粗细的变体。
 
  下表包含 Visual Studio 中使用的显示字体的设计详细信息和视觉对象示例。 某些显示字体变体具有大小和权重，如 "Semilight" 或 "浅色"，编码为其外观。
 
- 所有显示字体的实现代码片段可以在 "[格式设置（缩放/粗体）参考](../../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md#BKMK_Formatting)" 中找到。
+ 所有显示字体的实现代码片段可在 [格式设置中找到 (缩放/粗体) 引用](../../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md#BKMK_Formatting)。
 
 #### <a name="375-environment-font--light"></a>375% 环境字体 + 浅色
 
@@ -483,5 +483,5 @@ protected static void SetFontStyles(Control topControl, Control parent, Font ref
 
 ## <a name="see-also"></a>另请参阅
 
-- [字体（Windows）](/windows/desktop/uxguide/vis-fonts)
-- [用户界面文本（Windows）](/windows/desktop/uxguide/text-ui)
+- [字体 (Windows) ](/windows/desktop/uxguide/vis-fonts)
+- [Windows) 的用户界面文本 (](/windows/desktop/uxguide/text-ui)

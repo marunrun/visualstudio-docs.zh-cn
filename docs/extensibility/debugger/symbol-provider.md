@@ -1,5 +1,5 @@
 ---
-title: 符号提供程序 |微软文档
+title: 符号提供程序 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,21 +12,21 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 31b90846d9494ee046cf9dc4a3e5de9ff033ea3f
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80712812"
 ---
 # <a name="symbol-provider"></a>符号提供程序
-表达式赋值器实现必须访问语言编译器生成的符号调试信息，以便计算变量和表达式。 它通过使用符号提供程序 （SP） 的接口（也称为符号处理程序）来这样做。
+表达式计算器实现必须访问语言编译器生成的符号调试信息，才能计算变量和表达式。 它通过使用符号提供程序 (SP) （也称为符号处理程序）的接口来实现此目的。
 
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]使用程序数据库 （PDB） 符号文件格式为托管代码和本机代码提供 SP。 除非程序非常需要使用以自定义格式存储的符号，否则建议您使用 提供的[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]SP。
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 使用程序数据库为托管代码和本机代码提供 Sp (PDB) 符号文件格式。 除非你的程序很难使用以自定义格式存储的符号，否则建议你使用提供的 Sp [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 。
 
 ## <a name="implementation-notes"></a>实现说明
- 调试[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]引擎需要使用通用语言运行时 （CLR） 接口与 SP 进行对话。 因此，将配合 Visual Studio 调试引擎工作的 SP 必须支持 CLR。 所有 CLR 调试接口的完整列表可以在 debugref.doc 中找到，这是 的一[!INCLUDE[winsdklong](../../deployment/includes/winsdklong_md.md)]部分。
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]调试引擎需要使用公共语言运行时 (CLR) 接口与 SPs 进行通信。 因此，将使用 Visual Studio 调试引擎的 SP 必须支持 CLR。 可以在 debugref.doc 中找到所有 CLR 调试接口的完整列表，该列表是的一部分 [!INCLUDE[winsdklong](../../deployment/includes/winsdklong_md.md)] 。
 
- 如果您的 SP 将仅与自定义调试引擎一起使用，则可以根据调试引擎的需要，实现您认为合适的 SP。
+ 如果您的 SP 只使用您的自定义调试引擎，则可以根据调试引擎的需求，根据您的需要实现 SP。
 
 ## <a name="see-also"></a>请参阅
 - [调试器组件](../../extensibility/debugger/debugger-components.md)

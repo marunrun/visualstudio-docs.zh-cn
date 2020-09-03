@@ -11,32 +11,32 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: cb338803d50b2ecc9af8c8db6a6b6dc2f3631161
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85906175"
 ---
 # <a name="walkthrough-outlining"></a>演练：大纲显示
-通过定义要展开或折叠的文本区域的类型，设置基于语言的功能，如大纲显示。 可在语言服务的上下文中定义区域，或定义自己的文件扩展名和内容类型，并将区域定义仅应用于该类型，或者将区域定义应用于现有内容类型（如 "text"）。 此演练演示如何定义和显示大纲显示区域。
+通过定义要展开或折叠的文本区域的类型，设置基于语言的功能，如大纲显示。 可在语言服务的上下文中定义区域，或定义自己的文件扩展名和内容类型，并将区域定义仅应用于该类型，或者将区域定义应用于现有内容类型 (如 "text" ) 。 此演练演示如何定义和显示大纲显示区域。
 
-## <a name="prerequisites"></a>必备条件
- 从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅[安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
+## <a name="prerequisites"></a>先决条件
+ 从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
 
-## <a name="create-a-managed-extensibility-framework-mef-project"></a>创建 Managed Extensibility Framework （MEF）项目
+## <a name="create-a-managed-extensibility-framework-mef-project"></a>创建 Managed Extensibility Framework (MEF) 项目
 
 ### <a name="to-create-a-mef-project"></a>创建 MEF 项目
 
 1. 创建 VSIX 项目。 将解决方案命名为 `OutlineRegionTest`。
 
-2. 将编辑器分类器项模板添加到项目。 有关详细信息，请参阅[使用编辑器项模板创建扩展](../extensibility/creating-an-extension-with-an-editor-item-template.md)。
+2. 将编辑器分类器项模板添加到项目。 有关详细信息，请参阅 [使用编辑器项模板创建扩展](../extensibility/creating-an-extension-with-an-editor-item-template.md)。
 
 3. 删除现有的类文件。
 
 ## <a name="implement-an-outlining-tagger"></a>实现大纲显示标记
- 大纲显示区域由一类标记（）标记 <xref:Microsoft.VisualStudio.Text.Tagging.OutliningRegionTag> 。 此标记提供标准大纲显示行为。 可展开或折叠分级显示的区域。 如果轮廓区域是折叠的，则通过加号（）对其进行标记 **+** ，如果展开，则使用减号（）对其进行标记 **-** ，并且展开的区域将 demarcated 竖线。
+ 大纲显示区域由一类标记 () 来标记 <xref:Microsoft.VisualStudio.Text.Tagging.OutliningRegionTag> 。 此标记提供标准大纲显示行为。 可展开或折叠分级显示的区域。 **+** 如果已折叠或减号 (**-**) （如果它已展开），并且展开的区域 demarcated 由竖线标记，则会将其标记为带外符号 () 。
 
- 以下步骤演示如何定义一个标记，该标记可为用方括号（**[**，**]**）分隔的所有区域创建大纲区域。
+ 以下步骤演示如何定义一个标记，该标记可为由方括号 (**[**，**]**) 分隔的所有区域创建大纲区域。
 
 ### <a name="to-implement-an-outlining-tagger"></a>实现大纲显示标记
 
@@ -52,7 +52,7 @@ ms.locfileid: "85906175"
      [!code-csharp[VSSDKOutlineRegionTest#2](../extensibility/codesnippet/CSharp/walkthrough-outlining_2.cs)]
      [!code-vb[VSSDKOutlineRegionTest#2](../extensibility/codesnippet/VisualBasic/walkthrough-outlining_2.vb)]
 
-4. 添加一些字段以跟踪文本缓冲区和快照，并累积应该标记为大纲显示区域的行集。 此代码包括表示大纲区域的区域对象（稍后要定义）的列表。
+4. 添加一些字段以跟踪文本缓冲区和快照，并累积应该标记为大纲显示区域的行集。 此代码包括一个区域对象列表， (稍后将其定义) 表示大纲区域。
 
      [!code-csharp[VSSDKOutlineRegionTest#3](../extensibility/codesnippet/CSharp/walkthrough-outlining_3.cs)]
      [!code-vb[VSSDKOutlineRegionTest#3](../extensibility/codesnippet/VisualBasic/walkthrough-outlining_3.vb)]
@@ -87,12 +87,12 @@ ms.locfileid: "85906175"
      [!code-csharp[VSSDKOutlineRegionTest#9](../extensibility/codesnippet/CSharp/walkthrough-outlining_9.cs)]
      [!code-vb[VSSDKOutlineRegionTest#9](../extensibility/codesnippet/VisualBasic/walkthrough-outlining_9.vb)]
 
-11. 以下 helper 方法将区域（在本文后面部分定义）转换为 SnapshotSpan。
+11. 以下 helper 方法转换 (本文稍后部分中定义的区域) 到 SnapshotSpan。
 
      [!code-csharp[VSSDKOutlineRegionTest#10](../extensibility/codesnippet/CSharp/walkthrough-outlining_10.cs)]
      [!code-vb[VSSDKOutlineRegionTest#10](../extensibility/codesnippet/VisualBasic/walkthrough-outlining_10.vb)]
 
-12. 下面的代码仅用于说明。 它定义了一个 PartialRegion 类，该类包含大纲区域开头的行号和偏移量以及对父区域（如果有）的引用。 此代码使分析器可以设置嵌套的大纲区域。 派生区域类包含对大纲区域末尾行号的引用。
+12. 下面的代码仅用于说明。 它定义了一个 PartialRegion 类，该类包含大纲区域开头的行号和偏移量以及对父区域的引用 (如果有任何) 。 此代码使分析器可以设置嵌套的大纲区域。 派生区域类包含对大纲区域末尾行号的引用。
 
      [!code-csharp[VSSDKOutlineRegionTest#11](../extensibility/codesnippet/CSharp/walkthrough-outlining_11.cs)]
      [!code-vb[VSSDKOutlineRegionTest#11](../extensibility/codesnippet/VisualBasic/walkthrough-outlining_11.vb)]
@@ -129,7 +129,7 @@ ms.locfileid: "85906175"
     ]
     ```
 
-4. 应有一个包含两个方括号的大纲区域。 您应该能够单击左方括号左侧的减号来折叠大纲显示区域。 当区域处于折叠状态时，省略号符号（*...*）应出现在折叠区域的左侧，而当您将指针移到省略号上时，将显示包含文本**悬停文本**的弹出窗口。
+4. 应有一个包含两个方括号的大纲区域。 您应该能够单击左方括号左侧的减号来折叠大纲显示区域。 当区域处于折叠状态时，省略号符号 (*...*) 应该出现在折叠区域的左侧，并且将指针移到省略号上时，将出现一个包含文本 **悬停文本** 的弹出窗口。
 
 ## <a name="see-also"></a>另请参阅
 - [演练：将内容类型链接到文件扩展名](../extensibility/walkthrough-linking-a-content-type-to-a-file-name-extension.md)

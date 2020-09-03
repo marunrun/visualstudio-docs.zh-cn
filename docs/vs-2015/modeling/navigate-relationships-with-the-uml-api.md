@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 8d54964cc74422d34ae6c6df489d02768e6d4bbd
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75918250"
 ---
 # <a name="navigate-relationships-with-the-uml-api"></a>使用 UML API 导航关系
@@ -92,7 +92,7 @@ IEnumerable<IBehavioredClassifier> GetRealizingClassifiers
 
 ```
 
-### <a name="dependency"></a>依赖关系
+### <a name="dependency"></a>依赖项
 
 ```
 /// Returns the elements depending on this element
@@ -152,7 +152,7 @@ IEnumerable<IUseCase>GetIncludingCases(this IUseCase usecase);
 ```
 
 ## <a name="enumerating-relationships"></a>枚举关系
- 返回多个值的 UML 模型的所有属性都符合 IEnumerable < > 接口。 这意味着你可以使用[Linq 查询表达式](/dotnet/csharp/linq/index)和在**system.web**命名空间中定义的扩展方法。
+ 返回多个值的 UML 模型的所有属性都符合 IEnumerable<> 接口。 这意味着你可以使用 [Linq 查询表达式](/dotnet/csharp/linq/index) 和在 **system.web** 命名空间中定义的扩展方法。
 
  例如：
 
@@ -163,5 +163,5 @@ select shape.Element
 
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [扩展 uml 模型和关系图](../modeling/extend-uml-models-and-diagrams.md)[导航 uml 模型](../modeling/navigate-the-uml-model.md)

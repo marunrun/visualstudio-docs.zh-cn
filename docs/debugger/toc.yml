@@ -12,7 +12,7 @@
   items:
     - name: 初探调试器
       href: debugger-feature-tour.md
-    - name: '调试 C# 或 Visual Basic 应用'
+    - name: 调试 C# 或 Visual Basic 应用
       href: quickstart-debug-with-managed.md
     - name: 调试 C++ 应用
       href: quickstart-debug-with-cplusplus.md
@@ -20,7 +20,7 @@
       href: quickstart-debug-aspnet.md
 - name: 教程
   items:
-    - name: '了解如何调试 C#'
+    - name: 了解如何调试 C#
       href: /visualstudio/get-started/csharp/tutorial-debugger?toc=/visualstudio/debugger/toc.json
     - name: 了解如何调试 C++
       href: getting-started-with-the-debugger-cpp.md
@@ -30,7 +30,7 @@
       href: ../python/tutorial-working-with-python-in-visual-studio-step-04-debugging.md
     - name: 调试实时 Azure 应用
       href: debug-live-azure-applications.md
-    - name: '调试 C# 和 C++ 代码'
+    - name: 调试 C# 和 C++ 代码
       href: how-to-debug-managed-and-native-code.md
     - name: 检查上一应用状态
       href: view-historical-application-state.md
@@ -46,7 +46,7 @@
           href: using-breakpoints.md
         - name: 断点故障排除
           href: troubleshooting-breakpoints.md
-        - name: 'C# 数据断点疑难解答'
+        - name: C# 数据断点疑难解答
           href: troubleshoot-data-breakpoint-errors.md
     - name: 数据检查
       items:
@@ -68,7 +68,7 @@
                   href: format-specifiers-in-cpp.md
                 - name: 上下文运算符 (C++)
                   href: context-operator-cpp.md
-                - name: 'C# 中的格式说明符'
+                - name: C# 中的格式说明符
                   href: format-specifiers-in-csharp.md
                 - name: 伪变量
                   href: pseudovariables.md
@@ -118,11 +118,11 @@
               href: edit-and-continue-visual-cpp.md
             - name: 受支持的代码更改 (C++)
               href: supported-code-changes-cpp.md
-        - name: '编辑并继续 (Visual C#)'
+        - name: 编辑并继续 (Visual C#)
           items:
-            - name: '编辑并继续 (C#)'
+            - name: 编辑并继续 (C#)
               href: edit-and-continue-visual-csharp.md
-            - name: '使用“编辑并继续”(C#)'
+            - name: 使用“编辑并继续”(C#)
               href: how-to-use-edit-and-continue-csharp.md
             - name: 受支持的代码更改
               href: supported-code-changes-csharp.md
@@ -138,7 +138,7 @@
               href: ../xaml-tools/xaml-hot-reload.md?toc=/visualstudio/debugger/toc.json
             - name: 排查 XAML 热重载问题
               href: ../xaml-tools/xaml-hot-reload-troubleshooting.md?toc=/visualstudio/debugger/toc.json
-        - name: 'F# 不支持“编辑并继续”'
+        - name: F# 不支持“编辑并继续”
           href: edit-and-continue-not-supported-for-f-hash.md
     - name: 记录到“输出”窗口
       href: using-tracepoints.md
@@ -210,7 +210,7 @@
                       href: enabling-debug-features-in-visual-cpp-d-debug.md
                 - name: Web 项目的属性页设置
                   href: property-pages-settings-for-web-projects.md
-                - name: 'C# 调试配置的项目设置'
+                - name: C# 调试配置的项目设置
                   href: project-settings-for-csharp-debug-configurations.md
                 - name: Visual Basic 调试配置的项目设置
                   href: project-settings-for-a-visual-basic-debug-configuration.md
@@ -254,7 +254,7 @@
                   href: create-custom-visualizers-of-data.md
                 - name: 可视化工具体系结构
                   href: visualizer-architecture.md
-                - name: '演练：用 C# 编写可视化工具'
+                - name: 演练：用 C# 编写可视化工具
                   href: walkthrough-writing-a-visualizer-in-csharp.md
                 - name: 演练：用 Visual Basic 编写可视化工具
                   href: walkthrough-writing-a-visualizer-in-visual-basic.md
@@ -282,7 +282,7 @@
           href: remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md
         - name: 远程调试 Azure 上的 ASP.NET Core
           href: remote-debugging-azure.md
-        - name: '远程调试 C# 或 Visual Basic 项目'
+        - name: 远程调试 C# 或 Visual Basic 项目
           href: remote-debugging-csharp.md
         - name: 远程调试 C++ 项目
           href: remote-debugging-cpp.md
@@ -466,13 +466,13 @@
               href: how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio.md
             - name: 预提取 Microsoft Store 应用的内容
               href: prefetch-content-for-windows-store-apps.md
-        - name: '托管代码（C#、Visual Basic、F#）'
+        - name: 托管代码（C#、Visual Basic、F#）
           items:
             - name: 调试托管代码
               href: debugging-managed-code.md
             - name: 调试准备
               items:
-                - name: '调试准备：C#、F# 和 Visual Basic 项目类型'
+                - name: 调试准备：C#、F# 和 Visual Basic 项目类型
                   href: debugging-preparation-csharp-f-hash-and-visual-basic-project-types.md
                 - name: 托管调试：建议的属性设置
                   href: managed-debugging-recommended-property-settings.md
@@ -512,7 +512,7 @@
                   href: how-to-use-the-wpf-tree-visualizer.md
                 - name: 显示 WPF 跟踪信息
                   href: how-to-display-wpf-trace-information.md
-            - name: '调试 F#'
+            - name: 调试 F#
               href: debugging-f-hash.md
         - name: C/C++ 代码
           items:

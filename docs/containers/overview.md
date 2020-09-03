@@ -7,10 +7,10 @@ ms.topic: overview
 ms.date: 03/20/2019
 ms.technology: vs-azure
 ms.openlocfilehash: 0d5859016a02de259c24c213c6cfef8cb5fce005
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75916569"
 ---
 # <a name="container-tools-in-visual-studio"></a>Visual Studio 中的容器工具
@@ -22,7 +22,7 @@ Visual Studio 中用于使用容器进行开发的工具易于使用，并大大
 ## <a name="prerequisites"></a>先决条件
 
 * [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
-* 安装了“Web 开发”、“Azure 工具”工作负载和/或“.NET Core 跨平台开发”工作负载的 [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download)   
+* 安装了“Web 开发”、“Azure 工具”工作负载和/或“.NET Core 跨平台开发”工作负载的 [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download)  
 * 若要发布到 Azure 容器注册表，需要 Azure 订阅。 [注册免费试用版](https://azure.microsoft.com/offers/ms-azr-0044p/)。
 
 ## <a name="docker-support-in-visual-studio"></a>Visual Studio 中的 Docker 支持
@@ -56,15 +56,15 @@ Visual Studio 中的 Docker 支持因版本而异，以响应客户需求。 可
 借助 Visual Studio 2019，可以将 Docker Compose、Kubernetes 和 Service Fabric 用作容器业务流程服务。
 
 > [!NOTE]
-> 如果你使用完整的 .NET Framework 控制台项目模板，则在创建项目后，支持的选项是“添加容器业务流程协调程序支持”，它包括使用 Service Fabric 或 Docker Compose 的选项  。 对于没有业务流程的单个项目，无法在项目创建时添加支持，也无法添加 Docker 支持  。
+> 如果你使用完整的 .NET Framework 控制台项目模板，则在创建项目后，支持的选项是“添加容器业务流程协调程序支持”，它包括使用 Service Fabric 或 Docker Compose 的选项****。 对于没有业务流程的单个项目，无法在项目创建时添加支持，也无法添加 Docker 支持****。
 
-在 Visual Studio 2019 版本 16.4 及更高版本中，提供了“容器”窗口，你可用它来查看正在运行的容器，浏览可用的映像，查看环境变量、日志和端口映射，检查文件系统，附加调试器，或者在容器环境中打开终端窗口  。 请[ Visual Studio 中查看和诊断容器和映像](view-and-diagnose-containers.md)。
+在 Visual Studio 2019 版本 16.4 及更高版本中，提供了“容器”窗口，你可用它来查看正在运行的容器，浏览可用的映像，查看环境变量、日志和端口映射，检查文件系统，附加调试器，或者在容器环境中打开终端窗口****。 请[ Visual Studio 中查看和诊断容器和映像](view-and-diagnose-containers.md)。
 
 ::: moniker-end
 
 ### <a name="adding-docker-support"></a>添加 Docker 支持
 
-可以通过在创建新项目时选择“启用 Docker 支持”来在项目创建期间启用 Docker 支持，如以下屏幕截图所示  ：
+可以通过在创建新项目时选择“启用 Docker 支持”来在项目创建期间启用 Docker 支持，如以下屏幕截图所示****：
 
 ::: moniker range="vs-2017"
 ![在 Visual Studio 中为新的 ASP.NET Core Web 应用启用 Docker 支持](./media/overview/enable-docker-support-visual-studio.png)
@@ -76,13 +76,13 @@ Visual Studio 中的 Docker 支持因版本而异，以响应客户需求。 可
 > [!NOTE]
 > 对于 .NET Framework 项目（而不是 .NET Core），只有 Windows 容器可用。
 
-可以通过在“解决方案资源管理器”  中选择“添加”   > “Docker 支持”  来向现有项目添加 Docker 支持。 Add > Docker Support  和 Add > Container Orchestrator Support  命令位于“解决方案资源管理器”  中 ASP.NET Core 项目的项目节点的右键单击菜单（或上下文菜单）上，如以下屏幕截图所示：
+可以通过在“解决方案资源管理器”中选择“添加” > “Docker 支持”来向现有项目添加 Docker 支持。 Add > Docker Support**** 和 Add > Container Orchestrator Support**** 命令位于“解决方案资源管理器”**** 中 ASP.NET Core 项目的项目节点的右键单击菜单（或上下文菜单）上，如以下屏幕截图所示：
 
 ![Visual Studio 中的“添加 Docker 支持”菜单选项](./media/overview/add-docker-support-menu.png)
 
 当添加或启用 Docker 支持时，Visual Studio 会向项目添加以下各项：
 
-- Dockerfile  文件
+- Dockerfile** 文件
 - .dockerignore 文件
 - 对 Microsoft.VisualStudio.Azure.Containers.Tools.Targets 的 NuGet 包引用
 
@@ -101,15 +101,15 @@ Visual Studio 中的 Docker 支持因版本而异，以响应客户需求。 可
 
 ## <a name="docker-compose-support"></a>Docker Compose 支持
 
-当你想要使用 Docker Compose 撰写多容器解决方案时，请向项目添加容器业务流程支持。 这样就可以同时运行和调试一组容器（整个解决方案或项目组）（如果已在同一个 docker-compose.yml  文件中定义这些容器）。
+当你想要使用 Docker Compose 撰写多容器解决方案时，请向项目添加容器业务流程支持。 这样就可以同时运行和调试一组容器（整个解决方案或项目组）（如果已在同一个 docker-compose.yml** 文件中定义这些容器）。
 
-若要使用 Docker Compose 添加容器业务流程支持，请右键单击“解决方案资源管理器”  中的解决方案或项目节点，然后选择“添加”>“容器业务流程支持”  。 然后，选择“Docker Compose”  以管理容器。
+若要使用 Docker Compose 添加容器业务流程支持，请右键单击“解决方案资源管理器”**** 中的解决方案或项目节点，然后选择“添加”>“容器业务流程支持”****。 然后，选择“Docker Compose”**** 以管理容器。
 
-向项目添加容器业务流程支持后，会看到添加到项目的 Dockerfile  （如果尚无）以及添加到“解决方案资源管理器”  中的某个解决方案的 docker-compose  文件夹，如下所示：
+向项目添加容器业务流程支持后，会看到添加到项目的 Dockerfile**（如果尚无）以及添加到“解决方案资源管理器”**** 中的某个解决方案的 docker-compose**** 文件夹，如下所示：
 
 ![Visual Studio 解决方案资源管理器中的 Docker 文件](media/overview/docker-support-solution-explorer.png)
 
-如果 docker-compose.yml  已存在，Visual Studio 只需向其添加配置代码所需的行。
+如果 docker-compose.yml** 已存在，Visual Studio 只需向其添加配置代码所需的行。
 
 对要使用 Docker Compose 控制的其他项目重复该过程。
 
@@ -119,9 +119,9 @@ Visual Studio 中的 Docker 支持因版本而异，以响应客户需求。 可
 若要添加 Kubernetes 支持，请安装 [Visual Studio Tools for Kubernetes](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vs-tools-for-kubernetes)。
 ::: moniker-end
 
-借助 Kubernetes 支持，可以在本地项目和 [Azure Kubernetes 服务 (AKS)](/azure/aks) 中运行的 Kubernetes 群集之间启用连接，从而使用 Visual Studio 修改和调试 AKS 中运行的服务。  此服务由 [Azure Dev Spaces](/azure/dev-spaces/quickstart-netcore-visualstudio) 提供。 通过 Azure Dev Spaces，还可以设置名为 dev spaces  的 Kubernetes 服务的单独分支用于开发目的，因此可以有效地将生产服务与开发中的工作版本隔离，并使每个修改完全不同。
+借助 Kubernetes 支持，可以在本地项目和 [Azure Kubernetes 服务 (AKS)](/azure/aks) 中运行的 Kubernetes 群集之间启用连接，从而使用 Visual Studio 修改和调试 AKS 中运行的服务。  此服务由 [Azure Dev Spaces](/azure/dev-spaces/quickstart-netcore-visualstudio) 提供。 通过 Azure Dev Spaces，还可以设置名为 dev spaces** 的 Kubernetes 服务的单独分支用于开发目的，因此可以有效地将生产服务与开发中的工作版本隔离，并使每个修改完全不同。
 
-若要向项目添加 Kubernetes 支持，请在添加容器业务流程支持时选择“Kubernetes/Helm”  。 多个文件添加到项目，其中包括 azds.yaml  （用于配置 Azure Dev Spaces）和 Helm 图表（用于描述 Kubernetes 服务的结构）。
+若要向项目添加 Kubernetes 支持，请在添加容器业务流程支持时选择“Kubernetes/Helm”****。 多个文件添加到项目，其中包括 azds.yaml**（用于配置 Azure Dev Spaces）和 Helm 图表（用于描述 Kubernetes 服务的结构）。
 
 ## <a name="service-fabric-support"></a>Service Fabric 支持
 
@@ -150,6 +150,6 @@ Visual Studio 与 Azure Pipelines 轻松集成，以便自动完成服务代码�
 
 有关服务实现以及将 Visual Studio 工具用于容器的更多详细信息，请阅读以下文章：
 
-[Debugging apps in a local Docker container](edit-and-refresh.md)（在本地 Docker 容器中调试应用）
+在本地 Docker 容器中调试应用  
 
 [使用 Visual Studio 将 ASP.NET 容器部署到容器注册表](hosting-web-apps-in-docker.md)

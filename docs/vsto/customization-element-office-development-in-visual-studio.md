@@ -1,5 +1,5 @@
 ---
-title: '&lt;自定义 &gt; 元素（Visual Studio 中的 Office 开发）'
+title: '&lt;&gt;Visual Studio 中 (Office 开发的自定义元素) '
 titleSuffix: ''
 ms.custom: seodec18
 ms.date: 02/02/2017
@@ -15,13 +15,13 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 1239c6749f25bf4bce7a1f5cc89a2a8430c98a4d
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85544867"
 ---
-# <a name="ltcustomizationgt-element-office-development-in-visual-studio"></a>&lt;自定义 &gt; 元素（Visual Studio 中的 Office 开发）
+# <a name="ltcustomizationgt-element-office-development-in-visual-studio"></a>&lt;&gt;Visual Studio 中 (Office 开发的自定义元素) 
   `customization` 命名空间的 `vstov4` 元素描述特定 Office 解决方案。 对于文档级自定义项和 VSTO 外接程序，子元素是不同的。
 
 ## <a name="syntax-for-document-level-customizations"></a>文档级自定义项的语法
@@ -57,7 +57,7 @@ ms.locfileid: "85544867"
 
  `customization` 元素具有以下属性。
 
-|特性|描述|
+|特性|说明|
 |---------------|-----------------|
 |`id`|对于多项目部署是必需的。 `id` 元素唯一地标识 Office 解决方案。|
 
@@ -75,8 +75,8 @@ ms.locfileid: "85544867"
 
 ## <a name="example-of-a-document-level-customization"></a>文档级自定义项示例
 
-### <a name="description"></a>描述
- 下面的代码示例演示了文档级自定义项的 `customization` 元素。 此代码示例是[Office 解决方案的应用程序清单](../vsto/application-manifests-for-office-solutions.md)中提供的一个更大示例的一部分。
+### <a name="description"></a>说明
+ 下面的代码示例演示了文档级自定义项的 `customization` 元素。 此代码示例是 [Office 解决方案的应用程序清单](../vsto/application-manifests-for-office-solutions.md)中提供的一个更大示例的一部分。
 
 ### <a name="code"></a>代码
 
@@ -89,8 +89,8 @@ ms.locfileid: "85544867"
 
 ## <a name="example-of-a-vsto-add-in"></a>VSTO 外接程序示例
 
-### <a name="description"></a>描述
- 下面的代码示例演示了 `customization` VSTO 外接程序的元素。 这是一个包含窗体区域的 Outlook VSTO 外接程序。 此代码示例是[Office 解决方案的应用程序清单](../vsto/application-manifests-for-office-solutions.md)中提供的一个更大示例的一部分。
+### <a name="description"></a>说明
+ 下面的代码示例演示了 `customization` VSTO 外接程序的元素。 这是一个包含窗体区域的 Outlook VSTO 外接程序。 此代码示例是 [Office 解决方案的应用程序清单](../vsto/application-manifests-for-office-solutions.md)中提供的一个更大示例的一部分。
 
 ### <a name="code"></a>代码
 

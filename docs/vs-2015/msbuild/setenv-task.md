@@ -21,10 +21,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 960ebb94cf03ef293011645e732a0f0379d0fd47
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75852250"
 ---
 # <a name="setenv-task"></a>SetEnv 任务
@@ -35,7 +35,7 @@ ms.locfileid: "75852250"
 ## <a name="parameters"></a>参数  
  下表描述了 SetEnv 任务的参数  。  
   
-|参数|描述|  
+|参数|说明|  
 |---------------|-----------------|  
 |**Name**|必需的 **String** 参数。<br /><br /> 环境变量名。|  
 |OutputEnvironmentVariable |可选的 **String** 输出参数。<br /><br /> 包含分配给 Name 参数指定的环境变量的值  。|  
@@ -46,4 +46,4 @@ ms.locfileid: "75852250"
 ## <a name="remarks"></a>备注  
   
 ## <a name="see-also"></a>另请参阅  
- [任务参考](../msbuild/msbuild-task-reference.md)
+ [任务引用](../msbuild/msbuild-task-reference.md)

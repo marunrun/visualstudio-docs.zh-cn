@@ -14,13 +14,13 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: d09a251dc5f98080b317e1560423dcb7c8bf0805
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72619316"
 ---
-# <a name="configuring-warnings-in-visual-basic"></a>Configuring Warnings in Visual Basic
+# <a name="configuring-warnings-in-visual-basic"></a>在 Visual Basic 中配置警告
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 编译器提供了可能导致运行时错误的代码的一组警告。 可以使用这些信息编写 bug 较少的更干净、更快速和更好的代码。 例如，如果用户尝试调用未赋值的对象变量的成员，从未设置返回值的函数返回或者执行有逻辑错误的 `Try` 块来捕获异常，该编译器都将生成警告。
@@ -30,11 +30,11 @@ ms.locfileid: "72619316"
  你可能需要自定义项目，并关闭与你的应用程序无关的某些警告，而将其他警告变为错误。 本页说明如何打开和关闭单个警告。
 
 ## <a name="turning-warnings-off-and-on"></a>关闭和打开警告
- 配置警告有两种不同的方法：可以使用“项目设计器”配置警告，也可以使用 **/warnaserror** 和 **/nowarn** 编译器选项进行配置。
+ 配置警告有两种不同的方法：可以使用“项目设计器”  配置警告，也可以使用 **/warnaserror** 和 **/nowarn** 编译器选项进行配置。
 
- 使用“项目设计器”页的“编译”选项卡可以打开和关闭警告。 选中“禁用所有警告”复选框可禁用所有警告；选中“将所有警告视为错误”可将所有警告都视为错误。 有些个别警告可以根据所显示的表的需要，在错误和警告之间切换。
+ 使用“项目设计器”页的“编译”选项卡可以打开和关闭警告。 选中“禁用所有警告”  复选框可禁用所有警告；选中“将所有警告视为错误”  可将所有警告都视为错误。 有些个别警告可以根据所显示的表的需要，在错误和警告之间切换。
 
- 如果“Option Strict”设置为“Off”，则不能将与“Option Strict”相关的警告视为彼此独立。 如果“Option Strict”设置为“On”，则将相关联的警告视为错误，而无论其状态如何。 如果通过在命令行编译器中指定 `/optionstrict:custom` 将“Option Strict”设置为“自定义”，则可以不受限制地在开和关之间切换“Option Strict”警告。
+ 如果“Option Strict”  设置为“Off”  ，则不能将与“Option Strict”  相关的警告视为彼此独立。 如果“Option Strict”  设置为“On”  ，则将相关联的警告视为错误，而无论其状态如何。 如果通过在命令行编译器中指定 `/optionstrict:custom` 将“Option Strict”设置为“自定义”，则可以不受限制地在开和关之间切换“Option Strict”警告。
 
  此外，还可以使用该编译器的 **/warnaserror** 命令行选项指定是否将警告视为错误。 可以将逗号分隔的列表添加到此选项，以通过使用 + 或 - 指定应将哪些警告视为错误或警告。 下表对可能的选项进行了详细说明。
 
@@ -52,7 +52,7 @@ ms.locfileid: "72619316"
 ## <a name="examples"></a>示例
  下表包含命令行参数示例，并对每个参数的作用进行了说明。
 
-|参数|描述|
+|参数|说明|
 |--------------|-----------------|
 |`vbc /warnaserror`|指定应将所有警告都视为错误。|
 |`vbc /warnaserror:42024`|指定应将 42024 警告视为错误。|
@@ -119,5 +119,5 @@ ms.locfileid: "72619316"
 
  ID：42029、42031
 
-## <a name="see-also"></a>请参阅
- ["异常助手" 对话框](../debugger/exception-assistant-dialog-box.md)[错误类型](https://msdn.microsoft.com/library/3048aabf-8c97-4e13-9150-853769cb5f6f)[尝试 .。。Catch .。。Finally 语句](https://msdn.microsoft.com/library/d6488026-ccb3-42b8-a810-0d97b9d6472b) [/nowarn](https://msdn.microsoft.com/library/7ebf2106-0652-4fdc-bf60-70fc86465d83) [/warnaserror （Visual Basic）](https://msdn.microsoft.com/library/49819f1d-a1bd-4201-affe-5afe6d9712e1) ["编译" 页，默认情况下关闭的 "项目设计器" （Visual Basic）](../ide/reference/compile-page-project-designer-visual-basic.md) [编译器警告](https://msdn.microsoft.com/library/69809cfb-a38a-4035-b154-283a61938df8)
+## <a name="see-also"></a>另请参阅
+ ["异常助手" 对话框](../debugger/exception-assistant-dialog-box.md)[错误类型](https://msdn.microsoft.com/library/3048aabf-8c97-4e13-9150-853769cb5f6f)[尝试 .。。Catch .。。Finally 语句](https://msdn.microsoft.com/library/d6488026-ccb3-42b8-a810-0d97b9d6472b) [/nowarn](https://msdn.microsoft.com/library/7ebf2106-0652-4fdc-bf60-70fc86465d83) [/Warnaserror (Visual Basic) ](https://msdn.microsoft.com/library/49819f1d-a1bd-4201-affe-5afe6d9712e1) [编译 "页，项目设计器 (Visual Basic](../ide/reference/compile-page-project-designer-visual-basic.md) [默认情况下处于关闭状态的编译器警告](https://msdn.microsoft.com/library/69809cfb-a38a-4035-b154-283a61938df8)

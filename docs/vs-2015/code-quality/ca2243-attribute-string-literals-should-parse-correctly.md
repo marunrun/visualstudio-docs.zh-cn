@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 09e932651576f9b6d595657ad024b8f2697ad016
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85535741"
 ---
 # <a name="ca2243-attribute-string-literals-should-parse-correctly"></a>CA2243:特性字符串文本应正确分析
@@ -40,7 +40,7 @@ ms.locfileid: "85535741"
 
  由于参数已类型化为字符串，因此可能会在编译时传递格式不正确的参数。
 
- 此规则使用命名试探法查找表示统一资源标识符（URI）、全局唯一标识符（GUID）或版本的参数，并验证所传递的值是否正确。
+ 此规则使用命名试探法查找表示统一资源标识符的参数 (URI) ，全局唯一标识符 (GUID) 或版本，并验证所传递的值是否正确。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
  将参数字符串更改为格式正确的 URL、GUID 或版本。

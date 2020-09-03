@@ -10,10 +10,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 4762ad21f117bebe22ecfce1c846f15d154b1bf5
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85536014"
 ---
 # <a name="deploying-a-custom-directive-processor"></a>部署自定义指令处理器
@@ -32,7 +32,7 @@ ms.locfileid: "85536014"
 
 ## <a name="deploying-a-directive-processor-in-a-vsix"></a>在 VSIX 中部署指令处理器
 
-可以将自定义指令处理器添加到[Visual Studio 扩展（VSIX）](../extensibility/starting-to-develop-visual-studio-extensions.md)。
+可以将自定义指令处理器添加到 [ (VSIX) 的 Visual Studio 扩展 ](../extensibility/starting-to-develop-visual-studio-extensions.md)。
 
  需要确保 .vsix 文件包含以下两项：
 
@@ -46,23 +46,23 @@ ms.locfileid: "85536014"
 
 #### <a name="to-develop-a-custom-directive-processor-in-a-vsix-project"></a>在 VSIX 项目中开发自定义指令处理器
 
-1. 创建新的**VSIX 项目**项目。
+1. 创建新的 **VSIX 项目** 项目。
 
-2. 在**source.extension.vsixmanifest**中，设置内容类型和支持的版本。
+2. 在 **source.extension.vsixmanifest**中，设置内容类型和支持的版本。
 
-    1. 在 VSIX 清单编辑器中的 "**资产**" 选项卡上，选择 "**新建**" 并设置新项的属性：
+    1. 在 VSIX 清单编辑器中的 " **资产** " 选项卡上，选择 " **新建** " 并设置新项的属性：
 
          **内容类型**  = **VSPackage**
 
          **源项目** = \<*the current project*>
 
-    2. 单击 "**所选版本**"，然后检查要在其中使用指令处理器的安装类型。
+    2. 单击 " **所选版本** "，然后检查要在其中使用指令处理器的安装类型。
 
 3. 添加 .pkgdef 文件，并设置其属性，以便使其包含在 VSIX 中。
 
     1. 创建一个文本文件，并将其命名为 \<*assemblyName*> .pkgdef。
 
-         \<*assemblyName*>通常与项目的名称相同。
+         \<*assemblyName*> 通常与项目的名称相同。
 
     2. 在解决方案资源管理器中，选中该文件并将其属性设置如下：
 
@@ -101,7 +101,7 @@ ms.locfileid: "85536014"
 
 #### <a name="to-install-the-custom-directive-processor"></a>安装自定义指令处理器
 
-1. 在 Windows 资源管理器中，打开生成目录（通常为 bin\Debug 或 bin\Release）。
+1. 在 Windows 资源管理器中，打开 (通常为 bin\Debug 或 bin\Release) 的生成目录。
 
 2. 如果要在另一台计算机上安装指令处理器，请将 .vsix 文件复制到该计算机。
 
@@ -113,9 +113,9 @@ ms.locfileid: "85536014"
 
 #### <a name="to-uninstall-or-temporarily-disable-the-custom-directive-processor"></a>卸载或临时禁用自定义指令处理器
 
-1. 在 Visual Studio "**工具**" 菜单中，单击 "**扩展管理器**"。
+1. 在 Visual Studio " **工具** " 菜单中，单击 " **扩展管理器**"。
 
-2. 选择包含指令处理器的 VSIX，然后单击 "**卸载**" 或 "**禁用**"。
+2. 选择包含指令处理器的 VSIX，然后单击 " **卸载** " 或 " **禁用**"。
 
 ### <a name="troubleshooting-a-directive-processor-in-a-vsix"></a>VSIX 中指令处理器的疑难解答
  如果指令处理器不能正常运行，可以尝试以下建议：
@@ -170,11 +170,11 @@ ms.locfileid: "85536014"
 
 3. 添加与指令处理器类同名的注册表项。
 
-   - 在注册表树中，右键单击 " **DirectiveProcessors** " 节点，指向 "**新建**"，然后单击 "**项**"。
+   - 在注册表树中，右键单击 " **DirectiveProcessors** " 节点，指向 " **新建**"，然后单击 " **项**"。
 
 4. 在新建节点中，根据下表为 Class 和 CodeBase 或 Assembly 添加字符串值。
 
-   1. 右键单击创建的节点，指向 "**新建**"，然后单击 "**字符串值**"。
+   1. 右键单击创建的节点，指向 " **新建**"，然后单击 " **字符串值**"。
 
    2. 编辑值的名称。
 
@@ -196,6 +196,6 @@ ms.locfileid: "85536014"
 |类|REG_SZ|\<**Your Fully Qualified Class Name**>|
 |程序集|REG_SZ|\<**Your Assembly Name in the GAC**>|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [创建自定义 T4 文本模板指令处理器](../modeling/creating-custom-t4-text-template-directive-processors.md)

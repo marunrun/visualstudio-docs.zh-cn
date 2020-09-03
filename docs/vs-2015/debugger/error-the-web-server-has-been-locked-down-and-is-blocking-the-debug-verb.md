@@ -1,5 +1,5 @@
 ---
-title: 错误：Web 服务器已被锁定，并阻止 DEBUG 谓词 |Microsoft Docs
+title: 错误：Web 服务器已被锁定，并阻止 DEBUG 谓词 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -19,10 +19,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: b85efc44b39485476154d0f41f3261b2aeb1ea7c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68203212"
 ---
 # <a name="error-the-web-server-has-been-locked-down-and-is-blocking-the-debug-verb"></a>错误：Web 服务器已被锁定，并阻止 DEBUG 谓词
@@ -40,7 +40,7 @@ ms.locfileid: "68203212"
   
      C:\WINNT\System32\Inetsrv\urlscan  
   
-2. 创建此文件的副本并将它命名为 Urlscan.old  。  
+2. 创建此文件的副本并将它命名为 Urlscan.old。  
   
 3. 使用“记事本”或选定的文本编辑器打开 Urlscan.ini 文件的原始副本。  
   
@@ -52,6 +52,6 @@ ms.locfileid: "68203212"
   
 7. 重新启动服务器或重新启动 IIS。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [调试 Web 应用程序：错误和疑难解答](../debugger/debugging-web-applications-errors-and-troubleshooting.md)   
  [错误：Web 服务器找不到所请求的资源](../debugger/error-the-web-server-could-not-find-the-requested-resource.md)

@@ -13,16 +13,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: b95ed9b6473c156d1bdf8a20eb927ee044aa47cf
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72621108"
 ---
 # <a name="accessibility-features-of-the-help-viewer"></a>帮助查看器的辅助功能
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Microsoft 致力于让每位用户可以更便捷地使用其产品和服务。 本主题包含有关功能、产品和服务的信息，有助于让用户可以使用 Microsoft Help Viewer 2.2 的丰富功能。
+Microsoft 致力于使其产品和服务更便于每个人使用。 本主题包含有关功能、产品和服务的信息，有助于让用户可以使用 Microsoft Help Viewer 2.2 的丰富功能。
 
 ## <a name="keyboard-access"></a>键盘访问
  可以使用键盘来访问帮助查看器的所有功能。 有关详细信息，请参阅[快捷键 (Help Viewer)](../ide/shortcut-keys-help-viewer.md)。
