@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 92533b90e6a2da9f29a67d13c6e0eee2c31dbcfe
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72620236"
 ---
 # <a name="code-snippet-functions"></a>代码段函数
@@ -35,7 +35,7 @@ ms.locfileid: "72620236"
 |`SimpleTypeName(` `TypeName` `)`|在已调用该代码片段的上下文中将 TypeName 参数缩减为其最简单的形式  。|[!INCLUDE[csprcs](../includes/csprcs-md.md)]|
 
 ## <a name="example"></a>示例
- 下面的示例演示了如何使用 `GenerateSwitchCases` 函数。 在插入此代码片段并将枚举输入到 `$switch_on$` 文本中时，`$cases$` 文本为枚举中的每个值生成一个 `case` 语句。
+ 以下示例演示如何使用 `GenerateSwitchCases` 函数。 在插入此代码片段并将枚举输入到 `$switch_on$` 文本中时，`$cases$` 文本为枚举中的每个值生成一个 `case` 语句。
 
 ```
 <CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
@@ -76,7 +76,7 @@ ms.locfileid: "72620236"
 ```
 
 ## <a name="example"></a>示例
- 下面的示例演示了如何使用 `ClassName` 函数。 在插入此代码片段时，`$classname$` 文本会替换为代码文件中该位置的封闭类的名称。
+ 以下示例演示如何使用 `ClassName` 函数。 在插入此代码片段时，`$classname$` 文本会替换为代码文件中该位置的封闭类的名称。
 
 ```
 <CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
@@ -154,4 +154,4 @@ ms.locfileid: "72620236"
 ```
 
 ## <a name="see-also"></a>另请参阅
- [Function 元素（Intellisense 代码片段）](https://msdn.microsoft.com/572c5549-5821-4e15-8ecd-0fa86c1c65df) [代码段架构参考](../ide/code-snippets-schema-reference.md)
+ [函数元素 (Intellisense 代码片段) ](https://msdn.microsoft.com/572c5549-5821-4e15-8ecd-0fa86c1c65df) [代码段架构参考](../ide/code-snippets-schema-reference.md)

@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 16f312f9b9d15cbdacbb1fa3e0628903254aeaea
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85543138"
 ---
 # <a name="microsoft-office-is-not-installed-on-the-computer"></a>计算机上未安装 Microsoft Office
@@ -24,7 +24,7 @@ ms.locfileid: "85543138"
 
 ## <a name="to-correct-the-error"></a>更正此错误
 
-1. 安装与项目类型关联的 Microsoft Office 应用程序，包括主互操作程序集。 有关支持的 Microsoft Office 版本的详细信息，请参阅[配置计算机以开发 Office 解决方案](../vsto/configuring-a-computer-to-develop-office-solutions.md)。
+1. 安装与项目类型关联的 Microsoft Office 应用程序，包括主互操作程序集。 有关支持的 Microsoft Office 版本的详细信息，请参阅 [配置计算机以开发 Office 解决方案](../vsto/configuring-a-computer-to-develop-office-solutions.md)。
 
 ## <a name="see-also"></a>另请参阅
 - [将计算机配置为开发 Office 解决方案](../vsto/configuring-a-computer-to-develop-office-solutions.md)

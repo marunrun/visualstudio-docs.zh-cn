@@ -10,49 +10,49 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: faac29c59b78d8f3f1a0260b0b7a8ace16169f9d
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75916802"
 ---
 # <a name="how-to-extend-the-domain-specific-language-designer"></a>如何：扩展域特定语言设计器
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-你可以对用于编辑 DSL 定义的设计器进行扩展。 可以进行的扩展类型包括添加菜单命令、添加拖放和双击笔势的处理程序，以及在特定类型的值或关系发生更改时触发的规则。 可以将扩展打包为 Visual Studio 集成扩展（VSIX），并将其分发给其他用户。
+你可以对用于编辑 DSL 定义的设计器进行扩展。 可以进行的扩展类型包括添加菜单命令、添加拖放和双击笔势的处理程序，以及在特定类型的值或关系发生更改时触发的规则。 可以将扩展打包为 Visual Studio 集成扩展 (VSIX) 并分发给其他用户。
 
 ## <a name="setting-up-the-solution"></a>设置解决方案
  设置包含扩展代码的项目，以及一个导出项目的 VSIX 项目。 你的解决方案可以包含合并到同一 VSIX 中的其他项目。
 
 #### <a name="to-create-a-dsl-designer-extension-solution"></a>创建 DSL 设计器扩展解决方案
 
-1. 使用类库项目模板创建一个新项目。 在 "**新建项目**" 对话框中，单击 "**视觉对象C#**  "，然后在中间窗口中单击 **"类库"。**
+1. 使用类库项目模板创建一个新项目。 在 "**新建项目**" 对话框中，单击 " **Visual c #** "，然后在中间窗口中单击 **"类库"。**
 
      此项目将包含你的扩展的代码。
 
-2. 使用 VSIX 项目模板创建一个新项目。 在 "**新建项目**" 对话框中，依次展开 "**视觉对象C#** "、"**扩展性**"，然后在中间窗口中选择 " **VSIX 项目**"。
+2. 使用 VSIX 项目模板创建一个新项目。 在 " **新建项目** " 对话框中，依次展开 " **Visual c #**"、" **扩展性**"，然后在中间窗口中选择 " **VSIX 项目**"。
 
-     选择 "**添加到解决方案**"。
+     选择 " **添加到解决方案**"。
 
      Source.extension.vsixmanifest 在 VSIX 清单编辑器中打开。
 
-3. 在 "内容" 字段上方，单击 "**添加内容**"。
+3. 在 "内容" 字段上方，单击 " **添加内容**"。
 
-4. 在 "**添加内容**" 对话框中，将 "**选择内容类型**" 设置为 " **MEF 组件**"，并将 "**项目**" 设置为类库项目。
+4. 在 " **添加内容** " 对话框中，将 " **选择内容类型** " 设置为 " **MEF 组件**"，并将 " **项目** " 设置为类库项目。
 
-5. 单击 "**选择版本**" 并确保选中**Visual Studio Enterprise** 。
+5. 单击 " **选择版本** " 并确保选中 **Visual Studio Enterprise** 。
 
 6. 请确保 VSIX 项目是解决方案的启动项目。
 
 7. 在类库项目中，添加对以下程序集的引用：
 
-     Microsoft.VisualStudio.CoreUtility
+     VisualStudio. CoreUtility
 
-     Microsoft.VisualStudio.Modeling.Sdk.11.0
+     VisualStudio （web.config）
 
-     Microsoft.VisualStudio.Modeling.Sdk.Diagrams.11.0
+     VisualStudio. 11.0. 11。0
 
-     Microsoft.VisualStudio.Modeling.Sdk.DslDefinition.11.0
+     VisualStudio. Dsldefinition.dsl. 11。0
 
      Microsoft.VisualStudio.Modeling.Sdk.Integration.11.0
 
@@ -67,24 +67,24 @@ ms.locfileid: "75916802"
 ## <a name="testing-and-deployment"></a>测试和部署
  若要测试本主题中的任何扩展，请生成并运行解决方案。 将打开 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的实验实例。 在此实例中，打开 DSL 解决方案。 编辑 Dsldefinition.dsl 关系图。 可以查看扩展行为。
 
- 若要将扩展部署到主 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]和其他计算机上，请执行以下步骤：
+ 若要将扩展部署到主 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 和其他计算机，请执行以下步骤：
 
-1. 查找 VSIX 安装文件，在 VSIX 项目中 bin\\*\*\\\*.vsix
+1. 在 \\ bin 中的 vsix 项目中 * 查找 vsix 安装文件 \\ \*
 
-2. 将此文件复制到目标计算机，然后在 Windows 资源管理器（或文件资源管理器）中双击它。
+2. 将此文件复制到目标计算机，然后在 Windows 资源管理器中 (或文件资源管理器) 中，双击该文件。
 
-    此时将打开 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 扩展管理器以确认已安装了该扩展。
+    " [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 扩展管理器" 将打开，以确认已安装了该扩展。
 
    若要卸载扩展，请执行以下步骤：
 
-3. 在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]中，单击 "**工具**" 菜单上的 "**扩展管理器**"。
+3. 在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的 " **工具** " 菜单上，单击 " **扩展管理器**"。
 
 4. 选择扩展并将其删除。
 
 ## <a name="adding-a-shortcut-menu-command"></a>添加快捷菜单命令
  若要在 DSL 设计器图面上或在 DSL 资源管理器窗口中显示快捷菜单命令，请编写一个类似于下面的类。
 
- 类必须实现 `ICommandExtension` 并且必须具有属性 `DslDefinitionModelCommandExtension`。
+ 类必须实现 `ICommandExtension` ，并且必须具有特性 `DslDefinitionModelCommandExtension` 。
 
 ```
 using System.Collections.Generic;

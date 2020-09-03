@@ -14,20 +14,20 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 945e934ce16c9e08209f89d8d2d2dcdfe166a4c6
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85542813"
 ---
 # <a name="da0024-excessive-gc-cpu-time"></a>DA0024：GC 占用的 CPU 时间过多
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|Item|值|  
+|项|“值”|  
 |-|-|  
 |规则 ID|DA0024|  
-|Category|.NET Framework 使用情况|  
-|分析方法|All|  
+|类别|.NET Framework 使用情况|  
+|分析方法|全部|  
 |消息|垃圾回收中的时间百分比非常高。 垃圾回收的开销过多。|  
 |规则类型|警告|  
   
@@ -44,9 +44,9 @@ ms.locfileid: "85542813"
  如果垃圾回收所用的时间明显超过应用程序处理总时间，则将触发此规则。  
   
 > [!NOTE]
-> 垃圾回收所用时间的比例较高但未超过应用程序处理总时间时，不会触发此规则，而会触发 [DA0023：垃圾回收占用的 CPU 时间很多](../profiling/da0023-high-gc-cpu-time.md)警告。  
+> 当垃圾回收所用的时间比例很大但与应用程序总处理时间相比并不过量时，不会触发此规则，而是触发 [DA0023：GC 占用的 CPU 时间多](../profiling/da0023-high-gc-cpu-time.md)警告。  
   
 ## <a name="how-to-investigate-a-warning"></a>如何调查警告  
- 双击“错误列表”窗口中的消息，导航到分析数据的[标记视图](../profiling/marks-view.md)。 查找 **.NET CLR Memory\\% Time in GC** 列。 确定程序执行中是否存在托管内存垃圾回收的开销高于其他阶段的某个阶段。 将 %Time in GC 的值与 **第 0 代回收 #****第 1 代回收 #**、 **第 2 代回收 #** 值中报告的垃圾回收速率进行比较。  
+ 双击“错误列表”窗口中的消息，导航到分析数据的[标记视图](../profiling/marks-view.md)。 查找 **.NET CLR Memory\\% Time in GC** 列。 确定程序执行中是否存在托管内存垃圾回收的开销高于其他阶段的某个阶段。 将 %Time in GC 的值与 **第 0 代回收 #** **第 1 代回收 #** 、 **第 2 代回收 #** 值中报告的垃圾回收速率进行比较。  
   
  %Time in GC 值尝试报告应用程序执行垃圾回收处理所用的时间总量（与处理总量成正比）。 请注意，有时 % Time in GC 值可能报告非常高的值，但这不是由垃圾回收过多引起的。 有关如何计算% Time in GC 值的详细信息，请参阅 MSDN 上的**Maoni 的网络日志**的4项报告中的[性能数据之间的差异](https://devblogs.microsoft.com/dotnet/difference-between-perf-data-reported-by-different-tools-4/)。 如果垃圾回收期间发生页面故障或计算机上其他操作的优先级高于此应用程序，则 %Time in GC 计数器将反映这些额外的延迟。

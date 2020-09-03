@@ -10,10 +10,10 @@ author: alexhomer1
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: b70e3a24cd4cb05dc1a28ff855498496f5665ddc
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85542852"
 ---
 # <a name="run-unit-tests-for-store-apps-in-visual-studio"></a>对 Visual Studio 中的应用商店应用运行单元测试
@@ -50,10 +50,10 @@ ms.locfileid: "85542852"
 
   [调试单元测试](#BKMK_Debugging_unit_tests)
 
-## <a name="unit-test-frameworks-and-test-projects"></a><a name="BKMK_Unit_test_frameworks_and_test_projects"></a>单元测试框架和测试项目
+## <a name="unit-test-frameworks-and-test-projects"></a><a name="BKMK_Unit_test_frameworks_and_test_projects"></a> 单元测试框架和测试项目
  适用于 Windows 应用商店应用的 Visual Studio Express 包括针对托管和本机 C++ 代码的 Microsoft 单元测试框架。 测试资源管理器可从解决方案的多个测试项目以及从作为生产代码项目的一部分的测试类中运行测试。 测试项目可以是 Visual C++ 或 Visual C# 与 Visual Basic 单元测试框架的任意组合。 当测试中的代码针对 .NET Framework 进行编写时，无论目标代码使用何种语言，均可使用任何 .NET Framework 语言编写测试项目。 本机 C/C++ 代码项目必须使用 C++ 单元测试框架进行测试。
 
-## <a name="running-tests-in-test-explorer"></a><a name="BKMK_Running_tests_in_Test_Explorer"></a>在测试资源管理器中运行测试
+## <a name="running-tests-in-test-explorer"></a><a name="BKMK_Running_tests_in_Test_Explorer"></a> 在测试资源管理器中运行测试
  在生成测试项目时，测试将出现在测试资源管理器中。 如果测试资源管理器不可见，请选择 Visual Studio 菜单上的“测试”  ，然后依次选择“Windows” 、“测试资源管理器” 。
 
  ![单元测试资源管理器](../ide/media/ute-failedpassednotrunsummary.png "UTE_FailedPassedNotRunSummary")
@@ -64,12 +64,12 @@ ms.locfileid: "85542852"
 
  ![从测试资源管理器工具栏运行测试](../test/media/ute-toolbar.png "UTE_ToolBar")
 
-### <a name="running-tests"></a><a name="BKMK_Running_tests"></a>运行测试
+### <a name="running-tests"></a><a name="BKMK_Running_tests"></a> 运行测试
  你可以运行解决方案中的所有测试、组中的所有测试或你选择的一组测试。 执行下列操作之一：
 
 - 若要运行解决方案中的所有测试，请选择 **“全部运行”** 。
 
-- 若要运行默认组中的所有测试，请选择 "**运行 ...** "，然后在菜单上选择组。
+- 若要运行默认组中的所有测试，请选择 " **运行 ...** "，然后在菜单上选择组。
 
 - 选择想要运行的各个测试，打开选定测试的快捷菜单，然后选择“运行选定测试”****。
 
@@ -103,7 +103,7 @@ ms.locfileid: "85542852"
 ### <a name="grouping-tests"></a><a name="BKMK_Grouping_tests"></a> 对测试进行分组
  默认情况下，测试资源管理器将测试显示为“失败的测试”****、“通过的测试”****、“跳过的测试”**** 和“未运行的测试”**** 的子节点。
 
-|映像|说明|
+|图像|说明|
 |-|-|
 |![测试资源管理器的分组按钮](../test/media/ute-groupby-btn.png "UTE_GroupBy_btn")|若要按执行它们所花的时间对测试进行分组，请打开“分组方式”**** 列表并选择“持续时间”****。 选择“测试结果”**** 以切换到原始分组。|
 

@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 6a63ebb7f3946926864c4dd882c281b5dcd7c6c5
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85535832"
 ---
 # <a name="ca2208-instantiate-argument-exceptions-correctly"></a>CA2208:正确实例化参数异常
@@ -35,30 +35,30 @@ ms.locfileid: "85535832"
 ## <a name="cause"></a>原因
  可能的原因包括以下情况：
 
-- 调用了异常类型的默认（无参数）构造函数，或派生自 [ArgumentException] （<!-- TODO: review code entity reference <xref:assetId:///System.ArgumentException?qualifyHint=True&amp;autoUpgrade=True>  -->).
+- 对异常类型的默认 (无参数) 构造函数进行调用，或从 [ArgumentException] 派生 (<!-- TODO: review code entity reference <xref:assetId:///System.ArgumentException?qualifyHint=True&amp;autoUpgrade=True>  -->).
 
-- 将不正确的字符串自变量传递给异常类型的参数化构造函数，或从 [ArgumentException] 派生。(<!-- TODO: review code entity reference <xref:assetId:///System.ArgumentException.?qualifyHint=True&amp;autoUpgrade=True>  -->)
+- 将不正确的字符串自变量传递给异常类型的参数化构造函数，或从 [ArgumentException] 派生。 (<!-- TODO: review code entity reference <xref:assetId:///System.ArgumentException.?qualifyHint=True&amp;autoUpgrade=True>  -->)
 
 ## <a name="rule-description"></a>规则描述
  不是调用默认构造函数，而是调用允许提供更有意义的异常消息的构造函数重载之一。 异常消息应面向开发人员，并清楚地说明错误情况以及如何纠正或避免异常。
 
  及其派生类型的一个和两个字符串构造函数的签名与 <xref:System.ArgumentException> `message` 和参数不一致 `paramName` 。 请确保用正确的字符串参数调用这些构造函数。 签名如下所示：
 
- <xref:System.ArgumentException>（string `message` ）
+ <xref:System.ArgumentException> (字符串 `message`) 
 
- <xref:System.ArgumentException>（string `message` ，string `paramName` ）
+ <xref:System.ArgumentException> (字符串 `message` ，string `paramName`) 
 
- <xref:System.ArgumentNullException>（string `paramName` ）
+ <xref:System.ArgumentNullException> (字符串 `paramName`) 
 
- <xref:System.ArgumentNullException>（string `paramName` ，string `message` ）
+ <xref:System.ArgumentNullException> (字符串 `paramName` ，string `message`) 
 
- <xref:System.ArgumentOutOfRangeException>（string `paramName` ）
+ <xref:System.ArgumentOutOfRangeException> (字符串 `paramName`) 
 
- <xref:System.ArgumentOutOfRangeException>（string `paramName` ，string `message` ）
+ <xref:System.ArgumentOutOfRangeException> (字符串 `paramName` ，string `message`) 
 
- <xref:System.DuplicateWaitObjectException>（string `parameterName` ）
+ <xref:System.DuplicateWaitObjectException> (字符串 `parameterName`) 
 
- <xref:System.DuplicateWaitObjectException>（string `parameterName` ，string `message` ）
+ <xref:System.DuplicateWaitObjectException> (字符串 `parameterName` ，string `message`) 
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
  若要修复与此规则的冲突，请调用使用消息的构造函数和/或参数名，并确保参数对于调用的类型是正确的 <xref:System.ArgumentException> 。
