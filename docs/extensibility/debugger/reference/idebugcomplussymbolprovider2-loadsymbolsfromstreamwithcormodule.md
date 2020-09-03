@@ -15,14 +15,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: fa1d03b2f91cea03403f4893e61ec15bf5b82952
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80733397"
 ---
 # <a name="idebugcomplussymbolprovider2loadsymbolsfromstreamwithcormodule"></a>IDebugComPlusSymbolProvider2::LoadSymbolsFromStreamWithCorModule
-给定**ICorDebugModule**对象的数据流加载调试符号。
+给定 **ICorDebugModule** 对象，从数据流加载调试符号。
 
 ## <a name="syntax"></a>语法
 
@@ -50,28 +50,28 @@ int LoadSymbolsFromStreamWithCorModule(
 
 ## <a name="parameters"></a>参数
 `ulAppDomainID`\
-[在]应用程序域的标识符。
+中应用程序域的标识符。
 
 `guidModule`\
-[在]模块的唯一标识符。
+中模块的唯一标识符。
 
 `baseAddress`\
-[在]基本内存地址。
+中基本内存地址。
 
 `pUnkMetadataImport`\
-[在]包含符号元数据的对象。
+中包含符号元数据的对象。
 
 `pUnkCorDebugModule`\
-[在]实现[ICorDebugModule 接口](/dotnet/framework/unmanaged-api/debugging/icordebugmodule-interface)的对象。
+中实现 [ICorDebugModule 接口](/dotnet/framework/unmanaged-api/debugging/icordebugmodule-interface)的对象。
 
 `pStream`\
-[在]包含要加载的调试符号的数据流。
+中数据流，其中包含要加载的调试符号。
 
 ## <a name="return-value"></a>返回值
-如果成功，返回`S_OK`;否则，返回错误代码。
+如果成功， `S_OK` 则返回; 否则返回错误代码。
 
 ## <a name="example"></a>示例
-下面的示例演示如何为公开[IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md)接口的**CDebugSymbol提供程序**对象实现此方法。
+下面的示例演示如何为公开[IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md)接口的**CDebugSymbolProvider**对象实现此方法。
 
 ```cpp
 HRESULT CDebugSymbolProvider::LoadSymbolsFromStreamWithCorModule(
@@ -143,5 +143,5 @@ Error:
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md)

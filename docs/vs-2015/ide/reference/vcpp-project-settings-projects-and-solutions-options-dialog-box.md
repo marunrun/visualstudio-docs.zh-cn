@@ -20,10 +20,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: ef861d13387c013659e5e4c1714680b71896858c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657869"
 ---
 # <a name="vc-project-settings-projects-and-solutions-options-dialog-box"></a>“选项”对话框 ->“项目和解决方案”->“VC++ 项目设置”
@@ -41,17 +41,17 @@ ms.locfileid: "72657869"
  指定包含 .rules 文件的目录列表，这些文件有助于定义项目的生成规则。
 
 ## <a name="build-logging"></a>生成日志
- **是**启用生成日志文件的生成。 此选项可生成位于项目的中间文件目录中的 BuildLog.htm。 每个新的生成文件都会覆盖上一 BuildLog.htm 文件。
+ **是** 启用生成日志文件的生成。 此选项可生成位于项目的中间文件目录中的 BuildLog.htm。 每个新的生成文件都会覆盖上一 BuildLog.htm 文件。
 
- **否**关闭生成日志文件的生成。
+ **否** 关闭生成日志文件的生成。
 
 ## <a name="build-timing"></a>生成计时
- **是**启用生成计时。 如果选中，输出窗口中会发布生成完成所需的时间。 有关详细信息，请参阅[输出窗口](../../ide/reference/output-window.md)。
+ **是** 启用生成计时。 如果选中，输出窗口中会发布生成完成所需的时间。 有关详细信息，请参阅 [输出窗口](../../ide/reference/output-window.md)。
 
- **否**关闭生成计时。
+ **否** 关闭生成计时。
 
 ## <a name="extensions-to-hide"></a>要隐藏的扩展名
- 指定在“显示所有文件”  启用时，不会在“解决方案资源管理器”  中显示的文件的文件扩展名。
+ 指定在“显示所有文件”**** 启用时，不会在“解决方案资源管理器”**** 中显示的文件的文件扩展名。
 
 ## <a name="extensions-to-include"></a>要包括的扩展名
  指定可导入项目的文件的文件扩展名。
@@ -60,14 +60,14 @@ ms.locfileid: "72657869"
  指定用于并行 C++ 编译的 CPU 内核数目上限。
 
 ## <a name="show-environment-in-log"></a>在日志中显示环境
- **是**列出生成日志文件中的环境变量。 此选项指定在 [!INCLUDE[vcprvc](../../includes/vcprvc-md.md)] 项目生成期间，将所有环境变量回显到生成日志文件中。
+ **是** 列出生成日志文件中的环境变量。 此选项指定在 [!INCLUDE[vcprvc](../../includes/vcprvc-md.md)] 项目生成期间，将所有环境变量回显到生成日志文件中。
 
- **否**从生成日志文件中排除环境变量。
+ **否** 从生成日志文件中排除环境变量。
 
 ## <a name="solution-explorer-mode"></a>解决方案资源管理器模式
- **仅显示项目中的文件**将**解决方案资源管理器**配置为仅显示项目中的文件。
+ **仅显示项目中的文件** 将 **解决方案资源管理器** 配置为仅显示项目中的文件。
 
- **显示所有文件**配置**解决方案资源管理器**以显示项目中的文件和项目文件夹中的文件。
+ **显示所有文件** 配置 **解决方案资源管理器** 以显示项目中的文件和项目文件夹中的文件。
 
 ## <a name="see-also"></a>另请参阅
- [正在生成 cC++ /程序](https://msdn.microsoft.com/library/fa6ed4ff-334a-4d99-b5e2-a1f83d2b3008) [cC++ /生成引用](https://msdn.microsoft.com/library/100b4ccf-572c-4d1f-970c-fa0bc0cc0d2d)
+ [生成 c/c + + 程序](https://msdn.microsoft.com/library/fa6ed4ff-334a-4d99-b5e2-a1f83d2b3008) [c/c + + 生成参考](https://msdn.microsoft.com/library/100b4ccf-572c-4d1f-970c-fa0bc0cc0d2d)

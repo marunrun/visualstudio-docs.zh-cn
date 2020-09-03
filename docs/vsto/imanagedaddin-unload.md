@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 1ec01ebc32472e315fe2c905ecfd2cfef0f4bbe1
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85541006"
 ---
 # <a name="imanagedaddinunload"></a>IManagedAddin::Unload
@@ -34,6 +34,6 @@ HRESULT Unload();
 ## <a name="remarks"></a>备注
  当前版本的 Microsoft Office 不调用此方法。 此方法保留供将来使用。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IManagedAddin 接口](../vsto/imanagedaddin-interface.md)
 - [IManagedAddin::Load](../vsto/imanagedaddin-load.md)

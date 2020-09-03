@@ -11,10 +11,10 @@ monikerRange: vs-2017
 ms.workload:
 - dotnet
 ms.openlocfilehash: 68450129d9bb3e9e67793c0a4155e953abbccc3d
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85531802"
 ---
 # <a name="how-to-attach-the-profiler-to-a-net-framework-stand-alone-application-and-collect-application-statistics-by-using-the-command-line"></a>如何：将探查器附加到 .NET Framework 独立应用程序，并使用命令行收集应用程序统计信息

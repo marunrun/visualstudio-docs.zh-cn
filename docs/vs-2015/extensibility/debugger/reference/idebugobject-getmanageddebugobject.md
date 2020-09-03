@@ -1,5 +1,5 @@
 ---
-title: IDebugObject::GetManagedDebugObject |Microsoft Docs
+title: IDebugObject：： GetManagedDebugObject |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 4f2917135f5e25648cf08cd9030e3fdf31aedb52
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68162475"
 ---
 # <a name="idebugobjectgetmanageddebugobject"></a>IDebugObject::GetManagedDebugObject
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-调试引擎的地址空间中创建托管对象的副本。  
+在调试引擎的地址空间中创建托管对象的副本。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,14 +40,14 @@ int GetManagedDebugObject(
   
 #### <a name="parameters"></a>参数  
  `ppObject`  
- [out]返回[IDebugManagedObject](../../../extensibility/debugger/reference/idebugmanagedobject.md)对象，表示新创建的托管的对象。  
+ 弄返回表示新创建的托管对象的 [IDebugManagedObject](../../../extensibility/debugger/reference/idebugmanagedobject.md) 对象。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回 S_OK;否则，返回错误代码。 如果此返回 E_FAIL [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)不表示托管的值类实例。  
+ 如果成功，将返回 S_OK;否则，将返回错误代码。 如果此 [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) 不表示托管值类实例，则返回 E_FAIL。  
   
 ## <a name="remarks"></a>备注  
- 这[IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)对象必须代表托管的值类实例，如`System.Decimal`实例。 通过让本地副本，而调用的开销[Evaluate](../../../extensibility/debugger/reference/idebugfunctionobject-evaluate.md)被消除。  
+ 此 [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) 对象必须表示托管值类实例，如 `System.Decimal` 实例。 通过使用本地副本，可消除调用 [计算](../../../extensibility/debugger/reference/idebugfunctionobject-evaluate.md) 的开销。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)   
  [IDebugManagedObject](../../../extensibility/debugger/reference/idebugmanagedobject.md)

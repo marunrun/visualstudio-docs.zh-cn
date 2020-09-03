@@ -12,10 +12,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 344a2dbe0e629f62f609806008b963be2be058a1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68164055"
 ---
 # <a name="filtering-report-views"></a>筛选报告视图
@@ -41,14 +41,14 @@ ms.locfileid: "68164055"
     |-----------|-----------------|  
     |And/Or |如果此子句和下一个子句必须都为 true 才能匹配结果，则选择“与”  。 如果此子句或下一个子句为 true 即可匹配结果，则选择“或”  。|  
     |**字段**|从显示的数据字段列表中选择要在筛选器子句中使用的报告字段。|  
-    |**Operator**|选择用于指定子句中字段与值之间的关系的运算符。<br /><br /> =    等于<br /><br /> <>  不等于<br /><br /> <    小于<br /><br /> >    大于<br /><br /> <=  小于或等于<br /><br /> >=  大于或等于|  
+    |**“运算符”**|选择用于指定子句中字段与值之间的关系的运算符。<br /><br /> =    等于<br /><br /> <>  不等于<br /><br /> <    小于<br /><br /> >    大于<br /><br /> <=  小于或等于<br /><br /> >=  大于或等于|  
     |**值**|选择或输入要查找的值。 某些字段会列出字段的可用值。|  
   
 3. 
   
 #### <a name="to-create-a-profiler-report-filter-from-the-marks-report-view"></a>从“标记报告”视图中创建探查器报告筛选器  
   
-1. 在“性能报告”视图工具栏上，从“当前视图”  列表中选择“标记”  。  
+1. 在“性能报告”视图工具栏上，从“当前视图”列表中选择“标记”。  
   
     此时将显示“标记探查器”报告。  
   

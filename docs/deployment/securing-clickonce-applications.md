@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: d99cbf4aaa30e1afb95a98743c223edee94d98fe
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85286292"
 ---
 # <a name="secure-clickonce-applications"></a>保护 ClickOnce 应用程序
@@ -38,16 +38,16 @@ ms.locfileid: "85286292"
 |从网络文件共享安装|本地 Intranet 区域|
 |从 CD-ROM 安装|完全信任|
 
- 默认权限取决于部署初始应用程序版本的位置；应用程序的更新将继承这些权限。 如果将应用程序配置为从 Web 或网络位置检查是否有更新且存在较新的版本，则初始安装可以获得 Internet 或 Intranet 区域的权限，而不是完全信任权限。 如果不想让系统提示用户，系统管理员可以指定一个 ClickOnce 部署策略，将某个特定的应用程序发行者定义为受信任的来源。 对于部署此策略的计算机，系统会自动授予权限而不会提示用户授予权限。 有关详细信息，请参阅[受信任的应用程序部署概述](../deployment/trusted-application-deployment-overview.md)。 若要配置受信任的应用程序部署，可以将证书安装到计算机或企业级别。 有关详细信息，请参阅 [How to: Add a Trusted Publisher to a Client Computer for ClickOnce Applications](../deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications.md)。
+ 默认权限取决于部署初始应用程序版本的位置；应用程序的更新将继承这些权限。 如果将应用程序配置为从 Web 或网络位置检查是否有更新且存在较新的版本，则初始安装可以获得 Internet 或 Intranet 区域的权限，而不是完全信任权限。 如果不想让系统提示用户，系统管理员可以指定一个 ClickOnce 部署策略，将某个特定的应用程序发行者定义为受信任的来源。 对于部署此策略的计算机，系统会自动授予权限而不会提示用户授予权限。 有关详细信息，请参阅 [受信任的应用程序部署概述](../deployment/trusted-application-deployment-overview.md)。 若要配置受信任的应用程序部署，可以将证书安装到计算机或企业级别。 有关详细信息，请参阅 [How to: Add a Trusted Publisher to a Client Computer for ClickOnce Applications](../deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications.md)。
 
 ## <a name="code-access-security-policies"></a>代码访问安全性策略
  应用程序的权限取决于应用程序清单的[ \<trustInfo> 元素](../deployment/trustinfo-element-clickonce-application.md)元素中的设置。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 会根据项目的 **“安全性”** 属性页上的设置自动生成此信息。 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序仅被授予它所请求的特定权限。 例如，文件访问需要完全信任权限时，如果应用程序请求文件访问权限，则它仅被授予文件访问权限，而不会被授予完全信任权限。 在开发 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序时，你应确保仅请求应用程序需要的特定权限。 在大多数情况下，你可以使用 Internet 区域和本地 Intranet 区域来将你的应用程序限制为部分信任。 有关更多信息，请参阅[如何：为 ClickOnce 应用程序设置安全区域](../deployment/how-to-set-a-security-zone-for-a-clickonce-application.md)。 如果应用程序需要自定义权限，则您可以创建一个自定义区域。 有关详细信息，请参阅[如何：设置 ClickOnce 应用程序的自定义权限](../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md)。
 
  如果包括应用程序部署区域的默认权限集以外的权限，则会导致在安装或更新时提示最终用户授予权限。 如果不想让系统提示用户，系统管理员可以指定一个 ClickOnce 部署策略，将某个特定的应用程序发行者定义为受信任的来源。 在部署此策略的计算机上，系统会自动授予权限而不会提示用户授予权限。
 
- 作为开发人员，您有责任确保您的应用程序将以适当的权限运行。 如果应用程序在运行时请求区域之外的权限，则可能会出现安全性异常。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]使你能够在目标安全区域中调试应用程序，并提供有关开发安全应用程序的帮助。 有关详细信息，请参阅[调试使用 system.web 的 ClickOnce 应用程序](../deployment/debugging-clickonce-applications-that-use-system-deployment-application.md)。
+ 作为开发人员，您有责任确保您的应用程序将以适当的权限运行。 如果应用程序在运行时请求区域之外的权限，则可能会出现安全性异常。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 使你能够在目标安全区域中调试应用程序，并提供有关开发安全应用程序的帮助。 有关详细信息，请参阅 [调试使用 system.web 的 ClickOnce 应用程序](../deployment/debugging-clickonce-applications-that-use-system-deployment-application.md)。
 
- 有关代码访问安全性和 ClickOnce 的详细信息，请参阅[ClickOnce 应用程序的代码访问安全性](../deployment/code-access-security-for-clickonce-applications.md)。
+ 有关代码访问安全性和 ClickOnce 的详细信息，请参阅 [ClickOnce 应用程序的代码访问安全性](../deployment/code-access-security-for-clickonce-applications.md)。
 
 ## <a name="code-signing-certificates"></a>代码签名证书
  若要使用 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 部署发布应用程序，可以用公钥/私钥对为应用程序的应用程序和部署清单签名。 **“项目设计器”** 的 **“签名”** 页上提供了用于为清单签名的工具。 有关更多信息，请参见 [Signing Page, Project Designer](../ide/reference/signing-page-project-designer.md)。
@@ -76,6 +76,6 @@ ms.locfileid: "85286292"
 ## <a name="deploying-obfuscated-assemblies"></a>部署经过模糊处理的程序集
  Visual Studio 包括免费的 [PreEmptive Protection - Dotfuscator Community](../ide/dotfuscator/index.md)，使用它，可以通过代码混淆和主动保护措施来保护 ClickOnce 应用程序。  有关详细信息，请参阅 [Dotfuscator Community 用户指南的 ClickOnce 部分](https://www.preemptive.com/dotfuscator/ce/docs/help/5.27/advanced_clickonce.html)。
 
-## <a name="see-also"></a>另请参阅
-- [ClickOnce 安全性和部署](../deployment/clickonce-security-and-deployment.md)
+## <a name="see-also"></a>请参阅
+- [ClickOnce 安全和部署](../deployment/clickonce-security-and-deployment.md)
 - [选择 ClickOnce 部署策略](../deployment/choosing-a-clickonce-deployment-strategy.md)

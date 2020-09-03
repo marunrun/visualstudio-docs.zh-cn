@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 655911bac1efbafe1838e24e2056282f9036479b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68179190"
 ---
 # <a name="stackframetypeenum"></a>StackFrameTypeEnum
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-指定的堆栈帧类型。  
+指定堆栈帧类型。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,29 +40,29 @@ enum StackFrameTypeEnum {
   
 ## <a name="elements"></a>元素  
  `FrameTypeFPO`  
- 帧指针省略;FPO 信息可用。  
+ 省略帧指针;可用的 FPO 信息。  
   
  `FrameTypeTrap`  
- 内核陷阱帧。  
+ 内核捕获帧。  
   
  `FrameTypeTSS`  
- 内核陷阱帧。  
+ 内核捕获帧。  
   
  `FrameTypeStandard`  
  标准 EBP 堆栈帧。  
   
  `FrameTypeFrameData`  
- 帧指针省略;帧数据信息可用。  
+ 省略帧指针;提供框架数据信息。  
   
  `FrameTypeUnknown`  
- 不具有任何调试信息的帧。  
+ 不包含任何调试信息的帧。  
   
 ## <a name="remarks"></a>备注  
- 此枚举中的值返回通过调用[idiastackframe:: Get_type](../../debugger/debug-interface-access/idiastackframe-get-type.md)方法。  
+ 此枚举中的值由对 [IDiaStackFrame：： get_type](../../debugger/debug-interface-access/idiastackframe-get-type.md) 方法的调用返回。  
   
 ## <a name="requirements"></a>要求  
- 标头： cvconst.h  
+ 标头： cvconst  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [枚举和结构](../../debugger/debug-interface-access/enumerations-and-structures.md)   
  [IDiaStackFrame::get_type](../../debugger/debug-interface-access/idiastackframe-get-type.md)

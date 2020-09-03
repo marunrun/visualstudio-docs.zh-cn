@@ -9,31 +9,31 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 3217835571ac659ac2cef2b46cb45a1c02ba2584
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80703041"
 ---
 # <a name="launch-visual-studio-using-dte"></a>使用 DTE 启动 Visual Studio
 
-从 Visual Studio 2017 开始，使用 DTE 启动视觉工作室的机制不同于推出早期版本的 Visual Studio。 此更改是必需的，因为 Visual Studio 2017 和更高版本支持主要版本的并行安装（例如，您可以并排安装预览版和发布版本）。
+从 Visual Studio 2017 开始，使用 DTE 启动 Visual Studio 的机制不同于启动先前版本的 Visual Studio。 此更改是必需的，因为 Visual Studio 2017 和更高版本支持主要版本的并行安装 (例如，你可以并排安装预览和发布版本) 。
 
-本文的其余部分显示了您可以使用 DTE 启动 Visual Studio 2019 的代码。
+本文的其余部分介绍了可用于使用 DTE 启动 Visual Studio 2019 的代码。
 
 ## <a name="set-up-the-project"></a>设置项目
 
-要查看启动代码的操作，请按照以下步骤创建项目。
+若要查看正在运行的代码，请按照以下步骤创建一个项目。
 
-1. 为 .NET 框架创建新的**控制台应用**项目。
+1. 为 .NET Framework 创建新的 **控制台应用程序** 项目。
 
-2. 安装[Microsoft.VisualStudio.安装程序.配置.Interop](https://www.nuget.org/packages/Microsoft.VisualStudio.Setup.Configuration.Interop/) NuGet 包，并添加对程序集的引用。
+2. 安装 [Microsoft.VisualStudio.Setup.Configu。互操作](https://www.nuget.org/packages/Microsoft.VisualStudio.Setup.Configuration.Interop/) NuGet 包并添加对程序集的引用。
 
 3. 添加对 EnvDTE 的引用。
 
-4. 将后面的[示例代码](#example-code)粘贴到*Program.cs*文件中。
+4. 将下面的 [示例代码](#example-code) 粘贴到 *Program.cs* 文件中。
 
-5. 按 **F5** 运行程序。 您应该看到 Visual Studio 2019 在程序退出之前打开。
+5. 按 **F5** 运行该程序。 在程序退出之前，你应该会看到 Visual Studio 2019 处于打开状态。
 
 ## <a name="example-code"></a>示例代码
 
@@ -188,4 +188,4 @@ namespace ConsoleLauncherApp
 ## <a name="see-also"></a>请参阅
 
 - [找到 Visual Studio](locating-visual-studio.md)
-- [演练：从编辑器扩展器访问 DTE 对象](walkthrough-accessing-the-dte-object-from-an-editor-extension.md)
+- [演练：从编辑器扩展访问 DTE 对象](walkthrough-accessing-the-dte-object-from-an-editor-extension.md)

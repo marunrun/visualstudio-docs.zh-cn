@@ -1,5 +1,5 @@
 ---
-title: DEBUG_CUSTOM_VIEWER |微软文档
+title: DEBUG_CUSTOM_VIEWER |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 3de9b8f7ef30cffbdd78399dc831060e413ba51b
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80737543"
 ---
 # <a name="debug_custom_viewer"></a>DEBUG_CUSTOM_VIEWER
@@ -51,32 +51,32 @@ public struct DEBUG_CUSTOM_VIEWER {
 
 ## <a name="members"></a>成员
 `dwID`\
-一个 ID，用于区分由一个`GUID`实现的多个查看器或可视化工具。
+用于区分由一个或多个实现的查看器的 ID `GUID` 。
 
 `bstrMenuName`\
-下拉菜单中显示的文本。
+将显示在下拉菜单中的文本。
 
 `bstrDescription`\
-自定义查看器或类型可视化工具的说明（如果未使用，则必须是空值）。
+如果未使用) ，则自定义查看器或类型可视化工具的说明 (必须为 null 值。
 
 `guidLang`\
-提供表达式赋值器的语言。
+提供表达式计算器的语言。
 
 `guidVendor`\
-提供表达式赋值器的供应商。
+提供表达式计算器的供应商。
 
 `bstrMetric`\
-存储自定义查看器或类型可视化工具`CLSID`的指标。
+用于存储自定义查看器或类型可视化工具的度量值 `CLSID` 。
 
 ## <a name="remarks"></a>备注
-此结构的列表通过调用[GetCustomViewerList](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md)方法（以及通过扩展[返回 GetCustomViewerList](../../../extensibility/debugger/reference/ieevisualizerservice-getcustomviewerlist.md)方法）返回。
+此结构的列表由对 [GetCustomViewerList](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md) 方法的调用返回， (，并通过扩展 [) 方法进行](../../../extensibility/debugger/reference/ieevisualizerservice-getcustomviewerlist.md) 。
 
 ## <a name="requirements"></a>要求
-标题： msdbg.h
+标头： msdbg
 
-命名空间：微软.VisualStudio.调试器.互通
+命名空间： VisualStudio
 
-程序集：微软.VisualStudio.调试器.Interop.dll
+程序集： Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [结构和联合](../../../extensibility/debugger/reference/structures-and-unions.md)

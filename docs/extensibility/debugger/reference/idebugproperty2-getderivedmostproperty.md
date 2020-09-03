@@ -1,5 +1,5 @@
 ---
-title: IDebug属性2：：获取最派生的财产 |微软文档
+title: IDebugProperty2：： GetDerivedMostProperty |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 2086aded4361049d722ec36ba1d470ed8f7ac6e5
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80721501"
 ---
 # <a name="idebugproperty2getderivedmostproperty"></a>IDebugProperty2::GetDerivedMostProperty
-获取属性的派生最源属性。
+获取属性的派生程度最大的属性。
 
 ## <a name="syntax"></a>语法
 
@@ -41,13 +41,13 @@ int GetDerivedMostProperty ( 
 
 ## <a name="parameters"></a>参数
 `ppDerivedMost`\
-[出]返回表示派生最源属性的[IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)对象。
+弄返回表示最常派生的属性的 [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) 对象。
 
 ## <a name="return-value"></a>返回值
- 如果成功，返回`S_OK`;否则返回错误代码。 如果没有`S_GETDERIVEDMOST_NO_DERIVED_MOST`要检索的派生最属性，则返回。
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。 `S_GETDERIVEDMOST_NO_DERIVED_MOST`如果没有要检索的最常派生的属性，则返回。
 
 ## <a name="remarks"></a>备注
- 例如，如果此属性描述实现`ClassRoot`但实际上是从`ClassDerived``ClassRoot`派生的对象的实例化，则此方法返回描述`ClassDerived`该对象的[IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)对象。
+ 例如，如果此属性描述一个对象，该对象实现， `ClassRoot` 但它实际上是 `ClassDerived` 派生自的实例 `ClassRoot` ，则此方法将返回描述对象的 [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) 对象 `ClassDerived` 。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)

@@ -12,84 +12,84 @@ caps.latest.revision: 22
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 1cdd172c2960024da8b12735764161d36498c4e2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68162094"
 ---
 # <a name="deploying-custom-start-pages"></a>部署自定义起始页
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-使用 VSIX 部署或将文件复制到目标计算机上的正确位置，你可以部署自定义起始页。  
+您可以通过使用 VSIX 部署或通过将文件复制到目标计算机上的正确位置来部署自定义起始页。  
   
 ## <a name="vsix-deployment-by-using-the-start-page-project-template"></a>使用起始页项目模板的 VSIX 部署  
- 当使用起始页项目模板，创建一个起始页，然后生成项目时，Visual Studio 创建可以分发的.vsix 文件。 打包.vsix 文件中的启动页提供了部署，具体取决于您的目标受众的以下选项：  
+ 使用 "起始页" 项目模板创建 "起始页"，然后生成项目时，Visual Studio 将创建一个可分发的 .vsix 文件。 打包 .vsix 文件中的起始页可以根据你的目标受众，为你提供以下部署选项：  
   
-- 在网络共享上或在公共网站上，可以将.vsix 文件。 在有人打开文件时，会自动安装启动页。  
+- 可以将 .vsix 文件放在网络共享或公共网站上。 当某个用户打开该文件时，将自动安装起始页。  
   
-- 可以上传到.vsix 文件[Visual Studio Marketplace](https://marketplace.visualstudio.com/) Web 站点，以便用户可以使用来安装它**扩展管理器**。  
+- 您可以将 .vsix 文件上载到 [Visual Studio Marketplace](https://marketplace.visualstudio.com/) 网站，以便用户可以使用 **扩展管理器**进行安装。  
   
-  起始页项目模板创建一份默认 Visual Studio 起始页，以便您可以修改副本，并保留原始。  
+  "起始页" 项目模板创建默认 Visual Studio 起始页的副本，以便您可以修改副本并保留原始页。  
   
-  你可以通过使用获取起始页项目模板**扩展管理器**或通过从 Web 站点下载它。  
+  您可以使用 **扩展管理器** 或从网站下载 "起始页" 项目模板。  
   
-## <a name="vsix-deployment-without-using-the-start-page-project-template"></a>而无需使用起始页项目模板的 VSIX 部署  
- 成功的 VSIX 部署需要在 VSIX 注册过程和识别的文件夹中安装的扩展**扩展管理器**。 由于起始页项目模板已指定正确的文件夹中，我们建议要打包为 VSIX 部署扩展时使用它。 但是，如果你不能在其中使用该模板的用例，您可以创建 VSIX 部署而无需使用它。  
+## <a name="vsix-deployment-without-using-the-start-page-project-template"></a>不使用起始页项目模板的 VSIX 部署  
+ 成功的 VSIX 部署需要在由 VSIX 注册过程和 **扩展管理器**识别的文件夹中安装一个扩展。 由于起始页项目模板已经指定了正确的文件夹，因此，我们建议你在每次需要为 VSIX 部署打包扩展时使用它。 但是，如果你不能使用模板，则可以在不使用模板的情况下创建它。  
   
- 若要创建 VSIX 部署而无需使用起始页项目模板，首先创建这两种方式之一中的启动页的.vsix 文件：  
+ 若要在不使用起始页项目模板的情况下创建 VSIX 部署，请先使用以下两种方法之一创建起始页的 .vsix 文件：  
   
-- 通过将自定义起始页文件添加到一个空的 VSIX 项目。 有关详细信息，请参阅[VSIX 项目模板](../extensibility/vsix-project-template.md)。  
+- 通过将自定义起始页文件添加到空 VSIX 项目中。 有关详细信息，请参阅 [VSIX 项目模板](../extensibility/vsix-project-template.md)。  
   
-- 通过手动创建.vsix 文件。 有关详细信息，请参阅[如何：手动将扩展打包 （VSIX 部署）](../misc/how-to-manually-package-an-extension-vsix-deployment.md)。  
+- 通过手动创建 .vsix 文件。 有关详细信息，请参阅 [如何：手动将扩展打包 (VSIX 部署) ](../misc/how-to-manually-package-an-extension-vsix-deployment.md)。  
   
-  Visual studio 能够识别启动页上，`Content Element`必须包含的 VSIX 清单`CustomExtension Element`具有`Type`属性设置为`"StartPage"`。 使用 VSIX 部署安装起始页扩展将出现在**自定义起始页**上列出**启动**选项页中以 **[安装的扩展]** *扩展插件名称*。  
+  为了使 Visual Studio 能够识别起始页， `Content Element` VSIX 清单的必须包含一个 `CustomExtension Element` `Type` 将属性设置为的 `"StartPage"` 。 **"启动选项"** 页上的 "**自定义起始页**" 列表中显示了已使用 VSIX 部署安装的起始页**扩展。** *Extension Name*  
   
-  如果起始页包中包含的程序集，必须添加绑定路径注册，以便它们可用于 Visual Studio 将启动。 若要执行此操作，请确保您的包，包括具有以下信息的.pkgdef 文件。  
+  如果起始页包包含程序集，则必须添加绑定路径注册，使其在 Visual Studio 启动时可用。 为此，请确保你的包包含 .pkgdef 文件，其中包含以下信息。  
   
 ```  
 [$RootKey$\BindingPaths\{Insert a new GUID here}]  
 "$PackageFolder$"=""  
 ```  
   
-### <a name="vsix-deployment-for-all-users"></a>所有用户的的 VSIX 部署  
- 默认情况下，在 VSIX 包中部署的扩展插件安装仅为当前用户。 您可以通过创建的所有用户部署的目标计算机的所有用户都使起始页安装。  
+### <a name="vsix-deployment-for-all-users"></a>所有用户的 VSIX 部署  
+ 默认情况下，仅为当前用户安装 VSIX 包中部署的扩展。 您可以通过创建 "所有用户" 部署为目标计算机的所有用户创建一个开始页面。  
   
-##### <a name="to-create-an-all-users-deployment"></a>若要创建的所有用户部署  
+##### <a name="to-create-an-all-users-deployment"></a>创建 "所有用户" 部署  
   
-1. 在代码视图中打开 extension.vsixmanifest 文件。  
+1. 在代码视图中打开 source.extension.vsixmanifest 文件。  
   
-2. 在中`Identifier`vsix 清单中，元素添加`AllUsers`元素的值为`true`。  
+2. 在 `Identifier` vsix 清单的元素中，添加一个 `AllUsers` 值为的元素 `true` 。  
   
     ```  
     <AllUsers>true</AllUsers>  
     ```  
   
-     这将导致 vsix 安装程序提示输入管理员权限，然后将文件安装到 \Common7\IDE\Extensions。  
+     这将导致 vsix 安装程序提示管理员权限，然后将文件安装到 \Common7\IDE\Extensions。  
   
-3. 打开.pkgdef 文件。  
+3. 打开 .pkgdef 文件。  
   
-4. 修改.pkgdef 设置默认起始页在 HKLM 下的添加以下内容，其中*MyStartPage.xaml*是包含你的起始页.xaml 文件的名称。  
+4. 通过添加以下项来修改 .pkgdef 以设置 HKLM 下的默认起始页，其中 *MyStartPage* 是包含起始页的 .xaml 文件的名称。  
   
-     [$RootKey$\StartPage\Default]  
+     [$RootKey $ \StartPage\Default]  
   
-     "Uri"="$PackageFolder$\\*MyStartPage.xaml*"  
+     "Uri" = "$PackageFolder $ \\ *MyStartPage*"  
   
-     这将告知 Visual 花了在新的起始页位置中进行查找。  
+     这会告知 Visual 考验在新的起始页位置中查找。  
   
 ## <a name="file-copy-deployment"></a>文件复制部署  
- 不需要创建要部署自定义起始页的.vsix 文件。 相反，您可以直接在用户的 \StartPages\ 文件夹复制标记和支持文件。 **自定义起始页**上列出**启动**选项页列出了该文件夹，以及该路径中的每个.xaml 文件 — 例如，%USERPROFILE%\My Documents\Visual Studio *版本*\StartPages\\*文件名*.xaml。 如果你的起始页包含对专用程序集的引用，必须将它们复制并将其粘贴在 \PrivateAssemblies\ 文件夹中。  
+ 不必创建 .vsix 文件来部署自定义起始页。 相反，你可以将标记和支持文件直接复制到用户的 \StartPages\ 文件夹中。 "**启动**选项" 页面上的 "**自定义起始页**" 列表中列出了该文件夹中的每个 .xaml 文件以及路径，例如%USERPROFILE%\My Documents\Visual Studio *version*\StartPages \\ *file Name*。 如果起始页包含对专用程序集的引用，则必须复制这些程序集，并将其粘贴到 \PrivateAssemblies\ 文件夹中。  
   
- 若要分发而无需打包创建起始页中的.vsix 文件，建议使用基本的文件的复制策略，例如，批处理脚本或任何其他部署技术，它允许您将文件放入所需的目录。  
+ 若要分发已创建的起始页，而不将其打包到 .vsix 文件中，我们建议你使用基本的文件复制策略（例如，批处理脚本）或任何其他部署技术，使你能够将这些文件放入所需的目录。  
   
-#### <a name="to-manually-install-a-custom-start-page"></a>若要手动安装自定义起始页  
+#### <a name="to-manually-install-a-custom-start-page"></a>手动安装自定义起始页  
   
-1. 复制的.xaml 文件，包含起始页标记，以及任何支持文件以外的程序集，并将其粘贴在用户的 \StartPages\ 文件夹中。  
+1. 复制包含起始页标记的 .xaml 文件和除程序集之外的任何支持文件，然后将其粘贴到用户的 \StartPages\ 文件夹中。  
   
-2. 如果启动页需要程序集，将它们复制并粘贴在...\\ *Visual Studio 安装文件夹*\Common7\IDE\PrivateAssemblies\\。  
+2. 如果起始页需要程序集，请将其复制并粘贴到中。 \\*Visual Studio 安装文件夹*\Common7\IDE\PrivateAssemblies \\ 。  
   
-3. 在中**自定义起始页**上列出**启动**选项页上，选择新的起始页。 有关详细信息，请参阅[自定义起始页](../ide/customizing-the-start-page-for-visual-studio.md)。  
+3. 在 "**启动**选项" 页面上的 "**自定义起始页**" 列表中，选择新的起始页。 有关详细信息，请参阅[自定义起始页](../ide/customizing-the-start-page-for-visual-studio.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [自定义起始页](../ide/customizing-the-start-page-for-visual-studio.md)   
  [将用户控件添加到起始页](../extensibility/adding-user-control-to-the-start-page.md)

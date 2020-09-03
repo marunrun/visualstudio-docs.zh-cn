@@ -16,20 +16,20 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 4adcae1c1cc616cdbcf5a7aa15342d221c2f4300
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85540577"
 ---
 # <a name="ca2228-do-not-ship-unreleased-resource-formats"></a>CA2228:不要发行未发布的资源格式
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|Item|值|
+|项|值|
 |-|-|
 |TypeName|DoNotShipUnreleasedResourceFormats|
 |CheckId|CA2228|
-|Category|Microsoft. 使用情况|
+|类别|Microsoft. 使用情况|
 |是否重大更改|非重大更改|
 
 ## <a name="cause"></a>原因

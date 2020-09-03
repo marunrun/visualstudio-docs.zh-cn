@@ -1,5 +1,5 @@
 ---
-title: IDebugCoreServer3::CreateInstanceInServer |Microsoft Docs
+title: IDebugCoreServer3：： CreateInstanceInServer |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,10 +13,10 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: f1d8964a79aaeb7b90dfbc809ec547d0282d79fa
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68205262"
 ---
 # <a name="idebugcoreserver3createinstanceinserver"></a>IDebugCoreServer3::CreateInstanceInServer
@@ -48,23 +48,23 @@ int CreateInstanceInServer(
   
 #### <a name="parameters"></a>参数  
  `szDll`  
- [in]实现中指定的 CLSID 的 dll 路径`clsidObject`参数。 如果这是`NULL`，然后 COM 的`CoCreateInstance`调用函数。  
+ 中用于实现参数中指定的 CLSID 的 dll 的路径 `clsidObject` 。 如果是 `NULL` ，则调用 COM 的 `CoCreateInstance` 函数。  
   
  `wLangId`  
- [in]调试引擎的区域设置。 这可以是 0，如果[SetLocale](../../../extensibility/debugger/reference/idebugengine2-setlocale.md)不应调用方法。  
+ 中调试引擎的区域设置。 如果不应调用 [SetLocale](../../../extensibility/debugger/reference/idebugengine2-setlocale.md) 方法，则这可能为0。  
   
  `clsidObject`  
- [in]若要创建的调试引擎的 CLSID。  
+ 中要创建的调试引擎的 CLSID。  
   
  `riid`  
- [in]接口 ID 的特定接口来检索此类对象中。  
+ 中要从类对象中检索的特定接口的接口 ID。  
   
  `ppvObject`  
- [out]`IUnknown`中实例化的对象的接口。 强制转换或封送到所需的接口的此对象。  
+ [out] `IUnknown` 实例化对象的接口。 将此对象强制转换或封送到所需的接口。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md)   
  [SetLocale](../../../extensibility/debugger/reference/idebugengine2-setlocale.md)

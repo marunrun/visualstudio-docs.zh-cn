@@ -1,5 +1,5 @@
 ---
-title: 菜单元素 |微软文档
+title: 菜单元素 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: a6382abed36aba66087066bf5664ae55682e39e2
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80702579"
 ---
 # <a name="menus-element"></a>菜单元素
@@ -35,20 +35,20 @@ ms.locfileid: "80702579"
 
 ### <a name="attributes"></a>特性
 
-|特性|描述|
+|特性|说明|
 |---------------|-----------------|
-|条件|可选。 请参阅[条件属性](../extensibility/vsct-xml-schema-conditional-attributes.md)。|
+|条件|可选。 请参阅 [条件特性](../extensibility/vsct-xml-schema-conditional-attributes.md)。|
 
 ### <a name="child-elements"></a>子元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
 |[菜单元素](../extensibility/menus-element.md)|定义 VSPackage 实现的所有菜单和工具栏。|
-|[菜单元素](../extensibility/menu-element.md)|表示单个菜单或工具栏。|
+|[Menu 元素](../extensibility/menu-element.md)|表示单个菜单或工具栏。|
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
 |[命令元素](../extensibility/commands-element.md)|表示 VSPackage 中命令的集合。|
 
@@ -77,6 +77,6 @@ ms.locfileid: "80702579"
 <Commands>
 ```
 
-## <a name="see-also"></a>请参阅
-- [VS包如何添加用户界面元素](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
+## <a name="see-also"></a>另请参阅
+- [Vspackage 如何添加用户界面元素](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
 - [命令、菜单和工具栏](../extensibility/internals/commands-menus-and-toolbars.md)

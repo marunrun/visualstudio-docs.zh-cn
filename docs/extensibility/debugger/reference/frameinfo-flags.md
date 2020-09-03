@@ -1,5 +1,5 @@
 ---
-title: FRAMEINFO_FLAGS |微软文档
+title: FRAMEINFO_FLAGS |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 3510726400623c5ddf3e7a4d58a4903763b91245
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80736797"
 ---
 # <a name="frameinfo_flags"></a>FRAMEINFO_FLAGS
-指定要检索有关堆栈帧对象的信息。
+指定要检索的有关堆栈帧对象的信息。
 
 ## <a name="syntax"></a>语法
 
@@ -102,109 +102,109 @@ public enum enum_FRAMEINFO_FLAGS {
 
 ## <a name="fields"></a>字段
 `FIF_FUNCNAME`\
-初始化/使用`m_bstrFuncName`字段。
+初始化/使用 `m_bstrFuncName` 字段。
 
 `FIF_RETURNTYPE`\
-初始化/使用`m_bstrReturnType`字段。
+初始化/使用 `m_bstrReturnType` 字段。
 
 `FIF_ARGS`\
-初始化/使用`m_bstrArgs`字段。
+初始化/使用 `m_bstrArgs` 字段。
 
 `FIF_LANGUAGE`\
-初始化/使用`m_bstrLanguage`字段。
+初始化/使用 `m_bstrLanguage` 字段。
 
 `FIF_MODULE`\
-初始化/使用`m_bstrModule`字段。
+初始化/使用 `m_bstrModule` 字段。
 
 `FIF_STACKRANGE`\
-初始化/使用`m_addrMin`和`m_addrMax`（堆栈范围） 字段。
+初始化/使用 `m_addrMin` 和 `m_addrMax` (堆栈范围) 字段。
 
 `FIF_FRAME`\
-初始化/使用`m_pFrame`字段。
+初始化/使用 `m_pFrame` 字段。
 
 `FIF_DEBUGINFO`\
-初始化/使用`m_fHasDebugInfo`字段。
+初始化/使用 `m_fHasDebugInfo` 字段。
 
 `FIF_STALECODE`\
-初始化/使用`m_fStaleCode`字段。
+初始化/使用 `m_fStaleCode` 字段。
 
 `FIF_ANNOTATEDFRAME`\
-初始化/使用`m_fAnnotatedFrame`字段。
+初始化/使用 `m_fAnnotatedFrame` 字段。
 
 `FIF_DEBUG_MODULEP`\
-初始化/使用`m_pModule`字段。
+初始化/使用 `m_pModule` 字段。
 
 `FIF_FUNCNAME_FORMAT`\
-设置函数名称的格式。 结果在字段中返回，`m_bstrFunName`并且不会填写其他字段。
+格式化函数名称。 结果将在字段中返回 `m_bstrFunName` ，而不会填写其他字段。
 
 `FIF_FUNCNAME_RETURNTYPE`\
-将返回类型添加到`m_bstrFuncName`字段中。
+将返回类型添加到 `m_bstrFuncName` 字段。
 
 `FIF_FUNCNAME_ARGS`\
-将参数添加到`m_bstrFuncName`字段中。
+将参数添加到 `m_bstrFuncName` 字段。
 
 `FIF_FUNCNAME_LANGUAGE`\
-将语言添加到`m_bstrFuncName`字段中。
+将语言添加到 `m_bstrFuncName` 字段。
 
 `FIF_FUNCNAME_MODULE`\
-将模块名称添加到`m_bstrFuncName`字段中。
+将模块名称添加到 `m_bstrFuncName` 字段。
 
 `FIF_FUNCNAME_LINES`\
-将行数添加到`m_bstrFuncName`字段中。
+将行数添加到字段中 `m_bstrFuncName` 。
 
 `FIF_FUNCNAME_OFFSET`\
-如果`FIF_FUNCNAME_LINES`指定，`m_bstrFuncName`则从行的开头向字段添加偏移量（以字节为单位）。 如果未`FIF_FUNCNAME_LINES`指定，或者如果行号不可用，则从函数的开头添加偏移以字节为单位。
+`m_bstrFuncName`如果指定，则从行的开头向字段添加偏移量（以字节为单位） `FIF_FUNCNAME_LINES` 。 如果 `FIF_FUNCNAME_LINES` 未指定，或者行号不可用，则将从函数的开头开始添加偏移量（以字节为单位）。
 
 `FIF_FUNCNAME_ARGS_TYPES`\
-将每个函数参数的类型添加到`m_bstrFuncName`字段中。
+将每个函数参数的类型添加到 `m_bstrFuncName` 字段中。
 
 `FIF_FUNCNAME_ARGS_NAMES`\
-将每个函数参数的名称添加到`m_bstrFuncName`字段中。
+将每个函数参数的名称添加到 `m_bstrFuncName` 字段中。
 
 `FIF_FUNCNAME_ARGS_VALUES`\
-将每个函数参数的值添加到`m_bstrFuncName`字段中。
+将每个函数参数的值添加到 `m_bstrFuncName` 字段中。
 
 `FIF_FUNCNAME_ARGS_ALL`\
-将所有参数的类型、名称和值添加到`m_bstrFuncName`字段中。
+将所有参数的类型、名称和值添加到字段中 `m_bstrFuncName` 。
 
 `FIF_ARGS_TYPES`\
-将检索参数类型并设置格式。
+检索参数类型并设置其格式。
 
 `FIF_ARGS_NAMES`\
-检索参数名称并设置格式。
+检索参数名称并设置其格式。
 
 `FIF_ARGS_VALUES`\
-将检索参数值并设置格式。
+检索参数值并设置其格式。
 
 `FIF_ARGS_ALL`\
-检索并格式化所有参数的类型、名称和值。
+检索所有参数的类型、名称和值并设置其格式。
 
 `FIF_ARGS_NOFORMAT`\
-指定不格式化参数（例如，不要在参数列表周围添加首和闭括号，也不在参数之间添加分隔符）。
+指定不设置参数的格式 (例如，不要在参数列表两侧添加左括号和右括号，也不要在) 的参数之间添加分隔符。
 
 `FIF_ARGS_NO_FUNC_EVAL`\
-指定在检索参数值时不应使用函数（属性）计算。
+指定在检索参数值时不应使用函数 (属性) 计算。
 
 `FIF_FILTER_NON_USER_CODE`\
-调试引擎是筛选非用户代码帧，以便不包含这些帧。
+调试引擎用于筛选非用户代码框架，因此不包含它们。
 
 `FIF_ARGS_NO_TOSTRING`\
-返回函数参数`ToString()`时不允许函数计算或格式化。
+`ToString()`返回函数参数时，不允许函数求值或格式设置。
 
 `FIF_DESIGN_TIME_EXPR_EVAL`\
-帧信息应从托管应用域（而不是托管进程）获取。
+帧信息应该从托管的应用程序域（而不是托管进程）获得。
 
 ## <a name="remarks"></a>备注
-这些标志将传递给[EnumFrameInfo](../../../extensibility/debugger/reference/idebugthread2-enumframeinfo.md)和[GetInfo](../../../extensibility/debugger/reference/idebugstackframe2-getinfo.md)方法，以指示要在[FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md)结构或结构中初始化哪些字段。
+这些标志传递给 [EnumFrameInfo](../../../extensibility/debugger/reference/idebugthread2-enumframeinfo.md) 和 [GetInfo](../../../extensibility/debugger/reference/idebugstackframe2-getinfo.md) 方法，以指示要在 [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md) 结构或结构中初始化的字段。
 
-这些标志还用于指示在返回结构时使用[FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md)结构的哪些字段并有效。 这些值可以稍微结合`OR`。
+这些标志还用于指示在返回结构时，使用了 [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md) 结构的哪些字段并使这些字段有效。 这些值可以与按位组合 `OR` 。
 
 ## <a name="requirements"></a>要求
-标题： msdbg.h
+标头： msdbg
 
-命名空间：微软.VisualStudio.调试器.互通
+命名空间： VisualStudio
 
-程序集：微软.VisualStudio.调试器.Interop.dll
+程序集： Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [枚举](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

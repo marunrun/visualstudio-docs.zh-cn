@@ -13,16 +13,16 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 04a8756fd7eb2a4b938ebcd2d5f4754509b704e3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68205215"
 ---
-# <a name="moduleinfo"></a>MODULE_INFO
+# <a name="module_info"></a>MODULE_INFO
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-描述为特定模块 （DLL、 exe 文件或程序集）。  
+描述特定模块 (DLL、EXE 或程序集) 。  
   
 ## <a name="syntax"></a>语法  
   
@@ -62,25 +62,25 @@ public struct MODULE_INFO { 
   
 ## <a name="members"></a>成员  
  dwValidFields  
- 中的标志的组合[MODULE_INFO_FIELDS](../../../extensibility/debugger/reference/module-info-fields.md)枚举，用于指定哪些字段填写。  
+ [MODULE_INFO_FIELDS](../../../extensibility/debugger/reference/module-info-fields.md)枚举中的标志的组合，用于指定要填写的字段。  
   
  m_bstrName  
  模块名。  
   
  m_bstrUrl  
- 模块的 URL。  
+ 模块 URL。  
   
  m_bstrVersion  
  模块版本。  
   
  m_bstrDebugMessage  
- 可选的消息有关该模块，例如，"无法加载符号。"  
+ 有关模块的可选消息，例如 "无法加载符号"。  
   
  m_addrLoadAddress  
  模块加载地址。  
   
  m_addrPreferredLoadAddress  
- 模块的首选的加载地址。  
+ 模块的首选加载地址。  
   
  m_dwSize  
  模块大小。  
@@ -92,24 +92,24 @@ public struct MODULE_INFO { 
  上次修改符号文件的时间。  
   
  m_bstrUrlSymbolLocation  
- 符号文件的位置 (例如，"。\\") 指定模块中。 用作起始位置到查找符号的模块。  
+ 符号文件的位置 (例如，". \\ "模块中指定 ) 。 用作查找模块符号的起始位置。  
   
  m_dwModuleFlags  
- 中的标志的组合[MODULE_FLAGS](../../../extensibility/debugger/reference/module-flags.md)枚举，用于描述该模块。  
+ 描述模块的 [MODULE_FLAGS](../../../extensibility/debugger/reference/module-flags.md) 枚举中的标志的组合。  
   
 ## <a name="remarks"></a>备注  
- 此结构传递给[GetInfo](../../../extensibility/debugger/reference/idebugmodule2-getinfo.md)填写其中的方法。  
+ 此结构被传递给 [GetInfo](../../../extensibility/debugger/reference/idebugmodule2-getinfo.md) 方法，其中填充了此结构。  
   
- 此结构对应于中列出的每个模块**模块**窗口。  
+ 此结构对应于 " **模块** " 窗口中列出的每个模块。  
   
 ## <a name="requirements"></a>要求  
- 标头： msdbg.h  
+ 标头： msdbg  
   
- 命名空间:Microsoft.VisualStudio.Debugger.Interop  
+ 命名空间： VisualStudio  
   
- 程序集：Microsoft.VisualStudio.Debugger.Interop.dll  
+ 程序集： Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [结构和联合](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [MODULE_INFO_FIELDS](../../../extensibility/debugger/reference/module-info-fields.md)   
  [MODULE_FLAGS](../../../extensibility/debugger/reference/module-flags.md)   

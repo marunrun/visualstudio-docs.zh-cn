@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: c04ef8f015b081e29891d7439b783e3851376210
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85531543"
 ---
 # <a name="shortcut-keys-help-viewer"></a>快捷键 (Help Viewer)
@@ -24,32 +24,32 @@ ms.locfileid: "85531543"
 
 使用下表中的快捷键，可以在 Microsoft Help Viewer 中导航：
 
-|区域|击键|操作|
+|领域|击键|操作|
 |----------|---------------|------------|
 |常规应用程序|Space|在编辑字段外的任意位置使用而不是编辑。|
 |常规应用程序|F1|打开有关当前 UI 元素的帮助。|
 |常规应用程序|F11|在全屏视图与常规视图之间切换。|
-|Toolbar|Backspace<br /><br /> - 或 -<br /><br /> Alt+向左键|显示上一页。|
-|Toolbar|Alt+向右键|显示下一页。|
-|Toolbar|Alt+Home|显示帮助审阅者主页。|
-|Toolbar|Ctrl+S|突出显示目录的当前主题（在“内容”选项卡）****。|
-|Toolbar|Ctrl + D|将当前主题添加到“收藏夹”选项卡****。|
-|Toolbar|Ctrl+F|显示主题区域中的查找栏，便于在当前主题中搜索文本。|
-|Toolbar|Ctrl+P|打印当前页。|
-|Toolbar|Ctrl+F2|显示当前页的打印预览。|
-|Toolbar|Ctrl+O|显示“查看器选项”对话框****。|
-|Toolbar|Ctrl+Shift+M|显示“管理内容”选项卡****。|
-|导航器|Alt+C<br /><br /> - 或 -<br /><br /> Ctrl+Shift+C|显示“内容”选项卡****。|
-|导航器|Alt+I<br /><br /> - 或 -<br /><br /> Ctrl+Shift+I|显示“索引”选项卡****。|
-|导航器|Alt+F<br /><br /> - 或 -<br /><br /> Ctrl+Shift+F|显示“收藏夹”选项卡****。|
-|导航器|Alt+S<br /><br /> - 或 -<br /><br /> Ctrl+E<br /><br /> - 或 -<br /><br /> Ctrl+Shift+S|显示“搜索”选项卡****。|
-|导航器|Alt+M<br /><br /> - 或 -<br /><br /> Ctrl+Shift+M|显示“管理内容”选项卡****。|
+|工具栏|Backspace<br /><br /> \- 或 -<br /><br /> Alt+向左键|显示上一页。|
+|工具栏|Alt+向右键|显示下一页。|
+|工具栏|Alt+Home|显示帮助审阅者主页。|
+|工具栏|Ctrl+S|突出显示目录的当前主题（在“内容”选项卡）****。|
+|工具栏|Ctrl + D|将当前主题添加到“收藏夹”选项卡****。|
+|工具栏|Ctrl+F|显示主题区域中的查找栏，便于在当前主题中搜索文本。|
+|工具栏|Ctrl+P|打印当前页。|
+|工具栏|Ctrl+F2|显示当前页的打印预览。|
+|工具栏|Ctrl+O|显示“查看器选项”对话框****。|
+|工具栏|Ctrl+Shift+M|显示“管理内容”选项卡****。|
+|导航器|Alt+C<br /><br /> \- 或 -<br /><br /> Ctrl+Shift+C|显示“内容”选项卡****。|
+|导航器|Alt+I<br /><br /> \- 或 -<br /><br /> Ctrl+Shift+I|显示“索引”选项卡****。|
+|导航器|Alt+F<br /><br /> \- 或 -<br /><br /> Ctrl+Shift+F|显示“收藏夹”选项卡****。|
+|导航器|Alt+S<br /><br /> \- 或 -<br /><br /> Ctrl+E<br /><br /> \- 或 -<br /><br /> Ctrl+Shift+S|显示“搜索”选项卡****。|
+|导航器|Alt+M<br /><br /> \- 或 -<br /><br /> Ctrl+Shift+M|显示“管理内容”选项卡****。|
 |主题|快捷菜单键<br /><br /> OR<br /><br /> Shift+F10|显示当前 UI 元素的快捷菜单。|
 |主题|向上键|滚动到文档开头，一次滚动一行。|
 |主题|向下键|滚动到文档末尾，一次滚动一行。|
 |主题|Page Up|滚动到文档开头，一次滚动一屏幕。|
 |主题|Page Down|滚动到文档末尾，一次滚动一屏幕。|
-|主题|Home|移动到文档开头。|
+|主题|主页|移动到文档开头。|
 |主题|结束|移动到文档末尾。|
 |主题|Ctrl+F|在此页上查找搜索文本。|
 |主题|F5|刷新当前页。|
@@ -90,7 +90,7 @@ ms.locfileid: "85531543"
 
  **窗口管理**
 
-|**击键**|**Action**|
+|**击键**|**操作**|
 |-|-|
 |Ctrl + L|将 Help Viewer 的布局重置为默认布局，并关闭所有主题选项卡。|
 |Ctrl+Tab|首次击键，会将焦点移到“选项卡选择”菜单****。 下次击键会将焦点移到菜单项顶部，后续的击键会按从上到下的顺序将焦点移到菜单项。 菜单项具有焦点时，按下 Enter 键会将该项变成活动选项卡。|
@@ -99,12 +99,12 @@ ms.locfileid: "85531543"
 
  **管理内容**
 
-|**击键**|**Action**|
+|**击键**|**操作**|
 |-|-|
 |Alt+D|将安装源更改为磁盘。|
 |Alt+O|将安装源更改为联机。|
 |选项卡|将焦点更改到“本地存储路径”文本框****。|
-|选项卡|将焦点更改到**移动 ...** 按钮。|
+|选项卡|将焦点更改到 **移动 ...** 按钮。|
 |Alt+V|打开“移动内容”对话框****。|
 |Ctrl+Alt+F|将焦点更改到“筛选器文档”文本框****。|
 |选项卡|将焦点更改到文档列表。|

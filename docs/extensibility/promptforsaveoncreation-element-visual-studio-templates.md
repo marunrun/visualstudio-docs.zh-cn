@@ -1,5 +1,5 @@
 ---
-title: 提示保存创建元素（可视化工作室模板） |微软文档
+title: " (Visual Studio 模板) 的 PromptForSaveOnCreation 元素 |Microsoft Docs"
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -15,15 +15,15 @@ ms.workload:
 - vssdk
 monikerRange: vs-2017
 ms.openlocfilehash: 2e6bbd62120da59da1fb26e671c1aa02f33949f4
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80701781"
 ---
-# <a name="promptforsaveoncreation-element-visual-studio-templates"></a>提示保存创建元素（可视化工作室模板）
+# <a name="promptforsaveoncreation-element-visual-studio-templates"></a> (Visual Studio 模板的 PromptForSaveOnCreation 元素) 
 
-指定在创建项目时是否通过 **"新项目**"对话框提示用户创建项目保存位置。 如果此元素设置为`true`，则系统会提示用户输入保存位置。 如果`false`不会提示它们（即创建临时项目）。
+指定在创建项目时是否通过 " **新建项目** " 对话框提示用户输入项目保存位置。 如果此元素设置为 `true` ，则会提示用户输入保存位置。 如果 `false` 为，则不会提示他们 (即，) 创建临时项目。
 
 ```xml
 \<VSTemplate>
@@ -50,20 +50,20 @@ ms.locfileid: "80701781"
 
 |元素|描述|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|必需元素。<br /><br /> 将此模板分类并定义此模板在 **“新建项目”** 或 **“添加新项”** 对话框中的显示方式。|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|必需的元素。<br /><br /> 将此模板分类并定义此模板在 **“新建项目”** 或 **“添加新项”** 对话框中的显示方式。|
 
 ## <a name="text-value"></a>文本值
  需要一个文本值。
 
- 文本必须为 或`true``false`，`true`指示在创建新项目时将提示用户创建保存位置。
+ 文本必须是 `true` 或 `false` ，表示在 `true` 创建新项目时将提示用户输入保存位置。
 
 ## <a name="remarks"></a>备注
- `PromptForSaveOnCreation` 是可选元素。 默认值为 `false`。
+ `PromptForSaveOnCreation` 是可选元素。 默认值是 `false`。
 
- 临时项目是您可以创建和修改的项目，无需将该项目的内容保存在磁盘上。
+ 临时项目是您可以创建和修改的项目，而无需将该项目的内容保存在磁盘上。
 
 ## <a name="example"></a>示例
- 下面的示例设置 等于 的值`PromptForSaveOnCreation``false`，该值指定允许将项目创建为临时项目。
+ 下面的示例将的值设置 `PromptForSaveOnCreation` 为 `false` ，它指定允许将项目创建为临时项目。
 
 ```xml
 <VSTemplate Type="Project" Version="3.0.0"
@@ -92,5 +92,5 @@ ms.locfileid: "80701781"
 
 ## <a name="see-also"></a>请参阅
 
-- [可视化工作室模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
+- [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
 - [创建项目和项模板](../ide/creating-project-and-item-templates.md)

@@ -13,16 +13,16 @@ caps.latest.revision: 15
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 264d9057bf4f17281d6d8a16ed3a6794004e0e21
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68189558"
 ---
 # <a name="sccbeginbatch-function"></a>SccBeginBatch 函数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-此函数将启动批处理序列的源代码管理操作。 [SccEndBatch](../extensibility/sccendbatch-function.md)将调用以结束该批处理。 这些批不能嵌套。  
+此函数启动源代码管理操作的批处理序列。 将调用 [SccEndBatch](../extensibility/sccendbatch-function.md) 以结束批处理。 这些批处理不能嵌套。  
   
 ## <a name="syntax"></a>语法  
   
@@ -30,22 +30,22 @@ ms.locfileid: "68189558"
 SCCRTN SccBeginBatch(void);  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>参数  
  无。  
   
 ## <a name="return-value"></a>返回值  
- 此函数的源控制插件实现应返回以下值之一：  
+ 此函数的源代码管理插件实现应返回以下值之一：  
   
-|ReplTest1|描述|  
+|值|说明|  
 |-----------|-----------------|  
-|SCC_OK|一批操作已成功开始。|  
+|SCC_OK|成功的批处理操作。|  
 |SCC_E_UNKNOWNERROR|非特定故障。|  
   
 ## <a name="remarks"></a>备注  
- 使用源控制批处理以跨多个项目或多个上下文中执行相同操作。 若要在批处理操作期间消除冗余的每个项目对话框从用户体验，可以使用批处理。 `SccBeginBatch`函数和[SccEndBatch](../extensibility/sccendbatch-function.md)作为函数对用于指示的开头和结尾的操作。 它们不能嵌套。 `SccBeginBatch` 设置一个标志，指示批处理操作正在进行。  
+ 源代码管理批处理用于在多个项目或多个上下文中执行相同的操作。 批处理可用于消除批处理操作期间用户体验中的冗余每个项目对话框。 `SccBeginBatch`函数和[SccEndBatch](../extensibility/sccendbatch-function.md)用作函数对，用于指示操作的开始和结束。 它们不能嵌套。 `SccBeginBatch` 设置一个标志，指示正在进行批处理操作。  
   
- 批处理操作生效时，源代码管理插件应为用户提供最多一个对话框中的任何问题，并对所有后续操作应用来自该对话框中的响应。  
+ 批处理操作生效时，源代码管理插件最多应向用户显示一个对话框，并在所有后续操作上应用该对话框的响应。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [源代码管理插件 API 函数](../extensibility/source-control-plug-in-api-functions.md)   
  [SccEndBatch](../extensibility/sccendbatch-function.md)

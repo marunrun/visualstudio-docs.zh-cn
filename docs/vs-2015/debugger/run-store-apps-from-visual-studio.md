@@ -15,10 +15,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 2ac3e8ec68553159972e88538d8a4bc1ec49ce50
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85540304"
 ---
 # <a name="run-store-apps-from-visual-studio"></a>从 Visual Studio 运行应用商店应用
@@ -30,7 +30,7 @@ ms.locfileid: "85540304"
 
 ## <a name="in-this-section"></a>本节内容
 
-|Title|描述|
+|Title|说明|
 |-|-|
 |[在本地计算机上运行 Windows 应用商店应用程序](../debugger/run-windows-store-apps-on-the-local-machine.md)|在 Visual Studio 设备上运行 Windows 应用商店应用。|
 |[在模拟器中运行 Windows 应用商店应用程序](../debugger/run-windows-store-apps-in-the-simulator.md)|在桌面窗口中运行 Windows 应用商店应用，以模拟 [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] 功能，如触摸和定向。|

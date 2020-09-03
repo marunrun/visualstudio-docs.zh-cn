@@ -1,5 +1,5 @@
 ---
-title: IDebugExpressionEvaluator::Parse |Microsoft Docs
+title: IDebugExpressionEvaluator：:P arse |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 4039534b139eeeaf20f938c6d6c358c602f96227
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68155345"
 ---
 # <a name="idebugexpressionevaluatorparse"></a>IDebugExpressionEvaluator::Parse
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-此方法将一个表达式字符串转换为已分析的表达式。  
+此方法将表达式字符串转换为分析的表达式。  
   
 ## <a name="syntax"></a>语法  
   
@@ -50,30 +50,30 @@ int Parse(
   
 #### <a name="parameters"></a>参数  
  `upstrExpression`  
- [in]要分析的表达式字符串。  
+ 中要分析的表达式字符串。  
   
  `dwFlags`  
- [in]一系列[PARSEFLAGS](../../../extensibility/debugger/reference/parseflags.md)确定表达式的分析方式的常量。  
+ 中确定如何分析表达式的 [PARSEFLAGS](../../../extensibility/debugger/reference/parseflags.md) 常量的集合。  
   
  `nRadix`  
- [in]要用来解释任何数字信息的基数。  
+ 中用于解释任何数值信息的基数。  
   
  `pbstrError`  
- [out]以用户可读文本形式将返回错误。  
+ 弄以用户可读的文本形式返回错误。  
   
  `pichError`  
- [out]返回错误的起始字符的位置中的表达式字符串。  
+ 弄返回表达式字符串中错误开头的字符位置。  
   
  `ppParsedExpression`  
- [out]返回中的已分析的表达式[IDebugParsedExpression](../../../extensibility/debugger/reference/idebugparsedexpression.md)对象。  
+ 弄返回 [IDebugParsedExpression](../../../extensibility/debugger/reference/idebugparsedexpression.md) 对象中分析的表达式。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
 ## <a name="remarks"></a>备注  
- 此方法生成的已分析的表达式不是一个实际值。 已分析的表达式是可供计算，即，转换为值。  
+ 此方法生成一个分析的表达式，而不是实际值。 已分析的表达式已准备好进行计算，即转换为值。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugExpressionEvaluator](../../../extensibility/debugger/reference/idebugexpressionevaluator.md)   
  [IDebugParsedExpression](../../../extensibility/debugger/reference/idebugparsedexpression.md)   
  [PARSEFLAGS](../../../extensibility/debugger/reference/parseflags.md)

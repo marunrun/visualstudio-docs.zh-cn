@@ -10,10 +10,10 @@ ms.topic: how-to
 ms.date: 03/21/2017
 ms.author: ghogen
 ms.openlocfilehash: e7e7d9a6c1c417b3802ef1f94ac51fec14bf682a
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85280845"
 ---
 # <a name="retain-a-constant-virtual-ip-address-for-an-azure-cloud-service"></a>为 Azure 云服务保留固定的虚拟 IP 地址
@@ -27,7 +27,7 @@ ms.locfileid: "85280845"
 ## <a name="update-a-cloud-service-without-changing-its-vip"></a>更新云服务，而不更改其 VIP
 1. 在 Visual Studio 中创建或打开 Azure 云服务项目。
 
-2. 在“解决方案资源管理器”**** 中，右键单击项目。 在快捷菜单上，选择“发布”****。
+2. 在“解决方案资源管理器”中，右键单击项目。 在快捷菜单上，选择“发布”****。
 
     ![发布菜单](./media/vs-azure-tools-cloud-service-retain-a-constant-virtual-ip-address/solution-explorer-publish-menu.png)
 

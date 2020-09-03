@@ -15,10 +15,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 251b805367922d032eb90a70a9ba8ae9d8bd01f2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68155504"
 ---
 # <a name="performance-explorer"></a>性能资源管理器
@@ -32,7 +32,7 @@ ms.locfileid: "68155504"
   
  有关与性能和分析相关的当前和高级主题的详细信息，可搜索 Microsoft Developer Network 查看主题和 Microsoft 博客了解相关信息。 使用关键字：企业性能工具团队。  
   
-## <a name="common-tasks"></a>常规任务  
+## <a name="common-tasks"></a>常见任务  
   
 |任务|相关内容|  
 |----------|---------------------|  
@@ -44,7 +44,7 @@ ms.locfileid: "68155504"
 |**查找性能问题：** 了解如何查看和分析分析工具报告视图窗口中的收集的性能数据。|[分析性能工具数据](../profiling/analyzing-performance-tools-data.md)|  
 |**分析性能变化：** 了解如何比较两个探查器数据文件以分析性能变化。|[比较性能数据文件](../profiling/comparing-performance-data-files.md)|  
 |**保存和共享结果：** 了解如何保存分析数据进行存档或共享。|[保存和导出性能工具数据](../profiling/saving-and-exporting-performance-tools-data.md)|  
-|**自动分析：** 了解如何从命令提示符使用分析工具。|[从命令行分析](../profiling/using-the-profiling-tools-from-the-command-line.md)|  
+|**自动分析：** 了解如何从命令提示符使用分析工具。|[通过命令行进行分析](../profiling/using-the-profiling-tools-from-the-command-line.md)|  
 |**以编程方式控制分析：** 了解如何使用托管的和本机分析工具 API 控制直接收集自源代码的数据。|[分析工具 API](../profiling/profiling-tools-apis.md)|  
 |**分析问题疑难解答**|[性能工具问题疑难解答](../profiling/troubleshooting-performance-tools-issues.md)|  
   

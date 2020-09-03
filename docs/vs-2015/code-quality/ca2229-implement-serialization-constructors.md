@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: ba654496d80654f0d9790a01bbc41326f7a5f13e
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85540486"
 ---
 # <a name="ca2229-implement-serialization-constructors"></a>CA2229:实现序列化构造函数
@@ -35,9 +35,9 @@ ms.locfileid: "85540486"
 ## <a name="cause"></a>原因
  该类型实现 <xref:System.Runtime.Serialization.ISerializable?displayProperty=fullName> 接口，不是委托或接口，并且以下条件之一成立：
 
-- 该类型没有采用对象的构造函数 <xref:System.Runtime.Serialization.SerializationInfo?displayProperty=fullName> 和一个 <xref:System.Runtime.Serialization.StreamingContext?displayProperty=fullName> 对象（序列化构造函数的签名）。
+- 该类型没有构造函数，该构造函数将 <xref:System.Runtime.Serialization.SerializationInfo?displayProperty=fullName> 对象和 <xref:System.Runtime.Serialization.StreamingContext?displayProperty=fullName> 对象 (序列化构造函数的签名) 。
 
-- 类型是未密封的，并且其序列化构造函数的访问修饰符是不受保护的（系列）。
+- 该类型是未密封的，并且其序列化构造函数的访问修饰符不受 (系列) 的保护。
 
 - 类型是密封的，并且其序列化构造函数的访问修饰符不是私有的。
 

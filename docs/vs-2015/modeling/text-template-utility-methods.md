@@ -12,19 +12,19 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 6c38b15a3b819ce561c098c3b9810ee6884e526b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72658521"
 ---
 # <a name="text-template-utility-methods"></a>文本模板实用工具方法
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 文本模板中编写代码时，有几种方法始终可用。 这些方法是在 <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation> 中定义的。
+在文本模板中编写代码时，有几种方法始终可用 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 。 这些方法是在中定义的 <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation> 。
 
 > [!TIP]
-> 您还可以在常规（非预处理）文本模板中使用主机环境提供的其他方法和服务。 例如，你可以解析文件路径、记录错误以及获取 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 和任何已加载的包提供的服务。  有关详细信息，请参阅[从文本模板访问 Visual Studio](https://msdn.microsoft.com/0556f20c-fef4-41a9-9597-53afab4ab9e4)。
+> 你还可以在常规 (未预处理) 文本模板中使用主机环境提供的其他方法和服务。 例如，你可以解析文件路径、记录错误以及获取和任何已加载的包所提供的服务 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 。  有关详细信息，请参阅 [从文本模板访问 Visual Studio](https://msdn.microsoft.com/0556f20c-fef4-41a9-9597-53afab4ab9e4)。
 
 ## <a name="write-methods"></a>写入方法
  您可以使用 `Write()` 和 `WriteLine()` 方法在标准代码块中追加文本，而不是使用表达式代码块。 以下两个代码块在功能上是等效的。
@@ -41,7 +41,7 @@ while (i-- > 0)
 #>
 ```
 
-##### <a name="code-block-using-writeline"></a>使用 WriteLine （）的代码块
+##### <a name="code-block-using-writeline"></a>使用 WriteLine ( 的代码块 # A1
 
 ```
 <#
@@ -55,7 +55,7 @@ while (i-- > 0)
 
  你可能会发现，在带有嵌套控制结构的长代码块中使用这些实用工具方法之一而不是表达式块很有用。
 
- @No__t_0 和 `WriteLine()` 方法有两个重载，一个重载采用单个字符串参数，另一个采用复合格式字符串和要包含在字符串中的对象数组（如 `Console.WriteLine()` 方法）。 @No__t_0 的以下两种用法在功能上是等效的：
+ `Write()`和 `WriteLine()` 方法有两个重载，一个重载采用单个字符串参数，另一个重载采用复合格式字符串和要包含在字符串中的对象的数组， (如 `Console.WriteLine()` 方法) 。 的以下两个用法在 `WriteLine()` 功能上是等效的：
 
 ```
 <#
@@ -70,7 +70,7 @@ while (i-- > 0)
 ```
 
 ## <a name="indentation-methods"></a>缩进方法
- 您可以使用缩进方法格式化文本模板的输出。 @No__t_0 类具有一个 `CurrentIndent` string 属性，该属性显示文本模板中的当前缩进和一个 `indentLengths` 字段，该字段是已添加的缩进的列表。 您可以使用 `PushIndent()` 方法添加缩进，并使用 `PopIndent()` 方法减去缩进。 如果要删除所有缩进，请使用 `ClearIndent()` 方法。 以下代码块显示了这些方法的用法：
+ 您可以使用缩进方法格式化文本模板的输出。 <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation>类具有一个 `CurrentIndent` 字符串属性，该属性显示文本模板中的当前缩进以及一个 `indentLengths` 字段，该字段是已添加的缩进的列表。 您可以使用方法添加缩进 `PushIndent()` ，并使用方法减去缩进 `PopIndent()` 。 如果要删除所有缩进，请使用 `ClearIndent()` 方法。 以下代码块显示了这些方法的用法：
 
 ```
 <#
@@ -114,11 +114,11 @@ Hello
 ```
 
 ## <a name="access-to-host-and-service-provider"></a>对主机和服务提供程序的访问权限
- 属性 `this.Host` 可提供对执行模板的主机公开的属性的访问。 若要使用 `this.Host`，必须在 `<@template#>` 指令中设置 `hostspecific` 特性：
+ 属性 `this.Host` 可提供对执行模板的主机公开的属性的访问。 若要使用 `this.Host` ，必须 `hostspecific` 在指令中设置特性 `<@template#>` ：
 
  `<#@template ... hostspecific="true" #>`
 
- @No__t_0 的类型取决于执行模板的主机的类型。 在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中运行的模板中，可以将 `this.Host` 强制转换为 `IServiceProvider`，以获取对 IDE 等服务的访问权限。 例如:
+ 的类型 `this.Host` 取决于执行模板的主机的类型。 在运行的模板中 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ，可以将强制转换 `this.Host` 为 `IServiceProvider` 以获取对 IDE 等服务的访问权限。 例如：
 
 ```
 EnvDTE.DTE dte = (EnvDTE.DTE) ((IServiceProvider) this.Host)
@@ -126,7 +126,7 @@ EnvDTE.DTE dte = (EnvDTE.DTE) ((IServiceProvider) this.Host)
 ```
 
 ## <a name="using-a-different-set-of-utility-methods"></a>使用一组不同的实用工具方法
- 作为文本生成过程的一部分，模板文件转换为类，该类始终命名为 `GeneratedTextTransformation`and 从 <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation> 继承。 如果要改为使用一组不同的方法，可以编写自己的类并在模板指令中指定它。 类必须继承自 <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation>。
+ 作为文本生成过程的一部分，模板文件将转换为类，该类始终命名 `GeneratedTextTransformation` 并从继承 <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation> 。 如果要改为使用一组不同的方法，可以编写自己的类并在模板指令中指定它。 类必须继承自 <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation> 。
 
 ```
 <#@ template inherits="MyUtilityClass" #>

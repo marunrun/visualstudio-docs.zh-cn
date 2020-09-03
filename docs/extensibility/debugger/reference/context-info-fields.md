@@ -1,5 +1,5 @@
 ---
-title: CONTEXT_INFO_FIELDS |微软文档
+title: CONTEXT_INFO_FIELDS |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: b398e7ee549026750cbdff7b7fede8522116f346
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80737592"
 ---
 # <a name="context_info_fields"></a>CONTEXT_INFO_FIELDS
-指定要检索有关内存上下文的信息。
+指定要检索的有关内存上下文的信息。
 
 ## <a name="syntax"></a>语法
 
@@ -54,36 +54,36 @@ public enum enum_CONTEXT_INFO_FIELDS {
 
 ## <a name="fields"></a>字段
 `CIF_MODULEURL`\
-初始化/使用`bstrModuleUrl`[CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md)结构的字段。
+初始化/使用 `bstrModuleUrl` [CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md) 结构的字段。
 
 `CIF_FUNCTION`\
-初始化/使用`bstrFunction`结构字段。 `CONTEXT_INFO`
+初始化/使用 `bstrFunction` 结构的字段 `CONTEXT_INFO` 。
 
 `CIF_FUNCTIONOFFSET`\
-初始化/使用`posFunctionOffset`结构字段。 `CONTEXT_INFO`
+初始化/使用 `posFunctionOffset` 结构的字段 `CONTEXT_INFO` 。
 
 `CIF_ADDRESS`\
-初始化/使用`bstrAddress`结构字段。 `CONTEXT_INFO`
+初始化/使用 `bstrAddress` 结构的字段 `CONTEXT_INFO` 。
 
 `CIF_ADDRESSOFFSET`\
-初始化/使用`bstrAddressOffset`结构字段。 `CONTEXT_INFO`
+初始化/使用 `bstrAddressOffset` 结构的字段 `CONTEXT_INFO` 。
 
 `CIF_ALLFIELDS`\
-初始化/使用`CONTEXT_INFO`结构的所有字段。
+初始化/使用结构的所有字段 `CONTEXT_INFO` 。
 
 ## <a name="remarks"></a>备注
-这些值将参数传递给[GetInfo](../../../extensibility/debugger/reference/idebugmemorycontext2-getinfo.md)方法，以指示要初始化[CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md)结构的字段。
+将参数传递给 [GetInfo](../../../extensibility/debugger/reference/idebugmemorycontext2-getinfo.md) 方法，以指示要初始化 [CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md) 结构的哪些字段。
 
-这些标志还用于指示在返回`CONTEXT_INFO`结构时使用结构的字段并有效。
+这些标志还用于指示在 `CONTEXT_INFO` 返回结构时使用的结构字段和有效字段。
 
-这些值可以与位或组合。
+这些值可以与按位 "或" 组合在一起。
 
 ## <a name="requirements"></a>要求
-标题： msdbg.h
+标头： msdbg
 
-命名空间：微软.VisualStudio.调试器.互通
+命名空间： VisualStudio
 
-程序集：微软.VisualStudio.调试器.Interop.dll
+程序集： Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [枚举](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

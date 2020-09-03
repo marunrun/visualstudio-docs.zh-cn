@@ -9,10 +9,10 @@ caps.latest.revision: 13
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 68bff8dbe2d0e5d85c8b18eeafaeaad06ba3982e
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85540070"
 ---
 # <a name="unit-testing-existing-c-applications-with-test-explorer"></a>用测试资源管理器对现有的 C++ 应用程序进行单元测试
@@ -43,7 +43,7 @@ ms.locfileid: "85540070"
 
  转到过程[将受测代码更改为静态库的具体步骤](#staticLink)。
 
- **单元测试必须使用私有函数和数据，并且代码必须生成为动态链接库（DLL）：** 在产品代码所在的同一项目中添加单元测试。
+ **单元测试必须使用私有函数和数据，并且代码必须生成为动态链接库 (DLL) ：** 在产品代码所在的同一项目中添加单元测试。
 
  转到过程[在同一项目中添加单元测试的具体步骤](#sameProject)。
 
@@ -53,7 +53,7 @@ ms.locfileid: "85540070"
 
 - 如果测试必须使用所测试项目不导出的成员，并且所测试项目将生成为动态库，请考虑将其转换为静态库。
 
-  1. 在解决方案资源管理器的 "正在测试的项目" 的快捷菜单上，选择 "**属性**"。 此时将打开项目属性窗口。
+  1. 在解决方案资源管理器的 "正在测试的项目" 的快捷菜单上，选择 " **属性**"。 此时将打开项目属性窗口。
 
   2. 依次选择“配置属性”**** 和“常规”****。
 
@@ -69,7 +69,7 @@ ms.locfileid: "85540070"
 
       1. 在“文件”**** 菜单中，依次选择“新建” ****、“项目”****、“Visual C++”、“测试”**** 和“C++ 单元测试项目”****。
 
-  2. 在解决方案资源管理器中，在测试项目的快捷菜单上，选择 "**引用**"。 此时将打开项目属性窗口。
+  2. 在解决方案资源管理器中，在测试项目的快捷菜单上，选择 " **引用**"。 此时将打开项目属性窗口。
 
   3. 依次选择“通用属性”****、“框架和引用”**** 和“添加新引用”**** 按钮。
 
@@ -119,7 +119,7 @@ ms.locfileid: "85540070"
 
    3. 编辑“包含目录”和“库目录”：
 
-       |Property|值|
+       |属性|值|
        |-|-|
        |**包含目录**|**$(VCInstallDir)UnitTest\include;$(IncludePath)**|
        |**库目录**|**$(VCInstallDir)UnitTest\lib;$(LibraryPath)**|
@@ -160,6 +160,6 @@ ms.locfileid: "85540070"
 
 1. 在 **“查看”** 菜单中，依次选择 **“其他窗口”**、 **“测试资源管理器”**。
 
-2. 在测试资源管理器中，选择 "**全部运行**"。
+2. 在测试资源管理器中，选择 " **全部运行**"。
 
    有关详细信息，请参阅[快速入门：通过测试资源管理器进行测试驱动开发](../test/quick-start-test-driven-development-with-test-explorer.md)。

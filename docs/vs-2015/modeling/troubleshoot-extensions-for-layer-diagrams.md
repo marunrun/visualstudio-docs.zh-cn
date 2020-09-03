@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: dd4560673259373b68b370e73a43de424fb7bdb7
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72658472"
 ---
 # <a name="troubleshoot-extensions-for-layer-diagrams"></a>层关系图扩展疑难解答
@@ -24,11 +24,11 @@ ms.locfileid: "72658472"
 
 本主题解决了你在创建层模型扩展时可能会遇到的一些问题。
 
-#### <a name="when-i-press-f5-to-debug-my-extension-my-commands-gesture-handlers-validation-extensions-or-custom-properties-do-not-appear-on-layer-diagrams-in-the-experimental-instance-of-includevsprvsincludesvsprvs-mdmd"></a>在我按 F5 调试扩展时，我的命令、笔势处理程序、验证扩展或自定义属性没有出现在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 实验实例的层关系图上。
+#### <a name="when-i-press-f5-to-debug-my-extension-my-commands-gesture-handlers-validation-extensions-or-custom-properties-do-not-appear-on-layer-diagrams-in-the-experimental-instance-of-vsprvs"></a>在我按 F5 调试扩展时，我的命令、笔势处理程序、验证扩展或自定义属性没有出现在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 实验实例的层关系图上。
 
-1. 在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的实验实例中打开扩展解决方案，然后在 "**生成**" 菜单上单击 "**重新生成解决方案**"。
+1. 在的实验实例中打开扩展解决方案 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ，然后在 " **生成** " 菜单上单击 " **重新生成解决方案**"。
 
-2. 按**F5**或**CTRL + F5**启动 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的实验实例。 打开层关系图并测试你的扩展。
+2. 按 **F5** 或 **CTRL + F5** 启动的实验实例 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 。 打开层关系图并测试你的扩展。
 
    如有必要，请继续下一个过程。
 
@@ -39,13 +39,13 @@ ms.locfileid: "72658472"
 2. 删除以下文件夹：%LocalAppData%\Microsoft\VisualStudio \\ [version] \ComponentModelCache
 
    > [!NOTE]
-   > % LocalAppData% 通常为*DriveName*： \Users \\*用户名*\appdata\local。
+   > % LocalAppData% 通常为*DriveName*： \Users \\ *UserName*\appdata\local。
 
    如有必要，请继续下一个过程。
 
 #### <a name="an-old-version-of-my-validation-results-appears-or-my-validation-method-is-not-called"></a>将出现旧版本的验证结果，或我的验证方法未被调用。
 
-1. 在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的实验实例中，单击 "**生成**" 菜单上的 "**清理解决方案**"。 这将清除上一个验证分析缓存的结果。
+1. 在的实验实例中 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ，单击 " **生成** " 菜单上的 " **清理解决方案**"。 这将清除上一个验证分析缓存的结果。
 
 2. 请确保你的模型中的层与代码元素关联，并且在模型中有至少一个依赖项链接。 如果不存在任何验证内容，则不会调用验证。
 
@@ -53,5 +53,5 @@ ms.locfileid: "72658472"
 
 4. 在层验证项目的**source.extension.vsixmanifest**中，请确保已在 "**内容**" 下添加了**MEF 组件**项和**自定义扩展类型**项。
 
-## <a name="see-also"></a>请参阅
- [扩展层关系图](../modeling/extend-layer-diagrams.md)
+## <a name="see-also"></a>另请参阅
+ [Extend layer diagrams](../modeling/extend-layer-diagrams.md)

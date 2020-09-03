@@ -13,10 +13,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 93451d6d49082621df48c734de951e6a4bc7e281
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68156623"
 ---
 # <a name="how-to-display-an-item-list-separated-with-commas"></a>如何：显示用逗号分隔的项列表
@@ -46,7 +46,7 @@ ms.locfileid: "68156623"
      `@(TXTFile, ', ')`  
   
 ## <a name="example"></a>示例  
- 在此示例中，[Exec](../msbuild/exec-task.md) 任务会运行 findstr 工具，在文件 Phrases.txt 中查找指定的文本字符串。 在 findstr 命令中，文本搜索字符串由 /c: 开关指示，因此 `@(Phrase)` 项列表中各项之间应插入分隔符 `/c:`  。  
+ 在此示例中， [Exec](../msbuild/exec-task.md) 任务运行 findstr 工具，以便在文件中查找指定的文本字符串，Phrases.txt。 在 findstr 命令中，通过 **/c：** switch 指示文本搜索字符串，因此在 `/c:` 项列表中的项之间插入项分隔符 `@(Phrase)` 。  
   
  对于此示例，等效的命令行命令为：  
   
@@ -70,5 +70,5 @@ ms.locfileid: "68156623"
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [MSBuild 参考](../msbuild/msbuild-reference.md)   
+ [MSBuild 引用](../msbuild/msbuild-reference.md)   
  [项](../msbuild/msbuild-items.md)

@@ -16,20 +16,20 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 6a4a4e2e6990772b50568043c4d18ff29248571d
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85547883"
 ---
 # <a name="ca1009-declare-event-handlers-correctly"></a>CA1009:正确声明事件处理程序
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|Item|值|
+|项|值|
 |-|-|
 |TypeName|DeclareEventHandlersCorrectly|
 |CheckId|CA1009|
-|Category|Microsoft. Design|
+|类别|Microsoft. Design|
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
@@ -47,7 +47,7 @@ ms.locfileid: "85547883"
  不禁止显示此规则发出的警告。
 
 ## <a name="example"></a>示例
- 下面的示例演示适合处理事件的委托。 此事件处理程序可调用的方法符合设计准则中指定的签名。 `AlarmEventHandler`委托的类型名称。 `AlarmEventArgs`从事件数据的基类派生， <xref:System.EventArgs> 并保存警报事件数据。
+ 下面的示例演示适合处理事件的委托。 此事件处理程序可调用的方法符合设计准则中指定的签名。 `AlarmEventHandler` 委托的类型名称。 `AlarmEventArgs` 从事件数据的基类派生， <xref:System.EventArgs> 并保存警报事件数据。
 
  [!code-cpp[FxCop.Design.EventsTwoParams#1](../snippets/cpp/VS_Snippets_CodeAnalysis/FxCop.Design.EventsTwoParams/cpp/FxCop.Design.EventsTwoParams.cpp#1)]
  [!code-csharp[FxCop.Design.EventsTwoParams#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.EventsTwoParams/cs/FxCop.Design.EventsTwoParams.cs#1)]

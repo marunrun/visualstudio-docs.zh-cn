@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: e5237d8a524bd77f67c86a650bb4c8f075e407fb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68190631"
 ---
-# <a name="idiasourcefilegetuniqueid"></a>IDiaSourceFile::get_uniqueId
+# <a name="idiasourcefileget_uniqueid"></a>IDiaSourceFile::get_uniqueId
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-检索一个简单的整数密钥值，该值是唯一的此映像。  
+检索对此图像唯一的简单整数键值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,13 +35,13 @@ HRESULT get_uniqueId ( 
   
 #### <a name="parameters"></a>参数  
  `pRetVal`  
- [out]返回一个简单的整数密钥值，该值是唯一的此映像。  
+ 弄返回此图像唯一的简单整数键值。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
 ## <a name="remarks"></a>备注  
- 而不是字符串可加快行编号处理键进行比较。  
+ 比较键而不是字符串可以加速行号处理。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md)

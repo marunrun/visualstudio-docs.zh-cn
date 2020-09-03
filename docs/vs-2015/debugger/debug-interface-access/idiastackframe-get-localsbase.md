@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: b5b21f7cf8a877c1faab8d9535960a116a8f6bb6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68190526"
 ---
-# <a name="idiastackframegetlocalsbase"></a>IDiaStackFrame::get_localsBase
+# <a name="idiastackframeget_localsbase"></a>IDiaStackFrame::get_localsBase
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-检索在帧的局部变量的基址。  
+检索框架的局部变量的基址。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,10 +35,10 @@ HRESULT get_localsBase ( 
   
 #### <a name="parameters"></a>参数  
  `pRetVal`  
- [out]返回本地变量的基址。  
+ 弄返回局部变量的基址。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回 `S_OK`。 返回`S_FALSE`如果不支持的属性。 否则，返回错误代码。  
+ 如果成功，则返回 `S_OK`。 `S_FALSE`如果该属性不受支持，则返回。 否则，返回错误代码。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)

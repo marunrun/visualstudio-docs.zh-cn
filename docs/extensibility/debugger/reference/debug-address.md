@@ -1,5 +1,5 @@
 ---
-title: DEBUG_ADDRESS |微软文档
+title: DEBUG_ADDRESS |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: fe778ba3ed80930a4cd7b4fa1170f286b3ccf6ec
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80737521"
 ---
 # <a name="debug_address"></a>DEBUG_ADDRESS
@@ -53,20 +53,20 @@ public struct DEBUG_ADDRESS {
 包含此地址的模块的 GUID。
 
 `tokClass`\
-标识此地址的类或类型的令牌。
+标识此地址的类或类型的标记。
 
 > [!NOTE]
-> 此值特定于符号提供程序，因此除了作为类类型的标识符之外，没有一般含义。
+> 此值特定于符号提供程序，因此除了作为类类型的标识符外，没有任何常规含义。
 
 `addr`\
-[DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md)结构，其中包含描述各个地址类型的结构联合。 值`addr`。`dwKind` 来自[ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md)枚举，它解释了如何解释联合。
+一个 [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) 结构，它包含描述各个地址类型的结构的并集。 值 `addr` 。`dwKind` 来自 [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) 枚举，该枚举说明了如何解释联合。
 
 ## <a name="remarks"></a>备注
-此结构传递给要填充的[GetAddress](../../../extensibility/debugger/reference/idebugaddress-getaddress.md)方法。
+此结构传递到要填写的 [GetAddress](../../../extensibility/debugger/reference/idebugaddress-getaddress.md) 方法。
 
-**警告 [仅限C++]**
+**警告 [仅 c + +]**
 
-如果`addr.dwKind`为`ADDRESS_KIND_METADATA_LOCAL`，如果不是`addr.addr.addrLocal.pLocal`空值，则必须调用`Release`令牌指针：
+如果 `addr.dwKind` 为，并且不是 `ADDRESS_KIND_METADATA_LOCAL` `addr.addr.addrLocal.pLocal` null 值，则必须 `Release` 对标记指针调用：
 
 ```
 if (addr.dwKind == ADDRESS_KIND_METADATA_LOCAL && addr.addr.addrLocal.pLocal != NULL)
@@ -76,11 +76,11 @@ if (addr.dwKind == ADDRESS_KIND_METADATA_LOCAL && addr.addr.addrLocal.pLocal != 
 ```
 
 ## <a name="requirements"></a>要求
-标题： sh.h
+标头： sh。h
 
-命名空间：微软.VisualStudio.调试器.互通
+命名空间： VisualStudio
 
-程序集：微软.VisualStudio.调试器.Interop.dll
+程序集： Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [结构和联合](../../../extensibility/debugger/reference/structures-and-unions.md)

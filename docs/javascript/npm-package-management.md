@@ -13,10 +13,10 @@ dev_langs:
 ms.workload:
 - nodejs
 ms.openlocfilehash: 6b53fb34b3cff444e57491f878f8385bdb523c6e
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85285044"
 ---
 # <a name="manage-npm-packages-in-visual-studio"></a>在 Visual Studio 中管理 npm 包

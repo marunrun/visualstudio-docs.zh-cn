@@ -11,16 +11,16 @@ caps.latest.revision: 7
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 96241026afff71c061abcfae3547d25cc2166902
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68152878"
 ---
 # <a name="idebugtypefieldbuilder2"></a>IDebugTypeFieldBuilder2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-扩展了**IDebugTypeFieldBuilder**能够创建数组类型。  
+扩展 **IDebugTypeFieldBuilder** ，以便能够创建数组类型。  
   
 ## <a name="syntax"></a>语法  
   
@@ -28,19 +28,19 @@ ms.locfileid: "68152878"
 IDebugTypeFieldBuilder2 : IDebugTypeFieldBuilder  
 ```  
   
-## <a name="notes-for-callers"></a>调用方的说明  
- 此接口可以获取从符号提供程序。  
+## <a name="notes-for-callers"></a>调用方说明  
+ 此接口可以从符号提供程序获取。  
   
 ## <a name="methods"></a>方法  
- 除了上的方法[IDebugTypeFieldBuilder](../../../extensibility/debugger/reference/idebugtypefieldbuilder.md)接口，此接口实现了以下方法：  
+ 除了 [IDebugTypeFieldBuilder](../../../extensibility/debugger/reference/idebugtypefieldbuilder.md) 接口上的方法，此接口还实现以下方法：  
   
-|方法|描述|  
+|方法|说明|  
 |------------|-----------------|  
-|[CreateArrayOfType](../../../extensibility/debugger/reference/idebugtypefieldbuilder2-createarrayoftype.md)|创建指定的类型和大小的数组。|  
+|[CreateArrayOfType](../../../extensibility/debugger/reference/idebugtypefieldbuilder2-createarrayoftype.md)|创建指定类型和大小的数组。|  
   
 ## <a name="requirements"></a>要求  
- 标头：Sh.h  
+ 标头： Sh。h  
   
- 命名空间:Microsoft.VisualStudio.Debugger.Interop  
+ 命名空间： VisualStudio  
   
- 程序集：Microsoft.VisualStudio.Debugger.Interop.dll
+ 程序集： Microsoft.VisualStudio.Debugger.Interop.dll

@@ -18,10 +18,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: badb88abdf4b3ffd6140cb587b2b0add20630925
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72672698"
 ---
 # <a name="lcid-devenvexe"></a>/LCID (devenv.exe)
@@ -35,11 +35,11 @@ ms.locfileid: "72672698"
 devenv {/LCID|/l} LocaleID
 ```
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
  `LocaleID`（必需）。 指定的语言的 LCID（区域设置 ID）。
 
 ## <a name="remarks"></a>备注
- 加载 IDE 并设置环境的默认自然语言。 此更改保留在会话中，并反映在 IDE 的“选项”对话框中“环境”选项的“国际设置”窗格上    。
+ 加载 IDE 并设置环境的默认自然语言。 此更改保留在会话中，并反映在 IDE 的“选项”对话框中“环境”选项的“国际设置”窗格上************。
 
  如果指定的语言在用户的系统上不可用，则忽略 /LCID 开关。
 
@@ -47,14 +47,14 @@ devenv {/LCID|/l} LocaleID
 
 |语言|LCID|
 |--------------|----------|
-|中文（简体）|2052|
-|和 SharePoint 2010 显示的“中文(繁体)”|1028|
+|中文(简体)|2052|
+|中文(繁体)|1028|
 |英语|2052|
 |法语|1036|
 |德语|1031|
 |意大利语|1040|
 |日语|1041|
-|朝鲜语|1042|
+|韩语|1042|
 |西班牙语|3082|
 
 ## <a name="example"></a>示例

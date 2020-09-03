@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 0c09e45250ad95d50d5d2cd0ca2753a70bb95748
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75590236"
 ---
 # <a name="model-user-requirements"></a>建立用户需求模型
@@ -39,28 +39,28 @@ ms.locfileid: "75590236"
 
 - 使用模型作为系统测试的基础，明确测试和要求之间的关系。 要求发生改变时，这种关系将帮助你正确地更新测试。 这可以确保系统满足新的要求。
 
-如果在与用户或其代表进行重点讨论时使用需求模型，并在每次迭代开始时重新查看需求模型，那么使用需求模型会获得最大的好处。 无需在编写代码之前详细地完成它。 即使是非常简单的部分工作的应用程序，通常也能构成与用户讨论需求时的最具激励性的基础。 模型是汇总讨论结果的一种有效方式。 有关详细信息，请参阅[在开发过程中使用模型](../modeling/use-models-in-your-development-process.md)。
+如果在与用户或其代表进行重点讨论时使用需求模型，并在每次迭代开始时重新查看需求模型，那么使用需求模型会获得最大的好处。 无需在编写代码之前详细地完成它。 即使是非常简单的部分工作的应用程序，通常也能构成与用户讨论需求时的最具激励性的基础。 模型是汇总讨论结果的一种有效方式。 有关详细信息，请参阅 [在开发过程中使用模型](../modeling/use-models-in-your-development-process.md)。
 
 > [!NOTE]
 > 在这些主题中，“系统”表示正在开发的系统或应用程序。 它可能是许多软件和硬件组件的大型集合、单个应用程序或一个更大型系统内的某个软件组件。 在每种情况下，需求模型都描述了在系统外部可以通过用户界面或 API 看到的行为。
 
-## <a name="common-tasks"></a>常规任务
+## <a name="common-tasks"></a>常见任务
 
 可以根据用户需求创建多个不同的视图。  每个视图都提供特定类型的信息。  在创建这些视图时，最好经常在视图间移动。 可以从任意视图开始。
 
-|关系图或文档|需求模型中描述的内容|节|
+|关系图或文档|需求模型中描述的内容|部分|
 |-|-|-|
 |概念类图|用于描述要求的类型术语表；类型可以在系统界面中看到。||
 |附加文档或工作项|性能、安全性、可用性和可靠性条件。|[描述服务质量要求](#QoSRequirements)|
 |附加文档或工作项|不针对特定用例的约束和规则|[显示业务规则](#BusinessRules)|
 
-请注意，大多数关系图类型可以用于其他目的。 有关关系图类型的概述，请参阅为[应用程序创建模型](../modeling/create-models-for-your-app.md)。
+请注意，大多数关系图类型可以用于其他目的。 有关关系图类型的概述，请参阅为 [应用程序创建模型](../modeling/create-models-for-your-app.md)。
 
-## <a name="BusinessRules"></a> Showing Business Rules
+## <a name="showing-business-rules"></a><a name="BusinessRules"></a> Showing Business Rules
 
 业务规则是一个不与特定用例相关联的要求，应在整个系统中进行观察。
 
-许多业务规则受概念类间关系的约束。 您可以编写这些*静态业务规则*作为与概念类图上的相关类关联的注释。 例如：
+许多业务规则受概念类间关系的约束。 您可以编写这些 *静态业务规则* 作为与概念类图上的相关类关联的注释。 例如：
 
 ![附加到 Order 类的注释中的规则。](../modeling/media/uml_reqmcd2.png)
 
@@ -70,13 +70,13 @@ ms.locfileid: "75590236"
 
 请注意，此处的选择是有关你如何定义要求的方式，与你如何在程序代码中实现要求无关。
 
-下列主题提供了更多信息：
+有关详细信息，请参阅以下主题：
 
-|若要了解|读取|
+|了解|读取|
 |-|-|
 |如何开发符合业务规则的代码|[应用体系结构建模](../modeling/model-your-app-s-architecture.md)|
 
-## <a name="QoSRequirements"></a> Describing Quality of Service Requirements
+## <a name="describing-quality-of-service-requirements"></a><a name="QoSRequirements"></a> 描述服务质量要求
 
 服务质量要求有多个类别。 它们包括以下内容：
 
@@ -94,7 +94,7 @@ ms.locfileid: "75590236"
 
 如果餐厅在顾客订餐时删除了菜单项，则任何引用该菜单项的订单项将显示为红色。
 
-有关如何开发符合服务质量要求的代码，请参阅为[应用程序的体系结构建模](../modeling/model-your-app-s-architecture.md)。
+有关如何开发符合服务质量要求的代码，请参阅为 [应用程序的体系结构建模](../modeling/model-your-app-s-architecture.md) 。
 
 ## <a name="see-also"></a>另请参阅
 

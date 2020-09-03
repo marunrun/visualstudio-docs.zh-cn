@@ -1,5 +1,5 @@
 ---
-title: IDebugMemoryBytes2::WriteAt | Microsoft Docs
+title: IDebugMemoryBytes2：： WriteAt |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -14,16 +14,16 @@ caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 2479ac3948f81769ba2e73c746fd1811652aa239
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68180571"
 ---
 # <a name="idebugmemorybytes2writeat"></a>IDebugMemoryBytes2::WriteAt
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-写入指定的内存，在指定地址开始的字节数。  
+写入从指定地址开始的指定字节数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,20 +45,20 @@ int WriteAt(
   
 #### <a name="parameters"></a>参数  
  `pStartContext`  
- [in][IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)对象，它指定位置开始写入字节数。  
+ 中 [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) 对象，指定开始写入字节的位置。  
   
  `dwCount`  
- [in]要写入的字节数。  
+ 中要写入的字节数。  
   
  `rgbMemory`  
- [in]要写入的字节。 此数组被假定为至少`dwCount`字节的大小。  
+ 中要写入的字节数。 假定此数组的大小至少为 `dwCount` 个字节。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回`S_FALSE`如果不是所有字节都可以编写，或返回错误代码 (通常`E_FAIL`)。  
+ 如果成功， `S_OK` 则返回; 否则， `S_FALSE` 如果不能写入所有字节，则返回; 否则返回错误代码 (通常 `E_FAIL`) 。  
   
 ## <a name="remarks"></a>备注  
- 如果起始地址不是由此内存窗口内[IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md)对象时，发生任何写操作和错误代码的`E_FAIL`返回 — 即使量要写入到内存空间重叠。  
+ 如果起始地址不在此 [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md) 对象所表示的内存窗口中，则不会执行任何写入操作，并且将返回错误代码 `E_FAIL` （即使要写入的量与内存空间重叠）。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md)   
  [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)

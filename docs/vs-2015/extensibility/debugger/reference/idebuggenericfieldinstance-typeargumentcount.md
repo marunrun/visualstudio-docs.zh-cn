@@ -1,5 +1,5 @@
 ---
-title: IDebugGenericFieldInstance::TypeArgumentCount |Microsoft Docs
+title: IDebugGenericFieldInstance：： TypeArgumentCount |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,16 +12,16 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 80c2aea4130fe7de0208d4c40b0f01afed06eecf
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68180847"
 ---
 # <a name="idebuggenericfieldinstancetypeargumentcount"></a>IDebugGenericFieldInstance::TypeArgumentCount
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-返回此实例的参数自变量类型的数目。  
+返回此实例的类型参数参数的数目。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,13 +39,13 @@ int TypeArgumentCount(
   
 #### <a name="parameters"></a>参数  
  `pcArgs`  
- [in、 out]此实例的类型参数参数的数目。  
+ [in，out]此实例的类型参数参数的数目。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
 ## <a name="remarks"></a>备注  
- 例如，如果列表\<int >，此方法返回 1，并且，如果列表\<int，float2 > 此方法返回 2。 如果没有任何类型自变量，则此方法返回 0。  
+ 例如，如果列表 \<int> ，则此方法返回 1; 如果 list，则此方法返回 \<int,float2> 2。 如果没有类型参数，则此方法返回0。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugGenericFieldInstance](../../../extensibility/debugger/reference/idebuggenericfieldinstance.md)

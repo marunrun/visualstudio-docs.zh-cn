@@ -1,5 +1,5 @@
 ---
-title: IDebugCoreServer2：：获取机器信息 |微软文档
+title: IDebugCoreServer2：： GetMachineInfo |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 9411c296f396043a63eee6e4254a35d5c2c35884
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80733161"
 ---
 # <a name="idebugcoreserver2getmachineinfo"></a>IDebugCoreServer2::GetMachineInfo
-检索核心服务器正在运行的计算机的说明。
+检索核心服务器正在其上运行的计算机的说明。
 
 ## <a name="syntax"></a>语法
 
@@ -43,16 +43,16 @@ int GetMachineInfo( 
 
 ## <a name="parameters"></a>参数
 `Fields`\
-[在][MACHINE_INFO_FIELDS](../../../extensibility/debugger/reference/machine-info-fields.md)枚举中的标志的组合，用于指定要填写的`pMachineInfo`字段。
+中 [MACHINE_INFO_FIELDS](../../../extensibility/debugger/reference/machine-info-fields.md) 枚举中的标志的组合，用于指定 `pMachineInfo` 要填写的字段。
 
  `pMachineInfo`\
 
- [进出]一个[MACHINE_INFO](../../../extensibility/debugger/reference/machine-info.md)结构，用机器的说明填充。
+ [in，out]使用计算机说明填充的 [MACHINE_INFO](../../../extensibility/debugger/reference/machine-info.md) 结构。
 
 ## <a name="return-value"></a>返回值
- 如果成功，返回`S_OK`;否则，返回错误代码。
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md)
 - [MACHINE_INFO_FIELDS](../../../extensibility/debugger/reference/machine-info-fields.md)
 - [MACHINE_INFO](../../../extensibility/debugger/reference/machine-info.md)

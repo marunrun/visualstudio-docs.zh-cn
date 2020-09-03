@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 7726379258ef474b57f1ca4a924413cd93cf80bb
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72672790"
 ---
 # <a name="attach-reference-strings-to-uml-model-elements"></a>将引用字符串附加到 UML 模型元素
@@ -34,7 +34,7 @@ ms.locfileid: "72672790"
 
  `using Microsoft.VisualStudio.ArchitectureTools.Extensibility.Uml;`
 
-|方法调用|描述|
+|方法调用|说明|
 |-----------------|-----------------|
 |`element.AddReference (nameString, valueString, duplicatesAllowed)`|使用给定的名称和值字符串创建 `IReference`，并将其链接到 `element`。 返回 `IReference`。<br /><br /> 如果 `duplicatesAllowed` 为 False 并且已经有一个具有相同名称的 `IReference` 附加到 `element`，则会引发异常。|
 |`element.GetReferences(name)`|返回所有链接到具有给定的 `IReference` 的 `element` 的 `name` 对象。|
@@ -42,5 +42,5 @@ ms.locfileid: "72672790"
 |`reference.Delete()`|删除此 `IReference`。|
 |`ReferenceConstants.WorkItem`|用于命名工作项引用的值。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [定义工作项链接处理程序](../modeling/define-a-work-item-link-handler.md)[定义和安装建模扩展](../modeling/define-and-install-a-modeling-extension.md)[使用 UML API 编程](../modeling/programming-with-the-uml-api.md)

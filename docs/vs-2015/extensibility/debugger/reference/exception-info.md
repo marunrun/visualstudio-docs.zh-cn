@@ -1,5 +1,5 @@
 ---
-title: EXCEPTION_INFO | Microsoft Docs
+title: EXCEPTION_INFO |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 66af4d95707be99865df3df32751215cf5eb10b2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68181175"
 ---
-# <a name="exceptioninfo"></a>EXCEPTION_INFO
+# <a name="exception_info"></a>EXCEPTION_INFO
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-描述异常或引发由正在调试的程序的运行时错误。  
+描述由正在调试的程序引发的异常或运行时错误。  
   
 ## <a name="syntax"></a>语法  
   
@@ -50,34 +50,34 @@ public struct EXCEPTION_INFO { 
   
 ## <a name="members"></a>成员  
  pProgram  
- [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)对象，表示发生了异常的程序。  
+ [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)对象，它表示发生异常的程序。  
   
  bstrProgramName  
- 发生了异常的程序的名称。  
+ 发生异常的程序的名称。  
   
  bstrExceptionName  
  异常的名称。  
   
  dwCode  
- 异常或运行时错误标识代码。  
+ 异常或运行时错误的标识代码。  
   
  dwState  
- 中的值[EXCEPTION_STATE](../../../extensibility/debugger/reference/exception-state.md)枚举，用于定义异常的状态。  
+ [EXCEPTION_STATE](../../../extensibility/debugger/reference/exception-state.md)枚举中的一个值，该值定义异常的状态。  
   
  guidType  
- GUID 的语言标识符，即`guidLang`或`guidEng`。  
+ GUID 语言标识符， `guidLang` 或 `guidEng` 。  
   
 ## <a name="remarks"></a>备注  
- 此结构作为参数传递给[SetException](../../../extensibility/debugger/reference/idebugengine2-setexception.md)并[RemoveSetException](../../../extensibility/debugger/reference/idebugengine2-removesetexception.md)方法。 此结构还传递给[GetException](../../../extensibility/debugger/reference/idebugexceptionevent2-getexception.md)要填充的方法。  
+ 此结构作为参数传递给 [SetException](../../../extensibility/debugger/reference/idebugengine2-setexception.md) 和 [RemoveSetException](../../../extensibility/debugger/reference/idebugengine2-removesetexception.md) 方法。 此结构还会传递到要填写的 [GetException](../../../extensibility/debugger/reference/idebugexceptionevent2-getexception.md) 方法。  
   
 ## <a name="requirements"></a>要求  
- 标头： msdbg.h  
+ 标头： msdbg  
   
- 命名空间:Microsoft.VisualStudio.Debugger.Interop  
+ 命名空间： VisualStudio  
   
- 程序集：Microsoft.VisualStudio.Debugger.Interop.dll  
+ 程序集： Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [结构和联合](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [EXCEPTION_STATE](../../../extensibility/debugger/reference/exception-state.md)   
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)   

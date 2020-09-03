@@ -10,10 +10,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: e84a7c3c7e402edb3c39ea247ea7efffce1b60df
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68154842"
 ---
 # <a name="msbuild-glossary"></a>MSBuild 词汇表
@@ -21,14 +21,14 @@ ms.locfileid: "68154842"
 
 这些术语用于描述 Microsoft 生成引擎 (MSBuild) 及其组件。
 
-## <a name="glossary"></a>词汇表
+## <a name="glossary"></a>术语表
  AssemblyFoldersEx
 
  注册表位置，第三方供应商将其支持的每个框架版本的路径存储在此，设计时解析可在此处查找参考程序集。
 
  批处理
 
- 批处理是指根据项元数据，将项划分为不同类别（称为批次  ），然后使用每个批次运行目标或任务。 批处理相当于 MSBuild for 循环构造。 有关详细信息，请参阅[批处理](../msbuild/msbuild-batching.md)。
+ 批处理是指根据项元数据，将项划分为不同类别（称为批次**），然后使用每个批次运行目标或任务。 批处理相当于 MSBuild for 循环构造。 有关详细信息，请参阅[批处理](../msbuild/msbuild-batching.md)。
 
  生成范围
 
@@ -38,7 +38,7 @@ ms.locfileid: "68154842"
 
  请参阅*项目，子项目*。
 
- 条件
+ condition
 
  可根据条件定义多个 MSBuild 元素；也就是说，元素中会出现 `Condition` 属性。 除非条件的计算结果为 `true`，否则会忽略条件元素的内容。 有关详细信息，请参阅[条件](../msbuild/msbuild-conditions.md)。
 
@@ -70,7 +70,7 @@ ms.locfileid: "68154842"
 
  请参阅项函数。
 
- 项
+ item
 
  项是生成系统的输入，并基于其元素名组成不同的项类型。 项通常表示文件。 由于项根据其所属项类型命名，因此术语*项*和*项值*可互换使用。 有关详细信息，请参阅[项](../msbuild/msbuild-items.md)。
 
@@ -102,7 +102,7 @@ ms.locfileid: "68154842"
 
  应用程序或程序集项目从 MSBuild 和 Visual Studio 瞄准多个不同 CLR 和框架的能力。
 
- profile
+ 个人资料
 
  完整框架的子集。 用于最大程度减少需下载到计算机的量。
 
@@ -110,7 +110,7 @@ ms.locfileid: "68154842"
 
  项目文件包含控制生成的 MSBuild 脚本。 项目文件通常具有以“proj”结尾的文件扩展名（如 .csproj 或 .vbproj）。 项目文件可能会导入属性文件和目标文件。
 
- 属性
+ property
 
  属性是用来控制生成过程的键值对。 有关详细信息，请参阅 [MSBuild 属性](msbuild-properties1.md)。
 
@@ -170,7 +170,7 @@ ms.locfileid: "68154842"
 
  请参阅*属性，注册表*。
 
- target
+ 目标
 
  目标按特定的顺序将任务组合到一起，并将项目文件的各个部分作为生成过程入口点公开。 有关详细信息，请参阅[目标](../msbuild/msbuild-targets.md)。
 
@@ -206,7 +206,7 @@ ms.locfileid: "68154842"
 
  目标文件是包含大部分指导生成的目标和任务的项目文件。 按照约定，其文件扩展名为 .targets。 通常在关联的项目文件的结尾导入目标文件。
 
- 任务
+ task
 
  任务是 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 项目用于执行生成操作的可执行代码单元。 例如，任务可能编译输入文件或运行外部工具。 有关详细信息，请参阅[任务](../msbuild/msbuild-tasks.md)。
 
@@ -218,6 +218,6 @@ ms.locfileid: "68154842"
 
  请参阅*元数据，已知*。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [MSBuild1](../msbuild/msbuild.md)

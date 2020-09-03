@@ -1,5 +1,5 @@
 ---
-title: IDebugBinder3::GetMemoryObject |Microsoft Docs
+title: IDebugBinder3：： GetMemoryObject |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,10 +13,10 @@ caps.latest.revision: 8
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 0019b1691cb36b9d23be546cdfdb0e061779647d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68193022"
 ---
 # <a name="idebugbinder3getmemoryobject"></a>IDebugBinder3::GetMemoryObject
@@ -44,18 +44,18 @@ int GetMemoryObject(
   
 #### <a name="parameters"></a>参数  
  `pField`  
- [in]指定要获取的内存对象的字段。  
+ 中指定要获取其内存对象的字段。  
   
  `uConstant`  
- [in]表示内存地址或值的常量值。  
+ 中表示常量值的内存地址或值。  
   
  `ppObject`  
- [out][IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)表示此对象绑定到的内存。  
+ 弄一个 [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) ，表示此对象绑定到的内存。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md)   
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)   
  [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)

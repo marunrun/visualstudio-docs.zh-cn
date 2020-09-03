@@ -13,10 +13,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: d388d32b288e47a7e92f5d0f727230ffa00a2621
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68178320"
 ---
 # <a name="how-to-use-the-same-target-in-multiple-project-files"></a>如何：在多个项目文件中使用同一目标
@@ -25,19 +25,19 @@ ms.locfileid: "68178320"
 如果你创建了若干个 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 项目文件后，或许发现自己可能需要在不同项目文件中使用相同的任务和目标。 无需将这些任务或目标的完整说明包含在每个项目文件中，相反，你可以将目标保存在单独的项目文件中，然后将该项目导入任何需要使用该目标的其他项目。  
   
 ## <a name="using-the-import-element"></a>使用 Import 元素  
- `Import` 元素用于将一个项目文件插入另一个项目文件中。 被导入的项目文件必须是有效的 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 项目文件，并包含格式标准的 XML。 `Project` 属性指定已导入的项目文件的路径。 有关 `Import` 元素的详细信息，请参阅 [Import 元素 (MSBuild)](../msbuild/import-element-msbuild.md)。  
+ `Import` 元素用于将一个项目文件插入另一个项目文件中。 被导入的项目文件必须是有效的 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 项目文件，并包含格式标准的 XML。 `Project` 属性指定已导入的项目文件的路径。 有关元素的详细信息 `Import` ，请参阅 [Import Element (MSBuild) ](../msbuild/import-element-msbuild.md)。  
   
 #### <a name="to-import-a-project"></a>导入项目  
   
 1. 在正在导入的项目文件中，定义所有在已导入项目中作为属性和项的参数使用的属性和项。  
   
-2. 使用 `Import` 元素导入项目。 例如:  
+2. 使用 `Import` 元素导入项目。 例如：  
   
      `<Import Project="MyCommon.targets"/>`  
   
 3. 在 `Import` 元素之后定义所有属性和项，它们必须替代已导入项目中属性和项的默认定义。  
   
-## <a name="order-of-evaluation"></a>计算顺序  
+## <a name="order-of-evaluation"></a>评估顺序  
  当 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 到达 `Import` 元素后，已导入项目将被高效地插入位于 `Import` 元素所处位置的正在导入的项目中。 因此，`Import` 元素的位置可能会影响属性和项的值。 请务必了解已导入项目所设置的属性和项，以及已导入项目所使用的属性和项。  
   
  当项目生成时，将首先评估所有属性，然后对项进行评估。 例如，下面的 XML 定义了已导入的项目文件 MyCommon.targets：  
@@ -115,5 +115,5 @@ ms.locfileid: "68178320"
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Import 元素 (MSBuild)](../msbuild/import-element-msbuild.md)   
+ [ (MSBuild) 导入元素 ](../msbuild/import-element-msbuild.md)   
  [目标](../msbuild/msbuild-targets.md)

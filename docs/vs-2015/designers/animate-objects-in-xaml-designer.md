@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: ea2fdf1f47385a9be26fa65a93b9104b2d864079
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72658024"
 ---
 # <a name="animate-objects-in-xaml-designer"></a>在 XAML 设计器中动态显示对象
@@ -23,7 +23,7 @@ ms.locfileid: "72658024"
 
  若要开始，请创建 *情节提要*。 情节提要包含一个或多个 *时间线*。 在时间线上设置 *关键帧* 以标记属性更改。 随后在运行动画时，Blend 将在指定时间段内插入属性更改。 这样便可实现平滑过渡。 可以对属于对象的任何属性（甚至非可视属性）进行动画处理。
 
- 下图显示了一个名为“MoveUp”的情节提要。 时间线包含标记矩形的 X 和 Y 位置的关键帧。 当此动画运行时，矩形平滑地从一个位置移动到另一个位置。
+ 下图显示了一个名为“MoveUp” **** 的情节提要。 时间线包含标记矩形的 X 和 Y 位置的关键帧。 当此动画运行时，矩形平滑地从一个位置移动到另一个位置。
 
  ![](../designers/media/982f031a-74a3-414a-abc2-a0f41a741075.png "982f031a-74a3-414a-abc2-a0f41a741075")
 
@@ -40,5 +40,5 @@ ms.locfileid: "72658024"
 |![配置已安装的功能](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon")[对按钮进行动画处理](http://www.popscreen.com/v/6A4fK/Microsoft-Expression-Blend-Animating-a-Button)|创建在用户指向按钮时出现在按钮上的有趣效果。|
 |![配置已安装的功能](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon")[创建动画和使用缓动](https://www.youtube.com/watch?v=mAJXYrwxGYo)|当用户按下计算器图像上的按钮时出现的动画效果。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [使用 Blend for Visual Studio 创建 UI](../designers/creating-a-ui-by-using-blend-for-visual-studio.md)

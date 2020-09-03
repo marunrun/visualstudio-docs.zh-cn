@@ -19,16 +19,16 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 7417f9cdce21dc09aeaf306b55834ad7d3a125a6
-ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85382544"
 ---
 # <a name="how-to-configure-the-clickonce-trust-prompt-behavior"></a>如何：配置 ClickOnce 信任提示行为
 您可以配置 ClickOnce 信任提示，以控制最终用户是否提供安装 ClickOnce 应用程序的选项，例如 Windows 窗体应用程序、Windows Presentation Foundation 应用程序、控制台应用程序、WPF 浏览器应用程序和 Office 解决方案。 可以通过在每个最终用户的计算机上设置注册表项来配置信任提示。
 
- 下表显示了可应用到五个区域（Internet、UntrustedSites、MyComputer、LocalIntranet 和 TrustedSites）中的每一项的配置选项。
+ 下表显示了可应用于每个 (Internet、UntrustedSites、MyComputer、LocalIntranet 和 TrustedSites) 的五个区域的配置选项。
 
 |选项|注册表设置值|说明|
 |------------|----------------------------|-----------------|
@@ -38,7 +38,7 @@ ms.locfileid: "85382544"
 
  下表显示了每个区域的默认行为。 "应用程序" 列是指 Windows 窗体应用程序、Windows Presentation Foundation 应用程序、WPF 浏览器应用程序和控制台应用程序。
 
-|Zone|应用程序|Office 解决方案|
+|区域|应用程序|Office 解决方案|
 |----------|------------------|----------------------|
 |`MyComputer`|`Enabled`|`Enabled`|
 |`LocalIntranet`|`Enabled`|`Enabled`|
@@ -57,7 +57,7 @@ ms.locfileid: "85382544"
 
     1. 单击 **“启动”** ，再单击 **“运行”** 。
 
-    2. 在 "**打开**" 框中键入 `regedit` ，然后单击 **"确定"**。
+    2. 在 " **打开** " 框中键入 `regedit` ，然后单击 **"确定"**。
 
 2. 找到以下注册表项：
 
@@ -65,9 +65,9 @@ ms.locfileid: "85382544"
 
      如果该键不存在，请创建它。
 
-3. 将以下子项添加为**字符串值**（如果它们尚不存在），其中包含下表中所示的关联值。
+3. 将以下子项添加为 **字符串值**（如果它们尚不存在），其中包含下表中所示的关联值。
 
-    |字符串值子项|“值”|
+    |字符串值子项|值|
     |-------------------------|-----------|
     |`Internet`|`Enabled`|
     |`UntrustedSites`|`Disabled`|
@@ -116,7 +116,7 @@ ms.locfileid: "85382544"
 
     1. 单击 **“启动”** ，再单击 **“运行”** 。
 
-    2. 在 "**打开**" 框中键入 `regedit` ，然后单击 **"确定"**。
+    2. 在 " **打开** " 框中键入 `regedit` ，然后单击 **"确定"**。
 
 2. 找到以下注册表项：
 
@@ -124,9 +124,9 @@ ms.locfileid: "85382544"
 
      如果该键不存在，请创建它。
 
-3. 将以下子项添加为**字符串值**（如果它们尚不存在），其中包含下表中所示的关联值。
+3. 将以下子项添加为 **字符串值**（如果它们尚不存在），其中包含下表中所示的关联值。
 
-    |字符串值子项|“值”|
+    |字符串值子项|值|
     |-------------------------|-----------|
     |`UntrustedSites`|`Disabled`|
     |`Internet`|`AuthenticodeRequired`|
@@ -173,7 +173,7 @@ ms.locfileid: "85382544"
 
     1. 单击 **“启动”** ，再单击 **“运行”** 。
 
-    2. 在 "**打开**" 框中键入 `regedit` ，然后单击 **"确定"**。
+    2. 在 " **打开** " 框中键入 `regedit` ，然后单击 **"确定"**。
 
 2. 找到以下注册表项：
 
@@ -181,9 +181,9 @@ ms.locfileid: "85382544"
 
      如果该键不存在，请创建它。
 
-3. 将以下子项添加为**字符串值**（如果它们尚不存在），其中包含下表中所示的关联值。
+3. 将以下子项添加为 **字符串值**（如果它们尚不存在），其中包含下表中所示的关联值。
 
-    |字符串值子项|“值”|
+    |字符串值子项|值|
     |-------------------------|-----------|
     |`UntrustedSites`|`Disabled`|
     |`Internet`|`Disabled`|
@@ -222,7 +222,7 @@ ms.locfileid: "85382544"
 
 3. 生成并运行应用程序。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [保护 ClickOnce 应用程序](../deployment/securing-clickonce-applications.md)
 - [ClickOnce 应用程序的代码访问安全性](../deployment/code-access-security-for-clickonce-applications.md)
 - [ClickOnce 和 Authenticode](../deployment/clickonce-and-authenticode.md)

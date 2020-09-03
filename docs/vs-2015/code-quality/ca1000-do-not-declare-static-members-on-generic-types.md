@@ -16,24 +16,24 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 66bca5b8b039de59509cecf4ecfae6bd6b4f0162
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85548325"
 ---
 # <a name="ca1000-do-not-declare-static-members-on-generic-types"></a>CA1000:不要在泛型类型中声明静态成员
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|Item|值|
+|项|值|
 |-|-|
 |TypeName|DoNotDeclareStaticMembersOnGenericTypes|
 |CheckId|CA1000|
-|Category|Microsoft. Design|
+|类别|Microsoft. Design|
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
- 外部可见的泛型类型包含 `static` （ `Shared` 在 Visual Basic）成员中。
+ 外部可见的泛型类型包含 `static` `Shared` Visual Basic) 成员的 (。
 
 ## <a name="rule-description"></a>规则描述
  当 `static` 调用泛型类型的成员时，必须为该类型指定类型参数。 当调用不支持推理的泛型实例成员时，必须指定该成员的类型参数。 在这两种情况下，在这两种情况中指定类型参数的语法不同，并且很容易混淆，如下所示：
@@ -54,7 +54,7 @@ GenericType<int>.StaticMethod();
 someObject.GenericMethod<int>();
 ```
 
- 通常，应避免上述两个声明，以便在调用成员时不必指定类型参数。 这会导致在泛型中调用成员的语法与非泛型的语法不同。 有关详细信息，请参阅[CA1004：泛型方法应提供类型参数](../code-quality/ca1004-generic-methods-should-provide-type-parameter.md)。
+ 通常，应避免上述两个声明，以便在调用成员时不必指定类型参数。 这会导致在泛型中调用成员的语法与非泛型的语法不同。 有关详细信息，请参阅 [CA1004：泛型方法应提供类型参数](../code-quality/ca1004-generic-methods-should-provide-type-parameter.md)。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
  若要修复与此规则的冲突，请删除静态成员或将其更改为实例成员。

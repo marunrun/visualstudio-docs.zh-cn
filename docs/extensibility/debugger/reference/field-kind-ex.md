@@ -1,5 +1,5 @@
 ---
-title: FIELD_KIND_EX |微软文档
+title: FIELD_KIND_EX |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -14,14 +14,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: f0c13d83f80b311838eca32945462c1f17ca23f4
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80736876"
 ---
 # <a name="field_kind_ex"></a>FIELD_KIND_EX
-枚举[IDebugField](../../../extensibility/debugger/reference/idebugfield.md)对象可以包含的其他类型的字段。 此枚举扩展[了FIELD_KIND](../../../extensibility/debugger/reference/field-kind.md)枚举。
+枚举 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) 对象可包含的其他类型的字段。 此枚举扩展 [FIELD_KIND](../../../extensibility/debugger/reference/field-kind.md) 枚举。
 
 ## <a name="syntax"></a>语法
 
@@ -55,11 +55,11 @@ public enum enum_FIELD_KIND_EX
 字段包含类变量。
 
 ## <a name="requirements"></a>要求
-标题： Sh.h
+标头： Sh。h
 
-命名空间：微软.VisualStudio.调试器.互通
+命名空间： VisualStudio
 
-程序集：微软.VisualStudio.调试器.Interop.dll
+程序集： Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [枚举](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

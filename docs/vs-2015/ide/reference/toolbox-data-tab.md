@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 9349745eeee24f2f8b1e62eb2b01bd75273c86d8
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72658586"
 ---
 # <a name="toolbox-data-tab"></a>工具箱，“数据”选项卡
@@ -29,9 +29,9 @@ ms.locfileid: "72658586"
 > 运行“数据源配置向导”将自动创建和配置大部分数据项。 有关详细信息，请参阅[使用 Visual Studio 创建数据应用程序](https://msdn.microsoft.com/28edce21-220a-484c-b461-a75b0232d293)。
 
 ## <a name="ui-element-list"></a>UI 元素列表
- 若要直接转到某个组件的 .NET Framework 参考页，请针对“工具箱”中的项或设计器栏中的组件项按“F1”   。
+ 若要直接转到某个组件的 .NET Framework 参考页，请针对“工具箱”中的项或设计器栏中的组件项按“F1”********。
 
-|name|说明|
+|名称|说明|
 |----------|-----------------|
 |<xref:System.Data.DataSet>|向窗体或组件中添加类型化或非类型化数据集的实例。 将此对象拖到设计器上后，它将显示一个对话框，可在其中选择一个现有的类型化数据集类或指定希望创建新的非类型化空数据集。 注意：  不要使用“工具箱”上的 <xref:System.Data.DataSet> 对象创建新的类型化数据集架构和类  。 有关详细信息，请参阅[创建和配置数据集](../../data-tools/create-and-configure-datasets-in-visual-studio.md)。|
 |<xref:System.Windows.Forms.DataGridView>|提供一种以表格格式显示数据的功能强大且灵活的方法。|

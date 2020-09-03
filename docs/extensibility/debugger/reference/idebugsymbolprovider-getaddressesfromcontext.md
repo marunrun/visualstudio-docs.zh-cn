@@ -1,5 +1,5 @@
 ---
-title: IDebugSymbol 提供程序：从上下文获取地址 |微软文档
+title: IDebugSymbolProvider：： GetAddressesFromContext |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 7cf7599cf0fc37c16467c29c2b432f1f58b172fe
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80719431"
 ---
 # <a name="idebugsymbolprovidergetaddressesfromcontext"></a>IDebugSymbolProvider::GetAddressesFromContext
-此方法将文档上下文映射到调试地址数组中。
+此方法将文档上下文映射到一个调试地址数组。
 
 ## <a name="syntax"></a>语法
 
@@ -47,26 +47,26 @@ int GetAddressesFromContext(
 
 ## <a name="parameters"></a>参数
 `pDocContext`\
-[在]文档上下文。
+中文档上下文。
 
 `fStatmentOnly`\
-[在]如果为 TRUE，则将调试地址限制为单个语句。
+中如果为 TRUE，则将调试地址限制为单个语句。
 
 `ppEnumBegAddresses`\
-[出]返回与此语句或行关联的起始调试地址的枚举器。
+弄返回与此语句或行关联的起始调试地址的枚举数。
 
 `ppEnumEndAddresses`\
-[出]返回与此语句或行关联的结束调试地址的[IEnumDebug 地址](../../../extensibility/debugger/reference/ienumdebugaddresses.md)枚举器。
+弄返回与此语句或行相关联的结束调试地址的 [IEnumDebugAddresses](../../../extensibility/debugger/reference/ienumdebugaddresses.md) 枚举器。
 
 ## <a name="return-value"></a>返回值
- 如果成功，返回`S_OK`;否则，返回错误代码。
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。
 
 ## <a name="remarks"></a>备注
- 文档上下文通常指示源行的范围。 此方法提供与这些行关联的开始和结束调试地址。 某些语言允许跨多行的语句或包含多个语句的行。 此方法提供一个标志，用于将调试地址限制为单个语句。
+ 文档上下文通常指示源行的范围。 此方法提供与这些行关联的开始和结束调试地址。 某些语言允许跨多行的语句或包含多个语句的行。 此方法提供用于将调试地址限制为单个语句的标志。
 
- 单个语句可以有多个调试地址，如模板。
+ 单个语句可以有多个调试地址，就像在模板中一样。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)
 - [GetAddressesFromPosition](../../../extensibility/debugger/reference/idebugsymbolprovider-getaddressesfromposition.md)
 - [IEnumDebugAddresses](../../../extensibility/debugger/reference/ienumdebugaddresses.md)

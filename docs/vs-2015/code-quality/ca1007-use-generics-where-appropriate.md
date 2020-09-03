@@ -16,27 +16,27 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 4ee33305c1ae0f15e5d8f390a4b65d62c87b6904
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85547935"
 ---
 # <a name="ca1007-use-generics-where-appropriate"></a>CA1007:在适用处使用泛型
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|Item|值|
+|项|值|
 |-|-|
 |TypeName|UseGenericsWhereAppropriate|
 |CheckId|CA1007|
-|Category|Microsoft. Design|
+|类别|Microsoft. Design|
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
  外部可见方法包含类型的引用参数 <xref:System.Object?displayProperty=fullName> 和包含程序集目标 [!INCLUDE[dnprdnlong](../includes/dnprdnlong-md.md)] 。
 
 ## <a name="rule-description"></a>规则描述
- 引用参数是使用 `ref` （ `ByRef` in）关键字修改的参数 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 。 为引用参数提供的参数类型必须与引用参数类型完全匹配。 若要使用从引用参数类型派生的类型，必须先强制转换类型并将其分配给引用参数类型的变量。 如果使用泛型方法，则允许将受约束的所有类型传递给方法，而无需先将类型强制转换为引用参数类型。
+ 引用参数是使用 `ref` `ByRef`) 关键字中的 (修改的参数 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 。 为引用参数提供的参数类型必须与引用参数类型完全匹配。 若要使用从引用参数类型派生的类型，必须先强制转换类型并将其分配给引用参数类型的变量。 如果使用泛型方法，则允许将受约束的所有类型传递给方法，而无需先将类型强制转换为引用参数类型。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
  若要修复与此规则的冲突，请将方法设置为泛型，并 <xref:System.Object> 使用类型参数替换参数。

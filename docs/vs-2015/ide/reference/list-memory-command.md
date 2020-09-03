@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 2630402e03d1256f63e542818a9066745206d2c5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72672751"
 ---
 # <a name="list-memory-command"></a>“列出内存”命令
@@ -34,7 +34,7 @@ Debug.ListMemory [/ANSI|Unicode] [/Count:number] [/Format:formattype]
 [/Hex|Signed|Unsigned] [expression]
 ```
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
  `expression`（可选）。 从此处开始显示内存的内存地址。
 
 ## <a name="switches"></a>开关
@@ -42,12 +42,12 @@ Debug.ListMemory [/ANSI|Unicode] [/Count:number] [/Format:formattype]
 
  /Count： `number` 可选。 确定要显示的内存的字节数，从 `expression` 开始。
 
- /Format： `formattype` 可选。 查看“内存”窗口中的内存信息时使用的格式类型；可以为 OneByte、TwoBytes、FourBytes、EightBytes、Float（32 位）或 Double（64 位）  。 如果使用 OneByte，则 `/Unicode` 不可用。
+ /Format： `formattype` 可选。 查看“内存”窗口中的内存信息时使用的格式类型；可以为 OneByte、TwoBytes、FourBytes、EightBytes、Float（32 位）或 Double（64 位）****。 如果使用 OneByte，则 `/Unicode` 不可用。
 
- /Hex&#124;有&#124;符号无符号可选。 指定查看数字时使用的格式：有符号、无符号的或十六进制。
+ /Hex&#124;有符号&#124;无符号可选。 指定查看数字时使用的格式：有符号、无符号的或十六进制。
 
 ## <a name="remarks"></a>备注
- 不必写出带所有开关的完整“Debug.ListMemory”命令，可以使用某些开关预设为指定值的预定义别名调用该命令  。 例如，不必输入：
+ 不必写出带所有开关的完整“Debug.ListMemory”命令，可以使用某些开关预设为指定值的预定义别名调用该命令****。 例如，不必输入：
 
 ```
 >Debug.ListMemory /Format:float /Count:30 /Unicode
@@ -59,16 +59,16 @@ Debug.ListMemory [/ANSI|Unicode] [/Count:number] [/Format:formattype]
 >df /Count:30 /Unicode
 ```
 
- 下面是 Debug.ListMemory 命令的可用别名列表  ：
+ 下面是 Debug.ListMemory 命令的可用别名列表****：
 
 |Alias|命令和开关|
 |-----------|--------------------------|
 |**d**|Debug.ListMemory|
 |**da**|Debug.ListMemory /Ansi|
-|**db**|Debug.ListMemory /Format:OneByte|
-|**dc**|Debug.ListMemory /Format:FourBytes /Ansi|
+|**数据库**|Debug.ListMemory /Format:OneByte|
+|**台**|Debug.ListMemory /Format:FourBytes /Ansi|
 |**dd**|Debug.ListMemory /Format:FourBytes|
-|**df**|Debug.ListMemory /Format:Float|
+|**加**|Debug.ListMemory /Format:Float|
 |**dq**|Debug.ListMemory /Format:EightBytes|
 |**du**|Debug.ListMemory /Unicode|
 

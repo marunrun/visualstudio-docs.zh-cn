@@ -11,23 +11,23 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 0331c0d240503dd88257269397e1afae80a17803
-ms.sourcegitcommit: 0f30188f57d5ad2b0c8073eb51d37557c8f35a62
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86418063"
 ---
 # <a name="walkthrough-highlight-text"></a>演练：突出显示文本
-您可以通过创建 Managed Extensibility Framework （MEF）组件部分向编辑器添加不同的视觉效果。 本演练演示如何突出显示文本文件中当前单词的每个匹配项。 如果某个单词在文本文件中出现多次，并且您将插入符号放置在一个匹配项中，则将突出显示每个匹配项。
+您可以通过创建 Managed Extensibility Framework (MEF) 组件部分来向编辑器添加不同的视觉效果。 本演练演示如何突出显示文本文件中当前单词的每个匹配项。 如果某个单词在文本文件中出现多次，并且您将插入符号放置在一个匹配项中，则将突出显示每个匹配项。
 
 ## <a name="prerequisites"></a>先决条件
- 从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅[安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
+ 从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
 
 ## <a name="create-a-mef-project"></a>创建 MEF 项目
 
-1. 创建 c # VSIX 项目。 （在 "**新建项目**" 对话框中，依次选择 " **Visual c #/扩展性**"、" **VSIX 项目**"。）命名解决方案 `HighlightWordTest` 。
+1. 创建 c # VSIX 项目。  (在 " **新建项目** " 对话框中，依次选择 " **Visual c #/扩展性**"、" **VSIX 项目**"。 ) 将解决方案命名为 `HighlightWordTest` 。
 
-2. 将编辑器分类器项模板添加到项目。 有关详细信息，请参阅[使用编辑器项模板创建扩展](../extensibility/creating-an-extension-with-an-editor-item-template.md)。
+2. 将编辑器分类器项模板添加到项目。 有关详细信息，请参阅 [使用编辑器项模板创建扩展](../extensibility/creating-an-extension-with-an-editor-item-template.md)。
 
 3. 删除现有的类文件。
 
@@ -36,7 +36,7 @@ ms.locfileid: "86418063"
 
 ### <a name="to-define-a-textmarkertag-and-a-markerformatdefinition"></a>定义 TextMarkerTag 和 MarkerFormatDefinition
 
-1. 添加一个类文件并将其命名为**HighlightWordTag**。
+1. 添加一个类文件并将其命名为 **HighlightWordTag**。
 
 2. 添加以下引用：
 
@@ -306,7 +306,7 @@ ms.locfileid: "86418063"
 
 8. 必须实现 <xref:Microsoft.VisualStudio.Text.Tagging.ITagger%601.GetTags%2A> 方法。 此方法获取对象的集合 <xref:Microsoft.VisualStudio.Text.SnapshotSpan> ，并返回标记跨度的枚举。
 
-     在 c # 中，将此方法实现为 yield 迭代器，该迭代器对标记启用延迟计算（即，仅在访问个别项时对集进行计算）。 在 Visual Basic 中，将标记添加到列表并返回列表。
+     在 c # 中，将此方法实现为 yield 迭代器，该迭代器可启用延迟计算 (即，仅当访问单个项) 标记时才对集进行计算。 在 Visual Basic 中，将标记添加到列表并返回列表。
 
      此方法返回一个 <xref:Microsoft.VisualStudio.Text.Tagging.TagSpan%601> 具有 "blue" 的对象 <xref:Microsoft.VisualStudio.Text.Tagging.TextMarkerTag> ，该对象提供蓝色背景。
 
@@ -351,7 +351,7 @@ ms.locfileid: "86418063"
  若要创建标记，必须实现 <xref:Microsoft.VisualStudio.Text.Tagging.IViewTaggerProvider> 。 此类是一个 MEF 组件部件，因此必须设置正确的属性，以便识别此扩展。
 
 > [!NOTE]
-> 有关 MEF 的详细信息，请参阅[Managed Extensibility Framework （MEF）](/dotnet/framework/mef/index)。
+> 有关 MEF 的详细信息，请参阅 [ (MEF) Managed Extensibility Framework ](/dotnet/framework/mef/index)。
 
 ### <a name="to-create-a-tagger-provider"></a>创建标记器提供程序
 
@@ -405,5 +405,5 @@ ms.locfileid: "86418063"
 
 4. 将光标置于出现的 "hello" 之一中。 每个匹配项都应以蓝色突出显示。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [演练：将内容类型链接到文件扩展名](../extensibility/walkthrough-linking-a-content-type-to-a-file-name-extension.md)

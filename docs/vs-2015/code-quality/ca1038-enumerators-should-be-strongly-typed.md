@@ -16,20 +16,20 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: e660b1af58dca8d0d69ce2844076382c4a5a1f12
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85548260"
 ---
 # <a name="ca1038-enumerators-should-be-strongly-typed"></a>CA1038:枚举数应强类型化
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|Item|值|
+|项|值|
 |-|-|
 |TypeName|EnumeratorsShouldBeStronglyTyped|
 |CheckId|CA1038|
-|Category|Microsoft. Design|
+|类别|Microsoft. Design|
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
@@ -45,7 +45,7 @@ ms.locfileid: "85548260"
  此规则要求 <xref:System.Collections.IEnumerator> 实现还需要提供属性的强类型版本， <xref:System.Collections.IEnumerator.Current%2A> 以便用户在使用该接口提供的功能时无需将返回值强制转换为强类型。 此规则假定实现的类型 <xref:System.Collections.IEnumerator> 包含强于的类型的实例集合 <xref:System.Object> 。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
- 若要修复与此规则的冲突，请显式实现接口属性（将其声明为 `IEnumerator.Current` ）。 添加属性的公共强类型版本，将声明为 `Current` ，并使其返回强类型化对象。
+ 若要修复与此规则的冲突，请显式实现接口属性， (将其声明为 `IEnumerator.Current`) 。 添加属性的公共强类型版本，将声明为 `Current` ，并使其返回强类型化对象。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
  当您实现基于对象的枚举器以便与基于对象的集合（如二元树）一起使用时，禁止显示此规则发出的警告。 扩展新集合的类型将定义强类型枚举器并公开强类型的属性。

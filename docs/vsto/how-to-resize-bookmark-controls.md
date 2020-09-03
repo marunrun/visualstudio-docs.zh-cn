@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 6cc7b26bb767c233ed8699519261d4b5b708306b
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545855"
 ---
 # <a name="how-to-resize-bookmark-controls"></a>如何：调整书签控件的大小
@@ -39,7 +39,7 @@ ms.locfileid: "85545855"
 
    如果将对书签的大小或位置作出重大更改，此方法很有用。
 
-  在文档级项目中，你可以在设计时或在运行时向项目中的文档添加 <xref:Microsoft.Office.Tools.Word.Bookmark> 控件。 在 VSTO 外接程序项目中，可以在运行时向任何打开的文档添加 <xref:Microsoft.Office.Tools.Word.Bookmark> 控件。 有关详细信息，请参阅[如何：将书签控件添加到 Word 文档](../vsto/how-to-add-bookmark-controls-to-word-documents.md)。
+  在文档级项目中，你可以在设计时或在运行时向项目中的文档添加 <xref:Microsoft.Office.Tools.Word.Bookmark> 控件。 在 VSTO 外接程序项目中，可以在运行时向任何打开的文档添加 <xref:Microsoft.Office.Tools.Word.Bookmark> 控件。 有关详细信息，请参阅 [如何：将书签控件添加到 Word 文档](../vsto/how-to-add-bookmark-controls-to-word-documents.md)。
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
@@ -87,7 +87,7 @@ ms.locfileid: "85545855"
 
 3. 在“书签” **** 对话框中，选择想要重设其大小的书签的名称，并单击“添加” ****。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [如何：向 Word 文档添加书签控件](../vsto/how-to-add-bookmark-controls-to-word-documents.md)
 - [使用扩展对象实现 Word 自动化](../vsto/automating-word-by-using-extended-objects.md)
 - [主机项和主机控件概述](../vsto/host-items-and-host-controls-overview.md)

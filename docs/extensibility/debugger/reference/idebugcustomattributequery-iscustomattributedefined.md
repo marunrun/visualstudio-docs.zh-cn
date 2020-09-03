@@ -1,5 +1,5 @@
 ---
-title: IDebug自定义属性查询：：已定义自定义属性 |微软文档
+title: IDebugCustomAttributeQuery：： IsCustomAttributeDefined |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -15,10 +15,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 3b0be4f8afdfe5320bdf871586f8c0e8f648ae84
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80732629"
 ---
 # <a name="idebugcustomattributequeryiscustomattributedefined"></a>IDebugCustomAttributeQuery::IsCustomAttributeDefined
@@ -40,13 +40,13 @@ int IsCustomAttributeDefined(
 
 ## <a name="parameters"></a>参数
 `pszCustomAttributeName`\
-[在]自定义属性的名称。
+中自定义属性的名称。
 
 ## <a name="return-value"></a>返回值
-如果定义了自定义属性，则返回`S_OK`。否则，返回`S_FALSE`。
+如果定义了自定义特性， `S_OK` 则返回; 否则返回 `S_FALSE` 。
 
 ## <a name="example"></a>示例
-下面的示例演示如何为公开[IDebugCustom属性查询](../../../extensibility/debugger/reference/idebugcustomattributequery.md)接口的**CDebugClassFieldSymbol**对象实现此方法。
+下面的示例演示如何为公开[IDebugCustomAttributeQuery](../../../extensibility/debugger/reference/idebugcustomattributequery.md)接口的**CDebugClassFieldSymbol**对象实现此方法。
 
 ```cpp
 HRESULT CDebugClassFieldSymbol::IsCustomAttributeDefined(
@@ -85,5 +85,5 @@ Error:
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IDebugCustomAttributeQuery](../../../extensibility/debugger/reference/idebugcustomattributequery.md)

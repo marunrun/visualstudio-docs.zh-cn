@@ -13,16 +13,16 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 7700670774dcb38b054cf28275f64c0c3046f741
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68205030"
 ---
-# <a name="processinfofields"></a>PROCESS_INFO_FIELDS
+# <a name="process_info_fields"></a>PROCESS_INFO_FIELDS
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-指定要检索进程信息的种类。  
+指定要为进程检索的信息类型。  
   
 ## <a name="syntax"></a>语法  
   
@@ -57,46 +57,46 @@ public enum enum_PROCESS_INFO_FIELDS { 
   
 ## <a name="members"></a>成员  
  PIF_FILE_NAME  
- 初始化/用`bstrFileName`字段[PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md)结构。  
+ 初始化/使用 `bstrFileName` [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md) 结构的字段。  
   
  PIF_BASE_NAME  
- 初始化/用`bstrBaseName`字段的`PROCESS_INFO`结构。  
+ 初始化/使用 `bstrBaseName` 结构的字段 `PROCESS_INFO` 。  
   
  PIF_TITLE  
- 初始化/用`bstrTitle`字段的`PROCESS_INFO`结构。  
+ 初始化/使用 `bstrTitle` 结构的字段 `PROCESS_INFO` 。  
   
  PIF_PROCESS_ID  
- 初始化/用`ProcessId`字段的`PROCESS_INFO`结构。  
+ 初始化/使用 `ProcessId` 结构的字段 `PROCESS_INFO` 。  
   
  PIF_SESSION_ID  
- 初始化/用`dwSessionId`字段的`PROCESS_INFO`结构。  
+ 初始化/使用 `dwSessionId` 结构的字段 `PROCESS_INFO` 。  
   
  PIF_ATTACHED_SESSION_NAME  
- 初始化/用`bstrAttachedSessionName`字段的`PROCESS_INFO`结构。  
+ 初始化/使用 `bstrAttachedSessionName` 结构的字段 `PROCESS_INFO` 。  
   
  PIF_CREATION_TIME  
- 初始化/用`CreationTime`字段的`PROCESS_INFO`结构。  
+ 初始化/使用 `CreationTime` 结构的字段 `PROCESS_INFO` 。  
   
  PIF_FLAGS  
- 初始化/用`Flags`字段的`PROCESS_INFO`结构。  
+ 初始化/使用 `Flags` 结构的字段 `PROCESS_INFO` 。  
   
  PIF_ALL  
  填写所有字段。  
   
 ## <a name="remarks"></a>备注  
- 传递给[GetInfo](../../../extensibility/debugger/reference/idebugprocess2-getinfo.md)方法，以指示的哪些字段[PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md)结构是进行初始化。  
+ 传递给 [GetInfo](../../../extensibility/debugger/reference/idebugprocess2-getinfo.md) 方法以指示要初始化 [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md) 结构的哪些字段。  
   
- 中也使用`Fields`字段的`PROCESS_INFO`结构，用于指示哪些字段是使用，有效。  
+ 还在结构的字段中用于 `Fields` `PROCESS_INFO` 指示哪些字段已使用并且有效。  
   
- 可能的按位组合这些标志`OR`。  
+ 这些标志可以与按位组合 `OR` 。  
   
 ## <a name="requirements"></a>要求  
- 标头： msdbg.h  
+ 标头： msdbg  
   
- 命名空间:Microsoft.VisualStudio.Debugger.Interop  
+ 命名空间： VisualStudio  
   
- 程序集：Microsoft.VisualStudio.Debugger.Interop.dll  
+ 程序集： Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>请参阅  
- [枚举](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>另请参阅  
+ [计数](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebug默认端口2：：查询本地 |微软文档
+title: IDebugDefaultPort2：： QueryIsLocal |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,14 +13,14 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: c06230f7bbd1825fe73a22f9b1fdc35aea35c499
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80732325"
 ---
 # <a name="idebugdefaultport2queryislocal"></a>IDebugDefaultPort2::QueryIsLocal
-此方法确定此端口是否位于本地计算机上。
+此方法确定此端口是否在本地计算机上。
 
 ## <a name="syntax"></a>语法
 
@@ -35,7 +35,7 @@ int QueryIsLocal();
 ```
 
 ## <a name="return-value"></a>返回值
- 如果`S_OK`此端口是本地的（与调用方在同一台计算机上），或者`S_FALSE`该端口位于另一台计算机上，则返回。
+ `S_OK`如果此端口在与调用) 方相同的计算机上 (本地，则返回; `S_FALSE` 如果端口在另一台计算机上，则返回。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IDebugDefaultPort2](../../../extensibility/debugger/reference/idebugdefaultport2.md)

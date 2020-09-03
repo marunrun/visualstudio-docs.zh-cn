@@ -16,24 +16,24 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 15b63e49f89e17db631772c48765cc610f47ed29
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85548299"
 ---
 # <a name="ca1400-pinvoke-entry-points-should-exist"></a>CA1400：P/Invoke 入口点应该存在
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|Item|值|
+|项|值|
 |-|-|
 |TypeName|PInvokeEntryPointsShouldExist|
 |CheckId|CA1400|
-|Category|Microsoft. 互操作性|
+|类别|Microsoft. 互操作性|
 |是否重大更改|不间断|
 
 ## <a name="cause"></a>原因
- 公共或受保护的方法使用进行标记 <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName> 。 未能找到非托管库，或者未能将方法与库中的函数匹配。 如果规则找不到指定的方法名称，它将通过使用 "A" 或 "W" suffixing 方法名称来查找方法的 ANSI 或宽字符版本。 如果未找到匹配项，则规则将尝试使用 __stdcall 名称格式（ _MyMethod@12 ，其中12表示参数的长度）查找函数。 如果未找到匹配项，并且方法名称以 "#" 开头，则规则会搜索函数作为序号引用而不是名称引用。
+ 公共或受保护的方法使用进行标记 <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName> 。 未能找到非托管库，或者未能将方法与库中的函数匹配。 如果规则找不到指定的方法名称，它将通过使用 "A" 或 "W" suffixing 方法名称来查找方法的 ANSI 或宽字符版本。 如果未找到匹配项，则该规则将尝试使用 __stdcall 名称格式 (查找函数 _MyMethod@12 ，其中12表示) 参数的长度。 如果未找到匹配项，并且方法名称以 "#" 开头，则规则会搜索函数作为序号引用而不是名称引用。
 
 ## <a name="rule-description"></a>规则描述
  无编译时检查可用于确保用标记的方法 <xref:System.Runtime.InteropServices.DllImportAttribute> 位于引用的非托管 DLL 中。 如果库中没有具有指定名称的函数，或者该方法的参数与函数参数不匹配，则公共语言运行时将引发异常。

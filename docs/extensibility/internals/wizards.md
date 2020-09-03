@@ -1,5 +1,5 @@
 ---
-title: 向导 |微软文档
+title: 向导 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,48 +11,48 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: d65cf2dcc10380b0ac750c8e1b0e7fd56eab95b5
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80703213"
 ---
 # <a name="wizards"></a>向导
-创建向导后，通常需要将其添加到[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]集成开发环境 （IDE），以便其他人可以使用它。 然后，添加的向导将显示在"**添加新项目**"或 **"添加新项目"** 对话框中。 要查看"**添加新项目**"或 **"添加新项目"** 对话框，请右键单击**解决方案资源管理器**中的打开解决方案，指向 **"添加**"，然后单击"**新项目**"或 **"新项目**"。
+创建向导后，通常需要将其添加到 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 集成开发环境中 (IDE) ，以便其他人可以使用它。 添加的向导随后会出现在 " **添加新项目** " 或 " **添加新项** " 对话框中。 若要查看 " **添加新项目** " 或 " **添加新项** " 对话框，请在 **解决方案资源管理器**中右键单击打开的解决方案，指向 " **添加**"，然后单击 " **新建项目** " 或 " **新建项**"。
 
- 向导可以实现，以便用户[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]在打开 **"添加新项目**"对话框或 **"添加新项目**"对话框时，或在**解决方案资源管理器**中右键单击项目时，从可用值的树视图中选择。
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]当用户打开 "**添加新项目**" 对话框或 "**添加新项**" 对话框，或在**解决方案资源管理器**中右键单击某项时，可以在中实现，以允许用户从可用值的树视图中进行选择。
 
- 在向导中，可以提供本地化新项目或 ites 名称的选项，还可以确定用户在选择向导时将看到的图标。 您还可以控制新项目相对于其他可用项的显示顺序;项目不必按字母顺序排列。
+ 在向导中，您可以提供对新项目或 ites 的名称进行本地化的选项，并且可以确定用户在选择该向导时将看到的图标。 您还可以控制新项相对于其他可用项的显示顺序;不需要按字母顺序对项进行组织。
 
- 还可以提供不同启动的向导，该向导基于打开向导时传递给向导的自定义参数。
+ 你还可以根据在打开时传递到向导的自定义参数，提供以不同方式启动的向导。
 
- 本节中的主题讨论您实现的文件，以便导致[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]**"添加新项目和****添加新项目"** 对话框，以在可用的向导和模板中列出向导，以及向导必须满足的要求才能在 IDE 中正常运行。
+ 本节中的主题讨论您实现的用于使 " [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] **添加新项目** " 和 " **添加新项** " 对话框在可用向导和模板之间列出向导的文件，以及您的向导在 IDE 中正确运行时必须满足的要求。
 
 ## <a name="in-this-section"></a>本节内容
 - [模板目录说明 (.Vsdir) 文件](../../extensibility/internals/template-directory-description-dot-vsdir-files.md)
 
- 提供哪些模板目录描述文件的概述，并解释它们如何在 IDE 中工作以显示对话框中与项目关联的文件夹、向导 .vsz 文件和模板文件。
+ 概述了模板目录说明文件的内容，并说明了这些文件在 IDE 中如何在 IDE 中显示文件夹、向导 .vsz 文件以及与对话框中的项目相关联的模板文件。
 
 - [向导 (.Vsz) 文件](../../extensibility/internals/wizard-dot-vsz-file.md)
 
- 解释 IDE 如何启动向导并列出 .vsz 文件的三个部分。
+ 说明 IDE 如何启动向导，并列出 .vsz 文件的三个部分。
 
 - [向导界面 (IDTWizard)](../../extensibility/internals/wizard-interface-idtwizard.md)
 
- 描述向导`IDTWizard`在 IDE 中工作时必须实现的接口。
+ 介绍 `IDTWizard` 向导在 IDE 中工作时必须实现的接口。
 
 - [上下文参数](../../extensibility/internals/context-parameters.md)
 
- 说明如何实现向导，以及当 IDE 将上下文参数传递给实现时会发生什么。
+ 说明如何实现向导以及 IDE 将上下文参数传递到实现时所发生的情况。
 
 - [自定义参数](../../extensibility/internals/custom-parameters.md)
 
- 说明在向导启动后如何使用自定义参数来控制向导的操作。
+ 说明如何在向导启动后使用自定义参数控制向导的操作。
 
 ## <a name="related-sections"></a>相关章节
 - [项目类型](../../extensibility/internals/project-types.md)
 
- 提供指向其他主题的链接，这些主题提供有关如何设计新项目类型的信息。
+ 提供指向其他主题的链接，这些主题提供有关如何设计新的项目类型的信息。
 
 - [扩展项目](../../extensibility/extending-projects.md)
 

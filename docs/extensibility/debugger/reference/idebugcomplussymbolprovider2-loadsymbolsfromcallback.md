@@ -1,5 +1,5 @@
 ---
-title: IDebugComPlus符号提供程序2：：从回调加载符号 |微软文档
+title: IDebugComPlusSymbolProvider2：： LoadSymbolsFromCallback |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -15,10 +15,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 738c9e24a8acfe33d7d3993da0eb5eb96ace1795
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80733366"
 ---
 # <a name="idebugcomplussymbolprovider2loadsymbolsfromcallback"></a>IDebugComPlusSymbolProvider2::LoadSymbolsFromCallback
@@ -52,31 +52,31 @@ int LoadSymbolsFromCallback(
 
 ## <a name="parameters"></a>参数
 `ulAppDomainID`\
-[在]应用程序域的标识符。
+中应用程序域的标识符。
 
 `guidModule`\
-[在]模块的唯一标识符。
+中模块的唯一标识符。
 
 `pUnkMetadataImport`\
-[在]包含符号元数据的对象。
+中包含符号元数据的对象。
 
 `pUnkCorDebugModule`\
-[在]实现[ICorDebugModule 接口](/dotnet/framework/unmanaged-api/debugging/icordebugmodule-interface)的对象。
+中实现 [ICorDebugModule 接口](/dotnet/framework/unmanaged-api/debugging/icordebugmodule-interface)的对象。
 
 `bstrModuleName`\
-[在]模块的名称。
+中模块的名称。
 
 `bstrSymSearchPath`\
-[在]用于搜索符号文件的路径。
+中要搜索符号文件的路径。
 
 `pCallback`\
-[在]表示回调方法的对象。
+中表示回调方法的对象。
 
 ## <a name="return-value"></a>返回值
-如果成功，返回`S_OK`;否则，返回错误代码。
+如果成功， `S_OK` 则返回; 否则返回错误代码。
 
 ## <a name="example"></a>示例
-下面的示例演示如何为公开[IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md)接口的**CDebugSymbol提供程序**对象实现此方法。
+下面的示例演示如何为公开[IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md)接口的**CDebugSymbolProvider**对象实现此方法。
 
 ```cpp
 HRESULT CDebugSymbolProvider::LoadSymbolsFromCallback(
@@ -169,5 +169,5 @@ Error:
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md)

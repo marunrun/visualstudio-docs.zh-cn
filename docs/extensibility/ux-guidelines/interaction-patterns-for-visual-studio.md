@@ -9,21 +9,21 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 5cbfeef3352e4abd03e12cc6b228cea8a8c124a6
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "84184401"
 ---
 # <a name="interaction-patterns-for-visual-studio"></a>Visual Studio 的交互模式
 ## <a name="overview"></a>概述
  通常，设计模式是设计的核心，它可以在特定情况下应用以解决类似约束集的问题。 功能和系统设计器使用这些设计模式作为起点，然后可以根据具体情况调整这些起点。
 
- Visual Studio 具有一个通用交互模式库，在生成新功能时应考虑到这些模式。 设计模式有两个核心上下文： Visual Studio 客户端（devenv）和 Visual Studio Codespaces （以前称为 Visual Studio Online）。 对于某些设计问题，有一种广泛的模式适用于所有情况。 但是，在许多情况下，对于在浏览器中呈现的 UI，以及在客户端应用程序上承载的 UI，解决方案可能会有所不同。
+ Visual Studio 具有一个通用交互模式库，在生成新功能时应考虑到这些模式。 设计模式有两个核心上下文： Visual Studio 客户端 (devenv) 和 Visual Studio Codespaces (以前的 Visual Studio Online) 。 对于某些设计问题，有一种广泛的模式适用于所有情况。 但是，在许多情况下，对于在浏览器中呈现的 UI，以及在客户端应用程序上承载的 UI，解决方案可能会有所不同。
 
 ### <a name="visual-studio-client-pattern-types"></a>Visual Studio 客户端模式类型
 
-|模式类型|描述|示例|
+|模式类型|说明|示例|
 |------------------|-----------------|--------------|
 |**应用程序级模式**|应用程序通用的高级模式，确定或显示应用程序上下文，并在其中包含复合和控件模式|-工具窗口<br />-文档窗口|
 |**复合模式**|可能跨应用程序模式的常见模式，或在不同配置中由多个控件组成的可识别模式|-查看切换<br />-列表生成器<br />-显示数据<br />-通知<br />-验证<br />-选择模型|
@@ -46,7 +46,7 @@ ms.locfileid: "84184401"
 
   - [对话框](../../extensibility/ux-guidelines/application-patterns-for-visual-studio.md#BKMK_Dialogs)
 
-  - [投射](../../extensibility/ux-guidelines/application-patterns-for-visual-studio.md#BKMK_Projects)
+  - [项目](../../extensibility/ux-guidelines/application-patterns-for-visual-studio.md#BKMK_Projects)
 
 ## <a name="common-control-patterns"></a>公共控件模式
  控件模式主要涉及各个控件的行为方式。 这是一致性最为重要的一个领域。

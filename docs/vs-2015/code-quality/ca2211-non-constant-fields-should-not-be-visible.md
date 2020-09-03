@@ -16,20 +16,20 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: aa67c33eac5d618c0a080323720775beea7b68c3
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85548208"
 ---
 # <a name="ca2211-non-constant-fields-should-not-be-visible"></a>CA2211:非常量字段不应是可见的
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|Item|值|
+|项|值|
 |-|-|
 |TypeName|NonConstantFieldsShouldNotBeVisible|
 |CheckId|CA2211|
-|Category|Microsoft. 使用情况|
+|类别|Microsoft. 使用情况|
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因

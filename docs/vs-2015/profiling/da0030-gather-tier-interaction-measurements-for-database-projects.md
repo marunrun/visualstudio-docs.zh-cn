@@ -1,5 +1,5 @@
 ---
-title: DA0030：收集数据库项目的层交互度量值 | Microsoft Docs
+title: DA0030：收集数据库项目的层交互测量值 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,10 +14,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 9a4b140c1859d3a3a17eb2f48eb02a60a3e9d50c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68152631"
 ---
 # <a name="da0030-gather-tier-interaction-measurements-for-database-projects"></a>DA0030：收集数据库项目的层交互度量值
@@ -26,13 +26,13 @@ ms.locfileid: "68152631"
 规则 Id |DA0030 |  
 |类别 |分析工具使用情况 |  
 |分析方法 |采样 |  
-|消息 |收集多层应用程序的交互度量值将有助于您了解数据库使用模式和关键数据访问延迟。 尝试在启用“层交互分析”选项的情况下再次分析应用程序。|  
+|消息 |收集多层应用程序的交互度量将有助于了解数据库使用模式和关键数据访问延迟。 尝试在启用“层交互分析”选项的情况下再次分析应用程序。|  
 |规则类型 |信息 |  
   
 ## <a name="cause"></a>原因  
  对 <xref:System.Data> 方法的调用在分析数据中占很大比例，并且用户未收集分析运行中的层交互数据。 请考虑再次进行分析并添加层交互数据。  
   
-## <a name="rule-description"></a>规则说明  
+## <a name="rule-description"></a>规则描述  
  每当位于 System.Data 命名空间（包括 <xref:System.Data.Linq><xref:System.Data.Linq>）中的函数中出现重大活动时，都将触发此规则。  
   
  多层应用程序将分层的服务用于其演示文稿和数据层。 通常，数据层是运行数据库管理系统（如 Microsoft Sql Server）的单独进程。 数据层甚至可能通过应用程序其余部分在单独的计算机上运行。 采样分析很少涉及在进程外运行或远程运行的函数和服务。  
