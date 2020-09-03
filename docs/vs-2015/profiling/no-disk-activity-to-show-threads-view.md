@@ -14,10 +14,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: f8273e17f5a132d4be2394bd0dc75b15b7204316
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68205880"
 ---
 # <a name="no-disk-activity-to-show-threads-view"></a>不显示磁盘活动（线程视图）
@@ -26,4 +26,4 @@ ms.locfileid: "68205880"
 无法显示磁盘 I/O 通道中当前时间范围的磁盘活动。 如果缩小或滚动，可能会显示磁盘活动。 此外，请确保没有磁盘通道处于隐藏状态。  
   
 ## <a name="see-also"></a>另请参阅  
- [线程视图](../profiling/threads-view-parallel-performance.md)
+ [“线程”视图](../profiling/threads-view-parallel-performance.md)

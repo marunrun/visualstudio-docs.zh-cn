@@ -11,27 +11,27 @@ caps.latest.revision: 16
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 06cd4523f91c341029140764b31fbd0ee262d551
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68155680"
 ---
 # <a name="source-control-vspackage-design-elements"></a>源代码管理 VSPackage 设计元素
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-在本部分中的主题概述了结构源代码管理 VSPackage 必须实现的深度集成。 它还列出了这些接口和源代码管理 VSPackage 的服务可以实现，和源代码管理 VSPackage 的接口和服务可以使用从其他[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]组件来支持其源控制模型和功能。  
+本节中的主题概述了源代码管理 VSPackage 为深度集成而必须实现的结构。 它还列出了源代码管理 VSPackage 可以实现的接口和服务，以及源代码管理 VSPackage 可以从其他组件中使用的接口和服务， [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 以支持其源代码管理模型和功能。  
   
 ## <a name="in-this-section"></a>本节内容  
  [VSPackage 结构](../../extensibility/internals/vspackage-structure-source-control-vspackage.md)  
  定义源代码管理 VSPackage 的结构。  
   
  [相关服务和接口](../../extensibility/internals/related-services-and-interfaces-source-control-vspackage.md)  
- 列出了源控制与包相关接口和服务。  
+ 列出源代码管理包相关的接口和服务。  
   
  [提供的服务](../../extensibility/internals/services-provided-source-control-vspackage.md)  
- 描述由源代码管理 VSPackage 提供的源控制服务。  
+ 介绍源代码管理 VSPackage 提供的源代码管理服务。  
   
 ## <a name="related-sections"></a>相关章节  
  [创建源代码管理 VSPackage](../../extensibility/internals/creating-a-source-control-vspackage.md)  
- 讨论如何创建源代码管理 VSPackage 不仅提供源代码管理功能，但可用于自定义[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]源代码管理 UI。
+ 讨论如何创建一个源代码管理 VSPackage，该控件不仅提供源代码管理功能，还可用于自定义 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 源代码管理 UI。

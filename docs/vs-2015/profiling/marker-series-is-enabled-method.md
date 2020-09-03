@@ -14,13 +14,13 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 9ccef8ebbf63835a71027643b518280d5f4f867b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68156412"
 ---
-# <a name="markerseriesisenabled-method"></a>marker_series::is_enabled 方法
+# <a name="marker_seriesis_enabled-method"></a>marker_series::is_enabled 方法
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 确定是否有任何会话启用了该提供程序。  

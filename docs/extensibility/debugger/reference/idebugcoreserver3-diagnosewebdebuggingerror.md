@@ -1,5 +1,5 @@
 ---
-title: IDebugCoreServer3：:Diagnose网络调试错误 |微软文档
+title: IDebugCoreServer3：:D iagnoseWebDebuggingError |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: fec5b8fbe1cae18b8221702fe14443df231d8880
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80732947"
 ---
 # <a name="idebugcoreserver3diagnosewebdebuggingerror"></a>IDebugCoreServer3::DiagnoseWebDebuggingError
@@ -41,16 +41,16 @@ int DiagnoseWebDebuggingError(
 
 ## <a name="parameters"></a>参数
 `pszUrl`\
-[在]当前未使用;应始终设置为 null 值。
+中当前未使用;应始终设置为 null 值。
 
 ## <a name="return-value"></a>返回值
- 如果成功，返回`S_OK`;否则，返回错误代码。 以下是其他典型的退货代码：
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。 下面是其他典型的返回代码：
 
-|代码|描述|
+|代码|说明|
 |----------|-----------------|
-|`S_WEBDBG_UNABLE_TO_DIAGNOSE`|无法确定远程服务器无法启动调试的原因。|
-|`S_WEBDBG_DEBUG_VERB_BLOCKED`|无法在远程服务器上调试，可能是由于权限不足或未启用 DEBUG 谓词。|
-|`E_WEBDBG_DEBUG_VERB_BLOCKED`|Web 服务器已锁定并阻止启用调试所需的 DEBUG 谓词。|
+|`S_WEBDBG_UNABLE_TO_DIAGNOSE`|无法确定远程服务器启动调试失败的原因。|
+|`S_WEBDBG_DEBUG_VERB_BLOCKED`|无法在远程服务器上进行调试，可能是由于权限不足或没有启用调试谓词。|
+|`E_WEBDBG_DEBUG_VERB_BLOCKED`|Web 服务器已被锁定，并阻止调试谓词，这是启用调试所必需的。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md)

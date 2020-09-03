@@ -1,5 +1,5 @@
 ---
-title: IDebugComPlusSymbolProvider::GetNameFromToken |Microsoft Docs
+title: IDebugComPlusSymbolProvider：： GetNameFromToken |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,16 +12,16 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 94cca3ebf25c86579ce601d614618ff431629af7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68194689"
 ---
 # <a name="idebugcomplussymbolprovidergetnamefromtoken"></a>IDebugComPlusSymbolProvider::GetNameFromToken
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-返回与给定其元数据对象的指定标记关联的名称。  
+根据给定的元数据对象，返回与指定标记关联的名称。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,19 +43,19 @@ int GetNameFromToken (
   
 #### <a name="parameters"></a>参数  
  `pMetadataImport`  
- [in]包含元数据信息的对象。  
+ 中包含元数据信息的对象。  
   
  `dwToken`  
- [in]若要将名为的标记。  
+ 中要命名的标记。  
   
  `pbstrName`  
- [out]对应于令牌的名称。  
+ 弄对应于标记的名称。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何实现此方法对于**CDebugSymbolProvider**对象，它公开[IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)接口。  
+ 下面的示例演示如何为公开[IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)接口的**CDebugSymbolProvider**对象实现此方法。  
   
 ```cpp#  
 HRESULT CDebugSymbolProvider::GetNameFromToken(  
@@ -121,5 +121,5 @@ Error:
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)
