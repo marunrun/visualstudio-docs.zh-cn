@@ -1,5 +1,5 @@
 ---
-title: 在混合中调试 XAML |微软文档
+title: 在 Blend 中调试 XAML |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -15,10 +15,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 8e032f9f99087df26c82b4984c2267a35236bf6e
-ms.sourcegitcommit: 7b60e81414a82c6d34f6de1a1f56115c9cd26943
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "81444604"
 ---
 # <a name="debug-xaml-in-blend"></a>在 Blend 中调试 XAML
@@ -55,9 +55,9 @@ ms.locfileid: "81444604"
   
     在“新建项目”对话框中，左侧会显示项目类型列表****。 单击一种项目类型后，右侧将显示与该类型关联的项目模板。  
   
-2. 在项目类型列表中，单击**XAML（Windows 应用商店）。**  
+2. 在项目类型列表中，单击 " **XAML (Windows 应用商店") **。  
   
-3. 在项目模板列表中，单击 **"空白应用**"。  
+3. 在项目模板列表中，单击 " **空白应用**"。  
   
 4. 在“名称”文本框中，键入 `DebuggingSample`****。   
   
@@ -114,7 +114,7 @@ ms.locfileid: "81444604"
   
 4. 双击“无法识别或访问成员‘content’”。 `c` 中的 `content` 应为大写。 将小写“c”替换为大写“c”。  
   
-5. 双击"`https://schemas.microsoft.com/winfx/2006/xaml`名称空间中不存在属性"Mame"。 “Mame”中的“M”应为“N”。 将“M”替换为“N”。 现在可以分析 XAML，应用程序将显示在设计图面上。  
+5. 双击 "命名空间中不存在属性 ' Mame '" `https://schemas.microsoft.com/winfx/2006/xaml` 。 “Mame”中的“M”应为“N”。 将“M”替换为“N”。 现在可以分析 XAML，应用程序将显示在设计图面上。  
   
     ![在 Blend for Visual Studio 中调试 XAML](../debugger/media/blend-debugartboard-xaml.png "blend_debugArtboard_XAML")  
   
@@ -123,7 +123,7 @@ ms.locfileid: "81444604"
 ## <a name="debugging-in-visual-studio"></a>在 Visual Studio 中进行调试  
  你可以在 Visual Studio 中打开 [!INCLUDE[blend_subs](../includes/blend-subs-md.md)] 项目，以便可以在应用中更轻松地调试代码。 若要在 Visual Studio 中打开[!INCLUDE[blend_subs](../includes/blend-subs-md.md)] 项目，右键单击“项目”面板中的项目，然后单击“在 Visual Studio 中编辑”********。 在 Visual Studio 中完成调试会话后，按 Ctrl+Shift+S 保存所有更改，然后切换回 [!INCLUDE[blend_subs](../includes/blend-subs-md.md)]。 系统将提示你重新加载该项目。 单击“全选‘是’”以继续在 [!INCLUDE[blend_subs](../includes/blend-subs-md.md)] 中工作****。   
   
- 有关调试应用的详细信息，请参阅[在 Visual Studio 中调试 Windows 应用商店应用](https://msdn.microsoft.com/library/windows/apps/hh441472.aspx)。  
+ 有关调试应用的详细信息，请参阅 [在 Visual Studio 中调试 Windows 应用商店应用](https://msdn.microsoft.com/library/windows/apps/hh441472.aspx)。  
   
 ## <a name="getting-help"></a>获取帮助  
- 如果您需要更多帮助来调试应用[!INCLUDE[blend_subs](../includes/blend-subs-md.md)]，则可以在 Windows[应用商店应用社区论坛](https://social.msdn.microsoft.com/Forums/windowsapps/home?category=windowsapps)中搜索与您的问题相关的帖子或发布问题。
+ 如果需要有关调试应用的更多帮助 [!INCLUDE[blend_subs](../includes/blend-subs-md.md)] ，可以在 [Windows 应用商店应用社区论坛](https://social.msdn.microsoft.com/Forums/windowsapps/home?category=windowsapps) 中搜索与问题相关的帖子或发布问题。

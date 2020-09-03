@@ -12,10 +12,10 @@ ms.topic: conceptual
 ms.date: 11/11/2016
 ms.author: ghogen
 ms.openlocfilehash: 3d56cfce70b0723b636b9b8ef7c6f3917015bf66
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75915548"
 ---
 # <a name="publish-webapplicationwebsite-windows-powershell-script"></a>Publish-WebApplicationWebSite（Windows PowerShell 脚本）
@@ -32,14 +32,14 @@ Publish-WebApplicationWebSite
 -Verbose
 ```
 
-## <a name="configuration"></a>配置
+## <a name="configuration"></a>Configuration
 描述部署详细信息的 JSON 配置文件的路径。
 
 | 参数 | 默认值 |
 | --- | --- |
 | 别名 |无 |
-| 是否必需？ |true |
-| 位置 |named |
+| 必需？ |true |
+| 位置 |所指定位置 |
 | 默认值 |无 |
 | 接受管道输入？ |false |
 | 接受通配符？ |false |
@@ -50,8 +50,8 @@ Publish-WebApplicationWebSite
 | 参数 | 默认值 |
 | --- | --- |
 | 别名 |无 |
-| 是否必需？ |false |
-| 位置 |named |
+| 必需？ |false |
+| 位置 |所指定位置 |
 | 默认值 |无 |
 | 接受管道输入？ |false |
 | 接受通配符？ |false |
@@ -62,8 +62,8 @@ Publish-WebApplicationWebSite
 | 参数 | 默认值 |
 | --- | --- |
 | 别名 |无 |
-| 是否必需？ |false |
-| 位置 |named |
+| 必需？ |false |
+| 位置 |所指定位置 |
 | 默认值 |无 |
 | 接受管道输入？ |false |
 | 接受通配符？ |false |
@@ -74,8 +74,8 @@ Azure 中的 SQL 数据库的用户名和密码。
 | 参数 | 默认值 |
 | --- | --- |
 | 别名 |无 |
-| 是否必需？ |false |
-| 位置 |named |
+| 必需？ |false |
+| 位置 |所指定位置 |
 | 默认值 |无 |
 | 接受管道输入？ |false |
 | 接受通配符？ |false |
@@ -86,8 +86,8 @@ Azure 中的 SQL 数据库的用户名和密码。
 | 参数 | 默认值 |
 | --- | --- |
 | 别名 |无 |
-| 是否必需？ |false |
-| 位置 |named |
+| 必需？ |false |
+| 位置 |所指定位置 |
 | 默认值 |false |
 | 接受管道输入？ |false |
 | 接受通配符？ |false |
@@ -121,7 +121,7 @@ JSON 配置文件指定要部署的内容的详细信息。 它包括当创建�
 }
 ```
 
-可以编辑 JSON 配置文件以更改部署的内容。 webSite 节是必需的，但 database 节是可选的。
+可以编辑 JSON 配置文件以更改部署的内容。 网站部分是必需的，但数据库部分则是可选的。
 
 ## <a name="next-steps"></a>后续步骤
 有关详细信息，请参阅[Publish-WebApplicationVM（Windows PowerShell 脚本）](vs-azure-tools-publish-webapplicationvm.md)

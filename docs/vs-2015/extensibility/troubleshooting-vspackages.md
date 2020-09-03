@@ -12,10 +12,10 @@ caps.latest.revision: 23
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: e740860046ee9d18a137dbd513202e259e90bf79
-ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/22/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77557971"
 ---
 # <a name="troubleshooting-vspackages"></a>VSPackages 故障排除
@@ -25,36 +25,36 @@ ms.locfileid: "77557971"
   
 ### <a name="to-troubleshoot-a-vspackage-that-keeps-visual-studio-from-starting"></a>排查使 Visual Studio 启动的 VSPackage  
   
-- 在安全模式下启动 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]。  
+- [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]在安全模式下启动。  
   
-     若要在安全模式下启动 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]，请在命令提示符下键入**devenv/safemode**。  
+     若要 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 在安全模式下启动，请在命令提示符下键入 **devenv.exe/safemode**。  
   
-     在此过程中，不会加载任何 Vspackage，但 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]附带的 Vspackage 除外。  
+     在此过程中，不会加载 Vspackage，除了附带的 Vspackage [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 。  
   
 ### <a name="to-troubleshoot-a-vspackage-that-does-not-load"></a>对不加载的 VSPackage 进行故障排除  
   
 1. 请确保使用注册 VSPackage 的注册表根目录，通常是实验性的注册表根。  
   
-     有关详细信息，请参阅[实验实例](../extensibility/the-experimental-instance.md)。  
+     有关详细信息，请参阅 [实验实例](../extensibility/the-experimental-instance.md)。  
   
-2. 如果 VSPackage 的目标是在实验性的注册表根中运行，请确保您运行的是 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]的实验版本。  
+2. 如果 VSPackage 的目标是在实验性注册表根中运行，请确保运行的实验版本 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 。  
   
      若要运行实验版本，请在命令窗口中键入以下内容： **devenv/rootsuffix exp**。  
   
 3. 检查 VSPackage 注册表项。  
   
-     有关详细信息，请参阅[注册 vspackage](internals/registering-vspackages.md)和[管理 vspackage](../extensibility/managing-vspackages.md)。  
+     有关详细信息，请参阅 [注册 vspackage](internals/registering-vspackages.md) 和 [管理 vspackage](../extensibility/managing-vspackages.md)。  
   
-4. 打开未能加载 VSPackage 的 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 实例的 "**输出**" 窗口。 在该窗口中可能会显示 VSPackage 未能加载的原因的相关信息。  
+4. 打开无法加载 VSPackage 的实例的 " **输出** " 窗口 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 。 在该窗口中可能会显示 VSPackage 未能加载的原因的相关信息。  
   
     > [!NOTE]
-    > 如果要从 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 集成开发环境（IDE）中启动 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的实验版本，请检查这两个版本的**输出**窗口。  
+    > 如果要 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 从集成开发环境启动的实验版本 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] (IDE) ，请检查这两个版本的 " **输出** " 窗口。  
   
 5. 检查活动日志。  
   
-     有关详细信息，请参阅[如何：使用活动日志](../extensibility/how-to-use-the-activity-log.md)。  
+     有关详细信息，请参阅 [如何：使用活动日志](../extensibility/how-to-use-the-activity-log.md)。  
   
-6. 有关 IDE 引发的异常的详细信息，请单击 "**调试**" 菜单上的 "**异常**" 以启用异常。 在 "**异常**" 对话框中，选择想要了解其详细信息的异常类型。  
+6. 有关 IDE 引发的异常的详细信息，请单击 "**调试**" 菜单上的 "**异常**" 以启用异常。 在 " **异常** " 对话框中，选择想要了解其详细信息的异常类型。  
   
 ### <a name="to-troubleshoot-a-vspackage-that-does-not-register"></a>对未注册的 VSPackage 进行故障排除  
   
@@ -62,13 +62,13 @@ ms.locfileid: "77557971"
   
 ### <a name="to-troubleshoot-a-command-that-is-not-visible-or-that-generates-an-error-when-you-click-a-command"></a>排查在单击命令时不可见或生成错误的命令  
   
-1. 在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 命令提示符下键入以下命令，合并新的或已更改的菜单命令以及已在 IDE 中的命令： **devenv/Rootsuffix Exp/setup**。  
+1. 在命令提示符下键入以下命令，合并新的或更改的菜单命令以及已在 IDE 中的命令 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ： **Devenv/rootsuffix Exp/setup**。  
   
-2. 请确保 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 可以找到 VSPackage 的 UI。  
+2. 请确保 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 可以找到 VSPackage 的 UI.dll。  
   
     1. 在注册表的 "包" 部分中找到 VSPackage 的 CLSID：  
   
-         HKLM\Software\Microsoft\Visual Studio\\*\<版本 >* \Packages  
+         HKLM\Software\Microsoft\Visual Studio \\ *\<version>* \Packages  
   
     2. 验证 SatelliteDll 子项给定的路径是否正确。  
   
@@ -78,28 +78,28 @@ ms.locfileid: "77557971"
   
      调试的良好起点是构造函数和初始化方法。 您还可以在要计算的区域中设置断点，例如菜单命令。 若要启用断点，必须在调试器下运行。  
   
-    1. 在 **“项目”** 菜单上，单击 **“属性”**。  
+    1. 在 **“项目”** 菜单上，单击 **“属性”** 。  
   
-    2. 在 "**属性页**" 对话框中，选择 "**调试**" 选项卡。  
+    2. 在 " **属性页** " 对话框中，选择 " **调试** " 选项卡。  
   
-    3. 在 "**命令行参数**" 框中，键入 VSPackage 目标的开发环境的根后缀。 例如，若要选择实验生成，请键入： **/RootSuffix Exp**。  
+    3. 在 " **命令行参数** " 框中，键入 VSPackage 目标的开发环境的根后缀。 例如，若要选择实验生成，请键入： **/RootSuffix Exp**。  
   
-    4. 在 "**调试**" 菜单上，单击 "**启动调试**" 或按 F5。  
+    4. 在 " **调试** " 菜单上，单击 " **启动调试** " 或按 F5。  
   
         > [!NOTE]
         > 如果正在调试项目，请立即创建或加载现有项目的实例。  
   
 2. 使用活动日志。  
   
-     通过在关键点将信息写入活动日志来跟踪 VSPackage 行为。 在零售环境中运行 VSPackage 时，此方法特别有用。 有关详细信息，请参阅[如何：使用活动日志](../extensibility/how-to-use-the-activity-log.md)。  
+     通过在关键点将信息写入活动日志来跟踪 VSPackage 行为。 在零售环境中运行 VSPackage 时，此方法特别有用。 有关详细信息，请参阅 [如何：使用活动日志](../extensibility/how-to-use-the-activity-log.md)。  
   
 3. 使用公共符号。  
   
      若要在调试时提高可读性，可以将符号附加到调试器。  
   
-    1. 从 "**工具"/"选项**" 菜单中，导航到 "**调试"/"符号**" 对话框。  
+    1. 从 " **工具"/"选项** " 菜单中，导航到 " **调试"/"符号** " 对话框。  
   
-    2. 添加此**符号文件（.pdb）位置**：  
+    2. ** ( .pdb) 位置添加此符号文件**：  
   
        `https://msdl.microsoft.com/download/symbols`  
   
@@ -111,17 +111,17 @@ ms.locfileid: "77557971"
   
 1. 对于托管代码，请确保引用路径正确。  
   
-   1. 在 **“项目”** 菜单上，单击 **“属性”**。  
+   1. 在 **“项目”** 菜单上，单击 **“属性”** 。  
   
-   2. 在 "**属性页**" 对话框中选择 "**引用**" 选项卡，并确保所有路径都是正确的。 或者，您可以使用**对象浏览器**浏览引用的对象。  
+   2. 在 "**属性页**" 对话框中选择 "**引用**" 选项卡，并确保所有路径都是正确的。 或者，您可以使用 **对象浏览器** 浏览引用的对象。  
   
-        对于托管代码，你可以使用[fuslogvw.exe （程序集绑定日志查看器）](/dotnet/framework/tools/fuslogvw-exe-assembly-binding-log-viewer)来显示失败的程序集加载的详细信息。  
+        对于托管代码，可以使用 [Fuslogvw.exe (程序集绑定日志查看器) ](/dotnet/framework/tools/fuslogvw-exe-assembly-binding-log-viewer) 来显示失败的程序集加载的详细信息。  
   
-2. 对于非托管代码，请在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] CLSID 注册表节点中找到 VSPackage 的 CLSID：  
+2. 对于非托管代码，请在 clsid 注册表节点中找到 VSPackage 的 CLSID [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ：  
   
-    HKLM\Software\Microsoft\Visual Studio\\*\<版本 >* \CLSID  
+    HKLM\Software\Microsoft\Visual Studio \\ *\<version>* \CLSID  
   
    请确保 InprocServer32 项具有 VSPackage dll 的正确路径。  
   
 ## <a name="see-also"></a>另请参阅  
- [VSPackage](../extensibility/internals/vspackages.md)
+ [VSPackages](../extensibility/internals/vspackages.md)

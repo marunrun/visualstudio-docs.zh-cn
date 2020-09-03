@@ -12,16 +12,16 @@ caps.latest.revision: 20
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 6131e27dbe4018fa1db415ba1690870c4bffa10c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68203973"
 ---
 # <a name="ide-guids"></a>IDE GUID
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-<xref:Microsoft.VisualStudio.VSConstants>类发布的集成的开发环境 (IDE) 的某些部分 Guid 下, 表中列出。  
+<xref:Microsoft.VisualStudio.VSConstants>类将集成开发环境的某些部分的 guid 发布 (IDE) ，如下表所示。  
   
 ## <a name="core-systems"></a>核心系统  
   
@@ -36,16 +36,16 @@ ms.locfileid: "68203973"
 |<xref:Microsoft.VisualStudio.VSConstants.VsEditorFactoryGuid.HtmlEditor_guid>|C76D83F8-A489-11D0-8195-00A0C91BBEE3|  
 |<xref:Microsoft.VisualStudio.VSConstants.VsEditorFactoryGuid.TextEditor_guid>|8B382828-6202-11d1-8870-0000F87579D2|  
   
-## <a name="broadly-visible-components"></a>广泛可见组件  
+## <a name="broadly-visible-components"></a>广泛可见的组件  
   
 |返回的常量|GUID|  
 |--------------|----------|  
 |<xref:Microsoft.VisualStudio.VSConstants.CLSID.VsUIHierarchyWindow_guid>|7D960B07-7AF8-11D0-8E5E-00A0C911005A|  
 |<xref:Microsoft.VisualStudio.VSConstants.VsEditorFactoryGuid.ExternalEditor_guid>|8137C9E8-35FE-4AF2-87B0-DE3C45F395FD|  
-|Microsoft.VisualStudio.VSConstants.SID_SUIHostCommandDispatcher|e69cd190-1276-11d1-9f64-00a0c911004f|  
-|Microsoft.VisualStudio.VSConstants.SID_SVsGeneralOutputWindowPane|65482c72-defa-41b7-902c-11c091889c83|  
+|VisualStudio. VSConstants. SID_SUIHostCommandDispatcher|e69cd190-1276-11d1-9f64-00a0c911004f|  
+|VisualStudio. VSConstants. SID_SVsGeneralOutputWindowPane|65482c72-defa-41b7-902c-11c091889c83|  
   
-## <a name="files-virtual-and-physical-folders-and-subprojects"></a>文件、 虚拟和物理文件夹和子项目  
+## <a name="files-virtual-and-physical-folders-and-subprojects"></a>文件、虚拟和物理文件夹和子项目  
   
 |返回的常量|GUID|  
 |--------------|----------|  
@@ -70,7 +70,7 @@ ms.locfileid: "68203973"
 |<xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.SolutionHasMultipleProjects_guid>|93694fa0-0397-11d1-9f4e-00a0c911004f|  
 |<xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.SolutionHasSingleProject_guid>|adfc4e66-0397-11d1-9f4e-00a0c911004f|  
   
-## <a name="output-pane"></a>“输出”窗格  
+## <a name="output-pane"></a>输出窗格  
   
 |返回的常量|GUID|  
 |--------------|----------|  
@@ -79,14 +79,14 @@ ms.locfileid: "68203973"
 |<xref:Microsoft.VisualStudio.VSConstants.OutputWindowPaneGuid.GeneralPane_guid>|3C24D581-5591-4884-A571-9FE89915CD64|
 |<xref:Microsoft.VisualStudio.VSConstants.OutputWindowPaneGuid.SortedBuildOutputPane_guid>|2032B126-7C8D-48AD-8026-0E0348004FC0|
 |<xref:Microsoft.VisualStudio.VSConstants.OutputWindowPaneGuid.StoreValidationPane_guid>|54065C74-1B11-4249-9EA7-5540D1A6D528|
-|Microsoft.VisualStudio.VSConstants.SID_SVsGeneralOutputWindowPane|65482c72-defa-41b7-902c-11c091889c83|  
+|VisualStudio. VSConstants. SID_SVsGeneralOutputWindowPane|65482c72-defa-41b7-902c-11c091889c83|  
   
-## <a name="command-sets-and-properties"></a>命令组和属性  
+## <a name="command-sets-and-properties"></a>命令集和属性  
   
 |返回的常量|GUID|  
 |--------------|----------|  
-|Microsoft.VisualStudio.VSConstants.GUID_VSStandardCommandSet97|5EFC7975-14BC-11CF-9B2B-00AA00573819|  
-|Microsoft.VisualStudio.VSConstants.GUID_VsUIHierarchyWindowCmds|60481700-078b-11d1-aaf8-00a0c9055a90|  
+|VisualStudio. VSConstants. GUID_VSStandardCommandSet97|5EFC7975-14BC-11CF-9B2B-00AA00573819|  
+|VisualStudio. VSConstants. GUID_VsUIHierarchyWindowCmds|60481700-078b-11d1-aaf8-00a0c9055a90|  
   
 ## <a name="iunknown"></a>IUnknown  
   
@@ -94,7 +94,7 @@ ms.locfileid: "68203973"
 |--------------|----------|  
 |<xref:Microsoft.VisualStudio.VSConstants.IID_IUnknown>|00000000-0000-0000-C000-000000000046|  
   
-## <a name="task-list-guids"></a>任务列表的 Guid  
+## <a name="task-list-guids"></a>任务列表 Guid  
   
 |返回的常量|GUID|  
 |--------------|----------|  
@@ -114,19 +114,19 @@ ms.locfileid: "68203973"
   
 |常量|GUID|  
 |---------------|----------|  
-|Microsoft.VisualStudio.VSConstants.GUID_COMClassicPage|9A341D96-5A64-11d3-BFF9-00C04F990235|  
-|Microsoft.VisualStudio.VSConstants.GUID_COMPlusPage|9A341D95-5A64-11d3-BFF9-00C04F990235|  
-|Microsoft.VisualStudio.VSConstants.GUID_SolutionPage|9A341D97-5A64-11d3-BFF9-00C04F990235|  
+|VisualStudio. VSConstants. GUID_COMClassicPage|9A341D96-5A64-11d3-BFF9-00C04F990235|  
+|VisualStudio. VSConstants. GUID_COMPlusPage|9A341D95-5A64-11d3-BFF9-00C04F990235|  
+|VisualStudio. VSConstants. GUID_SolutionPage|9A341D97-5A64-11d3-BFF9-00C04F990235|  
   
-## <a name="miscellaneous-shell-guids"></a>杂项命令行程序 Guid  
+## <a name="miscellaneous-shell-guids"></a>其他 Shell Guid  
   
 |常量|GUID|  
 |---------------|----------|  
 |<xref:Microsoft.VisualStudio.VSConstants.CLSID.VsCfgProviderEventsHelper_guid>|99913f1f-1ee3-11d1-8a6e-00c04f682e21|  
 |<xref:Microsoft.VisualStudio.VSConstants.VsPackageGuid.VsDocOutlinePackage_guid>|21af45b0-ffa5-11d0-b63f-00a0c922e851|  
-|Microsoft.VisualStudio.VSConstants.SID_SVsToolboxActiveXDataProvider|35222106-bb44-11d0-8c46-00c04fc2aae2|  
+|VisualStudio. VSConstants. SID_SVsToolboxActiveXDataProvider|35222106-bb44-11d0-8c46-00c04fc2aae2|  
   
-## <a name="see-also"></a>请参阅  
- [在托管代码中的 COM 常量](../extensibility/com-constants-in-managed-code.md)   
+## <a name="see-also"></a>另请参阅  
+ [托管代码中的 COM 常量](../extensibility/com-constants-in-managed-code.md)   
  [IDE 常量](../extensibility/ide-constants.md)   
  [用于扩展项目系统的 IDE 定义的命令](../extensibility/internals/ide-defined-commands-for-extending-project-systems.md)
