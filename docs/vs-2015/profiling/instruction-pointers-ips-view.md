@@ -19,10 +19,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 1c6dcd6da21d83203f2e22472aaeb226f65e8475
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68191541"
 ---
 # <a name="instruction-pointers-ips-view"></a>“指令指针”(IP) 视图
@@ -37,6 +37,6 @@ ms.locfileid: "68191541"
  对于 .NET 内存数据，“行”视图标识分配内存的指令。  
   
 ## <a name="see-also"></a>另请参阅  
- [“指令指针”(IP) 视图](../profiling/instruction-pointers-ips-view-sampling-data.md)   
- [“指令指针”(IP) 视图 - 采样](../profiling/instruction-pointers-ips-view-dotnet-memory-sampling-data.md)   
+ [Ip) 视图 (的指令指针](../profiling/instruction-pointers-ips-view-sampling-data.md)   
+ [ (Ip) 视图-采样的指令指针](../profiling/instruction-pointers-ips-view-dotnet-memory-sampling-data.md)   
  [“指令指针”(IP) 视图](../profiling/instruction-pointers-ips-view-contention-data.md)
