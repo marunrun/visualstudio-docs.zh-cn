@@ -1,5 +1,5 @@
 ---
-title: IDebugEnumField::GetUnderlyingSymbol |Microsoft Docs
+title: IDebugEnumField：： GetUnderlyingSymbol |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 8
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 1841ca2bf9bd5a43ec5a16a515a03769db64ea15
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68188976"
 ---
 # <a name="idebugenumfieldgetunderlyingsymbol"></a>IDebugEnumField::GetUnderlyingSymbol
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-此方法返回[IDebugField](../../../extensibility/debugger/reference/idebugfield.md)表示枚举的名称。  
+此方法返回表示枚举名称的 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) 。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,15 +40,15 @@ int GetUnderlyingSymbol(
   
 #### <a name="parameters"></a>参数  
  `ppField`  
- [out]返回[IDebugField](../../../extensibility/debugger/reference/idebugfield.md)描述了此枚举的名称。  
+ 弄返回描述此枚举名称的 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) 。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
 ## <a name="remarks"></a>备注  
- 枚举的名称还包含通过使用绑定到的内存位置的枚举类型[绑定](../../../extensibility/debugger/reference/idebugbinder-bind.md)。  
+ 枚举的名称还包含枚举的类型，该类型使用 [Bind](../../../extensibility/debugger/reference/idebugbinder-bind.md)绑定到内存位置。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugEnumField](../../../extensibility/debugger/reference/idebugenumfield.md)   
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)   
- [Bind](../../../extensibility/debugger/reference/idebugbinder-bind.md)
+ [绑定](../../../extensibility/debugger/reference/idebugbinder-bind.md)

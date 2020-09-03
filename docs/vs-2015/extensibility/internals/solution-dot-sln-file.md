@@ -1,5 +1,5 @@
 ---
-title: 解决方案 (。Sln) 文件 |Microsoft Docs
+title: 解决方案 (。.Sln) 文件 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,25 +13,25 @@ caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: d9e045ab707620fe985e34174238081f6168e5af
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68154971"
 ---
 # <a name="solution-sln-file"></a>解决方案 (.Sln) 文件
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-一种解决方案是用于组织项目在 Visual Studio 中的结构。 该解决方案维护基于文本的 (共享） 的.sln 和.suo （二进制、 用户特定的解决方案选项） 文件中的项目的状态信息。 .Suo 文件的详细信息，请参阅[解决方案用户选项 (。Suo) 文件](../../extensibility/internals/solution-user-options-dot-suo-file.md)。  
+解决方案是在 Visual Studio 中组织项目的结构。 解决方案会在 .sln (基于文本的共享) 和 .suo (二进制，特定于用户的解决方案选项) 文件中维护项目的状态信息。 有关 .suo 文件的详细信息，请参阅 [解决方案用户选项 (。.Suo) 文件](../../extensibility/internals/solution-user-options-dot-suo-file.md)。  
   
- 如果由于所引用的.sln 文件中加载你的 VSPackage，则环境在调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps.ReadSolutionProps%2A>.sln 文件中读取。  
+ 如果由于在 .sln 文件中引用了 VSPackage，则环境将调用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps.ReadSolutionProps%2A> 以在 .sln 文件中读取。  
   
- .Sln 文件包含在环境中使用查找和加载持久化的数据和它所引用的 Vspackage 的项目的名称-值参数的基于文本的信息。 当用户打开一个解决方案时，在环境中循环`preSolution`， `Project`，和`postSolution`.sln 文件，若要加载的解决方案中的信息在解决方案中项目和任何保留的该信息附加到该解决方案。  
+ .Sln 文件包含基于文本的信息，环境使用该信息查找并加载持久数据的名称-值参数和它引用的项目 Vspackage。 当用户打开解决方案时，环境会循环遍历 `preSolution` `Project` `postSolution` .sln 文件中的、和信息，以加载解决方案、解决方案中的项目以及附加到解决方案的任何持久性信息。  
   
- 每个项目的文件包含要填充与该项目的项的层次结构的环境所读取的其他信息。 由项目; 控制层次结构数据暂留尽管数据是不通常存储在.sln 文件中，您可以故意项目信息写入.sln 文件如果你选择这样做。 与持久性相关的详细信息，请参阅[项目持久性](../../extensibility/internals/project-persistence.md)并[打开和保存项目项](../../extensibility/internals/opening-and-saving-project-items.md)。  
+ 每个项目的文件都包含环境读取的其他信息，以使用该项目的项填充层次结构。 层次结构数据持久性由项目控制;数据通常不会存储在 .sln 文件中，但如果您选择这样做，您可以有意地将项目信息写入 .sln 文件。 有关持久性的详细信息，请参阅 [项目持久性](../../extensibility/internals/project-persistence.md) 和 [打开和保存项目项](../../extensibility/internals/opening-and-saving-project-items.md)。  
   
 ## <a name="solution-file-contents"></a>解决方案文件内容  
- 下面的代码中所示的.sln 文件几个部分组成。  
+ .Sln 文件包含若干节，如以下代码所示。  
   
 ```  
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Project1", "Project1.vbproj", "{8CDD8387-B905-44A8-B5D5-07BB50E05BEA}"  
@@ -58,9 +58,9 @@ Global
 EndGlobal  
 ```  
   
- 若要加载一个解决方案，该环境，请执行以下一系列任务。  
+ 若要加载解决方案，环境将执行以下任务序列。  
   
-1. 在环境中读取的.sln 文件的全局部分并处理标记的所有部分`preSolution`。 在这种情况下，还有一个此类语句：  
+1. 环境将读取 .sln 文件的全局部分，并处理标记的所有部分 `preSolution` 。 在这种情况下，有一个这样的语句：  
   
    ```  
    GlobalSection(SolutionConfiguration) = preSolution  
@@ -68,11 +68,11 @@ EndGlobal
         ConfigName.1 = Release  
    ```  
   
-    当在环境中读取`GlobalSection('name')`标记，它将名称映射到使用注册表的 VSPackage。 密钥名称应存在注册表中 [HKLM\\< 应用程序 ID 注册表根\>\SolutionPersistence\AggregateGUIDs]。 密钥的默认值为编写了项的 VSPackage 的包 GUID (REG_SZ)。  
+    当环境读取标记时 `GlobalSection('name')` ，它将使用注册表将名称映射到 VSPackage。 注册表项名称应存在于 [HKLM \\<APPLICATION ID Registry Root \SolutionPersistence\AggregateGUIDs] 下的注册表中 \> 。 密钥的默认值是写入条目的 VSPackage REG_SZ) 的包 GUID (。  
   
-2. 在环境加载 VSPackage，调用`QueryInterface`上的 VSPackage<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps>接口，并调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps.ReadSolutionProps%2A>使 VSPackage 能够存储数据的部分中的数据的方法。 环境会为每个重复此过程`preSolution`部分。  
+2. 环境加载 VSPackage，对接口调用 `QueryInterface` VSPackage， <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps> 并 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps.ReadSolutionProps%2A> 通过节中的数据调用方法，以便 VSPackage 可以存储数据。 环境为每个部分重复此过程 `preSolution` 。  
   
-3. 项目持久性块循环访问环境。 在这种情况下，没有一个项目。  
+3. 环境循环访问项目持久性块。 在这种情况下，有一个项目。  
   
    ```  
    Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Project1",  
@@ -80,27 +80,27 @@ EndGlobal
    EndProject  
    ```  
   
-    此语句包含 GUID 的唯一项目和项目类型 GUID。 在环境使用此信息来查找的项目文件或属于该解决方案的文件和 VSPackage 所需的每个项目。 项目 GUID 传递给<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory>加载特定 VSPackage 项目相关，然后加载该项目是由 VSPackage。 在这种情况下，为此项目加载 VSPackage 是 Visual Basic。  
+    此语句包含唯一项目 GUID 和项目类型 GUID。 环境使用此信息来查找项目文件或属于解决方案的文件，以及每个项目所需的 VSPackage。 项目 GUID 传递到 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory> 以加载与项目相关的特定 VSPackage，然后由 VSPackage 加载项目。 在这种情况下，为此项目加载的 VSPackage Visual Basic。  
   
-    每个项目可以保留一个唯一的项目实例 ID，以便根据需要由解决方案中的其他项目进行访问。 理想情况下，如果解决方案和项目源代码管理下，项目的路径应相对于解决方案的路径。 首次加载解决方案时，项目文件不能为用户的计算机上。 通过采用相对于解决方案文件服务器上存储的项目文件，是要找出并复制到用户的计算机上的项目文件的相对简单。 然后，再将复制，并加载该项目所需的文件的其余部分。  
+    每个项目都可以保留唯一的项目实例 ID，以便可以根据解决方案中的其他项目的需要对其进行访问。 理想情况下，如果解决方案和项目处于源代码管理下，则项目的路径应相对于解决方案的路径。 首次加载解决方案时，项目文件不能在用户的计算机上。 通过将项目文件与解决方案文件相关，将项目文件存储在服务器上，可以找到项目文件并将其复制到用户的计算机。 然后，它会复制并加载项目所需的其他文件。  
   
-4. 根据项目一部分的.sln 文件中包含的信息，环境将加载每个项目文件。 项目本身负责，然后填充项目层次结构，并加载任何嵌套的项目。  
+4. 根据 .sln 文件的 "项目" 部分中包含的信息，环境将加载每个项目文件。 然后，项目本身负责填充项目层次结构并加载任何嵌套的项目。  
   
-5. .Sln 文件的所有部分进行都处理后，解决方案将显示在解决方案资源管理器，并可供用户修改。  
+5. 处理 .sln 文件的所有部分后，解决方案将显示在 "解决方案资源管理器中，并可供用户修改。  
   
-   如果任何 VSPackage 实现项目解决方案中无法加载，<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps.OnProjectLoadFailure%2A>调用方法和解决方案中的每个其他项目就会有机会以忽略在加载期间可能已做的更改。 如果出现分析错误，请尽可能多的信息保留使用的解决方案文件，并在环境显示一个对话框，警告用户该解决方案已损坏。  
+   如果在解决方案中实现项目的任何 VSPackage 都无法加载，则会 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps.OnProjectLoadFailure%2A> 调用方法，并且解决方案中的每个项目都有机会忽略在加载过程中可能已进行的更改。 如果发生分析错误，解决方案文件中将保留尽可能多的信息，并且环境会显示一个对话框，警告用户解决方案已损坏。  
   
-   保存或关闭，解决方案时<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps.QuerySaveSolutionProps%2A>方法调用并传递给层次结构，以查看是否已对需要为其输入到.sln 文件的解决方案进行了更改。 Null 值，在传递给`QuerySaveSolutionProps`在<xref:Microsoft.VisualStudio.Shell.Interop.VSQUERYSAVESLNPROPS>，指示解决方案保留信息。 如果值不为 null，保持的信息是由指向指针的特定项目<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy>接口。  
+   保存或关闭解决方案时，将 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps.QuerySaveSolutionProps%2A> 调用方法并将其传递给层次结构，以查看是否已对需要输入 .sln 文件的解决方案进行了更改。 传入的中的 null 值 `QuerySaveSolutionProps` 指示该 <xref:Microsoft.VisualStudio.Shell.Interop.VSQUERYSAVESLNPROPS> 解决方案的信息是持久的。 如果值不为 null，则保留的信息针对特定项目，由指向接口的指针确定 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> 。  
   
-   如果没有要保存信息<xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionPersistence>接口的指针调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps.SaveSolutionProps%2A>方法。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps.WriteSolutionProps%2A>环境，以检索从名称-值对然后调用方法`IPropertyBag`接口，并将信息写入到.sln 文件。  
+   如果有要保存的信息，则 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionPersistence> 使用指向方法的指针调用接口 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps.SaveSolutionProps%2A> 。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps.WriteSolutionProps%2A>然后，环境将调用方法，以从接口检索名称/值对 `IPropertyBag` ，并将信息写入 .sln 文件。  
   
-   `SaveSolutionProps` 并`WriteSolutionProps`对象调用以检索从保存信息的环境以递归方式`IPropertyBag`接口之前的所有更改都已都输入到.sln 文件。 这样一来，可以确保信息就会保存解决方案并打开解决方案时可用的下一次。  
+   `SaveSolutionProps` 和 `WriteSolutionProps` 对象由环境以递归方式调用，以检索要从接口保存的信息， `IPropertyBag` 直到将所有更改都输入到 .sln 文件中为止。 通过这种方式，您可以确保信息将随解决方案一起保存，并且在下次打开解决方案时可用。  
   
-   枚举每个加载的 VSPackage 以查看是否有任何内容将保存到.sln 文件。 它是仅在加载时，查询注册表项。 因为它们是在保存解决方案时在内存中，则环境知道有关所有已加载的包。  
+   枚举每个加载的 VSPackage，以查看它是否有任何内容保存到 .sln 文件。 仅在加载时才对注册表项进行查询。 环境知道所有加载的包，因为这些包在保存解决方案时位于内存中。  
   
-   只有.sln 文件包含中的条目`preSolution`和`postSolution`部分。 不相似的节中有.suo 文件由于解决方案需要此信息才能正确加载。 .Suo 文件包含特定于用户的选项，如不应被共享或放置在源代码管理下的私人的便笺。  
+   只有 .sln 文件包含和节中的条目 `preSolution` `postSolution` 。 .Suo 文件中没有类似的部分，因为解决方案需要此信息才能正确加载。 .Suo 文件包含特定于用户的选项，如专用说明，这些选项不应在源代码管理下共享或放置。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps>   
- [解决方案用户选项 (。Suo) 文件](../../extensibility/internals/solution-user-options-dot-suo-file.md)   
+ [解决方案用户选项 (。.Suo) 文件](../../extensibility/internals/solution-user-options-dot-suo-file.md)   
  [解决方案](../../extensibility/internals/solutions-overview.md)

@@ -18,16 +18,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: c0eaa719bb3eeca2eb3dfe558184699ccca42819
-ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86387195"
 ---
 # <a name="debug-64-bit-applications"></a>调试 64 位应用程序
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-本主题的最新版本可在[调试64位应用程序](/visualstudio/debugger/debug-64-bit-applications)上找到。  
+本主题的最新版本可在 [调试64位应用程序](/visualstudio/debugger/debug-64-bit-applications) 上找到。  
   
 您可以调试运行于本地计算机或远程计算机上的 64 位应用程序。  
   

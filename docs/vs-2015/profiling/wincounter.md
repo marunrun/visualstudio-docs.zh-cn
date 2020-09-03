@@ -10,10 +10,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 9424eb099516761866ec459888ff830fcf56a28b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68154740"
 ---
 # <a name="wincounter"></a>WinCounter
@@ -40,13 +40,13 @@ VSPerfCmd.exe /Start:Method /Wincounter:Path [/WinCounter:Path] [AutoMark:Millis
 ## <a name="required-options"></a>必需选项  
  **WinCounter** 选项只能与 **Start** 选项一起使用。  
   
- **Start:** `Method`  
- “Start”选项可将探查器初始化为指定的分析方法  。  
+ **开始时间：**`Method`  
+  “Start”选项可将探查器初始化为指定的分析方法****。  
   
 ## <a name="exclusive-options"></a>独占选项  
  **AutoMark** 选项只能与 **WinCounter** 选项一起使用。  
   
- **AutoMark:** `Milliseconds`  
+ **AutoMark：**`Milliseconds`  
  指定两次 Windows 性能计数器数据收集相隔的毫秒数。  
   
 ## <a name="example"></a>示例  

@@ -1,5 +1,5 @@
 ---
-title: EnableLocationBrowseButton 元素 （Visual Studio 模板） |Microsoft Docs
+title: " (Visual Studio 模板) 的 EnableLocationBrowseButton 元素 |Microsoft Docs"
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -13,19 +13,19 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: ef9f42bfb24caaf2775ba2c70110eaaa5d616116
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68204599"
 ---
 # <a name="enablelocationbrowsebutton-element-visual-studio-templates"></a>EnableLocationBrowseButton 元素（Visual Studio 模板）
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-指定是否**浏览**按钮现已推出**新项目**对话框，以便用户可以轻松地修改保存新项目的默认目录。  
+指定 "**新建项目**" 对话框中的 "**浏览**" 按钮是否可用，以便用户可以轻松地修改保存新项目的默认目录。  
   
- \<VSTemplate >  
- \<TemplateData >  
+ \<VSTemplate>  
+ \<TemplateData>  
  \<EnableLocationBrowseButton>  
   
 ## <a name="syntax"></a>语法  
@@ -52,15 +52,15 @@ ms.locfileid: "68204599"
 ## <a name="text-value"></a>文本值  
  需要一个文本值。  
   
- 文本必须是`true`或`false`，，该值指示是否显示**浏览**按钮**新项目**对话框。  
+ 文本必须是 `true` 或 `false` ，指示是否在 "**新建项目**" 对话框中显示 "**浏览**" 按钮。  
   
 ## <a name="remarks"></a>备注  
- `EnableLocationBrowseButton` 是可选元素。 默认值是`true`，其中显示**浏览**按钮**新项目**对话框。  
+ `EnableLocationBrowseButton` 是可选元素。 默认值为 `true` ，它显示 "**新建项目**" 对话框中的 "**浏览**" 按钮。  
   
- 在中**新的项目**对话框中，**位置**文本框中指定新的项目的保存位置的目录。 **浏览**按钮可帮助你通过显示来修改此目录**项目位置**对话框中，使您可以轻松地导航到另一个计算机上可用的目录，并然后选择为保存新项目的目录。  
+ 在 " **新建项目** " 对话框中，" **位置** " 文本框指定用于保存新项目的目录。 " **浏览** " 按钮可帮助您通过显示 " **项目位置** " 对话框来修改此目录，该对话框使您可以轻松地导航到您的计算机上提供的不同目录，然后选择它作为新项目的保存目录。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示的元数据[!INCLUDE[csprcs](../includes/csprcs-md.md)]Windows 应用程序。  
+ 下面的示例演示了 [!INCLUDE[csprcs](../includes/csprcs-md.md)] Windows 应用程序的元数据。  
   
 ```  
 <VSTemplate Type="Project" Version="3.0.0"  
@@ -87,6 +87,6 @@ ms.locfileid: "68204599"
 </VSTemplate>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)   
  [创建项目和项模板](../ide/creating-project-and-item-templates.md)

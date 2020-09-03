@@ -1,5 +1,5 @@
 ---
-title: IDebugSettingsCallback2::GetEEMetricDword |Microsoft Docs
+title: IDebugSettingsCallback2：： GetEEMetricDword |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,16 +11,16 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 461371efdb6152fc8507f081a6d20ccece932d09
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68155226"
 ---
 # <a name="idebugsettingscallback2geteemetricdword"></a>IDebugSettingsCallback2::GetEEMetricDword
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-检索一个值，对应于指定的表达式计算器指标。  
+检索一个值，该值对应于表达式计算器的指定指标。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,19 +44,19 @@ private int GetEEMetricDword(
   
 #### <a name="parameters"></a>参数  
  `guidLang`  
- [in]编程语言的唯一标识符。  
+ 中编程语言的唯一标识符。  
   
  `guidVendor`  
- [in]供应商的唯一标识符。  
+ 中供应商的唯一标识符。  
   
  `pszMetric`  
- [in]指标的名称。  
+ 中度量值的名称。  
   
  `pdwValue`  
- [out]返回度量值的字符串相对应的值。  
+ 弄返回与度量值字符串相对应的值。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugSettingsCallback2](../../../extensibility/debugger/reference/idebugsettingscallback2.md)

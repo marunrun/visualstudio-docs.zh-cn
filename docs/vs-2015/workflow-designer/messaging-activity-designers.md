@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: a6fb06bea4cebf2558990d23f7ece5b4f8db5b95
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72658931"
 ---
 # <a name="messaging-activity-designers"></a>消息传递活动设计器
@@ -21,13 +21,13 @@ ms.locfileid: "72658931"
 
 ## <a name="in-this-section"></a>本节内容
 
-|消息活动|描述|
+|消息活动|说明|
 |----------------------|-----------------|
 |[CorrelationScope](../workflow-designer/correlationscope-activity-designer.md)|创建和配置 <xref:System.ServiceModel.Activities.CorrelationScope> 活动，该活动使用 <xref:System.ServiceModel.Activities.CorrelationHandle> 对象提供子消息传递活动的隐式管理。|
 |[InitializeCorrelation](../workflow-designer/initializecorrelation-activity-designer.md)|创建和配置 <xref:System.ServiceModel.Activities.InitializeCorrelation> 活动，该活动用于在不发送或接收消息的情况下初始化相关。|
-|[Receive](../workflow-designer/receive-activity-designer.md)|创建和配置 <xref:System.ServiceModel.Activities.Receive> 活动，该活动从某个服务接收消息。|
+|[收](../workflow-designer/receive-activity-designer.md)|创建和配置 <xref:System.ServiceModel.Activities.Receive> 活动，该活动从某个服务接收消息。|
 |[ReceiveAndSendReply](../workflow-designer/receiveandsendreply-template-designer.md)|在 <xref:System.ServiceModel.Activities.Send> 活动内创建预配置的一对 <xref:System.ServiceModel.Activities.ReceiveReply> 和 <xref:System.Activities.Statements.Sequence> 活动。|
-|[Send](../workflow-designer/send-activity-designer.md)|创建和配置 <xref:System.ServiceModel.Activities.Send> 活动，该活动向某个服务发送消息。|
+|[发送](../workflow-designer/send-activity-designer.md)|创建和配置 <xref:System.ServiceModel.Activities.Send> 活动，该活动向某个服务发送消息。|
 |[SendAndReceiveReply](../workflow-designer/sendandreceivereply-template-designer.md)|在 <xref:System.ServiceModel.Activities.Receive> 活动内创建预配置的一对 <xref:System.ServiceModel.Activities.SendReply> 和 <xref:System.Activities.Statements.Sequence> 活动。|
 |[TransactedReceiveScope](../workflow-designer/transactedreceivescope-activity-designer.md)|创建和配置 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 活动，该活动能将事务流入某个工作流中。|
 
@@ -61,7 +61,7 @@ ms.locfileid: "72658931"
 
  [事务](../workflow-designer/transaction-activity-designers.md)
 
- [收集](../workflow-designer/collection-activity-designers.md)
+ [集合](../workflow-designer/collection-activity-designers.md)
 
  [错误处理](../workflow-designer/error-handling-activity-designers.md)
 

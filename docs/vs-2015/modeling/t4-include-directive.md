@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 669be50e11d3bf17d617c361b63f807149dbc823
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72658580"
 ---
 # <a name="t4-include-directive"></a>T4 包含指令
@@ -27,13 +27,13 @@ ms.locfileid: "72658580"
 <#@ include file="filePath" [once="true"] #>
 ```
 
-- `filePath` 可以是绝对的，或相对于当前模板文件。
+- `filePath` 可以是绝对的，也可以是相对于当前模板文件的相对路径。
 
-   另外，特定 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 扩展可以指定其自己的目录以便搜索包含文件。 例如，在您安装了可视化和建模 SDK （DSL 工具）后，以下文件夹将添加到 "包含列表： `Program Files\Microsoft Visual Studio 10.0\Common7\IDE\Extensions\Microsoft\DSL SDK\DSL Designer\11.0\TextTemplates`"。
+   另外，特定 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 扩展可以指定其自己的目录以便搜索包含文件。 例如，在安装了可视化和建模 SDK (DSL 工具) 后，会将以下文件夹添加到包含列表： `Program Files\Microsoft Visual Studio 10.0\Common7\IDE\Extensions\Microsoft\DSL SDK\DSL Designer\11.0\TextTemplates` 。
 
    这些附加包含文件夹可能取决于包含文件的文件扩展名。 例如，DSL 工具包含仅具有文件扩展名 `.tt` 的包含文件可访问的文件夹。
 
-- `filePath` 可以包括用“%”分隔的环境变量。 例如:
+- `filePath` 可以包括用“%”分隔的环境变量。 例如：
 
   ```
   <#@ include file="%HOMEPATH%\MyIncludeFile.t4" #>
@@ -41,7 +41,7 @@ ms.locfileid: "72658580"
 
 - 包含的文件的名称将不必使用扩展名 `".tt"`。
 
-   你可能需要对包含的文件使用其他扩展名，例如，`".t4"`。 这是因为，当你将 `.tt` 文件添加到项目时，[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 会自动将其**自定义工具**属性设置为 "`TextTemplatingFileGenerator`"。 你通常不希望单独转换包含的文件。
+   你可能需要对包含的文件使用其他扩展名，例如，`".t4"`。 这是因为，当你向 `.tt` 项目添加文件时， [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 会自动将其 " **自定义工具** " 属性设置为 `TextTemplatingFileGenerator` 。 你通常不希望单独转换包含的文件。
 
    另一方面，在某种情况下应注意，文件扩展名会影响将要搜索哪些附加文件夹来获得包含文件。 您具有包括其他文件的已包含文件时，这可能会很重要。
 
@@ -49,7 +49,7 @@ ms.locfileid: "72658580"
 
 - 使用 `once="true"` 以确保一个模板只包括一次，即使从多个其他包括文件对其进行调用也是如此。
 
-   利用此功能，可以轻松构建可重复使用的 T4 代码库，而不必担心其他一些代码段已经包含它们。  例如，假设您有一个非常细化的代码片段库，用于处理模板处理和C#生成。  进而，某些特定于任务的实用程序（如生成异常）使用这些工具，然后可以从任何应用程序特定的模板使用它们。 如果绘制依赖项关系图，则你会看到将会多次包含某些代码片段。 但 `once` 参数阻止后续包含。
+   利用此功能，可以轻松构建可重复使用的 T4 代码库，而不必担心其他一些代码段已经包含它们。  例如，假设您有一个非常精细的代码段库，用于处理模板处理和 c # 生成。  进而，某些特定于任务的实用程序（如生成异常）使用这些工具，然后可以从任何应用程序特定的模板使用它们。 如果绘制依赖项关系图，则你会看到将会多次包含某些代码片段。 但 `once` 参数阻止后续包含。
 
   **MyTextTemplate.tt：**
 
@@ -65,7 +65,7 @@ Output message 5 (from top template).
 
 ```
 
- **Textfile1.txt：**
+ **TextFile1.t4：**
 
 ```
    Output Message 2 (from included file).
@@ -82,7 +82,7 @@ void GenerateMessage(int n)
 
 ```
 
- **Textfile2.txt：**
+ **TextFile2.t4：**
 
 ```
         Output Message 3 (from included file 2).
@@ -97,7 +97,7 @@ void AnotherGenerateMessage(int n)
 
 ```
 
- **生成的生成文件 Mytexttemplate.txt：**
+ **得到的已生成文件，MyTextTemplate.txt：**
 
 ```
 Output message 1 (from top template).
@@ -112,7 +112,7 @@ Output message 5 (from top template).
 
 ```
 
-## <a name="msbuild"></a>在 MSBuild 和 Visual Studio 中使用项目属性
+## <a name="using-project-properties-in-msbuild-and-visual-studio"></a><a name="msbuild"></a> 在 MSBuild 和 Visual Studio 中使用项目属性
  虽然你可在 Include 指令中使用 Visual Studio 宏（如 $(SolutionDir），但它们在 MSBuild 中不起作用。 如果你想要在生成计算机中转换模板，则必须改用项目属性。
 
  编辑 .csproj 或 .vbproj 文件以定义项目属性。 此示例定义一个名为 `myIncludeFolder` 的属性：
