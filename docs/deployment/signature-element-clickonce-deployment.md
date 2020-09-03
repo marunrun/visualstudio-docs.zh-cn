@@ -1,5 +1,5 @@
 ---
-title: '&lt;签名 &gt; 元素（ClickOnce 部署） |Microsoft Docs'
+title: '&lt;&gt; (ClickOnce 部署) 的签名元素 |Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,13 +15,13 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: b6f07e2649d6f41e77f453f64c5838c746f22ad0
-ms.sourcegitcommit: 9a9c61ca115c22d33bb902153eb0853789c7be4c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85835415"
 ---
-# <a name="ltsignaturegt-element-clickonce-deployment"></a>&lt;Signature &gt; 元素（ClickOnce 部署）
+# <a name="ltsignaturegt-element-clickonce-deployment"></a>&lt;&gt;ClickOnce 部署 (签名元素) 
 包含对此部署清单进行数字签名所需的信息。
 
 ## <a name="syntax"></a>语法

@@ -15,10 +15,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: 969f2bcb578d74ac02a7bdaa6984de5948e49e27
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85817601"
 ---
 # <a name="date-object-expected"></a>缺少日期对象
@@ -34,7 +34,7 @@ o.f();
   
 - 仅**对类型**为的对象调用 valueOf 或**Date.prototype.valueOf** `Date` 方法。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Date 对象](../../javascript/reference/date-object-javascript.md)   
- [getDate 方法（Date）](../../javascript/reference/getdate-method-date-javascript.md)   
+ [getDate 方法 (日期) ](../../javascript/reference/getdate-method-date-javascript.md)   
  [内部对象](../../javascript/intrinsic-objects-javascript.md)

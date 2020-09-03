@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: ec9be9dae502ec48570a85576f483518ed0d75d6
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85534948"
 ---
 # <a name="ca1019-define-accessors-for-attribute-arguments"></a>CA1019:定义特性参数的访问器
@@ -51,7 +51,7 @@ ms.locfileid: "85534948"
 ## <a name="custom-attributes-example"></a>自定义特性示例
 
 ### <a name="description"></a>说明
- 下面的示例演示两个定义强制（位置）参数的属性。 未正确定义属性的第一个实现。 第二种实现是正确的。
+ 下面的示例演示两个定义 (位置) 参数的属性。 未正确定义属性的第一个实现。 第二种实现是正确的。
 
 ### <a name="code"></a>代码
  [!code-csharp[FxCop.Design.AttributeAccessors#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.AttributeAccessors/cs/FxCop.Design.AttributeAccessors.cs#1)]

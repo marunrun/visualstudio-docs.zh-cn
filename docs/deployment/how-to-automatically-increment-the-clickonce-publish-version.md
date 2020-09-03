@@ -18,10 +18,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 710f2d045af4da92116334e64efa5ce528563d1d
-ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85382596"
 ---
 # <a name="how-to-automatically-increment-the-clickonce-publish-version"></a>如何：自动递增 ClickOnce 发布版本
@@ -39,9 +39,9 @@ ms.locfileid: "85382596"
 
 2. 单击 **“发布”** 选项卡。
 
-3. 在 "**发布版本**" 部分中，清除 "**自动递增每个版本的修订版本**" 复选框。
+3. 在 " **发布版本** " 部分中，清除 " **自动递增每个版本的修订版本** " 复选框。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [如何：设置 ClickOnce 发布版本](../deployment/how-to-set-the-clickonce-publish-version.md)
 - [发布 ClickOnce 应用程序](../deployment/publishing-clickonce-applications.md)

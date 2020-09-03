@@ -16,27 +16,27 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 1752efb5be1828f62703e1fe1a1130b37ff80503
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85534922"
 ---
 # <a name="ca1403-auto-layout-types-should-not-be-com-visible"></a>CA1403:自动布局类型不应对 COM 可见
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|Item|值|
+|项|值|
 |-|-|
 |TypeName|AutoLayoutTypesShouldNotBeComVisible|
 |CheckId|CA1403|
-|Category|Microsoft. 互操作性|
+|类别|Microsoft. 互操作性|
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
- 组件对象模型（COM）可见值类型标记为 <xref:System.Runtime.InteropServices.StructLayoutAttribute?displayProperty=fullName> 属性设置为 <xref:System.Runtime.InteropServices.LayoutKind?displayProperty=fullName> 。
+ 组件对象模型 (COM) 可见值类型，并将 <xref:System.Runtime.InteropServices.StructLayoutAttribute?displayProperty=fullName> 特性设置为 <xref:System.Runtime.InteropServices.LayoutKind?displayProperty=fullName> 。
 
 ## <a name="rule-description"></a>规则描述
- <xref:System.Runtime.InteropServices.LayoutKind>布局类型由公共语言运行时管理。 这些类型的布局可能在 .NET Framework 的不同版本之间更改，这会中断需要特定布局的 COM 客户端。 请注意，如果 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 未指定属性，则 c #、 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 和 c + + 编译器将指定 <xref:System.Runtime.InteropServices.LayoutKind> 值类型的布局。
+ <xref:System.Runtime.InteropServices.LayoutKind> 布局类型由公共语言运行时管理。 这些类型的布局可能在 .NET Framework 的不同版本之间更改，这会中断需要特定布局的 COM 客户端。 请注意，如果 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 未指定属性，则 c #、 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 和 c + + 编译器将指定 <xref:System.Runtime.InteropServices.LayoutKind> 值类型的布局。
 
  除非另行标记，否则所有公共非泛型类型都对 COM 可见;所有非公共和泛型类型对 COM 都不可见。 但是，若要减少误报，此规则需要显式声明类型的 COM 可见性;必须用设置为的将包含程序集标记为 <xref:System.Runtime.InteropServices.ComVisibleAttribute?displayProperty=fullName> `false` ，且类型必须标记为 <xref:System.Runtime.InteropServices.ComVisibleAttribute> `true` 。
 

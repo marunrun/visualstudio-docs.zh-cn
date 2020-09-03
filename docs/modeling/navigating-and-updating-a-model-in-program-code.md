@@ -482,7 +482,7 @@ partial class MyDiagram
 ## <a name="store-partitions"></a>存储分区
  加载模型时，将同时加载随附的关系图。 通常情况下，模型会加载到 DefaultPartition 中，关系图内容会加载到另一个分区中。 通常会加载每个分区的内容并将其保存到单独的文件中。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - <xref:Microsoft.VisualStudio.Modeling.ModelElement>
 - [域特定语言中的验证](../modeling/validation-in-a-domain-specific-language.md)

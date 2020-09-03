@@ -11,33 +11,33 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: b88c8555904bb31c2804579459ad3096d640b0c2
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85904819"
 ---
 # <a name="walkthrough-display-signature-help"></a>演练：显示签名帮助
-签名帮助（也称为*参数信息*）在用户键入参数列表开始字符（通常是左括号）时，在工具提示中显示方法的签名。 如果键入了参数和参数分隔符（通常为逗号），则工具提示将更新为以粗体显示下一个参数。 可以通过以下方式定义签名帮助：在语言服务的上下文中，定义自己的文件扩展名和内容类型，并为该类型仅显示签名帮助，或显示现有内容类型（例如，"文本"）的签名帮助。 本演练演示如何为 "文本" 内容类型显示签名帮助。
+签名帮助 (也称为 *参数信息*) 当用户键入参数列表开始字符时，将在工具提示中显示方法的签名， (通常为左括号) 。 作为参数和参数分隔符 (通常会键入逗号) ，工具提示将更新以以粗体显示下一个参数。 可以通过以下方式定义签名帮助：在语言服务的上下文中，定义自己的文件扩展名和内容类型，并为现有内容类型显示签名帮助 (例如，"text" ) 。 本演练演示如何为 "文本" 内容类型显示签名帮助。
 
- 签名帮助通常通过键入特定字符来触发，例如 "（" （左括号），并通过键入另一个字符（例如 "）" （右括号）来消除。 通过使用键击（ <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> 接口）和实现接口的处理程序提供程序的命令处理程序，可以实现通过键入字符触发的 IntelliSense 功能 <xref:Microsoft.VisualStudio.Editor.IVsTextViewCreationListener> 。 若要创建签名帮助源（参与签名帮助的签名列表），请实现 <xref:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpSource> 接口和运行接口的源提供程序 <xref:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpSourceProvider> 。 提供程序是 Managed Extensibility Framework （MEF）组件部件，负责导出源和控制器类，以及导入服务和代理，例如，可 <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService> 让你在文本缓冲区中导航和 <xref:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpBroker> ，这会触发签名帮助会话。
+ 签名帮助通常是通过键入特定字符来触发的，例如 " (" (左括号) ，并通过键入另一个字符来消除，如 ") " (右括号) 。 通过使用命令处理程序 (<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> 接口) 和实现接口的处理程序提供程序，可以实现通过键入字符触发的 IntelliSense 功能 <xref:Microsoft.VisualStudio.Editor.IVsTextViewCreationListener> 。 若要创建签名帮助源（参与签名帮助的签名列表），请实现 <xref:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpSource> 接口和运行接口的源提供程序 <xref:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpSourceProvider> 。 提供程序 Managed Extensibility Framework (MEF) 组件部件，并负责导出源和控制器类，以及导入服务和代理，例如，可 <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService> 让你在文本缓冲区中导航，并将 <xref:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpBroker> 触发签名帮助会话。
 
  本演练演示如何为硬编码的标识符集设置签名帮助。 在完整实现中，语言负责提供该内容。
 
-## <a name="prerequisites"></a>必备条件
- 从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅[安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
+## <a name="prerequisites"></a>先决条件
+ 从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
 
 ## <a name="creating-a-mef-project"></a>创建 MEF 项目
 
 #### <a name="to-create-a-mef-project"></a>创建 MEF 项目
 
-1. 创建 c # VSIX 项目。 （在 "**新建项目**" 对话框中，依次选择 " **Visual c #/扩展性**"、" **VSIX 项目**"。）命名解决方案 `SignatureHelpTest` 。
+1. 创建 c # VSIX 项目。  (在 " **新建项目** " 对话框中，依次选择 " **Visual c #/扩展性**"、" **VSIX 项目**"。 ) 将解决方案命名为 `SignatureHelpTest` 。
 
-2. 将编辑器分类器项模板添加到项目。 有关详细信息，请参阅[使用编辑器项模板创建扩展](../extensibility/creating-an-extension-with-an-editor-item-template.md)。
+2. 将编辑器分类器项模板添加到项目。 有关详细信息，请参阅 [使用编辑器项模板创建扩展](../extensibility/creating-an-extension-with-an-editor-item-template.md)。
 
 3. 删除现有的类文件。
 
-4. 将以下引用添加到项目，并确保**CopyLocal**设置为 `false` ：
+4. 将以下引用添加到项目，并确保 **CopyLocal** 设置为 `false` ：
 
      VisualStudio
 
@@ -167,7 +167,7 @@ ms.locfileid: "85904819"
      [!code-csharp[VSSDKSignatureHelpTest#21](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_21.cs)]
 
 ## <a name="implement-the-signature-help-source-provider"></a>实现签名帮助源提供程序
- 签名帮助源提供程序负责导出 Managed Extensibility Framework （MEF）组件部分和实例化签名帮助源。
+ 签名帮助源提供程序负责导出 Managed Extensibility Framework (MEF) 组件部件和实例化签名帮助源。
 
 #### <a name="to-implement-the-signature-help-source-provider"></a>实现签名帮助源提供程序
 
@@ -182,7 +182,7 @@ ms.locfileid: "85904819"
      [!code-csharp[VSSDKSignatureHelpTest#23](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_23.cs)]
 
 ## <a name="implement-the-command-handler"></a>实现命令处理程序
- 签名帮助通常由左括号 "（" 字符和右括号 "）" 字符来触发。 你可以通过运行来处理这些击键 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> ，使其在收到一个带有已知方法名称的左括号字符时触发签名帮助会话，并在收到右括号字符时关闭会话。
+ 签名帮助通常由左括号 " (" 字符触发，并由右括号 ") " 字符消除。 你可以通过运行来处理这些击键 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> ，使其在收到一个带有已知方法名称的左括号字符时触发签名帮助会话，并在收到右括号字符时关闭会话。
 
 #### <a name="to-implement-the-command-handler"></a>实现命令处理程序
 
@@ -191,7 +191,7 @@ ms.locfileid: "85904819"
      [!code-vb[VSSDKSignatureHelpTest#24](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_24.vb)]
      [!code-csharp[VSSDKSignatureHelpTest#24](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_24.cs)]
 
-2. 为适配器添加私有字段 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> （这使你可以将命令处理程序添加到命令处理程序链中）、文本视图、签名帮助代理和会话、以及 <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigator> 下一步 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> 。
+2. 为适配器 (添加私有字段 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> ，该字段允许你将命令处理程序添加到命令处理程序链，) ，文本视图，签名帮助代理和会话， <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigator> ，以及下一步 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> 。
 
      [!code-vb[VSSDKSignatureHelpTest#25](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_25.vb)]
      [!code-csharp[VSSDKSignatureHelpTest#25](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_25.cs)]
@@ -201,7 +201,7 @@ ms.locfileid: "85904819"
      [!code-vb[VSSDKSignatureHelpTest#26](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_26.vb)]
      [!code-csharp[VSSDKSignatureHelpTest#26](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_26.cs)]
 
-4. <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A>当命令筛选器接收到一个已知方法名称后面的左括号 "（" 字符后，若要在会话仍处于活动状态时在收到右括号 "）" 字符时消除会话，请实现方法以触发签名帮助会话。 在每种情况下，都将转发该命令。
+4. 实现 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> 方法，以便在命令筛选器接收到一个已知方法名称后的左括号 " (" 字符时触发签名帮助会话，并在会话仍处于活动状态的情况下，在收到右括号 ") " 字符时关闭会话。 在每种情况下，都将转发该命令。
 
      [!code-vb[VSSDKSignatureHelpTest#27](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_27.vb)]
      [!code-csharp[VSSDKSignatureHelpTest#27](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_27.cs)]
@@ -221,7 +221,7 @@ ms.locfileid: "85904819"
      [!code-vb[VSSDKSignatureHelpTest#29](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_29.vb)]
      [!code-csharp[VSSDKSignatureHelpTest#29](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_29.cs)]
 
-2. 导入 <xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService> （可在给定对象的情况下获取） <xref:Microsoft.VisualStudio.Text.Editor.ITextView> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> 、 <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService> （用于查找当前单词）和 <xref:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpBroker> （用于触发签名帮助会话）。
+2. 导入 <xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService> 用于获取的 (<xref:Microsoft.VisualStudio.Text.Editor.ITextView> ，给定 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> 对象) 、 <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService> 用于查找当前单词) 的 (和用于 <xref:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpBroker> 触发签名帮助会话 (的) 。
 
      [!code-vb[VSSDKSignatureHelpTest#30](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-signature-help_30.vb)]
      [!code-csharp[VSSDKSignatureHelpTest#30](../extensibility/codesnippet/CSharp/walkthrough-displaying-signature-help_30.cs)]

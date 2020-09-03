@@ -1,6 +1,6 @@
 - name: 概述
   items:
-    - name: 用于 Visual Studio 的 R 工具
+    - name: R Tools for Visual Studio
       href: index.md
     - name: 数据科学和分析应用程序工作负荷
       href: ../python/data-science-and-analytical-applications-workload.md
@@ -16,7 +16,7 @@
       href: getting-started-with-r.md
 - name: 示例
   href: getting-started-samples.md
-- name: 操作方法指南
+- name: 操作指南
   items:
     - name: R 项目
       items:
@@ -60,5 +60,5 @@
   items:
     - name: 选项
       href: options-for-r-tools-in-visual-studio.md
-    - name: 常见问题
+    - name: 常见问题解答
       href: faq.md

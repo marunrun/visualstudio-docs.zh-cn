@@ -27,7 +27,7 @@ ms.locfileid: "75566132"
 |-|-|-|
 |DisplayName|将在生成的设计器中显示的修饰器的名称。|展开折叠修饰器|
 |名称|修饰器的名称。|ExpandCollapseDecorator|
-|备注|与此修饰器关联的非正式注释。|\<none>|
+|说明|与此修饰器关联的非正式注释。|\<none>|
 |System.windows.controls.primitives.popup.horizontaloffset|相对于修饰器默认位置的水平偏移量（以英寸为单位）。 仅对形状 (。 ) |0|
 |System.windows.controls.primitives.popup.verticaloffset|相对于修饰器默认位置的垂直偏移量（以英寸为单位）。 仅对形状 (。 ) |0|
 |OffsetFromLine|从行修饰器的偏移量（以英寸为单位），相对于其默认位置。 仅对连接器 (。 ) |0|
@@ -41,7 +41,7 @@ ms.locfileid: "75566132"
 |DefaultIcon|要显示的图标或图像文件的路径。|\<none>|
 |DisplayName|要在生成的设计器中显示的修饰器的名称。|图标修饰器|
 |名称|修饰器的名称。|IconDecorator|
-|备注|与修饰器关联的非正式注释。|\<none>|
+|说明|与修饰器关联的非正式注释。|\<none>|
 |System.windows.controls.primitives.popup.horizontaloffset|相对于修饰器默认位置的水平偏移量（以英寸为单位）。 仅对形状 (。 ) |0|
 |System.windows.controls.primitives.popup.verticaloffset|相对于修饰器默认位置的垂直偏移量（以英寸为单位）。 仅对形状 (。 ) |0|
 |OffsetFromLine|从行修饰器的偏移量（以英寸为单位），相对于其默认位置。 仅对连接器 (。 ) |0|
@@ -57,13 +57,13 @@ ms.locfileid: "75566132"
 |FontSize|修饰器中所显示文本的字体大小。|8|
 |FontStyle|修饰器中所显示文本的字体样式。|定期|
 |名称|修饰器的名称。|Label|
-|备注|与修饰器关联的非正式注释。|\<none>|
+|说明|与修饰器关联的非正式注释。|\<none>|
 |System.windows.controls.primitives.popup.horizontaloffset|相对于修饰器默认位置的水平偏移量（以英寸为单位）。 仅对形状 (。 ) |0|
 |System.windows.controls.primitives.popup.verticaloffset|相对于修饰器默认位置的垂直偏移量（以英寸为单位）。 仅对形状 (。 ) |0|
 |OffsetFromLine|从行修饰器的偏移量（以英寸为单位），相对于其默认位置。 仅对连接器 (。 ) |0|
 |OffsetFromShape|修饰器相对于其默认位置的偏移量（以英寸为单位）。 仅对连接器 (。 ) |0|
 |位置|修饰器的默认位置。|Microsoft.visualstudio.modeling.diagrams.connectordecoratorposition.targetbottom|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [域特定语言工具术语表](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

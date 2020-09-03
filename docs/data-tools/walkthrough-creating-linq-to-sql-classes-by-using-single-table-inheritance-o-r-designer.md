@@ -1,5 +1,5 @@
 ---
-title: 具有单表继承的 LINQ to SQL 类（O-R 设计器）
+title: 'LINQ to SQL 具有单表继承的类 (O-R 设计器) '
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,14 +12,14 @@ manager: jillfra
 ms.workload:
 - data-storage
 ms.openlocfilehash: afe4063f2d96b2ae46664ec6642ec1a4e98ab892
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85535260"
 ---
-# <a name="walkthrough-create-linq-to-sql-classes-by-using-single-table-inheritance-or-designer"></a>演练：使用单表继承创建 LINQ to SQL 类（O/R 设计器）
-[Visual Studio 中的 LINQ to SQL 工具](../data-tools/linq-to-sql-tools-in-visual-studio2.md)支持单表继承，因为它通常在关系系统中实现。 本演练扩展了[如何：使用 O/R 设计器配置继承](../data-tools/how-to-configure-inheritance-by-using-the-o-r-designer.md)主题中提供的一般步骤，并提供了一些真实数据来演示中的继承使用 [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)] 。
+# <a name="walkthrough-create-linq-to-sql-classes-by-using-single-table-inheritance-or-designer"></a>演练：使用单表继承 (O/R 设计器创建 LINQ to SQL 类) 
+[Visual Studio 中的 LINQ to SQL 工具](../data-tools/linq-to-sql-tools-in-visual-studio2.md)支持单表继承，因为它通常在关系系统中实现。 本演练扩展了 [如何：使用 O/R 设计器配置继承](../data-tools/how-to-configure-inheritance-by-using-the-o-r-designer.md) 主题中提供的一般步骤，并提供了一些真实数据来演示中的继承使用 [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)] 。
 
 在本演练中，你将执行以下任务：
 
@@ -42,7 +42,7 @@ ms.locfileid: "85535260"
 
 ### <a name="to-create-a-base-table-to-demonstrate-inheritance"></a>创建基表以演示继承
 
-1. 在**服务器资源管理器**或**数据库资源管理器**中，右键单击 "**表**" 节点，然后单击 "**添加新表**"。
+1. 在 **服务器资源管理器** 或 **数据库资源管理器**中，右键单击 " **表** " 节点，然后单击 " **添加新表**"。
 
     > [!NOTE]
     > 可以使用 Northwind 数据库或其他任何可添加表的数据库。
@@ -52,7 +52,7 @@ ms.locfileid: "85535260"
     |列名|数据类型|允许 Null 值|
     |-----------------|---------------|-----------------|
     |**ID**|**int**|**False**|
-    |类型|**int**|**True**|
+    |**类型**|**int**|**True**|
     |**名字**|**nvarchar(200)**|**False**|
     |**姓氏**|**nvarchar(200)**|**False**|
     |管理员|**int**|**True**|
@@ -66,11 +66,11 @@ ms.locfileid: "85535260"
 
 ### <a name="to-add-data-to-the-table"></a>向表中添加数据。
 
-1. 在数据视图中打开该表。 （右键单击**服务器资源管理器**或**数据库资源管理器**中的**Person**表，然后单击 "**显示表数据**"。）
+1. 在数据视图中打开该表。  (在**服务器资源管理器**或**数据库资源管理器**中右键单击**Person**表，然后单击 "**显示表数据**"。 ) 
 
-2. 将下面的数据复制到表中。 （您可以通过在 "**结果**" 窗格中选择整行来复制它，然后将其粘贴到表中。）
+2. 将下面的数据复制到表中。  (你可以通过在 " **结果** " 窗格中选择整行来复制它，然后将其粘贴到表中。 ) 
 
-    |**ID**|类型|**名字**|**姓氏**|管理员|
+    |**ID**|**类型**|**名字**|**姓氏**|管理员|
     |-|-|-|-|-|
     |**1**|**1**|**Anne**|**Wallace**|**NULL**|
     |**2**|**1**|**Carlos**|**Grilo**|**NULL**|
@@ -94,9 +94,9 @@ ms.locfileid: "85535260"
 
 2. 在左侧窗格中展开 " **Visual c #** " 或 " **Visual Basic** "，然后选择 " **Windows 桌面**"。
 
-3. 在中间窗格中，选择 " **Windows 窗体应用程序**" 项目类型。
+3. 在中间窗格中，选择 " **Windows 窗体应用程序** " 项目类型。
 
-4. 将项目命名为**命名为 inheritancewalkthrough**，然后选择 **"确定"**。
+4. 将项目命名为 **命名为 inheritancewalkthrough**，然后选择 **"确定"**。
 
      InheritanceWalkthrough 项目即被创建并添加到解决方案资源管理器中********。
 
@@ -115,17 +115,17 @@ ms.locfileid: "85535260"
 
 ### <a name="to-create-the-inheritance"></a>创建继承
 
-1. 在**服务器资源管理器**或**数据库资源管理器**中，导航到之前创建的**Person**表。
+1. 在 **服务器资源管理器** 或 **数据库资源管理器**中，导航到之前创建的 **Person** 表。
 
-2. 将**Person**表拖到**O/R 设计器**设计图面上。
+2. 将 **Person** 表拖到 **O/R 设计器** 设计图面上。
 
-3. 将第二个**Person**表拖到**O/R 设计器**上，并将其名称更改为**Employee**。
+3. 将第二个 **Person** 表拖到 **O/R 设计器** 上，并将其名称更改为 **Employee**。
 
 4. 从“Person”对象删除“Manager”属性********。
 
 5. 从“Employee”对象删除“Type”、“ID”、“FirstName”和“LastName”属性********************。 （即删除“Manager”以外的所有属性。****）
 
-6. 从“工具箱”的“对象关系设计器”选项卡上，在“Person”和“Employee”对象之间创建“继承”********************。 为此，请单击“工具箱”中的“继承”项，然后松开鼠标按钮********。 接下来，单击 " **Employee** " 对象，然后单击**O/R 设计器**中的**Person**对象。 继承连线上的箭头将指向**Person**对象。
+6. 从“工具箱”的“对象关系设计器”选项卡上，在“Person”和“Employee”对象之间创建“继承”********************。 为此，请单击“工具箱”中的“继承”项，然后松开鼠标按钮********。 接下来，单击 " **Employee** " 对象，然后单击**O/R 设计器**中的**Person**对象。 继承连线上的箭头将指向 **Person** 对象。
 
 7. 单击设计图面上的“继承”连线****。
 
@@ -182,7 +182,7 @@ ms.locfileid: "85535260"
 
 2. 检验是否仅显示了“Type”列值为 2 的记录****。
 
-3. 关闭窗体。 （在 "**调试**" 菜单上单击 "**停止调试**"。）
+3. 关闭窗体。  (在 " **调试** " 菜单上，单击 " **停止调试**"。 ) 
 
 ## <a name="see-also"></a>另请参阅
 
