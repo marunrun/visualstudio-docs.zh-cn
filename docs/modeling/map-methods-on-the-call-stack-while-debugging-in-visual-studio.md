@@ -29,10 +29,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: e1638b16eea9bfa20962359f0b63a7415915d0fc
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85532699"
 ---
 # <a name="map-methods-on-the-call-stack-while-debugging-in-visual-studio"></a>在 Visual Studio 中调试时映射调用堆栈上的方法
@@ -59,7 +59,7 @@ ms.locfileid: "85532699"
 
   请参阅：
 
-- [视频：利用代码图调试器集成进行可视化调试（第9频道）](https://channel9.msdn.com/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012Debug-visually-with-Code-Map-debugger-integration)
+- [视频：利用代码图调试器集成进行可视化调试 (第9频道) ](https://channel9.msdn.com/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012Debug-visually-with-Code-Map-debugger-integration)
 
 - [映射调用堆栈](#MapStack)
 
@@ -71,15 +71,15 @@ ms.locfileid: "85532699"
 
 - [使用地图查找 bug](#FindBugs)
 
-- [问 &](#QA)
+- [问答](#QA)
 
-  有关使用代码图时可以使用的命令和操作的详细信息，请参阅[浏览和重新排列代码图](../modeling/browse-and-rearrange-code-maps.md)。
+  有关使用代码图时可以使用的命令和操作的详细信息，请参阅 [浏览和重新排列代码图](../modeling/browse-and-rearrange-code-maps.md)。
 
 ## <a name="map-the-call-stack"></a><a name="MapStack"></a>映射调用堆栈
 
-1. 开始调试。 （键盘： **F5**）
+1. 开始调试。  (键盘： **F5**) 
 
-2. 在应用进入中断模式或单步执行函数后，选择 "**代码图**"。 （键盘： **Ctrl**  + **Shift**  +  **`** ）
+2. 在应用进入中断模式或单步执行函数后，选择 " **代码图**"。  (键盘： **Ctrl**  +  **Shift**  +  **`**) 
 
      ![选择代码图以开始映射调用堆栈](../debugger/media/debuggermap_choosecodemap.png)
 
@@ -87,11 +87,11 @@ ms.locfileid: "85532699"
 
      ![查看代码图上的调用堆栈](../debugger/media/debuggermap_seeundocallstack.png)
 
-     在你继续调试时，该代码图将自动更新。 请参见[用下一个调用堆栈更新映射](#UpdateMap)。
+     在你继续调试时，该代码图将自动更新。 请参见 [用下一个调用堆栈更新映射](#UpdateMap)。
 
 ## <a name="make-notes-about-the-code"></a><a name="MakeNotes"></a>对代码进行标注
 
- 添加注释以跟踪代码发生的情况。 若要在注释中添加新行，请按**Shift + Return**。
+ 添加注释以跟踪代码发生的情况。 若要在注释中添加新行，请按 **Shift + Return**。
 
  ![向代码图上的调用堆栈添加注释](../debugger/media/debuggermap_addcomment.png)
 
@@ -105,7 +105,7 @@ ms.locfileid: "85532699"
 
  现在已经有了一个映射，接下来要做什么？ 如果使用的是 c # 或 Visual Basic，请添加项（如字段、属性和其他方法），以跟踪代码中发生的情况。
 
- 双击某个方法以查看其代码定义，或者使用该方法的快捷菜单。 （键盘：在地图上选择方法，然后按**F12**）
+ 双击某个方法以查看其代码定义，或者使用该方法的快捷菜单。  (键盘：在地图上选择方法，然后按 **F12**) 
 
  ![转到代码图上某方法的代码定义](../debugger/media/debuggermap_gotocodedefinition.png)
 
@@ -114,7 +114,7 @@ ms.locfileid: "85532699"
  ![显示调用堆栈代码图上某方法中的字段](../debugger/media/debuggermap_showfields.png)
 
 > [!NOTE]
-> 默认情况下，向图添加项还会添加父组节点（如类、命名空间和程序集）。 虽然这很有用，但你可以通过在 "地图" 工具栏上使用 "**包括父级**" 按钮关闭此功能，或者在添加项时按**CTRL**来使映射简单。
+> 默认情况下，向图添加项还会添加父组节点（如类、命名空间和程序集）。 虽然这很有用，但你可以通过在 "地图" 工具栏上使用 " **包括父级** " 按钮关闭此功能，或者在添加项时按 **CTRL** 来使映射简单。
 
  ![调用堆栈代码图上与某方法相关的字段](../debugger/media/debuggermap_showedfields.png)
 
@@ -144,11 +144,11 @@ ms.locfileid: "85532699"
 
 - **不是所有的调用都出现在地图上。为什么?**
 
-   默认情况下，只有你自己的代码会显示在图中。 若要查看外部代码，请在 "**调用堆栈**" 窗口中将其打开：
+   默认情况下，只有你自己的代码会显示在图中。 若要查看外部代码，请在 " **调用堆栈** " 窗口中将其打开：
 
    ![使用“调用堆栈”窗口显示外部代码](../debugger/media/debuggermap_callstackmenu.png)
 
-   或在 Visual Studio 调试选项中关闭 "**启用仅我的代码**：
+   或在 Visual Studio 调试选项中关闭 " **启用仅我的代码** ：
 
    ![使用“选项”对话框显示外部代码](../debugger/media/debuggermap_debugoptions.png)
 
@@ -162,13 +162,13 @@ ms.locfileid: "85532699"
 
 - **如何实现控制地图的布局？**
 
-   打开地图工具栏上的 "**布局**" 菜单：
+   打开地图工具栏上的 " **布局** " 菜单：
 
   - 更改默认布局。
 
-  - 若要停止自动重新排列映射，请关闭 "**调试时自动布局**"。
+  - 若要停止自动重新排列映射，请关闭 " **调试时自动布局**"。
 
-  - 若要在添加项时尽可能少地重新排列映射，请关闭 "**增量布局**"。
+  - 若要在添加项时尽可能少地重新排列映射，请关闭 " **增量布局**"。
 
 - **我能否与他人共享此图？**
 
@@ -184,7 +184,7 @@ ms.locfileid: "85532699"
 
 - **项图标和箭头代表什么？**
 
-   若要获取有关项的详细信息，请将鼠标指针移到该项上，并查看项的工具提示。 还可以查看**图例**来了解每个图标的含义。
+   若要获取有关项的详细信息，请将鼠标指针移到该项上，并查看项的工具提示。 还可以查看 **图例** 来了解每个图标的含义。
 
    ![调用堆栈代码图上各图标的含义](../debugger/media/debuggermap_showlegend.png)
 
