@@ -1,5 +1,5 @@
 ---
-title: 正在加载 VS 包 |微软文档
+title: 正在加载 Vspackage |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,23 +12,23 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: b1c221bf06ef3b7e37e2afc1856f3e54fe5ad95e
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80702964"
 ---
-# <a name="load-vspackages"></a>加载 VS 包
-仅当需要 VS 包的功能时，才会加载到 Visual Studio 中。 例如，当 Visual Studio 使用项目工厂或 VSPackage 实现的服务时，将加载 VS 包。 此功能称为延迟加载，尽可能用于提高性能。
+# <a name="load-vspackages"></a>Load Vspackage
+仅当需要功能时，Vspackage 才会加载到 Visual Studio 中。 例如，当 Visual Studio 使用项目工厂或 VSPackage 实现的服务时，将加载 VSPackage。 此功能称为延迟加载，尽可能使用它来提高性能。
 
 > [!NOTE]
-> Visual Studio 可以确定某些 VSPackage 信息，例如 VSPackage 提供的命令，而无需加载 VSPackage。
+> Visual Studio 可以确定某些 VSPackage 信息，如 VSPackage 提供的命令，而无需加载 VSPackage。
 
- VS包可以设置为在特定用户界面 （UI） 上下文中自动加载，例如，当解决方案打开时。 属性<xref:Microsoft.VisualStudio.Shell.ProvideAutoLoadAttribute>设置此上下文。
+ Vspackage 可以设置为特定用户界面中的 autoload (UI) 上下文（例如，当解决方案打开时）。 <xref:Microsoft.VisualStudio.Shell.ProvideAutoLoadAttribute>特性设置此上下文。
 
-### <a name="autoload-a-vspackage-in-a-specific-context"></a>在特定上下文中自动加载 VS 包
+### <a name="autoload-a-vspackage-in-a-specific-context"></a>在特定上下文中 Autoload VSPackage
 
-- 将`ProvideAutoLoad`属性添加到 VSPackage 属性：
+- 将 `ProvideAutoLoad` 属性添加到 VSPackage 属性：
 
     ```csharp
     [DefaultRegistryRoot(@"Software\Microsoft\VisualStudio\14.0")]
@@ -39,22 +39,22 @@ ms.locfileid: "80702964"
     {. . .}
     ```
 
-     有关 UI 上下文及其<xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids80>GUID 值的列表，请参阅 的枚举字段。
+     <xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids80>有关 UI 上下文及其 GUID 值的列表，请参阅的枚举字段。
 
-- 在<xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A>方法中设置断点。
+- 在方法中设置断点 <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> 。
 
-- 生成 VS 包并开始调试。
+- 生成 VSPackage 并启动调试。
 
-- 加载解决方案或创建解决方案。
+- 加载解决方案或创建一个解决方案。
 
-     VSPackage 在断点加载和停止。
+     VSPackage 加载并停止在断点处。
 
-## <a name="force-a-vspackage-to-load"></a>强制 VS 包加载
- 在某些情况下，VSPackage 可能必须强制加载另一个 VSPackage。 例如，轻量级 VS 包可能会在无法作为 CMDUIContext 提供的上下文中加载较大的 VS 包。
+## <a name="force-a-vspackage-to-load"></a>强制加载 VSPackage
+ 在某些情况下，VSPackage 可能必须强制加载另一个 VSPackage。 例如，轻量 VSPackage 可能会将较大的 VSPackage 加载到不可作为 CMDUIContext 的上下文中。
 
- 可以使用 方法<xref:Microsoft.VisualStudio.Shell.Interop.IVsShell.LoadPackage%2A>强制加载 VSPackage。
+ 您可以使用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsShell.LoadPackage%2A> 方法强制加载 VSPackage。
 
-- 将此代码插入<xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A>VSPackage 的方法，该方法强制另一个 VSPackage 加载：
+- 将此代码插入 <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> 强制另一个 VSPackage 加载的 VSPackage 的方法：
 
     ```csharp
     IVsShell shell = GetService(typeof(SVsShell)) as IVsShell;
@@ -67,9 +67,9 @@ ms.locfileid: "80702964"
 
     ```
 
-     初始化 VSPackage 时，它将强制`PackageToBeLoaded`加载。
+     初始化 VSPackage 时，它将强制 `PackageToBeLoaded` 加载。
 
-     力加载不应用于 VSPackage 通信。 而是[使用和提供服务](../extensibility/using-and-providing-services.md)。
+     不应将强制加载用于 VSPackage 通信。 请改用 [和提供服务](../extensibility/using-and-providing-services.md) 。
 
 ## <a name="see-also"></a>请参阅
-- [VSPackage](../extensibility/internals/vspackages.md)
+- [VSPackages](../extensibility/internals/vspackages.md)

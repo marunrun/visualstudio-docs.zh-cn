@@ -10,10 +10,10 @@ manager: unniravindranathan
 ms.prod: visual-studio-mac
 ms.topic: how-to
 ms.openlocfilehash: ab461327a0af5d072689e4a5cb357525b42018ba
-ms.sourcegitcommit: 5335a9864d5747bc917ed28d4ebeade3076b10e7
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85950481"
 ---
 # <a name="publish-to-a-folder-using-visual-studio-for-mac"></a>使用 Visual Studio for Mac 发布到文件夹
@@ -29,19 +29,19 @@ ms.locfileid: "85950481"
 
 使用 Visual Studio for Mac 通过“发布”工具可以将 .NET Core 项目发布到文件夹。 将文件发布到文件夹后，可以将它们传输到其他环境。 若要发布到文件夹，请执行以下步骤。
 
- 1. 在 Solution Pad 中，右键单击项目，选择“发布”  。
+ 1. 在 Solution Pad 中，右键单击项目，选择“发布”。
 
     ![“发布”上下文菜单](media/publish-context-menu.png)
 
  2. 如果之前已发布此项目，则在菜单中将看到发布配置文件。 选择该发布配置文件以启动发布过程。
 
- 3. 若要首次将此项目发布到文件夹，请选择“发布到文件夹” 
+ 3. 若要首次将此项目发布到文件夹，请选择“发布到文件夹”
 
     ![“发布到文件夹”上下文菜单](media/publish-to-folder-context-menu.png)
 
- 4. “发布到文件夹”对话框出现  。 在此对话框可以自定义将在其中发布项目的文件夹。 可以使用“浏览”按钮执行此操作，也可以粘贴某个路径  。
+ 4. “发布到文件夹”对话框出现。 在此对话框可以自定义将在其中发布项目的文件夹。 可以使用“浏览”按钮执行此操作，也可以粘贴某个路径。
 
- 5. 单击“发布”后，系统会发生一些事件  。 首先是创建发布配置文件。 发布配置文件是在发布过程中导入项目的 MSBuild 文件。 它包含在发布过程中使用的属性。 这些文件存储在 `Properties/PublishProfiles` 中并具有扩展名 `.pubxml`。 接下来是启动发布过程。 你可以通过查看 Visual Studio for Mac 中的状态栏监视进度。
+ 5. 单击“发布”后，系统会发生一些事件。 首先是创建发布配置文件。 发布配置文件是在发布过程中导入项目的 MSBuild 文件。 它包含在发布过程中使用的属性。 这些文件存储在 `Properties/PublishProfiles` 中并具有扩展名 `.pubxml`。 接下来是启动发布过程。 你可以通过查看 Visual Studio for Mac 中的状态栏监视进度。
 
     ![显示发布状态的 IDE 状态栏](media/publish-to-folder-status-bar.png)
 

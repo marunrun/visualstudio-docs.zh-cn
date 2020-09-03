@@ -1,5 +1,5 @@
 ---
-title: IDebugThread2：：枚举信息 |微软文档
+title: IDebugThread2：： EnumFrameInfo |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 8bd3c6d46a577930cc7a2b87c85cd82a55f8cf66
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80718863"
 ---
 # <a name="idebugthread2enumframeinfo"></a>IDebugThread2::EnumFrameInfo
@@ -45,21 +45,21 @@ int EnumFrameInfo ( 
 
 ## <a name="parameters"></a>参数
 `dwFieldSpec`\
-[在][FRAMEINFO_FLAGS](../../../extensibility/debugger/reference/frameinfo-flags.md)枚举中的标志的组合，指定要填充[FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md)结构的字段。指定标志`FIF_FUNCNAME_FORMAT`以将函数名称格式化为单个字符串。
+中 [FRAMEINFO_FLAGS](../../../extensibility/debugger/reference/frameinfo-flags.md) 枚举中的标志的组合，用于指定要填写 [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md) 结构的哪些字段。指定 `FIF_FUNCNAME_FORMAT` 用于将函数名称设置为单个字符串的标志。
 
 `nRadix`\
-[在]用于格式化枚举器中的数字信息的 Radix。
+中格式化枚举器中的数值信息时使用的基数。
 
 `ppEnum`\
-[出]返回[IEnumDebugFrameInfo2](../../../extensibility/debugger/reference/ienumdebugframeinfo2.md)对象，该对象包含描述堆栈帧的[FRAME 信息](../../../extensibility/debugger/reference/frameinfo.md)结构列表。
+弄返回一个 [IEnumDebugFrameInfo2](../../../extensibility/debugger/reference/ienumdebugframeinfo2.md) 对象，该对象包含描述堆栈帧的 [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md) 结构的列表。
 
 ## <a name="return-value"></a>返回值
- 如果成功，返回`S_OK`;否则，返回错误代码。
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。
 
 ## <a name="remarks"></a>备注
- 线程的帧按顺序枚举，当前帧首先枚举，最旧帧最后枚举。
+ 线程的帧按顺序枚举，当前帧首先枚举，最后枚举最早的帧。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)
 - [FRAMEINFO_FLAGS](../../../extensibility/debugger/reference/frameinfo-flags.md)
 - [IEnumDebugFrameInfo2](../../../extensibility/debugger/reference/ienumdebugframeinfo2.md)

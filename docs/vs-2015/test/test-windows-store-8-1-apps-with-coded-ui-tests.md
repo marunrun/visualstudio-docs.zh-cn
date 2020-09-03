@@ -9,10 +9,10 @@ caps.latest.revision: 26
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: ce4c6ceec9489abcd3573c126aefe98a268187c3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72660433"
 ---
 # <a name="test-windows-uwp-and-81-store-apps-with-coded-ui-tests"></a>使用编码的 UI 测试来测试 Windows UWP 和应用商店 8.1 应用
@@ -24,15 +24,15 @@ ms.locfileid: "72660433"
 
 1. 如果你想要针对基于 XAML 的 Windows 应用商店应用运行编码的 UI 测试，你必须 [设置可标识每个控件的唯一的自动化属性](../test/set-a-unique-automation-property-for-windows-store-controls-for-testing.md)。
 
-     在 **“工具”** 菜单上，指向 **“选项”** ，然后依次选择 **“文本编辑器”** 、 **“XAML”** 和 **“其他”** 。
+     在 **“工具”** 菜单上，指向 **“选项”** ，然后依次选择 **“文本编辑器”**、 **“XAML”** 和 **“其他”**。
 
      选中复选框以在创建时自动命名交互元素。
 
-     ![XAML 杂项选项](../test/media/cuit-windowsstoreapp-b.png "CUIT_WindowsStoreApp_B")
+     ![XAML“杂项”选项](../test/media/cuit-windowsstoreapp-b.png "CUIT_WindowsStoreApp_B")
 
 2. 使用 Visual C# 或 Visual Basic 模板，为基于 XAML 的空白 Windows 应用商店应用创建新项目。
 
-     ![创建 Windows 应用商店空白应用&#40;XAML&#41;](../test/media/cuit-windowsstoreapp-newproject-blankstoreapp.png "CUIT_WindowsStoreApp_NewProject_BlankStoreApp")
+     ![&#40;XAML 创建 Windows 应用商店空白应用&#41;](../test/media/cuit-windowsstoreapp-newproject-blankstoreapp.png "CUIT_WindowsStoreApp_NewProject_BlankStoreApp")
 
 3. 在解决方案资源管理器中，打开 MainPage.xaml。 从工具箱中，将按钮控件和文本框控件拖动到设计图面。
 
@@ -66,13 +66,13 @@ ms.locfileid: "72660433"
 
 1. 为 Windows 应用商店应用创建新编码的 UI 测试项目。
 
-    ![新编码的 UI 测试&#40;项目 Windows 应用商店应用&#41;](../test/media/cuit-windowsstore-newproject.png "CUIT_WindowsStore_NewProject")
+    ![Windows 应用商店应用 &#40;的新编码的 UI 测试项目&#41;](../test/media/cuit-windowsstore-newproject.png "CUIT_WindowsStore_NewProject")
 
 2. 选择使用十字线工具编辑 UI 映射。
 
-    ![选择编辑 UI 映射或添加断言](../test/media/cuit-windowsstoreapp-createproject-gencodedialog.png "CUIT_WindowsStoreApp_CreateProject_GenCodeDialog")
+    ![选择“编辑 UI 映射或添加断言”](../test/media/cuit-windowsstoreapp-createproject-gencodedialog.png "CUIT_WindowsStoreApp_CreateProject_GenCodeDialog")
 
-3. 在编码的 UI 测试生成器中使用十字线工具以选择应用磁贴、右键单击 **“AutomationId”** ，然后选择 **“将值复制到剪贴板”** 。 稍后将剪贴板中的值用于编写操作以启动可供测试的应用。
+3. 在编码的 UI 测试生成器中使用十字线工具以选择应用磁贴、右键单击 **“AutomationId”** ，然后选择 **“将值复制到剪贴板”**。 稍后将剪贴板中的值用于编写操作以启动可供测试的应用。
 
     ![将 AutomationId 复制到剪贴板](../test/media/cuit-windows-store-tileautomationid.png "CUIT_Windows_Store_TileAutomationID")
 
@@ -86,7 +86,7 @@ ms.locfileid: "72660433"
 
 6. 选择按钮以在文本框中设置值。
 
-    ![单击按钮控件设置 textbox 值](../test/media/cuit-windowsstoreapp-clickbutton.png "CUIT_WindowsStoreApp_ClickButton")
+    ![单击 button 控件设置 textbox 值](../test/media/cuit-windowsstoreapp-clickbutton.png "CUIT_WindowsStoreApp_ClickButton")
 
 7. 使用十字线工具选择文本框控件，然后选择 **“文本”** 属性。
 
@@ -94,11 +94,11 @@ ms.locfileid: "72660433"
 
 8. 添加断言。 将在测试中使用它以验证该值是否正确。
 
-    ![选择带有与十字&#45;线并添加断言](../test/media/cuit-windowsstoreapp-textbox-addassertion.png "CUIT_WindowsStoreApp_Textbox_AddAssertion")
+    ![选择带有和交叉&#45;头发并添加断言](../test/media/cuit-windowsstoreapp-textbox-addassertion.png "CUIT_WindowsStoreApp_Textbox_AddAssertion")
 
 9. 为断言添加并生成代码。
 
-     ![为 textbox 断言生成代码](../test/media/cuit-windowsstoreapp-textbox-generate-assertion.png "CUIT_WindowsStoreApp_Textbox_Generate_Assertion")
+     ![为文本框断言生成代码](../test/media/cuit-windowsstoreapp-textbox-generate-assertion.png "CUIT_WindowsStoreApp_Textbox_Generate_Assertion")
 
 10. **Visual C#**
 
@@ -106,7 +106,7 @@ ms.locfileid: "72660433"
 
      **Visual Basic**
 
-     在“解决方案资源管理器”中，打开 CodedUITest1.vb 文件，然后在 CodedUITestMethod1() 测试方法代码中，右键单击对已自动添加了 `Me.UIMap.AssertMethod1()` 断言方法的调用，然后选择 **“转到定义”** 。 这将在代码编辑器中打开 UIMap.Designer.vb 文件，因此你可以查看为断言方法和控件添加的代码。
+     在“解决方案资源管理器”中，打开 CodedUITest1.vb 文件，然后在 CodedUITestMethod1() 测试方法代码中，右键单击对已自动添加了 `Me.UIMap.AssertMethod1()` 断言方法的调用，然后选择 **“转到定义”**。 这将在代码编辑器中打开 UIMap.Designer.vb 文件，因此你可以查看为断言方法和控件添加的代码。
 
     > [!WARNING]
     > 请不要直接修改 UIMap.designer.cs 或 UIMap.Designer.vb 文件。 如果执行此操作，则在每次生成测试时都将覆盖对该文件所做的更改。
@@ -290,11 +290,11 @@ ms.locfileid: "72660433"
 
      完成测试后，测试资源管理器将显示通过了该测试。
 
-     ![在测试资源管理器中传递测试显示](../test/media/cuit-windowsstorapp-passedtest.png "CUIT_WindowsStorApp_PassedTest")
+     ![已通过的测试显示在测试资源管理器中](../test/media/cuit-windowsstorapp-passedtest.png "CUIT_WindowsStorApp_PassedTest")
 
 ## <a name="q--a"></a>问题解答
 
-- **问：为什么在“生成编码的 UI 测试的代码”对话框中看不到用于记录我的编码的 UI 测试的选项？**
+- **问：为什么在 "生成编码的 UI 测试的代码" 对话框中看不到用于记录我的编码的 UI 测试的选项？**
 
      **答**：Windows 应用商店应用不支持记录选项。
 
@@ -311,15 +311,15 @@ ms.locfileid: "72660433"
 
    **答**：根据要在其中测试 UWP 应用的平台，通过以下方式之一创建编码的 UI 测试项目：
 
-  - 在本地计算机上运行的 UWP 应用将作为应用商店应用运行。 若要对此进行测试，必须使用 **“编码的 UI 测试项目(Windows)”** 模板。 若要在创建新项目时查找此模板，请转到“Windows”、“通用” 节点。 或转到 **“Windows”** 、 **“Windows 8”** 、 **“Windows”** 节点。
+  - 在本地计算机上运行的 UWP 应用将作为应用商店应用运行。 若要对此进行测试，必须使用 **“编码的 UI 测试项目(Windows)”** 模板。 若要在创建新项目时查找此模板，请转到“Windows” ****、“通用” **** 节点。 或转到 **“Windows”**、 **“Windows 8”**、 **“Windows”** 节点。
 
-  - 在移动设备或仿真器上运行的 UWP 应用将作为 Phone 应用进行运行。 若要对此进行测试，必须使用 **“编码的 UI 测试项目(Windows Phone)”** 模板。 若要在创建新项目时查找此模板，请转到“Windows”、“通用” 节点。 或转到 **“Windows”** 、 **“Windows 8”** 、 **“Windows Phone”** 节点。
+  - 在移动设备或仿真器上运行的 UWP 应用将作为 Phone 应用进行运行。 若要对此进行测试，必须使用 **“编码的 UI 测试项目(Windows Phone)”** 模板。 若要在创建新项目时查找此模板，请转到“Windows” ****、“通用” **** 节点。 或转到 **“Windows”**、 **“Windows 8”**、 **“Windows Phone”** 节点。
 
     创建项目后，将测试创作为与之前保持相同。
 
-- **问：为什么我无法修改 UIMap.Designer 文件中的代码？**
+- **问：为什么无法修改 UIMap 文件中的代码？**
 
-   **答**：每次使用“UIMap - 编码的 UI 测试生成器”生成代码时，都将覆盖在 UIMapDesigner.cs 文件中所做的任何代码更改。 如果必须修改录制的方法，则必须将其复制到 UIMap.cs 文件并对其重命名。 UIMap.cs 文件可用于重写 UIMapDesigner.cs 文件中的方法和属性。 必须在 Coded UITest.cs 文件中删除对原始方法的引用，并将其替换为重命名的方法名称。
+   **答**：每次使用 "UIMap-编码的 UI 测试生成器" 生成代码时，都将覆盖在 UIMapDesigner.cs 文件中所做的任何代码更改。 如果必须修改录制的方法，则必须将其复制到 UIMap.cs 文件并对其重命名。  UIMap.cs 文件可用于重写 UIMapDesigner.cs 文件中的方法和属性。 必须在 Coded UITest.cs 文件中删除对原始方法的引用，并将其替换为重命名的方法名称。
 
-## <a name="see-also"></a>请参阅
- [使用 UI 自动化来测试代码](../test/use-ui-automation-to-test-your-code.md)为[Windows 应用商店控件设置唯一的自动化属性以进行测试](../test/set-a-unique-automation-property-for-windows-store-controls-for-testing.md)
+## <a name="see-also"></a>另请参阅
+ [使用 UI 自动化来测试代码](../test/use-ui-automation-to-test-your-code.md)为 [Windows 应用商店控件设置唯一的自动化属性以进行测试](../test/set-a-unique-automation-property-for-windows-store-controls-for-testing.md)

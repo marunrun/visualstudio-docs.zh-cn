@@ -1,5 +1,5 @@
 ---
-title: IDebugSymbolProviderDirect::GetMetaDataImport |Microsoft Docs
+title: IDebugSymbolProviderDirect：： GetMetaDataImport |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,10 +12,10 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 738169ece185bfc4b861b8f8220199dbf3c762b1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68155118"
 ---
 # <a name="idebugsymbolproviderdirectgetmetadataimport"></a>IDebugSymbolProviderDirect::GetMetaDataImport
@@ -41,18 +41,18 @@ int GetMetaDataImport (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>参数  
  `guid`  
- [in]该模块的唯一标识符。  
+ 中模块的唯一标识符。  
   
  `appID`  
- [in]应用程序域标识符。  
+ 中应用程序域的标识符。  
   
  `ppImport`  
- [out]返回一个对象，它包含的元数据导入信息。  
+ 弄返回一个包含元数据导入信息的对象。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugSymbolProviderDirect](../../../extensibility/debugger/reference/idebugsymbolproviderdirect.md)
