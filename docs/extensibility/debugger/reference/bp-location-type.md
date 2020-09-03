@@ -1,5 +1,5 @@
 ---
-title: BP_LOCATION_TYPE |微软文档
+title: BP_LOCATION_TYPE |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 50e6bdc0dba8f6bcbdd55c45132dff02735786d6
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80737950"
 ---
 # <a name="bp_location_type"></a>BP_LOCATION_TYPE
@@ -73,31 +73,31 @@ public enum enum_BP_LOCATION_TYPE {
 指定无断点位置。
 
 `BPLT_FILE_LINE`\
-指定断点的位置类型作为文件行。
+以文件行形式指定断点的位置类型。
 
 `BPLT_FUNC_OFFSET`\
-指定断点的位置类型作为函数偏移。
+指定断点的位置类型作为函数偏移量。
 
 `BPLT_CONTEXT`\
-指定断点作为上下文的位置类型。
+指定断点的位置类型作为上下文。
 
 `BPLT_STRING`\
-指定断点作为字符串的位置类型。
+以字符串的形式指定断点的位置类型。
 
 `BPLT_ADDRESS`\
-指定断点作为地址的位置类型。
+指定断点的位置类型作为地址。
 
 `BPLT_RESOLUTION`\
-将断点的位置类型指定为分辨率。
+指定断点的位置类型作为解析。
 
 `BPLT_CODE_FILE_LINE`\
-指定断点的位置类型作为源代码行。
+以源代码行的形式指定断点的位置类型。
 
 `BPLT_CODE_FUNC_OFFSET`\
 指定断点的位置类型作为代码函数偏移量。
 
 `BPLT_CODE_CONTEXT`\
-指定断点作为代码上下文的位置类型。
+将断点的位置类型指定为代码上下文。
 
 `BPLT_CODE_STRING`\
 指定断点的位置类型作为代码字符串。
@@ -106,7 +106,7 @@ public enum enum_BP_LOCATION_TYPE {
 指定断点的位置类型作为代码地址。
 
 `BPLT_DATA_STRING`\
-指定断点作为数据字符串的位置类型。
+指定断点的位置类型作为数据字符串。
 
 `BPLT_TYPE_MASK`\
 指定位掩码，以便可以从值中提取断点类型。
@@ -115,18 +115,18 @@ public enum enum_BP_LOCATION_TYPE {
 指定位掩码，以便可以从值中提取断点位置类型。
 
 ## <a name="remarks"></a>备注
-作为参数传递给[GetLocationType](../../../extensibility/debugger/reference/idebugbreakpointrequest2-getlocationtype.md)方法。
+作为参数传递给 [GetLocationType](../../../extensibility/debugger/reference/idebugbreakpointrequest2-getlocationtype.md) 方法。
 
-断点位置类型由断点类型和位置类型组成。 这意味着断点位置类型绝不只是断点类型（例如`BPT_CODE`）或位置类型（例如）。 `BPLT_FILE_LINE` 当前支持的所有断点位置类型的预定义常量都包含在此枚举 （`BPLT_CODE_FILE_LINE`通过`BPLT_DATA_STRING`） 中。
+断点位置类型由断点类型和位置类型组成。 这意味着，断点位置类型永远不会只是断点类型 (例如 `BPT_CODE`) 或位置类型 (例如 `BPLT_FILE_LINE`) 。 当前支持的所有断点位置类型的预定义常量都包含在此枚举 (`BPLT_CODE_FILE_LINE` 通过 `BPLT_DATA_STRING`) 。
 
-`BPT_CODE`是`BPT_DATA`[BP_TYPE](../../../extensibility/debugger/reference/bp-type.md)枚举的成员。
+`BPT_CODE` 和 `BPT_DATA` 是 [BP_TYPE](../../../extensibility/debugger/reference/bp-type.md) 枚举的成员。
 
 ## <a name="requirements"></a>要求
-标题： msdbg.h
+标头： msdbg
 
-命名空间：微软.VisualStudio.调试器.互通
+命名空间： VisualStudio
 
-程序集：微软.VisualStudio.调试器.Interop.dll
+程序集： Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [枚举](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

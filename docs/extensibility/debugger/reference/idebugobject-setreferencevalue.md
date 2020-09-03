@@ -1,5 +1,5 @@
 ---
-title: IDebugObject：设置参考值 |微软文档
+title: IDebugObject：： SetReferenceValue |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: cc0db8ee7f0581a4c336111d3876c24f0e5c12d1
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80726374"
 ---
 # <a name="idebugobjectsetreferencevalue"></a>IDebugObject::SetReferenceValue
@@ -41,14 +41,14 @@ int SetReferenceValue(
 
 ## <a name="parameters"></a>参数
 `pObject`\
-[在]表示新引用值的[IDebugObject 对象](../../../extensibility/debugger/reference/idebugobject.md)。
+中表示新引用值的 [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) 对象。
 
 ## <a name="return-value"></a>返回值
- 如果成功，返回S_OK;否则，返回错误代码。
+ 如果成功，将返回 S_OK;否则，将返回错误代码。
 
 ## <a name="remarks"></a>备注
- 此方法使此[IDebugObject 对象](../../../extensibility/debugger/reference/idebugobject.md)对`pObject`参数中给出的对象的值的引用，并丢弃任何以前的引用。 请注意，此`IDebugObject`对象必须已经是引用类型。
+ 此方法使此 [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) 对象引用参数中给定的对象的值 `pObject` ，同时丢弃任何以前的引用。 请注意，此 `IDebugObject` 对象必须已经是引用类型。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)
 - [GetValue](../../../extensibility/debugger/reference/idebugobject-getvalue.md)
