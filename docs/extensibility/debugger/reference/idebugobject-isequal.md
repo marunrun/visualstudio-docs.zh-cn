@@ -1,5 +1,5 @@
 ---
-title: IDebugObject：：是平等的 |微软文档
+title: IDebugObject：： IsEqual |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 13018e31fb5f8bed89a0a290d687360a605a855d
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80726499"
 ---
 # <a name="idebugobjectisequal"></a>IDebugObject::IsEqual
@@ -43,16 +43,16 @@ int IsEqual(
 
 ## <a name="parameters"></a>参数
 `pObject`\
-[在]表示要与之比较的对象的[IDebugObject 对象](../../../extensibility/debugger/reference/idebugobject.md)。
+中表示要比较的对象的 [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) 对象。
 
 `pfIsEqual`\
-[出]如果对象的值相等，`TRUE`则返回非零 （ ），否则，返回零`FALSE`（）。
+弄如果对象的值相等，则返回非零 (`TRUE`) ; 否则返回零 (`FALSE`) 。
 
 ## <a name="return-value"></a>返回值
- 如果成功，返回S_OK;否则，返回错误代码。
+ 如果成功，将返回 S_OK;否则，将返回错误代码。
 
 ## <a name="remarks"></a>备注
- 通常，此方法可以比较`pObject`参数和此[IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)对象表示的值的地址;如果地址相等，则对象可以视为相等。
+ 通常，此方法可以比较 `pObject` 参数和此 [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) 对象所表示的值的地址; 如果地址相等，则可以将这些对象视为相等。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)

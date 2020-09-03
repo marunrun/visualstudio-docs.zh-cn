@@ -1,5 +1,5 @@
 ---
-title: IDebug 待定突破点2：：虚拟化 |微软文档
+title: IDebugPendingBreakpoint2：：虚拟化 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,14 +17,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 7ad5aac997cf694a7cf8fa887ae63fbef54ca07f
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80725665"
 ---
 # <a name="idebugpendingbreakpoint2virtualize"></a>IDebugPendingBreakpoint2::Virtualize
-切换此挂起断点的虚拟化状态。 虚拟化挂起的断点时，调试引擎将尝试在每次新代码加载到程序中时对其进行绑定。
+切换此挂起断点的虚拟化状态。 当挂起的断点虚拟化时，调试引擎将尝试在每次将新代码加载到程序时绑定该断点。
 
 ## <a name="syntax"></a>语法
 
@@ -42,16 +42,16 @@ int Virtualize(
 
 ## <a name="parameters"></a>参数
 `fVirtualize`\
-[在]设置为非零 （`TRUE`） 以虚拟化挂起的断点，或设置为零`FALSE`（ ） 以关闭虚拟化。
+中设置为非零 `TRUE` 值 () 以虚拟化挂起断点，或设置为零， (`FALSE`) 关闭虚拟化。
 
 ## <a name="return-value"></a>返回值
-如果成功，返回`S_OK`;否则，返回错误代码。 如果`E_BP_DELETED`断点已被删除，则返回。
+如果成功， `S_OK` 则返回; 否则返回错误代码。 `E_BP_DELETED`如果已删除断点，则返回。
 
 ## <a name="remarks"></a>备注
-每次加载代码时都会绑定虚拟化断点。
+每次加载代码时都绑定了虚拟化的断点。
 
 ## <a name="example"></a>示例
-下面的示例演示如何为公开`CPendingBreakpoint`[IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)接口的简单对象实现此方法。
+下面的示例演示如何为 `CPendingBreakpoint` 公开 [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) 接口的简单对象实现此方法。
 
 ```cpp
 HRESULT CPendingBreakpoint::Virtualize(BOOL fVirtualize)
@@ -85,5 +85,5 @@ HRESULT CPendingBreakpoint::Virtualize(BOOL fVirtualize)
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)

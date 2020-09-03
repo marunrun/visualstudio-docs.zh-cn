@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 779d3ec1ed520d5d48043f90e7cb6272553012a6
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85535039"
 ---
 # <a name="ca1405-com-visible-type-base-types-should-be-com-visible"></a>CA1405:COM 可见类型的基类型应对 COM 可见
@@ -33,10 +33,10 @@ ms.locfileid: "85535039"
 |是否重大更改|DependsOnFix|
 
 ## <a name="cause"></a>原因
- 组件对象模型（COM）可见类型派生自非 COM 可见的类型。
+ 组件对象模型 (COM) 可见类型派生自非 COM 可见的类型。
 
 ## <a name="rule-description"></a>规则描述
- 当 COM 可见类型在新版本中添加成员时，必须遵守严格指导原则，以避免中断绑定到当前版本的 COM 客户端。 对于 COM 不可见的类型，假设在添加新成员时，不需要遵循这些 COM 版本控制规则。 但是，如果 COM 可见类型派生自 COM 不可见类型并公开了或的类接口 <xref:System.Runtime.InteropServices.ClassInterfaceType?displayProperty=fullName> <xref:System.Runtime.InteropServices.ClassInterfaceType> （默认值），则该基类型的所有公共成员（除非它们专门标记为 com 不可见，这将是冗余的）向 COM 公开。 如果基类型在后续版本中添加了新成员，则绑定到派生类型的类接口的任何 COM 客户端都可能会中断。 COM 可见类型应仅从 COM 可见类型派生，以减少中断 COM 客户端的可能性。
+ 当 COM 可见类型在新版本中添加成员时，必须遵守严格指导原则，以避免中断绑定到当前版本的 COM 客户端。 对于 COM 不可见的类型，假设在添加新成员时，不需要遵循这些 COM 版本控制规则。 但是，如果 COM 可见类型派生自 COM 不可见类型，并公开了 <xref:System.Runtime.InteropServices.ClassInterfaceType?displayProperty=fullName> 或 <xref:System.Runtime.InteropServices.ClassInterfaceType> (默认) 的类接口，则基类型的所有公共成员将 (，除非它们特别标记为 com 不可见，这将是向 com 公开的冗余) 。 如果基类型在后续版本中添加了新成员，则绑定到派生类型的类接口的任何 COM 客户端都可能会中断。 COM 可见类型应仅从 COM 可见类型派生，以减少中断 COM 客户端的可能性。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
  若要修复与此规则的冲突，请使基类型 COM 可见或派生类型 COM 不可见。

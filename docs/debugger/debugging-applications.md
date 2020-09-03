@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 1849d6918c1fd5607c97b82c17e385d3c6521fc4
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85535156"
 ---
 # <a name="debugging-applications"></a>调试应用程序
@@ -25,7 +25,7 @@ ms.locfileid: "85535156"
 
 ## <a name="debugging-for-different-types-of-applications"></a>对不同类型的应用程序进行调试
 
-|标题|说明|
+|Title|说明|
 |-|-|
 |[调试 UWP 应用](../debugger/debugging-windows-store-and-windows-universal-apps.md)|介绍如何调试 UWP 应用。|
 |[调试托管代码](../debugger/debugging-managed-code.md)|描述如何调试托管代码（Visual C#、Visual Basic、F# 和 C++/CLI）。|

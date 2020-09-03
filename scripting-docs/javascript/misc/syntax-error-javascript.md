@@ -1,5 +1,5 @@
 ---
-title: 语法错误（JavaScript） |Microsoft Docs
+title: JavaScript)  (语法错误 |Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
@@ -15,10 +15,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: 5026e2a09d673ab18102db1079ca4ddf8c0da268
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85817523"
 ---
 # <a name="syntax-error-javascript"></a>语法错误 (JavaScript)
@@ -30,5 +30,5 @@ ms.locfileid: "85817523"
   
 - 查找定向的圆括号或大括号。  
   
-## <a name="see-also"></a>请参阅  
- [Error 对象](../../javascript/reference/error-object-javascript.md)
+## <a name="see-also"></a>另请参阅  
+ [错误对象](../../javascript/reference/error-object-javascript.md)

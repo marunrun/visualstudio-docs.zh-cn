@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 0252cf39f8f5ee268adbf625f03a9b5a305b903a
-ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85382583"
 ---
 # <a name="how-to-change-the-publish-language-for-a-clickonce-application"></a>如何：更改 ClickOnce 应用程序的发布语言
@@ -38,13 +38,13 @@ ms.locfileid: "85382583"
 
 2. 单击 **“发布”** 选项卡。
 
-3. 单击 "**选项**" 按钮打开 "**发布选项**" 对话框。
+3. 单击 " **选项** " 按钮打开 " **发布选项** " 对话框。
 
-4. 单击 "**说明**"。
+4. 单击 " **说明**"。
 
-5. 在 "**发布选项**" 对话框中，从 "**发布语言**" 下拉列表中选择语言和区域性，然后单击 **"确定"**。
+5. 在 " **发布选项** " 对话框中，从 " **发布语言** " 下拉列表中选择语言和区域性，然后单击 **"确定"**。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [发布 ClickOnce 应用程序](../deployment/publishing-clickonce-applications.md)
 - [如何：使用发布向导发布 ClickOnce 应用程序](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)

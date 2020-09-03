@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: b5c1e3af0e35bf92d72e853948c455893b417998
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85534935"
 ---
 # <a name="ca1402-avoid-overloads-in-com-visible-interfaces"></a>CA1402:避免在 COM 可见接口中进行重载
@@ -33,7 +33,7 @@ ms.locfileid: "85534935"
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
- 组件对象模型（COM）可见接口声明重载方法。
+ 组件对象模型 (COM) 可见接口声明重载方法。
 
 ## <a name="rule-description"></a>规则描述
  在向 COM 客户端公开重载的方法时，只有第一个方法重载保留其名称。 通过在名称后追加下划线字符 "_" 和一个与重载的声明顺序相对应的整数，可对后续重载进行唯一重命名。 例如，请考虑以下方法。
@@ -55,7 +55,7 @@ void SomeMethod_3(int valueOne, int valueTwo);
  Visual Basic 6，COM 客户端无法通过在名称中使用下划线来实现接口方法。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
- 若要修复与此规则的冲突，请重命名重载的方法，使名称唯一。 或者，通过将可访问性更改为 `internal` （ `Friend` 在中为 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] ）或 <xref:System.Runtime.InteropServices.ComVisibleAttribute?displayProperty=fullName> 将属性设置为 `false` ，使接口对 COM 不可见。
+ 若要修复与此规则的冲突，请重命名重载的方法，使名称唯一。 或者，通过将) 中的可访问性更改为 `internal` (， `Friend` [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 或 <xref:System.Runtime.InteropServices.ComVisibleAttribute?displayProperty=fullName> 将属性设置为 `false` ，使接口对 COM 不可见。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
  不禁止显示此规则发出的警告。

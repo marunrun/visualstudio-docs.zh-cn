@@ -13,16 +13,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 03fae58a902da5bc9432c9ed2ed587dd7ddb4f5a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72665772"
 ---
 # <a name="designing-classes-and-types-class-designer"></a>设计类和类型（类设计器）
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-使用类设计器不仅可以对类和类型进行可视化处理，而且还能对其进行设计。 以下主题介绍了如何执行此操作。
+使用类设计器不仅可以对类和类型进行可视化处理，而且还能对其进行设计****。 以下主题介绍了如何执行此操作。
 
 > [!NOTE]
 > 使用类设计器时，应在执行之前检查它发出的代码，验证该代码是否适用于安全性上下文。
@@ -32,7 +32,7 @@ ms.locfileid: "72665772"
 
  介绍如何使用类图创建类型。
 
- [如何：创建类型之间的继承（类设计器）](../ide/how-to-create-inheritance-between-types-class-designer.md)
+ [如何：创建类型之间的继承 (类设计器) ](../ide/how-to-create-inheritance-between-types-class-designer.md)
 
  介绍如何定义类型之间的继承关系。
 
@@ -53,5 +53,5 @@ ms.locfileid: "72665772"
 
  [重构类和类型（类设计器）](../ide/refactoring-classes-and-types-class-designer.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [使用类图（类设计器）](../ide/working-with-class-diagrams-class-designer.md)
