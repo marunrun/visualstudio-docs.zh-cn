@@ -10,10 +10,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: b87ed03c8f513f6a9a750186d8763e56061bed98
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85350818"
 ---
 # <a name="draw-shapes-and-paths"></a>绘制形状和路径
@@ -30,7 +30,7 @@ ms.locfileid: "85350818"
 
 将所需的任何形状拖到美工板上。 然后，使用形状的图柄缩放、旋转、移动或扭曲形状。
 
-![控点](../designers/media/84261e83-3091-4490-ab58-4218b188439e.png)
+![句柄数](../designers/media/84261e83-3091-4490-ab58-4218b188439e.png)
 
 ## <a name="draw-a-path"></a>绘制路径
 
@@ -78,11 +78,11 @@ ms.locfileid: "85350818"
 
 ### <a name="remove-a-point-in-a-path"></a>删除路径中的点
 
-使用“选择”**** 工具，以选中路径。 然后，使用 "**笔**" 工具单击你要删除的点。
+使用“选择”**** 工具，以选中路径。 然后，使用 " **笔** " 工具单击你要删除的点。
 
 ### <a name="add-a-point-to-a-path"></a>向路径添加点
 
-使用“选择”**** 工具，以选中路径。 使用 "**笔**" 工具单击路径上要添加点的任何位置。
+使用“选择”**** 工具，以选中路径。 使用 " **笔** " 工具单击路径上要添加点的任何位置。
 
 ## <a name="convert-a-shape-to-a-path"></a>将形状转换为路径
 
@@ -104,7 +104,7 @@ ms.locfileid: "85350818"
 |![合并之前的两个形状](../designers/media/b1_1.png)|合并之前的两个形状|
 |![相并](../designers/media/b1_2.png)|相并|
 |![除](../designers/media/b1_3.png)|除|
-|![Intersect](../designers/media/b1_4.png)|Intersect|
+|![相交](../designers/media/b1_4.png)|相交|
 |![相斥](../designers/media/b1_5.png)|排除重叠|
 |![减](../designers/media/b1_6.png)|减|
 

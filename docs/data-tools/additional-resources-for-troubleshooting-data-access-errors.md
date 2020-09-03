@@ -225,10 +225,10 @@ manager: jillfra
 ms.workload:
 - data-storage
 ms.openlocfilehash: 0383de73992b96f6a458b389573e252b39d624b6
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75587038"
 ---
 # <a name="troubleshoot-data-access-errors-on-the-forums"></a>排查论坛上的数据访问错误
@@ -249,7 +249,7 @@ ms.locfileid: "75587038"
 
 - [ADO.NET 数据提供者论坛](https://social.msdn.microsoft.com/Forums/en-US/home?forum=adodotnetdataproviders)
 
-有关如何解决与 SQL Server 的连接问题的信息，请参阅[连接到 SQL Server 数据库引擎的疑难解答](https://social.technet.microsoft.com/wiki/contents/articles/2102.how-to-troubleshoot-connecting-to-the-sql-server-database-engine.aspx)。
+有关如何解决与 SQL Server 的连接问题的信息，请参阅 [连接到 SQL Server 数据库引擎的疑难解答](https://social.technet.microsoft.com/wiki/contents/articles/2102.how-to-troubleshoot-connecting-to-the-sql-server-database-engine.aspx)。
 
 ## <a name="see-also"></a>另请参阅
 
