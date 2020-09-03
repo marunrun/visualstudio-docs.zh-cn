@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 14bfe8762d914770dd2523a431bada883d003511
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68189768"
 ---
 # <a name="idiaenumsourcefilesskip"></a>IDiaEnumSourceFiles::Skip
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-跳过枚举序列中的源文件指定的数目。  
+跳过枚举序列中指定数目的源文件。  
   
 ## <a name="syntax"></a>语法  
   
@@ -33,12 +33,12 @@ HRESULT Skip ( 
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>参数  
  celt  
- [in]若要跳过枚举序列中的源文件数。  
+ 中要跳过的枚举序列中的源文件数。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回`S_FALSE`如果没有更多的源代码文件，以跳过。  
+ 如果成功，则返回 `S_OK` ; 否则， `S_FALSE` 如果没有更多要跳过的源文件，则返回。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDiaEnumSourceFiles](../../debugger/debug-interface-access/idiaenumsourcefiles.md)

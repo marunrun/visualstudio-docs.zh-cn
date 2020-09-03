@@ -23,10 +23,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 4ca10653fd177826e2b236d432c685535993fbba
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68155906"
 ---
 # <a name="debugging-web-applications-and-script"></a>调试 Web 应用程序和脚本
@@ -34,7 +34,7 @@ ms.locfileid: "68155906"
 
 表格图例：  
   
- 本节描述适用于 Web 应用程序的常见调试技术。 有关详细信息，请参阅[调试器基础知识](../debugger/debugger-basics.md)。  
+ 本节描述适用于 Web 应用程序的常见调试技术。 有关详细信息，请参阅 [调试器基础知识](../debugger/debugger-basics.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
  [调试 ASP.NET 和 AJAX 应用程序](../debugger/debugging-aspnet-and-ajax-applications.md)  
@@ -44,7 +44,7 @@ ms.locfileid: "68155906"
  列出在调试 Web 应用程序时可能遇到的错误，并提出修复建议。  
   
  [演练：调试并行应用程序](../debugger/walkthrough-debugging-a-parallel-application.md)  
- 描述如何使用“并行任务”  和“并行堆栈”  工具窗口调试并行应用程序。  
+ 描述如何使用“并行任务” 和“并行堆栈”工具窗口调试并行应用程序。  
   
 ## <a name="related-sections"></a>相关章节  
  [ASP.NET Web 应用程序](../debugger/debugging-preparation-aspnet-web-applications.md)  
@@ -59,6 +59,6 @@ ms.locfileid: "68155906"
  [IntelliTrace](../debugger/intellitrace.md)  
  通过使用 IntelliTrace 记录应用的执行历史记录来更快更轻松地发现 Bug。 通过记录的事件和调用向后移动和向前移动以在关键时间点检查您应用的状态。 调试代码，而无需设置很多断点或频繁重新启动应用。 需要 Visual Studio Ultimate。  
   
-## <a name="see-also"></a>请参阅  
- [调试器安全](../debugger/debugger-security.md)   
+## <a name="see-also"></a>另请参阅  
+ [调试器安全性](../debugger/debugger-security.md)   
  [在 Visual Studio 中进行调试](../debugger/debugging-in-visual-studio.md)
