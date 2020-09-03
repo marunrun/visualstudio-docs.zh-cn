@@ -11,25 +11,25 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 094cb590d5b2a3bf062916985bfc61b1cf76d365
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85904402"
 ---
 # <a name="walkthrough-use-a-shortcut-key-with-an-editor-extension"></a>演练：在编辑器扩展中使用快捷键
 您可以在编辑器扩展中响应快捷键。 下面的演练演示如何使用快捷键将视图修饰添加到文本视图。 本演练基于视口修饰编辑器模板，它允许您使用 + 字符添加修饰。
 
-## <a name="prerequisites"></a>必备条件
- 从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅[安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
+## <a name="prerequisites"></a>先决条件
+ 从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
 
-## <a name="create-a-managed-extensibility-framework-mef-project"></a>创建 Managed Extensibility Framework （MEF）项目
+## <a name="create-a-managed-extensibility-framework-mef-project"></a>创建 Managed Extensibility Framework (MEF) 项目
 
-1. 创建 c # VSIX 项目。 （在 "**新建项目**" 对话框中，依次选择 " **Visual c #/扩展性**"、" **VSIX 项目**"。）命名解决方案 `KeyBindingTest` 。
+1. 创建 c # VSIX 项目。  (在 " **新建项目** " 对话框中，依次选择 " **Visual c #/扩展性**"、" **VSIX 项目**"。 ) 将解决方案命名为 `KeyBindingTest` 。
 
-2. 将编辑器文本修饰项模板添加到项目并将其命名为 `KeyBindingTest` 。 有关详细信息，请参阅[使用编辑器项模板创建扩展](../extensibility/creating-an-extension-with-an-editor-item-template.md)。
+2. 将编辑器文本修饰项模板添加到项目并将其命名为 `KeyBindingTest` 。 有关详细信息，请参阅 [使用编辑器项模板创建扩展](../extensibility/creating-an-extension-with-an-editor-item-template.md)。
 
-3. 添加以下引用，并将**CopyLocal**设置为 `false` ：
+3. 添加以下引用，并将 **CopyLocal** 设置为 `false` ：
 
     VisualStudio
 
@@ -57,7 +57,7 @@ public AdornmentLayerDefinition editorAdornmentLayer;
 ## <a name="handle-typechar-command"></a>处理 TYPECHAR 命令
 在 Visual Studio 2017 版本15.6 之前，处理编辑器扩展中的命令的唯一方法是实现 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> 基于的命令筛选器。 Visual Studio 2017 版本15.6 引入了基于编辑器命令处理程序的新式简化方法。 接下来的两部分将演示如何使用旧方法和新式方法来处理命令。
 
-## <a name="define-the-command-filter-prior-to-visual-studio-2017-version-156"></a>定义命令筛选器（Visual Studio 2017 版本15.6 之前）
+## <a name="define-the-command-filter-prior-to-visual-studio-2017-version-156"></a>在 Visual Studio 2017 版本15.6 之前定义命令筛选器 () 
 
  命令筛选器是的实现 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> ，它通过实例化修饰来处理命令。
 
@@ -108,7 +108,7 @@ public AdornmentLayerDefinition editorAdornmentLayer;
     }
     ```
 
-7. 实现 `Exec()` 方法，以便在键入加号（ **+** ）字符时将紫色框添加到视图中。
+7. 实现 `Exec()` 方法，以便在键入加号 (**+**) 字符时将紫色框添加到视图中。
 
     ```csharp
     int IOleCommandTarget.Exec(ref Guid pguidCmdGroup, uint nCmdID, uint nCmdexecopt, IntPtr pvaIn, IntPtr pvaOut)
@@ -132,7 +132,7 @@ public AdornmentLayerDefinition editorAdornmentLayer;
 
     ```
 
-## <a name="add-the-command-filter-prior-to-visual-studio-2017-version-156"></a>添加命令筛选器（Visual Studio 2017 版本15.6 之前）
+## <a name="add-the-command-filter-prior-to-visual-studio-2017-version-156"></a>在 Visual Studio 2017 版本15.6 之前添加命令筛选器 () 
  修饰提供程序必须向文本视图添加命令筛选器。 在此示例中，提供程序实现 <xref:Microsoft.VisualStudio.Editor.IVsTextViewCreationListener> 以侦听文本视图创建事件。 此修饰提供程序还导出修饰层，修饰层定义修饰的 Z 顺序。
 
 1. 在 KeyBindingTestTextViewCreationListener 文件中，添加以下 using 指令：
@@ -191,13 +191,13 @@ public AdornmentLayerDefinition editorAdornmentLayer;
     }
     ```
 
-## <a name="implement-a-command-handler-starting-in-visual-studio-2017-version-156"></a>实现命令处理程序（从 Visual Studio 2017 版本15.6 开始）
+## <a name="implement-a-command-handler-starting-in-visual-studio-2017-version-156"></a>在 Visual Studio 2017 版本15.6 中开始 (实现命令处理程序) 
 
 首先，更新项目的 Nuget 引用以引用最新的编辑器 API：
 
-1. 右键单击该项目，然后选择 "**管理 Nuget 包**"。
+1. 右键单击该项目，然后选择 " **管理 Nuget 包**"。
 
-2. 在**Nuget 包管理器**中，选择 "**更新**" 选项卡，选中 "**选择所有包**" 复选框，然后选择 "**更新**"。
+2. 在 **Nuget 包管理器**中，选择 " **更新** " 选项卡，选中 " **选择所有包** " 复选框，然后选择 " **更新**"。
 
 命令处理程序是的实现 <xref:Microsoft.VisualStudio.Commanding.ICommandHandler%601> ，它通过实例化修饰来处理命令。
 
@@ -237,7 +237,7 @@ public AdornmentLayerDefinition editorAdornmentLayer;
    }
    ```
 
-6. 实现 `ExecuteCommand()` 方法，以便在键入加号（ **+** ）字符时将紫色框添加到视图中。
+6. 实现 `ExecuteCommand()` 方法，以便在键入加号 (**+**) 字符时将紫色框添加到视图中。
 
    ```csharp
    public bool ExecuteCommand(TypeCharCommandArgs args, CommandExecutionContext executionContext)
@@ -257,7 +257,7 @@ public AdornmentLayerDefinition editorAdornmentLayer;
    }
    ```
 
-   7. 将修饰层定义从*KeyBindingTestTextViewCreationListener.cs*文件复制到*KeyBindingCommandHandler.cs* ，然后删除*KeyBindingTestTextViewCreationListener.cs*文件：
+   7. 将修饰层定义从 *KeyBindingTestTextViewCreationListener.cs* 文件复制到 *KeyBindingCommandHandler.cs* ，然后删除 *KeyBindingTestTextViewCreationListener.cs* 文件：
 
    ```csharp
    /// <summary>
@@ -274,7 +274,7 @@ public AdornmentLayerDefinition editorAdornmentLayer;
 
 原始修饰出现在文本文件中的每个字符 "a" 上。 现在，我们已更改代码以添加修饰以响应 **+** 字符，它只会在键入字符的行上添加修饰 **+** 。 我们可以更改修饰代码，以便修饰每个 "a" 上出现一次。
 
-在*KeyBindingTest.cs*文件中，更改 `CreateVisuals()` 方法以循环访问视图中的所有行来修饰 "a" 字符。
+在 *KeyBindingTest.cs* 文件中，更改 `CreateVisuals()` 方法以循环访问视图中的所有行来修饰 "a" 字符。
 
 ```csharp
 private void CreateVisuals(ITextViewLine line)

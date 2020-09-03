@@ -11,45 +11,45 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 5fd5e17d764336cda450c726023b209f89f194a1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68180386"
 ---
 # <a name="properties-display-grid"></a>属性显示网格
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-**属性**窗口将显示在网格中的字段。 左侧的列包含的属性名称;右侧列包含的属性值。  
+" **属性** " 窗口显示网格中的字段。 左侧列包含属性名称;右侧列包含属性值。  
   
 ## <a name="working-with-the-grid"></a>使用网格  
- 两个列列表显示了在设计时和其当前设置进行更改的独立于配置的属性。 请注意，可能不会显示所有属性。 属性可以设置为隐藏，例如，通过实现<xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing.HideProperty%2A>方法。 具体而言，到具有子属性，请参阅的隐藏属性[隐藏属性，具有子属性](../../misc/hiding-properties-that-have-child-properties.md)。  
+ 两列列表显示了独立于配置的属性，这些属性可在设计时和当前设置中进行更改。 请注意，可能不会显示所有属性。 可以通过实现方法将属性设置为隐藏 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing.HideProperty%2A> 。 具体而言，若要隐藏具有子属性的属性，请参阅， [隐藏具有子属性的属性](../../misc/hiding-properties-that-have-child-properties.md)。  
   
- 信息推送到**属性**窗口中，IDE 使用<xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer>。 <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> 由每个窗口，其中包含具有要显示在相关属性的可选择对象的 Vspackage**属性**窗口。 **解决方案资源管理器**的实现<xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer>调用`GetProperty`使用<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID>项目层次结构来获取层次结构中的可浏览对象中。  
+ 为了将信息推送到 " **属性** " 窗口，IDE 使用 <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> 。 <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> 由 Vspackage 为每个窗口调用，其中包含具有相关属性的可选择对象，这些对象将显示在 " **属性** " 窗口中。 **解决方案资源管理器** <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> `GetProperty` <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID> 在项目层次结构中使用调用的实现，以获取层次结构中的可浏览对象。  
   
- 如果你的 VSPackage 不支持<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID>，尝试使用 IDE<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A>使用的值为<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID>提供层次结构项。  
+ 如果 VSPackage 不支持 <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID> ，则 IDE 会尝试使用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A> <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID> 层次结构项或项提供的值。  
   
- 你的项目不需要创建 VSPackage<xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer>因为实现该 IDE 提供窗口包 (例如，**解决方案资源管理器**) 构造<xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer>代表其自身。  
+ 你的项目 VSPackage 无需创建， <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> 因为 IDE 提供的用于实现它的窗口包 (例如， **解决方案资源管理器**) <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> 代表其构造。  
   
- <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> 包含由 IDE 调用的三种方法：  
+ <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> 由 IDE 调用的三个方法组成：  
   
-- <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer.CountObjects%2A> 包含选择要在中显示的对象数**属性**窗口。  
+- <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer.CountObjects%2A> 包含在 " **属性** " 窗口中选择要显示的对象的数目。  
   
-- <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer.GetObjects%2A> 返回`IDispatch`选择要在中显示的对象**属性**窗口。  
+- <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer.GetObjects%2A> 返回在 `IDispatch` " **属性** " 窗口中选择要显示的对象。  
   
-- <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer.SelectObjects%2A> 使返回的任何的对象<xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer.GetObjects%2A>供选择的用户。 这使 VSPackage 可以直观地更新 UI 中向用户显示的选项。  
+- <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer.SelectObjects%2A> 允许用户选择由返回的任何对象 <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer.GetObjects%2A> 。 这允许 VSPackage 以可视方式更新用户在 UI 中显示的选择。  
   
-  **属性**窗口中提取信息从`IDispatch`对象来检索正在被浏览的属性。 属性浏览器使用`IDispatch`向对象要求哪些属性它支持通过查询`ITypeInfo`，从中获取从`IDispatch::GetTypeInfo`。 在浏览器并将这些值来填充**属性**窗口并更改网格中显示单个属性的值。 属性信息保留在对象本身。  
+  " **属性** " 窗口从对象中提取信息 `IDispatch` 以检索要浏览的属性。 "属性浏览器" `IDispatch` 通过查询 `ITypeInfo` （从获取）来请求对象支持的属性 `IDispatch::GetTypeInfo` 。 然后，浏览器使用这些值来填充 " **属性** " 窗口，并更改网格中显示的各个属性的值。 属性信息在对象本身内维护。  
   
-  因为返回的对象支持`IDispatch`，调用方可以通过调用获取信息，如对象的名称`IDispatch::Invoke`或`ITypeInfo::Invoke`与表示所需的信息的预定义的调度标识符 (DISPID)。 声明的 Dispid 为负，以确保它们不会与用户定义的标识符发生冲突。  
+  由于返回的对象支持 `IDispatch` ，因此调用方可以通过调用 `IDispatch::Invoke` 或 `ITypeInfo::Invoke` 使用预定义的调度标识符（ (DISPID) 来表示所需的信息）来获取信息（如对象的名称）。 声明的 Dispid 为负数，以确保它们不会与用户定义的标识符冲突。  
   
-  **属性**窗口会显示不同类型的字段，具体取决于所选对象的特定属性的属性。 这些字段包括编辑框、 下拉列表和指向自定义编辑器对话框。  
+  " **属性** " 窗口显示不同类型的字段，具体取决于所选对象的特定属性的属性。 这些字段包括编辑框、下拉列表和指向自定义编辑器对话框的链接。  
   
-- 检索的枚举列表中包含值<xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer.GetObjects%2A>查询到`IDispatch`。 获取从枚举列表值可以更改在属性网格中，通过双击字段名称，或通过单击值并从下拉列表中选择新值。 对于具有预定义的枚举列表中的设置的属性，双击属性列表中的属性名称进行循环的可用选项。 只有两个选项，如 true/false 时，使用预定义属性中，双击要选项之间进行切换的属性名称。  
+- 枚举列表中包含的值通过 <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer.GetObjects%2A> 查询来检索 `IDispatch` 。 在 "属性" 网格中，可以通过双击字段名称，或通过单击值并从下拉列表中选择新值来更改从枚举列表获得的值。 对于具有枚举列表中预定义的设置的属性，双击 "属性" 列表中的属性名称将循环访问可用选项。 对于仅有两个选项的预定义属性（如 true/false），请双击属性名称以在选项之间切换。  
   
-- 如果<xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing.HasDefaultValue%2A>是`false`，表示的值已更改，以粗体显示的值。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing.CanResetPropertyValue%2A> 用于确定是否值可以重置为原始值。 如果因此，您可以改回为默认值通过右键单击该值，然后选择**重置**从显示的菜单。 否则，必须手动更改回默认值的值。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing> 此外允许您以本地化和隐藏在设计时显示的属性的名称，但不会影响在运行时显示的属性名称。  
+- 如果 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing.HasDefaultValue%2A> 为 `false` ，指示值已更改，则该值显示为粗体文本。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing.CanResetPropertyValue%2A> 用于确定是否可将值重置为原始值。 如果是这样，则可以通过右键单击值并从显示的菜单中选择 " **重置** "，来改回默认值。 否则，必须手动将该值改回默认值。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing> 还允许您本地化和隐藏在设计时显示的属性的名称，但不会影响运行时显示的属性名称。  
   
-- 单击省略号 （...） 按钮显示的用户可以从中选择 （如颜色选取器或字体列表） 的属性值的列表。 <xref:Microsoft.VisualStudio.Shell.Interop.IProvidePropertyBuilder> 提供这些值。  
+- 单击省略号 ( ") " 按钮将显示一个属性值列表，用户可从中选择 (，如颜色选取器或字体列表) 。 <xref:Microsoft.VisualStudio.Shell.Interop.IProvidePropertyBuilder> 提供这些值。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [扩展属性](../../extensibility/internals/extending-properties.md)

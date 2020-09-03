@@ -182,7 +182,7 @@ Windows 窗体控件在 Office 文档中的行为通常与 Windows 窗体上的�
 
 如果创建的文档级 Office 项目使用的是包含 ActiveX 控件的现有 Word 文档或 Excel 工作簿，则 ActiveX 控件的功能不会丢失;但是，不支持从 Visual Studio 中向文档添加新的 ActiveX 控件。 例如，如果 Word 文档的 " **控件** 工具箱" 中有一个按钮，该按钮运行 (VBA) 宏的 Visual Basic for Applications，则在 Office 项目中使用该文档后，该文档将继续运行该宏。 但是，建议删除 ActiveX 控件和 VBA 宏，并将其替换为 Windows 窗体控件和托管代码。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [Office 文档上的控件](../vsto/controls-on-office-documents.md)
 - [Office 文档上的 Windows 窗体控件概述](../vsto/windows-forms-controls-on-office-documents-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: CONTEXT_INFO_FIELDS | Microsoft Docs
+title: CONTEXT_INFO_FIELDS |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: fbfa24733644067b3f79fc7b6e8450df2130116d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68179951"
 ---
-# <a name="contextinfofields"></a>CONTEXT_INFO_FIELDS
+# <a name="context_info_fields"></a>CONTEXT_INFO_FIELDS
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-指定要检索有关内存上下文信息。  
+指定要检索的有关内存上下文的信息。  
   
 ## <a name="syntax"></a>语法  
   
@@ -53,38 +53,38 @@ public enum enum_CONTEXT_INFO_FIELDS {
   
 ## <a name="members"></a>成员  
  CIF_MODULEURL  
- 初始化/用`bstrModuleUrl`字段[CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md)结构。  
+ 初始化/使用 `bstrModuleUrl` [CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md) 结构的字段。  
   
  CIF_FUNCTION  
- 初始化/用`bstrFunction`字段的`CONTEXT_INFO`结构。  
+ 初始化/使用 `bstrFunction` 结构的字段 `CONTEXT_INFO` 。  
   
  CIF_FUNCTIONOFFSET  
- 初始化/用`posFunctionOffset`字段的`CONTEXT_INFO`结构。  
+ 初始化/使用 `posFunctionOffset` 结构的字段 `CONTEXT_INFO` 。  
   
  CIF_ADDRESS  
- 初始化/用`bstrAddress`字段的`CONTEXT_INFO`结构。  
+ 初始化/使用 `bstrAddress` 结构的字段 `CONTEXT_INFO` 。  
   
  CIF_ADDRESSOFFSET  
- 初始化/用`bstrAddressOffset`字段的`CONTEXT_INFO`结构。  
+ 初始化/使用 `bstrAddressOffset` 结构的字段 `CONTEXT_INFO` 。  
   
  CIF_ALLFIELDS  
- 初始化/使用的所有字段`CONTEXT_INFO`结构。  
+ 初始化/使用结构的所有字段 `CONTEXT_INFO` 。  
   
 ## <a name="remarks"></a>备注  
- 这些值会传递的参数[GetInfo](../../../extensibility/debugger/reference/idebugmemorycontext2-getinfo.md)方法，以指示的哪些字段[CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md)结构是进行初始化。  
+ 将参数传递给 [GetInfo](../../../extensibility/debugger/reference/idebugmemorycontext2-getinfo.md) 方法，以指示要初始化 [CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md) 结构的哪些字段。  
   
- 这些标志还用于指示哪些字段的`CONTEXT_INFO`结构已使用且有效时返回该结构。  
+ 这些标志还用于指示在 `CONTEXT_INFO` 返回结构时使用的结构字段和有效字段。  
   
- 可能会使用按位 OR 组合这些值。  
+ 这些值可以与按位 "或" 组合在一起。  
   
 ## <a name="requirements"></a>要求  
- 标头： msdbg.h  
+ 标头： msdbg  
   
- 命名空间:Microsoft.VisualStudio.Debugger.Interop  
+ 命名空间： VisualStudio  
   
- 程序集：Microsoft.VisualStudio.Debugger.Interop.dll  
+ 程序集： Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>请参阅  
- [枚举](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>另请参阅  
+ [计数](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md)   
  [GetInfo](../../../extensibility/debugger/reference/idebugmemorycontext2-getinfo.md)
