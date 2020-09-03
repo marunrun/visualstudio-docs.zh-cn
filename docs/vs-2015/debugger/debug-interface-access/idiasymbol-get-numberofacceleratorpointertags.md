@@ -12,16 +12,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: b25cd941b8f06909ca1bf777d0e3251c78732706
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68183186"
 ---
-# <a name="idiasymbolgetnumberofacceleratorpointertags"></a>IDiaSymbol::get_numberOfAcceleratorPointerTags
+# <a name="idiasymbolget_numberofacceleratorpointertags"></a>IDiaSymbol::get_numberOfAcceleratorPointerTags
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-返回 accelerator 指针中的标记数C++AMP 存根 （stub） 函数。  
+返回 C++ AMP 存根函数中的快捷键指针标记的数目。  
   
 ## <a name="syntax"></a>语法  
   
@@ -32,13 +32,13 @@ HRESULT get_numberOfAcceleratorPointerTags(
   
 #### <a name="parameters"></a>参数  
  `count`  
- [out]一个指向`DWORD`，它持有的加速器数量中的指针标记C++AMP 存根 （stub） 函数。  
+ 弄指向的指针 `DWORD` ，它包含 C++ AMP 存根函数中的快捷键指针标记的数目。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回`S_FALSE`或错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回 `S_FALSE` 错误代码。  
   
 ## <a name="remarks"></a>备注  
- 在调用此方法`IDiaSymbol`接口对应于C++AMP 快捷键存根 （stub） 函数。  
+ 此方法在 `IDiaSymbol` 与 C++ AMP 加速器存根函数相对应的接口上调用。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

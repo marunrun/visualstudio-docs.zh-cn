@@ -9,10 +9,10 @@ caps.latest.revision: 8
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 296ef23bc512a86917920b3c3d5fbb5ec203a21e
-ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86387013"
 ---
 # <a name="managing-multiple-threads-in-managed-code"></a>在托管代码中管理多个线程
@@ -27,7 +27,7 @@ ms.locfileid: "86387013"
   
 ## <a name="switching-from-the-ui-thread-to-a-background-thread"></a>从 UI 线程切换到后台线程  
   
-1. 如果在 UI 线程上，并且想要在后台线程上执行异步工作，请使用 "运行" （）：  
+1. 如果在 UI 线程上，并且想要在后台线程上执行异步工作，请使用任务。运行 ( # A1：  
   
     ```csharp  
     await Task.Run(async delegate{  

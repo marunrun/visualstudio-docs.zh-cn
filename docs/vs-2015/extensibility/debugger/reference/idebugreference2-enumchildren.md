@@ -1,5 +1,5 @@
 ---
-title: IDebugReference2::EnumChildren |Microsoft Docs
+title: IDebugReference2：： EnumChildren |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,10 +13,10 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 4df5ad26db3ad519f162c62150d822ae2bc4b687
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68182483"
 ---
 # <a name="idebugreference2enumchildren"></a>IDebugReference2::EnumChildren
@@ -50,27 +50,27 @@ int EnumChildren ( 
   
 #### <a name="parameters"></a>参数  
  `dwFields`  
- [in]中的标志的组合[DEBUGREF_INFO_FLAGS](../../../extensibility/debugger/reference/debugref-info-flags.md)枚举，用于指定哪些字段中枚举[DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md)结构是必填。  
+ 中 [DEBUGREF_INFO_FLAGS](../../../extensibility/debugger/reference/debugref-info-flags.md) 枚举中的标志的组合，用于指定要在枚举的 [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) 结构中填充的字段。  
   
  `dwRadix`  
- [in]用于格式化数值的任何信息的基数。  
+ 中用于设置任何数字信息格式的基数。  
   
  `dwAttribFilter`  
- [in]中的标志的组合[DBG_ATTRIB_FLAGS](../../../extensibility/debugger/reference/dbg-attrib-flags.md)作为筛选器结合使用的枚举`pszNameFilter`参数选择的结构是要枚举。  
+ 中 [DBG_ATTRIB_FLAGS](../../../extensibility/debugger/reference/dbg-attrib-flags.md) 枚举中的标志的组合，用作筛选器与参数组合， `pszNameFilter` 以选择要枚举的结构。  
   
  `pszNameFilter`  
- [in]一个字符串，指定筛选器，例如"MyX"，与结合使用`dwAttribFilter`参数选择要枚举的结构。  
+ 中指定筛选器（如 "MyX"）的字符串，与参数结合使用， `dwAttribFilter` 以选择要枚举的结构。  
   
  `dwTimeout`  
- [in]最大时间 （毫秒），此方法返回前等待。 使用`INFINITE`无限期等待。  
+ 中从此方法返回前等待的最长时间（以毫秒为单位）。 使用 `INFINITE` 无限期等待。  
   
  `ppEnum`  
- [out]返回[IEnumDebugReferenceInfo2](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2.md)对象，其中包含请求的子属性的列表。  
+ 弄返回一个 [IEnumDebugReferenceInfo2](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2.md) 对象，该对象包含请求的子属性的列表。  
   
 ## <a name="return-value"></a>返回值  
  始终返回 `E_NOTIMPL`。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)   
  [DEBUGREF_INFO_FLAGS](../../../extensibility/debugger/reference/debugref-info-flags.md)   
  [DBG_ATTRIB_FLAGS](../../../extensibility/debugger/reference/dbg-attrib-flags.md)   

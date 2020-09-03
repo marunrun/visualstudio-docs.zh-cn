@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 7d0fccb5694e538cdf71844d2cc18640114ec735
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72672313"
 ---
 # <a name="walkthrough-creating-a-multiple-computer-build-environment"></a>演练：创建多计算机生成环境
@@ -56,23 +56,23 @@ ms.locfileid: "72672313"
 
 - [将文件从主计算机复制到生成计算机](../ide/walkthrough-creating-a-multiple-computer-build-environment.md#CopyingFiles)
 
-- [创建注册表设置](../ide/walkthrough-creating-a-multiple-computer-build-environment.md#CreatingRegistry)
+- [正在创建注册表设置](../ide/walkthrough-creating-a-multiple-computer-build-environment.md#CreatingRegistry)
 
 - [在生成计算机上设置环境变量](../ide/walkthrough-creating-a-multiple-computer-build-environment.md#SettingEnvVariables)
 
-- [将 MSBuild 程序集安装到生成计算机上的全局程序集缓存 (GAC) 中](../ide/walkthrough-creating-a-multiple-computer-build-environment.md#InstallingMSBuildToGAC)
+- [将 MSBuild 程序集安装到生成计算机上的全局程序集缓存 (GAC) ](../ide/walkthrough-creating-a-multiple-computer-build-environment.md#InstallingMSBuildToGAC)
 
 - [生成项目](../ide/walkthrough-creating-a-multiple-computer-build-environment.md#BuildingProjects)
 
 - [创建可以签入源代码管理的生成环境](../ide/walkthrough-creating-a-multiple-computer-build-environment.md#CreatingForSourceControl)
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 - Visual Studio Ultimate、Visual Studio Premium 或 Visual Studio Professional 的许可副本
 
 - .NET Framework 4.5.1 的副本，可以从 [Microsoft](https://www.microsoft.com/download/details.aspx?id=40779) 网站下载。
 
-## <a name="InstallingSoftware"></a>在计算机上安装软件
+## <a name="installing-software-on-the-computers"></a><a name="InstallingSoftware"></a> 在计算机上安装软件
  首先，先后设置主计算机和生成计算机。
 
  通过在主计算机上安装 Visual Studio，创建之后将复制到生成计算机的文件和设置。 您可在 x86 或 x64 计算机上安装 Visual Studio，但生成计算机的体系结构必须与主计算机的体系结构匹配。
@@ -83,7 +83,7 @@ ms.locfileid: "72672313"
 
 2. 在生成计算机上，安装 .NET Framework 4.5。 若要验证是否已安装，请确保注册表项 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full@Version 的值以“4.5”开头。
 
-## <a name="CopyingFiles"></a>将文件从主计算机复制到生成计算机
+## <a name="copying-files-from-the-host-computer-to-the-build-computer"></a><a name="CopyingFiles"></a>将文件从主计算机复制到生成计算机
  本节包括将特定文件、编译器、生成工具、MSBuild 资产和注册表设置从主计算机复制到生成计算机。 这些说明假定，您已在主计算机的默认位置安装了 Visual Studio；如果安装在其他位置，请相应地调整步骤。
 
 - 在 x86 计算机上，默认位置为 C:\Program Files\Microsoft Visual Studio 11.0\
@@ -215,7 +215,7 @@ ms.locfileid: "72672313"
 
    - \Microsoft.VC110.DebugOpenMP\vcomp110d.dll
 
-## <a name="CreatingRegistry"></a>创建注册表设置
+## <a name="creating-registry-settings"></a><a name="CreatingRegistry"></a>创建注册表设置
  您必须创建注册表项才能配置 MSBuild 的设置。
 
 #### <a name="to-create-registry-settings"></a>创建注册表设置
@@ -277,7 +277,7 @@ ms.locfileid: "72672313"
 
    - HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSBuild\ToolsVersions\4.0\11.0@VCTargetsPath11
 
-## <a name="SettingEnvVariables"></a>在生成计算机上设置环境变量
+## <a name="setting-environment-variables-on-the-build-computer"></a><a name="SettingEnvVariables"></a> 在生成计算机上设置环境变量
  若要在生成计算机上使用 MSBuild，则必须设置 PATH 环境变量。 您可以使用 vcvarsall.bat 设置变量，也可以手动配置它们。
 
 #### <a name="to-use-vcvarsallbat-to-set-environment-variables"></a>使用 vcvarsall.bat 设置环境变量
@@ -314,7 +314,7 @@ ms.locfileid: "72672313"
 
    - %windir%\Microsoft.NET\Framework64\v4.0.30319
 
-## <a name="InstallingMSBuildToGAC"></a>将 MSBuild 程序集安装到生成计算机上的全局程序集缓存 (GAC) 中
+## <a name="installing-msbuild-assemblies-to-the-global-assembly-cache-gac-on-the-build-computer"></a><a name="InstallingMSBuildToGAC"></a>将 MSBuild 程序集安装到生成计算机上的全局程序集缓存 (GAC) 中
  MSBuild 需要在生成计算机的 GAC 上安装一些附加程序集。
 
 #### <a name="to-copy-assemblies-from-the-host-computer-and-install-them-on-the-build-computer"></a>从主计算机复制程序集并在生成计算机上安装它们
@@ -331,26 +331,26 @@ ms.locfileid: "72672313"
 
      打开具有管理权限的“命令提示符”窗口，针对每个文件运行以下命令：
 
-     **gacutil -i \<file>**
+     **gacutil.exe-i \<file>**
 
     > [!NOTE]
     > 若要将程序集完全安装到 GAC 中，可能需要重新启动。
 
-## <a name="BuildingProjects"></a>生成项目
+## <a name="building-projects"></a><a name="BuildingProjects"></a> 生成项目
  您可以使用 Team Foundation Build 生成 [!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)] 项目和解决方案，也可以在命令行上生成它们。 当您使用 Team Foundation Build 生成项目时，将调用对应于系统体系结构的 MSBuild 可执行文件。  在命令行上，您可以使用 32 位 MSBuild 或 64 位 MSBuild，并且您可以通过设置 PATH 环境变量或通过直接调用特定于体系结构的 MSBuild 可执行文件来选择 MSBuild 的体系结构。
 
- 若要在命令提示符处使用 msbuild.exe，请运行以下命令，其中 *solution.sln* 是解决方案名称的占位符。
+ 若要在命令提示符处使用 msbuild.exe，请运行以下命令，其中 solution.sln 是解决方案名称的占位符**。
 
  **msbuild** *solution.sln*
 
- 若要详细了解如何在命令行处使用 MSBuild，请参阅[命令行参考](../msbuild/msbuild-command-line-reference.md)。
+ 有关如何在命令行上使用 MSBuild 的详细信息，请参阅 [命令行参考](../msbuild/msbuild-command-line-reference.md)。
 
 > [!NOTE]
 > 若要生成 [!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)] 项目，您必须使用“v110”平台工具集。 如果您不想编辑 [!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)] 项目文件，则可以使用此命令行参数来设置平台工具集：
 >
 > **msbuild** *solution.sln* **/p:PlatformToolset=v110**
 
-## <a name="CreatingForSourceControl"></a>创建可以签入源代码管理的生成环境
+## <a name="creating-the-build-environment-so-that-it-can-be-checked-into-source-control"></a><a name="CreatingForSourceControl"></a> 创建生成环境，以便可以将其签入源代码管理
  您可以创建可部署到不同计算机的生成环境，这不需要 GAC 文件，也不需要修改注册表设置。 下列步骤只是实现此目的的一种途径。 使这些步骤适应您的生成环境的独特特征。
 
 > [!NOTE]
@@ -368,11 +368,11 @@ ms.locfileid: "72672313"
 
 3. 如果在 %Depot% 中粘贴文件，则请进行下列更改：
 
-    - 在 %Depot%\MSBuild\Microsoft.Cpp\v4.0\v110\Microsoft.CPP.Targets、\Microsoft.Cpp.InvalidPlatforms.targets\\、\Microsoft.cppbuild.targets\\ 和 \Microsoft.CppCommon.targets\\ 中，将
+    - 在 %Depot%\MSBuild\Microsoft.Cpp\v4.0\v110\Microsoft.CPP.Targets、\Microsoft.Cpp.InvalidPlatforms.targets\\、\Microsoft.cppbuild.targets\\ 和 \Microsoft.CppCommon.targets\\ 中，将 
 
          AssemblyName="Microsoft.Build.CppTasks.Common.v110, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" 的每个实例
 
-         实例部署到 Windows Azure 虚拟机 (VM) 中的
+         to
 
          AssemblyFile="$(VCTargetsPath11)Microsoft.Build.CppTasks.Common.v110.dll"。
 
@@ -382,7 +382,7 @@ ms.locfileid: "72672313"
 
          AssemblyName="Microsoft.Build.CppTasks.Common.v110, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" 的每个实例
 
-         实例部署到 Windows Azure 虚拟机 (VM) 中的
+         to
 
          AssemblyFile="$(VCTargetsPath11)Microsoft.Build.CppTasks.Common.v110.dll"。
 

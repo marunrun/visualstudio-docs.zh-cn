@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: c9d9c01e07ab51e1ef21e9b886629dd7bb493c2c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72651825"
 ---
 # <a name="how-to-manage-editor-windows"></a>如何：管理编辑器窗口
@@ -36,7 +36,7 @@ ms.locfileid: "72651825"
 
 1. 在编辑器窗口中单击以获得焦点。
 
-2. 在“窗口”菜单中，选择“拆分”。
+2. 在“窗口”菜单中，选择“拆分”   。
 
      编辑区域分为由分隔条隔开的两个窗格。 可以分别滚动这两个窗格，以便同时查看和编辑活动文档的不同部分。 窗格中的任何更改都会在其他窗格中反映。
 
@@ -45,16 +45,16 @@ ms.locfileid: "72651825"
 
 #### <a name="to-return-to-single-pane-view"></a>返回单一窗格视图
 
-- 在“窗口”菜单中，选择“移除拆分”。
+- 在“窗口”菜单中，选择“移除拆分”   。
 
 ## <a name="creating-new-windows"></a>创建新窗口
  也可以创建编辑器窗口的多个实例。 通过此功能，可在一个编辑器的多个实例中打开长文档，以便在单独的全尺寸编辑器窗口同时查看和编辑不同部分。
 
 #### <a name="to-create-a-new-window"></a>创建新窗口
 
-- 在“窗口”菜单上，单击“新建窗口”。
+- 在“窗口”菜单上，单击“新建窗口”********。
 
      添加编辑器的制表符分隔的新实例。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [自定义编辑器](../ide/customizing-the-editor.md)[编写代码](../ide/writing-code-in-the-code-and-text-editor.md)[自定义窗口布局](../ide/customizing-window-layouts-in-visual-studio.md)

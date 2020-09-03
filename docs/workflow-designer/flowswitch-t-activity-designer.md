@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: d6637682bd6ba649f27c1a53f3b1448629f03736
-ms.sourcegitcommit: de98ed7edc81383e47b87ae6e61143fbbbe7bc56
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88711568"
 ---
 # <a name="flowswitcht-activity-designer"></a>FlowSwitch\<T> 活动设计器
@@ -43,7 +43,7 @@ ms.locfileid: "88711568"
 |属性名称|必选|使用情况|
 |-|--------------|-|
 |<xref:System.Activities.Statements.FlowSwitch%601.Expression%2A>|正确|指定表达式，通过计算该表达式来确定在执行路径中可切换到哪个 <xref:System.Activities.Statements.FlowSwitch%601.Cases%2A>。|
-|<xref:System.Activities.Statements.FlowSwitch%601.Cases%2A>|False|指定通过从 <xref:System.Activities.Statements.FlowSwitch%601.Expression%2A> 的可能计算结果到一组 <xref:System.Activities.Statements.FlowNode> 对象的唯一映射。|
+|<xref:System.Activities.Statements.FlowSwitch%601.Cases%2A>|错误|指定通过从 <xref:System.Activities.Statements.FlowSwitch%601.Expression%2A> 的可能计算结果到一组 <xref:System.Activities.Statements.FlowNode> 对象的唯一映射。|
 |<xref:System.Activities.Statements.FlowSwitch%601.Default%2A>|正确|指定当 <xref:System.Activities.Statements.FlowSwitch%601.Expression%2A> 的计算值与 <xref:System.Activities.Statements.FlowSwitch%601.Cases%2A> 对象中包含的值之一不匹配时的映射。|
 
 ## <a name="see-also"></a>另请参阅

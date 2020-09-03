@@ -16,20 +16,20 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 9533a597a33deaed17ff2a73d56ef306ea7b5613
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85546336"
 ---
 # <a name="ca2201-do-not-raise-reserved-exception-types"></a>CA2201:不要引发保留的异常类型
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|Item|值|
+|项|值|
 |-|-|
 |TypeName|DoNotRaiseReservedExceptionTypes|
 |CheckId|CA2201|
-|Category|Microsoft. 使用情况|
+|类别|Microsoft. 使用情况|
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
@@ -66,19 +66,19 @@ ms.locfileid: "85546336"
 
 |参数说明|异常|
 |---------------------------|---------------|
-|`null`对|<xref:System.ArgumentNullException?displayProperty=fullName>|
-|超出允许的值范围（如集合或列表的索引）|<xref:System.ArgumentOutOfRangeException?displayProperty=fullName>|
+|`null` 对|<xref:System.ArgumentNullException?displayProperty=fullName>|
+|超出允许的值范围 (例如集合或列表的索引) |<xref:System.ArgumentOutOfRangeException?displayProperty=fullName>|
 |`enum`值无效|<xref:System.ComponentModel.InvalidEnumArgumentException?displayProperty=fullName>|
-|包含的格式不符合方法的参数规范（如的格式字符串 `ToString(String)` ）|<xref:System.FormatException?displayProperty=fullName>|
+|包含不满足方法参数规范的格式 (如) 的格式字符串 `ToString(String)`|<xref:System.FormatException?displayProperty=fullName>|
 |否则无效|<xref:System.ArgumentException?displayProperty=fullName>|
 
- 当操作对对象引发的当前状态无效时<xref:System.InvalidOperationException?displayProperty=fullName>
+ 当操作对对象引发的当前状态无效时 <xref:System.InvalidOperationException?displayProperty=fullName>
 
- 对已释放的引发的对象执行操作时<xref:System.ObjectDisposedException?displayProperty=fullName>
+ 对已释放的引发的对象执行操作时 <xref:System.ObjectDisposedException?displayProperty=fullName>
 
- 不支持操作时（例如在重写的流中**写入**）<xref:System.NotSupportedException?displayProperty=fullName>
+ 当不支持某个操作时 (如在重写的 **流中。写入** 打开的流以读取) 引发 <xref:System.NotSupportedException?displayProperty=fullName>
 
- 当转换导致溢出时（如在显式强制转换运算符重载中）引发<xref:System.OverflowException?displayProperty=fullName>
+ 当转换导致溢出 (如在显式转换运算符重载中) throw <xref:System.OverflowException?displayProperty=fullName>
 
  对于所有其他情况，可考虑创建自己的派生自的类型 <xref:System.Exception> 并引发该。
 

@@ -17,10 +17,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 4de007ef262304d570ec8ebed39e6b14a2730833
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72651939"
 ---
 # <a name="how-to-find-topics-in-the-index"></a>如何：在索引中查找主题
@@ -30,7 +30,7 @@ ms.locfileid: "72651939"
 
 ### <a name="to-find-a-topic-by-using-the-index"></a>要使用索引查找主题
 
-1. 在“索引”选项卡上，执行以下任一任务： 
+1. 在“索引”选项卡上，执行以下任一任务：****
 
    - 在文本框中指定要搜索的关键字。 例如，指定“更新”来查找具有关键字如“更新”、“已更新”和“正在更新”的主题。
 

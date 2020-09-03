@@ -1,5 +1,5 @@
 ---
-title: .NET 框架的并行扩展内部 |微软文档
+title: .NET Framework 的并行扩展内部机制 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,30 +11,30 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 6a3583e94a0bfff4474db03aa9d083add921f3da
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80738270"
 ---
-# <a name="parallel-extension-internals-for-the-net-framework"></a>.NET 框架的并行扩展内部
-本节介绍内部类型、方法和类字段，这些类可帮助您实现对 .NET 框架的并行扩展的自定义调试器。
+# <a name="parallel-extension-internals-for-the-net-framework"></a>.NET Framework 的并行扩展内部机制
+本节介绍类的内部类型、方法和字段，这些类可帮助您为 .NET Framework 的并行扩展实现自定义调试器。
 
-## <a name="in-this-section"></a>在本节中
- [任务类](../../extensibility/debugger/task-class-internal-members.md)描述<xref:System.Threading.Tasks.Task?displayProperty=fullName>类的内部数据成员。
+## <a name="in-this-section"></a>本节内容
+ [Task 类](../../extensibility/debugger/task-class-internal-members.md) 描述类的内部数据成员 <xref:System.Threading.Tasks.Task?displayProperty=fullName> 。
 
- [任务计划器类](../../extensibility/debugger/taskscheduler-class-internal-members.md)描述<xref:System.Threading.Tasks.TaskScheduler?displayProperty=fullName>类的内部数据成员。
+ [TaskScheduler 类](../../extensibility/debugger/taskscheduler-class-internal-members.md) 描述类的内部数据成员 <xref:System.Threading.Tasks.TaskScheduler?displayProperty=fullName> 。
 
- [或有属性类](../../extensibility/debugger/contingentproperties-class-internal-members.md)描述`System.Threading.Tasks.ContingentProperties`类的内部数据成员。
+ [ContingentProperties 类](../../extensibility/debugger/contingentproperties-class-internal-members.md) 描述类的内部数据成员 `System.Threading.Tasks.ContingentProperties` 。
 
- [异步任务方法构建器结构](../../extensibility/debugger/asynctaskmethodbuilder-structure-internal-members.md)描述<xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder>结构的内部成员。
+ [AsyncTaskMethodBuilder 结构](../../extensibility/debugger/asynctaskmethodbuilder-structure-internal-members.md) 描述结构的内部成员 <xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder> 。
 
- [异步任务方法构建\<器 TResult>结构](../../extensibility/debugger/asynctaskmethodbuilder-tresult-structure-internal-members.md)描述<xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder%601>结构的内部成员。
+ [AsyncTaskMethodBuilder \<TResult> 结构](../../extensibility/debugger/asynctaskmethodbuilder-tresult-structure-internal-members.md) 描述了结构的内部成员 <xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder%601> 。
 
- [异步VoidMethodBuilder结构](../../extensibility/debugger/asyncvoidmethodbuilder-structure-internal-members.md)描述<xref:System.Runtime.CompilerServices.AsyncVoidMethodBuilder>结构的内部成员。
+ [AsyncVoidMethodBuilder 结构](../../extensibility/debugger/asyncvoidmethodbuilder-structure-internal-members.md) 描述结构的内部成员 <xref:System.Runtime.CompilerServices.AsyncVoidMethodBuilder> 。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - <xref:System.Threading.Tasks.Task?displayProperty=fullName>
 - <xref:System.Threading.Tasks.TaskScheduler?displayProperty=fullName>
-- [可视化工作室调试器可扩展性](../../extensibility/debugger/visual-studio-debugger-extensibility.md)
+- [Visual Studio 调试器扩展性](../../extensibility/debugger/visual-studio-debugger-extensibility.md)
 - [并行编程](/dotnet/standard/parallel-programming/index)

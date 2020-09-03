@@ -1,5 +1,5 @@
 ---
-title: IDebugErrorEvent2::GetErrorMessage |Microsoft Docs
+title: IDebugErrorEvent2：： GetErrorMessage |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: c4b25e040fe391b0bfbd05159779096e6bad9951
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68183518"
 ---
 # <a name="idebugerrorevent2geterrormessage"></a>IDebugErrorEvent2::GetErrorMessage
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-返回允许的用户可读的错误消息构造的信息。  
+返回允许构造用户可读错误消息的信息。  
   
 ## <a name="syntax"></a>语法  
   
@@ -50,29 +50,29 @@ int GetErrorMessage(
   
 #### <a name="parameters"></a>参数  
  `pMessageType`  
- [out]返回一个值从[MESSAGETYPE](../../../extensibility/debugger/reference/messagetype.md)描述消息的类型的枚举。  
+ 弄从 [MESSAGETYPE](../../../extensibility/debugger/reference/messagetype.md) 枚举返回一个值，用于描述消息的类型。  
   
  `pbstrErrorFormat`  
- [out]向用户最后一条消息的格式 （有关详细信息，请参阅"备注"）。  
+ 弄用户的最终消息格式 (参阅 "备注" 以了解详细信息) 。  
   
  `hrErrorReason`  
- [out]有关消息的错误代码。  
+ 弄消息的错误代码。  
   
  `pdwType`  
- [out]错误的严重性 (使用的 MB_XXX 常量`MessageBox`; 例如，`MB_EXCLAMATION`或`MB_WARNING`)。  
+ 弄错误的严重性 (将 MB_XXX 常量用于 `MessageBox` ; 例如 `MB_EXCLAMATION` 或 `MB_WARNING`) 。  
   
  `pbstrHelpFileName`  
- [out]帮助文件 （设置为 null 的值，如果没有帮助文件） 的路径。  
+ 弄帮助文件的路径 (如果没有) 的帮助文件，则将设置为 null 值。  
   
  `pdwHelpId`  
- [out]若要显示 （设置为 0，如果没有任何帮助主题） 的帮助主题的 ID。  
+ 弄要显示的帮助主题的 ID (如果没有) 的帮助主题，则设置为0。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
 ## <a name="remarks"></a>备注  
- 错误消息的格式应按一系列`"What I was doing.  %1"`。 `"%1"`将替换为调用方并显示错误消息派生自的错误代码 (其返回`hrErrorReason`)。 `pMessageType`参数指示调用方应如何显示最后一条错误消息。  
+ 错误消息应按照的行格式设置 `"What I was doing.  %1"` 。 `"%1"`然后，调用方会将其替换为错误代码，此错误消息派生自) 中返回 (`hrErrorReason` 。 `pMessageType`参数告知调用方应如何显示最终的错误消息。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugErrorEvent2](../../../extensibility/debugger/reference/idebugerrorevent2.md)   
  [MESSAGETYPE](../../../extensibility/debugger/reference/messagetype.md)

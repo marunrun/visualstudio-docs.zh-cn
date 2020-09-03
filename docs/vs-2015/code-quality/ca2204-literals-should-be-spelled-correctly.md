@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: ecf829251cbeab600cb95f8f0c0b0173cd7338d4
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85546271"
 ---
 # <a name="ca2204-literals-should-be-spelled-correctly"></a>CA2204:文字应正确拼写
@@ -44,12 +44,12 @@ ms.locfileid: "85546271"
 
 - 传递给控制台. Write 或 Console 方法的字符串参数的名称为 "value" 或 "format"。
 
-  此规则将文本字符串分析为单词词汇切分，并检查每个单词/标记的拼写。 有关分析算法的信息，请参阅[CA1704：标识符应拼写正确](../code-quality/ca1704-identifiers-should-be-spelled-correctly.md)。
+  此规则将文本字符串分析为单词词汇切分，并检查每个单词/标记的拼写。 有关分析算法的信息，请参阅 [CA1704：标识符应拼写正确](../code-quality/ca1704-identifiers-should-be-spelled-correctly.md)。
 
-  默认情况下，使用英语（en）版本的拼写检查器。
+  默认情况下，使用英语 (en) 版本的拼写检查器。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
- 若要修复与此规则的冲突，请更正单词的拼写，或将该词添加到自定义字典中。 有关如何使用自定义字典的信息，请参阅[如何：自定义代码分析字典](../code-quality/how-to-customize-the-code-analysis-dictionary.md)。
+ 若要修复与此规则的冲突，请更正单词的拼写，或将该词添加到自定义字典中。 有关如何使用自定义字典的信息，请参阅 [如何：自定义代码分析字典](../code-quality/how-to-customize-the-code-analysis-dictionary.md)。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
  不禁止显示此规则发出的警告。 拼写正确的单词减少了新软件库所需的学习曲线。

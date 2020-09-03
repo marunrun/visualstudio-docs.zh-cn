@@ -16,24 +16,24 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 31bf7fe33aa59c3a713d2da81ddbd11ed6899723
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85546284"
 ---
 # <a name="ca2202-do-not-dispose-objects-multiple-times"></a>CA2202:不要多次释放对象
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|Item|值|
+|项|值|
 |-|-|
 |TypeName|DoNotDisposeObjectsMultipleTimes|
 |CheckId|CA2202|
-|Category|Microsoft. 使用情况|
+|类别|Microsoft. 使用情况|
 |是否重大更改|非重大更改|
 
 ## <a name="cause"></a>原因
- 方法实现包含的代码路径可能导致对 <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> 同一对象的多个调用或 Dispose 等效项（如某些类型上的 Close （）方法）。
+ 方法实现包含的代码路径可能会导致对同一对象的多个调用 <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> 或 Dispose 等效项，例如，在某些类型上关闭 ( # A1 方法。
 
 ## <a name="rule-description"></a>规则描述
  正确实现的 <xref:System.IDisposable.Dispose%2A> 方法可以多次调用而不引发异常。 但是，这是不能保证的，为了避免生成， <xref:System.ObjectDisposedException?displayProperty=fullName> 不应对 <xref:System.IDisposable.Dispose%2A> 对象多次调用。
@@ -48,7 +48,7 @@ ms.locfileid: "85546284"
  不禁止显示此规则发出的警告。 即使 <xref:System.IDisposable.Dispose%2A> 已知对象可以安全地多次调用，实现也可能会在将来发生变化。
 
 ## <a name="example"></a>示例
- 嵌套 `using` 的语句（ `Using` 在 Visual Basic 中）可能导致违反 CA2202 警告。 如果嵌套内部语句的 IDisposable 资源 `using` 包含外部语句的资源 `using` ， `Dispose` 则嵌套资源的方法会释放包含的资源。 出现这种情况时， `Dispose` 外部语句的方法将 `using` 尝试再次释放其资源。
+ `using` `Using` Visual Basic) 中 (的嵌套语句可能导致违反 CA2202 警告。 如果嵌套内部语句的 IDisposable 资源 `using` 包含外部语句的资源 `using` ， `Dispose` 则嵌套资源的方法会释放包含的资源。 出现这种情况时， `Dispose` 外部语句的方法将 `using` 尝试再次释放其资源。
 
  在下面的示例中，在 <xref:System.IO.Stream> 外部 using 语句中创建的对象将在 <xref:System.IO.StreamWriter> 包含该对象的对象的 Dispose 方法中的内部 using 语句的末尾释放 `stream` 。 在外部语句结束时 `using` ，将 `stream` 再次释放该对象。 第二个版本违反了 CA2202。
 

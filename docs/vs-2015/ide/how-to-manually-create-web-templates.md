@@ -15,16 +15,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 4bf604e747158c651f284c6463c2c2f65ae3c47a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72651806"
 ---
 # <a name="how-to-manually-create-web-templates"></a>如何：手动创建 Web 模板
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-创建 Web 模板与创建其他种类的模板不同。 由于 Web 项目模板出现在”添加新网站“对话框中，并且 Web 项目项由编程语言分类，vstemplate 文件必须将模板指定为 Web 模板，并识别该编程语言。
+创建 Web 模板与创建其他种类的模板不同。 由于 Web 项目模板出现在 " **添加新** 网站" 对话框中，并且 web 项目项由编程语言分类，因此 .vstemplate 文件必须将模板指定为 Web 模板，并识别编程语言。
 
 > [!NOTE]
 > Web 模板必须包含空 webproj 文件，该文件通过使用元素 `Project` 的属性 `File` 指定。 虽然 Web 项目不需要项目文件，但需要此文件来让 Web 模板正常运行。
@@ -47,7 +47,7 @@ ms.locfileid: "72651806"
 
    - VisualBasic
 
-     例如:
+     例如：
 
    ```
    <TemplateData>
@@ -58,9 +58,9 @@ ms.locfileid: "72651806"
    </TemplateData>
    ```
 
-7. 选择模板中的文件（包括 vstemplate 文件），右键单击所选文件，单击“发送至”，然后单击“压缩的文件夹（zip 格式）”。 这些文件被压缩到一个 .zip 文件中。
+7. 选择模板中的文件（包括 vstemplate 文件），右键单击所选文件，单击“发送至”，然后单击“压缩的文件夹（zip 格式）”********。 这些文件被压缩到一个 .zip 文件中。
 
-8. 将该 .zip 模板文件放入 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 项目模板目录。 默认情况下，该目录为 \My Documents\Visual Studio Version\My Exported Templates\\。
+8. 将该 .zip 模板文件放入 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 项目模板目录。 默认情况下，该目录为 \My Documents\Visual Studio Version\My Exported Templates\\**。
 
 ## <a name="example"></a>示例
  以下示例显示 Web 项目模板的基本 vstemplate 文件。
@@ -86,5 +86,5 @@ ms.locfileid: "72651806"
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [创建项目和项模板](../ide/creating-project-and-item-templates.md) [Visual Studio 模板架构引用](../extensibility/visual-studio-template-schema-reference.md)

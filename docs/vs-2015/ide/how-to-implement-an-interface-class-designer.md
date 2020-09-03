@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 6b750830e8263d0016f52a71ad4eac8c6950eda8
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72651852"
 ---
 # <a name="how-to-implement-an-interface-class-designer"></a>如何：实现接口（类设计器）
@@ -44,11 +44,11 @@ ms.locfileid: "72651852"
 2. 打开类视图，并查找该接口。
 
     > [!TIP]
-    > 如果类视图尚未打开，则从“视图”菜单打开类视图。 有关类视图的详细信息，请参阅[查看类及其成员](https://msdn.microsoft.com/71e9e8f3-261a-4e0c-87bf-5ec48b8bf333)。
+    > 如果类视图尚未打开，则从“视图”菜单打开类视图****。 有关类视图的详细信息，请参阅[查看类及其成员](https://msdn.microsoft.com/71e9e8f3-261a-4e0c-87bf-5ec48b8bf333)。
 
 3. 在关系图上将接口节点拖到类形状。
 
      将有一个棒糖形附加在类上，还有一个带接口名称的标签，用以标识继承关系。 Visual Studio 为所有接口成员生成存根；至此就实现了接口。
 
-## <a name="see-also"></a>请参阅
- [如何：使用类设计器创建类型](../ide/how-to-create-types-by-using-class-designer.md)如何[：查看现有类型（类设计器）](../ide/how-to-view-existing-types-class-designer.md) [如何：创建类型之间的继承（类设计器）](../ide/how-to-create-inheritance-between-types-class-designer.md) [重构类和类型（类设计器）](../ide/refactoring-classes-and-types-class-designer.md)
+## <a name="see-also"></a>另请参阅
+ [如何：通过使用类设计器](../ide/how-to-create-types-by-using-class-designer.md)[如何：查看现有类型 (类设计器) ](../ide/how-to-view-existing-types-class-designer.md) [如何：创建类型之间的继承 (](../ide/how-to-create-inheritance-between-types-class-designer.md)类设计器)  ([重构类和类型类设计器) ](../ide/refactoring-classes-and-types-class-designer.md)

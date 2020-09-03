@@ -1,5 +1,5 @@
 ---
-title: 流程 |微软文档
+title: 进程 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,35 +11,35 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 392c59b90bb117dded0f528bc33a617370b091a7
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80738250"
 ---
 # <a name="processes"></a>进程
-在调试器体系结构中，*进程*：
+在调试程序体系结构中， *进程*：
 
-- 是一组程序的容器。 它与 Windows 进程非常相似，Windows 进程是一组线程的容器。
+- 是一组程序的容器。 它与 Windows 进程非常相似，后者是一组线程的容器。
 
-- 可以按名称、标识符或物理标识符标识自身。
+- 可以按名称、标识符或物理标识符来标识自身。
 
-- 可以枚举所有正在运行的程序（及其线程）。
+- 可以枚举所有正在运行的程序 (及其线程) 。
 
-- 可以描述自身、正在运行的端口以及包含它的计算机。
+- 可以描述自身、运行它的端口以及包含它的计算机。
 
-- 可以创建一个或多个程序、终止它创建的任何程序，或导致程序停止。
+- 可以创建一个或多个程序、终止它创建的任何程序或导致程序停止。
 
-- 由[IDebugProcess2](../../extensibility/debugger/reference/idebugprocess2.md)接口表示，该接口是在启动进程时创建的。 进程由会话调试管理器 （SDM） 或[Launch暂停](../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md)启动。
+- 由 [IDebugProcess2](../../extensibility/debugger/reference/idebugprocess2.md) 接口表示，该接口在进程启动时创建。 进程由会话调试管理器 (SDM) 或 [LaunchSuspended](../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md)启动。
 
-  调试包可以通过调用[Attach](../../extensibility/debugger/reference/idebugprocess2-attach.md)将调试引擎 （DE） 附加到进程，这意味着 DE 附加到它可以处理的进程中运行的所有可能的程序。 例如，如果通用语言运行时 DE 附加到进程，则它仅附加到运行托管代码的程序。
+  调试包可以通过调用 [attach](../../extensibility/debugger/reference/idebugprocess2-attach.md)将调试引擎附加到进程 (取消) ，这意味着它会附加到可处理的进程中运行的所有可能的程序。 例如，如果公共语言运行时将附加到某个进程，则它仅附加到运行托管代码的程序。
 
-## <a name="see-also"></a>请参阅
-- [程序](../../extensibility/debugger/programs.md)
+## <a name="see-also"></a>另请参阅
+- [计划](../../extensibility/debugger/programs.md)
 - [线程](../../extensibility/debugger/threads.md)
 - [调试器概念](../../extensibility/debugger/debugger-concepts.md)
 - [调试包](../../extensibility/debugger/debug-package.md)
 - [调试引擎](../../extensibility/debugger/debug-engine.md)
 - [IDebugProcess2](../../extensibility/debugger/reference/idebugprocess2.md)
 - [LaunchSuspended](../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md)
-- [Attach](../../extensibility/debugger/reference/idebugprocess2-attach.md)
+- [附加](../../extensibility/debugger/reference/idebugprocess2-attach.md)

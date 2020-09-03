@@ -9,20 +9,20 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 27d837c09e5f2f90796c149bf58d1114d7e6352d
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85546310"
 ---
 # <a name="ca2153-avoid-handling-corrupted-state-exceptions"></a>CA2153:避免处理损坏状态异常
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|Item|值|
+|项|值|
 |-|-|
 |TypeName|AvoidHandlingCorruptedStateExceptions|
 |CheckId|CA2153|
-|Category|Microsoft.Security|
+|类别|Microsoft.Security|
 |是否重大更改|非重大更改|
 
 ## <a name="cause"></a>原因
@@ -68,7 +68,7 @@ void TestMethod1()
 }
 ```
 
-### <a name="solution-1"></a>解决方法 1
+### <a name="solution-1"></a>解决方案 1
  删除 HandleProcessCorruptedExceptions 特性确保将不会处理异常。
 
 ```
@@ -89,7 +89,7 @@ void TestMethod1()
 }
 ```
 
-### <a name="solution-2"></a>解决方法 2
+### <a name="solution-2"></a>解决方案 2
  删除常规的 catch 处理程序并只捕获特定异常类型。
 
 ```
@@ -110,7 +110,7 @@ void TestMethod1()
 }
 ```
 
-### <a name="solution-3"></a>解决方法 3
+### <a name="solution-3"></a>解决方案 3
  重新引发异常。
 
 ```
