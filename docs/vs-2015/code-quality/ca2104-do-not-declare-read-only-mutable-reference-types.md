@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: ff42cc2b8543fe8e1cf980a3574ae15922febf9b
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85521038"
 ---
 # <a name="ca2104-do-not-declare-read-only-mutable-reference-types"></a>CA2104:不要声明只读可变引用类型
@@ -38,9 +38,9 @@ ms.locfileid: "85521038"
 ## <a name="rule-description"></a>规则描述
  可变类型是实例数据可被修改的类型。 <xref:System.Text.StringBuilder?displayProperty=fullName>类是可变引用类型的示例。 它包含可以更改类的实例值的成员。 类是不可变引用类型的一个示例 <xref:System.String?displayProperty=fullName> 。 在实例化后，其值永远不会更改。
 
- 引用类型字段上的只读修饰符（c # 中为[readonly](https://msdn.microsoft.com/library/2f8081f6-0de2-4903-898d-99696c48d2f4) 、在 c + + 中为[readonly](https://msdn.microsoft.com/library/e868185d-6142-4359-a2fd-a7965cadfce8) [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 和[const](https://msdn.microsoft.com/library/b21c0271-1ad0-40a0-b21c-5e812bba0318) ）可防止该字段被引用类型的另一个实例替换。 但是，修饰符不会阻止通过引用类型修改字段的实例数据。
+ 在 c # 中，只读修饰符 ([readonly](https://msdn.microsoft.com/library/2f8081f6-0de2-4903-898d-99696c48d2f4) ，在 c + + 中为 [readonly](https://msdn.microsoft.com/library/e868185d-6142-4359-a2fd-a7965cadfce8)) ，而在 c + + 中 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 为 () 中的 [常量](https://msdn.microsoft.com/library/b21c0271-1ad0-40a0-b21c-5e812bba0318) ，这会阻止字段被引用类型的其他实例替换。 但是，修饰符不会阻止通过引用类型修改字段的实例数据。
 
- 只读数组字段不受此规则的阻止，而是导致 CA2105 的冲突[：数组字段不应为只读](../code-quality/ca2105-array-fields-should-not-be-read-only.md)规则。
+ 只读数组字段不受此规则的阻止，而是导致 CA2105 的冲突 [：数组字段不应为只读](../code-quality/ca2105-array-fields-should-not-be-read-only.md) 规则。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
  若要修复与此规则的冲突，请删除只读修饰符，或者，如果可接受重大更改，请将该字段替换为不可变类型。

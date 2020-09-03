@@ -18,10 +18,10 @@ dev_langs:
 ms.workload:
 - multiple
 ms.openlocfilehash: c06f9f7dc7e5a672e3fd5da3f3fc834fe223a783
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75585413"
 ---
 # <a name="code-snippets"></a>代码片段
@@ -31,17 +31,17 @@ ms.locfileid: "75585413"
 > [!NOTE]
 > 本主题适用于 Visual Studio  Windows 版。 对于 Visual Studio for Mac，请参阅[代码片段 (Visual Studio for Mac)](/visualstudio/mac/snippets)。
 
-代码片段可用于多种语言，例如 C#、C++、Visual Basic、XML 和 T-SQL。 要查看对某种语言可用的所有已安装片段，请在“工具”菜单中打开“代码片段管理器”（或按“Ctrl+K”、“Ctrl+B”），然后从顶部的下拉菜单中选择此语言       。
+代码片段可用于多种语言，例如 C#、C++、Visual Basic、XML 和 T-SQL。 要查看对某种语言可用的所有已安装片段，请在“工具”菜单中打开“代码片段管理器”（或按“Ctrl+K”、“Ctrl+B”），然后从顶部的下拉菜单中选择此语言************************。
 
 ![“代码片段管理器”对话框](media/code-snippets-manager.png)
 
 可通过以下常见方法访问代码片段：
 
-- 在菜单栏上，选择“编辑” > “IntelliSense” > “插入代码段”   
+- 在菜单栏上，选择“编辑” > “IntelliSense” > “插入代码段”  
 
-- 在代码编辑器的右键单击或上下文菜单中，选择“代码段” > “插入代码段”  
+- 在代码编辑器的右键单击或上下文菜单中，选择“代码段” > “插入代码段” 
 
-- 在键盘上按“Ctrl+K”、“Ctrl+X”    
+- 在键盘上按“Ctrl+K”、“Ctrl+X”   
 
 ## <a name="expansion-snippets-and-surround-with-snippets"></a>扩展式代码片段和外侧代码片段
 
@@ -60,9 +60,9 @@ finally
 }
 ```
 
-若要插入此代码片段，可以依次单击代码窗口的右键单击菜单（关联菜单）中的“插入代码片段”  和“Visual C#”  ，键入“`tryf`”，再按 Tab  键。或者，可键入 `tryf`，再按 Tab 两次  。
+若要插入此代码片段，可以依次单击代码窗口的右键单击菜单（关联菜单）中的“插入代码片段”和“Visual C#”，键入“`tryf`”，再按 Tab 键。或者，可键入 `tryf`，再按 Tab 两次。
 
-外侧代码片段的示例：在 C++ 快捷方式中，`if` 可用作插入代码片段，或者可用作外侧代码片段。 如果选择一行（例如 `return FALSE;`），然后单击“外侧代码” > “if”，即可让代码片段将围绕此行展开   ：
+外侧代码片段的示例：在 C++ 快捷方式中，`if` 可用作插入代码片段，或者可用作外侧代码片段。 如果选择一行（例如 `return FALSE;`），然后单击“外侧代码” > “if”，即可让代码片段将围绕此行展开 ：
 
 ```cpp
 if (true)
@@ -75,7 +75,7 @@ if (true)
 
 代码片段可以包含替换参数，这些替换参数是占位符，必须对其进行替换以适应你编写的精确代码。 上例中的 `true` 是替换参数，你可以将其替换为适当的条件。 进行的替换将针对代码片段中同一个替换参数的每个实例重复。
 
-例如，Visual Basic 中有一个用于插入属性的代码片段。 要插入代码片段，请在 Visual Basic 代码文件的右键单击或上下文菜单中选择“代码段” > “插入代码段”   。 然后，选择“代码模式” > “属性、过程和事件” > “定义属性”    。
+例如，Visual Basic 中有一个用于插入属性的代码片段。 要插入代码片段，请在 Visual Basic 代码文件的右键单击或上下文菜单中选择“代码段” > “插入代码段” 。 然后，选择“代码模式” > “属性、过程和事件” > “定义属性”  。
 
 ![用于定义属性的代码片段菜单](media/code-snippets-vb-property.png)
 
@@ -95,7 +95,7 @@ End Property
 
 如果将 `newPropertyValue` 更改为 `m_property`，则 `newPropertyValue` 的每个实例都会更改。 如果在属性声明中将 `String` 更改为 `Int`，则 Set 方法中的值也会更改为 `Int`。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [演练：创建代码片段](../ide/walkthrough-creating-a-code-snippet.md)
 - [如何：分发代码片段](../ide/how-to-distribute-code-snippets.md)
