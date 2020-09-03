@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 551e072b05e7a88ff9624c5d16e4aa199a6afd66
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657984"
 ---
 # <a name="attribute-xelement-dynamic-property"></a>特性（XElement 动态属性）
@@ -33,5 +33,5 @@ elem.Attribute[{namespaceName}attribName]
 ## <a name="remarks"></a>备注
  此属性等效于 <xref:System.Xml.Linq.XElement.Attribute%2A> 类的 <xref:System.Xml.Linq.XElement?displayProperty=fullName> 方法。
 
-## <a name="see-also"></a>请参阅
- <xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=fullName> [System.xml.linq.xelement> 类动态属性](../designers/xelement-class-dynamic-properties.md)[值](../designers/value-xattribute-dynamic-property.md)
+## <a name="see-also"></a>另请参阅
+ <xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=fullName>[System.xml.linq.xelement> 类动态属性](../designers/xelement-class-dynamic-properties.md)[值](../designers/value-xattribute-dynamic-property.md)

@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 445049452a91351ffff0cc18daa328777ed89dc9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68189922"
 ---
-# <a name="idiaenumsegmentsgetcount"></a>IDiaEnumSegments::get_Count
+# <a name="idiaenumsegmentsget_count"></a>IDiaEnumSegments::get_Count
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-检索的段数。  
+检索段数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -33,13 +33,13 @@ HRESULT get_Count ( 
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>参数  
  pRetVal  
- [out，retval]返回的段数。  
+ [out，retval]返回段数。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDiaEnumSegments](../../debugger/debug-interface-access/idiaenumsegments.md)   
  [IDiaEnumSegments::Item](../../debugger/debug-interface-access/idiaenumsegments-item.md)

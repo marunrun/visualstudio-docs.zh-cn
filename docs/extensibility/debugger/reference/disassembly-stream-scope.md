@@ -1,5 +1,5 @@
 ---
-title: DISASSEMBLY_STREAM_SCOPE |微软文档
+title: DISASSEMBLY_STREAM_SCOPE |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: fae1f22c6db22cd6cff93cfb1b98a28620a1537c
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80737268"
 ---
 # <a name="disassembly_stream_scope"></a>DISASSEMBLY_STREAM_SCOPE
-指定拆解流的范围。
+指定反汇编流的作用域。
 
 ## <a name="syntax"></a>语法
 
@@ -48,28 +48,28 @@ public enum enum_DISASSEMBLY_STREAM_SCOPE {
 
 ## <a name="fields"></a>字段
 `DSS_HUGE`\
-指定拆解代码上下文产生的输出将超过客户端在单个调用中通常希望检索的输出数。
+指定反汇编代码上下文将生成比客户端通常要在单个调用中检索的输出的输出。
 
 `DSS_FUNCTION`\
-指定应拆解代码上下文中包含的函数。 指定拆解流表示函数，当由[GetScope](../../../extensibility/debugger/reference/idebugdisassemblystream2-getscope.md)方法返回时。
+指定应反汇编代码上下文包含的函数。 指定在 [GetScope](../../../extensibility/debugger/reference/idebugdisassemblystream2-getscope.md) 方法返回时，反汇编流表示函数。
 
 `DSS_MODULE`\
-当由`IDebugDisassemblyStream2::GetScope`方法返回时，指定拆解流表示模块。
+当方法返回时 `IDebugDisassemblyStream2::GetScope` ，指定反汇编流表示模块。
 
 `DSS_ALL`\
-指定整个地址空间的拆解。
+指定整个地址空间的反汇编。
 
 ## <a name="remarks"></a>备注
-作为参数传递给[GetDisassemblyStream](../../../extensibility/debugger/reference/idebugprogram2-getdisassemblystream.md)方法，并由[GetScope](../../../extensibility/debugger/reference/idebugdisassemblystream2-getscope.md)方法返回。
+作为参数传递给 [GetDisassemblyStream](../../../extensibility/debugger/reference/idebugprogram2-getdisassemblystream.md) 方法并由 [GetScope](../../../extensibility/debugger/reference/idebugdisassemblystream2-getscope.md) 方法返回。
 
-这些值可以稍微结合`OR`。
+这些值可以与按位组合 `OR` 。
 
 ## <a name="requirements"></a>要求
-标题： msdbg.h
+标头： msdbg
 
-命名空间：微软.VisualStudio.调试器.互通
+命名空间： VisualStudio
 
-程序集：微软.VisualStudio.调试器.Interop.dll
+程序集： Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [枚举](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
