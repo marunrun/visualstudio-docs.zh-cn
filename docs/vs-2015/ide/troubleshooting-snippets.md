@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: f73cb7ba59daf2f8ee957d95dee36bba59f87614
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72654778"
 ---
 # <a name="troubleshooting-snippets"></a>疑难解答：代码段
@@ -29,9 +29,9 @@ ms.locfileid: "72654778"
 
 ### <a name="the-snippet-cannot-be-dragged-from-file-explorer-to-a-visual-studio-source-file"></a>代码片段不能从文件资源管理器拖动到 Visual Studio 源文件
 
-- 代码片段文件中的 XML 可能已损坏。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中的 XML 编辑器可找到 XML 结构中的问题  。
+- 代码片段文件中的 XML 可能已损坏。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中的 XML 编辑器可找到 XML 结构中的问题****。
 
-- 代码片段文件可能不符合代码片段架构。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中的 XML 编辑器可找到 XML 结构中的问题  。
+- 代码片段文件可能不符合代码片段架构。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中的 XML 编辑器可找到 XML 结构中的问题****。
 
 ### <a name="the-code-has-compiler-errors-that-are-not-highlighted"></a>代码具有未突出显示的编译器错误
 
