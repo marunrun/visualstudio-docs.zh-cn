@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 3b13aa65e4dd5868a36e0dd833351b1d1751d8b0
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85546167"
 ---
 # <a name="how-to-configure-a-computer-to-develop-office-solutions"></a>如何：将计算机配置为开发 Office 解决方案
@@ -25,13 +25,13 @@ ms.locfileid: "85546167"
 
 ### <a name="to-configure-the-development-computer"></a>配置开发计算机
 
-1. 安装包括 Office 开发人员工具的 Visual Studio 版本。 默认安装 Office 开发人员工具。 如果通过选择要安装的功能来自定义 Visual Studio 安装，请确保在安装过程中选择**Microsoft Office 开发人员工具**。 有关包含 Office 开发人员工具的 Visual Studio 版本的详细信息，请参阅[配置计算机以开发 office 解决方案](../vsto/configuring-a-computer-to-develop-office-solutions.md)。
+1. 安装包括 Office 开发人员工具的 Visual Studio 版本。 默认安装 Office 开发人员工具。 如果通过选择要安装的功能来自定义 Visual Studio 安装，请确保在安装过程中选择 **Microsoft Office 开发人员工具** 。 有关包含 Office 开发人员工具的 Visual Studio 版本的详细信息，请参阅 [配置计算机以开发 office 解决方案](../vsto/configuring-a-computer-to-develop-office-solutions.md)。
 
-2. 安装 Visual Studio 中的 Office 开发人员工具支持的 Office 的版本。 有关详细信息，请参阅[配置计算机以开发 Office 解决方案](../vsto/configuring-a-computer-to-develop-office-solutions.md)。
+2. 安装 Visual Studio 中的 Office 开发人员工具支持的 Office 的版本。 有关详细信息，请参阅 [配置计算机以开发 Office 解决方案](../vsto/configuring-a-computer-to-develop-office-solutions.md)。
 
-     请确保也为安装的 Office 版本安装的 PIA。 默认情况下，PIA 随 Office 一起安装。 如果修改 Office 安装程序，请确保为你要以其为目标的应用程序选择 " **.Net 可编程性支持**" 功能。
+     请确保也为安装的 Office 版本安装的 PIA。 默认情况下，PIA 随 Office 一起安装。 如果修改 Office 安装程序，请确保为你要以其为目标的应用程序选择 " **.Net 可编程性支持** " 功能。
 
-3. 如果使用的是英文版的 Visual Studio，但使用非英语的 Windows 设置，则可以安装 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] 语言包，以便以与 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] windows 相同的语言查看消息。 Visual Studio 的非英语版本将自动安装该语言包。 可从[Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=54246)获取该语言包。
+3. 如果使用的是英文版的 Visual Studio，但使用非英语的 Windows 设置，则可以安装 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] 语言包，以便以与 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] windows 相同的语言查看消息。 Visual Studio 的非英语版本将自动安装该语言包。 可从 [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=54246)获取该语言包。
 
 ## <a name="see-also"></a>请参阅
 

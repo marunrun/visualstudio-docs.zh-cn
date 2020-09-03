@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 76af290b0e32126689dbe7b60f27889d9742ea7f
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85519842"
 ---
 # <a name="how-to-programmatically-format-text-in-documents"></a>如何：以编程方式在文档中设置文本格式
@@ -26,7 +26,7 @@ ms.locfileid: "85519842"
 
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]
 
- 下面的示例选择文档中的第一个段落并更改字号、字体名称和对齐方式。 然后，它会选择范围并显示一个消息框，以在执行下一段代码前暂停。 下一节将调用 <xref:Microsoft.Office.Tools.Word.Document> 宿主项（对于文档级自定义项）或 <xref:Microsoft.Office.Interop.Word.Document> 类（对于 VSTO 外接程序）的撤消方法三次。 它应用“正文缩进”样式，并显示一个消息框以暂停代码。 然后，该代码调用 <xref:Microsoft.Office.Tools.Word.Document.Undo%2A> 方法一次，并显示一个消息框。
+ 下面的示例选择文档中的第一个段落并更改字号、字体名称和对齐方式。 然后，它会选择范围并显示一个消息框，以在执行下一段代码前暂停。 下一节调用 <xref:Microsoft.Office.Tools.Word.Document> 文档级自定义项 (的撤消方法，) 或 <xref:Microsoft.Office.Interop.Word.Document> VSTO 外接程序的类 () 三次。 它应用“正文缩进”样式，并显示一个消息框以暂停代码。 然后，该代码调用 <xref:Microsoft.Office.Tools.Word.Document.Undo%2A> 方法一次，并显示一个消息框。
 
 ## <a name="document-level-customization-example"></a>文档级自定义项示例
 

@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: c6dc131a2bb5f0c54943213fbb42561a0c72d95c
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545465"
 ---
 # <a name="ca1014-mark-assemblies-with-clscompliantattribute"></a>CA1014:用 CLSCompliantAttribute 标记程序集
@@ -54,4 +54,4 @@ ms.locfileid: "85545465"
  [!code-vb[FxCop.Design.AssembliesCls#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Design.AssembliesCls/vb/FxCop.Design.AssembliesCls.vb#1)]
 
 ## <a name="see-also"></a>另请参阅
- <xref:System.CLSCompliantAttribute?displayProperty=fullName>[语言独立性和与语言无关的组件](https://msdn.microsoft.com/library/4f0b77d0-4844-464f-af73-6e06bedeafc6)
+ <xref:System.CLSCompliantAttribute?displayProperty=fullName> [语言独立性和与语言无关的组件](https://msdn.microsoft.com/library/4f0b77d0-4844-464f-af73-6e06bedeafc6)

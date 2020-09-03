@@ -1,5 +1,5 @@
 ---
-title: 图标元素（视觉工作室模板） |微软文档
+title: ) Visual Studio 模板 (图标元素 |Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,16 +14,17 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: ff725e2db0d74e571b8c41d8a8aa80228938fbff
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80710531"
 ---
-# <a name="icon-element-visual-studio-templates"></a>图标元素（可视化工作室模板）
-指定用作模板的图标的图像文件的路径和文件名，该图标显示在"**新项目**"或"**添加新项目"** 对话框中。
+# <a name="icon-element-visual-studio-templates"></a>Visual Studio 模板 (Icon 元素) 
+指定图像文件的路径和文件名，该图像文件将显示在模板的 " **新建项目** " 或 " **添加新项** " 对话框中。
 
- \<VStemplate \<>模板数据\<>图标>
+ \<VSTemplate> \<TemplateData>
+ \<Icon>
 
 ## <a name="syntax"></a>语法
 
@@ -42,10 +43,10 @@ ms.locfileid: "80710531"
 
 ### <a name="attributes"></a>特性
 
-|特性|描述|
+|特性|说明|
 |---------------|-----------------|
-|`Package`|可选属性，用于高级用户方案。<br /><br /> 指定 Visual Studio 包 ID 的 GUID。|
-|`ID`|可选属性，用于高级用户方案。<br /><br /> 指定 Visual Studio 资源 ID。|
+|`Package`|可选属性，适用于高级用户方案。<br /><br /> 指定 Visual Studio 包 ID 的 GUID。|
+|`ID`|可选属性，适用于高级用户方案。<br /><br /> 指定 Visual Studio 资源 ID。|
 
 ### <a name="child-elements"></a>子元素
  无。
@@ -54,18 +55,18 @@ ms.locfileid: "80710531"
 
 |元素|描述|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|必需元素。<br /><br /> 将此模板分类并定义此模板在 **“新建项目”** 或 **“添加新项”** 对话框中的显示方式。|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|必需的元素。<br /><br /> 将此模板分类并定义此模板在 **“新建项目”** 或 **“添加新项”** 对话框中的显示方式。|
 
 ## <a name="text-value"></a>文本值
  若未使用 `Package` 和 `ID` 属性，则必须提供文本值。
 
- 文本提供将显示在 **"新项目"** 对话框中的模板图标的路径和文件名。
+ 此文本提供将在 " **新建项目** " 对话框中显示的模板图标的路径和文件名。
 
 ## <a name="remarks"></a>备注
  `Icon` 是 `TemplateData` 的必需子元素。
 
 ## <a name="example"></a>示例
- 下面的示例显示了[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]应用程序的项目模板的元数据。
+ 下面的示例演示应用程序的项目模板的元数据 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 。
 
 ```
 <VSTemplate Type="Project" Version="3.0.0"
@@ -92,5 +93,5 @@ ms.locfileid: "80710531"
 ```
 
 ## <a name="see-also"></a>请参阅
-- [可视化工作室模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
+- [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
 - [创建项目和项模板](../ide/creating-project-and-item-templates.md)

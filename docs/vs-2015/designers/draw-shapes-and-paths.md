@@ -10,16 +10,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: e9eba4e5bfef052f7a82c3148f5628eff9413180
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85542202"
 ---
 # <a name="draw-shapes-and-paths"></a>绘制形状和路径
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-在 XAML 设计器中，一个*形状*正是你所期望的。 例如：矩形、圆或椭圆。 *路径* 是更加灵活的形状版本。 你可以执行某些操作，如重新调整它们的形状，或将它们合并在一起以形成新形状。
+在 XAML 设计器中，一个 *形状* 正是你所期望的。 例如：矩形、圆或椭圆。 *路径* 是更加灵活的形状版本。 你可以执行某些操作，如重新调整它们的形状，或将它们合并在一起以形成新形状。
 
  形状和路径使用矢量图形，因此它们可很好地按高分辨率显示进行缩放。 若要了解有关向量图形的详细信息，请参阅 [什么是向量图形](https://www.youtube.com/watch?v=MoCSwF0n-io) 或 [向量图形](https://www.webopedia.com/TERM/V/vector_graphics.html)。
 
@@ -37,7 +37,7 @@ ms.locfileid: "85542202"
 
 - [创建剪切路径](#Clipping)
 
-## <a name="draw-a-shape"></a><a name="Shape"></a>绘制形状
+## <a name="draw-a-shape"></a><a name="Shape"></a> 绘制形状
  可以在“资产” **** 面板中查找形状。
 
  ![“资产”面板上的“形状”类别](../designers/media/b4-shapes-assetspanel.png "b4_Shapes_AssetsPanel")
@@ -89,32 +89,32 @@ ms.locfileid: "85542202"
 ### <a name="remove-a-point-in-a-path"></a>删除路径中的点
  使用“选择” **** 工具  ![](../designers/media/2ff91340-477e-4efa-a0f7-af20851e4daa.png "2ff91340-477e-4efa-a0f7-af20851e4daa")和“笔” **** 工具 ![](../designers/media/894f8612-e0ed-4e00-84cf-a9bc8f38fc54.png "894f8612-e0ed-4e00-84cf-a9bc8f38fc54")。
 
- 使用 "**选择**" 工具 ![](../designers/media/2ff91340-477e-4efa-a0f7-af20851e4daa.png "2ff91340-477e-4efa-a0f7-af20851e4daa") 选择路径。 然后，使用“笔” **** 工具 ![](../designers/media/894f8612-e0ed-4e00-84cf-a9bc8f38fc54.png "894f8612-e0ed-4e00-84cf-a9bc8f38fc54") ，以单击想要删除的点。
+ 使用 " **选择** " 工具  ![](../designers/media/2ff91340-477e-4efa-a0f7-af20851e4daa.png "2ff91340-477e-4efa-a0f7-af20851e4daa") 选择路径。 然后，使用“笔” **** 工具 ![](../designers/media/894f8612-e0ed-4e00-84cf-a9bc8f38fc54.png "894f8612-e0ed-4e00-84cf-a9bc8f38fc54") ，以单击想要删除的点。
 
 ### <a name="add-a-point-to-a-path"></a>向路径添加点
  使用“选择” **** 工具  ![](../designers/media/2ff91340-477e-4efa-a0f7-af20851e4daa.png "2ff91340-477e-4efa-a0f7-af20851e4daa")和“笔” **** 工具 ![](../designers/media/894f8612-e0ed-4e00-84cf-a9bc8f38fc54.png "894f8612-e0ed-4e00-84cf-a9bc8f38fc54")。
 
- 使用 "**选择**" 工具 ![](../designers/media/2ff91340-477e-4efa-a0f7-af20851e4daa.png "2ff91340-477e-4efa-a0f7-af20851e4daa") 选择路径。 使用“笔” **** 工具 ![](../designers/media/894f8612-e0ed-4e00-84cf-a9bc8f38fc54.png "894f8612-e0ed-4e00-84cf-a9bc8f38fc54") ，以单击想要在其中添加点的路径上的任意位置。
+ 使用 " **选择** " 工具  ![](../designers/media/2ff91340-477e-4efa-a0f7-af20851e4daa.png "2ff91340-477e-4efa-a0f7-af20851e4daa") 选择路径。 使用“笔” **** 工具 ![](../designers/media/894f8612-e0ed-4e00-84cf-a9bc8f38fc54.png "894f8612-e0ed-4e00-84cf-a9bc8f38fc54") ，以单击想要在其中添加点的路径上的任意位置。
 
-## <a name="convert-a-shape-to-a-path"></a><a name="Convert"></a>将形状转换为路径
+## <a name="convert-a-shape-to-a-path"></a><a name="Convert"></a> 将形状转换为路径
  若要采用与修改路径相同的方式来修改形状，请将形状转换为路径。
 
  **观看短片：** ![配置已安装的功能](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [使用路径：将形状转换为路径](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=147)。
 
-## <a name="combine-paths"></a><a name="Combine"></a>组合路径
+## <a name="combine-paths"></a><a name="Combine"></a> 组合路径
  可以将路径和形状合并到单个路径中。
 
  ![](../designers/media/2df17a5d-a338-4ef4-96c5-dae51cc1ca8a.png "2df17a5d-a338-4ef4-96c5-dae51cc1ca8a")
 
-|映像|说明|映像|说明|
+|图像|说明|图像|说明|
 |-|-|-|-|
-|![](../designers/media/b1-1.png "B1_1")|合并之前的两个形状|![](../designers/media/b1-4.png "B1_4")|Intersect|
+|![](../designers/media/b1-1.png "B1_1")|合并之前的两个形状|![](../designers/media/b1-4.png "B1_4")|相交|
 |![](../designers/media/b1-2.png "B1_2")|相并|![](../designers/media/b1-5.png "B1_5")|排除重叠|
 |![](../designers/media/b1-3.png "B1_3")|除|![](../designers/media/b1-6.png "B1_6")|减|
 
  **观看短片：** ![配置已安装的功能](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [使用路径：合并路径](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=195)。
 
-## <a name="create-a-compound-path"></a><a name="Compound"></a>创建复合路径
+## <a name="create-a-compound-path"></a><a name="Compound"></a> 创建复合路径
  创建复合路径时，会从结果中减去路径的任何相交部分，生成的路径会采取最底部路径的视觉属性。
 
  可以在创建之后随时分离复合路径。
@@ -123,7 +123,7 @@ ms.locfileid: "85542202"
 
  **观看短片：** ![配置已安装的功能](../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [使用路径：创建复合路径](https://www.youtube.com/watch?v=Io5bC0-nH6Q)。
 
-## <a name="create-a-clipping-path"></a><a name="Clipping"></a>创建剪切路径
+## <a name="create-a-clipping-path"></a><a name="Clipping"></a> 创建剪切路径
  剪切路径是应用于另一个对象的路径或形状，可隐藏遮蔽对象处于剪切路径之外的部分。
 
  ![](../designers/media/22471e98-a841-4f39-a3ef-36090cf5a625.png "22471e98-a841-4f39-a3ef-36090cf5a625")

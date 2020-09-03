@@ -8,10 +8,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 38496141d6fcdd33f3bf5185c3f50b1bf961d832
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85542540"
 ---
 # <a name="sharing-classes-between-dsls-by-using-a-dsl-library"></a>使用 DSL 库在 DSL 之间共享类
@@ -31,31 +31,31 @@ ms.locfileid: "85542540"
 
      若要定义导入程序可以使用的关系，请创建两个域类并创建它们之间的关系。
 
-     请考虑将域类的**继承修饰符**设置为 `Abstract` 。
+     请考虑将域类的 **继承修饰符** 设置为 `Abstract` 。
 
 3. 可以添加在 DSL 资源管理器中定义的元素，例如连接构建器。
 
 4. 您可以添加需要其他代码的自定义项，如验证约束。
 
-5. 单击 "**转换所有模板**"。
+5. 单击 " **转换所有模板**"。
 
 6. 生成项目。
 
-7. 将 DSL 分发给其他人使用时，必须同时提供编译的程序集（DLL）和文件 `DslDefinition.dsl` 。 可以在下面的文件夹中查找已编译的程序集`Dsl\bin\*`
+7. 将 DSL 分发给其他人使用时，必须同时提供编译的程序集 (DLL) 和文件 `DslDefinition.dsl` 。 可以在下面的文件夹中查找已编译的程序集 `Dsl\bin\*`
 
 #### <a name="to-import-a-dsl-library"></a>导入 DSL 库
 
-1. 在其他 DSL 定义中，在**Dsl 资源管理器**中右键单击 dsl 的根类，然后单击 "**添加新的 DslLibrary 导入**"。
+1. 在其他 DSL 定义中，在 **Dsl 资源管理器**中右键单击 dsl 的根类，然后单击 " **添加新的 DslLibrary 导入**"。
 
-2. 在属性窗口中，设置库的**文件路径**。 您可以使用相对路径或绝对路径。
+2. 在属性窗口中，设置库的 **文件路径** 。 您可以使用相对路径或绝对路径。
 
     导入的库在 DSL 资源管理器中显示为只读模式。
 
-3. 您可以使用导入的类作为基类。 在导入 DSL 中创建域类，并在属性窗口中，将 "**基类**" 设置为导入的类。
+3. 您可以使用导入的类作为基类。 在导入 DSL 中创建域类，并在属性窗口中，将 " **基类** " 设置为导入的类。
 
 4. 单击“转换所有模板”。
 
-5. 添加到 DSL 项目引用 DSL 库项目生成的程序集（DLL）。
+5. 向 DSL 项目添加对 DSL 库项目生成的程序集 (DLL) 的引用。
 
 6. 生成解决方案。
 

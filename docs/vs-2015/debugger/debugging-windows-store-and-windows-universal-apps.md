@@ -15,10 +15,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: b8423884393be19149a06b7d30749649e1cf57ff
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545556"
 ---
 # <a name="debugging-windows-store-and-windows-universal-apps"></a>调试 Windows 应用商店和 Windows 通用应用
@@ -26,13 +26,13 @@ ms.locfileid: "85545556"
 
 Visual Studio 调试器提供对调试 Windows 应用商店应用程序的完整支持。  
   
- 有关调试 Windows 通用应用的信息，请参阅[部署和调试 Windows 通用平台应用](https://msdn.microsoft.com/library/windows/apps/mt613243.aspx)。  
+ 有关调试 Windows 通用应用的信息，请参阅 [部署和调试 Windows 通用平台应用](https://msdn.microsoft.com/library/windows/apps/mt613243.aspx)。  
   
- 若要调试 Windows Phone 的应用，请参阅[Windows Phone 8 的调试应用](https://msdn.microsoft.com/library/windows/apps/ff402572\(v=vs.105\).aspx)。  
+ 若要调试 Windows Phone 的应用，请参阅 [Windows Phone 8 的调试应用](https://msdn.microsoft.com/library/windows/apps/ff402572\(v=vs.105\).aspx)。  
   
 ## <a name="in-this-section"></a>本节内容  
   
-|Title|描述|  
+|Title|说明|  
 |-|-|  
 |[从 Visual Studio 运行应用](../debugger/run-store-apps-from-visual-studio.md)|在本地计算机上、在应用模拟器或仿真程序中或者在远程设备上运行应用商店应用。|  
 |[在 Visual Studio 中调试应用](../debugger/debug-store-apps-in-visual-studio.md)|使用 Visual Studio 调试器，在应用商店应用中查找和修复错误。|  

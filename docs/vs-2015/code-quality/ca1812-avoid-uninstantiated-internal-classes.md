@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 401fbfbccfeeeeec5cbdc0e791b110d1b5f0201b
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85543970"
 ---
 # <a name="ca1812-avoid-uninstantiated-internal-classes"></a>CA1812:避免未实例化的内部类
@@ -50,7 +50,7 @@ ms.locfileid: "85543970"
 
 - 编译器发出的数组类型
 
-- 不能实例化并 `static` 仅定义（ `Shared` 在 Visual Basic 中）方法的类型。
+- 不能实例化并 `static` `Shared` 仅定义 Visual Basic) 方法中 (的类型。
 
   如果你将应用 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute?displayProperty=fullName> 到正在分析的程序集，则将不会在标记为的任何构造函数上出现此规则， `internal` 因为你无法判断某个字段是否正由其他 `friend` 程序集使用。
 
@@ -61,7 +61,7 @@ ms.locfileid: "85543970"
 
 - 面向版本1.0 和1.1 的类型的私有构造函数 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 。
 
-- `static`面向的类型的（ `Shared` 在 Visual Basic）修饰符 [!INCLUDE[dnprdnlong](../includes/dnprdnlong-md.md)] 。
+- `static` `Shared` 针对面向的类型 Visual Basic) 修饰符中的 ([!INCLUDE[dnprdnlong](../includes/dnprdnlong-md.md)] 。
 
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
  可以安全地禁止显示此规则发出的警告。 建议在以下情况下禁止显示此警告：
