@@ -16,20 +16,20 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 118c29473db09d5ed0a4fa447e27e593a88f98b3
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85546752"
 ---
 # <a name="ca1046-do-not-overload-operator-equals-on-reference-types"></a>CA1046:不要对引用类型重载相等运算符
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|Item|值|
+|项|值|
 |-|-|
 |TypeName|DoNotOverloadOperatorEqualsOnReferenceTypes|
 |CheckId|CA1046|
-|Category|Microsoft. Design|
+|类别|Microsoft. Design|
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
@@ -56,7 +56,7 @@ ms.locfileid: "85546752"
 
  本示例生成以下输出。
 
- **a = new （2，2）和 b = new （2，2）是否相同？没有** 
+ **a = new (2，2) ，b = new (2，2) 相等？没有** 
  **c 和 a 是否相等？是** 
  **b，a 是 = =？没有** 
  **c 和 a 是 = =？是**

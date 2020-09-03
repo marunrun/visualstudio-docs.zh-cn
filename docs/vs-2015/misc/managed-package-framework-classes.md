@@ -13,10 +13,10 @@ ms.assetid: 15aedcc3-c79a-460b-b620-43223f1ae81e
 caps.latest.revision: 24
 manager: jillfra
 ms.openlocfilehash: 2e9fe1abb82d3d64232e3e5e2a6d117c1068aa1c
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74297693"
 ---
 # <a name="managed-package-framework-classes"></a>托管包框架类
@@ -28,7 +28,7 @@ ms.locfileid: "74297693"
 ## <a name="mpf-namespaces"></a>MPF 命名空间  
  下表列出了由 [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)]提供的 MPF 命名空间。  
   
-|命名空间|内容|  
+|命名空间|目录|  
 |----------------|--------------|  
 |<xref:Microsoft.VisualStudio>|包含用于处理 COM 错误、 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 常量和 Win32 窗口的有用类。|  
 |<xref:Microsoft.VisualStudio.Package>|包含 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 项目、编辑器和 MSBuild 的托管代码包装。|  
@@ -38,7 +38,7 @@ ms.locfileid: "74297693"
 |<xref:Microsoft.VisualStudio.Shell.Design.Serialization.CodeDom>|包含 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] CodeDom 设计器扩展。|  
 |<xref:Microsoft.VisualStudio.Shell.Flavor>|支持项目子类型（也称为“风格”）。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Vspackage 和托管包框架](../misc/vspackages-and-the-managed-package-framework.md)   
  [使用 Visual Studio 互操作程序集](../extensibility/internals/using-visual-studio-interop-assemblies.md)   
  [VSPackage 和托管包框架](../misc/vspackages-and-the-managed-package-framework.md)

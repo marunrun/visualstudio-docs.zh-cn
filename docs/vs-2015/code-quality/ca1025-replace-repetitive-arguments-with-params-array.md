@@ -16,20 +16,20 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 84809341d7898aeb3defe0447f2a2f1142eb460a
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85546622"
 ---
 # <a name="ca1025-replace-repetitive-arguments-with-params-array"></a>CA1025:用形参数组替换重复的实参
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|Item|值|
+|项|值|
 |-|-|
 |TypeName|ReplaceRepetitiveArgumentsWithParamsArray|
 |CheckId|CA1025|
-|Category|Microsoft. Design|
+|类别|Microsoft. Design|
 |是否重大更改|不间断|
 
 ## <a name="cause"></a>原因

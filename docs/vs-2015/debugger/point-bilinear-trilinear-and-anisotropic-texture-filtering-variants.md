@@ -1,5 +1,5 @@
 ---
-title: Point、 Bilinear、 Trilinear 和 Anisotropic 纹理过滤变量 |Microsoft Docs
+title: Point、双线性、Trilinear 和各向异性纹理筛选变体 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -10,10 +10,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 5c53f3b0633ec8938de210cb518d9fae1937eb2c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68185406"
 ---
 # <a name="point-bilinear-trilinear-and-anisotropic-texture-filtering-variants"></a>Point、Bilinear、Trilinear 和 Anisotropic 纹理过滤变量
@@ -57,15 +57,15 @@ ms.locfileid: "68185406"
   
 - `D3D11_FILTER_ANISOTROPIC`  
   
-  在“点纹理筛选”变体中，应用程序提供的筛选模式将替换为 `D3D11_FILTER_MIN_MAG_MIP_POINT`；在“双线性纹理筛选”变体中，将替换为 `D3D11_FILTER_MIN_MAG_LINEAR_MIP_POINT`；在“三线性纹理筛选”变体中，将替换为 `D3D11_FILTER_MIN_MAG_MIP_LINEAR`    。  
+  在“点纹理筛选”变体中，应用程序提供的筛选模式将替换为 `D3D11_FILTER_MIN_MAG_MIP_POINT`；在“双线性纹理筛选”变体中，将替换为 `D3D11_FILTER_MIN_MAG_LINEAR_MIP_POINT`；在“三线性纹理筛选”变体中，将替换为 `D3D11_FILTER_MIN_MAG_MIP_LINEAR`  。  
   
-  在“各向异性纹理筛选”变体中，应用程序提供的筛选模式将替换为 `D3D11_FILTER_ANISOTROPIC`，且最大各向异性将设置为 16  。  
+  在“各向异性纹理筛选”变体中，应用程序提供的筛选模式将替换为 `D3D11_FILTER_ANISOTROPIC`，且最大各向异性将设置为 16。  
   
 ## <a name="restrictions-and-limitations"></a>限制和约束  
- 在 Direct3D 中，功能级别 9.1 指定最大各向异性为 2x。 因为“各向异性纹理筛选”变体尝试以独占方式使用 16x 各向异性，所以当帧分析在功能级别 9.1 的设备上运行时播放将失败  。 受此约束影响的现代设备包括基于 ARM 的 Surface RT 和 Surface 2 Windows 平板电脑。 仍然可能在某些计算机中找到的较旧 GPU 也可能会受影响，但是将它们普遍视为已过时且它们越来越不常见。  
+ 在 Direct3D 中，功能级别 9.1 指定最大各向异性为 2x。 因为“各向异性纹理筛选”变体尝试以独占方式使用 16x 各向异性，所以当帧分析在功能级别 9.1 的设备上运行时播放将失败。 受此约束影响的现代设备包括基于 ARM 的 Surface RT 和 Surface 2 Windows 平板电脑。 仍然可能在某些计算机中找到的较旧 GPU 也可能会受影响，但是将它们普遍视为已过时且它们越来越不常见。  
   
 ## <a name="example"></a>示例  
- 通过使用如下代码，可重现“点纹理筛选”变体  ：  
+ 通过使用如下代码，可重现“点纹理筛选”变体：  
   
 ```  
 D3D11_SAMPLER_DESC sampler_description;  
@@ -79,7 +79,7 @@ d3d_context->PSSetSamplers(0, 1, &sampler
 ```  
   
 ## <a name="example"></a>示例  
- 通过使用如下代码，可重现“双线性纹理筛选”变体  ：  
+ 通过使用如下代码，可重现“双线性纹理筛选”变体：  
   
 ```  
 D3D11_SAMPLER_DESC sampler_description;   
@@ -93,7 +93,7 @@ d3d_context->PSSetSamplers(0, 1, &sampler
 ```  
   
 ## <a name="example"></a>示例  
- 通过使用如下代码，可重现“三线性纹理筛选”变体  ：  
+ 通过使用如下代码，可重现“三线性纹理筛选”变体：  
   
 ```  
 D3D11_SAMPLER_DESC sampler_description;   
@@ -107,7 +107,7 @@ d3d_context->PSSetSamplers(0, 1, &sampler
 ```  
   
 ## <a name="example"></a>示例  
- 通过使用如下代码，可重现“各向异性问题筛选”变体  ：  
+ 通过使用如下代码，可重现“各向异性问题筛选”变体：  
   
 ```  
 D3D11_SAMPLER_DESC sampler_description;   

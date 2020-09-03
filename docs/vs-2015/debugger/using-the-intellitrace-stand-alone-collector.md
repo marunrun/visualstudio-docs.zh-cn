@@ -14,10 +14,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 81eedeeb9a1b2470e87f0d865996ad3e456723fe
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85520544"
 ---
 # <a name="using-the-intellitrace-stand-alone-collector"></a>使用 IntelliTrace 独立收集器
@@ -200,9 +200,9 @@ ms.locfileid: "85520544"
 
      2. 在“安全”  选项卡上，选择“编辑” ，然后单击“添加” 。
 
-     3. 确保“内置安全主体”  出现在“选择此对象类型”  框中。 如果不存在，请选择要添加的**对象类型**。
+     3. 确保“内置安全主体”  出现在“选择此对象类型”  框中。 如果不存在，请选择要添加的 **对象类型** 。
 
-     4. 确保本地计算机出现在“从此处”  框中。 如果不存在，请选择 "**位置**" 进行更改。
+     4. 确保本地计算机出现在“从此处”  框中。 如果不存在，请选择 " **位置** " 进行更改。
 
      5. 在“输入要选择的对象名称”  框中，添加 Web 应用或 SharePoint 应用程序的应用程序池。
 
@@ -223,7 +223,7 @@ ms.locfileid: "85520544"
 
      `Start-IntelliTraceCollection "SharePoint - 80" "C:\IntelliTraceCollector\collection_plan.ASP.NET.default.xml" "C:\IntelliTraceLogFiles"`
 
-    |Item|说明|
+    |项|描述|
     |-|-|
     |*应用程序池*|应用程序运行的应用程序池名|
     |*收集计划路径*|收集计划路径，配置收集器设置的 .xml 文件。<br /><br /> 你可指定收集器附带的一个计划。 以下计划适合 Web 应用和 SharePoint 应用程序：<br /><br /> -   collection_plan.ASP.NET.default.xml<br />     仅收集 IntelliTrace 事件和 SharePoint 事件，包括异常、数据库调用及 Web 服务器请求。<br />-   collection_plan.ASP.NET.trace.xml<br />     收集 collection_plan.ASP.NET.default.xml 中的函数调用及所有数据。 该计划非常适合进行详细分析，但其可能导致你的应用速度比 collection_plan.ASP.NET.default.xml 更慢。<br /><br /> 为避免应用速度变慢，自定义这些计划或创建自己的计划。 为安全起见，将所有自定义计划放在收集器文件所在的同一安全位置。 请参阅 [创建并自定义 IntelliTrace 收集计划](https://devblogs.microsoft.com/devops/modifying-an-intellitrace-collection-plan-for-the-stand-alone-collector/) 和 [如何在应用速度不减的前提下获取最多的数据？](#Minimizing) **注意：** 默认情况下，.iTrace 文件最大不得超过 100 MB。 .iTrace 文件大小达到该上限时，收集器会删除文件中最早的项以便为更新的项让出空间。 要更改该上限，请修改此收集计划的 `MaximumLogFileSize` 属性。 <br /><br /> *从何处可找到这些收集计划的本地版本？*<br /><br /> 可在收集器子文件夹中找到本地计划。|
@@ -262,7 +262,7 @@ ms.locfileid: "85520544"
 
      `C:IntelliTraceCollectorIntelliTraceSC.exe launch /cp:"C:IntelliTraceCollectorcollection_plan.ASP.NET.default.xml" /f:"C:IntelliTraceLogFilesMyApp.itrace" "C:MyAppMyApp.exe"`
 
-    |Item|说明|
+    |项|描述|
     |-|-|
     |*IntelliTrace 收集器可执行文件完整路径*|收集器可执行文件的完整路径，IntelliTraceSC.exe|
     |*收集计划路径*|收集计划路径，配置收集器设置的 .xml 文件。<br /><br /> 你可指定收集器附带的一个计划。 以下计划适合托管应用：<br /><br /> -   collection_plan.ASP.NET.default.xml<br />     仅收集 IntelliTrace 事件，包括异常、数据库调用及 Web 服务器请求。<br />-   collection_plan.ASP.NET.trace.xml<br />     收集 collection_plan.ASP.NET.default.xml 中的函数调用及所有数据。 该计划非常适合进行详细分析，但其可能导致你的应用速度比 collection_plan.ASP.NET.default.xml 更慢。<br /><br /> 为避免应用速度变慢，自定义这些计划或创建自己的计划。 为安全起见，将所有自定义计划放在收集器文件所在的同一安全位置。 请参阅 [创建并自定义 IntelliTrace 收集计划](https://devblogs.microsoft.com/devops/modifying-an-intellitrace-collection-plan-for-the-stand-alone-collector/) 和 [如何在应用速度不减的前提下获取最多的数据？](#Minimizing) **注意：** 默认情况下，.iTrace 文件最大不得超过 100 MB。 .iTrace 文件大小达到该上限时，收集器会删除文件中最早的项以便为更新的项让出空间。 要更改该上限，请修改此收集计划的 `MaximumLogFileSize` 属性。 <br /><br /> *从何处可找到这些收集计划的本地版本？*<br /><br /> 可在收集器子文件夹中找到本地计划。|
@@ -381,7 +381,7 @@ ms.locfileid: "85520544"
 
 ## <a name="where-else-can-i-get-intellitrace-data"></a><a name="WhereElse"></a> 可从哪些其他渠道获取 IntelliTrace 数据？
 
-- 在 Visual Studio Enterprise 中的 IntelliTrace 调试会话中，请参阅[Intellitrace 功能](../debugger/intellitrace-features.md)。
+- 在 Visual Studio Enterprise 中的 IntelliTrace 调试会话中，请参阅 [Intellitrace 功能](../debugger/intellitrace-features.md)。
 
 - 可通过 Microsoft 测试管理器中的测试会话获取，请参阅 [如何：收集 IntelliTrace 数据以帮助调试难题](/visualstudio/test/how-to-collect-intellitrace-data-to-help-debug-difficult-issues?view=vs-2015)。
 

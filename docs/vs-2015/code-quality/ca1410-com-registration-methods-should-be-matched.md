@@ -16,27 +16,27 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 43767ce04b32440a5c6753f5bfcabb91487c1232
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85546700"
 ---
 # <a name="ca1410-com-registration-methods-should-be-matched"></a>CA1410:应对 COM 注册方法进行匹配
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|Item|值|
+|项|值|
 |-|-|
 |TypeName|ComRegistrationMethodsShouldBeMatched|
 |CheckId|CA1410|
-|Category|Microsoft. 互操作性|
+|类别|Microsoft. 互操作性|
 |是否重大更改|不间断|
 
 ## <a name="cause"></a>原因
  类型声明用特性标记的方法 <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute?displayProperty=fullName> ，但不声明用特性标记的方法 <xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute?displayProperty=fullName> ，反之亦然。
 
 ## <a name="rule-description"></a>规则描述
- 要使组件对象模型（COM）客户端创建 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 类型，必须先注册类型。 如果可用，则在注册过程中将调用标记为属性的方法， <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute> 以运行用户指定的代码。 在注销过程中，将调用使用特性标记的相应方法， <xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute> 以撤消注册方法的操作。
+ 对于组件对象模型 (COM) 客户端创建 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 类型，必须先注册该类型。 如果可用，则在注册过程中将调用标记为属性的方法， <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute> 以运行用户指定的代码。 在注销过程中，将调用使用特性标记的相应方法， <xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute> 以撤消注册方法的操作。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
  若要修复与此规则的冲突，请添加相应的注册或注销方法。
@@ -54,4 +54,4 @@ ms.locfileid: "85546700"
  [CA1411:COM 注册方法应该是不可见的](../code-quality/ca1411-com-registration-methods-should-not-be-visible.md)
 
 ## <a name="see-also"></a>另请参阅
- <xref:System.Runtime.InteropServices.RegistrationServices?displayProperty=fullName>将[程序集注册到 COM](https://msdn.microsoft.com/library/87925795-a3ae-4833-b138-125413478551) [Regasm.exe （程序集注册工具）](https://msdn.microsoft.com/library/e190e342-36ef-4651-a0b4-0e8c2c0281cb)
+ <xref:System.Runtime.InteropServices.RegistrationServices?displayProperty=fullName>[向 COM](https://msdn.microsoft.com/library/87925795-a3ae-4833-b138-125413478551) [Regasm.exe (程序集注册工具](https://msdn.microsoft.com/library/e190e342-36ef-4651-a0b4-0e8c2c0281cb)注册程序集) 

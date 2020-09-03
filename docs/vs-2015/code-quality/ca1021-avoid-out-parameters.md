@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: f8f1b0c17fe9135bf534b9f30bf4e54c8c286ada
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85546687"
 ---
 # <a name="ca1021-avoid-out-parameters"></a>CA1021:避免使用 out 参数
@@ -36,7 +36,7 @@ ms.locfileid: "85546687"
  公共类型中的公共或受保护方法具有 `out` 参数。
 
 ## <a name="rule-description"></a>规则描述
- 按引用传递类型（使用 `out` 或 `ref` ）需要使用指针的经验，了解值类型和引用类型的不同之处，以及处理具有多个返回值的方法。 此外，和参数之间的差异 `out` 并 `ref` 不被广泛理解。
+ 使用或)  (传递类型 `out` `ref` 需要使用指针的经验，了解值类型和引用类型的不同之处，以及处理具有多个返回值的方法。 此外，和参数之间的差异 `out` 并 `ref` 不被广泛理解。
 
  如果引用类型按引用传递，则该方法要使用参数来返回对象的不同实例。 按引用传递引用类型也称为使用双指针、指向指针的指针或双重间接寻址。 通过使用按值传递的默认调用约定 "，采用引用类型的参数已经收到指向对象的指针。 指针（而不是它指向的对象）通过值传递。 "按值传递" 表示方法不能更改指针以使其指向引用类型的新实例。 但是，它可以更改它所指向的对象的内容。 对于大多数应用程序，这就足够了，并生成了所需的行为。
 
@@ -53,12 +53,12 @@ ms.locfileid: "85546687"
  可以安全地禁止显示此规则发出的警告。 但是，这种设计可能会导致可用性问题。
 
 ## <a name="example"></a>示例
- 以下库显示类的两个实现，该类生成对用户反馈的响应。 第一个实现（ `BadRefAndOut` ）强制库用户管理三个返回值。 第二个实现（ `RedesignedRefAndOut` ）通过返回将 `ReplyData` 数据作为单个单元进行管理的容器类（）的实例，简化了用户体验。
+ 以下库显示类的两个实现，该类生成对用户反馈的响应。 第一次实现 (`BadRefAndOut`) 强制库用户管理三个返回值。 第二种实现 (`RedesignedRefAndOut`) 通过返回一个容器类的实例， (将 `ReplyData` 数据作为单个单元进行管理的) 来简化用户体验。
 
  [!code-csharp[FxCop.Design.NoRefOrOut#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.NoRefOrOut/cs/FxCop.Design.NoRefOrOut.cs#1)]
 
 ## <a name="example"></a>示例
- 以下应用程序说明了用户的体验。 对重新设计的库（ `UseTheSimplifiedClass` 方法）的调用更简单，并且由方法返回的信息易于管理。 这两种方法的输出是相同的。
+ 以下应用程序说明了用户的体验。 对重新设计的库的调用 (`UseTheSimplifiedClass` 方法) 更简单，并且由方法返回的信息易于管理。 这两种方法的输出是相同的。
 
  [!code-csharp[FxCop.Design.TestNoRefOrOut#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.TestNoRefOrOut/cs/FxCop.Design.TestNoRefOrOut.cs#1)]
 
@@ -84,8 +84,8 @@ ms.locfileid: "85546687"
 **12345 abcde...z**
 ## <a name="try-pattern-methods"></a>尝试模式方法
 
-### <a name="description"></a>描述
- 实现** \<Something> Try**模式的方法（如 <xref:System.Int32.TryParse%2A?displayProperty=fullName> ）不会引发此冲突。 下面的示例显示了实现方法的结构（值类型） <xref:System.Int32.TryParse%2A?displayProperty=fullName> 。
+### <a name="description"></a>说明
+ 实现** \<Something> Try**模式的方法（如 <xref:System.Int32.TryParse%2A?displayProperty=fullName> ）不会引发此冲突。 下面的示例显示了实现方法)  (值类型的结构 <xref:System.Int32.TryParse%2A?displayProperty=fullName> 。
 
 ### <a name="code"></a>代码
  [!code-csharp[FxCop.Design.TryPattern#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.TryPattern/cs/FxCop.Design.TryPattern.cs#1)]

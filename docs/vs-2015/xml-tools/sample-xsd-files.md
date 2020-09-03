@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 213f53a426c21f967d82562f24ec07c6eb3edfbd
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72656186"
 ---
 # <a name="sample-xsd-files"></a>示例 XSD 文件
@@ -26,7 +26,7 @@ ms.locfileid: "72656186"
 
 ## <a name="in-this-section"></a>本节内容
 
-|主题|描述|
+|主题|说明|
 |-----------|-----------------|
 |[示例 XSD 文件：采购订单架构](../xml-tools/sample-xsd-file-purchase-order-schema.md)|一个包含典型采购订单架构的 XSD 文档。|
 |[示例 XSD 文件：简单架构](../xml-tools/sample-xsd-file-simple-schema.md)|一个包含简单架构的 XSD 文档。|

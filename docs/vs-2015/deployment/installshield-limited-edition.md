@@ -10,10 +10,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 2e56618138fccf6ac431741769b1d4b5ebe7bad4
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74295122"
 ---
 # <a name="installshield-limited-edition"></a>InstallShield Limited Edition
@@ -26,10 +26,10 @@ ms.locfileid: "74295122"
   
 ### <a name="to-enable-installshield-limited-edition"></a>启用 InstallShield Limited Edition  
   
-1. 在菜单栏上，依次选择“文件”、“新建”、“项目”。  
+1. 在菜单栏上，依次选择“文件” 、“新建” 、“项目” 。  
   
-2. 在“新建项目” 对话框中，展开“其他项目类型” 节点，然后选择“安装和部署” 节点。  
+2. 在“新建项目” **** 对话框中，展开“其他项目类型” **** 节点，然后选择“安装和部署” **** 节点。  
   
-3. 在模板列表中，选择“启用 InstallShield Limited Edition”，然后选择“确定” 按钮。  
+3. 在模板列表中，选择“启用 InstallShield Limited Edition” ****，然后选择“确定” **** 按钮。  
   
-4. 在打开的浏览器窗口中阅读说明，然后选择“转到下载网站” 链接。
+4. 在打开的浏览器窗口中阅读说明，然后选择“转到下载网站” **** 链接。
