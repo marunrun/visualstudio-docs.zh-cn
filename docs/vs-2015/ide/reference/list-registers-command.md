@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 3476244d3044eb80dbfce3559479421b012cc5fa
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72659501"
 ---
 # <a name="list-registers-command"></a>“列出寄存器”命令
@@ -36,7 +36,7 @@ Debug.ListRegisters [/Display [{register|registerGroup}...]] [/List]
 ```
 
 ## <a name="switches"></a>开关
- /Display [{`register`&#124; `registerGroup`} ...]显示指定 `register` 或 `registerGroup` 的值。 如果没有指定 `register` 或 `registerGroup`，将显示寄存器的默认列表。 如果没有指定任何开关，则出现相同行为。 例如:
+ /Display [{ `register`&#124;`registerGroup` } ...]显示指定的或的值 `register` `registerGroup` 。 如果没有指定 `register` 或 `registerGroup`，将显示寄存器的默认列表。 如果没有指定任何开关，则出现相同行为。 例如：
 
  `Debug.ListRegisters /Display eax`
 
@@ -46,9 +46,9 @@ Debug.ListRegisters [/Display [{register|registerGroup}...]] [/List]
 
  /List 显示列表中的所有注册组。
 
- /Watch [{`register`&#124; `registerGroup`} ...]向列表中添加一个或多个 `register` 或 `registerGroup` 值。
+ /Watch [{ `register`&#124;`registerGroup` } ...]向列表中添加一个或多个 `register` 或 `registerGroup` 值。
 
- /Unwatch [{`register`&#124; `registerGroup`} ...]从列表中删除一个或多个 `register` 或 `registerGroup` 值。
+ /Unwatch [{ `register`&#124;`registerGroup` } ...]从列表中删除一个或多个 `register` 或 `registerGroup` 值。
 
 ## <a name="remarks"></a>备注
  别名 `r` 可用来代替 `Debug.ListRegisters`。
@@ -60,5 +60,5 @@ Debug.ListRegisters [/Display [{register|registerGroup}...]] [/List]
 r /Display Flags
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [Visual Studio 命令](../../ide/reference/visual-studio-commands.md)[调试基础知识：注册窗口](../../debugger/debugging-basics-registers-window.md)[如何：使用 "寄存器" 窗口](../../debugger/how-to-use-the-registers-window.md)

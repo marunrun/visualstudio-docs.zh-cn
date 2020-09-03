@@ -1,5 +1,5 @@
 ---
-title: 断言失败对话框 |Microsoft Docs
+title: “断言失败”对话框 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -22,10 +22,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: d665f51f2ec5d825dbac1533c82e3d15bf419ff2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68161823"
 ---
 # <a name="assertion-failed-dialog-box"></a>“断言失败”对话框
@@ -39,5 +39,5 @@ ms.locfileid: "68161823"
 |忽略|忽略断言并继续运行该程序。|  
 |中止|暂停执行程序，并结束调试会话。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [C/C++ 断言](../debugger/c-cpp-assertions.md)

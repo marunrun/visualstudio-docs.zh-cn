@@ -16,24 +16,24 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 223b2ff9aa25ddd94a3c62eb9e641127a1cace4e
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85543814"
 ---
 # <a name="ca1811-avoid-uncalled-private-code"></a>CA1811:避免使用未调用的私有代码
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|Item|值|
+|项|值|
 |-|-|
 |TypeName|AvoidUncalledPrivateCode|
 |CheckId|CA1811|
-|Category|Microsoft. 性能|
+|类别|Microsoft. 性能|
 |是否重大更改|不间断|
 
 ## <a name="cause"></a>原因
- 私有或内部（程序集级别）成员在程序集中没有调用方，公共语言运行时不会调用该成员，并且委托不会调用该成员。 此规则不检查以下成员：
+ 私有或内部 (程序集级别) 成员在程序集中没有调用方，公共语言运行时不会调用该程序集，也不会由委托调用。 此规则不检查以下成员：
 
 - 显式接口成员。
 

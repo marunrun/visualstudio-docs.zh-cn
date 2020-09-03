@@ -1,5 +1,5 @@
 ---
-title: 项目的 Visual Basic 调试配置的设置 |Microsoft Docs
+title: Visual Basic 调试配置的项目设置 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -24,10 +24,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 27acc89790e0759d3b284e3d9a4c6798c3d9a16f
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65687578"
 ---
 # <a name="project-settings-for-a-visual-basic-debug-configuration"></a>Project Settings for a Visual Basic Debug Configuration
@@ -36,14 +36,14 @@ ms.locfileid: "65687578"
 可以在“属性页”窗口中更改 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 调试配置的项目设置，这在[调试和发布配置](../debugger/how-to-set-debug-and-release-configurations.md)中进行了探讨。 下表显示“属性页”窗口中与调试器有关的设置的位置。  
   
 > [!WARNING]
-> 本主题不适用于应用商店应用。 请参阅[启动调试会话 (VB、 C#，C++和 XAML)](../debugger/start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml.md)  
+> 本主题不适用于应用商店应用。 请参阅[启动调试会话（VB、C#、C++ 和 XAML）](../debugger/start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml.md)  
   
 ### <a name="debug-tab"></a>“调试”选项卡  
   
 |设置|描述|  
 |-------------|-----------------|  
-|**配置**|设置编译应用程序的模式。 在“活动(调试)”、“调试”、“发布”和“所有配置”之间进行选择。|  
-|**启动操作**|这组控件指定在从“调试”菜单中选择“启动”时将发生的操作。<br /><br /> -   “启动项目”是默认值，用于启动启动项目以供调试。 有关详细信息，请参阅[NIB 如何：设置启动项目](https://msdn.microsoft.com/31465836-0911-48db-a5d9-e456b635e970)。<br />-   “启动外部程序”用于启动和附加到不属于 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 项目的程序。 有关详细信息，请参阅[附加到运行中的进程](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)。<br />-   “使用 URL 启动浏览器”可用于调试 Web 应用程序。|  
+|**配置**|设置编译应用程序的模式。 在“活动(调试)”、“调试”、“发布”和“所有配置”之间进行选择   。|  
+|**启动操作**|这组控件指定在从“调试”菜单中选择“启动”时将发生的操作。<br /><br /> -   “启动项目”是默认值，用于启动启动项目以供调试。 有关详细信息，请参阅 [笔尖如何：设置启动项目](https://msdn.microsoft.com/31465836-0911-48db-a5d9-e456b635e970)。<br />-   “启动外部程序”用于启动和附加到不属于 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 项目的程序。 有关详细信息，请参阅[附加到运行中的进程](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)。<br />-   “使用 URL 启动浏览器”可用于调试 Web 应用程序。|  
 |**命令行参数**|指定要调试的程序的命令行参数。 该命令名是在“启动外部程序”中指定的程序名。 如果“启动操作”设置为“启动 URL”，则忽略命令行自变量。|  
 |**工作目录**|指定被调试的程序的工作目录。 在 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 中，工作目录就是启动应用程序所在的目录。 默认工作目录是 \bin\Debug 或 \bin\Release，具体取决于当前配置。|  
 |**使用远程计算机**|选中此复选框后，将启用远程调试。 在文本框中，可以键入出于调试目的运行应用程序的远程计算机的名称或 [Msvsmon 服务器名称](https://msdn.microsoft.com/library/55b60ce7-834b-4e83-a10e-fe4248260a4c)。 该 EXE 在远程计算机上的位置是由“生成”选项卡中的“输出路径”属性指定的。此位置必须是远程计算机上的共享目录。|  
@@ -59,5 +59,5 @@ ms.locfileid: "65687578"
 |**定义 DEBUG 常量**|定义该符号可启用对 [Debug 类](https://msdn.microsoft.com/library/system.diagnostics.debug.aspx)中的输出函数的条件编译。 定义该符号后，Debug 类方法可向[输出窗口](../ide/reference/output-window.md)生成输出。 如果没有该符号，则 Debug 类方法将不会被编译，并且不生成任何输出。 该符号应在调试版本中定义而不应在发布版本中定义。 在发布版本中定义该符号将创建不必要的代码，从而降低程序的速度。|  
 |**定义 TRACE 常量**|定义该符号可启用对 [Trace 类](https://msdn.microsoft.com/library/system.diagnostics.trace.aspx)中的输出函数的条件编译。 定义该符号后，Trace 类方法可向[输出窗口](../ide/reference/output-window.md)生成输出。 如果没有该符号，则 Trace 类方法将不会被编译，并且不生成任何 Trace 输出。 默认情况下，在调试版本和发布版本中都定义了此符号。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [调试器设置和准备](../debugger/debugger-settings-and-preparation.md)

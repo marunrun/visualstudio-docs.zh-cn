@@ -13,21 +13,21 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 23a2f7f59ed3565a23d878858c55da4c4a7e4d85
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72659275"
 ---
 # <a name="walkthrough-creating-a-custom-text-template-host"></a>演练：创建自定义文本模板宿主
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-*文本模板*<em>宿主</em>提供了一个环境，该环境允许*文本模板转换引擎*运行。 宿主负责管理引擎与文件系统的交互。 需要文件或程序集的引擎或*指令处理器*可以从主机请求资源。 然后，宿主可以搜索目录和全局程序集缓存，以查找请求的资源。 有关详细信息，请参阅[文本模板转换过程](../modeling/the-text-template-transformation-process.md)。
+*文本模板*<em>宿主</em>提供了一个环境，该环境允许*文本模板转换引擎*运行。 宿主负责管理引擎与文件系统的交互。 需要文件或程序集的引擎或 *指令处理器* 可以从主机请求资源。 然后，宿主可以搜索目录和全局程序集缓存，以查找请求的资源。 有关详细信息，请参阅 [文本模板转换过程](../modeling/the-text-template-transformation-process.md)。
 
- 如果要在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 之外使用*文本模板转换*功能，或者希望将该功能集成到自定义工具中，则可以编写自定义主机。 若要创建自定义主机，你必须创建一个继承自[ITextTemplatingEngineHost](/previous-versions/visualstudio/visual-studio-2012/bb126505(v=vs.110))的类。 有关各个方法的文档，请参阅[ITextTemplatingEngineHost](/previous-versions/visualstudio/visual-studio-2012/bb126505(v=vs.110))。
+ 如果要使用外部的 *文本模板转换* 功能， [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 或者希望将该功能集成到自定义工具中，则可以编写自定义主机。 若要创建自定义主机，你必须创建一个继承自 [ITextTemplatingEngineHost](/previous-versions/visualstudio/visual-studio-2012/bb126505(v=vs.110))的类。 有关各个方法的文档，请参阅 [ITextTemplatingEngineHost](/previous-versions/visualstudio/visual-studio-2012/bb126505(v=vs.110))。
 
 > [!WARNING]
-> 如果要编写 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 扩展或包，请考虑使用文本模板化服务而不是创建您自己的主机。 有关详细信息，请参阅[在 VS 扩展中调用文本转换](../modeling/invoking-text-transformation-in-a-vs-extension.md)。
+> 如果要编写 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 扩展或包，请考虑使用文本模板化服务而不是创建您自己的主机。 有关详细信息，请参阅 [在 VS 扩展中调用文本转换](../modeling/invoking-text-transformation-in-a-vs-extension.md)。
 
  本演练演示以下任务：
 
@@ -35,7 +35,7 @@ ms.locfileid: "72659275"
 
 - 测试自定义主机。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
  若要完成本演练，您必须具有：
 
 - Visual Studio 2010 或更高版本
@@ -51,9 +51,9 @@ ms.locfileid: "72659275"
 
 2. 添加对下列程序集的引用：
 
-    - **VisualStudio. TextTemplating. \***
+    - **VisualStudio \* . TextTemplating。0**
 
-    - **VisualStudio. TextTemplating 和更高版本**
+    - **Microsoft.VisualStudio.TextTemplating.Interfaces.10.0 和更高版本**
 
 3. 用下面的代码替换 Program.cs 或 Module1.vb 文件中的代码：
 
@@ -714,22 +714,22 @@ ms.locfileid: "72659275"
     End Namespace
     ```
 
-4. 对于 "仅 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]"，打开 "**项目**" 菜单，然后单击 " **CustomHost 属性**"。 在 "**启动对象**" 列表中，单击 " **CustomHost**"。
+4. [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]仅对于，打开 "**项目**" 菜单，然后单击 " **CustomHost 属性**"。 在 " **启动对象** " 列表中，单击 " **CustomHost**"。
 
-5. 在“文件”菜单上，单击“全部保存”。
+5. 在“文件”  菜单上，单击“全部保存” 。
 
-6. 在 **“生成”** 菜单上，单击 **“生成解决方案”** 。
+6. 在“生成”菜单中，单击“生成解决方案”。
 
 ## <a name="testing-the-custom-host"></a>测试自定义宿主
  若要测试自定义主机，你需要编写一个文本模板，然后运行自定义主机，将文本模板的名称传递给它并验证模板转换。
 
 #### <a name="to-create-a-text-template-to-test-the-custom-host"></a>创建文本模板测试自定义主机
 
-1. 创建一个文本文件，并将其命名为 `TestTemplate.tt`。
+1. 创建一个文本文件，并将其命名为 `TestTemplate.tt` 。
 
      可以使用任何文本编辑器（例如记事本）来创建文件。
 
-2. 将以下内容添加到文件中：
+2. 将以下内容添加到该文件：
 
     > [!NOTE]
     > 文本模板的编程语言不必与自定义宿主的编程语言一致。
@@ -772,11 +772,11 @@ ms.locfileid: "72659275"
 
     ```
 
-3. 保存并关闭文件。
+3. 保存并关闭该文件。
 
 #### <a name="to-test-the-custom-host"></a>测试自定义主机
 
-1. 打开“命令提示符”窗口。
+1. 打开命令提示符窗口。
 
 2. 为自定义宿主键入可执行文件的路径，但暂不要按 Enter。
 
@@ -785,7 +785,7 @@ ms.locfileid: "72659275"
      `<YOUR PATH>CustomHost\bin\Debug\CustomHost.exe`
 
     > [!NOTE]
-    > 您可以在**Windows 资源管理器**中浏览到文件 CustomHost，然后将该文件拖入命令提示符窗口，而不是键入地址。
+    > 您可以浏览到 **Windows 资源管理器** 中的文件 CustomHost.exe，然后将该文件拖入命令提示符窗口，而不是键入地址。
 
 3. 键入一个空格。
 
@@ -796,11 +796,11 @@ ms.locfileid: "72659275"
      `C:\<YOUR PATH>TestTemplate.tt`
 
     > [!NOTE]
-    > 您可以在**Windows 资源管理器**中浏览到文件 TestTemplate.tt，然后将该文件拖入命令提示符窗口，而不是键入地址。
+    > 您可以在 **Windows 资源管理器** 中浏览到文件 TestTemplate.tt，然后将该文件拖入命令提示符窗口，而不是键入地址。
 
      自定义宿主应用程序运行并完成文本模板转换过程。
 
-5. 在**Windows 资源管理器**中，浏览到包含文件 TestTemplate.tt 的文件夹。
+5. 在 **Windows 资源管理器**中，浏览到包含文件 TestTemplate.tt 的文件夹。
 
      该文件夹还包含文件 TestTemplate1.txt。
 
@@ -817,7 +817,7 @@ ms.locfileid: "72659275"
     ```
 
 ## <a name="next-steps"></a>后续步骤
- 在本演练中，你创建了一个支持基本转换功能的文本模板转换主机。 您可以对该宿主进行扩展，以支持可调用自定义或生成的指令处理器的文本模板。 有关详细信息，请参阅[演练：将主机连接到生成的指令处理器](../modeling/walkthrough-connecting-a-host-to-a-generated-directive-processor.md)。
+ 在本演练中，你创建了一个支持基本转换功能的文本模板转换主机。 您可以对该宿主进行扩展，以支持可调用自定义或生成的指令处理器的文本模板。 有关详细信息，请参阅 [演练：将主机连接到生成的指令处理器](../modeling/walkthrough-connecting-a-host-to-a-generated-directive-processor.md)。
 
 ## <a name="see-also"></a>请参阅
 

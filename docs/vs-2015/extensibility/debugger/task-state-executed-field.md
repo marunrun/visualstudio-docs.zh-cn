@@ -11,22 +11,22 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 6dcfb6c7b4b79d1abd2b393e32b9795f613c205a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68162223"
 ---
-# <a name="taskstateexecuted-field"></a>TASK_STATE_EXECUTED 字段
+# <a name="task_state_executed-field"></a>TASK_STATE_EXECUTED 字段
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
 该任务正在运行，但尚未完成。  
   
  **命名空间：** <xref:System.Threading.Tasks?displayProperty=fullName>  
   
- **程序集：** mscorlib （在 mscorlib.dll 中)  
+ **Assembly：** mscorlib (mscorlib.dll)   
   
- 无法从.NET Framework 来访问此内部成员，因为以下语法提供通用中间语言 (CIL)。  
+ 由于无法从 .NET Framework 访问此内部成员，因此在公共中间语言 (CIL) 中提供了以下语法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,7 +35,7 @@ ms.locfileid: "68162223"
 ```  
   
 ## <a name="remarks"></a>备注  
- 如果[m_stateFlags](../../extensibility/debugger/m-stateflags-field.md)字段包含此值，<xref:System.Threading.Tasks.Task.Status%2A>属性返回<xref:System.Threading.Tasks.TaskStatus?displayProperty=fullName>。  
+ 如果 [m_stateFlags](../../extensibility/debugger/m-stateflags-field.md) 字段包含此值，则 <xref:System.Threading.Tasks.Task.Status%2A> 属性将返回 <xref:System.Threading.Tasks.TaskStatus?displayProperty=fullName> 。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Task 类](../../extensibility/debugger/task-class-internal-members.md)

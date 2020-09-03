@@ -1,5 +1,5 @@
 ---
-title: 如何：停止代码更改 |Microsoft Docs
+title: 如何：停止代码更改 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -21,10 +21,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 739538d82a478f182c06de0e34b13f8a1bd2b2e0
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65690061"
 ---
 # <a name="how-to-stop-code-changes"></a>如何：停止代码更改
@@ -37,12 +37,12 @@ ms.locfileid: "65690061"
   
 ### <a name="to-stop-applying-code-changes"></a>停止应用代码更改  
   
-- 从“调试”菜单中选择“停止应用代码更改”。  
+- 从“调试”菜单中选择“停止应用代码更改” 。  
   
   该菜单项仅在应用代码更改时才可见。  
   
   如果选择了改选项，就不会进行任何代码更改。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [编辑并继续](../debugger/edit-and-continue.md)   
  [“选项”对话框 ->“调试”->“编辑并继续”](https://msdn.microsoft.com/library/009d225f-ef65-463f-a146-e4c518f86103)

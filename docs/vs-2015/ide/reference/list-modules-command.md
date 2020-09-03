@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 4600f27f62d6e840041a65b4128df128e4d36873
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72659534"
 ---
 # <a name="list-modules-command"></a>“列出模块”命令
@@ -36,21 +36,21 @@ Debug.ListModules [/Address:yes|no] [/Name:yes|no] [/Order:yes|no]
 ```
 
 #### <a name="parameters"></a>参数
- /Address： `yes|no` 可选。 指定是否显示模块的内存地址。 默认值是 `yes`。
+ /Address： `yes|no` 可选。 指定是否显示模块的内存地址。 默认值为 `yes`。
 
- /Name:`yes|no`（可选）。 指定是否显示模块的名称。 默认值是 `yes`。
+ /Name:`yes|no`（可选）。 指定是否显示模块的名称。 默认值为 `yes`。
 
- /Order： `yes|no` 可选。 指定是否显示模块的顺序。 默认值是 `no`。
+ /Order： `yes|no` 可选。 指定是否显示模块的顺序。 默认值为 `no`。
 
- /Path:`yes|no`（可选）。 指定是否显示模块的路径。 默认值是 `yes`。
+ /Path:`yes|no`（可选）。 指定是否显示模块的路径。 默认值为 `yes`。
 
- /Process： `yes|no` 可选。 指定是否显示模块的进程。 默认值是 `no`。
+ /Process： `yes|no` 可选。 指定是否显示模块的进程。 默认值为 `no`。
 
- /SymbolFile： `yes|no` 可选。 指定是否显示模块的符号文件。 默认值是 `no`。
+ /SymbolFile： `yes|no` 可选。 指定是否显示模块的符号文件。 默认值为 `no`。
 
- /SymbolStatus： `yes|no` 可选。 指定是否显示模块的符号状态。 默认值是 `yes`。
+ /SymbolStatus： `yes|no` 可选。 指定是否显示模块的符号状态。 默认值为 `yes`。
 
- /Timestamp： `yes|no` 可选。 指定是否显示模块的时间戳。 默认值是 `no`。
+ /Timestamp： `yes|no` 可选。 指定是否显示模块的时间戳。 默认值为 `no`。
 
  /Version:`yes|no`（可选）。 指定是否显示模块的版本。 默认值是 `no`。
 

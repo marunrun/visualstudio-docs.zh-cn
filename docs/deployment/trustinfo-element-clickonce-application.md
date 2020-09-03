@@ -1,5 +1,5 @@
 ---
-title: '&lt;trustInfo &gt; 元素（ClickOnce 应用程序） |Microsoft Docs'
+title: '&lt;&gt; (ClickOnce 应用程序) 的 trustInfo 元素 |Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -23,10 +23,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 5873eb18b2f803acfd5aba9444657884b1a24581
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "84184427"
 ---
 # <a name="lttrustinfogt-element-clickonce-application"></a>&lt;trustInfo&gt; 元素（ClickOnce 应用程序）
@@ -161,7 +161,7 @@ ms.locfileid: "84184427"
 
  将授予所有使用 `defaultAssemblyRequest` 和 `assemblyRequest` 请求的权限，而无需提示用户该部署清单是否具有有效的信任许可证。
 
- 有关权限提升的详细信息，请参阅[保护 ClickOnce 应用程序](../deployment/securing-clickonce-applications.md)。 有关策略部署的详细信息，请参阅 [Trusted Application Deployment Overview](../deployment/trusted-application-deployment-overview.md)。
+ 有关权限提升的详细信息，请参阅 [保护 ClickOnce 应用程序](../deployment/securing-clickonce-applications.md)。 有关策略部署的详细信息，请参阅 [Trusted Application Deployment Overview](../deployment/trusted-application-deployment-overview.md)。
 
 ## <a name="examples"></a>示例
  下面的三个代码示例说明了默认命令的安全区域的 `trustInfo` 元素 - Internet、LocalIntranet 和 FullTrust - 用于 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 部署的应用程序清单中。
@@ -267,6 +267,6 @@ ms.locfileid: "84184427"
 </trustInfo>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [受信任的应用程序部署概述](../deployment/trusted-application-deployment-overview.md)
 - [ClickOnce 应用程序清单](../deployment/clickonce-application-manifest.md)

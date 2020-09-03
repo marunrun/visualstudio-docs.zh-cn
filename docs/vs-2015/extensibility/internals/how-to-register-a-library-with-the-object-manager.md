@@ -15,32 +15,32 @@ caps.latest.revision: 27
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: c40c695a912e97269263ba14747b72382847324d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68162038"
 ---
 # <a name="how-to-register-a-library-with-the-object-manager"></a>如何：使用对象管理器注册库
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-符号浏览工具，如**类视图**，**对象浏览器**，**调用浏览器**并**查找符号结果**，可以查看在项目中或在外部组件的符号。 符号包括命名空间、 类、 接口、 方法和其他语言元素。 库跟踪这些符号和公开到[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]对象管理器填充的数据的工具。  
+使用符号（例如 **类视图**、 **对象浏览器**、 **调用浏览器** 和 **查找符号结果**），可以在项目或外部组件中查看符号。 这些符号包括命名空间、类、接口、方法和其他语言元素。 这些库跟踪这些符号，并将这些符号公开给 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 对象管理器，用数据填充工具。  
   
- 对象管理器跟踪的所有可用的库。 每个库必须注册对象管理器，在符号浏览工具提供符号之前。  
+ 对象管理器会跟踪所有可用库。 每个库必须在为符号浏览工具提供符号之前，在对象管理器中注册。  
   
- 通常情况下，当加载 VSPackage 时注册库。 但是，它可以在另一个时根据需要。 当 VSPackage 关闭时注销库。  
+ 通常，在 VSPackage 加载时注册库。 不过，也可以根据需要在其他时间完成此操作。 VSPackage 关闭时，将取消注册库。  
   
- 若要注册一个库，请使用<xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.RegisterLibrary%2A>方法。 在托管的代码库的情况下使用<xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.RegisterSimpleLibrary%2A>方法。  
+ 若要注册库，请使用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.RegisterLibrary%2A> 方法。 对于托管代码库，请使用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.RegisterSimpleLibrary%2A> 方法。  
   
- 若要取消注册一个库，请使用<xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.UnregisterLibrary%2A>方法。  
+ 若要注销库，请使用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.UnregisterLibrary%2A> 方法。  
   
- 若要获取对对象管理器，引用<xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2>，传递<xref:Microsoft.VisualStudio.Shell.Interop.SVsObjectManager>服务 ID 到`GetService`方法。  
+ 若要获取对对象管理器的引用， <xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2> 请 <xref:Microsoft.VisualStudio.Shell.Interop.SVsObjectManager> 将服务 ID 传递到 `GetService` 方法。  
   
-## <a name="registering-and-unregistering-a-library-with-the-object-manager"></a>注册和注销库与对象管理器  
+## <a name="registering-and-unregistering-a-library-with-the-object-manager"></a>使用对象管理器注册和撤消注册库  
   
-#### <a name="to-register-a-library-with-the-object-manager"></a>若要向对象管理器注册库  
+#### <a name="to-register-a-library-with-the-object-manager"></a>使用对象管理器注册库  
   
-1. 创建一个库。  
+1. 创建库。  
   
     ```vb  
     Private m_CallBrowserLibrary As CallBrowser.Library = Nothing  
@@ -57,7 +57,7 @@ ms.locfileid: "68162038"
   
     ```  
   
-2. 获取对的对象的引用<xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2>类型并调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.RegisterSimpleLibrary%2A>方法。  
+2. 获取对类型的对象的引用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2> ，并调用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.RegisterSimpleLibrary%2A> 方法。  
   
     ```vb  
     Private Sub RegisterLibrary()  
@@ -111,9 +111,9 @@ ms.locfileid: "68162038"
   
     ```  
   
-#### <a name="to-unregister-a-library-with-the-object-manager"></a>若要注销的对象管理器库  
+#### <a name="to-unregister-a-library-with-the-object-manager"></a>使用对象管理器取消注册库  
   
-1. 获取对的对象的引用<xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2>类型并调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.UnregisterLibrary%2A>方法。  
+1. 获取对类型的对象的引用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2> ，并调用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.UnregisterLibrary%2A> 方法。  
   
     ```vb  
     Private Sub UnregisterLibrary()  
@@ -166,7 +166,7 @@ ms.locfileid: "68162038"
   
     ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [旧版语言服务扩展性](../../extensibility/internals/legacy-language-service-extensibility.md)   
  [支持符号浏览工具](../../extensibility/internals/supporting-symbol-browsing-tools.md)   
  [如何：向对象管理器公开库提供的符号列表](../../extensibility/internals/how-to-expose-lists-of-symbols-provided-by-the-library-to-the-object-manager.md)

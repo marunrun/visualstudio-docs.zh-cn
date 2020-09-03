@@ -1,5 +1,5 @@
 ---
-title: IDebugThread2：恢复 |微软文档
+title: IDebugThread2：： Resume |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 3899dea7c33946588de4308f42b948ede703361a
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80718685"
 ---
 # <a name="idebugthread2resume"></a>IDebugThread2::Resume
-恢复线程的执行。
+继续执行线程。
 
 ## <a name="syntax"></a>语法
 
@@ -41,16 +41,16 @@ int Resume ( 
 
 ## <a name="parameters"></a>参数
 `pdwSuspendCount`\
-[出]返回恢复操作后的挂起计数。
+弄返回恢复操作后的挂起计数。
 
 ## <a name="return-value"></a>返回值
- 如果成功，返回`S_OK`;否则，返回错误代码。
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。
 
 ## <a name="remarks"></a>备注
- 对此方法的每个调用都会取消挂起计数，直到它达到 0，此时实际恢复执行。 此挂起计数显示在**线程**调试窗口中。
+ 对此方法的每个调用都将减少挂起计数，直到达到0，此时将实际恢复执行。 此挂起计数显示在 " **线程** 调试" 窗口中。
 
- 对于对此方法的每个调用，必须对[挂起](../../../extensibility/debugger/reference/idebugthread2-suspend.md)方法进行以前的调用。 挂起计数确定到目前为止调用`IDebugThread2::Suspend`该方法的次数。
+ 对于对此方法的每个调用，必须有对 [挂起](../../../extensibility/debugger/reference/idebugthread2-suspend.md) 方法的以前调用。 "挂起计数" 确定到 `IDebugThread2::Suspend` 目前为止已调用方法的次数。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)
-- [暂停](../../../extensibility/debugger/reference/idebugthread2-suspend.md)
+- [挂起](../../../extensibility/debugger/reference/idebugthread2-suspend.md)

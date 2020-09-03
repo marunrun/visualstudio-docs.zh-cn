@@ -1,5 +1,5 @@
 ---
-title: '&lt;部署&gt;元素 （ClickOnce 部署） |Microsoft Docs'
+title: '&lt;&gt; (ClickOnce 部署) 的部署元素 |Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-deployment
@@ -23,13 +23,13 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: a55b5519d5abb7b40aeca23fed1bc2f8ea2cc33d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68194647"
 ---
-# <a name="ltdeploymentgt-element-clickonce-deployment"></a>&lt;部署&gt;元素 （ClickOnce 部署）
+# <a name="ltdeploymentgt-element-clickonce-deployment"></a>&lt;&gt;ClickOnce 部署 (部署元素) 
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 标识用于部署更新并向系统公开的特性。  
@@ -63,55 +63,55 @@ ms.locfileid: "68194647"
 ## <a name="elements-and-attributes"></a>元素和属性  
  `deployment` 元素是必需的，它位于 `urn:schemas-microsoft-com:asm.v1` 命名空间中。 元素具有以下属性。  
   
-|特性|描述|  
+|特性|说明|  
 |---------------|-----------------|  
-|`install`|必需。 指定此应用程序是否在 Windows 上定义一个快捷**启动**菜单控件面板和**添加或删除程序**应用程序。 有效值为 `true` 和 `false`。 如果`false`，[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]始终会从网络运行此应用程序的最新版本并将无法识别`subscription`元素。|  
-|`minimumRequiredVersion`|可选。 指定可在客户端运行此应用程序的最低版本。 如果应用程序的版本编号小于提供的部署清单中的版本号，不会运行该应用程序。 必须以格式指定版本号`N.N.N.N`，其中`N`是一个无符号的整数。 如果`install`属性是`false`，`minimumRequiredVersion`不能设置。|  
-|`mapFileExtensions`|可选。 默认为 `false`。 如果`true`，部署中的所有文件必须都具有.deploy 扩展名。 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 将关闭这些文件中剥离此扩展，只要它从 Web 服务器下载它们。 如果使用发布你的应用程序，则[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]，它会自动将此扩展添加到的所有文件。 此参数允许内的所有文件[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]部署，以从筛选器阻止传输的"不安全"扩展，如.exe 结尾的文件的 Web 服务器下载。|  
-|`disallowUrlActivation`|可选。 默认为 `false`。 如果`true`，可以防止通过单击的 URL 或 Internet 资源管理器中输入 URL 来启动已安装应用程序。 如果`install`属性不存在，则忽略此属性。|  
-|`trustURLParameters`|可选。 默认为 `false`。 如果`true`，可以包含查询字符串参数传递到应用程序的 URL，太多类似的命令行自变量传递给命令行应用程序。 有关更多信息，请参见[如何：在联机 ClickOnce 应用程序中检索查询字符串信息](../deployment/how-to-retrieve-query-string-information-in-an-online-clickonce-application.md)。<br /><br /> 如果`disallowUrlActivation`属性是`true`，`trustUrlParameters`必须是从在清单中排除或显式设置为`false`。|  
+|`install`|必需。 指定此应用程序是否在 Windows " **开始** " 菜单和 "控制面板" 的 " **添加或删除程序** " 应用程序中定义状态。 有效值为 `true` 和 `false`。 如果为 `false` ， [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 将始终从网络中运行此应用程序的最新版本，并且将无法识别 `subscription` 元素。|  
+|`minimumRequiredVersion`|可选。 指定可在客户端上运行的此应用程序的最低版本。 如果应用程序的版本号小于部署清单中提供的版本号，则应用程序将不会运行。 版本号必须以格式指定 `N.N.N.N` ，其中 `N` 是无符号整数。 如果 `install` 特性为 `false` ，则 `minimumRequiredVersion` 不得设置。|  
+|`mapFileExtensions`|可选。 默认为 `false`。 如果 `true` 为，则部署中的所有文件都必须具有 .deploy 扩展名。 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 从 Web 服务器下载这些文件后，会立即将其从 Web 服务器中去除。 如果使用发布应用程序 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ，它会自动将此扩展添加到所有文件。 此参数允许 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 从 Web 服务器下载部署中的所有文件，这些文件阻止以 "不安全" 扩展（如 .exe）结尾的文件的传输。|  
+|`disallowUrlActivation`|可选。 默认为 `false`。 如果为 `true` ，则通过单击 url 或在 Internet Explorer 中输入 url 来阻止已安装的应用程序启动。 如果该 `install` 属性不存在，则忽略此属性。|  
+|`trustURLParameters`|可选。 默认为 `false`。 如果 `true` 为，则允许 URL 包含传入应用程序的查询字符串参数，非常类似于将命令行自变量传递到命令行应用程序。 有关详细信息，请参阅 [如何：在联机 ClickOnce 应用程序中检索查询字符串信息](../deployment/how-to-retrieve-query-string-information-in-an-online-clickonce-application.md)。<br /><br /> 如果 `disallowUrlActivation` 特性为 `true` ，则 `trustUrlParameters` 必须从清单中排除，或者显式设置为 `false` 。|  
   
- `deployment`元素还包含以下子元素。  
+ `deployment`元素还包含下列子元素。  
   
 ## <a name="subscription"></a>订阅  
- 可选。 包含`update`元素。 `subscription` 元素没有属性。 如果`subscription`元素不存在，[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]应用程序将永远不会扫描更新。 如果`install`的属性`deployment`元素是`false`，则`subscription`忽略元素，因为[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]启动应用程序是从网络始终使用最新版本。  
+ 可选。 包含 `update` 元素。 `subscription` 元素没有属性。 如果该 `subscription` 元素不存在，则 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 应用程序将从不扫描更新。 如果 `install` 元素的属性 `deployment` 为，则 `false` 将 `subscription` 忽略元素，因为 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 从网络启动的应用程序始终使用最新版本。  
   
-## <a name="update"></a>更新  
- 必需。 此元素是子元素的`subscription`元素，它包含`beforeApplicationStartup`或`expiration`元素。 `beforeApplicationStartup` 和`expiration`无法同时指定相同的部署清单中。  
+## <a name="update"></a>update  
+ 必需。 此元素是元素的子元素 `subscription` ，并且包含 `beforeApplicationStartup` 或 `expiration` 元素。 `beforeApplicationStartup``expiration`不能在同一部署清单中同时指定和。  
   
  `update` 元素没有属性。  
   
 ## <a name="beforeapplicationstartup"></a>beforeApplicationStartup  
- 可选。 此元素是子元素的`update`元素并且没有任何特性。 当`beforeApplicationStartup`元素存在，该应用程序将被阻止时[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]检查更新，如果客户端处于联机状态。 此元素不存在，如果[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]基于指定的值的更新将首先扫描`expiration`元素。 `beforeApplicationStartup` 和`expiration`无法同时指定相同的部署清单中。  
+ 可选。 此元素是元素的子元素 `update` ，但没有属性。 如果该 `beforeApplicationStartup` 元素存在，则在 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 检查更新时，如果客户端处于联机状态，则应用程序将被阻止。 如果此元素不存在， [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 将首先根据为元素指定的值扫描更新 `expiration` 。 `beforeApplicationStartup``expiration`不能在同一部署清单中同时指定和。  
   
-## <a name="expiration"></a>过期  
- 可选。 此元素是子元素的`update`元素，并没有任何子级。 `beforeApplicationStartup` 和`expiration`无法同时指定相同的部署清单中。 当进行更新检查以及检测到更新的版本时，新版本缓存的现有版本运行时。 然后安装新版本的在下次启动[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]应用程序。  
+## <a name="expiration"></a>expiration  
+ 可选。 此元素是元素的子元素 `update` ，没有任何子级。 `beforeApplicationStartup``expiration`不能在同一部署清单中同时指定和。 当发生更新检查并检测到更新版本时，新版本将在现有版本运行时缓存。 然后，新版本将在下一次启动 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 应用程序时安装。  
   
- `expiration`元素支持以下属性。  
+ `expiration`元素支持以下特性。  
   
-|特性|描述|  
+|特性|说明|  
 |---------------|-----------------|  
-|`maximumAge`|必需。 标识如何旧当前更新应会在之前在应用程序执行更新检查。 时间单位由`unit`属性。|  
-|`unit`|必需。 标识的时间单位`maximumAge`。 有效的单位为`hours`， `days`，和`weeks`。|  
+|`maximumAge`|必需。 标识当前更新在应用程序执行更新检查之前应如何发生。 时间单位由 `unit` 属性确定。|  
+|`unit`|必需。 标识的时间单位 `maximumAge` 。 有效单位为 `hours` 、 `days` 和 `weeks` 。|  
   
 ## <a name="deploymentprovider"></a>deploymentProvider  
- 为.NET Framework 2.0 中，如果此元素是必需部署清单包含`subscription`部分。 .NET Framework 3.5 及更高版本，此元素是可选的并将默认为服务器和在其中发现的部署清单的文件路径。  
+ 对于 .NET Framework 2.0，如果部署清单包含部分，则此元素是必需的 `subscription` 。 对于 .NET Framework 3.5 及更高版本，此元素是可选的，它将默认为发现部署清单的服务器和文件路径。  
   
  此元素是 `deployment` 元素的子元素，并且包含以下元素。  
   
-|特性|描述|  
+|特性|说明|  
 |---------------|-----------------|  
-|`codebase`|必需。 标识的位置，作为统一资源标识符 (URI)，用于更新部署清单的[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]应用程序。 此元素还允许转发的基于 CD 的安装的更新位置。 必须是有效的 URI。|  
+|`codebase`|必需。 标识用于更新应用程序的部署清单的位置，作为统一资源标识符 (URI) [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 。 此元素还允许将更新位置转发到基于 CD 的安装。 必须是有效的 URI。|  
   
 ## <a name="remarks"></a>备注  
- 你可以配置在[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]扫描在启动时，更新的应用程序在启动后检查更新或从不检查更新。 若要检查在启动更新，请确保`beforeApplicationStartup`元素下存在`update`元素。 若要在启动后检查更新，请确保`expiration`元素下存在`update`元素，并提供更新的时间间隔。  
+ 你可以将 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 应用程序配置为在启动时扫描更新、在启动后扫描更新或从不检查更新。 若要在启动时扫描更新，请确保元素 `beforeApplicationStartup` 下存在元素 `update` 。 若要在启动后扫描更新，请确保元素 `expiration` 下存在元素 `update` ，并提供更新间隔。  
   
- 若要禁用检查更新，请删除`subscription`元素。 当您指定永远不会扫描更新的部署清单中时，您可以仍手动检查更新使用<xref:System.Deployment.Application.ApplicationDeployment.CheckForUpdate%2A>方法。  
+ 若要禁用检查更新，请删除 `subscription` 元素。 当你在部署清单中指定从不扫描更新时，你仍可以使用方法手动检查更新 <xref:System.Deployment.Application.ApplicationDeployment.CheckForUpdate%2A> 。  
   
- DeploymentProvider 如何与更新相关联的详细信息，请参阅[选择 ClickOnce 更新策略](../deployment/choosing-a-clickonce-update-strategy.md)。  
+ 有关 deploymentProvider 如何与更新相关的详细信息，请参阅 [选择 ClickOnce 更新策略](../deployment/choosing-a-clickonce-update-strategy.md)。  
   
 ## <a name="examples"></a>示例  
- 下面的代码示例演示`deployment`中的元素[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]部署清单。 该示例使用`deploymentProvider`元素以指示首选的更新位置。  
+ 下面的代码示例阐释了 `deployment` 部署清单中的元素 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 。 该示例使用 `deploymentProvider` 元素来指示首选的更新位置。  
   
 ```  
 <deployment install="true" minimumRequiredVersion="2.0.0.0" mapFileExtension="true" trustUrlParameters="true">  
@@ -124,5 +124,5 @@ ms.locfileid: "68194647"
   </deployment>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [ClickOnce 部署清单](../deployment/clickonce-deployment-manifest.md)

@@ -14,10 +14,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 85126a7816fa583db94bb93659a7d4cbb29078ce
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68154771"
 ---
 # <a name="just-my-code-threads-view"></a>仅我的代码（线程视图）
@@ -30,5 +30,5 @@ ms.locfileid: "68154771"
  在某些情况下，选择此选项可以筛选出阻止的调用。 如果需要完整的调用堆栈详细信息以便作决定，请清除此选项，公开完整的调用堆栈。  
   
 ## <a name="see-also"></a>另请参阅  
- [“线程”视图](../profiling/threads-view-parallel-performance.md)   
+ [线程视图](../profiling/threads-view-parallel-performance.md)   
  [降噪百分比](../profiling/noise-reduction-percentage.md)

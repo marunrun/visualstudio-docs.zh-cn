@@ -1,5 +1,5 @@
 ---
-title: IDebugEngine2::SetRegistryRoot |Microsoft Docs
+title: IDebugEngine2：： SetRegistryRoot |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 39bb532301d34a3abf9988cfa909e1606c3c73e8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68195948"
 ---
 # <a name="idebugengine2setregistryroot"></a>IDebugEngine2::SetRegistryRoot
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-设置调试引擎 (DE) 的注册表根目录。  
+设置调试引擎的注册表根 (DE) 。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,13 +40,13 @@ int SetRegistryRoot( 
   
 #### <a name="parameters"></a>参数  
  `pszRegistryRoot`  
- [in]要使用的注册表根。  
+ 中要使用的注册表根目录。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
 ## <a name="remarks"></a>备注  
- 此方法允许[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]来指定备用的注册表根目录，DE 应使用以获得其他注册表设置; 例如，"HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp"。  
+ 此方法允许 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 指定应使用的备用注册表根以获取注册表设置，例如 "HKEY_LOCAL_MACHINE \software\microsoft\visualstudio\8.0exp"。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)

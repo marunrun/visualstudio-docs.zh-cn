@@ -12,14 +12,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 34a5a2f07d17c2ebd607bfe102cc7e3db92d014a
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "67825135"
 ---
 # <a name="accessibility-features-of-the-help-viewer"></a>Help Viewer 的辅助功能
-Microsoft 致力于让每位用户可以更便捷地使用其产品和服务。 本主题包含有关功能、产品和服务的信息，有助于让用户可以使用 Microsoft Help Viewer 的丰富功能。
+Microsoft 致力于使其产品和服务更便于每个人使用。 本主题包含有关功能、产品和服务的信息，有助于让用户可以使用 Microsoft Help Viewer 的丰富功能。
 
 ## <a name="keyboard-access"></a>键盘访问
 可以使用键盘来访问帮助查看器的所有功能。 有关详细信息，请参阅[快捷键 (Help Viewer)](../help-viewer/shortcut-keys.md)。
@@ -33,7 +33,7 @@ Microsoft 致力于让每位用户可以更便捷地使用其产品和服务。 
 ## <a name="help-viewer-position"></a>帮助查看器位置
 可以通过将帮助查看器的标题栏拖到其他位置来重新定位帮助查看器。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Microsoft Help Viewer](../help-viewer/overview.md)
-- [快捷键 (Help Viewer)](../help-viewer/shortcut-keys.md)
+- [快捷键 (帮助查看器) ](../help-viewer/shortcut-keys.md)

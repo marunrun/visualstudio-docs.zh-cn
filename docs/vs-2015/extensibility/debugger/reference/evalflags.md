@@ -1,5 +1,5 @@
 ---
-title: EVALFLAGS | Microsoft Docs
+title: EVALFLAGS |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 9e6ee00402c13b2a79e4e6757a127211eda9c3c0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68149387"
 ---
 # <a name="evalflags"></a>EVALFLAGS
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-指定用于控制表达式求值的标志。  
+指定控制表达式计算的标志。  
   
 ## <a name="syntax"></a>语法  
   
@@ -53,39 +53,39 @@ public enum enum_EVALFLAGS {
   
 ## <a name="members"></a>成员  
  EVAL_RETURNVALUE  
- 指定的计算返回值，如果有的话。  
+ 指定将计算返回值（如果有）。  
   
  EVAL_NOSIDEEFFECTS  
  指定不允许副作用。  
   
  EVAL_ALLOWBPS  
- 指定断点停止。  
+ 指定在断点处停止。  
   
  EVAL_ALLOWERRORREPORT  
- 指定错误报告到的主机功能，允许。 主要用于在 Internet Explorer 中的脚本中的表达式计算。  
+ 指定将错误报告给允许的主机。 主要用于 Internet Explorer 中的脚本中的表达式计算。  
   
  EVAL_FUNCTION_AS_ADDRESS  
- 强制函数计算结果为地址，而不是调用该函数。  
+ 强制将函数作为地址进行计算，而不是调用函数。  
   
  EVAL_NOFUNCEVAL  
- 防止函数进行计算。 例如，考虑`int`令牌在表达式中`myExpression(int) + 10`。 为地址，但不能作为一个值，此函数可以正确评估。  
+ 禁止计算函数。 例如，请考虑 `int` 表达式中的标记 `myExpression(int) + 10` 。 此函数可以正确地作为地址进行计算，但不能作为值来计算。  
   
  EVAL_NOEVENTS  
- 一个标志，用于指示会话调试管理器 (SDM) 或 IDE 未发送的表达式计算期间发生的事件。  
+ 一个标志，用于指示在表达式计算过程中发生的事件不应发送到会话调试管理器 (SDM) 或 IDE。  
   
 ## <a name="remarks"></a>备注  
- 这些标志作为参数传递[EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md)并[EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md)方法。  
+ 这些标志作为参数传递给 [EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) 和 [EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) 方法。  
   
- 可能会使用按位 OR 组合这些标志。  
+ 这些标志可以与按位 "或" 组合在一起。  
   
 ## <a name="requirements"></a>要求  
- 标头： msdbg.h  
+ 标头： msdbg  
   
- 命名空间:Microsoft.VisualStudio.Debugger.Interop  
+ 命名空间： VisualStudio  
   
- 程序集：Microsoft.VisualStudio.Debugger.Interop.dll  
+ 程序集： Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>请参阅  
- [枚举](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>另请参阅  
+ [计数](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md)   
  [EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md)

@@ -1,5 +1,5 @@
 ---
-title: '&lt;application &gt; 元素（Visual Studio 中的 Office 开发）'
+title: '&lt;&gt;Visual Studio 中的应用程序元素 (Office 开发) '
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: reference
@@ -14,13 +14,13 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 3540df77b4498376dcde389730e17e7506647fb8
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85543736"
 ---
-# <a name="ltapplicationgt-element-office-development-in-visual-studio"></a>&lt;application &gt; 元素（Visual Studio 中的 Office 开发）
+# <a name="ltapplicationgt-element-office-development-in-visual-studio"></a>&lt;&gt;Visual Studio 中的应用程序元素 (Office 开发) 
   `application` 命名空间的 `vstav3` 元素包装 Office 解决方案的描述。 对于文档级自定义项和 VSTO 外接程序，子元素是不同的。
 
 ## <a name="syntax-for-document-level-customizations"></a>文档级自定义项的语法
@@ -119,7 +119,7 @@ ms.locfileid: "85543736"
 </vstav3:application>
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [Office 解决方案的应用程序清单](../vsto/application-manifests-for-office-solutions.md)
 - [Office 解决方案的部署清单](../vsto/deployment-manifests-for-office-solutions.md)

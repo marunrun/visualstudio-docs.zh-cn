@@ -1,5 +1,5 @@
 ---
-title: IDebugSymbol 供应商直接：获取电流模块信息 |微软文档
+title: IDebugSymbolProviderDirect：： GetCurrentModulesInfo |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -15,14 +15,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: a51a7bbbe081d323ea478b64917507ce43b45762
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80719115"
 ---
 # <a name="idebugsymbolproviderdirectgetcurrentmodulesinfo"></a>IDebugSymbolProviderDirect::GetCurrentModulesInfo
-检索有关符号组中模块的信息。
+检索有关符号组中的模块的信息。
 
 ## <a name="syntax"></a>语法
 
@@ -48,22 +48,22 @@ int GetCurrentModulesInfo(
 
 ## <a name="parameters"></a>参数
 `pCount`\
-[在]阵列中的`ppGuids`模块数。
+中数组中的模块数 `ppGuids` 。
 
 `ppGuids`\
-[在]包含模块的唯一标识符的数组。
+中数组，其中包含模块的唯一标识符。
 
 `pADIds`\
-[在]应用程序域的标识符。
+中应用程序域的标识符。
 
 `pCurrentState`\
-[在]符号组的当前状态。
+中符号组的当前状态。
 
 `ppCDModItfs`\
-[出]返回包含符号组中模块的对象。
+弄返回一个对象，该对象包含符号组中的模块。
 
 ## <a name="return-value"></a>返回值
- 如果成功，返回`S_OK`;否则，返回错误代码。
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IDebugSymbolProviderDirect](../../../extensibility/debugger/reference/idebugsymbolproviderdirect.md)

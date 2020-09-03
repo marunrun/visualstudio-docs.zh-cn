@@ -16,20 +16,20 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 726cde42eb08ee5508481887fae2e9d2b059256c
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85543866"
 ---
 # <a name="ca1806-do-not-ignore-method-results"></a>CA1806:不要忽略方法结果
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|Item|值|
+|项|值|
 |-|-|
 |TypeName|DoNotIgnoreMethodResults|
 |CheckId|CA1806|
-|Category|Microsoft. 使用情况|
+|类别|Microsoft. 使用情况|
 |是否重大更改|非重大更改|
 
 ## <a name="cause"></a>原因
@@ -52,7 +52,7 @@ ms.locfileid: "85543866"
 
  如果方法 A 调用方法 B，但不使用方法 B 返回的新字符串实例，则为。 将该实例作为参数传递给其他方法，并将该实例分配给一个变量。 如果不需要，则删除该调用。
 
- -或-
+ - 或 -
 
  如果方法 A 调用方法 B，但不使用该方法返回的 HRESULT 或错误代码，则为。 在条件语句中使用结果，将结果赋给变量，或将其作为参数传递给其他方法。
 

@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: f2d22973e13ee77b66de303041f8b6a765b4b93a
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545868"
 ---
 # <a name="how-to-resize-controls-within-worksheet-cells"></a>如何：调整工作表单元格中的控件大小
@@ -29,19 +29,19 @@ ms.locfileid: "85545868"
 
  如果在设计时添加控件，则必须设置每个控件的定位选项。
 
- 如果以编程方式添加 Windows 窗体控件并提供 range 参数，则当调整范围内的单元格大小时，控件会自动调整大小。 有关详细信息，请参阅[在运行时向 Office 文档添加控件](../vsto/adding-controls-to-office-documents-at-run-time.md)。
+ 如果以编程方式添加 Windows 窗体控件并提供 range 参数，则当调整范围内的单元格大小时，控件会自动调整大小。 有关详细信息，请参阅 [在运行时向 Office 文档添加控件](../vsto/adding-controls-to-office-documents-at-run-time.md)。
 
 ## <a name="resize-controls-at-design-time"></a>在设计时调整控件大小
 
 ### <a name="to-make-controls-resize-with-cells-at-design-time"></a>在设计时使控件调整单元格大小
 
-1. 从 "**工具箱**" 中，将 Windows 窗体控件拖到工作表。
+1. 从 " **工具箱**" 中，将 Windows 窗体控件拖到工作表。
 
-2. 右键单击控件，然后单击 "**设置控件格式**"。
+2. 右键单击控件，然后单击 " **设置控件格式**"。
 
-3. 在 "**设置控件格式**" 对话框中，单击 "**属性**" 选项卡。
+3. 在 " **设置控件格式** " 对话框中，单击 " **属性** " 选项卡。
 
-4. 在 "**对象定位**" 下，选择 "**移动单元大小**" 选项，然后单击 **"确定"**。
+4. 在 " **对象定位**" 下，选择 " **移动单元大小** " 选项，然后单击 **"确定"**。
 
      当调整包含控件的单元格的大小时，控件调整大小以适合单元格。
 
@@ -73,7 +73,7 @@ ms.locfileid: "85545868"
      [!code-vb[Trin_VstcoreProgrammingControlsExcel#6](../vsto/codesnippet/VisualBasic/my excel chart/Sheet1.vb#6)]
      [!code-csharp[Trin_VstcoreProgrammingControlsExcel#6](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs#6)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [Office 文档上的控件](../vsto/controls-on-office-documents.md)
 - [如何：向 Office 文档添加 Windows 窗体控件](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)
 - [如何：在打印时隐藏工作表上的控件](../vsto/how-to-hide-controls-on-worksheets-when-printing.md)

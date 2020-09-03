@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 864422aac695fbf474e6ed6b8cf6d765247eabf9
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "71255304"
 ---
 # <a name="chart-control"></a>图表控件
@@ -29,14 +29,14 @@ ms.locfileid: "71255304"
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]
 
 ## <a name="create-the-control"></a>创建控件
- 在文档级项目中，你可以在设计时或在运行时将 <xref:Microsoft.Office.Tools.Excel.Chart> 控件添加到 Microsoft Office Excel 工作表中。
+ 您可以在 <xref:Microsoft.Office.Tools.Excel.Chart> 设计时或在运行时将控件添加到文档级项目中的 Microsoft Office Excel 工作表。
 
- 在 VSTO 外接程序中，你可以在运行时将 <xref:Microsoft.Office.Tools.Excel.Chart> 控件添加到工作表中。 有关详细信息，请参阅[如何：向工作表](../vsto/how-to-add-chart-controls-to-worksheets.md)添加图表控件。
+ 在 VSTO 外接程序中，你可以在运行时将 <xref:Microsoft.Office.Tools.Excel.Chart> 控件添加到工作表中。 有关详细信息，请参阅 [如何：向工作表添加图表控件](../vsto/how-to-add-chart-controls-to-worksheets.md)。
 
 > [!NOTE]
-> 工作表关闭时，动态创建的图表控件不作为主机控件保留在工作表中。 有关详细信息，请参阅[在运行时向 Office 文档添加控件](../vsto/adding-controls-to-office-documents-at-run-time.md)。
+> 工作表关闭时，动态创建的图表控件不作为主机控件保留在工作表中。 有关详细信息，请参阅 [在运行时向 Office 文档添加控件](../vsto/adding-controls-to-office-documents-at-run-time.md)。
 
-## <a name="formatting"></a>格式化
+## <a name="formatting"></a>格式设置
  可应用于 <xref:Microsoft.Office.Interop.Excel.Chart> 的所有格式设置也可应用于 <xref:Microsoft.Office.Tools.Excel.Chart> 控件。 这包括边框、字体、图表类型、网格线、图例和数据标签。
 
 ## <a name="events"></a>事件

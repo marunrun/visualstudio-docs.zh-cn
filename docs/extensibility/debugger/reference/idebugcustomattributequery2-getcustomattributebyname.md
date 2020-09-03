@@ -1,5 +1,5 @@
 ---
-title: IDebug自定义属性查询2：：获取按名称获取自定义属性 |微软文档
+title: IDebugCustomAttributeQuery2：： GetCustomAttributeByName |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 47471f2743e705b06fb9a1bda6752b24a7836d1b
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80732561"
 ---
 # <a name="idebugcustomattributequery2getcustomattributebyname"></a>IDebugCustomAttributeQuery2::GetCustomAttributeByName
-获取给定自定义属性名称的自定义属性字节。
+给定自定义属性的名称，获取自定义属性字节。
 
 ## <a name="syntax"></a>语法
 
@@ -45,24 +45,24 @@ int GetCustomAttributeByName(
 
 ## <a name="parameters"></a>参数
 `pszCustomAttributeName`\
-[在]包含要查找的自定义属性的名称的字符串。
+中一个字符串，其中包含要查找的自定义特性的名称。
 
 `ppBlob`\
-[进出]使用自定义属性字节填充的数组。
+[in，out]使用自定义属性字节填充的数组。
 
 `pdwLen`\
-[进出]指定要在`ppBlob`数组中返回的最大字节数，并返回实际写入数组的字节数。
+[in，out]指定要在数组中返回的最大字节数 `ppBlob` ，并返回实际写入到数组中的字节数。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回S_OK或返回S_FALSE自定义属性不存在。 否则，返回错误代码。
+ 如果成功，则返回 S_OK 或返回 S_FALSE （如果自定义特性不存在）。 否则，返回错误代码。
 
 ## <a name="remarks"></a>备注
- 将`ppBlob`参数设置为空值以返回可用属性字节数。 然后分配一个数组，并将该数组传递给该`ppBlob`参数。
+ 将 `ppBlob` 参数设置为 null 值，以返回可用的属性字节数。 然后，分配一个数组，然后将该数组传递给中的 `ppBlob` 参数。
 
- 属性字节表示自定义属性的原始数据。
+ 属性 bytes 表示自定义属性的原始数据。
 
- 如果`ppBlob`和`pdwLen`参数设置为 null 值，则此方法可用于确定自定义属性是否仅存在。 但是，一个更简单的替代方法是调用[IsCustom属性定义](../../../extensibility/debugger/reference/idebugcustomattributequery2-iscustomattributedefined.md)方法。
+ 如果 `ppBlob` 将和 `pdwLen` 参数设置为 null 值，则可以使用此方法来确定自定义属性是否只存在。 但更简单的方法是调用 [IsCustomAttributeDefined](../../../extensibility/debugger/reference/idebugcustomattributequery2-iscustomattributedefined.md) 方法。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IDebugCustomAttributeQuery2](../../../extensibility/debugger/reference/idebugcustomattributequery2.md)
 - [IsCustomAttributeDefined](../../../extensibility/debugger/reference/idebugcustomattributequery2-iscustomattributedefined.md)

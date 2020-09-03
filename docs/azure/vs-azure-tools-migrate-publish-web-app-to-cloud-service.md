@@ -10,10 +10,10 @@ ms.topic: how-to
 ms.date: 11/10/2017
 ms.author: ghogen
 ms.openlocfilehash: c95c96815872c259cab761d8b4af36141f866dbd
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85280552"
 ---
 # <a name="how-to-migrate-and-publish-a-web-application-to-an-azure-cloud-service-from-visual-studio"></a>如何：从 Visual Studio 将 web 应用程序迁移和发布到 Azure 云服务
@@ -25,10 +25,10 @@ ms.locfileid: "85280552"
 
 ## <a name="migrate-a-project-to-cloud-services"></a>将项目迁移到云服务
 
-1. 右键单击 "解决方案" 节点，然后选择 "**添加 > 新建项目 ...** "，并将新的 " **Azure 云服务（经典）** " 项目添加到现有解决方案。
-1. 在 "**新建 Microsoft Azure 云服务（经典）** " 对话框中，单击 "确定"，而不向项目添加任何角色。
-1. 右键单击新添加的 "云服务" 项目下的 "角色" 节点，然后选择 "**在解决方案中添加 Web 角色项目 ..."**。
-1. 在 "**与角色项目关联**" 对话框中，选择想要关联为 web 角色的项目。
+1. 右键单击 "解决方案" 节点，然后选择 " **添加 > 新建项目 ...** "，并将新的 **Azure 云服务 (经典) ** 项目添加到现有解决方案。
+1. 在 " **新建 Microsoft Azure 云服务 (经典) ** " 对话框中，单击 "确定"，而不向项目添加任何角色。
+1. 右键单击新添加的 "云服务" 项目下的 "角色" 节点，然后选择 " **在解决方案中添加 Web 角色项目 ..."**。
+1. 在 " **与角色项目关联** " 对话框中，选择想要关联为 web 角色的项目。
 
    > [!Important]
    > 如果有此 Web 应用程序所需的其他程序集或文件，必须手动设置这些文件的属性。 有关如何设置这些属性的信息，请参阅[在服务包中包含文件](vs-azure-tools-publishing-a-cloud-service.md#include-files-in-the-service-package)。

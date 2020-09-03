@@ -1,5 +1,5 @@
 ---
-title: IDebugEntryPointEvent2 | Microsoft Docs
+title: IDebugEntryPointEvent2 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 22d7c663dbd1c9c397e7145c9dea74c8424e4383
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65689184"
 ---
 # <a name="idebugentrypointevent2"></a>IDebugEntryPointEvent2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-当程序要执行其第一个指令的用户代码时，调试引擎 (DE) 会将此接口发送到会话调试管理器 (SDM)。  
+当程序要执行用户代码的第一个指令时，调试引擎 (DE) 将此接口发送到会话调试管理器 (SDM) 。  
   
 ## <a name="syntax"></a>语法  
   
@@ -30,24 +30,24 @@ ms.locfileid: "65689184"
 IDebugEntryPointEvent2 : IUnknown  
 ```  
   
-## <a name="notes-for-implementers"></a>实施者的说明  
- DE 实现此接口作为其常规操作的一部分。 [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)接口必须实现此接口作为对同一个对象。 使用 SDM [QueryInterface](https://msdn.microsoft.com/library/62fce95e-aafa-4187-b50b-e6611b74c3b3)访问`IDebugEvent2`接口。  
+## <a name="notes-for-implementers"></a>实施者注意事项  
+ DE 实现此接口作为其常规操作的一部分。 必须在与此接口相同的对象上实现 [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) 接口。 SDM 使用 [QueryInterface](https://msdn.microsoft.com/library/62fce95e-aafa-4187-b50b-e6611b74c3b3) 访问 `IDebugEvent2` 接口。  
   
-## <a name="notes-for-callers"></a>调用方的说明  
- DE 创建并发送此事件对象，当正在调试的程序已加载并已准备好执行用户代码的第一个指令。 通过使用发送该事件[IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) SDM 它附加到正在调试的程序时提供的回调函数。  
+## <a name="notes-for-callers"></a>调用方说明  
+ 当正在调试的程序已加载并且已准备好执行用户代码的第一个指令时，DE 将创建并发送此事件对象。 使用 SDM 在附加到正在调试的程序时提供的 [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) 回调函数发送事件。  
   
 ## <a name="remarks"></a>备注  
- [IDebugLoadCompleteEvent2](../../../extensibility/debugger/reference/idebugloadcompleteevent2.md)程序即将执行的第一个指令时发送。 例如，`IDebugEntryPoint2`时该程序将要执行的用户发送`main`函数。  
+ 当程序将要执行第一个指令时，将发送[IDebugLoadCompleteEvent2](../../../extensibility/debugger/reference/idebugloadcompleteevent2.md) 。 例如，在 `IDebugEntryPoint2` 程序即将执行用户的函数时发送 `main` 。  
   
- 当发送 DE `IDebugEntryPointEvent2`，当前的代码位置应为在用户代码的第一个指令如`main`。  
+ 当取消发送时 `IDebugEntryPointEvent2` ，当前代码位置应位于用户代码的第一个指令上，如 `main` 。  
   
 ## <a name="requirements"></a>要求  
- 标头： msdbg.h  
+ 标头： msdbg  
   
- 命名空间:Microsoft.VisualStudio.Debugger.Interop  
+ 命名空间： VisualStudio  
   
- 程序集：Microsoft.VisualStudio.Debugger.Interop.dll  
+ 程序集： Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)   
  [IDebugLoadCompleteEvent2](../../../extensibility/debugger/reference/idebugloadcompleteevent2.md)

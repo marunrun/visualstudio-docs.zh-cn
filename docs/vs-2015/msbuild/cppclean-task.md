@@ -21,10 +21,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: bddba1170cf675b5bde7ab8deed8cce1e7eb57dd
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68196580"
 ---
 # <a name="cppclean-task"></a>CPPClean 任务
@@ -35,15 +35,15 @@ ms.locfileid: "68196580"
 ## <a name="parameters"></a>参数  
  下表描述了 CPPClean 任务的参数  。  
 
-|            参数            |                                                                                                描述                                                                                                 |
+|            参数            |                                                                                                说明                                                                                                 |
 |---------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |        DeletedFiles          |                               可选 `ITaskItem[]` 输出参数。<br /><br /> 定义可由任务使用和发出的 MSBuild 输出文件项的数组。                                |
 |          DoDelete            |                                                            可选 **Boolean** 参数。<br /><br /> 如果为 `true`，则清除临时生成文件。                                                             |
 | FilePatternsToDeleteOnClean  |                                            必选 `String` 参数。<br /><br /> 指定要清除的文件的文件扩展名列表（以分号分隔）。                                             |
 |   FilesExcludedFromClean     |                                                    可选 `String` 参数。<br /><br /> 指定不会清除的文件的列表（以分号分隔）。                                                    |
-|       FoldersToClean         | 必选 `String` 参数。<br /><br /> 指定要清除的目录的列表（以分号分隔）。 可指定完整路径或相对路径，并且路径可包含通配符 (\\\*)  。 |
+|       FoldersToClean         | 必选 `String` 参数。<br /><br /> 指定要清除的目录的列表（以分号分隔）。 可以指定完整路径或相对路径，路径可以包含通配符符号 (**\\** \*) 。 |
 
 ## <a name="remarks"></a>备注  
 
-## <a name="see-also"></a>请参阅  
- [任务参考](../msbuild/msbuild-task-reference.md)
+## <a name="see-also"></a>另请参阅  
+ [任务引用](../msbuild/msbuild-task-reference.md)

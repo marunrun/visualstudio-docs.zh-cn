@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: 95264aafd2467065ee2bc36d463369f19714dd68
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75587350"
 ---
 # <a name="managed-minimum-rules-rule-set-for-managed-code"></a>托管代码的“托管最少量规则”规则集
@@ -24,4 +24,4 @@ ms.locfileid: "75587350"
 |[CA1001](../code-quality/ca1001.md)|具有可释放字段的类型应该是可释放的|
 |[CA1821](../code-quality/ca1821.md)|移除空终结器|
 |[CA2213](../code-quality/ca2213.md)|应释放可释放的字段|
-|[CA2231](../code-quality/ca2231.md)|重写时重载运算符 equals `ValueType.Equals`|
+|[CA2231](../code-quality/ca2231.md)|重写时重载相等运算符 `ValueType.Equals`|

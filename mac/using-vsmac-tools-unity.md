@@ -6,11 +6,11 @@ ms.author: johmil
 ms.date: 12/13/2019
 ms.assetid: 83FDD7A3-5D16-4B4B-9080-078E3FB5C623
 ms.openlocfilehash: 4247e5cfb936d79c2b2bea5ac68a16164f0c0ef0
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "79306715"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89315013"
 ---
 # <a name="using-visual-studio-for-mac-tools-for-unity"></a>使用 Visual Studio for Mac Tools for Unity
 
@@ -105,7 +105,7 @@ Unity 编辑器的“Project”窗口会反映这些添加。
 
 ### <a name="start-debugging-in-a-single-step"></a>通过单个步骤启动调试
 
-通过选择“附加到 Unity 并播放”配置，可通过一个步骤直接从 Visual Studio for Mac 完成启动调试和播放 Unity 编辑器  。
+通过选择“附加到 Unity 并播放”配置，可通过一个步骤直接从 Visual Studio for Mac 完成启动调试和播放 Unity 编辑器****。
 
 ![选择“附加到 Unity 并播放”](media/using-vsmac-tools-unity-image8.png)
 
@@ -113,11 +113,11 @@ Unity 编辑器的“Project”窗口会反映这些添加。
 
 停止调试：
 
-1. 在 Visual Studio for Mac 中单击“停止”按钮，或按“Shift + Command + Return”   。
+1. 在 Visual Studio for Mac 中单击“停止”按钮，或按“Shift + Command + Return”********。
 
    ![在 Visual Studio 中单击“停止”](media/using-vsmac-tools-unity-image7.png)
 
 > [!NOTE]
-> 如果使用“附加到 Unity 并播放”配置启动调试，“停止”按钮也将停止 Unity   。
+> 如果使用“附加到 Unity 并播放”配置启动调试，“停止”按钮也将停止 Unity********。
 
 有关在 Visual Studio for Mac 中调试的详细信息，请参阅[使用调试程序](debugging.md)。

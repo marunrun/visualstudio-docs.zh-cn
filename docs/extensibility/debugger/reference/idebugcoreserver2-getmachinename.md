@@ -1,5 +1,5 @@
 ---
-title: IDebugCoreServer2：：获取机器名称 |微软文档
+title: IDebugCoreServer2：： GetMachineName |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 238088caa3229a0e57da90baeb0ee0f791c2908a
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80733139"
 ---
 # <a name="idebugcoreserver2getmachinename"></a>IDebugCoreServer2::GetMachineName
-获取核心服务器运行的计算机的名称。
+获取核心服务器正在其上运行的计算机的名称。
 
 ## <a name="syntax"></a>语法
 
@@ -41,10 +41,10 @@ int GetName( 
 
 ## <a name="parameters"></a>参数
 `pbstrName`\
-[出]返回包含计算机名称的字符串。
+弄返回一个包含计算机名称的字符串。
 
 ## <a name="return-value"></a>返回值
- 如果成功，返回`S_OK`;否则，返回错误代码。
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md)

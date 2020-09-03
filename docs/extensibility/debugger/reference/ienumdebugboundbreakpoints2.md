@@ -1,5 +1,5 @@
 ---
-title: IEnumDebug绑定断点2 |微软文档
+title: IEnumDebugBoundBreakpoints2 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 421d46efbef189fd6ffc86812d2bfdd28f5da5ff
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80717442"
 ---
 # <a name="ienumdebugboundbreakpoints2"></a>IEnumDebugBoundBreakpoints2
@@ -28,40 +28,40 @@ ms.locfileid: "80717442"
 IEnumDebugBoundBreakpoints2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>实施者说明
- 调试引擎 （DE） 实现此接口作为其对断点的支持的一部分。 如果支持断点，则必须实现此接口。
+## <a name="notes-for-implementers"></a>实施者注意事项
+ 调试引擎 (DE) 实现此接口作为其对断点的支持的一部分。 如果支持断点，则必须实现此接口。
 
-## <a name="notes-for-callers"></a>呼叫者备注
- 视觉工作室呼叫：
+## <a name="notes-for-callers"></a>调用方说明
+ Visual Studio 调用：
 
-- [EnumBreakpoints](../../../extensibility/debugger/reference/idebugbreakpointevent2-enumbreakpoints.md)以获取此接口，表示触发的所有断点的列表。
+- [EnumBreakpoints](../../../extensibility/debugger/reference/idebugbreakpointevent2-enumbreakpoints.md) 获取表示所有已触发断点列表的此接口。
 
-- [EnumBoundBreakpoints](../../../extensibility/debugger/reference/idebugbreakpointboundevent2-enumboundbreakpoints.md)以获取此接口，表示绑定的所有断点的列表。
+- [EnumBoundBreakpoints](../../../extensibility/debugger/reference/idebugbreakpointboundevent2-enumboundbreakpoints.md) 获取表示所有绑定断点列表的此接口。
 
-- [EnumBoundBreakpoint](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumboundbreakpoints.md)以获取此接口，表示绑定到该挂起断点的的所有断点的列表。
+- [EnumBoundBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumboundbreakpoints.md) 获取此接口，该接口表示绑定到该挂起断点的所有断点的列表。
 
 ## <a name="methods-in-vtable-order"></a>Vtable 顺序中的方法
- 下表显示了 的方法`IEnumDebugBoundBreakpoints2`。
+ 下表显示的方法 `IEnumDebugBoundBreakpoints2` 。
 
-|方法|描述|
+|方法|说明|
 |------------|-----------------|
-|[下一步](../../../extensibility/debugger/reference/ienumdebugboundbreakpoints2-next.md)|检索枚举序列中指定数量的绑定断点。|
-|[跳](../../../extensibility/debugger/reference/ienumdebugboundbreakpoints2-skip.md)|在枚举序列中跳过指定数量的绑定断点。|
-|[重置](../../../extensibility/debugger/reference/ienumdebugboundbreakpoints2-reset.md)|将枚举序列重置为开头。|
-|[克隆](../../../extensibility/debugger/reference/ienumdebugboundbreakpoints2-clone.md)|创建与当前枚举器相同的枚举状态的枚举器。|
-|[GetCount](../../../extensibility/debugger/reference/ienumdebugboundbreakpoints2-getcount.md)|获取枚举器中的绑定断点数。|
+|[下一页](../../../extensibility/debugger/reference/ienumdebugboundbreakpoints2-next.md)|检索枚举序列中指定数目的绑定断点。|
+|[Skip](../../../extensibility/debugger/reference/ienumdebugboundbreakpoints2-skip.md)|跳过枚举序列中指定数目的绑定断点。|
+|[重置](../../../extensibility/debugger/reference/ienumdebugboundbreakpoints2-reset.md)|将枚举序列重置到开始处。|
+|[克隆](../../../extensibility/debugger/reference/ienumdebugboundbreakpoints2-clone.md)|创建与当前枚举数包含相同枚举状态的枚举数。|
+|[GetCount](../../../extensibility/debugger/reference/ienumdebugboundbreakpoints2-getcount.md)|获取枚举器中绑定断点的数目。|
 
 ## <a name="remarks"></a>备注
- Visual Studio 使用此接口表示的绑定断点来更新 IDE 中断点的显示。
+ Visual Studio 使用此接口所表示的绑定断点更新 IDE 中断点的显示。
 
 ## <a name="requirements"></a>要求
- 标题： msdbg.h
+ 标头： msdbg
 
- 命名空间：微软.VisualStudio.调试器.互通
+ 命名空间： VisualStudio
 
- 程序集：微软.VisualStudio.调试器.Interop.dll
+ 程序集： Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [核心接口](../../../extensibility/debugger/reference/core-interfaces.md)
 - [EnumBoundBreakpoints](../../../extensibility/debugger/reference/idebugbreakpointboundevent2-enumboundbreakpoints.md)
 - [EnumBoundBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumboundbreakpoints.md)

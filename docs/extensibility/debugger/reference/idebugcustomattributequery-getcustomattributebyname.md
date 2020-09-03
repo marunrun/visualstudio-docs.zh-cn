@@ -1,5 +1,5 @@
 ---
-title: IDebug自定义属性查询：：按名称获取自定义属性 |微软文档
+title: IDebugCustomAttributeQuery：： GetCustomAttributeByName |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -15,14 +15,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: e1c87fd105d2dbdc18bd4689c4680f2825c9e3be
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80732637"
 ---
 # <a name="idebugcustomattributequerygetcustomattributebyname"></a>IDebugCustomAttributeQuery::GetCustomAttributeByName
-检索给定其名称的自定义属性。
+检索自定义属性的名称。
 
 ## <a name="syntax"></a>语法
 
@@ -44,19 +44,19 @@ int GetCustomAttributeByName(
 
 ## <a name="parameters"></a>参数
 `pszCustomAttributeName`\
-[在]自定义属性的名称。
+中自定义属性的名称。
 
 `ppBlob`\
-[in，出]包含自定义属性数据的字节数组。
+[in，out]包含自定义特性数据的字节数组。
 
 `pdwLen`\
-[出]`ppBlob`参数的长度（以字节为单位）。
+弄参数的长度（以字节为单位） `ppBlob` 。
 
 ## <a name="return-value"></a>返回值
-如果成功，则返回 `S_OK`。 如果自定义属性不存在，请返回`S_FALSE`。 否则，返回错误代码。
+如果成功，则返回 `S_OK`。 如果自定义属性不存在，则返回 `S_FALSE` 。 否则，返回错误代码。
 
 ## <a name="example"></a>示例
-下面的示例演示如何为公开[IDebugCustom属性查询](../../../extensibility/debugger/reference/idebugcustomattributequery.md)接口的**CDebugClassFieldSymbol**对象实现此方法。
+下面的示例演示如何为公开[IDebugCustomAttributeQuery](../../../extensibility/debugger/reference/idebugcustomattributequery.md)接口的**CDebugClassFieldSymbol**对象实现此方法。
 
 ```cpp
 HRESULT CDebugClassFieldSymbol::GetCustomAttributeByName(
@@ -93,5 +93,5 @@ Error:
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IDebugCustomAttributeQuery](../../../extensibility/debugger/reference/idebugcustomattributequery.md)

@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 1c1574704f8848c16f4740189688cb1719f19623
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "84183712"
 ---
 # <a name="change-the-appearance-of-a-command"></a>更改命令的外观
@@ -30,25 +30,25 @@ ms.locfileid: "84183712"
 
 - 实现 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> 接口并修改原始命令对象。
 
-  以下步骤演示如何使用托管包框架（MPF）查找和更新命令的外观。
+  以下步骤演示了如何使用托管包框架 (MPF) 查找和更新命令的外观。
 
 ### <a name="to-change-the-appearance-of-a-menu-command"></a>更改菜单命令的外观
 
-1. 按照[更改菜单命令的文本](../extensibility/changing-the-text-of-a-menu-command.md)中的说明创建一个名为的菜单项 `New Text` 。
+1. 按照 [更改菜单命令的文本](../extensibility/changing-the-text-of-a-menu-command.md) 中的说明创建一个名为的菜单项 `New Text` 。
 
-2. 在*ChangeMenuText.cs*文件中，添加以下 using 语句：
+2. 在 *ChangeMenuText.cs* 文件中，添加以下 using 语句：
 
     ```csharp
     using System.Security.Permissions;
     ```
 
-3. 在*ChangeMenuTextPackageGuids.cs*文件中，添加以下行：
+3. 在 *ChangeMenuTextPackageGuids.cs* 文件中，添加以下行：
 
     ```csharp
     public const string guidChangeMenuTextPackageCmdSet= "00000000-0000-0000-0000-00000000";  // get the GUID from the .vsct file
     ```
 
-4. 在*ChangeMenuText.cs*文件中，将 ShowMessageBox 方法中的代码替换为以下代码：
+4. 在 *ChangeMenuText.cs* 文件中，将 ShowMessageBox 方法中的代码替换为以下代码：
 
     ```csharp
     private void Execute(object sender, EventArgs e)
@@ -80,12 +80,12 @@ ms.locfileid: "84183712"
 
 6. 生成项目并启动调试。 应显示 Visual Studio 的实验实例。
 
-7. 在 "**工具**" 菜单上，单击 "**调用 ChangeMenuText** " 命令。 此时，命令名称会**调用 ChangeMenuText**，因此，命令处理程序不会调用**ChangeMyCommand （）**。
+7. 在 " **工具** " 菜单上，单击 " **调用 ChangeMenuText** " 命令。 此时，命令名称会 **调用 ChangeMenuText**，因此命令处理程序不会调用 **ChangeMyCommand ( # B1 **。
 
-8. 此时，你应该会看到 "**工具**" 菜单上的 "**新文本**"。 单击 "**新文本**"。 该命令现在应显示为灰色。
+8. 此时，你应该会看到 " **工具** " 菜单上的 " **新文本**"。 单击 " **新文本**"。 该命令现在应显示为灰色。
 
 ## <a name="see-also"></a>请参阅
 - [命令、菜单和工具栏](../extensibility/internals/commands-menus-and-toolbars.md)
 - [Vspackage 如何添加用户界面元素](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
 - [扩展菜单和命令](../extensibility/extending-menus-and-commands.md)
-- [Visual Studio 命令表（。.Vsct）文件](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [Visual Studio 命令表 (。.Vsct) 文件](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

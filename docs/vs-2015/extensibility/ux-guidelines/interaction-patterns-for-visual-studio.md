@@ -9,38 +9,38 @@ caps.latest.revision: 5
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: f570d665ddbc97ccddf058e1bb424c62e23912cb
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "67825279"
 ---
 # <a name="interaction-patterns-for-visual-studio"></a>Visual Studio 的交互模式
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
 ## <a name="overview"></a>概述
- 一种设计模式，一般情况下，是设计的可以应用在特定情况下，若要解决问题的约束类似集合的核心。 功能和系统设计器使用这些设计模式作为起始点，然后可适用于其特定的情况。
+ 通常，设计模式是设计的核心，它可以在特定情况下应用以解决类似约束集的问题。 功能和系统设计器使用这些设计模式作为起点，然后可以根据具体情况调整这些起点。
 
- Visual Studio 提供生成的新功能时应考虑的常见交互模式的库。 有两个核心上下文为我们的设计模式：Visual Studio 客户端 (devenv) 和 Visual Studio Online。 对于某些设计问题，是适用于所有情况下的通用模式。 在许多情况下，但是，解决方案可能是不同的在浏览器并且将托管在客户端应用程序上显示的 UI。
+ Visual Studio 具有一个通用交互模式库，在生成新功能时应考虑到这些模式。 设计模式有两个核心上下文： Visual Studio 客户端 (devenv) 和 Visual Studio Online。 对于某些设计问题，有一种广泛的模式适用于所有情况。 但是，在许多情况下，对于在浏览器中呈现的 UI，以及在客户端应用程序上承载的 UI，解决方案可能会有所不同。
 
 ### <a name="visual-studio-client-pattern-types"></a>Visual Studio 客户端模式类型
 
-|模式类型|描述|示例|
+|模式类型|说明|示例|
 |------------------|-----------------|--------------|
-|**应用程序级模式**|通用的应用程序，确定或显示应用程序上下文中，并包含其中的复合和控件模式的高级模式|-工具窗口<br />-文档窗口|
-|**复合模式**|可能会跨应用程序模式的常见模式或识别的模式的不同配置中的多个控件组成|视图切换<br />列表生成器<br />-显示数据<br />-通知<br />验证<br />选择模型|
-|**控件模式**|有关如何低级别的控件的具体信息应表现出的行为|树视图<br />-网格控件中编辑|
+|**应用程序级模式**|应用程序通用的高级模式，确定或显示应用程序上下文，并在其中包含复合和控件模式|-工具窗口<br />-文档窗口|
+|**复合模式**|可能跨应用程序模式的常见模式，或在不同配置中由多个控件组成的可识别模式|-查看切换<br />-列表生成器<br />-显示数据<br />-通知<br />-验证<br />-选择模型|
+|**控件模式**|有关底层控件应如何表现的详细信息|-树形视图<br />-在 grid 控件内编辑|
 
 ## <a name="application-patterns"></a>应用程序模式
- 在高级别中，Visual Studio 界面包含多个 windows、 对话框、 命令和单个 IDE 中的工具栏。 Visual Studio 层次结构确定上下文和驱动器菜单。 IDE 的用户界面的关键集成点是文档窗口： 工具窗口、 项目、 命令结构、 文本编辑器、 工具箱、 属性窗口中和工具 > 选项。
+ 在高级别上，Visual Studio 接口在单个 IDE 内包含多个窗口、对话框、命令和工具栏。 Visual Studio 层次结构决定了上下文和驱动器菜单。 IDE 用户界面中的关键集成点包括文档窗口、工具窗口、项目、命令结构、文本编辑器、工具箱、属性窗口和工具 > 选项。
 
- 有基本的使用模式为每个用户界面中的 IDE 的关键集成点：
+ IDE 用户界面中的每个关键集成点都有基本的使用模式：
 
 - [Visual Studio 的菜单和命令](../../extensibility/ux-guidelines/menus-and-commands-for-visual-studio.md)
 
 - [Visual Studio 的应用程序模式](../../extensibility/ux-guidelines/application-patterns-for-visual-studio.md)
 
-  - [窗口的交互](../../extensibility/ux-guidelines/application-patterns-for-visual-studio.md#BKMK_WindowInteractions)
+  - [窗口交互](../../extensibility/ux-guidelines/application-patterns-for-visual-studio.md#BKMK_WindowInteractions)
 
   - [工具窗口](../../extensibility/ux-guidelines/application-patterns-for-visual-studio.md#BKMK_ToolWindows)
 
@@ -50,10 +50,10 @@ ms.locfileid: "67825279"
 
   - [项目](../../extensibility/ux-guidelines/application-patterns-for-visual-studio.md#BKMK_Projects)
 
-## <a name="common-control-patterns"></a>常见控件模式
- 控件模式主要是关于个别控件预期行为。 这是一个在其中一致性是最关键的区域。
+## <a name="common-control-patterns"></a>公共控件模式
+ 控件模式主要涉及各个控件的行为方式。 这是一致性最为重要的一个领域。
 
- 在 Visual Studio 中最常用的控件应遵循的桌面 Windows 准则。 我们的指导原则只包括我们需要增加使用的特定于 Visual Studio 的交互或在其中我们取代准则完全为了定制 Visual Studio 以满足我们经验丰富的用户的需求的位置的常见约定领域。
+ Visual Studio 中的最常见控件应遵循桌面 Windows 指导原则。 本指南仅包括一些区域，在这些区域中我们需要增加常见约定与 Visual Studio 的特定交互，或者我们完全取代了这些指导原则，以便为 Visual Studio 定制，以满足复杂用户的需求。
 
 - [Visual Studio 的公共控件模式](../../extensibility/ux-guidelines/common-control-patterns-for-visual-studio.md)
 
@@ -64,9 +64,9 @@ ms.locfileid: "67825279"
   - [按钮和超链接](../../extensibility/ux-guidelines/common-control-patterns-for-visual-studio.md#BKMK_ButtonsAndHyperlinks)
 
 ## <a name="composite-patterns"></a>复合模式
- 有许多用户希望在完成任务的方法。 如有可能，应设计功能来使用这些模式为交互和可视化设计。
+ 用户需要通过多种方式来完成任务。 只要有可能，功能就应该设计为使用这些模式进行交互和可视化设计。
 
- 尽管有很多的复合模式，在 Visual Studio 中，一些最重要的方面的一致性是：
+ 尽管在 Visual Studio 中有很多复合模式，但对于一致性而言，最重要的是：
 
 - [Visual Studio 的复合模式](../../extensibility/ux-guidelines/composite-patterns-for-visual-studio.md)
 

@@ -11,10 +11,10 @@ caps.latest.revision: 41
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 2dffebeaa0349c149e319d20794f8b065baa5647
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72660689"
 ---
 # <a name="best-practices-for-coded-ui-tests"></a>编码的 UI 测试的最佳做法
@@ -26,14 +26,14 @@ ms.locfileid: "72660689"
 
 - Visual Studio Enterprise
 
-## <a name="best-practices"></a>最佳做法
+## <a name="best-practices"></a>最佳方案
  使用以下准则来创建灵活的编码的 UI 测试。
 
 - 尽可能使用**编码的 UI 测试生成器**。
 
 - 请不要直接修改 `UIMap.designer.cs` 文件。 如果执行此操作，将覆盖对该文件的更改。
 
-- 将测试创建为一系列记录的方法。 若要详细了解如何录制方法，请参阅[创建编码的 UI 测试](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate)。
+- 将测试创建为一系列记录的方法。 有关如何记录方法的详细信息，请参阅 [创建编码的 UI 测试](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate)。
 
 - 每个记录的方法应作用于单个页面、窗体或对话框。 为每个新页面、窗体或对话框创建新测试方法。
 
@@ -45,11 +45,11 @@ ms.locfileid: "72660689"
 
 - 如果用户界面 (UI) 更改，请重新记录测试方法或断言方法，或重新记录现有测试方法中受影响的部分。
 
-- 为受测应用程序中的每个模块创建一个单独的 [UIMap](/previous-versions/dd580454(v=vs.140)) 文件。 有关详细信息，请参阅[使用多个 UI 映射测试大型应用程序](../test/testing-a-large-application-with-multiple-ui-maps.md)。
+- 为受测应用程序中的每个模块创建一个单独的 [UIMap](/previous-versions/dd580454(v=vs.140)) 文件。 有关详细信息，请参阅 [使用多个 UI 映射测试大型应用程序](../test/testing-a-large-application-with-multiple-ui-maps.md)。
 
 - 在受测应用程序中创建 UI 控件时，请使用有意义的名称。 这比自动生成的控件名称更有意义，更易于使用。
 
-- 如果要通过使用 API 编码来创建断言，请为 `UIMap.cs` 文件中的[UIMap](/previous-versions/dd580454(v=vs.140))类的部分中的每个断言创建一个方法。 从测试方法中调用此方法以执行断言。
+- 如果要通过使用 API 编码来创建断言，请为文件中的 [UIMap](/previous-versions/dd580454(v=vs.140)) 类的部分中的每个断言创建一个方法 `UIMap.cs` 。 从测试方法中调用此方法以执行断言。
 
 - 如果直接用 API 编码，请在代码中尽可能使用 `UIMap.Designer.cs` 文件中生成的类中的属性和方法。 这些类将使您的工作更简单可靠，并帮助您提高效率。
 
@@ -70,7 +70,7 @@ ms.locfileid: "72660689"
 
   - 通过将十字线按钮拖动到 UI 控件上来添加新的断言，打开 UI 映射，并添加新的断言。
 
-  若要详细了解如何录制编码的 UI 测试，请参阅[使用 UI 自动化来测试代码](../test/use-ui-automation-to-test-your-code.md)。
+  有关如何记录编码的 UI 测试的详细信息，请参阅 [使用 UI 自动化来测试代码](../test/use-ui-automation-to-test-your-code.md)。
 
 ## <a name="what-to-do-if-a-background-process-needs-to-complete-before-the-test-can-continue"></a>需要先完成后台进程然后测试才能继续时应如何操作
  可能必须等到进程完成，然后才能继续下一个 UI 操作。 为此，可以使用 <xref:Microsoft.VisualStudio.TestTools.UITesting.PlaybackSettings.WaitForReadyLevel%2A> 在测试继续之前等待，如以下示例所示。
@@ -86,11 +86,11 @@ this.UIMap.ClickSubmit();
 Playback.PlaybackSettings.WaitForReadyLevel = WaitForReadyLevel.UIThreadOnly;
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [UIMap](/previous-versions/dd580454(v=vs.140))
 - <xref:Microsoft.VisualStudio.TestTools.UITesting>
 - [使用 UI 自动化来测试代码](../test/use-ui-automation-to-test-your-code.md)
 - [创建编码的 UI 测试](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate)
 - [使用多个 UI 映射测试大型应用程序](../test/testing-a-large-application-with-multiple-ui-maps.md)
-- [支持编码的 UI 测试和操作录制的配置和平台](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)
+- [编码的 UI 测试和操作录制支持的配置和平台](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)

@@ -22,16 +22,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: be85bd5c09d59df576d66cef6cf2d4e7e34876ab
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65687655"
 ---
 # <a name="quickstart-debug-html-and-css"></a>快速入门：调试 HTML 和 CSS
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-适用于 Windows 和 Windows Phone] (../Image/windows_and_phone_content.png"windows_and_phone_content")  
+适用于 Windows 和 Windows Phone] (。将 windows_and_phone_content.png "windows_and_phone_content" )   
   
  Visual Studio 针对 JavaScript 应用提供全面的调试体验，其中包括 Internet Explorer 和 Visual Studio 开发人员熟悉的多项功能。 这些功能支持 [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)]、Windows Phone 应用商店应用，以及使用用于 Apache Cordova 的 Visual Studio 工具创建的应用。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "65687655"
   
 - [检查实时 DOM](#InspectingDOM)  
   
-- [Selecting elements](#SelectingElements)  
+- [选择元素](#SelectingElements)  
   
   有关使用 DOM 资源管理器的附加信息，请参见下列主题：  
   
@@ -55,13 +55,13 @@ ms.locfileid: "65687655"
   
 - [调试 WebView 控件](../debugger/debug-a-webview-control.md)  
   
-  有关其他 JavaScript 调试功能，例如使用 JavaScript 控制台窗口，并设置断点，请参阅[快速入门：调试 JavaScript](../debugger/quickstart-debug-javascript-using-the-console.md)并[在 Visual Studio 中调试应用](../debugger/debug-store-apps-in-visual-studio.md)。  
+  有关其他 JavaScript 调试功能（例如，使用 JavaScript 控制台窗口和设置断点）的信息，请参阅 [快速入门：调试 JavaScript](../debugger/quickstart-debug-javascript-using-the-console.md) 和[在 Visual Studio 中调试应用](../debugger/debug-store-apps-in-visual-studio.md)。  
   
-## <a name="InspectingDOM"></a> 检查实时 DOM  
+## <a name="inspecting-the-live-dom"></a><a name="InspectingDOM"></a> 检查实时 DOM  
  DOM 资源管理器展示所呈现的页面的视图，还可使用 DOM 资源管理器更改值并立即看到结果。 这使你可以在无需停止和重新启动调试器的情况下测试更改。 使用此方法与页面进行交互时不更改项目中的源代码，因此当发现代码中要更正的内容时，请对源代码作出更改。  
   
 > [!TIP]
-> 若要在更改源代码时避免停止和重新启动调试器，你可以使用“调试”工具栏上的 **“刷新 Windows 应用”** 按钮（或按 F4）刷新应用。 有关详细信息，请参阅[刷新应用程序 (JavaScript)](../debugger/refresh-an-app-javascript.md)。  
+> 若要在更改源代码时避免停止和重新启动调试器，你可以使用“调试”工具栏上的 **“刷新 Windows 应用”** 按钮（或按 F4）刷新应用。 有关详细信息，请参阅 [刷新应用 (JavaScript)](../debugger/refresh-an-app-javascript.md)。  
   
  可使用 DOM 资源管理器：  
   
@@ -71,7 +71,7 @@ ms.locfileid: "65687655"
   
 - 检查如何将 CSS 样式应用到页元素，并跟踪已应用的规则。  
   
-  调试应用程序时，通常需要在 DOM 资源管理器中选择元素。 选择某个元素后，DOM 资源管理器右侧选项卡上显示的值将自动更新，以反映 DOM 资源管理器中的选定元素。 以下是在选项卡：**样式**，**计算**，**布局**。 Windows 应用商店应用还支持“事件”  和“更改”  选项卡。 有关选择元素的详细信息，请参见 [Selecting elements](#SelectingElements)。  
+  调试应用程序时，通常需要在 DOM 资源管理器中选择元素。 选择某个元素后，DOM 资源管理器右侧选项卡上显示的值将自动更新，以反映 DOM 资源管理器中的选定元素。 这些选项卡包括：样式、计算和布局  。 Windows 应用商店应用还支持“事件” **** 和“更改” **** 选项卡。 有关选择元素的详细信息，请参见 [Selecting elements](#SelectingElements)。  
   
 > [!TIP]
 > 如果“DOM 资源管理器”窗口已关闭，请依次选择“调试” > >  以重新打开它。 仅在脚本调试会话期间显示该窗口。  
@@ -83,9 +83,9 @@ ms.locfileid: "65687655"
   
 #### <a name="to-debug-by-inspecting-the-live-dom"></a>通过检查实时 DOM 进行调试  
   
-1. 通过选择 **“文件”** > **“新建项目”**。  
+1. 通过选择 **“文件”**  >  **“新建项目”** 。  
   
-2. 选择 **“JavaScript”** > **“应用商店”**，再选择 **“Windows 应用”** 或 **“Windows Phone 应用”**，然后选择 **“空白应用”**。  
+2. 选择 " **JavaScript**  >  **存储**"，选择 " **Windows 应用**" 或 " **Windows Phone 应用**"，然后选择 "**空白应用**"。  
   
 3. 为项目输入名称（如 `FlipViewApp`），然后选择“确定”  以创建应用。  
   
@@ -168,13 +168,13 @@ ms.locfileid: "65687655"
   
     下图显示了在 Phone 仿真程序中运行该应用程序（与模拟器中的情况类似）时希望看到的状态。 但是，若要让应用程序进入此状态，我们必须先修复大量 Bug。  
   
-    ![显示预期的结果的 FlipView 应用](../debugger/media/js-dom-appfixed.png "JS_DOM_AppFixed")  
+    ![显示所需结果的 FlipView 应用](../debugger/media/js-dom-appfixed.png "JS_DOM_AppFixed")  
   
 7. 从 **“调试”** 工具栏上的 **“启动调试”** 按钮旁的下拉列表中，选择 **“模拟器”** 或 **“仿真程序 8.1 WVGA 4 英寸 512MB”** ：  
   
     ![选择调试目标列表](../debugger/media/js-select-target.png "JS_Select_Target")  
   
-8. 选择 **“仿真程序 8.1 WVGA 4 英寸 512MB”** > **“模拟器”** 或按 F5，以调试模式运行应用。  
+8. 选择 **“仿真程序 8.1 WVGA 4 英寸 512MB”**  >  **“模拟器”** 或按 F5，以调试模式运行应用。  
   
     这样将在模拟器或 Phone 仿真程序中运行应用程序，但是，你将看到几乎空白的屏幕，因为样式中有几个 Bug。 第一个 `FlipView` 图像显示在屏幕中间附近的小正方形中。  
   
@@ -187,7 +187,7 @@ ms.locfileid: "65687655"
   
 11. 在“DOM 资源管理器”窗口中，选择 ID 为 `"fView"`的部分的 DIV 元素。 使用箭头键可以查看并选择正确的 DIV 元素。 （使用右键头键可以查看元素的子元素。）  
   
-     ![DOM Explorer](../debugger/media/js-dom-explorer.png "JS_DOM_Explorer")  
+     ![DOM 资源管理器](../debugger/media/js-dom-explorer.png "JS_DOM_Explorer")  
   
     > [!TIP]
     > 也可通过在 >> 输入提示符下键入 `select(fView)`，然后按 Enter，在“JavaScript 控制台”窗口的左下角选择此 DIV 元素。  
@@ -202,14 +202,14 @@ ms.locfileid: "65687655"
   
      下图显示了 **“已计算”** 选项卡。  
   
-     ![DOM 资源管理器中计算选项卡](../debugger/media/js-dom-explorer-computed.png "JS_DOM_Explorer_Computed")  
+     ![DOM 资源管理器的“已计算”选项卡](../debugger/media/js-dom-explorer-computed.png "JS_DOM_Explorer_Computed")  
   
 14. 在“DOM 资源管理器”主窗口中，双击 `fView` DIV 元素的高度和宽度的级联样式。 现在可以在此处编辑这些值。 在此方案中，我们需要完全移除它们。  
   
 15. 选择 `width: 100px;height: 100px;`，并按 Delete 键，然后按 Enter。 按 Enter 后，模拟器或 Phone 仿真程序中将立即反映新值，即使尚未停止调试会话也是如此。  
   
     > [!IMPORTANT]
-    > 你不但可以在“DOM 资源管理器”窗口中更新特性，还可更新 **“样式”**、 **“已计算”** 和 **“布局”** 选项卡上显示的值。 有关详细信息，请参阅[使用 DOM 资源管理器调试 CSS 样式](../debugger/debug-css-styles-using-dom-explorer.md)并[使用 DOM 资源管理器调试布局](../debugger/debug-layout-using-dom-explorer.md)。  
+    > 你不但可以在“DOM 资源管理器”窗口中更新特性，还可更新 **“样式”** 、 **“已计算”** 和 **“布局”** 选项卡上显示的值。 有关详细信息，请参阅 [使用 Dom 资源管理器调试 CSS 样式](../debugger/debug-css-styles-using-dom-explorer.md) 和 [使用 Dom 资源管理器调试布局](../debugger/debug-layout-using-dom-explorer.md)。  
   
 16. 通过选择模拟器或 Phone 仿真程序，或通过使用 Alt+Tab 切换到此应用程序。  
   
@@ -225,17 +225,17 @@ ms.locfileid: "65687655"
   
      情况有所好转。 然而，还有一个问题有待解决，那就是边距看上去太大。  
   
-20. 若要进行调查，请切换到 Visual Studio 并选择 **“布局”** 选项卡查看元素的框模型。  
+20. 若要进行调查，请切换到 Visual Studio 并选择 " **布局** " 选项卡以查看元素的框模型。  
   
      在 **“布局”** 选项卡中，你会看到以下值：  
   
-    - 对于模拟器：为 320px （偏移量） 和 320px （边距）。  
+    - 对于模拟器：320px（偏移量）和 320px（边距）。  
   
-    - 对于 Phone 仿真程序：100px （偏移量） 和 100px （边距）。  
+    - 对于 Phone 仿真程序：100px（偏移量）和 100px（边距）。  
   
       下图显示了使用 Phone 仿真程序（100px 的偏移量和边距）时 **“布局”** 选项卡的外观。  
   
-      ![DOM 资源管理器布局选项卡](../debugger/media/js-dom-explorer-layout.png "JS_DOM_Explorer_Layout")  
+      ![DOM 资源管理器的“布局”选项卡](../debugger/media/js-dom-explorer-layout.png "JS_DOM_Explorer_Layout")  
   
       这似乎并不合适。 **“计算”** 选项卡也显示相同的边距值。  
   
@@ -253,13 +253,13 @@ ms.locfileid: "65687655"
   
 2. 打开 default.html，然后通过将 `"fView"` DIV 元素的 height 和 width 均设置为 100%，对源代码进行修改。  
   
-3. 选择“调试”工具栏上的 **“刷新 Windows 应用程序”** 按钮（或按 F4）。 该按钮如下所示：![刷新 Windows 应用按钮](../debugger/media/js-refresh.png "JS_Refresh")。  
+3. 选择“调试”工具栏上的 **“刷新 Windows 应用程序”** 按钮（或按 F4）。 该按钮如下所示：![“刷新 Windows 应用”按钮](../debugger/media/js-refresh.png "JS_Refresh")。  
   
      随后将重新加载应用程序页面，并且模拟器或 Phone 仿真程序将返回前台。  
   
-     有关刷新功能的详细信息，请参阅[刷新应用程序 (JavaScript)](../debugger/refresh-an-app-javascript.md)。  
+     有关“刷新”功能的详细信息，请参阅 [刷新应用 (JavaScript)](../debugger/refresh-an-app-javascript.md)。  
   
-## <a name="SelectingElements"></a> Selecting elements  
+## <a name="selecting-elements"></a><a name="SelectingElements"></a> Selecting elements  
  在调试应用程序时，可以通过三种方式选择 DOM 元素：  
   
 - 通过在“DOM 资源管理器”窗口中直接单击元素（或通过使用箭头键）。  
@@ -270,7 +270,7 @@ ms.locfileid: "65687655"
   
   在使用“DOM 资源管理器”窗口选择元素并将鼠标指针置于一个元素上时，正在运行的应用程序中会突出显示相应的元素。 必须在 DOM 资源管理器中单击该元素以将其选定，也可以使用箭头键突出显示并选择元素。此外，还可以使用 **“选择元素”** 按钮在 DOM 资源管理器中选择元素。 下图显示 **“选择元素”** 按钮。  
   
-  ![在 DOM 资源管理器中选择元素按钮](../debugger/media/js-dom-select-element-button.png "JS_DOM_Select_Element_Button")  
+  ![DOM 资源管理器的“选择元素”按钮](../debugger/media/js-dom-select-element-button.png "JS_DOM_Select_Element_Button")  
   
   单击 **“选择元素”** （或按 Ctrl+B）将更改选择模式，以使你在正在运行的应用程序中单击某项，即可在 DOM 资源管理器中选择该项。 单击之后，模式将变回正常选择模式。 单击 **“选择元素”** 后，应用程序转入前台，而光标发生变化以反映新的选择模式。 单击有轮廓包围的元素后，DOM 资源管理器将返回前台，并选中了指定的元素。  
   
@@ -283,9 +283,9 @@ ms.locfileid: "65687655"
 > [!NOTE]
 > 指针悬停在元素上方时突出显示的元素在 Windows Phone 模拟器中仅部分受支持。  
   
- 有关示例，演示如何使用选择的元素**Select 元素**按钮，请参阅[使用 DOM 资源管理器调试 CSS 样式](../debugger/debug-css-styles-using-dom-explorer.md)。  
+ 有关演示如何使用 " **选择元素** " 按钮选择元素的示例，请参阅 [使用 DOM 资源管理器调试 CSS 样式](../debugger/debug-css-styles-using-dom-explorer.md)。  
   
-## <a name="BrowserSupport"></a> 浏览器和平台支持  
+## <a name="browser-and-platform-support"></a><a name="BrowserSupport"></a> 浏览器和平台支持  
  JavaScript 的 Visual Studio 工具、DOM 资源管理器和 JavaScript 控制台窗口在以下平台上受支持：  
   
 - 使用 JavaScript 和 HTML 的[!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] 和 Windows Phone 应用商店应用  
@@ -296,14 +296,14 @@ ms.locfileid: "65687655"
   
   请前往 [此处](https://developer.microsoft.com/windows/downloads/sdk-archive) 下载 [!INCLUDE[win8](../includes/win8-md.md)] 和 Visual Studio。  
   
-## <a name="see-also"></a>请参阅  
- [Debug apps in Visual Studio](../debugger/debug-store-apps-in-visual-studio.md)   
+## <a name="see-also"></a>另请参阅  
+ [在 Visual Studio 中调试应用](../debugger/debug-store-apps-in-visual-studio.md)   
  [使用 DOM 资源管理器调试 CSS 样式](../debugger/debug-css-styles-using-dom-explorer.md)   
  [使用 DOM 资源管理器调试布局](../debugger/debug-layout-using-dom-explorer.md)   
  [查看 DOM 事件侦听器](../debugger/view-dom-event-listeners.md)   
- [刷新应用 (JavaScript)](../debugger/refresh-an-app-javascript.md)   
- [调试 WebView 控件](../debugger/debug-a-webview-control.md)   
- [键盘快捷键](../debugger/keyboard-shortcuts-html-and-javascript.md)   
- [JavaScript Console commands](../debugger/javascript-console-commands.md)   
+ [ (JavaScript 中刷新应用) ](../debugger/refresh-an-app-javascript.md)   
+ [调试 Web 视图控件](../debugger/debug-a-webview-control.md)   
+ [键盘快捷方式](../debugger/keyboard-shortcuts-html-and-javascript.md)   
+ [JavaScript 控制台命令](../debugger/javascript-console-commands.md)   
  [调试 HTML、CSS 和 JavaScript 示例代码](../debugger/debug-html-css-and-javascript-sample-code.md)   
  [产品支持和辅助功能](https://msdn.microsoft.com/library/tzbxw1af\(VS.120\).aspx)

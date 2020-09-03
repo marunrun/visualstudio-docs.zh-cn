@@ -13,35 +13,35 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 3f73f948befc7665ecc3a40f816389bfaae8e4fd
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85904203"
 ---
 # <a name="add-a-most-recently-used-list-to-a-submenu"></a>向子菜单添加最近使用过的列表
-本演练基于[向菜单添加子](../extensibility/adding-a-submenu-to-a-menu.md)菜单中的演示，并演示如何向子菜单添加动态列表。 动态列表构成了创建最近使用的（MRU）列表的基础。
+本演练基于 [向菜单添加子](../extensibility/adding-a-submenu-to-a-menu.md)菜单中的演示，并演示如何向子菜单添加动态列表。 动态列表构成了创建最近使用 (MRU) 列表的基础。
 
-动态菜单列表以菜单上的占位符开头。 每次显示菜单时，Visual Studio 集成开发环境（IDE）都向 VSPackage 请求应显示在占位符中的所有命令。 动态列表可以出现在菜单上的任何位置。 但是，动态列表通常存储在子菜单上或菜单底部。 通过使用这些设计模式，可以在不影响菜单上其他命令的位置的情况下，使命令的动态列表展开和收缩。 在本演练中，动态 MRU 列表显示在现有子菜单的底部，并与子菜单的其余部分分隔开。
+动态菜单列表以菜单上的占位符开头。 每次显示菜单时，Visual Studio 集成开发环境 (IDE) 请求应显示在占位符中的所有命令的 VSPackage。 动态列表可以出现在菜单上的任何位置。 但是，动态列表通常存储在子菜单上或菜单底部。 通过使用这些设计模式，可以在不影响菜单上其他命令的位置的情况下，使命令的动态列表展开和收缩。 在本演练中，动态 MRU 列表显示在现有子菜单的底部，并与子菜单的其余部分分隔开。
 
 从技术上讲，动态列表还可以应用于工具栏。 但是，我们会反对这种用法，因为工具栏应保持不变，除非用户执行特定步骤来更改它。
 
-本演练将创建四个项的 MRU 列表，每次选择其中一项时，这些项都将更改顺序（选定项移至列表顶部）。
+本演练将创建四个项的 MRU 列表，每次选择其中一项时，这些项将更改它们的顺序 (选定项移至列表顶部) 。
 
-有关菜单和 *.vsct*文件的详细信息，请参阅[命令、菜单和工具栏](../extensibility/internals/commands-menus-and-toolbars.md)。
+有关菜单和 *.vsct* 文件的详细信息，请参阅 [命令、菜单和工具栏](../extensibility/internals/commands-menus-and-toolbars.md)。
 
-## <a name="prerequisites"></a>必备条件
-要按照本演练的步骤操作，必须安装 Visual Studio SDK。 有关详细信息，请参阅[Visual STUDIO SDK](../extensibility/visual-studio-sdk.md)。
+## <a name="prerequisites"></a>先决条件
+要按照本演练的步骤操作，必须安装 Visual Studio SDK。 有关详细信息，请参阅 [Visual STUDIO SDK](../extensibility/visual-studio-sdk.md)。
 
 ## <a name="create-an-extension"></a>创建一个扩展
 
-- 按照[将子菜单添加到菜单](../extensibility/adding-a-submenu-to-a-menu.md)中的过程创建在以下过程中修改的子菜单。
+- 按照 [将子菜单添加到菜单](../extensibility/adding-a-submenu-to-a-menu.md) 中的过程创建在以下过程中修改的子菜单。
 
-  本演练中的过程假定 VSPackage 的名称是 `TestCommand` ，它是在[Visual Studio 菜单栏的 "添加" 菜单](../extensibility/adding-a-menu-to-the-visual-studio-menu-bar.md)中使用的名称。
+  本演练中的过程假定 VSPackage 的名称是 `TestCommand` ，它是在 [Visual Studio 菜单栏的 "添加" 菜单](../extensibility/adding-a-menu-to-the-visual-studio-menu-bar.md)中使用的名称。
 
 ## <a name="create-a-dynamic-item-list-command"></a>创建动态项列表命令
 
-1. 打开*TestCommandPackage. .vsct*。
+1. 打开 *TestCommandPackage. .vsct*。
 
 2. 在 `Symbols` 部分中，在 `GuidSymbol` 名为 guidTestCommandPackageCmdSet 的节点中，添加 `MRUListGroup` 组和命令的符号 `cmdidMRUList` ，如下所示。
 
@@ -77,18 +77,18 @@ ms.locfileid: "85904203"
 
 5. 生成项目并启动调试以测试新命令的显示。
 
-    在 " **TestMenu** " 菜单上，单击 "新建" 子菜单，单击 "**子菜单**" 以显示 "新命令， **MRU 占位符**"。 在下一过程中实现了动态 MRU 命令列表后，每次打开子菜单时，此命令标签都将替换为该列表。
+    在 " **TestMenu** " 菜单上，单击 "新建" 子菜单，单击 " **子菜单**" 以显示 "新命令， **MRU 占位符**"。 在下一过程中实现了动态 MRU 命令列表后，每次打开子菜单时，此命令标签都将替换为该列表。
 
 ## <a name="filling-the-mru-list"></a>填充 MRU 列表
 
-1. 在*TestCommandPackageGuids.cs*中，在类定义中的现有命令 id 后面添加以下行 `TestCommandPackageGuids` 。
+1. 在 *TestCommandPackageGuids.cs*中，在类定义中的现有命令 id 后面添加以下行 `TestCommandPackageGuids` 。
 
     ```csharp
     public const string guidTestCommandPackageCmdSet = "00000000-0000-0000-0000-00000000"; // get the GUID from the .vsct file
     public const uint cmdidMRUList = 0x200;
     ```
 
-2. 在*TestCommand.cs*中，添加以下 using 语句。
+2. 在 *TestCommand.cs* 中，添加以下 using 语句。
 
     ```csharp
     using System.Collections;
@@ -190,14 +190,14 @@ ms.locfileid: "85904203"
 
 1. 生成项目并启动调试。
 
-2. 在 " **TestMenu** " 菜单上，单击 "**调用 testcommand (**"。 执行此操作将显示一个消息框，指示已选择此命令。
+2. 在 " **TestMenu** " 菜单上，单击 " **调用 testcommand (**"。 执行此操作将显示一个消息框，指示已选择此命令。
 
     > [!NOTE]
     > 若要强制 VSPackage 加载并正确显示 MRU 列表，需要执行此步骤。 如果跳过此步骤，则不会显示 MRU 列表。
 
-3. 在 "**测试" 菜单**菜单上，单击 "**子菜单**"。 在子菜单的末尾，分隔符下显示了四个项的列表。 单击 "**项目 3**" 时，将出现一个消息框并显示文本 "已**选择项 3**"。 （如果未显示四项列表，请确保已按照前面步骤中的说明进行操作。）
+3. 在 " **测试" 菜单** 菜单上，单击 " **子菜单**"。 在子菜单的末尾，分隔符下显示了四个项的列表。 单击 " **项目 3**" 时，将出现一个消息框并显示文本 "已 **选择项 3**"。  (如果未显示四项列表，请确保已按照前面步骤中的说明进行操作。 ) 
 
-4. 再次打开子菜单。 请注意，**项 3**现在位于列表的顶部，而其他项已向下推送一个位置。 再次单击**第3项**，请注意，消息框仍显示**选定的项 3**，这表示文本已正确地与命令标签一起移动到新位置。
+4. 再次打开子菜单。 请注意， **项 3** 现在位于列表的顶部，而其他项已向下推送一个位置。 再次单击 **第3项** ，请注意，消息框仍显示 **选定的项 3**，这表示文本已正确地与命令标签一起移动到新位置。
 
 ## <a name="see-also"></a>另请参阅
 - [动态添加菜单项](../extensibility/dynamically-adding-menu-items.md)

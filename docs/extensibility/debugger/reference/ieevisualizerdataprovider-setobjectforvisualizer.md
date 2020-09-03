@@ -1,5 +1,5 @@
 ---
-title: IEE可视化数据提供程序：为可视化器设置对象 |微软文档
+title: IEEVisualizerDataProvider：： SetObjectForVisualizer |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: ab63f1e74e0cd3ac64a4d7e7687a9136075b41a7
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80718079"
 ---
 # <a name="ieevisualizerdataprovidersetobjectforvisualizer"></a>IEEVisualizerDataProvider::SetObjectForVisualizer
@@ -45,20 +45,20 @@ int SetObjectForVisualizer(
 
 ## <a name="parameters"></a>参数
 `pNewObject`\
-[在]要设置的对象。
+中要设置的对象。
 
 `error`\
-[出]如果设置对象时出现错误，则此字符串会保留错误消息。
+弄如果设置对象时出现错误，则此字符串将保存错误消息。
 
 `pException`\
-[出]如果出现错误，此对象将保存异常信息。
+弄如果出现错误，则此对象将保存异常信息。
 
 ## <a name="return-value"></a>返回值
- 如果成功，返回`S_OK`;否则，返回错误代码。
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。
 
 ## <a name="remarks"></a>备注
- 由实施者确定如何返回错误信息。 但是，某些调用方可能只查看是否返回了异常对象，以便知道存在错误，因此此方法应始终返回异常对象（如果出现错误）。 如果调用方希望使用它，也应提供错误字符串。
+ 由实施者决定如何返回错误信息。 但是，某些调用方可能仅查看是否返回了异常对象以知道是否有错误，因此，如果出现错误，此方法应始终返回异常对象。 如果调用方想要使用错误字符串，则还应提供它。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IEEVisualizerDataProvider](../../../extensibility/debugger/reference/ieevisualizerdataprovider.md)
 - [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)

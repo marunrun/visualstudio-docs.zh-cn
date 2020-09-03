@@ -11,16 +11,16 @@ ms.assetid: 3bac375d-8bd5-41be-a8de-32eb33c5cfac
 caps.latest.revision: 20
 manager: jillfra
 ms.openlocfilehash: 15a3896f8a2010a063393d3a11c1ed3453a008d5
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65689101"
 ---
 # <a name="support-for-settings-categories"></a>支持设置类别
 设置类别包含一组可自定义集成开发环境 (IDE) 的选项。 例如，设置可以控制 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 窗口的布局和菜单的内容。 有关详细信息，请参阅 [在 Visual Studio 中自定义开发设置](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
- 在“工具”  菜单上，单击“导入和导出设置”  以启动“导入和导出设置向导” 。 向导提供三个选项：导出、导入或重置设置。 例如，选择导出会打开向导的“选择要导出的设置”  页面。  
+ 在“工具” **** 菜单上，单击“导入和导出设置” **** 以启动“导入和导出设置向导” ****。 向导提供三个选项：导出、导入或重置设置。 例如，选择导出会打开向导的“选择要导出的设置” **** 页面。  
   
  此页面的导航窗格中的树控件会列出类别。 类别是一组显示为“自定义设置点”（即显示为复选框）的相关设置。 使用这些复选框可选择要保留在 .vsettings 文件中的类别。 向导允许命名 .vsettings 文件并指定其路径。  
   
@@ -51,16 +51,16 @@ ms.locfileid: "65689101"
 > 规范名称不会出现在用户界面 (UI) 中。 它用于将可读名称与设置类别进行关联，非常类似于编程标识符 (ProgID)。  
   
 ### <a name="settings-category-attribute"></a>设置类别属性  
- <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute>确定到中的自定义设置点类别的映射**导入和导出设置向导**通过将类别与提供它的 VSPackage 相关联。 考虑以下代码片断：  
+ <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute>通过将类别与提供它的 VSPackage 相关联，确定**导入和导出设置向导**中的类别到自定义设置点的映射。 考虑以下代码片断：  
   
  [!code-csharp[VSSDKSupportForSettingsCategories#1](../snippets/csharp/VS_Snippets_VSSDK/vssdksupportforsettingscategories/cs/vssdksupportforsettingscategoriespackage.cs#1)]
  [!code-vb[VSSDKSupportForSettingsCategories#1](../snippets/visualbasic/VS_Snippets_VSSDK/vssdksupportforsettingscategories/vb/vssdksupportforsettingscategoriespackage.vb#1)]  
   
  资源 ID 106 映射到“My Category”，107 映射到“My Settings”，108 映射到“Various Options”。 这声明 `MyPackage` 提供类别 My Category_My Settings。 该类别由 `OptionsPageGeneral` 类提供，该类必须实现 <xref:Microsoft.VisualStudio.Shell.IProfileManager>。 该类别中的设置是 `OptionsPageGeneral` 类的公共属性。  
   
- 在“导入和导出设置向导” 中，设置点的名称是 My Settings。 选择设置点时，说明“Various Options” 会出现。 设置点名称和说明取自本地化字符串资源。  
+ 在“导入和导出设置向导” **** 中，设置点的名称是 My Settings。 选择设置点时，说明“Various Options” **** 会出现。 设置点名称和说明取自本地化字符串资源。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建选项页](../extensibility/creating-an-options-page.md)   
  [VSSDK 示例](../misc/vssdk-samples.md)   
  [VSPackage 状态](../misc/vspackage-state.md)   

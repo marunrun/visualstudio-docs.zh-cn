@@ -1,5 +1,5 @@
 ---
-title: LPTEXTOUTPROC |微软文档
+title: LPTEXTOUTPROC |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -17,20 +17,20 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 38c3e8263b9a30058c2de019e5e92160b716aa71
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80702793"
 ---
 # <a name="lptextoutproc"></a>LPTEXTOUTPROC
 
-当用户从集成开发环境 （IDE） 内部执行源代码管理操作时，源代码管理插件可能需要传达与操作相关的错误或状态消息。 为此，插件可以显示自己的消息框。 但是，为了进行更无缝的集成，插件可以将字符串传递给 IDE，IDE 然后以本机方式显示状态信息。 这是`LPTEXTOUTPROC`函数指针。 IDE 实现此函数（下面将详细介绍），用于显示错误和状态。
+当用户从集成开发环境内部 (IDE) 执行源代码管理操作时，源代码管理插件可能需要传达与操作相关的错误或状态消息。 此插件可以显示其自己的消息框以实现此目的。 但是，为了实现更无缝的集成，该插件可将字符串传递到 IDE，然后以其本机方式显示状态信息。 此的机制是 `LPTEXTOUTPROC` 函数指针。 IDE 将更详细地实现此函数 (，) 以显示错误和状态。
 
-调用`lpTextOutProc`[SccOpenProject](../extensibility/sccopenproject-function.md)时，IDE 将函数指针传递给此函数（作为参数）传递给源代码管理插件。 例如，在 SCC 操作期间，在调用涉及许多文件的[SccGet](../extensibility/sccget-function.md)时，插件可以调用`LPTEXTOUTPROC`该函数，定期传递字符串以显示。 IDE 可以根据需要在状态栏、输出窗口中或单独的消息框中显示这些字符串。 或者，IDE 可能可以使用 **"取消"** 按钮显示某些消息。 这使用户能够取消该操作，并使 IDE 能够将此信息传回插件。
+`lpTextOutProc`调用[SccOpenProject](../extensibility/sccopenproject-function.md)时，IDE 会将此函数的函数指针作为参数传递给源代码管理插件。 在 SCC 操作期间（例如，在调用涉及多个文件的 [SccGet](../extensibility/sccget-function.md) 的过程中），插件可以调用 `LPTEXTOUTPROC` 函数，并定期传递要显示的字符串。 IDE 可能会将这些字符串显示在状态栏、输出窗口或单独的消息框中（视情况而不同）。 IDE 还可以使用 " **取消** " 按钮显示某些消息。 这样，用户就可以取消操作，并为 IDE 提供将此信息传递回插件的功能。
 
 ## <a name="signature"></a>签名
- IDE 的输出函数具有以下签名：
+ IDE 的 output 函数具有以下签名：
 
 ```cpp
 typedef LONG (*LPTEXTOUTPROC) (
@@ -47,33 +47,33 @@ display_string
 
 mesg_type
 
-消息的类型。 下表列出了此参数的支持值。
+消息的类型。 下表列出了此参数支持的值。
 
 |值|说明|
 |-----------|-----------------|
-|`SCC_MSG_INFO, SCC_MSG_WARNING, SCC_MSG_ERROR`|该消息被视为信息、警告或错误。|
-|`SCC_MSG_STATUS`|该消息显示状态，可以显示在状态栏中。|
-|`SCC_MSG_DOCANCEL`|未发送消息字符串。|
-|`SCC_MSG_STARTCANCEL`|开始显示 **"取消"** 按钮。|
-|`SCC_MSG_STOPCANCEL`|停止显示 **"取消"** 按钮。|
-|`SCC_MSG_BACKGROUND_IS_CANCELLED`|询问 IDE 是否要取消后台操作：如果操作被取消`SCC_MSG_RTN_CANCEL`，IDE 将返回;否则，返回`SCC_MSG_RTN_OK`。 该`display_string`参数被强制转换为[SccMsgDataIsCanceled](#LinkSccMsgDataIsCancelled)结构，该结构由源代码管理插件提供。|
-|`SCC_MSG_BACKGROUND_ON_BEFORE_GET_FILE`|在从版本控件检索文件之前，先向 IDE 介绍该文件。 该`display_string`参数被强制转换为[SccMsgDataOnOnGetFile](#LinkSccMsgDataOnBeforeGetFile)结构，该结构由源代码管理插件提供。|
-|`SCC_MSG_BACKGROUND_ON_AFTER_GET_FILE`|从版本控件检索文件后，向 IDE 告知该文件。 该`display_string`参数被强制转换为[SccMsgDataOnOnAfterGetFile](#LinkSccMsgDataOnAfterGetFile)结构，该结构由源代码管理插件提供。|
-|`SCC_MSG_BACKGROUND_ON_MESSAGE`|告诉 IDE 后台操作的当前状态。 该`display_string`参数被强制转换为[SccMsgDataOnMessage](#LinkSccMsgDataOnMessage)结构，该结构由源代码管理插件提供。|
+|`SCC_MSG_INFO, SCC_MSG_WARNING, SCC_MSG_ERROR`|消息被视为信息、警告或错误。|
+|`SCC_MSG_STATUS`|此消息显示状态，并且可以显示在状态栏中。|
+|`SCC_MSG_DOCANCEL`|发送时不包含消息字符串。|
+|`SCC_MSG_STARTCANCEL`|开始显示 " **取消** " 按钮。|
+|`SCC_MSG_STOPCANCEL`|停止显示 " **取消** " 按钮。|
+|`SCC_MSG_BACKGROUND_IS_CANCELLED`|如果后台操作被取消，则会询问 IDE： IDE 将 `SCC_MSG_RTN_CANCEL` 在取消操作时返回; 否则返回 `SCC_MSG_RTN_OK` 。 `display_string`参数将强制转换为[SccMsgDataIsCancelled](#LinkSccMsgDataIsCancelled)结构，该结构由源代码管理插件提供。|
+|`SCC_MSG_BACKGROUND_ON_BEFORE_GET_FILE`|从版本控制中检索文件之前通知 IDE。 `display_string`参数将强制转换为[SccMsgDataOnBeforeGetFile](#LinkSccMsgDataOnBeforeGetFile)结构，该结构由源代码管理插件提供。|
+|`SCC_MSG_BACKGROUND_ON_AFTER_GET_FILE`|从版本控制中检索文件后，告诉 IDE 文件。 `display_string`参数将强制转换为[SccMsgDataOnAfterGetFile](#LinkSccMsgDataOnAfterGetFile)结构，该结构由源代码管理插件提供。|
+|`SCC_MSG_BACKGROUND_ON_MESSAGE`|告诉 IDE 后台操作的当前状态。 `display_string`参数将强制转换为[SccMsgDataOnMessage](#LinkSccMsgDataOnMessage)结构，该结构由源代码管理插件提供。|
 
 ## <a name="return-value"></a>返回值
 
 |值|说明|
 |-----------|-----------------|
-|SCC_MSG_RTN_OK|显示字符串或操作已成功完成。|
-|SCC_MSG_RTN_CANCEL|用户希望取消该操作。|
+|SCC_MSG_RTN_OK|字符串已显示或操作已成功完成。|
+|SCC_MSG_RTN_CANCEL|用户要取消该操作。|
 
 ## <a name="example"></a>示例
- 假设 IDE 调用具有 20 个文件名[的 SccGet。](../extensibility/sccget-function.md) 源代码管理插件希望防止在文件获取中间取消操作。 获取每个文件后，它会调用`lpTextOutProc`，传递每个文件的状态信息，如果该文件没有要报告的状态`SCC_MSG_DOCANCEL`，则发送消息。 如果插件在任何时候收到来自 IDE 的`SCC_MSG_RTN_CANCEL`返回值，它会立即取消 get 操作，以便不再检索文件。
+ 假设 IDE 调用了包含二十个文件名的 [SccGet](../extensibility/sccget-function.md) 。 源代码管理插件希望阻止在文件获取过程中取消该操作。 获取每个文件后，它会调用并向 `lpTextOutProc` 其传递每个文件的状态信息，并在 `SCC_MSG_DOCANCEL` 消息没有要报告的状态时发送消息。 如果插件从 IDE 中收到返回值 `SCC_MSG_RTN_CANCEL` ，则会立即取消 get 操作，以便不会再检索文件。
 
 ## <a name="structures"></a>结构
 
-### <a name="sccmsgdataiscancelled"></a><a name="LinkSccMsgDataIsCancelled"></a>SccMsgDatais 已取消
+### <a name="sccmsgdataiscancelled"></a><a name="LinkSccMsgDataIsCancelled"></a> SccMsgDataIsCancelled
 
 ```cpp
 typedef struct {
@@ -81,9 +81,9 @@ typedef struct {
 } SccMsgDataIsCancelled;
 ```
 
- 此结构随消息一`SCC_MSG_BACKGROUND_IS_CANCELLED`起发送。 它用于传达已取消的背景操作的 ID。
+ 此结构随消息一起发送 `SCC_MSG_BACKGROUND_IS_CANCELLED` 。 它用于传达已取消的后台操作的 ID。
 
-### <a name="sccmsgdataonbeforegetfile"></a><a name="LinkSccMsgDataOnBeforeGetFile"></a>SccMsgDataon 之前获取文件
+### <a name="sccmsgdataonbeforegetfile"></a><a name="LinkSccMsgDataOnBeforeGetFile"></a> SccMsgDataOnBeforeGetFile
 
 ```cpp
 typedef struct {
@@ -92,9 +92,9 @@ typedef struct {
 } SccMsgDataOnBeforeGetFile;
 ```
 
- 此结构随消息一`SCC_MSG_BACKGROUND_ON_BEFORE_GET_FILE`起发送。 它用于传达要检索的文件的名称和执行检索的后台操作的 ID。
+ 此结构随消息一起发送 `SCC_MSG_BACKGROUND_ON_BEFORE_GET_FILE` 。 它用于传递要检索的文件的名称，以及正在执行检索操作的后台操作的 ID。
 
-### <a name="sccmsgdataonaftergetfile"></a><a name="LinkSccMsgDataOnAfterGetFile"></a>SccMsgdataon 后获取文件
+### <a name="sccmsgdataonaftergetfile"></a><a name="LinkSccMsgDataOnAfterGetFile"></a> SccMsgDataOnAfterGetFile
 
 ```cpp
 typedef struct {
@@ -104,9 +104,9 @@ typedef struct {
 } SccMsgDataOnAfterGetFile;
 ```
 
- 此结构随消息一`SCC_MSG_BACKGROUND_ON_AFTER_GET_FILE`起发送。 它用于传达检索指定文件的结果以及进行检索的后台操作的 ID。 有关可以因此提供的内容，请参阅[SccGet](../extensibility/sccget-function.md)的返回值。
+ 此结构随消息一起发送 `SCC_MSG_BACKGROUND_ON_AFTER_GET_FILE` 。 它用于传递检索指定文件的结果，以及执行检索操作的后台操作的 ID。 请参阅 [SccGet](../extensibility/sccget-function.md) 的返回值，以了解可获得的结果。
 
-### <a name="sccmsgdataonmessage"></a><a name="LinkSccMsgDataOnMessage"></a>SccMsgDataon消息
+### <a name="sccmsgdataonmessage"></a><a name="LinkSccMsgDataOnMessage"></a> SccMsgDataOnMessage
 
 ```cpp
 typedef struct {
@@ -116,10 +116,10 @@ typedef struct {
 } SccMsgDataOnMessage;
 ```
 
- 此结构随消息一`SCC_MSG_BACKGROUND_ON_MESSAGE`起发送。 它用于传达后台操作的当前状态。 状态表示为 IDE 显示的字符串，并`bIsError`指示消息的严重性（`TRUE`对于错误消息;`FALSE`用于警告或信息性消息）。 还提供了发送状态的后台操作的 ID。
+ 此结构随消息一起发送 `SCC_MSG_BACKGROUND_ON_MESSAGE` 。 它用于传达后台操作的当前状态。 状态表示为一个字符串，该字符串将由 IDE 显示，并 `bIsError` 指明错误消息 (消息的严重性 `TRUE` ; `FALSE` 对于警告或) ，为信息性消息。 同时提供发送状态的后台操作的 ID。
 
 ## <a name="code-example"></a>代码示例
- 下面是调用`LPTEXTOUTPROC`发送消息的简短`SCC_MSG_BACKGROUND_ON_MESSAGE`示例，演示如何为调用强制转换结构。
+ 下面是调用发送消息的简单示例 `LPTEXTOUTPROC` `SCC_MSG_BACKGROUND_ON_MESSAGE` ，演示如何转换调用的结构。
 
 ```cpp
 LONG SendStatusMessage(
@@ -140,6 +140,6 @@ LONG SendStatusMessage(
 }
 ```
 
-## <a name="see-also"></a>请参阅
-- [IDE 实现的回调功能](../extensibility/callback-functions-implemented-by-the-ide.md)
+## <a name="see-also"></a>另请参阅
+- [IDE 实现的回调函数](../extensibility/callback-functions-implemented-by-the-ide.md)
 - [源代码管理插件](../extensibility/source-control-plug-ins.md)

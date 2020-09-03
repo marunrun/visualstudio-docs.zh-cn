@@ -10,10 +10,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 311d02ad3e15f184f8b7e21b5794d73c41a8d4fb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68145377"
 ---
 # <a name="user-vsperfcmd"></a>User (VSPerfCmd)
@@ -21,7 +21,7 @@ ms.locfileid: "68145377"
 
 **User** 选项指定拥有被分析进程的帐户的域和用户名。 仅在进程以已登录用户外的用户身份运行时才需要此选项。 进程所有者在 Windows 任务管理器的“进程”选项卡上的“用户名”列中列出。  
   
- **用户**选项只能在还包含命令行上指定**启动**选项选项。  
+ 只能在同时包含**启动**选项选项的命令行上指定**User**选项。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,7 +39,7 @@ VSPerfCmd.exe /Start:Method /Output:FileName /User:[Domain\]UserName [Options]
 ## <a name="required-options"></a>必需选项  
  **User** 选项只能与 **Start** 选项一起使用。  
   
- **Start:** `Method`  
+ **开始时间：**`Method`  
  将探查器初始化为指定的分析方法。  
   
 ## <a name="example"></a>示例  

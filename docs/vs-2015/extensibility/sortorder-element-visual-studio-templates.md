@@ -1,5 +1,5 @@
 ---
-title: SortOrder 元素 （Visual Studio 模板） |Microsoft Docs
+title: " (Visual Studio 模板) 的 SortOrder 元素 |Microsoft Docs"
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -14,19 +14,19 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 825ec785a83cae0aaa8a31ae1375e956228b634e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68205514"
 ---
 # <a name="sortorder-element-visual-studio-templates"></a>SortOrder 元素（Visual Studio 模板）
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-指定一个值，用于排列在同一类别中的其他模板之间的模板中显示该值**新的项目**或**添加新项**对话框。  
+指定一个值，该值用于在同一类别中的其他模板之间进行排列，如在 " **新建项目** " 或 " **添加新项** " 对话框中显示的模板。  
   
- \<VSTemplate >  
- \<TemplateData >  
+ \<VSTemplate>  
+ \<TemplateData>  
  \<SortOrder>  
   
 ## <a name="syntax"></a>语法  
@@ -53,17 +53,17 @@ ms.locfileid: "68205514"
 ## <a name="text-value"></a>文本值  
  需要一个文本值。  
   
- `integer`表示排序顺序值。  
+ 一个 `integer` ，它表示排序顺序值。  
   
 ## <a name="remarks"></a>备注  
- `SortOrder` 是可选元素。 默认值为 100，并且所有值都必须为 10 的倍数。  
+ `SortOrder` 是可选元素。 默认值为100，所有值都必须是10的倍数。  
   
- `SortOrder`元素忽略为用户创建的模板。 所有用户创建的模板进行按字母顺序都排序。  
+ `SortOrder`对于用户创建的模板，将忽略元素。 所有用户创建的模板都按字母顺序排序。  
   
- 中将显示具有较低的排序顺序值的模板**新的项目**或**新添加项**之前具有高排序顺序值的模板对话框的。  
+ 具有低排序顺序值的模板会出现在 " **新建项目** " 或 " **新建添加项** " 对话框中，然后才会出现具有高排序顺序值的模板。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示一种标准的元数据[!INCLUDE[csprcs](../includes/csprcs-md.md)]类模板。  
+ 下面的示例演示标准类模板的元数据 [!INCLUDE[csprcs](../includes/csprcs-md.md)] 。  
   
 ```  
 <VSTemplate Type="Item" Version="3.0.0"  
@@ -82,8 +82,8 @@ ms.locfileid: "68205514"
 </VSTemplate>  
 ```  
   
- 在此示例中，`SortOrder`元素是相对较高。 很可能其他[!INCLUDE[csprcs](../includes/csprcs-md.md)]项模板将具有`SortOrder`值低于`290`，并将此模板前**新项**对话框。  
+ 在此示例中， `SortOrder` 元素相对较高。 其他 [!INCLUDE[csprcs](../includes/csprcs-md.md)] 项模板可能具有 `SortOrder` 小于 `290` 的值，并且将在 " **新建项** " 对话框中显示在此模板之前。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)   
  [创建项目和项模板](../ide/creating-project-and-item-templates.md)

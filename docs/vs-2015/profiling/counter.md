@@ -10,10 +10,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 5da78c33af599accf5ff3a2e09a9afb52982573a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68149288"
 ---
 # <a name="counter"></a>计数器
@@ -50,13 +50,13 @@ VSPerfCmd.exe /Start:Method /Counter:Name[,Reload[,FriendlyName]][/Counter:Name[
 ## <a name="required-options"></a>必需选项  
  “计数器”选项仅可与以下选项之一配合使用：  
   
- **Start:** `Trace`  
+ **开始时间：**`Trace`  
  初始化探查器以使用检测方法。  
   
- **Launch：** `AppName`  
+ **启动：**`AppName`  
  启动指定的应用程序和探查器。 必须初始化探查器才能使用采样方法。  
   
- **Attach:** `PID`  
+ **附加：**`PID`  
  启动探查器并将其附加到进程 ID 指定的进程。 必须初始化探查器才能使用采样方法。  
   
 ## <a name="example"></a>示例  

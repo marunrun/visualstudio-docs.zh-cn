@@ -1,5 +1,5 @@
 ---
-title: 参考元素（可视化工作室模板） |微软文档
+title: Visual Studio 模板 (引用元素) |Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -15,16 +15,17 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: ef31c5e7550ec7c6e4570d156d364afcf4ad6819
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80701604"
 ---
-# <a name="references-element-visual-studio-templates"></a>引用元素（可视化工作室模板）
-对模板添加到项目中的程序集引用进行分组。
+# <a name="references-element-visual-studio-templates"></a>Visual Studio 模板 (引用元素) 
+将模板添加到项目的程序集引用分组。
 
- \<VStemplate \<>模板内容\<>引用>
+ \<VSTemplate> \<TemplateContent>
+ \<References>
 
 ## <a name="syntax"></a>语法
 
@@ -44,23 +45,23 @@ ms.locfileid: "80701604"
 
 ### <a name="child-elements"></a>子元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
-|[参考](../extensibility/reference-element-visual-studio-templates.md)|必需元素。<br /><br /> 指定向项目添加项时要添加的程序集引用。 元素中必须存在一`Reference``References`个或多个元素。|
+|[引用](../extensibility/reference-element-visual-studio-templates.md)|必需的元素。<br /><br /> 指定向项目添加项时要添加的程序集引用。 元素中必须有一个或多个 `Reference` 元素 `References` 。|
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
-|[模板内容](../extensibility/templatecontent-element-visual-studio-templates.md)|指定模板的内容。|
+|[TemplateContent](../extensibility/templatecontent-element-visual-studio-templates.md)|指定模板的内容。|
 
 ## <a name="remarks"></a>备注
  `References` 是 `TemplateContent` 的可选子元素。
 
- `Reference`和`References`元素只能在 具有`Type`属性值 的`Item` *.vstemplate*文件中使用。
+ `Reference`和 `References` 元素只能在属性值为的 *.vstemplate*文件中使用 `Type` `Item` 。
 
 ## <a name="example"></a>示例
- 下面的示例说明了项模板`TemplateContent`的元素。 此 XML 添加对*System.dll*和*System.Data.dll*程序集的引用。
+ 下面的示例演示 `TemplateContent` 项模板的元素。 此 XML 添加对 *System.dll* 和 *System.Data.dll* 程序集的引用。
 
 ```xml
 <TemplateContent>
@@ -81,5 +82,5 @@ ms.locfileid: "80701604"
 ```
 
 ## <a name="see-also"></a>请参阅
-- [可视化工作室模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
+- [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
 - [创建项目和项模板](../ide/creating-project-and-item-templates.md)

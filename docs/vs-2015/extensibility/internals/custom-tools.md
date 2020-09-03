@@ -13,46 +13,46 @@ caps.latest.revision: 22
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 594d564cf4a18eb0b673abd9b45b7d70e20381b1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68196921"
 ---
 # <a name="custom-tools"></a>自定义工具
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-*自定义工具*可将工具与项目中的项相关联，并运行该工具，每次保存该文件。 某些自定义工具，有时称为*单个文件生成器*，通常用于实现转换器生成代码中的数据，反之亦然。 例如，单个文件生成器创建[!INCLUDE[csprcs](../../includes/csprcs-md.md)]和[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]带.settings 和.resx 文件的源代码。 生成的源代码提供强类型化访问.settings 和.resx 文件中的数据。 [!INCLUDE[csprcs](../../includes/csprcs-md.md)]和[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]项目类型支持自定义工具;[!INCLUDE[vcprvc](../../includes/vcprvc-md.md)]项目类型不这样做。 你自己的项目类型还可以支持自定义工具。  
+*自定义工具* 使你可以将工具与项目中的项相关联，并在每次保存文件时运行该工具。 某些自定义工具（有时称为 *单文件生成器*）经常用于实现从数据生成代码的转换器，反之亦然。 例如，单文件生成器会创建 [!INCLUDE[csprcs](../../includes/csprcs-md.md)] 和源代码，并将其放 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 在. 设置和 .resx 文件中。 生成的源代码提供对设置和 .resx 文件中的数据的强类型访问。 [!INCLUDE[csprcs](../../includes/csprcs-md.md)]和 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 项目类型支持自定义工具; [!INCLUDE[vcprvc](../../includes/vcprvc-md.md)] 项目类型不支持。 你自己的项目类型还可以支持自定义工具。  
   
- 自定义工具是实现的已注册的组件`IVsSingleFileGenerator`接口。  
+ 自定义工具是实现接口的已注册组件 `IVsSingleFileGenerator` 。  
   
- 与之关联的自定义工具`ProjectItem`接口对象，并如下所示设计器和编辑器。 自定义工具将表示的文件`ProjectItem`作为输入，并将其文件名称提供的一个新文件写入`DefaultExtension`方法。  
+ 自定义工具与 `ProjectItem` interface 对象相关联，并且与设计器和编辑器类似。 自定义工具使用由表示的文件 `ProjectItem` 作为输入，并写入一个新文件，其文件名由 `DefaultExtension` 方法提供。  
   
 ## <a name="in-this-section"></a>本节内容  
  [实现单个文件生成器](../../extensibility/internals/implementing-single-file-generators.md)  
- 介绍如何使用<xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator>接口实现一个自定义工具。  
+ 描述如何使用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator> 接口实现自定义工具。  
   
  [确定项目的默认命名空间](../../misc/determining-the-default-namespace-of-a-project.md)  
- 介绍如何确定正确的命名空间基于所用的语言。  
+ 介绍如何根据所使用的语言来确定正确的命名空间。  
   
  [注册单个文件生成器](../../extensibility/internals/registering-single-file-generators.md)  
- 介绍了自定义工具的所有注册表项。  
+ 提供自定义工具的所有注册表项的说明。  
   
  [向可视化设计器公开类型](../../extensibility/internals/exposing-types-to-visual-designers.md)  
- 介绍了如何项目系统支持对访问生成类和类型的可视化设计器通过提供临时可移植可执行文件 (PE) 文件。  
+ 介绍项目系统如何为可视化设计器提供支持，以便通过临时可执行文件 (PE) 文件访问生成的类和类型。  
   
  [保留项目项的属性](../../extensibility/persisting-the-property-of-a-project-item.md)  
- 演示如何持久保存项目项属性，例如源代码文件，在项目文件中的作者。  
+ 演示如何在项目文件中保存项目项属性，如源文件的作者。  
   
 ## <a name="reference"></a>参考  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator>  
- 详细介绍<xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator>，其中将一个输入的文件转换为可以编译或添加到项目中的单个输出文件。  
+ 提供有关的详细信息，该信息将 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator> 单个输入文件转换为单个输出文件，该文件可编译或添加到项目。  
   
  <xref:EnvDTE.ProjectItem>  
- 介绍了`ProjectItem`接口，它表示项目中的项。  
+ 介绍 `ProjectItem` 接口，它表示项目中的项。  
   
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator.DefaultExtension%2A>  
- 详细介绍`DefaultExtension`方法，检索提供给输出文件的名称的文件扩展名。  
+ 提供有关方法的详细信息 `DefaultExtension` ，该方法检索为输出文件名提供的文件扩展名。  
   
 ## <a name="related-sections"></a>相关章节  
  [扩展项目](../../extensibility/extending-projects.md)  

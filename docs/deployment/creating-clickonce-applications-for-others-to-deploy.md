@@ -97,7 +97,7 @@ ms.locfileid: "71252450"
 
  此方法的缺点是要求客户安装 .NET Framework SDK 工具，并让开发人员或系统管理员熟练使用这些工具。 有些客户可能需要对其部分进行少量或不需要技术工作的解决方案。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [部署用于测试和生产服务器的 ClickOnce 应用程序而无需让步](../deployment/deploying-clickonce-applications-for-testing-and-production-without-resigning.md)
 - [演练：手动部署 ClickOnce 应用程序](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)
 - [演练：手动部署不需要重新签名并且保留署名信息的 ClickOnce 应用程序](../deployment/walkthrough-manually-deploying-a-clickonce-app-no-re-signing-required.md)

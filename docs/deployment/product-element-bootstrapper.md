@@ -1,5 +1,5 @@
 ---
-title: '&lt;产品&gt;元素 （引导程序） |Microsoft Docs'
+title: '&lt;&gt; (引导程序) 的产品元素 |Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -16,13 +16,13 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: d6dca2c7838ce40f8d24e3afbd898206d0cb9191
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "66747455"
 ---
-# <a name="ltproductgt-element-bootstrapper"></a>&lt;产品&gt;元素 （引导程序）
+# <a name="ltproductgt-element-bootstrapper"></a>&lt; (引导程序的产品 &gt; 元素) 
 `Product`元素是产品文件内的顶级 XML 元素。
 
 ## <a name="syntax"></a>语法
@@ -138,14 +138,14 @@ ProductCode
 ```
 
 ## <a name="elements-and-attributes"></a>元素和属性
- `Product`元素必需的产品文件中。 它具有以下特性。
+ `Product`元素在产品文件中是必需的。 它具有以下属性。
 
-|特性|描述|
+|特性|说明|
 |---------------|-----------------|
-|`ProductCode`|该产品的唯一标识符。|
+|`ProductCode`|产品的唯一标识符。|
 
 ## <a name="example"></a>示例
- 下面的代码示例显示了用于安装.NET Framework 的完整的产品文件。
+ 下面的代码示例演示了用于安装 .NET Framework 的完整的产品文件。
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -249,5 +249,5 @@ ProductCode
 </Product>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [产品和包架构引用](../deployment/product-and-package-schema-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: 重新排列参数重构C#（） |Microsoft Docs
+title: '重新排列参数重构 (c # ) |Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -17,25 +17,25 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: e39564fb108b63859620e2c4a650608cdf1e7e82
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72673144"
 ---
 # <a name="reorder-parameters-refactoring-c"></a>重新排列参数重构 (C#)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-`Reorder Parameters` 是一种C#可视化重构操作，它提供了一种简单的方法来更改方法、索引器和委托的参数顺序。 `Reorder Parameters` 更改声明，并在调用成员的任何位置更改参数，则会重新排列这些参数以反映新的顺序。
+`Reorder Parameters` 是一个 Visual c # 重构操作，它提供了一种简单的方法来更改方法、索引器和委托的参数的顺序。 `Reorder Parameters` 更改声明，并在调用成员的任何位置更改参数，以反映新的顺序。
 
- 若要执行 `Reorder Parameters` 操作，请将光标置于方法、索引器或委托的上方或旁边。 当光标位于位置时，通过按键盘快捷方式或单击快捷菜单中的命令来调用 `Reorder Parameters` 操作。
+ 若要执行该 `Reorder Parameters` 操作，请将光标置于方法、索引器或委托的上方或旁边。 当光标位于位置时， `Reorder Parameters` 通过按键盘快捷方式或单击快捷菜单中的命令来调用操作。
 
 > [!NOTE]
 > 不能对扩展方法中的第一个参数重新排序。
 
 ### <a name="to-reorder-parameters"></a>重新排列参数
 
-1. 创建一个名为 `ReorderParameters` 的类库，然后将 `Class1` 替换为下面的示例代码。
+1. 创建一个名为的类库 `ReorderParameters` ，然后将替换为 `Class1` 下面的示例代码。
 
     ```csharp
     class ProtoClassA
@@ -56,26 +56,26 @@ ms.locfileid: "72673144"
     }
     ```
 
-2. 将光标置于方法声明或方法调用中 `MethodB` 上。
+2. 将光标置于 `MethodB` 方法声明或方法调用中。
 
-3. 在 "**重构**" 菜单上，单击 "**重新排列参数**"。
+3. 在 " **重构** " 菜单上，单击 " **重新排列参数**"。
 
-     此时将显示 "**重新排列参数**" 对话框。
+     此时将显示 " **重新排列参数** " 对话框。
 
-4. 在 "**重新排列参数**" 对话框中，在 "**参数**" 列表中选择 "`int i`"，然后单击 "下一按钮"。
+4. 在 " **重新排列参数** " 对话框中，在 `int i` " **参数** " 列表中选择，然后单击 "下一按钮"。
 
-     或者，您可以将 `int i` 拖动到 "**参数**" 列表中 `bool b` 之后。
+     或者，您可以 `int i` `bool b` 在 " **参数** " 列表中的后面拖动。
 
-5. 在 "**重新排列参数**" 对话框中，单击 **"确定"** 。
+5. 在 " **重新排列参数** " 对话框中，单击 **"确定"**。
 
-     如果在 "**重新排列参数**" 对话框中选择了 "**预览引用更改**" 选项，则会出现 "**预览更改-重新排序参数**" 对话框。 它为签名和方法调用中的 `MethodB` 提供参数列表中更改的预览。
+     如果在 "**重新排列参数**" 对话框中选择了 "**预览引用更改**" 选项，则会出现 "**预览更改-重新排序参数**" 对话框。 它为 `MethodB` 签名和方法调用中的参数列表中的更改提供预览。
 
-    1. 如果显示 "**预览更改-重新排列参数**" 对话框，则单击 "**应用**"。
+    1. 如果显示 " **预览更改-重新排列参数** " 对话框，则单击 " **应用**"。
 
-         在此示例中，将更新 `MethodB` 的方法声明和所有方法调用站点。
+         在此示例中，将更新的方法声明和的所有方法调用站点 `MethodB` 。
 
 ## <a name="remarks"></a>备注
  您可以重新排列方法声明或方法调用中的参数。 将光标置于方法或委托声明的上方或旁边，而不是放置在正文中。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [重构 (C#)](../csharp-ide/refactoring-csharp.md)

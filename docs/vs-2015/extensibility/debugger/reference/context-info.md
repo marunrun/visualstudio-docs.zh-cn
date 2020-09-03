@@ -13,16 +13,16 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: f4e8c1b438cd2fa2721e81f055695e5836c26d12
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68179945"
 ---
-# <a name="contextinfo"></a>CONTEXT_INFO
+# <a name="context_info"></a>CONTEXT_INFO
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-此结构描述内存上下文或代码上下文。  
+此结构描述了内存上下文或代码上下文。  
   
 ## <a name="syntax"></a>语法  
   
@@ -52,39 +52,39 @@ public struct CONTEXT_INFO {
   
 ## <a name="members"></a>成员  
  dwFields  
- 从他的标志的组合[CONTEXT_INFO_FIELDS](../../../extensibility/debugger/reference/context-info-fields.md)枚举，用于指定哪些字段填完<strong>。</strong>  
+ [CONTEXT_INFO_FIELDS](../../../extensibility/debugger/reference/context-info-fields.md)枚举中的标志的组合，用于指定要填写的字段<strong>。</strong>  
   
  bstrModuleUrl  
- 上下文的位置的模块的名称。  
+ 上下文所在的模块的名称。  
   
  bstrFunction  
- 函数名称上下文所在的位置。  
+ 上下文所在的函数名称。  
   
  posFunctionOffset  
- 一个[TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md)结构，它标识与代码上下文关联的函数的行和列偏移量。  
+ 一个 [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) 结构，该结构标识与代码上下文关联的函数的行和列偏移量。  
   
  bstrAddress  
- 给定的上下文的位置的代码中的地址。  
+ 给定上下文所在的代码中的地址。  
   
  bstrAddressOffset  
- 在代码中给定的上下文的位置的地址的偏移量。  
+ 给定上下文所在的代码中地址的偏移量。  
   
  bstrAddressAbsolute  
- 给定的上下文的位置的内存中的绝对地址。  
+ 内存中给定上下文所在位置的绝对地址。  
   
 ## <a name="remarks"></a>备注  
- 此结构从调用返回[GetInfo](../../../extensibility/debugger/reference/idebugmemorycontext2-getinfo.md)方法。  
+ 此结构是通过调用 [GetInfo](../../../extensibility/debugger/reference/idebugmemorycontext2-getinfo.md) 方法返回的。  
   
- 此结构的典型用法是支持**内存**调试窗口。  
+ 此结构的典型用途是支持 **内存** 调试窗口。  
   
 ## <a name="requirements"></a>要求  
- 标头： msdbg.h  
+ 标头： msdbg  
   
- 命名空间:Microsoft.VisualStudio.Debugger.Interop  
+ 命名空间： VisualStudio  
   
- 程序集：Microsoft.VisualStudio.Debugger.Interop.dll  
+ 程序集： Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [结构和联合](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [GetInfo](../../../extensibility/debugger/reference/idebugmemorycontext2-getinfo.md)   
  [CONTEXT_INFO_FIELDS](../../../extensibility/debugger/reference/context-info-fields.md)   

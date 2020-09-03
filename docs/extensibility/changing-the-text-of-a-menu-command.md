@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 88a20d9f29ae86f7946389cafd26d67c244caea7
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "84183686"
 ---
 # <a name="change-the-text-of-a-menu-command"></a>更改菜单命令的文本
@@ -24,9 +24,9 @@ ms.locfileid: "84183686"
 
 ## <a name="changing-a-menu-command-label-with-the-imenucommandservice"></a>使用 IMenuCommandService 更改菜单命令标签
 
-1. `MenuText`使用名为**ChangeMenuText**的菜单命令创建一个名为的 VSIX 项目。 有关详细信息，请参阅[使用菜单命令创建扩展](../extensibility/creating-an-extension-with-a-menu-command.md)。
+1. `MenuText`使用名为**ChangeMenuText**的菜单命令创建一个名为的 VSIX 项目。 有关详细信息，请参阅 [使用菜单命令创建扩展](../extensibility/creating-an-extension-with-a-menu-command.md)。
 
-2. 在 *.vsct*文件中，将标志添加 `TextChanges` 到菜单命令中，如下面的示例中所示。
+2. 在 *.vsct* 文件中，将标志添加 `TextChanges` 到菜单命令中，如下面的示例中所示。
 
     ```xml
     <Button guid="guidChangeMenuTextPackageCmdSet" id="ChangeMenuTextId" priority="0x0100" type="Button">
@@ -39,7 +39,7 @@ ms.locfileid: "84183686"
     </Button>
     ```
 
-3. 在*ChangeMenuText.cs*文件中，创建一个将在显示菜单命令之前调用的事件处理程序。
+3. 在 *ChangeMenuText.cs* 文件中，创建一个将在显示菜单命令之前调用的事件处理程序。
 
     ```csharp
     private void OnBeforeQueryStatus(object sender, EventArgs e)
@@ -54,7 +54,7 @@ ms.locfileid: "84183686"
 
     还可以通过更改 <xref:System.ComponentModel.Design.MenuCommand.Visible%2A> 对象的、和属性来更新此方法中的菜单命令的状态 <xref:System.ComponentModel.Design.MenuCommand.Checked%2A> <xref:System.ComponentModel.Design.MenuCommand.Enabled%2A> <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> 。
 
-4. 在 ChangeMenuText 构造函数中，用创建表示菜单命令的（而不是）的代码替换原始命令初始化和放置代码， <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> `MenuCommand` 添加 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.BeforeQueryStatus> 事件处理程序，并为菜单命令服务提供菜单命令。
+4. 在 ChangeMenuText 构造函数中，将原始命令初始化和位置代码替换为创建 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> (而不是 `MenuCommand` 表示菜单命令的) 的代码， <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.BeforeQueryStatus> 并添加事件处理程序，并为菜单命令服务提供菜单命令。
 
     如下所示：
 
@@ -73,6 +73,6 @@ ms.locfileid: "84183686"
 
 5. 生成项目并启动调试。 此时将显示 Visual Studio 的实验实例。
 
-6. 在 "**工具**" 菜单中，应会看到名为 "**调用 ChangeMenuText**" 的命令。
+6. 在 " **工具** " 菜单中，应会看到名为 " **调用 ChangeMenuText**" 的命令。
 
-7. 单击该命令。 应该会看到消息框，指出已调用**MenuItemCallback** 。 关闭消息框时，应会看到 "工具" 菜单上的命令名称现在为 "**新文本**"。
+7. 单击该命令。 应该会看到消息框，指出已调用 **MenuItemCallback** 。 关闭消息框时，应会看到 "工具" 菜单上的命令名称现在为 " **新文本**"。

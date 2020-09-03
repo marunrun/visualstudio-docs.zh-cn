@@ -14,13 +14,13 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: db12121827e18bdcc95e6d4133bb30d35e7227de
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68194854"
 ---
-# <a name="idiaenumtablesgetcount"></a>IDiaEnumTables::get_Count
+# <a name="idiaenumtablesget_count"></a>IDiaEnumTables::get_Count
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
 检索表的数目。  
@@ -33,13 +33,13 @@ HRESULT get_Count (    LONG* pRetVal
   
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>参数  
  `pRetVal`  
- [out]返回的表的数量。  
+ 弄返回表的数目。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDiaEnumTables](../../debugger/debug-interface-access/idiaenumtables.md)   
  [IDiaEnumTables::Item](../../debugger/debug-interface-access/idiaenumtables-item.md)

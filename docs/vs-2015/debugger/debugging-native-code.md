@@ -1,5 +1,5 @@
 ---
-title: 调试本机代码 |Microsoft Docs
+title: 调试本机代码 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -23,16 +23,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 61ee852f75737d85604fda106b15e61dc3634899
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68196424"
 ---
 # <a name="debugging-native-code"></a>调试本机代码
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-本节讲述本机应用程序的一些常见调试问题和调试技术。 本节阐述的技术属于高级别技术。 使用 Visual Studio 调试器的机制，请参阅[调试器路线图](../debugger/debugger-basics.md)。  
+本节讲述本机应用程序的一些常见调试问题和调试技术。 本节阐述的技术属于高级别技术。 有关使用 Visual Studio 调试器的机制，请参阅 [调试器路线图](../debugger/debugger-basics.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
  [如何：调试优化的代码](../debugger/how-to-debug-optimized-code.md)  
@@ -47,7 +47,7 @@ ms.locfileid: "68196424"
  [如何：调试内联程序集代码](../debugger/how-to-debug-inline-assembly-code.md)  
  提供有关使用“反汇编”窗口查看程序集指令和使用“寄存器”窗口查看寄存器内容的简短说明，并提供指向关于这些窗口的主题的链接。  
   
- [MFC 调试技术](../debugger/mfc-debugging-techniques.md)  
+ [MFC 调试方法](../debugger/mfc-debugging-techniques.md)  
  将您链接到 MFC 程序的调试技术，包括：afxDebugBreak、TRACE 宏、在 MFC 中检测内存泄漏、MFC 断言以及降低 MFC 调试版本的大小。  
   
  [CRT 调试方法](../debugger/crt-debugging-techniques.md)  
@@ -66,7 +66,7 @@ ms.locfileid: "68196424"
  提供有关如何调试使用特性的代码的指导。 指导信息包括如何打开“源批注”、如何查看插入的代码以及如何在当前执行点查看反汇编代码。  
   
  [演练：调试并行应用程序](../debugger/walkthrough-debugging-a-parallel-application.md)  
- 描述如何使用“并行任务”  和“并行堆栈”  工具窗口调试并行应用程序。  
+ 描述如何使用“并行任务” 和“并行堆栈”工具窗口调试并行应用程序。  
   
 ## <a name="related-sections"></a>相关章节  
  [Visual C++ 项目类型](../debugger/debugging-preparation-visual-cpp-project-types.md)  
@@ -75,6 +75,6 @@ ms.locfileid: "68196424"
  [在 Visual Studio 中进行调试](../debugger/debugging-in-visual-studio.md)  
  提供指向调试文档的较大章节的链接。 涉及的信息包括：调试器的新增功能、设置和准备、断点、处理异常、编辑和继续、调试托管代码、调试本机代码、调试 SQL 以及用户界面参考。  
   
-## <a name="see-also"></a>请参阅  
- [调试器安全](../debugger/debugger-security.md)   
+## <a name="see-also"></a>另请参阅  
+ [调试器安全性](../debugger/debugger-security.md)   
  [在 Visual Studio 中进行调试](../debugger/debugging-in-visual-studio.md)

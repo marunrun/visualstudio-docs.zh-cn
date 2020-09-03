@@ -14,10 +14,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: c6a7d4d1e80323b4d260ac558661c222f72ec3c1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68149268"
 ---
 # <a name="resource-contentions-view---contention-data"></a>“资源争用”视图 - 争用数据
@@ -42,9 +42,9 @@ ms.locfileid: "68149268"
   
 ## <a name="navigating-the-resource-allocation-view"></a>导航资源分配视图  
   
-|列|描述|  
+|列|说明|  
 |------------|-----------------|  
-|**名称**|资源或函数的名称。|  
+|**Name**|资源或函数的名称。|  
 |**独占阻塞的时间**|-   对于资源，是阻止访问资源并导致线程等待的总时间。<br />-   对于函数，是此函数在函数体中执行代码时阻止此函数的这些实例访问父资源的时间。 不包含此函数调用的函数中的阻塞时间。|  
 |**独占阻塞的时间百分比**|-   对于资源，是此资源的阻塞时间占分析数据中的所有阻塞时间的百分比<br />-   对于函数，是这些函数实例的独占阻塞时间占分析数据中的所有阻塞时间的百分比。|  
 |**独占争用**|-   对于资源，是阻止访问资源并导致线程等待的总次数。<br />-   对于函数，是此函数在函数体中执行代码时阻止此函数的这些实例访问父资源的次数。 不包含此函数调用的函数中的阻塞事件。|  

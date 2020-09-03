@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: f38bfc7a6899ff1d61b8103204bb58df5c5106a6
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "82921123"
 ---
 # <a name="modify-the-style-of-objects-in-blend-for-visual-studio"></a>修改 Blend for Visual Studio 中对象的样式
@@ -67,7 +67,7 @@ ms.locfileid: "82921123"
 
 - 选择“创建空白项”**** 可从头开始。
 
-仅当编辑已创建的样式或模板时，"**编辑当前**" 选项才会出现。 对于仍在使用默认系统模板的控件，它不会出现。
+仅当编辑已创建的样式或模板时，" **编辑当前** " 选项才会出现。 对于仍在使用默认系统模板的控件，它不会出现。
 
 在“创建样式资源”**** 对话框中，可以命名样式或模板以便可以在以后使用它，也可以将样式或模板应用于该类型的所有控件。
 
@@ -75,7 +75,7 @@ ms.locfileid: "82921123"
 
 > [!NOTE]
 > 不能为控件的每种类型都创建样式或模板。 如果控件不支持它们，则痕迹导航按钮不会出现在美工板上方。
-> 若要返回到主文档的编辑范围，请单击 "**返回范围" 以** ![将 "](../designers/media/55844eb3-ed98-4f20-aa66-a6f5b23eeb2b.png)作用域返回到" 图标。
+> 若要返回到主文档的编辑范围，请单击 " **返回范围" 以**将 "作用域返回到" ![ 图标 ](../designers/media/55844eb3-ed98-4f20-aa66-a6f5b23eeb2b.png) 。
 
 ### <a name="apply-a-style-or-template-to-a-control"></a>将样式或模板应用于控件
 
@@ -85,7 +85,7 @@ ms.locfileid: "82921123"
 
 ### <a name="restore-the-default-style-or-template-of-a-control"></a>还原控件的默认样式或模板
 
-选择控件，在 "属性" 窗口中，找到 "**样式**" 或 "**模板**" 属性。 选择“高级选项”，然后在快捷菜单上单击“重置”********。
+选择控件，在 "属性" 窗口中，找到 " **样式** " 或 " **模板** " 属性。 选择“高级选项”，然后在快捷菜单上单击“重置”********。
 
 ## <a name="visual-states"></a>可视状态
 

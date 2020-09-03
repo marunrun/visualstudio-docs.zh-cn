@@ -1,5 +1,5 @@
 ---
-title: 警告：脚本调试已禁用 |Microsoft Docs
+title: 警告：脚本调试被禁用 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -17,10 +17,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 36065120dc636f0004f0e00d8b17a0059a680723
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68161372"
 ---
 # <a name="warning-script-debugging-disabled"></a>警告：脚本调试已禁用
@@ -46,5 +46,5 @@ ms.locfileid: "68161372"
   
      新设置现在将生效。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [如何：附加到脚本](../debugger/how-to-attach-to-script.md)

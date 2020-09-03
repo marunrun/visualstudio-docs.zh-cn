@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 068de3c14240bc7e13be0e2e564c2c4e6034f987
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85531412"
 ---
 # <a name="access-visual-studio-or-other-hosts-from-a-text-template"></a>从文本模板访问 Visual Studio 或其他主机
@@ -20,11 +20,11 @@ ms.locfileid: "85531412"
 在文本模板中，可以使用由执行模板的主机公开的方法和属性。 Visual Studio 是主机的一个示例。
 
 > [!NOTE]
-> 您可以在常规文本模板中使用主机方法和属性，但不能在*预处理*文本模板中使用。
+> 您可以在常规文本模板中使用主机方法和属性，但不能在 *预处理* 文本模板中使用。
 
 ## <a name="obtain-access-to-the-host"></a>获取对主机的访问权限
 
-若要访问宿主，请 `hostspecific="true"` 在指令中设置 `template` 。 现在，可以使用 `this.Host` 类型为[ITextTemplatingEngineHost](/previous-versions/visualstudio/visual-studio-2012/bb126505(v=vs.110))的。 [ITextTemplatingEngineHost](/previous-versions/visualstudio/visual-studio-2012/bb126505(v=vs.110))类型具有可用于解析文件名和日志错误的成员，例如。
+若要访问宿主，请 `hostspecific="true"` 在指令中设置 `template` 。 现在，可以使用 `this.Host` 类型为 [ITextTemplatingEngineHost](/previous-versions/visualstudio/visual-studio-2012/bb126505(v=vs.110))的。 [ITextTemplatingEngineHost](/previous-versions/visualstudio/visual-studio-2012/bb126505(v=vs.110))类型具有可用于解析文件名和日志错误的成员，例如。
 
 ### <a name="resolve-file-names"></a>解析文件名
 
@@ -44,7 +44,7 @@ Content of myFile is:
 
 ### <a name="display-error-messages"></a>显示错误消息
 
-此示例在转换模板时记录消息。 如果主机是 Visual Studio，则会将错误添加到**错误列表**。
+此示例在转换模板时记录消息。 如果主机是 Visual Studio，则会将错误添加到 **错误列表**。
 
 ```csharp
 <#@ template hostspecific="true" language="C#" #>

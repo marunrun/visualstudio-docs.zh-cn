@@ -1,5 +1,5 @@
 ---
-title: 调试准备：C#F#，和 Visual Basic 项目类型 |Microsoft Docs
+title: '调试准备： c #、F # 和 Visual Basic 项目类型 |Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -24,10 +24,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 1bf57ae0d8d2b9b499897baadc7f2c4450086bf2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68195314"
 ---
 # <a name="debugging-preparation-c-f-and-visual-basic-project-types"></a>调试准备：C#、F# 和 Visual Basic 项目类型
@@ -35,7 +35,7 @@ ms.locfileid: "68195314"
 
 本节主题描述如何调试由 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 项目模板创建的 C#、F# 和 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 项目类型。  
   
- 请注意，创建 Dll 作为其输出的这些项目类型已被分组到[调试 DLL 项目](../debugger/debugging-dll-projects.md)由于它们共享的常见功能。  
+ 请注意，那些将 DLL 作为其输出创建的项目类型由于其共同的特性已被分组到[调试 DLL 项目](../debugger/debugging-dll-projects.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
  [建议的属性设置](../debugger/managed-debugging-recommended-property-settings.md)  
@@ -57,5 +57,5 @@ ms.locfileid: "68195314"
  [调试托管代码](../debugger/debugging-managed-code.md)  
  介绍用托管代码编写的应用程序的常见调试问题和技术。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [调试器安全](../debugger/debugger-security.md)

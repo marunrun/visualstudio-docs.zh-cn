@@ -11,10 +11,10 @@ caps.latest.revision: 29
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 0657fdd846c201b4f9bff4910bdd9fc271c399c9
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85543775"
 ---
 # <a name="unit-test-basics"></a>单元测试基础
@@ -40,9 +40,9 @@ ms.locfileid: "85543775"
 
 - [运行和查看测试](#BKMK_Running_and_viewing_tests_from_the_Test_Explorer_toolbar)
 
-## <a name="unit-testing-overview"></a><a name="BKMK_Unit_testing_overview"></a>单元测试概述
+## <a name="unit-testing-overview"></a><a name="BKMK_Unit_testing_overview"></a> 单元测试概述
 
-### <a name="quick-starts"></a><a name="BKMK_Quick_starts"></a>快速入门
+### <a name="quick-starts"></a><a name="BKMK_Quick_starts"></a> 快速入门
  关于直接进入编码的单元测试的简介，请参阅以下主题之一：
 
 - [演练：创建并运行托管代码的单元测试](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)
@@ -51,7 +51,7 @@ ms.locfileid: "85543775"
 
 - [使用测试资源管理器对本机代码进行单元测试](https://msdn.microsoft.com/8a09d6d8-3613-49d8-9ffe-11375ac4736c)
 
-## <a name="the-mybank-solution-example"></a><a name="BKMK_The_MyBank_Solution_example"></a>MyBank 解决方案示例
+## <a name="the-mybank-solution-example"></a><a name="BKMK_The_MyBank_Solution_example"></a> MyBank 解决方案示例
  在本主题中，我们使用称为 `MyBank` 的虚构应用程序的开发作为示例。 你不需要按照本主题中的说明的实际代码。 测试方法用 C# 编写并使用 Microsoft 单元测试框架为托管代码进行呈现，但是，概念可以轻松地转到其他语言和框架中。
 
  ![MyBank 解决方案](../test/media/ute-mybanksolution.png "UTE_MyBankSolution")
@@ -142,7 +142,7 @@ public void Withdraw(double amount)
 
 - `CheckingAccountTests` 类包含用于 `CheckingAccount` 类的单元测试方法。
 
-## <a name="write-your-tests"></a><a name="BKMK_Writing_your_tests"></a>编写测试
+## <a name="write-your-tests"></a><a name="BKMK_Writing_your_tests"></a> 编写测试
  你使用的单元测试框架和 Visual Studio IntelliSense 将指导你完成为代码项目的单元测试编写代码。 若要在测试资源管理器中运行，大多数框架要求你添加特定的属性来识别单元测试方法。 框架还提供了一种方法，通常通过断言语句或方法属性，来指示测试方法是否已通过或失败。 其他属性标识可选的安装方法，即在类初始化时和每个测试方法和每个拆卸方法之前的安装方法，这些拆卸方法在每个测试方法之后和类被销毁之前运行。
 
  AAA（准备、执行、断言）模式是编写待测试方法的单元测试的常用方法。
@@ -217,7 +217,7 @@ public void My_Test ()
 }
 ```
 
-## <a name="run-tests-in-test-explorer"></a><a name="BKMK_Running_tests_in_Test_Explorer"></a>在测试资源管理器中运行测试
+## <a name="run-tests-in-test-explorer"></a><a name="BKMK_Running_tests_in_Test_Explorer"></a> 在测试资源管理器中运行测试
  在生成测试项目时，测试将出现在测试资源管理器中。 如果测试资源管理器不可见，请选择 Visual Studio 菜单上的“测试”  ，然后依次选择“Windows” 、“测试资源管理器” 。
 
  ![单元测试资源管理器](../ide/media/ute-failedpassednotrunsummary.png "UTE_FailedPassedNotRunSummary")
@@ -226,34 +226,34 @@ public void My_Test ()
 
  通过在全局级别的搜索框中的匹配文本或选择其中一个预定义的筛选器，你还可以在任何视图中筛选测试。 你可以在任何时间运行任何选定的测试。 测试运行的结果立即显示在资源管理器窗口顶部的通过/失败栏中。 在你选择测试时，会显示测试方法结果的详细信息。
 
-### <a name="run-and-view-tests"></a><a name="BKMK_Running_and_viewing_tests_from_the_Test_Explorer_toolbar"></a>运行和查看测试
+### <a name="run-and-view-tests"></a><a name="BKMK_Running_and_viewing_tests_from_the_Test_Explorer_toolbar"></a> 运行和查看测试
  测试资源管理器工具栏可帮助你发现、组织和运行你感兴趣的测试。
 
  ![从测试资源管理器工具栏运行测试](../test/media/ute-toolbar.png "UTE_ToolBar")
 
- 您可以选择 "**运行全部**" 来运行所有测试，或选择 "**运行**" 来选择要运行的测试的子集。 运行一组测试后，测试运行的摘要将出现在测试资源管理器窗口的底部。 选择一个测试以在底部窗格中查看该测试的详细信息。 从上下文菜单中选择 "**打开测试**" （键盘： F12），以显示所选测试的源代码。
+ 您可以选择 " **运行全部** " 来运行所有测试，或选择 " **运行** " 来选择要运行的测试的子集。 运行一组测试后，测试运行的摘要将出现在测试资源管理器窗口的底部。 选择一个测试以在底部窗格中查看该测试的详细信息。 从上下文菜单中选择 " **打开测试** " (键盘： F12) 以显示所选测试的源代码。
 
  如果各个测试没有防止其以任何顺序运行的依赖项，则可使用工具栏上的 ![UTE_parallelicon - 小](../test/media/ute-parallelicon-small.png "UTE_parallelicon-小型")切换按钮来打开并行测试执行。 这可以显著降低运行所有测试所需的时间。
 
-### <a name="run-tests-after-every-build"></a><a name="BKMK_Running_tests_after_every_build"></a>在每次生成后运行测试
+### <a name="run-tests-after-every-build"></a><a name="BKMK_Running_tests_after_every_build"></a> 在每次生成后运行测试
 
 > [!WARNING]
 > 仅在 Visual Studio Enterprise 中支持每次生成后运行单元测试。
 
-|映像|说明|
+|图像|说明|
 |-|-|
 |![生成后运行](../test/media/ute-runafterbuild-btn.png "UTE_RunAfterBuild_btn")|若要在每个本地生成后运行单元测试，请在标准菜单上选择“测试”，然后在“测试资源管理器”工具栏上选择“生成后运行测试”********。|
 
-### <a name="filter-and-group-the-test-list"></a><a name="BKMK_Filtering_and_grouping_the_test_list"></a>筛选和分组测试列表
+### <a name="filter-and-group-the-test-list"></a><a name="BKMK_Filtering_and_grouping_the_test_list"></a> 筛选和分组测试列表
  当你有大量测试时，你可以在测试资源管理器搜索框中键入，以按指定的字符串筛选列表。 你可以通过从筛选器列表中选择以更多地限制筛选器事件。
 
  ![搜索筛选器类别](../test/media/ute-searchfilter.png "UTE_SearchFilter")
 
-|映像|说明|
+|图像|说明|
 |-|-|
 |![测试资源管理器的分组按钮](../test/media/ute-groupby-btn.png "UTE_GroupBy_btn")|若要按类别分组测试，请选择“分组依据” **** 按钮。|
 
- 有关详细信息，请参阅[用测试资源管理器运行单元测试](../test/run-unit-tests-with-test-explorer.md)
+ 有关详细信息，请参阅 [用测试资源管理器运行单元测试](../test/run-unit-tests-with-test-explorer.md)
 
 ## <a name="qa"></a>问答
  **问：如何调试单元测试？**
@@ -265,7 +265,7 @@ public void My_Test ()
    > [!NOTE]
    > 因为测试方法可以按任何顺序运行，请在你想要调试的所有测试方法中设置断点。
 
-2. 在测试资源管理器中，选择测试方法，然后从快捷菜单中选择 "**调试选定的测试**"。
+2. 在测试资源管理器中，选择测试方法，然后从快捷菜单中选择 " **调试选定的测试** "。
 
    详细了解如何[调试单元测试](../debugger/debugging-in-visual-studio.md)。
 

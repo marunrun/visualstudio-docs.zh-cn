@@ -1,5 +1,5 @@
 ---
-title: IDebugEngine2::RemoveAllSetExceptions |Microsoft Docs
+title: IDebugEngine2：： RemoveAllSetExceptions |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 823c3312fe68d73ddd8db3d40a35cefbed1b9ac7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68196019"
 ---
 # <a name="idebugengine2removeallsetexceptions"></a>IDebugEngine2::RemoveAllSetExceptions
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-删除的异常 IDE 已设置为特定的运行时体系结构或语言的列表。  
+删除 IDE 为特定运行时体系结构或语言设置的异常列表。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,17 +40,17 @@ int RemoveAllSetExceptions( 
   
 #### <a name="parameters"></a>参数  
  `guidType`  
- [in]语言 GUID 或特定于运行时体系结构的调试引擎的 GUID。  
+ 中语言的 GUID 或特定于运行时体系结构的调试引擎的 GUID。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
 ## <a name="remarks"></a>备注  
- 通过此方法移除异常设置的早期调用[SetException](../../../extensibility/debugger/reference/idebugengine2-setexception.md)方法。  
+ 此方法删除的异常由先前对 [SetException](../../../extensibility/debugger/reference/idebugengine2-setexception.md) 方法的调用设置。  
   
- 若要删除的特定异常，请调用[RemoveSetException](../../../extensibility/debugger/reference/idebugengine2-removesetexception.md)方法。  
+ 若要删除特定的异常，请调用 [RemoveSetException](../../../extensibility/debugger/reference/idebugengine2-removesetexception.md) 方法。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)   
  [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)   
  [RemoveSetException](../../../extensibility/debugger/reference/idebugengine2-removesetexception.md)

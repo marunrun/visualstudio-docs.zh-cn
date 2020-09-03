@@ -1,5 +1,5 @@
 ---
-title: IDebug文档上下文2：：比较 |微软文档
+title: IDebugDocumentContext2：： Compare |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: b0e46f765c8e4c0e12c3bb9447e0713919fae7b8
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80731893"
 ---
 # <a name="idebugdocumentcontext2compare"></a>IDebugDocumentContext2::Compare
@@ -47,23 +47,23 @@ int Compare( 
 
 ## <a name="parameters"></a>参数
 `compare`\
-[在][DOCCONTEXT_COMPARE](../../../extensibility/debugger/reference/doccontext-compare.md)枚举中指定比较类型的值。
+中 [DOCCONTEXT_COMPARE](../../../extensibility/debugger/reference/doccontext-compare.md) 枚举中的一个值，该值指定比较的类型。
 
 `rgpDocContextSet`\
-[在][IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md)对象的数组，表示要比较的文档上下文。
+中 [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) 对象的数组，这些对象表示要进行比较的文档上下文。
 
 `dwDocContextSetLen`\
-[在]要比较的文档上下文数组的长度。
+中要比较的文档上下文数组的长度。
 
 `pdwDocContext`\
-[出]将索引返回到满足比较`rgpDocContextSet`的第一个文档上下文的数组中。
+弄将索引返回到 `rgpDocContextSet` 满足比较的第一个文档上下文的数组中。
 
 ## <a name="return-value"></a>返回值
- 如果`S_OK`找到匹配项，则返回。 如果`S_FALSE`未找到匹配项，则返回。 否则，返回错误代码。
+ `S_OK`如果找到匹配项，则返回。 `S_FALSE`如果未找到匹配项，则返回。 否则，返回错误代码。
 
 ## <a name="remarks"></a>备注
- 数组中传递的[IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md)对象必须由实现所调用对象的同一`IDebugDocumentContext2`调试引擎实现;否则，比较无效。
+ 在数组中传递的 [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) 对象必须由实现在其上调用的对象的相同调试引擎实现 `IDebugDocumentContext2` ; 否则，比较无效。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md)
 - [DOCCONTEXT_COMPARE](../../../extensibility/debugger/reference/doccontext-compare.md)

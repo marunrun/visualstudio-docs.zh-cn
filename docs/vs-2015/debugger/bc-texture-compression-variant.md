@@ -1,5 +1,5 @@
 ---
-title: BC 纹理压缩变量 |Microsoft Docs
+title: BC 纹理压缩变体 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -10,10 +10,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: f0758d9eb5a003b0353ceb4fee21996d90685fa5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68161693"
 ---
 # <a name="bc-texture-compression-variant"></a>BC 纹理压缩变量
@@ -63,5 +63,5 @@ ms.locfileid: "68161693"
 ## <a name="example"></a>示例  
  此变量在运行时（调用 `CreateTexture2D` 之前）对纹理进行块压缩。 我们不建议将此方法用于成品代码，因为未压缩的纹理会消耗更多的磁盘空间，而且此额外步骤会显著增加应用中的加载次数（因为基于块的压缩需要大量计算要编码的资源）。 相反，我们建议你通过使用生成管道中包含的图像编辑器或图像处理器，在脱机状态下压缩纹理。 这些方法将降低磁盘空间要求、消除应用中的运行时开销并提供更多的处理时间，以便可以保持最佳图像质量。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Half/Quarter 纹理维度变量](../debugger/half-quarter-texture-dimensions-variant.md)

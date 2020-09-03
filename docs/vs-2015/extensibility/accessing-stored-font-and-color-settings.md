@@ -13,72 +13,72 @@ caps.latest.revision: 27
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: fbb2f118d903eae2124e705f14c7aa7b51bf9c4d
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "67821830"
 ---
 # <a name="accessing-stored-font-and-color-settings"></a>访问存储的字体和颜色设置
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]集成的开发环境 (IDE) 存储修改后的设置字体和颜色在注册表中。 可以使用<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage>界面来访问这些设置。  
+[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]集成开发环境 (IDE) 为注册表中的字体和颜色存储修改后的设置。 您可以使用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage> 接口来访问这些设置。  
   
-## <a name="to-initiate-state-persistence-of-fonts-and-colors"></a>若要启动的字体和颜色的状态持久性  
- 字体和颜色信息存储在以下注册表位置中按类别: [HKCU\SOFTWARE\Microsoft \Visual Studio\\ *\<Visual Studio 版本 >* \FontAndColors\\ *\<CategoryGUID >* ]，其中 *\<CategoryGUID >* 类别的 GUID。  
+## <a name="to-initiate-state-persistence-of-fonts-and-colors"></a>启动字体和颜色的状态持久性  
+ 字体和颜色信息按类别存储在以下注册表位置中： [HKCU\SOFTWARE\Microsoft \Visual Studio \\ *\<Visual Studio version>* \FontAndColors \\ *\<CategoryGUID>* ]，其中 *\<CategoryGUID>* 是类别 GUID。  
   
- 因此，若要启动暂留，VSPackage 必须：  
+ 因此，若要启动持久性，VSPackage 必须：  
   
-- 获取<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage>接口通过调用`QueryService`针对全局服务提供程序。  
+- <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage>通过调用 `QueryService` 全局服务提供程序来获取接口。  
   
-     `QueryService` 必须使用的服务 ID 自变量调用`SID_SVsFontAndColorStorage`的接口 ID 自变量和`IID_IVsFontAndColorStorage`。  
+     `QueryService` 必须使用的服务 ID 参数 `SID_SVsFontAndColorStorage` 和的接口 id 参数来调用 `IID_IVsFontAndColorStorage` 。  
   
-- 使用<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage.OpenCategory%2A>方法打开某个类别，以保存通过使用类别的 GUID 和模式标志作为参数。  
+- 使用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage.OpenCategory%2A> 方法可通过将类别的 GUID 和模式标志用作参数来打开要保存的类别。  
   
-  通过指定的模式`fFlags`参数，构造中的值从<xref:Microsoft.VisualStudio.Shell.Interop.__FCSTORAGEFLAGS>枚举。 此模式下控制：  
+  由参数指定的模式由 `fFlags` 枚举中的值构造而成 <xref:Microsoft.VisualStudio.Shell.Interop.__FCSTORAGEFLAGS> 。 此模式控制：  
 
-  - 可以通过访问的设置<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage>接口。  
+  - 可以通过接口访问的设置 <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage> 。  
 
-  - 所有设置或仅这些用户修改的并且可通过检索<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage>接口。  
+  - 要么是所有的设置，要么只是用户修改的、可通过接口检索的设置 <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage> 。  
 
-  - 将更改传播到用户设置的方式。  
+  - 传播对用户设置所做更改的方式。  
 
-  - 所使用的颜色值的格式。  
+  - 使用的颜色值的格式。  
 
-## <a name="to-use-state-persistence-of-fonts-and-colors"></a>若要使用的字体和颜色的状态持久性  
- 保留的字体和颜色涉及：  
+## <a name="to-use-state-persistence-of-fonts-and-colors"></a>使用字体和颜色的状态持久性  
+ 保存字体和颜色涉及：  
   
-- 与存储在注册表中设置同步的 IDE 设置。  
+- 将 IDE 设置与注册表中存储的设置进行同步。  
   
 - 传播注册表修改信息。  
   
-- 设置和检索存储在注册表中的设置。  
+- 设置和检索注册表中存储的设置。  
   
-  与 IDE 设置同步的存储设置是很大程度上透明的。 基础 IDE 自动将写入的更新的设置**显示项**到类别的注册表项。  
+  将存储设置与 IDE 设置同步很大程度上是透明的。 基础 IDE 自动将 **显示项** 的更新设置写入类别的注册表项。  
   
-  如果多个 Vspackage 共享特定类别，VSPackage 应要求将生成事件时的方法<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage>接口用于修改存储的注册表设置。  
+  如果多个 Vspackage 共享特定类别，则 VSPackage 应要求在 <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage> 使用接口的方法修改存储的注册表设置时生成事件。  
   
-  默认情况下未启用事件生成。 若要启用事件生成，类别必须打开使用<xref:Microsoft.VisualStudio.Shell.Interop.__FCSTORAGEFLAGS>。 这会导致 IDE 以调用适当<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorEvents>VSPackage 实现的方法。  
+  默认情况下，不启用事件生成。 若要启用事件生成，必须使用打开一个类别 <xref:Microsoft.VisualStudio.Shell.Interop.__FCSTORAGEFLAGS> 。 这会使 IDE 调用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorEvents> VSPackage 实现的适当方法。  
   
 > [!NOTE]
-> 通过修改**字体和颜色**属性页生成事件的独立<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage>。 可以使用<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorCacheManager>接口，以确定是否在调用的方法需要更新的缓存的字体和颜色设置<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage>类。  
+> 通过 " **字体和颜色** " 属性页的修改将生成独立于的事件 <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage> 。 在 <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorCacheManager> 调用类的方法之前，可以使用接口来确定是否需要更新缓存的字体和颜色设置 <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage> 。  
   
 ### <a name="storing-and-retrieving-information"></a>存储和检索信息  
- 若要获取或配置的用户可以修改在打开的类别为命名的显示项的信息，Vspackage 将调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage.GetItem%2A>和<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage.SetItem%2A>方法。  
+ 若要获取或配置用户可以为打开的类别中的已命名显示项修改的信息，Vspackage 调用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage.GetItem%2A> 和 <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage.SetItem%2A> 方法。  
   
- 有关字体的信息特性的使用获取特定类别<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage.GetFont%2A>和<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage.SetFont%2A>方法。  
-  
-> [!NOTE]
-> `fFlags`自变量传递给<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage.OpenCategory%2A>方法时已打开该类别定义的行为<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage.GetItem%2A>和<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage.GetFont%2A>方法。 默认情况下，这些方法仅返回信息 aboutdisplay itemsthat 已更改。 但是，如果使用打开类别<xref:Microsoft.VisualStudio.Shell.Interop.__FCSTORAGEFLAGS>标志，同时更新，并且可以通过访问不变的显示项<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage.GetItem%2A>和<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage.GetFont%2A>。  
-  
- 默认情况下，仅更改**显示项**信息保存在注册表中。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage>接口不能用于检索所有设置的字体和颜色。  
+ 有关特定类别的字体属性的信息，请使用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage.GetFont%2A> 和方法获取 <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage.SetFont%2A> 。  
   
 > [!NOTE]
-> <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage.GetItem%2A>并<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage.GetFont%2A>方法返回 REGDB_E_KEYMISSING，(0x80040152L) 使用它们来检索信息时，有关未更改**显示项**。  
+> `fFlags` <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage.OpenCategory%2A> 当该类别打开时，传递给方法的参数定义 <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage.GetItem%2A> 和方法的行为 <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage.GetFont%2A> 。 默认情况下，这些方法只返回 aboutdisplay itemsthat 已更改的信息。 但是，如果使用标志打开类别 <xref:Microsoft.VisualStudio.Shell.Interop.__FCSTORAGEFLAGS> ，则和都可以访问更新和未更改的显示项 <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage.GetItem%2A> <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage.GetFont%2A> 。  
   
- 所有的设置**显示项**中特定**类别**可以通过使用的方法来获取`T:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorDefaults`接口。  
+ 默认情况下，注册表中仅保留更改的 **显示项** 信息。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage>接口不能用于检索字体和颜色的所有设置。  
   
-## <a name="see-also"></a>请参阅  
+> [!NOTE]
+> <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage.GetItem%2A> <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage.GetFont%2A> 当使用和方法检索有关未更改的**显示项**的信息时，将返回 REGDB_E_KEYMISSING， (0x80040152L) 。  
+  
+ 可以通过使用接口的方法来获取特定**类别**中的所有**显示项**的设置 `T:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorDefaults` 。  
+  
+## <a name="see-also"></a>另请参阅  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage>   
  <xref:Microsoft.VisualStudio.Shell.Interop.__FCSTORAGEFLAGS>   
  [实现自定义类别和显示项](../extensibility/implementing-custom-categories-and-display-items.md)

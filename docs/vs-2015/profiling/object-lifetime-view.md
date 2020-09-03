@@ -18,16 +18,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: ef216c1220cbfda37da579d3ea2dfdd32837ab75
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68195566"
 ---
 # <a name="object-lifetime-view"></a>“对象生存期”视图
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-在“性能会话”属性页上选中“还收集 .NET 对象的生存期数据”  时，可以使用“对象生存期”视图。  
+在“性能会话”属性页上选中“还收集 .NET 对象的生存期数据”时，可以使用“对象生存期”视图****。  
   
  [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 的垃圾回收器负责管理应用程序的内存分配和释放。 为优化垃圾回收器的性能，将托管堆分为三代：第 0 代、第 1 代和第 2 代。 运行时的垃圾回收器将新对象存储在第 0 代中。 未回收的对象将会升级并存储在第 1 代和第 2 代中。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "68195566"
   
 |列|说明|  
 |------------|-----------------|  
-|**实例**|此类型对象的分配数。|  
+|**实例数**|此类型对象的分配数。|  
 |**总实例数百分比**|在分析运行期间进行的分配总数的百分比。|  
 |**已收集的第 0 代实例数**|在垃圾回收算法的第 0 代中，已解除分配的类型实例数。|  
 |**已收集的第 1 代实例数**|在垃圾回收算法的第 1 代中，已解除分配的类型实例数。|  

@@ -18,13 +18,14 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: c76373c710908a8ae7edc49c4e26ff7e94336a6d
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86014981"
 ---
 # <a name="how-to-add-an-updater-method"></a>如何：添加更新程序方法
-  您可以通过创建一种*更新方法，* 使用户能够更新 SharePoint 外部列表中的业务数据。 有关详细信息，请参阅[设计业务数据连接模型](../sharepoint/designing-a-business-data-connectivity-model.md)。
+  您可以通过创建一种 *更新方法，* 使用户能够更新 SharePoint 外部列表中的业务数据。 有关详细信息，请参阅 [设计业务数据连接模型](../sharepoint/designing-a-business-data-connectivity-model.md)。
 
 ### <a name="to-create-an-updater-method"></a>创建更新方法
 
@@ -32,28 +33,28 @@ ms.locfileid: "86014981"
 
 2. 在菜单栏上，选择 "**查看**  >  **其他 Windows**  >  **BDC 方法详细信息**"。
 
-    “BDC 方法详细信息”窗口将打开。 有关此窗口的详细信息，请参阅[BDC 模型设计工具概述](../sharepoint/bdc-model-design-tools-overview.md)。
+    “BDC 方法详细信息”窗口将打开。 有关此窗口的详细信息，请参阅 [BDC 模型设计工具概述](../sharepoint/bdc-model-design-tools-overview.md)。
 
-3. 在 "**添加方法**" 列表中，选择 "**创建更新方法**"。
+3. 在 " **添加方法** " 列表中，选择 " **创建更新方法**"。
 
     Visual Studio 将以下元素添加到模型中。 这些元素出现在 "BDC 方法详细信息" 窗口中。
 
-   - 名为**Update**的方法。
+   - 名为 **Update**的方法。
 
    - 方法的输入参数。
 
-   - 参数的类型描述符。 默认情况下，Visual Studio 使用为 Finder 方法（例如： Contact）定义的实体类型描述符。
+   - 参数的类型描述符。 默认情况下，Visual Studio 使用为 Finder 方法定义的实体类型描述符 (例如： Contact) 。
 
    - 方法的方法实例。
 
-     有关详细信息，请参阅[设计业务数据连接模型](../sharepoint/designing-a-business-data-connectivity-model.md)。
+     有关详细信息，请参阅 [设计业务数据连接模型](../sharepoint/designing-a-business-data-connectivity-model.md)。
 
    > [!NOTE]
-   > 如果实体类型的标识符表示数据库表中的字段（该字段不是自动生成的），请将 "**预生成更新字段**" 属性设置为 " **True**"。
+   > 如果实体类型的标识符表示数据库表中的字段（该字段不是自动生成的），请将 " **预生成更新字段** " 属性设置为 " **True**"。
 
-4. 在**解决方案资源管理器**中，打开为实体生成的服务代码文件的快捷菜单，然后选择 "**查看代码**"。
+4. 在 **解决方案资源管理器**中，打开为实体生成的服务代码文件的快捷菜单，然后选择 " **查看代码**"。
 
-    实体服务代码文件将在**代码编辑器**中打开。 有关该文件的详细信息，请参阅[创建业务数据连接模型](../sharepoint/creating-a-business-data-connectivity-model.md)。
+    实体服务代码文件将在 **代码编辑器**中打开。 有关该文件的详细信息，请参阅 [创建业务数据连接模型](../sharepoint/creating-a-business-data-connectivity-model.md)。
 
 5. 将代码添加到更新方法来更新数据。 下面的示例更新 AdventureWorks 示例数据库中的联系人信息，以便 SQL Server。
 
@@ -63,7 +64,7 @@ ms.locfileid: "86014981"
     [!code-csharp[SP_BDC#5](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs#5)]
     [!code-vb[SP_BDC#5](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb#5)]
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [设计业务数据连接模型](../sharepoint/designing-a-business-data-connectivity-model.md)
 - [如何：添加 Finder 方法](../sharepoint/how-to-add-a-finder-method.md)
 - [如何：添加特定的 Finder 方法](../sharepoint/how-to-add-a-specific-finder-method.md)

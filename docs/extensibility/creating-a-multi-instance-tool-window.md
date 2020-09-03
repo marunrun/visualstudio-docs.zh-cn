@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 1bb84ed9961cac5159e15bc0c45fada5426d2f2c
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85904068"
 ---
 # <a name="create-a-multi-instance-tool-window"></a>创建多实例工具窗口
@@ -23,16 +23,16 @@ ms.locfileid: "85904068"
 
 使用多实例工具窗口时，可以同时显示多个相关的信息源。 例如，可以 <xref:System.Windows.Forms.TextBox> 在多实例工具窗口中放置一个多行控件，以便在编程会话过程中同时提供多个代码片段。 例如，您可以将 <xref:System.Windows.Forms.DataGrid> 控件和下拉列表框放在多实例工具窗口中，以便可以同时跟踪多个实时数据源。
 
-## <a name="create-a-basic-single-instance-tool-window"></a>创建基本（单实例）工具窗口
+## <a name="create-a-basic-single-instance-tool-window"></a>创建基本 (单实例) 工具窗口
 
-1. 使用 VSIX 模板创建名为**MultiInstanceToolWindow**的项目，并添加一个名为**MIToolWindow**的自定义工具窗口项模板。
+1. 使用 VSIX 模板创建名为 **MultiInstanceToolWindow** 的项目，并添加一个名为 **MIToolWindow**的自定义工具窗口项模板。
 
     > [!NOTE]
-    > 有关使用工具窗口创建扩展的详细信息，请参阅[使用工具窗口创建扩展](../extensibility/creating-an-extension-with-a-tool-window.md)。
+    > 有关使用工具窗口创建扩展的详细信息，请参阅 [使用工具窗口创建扩展](../extensibility/creating-an-extension-with-a-tool-window.md)。
 
 ## <a name="make-a-tool-window-multi-instance"></a>创建工具窗口多实例
 
-1. 打开*MIToolWindowPackage.cs*文件并找到 `ProvideToolWindow` 属性。 和 `MultiInstances=true` 参数，如以下示例中所示：
+1. 打开 *MIToolWindowPackage.cs* 文件并找到 `ProvideToolWindow` 属性。 和 `MultiInstances=true` 参数，如以下示例中所示：
 
     ```csharp
     [PackageRegistration(UseManagedResourcesOnly = true)]
@@ -44,7 +44,7 @@ ms.locfileid: "85904068"
     {. . .}
     ```
 
-2. 在*MIToolWindowCommand.cs*文件中，找到 `ShowToolWindos()` 方法。 在此方法中调用 <xref:Microsoft.VisualStudio.Shell.Package.FindToolWindow%2A> 方法，并将其 `create` 标志设置为， `false` 以便它将循环访问现有的工具窗口实例，直到找到可用的 `id` 。
+2. 在 *MIToolWindowCommand.cs* 文件中，找到 `ShowToolWindos()` 方法。 在此方法中调用 <xref:Microsoft.VisualStudio.Shell.Package.FindToolWindow%2A> 方法，并将其 `create` 标志设置为， `false` 以便它将循环访问现有的工具窗口实例，直到找到可用的 `id` 。
 
 3. 若要创建工具窗口实例，请调用 <xref:Microsoft.VisualStudio.Shell.Package.FindToolWindow%2A> 方法，并将其设置 `id` 为可用值，并将其 `create` 标志设置为 `true` 。
 

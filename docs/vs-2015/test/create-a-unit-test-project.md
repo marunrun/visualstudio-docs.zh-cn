@@ -9,10 +9,10 @@ caps.latest.revision: 10
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: bfc85b0616fdf8f30732f2409a1a15040967dbb3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72660640"
 ---
 # <a name="create-a-unit-test-project"></a>创建单元测试项目
@@ -25,19 +25,19 @@ ms.locfileid: "72660640"
 
 ## <a name="to-create-a-unit-test-project"></a>创建单元测试项目：
 
-1. 在“文件” 菜单上，选择“新建” ，然后选择“项目” （快捷键：Ctrl + Shift + N）。
+1. 在“文件” **** 菜单上，选择“新建” **** ，然后选择“项目” **** （快捷键：Ctrl + Shift + N）。
 
-2. 在“新建项目”对话框中，展开“已安装”节点，选择你想要用于测试项目的语言，然后选择“测试”。
+2. 在“新建项目”对话框中，展开“已安装” **** 节点，选择你想要用于测试项目的语言，然后选择“测试”****。
 
-3. 若要使用 Microsoft 单元测试框架之一，请从项目模板的列表中选择“单元测试项目” 。 否则，请选择你想要使用的单元测试框架的项目模板。 为了测试我们示例中的“帐户”项目，您可以将该项目命名为“AccountsTests”。
+3. 若要使用 Microsoft 单元测试框架之一，请从项目模板的列表中选择“单元测试项目” **** 。 否则，请选择你想要使用的单元测试框架的项目模板。 为了测试我们示例中的“帐户”项目，您可以将该项目命名为“AccountsTests”。
 
 4. 在单元测试项目中，添加对被测代码的引用。  下面介绍了如何在同一解决方案中创建对代码项目的引用：
 
     1. 在解决方案资源管理器中选择项目。
 
-    2. 在“项目”菜单上，选择“添加引用...”。
+    2. 在 " **项目** " 菜单上，选择 " **添加引用 ...**"。
 
-    3. 在“引用管理器”对话框中，打开“解决方案”节点，然后选择“项目”。 检查代码项目名称并关闭对话框。
+    3. 在“引用管理器”对话框中，打开“解决方案”节点，然后选择“项目”。******** 检查代码项目名称并关闭对话框。
 
 5. 如果要测试的代码位于其他位置，请参阅[管理项目中的引用](../ide/managing-references-in-a-project.md)了解有关添加引用的信息。
 
@@ -48,7 +48,7 @@ ms.locfileid: "72660640"
 
 - [用 Microsoft 适用于托管代码的单元测试框架编写 .NET Framework 的单元测试](../test/writing-unit-tests-for-the-dotnet-framework-with-the-microsoft-unit-test-framework-for-managed-code.md)
 
-- [用适用于 C++ 的 Microsoft 单元测试框架编写 C/C++ 单元测试](../test/writing-unit-tests-for-c-cpp-with-the-microsoft-unit-testing-framework-for-cpp.md)
+- [用适用于 c + + 的 Microsoft 单元测试框架编写 C/c + + 单元测试](../test/writing-unit-tests-for-c-cpp-with-the-microsoft-unit-testing-framework-for-cpp.md)
 
   **运行单元测试**
 

@@ -1,5 +1,5 @@
 ---
-title: 名称元素（可视化工作室模板） |微软文档
+title: Visual Studio 模板)  (名称元素 |Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,16 +14,17 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: b2a02dc377bac5f93f8e0365f6f3d9ccb81737a8
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80702461"
 ---
-# <a name="name-element-visual-studio-templates"></a>名称元素（可视化工作室模板）
-指定模板的名称，如模板显示在 **"新项目**"或 **"添加新项目"** 对话框中。
+# <a name="name-element-visual-studio-templates"></a>Visual Studio 模板 (名称元素) 
+指定模板在 " **新建项目** " 或 " **添加新项** " 对话框中显示的名称。
 
- \<VStemplate \<>模板数据\<>名称>
+ \<VSTemplate> \<TemplateData>
+ \<Name>
 
 ## <a name="syntax"></a>语法
 
@@ -40,10 +41,10 @@ ms.locfileid: "80702461"
 
 ### <a name="attributes"></a>特性
 
-|特性|描述|
+|特性|说明|
 |---------------|-----------------|
-|`Package`|可选属性，用于高级用户方案。<br /><br /> 指定 Visual Studio 包 ID 的 GUID。|
-|`ID`|可选属性，用于高级用户方案。<br /><br /> 指定 Visual Studio 资源 ID。|
+|`Package`|可选属性，适用于高级用户方案。<br /><br /> 指定 Visual Studio 包 ID 的 GUID。|
+|`ID`|可选属性，适用于高级用户方案。<br /><br /> 指定 Visual Studio 资源 ID。|
 
 ### <a name="child-elements"></a>子元素
  无。
@@ -52,7 +53,7 @@ ms.locfileid: "80702461"
 
 |元素|描述|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|必需元素。<br /><br /> 将此模板分类并定义此模板在 **“新建项目”** 或 **“添加新项”** 对话框中的显示方式。|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|必需的元素。<br /><br /> 将此模板分类并定义此模板在 **“新建项目”** 或 **“添加新项”** 对话框中的显示方式。|
 
 ## <a name="text-value"></a>文本值
  若未使用 `Package` 和 `ID` 属性，则必须提供文本值。
@@ -63,7 +64,7 @@ ms.locfileid: "80702461"
  `Name` 是 `TemplateData` 的必需子元素。
 
 ## <a name="example"></a>示例
- 下面的示例显示了[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]应用程序的项目模板的元数据。
+ 下面的示例演示应用程序的项目模板的元数据 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 。
 
 ```xml
 <VSTemplate Type="Project" Version="3.0.0"
@@ -90,5 +91,5 @@ ms.locfileid: "80702461"
 ```
 
 ## <a name="see-also"></a>请参阅
-- [可视化工作室模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
+- [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
 - [创建项目和项模板](../ide/creating-project-and-item-templates.md)

@@ -12,10 +12,10 @@ caps.latest.revision: 32
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: d495d0bf12c900d34a04a84e950b002494b7b5c3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72660399"
 ---
 # <a name="sample-project-for-creating-unit-tests"></a>用于创建单元测试的示例项目
@@ -131,5 +131,5 @@ namespace BankAccountNS
 ## <a name="working-with-the-code"></a>使用代码
  若要使用这些代码，您必须首先在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中为其创建一个项目。 按照[演练：创建并运行托管代码的单元测试](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)中“准备演练”部分所述的步骤操作。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [演练：创建并运行托管代码的单元测试](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)[演练：运行测试并查看代码覆盖率](https://msdn.microsoft.com/d4aab8e2-2140-4975-b4e3-41ef3fa944c8)[演练：使用命令行测试实用工具](https://msdn.microsoft.com/library/52c11992-9e94-4067-a4b7-59f19d69d867)

@@ -20,10 +20,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: acf285c895e5160e850b6bc8f20f920279a5e26c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68154779"
 ---
 # <a name="otherwise-element-msbuild"></a>Otherwise 元素 (MSBuild)
@@ -60,7 +60,7 @@ ms.locfileid: "68154779"
   
 |元素|说明|  
 |-------------|-----------------|  
-|[Choose](../msbuild/choose-element-msbuild.md)|可选元素。<br /><br /> 评估子元素以选择代码的一部分来执行。 `Choose` 元素中可能有零个或零个以上的 `Otherwise` 元素。|  
+|[[](../msbuild/choose-element-msbuild.md)|可选元素。<br /><br /> 评估子元素以选择代码的一部分来执行。 `Choose` 元素中可能有零个或零个以上的 `Otherwise` 元素。|  
 |[ItemGroup](../msbuild/itemgroup-element-msbuild.md)|可选元素。<br /><br /> 包含一组用户定义的 [Item](../msbuild/item-element-msbuild.md) 元素。 `ItemGroup` 元素中可能有零个或零个以上的 `Otherwise` 元素。|  
 |[PropertyGroup](../msbuild/propertygroup-element-msbuild.md)|可选元素。<br /><br /> 包含一组用户定义的 [Property](../msbuild/property-element-msbuild.md) 元素。 `PropertyGroup` 元素中可能有零个或零个以上的 `Otherwise` 元素。|  
   
@@ -68,7 +68,7 @@ ms.locfileid: "68154779"
   
 |元素|说明|  
 |-------------|-----------------|  
-|[Choose](../msbuild/choose-element-msbuild.md)|评估子元素以选择代码的一部分来执行。|  
+|[[](../msbuild/choose-element-msbuild.md)|评估子元素以选择代码的一部分来执行。|  
   
 ## <a name="remarks"></a>备注  
  `Choose` 元素中可能只有一个 `Otherwise`元素，并且它必须是最后一个元素。  

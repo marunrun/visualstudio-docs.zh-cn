@@ -9,10 +9,10 @@ caps.latest.revision: 32
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 0ec4c0a9594202b6755500d683c426238264aec3
-ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "82586980"
 ---
 # <a name="testing-sharepoint-2010-applications-with-coded-ui-tests"></a>使用编码的 UI 测试来测试 SharePoint 2010 应用程序
@@ -27,11 +27,11 @@ ms.locfileid: "82586980"
 ## <a name="what-else-should-i-know-about-coded-ui-tests"></a>还应当编码的 UI 测试了解什么?
  若要详细了解使用编码的 UI 测试的相关好处，请参阅[使用 UI 自动化来测试代码](../test/use-ui-automation-to-test-your-code.md)和[使用 Visual Studio 2012 测试持续交付 - 第 5 章：实现系统测试的自动化](https://msdn.microsoft.com/library/jj159335.aspx)。
 
- **说明**
+ **备注**
 
-- ![先决条件](../test/media/prereq.png "Prereq")只有 SharePoint 2010 支持对 SharePoint 应用程序进行编码的 UI 测试。
+- ![先决条件](../test/media/prereq.png "Prereq") 只有 SharePoint 2010 支持对 SharePoint 应用程序进行编码的 UI 测试。
 
-- ![先决条件](../test/media/prereq.png "Prereq")不支持 SharePoint 应用程序中对 Visio 和 PowerPoint 2010 控件的支持。
+- ![先决条件](../test/media/prereq.png "Prereq") 不支持 SharePoint 应用程序中对 Visio 和 PowerPoint 2010 控件的支持。
 
 ## <a name="creating-a-coded-ui-test-for-your-sharepoint-app"></a>为您的 SharePoint 应用程序创建编码的 UI 测试
  为 SharePoint 2010 应用程序[创建编码的 UI 测试](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate) ，与为其他类型的应用程序创建测试相同。 支持对 Web 编辑界面上的所有控件进行录制和播放。 选择类别和 Web 部件的接口都是标准 Web 控件。
@@ -60,7 +60,7 @@ Mouse.DoubliClick(uiItemCell,new Point(31,14));
 uiGridKeyboardInputEdit.Text=value;
 ```
 
- 如果要录制对非空单元格的操作，则稍微有些复杂，因为在向单元格添加文本时，将会添加一个新的 \<div> 控件作为此单元格的子项。 新的 \<div> 控件包含刚才输入的文本。 记录器需要录制对新 \<div> 控件的操作；但是，它无法进行录制，因为新 \<div> 控件直到进入测试后才会存在。 您必须手动对代码做出以下更改，才能解决这一问题。
+ 如果正在对非空单元格记录操作，则会稍微复杂一些，因为在向单元格添加文本时，会将新 \<div> 控件作为单元格的子元素添加。 新 \<div> 控件包含刚才输入的文本。 记录器需要录制对新控件的操作 \<div> ; 但是，它不能，因为在 \<div> 输入测试后新控件不存在。 您必须手动对代码做出以下更改，才能解决这一问题。
 
 1. 转到单元格初始化，将 `RowIndex` 和 `ColumnIndex` 作为主要属性：
 

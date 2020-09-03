@@ -1,5 +1,5 @@
 ---
-title: XML 文档注释（JavaScript） |Microsoft Docs
+title: " (JavaScript) 的 XML 文档注释 |Microsoft Docs"
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 5b5a94ddd9e170a709dca9107e6f1fcfff7cd0f3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72662592"
 ---
 # <a name="xml-documentation-comments-javascript"></a>XML 文档注释 (JavaScript)
@@ -48,5 +48,5 @@ ms.locfileid: "72662592"
 
 - [\<var>](../ide/var-javascript.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [JavaScript IntelliSense](../ide/javascript-intellisense.md)

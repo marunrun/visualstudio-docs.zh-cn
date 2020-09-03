@@ -11,23 +11,23 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: b4e5ba3cd82090b5fad76d48c4600e0814bd91eb
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85904686"
 ---
 # <a name="walkthrough-link-a-content-type-to-a-file-name-extension"></a>演练：将内容类型链接到文件扩展名
-您可以定义自己的内容类型，并使用编辑器 Managed Extensibility Framework （MEF）扩展将文件扩展名链接到该类型。 在某些情况下，文件扩展名已由语言服务定义。 但是，若要将其与 MEF 一起使用，还必须将其链接到内容类型。
+你可以定义自己的内容类型，并使用编辑器 Managed Extensibility Framework (MEF) 扩展将文件扩展名链接到该类型。 在某些情况下，文件扩展名已由语言服务定义。 但是，若要将其与 MEF 一起使用，还必须将其链接到内容类型。
 
-## <a name="prerequisites"></a>必备条件
- 从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅[安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
+## <a name="prerequisites"></a>先决条件
+ 从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
 
 ## <a name="create-a-mef-project"></a>创建 MEF 项目
 
-1. 创建 c # VSIX 项目。 （在 "**新建项目**" 对话框中，依次选择 " **Visual c #/扩展性**"、" **VSIX 项目**"。）命名解决方案 `ContentTypeTest` 。
+1. 创建 c # VSIX 项目。  (在 " **新建项目** " 对话框中，依次选择 " **Visual c #/扩展性**"、" **VSIX 项目**"。 ) 将解决方案命名为 `ContentTypeTest` 。
 
-2. 在**source.extension.vsixmanifest**文件中，中转到 "**资产**" 选项卡，并将 "**类型**" 字段设置为 " **microsoft.visualstudio.mefcomponent**"，将 "**源**" 字段设置为**当前解决方案中的项目**，将 "**项目**" 字段设置为项目的名称。
+2. 在 **source.extension.vsixmanifest** 文件中，中转到 " **资产** " 选项卡，并将 " **类型** " 字段设置为 " **microsoft.visualstudio.mefcomponent**"，将 " **源** " 字段设置为 **当前解决方案中的项目**，将 " **项目** " 字段设置为项目的名称。
 
 ## <a name="define-the-content-type"></a>定义内容类型
 
@@ -71,7 +71,7 @@ ms.locfileid: "85904686"
 
 ## <a name="link-a-file-name-extension-to-a-content-type"></a>将文件扩展名链接到内容类型
 
-- 若要将此内容类型映射到文件扩展名，请导出 <xref:Microsoft.VisualStudio.Utilities.FileExtensionToContentTypeDefinition> 扩展名为*hid*和内容类型为 "hid" 的。
+- 若要将此内容类型映射到文件扩展名，请导出 <xref:Microsoft.VisualStudio.Utilities.FileExtensionToContentTypeDefinition> 扩展名为 *hid* 和内容类型为 "hid" 的。
 
     ```csharp
     internal static class FileAndContentTypeDefinitions
@@ -90,7 +90,7 @@ ms.locfileid: "85904686"
 
 ## <a name="add-the-content-type-to-an-editor-export"></a>向编辑器导出添加内容类型
 
-1. 创建编辑器扩展。 例如，可以使用[演练：创建边距标志符号](../extensibility/walkthrough-creating-a-margin-glyph.md)中所述的边距标志符号扩展。
+1. 创建编辑器扩展。 例如，可以使用 [演练：创建边距标志符号](../extensibility/walkthrough-creating-a-margin-glyph.md)中所述的边距标志符号扩展。
 
 2. 添加您在此过程中定义的类。
 

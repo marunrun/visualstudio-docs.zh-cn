@@ -13,10 +13,10 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: b6d040597f48d4514a58027df3335c080d6305a4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68144957"
 ---
 # <a name="idebugdocumentcontext2"></a>IDebugDocumentContext2
@@ -30,34 +30,34 @@ ms.locfileid: "68144957"
 IDebugDocumentContext2 : IUnknown  
 ```  
   
-## <a name="notes-for-implementers"></a>实施者的说明  
- 调试引擎 (DE) 实现此接口作为源代码级别调试的支持的一部分。 除了在源代码中位置，此接口提供了用于比较上下文和源代码文档中导航方法。  
+## <a name="notes-for-implementers"></a>实施者注意事项  
+ 调试引擎 (DE) 实现此接口，作为其对源代码级别调试的支持的一部分。 除了源代码中的位置外，此接口还提供了一些方法用于比较上下文和在源代码文档中导航。  
   
-## <a name="notes-for-callers"></a>调用方的说明  
- 方法在多个接口，通常最[GetDocumentContext](../../../extensibility/debugger/reference/idebugstackframe2-getdocumentcontext.md)并[GetDocumentContext](../../../extensibility/debugger/reference/idebugcodecontext2-getdocumentcontext.md)接口，返回此接口。  
+## <a name="notes-for-callers"></a>调用方说明  
+ 在多个接口上，最常见的方法是 [GetDocumentContext](../../../extensibility/debugger/reference/idebugstackframe2-getdocumentcontext.md) 和 [GetDocumentContext](../../../extensibility/debugger/reference/idebugcodecontext2-getdocumentcontext.md) 接口，返回此接口。  
   
 ## <a name="methods-in-vtable-order"></a>Vtable 顺序中的方法  
- 下表显示的方法`IDebugDocumentContext2`。  
+ 下表显示的方法 `IDebugDocumentContext2` 。  
   
-|方法|描述|  
+|方法|说明|  
 |------------|-----------------|  
-|[GetDocument](../../../extensibility/debugger/reference/idebugdocumentcontext2-getdocument.md)|获取包含此文档上下文中的文档。|  
-|[GetName](../../../extensibility/debugger/reference/idebugdocumentcontext2-getname.md)|获取包含此文档上下文中的文档的可显示名称。|  
+|[GetDocument](../../../extensibility/debugger/reference/idebugdocumentcontext2-getdocument.md)|获取包含此文档上下文的文档。|  
+|[GetName](../../../extensibility/debugger/reference/idebugdocumentcontext2-getname.md)|获取包含此文档上下文的文档的可显示名称。|  
 |[EnumCodeContexts](../../../extensibility/debugger/reference/idebugdocumentcontext2-enumcodecontexts.md)|检索与此文档上下文关联的所有代码上下文的列表。|  
 |[GetLanguageInfo](../../../extensibility/debugger/reference/idebugdocumentcontext2-getlanguageinfo.md)|获取与此文档上下文关联的语言。|  
-|[GetStatementRange](../../../extensibility/debugger/reference/idebugdocumentcontext2-getstatementrange.md)|获取此文档上下文中的文件语句范围。|  
-|[GetSourceRange](../../../extensibility/debugger/reference/idebugdocumentcontext2-getsourcerange.md)|获取此文档上下文中的文件源范围。|  
-|[Compare](../../../extensibility/debugger/reference/idebugdocumentcontext2-compare.md)|比较此文档上下文到给定数组的文档上下文。|  
-|[Seek](../../../extensibility/debugger/reference/idebugdocumentcontext2-seek.md)|按给定数量的语句或行移动文档上下文。|  
+|[GetStatementRange](../../../extensibility/debugger/reference/idebugdocumentcontext2-getstatementrange.md)|获取此文档上下文的文件语句范围。|  
+|[GetSourceRange](../../../extensibility/debugger/reference/idebugdocumentcontext2-getsourcerange.md)|获取此文档上下文的文件源范围。|  
+|[比较](../../../extensibility/debugger/reference/idebugdocumentcontext2-compare.md)|将此文档上下文与给定的文档上下文数组进行比较。|  
+|[Seek](../../../extensibility/debugger/reference/idebugdocumentcontext2-seek.md)|按给定的语句或行数移动文档上下文。|  
   
 ## <a name="requirements"></a>要求  
- 标头： msdbg.h  
+ 标头： msdbg  
   
- 命名空间:Microsoft.VisualStudio.Debugger.Interop  
+ 命名空间： VisualStudio  
   
- 程序集：Microsoft.VisualStudio.Debugger.Interop.dll  
+ 程序集： Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [GetDocumentContext](../../../extensibility/debugger/reference/idebugcanstopevent2-getdocumentcontext.md)   
  [GetDocumentContext](../../../extensibility/debugger/reference/idebugactivatedocumentevent2-getdocumentcontext.md)   
  [GetDocumentContext](../../../extensibility/debugger/reference/idebugstackframe2-getdocumentcontext.md)   

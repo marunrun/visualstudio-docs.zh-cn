@@ -14,10 +14,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.openlocfilehash: 9f5fdd524591a2c1da144886226bd0b48f08021f
-ms.sourcegitcommit: 748d9cd7328a30f8c80ce42198a94a4b5e869f26
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68143363"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89325931"
 ---
 Visual Studio 行业合作伙伴 (VSIP) 计划

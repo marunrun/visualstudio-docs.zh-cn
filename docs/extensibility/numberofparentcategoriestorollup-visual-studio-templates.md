@@ -1,5 +1,5 @@
 ---
-title: 父类别数到滚动元素（模板）
+title: 'NumberOfParentCategoriesToRollUp 元素 (模板) '
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -15,16 +15,17 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: b903b9d0bdab2c17dd2e489de01badad82c15473
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80702360"
 ---
-# <a name="numberofparentcategoriestorollup-element-visual-studio-templates"></a>父类别数到滚动元素（可视化工作室模板）
-指定将在 **"新项目"** 对话框中显示模板的父类别数。
+# <a name="numberofparentcategoriestorollup-element-visual-studio-templates"></a> (Visual Studio 模板的 NumberOfParentCategoriesToRollUp 元素) 
+指定将在 " **新建项目** " 对话框中显示模板的父类别的数目。
 
- \<vstemplate>\<模板数据>\<父类别数量>
+ \<VSTemplate> \<TemplateData>
+ \<NumberOfParentCategoriesToRollUp>
 
 ## <a name="syntax"></a>语法
 
@@ -50,15 +51,15 @@ ms.locfileid: "80702360"
 |[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|将此模板分类并定义此模板在 **“新建项目”** 或 **“添加新项”** 对话框中的显示方式。|
 
 ## <a name="text-value"></a>文本值
- 需要`integer`值。
+ `integer`值是必需的。
 
- 此值指定将在 **"新项目"** 对话框中显示模板的父类别数。
+ 此值指定将在 " **新建项目** " 对话框中显示模板的父类别的数目。
 
 ## <a name="remarks"></a>备注
  `NumberOfParentCategoriesToRollUp` 是可选元素。
 
 ## <a name="example"></a>示例
- 此示例演示了[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]Windows 应用程序的元数据。 如果具有此元数据的模板放置在顶层[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]节点以下两个文件夹级别，则该模板将显示在 **"新项目"** 对话框中的顶层节点中。 如果未设置`NumberOfParentCategoriesToRollUp`，则模板仅出现在其物理所在的节点中。
+ 此示例演示了 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] Windows 应用程序的元数据。 如果具有此元数据的模板在顶级节点下面放置了两个文件夹级别 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] ，则模板将显示在 " **新建项目** " 对话框的 "顶层" 节点中。 如果 `NumberOfParentCategoriesToRollUp` 未设置，则模板仅出现在它所在的节点上。
 
 ```xml
 <VSTemplate Type="Project" Version="3.0.0"
@@ -86,5 +87,5 @@ ms.locfileid: "80702360"
 ```
 
 ## <a name="see-also"></a>请参阅
-- [可视化工作室模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
+- [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
 - [创建项目和项模板](../ide/creating-project-and-item-templates.md)

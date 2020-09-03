@@ -14,10 +14,10 @@ caps.latest.revision: 128
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: f3252ea7cada8261a97832e4e621849e0fb0c91e
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85543710"
 ---
 # <a name="welcome-to-visual-studio-2015"></a>欢迎使用 Visual Studio 2015
@@ -30,27 +30,27 @@ ms.locfileid: "85543710"
 >
 > 单击此处，了解 [Visual Studio 2017](https://www.visualstudio.com/news/releasenotes/vs2017-relnotes) 的发行说明。
 
- 免费下载[Visual Studio 社区 2015](https://visualstudio.microsoft.com/vs/older-downloads/) ，立即开始编码。 如果要进行跨平台开发，请确保安装可选包。 Visual Studio Professional 或 Visual Studio Enterprise 可以获得更多的功能。
+ 免费下载 [Visual Studio 社区 2015](https://visualstudio.microsoft.com/vs/older-downloads/) ，立即开始编码。 如果要进行跨平台开发，请确保安装可选包。 Visual Studio Professional 或 Visual Studio Enterprise 可以获得更多的功能。
 
- 立即投入，创建新项目，然后开始编写代码。 选择要创建的应用类型。 或者，你可以浏览[Visual STUDIO IDE](./ide/visual-studio-ide.md)以熟悉工具。
+ 立即投入，创建新项目，然后开始编写代码。 选择要创建的应用类型。 或者，你可以浏览 [Visual STUDIO IDE](./ide/visual-studio-ide.md) 以熟悉工具。
 
- 别忘了浏览我们的[代码库](https://code.msdn.microsoft.com/)，以找到可帮助你更快编写应用的示例！
+ 别忘了浏览我们的 [代码库](https://code.msdn.microsoft.com/) ，以找到可帮助你更快编写应用的示例！
 
- 可以通过从 [Visual Studio 下载](https://visualstudio.microsoft.com/vs/older-downloads/)页面下载安装 Visual Studio 2015。 若要了解有关安装过程的详细信息，请参阅[安装 Visual Studio 2015](./install/install-visual-studio-2015.md)。
+ 可以通过从 [Visual Studio 下载](https://visualstudio.microsoft.com/vs/older-downloads/)页面下载安装 Visual Studio 2015。 若要了解有关安装过程的详细信息，请参阅 [安装 Visual Studio 2015](./install/install-visual-studio-2015.md)。
 
 ## <a name="extend-visual-studio"></a>扩展 Visual Studio
  添加自己的 Visual Studio 扩展以包含在编码时经常使用的工具或脚本。 可以创建自定义菜单项和工具窗口，以将自己的工具集成到 Visual Studio IDE 中。 可以扩展 Visual Studio 编辑器以分析和修复代码，或添加新项目类型以恰好包含所需内容。
 
  若要查找 Visual Studio 扩展性工具 (VS SDK) 的最新版本，请参阅 [Visual Studio SDK](./extensibility/visual-studio-sdk.md)。
 
- 您可以使用[.NET Compiler Platform （Roslyn）](https://github.com/dotnet/Roslyn)来编写自己的代码分析器和代码生成器。 
+ 可以使用 [.NET Compiler Platform (Roslyn) ](https://github.com/dotnet/Roslyn) 编写自己的代码分析器和代码生成器。 
 
- 在[Visual Studio Marketplace](https://visualstudiogallery.msdn.microsoft.com/)中查找 VISUAL Studio IDE 的扩展。 Marketplace 中的扩展是由 Microsoft 开发人员以及我们的开发社区创建的。
+ 在 [Visual Studio Marketplace](https://visualstudiogallery.msdn.microsoft.com/)中查找 VISUAL Studio IDE 的扩展。 Marketplace 中的扩展是由 Microsoft 开发人员以及我们的开发社区创建的。
 
 ## <a name="build-apps-for-android-ios-and-windows"></a>生成用于 Android、iOS 和 Windows 的应用
- 可使用 Visual Studio 生成适用于 Android、iOS 和 Windows 设备的应用。 详细了解[Visual Studio 中的跨平台移动开发](./cross-platform/cross-platform-mobile-development-in-visual-studio.md)。
+ 可使用 Visual Studio 生成适用于 Android、iOS 和 Windows 设备的应用。 详细了解 [Visual Studio 中的跨平台移动开发](./cross-platform/cross-platform-mobile-development-in-visual-studio.md)。
 
- 有关通用 Windows 应用（UWP）的信息，请参阅[什么是通用 Windows 平台（UWP）应用？](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)。
+ 有关 (UWP) 的通用 Windows 应用程序的信息，请参阅 [什么是通用 Windows 平台 (UWP) 应用程序？](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)。
 
  基于应用要求和要使用的语言选择所需工具。
 
@@ -74,12 +74,12 @@ ms.locfileid: "85543710"
 - 将 Office 365 REST API 集成到你自己的应用中以连接到云中存储的数据。 有关详细信息，请参阅 [这些示例](https://docs.microsoft.com/samples/browse/?products=office-365&term=REST)。
 
 ## <a name="write-great-web-apps-with-aspnet"></a>通过 ASP.NET 编写优秀的 web 应用
- [ASP.NET 5](https://docs.microsoft.com/aspnet/core/?view=aspnetcore-3.0)是对 MVC、WebAPI 和 SignalR 的重大更新，在 Windows、Mac 和 Linux 上运行。  ASP.NET 已从头开始设计，为你提供了一个用于生成基于云的新式 web 应用和服务的可组合的精益 .NET 堆栈。
+ [ASP.NET 5](https://docs.microsoft.com/aspnet/core/?view=aspnetcore-3.0) 是对 MVC、WebAPI 和 SignalR 的重大更新，在 Windows、Mac 和 Linux 上运行。  ASP.NET 已从头开始设计，为你提供了一个用于生成基于云的新式 web 应用和服务的可组合的精益 .NET 堆栈。
 
 ## <a name="build-test-and-manage-your-code"></a>生成、测试和管理你的代码
 
 ### <a name="check-in-your-code"></a>签入你的代码
- 如果你在团队中工作，则还需要共享代码的最新版本，以便团队中的每个人都使用相同的基本代码。 Visual Studio 与 Visual Studio Team Services 或 Team Foundation Server 无缝集成，以使用 Git 或 TFVC（Team Foundation 版本控制）提供版本控制。 使用 Visual Studio Team Services 可将代码存储在云中，而无需维护本地服务器。 如果需要具有本地服务器，请使用 Team Foundation Server。 每次创建代码项目时，你都可以选择将其添加到版本控制。 若要了解哪个版本控制系统最适合你的需要，请参阅[为你的项目选择正确的版本控制](https://docs.microsoft.com/azure/devops/repos/tfvc/comparison-git-tfvc?view=azure-devops)。
+ 如果你在团队中工作，则还需要共享代码的最新版本，以便团队中的每个人都使用相同的基本代码。 Visual Studio 与 Visual Studio Team Services 或 Team Foundation Server 无缝集成，以使用 Git 或 TFVC（Team Foundation 版本控制）提供版本控制。 使用 Visual Studio Team Services 可将代码存储在云中，而无需维护本地服务器。 如果需要具有本地服务器，请使用 Team Foundation Server。 每次创建代码项目时，你都可以选择将其添加到版本控制。 若要了解哪个版本控制系统最适合你的需要，请参阅 [为你的项目选择正确的版本控制](https://docs.microsoft.com/azure/devops/repos/tfvc/comparison-git-tfvc?view=azure-devops)。
 
 ### <a name="build-your-app"></a>生成应用
  你可以 [在本地生成应用](./ide/compiling-and-building-in-visual-studio.md) 并确保它正常运行。 然后使用 [调试工具](./debugger/debugging-in-visual-studio.md) 修复与应用有关的任何问题。 或者，可以在共享生成服务器上或在云中生成项目。 自动执行生成过程以生成团队中的开发人员签入到版本控制的代码。 例如，您可以在夜间或每次签入此代码时生成一个或多个项目。

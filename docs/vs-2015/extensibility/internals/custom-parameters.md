@@ -12,20 +12,20 @@ caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 1a595861be835ec1aaa7079b3e3fe1962d5055e9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68154996"
 ---
 # <a name="custom-parameters"></a>自定义参数
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-启动向导后，自定义参数控制操作的向导。 相关的.vsz 文件提供了集成的开发环境 (IDE) 通过打包并启动该向导时作为一个字符串数组传递到向导的用户定义参数的数组。 向导然后分析的字符串数组，并使用这些信息来控制实际操作的向导。 以这种方式，具体取决于.vsz 文件的内容的功能可以自定义向导。  
+自定义参数用于在向导启动之后控制向导的操作。 相关的 .vsz 文件提供一个用户定义参数数组，这些参数由集成开发环境打包 (IDE) 并在启动向导时作为字符串数组传递到向导。 然后，该向导会分析字符串数组，并使用该信息来控制向导的实际操作。 通过这种方式，向导可以根据 .vsz 文件的内容自定义功能。  
   
- 启动向导，上下文参数，但是，定义项目的状态。 有关详细信息，请参阅[上下文参数](../../extensibility/internals/context-parameters.md)。  
+ 另一方面，上下文参数在启动向导时定义项目的状态。 有关详细信息，请参阅 [上下文参数](../../extensibility/internals/context-parameters.md)。  
   
- 下面是一个具有自定义参数的.vsz 文件的示例：  
+ 下面是包含自定义参数的 .vsz 文件的示例：  
   
 ```  
 VSWIZARD 8.0  
@@ -37,13 +37,13 @@ Param="PREPROCESS_FUNCTION = CanAddATLSupport"
 Param="PROJECT_TYPE = CSPROJ"  
 ```  
   
- .Vsz 文件的作者添加了参数的值。 如果用户选择**新的项目**或**添加新项**文件菜单或通过右键单击项目中的**解决方案资源管理器**，IDE 将这些值收集到的数组字符串。 IDE 然后调用项目的<xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.AddItem%2A>方法替换<xref:Microsoft.VisualStudio.Shell.Interop.VSADDITEMOPERATION>标记集和项目调用<xref:EnvDTE.IVsExtensibility.RunWizardFile%2A>负责运行该向导并返回结果的方法。  
+ .Vsz 文件的作者添加参数的值。 当用户选择 "文件" 菜单上的 " **新建项目** " 或 " **添加新项** " 或在 **解决方案资源管理器**中右键单击某个项目时，IDE 会将这些值收集到字符串数组中。 然后，IDE 将调用项目的 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.AddItem%2A> 方法并 <xref:Microsoft.VisualStudio.Shell.Interop.VSADDITEMOPERATION> 设置标志，并且项目将调用 <xref:EnvDTE.IVsExtensibility.RunWizardFile%2A> 负责运行向导并返回结果的方法。  
   
- 该向导负责分析的字符串数组并相应地作用于字符串。 在这种方式，通过实现自定义参数可以创建一个向导执行各种功能。 换而言之，一个向导无法具有三个不同的.vsz 文件。 每个文件将传递不同的自定义的参数来控制在各种情况下向导行为集。  
+ 向导负责分析字符串数组，并对字符串进行适当的操作。 通过实现自定义参数，您可以创建一个向导来执行各种功能。 换言之，一个向导可能有三个不同的 .vsz 文件。 每个文件通过不同的自定义参数集来控制向导在各种情况下的行为。  
   
- 有关详细信息，请参阅[向导 (。在 Vsz) 文件](../../extensibility/internals/wizard-dot-vsz-file.md)。  
+ 有关详细信息，请参阅 [向导 (。.Vsz) 文件](../../extensibility/internals/wizard-dot-vsz-file.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3>   
  [上下文参数](../../extensibility/internals/context-parameters.md)   
  [向导](../../extensibility/internals/wizards.md)   

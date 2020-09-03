@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: d51a6557b2204d7b6ff3d8865c82de091f5a59d0
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545894"
 ---
 # <a name="how-to-programmatically-protect-worksheets"></a>如何：以编程方式保护工作表
@@ -38,7 +38,7 @@ ms.locfileid: "85545894"
 
 1. 在 "**审阅**" 选项卡的 "**更改**" 组中，单击 "**保护工作表**"。
 
-    此时将显示 "**保护工作表**" 对话框。 可以设置密码，并根据需要指定用户可利用工作表执行的特定操作，例如设置单元格格式或插入行。
+    此时将显示 " **保护工作表** " 对话框。 可以设置密码，并根据需要指定用户可利用工作表执行的特定操作，例如设置单元格格式或插入行。
 
    还可以允许用户编辑受保护工作表中的特定范围。
 
@@ -46,7 +46,7 @@ ms.locfileid: "85545894"
 
 1. 在 "**审阅**" 选项卡的 "**更改**" 组中，单击 "**允许用户编辑范围**"。
 
-     此时将显示 "**允许用户编辑范围**" 对话框。 可以指定使用密码解锁的范围，以及指定不需要密码就可以编辑范围的用户。
+     此时将显示 " **允许用户编辑范围** " 对话框。 可以指定使用密码解锁的范围，以及指定不需要密码就可以编辑范围的用户。
 
 ## <a name="use-code-at-run-time"></a>在运行时使用代码
  下面的代码会设置密码（使用变量 getPasswordFromUser，其中包含从用户处获得的密码），并仅允许排序。

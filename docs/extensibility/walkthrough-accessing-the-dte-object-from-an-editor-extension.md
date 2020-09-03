@@ -1,5 +1,5 @@
 ---
-title: 从编辑器扩展器访问 DTE 对象
+title: 从编辑器扩展访问 DTE 对象
 ms.date: 04/24/2019
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,48 +11,48 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: e37bdb21b7c8132f0dfb166d19e03d36e838245d
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80697661"
 ---
-# <a name="walkthrough-access-the-dte-object-from-an-editor-extension"></a>演练：从编辑器扩展器访问 DTE 对象
+# <a name="walkthrough-access-the-dte-object-from-an-editor-extension"></a>演练：从编辑器扩展访问 DTE 对象
 
-在 VSPackages 中，可以通过使用 DTE 对象<xref:Microsoft.VisualStudio.Shell.Package.GetService%2A>的类型调用 方法来获取 DTE 对象。 在托管扩展性框架 （MEF） 扩展中，可以导入<xref:Microsoft.VisualStudio.Shell.SVsServiceProvider>然后使用 类型<xref:Microsoft.VisualStudio.Shell.ServiceProvider.GetService%2A><xref:EnvDTE.DTE>调用 方法。
+在 Vspackage 中，可以通过 <xref:Microsoft.VisualStudio.Shell.Package.GetService%2A> 使用 dte 对象的类型调用方法来获取 dte 对象。 在 Managed Extensibility Framework (MEF) 扩展中，可以导入， <xref:Microsoft.VisualStudio.Shell.SVsServiceProvider> 然后 <xref:Microsoft.VisualStudio.Shell.ServiceProvider.GetService%2A> 使用类型调用方法 <xref:EnvDTE.DTE> 。
 
 ## <a name="prerequisites"></a>先决条件
 
-要按照本演练的步骤操作，必须安装 Visual Studio SDK。 有关详细信息，请参阅[可视化工作室 SDK](../extensibility/visual-studio-sdk.md)。
+要按照本演练的步骤操作，必须安装 Visual Studio SDK。 有关详细信息，请参阅 [Visual STUDIO SDK](../extensibility/visual-studio-sdk.md)。
 
 ## <a name="get-the-dte-object"></a>获取 DTE 对象
 
-1. 创建一个 C# VSIX 项目并将其命名为**DTETest**。 添加**编辑器分类器**项目模板并将其命名为**DTETest**。
+1. 创建 c # VSIX 项目，并将其命名为 **DTETest**。 添加 **编辑器分类器** 项模板并将其命名为 **DTETest**。
 
-   有关详细信息，请参阅[使用编辑器项模板创建扩展](../extensibility/creating-an-extension-with-an-editor-item-template.md)。
+   有关详细信息，请参阅 [使用编辑器项模板创建扩展](../extensibility/creating-an-extension-with-an-editor-item-template.md)。
 
 ::: moniker range=">=vs-2019"
 
-2. 向项目添加以下程序集引用：
+2. 将以下程序集引用添加到项目：
 
-    - 微软.VisualStudio.shell.Framework.Framework
-    - 微软.VisualStudio.shell.不可改变.10.0
+    - VisualStudio 框架
+    - VisualStudio. 10.0。
 
-3. 在*DTETestProvider.cs*文件中，添加以下`using`指令：
+3. 在 *DTETestProvider.cs* 文件中，添加以下 `using` 指令：
 
     ```csharp
     using EnvDTE;
     using Microsoft.VisualStudio.Shell;
     ```
 
-4. 在`DTETestProvider`类中，导入<xref:Microsoft.VisualStudio.Shell.SVsServiceProvider>。
+4. 在 `DTETestProvider` 类中，导入 <xref:Microsoft.VisualStudio.Shell.SVsServiceProvider> 。
 
     ```csharp
     [Import]
     internal SVsServiceProvider ServiceProvider = null;
     ```
 
-5. 在`GetClassifier()`方法中，在`return`语句之前添加以下代码：
+5. 在 `GetClassifier()` 方法中，在语句之前添加以下代码 `return` ：
 
     ```csharp
    ThreadHelper.ThrowIfNotOnUIThread();
@@ -63,26 +63,26 @@ ms.locfileid: "80697661"
 
 ::: moniker range="vs-2017"
 
-2. 向项目添加以下程序集引用：
+2. 将以下程序集引用添加到项目：
 
    - EnvDTE
-   - 微软.VisualStudio.shell.Framework.Framework
+   - VisualStudio 框架
 
-3. 在*DTETestProvider.cs*文件中，添加以下`using`指令：
+3. 在 *DTETestProvider.cs* 文件中，添加以下 `using` 指令：
 
     ```csharp
     using EnvDTE;
     using Microsoft.VisualStudio.Shell;
     ```
 
-4. 在`DTETestProvider`类中，导入<xref:Microsoft.VisualStudio.Shell.SVsServiceProvider>。
+4. 在 `DTETestProvider` 类中，导入 <xref:Microsoft.VisualStudio.Shell.SVsServiceProvider> 。
 
     ```csharp
     [Import]
     internal SVsServiceProvider ServiceProvider = null;
     ```
 
-5. 在`GetClassifier()`方法中，在`return`语句之前添加以下代码：
+5. 在 `GetClassifier()` 方法中，在语句之前添加以下代码 `return` ：
 
     ```csharp
    DTE dte = (DTE)ServiceProvider.GetService(typeof(DTE));

@@ -11,16 +11,16 @@ caps.latest.revision: 7
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 5d36b1091f34318ccba1ce0a997ad23043cbdeb2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68155564"
 ---
 # <a name="idebugnosymbolsevent2"></a>IDebugNoSymbolsEvent2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-信号[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]调试器用户界面以警告符号不找不到启动可执行文件的用户。  
+[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]向调试器 UI 发出信号，以向用户发出警告：找不到已启动的可执行文件的符号。  
   
 ## <a name="syntax"></a>语法  
   
@@ -28,12 +28,12 @@ ms.locfileid: "68155564"
 IDebugNoSymbolsEvent2 : IUnknown  
 ```  
   
-## <a name="notes-for-implementers"></a>实施者的说明  
- 由的调试引擎实现并由[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]调试器用户界面。  
+## <a name="notes-for-implementers"></a>实施者注意事项  
+ 由调试引擎实现并由 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 调试器 UI 使用。  
   
 ## <a name="requirements"></a>要求  
- 标头：Msdbg.h  
+ 标头： Msdbg  
   
- 命名空间:Microsoft.VisualStudio.Debugger.Interop  
+ 命名空间： VisualStudio  
   
- 程序集：Microsoft.VisualStudio.Debugger.Interop.dll
+ 程序集： Microsoft.VisualStudio.Debugger.Interop.dll

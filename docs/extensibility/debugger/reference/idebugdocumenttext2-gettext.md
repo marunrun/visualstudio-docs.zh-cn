@@ -1,5 +1,5 @@
 ---
-title: IDebug文档文本2：：获取文本 |微软文档
+title: IDebugDocumentText2：： GetText |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 2429bdf3f09eff168210a7b835a9e506d74d63ea
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80731572"
 ---
 # <a name="idebugdocumenttext2gettext"></a>IDebugDocumentText2::GetText
@@ -47,22 +47,22 @@ int GetText(
 
 ## <a name="parameters"></a>参数
 `pos`\
-[在]指示[要](../../../extensibility/debugger/reference/text-position.md)检索的文本的位置TEXT_POSITION结构。
+中一个 [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) 结构，它指示要检索的文本的位置。
 
 `cMaxChars`\
-[在]要检索的文本的最大字符数。
+中要检索的文本的最大字符数。
 
 `pText`\
-[进出]指向要用所需文本填充的缓冲区的指针。 此缓冲区必须能够包含至少`cMaxChars`数量的宽字符。
+[in，out]指向缓冲区的指针，该缓冲区使用所需的文本进行填充。 此缓冲区必须至少包含 `cMaxChars` 多个宽字符。
 
 `pcNumChars`\
-[出]返回实际检索的字符数。
+弄返回实际检索的字符数。
 
 ## <a name="return-value"></a>返回值
-如果成功，返回`S_OK`;否则，返回错误代码。
+如果成功， `S_OK` 则返回; 否则返回错误代码。
 
 ## <a name="example"></a>示例
-此示例演示如何从 C# 调用此方法。
+此示例演示如何从 c # 调用此方法。
 
 ```csharp
 using System.Runtime.Interop.Services;
@@ -100,6 +100,6 @@ namespace Mynamespace
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IDebugDocumentText2](../../../extensibility/debugger/reference/idebugdocumenttext2.md)
 - [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md)

@@ -17,14 +17,14 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 5af4ceeb37574fef6eb55d80f3c173b71ac090e0
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545946"
 ---
 # <a name="how-to-programmatically-define-and-select-ranges-in-documents"></a>如何：以编程方式在文档中定义和选择范围
-  你也可以通过使用 <xref:Microsoft.Office.Interop.Word.Range> 对象在 Microsoft Office Word 文档中定义一个范围。 您可以通过多种方式（例如，通过使用 <xref:Microsoft.Office.Interop.Word.Range.Select%2A> 对象的方法 <xref:Microsoft.Office.Interop.Word.Range> ，或者使用类的 Content 属性 <xref:Microsoft.Office.Tools.Word.Document> （在文档级自定义项中）或 <xref:Microsoft.Office.Interop.Word.Document> 类（VSTO 外接程序中））来选择整个文档。
+  你也可以通过使用 <xref:Microsoft.Office.Interop.Word.Range> 对象在 Microsoft Office Word 文档中定义一个范围。 您可以通过多种方式（例如，通过使用 <xref:Microsoft.Office.Interop.Word.Range.Select%2A> 对象的方法 <xref:Microsoft.Office.Interop.Word.Range> ，或者通过使用 <xref:Microsoft.Office.Tools.Word.Document> 文档级自定义项中的类 (的 Content 属性) 或 <xref:Microsoft.Office.Interop.Word.Document> VSTO 外接程序) 中的类 (来选择整个文档。
 
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]
 
@@ -80,7 +80,7 @@ ms.locfileid: "85545946"
      [!code-vb[Trin_VstcoreWordAutomation#23](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#23)]
      [!code-csharp[Trin_VstcoreWordAutomation#23](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#23)]
 
-2. 检查文档中是否至少有两个句子，设置范围的*开始*和*结束*参数，然后选择范围。
+2. 检查文档中是否至少有两个句子，设置范围的 *开始* 和 *结束* 参数，然后选择范围。
 
      [!code-vb[Trin_VstcoreWordAutomation#24](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#24)]
      [!code-csharp[Trin_VstcoreWordAutomation#24](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#24)]
@@ -120,12 +120,12 @@ ms.locfileid: "85545946"
      [!code-vb[Trin_VstcoreWordAutomationAddIn#23](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#23)]
      [!code-csharp[Trin_VstcoreWordAutomationAddIn#23](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#23)]
 
-2. 检查文档中是否至少有两个句子，设置范围的*开始*和*结束*参数，然后选择范围。
+2. 检查文档中是否至少有两个句子，设置范围的 *开始* 和 *结束* 参数，然后选择范围。
 
      [!code-vb[Trin_VstcoreWordAutomationAddIn#24](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#24)]
      [!code-csharp[Trin_VstcoreWordAutomationAddIn#24](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#24)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [Word 对象模型概述](../vsto/word-object-model-overview.md)
 - [如何：以编程方式在文档中扩展范围](../vsto/how-to-programmatically-extend-ranges-in-documents.md)
 - [如何：以编程方式检索范围中的开始字符和结束字符](../vsto/how-to-programmatically-retrieve-start-and-end-characters-in-ranges.md)

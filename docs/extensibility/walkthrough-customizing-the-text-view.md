@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 3b7a62ee2b55bf2b56ae1d8e28fc1910ed444c29
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85904928"
 ---
 # <a name="walkthrough-customize-the-text-view"></a>演练：自定义文本视图
@@ -28,18 +28,18 @@ ms.locfileid: "85904928"
 
 - 选定的文本
 
-- 非活动选定文本（即，所选文本丢失焦点）
+- 非活动选定文本 (也就是说，所选文本丢失焦点) 
 
 - 可见空白
 
-## <a name="prerequisites"></a>必备条件
- 从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅[安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
+## <a name="prerequisites"></a>先决条件
+ 从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
 
 ## <a name="create-a-mef-project"></a>创建 MEF 项目
 
-1. 创建 c # VSIX 项目。 （在 "**新建项目**" 对话框中，依次选择 " **Visual c #/扩展性**"、" **VSIX 项目**"。）命名解决方案 `ViewPropertyTest` 。
+1. 创建 c # VSIX 项目。  (在 " **新建项目** " 对话框中，依次选择 " **Visual c #/扩展性**"、" **VSIX 项目**"。 ) 将解决方案命名为 `ViewPropertyTest` 。
 
-2. 将编辑器分类器项模板添加到项目。 有关详细信息，请参阅[使用编辑器项模板创建扩展](../extensibility/creating-an-extension-with-an-editor-item-template.md)。
+2. 将编辑器分类器项模板添加到项目。 有关详细信息，请参阅 [使用编辑器项模板创建扩展](../extensibility/creating-an-extension-with-an-editor-item-template.md)。
 
 3. 删除现有的类文件。
 
@@ -54,9 +54,9 @@ ms.locfileid: "85904928"
 
 3. 声明一个从继承的名为 `TestViewCreationListener` 的类 <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener> 。 将此类导出为以下属性：
 
-   - <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute>指定此侦听器应用于的内容的类型。
+   - <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> 指定此侦听器应用于的内容的类型。
 
-   - <xref:Microsoft.VisualStudio.Text.Editor.TextViewRoleAttribute>指定此侦听器的角色。
+   - <xref:Microsoft.VisualStudio.Text.Editor.TextViewRoleAttribute> 指定此侦听器的角色。
 
      [!code-csharp[VSSDKViewPropertyTest#2](../extensibility/codesnippet/CSharp/walkthrough-customizing-the-text-view_2.cs)]
      [!code-vb[VSSDKViewPropertyTest#2](../extensibility/codesnippet/VisualBasic/walkthrough-customizing-the-text-view_2.vb)]
@@ -83,13 +83,13 @@ ms.locfileid: "85904928"
 
     - 插入插入符号应为洋红色，覆盖符号应为青绿色。
 
-    - 指示器边距（位于文本视图的左侧）应为浅绿色。
+    - 指示器边距 (在文本视图的左侧) 应为浅绿色。
 
 3. 选择键入的文本。 所选文本的颜色应为浅粉色。
 
 4. 选择文本时，请单击文本窗口外的任意位置。 所选文本的颜色应为暗粉色。
 
-5. 打开可见的空白。 （在 "**编辑**" 菜单上，指向 "**高级**"，然后单击 "**查看空白空间**"）。 在文本中键入某些选项卡。 应显示表示选项卡的红色箭头。
+5. 打开可见的空白。  (在 " **编辑** " 菜单上，指向 " **高级** "，然后单击 " **查看空白**) 。 在文本中键入某些选项卡。 应显示表示选项卡的红色箭头。
 
 ## <a name="see-also"></a>另请参阅
 - [语言服务和编辑器扩展点](../extensibility/language-service-and-editor-extension-points.md)

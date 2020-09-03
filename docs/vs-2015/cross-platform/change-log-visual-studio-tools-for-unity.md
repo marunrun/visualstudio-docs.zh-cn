@@ -10,10 +10,10 @@ author: conceptdev
 ms.author: crdun
 manager: jillfra
 ms.openlocfilehash: 751faa1d81ca93fce5f8dfa866327cc8787e27ef
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "67825969"
 ---
 # <a name="change-log-visual-studio-tools-for-unity"></a>更改日志（Visual Studio Tools for Unity）
@@ -210,7 +210,7 @@ Visual Studio Tools for Unity 更改日志。
 
 - **Unity：** 在项目文件生成过程中查找 .rsp 文件中的不安全标志和自定义定义。
 
-- **UI：** Visual Studio 中已添加的 Visual Studio Tools for Unity“选项”对话框  。
+- **UI：** Visual Studio 中已添加的 Visual Studio Tools for Unity“选项”对话框。
 
 ### <a name="bug-fixes"></a>Bug 修复
 

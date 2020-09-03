@@ -1,5 +1,5 @@
 ---
-title: MenuCommands 与OleMenuCommands |Microsoft Docs
+title: Menucommand 与 OleMenuCommands |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: devlang-csharp
@@ -12,27 +12,27 @@ ms.assetid: 553d5e07-3e19-4aba-b490-6c7dd05fd82e
 caps.latest.revision: 46
 manager: jillfra
 ms.openlocfilehash: 42c471ca924bfded62db32a956a26c07240459eb
-ms.sourcegitcommit: 3cc73e74921a9ceb622542e0e263abeebc455c00
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/08/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "67624455"
 ---
-# <a name="menucommands-vs-olemenucommands"></a>MenuCommands 与OleMenuCommands
-可以通过从派生来创建菜单命令<xref:System.ComponentModel.Design.MenuCommand>或从<xref:Microsoft.VisualStudio.Shell.OleMenuCommand>对象，并实现相应的事件处理程序。 在大多数情况下可以使用 <xref:System.ComponentModel.Design.MenuCommand>，就和 VSPackage 项目模板工作方式一样，但有时你可能需要使用 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand>。  
+# <a name="menucommands-vs-olemenucommands"></a>Menucommand 与 OleMenuCommands
+可以通过从或从对象派生来创建菜单命令 <xref:System.ComponentModel.Design.MenuCommand> <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> ，并实现相应的事件处理程序。 在大多数情况下可以使用 <xref:System.ComponentModel.Design.MenuCommand>，就和 VSPackage 项目模板工作方式一样，但有时你可能需要使用 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand>。  
   
  VSPackage 对 IED 可提供的命令在用户可以使用前必须处于可见和启用状态。 当通过使用 Visual Studio Package 项目模板在 .vsct 文件中创建命令时，命令默认为可见和启用状态。 设置某些命令标志，如 `DynamicItemStart`，可以更改默认行为。 还可以通过访问与命令相关联的 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> 对象在运行时更改代码中命令的可见性、已启用的状态以及其他属性。  
   
-## <a name="prerequisites"></a>系统必备  
- 要按照本演练的步骤操作，必须安装 Visual Studio SDK。 有关详细信息，请参阅[Visual Studio SDK](../extensibility/visual-studio-sdk.md)。  
+## <a name="prerequisites"></a>先决条件  
+ 要按照本演练的步骤操作，必须安装 Visual Studio SDK。 有关详细信息，请参阅 [Visual STUDIO SDK](../extensibility/visual-studio-sdk.md)。  
   
 ## <a name="template-locations-for-the-visual-studio-package-template"></a>“Visual Studio 包模板”的模板位置  
- 你可以在“Visual Basic / 扩展性”  ，“C# / 可扩展性”  或“其他项目类型 / 扩展性”  下的“新项目”  对话框中找到 Visual Studio 包模板。  
+ 你可以在“Visual Basic / 扩展性” **** ，“C# / 可扩展性” **** 或“其他项目类型 / 扩展性” **** 下的“新项目” **** 对话框中找到 Visual Studio 包模板。  
   
 ## <a name="creating-a-command"></a>创建命令  
  在 .vct 文件中定义所有命令、命令组、菜单、工具栏和工具窗口。 有关详细信息，请参阅 [Visual Studio Command Table (.Vsct) Files](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)。  
   
- 如果使用包模板创建 VSPackage，请选择“菜单命令”  创建 .vsct 文件和定义默认菜单命令。 有关详细信息，请参阅[使用菜单命令创建扩展](../extensibility/creating-an-extension-with-a-menu-command.md)。  
+ 如果使用包模板创建 VSPackage，请选择“菜单命令” **** 创建 .vsct 文件和定义默认菜单命令。 有关详细信息，请参阅 [使用菜单命令创建扩展](../extensibility/creating-an-extension-with-a-menu-command.md)。  
   
 #### <a name="to-add-a-command-to-the-ide"></a>将命令添加到 IDE  
   
@@ -76,7 +76,7 @@ ms.locfileid: "67624455"
   
    3. 设置 `type` 特性。 在大多数情况下，其值将为 `"Button"`。 有关其他有效按钮类型的说明，请参阅 [Button Element](../extensibility/button-element.md)。  
   
-5. 在按钮定义中，创建一个包含 [ButtonText](../extensibility/strings-element.md) 元素的 [Strings](../extensibility/buttontext-element.md) 元素以包含菜单名称（菜单在 IDE 中显示时），并包含一个 [CommandName](../extensibility/commandname-element.md) 元素以包含用于访问“命令”  窗口中的菜单的命令名称。  
+5. 在按钮定义中，创建一个包含 [ButtonText](../extensibility/strings-element.md) 元素的 [Strings](../extensibility/buttontext-element.md) 元素以包含菜单名称（菜单在 IDE 中显示时），并包含一个 [CommandName](../extensibility/commandname-element.md) 元素以包含用于访问“命令” **** 窗口中的菜单的命令名称。  
   
     如果按钮文本字符串包含“&”字符，则用户可通过按 ALT 加上紧跟“&”之后的字符打开菜单。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "67624455"
   
 7. 根据需要添加命令标志，以更改按钮的外观和行为。 若要执行此操作，请在菜单定义中添加 [CommandFlag](../extensibility/command-flag-element.md) 元素。  
   
-8. 设置命令的父组。 父组可以是你创建的组、来自另一个包的组或来自 IDE 的组。 例如，若要将你的命令添加到 Visual Studio 编辑工具栏上“注释”按钮  和“删除评论”  按钮旁边，则将父级设置为 guidStdEditor:IDG_VS_EDITTOOLBAR_COMMENT。 如果父级是用户定义的组，则它必须是菜单的子级、工具栏或显示在 IDE 中的工具窗口。  
+8. 设置命令的父组。 父组可以是你创建的组、来自另一个包的组或来自 IDE 的组。 例如，若要将你的命令添加到 Visual Studio 编辑工具栏上“注释”按钮 **** 和“删除评论” **** 按钮旁边，则将父级设置为 guidStdEditor:IDG_VS_EDITTOOLBAR_COMMENT。 如果父级是用户定义的组，则它必须是菜单的子级、工具栏或显示在 IDE 中的工具窗口。  
   
     你可以根据你的设计选择两种方式之一执行此操作：  
   
@@ -117,7 +117,7 @@ ms.locfileid: "67624455"
       
       创建具有相同 GUID:ID 和不同父级的多个命令放置会导致菜单在多个位置显示。 有关详细信息，请参见 [CommandPlacements](../extensibility/commandplacements-element.md) 元素。  
   
-    有关命令组和设置父级的详细信息，请参阅[按钮创建可重用组](../extensibility/creating-reusable-groups-of-buttons.md)。  
+    有关命令组和父级的详细信息，请参阅 [创建可重用的按钮组](../extensibility/creating-reusable-groups-of-buttons.md)。  
   
    此时，该命令将在 IDE 中可见，但不具有任何功能。 如果该命令由包模板创建，在默认情况下它会具有一个显示消息的单击处理程序。  
   
@@ -179,7 +179,7 @@ ms.locfileid: "67624455"
   
     `EventHandler` 对象命名为查询菜单命令状态时调用的方法的名称。  
   
-2. 实现该命令的查询状态处理程序的方法。 `object` `sender` 参数可强制转换为 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> 对象（此对象用于设置菜单命令的各种特性），包括文本。 下表显示对应于 <xref:System.ComponentModel.Design.MenuCommand> 标志的 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> 类（MPF 类 <xref:Microsoft.VisualStudio.OLE.Interop.OLECMDF> 的派生来源）上的属性。  
+2. 实现该命令的查询状态处理程序的方法。 `object` `sender` 参数可强制转换为 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> 对象，该对象用于设置菜单命令的各种属性，包括文本。 下表显示对应于 <xref:System.ComponentModel.Design.MenuCommand> 标志的 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> 类（MPF 类 <xref:Microsoft.VisualStudio.OLE.Interop.OLECMDF> 的派生来源）上的属性。  
   
    |MenuCommand 属性|OLECMDF 标志|  
    |--------------------------|------------------|  
@@ -197,7 +197,7 @@ ms.locfileid: "67624455"
 ### <a name="handling-commands-by-using-the-iolecommandtarget-interface"></a>通过使用 IOleCommandTarget 接口处理命令  
  对于直接使用 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> 接口的代码，VSPackage 必须同时实现 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> 接口的方法 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> 和 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> 。 如果 VSPackage 实现项目层次结构，则应实现 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.QueryStatusCommand%2A> 接口的方法 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.ExecCommand%2A> 和 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy> 。  
   
- <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> 和 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> 方法旨在接收单一命令集 `GUID` 和命令 ID 的数组作为输入。 我们建议 VSPackage 完全支持此“单次调用，多个 ID”的概念。 但是，只要不从其他 Vspackage 调用 VSPackage，你可以认为该命令数组仅包含一个命令 ID，因为 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> 和 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> 方法以明确定义的顺序执行。 有关路由的详细信息，请参阅[Vspackage 中的命令路由](../extensibility/internals/command-routing-in-vspackages.md)。  
+ <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> 和 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> 方法旨在接收单一命令集 `GUID` 和命令 ID 的数组作为输入。 我们建议 VSPackage 完全支持此“单次调用，多个 ID”的概念。 但是，只要不从其他 Vspackage 调用 VSPackage，你可以认为该命令数组仅包含一个命令 ID，因为 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> 和 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> 方法以明确定义的顺序执行。 有关路由的详细信息，请参阅 [vspackage 中的命令路由](../extensibility/internals/command-routing-in-vspackages.md)。  
   
  对于直接使用 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> 接口进行命令处理的代码，必须如下面所示在 VSPackage 中实现 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> 方法以处理命令。  
   
@@ -251,6 +251,6 @@ ms.locfileid: "67624455"
   
 - 如果 `GUID` 和命令 ID 匹配 .vsct 文件中该命令使用的 GUID:ID 对，则执行与该命令关联的代码并返回 <xref:Microsoft.VisualStudio.VSConstants.S_OK>。  
   
-## <a name="see-also"></a>请参阅  
- [VSCT XML 架构参考](../extensibility/vsct-xml-schema-reference.md)   
+## <a name="see-also"></a>另请参阅  
+ [.VSCT XML 架构引用](../extensibility/vsct-xml-schema-reference.md)   
  [扩展菜单和命令](../extensibility/extending-menus-and-commands.md)

@@ -10,10 +10,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 3df1139f34c17055703b1ffcbbe2711d5750b9a8
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68870049"
 ---
 # <a name="how-to-use-the-concurrency-visualizer-markers-sdk"></a>如何：使用并发可视化工具标记 SDK
@@ -74,7 +74,7 @@ ms.locfileid: "68870049"
 
 6. 启动当前项目以显示并发可视化工具。 在“线程”视图中，两个标记系列显示在其各自的通道中。 下图显示两个新范围。
 
-     ![具有 3 个自定义标记系列的并发可视化工具](../profiling/media/cvmarkerseriesnative.png "CvMarkerSeriesNative")
+     ![具有 3 个自定义标记序列的并发可视化工具](../profiling/media/cvmarkerseriesnative.png "CvMarkerSeriesNative")
 
 ### <a name="to-use-visual-basic-or-c"></a>使用 Visual Basic 或 C\#
 
@@ -90,7 +90,7 @@ ms.locfileid: "68870049"
     using Microsoft.ConcurrencyVisualizer.Instrumentation;
     ```
 
-3. 添加代码以在默认标记系列中创建三个范围，并编写一个标志、一条消息和一个警报（各自对应一个范围）。 可以通过调用静态`EnterSpan`方法来创建 [Span](/previous-versions/hh694189(v=vs.140)) 对象。 若要写入默认序列, 请使用[标记](/previous-versions/hh694099(v=vs.140))类的静态写入方法。
+3. 添加代码以在默认标记系列中创建三个范围，并编写一个标志、一条消息和一个警报（各自对应一个范围）。 通过调用静态 `EnterSpan` 方法创建 [Span](/previous-versions/hh694189(v=vs.140)) 对象。 若要写入到默认序列，请使用 [Markers](/previous-versions/hh694099(v=vs.140)) 类的静态写入方法。
 
     ```vb
     Dim flagSpan As Span = Markers.EnterSpan("flag span")
@@ -132,7 +132,7 @@ ms.locfileid: "68870049"
 
      ![具有标记和警报的并发可视化工具](../profiling/media/cvmarkersmanaged.png "CvMarkersManaged")
 
-5. 使用静态[CreateMarkerSeries](/previous-versions/hh694171(v=vs.140))方法添加代码以创建客户标记序列。 [Microsoft.concurrencyvisualizer.instrumentation.markerseries>](/previous-versions/hh694127(v=vs.140))类包含用于创建范围和写入标志、消息和警报的方法。
+5. 添加代码，使用静态 [CreateMarkerSeries](/previous-versions/hh694171(v=vs.140)) 方法创建客户标记序列。 [MarkerSeries](/previous-versions/hh694127(v=vs.140)) 类包含用于创建范围和编写标志、消息和警报的方法。
 
     ```vb
     Dim flagSeries As MarkerSeries = Markers.DefaultWriter.CreateMarkerSeries("flag series")
@@ -166,8 +166,8 @@ ms.locfileid: "68870049"
 
 6. 启动当前项目以显示并发可视化工具。 在“线程”视图中，三个标记系列显示在其各自的通道中。 下图显示三个新范围。
 
-     ![具有 3 个自定义标记系列的并发可视化工具](../profiling/media/cvmarkerseriesmanaged.png "CvMarkerSeriesManaged")
+     ![具有 3 个自定义标记序列的并发可视化工具](../profiling/media/cvmarkerseriesmanaged.png "CvMarkerSeriesManaged")
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [并发可视化工具 SDK](../profiling/concurrency-visualizer-sdk.md)

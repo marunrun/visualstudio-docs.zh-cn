@@ -12,29 +12,29 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 4db3506ca21289c8ffda8582337cd8027a261438
-ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "82586359"
 ---
 # <a name="use-models-in-your-development-process"></a>在你的开发过程中使用模型
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-在 Visual Studio 中，你可以使用模型帮助你理解和更改系统、应用程序或组件。 模型能帮助你可视化系统工作的环境、阐明用户需求、定义你系统的体系结构、分析代码并确保你的代码符合要求。 请参阅第[9 频道视频：通过建模改进体系结构](https://s.ch9.ms/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012-Improving-architecture-through-modeling)。
+在 Visual Studio 中，你可以使用模型帮助你理解和更改系统、应用程序或组件。 模型能帮助你可视化系统工作的环境、阐明用户需求、定义你系统的体系结构、分析代码并确保你的代码符合要求。 请参阅第 [9 频道视频：通过建模改进体系结构](https://s.ch9.ms/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012-Improving-architecture-through-modeling)。
 
  若要查看支持每种类型的模型的 Visual Studio 版本，请参阅 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)。
 
 ## <a name="how-to-use-models"></a>如何使用模型
  模型可以通过几种方式帮助你：
 
-- 绘制建模图可帮助明确需求、体系结构和高级设计中所涉及的概念。 有关详细信息，请参阅[模型用户需求](../modeling/model-user-requirements.md)。
+- 绘制建模图可帮助明确需求、体系结构和高级设计中所涉及的概念。 有关详细信息，请参阅 [模型用户需求](../modeling/model-user-requirements.md)。
 
 - 使用模型可帮助你揭示需求中的不一致性。
 
-- 使用模型通信可帮助你沟通重要概念时比使用自然语言更明确。 有关详细信息，请参阅为[应用程序的体系结构建模](../modeling/model-your-app-s-architecture.md)。
+- 使用模型通信可帮助你沟通重要概念时比使用自然语言更明确。 有关详细信息，请参阅为 [应用程序的体系结构建模](../modeling/model-your-app-s-architecture.md)。
 
-- 有时可使用模型生成代码或其他项目（如数据库架构或文档）。 例如，[!INCLUDE[vsUltShort](../includes/vsultshort-md.md)] 建模组件是从模型生成的。  有关详细信息，请参阅[从模型生成和配置应用](../modeling/generate-and-configure-your-app-from-models.md)。
+- 有时可使用模型生成代码或其他项目（如数据库架构或文档）。 例如，[!INCLUDE[vsUltShort](../includes/vsultshort-md.md)] 建模组件是从模型生成的。  有关详细信息，请参阅 [从模型生成和配置应用](../modeling/generate-and-configure-your-app-from-models.md)。
 
   你可以在从极端敏捷到崇礼的各种流程中使用模型。
 
@@ -45,7 +45,7 @@ ms.locfileid: "82586359"
 
  如果你的项目很大，并且团队遍布全球各个位置，与使用纯文本相比，你可以使用模型来帮助更有效地沟通需求和体系结构。
 
- 在这两种情况下，创建模型几乎总是会导致不一致和多义性的显著降低。 不同的利益干系人经常会对系统工作的业务领域有不同的理解，并且不同的开发人员经常会对系统的工作方式有不同的理解。 通常使用模型作为讨论的焦点来揭示这些不同之处。 有关如何使用模型来减少不一致的详细信息，请参阅[模型用户需求](../modeling/model-user-requirements.md)。
+ 在这两种情况下，创建模型几乎总是会导致不一致和多义性的显著降低。 不同的利益干系人经常会对系统工作的业务领域有不同的理解，并且不同的开发人员经常会对系统的工作方式有不同的理解。 通常使用模型作为讨论的焦点来揭示这些不同之处。 有关如何使用模型来减少不一致的详细信息，请参阅 [模型用户需求](../modeling/model-user-requirements.md)。
 
 ### <a name="use-models-with-other-artifacts"></a>对其他项目使用模型
  一个模型本身并不是需求规范或体系结构。 它是一个工具，用于更清楚地表达的事物某些方面，但不是所有软件设计过程中所需的全部概念都可以表达出来。 因此，模型应当与其他通信方法一起使用，如 OneNote 页面或段落、Microsoft Office 文档、[!INCLUDE[esprfound](../includes/esprfound-md.md)] 中的工作项，或项目文件室墙上的粘滞便笺。 除了最后一项，所有这些对象类型都可以链接到模型的元素部分。
@@ -93,20 +93,20 @@ ms.locfileid: "82586359"
 - 从你这里获取一些指导后，非技术性的利益干系人对理解 UML 关系图通常不会有问题。
 
 #### <a name="link-model-to-work-items"></a>将模型链接到工作项
- 需求研讨会结束后，请详细说明需求模型的的详细信息，并将模型链接到开发任务。 你可以通过将 [!INCLUDE[esprfound](../includes/esprfound-md.md)] 中的工作项链接到模型中的元素来实现此操作。 若要了解如何执行此操作，请参阅[链接模型元素和工作项](../modeling/link-model-elements-and-work-items.md)。
+ 需求研讨会结束后，请详细说明需求模型的的详细信息，并将模型链接到开发任务。 你可以通过将 [!INCLUDE[esprfound](../includes/esprfound-md.md)] 中的工作项链接到模型中的元素来实现此操作。 若要了解如何执行此操作，请参阅 [链接模型元素和工作项](../modeling/link-model-elements-and-work-items.md)。
 
  你可以将任意元素链接到工作项，但最有用的元素如下所示：
 
 - 用例。 你可以将用例链接到将实现它的开发任务。
 
-- 用例扩展。 如果迭代中将仅实现用例的一个方面，则可以将它分离为具有一个或多个扩展的基础用例。 扩展是以 «extend» 关系链接到基础用例的用例。 有关用例扩展的详细信息，请参阅[UML 用例图：引用](../modeling/uml-use-case-diagrams-reference.md)。
+- 用例扩展。 如果迭代中将仅实现用例的一个方面，则可以将它分离为具有一个或多个扩展的基础用例。 扩展是以 «extend» 关系链接到基础用例的用例。 有关用例扩展的详细信息，请参阅 [UML 用例图：引用](../modeling/uml-use-case-diagrams-reference.md)。
 
-- 描述业务规则或服务质量要求的注释。 有关详细信息，请参阅[模型用户需求](../modeling/model-user-requirements.md)。
+- 描述业务规则或服务质量要求的注释。 有关详细信息，请参阅 [模型用户需求](../modeling/model-user-requirements.md)。
 
 #### <a name="link-model-to-tests"></a>将模型链接到测试
  使用需求模型来指导验收测试的设计。 在开发工作进行的同时创建这些测试。
 
- 若要了解有关此方法的详细信息，请参阅[从模型开发测试](../modeling/develop-tests-from-a-model.md)。
+ 若要了解有关此方法的详细信息，请参阅 [从模型开发测试](../modeling/develop-tests-from-a-model.md)。
 
 #### <a name="estimate-remaining-work"></a>估计剩余工作
  需求模型可以帮助根据每个迭代的大小估计项目的总大小。 评估用例和类的数量和复杂性可以帮助你估计将需要的开发工作。 完成前几个迭代后，对已涵盖需求以及仍将涵盖的需求进行比较可以估算出项目剩余部分的成本和范围。
@@ -116,7 +116,7 @@ ms.locfileid: "82586359"
 ## <a name="levels-of-abstraction"></a>抽象级别
  模型具有与软件相关的一系列抽象。 最具体的模型直接表示程序代码，而最抽象的模型表示可能会或可能不会在代码中表示的业务概念。
 
- 可以通过多种类型的关系图中查看模型。 有关模型和关系图的信息，请参阅为[应用程序创建模型](../modeling/create-models-for-your-app.md)。
+ 可以通过多种类型的关系图中查看模型。 有关模型和关系图的信息，请参阅为 [应用程序创建模型](../modeling/create-models-for-your-app.md)。
 
  不同类型的关系图可用于描述不同抽象级别的设计。 许多关系图类型可用于多个级别。 此表显示可以如何使用每种类型的关系图。
 
@@ -132,7 +132,7 @@ ms.locfileid: "82586359"
 
 |**类别**|**链接**|
 |------------------|---------------|
-|**视频**|![链接到视频](../data-tools/media/playvideo.gif "PlayVideo") [MSDN 如何实现视频：如何创建和使用 UML 模型和关系图（Visual Studio 2010 旗舰版）](https://msdn.microsoft.com/vstudio/gg418384)<br /><br /> ![视频](../data-tools/media/playvideo.gif "PlayVideo")[通道9： UML 与 Visual Studio 2010 的](https://channel9.msdn.com/posts/clinted/UML-with-VS-2010-Part-1-Brainstorming-a-Project/)链接<br /><br /> ![链接到视频](../data-tools/media/playvideo.gif "PlayVideo") [MSDN 如何实现系列： UML 工具和扩展性（Visual Studio 2010 旗舰版）](https://msdn.microsoft.com/vstudio/ff859492)|
+|**视频**|![链接到视频](../data-tools/media/playvideo.gif "PlayVideo") [MSDN 如何实现视频：如何创建和使用 UML 模型和关系图 (Visual Studio 2010 旗舰版) ](https://msdn.microsoft.com/vstudio/gg418384)<br /><br /> ![视频](../data-tools/media/playvideo.gif "PlayVideo")[通道9： UML 与 Visual Studio 2010 的](https://channel9.msdn.com/posts/clinted/UML-with-VS-2010-Part-1-Brainstorming-a-Project/)链接<br /><br /> ![链接到视频](../data-tools/media/playvideo.gif "PlayVideo") [MSDN 如何实现系列： UML 工具和扩展性 (Visual Studio 2010 旗舰版) ](https://msdn.microsoft.com/vstudio/ff859492)|
 |**论坛**|-   [Visual Studio 可视化和建模工具](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vsarch)<br />-   [Visual Studio 可视化和建模 SDK（DSL 工具）](https://social.msdn.microsoft.com/Forums/home?forum=dslvsarchx)|
 |**博客**|[Visual Studio ALM + Team Foundation Server 博客](https://devblogs.microsoft.com/devops/welcome-to-the-visual-studio-alm-team-foundation-server-blog/)|
 |**技术文章和日志**|[MSDN 体系结构中心](https://msdn.microsoft.com/architecture/default.aspx)<br /><br /> [Visual Studio 体系结构工具指南](../modeling/visual-studio-architecture-tooling-guidance.md)|

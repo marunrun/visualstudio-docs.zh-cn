@@ -15,10 +15,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: cf22fdf3d0cd9196794aa3929e9952f57bbfa2f0
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68872000"
 ---
 # <a name="msbuild-toolset-toolsversion"></a>MSBuild 工具集 (ToolsVersion)
@@ -38,7 +38,7 @@ MSBuild 使用任务、目标和工具的工具集以生成应用程序。 通�
 
  当 `ToolsVersion` 值在项目文件中定义时，MSBuild 将使用该值来确定在该项目中可用的工具集属性的值。 其中一个工具集属性为 `$(MSBuildToolsPath)`，该属性指定 .NET Framework 工具的路径。 仅该工具集属性（或 `$(MSBuildBinPath)`）是必需的。
 
- 从 Visual Studio 2013 开始，MSBuild 工具集版本号与 Visual Studio 版本号相同。 无论项目文件中指定哪个工具集版本，MSBuild 都会在 Visual Studio 中和命令行上默认使用该工具集。  使用 /ToolsVersion 标志可重写此行为。 有关详细信息，请参阅[重写 ToolsVersion 设置](../msbuild/overriding-toolsversion-settings.md)。
+ 从 Visual Studio 2013 开始，MSBuild 工具集版本号与 Visual Studio 版本号相同。 无论项目文件中指定哪个工具集版本，MSBuild 都会在 Visual Studio 中和命令行上默认使用该工具集。  使用 /ToolsVersion 标志可重写此行为。 有关详细信息，请参阅 [重写 ToolsVersion 设置](../msbuild/overriding-toolsversion-settings.md)。
 
  在下面的示例中，MSBuild 将使用 `MSBuildToolsPath` 保留的属性查找 Microsoft.CSharp.targets 文件。
 
@@ -50,7 +50,7 @@ MSBuild 使用任务、目标和工具的工具集以生成应用程序。 通�
 
  当在命令行上生成解决方案并为 msbuild.exe 指定 `ToolsVersion` 时，所有项目及其项目到项目的依赖项均基于该 `ToolsVersion` 生成，即便解决方案中的每个项目都指定了自己的 `ToolsVersion` 也是如此。 若要根据每个项目定义 `ToolsVersion` 值，请参阅[替代 ToolsVersion 设置](../msbuild/overriding-toolsversion-settings.md)。
 
- `ToolsVersion` 特性也用于项目移植。 例如，如果你在 Visual Studio 2010 中打开 Visual Studio 2008 项目，则该项目文件将更新以包括 ToolsVersion=“4.0”。 如果你此时尝试在 Visual Studio 2008 中打开该项目，由于它不会识别已升级的 `ToolsVersion`，因此它会按照该特性设置为 3.5 的情况生成该项目。
+ `ToolsVersion` 特性也用于项目移植。 例如，如果你在 Visual Studio 2010 中打开 Visual Studio 2008 项目，则该项目文件将更新以包括 ToolsVersion=“4.0”。 如果你此时尝试在 Visual Studio 2008 中打开该项目，由于它不会识别已升级的 ，因此它会按照该特性设置为 3.5 的情况生成该项目。
 
  Visual Studio 2010 和 Visual Studio 2012 使用的 ToolsVersion 为 4.0。 Visual Studio 2013 使用的 ToolsVersion 为 12.0。 在许多情况下，无需修改即可在 Visual Studio 的所有三个版本中打开该项目。 Visual Studio 始终会使用正确的工具集，但是会在使用的版本与项目文件中的版本不匹配时通知你。 在几乎所有情况下，此警告是良性的，因为工具集在大多数情况下都兼容。
 
@@ -71,7 +71,7 @@ MSBuild 使用任务、目标和工具的工具集以生成应用程序。 通�
 
 - 使用 <xref:Microsoft.Build.Utilities.ToolLocationHelper> 方法
 
-  工具集属性指定工具的路径。 MSBuild 使用项目文件中的 `ToolsVersion` 属性的值以查找相应的注册表项，然后使用该注册表项中的信息来设置工具集属性。 例如，如果 `ToolsVersion` 的值为 `12.0`，则 MSBuild 将根据以下注册表项设置工具集属性：HKLM\Software\Microsoft\MSBuild\ToolsVersions\12.0.
+  工具集属性指定工具的路径。 MSBuild 使用项目文件中的 `ToolsVersion` 属性的值以查找相应的注册表项，然后使用该注册表项中的信息来设置工具集属性。 例如，如果 `ToolsVersion` 的值为 `12.0`，则 MSBuild 将根据以下注册表项设置工具集属性：HKLM\Software\Microsoft\MSBuild\ToolsVersions\12.0。
 
   这些是工具集属性：
 
@@ -91,7 +91,7 @@ MSBuild 使用任务、目标和工具的工具集以生成应用程序。 通�
 
 - <xref:Microsoft.Build.Utilities.ToolLocationHelper.GetPathToDotNetFrameworkSdkFile%2A> 返回某个文件的路径，该文件通常位于托管工具文件夹中。
 
-- [GetPathToBuildTools](/previous-versions/visualstudio/visual-studio-2013/dn251121(v=vs.121))返回生成工具的路径。
+- [GetPathToBuildTools](/previous-versions/visualstudio/visual-studio-2013/dn251121(v=vs.121)) 返回生成工具的路径。
 
 ### <a name="sub-toolsets"></a>子工具集
  如本主题前面所述，MSBuild 使用注册表项来指定基本工具的路径。 如果该注册表项具有一个子项，则 MSBuild 将使用它来指定包含其他工具的子工具集的路径。 在这种情况下，通过合并在这两个项中定义的属性定义对工具集进行定义。
@@ -115,7 +115,7 @@ MSBuild 使用任务、目标和工具的工具集以生成应用程序。 通�
 
   在 .NET Framework 4.5 中引入了子工具集。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [标准和自定义工具集配置](../msbuild/standard-and-custom-toolset-configurations.md)
 - [多定向](../msbuild/msbuild-multitargeting-overview.md)

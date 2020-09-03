@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 8a0868019247e20b9154690469d4c291f1f8e0d6
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545803"
 ---
 # <a name="how-to-set-up-configuration-information-for-an-office-solution"></a>如何：为 Office 解决方案设置配置信息
@@ -31,15 +31,15 @@ ms.locfileid: "85545803"
 
 1. 在 **“项目”** 菜单上，单击 **“添加新项”**。
 
-2. 在 "**类别**" 窗格中，单击 "**常规**"。
+2. 在 " **类别** " 窗格中，单击 " **常规**"。
 
-3. 在 "**模板**" 窗格中，选择 "**应用程序配置文件**"。
+3. 在 " **模板** " 窗格中，选择 " **应用程序配置文件**"。
 
-4. 在 "**名称**" 框中，键入与程序集和扩展名 *.config*相同的名称。例如，名为*ExcelWorkbook1.dll*的 Excel 项目程序集的配置文件将命名为*ExcelWorkbook1.dll.config*。
+4. 在 " **名称** " 框中，键入与程序集和扩展名 *.config*相同的名称。例如，名为 *ExcelWorkbook1.dll* 的 Excel 项目程序集的配置文件将命名为 *ExcelWorkbook1.dll.config*。
 
 5. 单击“添加”。
 
-6. 根据应用程序配置文件架构创建配置文件。 有关详细信息，请参阅[.NET Framework 的配置文件架构](/dotnet/framework/configure-apps/file-schema/index)。
+6. 根据应用程序配置文件架构创建配置文件。 有关详细信息，请参阅 [.NET Framework 的配置文件架构](/dotnet/framework/configure-apps/file-schema/index)。
 
    在 Office 项目中使用配置文件时，没有特别的注意事项。
 

@@ -14,10 +14,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 128de95d347fece01c9177057346b00e412e1e6f
-ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "82586638"
 ---
 # <a name="common-patterns-for-poorly-behaved-multithreaded-applications"></a>性能不佳的多线程应用程序的常见模式
@@ -32,7 +32,7 @@ ms.locfileid: "82586638"
   
  如下图所示，并发可视化工具还可在 CPU 使用率视图中公开此症状，其中，尽管存在多个线程，但该应用程序只使用一个逻辑核心。  
   
- 有关详细信息，请参阅 MSDN 博客网站上的上 hazim Shafi 的 " [Windows 博客并行性能工具](https://docs.microsoft.com/archive/blogs/hshafi/)" 中的 "性能模式1：标识锁争用"。  
+ 有关详细信息，请参阅 MSDN 博客网站上的上 hazim Shafi 的 " [Windows 博客并行性能工具](https://docs.microsoft.com/archive/blogs/hshafi/) " 中的 "性能模式1：标识锁争用"。  
   
  ![锁争用](../profiling/media/lockcontention-2.png "LockContention_2")  
   

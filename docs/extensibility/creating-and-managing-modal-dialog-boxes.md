@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: f2f4f296bb155bcde82235d962ae63c8fa4d41d7
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85903771"
 ---
 # <a name="create-and-manage-modal-dialog-boxes"></a>创建和管理模式对话框
@@ -22,13 +22,13 @@ ms.locfileid: "85903771"
 
 可以通过两种方式执行此操作。 如果你有一个 WPF 对话框，建议使用 <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow> ，然后调用来显示对话框，建议使用此方法 <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow.ShowModal%2A> 。 如果这样做，则无需管理父窗口的模式状态。
 
-如果对话框不是 WPF，或出于某些其他原因而无法从派生对话框类 <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow> ，则必须通过在 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.GetDialogOwnerHwnd%2A> <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.EnableModeless%2A> 显示对话框并在关闭对话框后使用参数1（true）调用方法，以通过调用和管理模式状态来获取对话框的父项。
+如果您的对话框不是 WPF，或出于某些其他原因而无法从派生您的对话框类 <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow> ，则您必须通过在 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.GetDialogOwnerHwnd%2A> 显示对话框之前通过调用参数为 0 (false) 的方法来获取对话框的父级，然后在 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.EnableModeless%2A> 关闭对话框并使用参数 1 (true) 再次调用方法。
 
 ## <a name="create-a-dialog-box-derived-from-dialogwindow"></a>创建一个从 DialogWindow 派生的对话框
 
-1. 创建名为**OpenDialogTest**的 VSIX 项目，并添加名为**OpenDialog**的菜单命令。 有关如何执行此操作的详细信息，请参阅[使用菜单命令创建扩展](../extensibility/creating-an-extension-with-a-menu-command.md)。
+1. 创建名为 **OpenDialogTest** 的 VSIX 项目，并添加名为 **OpenDialog**的菜单命令。 有关如何执行此操作的详细信息，请参阅 [使用菜单命令创建扩展](../extensibility/creating-an-extension-with-a-menu-command.md)。
 
-2. 若要使用 <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow> 类，必须添加对以下程序集的引用（在 "**添加引用**" 对话框的 "框架" 选项卡中）：
+2. 若要使用 <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow> 类，必须在 " **添加引用** " 对话框的 "框架" 选项卡中添加对以下程序集的引用 () ：
 
     - *PresentationCore*
 
@@ -38,7 +38,7 @@ ms.locfileid: "85903771"
 
     - *System.Xaml*
 
-3. 在*OpenDialog.cs*中，添加以下 `using` 语句：
+3. 在 *OpenDialog.cs*中，添加以下 `using` 语句：
 
     ```csharp
     using Microsoft.VisualStudio.PlatformUI;
@@ -68,11 +68,11 @@ ms.locfileid: "85903771"
     testDialog.ShowModal();
     ```
 
-7. 生成并运行应用程序。 应显示 Visual Studio 的实验实例。 在实验实例的 "**工具**" 菜单中，应会看到名为 "**调用 OpenDialog**" 的命令。 单击此命令时，应会看到对话框窗口。 你应该能够最小化窗口并最大化。
+7. 生成并运行应用程序。 应显示 Visual Studio 的实验实例。 在实验实例的 " **工具** " 菜单中，应会看到名为 " **调用 OpenDialog**" 的命令。 单击此命令时，应会看到对话框窗口。 你应该能够最小化窗口并最大化。
 
 ## <a name="create-and-manage-a-dialog-box-not-derived-from-dialogwindow"></a>创建和管理不是从 DialogWindow 派生的对话框
 
-1. 对于此过程，可以使用在前面的过程中创建的**OpenDialogTest**解决方案，该解决方案具有相同的程序集引用。
+1. 对于此过程，可以使用在前面的过程中创建的 **OpenDialogTest** 解决方案，该解决方案具有相同的程序集引用。
 
 2. 添加以下 `using` 声明：
 
@@ -125,4 +125,4 @@ ms.locfileid: "85903771"
     }
     ```
 
-7. 生成并运行应用程序。 在 "**工具**" 菜单中，应会看到名为 "**调用 OpenDialog**" 的命令。 单击此命令时，应会看到对话框窗口。
+7. 生成并运行应用程序。 在 " **工具** " 菜单中，应会看到名为 " **调用 OpenDialog**" 的命令。 单击此命令时，应会看到对话框窗口。

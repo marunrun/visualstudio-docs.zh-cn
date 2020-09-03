@@ -12,31 +12,31 @@ caps.latest.revision: 27
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 08bb0a296daca0de1c02b905a75fb10ce05f254e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68205995"
 ---
 # <a name="vspackage-structure-source-control-vspackage"></a>VSPackage 结构（源代码管理 VSPackage）
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-源控件包 SDK 提供了用于创建 VSPackage 的准则允许源控件实施者，将使用其自己的源代码管理功能进行集成[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]环境。 VSPackage 是 COM 组件，通常按需加载[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]集成的开发环境 (IDE) 基于由其注册表项中的包播发的服务。 每个 VSPackage 必须实现<xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage>。 VSPackage 通常使用所提供的服务[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]IDE 和提供某些服务。  
+源代码管理包 SDK 提供了创建 VSPackage 的指导原则，使源代码管理实施者能够将其源代码管理功能与 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 环境集成。 VSPackage 是一种 COM 组件，通常由 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 集成开发环境按需加载 (IDE) 基于其注册表项中由包播发的服务。 每个 VSPackage 都必须实现 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage> 。 VSPackage 通常使用 IDE 提供的服务 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ，并提供自己的某些服务。  
   
- VSPackage 声明其菜单项，并建立通过.vsct 文件的默认项状态。 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] IDE 将加载 VSPackage 之前在此状态中显示的菜单项。 随后，VSPackage 的实现的<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A>调用方法来启用或禁用菜单项。  
+ VSPackage 声明其菜单项，并通过 .vsct 文件建立默认项状态。 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]IDE 将在此状态下显示菜单项，直到加载了 VSPackage。 然后，调用方法的 VSPackage 实现 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> 来启用或禁用菜单项。  
   
-## <a name="source-control-package-characteristics"></a>源控件的封装特性  
- 源代码管理 VSPackage 紧密地集成到[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]。  
+## <a name="source-control-package-characteristics"></a>源代码管理包特性  
+ 源代码管理 VSPackage 已深度集成到中 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 。  
   
  VSPackage 语义包括：  
   
-- 由于正在 VSPackage 实现的接口 (`IVsPackage`接口)  
+- 要实现的接口是接口的 VSPackage (`IVsPackage`)   
   
-- UI 命令实现 (.vsct 文件和实现<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>接口)  
+- UI 命令实现 ( 的接口的 .vsct 文件和实现 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>)   
   
-- 使用 VSPackage 注册[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]。  
+- 将 VSPackage 注册到 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 。  
   
-  源代码管理 VSPackage 必须与通信这些其他[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]实体：  
+  源代码管理 VSPackage 必须与以下其他实体通信 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ：  
   
 - 项目  
   
@@ -46,9 +46,9 @@ ms.locfileid: "68205995"
   
 - Windows  
   
-- 运行文档表  
+- 正在运行的文档表  
   
-### <a name="visual-studio-environment-services-that-may-be-consumed"></a>可能使用的 visual Studio 环境服务  
+### <a name="visual-studio-environment-services-that-may-be-consumed"></a>可能使用的 Visual Studio 环境服务  
  <xref:Microsoft.VisualStudio.Shell.Interop.SVsShell>  
   
  <xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell>  
@@ -65,15 +65,15 @@ ms.locfileid: "68205995"
   
  <xref:Microsoft.VisualStudio.Shell.Interop.SVsSccManager>  
   
-### <a name="vsip-interfaces-implemented-and-called"></a>VSIP 接口实现和调用  
- 源代码管理包是 VSPackage，并因此它可直接与注册的其他 Vspackage 交互[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]。 为了提供全套的源代码管理功能，源代码管理 VSPackage 可以处理提供的项目或 shell 接口。  
+### <a name="vsip-interfaces-implemented-and-called"></a>已实现并调用 VSIP 接口  
+ 源代码管理包是一个 VSPackage，因此它可以与向注册的其他 Vspackage 直接交互 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 。 为了提供完整的源代码管理功能，源代码管理 VSPackage 可以处理项目或 shell 所提供的接口。  
   
- 每个项目中的[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]必须实现<xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3>若要识别为中的项目[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]IDE。 但是，此接口不专用足够用于源代码管理。 应为源下的项目控件实现<xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProject2>。 若要查询对其内容的项目，并将该标志符号和绑定信息 （所需的信息的服务器位置和下一个项目的磁盘位置之间建立连接，使用此接口由源代码管理 VSPackage源代码管理）。  
+ 中的每个项目 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 都必须实现， <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3> 才能被识别为 IDE 中的项目 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 。 但是，此接口专用于源代码管理。 预期受源代码管理的项目将实现 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProject2> 。 源代码管理 VSPackage 使用此接口来查询项目的内容，并提供 it 标志符号和绑定信息 (在服务器位置与受源代码管理) 的项目的磁盘位置之间建立连接所需的信息。  
   
- 源代码管理 VSPackage 实现<xref:Microsoft.VisualStudio.Shell.Interop.IVsSccManager2>，这反过来允许项目进行源代码管理中注册自身和检索其状态的标志符号。  
+ 源代码管理 VSPackage 实现 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccManager2> ，后者又允许项目自行注册源代码管理，并检索其状态字形。  
   
- 源代码管理 VSPackage 必须考虑的接口的完整列表，请参阅[相关服务和界面](../../extensibility/internals/related-services-and-interfaces-source-control-vspackage.md)。  
+ 有关源代码管理 VSPackage 必须考虑的接口的完整列表，请参阅 [相关服务和接口](../../extensibility/internals/related-services-and-interfaces-source-control-vspackage.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [设计元素](../../extensibility/internals/source-control-vspackage-design-elements.md)   
  [相关服务和接口](../../extensibility/internals/related-services-and-interfaces-source-control-vspackage.md)

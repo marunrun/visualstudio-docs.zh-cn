@@ -1,5 +1,5 @@
 ---
-title: IEE可视化服务提供商：：创建可视化服务 |微软文档
+title: IEEVisualizerServiceProvider：： CreateVisualizerService |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: e05677122b7d4e4eb025a9382ede1509374de894
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80717918"
 ---
 # <a name="ieevisualizerserviceprovidercreatevisualizerservice"></a>IEEVisualizerServiceProvider::CreateVisualizerService
@@ -49,27 +49,27 @@ int CreateVisualizerService(
 
 ## <a name="parameters"></a>参数
 `binder`\
-[在][IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md)对象传递给[评估同步](../../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md)。
+中传递给[EvaluateSync](../../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md)的[IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md)对象。
 
 `pSymProv`\
-[在]传递给 的[IDebugSymbol](../../../extensibility/debugger/reference/idebugsymbolprovider.md) `IDebugParsedExpression::EvaluateSync`提供程序对象。
+中传递给的 [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md) 对象 `IDebugParsedExpression::EvaluateSync` 。
 
 `pAddress`\
-[在]传递给[的 IDebug](../../../extensibility/debugger/reference/idebugaddress.md) `IDebugParsedExression::EvaluateSync`地址对象。
+中传递给的 [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) 对象 `IDebugParsedExression::EvaluateSync` 。
 
 `dataProvider`\
-[在]实现[IEEVisualizerDataProvider 接口](../../../extensibility/debugger/reference/ieevisualizerdataprovider.md)的对象（由表达式赋值器提供）。
+中实现 [IEEVisualizerDataProvider](../../../extensibility/debugger/reference/ieevisualizerdataprovider.md) 接口的对象 (由表达式计算器) 提供。
 
 `ppService`\
-[出]创建的服务。
+弄创建的服务。
 
 ## <a name="return-value"></a>返回值
- 如果成功，返回`S_OK`;否则，返回错误代码。
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。
 
 ## <a name="remarks"></a>备注
- 和`binder``pSymProv``pAddress`参数都传递给方法`IDebugParsedExpression::EvaluateSync`。 `CreateVisualizerService`仅从`IDebugParsedExpression::EvaluateSync`表达式评估器对类型可视化器的支持调用。
+ `binder`、 `pSymProv` 和参数都 `pAddress` 传递给 `IDebugParsedExpression::EvaluateSync` 方法。 `CreateVisualizerService` 仅 `IDebugParsedExpression::EvaluateSync` 作为表达式计算器对类型可视化工具的支持的一部分进行调用。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IEEVisualizerServiceProvider](../../../extensibility/debugger/reference/ieevisualizerserviceprovider.md)
 - [EvaluateSync](../../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md)
 - [IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md)

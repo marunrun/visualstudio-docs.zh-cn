@@ -1,5 +1,5 @@
 ---
-title: 调试错误和警告对话框 |Microsoft Docs
+title: “调试错误和警告”对话框 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -23,10 +23,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 337341547891d87b577756350cbb71e13dd230ae
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65691188"
 ---
 # <a name="debugging-errors-and-warning-dialog-boxes"></a>“调试错误和警告”对话框
@@ -60,7 +60,7 @@ ms.locfileid: "65691188"
  [错误：无法进行调试，因为系统上已启用内核调试程序](../debugger/error-debugging-isn-t-possible-because-a-kernel-debugger-is-enabled-on-the-system.md)  
   
 ## <a name="related-sections"></a>相关章节  
- [调试脚本和 Web:错误和疑难解答](../debugger/debugging-web-applications-errors-and-troubleshooting.md)  
+ [调试脚本和 Web：错误和疑难解答](../debugger/debugging-web-applications-errors-and-troubleshooting.md)  
   
  [远程调试错误](../debugger/remote-debugging-errors-and-troubleshooting.md)  
   

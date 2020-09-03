@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 9e6626faa09f1e38506c2d205d13caa9a3707fc0
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72659466"
 ---
 # <a name="update-a-uml-model-from-a-background-thread"></a>从后台线程中更新 UML 模型
@@ -32,7 +32,7 @@ ms.locfileid: "72659466"
 
 #### <a name="to-run-the-example"></a>运行示例
 
-1. 在C#项目中创建一个命令处理程序，如在[建模图上定义菜单命令](../modeling/define-a-menu-command-on-a-modeling-diagram.md)中所述。
+1. 在 c # 项目中创建一个命令处理程序，如在 [建模图上定义菜单命令](../modeling/define-a-menu-command-on-a-modeling-diagram.md)中所述。
 
 2. 确保该项目包含对这些程序集的引用：
 
@@ -48,7 +48,7 @@ ms.locfileid: "72659466"
 
    - System.Windows.Forms
 
-3. 向项目添加一个名为**ProgressForm**的 Windows 窗体。 此窗体应显示一条指示正在进行更新的消息。 它不必包含任何其他控件。
+3. 向项目添加一个名为 **ProgressForm**的 Windows 窗体。 此窗体应显示一条指示正在进行更新的消息。 它不必包含任何其他控件。
 
 4. 添加一个 C# 文件，其中包含步骤 7 后显示的代码。
 
@@ -58,7 +58,7 @@ ms.locfileid: "72659466"
 
 6. 在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 实验实例中创建或打开一个 UML 类关系图。
 
-7. 右键单击 UML 类图中的任意位置，然后单击 "**添加多个 UML 类**"。
+7. 右键单击 UML 类图中的任意位置，然后单击 " **添加多个 UML 类**"。
 
    关系图中将以半秒的时间间隔接连显示若干新的类框。
 
@@ -187,5 +187,5 @@ namespace BackgroundThreadProgressUI // CHANGE TO YOUR NAMESPACE
 
  可以使用 `uiThreadHolder.Invoke()` 在 UI 线程中执行操作。
 
-## <a name="see-also"></a>请参阅
- [在建模图上定义菜单命令](../modeling/define-a-menu-command-on-a-modeling-diagram.md)在[建模图上定义笔势处理程序](../modeling/define-a-gesture-handler-on-a-modeling-diagram.md)
+## <a name="see-also"></a>另请参阅
+ [在建模图上定义菜单命令](../modeling/define-a-menu-command-on-a-modeling-diagram.md)在 [建模图上定义笔势处理程序](../modeling/define-a-gesture-handler-on-a-modeling-diagram.md)
