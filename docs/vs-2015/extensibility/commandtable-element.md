@@ -14,10 +14,10 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: bb2b874f7bbe94e383e9e7fba755dcc373a93150
-ms.sourcegitcommit: 374f5ec9a5fa18a6d4533fa2b797aa211f186755
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77477045"
 ---
 # <a name="commandtable-element"></a>CommandTable 元素
@@ -41,22 +41,22 @@ CommandTable 是 .vsct 文件的根元素。 此文件用于定义 VSPackage 提
 </CommandTable>  
 ```  
   
-## <a name="attributes-and-elements"></a>属性和元素  
+## <a name="attributes-and-elements"></a>特性和元素  
  下列各节描述了特性、子元素和父元素。  
   
-### <a name="attributes"></a>Attributes  
+### <a name="attributes"></a>特性  
   
-| 属性 |                                                                                                                   说明                                                                                                                   |
+| 特性 |                                                                                                                   说明                                                                                                                   |
 |-----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |   xmlns   |                                   必需。 XML 命名空间：<br /><br /> `xmlns="<http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable>"`<br /><br /> `xmlns:xs="<http://www.w3.org/2001/XMLSchema>"`                                   |
-| language  | 可选。 Language 特性可用于指定命令表中 > 元素的所有 \<字符串的默认语言。  如果未指定语言，则将使用当前进程的语言：<br /><br /> language="en-us" |
+| 语言  | 可选。 Language 特性可用于指定命令表中所有元素的默认语言 \<Strings> 。  如果未指定语言，则将使用当前进程的语言：<br /><br /> language = "en-us" |
   
 ### <a name="child-elements"></a>子元素  
   
 |元素|说明|  
 |-------------|-----------------|  
 |[Extern 元素](../extensibility/extern-element.md)|可选。 包含编译器的预处理器指令。|  
-|[ Include元素](../extensibility/include-element.md)|可选。 包含要包含在编译中的任何文件的路径。|  
+|[Include 元素](../extensibility/include-element.md)|可选。 包含要包含在编译中的任何文件的路径。|  
 |[Define 元素](../extensibility/define-element.md)|可选。 定义符号的名称和值。|  
 |[Commands 元素](../extensibility/commands-element.md)|可选。 父元素，用于为包含所有其他元素的 VSPackage 定义所有命令。|  
 |[CommandPlacements 元素](../extensibility/commandplacements-element.md)|可选。 定义命令栏上命令的放置位置。|  

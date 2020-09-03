@@ -1,5 +1,5 @@
 ---
-title: PENDING_BP_STATE_INFO |微软文档
+title: PENDING_BP_STATE_INFO |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: d66ecc63e133a75148f06b59b8f1ccf61fe2658d
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80714079"
 ---
 # <a name="pending_bp_state_info"></a>PENDING_BP_STATE_INFO
-包含有关准备绑定到代码位置的断点状态的信息。
+包含有关已准备好绑定到代码位置的断点状态的信息。
 
 ## <a name="syntax"></a>语法
 
@@ -43,23 +43,23 @@ public struct PENDING_BP_STATE_INFO { 
 
 ## <a name="members"></a>成员
  `state`\
- PENDING_BP_STATE[枚举中](../../../extensibility/debugger/reference/pending-bp-state.md)指定挂起断点状态的值。
+ [PENDING_BP_STATE](../../../extensibility/debugger/reference/pending-bp-state.md)枚举中的一个值，该值指定挂起断点的状态。
 
  `flags`\
- [PENDING_BP_STATE_FLAGS](../../../extensibility/debugger/reference/pending-bp-state-flags.md)枚举中的标志的组合，用于指定断点是否虚拟化。
+ [PENDING_BP_STATE_FLAGS](../../../extensibility/debugger/reference/pending-bp-state-flags.md)枚举中用于指定断点是否已虚拟化的标志的组合。
 
 ## <a name="remarks"></a>备注
- 此结构传递给填写该结构的[GetState](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-getstate.md)方法。
+ 此结构被传递给 [GetState](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-getstate.md) 方法，其中填充了此结构。
 
 ## <a name="requirements"></a>要求
- 标题： msdbg.h
+ 标头： msdbg
 
- 命名空间：微软.VisualStudio.调试器.互通
+ 命名空间： VisualStudio
 
- 程序集：微软.VisualStudio.调试器.Interop.dll
+ 程序集： Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [结构和联合](../../../extensibility/debugger/reference/structures-and-unions.md)
-- [获取状态](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-getstate.md)
+- [GetState](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-getstate.md)
 - [PENDING_BP_STATE](../../../extensibility/debugger/reference/pending-bp-state.md)
 - [PENDING_BP_STATE_FLAGS](../../../extensibility/debugger/reference/pending-bp-state-flags.md)

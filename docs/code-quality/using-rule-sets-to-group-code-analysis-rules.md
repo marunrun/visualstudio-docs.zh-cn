@@ -12,23 +12,23 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: ca48d0cad8ad6e22aa2264390d230590438e8579
-ms.sourcegitcommit: 260d093d2287ba791f28bdc7103493beabf80b2e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77506465"
 ---
 # <a name="use-rule-sets-to-group-code-analysis-rules"></a>使用规则集对代码分析规则进行分组
 
-在 Visual Studio 中配置代码分析时，可以从内置*规则集*列表中进行选择。 规则集是一组代码分析规则，用于标识目标问题和该项目的特定条件。 例如，你可以应用一个规则集，设计用于扫描代码以实现公开可用的 Api。 还可以应用包含所有可用规则的规则集。
+在 Visual Studio 中配置代码分析时，可以从内置 *规则集*列表中进行选择。 规则集是一组代码分析规则，用于标识目标问题和该项目的特定条件。 例如，你可以应用一个规则集，设计用于扫描代码以实现公开可用的 Api。 还可以应用包含所有可用规则的规则集。
 
-你可以通过添加或删除规则或将规则严重性更改为在**错误列表**中显示为警告或错误来自定义规则集。 自定义规则集可以满足特定开发环境的需求。 自定义规则集时，规则集编辑器会提供搜索和筛选工具，以帮助您在此过程中使用。
+你可以通过添加或删除规则或将规则严重性更改为在 **错误列表**中显示为警告或错误来自定义规则集。 自定义规则集可以满足特定开发环境的需求。 自定义规则集时，规则集编辑器会提供搜索和筛选工具，以帮助您在此过程中使用。
 
-规则集可用于[托管代码分析](analyzer-rule-sets.md)、对[托管代码的传统分析](how-to-configure-code-analysis-for-a-managed-code-project.md)和[ C++代码分析](/cpp/code-quality/using-rule-sets-to-specify-the-cpp-rules-to-run)。
+规则集可用于 [托管代码分析](analyzer-rule-sets.md)、 [托管代码的传统分析](how-to-configure-code-analysis-for-a-managed-code-project.md)和 [c + + 代码分析](/cpp/code-quality/using-rule-sets-to-specify-the-cpp-rules-to-run)。
 
 ## <a name="rule-set-format"></a>规则集格式
 
-规则集是以 XML 格式*指定的规则集文件。* 由 ID 和*操作*组成的规则按文件中的分析器 ID 和命名空间分组。
+规则集是以 XML 格式*指定的规则集文件。* 由 ID 和 *操作*组成的规则按文件中的分析器 ID 和命名空间分组。
 
 *规则集*文件的内容类似于以下 XML：
 
@@ -58,7 +58,7 @@ ms.locfileid: "77506465"
 
 ## <a name="specify-a-rule-set-for-a-project"></a>为项目指定规则集
 
-项目的规则集由 Visual Studio 项目文件中的**CodeAnalysisRuleSet**属性指定。 例如：
+项目的规则集由 Visual Studio 项目文件中的 **CodeAnalysisRuleSet** 属性指定。 例如：
 
 ```xml
 <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">

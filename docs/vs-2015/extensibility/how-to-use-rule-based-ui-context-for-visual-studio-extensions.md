@@ -6,10 +6,10 @@ ms.assetid: 8dd2cd1d-d8ba-49b9-870a-45acf3a3259d
 caps.latest.revision: 8
 ms.author: gregvanl
 ms.openlocfilehash: 26f66f635b2c248af01067d9dbd96fd997593593
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85535559"
 ---
 # <a name="how-to-use-rule-based-ui-context-for-visual-studio-extensions"></a>如何：使用 Visual Studio 扩展的基于规则的 UI 上下文
@@ -20,7 +20,7 @@ ms.locfileid: "85535559"
  加载包可能会影响性能，并尽快加载它们，这并不是最佳做法。 Visual Studio 2015 引入了基于规则的 UI 上下文的概念，这种机制允许扩展创作者定义激活 UI 上下文并将其与 Vspackage 加载关联的精确条件。
 
 ## <a name="rule-based-ui-context"></a>基于规则的 UI 上下文
- "规则" 包含一个新的 UI 上下文（GUID）和一个引用一个或多个 "字词" 以及逻辑 "and"、"or"、"not" 运算的布尔表达式。 "字词" 会在运行时动态计算，只要其任何字词发生更改，就会重新计算表达式。 当表达式的计算结果为 true 时，将激活关联的 UI 上下文。 否则，将取消激活 UI 上下文。
+ "规则" 包含新的 UI 上下文 (GUID) 和引用一个或多个 "字词" 以及逻辑 "and"、"or"、"not" 运算的布尔表达式。 "字词" 会在运行时动态计算，只要其任何字词发生更改，就会重新计算表达式。 当表达式的计算结果为 true 时，将激活关联的 UI 上下文。 否则，将取消激活 UI 上下文。
 
  可以通过多种方式使用基于规则的 UI 上下文：
 
@@ -37,13 +37,13 @@ ms.locfileid: "85535559"
 
 1. 定义新的 UIContext GUID 并添加到 VSPackage 类 <xref:Microsoft.VisualStudio.Shell.ProvideAutoLoadAttribute> 和 <xref:Microsoft.VisualStudio.Shell.ProvideUIContextRuleAttribute> 。
 
-    例如，假设要添加一个新的 UIContext "UIContextGuid"。 创建的 GUID （可以通过单击 "工具-> 创建 guid" 创建 GUID）为 "8B40D5E2-5626-42AE-99EF-3DD1EFF46E7B"。 然后，在包类中添加以下内容：
+    例如，假设要添加一个新的 UIContext "UIContextGuid"。 创建 guid (可以通过单击 "工具"-> "创建 guid") 为 "8B40D5E2-5626-42AE-99EF-3DD1EFF46E7B" 创建 GUID。 然后，在包类中添加以下内容：
 
    ```csharp
    public const string UIContextGuid = "8B40D5E2-5626-42AE-99EF-3DD1EFF46E7B";
    ```
 
-    对于属性，请添加以下内容：（稍后将介绍这些属性的详细信息）
+    对于属性，请添加以下内容：稍后将介绍这些属性的 (详细信息) 
 
    ```csharp
    [ProvideAutoLoad(TestPackage.UIContextGuid)]
@@ -54,7 +54,7 @@ ms.locfileid: "85535559"
        termValues: new[] { "HierSingleSelectionName:.config$" })]
    ```
 
-    这些元数据定义了新的 UIContext GUID （8B40D5E2-5626-42AE-99EF-3DD1EFF46E7B）和引用单个字词 "DotConfig" 的表达式。 当活动层次结构中的当前选定内容具有与正则表达式模式 " \\ .config $" 匹配的名称（以 ".config" 结尾）时，"DotConfig" 术语的计算结果为 true。 （默认值）值为用于调试的规则定义一个可选名称。
+    这些元数据定义了新的 UIContext GUID (8B40D5E2-5626-42AE-99EF-3DD1EFF46E7B) 和引用单个术语 "DotConfig" 的表达式。 每当活动层次结构中的当前选定内容具有与正则表达式模式 ".config $" 匹配的名称时，"DotConfig" 术语将计算为 true， \\ )  (以 ".config" 结尾。  (默认) 值定义用于调试的规则的可选名称。
 
     此属性的值将添加到生成时生成时生成的 .pkgdef 中。
 
@@ -106,7 +106,7 @@ ms.locfileid: "85535559"
     termValues: new[] { VSConstants.UICONTEXT_SolutionHasSingleProject_string , VSConstants.UICONTEXT_SolutionHasMultipleProjects_string , "HierSingleSelectionName:.config$" })]
 ```
 
- 现在，表达式引用了三个字词。 前两个术语 "SingleProject" 和 "MultipleProjects" 引用其他已知的 UI 上下文（通过其 Guid）。 第三个术语 "DotConfig" 是我们前面定义的基于规则的 UI 上下文。
+ 现在，表达式引用了三个字词。 前两个术语 "SingleProject" 和 "MultipleProjects" 引用其他已知的 UI 上下文 (其 Guid) 。 第三个术语 "DotConfig" 是我们前面定义的基于规则的 UI 上下文。
 
 ## <a name="delayed-activation"></a>延迟激活
  规则可以具有可选的 "延迟"。 延迟以毫秒为单位指定。 如果存在，延迟将导致规则的 UI 上下文激活或停用延迟为该时间间隔。 如果规则更改回延迟间隔之前，则不会发生任何事情。 此机制可用于 "错开" 初始化步骤（特别是一次性初始化），而无需依赖计时器或注册空闲通知。
@@ -132,16 +132,16 @@ ms.locfileid: "85535559"
 |HierSingleSelectionName:\<pattern>|当活动层次结构中的选定内容为单个项并且所选项的名称与 "pattern" 给定的 .Net 正则表达式匹配时，将为 true。|
 |UserSettingsStoreQuery:\<query>|"查询" 表示用户设置存储中的完整路径，该路径的计算结果必须为非零值。 查询拆分为最后一个斜杠的 "集合" 和 "属性名称"。|
 |ConfigSettingsStoreQuery:\<query>|"查询" 表示配置设置存储中的完整路径，该路径的计算结果必须为非零值。 查询拆分为最后一个斜杠的 "集合" 和 "属性名称"。|
-|ActiveProjectFlavor:\<projectTypeGuid>|每当当前选择的项目为风格（聚合）并且具有与给定项目类型 GUID 匹配的风格时，此术语将为 true。|
+|ActiveProjectFlavor:\<projectTypeGuid>|每当当前选定的项目 (聚合) 并且具有与给定项目类型 GUID 匹配的口味时，此术语就为 true。|
 |ActiveEditorContentType:\<contentType>|当所选文档是具有给定内容类型的文本编辑器时，此术语为 true。|
 |ActiveProjectCapability:\<Expression>|当活动项目功能与提供的表达式匹配时，术语为 true。 表达式可以类似于 VB &#124; CSharp|
 |SolutionHasProjectCapability:\<Expression>|与上面类似，但当解决方案具有与表达式匹配的任何已加载项目时，term 为 true。|
-|SolutionHasProjectFlavor:\<projectTypeGuid>|只要解决方案包含风格（聚合）的项目，并且具有与给定项目类型 GUID 匹配的风格，就会出现这种情况。|
+|SolutionHasProjectFlavor:\<projectTypeGuid>|只要解决方案包含的项目为风格 (聚合) 并且具有与给定项目类型 GUID 匹配的风格，就会出现这种情况。|
 
 ## <a name="compatibility-with-cross-version-extension"></a>跨版本扩展的兼容性
  基于规则的 UI 上下文是 Visual Studio 2015 中的新功能，不会移植到早期版本。 这会导致针对多个版本的 Visual Studio （必须在 Visual Studio 2013 和更早版本中自动加载）的扩展/包存在问题，但可以从基于规则的 UI 上下文中获益，以防在 Visual Studio 2015 中自动加载。
 
- 为了支持此类包，注册表中的 AutoLoadPackages 条目现在可以在其值字段中提供一个标志，指示在 Visual Studio 2015 和更高版本中应跳过该条目。 这可以通过将标志选项添加到来完成 <xref:Microsoft.VisualStudio.Shell.PackageAutoLoadFlags> 。 Vspackage 现在可以将**SkipWhenUIContextRulesActive**选项添加到其 <xref:Microsoft.VisualStudio.Shell.ProvideAutoLoadAttribute> 属性，以指示应在 Visual Studio 2015 及更高版本中忽略该条目。
+ 为了支持此类包，注册表中的 AutoLoadPackages 条目现在可以在其值字段中提供一个标志，指示在 Visual Studio 2015 和更高版本中应跳过该条目。 这可以通过将标志选项添加到来完成 <xref:Microsoft.VisualStudio.Shell.PackageAutoLoadFlags> 。 Vspackage 现在可以将 **SkipWhenUIContextRulesActive** 选项添加到其 <xref:Microsoft.VisualStudio.Shell.ProvideAutoLoadAttribute> 属性，以指示应在 Visual Studio 2015 及更高版本中忽略该条目。
 
 ## <a name="extensible-ui-context-rules"></a>可扩展的 UI 上下文规则
  有时，包不能使用静态 UI 上下文规则。 例如，假设你有一个支持可扩展性的包，以便命令状态基于导入的 MEF 提供程序所支持的编辑器类型。 如果存在支持当前编辑类型的扩展，则启用该命令。 在这种情况下，包本身不能使用静态 UI 上下文规则，因为术语会根据可用的 MEF 扩展而发生变化。
