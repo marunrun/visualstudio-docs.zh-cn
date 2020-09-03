@@ -1,5 +1,5 @@
 ---
-title: IDebugexception2 |微软文档
+title: IDebugExceptionEvent2 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,14 +13,14 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: cbd53d56b21886e972b33c219367edd603cbf0d5
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80729778"
 ---
 # <a name="idebugexceptionevent2"></a>IDebugExceptionEvent2
-调试引擎 （DE） 在当前正在执行的程序中引发异常时，将此接口发送到会话调试管理器 （SDM）。
+当当前正在执行的程序中引发异常时，调试引擎 (DE) 将此接口发送到会话调试管理器 (SDM) 。
 
 ## <a name="syntax"></a>语法
 
@@ -28,33 +28,33 @@ ms.locfileid: "80729778"
 IDebugExceptionEvent2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>实施者说明
- DE 实现此接口以报告正在调试的程序中发生了异常。 [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)接口必须在与此接口相同的对象上实现。 SDM 使用[查询接口](/cpp/atl/queryinterface)访问`IDebugEvent2`接口。
+## <a name="notes-for-implementers"></a>实施者注意事项
+ DE 实现此接口，报告正在调试的程序中发生了异常。 必须在与此接口相同的对象上实现 [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) 接口。 SDM 使用 [QueryInterface](/cpp/atl/queryinterface) 访问 `IDebugEvent2` 接口。
 
-## <a name="notes-for-callers"></a>呼叫者备注
- DE 创建并发送此事件对象以报告异常。 该事件使用 SDM 在连接到正在调试的程序时提供的[IDebugEvent 回调2](../../../extensibility/debugger/reference/idebugeventcallback2.md)回调函数发送。
+## <a name="notes-for-callers"></a>调用方说明
+ DE 创建并发送此事件对象，以报告异常。 使用 SDM 在附加到正在调试的程序时提供的 [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) 回调函数发送事件。
 
 ## <a name="methods-in-vtable-order"></a>Vtable 顺序中的方法
- 下表显示了 的方法`IDebugExceptionEvent2`。
+ 下表显示的方法 `IDebugExceptionEvent2` 。
 
-|方法|描述|
+|方法|说明|
 |------------|-----------------|
-|[GetException](../../../extensibility/debugger/reference/idebugexceptionevent2-getexception.md)|获取有关触发此事件的异常的详细信息。|
-|[GetExceptionDescription](../../../extensibility/debugger/reference/idebugexceptionevent2-getexceptiondescription.md)|获取引发此事件的异常的人类可读描述。|
-|[CanPassToDebuggee](../../../extensibility/debugger/reference/idebugexceptionevent2-canpasstodebuggee.md)|确定调试引擎 （DE） 是否支持在恢复执行时将此异常传递给正在调试的程序的选项。|
-|[PassToDebuggee](../../../extensibility/debugger/reference/idebugexceptionevent2-passtodebuggee.md)|指定是否应将异常传递到执行恢复时正在调试的程序，还是应丢弃该异常。|
+|[GetException](../../../extensibility/debugger/reference/idebugexceptionevent2-getexception.md)|获取有关激发此事件的异常的详细信息。|
+|[GetExceptionDescription](../../../extensibility/debugger/reference/idebugexceptionevent2-getexceptiondescription.md)|获取引发此事件的引发异常的可读说明。|
+|[CanPassToDebuggee](../../../extensibility/debugger/reference/idebugexceptionevent2-canpasstodebuggee.md)|确定调试引擎 (DE) 是否支持将此异常传递给执行恢复时正在调试的程序的选项。|
+|[PassToDebuggee](../../../extensibility/debugger/reference/idebugexceptionevent2-passtodebuggee.md)|指定是否应在执行恢复时将异常传递给正在调试的程序，或是否应丢弃异常。|
 
 ## <a name="requirements"></a>要求
- 标题： msdbg.h
+ 标头： msdbg
 
- 命名空间：微软.VisualStudio.调试器.互通
+ 命名空间： VisualStudio
 
- 程序集：微软.VisualStudio.调试器.Interop.dll
+ 程序集： Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="remarks"></a>备注
- 在发送事件之前，DE 会检查此异常事件是否已被以前调用[SetException](../../../extensibility/debugger/reference/idebugengine2-setexception.md)指定为第一次或第二次异常。 如果已将其指定为第一次异常，则事件`IDebugExceptionEvent2`将发送到 SDM。 如果没有，DE 会给应用程序处理异常的机会。 如果未提供异常处理程序，并且该异常已指定为第二个异常，则事件`IDebugExceptionEvent2`将发送到 SDM。 否则，DE 将恢复执行程序，操作系统或运行时处理异常。
+ 在发送事件之前，将检查是否已通过之前对 [SetException](../../../extensibility/debugger/reference/idebugengine2-setexception.md)的调用将此异常事件指定为第一次或第二次异常。 如果已将该事件指定为第一次异常，则会将 `IDebugExceptionEvent2` 事件发送到 SDM。 否则，这会使应用程序有机会处理异常。 如果未提供异常处理程序，并且异常已被指定为第二次异常，则 `IDebugExceptionEvent2` 会将事件发送到 SDM。 否则，将继续执行程序，操作系统或运行时将处理此异常。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [核心接口](../../../extensibility/debugger/reference/core-interfaces.md)
 - [SetException](../../../extensibility/debugger/reference/idebugengine2-setexception.md)
 - [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)

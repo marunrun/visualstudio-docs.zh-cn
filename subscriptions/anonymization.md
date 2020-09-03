@@ -8,10 +8,10 @@ ms.date: 02/20/2020
 ms.topic: conceptual
 description: 了解订阅访问丢失时订阅者数据的匿名方式。
 ms.openlocfilehash: b65673d2fe61f62bf9e7731d20763bcd8c6f74bf
-ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80232738"
 ---
 # <a name="anonymization-of-visual-studio-subscriber-information"></a>Visual Studio 订阅者信息匿名化
