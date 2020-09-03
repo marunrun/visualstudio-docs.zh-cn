@@ -13,10 +13,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: d5fc0f5a11d29fdb1ee570dc32066fdd492ed8db
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68871542"
 ---
 # <a name="walkthrough-using-profiler-apis"></a>演练：使用探查器 API
@@ -34,9 +34,9 @@ ms.locfileid: "68871542"
 
  对于本机代码，Visual Studio 探查器 API 位于 VSPerf.dll 中。 头文件 VSPerf.h 和导入库 VSPerf.lib 位于 Microsoft Visual Studio 9\Team Tools\Performance Tools 目录中。
 
- 对于托管代码，探查器 API 位于 Microsoft.VisualStudio.Profiler.dll 中。 此 DLL 位于 Microsoft Visual Studio 9\Team Tools\Performance Tools 目录中。 有关详细信息, 请参阅[Profiler](/previous-versions/ms242704(v=vs.140))。
+ 对于托管代码，探查器 API 位于 Microsoft.VisualStudio.Profiler.dll 中。 此 DLL 位于 Microsoft Visual Studio 9\Team Tools\Performance Tools 目录中。 有关详细信息，请参阅[探查器](/previous-versions/ms242704(v=vs.140))。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
  本演练假定用户选择的开发环境配置为支持调试和采样。 以下主题概述了这些系统必备：
 
  [如何：选择收集方法](../profiling/how-to-choose-collection-methods.md)
@@ -119,15 +119,15 @@ DataCollection.CurrentId);
 
 #### <a name="to-collect-and-view-data-in-the-visual-studio-ide"></a>在 Visual Studio IDE 中收集和查看数据
 
-1. 打开 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] IDE。 在“分析”菜单上指向“探查器”，然后选择“新建性能会话”。
+1. 打开 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] IDE。 在 " **分析** " 菜单上，指向 " **探查器**"，然后选择 " **新建性能会话"。**
 
-2. 将编译的二进制文件添加到“性能资源管理器”窗口的“目标”列表中。 右键单击“目标”，然后选择“添加目标二进制文件”。 在“添加目标二进制文件”对话框中找到二进制文件，然后单击“打开”。
+2. 将编译的二进制文件添加到“性能资源管理器”**** 窗口的“目标”**** 列表中。 右键单击“目标”****，然后选择“添加目标二进制文件”****。 在“添加目标二进制文件”**** 对话框中找到二进制文件，然后单击“打开”****。
 
-3. 从“性能资源管理器”工具栏上的“方法”列表中选择“检测”。
+3. 从“性能资源管理器”**** 工具栏上的“方法”**** 列表中选择“检测”****。
 
-4. 单击“启动并启用分析功能”。
+4. 单击“启动并启用分析功能”****。
 
-    探查器将检测和执行该二进制文件，并创建一个性能报告文件。 性能报告文件将显示在“性能资源管理器”的“报告”节点中。
+    探查器将检测和执行该二进制文件，并创建一个性能报告文件。 性能报告文件将显示在“性能资源管理器”**** 的“报告”**** 节点中。
 
 5. 打开生成的性能报告文件。
 
@@ -147,9 +147,9 @@ DataCollection.CurrentId);
 
      **VsPefCLREnv /traceon**
 
-3. 键入下面的命令：**VSInstr \<文件名>.exe**
+3. 键入以下命令：**VSInstr \<filename> **
 
-4. 键入下面的命令：**VSPerfCmd /start:trace /output:\<文件名>.vsp**
+4. 键入以下命令：**VSPerfCmd/start： trace/output： \<filename> .vsp**
 
 5. 键入下面的命令：**VSPerfCmd /globaloff**
 
@@ -157,13 +157,13 @@ DataCollection.CurrentId);
 
 7. 键入下面的命令：**VSPerfCmd /shutdown**
 
-8. 键入下面的命令：**VSPerfReport /calltrace:\<文件名>.vsp**
+8. 键入以下命令：**VSPerfReport/calltrace： \<filename> .vsp**
 
      当前目录中即会创建一个 .csv 文件，该文件包含得到的性能数据。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [探查器](/previous-versions/ms242704(v=vs.140))
-- [Visual Studio 探查器 API 参考（本机）](../profiling/visual-studio-profiler-api-reference-native.md)
+- [Visual Studio 探查器 API 参考 (本机) ](../profiling/visual-studio-profiler-api-reference-native.md)
 - [入门](../profiling/getting-started-with-performance-tools.md)
-- [从命令行分析](../profiling/using-the-profiling-tools-from-the-command-line.md)
+- [通过命令行进行分析](../profiling/using-the-profiling-tools-from-the-command-line.md)

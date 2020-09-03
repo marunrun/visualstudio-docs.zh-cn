@@ -1,4 +1,4 @@
-﻿---
+---
 title: 使用 IntelliTest 为你的代码生成单元测试
 ms.date: 10/05/2015
 ms.topic: conceptual
@@ -40,7 +40,7 @@ IntelliTest 浏览你的 .NET 代码，以生成测试数据和单元测试套�
 
 1. 在 Visual Studio 中打开解决方案，然后打开包含要测试的方法的类文件。
 
-2. 右键单击一个方法并选择“运行 IntelliTest”，为方法中的代码生成单元测试。
+2. 右键单击一个方法并选择“运行 IntelliTest”，为方法中的代码生成单元测试  。
 
    ![在方法中右键单击以生成单元测试](../test/media/runpex.png)
 
@@ -128,7 +128,7 @@ IntelliTest 浏览你的 .NET 代码，以生成测试数据和单元测试套�
 
 如果添加了断言并重新运行 IntelliTest，将检查断言的有效性；如果断言无效，则测试失败。
 
-### <a name="NoRun"></a> 问：是否可以无需首先运行 IntelliTest 便生成参数化单元测试？
+### <a name="q-can-i-generate-parameterized-unit-tests-without-running-intellitest-first"></a><a name="NoRun"></a> 问：是否可以无需首先运行 IntelliTest 便生成参数化单元测试？
 
 **答：** 可以，在类或方法中单击右键，然后选择“创建 IntelliTest”  。
 
