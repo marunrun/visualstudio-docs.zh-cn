@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: eff09fb8f4423560c4681c94507d909f5864c69e
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545231"
 ---
 # <a name="ca2233-operations-should-not-overflow"></a>CA2233:运算不应溢出
@@ -46,8 +46,8 @@ ms.locfileid: "85545231"
 
 ## <a name="example-of-a-violation"></a>冲突示例
 
-### <a name="description"></a>描述
- 下面的示例中的方法操作了违反此规则的整数。 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]需要禁用**删除**整数溢出选项，此选项才会激发。
+### <a name="description"></a>说明
+ 下面的示例中的方法操作了违反此规则的整数。 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 需要禁用 **删除** 整数溢出选项，此选项才会激发。
 
 ### <a name="code"></a>代码
  [!code-csharp[FxCop.Usage.OperationOverflow#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.OperationOverflow/cs/FxCop.Usage.OperationOverflow.cs#1)]
@@ -77,7 +77,7 @@ Public Shared Sub Main()
 End Sub
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>输出
 
 ```
 2147483647
@@ -85,7 +85,7 @@ End Sub
 
 ## <a name="fix-with-input-parameter-validation"></a>修复了输入参数验证
 
-### <a name="description"></a>描述
+### <a name="description"></a>说明
  下面的示例通过验证输入的值修复了之前的冲突。
 
 ### <a name="code"></a>代码
@@ -94,7 +94,7 @@ End Sub
 
 ## <a name="fix-with-a-checked-block"></a>使用 Checked 块修复
 
-### <a name="description"></a>描述
+### <a name="description"></a>说明
  下面的示例通过在已检查的块中包装操作来修复前面的冲突。 如果操作导致溢出， <xref:System.OverflowException?displayProperty=fullName> 将引发。
 
  请注意，中不支持选中的块 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 。
@@ -107,11 +107,11 @@ End Sub
 
  **打开 C 中的选中算术溢出/下溢#**
 
-1. 在**解决方案资源管理器**中，右键单击项目，然后选择 "**属性**"。
+1. 在 **解决方案资源管理器**中，右键单击项目，然后选择 " **属性**"。
 
 2. 选择“生成”选项卡，然后单击“高级”********。
 
-3. 选择 "**检查算术溢出/下溢**" 并单击 **"确定"**。
+3. 选择 " **检查算术溢出/下溢** " 并单击 **"确定"**。
 
 ## <a name="see-also"></a>另请参阅
  <xref:System.OverflowException?displayProperty=fullName>[C # 运算符](https://msdn.microsoft.com/library/0301e31f-22ad-49af-ac3c-d5eae7f0ac43) [Checked 和 Unchecked](https://msdn.microsoft.com/library/a84bc877-2c7f-4396-8735-1ce97c42f35e)

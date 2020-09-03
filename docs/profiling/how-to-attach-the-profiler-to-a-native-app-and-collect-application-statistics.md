@@ -11,10 +11,10 @@ monikerRange: vs-2017
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 9d463413833ad476b8d6ad90369f53267e3f7cff
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85328676"
 ---
 # <a name="how-to-attach-the-profiler-to-a-native-stand-alone-application-and-collect-application-statistics-by-using-the-command-line"></a>如何：将探查器附加到本机独立应用程序，并使用命令行收集应用程序统计信息

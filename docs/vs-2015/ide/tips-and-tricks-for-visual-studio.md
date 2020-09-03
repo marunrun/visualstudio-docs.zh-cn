@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 53caca1d98b4074867757ae01d8cc9efa9692952
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85542982"
 ---
 # <a name="tips-and-tricks-for-visual-studio"></a>Visual Studio 的提示和技巧
@@ -38,7 +38,7 @@ ms.locfileid: "85542982"
 
 - [应用程序生命周期管理](../ide/tips-and-tricks-for-visual-studio.md#BKMK_ALM)
 
-## <a name="window-management"></a><a name="BKMK_WindowMgmt"></a>窗口管理
+## <a name="window-management"></a><a name="BKMK_WindowMgmt"></a> 窗口管理
 
 |命令|快捷键|
 |-|-|
@@ -49,7 +49,7 @@ ms.locfileid: "85542982"
 |显示打开的文件列表|Ctrl+Alt+向下键|
 |显示全部浮动窗口|Ctrl+Shift+M|
 
-## <a name="window-shortcuts"></a><a name="BKMK_WindowShortcuts"></a>窗口快捷方式
+## <a name="window-shortcuts"></a><a name="BKMK_WindowShortcuts"></a> 窗口快捷方式
 
 |命令|快捷键|
 |-|-|
@@ -59,7 +59,7 @@ ms.locfileid: "85542982"
 |启动新实例|Win+Shift+n|
 |在窗口之间切换|Win+n|
 
-## <a name="visual-studio-search"></a><a name="BKMK_Search"></a>Visual Studio 搜索
+## <a name="visual-studio-search"></a><a name="BKMK_Search"></a> Visual Studio 搜索
 
 |命令|快捷键|
 |-|-|
@@ -69,7 +69,7 @@ ms.locfileid: "85542982"
 |快速启动范围结果|-   @opt 选项<br />-   @cmd 命令<br />-   @mru 最近使用<br />-   @doc 打开文档|
 |在工具选项中搜索|Ctrl+E|
 
-## <a name="editor-find"></a><a name="BKMK_EditorFind"></a>编辑器查找
+## <a name="editor-find"></a><a name="BKMK_EditorFind"></a> 编辑器查找
 
 |命令|快捷键|
 |-|-|
@@ -84,7 +84,7 @@ ms.locfileid: "85542982"
 |在文件中查找|Ctrl+Shift+F|
 |在文件中替换|Ctrl+Shift+H|
 
-## <a name="code-editor"></a><a name="BKMK_CodeEditor"></a>代码编辑器
+## <a name="code-editor"></a><a name="BKMK_CodeEditor"></a> 代码编辑器
 
 |命令|快捷键|
 |-|-|
@@ -109,7 +109,7 @@ ms.locfileid: "85542982"
 |在多个查看结果之间导航|F8 和 Shift+F8|
 |在“代码编辑器”窗口和“查看定义”窗口之间切换|Shift+Esc|
 
-## <a name="toolbars"></a><a name="BKMK_Toolbars"></a>'
+## <a name="toolbars"></a><a name="BKMK_Toolbars"></a> '
 
 |命令|快捷键|
 |-|-|
@@ -137,7 +137,7 @@ ms.locfileid: "85542982"
 |即时窗口清除缓冲区|>cls|
 |即时窗口打印值|?varname|
 
-## <a name="application-lifecycle-management"></a><a name="BKMK_ALM"></a>应用程序生命周期管理
+## <a name="application-lifecycle-management"></a><a name="BKMK_ALM"></a> 应用程序生命周期管理
 
 请参阅[键盘快捷键：Visual Studio Online、TFS Web 门户和团队资源管理器](/azure/devops/project/navigation/keyboard-shortcuts?view=vsts)。
 

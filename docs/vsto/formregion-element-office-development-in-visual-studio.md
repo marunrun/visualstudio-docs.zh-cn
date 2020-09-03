@@ -1,5 +1,5 @@
 ---
-title: '&lt;n &gt; 元素（Visual Studio 中的 Office 开发）'
+title: '&lt;&gt;Visual Studio 中的 n 元素 (Office 开发) '
 titleSuffix: ''
 ms.custom: seodec18
 ms.date: 02/02/2017
@@ -15,13 +15,13 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 9e13576ef673728d673d0351cf289a80944584bd
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85543527"
 ---
-# <a name="ltformregiongt-element-office-development-in-visual-studio"></a>&lt;n &gt; 元素（Visual Studio 中的 Office 开发）
+# <a name="ltformregiongt-element-office-development-in-visual-studio"></a>&lt;&gt;Visual Studio 中的 n 元素 (Office 开发) 
   `formRegion`命名空间的元素 `vstov4` 标识与 VSTO 外接程序关联的 Microsoft Office Outlook 窗体区域。
 
 ## <a name="syntax"></a>语法
@@ -41,7 +41,7 @@ ms.locfileid: "85543527"
 
  `formRegion` 元素具有以下属性。
 
-|Attribute|说明|
+|特性|说明|
 |---------------|-----------------|
 |`name`|必需。 标识窗体区域名称。|
 
@@ -52,12 +52,12 @@ ms.locfileid: "85543527"
 
  `messageClass` 元素具有以下属性。
 
-|Attribute|说明|
+|特性|说明|
 |---------------|-----------------|
 |`name`|必需。 标识与窗体区域关联的窗体。|
 
 ## <a name="example"></a>示例
- 下面的代码示例阐释 Outlook VSTO 外接程序的应用程序清单中的 `formRegion` 元素，该外接程序是使用 [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]部署的。 其中有三个邮件类与这一个窗体区域关联。 此代码示例是[Office 解决方案的应用程序清单](../vsto/application-manifests-for-office-solutions.md)中提供的一个更大示例的一部分。
+ 下面的代码示例阐释 Outlook VSTO 外接程序的应用程序清单中的 `formRegion` 元素，该外接程序是使用 [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]部署的。 其中有三个邮件类与这一个窗体区域关联。 此代码示例是 [Office 解决方案的应用程序清单](../vsto/application-manifests-for-office-solutions.md)中提供的一个更大示例的一部分。
 
 ```xml
 <vstov4:formRegion

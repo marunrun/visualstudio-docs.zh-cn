@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: cf88661f9ec15e1a3a25e7eb6a40bbd82335a7f4
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75918725"
 ---
 # <a name="how-to-respond-to-changes-in-a-uml-model"></a>如何：响应 UML 模型中的更改
@@ -22,6 +22,6 @@ ms.locfileid: "75918725"
 > [!WARNING]
 > 这些技术不受 UML API 支持。 它们可能无法在将来版本的 Visual Studio 中使用。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [导航 UML 模型](../modeling/navigate-the-uml-model.md)[事件处理程序在模型外部传播更改](../modeling/event-handlers-propagate-changes-outside-the-model.md)
  

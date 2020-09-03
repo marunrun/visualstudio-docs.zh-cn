@@ -1,5 +1,5 @@
 ---
-title: PROGRAM_NODE_ARRAY |微软文档
+title: PROGRAM_NODE_ARRAY |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: ce84fec7a0d9223575828da105e46f43cc6cab09
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80713805"
 ---
 # <a name="program_node_array"></a>PROGRAM_NODE_ARRAY
-包含描述感兴趣的程序的对象数组。
+包含一个对象的数组，这些对象描述相关的程序。
 
 ## <a name="syntax"></a>语法
 
@@ -43,22 +43,22 @@ public struct tagPROGRAM_NODE_ARRAY {
 
 ## <a name="members"></a>成员
  `dwCount`\
- 数组中`Members`的对象数。
+ 数组中的对象数 `Members` 。
 
  `Members`\
- 描述请求的程序的[IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)对象的数组。
+ 描述所请求程序的 [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) 对象的数组。
 
 ## <a name="remarks"></a>备注
- 此结构是[PROVIDER_PROCESS_DATA](../../../extensibility/debugger/reference/provider-process-data.md)结构的一部分，而该结构又通过对[GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md)方法的调用填充。
+ 此结构是 [PROVIDER_PROCESS_DATA](../../../extensibility/debugger/reference/provider-process-data.md) 结构的一部分，该结构进而通过调用 [GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md) 方法来填充。
 
 ## <a name="requirements"></a>要求
- 标题： msdbg.h
+ 标头： msdbg
 
- 命名空间：微软.VisualStudio.调试器.互通
+ 命名空间： VisualStudio
 
- 程序集：微软.VisualStudio.调试器.Interop.dll
+ 程序集： Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [结构和联合](../../../extensibility/debugger/reference/structures-and-unions.md)
 - [PROVIDER_PROCESS_DATA](../../../extensibility/debugger/reference/provider-process-data.md)
 - [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)

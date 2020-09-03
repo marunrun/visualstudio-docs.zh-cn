@@ -15,10 +15,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: b7bc7ff09152cd0ce7b95c6de73ea98446529c44
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85815521"
 ---
 # <a name="throw-must-be-followed-by-an-expression-on-the-same-source-line"></a>同一源行中 throw 之后必须有表达式
@@ -36,7 +36,7 @@ if (denominator == 0) {
   
 - 请确保 `throw` 关键字和要引发的表达式出现在同一行上。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Error 对象](../../javascript/reference/error-object-javascript.md)   
  [throw 语句](../../javascript/reference/throw-statement-javascript.md)   
  [尝试 .。。catch .。。finally 语句](../../javascript/reference/try-dot-dot-dot-catch-dot-dot-dot-finally-statement-javascript.md)

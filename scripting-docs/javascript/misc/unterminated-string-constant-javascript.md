@@ -1,5 +1,5 @@
 ---
-title: 未终止的字符串常量（JavaScript） |Microsoft Docs
+title: JavaScript)  (未终止的字符串常量 |Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
@@ -15,10 +15,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: f59fd95b77ec6a3cd2486ff954002daeb0364321
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85815313"
 ---
 # <a name="unterminated-string-constant-javascript"></a>未终止的字符串常量 (JavaScript)
@@ -31,6 +31,6 @@ ms.locfileid: "85815313"
   
 - 将右引号添加到字符串的末尾。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [String 对象](../../javascript/reference/string-object-javascript.md)   
  [toString 方法 (Object)](../../javascript/reference/tostring-method-object-javascript.md)

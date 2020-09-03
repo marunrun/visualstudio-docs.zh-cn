@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 099be38c5585fe19c00b31c00ac3a7ddcd3d7fe2
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "76111465"
 ---
 # <a name="if-activity-designer"></a>If 活动设计器
@@ -25,14 +25,14 @@ ms.locfileid: "76111465"
 
 下表列出最有用的 <xref:System.Activities.Statements.If> 活动属性并说明如何在设计器中使用它们。
 
-|属性名|必需|用量|
+|属性名称|必选|使用情况|
 |-|--------------|-|
-|<xref:System.Activities.Statements.If.Condition%2A>|True|用于确定要执行哪个子活动的条件。 若要设置 <xref:System.Activities.Statements.If.Condition%2A>，请在 " **If** " 活动设计器或属性网格中的 "**条件**" 框中键入 Visual Basic 表达式。|
-|<xref:System.Activities.Statements.If.Else%2A>|False|<xref:System.Activities.Statements.If.Condition%2A> 为**false**时要执行的活动。 若要添加 <xref:System.Activities.Statements.If.Else%2A> 分支执行的活动，请将活动从 "**工具箱**" 拖放到 " **If** " 活动设计器上带提示文本 "将活动放置到此处" 的 " **Else** " 框中。|
-|<xref:System.Activities.Statements.If.Then%2A>|False|<xref:System.Activities.Statements.If.Condition%2A> 为**true**时要执行的活动。 若要添加由 <xref:System.Activities.Statements.If.Then%2A> 分支执行的活动，请将活动从 "**工具箱**" 拖放到 " **If** " 活动设计器上的 "Then" 框，并提示文本 "**将**活动放在此处"。|
+|<xref:System.Activities.Statements.If.Condition%2A>|正确|用于确定要执行哪个子活动的条件。 若要设置 <xref:System.Activities.Statements.If.Condition%2A> ，请在 " **If** " 活动设计器或属性网格中的 "**条件**" 框中键入 Visual Basic 表达式。|
+|<xref:System.Activities.Statements.If.Else%2A>|错误|为 false 时要执行的 <xref:System.Activities.Statements.If.Condition%2A> 活动**false**。 若要添加由分支执行的活动 <xref:System.Activities.Statements.If.Else%2A> ，请将活动从 "**工具箱**" 拖放到 " **If** " 活动设计器上带提示文本 "在此处放置活动" 的 " **Else** " 框中。|
+|<xref:System.Activities.Statements.If.Then%2A>|错误|如果为 true，则为要执行的活动 <xref:System.Activities.Statements.If.Condition%2A> 。 **true** 若要添加由分支执行的活动 <xref:System.Activities.Statements.If.Then%2A> ，请将活动从 "**工具箱**" 拖放到 " **If** " 活动设计器上带有提示文本 "将活动放置到此处" 的 " **Then** " 框中。|
 
 ## <a name="see-also"></a>另请参阅
 
-- [Sequence](../workflow-designer/sequence-activity-designer.md)
+- [序列](../workflow-designer/sequence-activity-designer.md)
 - [Parallel](../workflow-designer/parallel-activity-designer.md)
 - [控制流](../workflow-designer/control-flow-activity-designers.md)

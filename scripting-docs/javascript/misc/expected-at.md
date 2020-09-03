@@ -15,10 +15,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: 209a8793c0940511b7ecb2abb32f537a614ebf8b
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85814819"
 ---
 # <a name="expected-"></a>应输入 " \@ "
@@ -32,7 +32,7 @@ ms.locfileid: "85814819"
     @set @myvar = 1  
     ```  
   
-## <a name="see-also"></a>请参阅  
- [@set损益](../../javascript/reference/at-set-statement-javascript.md)   
+## <a name="see-also"></a>另请参阅  
+ [@set 损益](../../javascript/reference/at-set-statement-javascript.md)   
  [条件编译](../../javascript/advanced/conditional-compilation-javascript.md)   
  [条件编译变量](../../javascript/advanced/conditional-compilation-variables-javascript.md)

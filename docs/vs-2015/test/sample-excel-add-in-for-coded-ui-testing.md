@@ -11,10 +11,10 @@ caps.latest.revision: 18
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 6dc6b4385130c6341b5b3545c6c9f71dc67457f5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72672195"
 ---
 # <a name="sample-excel-add-in-for-coded-ui-testing"></a>用于编码的 UI 测试的示例 Excel 外接程序
@@ -40,10 +40,10 @@ ms.locfileid: "72672195"
  必须实现的成员是事件处理程序：`ThisAddIn_Startup()` 和 `ThisAddIn_Shutdown()`。 它们的用途是初始化或关闭 `ExcelUICommunicator` 使用的 .NET 远程通道。
 
 ## <a name="excelcodeduiaddinhelper_temporarykeypfx"></a>ExcelCodedUIAddinHelper_TemporaryKey.pfx
- 此文件包含一个由 Visual Studio Tools for Office 生成的临时安全证书，可以授予外接程序程序集在 Excel 进程中进行操作的权限，以便测试外接程序和扩展。 应删除此证书，并且在项目“属性”窗口的“签名”选项卡中创建新证书，或附加自己的测试证书。
+ 此文件包含一个由 Visual Studio Tools for Office 生成的临时安全证书，可以授予外接程序程序集在 Excel 进程中进行操作的权限，以便测试外接程序和扩展。 应删除此证书，并且在项目“属性”**** 窗口的“签名”**** 选项卡中创建新证书，或附加自己的测试证书。
 
 ## <a name="exceluicommunicator-class"></a>ExcelUICommunicator 类
  此类实现 `IExcelUITestCommunication` 接口，并从 Excel 对象模型获取请求的 UI 信息。 有关详细信息，请参阅[示例 Excel Communicator 接口](../test/sample-excel-communicator-interface.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [扩展编码的 UI 测试和操作录制以支持 Microsoft Excel](../test/extending-coded-ui-tests-and-action-recordings-to-support-microsoft-excel.md)演练：为 Excel [Office 和 SharePoint 开发](https://msdn.microsoft.com/library/2ddec047-263a-4901-a54c-a15fc8472329)[创建您的第一个 VSTO 外接程序](https://msdn.microsoft.com/library/a855e2be-3ecf-4112-a7f5-ec0f7fad3b5f)

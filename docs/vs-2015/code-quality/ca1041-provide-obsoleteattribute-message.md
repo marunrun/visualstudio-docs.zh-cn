@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: d738cf15ebe734cb74e553f38f6eb26af17e8cfd
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85542306"
 ---
 # <a name="ca1041-provide-obsoleteattribute-message"></a>CA1041:提供 ObsoleteAttribute 消息
@@ -36,7 +36,7 @@ ms.locfileid: "85542306"
  使用 <xref:System.ObsoleteAttribute?displayProperty=fullName> 未指定属性的特性标记类型或成员 <xref:System.ObsoleteAttribute.Message%2A?displayProperty=fullName> 。
 
 ## <a name="rule-description"></a>规则描述
- <xref:System.ObsoleteAttribute>用于标记不推荐使用的库类型和成员。 库使用者应避免使用任何标记为过时的类型或成员。 这是因为它可能不受支持，最终将从库的更高版本中删除。 在编译使用标记的类型或成员时 <xref:System.ObsoleteAttribute> ，将 <xref:System.ObsoleteAttribute.Message%2A> 显示该特性的属性。 这将为用户提供有关已过时的类型或成员的信息。 此信息通常包括库设计器支持过时的类型或成员的时间，以及要使用的首选替换。
+ <xref:System.ObsoleteAttribute> 用于标记不推荐使用的库类型和成员。 库使用者应避免使用任何标记为过时的类型或成员。 这是因为它可能不受支持，最终将从库的更高版本中删除。 在编译使用标记的类型或成员时 <xref:System.ObsoleteAttribute> ，将 <xref:System.ObsoleteAttribute.Message%2A> 显示该特性的属性。 这将为用户提供有关已过时的类型或成员的信息。 此信息通常包括库设计器支持过时的类型或成员的时间，以及要使用的首选替换。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
  若要修复与此规则的冲突，请将 `message` 参数添加到 <xref:System.ObsoleteAttribute> 构造函数。

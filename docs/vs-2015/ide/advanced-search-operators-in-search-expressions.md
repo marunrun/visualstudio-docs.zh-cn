@@ -17,10 +17,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: c5088fc04f4440260bdb9d3f040d99061c05d243
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72620333"
 ---
 # <a name="advanced-search-operators-in-search-expressions"></a>搜索表达式中的高级搜索运算符
@@ -31,7 +31,7 @@ ms.locfileid: "72620333"
 > [!WARNING]
 > 输入的高级搜索运算符必须以冒号结尾并且逗号前不能有空格，这样搜索引擎才能识别这些运算符。
 
-|要搜索|使用“管理”工作区中的“连接的管理组”|示例|结果|
+|要搜索|用途|示例|结果|
 |-------------------|---------|-------------|------------|
 |主题标题中的字词|title:|title:binaryreader|标题中包含“binaryreader”的主题。|
 |代码示例中的字词|code:|code:readdouble|代码示例中包含“readdouble”的的主题。|
@@ -40,7 +40,7 @@ ms.locfileid: "72620333"
 
  可使用 code: 运算符查找任意编程语言的相关内容，但它的返回结果仅包含标记为特定编程语言的内容。 下表列出了此运算符支持的编程语言：
 
-|编程语言|使用“管理”工作区中的“连接的管理组”|
+|编程语言|使用|
 |--------------------------|---------|
 |Visual Basic|code:vb<br /><br /> 或<br /><br /> code:visualbasic|
 |C#|code:c#<br /><br /> 或<br /><br /> code:csharp|
@@ -49,5 +49,5 @@ ms.locfileid: "72620333"
 |JavaScript|code:javascript<br /><br /> 或<br /><br /> code:js|
 |XAML|code:xaml|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [搜索表达式中的逻辑运算符](../ide/logical-operators-in-search-expressions.md)[全文搜索提示](../ide/full-text-search-tips.md)

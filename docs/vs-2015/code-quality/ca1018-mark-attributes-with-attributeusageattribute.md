@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 256fc281b27c483f1dda0317f7d2695fa36c47f8
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85535052"
 ---
 # <a name="ca1018-mark-attributes-with-attributeusageattribute"></a>CA1018:用 AttributeUsageAttribute 标记特性
@@ -47,7 +47,7 @@ ms.locfileid: "85535052"
  应修复与此规则的冲突，而不是排除消息。 即使属性继承，也 <xref:System.AttributeUsageAttribute> 应该提供属性以简化代码维护。
 
 ## <a name="example"></a>示例
- 下面的示例定义了两个特性。 `BadCodeMaintainerAttribute`错误地省略了 <xref:System.AttributeUsageAttribute> 语句，并 `GoodCodeMaintainerAttribute` 正确实现了本部分前面所述的属性。 请注意， `DeveloperName` 设计规则[CA1019：定义特性参数的访问器](../code-quality/ca1019-define-accessors-for-attribute-arguments.md)时，属性是必需的，出于完整性考虑，它包括在内。
+ 下面的示例定义了两个特性。 `BadCodeMaintainerAttribute` 错误地省略了 <xref:System.AttributeUsageAttribute> 语句，并 `GoodCodeMaintainerAttribute` 正确实现了本部分前面所述的属性。 请注意， `DeveloperName` 设计规则 [CA1019：定义特性参数的访问器](../code-quality/ca1019-define-accessors-for-attribute-arguments.md) 时，属性是必需的，出于完整性考虑，它包括在内。
 
  [!code-csharp[FxCop.Design.AttributeUsage#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.AttributeUsage/cs/FxCop.Design.AttributeUsage.cs#1)]
  [!code-vb[FxCop.Design.AttributeUsage#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Design.AttributeUsage/vb/FxCop.Design.AttributeUsage.vb#1)]

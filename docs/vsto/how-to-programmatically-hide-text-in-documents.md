@@ -14,16 +14,16 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 4dae19d196f830e5187fa395473c0a5482cb1d03
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85543307"
 ---
 # <a name="how-to-programmatically-hide-text-in-documents"></a>如何：以编程方式隐藏文档中的文本
   通过将 <xref:Microsoft.Office.Interop.Word._Font.Hidden%2A> 属性设置为某个特定范围文本的 <xref:Microsoft.Office.Interop.Word.Range.Font%2A> 。
 
- 例如，你可以 <xref:Microsoft.Office.Tools.Word.Bookmark> 在将文档发送到打印机之前暂时隐藏（在文档级自定义项中）或 <xref:Microsoft.Office.Interop.Word.Bookmark> （在 VSTO 外接程序中）中的文本。
+ 例如，可以在将文档 <xref:Microsoft.Office.Tools.Word.Bookmark> 发送到打印机之前，暂时隐藏文档级自定义项中的 (中的文本) 或 <xref:Microsoft.Office.Interop.Word.Bookmark> VSTO 外接程序) 中的 (。
 
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]
 
@@ -52,7 +52,7 @@ ms.locfileid: "85543307"
      [!code-csharp[Trin_VstcoreWordAutomationAddIn#107](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#107)]
 
 ## <a name="compile-the-code"></a>编译代码
- 此代码示例假定文档包含一个 <xref:Microsoft.Office.Tools.Word.Bookmark> 控件（在文档级自定义项中）或 <xref:Microsoft.Office.Interop.Word.Bookmark> 名为的控件（在 VSTO 外接程序中） `bookmark1` 。
+ 此代码示例假定文档包含 <xref:Microsoft.Office.Tools.Word.Bookmark> 文档级自定义项中的控件 () 或 <xref:Microsoft.Office.Interop.Word.Bookmark> 在名为的 VSTO 外接程序) 中的控件 (`bookmark1` 。
 
 ## <a name="see-also"></a>另请参阅
 - [如何：以编程方式打印文档](../vsto/how-to-programmatically-print-documents.md)

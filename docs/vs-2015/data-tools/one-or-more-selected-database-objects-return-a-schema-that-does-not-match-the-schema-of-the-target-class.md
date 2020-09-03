@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: a37ff592784d7c12c245337983808bd4064dc922
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72669991"
 ---
 # <a name="one-or-more-selected-database-objects-return-a-schema-that-does-not-match-the-schema-of-the-target-class"></a>一个或多个所选数据库对象返回与目标类的架构不匹配的架构
@@ -25,9 +25,9 @@ ms.locfileid: "72669991"
 
 ### <a name="to-correct-this-error"></a>更正此错误
 
-1. 单击“确定”关闭对话框。
+1. 单击“确定”关闭对话框****。
 
 2. 选择一个数据库对象，该对象返回的数据与目标类（要在 O/R 设计器中将该数据库对象拖动到它上面的类）的架构相匹配。
 
-## <a name="see-also"></a>请参阅
- [Visual Studio 中的 LINQ to SQL 工具](../data-tools/linq-to-sql-tools-in-visual-studio2.md) [DataContext 方法（o/R 设计器）](../data-tools/datacontext-methods-o-r-designer.md) [如何：创建映射到存储过程和函数的 DataContext 方法（o/r 设计器）](../data-tools/how-to-create-datacontext-methods-mapped-to-stored-procedures-and-functions-o-r-designer.md) [LINQ to SQL](https://msdn.microsoft.com/library/73d13345-eece-471a-af40-4cc7a2f11655)
+## <a name="see-also"></a>另请参阅
+ [Visual Studio 中的 LINQ to SQL 工具](../data-tools/linq-to-sql-tools-in-visual-studio2.md) [ (O/r 设计器的方法，) ](../data-tools/datacontext-methods-o-r-designer.md) [如何：创建映射到存储过程和函数的 DataContext 方法 (O/r 设计器) ](../data-tools/how-to-create-datacontext-methods-mapped-to-stored-procedures-and-functions-o-r-designer.md) [LINQ to SQL](https://msdn.microsoft.com/library/73d13345-eece-471a-af40-4cc7a2f11655)

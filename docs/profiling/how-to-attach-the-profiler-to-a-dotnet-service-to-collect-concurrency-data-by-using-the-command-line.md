@@ -11,10 +11,10 @@ monikerRange: vs-2017
 ms.workload:
 - dotnet
 ms.openlocfilehash: 24c49015915b8a1d214a833c38c5550f51c50c13
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85328691"
 ---
 # <a name="how-to-attach-the-profiler-to-a-net-service-to-collect-concurrency-data-by-using-the-command-line"></a>如何：将探查器附加到 .NET 服务，以使用命令行收集并发数据

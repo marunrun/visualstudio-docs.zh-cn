@@ -11,10 +11,10 @@ manager: crdun
 ms.workload:
 - unity
 ms.openlocfilehash: f65945f28a577201c1308694bb7196d464330dc1
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85815157"
 ---
 # <a name="use-visual-studio-tools-for-unity"></a>使用 Visual Studio Tools for Unity

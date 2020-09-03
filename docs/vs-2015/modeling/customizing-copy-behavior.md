@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 5e4cb74b075a0dc9fe538ec8a09a455b30d2964b
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75918911"
 ---
 # <a name="customizing-copy-behavior"></a>自定义复制行为
@@ -41,19 +41,19 @@ ms.locfileid: "75918911"
   用户可以根据 DSL 定义将复制的元素粘贴到可以接受元素的目标上。 例如，在从组件解决方案模板生成的 DSL 中，用户可以将端口复制到组件上，但不能复制到关系图上；并且可以将组件粘贴到关系图上，但不能粘贴到其他组件上。
 
 ## <a name="customizing-copy-and-paste-behavior"></a>自定义复制和粘贴行为
- 有关使用程序代码自定义模型的详细信息，请参阅[在程序代码中导航和更新模型](../modeling/navigating-and-updating-a-model-in-program-code.md)。
+ 有关使用程序代码自定义模型的详细信息，请参阅 [在程序代码中导航和更新模型](../modeling/navigating-and-updating-a-model-in-program-code.md)。
 
  **启用或禁用复制、剪切和粘贴。**
 在 "DSL 资源管理器" 中，设置 "**编辑器**" 节点的 "**启用复制粘贴**" 属性。
 
  **将链接复制到同一目标。** 例如，将复制的注释框链接到相同的使用者元素。
-将角色的 "**传播复制**" 属性设置为 "**仅将副本传播到链接**"。 有关详细信息，请参阅[自定义链接复制行为](#customizeLinks)。
+将角色的 " **传播复制** " 属性设置为 " **仅将副本传播到链接**"。 有关详细信息，请参阅 [自定义链接复制行为](#customizeLinks)。
 
  复制链接的元素。 例如，在复制新元素时，还建立了任何链接的注释框的副本。
-将角色的 "**传播复制**" 属性设置为 "将**副本传播到链接和相反的角色扮演**者"。 有关详细信息，请参阅[自定义链接复制行为](#customizeLinks)。
+将角色的 " **传播复制** " 属性设置为 "将 **副本传播到链接和相反的角色扮演**者"。 有关详细信息，请参阅 [自定义链接复制行为](#customizeLinks)。
 
  **通过复制和粘贴快速复制元素。** 通常，刚复制的项仍处于选中状态，并且你无法将相同类型的元素粘贴到该项上。
-将元素合并指令添加到域类，并将其设置为向前合并到父类。 这将在拖动操作上产生相同的效果。 有关详细信息，请参阅[自定义元素创建和移动](../modeling/customizing-element-creation-and-movement.md)。
+将元素合并指令添加到域类，并将其设置为向前合并到父类。 这将在拖动操作上产生相同的效果。 有关详细信息，请参阅 [自定义元素创建和移动](../modeling/customizing-element-creation-and-movement.md)。
 
  \- 或 -
 
@@ -77,18 +77,18 @@ partial class MyDslClipboardCommandSet
 
 ```
 
- **当用户粘贴到选定目标时创建其他链接。** 例如，在将注释框粘贴到元素上时，它们之间即创建一个链接。
-将元素合并指令添加到目标域类，并将其设置为通过添加链接来处理合并。 这将在拖动操作上产生相同的效果。 有关详细信息，请参阅[自定义元素创建和移动](../modeling/customizing-element-creation-and-movement.md)。
+ **当用户粘贴到选定的目标上时创建附加链接。** 例如，在将注释框粘贴到元素上时，它们之间即创建一个链接。
+将元素合并指令添加到目标域类，并将其设置为通过添加链接来处理合并。 这将在拖动操作上产生相同的效果。 有关详细信息，请参阅 [自定义元素创建和移动](../modeling/customizing-element-creation-and-movement.md)。
 
  \- 或 -
 
  重写 `ClipboardCommandSet.ProcessOnPasteCommand()` 以在调用基方法后创建附加链接。
 
- **自定义可将元素复制**到外部应用程序的格式-例如，将边框添加到位图窗体。
-在 DslPackage 项目中重写*MyDsl*`ClipboardCommandSet.ProcessOnMenuCopyCommand()`。
+ **自定义可将元素复制** 到外部应用程序的格式-例如，将边框添加到位图窗体。
+*MyDsl* `ClipboardCommandSet.ProcessOnMenuCopyCommand()` 在 DslPackage 项目中重写 MyDsl。
 
- **自定义通过复制命令（而不是在拖动操作中）将元素复制到剪贴板的方式。**
-在 DslPackage 项目中重写*MyDsl*`ClipboardCommandSet.CopyModelElementsIntoElementGroupPrototype()`。
+ **自定义通过复制命令（而非采用拖动操作）将元素复制到剪贴板的方式。**
+*MyDsl* `ClipboardCommandSet.CopyModelElementsIntoElementGroupPrototype()` 在 DslPackage 项目中重写 MyDsl。
 
  **通过复制和粘贴保留形状布局。**
 当用户复制多个形状时，可以在粘贴它们时保留其相对位置。 
@@ -215,12 +215,12 @@ partial class MyDslClipboardCommandSet // EDIT NAME
 ```
 
  **让用户拖放元素。**
-请参阅[如何：添加拖放处理程序](../modeling/how-to-add-a-drag-and-drop-handler.md)。
+请参阅 [如何：添加拖放处理程序](../modeling/how-to-add-a-drag-and-drop-handler.md)。
 
-## <a name="customizeLinks"></a>自定义链接复制行为
- 当用户复制元素时，标准行为是还会复制所有嵌入元素。 可以修改标准复制行为。 在 DSL 定义中，选择关系中一方的角色，并在属性窗口设置 "**传播复制**" 值。
+## <a name="customizing-link-copy-behavior"></a><a name="customizeLinks"></a> 自定义链接复制行为
+ 当用户复制元素时，标准行为是还会复制所有嵌入元素。 可以修改标准复制行为。 在 DSL 定义中，选择关系中一方的角色，并在属性窗口设置 " **传播复制** " 值。
 
- ![传播域角色的复制属性](../modeling/media/dslpropagatescopy.png "DslPropagatesCopy")
+ ![传播域角色的 Copy 属性](../modeling/media/dslpropagatescopy.png "DslPropagatesCopy")
 
  有三个值：
 
@@ -230,7 +230,7 @@ partial class MyDslClipboardCommandSet // EDIT NAME
 
 - 将复制传播到链接和相反的角色扮演者 - 复制的组包括位于链接另一端上的元素的副本。
 
-  ![用 PropagateCopyToLinkOnly 复制的效果](../modeling/media/dslpropagatecopy.png "DslPropagateCopy")
+  ![使用 PropagateCopyToLinkOnly 进行复制的效果](../modeling/media/dslpropagatecopy.png "DslPropagateCopy")
 
   所进行的更改将同时影响元素和复制的图像。
 
@@ -238,7 +238,7 @@ partial class MyDslClipboardCommandSet // EDIT NAME
  与复制、粘贴、创建和删除对象有关的 DSL 行为的许多方面都由耦合到关系图的 <xref:Microsoft.VisualStudio.Modeling.ElementOperations> 的实例控制。 通过从 <xref:Microsoft.VisualStudio.Modeling.ElementOperations> 中派生自己的类并重写关系图类的 <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.ElementOperations%2A> 属性，可修改 DSL 的行为。
 
 > [!TIP]
-> 有关使用程序代码自定义模型的详细信息，请参阅[在程序代码中导航和更新模型](../modeling/navigating-and-updating-a-model-in-program-code.md)。
+> 有关使用程序代码自定义模型的详细信息，请参阅 [在程序代码中导航和更新模型](../modeling/navigating-and-updating-a-model-in-program-code.md)。
 
  ![复制操作的序列图](../modeling/media/dslcopyseqdiagram.png "dslCopySeqDiagram")
 
@@ -248,7 +248,7 @@ partial class MyDslClipboardCommandSet // EDIT NAME
 
 1. 在 DSL 项目的新文件中，创建派生自 <xref:Microsoft.VisualStudio.Modeling.Diagrams.DesignSurfaceElementOperations> 的类。
 
-2. 为关系图类添加分部类定义。 此类的名称可以在**Dsl\GeneratedCode\Diagrams.cs**中找到。
+2. 为关系图类添加分部类定义。 此类的名称可以在 **Dsl\GeneratedCode\Diagrams.cs**中找到。
 
     在关系图类中，重写 <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.ElementOperations%2A> 以返回 ElementOperations 子类的实例。 应在每次调用时返回同一个实例。
 
@@ -287,16 +287,16 @@ using Microsoft.VisualStudio.Modeling.Diagrams.ExtensionEnablement;
 ```
 
 ## <a name="receiving-items-dragged-from-other-models"></a>接收从其他模型拖动的项
- ElementOperations 还可用于定义复制、移动、删除和拖放行为。 作为 ElementOperations 用法的演示，此处提供的示例将定义自定义拖放行为。 但出于这一目的，您可以考虑[如何：添加拖放处理程序](../modeling/how-to-add-a-drag-and-drop-handler.md)中介绍的替代方法，这是更可扩展的方法。
+ ElementOperations 还可用于定义复制、移动、删除和拖放行为。 作为 ElementOperations 用法的演示，此处提供的示例将定义自定义拖放行为。 但出于这一目的，您可以考虑 [如何：添加拖放处理程序](../modeling/how-to-add-a-drag-and-drop-handler.md)中介绍的替代方法，这是更可扩展的方法。
 
  在 ElementOperations 类中定义两个方法：
 
-- `CanMerge(ModelElement targetElement, System.Windows.Forms.IDataObject data)` 确定源元素是否可拖动到目标形状、连接符或关系图上。
+- `CanMerge(ModelElement targetElement, System.Windows.Forms.IDataObject data)` 这确定是否可以将源元素拖动到目标形状、连接符或关系图上。
 
-- `MergeElementGroupPrototype(ModelElement targetElement, ElementGroupPrototype sourcePrototype)`，它将源元素与目标组合在一起。
+- `MergeElementGroupPrototype(ModelElement targetElement, ElementGroupPrototype sourcePrototype)` 它将源元素与目标组合在一起。
 
 ### <a name="canmerge"></a>CanMerge()
- 当鼠标在关系图中移动时，将调用 `CanMerge()` 来确定应向用户提供的反馈。 该方法的参数是在其上鼠标悬停的元素，以及有关源的数据（拖动操作从该源执行）。 用户可以从屏幕上的任何位置进行拖动。 因此，源对象可以为多种不同类型，并且可以采用不同的格式进行序列化。 如果源是 DSL 或 UML 模型，则数据参数是 <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> 的序列化。 拖动、复制和工具箱操作使用 ElementGroupPrototypes 来表示模型的片段。
+ `CanMerge()` 当鼠标移动到关系图上时，将调用来确定应向用户提供的反馈。 该方法的参数是在其上鼠标悬停的元素，以及有关源的数据（拖动操作从该源执行）。 用户可以从屏幕上的任何位置进行拖动。 因此，源对象可以为多种不同类型，并且可以采用不同的格式进行序列化。 如果源是 DSL 或 UML 模型，则数据参数是 <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> 的序列化。 拖动、复制和工具箱操作使用 ElementGroupPrototypes 来表示模型的片段。
 
  元素组原型可以包含任意数目的元素和链接。 元素类型可由其 GUID 标识。 GUID 属于已拖动的形状，而不属于基础模型元素。 在以下示例中，如果将来自 UML 关系图的类形状拖动到此关系图上，则 `CanMerge()` 将返回 True。
 
@@ -375,9 +375,9 @@ private ElementGroupPrototype ConvertDraggedTypeToLocal (MyTargetShape snapshot,
 ## <a name="standard-copy-behavior"></a>标准复制行为
  此部分中的代码将显示可进行重写以更改复制行为的方法。 为了帮助你了解如何实现自己的自定义，此部分显示了可重写涉及复制的方法但不更改标准行为的代码。
 
- 当用户按 CTRL+C 或使用“复制”菜单命令时，将调用方法 <xref:Microsoft.VisualStudio.Modeling.Shell.ClipboardCommandSet.ProcessOnMenuCopyCommand%2A>。 你可以在**DslPackage\Generated Code\CommandSet.cs**中了解这是如何设置的。 有关如何设置命令的详细信息，请参阅[如何：向快捷菜单中添加命令](../modeling/how-to-add-a-command-to-the-shortcut-menu.md)。
+ 当用户按 CTRL+C 或使用“复制”菜单命令时，将调用方法 <xref:Microsoft.VisualStudio.Modeling.Shell.ClipboardCommandSet.ProcessOnMenuCopyCommand%2A>。 你可以在 **DslPackage\Generated Code\CommandSet.cs**中了解这是如何设置的。 有关如何设置命令的详细信息，请参阅 [如何：向快捷菜单中添加命令](../modeling/how-to-add-a-command-to-the-shortcut-menu.md)。
 
- 可以通过在 DslPackage 项目中添加*MyDsl*`ClipboardCommandSet` 的分部类定义来替代 ProcessOnMenuCopyCommand。
+ 可以通过*MyDsl* `ClipboardCommandSet` 在 DslPackage 项目中添加 MyDsl 的分部类定义来替代 ProcessOnMenuCopyCommand。
 
 ```csharp
 using System.Collections.Generic;
@@ -563,6 +563,6 @@ namespace Company.MyDsl
 
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [自定义元素创建和移动](../modeling/customizing-element-creation-and-movement.md)[如何：添加拖放处理程序](../modeling/how-to-add-a-drag-and-drop-handler.md)[自定义删除行为](../modeling/customizing-deletion-behavior.md)
  

@@ -19,17 +19,17 @@ caps.latest.revision: 29
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 0f124e997669370e71819cf37423d0c2d6a414d7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7c8e0b0eb1c1016ac8e5351ff55df23b44d26824
+ms.sourcegitcommit: a3edc753c951f317b67ce294cd2fc74f0c45390c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72658059"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89426702"
 ---
 # <a name="n-tier-data-applications-overview"></a>N 层数据应用程序概述
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-N 层 * 数据应用程序是指分为多个 *层*的数据应用程序。 也称为 "分布式应用程序" 和 "多层应用程序"，n 层应用程序将处理单独处理到在客户端和服务器之间分布的离散层。 开发访问数据的应用程序时，应在构成应用程序的各个层之间明确分隔。
+*N 层* 数据应用程序是分为多个 *层*的数据应用程序。 也称为 "分布式应用程序" 和 "多层应用程序"，n 层应用程序将处理单独处理到在客户端和服务器之间分布的离散层。 开发访问数据的应用程序时，应在构成应用程序的各个层之间明确分隔。
 
  典型的 n 层应用程序包括一个表示层、一个中间层和一个数据层。 分隔 n 层应用程序中各个层的最简单方法是为每个要包括在应用程序中的层创建不同的项目。 例如，表示层可能是 Windows 窗体应用程序，而数据访问逻辑可能是位于中间层的类库。 此外，表示层可以通过服务（如服务）与中间层中的数据访问逻辑通信。 将应用程序组件分离到不同的层可提高应用程序的可维护性和可伸缩性。 为实现此功能，可更轻松地采用可应用于单个层的新技术，而无需重新设计整个解决方案。 此外，n 层应用程序通常将敏感信息存储在中间层中，这会保持与表示层的隔离。
 

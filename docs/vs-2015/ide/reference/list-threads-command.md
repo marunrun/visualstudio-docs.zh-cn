@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: fc11479901785b19235e0962d3ae90e552e5b33b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72671138"
 ---
 # <a name="list-threads-command"></a>“列出线程”命令
@@ -33,7 +33,7 @@ ms.locfileid: "72671138"
 Debug.ListThreads [index]
 ```
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
  `index`（可选）。 通过索引来选择要用作当前线程的线程。
 
 ## <a name="remarks"></a>备注

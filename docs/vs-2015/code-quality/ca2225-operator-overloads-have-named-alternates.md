@@ -16,35 +16,35 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 2dc43e92b92b6f963900057a76dfe88e38a3638f
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545218"
 ---
 # <a name="ca2225-operator-overloads-have-named-alternates"></a>CA2225:运算符重载具有命名的备用项
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|Item|值|
+|项|值|
 |-|-|
 |TypeName|OperatorOverloadsHaveNamedAlternates|
 |CheckId|CA2225|
-|Category|Microsoft. 使用情况|
+|类别|Microsoft. 使用情况|
 |是否重大更改|非重大更改|
 
 ## <a name="cause"></a>原因
  检测到运算符重载，但未找到预期的指定备用方法。
 
 ## <a name="rule-description"></a>规则描述
- 运算符重载允许使用符号来表示类型的计算。 例如，重载加号（+）以添加的类型通常具有一个名为 "Add" 的备用成员。 命名的备用成员提供与运算符相同的功能的访问权限，并且为以不支持重载运算符的语言编写的开发人员提供。
+ 运算符重载允许使用符号来表示类型的计算。 例如，重载加号符号 (+) 的类型通常具有一个名为 "Add" 的备用成员。 命名的备用成员提供与运算符相同的功能的访问权限，并且为以不支持重载运算符的语言编写的开发人员提供。
 
  此规则检查下表中列出的运算符。
 
 |C#|Visual Basic|C++|备用名称|
 |---------|------------------|-----------|--------------------|
-|+ （二进制）|+|+ （二进制）|添加|
+|+ (二进制) |+|+ (二进制) |添加|
 |+=|+=|+=|添加|
-|&|且|&|BitwiseAnd|
+|&|And|&|BitwiseAnd|
 |&=|And =|&=|BitwiseAnd|
 |&#124;|或|&#124;|BitwiseOr|
 |&#124;=|Or =|&#124;=|BitwiseOr|
@@ -67,21 +67,21 @@ ms.locfileid: "85545218"
 |!|空值|!|LogicalNot|
 |%|Mod|%|Mod 或余数|
 |%=|空值|%=|Mod|
-|* （二进制）|*|*|乘|
+|* (二进制) |*|*|乘|
 |*=|空值|*=|乘|
 |~|Not|~|OnesComplement|
 |>>|>>|>>|右 shift|
 =|空值|>>=|右 shift|
-|-（二进制）|-（二进制）|-（二进制）|减|
+|- (二元) |- (二元) |- (二元) |减|
 |-=|空值|-=|减|
-|true|IsTrue|空值|IsTrue （属性）|
+|true|IsTrue|空值|IsTrue (属性) |
 | - (unary)   |空值|-|Negate|
-|+ （一元）|空值|+|加大|
-|false|IsFalse|False|IsTrue （属性）|
+|+ (一元) |空值|+|加大|
+|false|IsFalse|错误|IsTrue (属性) |
 
  不能以所选语言重载 N/A = =。
 
- 此规则还 `SomeType` 通过检查名为和的方法，检查类型（）中的隐式和显式强制转换运算符 `ToSomeType` `FromSomeType` 。
+ 此规则还 `SomeType` 通过检查名为和的方法，检查类型 () 中的隐式和显式强制转换运算符 `ToSomeType` `FromSomeType` 。
 
  在 c # 中，当重载二元运算符时，也会隐式重载相应的赋值运算符（如果有）。
 

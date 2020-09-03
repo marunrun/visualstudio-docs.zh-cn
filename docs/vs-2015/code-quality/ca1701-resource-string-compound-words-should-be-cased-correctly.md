@@ -16,20 +16,20 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 7c1c3b0fd6cf3a25d5db9e3039d4dc5d8364a18e
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85544100"
 ---
 # <a name="ca1701-resource-string-compound-words-should-be-cased-correctly"></a>CA1701:资源字符串组合词应采用正确的大小写
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|Item|值|
+|项|值|
 |-|-|
 |TypeName|ResourceStringCompoundWordsShouldBeCasedCorrectly|
 |CheckId|CA1701|
-|Category|Microsoft。命名|
+|类别|Microsoft。命名|
 |是否重大更改|不间断|
 
 ## <a name="cause"></a>原因
@@ -46,7 +46,7 @@ ms.locfileid: "85544100"
 ## <a name="when-to-suppress-warnings"></a>何时禁止显示警告
  如果拼写词典识别了复合单词的两个部分，并且目的是使用两个词，则可以安全地禁止显示此规则发出的警告。
 
- 还可以向拼写检查器的自定义字典中添加复合单词。 自定义字典中的单词不会导致冲突。 有关详细信息，请参阅[如何：自定义代码分析字典](../code-quality/how-to-customize-the-code-analysis-dictionary.md)。
+ 还可以向拼写检查器的自定义字典中添加复合单词。 自定义字典中的单词不会导致冲突。 有关详细信息，请参阅 [如何：自定义代码分析字典](../code-quality/how-to-customize-the-code-analysis-dictionary.md)。
 
 ## <a name="related-rules"></a>相关规则
  [CA1702:组合词应采用正确的大小写](../code-quality/ca1702-compound-words-should-be-cased-correctly.md)

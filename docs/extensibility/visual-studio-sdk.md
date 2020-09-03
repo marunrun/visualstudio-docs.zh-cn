@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 67ba3664ee9ea3e349aa4e5e9c01eed04ecddb45
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "84173560"
 ---
 # <a name="visual-studio-sdk"></a>Visual Studio SDK
@@ -38,34 +38,34 @@ Visual Studio SDK 可帮助你扩展 Visual Studio 的功能，或将新功能�
 
 - 通过 Visual Studio Marketplace 与数百万个开发人员联系
 
-  如果你之前从未编写过 Visual Studio 扩展，则应在[开始开发 Visual studio 扩展](../extensibility/starting-to-develop-visual-studio-extensions.md)时找到有关这些功能的详细信息。
+  如果你之前从未编写过 Visual Studio 扩展，则应在 [开始开发 Visual studio 扩展](../extensibility/starting-to-develop-visual-studio-extensions.md)时找到有关这些功能的详细信息。
 
 ## <a name="install-the-visual-studio-sdk"></a>安装 Visual Studio SDK
- Visual Studio SDK 是 Visual Studio 安装程序中的一项可选功能。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅[安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
+ Visual Studio SDK 是 Visual Studio 安装程序中的一项可选功能。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
 
 ## <a name="whats-new-in-the-visual-studio-sdk"></a>Visual Studio SDK 的新增功能
- Visual Studio SDK 具有一些新功能，例如同步加载扩展警告和 VSIX v3 格式以及重大更改，这可能要求你更新扩展。 有关详细信息，请参阅[Visual studio 2019 sdk 的新增功能](../extensibility/whats-new-visual-studio-2019-sdk.md)和[VISUAL studio 2017 sdk 的新增](../extensibility/what-s-new-in-the-visual-studio-2017-sdk.md)功能。
+ Visual Studio SDK 具有一些新功能，例如同步加载扩展警告和 VSIX v3 格式以及重大更改，这可能要求你更新扩展。 有关详细信息，请参阅 [Visual studio 2019 sdk 的新增功能](../extensibility/whats-new-visual-studio-2019-sdk.md) 和 [VISUAL studio 2017 sdk 的新增](../extensibility/what-s-new-in-the-visual-studio-2017-sdk.md)功能。
 
 ## <a name="visual-studio-user-experience-guidelines"></a>Visual Studio 用户体验指南
- 获取有关在[Visual Studio 用户体验指南](../extensibility/ux-guidelines/visual-studio-user-experience-guidelines.md)中设计扩展 UI 的极佳技巧。
+ 获取有关在 [Visual Studio 用户体验指南](../extensibility/ux-guidelines/visual-studio-user-experience-guidelines.md)中设计扩展 UI 的极佳技巧。
 
- 你还可以了解如何在高 DPI 设备上提供扩展，并显示[地址 DPI 问题](../extensibility/addressing-dpi-issues2.md)一文。
+ 你还可以了解如何在高 DPI 设备上提供扩展，并显示 [地址 DPI 问题](../extensibility/addressing-dpi-issues2.md) 一文。
 
- 利用[映像服务和目录](../extensibility/image-service-and-catalog.md)获得极佳的图像管理，并提供高 DPI 和主题的支持。
+ 利用 [映像服务和目录](../extensibility/image-service-and-catalog.md) 获得极佳的图像管理，并提供高 DPI 和主题的支持。
 
 ## <a name="find-and-install-existing-visual-studio-extensions"></a>查找并安装现有的 Visual Studio 扩展
- 可以在 "**工具**" 菜单上的 "**扩展和更新**" 对话框中找到 Visual Studio 扩展。 有关详细信息，请参阅[查找和使用 Visual Studio 扩展](../ide/finding-and-using-visual-studio-extensions.md)。 你还可以在[Visual Studio Marketplace](https://marketplace.visualstudio.com/)中找到扩展
+ 可以在 "**工具**" 菜单上的 "**扩展和更新**" 对话框中找到 Visual Studio 扩展。 有关详细信息，请参阅 [查找和使用 Visual Studio 扩展](../ide/finding-and-using-visual-studio-extensions.md)。 你还可以在[Visual Studio Marketplace](https://marketplace.visualstudio.com/)中找到扩展
 
 ## <a name="visual-studio-sdk-reference"></a>Visual Studio SDK 参考
- 可在[Visual STUDIO Sdk 参考](../extensibility/visual-studio-sdk-reference.md)中找到 VISUAL STUDIO sdk API 参考。
+ 可在 [Visual STUDIO Sdk 参考](../extensibility/visual-studio-sdk-reference.md)中找到 VISUAL STUDIO sdk API 参考。
 
 ## <a name="visual-studio-sdk-samples"></a>Visual Studio SDK 示例
- 可在 GitHub 上的[Visual Studio 示例](https://github.com/Microsoft/VSSDK-Extensibility-Samples)中找到 VS SDK 扩展的开源示例。 此 GitHub 存储库包含说明 Visual Studio 中各种可扩展功能的示例。
+ 可在 GitHub 上的 [Visual Studio 示例](https://github.com/Microsoft/VSSDK-Extensibility-Samples)中找到 VS SDK 扩展的开源示例。 此 GitHub 存储库包含说明 Visual Studio 中各种可扩展功能的示例。
 
 ## <a name="other-visual-studio-sdk-resources"></a>其他 Visual Studio SDK 资源
- 如果对 VSSDK 有疑问或想要分享开发扩展的经验，可以使用[Visual Studio 扩展性论坛](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vsx)或[ExtendVS Gitter Chatroom](https://gitter.im/Microsoft/extendvs)。
+ 如果对 VSSDK 有疑问或想要分享开发扩展的经验，可以使用 [Visual Studio 扩展性论坛](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vsx) 或 [ExtendVS Gitter Chatroom](https://gitter.im/Microsoft/extendvs)。
 
- 可以在[VSX Arcana 博客](https://blogs.msdn.microsoft.com/vsx/)和 Microsoft mvp 编写的大量博客中找到详细信息：
+ 可以在 [VSX Arcana 博客](https://blogs.msdn.microsoft.com/vsx/) 和 Microsoft mvp 编写的大量博客中找到详细信息：
 
 - [最喜爱的 Visual Studio 扩展](https://scottdorman.blog/2014/10/05/favorite-visual-studio-extensions/)
 

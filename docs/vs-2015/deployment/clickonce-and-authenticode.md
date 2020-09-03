@@ -20,10 +20,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: a8f7fd108250a406339d5be08b5a6e9aaf67d039
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75917568"
 ---
 # <a name="clickonce-and-authenticode"></a>ClickOnce 和 Authenticode
@@ -36,7 +36,7 @@ Authenticode * 是一种 Microsoft 技术，它使用行业标准加密来签署
 ## <a name="authenticode-and-code-signing"></a>验证码和代码签名  
  *数字证书* 是一个包含一个加密公钥/私钥对和元数据的文件，元数据描述了向其颁发证书的发行者以及颁发证书的机构。  
   
- 有各种类型的验证码证书。 每种验证码证书为不同类型的签名而配置。 对于 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 应用程序，必须具有对代码签名有效的验证码证书。 如果尝试使用其他类型证书（如数字电子邮件证书）对 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 应用程序进行签名，将不起作用。 有关详细信息，请参阅 [Introduction to Code Signing](https://msdn.microsoft.com/library/ms537361.aspx)（代码签名简介）。  
+ 有各种类型的验证码证书。 每种验证码证书为不同类型的签名而配置。 对于 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 应用程序，必须具有对代码签名有效的验证码证书。 如果尝试使用其他类型证书（如数字电子邮件证书）对 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 应用程序进行签名，将不起作用。 有关详细信息，请参阅[代码签名简介](https://msdn.microsoft.com/library/ms537361.aspx)。  
   
  可以通过以下三种方法之一获取代码签名证书：  
   
@@ -47,11 +47,11 @@ Authenticode * 是一种 Microsoft 技术，它使用行业标准加密来签署
 - 使用 [!INCLUDE[winsdklong](../includes/winsdklong-md.md)]附带的 MakeCert.exe 生成自己的证书。  
   
 ### <a name="how-using-certificate-authorities-helps-users"></a>使用证书颁发机构对用户的好处  
- 使用 MakeCert 实用工具生成的证书通常称为 "*自证书*" 或 "*测试证书*"。这种证书的工作方式与 .NET Framework 中的 .snk 文件的工作方式大致相同。 它只包含公钥/私钥加密密钥对，不包含有关发行者的可验证信息。 可以使用自发证书在 Intranet 上部署具有高信任级别的 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 应用程序。 但是，当这些应用程序在客户端计算机上运行时， [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 会将它们标识为来自未知发行者。 默认情况下，使用自发证书签名并在 Internet 上部署的 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 应用程序不能使用受信任的应用程序部署。  
+ 使用 MakeCert.exe 实用工具生成的证书通常称为 " *自证书* " 或 " *测试证书*"。这种证书的工作方式与 .NET Framework 中的 .snk 文件的工作方式大致相同。 它只包含公钥/私钥加密密钥对，不包含有关发行者的可验证信息。 可以使用自发证书在 Intranet 上部署具有高信任级别的 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 应用程序。 但是，当这些应用程序在客户端计算机上运行时， [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 会将它们标识为来自未知发行者。 默认情况下，使用自发证书签名并在 Internet 上部署的 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 应用程序不能使用受信任的应用程序部署。  
   
  相反，从 CA（如证书供应商或企业内部部门）收到的证书可以为你的用户提供更高的安全性。 该证书不仅会标识已签名软件的发行者，还会通过与签发该证书的 CA 进行核实来验证发行者的身份。 如果 CA 不是根证书颁发机构，验证码还会沿证书链回溯到根颁发机构来验证该 CA 是否有权颁发证书。 为了提高安全性，应尽量使用 CA 颁发的证书。  
   
- 有关生成自证书的详细信息，请参阅[Makecert （证书创建工具）](https://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d)。  
+ 有关生成自证书的详细信息，请参阅 [)Makecert.exe (证书创建工具 ](https://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d)。  
   
 ### <a name="timestamps"></a>时间戳  
  用于对 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 应用程序签名的证书在特定时间长度（通常为 12 个月）后会过期。 为了避免不断使用新证书对应用程序重新签名， [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 支持时间戳。 使用时间戳对应用程序签名，只要时间戳有效，即使过期之后证书仍将被接受。 这将允许下载和运行证书已过期，但时间戳有效的 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 应用程序。 还允许使用过期证书的已安装应用程序继续下载和安装更新。  
@@ -71,8 +71,8 @@ Authenticode * 是一种 Microsoft 技术，它使用行业标准加密来签署
   
 - 可以在文件系统上将证书存储为.pfx 文件，或将其存储在密钥容器中。 Windows 域上的用户可拥有若干数目的密钥容器。 默认情况下，MakeCert.exe 会将证书存储在个人密钥容器中，除非指定将其保存为 .pfx。 用于创建 [!INCLUDE[winsdkshort](../includes/winsdkshort-md.md)] 部署的 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] Mage.exe 和 MageUI.exe 允许你使用上述任一方式存储的证书。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [ClickOnce 安全和部署](../deployment/clickonce-security-and-deployment.md)   
  [保护 ClickOnce 应用程序](../deployment/securing-clickonce-applications.md)   
- [Trusted Application Deployment Overview](../deployment/trusted-application-deployment-overview.md)   
+ [受信任的应用程序部署概述](../deployment/trusted-application-deployment-overview.md)   
  [Mage.exe（清单生成和编辑工具）](https://msdn.microsoft.com/library/77dfe576-2962-407e-af13-82255df725a1)

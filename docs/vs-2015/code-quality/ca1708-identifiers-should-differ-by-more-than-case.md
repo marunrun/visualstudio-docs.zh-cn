@@ -16,20 +16,20 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 22a33c852b941b4c7e7398416aa1e74e69ff1786
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85544035"
 ---
 # <a name="ca1708-identifiers-should-differ-by-more-than-case"></a>CA1708:标识符应以大小写之外的差别进行区分
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|Item|值|
+|项|值|
 |-|-|
 |TypeName|IdentifiersShouldDifferByMoreThanCase|
 |CheckId|CA1708|
-|Category|Microsoft。命名|
+|类别|Microsoft。命名|
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因

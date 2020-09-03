@@ -9,10 +9,10 @@ caps.latest.revision: 11
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: ac9a4517fcf13dbb0e1d7a6f994092168723e660
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72672154"
 ---
 # <a name="sample-excel-extension-technologymanager-class"></a>示例 Excel 扩展：TechnologyManager 类
@@ -60,7 +60,7 @@ ms.locfileid: "72672154"
 ## <a name="getexcelelement-internal-method"></a>GetExcelElement 内部方法
  此内部方法使用一个窗口句柄和有关 Excel 元素的信息，并返回所请求的 Excel 元素。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyManager> <xref:System.NotSupportedException>
  <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement>
  <xref:System.Runtime.InteropServices.ComVisibleAttribute>

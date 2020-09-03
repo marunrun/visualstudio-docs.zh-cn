@@ -14,13 +14,13 @@ ms.assetid: 8a512060-d744-47af-a83e-4ba42ea2c5b2
 author: mikejo5000
 ms.author: mikejo
 ms.openlocfilehash: 874f7c0e5dcfaf4881c059a77f1c5e930d8c0578
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85814832"
 ---
-# <a name="access-is-denied"></a>访问被拒绝
+# <a name="access-is-denied"></a>拒绝访问
 脚本尝试从当前页的主机以外的源访问数据。 后跟 Internet Explorer 及其他浏览器的同一初始策略允许脚本只从具备当前页 URL 的同一方案、主机和端口的源访问数据。  
   
  例如，如果当前页为 `https://employees.mycompany.com` ，则无法从以下 url 访问数据：  

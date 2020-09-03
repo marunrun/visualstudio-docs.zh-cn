@@ -15,10 +15,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: 09ab257e6c473e2747a24559200e7b1f432d5687
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85815274"
 ---
 # <a name="vbarray-expected"></a>缺少 VBArray
@@ -32,8 +32,8 @@ new VBArray(safeArray);
   
 ### <a name="to-correct-this-error"></a>更正此错误  
   
-- 请确保仅将**VBArray**对象传递给**VBArray**构造函数。  
+- 请确保仅将 **VBArray** 对象传递给 **VBArray** 构造函数。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [VBArray 对象](../../javascript/reference/vbarray-object-javascript.md)   
  [使用数组](../../javascript/advanced/using-arrays-javascript.md)

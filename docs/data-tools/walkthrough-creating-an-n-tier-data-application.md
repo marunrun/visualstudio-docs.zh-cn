@@ -14,12 +14,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: a88f0382a93027cc952dfe44f0027e6ab1076a45
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a09ef4cec4b7c2921322b934eef39ba660d02587
+ms.sourcegitcommit: a3edc753c951f317b67ce294cd2fc74f0c45390c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75916499"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89426650"
 ---
 # <a name="walkthrough-create-an-n-tier-data-application"></a>演练：创建 n 层数据应用程序
 “N 层”数据应用程序是指用于访问数据且分为多个逻辑层（或“多层”）的应用程序****。 通过将应用程序组件分离到相对独立的层中，可以提高应用程序的可维护性和可伸缩性。 该结构之所以具有这种优点，是因为它有利于采用可应用于单个层而无需重新设计整个解决方案的新技术。 N 层体系结构包括一个表示层、一个中间层和一个数据层。 中间层通常包括数据访问层、业务逻辑层和共享组件（例如身份验证和验证）。 数据层则包括关系数据库。 N 层应用程序通常将敏感信息存储在中间层的数据访问层中，目的是将它们与访问表示层的最终用户隔离。 有关详细信息，请参阅 [N 层数据应用程序概述](../data-tools/n-tier-data-applications-overview.md)。
@@ -218,7 +218,7 @@ ms.locfileid: "75916499"
 
 3. 选择“DataAccessTier”和“DataEntityTier”项目********。
 
-4. 单击“确定”。
+4. 单击" **确定**"。
 
 ## <a name="add-functions-to-the-service-to-call-the-getcustomers-and-getorders-methods-in-the-data-access-tier"></a>向服务添加函数以调用数据访问层中的 GetCustomers 和 GetOrders 方法
 现在数据访问层包含返回数据的方法，接下来要在数据服务中创建调用这些方法的方法。
@@ -379,7 +379,7 @@ ms.locfileid: "75916499"
 
 - 将其他方法添加到服务，以将数据更新回数据库。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [在 N 层应用程序中使用数据集](../data-tools/work-with-datasets-in-n-tier-applications.md)
 - [分层更新](../data-tools/hierarchical-update.md)

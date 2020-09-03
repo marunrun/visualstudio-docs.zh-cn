@@ -12,21 +12,21 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: e480869d5b13ecc051deaa97b0bfd2532519d18f
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85535715"
 ---
 # <a name="code-analysis-rule-set-reference"></a>代码分析规则集参考
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-在、或中配置托管代码项目的代码分析时， [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)] [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)] [!INCLUDE[vsPro](../includes/vspro-md.md)] 将显示内置*规则集*的列表。 可以使用某一标准规则集，也可以自定义规则集以适合您的项目要求。
+在、或中配置托管代码项目的代码分析时， [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)] [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)] [!INCLUDE[vsPro](../includes/vspro-md.md)] 将显示内置 *规则集*的列表。 可以使用某一标准规则集，也可以自定义规则集以适合您的项目要求。
 
 ## <a name="available-rule-sets"></a>可用规则集
  下表列出了默认规则集：
 
-|Item|值|
+|项|值|
 |-|-|
 |[“所有规则”规则集](../code-quality/all-rules-rule-set.md)|此规则集包含所有规则。 运行此规则集可能会导致报告大量警告。 使用此规则集可全面了解代码中的所有问题。 这可以帮助你确定哪些更为集中的规则集最适用于你的项目。|
 |[托管代码的“基本更正规则”规则集](../code-quality/basic-correctness-rules-rule-set-for-managed-code.md)|这些规则重点介绍了在使用框架 Api 时的逻辑错误和常见错误。 包含此规则集以便在建议的最低规则报告的警告列表中进行扩展。|

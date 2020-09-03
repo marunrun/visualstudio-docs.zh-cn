@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 1ad27481799718d9d2b0872d7a43837fc822ca40
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85546193"
 ---
 # <a name="how-to-add-commands-to-shortcut-menus"></a>如何：向快捷菜单中添加命令
@@ -27,7 +27,7 @@ ms.locfileid: "85546193"
 
 ### <a name="to-add-commands-to-shortcut-menus-in-office"></a>将命令添加到 Office 的快捷菜单中
 
-1. 将“功能区 XML” **** 项添加到文档级项目或 VSTO 外接程序项目中。 有关详细信息，请参阅[如何：开始自定义功能区](../vsto/how-to-get-started-customizing-the-ribbon.md)。 In
+1. 将“功能区 XML” **** 项添加到文档级项目或 VSTO 外接程序项目中。 有关详细信息，请参阅 [如何：开始自定义功能区](../vsto/how-to-get-started-customizing-the-ribbon.md)。 In
 
 2. 在“解决方案资源管理器”**** 中，选择“” **** 或“” ****。
 
@@ -40,7 +40,7 @@ ms.locfileid: "85546193"
      [!code-csharp[Trin_WordAddIn_Menus#1](../vsto/codesnippet/CSharp/trin_wordaddin_menus.cs/thisaddin.cs#1)]
      [!code-vb[Trin_WordAddIn_Menus#1](../vsto/codesnippet/VisualBasic/trin_wordaddin_menus.vb/thisaddin.vb#1)]
 
-5. 在“解决方案资源管理器” **** 中，选择功能区 XML 文件。 默认情况下，功能区 XML 文件命名为*Ribbon1.xml*。
+5. 在“解决方案资源管理器” **** 中，选择功能区 XML 文件。 默认情况下，功能区 XML 文件命名为 *Ribbon1.xml*。
 
 6. 在菜单栏上，选择 "**查看**  >  **代码**"。
 
@@ -48,7 +48,7 @@ ms.locfileid: "85546193"
 
 7. 在代码编辑器中添加 XML，该 XML 描述快捷菜单以及要添加到快捷菜单的控件。
 
-     下面的示例将向 Word 文档的快捷菜单添加按钮、菜单和库控件。 此快捷菜单的控件 ID 是 ContextMenuText。 有关 Office 2010 快捷方式控件 ID 的完整列表，请参阅[office 2010 帮助文件： office 熟知用户界面控件标识符](https://www.microsoft.com/download/details.aspx?id=6627)。
+     下面的示例将向 Word 文档的快捷菜单添加按钮、菜单和库控件。 此快捷菜单的控件 ID 是 ContextMenuText。 有关 Office 2010 快捷方式控件 ID 的完整列表，请参阅 [office 2010 帮助文件： office 熟知用户界面控件标识符](https://www.microsoft.com/download/details.aspx?id=6627)。
 
     ```xml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -79,7 +79,7 @@ ms.locfileid: "85546193"
      [!code-vb[Trin_WordAddIn_Menus#2](../vsto/codesnippet/VisualBasic/trin_wordaddin_menus.vb/ribbon1.vb#2)]
      [!code-csharp[Trin_WordAddIn_Menus#2](../vsto/codesnippet/CSharp/trin_wordaddin_menus.cs/ribbon1.cs#2)]
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [Office UI 自定义](../vsto/office-ui-customization.md)
 - [演练：创建书签的快捷菜单](../vsto/walkthrough-creating-shortcut-menus-for-bookmarks.md)
 - [Office 解决方案中的可选参数](../vsto/optional-parameters-in-office-solutions.md)

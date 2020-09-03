@@ -16,16 +16,16 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 2ece4788a277bfc4d16568d4014f9eae2ed4de33
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545270"
 ---
 # <a name="ca1900-value-type-fields-should-be-portable"></a>CA1900:值类型字段应为可移植字段
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-有关 Visual Studio 的最新文档，请参阅[CA1900：值类型字段应为可移植字段](/visualstudio/code-quality/ca1900-value-type-fields-should-be-portable)。
+有关 Visual Studio 的最新文档，请参阅 [CA1900：值类型字段应为可移植字段](/visualstudio/code-quality/ca1900-value-type-fields-should-be-portable)。
 
 |项|值|
 |-|-|

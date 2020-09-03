@@ -1,5 +1,5 @@
 ---
-title: 外部元素 |微软文档
+title: Extern 元素 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -14,18 +14,18 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 2cf6f9db77abaa7034af8d074b9833a4c1560f07
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80711490"
 ---
-# <a name="extern-element"></a>外部元素
-Extern 元素引用任何外部标头 *（.h*） 文件，以便在编译时与 *.vsct*文件合并。 要合并的文件必须位于提供给 VSCT 编译器的"包含"路径上，或者由[Include 元素](../extensibility/include-element.md)引用。 这些文件可能是其他 *.vsct*文件或C++头文件。
+# <a name="extern-element"></a>Extern 元素
+Extern 元素在编译时 *引用 () * 文件与 *.vsct* 文件合并的任何外部标头。 要合并的文件必须位于 .VSCT 编译器提供的包含路径上，或由 [include 元素](../extensibility/include-element.md)引用。 这些文件可以是其他 *.vsct* 文件或 c + + 头文件。
 
- 标题文件中的定义必须为"#define [符号] [值]"的形式。 定义可用于命令项的条件语句。 任何未实际使用的符号都将被丢弃。
+ 标头文件中的定义的格式必须为 "#define [符号] [值]"。值可以是其他符号（如果以前已定义）。 定义可以在命令项的条件语句中使用。 不实际使用的任何符号将被丢弃。
 
- 命令表元素外部元素
+ CommandTable 元素 Extern 元素
 
 ## <a name="syntax"></a>语法
 
@@ -38,23 +38,23 @@ Extern 元素引用任何外部标头 *（.h*） 文件，以便在编译时与 
 
 ### <a name="attributes"></a>特性
 
-|特性|描述|
+|特性|说明|
 |---------------|-----------------|
-|href|必需。 标头文件的路径：<br /><br /> href="stdidcmd.h"|
-|条件|可选。 请参阅[条件属性](../extensibility/vsct-xml-schema-conditional-attributes.md)。|
-|语言|可选。 命令表中所有[\<字符串的](../extensibility/strings-element.md)默认语言>元素：<br /><br /> 语言="en-us"|
+|href|必需。 标头文件的路径：<br /><br /> href = "stdidcmd"|
+|条件|可选。 请参阅 [条件特性](../extensibility/vsct-xml-schema-conditional-attributes.md)。|
+|语言|可选。 [\<Strings>](../extensibility/strings-element.md)命令表中所有元素的默认语言：<br /><br /> language = "en-us"|
 
 ### <a name="child-elements"></a>子元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
 |无。|无。|
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
-|[命令表元素](../extensibility/commandtable-element.md)|定义表示 VSPackage 向 IDE 提供的命令的所有元素（即菜单项、菜单、工具栏和组合框）。|
+|[CommandTable 元素](../extensibility/commandtable-element.md)|定义所有元素，这些元素表示 VSPackage 提供给 IDE 的命令（即菜单项、菜单、工具栏和组合框）。|
 
 ## <a name="example"></a>示例
 
@@ -68,7 +68,7 @@ Extern 元素引用任何外部标头 *（.h*） 文件，以便在编译时与 
 </CommandTable>
 ```
 
-## <a name="see-also"></a>请参阅
-- [可视化工作室命令表 （.vsct） 文件](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
-- [VS包如何添加用户界面元素](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
+## <a name="see-also"></a>另请参阅
+- [Visual Studio 命令表 ( .vsct) 文件](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [Vspackage 如何添加用户界面元素](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
 - [命令、菜单和工具栏](../extensibility/internals/commands-menus-and-toolbars.md)

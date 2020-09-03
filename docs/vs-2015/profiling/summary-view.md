@@ -17,10 +17,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: f4346b0e7459ee3c78669ab9178555370ffac16d
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545504"
 ---
 # <a name="summary-view"></a>“摘要”视图
@@ -30,7 +30,7 @@ ms.locfileid: "85545504"
   
  对于除并发数据的“摘要”视图以外的所有“摘要”视图，“摘要”视图中的时间线图显示被分析的应用程序在进行分析的这段时间内的处理器 (CPU) 使用率。  
   
-- 如果在图表上指定一个时间段，则可以重新分析该时间段的数据或缩放时间线以显示指定的时间段。 有关详细信息，请参阅[如何：从摘要时间线中筛选报告视图](../profiling/how-to-filter-report-views-from-the-summary-timeline.md)  
+- 如果在图表上指定一个时间段，则可以重新分析该时间段的数据或缩放时间线以显示指定的时间段。 有关详细信息，请参阅 [如何：从摘要时间线中筛选报告视图](../profiling/how-to-filter-report-views-from-the-summary-timeline.md)  
   
 - 可在“摘要”视图列表中单击函数，打开函数的“函数详细信息”视图。 还可右键单击函数获取其他视图选项。  
   
@@ -41,20 +41,20 @@ ms.locfileid: "85545504"
   
 |选项|描述|  
 |-|-|  
-|**显示非用户代码**<br /><br /> **仅显示我的代码**|不可用于本机代码或分析数据（使用检测方法收集）。 在仅显示用户代码中的数据（“仅显示我的代码”）与显示包括系统代码在内的所有代码中的数据（“显示非用户代码”）之间切换。 默认情况下，数据仅限于用户代码。 若要更改设置，请参阅[如何：筛选分析工具报表视图以显示仅我的代码](../profiling/how-to-filter-profiling-tools-report-views-to-display-just-my-code.md)。|  
+|**显示非用户代码**<br /><br /> **仅显示我的代码**|不可用于本机代码或分析数据（使用检测方法收集）。 在仅显示用户代码中的数据（“仅显示我的代码”）与显示包括系统代码在内的所有代码中的数据（“显示非用户代码”）之间切换。 默认情况下，数据仅限于用户代码。 若要更改设置，请参阅 [如何：筛选分析工具报表视图以显示仅我的代码](../profiling/how-to-filter-profiling-tools-report-views-to-display-just-my-code.md)。|  
 |**视图指南**|在“错误列表”窗口中显示性能规则警告。 有关详细信息，请参阅[使用性能规则对数据进行分析](../profiling/using-performance-rules-to-analyze-data.md)|  
   
 ## <a name="report"></a>报告  
  可单击报告列表中的链接，打开不同的视图并比较、保存或筛选报告。 列表位于时间线图的右侧。  
   
-|“属性”|描述|  
+|名称|描述|  
 |-|-|  
-|**显示已修整的调用树**|在“调用树”视图中，显示性能开销最大的的执行路径。 有关详细信息，请参阅 "[调用关系树" 视图](../profiling/call-tree-view.md)。|  
-|**显示热行**|不可用于使用检测方法收集的分析数据。 在“行”视图中，显示性能开销最大的源代码行。 有关详细信息，请参阅[行视图](../profiling/lines-view.md)。|  
+|**显示已修整的调用树**|在“调用树”视图中，显示性能开销最大的的执行路径。 有关详细信息，请参阅 " [调用关系树" 视图](../profiling/call-tree-view.md)。|  
+|**显示热行**|不可用于使用检测方法收集的分析数据。 在“行”视图中，显示性能开销最大的源代码行。 有关详细信息，请参阅 [行视图](../profiling/lines-view.md)。|  
 |**比较报告**|显示“选择要比较的分析文件”对话框，可在其中指定要与当前文件进行比较的另一个分析数据文件。 有关详细信息，请参阅[比较性能数据文件](../profiling/comparing-performance-data-files.md)。|  
-|**导出报告数据**|显示“导出报告”对话框，可在其中指定一个或多个要保存为逗号分隔值 (.csv) 文件或 .xml 文件的报告视图。 有关详细信息，请参阅[如何：导出分析工具报表](https://msdn.microsoft.com/174b5bd3-df9b-4fd4-88d4-76032ab90451)。|  
-|**保存已分析的报告**|将当前分析数据文件保存为 .vsps 文件，该文件可在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 界面中更快速地打开。 有关详细信息，请参阅[如何：保存分析的分析数据文件](https://msdn.microsoft.com/0340ddde-caf4-48ac-8af3-d15dcdade556)。|  
-|**筛选报告数据**|显示分析报告筛选器窗格，可在其中指定条件来限制报告视图中显示的数据。 有关详细信息，请参阅[性能报告视图筛选器](../profiling/performance-report-view-filter.md)|  
+|**导出报告数据**|显示“导出报告”对话框，可在其中指定一个或多个要保存为逗号分隔值 (.csv) 文件或 .xml 文件的报告视图。 有关详细信息，请参阅 [如何：导出分析工具报表](https://msdn.microsoft.com/174b5bd3-df9b-4fd4-88d4-76032ab90451)。|  
+|**保存已分析的报告**|将当前分析数据文件保存为 .vsps 文件，该文件可在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 界面中更快速地打开。 有关详细信息，请参阅 [如何：保存分析的分析数据文件](https://msdn.microsoft.com/0340ddde-caf4-48ac-8af3-d15dcdade556)。|  
+|**筛选报告数据**|显示分析报告筛选器窗格，可在其中指定条件来限制报告视图中显示的数据。 有关详细信息，请参阅 [性能报告视图筛选器](../profiling/performance-report-view-filter.md)|  
 |**切换全屏显示**|切换报告视图的全屏模式。|  
   
 ## <a name="see-also"></a>另请参阅  

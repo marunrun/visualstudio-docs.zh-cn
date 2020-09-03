@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: d5830bb71f66b27acf2ba63133a130c2ea24a9c6
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670758"
 ---
 # <a name="how-to-search-for-topics"></a>如何：搜索主题
@@ -23,7 +23,7 @@ ms.locfileid: "72670758"
 
 ### <a name="to-open-the-search-tab"></a>打开 "搜索" 选项卡
 
-- 选择 "帮助查看器" 窗口中的 "**搜索**" 选项卡，或按 Ctrl + E 键。
+- 选择 "帮助查看器" 窗口中的 " **搜索** " 选项卡，或按 Ctrl + E 键。
 
 ### <a name="to-perform-a-full-text-search"></a>执行全文搜索
 
@@ -32,7 +32,7 @@ ms.locfileid: "72670758"
 2. 在搜索查询中，指定要应用于搜索的逻辑或高级搜索运算符（如果有）。 若要搜索所有可用帮助，请勿使用运算符。
 
     > [!NOTE]
-    > 在“Viewer 选项”对话框中，可以指定附加首选项，比如一次显示的搜索结果最大数量，以及主要区域设置不是英语时是否包含英语内容。
+    > 在“Viewer 选项”**** 对话框中，可以指定附加首选项，比如一次显示的搜索结果最大数量，以及主要区域设置不是英语时是否包含英语内容。
 
 3. 选择 Enter 键。
 
@@ -42,5 +42,5 @@ ms.locfileid: "72670758"
 
 4. 若要查看主题，请从结果列表中选择其标题。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [全文搜索提示](../ide/full-text-search-tips.md)[搜索表达式中的逻辑运算符](../ide/logical-operators-in-search-expressions.md)[搜索表达式中的高级搜索运算符](../ide/advanced-search-operators-in-search-expressions.md)[如何：自定义搜索结果](../ide/how-to-customize-search-results.md)
