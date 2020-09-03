@@ -1,5 +1,5 @@
 ---
-title: IDebug记忆字节2：：获取大小 |微软文档
+title: IDebugMemoryBytes2：： GetSize |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,14 +17,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 6de4eccb395059112dde40af36ce75798db9064b
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80727544"
 ---
 # <a name="idebugmemorybytes2getsize"></a>IDebugMemoryBytes2::GetSize
-检索此[IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md)对象表示的内存的大小（以字节为单位）。
+检索此 [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md) 对象表示的内存的大小（以字节为单位）。
 
 ## <a name="syntax"></a>语法
 
@@ -42,10 +42,10 @@ int GetSize(
 
 ## <a name="parameters"></a>参数
 `pqwSize`\
-[出]返回内存空间的大小（以字节为单位）。
+弄返回内存空间的大小（以字节为单位）。
 
 ## <a name="return-value"></a>返回值
- 如果成功，返回`S_OK`;否则，返回错误代码。
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md)

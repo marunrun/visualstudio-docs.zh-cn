@@ -1,0 +1,196 @@
+- name: Visual Studio 订阅
+  href: index.yml
+- name: 新增功能
+  href: whats-new-in-subscriptions.md
+- name: 订阅
+  items:
+    - name: 购买订阅
+      items:
+        - name: Retail
+          href: buy-activate-retail.md
+        - name: 云
+          items:
+            - name: 概述
+              href: vscloud-overview.md
+            - name: 账单常见问题解答
+              href: vscloud-billing-faq.md
+            - name: CSP 购买
+              href: vscloud-csp.md
+        - name: Visual Studio 与 GitHub Enterprise
+          href: access-github.md
+        - name: Microsoft 合作伙伴网络
+          items:
+            - name: 面向合作伙伴的订阅
+              href: program-mpn.md
+            - name: 管理面向 MPN 的订阅
+              href: manage-mpn-subscriptions.md
+        - name: 适用于初创企业的 Microsoft
+          href: program-startups.md
+    - name: 登录
+      items:
+        - name: 使用 Microsoft 帐户登录
+          href: sign-in-msa.md
+        - name: 使用工作或学校帐户登录
+          href: sign-in-work.md
+        - name: 使用 GitHub 登录
+          href: sign-in-github.md
+        - name: 联合标识
+          href: use-connected-identities.md
+        - name: 备用标识
+          href: vs-alternate-identity.md
+        - name: 登录问题
+          href: sign-in-issues.md
+        - name: 订阅者数据匿名化
+          href: anonymization.md
+    - name: 订阅门户概述
+      href: using-the-subscriber-portal.md
+    - name: 管理订阅
+      href: manage-vs-subscriptions.md
+    - name: 联系订阅管理员
+      href: contact-my-admin.md
+    - name: 优点
+      items:
+        - name: 工具
+          items:
+            - name: Azure 开发测试个人额度
+              href: vs-azure.md
+            - name: Azure DevOps
+              href: vs-azure-devops.md
+            - name: Azure 开发测试即用即付
+              href: vs-azure-payg.md
+            - name: Azure EA DevTest
+              href: azure-ea-devtest.md
+            - name: CAST 突出显示
+              href: vs-cast.md
+            - name: CloudPilot
+              href: vs-cloudpilot.md
+            - name: Microsoft 365 企业应用版
+              href: microsoft-365-apps-for-enterprise.md
+            - name: Microsoft 365 开发人员
+              href: vs-m365.md
+            - name: Parasoft
+              href: vs-parasoft.md
+            - name: Power BI Pro
+              href: vs-pbi.md
+            - name: Visual Studio App Center
+              href: vs-visual-studio-app-center.md
+            - name: Visual Studio IDE
+              href: vs-ide-benefit.md
+            - name: WhiteSource Bolt
+              href: vs-whitesource.md
+            - name: Windows 开发人员帐户
+              href: vs-windows-dev.md
+            - name: Windows 虚拟桌面
+              href: vs-windows-virtual-desktop.md
+        - name: 专业开发
+          items:
+            - name: MSDN 杂志
+              href: vs-code-magazine.md
+            - name: DataCamp
+              href: vs-datacamp.md
+            - name: LinkedIn Learning
+              href: vs-linkedin-learning.md
+            - name: Pluralsight
+              href: vs-pluralsight.md
+        - name: 支持
+          items:
+            - name: Azure 社区
+              href: vs-azure-community.md
+            - name: 接待支持
+              href: vs-concierge-chat.md
+            - name: 技术支持
+              href: vs-tech-support.md
+- name: 软件和密钥
+  items:
+    - name: 软件下载
+      items:
+        - name: 产品可用性
+          href: product-availability.md
+        - name: 下载软件
+          href: download-software.md
+    - name: 可用软件下载列表
+      href: software-download-list.md
+    - name: 产品密钥
+      items:
+        - name: 产品密钥概述
+          href: product-keys.md
+        - name: 查找和声明密钥
+          href: find-keys.md
+        - name: Internet 演示
+          href: internet-demos.md
+- name: 管理员
+  items:
+    - name: 管理员职责
+      items:
+        - name: 管理员职责
+          href: admin-responsibilities.md
+        - name: 预生产库存
+          href: admin-inventory.md
+        - name: 管理大型团队和外部承包商
+          href: manage-teams.md
+        - name: 跟踪用户分配和处理订单
+          href: assignments-orders.md
+    - name: 访问管理门户
+      items:
+        - name: 批量许可证
+          href: volume-license.md
+        - name: MPSA
+          href: mpsa.md
+        - name: 云订阅
+          href: cloud-admin.md
+        - name: 针对客户的合作伙伴管理
+          href: open-migration.md
+        - name: 视频教程：访问管理门户
+          href: 'https://youtu.be/plSu6fpi7UI'
+    - name: 使用管理门户
+      items:
+        - name: 超级管理员和管理人员
+          href: admin-roles.md
+        - name: 设置协议首选项
+          href: admin-prefs.md
+        - name: 概述
+          href: using-admin-portal.md
+        - name: 添加月度订阅
+          href: add-monthly-subs.md
+        - name: 分配订阅
+          items:
+            - name: 添加单用户
+              href: assign-license.md
+            - name: 添加多个用户
+              href: assign-license-bulk.md
+            - name: 分配特定订阅
+              href: assign-guid.md
+        - name: 编辑订阅
+          href: edit-license.md
+        - name: 删除订阅
+          href: delete-license.md
+        - name: 搜索订阅
+          href: search-license.md
+        - name: 导出订阅
+          href: exporting-subscriptions.md
+        - name: 过度分配
+          href: handle-overclaimed-license.md
+        - name: 最大用量
+          href: maximum-usage.md
+        - name: 过期订阅
+          href: handle-expired-license.md
+        - name: '订阅者登录方案 '
+          href: aliasing.md
+        - name: 使用个人电子邮件登录的订阅者
+          href: personal-email-sign-ins.md
+        - name: 使用 GitHub Enterprise 管理 Visual Studio
+          href: assign-github.md
+- name: 资源
+  items:
+    - name: Visual Studio 授权白皮书
+      href: 'https://visualstudio.microsoft.com/wp-content/uploads/2019/06/Visual-Studio-Licensing-Whitepaper-May-2019.pdf'
+    - name: 比较订阅选项和定价
+      href: 'https://visualstudio.microsoft.com/vs/pricing'
+    - name: 比较 Visual Studio IDE 功能
+      href: 'https://visualstudio.microsoft.com/vs/compare'
+    - name: Visual Studio 管理和订阅支持
+      href: 'https://visualstudio.microsoft.com/support/support-overview-vs'
+    - name: 批量许可条款
+      href: 'https://www.microsoft.com/licensing/product-licensing/products.aspx'
+    - name: Microsoft 产品和服务协议 (MPSA)
+      href: 'https://www.microsoft.com/licensing/mpsa/default.aspx'

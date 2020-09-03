@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: ee5d3cff260346a5bcc1806b09b955642c608f14
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72669493"
 ---
 # <a name="xml-document-validation"></a>XML 文档验证
@@ -23,7 +23,7 @@ ms.locfileid: "72669493"
 
  将已编译架构的 `targetNamespace` 与元素的 xmlns 声明进行匹配，可以找到验证中使用的架构。 已编译架构从下列位置之一加载（按优先级顺序列出）：
 
-- 从文档的 "**架构**" 字段中指定的文件名属性窗口。
+- 从文档的 " **架构** " 字段中指定的文件名属性窗口。
 
 - 内联架构或 DTD。
 
@@ -45,5 +45,5 @@ ms.locfileid: "72669493"
 ## <a name="xml-schema-xsd-files"></a>XML 架构 (XSD) 文件
  在编辑 XML 架构文件时，使用架构缓存中的 xsdschema.xsd 文件进行验证。 验证错误以蓝色的波浪形下划线显示。 任何编译错误也会显示为红色的波浪形下划线。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [XML 编辑器](../xml-tools/xml-editor.md)

@@ -12,9 +12,9 @@
       items:
         - name: Get Started Developing with Visual Studio
           href: get-started-developing-with-visual-studio.md
-        - name: 'Visual C# 和 Visual Basic 入门'
+        - name: Visual C# 和 Visual Basic 入门
           items:
-            - name: 'Visual C# 和 Visual Basic 入门'
+            - name: Visual C# 和 Visual Basic 入门
               href: getting-started-with-visual-csharp-and-visual-basic.md
             - name: 创建简单的应用程序
               href: walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md
@@ -122,7 +122,7 @@
               href: managing-assembly-and-manifest-signing.md
             - name: 对应用程序和部署清单签名
               href: how-to-sign-application-and-deployment-manifests.md
-        - name: '指定应用程序图标（Visual Basic、C#）'
+        - name: 指定应用程序图标（Visual Basic、C#）
           href: how-to-specify-an-application-icon-visual-basic-csharp.md
         - name: 面向特定的 .NET Framework 版本
           items:
@@ -186,7 +186,7 @@
           href: encodings-and-line-breaks.md
         - name: 大纲显示
           href: outlining.md
-        - name: Refactoring
+        - name: 重构
           href: refactoring-in-visual-studio.md
         - name: 工作效率提示
           items:
@@ -212,7 +212,7 @@
                   href: visual-basic-specific-intellisense.md
                 - name: Visual Basic 中经过筛选的完成列表
                   href: filtered-completion-lists-in-visual-basic.md
-            - name: 'Visual C# IntelliSense'
+            - name: Visual C# IntelliSense
               href: visual-csharp-intellisense.md
             - name: 带有“使用时生成”功能的测试先行支持
               href: walkthrough-test-first-support-with-the-generate-from-usage-feature.md
@@ -272,21 +272,21 @@
           href: how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12.md
         - name: 使用电灯泡执行快速操作
           href: perform-quick-actions-with-light-bulbs.md
-        - name: 代码片段
+        - name: 代码段
           items:
-            - name: 代码片段
+            - name: 代码段
               href: code-snippets.md
             - name: 创建代码片段
               href: walkthrough-creating-a-code-snippet.md
             - name: 分发代码片段
               href: how-to-distribute-code-snippets.md
-            - name: 'Visual C# 代码段'
+            - name: Visual C# 代码段
               href: visual-csharp-code-snippets.md
             - name: Visual C++ 代码片段
               href: visual-cpp-code-snippets.md
             - name: 代码段函数
               href: code-snippet-functions.md
-            - name: '还原 C# 重构片段'
+            - name: 还原 C# 重构片段
               href: how-to-restore-csharp-refactoring-snippets.md
             - name: 使用外侧代码片段
               href: how-to-use-surround-with-code-snippets.md
@@ -390,29 +390,29 @@
               href: find-code-changes-and-other-history-with-codelens.md
             - name: CodeIndex 命令
               href: codeindex-command.md
-        - name: '使用 Visual Studio C# 开发环境'
+        - name: 使用 Visual Studio C# 开发环境
           items:
-            - name: '使用 Visual Studio C# 开发环境'
+            - name: 使用 Visual Studio C# 开发环境
               href: ../csharp-ide/using-the-visual-studio-development-environment-for-csharp.md
-            - name: '向 C# 项目添加应用程序配置文件'
+            - name: 向 C# 项目添加应用程序配置文件
               href: ../csharp-ide/how-to-add-an-application-configuration-file-to-a-csharp-project.md
             - name: 作为源代码的元数据
               href: ../csharp-ide/metadata-as-source.md
-            - name: '重构 (C#)'
+            - name: 重构 (C#)
               items:
-                - name: '重构 (C#)'
+                - name: 重构 (C#)
                   href: ../csharp-ide/refactoring-csharp.md
-                - name: '提取方法重构 (C#)'
+                - name: 提取方法重构 (C#)
                   href: ../csharp-ide/extract-method-refactoring-csharp.md
-                - name: '重命名重构 (C#)'
+                - name: 重命名重构 (C#)
                   href: ../csharp-ide/rename-refactoring-csharp.md
-                - name: '封装字段重构 (C#)'
+                - name: 封装字段重构 (C#)
                   href: ../csharp-ide/encapsulate-field-refactoring-csharp.md
-                - name: '提取接口重构 (C#)'
+                - name: 提取接口重构 (C#)
                   href: ../csharp-ide/extract-interface-refactoring-csharp.md
-                - name: '移除参数重构 (C#)'
+                - name: 移除参数重构 (C#)
                   href: ../csharp-ide/remove-parameters-refactoring-csharp.md
-                - name: '重新排列参数重构 (C#)'
+                - name: 重新排列参数重构 (C#)
                   href: ../csharp-ide/reorder-parameters-refactoring-csharp.md
     - name: 在 Visual Studio 中进行调试
       href: ../debugger/debugging-in-visual-studio.md
@@ -470,7 +470,7 @@
               href: how-to-configure-projects-to-target-multiple-platforms.md
         - name: 指定生成事件 (Visual Basic)
           href: how-to-specify-build-events-visual-basic.md
-        - name: '指定生成事件 (C#)'
+        - name: 指定生成事件 (C#)
           href: how-to-specify-build-events-csharp.md
         - name: 在 Visual Basic 中配置警告
           href: configuring-warnings-in-visual-basic.md
@@ -706,19 +706,19 @@
                   href: reference/options-text-editor-all-languages-tabs.md
                 - name: 选项，文本编辑器，基本 (Visual Basic)
                   href: reference/options-text-editor-basic-visual-basic.md
-                - name: 选项，文本编辑器，C/C++，格式设置
+                - name: 选项，文本编辑器，C/C++，格式
                   href: reference/options-text-editor-c-cpp-formatting.md
                 - name: 选项，文本编辑器，C/C++，高级
                   href: reference/options-text-editor-c-cpp-advanced.md
                 - name: '选项, 文本编辑器, C/C++, 实验'
                   href: reference/options-text-editor-c-cpp-experimental.md
-                - name: '选项、文本编辑器、C#、格式设置'
+                - name: 选项、文本编辑器、C#、格式设置
                   href: reference/options-text-editor-csharp-formatting.md
-                - name: '选项，文本编辑器，C#，高级'
+                - name: 选项，文本编辑器，C#，高级
                   href: reference/options-text-editor-csharp-advanced.md
-                - name: '选项，文本编辑器，C#，IntelliSense'
+                - name: 选项，文本编辑器，C#，IntelliSense
                   href: reference/options-text-editor-csharp-intellisense.md
-                - name: 'Options, Text Editor, JavaScript, Formatting'
+                - name: 选项，文本编辑器，JavaScript，格式
                   href: reference/options-text-editor-javascript-formatting.md
                 - name: 选项，文本编辑器，JavaScript，IntelliSense
                   href: reference/options-text-editor-javascript-intellisense.md
@@ -742,19 +742,19 @@
                       href: reference/application-page-project-designer-visual-basic.md
                     - name: “程序集信息”对话框
                       href: reference/assembly-information-dialog-box.md
-                - name: '“项目设计器”->“应用程序”页 (C#)'
+                - name: “项目设计器”->“应用程序”页 (C#)
                   href: reference/application-page-project-designer-csharp.md
-                - name: '“项目设计器”->“生成事件”页 (C#)'
+                - name: “项目设计器”->“生成事件”页 (C#)
                   items:
-                    - name: '“项目设计器”->“生成事件”页 (C#)'
+                    - name: “项目设计器”->“生成事件”页 (C#)
                       href: reference/build-events-page-project-designer-csharp.md
                     - name: 预生成事件/生成后事件命令行对话框
                       href: reference/pre-build-event-post-build-event-command-line-dialog-box.md
-                - name: '“项目设计器”->“生成”页 (C#)'
+                - name: “项目设计器”->“生成”页 (C#)
                   items:
-                    - name: '“项目设计器”->“生成”页 (C#)'
+                    - name: “项目设计器”->“生成”页 (C#)
                       href: reference/build-page-project-designer-csharp.md
-                    - name: '“高级生成设置”对话框 (C#)'
+                    - name: “高级生成设置”对话框 (C#)
                       href: reference/advanced-build-settings-dialog-box-csharp.md
                 - name: “项目设计器”->“代码分析”
                   href: reference/code-analysis-project-designer.md

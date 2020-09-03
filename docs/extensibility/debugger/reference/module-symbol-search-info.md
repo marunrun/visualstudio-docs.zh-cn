@@ -1,5 +1,5 @@
 ---
-title: MODULE_SYMBOL_SEARCH_INFO |微软文档
+title: MODULE_SYMBOL_SEARCH_INFO |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 5f15587759c4f665d1593d1298c47459a0e64aac
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80714240"
 ---
 # <a name="module_symbol_search_info"></a>MODULE_SYMBOL_SEARCH_INFO
@@ -46,22 +46,22 @@ public struct MODULE_SYMBOL_SEARCH_INFO {
 ## <a name="members"></a>成员
 
 `dwValidFields`\
-[SYMBOL_SEARCH_INFO_FIELDS](../../../extensibility/debugger/reference/symbol-search-info-fields.md)枚举中的标志的组合，指定此结构中描述的搜索信息类型。
+[SYMBOL_SEARCH_INFO_FIELDS](../../../extensibility/debugger/reference/symbol-search-info-fields.md)枚举中的标志的组合，指定此结构中所述的搜索信息种类。
 
 `bstrVerboseSearchInfo`\
-搜索路径和结果串联到单个字符串中。
+搜索路径和结果连接成一个字符串。
 
 ## <a name="remarks"></a>备注
 
-此结构从对[GetSymbolInfo](../../../extensibility/debugger/reference/idebugmodule3-getsymbolinfo.md)方法的调用返回。
+此结构是通过调用 [GetSymbolInfo](../../../extensibility/debugger/reference/idebugmodule3-getsymbolinfo.md) 方法返回的。
 
-如果`bstrVerboseSearchInfo`该字段不为空，则它包含搜索的路径列表和该搜索的结果。 列表的格式采用路径，后跟省略号 （"..."），后跟结果。 如果有多个路径结果对，则每对由一对"\r\n"（回车/换行）对分隔。 模式如下所示：
+如果该 `bstrVerboseSearchInfo` 字段不为空，则它包含搜索的路径列表和该搜索的结果。 该列表的格式为路径，后跟省略号 ( "..." ) ，然后是结果。 如果有多个路径结果对，则每个对都由 "\r\n" (回车/换行) 对分隔。 模式如下所示：
 
-\<路径>...\<结果>\r\n\<路径>...\<结果>\r\n\<路径>...\<结果>
+\<path>...\<result>\r\n \<path> ... \<result>\r\n \<path> .。。\<result>
 
 请注意，最后一个条目没有 \r\n 序列。
 
-下面是已发送到标准`bstrVerboseSearchInfo`出的可能的字符串。
+下面是一个已 `bstrVerboseSearchInfo` 发送到标准输出的可能字符串。
 
 `c:\symbols\user32.pdb... File not found.`
 
@@ -71,11 +71,11 @@ public struct MODULE_SYMBOL_SEARCH_INFO {
 
 ## <a name="requirements"></a>要求
 
-标题： msdbg.h
+标头： msdbg
 
-命名空间：微软.VisualStudio.调试器.互通
+命名空间： VisualStudio
 
-程序集：微软.VisualStudio.调试器.Interop.dll
+程序集： Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 

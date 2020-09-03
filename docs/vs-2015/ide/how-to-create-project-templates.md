@@ -18,16 +18,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: f358d5b95349fe99b2a2e01df5158d2c0aa10a11
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72668054"
 ---
 # <a name="how-to-create-project-templates"></a>如何：创建项目模板
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-在此过程中，可以使用“导出模板”向导创建模板，将模板打包为 .zip 文件。 还可以使用导出模板向导扩展，或使用 [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)] 中包含的模板创建 VSIX 文件格式的模板，改进部署，也可以手动创建模板。
+在此过程中，可以使用“导出模板”向导创建模板，将模板打包为 .zip 文件****。 还可以使用导出模板向导扩展，或使用 [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)] 中包含的模板创建 VSIX 文件格式的模板，改进部署，也可以手动创建模板。
 
 ### <a name="to-create-a-custom-project-template-with-the-standard-export-template-wizard"></a>使用标准的导出模板向导创建自定义项目模板
 
@@ -40,21 +40,21 @@ ms.locfileid: "72668054"
 
 3. 根据需要编辑代码文件，指出应替换参数的位置。 有关参数替换的详细信息，请参阅[如何：替换模板中的参数](../ide/how-to-substitute-parameters-in-a-template.md)。
 
-4. 在“文件”菜单上，单击“导出模板”。 “导出模板”向导随即打开。
+4. 在“文件”**** 菜单上，单击“导出模板”****。 " **导出模板** 向导" 将打开。
 
-5. 单击“项目模板”。
+5. 单击“项目模板”****。
 
 6. 如果当前解决方案中具有多个项目，请选择要导出到模板中的项目。
 
-7. 单击 **“下一步”** 。
+7. 单击“配置目录分区”  。
 
-8. 选择模板的图标和预览图像。 这些将出现在“新建项目”对话框中。
+8. 选择模板的图标和预览图像。 这些将出现在“新建项目”对话框中****。
 
 9. 输入模板名称和说明。
 
-10. 单击 **“完成”** 。 项目会导出到一个 .zip 文件中，并放在指定的输出位置，还可以导入到 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]（如果选择）。
+10. 单击“完成”。 项目会导出到一个 .zip 文件中，并放在指定的输出位置，还可以导入到 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]（如果选择）。
 
-     如果已安装 [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)]，可以使用“VSIX 项目”模板将完成的模板包装到 .vsix 文件中，供部署使用。 有关详细信息，请参阅 [VSIX 项目模板入门](../extensibility/getting-started-with-the-vsix-project-template.md)。
+     如果已安装 [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)]，可以使用“VSIX 项目”模板将完成的模板包装到 .vsix 文件中，供部署使用****。 有关详细信息，请参阅 [与 VSIX 项目模板入门](../extensibility/getting-started-with-the-vsix-project-template.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [创建项目和项模板](../ide/creating-project-and-item-templates.md)[如何：创建项模板](../ide/how-to-create-item-templates.md)

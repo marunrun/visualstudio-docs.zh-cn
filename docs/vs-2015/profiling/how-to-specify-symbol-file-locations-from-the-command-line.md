@@ -10,10 +10,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 01fbb6cfd1717562af79c067ede0cad9753ad5dd
-ms.sourcegitcommit: bf2e9d4ff38bf5b62b8af3da1e6a183beb899809
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/22/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77557902"
 ---
 # <a name="how-to-specify-symbol-file-locations-from-the-command-line"></a>如何：从命令行指定符号文件位置
@@ -38,7 +38,7 @@ ms.locfileid: "77557902"
   还可以同时使用这两种方法。  
   
 > [!NOTE]
-> 如果本地计算机上安装了 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]，则可能已指定了 Windows 符号文件的位置。 有关详细信息，请参阅[如何：引用 Windows 符号信息](../profiling/how-to-reference-windows-symbol-information.md)。 仍必须配置 VSPerfReport 才能使用位置和服务器，如本主题后面所述。  
+> 如果本地计算机上安装了 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]，则可能已指定了 Windows 符号文件的位置。 有关详细信息，请参阅 [如何：引用 Windows 符号信息](../profiling/how-to-reference-windows-symbol-information.md)。 仍必须配置 VSPerfReport 才能使用位置和服务器，如本主题后面所述。  
   
 ## <a name="specifying-windows-symbol-files"></a>指定 Windows 符号文件  
   
@@ -50,7 +50,7 @@ ms.locfileid: "77557902"
   
    `srv*<LocalStore>*https://msdl.microsoft.com/downloads/symbols`  
   
-   其中*<LocalStore>* 是所创建的本地目录的路径。  
+   其中，“<LocalStore>”是你创建的本地目录的路径。  
   
 ## <a name="specifying-component-symbol-files"></a>指定组件符号文件  
  分析工具会在以下位置搜索待分析组件的 .pdb 文件：.pdb 文件在组件中的原始存储位置，或者包含分析数据文件的文件夹。 可通过向 **_NT_SYMBOL_PATH** 或向 **/SymbolPath** 选项添加一个或多个路径来指定要搜索的其他位置。 各个路径之间用分号分隔。  
@@ -62,6 +62,6 @@ ms.locfileid: "77557902"
  set  _NT_SYMBOL_PATH=srv*C:\symbols*https://msdl.microsoft.com/downloads/symbols
  ```
 
- 通过使用 **/SymbolPath** 选项，以下 VSPerfReport 命令行向搜索路径添加 C:\Projects\Symbols 目录。  
+ 以下 VSPerfReport 命令行将使用 **/SymbolPath** 选项将 C:\Projects\Symbols 目录添加到搜索路径。  
   
- **VSPerfReport**  *MyApp* **.exe/SymbolPath： C:\Projects\Symbols/summary： all**
+ **VSPerfReport** *MyApp* **.exe /SymbolPath:C:\Projects\Symbols /summary:all**

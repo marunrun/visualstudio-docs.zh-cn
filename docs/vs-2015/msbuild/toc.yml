@@ -382,7 +382,7 @@
               href: xmlpoke-task.md
             - name: XslTransformation 任务
               href: xsltransformation-task.md
-        - name: 条件
+        - name: Conditions
           href: msbuild-conditions.md
         - name: 条件构造
           href: msbuild-conditional-constructs.md

@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: d9a5a29cd63f9d51f86d41d2f0f5986a77666318
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72666865"
 ---
 # <a name="log-command-window-output-command"></a>“日志命令窗口输出”命令
@@ -32,16 +32,16 @@ ms.locfileid: "72666865"
 Tools.LogCommandWindowOutput [filename] [/on|/off] [/overwrite]
 ```
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
  `filename`（可选）。 日志文件的名称。 默认情况下，该文件在用户的配置文件文件夹中创建。 如果该文件名已存在，将在该现有文件的末尾追加日志。 如果未指定文件，则使用上次指定的文件。 如果不存在以前的文件，则创建名称为 cmdline.log 的默认日志文件。
 
 > [!TIP]
 > 要更改日志文件的保存位置，请输入该文件的完整路径，如果该路径包含任何空格，请使用引号将路径引起。
 
 ## <a name="switches"></a>开关
- /on 可选。 在指定文件中启动“命令”窗口的日志，并在文件中追加新信息  。
+ /on 可选。 在指定文件中启动“命令”窗口的日志，并在文件中追加新信息****。
 
- /off 可选。 停止“命令”窗口的日志  。
+ /off 可选。 停止“命令”窗口的日志****。
 
  /overwrite 可选。 如果 `filename` 参数中指定的文件与现有文件匹配，该文件将会被覆盖。
 
@@ -68,4 +68,4 @@ Tools.LogCommandWindowOutput [filename] [/on|/off] [/overwrite]
 ```
 
 ## <a name="see-also"></a>另请参阅
- [Visual studio](../../ide/reference/visual-studio-commands.md) "[命令" 窗口](../../ide/reference/command-window.md)中的["查找/命令" 框](../../ide/find-command-box.md) [visual studio 命令别名](../../ide/reference/visual-studio-command-aliases.md)
+ [Visual studio](../../ide/reference/visual-studio-commands.md) " [命令" 窗口](../../ide/reference/command-window.md)中的 ["查找/命令" 框](../../ide/find-command-box.md) [visual studio 命令别名](../../ide/reference/visual-studio-command-aliases.md)

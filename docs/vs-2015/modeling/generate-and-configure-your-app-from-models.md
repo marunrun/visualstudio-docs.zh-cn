@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 2ea9e28c55b608235d49096e4ef99cd30081eda0
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72666165"
 ---
 # <a name="generate-and-configure-your-app-from-models"></a>从模型中生成并配置你的应用程序
@@ -24,7 +24,7 @@ ms.locfileid: "72666165"
  模型比代码更能直接表示要求。 与更新代码相比，通过直接从模型派生应用程序的行为，你可以更加快速可靠地对更改的需求做出响应。 尽管需要做一些初始工作来设置派生，但如果你预计要求会发生改变，或者你计划生成产品的几个变体，则这种投资是会有回报的。
 
 ## <a name="generating-the-code-of-your-application-from-a-model"></a>从模型生成应用程序代码
- 生成代码的最便捷方法是使用模板。 您可以在保存模型的同一 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 解决方案中生成代码。 有关详细信息，请参见:
+ 生成代码的最便捷方法是使用模板。 您可以在保存模型的同一解决方案中生成代码 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 。 有关详细信息，请参阅：
 
 - [使用 T4 文本模板生成设计时代码](../modeling/design-time-code-generation-by-using-t4-text-templates.md)
 
@@ -41,7 +41,7 @@ ms.locfileid: "72666165"
   但是，如果是从一个现有应用程序开始，你可能会发现需要进行很多重构才能隔开受模型控制的不同行为，以便这些行为可以独立改变。 建议你在估计项目成本时，将应用程序的这一方面评估在内。
 
 ## <a name="configuring-your-application-from-a-model"></a>从模型进配置应用程序
- 如果你希望在运行时改变应用程序的行为，则无法使用在编译应用程序前生成源代码的代码生成。 相反，你可以将应用程序设计为读取 UML 或 DSL 模型并相应地改变其行为。 有关详细信息，请参见:
+ 如果你希望在运行时改变应用程序的行为，则无法使用在编译应用程序前生成源代码的代码生成。 相反，你可以将应用程序设计为读取 UML 或 DSL 模型并相应地改变其行为。 有关详细信息，请参阅：
 
 - [在程序代码中读取 UML 模型](../modeling/read-a-uml-model-in-program-code.md)
 
@@ -64,9 +64,9 @@ ms.locfileid: "72666165"
 
 - **分隔问题。** 如果可变方面能分成独立的区域，则为每个区域使用单独的模型。 使用 ModelBus，你可以定义同时影响各模型及其之间的约束的操作。
 
-     例如，使用一个模型来定义网页导航，使用另一个模型来定义网页布局。 有关详细信息，请参阅将[UML 模型与其他模型和工具集成](../modeling/integrate-uml-models-with-other-models-and-tools.md)。
+     例如，使用一个模型来定义网页导航，使用另一个模型来定义网页布局。 有关详细信息，请参阅将 [UML 模型与其他模型和工具集成](../modeling/integrate-uml-models-with-other-models-and-tools.md)。
 
-- **为需求建模，而不是解决方案。** 设计 DSL 或采用 UML，以便用来描述用户需求。 与此相反，不要根据实现的可变方面设计表示法。
+- **建立需求而非解决方案的模型。** 设计 DSL 或采用 UML，以便用来描述用户需求。 与此相反，不要根据实现的可变方面设计表示法。
 
      例如，Web 导航模型应表示网页和网页间的超链接。 Web 导航模型不应表示应用程序中的 HTML 或类的片段。
 
@@ -78,5 +78,5 @@ ms.locfileid: "72666165"
 
      例如，UML 类图是框和箭头的集合；有了这种表示法，你在理论上能定义任何内容。 但是，除非你实际需要描述一组类型，否则我们不建议你使用类图。 例如，你可以采用类图来描述不同类型的网页。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [从 UML 模型生成文件](../modeling/generate-files-from-a-uml-model.md)[在程序代码中读取 Uml 模型](../modeling/read-a-uml-model-in-program-code.md)[从域特定语言生成代码](../modeling/generating-code-from-a-domain-specific-language.md)[如何：在程序代码中从文件打开模型](../modeling/how-to-open-a-model-from-file-in-program-code.md)[使用 T4 文本模板生成设计时代码生成](../modeling/design-time-code-generation-by-using-t4-text-templates.md)

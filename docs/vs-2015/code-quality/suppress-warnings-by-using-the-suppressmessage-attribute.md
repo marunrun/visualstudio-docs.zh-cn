@@ -20,16 +20,16 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: a5d64a27759cf844550297beb19b026bbeaa0e40
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85546817"
 ---
 # <a name="suppress-warnings-by-using-the-suppressmessage-attribute"></a>使用 SuppressMessage 特性禁止显示警告
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-通常，这会很有用，这是为了让团队成员了解代码已评审并且确定应禁止显示警告，这通常很有用。 在源抑制（ISS）中，开发人员可以将禁止显示警告的属性放置在生成警告的位置附近。 您可以直接向源文件添加 ISS 特性，也可以在 IDE 中使用快捷菜单 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 。
+通常，这会很有用，这是为了让团队成员了解代码已评审并且确定应禁止显示警告，这通常很有用。 在源代码中禁止 (ISS) 使开发人员可以将禁止显示警告的属性放置在生成警告的位置附近。 您可以直接向源文件添加 ISS 特性，也可以在 IDE 中使用快捷菜单 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 。
 
 ## <a name="in-this-section"></a>本节内容
 

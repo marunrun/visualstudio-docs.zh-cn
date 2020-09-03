@@ -1,5 +1,5 @@
 ---
-title: 优化菜单和工具栏命令 |微软文档
+title: 优化菜单和工具栏命令 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,19 +15,19 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 4932a4404c3d76b089468864f84d011524e9cfa0
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80706909"
 ---
 # <a name="optimizing-menu-and-toolbar-commands"></a>优化菜单和工具栏命令
-VSPackages 及其相应的命令的添加[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]可能会导致 UI 拥挤。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]提供了帮助最小化 UI 命令混淆的方法。
+添加 Vspackage 及其相应的命令 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 可能会导致拥挤的 UI。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 提供有助于最大程度地减少 UI 命令混淆的方法。
 
 ## <a name="in-this-section"></a>本节内容
 - [提供可用命令](../../extensibility/internals/making-commands-available.md)
 
- 提供添加 VS 包时最小化[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]UI 挤拥的一般准则。
+ 提供有关在添加 Vspackage 时最大限度地减少 UI crowding 的一般准则 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 。
 
 - [放置指南](../../extensibility/internals/command-placement-guidelines.md)
 

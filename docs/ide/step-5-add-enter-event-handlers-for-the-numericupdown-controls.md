@@ -78,6 +78,6 @@ ms.locfileid: "77579830"
 
 ## <a name="to-continue-or-review"></a>继续或查看
 
-- 要转到下一个教程步骤，请参阅 [**步骤 6：** 添加减法题](../ide/step-6-add-a-subtraction-problem.md)。
+- 要转到下一个教程步骤，请参阅 **[步骤 6：** 添加减法题](../ide/step-6-add-a-subtraction-problem.md)。
 
 - 要返回上一个教程步骤，请参阅[步骤 4：添加 CheckTheAnswer() 方法](../ide/step-4-add-the-checktheanswer-parens-method.md)。

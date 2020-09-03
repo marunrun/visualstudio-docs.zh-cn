@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 594c012aaa49a5b62e9f254f924a71f4934d1ebe
-ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85382609"
 ---
 # <a name="how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications"></a>如何：为 ClickOnce 应用程序向客户端计算机添加一个受信任的发行者
@@ -32,13 +32,13 @@ ms.locfileid: "85382609"
 
  还可以使用 <xref:System.Security.Cryptography.X509Certificates.X509Store> 类以编程方式将证书添加到存储。
 
- 有关受信任的应用程序部署的概述，请参阅[受信任的应用程序部署概述](../deployment/trusted-application-deployment-overview.md)。
+ 有关受信任的应用程序部署的概述，请参阅 [受信任的应用程序部署概述](../deployment/trusted-application-deployment-overview.md)。
 
 ### <a name="to-add-a-certificate-to-the-trusted-publishers-store-under-the-trusted-root"></a>将证书添加到受信任的根下的“受信任的发布者”存储
 
 1. 从 CA 获取数字证书。
 
-2. 将证书导出为 Base64 x.509 （*.cer*）格式。 有关证书格式的详细信息，请参阅[导出证书](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730988(v=ws.10))。
+2. 将证书导出为 Base64 x.509 (*.cer*) 格式。 有关证书格式的详细信息，请参阅 [导出证书](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730988(v=ws.10))。
 
 3. 从客户端计算机上的命令提示符处，运行以下命令：
 
@@ -48,7 +48,7 @@ ms.locfileid: "85382609"
 
 1. 从 CA 获取数字证书。
 
-2. 将证书导出为 Base64 x.509 （*.cer*）格式。 有关证书格式的详细信息，请参阅 [导出证书](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730988(v=ws.10))。
+2. 将证书导出为 Base64 x.509 (*.cer*) 格式。 有关证书格式的详细信息，请参阅 [导出证书](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730988(v=ws.10))。
 
 3. 从客户端计算机上的命令提示符处，运行以下命令：
 
@@ -56,7 +56,7 @@ ms.locfileid: "85382609"
 
      **certmgr.exe -add good.cer -c -s -r localMachine TrustedPublisher**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [演练：手动部署 ClickOnce 应用程序](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)
 - [保护 ClickOnce 应用程序](../deployment/securing-clickonce-applications.md)
 - [ClickOnce 应用程序的代码访问安全性](../deployment/code-access-security-for-clickonce-applications.md)

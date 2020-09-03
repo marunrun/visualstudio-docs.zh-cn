@@ -1,5 +1,5 @@
 ---
-title: IDebugMethodfield：：EnumAllLocals |微软文档
+title: IDebugMethodField：： EnumAllLocals |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 50da5af616c56276a0299a0d08e6eeb0b88181cc
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80727342"
 ---
 # <a name="idebugmethodfieldenumalllocals"></a>IDebugMethodField::EnumAllLocals
-为方法的所有局部变量创建枚举器，包括编译器内部生成的变量。
+创建方法的所有局部变量的枚举数，包括编译器在内部生成的变量。
 
 ## <a name="syntax"></a>语法
 
@@ -43,20 +43,20 @@ int EnumAllLocals(
 
 ## <a name="parameters"></a>参数
 `pAddress`\
-[在][IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md)对象表示方法中的调试地址，指向特定范围或上下文。
+中 [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) 对象，表示方法中的调试地址，指向特定范围或上下文。
 
 `ppLocals`\
-[出]返回表示指定作用域中所有局部变量列表的[IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)对象;否则，返回一个 null 值，指示没有局部变量。
+弄返回一个 [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) 对象，该对象表示指定范围内的所有局部变量的列表;否则，返回 null 值，指示没有局部变量。
 
 ## <a name="return-value"></a>返回值
- 如果成功，则返回S_OK或返回S_FALSE如果没有局部变量。 否则，返回错误代码。
+ 如果成功，则返回 S_OK 或返回 S_FALSE （如果没有局部变量）。 否则，返回错误代码。
 
 ## <a name="remarks"></a>备注
- 仅枚举在包含给定调试地址的块中定义的变量。 此方法包括任何编译器生成的局部变量。 如果所需的全部是源中显式定义的局部变量，请调用[EnumLocals](../../../extensibility/debugger/reference/idebugmethodfield-enumlocals.md)方法。
+ 仅枚举包含给定调试地址的块中定义的变量。 此方法包含编译器生成的任何局部变量。 如果所需的全部都是在源中显式定义的局部变量，请调用 [EnumLocals](../../../extensibility/debugger/reference/idebugmethodfield-enumlocals.md) 方法。
 
- 方法可以包含多个范围上下文或块。
+ 一个方法可以包含多个范围上下文或块。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)
 - [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md)
 - [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)

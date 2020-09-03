@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 546f7255b1c2846bdbd05bba0593b30bad9beacd
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85769009"
 ---
 # <a name="how-to-export-a-texture-for-use-with-direct2d-or-javascript-apps"></a>如何：使用 Direct2D 或 JavaScript 应用导出纹理以供使用

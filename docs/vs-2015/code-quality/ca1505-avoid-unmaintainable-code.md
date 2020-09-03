@@ -16,27 +16,27 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 0f2f731b1ac0d87b59c7690d0cf57ade3570ed5f
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85547818"
 ---
 # <a name="ca1505-avoid-unmaintainable-code"></a>CA1505:避免使用无法维护的代码
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|Item|值|
+|项|值|
 |-|-|
 |TypeName|AvoidUnmantainableCode|
 |CheckId|CA1505|
-|Category|Microsoft 可维护性|
+|类别|Microsoft 可维护性|
 |是否重大更改|不间断|
 
 ## <a name="cause"></a>原因
  类型或方法具有较低的可维护性索引值。
 
 ## <a name="rule-description"></a>规则描述
- 可维护性索引使用以下度量值进行计算：代码行、程序量和圈复杂度。 "程序卷" 是对基于代码中的运算符和操作数的数量进行理解的难度。 圈复杂度是指类型或方法的结构复杂度的度量。 可以在[测量托管代码的复杂性和可维护性](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)中了解有关代码度量值的详细信息。
+ 可维护性索引使用以下度量值进行计算：代码行、程序量和圈复杂度。 "程序卷" 是对基于代码中的运算符和操作数的数量进行理解的难度。 圈复杂度是指类型或方法的结构复杂度的度量。 可以在 [测量托管代码的复杂性和可维护性](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)中了解有关代码度量值的详细信息。
 
  低可维护性索引指示类型或方法可能难以维护，并且是重新设计的良好候选项。
 

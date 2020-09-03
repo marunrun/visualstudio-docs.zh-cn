@@ -22,7 +22,7 @@
               href: lexical-hierarchy-of-symbol-types.md
             - name: Annotation
               href: annotation.md
-            - name: 街区
+            - name: 阻止
               href: block.md
             - name: 编译单位
               href: compiland.md

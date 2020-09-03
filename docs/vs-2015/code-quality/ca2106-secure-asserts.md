@@ -16,20 +16,20 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: eb0e097c2f13fa9d9279a5f3e9761a53cb6e4b1d
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85547740"
 ---
 # <a name="ca2106-secure-asserts"></a>CA2106:保护断言
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|Item|值|
+|项|值|
 |-|-|
 |TypeName|SecureAsserts|
 |CheckId|CA2106|
-|Category|Microsoft.Security|
+|类别|Microsoft.Security|
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
@@ -45,4 +45,4 @@ ms.locfileid: "85547740"
  仅在仔细检查安全检查后，禁止显示此规则发出的警告。
 
 ## <a name="see-also"></a>另请参阅
- <xref:System.Security.CodeAccessPermission.Assert%2A?displayProperty=fullName> [代码安全维护指南](https://msdn.microsoft.com/library/4f882d94-262b-4494-b0a6-ba9ba1f5f177)
+ <xref:System.Security.CodeAccessPermission.Assert%2A?displayProperty=fullName> [安全编码准则](https://msdn.microsoft.com/library/4f882d94-262b-4494-b0a6-ba9ba1f5f177)
