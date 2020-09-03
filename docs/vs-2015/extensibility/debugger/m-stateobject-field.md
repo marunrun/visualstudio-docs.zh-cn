@@ -11,22 +11,22 @@ caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 8e9cfc6f689504bef2a8366f90282641d1e9e105
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68149042"
 ---
-# <a name="mstateobject-field"></a>m_stateObject 字段
+# <a name="m_stateobject-field"></a>m_stateObject 字段
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-一个对象，表示该操作将使用的数据。  
+表示操作将使用的数据的对象。  
   
  **命名空间：** <xref:System.Threading.Tasks?displayProperty=fullName>  
   
- **程序集：** mscorlib （在 mscorlib.dll 中)  
+ **Assembly：** mscorlib (mscorlib.dll)   
   
- 无法从.NET Framework 来访问此内部成员，因为以下语法提供通用中间语言 (CIL)。  
+ 由于无法从 .NET Framework 访问此内部成员，因此在公共中间语言 (CIL) 中提供了以下语法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,7 +35,7 @@ ms.locfileid: "68149042"
 ```  
   
 ## <a name="remarks"></a>备注  
- 这是`state`中的参数<xref:System.Threading.Tasks.Task.%23ctor%2A>构造函数。 它也是为支持字段<xref:System.Threading.Tasks.Task.AsyncState%2A?displayProperty=fullName>属性。  
+ 这是 `state` 构造函数中的 <xref:System.Threading.Tasks.Task.%23ctor%2A> 参数。 它也是属性的支持字段 <xref:System.Threading.Tasks.Task.AsyncState%2A?displayProperty=fullName> 。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Task 类](../../extensibility/debugger/task-class-internal-members.md)

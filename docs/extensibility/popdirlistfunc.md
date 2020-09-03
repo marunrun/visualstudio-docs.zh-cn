@@ -1,5 +1,5 @@
 ---
-title: 波普迪利斯芬奇 |微软文档
+title: POPDIRLISTFUNC |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,16 +13,16 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 52a0c16af0e142bda8527c5244a22e0830ced9e0
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80702082"
 ---
 # <a name="popdirlistfunc"></a>POPDIRLISTFUNC
-这是为[SccPopulateDirList](../extensibility/sccpopulatedirlist-function.md)函数提供的回调函数，用于更新目录和（可选）文件名的集合，以找出受源代码管理。
+这是一个回调函数，该函数提供给 [SccPopulateDirList](../extensibility/sccpopulatedirlist-function.md) 函数以更新目录的集合，并 (可以选择性地) 文件名以找出受源代码管理的文件名称。
 
- `POPDIRLISTFUNC`应仅对实际受源代码管理的目录和文件名（在提供给`SccPopulateDirList`函数的列表中）调用回调。
+ `POPDIRLISTFUNC`只应为这些目录和文件名调用回调，此列表中 (`SccPopulateDirList` 是) 实际受源代码管理的函数。
 
 ## <a name="signature"></a>签名
 
@@ -37,18 +37,18 @@ typedef BOOL (*POPDIRLISTFUNC)(
 ## <a name="parameters"></a>参数
  pvCallerData
 
-[在]提供给[SccpopulateDirlist 的用户](../extensibility/sccpopulatedirlist-function.md)值 。
+中向 [SccPopulateDirList](../extensibility/sccpopulatedirlist-function.md)提供的用户值。
 
  bFolder
 
-[在]`TRUE`如果 中`lpDirectoryOrFileName`的名称是目录;如果否则，名称是文件名。
+[in] `TRUE` 如果中的名称 `lpDirectoryOrFileName` 是目录，则为; 否则为文件名。
 
- lpDirectoryOr文件名
+ lpDirectoryOrFileName
 
-[在]目录或文件名的完整本地路径，由源代码控制。
+中源代码管理下的目录或文件名的完整本地路径。
 
 ## <a name="return-value"></a>返回值
- IDE 返回相应的错误代码：
+ IDE 将返回相应的错误代码：
 
 |值|说明|
 |-----------|-----------------|
@@ -57,9 +57,9 @@ typedef BOOL (*POPDIRLISTFUNC)(
 |SCC_E_xxx|任何适当的源代码管理错误都应停止处理。|
 
 ## <a name="remarks"></a>备注
- 如果`fOptions``SccPopulateDirList`函数的参数包含`SCC_PDL_INCLUDEFILES`标志，则列表可能包含文件名和目录名。
+ 如果 `fOptions` 函数的参数 `SccPopulateDirList` 包含 `SCC_PDL_INCLUDEFILES` 标志，则该列表可能包含文件名和目录名。
 
-## <a name="see-also"></a>请参阅
-- [IDE 实现的回调功能](../extensibility/callback-functions-implemented-by-the-ide.md)
+## <a name="see-also"></a>另请参阅
+- [IDE 实现的回调函数](../extensibility/callback-functions-implemented-by-the-ide.md)
 - [SccPopulateDirList](../extensibility/sccpopulatedirlist-function.md)
 - [错误代码](../extensibility/error-codes.md)

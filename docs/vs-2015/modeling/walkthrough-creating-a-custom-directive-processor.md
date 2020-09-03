@@ -13,16 +13,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 208089e4a9caeea5f8b56cdf694b7aaa602228ec
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72659324"
 ---
 # <a name="walkthrough-creating-a-custom-directive-processor"></a>演练：创建自定义指令处理器
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-指令处理器 * 通过将代码添加到*生成的转换类*来工作。 如果从*文本模板*调用*指令*，则在文本模板中编写的其余代码都可以依赖于指令提供的功能。
+指令处理器 * 通过将代码添加到 *生成的转换类*来工作。 如果从*文本模板*调用*指令*，则在文本模板中编写的其余代码都可以依赖于指令提供的功能。
 
  您可以编写自己的自定义指令处理器。 利用它可以自定义文本模板。 若要创建自定义指令处理器，需要创建一个从 <xref:Microsoft.VisualStudio.TextTemplating.DirectiveProcessor> 或 <xref:Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor> 继承的类。
 
@@ -34,7 +34,7 @@ ms.locfileid: "72659324"
 
 - 测试指令处理器
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
  若要完成此演练，您需要：
 
 - Visual Studio 2010
@@ -86,15 +86,15 @@ End Property
 1. 在 Visual Studio 中，创建一个名为 CustomDP 的 C# 或 Visual Basic 类库项目。
 
     > [!NOTE]
-    > 如果要在多台计算机上安装指令处理器，最好使用 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Extension (VSIX) 项目并在扩展中包含一个 .pkgdef 文件。 有关详细信息，请参阅[部署自定义指令处理器](../modeling/deploying-a-custom-directive-processor.md)。
+    > 如果要在多台计算机上安装指令处理器，最好使用 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Extension (VSIX) 项目并在扩展中包含一个 .pkgdef 文件。 有关详细信息，请参阅 [部署自定义指令处理器](../modeling/deploying-a-custom-directive-processor.md)。
 
 2. 添加对下列程序集的引用：
 
-    - **VisualStudio. TextTemplating. \***
+    - **VisualStudio \* . TextTemplating。0**
 
-    - **VisualStudio. TextTemplating. \***
+    - **VisualStudio. \* TextTemplating。0**
 
-3. 将**Class1**中的代码替换为以下代码。 此代码定义一个继承自 <xref:Microsoft.VisualStudio.TextTemplating.DirectiveProcessor> 类的 CustomDirectiveProcessor 类并实现必需的方法。
+3. 将 **Class1** 中的代码替换为以下代码。 此代码定义一个继承自 <xref:Microsoft.VisualStudio.TextTemplating.DirectiveProcessor> 类的 CustomDirectiveProcessor 类并实现必需的方法。
 
     ```csharp
     using System;
@@ -606,20 +606,20 @@ End Property
     End Namespace
     ```
 
-4. 对于 "仅 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]"，打开 "**项目**" 菜单，然后单击 " **CustomDP 属性**"。 在 "**应用程序**" 选项卡上的 "**根命名空间**" 中，删除默认值 `CustomDP`。
+4. [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]仅对于，打开 "**项目**" 菜单，然后单击 " **CustomDP 属性**"。 在 " **应用程序** " 选项卡上的 " **根命名空间**" 中，删除默认值 `CustomDP` 。
 
-5. 在“文件”菜单上，单击“全部保存”。
+5. 在“文件”  菜单上，单击“全部保存” 。
 
-6. 在 **“生成”** 菜单上，单击 **“生成解决方案”** 。
+6. 在“生成”菜单中，单击“生成解决方案”。
 
 ### <a name="build-the-project"></a>生成项目
- 生成项目。 在 **“生成”** 菜单上，单击 **“生成解决方案”** 。
+ 生成项目。 在“生成”菜单中，单击“生成解决方案”。
 
 ## <a name="registering-the-directive-processor"></a>注册指令处理器
- 在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中的文本模板调用指令之前，必须为指令处理器添加注册表项。
+ [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]必须先为指令处理器添加注册表项，然后才能在中从文本模板调用指令。
 
 > [!NOTE]
-> 如果要在多台计算机上安装指令处理器，最好定义一个 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Extension (VSIX)，其中包含一个 .pkgdef 文件和您的程序集。 有关详细信息，请参阅[部署自定义指令处理器](../modeling/deploying-a-custom-directive-processor.md)。
+> 如果要在多台计算机上安装指令处理器，最好定义一个 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Extension (VSIX)，其中包含一个 .pkgdef 文件和您的程序集。 有关详细信息，请参阅 [部署自定义指令处理器](../modeling/deploying-a-custom-directive-processor.md)。
 
  指令处理器的项在注册表的以下位置：
 
@@ -636,15 +636,15 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\*.0\TextTemplatin
  在本节中，将在注册表中的该位置为自定义指令处理器添加一个项。
 
 > [!CAUTION]
-> 注册表编辑不当可能会严重损坏系统。 更改注册表之前，应备份计算机中的所有重要数据。
+> 错误编辑注册表会严重损坏您的系统。 更改注册表之前，应备份计算机中的所有重要数据。
 
 #### <a name="to-add-a-registry-key-for-the-directive-processor"></a>为指令处理器添加注册表项
 
-1. 使用 "开始" 菜单或命令行运行 `regedit` 命令。
+1. `regedit`使用 "开始" 菜单或命令行运行该命令。
 
-2. 浏览到位置**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio \\ \* .0 \ TextTemplating\DirectiveProcessors**，并单击节点。
+2. 浏览到位置**HKEY_LOCAL_MACHINE \software\microsoft\visualstudio \\ \* .0 \ TextTemplating\DirectiveProcessors**，并单击该节点。
 
-    在64位系统上，使用**HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio \\ \*。 0 \ TextTemplating\DirectiveProcessors**
+    在64位系统上，使用**HKEY_LOCAL_MACHINE \software\wow6432node\microsoft\visualstudio \\ \* \ TextTemplating\DirectiveProcessors**
 
 3. 添加名为 CustomDirectiveProcessor 的新项。
 
@@ -655,36 +655,36 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\*.0\TextTemplatin
 
 5. 添加名为 CodeBase 的新字符串值，它的值等于在本演练前面创建的 CustomDP.dll 的路径。
 
-    例如，路径可能类似于 `C:\UserFiles\CustomDP\bin\Debug\CustomDP.dll`。
+    例如，路径可能类似于 `C:\UserFiles\CustomDP\bin\Debug\CustomDP.dll` 。
 
     注册表项应具有以下值：
 
-   |   “属性”    |  键入  |                                   数据                                   |
+   |   名称    |  类型  |                                   数据                                   |
    |-----------|--------|--------------------------------------------------------------------------|
-   | (默认) | REG_SZ |                             (未设置值)                              |
-   |   实例   | REG_SZ |                    CustomDP.CustomDirectiveProcessor                     |
-   | CodeBase  | REG_SZ | <strong>\<Path 到解决方案 ></strong>CustomDP\bin\Debug\CustomDP.dll |
+   | （默认值） | REG_SZ |                             (未设置值)                              |
+   |   类   | REG_SZ |                    CustomDP.CustomDirectiveProcessor                     |
+   | CodeBase  | REG_SZ | <strong>\<Path to Your Solution></strong>CustomDP\bin\Debug\CustomDP.dll |
 
     如果已将程序集放置在 GAC 中，则值应如下所示：
 
-   |   “属性”    |  键入  |               数据                |
+   |   名称    |  类型  |               数据                |
    |-----------|--------|-----------------------------------|
-   | (默认) | REG_SZ |          (未设置值)          |
-   |   实例   | REG_SZ | CustomDP.CustomDirectiveProcessor |
-   | Assembly  | REG_SZ |           CustomDP.dll            |
+   | （默认值） | REG_SZ |          (未设置值)          |
+   |   类   | REG_SZ | CustomDP.CustomDirectiveProcessor |
+   | 程序集  | REG_SZ |           CustomDP.dll            |
 
-6. 重新启动 Visual Studio。
+6. 重启 Visual Studio。
 
 ## <a name="testing-the-directive-processor"></a>测试指令处理器
  若要测试指令处理器，需要编写一个调用它的文本模板。
 
- 在本示例中，文本模板调用指令并传入包含类文件文档的 XML 文件的名称。 有关详细信息，请参阅[XML 文档注释](https://msdn.microsoft.com/library/803b7f7b-7428-4725-b5db-9a6cff273199)。
+ 在本示例中，文本模板调用指令并传入包含类文件文档的 XML 文件的名称。 有关详细信息，请参阅 [XML 文档注释](https://msdn.microsoft.com/library/803b7f7b-7428-4725-b5db-9a6cff273199)。
 
  然后，文本模板使用该指令创建的 <xref:System.Xml.XmlDocument> 属性导航到 XML 并输出文档注释。
 
 #### <a name="to-create-an-xml-file-for-use-in-testing-the-directive-processor"></a>创建供测试指令处理器使用的 XML 文件
 
-1. 使用任意文本编辑器（例如记事本）创建名为 `DocFile.xml` 的文本文件。
+1. `DocFile.xml`使用任何文本编辑器创建名为的文本文件 (例如，记事本) 。
 
     > [!NOTE]
     > 可以在任意位置（如 C:\Test\DocFile.xml）创建此文件。
@@ -730,7 +730,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\*.0\TextTemplatin
     </doc>
     ```
 
-3. 保存并关闭文件。
+3. 保存并关闭该文件。
 
 #### <a name="to-create-a-text-template-to-test-the-directive-processor"></a>创建文本模板测试指令处理器
 
@@ -738,12 +738,12 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\*.0\TextTemplatin
 
 2. 添加名为 TestDP.tt 的新文本模板文件。
 
-3. 确保将 TestDP.tt 的 "**自定义工具**" 属性设置为 `TextTemplatingFileGenerator`。
+3. 请确保将 TestDP.tt 的 " **自定义工具** " 属性设置为 `TextTemplatingFileGenerator` 。
 
 4. 将 TestDP.tt 的内容更改为以下文本。
 
     > [!NOTE]
-    > 请确保将字符串 < `YOUR PATH>` 替换为 Docfile.xml 文件的路径。
+    > 请确保将字符串 <替换为 `YOUR PATH>` DocFile.xml 文件的路径。
 
      文本模板的语言不必与指令处理器的语言一致。
 
@@ -832,15 +832,15 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\*.0\TextTemplatin
     > [!NOTE]
     > 在本示例中，`Processor` 参数的值为 `CustomDirectiveProcessor`。 `Processor` 参数的值必须与处理器的注册表项的名称一致。
 
-5. 在“文件”菜单上，单击“全部保存”。
+5. 在“文件”  菜单上，单击“全部保存” 。
 
 #### <a name="to-test-the-directive-processor"></a>测试指令处理器
 
-1. 在**解决方案资源管理器**中，右键单击 TestDP.tt，然后单击 "**运行自定义工具**"。
+1. 在 **解决方案资源管理器**中，右键单击 TestDP.tt，然后单击 " **运行自定义工具**"。
 
-     对于 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 用户，默认情况下，Testdp.txt 可能不会出现在**解决方案资源管理器**中。 若要显示分配给项目的所有文件，请打开 "**项目**" 菜单，然后单击 "**显示所有文件**"。
+     对于 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 用户，默认情况下 TestDP.txt 可能不会出现在 **解决方案资源管理器** 中。 若要显示分配给项目的所有文件，请打开 " **项目** " 菜单，然后单击 " **显示所有文件**"。
 
-2. 在**解决方案资源管理器**中，展开 "testdp.txt" 节点，然后双击 "testdp.txt" 以在编辑器中将其打开。
+2. 在 **解决方案资源管理器**中，展开 "TestDP.txt" 节点，然后双击 "TestDP.txt" 以在编辑器中将其打开。
 
      此时将显示生成的文本输出。 输出应如下所示：
 
@@ -879,10 +879,10 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\*.0\TextTemplatin
 
 #### <a name="to-add-html-to-the-generated-text"></a>向生成的文本添加 HTML
 
-1. 用下面的代码替换 TestDP.tt 中的代码。 HTML 为突出显示状态。 请确保将字符串 `YOUR PATH` 替换为 Docfile.xml 文件的路径。
+1. 用下面的代码替换 TestDP.tt 中的代码。 HTML 为突出显示状态。 请确保将字符串替换为 `YOUR PATH` DocFile.xml 文件的路径。
 
     > [!NOTE]
-    > 其他打开的 \< # 和 close # > 标记与 HTML 标记中的语句代码分开。
+    > 其他打开 \<# and close #> 的标记将语句代码与 HTML 标记分隔开来。
 
     ```csharp
     <#@ assembly name="System.Xml" #>
@@ -964,8 +964,8 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\*.0\TextTemplatin
     </body></html>
     ```
 
-2. 在 "**文件**" 菜单上，单击 "**保存 testdp.txt**"。
+2. 在 " **文件** " 菜单上，单击 " **保存 TestDP.txt**。
 
-3. 若要在浏览器中查看输出，请在**解决方案资源管理器**中右键单击 testdp.txt，然后单击 "**在浏览器中查看**"。
+3. 若要在浏览器中查看输出，请在 **解决方案资源管理器**中右键单击 TestDP.htm，然后单击 " **在浏览器中查看**"。
 
      输出应与原始文本相同，只是应用了 HTML 格式。 每个项名称都应显示为粗体。

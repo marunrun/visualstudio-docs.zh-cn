@@ -1,5 +1,5 @@
 ---
-title: IDebugThread2：暂停 |微软文档
+title: IDebugThread2：：挂起 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 74a7dd5dc69effbd46986eff963de3e740d9aa8e
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80718637"
 ---
 # <a name="idebugthread2suspend"></a>IDebugThread2::Suspend
@@ -41,16 +41,16 @@ HRESULT Suspend ( 
 
 ## <a name="parameters"></a>参数
 `pdwSuspendCount`\
-[出]在挂起操作后返回挂起计数。
+弄返回挂起操作后的挂起计数。
 
 ## <a name="return-value"></a>返回值
- 如果成功，返回`S_OK`;否则，返回错误代码。
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。
 
 ## <a name="remarks"></a>备注
- 对此方法的每个调用都会将挂起计数增加到 0 以上。 此挂起计数显示在**线程**调试窗口中。
+ 对此方法的每个调用会递增大于0的挂起计数。 此挂起计数显示在 " **线程** 调试" 窗口中。
 
- 对于对此方法的每个调用，以后必须调用[Resume](../../../extensibility/debugger/reference/idebugthread2-resume.md)方法。
+ 对于对此方法的每个调用，必须在以后调用 [Resume](../../../extensibility/debugger/reference/idebugthread2-resume.md) 方法。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)
 - [恢复](../../../extensibility/debugger/reference/idebugthread2-resume.md)

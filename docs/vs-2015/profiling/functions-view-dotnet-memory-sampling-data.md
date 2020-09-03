@@ -12,10 +12,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 8e77c6c2b3bf079e8aae88c9779c3b487ff97fe7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68141876"
 ---
 # <a name="functions-view---net-memory-sampling-data"></a>“函数”视图 - .NET 内存采样数据
@@ -43,6 +43,6 @@ ms.locfileid: "68141876"
 |**独占字节数百分比**|分析运行期间分配的属于此函数的独占字节的所有内存字节数的百分比。|  
   
 ## <a name="see-also"></a>另请参阅  
- [“函数”视图 - 检测](../profiling/functions-view-dotnet-memory-instrumentation-data.md)   
- [“函数”视图](../profiling/functions-view-sampling-data.md)   
+ ["函数" 视图-检测](../profiling/functions-view-dotnet-memory-instrumentation-data.md)   
+ [函数视图](../profiling/functions-view-sampling-data.md)   
  [“函数”视图](../profiling/functions-view-instrumentation-data.md)
