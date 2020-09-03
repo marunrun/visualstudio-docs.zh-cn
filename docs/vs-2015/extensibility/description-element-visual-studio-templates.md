@@ -1,5 +1,5 @@
 ---
-title: Description 元素 （Visual Studio 模板） |Microsoft Docs
+title: Visual Studio 模板 (Description 元素) |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -11,20 +11,20 @@ caps.latest.revision: 17
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: d60244ea827433678afbd09dd1e8cf1c972595cd
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68162115"
 ---
 # <a name="description-element-visual-studio-templates"></a>Description 元素（Visual Studio 模板）
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-指定模板的说明中所示**新的项目**或**添加新项**对话框。  
+指定在 " **新建项目** " 或 " **添加新项** " 对话框中显示的模板的说明。  
   
- \<VSTemplate >  
- \<TemplateData >  
- \<说明 >  
+ \<VSTemplate>  
+ \<TemplateData>  
+ \<Description>  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,10 +43,10 @@ ms.locfileid: "68162115"
   
 ### <a name="attributes"></a>特性  
   
-|特性|描述|  
+|特性|说明|  
 |---------------|-----------------|  
-|`Package`|适用于高级的用户情形的可选属性。<br /><br /> 指定 Visual Studio 包 ID 的 GUID。|  
-|`ID`|适用于高级的用户情形的可选属性。<br /><br /> 指定 Visual Studio 资源 ID。|  
+|`Package`|可选属性，适用于高级用户方案。<br /><br /> 指定 Visual Studio 包 ID 的 GUID。|  
+|`ID`|可选属性，适用于高级用户方案。<br /><br /> 指定 Visual Studio 资源 ID。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -63,10 +63,10 @@ ms.locfileid: "68162115"
  此文本提供模板的说明。  
   
 ## <a name="remarks"></a>备注  
- `Description` 是 `TemplateData` 元素的必需子元素。  
+ `Description` 是元素的必需子元素 `TemplateData` 。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示用于的项目模板的元数据[!INCLUDE[csprcs](../includes/csprcs-md.md)]应用程序。  
+ 下面的示例演示应用程序的项目模板的元数据 [!INCLUDE[csprcs](../includes/csprcs-md.md)] 。  
   
 ```  
 <VSTemplate Type="Project" Version="3.0.0"  
@@ -92,6 +92,6 @@ ms.locfileid: "68162115"
 </VSTemplate>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)   
  [创建项目和项模板](../ide/creating-project-and-item-templates.md)

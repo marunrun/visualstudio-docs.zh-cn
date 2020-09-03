@@ -1,5 +1,5 @@
 ---
-title: 使用 SAL 注释减少 CC++代码缺陷 |Microsoft Docs
+title: 使用 SAL 注释减少 C + + 代码缺陷 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -14,10 +14,10 @@ author: corob-msft
 ms.author: corob
 manager: jillfra
 ms.openlocfilehash: 66da17a31f6287bea810fc29fdb9c12d95cc94b2
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77275408"
 ---
 # <a name="using-sal-annotations-to-reduce-cc-code-defects"></a>使用 SAL 批注以减少 C/C++ 代码缺陷
@@ -49,7 +49,7 @@ SAL 是 Microsoft 源代码批注语言。 通过使用源代码批注，你可�
   
 - [指定何时以及在何处应用批注](../code-quality/specifying-when-and-where-an-annotation-applies.md)  
   
-     列出指定其他 SAL 批注的条件或范围（位置）的 SAL 批注。  
+     列出指定其他 SAL 批注的条件或范围 (放置) 的 SAL 注释。  
   
 - [内部函数](../code-quality/intrinsic-functions.md)  
   
@@ -63,4 +63,4 @@ SAL 是 Microsoft 源代码批注语言。 通过使用源代码批注，你可�
  [代码分析团队博客](https://blogs.msdn.com/b/codeanalysis/)  
   
 ## <a name="see-also"></a>另请参阅  
- [Windows 驱动程序的 SAL 2.0 批注](https://msdn.microsoft.com/library/windows/hardware/hh454237.aspx)
+ [Windows 驱动程序的 SAL 2.0 注释](https://msdn.microsoft.com/library/windows/hardware/hh454237.aspx)
