@@ -10,10 +10,10 @@ author: steved0x
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 84f74b4718a7f976b386197a79692256ab49caa4
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72659124"
 ---
 # <a name="how-to-use-search-in-the-workflow-designer"></a>如何：在工作流设计器中使用搜索
@@ -26,19 +26,19 @@ ms.locfileid: "72659124"
 
 - 变量
 
-- 自变量
+- 参数
 
 - 表达式
 
 #### <a name="using-quick-find"></a>使用“快速查找”
 
-1. 打开工作流设计器后，按**Ctrl + F**，或选择 "**编辑**"、"**查找和替换**"、"**快速查找**"。
+1. 打开工作流设计器后，按 **Ctrl + F**，或选择 " **编辑**"、" **查找和替换**"、" **快速查找**"。
 
-2. 在 "**查找内容**" 文本框中输入搜索词，然后单击 "**查找下一个**"。
+2. 在 " **查找内容** " 文本框中输入搜索词，然后单击 " **查找下一个**"。
 
 3. 将在当前工作流中查找搜索词。 下面的屏幕快照显示了位于设计器中的活动显示名称。
 
-     ![工作流设计器中的搜索结果](../workflow-designer/media/designersearch.png "DesignerSearch")
+     ![在工作流设计器中搜索结果](../workflow-designer/media/designersearch.png "DesignerSearch")
 
 ## <a name="find-in-files"></a>在文件中查找
  使用“在文件中查找”将找到工作流文件（包括 XAML 文件）中的字符串。
@@ -49,4 +49,4 @@ ms.locfileid: "72659124"
 
 2. 在 "**查找内容**" 文本框中输入搜索项，并单击 "**查找全部**"
 
-3. 查找结果将显示在 "[!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] 查找"**结果**视图中。 双击某个结果项将导航到包含工作流设计器中的匹配项的活动。
+3. 查找结果将显示在 " [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] **查找结果**" 视图中。 双击某个结果项将导航到包含工作流设计器中的匹配项的活动。

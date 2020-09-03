@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 6f7bc701c4a7009d402c778356a290ce4e129bb3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72658973"
 ---
 # <a name="keyboard-shortcuts-in-the-workflow-designer"></a>工作流设计器中的键盘快捷键
@@ -27,7 +27,7 @@ ms.locfileid: "72658973"
 ### <a name="workflow-designer-keyboard-shortcuts"></a>工作流设计器键盘快捷键
  下表汇总了分配给 [!INCLUDE[wfd2](../includes/wfd2-md.md)] 命令的默认键盘快捷键。
 
-|快捷键|目标|
+|快捷键|用途|
 |--------------|-------------|
 |Ctrl+E，A|显示或隐藏自变量设计器。|
 |Ctrl+E，C|就地折叠所选择的活动。|
@@ -50,7 +50,7 @@ ms.locfileid: "72658973"
 
 - 若要调整流程图的大小，请使用箭头键移动某个活动经过该流程图的当前边框。 将自动调整流程图的大小。
 
-- 若要将活动设置为开始节点，请使用上下文菜单中的 "**设置为 StartNode** " 命令。
+- 若要将活动设置为开始节点，请使用上下文菜单中的 " **设置为 StartNode** " 命令。
 
 - 连接活动：
 
@@ -68,7 +68,7 @@ ms.locfileid: "72658973"
 
 - 如果某对活动无法连接（例如，源活动已具有一个传出连接），则仍会尽可能进行所选作用域内活动之间的其他连接。
 
-- 如果选定内容中包含**FlowDecision** ，并且**FlowDecision**没有传出连接器，则会将该连接器放置在**真正**的分支中。
+- 如果选定内容中包含 **FlowDecision** ，并且 **FlowDecision** 没有传出连接器，则会将该连接器放置在 **真正** 的分支中。
 
 ### <a name="expression-editing"></a>表达式编辑
  默认情况下，用于 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 文本编辑的默认键盘快捷键适用于 [!INCLUDE[wfd2](../includes/wfd2-md.md)] 中的表达式编辑器，但具有以下限制：

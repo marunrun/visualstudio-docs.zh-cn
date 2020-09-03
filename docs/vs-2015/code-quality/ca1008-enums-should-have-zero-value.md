@@ -16,21 +16,21 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 0ca58938a55330243315529e9c7990b59d1a6fe5
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85548338"
 ---
 # <a name="ca1008-enums-should-have-zero-value"></a>CA1008:枚举应具有零值
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|Item|值|
+|项|值|
 |-|-|
 |TypeName|EnumsShouldHaveZeroValue|
 |CheckId|CA1008|
-|Category|Microsoft. Design|
-|是否重大更改|不间断-当系统提示你向非标志枚举添加**无**值时。如果系统提示重命名或删除任何枚举值，则为。|
+|类别|Microsoft. Design|
+|是否重大更改|不间断-当系统提示你向非标志枚举添加 **无** 值时。如果系统提示重命名或删除任何枚举值，则为。|
 
 ## <a name="cause"></a>原因
  未应用的枚举 <xref:System.FlagsAttribute?displayProperty=fullName> 未定义值为零的成员; 或已应用的枚举 <xref:System.FlagsAttribute> 定义了值为零但其名称不为 "None" 的成员，或者枚举定义了多个零值成员。

@@ -16,24 +16,24 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: ee0571e85a1d4ec9960e0235814fcb9d7adbd483
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85539901"
 ---
 # <a name="ca1003-use-generic-event-handler-instances"></a>CA1003:使用泛型事件处理程序实例
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|Item|值|
+|项|值|
 |-|-|
 |TypeName|UseGenericEventHandlerInstances|
 |CheckId|CA1003|
-|Category|Microsoft. Design|
+|类别|Microsoft. Design|
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
- 类型包含一个返回 void 的委托，该委托的签名包含两个参数（第一个对象，第二个参数是可分配给 EventArgs 的类型）和包含程序集目标 [!INCLUDE[dnprdnlong](../includes/dnprdnlong-md.md)] 。
+ 类型包含一个返回 void 的委托，该委托的签名包含 (第一个对象的两个参数，第二个参数包含可分配给 EventArgs) 的类型和包含程序集目标 [!INCLUDE[dnprdnlong](../includes/dnprdnlong-md.md)] 。
 
 ## <a name="rule-description"></a>规则描述
  [!INCLUDE[dnprdnlong](../includes/dnprdnlong-md.md)]在之前，若要将自定义信息传递到事件处理程序，必须将新委托声明为指定派生自类的类 <xref:System.EventArgs?displayProperty=fullName> 。 这在引入委托的中不再是如此 [!INCLUDE[dnprdnlong](../includes/dnprdnlong-md.md)] <xref:System.EventHandler%601?displayProperty=fullName> 。 此泛型委托允许将派生自的任何类 <xref:System.EventArgs> 与事件处理程序一起使用。

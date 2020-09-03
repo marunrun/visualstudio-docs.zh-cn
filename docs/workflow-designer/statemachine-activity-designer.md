@@ -12,10 +12,10 @@ ms.workload:
 - multiple
 author: TerryGLee
 ms.openlocfilehash: e7a270780a953a6104adc7089a02ff6529106fdf
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75593130"
 ---
 # <a name="statemachine-activity-designer"></a>StateMachine 活动设计器
@@ -24,15 +24,15 @@ ms.locfileid: "75593130"
 
 ## <a name="using-the-statemachine-activity-designer"></a>使用 StateMachine 活动设计器
 
-若要添加 <xref:System.Activities.Statements.StateMachine> 活动，请将 " **StateMachine** " 活动设计器从 "**工具箱**" 的 "**状态机**" 部分拖放到工作流设计器图面上。 若要将子状态添加到此 <xref:System.Activities.Statements.StateMachine> 活动，请从 "**工具箱**" 中拖动 <xref:System.Activities.Statements.State> 或 <xref:System.Activities.Core.Presentation.FinalState>，并将其放到**StateMachine**上。
+若要添加 <xref:System.Activities.Statements.StateMachine> 活动，请将 " **StateMachine** " 活动设计器从 "**工具箱**" 的 "**状态机**" 部分拖放到工作流设计器图面上。 若要将子状态添加到此 <xref:System.Activities.Statements.StateMachine> 活动，请 <xref:System.Activities.Statements.State> 从 "工具箱" 中将或拖 <xref:System.Activities.Core.Presentation.FinalState> 放到**StateMachine**上。 **Toolbox**
 
 ### <a name="statemachine-activity-properties-in-the-workflow-designer"></a>工作流设计器中的 StateMachine 活动属性
 
 下表列出可使用工作流设计器设置的 <xref:System.Activities.Statements.StateMachine> 属性并说明如何在设计器中使用它们。 这些属性可以在属性网格中进行编辑，其中一些属性还可以在设计器图面上进行编辑。
 
-|属性名|必需|用量|
+|属性名称|必选|使用情况|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|False|指定 <xref:System.Activities.Statements.StateMachine> 活动设计器在标头中的友好名称。 默认值为**StateMachine**。 可以在属性网格或直接在活动设计器的标头中编辑该值。 <xref:System.Activities.Activity.DisplayName%2A> 用于痕迹导航，后者显示在工作流设计器顶部。<br /><br /> 虽然 <xref:System.Activities.Activity.DisplayName%2A> 不是绝对必需的，但最好使用该属性。|
+|<xref:System.Activities.Activity.DisplayName%2A>|错误|指定 <xref:System.Activities.Statements.StateMachine> 活动设计器在标头中的友好名称。 默认值为 **StateMachine**。 可以在属性网格或直接在活动设计器的标头中编辑该值。 <xref:System.Activities.Activity.DisplayName%2A> 用于痕迹导航，后者显示在工作流设计器顶部。<br /><br /> 虽然 <xref:System.Activities.Activity.DisplayName%2A> 不是绝对必需的，但最好使用该属性。|
 
 ## <a name="see-also"></a>另请参阅
 

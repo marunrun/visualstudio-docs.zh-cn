@@ -10,15 +10,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 4dac40177c3df2a346039a08cf557b6083ed9fc2
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85548273"
 ---
 # <a name="customize-the-properties-window"></a>自定义属性窗口
 
-你可以在 Visual Studio 中自定义域特定语言（DSL）的 "属性" 窗口的外观和行为。 在 DSL 定义中，为每个域类定义域属性。 默认情况下，当您在关系图上或在模型资源管理器中选择类的实例时，每个域属性都将列在 "属性" 窗口中。 这使你可以查看和编辑域属性的值，即使尚未将它们映射到关系图上的形状字段。
+你可以在 Visual Studio 中 (DSL) 自定义域特定语言中 "属性" 窗口的外观和行为。 在 DSL 定义中，为每个域类定义域属性。 默认情况下，当您在关系图上或在模型资源管理器中选择类的实例时，每个域属性都将列在 "属性" 窗口中。 这使你可以查看和编辑域属性的值，即使尚未将它们映射到关系图上的形状字段。
 
 ## <a name="names-descriptions-and-categories"></a>名称、说明和类别
 
@@ -36,23 +36,23 @@ ms.locfileid: "85548273"
 
 ## <a name="expose-style-features"></a>公开样式功能
 
-可以将图形元素的某些动态功能表示或*公开*为域属性。 以这种方式公开的功能可以由用户更新，并且可以更轻松地通过程序代码进行更新。
+可以将图形元素的某些动态功能表示或 *公开* 为域属性。 以这种方式公开的功能可以由用户更新，并且可以更轻松地通过程序代码进行更新。
 
-右键单击 DSL 定义中的形状类，指向 "添加" "**添加**"，然后选择一项功能。
+右键单击 DSL 定义中的形状类，指向 "添加" " **添加**"，然后选择一项功能。
 
-在形状上，可以公开**FillColor**、 **OutlineColor**、 **TextColor**、 **OutlineDashStyle**、 **OutlineThickness**和**FillGradientMode**属性。 在连接器上，可以公开**Color** `,` **TextColor**、 **DashStyle**和**宽窄**属性。 在关系图上，可以公开**FillColor**和**TextColor**属性。
+在形状上，可以公开 **FillColor**、 **OutlineColor**、 **TextColor**、 **OutlineDashStyle**、 **OutlineThickness** 和 **FillGradientMode** 属性。 在连接器上，可以公开**Color** `,` **TextColor**、 **DashStyle**和**宽窄**属性。 在关系图上，可以公开 **FillColor** 和 **TextColor** 属性。
 
 ## <a name="forwarding-display-properties-of-related-elements"></a>转发：显示相关元素的属性
 
 当 DSL 的用户选择模型中的元素时，该元素的属性将显示在 "属性" 窗口中。 但是，还可以显示指定相关元素的属性。 如果您定义了一组一起工作的元素，这会很有用。 例如，你可以定义一个主元素和一个可选的插件元素。 如果将主元素映射到某一形状，而另一个元素不是，则可以查看它们的所有属性，就好像它们位于一个元素上一样。
 
-这种效果命名为*属性转发*，并且在几种情况下会自动发生。 在其他情况下，可以通过定义域类型描述符来实现属性转发。
+这种效果命名为 *属性转发*，并且在几种情况下会自动发生。 在其他情况下，可以通过定义域类型描述符来实现属性转发。
 
 ### <a name="default-property-forwarding-cases"></a>默认属性转发事例
 
 当用户在资源管理器中选择形状或连接符或元素时，以下属性将显示在属性窗口中：
 
-- 在模型元素的域类上定义的域属性，包括基类中定义的属性。 例外情况是可以**浏览**设置的域属性 `False` 。
+- 在模型元素的域类上定义的域属性，包括基类中定义的属性。 例外情况是可以 **浏览** 设置的域属性 `False` 。
 
 - 通过具有重数为 0 ..1 的关系链接的元素的名称。 这提供了一种方便的方法来查看链接的元素，即使您没有为关系定义连接器映射也是如此。
 
@@ -71,25 +71,25 @@ ms.locfileid: "85548273"
 
 #### <a name="forward-a-property-from-another-element"></a>从另一个元素转发属性
 
-1. 创建一个 [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] 包含至少两个类的解决方案，在此示例中，这两个类称为 "**书籍**和**作者**"。 **本书**和**Author**之间应有一种类型的关系。
+1. 创建一个 [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] 包含至少两个类的解决方案，在此示例中，这两个类称为 " **书籍** 和 **作者**"。 **本书**和**Author**之间应有一种类型的关系。
 
-    源角色的重数（**本书**端角色）应为 0 ..1 或 1 ..1，以便每**本书**都有一个**作者**。
+     (在 **本书** 端) 角色的源角色的重数应为 0 ..1 或 1 ..1，以便每 **本书** 都有一个 **作者**。
 
-2. 在 " **DSL 资源管理器**" 中，右键单击**Book**域类，然后单击 "**添加新 DomainTypeDescriptor**"。
+2. 在 " **DSL 资源管理器**" 中，右键单击 **Book** 域类，然后单击 " **添加新 DomainTypeDescriptor**"。
 
     自定义**类型描述符**节点下将显示名为**的自定义属性描述符的路径**。
 
-3. 右键单击 "**自定义类型描述符**" 节点，然后单击 "**添加新 PropertyPath**"。
+3. 右键单击 " **自定义类型描述符** " 节点，然后单击 " **添加新 PropertyPath**"。
 
-    新属性路径出现在 "**自定义属性描述符**" 节点的路径下。
+    新属性路径出现在 " **自定义属性描述符** " 节点的路径下。
 
-4. 选择新的属性路径，然后在 "**属性**" 窗口中，将 "**路径**" 设置为相应模型元素的路径。
+4. 选择新的属性路径，然后在 " **属性** " 窗口中，将 " **路径** " 设置为相应模型元素的路径。
 
-    通过单击此属性右侧的向下箭头，可以在树视图中编辑路径。 有关域路径的详细信息，请参阅[域路径语法](../modeling/domain-path-syntax.md)。 编辑后，路径应类似于**BookReferencesAuthor/！作者**。
+    通过单击此属性右侧的向下箭头，可以在树视图中编辑路径。 有关域路径的详细信息，请参阅 [域路径语法](../modeling/domain-path-syntax.md)。 编辑后，路径应类似于 **BookReferencesAuthor/！作者**。
 
 5. 将**属性**设置为**Author**的**Name**域属性。
 
-6. 将**显示名称**设置为**作者名称**。
+6. 将 **显示名称** 设置为 **作者名称**。
 
 7. 转换所有模板，生成并运行 DSL。
 
@@ -109,28 +109,28 @@ ms.locfileid: "85548273"
 
    外部类型与类型（如 String）之间的转换，该类型具有默认编辑器。
 
-   在 DSL 中，*外部类型*是任何不属于简单类型（如布尔值或 Int32）或字符串的类型。
+   在 DSL 中， *外部类型* 是任何不属于简单类型的类型 (例如布尔值或 Int32) 或字符串。
 
 ### <a name="define-a-domain-property-that-has-an-external-type"></a>定义具有外部类型的域属性
 
-1. 在**解决方案资源管理器**中，在**Dsl**项目中添加对包含外部类型的程序集（DLL）的引用。
+1. 在 **解决方案资源管理器**中，在 **Dsl** 项目中添加对包含外部类型的程序集 (DLL) 的引用。
 
     该程序集可以是 .NET 程序集，也可以是您提供的程序集。
 
-2. 将类型添加到 "**域类型**" 列表中，除非您已执行此操作。
+2. 将类型添加到 " **域类型** " 列表中，除非您已执行此操作。
 
-   1. 打开 Dsldefinition.dsl，并在**Dsl 资源管理器**中右键单击根节点，然后单击 "**添加新的外部类型**"。
+   1. 打开 Dsldefinition.dsl，并在 **Dsl 资源管理器**中右键单击根节点，然后单击 " **添加新的外部类型**"。
 
-        新条目出现在 "**域类型**" 节点下。
+        新条目出现在 " **域类型** " 节点下。
 
        > [!WARNING]
-       > 该菜单项在 DSL 根节点上，而不是 "**域类型**" 节点上。
+       > 该菜单项在 DSL 根节点上，而不是 " **域类型** " 节点上。
 
    2. 在属性窗口中设置新类型的名称和命名空间。
 
 3. 以常规方式向域类添加域属性。
 
-    在属性窗口的 "**类型**" 字段的下拉列表中，选择 "外部" 类型。
+    在属性窗口的 " **类型** " 字段的下拉列表中，选择 "外部" 类型。
 
    在此阶段，用户可以查看属性的值，但不能对其进行编辑。 将从函数获取显示的值 `ToString()` 。 您可以编写程序代码以设置属性的值，例如在命令或规则中。
 
@@ -144,7 +144,7 @@ ms.locfileid: "85548273"
    typeof(System.Drawing.Design.UITypeEditor))]
 ```
 
-您可以使用属性窗口中的**自定义特性**项设置属性的属性。
+您可以使用属性窗口中的 **自定义特性** 项设置属性的属性。
 
 的类型 `AnEditor` 必须派生自第二个参数中指定的类型。 第二个参数应为 <xref:System.Drawing.Design.UITypeEditor> 或 <xref:System.ComponentModel.ComponentEditor> 。 有关详细信息，请参阅 <xref:System.ComponentModel.EditorAttribute>。
 
@@ -154,7 +154,7 @@ ms.locfileid: "85548273"
 
 1. 向 DSL 定义中的域类添加域属性。
 
-2. 选择新属性。 在属性窗口的 "**自定义特性**" 字段中，输入以下属性。 若要输入此属性，请单击省略号 **[...]** ，并分别输入属性名称和参数：
+2. 选择新属性。 在属性窗口的 " **自定义特性** " 字段中，输入以下属性。 若要输入此属性，请单击省略号 **[...]** ，并分别输入属性名称和参数：
 
     ```csharp
     [System.ComponentModel.Editor (
@@ -163,7 +163,7 @@ ms.locfileid: "85548273"
 
     ```
 
-3. 保留域属性的类型，其默认设置为 "**字符串**"。
+3. 保留域属性的类型，其默认设置为 " **字符串**"。
 
 4. 若要测试编辑器，请验证用户是否可以打开文件名编辑器来编辑域属性。
 
@@ -186,7 +186,7 @@ ms.locfileid: "85548273"
 还可以提供属性的值的图形表示形式，该属性的值将显示在属性网格中。 为此，请重写 `GetPaintValueSupported` 和 `PaintValue` 。  有关详细信息，请参阅 <xref:System.Drawing.Design.UITypeEditor>。
 
 > [!NOTE]
-> 在**Dsl**项目的单独代码文件中添加代码。
+> 在 **Dsl** 项目的单独代码文件中添加代码。
 
 例如：
 
@@ -202,7 +202,7 @@ internal class TextFileNameEditor : System.Windows.Forms.Design.FileNameEditor
 }
 ```
 
-若要使用此编辑器，请将域属性的**自定义属性**设置为：
+若要使用此编辑器，请将域属性的 **自定义属性** 设置为：
 
 ```csharp
 [System.ComponentModel.Editor (
@@ -226,7 +226,7 @@ internal class TextFileNameEditor : System.Windows.Forms.Design.FileNameEditor
 (typeof(MyTypeConverter))]
 ```
 
-定义一个从 <xref:System.ComponentModel.TypeConverter> 派生的类。 将代码添加到**Dsl**项目的单独文件中。 例如：
+定义一个从 <xref:System.ComponentModel.TypeConverter> 派生的类。 将代码添加到 **Dsl** 项目的单独文件中。 例如：
 
 ```csharp
 /// <summary>
@@ -319,6 +319,6 @@ public class MyTypeConverter : System.ComponentModel.TypeConverter
 }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [在程序代码中导航和更新模型](../modeling/navigating-and-updating-a-model-in-program-code.md)

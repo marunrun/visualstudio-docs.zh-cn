@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramDestroyEventFlags2 | Microsoft Docs
+title: IDebugProgramDestroyEventFlags2 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,16 +11,16 @@ caps.latest.revision: 8
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 86f7e211c742e4d95f3459d058139854874e7d85
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68182213"
 ---
 # <a name="idebugprogramdestroyeventflags2"></a>IDebugProgramDestroyEventFlags2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-使调试引擎能够重写的默认行为[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]UI 时结束调试会话。  
+[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]当您结束调试会话时，使调试引擎能够重写 UI 的默认行为。  
   
 ## <a name="syntax"></a>语法  
   
@@ -28,22 +28,22 @@ ms.locfileid: "68182213"
 IDebugProgramDestroyEventFlags2 : IUnknown  
 ```  
   
-## <a name="notes-for-implementers"></a>实施者的说明  
- 此接口由的调试引擎实现。 它可用于主机可能会创建和销毁进程的生存期内的多个程序。  
+## <a name="notes-for-implementers"></a>实施者注意事项  
+ 此接口由调试引擎实现。 这适用于可能在进程的生存期内创建和销毁多个程序的主机。  
   
 ## <a name="methods"></a>方法  
- 下表显示的方法`IDebugProgramDestroyEventFlags2`。  
+ 下表显示的方法 `IDebugProgramDestroyEventFlags2` 。  
   
-|方法|描述|  
+|方法|说明|  
 |------------|-----------------|  
 |[GetFlags](../../../extensibility/debugger/reference/idebugprogramdestroyeventflags2-getflags.md)|检索程序销毁标志。|  
   
 ## <a name="remarks"></a>备注  
- 默认行为[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]UI 是以返回到设计模式下，所有程序具有都发送程序后销毁事件。 此接口使调试引擎，若要更改该行为。  
+ UI 的默认行为 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 是在所有程序都发送程序销毁事件后返回到设计模式。 此接口可使调试引擎更改该行为。  
   
 ## <a name="requirements"></a>要求  
- 标头：Msdbg.h  
+ 标头： Msdbg  
   
- 命名空间:Microsoft.VisualStudio.Debugger.Interop  
+ 命名空间： VisualStudio  
   
- 程序集：Microsoft.VisualStudio.Debugger.Interop.dll
+ 程序集： Microsoft.VisualStudio.Debugger.Interop.dll

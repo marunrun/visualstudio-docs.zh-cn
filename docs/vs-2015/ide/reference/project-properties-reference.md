@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: b359d49ed4d670581406da3aad4cf05393f6b446
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72662105"
 ---
 # <a name="project-properties-reference"></a>项目属性引用
@@ -26,7 +26,7 @@ ms.locfileid: "72662105"
 
 ## <a name="project-properties-pages"></a>项目属性页
 
-|Title|说明|
+|标题|说明|
 |-----------|-----------------|
 |[“项目设计器”->“应用程序”页 (Visual Basic)](../../ide/reference/application-page-project-designer-visual-basic.md)|使用此页指定 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 项目的应用程序设置和属性。|
 |[“项目设计器”->“应用程序”页 (C#)](../../ide/reference/application-page-project-designer-csharp.md)|使用此页指定 [!INCLUDE[csprcs](../../includes/csprcs-md.md)] 项目的应用程序设置和属性。|

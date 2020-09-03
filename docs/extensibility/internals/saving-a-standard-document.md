@@ -56,6 +56,6 @@ ms.locfileid: "80705555"
 
 2. 调用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsExternalFilesManager2.TransferDocument%2A> (`pszMkDocumentNew` ， `punkWindowFrame`) 方法将文档传输到新层次结构。 执行 "另存为" 命令的层次结构将调用此方法。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>
 - [打开和保存项目项](../../extensibility/internals/opening-and-saving-project-items.md)

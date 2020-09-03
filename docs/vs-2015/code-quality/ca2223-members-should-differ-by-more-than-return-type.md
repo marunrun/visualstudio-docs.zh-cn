@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 4c1071617572af44a73f98953fd435623190e0e3
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85540837"
 ---
 # <a name="ca2223-members-should-differ-by-more-than-return-type"></a>CA2223:成员不应只是返回类型不同
@@ -45,7 +45,7 @@ ms.locfileid: "85540837"
  不禁止显示此规则发出的警告。
 
 ## <a name="example"></a>示例
- 下面的示例（在 Microsoft 中间语言（MSIL）中）显示了违反此规则的类型。 请注意，不能使用 c # 或 .NET Visual Basic 来违反此规则。
+ 以下示例（在 Microsoft 中间语言 (MSIL) 中）显示违反此规则的类型。 请注意，不能使用 c # 或 .NET Visual Basic 来违反此规则。
 
 ```
 
