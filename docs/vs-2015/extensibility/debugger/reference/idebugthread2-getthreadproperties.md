@@ -1,5 +1,5 @@
 ---
-title: IDebugThread2::GetThreadProperties |Microsoft Docs
+title: IDebugThread2：： GetThreadProperties |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,10 +13,10 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: dd32c32d2ccdb041ea34ce8d9d7ca72f2035db94
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68152999"
 ---
 # <a name="idebugthread2getthreadproperties"></a>IDebugThread2::GetThreadProperties
@@ -42,19 +42,19 @@ int GetThreadProperties ( 
   
 #### <a name="parameters"></a>参数  
  `dwFields`  
- [in]中的标志的组合[THREADPROPERTY_FIELDS](../../../extensibility/debugger/reference/threadproperty-fields.md)枚举，它确定的哪些字段`ptp`要填充的。  
+ 中 [THREADPROPERTY_FIELDS](../../../extensibility/debugger/reference/threadproperty-fields.md) 枚举中的标志的组合，用于确定 `ptp` 要填写的字段。  
   
  `ptp`  
- [in、 out]一个[THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md)填充线程的属性的结构。  
+ [in，out]使用线程的属性填充的 [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md) 结构。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
 ## <a name="remarks"></a>备注  
- 通常，此方法返回的信息显示在**线程**调试窗口。  
+ 此方法返回的信息通常显示在 " **线程** 调试" 窗口中。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何实现此方法对于简单`CProgram`对象，它实现[IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)接口。  
+ 下面的示例演示如何对 `CProgram` 实现 [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) 接口的简单对象实现此方法。  
   
 ```cpp#  
 HRESULT CProgram::GetThreadProperties(THREADPROPERTY_FIELDS dwFields,  
@@ -92,7 +92,7 @@ HRESULT CProgram::GetThreadProperties(THREADPROPERTY_FIELDS dwFields,
 }    
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)   
  [THREADPROPERTY_FIELDS](../../../extensibility/debugger/reference/threadproperty-fields.md)   
  [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md)

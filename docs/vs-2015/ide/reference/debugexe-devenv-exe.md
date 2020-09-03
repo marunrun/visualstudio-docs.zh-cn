@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: f472add6b821693d1d48397e878db19e707e2868
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72660807"
 ---
 # <a name="debugexe-devenvexe"></a>/DebugExe (devenv.exe)
@@ -31,7 +31,7 @@ ms.locfileid: "72660807"
 Devenv /debugexe ExecutableFile
 ```
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
  `ExecutableFile`（必需）。 .exe 文件的路径和文件名称。
 
  如果找不到 .exe 文件或不存在，不会显示任何警告或错误，并且 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 启动正常。

@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 419716d750771908a43318d051cb0b4681d35149
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72660982"
 ---
 # <a name="build-devenvexe"></a>/Build (devenv.exe)
@@ -32,7 +32,7 @@ ms.locfileid: "72660982"
 Devenv SolutionName /build SolnConfigName [/project ProjName [/projectconfig ProjConfigName]]
 ```
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
  `SolutionName`（必需）。 解决方案文件的完整路径和名称。
 
  `SolnConfigName`（必需）。 `SolutionName` 中指定了将用于生成解决方案的解决方案配置的名称。
@@ -46,7 +46,7 @@ Devenv SolutionName /build SolnConfigName [/project ProjName [/projectconfig Pro
 
  用双引号将含有空格的字符串引起来。
 
- “命令”  窗口或使用 `/out` 开关指定的任何日志文件中都可显示生成的摘要信息（包括错误）。
+ 生成的摘要信息（包括错误）可以显示在 **命令** 窗口中，也可以显示在通过开关指定的任何日志文件中 `/out` 。
 
  此命令仅生成自上次生成后已更改的项目。 若要生成解决方案中的所有项目，请使用[/Rebuild (devenv.exe)](../../ide/reference/rebuild-devenv-exe.md)。
 
@@ -58,4 +58,4 @@ devenv "C:\Documents and Settings\someuser\My Documents\Visual Studio\Projects\M
 ```
 
 ## <a name="see-also"></a>另请参阅
- [在 Visual Studio 中生成和清理项目和解决方案](../../ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md) [Devenv 命令行开关](../../ide/reference/devenv-command-line-switches.md) [/Rebuild （devenv）](../../ide/reference/rebuild-devenv-exe.md) [/Clean （devenv](../../ide/reference/clean-devenv-exe.md) ） [/out （devenv](../../ide/reference/out-devenv-exe.md) ）
+ [在 Visual Studio 中生成和清理项目和解决方案](../../ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md) [Devenv 命令行开关](../../ide/reference/devenv-command-line-switches.md) [/Rebuild ( # A0) ](../../ide/reference/rebuild-devenv-exe.md) [/Clean ( # A1) ](../../ide/reference/clean-devenv-exe.md) [/out ( # A2) ](../../ide/reference/out-devenv-exe.md)

@@ -18,16 +18,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 0c3bcac9f320840faaed32d0622f30e4cbd288ea
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72660843"
 ---
 # <a name="command-window"></a>“命令”窗口
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-“命令”窗口用于直接在 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 集成开发环境 (IDE) 中执行命令或别名  。 可以执行菜单命令和不在任何菜单上出现的命令。 若要显示“命令”窗口，请在“视图”菜单中选择“其他窗口”，然后选择“命令窗口”     。
+“命令”窗口用于直接在 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 集成开发环境 (IDE) 中执行命令或别名。 可以执行菜单命令和不在任何菜单上出现的命令。 若要显示“命令”窗口，请在“视图”菜单中选择“其他窗口”，然后选择“命令窗口”     。
 
 ## <a name="displaying-the-values-of-variables"></a>显示变量的值
  若要检查变量 `varA` 的值，请使用 [Print 命令](../../ide/reference/print-command.md)：
@@ -78,7 +78,7 @@ ms.locfileid: "72660843"
 
  将返回 `False` 的值。
 
- 与此相反，在“即时”窗口中，将等号 (=) 解释为赋值运算符  。 例如，命令
+ 与此相反，在“即时”窗口中，将等号 (=) 解释为赋值运算符****。 例如，命令
 
 ```
 >Debug.EvaluateStatement(varA=varB)
@@ -122,7 +122,7 @@ Edit.ReplaceInFiles /case /pattern:regex var[1-3]+ oldpar
  插入符号在引号内或引号外的作用相同。 如果插入符号是行的最后一个字符，则忽略不计。 此处显示的示例演示如何搜索模式“^t”。
 
 ## <a name="use-quotes-for-path-names-with-spaces"></a>对带有空格的路径名称使用引号
- 例如，如果要打开的文件的路径中含有空格，必须在包含空格的路径或路径段两边添加双引号：C:\\"Program Files" 或 "C:\Program Files"   。
+ 例如，如果要打开的文件的路径中含有空格，必须在包含空格的路径或路径段两边添加双引号：C:\\"Program Files" 或 "C:\Program Files"********。
 
 ## <a name="see-also"></a>另请参阅
  Visual [Studio 命令别名](../../ide/reference/visual-studio-command-aliases.md) [visual studio 命令](../../ide/reference/visual-studio-commands.md)

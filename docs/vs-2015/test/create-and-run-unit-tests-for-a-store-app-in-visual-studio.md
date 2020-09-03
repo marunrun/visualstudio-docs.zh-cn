@@ -12,10 +12,10 @@ author: alexhomer1
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: a7efb5fe4484fdd0ce7d2fcb0a1988e9b089509e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72660622"
 ---
 # <a name="create-and-run-unit-tests-for-a-store-app-in-visual-studio"></a>在 Visual Studio 中为应用商店应用创建并运行单元测试
@@ -33,7 +33,7 @@ Visual Studio 2012 Express for Windows 8 单元测试工具旨在为那些将单
 >   有关详细信息，请参阅 MSDN 库中的[单元测试代码](../test/unit-test-your-code.md)。
 
 ## <a name="in-this-section"></a>本节内容
- [对 C# 代码进行单元测试](../test/unit-testing-visual-csharp-code-in-a-store-app.md)
+ [单元测试 C# 代码](../test/unit-testing-visual-csharp-code-in-a-store-app.md)
 
  [对 C++ DLL 进行单元测试](../test/unit-testing-a-visual-cpp-dll-for-store-apps.md)
 

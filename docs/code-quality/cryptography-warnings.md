@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 78923dfd2873b53790421cde3fe01f024e267202
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75587689"
 ---
 # <a name="cryptography-warnings"></a>加密警告
@@ -20,5 +20,5 @@ ms.locfileid: "75587689"
 
 |规则|描述|
 |----------|-----------------|
-|[CA5350：请勿使用弱加密算法](../code-quality/ca5350.md)|出于多种原因，现今使用弱加密算法和哈希函数，但不应使用它们来保证保密性或它们所保护的数据的完整性。        当此规则在代码中找到 TripleDES、SHA1、或 RIPEMD160 算法时，此规则将触发。|
+|[CA5350:请勿使用弱加密算法](../code-quality/ca5350.md)|出于多种原因，现今使用弱加密算法和哈希函数，但不应使用它们来保证保密性或它们所保护的数据的完整性。        当此规则在代码中找到 TripleDES、SHA1、或 RIPEMD160 算法时，此规则将触发。|
 |[CA5351 不使用损坏的加密算法](../code-quality/ca5351.md)|损坏的加密算法不安全，强烈建议不要使用。 当此规则在代码中找到 MD5 哈希算法，或者 DES 或 RC2 加密算法时，此规则将触发。|

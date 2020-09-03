@@ -1,5 +1,5 @@
 ---
-title: IDebugExceptionEvent2::GetExceptionDescription |Microsoft Docs
+title: IDebugExceptionEvent2：： GetExceptionDescription |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 98590c0493f8910d31ed059a72dad68caedf6929
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68163785"
 ---
 # <a name="idebugexceptionevent2getexceptiondescription"></a>IDebugExceptionEvent2::GetExceptionDescription
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-获取可显示异常的说明。  
+获取异常的可显示说明。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,13 +40,13 @@ int GetExceptionDescription( 
   
 #### <a name="parameters"></a>参数  
  `pbstrDescription`  
- [out]返回可显示异常的说明。  
+ 弄返回异常的可显示说明。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
 ## <a name="remarks"></a>备注  
- 此方法返回的字符串通常是异常的名称和中所示**输出**窗口时出现异常。  
+ 此方法返回的字符串通常是异常的名称，并在发生异常的情况下显示在 " **输出** " 窗口中。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugExceptionEvent2](../../../extensibility/debugger/reference/idebugexceptionevent2.md)

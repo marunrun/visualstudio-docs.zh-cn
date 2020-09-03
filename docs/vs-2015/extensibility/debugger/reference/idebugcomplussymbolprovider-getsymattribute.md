@@ -1,5 +1,5 @@
 ---
-title: IDebugComPlusSymbolProvider::GetSymAttribute |Microsoft Docs
+title: IDebugComPlusSymbolProvider：： GetSymAttribute |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,16 +12,16 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 09ca280bafc7ffbf5c48f1a73479bdc99f46fd56
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68194768"
 ---
 # <a name="idebugcomplussymbolprovidergetsymattribute"></a>IDebugComPlusSymbolProvider::GetSymAttribute
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-检索与给定的父属性指定模块的调试符号。  
+检索具有指定模块的给定父属性的调试符号。  
   
 ## <a name="syntax"></a>语法  
   
@@ -49,33 +49,33 @@ int GetSymAttribute (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>参数  
  `ulAppDomainID`  
- [in]应用程序域的标识符。  
+ 中应用程序域的标识符。  
   
  `guidModule`  
- [in]该模块的唯一标识符。  
+ 中模块的唯一标识符。  
   
  `tokParent`  
- [in]父特性的标记。  
+ 中父属性的标记。  
   
  `pstrName`  
- [in]模块的名称。  
+ 中模块的名称。  
   
  `cBuffer`  
- [in]输出所需的字节数`buffer`。  
+ 中输出所需的字节数 `buffer` 。  
   
  `pcBuffer`  
- [out]输出的长度`buffer`。  
+ 弄输出的长度 `buffer` 。  
   
  `buffer`  
- [out]包含的符号的数组。  
+ 弄包含符号的数组。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何实现此方法对于**CDebugSymbolProvider**对象，它公开[IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)接口。  
+ 下面的示例演示如何为公开[IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)接口的**CDebugSymbolProvider**对象实现此方法。  
   
 ```cpp#  
 HRESULT CDebugSymbolProvider::GetSymAttribute(  
@@ -105,5 +105,5 @@ Error:
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)

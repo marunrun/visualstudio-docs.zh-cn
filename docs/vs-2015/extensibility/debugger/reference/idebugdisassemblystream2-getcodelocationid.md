@@ -1,5 +1,5 @@
 ---
-title: IDebugDisassemblyStream2::GetCodeLocationId |Microsoft Docs
+title: IDebugDisassemblyStream2：： GetCodeLocationId |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,10 +13,10 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: ebb2280f814985e2352413921a00268d96761b7d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68196236"
 ---
 # <a name="idebugdisassemblystream2getcodelocationid"></a>IDebugDisassemblyStream2::GetCodeLocationId
@@ -42,20 +42,20 @@ int GetCodeLocationId( 
   
 #### <a name="parameters"></a>参数  
  `pCodeContext`  
- [in][IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md)对象要转换为标识符。  
+ 中要转换为标识符的 [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) 对象。  
   
  `puCodeLocationId`  
- [out]返回的代码位置标识符。 请参阅“备注”。  
+ 弄返回代码位置标识符。 请参阅“备注”。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。 返回`E_CODE_CONTEXT_OUT_OF_SCOPE`代码上下文是否有效，但作用域之外。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。 `E_CODE_CONTEXT_OUT_OF_SCOPE`如果代码上下文有效但在范围外，则返回。  
   
 ## <a name="remarks"></a>备注  
- 代码位置标识符是特定于调试引擎 (DE) 支持反汇编。 此位置标识符由在内部用于 DE 跟踪代码中的位置，通常是地址或某种类型的偏移量。 唯一要求是，如果代码上下文的一个位置小于另一个位置的代码上下文则相应的代码位置标识符的第一个代码上下文也必须是小于第二个代码上下文的代码位置标识符。  
+ 代码位置标识符特定于调试引擎 (DE) 支持反汇编。 此位置标识符由 DE 在内部使用，用于跟踪代码中的位置，通常为某个地址或某种类型的偏移量。 唯一的要求是，如果一个位置的代码上下文小于另一个位置的代码上下文，则第一个代码上下文的相应代码位置标识符也必须小于第二个代码上下文的代码位置标识符。  
   
- 若要检索的代码位置标识符代码上下文，请调用[GetCodeContext](../../../extensibility/debugger/reference/idebugdisassemblystream2-getcodecontext.md)方法。  
+ 若要检索代码位置标识符的代码上下文，请调用 [GetCodeContext](../../../extensibility/debugger/reference/idebugdisassemblystream2-getcodecontext.md) 方法。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md)   
  [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md)   
  [GetCodeContext](../../../extensibility/debugger/reference/idebugdisassemblystream2-getcodecontext.md)

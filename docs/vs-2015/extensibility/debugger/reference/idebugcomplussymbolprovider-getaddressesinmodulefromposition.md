@@ -1,5 +1,5 @@
 ---
-title: IDebugComPlusSymbolProvider::GetAddressesInModuleFromPosition |Microsoft Docs
+title: IDebugComPlusSymbolProvider：： GetAddressesInModuleFromPosition |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,16 +12,16 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 4471997a5497413869c3c4662592f4c585c2d76d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68194828"
 ---
 # <a name="idebugcomplussymbolprovidergetaddressesinmodulefromposition"></a>IDebugComPlusSymbolProvider::GetAddressesInModuleFromPosition
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-将指定的模块中的文档位置映射到调试地址的数组。  
+将指定模块中的文档位置映射到一个调试地址数组。  
   
 ## <a name="syntax"></a>语法  
   
@@ -51,28 +51,28 @@ int GetAddressesInModuleFromPosition(
   
 #### <a name="parameters"></a>参数  
  `ulAppDomainID`  
- [in]应用程序域标识符。  
+ 中应用程序域标识符。  
   
  `guidModule`  
- [in]该模块的唯一标识符。  
+ 中模块的唯一标识符。  
   
  `pDocPos`  
- [in]文档位置中。  
+ 中文档位置。  
   
  `fStatmentOnly`  
- [in]如果`TRUE`，限制到单个语句的调试地址。  
+ 中如果 `TRUE` 为，则将调试地址限制为单个语句。  
   
  `ppEnumBegAddresses`  
- [out]返回与此语句或行相关联的起始调试地址的枚举器。  
+ 弄返回与此语句或行关联的起始调试地址的枚举数。  
   
  `ppEnumEndAddresses`  
- [out]返回与此语句或行的结束调试地址的枚举器。  
+ 弄返回与此语句或行相关联的结束调试地址的枚举数。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何实现此方法对于**CDebugSymbolProvider**对象，它公开[IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)接口。  
+ 下面的示例演示如何为公开[IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)接口的**CDebugSymbolProvider**对象实现此方法。  
   
 ```cpp#  
 HRESULT CDebugSymbolProvider::GetAddressesInModuleFromPosition(  
@@ -223,5 +223,5 @@ Error:
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)

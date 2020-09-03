@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 0842cab03ba92568b0b672e2b8d257af4b6aa490
-ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "69551874"
 ---
 # <a name="architecture-of-office-solutions-in-visual-studio"></a>Visual Studio 中 Office 解决方案的体系结构
@@ -33,7 +33,7 @@ ms.locfileid: "69551874"
 
 介绍文档级自定义项如何工作，以及开发人员和最终用户如何以不同的方式看待它们。
 
-[VSTO 外接程序的体系结构](../vsto/architecture-of-vsto-add-ins.md)
+[Architecture of VSTO Add-ins](../vsto/architecture-of-vsto-add-ins.md)
 
 描述 VSTO 外接程序的组件以及应用程序加载这些组件的方式。
 
@@ -51,11 +51,11 @@ ms.locfileid: "69551874"
 
 ## <a name="related-sections"></a>相关章节
 
-[Office 解决方案开发概述&#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)
+[Office 解决方案开发概述 &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)
 
 介绍将 Microsoft Office 用作开发商业解决方案的平台。
 
-[Visual Studio &#40;中的 Office 开发入门&#41;](../vsto/getting-started-office-development-in-visual-studio.md)
+[开始 &#40;Visual Studio 中的 Office 开发&#41;](../vsto/getting-started-office-development-in-visual-studio.md)
 
 提供一些链接，这些链接指向有关配置开发计算机以创建 Office 解决方案、如何开始创建 Office 解决方案以及自 Visual Studio 中的 Office 开发人员工具的早期版本以来的更改内容的信息。
 
@@ -63,6 +63,6 @@ ms.locfileid: "69551874"
 
 提供有关创建 Office 解决方案的信息的链接。
 
-[Visual Studio &#40;中的常规参考 Office 开发&#41;](../vsto/general-reference-office-development-in-visual-studio.md)
+[Visual Studio 中的常规参考 &#40;Office 开发&#41;](../vsto/general-reference-office-development-in-visual-studio.md)
 
 提供有关 Office 项目中用户界面元素、Office 项目的应用程序和部署清单、 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]中的 API 的信息的链接。

@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: ed93451942ccb0376c78ebb0e99b269a658131de
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545920"
 ---
 # <a name="how-to-programmatically-display-a-string-in-a-worksheet-cell"></a>如何：以编程方式在工作表单元格中显示字符串
@@ -30,7 +30,7 @@ ms.locfileid: "85545920"
 
 ### <a name="to-display-text-in-a-namedrange-control"></a>在 NamedRange 控件中显示文本
 
-1. 将控件的值设置 <xref:Microsoft.Office.Tools.Excel.NamedRange> 为**Hello World**。
+1. 将控件的值设置 <xref:Microsoft.Office.Tools.Excel.NamedRange> 为 **Hello World**。
 
      [!code-csharp[Trin_VstcoreExcelAutomation#68](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#68)]
      [!code-vb[Trin_VstcoreExcelAutomation#68](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#68)]
@@ -40,7 +40,7 @@ ms.locfileid: "85545920"
 
 ### <a name="to-display-text-in-an-excel-range"></a>显示 Excel 区域中的文本
 
-1. 检索上单元格**A1**的范围 `Sheet1` ，并将值设置为**Hello World**。
+1. 检索上单元格 **A1** 的范围 `Sheet1` ，并将值设置为 **Hello World**。
 
      [!code-csharp[Trin_VstcoreExcelAutomation#69](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#69)]
      [!code-vb[Trin_VstcoreExcelAutomation#69](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#69)]

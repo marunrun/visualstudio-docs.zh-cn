@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 68a9841d8471189538959a311bf9349199d55f78
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545829"
 ---
 # <a name="how-to-resize-listobject-controls"></a>如何：调整 ListObject 控件的大小
@@ -35,16 +35,16 @@ ms.locfileid: "85545829"
 
 - [在运行时在 VSTO 外接程序项目中调整 ListObject 控件的大小](#runtimeaddin)
 
-  有关控件的详细信息 <xref:Microsoft.Office.Tools.Excel.ListObject> ，请参阅[ListObject 控件](../vsto/listobject-control.md)。
+  有关控件的详细信息 <xref:Microsoft.Office.Tools.Excel.ListObject> ，请参阅 [ListObject 控件](../vsto/listobject-control.md)。
 
-## <a name="resize-a-listobject-control-at-design-time"></a><a name="designtime"></a>在设计时调整 ListObject 控件的大小
+## <a name="resize-a-listobject-control-at-design-time"></a><a name="designtime"></a> 在设计时调整 ListObject 控件的大小
  若要重设列表的大小，可以单击并拖动其中一个尺寸控点，或者在“重设列表大小” **** 对话框中重新定义其大小。
 
 ### <a name="to-resize-a-list-by-using-the-resize-list-dialog-box"></a>使用“重设列表大小”对话框重设列表的大小
 
-1. 单击表中的任意位置 <xref:Microsoft.Office.Tools.Excel.ListObject> 。 功能区中的 "**表工具**  >  **设计**" 选项卡随即出现。
+1. 单击表中的任意位置  <xref:Microsoft.Office.Tools.Excel.ListObject> 。 功能区中的 "**表工具**  >  **设计**" 选项卡随即出现。
 
-2. 在 "属性" 部分中，单击 "**调整大小" 表**。
+2. 在 "属性" 部分中，单击 " **调整大小" 表**。
 
     ![VSTO_ResizeTable](../vsto/media/vsto-resizetable.png)
 
@@ -52,7 +52,7 @@ ms.locfileid: "85545829"
 
 4. 单击“确定”。
 
-## <a name="resize-a-listobject-control-at-run-time-in-a-document-level-project"></a><a name="runtimedoclevel"></a>在运行时在文档级项目中调整 ListObject 控件的大小
+## <a name="resize-a-listobject-control-at-run-time-in-a-document-level-project"></a><a name="runtimedoclevel"></a> 在运行时在文档级项目中调整 ListObject 控件的大小
  在运行时，可以使用 <xref:Microsoft.Office.Tools.Excel.ListObject> 方法重设 <xref:Microsoft.Office.Tools.Excel.ListObject.Resize%2A> 控件的大小。 不能使用此方法将 <xref:Microsoft.Office.Tools.Excel.ListObject> 控件移动到工作表中的新位置。 标题必须保持在同一行中，且重设大小后的 <xref:Microsoft.Office.Tools.Excel.ListObject> 控件必须与原列表对象重叠。 重设大小后的 <xref:Microsoft.Office.Tools.Excel.ListObject> 控件必须包含一个标题行，而且至少有一行数据。
 
 ### <a name="to-resize-a-list-object-programmatically"></a>以编程方式重设列表对象的大小
@@ -67,8 +67,8 @@ ms.locfileid: "85545829"
      [!code-csharp[Trin_VstcoreHostControlsExcel#7](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs#7)]
      [!code-vb[Trin_VstcoreHostControlsExcel#7](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb#7)]
 
-## <a name="resize-a-listobject-at-run-time-in-a-vsto-add-in-project"></a><a name="runtimeaddin"></a>在运行时在 VSTO 外接程序项目中调整 ListObject 的大小
- 你可以在运行时在任何打开的工作表中调整 <xref:Microsoft.Office.Tools.Excel.ListObject> 控件的大小。 有关如何 <xref:Microsoft.Office.Tools.Excel.ListObject> 使用 VSTO 外接程序向工作表添加控件的详细信息，请参阅[如何：将 ListObject 控件添加到工作表](../vsto/how-to-add-listobject-controls-to-worksheets.md)。
+## <a name="resize-a-listobject-at-run-time-in-a-vsto-add-in-project"></a><a name="runtimeaddin"></a> 在运行时在 VSTO 外接程序项目中调整 ListObject 的大小
+ 你可以在运行时在任何打开的工作表中调整 <xref:Microsoft.Office.Tools.Excel.ListObject> 控件的大小。 有关如何 <xref:Microsoft.Office.Tools.Excel.ListObject> 使用 VSTO 外接程序向工作表添加控件的详细信息，请参阅 [如何：将 ListObject 控件添加到工作表](../vsto/how-to-add-listobject-controls-to-worksheets.md)。
 
 ### <a name="to-resize-a-list-object-programmatically"></a>以编程方式重设列表对象的大小
 

@@ -10,10 +10,10 @@ ms.topic: how-to
 ms.date: 03/21/2017
 ms.author: ghogen
 ms.openlocfilehash: 477b7860c320730d6362cdb7e0fcb46ad3bc7d17
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85280526"
 ---
 # <a name="using-the-visual-studio-publish-azure-application-wizard"></a>使用 Visual Studio“发布 Azure 应用程序”向导 | Microsoft Docs
@@ -97,7 +97,7 @@ Azure 存储帐户将存储应用程序部署的包。 部署应用程序之后�
 
 ## <a name="summary-page"></a>“摘要”页
 
-![摘要](./media/vs-azure-tools-publish-azure-application-wizard/summary.png)
+![总结](./media/vs-azure-tools-publish-azure-application-wizard/summary.png)
 
 **目标配置文件** - 可以选择基于所选的设置创建发布配置文件。 例如，可以创建一个配置文件用于测试环境，并创建另一个配置文件用于生产环境。 要保存此配置文件，请选择 **“保存”** 图标。 向导将创建配置文件并将它保存在 Visual Studio 项目中。 若要修改配置文件名称，请打开 "**目标配置文件**" 列表，然后选择 " ** &lt; 管理 &gt; ...**"。
 

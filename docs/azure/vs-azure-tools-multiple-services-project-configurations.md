@@ -10,10 +10,10 @@ ms.topic: how-to
 ms.date: 11/11/2017
 ms.author: ghogen
 ms.openlocfilehash: 8c9f65291d43a55ee75840591698c26fdde6e967
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85280539"
 ---
 # <a name="configuring-your-azure-project-in-visual-studio-to-use-multiple-service-configurations"></a>使用多种服务配置来配置 Visual Studio 中的 Azure 项目
@@ -35,17 +35,17 @@ Visual Studio 中的 Azure 云服务项目包括三个配置文件：`ServiceDef
 
 选择受更改影响的 `ServiceConfiguration.*.cscfg` 文件。 默认情况下有本地和云变体，并且可以使用“管理...”**** 命令来复制、重命名和删除配置文件。 这些文件会被添加到你的云服务项目，并显示在“解决方案资源管理器”**** 中。 但是，只能从该控件中完成重命名或删除配置操作。
 
-### <a name="instances"></a>实例数
+### <a name="instances"></a>Instances
 
 将“实例计数”属性设置为服务应为此角色运行的实例的数目。****
 
-将“VM 大小”属性设置为“特小”、“小”、“中”、“大”或“特大”。************************  有关详细信息，请参阅[云服务的大小](/azure/cloud-services/cloud-services-sizes-specs)。
+将“VM 大小”属性设置为“特小”、“小”、“中”、“大”或“特大”。************************  有关详细信息，请参阅 [云服务的大小](/azure/cloud-services/cloud-services-sizes-specs)。
 
 ### <a name="startup-action-web-role-only"></a>启动操作（仅适用于 Web 角色）
 
 设置此属性可指定在开始调试时，Visual Studio 应为 HTTP 终结点、HTTPS 终结点还是两者启动 Web 浏览器。
 
-仅当已为角色定义 HTTPS 终结点时， **https 终结点**选项才可用。 可以在“终结点”属性页上定义 HTTPS 终结点。****
+仅当已为角色定义 HTTPS 终结点时， **https 终结点** 选项才可用。 可以在“终结点”属性页上定义 HTTPS 终结点。****
 
 如果已添加 HTTPS 终结点，则将默认启用“HTTPS 终结点”选项，Visual Studio 除了为 HTTP 终结点启动浏览器之外，还会在开始调试时为此终结点启动浏览器，假定这两个启动选项均已启用。
 
@@ -53,9 +53,9 @@ Visual Studio 中的 Azure 云服务项目包括三个配置文件：`ServiceDef
 
 默认情况下，将对 Web 角色启用诊断。 Azure 云服务项目和存储帐户都设置为使用本地存储模拟器。 准备好部署到 Azure 后，可以选择生成器按钮 (…****) 以改用 Azure 存储。 可以根据需要或自动计划的间隔，将诊断数据传输到存储帐户。 有关 Azure 诊断的详细信息，请参阅[在 Azure 云服务和虚拟机中启用诊断](/azure/cloud-services/cloud-services-dotnet-diagnostics)。
 
-## <a name="settings-page"></a>“设置”页
+## <a name="settings-page"></a>设置页面
 
-在“设置”**** 页上，可以将设置以名称/值对形式添加到配置中。 在角色中运行的代码可以使用[Azure 托管库](/previous-versions/azure/dn602775(v=azure.11))提供的类（特别是[GetConfigurationSettingValue](/previous-versions/azure/reference/ee772857(v=azure.100))方法）在运行时读取配置设置的值。
+在“设置”**** 页上，可以将设置以名称/值对形式添加到配置中。 在角色中运行的代码可以使用 [Azure 托管库](/previous-versions/azure/dn602775(v=azure.11))提供的类（特别是 [GetConfigurationSettingValue](/previous-versions/azure/reference/ee772857(v=azure.100)) 方法）在运行时读取配置设置的值。
 
 ### <a name="configuring-a-connection-string-for-a-storage-account"></a>为存储帐户配置连接字符串
 

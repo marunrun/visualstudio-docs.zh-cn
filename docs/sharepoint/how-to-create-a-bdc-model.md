@@ -14,13 +14,14 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 139da31ced1d32def450a1dc176ca241b0c4677f
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86014548"
 ---
 # <a name="how-to-create-a-bdc-model"></a>如何：创建 BDC 模型
-  您可以使用此类项的模板来创建业务数据连接（BDC）模型，然后将该模型添加到任何 SharePoint 项目。 有关详细信息，请参阅[创建业务数据连接模型](../sharepoint/creating-a-business-data-connectivity-model.md)。 有关如何设计模型的详细信息，请参阅[设计业务数据连接模型](../sharepoint/designing-a-business-data-connectivity-model.md)。
+  您可以通过使用此类项的模板，然后将该模型添加到任何 SharePoint 项目，创建 (BDC) 模型的业务数据连接。 有关详细信息，请参阅 [创建业务数据连接模型](../sharepoint/creating-a-business-data-connectivity-model.md)。 有关如何设计模型的详细信息，请参阅 [设计业务数据连接模型](../sharepoint/designing-a-business-data-connectivity-model.md)。
 
 ### <a name="to-create-a-bdc-project"></a>创建 BDC 项目
 
@@ -33,11 +34,11 @@ ms.locfileid: "86014548"
 
 2. 在 " **Visual Basic** " 或 " **Visual c #**" 下，选择 " **Office/sharepoint**， **sharepoint 解决方案**"。
 
-3. 在 "**模板**" 窗格中，选择 " **SharePoint 2013-空项目**" 项，然后选择 **"确定"** 按钮。
+3. 在 " **模板** " 窗格中，选择 " **SharePoint 2013-空项目** " 项，然后选择 **"确定"** 按钮。
 
-     " **SharePoint 自定义向导**" 随即打开。
+     " **SharePoint 自定义向导** " 随即打开。
 
-4. 在 "**指定用于调试的站点和安全级别**" 页上，指定本地计算机上的 SharePoint 站点的 URL，选择 "**部署为场解决方案**" 选项按钮，然后选择 "**完成**" 按钮。
+4. 在 " **指定用于调试的站点和安全级别** " 页上，指定本地计算机上的 SharePoint 站点的 URL，选择 " **部署为场解决方案** " 选项按钮，然后选择 " **完成** " 按钮。
 
      你将在指定的 SharePoint 站点上测试模型。
 
@@ -48,13 +49,13 @@ ms.locfileid: "86014548"
 
 5. 在菜单栏上，选择 "**项目**" "  >  **添加新项**"。
 
-6. 在 "**添加新项**" 对话框中，选择 " **Office/SharePoint** " 节点。
+6. 在 " **添加新项** " 对话框中，选择 " **Office/SharePoint** " 节点。
 
-7. 在 SharePoint 模板列表中，选择 "**业务数据连接模型（仅场解决方案）**"。
+7. 在 SharePoint 模板列表中，选择 " **业务数据连接模型 (场解决方案" 仅) **"。
 
-8. 在 "**名称**" 框中，为 BDC 模型指定一个名称，然后选择 "**添加**" 按钮。
+8. 在 " **名称** " 框中，为 BDC 模型指定一个名称，然后选择 " **添加** " 按钮。
 
-     **业务数据连接模型**项将添加到项目。 默认情况下，该模型将显示在 BDC 设计器中。 有关详细信息，请参阅[创建业务数据连接模型](../sharepoint/creating-a-business-data-connectivity-model.md)。
+     **业务数据连接模型**项将添加到项目。 默认情况下，该模型将显示在 BDC 设计器中。 有关详细信息，请参阅 [创建业务数据连接模型](../sharepoint/creating-a-business-data-connectivity-model.md)。
 
 ## <a name="see-also"></a>另请参阅
 - [创建业务数据连接模型](../sharepoint/creating-a-business-data-connectivity-model.md)

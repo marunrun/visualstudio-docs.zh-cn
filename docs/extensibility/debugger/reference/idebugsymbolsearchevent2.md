@@ -1,5 +1,5 @@
 ---
-title: IDebug符号搜索事件2 |微软文档
+title: IDebugSymbolSearchEvent2 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,14 +13,14 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: cbe99422e506fb86b0a7e1d9d3242783f3258e6a
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80718784"
 ---
 # <a name="idebugsymbolsearchevent2"></a>IDebugSymbolSearchEvent2
-此接口由调试引擎 （DE） 发送，以指示已加载正在调试的模块的调试符号。
+此接口由调试引擎发送 (DE) ，以指示已加载正在调试的模块的调试符号。
 
 ## <a name="syntax"></a>语法
 
@@ -28,32 +28,32 @@ ms.locfileid: "80718784"
 IDebugSymbolSearchEvent2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>实施者说明
- DE 实现此接口以报告已加载模块的符号。 [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)接口必须在与此接口相同的对象上实现。 SDM 使用[查询接口](/cpp/atl/queryinterface)访问`IDebugEvent2`接口。
+## <a name="notes-for-implementers"></a>实施者注意事项
+ DE 实现此接口，以报告已加载模块的符号。 必须在与此接口相同的对象上实现 [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) 接口。 SDM 使用 [QueryInterface](/cpp/atl/queryinterface) 访问 `IDebugEvent2` 接口。
 
-## <a name="notes-for-callers"></a>呼叫者备注
- DE 创建并发送此事件对象以报告已加载模块的符号。 该事件使用 SDM 在连接到正在调试的程序时提供的[IDebugEvent 回调2](../../../extensibility/debugger/reference/idebugeventcallback2.md)回调函数进行发送。
+## <a name="notes-for-callers"></a>调用方说明
+ DE 将创建并发送此事件对象，以报告已加载模块的符号。 使用 SDM 在附加到正在调试的程序时提供的 [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) 回调函数发送事件。
 
 ## <a name="methods-in-vtable-order"></a>Vtable 顺序中的方法
- 接口`IDebugSymbolSearchEvent2`公开以下方法。
+ `IDebugSymbolSearchEvent2`接口公开以下方法。
 
-|方法|描述|
+|方法|说明|
 |------------|-----------------|
 |[GetSymbolSearchInfo](../../../extensibility/debugger/reference/idebugsymbolsearchevent2-getsymbolsearchinfo.md)|检索有关符号搜索结果的信息。|
 
 ## <a name="remarks"></a>备注
- 即使符号无法加载，也会发送此事件。 调用`IDebugSymbolSearchEvent2::GetSymbolSearchInfo`允许此事件的处理程序确定模块是否实际具有任何符号。
+ 即使未能加载符号，也会发送此事件。 调用 `IDebugSymbolSearchEvent2::GetSymbolSearchInfo` 允许此事件的处理程序确定模块是否确实有任何符号。
 
- Visual Studio 通常使用此事件更新 **"模块"** 窗口中加载的符号的状态。
+ Visual Studio 通常使用此事件来更新 " **模块** " 窗口中加载符号的状态。
 
 ## <a name="requirements"></a>要求
- 标题： msdbg.h
+ 标头： msdbg
 
- 命名空间：微软.VisualStudio.调试器.互通
+ 命名空间： VisualStudio
 
- 程序集：微软.VisualStudio.调试器.Interop.dll
+ 程序集： Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [核心接口](../../../extensibility/debugger/reference/core-interfaces.md)
 - [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)
 - [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)

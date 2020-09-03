@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 5e27987f7fa298ddcedf52a9f01a80f57d3d329f
-ms.sourcegitcommit: 48e93538f1e352fc1f972b642bb5fcce2f6834a2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85371776"
 ---
 # <a name="how-to-synchronize-code-project-rule-sets-with-an-azure-devops-project-check-in-policy"></a>如何：将代码项目规则集与 Azure DevOps 项目签入策略同步
@@ -31,19 +31,19 @@ ms.locfileid: "85371776"
 
 ## <a name="to-specify-a-microsoft-standard-rule-set"></a>指定 Microsoft 标准规则集
 
-1. 在**解决方案资源管理器**中，右键单击代码项目，然后单击 "**属性**"。
+1. 在 **解决方案资源管理器**中，右键单击代码项目，然后单击 " **属性**"。
 
-2. 单击“代码分析”****。
+2. 单击“代码分析”。
 
 ::: moniker range="vs-2017"
 
-3. 在 "**运行此规则集**" 列表中，选择 "签入策略规则集"。
+3. 在 " **运行此规则集** " 列表中，选择 "签入策略规则集"。
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-3. 在 "**活动规则**" 列表中，选择 "签入策略规则集"。
+3. 在 " **活动规则** " 列表中，选择 "签入策略规则集"。
 
 ::: moniker-end
 
@@ -51,24 +51,24 @@ ms.locfileid: "85371776"
 
 1. 如有必要，对指定签入策略的规则集文件执行 get 操作。
 
-2. 在**解决方案资源管理器**中，右键单击代码项目，然后单击 "**属性**"。
+2. 在 **解决方案资源管理器**中，右键单击代码项目，然后单击 " **属性**"。
 
-3. 单击“代码分析”****。
+3. 单击“代码分析”。
 
 ::: moniker range="vs-2017"
 
-4. 在 "**运行此规则集**" 列表中，单击 "" **\<Browse>** 。
+4. 在 " **运行此规则集** " 列表中，单击 "" **\<Browse>** 。
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-4. 在 "**活动规则**" 列表中，单击 **\<Browse>** 。
+4. 在 " **活动规则** " 列表中，单击 **\<Browse>** 。
 
 ::: moniker-end
 
-5. 在 "**打开**" 对话框中，指定签入策略规则集文件。
+5. 在 " **打开** " 对话框中，指定签入策略规则集文件。
 
 ## <a name="to-create-a-custom-rule-set-for-a-code-project"></a>为代码项目创建自定义规则集
 
-有关创建自定义规则集的信息，请参阅[自定义规则集](how-to-create-a-custom-rule-set.md)。
+有关创建自定义规则集的信息，请参阅 [自定义规则集](how-to-create-a-custom-rule-set.md)。

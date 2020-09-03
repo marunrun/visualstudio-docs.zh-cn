@@ -20,10 +20,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 20c22e0ea2ef05c108ebe564b186ede2a02f9dfe
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68162423"
 ---
 # <a name="itemgroup-element-msbuild"></a>ItemGroup 元素 (MSBuild)
@@ -48,19 +48,19 @@ ms.locfileid: "68162423"
   
 ### <a name="attributes"></a>特性  
   
-|特性|说明|  
+|特性|描述|  
 |---------------|-----------------|  
 |`Condition`|可选特性。 要计算的条件。 有关详细信息，请参阅[条件](../msbuild/msbuild-conditions.md)。|  
   
 ### <a name="child-elements"></a>子元素  
   
-|元素|说明|  
+|元素|描述|  
 |-------------|-----------------|  
 |[Item](../msbuild/item-element-msbuild.md)|定义生成过程的输入。 `ItemGroup` 中可能没有或有一些 `Item` 元素。|  
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|说明|  
+|元素|描述|  
 |-------------|-----------------|  
 |[Project](../msbuild/project-element-msbuild.md)|[!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 项目文件必需的根元素。|  
 |[Target](../msbuild/target-element-msbuild.md)|从 .NET Framework 3.5 开始，`ItemGroup` 元素可以出现在 `Target` 元素内部。 有关详细信息，请参阅[目标](../msbuild/msbuild-targets.md)。|  
@@ -90,4 +90,4 @@ ms.locfileid: "68162423"
 ## <a name="see-also"></a>另请参阅  
  [项目文件架构参考](../msbuild/msbuild-project-file-schema-reference.md)   
  [项](../msbuild/msbuild-items.md)   
- [常用的 MSBuild 项目项](../msbuild/common-msbuild-project-items.md)
+ [常见的 MSBuild 项目项](../msbuild/common-msbuild-project-items.md)

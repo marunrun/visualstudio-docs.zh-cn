@@ -1,5 +1,5 @@
 ---
-title: IDebugdisassemblystream2：：获取代码上下文 |微软文档
+title: IDebugDisassemblyStream2：： GetCodeContext |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: a6b3864528ee90c22a1e7122eeaf1969f613cc8e
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80732295"
 ---
 # <a name="idebugdisassemblystream2getcodecontext"></a>IDebugDisassemblyStream2::GetCodeContext
-返回与指定代码位置标识符对应的代码上下文对象。
+返回对应于指定代码位置标识符的代码上下文对象。
 
 ## <a name="syntax"></a>语法
 
@@ -43,20 +43,20 @@ int GetCodeContext( 
 
 ## <a name="parameters"></a>参数
 `uCodeLocationId`\
-[在]指定代码位置标识符。 有关代码位置标识符的说明，请参阅[GetCodeLocationId](../../../extensibility/debugger/reference/idebugdisassemblystream2-getcodelocationid.md)方法的备注部分。
+中指定代码位置标识符。 有关代码位置标识符的说明，请参阅 [GetCodeLocationId](../../../extensibility/debugger/reference/idebugdisassemblystream2-getcodelocationid.md) 方法的 "备注" 部分。
 
 `ppCodeContext`\
-[出]返回表示关联代码上下文的[IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md)对象。
+弄返回一个 [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) 对象，该对象表示关联的代码上下文。
 
 ## <a name="return-value"></a>返回值
- 如果成功，返回`S_OK`;否则，返回错误代码。
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。
 
 ## <a name="remarks"></a>备注
- 代码位置标识符可以从对[GetCurrentLocation](../../../extensibility/debugger/reference/idebugdisassemblystream2-getcurrentlocation.md)方法的调用返回，并可以显示在["拆解数据"](../../../extensibility/debugger/reference/disassemblydata.md)结构中。
+ 可以通过调用 [GetCurrentLocation](../../../extensibility/debugger/reference/idebugdisassemblystream2-getcurrentlocation.md) 方法返回代码位置标识符，并且该标识符可以出现在 [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) 结构中。
 
- 要将代码上下文转换为代码位置标识符，请调用[GetCodeLocationId](../../../extensibility/debugger/reference/idebugdisassemblystream2-getcodelocationid.md)方法。
+ 若要将代码上下文转换为代码位置标识符，请调用 [GetCodeLocationId](../../../extensibility/debugger/reference/idebugdisassemblystream2-getcodelocationid.md) 方法。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IDebugDisassemblyStream2](../../../extensibility/debugger/reference/idebugdisassemblystream2.md)
 - [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md)
 - [GetCodeLocationId](../../../extensibility/debugger/reference/idebugdisassemblystream2-getcodelocationid.md)
