@@ -1,5 +1,5 @@
 ---
-title: IDebugBreakpoint请求2：：获取请求信息 |微软文档
+title: IDebugBreakpointRequest2：： GetRequestInfo |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 995272ccfd7a2bcac5c7c934413d6be0197de17d
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80734947"
 ---
 # <a name="idebugbreakpointrequest2getrequestinfo"></a>IDebugBreakpointRequest2::GetRequestInfo
@@ -43,16 +43,16 @@ int GetRequestInfo( 
 
 ## <a name="parameters"></a>参数
 `dwFields`\
-[在][BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md)枚举中的标志的组合，用于确定要填充参数中的`pBPRequestInfo`字段。
+中 [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md) 枚举中的标志的组合，用于确定要填充参数中的哪些字段 `pBPRequestInfo` 。
 
 `pBPRequestInfo`\
-[出]指定要用断点请求的说明填充[BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md)结构。
+弄指定要在其中填充断点请求说明的 [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) 结构。
 
 ## <a name="return-value"></a>返回值
- 如果成功，返回`S_OK`;否则，返回错误代码。
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。
 
 ## <a name="example"></a>示例
- 下面的示例演示如何为公开`CDebugBreakpointRequest`[IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md)接口的简单对象实现此方法。
+ 下面的示例演示如何为 `CDebugBreakpointRequest` 公开 [IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md) 接口的简单对象实现此方法。
 
 ```
 HRESULT CDebugBreakpointRequest::GetRequestInfo(
@@ -216,7 +216,7 @@ HRESULT CDebugBreakpointRequest::CopyBP_REQUEST_INFO(
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md)
 - [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md)
 - [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md)

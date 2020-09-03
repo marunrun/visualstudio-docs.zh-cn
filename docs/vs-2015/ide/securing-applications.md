@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: c590c88894c930f04caf0f7e8afd4eee298f077a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72669947"
 ---
 # <a name="securing-applications"></a>保证应用程序的安全
@@ -29,7 +29,7 @@ ms.locfileid: "72669947"
 
  [安全性最佳做法](https://msdn.microsoft.com/library/86acaccf-cdb4-4517-bd58-553618e3ec42)提供有关在 Visual C++ 中工作时可用的安全功能和做法的信息。
 
- [不在生成中：安全性和编程C# （和 Visual Basic）](https://msdn.microsoft.com/227e2863-cf09-4c28-9611-bcd82be5e994)为 Visual Basic 和C#开发人员提供了有关前三大安全问题的信息：权限、Web 应用程序和 Visual Studio 安装程序。
+ [不在生成中： c # 和 Visual Basic 的安全性和编程 () ](https://msdn.microsoft.com/227e2863-cf09-4c28-9611-bcd82be5e994) 提供有关 Visual Basic 和 c # 开发人员的前三大安全问题的信息：权限、Web 应用程序和 Visual Studio 安装程序。
 
 ## <a name="securing-mobile-applications"></a>保护移动应用程序
  随着移动设备普及程度的增加，这些设备上的信息和数据的安全性便变得更加重要。
@@ -38,7 +38,7 @@ ms.locfileid: "72669947"
 
  [.NET Compact Framework 的安全性目标](https://msdn.microsoft.com/64ac2770-e2bc-40a3-abbf-56c8a2c0e364)介绍 .NET Compact Framework 安全性的目标。
 
- [设计安全的移动 Web 窗体页](https://msdn.microsoft.com/b69727c1-f81f-4221-a116-8f92f769365f)讨论规划、实现和支持无线网络和移动设备中的安全性。
+ [设计安全的移动 Web 窗体页](https://msdn.microsoft.com/b69727c1-f81f-4221-a116-8f92f769365f) 讨论规划、实现和支持无线网络和移动设备中的安全性。
 
 ## <a name="securing-web-applications"></a>保护 Web 应用程序
  编写糟糕的网页可能会危害整个服务器以及（可能）整个网络的完整性和安全性。 因此，你必须在规划 Web 应用程序时检查安全注意事项。
@@ -47,7 +47,7 @@ ms.locfileid: "72669947"
 
  [ASP.NET Web 应用程序安全性](https://msdn.microsoft.com/library/658d0430-1644-4744-b52d-08b0d6fcacb8)详细介绍如何解决 ASP.NET 中的授权和身份验证问题。
 
- [JScript 的安全注意事项](https://msdn.microsoft.com/8572efc9-071a-472d-a1a4-f0a3b42644c1)详细介绍 JScript 程序员可能会遇到的一些安全缺陷。
+ [JScript 的安全注意事项](https://msdn.microsoft.com/8572efc9-071a-472d-a1a4-f0a3b42644c1) 详细介绍 JScript 程序员可能会遇到的一些安全缺陷。
 
  [如何：使用传输安全性](https://msdn.microsoft.com/16210e41-5492-4cc8-9002-7366b1fc7297)介绍如何在连接到 WCF 服务时使用传输安全性进行身份验证。
 

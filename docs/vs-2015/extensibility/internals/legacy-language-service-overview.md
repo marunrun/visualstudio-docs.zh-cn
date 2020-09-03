@@ -11,25 +11,25 @@ caps.latest.revision: 18
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: c5964aa82d76791d29313ac787f1216c9c9ad283
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68202715"
 ---
 # <a name="legacy-language-service-overview"></a>旧版语言服务概述
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-语言服务都会提供使您可以实现特定的编辑器支持[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]功能。 托管包框架 (MPF) 语言服务类提供完全支持对常用功能和对其他功能的部分支持。  
+语言服务提供编辑器支持，使你能够实现某些 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 功能。 托管包框架 (MPF) 语言服务类为常用功能提供完全支持，并对其他功能提供部分支持。  
   
-## <a name="fully-supported-features-in-the-mpf"></a>MPF 中完全支持的功能  
+## <a name="fully-supported-features-in-the-mpf"></a>MPF 中完全受支持的功能  
  MPF 语言服务类支持以下功能：  
   
 - 语法突出显示  
   
 - 大纲显示  
   
-- 注释的代码块  
+- 注释代码块  
   
 - 大括号匹配  
   
@@ -43,21 +43,21 @@ ms.locfileid: "68202715"
   
 - IntelliSense 成员完成  
   
-- IntelliSense 文字自动完成  
+- IntelliSense word 完成  
   
 ## <a name="partially-supported-features-in-the-mpf"></a>MPF 中部分支持的功能  
- MPF 提供以下功能仅部分支持。 这意味着您必须实现的 MPF 调用的方法。  
+ MPF 仅提供对以下功能的部分支持。 这意味着必须实现由 MPF 调用的方法。  
   
-- 重新格式化代码。 提供用于实现重新格式化操作的代码。  
+- 重新格式化代码。 提供实现重新格式化的代码。  
   
-- 通过标识有效的代码来验证断点跨越。 提供的代码，用于标识代码范围。  
+- 通过标识有效的代码范围来验证断点。 提供标识代码跨越的代码。  
   
-- 支持调试器**自动**显示变量的窗口。 提供确定如何在窗口中显示的代码。  
+- 支持 **调试器的** "自动" 窗口用于显示变量。 提供用于确定要在窗口中显示的内容的代码。  
   
-- 支持**导航栏**类型和成员之间快速导航。 实现并返回填充的列表中的帮助器类**导航栏**组合框。  
+- 支持 **导航栏** 用于类型和成员之间的快速导航。 您可以实现并返回一个帮助器类，用于填充 **导航栏** 组合框中的列表。  
   
 ## <a name="implementation"></a>实现  
- 必须完成几个步骤来实现本身的语言服务和你想要为您的语言支持的语言服务功能。 以下主题中讨论了这些步骤：  
+ 必须完成几个步骤才能实现语言服务本身，以及你想要为你的语言提供支持的语言服务功能。 以下主题介绍了这些步骤：  
   
 - [实现旧版语言服务](../../extensibility/internals/implementing-a-legacy-language-service2.md)  
   
@@ -91,6 +91,6 @@ ms.locfileid: "68202715"
   
 - [验证旧版语言服务中的断点](../../extensibility/internals/validating-breakpoints-in-a-legacy-language-service.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [实现旧版语言服务](../../extensibility/internals/implementing-a-legacy-language-service1.md)   
  [旧版语言服务扩展性](../../extensibility/internals/legacy-language-service-extensibility.md)

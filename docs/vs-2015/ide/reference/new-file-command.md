@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 8e0d25d585f518c854ad6176ae4ae7a5f27b22ad
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72671962"
 ---
 # <a name="new-file-command"></a>“新建文件”命令
@@ -32,7 +32,7 @@ ms.locfileid: "72671962"
 File.NewFile [filename] [/t:templatename] [/editor:editorname]
 ```
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
  `filename`（可选）。 文件的名称。 如果未提供名称，则使用默认名称。 如果没有列出模板名称，则创建文本文件。
 
 ## <a name="switches"></a>开关
@@ -46,9 +46,9 @@ File.NewFile [filename] [/t:templatename] [/editor:editorname]
 /t:"Visual C++\C++ File (.cpp)"
 ```
 
- 以上示例指示 C++ 文件模板位于“新建文件”对话框中的 Visual C++ 类别下  。
+ 以上示例指示 C++ 文件模板位于“新建文件”对话框中的 Visual C++ 类别下****。
 
- /e:`editorname`（可选）。 将在其中打开文件的编辑器的名称。 如果指定该参数，但未提供编辑器名称，则会出现“打开方式”  对话框。
+ /e:`editorname`（可选）。 将在其中打开文件的编辑器的名称。 如果指定该参数，但未提供编辑器名称，则会出现“打开方式”**** 对话框。
 
  /e:`editorname` 参数语法使用“打开方式”对话框中显示的编辑器名称，并用引号括起来。
 
