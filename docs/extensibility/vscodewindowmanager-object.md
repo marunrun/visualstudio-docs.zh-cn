@@ -1,5 +1,5 @@
 ---
-title: VSCode窗口管理器对象 |微软文档
+title: VSCodeWindowManager 对象 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -14,18 +14,18 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 17bc9462af55ec9621654bd39cd65a2091f3f73f
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80740415"
 ---
-# <a name="vscodewindowmanager-object"></a>VSCode窗口管理器对象
+# <a name="vscodewindowmanager-object"></a>VSCodeWindowManager 对象
 
-语言服务实现代码窗口管理器，并负责管理修饰（例如，下拉栏）。 有关详细信息，请参阅[使用旧 API 自定义代码窗口](/visualstudio/extensibility/customizing-code-windows-by-using-the-legacy-api?view=vs-2015)。
+语言服务实现代码窗口管理器，负责管理修饰 (例如，下拉栏) 。 有关详细信息，请参阅 [使用旧版 API 自定义代码窗口](/visualstudio/extensibility/customizing-code-windows-by-using-the-legacy-api?view=vs-2015)。
 
-下表显示了对象中的`VSCodeWindowManager`接口。
+下表显示了对象中的接口 `VSCodeWindowManager` 。
 
-|接口|描述|
+|接口|说明|
 |---------------|-----------------|
-|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager>|允许将修饰（如下拉栏）添加到代码窗口或从代码窗口中删除。|
+|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager>|允许在代码窗口中添加或删除修饰 (例如下拉栏) 。|

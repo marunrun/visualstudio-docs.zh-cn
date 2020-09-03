@@ -1,5 +1,5 @@
 ---
-title: FullClassName 元素（VS 模板向导扩展）
+title: 'FullClassName 元素 (VS template wizard extension) '
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,13 +14,13 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: ed9ceb57f49d8c08b75aa140e45a0f4268f4336c
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85769610"
 ---
-# <a name="fullclassname-element-visual-studio-template-wizard-extension"></a>FullClassName 元素（Visual Studio 模板向导扩展）
+# <a name="fullclassname-element-visual-studio-template-wizard-extension"></a> (Visual Studio 模板向导扩展的 FullClassName 元素) 
 实现接口的类的完全限定名称 `IWizard` 。
 
  \<VSTemplate> \<WizardExtension>
@@ -50,9 +50,9 @@ ms.locfileid: "85769610"
 ## <a name="text-value"></a>文本值
  需要一个文本值。
 
- 此文本指定实现接口的类 `IWizard` 。 指定的类必须存在于[assembly](../extensibility/assembly-element-visual-studio-template-wizard-extension.md)元素指定的程序集中。
+ 此文本指定实现接口的类 `IWizard` 。 指定的类必须存在于 [assembly](../extensibility/assembly-element-visual-studio-template-wizard-extension.md) 元素指定的程序集中。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
  `FullClassName` 是 `WizardExtension` 的必需子元素。
 
 ## <a name="example"></a>示例

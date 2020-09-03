@@ -12,10 +12,10 @@ ms.assetid: a0df5b9c-0932-4e54-86f0-28530ad9d684
 caps.latest.revision: 22
 manager: jillfra
 ms.openlocfilehash: fba7f1e0801b6f977d47b13af025538f5d2fe031
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75850979"
 ---
 # <a name="creating-your-own-start-page"></a>创建你自己的起始页
@@ -31,17 +31,17 @@ ms.locfileid: "75850979"
 1. 从 Visual Studio 库下载并安装 [起始页项目模板](https://visualstudiogallery.msdn.microsoft.com/f655a5dc-1a2d-4eca-b774-76c352c03b87) 。  
   
     > [!WARNING]
-    > 此时 Visual Studio 2010 起始页项目模板尚未升级。 有关如何升级此模板的信息，请参阅[如何：升级 Visual Studio 自定义起始页](../misc/how-to-upgrade-a-visual-studio-custom-start-page.md)。  
+    > 此时 Visual Studio 2010 起始页项目模板尚未升级。 有关如何升级此模板的信息，请参阅 [如何：升级 Visual Studio 自定义起始页](../misc/how-to-upgrade-a-visual-studio-custom-start-page.md)。  
   
 2. 安装模板后，使用它创建新的起始页项目。  
   
-3. 在“新建项目”对话框的左窗格中，在“已安装的模板”下，展开“其他项目类型” 节点，单击“扩展性”。  
+3. 在“新建项目”对话框的左窗格中，在“已安装的模板” **** 下，展开“其他项目类型” **** 节点，单击“扩展性” ****。  
   
-4. 在中间窗格中，单击“自定义起始页”，然后命名项目并单击“确定”。  
+4. 在中间窗格中，单击“自定义起始页” ****，然后命名项目并单击“确定” ****。  
   
      Visual Studio 创建的“起始页”项目是 Visual Studio 起始页的完整副本。  
   
-5. 在“解决方案资源管理器”中，打开 **StartPage.xaml**。  
+5. 在“解决方案资源管理器” **** 中，打开 **StartPage.xaml**。  
   
 6. 编辑 StartPage.xaml。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "75850979"
   
     你应该保留 .vsix 和 .pkgdef 文件以进行部署。  
   
-   或者，你可以通过创建具有正确标记结构，Visual Studio 可以识别的 XAML 文件来创建一个空白“起始页”。 然后，你可以添加标记和代码隐藏以获得所需的外观和功能。 有关详细信息，请参阅[创建自定义起始页](../extensibility/creating-a-custom-start-page.md)。  
+   或者，你可以通过创建具有正确标记结构，Visual Studio 可以识别的 XAML 文件来创建一个空白“起始页”。 然后，你可以添加标记和代码隐藏以获得所需的外观和功能。 有关详细信息，请参阅 [创建自定义起始页](../extensibility/creating-a-custom-start-page.md)。  
   
 ## <a name="testing-and-applying-the-custom-start-page"></a>测试并应用自定义起始页  
  在主实例经验证不会崩溃之前，请勿将其设置为运行自定义“起始页”。 测试自定义“起始页”后，你可以通过在 Visual Studio 的主实例中重复该过程的最后三个步骤以将其应用到你的系统。  
@@ -89,16 +89,16 @@ ms.locfileid: "75850979"
   
     新“起始页”已安装但未选中的情况下，会打开 Visual Studio 实验实例。  
   
-2. 在 Visual Studio 的实验实例中，在“工具” 菜单上，单击“选项”。  
+2. 在 Visual Studio 的实验实例中，在“工具” **** 菜单上，单击“选项” ****。  
   
-3. 在“选项” 对话框中，在“环境”下，选择“启动”。 然后，在“自定义起始页” 列表中，选择 .xaml 文件，然后单击“确定”。  
+3. 在“选项” **** 对话框中，在“环境” **** 下，选择“启动” ****。 然后，在“自定义起始页” **** 列表中，选择 .xaml 文件，然后单击“确定” ****。  
   
-4. 在“视图” 菜单上，单击“起始页”。  
+4. 在“视图” **** 菜单上，单击“起始页” ****。  
   
     将显示正在工作的“起始页”。 必须关闭实验实例，重新复制任何已更改的文件，然后再重新打开实验实例，以查看新的更改。  
   
-   可以通过将 .vsix 文件从 bin\debug 目录上载到[Visual Studio Marketplace](https://marketplace.visualstudio.com/)网站，或上载到另一个网站或 intranet 共享，来共享自定义起始页。 有关更多信息，请参见 [Deploying Custom Start Pages](../extensibility/deploying-custom-start-pages.md)。  
+   可以通过将 .vsix 文件从 bin\debug 目录上载到 [Visual Studio Marketplace](https://marketplace.visualstudio.com/) 网站，或上载到另一个网站或 intranet 共享，来共享自定义起始页。 有关更多信息，请参见 [Deploying Custom Start Pages](../extensibility/deploying-custom-start-pages.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [自定义起始页](../ide/customizing-the-start-page-for-visual-studio.md)   
  [演练：将自定义 XAML 添加到起始页](../extensibility/walkthrough-adding-custom-xaml-to-the-start-page.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebug端口通知2：：删除程序节点 |微软文档
+title: IDebugPortNotify2：： RemoveProgramNode |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: c59b80a2c9748dccccd7b1fa1d5217b8e9f4979f
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80724959"
 ---
 # <a name="idebugportnotify2removeprogramnode"></a>IDebugPortNotify2::RemoveProgramNode
-取消注册可以从正在运行的端口调试的程序。
+取消注册可从运行该程序的端口进行调试的程序。
 
 ## <a name="syntax"></a>语法
 
@@ -41,15 +41,15 @@ int RemoveProgramNode( 
 
 ## <a name="parameters"></a>参数
 `pProgramNode`\
-[在]表示要未注册的程序的[IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)的 objecy。
+中表示要注销的程序的 [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) 对象。
 
 ## <a name="return-value"></a>返回值
- 如果成功，返回`S_OK`;否则，返回错误代码。
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。
 
 ## <a name="remarks"></a>备注
- 此方法删除使用调用[AddProgramNode](../../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md)方法添加的程序节点。
+ 此方法删除通过调用 [AddProgramNode](../../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md) 方法添加的程序节点。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IDebugPortNotify2](../../../extensibility/debugger/reference/idebugportnotify2.md)
 - [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)
 - [AddProgramNode](../../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugPort2：：获取端口请求 |微软文档
+title: IDebugPort2：： GetPortRequest |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: d48d39ea10e8425d5449444514489ac4b73c0a3f
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80725333"
 ---
 # <a name="idebugport2getportrequest"></a>IDebugPort2::GetPortRequest
-获取以前用于创建端口的端口的说明（如果可用）。
+获取以前用于创建端口 (（如果可用）) 的端口的说明。
 
 ## <a name="syntax"></a>语法
 
@@ -41,12 +41,12 @@ int GetPortRequest( 
 
 ## <a name="parameters"></a>参数
 `ppRequest`\
-[出]返回一个[IDebugPortRequest2](../../../extensibility/debugger/reference/idebugportrequest2.md)对象，表示用于创建端口的请求。
+弄返回一个 [IDebugPortRequest2](../../../extensibility/debugger/reference/idebugportrequest2.md) 对象，该对象表示用于创建端口的请求。
 
 ## <a name="return-value"></a>返回值
- 如果成功，返回`S_OK`;否则，返回错误代码。  如果未`E_PORT_NO_REQUEST`使用[IDebugPortRequest2](../../../extensibility/debugger/reference/idebugportrequest2.md)端口请求创建端口，请返回。
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  `E_PORT_NO_REQUEST`如果未使用[IDebugPortRequest2](../../../extensibility/debugger/reference/idebugportrequest2.md)端口请求创建端口，则返回。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md)
 - [IDebugPortRequest2](../../../extensibility/debugger/reference/idebugportrequest2.md)
 - [AddPort](../../../extensibility/debugger/reference/idebugportsupplier2-addport.md)

@@ -10,10 +10,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: a8042b228a481dc3d720d8b422963db41abbddcd
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85533830"
 ---
 # <a name="vsperf"></a>VSPerf
@@ -47,7 +47,7 @@ ms.locfileid: "85533830"
 |**/noclr**|可选。 不收集 CLR 数据。<br /><br /> 仅与 /package 或 /attach 一起使用。<br /><br /> 优化，不会解析任何托管符号。|  
 |**/listapps**|列出已安装的应用名称和 PackageFullNames。|  
   
-## <a name="windows-8-desktop-applications-and-windows-server-2012-applications-only"></a><a name="BKMK_Windows_8_classic_applications_and_Windows_Server_2012_applications_only"></a>仅限 windows 8 桌面应用程序和 Windows Server 2012 应用程序  
+## <a name="windows-8-desktop-applications-and-windows-server-2012-applications-only"></a><a name="BKMK_Windows_8_classic_applications_and_Windows_Server_2012_applications_only"></a> 仅限 windows 8 桌面应用程序和 Windows Server 2012 应用程序  
  这些选项不适用于 Windows 应用商店应用。  
   
 |选项|描述|  
@@ -56,7 +56,7 @@ ms.locfileid: "85533830"
 |**/args:{ExecutableArguments}**|指定要传递 **/launch** 目标的命令行参数。|  
 |**/console**|在新的命令窗口中运行 **/launch** 目标。|  
   
-## <a name="all-applications"></a><a name="BKMK_All_applications"></a>所有应用程序  
+## <a name="all-applications"></a><a name="BKMK_All_applications"></a> 所有应用程序  
  这些选项适用于任何 Windows 8 或 Windows Server 2012 应用程序。  
   
 |选项|描述|  
