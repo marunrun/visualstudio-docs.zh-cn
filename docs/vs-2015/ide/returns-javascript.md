@@ -1,5 +1,5 @@
 ---
-title: '&lt;returns &gt; （JavaScript） |Microsoft Docs'
+title: '&lt;返回 &gt; JavaScript)  (Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: f8fd8cdc8acdbf42b97e00f3c85647dd863721d5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72669951"
 ---
 # <a name="ltreturnsgt-javascript"></a>&lt;returns&gt; (JavaScript)
@@ -38,17 +38,17 @@ ms.locfileid: "72669951"
 #### <a name="parameters"></a>参数
  `type`（可选）。 返回值的数据类型。 类型可以是下列类型之一：
 
-- ECMAScript 5 规范中的 ECMAScript 语言类型，如 `Number` 和 `Object`。
+- ECMAScript 5 规范中的 ECMAScript 语言类型，例如 `Number` 和 `Object` 。
 
 - DOM 对象，例如 `HTMLElement`、`Window` 和 `Document`。
 
 - JavaScript 构造函数。
 
-  `integer`（可选）。 如果 `Number` `type`，则指定返回值是否为整数。 设置为 `true`，以指示返回值为整数;否则，设置为 `false`。 Visual Studio 不使用此属性以提供 IntelliSense 信息。
+  `integer`（可选）。 如果 `type` 为 `Number` ，则指定返回值是否为整数。 设置为 `true` 以指示返回值为整数; 否则设置为 `false` 。 Visual Studio 不使用此属性以提供 IntelliSense 信息。
 
-  `domElement`（可选）。 此属性已弃用；`type` 属性优先于此属性。 此属性指定所记录的返回值是否为 DOM 元素。 设置为 `true` 以指定返回值为 DOM 元素;否则，设置为 `false`。 如果未设置 `type` 特性，并且 `domElement` 设置为 `true`，则在执行语句完成时，IntelliSense 将记录的返回值视为一个 `HTMLElement`。
+  `domElement`（可选）。 此属性已弃用；`type` 属性优先于此属性。 此属性指定所记录的返回值是否为 DOM 元素。 设置为 `true` 以指定返回值为 DOM 元素; 否则设置为 `false` 。 如果 `type` 未设置属性，并且 `domElement` 设置为，则 `true` `HTMLElement` 在执行语句完成时，IntelliSense 将记录的返回值视为。
 
-  `mayBeNull`（可选）。 指定是否可以将记录的返回值设置为 null。 设置为 `true` 以指示返回值可以设置为 null;否则，设置为 `false`。 默认值为 `false`。 Visual Studio 不使用此属性以提供 IntelliSense 信息。
+  `mayBeNull`（可选）。 指定是否可以将记录的返回值设置为 null。 设置为 `true` 以指示返回值可以设置为 null; 否则设置为 `false` 。 默认值是 `false`。 Visual Studio 不使用此属性以提供 IntelliSense 信息。
 
   `elementType`（可选）。 如果 `type` 是 `Array`，此属性指定数组中元素的类型。
 
@@ -56,16 +56,16 @@ ms.locfileid: "72669951"
 
   `elementDomElement`（可选）。 此属性已弃用；`elementType` 属性优先于此属性。 如果 `type` 是 `Array`，此属性指定数组中的元素是否是 DOM 元素。 设置为 `true`，指定该元素是 DOM 元素；否则，设置为 `false`。 如果未指定 `elementType` 属性，且 `elementDomElement` 设置为 `true`，执行语句完成时，IntelliSense 将数组中的每个元素视为 `HTMLElement`。
 
-  `elementMayBeNull`（可选）。 如果 `type` 是 `Array`，指定是否可将数组中的元素设置为 null。 设置为 `true`，指示数组中的元素可以设置为 null；否则，设置为 `false`。 默认值为 `false`。 Visual Studio 不使用此属性以提供 IntelliSense 信息。
+  `elementMayBeNull`（可选）。 如果 `type` 是 `Array`，指定是否可将数组中的元素设置为 null。 设置为 `true`，指示数组中的元素可以设置为 null；否则，设置为 `false`。 默认值是 `false`。 Visual Studio 不使用此属性以提供 IntelliSense 信息。
 
-  `locid`（可选）。 有关返回值的本地化信息的标识符。 标识符是成员 ID 或对应于 OpenAjax 元数据定义的消息绑定中的 `name` 属性值。 标识符类型取决于 [\<loc>](../ide/loc-javascript.md) 标记中指定的格式。
+  `locid`（可选）。 有关返回值的本地化信息的标识符。 标识符是成员 ID 或对应于 OpenAjax 元数据定义的消息绑定中的 `name` 属性值。 标识符类型取决于标记中指定的格式 [\<loc>](../ide/loc-javascript.md) 。
 
-  `value`（可选）。 指定应计算以供 IntelliSense 使用的代码，而不是函数代码本身。 例如，你可以使用此属性为异步回调提供 IntelliSense，如 `Promise`。 将 `value` 特性与 `<returns>` 元素结合使用可以通过跳过长代码执行来提高 IntelliSense 性能。
+  `value`（可选）。 指定应计算以供 IntelliSense 使用的代码，而不是函数代码本身。 例如，可以使用此特性为异步回调提供 IntelliSense，如 `Promise` 。 将 `value` 属性与元素一起使用 `<returns>` 可以通过跳过长代码执行来提高 IntelliSense 性能。
 
   `description`（可选）。 返回值的说明。
 
 ## <a name="remarks"></a>备注
- 在任何语句之前，必须将 `<returns>` 元素放在函数体中。
+ `<returns>`元素必须位于函数体中的任何语句前面。
 
 ## <a name="example"></a>示例
  下面的代码示例演示如何使用 `<returns>` 元素。

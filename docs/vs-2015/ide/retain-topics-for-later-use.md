@@ -18,19 +18,19 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: c6c32db6dc6fbe151b9eec3cec988443ceb73fec
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72669989"
 ---
 # <a name="retain-topics-for-later-use"></a>保留主题供以后使用
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-如果找到一个有用的主题，可以将它复制并粘贴到文本文件中、进行打印或保存到收藏夹中，以供日后访问。 例如，可以打开主题的快捷菜单，选择“复制”  、“打印”  、“打印预览”  和“添加到收藏夹”  选项，以便保留内容供以后使用。
+如果找到一个有用的主题，可以将它复制并粘贴到文本文件中、进行打印或保存到收藏夹中，以供日后访问。 例如，可以打开主题的快捷菜单，选择“复制”****、“打印”****、“打印预览”**** 和“添加到收藏夹”**** 选项，以便保留内容供以后使用。
 
 ## <a name="using-the-favorites-tab"></a>使用“收藏夹”选项卡
- 在“收藏夹”  选项卡上，可以打开任意条目的快捷菜单，然后重命名、删除条目或将条目整理到文件夹中。
+ 在“收藏夹”**** 选项卡上，可以打开任意条目的快捷菜单，然后重命名、删除条目或将条目整理到文件夹中。
 
 ## <a name="see-also"></a>另请参阅
- [快捷键 (Help Viewer)](../ide/shortcut-keys-help-viewer.md)
+ [快捷键 (帮助查看器) ](../ide/shortcut-keys-help-viewer.md)
