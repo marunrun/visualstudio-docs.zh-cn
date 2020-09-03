@@ -1,5 +1,5 @@
 ---
-title: 设计器初始化和元数据配置 |微软文档
+title: 设计器初始化和元数据配置 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,92 +12,92 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: e876dd9e6fa95bbe180d1737bc8c4911f16e1e9a
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80712216"
 ---
 # <a name="designer-initialization-and-metadata-configuration"></a>设计器初始化和元数据配置
 
-操作与设计器或设计器组件关联的元数据和筛选器属性为应用程序提供了一种机制，用于定义特定设计器在设计器可用时使用哪些<xref:System.Type>工具来处理不同的对象（如数据结构、类或图形实体），以及 Visual Studio IDE 如何配置为支持设计器（例如，可用的**工具箱**类别或选项卡）。
+操作与设计器或设计器组件关联的元数据和筛选器属性提供了一种机制，应用程序可以使用该机制来定义特定设计器使用哪些工具来处理不同的 <xref:System.Type> 对象 (例如数据结构、类或图形实体) 在设计器可用时，以及如何将 Visual STUDIO IDE 配置为支持设计器 (例如， **工具箱** 类别或选项卡可用) 。
 
-提供了[!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)]几种机制，便于控制设计器或设计器组件的初始化，并通过 VSPackage 操作其元数据。
+[!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)]提供了几种机制来帮助控制设计器或设计器组件的初始化，并通过 VSPackage 来操作其元数据。
 
 ## <a name="initialize-metadata-and-configuration-information"></a>初始化元数据和配置信息
- 由于它们是按需加载的，因此在设计器实例化之前，Visual Studio 环境可能尚未加载 VSPackages。 因此，VSPackages 不能使用标准机制在创建时配置设计器或设计器组件，即处理<xref:System.ComponentModel.Design.IDesignerEventService.DesignerCreated>事件。 相反，VSPackage 实现<xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension>接口的实例并注册自身以提供自定义项，称为设计曲面扩展。
+ 由于它们是按需加载的，因此，在实例化设计器之前，Visual Studio 环境可能未加载 Vspackage。 因此，在创建时，Vspackage 不能使用标准机制来配置设计器或设计器组件，而是处理 <xref:System.ComponentModel.Design.IDesignerEventService.DesignerCreated> 事件。 相反，VSPackage 实现接口的一个实例， <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension> 并注册其自身以提供自定义项，称为设计图面扩展。
 
 ### <a name="customize-initialization"></a>自定义初始化
 
-自定义设计器、组件或设计器表面涉及：
+自定义设计器、组件或设计器图面涉及：
 
-1. 修改设计器元数据并有效更改访问或转换<xref:System.Type>某个特定内容的方式。
+1. 修改设计器元数据，并有效地更改 <xref:System.Type> 访问或转换特定的方式。
 
-    这通常是通过<xref:System.Drawing.Design.UITypeEditor>或<xref:System.ComponentModel.TypeConverter>机制完成的。
+    通常通过或机制完成此 <xref:System.Drawing.Design.UITypeEditor> 操作 <xref:System.ComponentModel.TypeConverter> 。
 
-    例如，当初始<xref:System.Windows.Forms>化基于 的设计人员时，Visual Studio 环境将修改<xref:System.Drawing.Design.UITypeEditor><xref:System.Web.UI.WebControls.Image>与设计器一起使用的对象，以使用资源管理器获取位图而不是文件系统。
+    例如，当 <xref:System.Windows.Forms> 初始化基于的设计器时，Visual Studio 环境会修改 <xref:System.Drawing.Design.UITypeEditor> <xref:System.Web.UI.WebControls.Image> 与设计器一起使用的对象的，以使用资源管理器来获取位图，而不是文件系统。
 
-2. 通过订阅事件或获取项目配置信息来与环境集成。 您可以通过获取<xref:System.ComponentModel.Design.ITypeResolutionService>接口获取项目配置信息并订阅事件。
+2. 与环境集成，例如，通过订阅事件或获取项目配置信息。 可以获取项目配置信息，并通过获取界面来订阅事件 <xref:System.ComponentModel.Design.ITypeResolutionService> 。
 
-3. 通过激活适当的**工具箱**类别或通过将类的实例应用于设计器来限制设计器的适用性来<xref:System.ComponentModel.ToolboxItemFilterAttribute>修改用户环境。
+3. 通过激活适当的 **工具箱** 类别来修改用户环境，或通过将类的实例应用于设计器来限制设计器的适用性 <xref:System.ComponentModel.ToolboxItemFilterAttribute> 。
 
-### <a name="designer-initialization-by-a-vspackage"></a>按 VSPackage 初始化设计器
+### <a name="designer-initialization-by-a-vspackage"></a>VSPackage 的设计器初始化
 
-VSPackage 应按以下操作处理设计器初始化：
+VSPackage 应通过以下方式处理设计器初始化：
 
-1. 创建实现<xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension>类的对象。
+1. 创建实现类的对象 <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension> 。
 
    > [!NOTE]
-   > 不应<xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension>在类的同一对象上实现<xref:Microsoft.VisualStudio.Shell.Package>类。
+   > <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension>类绝不应在与类相同的对象上实现 <xref:Microsoft.VisualStudio.Shell.Package> 。
 
-2. 注册实现<xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension>为 VSPackage 的设计器扩展提供支持的类。 通过<xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtensionAttribute>应用 的 实例 来注册<xref:Microsoft.VisualStudio.Shell.ProvideObjectAttribute>类，<xref:Microsoft.VisualStudio.Shell.ProvideServiceAttribute>并注册提供 VSPackage 实现 的类<xref:Microsoft.VisualStudio.Shell.Package>。
+2. 注册类，该类实现 <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension> 为 VSPackage 的设计器扩展提供支持。 通过  <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtensionAttribute> <xref:Microsoft.VisualStudio.Shell.ProvideObjectAttribute> <xref:Microsoft.VisualStudio.Shell.ProvideServiceAttribute> 向提供 VSPackage 的实现的类应用、和的实例来注册该类 <xref:Microsoft.VisualStudio.Shell.Package> 。
 
-每当创建设计器或设计器组件时，可视化工作室环境：
+每当创建设计器或设计器组件时，Visual Studio 环境：
 
-- 访问每个已注册的设计曲面扩展提供程序。
+- 访问每个注册的设计图面扩展提供程序。
 
-- 实例化和初始化每个设计曲面扩展提供程序对象的<xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension>实例。
+- 实例化并初始化每个设计图面扩展提供程序的 <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension> 对象的实例。
 
-- 调用每个设计曲面扩展提供程序<xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension.OnDesignerCreated%2A>的方法或<xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension.OnComponentCreated%2A>方法（视适用）。
+-  (适当的) 调用每个设计图面扩展提供程序的 <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension.OnDesignerCreated%2A> 方法或 <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension.OnComponentCreated%2A> 方法。
 
-当作为<xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension>VSPackage 的成员实现该对象时，请务必了解：
+<xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension>作为 VSPackage 的成员实现对象时，请务必了解：
 
-- Visual Studio 环境不提供对特定`DesignSurfaceExtension`提供程序修改的元数据或其他配置设置的任何控制。 两个或多个`DesignSurfaceExtension`提供程序可能会以冲突的方式修改同一设计器功能，最终修改是决定性的。 最后应用的是哪个修改是不确定的。
+- Visual Studio 环境不提供对特定提供程序修改的元数据或其他配置设置的任何控制 `DesignSurfaceExtension` 。 两个或多个 `DesignSurfaceExtension` 提供程序在冲突的方式下修改相同的设计器功能，最后一项修改是有可能的。 这是不确定的。
 
-- 通过将 对象的<xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension><xref:System.ComponentModel.ToolboxItemFilterAttribute>实例应用于该实现，可以显式将对象的实现限制为特定设计器。 有关**工具箱**项目筛选的详细信息，请参阅 和<xref:System.ComponentModel.ToolboxItemFilterAttribute><xref:System.ComponentModel.ToolboxItemFilterType>。
+- <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension>通过将的实例应用于特定设计器，可以将对象的实现显式限制为特定设计器 <xref:System.ComponentModel.ToolboxItemFilterAttribute> 。 有关 **工具箱** 项筛选的详细信息，请参阅 <xref:System.ComponentModel.ToolboxItemFilterAttribute> 和 <xref:System.ComponentModel.ToolboxItemFilterType> 。
 
 ## <a name="additional-metadata-provisioning"></a>其他元数据预配
 
-VSPackage 可以更改设计器或设计器组件的配置，而不是在设计时。
+在设计时，VSPackage 可以更改设计器或设计器组件的配置。
 
-类<xref:Microsoft.VisualStudio.Shell.Design.ProvideDesignerMetadataAttribute>可以以编程方式使用，也可以应用于提供设计器的 VSPackage。
+<xref:Microsoft.VisualStudio.Shell.Design.ProvideDesignerMetadataAttribute>类可以编程方式使用，也可以应用于提供设计器的 VSPackage。
 
-<xref:Microsoft.VisualStudio.Shell.Design.ProvideDesignerMetadataAttribute>类的实例用于修改在设计图面上创建的组件的元数据。 例如，可以将<xref:System.Windows.Forms.CommonDialog>对象使用的默认属性浏览器替换为自定义属性浏览器。
+类的实例 <xref:Microsoft.VisualStudio.Shell.Design.ProvideDesignerMetadataAttribute> 用于修改设计图面上创建的组件的元数据。 例如，可以将对象使用的默认属性浏览器替换为 <xref:System.Windows.Forms.CommonDialog> 自定义属性浏览器。
 
-应用于 VSPackage 实现<xref:Microsoft.VisualStudio.Shell.Design.ProvideDesignerMetadataAttribute>的实例提供的修改<xref:Microsoft.VisualStudio.Shell.Package>可以具有两个作用域之一：
+<xref:Microsoft.VisualStudio.Shell.Design.ProvideDesignerMetadataAttribute>应用到 VSPackage 的实现的实例提供的修改 <xref:Microsoft.VisualStudio.Shell.Package> 可以具有以下两个范围之一：
 
-- 全局 - 给定组件的所有新实例
+- 全局--对于给定组件的所有新实例
 
-- 本地 - 仅与当前 VSPackage 提供的设计表面上创建的组件实例相关。
+- Local--仅与在当前 VSPackage 提供的设计图面上创建的组件的实例相关。
 
-应用于`IsGlobal`VSPackage<xref:Microsoft.VisualStudio.Shell.Design.ProvideDesignerMetadataAttribute>实现 的实例的属性<xref:Microsoft.VisualStudio.Shell.Package>决定了此范围。
+`IsGlobal` <xref:Microsoft.VisualStudio.Shell.Design.ProvideDesignerMetadataAttribute> 应用到 VSPackage 的实现的实例的属性 <xref:Microsoft.VisualStudio.Shell.Package> 决定了此范围。
 
-<xref:Microsoft.VisualStudio.Shell.Package>将属性应用于<xref:Microsoft.VisualStudio.Shell.Design.ProvideDesignerMetadataAttribute.IsGlobal%2A>对象<xref:Microsoft.VisualStudio.Shell.Design.ProvideDesignerMetadataAttribute>属性设置为`true`的 实现，如下所示，将更改整个 Visual Studio 环境的浏览器：
+将特性应用到的实现 <xref:Microsoft.VisualStudio.Shell.Package> ，并将 <xref:Microsoft.VisualStudio.Shell.Design.ProvideDesignerMetadataAttribute.IsGlobal%2A> 对象的属性 <xref:Microsoft.VisualStudio.Shell.Design.ProvideDesignerMetadataAttribute> 设置为 `true` ，如下所示，更改整个 Visual Studio 环境的浏览器：
 
 `[ProvideDesignerMetadata(typeof(Color), typeof(CustomBrowser),`   `IsGlobal=true`  `)]`
 
 `internal class MyPackage : Package {}`
 
-如果全局标志设置为`false`，则元数据更改是当前 VSPackage 支持的当前设计器的本地：
+如果全局标志设置为，则 `false` 元数据更改将在当前 VSPackage 支持的当前设计器的本地：
 
 `[ProvideDesignerMetadata(typeof(Color), typeof(CustomBrowser),`   `IsGlobal=false`  `)]`
 
 `internal class MyPackage : Package {}`
 
 > [!NOTE]
-> 设计图面仅支持创建组件，因此只有组件可以具有本地元数据。 在上面的示例中，我们尝试修改属性，例如对象`Color`的属性。 如果`false`为全局标志传入，`CustomBrowser`则永远不会出现，因为设计器从未实际创建 的`Color`实例。 将全局标志`false`设置为 对组件（如控件、计时器和对话框）很有用。
+> 设计图面仅支持创建组件，因此，仅组件可以有本地元数据。 在上面的示例中，我们尝试修改属性，如 `Color` 对象的属性。 如果 `false` 为 global 标志传入了，则 `CustomBrowser` 永远不会出现，因为设计器实际上不会创建的实例 `Color` 。 将全局标志设置为 `false` 对于组件（如控件、计时器和对话框）很有用。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension>
 - <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtensionAttribute>

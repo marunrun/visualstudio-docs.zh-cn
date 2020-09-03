@@ -11,10 +11,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 8457dde4a447b3b49349ee7f9a979479abe4aaf8
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75851626"
 ---
 # <a name="signing-in-to-visual-studio"></a>登录 Visual Studio
@@ -35,25 +35,25 @@ ms.locfileid: "75851626"
 
 - **延长 Visual Studio 试用期** – 可以将 Visual Studio Professional 或 Visual Studio Enterprise 的使用延长 90 天，而不会限定为 30 天试用期。
 
-- **解锁 Visual Studio（如果使用与 MSDN 或 VSO 订阅相关联的帐户）** 。 请参阅 [如何解锁 Visual Studio](../ide/how-to-unlock-visual-studio.md)。
+- **解锁 Visual Studio（如果使用与 MSDN 或 VSO 订阅相关联的帐户）**。 请参阅 [如何解锁 Visual Studio](../ide/how-to-unlock-visual-studio.md)。
 
 - 在 IDE 中**自动连接到服务（如 Azure 和 Visual Studio Team Services）** ，而不会再次提示对同一账户输入凭据。
 
 ## <a name="how-to-sign-in-to-visual-studio"></a>如何登录到 Visual Studio
  首次启动 Visual Studio 时，系统将要求你登录并提供一些基本注册信息。 应选择最符合需求的 Microsoft 帐户或工作（学校）帐户。 如果你没有此类帐户，可以免费创建一个 Microsoft 帐户。 请参阅 [如何注册 Microsoft 帐户？](https://support.microsoft.com/help/4026324/microsoft-account-how-to-create)
 
- 然后，选择要在 Visual Studio 中使用的 UI 设置和颜色主题。 Visual Studio 会记住这些设置并将其同步到登录到的所有 Visual Studio 环境。 有关已同步的设置列表，请参阅[已同步的设置](../ide/synchronized-settings-in-visual-studio.md)。 以后可以打开 Visual Studio 中的“工具 &#124; 选项”菜单来更改设置。
+ 然后，选择要在 Visual Studio 中使用的 UI 设置和颜色主题。 Visual Studio 会记住这些设置并将其同步到登录到的所有 Visual Studio 环境。 有关同步的设置的列表，请参阅 [同步设置](../ide/synchronized-settings-in-visual-studio.md)。 以后可以打开 Visual Studio 中的“工具 &#124; 选项”菜单来更改设置。****
 
  提供设置后，Visual Studio 将启动，然后你就会进行登录并准备好开始操作。 若要验证你是否已登录，请在 Visual Studio 环境的右上角查找名称。
 
- ![当前登录用户](../ide/media/vs2015-username.png "VS2015_UserName")
+ ![当前登录的用户](../ide/media/vs2015-username.png "VS2015_UserName")
 
  除非你注销，否则当你启动 Visual Studio 时将自动登录，并自动应用于对同步设置所做的所有更改。 若要注销，请依次选择 Visual Studio 环境中的配置文件名称旁边的下箭头、 **“帐户设置”** 命令和 **“注销”** 链接。 若要再次登录，请选择 Visual Studio 环境的右上角中的 **“登录”** 命令。
 
 ## <a name="to-change-your-profile-information"></a>更改你的配置文件信息
- 在“文件”&#124;“帐户设置”中，可以查看并更新有关 Visual Studio 配置文件和许可证的信息。 若要编辑配置文件信息（如帐户名、虚拟形象图片或电子邮件地址），请执行以下操作：
+ 在“文件”&#124;“帐户设置”中，可以查看并更新有关 Visual Studio 配置文件和许可证的信息。**** 若要编辑配置文件信息（如帐户名、虚拟形象图片或电子邮件地址），请执行以下操作：
 
-1. 转到“文件”&#124;“帐户设置”。
+1. 转到“文件”&#124;“帐户设置”。****
 
 2. 在 **“文件”|“帐户设置”** 对话框中，选择 **“管理 Visual Studio 配置文件”** 链接。
 

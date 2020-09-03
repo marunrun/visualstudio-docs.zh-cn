@@ -10,16 +10,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 51512c80c96ef82835ce38c36e3643261ba84231
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72671744"
 ---
 # <a name="step-5-add-label-references"></a>步骤 5：添加标签引用
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-该程序需要跟踪玩家选择了哪些标签控件。 现在，该程序将显示玩家选择的所有标签。 但是，我们要更改这一行为。 在选择第一个标签后，该程序应显示该标签的图标。 在选择第二个标签后，该程序应短暂显示两个图标，然后再隐藏这两个图标。 程序现将通过引用变量跟踪第一次和第二次分别选择的标签控件。
+该程序需要跟踪玩家选择了哪些标签控件。 现在，该程序将显示玩家选择的所有标签。 但是，我们要更改这一行为。 在选择第一个标签后，该程序应显示该标签的图标。 在选择第二个标签后，该程序应短暂显示两个图标，然后再隐藏这两个图标。 程序现将通过引用变量** 跟踪第一次和第二次分别选择的标签控件。
 
 ### <a name="to-add-label-references"></a>添加标签引用
 
@@ -41,9 +41,9 @@ ms.locfileid: "72671744"
 
 4. 选择下一个标签控件，发现没有任何反应。 该程序已跟踪玩家选择的第一个标签，因此 `firstClicked` 不等于 Visual C# 中的 `null` 或 Visual Basic 中的 `Nothing`。 当 `if` 语句检查 `firstClicked` 以确定它是否等于 `null` 或 `Nothing` 时，它发现它不等于，因而不会在 `if` 语句中执行语句。 因此，只有选择的第一个图标变为黑色，其他图标是不可见的，如下图所示。
 
-     ![显示一个图标的匹配游戏](../ide/media/express-tut4step5.png "Express_Tut4Step5")显示一个图标的匹配游戏
+     ![显示一个图标的匹配游戏](../ide/media/express-tut4step5.png "Express_Tut4Step5") 显示一个图标的匹配游戏
 
-     在教程的下一步中，将添加“计时器”控件修复此情况。
+     在教程的下一步中，将添加“计时器”**** 控件修复此情况。
 
 ### <a name="to-continue-or-review"></a>继续或查看
 

@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 43b9d201a146538cd74e9528340845fd9fd92597
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75918582"
 ---
 # <a name="walkthrough-generating-code-by-using-text-templates"></a>演练：使用文本模板生成代码
@@ -86,9 +86,9 @@ foreach (XmlNode artist in catalog.SelectNodes("artist"))
 
 ##### <a name="to-create-the-project"></a>创建项目
 
-1. 在“文件” 菜单上，单击“新建” ，然后单击“项目”。
+1. 在 " **文件** " 菜单上，单击 " **新建** "，然后单击 " **项目**"。
 
-2. 单击“” 节点，然后在“模板” 窗格中，单击“控制台应用程序”
+2. 单击“” **** 节点，然后在“模板” **** 窗格中，单击“控制台应用程序” ****
 
 ### <a name="add-a-prototype-xml-file-to-the-project"></a>将原型 XML 文件添加到项目
  此文件的目的是提供想要应用程序能够读取的 XML 节点类型的示例。 可以是一个将用于测试应用程序的文件。 模板将为此文件中的每种节点类型生成 C# 类。
@@ -97,15 +97,15 @@ foreach (XmlNode artist in catalog.SelectNodes("artist"))
 
 ##### <a name="to-add-an-xml-file"></a>添加 XML 文件
 
-1. 在“解决方案资源管理器”中，右键单击项目，单击“添加” ，然后单击“新项”。
+1. 在 **解决方案资源管理器**中，右键单击项目，单击 " **添加** "，然后单击 " **新建项**"。
 
-2. 在“添加新项” 对话框，从“模板” 窗格选择“XML 文件” 。
+2. 在“添加新项” **** 对话框，从“模板” **** 窗格选择“XML 文件” **** 。
 
 3. 将示例内容添加到该文件。
 
 4. 本演练中，命名文件 `exampleXml.xml`。 将文件的内容设置为上一节中所示的 XML。
 
-   .
+   ..
 
 ### <a name="add-a-test-code-file"></a>添加测试代码文件
  将 C# 文件添加到项目，并在其中编写希望能够进行编写的代码示例。 例如：
@@ -137,9 +137,9 @@ namespace MyProject
 
 ##### <a name="to-add-a-text-template-file-to-your-project"></a>将文本模板文件添加到项目
 
-1. 在“解决方案资源管理器”中，右键单击项目，单击“添加”，然后单击“新项”。
+1. 在“解决方案资源管理器” **** 中，右键单击项目，单击“添加” ****，然后单击“新项” ****。
 
-2. 在“添加新项” 对话框中，从“模板” 窗格选择“文本模板” 。
+2. 在“添加新项” **** 对话框中，从“模板” **** 窗格选择“文本模板” **** 。
 
    > [!NOTE]
    > 确保添加的是文本模板，而不是预处理文本模板。
@@ -150,14 +150,14 @@ namespace MyProject
 
 4. 在输出指令中，将扩展属性更改为“.cs”，使该模板生成 C# 文件。 在 Visual Basic 项目中，将其更改为“.vb”。
 
-5. 保存该文件。 在此阶段，文本模板文件应包含这些行：
+5. 保存文件。 在此阶段，文本模板文件应包含这些行：
 
    ```
    <#@ template debug="false" hostspecific="true" language="C#" #>
    <#@ output extension=".cs" #>
    ```
 
-   。
+   .
 
    请注意，.cs 文件在解决方案资源管理器中显示为模板文件的附属文件。 可单击模板文件名称旁边的 [+] 进行查看。 只要保存或将焦点从模板文件移开，就会从模板文件生成此文件。 所生成的文件将编译为项目的一部分。
 
@@ -400,9 +400,9 @@ namespace MyProject
 
  更改 XML 架构时，可轻松地生成新的类。 编译器将告知开发人员必须更新应用程序代码的位置。
 
- 若要在更改示例 XML 文件时再生成类，请单击“解决方案资源管理器”工具栏中的“转换所有模板” 。
+ 若要在更改示例 XML 文件时再生成类，请单击“解决方案资源管理器”工具栏中的“转换所有模板” **** 。
 
-## <a name="conclusion"></a>结束语
+## <a name="conclusion"></a>结论
  本演练演示了代码生成的几种方法及其优势：
 
 - *代码生成* 是指从 *模型*创建应用程序的部分源代码。 模型包含以适合应用程序域的方式呈现的信息，并可能在应用程序的生存期内发生更改。
@@ -418,7 +418,7 @@ namespace MyProject
   在本演练中，程序代码实际上是从模型实例中生成的，该实例是应用程序会处理的一个典型 XML 文件示例。 在更正规的方法中，XML 架构将以 .xsd 文件或域特定语言定义的形式成为模板的输入。 这种方法将使模板在确定特征（如关系的多重性）方面更轻松。
 
 ## <a name="troubleshooting-the-text-template"></a>解决文本模板故障
- 若在“错误列表”中看到模板转换或编译错误，或者若未正确生成输出文件，可以借助[使用 TextTransform 实用工具生成文件](../modeling/generating-files-with-the-texttransform-utility.md)中所述的技术解决文本模板的问题。
+ 若在“错误列表”**** 中看到模板转换或编译错误，或者若未正确生成输出文件，可以借助[使用 TextTransform 实用工具生成文件](../modeling/generating-files-with-the-texttransform-utility.md)中所述的技术解决文本模板的问题。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [通过使用 T4 文本模板](../modeling/design-time-code-generation-by-using-t4-text-templates.md)[编写 T4 文本模板](../modeling/writing-a-t4-text-template.md)生成设计时代码

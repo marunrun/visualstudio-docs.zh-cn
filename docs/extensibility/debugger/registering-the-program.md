@@ -1,5 +1,5 @@
 ---
-title: 注册程序 |微软文档
+title: 注册程序 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,33 +12,33 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: b68fa67f784d155288482ad724b632ed5ba5fa41
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80713162"
 ---
 # <a name="register-the-program"></a>注册程序
-调试引擎获取了由[IDebugPort2](../../extensibility/debugger/reference/idebugport2.md)接口表示的端口后，使程序进行调试的下一步是将其注册到端口。 注册后，程序可通过以下方式之一进行调试：
+调试引擎获取端口（由 [IDebugPort2](../../extensibility/debugger/reference/idebugport2.md) 接口表示）后，启用程序调试的下一步是将其注册到该端口。 注册后，可通过以下方法之一进行调试：
 
-- 附加过程，它允许调试器获得正在运行的应用程序的完整调试控制。
+- 附加的过程，它允许调试器对正在运行的应用程序进行完全的调试控制。
 
-- 实时 （JIT） 调试，允许对独立于调试器运行的程序进行事后调试。 当运行时体系结构捕获故障时，在操作系统或运行时环境释放故障程序的内存和资源之前通知调试器。
+- 实时 (JIT) 调试，这允许对独立于调试器运行的程序进行事后调试。 当运行时体系结构捕获到错误时，将在操作系统或运行时环境释放错误程序的内存和资源之前通知调试器。
 
-## <a name="registering-procedure"></a>注册过程
+## <a name="registering-procedure"></a>正在注册过程
 
-### <a name="to-register-your-program"></a>注册您的程序
+### <a name="to-register-your-program"></a>注册程序
 
-1. 调用端口实现的[AddProgramNode](../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md)方法。
+1. 调用由端口实现的 [AddProgramNode](../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md) 方法。
 
-     `IDebugPortNotify2::AddProgramNode`需要指向[IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md)接口的指针。
+     `IDebugPortNotify2::AddProgramNode` 需要指向 [IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md) 接口的指针。
 
-     通常，当操作系统或运行时环境加载程序时，它会创建程序节点。 如果要求调试引擎 （DE） 加载程序，DE 将创建并注册程序节点。
+     通常，当操作系统或运行时环境加载程序时，它会创建程序节点。 如果要求 (DE) 调试引擎加载程序，则取消创建并注册程序节点。
 
-     下面的示例显示调试引擎启动程序并将其注册到端口。
+     下面的示例演示了如何启动程序并使用端口注册程序。
 
     > [!NOTE]
-    > 此代码示例不是启动和恢复进程的唯一方法;因此，此过程不是启动和恢复进程的唯一方法。此代码主要是将程序注册到端口的示例。
+    > 此代码示例并不是启动和恢复进程的唯一方法;此代码主要是向端口注册程序的一个示例。
 
     ```cpp
     // This is an IDebugEngineLaunch2 method.
@@ -104,6 +104,6 @@ ms.locfileid: "80713162"
 
     ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [获取端口](../../extensibility/debugger/getting-a-port.md)
-- [启用对程序进行调试](../../extensibility/debugger/enabling-a-program-to-be-debugged.md)
+- [启用要调试的程序](../../extensibility/debugger/enabling-a-program-to-be-debugged.md)

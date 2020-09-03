@@ -14,10 +14,10 @@ caps.latest.revision: 7
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 12945998b215e9082591fad514bd9c16ab789405
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68203882"
 ---
 # <a name="intellisensehostflags"></a>IntelliSenseHostFlags
@@ -40,16 +40,16 @@ enum IntellisenseHostFlags
   
 #### <a name="parameters"></a>参数  
   
-|成员|描述|  
+|成员|说明|  
 |-------------|-----------------|  
-|`IHF_READONLYCONTEXT`|上下文缓冲区是只读的。|  
-|`IHF_NOSEPARATESUBJECT`|没有使用者的文本。 上下文缓冲区包含 IntelliSense 目标 (意味着`!IHF_READONLYCONTEXT`)。|  
-|`IHF_SINGLELINESUBJECT`|不支持多行的主题文本。|  
+|`IHF_READONLYCONTEXT`|上下文缓冲区为只读。|  
+|`IHF_NOSEPARATESUBJECT`|无主题文本。 上下文缓冲区包含 IntelliSense-目标 (表示 `!IHF_READONLYCONTEXT`) 。|  
+|`IHF_SINGLELINESUBJECT`|主题文本不支持多行。|  
 |`IHF_FORCECOMMITTOCONTEXT`|与 `CanCommitIntoReadOnlyBuffer` 相同。|  
-|`IHF_OVERTYPE`|应在改写模式下编辑 （在使用者或上下文）。|  
+|`IHF_OVERTYPE`|在主题或上下文) 中编辑 (应在改写模式下完成。|  
   
 ## <a name="requirements"></a>要求  
- SingleFileeditor.idl  
+ SingleFileeditor .idl  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:Microsoft.VisualStudio.TextManager.Interop>

@@ -1,5 +1,5 @@
 ---
-title: 错误： web 服务器配置不正确 |Microsoft Docs
+title: 错误：Web 服务器配置不正确 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -19,10 +19,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 3cfbcf127b9951ddfce1d3db8fe1177087b0350a
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75918505"
 ---
 # <a name="error-the-web-server-is-not-configured-correctly"></a>错误：Web 服务器配置不正确
@@ -36,5 +36,5 @@ ms.locfileid: "75918505"
   
 - 如果你正尝试调试 ASP.NET 应用程序，请参阅 [发布到 IIS](https://docs.asp.net/en/latest/publishing/iis.html) ，了解有关部署到运行 IIS 8 或更高版本的远程计算机的说明，或参阅 [Remote Debugging ASP.NET on a Remote IIS 7.5 Computer](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md) ，了解有关部署到运行 IIS 7.5 的远程计算机的说明。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [调试 Web 应用程序：错误和疑难解答](../debugger/debugging-web-applications-errors-and-troubleshooting.md)

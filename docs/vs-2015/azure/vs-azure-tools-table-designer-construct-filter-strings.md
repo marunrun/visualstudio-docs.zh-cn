@@ -12,22 +12,22 @@ ms.topic: conceptual
 ms.date: 11/18/2016
 ms.author: ghogen
 ms.openlocfilehash: 571f7bf825583b3094e07ea4404437f2fb2d62de
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75917601"
 ---
-# <a name="constructing-filter-strings-for-the-table-designer"></a>为表设计器构造筛选器字符串
+# <a name="constructing-filter-strings-for-the-table-designer"></a>为表设计器构造筛选字符串
 ## <a name="overview"></a>概述
 要筛选 Visual Studio **表设计器**中显示在 Azure 表中的数据，可以构造一个筛选器字符串并将其输入到筛选器字段中。 筛选器字符串语法由 WCF 数据服务进行定义，与 SQL WHERE 子句类似，但通过 HTTP 请求发送给表服务。 **表设计器**会处理正确的编码，因此，要筛选所需的属性值，只需要在筛选器字段中输入属性名、比较运算符、条件值以及可选的布尔运算符。 不需要像构造 URL 以通过[存储服务 REST API 参考](/rest/api/storageservices)来查询表时那样包括 $filter 查询选项。
 
-WCF 数据服务基于[开放数据协议](https://www.odata.org/) (OData)。 有关筛选器系统查询选项 ( **$filter**) 的详细信息，请参阅 [OData URI Conventions specification](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/)（OData URI 约定规范）。
+WCF 数据服务基于[开放数据协议](https://www.odata.org/) (OData)。 有关筛选器系统查询选项 (**$filter**) 的详细信息，请参阅 [OData URI Conventions specification](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/)（OData URI 约定规范）。
 
 ## <a name="comparison-operators"></a>比较运算符
 所有属性类型都支持以下逻辑运算符：
 
-| 逻辑运算符 | 描述 | 示例筛选器字符串 |
+| 逻辑运算符 | 说明 | 示例筛选器字符串 |
 | --- | --- | --- |
 | eq |等于 |City eq 'Redmond' |
 | gt |大于 |Price gt 20 |
@@ -35,9 +35,9 @@ WCF 数据服务基于[开放数据协议](https://www.odata.org/) (OData)。 �
 | lt |小于 |Price lt 20 |
 | le |小于或等于 |Price le 100 |
 | ne |不等于 |City ne 'London' |
-| 和 |且 |Price le 200 and Price gt 3.5 |
-| 或 |Or |Price le 3.5 or Price gt 200 |
-| not |非 |not isAvailable |
+| 和 |And |Price le 200 and Price gt 3.5 |
+| 或 |或 |Price le 3.5 or Price gt 200 |
+| not |Not |not isAvailable |
 
 构造筛选器字符串时，以下规则非常重要：
 

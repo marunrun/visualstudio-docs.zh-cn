@@ -1,5 +1,5 @@
 ---
-title: PROVIDER_FIELDS |微软文档
+title: PROVIDER_FIELDS |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 37f64b455ab0331f9b8f08da1f29a3e2c1b82fdf
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80713792"
 ---
 # <a name="provider_fields"></a>PROVIDER_FIELDS
-指定与程序提供程序关联的属性。
+指定与程序提供程序相关联的属性。
 
 ## <a name="syntax"></a>语法
 
@@ -44,22 +44,22 @@ public enum enum_PROVIDER_FIELDS {
 
 ## <a name="fields"></a>字段
  `PFIELD_PROGRAM_NODES`\
- 该`ProgramNodes`字段有效。
+ 该 `ProgramNodes` 字段有效。
 
  `PFIELD_IS_DEBUGGER_PRESENT`\
- 该`fIsDebuggerPresent`字段有效。
+ 该 `fIsDebuggerPresent` 字段有效。
 
 ## <a name="remarks"></a>备注
- 这些值在`Fields`[PROVIDER_PROCESS_DATA](../../../extensibility/debugger/reference/provider-process-data.md)结构的成员中返回，以指示已显式填充结构的字段。
+ 这些值将在 `Fields` [PROVIDER_PROCESS_DATA](../../../extensibility/debugger/reference/provider-process-data.md) 结构的成员中返回，以指示已显式填充结构的哪些字段。
 
- 这些值可以与一点一点地`OR`结合。
+ 这些值可以与按位组合 `OR` 。
 
 ## <a name="requirements"></a>要求
- 标题： msdbg.h
+ 标头： msdbg
 
- 命名空间：微软.VisualStudio.调试器.互通
+ 命名空间： VisualStudio
 
- 程序集：微软.VisualStudio.调试器.Interop.dll
+ 程序集： Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [枚举](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

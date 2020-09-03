@@ -1,5 +1,5 @@
 ---
-title: 启动后发送启动事件 |微软文档
+title: 启动后发送启动事件 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,16 +11,16 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: c71db002420a2b822bffd34f2ae05e712f6a4bb9
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80713015"
 ---
 # <a name="send-startup-events-after-a-launch"></a>启动后发送启动事件
-一旦调试引擎 （DE） 连接到程序，它将一系列启动事件发送回调试会话。
+调试引擎 (DE) 附加到程序后，它会向调试会话发送一系列启动事件。
 
- 发回调试会话的启动事件包括：
+ 发回到调试会话的启动事件包括：
 
 - 引擎创建事件。
 
@@ -28,21 +28,21 @@ ms.locfileid: "80713015"
 
 - 线程创建和模块加载事件。
 
-- 加载完成事件，在加载代码并准备运行时发送，但在执行任何代码之前。
+- 加载完成事件，在代码加载并准备好运行，但在执行任何代码之前发送。
 
   > [!NOTE]
-  > 继续此事件时，将初始化全局变量并运行启动例程。
+  > 继续此事件时，将初始化全局变量，并运行启动例程。
 
 - 可能的其他线程创建和模块加载事件。
 
-- 入口点事件，表示程序已到达其主要入口点，如**Main**或`WinMain`。 如果 DE 附加到已运行的程序，则通常不会发送此事件。
+- 入口点事件，该事件指示程序已到达其主入口点，如 **main** 或 `WinMain` 。 如果将 DE 附加到已在运行的程序，则通常不会发送此事件。
 
-  在编程上，DE 首先发送会话调试管理器 （SDM） [IDebugEngineCreateEvent2](../../extensibility/debugger/reference/idebugenginecreateevent2.md)接口，该接口表示引擎创建事件，然后是[IDebugProgramCreateEvent2](../../extensibility/debugger/reference/idebugprogramcreateevent2.md)，它表示程序创建事件。
+  在编程中，取消第一次将会话调试管理器 (SDM 发送) 一个 [IDebugEngineCreateEvent2](../../extensibility/debugger/reference/idebugenginecreateevent2.md) 接口，该接口表示一个引擎创建事件，后跟一个 [IDebugProgramCreateEvent2](../../extensibility/debugger/reference/idebugprogramcreateevent2.md)，表示一个程序创建事件。
 
-  这些事件之后通常跟一个或多个[IDebugThreadCreateEvent2](../../extensibility/debugger/reference/idebugthreadcreateevent2.md)线程创建事件和[IDebugModuleLoadEvent2](../../extensibility/debugger/reference/idebugmoduleloadevent2.md)模块加载事件。
+  这些事件通常后跟一个或多个 [IDebugThreadCreateEvent2](../../extensibility/debugger/reference/idebugthreadcreateevent2.md) 线程创建事件和 [IDebugModuleLoadEvent2](../../extensibility/debugger/reference/idebugmoduleloadevent2.md) 模块加载事件。
 
-  加载代码并准备运行时，但在执行任何代码之前，DE 会向 SDM 发送[IDebugLoadCompleteEvent2](../../extensibility/debugger/reference/idebugloadcompleteevent2.md)加载完成事件。 最后，如果程序尚未运行，DE 将发送[IDebugEntryPoint2](../../extensibility/debugger/reference/idebugentrypointevent2.md)入口点事件，表示程序已到达其主要入口点并准备好进行调试。
+  当代码已加载并准备好运行，但在执行任何代码之前，DE 将发送 SDM a [IDebugLoadCompleteEvent2](../../extensibility/debugger/reference/idebugloadcompleteevent2.md) load 完成事件。 最后，如果程序未在运行，则 DE 将发送 [IDebugEntryPointEvent2](../../extensibility/debugger/reference/idebugentrypointevent2.md) 入口点事件，并发出信号表明程序已到达其主入口点，并且已准备好进行调试。
 
-## <a name="see-also"></a>请参阅
-- [执行控制](../../extensibility/debugger/control-of-execution.md)
+## <a name="see-also"></a>另请参阅
+- [控制执行](../../extensibility/debugger/control-of-execution.md)
 - [调试任务](../../extensibility/debugger/debugging-tasks.md)

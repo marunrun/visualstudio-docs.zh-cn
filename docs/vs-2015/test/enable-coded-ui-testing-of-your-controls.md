@@ -9,10 +9,10 @@ caps.latest.revision: 24
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 7190a7f698868642c58d1de2ff801e328859b9db
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75851807"
 ---
 # <a name="enable-coded-ui-testing-of-your-controls"></a>启用控件的编码的 UI 测试
@@ -20,7 +20,7 @@ ms.locfileid: "75851807"
 
 如果实现对编码的 UI 测试框架的支持，则可以更轻松地测试你的控件。 您能够以增量方式增加支持级别。 您可以先从支持录制、播放和属性验证开始。 在此基础上，您可以允许编码的 UI 测试生成器识别控件的自定义属性，并提供自定义类以便从生成的代码访问这些属性。 你还可以帮助编码的 UI 测试生成器，使之以一种与所录制操作的目的更为接近的方法来捕获操作。
 
- **在本主题中：**
+ **本主题内容：**
 
 1. [通过实现可访问性来支持录制和播放以及属性验证](../test/enable-coded-ui-testing-of-your-controls.md#recordandplayback)
 
@@ -32,7 +32,7 @@ ms.locfileid: "75851807"
 
    ![CUIT&#95;Full](../test/media/cuit-full.png "CUIT_Full")
 
-## <a name="recordandplayback"></a>通过实现可访问性来支持录制和播放以及属性验证
+## <a name="support-record-and-playback-and-property-validation-by-implementing-accessibility"></a><a name="recordandplayback"></a> 通过实现可访问性来支持录制和播放以及属性验证
  编码的 UI 测试生成器可捕获与它在录制期间所遇到的控件有关的信息，然后生成代码以重播该会话。 如果控件不支持辅助功能，则编码的 UI 测试生成器将使用屏幕坐标来捕获操作（例如，鼠标单击）。 播放测试时，生成的代码将在同一屏幕坐标释放这些鼠标单击操作。 在播放测试时，如果控件出现在屏幕上的其他位置，则生成的代码将无法对控件执行该操作。 如果在不同的屏幕配置下、在不同的环境中，或者在 UI 布局发生更改之后播放测试，则这可能会导致失败。
 
  ![CUIT&#95;RecordNoSupport](../test/media/cuit-recordnosupport.png "CUIT_RecordNoSupport")
@@ -78,9 +78,9 @@ ms.locfileid: "75851807"
 4. 重写子控件辅助功能对象的 <xref:System.Windows.Forms.AccessibleObject.Bounds%2A>、<xref:System.Windows.Forms.AccessibleObject.Name%2A>、<xref:System.Windows.Forms.AccessibleObject.Parent%2A>、<xref:System.Windows.Forms.AccessibleObject.Role%2A>、<xref:System.Windows.Forms.AccessibleObject.State%2A>、<xref:System.Windows.Forms.AccessibleObject.Navigate%2A> 和 <xref:System.Windows.Forms.AccessibleObject.Select%2A> 属性及方法。
 
 > [!NOTE]
-> 本主题在此过程中从 <xref:System.Windows.Forms.AccessibleObject> 辅助功能示例开始，然后在此基础上完成剩余过程。 如果要创建辅助功能示例的可行版本，请创建一个控制台应用程序，然后用示例代码替换 Program.cs 中的代码。 您需要添加对辅助功能、System.Drawing 和 System.Windows.Forms 的引用。 若要消除生成警告，应将可访问性的“嵌入互操作类型”更改为“False”。 可以将项目的输出类型从“控制台应用”更改为“Windows 应用”，这样就不会在运行应用时看到控制台窗口了。
+> 本主题在此过程中从 <xref:System.Windows.Forms.AccessibleObject> 辅助功能示例开始，然后在此基础上完成剩余过程。 如果要创建辅助功能示例的可行版本，请创建一个控制台应用程序，然后用示例代码替换 Program.cs 中的代码。 您需要添加对辅助功能、System.Drawing 和 System.Windows.Forms 的引用。 若要消除生成警告，应将可访问性的“嵌入互操作类型”**** 更改为“False”****。 可以将项目的输出类型从“控制台应用”**** 更改为“Windows 应用”****，这样就不会在运行应用时看到控制台窗口了。
 
-## <a name="customproprties"></a>通过实现属性提供程序来支持自定义属性验证
+## <a name="support-custom-property-validation-by-implementing-a-property-provider"></a><a name="customproprties"></a>通过实现属性提供程序来支持自定义属性验证
  在实现对录制、播放和属性验证的基本支持后，您可以通过实现 <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestPropertyProvider> 插件，使控件的自定义属性可供编码的 UI 测试使用。 例如，下面的过程将创建一个属性提供程序，该程序允许编码的 UI 测试访问图表控件 CurveLegend 子控件的 State 属性。
 
  ![CUIT&#95;CustomProps](../test/media/cuit-customprops.png "CUIT_CustomProps")
@@ -106,7 +106,7 @@ ms.locfileid: "75851807"
     }
     ```
 
-2. 通过创建一个类库项目并添加对辅助功能、Microsoft.VisualStudio.TestTools.UITesting、Microsoft.VisualStudio.TestTools.UITest.Common 和 Microsoft.VisualStudio.TestTools.Extension 的引用，为你的控件创建一个 UI 测试扩展包。 将可访问性的“嵌入互操作类型”更改为“False”。
+2. 通过创建一个类库项目并添加对辅助功能、Microsoft.VisualStudio.TestTools.UITesting、Microsoft.VisualStudio.TestTools.UITest.Common 和 Microsoft.VisualStudio.TestTools.Extension 的引用，为你的控件创建一个 UI 测试扩展包。 将可访问性的“嵌入互操作类型”**** 更改为“False”****。
 
 3. 添加一个从 <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestPropertyProvider> 派生的属性提供程序类。
 
@@ -326,7 +326,7 @@ ms.locfileid: "75851807"
 > [!NOTE]
 > 此扩展包将应用于类型为“Text”的所有控件。 如果测试同一类型的多个控件，则需要分别进行测试，并管理在录制测试时要部署哪些扩展包。
 
-## <a name="codegeneration"></a>通过实现用于访问自定义属性的类来支持代码生成
+## <a name="support-code-generation-by-implementing-a-class-to-access-custom-properties"></a><a name="codegeneration"></a>通过实现用于访问自定义属性的类来支持代码生成
  当编码的 UI 测试时生成器生成会话录制的代码时，它将使用 <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl> 类来访问您的控件。
 
 ```csharp
@@ -406,13 +406,13 @@ Assert.AreEqual(this.AssertMethod3ExpectedValues.UIATextState, uIAText.State);
     }
     ```
 
-## <a name="intentawareactions"></a>通过实现操作筛选器来支持意向感知操作
+## <a name="support-intent-aware-actions-by-implementing-an-action-filter"></a><a name="intentawareactions"></a>通过实现操作筛选器来支持意向感知操作
  当 Visual Studio 录制测试时，它会捕获鼠标和键盘事件。 但是，在某些情况下，在一系列鼠标和键盘事件中可能会丢失操作的目的。 例如，如果控件支持自动完成，则在其他环境中播放测试时，同一组鼠标和键盘事件可能会产生不同的值。 您可以添加一个操作筛选器插件，将一系列键盘和鼠标事件替换为单一操作。 这样一来，您就可以将结果为选择某一值的一系列鼠标和键盘事件替换为设置值的单一操作。 当从一个环境转到另一个环境时，这样可以保护编码的 UI 测试，使之不受自动完成差异的影响。
 
 ### <a name="to-support-intent-aware-actions"></a>支持目的感知操作
  ![CUIT&#95;操作](../test/media/cuit-actions.png "CUIT_Actions")
 
-1. 实现从[microsoft.visualstudio.testtools.uitest.common.uitestactionfilter>](/previous-versions/visualstudio/visual-studio-2012/dd985757(v=vs.110))派生的操作筛选器类，并重写属性[ApplyTimeout](/previous-versions/visualstudio/visual-studio-2012/dd984649%28v%3dvs.110%29)、[类别](/previous-versions/visualstudio/visual-studio-2012/dd986905(v=vs.110))、[已启用](/previous-versions/visualstudio/visual-studio-2012/dd985633(v=vs.110))、 [FilterType](/previous-versions/visualstudio/visual-studio-2012/dd778726(v=vs.110))、[组](/previous-versions/visualstudio/visual-studio-2012/dd779219(v=vs.110))和[名称](/previous-versions/visualstudio/visual-studio-2012/dd998334(v=vs.110))。
+1. 实现从 [microsoft.visualstudio.testtools.uitest.common.uitestactionfilter>](/previous-versions/visualstudio/visual-studio-2012/dd985757(v=vs.110))派生的操作筛选器类，并重写属性 [ApplyTimeout](/previous-versions/visualstudio/visual-studio-2012/dd984649%28v%3dvs.110%29)、 [类别](/previous-versions/visualstudio/visual-studio-2012/dd986905(v=vs.110))、 [已启用](/previous-versions/visualstudio/visual-studio-2012/dd985633(v=vs.110))、 [FilterType](/previous-versions/visualstudio/visual-studio-2012/dd778726(v=vs.110))、 [组](/previous-versions/visualstudio/visual-studio-2012/dd779219(v=vs.110)) 和 [名称](/previous-versions/visualstudio/visual-studio-2012/dd998334(v=vs.110))。
 
     ```csharp
     internal class MyActionFilter : UITestActionFilter
@@ -509,7 +509,7 @@ Assert.AreEqual(this.AssertMethod3ExpectedValues.UIATextState, uIAText.State);
     }
     ```
 
-4. 生成你的二进制文件并将其复制到 %ProgramFiles%\Common Files\Microsoft Shared\VSTT\10.0\UITestExtensionPackages。
+4. 生成二进制文件，然后将其复制到 %ProgramFiles%\Common Files\Microsoft Shared\VSTT\10.0\UITestExtensionPackages。
 
 > [!NOTE]
 > 操作筛选器不依赖于辅助功能实现或属性提供程序。
@@ -519,7 +519,7 @@ Assert.AreEqual(this.AssertMethod3ExpectedValues.UIATextState, uIAText.State);
 
 #### <a name="to-debug-your-property-provider-or-action-filter"></a>调试属性提供程序或操作筛选器
 
-1. 生成扩展包的调试版本，将 .dll 和 .pdb 文件复制到 %ProgramFiles%\Common Files\Microsoft Shared\VSTT\10.0\UITestExtensionPackages。
+1. 生成扩展包的调试版本，然后将 .dll 和 .pdb 文件复制到 %ProgramFiles%\Common Files\Microsoft Shared\VSTT\10.0\UITestExtensionPackages。
 
 2. 运行您的应用程序（不在调试器中）。
 
@@ -535,8 +535,8 @@ Assert.AreEqual(this.AssertMethod3ExpectedValues.UIATextState, uIAText.State);
 
 ## <a name="external-resources"></a>外部资源
 
-### <a name="guidance"></a>指导
- [使用 Visual Studio 2012 对连续交付进行测试 - 第 2 章：单元测试：测试内部](https://msdn.microsoft.com/library/jj159340.aspx)
+### <a name="guidance"></a>指南
+ [通过 Visual Studio 2012 对持续交付进行测试-第2章：单元测试：测试内部](https://msdn.microsoft.com/library/jj159340.aspx)
 
 ## <a name="see-also"></a>另请参阅
 
