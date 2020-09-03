@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 2cdd069e8b17bcc26e067e0927ceef8cd9b1125a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72658008"
 ---
 # <a name="artboard-modifier-keys-in-blend"></a>Blend 中的“美工板”修改键
@@ -21,10 +21,10 @@ ms.locfileid: "72658008"
 
 某些键盘快捷方式没有关联的菜单项，这意味着你无法使用 [!INCLUDE[blend_subs](../includes/blend-subs-md.md)] 用户界面来发现这些键盘快捷方式。 下表列出了修改操作（例如调整对象的大小）的快捷方式。
 
-|任务|请执行此操作|
+|为了执行此操作|操作|
 |-----------------------|-------------|
-|在选择其他工具的同时，暂时选中“选择”工具。此操作可减少你在“工具”面板中单击的次数，以及在“选择”工具和其他内容间来回切换的次数）|按住 Ctrl|
-|选中“选择”工具时微移所选对象|按箭头键|
+|在选择其他工具的同时，暂时选中“选择”**** 工具。此操作可减少你在“工具”**** 面板中单击的次数，以及在“选择”**** 工具和其他内容间来回切换的次数）|按住 Ctrl|
+|选中“选择”**** 工具时微移所选对象|按箭头键|
 |平移美工板|按住空格键并拖动美工板|
 |在美工板上放大和缩小|旋转鼠标滚轮|
 |在美工板上放大|单击美工板上的任意位置时按住 Ctrl+空格键|
@@ -40,7 +40,7 @@ ms.locfileid: "72658008"
 |通过绘制字幕进行选择|按住 Shift 并拖动|
 |选择另一个对象下面的对象|按住 Alt 并单击每个对象层一次|
 |在打开的文档之间切换|按 Ctrl+Tab|
-|打开“资产”面板|按 Ctrl+句点|
+|打开“资产”**** 面板|按 Ctrl+句点|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [键盘快捷键](../designers/keyboard-shortcuts-in-blend.md)"[笔" 工具修改键](../designers/pen-tool-modifier-keys-in-blend.md)[路径选择工具修改键](../designers/direct-selection-tool-modifier-keys-in-blend.md)

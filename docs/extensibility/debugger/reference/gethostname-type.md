@@ -1,5 +1,5 @@
 ---
-title: GETHOSTNAME_TYPE |微软文档
+title: GETHOSTNAME_TYPE |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 5a7da1486f0edf52f3f0d96db699f60f24e36827
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80736771"
 ---
 # <a name="gethostname_type"></a>GETHOSTNAME_TYPE
@@ -50,14 +50,14 @@ public enum enum_GETHOSTNAME_TYPE {
 指定主机的文件名。
 
 ## <a name="remarks"></a>备注
-这些值作为参数传递给[GetHostName](../../../extensibility/debugger/reference/idebugprogramnode2-gethostname.md)方法，以检索不同格式的主机名。
+这些值作为参数传递给 [GetHostName](../../../extensibility/debugger/reference/idebugprogramnode2-gethostname.md) 方法以检索不同格式的主机名。
 
 ## <a name="requirements"></a>要求
-标题： msdbg.h
+标头： msdbg
 
-命名空间：微软.VisualStudio.调试器.互通
+命名空间： VisualStudio
 
-程序集：微软.VisualStudio.调试器.Interop.dll
+程序集： Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [枚举](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

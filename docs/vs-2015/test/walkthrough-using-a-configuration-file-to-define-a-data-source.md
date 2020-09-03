@@ -13,10 +13,10 @@ caps.latest.revision: 34
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 3f669c4dcfb91579ac50270914112cd6388e2743
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85547974"
 ---
 # <a name="walkthrough-using-a-configuration-file-to-define-a-data-source"></a>演练：使用配置文件定义数据源
@@ -47,7 +47,7 @@ ms.locfileid: "85547974"
 
 #### <a name="to-add-an-appconfig-file-to-the-project"></a>若要将 app.config 文件添加到项目
 
-1. 如果测试项目已有 app.config 文件，请参阅[定义自定义配置部分](#DefineCustomConfigurationSection)。
+1. 如果测试项目已有 app.config 文件，请参阅 [定义自定义配置部分](#DefineCustomConfigurationSection)。
 
 2. 在“解决方案资源管理器”**** 中右键单击测试项目，指向“添加”****，然后单击“新建项”****。
 
@@ -55,7 +55,7 @@ ms.locfileid: "85547974"
 
 3. 选择“应用配置文件”**** 模板，然后单击“添加”****。
 
-## <a name="define-a-custom-configuration-section"></a><a name="DefineCustomConfigurationSection"></a>定义自定义配置节
+## <a name="define-a-custom-configuration-section"></a><a name="DefineCustomConfigurationSection"></a> 定义自定义配置节
  检查 app.config 文件。 它至少包含 XML 声明和一个根元素。
 
 #### <a name="to-add-the-custom-configuration-section-to-the-appconfig-file"></a>若要将自定义配置节添加到 app.config 文件
@@ -94,7 +94,7 @@ ms.locfileid: "85547974"
 
  在第二个 `add` 元素中，创建下列特性和值以连接到 Microsoft Excel 电子表格：
 
-|Attribute|值|
+|特性|值|
 |-|-|
 |`name`|`"MyExcelConn"`|
 |`connectionString`|`"Dsn=Excel Files;dbq=data.xlsx;defaultdir=.; driverid=790;maxbuffersize=2048;pagetimeout=5"`|

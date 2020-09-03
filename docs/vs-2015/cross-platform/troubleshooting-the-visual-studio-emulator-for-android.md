@@ -9,10 +9,10 @@ caps.latest.revision: 25
 ms.author: crdun
 manager: crdun
 ms.openlocfilehash: 27f69a3295deb8d3335878acc865314635af7c0e
-ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86387299"
 ---
 # <a name="troubleshooting-the-visual-studio-emulator-for-android"></a>Troubleshooting the Visual Studio Emulator for Android
@@ -43,11 +43,11 @@ ms.locfileid: "86387299"
 
 - [Visual Studio 尝试将应用部署到仿真程序时遇到困难，或者仿真程序未在其他 IDE 中显示为调试目标。](#ADB)
 
-- [模拟器停止响应，因为它无法设置 UDP 端口](#XamarinPlayer)
+- [由于它无法设置 UDP 端口，仿真程序停止响应](#XamarinPlayer)
 
 - [无法将调试器附加到 Xamarin 项目](#Skylake)
 
-- [仿真程序未能运行使用 Google Play 服务的应用](#GooglePlay)
+- [模拟器未能运行使用 Google Play 服务的应用](#GooglePlay)
 
 - [无法拖放文件、APK 或可闪存 zip 文件](#DragAndDrop)
 
@@ -62,7 +62,7 @@ ms.locfileid: "86387299"
 ## <a name="before-you-start"></a><a name="BeforeYouStart"></a> 准备工作
  开始进行故障排除前，查看以下主题可能会有用：
 
-- [适用于 Android 的 Visual Studio 模拟程序的系统要求](../cross-platform/system-requirements-for-the-visual-studio-emulator-for-android.md)
+- [适用于 Android 的 Visual Studio 仿真程序的系统要求](../cross-platform/system-requirements-for-the-visual-studio-emulator-for-android.md)
 
 ## <a name="emulator-fails-to-install"></a><a name="NoInstall"></a> 仿真程序安装失败
  如果未安装 Hyper-V，则当你尝试安装仿真程序时将看到以下消息。 你的计算机必须支持并启用了 HyperV。
@@ -72,7 +72,7 @@ ms.locfileid: "86387299"
 > [!NOTE]
 > 对于适用于 Android 的 Visual Studio 仿真程序和 Windows Phone 仿真程序，此消息均适用。 Windows 8.1 和 Windows 10 支持仿真程序。
 
- 如果看到此消息，请检查[适用于 Android 的 Visual Studio 仿真程序的系统要求](../cross-platform/system-requirements-for-the-visual-studio-emulator-for-android.md)，以查看是否可以运行仿真程序。
+ 如果看到此消息，请检查 [适用于 Android 的 Visual Studio 仿真程序的系统要求](../cross-platform/system-requirements-for-the-visual-studio-emulator-for-android.md) ，以查看是否可以运行仿真程序。
 
 ## <a name="cannot-connect-to-network-destinations-on-a-domain-or-corporate-network"></a><a name="DomainNetwork"></a> 无法连接到域上或企业网络上的网络目标
  适用于 Android 的 Visual Studio 仿真程序作为具有自己的 IP 地址的单独设备出现在网络上。 它未加入 Windows 域，并且不与主计算机共享域或工作组凭据。
@@ -94,7 +94,7 @@ ms.locfileid: "86387299"
 ## <a name="cannot-connect-to-network-destinations-when-network-settings-require-manual-configuration"></a><a name="ManualNetworkConfig"></a> 当需要手动配置网络设置时无法连接到网络目标
  若要从仿真程序连接到网络目标，网络必须满足以下要求：
 
-- DHCP。 仿真程序需要 DHCP，因为它将自身配置为网络上具有自己的 IP 地址的一个单独的设备。
+- DHCP。 仿真程序需要 DHCP，因为它将自身配置为网络上具有自己的 IP 地址的一个单独的设备
 
 - 自动配置的 DNS 和网关设置。 不可能为仿真程序手动配置 DNS 和网关设置。
 
@@ -134,7 +134,7 @@ ms.locfileid: "86387299"
 
      ![Android&#95;Emu&#95;V&#95;Switch&#95;Man](../cross-platform/media/android-emu-v-switch-man.png "Android_Emu_V_Switch_Man")
 
-     如果安装不正确，并且使用的是 Windows 10，则可以尝试 [使用 netcfg – d 命令重新安装网络设备](https://support.microsoft.com/help/10741/windows-fix-network-connection-issues) （第 6 节）。
+     如果安装不正确，并且使用的是 Windows 10，则可以尝试 [使用 netcfg – d 命令](https://support.microsoft.com/help/10741/windows-fix-network-connection-issues) (第6部分) 重新安装网络设备。
 
 - 如果这些步骤未解决问题，请参阅 [Emulator fails to start (first use)](#NoStart) ，了解可能会干扰仿真程序的第三方软件的信息。
 
@@ -173,7 +173,7 @@ ms.locfileid: "86387299"
 
      - 禁用受信任的执行
 
-       有关详细信息，请参阅此文章：Technet：Hyper-V：如何修复启用 Hyper-V 时发生的 BIOS 错误
+       有关详细信息，请参阅此文：Technet：Hyper-V：如何启用 Hyper-V 修复 BIOS 错误
 
   5. 确保至少具有 4 GB 系统内存，并且它未被其他占用大量资源的程序和进程使用。
 
@@ -191,9 +191,9 @@ ms.locfileid: "86387299"
 
    一般情况下，是否更新其软件从而与 Windows 8 和 Hyper-V 兼容取决于这些产品的开发人员。
 
-   以下产品可能需要升级以与 Windows 8 兼容：VirtualBox、Virtual PC 7、VMWare、某些 VPN 客户端、软件防火墙、某些版本的 Cisco VPN 客户端和其他虚拟化系统。 与可疑虚拟化软件的开发人员合作，鼓励他们升级软件，从而使软件与 Windows 8 和 Hyper-V 兼容。
+   以下产品可能需要升级才能与 Windows 8 兼容：VirtualBox、Virtual PC 7、VMWare、一些 VPN 客户端、软件防火墙、一些版本的 Cisco VPN 客户端和其他虚拟化系统。 与可疑虚拟化软件的开发人员合作，鼓励他们升级软件，从而使软件与 Windows 8 和 Hyper-V 兼容。
 
-   作为一种 **解决方法**，可以禁用可能会干扰虚拟网络（仿真程序用于与 Visual Studio 进行通信）的所有第三方驱动程序和应用程序。 这些应用程序可能包括：
+   作为一种 **解决方法**，你可以禁用所有第三方驱动程序和应用程序，这可能会妨碍模拟器使用的虚拟网络与 Visual Studio 进行通信。 这些应用程序可能包括：
 
   - 防病毒应用程序（挂接到网络堆栈）
 
@@ -254,7 +254,7 @@ ms.locfileid: "86387299"
 
   若要解决此问题，则在主板的 BIOS 设置中禁用 USB3，然后重新启动计算机。 然后，检查 Gigabyte 是否已为主板的 BIOS 发布了更新。
 
-  有关详细信息，请参阅以下知识库文章： [在 Gigabyte 系统上安装 Hyper-V 角色后启动失败](https://support.microsoft.com/kb/2693144)。
+  有关详细信息，请参阅以下知识库文章：[在 Gigabyte 系统上安装 Hyper-V 角色后启动失败](https://support.microsoft.com/kb/2693144)。
 
 ## <a name="visual-studio-gets-stuck-trying-to-deploy-the-app-to-the-emulator-or-the-emulator-does-not-appear-as-a-debug-target-in-other-ides"></a><a name="ADB"></a> Visual Studio 尝试将应用部署到仿真程序时遇到困难，或者仿真程序未在其他 IDE 中显示为调试目标。
  如果仿真程序正在运行，但它似乎没有连接到 ADB（Android 调试桥）或未显示在使用 ADB 的 Android 工具中（如 Android Studio 或 Eclipse），则可能需要调整仿真程序查找 ADB 的位置。 仿真程序使用注册表项来标识 Android SDK 的基位置，并查找该目录下的 \platform-tools\adb.exe 文件。 若要修改仿真程序使用的 Android SDK 路径：
@@ -267,7 +267,7 @@ ms.locfileid: "86387299"
 
   重新启动仿真程序，现在应能够看到仿真程序已连接到 ADB 和关联的 Android 工具。
 
-## <a name="emulator-stops-responding-because-it-couldnt-set-up-the-udp-port"></a><a name="XamarinPlayer"></a>模拟器停止响应，因为它无法设置 UDP 端口
+## <a name="emulator-stops-responding-because-it-couldnt-set-up-the-udp-port"></a><a name="XamarinPlayer"></a> 由于它无法设置 UDP 端口，仿真程序停止响应
  由于与 Xamarin 播放器不兼容，你可能会遇到此问题。 如果仿真程序似乎停止响应，或看到此错误消息 "仿真程序无法连接到设备操作系统：无法设置 UDP 端口。  某些功能可能已禁用”，则这表示你可能遇到了此问题。 请执行下列步骤：
 
 1. 卸载 Xamarin 播放器。
@@ -283,17 +283,17 @@ ms.locfileid: "86387299"
 
 1. 打开 Hyper-V 管理器，选择当前使用的模拟器配置文件的 VM。
 
-2. 选择“删除已保存状态”  （右下方）。
+2. 选择“删除已保存状态”（右下方）。
 
-3. 选择“设置...” 
+3. 选择“设置...”
 
-4. 展开处理器节点并选择“兼容性”  。
+4. 展开处理器节点并选择“兼容性”。
 
-5. 启用“迁移到具有不同处理器版本的物理计算机”  。
+5. 启用“迁移到具有不同处理器版本的物理计算机”。
 
-6. 在“操作”  下重启该服务，然后重试。
+6. 在“操作”下重启该服务，然后重试。
 
-## <a name="emulator-fails-to-run-app-that-uses-google-play-services"></a><a name="GooglePlay"></a> 仿真程序未能运行使用 Google Play 服务的应用
+## <a name="emulator-fails-to-run-app-that-uses-google-play-services"></a><a name="GooglePlay"></a>模拟器未能运行使用 Google Play 服务的应用
  仿真程序未随 Google Play 服务的库一同提供。 但是，仿真程序不支持可闪存 zip 文件的拖放安装。
 
 ## <a name="drag-and-drop-of-a-file-apk-or-flashable-zip-file-does-not-work"></a><a name="DragAndDrop"></a> 无法拖放文件、APK 或可闪存 zip 文件
@@ -302,7 +302,7 @@ ms.locfileid: "86387299"
 ## <a name="resolution-of-screenshot-is-incorrect"></a><a name="Resolution"></a> 屏幕快照的分辨率不正确
  如果使用 **“其他工具”** 窗口中的“屏幕快照”选项卡来进行屏幕快照，而生成的图像的大小并非预期大小，则在选择 **“捕获”** 前可能需要调整屏幕的缩放级别。 仿真程序以主机计算机显示器上屏幕的分辨率进行屏幕快照。
 
-## <a name="emulator-fails-to-render-opengl-content"></a><a name="OpenGL"></a>模拟器未能呈现 OpenGL 内容
+## <a name="emulator-fails-to-render-opengl-content"></a><a name="OpenGL"></a> 仿真程序未能呈现 OpenGL 内容
  仿真程序使用主计算机的 GPU 呈现 OpenGL 内容，并使用 ANGLE 项目将这些调用和 DirectX 进行相互转换。 如果应用程序正确地呈现在设备上，但未正确呈现在仿真器上，则该设备很可能正在缓解不正确的 OpenGL 调用（例如，使用不匹配的着色器变量）。
 
 ## <a name="emulator-does-not-respond-to-multi-touch-gestures"></a><a name="Multitouch"></a> 仿真程序不响应多点触控笔势

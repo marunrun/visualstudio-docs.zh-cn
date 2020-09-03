@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 7d660189ede0848216eb44d6ef49fe9c93a06ec8
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72672730"
 ---
 # <a name="boundsrules-constrain-shape-location-and-size"></a>BoundsRules 约束形状位置和大小
@@ -25,7 +25,7 @@ ms.locfileid: "72672730"
 
  下面的示例将矩形形状约束为固定大小（水平或垂直）的条形。 当用户拖动角部或边时，大纲在高度和宽度的两个允许的配置之间翻转。
 
- 边界规则是从 <xref:Microsoft.VisualStudio.Modeling.Diagrams.BoundsRules> 派生的类。 在形状中创建规则的实例：
+ 边界规则是从派生的类 <xref:Microsoft.VisualStudio.Modeling.Diagrams.BoundsRules> 。 在形状中创建规则的实例：
 
 ```
 using Microsoft.VisualStudio.Modeling.Diagrams; ...
@@ -67,5 +67,5 @@ public class BarBoundsRule: BoundsRules
 
  请注意，如果需要，可以对位置和大小进行限制。
 
-## <a name="see-also"></a>请参阅
- <xref:Microsoft.VisualStudio.Modeling.Diagrams.BoundsRules>[响应和传播更改](../modeling/responding-to-and-propagating-changes.md)
+## <a name="see-also"></a>另请参阅
+ <xref:Microsoft.VisualStudio.Modeling.Diagrams.BoundsRules> [响应并传播更改](../modeling/responding-to-and-propagating-changes.md)

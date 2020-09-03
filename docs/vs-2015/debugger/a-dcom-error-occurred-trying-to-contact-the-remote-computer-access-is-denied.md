@@ -22,10 +22,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 0157b1ade2c38a2c10920b9674d7c9a58ac036b2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68156535"
 ---
 # <a name="a-dcom-error-occurred-trying-to-contact-the-remote-computer-access-is-denied"></a>尝试联系远程计算机时出现 DCOM 错误。 拒绝访问。
@@ -33,11 +33,11 @@ ms.locfileid: "68156535"
 
 在以下情况下，远程调试使用 DCOM 在本地和远程计算机之间进行通信：  
   
-- 调试器设置为了“本机兼容性模式”  ，或在“工具/选项/调试”  页内选中了“托管兼容模式”   
+- 调试器设置为**本机兼容模式**，或在 "**工具/选项/调试**" 页中选中了 "**托管兼容模式**"  
   
 - 调试的是托管 C++ (C++/CLI) 代码。  
   
-- 在 Visual Studio 2013 中，在“工具”/“选项”/“调试”  页内选中了“启用本机编辑并继续”   
+- 在 Visual Studio 2013 中，在 "**工具/选项/调试**" 页中选中了 "**启用本机编辑并继续**"  
   
 - 某些第三方调试方案  
   
@@ -51,6 +51,6 @@ ms.locfileid: "68156535"
   
 - 如果远程调试要求输入凭据，则选中该选项以保存凭据。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [远程调试错误和疑难解答](../debugger/remote-debugging-errors-and-troubleshooting.md)   
  [远程调试](../debugger/remote-debugging.md)

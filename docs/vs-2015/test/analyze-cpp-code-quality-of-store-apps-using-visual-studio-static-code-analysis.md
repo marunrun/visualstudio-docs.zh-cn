@@ -1,5 +1,5 @@
 ---
-title: C++静态代码分析应用商店应用
+title: C + + 静态代码分析应用程序
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-test
@@ -12,38 +12,38 @@ author: alexhomer1
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: c20fe8bccdf48cf307dda72a085b3c2a72f1d0cf
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72672708"
 ---
 # <a name="analyze-c-code-quality-of-store-apps-using-visual-studio-static-code-analysis"></a>使用 Visual Studio 静态代码分析来分析应用商店应用的 C++ 代码质量
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-适用于 Windows 和 Windows Phone] （.。。/Image/windows_and_phone_content.png "windows_and_phone_content")
+适用于 Windows 和 Windows Phone] (。将 windows_and_phone_content.png "windows_and_phone_content" ) 
 
  Visual Studio Express 版本中的代码分析工具可检查代码中是否存在一组常见问题以及违反良好编程习惯的情况。 代码分析警告与编译器错误和警告不同，因为代码分析工具搜索的是虽然有效但仍会为你或使用你代码的其他人员带来问题的特定代码模式。 代码分析还可在代码中找到通过测试难以发现的缺陷。 在开发过程中定期运行代码分析工具可提高所编写的应用程序的质量。
 
 > [!NOTE]
 > 在 Visual Studio 旗舰版、Visual Studio 高级专业版和 Visual Studio 专业版中，可使用完整的代码分析工具。 请参阅 MSDN 库中的 [Analyzing Application Quality by Using Code Analysis Tools](https://msdn.microsoft.com/library/dd264897.aspx)（使用代码分析工具分析应用程序质量）。
 
-## <a name="BKMK_Run"></a>运行代码分析
+## <a name="running-code-analysis"></a><a name="BKMK_Run"></a> 运行代码分析
  若要对 Visual Studio 解决方案运行代码分析，请执行以下操作：
 
-- 在“生成”菜单上，选择“对解决方案运行代码分析”。
+- 在“生成”菜单上，选择“对解决方案运行代码分析”。********
 
   若要在每次生成项目时自动运行代码分析，请执行以下操作：
 
-1. 在解决方案资源管理器中选择项目名称，然后选择“属性”。
+1. 在解决方案资源管理器中选择项目名称，然后选择“属性”****。
 
-2. 在项目属性页中，选择“代码分析”，然后选择“生成时启用适用于 C/C++ 的代码分析”。
+2. 在项目属性页中，选择“代码分析”，然后选择“生成时启用适用于 C/C++ 的代码分析”。********
 
    这样，解决方案编译后将运行代码分析。 结果将显示在“代码分析”窗口中。
 
    ![代码分析窗口](../test/media/ca-cpp-collapsed.png "CA_CPP_Collapsed")
 
-## <a name="BKMK_Analyze"></a>分析和解决代码分析警告
+## <a name="analyzing-and-resolving-code-analysis-warnings"></a><a name="BKMK_Analyze"></a>分析和解决代码分析警告
  若要分析某个具体的警告，请在“代码分析”窗口中选择该警告的标题。 随后该警告将展开，显示有关问题的详细信息。 如果可能，代码分析将显示导致该警告的行号和分析逻辑。
 
  ![展开的代码分析警告](../test/media/ca-cpp-expanded-callout.png "CA_CPP_Expanded_Callout")
@@ -55,27 +55,27 @@ ms.locfileid: "72672708"
  了解问题后，可在代码中解决该问题。 然后重新运行代码分析，以确保警告不再显示在“代码分析”窗口中，并且修复未引发新的警告。
 
 > [!TIP]
-> 可从“代码分析”窗口中重新运行代码分析。 选择“分析”按钮，然后选择分析的范围。 可对整个解决方案对所选项目重新运行分析。
+> 可从“代码分析”窗口中重新运行代码分析。 选择“分析”按钮，然后选择分析的范围。**** 可对整个解决方案对所选项目重新运行分析。
 
-## <a name="BKMK_Suppress"></a>禁止显示代码分析警告
+## <a name="suppressing-code-analysis-warnings"></a><a name="BKMK_Suppress"></a> 禁止显示代码分析警告
  有时，你可能会决定不修复代码分析警告。 你可能会觉得与代码的任何真实实现中引发问题的可能性相比，解决警告所需的重新编码工作量过大。 或者，你可能会认为在警告中使用的分析不适合特定的上下文。 可禁止显示个别警告，以使“代码分析”窗口中不再显示这些警告。
 
  若要禁止显示警告，请执行以下操作：
 
 1. 如果未显示详细信息，可将警告的标题展开。
 
-2. 选择警告底部的“操作”链接。
+2. 选择警告底部的“操作”链接。****
 
-3. 选择“禁止显示消息”，然后选择“在源中”。
+3. 选择“禁止显示消息”，然后选择“在源中”。********
 
-   禁止显示消息会插入用于禁止显示代码行的警告的 `#pragma(warning:`*WarningId*`)`。
+   禁止显示消息会插入禁止显示 `#pragma(warning:` *WarningId* `)` 代码行警告的 WarningId。
 
-## <a name="BKMK_Search"></a>搜索和筛选代码分析结果
+## <a name="searching-and-filtering-code-analysis-results"></a><a name="BKMK_Search"></a> 搜索和筛选代码分析结果
  可搜索冗长的警告消息列表，也可在多项目解决方案中筛选警告。
 
- ![搜索和筛选代码分析窗口](../test/media/ca-searchfilter.png "CA_SearchFilter")
+ ![搜索并筛选代码分析窗口](../test/media/ca-searchfilter.png "CA_SearchFilter")
 
-## <a name="Warnings"></a>C++ 代码分析警告
+## <a name="c-code-analysis-warnings"></a><a name="Warnings"></a> C + + 代码分析警告
  代码分析可引发以下有关 C++ 代码的警告：
 
 |                                      规则                                      |                                                  描述                                                  |

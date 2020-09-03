@@ -1,5 +1,5 @@
 ---
-title: IDebug属性2：：获取财产信息 |微软文档
+title: IDebugProperty2：： GetPropertyInfo |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 6ec1c3e29e0dbb6ca069dec696e6645a159ec7e6
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80721375"
 ---
 # <a name="idebugproperty2getpropertyinfo"></a>IDebugProperty2::GetPropertyInfo
-获取描述属性[DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md)结构。
+获取描述属性的 [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) 结构。
 
 ## <a name="syntax"></a>语法
 
@@ -51,27 +51,27 @@ int GetPropertyInfo ( 
 
 ## <a name="parameters"></a>参数
 `dwFields`\
-[在][DEBUGPROP_INFO_FLAGS](../../../extensibility/debugger/reference/debugprop-info-flags.md)枚举中的值的组合，用于指定要在`pPropertyInfo`结构中填写哪些字段。
+中 [DEBUGPROP_INFO_FLAGS](../../../extensibility/debugger/reference/debugprop-info-flags.md) 枚举中的值的组合，用于指定要在结构中填充的字段 `pPropertyInfo` 。
 
 `nRadix`\
-[在]用于格式化任何数值信息的 Radix。
+中用于设置任何数字信息格式的基数。
 
 `dwTimeout`\
-[在]指定从此方法返回之前等待的最大时间（以毫秒为单位）。 用于`INFINITE`无限期等待。
+中指定从此方法返回之前要等待的最长时间（以毫秒为单位）。 使用 `INFINITE` 无限期等待。
 
 `rgpArgs`\
-[进出]保留供将来使用;设置为空值。
+[in，out]保留以供将来使用;设置为 null 值。
 
 `dwArgCount`\
-[在]保留供将来使用;设置为零。
+中保留以供将来使用;设置为零。
 
 `pPropertyInfo`\
-[出]用属性的说明填充的[DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md)结构。
+弄使用属性的说明填充的 [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) 结构。
 
 ## <a name="return-value"></a>返回值
- 如果成功，返回`S_OK`;否则返回错误代码。
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)
 - [DEBUGPROP_INFO_FLAGS](../../../extensibility/debugger/reference/debugprop-info-flags.md)
 - [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)

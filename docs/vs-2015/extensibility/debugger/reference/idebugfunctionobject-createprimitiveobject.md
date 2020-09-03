@@ -1,5 +1,5 @@
 ---
-title: IDebugFunctionObject::CreatePrimitiveObject |Microsoft Docs
+title: IDebugFunctionObject：： CreatePrimitiveObject |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 3531483c113c37587b253bed90a9985541b2e526
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68179443"
 ---
 # <a name="idebugfunctionobjectcreateprimitiveobject"></a>IDebugFunctionObject::CreatePrimitiveObject
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-创建一个基元数据对象，例如简单的整数。  
+创建一个基元数据对象，如简单整数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,16 +42,16 @@ int CreatePrimitiveObject(
   
 #### <a name="parameters"></a>参数  
  `ot`  
- [in]中的值[OBJECT_TYPE](../../../extensibility/debugger/reference/object-type.md)表示创建的基元类型的枚举。  
+ 中 [OBJECT_TYPE](../../../extensibility/debugger/reference/object-type.md) 枚举中的一个值，表示要创建的基元类型。  
   
  `ppObject`  
- [out]返回[IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)表示新创建的对象。  
+ 弄返回表示新创建的对象的 [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) 。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回 S_OK;否则，返回错误代码。  
+ 如果成功，将返回 S_OK;否则，将返回错误代码。  
   
 ## <a name="remarks"></a>备注  
- 调用此方法以创建一个对象，表示由表示该函数的参数的基元对象[IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md)接口。 例如，如果表达式字符串为"myString(5)"，此方法将用于创建一个表示整数 5 的对象。  
+ 调用此方法可创建一个对象，该对象表示一个基元对象，该对象是由 [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) 接口表示的函数的参数。 例如，如果表达式字符串为 "myString (5) "，则此方法将用于创建表示整数5的对象。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md)

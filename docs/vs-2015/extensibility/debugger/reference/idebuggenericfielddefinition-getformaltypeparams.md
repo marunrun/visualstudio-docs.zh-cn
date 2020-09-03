@@ -1,5 +1,5 @@
 ---
-title: IDebugGenericFieldDefinition::GetFormalTypeParams |Microsoft Docs
+title: IDebugGenericFieldDefinition：： GetFormalTypeParams |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,16 +12,16 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 2e4595cd8a93c266d0eb70e91b8ab8ca8aeb8cb5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68180843"
 ---
 # <a name="idebuggenericfielddefinitiongetformaltypeparams"></a>IDebugGenericFieldDefinition::GetFormalTypeParams
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-检索给定的参数数目的类型参数。  
+根据参数的数量检索类型参数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,19 +43,19 @@ int GetFormalTypeParams(
   
 #### <a name="parameters"></a>参数  
  `cParams`  
- [in]参数数目。  
+ 中参数的数目。  
   
  `ppParams`  
- [out]类型参数的数组。  
+ 弄类型参数数组。  
   
  `pcParams`  
- [in、 out]中的参数数量`ppParams`数组。  
+ [in，out]数组中的参数数量 `ppParams` 。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
 ## <a name="remarks"></a>备注  
- 返回的类型参数的顺序从左到右。 例如，字典\<K，V > 将返回 IDebugFormalGenericParameters {K，V}。  
+ 按从左至右的顺序返回类型参数。 例如，Dictionary \<K,V> 返回 IDebugFormalGenericParameters {K，V}。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugGenericFieldDefinition](../../../extensibility/debugger/reference/idebuggenericfielddefinition.md)

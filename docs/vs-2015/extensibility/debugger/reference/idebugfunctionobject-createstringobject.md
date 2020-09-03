@@ -1,5 +1,5 @@
 ---
-title: IDebugFunctionObject::CreateStringObject |Microsoft Docs
+title: IDebugFunctionObject：： CreateStringObject |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,10 +13,10 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 05f8e77bd019b1bed04ec3a08cda5bbcfefa30ff
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68179438"
 ---
 # <a name="idebugfunctionobjectcreatestringobject"></a>IDebugFunctionObject::CreateStringObject
@@ -42,16 +42,16 @@ int CreateStringObject(
   
 #### <a name="parameters"></a>参数  
  `pcstrString`  
- [in]字符串对象的字符串值。  
+ 中字符串对象的字符串值。  
   
  `ppObject`  
- [out]返回[IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)对象，表示新创建的字符串对象。  
+ 弄返回一个 [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) 对象，该对象表示新创建的字符串对象。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回 S_OK;否则，返回错误代码。  
+ 如果成功，将返回 S_OK;否则，将返回错误代码。  
   
 ## <a name="remarks"></a>备注  
- 调用此方法以创建一个对象，表示一个字符串，它由表示该函数的参数[IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md)接口。  
+ 调用此方法可创建一个对象，该对象表示一个字符串，该字符串是由 [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) 接口表示的函数的参数。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md)

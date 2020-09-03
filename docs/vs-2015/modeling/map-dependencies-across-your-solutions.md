@@ -30,10 +30,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: d70016229ad9599c7ededbefaf08744f2bb6f351
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85548078"
 ---
 # <a name="map-dependencies-across-your-solutions"></a>映射解决方案中的依赖项
@@ -139,10 +139,10 @@ ms.locfileid: "85548078"
 
     ![展开代码映射中的节点](../modeling/media/dependencygraph-containment.png "DependencyGraph_Containment")
 
-    或通过选择项，然后按加号键（）来使用键盘 **+** 。 若要查看更深层次的代码，请对命名空间、类型和成员执行相同操作。
+    或通过选择项，然后按加号键 () 来使用键盘 **+** 。 若要查看更深层次的代码，请对命名空间、类型和成员执行相同操作。
 
    > [!TIP]
-   > 有关使用鼠标、键盘和触控处理代码图的详细信息，请参阅[浏览和重新排列代码图](../modeling/browse-and-rearrange-code-maps.md)。
+   > 有关使用鼠标、键盘和触控处理代码图的详细信息，请参阅 [浏览和重新排列代码图](../modeling/browse-and-rearrange-code-maps.md)。
 
 5. 若要简化代码图并将重点关注各个部分，选择代码图工具栏上的“筛选器” **** ，然后仅选择你感兴趣的节点和链接类型。 例如，可以隐藏所有的解决方案文件夹和程序集容器。
 
@@ -185,7 +185,7 @@ ms.locfileid: "85548078"
 
 - [浏览和重新排列代码图](../modeling/browse-and-rearrange-code-maps.md)
 
-- [Customize code maps by editing the DGML files](../modeling/customize-code-maps-by-editing-the-dgml-files.md)
+- [通过编辑 DGML 文件自定义代码图](../modeling/customize-code-maps-by-editing-the-dgml-files.md)
 
 - 通过 [运行分析器](../modeling/find-potential-problems-using-code-map-analyzers.md)发现代码中的潜在问题。
 
@@ -205,7 +205,7 @@ ms.locfileid: "85548078"
 
 ### <a name="see-specific-dependencies-in-your-solution"></a>查看解决方案中特定的依赖关系
 
-1. 打开“解决方案资源管理器”****。 选择你感兴趣的项目、程序集引用、文件夹、文件、类型和成员。 若要找出与类型或成员有依赖关系的项，请从“解决方案资源管理器”中打开类型或成员的快捷菜单 ****。 选择依赖关系类型，然后选择结果。
+1. 打开“解决方案资源管理器”。 选择你感兴趣的项目、程序集引用、文件夹、文件、类型和成员。 若要找出与类型或成员有依赖关系的项，请从“解决方案资源管理器”中打开类型或成员的快捷菜单 ****。 选择依赖关系类型，然后选择结果。
 
 2. 映射你的项及其成员。 在**解决方案资源管理器**工具栏上，单击 "**在代码图上显示**" "![从所选节点创建新关系图" 按钮](../modeling/media/createnewgraphfromselectedbutton.gif "CreateNewGraphFromSelectedButton")。
 
@@ -230,7 +230,7 @@ ms.locfileid: "85548078"
 
      ![将组展开到类和成员级别](../modeling/media/codemapsexpandtoclassandmember.png "CodeMapsExpandToClassAndMember")
 
-     若要查看代码中的成员，但不显示在地图上，请单击组左上角的 "**重新提取子级**" 图标![重新提取儿童图标](../modeling/media/dependencygraph-deletednodesicon.png "DependencyGraph_DeletedNodesIcon")。
+     若要查看代码中的成员，但不显示在地图上，请单击组左上角的 " **重新提取子级** " 图标 ![重新提取儿童图标](../modeling/media/dependencygraph-deletednodesicon.png "DependencyGraph_DeletedNodesIcon") 。
 
 6. 若要查看更多与代码图上的项相关的项，请选择其中一个，再选择代码图工具栏上的“显示相关内容” **** ，然后选择要添加到图中的相关项的类型。 或者，选择一个或多个项，打开快捷菜单，然后为要添加到图中的相关项类型选择“显示…” **** 选项。 例如：
 
@@ -245,7 +245,7 @@ ms.locfileid: "85548078"
 
      对于 **类** 或 **接口**，请选择：
 
-    |选项|说明|
+    |选项|描述|
     |-|-|
     |**显示基类型**|对于类，添加基类和实现的接口。<br /><br /> 对于接口，请添加基接口。|
     |**显示派生类型**|对于类，添加派生类。<br /><br /> 对于接口，请添加派生接口和实现类或结构。|
@@ -307,16 +307,16 @@ ms.locfileid: "85548078"
 
   在为 C 和 C++ 代码创建代码图时可能会出现这些问题：
 
-|**问题**|可能的原因 |**解决方法**|
+|**问题**|可能的原因 |**分辨率**|
 |---------------|------------------------|--------------------|
 |未能生成代码图。|解决方案中没有项目成功生成过。|修复出现的生成错误，然后重新生成代码图。|
 |尝试从“体系结构”[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]**菜单生成代码图时，** 无响应。|程序数据库 (.pdb) 文件可能已损坏。<br /><br /> pdb 文件将存储调试信息，例如，类型、方法和源文件信息。|重新生成解决方案，然后重试。|
-|禁用 IntelliSense 浏览器数据库的某些设置。|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]**** “选项”对话框中可能已禁用某些 IntelliSense 设置。|打开设置以启用它们。<br /><br /> 请参阅[选项、文本编辑器、C/c + +、高级](../ide/reference/options-text-editor-c-cpp-advanced.md)。|
+|禁用 IntelliSense 浏览器数据库的某些设置。|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]**** “选项”对话框中可能已禁用某些 IntelliSense 设置。|打开设置以启用它们。<br /><br /> 请参阅 [选项、文本编辑器、C/c + +、高级](../ide/reference/options-text-editor-c-cpp-advanced.md)。|
 |消息“未知方法” **** 将出现在方法节点上。<br /><br /> 由于无法解析方法的名称，导致出现此问题。|二进制文件可能没有基重定位表。|在链接器中打开 **/FIXED:NO** 选项。<br /><br /> 请参阅 [/FIXED (Fixed Base Address)](https://msdn.microsoft.com/library/929bba5e-b7d8-40ed-943e-056aa3710fc5)。|
 ||无法生成程序数据库 (.pdb) 文件。<br /><br /> pdb 文件将存储调试信息，例如，类型、方法和源文件信息。|在链接器中打开 **/DEBUG** 选项。<br /><br /> 请参阅 [/DEBUG (Generate Debug Info)](https://msdn.microsoft.com/library/1af389ae-3f8b-4d76-a087-1cdf861e9103)。|
 ||无法在预期位置打开或找到 .pdb 文件。|确保 .pdb 文件位于预期位置。|
 ||已从 .pdb 文件中去除调试信息。|如果链接器中已使用 **/PDBSTRIPPED** 选项，则改为包含完整的 .pdb 文件。<br /><br /> 请参阅 [/PDBSTRIPPED (Strip Private Symbols)](https://msdn.microsoft.com/library/9b9e0070-6a13-4142-8180-19c003fbbd55)。|
-||调用方不是函数，它是二进制文件中的形式转换 (thunk) 或数据节中的指针。|当调用方是形式转换 (thunk) 时，尝试使用 `_declspec(dllimport)` 以避免形式转换 (thunk)。<br /><br /> 请参阅：<br /><br /> -   [一般规则和限制](https://msdn.microsoft.com/library/6c48902d-4259-4761-95d4-e421d69aa050)<br />-   [使用 __declspec （dllimport）导入函数调用](https://msdn.microsoft.com/library/6b53c616-0c6d-419a-8e2a-d2fff20510b3)<br />-   [dllexport、dllimport](https://msdn.microsoft.com/library/ff95b645-ef55-4e72-b848-df44657b3208)|
+||调用方不是函数，它是二进制文件中的形式转换 (thunk) 或数据节中的指针。|当调用方是形式转换 (thunk) 时，尝试使用 `_declspec(dllimport)` 以避免形式转换 (thunk)。<br /><br /> 请参阅：<br /><br /> -   [一般规则和限制](https://msdn.microsoft.com/library/6c48902d-4259-4761-95d4-e421d69aa050)<br />-   [使用 __declspec (dllimport 导入函数调用) ](https://msdn.microsoft.com/library/6b53c616-0c6d-419a-8e2a-d2fff20510b3)<br />-   [dllexport、dllimport](https://msdn.microsoft.com/library/ff95b645-ef55-4e72-b848-df44657b3208)|
 
 ## <a name="make-code-maps-render-more-quickly"></a><a name="RenderMoreQuickly"></a> 使代码图更快呈现
  在首次生成代码图时，Visual Studio 会将其找到的所有依赖关系都编入索引中。 这个过程可能需要一些时间，尤其是针对大型解决方案，但会提高之后的性能。 如果更改了代码，Visual Studio 只会将已更新的代码重新编入索引。 为了尽量减少代码图完成呈现所需的时间，请考虑以下内容：
@@ -339,12 +339,12 @@ ms.locfileid: "85548078"
 
   完成的图只会为成功创建的代码显示依赖关系。 如果某些组件出现生成错误，这些错误会出现在代码图上。 在基于代码图做出体系结构决策时，请确保组件实际生成并且具有依赖项。
 
-## <a name="share-code-maps"></a><a name="SavingExporting"></a>共享代码图
+## <a name="share-code-maps"></a><a name="SavingExporting"></a> 共享代码图
 
 ### <a name="share-the-map-with-other-visual-studio-users"></a>与其他 Visual Studio 用户共享代码图
  使用“文件” **** 菜单保存代码图。
 
- -或-
+ - 或 -
 
  若要将地图保存为特定项目的一部分，请在地图工具栏上选择 "**共享**"，将 "dgml"**移** \<*CodeMapName*> **到**，然后选择要在其中保存地图的项目。
 
@@ -373,7 +373,7 @@ ms.locfileid: "85548078"
 
 2. 浏览到你要保存文件的位置。
 
-3. 对代码图命名。 请确保将 "**保存类型**" 框设置为 " **xps 文件（ \* .xps）**"。 选择 **“保存”** 。
+3. 对代码图命名。 请确保将 " **保存类型** " 框设置为 " **xps 文件 (.xps \*) **。 选择 **“保存”** 。
 
 ## <a name="what-else-can-i-do"></a>我还能执行什么操作？
 
@@ -385,4 +385,4 @@ ms.locfileid: "85548078"
 
 - [浏览和重新排列代码图](../modeling/browse-and-rearrange-code-maps.md)
 
-- [Customize code maps by editing the DGML files](../modeling/customize-code-maps-by-editing-the-dgml-files.md)
+- [通过编辑 DGML 文件自定义代码图](../modeling/customize-code-maps-by-editing-the-dgml-files.md)
