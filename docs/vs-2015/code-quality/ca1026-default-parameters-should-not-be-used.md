@@ -16,29 +16,29 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: a63d6e788dd1722d0c593469b225a4f1aeb4738d
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85548432"
 ---
 # <a name="ca1026-default-parameters-should-not-be-used"></a>CA1026:不应使用默认形参
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|Item|值|
+|项|值|
 |-|-|
 |TypeName|DefaultParametersShouldNotBeUsed|
 |CheckId|CA1026|
-|Category|Microsoft. Design|
+|类别|Microsoft. Design|
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
  外部可见类型包含使用默认参数的外部可见方法。
 
 ## <a name="rule-description"></a>规则描述
- 在公共语言规范（CLS）下允许使用默认参数的方法;但是，CLS 允许编译器忽略分配给这些参数的值。 为忽略默认参数值的编译器编写的代码必须为每个默认参数显式提供参数。 若要跨编程语言维护所需的行为，则应使用提供默认参数的方法重载替换使用默认参数的方法。
+ 在公共语言规范下允许使用默认参数的方法 (CLS) ;但是，CLS 允许编译器忽略分配给这些参数的值。 为忽略默认参数值的编译器编写的代码必须为每个默认参数显式提供参数。 若要跨编程语言维护所需的行为，则应使用提供默认参数的方法重载替换使用默认参数的方法。
 
- 编译器在访问托管代码时，将忽略 c + + 的托管扩展的默认参数值。 Visual Basic 编译器支持具有使用[可选](https://msdn.microsoft.com/library/4571ce88-a539-4115-b230-54eb277c6aa7)关键字的默认参数的方法。
+ 编译器在访问托管代码时，将忽略 c + + 的托管扩展的默认参数值。 Visual Basic 编译器支持具有使用 [可选](https://msdn.microsoft.com/library/4571ce88-a539-4115-b230-54eb277c6aa7) 关键字的默认参数的方法。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
  若要修复与此规则的冲突，请将使用默认参数的方法替换为提供默认参数的方法重载。

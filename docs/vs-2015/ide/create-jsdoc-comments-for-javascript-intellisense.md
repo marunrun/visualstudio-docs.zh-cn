@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: b974f3450b88ab22e58e284881f270c1b3d72298
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72619273"
 ---
 # <a name="create-jsdoc-comments-for-javascript-intellisense"></a>为 JavaScript IntelliSense 创建 JSDoc 注释
@@ -24,19 +24,19 @@ Visual Studio 中的 IntelliSense 显示你使用标准 JSDoc 注释添加到脚
 ## <a name="jsdoc-comment-tags"></a>JSDoc 注释标记
  intellisense 使用以下标准 JSDoc 注释标记显示有关代码的信息。
 
-|  JSDoc 标记   |                       语法                        |                                                     注意                                                      |
+|  JSDoc 标记   |                       语法                        |                                                     备注                                                      |
 |--------------|-----------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| @deprecated  |              @deprecated description              |                                   指定一个不推荐使用的函数或方法。                                   |
-| @description |             @description description              |                              指定函数或方法的说明。                               |
-|    @param    | @param {type} parameterName<em>description</em> | 指定函数或方法中的参数信息。<br /><br /> TypeScript 还支持 @paramTag。 |
-|  @property   |          @property {type} propertyName          |   为在对象上定义的字段或成员指定信息（包括说明）。    |
-|   @returns   |                  @returns {type}                  |           指定一个返回值。<br /><br /> 对于 TypeScript，请使用 @returnType 而不是 @returns。           |
-|   @summary   |               @summary description                |                   指定函数或方法的说明（与 @description 相同）。                   |
-|    @type     |                   @type {type}                    |                                指定常量或变量的类型。                                |
-|   @typedef   |         @typedef {type} customTypeName          |                                            指定自定义的类型。                                            |
+| @deprecated  |              @deprecated*描述*              |                                   指定一个不推荐使用的函数或方法。                                   |
+| @description |             @description*描述*              |                              指定函数或方法的说明。                               |
+|    @param    | @param {type} parameterName<em>description</em>**** | 指定函数或方法中的参数信息。<br /><br /> TypeScript 还支持 @paramTag 。 |
+|  @property   |          @property {type} propertyName****          |   为在对象上定义的字段或成员指定信息（包括说明）。    |
+|   @returns   |                  @returns {*type*}                  |           指定一个返回值。<br /><br /> 对于 TypeScript，请使用 @returnType 而不是 @returns 。           |
+|   @summary   |               @summary*描述*                |                   指定与)  (相同的函数或方法的说明 @description 。                   |
+|    @type     |                   @type {*type*}                    |                                指定常量或变量的类型。                                |
+|   @typedef   |         @typedef {type} customTypeName****          |                                            指定自定义的类型。                                            |
 
 ### <a name="examples"></a>示例
- 下面的示例演示如何对名为 `getArea` 的函数使用 @description、@param 和 @return JSDoc 标记。
+ 下面的示例演示如何对 @description @param 名为的函数使用、和 @return JSDoc 标记 `getArea` 。
 
 ```javascript
 /** @description Determines the area of a circle that has the specified radius parameter.
@@ -52,9 +52,9 @@ function getArea(radius) {
 
  在前面的示例中，当你为 `getArea` 键入左括号时，IntelliSense 显示说明、参数和返回信息。
 
- ![函数的 IntelliSense 信息](../ide/media/js-intellisense-jsdoc-comments.png "JS_IntelliSense_JSDoc_Comments")
+ ![函数的 Intellisense 信息](../ide/media/js-intellisense-jsdoc-comments.png "JS_IntelliSense_JSDoc_Comments")
 
- 下面的示例演示如何将 @typedef 标记与 @property 标记一起使用。
+ 下面的示例演示如何将 @typedef 标记与标记一起使用 @property 。
 
 ```javascript
 /**

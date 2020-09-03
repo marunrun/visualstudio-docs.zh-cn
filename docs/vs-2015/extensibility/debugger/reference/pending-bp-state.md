@@ -1,5 +1,5 @@
 ---
-title: PENDING_BP_STATE | Microsoft Docs
+title: PENDING_BP_STATE |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 15ac788bf81ce83c2658b8a88a68ac5281020373
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68205088"
 ---
-# <a name="pendingbpstate"></a>PENDING_BP_STATE
+# <a name="pending_bp_state"></a>PENDING_BP_STATE
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-指定挂起断点 （尚未绑定的断点） 的状态。  
+指定挂起断点的状态 (尚未绑定) 的断点。  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,27 +47,27 @@ public enum enum_PENDING_BP_STATE { 
   
 ## <a name="members"></a>成员  
  PBPS_NONE  
- 零占位符。 永远不会返回此值。  
+ 占位符为零。 从不返回此值。  
   
  PBPS_DELETED  
- 指示挂起断点已被删除。  
+ 指示已删除挂起的断点。  
   
  PBPS_DISABLED  
- 指示挂起断点已禁用。  
+ 指示挂起的断点已禁用。  
   
  PBPS_ENABLED  
- 指示启用了挂起断点。  
+ 指示已启用挂起断点。  
   
 ## <a name="remarks"></a>备注  
- 使用作为`state`的成员[PENDING_BP_STATE_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md)结构。  
+ 用作 `state` [PENDING_BP_STATE_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md) 结构的成员。  
   
 ## <a name="requirements"></a>要求  
- 标头： msdbg.h  
+ 标头： msdbg  
   
- 命名空间:Microsoft.VisualStudio.Debugger.Interop  
+ 命名空间： VisualStudio  
   
- 程序集：Microsoft.VisualStudio.Debugger.Interop.dll  
+ 程序集： Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>请参阅  
- [枚举](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>另请参阅  
+ [计数](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [PENDING_BP_STATE_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md)

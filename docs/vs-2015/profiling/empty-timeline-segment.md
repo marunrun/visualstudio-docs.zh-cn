@@ -14,10 +14,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 0291cfe93492c357401ce371d58683c6815aa12b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68179049"
 ---
 # <a name="empty-timeline-segment"></a>空时间线分段
@@ -34,5 +34,5 @@ ms.locfileid: "68179049"
 - 对于标记通道，这意味着未生成任何标记。  
   
 ## <a name="see-also"></a>另请参阅  
- [“线程”视图](../profiling/threads-view-parallel-performance.md)   
- [缩放控件（“线程”视图）](../profiling/zoom-control-threads-view.md)
+ [线程视图](../profiling/threads-view-parallel-performance.md)   
+ [缩放控件（线程视图）](../profiling/zoom-control-threads-view.md)

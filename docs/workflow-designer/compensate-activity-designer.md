@@ -11,15 +11,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 5332b6d9ec087f4e1b127d93563dc0f2fe5fdd15
-ms.sourcegitcommit: 186c0c250d85ac74274fa1e438b4c7c7108d8a36
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86876146"
 ---
 # <a name="compensate-activity-designer"></a>Compensate 活动设计器
 
-"**补偿**活动设计器" 用于创建和配置 <xref:System.Activities.Statements.Compensate> 活动。
+" **补偿** 活动设计器" 用于创建和配置 <xref:System.Activities.Statements.Compensate> 活动。
 
 ## <a name="the-compensate-activity"></a>Compensate 活动
 
@@ -29,9 +29,9 @@ ms.locfileid: "86876146"
 
 ### <a name="using-the-compensate-activity-designer"></a>使用 Compensate 活动设计器
 
-"**补偿**活动" 设计器可在 "**工具箱**" 的 "**事务**" 类别中找到。 若要打开**工具箱**，请选择工作流设计器左侧的 "**工具箱**" 选项卡。 或者，从 "**视图**" 菜单中选择 **"工具箱**"，或按**Ctrl** + **Alt** + **X**。
+"**补偿**活动" 设计器可在 "**工具箱**" 的 "**事务**" 类别中找到。 若要打开 **工具箱**，请选择工作流设计器左侧的 " **工具箱** " 选项卡。 或者，从 "**视图**" 菜单中选择 **"工具箱**"，或按**Ctrl** + **Alt** + **X**。
 
-可以将 "**补偿**活动设计器" 从 "**工具箱**" 拖放到工作流设计器图面上放置活动的任何位置，如内 <xref:System.Activities.Statements.Sequence> 。 删除活动设计器将创建一个 <xref:System.Activities.Statements.Compensate> 活动，其中默认值为 " <xref:System.Activities.Activity.DisplayName%2A> 补偿"。 <xref:System.Activities.Activity.DisplayName%2A>可以在 "**补偿**活动" 设计器的标头中或在属性网格的 " **DisplayName** " 框中编辑值。
+可以将 " **补偿** 活动设计器" 从 " **工具箱** " 拖放到工作流设计器图面上放置活动的任何位置，如内 <xref:System.Activities.Statements.Sequence> 。 删除活动设计器将创建一个 <xref:System.Activities.Statements.Compensate> 活动，其中默认值为 " <xref:System.Activities.Activity.DisplayName%2A> 补偿"。 <xref:System.Activities.Activity.DisplayName%2A>可以在 "**补偿**活动" 设计器的标头中或在属性网格的 " **DisplayName** " 框中编辑值。
 
 ### <a name="the-compensate-properties"></a>Compensate 属性
 
@@ -47,5 +47,5 @@ ms.locfileid: "86876146"
 - [事务](../workflow-designer/transaction-activity-designers.md)
 - [CompensableActivity](../workflow-designer/compensableactivity-activity-designer.md)
 - [Compensate 活动设计器](../workflow-designer/compensate-activity-designer.md)
-- [逐条](../workflow-designer/confirm-activity-designer.md)
+- [确认](../workflow-designer/confirm-activity-designer.md)
 - [TransactionScope](../workflow-designer/transactionscope-activity-designer.md)

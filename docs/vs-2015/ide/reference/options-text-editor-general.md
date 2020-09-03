@@ -49,16 +49,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: fa81b08d6e375da4ad67b2e6eec32f244a779408
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72662253"
 ---
 # <a name="options-text-editor-general"></a>选项，文本编辑器，常规
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-使用此对话框可以更改 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 代码和文本编辑器的全局设置。 若要显示此对话框，请在“工具”菜单上单击“选项”，展开“文本编辑器”文件夹，然后单击“常规”。
+使用此对话框可以更改 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 代码和文本编辑器的全局设置。 若要显示此对话框，请在“工具”菜单上单击“选项”，展开“文本编辑器”文件夹，然后单击“常规”****************。
 
 > [!NOTE]
 > 显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅 [在 Visual Studio 中自定义开发设置](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。
@@ -77,7 +77,7 @@ ms.locfileid: "72662253"
 
 |打开选定内容的边距|关闭选定内容的边距|
 |-------------------------|--------------------------|
-|![HTMLpageSelectionMarginOn 屏幕快照](../../ide/reference/media/vxselmaron.gif "|::ref1::|")|![HTMLpageSelectionMarginOff 屏幕快照](../../ide/reference/media/vxselmaroff.gif "|::ref2::|")|
+|![HTMLpageSelectionMarginOn 屏幕快照](../../ide/reference/media/vxselmaron.gif "vxSelmaron")|![HTMLpageSelectionMarginOff 屏幕快照](../../ide/reference/media/vxselmaroff.gif "vxSelmaroff")|
 
  指示器边距选中后，将在编辑器文本区域的左边缘之外显示垂直边距。 在此边距内单击时，会显示与文本有关的图标和工具提示。 例如，指示器边距内会出现断点或任务列表快捷方式。 但不显示指示器边距信息。
 
@@ -88,4 +88,4 @@ ms.locfileid: "72662253"
  选中时突出显示当前行，在光标所在的代码行周围显示灰色框。
 
 ## <a name="see-also"></a>另请参阅
- [选项，文本编辑器，所有语言](../../ide/reference/options-text-editor-all-languages.md)[选项，文本编辑器，所有语言，选项卡](../../ide/reference/options-text-editor-all-languages-tabs.md)[选项，文本编辑器，文件扩展名](../../ide/reference/options-text-editor-file-extension.md) [标识和自定义使用的键盘快捷方式](../../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md) [Customizing 编辑器](../../ide/customizing-the-editor.md) [Using IntelliSense](../../ide/using-intellisense.md)
+ [选项，文本编辑器，所有语言](../../ide/reference/options-text-editor-all-languages.md)[选项，文本编辑器，所有语言，选项卡](../../ide/reference/options-text-editor-all-languages-tabs.md)[选项，文本编辑器，文件扩展名](../../ide/reference/options-text-editor-file-extension.md)[标识并自定义键盘快捷方式](../../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md)[使用 IntelliSense](../../ide/using-intellisense.md) [自定义编辑器](../../ide/customizing-the-editor.md)

@@ -9,17 +9,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a4503a9653123bf0b0668f5686b9fdb94c97a7bb
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75597017"
 ---
 # <a name="flowchart-activity-designers"></a>流程图活动设计器
 
 工作流设计器包括多个系统提供的活动，这些活动在构造工作流时可以使用。 本节包含系统提供的活动中用于管理工作流中的流程图的活动。 以下主题介绍这些活动以及如何使用它们。
 
-## <a name="reference"></a>引用
+## <a name="reference"></a>参考
  <xref:System.Activities.Activity>
 
  <xref:System.Activities.Statements.Flowchart>
@@ -35,7 +35,7 @@ ms.locfileid: "75597017"
 
  [使用活动设计器](control-flow-activity-designers.md)
 
- [Messaging](../workflow-designer/messaging-activity-designers.md)
+ [消息传送](../workflow-designer/messaging-activity-designers.md)
 
  [运行时](../workflow-designer/runtime-activity-designers.md)
 
@@ -43,6 +43,6 @@ ms.locfileid: "75597017"
 
  [事务](../workflow-designer/transaction-activity-designers.md)
 
- [收集](../workflow-designer/collection-activity-designers.md)
+ [集合](../workflow-designer/collection-activity-designers.md)
 
  [错误处理](../workflow-designer/error-handling-activity-designers.md)

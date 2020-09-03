@@ -7,10 +7,10 @@ author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.openlocfilehash: ebe96ec84d957c5ac8dcb6bad0a388ba3318c0fb
-ms.sourcegitcommit: 1fcdb5dae881a1c3a93413bb940d63c232bf96f3
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86459289"
 ---
 # <a name="organize-objects-into-layout-containers-in-xaml-designer"></a>在 XAML 设计器中将对象组织到布局容器中
@@ -19,7 +19,7 @@ ms.locfileid: "86459289"
 
 想象你希望对象出现在页面上的哪个位置&mdash;诸如图像、按钮和视频等对象。 也许你希望它们出现在行和列中、在单个行中（垂直或水平）或在固定位置中。
 
-在考虑好页面的显示情况后，请选择布局面板。 所有页面都从一个布局面板开始，因为你需要某个容器来向其中添加对象。 默认情况下，它是一个**网格**，但你可以更改它。
+在考虑好页面的显示情况后，请选择布局面板。 所有页面都从一个布局面板开始，因为你需要某个容器来向其中添加对象。 默认情况下，它是一个 **网格**，但你可以更改它。
 
 布局面板可帮助你在页面上排列对象，但是它们的作用不仅于此。 它们可以帮助你针对不同屏幕大小和分辨率进行设计。 当用户运行你的应用时，布局面板中的所有对象都会调整大小以匹配用户设备的屏幕空间。 当然，如果你不希望布局这样做，则可以为布局的一部分或整个布局重写该行为。 可以使用高度和宽度属性对此进行控制。
 
@@ -33,7 +33,7 @@ ms.locfileid: "86459289"
 
 在行和列中排列对象。
 
-![Grid 版式面板](../designers/media/98b234b2-ac3b-441f-9136-98375fee87b7.png)
+![网格布局面板](../designers/media/98b234b2-ac3b-441f-9136-98375fee87b7.png)
 
 ### <a name="uniformgrid"></a>UniformGrid
 
@@ -43,11 +43,11 @@ ms.locfileid: "86459289"
 
 ![UniformGrid 版式面板](../designers/media/928b9284-a7e8-4678-875a-656b80b78076.png)
 
-### <a name="canvas"></a>Canvas
+### <a name="canvas"></a>画布
 
 按任何所需方式排列对象。 当用户运行你的应用时，这些元素将在屏幕上具有固定位置。
 
-![Canvas 版式面板](../designers/media/e1ae27f0-3a57-454e-b580-877dcea8836d.png)
+![画布布局面板](../designers/media/e1ae27f0-3a57-454e-b580-877dcea8836d.png)
 
 ### <a name="stackpanel"></a>StackPanel
 
@@ -79,7 +79,7 @@ ms.locfileid: "86459289"
 
 以下布局控件是最常用的，不过还有一些其他布局控件。 在 Visual Studio 的“工具箱”中或 Blend for Visual Studio 的“资产”面板中可以找到它们********。
 
-### <a name="border"></a>Border
+### <a name="border"></a>边框
 
 围绕创建边框、背景或两者。 只能将一个对象添加到边框****。 如果要将边框或背景应用于多个对象，请将布局面板添加到边框****。 然后，将对象添加到该面板或控件。
 
@@ -101,7 +101,7 @@ ms.locfileid: "86459289"
 
 ![ViewBox 布局控件](../designers/media/f5b13c66-d918-4141-8a16-bd8f8628687a.png)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在 XAML 设计器中使用元素](../xaml-tools/working-with-elements-in-xaml-designer.md)
 - [使用 XAML 设计器创建 UI](../xaml-tools/creating-a-ui-by-using-xaml-designer-in-visual-studio.md)

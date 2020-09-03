@@ -1,5 +1,5 @@
 ---
-title: DEBUG_ADDRESS_UNION |微软文档
+title: DEBUG_ADDRESS_UNION |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: ad531ee10914e404459632c98aae4a9bbda8e437
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80737523"
 ---
 # <a name="debug_address_union"></a>DEBUG_ADDRESS_UNION
@@ -54,50 +54,50 @@ public struct DEBUG_ADDRESS_UNION {
 
 ## <a name="members"></a>成员
 `dwKind`\
-[ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md)枚举中的值，指定如何解释联合。
+[ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md)枚举中的一个值，指定如何解释联合。
 
 `addr.addrNative`\
-[仅C++]如果 = [NATIVE_ADDRESS](../../../extensibility/debugger/reference/native-address.md) ADDRESS_KIND_NATIVE，`dwKind`则包含NATIVE_ADDRESS结构。
+[仅限 c + +]如果 = ADDRESS_KIND_NATIVE，则包含 [NATIVE_ADDRESS](../../../extensibility/debugger/reference/native-address.md) 结构 `dwKind` 。
 
 `addr.addrThisRel`\
-[仅C++]如果 =[UNMANAGED_ADDRESS_THIS_RELATIVE](../../../extensibility/debugger/reference/unmanaged-address-this-relative.md) ADDRESS_KIND_UNMANAGED_THIS_RELATIVE，`dwKind`则包含UNMANAGED_ADDRESS_THIS_RELATIVE结构。
+[仅限 c + +]如果 = ADDRESS_KIND_UNMANAGED_THIS_RELATIVE，则包含[UNMANAGED_ADDRESS_THIS_RELATIVE](../../../extensibility/debugger/reference/unmanaged-address-this-relative.md) 结构 `dwKind` 。
 
 `addr.addUPhysical`\
-[仅C++]如果 =[UNMANAGED_ADDRESS_PHYSICAL](../../../extensibility/debugger/reference/unmanaged-address-physical.md) ADDRESS_KIND_UNMANAGED_PHYSICAL，`dwKind`则包含UNMANAGED_ADDRESS_PHYSICAL结构。
+[仅限 c + +]如果 = ADDRESS_KIND_UNMANAGED_PHYSICAL，则包含[UNMANAGED_ADDRESS_PHYSICAL](../../../extensibility/debugger/reference/unmanaged-address-physical.md) 结构 `dwKind` 。
 
 `addr.addrMethod`\
-[仅C++]如果 =[METADATA_ADDRESS_METHOD](../../../extensibility/debugger/reference/metadata-address-method.md) ADDRESS_KIND_METHOD，`dwKind`则包含METADATA_ADDRESS_METHOD结构。
+[仅限 c + +]如果 = ADDRESS_KIND_METHOD，则包含[METADATA_ADDRESS_METHOD](../../../extensibility/debugger/reference/metadata-address-method.md) 结构 `dwKind` 。
 
 `addr.addrField`\
-[仅C++]如果 =[METADATA_ADDRESS_FIELD](../../../extensibility/debugger/reference/metadata-address-field.md) ADDRESS_KIND_FIELD，`dwKind`则包含METADATA_ADDRESS_FIELD结构。
+[仅限 c + +]如果 = ADDRESS_KIND_FIELD，则包含[METADATA_ADDRESS_FIELD](../../../extensibility/debugger/reference/metadata-address-field.md) 结构 `dwKind` 。
 
 `addr.addrLocal`\
-[仅C++]如果 =[METADATA_ADDRESS_LOCAL](../../../extensibility/debugger/reference/metadata-address-local.md) ADDRESS_KIND_LOCAL，`dwKind`则包含METADATA_ADDRESS_LOCAL结构。
+[仅限 c + +]如果 = ADDRESS_KIND_LOCAL，则包含[METADATA_ADDRESS_LOCAL](../../../extensibility/debugger/reference/metadata-address-local.md) 结构 `dwKind` 。
 
 `addr.addrParam`\
-[仅C++]如果 =[METADATA_ADDRESS_PARAM](../../../extensibility/debugger/reference/metadata-address-param.md) ADDRESS_KIND_PARAM，`dwKind`则包含METADATA_ADDRESS_PARAM结构。
+[仅限 c + +]如果 = ADDRESS_KIND_PARAM，则包含[METADATA_ADDRESS_PARAM](../../../extensibility/debugger/reference/metadata-address-param.md) 结构 `dwKind` 。
 
 `addr.addrArrayElem`\
-[仅C++]如果 =[METADATA_ADDRESS_ARRAYELEM](../../../extensibility/debugger/reference/metadata-address-arrayelem.md) ADDRESS_KIND_ARRAYELEM，`dwKind`则包含METADATA_ADDRESS_ARRAYELEM结构。
+[仅限 c + +]如果 = ADDRESS_KIND_ARRAYELEM，则包含[METADATA_ADDRESS_ARRAYELEM](../../../extensibility/debugger/reference/metadata-address-arrayelem.md) 结构 `dwKind` 。
 
 `addr.addrRetVal`\
-[仅C++]如果 =[METADATA_ADDRESS_RETVAL](../../../extensibility/debugger/reference/metadata-address-retval.md) ADDRESS_KIND_RETVAL，`dwKind`则包含METADATA_ADDRESS_RETVAL结构。
+[仅限 c + +]如果 = ADDRESS_KIND_RETVAL，则包含[METADATA_ADDRESS_RETVAL](../../../extensibility/debugger/reference/metadata-address-retval.md) 结构 `dwKind` 。
 
 `addr.unused`\
-[仅C++] 填充。
+[仅限 c + +] 填充。
 
 `addr`\
-[仅C++]联合的名称。
+[仅限 c + +]联合的名称。
 
 `unionmember`\
-[仅 C]此值需要根据`dwKind`进行封送到相应的结构类型。 有关联合之间的`dwKind`关联和解释，请参阅备注。
+[仅限 c #]此值需要基于的适当的结构类型进行封送处理 `dwKind` 。 请参阅对联合之间的关联的备注 `dwKind` 。
 
 ## <a name="remarks"></a>备注
-此结构是[DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md)结构的一部分，表示多种不同类型的地址之一（`DEBUG_ADDRESS`结构由对[GetAddress](../../../extensibility/debugger/reference/idebugaddress-getaddress.md)方法的调用填充）。
+此结构是 [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md) 结构的一部分，它表示结构中 (的一种不同类型的地址， `DEBUG_ADDRESS` 通过调用 [GetAddress](../../../extensibility/debugger/reference/idebugaddress-getaddress.md) 方法) 进行填充。
 
- [仅 C]下表显示了如何解释每种地址`unionmember`的成员。 "示例"显示了如何针对一种地址执行此操作。
+ [仅限 c #]下表显示了如何解释 `unionmember` 每种类型的地址的成员。 该示例演示如何针对一种地址完成此操作。
 
-|`dwKind`|`unionmember`解释为|
+|`dwKind`|`unionmember` 解释为|
 |--------------|----------------------------------|
 |`ADDRESS_KIND_NATIVE`|[NATIVE_ADDRESS](../../../extensibility/debugger/reference/native-address.md)|
 |`ADDRESS_KIND_UNMANAGED_THIS_RELATIVE`|[UNMANAGED_ADDRESS_THIS_RELATIVE](../../../extensibility/debugger/reference/unmanaged-address-this-relative.md)|
@@ -110,7 +110,7 @@ public struct DEBUG_ADDRESS_UNION {
 |`ADDRESS_KIND_RETVAL`|[METADATA_ADDRESS_RETVAL](../../../extensibility/debugger/reference/metadata-address-retval.md)|
 
 ## <a name="example"></a>示例
-此示例演示如何解释 C# 中结构的`METADATA_ADDRESS_ARRAYELEM``DEBUG_ADDRESS_UNION`一种地址 （ ） 。 其余元素的解释方式完全相同。
+此示例演示如何 `METADATA_ADDRESS_ARRAYELEM` `DEBUG_ADDRESS_UNION` 在 c # 中解释结构的一种类型的地址 () 。 其余元素可以通过完全相同的方式进行解释。
 
 ```csharp
 using System;
@@ -135,11 +135,11 @@ namespace MyPackage
 ```
 
 ## <a name="requirements"></a>要求
-标题： sh.h
+标头： sh。h
 
-命名空间：微软.VisualStudio.调试器.互通
+命名空间： VisualStudio
 
-程序集：微软.VisualStudio.调试器.Interop.dll
+程序集： Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [结构和联合](../../../extensibility/debugger/reference/structures-and-unions.md)

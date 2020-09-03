@@ -1,5 +1,5 @@
 ---
-title: BPREQI_FIELDS |微软文档
+title: BPREQI_FIELDS |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 4c0e10b6c253c61a9e68e0cf161201f7d2520ae6
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80737749"
 ---
 # <a name="bpreqi_fields"></a>BPREQI_FIELDS
-指定要检索的关于断点请求的信息。
+指定要检索的有关断点请求的信息。
 
 ## <a name="syntax"></a>语法
 
@@ -68,60 +68,60 @@ public enum enum_BPREQI_FIELDS {
 
 ## <a name="fields"></a>字段
 `BPREQI_BPLOCATION`\
-初始化/使用`bpLocation`[BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md)或[BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md)结构的（断点位置）字段。
+初始化/使用 `bpLocation` [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) 或 [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) 结构的 (断点位置) 字段。
 
 `BPREQI_LANGUAGE`\
-初始化/使用`guidLanguage``BP_REQUEST_INFO`或`BP_REQUEST_INFO2`结构的字段。
+初始化/使用 `guidLanguage` 或结构的字段 `BP_REQUEST_INFO` `BP_REQUEST_INFO2` 。
 
 `BPREQI_PROGRAM`\
-初始化/使用`pProgram``BP_REQUEST_INFO`或`BP_REQUEST_INFO2`结构的字段。
+初始化/使用 `pProgram` 或结构的字段 `BP_REQUEST_INFO` `BP_REQUEST_INFO2` 。
 
 `BPREQI_PROGRAMNAME`\
-初始化/使用`bstrProgramName``BP_REQUEST_INFO`或`BP_REQUEST_INFO2`结构的字段。
+初始化/使用 `bstrProgramName` 或结构的字段 `BP_REQUEST_INFO` `BP_REQUEST_INFO2` 。
 
 `BPREQI_THREAD`\
-初始化/使用`pThread``BP_REQUEST_INFO`或`BP_REQUEST_INFO2`结构的字段。
+初始化/使用 `pThread` 或结构的字段 `BP_REQUEST_INFO` `BP_REQUEST_INFO2` 。
 
 `BPREQI_THREADNAME`\
-初始化/使用`bstrThreadName``BP_REQUEST_INFO`或`BP_REQUEST_INFO2`结构的字段。
+初始化/使用 `bstrThreadName` 或结构的字段 `BP_REQUEST_INFO` `BP_REQUEST_INFO2` 。
 
 `BPREQI_PASSCOUNT`\
-初始化/使用`bpPassCount``BP_REQUEST_INFO`或`BP_REQUEST_INFO2`结构的字段。
+初始化/使用 `bpPassCount` 或结构的字段 `BP_REQUEST_INFO` `BP_REQUEST_INFO2` 。
 
 `BPREQI_CONDITION`\
-初始化/使用`bpCondition``BP_REQUEST_INFO`或`BP_REQUEST_INFO2`结构的（断点条件）字段。
+初始化/使用 `bpCondition` 或结构的 (断点条件) 字段 `BP_REQUEST_INFO` `BP_REQUEST_INFO2` 。
 
 `BPREQI_FLAGS`\
-初始化/使用`dwFlags``BP_REQUEST_INFO`或`BP_REQUEST_INFO2`结构的字段。
+初始化/使用 `dwFlags` 或结构的字段 `BP_REQUEST_INFO` `BP_REQUEST_INFO2` 。
 
 `BPREQI_ALLOLDFIELDS`\
-初始化/使用`BP_REQUEST_INFO`结构的所有字段。
+初始化/使用结构的的所有字段 `BP_REQUEST_INFO` 。
 
 `BPREQI_VENDOR`\
-初始化/使用结构`guidVendor`字段`BP_REQUEST_INFO2`。
+初始化/使用 `guidVendor` 结构的字段 `BP_REQUEST_INFO2` 。
 
 `BPREQI_CONSTRAINT`\
-初始化/使用结构`bstrConstraint`字段`BP_REQUEST_INFO2`。
+初始化/使用 `bstrConstraint` 结构的字段 `BP_REQUEST_INFO2` 。
 
 `BPREQI_TRACEPOINT`\
-初始化/使用结构`bstrTracepoint`字段`BP_REQUEST_INFO2`。
+初始化/使用 `bstrTracepoint` 结构的字段 `BP_REQUEST_INFO2` 。
 
 `BPREQI_ALLFIELDS`\
-指定`BP_REQUEST_INFO2`结构的所有字段。
+指定结构的所有字段 `BP_REQUEST_INFO2` 。
 
 ## <a name="remarks"></a>备注
-作为参数传递给[GetRequestInfo，](../../../extensibility/debugger/reference/idebugbreakpointrequest2-getrequestinfo.md)[并BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md)方法指定要初始化[BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md)和[BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md)结构的字段。
+作为参数传递给 [GetRequestInfo](../../../extensibility/debugger/reference/idebugbreakpointrequest2-getrequestinfo.md) 和 [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) 方法，以指定要初始化 [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) 和 [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) 结构的哪些字段。
 
-这些标志还用于指示返回每个结构时使用`BP_REQUEST_INFO`和`BP_REQUEST_INFO2`结构的字段并有效。
+这些标志还用于指示在 `BP_REQUEST_INFO` `BP_REQUEST_INFO2` 返回每个结构时使用和结构的哪些字段。
 
-这些值可以稍微结合`OR`。
+这些值可以与按位组合 `OR` 。
 
 ## <a name="requirements"></a>要求
-标题： msdbg.h
+标头： msdbg
 
-命名空间：微软.VisualStudio.调试器.互通
+命名空间： VisualStudio
 
-程序集：微软.VisualStudio.调试器.Interop.dll
+程序集： Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [枚举](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

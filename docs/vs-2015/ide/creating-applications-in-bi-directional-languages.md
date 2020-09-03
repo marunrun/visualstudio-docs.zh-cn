@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 3b3d8649484178a537ed4af7bdde044a29893275
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72619259"
 ---
 # <a name="creating-applications-in-bi-directional-languages"></a>以双向语言创建应用程序
@@ -30,7 +30,7 @@ ms.locfileid: "72619259"
 
 ## <a name="types-of-application-that-support-bi-directional-languages"></a>支持双向语言的应用程序类型
 
-1. Windows 应用程序。 你可以创建完全双向的应用程序，包括支持双向文本、从右向左的读取顺序以及镜像（用于翻转窗口、菜单、对话框等的布局）。 除镜像外，这些功能都作为默认功能或属性设置提供。 某些功能（例如消息框）本身就支持镜像。 但在其他情况下，必须通过代码实现镜像。 有关详细信息，请参阅 [Windows 窗体应用程序的双向支持](https://msdn.microsoft.com/library/7b622fa4-f390-4e4d-b624-83a1917cccf2)。
+1. Windows 应用程序。 你可以创建完全双向的应用程序，包括支持双向文本、从右向左的读取顺序以及镜像（用于翻转窗口、菜单、对话框等的布局）。 除镜像外，这些功能都作为默认功能或属性设置提供。 某些功能（例如消息框）本身就支持镜像。 但在其他情况下，必须通过代码实现镜像。 有关详细信息，请参阅 [对 Windows 窗体应用程序的双向支持](https://msdn.microsoft.com/library/7b622fa4-f390-4e4d-b624-83a1917cccf2)。
 
 2. Web 应用程序。 Web 服务支持和收发 UTF-8 及 Unicode 文本，从而使它们适用于涉及双向语言的应用程序。 Web 客户端应用程序需借助浏览器的用户界面，因此，Web 应用程序中的双向支持程度取决于用户的浏览器对这些双向功能的支持程度。 在 Visual Studio 中，创建的应用程序可以支持阿拉伯语或希伯来语文本、从右向左读取顺序、文件编码和本地区域性设置。 有关详细信息，请参阅 [ASP.NET Web 应用程序的双向支持](https://msdn.microsoft.com/library/5576f9b1-9b86-41ef-8354-092d366bcd03)。
 
@@ -43,7 +43,7 @@ ms.locfileid: "72619259"
 
 - **对象名称** 可使用双向语言向解决方案、项目、文件、文件夹等分配名称。 在代码中，可针对变量名、类名、对象名、特性名、元数据名和其他元素名使用双向语言。
 
-- **文件编码** 可使用特定语言的编码或 Unicode 编码保存和打开文件。 有关详细信息，请参阅[如何：保存和打开带有编码的文件](../ide/how-to-save-and-open-files-with-encoding.md)。
+- **文件编码** 可使用特定语言的编码或 Unicode 编码保存和打开文件。 有关详细信息，请参阅 [如何：保存和打开带有编码的文件](../ide/how-to-save-and-open-files-with-encoding.md)。
 
 ## <a name="features-with-limited-or-no-support"></a>不完全支持或不支持的功能
  Visual Studio 不完全支持（在有些情况下根本不支持）双向语言应用程序的其他常见功能。 这些方法包括：
@@ -68,7 +68,7 @@ ms.locfileid: "72619259"
     > [!NOTE]
     > 代码编辑器的情况比较特殊。 有关详细信息，请参见以下内容。
 
-- 数据元素。 “服务器资源管理器”将正确显示这些元素，并允许对其进行编辑。
+- 数据元素。 “服务器资源管理器”**** 将正确显示这些元素，并允许对其进行编辑。
 
 - 复制到 Windows 剪贴板上的元素。
 
@@ -86,5 +86,5 @@ ms.locfileid: "72619259"
 
 - 代码注释。 可使用阿拉伯语或希伯来语创建注释。 还可在注释生成器工具中使用这些语言。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [对 Windows 窗体应用程序的双向支持](https://msdn.microsoft.com/library/7b622fa4-f390-4e4d-b624-83a1917cccf2)[双向支持 ASP.NET Web 应用](https://msdn.microsoft.com/library/5576f9b1-9b86-41ef-8354-092d366bcd03)[程序](../ide/globalizing-applications.md)对应用[程序进行本地化](../ide/localizing-applications.md)应用程序

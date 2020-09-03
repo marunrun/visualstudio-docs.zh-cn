@@ -20,10 +20,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 075746353440462a66133cd83ed9158470d8de5b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72662201"
 ---
 # <a name="out-devenvexe"></a>/Out (devenv.exe)
@@ -37,13 +37,13 @@ ms.locfileid: "72662201"
 devenv /out FileName
 ```
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
  `FileName`（必需）。 用于在生成可执行文件时接收错误的文件的路径和名称。
 
 ## <a name="remarks"></a>备注
  如果指定的文件名不存在，则会自动创建该文件。 如果该文件已存在，则结果会附加到该文件的现有内容中。
 
- “命令”窗口中以及“输出”窗口的“解决方案生成器”视图中会显示命令行生成错误   。 如果你正在运行无人参与的生成，并需要查看结果，则此选项非常有用。
+ “命令”窗口中以及“输出”窗口的“解决方案生成器”视图中会显示命令行生成错误********。 如果你正在运行无人参与的生成，并需要查看结果，则此选项非常有用。
 
 ## <a name="example"></a>示例
  此示例会运行 `MySolution`，并将错误写入文件 `MyErrorLog.txt` 中。
@@ -53,4 +53,4 @@ devenv /run "C:\Documents and Settings\someuser\My Documents\Visual Studio\Proje
 ```
 
 ## <a name="see-also"></a>另请参阅
- [Devenv 命令行开关](../../ide/reference/devenv-command-line-switches.md) [/Run （devenv）](../../ide/reference/run-devenv-exe.md) [/Build （](../../ide/reference/build-devenv-exe.md) Node.js） [/Rebuild （](../../ide/reference/rebuild-devenv-exe.md) devenv） [/Deploy （devenv](../../ide/reference/deploy-devenv-exe.md) ）
+ [Devenv 命令行开关](../../ide/reference/devenv-command-line-switches.md) [/Run ( # A0) ](../../ide/reference/run-devenv-exe.md) [/Build ( # A1) ](../../ide/reference/build-devenv-exe.md) [/Rebuild ( # A2) ](../../ide/reference/rebuild-devenv-exe.md) [/Deploy ( # A3) ](../../ide/reference/deploy-devenv-exe.md)

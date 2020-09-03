@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentChecksum2 | Microsoft Docs
+title: IDebugDocumentChecksum2 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,16 +11,16 @@ caps.latest.revision: 8
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: ba1510745b4781d56655fe83fffbb18f4ca65254
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68156478"
 ---
 # <a name="idebugdocumentchecksum2"></a>IDebugDocumentChecksum2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-表示调试文档的校验和并可将组件之间传递校验和。  
+表示调试文档的校验和，并允许传递组件之间的校验和。  
   
 ## <a name="syntax"></a>语法  
   
@@ -28,19 +28,19 @@ ms.locfileid: "68156478"
 IDebugDocumentChecksum2 : IUnknown  
 ```  
   
-## <a name="notes-for-implementers"></a>实施者的说明  
- 此接口可以由任何公开的组件实现[IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md)接口。 但是，它主要由实现的调试引擎，以便可以传递回 IDE 并查找源时，使用符号文件 (*.pdb) 中嵌入的校验和。  
+## <a name="notes-for-implementers"></a>实施者注意事项  
+ 此接口可由公开 [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) 接口的任何组件实现。 不过，它主要由调试引擎实现，以便在符号文件中嵌入的校验和 ( * .pdb) 可以传递回 IDE 并在查找源时使用。  
   
 ## <a name="methods"></a>方法  
- 下表显示的方法`IDebugDocumentChecksum2`。  
+ 下表显示的方法 `IDebugDocumentChecksum2` 。  
   
-|方法|描述|  
+|方法|说明|  
 |------------|-----------------|  
-|[GetChecksumAndAlgorithmId](../../../extensibility/debugger/reference/idebugdocumentchecksum2-getchecksumandalgorithmid.md)|检索要使用的字节的最大数目的文档校验和算法标识符。|  
+|[GetChecksumAndAlgorithmId](../../../extensibility/debugger/reference/idebugdocumentchecksum2-getchecksumandalgorithmid.md)|在给定要使用的最大字节数的情况中，检索文档校验和和算法标识符。|  
   
 ## <a name="requirements"></a>要求  
- 标头：Msdbg.h  
+ 标头： Msdbg  
   
- 命名空间:Microsoft.VisualStudio.Debugger.Interop  
+ 命名空间： VisualStudio  
   
- 程序集：Microsoft.VisualStudio.Debugger.Interop.dll
+ 程序集： Microsoft.VisualStudio.Debugger.Interop.dll

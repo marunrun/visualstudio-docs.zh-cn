@@ -10,19 +10,19 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 2981d510b5f56b89a2cb68d1a6bee93222d71b3b
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75596653"
 ---
 # <a name="develop-tests-from-a-model"></a>基于模型开发测试
 可以使用要求模型和体系结构模型来帮助组织系统及其组件的测试。 这种做法有助于确保你测试了对于用户和其他利益干系人而言非常重要的要求，并可帮助你在要求发生变化时快速更新测试。 如果你使用 [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)]，还可以维护模型和测试之间的链接。
 
- 若要查看支持这些功能的 Visual Studio 版本，请参阅[体系结构和建模工具的版本支持](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)。
+ 若要查看支持这些功能的 Visual Studio 版本，请参阅 [体系结构和建模工具的版本支持](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)。
 
 ## <a name="system-and-subsystem-testing"></a>系统和子系统测试
- *系统测试*也称为*验收测试*，这意味着测试是否满足用户的需求。 这种测试关注系统的外部可见行为，而不是内部设计。
+ *系统测试* 也称为 *验收测试*，这意味着测试是否满足用户的需求。 这种测试关注系统的外部可见行为，而不是内部设计。
 
  在扩展或重新设计系统时，系统测试非常有价值。 它们将帮助你避免在更改代码时引入 bug。
 
@@ -33,7 +33,7 @@ ms.locfileid: "75596653"
  子系统测试对系统的主要组件应用相同的原则。 每个组件都与其他组件分开进行测试。 子系统测试的重点是在组件的用户界面或 API 中可见的行为。
 
 ## <a name="deriving-system-tests-from-a-requirements-model"></a>从需求模型派生系统测试
- 你可以创建并维护系统测试和需求模型之间的关系。 若要建立这种关系，你可以编写对应需求模型主要元素的测试。 Visual Studio 通过允许你在测试和模型的各个部件之间创建链接，帮助你维护这一关系。 有关要求模型的详细信息，请参阅[模型用户需求](../modeling/model-user-requirements.md)。
+ 你可以创建并维护系统测试和需求模型之间的关系。 若要建立这种关系，你可以编写对应需求模型主要元素的测试。 Visual Studio 通过允许你在测试和模型的各个部件之间创建链接，帮助你维护这一关系。 有关要求模型的详细信息，请参阅 [模型用户需求](../modeling/model-user-requirements.md)。
 
 ### <a name="write-tests-for-each-use-case"></a>为每个用例编写测试
  如果你使用 [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)]，则可以为你在要求模型中定义的每个用例创建一组测试。 例如，如果你有一个“订餐”用例，其中包括“创建订单”和“向订单添加项”，则你可以为这些用例的整体和细节创建测试。
@@ -59,11 +59,11 @@ ms.locfileid: "75596653"
 
 1. 在 [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)] 中，创建一个要 求并使测试套件基于该需求。
 
-    所创建的要求是 [!INCLUDE[vstsTfsShort](../modeling/includes/vststfsshort_md.md)] 中的工作项。 它可能是用户情景、要求或用例工作项，具体取决于你的项目与 Team Foundation 一起使用的过程模板。 有关详细信息，请参阅[关于 Agile 工具和敏捷项目管理](/azure/devops/boards/backlogs/backlogs-overview?view=vsts)。
+    所创建的要求是 [!INCLUDE[vstsTfsShort](../modeling/includes/vststfsshort_md.md)] 中的工作项。 它可能是用户情景、要求或用例工作项，具体取决于你的项目与 Team Foundation 一起使用的过程模板。 有关详细信息，请参阅 [关于 Agile 工具和敏捷项目管理](/azure/devops/boards/backlogs/backlogs-overview?view=vsts)。
 
 2. 将要求工作项链接到模型中的一个或多个用例。
 
-    在用例图中，右键单击用例，然后单击 "**链接到工作项**"。
+    在用例图中，右键单击用例，然后单击 " **链接到工作项**"。
 
 3. 添加到测试套件（即验证用例的测试用例）。
 
@@ -110,7 +110,7 @@ Assert (countAfter == countBefore = 1);
 ## <a name="deriving-subsystem-tests-from-models"></a>从模型派生子系统测试
  在大型系统的高级设计中，可以标识组件或子系统。 这些表示可以单独设计、或位于不同计算机上或者是可通过多种方式重新组合的可重用模块的部件。
 
- 你可以对每个主要组件与完整系统应用相同的原则。 在大型项目中，每个组件都可以具有其自己的需求模型。 在较小的项目中，可以创建体系结构模型或高级设计以显示主要组件及其交互。 有关详细信息，请参阅为[应用程序的体系结构建模](../modeling/model-your-app-s-architecture.md)。
+ 你可以对每个主要组件与完整系统应用相同的原则。 在大型项目中，每个组件都可以具有其自己的需求模型。 在较小的项目中，可以创建体系结构模型或高级设计以显示主要组件及其交互。 有关详细信息，请参阅为 [应用程序的体系结构建模](../modeling/model-your-app-s-architecture.md)。
 
  在任何情况下，你都可以按照将在需求模型和系统测试之间建立关系的相同方式，在模型元素和子系统测试之间建立一种关系。
 
@@ -128,10 +128,10 @@ Assert (countAfter == countBefore = 1);
 
  从测试的角度来看，可以将需求模型看做是测试的简略形式。 因此，在整个项目中维护测试和模型之间的关系非常重要。
 
-## <a name="Attaching"></a>将测试用例附加到模型元素
+## <a name="attaching-test-cases-to-model-elements"></a><a name="Attaching"></a> 将测试用例附加到模型元素
  如果你的项目使用 [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)]，则你可以将测试链接到模型中的元素。 这样你便可以快速找到受要求中的更改影响的测试，并且可帮助你跟踪要求的实现程度。
 
- 你可以将测试链接到所有类型的元素。 下面是一些可能的恶意活动：
+ 你可以将测试链接到所有类型的元素。 下面是一些示例：
 
 - 将用例链接到执行它的测试。
 
@@ -147,17 +147,17 @@ Assert (countAfter == countBefore = 1);
 
 1. 在 [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)] 中，创建一个要 求并使测试套件基于该需求。
 
-    所创建的要求是 [!INCLUDE[vstsTfsShort](../modeling/includes/vststfsshort_md.md)] 中的工作项。 它可能是用户情景、要求或用例工作项，具体取决于你的项目与 Team Foundation 一起使用的过程模板。 有关详细信息，请参阅[关于 Agile 工具和敏捷项目管理](/azure/devops/boards/backlogs/backlogs-overview?view=vsts)。
+    所创建的要求是 [!INCLUDE[vstsTfsShort](../modeling/includes/vststfsshort_md.md)] 中的工作项。 它可能是用户情景、要求或用例工作项，具体取决于你的项目与 Team Foundation 一起使用的过程模板。 有关详细信息，请参阅 [关于 Agile 工具和敏捷项目管理](/azure/devops/boards/backlogs/backlogs-overview?view=vsts)。
 
 2. 将要求工作项链接到模型中的一个或多个元素。
 
-    在建模图中，右键单击元素、注释或关系，然后单击 "**链接到工作项**"。
+    在建模图中，右键单击元素、注释或关系，然后单击 " **链接到工作项**"。
 
 3. 添加到测试套件（即验证模型元素中表示的需求的测试用例）。
 
 ## <a name="see-also"></a>另请参阅
 
-- [为应用程序创建模型](../modeling/create-models-for-your-app.md)
+- [为你的应用程序创建模型](../modeling/create-models-for-your-app.md)
 - [建立用户需求模型](../modeling/model-user-requirements.md)
 - [应用体系结构建模](../modeling/model-your-app-s-architecture.md)
 - [体系结构分析和建模](../modeling/analyze-and-model-your-architecture.md)

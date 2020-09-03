@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 6d721ebc5849fc459d24173ad0500b4b1c12260f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68182968"
 ---
 # <a name="namesearchoptions"></a>NameSearchOptions
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-指定符号和文件名称的搜索选项。  
+指定符号和文件名的搜索选项。  
   
 ## <a name="syntax"></a>语法  
   
@@ -50,22 +50,22 @@ enum NameSearchOptions { 
  未指定任何选项。  
   
  `nsfCaseSensitive`  
- 将应用与匹配的区分大小写的名称。  
+ 应用区分大小写的名称匹配。  
   
  `nsfCaseInsensitive`  
- 将应用与匹配的不区分大小写的名称。  
+ 应用不区分大小写的名称匹配。  
   
  `nsfFNameExt`  
- 将视为路径的名称，并将应用与匹配的文件名.ext 名称。  
+ 将名称视为路径并应用文件名。 ext 名称匹配。  
   
  `nsfRegularExpression`  
- 应用使用星号 （*） 和问号 （？） 作为通配符的区分大小写的名称匹配。  
+ 使用星号 ( * ) 和问号 (？ ) 作为通配符来应用区分大小写的名称匹配。  
   
  `nsfUndecoratedName`  
- 仅适用于具有未修饰和修饰名的符号。  
+ 仅适用于具有未修饰名称和修饰名的符号。  
   
 ## <a name="remarks"></a>备注  
- 此枚举的值将传递到以下方法：  
+ 此枚举中的值将传递给以下方法：  
   
 - [IDiaSession::findChildren](../../debugger/debug-interface-access/idiasession-findchildren.md)  
   
@@ -74,10 +74,10 @@ enum NameSearchOptions { 
 - [IDiaSymbol::findChildren](../../debugger/debug-interface-access/idiasymbol-findchildren.md)  
   
 ## <a name="requirements"></a>要求  
- 标头： dia2.h  
+ 标头： dia2  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [枚举和结构](../../debugger/debug-interface-access/enumerations-and-structures.md)   
- [IDiaSession::findChildren](../../debugger/debug-interface-access/idiasession-findchildren.md)   
- [IDiaSession::findFile](../../debugger/debug-interface-access/idiasession-findfile.md)   
+ [IDiaSession：： findChildren](../../debugger/debug-interface-access/idiasession-findchildren.md)   
+ [IDiaSession：： findFile](../../debugger/debug-interface-access/idiasession-findfile.md)   
  [IDiaSymbol::findChildren](../../debugger/debug-interface-access/idiasymbol-findchildren.md)

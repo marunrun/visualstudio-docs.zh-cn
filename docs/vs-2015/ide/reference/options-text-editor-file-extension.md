@@ -17,10 +17,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 26c53633bc55efcf95ffbc579e24d2d61e4a0932
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72662277"
 ---
 # <a name="options-text-editor-file-extension"></a>选项，文本编辑器，文件扩展名
@@ -34,19 +34,19 @@ ms.locfileid: "72662277"
 > 显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅 [在 Visual Studio 中自定义开发设置](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。
 
 ## <a name="uielement-list"></a>UIElement 列表
- **扩展**在 IDE 中键入要定义的编辑体验的文件扩展名。
+ **扩展** 在 IDE 中键入要定义的编辑体验的文件扩展名。
 
- **编辑器**选择将打开具有此文件扩展名的文档的 IDE 编辑器或设计器。 选中“使用编码”选项后，每当打开此类文档时，都会显示一个对话框，用户可以选择编码方案。
+ **编辑器** 选择将打开具有此文件扩展名的文档的 IDE 编辑器或设计器。 选中“使用编码”选项后，每当打开此类文档时，都会显示一个对话框，用户可以选择编码方案。
 
- **添加**向扩展名列表添加包含指定的“扩展名”和“编辑体验”的条目   。
+ **添加**向扩展名列表添加包含指定的“扩展名”和“编辑体验”的条目********。
 
- **删除**从 "扩展" 列表中删除所选条目。
+ **删除** 从 "扩展" 列表中删除所选条目。
 
  "扩展列表" 列出为其指定了编辑体验的所有扩展。
 
- **将无扩展名文件映射到**如果希望指定 IDE 如何处理没有扩展名的文件，请选择此选项。
+ **将无扩展名文件映射到** 如果希望指定 IDE 如何处理没有扩展名的文件，请选择此选项。
 
- **无扩展名文件选项**提供与**编辑器**相同的列表。 选择打开不具有此文件扩展名的文档所使用的 IDE 编辑器或设计器。
+ **无扩展名文件选项** 提供与 **编辑器**相同的列表。 选择打开不具有此文件扩展名的文档所使用的 IDE 编辑器或设计器。
 
 ## <a name="see-also"></a>另请参阅
  [如何：管理编辑器模式](../../ide/how-to-manage-editor-modes.md)

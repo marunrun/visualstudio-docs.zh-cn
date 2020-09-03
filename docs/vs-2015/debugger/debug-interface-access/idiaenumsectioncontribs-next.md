@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 18bee6cf8f47aeeadd41c7accc1f33566f564898
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68189974"
 ---
 # <a name="idiaenumsectioncontribsnext"></a>IDiaEnumSectionContribs::Next
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-检索指定的数目的枚举序列中的部分发布内容。  
+检索枚举序列中指定数目的节内容。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,17 +37,17 @@ HRESULT Next( 
   
 #### <a name="parameters"></a>参数  
  celt  
- [in]要检索的枚举数中的部分发布内容的数。  
+ 中要检索的枚举器中的部分发布数。  
   
  rgelt  
- [out]数组，它是用来填充[IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)代表所需的部分发布内容的对象。  
+ 弄一个数组，该数组将用表示所需的节发布的 [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md) 对象进行填充。  
   
  pceltFetched  
- [out]返回中提取的枚举器部分发布内容的数量。  
+ 弄返回提取的枚举器中的部分发布数。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回 `S_OK`。 返回`S_FALSE`如果没有更多的部分发布内容。 否则，返回错误代码。  
+ 如果成功，则返回 `S_OK`。 `S_FALSE`如果没有更多的节基值，则返回。 否则，返回错误代码。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDiaEnumSectionContribs](../../debugger/debug-interface-access/idiaenumsectioncontribs.md)   
  [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

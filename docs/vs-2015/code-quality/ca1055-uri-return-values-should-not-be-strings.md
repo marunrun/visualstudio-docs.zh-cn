@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 522534d81ef9c87fc93d16a7ee880c7743a3268c
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85539654"
 ---
 # <a name="ca1055-uri-return-values-should-not-be-strings"></a>CA1055:URI 返回值不应是字符串
@@ -36,7 +36,7 @@ ms.locfileid: "85539654"
  方法名称包含 "uri"、"Uri"、"urn"、"Urn"、"url" 或 "Url"，方法返回一个字符串。
 
 ## <a name="rule-description"></a>规则描述
- 此规则根据 Pascal 大小写约定将方法名称拆分为标记，并检查每个标记是否等于 "uri"、"Uri"、"urn"、"Urn"、"url" 或 "Url"。 如果有匹配项，则规则假定方法返回统一资源标识符（URI）。 URI 的字符串表示形式容易导致分析和编码错误，并且可造成安全漏洞。 <xref:System.Uri?displayProperty=fullName>类以安全安全的方式提供这些服务。
+ 此规则根据 Pascal 大小写约定将方法名称拆分为标记，并检查每个标记是否等于 "uri"、"Uri"、"urn"、"Urn"、"url" 或 "Url"。 如果存在匹配项，则规则假定方法返回 (URI) 的统一资源标识符。 URI 的字符串表示形式容易导致分析和编码错误，并且可造成安全漏洞。 <xref:System.Uri?displayProperty=fullName>类以安全安全的方式提供这些服务。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
  若要修复与此规则的冲突，请将返回类型更改为 <xref:System.Uri> 。

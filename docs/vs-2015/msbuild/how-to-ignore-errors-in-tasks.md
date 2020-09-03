@@ -13,10 +13,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 5025cc3e9dc0e13c3ae4658d129f5d0ac94f6fd6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68156589"
 ---
 # <a name="how-to-ignore-errors-in-tasks"></a>如何：忽略任务中的错误
@@ -66,5 +66,5 @@ ms.locfileid: "68156589"
   
 ## <a name="see-also"></a>另请参阅
 [MSBuild](msbuild.md)  
- [任务参考](../msbuild/msbuild-task-reference.md)   
+ [任务引用](../msbuild/msbuild-task-reference.md)   
  [任务](../msbuild/msbuild-tasks.md)

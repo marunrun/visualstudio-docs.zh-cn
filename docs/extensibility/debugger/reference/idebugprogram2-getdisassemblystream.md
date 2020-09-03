@@ -1,5 +1,5 @@
 ---
-title: IDebugProgram2：：获取拆解流 |微软文档
+title: IDebugProgram2：： GetDisassemblyStream |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 2160f963ad1f3f37291519ced30b8096e33a6116
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80722861"
 ---
 # <a name="idebugprogram2getdisassemblystream"></a>IDebugProgram2::GetDisassemblyStream
-获取此程序或此程序的一部分的拆解流。
+获取此程序或此程序的一部分的反汇编流。
 
 ## <a name="syntax"></a>语法
 
@@ -45,21 +45,21 @@ int GetDisassemblyStream( 
 
 ## <a name="parameters"></a>参数
 `dwScope`\
-[在]指定定义拆解流范围[的DISASSEMBLY_STREAM_SCOPE](../../../extensibility/debugger/reference/disassembly-stream-scope.md)枚举中的值。
+中指定 [DISASSEMBLY_STREAM_SCOPE](../../../extensibility/debugger/reference/disassembly-stream-scope.md) 枚举中的一个值，该值定义反汇编流的作用域。
 
 `pCodeContext`\
-[在][IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md)对象，表示启动拆解流的位置。
+中一个 [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) 对象，该对象表示启动反汇编流的位置。
 
 `ppDisassemblyStream`\
-[出]返回表示拆解[流的 IDebugDisdisssstream2](../../../extensibility/debugger/reference/idebugdisassemblystream2.md)对象。
+弄返回表示反汇编流的 [IDebugDisassemblyStream2](../../../extensibility/debugger/reference/idebugdisassemblystream2.md) 对象。
 
 ## <a name="return-value"></a>返回值
- 如果成功，返回`S_OK`;否则，返回错误代码。 如果`E_DISASM_NOTSUPPORTED`此特定体系结构不支持拆解，则返回。
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。 `E_DISASM_NOTSUPPORTED`如果此特定体系结构不支持反汇编，则返回。
 
 ## <a name="remarks"></a>备注
- 如果`dwScopes`参数具有[DISASSEMBLY_STREAM_SCOPE](../../../extensibility/debugger/reference/disassembly-stream-scope.md)枚`DSS_HUGE`举集的标志，则拆解应返回大量拆解指令，例如，对于整个文件或模块。 如果未设置`DSS_HUGE`标志，则拆解应限制为一个小区域，通常是单个函数的区域。
+ 如果 `dwScopes` 参数具有 `DSS_HUGE` [DISASSEMBLY_STREAM_SCOPE](../../../extensibility/debugger/reference/disassembly-stream-scope.md) 枚举集的标志，则反汇编应返回大量的反汇编指令，例如，对于整个文件或模块。 如果 `DSS_HUGE` 未设置该标志，则反汇编应限制为一个小区域，通常是一个函数。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)
 - [DISASSEMBLY_STREAM_SCOPE](../../../extensibility/debugger/reference/disassembly-stream-scope.md)
 - [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md)

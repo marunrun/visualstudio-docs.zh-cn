@@ -1,5 +1,5 @@
 ---
-title: 埃瓦尔格兹 |微软文档
+title: EVALFLAGS |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 4136726e5c8b798121dbd38975d8f2bb935ed04a
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80737110"
 ---
 # <a name="evalflags"></a>EVALFLAGS
@@ -54,37 +54,37 @@ public enum enum_EVALFLAGS {
 
 ## <a name="fields"></a>字段
 `EVAL_RETURNVALUE`\
-指定计算返回值（如果有）。
+指定将计算返回值（如果有）。
 
 `EVAL_NOSIDEEFFECTS`\
 指定不允许副作用。
 
 `EVAL_ALLOWBPS`\
-指定在断点停止。
+指定在断点处停止。
 
 `EVAL_ALLOWERRORREPORT`\
-指定允许向主机报告错误。 主要用于在 Internet 资源管理器中脚本中的表达式计算。
+指定将错误报告给允许的主机。 主要用于 Internet Explorer 中的脚本中的表达式计算。
 
 `EVAL_FUNCTION_AS_ADDRESS`\
-强制函数作为地址计算，而不是调用函数。
+强制将函数作为地址进行计算，而不是调用函数。
 
 `EVAL_NOFUNCEVAL`\
-防止计算函数。 例如，`int`考虑表达式`myExpression(int) + 10`中的标记。 此功能可以正确计算为地址，但不能作为值。
+禁止计算函数。 例如，请考虑 `int` 表达式中的标记 `myExpression(int) + 10` 。 此函数可以正确地作为地址进行计算，但不能作为值来计算。
 
 `EVAL_NOEVENTS`\
-标记以指示不应将表达式计算期间发生的事件发送到会话调试管理器 （SDM） 或 IDE。
+一个标志，用于指示在表达式计算过程中发生的事件不应发送到会话调试管理器 (SDM) 或 IDE。
 
 ## <a name="remarks"></a>备注
-这些标志作为参数传递给[评估Async](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md)和[评估同步](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md)方法。
+这些标志作为参数传递给 [EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) 和 [EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) 方法。
 
-这些标志可以与位或组合。
+这些标志可以与按位 "或" 组合在一起。
 
 ## <a name="requirements"></a>要求
-标题： msdbg.h
+标头： msdbg
 
-命名空间：微软.VisualStudio.调试器.互通
+命名空间： VisualStudio
 
-程序集：微软.VisualStudio.调试器.Interop.dll
+程序集： Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [枚举](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

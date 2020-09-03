@@ -1,5 +1,5 @@
 ---
-title: BP_RESOLUTION_INFO |微软文档
+title: BP_RESOLUTION_INFO |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 70e66a936ec1eaf1f818ad249aa4eb14b0b63749
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80737824"
 ---
 # <a name="bp_resolution_info"></a>BP_RESOLUTION_INFO
-描述代码断点或数据断点的边界断点信息。
+描述代码断点或数据断点的绑定断点信息。
 
 ## <a name="syntax"></a>语法
 
@@ -47,28 +47,28 @@ public struct BP_RESOLUTION_INFO {
 
 ## <a name="members"></a>成员
 `dwFields`\
-[BPRESI_FIELDS](../../../extensibility/debugger/reference/bpresi-fields.md)枚举中标记的集合，用于指定填写哪些字段。
+[BPRESI_FIELDS](../../../extensibility/debugger/reference/bpresi-fields.md)枚举中的标志的集合，用于指定要填写的字段。
 
 `bpResLocation`\
-在代码或数据中指定断点位置的[BP_RESOLUTION_LOCATION](../../../extensibility/debugger/reference/bp-resolution-location.md)结构。
+[BP_RESOLUTION_LOCATION](../../../extensibility/debugger/reference/bp-resolution-location.md)结构，它在代码或数据中指定断点的位置。
 
 `pProgram`\
-[IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)对象，表示发生断点错误的应用程序。
+[IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)对象，它表示发生断点错误的应用程序。
 
 `pThread`\
-[IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)对象，表示包含断点错误的应用程序在其中运行的线程。
+[IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)对象，表示在其中运行包含断点错误的应用程序的线程。
 
 ## <a name="remarks"></a>备注
-此结构由[Get决议信息返回](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo.md)。
+此结构由 [GetResolutionInfo](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo.md)返回。
 
 ## <a name="requirements"></a>要求
-标题： msdbg.h
+标头： msdbg
 
-命名空间：微软.VisualStudio.调试器.互通
+命名空间： VisualStudio
 
-程序集：微软.VisualStudio.调试器.Interop.dll
+程序集： Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [结构和联合](../../../extensibility/debugger/reference/structures-and-unions.md)
 - [GetResolutionInfo](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo.md)
 - [BPRESI_FIELDS](../../../extensibility/debugger/reference/bpresi-fields.md)

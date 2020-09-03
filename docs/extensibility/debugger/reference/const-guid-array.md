@@ -1,5 +1,5 @@
 ---
-title: CONST_GUID_ARRAY |微软文档
+title: CONST_GUID_ARRAY |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: c0021ef24e0cafec0119263d2c74175f0d38d784
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80737636"
 ---
 # <a name="const_guid_array"></a>CONST_GUID_ARRAY
-保存 s 列表的结构`GUID`。
+包含的列表的结构 `GUID` 。
 
 ## <a name="syntax"></a>语法
 
@@ -43,24 +43,24 @@ public struct CONST_GUID_ARRAY {
 
 ## <a name="members"></a>成员
 `dwCount`\
-数组中的`GUID``Members`s 数。
+`GUID`数组中的的数目 `Members` 。
 
 `Members`\
-s`GUID`数组。
+的数组 `GUID` 。
 
 ## <a name="remarks"></a>备注
-此结构传递给[发布程序](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogram.md)方法，并从[获取提供程序处理数据和](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md) [WatchForProvider 事件](../../../extensibility/debugger/reference/idebugprogramprovider2-watchforproviderevents.md)方法返回。
+此结构传递给 [PublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogram.md) 方法，并从 [GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md) 和 [WatchForProviderEvents](../../../extensibility/debugger/reference/idebugprogramprovider2-watchforproviderevents.md) 方法返回。
 
-此结构实例的所有者负责释放分配的任何内存。
+此结构实例的所有者负责释放已分配的任何内存。
 
 ## <a name="requirements"></a>要求
-标题： msdbg.h
+标头： msdbg
 
-命名空间：微软.VisualStudio.调试器.互通
+命名空间： VisualStudio
 
-程序集：微软.VisualStudio.调试器.Interop.dll
+程序集： Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [结构和联合](../../../extensibility/debugger/reference/structures-and-unions.md)
 - [PublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogram.md)
 - [GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md)

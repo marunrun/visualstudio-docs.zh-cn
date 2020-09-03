@@ -14,13 +14,13 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 718b84720c3dbfc03552b6b64a95645e72951057
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68190661"
 ---
-# <a name="idiasourcefilegetfilename"></a>IDiaSourceFile::get_fileName
+# <a name="idiasourcefileget_filename"></a>IDiaSourceFile::get_fileName
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
 检索源文件名。  
@@ -33,12 +33,12 @@ HRESULT get_fileName ( 
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>参数  
  `pRetVal`  
- [out]返回源文件名。  
+ 弄返回源文件名。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md)

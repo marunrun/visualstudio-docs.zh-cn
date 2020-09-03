@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 4fc312736508a11d43cadf789b08aae77c528d35
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72608681"
 ---
 # <a name="visual-c-classes-in-class-designer"></a>类设计器中的 Visual C++ 类
@@ -36,7 +36,7 @@ class A {};
 class B : A {};
 ```
 
- 也可以只将类 B 拖到类图中，右键单击 B 的类形状，然后单击“显示基类”  。 这样可以显示它的基类 A。
+ 也可以只将类 B 拖到类图中，右键单击 B 的类形状，然后单击“显示基类”****。 这样可以显示它的基类 A。
 
 ## <a name="multiple-inheritance"></a>多重继承
  类设计器支持直观呈现多类继承关系。 当派生类有多个基类的特性时，就会用到*多重继承*。 下面的示例展示了多重继承：
@@ -49,10 +49,10 @@ class Penguin : public Bird, public Swimmer {};
 
  如果将存在多类继承关系的多个类拖到类图上，它们将会通过箭头相连。 箭头指向基类的方向。
 
- 右键单击类形状，然后单击“显示基类”  ，可以显示选定类的基类。
+ 右键单击类形状，然后单击“显示基类”****，可以显示选定类的基类。
 
 > [!NOTE]
-> C++ 代码不支持“显示派生类”  命令。 可以转到类视图，依次展开类型节点和“Derived Types”  子文件夹，然后将这些类型拖到类图上，即可显示派生类。
+> C++ 代码不支持“显示派生类”**** 命令。 可以转到类视图，依次展开类型节点和“Derived Types”**** 子文件夹，然后将这些类型拖到类图上，即可显示派生类。
 
  有关多类继承的详细信息，请参阅 [(NOTINBUILD) 多重继承](https://msdn.microsoft.com/3b74185e-2beb-4e29-8684-441e51d2a2ca)和[多个基类](https://msdn.microsoft.com/library/a30c69fe-401c-4a87-96a0-e0da70c7c740)。
 
@@ -90,7 +90,7 @@ class Swimmer
 };
 ```
 
- 在类图中显示这些声明时，类名 `Swimmer` 及其纯虚函数 `swim` 会连同标注“抽象类”  一起在抽象类形状中以斜体显示。 请注意，抽象类类型形状与常规类类型形状大致相同，不同之处在于抽象类类型形状的边框是虚线。
+ 在类图中显示这些声明时，类名 `Swimmer` 及其纯虚函数 `swim` 会连同标注“抽象类”**** 一起在抽象类形状中以斜体显示。 请注意，抽象类类型形状与常规类类型形状大致相同，不同之处在于抽象类类型形状的边框是虚线。
 
  派生自抽象基类的类必须替代基类中的每个纯虚函数，否则无法实例化派生类。 比方说，如果 `Fish` 类派生自 `Swimmer` 类，`Fish` 必须替代 `swim` 方法：
 
@@ -126,7 +126,7 @@ typedef struct
 ## <a name="template-classes"></a>模板类
  类设计器支持直观呈现模板类。 支持嵌套声明。 下表列出了一些典型声明。
 
-|Code 元素|类设计器视图|
+|代码元素|类设计器视图|
 |------------------|-------------------------|
 |`template <class T>`<br /><br /> `class A {};`|`A<T>`<br /><br /> 模板类|
 |`template <class T, class U>`<br /><br /> `class A {};`|`A<T, U>`<br /><br /> 模板类|
@@ -152,15 +152,15 @@ typedef struct
 
 |代码元素|类设计器视图|
 |------------------|-------------------------|
-|`class A`<br /><br /> `{`<br /><br /> `template <class T, class U>`<br /><br /> `void func(T a, U b);`<br /><br /> `template <class T>`<br /><br /> `void func(T a, int b);`<br /><br /> `};`|`A`<br /><br /> func\<T, U>（+ 1 重载）|
-|`template <class T1>`<br /><br /> `class A {`<br /><br /> `template <class T2>`<br /><br /> `class B {};`<br /><br /> `};`<br /><br /> `template<> template<>`<br /><br /> `class A<type>::B<type> {};`|`A<T1>`<br /><br /> 模板类<br /><br /> `B<T2>`<br /><br /> 模板类<br /><br /> （B 包含在类 A 中的“嵌套类型”  下）|
+|`class A`<br /><br /> `{`<br /><br /> `template <class T, class U>`<br /><br /> `void func(T a, U b);`<br /><br /> `template <class T>`<br /><br /> `void func(T a, int b);`<br /><br /> `};`|`A`<br /><br /> func \<T, U> (+ 1 重载) |
+|`template <class T1>`<br /><br /> `class A {`<br /><br /> `template <class T2>`<br /><br /> `class B {};`<br /><br /> `};`<br /><br /> `template<> template<>`<br /><br /> `class A<type>::B<type> {};`|`A<T1>`<br /><br /> 模板类<br /><br /> `B<T2>`<br /><br /> 模板类<br /><br /> （B 包含在类 A 中的“嵌套类型”**** 下）|
 |`template <class T>`<br /><br /> `class C {};`<br /><br /> `class A : C<int> {};`|`A`<br /><br /> 类<br /><br /> -> C\<int><br /><br /> `C<T>`<br /><br /> 模板类|
 
  下表列出了一些模板继承示例。
 
 |代码元素|类设计器视图|
 |------------------|-------------------------|
-|`template <class T>`<br /><br /> `class C {};`<br /><br /> `template<>`<br /><br /> `class C<int> {`<br /><br /> `class B {};`<br /><br /> `}`<br /><br /> `class A : C<int>::B {};`|`A`<br /><br /> 类<br /><br /> ->B<br /><br /> `C<int>`<br /><br /> 类<br /><br /> （B 包含在类 C 中的“嵌套类型”  下）<br /><br /> `C<T>`<br /><br /> 模板类|
+|`template <class T>`<br /><br /> `class C {};`<br /><br /> `template<>`<br /><br /> `class C<int> {`<br /><br /> `class B {};`<br /><br /> `}`<br /><br /> `class A : C<int>::B {};`|`A`<br /><br /> 类<br /><br /> ->B<br /><br /> `C<int>`<br /><br /> 类<br /><br /> （B 包含在类 C 中的“嵌套类型”**** 下）<br /><br /> `C<T>`<br /><br /> 模板类|
 
  下表列出了一些规范专用化类连接示例。
 
@@ -170,4 +170,4 @@ typedef struct
 |`class B {`<br /><br /> `template <class T>`<br /><br /> `T min (const T &a, const T &b);`<br /><br /> `};`|`B`<br /><br /> min \<T>|
 
 ## <a name="see-also"></a>另请参阅
- [使用 Visual C++ Code （类设计器）](../ide/working-with-visual-cpp-code-class-designer.md) [类和结构](https://msdn.microsoft.com/library/516dd496-13fb-4f17-845a-e9ca45437873)[匿名类类型](https://msdn.microsoft.com/library/9ba667b2-8c2a-4c29-82a6-fa120b9233c8) [（NOTINBUILD）多继承](https://msdn.microsoft.com/3b74185e-2beb-4e29-8684-441e51d2a2ca)[多个基类](https://msdn.microsoft.com/library/a30c69fe-401c-4a87-96a0-e0da70c7c740)[模板](https://msdn.microsoft.com/library/90fcc14a-2092-47af-9d2e-dba26d25b872)
+ [使用 Visual C++ 代码 (类设计器) ](../ide/working-with-visual-cpp-code-class-designer.md) [类和结构](https://msdn.microsoft.com/library/516dd496-13fb-4f17-845a-e9ca45437873)[匿名类类型](https://msdn.microsoft.com/library/9ba667b2-8c2a-4c29-82a6-fa120b9233c8) [ (NOTINBUILD) 多重继承](https://msdn.microsoft.com/3b74185e-2beb-4e29-8684-441e51d2a2ca)[多个基类](https://msdn.microsoft.com/library/a30c69fe-401c-4a87-96a0-e0da70c7c740)[模板](https://msdn.microsoft.com/library/90fcc14a-2092-47af-9d2e-dba26d25b872)

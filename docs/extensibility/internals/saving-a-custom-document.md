@@ -41,6 +41,6 @@ ms.locfileid: "80705614"
     > [!NOTE]
     > 如果实现自己的持久性，请确保调用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QuerySaveFiles%2A> 方法来节省时间。 此方法将进行检查以确保保存文件 (例如，文件不是只读的) 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>
 - [打开和保存项目项](../../extensibility/internals/opening-and-saving-project-items.md)

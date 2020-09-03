@@ -1,5 +1,5 @@
 ---
-title: IDebugProgram2：：获取引擎信息 |微软文档
+title: IDebugProgram2：： GetEngineInfo |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 53f16a3ef6bd1328d73c8a6c71c666968d5564d4
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80722827"
 ---
 # <a name="idebugprogram2getengineinfo"></a>IDebugProgram2::GetEngineInfo
-获取运行此程序的调试引擎 （DE） 的名称和 GUID。
+获取运行此程序)  (DE 调试引擎的名称和 GUID。
 
 ## <a name="syntax"></a>语法
 
@@ -43,16 +43,16 @@ int GetEngineInfo( 
 
 ## <a name="parameters"></a>参数
 `pbstrEngine`\
-[出]返回运行此程序的 DE 的名称。
+弄返回运行此程序的运行的名称。
 
 `pguidEngine`\
-[出]返回运行此程序的 DE 的 GUID。
+弄返回运行此程序的 DE 的 GUID。
 
 ## <a name="return-value"></a>返回值
- 如果成功，返回`S_OK`;否则，返回错误代码。
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。
 
 ## <a name="remarks"></a>备注
- 每个 DE 定义自己的 GUID 进行标识。
+ 每个 DE 都定义自己的标识的 GUID。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)

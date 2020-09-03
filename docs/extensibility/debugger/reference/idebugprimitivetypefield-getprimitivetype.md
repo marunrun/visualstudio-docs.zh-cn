@@ -1,5 +1,5 @@
 ---
-title: IDebug原始类型字段：：获取原始类型 |微软文档
+title: IDebugPrimitiveTypeField：： GetPrimitiveType |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -15,10 +15,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: a66c7c2e312795fa4303c8702e70cd509536de98
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80724278"
 ---
 # <a name="idebugprimitivetypefieldgetprimitivetype"></a>IDebugPrimitiveTypeField::GetPrimitiveType
@@ -40,10 +40,10 @@ int GetPrimitiveType (
 
 ## <a name="parameters"></a>参数
 `pdwType`\
-[出]表示基元[类型的 CorElementType 枚举中](/dotnet/framework/unmanaged-api/metadata/corelementtype-enumeration)的值。
+弄表示基元类型的 [CorElementType 枚举](/dotnet/framework/unmanaged-api/metadata/corelementtype-enumeration) 的值。
 
 ## <a name="return-value"></a>返回值
- 如果成功，返回`S_OK`;否则，返回`S_FALSE`。
+ 如果成功， `S_OK` 则返回; 否则返回 `S_FALSE` 。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IDebugPrimitiveTypeField](../../../extensibility/debugger/reference/idebugprimitivetypefield.md)

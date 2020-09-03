@@ -13,10 +13,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 7cac308de96c3edc2dfe5c7577b0bee8077bf9e7
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85548430"
 ---
 # <a name="nameprofile"></a>NameProfile
@@ -50,9 +50,9 @@ PROFILE_COMMAND_STATUS PROFILERAPI NameProfile(
   
   `Level`  
   
-  指示性能数据集合可应用到的分析级别。 以下 PROFILE_CONTROL_LEVEL 值可用于指示性能数据集合可应用到的三个级别之一  ：  
+  指示性能数据集合可应用到的分析级别。 以下 PROFILE_CONTROL_LEVEL 值可用于指示性能数据集合可应用到的三个级别之一：  
   
-|枚举器|说明|  
+|枚举器|描述|  
 |----------------|-----------------|  
 |PROFILE_GLOBALLEVEL|全局级别设置影响分析运行中的所有进程和线程。|  
 |PROFILE_PROCESSLEVEL|进程级别设置影响指定进程包含的所有线程。|  
@@ -65,7 +65,7 @@ PROFILE_COMMAND_STATUS PROFILERAPI NameProfile(
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  函数通过使用 **PROFILE_COMMAND_STATUS** 枚举来指示成功或失败。 返回值可以是下列值之一：  
   
-|枚举器|说明|  
+|枚举器|描述|  
 |----------------|-----------------|  
 |NAME_ERROR_ID_NOEXIST|指定的分析元素不存在。|  
 |NAME_ERROR_INVALID_NAME|名称无效。|  
@@ -91,10 +91,10 @@ PROFILE_COMMAND_STATUS PROFILERAPI NameProfile(
   
 ## <a name="function-information"></a>函数信息  
   
-|Item|说明|  
+|项|说明|  
 |-|-|  
-|**标头**|包括 VSPerf.h|  
-|**库**|使用 VSPerf.lib|  
+|**Header**|包括 VSPerf.h|  
+|**Library**|使用 VSPerf.lib|  
 |**Unicode**|作为 `NameProfileW` (Unicode) 和 `NameProfileA` (ANSI) 实现。|  
   
 ## <a name="example"></a>示例  
@@ -136,4 +136,4 @@ void ExerciseNameProfile()
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Visual Studio 探查器 API 参考（本机）](../profiling/visual-studio-profiler-api-reference-native.md)
+ [Visual Studio 探查器 API 参考 (本机) ](../profiling/visual-studio-profiler-api-reference-native.md)

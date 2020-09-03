@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 8ff5e620d4c53889afe17274364d6f92936025d3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72672742"
 ---
 # <a name="list-disassembly-command"></a>“列出反汇编”命令
@@ -37,17 +37,17 @@ Debug.ListDisassembly [/count:number] [/endaddress:expression]
 ## <a name="switches"></a>开关
  每个开关都可以使用其完整形式或缩写形式来调用。
 
- /count： `number` [或]/c： `number` [或]/length： `number` [或]/l： `number` 可选。 要显示的指令数。 默认值为 8。
+ /count： `number` [or]/c： `number` [or]/length： `number` [or]/l： `number` Optional。 要显示的指令数。 默认值为 8。
 
- /endaddress： `expression` [或]/e： `expression` 可选。 停止反汇编的地址。
+ /endaddress： `expression` [or]/e： `expression` Optional。 停止反汇编的地址。
 
- /codebytes： `yes`&#124; `no` [或]/bytes： `yes`&#124; `no` [或]/B： `yes`&#124; `no` Optional。 指示是否显示代码字节。 默认值是 `no`。
+ /codebytes： `yes`&#124;`no` [或]/bytes： `yes`&#124;`no` [或]/b： `yes`&#124;`no` 可选。 指示是否显示代码字节。 默认值为 `no`。
 
- /source： `yes`&#124; `no` [或]/s： `yes`&#124; `no` 可选。 指示是否显示源代码。 默认值是 `no`。
+ /source： `yes`&#124;`no` [或]/s： `yes`&#124;`no` 可选。 指示是否显示源代码。 默认值为 `no`。
 
- /symbolnames： `yes`&#124; `no` [或]/names： `yes`&#124; `no` [或]/N： `yes`&#124; `no` Optional。 指示是否显示符号名称。 默认值是 `yes`。
+ /symbolnames： `yes`&#124;`no` [或]/names： `yes`&#124;`no` [或]/n： `yes`&#124;`no` 可选。 指示是否显示符号名称。 默认值为 `yes`。
 
- [/linenumbers： `yes`&#124; `no`]可有可无. 启用查看与源代码关联的行号。 /source 开关必须具有 `yes` 的值来使用 /linenumbers 开关。
+ [/linenumbers： `yes`&#124;`no` ] 可选。 启用查看与源代码关联的行号。 /source 开关必须具有 `yes` 的值来使用 /linenumbers 开关。
 
 ## <a name="example"></a>示例
 

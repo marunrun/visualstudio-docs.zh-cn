@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 5685ad7a760e00392b5f9684cdf399ee320d4a0c
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85540252"
 ---
 # <a name="ca1412-mark-comsource-interfaces-as-idispatch"></a>CA1412:将 ComSource 接口标记为 IDispatch
@@ -36,7 +36,7 @@ ms.locfileid: "85540252"
  类型使用特性进行标记 <xref:System.Runtime.InteropServices.ComSourceInterfacesAttribute> ，且至少有一个指定接口未标记为 <xref:System.Runtime.InteropServices.InterfaceTypeAttribute> 特性设置为 `InterfaceIsDispatch` 值。
 
 ## <a name="rule-description"></a>规则描述
- <xref:System.Runtime.InteropServices.ComSourceInterfacesAttribute>用于标识类向组件对象模型（COM）客户端公开的事件接口。 必须公开这些接口， `InterfaceIsIDispatch` 才能使 Visual Basic 6 COM 客户端接收事件通知。 默认情况下，如果未使用特性标记接口 <xref:System.Runtime.InteropServices.InterfaceTypeAttribute> ，则该接口将公开为双重接口。
+ <xref:System.Runtime.InteropServices.ComSourceInterfacesAttribute> 用于标识类向组件对象模型公开的事件接口， (COM) 客户端。 必须公开这些接口， `InterfaceIsIDispatch` 才能使 Visual Basic 6 COM 客户端接收事件通知。 默认情况下，如果未使用特性标记接口 <xref:System.Runtime.InteropServices.InterfaceTypeAttribute> ，则该接口将公开为双重接口。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
  若要修复与此规则的冲突，请添加或修改 <xref:System.Runtime.InteropServices.InterfaceTypeAttribute> 属性，以便将使用属性指定的所有接口的值设置为 cominterfacetype.interfaceisidispatch <xref:System.Runtime.InteropServices.ComSourceInterfacesAttribute> 。

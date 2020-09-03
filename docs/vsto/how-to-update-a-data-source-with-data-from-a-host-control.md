@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 8384b35583517a832763f5229d2b526ca10190ad
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85541240"
 ---
 # <a name="how-to-update-a-data-source-with-data-from-a-host-control"></a>如何：使用主机控件中的数据更新数据源
@@ -29,7 +29,7 @@ ms.locfileid: "85541240"
 
 2. 使用内存中数据源中的已更改数据更新数据库。 此步骤仅适用于数据源连接到后端数据库（例如 SQL Server 或 Microsoft Office Access 数据库）的情况。
 
-   有关宿主控件和数据绑定的详细信息，请参阅[主机项和主机控件概述](../vsto/host-items-and-host-controls-overview.md)和[将数据绑定到 Office 解决方案中的控件](../vsto/binding-data-to-controls-in-office-solutions.md)。
+   有关宿主控件和数据绑定的详细信息，请参阅 [主机项和主机控件概述](../vsto/host-items-and-host-controls-overview.md) 和 [将数据绑定到 Office 解决方案中的控件](../vsto/binding-data-to-controls-in-office-solutions.md)。
 
    [!INCLUDE[appliesto_controls](../vsto/includes/appliesto-controls-md.md)]
 
@@ -76,7 +76,7 @@ ms.locfileid: "85541240"
 
 3. 在“属性” **** 窗口中，展开“(DataBindings)” **** 属性。
 
-4. 单击 " **（高级）** " 属性旁边的省略号按钮（![VisualStudioEllipsesButton 屏幕快照](../vsto/media/vbellipsesbutton.png "VisualStudioEllipsesButton 屏幕快照")）。
+4. 在 " ** (高级) ** " 属性旁边，单击省略号按钮 (" ![VisualStudioEllipsesButton 屏幕快照](../vsto/media/vbellipsesbutton.png "VisualStudioEllipsesButton 屏幕快照") ") 。
 
 5. 在“格式设置和高级绑定” **** 对话框中，单击“数据源更新模式” **** 下拉列表并选择以下值之一：
 
@@ -90,13 +90,13 @@ ms.locfileid: "85541240"
 6. 关闭“格式设置和高级绑定” **** 对话框。
 
 ## <a name="update-the-database"></a>更新数据库
- 如果内存中数据源与某个数据库关联，则必须使用对该数据源所做的更改来更新此数据库。 有关更新数据库的详细信息，请参阅使用 TableAdapter[将数据保存回数据库](../data-tools/save-data-back-to-the-database.md)和[更新数据](../data-tools/update-data-by-using-a-tableadapter.md)。
+ 如果内存中数据源与某个数据库关联，则必须使用对该数据源所做的更改来更新此数据库。 有关更新数据库的详细信息，请参阅使用 TableAdapter [将数据保存回数据库](../data-tools/save-data-back-to-the-database.md)  和 [更新数据](../data-tools/update-data-by-using-a-tableadapter.md) 。
 
 ### <a name="to-update-the-database"></a>更新数据库
 
 1. 调用控件的 <xref:System.Windows.Forms.BindingSource.EndEdit%2A> 的 <xref:System.Windows.Forms.BindingSource> 方法。
 
-     在设计时将数据绑定控件添加到文档或工作簿时，会自动生成 <xref:System.Windows.Forms.BindingSource> 。 <xref:System.Windows.Forms.BindingSource> 将该控件连接到项目中的类型化数据集。 有关详细信息，请参阅[BindingSource 组件概述](/dotnet/framework/winforms/controls/bindingsource-component-overview)。
+     在设计时将数据绑定控件添加到文档或工作簿时，会自动生成 <xref:System.Windows.Forms.BindingSource> 。 <xref:System.Windows.Forms.BindingSource> 将该控件连接到项目中的类型化数据集。 有关详细信息，请参阅 [BindingSource 组件概述](/dotnet/framework/winforms/controls/bindingsource-component-overview)。
 
      下面的代码示例假定你的项目包含一个名为 <xref:System.Windows.Forms.BindingSource> 的 `customersBindingSource`。
 
@@ -105,14 +105,14 @@ ms.locfileid: "85541240"
 
 2. 调用 `Update` 项目中生成的 TableAdapter 的方法。
 
-     当你在设计时将数据绑定控件添加到文档或工作簿时，将自动生成 TableAdapter。 TableAdapter 将项目中的类型化数据集连接到数据库。 有关详细信息，请参阅[TableAdapter 概述](../data-tools/fill-datasets-by-using-tableadapters.md#tableadapter-overview)。
+     当你在设计时将数据绑定控件添加到文档或工作簿时，将自动生成 TableAdapter。 TableAdapter 将项目中的类型化数据集连接到数据库。 有关详细信息，请参阅 [TableAdapter 概述](../data-tools/fill-datasets-by-using-tableadapters.md#tableadapter-overview)。
 
      下面的代码示例假定你已连接到 Northwind 数据库中的 Customers 表，并且你的项目包含一个名为的 TableAdapter `customersTableAdapter` 和一个名为的类型化数据集 `northwindDataSet` 。
 
      [!code-csharp[Trin_VstcoreDataExcel#21](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs#21)]
      [!code-vb[Trin_VstcoreDataExcel#21](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb#21)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [将数据绑定到 Office 解决方案中的控件](../vsto/binding-data-to-controls-in-office-solutions.md)
 - [将数据保存回数据库](../data-tools/save-data-back-to-the-database.md)
 - [使用 TableAdapter 更新数据](../data-tools/update-data-by-using-a-tableadapter.md)

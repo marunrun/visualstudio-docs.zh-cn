@@ -1,5 +1,5 @@
 ---
-title: CONTEXT_INFO |微软文档
+title: CONTEXT_INFO |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 4838df34c14b936af15b8a7a582a6d30ea12bee1
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80737564"
 ---
 # <a name="context_info"></a>CONTEXT_INFO
-此结构描述内存上下文或代码上下文。
+此结构描述了内存上下文或代码上下文。
 
 ## <a name="syntax"></a>语法
 
@@ -53,7 +53,7 @@ public struct CONTEXT_INFO {
 
 ## <a name="members"></a>成员
 `dwFields`\
-[他CONTEXT_INFO_FIELDS](../../../extensibility/debugger/reference/context-info-fields.md)枚举中的标志的组合，用于指定填写哪些字段<strong>。</strong>
+[CONTEXT_INFO_FIELDS](../../../extensibility/debugger/reference/context-info-fields.md)枚举中的标志的组合，用于指定要填写的字段<strong>。</strong>
 
 `bstrModuleUrl`\
 上下文所在的模块的名称。
@@ -62,7 +62,7 @@ public struct CONTEXT_INFO {
 上下文所在的函数名称。
 
 `posFunctionOffset`\
-标识与代码上下文关联的函数的行和列偏移的[TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md)结构。
+一个 [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) 结构，该结构标识与代码上下文关联的函数的行和列偏移量。
 
 `bstrAddress`\
 给定上下文所在的代码中的地址。
@@ -71,19 +71,19 @@ public struct CONTEXT_INFO {
 给定上下文所在的代码中地址的偏移量。
 
 `bstrAddressAbsolute`\
-给定上下文所在的内存中的绝对地址。
+内存中给定上下文所在位置的绝对地址。
 
 ## <a name="remarks"></a>备注
-此结构从对[GetInfo](../../../extensibility/debugger/reference/idebugmemorycontext2-getinfo.md)方法的调用返回。
+此结构是通过调用 [GetInfo](../../../extensibility/debugger/reference/idebugmemorycontext2-getinfo.md) 方法返回的。
 
-此结构的典型用途是支持**内存**调试窗口。
+此结构的典型用途是支持 **内存** 调试窗口。
 
 ## <a name="requirements"></a>要求
-标题： msdbg.h
+标头： msdbg
 
-命名空间：微软.VisualStudio.调试器.互通
+命名空间： VisualStudio
 
-程序集：微软.VisualStudio.调试器.Interop.dll
+程序集： Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [结构和联合](../../../extensibility/debugger/reference/structures-and-unions.md)

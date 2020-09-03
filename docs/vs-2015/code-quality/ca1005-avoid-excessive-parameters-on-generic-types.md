@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 56c69badf76a05351b37a7c8a41a9cacf54f9974
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85539719"
 ---
 # <a name="ca1005-avoid-excessive-parameters-on-generic-types"></a>CA1005:避免泛型类型的参数过多
@@ -36,7 +36,7 @@ ms.locfileid: "85539719"
  外部可见的泛型类型具有两个以上的类型参数。
 
 ## <a name="rule-description"></a>规则描述
- 泛型类型包含的类型参数越多，越难以知道并记住每个类型参数各代表什么。 通常情况下，有一种类型参数（如中 `List<T>` ）和（在某些情况下有两个类型参数）非常明显，如中所示 `Dictionary<TKey, TValue>` 。 如果存在两个以上的类型参数，则很难为大多数用户（例如， `TooManyTypeParameters<T, K, V>` c # 中的或中的）变得过大 `TooManyTypeParameters(Of T, K, V)` [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 。
+ 泛型类型包含的类型参数越多，越难以知道并记住每个类型参数各代表什么。 通常情况下，有一种类型参数（如中 `List<T>` ）和（在某些情况下有两个类型参数）非常明显，如中所示 `Dictionary<TKey, TValue>` 。 如果存在两个以上的类型参数，则很难在大多数用户 (例如， `TooManyTypeParameters<T, K, V>` 在 c # 中或 `TooManyTypeParameters(Of T, K, V)` [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) 中。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
  若要修复与此规则的冲突，请将设计更改为使用不超过两个类型参数。

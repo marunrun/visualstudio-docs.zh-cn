@@ -1,5 +1,5 @@
 ---
-title: CONSTRUCTOR_ENUM |微软文档
+title: CONSTRUCTOR_ENUM |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: f9e123399ed2378eaf63944f9a1527ef024c0cd6
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80737626"
 ---
 # <a name="constructor_enum"></a>CONSTRUCTOR_ENUM
@@ -54,14 +54,14 @@ public enum ConstructorMatchOptions {
 选择静态构造函数。
 
 ## <a name="remarks"></a>备注
-作为参数传递给[枚举构建器](../../../extensibility/debugger/reference/idebugclassfield-enumconstructors.md)方法。
+作为参数传递给 [EnumConstructors](../../../extensibility/debugger/reference/idebugclassfield-enumconstructors.md) 方法。
 
 ## <a name="requirements"></a>要求
-标题： sh.h
+标头： sh。h
 
-命名空间：微软.VisualStudio.调试器.互通
+命名空间： VisualStudio
 
-程序集：微软.VisualStudio.调试器.Interop.dll
+程序集： Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [枚举](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

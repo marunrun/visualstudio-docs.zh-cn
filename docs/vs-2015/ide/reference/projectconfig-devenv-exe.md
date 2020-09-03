@@ -22,10 +22,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: a33c7cbaef473e75631bb4ac6c0d217198cbf250
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72662089"
 ---
 # <a name="projectconfig-devenvexe"></a>/ProjectConfig (devenv.exe)
@@ -39,12 +39,12 @@ ms.locfileid: "72662089"
 devenv SolutionName {/build|/clean|/rebuild|/deploy} SolnConfigName [/project ProjName] [/projectconfig ProjConfigName]
 ```
 
-## <a name="arguments"></a>自变量
- /build 生成 `/project` `ProjName` 指定的项目。
+## <a name="arguments"></a>参数
+ /build 生成由指定的项目 `/project` `ProjName` 。
 
  /clean 清除在生成过程中创建的所有中间文件和输出目录。
 
- 然后，/rebuild 清理生成 `/project` `ProjName` 指定的项目。
+ 然后，/rebuild 清理生成由指定的项目 `/project` `ProjName` 。
 
  /deploy 指定在生成或重新生成后部署项目。
 
@@ -62,7 +62,7 @@ devenv SolutionName {/build|/clean|/rebuild|/deploy} SolnConfigName [/project Pr
 
 - 用双引号将含有空格的字符串引起来。
 
-- “命令”  窗口或使用 `/out` 开关指定的任何日志文件中都可显示生成的摘要信息（包括错误）。
+- 生成的摘要信息（包括错误）可以显示在 **命令** 窗口中，也可以显示在通过开关指定的任何日志文件中 `/out` 。
 
 ## <a name="example"></a>示例
  本示例使用 `MySolution` 的 `Debug` 解决方案配置中的 `Debug` 项目生成配置来生成 `CSharpConsoleApp` 项目。
@@ -72,4 +72,4 @@ devenv "C:\Documents and Settings\someuser\My Documents\Visual Studio\Projects\M
 ```
 
 ## <a name="see-also"></a>另请参阅
- [Devenv 命令行开关](../../ide/reference/devenv-command-line-switches.md) [/Project （devenv）](../../ide/reference/project-devenv-exe.md) [/Build （node.js）](../../ide/reference/build-devenv-exe.md) [/Clean （](../../ide/reference/clean-devenv-exe.md) devenv） [/Rebuild （devenv](../../ide/reference/rebuild-devenv-exe.md) ） [/Deploy （devenv](../../ide/reference/deploy-devenv-exe.md) ） [/out （devenv）](../../ide/reference/out-devenv-exe.md)
+ [Devenv 命令行开关](../../ide/reference/devenv-command-line-switches.md) [/Project ( # A0) ](../../ide/reference/project-devenv-exe.md) [/Build ( # A1) ](../../ide/reference/build-devenv-exe.md) [/Clean ( # A2) ](../../ide/reference/clean-devenv-exe.md) [/Rebuild ( # A3) ](../../ide/reference/rebuild-devenv-exe.md) [/Deploy ( # A4) ](../../ide/reference/deploy-devenv-exe.md) [/out ( # A5) ](../../ide/reference/out-devenv-exe.md)

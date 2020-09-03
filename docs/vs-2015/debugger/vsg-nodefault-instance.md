@@ -10,16 +10,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 9c7d2263642c2ff8a2c36f274d2c7b80745ed845
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68179484"
 ---
-# <a name="vsgnodefaultinstance"></a>VSG_NODEFAULT_INSTANCE
+# <a name="vsg_nodefault_instance"></a>VSG_NODEFAULT_INSTANCE
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-通过其存在定义的默认实例是否[VsgDbg 类](../debugger/vsgdbg-class.md)类，它提供编程捕获界面 — 提供。  
+通过其存在状况定义是否提供 [VsgDbg 类](../debugger/vsgdbg-class.md)的默认实例（它提供编程捕获接口）。  
   
 ## <a name="syntax"></a>语法  
   
@@ -27,7 +27,7 @@ ms.locfileid: "68179484"
 #define VSG_NODEFAULT_INSTANCE  
 ```  
   
-## <a name="value"></a>值  
+## <a name="value"></a>“值”  
  通过其存在或缺失的预处理器符号决定是否提供 `VsgDbg` 类的默认实例。 如果定义此符号，则不提供 `VsgDbg` 类的默认实例；否则，将在程序运行前提供并初始化默认实例。  
   
  通过具有全局范围的指针 `g_pVsgDbg` 提供编程捕获接口。  
@@ -41,7 +41,7 @@ VsgDbg *g_pVsgDbg;
   
  如果未禁用默认实例，则它将在程序运行前自动进行初始化并在程序终止时自动销毁。 您不必显式初始化或取消初始化此实例。  
   
- 若要禁用默认实例，必须定义`VSG_NODEFAULT_INSTANCE`包含之前`vsgcapture.h`在程序中。  
+ 若要禁用默认实例，必须在将 `vsgcapture.h` 包含在程序中之前定义 `VSG_NODEFAULT_INSTANCE`。  
   
 ## <a name="example"></a>示例  
  此示例说明如何禁用默认实例：  
