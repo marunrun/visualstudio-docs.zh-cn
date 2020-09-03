@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 83c8d8e7a1afe0946c1b1f5eb25c8650e2b512f5
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75917318"
 ---
 # <a name="structure-your-modeling-solution"></a>安排你的建模解决方案
@@ -26,7 +26,7 @@ ms.locfileid: "75917318"
 
 本主题假定你正在处理一个大项目，这个项目大到需要多名团队成员，还可能有多个团队。 项目的代码和模型存储在源代码管理系统，例如 [!INCLUDE[esprtfs](../includes/esprtfs-md.md)]。 至少某些团队成员使用 Visual Studio 来开发模型，其他团队成员可以通过使用其他版本的 Visual Studio 来查看模型。
 
-若要查看支持每个工具和建模功能的 Visual Studio 版本，请参阅[体系结构和建模工具的版本支持](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)。
+若要查看支持每个工具和建模功能的 Visual Studio 版本，请参阅 [体系结构和建模工具的版本支持](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)。
 
 ## <a name="solution-structure"></a>解决方案结构
 
@@ -60,7 +60,7 @@ ms.locfileid: "75917318"
 
     现在，每个层都有一个模型，还有一个用于应用程序体系结构的模型。 每个解决方案都包含各自的模型。 这样使团队成员能够同时在各个层上工作。
 
-2. 对于体系结构解决方案中，将添加每个层解决方案的建模项目。 为此，请打开体系结构解决方案。 在解决方案资源管理器中，右键单击解决方案节点，指向 "添加"，然后单击 "**现有项目**"。 在一个层解决方案中导航到建模项目 (.modelproj)。
+2. 对于体系结构解决方案中，将添加每个层解决方案的建模项目。 为此，请打开体系结构解决方案。 在解决方案资源管理器中，右键单击解决方案节点，指向 "添加"，然后单击 " **现有项目**"。 在一个层解决方案中导航到建模项目 (.modelproj)。
 
     现在，每个模型都在这两个解决方案中可见：其“主”解决方案和体系结构解决方案。
 
@@ -80,9 +80,9 @@ ms.locfileid: "75917318"
 
 ###### <a name="to-use-a-separate-package-for-each-layer"></a>为每一层使用单独的包
 
-1. 在每层的解决方案中，添加体系结构建模项目。 在解决方案资源管理器中，右键单击解决方案节点，指向 "**添加**"，然后单击 "**现有项目**"。 现在从每个解决方案都可以访问这个单一建模项目：体系结构项目以及每层的开发项目。
+1. 在每层的解决方案中，添加体系结构建模项目。 在解决方案资源管理器中，右键单击解决方案节点，指向 " **添加**"，然后单击 " **现有项目**"。 现在从每个解决方案都可以访问这个单一建模项目：体系结构项目以及每层的开发项目。
 
-2. 在共享的 UML 模型中，为每层创建一个包：在“解决方案资源管理器”中，选择建模项目。 在 "UML 模型资源管理器" 中，右键单击 "模型" 根节点，指向 "**添加**"，然后单击 "**包**"。
+2. 在共享的 UML 模型中，为每层创建一个包：在“解决方案资源管理器”中，选择建模项目。 在 "UML 模型资源管理器" 中，右键单击 "模型" 根节点，指向 " **添加**"，然后单击 " **包**"。
 
     每个包将包含描述对应层的要求和设计的 UML 关系图。
 
@@ -90,7 +90,7 @@ ms.locfileid: "75917318"
 
     此方法允许每层的设计元素直接引用其依赖的各个层和公共体系结构的设计元素。
 
-    尽管对不同包的并发操作会导致一些冲突，但这些冲突非常易于管理，因为包存储在单独的文件中。 主要困难是由删除依赖包所引用的元素导致的。 有关详细信息，请参阅[管理版本控制下的模型和关系图](../modeling/manage-models-and-diagrams-under-version-control.md)。
+    尽管对不同包的并发操作会导致一些冲突，但这些冲突非常易于管理，因为包存储在单独的文件中。 主要困难是由删除依赖包所引用的元素导致的。 有关详细信息，请参阅 [管理版本控制下的模型和关系图](../modeling/manage-models-and-diagrams-under-version-control.md)。
 
 ## <a name="creating-architecture-templates"></a>创建体系结构模板
 
@@ -104,7 +104,7 @@ ms.locfileid: "75917318"
 
 2. 创建你想要用作将来项目的起始点的解决方案结构。
 
-3. 在“文件” 菜单上，单击“将模板导出为 VSIX”。 将打开 "将**模板导出为 VSIX" 向导**。
+3. 在“文件” **** 菜单上，单击“将模板导出为 VSIX” ****。 将打开 "将 **模板导出为 VSIX" 向导** 。
 
 4. 按照该向导中的说明，选择你想要包括在模板中的项目，提供模板的名称和说明，并指定输出位置。
 
@@ -113,11 +113,11 @@ ms.locfileid: "75917318"
 
 ## <a name="related-materials"></a>相关材料
 
-[组织和管理模型](https://channel9.msdn.com/blogs/clinted/uml-with-vs-2010-part-9-organizing-and-managing-your-models)-视频（按 Clint Edmondson）。
+[组织和管理模型](https://channel9.msdn.com/blogs/clinted/uml-with-vs-2010-part-9-organizing-and-managing-your-models) -视频（按 Clint Edmondson）。
 
-[Visual Studio 体系结构工具指南](../modeling/visual-studio-architecture-tooling-guidance.md)–有关管理团队中的模型的进一步指南
+[Visual Studio 体系结构工具指南](../modeling/visual-studio-architecture-tooling-guidance.md) –有关管理团队中的模型的进一步指南
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[管理版本控制下的模型和关系图](../modeling/manage-models-and-diagrams-under-version-control.md)
-在[你的开发过程中使用模型](../modeling/use-models-in-your-development-process.md)
+[管理版本控制](../modeling/manage-models-and-diagrams-under-version-control.md) 
+ 下的模型和关系图[在开发过程中使用模型](../modeling/use-models-in-your-development-process.md)

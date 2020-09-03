@@ -1,5 +1,5 @@
 ---
-title: 评估监视表达式 |微软文档
+title: 计算监视表达式 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,28 +12,28 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 9a239e430338e88a0be4bc35ad1c357925f7d8f5
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80738851"
 ---
-# <a name="evaluate-a-watch-expression"></a>评估监视表达式
+# <a name="evaluate-a-watch-expression"></a>计算监视表达式
 > [!IMPORTANT]
-> 在 Visual Studio 2015 中，这种实现表达式赋值器的方式被弃用。 有关实现 CLR 表达式赋值器的信息，请参阅[CLR 表达式赋值器](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators)和[托管表达式赋值器示例](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)。
+> 在 Visual Studio 2015 中，不推荐使用这种实现表达式计算器的方式。 有关实现 CLR 表达式计算器的信息，请参阅 [clr 表达式计算器](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) 和 [托管表达式计算器示例](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)。
 
-当 Visual Studio 准备好显示手表表达式的值时，它调用[EvaluateSync](../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md)，这反过来又调用[评估同步](../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md)。 此过程生成包含表达式的值和类型的[IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md)对象。
+当 Visual Studio 准备好显示监视表达式的值时，它会调用 [EvaluateSync](../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md)，后者又会调用 [EvaluateSync](../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md)。 此过程将生成一个 [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) 对象，该对象包含表达式的值和类型。
 
-在此实现 中`IDebugParsedExpression::EvaluateSync`，将同时解析和计算表达式。 此实现执行以下任务：
+在的此实现中 `IDebugParsedExpression::EvaluateSync` ，将同时分析和计算表达式。 此实现执行以下任务：
 
-1. 分析并计算表达式以生成保存该值及其类型的泛型对象。 在 C# 中，这表示`object`为 C++ 中的一段时间，这`VARIANT`表示为 。
+1. 分析并计算表达式，以生成保存值及其类型的泛型对象。 在 c # 中，这在 `object` c + + 中表示为，这表示为 `VARIANT` 。
 
-2. 实例化实现`IDebugProperty2`接口并在类中存储`CValueProperty`要返回的值的类（在此示例中称为）。
+2. 实例化 `CValueProperty` 在此示例中调用的类 () 实现 `IDebugProperty2` 接口，并将要返回的值存储在类中。
 
-3. 从`IDebugProperty2``CValueProperty`对象返回接口。
+3. `IDebugProperty2`从对象返回接口 `CValueProperty` 。
 
 ## <a name="managed-code"></a>托管代码
-这是`IDebugParsedExpression::EvaluateSync`托管代码的实现。 帮助器方法`Tokenize`将表达式解析为解析树。 帮助器函数`EvalToken`将令牌转换为值。 帮助器函数`FindTerm`递归地遍历解析树，调用`EvalToken`表示值的每个节点，并在表达式中应用任何操作（添加或减法）。
+这是 `IDebugParsedExpression::EvaluateSync` 托管代码中的的实现。 Helper 方法将 `Tokenize` 表达式分析为分析树。 Helper 函数 `EvalToken` 将该标记转换为一个值。 Helper 函数 `FindTerm` 以递归方式遍历分析树， `EvalToken` 为每个表示值的节点调用，并在表达式中 (加法或减法) 应用任何操作。
 
 ```csharp
 namespace EEMC
@@ -80,7 +80,7 @@ namespace EEMC
 ```
 
 ## <a name="unmanaged-code"></a>非托管代码
-这是非托管代码的`IDebugParsedExpression::EvaluateSync`实现。 帮助器函数`Evaluate`解析和计算表达式，返回`VARIANT`保留结果值。 帮助器函数`VariantValueToProperty`将 捆绑`VARIANT`到对象中`CValueProperty`。
+这是 `IDebugParsedExpression::EvaluateSync` 在非托管代码中实现的。 Helper 函数 `Evaluate` 分析和计算表达式，并返回 `VARIANT` 包含结果值的。 Helper 函数将 `VariantValueToProperty` 绑定 `VARIANT` 到 `CValueProperty` 对象。
 
 ```cpp
 STDMETHODIMP CParsedExpression::EvaluateSync(
@@ -172,5 +172,5 @@ STDMETHODIMP CParsedExpression::EvaluateSync(
 ```
 
 ## <a name="see-also"></a>请参阅
-- [评估监视窗口表达式](../../extensibility/debugger/evaluating-a-watch-window-expression.md)
-- [表达式计算的样本实现](../../extensibility/debugger/sample-implementation-of-expression-evaluation.md)
+- [计算监视窗口表达式](../../extensibility/debugger/evaluating-a-watch-window-expression.md)
+- [表达式计算的示例实现](../../extensibility/debugger/sample-implementation-of-expression-evaluation.md)

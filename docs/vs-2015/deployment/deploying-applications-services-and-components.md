@@ -23,10 +23,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 42e3a4afec71b90a087ac927f5cbbbc0b181fadd
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75917557"
 ---
 # <a name="deploying-applications-services-and-components"></a>部署应用程序、服务和组件
@@ -52,6 +52,6 @@ ms.locfileid: "75917557"
 |**部署桌面应用程序：** 通过使用 ClickOnce 部署，你可以将桌面应用程序发布到 web 服务器或网络文件共享。 用户随后只需一次单击即可安装应用程序。|[ClickOnce 安全和部署](../deployment/clickonce-security-and-deployment.md)|  
 |**创建安装程序：** 你可以使用免费的 InstallShield 受限版创建安装程序。|[InstallShield Limited Edition](../deployment/installshield-limited-edition.md)|  
 |**维护现有的安装程序：** 通过安装 Visual Studio 安装程序项目扩展，继续使用在 Visual Studio 的早期版本中创建的安装程序。|[Visual Studio 安装程序项目扩展](https://devblogs.microsoft.com/visualstudio/visual-studio-installer-projects-extension/)<br /><br /> 以下位置提供了安装程序项目的文档： [Visual Studio 安装程序部署](https://msdn.microsoft.com/library/2kt85ked\(v=vs.100\).aspx)|  
-|**部署视觉对象C++应用程序：** 你可以使用中心C++部署、本地部署或静态链接来部署包含应用程序的 visual 运行时。|[部署本机桌面应用程序 (Visual C++)](/cpp/windows/deploying-native-desktop-applications-visual-cpp)|  
+|**部署 Visual C++ 应用程序：** 你可以使用中心部署、本地部署或静态链接，将 Visual C++ 运行时与应用程序一起部署。|[部署本机桌面应用程序 (Visual C++)](/cpp/windows/deploying-native-desktop-applications-visual-cpp)|  
 |**部署用于测试的应用程序：** 可以通过将应用程序部署到虚拟环境，实现更复杂的开发和测试。|[测试实验室环境](https://msdn.microsoft.com/library/14ba54c8-a158-4a6e-b00a-b00ae960feb8)|  
-|**安装必备组件：** 可以通过配置通用安装程序（称为 "引导程序"）来安装桌面应用程序的必备组件。|[应用程序部署必备](../deployment/application-deployment-prerequisites.md)|
+|**安装必备组件：** 可以通过配置通用安装程序（称为 "引导程序"）来安装桌面应用程序的必备组件。|[应用程序部署先决条件](../deployment/application-deployment-prerequisites.md)|

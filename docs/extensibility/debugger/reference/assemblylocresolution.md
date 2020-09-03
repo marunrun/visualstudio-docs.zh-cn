@@ -1,5 +1,5 @@
 ---
-title: 程序集分辨率 |微软文档
+title: ASSEMBLYLOCRESOLUTION |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: cbd015408cbefd1861f6e795447a5302efabb0dc
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80738138"
 ---
 # <a name="assemblylocresolution"></a>ASSEMBLYLOCRESOLUTION
-指定程序集的位置。
+指定程序集所在的位置。
 
 ## <a name="syntax"></a>语法
 
@@ -60,16 +60,16 @@ public enum enum_ASSEMBLYLOCRESOLUTION {
 程序集位于远程目录中。
 
 ## <a name="remarks"></a>备注
-这些值由[解析程序集Ref](../../../extensibility/debugger/reference/ipropertyproxyeeside-resolveassemblyref.md)和[获取托管查看器创建数据](../../../extensibility/debugger/reference/ipropertyproxyeeside-getmanagedviewercreationdata.md)方法返回。
+这些值由 [ResolveAssemblyRef](../../../extensibility/debugger/reference/ipropertyproxyeeside-resolveassemblyref.md) 和 [GetManagedViewerCreationData](../../../extensibility/debugger/reference/ipropertyproxyeeside-getmanagedviewercreationdata.md) 方法返回。
 
-这些值可以与操作结合使用`OR`。
+这些值可以与操作组合在一起 `OR` 。
 
 ## <a name="requirements"></a>要求
-标题： msdbg.h
+标头： msdbg
 
-命名空间：微软.VisualStudio.调试器.互通
+命名空间： VisualStudio
 
-程序集：微软.VisualStudio.调试器.Interop.dll
+程序集： Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [枚举](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

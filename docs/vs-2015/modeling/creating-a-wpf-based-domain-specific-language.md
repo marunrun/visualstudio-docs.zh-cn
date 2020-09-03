@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 198497c0f609401639218a54321427e51eb682ff
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75918904"
 ---
 # <a name="creating-a-wpf-based-domain-specific-language"></a>创建基于 WPF 的域特定语言
@@ -21,7 +21,7 @@ ms.locfileid: "75918904"
 
 可以创建具有 WPF 设计器而不是图形设计器的域特定语言。
 
- 可在[Visual Studio 可视化和建模 SDK](https://www.microsoft.com/download/details.aspx?id=48148)中找到有关此功能的信息和示例。
+ 可在 [Visual Studio 可视化和建模 SDK](https://www.microsoft.com/download/details.aspx?id=48148)中找到有关此功能的信息和示例。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [如何定义域特定语言](../modeling/how-to-define-a-domain-specific-language.md)

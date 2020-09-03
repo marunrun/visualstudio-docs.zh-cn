@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 693738e1751e580e32d7223d150438717fc63d27
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72651041"
 ---
 # <a name="extensions-and-updates-environment-options-dialog-box"></a>“选项”对话框 ->“环境”->“扩展和更新”
@@ -33,7 +33,7 @@ ms.locfileid: "72651041"
  有关详细信息，请参阅[查找和使用 Visual Studio 扩展](../../ide/finding-and-using-visual-studio-extensions.md)。
 
 ### <a name="additional-extension-galleries"></a>其他扩展库
- 一个企业功能，可启用对专有扩展的库的支持。 有关详细信息，请参阅[专用库](../../extensibility/private-galleries.md)。
+ 一个企业功能，可启用对专有扩展的库的支持。 有关详细信息，请参阅 [私有库](../../extensibility/private-galleries.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [“选项”对话框 ->“环境”](../../ide/reference/environment-options-dialog-box.md)

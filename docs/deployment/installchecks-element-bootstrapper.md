@@ -1,5 +1,5 @@
 ---
-title: '&lt;InstallChecks &gt; 元素（引导程序） |Microsoft Docs'
+title: '&lt;&gt; (引导程序) 的 InstallChecks 元素 |Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -16,13 +16,13 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: c7ba4da072a586bdc09993b77200a769be3940ab
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85536300"
 ---
-# <a name="ltinstallchecksgt-element-bootstrapper"></a>&lt;InstallChecks &gt; 元素（引导程序）
+# <a name="ltinstallchecksgt-element-bootstrapper"></a>&lt;InstallChecks &gt; 元素 (引导程序) 
 `InstallChecks`元素支持对本地计算机启动各种测试，以确保已安装应用程序的所有适当的先决条件。
 
 ## <a name="syntax"></a>语法
@@ -70,9 +70,9 @@ ms.locfileid: "85536300"
 ```
 
 ## <a name="assemblycheck"></a>AssemblyCheck
- 此元素是的可选子元素 `InstallChecks` 。 对于每个实例 `AssemblyCheck` ，引导程序将确保由元素标识的程序集存在于全局程序集缓存（GAC）中。 它不包含任何元素，并且具有以下属性。
+ 此元素是的可选子元素 `InstallChecks` 。 对于每个实例 `AssemblyCheck` ，引导程序将确保由元素标识的程序集存在于全局程序集缓存中 (GAC) 。 它不包含任何元素，并且具有以下属性。
 
-|Attribute|说明|
+|特性|说明|
 |---------------|-----------------|
 |`Property`|必需。 要存储结果的属性的名称。 可以从元素下的测试中引用此属性 `InstallConditions` ，该元素是元素的子元素 `Command` 。 有关详细信息，请参阅 [\<Commands> 元素](../deployment/commands-element-bootstrapper.md)。|
 |`Name`|必需。 要检查的程序集的完全限定名称。|
@@ -82,11 +82,11 @@ ms.locfileid: "85536300"
 |`ProcessorArchitecture`|可选。 此安装所针对的计算机处理器。 默认值为 `msil`。|
 
 ## <a name="externalcheck"></a>ExternalCheck
- 此元素是的可选子元素 `InstallChecks` 。 对于每个实例 `ExternalCheck` ，引导程序将在单独的进程中执行命名的外部程序，并在指示的属性中存储其退出代码 `Property` 。 `ExternalCheck`对于实现复杂的依赖项检查非常有用，或者当检查组件是否存在的唯一方法是对其进行实例化时。
+ 此元素是的可选子元素 `InstallChecks` 。 对于每个实例 `ExternalCheck` ，引导程序将在单独的进程中执行命名的外部程序，并在指示的属性中存储其退出代码 `Property` 。 `ExternalCheck` 对于实现复杂的依赖项检查非常有用，或者当检查组件是否存在的唯一方法是对其进行实例化时。
 
- `ExternalCheck`不包含任何元素，并且具有以下属性。
+ `ExternalCheck` 不包含任何元素，并且具有以下属性。
 
-|Attribute|说明|
+|特性|说明|
 |---------------|-----------------|
 |`Property`|必需。 要存储结果的属性的名称。 可以从元素下的测试中引用此属性 `InstallConditions` ，该元素是元素的子元素 `Command` 。 有关详细信息，请参阅 [\<Commands> 元素](../deployment/commands-element-bootstrapper.md)。|
 |`PackageFile`|必需。 要执行的外部程序。 此程序必须是安装分发包的一部分。|
@@ -95,9 +95,9 @@ ms.locfileid: "85536300"
 ## <a name="filecheck"></a>FileCheck
  此元素是的可选子元素 `InstallChecks` 。 对于每个实例 `FileCheck` ，引导程序将确定指定的文件是否存在，并返回该文件的版本号。 如果文件没有版本号，则引导程序会将名为的属性设置 `Property` 为0。 如果该文件不存在， `Property` 则不会将设置为任何值。
 
- `FileCheck`不包含任何元素，并且具有以下属性。
+ `FileCheck` 不包含任何元素，并且具有以下属性。
 
-| Attribute | 说明 |
+| 特性 | 说明 |
 |-----------------| - |
 | `Property` | 必需。 要存储结果的属性的名称。 可以从元素下的测试中引用此属性 `InstallConditions` ，该元素是元素的子元素 `Command` 。 有关详细信息，请参阅 [\<Commands> 元素](../deployment/commands-element-bootstrapper.md)。 |
 | `FileName` | 必需。 要查找的文件的名称。 |
@@ -106,11 +106,11 @@ ms.locfileid: "85536300"
 | `SearchDepth` | 可选。 在其中搜索指定文件的子文件夹的深度。 搜索深度优先。 默认值为0，该值将搜索限制为由和 SearchPath 指定的顶层文件夹 `SpecialFolder` 。 **SearchPath** |
 
 ## <a name="msiproductcheck"></a>MsiProductCheck
- 此元素是的可选子元素 `InstallChecks` 。 对于每个实例 `MsiProductCheck` ，引导程序将进行检查，以确定指定的 Microsoft Windows Installer 安装是否已运行完毕。 根据安装的产品的状态设置属性值。 正值表示已安装产品，0或-1 表示未安装该产品。 （有关详细信息，请参阅 Windows Installer SDK 函数 MsiQueryFeatureState。）. 如果未在计算机上安装 Windows Installer， `Property` 则不设置。
+ 此元素是的可选子元素 `InstallChecks` 。 对于每个实例 `MsiProductCheck` ，引导程序将进行检查，以确定指定的 Microsoft Windows Installer 安装是否已运行完毕。 根据安装的产品的状态设置属性值。 正值表示已安装产品，0或-1 表示未安装该产品。  (有关详细信息，请参阅 Windows Installer SDK 函数 MsiQueryFeatureState。 ) 。 如果未在计算机上安装 Windows Installer， `Property` 则不设置。
 
- `MsiProductCheck`不包含任何元素，并且具有以下属性。
+ `MsiProductCheck` 不包含任何元素，并且具有以下属性。
 
-|Attribute|说明|
+|特性|说明|
 |---------------|-----------------|
 |`Property`|必需。 要存储结果的属性的名称。 可以从元素下的测试中引用此属性 `InstallConditions` ，该元素是元素的子元素 `Command` 。 有关详细信息，请参阅 [\<Commands> 元素](../deployment/commands-element-bootstrapper.md)。|
 |`Product`|必需。 已安装产品的 GUID。|
@@ -119,24 +119,24 @@ ms.locfileid: "85536300"
 ## <a name="registrycheck"></a>RegistryCheck
  此元素是的可选子元素 `InstallChecks` 。 对于每个实例 `RegistryCheck` ，引导程序将进行检查以确定指定的注册表项是否存在，或其是否具有指示的值。
 
- `RegistryCheck`不包含任何元素，并且具有以下属性。
+ `RegistryCheck` 不包含任何元素，并且具有以下属性。
 
-|Attribute|说明|
+|特性|说明|
 |---------------|-----------------|
 |`Property`|必需。 要存储结果的属性的名称。 可以从元素下的测试中引用此属性 `InstallConditions` ，该元素是元素的子元素 `Command` 。 有关详细信息，请参阅 [\<Commands> 元素](../deployment/commands-element-bootstrapper.md)。|
 |`Key`|必需。 注册表项的名称。|
-|`Value`|可选。 要检索的注册表值的名称。 默认值为返回默认值的文本。 `Value`必须是字符串或 DWORD。|
+|`Value`|可选。 要检索的注册表值的名称。 默认值为返回默认值的文本。 `Value` 必须是字符串或 DWORD。|
 
 ## <a name="registryfilecheck"></a>RegistryFileCheck
  此元素是的可选子元素 `InstallChecks` 。 对于每个实例 `RegistryFileCheck` ，引导程序将检索指定文件的版本，并首先尝试从指定的注册表项检索文件的路径。 如果要在注册表中指定为值的目录中查找文件，此方法特别有用。
 
- `RegistryFileCheck`不包含任何元素，并且具有以下属性。
+ `RegistryFileCheck` 不包含任何元素，并且具有以下属性。
 
-|Attribute|说明|
+|特性|说明|
 |---------------|-----------------|
 |`Property`|必需。 要存储结果的属性的名称。 可以从元素下的测试中引用此属性 `InstallConditions` ，该元素是元素的子元素 `Command` 。 有关详细信息，请参阅 [\<Commands> 元素](../deployment/commands-element-bootstrapper.md)。|
 |`Key`|必需。 注册表项的名称。 它的值被解释为文件的路径，除非 `File` 已设置该属性。 如果此项不存在， `Property` 则不设置。|
-|`Value`|可选。 要检索的注册表值的名称。 默认值为返回默认值的文本。 `Value`必须是字符串。|
+|`Value`|可选。 要检索的注册表值的名称。 默认值为返回默认值的文本。 `Value` 必须是字符串。|
 |`FileName`|可选。 文件的名称。 如果已指定，则假定从注册表项获取的值为目录路径，此名称追加到该路径。 如果未指定，则假定从注册表返回的值为文件的完整路径。|
 |`SearchDepth`|可选。 在其中搜索指定文件的子文件夹的深度。 搜索深度优先。 默认值为0，该值将搜索限制为注册表项的值所指定的顶级文件夹。|
 
@@ -156,7 +156,7 @@ ms.locfileid: "85536300"
 ## <a name="installconditions"></a>InstallConditions
  `InstallChecks`计算时，它们将生成属性。 然后使用这些属性 `InstallConditions` 来确定包是否应安装、绕过或失败。 下表列出了 `InstallConditions` ：
 
-|条件|描述|
+|条件|说明|
 |-|-|
 |`FailIf`|如果任何 `FailIf` 条件的计算结果都为 true，包将失败。 其余条件将不会进行计算。|
 |`BypassIf`|如果任何 `BypassIf` 条件的计算结果都为 true，则将绕过包。 其余条件将不会进行计算。|
@@ -180,5 +180,5 @@ ms.locfileid: "85536300"
 ```
 
 ## <a name="see-also"></a>另请参阅
-- [\<Commands>element](../deployment/commands-element-bootstrapper.md)
+- [\<Commands> element](../deployment/commands-element-bootstrapper.md)
 - [产品和包架构引用](../deployment/product-and-package-schema-reference.md)

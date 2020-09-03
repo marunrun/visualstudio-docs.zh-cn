@@ -1,5 +1,5 @@
 ---
-title: BP_FLAGS90 |微软文档
+title: BP_FLAGS90 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -14,14 +14,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 5628af4a6e5c4deae3de02340e882bd2605e22d3
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80738046"
 ---
 # <a name="bp_flags90"></a>BP_FLAGS90
-枚举可选标志的有效值。 设置断点时，可选标志可用于指定其他信息。 此枚举扩展了[BP_FLAGS](../../../extensibility/debugger/reference/bp-flags.md)枚举。
+枚举可选标志的有效值。 设置断点时，可以使用可选标志来指定其他信息。 此枚举扩展 [BP_FLAGS](../../../extensibility/debugger/reference/bp-flags.md) 枚举。
 
 ## <a name="syntax"></a>语法
 
@@ -57,20 +57,20 @@ public enum enum_BP_FLAGS90
 指定无断点标志。
 
 `BP90_FLAG_MAP_DOCPOSITION`\
-指定调试引擎 （DE） 应使用文档位置映射断点。 这仅适用于在面向脚本的源文件中设置的断点，如活动服务器页 （ASP）。
+指定调试引擎 (DE) 应使用文档位置映射断点。 这仅适用于在面向脚本的源文件中设置的断点，例如 (ASP) 的 Active Server Pages。
 
 `BP90_FLAG_DONT_STOP`\
-指定断点应由调试引擎处理，但调试引擎最终不应停止;也就是说，不应发送[IDebugBreakpointEvent2](../../../extensibility/debugger/reference/idebugbreakpointevent2.md)事件对象。 此标志设计主要用于跟踪点。
+指定应由调试引擎处理断点，但调试引擎最终不应在该处停止;也就是说，不应发送 [IDebugBreakpointEvent2](../../../extensibility/debugger/reference/idebugbreakpointevent2.md) 事件对象。 此标志旨在主要用于跟踪点。
 
 `BP90_FLAG_TRACEPOINT_CONTINUE`\
-本机调试引擎用于确定是否应清除步进状态。 它与BP90_FLAG_DONT_STOP不同，因为如果跟踪点执行宏，则不设置BP90_FLAG_DONT_STOP。
+由本机调试引擎用来确定是否应清除步进状态。 它与 BP90_FLAG_DONT_STOP 不同，因为如果跟踪点执行宏，则不设置 BP90_FLAG_DONT_STOP。
 
 ## <a name="requirements"></a>要求
-标题： Msdbg90.h
+标头： Msdbg90
 
-命名空间：微软.VisualStudio.调试器.互通
+命名空间： VisualStudio
 
-程序集：微软.VisualStudio.调试器.Interop.dll
+程序集： Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [枚举](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

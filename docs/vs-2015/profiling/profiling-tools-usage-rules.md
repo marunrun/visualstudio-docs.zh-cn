@@ -10,10 +10,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 4158a6a393ed6e64dedddfca10c1ae04a95e3d3a
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85535546"
 ---
 # <a name="profiling-tools-usage-rules"></a>分析工具使用规则
@@ -29,4 +29,4 @@ ms.locfileid: "85535546"
 |[DA0008：收集的样本过少](../profiling/da0008-few-samples-collected.md)|在分析运行中收集的样本数不足以具有统计意义。 请考虑再次进行分析并较长时间地运行应用程序。 还可以考虑使用检测方法收集数据。|  
 |[DA0026：处理过程的内核 CPU 时间过长](../profiling/da0026-excessive-kernel-cpu-time-processing.md)|分析运行中有大量时间处于处理器内核模式下。 请考虑通过将系统调用用作指标（而不是将时间用作指标）来进行采样。|  
 |[DA0029：CLR 版本不受支持](../profiling/da0029-unsupported-clr-version.md)|分析的二进制文件在使用探查器不支持的 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 版本。 探查器报告无法解析符号名称。|  
-|[DA0030：收集数据库项目的层交互度量值](../profiling/da0030-gather-tier-interaction-measurements-for-database-projects.md)|收集了大量对 <xref:System.Data?displayProperty=fullName> 命名空间中的方法进行的调用。 若要包含有关数据库调用的数据，请考虑在分析运行中收集层交互数据。|
+|[DA0030：收集数据库项目的“层交互”度量值](../profiling/da0030-gather-tier-interaction-measurements-for-database-projects.md)|收集了大量对 <xref:System.Data?displayProperty=fullName> 命名空间中的方法进行的调用。 若要包含有关数据库调用的数据，请考虑在分析运行中收集层交互数据。|

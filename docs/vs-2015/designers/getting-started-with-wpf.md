@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 3b005b55e0079b7db6486a8cde08f81f62ac7399
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85542033"
 ---
 # <a name="getting-started-with-wpf"></a>WPF 入门
@@ -32,4 +32,4 @@ Windows Presentation Foundation (WPF) 是一个可创建桌面客户端应用程
 |是否是 Windows 窗体开发人员？|[Windows 窗体控件和等效的 WPF 控件](https://msdn.microsoft.com/library/ms750559\(v=vs.100\).aspx)<br /><br /> [WPF 和 Windows 窗体互操作中受支持的方案](https://msdn.microsoft.com/library/ms751797\(v=vs.100\).aspx)|
 
 ## <a name="see-also"></a>另请参阅
- [类库（WPF）](https://msdn.microsoft.com/library/ms753307\(v=vs.100\).aspx) [应用程序开发概述](https://msdn.microsoft.com/library/bb613549\(v=vs.100\).aspx) [.NET Framework 开发人员中心](https://dotnet.microsoft.com/)[通过 Windows Presentation Foundation 创建新式桌面应用程序](../designers/create-modern-desktop-applications-with-windows-presentation-foundation.md)
+ 类库[ (WPF) ](https://msdn.microsoft.com/library/ms753307\(v=vs.100\).aspx) [应用程序开发概述](https://msdn.microsoft.com/library/bb613549\(v=vs.100\).aspx) [.NET Framework 开发人员中心](https://dotnet.microsoft.com/)[创建包含 Windows Presentation Foundation 的新式桌面应用程序](../designers/create-modern-desktop-applications-with-windows-presentation-foundation.md)

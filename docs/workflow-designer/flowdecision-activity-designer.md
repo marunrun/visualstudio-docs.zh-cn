@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 79e405f82bcf33bc01ad07f1092879c17dec5849
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "76111435"
 ---
 # <a name="flowdecision-activity-designer"></a>FlowDecision 活动设计器
@@ -27,23 +27,23 @@ ms.locfileid: "76111435"
 
 ### <a name="using-the-flowdecision-designer"></a>使用 FlowDecision 设计器
 
-**FlowDecision**设计器可在 "**工具箱**" 的 "**流程图**" 类别中找到，可通过单击工作流设计器上的 "**工具箱**" 选项卡进行访问。 或者，从 "**视图**" 菜单中选择 **"工具箱**"，或按**Ctrl**+**Alt**+**X**。
+**FlowDecision**设计器可在 "**工具箱**" 的 "**流程图**" 类别中找到，可通过单击工作流设计器上的 "**工具箱**" 选项卡进行访问。 或者，从 "**视图**" 菜单中选择 **"工具箱**"，或按**Ctrl** + **Alt** + **X**。
 
-可以将 " **FlowDecision** " 设计器从 "**工具箱**" 拖放到 "**流程图**" 活动设计器内的工作流设计器图面上。 这**会在 <xref:System.Activities.Statements.Flowchart> 活动中创建**一个标记为 "<xref:System.Activities.Statements.FlowDecision>" 的标记。 将鼠标悬停在设计器上，将显示两个分支的**True**和**False**方控点。
+可以将 " **FlowDecision** " 设计器从 " **工具箱** " 拖放到 " **流程图** " 活动设计器内的工作流设计器图面上。 这会在 <xref:System.Activities.Statements.FlowDecision> 活动中创建标记为的 **决策** <xref:System.Activities.Statements.Flowchart> 。 将鼠标悬停在设计器上，将显示两个分支的 **True** 和 **False** 方控点。
 
-将**FlowDecision**设计器和其他设计器拖到**Flowchart**后，可将节点链接在一起以指定执行顺序。 若要在源节点（包括**FlowDecision**的**True**和**False**分支）和目标节点之间创建链接，请将鼠标悬停在源节点的设计器上，并在其每一侧显示正方形控点。 单击这些正方形处理框之一并按下鼠标按钮将其拖到当鼠标悬停在目标节点上时该节点周围以类似方式显示的处理框之一。 松开鼠标按钮，此时将在这两个节点之间创建一个链接，表示为从源设计器指向目标设计器的箭头。
+将 **FlowDecision** 设计器和其他设计器拖到 **Flowchart**后，可将节点链接在一起以指定执行顺序。 若要在源节点 (**) 和目标**节点之间创建链接**False** ，请将鼠标**FlowDecision**悬停在源节点的设计器上，并在其每一侧显示正方形控点。 单击这些正方形处理框之一并按下鼠标按钮将其拖到当鼠标悬停在目标节点上时该节点周围以类似方式显示的处理框之一。 松开鼠标按钮，此时将在这两个节点之间创建一个链接，表示为从源设计器指向目标设计器的箭头。
 
-通过单击提示文本 "输入 VB 表达式" 的位置，可以在 "**属性**" 窗口的 "**条件**" 框中键入指明 <xref:System.Activities.Statements.FlowDecision.Condition%2A> 的表达式。
+<xref:System.Activities.Statements.FlowDecision.Condition%2A>通过单击提示文本 "输入 VB 表达式" 的位置，可以在 "**属性**" 窗口的 "**条件**" 框中键入指示的表达式。
 
 ### <a name="the-flowdecision-properties"></a>FlowDecision 属性
 
 下表列出 <xref:System.Activities.Statements.FlowDecision> 属性并说明如何在设计器中使用它们。 这些属性可以在属性网格中或设计器图面上进行编辑。
 
-|属性名|必需|用量|
+|属性名称|必选|使用情况|
 |-|--------------|-|
-|<xref:System.Activities.Statements.FlowDecision.Condition%2A>|True|确定流控制所采用的路径的条件。|
-|<xref:System.Activities.Statements.FlowDecision.True%2A>|False|<xref:System.Activities.Statements.FlowDecision.Condition%2A> 成立时流控制所采用的路径。|
-|<xref:System.Activities.Statements.FlowDecision.False%2A>|False|<xref:System.Activities.Statements.FlowDecision.Condition%2A> 不成立时流控制所采用的路径。|
+|<xref:System.Activities.Statements.FlowDecision.Condition%2A>|正确|确定流控制所采用的路径的条件。|
+|<xref:System.Activities.Statements.FlowDecision.True%2A>|错误|<xref:System.Activities.Statements.FlowDecision.Condition%2A> 成立时流控制所采用的路径。|
+|<xref:System.Activities.Statements.FlowDecision.False%2A>|错误|<xref:System.Activities.Statements.FlowDecision.Condition%2A> 不成立时流控制所采用的路径。|
 
 ## <a name="see-also"></a>另请参阅
 

@@ -18,10 +18,10 @@ author: corob-msft
 ms.author: corob
 manager: jillfra
 ms.openlocfilehash: 31eda172d21fdce5ca3d6e03b91955318adb623d
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85533570"
 ---
 # <a name="analyzing-cc-code-quality-by-using-code-analysis"></a>使用代码分析来分析 C/C++ 代码质量
@@ -31,7 +31,7 @@ ms.locfileid: "85533570"
   
 ## <a name="in-this-section"></a>本节内容  
   
-|Title|描述|  
+|Title|说明|  
 |-|-|  
 |[C/c + + 代码分析概述](../code-quality/code-analysis-for-c-cpp-overview.md)|了解代码分析工具的功能。|  
 |[快速入门：C/C++ 代码分析](../code-quality/quick-start-code-analysis-for-c-cpp.md)|了解 C/C++ 代码分析的基础知识。|  

@@ -15,24 +15,24 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a585aa64fec565a58a3af245ff3d3beaa9dc8af3
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "84173923"
 ---
 # <a name="design-warnings"></a>设计警告
 
-设计警告支持遵循[.NET Framework 设计准则](/dotnet/standard/design-guidelines/)。
+设计警告支持遵循 [.NET Framework 设计准则](/dotnet/standard/design-guidelines/)。
 
 ## <a name="in-this-section"></a>本节内容
 
-| 规则 | 说明 |
+| 规则 | 描述 |
 | - | - |
 | [CA1000:不要在泛型类型中声明静态成员](../code-quality/ca1000.md) | 调用泛型类型的静态成员时，必须指定该类型的类型参数。 当调用不支持推理的泛型实例成员时，必须指定该成员的类型参数。 在上述两种情况下，用于指定类型自变量的语法不同，但很容易混淆。 |
 | [CA1001:具有可释放字段的类型应该是可释放的](../code-quality/ca1001.md) | 类声明并实现属于 IDisposable 类型并且类不实现 IDisposable 的实例字段。 声明 IDisposable 字段的类间接拥有非托管资源，并且应该实现 IDisposable 接口。 |
-| [CA1002:不要公开泛型列表](../code-quality/ca1002.md) | < （of \<(T> ） >）是一个泛型集合，设计用于性能，而不是继承。 因此，List 不包含任何虚拟成员。 应改为公开针对继承设计的泛型集合。 |
-| [CA1003:使用泛型事件处理程序实例](../code-quality/ca1003.md) | 类型包含一个返回 void 的委托，该委托的签名包含两个参数（第一个对象，第二个参数是可分配给 EventArgs 的类型），而包含的程序集目标 .NET Framework 2.0。 |
+| [CA1002:不要公开泛型列表](../code-quality/ca1002.md) | \<(T>) # A1) 的< (是为性能而不是继承而设计的泛型集合。 因此，List 不包含任何虚拟成员。 应改为公开针对继承设计的泛型集合。 |
+| [CA1003:使用泛型事件处理程序实例](../code-quality/ca1003.md) | 类型包含一个返回 void 的委托，该委托的签名包含 (第一个对象的两个参数，第二个参数包含可分配给 EventArgs) 的类型，并且包含的程序集目标 .NET Framework 2.0。 |
 | [CA1004:泛型方法应提供类型参数](../code-quality/ca1004.md) | 推理是指由传递给泛型方法的自变量类型来确定该方法的类型参数，而不是显式指定类型参数。 若要启用推理，泛型方法的参数签名必须包含与该方法的类型参数属于相同类型的参数。 在这种情况下，不必指定类型参数。 如果对所有类型参数使用推理，则调用泛型和非泛型实例方法的语法完全相同;这简化了泛型方法的可用性。 |
 | [CA1005:避免泛型类型的参数过多](../code-quality/ca1005.md) | 泛型类型包含的类型参数越多，越难以知道并记住每个类型参数各代表什么。 通常情况下，有一种类型参数，如在列表中 \<T> ，以及在某些情况下有两个类型参数，如字典中所示 \<TKey, TValue> 。 但是，如果存在两个以上的类型参数，则大多数用户都会感到过于困难。 |
 | [CA1006:不要将泛型类型嵌套在成员签名中](../code-quality/ca1006.md) | 嵌套类型参数是一个类型参数，也是一个泛型类型。 若要调用签名包含嵌套类型参数的成员，用户必须实例化一个泛型类型，并将此类型传递到另一个泛型类型的构造函数。 所需的过程和语法很复杂，应当避免。 |
@@ -76,7 +76,7 @@ ms.locfileid: "84173923"
 | [CA1049:拥有本机资源的类型应是可释放的](../code-quality/ca1049.md) | 分配非托管资源的类型应该实现 IDisposable，以使调用方可以根据需要释放这些资源，并缩短持有这些资源的对象的生存期。 |
 | [CA1050:在命名空间中声明类型](../code-quality/ca1050.md) | 应在命名空间内声明类型以避免名称冲突，并作为一种在对象层次结构中组织相关类型的方式。 |
 | [CA1051:不要声明可见实例字段](../code-quality/ca1051.md) | 字段的主要用途应是作为实现的详细信息。 字段应为 private 或 internal，并应通过使用属性公开这些字段。 |
-| [CA1052:应密封静态容器类型](../code-quality/ca1052.md) | 公共或受保护类型仅包含静态成员，并且不是使用 sealed （c #）或 NotInheritable （Visual Basic）修饰符声明的。 应使用 sealed 修饰符标记不希望被继承的类型，以免将其用作基类型。 |
+| [CA1052:应密封静态容器类型](../code-quality/ca1052.md) | 公共或受保护类型仅包含静态成员，并且不是使用密封的 (c # ) 或 NotInheritable (Visual Basic) 修饰符声明的。 应使用 sealed 修饰符标记不希望被继承的类型，以免将其用作基类型。 |
 | [CA1053:静态容器类型不应具有构造函数](../code-quality/ca1053.md) | 公共或嵌套公共类型只声明了静态成员，但具有公共或受保护的默认构造函数。 由于调用静态成员不需要类型的示例，因此没必要使用构造函数。 为安全起见，字符串重载应使用字符串自变量调用统一资源标识符 (URI) 重载。 |
 | [CA1054:URI 参数不应为字符串](../code-quality/ca1054.md) | 如果某方法采用 URI 的字符串表示形式，则应提供采用 URI 类的实例的相应重载，该重载以安全的方式提供这些服务。 |
 | [CA1055:URI 返回值不应是字符串](../code-quality/ca1055.md) | 此规则假定该方法返回 URI。 URI 的字符串表示形式容易导致分析和编码错误，并且可造成安全漏洞。 System.Uri 类以一种安全的方式提供这些服务。 |
@@ -93,6 +93,6 @@ ms.locfileid: "84173923"
 | [CA1066：重写 Equals 时实现 IEquatable](../code-quality/ca1066.md) | 值类型重写 <xref:System.Object.Equals%2A> 方法，但不实现 <xref:System.IEquatable%601> 。 |
 | [CA1067：实现 IEquatable 时重写 Equals](../code-quality/ca1067.md) | 类型实现 <xref:System.IEquatable%601> ，但不重写 <xref:System.Object.Equals%2A> 方法。 |
 | [CA1068:CancellationToken 参数必须最后出现](../code-quality/ca1068.md) | 方法具有一个不是最后一个参数的 CancellationToken 参数。 |
-| [CA1069：枚举不应包含重复值](../code-quality/ca1069.md) | 枚举具有多个显式分配相同常数值的成员。 |
-| [CA1070：不要将事件字段声明为虚拟](../code-quality/ca1070.md) | [类似字段的事件](/dotnet/csharp/language-reference/language-specification/classes#field-like-events)被声明为 virtual。 |
+| [CA1069:枚举不得具有重复值](../code-quality/ca1069.md) | 枚举具有多个显式分配相同常数值的成员。 |
+| [CA1070:不要将事件字段声明为“虚拟”](../code-quality/ca1070.md) | [类似字段的事件](/dotnet/csharp/language-reference/language-specification/classes#field-like-events)被声明为 virtual。 |
 | [CA2210:程序集应具有有效的强名称](../code-quality/ca2210.md) | 强名称可避免客户端在不知情的情况下加载已被篡改的程序集。 除非极为有限的几种情况，否则不应部署没有强名称的程序集。 如果共享或发布未正确签名的程序集，则该程序集可能被篡改，公共语言运行时可能不会加载该程序集；而用户可能必须在他/她的计算机上禁用验证。 |

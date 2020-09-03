@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 5059a15c483f648c2248321c7ba8271a634d0c69
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85536092"
 ---
 # <a name="vsix-color-compiler"></a>VSIX 颜色编译器
@@ -50,10 +50,10 @@ Visual Studio Extension Color 编译器工具是一个控制台应用程序，�
 </Theme>
 ```
 
-|**特性**|**定义**|
+|**Attribute**|**定义**|
 |-|-|
-|“属性”|请求主题的名称|
-|GUID|请求主题的 GUID （必须匹配 GUID 格式）|
+|名称|请求主题的名称|
+|GUID|请求主题的 GUID (必须与 GUID 格式匹配) |
 
  为 Visual Studio 创建自定义颜色时，需要为以下主题定义这些颜色。 如果特定主题没有任何颜色，Visual Studio 会尝试从浅色主题中加载缺少的颜色。
 
@@ -74,10 +74,10 @@ Visual Studio Extension Color 编译器工具是一个控制台应用程序，�
  </Category>
 ```
 
-|**特性**|**定义**|
+|**Attribute**|**定义**|
 |-|-|
-|“属性”|请求类别名称|
-|GUID|请求类别的 GUID （必须匹配 GUID 格式）|
+|名称|请求类别名称|
+|GUID|请求类别的 GUID (必须与 GUID 格式匹配) |
 
  **颜色**
 
@@ -90,9 +90,9 @@ Visual Studio Extension Color 编译器工具是一个控制台应用程序，�
  </Color>
 ```
 
-|**特性**|**定义**|
+|**Attribute**|**定义**|
 |-|-|
-|“属性”|请求颜色的名称|
+|名称|请求颜色的名称|
 
  **背景和/或前台**
 
@@ -103,10 +103,10 @@ Visual Studio Extension Color 编译器工具是一个控制台应用程序，�
 <Foreground Type="type" Source="int" />
 ```
 
-|**特性**|**定义**|
+|**Attribute**|**定义**|
 |-|-|
-|类型|请求颜色的类型。 该参数可以是下列值之一：<br /><br /> *CT_INVALID：* 颜色无效或未设置。<br /><br /> *CT_RAW：* 原始 ARGB 值。<br /><br /> *CT_COLORINDEX：* 请勿使用。<br /><br /> *CT_SYSCOLOR：* SysColor 中的 Windows 系统颜色。<br /><br /> *CT_VSCOLOR：*__VSSYSCOLOREX 中的 Visual Studio 颜色。<br /><br /> *CT_AUTOMATIC：* 自动颜色。<br /><br /> *CT_TRACK_FOREGROUND：* 请勿使用。<br /><br /> *CT_TRACK_BACKGROUND：* 请勿使用。|
-|源|请求用十六进制表示的颜色的值|
+|类型|请求颜色的类型。 该参数可以是下列值之一：<br /><br /> *CT_INVALID：* 颜色无效或未设置。<br /><br /> *CT_RAW：* 原始 ARGB 值。<br /><br /> *CT_COLORINDEX：* 请勿使用。<br /><br /> *CT_SYSCOLOR：* SysColor 中的 Windows 系统颜色。<br /><br /> *CT_VSCOLOR：* __VSSYSCOLOREX 中的 Visual Studio 颜色。<br /><br /> *CT_AUTOMATIC：* 自动颜色。<br /><br /> *CT_TRACK_FOREGROUND：* 请勿使用。<br /><br /> *CT_TRACK_BACKGROUND：* 请勿使用。|
+|Source|请求用十六进制表示的颜色的值|
 
  Type 属性中的架构支持 __VSCOLORTYPE 枚举支持的所有值。 但是，我们建议你仅使用 CT_RAW 和 CT_SYSCOLOR。
 
@@ -133,10 +133,10 @@ Visual Studio Extension Color 编译器工具是一个控制台应用程序，�
 
  **参数**
 
-|**交换机名称**|**备注**|**必需或可选**|
+|**交换机名称**|**备注**|**必需还是可选**|
 |-|-|-|
-|未命名（.xml 文件）|这是第一个未命名的参数，是要转换的 XML 文件的路径。|必需|
-|未命名（.pkgdef 文件）|这是第二个未命名的参数，是生成的 .pkgdef 文件的输出路径。<br /><br /> 默认值： \<XML Filename> . .pkgdef|可选|
+|未命名的 ( .xml 文件) |这是第一个未命名的参数，是要转换的 XML 文件的路径。|必需|
+|未命名的 ( .pkgdef 文件) |这是第二个未命名的参数，是生成的 .pkgdef 文件的输出路径。<br /><br /> 默认值： \<XML Filename> . .pkgdef|可选|
 |/noLogo|设置此标志将停止打印产品和版权信息。|可选|
 |/?|打印出帮助信息。|可选|
 |/help|打印出帮助信息。|可选|
@@ -147,7 +147,7 @@ Visual Studio Extension Color 编译器工具是一个控制台应用程序，�
 
 - VsixColorCompiler D:\xml\colors.xml/noLogo
 
-## <a name="notes"></a>备注
+## <a name="notes"></a>说明
 
 - 此工具需要安装最新版本的 VC + + 运行时。
 

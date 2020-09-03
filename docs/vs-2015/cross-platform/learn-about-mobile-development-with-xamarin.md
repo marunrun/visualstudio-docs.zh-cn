@@ -7,10 +7,10 @@ caps.latest.revision: 14
 ms.author: crdun
 manager: crdun
 ms.openlocfilehash: a362bd4eef2a48667c67c03e940e213fc960418b
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75919007"
 ---
 # <a name="learn-about-mobile-development-with-xamarin"></a>了解关于使用 Xamarin 进行移动开发的信息
@@ -61,13 +61,13 @@ ms.locfileid: "75919007"
   
 - 使用 Xamarin.Forms 生成可跨平台提供相同 UI 和功能（例如登录、联系人窗体和搜索结果）的通用屏幕。  
   
-- 使用 Xamarin.Forms 中的各种自定义功能在每个平台上的基础上调整 UI。 {2&gt;其中包括既可通过代码又可通过 XAML 使用的 OnPlatform API，用于创建自定义视图、扩展现有呈现器以及创建自定义呈现器。&lt;2}  
+- 使用 Xamarin.Forms 中的各种自定义功能在每个平台上的基础上调整 UI。 其中包括既可通过代码又可通过 XAML 使用的 OnPlatform API，用于创建自定义视图、扩展现有呈现器以及创建自定义呈现器。  
   
-- {2&gt;如有必要，使用 Xamarin 本机构建屏幕，构建的屏幕使用每个平台唯一的 UI 特性（例如使用本机相机捕获与图像操作的屏幕）。&lt;2}  
+- 如有必要，使用 Xamarin 本机构建屏幕，构建的屏幕使用每个平台唯一的 UI 特性（例如使用本机相机捕获与图像操作的屏幕）。  
   
   我们建议始终从 Xamarin.Forms 解决方案开始设置跨平台共享的 UI 代码，并使用自定义功能进行特定于平台的调整。 如果需要完全特定于平台的屏幕，你可以使用 Xamarin 本机单独添加它们。  
   
-  了解更多信息：  
+  若要了解更多信息，请参阅以下内容：  
   
 1. [Xamarin.Forms](/xamarin/xamarin-forms/) (xamarin.com) 提供了 Xamarin.Forms 与本机 UI 层（即 Xamarin.iOS 和 Xamarin.Android）的简要概述以及各自的利弊。  
   
@@ -86,15 +86,15 @@ ms.locfileid: "75919007"
   
 1. **Android 模拟器。** 根据你使用的 Windows 版本，我们建议使用 Microsoft 的 Visual Studio Android 模拟器或 Xamarin 播放器，它们均能提供优越的性能并支持各种设备功能：  
   
-    - **Windows 8 + 计算机：** 我们强烈建议使用随 Visual Studio 一起安装的 Microsoft [Visual Studio Android 模拟器](https://www.visualstudio.com/features/msft-android-emulator-vs.aspx)。  [Visual Studio Android 模拟器](https://channel9.msdn.com/events/Visual-Studio/Connect-event-2015/711) 视频（第 9 频道，5 分 55 秒）提供了相关概述与演示。  
+    - **Windows 8 + 计算机：** 我们强烈建议使用随 Visual Studio 一起安装的 Microsoft [Visual Studio Android 模拟器](https://www.visualstudio.com/features/msft-android-emulator-vs.aspx)。  [适用于 Android 的 Visual Studio 仿真程序](https://channel9.msdn.com/events/Visual-Studio/Connect-event-2015/711)视频 (Channel9，5m55s) 提供概述和演示。  
   
     - **Windows 7 或更低版本/在 Mac OS X 上运行的 Windows**：请使用 [Xamarin Android 播放器](/xamarin/android/deploy-test/debugging/debug-on-emulator?tabs=windows) (xamarin.com)。  
   
 2. **Apple 的 iOS 模拟器。** 有关详细信息，请参阅 [iOS 模拟器入门](https://developer.apple.com/library/prerelease/content/documentation/IDEs/Conceptual/iOS_Simulator_Guide/GettingStartedwithiOSSimulator/GettingStartedwithiOSSimulator.html#//apple_ref/doc/uid/TP40012848-CH5-SW1) (apple.com)。  
   
-3. **Microsoft 的 Windows Phone 仿真程序。** 若要了解详细信息，请参阅 [适用于 Windows Phone 8 的 Windows Phone 模拟器](https://msdn.microsoft.com/library/dn632391.aspx)。  
+3. **Microsoft 的 Windows Phone 模拟器。** 若要了解详细信息，请参阅 [适用于 Windows Phone 8 的 Windows Phone 模拟器](https://msdn.microsoft.com/library/dn632391.aspx)。  
   
-## <a name="components"></a> Deeper Dive: Xamarin Components  
+## <a name="deeper-dive-xamarin-components"></a><a name="components"></a> 深入探讨： Xamarin 组件  
  *10 分钟*  
   
- Xamarin 应用可通过 Xamarin 组件使用许多扩展功能。 可以在 [http://components.xamarin.com/](/xamarin/cross-platform/troubleshooting/component-nuget?tabs=windows) 上下载完整目录，其中包括其他 UI 控件、身份验证和 Microsoft Azure 等各种云服务以及其他更多部分。
+ Xamarin 应用可通过 Xamarin 组件使用许多扩展功能。 你可以在上找到可供下载的完整目录 [http://components.xamarin.com/](/xamarin/cross-platform/troubleshooting/component-nuget?tabs=windows) ，其中包括其他 UI 控件的组件、身份验证、各种云服务（如 Microsoft Azure）等。
