@@ -22,10 +22,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 209aac56f4648554ce619cbe31cef19a8ab1fed7
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85531789"
 ---
 # <a name="publishing-clickonce-applications"></a>发布 ClickOnce 应用程序
@@ -46,12 +46,12 @@ ms.locfileid: "85531789"
   
 - 更新频率 - 应用程序检查新更新的频率。  
   
-  有关详细信息，请参阅[如何：使用发布向导发布 ClickOnce 应用程序](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)。  
+  有关详细信息，请参阅 [如何：使用发布向导发布 ClickOnce 应用程序](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)。  
   
 ## <a name="publish-page"></a>“发布”页面  
  “项目设计器” **** 上的“发布” **** 页面用于针对 ClickOnce 部署配置属性。 下表列出主题  
   
-|Title|描述|  
+|Title|说明|  
 |-----------|-----------------|  
 |[如何：指定 Visual Studio 复制文件的位置](../deployment/how-to-specify-where-visual-studio-copies-the-files.md)|介绍如何设置 Visual Studio 放置应用程序文件和清单的位置。|  
 |[如何：指定最终用户将从中进行安装的位置](../deployment/how-to-specify-the-location-where-end-users-will-install-from.md)|介绍如何设置用户可以下载和安装应用程序的位置。|  
@@ -59,23 +59,23 @@ ms.locfileid: "85531789"
 |[如何：设置 ClickOnce 发布版本](../deployment/how-to-set-the-clickonce-publish-version.md)|介绍如何设置 ClickOnce“发布版本”属性，该属性确定发布的应用程序是否被视为更新****。|  
 |[如何：自动递增 ClickOnce 发布版本](../deployment/how-to-automatically-increment-the-clickonce-publish-version.md)|介绍如何在每次发布应用程序时自动递增“发布版本”的版本号****。|  
   
- 有关详细信息，请参阅["发布" 页、项目设计器](../ide/reference/publish-page-project-designer.md)  
+ 有关详细信息，请参阅 ["发布" 页、项目设计器](../ide/reference/publish-page-project-designer.md)  
   
 ### <a name="application-files-dialog-box"></a>“应用程序文件”对话框  
  在此对话框中，你可以指定如何在项目中对文件分类，以实现发布、动态下载和更新。 它包含一个网格，该网格中列出默认未排除或有下载组的项目文件。  
   
- 若要排除文件、将文件标记为数据文件或系统必备组件，并在 Visual Studio UI 中创建用于条件安装的文件组，请参阅[如何：指定由 ClickOnce 发布的文件](../deployment/how-to-specify-which-files-are-published-by-clickonce.md)。 你还可以通过使用 Mage.exe 标记数据文件。 有关详细信息，请参阅 [如何：将数据文件包括到 ClickOnce 应用程序中](../deployment/how-to-include-a-data-file-in-a-clickonce-application.md)。  
+ 若要排除文件、将文件标记为数据文件或系统必备组件，并在 Visual Studio UI 中创建用于条件安装的文件组，请参阅 [如何：指定由 ClickOnce 发布的文件](../deployment/how-to-specify-which-files-are-published-by-clickonce.md)。 你还可以通过使用 Mage.exe 标记数据文件。 有关详细信息，请参阅[如何：将数据文件添加到 ClickOnce 应用程序中](../deployment/how-to-include-a-data-file-in-a-clickonce-application.md)。  
   
 ### <a name="prerequisites-dialog-box"></a>“系统必备”对话框  
  此对话框指定要安装的必备组件以及其安装方式。 有关详细信息，请参阅[如何：使用 ClickOnce 应用程序和先决条件安装必备组件](../deployment/how-to-install-prerequisites-with-a-clickonce-application.md)[对话框](../ide/reference/prerequisites-dialog-box.md)。  
   
 ### <a name="application-updates-dialog-box"></a>“应用程序更新”对话框  
- 此对话框指定应如何检查应用程序安装的更新。 有关详细信息，请参阅[如何：管理 ClickOnce 应用程序的更新](../deployment/how-to-manage-updates-for-a-clickonce-application.md)。  
+ 此对话框指定应如何检查应用程序安装的更新。 有关详细信息，请参阅 [如何：管理 ClickOnce 应用程序的更新](../deployment/how-to-manage-updates-for-a-clickonce-application.md)。  
   
 ### <a name="publish-options-dialog-box"></a>“发布选项”对话框  
  “发布选项”对话框指定应用程序的部署选项。  
   
-|Title|描述|
+|Title|说明|
 |-|-|  
 |[如何：更改 ClickOnce 应用程序的发布语言](../deployment/how-to-change-the-publish-language-for-a-clickonce-application.md)|介绍如何指定与本地化版本匹配的语言和区域性。|  
 |[如何：指定 ClickOnce 应用程序的“开始”菜单名称](../deployment/how-to-specify-a-start-menu-name-for-a-clickonce-application.md)|介绍如何更改 ClickOnce 应用程序的显示名称。|  
@@ -87,7 +87,7 @@ ms.locfileid: "85531789"
   
 ## <a name="related-topics"></a>相关主题  
   
-|Title|描述|  
+|Title|说明|  
 |-----------|-----------------|  
 |[如何：为 ClickOnce 应用程序创建文件关联](../deployment/how-to-create-file-associations-for-a-clickonce-application.md)|介绍如何向 ClickOnce 应用程序添加文件名称扩展支持。|  
 |[如何：在联机 ClickOnce 应用程序中检索查询字符串信息](../deployment/how-to-retrieve-query-string-information-in-an-online-clickonce-application.md)|演示如何检索在用于运行 ClickOnce 应用程序的 URL 中传递的参数。|  

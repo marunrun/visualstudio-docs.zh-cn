@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: e182d921e8ffb019d2044699e3a9c333492497b0
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85531556"
 ---
 # <a name="shader-designer-examples"></a>着色器设计器示例
@@ -23,7 +23,7 @@ ms.locfileid: "85531556"
 
 ## <a name="related-topics"></a>相关主题
 
-|Title|描述|
+|Title|说明|
 |-|-|
 |[如何：创建基本颜色着色器](../designers/how-to-create-a-basic-color-shader.md)|演示将常量颜色应用于对象的着色器。|
 |[如何：创建基本朗伯着色器](../designers/how-to-create-a-basic-lambert-shader.md)|演示将经典朗伯照明模型应用于对象的着色器。|

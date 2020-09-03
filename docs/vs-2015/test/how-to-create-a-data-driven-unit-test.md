@@ -16,10 +16,10 @@ caps.latest.revision: 35
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: b9dc5ad44a73f517b91562209abfab8b0b3e8d4a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72660525"
 ---
 # <a name="how-to-create-a-data-driven-unit-test"></a>如何：创建数据驱动的单元测试
@@ -39,7 +39,7 @@ ms.locfileid: "72660525"
 
   - [指定 DataSourceAttribute](../test/how-to-create-a-data-driven-unit-test.md#BKMK_Specifying_the_DataSourceAttribute)
 
-  - [使用 TestContext.DataRow 访问数据](../test/how-to-create-a-data-driven-unit-test.md#BKMK_Using_TestContext_DataRow_to_access_the_data)
+  - [使用 TestContext 访问数据](../test/how-to-create-a-data-driven-unit-test.md#BKMK_Using_TestContext_DataRow_to_access_the_data)
 
 - [运行测试并查看结果](../test/how-to-create-a-data-driven-unit-test.md#BKMK_Running_the_test_and_viewing_results)
 
@@ -53,10 +53,10 @@ ms.locfileid: "72660525"
 
 4. 使用 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.DataRow%2A> 索引器属性检索测试中使用的值。
 
-## <a name="BKMK_The_method_under_test"></a>待测试的方法
+## <a name="the-method-under-test"></a><a name="BKMK_The_method_under_test"></a> 受测方法
  例如，假定我们已创建：
 
-1. 一个名为 `MyBank` 的解决方案，此解决方案接受并处理不同类型的帐户的交易。
+1. 一种名为 `MyBank` 的解决方案，此解决方案接受并处理不同类型的帐户的事务。
 
 2. `MyBank` 中名为 `BankDb` 的项目，此项目管理帐户的交易。
 
@@ -80,7 +80,7 @@ public int AddIntegers(int first, int second)
 }
 ```
 
-## <a name="BKMK_Creating_a_data_source"></a>创建数据源
+## <a name="creating-a-data-source"></a><a name="BKMK_Creating_a_data_source"></a> 创建数据源
  若要测试 `AddIntegers` 方法，需创建数据源，该数据源指定参数的值的范围和希望返回的总和。 在本示例中，创建名为 `MathsData` 的 Sql Compact 数据库和包含以下列名和值的名为 `AddIntegersData` 的表
 
 |FirstNumber|SecondNumber|Sum|
@@ -89,7 +89,7 @@ public int AddIntegers(int first, int second)
 |1|1|2|
 |2|-3|-1|
 
-## <a name="BKMK_Adding_a_TestContext_to_the_test_class"></a>向测试类添加 TestContext
+## <a name="adding-a-testcontext-to-the-test-class"></a><a name="BKMK_Adding_a_TestContext_to_the_test_class"></a>向测试类添加 TestContext
  单元测试框架创建  `TestContext` 对象来存储数据驱动测试的数据源信息。 然后，框架将此对象设置为我们创建的 `TestContext` 属性的值。
 
 ```
@@ -105,7 +105,7 @@ public TestContext TestContext
 
  在测试方法中，通过 `TestContext` 的 `DataRow` 索引器属性来访问数据。
 
-## <a name="BKMK_Writing_the_test_method"></a>编写测试方法
+## <a name="writing-the-test-method"></a><a name="BKMK_Writing_the_test_method"></a>编写测试方法
  `AddIntegers` 的测试方法很简单。 针对数据源中的每一行，将 **FirstNumber** 和 **SecondNumber** 列值作为参数来调用 `AddIntegers`，并根据 **Sum** 列的值来验证返回值：
 
 ```
@@ -131,7 +131,7 @@ public void AddIntegers_FromDataSourceTest()
 
  请注意，`Assert` 方法包括一条消息，此消息显示失败的迭代的值 `x` 和 `y`。 默认情况下，失败测试的详细信息中已包含声明的值 `expected` 和 `actual`。
 
-### <a name="BKMK_Specifying_the_DataSourceAttribute"></a>指定 DataSourceAttribute
+### <a name="specifying-the-datasourceattribute"></a><a name="BKMK_Specifying_the_DataSourceAttribute"></a>指定 DataSourceAttribute
  `DataSource` 属性指定数据源的连接字符串和测试方法中使用的表的名称。 连接字符串中的确切信息可能有所不同，具体取决于你使用的数据源类型。 在本例中，我们使用 SqlServerCe 数据库。
 
 ```
@@ -165,7 +165,7 @@ public void AddIntegers_FromDataSourceTest()
     )]
 ```
 
-### <a name="BKMK_Using_TestContext_DataRow_to_access_the_data"></a>使用 TestContext.DataRow 访问数据
+### <a name="using-testcontextdatarow-to-access-the-data"></a><a name="BKMK_Using_TestContext_DataRow_to_access_the_data"></a>使用 TestContext.DataRow 访问数据
  若要访问 `AddIntegersData` 表中的数据，请使用 `TestContext.DataRow` 索引器。 `DataRow` 是 <xref:System.Data.DataRow> 对象，因此我们根据索引或列名称检索列的值。 由于值作为对象返回，因此需要将它们转换为合适的类型：
 
 ```
@@ -173,16 +173,16 @@ int x = Convert.ToInt32(TestContext.DataRow["FirstNumber"]);
 
 ```
 
-## <a name="BKMK_Running_the_test_and_viewing_results"></a>运行测试并查看结果
- 完成测试方法的编写后，生成测试项目。 测试方法显示在测试资源管理器窗口中的“未运行的测试”组中。 当运行、编写以及重新运行测试时，测试资源管理器在“失败的测试”、“通过的测试”和“未运行的测试”组中显示结果。 可以选择“运行全部”来运行所有测试，或选择“运行...”来选择要运行的测试的子集。
+## <a name="running-the-test-and-viewing-results"></a><a name="BKMK_Running_the_test_and_viewing_results"></a>运行测试并查看结果
+ 完成测试方法的编写后，生成测试项目。 测试方法显示在测试资源管理器窗口中的“未运行的测试”**** 组中。 当运行、编写以及重新运行测试时，测试资源管理器在“失败的测试”、“通过的测试”和“未运行的测试”组中显示结果。************ 可以选择“运行全部”**** 来运行所有测试，或选择“运行...”**** 来选择要运行的测试的子集。
 
  当运行测试时，位于资源管理器顶部的测试结果栏是动态显示的。 在测试运行结束时，如果所有测试均通过，则结果栏为绿色；如果有任何测试失败，结果栏为红色。 测试运行的摘要显示在测试资源管理器底部的详细信息窗格中。 选择一个测试以在底部窗格中查看该测试的详细信息。
 
- 如果在本示例中运行 `AddIntegers_FromDataSourceTest` 方法，则结果栏变为红色，并且测试方法移动到“失败的测试”。如果数据源中的任何迭代方法失败，则数据驱动测试也会失败。 在测试资源管理器窗口中选择失败的数据驱动测试时，详细信息窗格将显示由数据行索引标识的每个迭代的结果。 在本示例中 `AddIntegers` 算法好像没有正确处理负值。
+ 如果在本示例中运行 `AddIntegers_FromDataSourceTest` 方法，则结果栏变为红色，并且测试方法移动到“失败的测试”****。如果数据源中的任何迭代方法失败，则数据驱动测试也会失败。 在测试资源管理器窗口中选择失败的数据驱动测试时，详细信息窗格将显示由数据行索引标识的每个迭代的结果。 在本示例中 `AddIntegers` 算法好像没有正确处理负值。
 
- 当更正了要测试的方法，并重新运行测试，则结果栏变为绿色，并且测试方法移动到“通过的测试”组中。
+ 当更正了要测试的方法，并重新运行测试，则结果栏变为绿色，并且测试方法移动到“通过的测试”**** 组中。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute?displayProperty=fullName> <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext?displayProperty=fullName>
  <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.DataRow%2A?displayProperty=fullName>
  <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert?displayProperty=fullName>

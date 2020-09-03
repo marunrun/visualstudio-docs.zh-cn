@@ -1,5 +1,5 @@
 ---
-title: DA0001：将 StringBuilder 用于串联 | Microsoft Docs
+title: DA0001：使用 StringBuilder 进行串联 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -15,18 +15,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 5e2e52b0688f69fd154425887077c40fc3e6c265
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85531399"
 ---
 # <a name="da0001-use-stringbuilder-for-concatenations"></a>DA0001：将 StringBuilder 用于串联
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-有关 Visual Studio 的最新文档，请参阅[DA0001：使用 StringBuilder 进行串联](/visualstudio/profiling/da0001-use-stringbuilder-for-concatenations)。  
+有关 Visual Studio 的最新文档，请参阅 [DA0001：使用 StringBuilder 进行串联](/visualstudio/profiling/da0001-use-stringbuilder-for-concatenations)。  
   
-|项|值|  
+|项|“值”|  
 |-|-|  
 |规则 ID|DA0001|  
 |类别|.NET Framework 使用情况|  
@@ -43,6 +43,6 @@ ms.locfileid: "85531399"
  StringBuilder 类是可变的对象，与 System.String 不同，StringBuilder 上修改此类的实例的大多数方法都将返回对该相同实例的引用。 可以插入字符或将文本追加到 StringBuilder 实例，并删除或替换实例中的字符，而无需分配新的实例和删除原始实例。  
   
 ## <a name="how-to-investigate-a-warning"></a>如何调查警告  
- 双击“错误列表”窗口中的消息，导航到采样分析数据的[函数详细信息视图](../profiling/function-details-view.md)。 查找程序中使用字符串串联最频繁的部分。 请对复杂的字符串操作使用 StringBuilder 类，包括频繁使用的字符串串联操作。  
+ 双击“错误列表”窗口中的消息，导航到采样分析数据的函数详细信息视图。 查找程序中使用字符串串联最频繁的部分。 请对复杂的字符串操作使用 StringBuilder 类，包括频繁使用的字符串串联操作。  
   
  若要深入了解如何使用字符串，请参阅 Microsoft 模式和做法库中[第 5 章 - 提高托管代码性能](https://msdn.microsoft.com/library/ms998547.aspx)的[字符串操作](https://msdn.microsoft.com/library/ms998547.aspx#scalenetchapt05_topic26)部分。
