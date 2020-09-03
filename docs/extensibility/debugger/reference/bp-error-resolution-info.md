@@ -1,5 +1,5 @@
 ---
-title: BP_ERROR_RESOLUTION_INFO |微软文档
+title: BP_ERROR_RESOLUTION_INFO |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: d48c4bc888db0ad8be6a0d6e98eeea2223a27e8a
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80738084"
 ---
 # <a name="bp_error_resolution_info"></a>BP_ERROR_RESOLUTION_INFO
-描述错误断点的分辨率，包括位置、程序和线程。
+描述错误断点的解决方法，包括位置、程序和线程。
 
 ## <a name="syntax"></a>语法
 
@@ -51,34 +51,34 @@ public struct BP_ERROR_RESOLUTION_INFO {
 
 ## <a name="members"></a>成员
 `dwFields`\
-[BPERESI_FIELDS](../../../extensibility/debugger/reference/bperesi-fields.md)枚举中的值的组合，指定填充此结构的字段。
+[BPERESI_FIELDS](../../../extensibility/debugger/reference/bperesi-fields.md)枚举中的值的组合，用于指定要填写此结构的哪些字段。
 
 `bpResLocation`\
 [BP_RESOLUTION_LOCATION](../../../extensibility/debugger/reference/bp-resolution-location.md)联合，它指定断点解析位置。
 
 `pProgram`\
-[IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)对象，表示发生断点错误的应用程序。
+[IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)对象，它表示发生断点错误的应用程序。
 
 `pThread`\
-[IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)对象，表示生成断点错误的应用程序在其上运行的线程。
+[IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)对象，它表示在其上运行生成断点错误的应用程序的线程。
 
 `bstrMessage`\
-包含此错误解决方法引起的任何警告或错误消息的字符串。
+包含此错误解析产生的任何警告或错误消息的字符串。
 
 `dwType`\
 [BP_ERROR_TYPE](../../../extensibility/debugger/reference/bp-error-type.md)枚举中指定断点错误类型的值。
 
 ## <a name="remarks"></a>备注
-此结构从[GetResolutionInfo](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getresolutioninfo.md)方法返回。
+此结构是从 [GetResolutionInfo](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getresolutioninfo.md) 方法返回的。
 
 ## <a name="requirements"></a>要求
-标题： msdbg.h
+标头： msdbg
 
-命名空间：微软.VisualStudio.调试器.互通
+命名空间： VisualStudio
 
-程序集：微软.VisualStudio.调试器.Interop.dll
+程序集： Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [结构和联合](../../../extensibility/debugger/reference/structures-and-unions.md)
 - [GetResolutionInfo](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getresolutioninfo.md)
 - [BPRESI_FIELDS](../../../extensibility/debugger/reference/bpresi-fields.md)

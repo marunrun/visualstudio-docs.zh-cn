@@ -16,13 +16,14 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: f54914e6676e0cc2400fa04ebb089fac08f58c3c
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86015492"
 ---
 # <a name="walkthrough-add-an-application-page-to-a-workflow"></a>演练：向工作流添加应用程序页
-  本演练演示如何将显示从工作流派生的数据的应用程序页添加到工作流项目中。 它基于主题[演练：创建具有关联和启动窗体的工作流](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)中所述的项目。
+  本演练演示如何将显示从工作流派生的数据的应用程序页添加到工作流项目中。 它基于主题 [演练：创建具有关联和启动窗体的工作流](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)中所述的项目。
 
  本演练演示了下列任务：
 
@@ -41,16 +42,16 @@ ms.locfileid: "86015492"
 
 - Visual Studio。
 
-- 还需要完成主题[演练：创建具有关联和启动窗体的工作流](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)中的项目。
+- 还需要完成主题 [演练：创建具有关联和启动窗体的工作流](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)中的项目。
 
 ## <a name="ammend-the-workflow-code"></a>Ammend 工作流代码
  首先，将一行代码添加到工作流，以便将 "结果" 列的值设置为支出报表的金额。 此值稍后会在支出报表汇总计算中使用。
 
 #### <a name="to-set-the-value-of-the-outcome-column-in-the-workflow"></a>设置工作流中的结果列的值
 
-1. 从主题[演练：创建具有关联和启动窗体的工作流](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md) [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 。
+1. 从主题 [演练：创建具有关联和启动窗体的工作流](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md) [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 。
 
-2. 打开*Workflow1.cs*或*workflow1.xaml*的代码（取决于编程语言）。
+2. 打开 *Workflow1.cs* 或 *workflow1.xaml* (的代码，具体取决于你的编程语言) 。
 
 3. 在该方法的底部 `createTask1_MethodInvoking` ，添加以下代码：
 
@@ -71,7 +72,7 @@ ms.locfileid: "86015492"
 
 1. 选择 ExpenseReport 项目，然后在菜单栏上选择 "项目" " **Project**  >  **添加新项**"。
 
-2. 在 "**模板**" 窗格中，选择 "**应用程序" 页**模板，使用项目项的默认名称（**ApplicationPage1**），然后选择 "**添加**" 按钮。
+2. 在 " **模板** " 窗格中，选择 " **应用程序" 页** 模板，使用项目 **项 ("**) " 的默认名称，然后选择 " **添加** " 按钮。
 
 3. 在 [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] ApplicationPage1 的中，将 `PlaceHolderMain` 节替换为以下内容：
 
@@ -102,7 +103,7 @@ ms.locfileid: "86015492"
 
 1. 选择 " **ApplicationPage1** " 节点，然后在菜单栏上选择 "**查看**  >  **代码**" 以在应用程序页后显示代码。
 
-2. 在类的顶部，将**using**或**Import**语句替换为以下内容：
+2. 将 **using** 或 **Import** 语句替换 (，具体取决于类顶部) 的编程语言，如下所示：
 
     ```vb
     Imports System
@@ -301,9 +302,9 @@ ms.locfileid: "86015492"
 
 #### <a name="to-test-the-application-page"></a>测试应用程序页
 
-1. 选择**F5**键以运行项目并将其部署到 SharePoint。
+1. 选择 **F5** 键以运行项目并将其部署到 SharePoint。
 
-2. 选择 "**主页**" 按钮，然后选择 "快速启动" 栏上的 "**共享文档**" 链接，以显示 SharePoint 站点上的 "共享文档" 列表。
+2. 选择 " **主页** " 按钮，然后选择 "快速启动" 栏上的 " **共享文档** " 链接，以显示 SharePoint 站点上的 "共享文档" 列表。
 
 3. 若要表示此示例的费用报表，请选择页面顶部的 " **LibraryTools** " 选项卡上的 "**文档**" 链接，并选择工具功能区上的 "**上载文档**" 按钮，将一些新文档上载到 "文档" 列表中。
 
@@ -311,34 +312,34 @@ ms.locfileid: "86015492"
 
 5. 在 "**文档库设置**" 页中，选择 "**权限和管理**" 部分中的 "**工作流设置**" 链接。
 
-6. 在 "**工作流设置**" 页中，选择 "**添加工作流**" 链接。
+6. 在 " **工作流设置** " 页中，选择 " **添加工作流** " 链接。
 
-7. 在 "**添加工作流**" 页面中，选择 " **ExpenseReport-workflow1.xaml** " 工作流，输入工作流的名称（例如 " **ExpenseTest**"），然后选择 "**下一步**" 按钮。
+7. 在 " **添加工作流** " 页面中，选择 " **ExpenseReport-workflow1.xaml** " 工作流，输入工作流的名称（例如 " **ExpenseTest**"），然后选择 " **下一步** " 按钮。
 
     此时将显示工作流关联窗体。 使用它报告支出限制金额。
 
 8. 在关联窗体中，在 "**自动批准限制**" 框中输入**1000** ，然后选择 "**关联工作流**" 按钮。
 
-9. 选择 "**主页**" 按钮返回到 SharePoint 主页。
+9. 选择 " **主页** " 按钮返回到 SharePoint 主页。
 
-10. 选择 "快速启动" 栏上的 "**共享文档**" 链接。
+10. 选择 "快速启动" 栏上的 " **共享文档** " 链接。
 
-11. 选择其中一个已上传的文档以显示下拉箭头，选择它，然后选择 "**工作流**" 项。
+11. 选择其中一个已上传的文档以显示下拉箭头，选择它，然后选择 " **工作流** " 项。
 
 12. 选择 ExpenseTest 旁的图像以显示工作流启动窗体。
 
-13. 在 "**支出合计**" 文本框中，输入大于1000的值，然后选择 "**启动工作流**" 按钮。
+13. 在 " **支出合计** " 文本框中，输入大于1000的值，然后选择 " **启动工作流** " 按钮。
 
      如果报告的支出超出分配的支出金额，则会将任务添加到任务列表。 已**完成**值为**ExpenseTest**的列也会添加到 "共享文档" 列表中的 "费用报表" 项。
 
-14. 在 "共享文档" 列表中对其他文档重复步骤 11-13。 （确切的文档数并不重要。）
+14. 在 "共享文档" 列表中对其他文档重复步骤 11-13。  (确切的文档数并不重要。 ) 
 
 15. 通过在 Web 浏览器中打开以下 URL 来显示 "费用报表摘要应用程序" 页： **Http://**<em>SystemName</em>**/_layouts/expensereport/applicationpage1.aspx**。
 
      "费用报表摘要" 页列出超出了分配金额的所有支出报表、它们超过了的金额以及所有报表的总金额。
 
 ## <a name="next-steps"></a>后续步骤
- 有关 SharePoint 应用程序页的详细信息，请参阅[为 Sharepoint 创建应用程序页](../sharepoint/creating-application-pages-for-sharepoint.md)。
+ 有关 SharePoint 应用程序页的详细信息，请参阅 [为 Sharepoint 创建应用程序页](../sharepoint/creating-application-pages-for-sharepoint.md)。
 
  若要详细了解如何使用 Visual Studio 中的 Visual Web Designer 设计 SharePoint 页面内容，请参阅以下主题：
 
