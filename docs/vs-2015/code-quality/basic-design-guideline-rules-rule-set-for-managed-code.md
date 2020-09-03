@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: cefe4864db8455ba6712dc728b342f49b6c7d5d4
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72655125"
 ---
 # <a name="basic-design-guideline-rules-rule-set-for-managed-code"></a>托管代码的“基本设计准则规则”规则集
@@ -21,7 +21,7 @@ ms.locfileid: "72655125"
 
 您可以使用 Microsoft 基本设计准则规则集来集中精力使您的代码更易于理解和使用。 如果你的项目包含库代码，或者如果你希望为易于维护的代码强制实施最佳实践，则应包含此规则集。
 
- 基本设计准则规则包括 Microsoft 最小 Recommeded Rules 规则集中的所有规则。 有关最低规则的列表，请参阅[托管代码的 "托管建议规则" 规则集](../code-quality/managed-recommended-rules-rule-set-for-managed-code.md)。
+ 基本设计准则规则包括 Microsoft 最小 Recommeded Rules 规则集中的所有规则。 有关最低规则的列表，请参阅 [托管代码的 "托管建议规则" 规则集](../code-quality/managed-recommended-rules-rule-set-for-managed-code.md)。
 
  下表介绍了 Microsoft 基本设计准则规则集中的所有规则。
 

@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 7454a110d5321a8f3a9dbf2472f15252cfaf13d0
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72655004"
 ---
 # <a name="customizing-presentation-on-the-diagram"></a>自定义图表的演示
@@ -37,5 +37,5 @@ ms.locfileid: "72655004"
 
 - [在 Windows 窗体中嵌入图表](../modeling/embedding-a-diagram-in-a-windows-form.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [在程序代码中导航和更新模型](../modeling/navigating-and-updating-a-model-in-program-code.md)

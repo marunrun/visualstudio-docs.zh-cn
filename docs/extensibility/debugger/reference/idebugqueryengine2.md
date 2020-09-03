@@ -1,5 +1,5 @@
 ---
-title: IDebug查询引擎2 |微软文档
+title: IDebugQueryEngine2 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,14 +13,14 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 31b1784055c54c9243237c81edb708e13de9bc5b
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80720651"
 ---
 # <a name="idebugqueryengine2"></a>IDebugQueryEngine2
-此接口允许会话调试管理器 （SDM） 检索表示调试引擎 （DE） 的接口。
+此接口使会话调试管理器 (SDM) 检索表示调试引擎 (DE) 的接口。
 
 ## <a name="syntax"></a>语法
 
@@ -28,30 +28,30 @@ ms.locfileid: "80720651"
 IDebugQueryEngine2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>实施者说明
- DE 在实现最常见的 DE 接口的对象（如[IDebugProgram2、IDebugThread2](../../../extensibility/debugger/reference/idebugprogram2.md)和[IDebugStackFrame2）](../../../extensibility/debugger/reference/idebugstackframe2.md)上实现此接口，以便允许访问 DE 本身的[IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)接口。 [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)
+## <a name="notes-for-implementers"></a>实施者注意事项
+ DE 在实现最常见的 DE 接口 (（如 [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)、 [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)和 [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)) ）的对象上实现了此接口，以允许访问 DE 自身的 [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md) 接口。
 
-## <a name="notes-for-callers"></a>呼叫者备注
- 在典型的 DE 接口上调用[查询接口](/cpp/atl/queryinterface)以获取此接口。
+## <a name="notes-for-callers"></a>调用方说明
+ 在典型的 DE 接口上调用 [QueryInterface](/cpp/atl/queryinterface) 以获取此接口。
 
 ## <a name="methods-in-vtable-order"></a>Vtable 顺序中的方法
- 下表显示了 的方法`IDebugQueryEngine2`。
+ 下表显示的方法 `IDebugQueryEngine2` 。
 
-|方法|描述|
+|方法|说明|
 |------------|-----------------|
-|[GetEngineInterface](../../../extensibility/debugger/reference/idebugqueryengine2-getengineinterface.md)|获取自定义调试引擎 （DE） 接口。|
+|[GetEngineInterface](../../../extensibility/debugger/reference/idebugqueryengine2-getengineinterface.md)|获取 (DE) 接口的自定义调试引擎。|
 
 ## <a name="remarks"></a>备注
- 此接口通常在实现[IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)接口的对象中实现，以支持按因果关系顺序执行函数;也就是说，当调试器退出函数时，要执行的下一个函数可能不是堆栈上的上一个函数，而是另一个线程中的函数。 有关"因果关系"的定义，请参阅[可视化工作室调试器词汇表](../../../extensibility/debugger/reference/visual-studio-debugger-glossary.md)。
+ 在实现 [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) 接口的对象中，通常会实现此接口，以便支持因果关系单步执行函数;也就是说，当调试器跳出某个函数时，要执行的下一个函数可能不是堆栈上的上一个函数，而是另一个线程中的函数。 有关 "因果关系" 的定义，请参阅 [Visual Studio 调试器术语表](../../../extensibility/debugger/reference/visual-studio-debugger-glossary.md)。
 
 ## <a name="requirements"></a>要求
- 标题： msdbg.h
+ 标头： msdbg
 
- 命名空间：微软.VisualStudio.调试器.互通
+ 命名空间： VisualStudio
 
- 程序集：微软.VisualStudio.调试器.Interop.dll
+ 程序集： Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [核心接口](../../../extensibility/debugger/reference/core-interfaces.md)
 - [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)
 - [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)

@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: b6b35bbb0592f7ec9f8defcd9d78dbba5a6a47a5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72655011"
 ---
 # <a name="customizing-element-tools"></a>自定义元素工具
@@ -24,7 +24,7 @@ ms.locfileid: "72655011"
  还可以重写将工具拖到关系图或元素上时会发生的情况。
 
 ## <a name="customizing-the-content-of-an-element-tool"></a>自定义元素工具的内容
- 每个元素工具都存储 <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> （EGP）的实例，该实例包含一个或多个模型元素和链接的序列化版本。 默认情况下，元素工具的 EGP 包含你为该工具指定的类的一个实例。 可以通过重写*YourLanguage* `ToolboxHelper.CreateElementToolPrototype` 来对此进行更改。 加载 DSL 包时将调用此方法。
+ 每个元素工具都存储一个 <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> (EGP) 的实例，该实例包含一个或多个模型元素和链接的序列化版本。 默认情况下，元素工具的 EGP 包含你为该工具指定的类的一个实例。 可以通过重写*YourLanguage*来更改此 `ToolboxHelper.CreateElementToolPrototype` 。 加载 DSL 包时将调用此方法。
 
  方法的参数是在 DSL 定义中指定的类的 ID。 当你感兴趣的类调用方法时，可以将额外的元素添加到 EGP 中。
 
@@ -62,5 +62,5 @@ public partial class CircuitDiagramToolboxHelper
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [自定义元素创建和移动](../modeling/customizing-element-creation-and-movement.md)
