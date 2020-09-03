@@ -14,10 +14,10 @@ author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.openlocfilehash: f8579a4e8088dc0fc6e7403da7f0371e46f2c928
-ms.sourcegitcommit: e359b93c93c6ca316c0d8b86c2b6e566171fd1ea
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "87507958"
 ---
 # <a name="create-a-ui-by-using-xaml-designer"></a>使用 XAML 设计器创建 UI
@@ -27,7 +27,7 @@ Visual Studio 和 Blend for Visual Studio 中的 XAML 设计器提供了一个�
 对于高级用户，甚至可以[自定义 XAML 设计器](https://github.com/microsoft/xaml-designer-extensibility/blob/master/documents/xaml-designer-extensibility-migration.md)。
 
 > [!NOTE]
-> Xamarin。窗体不支持 XAML 设计器。 若要查看 Xamarin. Forms XAML Ui 并在应用程序运行时对其进行编辑，请使用适用于 Xamarin 的 XAML 热重载。 有关详细信息，请参阅[适用于 Xamarin 的 XAML 热重载（预览）](/xamarin/xamarin-forms/xaml/hot-reload/)页。
+> Xamarin。窗体不支持 XAML 设计器。 若要查看 Xamarin. Forms XAML Ui 并在应用程序运行时对其进行编辑，请使用适用于 Xamarin 的 XAML 热重载。 有关详细信息，请参阅 [适用于 Xamarin 的 XAML 热重载 (预览) ](/xamarin/xamarin-forms/xaml/hot-reload/) 页面。
 
 ## <a name="xaml-designer-workspace"></a>XML 设计器工作区
 
@@ -91,7 +91,7 @@ XAML 设计器提供 XAML 视图和应用程序呈现的 XAML 标记的同步设
 
 **开启/关闭网格线对齐**
 
-如果已启用 "**网格线对齐**"，则当您将元素拖到美工板上时，它会与最近的水平和垂直网格线对齐。
+如果已启用 " **网格线对齐** "，则当您将元素拖到美工板上时，它会与最近的水平和垂直网格线对齐。
 
 **切换美工板背景**
 
@@ -107,7 +107,7 @@ XAML 设计器提供 XAML 视图和应用程序呈现的 XAML 标记的同步设
 
 ### <a name="xaml-view"></a>XAML 视图
 
-在**xaml**视图中，包含 xaml 编辑器的窗口是活动窗口，而 xaml 编辑器是主要创作工具。 可扩展应用程序标记语言 (XAML) 提供基于 XML 的声明性词汇，用于指定应用程序的用户界面。 XAML 视图包括 IntelliSense、自动格式设置、语法突出显示和标记导航。 下图显示打开了 IntelliSense 菜单的 XAML 视图：
+在 **xaml** 视图中，包含 xaml 编辑器的窗口是活动窗口，而 xaml 编辑器是主要创作工具。 可扩展应用程序标记语言 (XAML) 提供基于 XML 的声明性词汇，用于指定应用程序的用户界面。 XAML 视图包括 IntelliSense、自动格式设置、语法突出显示和标记导航。 下图显示打开了 IntelliSense 菜单的 XAML 视图：
 
 ![XAML 视图](media/xaml-editor.png)
 
@@ -144,17 +144,17 @@ Visual Studio 中的“文档大纲”窗口类似于 Blend for Visual Studio �
 
 ## <a name="properties-window"></a>“属性”窗口
 
-"**属性**" 窗口可用于设置控件的属性值。 它的外观如下所示：
+" **属性** " 窗口可用于设置控件的属性值。 它的外观如下所示：
 
 ![“属性”窗口](media/xaml-designer-properties-window.png)
 
-"**属性**" 窗口顶部有多种选项：
+" **属性** " 窗口顶部有多种选项：
 
 - 在“名称”框中更改当前所选元素的名称****。
 - 在左上角，有一个表示当前所选元素的图标。
 - 若要按类别或按字母顺序排列属性，请单击“类别” ****、“名称” **** 或“排列方式” **** 列表中的“源” **** 。
 - 若要查看控件的事件列表，请单击“事件”**** 按钮，该按钮显示为一个闪电形符号。
-- 若要搜索某个属性，请在搜索框中键入该属性的名称。 在键入时，"**属性**" 窗口将显示与您的搜索匹配的属性。
+- 若要搜索某个属性，请在搜索框中键入该属性的名称。 在键入时，" **属性** " 窗口将显示与您的搜索匹配的属性。
 
 某些属性允许通过选择向下箭头按钮设置高级属性。
 

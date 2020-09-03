@@ -1,5 +1,5 @@
 ---
-title: IDebugEngine2::CreatePendingBreakpoint |Microsoft Docs
+title: IDebugEngine2：： CreatePendingBreakpoint |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 84c36d08c7ad907006eb9f41d2f6e2c9cd77e7bf
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68196033"
 ---
 # <a name="idebugengine2creatependingbreakpoint"></a>IDebugEngine2::CreatePendingBreakpoint
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-在调试引擎 (DE) 中创建挂起断点。  
+ (DE) ，在调试引擎中创建挂起断点。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,23 +42,23 @@ int CreatePendingBreakpoint( 
   
 #### <a name="parameters"></a>参数  
  `pBPRequest`  
- [in][IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md)描述挂起断点，以创建对象。  
+ 中描述要创建的挂起断点的 [IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md) 对象。  
   
  `ppPendingBP`  
- [out]返回[IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)表示挂起断点的对象。  
+ 弄返回一个 [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) 对象，该对象表示挂起的断点。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。 通常会返回`E_FAIL`如果`pBPRequest`参数不匹配支持的 if DE 的任何语言`pBPRequest`参数是无效或不完整。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。 如果参数不 `E_FAIL` `pBPRequest` 匹配（如果 `pBPRequest` 参数无效或不完整）所支持的任何语言，则通常返回。  
   
 ## <a name="remarks"></a>备注  
- 挂起断点是实质上是将断点绑定到代码所需的所有信息的集合。 此方法返回挂起断点未绑定到之前的代码[绑定](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md)调用方法。  
+ 挂起断点实质上是将断点绑定到代码所需的所有信息的集合。 在调用 [Bind](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md) 方法之前，从此方法返回的挂起断点不会绑定到代码。  
   
- 每个挂起断点的用户集，会话调试管理器 (SDM) 调用此方法在每个附加 DE。 负责 DE 以验证该断点适用于该 DE 中运行的程序。  
+ 对于用户设置的每个挂起的断点，会话调试管理器 (SDM) 在每个附加的 DE 中调用此方法。 这是为了验证断点对于在该 DE 中运行的程序是否有效。  
   
- 当用户的代码行上设置断点时，DE 可以自由地将断点绑定到对应于此代码在文档中的最近的一行。 这使得用户可以在多行语句的第一行上设置断点，但将其绑定上的最后一行 （其中的所有代码具有的都特性中的调试信息）。  
+ 当用户在代码行上设置断点时，可以自由地将断点绑定到文档中对应于此代码的最接近的行。 这样一来，用户就可以在多行语句的第一行上设置断点，但将其绑定到在调试信息) 中所有代码都特性 (的最后一行。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何实现此方法对于简单`CProgram`对象。 DE 实现`IDebugEngine2::CreatePendingBreakpoint`可能然后转发到每个程序中方法的此实现的所有调用。  
+ 下面的示例演示如何为简单对象实现此方法 `CProgram` 。 在的实现 `IDebugEngine2::CreatePendingBreakpoint` 中，可能会在每个程序中将对该方法实现的所有调用转发给。  
   
 ```  
 HRESULT CProgram::CreatePendingBreakpoint(IDebugBreakpointRequest2* pBPRequest, IDebugPendingBreakpoint2** ppPendingBP)     
@@ -72,8 +72,8 @@ HRESULT CProgram::CreatePendingBreakpoint(IDebugBreakpointRequest2* pBPRequest, 
 }    
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)   
- [将绑定](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md)   
+ [绑定](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md)   
  [IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md)   
  [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)

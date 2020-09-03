@@ -1,5 +1,5 @@
 ---
-title: IDebugDisassemblyStream2::GetScope |Microsoft Docs
+title: IDebugDisassemblyStream2：： GetScope |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 34c4afec675ff6ef46ffba1e20bdffa03d0c47f5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68196188"
 ---
 # <a name="idebugdisassemblystream2getscope"></a>IDebugDisassemblyStream2::GetScope
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-获取反汇编流的范围。  
+获取反汇编流的作用域。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,14 +40,14 @@ int GetScope( 
   
 #### <a name="parameters"></a>参数  
  `pdwScope`  
- [out]返回一个值从[DISASSEMBLY_STREAM_SCOPE](../../../extensibility/debugger/reference/disassembly-stream-scope.md)介绍此反汇编流的范围的枚举。  
+ 弄返回 [DISASSEMBLY_STREAM_SCOPE](../../../extensibility/debugger/reference/disassembly-stream-scope.md) 枚举中的一个值，该值描述此反汇编流的作用域。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
 ## <a name="remarks"></a>备注  
- 反汇编的作用域可能是一个函数或整个模块，例如。  
+ 例如，反汇编的作用域可以是函数或整个模块。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugDisassemblyStream2](../../../extensibility/debugger/reference/idebugdisassemblystream2.md)   
  [DISASSEMBLY_STREAM_SCOPE](../../../extensibility/debugger/reference/disassembly-stream-scope.md)
