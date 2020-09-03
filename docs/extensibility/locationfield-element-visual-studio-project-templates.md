@@ -1,5 +1,5 @@
 ---
-title: LocationField 元素（Visual Studio 项目模板） |Microsoft Docs
+title: " (Visual Studio 项目模板) 的 LocationField 元素 |Microsoft Docs"
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,13 +14,13 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 8a5f2f47eef9c3cb047b5550e466585ef70e8f4e
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85770018"
 ---
-# <a name="locationfield-element-visual-studio-project-templates"></a>LocationField 元素（Visual Studio 项目模板）
+# <a name="locationfield-element-visual-studio-project-templates"></a>LocationField 元素 (Visual Studio 项目模板) 
 指定是否为项目模板启用、禁用或隐藏 "**新项目**" 对话框中的 "**位置**" 文本框。
 
  \<VSTemplate> \<TemplateData>
@@ -45,7 +45,7 @@ ms.locfileid: "85770018"
 
 |元素|描述|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|必需的元素。<br /><br /> 将模板分类并定义其在**新项目**中的显示方式。|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|必需的元素。<br /><br /> 将模板分类并定义其在 **新项目**中的显示方式。|
 
 ## <a name="text-value"></a>文本值
  需要一个文本值。
@@ -58,8 +58,8 @@ ms.locfileid: "85770018"
 
 - `Hidden`，它指定 "**新建项目**" 对话框的 "**位置**" 框处于隐藏状态。
 
-## <a name="remarks"></a>注解
- 默认值为 `Enabled`。
+## <a name="remarks"></a>备注
+ 默认值是 `Enabled`。
 
  通过 "**新建项目**" 对话框中的 "**位置**" 文本框，用户可以更改保存新项目的默认目录。
 

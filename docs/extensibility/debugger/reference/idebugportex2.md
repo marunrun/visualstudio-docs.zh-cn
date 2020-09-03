@@ -1,5 +1,5 @@
 ---
-title: IDebugPortEx2 |微软文档
+title: IDebugPortEx2 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,14 +13,14 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 5789681b0da70f46dadac1e29d0d6bb9dc905d1a
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80724997"
 ---
 # <a name="idebugportex2"></a>IDebugPortEx2
-此接口允许会话调试管理器 （SDM） 控制在端口上运行的程序和进程。
+此接口使会话调试管理器 (SDM) 控制端口上运行的程序和进程。
 
 ## <a name="syntax"></a>语法
 
@@ -28,36 +28,36 @@ ms.locfileid: "80724997"
 IDebugPortEx2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>实施者说明
- 自定义端口供应商在实现[IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md)的同一对象上实现此接口。
+## <a name="notes-for-implementers"></a>实施者注意事项
+ 自定义端口提供程序在实现 [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md)的同一对象上实现此接口。
 
-## <a name="notes-for-callers"></a>呼叫者备注
- SDM 在接口上`IDebugPort2`调用[查询接口](/cpp/atl/queryinterface)以获取此接口。
+## <a name="notes-for-callers"></a>调用方说明
+ SDM 在接口[QueryInterface](/cpp/atl/queryinterface)上调用 QueryInterface `IDebugPort2` 以获取此接口。
 
 ## <a name="methods-in-vtable-order"></a>Vtable 顺序中的方法
- 下表显示了 的方法`IDebugPortEx2`。
+ 下表显示的方法 `IDebugPortEx2` 。
 
-|方法|描述|
+|方法|说明|
 |------------|-----------------|
 |[LaunchSuspended](../../../extensibility/debugger/reference/idebugportex2-launchsuspended.md)|启动可执行文件。|
-|[ResumeProcess](../../../extensibility/debugger/reference/idebugportex2-resumeprocess.md)|恢复进程的执行。|
-|[CanTerminateProcess](../../../extensibility/debugger/reference/idebugportex2-canterminateprocess.md)|确定是否可以终止进程。|
+|[ResumeProcess](../../../extensibility/debugger/reference/idebugportex2-resumeprocess.md)|继续执行进程。|
+|[CanTerminateProcess](../../../extensibility/debugger/reference/idebugportex2-canterminateprocess.md)|确定进程是否可以终止。|
 |[TerminateProcess](../../../extensibility/debugger/reference/idebugportex2-terminateprocess.md)|终止进程。|
 |[GetPortProcessId](../../../extensibility/debugger/reference/idebugportex2-getportprocessid.md)|获取端口本身的进程 ID。|
 |[GetProgram](../../../extensibility/debugger/reference/idebugportex2-getprogram.md)|获取与程序节点关联的程序。|
 
 ## <a name="remarks"></a>备注
- 此接口通常是 SDM 和自定义端口供应商之间的私有接口。
+ 此接口通常在 SDM 和自定义端口提供商之间是专用的。
 
- 如果需要，调试引擎 （DE） 可以在[IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md)接口上查找此接口，该接口传递给[Launch暂停](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md)，并使用[Launch暂停](../../../extensibility/debugger/reference/idebugportex2-launchsuspended.md)启动程序。 但是，这不是要求，DE 可以执行启动请求程序所需的任何操作。
+ 如果需要，调试引擎 (DE) 可以在传递到[LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md)的[IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md)接口上查找此接口，并使用[LaunchSuspended](../../../extensibility/debugger/reference/idebugportex2-launchsuspended.md)启动程序。 但这并不是必需的，并且 DE 可以执行启动请求程序所需的任何操作。
 
 ## <a name="requirements"></a>要求
- 标题： portpriv.h
+ 标头： portpriv
 
- 命名空间：微软.VisualStudio.调试器.互通
+ 命名空间： VisualStudio
 
- 程序集：微软.VisualStudio.调试器.Interop.dll
+ 程序集： Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [核心接口](../../../extensibility/debugger/reference/core-interfaces.md)
 - [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md)

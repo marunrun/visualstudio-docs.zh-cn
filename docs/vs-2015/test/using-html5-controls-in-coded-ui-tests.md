@@ -9,10 +9,10 @@ caps.latest.revision: 19
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 029b547102863f4798ad261deb678c4d98596916
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657205"
 ---
 # <a name="using-html5-controls-in-coded-ui-tests"></a>在编码的 UI 测试中使用 HTML5 控件
@@ -20,7 +20,7 @@ ms.locfileid: "72657205"
 
 编码的 UI 测试包括对某些包含在 Internet Explorer 9 和 Internet Explorer 10 中的 HTML5 控件的支持。
 
- **惠?**
+ **要求**
 
 - Visual Studio Enterprise
 
@@ -39,7 +39,7 @@ ms.locfileid: "72657205"
 
 - [滑块](#slider)
 
-- [进度栏](#progressbar)
+- [ProgressBar](#progressbar)
 
 ### <a name="audio-control"></a>音频控件
  **音频控件：** 正确录制和播放 HTML5 音频控件上的操作。
@@ -48,12 +48,12 @@ ms.locfileid: "72657205"
 
 |操作|录制|生成的代码|
 |------------|---------------|--------------------|
-|**播放音频**<br /><br /> 直接通过控件，或通过控件上下文菜单。|从 00:00:00 开始播放 \<名称> 音频|HtmlAudio.Play(TimeSpan)|
-|**搜寻音频中的特定时间**|搜寻 \<名称> 音频的 00:01:48|HtmlAudio.Seek(TimeSpan)|
-|**暂停音频**<br /><br /> 直接通过控件，或通过控件上下文菜单。|在 00:01:53 暂停 \<名称> 音频|HtmlAudio.Pause(TimeSpan)|
-|**音频静音**<br /><br /> 直接通过控件，或通过控件上下文菜单。|使 \<名称> 音频静音|HtmlAudio.Mute()|
-|**取消静音音频**<br /><br /> 直接通过控件，或通过控件上下文菜单。|使 \<名称> 音频取消静音|HtmlAudio.Unmute()|
-|**更改音频音量**|将 \<名称> 音频的音量设为 79%|HtmlAudio.SetVolume(float)|
+|**播放音频**<br /><br /> 直接通过控件，或通过控件上下文菜单。|从 00:00:00 播放 \<name> 音频|HtmlAudio.Play(TimeSpan)|
+|**搜寻音频中的特定时间**|搜寻到 00:01:48 的 \<name> 音频|HtmlAudio.Seek(TimeSpan)|
+|**暂停音频**<br /><br /> 直接通过控件，或通过控件上下文菜单。|在 00:01:53 处暂停 \<name> 音频|HtmlAudio.Pause(TimeSpan)|
+|**音频静音**<br /><br /> 直接通过控件，或通过控件上下文菜单。|\<name> 音频静音|HtmlAudio.Mute()|
+|**取消静音音频**<br /><br /> 直接通过控件，或通过控件上下文菜单。|取消静音 \<name> 音频|HtmlAudio.Unmute()|
+|**更改音频音量**|将 \<name> 音频的音量设为 79%|HtmlAudio.SetVolume(float)|
 
  以下属性可用于 HtmlAudio，并且你可以对所有这些属性添加断言：
 
@@ -90,12 +90,12 @@ string Volume
 
 |操作|录制|生成的代码|
 |------------|---------------|--------------------|
-|**播放视频**<br /><br /> 直接通过控件，或通过控件上下文菜单。|从 00:00:00 开始播放 \<名称> 视频|HtmlVideo.Play(TimeSpan)|
-|**搜寻视频中的特定时间**|搜寻 \<名称> 视频的 00:01:48|HtmlVideo.Seek(TimeSpan)|
-|**暂停视频**<br /><br /> 直接通过控件，或通过控件上下文菜单。|在 00:01:53 暂停 \<名称> 视频|HtmlVideo.Pause(TimeSpan)|
-|**视频静音**<br /><br /> 直接通过控件，或通过控件上下文菜单。|使 \<名称> 视频静音|HtmlVideo.Mute()|
-|**取消静音视频**<br /><br /> 直接通过控件，或通过控件上下文菜单。|使 \<名称> 视频取消静音|HtmlVideo.Unmute()|
-|**更改视频音量**|将 \<名称> 视频的音量设为 79%||
+|**播放视频**<br /><br /> 直接通过控件，或通过控件上下文菜单。|从 00:00:00 播放 \<name> 视频|HtmlVideo.Play(TimeSpan)|
+|**搜寻视频中的特定时间**|搜寻到 00:01:48 的 \<name> 视频|HtmlVideo.Seek(TimeSpan)|
+|**暂停视频**<br /><br /> 直接通过控件，或通过控件上下文菜单。|在 00:01:53 处暂停 \<name> 视频|HtmlVideo.Pause(TimeSpan)|
+|**视频静音**<br /><br /> 直接通过控件，或通过控件上下文菜单。|\<name> 视频静音|HtmlVideo.Mute()|
+|**取消静音视频**<br /><br /> 直接通过控件，或通过控件上下文菜单。|取消静音 \<name> 视频|HtmlVideo.Unmute()|
+|**更改视频音量**|将 \<name> 视频的音量设为 79%||
 
  HtmlAudio 的所有属性都可用于 HtmlVideo。 此外，以下三个属性也可用。 可以对所有这些属性添加断言。
 
@@ -108,19 +108,19 @@ string VideoWidth
 
  **搜索属性：** `HtmlVideo` 的搜索属性为 `Id`、`Name` 和 `Title`。
 
- **筛选器属性：** `HtmlVideo` 的筛选器属性为 `Src`、`Poster`、`Class`、`ControlDefinition` 和 `TagInstance`。
+ **筛选器属性：** `HtmlVideo` 的筛选属性为 `Src`、`Poster``Class``ControlDefinition` 和 `TagInstance`。
 
 > [!NOTE]
 > 如果使用 -30s 或 +30s 标签对视频后退或快进，将聚合标签以定位到相应的时间。
 
-### <a name="slider"></a>Slider
+### <a name="slider"></a>滑块
  **滑块控件：** 正确录制和播放 HTML5 滑块控件上的操作。
 
  ![HTML5 滑块控件](../test/media/codedui-html5-slider.png)
 
 |操作|录制|生成的代码|
 |------------|---------------|--------------------|
-|**设置滑块位置**|将 \<名称> 滑块的位置设为 \<x>|HtmlSlider.ValueAsNumber=\<x>|
+|**设置滑块位置**|将位置设置为 \<x> 在 \<name> 滑块中|Htmlslider 并且. ValueAsNumber =\<x>|
 
  以下属性可用于 HtmlSlider，并且你可以对所有这些属性添加断言：
 
@@ -144,4 +144,4 @@ string ValueAsNumber
 - [使用 UI 自动化来测试代码](../test/use-ui-automation-to-test-your-code.md)
 - [创建编码的 UI 测试](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate)
 - [自定义编码的 UI 测试](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeCUITModify)
-- [支持编码的 UI 测试和操作录制的配置和平台](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)
+- [编码的 UI 测试和操作录制支持的配置和平台](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)

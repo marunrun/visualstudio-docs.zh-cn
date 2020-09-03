@@ -10,10 +10,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 0f899e081377ecc1a56e141f8793d6f707df2b69
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85534077"
 ---
 # <a name="application-timeline"></a>应用程序时间线
@@ -38,10 +38,10 @@ ms.locfileid: "85534077"
 5. Windows 7  
   
 > [!NOTE]
-> 你可以收集和分析 CPU 使用率数据和能耗数据以及 **“应用程序时间线”** 数据。 请参阅在[不调试的情况下运行分析工具](https://msdn.microsoft.com/library/e97ce1a4-62d6-4b8e-a2f7-61576437ff01)  
+> 你可以收集和分析 CPU 使用率数据和能耗数据以及 **“应用程序时间线”** 数据。 请参阅在 [不调试的情况下运行分析工具](https://msdn.microsoft.com/library/e97ce1a4-62d6-4b8e-a2f7-61576437ff01)  
   
-## <a name="collect-application-timeline-data"></a><a name="BKMK_Collect_Timeline_data_for_your_app"></a>收集应用程序时间线数据  
- 可以在本地计算机、连接的设备、Visual Studio 模拟器或仿真程序或者远程设备上分析应用的响应能力。 请参阅[运行分析工具而不进行调试](https://msdn.microsoft.com/library/e97ce1a4-62d6-4b8e-a2f7-61576437ff01)。  
+## <a name="collect-application-timeline-data"></a><a name="BKMK_Collect_Timeline_data_for_your_app"></a> 收集应用程序时间线数据  
+ 可以在本地计算机、连接的设备、Visual Studio 模拟器或仿真程序或者远程设备上分析应用的响应能力。 请参阅 [运行分析工具而不进行调试](https://msdn.microsoft.com/library/e97ce1a4-62d6-4b8e-a2f7-61576437ff01)。  
   
 > [!TIP]
 > 如果可能，请直接在设备上运行应用。 在模拟器上或通过远程桌面连接观察到的应用程序性能可能与设备上的实际性能不相同。 另一方面，通过使用 Visual Studio 远程工具收集数据并不影响性能数据。  
@@ -50,7 +50,7 @@ ms.locfileid: "85534077"
   
 1. 打开 AML 应用。  
   
-2. 单击 "**调试/性能探查器 ...**"。应会在 "diagsession" 窗口中看到分析工具列表。  
+2. 单击 " **调试/性能探查器 ...**"。应会在 "diagsession" 窗口中看到分析工具列表。  
   
 3. 选择 **“应用程序时间线”** ，然后单击窗口底部的 **“启动”** 。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "85534077"
   
      ![时间线探查器报告](../profiling/media/timeline-base.png "TIMELINE_Base")  
   
-## <a name="analyze-timeline-profiling-data"></a><a name="BKMK_Analyze_Timeline_profiling_data"></a>分析时间线分析数据  
+## <a name="analyze-timeline-profiling-data"></a><a name="BKMK_Analyze_Timeline_profiling_data"></a> 分析时间线分析数据  
  收集分析数据之后，可以按照以下步骤开始分析：  
   
 1. 检查 **“UI 线程使用率”** 和 **“可视吞吐量(FPS)”** 图中的信息，然后使用时间线导航栏选择要分析的时间范围。  
@@ -97,11 +97,11 @@ ms.locfileid: "85534077"
   
  支持以下事件：  
   
-|名称|说明|  
+|“属性”|描述|  
 |-|-|  
 |**分析**|分析 XAML 文件并创建对象所耗用的时间。<br /><br /> 展开“时间线详细信息” **** 中的 **** “分析”节点将显示作为根事件分析结果的所有 XAML 文件的依赖关系链。 这将使你能够识别性能敏感方案中的不必要的文件分析和对象创建并对其进行优化。|  
 |**布局**|在大型应用程序中，可能会同时在屏幕上显示数千个元素。 这可能会导致 UI 帧速率降低以及应用程序响应能力相应地变差。 布局事件可准确地确定对每个元素进行布局的成本（即 Arrange、Measure、ApplyTemplate、ArrangeOverride 和 ArrangeOverride 所用的时间），并生成参与了布局过程的可视化树。 你可以使用此可视化效果来确定需要修剪的逻辑树，或评估其他延期机制，以优化布局过程。|  
-|**Render**|在屏幕上绘制 XAML 元素所耗用的时间。|  
+|**呈现**|在屏幕上绘制 XAML 元素所耗用的时间。|  
 |**I/0**|从本地磁盘或从通过 [Microsoft Windows Internet (WinINet) API](https://msdn.microsoft.com/library/windows/desktop/aa385331.aspx)访问的网络资源中检索数据所耗用的时间。|  
 |**应用程序代码**|执行与分析或布局无关的应用程序（用户）代码所耗用的时间。|  
 |**Xaml 其他**|执行 XAML 运行时代码所耗用的时间。|  
@@ -110,12 +110,12 @@ ms.locfileid: "85534077"
 > 当开始分析时，选择 **“CPU 使用率”** 工具和 **“时间线”** 工具查看在 UI 线程上执行的应用方法。 将长时间运行的应用代码移动到后台线程可以提高 UI 响应能力。  
   
 #### <a name="customizing-timeline-details"></a><a name="BKMK_Customizing_Timeline_details_"></a> 自定义时间线详细信息  
- 使用 **** “时间线详细信息”工具栏排序、筛选和指定 **** “时间线详细信息”视图条目的批注。  
+ 使用  “时间线详细信息”工具栏排序、筛选和指定  “时间线详细信息”视图条目的批注。  
   
-|名称|说明|  
+|“属性”|描述|  
 |-|-|  
-|**排序方式**|按开始时间或事件的长度排序。|  
-|![通过框为事件分组](../profiling/media/timeline-groupbyframes.png "TIMELINE_GroupByFrames")|添加或删除按框架对事件进行分组的顶级 **** “框架”类别。|  
+|**排序依据**|按开始时间或事件的长度排序。|  
+|![按框架为事件分组](../profiling/media/timeline-groupbyframes.png "TIMELINE_GroupByFrames")|添加或删除按框架对事件进行分组的顶级  “框架”类别。|  
 |![筛选时间线详细信息列表](../profiling/media/timeline-filter.png "TIMELINE_Filter")|按所选类别和事件的长度筛选列表。|  
 |![自定义时间线详细信息](../profiling/media/timeline-viewsettings.png "TIMELINE_ViewSettings")|允许你指定事件的批注。|  
   

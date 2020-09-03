@@ -12,16 +12,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 8930bba76830a6116c3182f3fb2936cd4f1a3e47
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657599"
 ---
 # <a name="link-uml-model-updates-by-using-transactions"></a>使用事务链接 UML 模型更新
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-当你在 Visual Studio 中定义 UML 设计器的扩展时，可以将多个更改组合成一个称为 "*链接的撤消上下文*" 的单个事务。 若要查看支持 UML 模式的 Visual Studio 版本，请参阅 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)。
+当你在 Visual Studio 中定义 UML 设计器的扩展时，可以将多个更改组合成一个称为 " *链接的撤消上下文*" 的单个事务。 若要查看支持 UML 模式的 Visual Studio 版本，请参阅 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)。
 
  默认情况下，代码对模型进行的每处修改都可以由用户单独撤销。 例如，如果定义交换两个 UML 类的名称的菜单命令，用户可以调用该命令，然后执行单次撤消。 这将撤消对其中一个名称的更改，但不会撤销对另一个名称的更改，从而让你的模型处于意外状态。
 
@@ -60,7 +60,7 @@ ms.locfileid: "72657599"
 
  `}`
 
- 注意下列事项：
+ 请注意以下内容：
 
 - 必须始终在事务结束时包括 `Commit()`。 如果在不提交的情况下释放事务，则事务将回滚。 也就是说，该模型将还原到其事务开始时的状态。
 
@@ -108,5 +108,5 @@ ms.locfileid: "72657599"
  }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [使用 UML API 编程](../modeling/programming-with-the-uml-api.md)在[建模图上定义菜单命令](../modeling/define-a-menu-command-on-a-modeling-diagram.md)[扩展 UML 模型和关系图](../modeling/extend-uml-models-and-diagrams.md)

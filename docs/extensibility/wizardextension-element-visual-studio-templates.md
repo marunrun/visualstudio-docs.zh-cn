@@ -1,5 +1,5 @@
 ---
-title: 向导扩展元素（可视化工作室模板） |微软文档
+title: " (Visual Studio 模板) 的 WizardExtension 元素 |Microsoft Docs"
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -15,16 +15,16 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: fd81b32861114d654aa794b992826589406b1df9
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80740372"
 ---
 # <a name="wizardextension-element-visual-studio-templates"></a>WizardExtension 元素（Visual Studio 模板）
 包含用于自定义模板向导的注册元素。
 
- \<VSTemplate> ...\<向导扩展>
+ \<VSTemplate> ... \<WizardExtension>
 
 ## <a name="syntax"></a>语法
 
@@ -43,22 +43,22 @@ ms.locfileid: "80740372"
 
 ### <a name="child-elements"></a>子元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
-|[装配](../extensibility/assembly-element-visual-studio-template-wizard-extension.md)|必需元素。<br /><br /> 指定出现在全局程序集缓存中的程序集的名称或强名称。 元素中必须至少有一`Assembly`个`WizardExtension`元素。|
-|[FullClassName](../extensibility/fullclassname-element-visual-studio-template-wizard-extension.md)|必需元素。<br /><br /> 实现`IWizard`接口的类的完全限定名称。 元素中必须至少有一`FullClassName`个`WizardExtension`元素。|
+|[件](../extensibility/assembly-element-visual-studio-template-wizard-extension.md)|必需的元素。<br /><br /> 指定出现在全局程序集缓存中的程序集的名称或强名称。 元素中必须至少有一个 `Assembly` 元素 `WizardExtension` 。|
+|[FullClassName](../extensibility/fullclassname-element-visual-studio-template-wizard-extension.md)|必需的元素。<br /><br /> 实现接口的类的完全限定名称 `IWizard` 。 元素中必须至少有一个 `FullClassName` 元素 `WizardExtension` 。|
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
-|[VSTemplate](../extensibility/vstemplate-element-visual-studio-templates.md)|包含项目模板、项目模板或初学者工具包的所有元数据。|
+|[VSTemplate](../extensibility/vstemplate-element-visual-studio-templates.md)|包含项目模板、项模板或初学者工具包的所有元数据。|
 
 ## <a name="remarks"></a>备注
  `WizardExtension` 是 `VSTemplate` 的可选子元素。
 
 ## <a name="example"></a>示例
- 下面的示例演示了[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]Windows 应用程序的标准项目模板的元数据。
+ 下面的示例演示了 Windows 应用程序的标准项目模板的元数据 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 。
 
 ```
 <VSTemplate Version="3.0.0" Type="Item"
@@ -88,7 +88,7 @@ ms.locfileid: "80740372"
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
-- [创建项目和项目模板](../ide/creating-project-and-item-templates.md)
+- [创建项目和项模板](../ide/creating-project-and-item-templates.md)
 - [如何：使用向导来处理项目模板](../extensibility/how-to-use-wizards-with-project-templates.md)

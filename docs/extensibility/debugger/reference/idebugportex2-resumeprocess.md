@@ -1,5 +1,5 @@
 ---
-title: IDebugPortEx2：：恢复进程 |微软文档
+title: IDebugPortEx2：： ResumeProcess |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 0fdbd8e409208c28fbfc1ce728df3591be655c75
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80725023"
 ---
 # <a name="idebugportex2resumeprocess"></a>IDebugPortEx2::ResumeProcess
-恢复进程的执行。
+继续执行进程。
 
 ## <a name="syntax"></a>语法
 
@@ -41,11 +41,11 @@ int ResumeProcess( 
 
 ## <a name="parameters"></a>参数
 `pPortProcess`\
-[在]表示要恢复的进程的[IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)对象。
+中表示要恢复的进程的 [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) 对象。
 
 ## <a name="return-value"></a>返回值
- 如果成功，返回`S_OK`;否则，返回错误代码。
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IDebugPortEx2](../../../extensibility/debugger/reference/idebugportex2.md)
 - [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)

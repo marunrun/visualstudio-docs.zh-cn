@@ -1,5 +1,5 @@
 ---
-title: 调试用户界面参考 |Microsoft Docs
+title: 调试用户界面参考 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -23,10 +23,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 59cc4e96630be23ee864e3d5a03cbb6dde709695
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68191230"
 ---
 # <a name="debugging-user-interface-reference"></a>调试用户界面参考
@@ -48,6 +48,6 @@ ms.locfileid: "68191230"
   
 - [“调试错误和警告”对话框](../debugger/debugging-errors-and-warning-dialog-boxes.md)  
   
-## <a name="see-also"></a>请参阅  
- [在 Visual Studio 中进行调试](../debugger/debugging-in-visual-studio.md)   
+## <a name="see-also"></a>另请参阅  
+ [在 Visual Studio 中调试](../debugger/debugging-in-visual-studio.md)   
  [“命令”窗口](../ide/reference/command-window.md)

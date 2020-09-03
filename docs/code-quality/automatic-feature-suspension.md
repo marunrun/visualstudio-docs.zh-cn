@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 236a95cd8d4af8da91199bf79e7c9fe3aa0d49af
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85769477"
 ---
 # <a name="automatic-feature-suspension"></a>自动功能挂起
@@ -34,17 +34,17 @@ ms.locfileid: "85769477"
 
 - Visual c # 和 Visual Basic 的实时代码分析降低到最小范围。
 
-- 针对 Visual c # 和 Visual Basic 的[垃圾回收](/dotnet/standard/garbage-collection/index)（GC）低延迟模式处于禁用状态。
+- [垃圾回收](/dotnet/standard/garbage-collection/index) (GC) 为 Visual c # 提供低延迟模式，Visual Basic 处于禁用状态。
 
 - Visual Studio 缓存已刷新。
 
 ## <a name="improve-visual-studio-performance"></a>提高 Visual Studio 性能
 
-有关在处理大型解决方案或内存不足的情况时如何提高 Visual Studio 性能的提示和技巧，请参阅[大型解决方案的性能注意事项](https://github.com/dotnet/roslyn/wiki/Performance-considerations-for-large-solutions)。
+有关在处理大型解决方案或内存不足的情况时如何提高 Visual Studio 性能的提示和技巧，请参阅 [大型解决方案的性能注意事项](https://github.com/dotnet/roslyn/wiki/Performance-considerations-for-large-solutions)。
 
 ## <a name="live-code-analysis-is-reduced-to-minimal-scope"></a>实时代码分析降低到最小范围
 
-默认情况下，对打开的文档和项目执行实时代码分析。 你可以自定义此分析范围以减小到当前文档或增加到整个解决方案。 有关详细信息，请参阅[如何：配置托管代码的实时代码分析范围](./configure-live-code-analysis-scope-managed-code.md)。 在内存不足的情况下，Visual Studio 会强制将实时分析范围缩减为当前文档。 但是，你可以通过在信息栏中选择 "**重新启用**" 按钮或重新启动 Visual Studio 来重新启用首选的分析作用域。 "选项" 对话框始终显示当前的实时代码分析范围设置。
+默认情况下，对打开的文档和项目执行实时代码分析。 你可以自定义此分析范围以减小到当前文档或增加到整个解决方案。 有关详细信息，请参阅[如何：配置托管代码的实时代码分析范围](./configure-live-code-analysis-scope-managed-code.md)。 在内存不足的情况下，Visual Studio 会强制将实时分析范围缩减为当前文档。 但是，你可以通过在信息栏中选择 " **重新启用** " 按钮或重新启动 Visual Studio 来重新启用首选的分析作用域。 "选项" 对话框始终显示当前的实时代码分析范围设置。
 
 ## <a name="gc-low-latency-disabled"></a>GC 低延迟已禁用
 
@@ -63,7 +63,7 @@ ms.locfileid: "85769477"
 此外，还会清除用于内部 Visual Studio 操作的缓存。
 
 > [!NOTE]
-> 自动功能暂停警告只会针对每个解决方案出现一次，而不会在每个会话的基础上出现一次。 这意味着，如果从 Visual Basic 切换到 Visual c # （反之亦然），并遇到另一个内存不足的情况，则可能会出现另一个自动功能暂停警告。
+> 自动功能暂停警告只会针对每个解决方案出现一次，而不会在每个会话的基础上出现一次。 这意味着，如果从 Visual Basic 切换到 Visual c # (，反之亦然) 并遇到另一个内存不足的情况，则可能会出现另一个自动功能暂停警告。
 
 ## <a name="see-also"></a>另请参阅
 

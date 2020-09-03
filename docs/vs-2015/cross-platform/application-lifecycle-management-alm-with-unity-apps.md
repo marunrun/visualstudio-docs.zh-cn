@@ -10,10 +10,10 @@ author: conceptdev
 ms.author: crdun
 manager: jillfra
 ms.openlocfilehash: 90efd4e72ea172822e0bcc424bdbbc4bc7589098
-ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80233277"
 ---
 # <a name="application-lifecycle-management-alm-with-unity-apps"></a>适用于 Unity 应用的 Visual Studio 应用程序生命周期管理 (ALM)
@@ -83,41 +83,41 @@ ms.locfileid: "80233277"
 |生成带有前脚本和后脚本的定义|是|使用 Unity 命令行运行生成的自定义生成定义还可以配置为预生成和后生成脚本。|  
 |包括封闭签入的持续集成|是|仅在 Git 用于拉取请求（而非签入）时，封闭签入才适用于 TFVC。|  
   
-## <a name="testing"></a>正在测试  
+## <a name="testing"></a>测试  
  参考链接：**[测试应用程序](https://msdn.microsoft.com/library/796b7d6d-ad45-4772-9719-55eaf5490dac)**  
   
-|Feature|通过 Unity 提供支持|其他注释|  
+|功能|通过 Unity 提供支持|其他注释|  
 |-------------|--------------------------|-------------------------|  
 |规划测试、创建测试用例和组织测试套件|是||  
 |手动测试|是||  
 |测试管理器（记录和播放测试）|仅限 Windows 设备和 Android 模拟器||  
-|代码覆盖率|不适用|Unity 内进行单元测试时以及不是 Visual Studio 时不适用，请参阅下文。|  
-|[单元测试代码](../test/unit-test-your-code.md)|在 Unity 中，但不在 Visual Studio 中|Unity 提供了自己的单元测试框架，作为[Unity 测试工具](https://assetstore.unity.com/packages/tools/utilities/unity-test-tools-13802)（Unity 资产存储）的一部分。 单元测试结果在 Unity 中报告，将不会出现在 Visual Studio 内。|  
+|代码覆盖率|n/a|Unity 内进行单元测试时以及不是 Visual Studio 时不适用，请参阅下文。|  
+|[对代码进行单元测试](../test/unit-test-your-code.md)|在 Unity 中，但不在 Visual Studio 中|Unity 提供了自己的单元测试框架作为 [Unity 测试工具](https://assetstore.unity.com/packages/tools/utilities/unity-test-tools-13802) (Unity 资产存储) 的一部分。 单元测试结果在 Unity 中报告，将不会出现在 Visual Studio 内。|  
 |[使用 UI 自动化来测试代码](../test/use-ui-automation-to-test-your-code.md)|否|编码的 UI 测试依赖于应用 UI 中可读取的控件；Unity 应用在本质上都是图形，因此编码的 UI 测试工具无法读取其内容。|  
   
 ## <a name="improve-code-quality"></a>提高代码质量  
- 参考链接：**[提高代码质量](https://msdn.microsoft.com/library/73baa961-c21f-43fe-bb92-3f59ae9b5945)**  
+ 参考链接： **[提高代码质量](https://msdn.microsoft.com/library/73baa961-c21f-43fe-bb92-3f59ae9b5945)**  
   
-|Feature|通过 Unity 提供支持|其他注释|  
+|功能|通过 Unity 提供支持|其他注释|  
 |-------------|--------------------------|-------------------------|  
-|[分析托管代码质量](../code-quality/analyzing-managed-code-quality-by-using-code-analysis.md)|是|可以分析 Visual Studio 中的 C# 脚本代码。|  
-|[使用代码克隆检测功能查找重复代码](https://msdn.microsoft.com/library/a97cd5a6-5ffa-4104-9627-8e59e513654d)|是|可以分析 Visual Studio 中的 C# 脚本代码。|  
-|[测量托管代码的复杂性和可维护性](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)|是|可以分析 Visual Studio 中的 C# 脚本代码。|  
+|[分析托管代码质量](../code-quality/analyzing-managed-code-quality-by-using-code-analysis.md)|是|可以在 Visual Studio 中分析 C# 脚本代码。|  
+|[使用代码克隆检测功能查找重复代码](https://msdn.microsoft.com/library/a97cd5a6-5ffa-4104-9627-8e59e513654d)|是|可以在 Visual Studio 中分析 C# 脚本代码。|  
+|[测量托管代码的复杂性和可维护性](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)|是|可以在 Visual Studio 中分析 C# 脚本代码。|  
 |[性能资源管理器](../profiling/performance-explorer.md)|否|使用 [Unity 探查器](https://docs.unity3d.com/Manual/Profiler.html)（Unity 网站）。|  
 |[分析 .NET Framework 内存问题](../misc/analyze-dotnet-framework-memory-issues.md)|否|Visual Studio 工具没有深入 Mono 框架（用于 Unity）进行探查的挂钩。 使用 [Unity Profiler](https://docs.unity3d.com/Manual/Profiler.html)（Unity 文档）。|  
   
-## <a name="release-management"></a>版本管理  
+## <a name="release-management"></a>发布管理  
  参考链接：**[使用发布管理来自动进行部署](https://msdn.microsoft.com/library/vs/alm/release/overview)**  
   
-|Feature|通过 Unity 提供支持|其他注释|  
+|功能|通过 Unity 提供支持|其他注释|  
 |-------------|--------------------------|-------------------------|  
 |管理发布进程|是||  
 |通过脚本部署到旁加载的服务器|是||  
 |上载到应用商店|部分|提供了一些扩展，这些扩展可使某些应用商店的此进程自动化。  请参阅 [Visual Studio Team Services 的扩展](https://marketplace.visualstudio.com/VSTS)；例如，[Google Play 的扩展](https://marketplace.visualstudio.com/items?itemName=ms-vsclient.google-play)。|  
   
 ## <a name="monitor-with-hockeyapp"></a>使用 HockeyApp 进行监控  
- 参考链接：**[使用 HockeyApp 进行监控](https://www.hockeyapp.net/features/)**  
+ 参考链接： **[使用 HockeyApp 进行监控](https://www.hockeyapp.net/features/)**  
   
-|Feature|通过 Unity 提供支持|其他注释|  
+|功能|通过 Unity 提供支持|其他注释|  
 |-------------|--------------------------|-------------------------|  
 |故障分析、遥测和 beta 版本分发|是|HockeyApp 主要用于处理 beta 版本分布和获取故障报告。<br /><br /> 对于 C# 脚本中的遥测，可以使用任何分析框架，前提是它运行在 Unity 使用的 .NET 版本上。 但是，这仅允许在游戏脚本内进行分析，而无法深入到 Unity 引擎内部。 目前，没有任何适用于 Application Insights 的插件，但有适用于其他分析解决方案的插件，例如 [Unity Analytics](https://assetstore.unity.com/packages/add-ons/services/analytics/unity-analytics-28120)和 [Google Analytics](https://github.com/googleanalytics/google-analytics-plugin-for-unity)。 当然，Unity Analytics 等服务由于理解 Unity 项目的本质，可提供比一般框架有意义的多的分析。|

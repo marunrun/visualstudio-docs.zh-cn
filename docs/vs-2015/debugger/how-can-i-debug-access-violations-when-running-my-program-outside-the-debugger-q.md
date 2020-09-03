@@ -1,5 +1,5 @@
 ---
-title: 在调试器外部运行程序时，如何调试访问冲突？ | Microsoft Docs
+title: 在调试器外部运行程序时如何调试访问冲突？ | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -21,23 +21,23 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: ce5b21f92eecf2e8929c142bc1ee32e20d386335
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74299248"
 ---
-# <a name="how-can-i-debug-access-violations-when-running-my-program-outside-the-debugger"></a>在调试器外部运行程序时，如何调试访问冲突？
+# <a name="how-can-i-debug-access-violations-when-running-my-program-outside-the-debugger"></a>在调试器外部运行程序时如何调试访问冲突？
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 问题描述  
  我的程序在 Visual Studio 环境中运行良好，但在 Windows 操作系统中独立运行时发生访问冲突。 如何调试该问题？  
   
 ## <a name="solution"></a>解决方案  
- 设置[实时调试](../debugger/just-in-time-debugging-in-visual-studio.md)选项并运行独立程序，直到发生访问冲突。 然后，在”访问冲突”对话框中，你可以单击”取消”以启动调试器。  
+ 设置[实时调试](../debugger/just-in-time-debugging-in-visual-studio.md)选项并运行独立程序，直到发生访问冲突。 然后，在”访问冲突”对话框中，你可以单击”取消”以启动调试器 。  
   
- 请参见知识库文章 Q133174“How to Locate Where a General Protection (GP) Fault Occurs”（如何定位通用性保护 (GP) 错误的发生位置）。 你可以在 MSDN Library CD 上找到知识库文章，也可以通过搜索[http://support.microsoft.com/](https://support.microsoft.com/)找到。  
+ 请参见知识库文章 Q133174“How to Locate Where a General Protection (GP) Fault Occurs”（如何定位通用性保护 (GP) 错误的发生位置）。 你可以在 MSDN 库 CD 上或通过搜索来查找知识库文章 [http://support.microsoft.com/](https://support.microsoft.com/) 。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [调试本机代码常见问题解答](../debugger/debugging-native-code-faqs.md)   
  [调试本机代码](../debugger/debugging-native-code.md)
