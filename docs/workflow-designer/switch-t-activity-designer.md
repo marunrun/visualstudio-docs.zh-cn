@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 7430dec75e898a6695b146ce50076b8f57ed9d3e
-ms.sourcegitcommit: de98ed7edc81383e47b87ae6e61143fbbbe7bc56
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88711607"
 ---
 # <a name="switcht-activity-designer"></a>Switch\<T> 活动设计器
@@ -38,7 +38,7 @@ ms.locfileid: "88711607"
 
 |属性名称|必选|使用情况|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|False|指定 <xref:System.Activities.Statements.Switch%601> 活动设计器的友好名称。 默认值为 Switch<Int32 \> 。 该值可以在 " **属性** " 窗口中编辑，也可以直接在设计器标头中编辑。<br /><br /> 虽然 <xref:System.Activities.Activity.DisplayName%2A> 不是绝对必需的，但最好使用该属性。|
+|<xref:System.Activities.Activity.DisplayName%2A>|错误|指定 <xref:System.Activities.Statements.Switch%601> 活动设计器的友好名称。 默认值为 Switch<Int32 \> 。 该值可以在 " **属性** " 窗口中编辑，也可以直接在设计器标头中编辑。<br /><br /> 虽然 <xref:System.Activities.Activity.DisplayName%2A> 不是绝对必需的，但最好使用该属性。|
 |<xref:System.Activities.Statements.Switch%601.Expression%2A>|正确|指定用于与 case 集合中的键进行比较以确定执行哪个 case 的表达式。|
 |<xref:System.Activities.Statements.Switch%601.Default%2A>||指定未找到匹配项时执行的活动。 单击设计器上的 " **添加活动** " 按钮，以打开可以删除活动的 **默认** 框。|
 |<xref:System.Activities.Statements.Switch%601.Cases%2A>||指定要计算的 case。 若要添加事例，请单击**交换机 \<T> **设计器底部的 "**添加新事例**" 按钮。 如果添加开关时所选的泛型类型 \<T> 是 String 或 Enum) ，则按钮将更改为文本框 (组合框。 在 " **case 值** " 框中添加了一个键后，将展开事例区域，并且可以在提示文本 "在此处放置活动" 时删除一个活动以定义该事例的执行逻辑。|

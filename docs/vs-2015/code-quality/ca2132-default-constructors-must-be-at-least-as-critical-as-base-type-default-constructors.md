@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 401aa6f5ebec4dac99bedba6f12478c7c48d1dc5
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85540811"
 ---
 # <a name="ca2132-default-constructors-must-be-at-least-as-critical-as-base-type-default-constructors"></a>CA2132:默认构造函数必须至少与基类型默认构造函数一样关键
@@ -29,7 +29,7 @@ ms.locfileid: "85540811"
 |是否重大更改|重大|
 
 > [!NOTE]
-> 此警告仅适用于运行 CoreCLR 的代码（特定于 Silverlight Web 应用程序的 CLR 的版本）。
+> 此警告仅适用于运行 CoreCLR 的代码 () 特定于 Silverlight Web 应用程序的 CLR 版本。
 
 ## <a name="cause"></a>原因
  派生类的默认构造函数的透明特性与基类的透明度不一样重要。

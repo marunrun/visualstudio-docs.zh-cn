@@ -9,15 +9,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: f1b821b4e63f82233b3c2e92fa3f5c3481cda982
-ms.sourcegitcommit: 186c0c250d85ac74274fa1e438b4c7c7108d8a36
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86876185"
 ---
 # <a name="messaging-activity-designers"></a>消息传递活动设计器
 
-消息传递活动设计器用于创建和配置消息传递活动，这些活动从 Windows Workflow Foundation （WF）应用程序中发送和接收 Windows Communication Foundation （WCF）消息。 .NET Framework 4 中引入了五条消息传递活动。 工作流设计器提供了两个模板设计器，可用于管理工作流中的消息传送。
+消息传递活动设计器用于创建和配置消息传递活动，这些活动通过 Windows Workflow Foundation (WF) 应用程序内部发送和接收 Windows Communication Foundation (WCF) 消息。 .NET Framework 4 中引入了五条消息传递活动。 工作流设计器提供了两个模板设计器，可用于管理工作流中的消息传送。
 
 本节中包含的主题和下表中列出的主题提供了有关如何使用工作流设计器活动和模板设计器的指导。
 

@@ -1,5 +1,5 @@
 ---
-title: IDebugClassField::GetDefaultIndexer |Microsoft Docs
+title: IDebugClassField：： GetDefaultIndexer |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,10 +13,10 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 6be0a1925a1e5d48941c1c0e13ac1b4789687229
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68191017"
 ---
 # <a name="idebugclassfieldgetdefaultindexer"></a>IDebugClassField::GetDefaultIndexer
@@ -38,15 +38,15 @@ int GetDefaultIndexer(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>参数  
  `pbstrIndexer`  
- [out]返回包含的默认索引器的名称的字符串。  
+ 弄返回一个字符串，该字符串包含默认索引器的名称。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回 S_OK 或如果没有默认索引器，则返回 S_FALSE。 否则，返回错误代码。  
+ 如果成功，则返回 S_OK 或返回 S_FALSE （如果没有默认索引器）。 否则，返回错误代码。  
   
 ## <a name="remarks"></a>备注  
- 一个类的默认索引器是属性，它被标记为`Default`数组访问的属性。 这是特定于[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]。 下面是一个示例中声明的默认索引器[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]以及如何使用它。  
+ 类的默认索引器是标记为数组访问的属性的属性 `Default` 。 这是特定于的 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 。 下面是在中声明的默认索引器的示例 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] ，以及如何使用它。  
   
 ```vb  
 Imports System.Collections;  
@@ -78,5 +78,5 @@ Function GetItem(Index as Integer) as Integer
 End Function  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)

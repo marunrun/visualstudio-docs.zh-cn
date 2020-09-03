@@ -13,14 +13,14 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 2a52dbb77145d1389995813d89384966fea35cec
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72984161"
 ---
 # <a name="sharepoint-development-samples"></a>SharePoint 开发示例
-  你可以使用 Visual Studio 从[MSDN 代码库](https://code.msdn.microsoft.com/)下载和安装 SharePoint 应用程序的示例。
+  你可以使用 Visual Studio 从 [MSDN 代码库](https://code.msdn.microsoft.com/)下载和安装 SharePoint 应用程序的示例。
 
  您可以单独下载每个示例。 你还可以下载包含共享技术或文章的相关示例的示例包。 在为下载的任何示例发布源代码更改时，您将收到通知。
 

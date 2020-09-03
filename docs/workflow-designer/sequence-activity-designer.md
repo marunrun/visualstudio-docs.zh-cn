@@ -11,21 +11,21 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 77980077a580724f6db6bb5a544200890421d8e5
-ms.sourcegitcommit: 186c0c250d85ac74274fa1e438b4c7c7108d8a36
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86875964"
 ---
 # <a name="sequence-activity-designer"></a>Sequence 活动设计器
 
 <xref:System.Activities.Statements.Sequence> 活动包含子活动的已排序集合，将按该排序执行这些子活动。
 
-按顺序执行一组活动的另一个方法是使用 <xref:System.Activities.Statements.Flowchart> 活动。 当你有一个简单的分支或循环程序流需要为图示建模时，请考虑使用[流程图](../workflow-designer/flowchart-activity-designer.md)。
+按顺序执行一组活动的另一个方法是使用 <xref:System.Activities.Statements.Flowchart> 活动。 当你有一个简单的分支或循环程序流需要为图示建模时，请考虑使用 [流程图](../workflow-designer/flowchart-activity-designer.md) 。
 
 ## <a name="using-the-sequence-activity-designer"></a>使用 Sequence 活动设计器
 
-若要添加 <xref:System.Activities.Statements.Sequence> 活动，请将 " **Sequence** " 活动设计器从 "**工具箱**" 拖放到工作流设计器图面上。 若要向此活动添加子活动 <xref:System.Activities.Statements.Sequence> ，请将 "**工具箱**" 中的某些其他活动拖放到框中的三角形上，并在提示文本 "将活动放在此处"。
+若要添加 <xref:System.Activities.Statements.Sequence> 活动，请将 " **Sequence** " 活动设计器从 " **工具箱** " 拖放到工作流设计器图面上。 若要向此活动添加子活动 <xref:System.Activities.Statements.Sequence> ，请将 " **工具箱** " 中的某些其他活动拖放到框中的三角形上，并在提示文本 "将活动放在此处"。
 
 ### <a name="sequence-activity-properties-in-the-workflow-designer"></a>工作流设计器中的 Sequence 活动属性
 

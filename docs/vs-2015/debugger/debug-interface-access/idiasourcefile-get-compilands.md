@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 9502a43b02091e3109b84c22dfe99d7aa174647a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68190688"
 ---
-# <a name="idiasourcefilegetcompilands"></a>IDiaSourceFile::get_compilands
+# <a name="idiasourcefileget_compilands"></a>IDiaSourceFile::get_compilands
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-检索了行号引用此文件的编译单位的枚举器。  
+检索具有引用此文件的行号的 compiland 的枚举器。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,11 +35,11 @@ HRESULT get_compilands ( 
   
 #### <a name="parameters"></a>参数  
  `ppRetVal`  
- [out]返回[IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)对象，其中包含了引用此文件的行号的所有编译单位的列表。  
+ 弄返回一个 [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md) 对象，该对象包含具有引用此文件的行号的所有 compiland 的列表。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md)   
  [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)
