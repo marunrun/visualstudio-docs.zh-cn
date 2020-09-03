@@ -1,5 +1,5 @@
 ---
-title: 可视化工作室 SDK 中的 GUID 和常量 |微软文档
+title: Visual Studio SDK 中的 Guid 和常量 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,21 +12,21 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: ecb443f3b5d6dd7b45d8dd77a8739b12b8891832
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80711135"
 ---
-# <a name="guids-and-constants-in-the-visual-studio-sdk"></a>可视化工作室 SDK 中的 GUID 和常量
-该<xref:Microsoft.VisualStudio.VSConstants>类提供对环境 GUID 和常量的选择的访问。
+# <a name="guids-and-constants-in-the-visual-studio-sdk"></a>Visual Studio SDK 中的 Guid 和常量
+<xref:Microsoft.VisualStudio.VSConstants>类提供对所选的环境 guid 和常量的访问。
 
-## <a name="in-this-section"></a>在本节中
-- [IDE GUIDs](../extensibility/ide-guids.md)列出 提供的<xref:Microsoft.VisualStudio.VSConstants>GUID。
+## <a name="in-this-section"></a>本节内容
+- [IDE guid](../extensibility/ide-guids.md) 列出由提供的 Guid <xref:Microsoft.VisualStudio.VSConstants> 。
 
-- [IDE 常量](../extensibility/ide-constants.md)列出 提供的<xref:Microsoft.VisualStudio.VSConstants>SDK 常量。
+- [IDE 常量](../extensibility/ide-constants.md) 列出了提供的 SDK 常量 <xref:Microsoft.VisualStudio.VSConstants> 。
 
 ## <a name="related-sections"></a>相关章节
-- [托管代码中的 COM 常量](../extensibility/com-constants-in-managed-code.md)列出可从托管包框架 （MPF） 向托管代码提供的标准 COM 常量。
+- [托管代码中的 COM 常量](../extensibility/com-constants-in-managed-code.md) 列出可用于托管代码的标准 COM 常量 (MPF) 。
 
-- [用于扩展项目系统的 IDE 定义命令](../extensibility/internals/ide-defined-commands-for-extending-project-systems.md)列出用于扩展项目系统的不同类型的命令项。
+- [IDE 定义的用于扩展项目系统的命令](../extensibility/internals/ide-defined-commands-for-extending-project-systems.md) 列出用于扩展项目系统的不同类型的命令项。

@@ -1,5 +1,5 @@
 ---
-title: 可视化工作室调试示例 |微软文档
+title: Visual Studio 调试示例 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,15 +13,15 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 2c3ac20f541f83103e0ded8c11881317e8d1aca4
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80712408"
 ---
-# <a name="visual-studio-debugging-samples"></a>可视化工作室调试示例
-两个示例演示如何使用[!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]扩展可视化工作室调试器。
+# <a name="visual-studio-debugging-samples"></a>Visual Studio 调试示例
+下面两个示例演示如何使用扩展 Visual Studio 调试器 [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] 。
 
-- 对于托管语言，调试器表达式赋值器示例包含在 中[!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]。 在[!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]窗口中，单击"**示例**"选项卡，单击语言列表中**的"全部**"或 **"C#"，** 然后单击 **"调试器**"。
+- 托管语言的调试器表达式计算器示例包含在中 [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] 。 在 [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] 窗口中，单击 " **示例** " 选项卡，单击语言列表中的 " **全部** " 或 " **c #** "，然后单击 " **调试器**"。
 
-- 用于本机语言的可视化工作室调试引擎示例可在 MSDN 代码库上使用。 有关详细信息，请参阅 Microsoft 网站上的[可视化工作室调试引擎示例](https://code.msdn.microsoft.com/Visual-Studio-Debug-Engine-c2e21c0e)。
+- MSDN 代码库中提供了适用于本机语言的 Visual Studio 调试引擎示例。 有关详细信息，请参阅 Microsoft 网站上的 [Visual Studio 调试引擎示例](https://code.msdn.microsoft.com/Visual-Studio-Debug-Engine-c2e21c0e) 。

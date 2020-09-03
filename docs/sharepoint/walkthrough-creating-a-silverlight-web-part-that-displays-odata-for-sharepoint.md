@@ -13,13 +13,14 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 75653f0357bcc605e666ee271a527b616985b641
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86017167"
 ---
 # <a name="walkthrough-create-a-silverlight-web-part-that-displays-odata-for-sharepoint"></a>演练：创建显示 OData for SharePoint 的 Silverlight web 部件
-  SharePoint 2010 通过 OData 公开其列表数据。 在 SharePoint 中，OData 服务由 RESTful 服务 ListData 实现。 本演练演示如何创建承载 Silverlight 应用程序的 SharePoint web 部件。 Silverlight 应用程序使用 ListData 显示 SharePoint 公告列表信息。 有关详细信息，请参阅[SharePoint FOUNDATION REST 接口](/previous-versions/office/developer/sharepoint-2010/ff521587(v=office.14))和[Open Data Protocol](https://www.odata.org/)。
+  SharePoint 2010 通过 OData 公开其列表数据。 在 SharePoint 中，OData 服务由 RESTful 服务 ListData 实现。 本演练演示如何创建承载 Silverlight 应用程序的 SharePoint web 部件。 Silverlight 应用程序使用 ListData 显示 SharePoint 公告列表信息。 有关详细信息，请参阅 [SharePoint FOUNDATION REST 接口](/previous-versions/office/developer/sharepoint-2010/ff521587(v=office.14)) 和 [Open Data Protocol](https://www.odata.org/)。
 
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
@@ -42,23 +43,23 @@ ms.locfileid: "86017167"
 
 2. 展开 " **Visual c #** " 或 " **Visual Basic**" 下的 " **SharePoint** " 节点，然后选择 " **2010** " 节点。
 
-3. 在 "模板" 窗格中，选择 " **SharePoint 2010 Silverlight Web 部件**" 模板。
+3. 在 "模板" 窗格中，选择 " **SharePoint 2010 Silverlight Web 部件** " 模板。
 
-4. 在 "**名称**" 框中，输入**SLWebPartTest** ，然后选择 "**确定"** 按钮。
+4. 在 " **名称** " 框中，输入 **SLWebPartTest** ，然后选择 " **确定"** 按钮。
 
-    此时将显示 " **SharePoint 自定义向导**" 对话框。
+    此时将显示 " **SharePoint 自定义向导** " 对话框。
 
-5. 在 "**指定用于调试的站点和安全级别**" 页上，输入要在其中调试站点定义的 SharePoint 服务器站点的 URL，或者使用默认位置（http://<em>system name</em>/）。
+5. 在 " **指定用于调试的站点和安全级别** " 页上，输入要在其中调试站点定义的 SharePoint 服务器站点的 URL，或使用 (http://<em>system name</em>/) 的默认位置。
 
-6. 在 "**此 SharePoint 解决方案的信任级别是什么？** " 部分中，选择 "**部署为场解决方案**" 选项按钮。
+6. 在 " **此 SharePoint 解决方案的信任级别是什么？** " 部分中，选择 " **部署为场解决方案** " 选项按钮。
 
-    虽然此示例使用场解决方案，但 Silverlight web 部件项目可以作为场或沙盒解决方案进行部署。 有关沙盒解决方案和场解决方案的详细信息，请参阅[沙盒解决方案注意事项](../sharepoint/sandboxed-solution-considerations.md)。
+    虽然此示例使用场解决方案，但 Silverlight web 部件项目可以作为场或沙盒解决方案进行部署。 有关沙盒解决方案和场解决方案的详细信息，请参阅 [沙盒解决方案注意事项](../sharepoint/sandboxed-solution-considerations.md)。
 
 7. 在 "**指定 Silverlight 配置信息**" 页的 "要**如何关联 silverlight Web 部件**" 部分中，选择 "**创建新的 silverlight 项目并将其与 Web 部件相关联"** 选项按钮。
 
-8. 将**名称**更改为**SLApplication**，将**语言**设置为**Visual Basic**或**Visual c #**，然后将**silverlight 版本**设置为**silverlight 4.0**。
+8. 将 **名称** 更改为 **SLApplication**，将 **语言** 设置为 **Visual Basic** 或 **Visual c #**，然后将 **silverlight 版本** 设置为 **silverlight 4.0**。
 
-9. 选择 **“完成”** 按钮。 项目将显示在**解决方案资源管理器**中。
+9. 选择 **“完成”** 按钮。 项目将显示在 **解决方案资源管理器**中。
 
      此解决方案包含两个项目： Silverlight 应用程序和 Silverlight web 部件。 Silverlight 应用程序从 SharePoint 检索并显示列表数据，Silverlight web 部件承载 Silverlight 应用程序，使您可以在 SharePoint 中查看它。
 
@@ -67,32 +68,32 @@ ms.locfileid: "86017167"
 
 #### <a name="to-customize-the-silverlight-application"></a>自定义 Silverlight 应用程序
 
-1. 在 Silverlight 应用程序中添加对 System.web 的程序集引用。 有关详细信息，请参阅[如何：使用 "添加引用" 对话框添加或删除引用](https://msdn.microsoft.com/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)。
+1. 在 Silverlight 应用程序中添加对 System.web 的程序集引用。 有关详细信息，请参阅 [如何：使用 "添加引用" 对话框添加或删除引用](https://msdn.microsoft.com/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)。
 
-2. 在**解决方案资源管理器**中，打开 "**引用**" 的快捷菜单，然后选择 "**添加服务引用**"。
+2. 在 **解决方案资源管理器**中，打开 " **引用**" 的快捷菜单，然后选择 " **添加服务引用**"。
 
     > [!NOTE]
     > 如果使用 Visual Basic，则必须选择**解决方案资源管理器**顶部的 "**显示所有文件**" 图标以显示 "**引用**" 节点。
 
-3. 在 "**添加服务引用**" 对话框的 "地址" 框中，输入 SharePoint 站点的 URL （例如 **http://MySPSite** ），然后选择 "**开始**" 按钮。
+3. 在 " **添加服务引用** " 对话框的 "地址" 框中，输入 SharePoint 站点的 URL （例如 **http://MySPSite** ），然后选择 " **开始** " 按钮。
 
      当 Silverlight 查找 SharePoint OData 服务 ListData 时，它会将该地址替换为完整的服务 URL。 对于本示例， http://myserver 将变为 http://myserver/_vti_bin/ListData.svc 。
 
-4. 选择 "**确定"** 按钮以将服务引用添加到项目，并使用默认服务名称 ServiceReference1。
+4. 选择 " **确定"** 按钮以将服务引用添加到项目，并使用默认服务名称 ServiceReference1。
 
-5. 在菜单栏上，依次选择“生成” > “生成解决方案”   。
+5. 在菜单栏上，依次选择“生成” > “生成解决方案” 。
 
 6. 将新数据源添加到基于 SharePoint 服务的项目。 为此，请在菜单栏上选择 "**查看**  >  **其他 Windows**  >  **数据源**"。
 
-     "**数据源**" 窗口将显示所有可用的 SharePoint 列表数据，如 "任务"、"公告" 和 "日历"。
+     " **数据源** " 窗口将显示所有可用的 SharePoint 列表数据，如 "任务"、"公告" 和 "日历"。
 
-7. 将公告列表数据添加到 Silverlight 应用程序。 可以将 "通知" 从 "**数据源**" 窗口拖到 Silverlight 设计器中。
+7. 将公告列表数据添加到 Silverlight 应用程序。 可以将 "通知" 从 " **数据源** " 窗口拖到 Silverlight 设计器中。
 
      这将创建一个绑定到 SharePoint 站点的 "公告" 列表的网格控件。
 
 8. 调整网格控件的大小以适合 Silverlight 页。
 
-9. 在 MainPage 代码文件中（对于 Visual c #，为*MainPage.xaml.cs* ，对于 Visual Basic 为*MainPage* ），添加以下命名空间引用。
+9. 在 MainPage 代码文件中，对于 Visual Basic) 的 Visual c # 或*MainPage* (*MainPage.xaml.cs* ，请添加以下命名空间引用。
 
     ```vb
     ' Add the following three Imports statements.
@@ -159,7 +160,7 @@ ms.locfileid: "86017167"
     }
     ```
 
-     请确保将*ServerName*占位符替换为运行 SharePoint 的服务器的名称。
+     请确保将 *ServerName* 占位符替换为运行 SharePoint 的服务器的名称。
 
 12. 添加以下错误处理过程。
 
@@ -195,11 +196,11 @@ ms.locfileid: "86017167"
 
 #### <a name="to-modify-the-silverlight-web-part"></a>修改 Silverlight web 部件
 
-1. 打开 Silverlight web 部件项目（**SLWebPartTest**）的快捷菜单，然后选择 "**属性**"。
+1. 打开 (**SLWebPartTest**) 的 Silverlight web 部件项目的快捷菜单，然后选择 " **属性**"。
 
-2. 在 "**属性**" 窗口中，选择 " **SharePoint** " 选项卡。
+2. 在 " **属性** " 窗口中，选择 " **SharePoint** " 选项卡。
 
-3. 如果尚未选中，请选中 "**启用 Silverlight 调试（而不是脚本调试）** " 复选框。
+3. 如果尚未选中，请选中 " **启用 Silverlight 调试 (而不是脚本调试) ** 复选框。
 
 4. 保存项目。
 
@@ -208,26 +209,26 @@ ms.locfileid: "86017167"
 
 #### <a name="to-test-the-silverlight-web-part"></a>测试 Silverlight web 部件
 
-1. 选择**F5**键生成并运行 SharePoint 解决方案。
+1. 选择 **F5** 键生成并运行 SharePoint 解决方案。
 
-2. 在 SharePoint 的 "**网站操作**" 菜单上，选择 "**新建页**"。
+2. 在 SharePoint 的 " **网站操作** " 菜单上，选择 " **新建页**"。
 
-3. 在 "**新建页面**" 对话框中，输入标题，如 " **SL Web 部件测试**"，然后选择 "**创建**" 按钮。
+3. 在 " **新建页面** " 对话框中，输入标题，如 " **SL Web 部件测试**"，然后选择 " **创建** " 按钮。
 
-4. 在 "页面设计器" 中的 "**编辑工具**" 选项卡上，选择 "**插入**"。
+4. 在 "页面设计器" 中的 " **编辑工具** " 选项卡上，选择 " **插入**"。
 
 5. 在选项卡栏上，选择 " **Web 部件**"。
 
-6. 在 "**类别**" 框中，选择 "**自定义**" 文件夹。
+6. 在 " **类别** " 框中，选择 " **自定义** " 文件夹。
 
-7. 在**Web 部件**列表中，选择 Silverlight Web 部件，然后选择 "**添加**" 按钮，将该 web 部件添加到设计器中。
+7. 在 **Web 部件** 列表中，选择 Silverlight Web 部件，然后选择 " **添加** " 按钮，将该 web 部件添加到设计器中。
 
-8. 对所需的网页进行所有添加后，选择 "**页面**" 选项卡，然后选择工具栏上的 "**保存 &" 关闭**"按钮。
+8. 对所需的网页进行所有添加后，选择 " **页面** " 选项卡，然后选择工具栏上的 " **保存 &" 关闭** "按钮。
 
      Silverlight web 部件现在应显示来自 SharePoint 站点的公告数据。 默认情况下，该页存储在 SharePoint 的 "网站页面" 列表中。
 
     > [!NOTE]
-    > 跨域访问 Silverlight 中的数据时，Silverlight 会防止可用于利用 web 应用程序的安全漏洞。 如果在访问 Silverlight 中的远程数据时遇到问题，请参阅[使服务跨域边界可用](/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc197955(v=vs.95))。
+    > 跨域访问 Silverlight 中的数据时，Silverlight 会防止可用于利用 web 应用程序的安全漏洞。 如果在访问 Silverlight 中的远程数据时遇到问题，请参阅 [使服务跨域边界可用](/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc197955(v=vs.95))。
 
 ## <a name="see-also"></a>另请参阅
 - [为 SharePoint 创建 web 部件](../sharepoint/creating-web-parts-for-sharepoint.md)

@@ -9,20 +9,20 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: ad4698fe469176ae8ed590c44b4efbb4ccf39de2
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545049"
 ---
 # <a name="ca5351-do-not-use-broken-cryptographic-algorithms"></a>CA5351 不使用损坏的加密算法
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|Item|值|
+|项|值|
 |-|-|
 |TypeName|DoNotUseBrokenCryptographicAlgorithms|
 |CheckId|CA5351|
-|Category|Microsoft.Cryptography|
+|类别|Microsoft.Cryptography|
 |是否重大更改|非重大更改|
 
 > [!NOTE]
@@ -47,7 +47,7 @@ ms.locfileid: "85545049"
 ## <a name="how-to-fix-violations"></a>如何解决冲突
  使用更强大的加密选项：
 
-- 对于 MD5，请使用[sha-1](https://msdn.microsoft.com/library/windows/desktop/aa382459.aspx)系列中的哈希（例如 <xref:System.Security.Cryptography.SHA512> 、 <xref:System.Security.Cryptography.SHA384> 、 <xref:System.Security.Cryptography.SHA256> ）。
+- 对于 MD5，请使用 [sha-1](https://msdn.microsoft.com/library/windows/desktop/aa382459.aspx) 系列中的哈希 (例如 <xref:System.Security.Cryptography.SHA512> ， <xref:System.Security.Cryptography.SHA384> <xref:System.Security.Cryptography.SHA256>) 。
 
 - 对于 DES 和 RC2，请使用 <xref:System.Security.Cryptography.Aes> 加密。
 

@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 4e191ca10456f133e1213961ca2d1ed9cb8e040b
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85544295"
 ---
 # <a name="ca2124-wrap-vulnerable-finally-clauses-in-outer-try"></a>CA2124:在外部 try 块中包装易受攻击的 finally 子句
@@ -49,7 +49,7 @@ ms.locfileid: "85544295"
 
 ## <a name="pseudo-code-example"></a>伪代码示例
 
-### <a name="description"></a>描述
+### <a name="description"></a>说明
  下面伪代码说明此规则检测到的模式。
 
 ### <a name="code"></a>代码

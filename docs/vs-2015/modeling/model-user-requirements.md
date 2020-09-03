@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: a94a4bd479c3ad48efe44d3a92e91dc3a050efcd
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75918267"
 ---
 # <a name="model-user-requirements"></a>建立用户需求模型
@@ -43,41 +43,41 @@ ms.locfileid: "75918267"
 
 - 使用模型作为系统测试的基础，明确测试和要求之间的关系。 要求发生改变时，这种关系将帮助你正确地更新测试。 这可以确保系统满足新的要求。
 
-  如果在与用户或其代表进行重点讨论时使用需求模型，并在每次迭代开始时重新查看需求模型，那么使用需求模型会获得最大的好处。 无需在编写代码之前详细地完成它。 即使是非常简单的部分工作的应用程序，通常也能构成与用户讨论需求时的最具激励性的基础。 模型是汇总讨论结果的一种有效方式。 有关详细信息，请参阅[在开发过程中使用模型](../modeling/use-models-in-your-development-process.md)。
+  如果在与用户或其代表进行重点讨论时使用需求模型，并在每次迭代开始时重新查看需求模型，那么使用需求模型会获得最大的好处。 无需在编写代码之前详细地完成它。 即使是非常简单的部分工作的应用程序，通常也能构成与用户讨论需求时的最具激励性的基础。 模型是汇总讨论结果的一种有效方式。 有关详细信息，请参阅 [在开发过程中使用模型](../modeling/use-models-in-your-development-process.md)。
 
 > [!NOTE]
 > 在这些主题中，“系统”表示正在开发的系统或应用程序。 它可能是许多软件和硬件组件的大型集合、单个应用程序或一个更大型系统内的某个软件组件。 在每种情况下，需求模型都描述了在系统外部可以通过用户界面或 API 看到的行为。
 
-## <a name="common-tasks"></a>常规任务
+## <a name="common-tasks"></a>常见任务
  可以根据用户需求创建多个不同的视图。  每个视图都提供特定类型的信息。  在创建这些视图时，最好经常在视图间移动。 可以从任意视图开始。
 
-|关系图或文档|需求模型中描述的内容|节|
+|关系图或文档|需求模型中描述的内容|部分|
 |-------------------------|-----------------------------------------------|-------------|
-|用例图|系统的使用者是谁以及用该系统进行了什么操作。|[描述系统的使用方式](#UseCases)|
+|用例图|系统的使用者是谁以及用该系统进行了什么操作。|[描述系统的使用方法](#UseCases)|
 |概念类图|用于描述要求的类型术语表；类型可以在系统界面中看到。|[定义用于描述要求的术语](#RequirementsClasses)|
 |活动图|由用户与系统或其部件执行的活动之间的工作流和信息。|[显示用户与系统之间的工作流](#Workflow)|
 |序列图|用户和系统或其部分之间的交互序列。 活动图的替代视图。|[显示用户与系统之间的交互](#Sequences)|
 |附加文档或工作项|性能、安全性、可用性和可靠性条件。|[描述服务质量要求](#QoSRequirements)|
 |附加文档或工作项|不针对特定用例的约束和规则|[显示业务规则](#BusinessRules)|
 
- 请注意，大多数关系图类型可以用于其他目的。 有关关系图类型的概述，请参阅为[应用程序创建模型](../modeling/create-models-for-your-app.md)。 有关绘制关系图的基本信息，请参阅[编辑 UML 模型和关系图](../modeling/edit-uml-models-and-diagrams.md)。
+ 请注意，大多数关系图类型可以用于其他目的。 有关关系图类型的概述，请参阅为 [应用程序创建模型](../modeling/create-models-for-your-app.md)。 有关绘制关系图的基本信息，请参阅 [编辑 UML 模型和关系图](../modeling/edit-uml-models-and-diagrams.md)。
 
-## <a name="UseCases"></a>描述系统的使用方式
+## <a name="describing-how-your-system-is-used"></a><a name="UseCases"></a> 描述系统的使用方式
  创建用例图来描述系统的使用者以及他们使用系统的用途。 用例子表示系统用户的目标，以及他们执行操作以达到目标的过程。
 
  例如，在线售餐系统必须允许顾客从菜单中选择项目，也必须允许提供服务的餐厅可以更新菜单。 可以在用例图中对此进行汇总：
 
- ![客户和餐馆的用例](../modeling/media/uml-reqmuc1.png "UML_ReqmUC1")
+ ![Customer 和 Restaurant 用例](../modeling/media/uml-reqmuc1.png "UML_ReqmUC1")
 
  也可以展示多个小事例如何构成一个用例。 例如，订餐是购买餐食的一部分，还包括付款和送餐：
 
- ![系统参与付款但未送达。](../modeling/media/uml-reqmuc2.png "UML_ReqmUC2")
+ ![系统参与支付，但不参与交付。](../modeling/media/uml-reqmuc2.png "UML_ReqmUC2")
 
  此外，也可以显示正在开发的系统范围内还包括了哪些用例。 例如，插图中的系统未包含送餐用例。 这有助于为开发工作设置上下文。 （在用例图中，子系统容器可用于表示该系统或其组件。）
 
  它还可以帮助你的团队讨论后续版本中将包含的内容。 例如，在系统的初始版本中而不是在整个系统，可以讨论餐费支付是否直接安排在餐厅和顾客之间。 在这种情况下，可以在初始版本中将支付餐费移到“立即就餐”系统矩形外。
 
- 用例图仅提供用例的摘要。 若要提供更详细的说明，可以将关系图上的用例链接到单独的文档和其他关系图。 若要了解如何执行此操作，请参阅将[用例链接到文档和关系图](../modeling/link-a-use-case-to-documents-and-diagrams.md)。
+ 用例图仅提供用例的摘要。 若要提供更详细的说明，可以将关系图上的用例链接到单独的文档和其他关系图。 若要了解如何执行此操作，请参阅将 [用例链接到文档和关系图](../modeling/link-a-use-case-to-documents-and-diagrams.md)。
 
  绘制用例图可帮助团队：
 
@@ -85,15 +85,15 @@ ms.locfileid: "75918267"
 
 - 讨论系统范围或系统的特定版本。
 
-  下列主题提供了更多信息：
+  有关详细信息，请参阅以下主题：
 
-|若要了解|读取|
+|了解|读取|
 |--------------------|----------|
 |有关如何创建用例的更详细信息|[UML 用例图：准则](../modeling/uml-use-case-diagrams-guidelines.md)|
 |用例图上的元素|[UML 用例图：参考](../modeling/uml-use-case-diagrams-reference.md)|
 |如何从用例中开发代码|[应用体系结构建模](../modeling/model-your-app-s-architecture.md)|
 
-## <a name="RequirementsClasses"></a>定义用于描述要求的术语
+## <a name="defining-terms-used-to-describe-requirements"></a><a name="RequirementsClasses"></a> 定义用于描述要求的术语
  可以使用 UML 类图来帮助开发一致的、用于以下用途的业务概念术语：
 
 - 由用户自身讨论系统要作用于的业务。
@@ -114,7 +114,7 @@ ms.locfileid: "75918267"
 
   概念类图将提供在整个需求模型中使用的术语词汇。 例如，在用例“订餐”的详细描述中，可能会这样编写：
 
-  顾客选择“菜单” 并从中构造“订单”，然后通过选择“菜单” 中的“菜单项” 在“订单” 中创建“订单项”。
+  顾客选择“菜单” ** 并从中构造“订单” **，然后通过选择“菜单” ** 中的“菜单项” ** 在“订单” ** 中创建“订单项” **。
 
   请注意，术语在说明中的使用方法即为模型中类的名称。 关系图可以清楚地说明这些类之间的关系。 例如，它清楚地显示每个“订单”仅与一个菜单关联。
 
@@ -130,9 +130,9 @@ ms.locfileid: "75918267"
 
 - 阐明这些术语之间的关系。
 
-  下列主题提供了更多信息：
+  有关详细信息，请参阅以下主题：
 
-|若要了解|读取|
+|了解|读取|
 |--------------------|----------|
 |有关查找要求类的更详细信息|[UML 类图：准则](../modeling/uml-class-diagrams-guidelines.md)|
 |概念类图上的元素|[UML 类图：参考](../modeling/uml-class-diagrams-reference.md)|
@@ -140,10 +140,10 @@ ms.locfileid: "75918267"
 
  在概念类图中，通常在关联上放置箭头来表示可导航性没什么用处。 这是因为此关系图并不表示实现。 关联表示现实世界对象间的关系。
 
-## <a name="BusinessRules"></a> Showing Business Rules
+## <a name="showing-business-rules"></a><a name="BusinessRules"></a> Showing Business Rules
  业务规则是一个不与特定用例相关联的要求，应在整个系统中进行观察。
 
- 许多业务规则受概念类间关系的约束。 您可以编写这些*静态业务规则*作为与概念类图上的相关类关联的注释。 例如：
+ 许多业务规则受概念类间关系的约束。 您可以编写这些 *静态业务规则* 作为与概念类图上的相关类关联的注释。 例如：
 
  ![附加到 Order 类的注释中的规则。](../modeling/media/uml-reqmcd2.png "UML_ReqmCD2")
 
@@ -153,15 +153,15 @@ ms.locfileid: "75918267"
 
  请注意，此处的选择是有关你如何定义要求的方式，与你如何在程序代码中实现要求无关。
 
- 下列主题提供了更多信息：
+ 有关详细信息，请参阅以下主题：
 
-|若要了解|读取|
+|了解|读取|
 |--------------------|----------|
 |有关查找和记录静态业务规则的更详细信息|[UML 类图：准则](../modeling/uml-class-diagrams-guidelines.md)|
 |概念类图上的元素|[UML 类图：参考](../modeling/uml-class-diagrams-reference.md)|
 |如何开发符合业务规则的代码|[应用体系结构建模](../modeling/model-your-app-s-architecture.md)|
 
-## <a name="QoSRequirements"></a> Describing Quality of Service Requirements
+## <a name="describing-quality-of-service-requirements"></a><a name="QoSRequirements"></a> 描述服务质量要求
  服务质量要求有多个类别。 它们包括以下内容：
 
 - 性能
@@ -178,46 +178,46 @@ ms.locfileid: "75918267"
 
   如果餐厅在顾客订餐时删除了菜单项，则任何引用该菜单项的订单项将显示为红色。
 
-  下列主题提供了更多信息：
+  有关详细信息，请参阅以下主题：
 
-|若要了解|读取|
+|了解|读取|
 |--------------------|----------|
 |将其他文档附加到用例|[将用例链接到文档和关系图](../modeling/link-a-use-case-to-documents-and-diagrams.md)|
 |如何开发符合服务质量要求的代码|[应用体系结构建模](../modeling/model-your-app-s-architecture.md)|
 
-## <a name="Workflow"></a>显示用户与系统之间的工作流
+## <a name="showing-work-flow-between-users-and-your-system"></a><a name="Workflow"></a> 显示用户与系统之间的工作流
  可以使用活动图来显示不同用例间的工作流。 通过绘制显示用户执行的主要任务（通过系统执行或在系统以外执行的任务）的活动图来开始建立要求模型常常非常有用。
 
  例如：
 
- ![具有三个操作和循环的活动。](../modeling/media/uc-reqmwfact.png "UC_ReqmWFAct")
+ ![包含三个操作和一个循环的活动。](../modeling/media/uc-reqmwfact.png "UC_ReqmWFAct")
 
  可以绘制用例图和活动图来显示相同信息的不同视图。  虽然用例图在显示大型活动中嵌套的较小型活动时更具效率，但不会显示工作流。 例如：
 
- ![之前操作的用例](../modeling/media/uml-reqmwfuc.png "UML_ReqmWFUC")
+ ![前一个操作的用例](../modeling/media/uml-reqmwfuc.png "UML_ReqmWFUC")
 
  请注意，也可以使用活动图来描述软件内的算法，但在将此关系图用于业务进程时，应关注在系统外可以看到的操作。
 
- 下列主题提供了更多信息：
+ 有关详细信息，请参阅以下主题：
 
-|若要了解|读取|
+|了解|读取|
 |--------------------|----------|
 |有关如何定义业务工作流的更多信息|[UML 活动图：准则](../modeling/uml-activity-diagrams-guidelines.md)|
 |活动图中的元素|[UML 活动图：参考](../modeling/uml-activity-diagrams-reference.md)|
 |如何从活动图中开发代码|[应用体系结构建模](../modeling/model-your-app-s-architecture.md)|
 
-## <a name="Sequences"></a>显示用户与系统之间的交互
+## <a name="showing-interactions-between-users-and-your-system"></a><a name="Sequences"></a> 显示用户与系统之间的交互
  可以使用序列图显示系统和外部参与者之间或系统的各部件与系统之间的消息交换。 这在用例中提供了一个步骤视图，非常清晰地显示了交互序列。 当用例内有多个交互方，且你的系统有 API 时，序列图非常有用。
 
  例如：
 
- ![系统和参与者的序列图。](../modeling/media/uml-reqmseq.png "UML_ReqmSeq")
+ ![带有 System 和参与者的序列关系图。](../modeling/media/uml-reqmseq.png "UML_ReqmSeq")
 
  序列图的一个优点就是可以很方便地看到你所构建的系统收到了什么消息。 若要设计系统，可以将单个系统生命线替换为每个系统组件的独立生命线，然后显示各生命线之间用来响应每个传入消息的交互。
 
- 下列主题提供了更多信息：
+ 有关详细信息，请参阅以下主题：
 
-|若要了解|读取|
+|了解|读取|
 |--------------------|----------|
 |有关如何定义交互的更多信息|[UML 序列图：准则](../modeling/uml-sequence-diagrams-guidelines.md)|
 |序列图上的元素|[UML 序列图：参考](../modeling/uml-sequence-diagrams-reference.md)|
@@ -238,5 +238,5 @@ ms.locfileid: "75918267"
 
   通过检查不同关系图提供的视图之间的关系，可以快速理解用户使用的主要概念，并帮助他们理解他们需要从系统中获得什么。 还可以更好地理解利益干系人最不确定的需求。 可以计划在项目的早期阶段至少以简化的形式开发这些功能，从而允许用户体验这些功能。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [编辑 UML 模型和关系图](../modeling/edit-uml-models-and-diagrams.md)[从模型开发测试](../modeling/develop-tests-from-a-model.md)[使用开发过程中](../modeling/use-models-in-your-development-process.md)[的模型模型应用的体系结构](../modeling/model-your-app-s-architecture.md)[视频：业务域建模](https://channel9.msdn.com/blogs/clinted/uml-with-vs-2010-part-3-modeling-the-business-domain)

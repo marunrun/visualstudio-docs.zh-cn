@@ -9,10 +9,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: c0d6a6f6ab42d69d4503741f6625627c46d4ef77
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545101"
 ---
 # <a name="ca3077-insecure-processing-in-api-design-xml-document-and-xml-text-reader"></a>CA3077:API 设计、XML 文档和 XML 文本读取器中的不安全处理
@@ -31,7 +31,7 @@ ms.locfileid: "85545101"
 ## <a name="rule-description"></a>规则描述
  XML 分析器可以通过两种方式确定文档有效性， [文档类型定义 (DTD)](https://msdn.microsoft.com/library/aa468547.aspx) 是其中一种（根据  [万维网联合会 (W3C) 可扩展标记语言 (XML) 1.0](https://www.w3.org/TR/2008/REC-xml-20081126/)的定义）。 此规则查找接受不受信任数据的某些属性和实例以提醒开发人员有关的潜在 [Information Disclosure](https://msdn.microsoft.com/library/4064c89f-afa6-444a-aa7e-807ef072131c) 威胁，该威胁可能会导致 [拒绝服务 (DoS)](https://msdn.microsoft.com/library/dfb150f3-d598-4697-a5e6-6779e4f9b600) 攻击。 在以下情况下触发此规则：
 
-- <xref:System.Xml.XmlDocument>或 <xref:System.Xml.XmlTextReader> 类使用默认的冲突解决程序值来进行 DTD 处理。
+- <xref:System.Xml.XmlDocument> 或 <xref:System.Xml.XmlTextReader> 类使用默认的冲突解决程序值来进行 DTD 处理。
 
 - 没有为 XmlDocument 或 XmlTextReader 派生类定义的构造函数或没有用于 <xref:System.Xml.XmlResolver>的安全值。
 

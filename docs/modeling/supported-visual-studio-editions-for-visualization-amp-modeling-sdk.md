@@ -11,15 +11,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 3be233ce8730879c2f0406ec9cc180685992c6bf
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85544932"
 ---
 # <a name="supported-visual-studio-editions-for-visualization--modeling-sdk"></a>可视化和建模 SDK 支持的 Visual Studio 版本
 
-以下是 [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] 在创作和部署环境中支持的 Visual Studio 版本的列表。 有关这些版本的详细信息，请参阅 Microsoft Visual Studio[开发人员中心](https://visualstudio.microsoft.com/)。
+以下是 [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] 在创作和部署环境中支持的 Visual Studio 版本的列表。 有关这些版本的详细信息，请参阅 Microsoft Visual Studio [开发人员中心](https://visualstudio.microsoft.com/)。
 
 ## <a name="authoring-edition"></a>创作版
 
@@ -35,7 +35,7 @@ ms.locfileid: "85544932"
 
 ## <a name="deployment-editions"></a>部署版
 
-[!INCLUDE[dsl](../modeling/includes/dsl_md.md)]支持以下配置以部署生成的域特定语言：
+[!INCLUDE[dsl](../modeling/includes/dsl_md.md)] 支持以下配置以部署生成的域特定语言：
 
 - Visual Studio Enterprise
 
@@ -46,7 +46,7 @@ ms.locfileid: "85544932"
 - Visual Studio Shell（独立模式）可再发行组件包
 
 > [!NOTE]
-> 若要使 DSL 能够在 Shell 产品上运行，必须在扩展清单中设置**支持的 VS Edition**字段。 有关详细信息，请参阅[部署域特定语言解决方案](msi-and-vsix-deployment-of-a-dsl.md)。
+> 若要使 DSL 能够在 Shell 产品上运行，必须在扩展清单中设置 **支持的 VS Edition** 字段。 有关详细信息，请参阅[部署域特定语言解决方案](msi-and-vsix-deployment-of-a-dsl.md)。
 
 ## <a name="see-also"></a>另请参阅
 

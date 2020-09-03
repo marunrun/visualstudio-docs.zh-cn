@@ -16,20 +16,20 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 97bd41e51c8d6b5415ffb91c5696c7055f46cf7c
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545400"
 ---
 # <a name="ca1016-mark-assemblies-with-assemblyversionattribute"></a>CA1016:用 AssemblyVersionAttribute 标记程序集
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|Item|值|
+|项|值|
 |-|-|
 |TypeName|MarkAssembliesWithAssemblyVersion|
 |CheckId|CA1016|
-|Category|Microsoft. Design|
+|类别|Microsoft. Design|
 |是否重大更改|不间断|
 
 ## <a name="cause"></a>原因
@@ -44,7 +44,7 @@ ms.locfileid: "85545400"
 
 - 环境
 
-- 公钥（对于强名称程序集）。
+- ) 强名称程序集的公钥 (。
 
   [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 使用版本号唯一地标识程序集，并绑定到具有强名称的程序集中的类型。 版本号与版本和发行者策略一起使用。 默认情况下，仅使用用于生成应用程序的程序集版本运行应用程序。
 

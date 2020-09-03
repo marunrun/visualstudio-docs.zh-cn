@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: ef79d1be0b88ecdafa8691189bbc95291a6417ed
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85544984"
 ---
 # <a name="define-and-install-a-modeling-extension"></a>定义和安装建模扩展
@@ -77,7 +77,7 @@ ms.locfileid: "85544984"
         |**类别** =|**Microsoft.VisualStudio.MefComponent**|
         |**源程序** =|**当前解决方案中的项目**|
         |**Project** =|*类库项目*|
-        |**嵌入此文件夹** =|*空白处*|
+        |**嵌入此文件夹** =|* (空) *|
 
          有关其他组件类型，请参阅下一部分中的链接。
 
@@ -97,7 +97,7 @@ ms.locfileid: "85544984"
 
 #### <a name="to-run-an-extension-during-its-development"></a>在其开发期间运行扩展
 
-1. 在 " [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] **调试**" 菜单中，选择 "**启动调试**"。
+1. 在 " [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] **调试** " 菜单中，选择 " **启动调试**"。
 
      将生成项目，并且 [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] 的新实例将在实验模式下启动。
 
@@ -109,7 +109,7 @@ ms.locfileid: "85544984"
 
 3. 如果使用了“启动但不调试” **** ，但想要使用调试器，请返回到 Visual Studio 的主实例。 在 **“调试”** 菜单上，单击 **“附加到进程”**。 在对话框中，选择具有程序名 **devenv**的 Visual Studio 的实验实例。
 
-## <a name="installing-and-uninstalling-an-extension"></a><a name="Installing"></a>安装和卸载扩展
+## <a name="installing-and-uninstalling-an-extension"></a><a name="Installing"></a> 安装和卸载扩展
  执行以下步骤以在你自己的计算机上或在其他计算机上的 Visual Studio 的主实例中运行你的扩展。
 
 1. 在你的计算机中，找到由你的扩展项目生成的 **.vsix** 文件。
@@ -130,7 +130,7 @@ ms.locfileid: "85544984"
 
 #### <a name="to-uninstall-an-extension"></a>若要卸载扩展
 
-1. 在 **** “工具”菜单上，单击 ****“扩展和更新”。
+1. 在“工具”菜单上，单击“扩展和更新”。
 
 2. 展开“已安装的扩展” ****。
 

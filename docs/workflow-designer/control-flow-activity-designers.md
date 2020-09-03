@@ -9,17 +9,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 84f9de21dbf0529823690effb4285b63a3b226fa
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "76114681"
 ---
 # <a name="control-flow-activity-designers"></a>控制流活动设计器
 
 工作流设计器包括多个系统提供的活动，这些活动在构造工作流时可以使用。 本节包含系统提供的活动中用于控制工作流中的流的活动。 以下主题介绍这些活动以及如何使用它们。
 
-## <a name="reference"></a>引用
+## <a name="reference"></a>参考
 
  <xref:System.Activities.Activity>
 
@@ -51,7 +51,7 @@ ms.locfileid: "76114681"
 
  [流程图](../workflow-designer/flowchart-activity-designers.md)
 
- [Messaging](../workflow-designer/messaging-activity-designers.md)
+ [消息传送](../workflow-designer/messaging-activity-designers.md)
 
  [运行时](../workflow-designer/runtime-activity-designers.md)
 
@@ -59,10 +59,10 @@ ms.locfileid: "76114681"
 
  [事务](../workflow-designer/transaction-activity-designers.md)
 
- [收集](../workflow-designer/collection-activity-designers.md)
+ [集合](../workflow-designer/collection-activity-designers.md)
 
  [错误处理](../workflow-designer/error-handling-activity-designers.md)
 
-## <a name="external-resources"></a>外部資源
+## <a name="external-resources"></a>外部资源
 
 - [使用活动设计器](control-flow-activity-designers.md)

@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 0a4883d36c1833c66a2539380184521b070f5c2a
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85544724"
 ---
 # <a name="iwefdebuggingsupport-interface"></a>IWefDebuggingSupport 接口
@@ -42,4 +42,4 @@ interface IWefDebuggingSupport : IUnknown
 |名称|说明|
 |----------|-----------------|
 |[GetAutoInsertExtensions 方法](../vsto/getautoinsertextensions-method.md)|获取有关在调试过程中将自动插入的 Office 相关应用程序的信息。|
-|[SetWefProcessId 方法](../vsto/setwefprocessid-method.md)|提供将运行 Web 扩展框架（WEF）内容的进程标识符。|
+|[SetWefProcessId 方法](../vsto/setwefprocessid-method.md)|提供将 (WEF) 内容运行 Web 扩展框架的进程标识符。|
