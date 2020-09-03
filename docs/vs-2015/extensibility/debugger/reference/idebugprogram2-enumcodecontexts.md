@@ -1,5 +1,5 @@
 ---
-title: IDebugProgram2::EnumCodeContexts |Microsoft Docs
+title: IDebugProgram2：： EnumCodeContexts |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 26bd68764b94aadccb796f33d127ba159e9c3727
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68202759"
 ---
 # <a name="idebugprogram2enumcodecontexts"></a>IDebugProgram2::EnumCodeContexts
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-检索一组源代码文件中的给定位置的代码上下文。  
+检索源文件中给定位置的代码上下文的列表。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,18 +42,18 @@ int EnumCodeContexts( 
   
 #### <a name="parameters"></a>参数  
  `pDocPos`  
- [in][IDebugDocumentPosition2](../../../extensibility/debugger/reference/idebugdocumentposition2.md)表示已知的 IDE 的源文件中的抽象位置对象。  
+ 中表示 IDE 中已知的抽象位置的 [IDebugDocumentPosition2](../../../extensibility/debugger/reference/idebugdocumentposition2.md) 对象。  
   
  `ppEnum`  
- [out]返回[IEnumDebugCodeContexts2](../../../extensibility/debugger/reference/ienumdebugcodecontexts2.md)对象，其中包含一系列代码上下文。  
+ 弄返回一个 [IEnumDebugCodeContexts2](../../../extensibility/debugger/reference/ienumdebugcodecontexts2.md) 对象，该对象包含代码上下文的列表。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
 ## <a name="remarks"></a>备注  
- 此方法允许会话调试管理器 (SDM) 或 IDE 将映射到代码位置的源代码文件位置。 如果源生成多个代码块，则返回多个代码上下文 (例如，C++模板)。  
+ 此方法允许会话调试管理器 (SDM) 或 IDE 将源文件位置映射到代码位置。 如果源生成多个代码块 (例如，c + + 模板) ，则返回多个代码上下文。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)   
  [IDebugDocumentPosition2](../../../extensibility/debugger/reference/idebugdocumentposition2.md)   
  [IEnumDebugCodeContexts2](../../../extensibility/debugger/reference/ienumdebugcodecontexts2.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugPointerObject::Dereference |Microsoft Docs
+title: IDebugPointerObject：:D ereference |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,10 +13,10 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 40a0e66e5f3cb3a50618a3c8dd4fd5926c34c624
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68201008"
 ---
 # <a name="idebugpointerobjectdereference"></a>IDebugPointerObject::Dereference
@@ -40,18 +40,18 @@ int Dereference(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>参数  
  `dwIndex`  
- [in]指向从该对象的开头的简单的字节偏移量。  
+ 中相对于对象的开头的简单字节偏移量。  
   
  `ppObject`  
- [out]返回[IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)对象表示的对象指向，加上偏移，如果有的话。  
+ 弄返回一个 [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) 对象，该对象表示指向的对象，加上偏移量（如果有）。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回 S_OK;否则，返回错误代码。 如果此对象不指向另一个对象，则返回 E_FAIL。  
+ 如果成功，将返回 S_OK;否则，将返回错误代码。 如果此对象不指向另一个对象，则返回 E_FAIL。  
   
 ## <a name="remarks"></a>备注  
- 指向的对象可以是基元类型或更复杂的类型，例如类或结构。  
+ 指向的对象可以是基元类型，也可以是更复杂的类型，例如类或结构。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugPointerObject](../../../extensibility/debugger/reference/idebugpointerobject.md)

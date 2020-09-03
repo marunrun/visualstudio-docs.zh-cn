@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: e2335b6d2bc3a5e99f0e6de1afefac4f42de0501
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85521298"
 ---
 # <a name="ca2102-catch-non-clscompliant-exceptions-in-general-handlers"></a>CA2102:在常规处理程序中捕捉非 CLSCompliant 异常
@@ -35,11 +35,11 @@ ms.locfileid: "85521298"
  未标记为或的程序集中的成员 <xref:System.Runtime.CompilerServices.RuntimeCompatibilityAttribute> 被标记为 `RuntimeCompatibility(WrapNonExceptionThrows = false)` 包含一个 catch 块，该 catch 块处理 <xref:System.Exception?displayProperty=fullName> 并且不包含立即遵循的常规 catch 块。 此规则将忽略 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 程序集。
 
 ## <a name="rule-description"></a>规则描述
- 处理捕获 <xref:System.Exception> 所有符合公共语言规范（CLS）的异常的 catch 块。 但是，它不会捕获不符合 CLS 的异常。 不符合 CLS 的异常可以从本机代码或 Microsoft 中间语言（MSIL）组装器生成的托管代码中引发。 请注意，c # 和 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 编译器不允许引发不符合 cls 的异常，且不 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 会捕获不符合 cls 的异常。 如果 catch 块的目的是处理所有异常，请使用以下常规 catch 块语法。
+ 处理 <xref:System.Exception> 捕获所有公共语言规范 (符合 CLS) 兼容异常的 catch 块。 但是，它不会捕获不符合 CLS 的异常。 不符合 CLS 的异常可以从本机代码或由 Microsoft 中间语言 (MSIL) 汇编程序生成的托管代码中引发。 请注意，c # 和 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 编译器不允许引发不符合 cls 的异常，且不 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 会捕获不符合 cls 的异常。 如果 catch 块的目的是处理所有异常，请使用以下常规 catch 块语法。
 
 - C#：`catch {}`
 
-- C + +： `catch(...) {}` 或`catch(Object^) {}`
+- C + +： `catch(...) {}` 或 `catch(Object^) {}`
 
   在 catch 块中删除以前允许的权限时，未处理的不符合 CLS 的异常会成为安全问题。 由于不会捕获不符合 CLS 的异常，导致不符合 CLS 的异常的恶意方法可以使用提升的权限运行。
 
@@ -82,4 +82,4 @@ csc /r:ThrowNonClsCompliantException.dll CatchNonClsCompliantException.cs
  [CA1031:不要捕捉一般异常类型](../code-quality/ca1031-do-not-catch-general-exception-types.md)
 
 ## <a name="see-also"></a>另请参阅
- [异常和异常处理](https://msdn.microsoft.com/library/0001887f-4fa2-47e2-8034-2819477e2344) [Ilasm.exe （IL 汇编程序）](https://msdn.microsoft.com/library/4ca3a4f0-4400-47ce-8936-8e219961c76f) [覆盖安全检查](https://msdn.microsoft.com/4acdeff5-fc05-41bf-8505-7387cdbfca28)[语言独立性和与语言无关的组件](https://msdn.microsoft.com/library/4f0b77d0-4844-464f-af73-6e06bedeafc6)
+ [异常和异常处理](https://msdn.microsoft.com/library/0001887f-4fa2-47e2-8034-2819477e2344) [Ilasm.exe (IL 组装器) ](https://msdn.microsoft.com/library/4ca3a4f0-4400-47ce-8936-8e219961c76f) [重写安全检查](https://msdn.microsoft.com/4acdeff5-fc05-41bf-8505-7387cdbfca28)[语言独立性和与语言无关的组件](https://msdn.microsoft.com/library/4f0b77d0-4844-464f-af73-6e06bedeafc6)

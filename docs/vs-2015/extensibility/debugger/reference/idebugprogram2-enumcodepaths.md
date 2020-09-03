@@ -1,5 +1,5 @@
 ---
-title: IDebugProgram2::EnumCodePaths |Microsoft Docs
+title: IDebugProgram2：： EnumCodePaths |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: e4d34b1b6519407e02d4340a5108ef03cece12b1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68202766"
 ---
 # <a name="idebugprogram2enumcodepaths"></a>IDebugProgram2::EnumCodePaths
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-检索在源文件中的给定位置的代码路径的列表。  
+检索源文件中给定位置的代码路径的列表。  
   
 ## <a name="syntax"></a>语法  
   
@@ -48,32 +48,32 @@ int EnumCodePaths( 
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>参数  
  `pszHint`  
- [in]中光标下的词**源**或**反汇编**在 IDE 中的视图。  
+ 中IDE 中的 " **源** " 或 " **反汇编** " 视图中光标下的单词。  
   
  `pStart`  
- [in][IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md)对象，表示当前代码上下文。  
+ 中表示当前代码上下文的 [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) 对象。  
   
  `pFrame`  
- [in][IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)对象与当前断点表示堆栈帧关联。  
+ 中一个 [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md) 对象，表示与当前断点关联的堆栈帧。  
   
  `fSource`  
- [in]非零值 (`TRUE`) 中的 if**源**视图中，则为零 (`FALSE`) 中的 if**反汇编**视图。  
+ 中 `TRUE` 如果在 " **源** " 视图中，则为非零 () ，或者 `FALSE` 在 " **反汇编** " 视图中 () 。  
   
  `ppEnum`  
- [out]返回[IEnumCodePaths2](../../../extensibility/debugger/reference/ienumcodepaths2.md)对象，其中包含一系列代码路径。  
+ 弄返回一个 [IEnumCodePaths2](../../../extensibility/debugger/reference/ienumcodepaths2.md) 对象，该对象包含代码路径的列表。  
   
  `ppSafety`  
- [out]返回[IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md)对象表示在所选的代码路径的情况下，作为断点设置额外的代码上下文，将跳过。 发生这种情况对于短路的布尔表达式，例如。  
+ 弄返回一个 [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) 对象，该对象表示要在跳过所选代码路径时设置为断点的附加代码上下文。 例如，在短路布尔表达式的情况下可能会发生这种情况。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
 ## <a name="remarks"></a>备注  
- 代码路径，用于描述方法或函数的调用以获取执行程序中的当前点的名称。 一系列代码路径表示调用堆栈。  
+ 代码路径描述了为获取程序执行中的当前点而调用的方法或函数的名称。 代码路径列表表示调用堆栈。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)   
  [IEnumCodePaths2](../../../extensibility/debugger/reference/ienumcodepaths2.md)   
  [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md)   
