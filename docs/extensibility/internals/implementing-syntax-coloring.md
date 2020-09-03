@@ -13,18 +13,18 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: bb3f26f59d7cbc994da1d2537e0ab352ce12205e
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85905211"
 ---
 # <a name="implementing-syntax-coloring"></a>实现语法着色
-当语言服务提供语法着色时，分析器会将一行文本转换为可着色项的数组，并返回对应于这些可着色项的标记类型。 分析器应返回属于可着色项列表的标记类型。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]根据 colorizer 对象分配给相应标记类型的属性，在代码窗口中显示每个可着色项。
+当语言服务提供语法着色时，分析器会将一行文本转换为可着色项的数组，并返回对应于这些可着色项的标记类型。 分析器应返回属于可着色项列表的标记类型。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 根据 colorizer 对象分配给相应标记类型的属性，在代码窗口中显示每个可着色项。
 
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]不指定分析器接口，并且分析器实现完全由你完成。 但是，Visual Studio 语言包项目中提供了默认的分析器实现。 对于托管代码，托管包框架（MPF）提供了对着色文本的完整支持。
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 不指定分析器接口，并且分析器实现完全由你完成。 但是，Visual Studio 语言包项目中提供了默认的分析器实现。 对于托管代码，托管包框架 (MPF) 提供对着色文本的完整支持。
 
- 旧版语言服务是作为 VSPackage 的一部分实现的，但实现语言服务功能的更新方法是使用 MEF 扩展。 若要深入了解如何实现语法着色，请参阅[演练：突出显示文本](../../extensibility/walkthrough-highlighting-text.md)。
+ 旧版语言服务是作为 VSPackage 的一部分实现的，但实现语言服务功能的更新方法是使用 MEF 扩展。 若要深入了解如何实现语法着色，请参阅 [演练：突出显示文本](../../extensibility/walkthrough-highlighting-text.md)。
 
 > [!NOTE]
 > 建议你尽快开始使用新的编辑器 API。 这将提高语言服务的性能，并使你能够利用新的编辑器功能。
@@ -60,7 +60,7 @@ ms.locfileid: "85905211"
     4. 使用可着色项中的信息将文本呈现到显示内容中。
 
 ## <a name="managed-package-framework-colorizer"></a>托管包框架 Colorizer
- 托管包框架（MPF）提供了实现 colorizer 所需的所有类。 语言服务类应继承 <xref:Microsoft.VisualStudio.Package.LanguageService> 类并实现所需的方法。 必须通过实现接口提供一个扫描程序和分析器 <xref:Microsoft.VisualStudio.Package.IScanner> ，并从方法返回该接口的实例 <xref:Microsoft.VisualStudio.Package.LanguageService.GetScanner%2A> （必须在类中实现的方法之一 <xref:Microsoft.VisualStudio.Package.LanguageService> ）。 有关详细信息，请参阅[旧版语言服务中的语法着色](../../extensibility/internals/syntax-colorizing-in-a-legacy-language-service.md)。
+ 托管包框架 (MPF) 提供实现 colorizer 所需的所有类。 语言服务类应继承 <xref:Microsoft.VisualStudio.Package.LanguageService> 类并实现所需的方法。 必须通过实现接口提供扫描程序和分析器 <xref:Microsoft.VisualStudio.Package.IScanner> ，并从方法返回该接口的实例， <xref:Microsoft.VisualStudio.Package.LanguageService.GetScanner%2A> (必须在类) 中实现的方法之一 <xref:Microsoft.VisualStudio.Package.LanguageService> 。 有关详细信息，请参阅 [旧版语言服务中的语法着色](../../extensibility/internals/syntax-colorizing-in-a-legacy-language-service.md)。
 
 ## <a name="see-also"></a>另请参阅
 - [如何：使用内置的可着色项](../../extensibility/internals/how-to-use-built-in-colorable-items.md)

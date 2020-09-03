@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: fb62e5ad1d67f0e7bc85692935e64f85eb1c72df
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68202197"
 ---
-# <a name="idiainjectedsourcegetcrc"></a>IDiaInjectedSource::get_crc
+# <a name="idiainjectedsourceget_crc"></a>IDiaInjectedSource::get_crc
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-检索从源代码的字节计算的循环冗余检查 (CRC)。  
+检索循环冗余检查 (CRC) 从源代码字节计算得出的。  
   
 ## <a name="syntax"></a>语法  
   
@@ -33,12 +33,12 @@ HRESULT get_crc ( 
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>参数  
  `pRetVal`  
- [out]返回 CRC 计算的源代码的字节。  
+ 弄返回从源代码的字节计算得出的 CRC。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回 `S_OK`。 返回`S_FALSE`如果此属性不受支持。 否则，返回错误代码。  
+ 如果成功，则返回 `S_OK`。 `S_FALSE`如果此属性不受支持，则返回。 否则，返回错误代码。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md)

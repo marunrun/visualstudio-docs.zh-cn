@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: f9bd332b5767dbfffcfbaa44637e0cc92051f7b1
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85284927"
 ---
 # 如何：在目录中查找主题
@@ -31,7 +31,7 @@ ms.locfileid: "85284927"
 
 ## 筛选 TOC
 
-你可以筛选 TOC 来缩小 "**内容**" 选项卡中显示的主题范围。只有当标题包含指定字词的根目录时，标题才会出现在列表中。 例如，如果将“疑难解答”指定为筛选器，则只会显示包含“排除故障”或“疑难解答”的标题。 其标题不包含术语的节点会折叠为具有省略号（**...**）的单个节点。
+可以筛选 TOC，缩小 " **内容** " 选项卡中显示的主题范围。仅当标题包含指定字词的根目录时，它们才会出现在列表中。 例如，如果将“疑难解答”指定为筛选器，则只会显示包含“排除故障”或“疑难解答”的标题。 其标题不包含术语的节点会折叠为具有省略号 (**...**) 的单个节点。
 
 1. 选择“目录”**** 选项卡。
 

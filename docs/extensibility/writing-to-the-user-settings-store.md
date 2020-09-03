@@ -9,18 +9,18 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: ec4d9cdda975d0f80e9d8523ec18a19c24c9418a
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85906209"
 ---
 # <a name="writing-to-the-user-settings-store"></a>写入用户设置存储
-用户设置是 "**工具/选项**" 对话框、"属性" 窗口和某些其他对话框中的可写设置。 Visual Studio 扩展可以使用这些扩展来存储少量数据。 本演练演示如何通过读取和写入用户设置存储，将记事本作为外部工具添加到 Visual Studio。
+用户设置是 " **工具/选项** " 对话框、"属性" 窗口和某些其他对话框中的可写设置。 Visual Studio 扩展可以使用这些扩展来存储少量数据。 本演练演示如何通过读取和写入用户设置存储，将记事本作为外部工具添加到 Visual Studio。
 
 ## <a name="writing-to-the-user-settings-store"></a>写入用户设置存储
 
-1. 创建名为 UserSettingsStoreExtension 的 VSIX 项目，然后添加名为 UserSettingsStoreCommand 的自定义命令。 有关如何创建自定义命令的详细信息，请参阅[使用菜单命令创建扩展](../extensibility/creating-an-extension-with-a-menu-command.md)
+1. 创建名为 UserSettingsStoreExtension 的 VSIX 项目，然后添加名为 UserSettingsStoreCommand 的自定义命令。 有关如何创建自定义命令的详细信息，请参阅 [使用菜单命令创建扩展](../extensibility/creating-an-extension-with-a-menu-command.md)
 
 2. 在 UserSettingsStoreCommand.cs 中，添加以下 using 指令：
 
@@ -104,6 +104,6 @@ ms.locfileid: "85906209"
 
 7. 生成代码并开始调试。
 
-8. 在 "**工具**" 菜单上，单击 "**调用 UserSettingsStoreCommand**"。 这会将记事本添加到 "**工具**" 菜单。
+8. 在 " **工具** " 菜单上，单击 " **调用 UserSettingsStoreCommand**"。 这会将记事本添加到 " **工具** " 菜单。
 
-9. 现在，应会在 "工具"/"选项" 菜单上看到 "记事本"，然后单击 "**记事本**" 以打开记事本的实例。
+9. 现在，应会在 "工具"/"选项" 菜单上看到 "记事本"，然后单击 " **记事本** " 以打开记事本的实例。

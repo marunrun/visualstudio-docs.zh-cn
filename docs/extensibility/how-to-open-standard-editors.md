@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: c12e831654e7e138289d33b6e6f0409328e22c8c
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85905785"
 ---
 # <a name="how-to-open-standard-editors"></a>如何：打开标准编辑器
@@ -25,13 +25,13 @@ ms.locfileid: "85905785"
 
 ## <a name="to-implement-the-openitem-method-with-a-standard-editor"></a>使用标准编辑器实现 OpenItem 方法
 
-1. 调用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable> （ `RDT_EditLock` ）以确定文档数据对象文件是否已打开。
+1. 调用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable> (`RDT_EditLock`) 以确定文档数据对象文件是否已打开。
 
 2. 如果文件已打开，则通过调用方法来 resurface 文件 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.IsDocumentOpen%2A> ，并 `IDO_ActivateIfOpen` 为参数指定值 `grfIDO` 。
 
      如果文件已打开，并且文档由与调用项目不同的项目所拥有，则您的项目将收到一条警告，指出正在打开的编辑器来自其他项目。 然后，将显示 "文件" 窗口。
 
-3. 如果文档未打开或未在正在运行的文档表中，则调用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A> 方法（ `OSE_ChooseBestStdEditor` ）以打开文件的标准编辑器。
+3. 如果文档未打开或未在正在运行的文档表中，则调用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A> 方法 (`OSE_ChooseBestStdEditor`) 为该文件打开标准编辑器。
 
      调用方法时，IDE 会执行以下任务：
 

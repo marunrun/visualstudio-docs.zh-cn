@@ -21,10 +21,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: af2b71dd2169500b1c4a75ed59292779959d31a0
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74299664"
 ---
 # <a name="html-ui-responsiveness"></a>HTML UI 响应能力
@@ -40,14 +40,14 @@ ms.locfileid: "74299664"
   
 - 视觉对象更新频率比预期频率低。 如果 UI 线程太忙而无法保持平稳的帧速率，就会出现此情况。 例如，UI 线程忙碌时，可能会丢弃帧。 某些非 UI 线程工作（例如网络请求、图像解码和绘制工作）也会限制视觉对象更新频率。 （并非所有绘制工作都在 UI 线程上执行。  
   
-## <a name="RunningProfiler"></a> 运行 HTML UI 响应能力工具  
+## <a name="run-the-html-ui-responsiveness-tool"></a><a name="RunningProfiler"></a> 运行 HTML UI 响应能力工具  
  如果工作的 Windows 通用或 Windows 应用商店应用在 Visual Studio 中打开或安装在运行 Windows 8 或更高版本的计算机上，则可使用 HTML UI 响应能力工具。  
   
-1. 如果从 Visual Studio 中运行应用程序，请在 **“标准”** 工具栏上的 **“启动调试”** 列表中，选择一个部署目标，例如某个 Windows Phone 仿真器、 **“本地计算机”** 、 **“模拟器”** 或 **“远程计算机”** 。  
+1. 如果从 Visual Studio 中运行应用程序，请在 **“标准”** 工具栏上的 **“启动调试”** 列表中，选择一个部署目标，例如某个 Windows Phone 仿真器、 **“本地计算机”**、 **“模拟器”** 或 **“远程计算机”**。  
   
-2. 在“调试”  菜单上，选择“性能探查器...”  。  
+2. 在 " **调试** " 菜单上，选择 " **性能探查器 ...**"。  
   
-     如果要更改探查器的分析目标，请选择“更改目标”  。  
+     如果要更改探查器的分析目标，请选择“更改目标”****。  
   
      ![更改分析目标](../profiling/media/js-tools-target.png "JS_Tools_Target")  
   
@@ -73,10 +73,10 @@ ms.locfileid: "74299664"
   
 6. 若要停止分析探查器收集的应用程序和视图数据，请选择 **“停止收集”** 。  
   
-## <a name="IsolateAnIssue"></a> 隔离问题  
+## <a name="isolate-an-issue"></a><a name="IsolateAnIssue"></a> 隔离问题  
  下一节会提供帮助你隔离性能问题的建议。 有关如何通过使用样本性能测试应用来标识和修复性能问题的分步说明，请参阅[演练：改进 UI 响应能力 (HTML)](../profiling/walkthrough-improving-ui-responsiveness-html.md)。  
   
-### <a name="Workflow"></a> 隔离 UI 响应能力问题  
+### <a name="isolate-a-ui-responsiveness-problem"></a><a name="Workflow"></a> 隔离 UI 响应能力问题  
  以下是建议的工作流步骤，可帮助你更有效地使用 UI 响应能力探查器：  
   
 1. 在 Visual Studio 中打开应用程序。  
@@ -133,12 +133,12 @@ ms.locfileid: "74299664"
   
 13. 放大后，选择“CPU 使用率”或“可视吞吐量”图的一部分。 做出选择后，探查器下方窗格中的“时间线详细信息”图将更改为仅显示选定时间段。  
   
-### <a name="IsolateVisualThroughput"></a> Isolate a visual throughput problem  
+### <a name="isolate-a-visual-throughput-problem"></a><a name="IsolateVisualThroughput"></a> Isolate a visual throughput problem  
  CPU 利用率过高的时间段可能会导致帧速率较低或不一致。 如果开发富媒体应用程序和游戏，“可视吞吐量”图可能会比“CPU 使用率”图提供更重要的数据。  
   
  若要隔离可视吞吐量问题，请按照上节所述的步骤操作，但要使用“可视吞吐量”图作为其中一个关键数据点。  
   
-### <a name="ProfileMark"></a> 标记要分析的代码  
+### <a name="mark-code-for-analysis"></a><a name="ProfileMark"></a> 标记要分析的代码  
  若要隔离与图中所显示数据关联的应用程序代码部分，你可以在应用程序中添加一个函数调用，指示探查器在函数执行时向时间线中插入一个用户标记（倒三角形）。 你添加的所有用户标记均显示在“CPU 使用率”图、“可视吞吐量”图和“时间线详细信息”图的时间线中。  
   
  若要添加用户标记，请将以下代码添加到你的应用程序中。 此示例使用“getting data”（获取数据）作为事件说明。  
@@ -174,10 +174,10 @@ if (performance.mark && performance.measure) {
   
  ![时间线详细视图中的用户测量事件](../profiling/media/js-htmlvizprofiler-user-measure.png "JS_HTMLVizProfiler_User_Measure")  
   
-## <a name="AnalyzeData"></a> 分析数据  
+## <a name="analyze-data"></a><a name="AnalyzeData"></a> 分析数据  
  以下各节提供了有助于解释在探查器中显示的数据的信息。  
   
-### <a name="Ruler"></a> 查看诊断会话时间线  
+### <a name="view-the-diagnostic-session-timeline"></a><a name="Ruler"></a> 查看诊断会话时间线  
  探查器顶部的标尺将显示已分析信息的时间线。 此时间线适用于“CPU 使用率”图和“可视吞吐量”图。  
   
  下面是诊断会话时间线的外观，其中包含为几个应用程序生命周期事件显示的工具提示：  
@@ -192,7 +192,7 @@ if (performance.mark && performance.measure) {
   
 - 导航事件，在导航到其他页面时发生。 此事件的工具提示显示目标页面 URL。  
   
-### <a name="CPUUtilization"></a> 查看 CPU 使用率  
+### <a name="view-cpu-utilization"></a><a name="CPUUtilization"></a> 查看 CPU 使用率  
  通过“CPU 使用率”图可确定 CPU 活动过多的时间段。 该图提供一段时间内应用程序的 CPU 平均消耗量信息。 信息使用了彩色编码来表示以下具体类别： **“加载”** 、 **“脚本”** 、垃圾回收（ **“GC”** ）、 **“样式”** 、 **“呈现”** 和 **“图像解码”** 。 有关这些类别的详细信息，请参阅本主题后面部分的 [Profiler event reference](#ProfilerEvents) 。  
   
  “CPU 使用率”图显示在所有应用程序线程上花费的时间，它将一个或多个 CPU 的 CPU 使用率值合并为一个百分比值。 当多个 CPU 正在使用时，CPU 使用率值可能超过 100%。  
@@ -214,7 +214,7 @@ if (performance.mark && performance.measure) {
   
   有关使此图的详细信息，请参阅本主题中的 [Isolate a UI responsiveness problem](#Workflow) 。  
   
-### <a name="VisualThroughput"></a> 查看可视吞吐量 (FPS)  
+### <a name="view-visual-throughput-fps"></a><a name="VisualThroughput"></a> 查看可视吞吐量 (FPS)  
  通过“可视吞吐量”图可确定帧速率下降的时间段。 该图显示应用程序的每秒帧数 (FPS)。 此图最适于游戏和富媒体应用程序的开发。  
   
  显示的 FPS 值可能与实际帧速率不同。 检查此图中的数据时，请记住以下信息：  
@@ -237,7 +237,7 @@ if (performance.mark && performance.measure) {
   
 - 通过选择 **“放大”** 按钮可获取选定时间段的更详细的视图。  
   
-### <a name="TimelineDetails"></a> 查看时间线详细信息  
+### <a name="view-timeline-details"></a><a name="TimelineDetails"></a> 查看时间线详细信息  
  “时间线详细信息”图显示在 UI 响应能力探查器的底部窗格中。 该图提供关于选定时间段内消耗最多 CPU 时间的事件的顺序和分层信息。 该图可帮助你确定触发特定事件的原因，对于某些事件，还可确定如何找到与事件对应的源代码。 该图还有助于确定在屏幕上绘制视觉对象更新所需的时间。  
   
  该图显示 UI 线程工作并关注可导致视觉对象更新缓慢的后台线程。 此图不显示 JavaScript JIT 工作、异步 GPU 工作、在宿主进程之外执行的工作（例如 RuntimeBroker.exe 和 dwm.exe 工作），或尚未基于分析目的而检测的 Windows 运行时方面的工作（例如磁盘 I/O）。  
@@ -276,12 +276,12 @@ if (performance.mark && performance.measure) {
   > [!TIP]
   > 时间线详细信息图和 **“包含时间摘要”** 可帮助你识别需要优化的方面。 如果其中一个视图显示有大量的小型任务，则事件可能需要优化。 例如，应用可能会频繁刷新 DOM 元素，造成大量布局和 HTML 解析事件。 你或许能够通过批处理此工作来优化性能。  
 
-### <a name="FilterTimelineDetails"></a> 筛选时间线详细信息  
+### <a name="filter-timeline-details"></a><a name="FilterTimelineDetails"></a> 筛选时间线详细信息  
  通过从指定事件的上下文菜单中选择 **“筛选到事件”** ，可以在时间线详细信息中将视图筛选到特定事件。 当选择此选项时，时间线和网格视图的范围限于所选事件。 “CPU 使用率”图中选定内容的范围也限于特定事件。  
   
  ![筛选事件的时间线](../profiling/media/js-htmlvizprofiler-filtertoevent.png "JS_HTMLVizProfiler_FilterToEvent")  
   
-### <a name="FilterEvents"></a> 筛选事件  
+### <a name="filter-events"></a><a name="FilterEvents"></a> 筛选事件  
  可以从“时间线详细信息”图中筛选出一些事件以对数据降噪，或为性能方案去除不相关的数据。 你可以按事件名称或事件持续时间或者此处所述的特定筛选器来进行筛选。  
   
  若要筛选出图像解码、推理下载和 GC 事件，请从下窗格中的筛选器图标中清除 **“后台活动”** 选项。 由于这些事件不是很好操作，因此默认情况下已将其隐藏。  
@@ -297,7 +297,7 @@ if (performance.mark && performance.measure) {
   
  若要筛选出用户度量，请清除 **“用户测量”** 选项。 用户测量是无子项的顶级事件。  
   
-### <a name="GroupFrames"></a> 通过框为事件分组  
+### <a name="group-events-by-frame"></a><a name="GroupFrames"></a> 通过框为事件分组  
  你可以将时间线详细信息视图中显示的事件分组为单个帧。 这些帧事件是工具生成的事件，并且代表所有在绘制事件之间发生的 UI 线程工作的顶级事件容器。 若要启用此视图，请选择 **“按帧为顶级事件分组”** 。  
   
  ![按帧为顶级事件分组](../profiling/media/js-htmlvizprofiler-frame-grouping-button.png "JS_HTMLVizProfiler_Frame_Grouping_Button")  
@@ -306,10 +306,10 @@ if (performance.mark && performance.measure) {
   
  ![按帧分组的时间线事件](../profiling/media/js-htmlvizprofiler-frame-grouping.png "JS_HTMLVizProfiler_Frame_Grouping")  
   
-## <a name="SaveSession"></a> 保存诊断会话  
+## <a name="save-a-diagnostic-session"></a><a name="SaveSession"></a> 保存诊断会话  
  在 Visual Studio 中，你可以在关闭与诊断会话关联的选项卡时保存此会话。 保存的会话以后可以重新打开。  
   
-## <a name="ProfilerEvents"></a> Profiler event reference  
+## <a name="profiler-event-reference"></a><a name="ProfilerEvents"></a> 探查器事件引用  
  UI 响应能力探查器中对探查器事件进行了分类和彩色编码。 事件类别如下：  
   
 - **加载。** 指示应用程序首次加载时检索应用程序资源和解析 HTML 与 CSS 所用的时间。 这可能包括网络请求。  
@@ -330,31 +330,31 @@ if (performance.mark && performance.measure) {
   
   下表显示了事件及其说明：  
   
-|事件|事件类别|在出现以下情况时发生|  
+|ㄆン|事件类别|在出现以下情况时发生|  
 |-----------|--------------------|-----------------|  
 |CSS 解析|“加载”|发现了新 CSS 内容，而且尝试解析 CSS 内容。|  
 |HTML 解析|“加载”|发现了新 HTML 内容，而且尝试将此内容解析到节点并将内容插入到 DOM 树。|  
 |HTTP 请求|“加载”|在 DOM 中找到了远程资源，或者创建了生成 HTTP 请求的 XMLHttpRequest。|  
 |推理下载|“加载”|已在页面的 HTML 内容中搜索所需的资源，以便快速调度对资源的后续 HTTP 请求。|  
-|动画帧回调函数|“脚本”|浏览器即将呈现另一个帧，这触发了应用程序提供的回调函数。|  
-|DOM 事件|“脚本”|已发生并执行 DOM 事件。<br /><br /> DOM 事件的 `context` 属性（例如  `DOMContentLoaded` 或 `click`）显示在括号中。|  
-|事件侦听器|“脚本”|已调用并执行事件侦听器。|  
-|媒体查询侦听器|“脚本”|已注册的媒体查询无效化，这导致了其关联的侦听器的执行。|  
-|转变观察器|“脚本”|修改一个或多个观察到的 DOM 元素，这导致了 MutationObserver 的相关联回调的执行。|  
-|脚本计算|“脚本”|在 DOM 中找到了新的脚本元素，并且尝试解析和执行此脚本。|  
-|计时器|“脚本”|计划的计时器过时，从而导致执行其关联的回调函数。|  
-|Windows 运行时异步回调函数|“脚本”|Windows 运行时对象完成了触发 `Promise` 回调函数的异步操作。|  
-|Windows 运行时事件|“脚本”|Windows 运行时对象上发生的事件触发了注册侦听器。|  
+|动画帧回调函数|脚本|浏览器即将呈现另一个帧，这触发了应用程序提供的回调函数。|  
+|DOM 事件|脚本|已发生并执行 DOM 事件。<br /><br /> DOM 事件的 `context` 属性（例如  `DOMContentLoaded` 或 `click`）显示在括号中。|  
+|事件侦听器|脚本|已调用并执行事件侦听器。|  
+|媒体查询侦听器|脚本|已注册的媒体查询无效化，这导致了其关联的侦听器的执行。|  
+|转变观察器|脚本|修改一个或多个观察到的 DOM 元素，这导致了 MutationObserver 的相关联回调的执行。|  
+|脚本计算|脚本|在 DOM 中找到了新的脚本元素，并且尝试解析和执行此脚本。|  
+|计时器|脚本|计划的计时器过时，从而导致执行其关联的回调函数。|  
+|Windows 运行时异步回调函数|脚本|Windows 运行时对象完成了触发 `Promise` 回调函数的异步操作。|  
+|Windows 运行时事件|脚本|Windows 运行时对象上发生的事件触发了注册侦听器。|  
 |垃圾回收|“GC”|收集不再使用的对象的内存所用的时间。|  
 |CSS 计算|“样式”|已对 DOM 进行更改，要求重新计算所有受影响的元素的样式属性。|  
 |布局|“样式”|已对 DOM 进行更改，要求重新计算所有受影响的元素的大小和/或位置。|  
 |画图|“呈现”|已对 DOM 进行可视更改，并且尝试重新呈现页面的各部分。|  
 |呈现层|“呈现”|已对 DOM 的独立呈现片段（称为层）进行可视更改，这些更改要求呈现此页面的一个部分。|  
 |“图像解码”|“图像解码”|向 DOM 中加入了一个图像，并且尝试将该图像从其原始格式解压缩并解码成位图。|  
-|Frame|不可用|对需要重新提取页面的所有受影响部分的 DOM 进行了可视更改。 这是用于分组的工具生成的事件。|  
-|“用户测量”|不可用|使用 `performance.measure` 方法测量应用特定的方案。 这是用于分析代码的工具生成的事件。|  
+|Frame|不适用|对需要重新提取页面的所有受影响部分的 DOM 进行了可视更改。 这是用于分组的工具生成的事件。|  
+|“用户测量”|不适用|使用 `performance.measure` 方法测量应用特定的方案。 这是用于分析代码的工具生成的事件。|  
   
-## <a name="Tips"></a> 其他信息  
+## <a name="additional-information"></a><a name="Tips"></a> 其他信息  
   
 - 观看 [此视频](https://channel9.msdn.com/Events/Build/2013/3-316) （来自 Build 2013 大会，介绍了 UI 响应能力探查器）。  
   

@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 0312846431f670ae136fdadfc8647c4096348941
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74300137"
 ---
 # <a name="how-to-change-fonts-and-colors-in-visual-studio"></a>如何：在 Visual Studio 中更改字体和颜色
@@ -25,15 +25,15 @@ ms.locfileid: "74300137"
 在 Visual Studio 中，你可以使用多种方式来自定义 IDE 框架和工具窗口的颜色。
 
 > [!TIP]
-> 有关如何更改代码编辑器的颜色的信息，请参阅[如何：更改编辑器中的字体和颜色](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md)。
+> 有关如何更改代码编辑器的颜色的信息，请参阅 [如何：更改编辑器中的字体和颜色](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md)。
 
 ### <a name="change-the-color-theme-of-the-ide"></a>更改 IDE 的颜色主题
 
-1. 在菜单栏上，依次选择“工具”、“选项”。
+1. 在菜单栏上，依次选择 " **工具**"、" **选项**"。
 
-2. 在选项列表中，选择“环境”、“常规”。
+2. 在选项列表中，选择“环境”、“常规”********。
 
-3. 在“颜色主题”列表中，选择默认的“蓝色”主题，或选择“深色”或“浅色”。
+3. 在 " **颜色主题** " 列表中，选择默认的 **蓝色** 主题 " **深色** " 或 " **浅色**"。
 
     > [!IMPORTANT]
     > 当你更改颜色主题时，IDE 中的文本将恢复为默认值或恢复为之前自定义的字体和大小。
@@ -52,18 +52,18 @@ ms.locfileid: "74300137"
 
 #### <a name="to-change-the-font-and-size-of-all-text-in-the-ide"></a>更改 IDE 中所有文本的字体和大小
 
-1. 在菜单栏上，依次选择“工具”、“选项”。
+1. 在菜单栏上，依次选择 " **工具**"、" **选项**"。
 
-2. 在选项列表中，选择“环境”、“字体和颜色”。
+2. 在选项列表中，选择“环境”、“字体和颜色”********。
 
-3. 在“显示以下对象的设置”列表中，选择“环境字体”。
+3. 在“显示以下对象的设置”列表中，选择“环境字体”********。
 
     > [!TIP]
-    > 如果仅更改工具窗口的字体，则在“显示以下对象的设置”列表中，选择“[所有文本工具窗口]”。
+    > 如果只想更改工具窗口的字体，则在 "显示其 **设置** " 列表中，选择 " **[所有文本工具窗口]**"。
 
-4. 在“字体”列表中，选择字体。
+4. 在“字体”列表中，选择字体****。
 
-5. 在“大小”列表中，选择文本大小，然后选择“确定”按钮。
+5. 在“大小”列表中，选择文本大小，然后选择“确定”按钮********。
 
-## <a name="see-also"></a>请参阅
- [Visual Studio 的辅助功能](../ide/reference/accessibility-features-of-visual-studio.md)[如何：更改编辑器中的字体和颜色](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md)
+## <a name="see-also"></a>另请参阅
+ [Visual Studio 的辅助功能](../ide/reference/accessibility-features-of-visual-studio.md) [如何：更改编辑器中的字体和颜色](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md)

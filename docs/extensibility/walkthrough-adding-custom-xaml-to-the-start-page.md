@@ -13,10 +13,10 @@ ms.workload:
 - vssdk
 monikerRange: vs-2017
 ms.openlocfilehash: a13aada6cca9b54d8469885ab4c314a89cd06d6c
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85905957"
 ---
 # <a name="walkthrough-add-custom-xaml-to-the-start-page"></a>演练：将自定义 XAML 添加到起始页
@@ -25,9 +25,9 @@ ms.locfileid: "85905957"
 
 ## <a name="add-custom-xaml"></a>添加自定义 XAML
 
-1. 按照[创建自定义起始页](../extensibility/creating-a-custom-start-page.md)中的说明创建起始页。
+1. 按照 [创建自定义起始页](../extensibility/creating-a-custom-start-page.md)中的说明创建起始页。
 
-2. 在*mainwindow.xaml*文件中，找到 \<Grid> 部分。
+2. 在 *mainwindow.xaml* 文件中，找到 \<Grid> 部分。
 
 3. 在 \<TabControl> 元素内添加元素和 \<TabItem> \< Grid> ，如下面的示例中所示。
 
@@ -65,27 +65,27 @@ ms.locfileid: "85905957"
 
      此时将打开 Visual Studio 的实验实例，其中安装了自定义起始页但未选中。
 
-2. 在 Visual Studio 的实验实例中，打开**Tools/Options/环境**页。
+2. 在 Visual Studio 的实验实例中，打开 **Tools/Options/环境** 页。
 
-3. 选择 "**启动**"。 在 "**自定义起始页**" 列表中，选择您*的 .xaml*文件，然后单击 **"确定"**。
+3. 选择 " **启动**"。 在 " **自定义起始页** " 列表中，选择您 *的 .xaml* 文件，然后单击 **"确定"**。
 
 4. 在“视图” **** 菜单上，单击“起始页” ****。
 
-5. 单击 "**必应**" 选项卡。
+5. 单击 " **必应** " 选项卡。
 
      应会看到必应网页。
 
 6. 单击 " **mybutton.src** " 选项卡。
 
-     此时会显示一个 " **MyProject** " 按钮，该按钮将打开 "**新建项目**" 对话框。
+     此时会显示一个 " **MyProject** " 按钮，该按钮将打开 " **新建项目** " 对话框。
 
 7. 关闭实验实例。
 
-若要应用自定义起始页，请在 "**工具**  >  **选项**  >  "**环境**中选择 "**启动**"。 在 "**自定义起始页**" 列表中，选择您*的 .xaml*文件，然后单击 **"确定"**。
+若要应用自定义起始页，请在 "**工具**  >  **选项**  >  "**环境**中选择 "**启动**"。 在 " **自定义起始页** " 列表中，选择您 *的 .xaml* 文件，然后单击 **"确定"**。
 
 ## <a name="next-steps"></a>后续步骤
 
-Visual Studio 起始页现在包含一个选项卡，其中显示了 "Web 浏览器" 选项卡和 "Mybutton.src" 选项卡。通过使用*代码隐藏*模型添加自定义 .dll，可以创建具有其他功能的自定义起始页，如[将用户控件添加到起始页](../extensibility/adding-user-control-to-the-start-page.md)中所示。 可以通过将生成的 .vsix 文件发布到[Visual Studio Marketplace](https://marketplace.visualstudio.com/)网站或其他网站或网络共享来与其他用户共享自定义起始页。 有关更多信息，请参见 [Deploying Custom Start Pages](../extensibility/deploying-custom-start-pages.md)。
+Visual Studio 起始页现在包含一个选项卡，其中显示了 "Web 浏览器" 选项卡和 "Mybutton.src" 选项卡。通过使用 *代码隐藏* 模型添加自定义 .dll，可以创建具有其他功能的自定义起始页，如 [将用户控件添加到起始页](../extensibility/adding-user-control-to-the-start-page.md)中所示。 可以通过将生成的 .vsix 文件发布到 [Visual Studio Marketplace](https://marketplace.visualstudio.com/) 网站或其他网站或网络共享来与其他用户共享自定义起始页。 有关更多信息，请参见 [Deploying Custom Start Pages](../extensibility/deploying-custom-start-pages.md)。
 
 ## <a name="see-also"></a>另请参阅
 

@@ -11,29 +11,29 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: dca7768f31219328648d457d188086e0185e2ffc
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68200963"
 ---
 # <a name="web-site-support-templates"></a>网站支持模板
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 网站项目和项模板提供加速开发过程无需从头开始创建新网站项目和项的可重用和可自定义网站项目和项存根。 有关详细信息[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]模板，请参阅[创建项目和项模板](../../ide/creating-project-and-item-templates.md)。  
+[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 网站项目和项模板提供可重用且可自定义的网站项目和项存根，可通过无需从头开始创建新的网站项目和项来加速开发过程。 有关模板的详细信息 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ，请参阅 [创建项目和项模板](../../ide/creating-project-and-item-templates.md)。  
   
 ## <a name="project-template-folder"></a>项目模板文件夹  
- Web 项目模板模板通常安装在 [*Visual Studio 安装路径*] \Common7\IDE\ProjectTemplates\Web\\，每个同名 web 编程语言的子文件夹中。  
+ Web 项目模板模板通常安装在 [*Visual Studio 安装路径*] \Common7\IDE\ProjectTemplates\Web 上 \\ ，每个模板都在以 Web 编程语言命名的子文件夹中。  
   
 ## <a name="project-file"></a>项目文件  
- [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]集成的开发环境 (IDE) 作为一种方法将模板映射到正确的项目类型需要项目文件扩展名。 Web 项目没有项目文件，因为 dummy 项目文件扩展名.webproj 将注册为支持此功能。  
+ [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]集成开发环境 (IDE) 需要项目文件扩展名才能将模板映射到正确的项目类型。 由于 Web 项目没有项目文件，因此会注册虚拟项目文件扩展名 .webproj 以支持此操作。  
   
- （可选） 的语言名称字符串可以添加到模板，以使 Web 项目系统中设置语言默认**添加新项**对话框中的项基于该模板。 字符串必须是该文件的第一行，并且必须匹配下 AddItemLanguageName Intellisense 引擎注册中注册的名称和项目 Subtype(VsTemplate) 下注册的名称。 有关详细信息，请参阅[网站支持属性](../../extensibility/internals/web-site-support-attributes.md)。  
+ 或者，可以将语言名称字符串添加到模板，使 Web 项目系统可以在基于模板的项的 " **添加新项** " 对话框中设置语言默认值。 该字符串必须是文件的第一行，并且必须与 Intellisense 引擎注册中 AddItemLanguageName 下注册的名称匹配，并且必须与项目子类型下注册的名称相匹配 (.Vstemplate) 。 有关详细信息，请参阅网站 [支持属性](../../extensibility/internals/web-site-support-attributes.md)。  
   
- 如果字符串不存在，Web 项目系统将尝试确定基于添加到 Web 项目的项目模板模板的页面的语言属性和文件扩展的默认语言。  
+ 如果不存在该字符串，则 Web 项目系统将尝试根据项目模板模板添加到 Web 项目的页的语言特性和文件扩展名来确定默认语言。  
   
 ## <a name="project-templates"></a>项目模板  
- 使用网站项目模板来构建新网站以响应**新的 Web 站点**命令**文件**菜单。 目前支持三个网站项目类型：  
+ 网站项目模板用于生成新网站，以响应 "**文件**" 菜单上的 "**新建网站**" 命令。 当前支持三个网站项目类型：  
   
 - 空网站项目  
   
@@ -42,149 +42,149 @@ ms.locfileid: "68200963"
 - Web 服务项目  
   
 ### <a name="empty-web-site-projects"></a>空网站项目  
- 这些文件创建新的空网站以响应**空网站**命令，它指向后，会出现**新的 Web 站点**上**文件**菜单：  
+ 这些文件会创建一个新的空网站来响应**空**的网站命令，该命令将在指向 "**文件**" 菜单上的 "**新建**网站" 后提供：  
   
-- EmptyWeb.vstemplate  
+- EmptyWeb  
   
-     引导用户创建新的空网站模板文件。  
+     指导创建新的空网站的模板文件。  
   
-- EmptyWeb.webproj  
+- EmptyWeb. .webproj  
   
-     此文件是项目模板系统的项目。 它满足 EmptyWeb.vstemplate 文件中的项目文件引用。  
+     此文件是项目模板系统的项目。 它满足 EmptyWeb 文件中的项目文件引用。  
   
 ### <a name="web-site-projects"></a>网站项目  
- 这些文件创建新网站以响应**ASP.NET Web 站点**命令，它指向后，会出现**新的 Web 站点**上**文件**菜单：  
+ 这些文件会创建一个新网站来响应**ASP.NET**网站命令，该命令将在指向 "**文件**" 菜单上的 "**新建**网站" 后提供：  
   
 - Default.aspx  
   
-     新的 Web 站点默认主页。 Language 特性指定源代码语言和 CodeFile 特性指定包含与此页关联的代码隐藏代码的依赖文件。  
+     新网站的默认主页。 Language 特性指定了代码隐藏语言，而 CodeFile 特性指定了包含与此页关联的代码隐藏代码的依赖文件。  
   
 - Default.aspx。*扩展*  
   
-     包含默认主页上的代码隐藏代码的依赖文件。 代码隐藏语言决定*扩展*此文件。  
+     包含默认主页的代码隐藏代码的依赖文件。 代码隐藏语言确定此文件的 *扩展名* 。  
   
 - web.config  
   
-     根 web.site 配置文件。  
+     根网站配置文件。  
   
-- WebApplication.vstemplate  
+- WebApplication  
   
-     确定网站解决方案的内容并强制 App_Data 文件夹创建的模板文件。  
+     确定网站解决方案内容并强制创建 App_Data 文件夹的模板文件。  
   
-- WebApplication.webproj  
+- WebApplication. .webproj  
   
-     此文件是项目模板系统的项目。 它满足 WebApplication.vstemplate 文件中的项目文件引用。  
+     此文件是项目模板系统的项目。 它满足 WebApplication 文件中的项目文件引用。  
   
 ### <a name="web-service-projects"></a>Web 服务项目  
- 这些文件创建新网站以响应**ASP.NET Web 服务**指向后即可使用命令**新的 Web 站点**上**文件**菜单：  
+ 在指向 "**文件**" 菜单上的 "**新建**网站" 后，这些文件会创建一个新网站来响应**ASP.NET Web 服务**命令：  
   
-- Service.asmx  
+- 服务 .asmx  
   
-     新的 Web 服务的 HTML 页。 Language 特性指定源代码语言和 CodeBehind 属性指定包含与此服务关联的代码隐藏代码的依赖文件。  
+     新 Web 服务的 HTML 页。 Language 特性指定了代码隐藏语言，而代码隐藏特性指定了包含与此服务关联的代码隐藏代码的依赖文件。  
   
-- 服务。 *扩展*  
+- 服务。 *extension*  
   
-     实现服务类的依赖文件。 代码隐藏语言决定*扩展*此文件。  
+     实现服务类的依赖文件。 代码隐藏语言确定此文件的 *扩展名* 。  
   
 - web.config  
   
-- 根 web.site 配置文件。  
+- 根网站配置文件。  
   
-- WebService.vstemplate  
+- WebService  
   
-     确定网站解决方案的内容并强制 App_Data 和 App_Code 文件夹创建的模板文件。 该服务。*扩展*文件复制到 App_Code 文件夹。  
+     确定网站解决方案内容并强制创建 App_Data 和 App_Code 文件夹的模板文件。 服务。*扩展* 文件将复制到 App_Code 文件夹。  
   
-- WebService.webproj  
+- WebService. .webproj  
   
-     此文件是项目模板系统的项目。 它满足 WebService.vstemplate 文件中的项目文件引用。  
+     此文件是项目模板系统的项目。 它满足 WebService 文件中的项目文件引用。  
   
 ## <a name="project-item-template-folder"></a>项目项模板文件夹  
- Web 项目项模板模板通常安装在 [*Visual Studio 安装路径*] \Common7\IDE\ItemTemplates\Web\\，每个命名其 web 编程语言的子文件夹中。  
+ Web 项目-项模板模板通常安装在 [*Visual Studio 安装路径*] \Common7\IDE\ItemTemplates\Web 上 \\ ，每个模板都在以其 Web 编程语言命名的子文件夹中。  
   
 ## <a name="project-item-templates"></a>项目项模板  
- 网站项目项模板用于将新的 Web 页面添加到响应中的 Web 站点**添加现有项**命令。 目前支持这些类型的网页：  
+ 网站项目项模板用于向网站添加新网页，以响应 " **添加现有项** " 命令。 当前支持这些类型的网页：  
   
-- 新的类  
+- 新类  
   
-- 新的 HTML 页面  
+- 新 HTML 页面  
   
-- 新 Web 窗体  
+- 新建 Web 窗体  
   
-- 新的主页面  
+- 新母版页  
   
-### <a name="new-class"></a>新的类  
- 此模板创建新的源文件的空类定义以响应**添加新的类**命令。  
+### <a name="new-class"></a>新类  
+ 此模板创建一个新的源文件，该文件定义一个空类以响应 " **添加新类** " 命令。  
   
-- 类。 *扩展*  
+- 类。 *extension*  
   
-     实现了空的类的源文件。 代码隐藏语言决定*扩展*此文件。  
+     实现空类的源文件。 代码隐藏语言确定此文件的 *扩展名* 。  
   
-- Class.vstemplate  
+- 类 .vstemplate  
   
-     模板文件，创建的源文件，并确定其内容。  
+     用于创建源文件并确定其内容的模板文件。  
   
-### <a name="new-html-page"></a>新的 HTML 页面  
- 此模板创建新的 Web 页以响应**添加新的 HTML 页面**命令。  
+### <a name="new-html-page"></a>新 HTML 页面  
+ 此模板创建一个新网页，以响应 " **添加新的 HTML 页** " 命令。  
   
 - HTMLPage.htm  
   
-     Web 页面的起始内容。 此 Web 页面通常具有任何关联的代码隐藏依赖文件。 若要创建智能页关联的代码隐藏文件，请改为使用 Web 窗体模板。  
+     网页的起始内容。 此网页通常没有关联的代码隐藏依赖文件。 若要创建具有关联的代码隐藏文件的智能页面，请改用 Web 窗体模板。  
   
-- HTMLPage.vstemplate  
+- Html 页  
   
-     创建 Web 页并确定其内容的模板文件。  
+     用于创建网页并确定其内容的模板文件。  
   
-### <a name="new-webform"></a>新 web 窗体  
- 此模板创建新的智能网页以响应**添加新 Web 窗体**命令。  
+### <a name="new-webform"></a>新 WebForm  
+ 此模板创建一个新的智能网页，以响应 " **添加新 Web 窗体** " 命令。  
   
- 若要创建依赖的代码隐藏源文件，请选择**将代码放在单独的文件**。 否则单个网页将创建一个带有空的脚本块，但不\<%page%> 指令来挂接依赖文件。  
+ 若要创建依赖的代码隐藏源文件，请选择 " **将代码放在单独的文件中**"。 否则，将创建一个具有空脚本块且没有 \<% Page %> 用于挂钩依赖文件的指令的单个网页。  
   
- 若要创建所选的母版页的内容页，选择**选择母版页**。  
+ 若要为所选母版页创建内容页，请选择 " **选择母版页**"。  
   
-- WebForm.aspx  
+- WebForm .aspx  
   
-     Web 页面的起始内容。 此 Web 页面具有任何关联的代码隐藏依赖文件。  
+     网页的起始内容。 此网页没有关联的代码隐藏依赖文件。  
   
-- WebForm_cb.aspx  
+- WebForm_cb .aspx  
   
-     Web 页面的起始内容。 此 Web 页面有一个关联的代码隐藏依赖文件。  
+     网页的起始内容。 此网页包含关联的代码隐藏依赖文件。  
   
-- 代码隐藏文件。 *扩展*  
+- Codebehind. *extension*  
   
-     实现 web 窗体类的依赖文件。 代码隐藏语言决定*扩展*此文件。  
+     实现 webform 类的依赖文件。 代码隐藏语言确定此文件的 *扩展名* 。  
   
-- ContentPage.aspx  
+- ContentPage .aspx  
   
-     作为内容页面的网页的起始内容。 此 Web 页面具有任何关联的代码隐藏依赖文件。  
+     作为内容页的网页的起始内容。 此网页没有关联的代码隐藏依赖文件。  
   
-- ContentPage_cb.aspx  
+- ContentPage_cb .aspx  
   
-     作为内容页面的网页的起始内容。 此 Web 页面有一个关联的代码隐藏依赖文件。  
+     作为内容页的网页的起始内容。 此网页包含关联的代码隐藏依赖文件。  
   
-- WebForm.vstemplate  
+- WebForm  
   
-     确定新的 web 页面和其依赖的文件的内容模板文件。  
+     确定新网页的内容及其依赖文件（如果有）的模板文件。  
   
-### <a name="new-master-page"></a>新的母版页  
- 此模板创建新的主页面，以响应**添加新的主页面**命令。  
+### <a name="new-master-page"></a>新母版页  
+ 此模板创建一个新的母版页，以响应 " **添加新的母版页** " 命令。  
   
- 若要创建依赖的代码隐藏源文件，请选择**将代码放在单独的文件**。 否则单个网页将创建一个带有空的脚本块，但不\<%page%> 指令来挂接依赖文件。  
+ 若要创建依赖的代码隐藏源文件，请选择 " **将代码放在单独的文件中**"。 否则，将创建一个具有空脚本块且没有 \<% Page %> 用于挂钩依赖文件的指令的单个网页。  
   
-- MasterPage.master  
+- MasterPage  
   
-     母版页的起始内容。 此母版页具有任何关联的代码隐藏依赖文件。  
+     母版页的起始内容。 此母版页没有关联的代码隐藏依赖文件。  
   
-- MasterPage_cb.master  
+- MasterPage_cb master  
   
-     母版页的起始内容。 此母版页有一个关联的代码隐藏依赖文件。  
+     母版页的起始内容。 此母版页具有关联的代码隐藏依赖文件。  
   
-- 代码隐藏文件。*扩展*  
+- Codebehind.*扩展*  
   
-     实现主页面类中的依赖文件。 代码隐藏语言决定*扩展*此文件。  
+     实现母版页类的依赖文件。 代码隐藏语言确定此文件的 *扩展名* 。  
   
-- MasterPage.vstemplate  
+- MasterPage  
   
-     确定新的主页面和其依赖的文件的内容模板文件。  
+     确定新母版页的内容及其依赖文件（如果有）的模板文件。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [网站支持](../../extensibility/internals/web-site-support.md)

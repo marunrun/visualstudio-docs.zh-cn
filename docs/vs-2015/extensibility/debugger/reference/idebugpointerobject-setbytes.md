@@ -1,5 +1,5 @@
 ---
-title: IDebugPointerObject::SetBytes |Microsoft Docs
+title: IDebugPointerObject：： SetBytes |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 9d467b037f4e2affea53a142304507f876630999
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68202961"
 ---
 # <a name="idebugpointerobjectsetbytes"></a>IDebugPointerObject::SetBytes
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-设置指向一系列连续字节中的值。  
+设置从一系列连续字节指向的值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,23 +46,23 @@ int SetBytes(
   
 #### <a name="parameters"></a>参数  
  `dwStart`  
- [in]偏移量，以字节为单位，从一开始指向的对象。  
+ 中从指向的对象的开始处的偏移量（以字节为单位）。  
   
  `dwCount`  
- [in]要设置的字节数。  
+ 中要设置的字节数。  
   
  `pBytes`  
- [in]一个表示新值的字节数组。 此值存储到的对象，从给定的偏移量处开始。  
+ 中表示新值的字节数组。 此值存储在对象中（从给定的偏移量开始）。  
   
  `pdwBytes`  
- [out]返回实际设置的字节数。  
+ 弄返回实际设置的字节数。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回 S_OK;否则，返回错误代码。  
+ 如果成功，将返回 S_OK;否则，将返回错误代码。  
   
 ## <a name="remarks"></a>备注  
- 如果使用此方法的指针表示由此[IDebugPointerObject](../../../extensibility/debugger/reference/idebugpointerobject.md)指向基元类型或基元类型 （即，可以通过简单的字节序列表示一个数组） 的简单数组。 这`IDebugPointerObject`对象不能为空引用 （它必须指向出现在内存中的地址）。  
+ 如果此 [IDebugPointerObject](../../../extensibility/debugger/reference/idebugpointerobject.md) 表示的指针指向基元类型或基元 (类型的简单数组，则使用此方法，这是一个可以由) 的简单字节序列表示的数组。 此 `IDebugPointerObject` 对象不能为 null 引用 (它必须指向内存) 中的地址。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [GetBytes](../../../extensibility/debugger/reference/idebugpointerobject-getbytes.md)   
  [IDebugPointerObject](../../../extensibility/debugger/reference/idebugpointerobject.md)
