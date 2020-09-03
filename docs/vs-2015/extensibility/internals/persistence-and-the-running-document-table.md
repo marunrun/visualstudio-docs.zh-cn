@@ -1,5 +1,5 @@
 ---
-title: 持久性和正在运行文档表 |Microsoft Docs
+title: 持久性和正在运行的文档表 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -14,22 +14,22 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 2c422ad1735312c82c8dc027c4adf73c1b033685
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68196094"
 ---
 # <a name="persistence-and-the-running-document-table"></a>持久性和正在运行的文档表
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-在中[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]IDE 中，项目是完全负责管理其项目项，它们为使用该服务，持久性<xref:Microsoft.VisualStudio.Shell.Interop.SVsRunningDocumentTable>。 文档是在 Visual Studio 环境中的暂留的基本单位。 项目协调在打开、 保存和重命名的文档运行文档表 (RDT) 跟踪所有打开的文档的状态的资源。  
+在 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] IDE 中，项目完全负责管理其项目项的持久性，它们使用服务实现 <xref:Microsoft.VisualStudio.Shell.Interop.SVsRunningDocumentTable> 。 文档是 Visual Studio 环境中持久性的基本单元。 项目使用正在运行的文档表来协调文档的开始、保存和重命名 (RDT) ，这是跟踪所有打开文档状态的资源。  
   
 ## <a name="managing-persistence"></a>管理持久性  
- 项目通过实现控制环境的持久性服务<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem>接口。 虽然环境永远不会直接询问要保持自身的文档，它会要求所属项目 （或层次结构） 来保存文档。 这使项目及其项目项数据保存到本地文件、 远程文件、 数据库、 一个存储库或其他媒体。  
+ 项目通过实现接口控制环境的持久性服务 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem> 。 虽然环境不会直接要求文档保持自身，但会要求所属项目 (或层次结构) 保存文档。 这样，项目就可以将其项目项数据保存到本地文件、远程文件、数据库、存储库或其他介质中。  
   
- 全局环境负责维护 RDT。 环境负责维护所有打开的窗口的条目和 RDT，这样就可以为它们到中的文档接收特殊的通知，例如，解决方案已关闭时。 此外，RDT 使得要跟踪其对应的节点中的环境**解决方案资源管理器**。 RDT 维护每个打开、 持久对象，其中包括项目文件和项目项的文档的一条记录。  
+ 全局环境会保留 RDT。 环境维护 RDT 中所有打开的窗口和文档的条目，这使得它们可以接收特殊通知，如解决方案关闭时。 此外，RDT 使环境可以在 **解决方案资源管理器**中跟踪其相应节点。 RDT 针对每个打开的持久对象维护一条记录，其中包括项目文件和项目项文档。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [运行文档表](../../extensibility/internals/running-document-table.md)   
  [IDE 中的选择和货币](../../extensibility/internals/selection-and-currency-in-the-ide.md)

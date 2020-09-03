@@ -1,5 +1,5 @@
 ---
-title: IEEVisualizerDataProvider::CanSetObjectForVisualizer |Microsoft Docs
+title: IEEVisualizerDataProvider：： CanSetObjectForVisualizer |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: af1569e315b2010ad734c8776bd8436110365c40
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68196172"
 ---
 # <a name="ieevisualizerdataprovidercansetobjectforvisualizer"></a>IEEVisualizerDataProvider::CanSetObjectForVisualizer
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-此方法确定是否可以更新它所代表的数据对象可视化工具。  
+此方法确定可视化工具是否可以具有其表示的数据对象进行更新。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,15 +38,15 @@ int CanSetObjectForVisualizer(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>参数  
  `b`  
- [out]非零值 (`TRUE`) 可更新可视化工具上的对象，如果零 (`FALSE`) 如果不能。  
+ 弄 `TRUE` 如果可更新可视化工具上的对象，则为非零 () ，如果不能，则为零 (`FALSE`) 。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
 ## <a name="remarks"></a>备注  
- 对象可能不是如果例如绑定到只读的内存，则可更改。  
+ 例如，如果某个对象绑定到只读内存，则该对象可能无法更改。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IEEVisualizerDataProvider](../../../extensibility/debugger/reference/ieevisualizerdataprovider.md)

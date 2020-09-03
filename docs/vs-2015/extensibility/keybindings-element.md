@@ -1,5 +1,5 @@
 ---
-title: KeyBindings 元素 |Microsoft Docs
+title: 键绑定元素 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -14,16 +14,16 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 2649dee6bbf87b43caee260ddb2b6bbd217c7ae7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68180313"
 ---
 # <a name="keybindings-element"></a>KeyBindings 元素
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-键绑定元素进行分组键绑定元素和其他键绑定分组。  
+键绑定元素将键绑定元素和其他键绑定组分组。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,20 +39,20 @@ ms.locfileid: "68180313"
   
 ### <a name="attributes"></a>特性  
   
-|特性|描述|  
+|特性|说明|  
 |---------------|-----------------|  
-|条件|可选。 请参阅[条件属性](../extensibility/vsct-xml-schema-conditional-attributes.md)。|  
+|条件|可选。 请参阅 [条件特性](../extensibility/vsct-xml-schema-conditional-attributes.md)。|  
   
 ### <a name="child-elements"></a>子元素  
   
-|元素|描述|  
+|元素|说明|  
 |-------------|-----------------|  
-|[KeyBinding 元素](../extensibility/keybinding-element.md)|指定的命令的键盘快捷方式。|  
-|[KeyBindings](../extensibility/keybindings-element.md)|键绑定元素进行分组和其他键绑定分组。|  
+|[KeyBinding 元素](../extensibility/keybinding-element.md)|指定命令的键盘快捷方式。|  
+|[键绑定](../extensibility/keybindings-element.md)|将键绑定元素和其他键绑定分组分组。|  
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|描述|  
+|元素|说明|  
 |-------------|-----------------|  
 |[CommandTable 元素](../extensibility/commandtable-element.md)|定义表示命令的所有元素。|  
   
@@ -67,6 +67,6 @@ ms.locfileid: "68180313"
 </KeyBindings>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [KeyBinding 元素](../extensibility/keybinding-element.md)   
+## <a name="see-also"></a>另请参阅  
+ [键绑定元素](../extensibility/keybinding-element.md)   
  [Visual Studio 命令表格 (.Vsct) 文件](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

@@ -1,5 +1,5 @@
 ---
-title: KeyBinding 元素 |Microsoft Docs
+title: 键绑定元素 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,18 +12,18 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 75d96098e8444aac9a4fc6f895099435b54f640b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68180330"
 ---
 # <a name="keybinding-element"></a>KeyBinding 元素
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-键绑定元素指定的命令的键盘快捷方式。  
+键绑定元素指定命令的键盘快捷方式。  
   
- 命令可以具有与之关联的单个和双键绑定。 单个键绑定的一个示例是为 CTRL + S**保存**命令。 双键绑定需要两个连续的键组合来触发命令。 双键绑定的一个示例是 CTRL + K、 CTRL + K 设置书签。  
+ 命令可以有与之关联的单键和双键绑定。 对于 " **保存** " 命令，一个键绑定的示例为 CTRL + S。 双键绑定需要两个连续的键组合来触发命令。 例如，按 CTRL + K、CTRL + K 来设置书签。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,30 +36,30 @@ ms.locfileid: "68180330"
   
 ### <a name="attributes"></a>特性  
   
-|特性|描述|  
+|特性|说明|  
 |---------------|-----------------|  
 |guid|必需。|  
 |id|必需。|  
-|编辑器|必需。 编辑器 GUID 指示为其此键盘快捷方式将处于活动状态的编辑上下文。 全局绑定作用域值为"guidVSStd97"。|  
-|key1|必需。 有效值包括所有键入是字母数字和也两位数字的十六进制值 0x 和 VK_constants 前面有。|  
-|mod1|可选。 CTRL、 ALT 和 SHIFT 空格分隔的任意组合。|  
-|key2|可选。 有效值包括所有键入是字母数字和也两位数字的十六进制值 0x 和 VK_constants 前面有。|  
-|mod2|可选。 CTRL、 ALT 和 SHIFT 空格分隔的任意组合。|  
-|仿真程序|可选。|  
-|条件|可选。 请参阅[条件属性](../extensibility/vsct-xml-schema-conditional-attributes.md)。|  
+|编辑器|必需。 编辑器 GUID 指示此键盘快捷键将处于活动状态的编辑上下文。 全局绑定范围值为 "guidVSStd97"。|  
+|key1|必需。 有效值包括所有 typable 字母数字，以及以0x 和 VK_constants 开头的两位数十六进制值。|  
+|mod1|可选。 由空格分隔的 CTRL、ALT 和 SHIFT 的任意组合。|  
+|key2|可选。 有效值包括所有 typable 字母数字，以及以0x 和 VK_constants 开头的两位数十六进制值。|  
+|mod2|可选。 由空格分隔的 CTRL、ALT 和 SHIFT 的任意组合。|  
+|模拟器|可选。|  
+|条件|可选。 请参阅 [条件特性](../extensibility/vsct-xml-schema-conditional-attributes.md)。|  
   
 ### <a name="child-elements"></a>子元素  
   
-|元素|描述|  
+|元素|说明|  
 |-------------|-----------------|  
-|父级||  
-|批注||  
+|Parent||  
+|Annotation||  
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|描述|  
+|元素|说明|  
 |-------------|-----------------|  
-|[KeyBindings 元素](../extensibility/keybindings-element.md)|键绑定元素进行分组和其他键绑定分组。|  
+|[KeyBindings 元素](../extensibility/keybindings-element.md)|将键绑定元素和其他键绑定分组分组。|  
   
 ## <a name="example"></a>示例  
   
@@ -72,6 +72,6 @@ ms.locfileid: "68180330"
 </KeyBindings>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [KeyBindings 元素](../extensibility/keybindings-element.md)   
+## <a name="see-also"></a>另请参阅  
+ [键绑定元素](../extensibility/keybindings-element.md)   
  [Visual Studio 命令表格 (.Vsct) 文件](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
