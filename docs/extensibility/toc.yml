@@ -828,7 +828,7 @@
       href: creating-a-software-development-kit.md
     - name: SDK 与 NuGet 包
       href: nuget-versus-sdk-references.md
-    - name: '演练：使用 C# 或 Visual Basic 创建 SDK'
+    - name: 演练：使用 C# 或 Visual Basic 创建 SDK
       href: walkthrough-creating-an-sdk-using-csharp-or-visual-basic.md
     - name: 演练：使用 C++ 创建 SDK
       href: walkthrough-creating-an-sdk-using-cpp.md

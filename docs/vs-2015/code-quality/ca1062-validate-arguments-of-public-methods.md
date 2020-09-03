@@ -17,10 +17,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 377906675d70a712f8ca72b0b6e4d8a6864c1fbc
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85533232"
 ---
 # <a name="ca1062-validate-arguments-of-public-methods"></a>CA1062:验证公共方法的参数
@@ -34,7 +34,7 @@ ms.locfileid: "85533232"
 |是否重大更改|非重大更改|
 
 ## <a name="cause"></a>原因
- 外部可见方法取消引用其中一个引用参数，而不验证该参数是否为 `null` （ `Nothing` 在 Visual Basic 中）。
+ 外部可见方法取消引用其中一个引用参数，而不验证该参数是否 `null` (`Nothing` Visual Basic) 中。
 
 ## <a name="rule-description"></a>规则描述
  应检查传递给外部可见方法的所有引用参数 `null` 。 如果需要，则 <xref:System.ArgumentNullException> 在参数为时引发 `null` 。
@@ -62,7 +62,7 @@ ms.locfileid: "85533232"
  [!code-vb[FxCop.Design.ValidateArguments#2](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Design.ValidateArguments/vb/FxCop.Design.ValidateArguments.vb#2)]
 
 ## <a name="example"></a>示例
- 填充作为引用对象的字段或属性的复制构造函数也可能违反 CA1062 规则。 发生冲突的原因是，传递到复制构造函数的复制的对象可能是 `null` （ `Nothing` Visual Basic）。 若要解决此冲突，请使用静态方法（在 Visual Basic 中共享）检查复制的对象是否不为 null。
+ 填充作为引用对象的字段或属性的复制构造函数也可能违反 CA1062 规则。 发生冲突的原因是，传递到复制构造函数的复制的对象可能 `null` `Nothing` 在 Visual Basic) 中 (。 若要解决此冲突，请使用 Visual Basic) 方法中共享的静态 (来检查复制的对象是否不为 null。
 
  在下面的 `Person` 类示例中， `other` 传递给 `Person` 复制构造函数的对象可能是 `null` 。
 

@@ -8,17 +8,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 83a43e8570ea65373b8cac0bd3e3e7a8dc1f5791
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "76115023"
 ---
 # <a name="update-shapes-and-connectors-to-reflect-the-model"></a>更新形状和连接线以反映模型
 
 在 Visual Studio 中的域特定语言中，你可以使形状的外观反映基础模型的状态。
 
-应将本主题中的代码示例添加到 `Dsl` 项目中的 `.cs` 文件。 你需要在每个文件中执行以下指令：
+应将本主题中的代码示例添加到 `.cs` 项目中的文件 `Dsl` 。 你需要在每个文件中执行以下指令：
 
 ```csharp
 using Microsoft.VisualStudio.Modeling;
@@ -27,24 +27,24 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
 
 ## <a name="set-shape-map-properties-to-control-the-visibility-of-a-decorator"></a>设置形状映射属性以控制修饰器的可见性
 
-您可以通过配置 DSL 定义中形状和域类之间的映射来控制修饰器的可见性，而无需编写程序代码。 有关详细信息，请参阅[如何定义域特定语言](../modeling/how-to-define-a-domain-specific-language.md)。
+您可以通过配置 DSL 定义中形状和域类之间的映射来控制修饰器的可见性，而无需编写程序代码。 有关详细信息，请参阅 [如何定义域特定语言](../modeling/how-to-define-a-domain-specific-language.md)。
 
 ## <a name="expose-the-color-and-style-of-a-shape-as-properties"></a>以属性的形式公开形状的颜色和样式
 
-在 DSL 定义中，右键单击该形状类，指向 "添加" "**公开**"，然后单击其中一个项（如 "**填充颜色**"）。
+在 DSL 定义中，右键单击该形状类，指向 "添加" " **公开**"，然后单击其中一个项（如 " **填充颜色**"）。
 
 该形状现在具有可在程序代码或用户中设置的域属性。 例如，若要在命令或规则的程序代码中设置它，可以编写：
 
 `shape.FillColor = System.Drawing.Color.Red;`
 
-如果要仅在 "程序控制" （而不是用户）下设置属性变量，请在 DSL 定义关系图中选择新的域属性，如**填充颜色**。 然后，在属性窗口中，将 "可浏览" 设置为 "可**浏览**" `false` 或设置为 `true`的**UI Readonly** 。
+如果要仅在 "程序控制" （而不是用户）下设置属性变量，请在 DSL 定义关系图中选择新的域属性，如 **填充颜色** 。 然后，在属性窗口中，set 可 **浏览** 到， `false` 或设置 **为的 UI Readonly** `true` 。
 
 ## <a name="define-change-rules-to-make-color-style-or-location-depend-on-model-element-properties"></a>定义更改规则以使颜色、样式或位置依赖于模型元素属性
- 您可以定义规则，以便更新形状依赖于模型的其他部分的外观。 例如，您可以对模型元素定义一个更改规则，该规则元素根据模型元素的属性更新其形状的颜色。 有关更改规则的详细信息，请参阅[规则在模型内部传播更改](../modeling/rules-propagate-changes-within-the-model.md)。
+ 您可以定义规则，以便更新形状依赖于模型的其他部分的外观。 例如，您可以对模型元素定义一个更改规则，该规则元素根据模型元素的属性更新其形状的颜色。 有关更改规则的详细信息，请参阅 [规则在模型内部传播更改](../modeling/rules-propagate-changes-within-the-model.md)。
 
- 只应使用规则来更新存储区中维护的属性，因为在执行 Undo 命令时不会调用规则。 这不包括一些图形功能，如形状的大小和可见性。 若要更新形状的这些功能，请参阅[更新非存储图形功能](#OnAssociatedProperty)。
+ 只应使用规则来更新存储区中维护的属性，因为在执行 Undo 命令时不会调用规则。 这不包括一些图形功能，如形状的大小和可见性。 若要更新形状的这些功能，请参阅 [更新非存储图形功能](#OnAssociatedProperty)。
 
- 下面的示例假设你已将 `FillColor` 公开为域属性，如前一部分中所述。
+ 下面的示例假定你已 `FillColor` 作为域属性公开，如前一部分中所述。
 
 ```csharp
 [RuleOn(typeof(ExampleElement))]
@@ -84,7 +84,7 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
 
 ## <a name="use-onchildconfigured-to-initialize-a-shapes-properties"></a>使用 OnChildConfigured 初始化形状的属性
 
-若要在第一次创建时设置形状的属性，请在关系图类的分部定义中 `OnChildConfigured()` 重写。 关系图类在 DSL 定义中指定，生成的代码在**Dsl\Generated Code\Diagram.cs**中。 例如：
+若要在第一次创建时设置形状的属性，请 `OnChildConfigured()` 在关系图类的分部定义中进行重写。 关系图类在 DSL 定义中指定，生成的代码在 **Dsl\Generated Code\Diagram.cs**中。 例如：
 
 ```csharp
 partial class MyLanguageDiagram
@@ -108,11 +108,11 @@ partial class MyLanguageDiagram
 
 此方法可用于域属性和非存储功能，如形状的大小。
 
-## <a name="OnAssociatedProperty"></a>使用 AssociateValueWith （）更新形状的其他功能
+## <a name="use-associatevaluewith-to-update-other-features-of-a-shape"></a><a name="OnAssociatedProperty"></a> 使用 AssociateValueWith ( # A1 更新形状的其他功能
 
 对于某个形状的某些功能，例如，如果它具有阴影，或连接符的箭头样式，则没有将该功能作为域属性公开的内置方法。  对此类功能所做的更改不受事务系统控制。 因此，不适合使用规则对其进行更新，因为当用户执行撤消命令时不会调用规则。
 
-相反，你可以使用 <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnAssociatedPropertyChanged%2A>更新此类功能。 在下面的示例中，连接器的箭头样式是由连接器显示的关系中的域属性值控制的：
+相反，可以使用更新此类功能 <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnAssociatedPropertyChanged%2A> 。 在下面的示例中，连接器的箭头样式是由连接器显示的关系中的域属性值控制的：
 
 ```csharp
 public partial class ArrowConnector // My connector class.
@@ -153,6 +153,6 @@ public partial class ArrowConnector // My connector class.
 }
 ```
 
-对于要注册的每个域属性，应调用一次 `AssociateValueWith()`。 调用后，对指定属性所做的任何更改都将在显示该属性的模型元素的任何形状中调用 `OnAssociatedPropertyChanged()`。
+`AssociateValueWith()` 对于要注册的每个域属性，应调用一次。 调用后，对指定属性所做的任何更改都将 `OnAssociatedPropertyChanged()` 在显示该属性的模型元素的任何形状中调用。
 
-不需要为每个实例调用 `AssociateValueWith()`。 尽管 InitializeResources 是一个实例方法，但对于每个 shape 类只调用一次。
+不需要 `AssociateValueWith()` 为每个实例调用。 尽管 InitializeResources 是一个实例方法，但对于每个 shape 类只调用一次。

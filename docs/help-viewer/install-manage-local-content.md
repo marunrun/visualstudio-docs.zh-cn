@@ -24,10 +24,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 70bb90856fb88738bbc82434c47e375ea453fd08
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85284901"
 ---
 # <a name="install-and-manage-local-content"></a>安装和管理本地内容
@@ -51,7 +51,7 @@ ms.locfileid: "85284901"
 
     - 输入 .msha 文件的路径或服务终结点的 URL**。
 
-    - 选择 "浏览（**...**）" 按钮以导航到 *.msha*文件。
+    - 选择 "浏览 (**...** ") 按钮以导航到 *.msha* 文件。
 
     - 在此列表中，选择最近使用的条目。
 
