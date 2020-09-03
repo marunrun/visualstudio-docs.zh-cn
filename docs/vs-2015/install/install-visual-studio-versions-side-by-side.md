@@ -14,10 +14,10 @@ author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.openlocfilehash: 1ef2d51e35a198dbe6da3c1a034dd7c8d1bf8922
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75851026"
 ---
 # <a name="install-visual-studio-versions-side-by-side"></a>并行安装 Visual Studio 版本
@@ -32,7 +32,7 @@ ms.locfileid: "75851026"
 
 - 如果使用 Visual Studio 2015 打开在 [!INCLUDE[vs_dev12](../includes/vs-dev12-md.md)]中创建的解决方案，则稍后可以在旧版本中再次打开和修改该解决方案，前提是你没有执行任何 Visual Studio 2015 特有的功能。
 
-- 如果你尝试使用 Visual Studio 2015 打开在 [!INCLUDE[vs_dev12](../includes/vs-dev12-md.md)] 或更早的版本中创建的解决方案，则可能需要修改你的项目和文件才能与 Visual Studio 2015 兼容。 有关详细信息，请参阅[移植、迁移和升级 Visual Studio 项目](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects?view=vs-2015)页。
+- 如果你尝试使用 Visual Studio 2015 打开在 [!INCLUDE[vs_dev12](../includes/vs-dev12-md.md)] 或更早的版本中创建的解决方案，则可能需要修改你的项目和文件才能与 Visual Studio 2015 兼容。 有关详细信息，请参阅 [端口、迁移和升级 Visual Studio 项目](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects?view=vs-2015) 页。
 
 - 如果在已安装多个版本的计算机上卸载 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的一个版本，则将为所有版本移除 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的文件关联。 通过使用 **“选项”** 对话框的 **“常规”** 页上的 **“环境”** 中的 [“还原文件关联”](../ide/reference/general-environment-options-dialog-box.md) 按钮，可以重新映射这些文件关联。
 

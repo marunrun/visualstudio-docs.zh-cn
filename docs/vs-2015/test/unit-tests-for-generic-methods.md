@@ -12,10 +12,10 @@ caps.latest.revision: 49
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 2619e975dbfd22d96db2cc382a7cebbf04a05223
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657273"
 ---
 # <a name="unit-tests-for-generic-methods"></a>泛型方法的单元测试
@@ -33,7 +33,7 @@ ms.locfileid: "72657273"
 
 - [使用类型约束](#TypeConstraintNotSatisfied)。 此示例演示使用类型约束的泛型方法的单元测试。 在此示例中，不满足类型约束。
 
-### <a name="EditingGeneratedTestCode"></a>示例 1：编辑生成的测试代码
+### <a name="example-1-editing-generated-test-code"></a><a name="EditingGeneratedTestCode"></a> 示例1：编辑生成的测试代码
  本部分中的测试代码会测试一个名为 `SizeOfLinkedList()` 的带测试代码方法。 此方法返回一个整数，它指定链接列表中的节点数。
 
  第一个代码示例（位于“生成的测试代码”部分）按照由 Visual Studio Enterprise 生成的原样显示未编辑的测试代码。 第二个示例（位于“编辑的测试代码”部分）显示可以如何使其测试两个不同数据类型（`int` 和 `char`）的 SizeOfLinkedList 方法的运行情况。
@@ -119,7 +119,7 @@ public void SizeOfLinkedListTest()
 > [!NOTE]
 > 每次运行 SizeOfLinkedListTest 测试时，都将调用两次其 TestHelper 方法。 断言语句的计算结果必须每次都为 true，测试才能通过。 如果测试失败，也许分不清是指定了 `<int>` 的调用还是指定了 `<char>` 的调用导致了失败。 要找出答案，可以检查调用堆栈，或在测试方法中设置断点并在运行测试时进行调试。 有关详细信息，请参阅[如何：在 ASP.NET 解决方案中运行测试时进行调试](https://msdn.microsoft.com/library/de4d7aa1-4a1e-467e-a19b-4a85ec245b8b)。
 
-### <a name="TypeConstraintNotSatisfied"></a>示例 2：使用类型约束
+### <a name="example-2-using-a-type-constraint"></a><a name="TypeConstraintNotSatisfied"></a>示例 2：使用类型约束
  此示例演示使用未得到满足的类型约束的泛型方法的单元测试。 第一节显示待测试代码项目中的代码。 突出显示了类型约束。
 
  第二部分显示测试项目中的代码。
@@ -197,5 +197,5 @@ namespace ClassLibrary2
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  对代码[进行单元测试](https://msdn.microsoft.com/a03d1ee7-9999-4e7c-85df-7d9073976144)[单元测试](../test/unit-test-your-code.md)的剖析

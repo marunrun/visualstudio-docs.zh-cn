@@ -13,10 +13,10 @@ caps.latest.revision: 64
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 7a8b9a4b52fce5fb838c12ccf057fd0e80619cd7
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75851262"
 ---
 # <a name="unit-test-your-code"></a>单元测试代码
@@ -43,14 +43,14 @@ ms.locfileid: "75851262"
 
 |任务|相关主题|
 |-----------|-----------------------|
-|**快速入门和演练：** 借助以下主题从代码示例中学习 Visual Studio 中的单元测试。|-   [演练：创建并运行托管代码的单元测试](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)<br />-   [快速入门：通过测试资源管理器进行测试驱动开发](../test/quick-start-test-driven-development-with-test-explorer.md)<br />-   [向现有的 C++ 应用程序添加单元测试](../test/unit-testing-existing-cpp-applications-with-test-explorer.md)<br />-   [使用测试资源管理器对本机代码进行单元测试](https://msdn.microsoft.com/8a09d6d8-3613-49d8-9ffe-11375ac4736c)|
-|**使用“测试资源管理器”进行单元测试：** 了解“测试资源管理器”如何帮助创建成效和效率更高的单元测试。|-   [单元测试基础](../test/unit-test-basics.md)<br />-   [创建单元测试项目](../test/create-a-unit-test-project.md)<br />-   [使用测试资源管理器运行单元测试](../test/run-unit-tests-with-test-explorer.md)<br />-   [安装第三方单元测试框架](../test/install-third-party-unit-test-frameworks.md)<br />-   [从 Visual Studio 2010 升级单元测试](https://msdn.microsoft.com/9bb75856-f68a-4de2-a084-b08a947a1172)|
-|**对托管代码进行单元测试：**|-   [用 Microsoft 适用于托管代码的单元测试框架编写 .NET Framework 的单元测试](../test/writing-unit-tests-for-the-dotnet-framework-with-the-microsoft-unit-test-framework-for-managed-code.md)|
-|**对 C++ 代码进行单元测试**|-   [用适用于 C++ 的 Microsoft 单元测试框架编写 C/C++ 单元测试](../test/writing-unit-tests-for-c-cpp-with-the-microsoft-unit-testing-framework-for-cpp.md)|
-|**隔离单元测试**|-   [用 Microsoft Fakes 隔离测试代码](../test/isolating-code-under-test-with-microsoft-fakes.md)|
+|**快速入门和演练：** 借助以下主题从代码示例中学习 Visual Studio 中的单元测试。|-   [演练：创建并运行托管代码的单元测试](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)<br />-   [快速入门：通过测试资源管理器进行测试驱动开发](../test/quick-start-test-driven-development-with-test-explorer.md)<br />-   [向现有的 c + + 应用程序添加单元测试](../test/unit-testing-existing-cpp-applications-with-test-explorer.md)<br />-   [用测试资源管理器对本机代码进行单元测试](https://msdn.microsoft.com/8a09d6d8-3613-49d8-9ffe-11375ac4736c)|
+|**使用“测试资源管理器”进行单元测试：** 了解“测试资源管理器”如何帮助创建成效和效率更高的单元测试。|-   [单元测试基础知识](../test/unit-test-basics.md)<br />-   [创建单元测试项目](../test/create-a-unit-test-project.md)<br />-   [用测试资源管理器运行单元测试](../test/run-unit-tests-with-test-explorer.md)<br />-   [安装第三方单元测试框架](../test/install-third-party-unit-test-frameworks.md)<br />-   [从 Visual Studio 2010 升级单元测试](https://msdn.microsoft.com/9bb75856-f68a-4de2-a084-b08a947a1172)|
+|**对托管代码进行单元测试：**|-   [用适用于托管代码的 Microsoft 单元测试框架编写 .NET Framework 的单元测试](../test/writing-unit-tests-for-the-dotnet-framework-with-the-microsoft-unit-test-framework-for-managed-code.md)|
+|**对 C++ 代码进行单元测试**|-   [用适用于 c + + 的 Microsoft 单元测试框架编写 C/c + + 单元测试](../test/writing-unit-tests-for-c-cpp-with-the-microsoft-unit-testing-framework-for-cpp.md)|
+|**隔离单元测试**|-   [用 Microsoft Fakes 隔离受测代码](../test/isolating-code-under-test-with-microsoft-fakes.md)|
 |**使用代码覆盖率确定通过单元测试进行测试的项目代码的比例：** 了解 [!INCLUDE[vsprvsts](../includes/vsprvsts-md.md)] 测试工具的代码覆盖率功能。|-   [使用代码覆盖率确定所测试的代码量](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)|
 |**通过对单元测试使用负载测试来执行压力和性能分析**：可以创建负载测试并向其添加单元测试，以帮助隔离应用程序中的性能和压力问题。 **注意：** 创建和使用负载测试需要 Visual Studio Enterprise。|-   [创建和编辑负载测试](https://msdn.microsoft.com/e2985d15-60a7-4177-93b4-f986c2936337)<br />-   [如何：将 Web 性能测试和单元测试添加到负载测试方案](https://msdn.microsoft.com/03cc073e-9bdf-4530-ae46-504a51884594)<br />-   [如何：从负载测试方案中删除 Web 测试和单元测试](https://msdn.microsoft.com/3d6128d2-82b0-42fc-bda2-23a8aa03be07)|
-|**设置和强制实施质量要求**：可以创建质量要求以在签入代码之前强制运行测试，从而帮助确保代码质量。|-   [设置和强制实施质量要求](https://msdn.microsoft.com/library/bdc5666e-6cf0-45b2-a0a1-133c3f61e852)|
+|**设置并强制实施质量要求：** 你可以创建质量要求以在签入代码之前强制运行测试，从而帮助确保代码质量。|-   [设置和强制实施质量要求](https://msdn.microsoft.com/library/bdc5666e-6cf0-45b2-a0a1-133c3f61e852)|
 |**扩展单元测试类型：** 可以向可能不在单元测试框架内的测试添加功能。 例如，可以添加一个指定某个测试是否应以普通用户身份运行的测试属性。 也可以扩展框架，将行特性添加到某个方法并在测试内使用该行中的数据。|有关如何扩展单元测试框架的示例代码，请参见以下 [Microsoft 网站](https://msdn.microsoft.com/vstudio/ff420671.aspx)。|
 |**设置测试选项：** 例如，可以指定测试结果的存储位置。|[使用 .runsettings 文件配置单元测试](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md)|
 
@@ -63,10 +63,10 @@ ms.locfileid: "75851262"
 
  提供指向关于使用 Visual Studio 而不是使用 [!INCLUDE[TCMext](../includes/tcmext-md.md)]来运行自动测试的信息的链接。
 
-## <a name="reference"></a>引用
- <xref:Microsoft.VisualStudio.TestTools.UnitTesting> 描述 UnitTesting 命名空间，该命名空间提供特性、异常、断言和其他支持单元测试的类。
+## <a name="reference"></a>参考
+ <xref:Microsoft.VisualStudio.TestTools.UnitTesting> 介绍 UnitTesting 命名空间，该命名空间提供支持单元测试的特性、异常、断言和其他类。
 
- <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Web> 描述 UnitTesting 命名空间，该命名空间通过提供对 [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] 和 Web 服务单元测试的支持扩展了 UnitTesting 命名空间。
+ <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Web> 介绍 UnitTesting 命名空间，该命名空间通过提供对 [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] 和 Web 服务单元测试的支持扩展了 UnitTesting 命名空间。
 
 ## <a name="external-resources"></a>外部资源
 
@@ -76,11 +76,11 @@ ms.locfileid: "75851262"
 ### <a name="forums"></a>论坛
  [Visual Studio 单元测试](https://social.msdn.microsoft.com/Forums/en/vsunittest/threads)
 
-### <a name="guidance"></a>指导
- [使用 Visual Studio 2012 对连续交付进行测试 - 第 2 章：单元测试：测试内部](https://msdn.microsoft.com/library/jj159340.aspx)
+### <a name="guidance"></a>指南
+ [通过 Visual Studio 2012 对持续交付进行测试-第2章：单元测试：测试内部](https://msdn.microsoft.com/library/jj159340.aspx)
 
-### <a name="reference"></a>引用
+### <a name="reference"></a>参考
  [Content Index for Unit Tests](https://blogs.msdn.com/b/mathew_aniyan/archive/2012/05/17/content-index-for-unit-test.aspx)（单元测试的内容索引）
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [提高](https://msdn.microsoft.com/library/73baa961-c21f-43fe-bb92-3f59ae9b5945)[测试应用程序的](https://msdn.microsoft.com/library/796b7d6d-ad45-4772-9719-55eaf5490dac)代码质量

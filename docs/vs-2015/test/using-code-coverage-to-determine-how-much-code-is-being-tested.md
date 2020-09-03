@@ -11,10 +11,10 @@ caps.latest.revision: 38
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 737311167fc1f444d5c0f8a5d2c27e2fe321da75
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75851240"
 ---
 # <a name="using-code-coverage-to-determine-how-much-code-is-being-tested"></a>使用代码覆盖率确定所测试的代码量
@@ -24,21 +24,21 @@ ms.locfileid: "75851240"
 
  可将代码覆盖率分析应用于托管 (CLI) 和非托管（本机）代码。
 
- 代码覆盖率是使用测试资源管理器运行测试方法时的一个选项。 结果表将显示在各个程序集、类和方法中运行的代码的百分比。 此外，源编辑器将显示已测试的代码。
+ 代码覆盖率是使用测试资源管理器运行测试方法时的一个选项。 结果表将显示在各个程序集、类和方法中运行的代码的百分比。 此外，源代码编辑器会显示已测试的代码。
 
- ![带着色的代码覆盖率结果](../test/media/codecoverage1.png "CodeCoverage1")
+ ![着色的代码覆盖率结果](../test/media/codecoverage1.png "CodeCoverage1")
 
- **惠?**
+ **要求**
 
 - Visual Studio Enterprise
 
 ### <a name="to-analyze-code-coverage-on-unit-tests-in-test-explorer"></a>分析测试资源管理器中的单元测试的代码覆盖率
 
-1. 在“测试”菜单上，选择“分析代码覆盖率”。
+1. 在“测试”  菜单上，选择“分析代码覆盖率”  。
 
 2. 若要查看已运行的行，请选择![显示代码覆盖率着色图标](../test/media/codecoverage-showcoloringicon.png "CodeCoverage-ShowColoringIcon")**显示代码覆盖率着色**。
 
-     若要更改颜色或使用加粗，请依次选择“工具”、“选项”、“环境”、“字体和颜色”和“显示其设置：文本编辑器”。 在“显示项”下，调整覆盖率项。
+     若要更改颜色或使用加粗，请依次选择“工具”****、“选项”****、“环境”****、“字体和颜色”**** 和“显示其设置：文本编辑器”****。 在“显示项”**** 下，调整覆盖率项。
 
 3. 如果结果显示覆盖率较低，请调查代码的哪些部分没有执行测试，并编写更多测试来覆盖它们。 开发团队通常以大约 80% 的代码覆盖率为目标。 在某些情况下，较低的覆盖率是可接受的。 例如，当某代码是从标准模板生成时，可接受较低的覆盖率。
 
@@ -50,12 +50,12 @@ ms.locfileid: "75851240"
 >   如果要处理非托管（本机）代码，请使用调试版本。
 >   - 确保为每个程序集生成 .pdb（符号）文件。
 >
->   如果没有获得预期的结果，请参阅[代码覆盖率疑难解答](../test/troubleshooting-code-coverage.md)。 。 不要忘记在更新代码后再次运行代码覆盖率。 在修改代码后或运行测试时，覆盖率结果和代码着色不会自动更新。
+>   如果没有获得预期的结果，请参阅 [代码覆盖率疑难解答](../test/troubleshooting-code-coverage.md)。 . 不要忘记在更新代码后再次运行代码覆盖率。 在修改代码后或运行测试时，覆盖率结果和代码着色不会自动更新。
 
 ## <a name="reporting-in-blocks-or-lines"></a>报告块或行
- 代码覆盖率将以块为单位计数。 块是恰好有一个入口点和出口点的一段代码。  在测试运行期间，如果程序的控制流通过某个块，则将该块计为“已覆盖”。 块的使用次数对结果没有影响。
+ 代码覆盖率将以** 块为单位计数。 块是恰好有一个入口点和出口点的一段代码。  在测试运行期间，如果程序的控制流通过某个块，则将该块计为“已覆盖”。 块的使用次数对结果没有影响。
 
- 还可以通过在表标题中选择“添加/移除列”来按行显示结果。 如果测试运行执行了任何代码行中的所有代码块，则将该代码行计为一行。 如果某个行包含一些已执行的代码块和一些未执行的代码块，则将此行将计为部分行。
+ 还可以通过在表标题中选择“添加/移除列”**** 来按行显示结果。 如果测试运行执行了任何代码行中的所有代码块，则将该代码行计为一行。 如果某个行包含一些已执行的代码块和一些未执行的代码块，则将此行将计为部分行。
 
  某些用户更喜欢行计数，因为百分比与你在源代码中看到的段的大小更为对应。 一个很长的计算块即使占用多行，也将计为一行。
 
@@ -68,11 +68,11 @@ ms.locfileid: "75851240"
 
 - **若要查看以前的结果集**，请从下拉菜单中选择它。 该菜单将会显示一个临时列表。打开新的解决方案时，将会清除该列表。
 
-- **若要查看以前的会话中的结果**，请选择“导入代码覆盖率结果”，导航到解决方案的 TestResults 文件夹，然后导入 .coverage 文件。
+- **若要查看以前的会话中的结果**，请选择“导入代码覆盖率结果”****，导航到解决方案的 TestResults 文件夹，然后导入 .coverage 文件。
 
      如果源代码自 .coverage 文件生成之后已更改，则覆盖率着色可能不正确。
 
-- **若要使结果可作为文本读取**，请选择“导出代码覆盖率结果”。 这将生成可使用其他工具处理或在邮件中轻松发送的可读的 .coveragexml 文件。
+- **若要使结果可作为文本读取**，请选择“导出代码覆盖率结果”****。 这将生成可使用其他工具处理或在邮件中轻松发送的可读的 .coveragexml 文件。
 
 - **若要将结果发送给其他人**，请发送 .coverage 文件或导出的 .coveragexml 文件。 他们随后可以导入该文件。 如果他们具有相同版本的源代码，还可以看到覆盖率着色。
 
@@ -83,13 +83,13 @@ ms.locfileid: "75851240"
 
  为此，请使用![“代码覆盖率”窗口中“合并”按钮的图标](../test/media/codecoverage-mergeicon.png "CodeCoverage-MergeIcon")**合并代码覆盖率结果**。 你可以选择最近的运行或导入的结果的任意组合。 如果要组合导出的结果，则必须先将其导入。
 
- 使用“导出代码覆盖率结果”可保存合并操作的结果。
+ 使用“导出代码覆盖率结果”**** 可保存合并操作的结果。
 
 ### <a name="limitations-in-merging"></a>有关合并的限制
 
 - 如果你合并不同版本的代码中的覆盖率数据，结果将单独显示，但不会合并。 若要获取完全合并的结果，请使用相同的代码生成，并且仅更改测试数据。
 
-- 如果你合并一个先导出然后导入的结果文件，则只能按行查看结果，而不能按块查看结果。 使用“添加/移除列”命令可显示行数据。
+- 如果你合并一个先导出然后导入的结果文件，则只能按行查看结果，而不能按块查看结果。 使用“添加/移除列”**** 命令可显示行数据。
 
 - 如果你合并来自 ASP.NET 项目的测试的结果，则将显示各个测试的结果，而不是合并的测试的结果。 这只适用于 ASP.NET 项目本身：任何其他程序集的结果都将合并。
 
@@ -221,9 +221,9 @@ ExcludeSourceFromCodeCoverage(Exclusion4, L"*\\unittest1.cpp");
 
  使用以下宏：
 
- `ExcludeFromCodeCoverage(` *ExclusionName* `, L"` *FunctionName* `");`
+  ExclusionName`ExcludeFromCodeCoverage(` * FunctionName* `, L"` ** `");`
 
- `ExcludeSourceFromCodeCoverage(` *ExclusionName* `, L"` *SourceFilePath* `");`
+  ExclusionName`ExcludeSourceFromCodeCoverage(` * SourceFilePath* `, L"` ** `");`
 
 - *ExclusionName* 是唯一名称。
 
@@ -248,19 +248,19 @@ ExcludeSourceFromCodeCoverage(Exclusion4, L"*\\unittest1.cpp");
  你可以通过编写 .runsettings 文件来加强控制为代码覆盖率分析选择哪些程序集和元素。 例如，你可以排除特定类型的程序集，而不必向它们的类添加特性。 有关详细信息，请参阅[自定义代码覆盖率分析](../test/customizing-code-coverage-analysis.md)。
 
 ## <a name="analyzing-code-coverage-in-the-build-service"></a>分析生成服务中的代码覆盖率
- 签入代码时，你的测试以及其他团队成员的所有其他测试将在生成服务器中运行。 （如果尚未设置此项，请参阅[在生成过程中运行测试](https://msdn.microsoft.com/library/d05743a1-c5cf-447e-bed9-bed3cb595e38)。）分析生成服务中的代码覆盖率很有用，因为这样可以提供整个项目中最新的覆盖面。 它还包含你不常在开发计算机上运行的自动系统测试和其他编码的测试。
+ 签入代码时，你的测试以及其他团队成员的所有其他测试将在生成服务器中运行。  (如果尚未对此进行设置，请参阅 [在生成过程中运行测试](https://msdn.microsoft.com/library/d05743a1-c5cf-447e-bed9-bed3cb595e38)。 ) 对生成服务分析代码覆盖率很有用，因为这样可以提供整个项目中最新和最全面的覆盖率图片。 它还包含你不常在开发计算机上运行的自动系统测试和其他编码的测试。
 
-1. 在“团队资源管理器”中，打开“生成”，然后添加或编辑生成定义。
+1. 在“团队资源管理器”中，打开“生成”，然后添加或编辑生成定义。****
 
-2. 在“进程”页中，展开“自动测试”、“测试源”和“运行设置”。 将“运行设置文件的类型”设为“已启用代码覆盖率”。
+2. 在“进程”页中，展开“自动测试”、“测试源”和“运行设置”。**************** 将“运行设置文件的类型”设为“已启用代码覆盖率”。********
 
     如果你有多个测试源定义，请对每个定义重复此步骤。
 
-   - 但是，没有名为“运行设置文件的类型”的字段。<em>* * *
+   - 但是，没有名为“运行设置文件的类型”的字段。<em>**</em>**
 
-      在“自动测试”下，选择“测试程序集”，然后选择行尾的省略号按钮“[...]”。 在“添加/编辑测试运行”对话框的“测试运行程序”下，选择“Visual Studio 测试运行程序”。
+      在“自动测试”下，选择“测试程序集”，然后选择行尾的省略号按钮“[...]”。************ 在“添加/编辑测试运行”对话框的“测试运行程序”下，选择“Visual Studio 测试运行程序”。************
 
-   ![设置代码覆盖率的生成定义](../test/media/codecoverage-plaincc.png "CodeCoverage-plainCC")
+   ![为代码覆盖率设置生成定义](../test/media/codecoverage-plaincc.png "CodeCoverage-plainCC")
 
    生成运行后，代码覆盖率结果将附加到测试运行并显示在生成摘要中。
 
@@ -269,19 +269,19 @@ ExcludeSourceFromCodeCoverage(Exclusion4, L"*\\unittest1.cpp");
 
 1. 启动 Visual Studio 开发人员命令提示符：
 
-     在 Windows 的“开始”菜单上，依次选择“所有程序”、“Microsoft Visual Studio”、“Visual Studio Tools”和“开发人员命令提示”。
+     在 Windows 的“开始”**** 菜单上，依次选择“所有程序”****、“Microsoft Visual Studio”****、“Visual Studio Tools”**** 和“开发人员命令提示”****。
 
 2. 运行：
 
      `vstest.console.exe MyTestAssembly.dll /EnableCodeCoverage`
 
-## <a name="troubleshooting"></a>故障排除
+## <a name="troubleshooting"></a>疑难解答
  如果看不到代码覆盖率结果，请参阅[代码覆盖率疑难解答](../test/troubleshooting-code-coverage.md)。
 
 ## <a name="external-resources"></a>外部资源
 
-### <a name="guidance"></a>指导
- [使用 Visual Studio 2012 对连续交付进行测试 - 第 2 章：单元测试：测试内部](https://msdn.microsoft.com/library/jj159340.aspx)
+### <a name="guidance"></a>指南
+ [通过 Visual Studio 2012 对持续交付进行测试-第2章：单元测试：测试内部](https://msdn.microsoft.com/library/jj159340.aspx)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [自定义代码覆盖率分析](../test/customizing-code-coverage-analysis.md)[故障排除代码覆盖率](../test/troubleshooting-code-coverage.md)[单元测试代码](../test/unit-test-your-code.md)

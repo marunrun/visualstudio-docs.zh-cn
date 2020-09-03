@@ -1,5 +1,5 @@
 ---
-title: 调试混合模式应用程序 |Microsoft Docs
+title: 调试混合模式应用程序 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -26,10 +26,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: b462d5d0c449b8e47c936242908e5bbe6e433429
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74298305"
 ---
 # <a name="debugging-mixed-mode-applications"></a>调试混合模式应用程序
@@ -45,17 +45,17 @@ ms.locfileid: "74298305"
  在混合模式应用程序中，调试器执行的属性求值是一个资源消耗很大的操作。 因此，调试操作（如单步执行）可能会很慢。 有关详细信息，请参阅[单步执行](https://msdn.microsoft.com/8791dac9-64d1-4bb9-b59e-8d59af1833f9)。 如果混合模式调试的性能很低，你可能希望在调试器窗口中关闭属性求值。  
   
 > [!NOTE]
-> 显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+> 显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅 [在 Visual Studio 中自定义开发设置](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
 #### <a name="to-turn-off-property-evaluation"></a>关闭属性求值  
   
 1. 在 **“工具”** 菜单上，选择 **“选项”** 。  
   
-2. 在“选项”对话框中，打开“调试”文件夹并选择“常规”类别。  
+2. 在“选项”对话框中，打开“调试”文件夹并选择“常规”类别  。  
   
 3. 清除“启用属性求值和其他隐式函数调用”复选框。  
   
    由于本机调用堆栈和托管调用堆栈不同，因此调试器不能总是为混合代码提供完整的调用堆栈。 当本机代码调用托管代码时，你可能会注意到某些差异。 有关详细信息，请参阅[“调用堆栈”窗口中的混合代码与缺失信息](../debugger/mixed-code-and-missing-information-in-the-call-stack-window.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [调试托管代码](../debugger/debugging-managed-code.md)

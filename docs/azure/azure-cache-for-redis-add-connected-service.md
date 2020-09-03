@@ -10,10 +10,10 @@ ms.date: 08/17/2020
 ms.author: angelpe
 monikerRange: '>= vs-2019'
 ms.openlocfilehash: 7583848c4bbe38f9094c60998e16ca3e95cf399f
-ms.sourcegitcommit: 3ef987e99616c3eecf4731bf5ac89e16238e68aa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88643115"
 ---
 # <a name="add-azure-cache-for-redis-by-using-visual-studio-connected-services"></a>使用 Visual Studio 连接的服务添加适用于 Redis 的 Azure 缓存
@@ -51,7 +51,7 @@ ms.locfileid: "88643115"
 
 1. 在 " **添加依赖关系** " 页上，选择 " **Azure Cache for Redis**"。
 
-    ![为 Redis 添加 Azure 缓存](./media/azure-redis-cache-add-connected-service/azure-redis-cache.png)
+    ![添加 Azure Cache for Redis](./media/azure-redis-cache-add-connected-service/azure-redis-cache.png)
 
     如果尚未登录，请登录到 Azure 帐户。 如果没有 Azure 帐户，可以注册[免费试用版](https://azure.microsoft.com/account/free)。
 

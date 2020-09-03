@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: e9a31b4c4182ed67a3e67d3c25c2c5ccf50e083f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72664051"
 ---
 # <a name="value-xattribute-dynamic-property"></a>值（XAttribute 动态属性）
@@ -34,14 +34,14 @@ attrib.Value
 ## <a name="property-valuereturn-value"></a>属性值/返回值
  包含此属性的值的 <xref:System.String>。
 
-## <a name="exceptions"></a>异常
+## <a name="exceptions"></a>例外
 
-|异常类型|条件|
+|例外类型|条件|
 |--------------------|---------------|
 |<xref:System.ArgumentNullException>|设置时，`value` 为 `null`。|
 
 ## <a name="remarks"></a>备注
  此属性等效于 <xref:System.Xml.Linq.XAttribute.Value%2A> 类的 <xref:System.Xml.Linq.XAttribute?displayProperty=fullName> 属性，但此动态属性还支持更改通知。
 
-## <a name="see-also"></a>请参阅
- <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=fullName> [System.xml.linq.xattribute> 类的 Dynamic Properties](../designers/xattribute-class-dynamic-properties.md) [特性](../designers/attribute-xelement-dynamic-property.md)
+## <a name="see-also"></a>另请参阅
+ <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=fullName>[System.xml.linq.xattribute> 类动态属性](../designers/xattribute-class-dynamic-properties.md)[属性](../designers/attribute-xelement-dynamic-property.md)

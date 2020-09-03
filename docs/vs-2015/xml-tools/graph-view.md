@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: ba58777700ba34de3dc3b7a842f26462daf08c89
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72656350"
 ---
 # <a name="graph-view"></a>图形视图
@@ -23,20 +23,20 @@ ms.locfileid: "72656350"
 
  下图显示的是图形视图，其设计图面上有六个全局节点。
 
- ![XML 架构设计器图形视图](../xml-tools/media/xsddesigner-graphview.gif "XSDDesigner_GraphView")
+ ![XML 架构设计器关系图视图](../xml-tools/media/xsddesigner-graphview.gif "XSDDesigner_GraphView")
 
 ## <a name="design-surface"></a>设计图面
- 图形视图的设计图面显示[XML 架构设计器工作区](../xml-tools/xml-schema-designer-workspace.md)的内容。 如果工作区包含来自架构集的任何全局节点，则这些节点会显示在图形视图的设计图面上，并会在具有关系的节点之间绘制箭头。
+ 图形视图的设计图面显示 [XML 架构设计器工作区](../xml-tools/xml-schema-designer-workspace.md)的内容。 如果工作区包含来自架构集的任何全局节点，则这些节点会显示在图形视图的设计图面上，并会在具有关系的节点之间绘制箭头。
 
  双击图形视图中的节点会打开 XML 编辑器。
 
  若要从工作区中删除所选节点，请使用 XSD 设计器工具栏或 Delete 键。
 
- 如果设计图面为空，则会显示 XML 编辑器、XML 架构资源管理器和水印。 *水印*是指向所有 XSD 设计器视图的链接的列表。
+ 如果设计图面为空，则会显示 XML 编辑器、XML 架构资源管理器和水印。 “水印”是指向所有 XSD 设计器视图的链接的列表。
 
- ![XSD 设计器;图形视图](../xml-tools/media/xsdgraphviewwatermark.gif "XSDGraphViewWatermark")
+ ![XSD 设计器；关系图视图](../xml-tools/media/xsdgraphviewwatermark.gif "XSDGraphViewWatermark")
 
- 如果架构集有错误，则列表的末尾会显示以下文本：“请使用‘错误列表’查看和修复架构集中的错误”[Use the Error List to view and fix the errors in the set]。
+ 如果架构集出现错误，列表的末尾会显示以下文本：“使用错误列表查看和修复集中的错误。”
 
 ## <a name="breadcrumb-bar"></a>痕迹栏
  图形视图底部的痕迹栏显示所选节点在架构集中所处的位置。 如果选择了多个项，则痕迹栏将为空。
@@ -49,13 +49,13 @@ ms.locfileid: "72656350"
 |**在 XML 架构资源管理器中显示**|将焦点置于架构资源管理器上，并突出显示架构集节点。|
 |**在图形视图中显示**|切换到图形视图（灰显）。|
 |**生成示例 XML**|仅可用于全局元素。 生成全局元素的示例 XML 文件。|
-|**清除工作区**|清空工作区和设计图面。|
+|**清空工作区**|清空工作区和设计图面。|
 |**从工作区中删除**|从工作区和设计图面中删除所选节点。|
-|**从工作区中删除所有内容但选择**|从工作区和设计图面中删除未选择的节点。|
-|**将关系图导出为图像 。**|将设计图面保存到 XPS 文件。|
+|**删除工作区中所有内容，所选内容除外**|从工作区和设计图面中删除未选择的节点。|
+|**将关系图导出为图像 .。。**|将设计图面保存到 XPS 文件。|
 |**全选**|选择设计图面上的所有节点。|
 |**查看代码**|在 XML 编辑器中打开包含所选节点的文件。 在 XML 架构资源管理器中选定的项也会在 XML 编辑器中选定。|
-|**“属性”窗口**|打开 "**属性**" 窗口（如果尚未打开）。 此窗口显示有关节点的信息。|
+|**“属性”窗口**|打开“属性”窗口（如果尚未打开）。 此窗口显示有关节点的信息。|
 
  除了上述常用选项之外，全局元素的上下文菜单还拥有以下选项：
 
@@ -89,7 +89,7 @@ ms.locfileid: "72656350"
 |**添加所有引用**|添加引用相应组的所有节点，并绘制箭头以指示节点之间的关系。|
 
 ## <a name="properties-window"></a>“属性”窗口
- 使用上下文菜单最初打开 "**属性**" 窗口。 默认情况下，"**属性**" 窗口将显示在 Visual Studio 的右下角。 单击内容模型视图中呈现的节点时，该节点的属性将显示在 "**属性**" 窗口中。
+ 使用上下文菜单最初打开 " **属性** " 窗口。 默认情况下，“属性”窗口显示在 Visual Studio 的右下角。 单击“内容模型视图”中呈现的节点时，该节点的属性将显示在“属性”窗口中。
 
 ## <a name="xsd-toolbar"></a>XSD 工具栏
  当图形视图处于活动状态时，会启用以下 XSD 工具栏按钮。
@@ -101,9 +101,9 @@ ms.locfileid: "72656350"
 |**显示起始视图**|切换到[起始视图](../xml-tools/start-view.md)。 可以通过使用键盘快捷键： **CTRL + 1**来访问此视图。|
 |**显示内容模型视图**|切换到[内容模型视图](../xml-tools/content-model-view.md)。 可以使用键盘快捷键： **CTRL + 2**来访问此视图。|
 |**显示图形视图**|切换到[图形视图](../xml-tools/graph-view.md)。 可以使用键盘快捷方式（ **CTRL + 3**）访问此视图。|
-|**清除工作区**|清空工作区和设计图面。|
+|**清空工作区**|清空工作区和设计图面。|
 |**从工作区中删除**|从工作区和设计图面中删除所选节点。|
-|**从工作区中删除所有内容但选择**|从工作区和设计图面中删除未选择的节点。 会在内容模型视图和图形视图中启用此选项。|
+|**删除工作区中所有内容，所选内容除外**|从工作区和设计图面中删除未选择的节点。 会在内容模型视图和图形视图中启用此选项。|
 |**从左到右**|将图形视图中的布局更改为节点的从左到右分层表示形式。 可以使用键盘快捷方式访问此选项： **Alt + 向右键**。|
 |**从右到左**|将图形视图中的布局更改为节点的从右到左分层表示形式。 可以使用键盘快捷方式访问此选项： **Alt + 向左键**。|
 |**从上到下**|将图形视图中的布局更改为节点的从上到下分层表示形式。 可以使用键盘快捷方式访问此选项： **Alt + 向下键**。|
@@ -135,7 +135,7 @@ ms.locfileid: "72656350"
 ## <a name="xml-editor-integration"></a>XML 编辑器集成
  可通过以下方法在图形视图和 XML 编辑器之间来回切换：单击某个节点，然后使用“查看代码”上下文菜单。
 
- 如果在 XML 编辑器中对架构集进行更改，则相应的更改会在图形视图中同步。 有关详细信息，请参阅[与 XML 编辑器集成](../xml-tools/integration-with-xml-editor.md)。
+ 如果在 XML 编辑器中对架构集进行更改，则相应的更改会在图形视图中同步。 有关详细信息，请参阅 [与 XML 编辑器集成](../xml-tools/integration-with-xml-editor.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [Design Surface](../xml-tools/xml-schema-designer-workspace.md)

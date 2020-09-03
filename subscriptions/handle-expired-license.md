@@ -8,10 +8,10 @@ ms.date: 03/03/2020
 ms.topic: conceptual
 description: 了解管理员如何处理过期的 Visual Studio 订阅
 ms.openlocfilehash: 50fffc186ab3135077418eb29f849918db664290
-ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80232475"
 ---
 # <a name="expired-subscriptions"></a>过期订阅

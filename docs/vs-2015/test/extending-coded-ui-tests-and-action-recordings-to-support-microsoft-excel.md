@@ -9,10 +9,10 @@ caps.latest.revision: 32
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: c4cac9981a582d5ba9527e0f8dc47d14b6fba18b
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75851770"
 ---
 # <a name="extending-coded-ui-tests-and-action-recordings-to-support-microsoft-excel"></a>扩展编码的 UI 测试和操作录制以支持 Microsoft Excel
@@ -20,13 +20,13 @@ ms.locfileid: "75851770"
 
 编码的 UI 测试和操作录制的测试框架不支持的每个可能的用户界面。 它可能不支持你想要测试的特定 UI。 例如，不能立即创建编码的 UI 测试或 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 电子表格的操作录制。 但是，你可以为编码的 UI 测试框架创建自己的扩展，该扩展将通过利用编码的 UI 测试框架的扩展性支持特定的 UI。 以下主题提供的示例说明如何扩展框架以支持创建编码的 UI 测试和 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 的操作录制。 有关支持的平台的详细信息，请参阅[支持编码的 UI 测试和操作录制的配置和平台](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)。
 
- **惠?**
+ **要求**
 
 - Visual Studio Enterprise
 
   本节提供编码的 UI 测试扩展，该扩展可以录制和播放 Excel 工作表的测试。 本节和针对开发人员（该开发人员只想创建一个这样的扩展）的代码注释中对扩展的每个部分进行了介绍。
 
-  ![UI 测试体系结构](../test/media/ui-testarch.png "UI_TestArch")体系结构概述
+  ![UI 测试体系结构](../test/media/ui-testarch.png "UI_TestArch") 体系结构概述
 
 ## <a name="download-the-sample"></a>下载示例
  该示例由 `CodedUIExtensibilitySample.sln` 解决方案中的四个项目组成：
@@ -78,4 +78,4 @@ ms.locfileid: "75851770"
 - <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITestExtensionPackage>
 - [使用 UI 自动化来测试代码](../test/use-ui-automation-to-test-your-code.md)
 - [编码的 UI 测试的最佳做法](../test/best-practices-for-coded-ui-tests.md)
-- [支持编码的 UI 测试和操作录制的配置和平台](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)
+- [编码的 UI 测试和操作录制支持的配置和平台](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)

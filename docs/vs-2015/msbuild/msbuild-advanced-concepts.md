@@ -12,10 +12,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: e7aade87e0e1f6fe6a07269a585b35f52d4a9e5d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68191549"
 ---
 # <a name="msbuild-advanced-concepts"></a>MSBuild 高级概念
@@ -25,14 +25,14 @@ ms.locfileid: "68191549"
   
 ## <a name="related-topics"></a>相关主题  
   
-|Title|说明|  
+|Title|描述|  
 |-----------|-----------------|  
 |[批处理](../msbuild/msbuild-batching.md)|介绍如何根据项元数据批处理生成目标和任务。|  
 |[转换](../msbuild/msbuild-transforms.md)|说明如何使用转换来启用依赖项分析。|  
 |[Visual Studio 集成](../msbuild/visual-studio-integration-msbuild.md)|讨论在从 Visual Studio IDE 编译代码时如何使用 MSBuild 项目文件。|  
 |[并行生成多个项目](../msbuild/building-multiple-projects-in-parallel-with-msbuild.md)|介绍如何在有多个处理器或多核处理器的计算机上更快地生成多个项目。|  
 |[多定向](../msbuild/msbuild-multitargeting-overview.md)|介绍如何将应用程序编译为在若干 .NET Framework 版本的任意一个版本上运行。|  
-|[最佳做法](../msbuild/msbuild-best-practices.md)|建议用于编写 MSBuild 脚本的最佳做法。|  
+|[最佳实践](../msbuild/msbuild-best-practices.md)|建议用于编写 MSBuild 脚本的最佳做法。|  
   
 ## <a name="see-also"></a>另请参阅  
  [MSBuild 概念](../msbuild/msbuild-concepts.md)   

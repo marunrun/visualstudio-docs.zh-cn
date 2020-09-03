@@ -1,5 +1,5 @@
 ---
-title: IDebugPortEx2：：获取端口处理Id |微软文档
+title: IDebugPortEx2：： GetPortProcessId |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,10 +16,10 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: ae974461e312c68e6fcc14150a08879ac7709950
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80725135"
 ---
 # <a name="idebugportex2getportprocessid"></a>IDebugPortEx2::GetPortProcessId
@@ -41,13 +41,13 @@ int GetPortProcessId ( 
 
 ## <a name="parameters"></a>参数
 `pdwProcessId`\
-[出]返回端口本身的物理进程 ID。
+弄返回端口本身的物理进程 ID。
 
 ## <a name="return-value"></a>返回值
- 如果成功，返回`S_OK`;否则，返回错误代码。
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。
 
 ## <a name="remarks"></a>备注
- 例如，在 Win32 运行时中，此方法通常调用 Win32`GetCurrentProcessId`函数来获取物理进程 ID。
+ 例如，在 Win32 运行时中，此方法通常会调用 Win32 函数 `GetCurrentProcessId` 以获取物理进程 ID。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IDebugPortEx2](../../../extensibility/debugger/reference/idebugportex2.md)

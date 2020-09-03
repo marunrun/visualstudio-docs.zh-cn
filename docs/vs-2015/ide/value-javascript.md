@@ -1,5 +1,5 @@
 ---
-title: '&lt;value &gt; （JavaScript） |Microsoft Docs'
+title: '&lt;&gt;JavaScript)  (值 |Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -13,16 +13,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: aefe710cc730d5624abc01bbdfc54d9961788787
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72656396"
 ---
 # <a name="ltvaluegt-javascript"></a>&lt;value&gt; (JavaScript)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-指定 ECMAScript 3 属性的 `get` 和 `set` 函数的文档信息。
+指定 `get` ECMAScript 3 属性的文档信息和 `set` 函数。
 
 ## <a name="syntax"></a>语法
 
@@ -44,11 +44,11 @@ ms.locfileid: "72656396"
 
 - JavaScript 构造函数。
 
-  `integer`（可选）。 如果 `Number` `type`，则指定该属性是否为整数。 设置为 `true`，以指示该属性为整数;否则，设置为 `false`。 Visual Studio 不使用此属性以提供 IntelliSense 信息。
+  `integer`（可选）。 如果 `type` 为 `Number` ，则指定属性是否为整数。 如果设置为，则 `true` 指示属性是整数; 否则设置为 `false` 。 Visual Studio 不使用此属性以提供 IntelliSense 信息。
 
-  `domElement`（可选）。 此属性已弃用；`type` 属性优先于此属性。 此属性指定所记录的属性是否为 DOM 元素。 设置为 `true` 以指定该属性为 DOM 元素;否则，设置为 `false`。 如果未设置 `type` 特性，并且 `domElement` 设置为 `true`，则在执行语句完成时，IntelliSense 将记录的属性作为 `HTMLElement` 处理。
+  `domElement`（可选）。 此属性已弃用；`type` 属性优先于此属性。 此属性指定所记录的属性是否为 DOM 元素。 如果设置为，则 `true` 指定该属性为 DOM 元素; 否则设置为 `false` 。 如果 `type` 未设置属性，并且 `domElement` 设置为，则 `true` `HTMLElement` 在执行语句完成时，IntelliSense 将记录的属性视为。
 
-  `mayBeNull`（可选）。 指定记录的属性是否可以设置为 null。 设置为 `true` 以指示属性可以设置为 null;否则，设置为 `false`。 默认值为 `false`。 Visual Studio 不使用此属性以提供 IntelliSense 信息。
+  `mayBeNull`（可选）。 指定记录的属性是否可以设置为 null。 如果设置为，则 `true` 指示属性可以设置为 null; 否则设置为 `false` 。 默认值为 `false`。 Visual Studio 不使用此属性以提供 IntelliSense 信息。
 
   `elementType`（可选）。 如果 `type` 是 `Array`，此属性指定数组中元素的类型。
 
@@ -58,17 +58,17 @@ ms.locfileid: "72656396"
 
   `elementMayBeNull`（可选）。 如果 `type` 是 `Array`，指定是否可将数组中的元素设置为 null。 设置为 `true`，指示数组中的元素可以设置为 null；否则，设置为 `false`。 默认值为 `false`。 Visual Studio 不使用此属性以提供 IntelliSense 信息。
 
-  `locid`（可选）。 有关属性的本地化信息的标识符。 标识符是成员 ID 或对应于 OpenAjax 元数据定义的消息绑定中的 `name` 属性值。 标识符类型取决于 [\<loc>](../ide/loc-javascript.md) 元素中指定的格式。
+  `locid`（可选）。 有关属性的本地化信息的标识符。 标识符是成员 ID 或对应于 OpenAjax 元数据定义的消息绑定中的 `name` 属性值。 标识符类型取决于元素中指定的格式 [\<loc>](../ide/loc-javascript.md) 。
 
   `description`（可选）。 属性的说明。
 
 ## <a name="remarks"></a>备注
- ECMAScript 5 属性使用[\<summary >](../ide/summary-javascript.md)元素。
+ ECMAScript 5 属性使用 [\<summary>](../ide/summary-javascript.md) 元素。
 
- 在 `get` 或 `set` 函数之前立即使用 `<value>` 元素。
+ 在 `<value>` 或函数之前使用元素 `get` `set` 。
 
 ## <a name="example"></a>示例
- 下面的代码示例演示如何对 `get` 函数使用 `<value>` 元素。
+ 下面的代码示例演示如何对函数使用 `<value>` 元素 `get` 。
 
 ```javascript
 function Sys$CancelEventArgs$get_cancel() {

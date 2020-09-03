@@ -1,5 +1,5 @@
 ---
-title: 'Idiaaddressmap:: Set_imageheaders |Microsoft Docs'
+title: IDiaAddressMap：： set_imageHeaders |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 18fa69929f78d5ae661169a09db97697d98f4d94
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68198642"
 ---
-# <a name="idiaaddressmapsetimageheaders"></a>IDiaAddressMap::set_imageHeaders
+# <a name="idiaaddressmapset_imageheaders"></a>IDiaAddressMap::set_imageHeaders
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-设置映像标头，以便相对虚拟地址转换。  
+设置图像标头以启用相对虚拟地址转换。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,24 +37,24 @@ HRESULT set_imageHeaders ( 
   
 #### <a name="parameters"></a>参数  
  cbData  
- [in]标头数据的字节数。 必须是`n*sizeof(IMAGE_SECTION_HEADER)`其中`n`是可执行文件中的部分标头数。  
+ 中标头数据的字节数。 必须是 `n*sizeof(IMAGE_SECTION_HEADER)` `n` 可执行文件中的节标头数。  
   
  data[]  
- [in]一个数组`IMAGE_SECTION_HEADER`结构，以用作映像标头。  
+ 中  `IMAGE_SECTION_HEADER` 要用作图像标头的结构的数组。  
   
  originalHeaders  
- [in]设置为`FALSE`从新的映像，映像标头是否`TRUE`如果它们反映在升级之前的原始映像。 通常情况下，这将设置为`TRUE`仅在通过调用组合[idiaaddressmap:: Set_addressmap](../../debugger/debug-interface-access/idiaaddressmap-set-addressmap.md)方法。  
+ 中如果 `FALSE` 图像标题来自新图像，则设置为; `TRUE` 如果在升级之前反映原始图像，则设置为。 通常，这只会设置为 `TRUE` 与调用 [IDiaAddressMap：： set_addressMap](../../debugger/debug-interface-access/idiaaddressmap-set-addressmap.md) 方法结合。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
 ## <a name="remarks"></a>备注  
- `IMAGE_SECTION_HEADER`结构在 Winnt.h 中声明，表示可执行文件的图像部分标头格式。  
+ `IMAGE_SECTION_HEADER`结构在 Winnt 中声明，表示可执行文件的图像节标头格式。  
   
- 取决于相对虚拟地址计算`IMAGE_SECTION_HEADER`值。 通常情况下，DIA 检索这些程序数据库 (.pdb) 文件中。 如果缺少这些值，DIA 是无法计算相对虚拟地址并[idiaaddressmap:: Get_relativevirtualaddressenabled](../../debugger/debug-interface-access/idiaaddressmap-get-relativevirtualaddressenabled.md)方法将返回`FALSE`。 然后，客户端必须调用[idiaaddressmap:: Put_relativevirtualaddressenabled](../../debugger/debug-interface-access/idiaaddressmap-put-relativevirtualaddressenabled.md)方法，以提供图像本身中的缺少映像标头后使相对虚拟地址计算。  
+ 相对虚拟地址的计算取决于 `IMAGE_SECTION_HEADER` 值。 通常，DIA 从程序数据库 () 文件中检索这些文件。 如果缺少这些值，DIA 将无法计算相对虚拟地址， [IDiaAddressMap：： get_relativeVirtualAddressEnabled](../../debugger/debug-interface-access/idiaaddressmap-get-relativevirtualaddressenabled.md) 方法返回 `FALSE` 。 然后，客户端必须调用 [IDiaAddressMap：:p ut_relativeVirtualAddressEnabled](../../debugger/debug-interface-access/idiaaddressmap-put-relativevirtualaddressenabled.md) 方法，以便在提供图像本身缺少的图像标头后启用相对虚拟地址计算。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDiaAddressMap](../../debugger/debug-interface-access/idiaaddressmap.md)   
- [IDiaAddressMap::set_addressMap](../../debugger/debug-interface-access/idiaaddressmap-set-addressmap.md)   
- [IDiaAddressMap::get_relativeVirtualAddressEnabled](../../debugger/debug-interface-access/idiaaddressmap-get-relativevirtualaddressenabled.md)   
+ [IDiaAddressMap：： set_addressMap](../../debugger/debug-interface-access/idiaaddressmap-set-addressmap.md)   
+ [IDiaAddressMap：： get_relativeVirtualAddressEnabled](../../debugger/debug-interface-access/idiaaddressmap-get-relativevirtualaddressenabled.md)   
  [IDiaAddressMap::put_relativeVirtualAddressEnabled](../../debugger/debug-interface-access/idiaaddressmap-put-relativevirtualaddressenabled.md)

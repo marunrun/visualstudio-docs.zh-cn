@@ -10,10 +10,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 6fb07e9bc6c308e27e3ad054c5aeb0b12c092054
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85533999"
 ---
 # <a name="running-profiling-tools-with-or-without-the-debugger"></a>运行带或不带调试器的分析工具
@@ -49,7 +49,7 @@ Visual Studio 现提供一些性能工具的选择，其中一些（如“CPU �
   
     运行会话时，你可以看到有关事件、进程内存和 CPU 使用率的信息。  
   
-    下图显示了 Visual Studio 2015 Update 1 中的 "**诊断工具**" 窗口：  
+    下图显示了 Visual Studio 2015 Update 1 中的 " **诊断工具** " 窗口：  
   
     ![DiagnosticTools&#45;Update1](../profiling/media/diagnostictools-update1.png "DiagnosticTools-Update1")  
   
@@ -57,7 +57,7 @@ Visual Studio 现提供一些性能工具的选择，其中一些（如“CPU �
   
 5. 当停止调试时，诊断会话结束。  
   
-   在 Visual Studio 2015 Update 1 中，“诊断工具” **** 窗口可让你更容易地关注感兴趣的事件。   现在，事件名称显示有类别前缀（**手势**、**程序输出**、**断点**、**文件**等），因此，你可以快速扫描给定类别的列表或跳过你不关心的类别。  
+   在 Visual Studio 2015 Update 1 中，“诊断工具” **** 窗口可让你更容易地关注感兴趣的事件。   事件名称现在显示有类别前缀 (**手势**、 **程序输出**、 **断点**、 **文件** 等。 ) 这样，你可以快速扫描给定类别的列表或跳过你不关心的类别。  
   
    窗口中现在有搜索框，因此你可以在事件列表中任何位置查找指定的字符串。 例如，下图显示搜索字符串“install”的结果，其匹配四个事件：  
   
@@ -74,7 +74,7 @@ Visual Studio 现提供一些性能工具的选择，其中一些（如“CPU �
   
 1. 在 Visual Studio 中打开项目。  
   
-2. 在 "**调试**" 菜单上，选择 "**性能探查器 ...** " （快捷键： Alt + F2）。  
+2. 在 " **调试** " 菜单上，选择 " **性能探查器 ...** " (快捷键： Alt + F2) 。  
   
 3. 在诊断启动页上，选择要在会话中运行的一个或多个工具。 将仅显示适用于项目类型、操作系统和编程语言的工具。 选择诊断工具时，将禁用对不能在同一诊断会话中运行的工具的选择。 对于 C# Windows 通用应用，你的选择可能如下所示：  
   
@@ -99,7 +99,7 @@ Visual Studio 现提供一些性能工具的选择，其中一些（如“CPU �
 ## <a name="the-profiling-report"></a>分析报告  
  ![诊断工具报告](../profiling/media/diag-report.png "DIAG_Report")  
   
-|映像|说明|  
+|图像|描述|  
 |-|-|  
 |![步骤 1](../profiling/media/procguid-1.png "ProcGuid_1")|时间线显示分析会话的长度、应用程序生命周期激活事件以及用户标记。|  
 |![步骤 2](../profiling/media/procguid-2.png "ProcGuid_2")|你可以通过拖动蓝色条选择时间线的一个区域，将报告限制到这一部分时间线内。|  

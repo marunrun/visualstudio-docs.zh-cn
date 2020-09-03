@@ -15,16 +15,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: af300bca2b1e679eae58a92962067fcd50fea78f
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74297792"
 ---
 # <a name="resources-for-designing-accessible-applications"></a>用于设计支持辅助功能的应用程序的资源
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-使用以下链接可查找有关支持可访问设计的信息以及用于开发可访问 Windows 应用程序和网站的提示和示例。 可以在 [http://www.microsoft.com/enable/](https://www.microsoft.com/accessibility/) 处联机查找有关辅助功能的常规信息。
+使用以下链接可查找有关支持可访问设计的信息以及用于开发可访问 Windows 应用程序和网站的提示和示例。 有关辅助功能的常规信息，请参阅联机 [http://www.microsoft.com/enable/](https://www.microsoft.com/accessibility/) 。
 
 ## <a name="technologies"></a>技术
 
@@ -36,11 +36,11 @@ ms.locfileid: "74297792"
 
 ## <a name="windows-applications"></a>Windows 应用程序
 
-- [演练：创建可访问的基于 Windows 的应用程序](https://msdn.microsoft.com/library/654c7f2f-1586-480b-9f12-9d9b8f5cc32b) 本主题提供用于在示例 Windows 应用程序中包含针对 Certified for Windows 徽标的五个辅助功能需求的分步说明。
+- [演练：创建可访问的基于 Windows 的应用程序](https://msdn.microsoft.com/library/654c7f2f-1586-480b-9f12-9d9b8f5cc32b) 本主题提供了有关在示例 Windows 应用程序中包含适用于 Windows 的经过认证的徽标的五个辅助功能的分步说明。
 
-- [键盘用户界面设计的准则](/previous-versions/windows/desktop/dnacc/guidelines-for-keyboard-user-interface-design) 此技术文章介绍如何设计用户可以从键盘导航的 Windows 应用程序用户界面。
+- [键盘用户界面设计指南](/previous-versions/windows/desktop/dnacc/guidelines-for-keyboard-user-interface-design) 本技术文章介绍如何设计用户可以从键盘导航的 Windows 应用程序用户界面。
 
-- [控制台辅助功能](/previous-versions/windows/desktop/dnacc/console-accessibility) 此技术文章介绍用于公开 Windows XP 中面向辅助工具的控制台的 API 和事件。
+- [控制台辅助功能](/previous-versions/windows/desktop/dnacc/console-accessibility) 本技术文章介绍了用于在 Windows XP 中公开控制台以获得辅助功能帮助的 Api 和事件。
 
 ## <a name="web-sites"></a>网站
 
@@ -56,5 +56,5 @@ ms.locfileid: "74297792"
 
 - **万维网联合会 (W3C) 的 Web 辅助功能计划** 此网站为可访问网站开发提供准则和技术。 有关详细信息，请参阅 [http://www.w3.org/WAI/GL/](https://www.w3.org/WAI/GL/)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [Visual Studio 的辅助功能](../../ide/reference/accessibility-features-of-visual-studio.md)

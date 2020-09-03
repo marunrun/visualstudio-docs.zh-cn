@@ -10,10 +10,10 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: bc04cbc6d46d8dc47a08d06c8c5949bb5d9107f3
-ms.sourcegitcommit: 92361aac3665a934faa081e1d1ea89a067b01c5b
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "79431360"
 ---
 # <a name="frequently-asked-questions-about-fxcop-and-fxcop-analyzers"></a>有关 FxCop 和 FxCop 分析器的常见问题解答
@@ -31,7 +31,7 @@ FxCop 分析器基于 .NET Compiler Platform（“Roslyn”）。 [将它们安�
 
 ## <a name="does-the-run-code-analysis-command-run-fxcop-analyzers"></a>“运行代码分析”命令是否运行 FxCop 分析器？
 
-在 Visual Studio 2019 16.5 版本之前，当您选择 **"分析** > **运行代码分析**"时，它将执行旧版分析。 从 Visual Studio 2019 16.5 开始，**运行代码分析**菜单选项将执行基于 Roslyn 的基于 Roslyn 的分析器，用于所选项目或解决方案。 如果您安装了基于 Roslyn 的 FxCop 分析仪，它们也将被执行。 有关详细信息，请参阅[如何：手动运行托管代码的代码分析](how-to-run-code-analysis-manually-for-managed-code.md)。
+在 Visual Studio 2019 16.5 版本之前，当你选择 "**分析**  >  **运行代码分析**" 时，它会执行旧式分析。 启动 Visual Studio 2019 16.5， **运行代码分析** 菜单选项执行所选项目或解决方案的基于 Roslyn 的分析器。 如果已安装基于 Roslyn 的 FxCop 分析器，则这些分析器也将执行。 有关详细信息，请参阅 [如何：手动运行托管代码的代码分析](how-to-run-code-analysis-manually-for-managed-code.md)。
 
 ## <a name="does-the-runcodeanalysis-msbuild-project-property-run-analyzers"></a>RunCodeAnalysis msbuild 项目属性是否运行分析器？
 
@@ -43,22 +43,22 @@ FxCop 分析器基于 .NET Compiler Platform（“Roslyn”）。 [将它们安�
 
 ## <a name="i-get-warning-ca0507-even-after-ive-installed-the-fxcop-analyzers-nuget-package"></a>即使在安装了 FxCop 分析器 NuGet 包之后，我仍会收到 CA0507 警告
 
-如果您已安装 FxCop 分析器，但继续收到警告 CA0507"**运行代码分析"已被弃用，转而使用在生成期间运行的 FxCop 分析器"，** 则可能需要将[项目文件中](../ide/solutions-and-projects-in-visual-studio.md#project-file)的**RunCodeAnalysis** msbuild 属性设置为**false**。 否则，遗留分析将在每次生成后执行。
+如果已安装了 FxCop 分析器但继续获取警告 CA0507 **"运行代码分析" 已弃用（在生成过程中运行**），则可能需要将[项目文件](../ide/solutions-and-projects-in-visual-studio.md#project-file)中的**RunCodeAnalysis** msbuild 属性设置为**false**。 否则，将在每次生成后执行旧式分析。
 
 ```xml
 <RunCodeAnalysis>false</RunCodeAnalysis>
 ```
 
-## <a name="which-rules-have-been-ported-to-fxcop-analyzers"></a>哪些规则已移植到 FxCop 分析仪？
+## <a name="which-rules-have-been-ported-to-fxcop-analyzers"></a>哪些规则已移植到 FxCop 分析器？
 
-有关哪些旧版分析规则已移植到[FxCop 分析器](install-fxcop-analyzers.md)的信息，请参阅[Fxcop 规则端口状态](fxcop-rule-port-status.md)。
+有关哪些旧分析规则已移植到 [FxCop 分析器](install-fxcop-analyzers.md)的信息，请参阅 [fxcop 规则端口状态](fxcop-rule-port-status.md)。
 
 ## <a name="code-analysis-warnings-are-treated-as-errors"></a>代码分析警告被视为错误
 
-如果项目使用生成选项将警告视为错误，则 FxCop 分析器警告可能会显示为错误。 为防止将代码分析警告视为错误，请按照[代码分析常见问题 解答](../code-quality/analyzers-faq.md#treat-warnings-as-errors)中的步骤操作。
+如果你的项目使用 "生成" 选项将警告视为错误，则 FxCop 分析器警告可能会显示为错误。 若要防止代码分析警告被视为错误，请按照 [代码分析常见问题解答](../code-quality/analyzers-faq.md#treat-warnings-as-errors)中的步骤进行操作。
 
 ## <a name="see-also"></a>另请参阅
 
 - [.NET Compiler Platform 分析器概述](roslyn-analyzers-overview.md)
-- [迁移到 FxCop 分析仪](migrate-from-legacy-analysis-to-fxcop-analyzers.md)
+- [迁移到 FxCop 分析器](migrate-from-legacy-analysis-to-fxcop-analyzers.md)
 - [安装 FxCop 分析器](install-fxcop-analyzers.md)

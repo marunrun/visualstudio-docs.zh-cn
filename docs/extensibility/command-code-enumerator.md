@@ -1,5 +1,5 @@
 ---
-title: 命令代码枚举器 |微软文档
+title: 命令代码枚举器 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,14 +12,14 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 15916d26ac0120417205af0bb9117a45ec0397c6
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80739796"
 ---
 # <a name="command-code-enumerator"></a>命令代码枚举器
-此枚举器用于[SccGetCommandOptions 和](../extensibility/sccgetcommandoptions-function.md) [Scc 填充列表](../extensibility/sccpopulatelist-function.md)的选项中，以指示为其指定选项的命令。
+此枚举器用于 [SccGetCommandOptions](../extensibility/sccgetcommandoptions-function.md) 的选项和 [SccPopulateList](../extensibility/sccpopulatelist-function.md)，以指示为其指定了选项的命令。
 
 ## <a name="syntax"></a>语法
 
@@ -40,29 +40,29 @@ enum SCCCOMMAND {
 ```
 
 ## <a name="members"></a>成员
-SCC_COMMAND_GET对应于[SccGet。](../extensibility/sccget-function.md)
+SCC_COMMAND_GET 对应于 [SccGet](../extensibility/sccget-function.md)。
 
-SCC_COMMAND_CHECKOUT对应于[SccCheckout。](../extensibility/scccheckout-function.md)
+SCC_COMMAND_CHECKOUT 对应于 [SccCheckout](../extensibility/scccheckout-function.md)。
 
-SCC_COMMAND_CHECKIN对应于[SccCheckin。](../extensibility/scccheckin-function.md)
+SCC_COMMAND_CHECKIN 对应于 [SccCheckin](../extensibility/scccheckin-function.md)。
 
-SCC_COMMAND_UNCHECKOUT对应于[SccUncheck。](../extensibility/sccuncheckout-function.md)
+SCC_COMMAND_UNCHECKOUT 对应于 [SccUncheckout](../extensibility/sccuncheckout-function.md)。
 
-SCC_COMMAND_ADD对应于[SccAdd](../extensibility/sccadd-function.md)。
+SCC_COMMAND_ADD 对应于 [SccAdd](../extensibility/sccadd-function.md)。
 
-SCC_COMMAND_REMOVE对应于[SccRemove](../extensibility/sccremove-function.md)。
+SCC_COMMAND_REMOVE 对应于 [SccRemove](../extensibility/sccremove-function.md)。
 
-SCC_COMMAND_DIFF对应于[SccDiff](../extensibility/sccdiff-function.md)。
+SCC_COMMAND_DIFF 对应于 [SccDiff](../extensibility/sccdiff-function.md)。
 
-SCC_COMMAND_HISTORY对应于[史抄](../extensibility/scchistory-function.md)
+SCC_COMMAND_HISTORY 对应于 [SccHistory](../extensibility/scchistory-function.md)。
 
-SCC_COMMAND_RENAME对应于[SccRename](../extensibility/sccrename-function.md)。
+SCC_COMMAND_RENAME 对应于 [SccRename](../extensibility/sccrename-function.md)。
 
-SCC_COMMAND_PROPERTIES对应于[Scc属性](../extensibility/sccproperties-function.md)。
+SCC_COMMAND_PROPERTIES 对应于 [SccProperties](../extensibility/sccproperties-function.md)。
 
-SCC_COMMAND_OPTIONS对应于[SccSetOption](../extensibility/sccsetoption-function.md)。
+SCC_COMMAND_OPTIONS 对应于 [SccSetOption](../extensibility/sccsetoption-function.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [源代码管理插件](../extensibility/source-control-plug-ins.md)
 - [SccGetCommandOptions](../extensibility/sccgetcommandoptions-function.md)
 - [SccPopulateList](../extensibility/sccpopulatelist-function.md)
