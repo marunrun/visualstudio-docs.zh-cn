@@ -15,16 +15,16 @@ manager: jillfra
 ms.workload:
 - data-storage
 ms.openlocfilehash: fe59b30e9af7ee1d98c0aba65339af1d53cba8fb
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85282457"
 ---
 # <a name="edit-data-in-datasets"></a>编辑数据集中的数据
 编辑数据表中的数据与编辑任何数据库的表中的数据非常类似。 此过程可能包括插入、更新和删除表中的记录。 在数据绑定窗体中，可以指定哪些字段是用户可编辑的字段。 在这些情况下，数据绑定基础结构将处理所有更改跟踪，以便以后可以将更改发送回数据库。 如果以编程方式对数据进行编辑，并且想要将这些更改发送回数据库，则必须使用执行更改跟踪的对象和方法。
 
-除了更改实际数据之外，您还可以查询 <xref:System.Data.DataTable> 以返回特定的数据行。 例如，您可以查询单独的行、行的特定版本（原始和建议）、已更改的行或有错误的行。
+除了更改实际数据之外，您还可以查询 <xref:System.Data.DataTable> 以返回特定的数据行。 例如，您可以查询单个行、特定版本的行 (原始和建议) 、已更改的行或有错误的行。
 
 ## <a name="to-edit-rows-in-a-dataset"></a>编辑数据集中的行
 若要编辑中的现有行 <xref:System.Data.DataTable> ，需要找到 <xref:System.Data.DataRow> 要编辑的，然后将更新后的值分配给所需的列。
@@ -42,14 +42,14 @@ ms.locfileid: "85282457"
 ## <a name="to-insert-new-rows-into-a-dataset"></a>向数据集插入新行
 使用数据绑定控件的应用程序通常通过[BindingNavigator 控件](/dotnet/framework/winforms/controls/bindingnavigator-control-windows-forms)上的 "**添加新**项" 按钮来添加新记录。
 
-若要将新记录手动添加到数据集，请通过对 DataTable 调用方法来创建新的数据行。 然后，将该行添加到的 <xref:System.Data.DataRow> 集合（ <xref:System.Data.DataTable.Rows%2A> ）中 <xref:System.Data.DataTable> ：
+若要将新记录手动添加到数据集，请通过对 DataTable 调用方法来创建新的数据行。 然后，将该行添加到 <xref:System.Data.DataRow> (的集合 <xref:System.Data.DataTable.Rows%2A>) <xref:System.Data.DataTable> ：
 
 [!code-csharp[VbRaddataEditing#1](../data-tools/codesnippet/CSharp/edit-data-in-datasets_3.cs)]
 [!code-vb[VbRaddataEditing#1](../data-tools/codesnippet/VisualBasic/edit-data-in-datasets_3.vb)]
 
-为了保留数据集将更新发送到数据源所需的信息，请使用 <xref:System.Data.DataRow.Delete%2A> 方法删除数据表中的行。 例如，如果应用程序使用 TableAdapter （或 <xref:System.Data.Common.DataAdapter> ），则 TableAdapter 的 `Update` 方法会删除数据库中具有 <xref:System.Data.DataRow.RowState%2A> 的行 <xref:System.Data.DataRowState.Deleted> 。
+为了保留数据集将更新发送到数据源所需的信息，请使用 <xref:System.Data.DataRow.Delete%2A> 方法删除数据表中的行。 例如，如果应用程序使用 TableAdapter (或 <xref:System.Data.Common.DataAdapter>) ，则 TableAdapter 的 `Update` 方法会删除数据库中具有 <xref:System.Data.DataRow.RowState%2A> 的行 <xref:System.Data.DataRowState.Deleted> 。
 
-如果您的应用程序不需要将更新发送回数据源，则可以通过直接访问数据行集合（）来删除记录 <xref:System.Data.DataRowCollection.Remove%2A> 。
+如果你的应用程序不需要将更新发送回数据源，则可以通过直接访问数据行集合 () 来删除记录 <xref:System.Data.DataRowCollection.Remove%2A> 。
 
 #### <a name="to-delete-records-from-a-data-table"></a>删除数据表中的记录
 
@@ -58,7 +58,7 @@ ms.locfileid: "85282457"
      此方法不会以物理方式删除记录。 相反，它会将记录标记为要删除。
 
     > [!NOTE]
-    > 如果获取的计数属性 <xref:System.Data.DataRowCollection> ，则生成的计数将包含已标记为要删除的记录。 若要获取未标记为要删除的记录的准确计数，可以循环遍历 <xref:System.Data.DataRow.RowState%2A> 每个记录的属性的集合。 （标记为删除的记录具有 <xref:System.Data.DataRow.RowState%2A> 的 <xref:System.Data.DataRowState.Deleted> 。）或者，您可以创建一个数据集的数据视图，该数据集基于行状态进行筛选，并从该处获取计数属性。
+    > 如果获取的计数属性 <xref:System.Data.DataRowCollection> ，则生成的计数将包含已标记为要删除的记录。 若要获取未标记为要删除的记录的准确计数，可以循环遍历 <xref:System.Data.DataRow.RowState%2A> 每个记录的属性的集合。 标记为删除 (记录的 <xref:System.Data.DataRow.RowState%2A> <xref:System.Data.DataRowState.Deleted> ) 或者，你可以创建一个数据集的数据视图，该数据集基于行状态进行筛选，并从该处获取计数属性。
 
 下面的示例演示如何调用 <xref:System.Data.DataRow.Delete%2A> 方法，将表中的第一行标记 `Customers` 为已删除：
 
@@ -70,9 +70,9 @@ ms.locfileid: "85282457"
 
 在每个数据行中跟踪更改的两种方式：
 
-- 每个数据行都包含与其相关的信息（例如，、、 <xref:System.Data.DataRow.RowState%2A> <xref:System.Data.DataRowState.Added> <xref:System.Data.DataRowState.Modified> <xref:System.Data.DataRowState.Deleted> 或 <xref:System.Data.DataRowState.Unchanged> ）。
+- 每个数据行都包含与其 <xref:System.Data.DataRow.RowState%2A> (相关的信息，例如，、 <xref:System.Data.DataRowState.Added> <xref:System.Data.DataRowState.Modified> 、 <xref:System.Data.DataRowState.Deleted> 或 <xref:System.Data.DataRowState.Unchanged>) 。
 
-- 每个更改的数据行都包含该行（）的多个版本 <xref:System.Data.DataRowVersion> 、原始版本（在更改之前）和当前版本（更改后）。 在挂起更改（可以响应事件的时间 <xref:System.Data.DataTable.RowChanging> ）期间，还可以使用第三个版本（建议的版本）。
+- 每个更改的数据行都包含该行 () 的多个版本 <xref:System.Data.DataRowVersion> ， () 更改之前的原始版本，并在更改 (之后) 当前版本。 当更改处于挂起状态时 (可以响应 <xref:System.Data.DataTable.RowChanging> 事件) 的时间，还可以使用第三个版本（建议的版本）。
 
 <xref:System.Data.DataSet.HasChanges%2A> `true` 如果在数据集中进行了更改，则 dataset 的方法将返回。 确定已更改的行存在后，可以调用 `GetChanges` 或的方法 <xref:System.Data.DataSet> <xref:System.Data.DataTable> 来返回一组已更改的行。
 

@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - data-storage
 ms.openlocfilehash: 5d408c67b2e54fecd6404bac93d93ecfb35de162
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85282340"
 ---
 # <a name="how-to-add-validation-to-entity-classes"></a>如何：向实体类添加验证
@@ -24,7 +24,7 @@ ms.locfileid: "85282340"
 [Visual Studio 中的 LINQ to SQL 工具](../data-tools/linq-to-sql-tools-in-visual-studio2.md)提供了一些分部方法，使用户可以扩展在插入、更新和删除整个实体的过程中运行的设计器生成的代码，以及在个别列发生更改的过程中和之后运行。
 
 > [!NOTE]
-> 本主题提供通过使用**O/R 设计器**向实体类添加验证的基本步骤。 由于在未引用特定实体类的情况下，可能难以遵循这些一般步骤，因此将提供使用实际数据的演练。
+> 本主题提供通过使用 **O/R 设计器**向实体类添加验证的基本步骤。 由于在未引用特定实体类的情况下，可能难以遵循这些一般步骤，因此将提供使用实际数据的演练。
 
 ## <a name="add-validation-for-changes-to-the-value-in-a-specific-column"></a>添加对特定列中值的更改的验证
 此过程演示当列中的值更改时如何验证数据。 由于验证在类定义（而不是用户界面）中执行，因此如果值导致验证失败，则将引发异常。 请为应用程序中试图更改列值的代码实现错误处理。
@@ -33,7 +33,7 @@ ms.locfileid: "85282340"
 
 ### <a name="to-validate-data-during-a-columns-value-change"></a>在列值更改过程中验证数据
 
-1. 在**O/R 设计器**中打开或创建一个新的 LINQ to SQL 类文件（**.dbml**文件）。 （在“解决方案资源管理器”中双击“.dbml”文件。********）
+1. 在**O/R 设计器**中打开或创建一个新的 LINQ to SQL 类文件 (**.dbml**文件) 。 （在“解决方案资源管理器”中双击“.dbml”文件。********）
 
 2. 在 O/R 设计器中，右键单击要为其添加验证的类，然后单击“查看代码”********。
 
@@ -79,7 +79,7 @@ ms.locfileid: "85282340"
 
 ### <a name="to-validate-data-during-an-update-to-an-entity-class"></a>在实体类更新过程中验证数据
 
-1. 在**O/R 设计器**中打开或创建一个新的 LINQ to SQL 类文件（**.dbml**文件）。 （在“解决方案资源管理器”中双击“.dbml”文件。********）
+1. 在**O/R 设计器**中打开或创建一个新的 LINQ to SQL 类文件 (**.dbml**文件) 。 （在“解决方案资源管理器”中双击“.dbml”文件。********）
 
 2. 右键单击 O/R 设计器上的空白区域，然后单击“查看代码”********。
 
@@ -123,4 +123,4 @@ ms.locfileid: "85282340"
 
 - [Visual Studio 中的 LINQ to SQL 工具](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
 - [验证数据](../data-tools/validate-data-in-datasets.md)
-- [LINQ to SQL （.NET Framework）](/dotnet/framework/data/adonet/sql/linq/index)
+- [LINQ to SQL ( .NET Framework) ](/dotnet/framework/data/adonet/sql/linq/index)
