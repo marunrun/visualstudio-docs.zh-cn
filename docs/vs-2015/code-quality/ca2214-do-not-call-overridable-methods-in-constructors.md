@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: ad467e880b3281a75db2627108af0e0b2f90ea99
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85534454"
 ---
 # <a name="ca2214-do-not-call-overridable-methods-in-constructors"></a>CA2214:不要在构造函数中调用可重写的方法
@@ -45,7 +45,7 @@ ms.locfileid: "85534454"
  不禁止显示此规则发出的警告。 应对构造函数进行重新设计，以消除对虚拟方法的调用。
 
 ## <a name="example"></a>示例
- 下面的示例演示违反此规则的效果。 测试应用程序将创建的实例 `DerivedType` ，这将导致它的基类（ `BadlyConstructedType` ）构造函数执行。 `BadlyConstructedType`的构造函数错误地调用了虚方法 `DoSomething` 。 如输出所示，将 `DerivedType.DoSomething()` 执行，并在 `DerivedType` 执行构造函数之前执行。
+ 下面的示例演示违反此规则的效果。 测试应用程序将创建的实例 `DerivedType` ，从而使其基类 (`BadlyConstructedType` 要执行) 构造函数。 `BadlyConstructedType`的构造函数错误地调用了虚方法 `DoSomething` 。 如输出所示，将 `DerivedType.DoSomething()` 执行，并在 `DerivedType` 执行构造函数之前执行。
 
  [!code-csharp[FxCop.Usage.CtorVirtual#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.CtorVirtual/cs/FxCop.Usage.CtorVirtual.cs#1)]
  [!code-vb[FxCop.Usage.CtorVirtual#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Usage.CtorVirtual/vb/FxCop.Usage.CtorVirtual.vb#1)]

@@ -16,27 +16,27 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 887600bad0c3d05ff78050aa4449cf49dc882027
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85534571"
 ---
 # <a name="ca2213-disposable-fields-should-be-disposed"></a>CA2213:应释放可释放的字段
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|Item|值|
+|项|值|
 |-|-|
 |TypeName|DisposableFieldsShouldBeDisposed|
 |CheckId|CA2213|
-|Category|Microsoft. 使用情况|
+|类别|Microsoft. 使用情况|
 |是否重大更改|非重大更改|
 
 ## <a name="cause"></a>原因
  一种类型，该类型实现 <xref:System.IDisposable?displayProperty=fullName> 也实现的类型的字段 <xref:System.IDisposable> 。 该 <xref:System.IDisposable.Dispose%2A> 字段的方法不由 <xref:System.IDisposable.Dispose%2A> 声明类型的方法调用。
 
 ## <a name="rule-description"></a>规则描述
- 类型负责释放其所有非托管资源;这是通过实现实现的 <xref:System.IDisposable> 。 此规则检查可释放类型是否 `T` 声明一个字段 `F` ，该字段是可释放类型的实例 `FT` 。 对于每个字段 `F` ，该规则将尝试查找对的调用 `FT.Dispose` 。 此规则将搜索由调用的方法 `T.Dispose` ，一个级别较低（由调用的方法调用的方法 `FT.Dispose` ）。
+ 类型负责释放其所有非托管资源;这是通过实现实现的 <xref:System.IDisposable> 。 此规则检查可释放类型是否 `T` 声明一个字段 `F` ，该字段是可释放类型的实例 `FT` 。 对于每个字段 `F` ，该规则将尝试查找对的调用 `FT.Dispose` 。 规则搜索调用的方法 `T.Dispose` ，一个级别较低 (由) 调用的方法调用的方法 `FT.Dispose` 。
 
 ## <a name="how-to-fix-violations"></a>如何解决冲突
  若要修复与此规则的冲突，请对 <xref:System.IDisposable.Dispose%2A> 属于实现的类型的字段调用（ <xref:System.IDisposable> 如果你负责分配和释放字段所持有的非托管资源）。
@@ -45,12 +45,12 @@ ms.locfileid: "85534571"
  如果你不负责释放字段持有的资源，或者如果调用 <xref:System.IDisposable.Dispose%2A> 发生在比规则检查更深入的调用级别上，则可以安全地禁止显示此规则发出的警告。
 
 ## <a name="example"></a>示例
- 下面的示例演示一个 `TypeA` 实现的类型 <xref:System.IDisposable> （ `FT` 在上一讨论中）。
+ 下面的示例演示了一个 `TypeA` 实现 <xref:System.IDisposable> `FT` 前面讨论)  (的类型。
 
  [!code-csharp[FxCop.Usage.IDisposablePattern#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.IDisposablePattern/cs/FxCop.Usage.IDisposablePattern.cs#1)]
 
 ## <a name="example"></a>示例
- 下面的示例演示一个类型 `TypeB` ，该类型违反此规则，方法是将字段 `aFieldOfADisposableType` （ `F` 在上一讨论中）声明为可释放类型（ `TypeA` ），而不是 <xref:System.IDisposable.Dispose%2A> 对字段调用。 `TypeB`与 `T` 上一讨论中的相对应。
+ 下面的示例演示了一个类型 `TypeB` ，该类型违反了此规则，方法是将 `aFieldOfADisposableType` `F` 上一讨论中的字段 (声明) 为可释放类型 (`TypeA`) ，而不是 <xref:System.IDisposable.Dispose%2A> 对字段调用。 `TypeB` 与 `T` 上一讨论中的相对应。
 
  [!code-csharp[FxCop.Usage.IDisposableFields#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.IDisposableFields/cs/FxCop.Usage.IDisposableFields.cs#1)]
 
