@@ -13,14 +13,14 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 9b8ce3f16c1439d62cfa1e2cff344b70e6724c42
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72655353"
 ---
 # <a name="troubleshooting-exceptions-systemservicemodelsecuritymessagesecurityexception"></a>关于异常的疑难解答：System.ServiceModel.Security.MessageSecurityException
-当 [!INCLUDE[vsindigo](../includes/vsindigo-md.md)] 确定消息没有正确安全或已被篡改时，将引发 <xref:System.ServiceModel.Security.MessageSecurityException> 异常。 当下列条件全为真时，此错误会非常频繁地发生：
+<xref:System.ServiceModel.Security.MessageSecurityException>当 [!INCLUDE[vsindigo](../includes/vsindigo-md.md)] 确定消息没有正确安全或已被篡改时，将引发异常。 当下列条件全为真时，此错误会非常频繁地发生：
 
 - 在远程连接（如远程桌面连接或终端服务）上使用 WCF 服务引用与网站或 Web 应用程序项目中的 WCF 服务 (.svc) 进行通信。
 
@@ -78,11 +78,11 @@ ms.locfileid: "72655353"
 
 #### <a name="to-turn-off-ntlm-security"></a>关闭 NTLM 安全
 
-1. 在 **“解决方案资源管理器”** 中，右击网站名称，然后单击 **“属性页”** 。
+1. 在 **“解决方案资源管理器”** 中，右击网站名称，然后单击 **“属性页”**。
 
-2. 选择 **“启动选项”** ，然后清除 **“NTLM 身份验证”** 复选框。
+2. 选择 **“启动选项”**，然后清除 **“NTLM 身份验证”** 复选框。
 
 3. 单击“确定”。
 
-## <a name="see-also"></a>请参阅
- <xref:System.ServiceModel.Security.MessageSecurityException>[使用异常助手](https://msdn.microsoft.com/library/e0a78c50-7318-4d54-af51-40c00aea8711)
+## <a name="see-also"></a>另请参阅
+ <xref:System.ServiceModel.Security.MessageSecurityException> [使用异常助手](https://msdn.microsoft.com/library/e0a78c50-7318-4d54-af51-40c00aea8711)

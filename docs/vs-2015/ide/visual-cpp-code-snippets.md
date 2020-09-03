@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 213f4299ac71c08118563a008abe065f2c02423e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72655388"
 ---
 # <a name="visual-c-code-snippets"></a>Visual C++ 代码片段
@@ -26,13 +26,13 @@ ms.locfileid: "72655388"
 ## <a name="inserting-a-code-snippet"></a>插入代码片段。
  若要插入代码片段，请打开一个 C++ 代码文件（.cpp 或 .h），单击文件内的某个位置，然后执行以下操作之一：
 
-- 右键单击以获取上下文菜单并选择“插入代码片段”
+- 右键单击以获取上下文菜单并选择“插入代码片段” 
 
-- 在“编辑”/“IntelliSense”菜单中，选择“插入代码片段”
+- 在“编辑”/“IntelliSense”  菜单中，选择“插入代码片段” 
 
 - 使用热键：**CTRL + K + X**
 
-  将出现一个以“#if”开头的选择列表。 选择“#if”后，显示添加到文件的以下代码：
+  将出现一个以“#if”  开头的选择列表。 选择“#if”  后，显示添加到文件的以下代码：
 
 ```cpp
 #if 0
@@ -45,13 +45,13 @@ ms.locfileid: "72655388"
 ## <a name="using-a-code-snippet-to-surround-selected-code"></a>使用代码片段来包围所选代码
  若要使用代码片段来包围所选代码，请选择一行（或多行），然后执行下列操作之一：
 
-1. 右键单击以获取上下文菜单并选择“外侧代码”
+1. 右键单击以获取上下文菜单并选择 "**外侧代码**"
 
-2. 在“编辑”/“IntelliSense”菜单中，选择“外侧代码”
+2. 在“编辑”/“IntelliSense”**** 菜单中，选择“外侧代码”****
 
 3. 使用热键：**CTRL + K + S**
 
-   选择“#if”。 将显示如下所示的内容：
+   选择“#if”  。 将显示如下所示的内容：
 
 ```cpp
 #if 0
@@ -62,7 +62,7 @@ ms.locfileid: "72655388"
  然后，你可以使用正确的条件替换 0。
 
 ## <a name="where-can-i-find-a-complete-list-of-the-c-code-snippets"></a>在哪里可以找到 C++ 代码片段的完整列表？
- 可以通过以下方式找到 C++ 代码片段的完整列表：转到“代码片段管理器”（位于“工具”菜单中），并将“语言”设置为“Visual C++”。 在下面的窗口中，展开“Visual C++”。 将显示所有 C++ 代码片段的名称，按字母顺序排序。
+ 可以通过以下方式找到 C++ 代码片段的完整列表：转到“代码片段管理器”  （位于“工具”  菜单中），并将“语言”  设置为“Visual C++”  。 在下面的窗口中，展开“Visual C++”  。 将显示所有 C++ 代码片段的名称，按字母顺序排序。
 
  大多数代码片段的名称都具有自我说明性，但某些名称可能令人困惑。
 
@@ -111,7 +111,7 @@ private:
 ## <a name="for-vs-foreach-vs-forr-vs-rfor"></a>for、foreach、forr 和 rfor 代码片段比较
  有四个不同的 for 代码片段，可提供不同种类的 for 循环。
 
- **for** 代码片段具有 `for` 循环，此循环中的条件以对象的长度 (`size_t`) 为依据：
+ **For**代码段提供了一个 `for` 循环，其中的条件基于对象) 中 (的长度 `size_t` ：
 
 ```cpp
 for (size_t i = 0; i < length; i++)
@@ -129,7 +129,7 @@ for each (object var in collection_to_loop)
 }
 ```
 
- **forr** 代码片段具有反向 `for` 循环，此循环中的条件以对象的长度（整数）为依据：
+ **Forr**代码片段提供一个反向 `for` 循环，其中的条件基于对象整数)  (的长度：
 
 ```cpp
 for (int i = length - 1; i >= 0; i--)
@@ -138,7 +138,7 @@ for (int i = length - 1; i >= 0; i--)
 }
 ```
 
- **rfor** 代码片段具有[基于范围](https://msdn.microsoft.com/library/5750ba1d-ba48-4236-a923-e32de8345c2d)的 for 循环（链接）：
+ **Rfor**代码段提供[基于范围](https://msdn.microsoft.com/library/5750ba1d-ba48-4236-a923-e32de8345c2d)的 for 循环 (链接) ：
 
 ```cpp
 for (auto& i : v)
