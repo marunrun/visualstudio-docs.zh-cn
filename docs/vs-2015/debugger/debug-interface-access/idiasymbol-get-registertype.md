@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::get_registerType |Microsoft Docs
+title: IDiaSymbol：： get_registerType |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -12,16 +12,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: ec0124a6085e86c1656237a23ab4733c39c35646
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68182990"
 ---
-# <a name="idiasymbolgetregistertype"></a>IDiaSymbol::get_registerType
+# <a name="idiasymbolget_registertype"></a>IDiaSymbol::get_registerType
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-检索注册类型。  
+检索寄存器类型。  
   
 ## <a name="syntax"></a>语法  
   
@@ -32,10 +32,10 @@ HRESULT get_registerType(
   
 #### <a name="parameters"></a>参数  
  `pRetVal`  
- [out]一个指向`DWORD`保存注册类型。  
+ 弄指向 `DWORD` 保存注册类型的的指针。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回`S_FALSE`或错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回 `S_FALSE` 错误代码。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

@@ -1,5 +1,5 @@
 ---
-title: 传统语言服务中的大纲和隐藏文本 |微软文档
+title: 旧版语言服务中的大纲显示和隐藏文本 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,14 +11,14 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: b1f05d42de0201a7556046d19baf55830fa62c22
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80706829"
 ---
 # <a name="outlining-and-hidden-text-in-a-legacy-language-service"></a>旧版语言服务中的大纲显示和隐藏文本
-大纲可以将一系列文本行折叠成一行。 例如，在C++所有方法都可以折叠到一行，仅显示方法签名。 隐藏文本是可以显示或隐藏的文本行的顺序。
+大纲显示可将一系列文本行折叠成一行。 例如，在 c + + 中，所有方法都可以折叠为单个行，只显示方法签名。 隐藏文本是可以显示或隐藏的文本行的序列。
 
 ## <a name="in-this-section"></a>本节内容
 - [如何：支持旧版语言服务中的大纲显示](../../extensibility/internals/how-to-support-outlining-in-a-legacy-language-service.md)
@@ -27,8 +27,8 @@ ms.locfileid: "80706829"
 
 - [如何：提供旧版语言服务中的隐藏文本](../../extensibility/internals/how-to-provide-hidden-text-support-in-a-legacy-language-service.md)
 
- 解释隐藏文本区域的用途，并提供有关如何实现隐藏文本区域的说明。
+ 说明隐藏文本区域的用途，并提供有关如何实现隐藏文本区域的说明。
 
 - [如何：提供旧版语言服务中扩展的大纲显示支持](../../extensibility/internals/how-to-provide-expanded-outlining-support-in-a-legacy-language-service.md)
 
- 解释将概述对语言的支持扩展到支持"*折叠到定义"命令的*两个选项。
+ 介绍用于扩展对语言的大纲支持的两个选项，但不支持 " *折叠到定义* " 命令。
