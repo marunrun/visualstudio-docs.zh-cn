@@ -9,16 +9,16 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 153eda065b9a6e845a39c35aaae34bbe1745f7a8
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85904998"
 ---
 # <a name="walkthrough-display-light-bulb-suggestions"></a>演练：显示灯泡建议
 轻型电灯泡是 Visual Studio 编辑器中的图标，可展开以显示一组操作，例如对内置代码分析器或代码重构标识的问题的修补程序。
 
- 在 Visual c # 和 Visual Basic 编辑器中，还可以使用 .NET Compiler Platform （"Roslyn"）来编写和打包自己的代码分析器，其中包含自动电灯泡显示的操作。 有关详情，请参阅：
+ 在 Visual c # 和 Visual Basic 编辑器中，还可以使用 .NET Compiler Platform ( "Roslyn" ) 来编写和打包自己的代码分析器，其中包含自动电灯泡显示的操作。 有关详细信息，请参阅：
 
 - [如何：编写 c # 诊断和代码修补程序](https://github.com/dotnet/roslyn/wiki/How-To-Write-a-C%23-Analyzer-and-Code-Fix)
 
@@ -34,24 +34,24 @@ ms.locfileid: "85904998"
 
   ![灯泡预览](../extensibility/media/lightbulbpreview.png "LightBulbPreview")
 
-  可以使用轻型电灯泡来提供自己的建议操作。 例如，可以提供将左大括号移动到新行或将其移动到上一行末尾的操作。 下面的演练演示如何创建出现在当前单词上的灯泡，并提供两个建议的操作： "**转换为大写**" 和 "**转换为小写**"。
+  可以使用轻型电灯泡来提供自己的建议操作。 例如，可以提供将左大括号移动到新行或将其移动到上一行末尾的操作。 下面的演练演示如何创建出现在当前单词上的灯泡，并提供两个建议的操作： " **转换为大写** " 和 " **转换为小写**"。
 
-## <a name="prerequisites"></a>必备条件
- 从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅[安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
+## <a name="prerequisites"></a>先决条件
+ 从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
 
-## <a name="create-a-managed-extensibility-framework-mef-project"></a>创建 Managed Extensibility Framework （MEF）项目
+## <a name="create-a-managed-extensibility-framework-mef-project"></a>创建 Managed Extensibility Framework (MEF) 项目
 
-1. 创建 c # VSIX 项目。 （在 "**新建项目**" 对话框中，依次选择 " **Visual c #/扩展性**"、" **VSIX 项目**"。）命名解决方案 `LightBulbTest` 。
+1. 创建 c # VSIX 项目。  (在 " **新建项目** " 对话框中，依次选择 " **Visual c #/扩展性**"、" **VSIX 项目**"。 ) 将解决方案命名为 `LightBulbTest` 。
 
-2. 将**编辑器分类器**项模板添加到项目。 有关详细信息，请参阅[使用编辑器项模板创建扩展](../extensibility/creating-an-extension-with-an-editor-item-template.md)。
+2. 将 **编辑器分类器** 项模板添加到项目。 有关详细信息，请参阅 [使用编辑器项模板创建扩展](../extensibility/creating-an-extension-with-an-editor-item-template.md)。
 
 3. 删除现有的类文件。
 
-4. 将以下引用添加到项目，并将 "**复制本地**" 设置为 `False` ：
+4. 将以下引用添加到项目，并将 " **复制本地** " 设置为 `False` ：
 
      *Microsoft.VisualStudio.Language.Intellisense*
 
-5. 添加新的类文件并将其命名为**LightBulbTest**。
+5. 添加新的类文件并将其命名为 **LightBulbTest**。
 
 6. 添加以下 using 指令：
 
@@ -72,7 +72,7 @@ ms.locfileid: "85904998"
 
 ## <a name="implement-the-light-bulb-source-provider"></a>实现灯泡源提供程序
 
-1. 在*LightBulbTest.cs*类文件中，删除 LightBulbTest 类。 添加一个名为**TestSuggestedActionsSourceProvider**的类，该类实现 <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSourceProvider> 。 使用 "**测试建议的操作**" 和 "文本" 的名称导出它 <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> 。
+1. 在 *LightBulbTest.cs* 类文件中，删除 LightBulbTest 类。 添加一个名为 **TestSuggestedActionsSourceProvider** 的类，该类实现 <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSourceProvider> 。 使用 " **测试建议的操作** " 和 "文本" 的名称导出它 <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> 。
 
     ```csharp
     [Export(typeof(ISuggestedActionsSourceProvider))]
@@ -102,9 +102,9 @@ ms.locfileid: "85904998"
     ```
 
 ## <a name="implement-the-isuggestedactionsource"></a>实现 ISuggestedActionSource
- 建议的操作源负责收集一组建议的操作，并将其添加到正确的上下文中。 在这种情况下，上下文是当前词，建议的操作是**UpperCaseSuggestedAction**和**LowerCaseSuggestedAction**，如下一节中所述。
+ 建议的操作源负责收集一组建议的操作，并将其添加到正确的上下文中。 在这种情况下，上下文是当前词，建议的操作是 **UpperCaseSuggestedAction** 和 **LowerCaseSuggestedAction**，如下一节中所述。
 
-1. 添加一个实现的**TestSuggestedActionsSource**类 <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSource> 。
+1. 添加一个实现的 **TestSuggestedActionsSource** 类 <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSource> 。
 
     ```csharp
     internal class TestSuggestedActionsSource : ISuggestedActionsSource
@@ -177,7 +177,7 @@ ms.locfileid: "85904998"
 6. 实现 <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSource.GetSuggestedActions%2A> 方法，该方法返回 <xref:Microsoft.VisualStudio.Language.Intellisense.SuggestedActionSet> 包含不同对象的对象的数组 <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedAction> 。 此方法在展开灯泡时进行调用。
 
     > [!WARNING]
-    > 你应确保和的实现 `HasSuggestedActionsAsync()` `GetSuggestedActions()` 一致; 即，如果 `HasSuggestedActionsAsync()` 返回 `true` ，则 `GetSuggestedActions()` 应具有要显示的一些操作。 在许多情况下， `HasSuggestedActionsAsync()` 只会在之前调用 `GetSuggestedActions()` ，但这并不总是如此。 例如，如果用户通过按（**CTRL +** .）调用灯泡操作， `GetSuggestedActions()` 则只调用。
+    > 你应确保和的实现 `HasSuggestedActionsAsync()` `GetSuggestedActions()` 一致; 即，如果 `HasSuggestedActionsAsync()` 返回 `true` ，则 `GetSuggestedActions()` 应具有要显示的一些操作。 在许多情况下， `HasSuggestedActionsAsync()` 只会在之前调用 `GetSuggestedActions()` ，但这并不总是如此。 例如，如果用户通过按 **CTRL +** (调用灯泡操作，则只 `GetSuggestedActions()` 会调用 ) 。
 
     ```csharp
     public IEnumerable<SuggestedActionSet> GetSuggestedActions(ISuggestedActionCategorySet requestedActionCategories, SnapshotSpan range, CancellationToken cancellationToken)
@@ -217,7 +217,7 @@ ms.locfileid: "85904998"
 
 ## <a name="implement-light-bulb-actions"></a>实现灯泡操作
 
-1. 在项目中，添加对*Microsoft.VisualStudio.Imaging.Interop.14.0.DesignTime.dll*的引用并将 "**复制本地**" 设置为 `False` 。
+1. 在项目中，添加对 *Microsoft.VisualStudio.Imaging.Interop.14.0.DesignTime.dll* 的引用并将 " **复制本地** " 设置为 `False` 。
 
 2. 创建两个类，第一个名为 `UpperCaseSuggestedAction` ，第二个名为 `LowerCaseSuggestedAction`。 两个类都实现 <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedAction>。
 
@@ -326,7 +326,7 @@ ms.locfileid: "85904998"
     ```
 
     > [!WARNING]
-    > 灯泡操作**调用**方法不应显示 UI。 如果你的操作确实会引入新的 UI （例如，预览或选择对话框），请不要直接从**invoke**方法中显示 ui，而是计划在从**invoke**返回后显示 ui。
+    > 灯泡操作 **调用** 方法不应显示 UI。 如果你的操作会引入新的 UI (例如，) 的预览或选择对话框，请不要直接从 **invoke** 方法中显示 ui，而是计划在从 **invoke**返回后显示 ui。
 
 10. 若要完成实现，请添加 `Dispose()` 和 `TryGetTelemetryId()` 方法。
 

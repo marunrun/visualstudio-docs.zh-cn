@@ -14,13 +14,13 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 0926c7805ac2deee5851627a764acfdea2f65cdb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68152049"
 ---
-# <a name="idialinenumbergetlinenumber"></a>IDiaLineNumber::get_lineNumber
+# <a name="idialinenumberget_linenumber"></a>IDiaLineNumber::get_lineNumber
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
 检索源文件中的行号。  
@@ -35,10 +35,10 @@ HRESULT get_lineNumber ( 
   
 #### <a name="parameters"></a>参数  
  `pRetVal`  
- [out]在源文件中返回的行号。  
+ 弄返回源文件中的行号。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回 `S_OK`。 返回`S_FALSE`如果此属性不受支持。 否则，返回错误代码。  
+ 如果成功，则返回 `S_OK`。 `S_FALSE`如果此属性不受支持，则返回。 否则，返回错误代码。  
   
 ## <a name="example"></a>示例  
   
@@ -48,5 +48,5 @@ DWORD linenum;
 pLine->get_lineNumber( &linenum );  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)

@@ -11,25 +11,25 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 65a0bc2c53d5d6e970b4aaa956170bc06c24e7c9
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85904836"
 ---
 # <a name="walkthrough-display-matching-braces"></a>演练：显示匹配的大括号
-通过定义要匹配的大括号来实现基于语言的功能（例如，大括号匹配），并在插入符号位于一个大括号中时向匹配大括号添加文本标记标记。 可在语言上下文中定义大括号，定义自己的文件扩展名和内容类型，并将标记应用到该类型，或者将标记应用于现有内容类型（如 "文本"）。 下面的演练演示如何将大括号匹配标记应用于 "text" 内容类型。
+通过定义要匹配的大括号来实现基于语言的功能（例如，大括号匹配），并在插入符号位于一个大括号中时向匹配大括号添加文本标记标记。 你可以在语言上下文中定义大括号，定义自己的文件扩展名和内容类型，并将标记应用到该类型，或者将标记应用于现有内容类型 (如 "text" ) 。 下面的演练演示如何将大括号匹配标记应用于 "text" 内容类型。
 
-## <a name="prerequisites"></a>必备条件
- 从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅[安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
+## <a name="prerequisites"></a>先决条件
+ 从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
 
-## <a name="create-a-managed-extensibility-framework-mef-project"></a>创建 Managed Extensibility Framework （MEF）项目
+## <a name="create-a-managed-extensibility-framework-mef-project"></a>创建 Managed Extensibility Framework (MEF) 项目
 
 #### <a name="to-create-a-mef-project"></a>创建 MEF 项目
 
 1. 创建编辑器分类器项目。 将解决方案命名为 `BraceMatchingTest`。
 
-2. 将编辑器分类器项模板添加到项目。 有关详细信息，请参阅[使用编辑器项模板创建扩展](../extensibility/creating-an-extension-with-an-editor-item-template.md)。
+2. 将编辑器分类器项模板添加到项目。 有关详细信息，请参阅 [使用编辑器项模板创建扩展](../extensibility/creating-an-extension-with-an-editor-item-template.md)。
 
 3. 删除现有的类文件。
 

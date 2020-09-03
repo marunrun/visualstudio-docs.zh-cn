@@ -22,10 +22,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 0c9dcc0d09887cacca7e6cdaa2e4f2b719c6451c
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "67826249"
 ---
 # <a name="xsd-task"></a>XSD 任务
@@ -36,27 +36,27 @@ ms.locfileid: "67826249"
 ## <a name="parameters"></a>参数  
  下表介绍了 **XSD** 任务的参数。  
   
-- **AdditionalOptions**  
+- **其他**  
   
-     可选 **String** 参数。  
+     可选的 **字符串** 参数。  
   
-     在命令行上指定的选项列表。 例如，“ */option1 /option2 /option#* ”。 使用此参数可指定未由任何其他 **XSD** 任务参数表示的选项。  
+     在命令行上指定的选项列表。 例如，/option1 /option2 /option#。** 使用此参数可指定未由任何其他 **XSD** 任务参数表示的选项。  
   
 - **GenerateFromSchema**  
   
-  可选 **String** 参数。  
+  可选的 **字符串** 参数。  
 
   指定从指定架构生成的类型。  
 
   指定以下一个值，其中每个值对应于一个 XSD 选项。  
 
-  - **classes** -  **/classes**  
+  - **类**  - **/classes**  
 
-  - **dataset** -  **/dataset**  
+  - **数据集**  - **/dataset**  
   
 - **语言**  
   
-     可选 **String** 参数。  
+     可选的 **字符串** 参数。  
   
      指定要用于生成的代码的编程语言。  
   
@@ -64,11 +64,11 @@ ms.locfileid: "67826249"
   
 - **Namespace**  
   
-     可选 **String** 参数。  
+     可选的 **字符串** 参数。  
   
      为生成的类型指定运行时命名空间。  
   
-- **Sources**  
+- **源**  
   
      必选 `ITaskItem[]` 参数。  
   
@@ -76,15 +76,15 @@ ms.locfileid: "67826249"
   
 - **SuppressStartupBanner**  
   
-     可选 **Boolean** 参数。  
+     可选的 **布尔** 参数。  
   
      如果为 `true`，则在任务开始时阻止显示版权和版本号消息。  
   
 - **TrackerLogDirectory**  
   
-     可选 **String** 参数。  
+     可选的 **字符串** 参数。  
   
      指定跟踪器日志目录。  
   
 ## <a name="see-also"></a>另请参阅  
- [任务参考](../msbuild/msbuild-task-reference.md)
+ [任务引用](../msbuild/msbuild-task-reference.md)

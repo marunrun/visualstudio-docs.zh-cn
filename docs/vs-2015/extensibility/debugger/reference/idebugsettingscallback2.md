@@ -1,5 +1,5 @@
 ---
-title: IDebugSettingsCallback2 | Microsoft Docs
+title: IDebugSettingsCallback2 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,16 +11,16 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: c3e962c00d6c9230cab765ed56e7607cbfd91765
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68153147"
 ---
 # <a name="idebugsettingscallback2"></a>IDebugSettingsCallback2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-启用调试引擎读取指标设置远程。  
+启用调试引擎以远程读取指标设置。  
   
 ## <a name="syntax"></a>语法  
   
@@ -28,33 +28,33 @@ ms.locfileid: "68153147"
 IDebugSettingsCallback2D : IUnknown  
 ```  
   
-## <a name="notes-for-implementers"></a>实施者的说明  
- 此接口是由会话调试管理器的事件回调实现和使用的调试引擎。 它可能还用于本地而不是 Dbgmetric [d].lib。  
+## <a name="notes-for-implementers"></a>实施者注意事项  
+ 此接口由会话调试管理器的事件回调实现，由调试引擎使用。 它还可以在本地使用，而不是在 Dbgmetric [d] .lib 中使用。  
   
 ## <a name="methods"></a>方法  
- 下表显示的方法`IDebugSettingsCallback2`。  
+ 下表显示的方法 `IDebugSettingsCallback2` 。  
   
-|方法|描述|  
+|方法|说明|  
 |------------|-----------------|  
-|[EnumEEs](../../../extensibility/debugger/reference/idebugsettingscallback2-enumees.md)|枚举给定语言和供应商标识符可用表达式计算器。|  
+|[EnumEEs](../../../extensibility/debugger/reference/idebugsettingscallback2-enumees.md)|根据语言和供应商标识符枚举可用的表达式计算器。|  
 |[GetEELocalObject](../../../extensibility/debugger/reference/idebugsettingscallback2-geteelocalobject.md)|检索给定度量值的表达式计算器本地对象。|  
-|[GetEEMetricDword](../../../extensibility/debugger/reference/idebugsettingscallback2-geteemetricdword.md)|检索一个值，对应于指定的表达式计算器指标。|  
-|[GetEEMetricFile](../../../extensibility/debugger/reference/idebugsettingscallback2-geteemetricfile.md)|检索给定的名称或该度量值的表达式计算器指标文件。|  
-|[GetEEMetricGuid](../../../extensibility/debugger/reference/idebugsettingscallback2-geteemetricguid.md)|检索在给定其名称的表达式计算器指标的唯一标识符。|  
-|[GetEEMetricString](../../../extensibility/debugger/reference/idebugsettingscallback2-geteemetricstring.md)|检索在给定名称的表达式计算器指标的值字符串。|  
-|[GetMetricDword](../../../extensibility/debugger/reference/idebugsettingscallback2-getmetricdword.md)|检索在给定名称的指标的值。|  
-|[GetMetricGuid](../../../extensibility/debugger/reference/idebugsettingscallback2-getmetricguid.md)|检索在给定名称的一个指标的唯一标识符。|  
-|[GetMetricString](../../../extensibility/debugger/reference/idebugsettingscallback2-getmetricstring.md)|检索在给定名称的度量值的值字符串。|  
+|[GetEEMetricDword](../../../extensibility/debugger/reference/idebugsettingscallback2-geteemetricdword.md)|检索一个值，该值对应于表达式计算器的指定指标。|  
+|[GetEEMetricFile](../../../extensibility/debugger/reference/idebugsettingscallback2-geteemetricfile.md)|检索给定名称或度量值的表达式计算器度量值文件。|  
+|[GetEEMetricGuid](../../../extensibility/debugger/reference/idebugsettingscallback2-geteemetricguid.md)|根据给定的名称检索表达式计算器度量值的唯一标识符。|  
+|[GetEEMetricString](../../../extensibility/debugger/reference/idebugsettingscallback2-geteemetricstring.md)|根据给定的名称检索表达式计算器指标的值字符串。|  
+|[GetMetricDword](../../../extensibility/debugger/reference/idebugsettingscallback2-getmetricdword.md)|根据给定的名称检索度量值。|  
+|[GetMetricGuid](../../../extensibility/debugger/reference/idebugsettingscallback2-getmetricguid.md)|根据给定的名称检索指标的唯一标识符。|  
+|[GetMetricString](../../../extensibility/debugger/reference/idebugsettingscallback2-getmetricstring.md)|根据给定的名称检索指标的值字符串。|  
   
 ## <a name="requirements"></a>要求  
- 标头：Msdbg.h  
+ 标头： Msdbg  
   
- 命名空间:Microsoft.VisualStudio.Debugger.Interop  
+ 命名空间： VisualStudio  
   
- 程序集：Microsoft.VisualStudio.Debugger.Interop.dll  
+ 程序集： Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="example"></a>示例  
- 下面的示例演示采用的函数**IDebugSettingsCallback2**对象作为参数。  
+ 下面的示例演示了一个将 **IDebugSettingsCallback2** 对象作为参数的函数。  
   
 ```cpp#  
 HRESULT GetDebugSettingsCallback (IDebugSettingsCallback2 **ppCallback)  

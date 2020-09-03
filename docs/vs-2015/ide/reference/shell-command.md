@@ -20,10 +20,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: ad49aadf6be56fb330b883050e6a6ff893cf054a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72663546"
 ---
 # <a name="shell-command"></a>shell 命令
@@ -37,17 +37,17 @@ ms.locfileid: "72663546"
 Tools.Shell [/command] [/output] [/dir:folder] path [args]
 ```
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
  `path`（必需）。 要执行的文件或要打开的文档的路径和文件名。 如果在环境变量 PATH 的某个目录中没有指定的文件，则必须使用完整路径。
 
  `args`（可选）。 要传递给被调用的程序的任何参数。
 
 ## <a name="switches"></a>开关
- /commandwindow [或]/command [or]/c [or]/cmd Optional。 指定在“命令”窗口中显示可执行文件的输出  。
+ /commandwindow [或]/command [or]/c [or]/cmd Optional。 指定在“命令”窗口中显示可执行文件的输出****。
 
- /dir： `folder` [或]/d： `folder` 可选。 指定程序运行时要设置的工作目录。
+ /dir： `folder` [or]/d： `folder` Optional。 指定程序运行时要设置的工作目录。
 
- /outputwindow [或]/output [或]/out [or]/o Optional。 指定在“输出”窗口中显示可执行文件的输出  。
+ /outputwindow [或]/output [或]/out [or]/o Optional。 指定在“输出”窗口中显示可执行文件的输出****。
 
 ## <a name="remarks"></a>备注
  必须在 `Tools.Shell` 之后立即指定 /dir /o /c 开关。 可执行文件的名称之后指定的任何内容都会作为命令行参数传递给它。
@@ -71,7 +71,7 @@ Tools.Shell """C:\Program Files\SomeFile.exe"""
 > 如果未将路径字符串引在文本引号 (""") 中，Windows 将只使用第一个空格前的字符串部分。 例如，如果上面的路径字符串引用不正确，则 Windows 将查找 C:\ 根目录中的名为“Program”的文件。 如果 C:\Program.exe 可执行文件实际可用，则即使是由非法篡改安装的，Windows 也会尝试执行该程序，而不执行所需的“c:\Program Files\SomeFile.exe”程序。
 
 ## <a name="example"></a>示例
- 以下命令使用 xcopy.exe 将文件 `MyText.txt` 复制到 `Text` 文件夹。 xcopy.exe 的输出同时显示在“命令”窗口和“输出”窗口中   。
+ 以下命令使用 xcopy.exe 将文件 `MyText.txt` 复制到 `Text` 文件夹。 xcopy.exe 的输出同时显示在“命令”窗口和“输出”窗口中********。
 
 ```
 >Tools.Shell /o /c xcopy.exe c:\MyText.txt c:\Text\MyText.txt

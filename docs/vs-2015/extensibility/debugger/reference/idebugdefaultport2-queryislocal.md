@@ -1,5 +1,5 @@
 ---
-title: IDebugDefaultPort2::QueryIsLocal |Microsoft Docs
+title: IDebugDefaultPort2：： QueryIsLocal |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,10 +13,10 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 77c521a364b33c1bd6fdde544d27237ead12ca46
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68196260"
 ---
 # <a name="idebugdefaultport2queryislocal"></a>IDebugDefaultPort2::QueryIsLocal
@@ -37,7 +37,7 @@ int QueryIsLocal();
 ```  
   
 ## <a name="return-value"></a>返回值  
- 返回`S_OK`此端口是在本地 （在调用方所在的计算机） 或`S_FALSE`如果端口是在另一台计算机上。  
+ `S_OK`如果此端口在与调用) 方相同的计算机上 (本地，则返回; `S_FALSE` 如果端口在另一台计算机上，则返回。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugDefaultPort2](../../../extensibility/debugger/reference/idebugdefaultport2.md)
