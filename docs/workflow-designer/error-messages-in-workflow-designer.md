@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 72592d21fdaba1ef47a15a113c820dffe0ba71eb
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75597043"
 ---
 # <a name="error-messages-in-workflow-designer"></a>工作流设计器中的错误消息
@@ -35,9 +35,9 @@ ms.locfileid: "75597043"
 
 4. XAML 文件中存在错误，导致工作流无法加载。
 
-无效的表达式和未满足的验证约束不会导致工作流无法生成。 生成工作流成功，但在运行时将引发 <xref:System.Activities.InvalidWorkflowException>。 如果 XAML 文件中存在错误，生成将失败。
+无效的表达式和未满足的验证约束不会导致工作流无法生成。 生成工作流会成功，但 <xref:System.Activities.InvalidWorkflowException> 会在运行时引发。 如果 XAML 文件中存在错误，生成将失败。
 
-在 Visual Studio 中，加载工作流时，它的错误将显示在**错误列表**中。 若要导航到作为错误源的活动，请在**错误列表**中双击错误。
+在 Visual Studio 中，加载工作流时，它的错误将显示在 **错误列表**中。 若要导航到作为错误源的活动，请在 **错误列表**中双击错误。
 
 ### <a name="expression-errors"></a>表达式错误
  无效表达式用红色圆圈表示，并且该表达式旁有一个白色感叹号。 悬停在此图标上将显示描述错误来源的工具提示。 在 Visual Studio 中，单击表达式以查看显示错误源的行。 悬停在此加下划线的文本上将显示描述错误来源的工具提示。

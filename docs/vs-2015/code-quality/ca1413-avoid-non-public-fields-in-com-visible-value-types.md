@@ -16,24 +16,24 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 1054330b26cf145ebcbc943a56dc699fe793999f
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85548455"
 ---
 # <a name="ca1413-avoid-non-public-fields-in-com-visible-value-types"></a>CA1413:避免在 COM 可见值类型中使用非公共字段
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|Item|值|
+|项|值|
 |-|-|
 |TypeName|AvoidNonpublicFieldsInComVisibleValueTypes|
 |CheckId|CA1413|
-|Category|Microsoft. 互操作性|
+|类别|Microsoft. 互操作性|
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
- 特别标记为对组件对象模型（COM）可见的值类型声明非公共实例字段。
+ 一个值类型，明确标记为对组件对象模型可见 (COM) 声明非公共实例字段。
 
 ## <a name="rule-description"></a>规则描述
  对 COM 可见的值类型的非公共实例字段对 COM 客户端可见。 请查看字段的内容，以了解不应公开的信息，或者可能会产生意外的设计或安全影响的信息。
@@ -58,4 +58,4 @@ ms.locfileid: "85548455"
  [CA1017:用 ComVisibleAttribute 标记程序集](../code-quality/ca1017-mark-assemblies-with-comvisibleattribute.md)
 
 ## <a name="see-also"></a>另请参阅
- [与非托管代码](https://msdn.microsoft.com/library/ccb68ce7-b0e9-4ffb-839d-03b1cd2c1258)的互操作性，[为互操作提供 .net 类型](https://msdn.microsoft.com/library/4b8afb52-fb8d-4e65-b47c-fd82956a3cdd)
+ [与非托管代码](https://msdn.microsoft.com/library/ccb68ce7-b0e9-4ffb-839d-03b1cd2c1258)的互操作性， [为互操作提供 .net 类型](https://msdn.microsoft.com/library/4b8afb52-fb8d-4e65-b47c-fd82956a3cdd)
