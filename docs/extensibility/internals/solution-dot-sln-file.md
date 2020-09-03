@@ -160,7 +160,7 @@ EndGlobal
 
 只有 .sln 文件包含和节中的条目 `preSolution` `postSolution` 。 .Suo 文件中没有类似的部分，因为解决方案需要此信息才能正确加载。 .Suo 文件包含特定于用户的选项，如专用说明，这些选项不应在源代码管理下共享或放置。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps>
 - [解决方案用户选项 (.Suo) 文件](../../extensibility/internals/solution-user-options-dot-suo-file.md)

@@ -18,10 +18,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: dcc993ab7c127b16fda206047a1a985d1e003123
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72663177"
 ---
 # <a name="viewing-types-and-relationships-class-designer"></a>查看类型和关系（类设计器）
@@ -33,11 +33,11 @@ ms.locfileid: "72663177"
 > 如果项目包含类图，并且项目引用了另一个项目中的类型，则在为该类型生成项目前，类图不会显示该引用的类型。 同样，在为该实体重新生成项目前，该类图不会显示对外部实体代码所做的更改。 若要了解引用程序集和只读文件中的类型，请参阅[显示只读信息（类设计器）](https://msdn.microsoft.com/33e2d3a9-1668-4d10-ae56-fa09b3156e0a)。
 
 ## <a name="in-this-section"></a>本节内容
- [如何：查看现有类型（类设计器）](../ide/how-to-view-existing-types-class-designer.md)
+ [如何：查看现有类型 (类设计器) ](../ide/how-to-view-existing-types-class-designer.md)
 
  介绍如何使用类设计器可视化预存在的代码。
 
- [如何：查看类型之间的继承（类设计器）](../ide/how-to-view-inheritance-between-types-class-designer.md)
+ [如何：查看类型之间的继承 (类设计器) ](../ide/how-to-view-inheritance-between-types-class-designer.md)
 
  介绍如何查看类型之间的继承关系。
 

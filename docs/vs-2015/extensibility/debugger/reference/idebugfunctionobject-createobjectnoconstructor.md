@@ -1,5 +1,5 @@
 ---
-title: IDebugFunctionObject::CreateObjectNoConstructor |Microsoft Docs
+title: IDebugFunctionObject：： CreateObjectNoConstructor |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 0ea00035eb220ccd08590ceaea6db98944f4657a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68179463"
 ---
 # <a name="idebugfunctionobjectcreateobjectnoconstructor"></a>IDebugFunctionObject::CreateObjectNoConstructor
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-使用没有构造函数创建的对象。  
+创建不包含构造函数的对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,22 +40,22 @@ int CreateObjectNoConstructor(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>参数  
  `pClassObject`  
- [in][IDebugField](../../../extensibility/debugger/reference/idebugfield.md)对象，表示要创建的对象的类型。  
+ 中一个 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) 对象，表示要创建的对象的类型。  
   
  `ppObject`  
- [out]返回[IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)表示新创建的对象。  
+ 弄返回表示新创建的对象的 [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) 。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回 S_OK;否则，返回错误代码。  
+ 如果成功，将返回 S_OK;否则，将返回错误代码。  
   
 ## <a name="remarks"></a>备注  
- 调用此方法以创建一个对象，表示结构或复杂类型 （即不需要构造函数） 函数的参数由表示的实例[IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md)接口。  
+ 调用此方法可创建一个对象，该对象表示不需要构造函数的构造函数) 的结构或复杂类型 (，该构造函数由 [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) 接口表示。  
   
- 如果对象参数需要一个构造函数，调用[CreateObject](../../../extensibility/debugger/reference/idebugfunctionobject-createobject.md)方法。  
+ 如果对象参数需要构造函数，请调用 [CreateObject](../../../extensibility/debugger/reference/idebugfunctionobject-createobject.md) 方法。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)   
  [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md)   
  [CreateObject](../../../extensibility/debugger/reference/idebugfunctionobject-createobject.md)

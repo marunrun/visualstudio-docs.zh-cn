@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 6b35fe7f1b55dde25ec896f230f66cef00d24eed
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72659054"
 ---
 # <a name="if-activity-designer"></a>If 活动设计器
@@ -24,11 +24,11 @@ ms.locfileid: "72659054"
 ## <a name="if-properties-in-the-workflow-designer"></a>工作流设计器中的 If 属性
  下表列出最有用的 <xref:System.Activities.Statements.If> 活动属性并说明如何在设计器中使用它们。
 
-|属性名|必需|用法|
+|属性名称|必选|使用情况|
 |-------------------|--------------|-----------|
-|<xref:System.Activities.Statements.If.Condition%2A>|True|用于确定要执行哪个子活动的条件。 若要设置 <xref:System.Activities.Statements.If.Condition%2A>，请在 " **If** " 活动设计器或属性网格中的 "**条件**" 框中键入 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 表达式。|
-|<xref:System.Activities.Statements.If.Else%2A>|False|@No__t_0 为**false**时要执行的活动。 若要添加 <xref:System.Activities.Statements.If.Else%2A> 分支执行的活动，请将活动从 "**工具箱**" 拖放到 " **If** " 活动设计器上带提示文本 "将活动放置到此处" 的 " **Else** " 框中。|
-|<xref:System.Activities.Statements.If.Then%2A>|False|@No__t_0 为**true**时要执行的活动。 若要添加由 <xref:System.Activities.Statements.If.Then%2A> 分支执行的活动，请将活动从 "**工具箱**" 拖放到 " **If** " 活动设计器上的 "Then" 框，并提示文本 "**将**活动放在此处"。|
+|<xref:System.Activities.Statements.If.Condition%2A>|正确|用于确定要执行哪个子活动的条件。 若要设置 <xref:System.Activities.Statements.If.Condition%2A> ，请 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 在 " **If** " 活动设计器或属性网格中的 "**条件**" 框中键入表达式。|
+|<xref:System.Activities.Statements.If.Else%2A>|错误|为 false 时要执行的 <xref:System.Activities.Statements.If.Condition%2A> 活动**false**。 若要添加由分支执行的活动 <xref:System.Activities.Statements.If.Else%2A> ，请将活动从 "**工具箱**" 拖放到 " **If** " 活动设计器上带提示文本 "在此处放置活动" 的 " **Else** " 框中。|
+|<xref:System.Activities.Statements.If.Then%2A>|错误|如果为 true，则为要执行的活动 <xref:System.Activities.Statements.If.Condition%2A> 。 **true** 若要添加由分支执行的活动 <xref:System.Activities.Statements.If.Then%2A> ，请将活动从 "**工具箱**" 拖放到 " **If** " 活动设计器上带有提示文本 "将活动放置到此处" 的 " **Then** " 框中。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [序列](../workflow-designer/sequence-activity-designer.md)[并行](../workflow-designer/parallel-activity-designer.md)[控制流](../workflow-designer/control-flow-activity-designers.md)

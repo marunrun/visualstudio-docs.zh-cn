@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 06a82fbb52ccdf0f9fb9fda50a74f2cfb30e7648
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68190009"
 ---
 # <a name="idiaenumsectioncontribsitem"></a>IDiaEnumSectionContribs::Item
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-通过索引来检索部分发布内容。  
+通过索引检索节基值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,14 +36,14 @@ HRESULT Item ( 
   
 #### <a name="parameters"></a>参数  
  索引  
- [in]索引[IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)要检索对象。 索引是 0 到范围内`count`-1，其中`count`返回的[idiaenumsectioncontribs:: Get_count](../../debugger/debug-interface-access/idiaenumsectioncontribs-get-count.md)方法。  
+ 中要检索的 [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md) 对象的索引。 索引介于0到 `count` -1 之间，其中 `count` 由 [IDiaEnumSectionContribs：： get_Count](../../debugger/debug-interface-access/idiaenumsectioncontribs-get-count.md) 方法返回。  
   
  section  
- [out]返回[IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)对象，表示所需的部分中所占比例。  
+ 弄返回一个 [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md) 对象，该对象表示所需的节内容。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
-## <a name="see-also"></a>请参阅  
- [IDiaEnumSectionContribs::get_Count](../../debugger/debug-interface-access/idiaenumsectioncontribs-get-count.md)   
+## <a name="see-also"></a>另请参阅  
+ [IDiaEnumSectionContribs：： get_Count](../../debugger/debug-interface-access/idiaenumsectioncontribs-get-count.md)   
  [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

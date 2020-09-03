@@ -10,35 +10,35 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: e800fe651d32435351b2338b4da2f9c55158b3a0
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72663998"
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>演练：我的第一个 WPF 桌面应用程序
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-name = "简介" > </a> 此演练提供 Windows Presentation Foundation （WPF）开发的简介。 你将创建一个包括大多数 WPF 桌面应用程序中的常见元素的基本应用程序：XAML 标记、代码隐藏、应用程序定义、控件、布局、数据绑定和样式。
+name = "简介" ></a> 本演练介绍了 Windows Presentation Foundation (WPF) 开发。 你将创建一个包括大多数 WPF 桌面应用程序中的常见元素的基本应用程序：XAML 标记、代码隐藏、应用程序定义、控件、布局、数据绑定和样式。
 
-## <a name="Create_The_Application_Code_Files"></a> 创建应用程序项目
+## <a name="creating-the-application-project"></a><a name="Create_The_Application_Code_Files"></a>创建应用程序项目
  在本部分中，你将创建应用程序基础结构，其中包括项目和主窗口或窗体。
 
-#### <a name="to-create-the-project"></a>要创建项目
+#### <a name="to-create-the-project"></a>创建项目
 
-1. 在菜单栏上，依次选择 **“文件”** 、 **“新建”** 、 **“项目”** 。
+1. 在菜单栏上，依次选择“文件” 、“新建” 、“项目” 。
 
-2. 在“新建项目” 对话框框中，展开“Visual C#” 或“Visual Basic” 节点，再选择“Windows” 节点，然后展开“Windows” 节点并选择“经典桌面” 节点。
+2. 在“新建项目” **** 对话框框中，展开“Visual C#” **** 或“Visual Basic” **** 节点，再选择“Windows” **** 节点，然后展开“Windows” **** 节点并选择“经典桌面” **** 节点。
 
-3. 在模板列表中，选择“WPF 应用程序” 模板。
+3. 在模板列表中，选择“WPF 应用程序” **** 模板。
 
-4. 在“新建项目” 文本框中，键入 `ExpenseIt`，然后选择“确定” 按钮。
+4. 在“新建项目” **** 文本框中，键入 `ExpenseIt`，然后选择“确定” **** 按钮。
 
-     创建项目并且已将项目文件添加到“解决方案资源管理器”后，将显示名为 **MainWindow.xaml** 的默认应用程序窗口的设计器。
+     创建项目并且已将项目文件添加到“解决方案资源管理器” **** 后，将显示名为 **MainWindow.xaml** 的默认应用程序窗口的设计器。
 
 #### <a name="to-modify-the-main-window"></a>若要修改主窗口
 
-1. 在设计器中，选择“MainWindow.xaml” 选项卡（如果它还不是活动的设计器选项卡）。
+1. 在设计器中，选择“MainWindow.xaml” **** 选项卡（如果它还不是活动的设计器选项卡）。
 
 2. 如果你正在使用 C#，找到行 `<Window x:Class="ExpenseIt.MainWindow"` 并将其替换为 `<NavigationWindow x:Class="ExpenseIt.MainWindow"`。
 
@@ -47,19 +47,19 @@ name = "简介" > </a> 此演练提供 Windows Presentation Foundation （WPF）
      请注意，当你将 `<Window` 标记更改为 `<NavigationWindow`时，Intellisense 也会自动将结束标记更改为 `</NavigationWindow>` 。
 
     > [!NOTE]
-    > 如果更改标记后 “错误列表”窗口打开，那么你可能会看到几个错误。 别担心，在下几步中进行的更改将使这些消失。
+    > 如果更改标记后 **** “错误列表”窗口打开，那么你可能会看到几个错误。 别担心，在下几步中进行的更改将使这些消失。
 
 3. 选择 `<Grid>` 和 `</Grid>` 标记，并将其删除。
 
-     **NavigationWindow** 无法包含其他 UI 元素，如“网格”。
+     **NavigationWindow** 无法包含其他 UI 元素，如“网格” ****。
 
-4. 在“新建项目” 窗口中，展开“常用” **Common** 类别节点，然后选择“标题” 属性，再输入 `ExpenseIt` 并按“” 键。
+4. 在“属性”**** 窗口中，展开“常用”**** 类别节点，然后选择“标题”**** 属性，再输入 `ExpenseIt` 并按“Enter”**** 键。
 
-     请注意，XAML 窗口中的“标题” 元素会更改以匹配新值。 可以修改 XAML 窗口或“属性” 窗口中的 XAML 属性且更改会同步。
+     请注意，XAML 窗口中的“标题” **** 元素会更改以匹配新值。 可以修改 XAML 窗口或“属性” **** 窗口中的 XAML 属性且更改会同步。
 
-5. 在 XAML 窗口中，将“高度”元素的值设置为 `375`，并将“宽度”属性的值设置为 `500`。
+5. 在 XAML 窗口中，将“高度”**** 元素的值设置为 `375`，并将“宽度”**** 属性的值设置为 `500`。
 
-     这些元素对应于“高度”和“宽度”属性，它们可在“属性”窗口的“布局”类别中找到。
+     这些元素对应于“高度”**** 和“宽度”**** 属性，它们可在“属性”**** 窗口的“布局”**** 类别中找到。
 
      你的 **MainWindow.xaml** 文件在 C# 中现应如下所示：
 
@@ -93,26 +93,26 @@ name = "简介" > </a> 此演练提供 Windows Presentation Foundation （WPF）
 
 #### <a name="to-modify-the-code-behind-file-c"></a>若要修改代码隐藏文件 (C#)
 
-1. 在“解决方案资源管理器”中，展开“MainWindow.xaml” 节点并打开“MainWindow.xaml.cs” 文件。
+1. 在“解决方案资源管理器” **** 中，展开“MainWindow.xaml” **** 节点并打开“MainWindow.xaml.cs” **** 文件。
 
 2. 找到行 `public partial class MainWindow : Window` 并将其替换为 `public partial class MainWindow : NavigationWindow`。
 
      此操作会更改 `MainWindow` 类以派生自 `NavigationWindow`。 在 Visual Basic 中，当你更改 XAML 中的窗口时会自动发生这种情况，因此无需更改任何代码。
 
-## <a name="add_files_to_the_application"></a> 将文件添加到应用程序
+## <a name="adding-files-to-the-application"></a><a name="add_files_to_the_application"></a> 向应用程序添加文件
  在本部分中，你将向应用程序添加两个页面和一个图像。
 
 #### <a name="to-add-a-home-screen"></a>若要添加主屏幕
 
-1. 在“解决方案资源管理器”中，打开“ExpenseIt”节点的快捷菜单，选择“添加”、“页”。
+1. 在“解决方案资源管理器”**** 中，打开“ExpenseIt”**** 节点的快捷菜单，选择“添加”****、“页”****。
 
-2. 在“新建项目” “添加新项”对话框中，选择 “名称”文本框并输入 `ExpenseItHome`，然后选择“确定” 按钮。
+2. 在“新建项目” **** “添加新项”对话框中，选择 **** “名称”文本框并输入 `ExpenseItHome`，然后选择“确定” **** 按钮。
 
      此页是应用程序启动时显示的第一个窗口。
 
-3. 在设计器中，选择“ExpenseItHome.xaml” 选项卡（如果它还不是活动的设计器选项卡）。
+3. 在设计器中，选择“ExpenseItHome.xaml” **** 选项卡（如果它还不是活动的设计器选项卡）。
 
-4. 选择 `<Title>` 元素并将标题更改为“ExpenseIt – Home”。
+4. 选择 `<Title>` 元素并将标题更改为“ExpenseIt – Home” ****。
 
      你的 **ExpenseItHome.xaml** 文件在 C# 中现应如下所示：
 
@@ -151,11 +151,11 @@ name = "简介" > </a> 此演练提供 Windows Presentation Foundation （WPF）
     </Page>
     ```
 
-5. 在设计器中，选择“MainWindow.xaml” 选项卡。
+5. 在设计器中，选择“MainWindow.xaml” **** 选项卡。
 
 6. 查找行 `Title="ExpenseIt" Height="375" Width="500">` 元素并添加 `Source="ExpenseItHome.xaml"` 属性。
 
-     这将 **ExpenseItHome.xaml** 设置为应用程序启动时第一个打开的页。 你的 **MainWindow.xaml** 文件在 C# 中现应如下所示：
+     这会将 **expenseithome.xaml** 设置为应用程序启动时第一个打开的页。 你的 **MainWindow.xaml** 文件在 C# 中现应如下所示：
 
     ```xaml
     <NavigationWindow x:Class="ExpenseIt.MainWindow"
@@ -185,19 +185,19 @@ name = "简介" > </a> 此演练提供 Windows Presentation Foundation （WPF）
     </NavigationWindow>
     ```
 
-     正如你先前设置的属性一样，你也可以设置“属性”窗口的“杂项”类别中的 `Source` 属性。
+     正如你先前设置的属性一样，你也可以设置“属性”**** 窗口的“杂项”**** 类别中的 `Source` 属性。
 
 #### <a name="to-add-a-details-window"></a>若要添加详细信息窗口
 
-1. 在“解决方案资源管理器”中，打开“ExpenseIt”节点的快捷菜单，选择“添加”、“页”。
+1. 在“解决方案资源管理器”**** 中，打开“ExpenseIt”**** 节点的快捷菜单，选择“添加”****、“页”****。
 
-2. 在“新建项目” “添加新项”对话框中，选择 “名称”文本框并输入 `ExpenseReportPage`，然后选择“确定” 按钮。
+2. 在“新建项目” **** “添加新项”对话框中，选择 **** “名称”文本框并输入 `ExpenseReportPage`，然后选择“确定” **** 按钮。
 
      此窗口将显示单个费用报表。
 
-3. 在设计器中，选择“ExpenseReportPage.xaml” 选项卡（如果还不是活动的设计器选项卡）。
+3. 在设计器中，选择“ExpenseReportPage.xaml” **** 选项卡（如果还不是活动的设计器选项卡）。
 
-4. 选择 `<Title>` 元素并将标题更改为“ExpenseIt – View Expense”。
+4. 选择 `<Title>` 元素并将标题更改为“ExpenseIt – View Expense” ****。
 
      你的 ExpenseReportPage.xaml 文件在 C# 中现应如下所示：
 
@@ -236,7 +236,7 @@ name = "简介" > </a> 此演练提供 Windows Presentation Foundation （WPF）
     </Page>
     ```
 
-5. 在菜单栏上，依次选择“调试”和“启动调试” （或按 F5）以运行应用程序。
+5. 在菜单栏上，依次选择 ****“调试”和“启动调试” **** （或按 F5）以运行应用程序。
 
      下面的插图显示带导航窗口按钮的应用程序。
 
@@ -244,16 +244,16 @@ name = "简介" > </a> 此演练提供 Windows Presentation Foundation （WPF）
 
 6. 关闭应用程序以返回到设计模式。
 
-## <a name="Add_Layout"></a> 创建用户界面
+## <a name="creating-the-user-interface"></a><a name="Add_Layout"></a> 创建用户界面
  布局提供有序方式来放置元素，在调整窗体时还管理这些元素的大小和位置。 在本部分，你将创建三行一列的网格。 你将会添加控件到这两页、添加代码，并且最终定义控件的可重用样式。
 
 #### <a name="to-create-the-layout"></a>若要创建布局
 
-1. 打开“ExpenseItHome.xaml” ，并选择 `<Grid>` 元素。
+1. 打开 **expenseithome.xaml** 并选择 `<Grid>` 元素。
 
-2. 在“属性”窗口中，展开“布局”类别节点并将“边距”值设置为 `10`（左边距）、`10`（右边距）、`0`（上边距）和 `10`（下边距）。
+2. 在“属性”**** 窗口中，展开“布局”**** 类别节点并将“边距”**** 值设置为 `10`（左边距）、`10`（右边距）、`0`（上边距）和 `10`（下边距）。
 
-     元素 `Margin="10,0,10,10"` 添加到 XAML 中的 `<Grid>` 元素。 再强调一下，你可以直接在 XAML 代码中输入这些值，而不用在“属性”窗口中输入 ，效果都相同。
+     元素 `Margin="10,0,10,10"` 添加到 XAML 中的 `<Grid>` 元素。 再强调一下，你可以直接在 XAML 代码中输入这些值，而不用在“属性”窗口中输入 **** ，效果都相同。
 
 3. 将下面 XAML 代码添加到 `Grid` 元素以创建行和列定义：
 
@@ -270,7 +270,7 @@ name = "简介" > </a> 此演练提供 Windows Presentation Foundation （WPF）
 
 #### <a name="to-add-controls"></a>若要添加控件
 
-1. 打开 **ExpenseItHome.xaml**。
+1. 打开 **expenseithome.xaml**。
 
 2. 将以下 XAML 代码刚好添加到 `</Grid>` 标记上方以创建 `Border`、 `ListBox` 和 `Button` 控件。
 
@@ -292,7 +292,7 @@ name = "简介" > </a> 此演练提供 Windows Presentation Foundation （WPF）
 
     ```
 
-     注意控件会出现在设计窗口中。 你也可以通过将控件从“工具箱” 窗口拖到设计窗口并在“属性” 窗口设置其属性来创建控件。
+     注意控件会出现在设计窗口中。 你也可以通过将控件从“工具箱” **** 窗口拖到设计窗口并在“属性” **** 窗口设置其属性来创建控件。
 
 3. 生成并运行应用程序。 下图显示了此过程中 XAML 创建的控件的运行时外观。
 
@@ -300,7 +300,7 @@ name = "简介" > </a> 此演练提供 Windows Presentation Foundation （WPF）
 
 4. 关闭应用程序以返回到设计模式。
 
-#### <a name="to-add-a-background-image"></a>若要添加背景图像
+#### <a name="to-add-a-background-image"></a>添加背景图像
 
 1. 选择以下图像，并将其保存为 `watermark.png`。
 
@@ -309,14 +309,14 @@ name = "简介" > </a> 此演练提供 Windows Presentation Foundation （WPF）
     > [!NOTE]
     > 或者可以创建自己的图像并将其保存为 `watermark.png`。
 
-2. 在“解决方案资源管理器”中，打开“ExpenseIt”节点的快捷菜单，选择“添加”、“现有项”。
+2. 在“解决方案资源管理器”**** 中，打开“ExpenseIt”**** 节点的快捷菜单，选择“添加”****、“现有项”****。
 
-3. 在“添加现有项” 对话框中，找到刚添加的“watermark.png” 图像，并选中它，然后选择“添加” 按钮。
+3. 在“添加现有项” **** 对话框中，找到刚添加的“watermark.png” **** 图像，并选中它，然后选择“添加” **** 按钮。
 
     > [!NOTE]
-    > 你可能需要展开“文件类型” 列表并选择“图像文件”。
+    > 你可能需要展开“文件类型” **** 列表并选择“图像文件” ****。
 
-4. 打开“ExpenseItHome.xaml” 文件并将以下 XAML 代码刚好添加到 `</Grid>` 标记上方以创建背景图像：
+4. 打开“ExpenseItHome.xaml” **** 文件并将以下 XAML 代码刚好添加到 `</Grid>` 标记上方以创建背景图像：
 
     ```xaml
     <Grid.Background>
@@ -327,7 +327,7 @@ name = "简介" > </a> 此演练提供 Windows Presentation Foundation （WPF）
 
 #### <a name="to-add-a-title"></a>若要添加标题
 
-1. 打开 **ExpenseItHome.xaml**。
+1. 打开 **expenseithome.xaml**。
 
 2. 查找行 `<Grid.ColumnDefinitions>` 并将以下内容添加到它的下方：
 
@@ -467,11 +467,11 @@ name = "简介" > </a> 此演练提供 Windows Presentation Foundation （WPF）
 
 #### <a name="to-add-code-to-the-button"></a>若要将代码添加到按钮
 
-1. 打开 **ExpenseItHome.xaml**。
+1. 打开 **expenseithome.xaml**。
 
 2. 选择 `<Button` 元素并将以下 XAML 代码紧跟在 **HorizontalAlignment="Right"** 元素的后面： `Click="Button_Click"`。
 
-     这将为按钮的 `Click` 事件添加一个事件处理程序。 “<按钮”元素代码现应如下所示：
+     这将为按钮的 `Click` 事件添加一个事件处理程序。 " **<" 按钮** 元素代码现在应如下所示：
 
     ```
     <!-- View report button -->
@@ -479,7 +479,7 @@ name = "简介" > </a> 此演练提供 Windows Presentation Foundation （WPF）
     Height="25" HorizontalAlignment="Right" Click="Button_Click">View</Button>
     ```
 
-3. 打开“ExpenseItHome.xaml.cs” 或 “ExpenseItHome.xaml.vb”文件。
+3. 打开“ExpenseItHome.xaml.cs” **** 或 **** “ExpenseItHome.xaml.vb”文件。
 
 4. 将下面的代码添加到 `ExpenseItHome` 类中:
 
@@ -505,7 +505,7 @@ name = "简介" > </a> 此演练提供 Windows Presentation Foundation （WPF）
 
 #### <a name="to-create-the-ui-for-the-report-page"></a>若要为报表页创建用户界面
 
-1. 打开 **ExpenseReportPage.xaml**。
+1. 打开 **expensereportpage.xaml**。
 
      此页面显示“主页”页面上所选人员的费用报表。
 
@@ -573,11 +573,11 @@ name = "简介" > </a> 此演练提供 Windows Presentation Foundation （WPF）
     </Grid>
     ```
 
-     此用户界面类似于为主页创建的用户界面，但报表数据在“DataGrid” 控件中显示。
+     此用户界面类似于为主页创建的用户界面，但报表数据在“DataGrid” **** 控件中显示。
 
 3. 生成并运行应用程序。
 
-4. 选择 “视图”按钮。
+4. 选择 **** “视图”按钮。
 
      出现费用报告页。
 
@@ -587,7 +587,7 @@ name = "简介" > </a> 此演练提供 Windows Presentation Foundation （WPF）
 
 #### <a name="to-style-controls"></a>若要设置控件样式
 
-1. 打开“App.xaml” 文件 (C#) 或 “Application.xaml”文件 (Visual Basic)。
+1. 打开“App.xaml” **** 文件 (C#) 或 **** “Application.xaml”文件 (Visual Basic)。
 
 2. 将以下 XAML 添加到 `<Application.Resources>` 和 `</Application.Resources>` 标记之间：
 
@@ -650,11 +650,11 @@ name = "简介" > </a> 此演练提供 Windows Presentation Foundation （WPF）
 
     - `listHeaderStyle`：可设置列表标头 `Border` 控件的格式。
 
-    - `listHeaderTextStyle`：可设置列表标头“标签”的格式。
+    - `listHeaderTextStyle`：可设置列表标头“标签” **** 的格式。
 
-    - `buttonStyle`：可设置 `Button` **“ExpenseItHome.xaml”页面上** 的格式。
+    - `buttonStyle`：用于 `Button` 在 **expenseithome.xaml** 可设置 expenseithome.xaml 上设置格式。
 
-3. 打开 **ExpenseItHome.xaml** ，并使用以下 XAML替换 `<Grid>` 和 `</Grid>` 元素之间的所有内容
+3. 打开 **expenseithome.xaml** 并将和元素之间的所有内容替换 `<Grid>` `</Grid>` 为以下 xaml
 
     ```xaml
     <Grid.ColumnDefinitions>
@@ -691,7 +691,7 @@ name = "简介" > </a> 此演练提供 Windows Presentation Foundation （WPF）
 
      应用样式会删除和替换定义每个控件外观的属性（如 `VerticalAlignment` 和 `FontFamily` 。
 
-4. 打开 **ExpenseReportPage.xaml** ，并使用以下 XAML替换 `<Grid>` 和最后一个 `</Grid>` 元素之间的所有内容
+4. 打开 **expensereportpage.xaml** 并将和最后一个元素之间的所有内容替换 `<Grid>` `</Grid>` 为以下 xaml
 
     ```xaml
     <Grid.Background>
@@ -800,7 +800,7 @@ name = "简介" > </a> 此演练提供 Windows Presentation Foundation （WPF）
     </DataTemplate>
     ```
 
-     这将添加一个在“ListBox”中定义如何显示数据的 `Data Template`。
+     这将添加一个在“ListBox”**** 中定义如何显示数据的 `Data Template`。
 
 4. 将现有 `<ListBox>` 元素替换为以下 XAML。
 
@@ -815,7 +815,7 @@ name = "简介" > </a> 此演练提供 Windows Presentation Foundation （WPF）
 
 #### <a name="to-connect-data-to-controls"></a>若要将数据连接到控件
 
-1. 打开 **ExpenseReportPage.xaml.vb** 或 **ExpenseReportPage.xaml.cs**。
+1. 打开 **expensereportpage.xaml** 或 **ExpenseReportPage.xaml.cs**。
 
 2. 在 C# 中，将以下构造函数添加到 **ExpenseReportPage** 类，或在 Visual Basic 中使用以下内容替换现有类：
 
@@ -847,7 +847,7 @@ name = "简介" > </a> 此演练提供 Windows Presentation Foundation （WPF）
 
      此构造函数将数据对象作为参数。 在这种情况下数据对象将包含所选人员的名字。
 
-3. 打开 **ExpenseItHome.xaml.vb** 或 **ExpenseItHome.xaml.cs**。
+3. 打开 **expenseithome.xaml** 或 **ExpenseItHome.xaml.cs**。
 
 4. 将 `Click` 事件处理程序代码替换为以下内容：
 
@@ -873,9 +873,9 @@ name = "简介" > </a> 此演练提供 Windows Presentation Foundation （WPF）
 
 #### <a name="to-update-the-ui-with-data-templates"></a>若要使用数据模板更新用户界面
 
-1. 打开 **ExpenseReportPage.xaml**。
+1. 打开 **expensereportpage.xaml**。
 
-2. 使用以下内容替换“姓名”和“部门”`<StackPanel` 元素的 XAML 代码：
+2. 使用以下内容替换“姓名”**** 和“部门”****`<StackPanel` 元素的 XAML 代码：
 
     ```xaml
     <!-- Name -->
@@ -892,7 +892,7 @@ name = "简介" > </a> 此演练提供 Windows Presentation Foundation （WPF）
 
     ```
 
-     这会将“标签” 控件绑定到相应数据源属性。
+     这会将“标签” **** 控件绑定到相应数据源属性。
 
 3. 在 `<Grid>` 元素内部添加以下 XAML 代码：
 
@@ -927,28 +927,28 @@ name = "简介" > </a> 此演练提供 Windows Presentation Foundation （WPF）
     </DataGrid>
     ```
 
-     这将添加“ItemSource” 并为费用项目定义绑定。
+     这将添加“ItemSource” **** 并为费用项目定义绑定。
 
 5. 生成并运行应用程序。
 
-6. 选择某个人，然后选择“视图” 按钮。
+6. 选择某个人，然后选择“视图” **** 按钮。
 
      下图显示具有所应用的控件、布局、样式、数据绑定和数据模板的 ExpenseIt 应用程序的两个页面。
 
      ![ExpenseIt 示例屏幕快照](../designers/media/gettingstartedfigure5.png "GettingStartedFigure5")
 
-## <a name="Best_Practices"></a> 最佳做法
+## <a name="best-practices"></a><a name="Best_Practices"></a> 最佳实践
  此示例演示了 WPF 的基础知识，因此不遵循应用程序开发的最佳做法。 有关 WPF 和.NET Framework 应用程序开发最佳做法的全面介绍，请参阅以下相应的主题：
 
-- 辅助功能 - [辅助功能最佳做法](https://msdn.microsoft.com/library/aa350483\(v=vs.100\).aspx)
+- 辅助功能- [辅助功能最佳做法](https://msdn.microsoft.com/library/aa350483\(v=vs.100\).aspx)
 
 - 安全性 - [Windows Presentation Foundation 安全性](https://msdn.microsoft.com/library/aa970906\(v=vs.100\).aspx)
 
-- 本地化 - [WPF 全球化和本地化概述](https://msdn.microsoft.com/library/ms788718\(v=vs.100\).aspx)
+- 本地化- [WPF 全球化和本地化概述](https://msdn.microsoft.com/library/ms788718\(v=vs.100\).aspx)
 
-- 性能 - [优化 WPF 应用程序性能](https://msdn.microsoft.com/library/aa970683\(v=vs.100\).aspx)
+- 性能- [优化 WPF 应用程序性能](https://msdn.microsoft.com/library/aa970683\(v=vs.100\).aspx)
 
-## <a name="Whats_Next"></a> 下一步
+## <a name="whats-next"></a><a name="Whats_Next"></a> 后续操作
  通过使用 WPF，你现在可以采用大量技术来创建桌面应用程序。 你现在应该基本了解数据绑定 WPF 应用程序的构建基块。 本主题并不详尽，但希望你现在也能够意识到你可以自己发现本主题尚未介绍的技术。
 
  有关 WPF 体系结构和编程模型的详细信息，请参阅以下主题：
@@ -975,5 +975,5 @@ name = "简介" > </a> 此演练提供 Windows Presentation Foundation （WPF）
 
 - [WPF 中的文档](https://msdn.microsoft.com/library/ms748388\(v=vs.100\).aspx)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [演练：创建连接到 Azure 移动服务的 WPF 桌面应用程序](../designers/walkthrough-create-a-wpf-desktop-application-connected-to-an-azure-mobile-service.md)[使用 Windows Presentation Foundation 创建新式桌面应用](../designers/create-modern-desktop-applications-with-windows-presentation-foundation.md)程序

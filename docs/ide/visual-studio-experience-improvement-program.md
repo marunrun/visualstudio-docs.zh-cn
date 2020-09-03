@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: b6c785b755b64f0dd7e367a01d9c05c1981ea558
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "71693015"
 ---
 # <a name="visual-studio-customer-experience-improvement-program"></a>Visual Studio 客户体验改善计划
@@ -27,11 +27,11 @@ Visual Studio 客户体验改善计划 (VSCEIP) 旨在随着时间推移帮助 M
 
 VSCEIP 默认开启。 可以按照以下步骤将其关闭或者再次打开：
 
-1. 在 Visual Studio 中，选择“帮助”   > “发送反馈”  ，然后选择“设置”  。
+1. 在 Visual Studio 中，选择“帮助” > “发送反馈”，然后选择“设置”。
 
-   “Visual Studio 体验改善计划”对话框随即打开  。
+   “Visual Studio 体验改善计划”对话框随即打开****。
 
-1. 若要选择退出，请选择“否，我不想参加”，然后选择“确定”   。 若要选择加入，请选择“是，我愿意参加”，然后选择“确定”   。
+1. 若要选择退出，请选择“否，我不想参加”，然后选择“确定”********。 若要选择加入，请选择“是，我愿意参加”，然后选择“确定”********。
 
    ![“Visual Studio 体验改善计划”对话框](media/experience-improvement-program.png)
 
@@ -43,29 +43,29 @@ VSCEIP 默认开启。 可以按照以下步骤将其关闭或者再次打开：
 
 ::: moniker range="vs-2017"
 
-- 在 64 位操作系统上，Key = HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VSCommon\15.0\SQM 
-- 在 32 位操作系统上，Key = HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VSCommon\15.0\SQM 
-- 启用“组策略”时，Key = HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM 
+- 在 64 位操作系统上，Key = HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VSCommon\15.0\SQM****
+- 在 32 位操作系统上，Key = HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VSCommon\15.0\SQM****
+- 启用“组策略”时，Key = HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-- 在 64 位操作系统上，Key = HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VSCommon\16.0\SQM 
-- 在 32 位操作系统上，Key = HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VSCommon\16.0\SQM 
-- 启用“组策略”时，Key = HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM 
+- 在 64 位操作系统上，Key = HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VSCommon\16.0\SQM****
+- 在 32 位操作系统上，Key = HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VSCommon\16.0\SQM****
+- 启用“组策略”时，Key = HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM
 
 ::: moniker-end
 
-Entry = OptIn 
+Entry = OptIn
 
-Value = (DWORD)
+值 = (DWORD)
 
-- “0”为选择退出（关闭 VSCEIP） 
-- “1”为选择加入（开启 VSCEIP） 
+- “0”为选择退出（关闭 VSCEIP）
+- “1”为选择加入（开启 VSCEIP）
 
 > [!CAUTION]
-> 错误地编辑注册表可能会严重损坏您的系统。 更改注册表之前，应当备份计算机中的所有重要数据。 如果在应用手动更改之后遇到问题，也可以使用“最近一次的正确配置”启动选项  。
+> 不正确地编辑注册表可能会对系统造成严重损坏。 在更改注册表之前，应备份计算机上任何有价值的数据。 如果在应用手动更改之后遇到问题，也可以使用“最近一次的正确配置”启动选项。
 
 有关 VSCEIP 收集、处理或传输的信息的详情，请参阅 [Microsoft 隐私声明](https://privacy.microsoft.com/privacystatement)。
 

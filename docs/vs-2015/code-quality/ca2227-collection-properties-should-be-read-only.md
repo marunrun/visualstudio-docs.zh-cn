@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 17c4e2336a5c8bd8905d857dc8189a11f9fb6181
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85540525"
 ---
 # <a name="ca2227-collection-properties-should-be-read-only"></a>CA2227:集合属性应为只读
@@ -33,7 +33,7 @@ ms.locfileid: "85540525"
 |是否重大更改|重大|
 
 ## <a name="cause"></a>原因
- 外部可见的可写属性是实现的类型 <xref:System.Collections.ICollection?displayProperty=fullName> 。 规则将忽略数组、索引器（名称为 "Item" 的属性）和权限集。
+ 外部可见的可写属性是实现的类型 <xref:System.Collections.ICollection?displayProperty=fullName> 。 数组、索引器 (名称为 "Item" ) 和权限集的属性被规则忽略。
 
 ## <a name="rule-description"></a>规则描述
  可写集合属性允许用户将集合替换为完全不同的集合。 只读属性禁止替换该集合，但仍允许设置单个成员。 如果替换集合是一个目标，则首选的设计模式是包含一个方法，用于从集合中移除所有元素，使用一个方法来重新填充集合。 <xref:System.Collections.ArrayList.Clear%2A>有关此模式的示例，请参阅类的和 <xref:System.Collections.ArrayList.AddRange%2A> 方法 <xref:System.Collections.ArrayList?displayProperty=fullName> 。

@@ -51,10 +51,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 0b1783adadd1bfab32bfbbdcfb5ae28df7c0aae4
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72661198"
 ---
 # <a name="solutions-and-projects-in-visual-studio"></a>Visual Studio 中的解决方案和项目
@@ -70,17 +70,17 @@ ms.locfileid: "72661198"
 
  下图显示项目与解决方案，以及它们在逻辑上包含的项之间的关系。
 
- ![Visual Studio 项目和解决方案](../ide/media/vs2015-project-diagram.png "|::ref1::|")
+ ![Visual Studio 项目和解决方案](../ide/media/vs2015-project-diagram.png "vs2015_project_diagram")
 
  还可以创建自定义项目和项模板。 有关详细信息，请参阅[创建项目和项模板](../ide/creating-project-and-item-templates.md)。
 
 ## <a name="creating-new-projects"></a>创建新项目
- 创建新项目的最简单方法是从预定义的项目模板开始，该模板包含一组基本的预生成代码文件、配置文件、资产和设置，这些内容使你可以开始采用特定编程语言创建特定类型的应用程序或网站。 这些模板是从主菜单选择“文件”&#124;“新建”&#124;“项目”或“文件”&#124;“新建”&#124;“网站”，然后进行导航时在“新建项目对话框”中看到的内容。    有关详细信息，请参阅[创建解决方案和项目](../ide/creating-solutions-and-projects.md)和 [NIB Creating Projects from Templates](https://msdn.microsoft.com/7c36d86a-6b79-4480-8228-0f925f1204b2)（NIB 从模板创建项目）。
+ 创建新项目的最简单方法是从预定义的项目模板开始，该模板包含一组基本的预生成代码文件、配置文件、资产和设置，这些内容使你可以开始采用特定编程语言创建特定类型的应用程序或网站。 这些模板是从主菜单选择“文件”&#124;“新建”&#124;“项目”或“文件”&#124;“新建”&#124;“网站”，然后进行导航时在“新建项目对话框”中看到的内容。************ 有关详细信息，请参阅[创建解决方案和项目](../ide/creating-solutions-and-projects.md)和 [NIB Creating Projects from Templates](https://msdn.microsoft.com/7c36d86a-6b79-4480-8228-0f925f1204b2)（NIB 从模板创建项目）。
 
 ## <a name="managing-projects-in-solution-explorer"></a>在解决方案资源管理器中管理项目
  创建新项目之后，可使用 **“解决方案资源管理器”** 查看和管理项目和解决方案及其关联项。 下图显示具有一个包含两个项目的 C# 解决方案的服务器资源管理器。
 
- ![解决方案资源管理器](../ide/media/vs2015-solution-explorer.png "|::ref2::|")
+ ![解决方案资源管理器](../ide/media/vs2015-solution-explorer.png "vs2015_solution_explorer")
 
 ## <a name="in-this-section"></a>本节内容
 
@@ -96,7 +96,7 @@ ms.locfileid: "72661198"
 
 - [管理程序集签名和清单签名](../ide/managing-assembly-and-manifest-signing.md)
 
-- [如何：指定应用程序图标（Visual Basic、C#）](../ide/how-to-specify-an-application-icon-visual-basic-csharp.md)
+- [如何：指定应用程序图标 (Visual Basic，c # ) ](../ide/how-to-specify-an-application-icon-visual-basic-csharp.md)
 
 - [面向特定的 .NET Framework 版本](../ide/targeting-a-specific-dotnet-framework-version.md)
 

@@ -25,10 +25,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: cb5b56404c7ddc99b7999b47cf3c2a899f915efd
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72578025"
 ---
 # <a name="create-custom-views-of-managed-objects"></a>创建托管对象的自定义视图
@@ -36,7 +36,7 @@ ms.locfileid: "72578025"
 
 可以在调试器变量窗口中自定义 Visual Studio 显示数据类型的方式。  
   
-## <a name="attributes"></a>Attributes  
+## <a name="attributes"></a>特性  
  在 C# 和 Visual Basic 中，可以使用 <xref:System.Diagnostics.DebuggerTypeProxyAttribute>、<xref:System.Diagnostics.DebuggerDisplayAttribute> 和 <xref:System.Diagnostics.DebuggerBrowsableAttribute> 来添加自定义数据的扩展。  
   
  在 [!INCLUDE[dnprdnlong](../includes/dnprdnlong-md.md)] 代码中，Visual Basic 不支持 DebuggerBrowsable 特性。 此项限制在 .NET Framework 较高版本中已经删除。  
@@ -50,10 +50,10 @@ ms.locfileid: "72578025"
 > [!CAUTION]
 > 在 Visual Studio 的不同版本中，此文件的结构和 autoexp 规则的语法可能不同。  
   
- 通过编写表达式计算器外接程序，还可以自定义本机类型视图。 有关详细信息，请参阅[EEAddIn 示例：调试表达式计算器外接程序](https://msdn.microsoft.com/d4f6b068-c812-45bc-9ec0-7e0363c4bb9e)。  
+ 通过编写表达式计算器外接程序，还可以自定义本机类型视图。 有关详细信息，请参阅 [EEAddIn 示例：调试表达式计算器外接程序](https://msdn.microsoft.com/d4f6b068-c812-45bc-9ec0-7e0363c4bb9e)。  
   
-## <a name="see-also"></a>请参阅  
- [使用 DebuggerTypeProxy 属性](../debugger/using-debuggertypeproxy-attribute.md)   
- [使用 DebuggerDisplay 属性](../debugger/using-the-debuggerdisplay-attribute.md)   
- [“监视”和“快速监视”窗口](../debugger/watch-and-quickwatch-windows.md)   
+## <a name="see-also"></a>另请参阅  
+ [使用 DebuggerTypeProxy 特性](../debugger/using-debuggertypeproxy-attribute.md)   
+ [使用 DebuggerDisplay 特性](../debugger/using-the-debuggerdisplay-attribute.md)   
+ [监视和快速监视窗口](../debugger/watch-and-quickwatch-windows.md)   
  [使用调试器显示特性增强调试](https://msdn.microsoft.com/library/72bb7aa9-459b-42c4-9163-9312fab4c410)

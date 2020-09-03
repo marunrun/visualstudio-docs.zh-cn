@@ -16,20 +16,20 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 430a8d3cfd3b8ced45b60bd9dc70211711886d43
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85540564"
 ---
 # <a name="ca2226-operators-should-have-symmetrical-overloads"></a>CA2226:运算符应有对称重载
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|Item|值|
+|项|值|
 |-|-|
 |TypeName|OperatorsShouldHaveSymmetricalOverloads|
 |CheckId|CA2226|
-|Category|Microsoft. 使用情况|
+|类别|Microsoft. 使用情况|
 |是否重大更改|非重大更改|
 
 ## <a name="cause"></a>原因

@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: e9dbd245edd81907197e23c0d193a01cc07424b4
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85548104"
 ---
 # <a name="adding-visual-studio-editor-support-for-other-languages"></a>为其他语言添加 Visual Studio 编辑器支持
@@ -77,7 +77,7 @@ ms.locfileid: "85548104"
 
 - Java
 
-- JavaScript
+- Javascript
 
 - PHP
 
@@ -102,8 +102,8 @@ ms.locfileid: "85548104"
 
 |文件夹名|描述|
 |-----------------|-----------------|
-|\\*\<language name>*|语言文件夹。 替换 *\<language name>* 为语言的名称。 例如， **\Matlab**。|
-|\Syntaxes|语法文件夹。 包含语言的语法 json 文件，如**Matlab.js**。|
+|\\*\<language name>*|语言文件夹。 请将 \<language name> 替换为该语言的名称。 例如， **\Matlab**。|
+|\Syntaxes|语法文件夹。 包含语言的语法 json 文件，如 **Matlab.js**。|
 |\Snippets|代码段文件夹。 包含语言的代码段。|
 
  在 Windows 中，% userprofile% 解析为以下路径： c:\Users \\ *\<user name>* 。 如果系统上不存在扩展文件夹，则需要创建它。 如果该文件夹已存在，它将被隐藏。
