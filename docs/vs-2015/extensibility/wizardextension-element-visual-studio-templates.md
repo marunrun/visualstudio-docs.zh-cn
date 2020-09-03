@@ -1,5 +1,5 @@
 ---
-title: WizardExtension 元素 （Visual Studio 模板） |Microsoft Docs
+title: " (Visual Studio 模板) 的 WizardExtension 元素 |Microsoft Docs"
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -14,10 +14,10 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 69e35d4bebf7a16a1429be674ba3533b4f082b05
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68201916"
 ---
 # <a name="wizardextension-element-visual-studio-templates"></a>WizardExtension 元素（Visual Studio 模板）
@@ -25,7 +25,7 @@ ms.locfileid: "68201916"
 
 包含用于自定义模板向导的注册元素。  
   
- \<VSTemplate >  
+ \<VSTemplate>  
  ...  
  \<WizardExtension>  
   
@@ -46,22 +46,22 @@ ms.locfileid: "68201916"
   
 ### <a name="child-elements"></a>子元素  
   
-|元素|描述|  
+|元素|说明|  
 |-------------|-----------------|  
-|[Assembly](../extensibility/assembly-element-visual-studio-template-wizard-extension.md)|必需的元素。<br /><br /> 指定的名称或显示在全局程序集缓存中的程序集的强名称。 必须有至少一个`Assembly`中的元素`WizardExtension`元素。|  
-|[FullClassName](../extensibility/fullclassname-element-visual-studio-template-wizard-extension.md)|必需的元素。<br /><br /> 实现的类的完全限定的名称`IWizard`接口。 必须有至少一个`FullClassName`中的元素`WizardExtension`元素。|  
+|[件](../extensibility/assembly-element-visual-studio-template-wizard-extension.md)|必需的元素。<br /><br /> 指定出现在全局程序集缓存中的程序集的名称或强名称。 元素中必须至少有一个 `Assembly` 元素 `WizardExtension` 。|  
+|[FullClassName](../extensibility/fullclassname-element-visual-studio-template-wizard-extension.md)|必需的元素。<br /><br /> 实现接口的类的完全限定名称 `IWizard` 。 元素中必须至少有一个 `FullClassName` 元素 `WizardExtension` 。|  
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|描述|  
+|元素|说明|  
 |-------------|-----------------|  
-|[VSTemplate](../extensibility/vstemplate-element-visual-studio-templates.md)|包含项目模板、 项模板或初学者工具包的所有元数据。|  
+|[VSTemplate](../extensibility/vstemplate-element-visual-studio-templates.md)|包含项目模板、项模板或初学者工具包的所有元数据。|  
   
 ## <a name="remarks"></a>备注  
  `WizardExtension` 是 `VSTemplate` 的可选子元素。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示的标准项目模板的元数据[!INCLUDE[csprcs](../includes/csprcs-md.md)]Windows 应用程序。  
+ 下面的示例演示了 Windows 应用程序的标准项目模板的元数据 [!INCLUDE[csprcs](../includes/csprcs-md.md)] 。  
   
 ```  
 <VSTemplate Version="3.0.0" Type="Item"  
@@ -91,7 +91,7 @@ ms.locfileid: "68201916"
 </VSTemplate>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)   
  [创建项目和项模板](../ide/creating-project-and-item-templates.md)   
  [如何：使用向导来处理项目模板](../extensibility/how-to-use-wizards-with-project-templates.md)

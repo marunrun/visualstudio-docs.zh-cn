@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 1c8dcf35e4c045db0d9acd45e2eb307a31ba39f1
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72671937"
 ---
 # <a name="open-file-command"></a>“打开文件”命令
@@ -33,11 +33,11 @@ ms.locfileid: "72671937"
 File.OpenFile filename [/e:editorname]
 ```
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
  `filename`（必需）。 要打开的文件的完整或部分路径和文件名。 包含空格的路径必须引在引号内。
 
 ## <a name="switches"></a>开关
- /e:`editorname`（可选）。 将在其中打开文件的编辑器的名称。 如果指定该参数，但未提供编辑器名称，则会出现“打开方式”  对话框。
+ /e:`editorname`（可选）。 将在其中打开文件的编辑器的名称。 如果指定该参数，但未提供编辑器名称，则会出现“打开方式”**** 对话框。
 
  /e:`editorname` 参数语法使用“打开方式”对话框中显示的编辑器名称，并用引号括起来。
 
