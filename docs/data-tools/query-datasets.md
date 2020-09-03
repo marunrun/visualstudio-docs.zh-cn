@@ -12,14 +12,14 @@ manager: jillfra
 ms.workload:
 - data-storage
 ms.openlocfilehash: 4ef1c806914b0f134702e010b58229ee3fc15c7a
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85281859"
 ---
 # <a name="query-datasets"></a>查询数据集
-若要搜索数据集中的特定记录，请使用 `FindBy` DataTable 上的方法，编写自己的 foreach 语句来循环遍历表的 Rows 集合，或使用[LINQ to DataSet](/dotnet/framework/data/adonet/linq-to-dataset)。
+若要搜索数据集中的特定记录，请使用 `FindBy` DataTable 上的方法，编写自己的 foreach 语句来循环遍历表的 Rows 集合，或使用 [LINQ to DataSet](/dotnet/framework/data/adonet/linq-to-dataset)。
 
 ## <a name="dataset-case-sensitivity"></a>数据集区分大小写
 在数据集内，表名和列名在默认情况下是不区分大小写的，也就是说，数据集中名为 "Customers" 的表也可以称为 "customers"。 这与多个数据库中的命名约定相匹配，其中包括 SQL Server。 在 SQL Server 中，默认行为是数据元素的名称不能仅通过大小写区分。
@@ -27,7 +27,7 @@ ms.locfileid: "85281859"
 > [!NOTE]
 > 不同于数据集，XML 文档区分大小写，因此在架构中定义的数据元素的名称区分大小写。 例如，架构协议允许架构定义名为 "Customers" 的表和名为 "customers" 的其他表。 当包含仅大小写不同的元素的架构用于生成数据集类时，这可能会导致名称冲突。
 
-然而，区分大小写是在数据集内解释数据的方式的一个因素。 例如，如果筛选数据集表中的数据，搜索条件可能会返回不同的结果，具体取决于比较是否区分大小写。 可以通过设置数据集的属性来控制筛选、搜索和排序的区分大小写 <xref:System.Data.DataSet.CaseSensitive%2A> 。 默认情况下，数据集中的所有表都继承此属性的值。 （您可以通过设置表的属性，为每个单独的表覆盖此属性 <xref:System.Data.DataTable.CaseSensitive%2A> 。）
+然而，区分大小写是在数据集内解释数据的方式的一个因素。 例如，如果筛选数据集表中的数据，搜索条件可能会返回不同的结果，具体取决于比较是否区分大小写。 可以通过设置数据集的属性来控制筛选、搜索和排序的区分大小写 <xref:System.Data.DataSet.CaseSensitive%2A> 。 默认情况下，数据集中的所有表都继承此属性的值。  (可以通过设置表的属性，为每个单独的表覆盖此属性 <xref:System.Data.DataTable.CaseSensitive%2A> 。 ) 
 
 ## <a name="locate-a-specific-row-in-a-data-table"></a>查找数据表中的特定行
 
@@ -65,12 +65,12 @@ ms.locfileid: "85281859"
 
 <xref:System.Data.DataRelation>通过 <xref:System.Data.DataRow.GetChildRows%2A> <xref:System.Data.DataRow> 在父表中调用的方法，可以使用对象来查找相关记录。 此方法返回相关子记录的数组。 或者，你可以 <xref:System.Data.DataRow.GetParentRow%2A> <xref:System.Data.DataRow> 在子表中调用的方法。 此方法 <xref:System.Data.DataRow> 从父表返回单个。
 
-本页提供使用类型化数据集的示例。 有关在非类型化数据集中导航关系的信息，请参阅[导航 datarelation](/dotnet/framework/data/adonet/dataset-datatable-dataview/navigating-datarelations)。
+本页提供使用类型化数据集的示例。 有关在非类型化数据集中导航关系的信息，请参阅 [导航 datarelation](/dotnet/framework/data/adonet/dataset-datatable-dataview/navigating-datarelations)。
 
 > [!NOTE]
-> 如果使用的是 Windows 窗体应用程序并使用数据绑定功能显示数据，则设计器生成的窗体可能会为应用程序提供足够的功能。 有关详细信息，请参阅[在 Visual Studio 中将控件绑定到数据](../data-tools/bind-controls-to-data-in-visual-studio.md)。 具体而言，请参阅[数据集中的关系](relationships-in-datasets.md)。
+> 如果使用的是 Windows 窗体应用程序并使用数据绑定功能显示数据，则设计器生成的窗体可能会为应用程序提供足够的功能。 有关详细信息，请参阅 [在 Visual Studio 中将控件绑定到数据](../data-tools/bind-controls-to-data-in-visual-studio.md)。 具体而言，请参阅 [数据集中的关系](relationships-in-datasets.md)。
 
-下面的代码示例演示如何在类型化的数据集中向上和向下导航关系。 此代码示例使用类型化 <xref:System.Data.DataRow> `NorthwindDataSet.OrdersRow` 的（）和生成的 FindBy*PrimaryKey* （ `FindByCustomerID` ）方法查找所需的行并返回相关记录。 仅当有以下情况时，才会正确编译和运行示例：
+下面的代码示例演示如何在类型化的数据集中向上和向下导航关系。 此代码示例使用类型化 <xref:System.Data.DataRow> `NorthwindDataSet.OrdersRow` 的 () ，生成的 FindBy*PrimaryKey* (`FindByCustomerID`) 方法查找所需行并返回相关记录。 仅当有以下情况时，才会正确编译和运行示例：
 
 - 使用表命名的数据集的实例 `NorthwindDataSet` `Customers` 。
 

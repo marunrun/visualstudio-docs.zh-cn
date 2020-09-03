@@ -18,10 +18,10 @@ manager: jillfra
 ms.workload:
 - data-storage
 ms.openlocfilehash: 198eb09cabe16c72415520aa493a3395cdbf6d48
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85281872"
 ---
 # <a name="pass-data-between-forms"></a>在窗体间传递数据
@@ -33,11 +33,11 @@ ms.locfileid: "85281872"
 
 本演练涉及以下任务：
 
-- 创建新的**Windows 窗体应用程序**项目。
+- 创建新的 **Windows 窗体应用程序** 项目。
 
-- 使用 "[数据源配置向导](../data-tools/media/data-source-configuration-wizard.png)" 创建和配置数据集。
+- 使用 " [数据源配置向导](../data-tools/media/data-source-configuration-wizard.png)" 创建和配置数据集。
 
-- 选择从“数据源”窗口拖动某些项时要在窗体上创建的控件****。 有关详细信息，请参阅[设置在从 "数据源" 窗口中拖动时要创建的控件](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md)。
+- 选择从“数据源”窗口拖动某些项时要在窗体上创建的控件****。 有关详细信息，请参阅 [设置在从 "数据源" 窗口中拖动时要创建的控件](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md)。
 
 - 通过将某些项从“数据源”窗口拖到窗体上来创建数据绑定控件****。
 
@@ -51,17 +51,17 @@ ms.locfileid: "85281872"
 
 本演练使用 SQL Server Express LocalDB 和 Northwind 示例数据库。
 
-1. 如果没有 SQL Server Express 的 LocalDB，请从[SQL Server Express 下载 "页](https://www.microsoft.com/sql-server/sql-server-editions-express)或通过**Visual Studio 安装程序**安装它。 在 Visual Studio 安装程序中，SQL Server Express LocalDB 可以作为**数据存储和处理**工作负荷的一部分进行安装，也可以作为单个组件安装。
+1. 如果没有 SQL Server Express 的 LocalDB，请从 [SQL Server Express 下载 "页](https://www.microsoft.com/sql-server/sql-server-editions-express)或通过 **Visual Studio 安装程序**安装它。 在 Visual Studio 安装程序中，SQL Server Express LocalDB 可以作为 **数据存储和处理** 工作负荷的一部分进行安装，也可以作为单个组件安装。
 
 2. 按照以下步骤安装 Northwind 示例数据库：
 
-    1. 在 Visual Studio 中，打开 " **SQL Server 对象资源管理器**" 窗口。 （SQL Server 对象资源管理器作为 Visual Studio 安装程序中的**数据存储和处理**工作负荷的一部分安装。）展开 " **SQL Server** " 节点。 右键单击 LocalDB 实例，然后选择 "**新建查询**"。
+    1. 在 Visual Studio 中，打开 " **SQL Server 对象资源管理器** " 窗口。  (SQL Server 对象资源管理器在 Visual Studio 安装程序的 **数据存储和处理** 工作负荷中安装。 ) 展开 **SQL Server** 节点。 右键单击 LocalDB 实例，然后选择 " **新建查询**"。
 
        此时将打开查询编辑器窗口。
 
-    2. 将[Northwind transact-sql 脚本](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true)复制到剪贴板。 此 T-sql 脚本从头开始创建 Northwind 数据库，并用数据填充它。
+    2. 将 [Northwind transact-sql 脚本](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true) 复制到剪贴板。 此 T-sql 脚本从头开始创建 Northwind 数据库，并用数据填充它。
 
-    3. 将 T-sql 脚本粘贴到查询编辑器中，然后选择 "**执行**" 按钮。
+    3. 将 T-sql 脚本粘贴到查询编辑器中，然后选择 " **执行** " 按钮。
 
        一小段时间后，查询将完成运行，并创建 Northwind 数据库。
 
@@ -71,23 +71,23 @@ ms.locfileid: "85281872"
 
 2. 在左侧窗格中展开 " **Visual c #** " 或 " **Visual Basic** "，然后选择 " **Windows 桌面**"。
 
-3. 在中间窗格中，选择 " **Windows 窗体应用程序**" 项目类型。
+3. 在中间窗格中，选择 " **Windows 窗体应用程序** " 项目类型。
 
-4. 将项目命名为**PassingDataBetweenForms**，然后选择 **"确定"**。
+4. 将项目命名为 **PassingDataBetweenForms**，然后选择 **"确定"**。
 
      创建“PassingDataBetweenForms”项目并添加到“解决方案资源管理器”中********。
 
 ## <a name="create-the-data-source"></a>创建数据源
 
-1. 若要打开 "**数据源**" 窗口，请在 "**数据**" 菜单上单击 "**显示数据源**"。
+1. 若要打开 " **数据源** " 窗口，请在 " **数据** " 菜单上单击 " **显示数据源**"。
 
-2. 在 "**数据源**" 窗口中，选择 "**添加新数据源**" 以启动 "**数据源配置**向导"。
+2. 在 " **数据源** " 窗口中，选择 " **添加新数据源** " 以启动 " **数据源配置** 向导"。
 
 3. 在 **“选择数据源类型”** 页上选择 **“数据库”** ，然后单击 **“下一步”**。
 
 4. 在“选择数据库模型”页面上，确认已指定“数据集”，然后单击“下一步”************。
 
-5. 在 "**选择你的数据连接**" 页上，执行下列操作之一：
+5. 在 " **选择你的数据连接** " 页上，执行下列操作之一：
 
     - 如果下拉列表中包含到 Northwind 示例数据库的数据连接，请选择该连接。
 
@@ -95,7 +95,7 @@ ms.locfileid: "85281872"
 
 6. 如果数据库需要密码并且已启用含有敏感数据的选项，请选择该选项，然后单击“下一步”****。
 
-7. 在 "将**连接字符串保存到应用程序配置文件**" 页上，单击 "**下一步**"。
+7. 在 "将 **连接字符串保存到应用程序配置文件** " 页上，单击 " **下一步**"。
 
 8. 在“选择数据库对象”页上，展开“表”节点********。
 
@@ -103,7 +103,7 @@ ms.locfileid: "85281872"
 
      将“NorthwindDataSet”添加到项目中，然后“数据源”窗口中将显示“Customers”和“Orders”表****************。
 
-## <a name="create-the-first-form-form1"></a>创建第一个窗体（Form1）
+## <a name="create-the-first-form-form1"></a>创建第一个窗体 (Form1) 
 
 通过将“Customers”节点从“数据源”窗口拖到窗体上，可以创建数据绑定网格（<xref:System.Windows.Forms.DataGridView> 控件）********。
 
@@ -152,7 +152,7 @@ ms.locfileid: "85281872"
     > [!NOTE]
     > 验证数据库的参数语法是否正确。 例如，在 Microsoft Access 中，WHERE 子句应当如下：`WHERE CustomerID = ?`。
 
-6. 单击“下一步”****。
+6. 单击“配置目录分区”  。
 
 7. 对于 " **DataTableMethod 名称**"，请键入 `FillByCustomerID` 。
 
@@ -196,8 +196,8 @@ ms.locfileid: "85281872"
 
 - 编辑数据集来添加或移除数据库对象。 有关详细信息，请参阅[创建和配置数据集](../data-tools/create-and-configure-datasets-in-visual-studio.md)。
 
-- 添加将数据保存回数据库的功能。 有关详细信息，请参阅[将数据保存回数据库](../data-tools/save-data-back-to-the-database.md)。
+- 添加将数据保存回数据库的功能。 有关详细信息，请参阅 [将数据保存回数据库](../data-tools/save-data-back-to-the-database.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [在 Visual Studio 中将 Windows 窗体控件绑定到数据](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)

@@ -122,7 +122,7 @@
           href: processes.md
         - name: 程序节点
           href: program-nodes.md
-        - name: 程序
+        - name: 计划
           href: programs.md
         - name: 线程数
           href: threads.md

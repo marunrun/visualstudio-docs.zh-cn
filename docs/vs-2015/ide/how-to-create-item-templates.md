@@ -15,18 +15,18 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: c9edc79002a4a2d7c2fe135d7eb4669f5f010599
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72668075"
 ---
 # <a name="how-to-create-item-templates"></a>如何：创建项模板
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-本主题[第一个过程](#to-add-a-custom-project-item-template-to-the-add-new-item-dialog-box)中的步骤演示如何使用“导出模板”向导创建项模板。 如果模板将由多个文件组成，请参阅[如何：创建多文件项模板](../ide/how-to-create-multi-file-item-templates.md)。
+本主题[第一个过程](#to-add-a-custom-project-item-template-to-the-add-new-item-dialog-box)中的步骤演示如何使用“导出模板”**** 向导创建项模板。 如果模板将由多个文件组成，请参阅 [如何：创建多文件项模板](../ide/how-to-create-multi-file-item-templates.md)。
 
- 向导执行大量工作为你创建基本模板，但在许多情况下，你将需要在导出模板后手动修改 .vstemplate 文件。 例如，如果希望该项显示在 [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] 应用项目的“添加新项”对话框中，则需要执行一些额外步骤。 本主题中的[第二个过程](#to-enable-the-item-template-to-be-used-in-a-store-project)有助于完成该任务。
+ 向导执行大量工作为你创建基本模板，但在许多情况下，你将需要在导出模板后手动修改 .vstemplate 文件。 例如，如果希望该项显示在应用项目的 " **添加新项** " 对话框中 [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] ，则需要执行一些额外的步骤。 本主题中的[第二个过程](#to-enable-the-item-template-to-be-used-in-a-store-project)有助于完成该任务。
 
  在某些情况下，你可能希望或需要从头开始手动创建项模板。 [第三个过程](#to-enable-templates-for-specific-project-sub-types)演示如何做到这一点。
 
@@ -38,28 +38,28 @@ ms.locfileid: "72668075"
 
 2. 向项目添加一项，并在需要时修改它。
 
-3. 修改代码文件，以指示应进行参数替换的位置。 有关详细信息，请参阅[如何：替换模板中的参数](../ide/how-to-substitute-parameters-in-a-template.md)。
+3. 修改代码文件，以指示应进行参数替换的位置。 有关详细信息，请参阅 [如何：替换模板中的参数](../ide/how-to-substitute-parameters-in-a-template.md)。
 
-4. 在“文件”菜单上，单击“导出模板”。
+4. 在“文件”**** 菜单上，单击“导出模板”****。
 
-5. 单击“项模板”，选择包含该项的项目，然后单击“下一步”。
+5. 单击“项模板”****，选择包含该项的项目，然后单击“下一步”****。
 
-6. 选择要为其创建模板的项，然后单击“下一步”。
+6. 选择要为其创建模板的项，然后单击“下一步”****。
 
-7. 选择要包含到模板中的程序集引用，然后单击“下一步”。
+7. 选择要包含到模板中的程序集引用，然后单击“下一步”****。
 
-8. 键入图标文件名、预览图像、模板名称和模板说明，然后单击“完成”。
+8. 键入图标文件名、预览图像、模板名称和模板说明，然后单击“完成”****。
 
-     模板文件被添加到 .zip 文件中，并复制到你在对话框中指定的任何目录。 默认位置是 **..\Users\\<username\>\Documents\Visual Studio \<Version>\My Exported Templates\\** 文件夹。
+     模板文件被添加到 .zip 文件中，并复制到你在对话框中指定的任何目录。 默认位置为 **.。\Users \\<username \> \Documents\Visual Studio \<Version> \My 导出的 \\ 模板**"文件夹。
 
     > [!WARNING]
-    > 在 Visual Studio 的早期版本中，默认位置是 **..\Users\\<username\>\Documents\Visual Studio \<Version>\Templates\ItemTemplates**。
+    > 在 Visual Studio 的早期版本中，默认位置为 **.。\Users \\<username \> \Documents\Visual Studio \<Version> \Templates\ItemTemplates**。
 
 ### <a name="to-enable-the-item-template-to-be-used-in-a-store-project"></a>启用要在应用商店项目中使用的项模板
 
 1. 按照上述过程中的步骤导出项目模板。
 
-2. 从复制到 ..\Users\\username\Documents\Visual Studio Version\Templates\ItemTemplates\（或 **My Exported Templates**）文件夹的 .zip 文件中提取 .vstemplate 文件。
+2. 从复制到 ..\Users\\username** \Documents\Visual Studio Version** \Templates\ItemTemplates\（或 **My Exported Templates**）文件夹的 .zip 文件中提取 .vstemplate 文件。
 
 3. 在 Visual Studio 中打开 .vstemplate 文件。
 
@@ -67,7 +67,7 @@ ms.locfileid: "72668075"
 
     C++ Windows 8.1 应用商店项目使用的值为 `WinRT-Native-6.3`。 有关 Windows 10 及其他项目类型，请参阅 [TemplateGroupID 元素（Visual Studio 模板）](../extensibility/templategroupid-element-visual-studio-templates.md)。
 
-    下面的示例显示添加 XML 行 `<TemplateGroupID>WinRT-Managed</TemplateGroupID>` 之后，.vstemplate 文件的全部内容。 此示例特定于 C# 项目。 您可以修改 \<ProjectType > 并 \< [TemplateGroupID](../extensibility/templategroupid-element-visual-studio-templates.md)> 元素来指定其他语言和项目类型。
+    下面的示例显示添加 XML 行 `<TemplateGroupID>WinRT-Managed</TemplateGroupID>` 之后，.vstemplate 文件的全部内容。 此示例特定于 C# 项目。 您可以修改 \<ProjectType> 和 \< [TemplateGroupID](../extensibility/templategroupid-element-visual-studio-templates.md)> 元素以指定其他语言和项目类型。
 
    ```xml
    <VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">
@@ -92,11 +92,11 @@ ms.locfileid: "72668075"
 
 5. 在 Visual Studio 中，保存 .vstemplate 文件并将其关闭。
 
-6. 复制 .vstemplate 文件并将其粘贴至 ..\Users\\username\Documents\Visual Studio Version\Templates\ItemTemplates\ 文件夹中的 .zip 文件。
+6. 复制 .vstemplate 文件并将其粘贴至 ..\Users\\username** \Documents\Visual Studio Version** \Templates\ItemTemplates\ 文件夹中的 .zip 文件。
 
     如果出现“复制文件”对话框，请选择“复制和替换”选项。
 
-   现在，可以使用“添加新项”对话框，将基于此模板的项添加到 [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] 项目。
+   现在，可以使用“添加新项”**** 对话框，将基于此模板的项添加到 [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] 项目。
 
    有关参数名称的详细信息，请参阅[模板参数](../ide/template-parameters.md)。
 
@@ -157,5 +157,5 @@ ms.locfileid: "72668075"
 
 8. 复制该 .zip 文件并将其粘贴到用户的项模板位置。 在 Visual Studio 2015 中，默认目录是 ..\Users\\<username\>\Documents\Visual Studio 2015\Templates\ItemTemplates\\。 有关详细信息，请参阅“如何：查找和组织项目和项模板”。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [创建项目和项模板](../ide/creating-project-and-item-templates.md)[如何：创建多文件项模板](../ide/how-to-create-multi-file-item-templates.md) [Visual Studio 模板架构引用](../extensibility/visual-studio-template-schema-reference.md)

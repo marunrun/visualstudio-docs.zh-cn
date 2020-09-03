@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 1b65f2279270be0d5baef16d6d06e35a7fb0b854
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72669542"
 ---
 # <a name="walkthrough-using-xslt-intellisense"></a>演练：使用 XSLT IntelliSense
@@ -162,5 +162,5 @@ ms.locfileid: "72669542"
 
      请注意前缀列表在 `stylesheet-prefix` 元素的 `result-prefix` 和 `xsl:namespace-alias` 特性中的显示方式。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [XML 编辑器的 IntelliSense 功能](../xml-tools/xml-editor-intellisense-features.md)

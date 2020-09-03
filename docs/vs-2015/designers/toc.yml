@@ -38,7 +38,7 @@
               items:
                 - name: 键盘快捷方式和修改键
                   href: keyboard-shortcuts-and-modifier-keys-in-blend.md
-                - name: 键盘快捷方式
+                - name: 键盘快捷键
                   href: keyboard-shortcuts-in-blend.md
                 - name: 美工板修改键
                   href: artboard-modifier-keys-in-blend.md
@@ -88,15 +88,15 @@
                       items:
                         - name: XElement 类动态属性
                           href: xelement-class-dynamic-properties.md
-                        - name: Attribute
+                        - name: 特性
                           href: attribute-xelement-dynamic-property.md
                         - name: 元素
                           href: element-xelement-dynamic-property.md
                         - name: 元素
                           href: elements-xelement-dynamic-property.md
-                        - name: Descendants
+                        - name: 子代
                           href: descendants-xelement-dynamic-property.md
-                        - name: 值
+                        - name: “值”
                           href: value-xelement-dynamic-property.md
                         - name: Xml
                           href: xml-xelement-dynamic-property.md

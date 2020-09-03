@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 380aaa5bed1e30c549334bc004ea38e3f0bdb762
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72669925"
 ---
 # <a name="define-a-work-item-link-handler"></a>定义工作项链接处理程序
@@ -34,9 +34,9 @@ ms.locfileid: "72669925"
 
 1. 创建一个类库项目，将该项目添加到现有 VSIX 解决方案或创建一个新的解决方案。
 
-    1. 在“文件” 菜单上，选择“新建”、“项目”。
+    1. 在 **“文件”** 菜单上，选择 **“新建”**、**“项目”**。
 
-    2. 在 "**已安装的模板**" 下展开 "  **C#视觉对象**" 或 " **Visual Basic**"，然后在中间栏**中单击 "类库"**
+    2. 在 " **已安装的模板**" 下，展开 **Visual c #** 或 **Visual Basic**，然后在中间栏 **中单击 "类库"**。
 
     3. 设置 **“解决方案”** 以指示你是希望创建新的解决方案，还是希望向已打开的 VSIX 解决方案添加组件。
 
@@ -44,27 +44,27 @@ ms.locfileid: "72669925"
 
 2. 除非你的解决方案已经包含一个项目，否则请创建一个 VSIX 项目。
 
-    1. 在“解决方案资源管理器”中，在该解决方案的快捷菜单上依次选择“添加”、“新建项目”。
+    1. 在“解决方案资源管理器” **** 中，在该解决方案的快捷菜单上依次选择“添加” ****、“新建项目” ****。
 
-    2. 在“已安装的模板”下，展开“Visual C#” 或“Visual Basic”，然后选择“扩展性”。 在中间栏中，选择“VSIX 项目”。
+    2. 在“已安装的模板” **** 下，展开“Visual C#” **** 或“Visual Basic” ****，然后选择“扩展性” ****。 在中间栏中，选择“VSIX 项目” ****。
 
 3. 将 VSIX 项目设置为解决方案的启动项目。
 
-    - 在“解决方案资源管理器”中，VSIX 项目的快捷菜单上选择“设为启动项目”。
+    - 在“解决方案资源管理器”中，VSIX 项目的快捷菜单上选择“设为启动项目” ****。
 
-4. 在**source.extension.vsixmanifest**的 "**内容**" 下，将类库项目添加为 MEF 组件。
+4. 在 **source.extension.vsixmanifest**的 " **内容**" 下，将类库项目添加为 MEF 组件。
 
-    1. 在“元数据” 选项卡上，设置 VSIX 的名称。
+    1. 在“元数据” **** 选项卡上，设置 VSIX 的名称。
 
-    2. 在“安装目标” 选项卡上，将 Visual Studio 版本设置为目标。
+    2. 在“安装目标” **** 选项卡上，将 Visual Studio 版本设置为目标。
 
-    3. 在“资产” 选项卡上，选择“新建”，并在对话框中进行如下设置：
+    3. 在“资产” **** 选项卡上，选择 ****“新建”，并在对话框中进行如下设置：
 
-         **类型** = **MEF 组件**
+         **类型**  = **MEF 组件**
 
-          = **当前解决方案中的项目**
+         **源**  = **当前解决方案中的项目**
 
-          = *你的类库项目*
+         **项目**  = *你的类库项目*
 
 ## <a name="defining-the-work-item-link-handler"></a>定义工作项链接处理程序
  在类库项目中执行所有以下任务。
@@ -82,12 +82,12 @@ ms.locfileid: "72669925"
 
  `System.ComponentModel.Composition`
 
- `System.Drawing`-代码示例使用
+ `System.Drawing` -由示例代码使用
 
- 如果在 "**添加引用**" 对话框的 " **.net** " 选项卡下找不到其中一个引用，请使用 "浏览" 选项卡在 \Program Files\Microsoft Visual Studio [version] \Common7\IDE\PrivateAssemblies \\ 中查找它。
+ 如果在 "**添加引用**" 对话框的 " **.net** " 选项卡下找不到其中一个引用，请使用 "浏览" 选项卡在 \Program Files\Microsoft Visual Studio [version] \Common7\IDE\PrivateAssemblies 中查找它 \\ 。
 
 ### <a name="import-the-work-item-namespace"></a>导入工作项命名空间
- 在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 项目**引用**中，添加对以下程序集的引用：
+ 在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 项目 **引用**中，添加对以下程序集的引用：
 
 - Microsoft.TeamFoundation.WorkItemTracking.Client.dll
 
@@ -156,19 +156,19 @@ namespace WorkItems
 
 #### <a name="to-test-the-link-handler"></a>测试链接处理程序
 
-1. 按“F5”，或在“调试” 菜单上，选择“开始调试”。
+1. 按“F5” ****，或在“调试” **** 菜单上，选择“开始调试” ****。
 
      此时将启动 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的实验实例。
 
-     **故障排除**：如果新的 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 没有启动，请确保将 VSIX 项目设置为解决方案的启动项目。
+     **故障排除**：如果新的 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 未启动，请确保将 VSIX 项目设置为解决方案的启动项目。
 
 2. 在实验性 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]中，打开或创建一个建模项目，然后打开或创建一个建模图。
 
 3. 创建模型元素（如 UML 类）并设置其名称。
 
-4. 右键单击元素，然后单击 "**创建工作项**"。
+4. 右键单击元素，然后单击 " **创建工作项**"。
 
-    - 如果子菜单显示 "**打开 Team Foundation Server 连接**"，则需要关闭项目，连接到相应的 TFS，然后重新启动此过程。
+    - 如果子菜单显示 " **打开 Team Foundation Server 连接**"，则需要关闭项目，连接到相应的 TFS，然后重新启动此过程。
 
     - 如果子菜单显示工作项类型的列表，请单击其中一个类型。
 
@@ -191,7 +191,7 @@ namespace WorkItems
 ## <a name="about-the-work-item-handler-code"></a>关于工作项处理程序代码
 
 ### <a name="listening-for-new-work-items"></a>侦听新的工作项
- 用户选择创建要链接到模型元素的新工作项时调用 `OnWorkItemCreated`。 你的代码可以初始化工作项字段。 然后将向用户呈现工作项，用户可以更新字段和保存工作项。 已成功保存工作项之前，将不会创建指向模型元素的链接。
+ `OnWorkItemCreated` 当用户选择创建要链接到模型元素的新工作项时，将调用。 你的代码可以初始化工作项字段。 然后将向用户呈现工作项，用户可以更新字段和保存工作项。 已成功保存工作项之前，将不会创建指向模型元素的链接。
 
 ```
 public void OnWorkItemCreated(
@@ -206,7 +206,7 @@ public void OnWorkItemCreated(
 ```
 
 ### <a name="listening-for-link-creation"></a>侦听链接创建
- `OnWorkItemLinked` 于创建链接后立即调用。 无论链接是指向新工作项还是现有项，均调用它。 为每个工作项调用一次。
+ `OnWorkItemLinked` 在创建链接之后立即调用。 无论链接是指向新工作项还是现有项，均调用它。 为每个工作项调用一次。
 
 ```
 public void OnWorkItemLinked
@@ -224,7 +224,7 @@ public void OnWorkItemLinked
 > 若要使此示例中起作用，必须添加对 `System.Drawing.dll`的项目引用，并导入命名空间 `Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation`。 但是，对于 `OnWorkItemLinked` 的其他实现则无需这些添加。
 
 ### <a name="listening-for-link-removal"></a>侦听链接删除
- 恰好在删除的每个工作项之前调用 `OnWorkItemRemoved`。 如果删除了模型元素，则将删除其所有链接。
+ `OnWorkItemRemoved` 只在删除的每个工作项链接之前调用一次。 如果删除了模型元素，则将删除其所有链接。
 
 ```
 public void OnWorkItemRemoved
@@ -293,7 +293,7 @@ element.AddReference(ReferenceConstants.WorkItem, linkString, true);
 
   ```
 
-  有关引用的详细信息，请参阅[将引用字符串附加到 UML 模型元素](../modeling/attach-reference-strings-to-uml-model-elements.md)。
+  有关引用的详细信息，请参阅 [将引用字符串附加到 UML 模型元素](../modeling/attach-reference-strings-to-uml-model-elements.md)。
 
 ## <a name="see-also"></a>请参阅
 
@@ -301,4 +301,4 @@ element.AddReference(ReferenceConstants.WorkItem, linkString, true);
 - [链接模型元素和工作项](../modeling/link-model-elements-and-work-items.md)
 - [将引用字符串附加到 UML 模型元素](../modeling/attach-reference-strings-to-uml-model-elements.md)
 - [定义和安装建模扩展](../modeling/define-and-install-a-modeling-extension.md)
-- [使用 UML API 编程](../modeling/programming-with-the-uml-api.md)
+- [Programming with the UML API](../modeling/programming-with-the-uml-api.md)

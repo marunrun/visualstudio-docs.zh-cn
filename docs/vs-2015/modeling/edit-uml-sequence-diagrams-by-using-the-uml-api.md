@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: cbc7a6ce7edede6759c0562df1e524d932f62b91
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72669716"
 ---
 # <a name="edit-uml-sequence-diagrams-by-using-the-uml-api"></a>使用 UML API 编辑 UML 序列图
@@ -23,9 +23,9 @@ ms.locfileid: "72669716"
 
 交互是一组生命线之间的消息序列。 交互显示在 UML 序列图上。
 
- 有关 API 的完整详细信息，请参阅[VisualStudio](/previous-versions/dd493373(v=vs.140))。
+ 有关 API 的完整详细信息，请参阅 [VisualStudio](/previous-versions/dd493373(v=vs.140))。
 
- 有关编写用于 UML 关系图的命令和笔势处理程序的更一般的介绍，请参阅[在建模图上定义菜单命令](../modeling/define-a-menu-command-on-a-modeling-diagram.md)。
+ 有关编写用于 UML 关系图的命令和笔势处理程序的更一般的介绍，请参阅 [在建模图上定义菜单命令](../modeling/define-a-menu-command-on-a-modeling-diagram.md)。
 
 ## <a name="basic-code"></a>基本代码
 
@@ -52,10 +52,10 @@ using Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation;
    // for diagrams and context
 ```
 
- 有关详细信息，请参阅[在建模图上定义菜单命令](../modeling/define-a-menu-command-on-a-modeling-diagram.md)。
+ 有关详细信息，请参阅 [在建模图上定义菜单命令](../modeling/define-a-menu-command-on-a-modeling-diagram.md)。
 
 ### <a name="getting-the-context"></a>获取上下文
- 如果正在编辑作为序列图中命令或笔势处理程序一部分的交互，则可以获取对上下文的引用。 例如:
+ 如果正在编辑作为序列图中命令或笔势处理程序一部分的交互，则可以获取对上下文的引用。 例如：
 
 ```
 [SequenceDesignerExtension]
@@ -124,7 +124,7 @@ public void Execute (IMenuCommand command)
 
   在插入新元素或移动现有元素时，这一点尤为重要。 在执行这些操作的其中一个之前，它们将不会位于关系图上的正确位置。 你只需在一系列更改结束时调用这些操作的其中一个。
 
-  若要避免对在命令之后执行撤消操作的用户造成困惑，请使用 `ILinkedUndoTransaction` 以包括你的更改和最终的 `Layout()` 或 `UpdateShapePositions()` 操作。 例如:
+  若要避免对在命令之后执行撤消操作的用户造成困惑，请使用 `ILinkedUndoTransaction` 以包括你的更改和最终的 `Layout()` 或 `UpdateShapePositions()` 操作。 例如：
 
 ```
 using (ILinkedUndoTransaction transaction = LinkedUndoContext.BeginTransaction("create loop"))
@@ -141,7 +141,7 @@ using (ILinkedUndoTransaction transaction = LinkedUndoContext.BeginTransaction("
 [Import] ILinkedUndoContext LinkedUndoContext { get; set; }
 ```
 
- 有关详细信息，请参阅[使用事务链接 UML 模型更新](../modeling/link-uml-model-updates-by-using-transactions.md)。
+ 有关详细信息，请参阅 [使用事务链接 UML 模型更新](../modeling/link-uml-model-updates-by-using-transactions.md)。
 
 ## <a name="building-an-interaction"></a>生成交互
 
@@ -184,7 +184,7 @@ System.Diagnostics.Debug.Assert(
 ```
 
 ### <a name="to-create-messages"></a>创建消息
- 若要创建消息，则必须确定源生命线和目标生命线上的插入点。 例如:
+ 若要创建消息，则必须确定源生命线和目标生命线上的插入点。 例如：
 
 ```
 interaction.CreateMessage( sourceInsertionPoint,
@@ -246,11 +246,11 @@ cf.CreateInteractionOperand(cf.Operands.Last(), true);
 
  大多数其他问题都是由未对齐的插入点引起的，进而导致新消息或片段跨其他消息或片段。 症状可能是未执行任何更改，或者引发异常。 在执行 `UpdateShapePositions()` 或 `Layout()` 操作之前，不会引发异常。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [VisualStudio。](/previous-versions/dd493373(v=vs.140))
 - [扩展 UML 模型和关系图](../modeling/extend-uml-models-and-diagrams.md)
 - [在建模图上定义菜单命令](../modeling/define-a-menu-command-on-a-modeling-diagram.md)
 - [定义自定义建模工具箱项](../modeling/define-a-custom-modeling-toolbox-item.md)
 - [为 UML 模型定义验证约束](../modeling/define-validation-constraints-for-uml-models.md)
-- [使用 UML API 编程](../modeling/programming-with-the-uml-api.md)
+- [Programming with the UML API](../modeling/programming-with-the-uml-api.md)

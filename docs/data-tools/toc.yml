@@ -34,7 +34,7 @@
       href: creating-and-managing-databases-and-data-tier-applications-in-visual-studio.md
     - name: n 层数据应用程序概述
       href: n-tier-data-applications-overview.md
-- name: 操作方法指南
+- name: 操作指南
   items:
     - name: 创建数据库
       href: create-a-sql-database-by-using-a-designer.md

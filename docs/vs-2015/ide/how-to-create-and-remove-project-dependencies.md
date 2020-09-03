@@ -19,20 +19,20 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: a1403beccdb6bf9b938787f62cb3da2e5bb5c259
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72668125"
 ---
 # <a name="how-to-create-and-remove-project-dependencies"></a>如何：创建和移除项目依赖项
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-生成包含多个项目的解决方案时，可能需要首先生成某些项目，然后才能生成由其他项目使用的代码。 当一个项目使用另一个项目生成的可执行代码时，生成代码的项目则称为使用代码的项目的项目依赖项。 可在“项目依赖项”  对话框中定义此类依赖关系。
+生成包含多个项目的解决方案时，可能需要首先生成某些项目，然后才能生成由其他项目使用的代码。 当一个项目使用另一个项目生成的可执行代码时，生成代码的项目则称为使用代码的项目的项目依赖项。 可在 " **项目依赖项** " 对话框中定义此类依赖关系。
 
 ### <a name="to-assign-dependencies-to-projects"></a>将依赖项分配给项目
 
-1. 在“解决方案资源管理器”中，选择一个项目。
+1. 在解决方案资源管理器中，选择一个项目。
 
 2. 在“项目”  菜单上，选择“项目依赖项”  。
 
@@ -49,7 +49,7 @@ ms.locfileid: "72668125"
 
 ### <a name="to-remove-dependencies-from-projects"></a>删除项目中的依赖项
 
-1. 在“解决方案资源管理器”中，选择一个项目。
+1. 在解决方案资源管理器中，选择一个项目。
 
 2. 在“项目”  菜单上，选择“项目依赖项”  。
 
