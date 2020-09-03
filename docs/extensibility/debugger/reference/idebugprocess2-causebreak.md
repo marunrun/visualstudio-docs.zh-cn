@@ -1,5 +1,5 @@
 ---
-title: IDebugProcess2：：原因中断 |微软文档
+title: IDebugProcess2：： CauseBreak |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 298312ae285eed1de29a3092db900f06e8f7d19a
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80724171"
 ---
 # <a name="idebugprocess2causebreak"></a>IDebugProcess2::CauseBreak
-请求在此过程中运行代码的下一个程序停止并发送[IDebugBreakEvent2](../../../extensibility/debugger/reference/idebugbreakevent2.md)事件对象。
+请求运行此进程中的代码的下一个程序停止并发送 [IDebugBreakEvent2](../../../extensibility/debugger/reference/idebugbreakevent2.md) 事件对象。
 
 ## <a name="syntax"></a>语法
 
@@ -38,7 +38,7 @@ int CauseBreak();
 ```
 
 ## <a name="return-value"></a>返回值
- 如果成功，返回`S_OK`;否则，返回错误代码。
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)

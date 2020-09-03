@@ -169,7 +169,7 @@ Team Members:
 
 你还可以将自己的关系图类型设计为域特定语言 (DSL) 。 可从 UML 和 Dsl 生成代码。 有关详细信息，请参阅 [体系结构分析和建模](../modeling/analyze-and-model-your-architecture.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [使用 T4 文本模板生成设计时代码](../modeling/design-time-code-generation-by-using-t4-text-templates.md)
 - [使用 T4 文本模板的运行时文本生成](../modeling/run-time-text-generation-with-t4-text-templates.md)

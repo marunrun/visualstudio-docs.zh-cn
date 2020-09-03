@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: adad9ec70290f426ce7c3c59ad13ff8636a69463
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85541318"
 ---
 # <a name="how-to-read-from-and-write-to-document-properties"></a>如何：读取和写入文档属性
@@ -78,7 +78,7 @@ ms.locfileid: "85541318"
 
  虽然你可以使用 Word 和 Excel 及其对象，但 Microsoft Office 仍然提供了可用的内置文档属性的列表。 尝试访问未定义的属性会引发异常。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [程序 VSTO 外接程序](../vsto/programming-vsto-add-ins.md)
 - [程序文档级自定义项](../vsto/programming-document-level-customizations.md)
 - [如何：创建和修改自定义文档属性](../vsto/how-to-create-and-modify-custom-document-properties.md)
