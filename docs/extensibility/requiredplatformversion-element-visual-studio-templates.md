@@ -1,5 +1,5 @@
 ---
-title: 所需平台版本元素（可视化工作室模板） |微软文档
+title: " (Visual Studio 模板) 的 RequiredPlatformVersion 元素 |Microsoft Docs"
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -10,20 +10,20 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 3bc22f97401fe5e3724f2e44c873c72acbf65be1
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80701493"
 ---
-# <a name="requiredplatformversion-element-visual-studio-templates"></a>必需平台版本元素（可视化工作室模板）
-指定项目模板正常工作所需的操作系统的最小版本。 此元素用于创建[!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)]应用的项目模板。
+# <a name="requiredplatformversion-element-visual-studio-templates"></a> (Visual Studio 模板的 RequiredPlatformVersion 元素) 
+指定项目模板正常运行所需的操作系统的最低版本。 此元素用于创建应用程序的项目模板 [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] 。
 
- 该`RequiredPlatformVersion`值与操作系统的版本直接进行比较。 如果`RequiredPlatformVersion`高于操作系统版本，则模板不会显示在 **"新项目**"对话框中。 要为[!INCLUDE[win8](../debugger/includes/win8_md.md)]或更高指定模板，请设置为`RequiredPlatformVersion`6.2.0。 要为[!INCLUDE[win81](../debugger/includes/win81_md.md)]或更高指定模板，请设置为`RequiredPlatformVersion`6.3.0。
+ `RequiredPlatformVersion`该值与操作系统的版本直接进行比较。 如果 `RequiredPlatformVersion` 高于操作系统版本，则该模板不会显示在 " **新建项目** " 对话框中。 若要为 [!INCLUDE[win8](../debugger/includes/win8_md.md)] 或更高版本指定模板，请将设置 `RequiredPlatformVersion` 为6.2.0。 若要为 [!INCLUDE[win81](../debugger/includes/win81_md.md)] 或更高版本指定模板，请将设置 `RequiredPlatformVersion` 为6.3.0。
 
- 指定`RequiredPlatformVersion`|8 的模板与以前的客户[!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)]模板兼容。
+ 指定 `RequiredPlatformVersion` = 8 的模板与以前的客户 [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] 模板兼容。
 
- VSTemplate 模板数据 ...目标平台名称必需平台版本
+ .Vstemplate TemplateData ...。TargetPlatformName RequiredPlatformVersion
 
 ## <a name="syntax"></a>语法
 
@@ -42,15 +42,15 @@ ms.locfileid: "80701493"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
-|[模板平台名称](../extensibility/templatedata-element-visual-studio-templates.md)|指定项目模板面向的平台。|
+|[TemplatePlatformName](../extensibility/templatedata-element-visual-studio-templates.md)|指定项目模板面向的平台。|
 
 ## <a name="text-value"></a>文本值
  需要一个文本值。
 
 ## <a name="remarks"></a>备注
- 此文本指定模板所需的最小操作系统版本。
+ 此文本指定模板所需的最低操作系统版本。
 
 ## <a name="example"></a>示例
  此示例指定项目模板面向 [!INCLUDE[win8](../debugger/includes/win8_md.md)] 或更高版本。
@@ -68,7 +68,7 @@ ms.locfileid: "80701493"
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>请参阅
-- [目标平台名称元素（可视化工作室模板）](../extensibility/targetplatformname-element-visual-studio-templates.md)
+## <a name="see-also"></a>另请参阅
+- [ (Visual Studio 模板的 TargetPlatformName 元素) ](../extensibility/targetplatformname-element-visual-studio-templates.md)
 - [创建项目和项模板](../ide/creating-project-and-item-templates.md)
-- [可视化工作室模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
+- [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)

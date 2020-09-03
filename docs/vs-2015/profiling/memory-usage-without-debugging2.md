@@ -15,10 +15,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: ce7d30b66106b8d0d861fcf782a77ee7f461196b
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85532036"
 ---
 # <a name="memory-usage-without-debugging"></a>不调试的内存使用情况
@@ -34,7 +34,7 @@ ms.locfileid: "85532036"
   
   本主题介绍如何使用“内存使用率”工具分析 Windows Universal XAML 应用。 如果想要在使用 JavaScript 和 HTML 的 Windows 通用应用中分析内存使用情况，请参阅[分析内存使用率 (JavaScript)](https://msdn.microsoft.com/library/windows/apps/jj819176.aspx)。  
   
-## <a name="start-a-memory-usage-diagnostic-session"></a><a name="BKMK_Start_a_Memory_Usage_diagnostic_session"></a>启动内存使用情况诊断会话  
+## <a name="start-a-memory-usage-diagnostic-session"></a><a name="BKMK_Start_a_Memory_Usage_diagnostic_session"></a> 启动内存使用情况诊断会话  
   
 1. 在 Visual Studio 中打开 C# 通用 Windows 项目。  
   
@@ -44,10 +44,10 @@ ms.locfileid: "85532036"
   
      ![启动内存使用量诊断会话](../profiling/media/memuse-start-diagnosticssession.png "MEMUSE_Start_DiagnosticsSession")  
   
-## <a name="monitor-memory-use"></a><a name="BKMK_Monitor_memory_use"></a>监视内存使用情况  
+## <a name="monitor-memory-use"></a><a name="BKMK_Monitor_memory_use"></a> 监视内存使用情况  
  虽然可以使用**内存使用率**工具生成可用于查找并修复问题的详细报告，但也可以使用它来研究主动制订的方案的实时内存效果。  
   
- 启动诊断会话时，应用将启动，并且 "**诊断工具**" 窗口将显示应用的内存使用情况的时间线关系图。  
+ 启动诊断会话时，应用将启动，并且 " **诊断工具** " 窗口将显示应用的内存使用情况的时间线关系图。  
   
  ![内存使用量概述页](../profiling/media/memuse-reportoverview.png "MEMUSE__ReportOverview")  
   
@@ -58,12 +58,12 @@ ms.locfileid: "85532036"
   
  若要在不创建报告的情况下监视会话，只需关闭诊断窗口。 若要在拍摄内存快照后生成报告，请选择“停止”****。  
   
-## <a name="take-snapshots-of-the-memory-state-of-your-app"></a><a name="BKMK_Take_snapshots_to_analyze_the_memory_state_of_your_app"></a>获取应用的内存状态的快照  
+## <a name="take-snapshots-of-the-memory-state-of-your-app"></a><a name="BKMK_Take_snapshots_to_analyze_the_memory_state_of_your_app"></a> 获取应用的内存状态的快照  
  如果发现要调查的内存问题，可以在诊断会话期间拍摄快照，以在特定时刻捕获内存中的对象。 由于应用使用大量不同类型的对象，因此你可能希望集中分析某一种情况。 还有一个较好的办法是，在出现内存问题之前获取应用的基线快照，首次出现问题后获取另一个快照，并且在重复执行该方案时获取一个或多个其他快照。  
   
  若要收集快照，请启动新的诊断会话。 在想要捕获内存数据时选择“拍摄快照”****。 若要生成报告，请选择“停止”****。  
   
-## <a name="memory-usage-overview-page"></a><a name="BKMK_Memory_Usage_overview_page"></a>"内存使用率" 概述页  
+## <a name="memory-usage-overview-page"></a><a name="BKMK_Memory_Usage_overview_page"></a> "内存使用率" 概述页  
  在停止收集数据后，内存使用量工具将停止应用并显示概述报告。  
   
  ![内存使用量概述页](../profiling/media/memuse-reportoverview.png "MEMUSE__ReportOverview")  
@@ -79,7 +79,7 @@ ms.locfileid: "85532036"
   
   快照视图图片中带编号的项是可以打开内存使用量报告视图的链接。  
   
-|映像|描述|  
+|图像|描述|  
 |-|-|  
 |![步骤 1](../profiling/media/procguid-1.png "ProcGuid_1")|链接文本显示了在拍摄快照后内存中的总字节数。<br /><br /> 选择此链接以显示快照详细信息报告，该报告按类型实例的总大小进行排序。|  
 |![步骤 2](../profiling/media/procguid-2.png "ProcGuid_2")|链接文本显示了在拍摄快照后内存中的对象总数。<br /><br /> 选择此链接以显示快照详细信息报告，该报告按类型实例的计数进行排序。|  
@@ -112,30 +112,30 @@ ms.locfileid: "85532036"
   
  ![对选项进行排序和筛选](../profiling/media/memuse-sortandfilter.png "MEMUSE_SortAndFilter")  
   
-#### <a name="filter"></a><a name="BKMK_Filter"></a>筛选器  
+#### <a name="filter"></a><a name="BKMK_Filter"></a> 筛选器  
  在“筛选器”**** 框中输入字符串，以将树显示的内容限制为包含指定文本的类型。 筛选器不区分大小写，并且可识别类型名称任意部分中指定的字符串。  
   
 #### <a name="collapse-small-objects"></a><a name="BKMK_Collapse_Small_Objects"></a>折叠小对象  
  在应用此筛选器后，其“大小(字节)”**** 小于快照内存总大小的 0.5% 的类型将在**托管堆**列表中隐藏。  
   
-#### <a name="just-my-code"></a><a name="BKMK_Just_My_Code"></a>仅我的代码  
+#### <a name="just-my-code"></a><a name="BKMK_Just_My_Code"></a> 仅我的代码  
  **仅我的代码**筛选器将隐藏外部代码生成的大多数实例。 外部类型属于操作系统或 Framework 组件，或者由编译器生成。  
   
-## <a name="snapshot-details-reports"></a><a name="BKMK_Snapshot_details_reports"></a>快照详细信息报告  
+## <a name="snapshot-details-reports"></a><a name="BKMK_Snapshot_details_reports"></a> 快照详细信息报告  
  可以使用快照详细信息报告专注于诊断会话中的某个快照。 若要打开详细信息报告，可在快照视图中选择一个链接，如下图所示。 这两个链接打开的都是相同的报告；唯一的差异是在报告中**托管堆**树的启动排序顺序不同。 在这两种情况下，你可以在报告打开后更改排序顺序。  
   
  ![指向快照视图中快照报表的链接](../profiling/media/memuse-snapshotview-snapshotdetailslinks.png "MEMUSE_SnapshotView_SnapshotDetailsLinks")  
   
 - **MB** 链接按“非独占大小(字节)”**** 列对报告进行排序。  
   
-- "**对象**" 链接按 "**计数**" 列对报表进行排序。  
+- " **对象** " 链接按 " **计数** " 列对报表进行排序。  
   
 ### <a name="managed-heap-tree-snapshot-details"></a><a name="BKMK_Managed_Heap_tree__Snapshot_details_"></a>托管堆树（快照详细信息）  
  **托管堆**树列出了内存中保存的对象类型。 你可以展开类型名称以查看十大类型示例（按大小排列）。 通过选择类型或实例，可以显示选定项的**根路径**和**引用的对象**树。  
   
  ![托管堆树](../profiling/media/memuse-snapshotdetails-managedheaptree.png "MEMUSE__SnapshotDetails_ManagedHeapTree")  
   
-|“属性”|描述|  
+|名称|描述|  
 |-|-|  
 |“对象类型”|类型或对象实例的名称。|  
 |“计数”|类型的对象实例数。 对于实例，该数量始终为 1。|  
@@ -154,20 +154,20 @@ ms.locfileid: "85532036"
   
  ![引用的实例对象树](../profiling/media/memuse-snapshotdetails-referencedobjects-instance.png "MEMUSE_SnapshotDetails_ReferencedObjects_Instance")  
   
-|“属性”|描述|  
+|名称|说明|  
 |-|-|  
 |“对象类型/实例”****|类型或对象实例的名称。|  
 |“大小(字节)”|对于类型，则为所有类型实例的大小，排除类型中包含的对象的大小。<br /><br /> 对于实例，则为对象的大小，排除实例中包含的对象大小。|  
 |“非独占大小(字节)”|类型实例的总大小或实例的大小，其中包括所包含的对象的大小。|  
   
-## <a name="snapshot-difference-diff-reports"></a><a name="BKMK_Snapshot_difference__diff__reports"></a>快照差异（差异）报告  
+## <a name="snapshot-difference-diff-reports"></a><a name="BKMK_Snapshot_difference__diff__reports"></a> 快照差异 (差异) 报表  
  快照差异报告显示主要快照和紧接着在它之前拍摄的快照之间的更改。 若要打开差异报告，可在快照视图中选择一个链接，如下图所示。 这两个链接打开的都是相同的报告；唯一的差异是在报告中**托管堆**树的启动排序顺序不同。 你可以在报告打开后更改排序顺序。  
   
  ![指向快照视图中差异报表的链接](../profiling/media/memuse-snapshotview-snapshotdifflinks.png "MEMUSE_SnapshotView_SnapshotDiffLinks")  
   
 - **MB** 链接按“非独占大小(字节)”**** 列对报告进行排序。  
   
-- "**对象**" 链接按 "**计数**" 列对报表进行排序。  
+- " **对象** " 链接按 " **计数** " 列对报表进行排序。  
   
 ### <a name="managed-heap-tree-snapshot-diff"></a><a name="BKMK_Managed_Heap_tree__Snapshot_diff_"></a>托管堆树（快照差异）  
  **托管堆**树列出了内存中保存的对象类型。 你可以展开类型名称以查看十大类型示例（按大小排列）。 通过选择类型或实例，可以显示选定项的**根路径**和**引用的对象**树。  
@@ -176,7 +176,7 @@ ms.locfileid: "85532036"
   
  请注意，在该图片中，“计数”****、“大小(字节)”**** 和“非独占大小(字节)”**** 列已折叠。  
   
-|“属性”|描述|  
+|名称|描述|  
 |-|-|  
 |“对象类型”|类型或对象实例的名称。|  
 |“计数”|主要快照中的类型实例的数量。 对于实例，“计数”始终为 1。|  
@@ -196,7 +196,7 @@ ms.locfileid: "85532036"
   
  ![引用的实例对象树](../profiling/media/memuse-snapshotdetails-referencedobjects-instance.png "MEMUSE_SnapshotDetails_ReferencedObjects_Instance")  
   
-|“属性”|描述|  
+|名称|说明|  
 |-|-|  
 |“对象类型/实例”****|类型或对象实例的名称。|  
 |“大小(字节)”|对于实例，则为主要快照中的对象大小，排除该实例中包含的对象大小。<br /><br /> 对于类型，则为主要快照中类型实例的总大小，排除实例中包含的对象的大小。|  

@@ -15,10 +15,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 62da3a36a34a2111bb139765268fbb0bef9b500d
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85531919"
 ---
 # <a name="just-my-code"></a>仅我的代码
@@ -32,18 +32,18 @@ ms.locfileid: "85531919"
  ![“选项”对话框中的“启用‘仅我的代码’”](../debugger/media/dbg-justmycode-options.png "DBG_JustMyCode_Options")  
   
 > [!NOTE]
-> "**启用仅我的代码**" 设置是应用于所有语言的所有 Visual Studio 项目的全局设置。  
+> " **启用仅我的代码** " 设置是应用于所有语言的所有 Visual Studio 项目的全局设置。  
   
-### <a name="override-call-stack-filtering"></a><a name="BKMK_Override_call_stack_filtering"></a>重写调用堆栈筛选  
- 在调用堆栈显示中（如“调用堆栈”和“任务”窗口），“仅我的代码”会将非用户代码折叠为带有标签 `[External Code]` 的带批注帧。 若要查看折叠的帧，请在调用堆栈显示的上下文菜单中选择 "**显示外部代码**"。  
+### <a name="override-call-stack-filtering"></a><a name="BKMK_Override_call_stack_filtering"></a> 重写调用堆栈筛选  
+ 在调用堆栈显示中（如“调用堆栈”和“任务”窗口），“仅我的代码”会将非用户代码折叠为带有标签 `[External Code]` 的带批注帧。 若要查看折叠的帧，请在调用堆栈显示的上下文菜单中选择 " **显示外部代码** "。  
   
 > [!NOTE]
-> "**显示外部代码**" 设置保存到当前用户的探查器。 它会应用于所有语言中由用户打开的所有项目。  
+> " **显示外部代码** " 设置保存到当前用户的探查器。 它会应用于所有语言中由用户打开的所有项目。  
   
-## <a name="net-framework-just-my-code"></a><a name="BKMK__NET_Framework_Just_My_Code"></a>.NET Framework 仅我的代码  
+## <a name="net-framework-just-my-code"></a><a name="BKMK__NET_Framework_Just_My_Code"></a> .NET Framework 仅我的代码  
   
-### <a name="user-and-non-user-code"></a><a name="BKMK_NET_User_and_non_user_code"></a>用户和非用户代码  
- 为了区分用户代码和非用户代码，仅我的代码查看符号（.pdb）文件和程序优化。 当二进制文件进行了优化时或当 .pdb 文件不可用时，调试器会将代码视为非用户代码。  
+### <a name="user-and-non-user-code"></a><a name="BKMK_NET_User_and_non_user_code"></a> 用户和非用户代码  
+ 为了区分用户代码和非用户代码，仅我的代码查看符号 ( .pdb) 文件和程序优化。 当二进制文件进行了优化时或当 .pdb 文件不可用时，调试器会将代码视为非用户代码。  
   
  还有三个特性会影响调试器视为“我的代码”的内容：  
   
@@ -55,20 +55,20 @@ ms.locfileid: "85531919"
   
   将所有其他代码都视为用户代码。  
   
-### <a name="stepping-behavior"></a><a name="BKMK_NET_Stepping_behavior"></a>单步执行行为  
- **单步**执行（键盘快捷方式： F11）非用户代码时，调试器会逐过程执行代码到下一个用户语句。 **单步**执行（键盘： Shift + F11）时，调试器会运行到用户代码的下一行。 如果未遇到用户代码，则执行会继续，直到应用退出、命中断点或发生异常。  
+### <a name="stepping-behavior"></a><a name="BKMK_NET_Stepping_behavior"></a> 单步执行行为  
+ **单步**执行 (键盘快捷方式：按 F11) 非用户代码时，调试器会逐过程执行代码到下一个用户语句。 **跳出** (键盘： Shift + F11) 时，调试器会运行到用户代码的下一行。 如果未遇到用户代码，则执行会继续，直到应用退出、命中断点或发生异常。  
   
-### <a name="breakpoint-behavior"></a><a name="BKMK_NET_Breakpoint_behavior"></a>断点行为  
- 启用仅我的代码时，可以选择 "**全部中断**" （键盘： Ctrl + Alt + Break），并在没有要显示的用户代码的位置停止执行。 发生这种情况时，会显示“无源”窗口。 如果随后选择“单步执行”命令，则调试器会到达下一行用户代码。  
+### <a name="breakpoint-behavior"></a><a name="BKMK_NET_Breakpoint_behavior"></a> 断点行为  
+ 启用仅我的代码时，可以选择 " **全部中断** " (键盘： Ctrl + Alt + break) ，并在没有要显示的用户代码的位置停止执行。 发生这种情况时，会显示“无源”窗口。 如果随后选择“单步执行”命令，则调试器会到达下一行用户代码。  
   
-### <a name="exception-behavior"></a><a name="BKMK_NET_Exception_behavior"></a>异常行为  
+### <a name="exception-behavior"></a><a name="BKMK_NET_Exception_behavior"></a> 异常行为  
  如果在非用户代码中出现未经处理的异常，则调试器会在用户代码中生成异常的行上中断。  
   
  如果针对异常启用了第一机会异常，则以绿色突出显示用户代码行。 调用堆栈显示标记为 **[外部代码]** 的带批注的帧。  
   
 ## <a name="c-just-my-code"></a><a name="BKMK_C___Just_My_Code"></a>C++“仅我的代码”  
   
-### <a name="user-and-non-user-code"></a><a name="BKMK_CPP_User_and_non_user_code"></a>用户和非用户代码  
+### <a name="user-and-non-user-code"></a><a name="BKMK_CPP_User_and_non_user_code"></a> 用户和非用户代码  
  C++“仅我的代码”与 .NET Framework 和 JavaScript“仅我的代码”不同，因为单步执行行为独立于调用堆栈行为。  
   
  **调用堆栈**  
@@ -87,15 +87,15 @@ ms.locfileid: "85531919"
   
   可以在 `%USERPROFILE%\My Documents\Visual Studio 2015\Visualizers` 中创建自己的 `.natstepfilter` 和 `.natjmc` 以自定义单步执行和调用堆栈窗口行为。  
   
-### <a name="stepping-behavior"></a><a name="BKMK_CPP_Stepping_behavior"></a>单步执行行为  
- 当从用户代码**单步**执行（键盘快捷方式： F11）非用户代码时，调试器会逐过程执行代码到用户代码的下一行。 **单步**执行（键盘： Shift + F11）时，调试器会运行到用户代码的下一行。 如果未遇到用户代码，则执行会继续，直到应用退出、命中断点或发生异常。  
+### <a name="stepping-behavior"></a><a name="BKMK_CPP_Stepping_behavior"></a> 单步执行行为  
+ **单步**执行 (键盘快捷方式：按 F11) 用户代码中的非用户代码，则调试器会逐过程执行代码到用户代码的下一行。 **跳出** (键盘： Shift + F11) 时，调试器会运行到用户代码的下一行。 如果未遇到用户代码，则执行会继续，直到应用退出、命中断点或发生异常。  
   
  如果调试器在非用户代码中中断（例如，如果“全部中断”命令在非用户代码中停止），则单步执行会继续在非用户代码中进行。  
   
-### <a name="exception-behavior"></a><a name="BKMK_CPP_Exception_behavior"></a>异常行为  
+### <a name="exception-behavior"></a><a name="BKMK_CPP_Exception_behavior"></a> 异常行为  
  当调试器遇到异常时，它会异常处停止，而不考虑是处于用户还是非用户代码中。 "**异常**" 对话框中的**用户未处理**的选项将被忽略。  
   
-### <a name="customize-stepping-behavior"></a><a name="BKMK_CPP_Customize_stepping_behavior"></a>自定义单步执行行为  
+### <a name="customize-stepping-behavior"></a><a name="BKMK_CPP_Customize_stepping_behavior"></a> 自定义单步执行行为  
  可以通过在 `*.natstepfilter` 文件中将函数列为非用户代码来指定要逐过程执行的函数。  
   
 - 若要为 Visual Studio 计算机的所有用户指定非用户代码，请将 natstepfilter 文件添加到该 `%VsInstallDirectory%\Common7\Packages\Debugger\Visualizers` 文件夹中。  
@@ -120,14 +120,14 @@ ms.locfileid: "85531919"
   
 ```  
   
-|元素|描述|  
+|元素|说明|  
 |-------------|-----------------|  
 |函数|必需。 将一个或多个函数指定为非用户函数。|  
 |`Name`|必需。 ECMA-262 格式的正则表达式，指定要匹配的完整函数名。 例如：<br /><br /> `<Name>MyNS::MyClass.*</Name>`<br /><br /> 告知调试器将 `MyNS::MyClass` 中的所有方法都视为非用户代码。 匹配区分大小写。|  
 |`Module`|可选。 ECMA-262 格式的正则表达式，指定包含函数的模块的完整路径。 匹配不区分大小写。|  
-|`Action`|必需。 以下区分大小写的值之一：<br /><br /> -   `NoStepInto`–通知调试器逐过程执行匹配的函数。<br />-   `StepInto`–通知调试器单步执行匹配的函数，并覆盖匹配函数的任何其他 `NoStepInto` 。|  
+|`Action`|必需。 以下区分大小写的值之一：<br /><br /> -   `NoStepInto`  –通知调试器逐过程执行匹配的函数。<br />-   `StepInto`  –通知调试器单步执行匹配的函数，并覆盖匹配函数的任何其他 `NoStepInto` 。|  
   
-### <a name="customize-call-stack-behavior"></a><a name="BKMK_CPP_Customize_call_stack_behavior"></a>自定义调用堆栈行为  
+### <a name="customize-call-stack-behavior"></a><a name="BKMK_CPP_Customize_call_stack_behavior"></a> 自定义调用堆栈行为  
  可以通过在 `*.natjmc` 文件中指定模块、源文件和函数，将它们指定视为调用堆栈中的非用户代码。  
   
 - 若要为 Visual Studio 计算机的所有用户指定非用户代码，请将 natjmc 文件添加到该 `%VsInstallDirectory%\Common7\Packages\Debugger\Visualizers` 文件夹中。  
@@ -165,13 +165,13 @@ ms.locfileid: "85531919"
   
  **文件元素属性**  
   
-|特性|说明|  
+|特性|描述|  
 |---------------|-----------------|  
 |`Name`|必需。 要视为外部代码的源文件的完整路径。 可以在指定路径时使用 Windows 通配符 `?` 和 `*`。|  
   
  **函数元素属性**  
   
-|特性|说明|  
+|特性|描述|  
 |---------------|-----------------|  
 |`Name`|必需。 要视为外部代码的函数的完全限定的名称。|  
 |`Module`|可选。 包含函数的模块的名称或完整路径。 可以使用此特性区分具有相同名称的函数。|  
@@ -179,26 +179,26 @@ ms.locfileid: "85531919"
   
 ## <a name="javascript-just-my-code"></a><a name="BKMK_JavaScript_Just_My_Code"></a>JavaScript“仅我的代码”  
   
-### <a name="user-and-non-user-code"></a><a name="BKMK_JS_User_and_non_user_code"></a>用户和非用户代码  
+### <a name="user-and-non-user-code"></a><a name="BKMK_JS_User_and_non_user_code"></a> 用户和非用户代码  
  **代码分类**  
   
  JavaScript“仅我的代码”控件通过采用以下分类之一对代码进行分类，来控制单步执行和调用堆栈显示：  
   
-|“属性”|描述|
+|名称|描述|
 |-|-|  
 |**MyCode**|你拥有或控制的用户代码。|  
 |**LibraryCode**|库中由你定期使用以及应用程序为正常运行而依赖的非用户代码（例如 WinJS 或 jQuery）。|  
-|**UnrelatedCode**|可在你的应用程序中运行的非用户代码，但你不会拥有，并且你的应用程序不会直接依赖它来正常运行（例如，显示广告的广告 SDK）。 在 Windows 应用商店项目中，从 HTTP 或 HTTPS URI 加载到应用中的任何代码也被视为 UnrelatedCode。|  
+|**UnrelatedCode**|可在你的应用程序中运行的非用户代码，但你不会拥有，并且你的应用程序不会直接依赖它来正常运行 (例如，显示广告的广告 SDK) 。 在 Windows 应用商店项目中，从 HTTP 或 HTTPS URI 加载到应用中的任何代码也被视为 UnrelatedCode。|  
   
  JavaScript 调试器会自动对这些类型的代码进行分类：  
   
-- 通过将字符串传递给主机提供的函数来执行的脚本 `eval` 分类为**MyCode**。  
+- 通过将字符串传递给主机提供的函数来执行的脚本 `eval` 分类为 **MyCode**。  
   
-- 通过将字符串传递给构造函数来执行的脚本 `Function` 分类为**LibraryCode**。  
+- 通过将字符串传递给构造函数来执行的脚本 `Function` 分类为 **LibraryCode**。  
   
-- 框架引用中包含的脚本（如 WinJS 或 Azure SDK）归类为**LibraryCode**。  
+- 框架引用中包含的脚本（如 WinJS 或 Azure SDK）归类为 **LibraryCode**。  
   
-- 通过将字符串传递给、或函数来执行的脚本 `setTimeout` `setImmediate` `setInterval` 分类为**UnrelatedCode**。  
+- 通过将字符串传递给、或函数来执行的脚本 `setTimeout` `setImmediate` `setInterval` 分类为 **UnrelatedCode**。  
   
 - `%VSInstallDirectory%\JavaScript\JustMyCode\mycode.default.wwa.json` 为所有 Visual Studio JavaScript 项目指定其他用户和非用户代码。  
   
@@ -206,40 +206,40 @@ ms.locfileid: "85531919"
   
   其他所有代码都分类为“MyCode”。  
   
-### <a name="stepping-behavior"></a><a name="BKMK_JS_Stepping_behavior"></a>单步执行行为  
+### <a name="stepping-behavior"></a><a name="BKMK_JS_Stepping_behavior"></a> 单步执行行为  
   
-- 如果函数不是用户（**MyCode**）代码，则 "**单**步执行" （键盘快捷键： F11）的行为方式为 "**逐过程**" （键盘： F10）。  
+- 如果函数不是用户 (**MyCode**) 代码，请**单步**执行 (键盘快捷方式： F11) 的行为**方式 (键盘： F10) 。**  
   
-- 如果某个步骤以非用户（**LibraryCode**或**UnrelatedCode**）代码开始，则单步执行会暂时表现为不启用仅我的代码。 单步执行返回到用户代码中时，“仅我的代码”单步执行会立即重新启用。  
+- 如果某个步骤以非用户 (**LibraryCode** 或 **UnrelatedCode**) 代码开始，则单步执行会暂时表现为仅我的代码未启用。 单步执行返回到用户代码中时，“仅我的代码”单步执行会立即重新启用。  
   
-- 用户代码中的单步执行导致保留当前执行上下文（如对事件处理程序的最后一行进行单步执行）时，调试器会在执行的下一行用户代码处停止。 例如，如果回调在**LibraryCode**代码中执行，调试器将继续，直到执行用户代码的下一行。  
+- 用户代码中的单步执行导致保留当前执行上下文（如对事件处理程序的最后一行进行单步执行）时，调试器会在执行的下一行用户代码处停止。 例如，如果回调在 **LibraryCode** 代码中执行，调试器将继续，直到执行用户代码的下一行。  
   
-- "**跳出**" （键盘： Shift + F11）在用户代码的下一行停止。 如果未遇到用户代码，则执行会继续，直到应用退出、命中断点或发生异常。  
+- **跳出** (键盘： Shift + F11) 在用户代码的下一行停止。 如果未遇到用户代码，则执行会继续，直到应用退出、命中断点或发生异常。  
   
-### <a name="breakpoint-behavior"></a><a name="BKMK_JS_Breakpoint_behavior"></a>断点行为  
+### <a name="breakpoint-behavior"></a><a name="BKMK_JS_Breakpoint_behavior"></a> 断点行为  
   
 - 在任何代码中设置的断点都始终会命中（无论该代码如何分类）。  
   
 - 如果在以下内容中遇到 `debugger` 关键字：  
   
-  - **LibraryCode**代码，调试器始终中断。  
+  - **LibraryCode** 代码，调试器始终中断。  
 
-  - **UnrelatedCode**代码，调试器不会停止。  
+  - **UnrelatedCode** 代码，调试器不会停止。  
   
-### <a name="exception-behavior"></a><a name="BKMK_JS_Exception_behavior"></a>异常行为  
+### <a name="exception-behavior"></a><a name="BKMK_JS_Exception_behavior"></a> 异常行为  
  如果在以下内容中出现未经处理的异常：  
   
-- **MyCode**或**LibraryCode**代码，调试器始终中断。  
+- **MyCode** 或 **LibraryCode** 代码，调试器始终中断。  
   
-- **UnrelatedCode**代码、 **MyCode**或**LibraryCode**代码位于调用堆栈上，调试器中断。  
+- **UnrelatedCode** 代码、 **MyCode** 或 **LibraryCode** 代码位于调用堆栈上，调试器中断。  
   
-  如果在 "异常" 对话框中为异常启用了第一次机会异常，则会在**LibraryCode**或**UnrelatedCode**代码中引发异常：  
+  如果在 "异常" 对话框中为异常启用了第一次机会异常，则会在 **LibraryCode** 或 **UnrelatedCode** 代码中引发异常：  
   
 - 如果异常经过了处理，则调试器不会中断。  
   
 - 如果异常未经过处理，则调试器中断。  
   
-### <a name="customize-just-my-code"></a><a name="BKMK_JS_Customize_Just_My_Code"></a>自定义仅我的代码  
+### <a name="customize-just-my-code"></a><a name="BKMK_JS_Customize_Just_My_Code"></a> 自定义仅我的代码  
  若要针对单个 Visual Studio 项目对用户和非用户代码进行分类，请将一个名为 `mycode.json` 的 .json 文件添加到该项目的根文件夹。  
   
  按以下顺序执行分类：  
@@ -250,7 +250,7 @@ ms.locfileid: "85531919"
   
 3. 当前项目的 `mycode. json` 文件中的分类。  
   
-   每个分类步骤都会重写前面的步骤。 Json 文件不需要列出所有键值对， **MyCode**、**库**和不**相关**的值可以为空数组。  
+   每个分类步骤都会重写前面的步骤。 Json 文件不需要列出所有键值对， **MyCode**、 **库**和不 **相关** 的值可以为空数组。  
   
    “我的代码”.json 文件使用以下语法：  
   
@@ -282,7 +282,7 @@ ms.locfileid: "85531919"
   
  **Eval**、 **Function**和**ScriptBlock**键值对确定动态生成代码的分类方式。  
   
-|“属性”|描述|
+|名称|描述|
 |-|-|  
 |**Eval**|通过将字符串传递给主机提供的 `eval` 函数来执行的脚本。 默认情况下，Eval 脚本分类为“MyCode”。|  
 |**Function**|通过将字符串传递给 `Function` 构造函数来执行的脚本。 默认情况下，Function 脚本分类为“LibraryCode”。|  
@@ -290,20 +290,20 @@ ms.locfileid: "85531919"
   
  可以将值更改为以下关键字之一：  
   
-- `MyCode`将脚本分类为**MyCode**。  
+- `MyCode`  将脚本分类为 **MyCode**。  
   
-- `Library`将脚本分类为**LibraryCode**。  
+- `Library`  将脚本分类为 **LibraryCode**。  
   
-- `Unrelated`将脚本分类为**UnrelatedCode**。  
+- `Unrelated`  将脚本分类为 **UnrelatedCode**。  
   
   **MyCode、Libraries 和 Unrelated**  
   
   **MyCode**、**库**和不**相关**的键值对指定要包含在分类中的 url 或文件：  
   
-|“属性”|描述|
+|名称|描述|
 |-|-|  
-|**MyCode**|分类为**MyCode**的 url 或文件的数组。|  
-|**Libraries**|分类为**LibraryCode**的 url 或文件的数组。|  
-|**Unrelated**|分类为**UnrelatedCode**的 url 或文件的数组。|  
+|**MyCode**|分类为 **MyCode**的 url 或文件的数组。|  
+|**库**|分类为 **LibraryCode**的 url 或文件的数组。|  
+|**Unrelated**|分类为 **UnrelatedCode**的 url 或文件的数组。|  
   
  url 或文件字符串可以包含一个或多个 `*` 字符，这些字符匹配零个或多个字符。 `*` 是正则表达式 `.*` 的等效项。
