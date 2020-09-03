@@ -22,16 +22,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: b63f9ddf29ff74a4aa4bf089c266e12e37bb2f50
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85535533"
 ---
 # <a name="profiling-on-hpc-high-performance-computing-clusters"></a>针对 HPC（高性能计算）群集进行分析
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-可以使用 [!INCLUDE[vsPreExt](../includes/vspreext-md.md)] 或 [!INCLUDE[vsUltExt](../includes/vsultext-md.md)] 分析工具的采样方法对 Microsoft Windows HPC 群集的计算节点进行分析。 有关 HPC 的详细信息，请参阅[大型计算： HPC &](https://azure.microsoft.com/solutions/big-compute/) Microsoft 网站上的 Batch。  
+可以使用 [!INCLUDE[vsPreExt](../includes/vspreext-md.md)] 或 [!INCLUDE[vsUltExt](../includes/vsultext-md.md)] 分析工具的采样方法对 Microsoft Windows HPC 群集的计算节点进行分析。 有关 HPC 的详细信息，请参阅 [大型计算： HPC &](https://azure.microsoft.com/solutions/big-compute/) Microsoft 网站上的 Batch。  
   
 ## <a name="prerequisites"></a>先决条件  
  若要对 HPC 计算节点进行分析，必须执行以下操作：  
@@ -52,7 +52,7 @@ ms.locfileid: "85535533"
   
     3. `clusrun /all /scheduler:` %HeadNode% %ProfilerPath% `/q /norestart`   
   
-|语法元素|描述|  
+|语法元素|说明|  
 |-|-|  
 |*节点*|群集的头节点的名称。|  
 |*%FxPath%*|[!INCLUDE[net_v40_long](../includes/net-v40-long-md.md)] 安装程序的路径。 在 [!INCLUDE[vsPreShort](../includes/vspreshort-md.md)] 安装媒体上，路径是：WCU\dotNetFramework\dotNetFx40_Full_x86_x64.exe|  
@@ -73,7 +73,7 @@ ms.locfileid: "85535533"
   
     - 若要分析不在打开的项目中的二进制文件，请选择“可执行文件(.EXE 文件)”**** 选项。  
   
-4. 单击“下一步”。  
+4. 单击“配置目录分区”  。  
   
 5. 在向导的第三页上：  
   
@@ -85,7 +85,7 @@ ms.locfileid: "85535533"
   
     - 在“部署位置”**** 中，指定 HPC 服务器用于为部署暂存映像的目录的路径。  
   
-6. 单击“下一步”。  
+6. 单击“配置目录分区”  。  
   
 7. 在向导的第四页上：  
   
@@ -99,7 +99,7 @@ ms.locfileid: "85535533"
   
          若要分析在 HPC 群集中的特定节点上运行的进程，请选择“针对节点分析”**** 选项，然后从下拉列表中选择节点。  
   
-8. 单击“下一步”。  
+8. 单击“配置目录分区”  。  
   
 9. 在向导的第五页上，可以选择立即启动探查器和分析进程，或以后使用性能资源管理器启动分析。  
   
@@ -126,7 +126,7 @@ ms.locfileid: "85535533"
   
 ### <a name="hpc-launch-properties"></a>HPC 启动属性  
   
-|Property|描述|  
+|属性|说明|  
 |--------------|-----------------|  
 |**头节点**|指定在分析运行中充当 HPC 头节点的计算机。|  
 |**进程数**|指定要在分析的应用程序中运行的应用程序实例数。|  
@@ -137,7 +137,7 @@ ms.locfileid: "85535533"
   
 ### <a name="advanced-properties"></a>高级属性  
   
-|Property|描述|  
+|属性|说明|  
 |--------------|-----------------|  
 |**项目名称**|当前 [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] 项目或解决方案的名称。|  
 |**探查器停止时进行清理**|为 true 时，删除已部署到执行目录的二进制文件。 在此步骤中不会删除用户程序创建的文件和目录。 如果执行目录和部署目录是由 IDE 创建的，则 IDE 会尝试删除它们，但是如果它们包含不是由 IDE 部署的文件，则 IDE 不会执行此操作。|  

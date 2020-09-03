@@ -13,16 +13,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: bdf1111198c7f874d03596382372fe25851e37d3
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75852132"
 ---
 # <a name="programming-with-the-uml-api"></a>Programming with the UML API
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-利用 Visual Studio 的 UML API，你可以编写代码来创建、读取和更新 UML 模型和关系图。 若要查看支持 UML 模式的 Visual Studio 版本，请参阅 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)。
+可使用 Visual Studio 的 UML API 编写代码来创建、读取和更新 UML 模型和关系图。 若要查看支持 UML 模式的 Visual Studio 版本，请参阅 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)。
 
  下面的主题除了介绍 API 参考页，还介绍了 API。
 
@@ -37,7 +37,7 @@ ms.locfileid: "75852132"
 |[为 UML 模型定义验证约束](../modeling/define-validation-constraints-for-uml-models.md)|ValidationContext|可定义有助于确保模型符合指定约束的验证规则。|
 |[从 IDataObject 获取 UML 模型元素](../modeling/get-uml-model-elements-from-idataobject.md)|IElement、IShape|当将某个元素从 UML 模型资源管理器或 UML 关系图中拖动到另一个关系图或应用程序时，它将被序列化为 IDataObject。|
 |[使用 UML API 编辑 UML 序列图](../modeling/edit-uml-sequence-diagrams-by-using-the-uml-api.md)|IInteraction、ILifeline、IMessage|创建和更新交互图与使用其他类型的关系图稍有不同。|
-|[扩展层关系图](../modeling/extend-layer-diagrams.md)|ILayer、ILayerDiagram|可以编写代码来创建和编辑层关系图，同时对照它们来验证程序代码。|
+|[Extend layer diagrams](../modeling/extend-layer-diagrams.md)|ILayer、ILayerDiagram|可以编写代码来创建和编辑层关系图，同时对照它们来验证程序代码。|
 
 ## <a name="about-the-implementation"></a>关于实现
  UML 建模工具是基于 [!INCLUDE[dsl](../includes/dsl-md.md)] 构建的。 每个包和每个关系图都由 [!INCLUDE[dsl](../includes/dsl-md.md)] 模型表示，并有一个规则集合和其他方法来维护它们之间的一致性。
@@ -51,7 +51,7 @@ ms.locfileid: "75852132"
 ## <a name="the-api-assemblies"></a>API 程序集
  此表总结了为 UML 工具提供扩展性的程序集以及建议使用的命名空间。
 
-|Assembly|命名空间|提供对以下内容的访问：|
+|程序集|命名空间|提供对以下内容的访问：|
 |--------------|----------------|-------------------------|
 |Microsoft.VisualStudio.Uml.Interfaces|(全部)|UML 类型。|
 |Microsoft.VisualStudio.ArchitectureTools.Extensibility|VisualStudio （Microsoft.visualstudio.architecturetools.layer.validator）|[创建方法](../modeling/create-elements-and-relationships-in-uml-models.md)|
@@ -68,5 +68,5 @@ ms.locfileid: "75852132"
 |System.ComponentModel.Composition|<xref:System.ComponentModel.Composition>|[MEF 组件的导出和导入](../modeling/define-and-install-a-modeling-extension.md)|
 |System.Linq|<xref:System.Linq>|[简单地操作集合，尤其是在处理关系时](../modeling/navigate-relationships-with-the-uml-api.md)。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [扩展 uml 模型和关系图](../modeling/extend-uml-models-and-diagrams.md) [API 参考以实现 uml 建模扩展性](../modeling/api-reference-for-uml-modeling-extensibility.md)

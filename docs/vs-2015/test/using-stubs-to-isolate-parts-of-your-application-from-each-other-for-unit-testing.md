@@ -9,16 +9,16 @@ caps.latest.revision: 19
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: b77a088fc144df8c7305098e48c45f672733a7c9
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75851193"
 ---
-# <a name="using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing"></a>使用存根将应用程序的各个部分相隔离以进行单元测试
+# <a name="using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing"></a>使用存根针对单元测试隔离应用程序的各个部分
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-存根类型是 Microsoft Fakes 框架提供的两种技术之一，方便你轻松地将受测组件与它调用的其他组件隔离开来。 存根是一小段代码，可在测试过程中替代其他组件。 使用存根的优点是它返回一致的结果，让你能够更加轻松地编写测试。 而且，即使在其他组件无法工作的情况下，你也可以运行这些测试。
+存根类型是 Microsoft Fakes 框架提供的两种技术之一，方便你轻松地将受测组件与它调用的其他组件隔离开来。 存根是一小段代码，用来在测试期间替代另一个组件。 使用存根的好处在于它能返回一致的结果，使测试更易于编写。 而且，即使在其他组件无法工作的情况下，你也可以运行这些测试。
 
  有关 Fakes 的概述和快速入门指南，请参阅[使用 Microsoft Fakes 隔离受测代码](../test/isolating-code-under-test-with-microsoft-fakes.md)。
 
@@ -26,17 +26,17 @@ ms.locfileid: "75851193"
 
  在关系图中，StockAnalyzer 组件是我们要测试的组件。 它通常使用另一个组件，即 RealStockFeed 组件。 但是，每次调用 RealStockFeed 的方法时，RealStockFeed 都返回不同的结果，这使得很难测试 StockAnalyzer。  测试期间，我们将它替换为另一个类 - StubStockFeed。
 
- ![实类和存根类符合一个接口。](../test/media/fakesinterfaces.png "FakesInterfaces")
+ ![Real 和 Stub 类符合一个接口。](../test/media/fakesinterfaces.png "FakesInterfaces")
 
  由于存根依赖于你以这种方式构建代码的能力，因此你通常使用存根隔离应用程序的各个部分。 若要将它与不受你控制的其他程序集（如 System.dll）隔离开，你通常应使用填充码。 请参阅[使用垫片将应用与其他程序集相隔离以供单元测试使用](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md)。
 
- **惠?**
+ **要求**
 
 - Visual Studio Enterprise
 
-## <a name="How"></a>如何使用存根
+## <a name="how-to-use-stubs"></a><a name="How"></a> 如何使用存根
 
-### <a name="Dependency"></a>依赖项注入设计
+### <a name="design-for-dependency-injection"></a><a name="Dependency"></a>依赖项注入设计
  若要使用存根，则必须将应用程序设计为使不同的组件不相互依赖，而只依赖接口定义。 各个组件在运行时连接在一起，而不是在编译时进行耦合。 这种模式可帮助制作可靠且易于更新的软件，因为更改往往不会跨组件边界传播。 我们建议，即使你未使用存根，也要采用此模式。 若要编写新代码，遵循[依赖项注入](https://en.wikipedia.org/wiki/Dependency_injection)模式就很简单。 如果要为现有软件编写测试，你可能必须重构它。 如果这样做可行，则可以考虑改用填充码。
 
  让我们通过一个有趣的示例（关系图中的示例）开始此讨论。 类 StockAnalyzer 读取股票价格并生成一些有趣的结果。 它具有一些公共方法，我们要测试这些方法。 为简单起见，我们只讨论其中的一个方法，即，一个非常简单的、用于报告特定股票的当前价格的方法。 我们希望编写该方法的单元测试。 下面是测试的初稿：
@@ -144,7 +144,7 @@ analyzer = new StockAnalyzer(new StockFeed())
 
  执行此连接有更灵活的方式。 例如，StockAnalyzer 可以接受可在不同的条件下实例化 IStockFeed 的不同实现的工厂对象。
 
-### <a name="GeneratingStubs"></a>生成存根
+### <a name="generate-stubs"></a><a name="GeneratingStubs"></a>生成存根
  你已经将要测试的类与它使用的其他组件分离。 分离不但使应用程序更加可靠和灵活，还让你能够将接受测试的组件连接到接口的存根实现以便进行测试。
 
  你只需用常规方式将存根编写为类即可。 但是，Microsoft Fakes 提供了一个更灵活的方式来为每个测试创建最合适的存根。
@@ -153,15 +153,15 @@ analyzer = new StockAnalyzer(new StockFeed())
 
 ##### <a name="adding-a-fakes-assembly"></a>添加 Fakes 程序集
 
-1. 在“解决方案资源管理器”中，展开单元测试项目的“引用”。
+1. 在解决方案资源管理器中，展开单元测试项目的 **引用**。
 
-    - 如果使用的是 Visual Basic，必须选择解决方案资源管理器工具栏中的“显示所有文件”才能看到引用列表。
+    - 如果使用的是 Visual Basic，必须选择解决方案资源管理器工具栏中的“显示所有文件”**** 才能看到引用列表。
 
 2. 选择包含要为其创建存根的接口定义的程序集。
 
-3. 选择快捷菜单中的“添加 Fakes 程序集”。
+3. 选择快捷菜单中的“添加 Fakes 程序集”****。
 
-### <a name="WriteTest"></a>编写包含存根的测试
+### <a name="write-your-test-with-stubs"></a><a name="WriteTest"></a> 用存根编写测试
 
 ```csharp
 [TestClass]
@@ -223,7 +223,7 @@ End Class
 
  另外，还会为属性的 getter 和 setter、事件和泛型方法生成存根。
 
-### <a name="mocks"></a>验证参数值
+### <a name="verifying-parameter-values"></a><a name="mocks"></a>验证参数值
  你可以验证，当你的组件对另一个组件进行调用时，它是否传递正确的值。 你可以在存根中放置一个断言，或者也可以存储值并在测试的主体中验证它。 例如：
 
 ```csharp
@@ -301,9 +301,9 @@ Class TestMyComponent
 End Class
 ```
 
-## <a name="BKMK_Stub_basics"></a>用于各种类型成员的存根
+## <a name="stubs-for-different-kinds-of-type-members"></a><a name="BKMK_Stub_basics"></a> 不同类型成员的存根
 
-### <a name="BKMK_Methods"></a> 方法
+### <a name="methods"></a><a name="BKMK_Methods"></a> 方法
  如示例中所述，可以通过将委托附加到存根类的实例对方法进行存根处理。 存根类型的名称是从方法名称和参数名称派生而来的。 例如，假定有以下 `IMyInterface` 接口和 `MyMethod` 方法：
 
 ```csharp
@@ -325,7 +325,7 @@ interface IMyInterface
 
  如果你没有为某个函数提供存根，Fakes 将生成一个返回返回类型的默认值的函数。 对于数字，默认值为 0，而对于类类型，默认值为 `null` (C#) 或 `Nothing` (Visual Basic)。
 
-### <a name="BKMK_Properties"></a>属性
+### <a name="properties"></a><a name="BKMK_Properties"></a> 属性
  属性 getter 和 setter 作为单独的委托公开，可分别进行存根处理。 例如，考虑 `Value` 的 `IMyInterface` 属性：
 
 ```csharp
@@ -350,7 +350,7 @@ stub.ValueSet = (value) => i = value;
 
  如果没有为属性的 setter 或 getter 提供存根方法，Fakes 将生成一个存储值的存根，以便让存根属性像简单变量一样工作。
 
-### <a name="BKMK_Events"></a> 事件
+### <a name="events"></a><a name="BKMK_Events"></a> 事件
  事件将作为委托字段公开。 因此，已可通过调用事件支持字段引发已进行存根处理的事件。 让我们考虑以下要进行存根处理的接口：
 
 ```csharp
@@ -371,7 +371,7 @@ interface IWithEvents
 
 ```
 
-### <a name="BKMK_Generic_methods"></a>泛型方法
+### <a name="generic-methods"></a><a name="BKMK_Generic_methods"></a> 泛型方法
  可以通过为方法的每个必需的实例化提供委托来对泛型方法进行存根处理。 例如，假定有以下包含泛型方法的接口：
 
 ```csharp
@@ -399,7 +399,7 @@ public void TestGetValue()
 
  如果代码是为了调用具有任何其他实例化的 `GetValue<T>`，存根将只调用行为。
 
-### <a name="BKMK_Partial_stubs"></a>虚类的存根
+### <a name="stubs-of-virtual-classes"></a><a name="BKMK_Partial_stubs"></a> 虚拟类的存根
  在前面的示例中，已从接口生成存根。 还可以从具有虚拟或抽象成员的类生成存根。 例如：
 
 ```csharp
@@ -438,16 +438,16 @@ stub.CallBase = true;
 Assert.AreEqual(43,stub.DoVirtual(1));
 ```
 
-## <a name="BKMK_Debugging_stubs"></a>调试存根
+## <a name="debugging-stubs"></a><a name="BKMK_Debugging_stubs"></a>调试存根
  存根类型旨在提供顺畅的调试体验。 默认情况下，系统会指示调试程序单步执行所有生成的代码，因此，它应该直接单步执行到附加到存根的自定义成员实现。
 
-## <a name="BKMK_Stub_limitation"></a>存根限制
+## <a name="stub-limitations"></a><a name="BKMK_Stub_limitation"></a> 存根限制
 
 1. 不支持使用指针的方法签名。
 
 2. 无法对密封类或静态方法进行存根处理，因为存根类型依赖于虚方法调度。 对于这种情况，请按照[使用垫片将应用与其他程序集相隔离以供单元测试使用](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md)所述，使用垫片类型。
 
-## <a name="BKMK_Changing_the_default_behavior_of_stubs"></a>更改存根的默认行为
+## <a name="changing-the-default-behavior-of-stubs"></a><a name="BKMK_Changing_the_default_behavior_of_stubs"></a>更改存根的默认行为
  每个生成的存根类型都包含 `IStubBehavior` 接口的一个实例（通过 `IStub.InstanceBehavior` 属性）。 只要客户端调用没有附加自定义委托的成员，系统就会调用该行为。 如果该行为尚未设置，它将使用 `StubsBehaviors.Current` 属性返回的实例。 默认情况下，此属性将返回引发 `NotImplementedException` 异常的行为。
 
  可以通过设置任何存根实例的 `InstanceBehavior` 属性来随时更改该行为。 例如，以下代码片段将更改一个不执行任何操作或返回返回类型的默认值 `default(T)` 的行为：
@@ -471,8 +471,8 @@ StubBehaviors.Current =
 
 ## <a name="external-resources"></a>外部资源
 
-### <a name="guidance"></a>指导
- [使用 Visual Studio 2012 对连续交付进行测试 - 第 2 章：单元测试：测试内部](https://msdn.microsoft.com/library/jj159340.aspx)
+### <a name="guidance"></a>指南
+ [通过 Visual Studio 2012 对持续交付进行测试-第2章：单元测试：测试内部](https://msdn.microsoft.com/library/jj159340.aspx)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [用 Microsoft Fakes 隔离测试代码](../test/isolating-code-under-test-with-microsoft-fakes.md)
