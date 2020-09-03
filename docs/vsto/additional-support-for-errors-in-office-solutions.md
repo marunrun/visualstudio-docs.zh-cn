@@ -57,17 +57,17 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 01b225b27dfe9c5e1f006105b8e2676a509234b9
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72984626"
 ---
 # <a name="additional-support-for-errors-in-office-solutions"></a>Office 解决方案中的错误的其他支持
 
 你可以使用以下资源来帮助你查找在 Visual Studio 中创建 Office 解决方案时遇到的问题的答案。
 
-## <a name="troubleshoot-specific-errors"></a>解决特定错误
+## <a name="troubleshoot-specific-errors"></a>排查特定错误
 
 有关 Office 解决方案中的一些常见错误的帮助，请参阅以下主题：
 
@@ -91,7 +91,7 @@ ms.locfileid: "72984626"
 
 提供指向其他资源的链接，以了解有关通过 Visual Studio 开发 Office 解决方案和 Office 开发的详细信息。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [排查 Office 解决方案中的错误](../vsto/troubleshooting-errors-in-office-solutions.md)
 - [Office 解决方案安全性疑难解答](../vsto/troubleshooting-office-solution-security.md)

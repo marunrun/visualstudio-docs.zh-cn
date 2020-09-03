@@ -11,15 +11,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: abfd625a248c14f646683c7b035065e6ca096f68
-ms.sourcegitcommit: 186c0c250d85ac74274fa1e438b4c7c7108d8a36
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86876107"
 ---
 # <a name="delay-activity-designer"></a>Delay 活动设计器
 
-"**延迟**" 活动设计器用于创建和配置 <xref:System.Activities.Statements.Delay> 活动。
+" **延迟** " 活动设计器用于创建和配置 <xref:System.Activities.Statements.Delay> 活动。
 
 ## <a name="the-delay-activity"></a>延迟活动
 
@@ -29,7 +29,7 @@ ms.locfileid: "86876107"
 
 "**延迟**" 活动设计器可在 "**工具箱**" 的 "**基元**" 类别中找到，可通过单击工作流设计器的 "**工具箱**" 选项卡进行访问。 或者，从 "**视图**" 菜单中选择 **"工具箱**"，或按**Ctrl** + **Alt** + **X**。
 
-可以将 "**延迟**" 活动设计器从 "**工具箱**" 拖放到工作流设计器图面上通常放置活动的任何位置，例如中 <xref:System.Activities.Statements.Sequence> 。 删除活动设计器将创建一个 <xref:System.Activities.Statements.Delay> 活动，其默认值为 " <xref:System.Activities.Activity.DisplayName%2A> 延迟"。 <xref:System.Activities.Activity.DisplayName%2A>可以在 "**延迟**" 活动设计器的标头中或在属性网格的 " **DisplayName** " 框中编辑。
+可以将 " **延迟** " 活动设计器从 " **工具箱** " 拖放到工作流设计器图面上通常放置活动的任何位置，例如中 <xref:System.Activities.Statements.Sequence> 。 删除活动设计器将创建一个 <xref:System.Activities.Statements.Delay> 活动，其默认值为 " <xref:System.Activities.Activity.DisplayName%2A> 延迟"。 <xref:System.Activities.Activity.DisplayName%2A>可以在 "**延迟**" 活动设计器的标头中或在属性网格的 " **DisplayName** " 框中编辑。
 
 ### <a name="the-delay-properties"></a>延迟属性
 

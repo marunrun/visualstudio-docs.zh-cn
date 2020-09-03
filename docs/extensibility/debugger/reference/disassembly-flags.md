@@ -1,5 +1,5 @@
 ---
-title: DISASSEMBLY_FLAGS |微软文档
+title: DISASSEMBLY_FLAGS |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: ba6d9db3ad2cb1f9bbc9e3cea27aba939c6dd499
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80737371"
 ---
 # <a name="disassembly_flags"></a>DISASSEMBLY_FLAGS
-指定拆卸的标志。
+指定反汇编的标志。
 
 ## <a name="syntax"></a>语法
 
@@ -52,34 +52,34 @@ public enum enum_DISASSEMBLY_FLAGS {
 
 ## <a name="fields"></a>字段
 `DF_DOCUMENTCHANGE`\
-指示此指令位于与前一个不同的文档中。
+指示此指令与上一个指令位于不同的文档中。
 
 `DF_DISABLED`\
-指示此指令不会执行。
+指示将不执行此指令。
 
 `DF_INSTRUCTION_ACTIVE`\
-指示此指令是要执行的下一个指令之一（可能有多个指令）。
+指示此指令是要执行的下一个指令 (可能有多个) 。
 
 `DF_DATA`\
-指示此指令实际上是数据（不是代码）。
+指示此指令实际上是 (不是代码) 的数据。
 
 `DF_HASSOURCE`\
-指示此指令具有源。 某些说明（如分析代码或垃圾回收代码）没有相应的源。
+指示此指令具有源。 某些说明（例如，事件探查或垃圾收集代码）没有相应的源。
 
 `DF_DOCUMENT_CHECKSUM`\
-指示`bstrDocumentUrl`字段包含文档 URL 之后的校验和数据。 有关如何存储校验和数据的，请参阅["拆解数据](../../../extensibility/debugger/reference/disassemblydata.md)结构的备注"部分。
+指示 `bstrDocumentUrl` 字段包含文档 URL 后面的校验和数据。 有关校验和数据的存储方式，请参阅 [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) 结构的 "备注" 部分。
 
 ## <a name="remarks"></a>备注
-用作`dwFlags`[拆解数据](../../../extensibility/debugger/reference/disassemblydata.md)结构的成员。
+用作 `dwFlags` [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) 结构的成员。
 
-这些标志可以稍微结合`OR`。
+这些标志可以与按位组合 `OR` 。
 
 ## <a name="requirements"></a>要求
-标题： msdbg.h
+标头： msdbg
 
-命名空间：微软.VisualStudio.调试器.互通
+命名空间： VisualStudio
 
-程序集：微软.VisualStudio.调试器.Interop.dll
+程序集： Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>请参阅
 - [枚举](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

@@ -14,16 +14,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: dcfa4a2fb15ed8f4abfff24aa8e78c2b08eb8412
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72662248"
 ---
 # <a name="options-text-editor-javascript-formatting"></a>选项，文本编辑器，JavaScript，格式
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-使用“选项”  对话框的“格式设置”  页在代码编辑器中设置用于代码格式设置的选项。 若要访问此页，请在菜单栏上选择“工具”  、“选项”  ，然后依次展开“文本编辑器”  、“JavaScript”  和“格式设置”  。
+使用“选项”  对话框的“格式设置”  页在代码编辑器中设置用于代码格式设置的选项。 若要访问此页，请在菜单栏上选择“工具”****、“选项”****，然后依次展开“文本编辑器”****、“JavaScript”**** 和“格式设置”****。
 
  [!INCLUDE[note_settings_general](../../includes/note-settings-general-md.md)]
 
@@ -32,7 +32,7 @@ ms.locfileid: "72662248"
 
 ## <a name="uielement-list"></a>UIElement 列表
 
-|选项|说明|
+|选项|描述|
 |------------|-----------------|
 |**按 Enter 时设置已完成行的格式**|选择此选项后，如果按 Enter 键，代码编辑器会自动设置该行的格式。|
 |**输入 ; 时设置已完成语句的格式**|选择此选项后，如果按分号键，代码编辑器会自动设置该行的格式。|
@@ -50,7 +50,7 @@ ms.locfileid: "72662248"
 |**将控制块的左大括号置于新行**|选择此选项后，代码编辑器会将与控制块（例如，`if` 和 `while` 控制块）关联的左大括号移动到新行。|
 
 ## <a name="spacing"></a>间距
- 这些选项可确定在“源”视图中插入空格的方式  。
+ 这些选项可确定在“源”视图中插入空格的方式****。
 
 ## <a name="uielement-list"></a>UIElement 列表
 

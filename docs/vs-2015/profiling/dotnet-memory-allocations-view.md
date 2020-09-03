@@ -17,10 +17,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: a3c24d8aa984ddc947d3c532020974a196192940
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68179069"
 ---
 # <a name="net-memory-allocations-view"></a>.NET 内存分配视图
@@ -41,9 +41,9 @@ ms.locfileid: "68179069"
   
 - 若要显示最活跃的路径，请右键单击类型或函数，再单击“展开热路径”  。  
   
-|列|描述|  
+|列|说明|  
 |------------|-----------------|  
-|**名称**|已分配类型或函数的名称。|  
+|**Name**|已分配类型或函数的名称。|  
 |**进程 ID**|分析运行的进程 ID (PID)。|  
 |**进程名**|进程的名称。|  
 |**模块名**|类型或函数所在模块的名称。|  
