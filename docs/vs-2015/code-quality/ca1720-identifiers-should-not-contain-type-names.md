@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: f6d228b0fbf5507ba135f9ddc35d6d8b161f0011
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85534844"
 ---
 # <a name="ca1720-identifiers-should-not-contain-type-names"></a>CA1720:标识符不应包含类型名称
@@ -35,7 +35,7 @@ ms.locfileid: "85534844"
 ## <a name="cause"></a>原因
  外部可见成员中参数的名称包含数据类型名称。
 
- \- 或 -
+ - 或 -
 
  外部可见成员的名称包含特定于语言的数据类型名称。
 
@@ -60,7 +60,7 @@ ms.locfileid: "85534844"
 
 - UInt
 
-- 整数
+- Integer
 
 - UInteger
 
@@ -80,11 +80,11 @@ ms.locfileid: "85534844"
 
   此外，还会对照以下与语言无关的数据类型名称来检查参数的名称，但不区分大小写：
 
-- Object
+- 对象
 
 - Obj
 
-- 布尔值
+- 布尔
 
 - Char
 

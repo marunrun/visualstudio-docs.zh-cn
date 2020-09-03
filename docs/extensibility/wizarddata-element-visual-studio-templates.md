@@ -1,5 +1,5 @@
 ---
-title: 向导数据元素（可视化工作室模板） |微软文档
+title: " (Visual Studio 模板) 的 WizardData 元素 |Microsoft Docs"
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: aa3f9d2e971d944b964f4b194d1324ff960fbd24
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80740392"
 ---
 # <a name="wizarddata-element-visual-studio-templates"></a>WizardData 元素（Visual Studio 模板）
@@ -53,25 +53,25 @@ ms.locfileid: "80740392"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|描述|
+|元素|说明|
 |-------------|-----------------|
-|[VSTemplate](../extensibility/vstemplate-element-visual-studio-templates.md)|必需元素。<br /><br /> 包含项目模板、项目模板或初学者工具包的所有元数据。|
+|[VSTemplate](../extensibility/vstemplate-element-visual-studio-templates.md)|必需的元素。<br /><br /> 包含项目模板、项模板或初学者工具包的所有元数据。|
 
 ## <a name="text-value"></a>文本值
 
 文本值是可选的。
 
-此文本指定要传递到[向导扩展](../extensibility/wizardextension-element-visual-studio-templates.md)元素中指定的自定义向导扩展。
+此文本指定要传递给 [WizardExtension](../extensibility/wizardextension-element-visual-studio-templates.md) 元素中指定的自定义向导扩展的自定义 XML。
 
 ## <a name="remarks"></a>备注
 
-可以在此元素中指定任何 XML。 XML 将作为参数传递给自定义向导扩展，允许扩展使用此元素的内容。 未对此数据执行验证。
+可以在此元素中指定任何 XML。 XML 将作为参数传递到自定义向导扩展，允许扩展使用此元素的内容。 不对此数据执行任何验证。
 
-**向导数据**元素的内容作为`IWizard.RunStarted`方法中参数字符串字典中的参数传递，不变。 字典键名为`$wizarddata$`。
+在方法中参数的字符串字典中， **WizardData** 元素的内容以不更改的形式传递 `IWizard.RunStarted` 。 字典键的名称为 `$wizarddata$` 。
 
 ## <a name="example"></a>示例
 
-下面的示例演示了 C# Windows 应用程序的标准项目模板的元数据。
+下面的示例演示 c # Windows 应用程序的标准项目模板的元数据。
 
 ```xml
 <VSTemplate Version="3.0.0" Type="Item"
@@ -104,9 +104,9 @@ ms.locfileid: "80740392"
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
-- [创建项目和项目模板](../ide/creating-project-and-item-templates.md)
+- [创建项目和项模板](../ide/creating-project-and-item-templates.md)
 - [WizardExtension 元素（Visual Studio 模板）](../extensibility/wizardextension-element-visual-studio-templates.md)
 - [如何：使用向导来处理项目模板](../extensibility/how-to-use-wizards-with-project-templates.md)

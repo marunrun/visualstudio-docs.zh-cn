@@ -1,5 +1,5 @@
 ---
-title: 'Idiadatasource:: Opensession |Microsoft Docs'
+title: IDiaDataSource：： openSession |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 4bec5507d15374e6e88afd4567d4b0fec9ca6cb7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68198604"
 ---
 # <a name="idiadatasourceopensession"></a>IDiaDataSource::openSession
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-将打开一个会话，用于查询符号。  
+为查询符号打开一个会话。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,21 +35,21 @@ HRESULT openSession ( 
   
 #### <a name="parameters"></a>参数  
  ppSession  
- [out]返回[IDiaSession](../../debugger/debug-interface-access/idiasession.md)对象，表示打开会话。  
+ 弄返回表示打开的会话的 [IDiaSession](../../debugger/debug-interface-access/idiasession.md) 对象。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。 下表显示了可能的此方法的返回值。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。 下表显示了此方法的可能的返回值。  
   
-|值|描述|  
+|值|说明|  
 |-----------|-----------------|  
-|E_UNEXPECTED|[IDiaDataSource](../../debugger/debug-interface-access/idiadatasource.md)对象之前尚未初始化了一个来源为符号。|  
+|E_UNEXPECTED|尚未使用符号的源初始化 [IDiaDataSource](../../debugger/debug-interface-access/idiadatasource.md) 对象。|  
 |E_INVALIDARG|`ppSession` 参数无效。|  
-|E_OUTOFMEMORY|内存不足，无法打开会话。|  
+|E_OUTOFMEMORY|没有足够的内存来打开会话。|  
   
 ## <a name="remarks"></a>备注  
- 此方法打开[IDiaSession](../../debugger/debug-interface-access/idiasession.md)数据源对象。  
+ 此方法将为数据源打开一个 [IDiaSession](../../debugger/debug-interface-access/idiasession.md) 对象。  
   
- `IDiaSession` 对象中实现数据源的查询。 会话管理调试符号的每个集的一个地址空间。 如果数据源符号所描述的.exe 或.dll 文件是活动中多个地址范围 （例如，因为多个进程具有它加载），则应使用为每个地址范围的一个会话。  
+ `IDiaSession` 对象将查询实现到数据源。 会话为每组调试符号管理一个地址空间。 如果数据源符号描述的 .exe 或 .dll 文件在多个地址范围内处于活动状态 (例如，因为多个进程已加载) ，所以应该使用每个地址范围的一个会话。  
   
 ## <a name="example"></a>示例  
   
@@ -62,8 +62,8 @@ if (FAILED(hr))
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDiaDataSource](../../debugger/debug-interface-access/idiadatasource.md)   
- [概述](../../debugger/debug-interface-access/overview-debug-interface-access-sdk.md)   
+ [叙述](../../debugger/debug-interface-access/overview-debug-interface-access-sdk.md)   
  [IDiaSession](../../debugger/debug-interface-access/idiasession.md)   
  [查询 .Pdb 文件](../../debugger/debug-interface-access/querying-the-dot-pdb-file.md)

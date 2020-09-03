@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramProvider2::GetProviderProgramNode |Microsoft Docs
+title: IDebugProgramProvider2：： GetProviderProgramNode |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,10 +13,10 @@ caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 5fa9f4db6aa71e9bba1f456b13ba52abd24ab966
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68198717"
 ---
 # <a name="idebugprogramprovider2getproviderprogramnode"></a>IDebugProgramProvider2::GetProviderProgramNode
@@ -50,33 +50,33 @@ int GetProviderProgramNode(
   
 #### <a name="parameters"></a>参数  
  `Flags`  
- [in]中的标志的组合[PROVIDER_FLAGS](../../../extensibility/debugger/reference/provider-flags.md)枚举。 下列标志则典型的此调用：  
+ 中 [PROVIDER_FLAGS](../../../extensibility/debugger/reference/provider-flags.md) 枚举中的标志的组合。 下面是此调用的典型标志：  
   
-|Flag|描述|  
+|标志|描述|  
 |----------|-----------------|  
-|`PFLAG_REMOTE_PORT`|调用方在远程计算机上运行。|  
-|`PFLAG_DEBUGGEE`|当前正在调试调用方 （为每个节点将返回有关封送处理的其他信息）。|  
-|`PFLAG_ATTACHED_TO_DEBUGGEE`|调用方已附加到但不是启动调试器。|  
+|`PFLAG_REMOTE_PORT`|调用方正在远程计算机上运行。|  
+|`PFLAG_DEBUGGEE`|当前正在调试调用方 (将为每个节点) 返回有关封送的附加信息。|  
+|`PFLAG_ATTACHED_TO_DEBUGGEE`|调用方已附加到，但调试器未启动。|  
   
  `pPort`  
- [in]调用进程的端口上运行。  
+ 中正在运行调用进程的端口。  
   
  `processId`  
- [in][AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md)保存包含该程序的进程的 ID 相关的结构。  
+ 中一个 [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) 结构，它保存包含相关程序的进程的 ID。  
   
  `guidEngine`  
- [in]（如果有），该程序附加到的调试引擎的 GUID。  
+ 中如果任何) ，程序会附加到 (的调试引擎的 GUID。  
   
  `programId`  
- [in]若要获取的程序节点的程序的 ID。  
+ 中要获取其程序节点的程序的 ID。  
   
  `ppProgramNode`  
- [out][IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)对象，表示请求的程序节点。  
+ 弄表示请求的程序节点的 [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) 对象。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugProgramProvider2](../../../extensibility/debugger/reference/idebugprogramprovider2.md)   
  [PROVIDER_FLAGS](../../../extensibility/debugger/reference/provider-flags.md)   
  [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md)   

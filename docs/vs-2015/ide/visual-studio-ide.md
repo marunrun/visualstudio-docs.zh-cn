@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 3bbeeb3d65e50e4cd3e33d4cab63dc619a1ad7a8
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85534311"
 ---
 # <a name="visual-studio-ide"></a>Visual Studio IDE
@@ -47,7 +47,7 @@ Microsoft Visual Studio 2015 是一套用于创建软件的工具，包括通过
  ![Visual Studio IDE](../ide/media/visualstudioide.png "VisualStudioIDE")
 
 ### <a name="signing-in"></a>登录
- 首次启动 Visual Studio 时，可使用 Microsoft 帐户或者单位或学校帐户登录。 登录后，可跨多个设备同步设置（例如，窗口布局）并自动连接到所需的服务，如 Azure 订阅和 Visual Studio Team Services。 如果你拥有基于订阅的许可证，则需要定期登录 Visual Studio 以保持许可证令牌为最新。 如果你拥有产品密钥许可证，则无需登录，但登录后可更便捷地连接到 Visual Studio Team Services 和 Azure、Office 365、Salesforce.com 帐户。 有关详细信息，请参阅[登录 Visual Studio](../ide/signing-in-to-visual-studio.md)。
+ 首次启动 Visual Studio 时，可使用 Microsoft 帐户或者单位或学校帐户登录。 登录后，可跨多个设备同步设置（例如，窗口布局）并自动连接到所需的服务，如 Azure 订阅和 Visual Studio Team Services。 如果你拥有基于订阅的许可证，则需要定期登录 Visual Studio 以保持许可证令牌为最新。 如果你拥有产品密钥许可证，则无需登录，但登录后可更便捷地连接到 Visual Studio Team Services 和 Azure、Office 365、Salesforce.com 帐户。 有关详细信息，请参阅 [登录 Visual Studio](../ide/signing-in-to-visual-studio.md)。
 
  如果你拥有多个 Visual Studio Team Services 帐户、Azure 帐户或 MSDN 订阅，则可使用单一登录进行链接并访问所有帐户中的资源和服务。 有关详细信息，请参阅[使用多个用户帐户](../ide/work-with-multiple-user-accounts.md)。
 
@@ -67,7 +67,7 @@ Microsoft Visual Studio 2015 是一套用于创建软件的工具，包括通过
 ### <a name="personalizing-the-ide"></a>个性化设置 IDE
  可自定义窗口布局，以适合自己的开发风格。 可以随时停靠、浮动或隐藏任何窗口，还可以在全屏模式下运行编辑器。 可以创建并保存多个自定义窗口布局，仅用于显示特定上下文所需的窗口。 例如，可以创建全屏布局，以便代码编辑器全屏显示。 还可以创建不同布局，用于调试和团队操作。 有关详细信息，请参阅[自定义窗口布局](../ide/customizing-window-layouts-in-visual-studio.md)。
 
- 可以采用多种其他的方法来自定义 Visual Studio，并且可将设置漫游到使用的多台计算机中。 有关详细信息，请参阅[个性化 IDE](../ide/personalizing-the-visual-studio-ide.md)。
+ 可以采用多种其他的方法来自定义 Visual Studio，并且可将设置漫游到使用的多台计算机中。 有关详细信息，请参阅 [个性化 IDE](../ide/personalizing-the-visual-studio-ide.md)。
 
  几乎所有操作都有键盘快捷键，并且也可以对其进行自定义。 若要创建新的快捷键，请在“快速启动”中键入“Keyboard”打开“键盘”对话框。 如果需要有关选项的详细信息，请在此处按 F1 转到 MSDN 帮助页。 有关详细信息，请参阅 [Visual Studio 中的默认键盘键](../ide/default-keyboard-shortcuts-in-visual-studio.md)。
 
@@ -94,7 +94,7 @@ Microsoft Visual Studio 2015 是一套用于创建软件的工具，包括通过
 
  ![美工板](../ide/media/b5-artboard.png "b5_artboard")
 
-|映像|描述|
+|图像|说明|
 |-|-|
 |![](../designers/media/b1-1.png "B1_1")|**设计视图** 显示文档的可视设计。 在此视图中，您可以在设计图面上绘制或修改对象。|
 |![](../designers/media/b1-2.png "B1_2")|**痕迹导航** 可以在选定对象的模板编辑模式、样式编辑模式和对象编辑范围之间快速切换。|
@@ -178,7 +178,7 @@ Microsoft Visual Studio 2015 是一套用于创建软件的工具，包括通过
  ![SQL Server 对象资源管理器](../ide/media/vs2015-sqlobjectexplorer.png "vs2015_SQLObjectExplorer")
 
 ## <a name="deploying-your-finished-application"></a>部署已完成应用程序
- 当应用程序可以部署到客户时，无论是部署到 Windows 应用商店还是 Sharepoint 站点，无论是通过 Installshield 还是 Windows Installer 技术进行部署，Visual Studio 都会提供实现此操作的工具。 这些都可以通过 IDE 进行访问。 有关详细信息，请参阅[部署应用程序、服务和组件](../deployment/deploying-applications-services-and-components.md)。
+ 当应用程序可以部署到客户时，无论是部署到 Windows 应用商店还是 Sharepoint 站点，无论是通过 Installshield 还是 Windows Installer 技术进行部署，Visual Studio 都会提供实现此操作的工具。 这些都可以通过 IDE 进行访问。 有关详细信息，请参阅 [部署应用程序、服务和组件](../deployment/deploying-applications-services-and-components.md)。
 
 ## <a name="architecture-and-modeling-tools-enterprise-only"></a>体系结构和建模工具（仅适用于企业）
  可以使用 Visual Studio 体系结构和建模工具来设计和建模应用程序。 这些工具可帮助实现代码的结构、行为和关系的可视化效果。 在开发过程中，可以在整个应用程序生命周期的不同详细信息级别上创建模型。 可通过将模型元素链接到 Team Foundation Server 工作项和开发计划来跟踪要求、任务、测试用例、Bug 和其他与模型关联的工作。 有关详细信息，请参阅[设计和建模应用程序](../modeling/analyze-and-model-your-architecture.md)。

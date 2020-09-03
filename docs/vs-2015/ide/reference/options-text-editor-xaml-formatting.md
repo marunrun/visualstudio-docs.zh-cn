@@ -32,10 +32,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 537223aab878aee2fb00e9417d0415f0a17d2dd5
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85534129"
 ---
 # <a name="options-text-editor-xaml-formatting"></a>选项，文本编辑器，XAML，格式
@@ -44,7 +44,7 @@ ms.locfileid: "85534129"
 使用“格式设置”  属性页可指定如何在 XAML 文档中设置元素和特性的格式。 若要打开“选项”  对话框，请单击“工具”  菜单，然后单击“选项”  。 若要访问“格式设置”**** 属性页，请依次展开“文本编辑器”****、“XAML”****、“格式设置”**** 节点。
 
 > [!NOTE]
-> 显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。
+> 显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅 [在 Visual Studio 中自定义开发设置](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。
 
 ## <a name="auto-formatting-events"></a>自动格式化事件
 检测到以下任一事件时，可能引发自动格式设置。
@@ -59,7 +59,7 @@ ms.locfileid: "85534129"
 
   可以指定引发自动格式设置的事件。
 
-|“属性”|描述|
+|名称|说明|
 |-|-|
 |**结束标记或简单标记完成时**|完成键入结束标记或简单标记时引发自动格式设置。 简单标记没有特性，例如 `<Button />`。|
 |**开始标记完成时**|完成键入开始标记时引发自动格式设置。|
@@ -70,7 +70,7 @@ ms.locfileid: "85534129"
 
 设置此选项后，受影响的只有随后在 XAML 视图中使用设计器添加或手动添加的特性。
 
-|“属性”|描述|
+|名称|说明|
 |-|-|
 |**双引号 (")**|特性值括在双引号内。<br /><br /> `<Button Name="button1">Hello</Button>`|
 |**单引号 (')**|特性值括在单引号内。<br /><br /> `<Button Name='button1'>Hello</Button>`|
@@ -78,7 +78,7 @@ ms.locfileid: "85534129"
 ## <a name="tag-wrapping"></a>标记换行
 可以为标记换行指定一个行长度。 启用标记换行后，随后使用设计器添加的所有 XAML 将进行适当换行。
 
-|“属性”|描述|
+|名称|说明|
 |-|-|
 |**对超出指定长度的标记执行换行**|指定是否在“长度”**** 指定的行长度处换行。|
 |**长度**|一行中可以包含的字符数。 如有必要，某些 XAML 行可以超过指定的行长度。|
@@ -86,7 +86,7 @@ ms.locfileid: "85534129"
 ## <a name="attribute-spacing"></a>特性间距
 使用此设置可以控制特性在 XAML 文档中的排列方式
 
-|“属性”|描述|
+|名称|说明|
 |-|-|
 |**在特性之间保留换行符和空格**|特性之间的换行符和空格不受自动格式设置的影响。<br /><br /> `<Button Height="23" Name="button1"`<br /><br /> `Width="75">Hello</Button>`|
 |**在特性之间插入单个空格**|特性占用一行，由一个空格分隔相邻的特性。 应用标记换行设置。<br /><br /> `<Button Height="23" Name="button1" Width="75">Hello</Button>`|
@@ -115,14 +115,14 @@ ms.locfileid: "85534129"
 ## <a name="default-view"></a>默认视图
 使用此设置来控制是否在加载 XAML 文档时显示设计视图。
 
-|“属性”|描述|
+|“属性”|说明|
 |-|-|
 |**始终在完整 XAML 视图中打开文档**|指定 XAML 文档是否仅出现在 XAML 视图中，无设计视图。 用于加载大型文档。|
 
 ## <a name="toolbox"></a>工具箱
 使用此设置可指定是否在工具箱中显示用户控件和自定义控件。
 
-|“属性”|描述|
+|名称|说明|
 |-|-|
 |**自动填充工具箱项**|指定当前解决方案中的用户控件和自定义控件是否自动显示在工具箱中。|
 

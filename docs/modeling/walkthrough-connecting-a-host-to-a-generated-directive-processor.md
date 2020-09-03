@@ -14,10 +14,10 @@ dev_langs:
 - CSharp
 - VB
 ms.openlocfilehash: 8dfca47159192c1f6fe25f703b54745b55d8e384
-ms.sourcegitcommit: d8609a78b460d4783f5d59c0c89454910a4dbd21
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88237992"
 ---
 # <a name="walkthrough-connect-a-host-to-a-generated-directive-processor"></a>演练：将主机连接到生成的指令处理器
@@ -314,7 +314,7 @@ ms.locfileid: "88237992"
 
 3. 在代码中， \<YOUR PATH> 将替换为在第一个过程中创建的特定于设计语言的示例文件的路径。
 
-4. 保存并关闭文件。
+4. 保存并关闭该文件。
 
 ### <a name="test-the-custom-host"></a>测试自定义主机
 

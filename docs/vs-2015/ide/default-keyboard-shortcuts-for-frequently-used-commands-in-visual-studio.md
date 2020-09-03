@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 87b240dea73cc447f21422d9c165dad67f136075
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85534233"
 ---
 # <a name="default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio"></a>Visual Studio 中的常用命令的默认键盘快捷键
@@ -34,7 +34,7 @@ ms.locfileid: "85534233"
 
 - [工具](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md#bkmk_tools)
 
-- [Window](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md#bkmk_window)
+- [窗口](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md#bkmk_window)
 
 - [调试](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md#bkmk_debug)
 
@@ -44,7 +44,7 @@ ms.locfileid: "85534233"
 
 - [显示](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md#bkmk_view)||
 
-## <a name="build"></a><a name="bkmk_build"></a>构造
+## <a name="build"></a><a name="bkmk_build"></a>生成
 
 |命令|键盘快捷键 [上下文]|
 |--------------|-------------------------------------|
@@ -53,7 +53,7 @@ ms.locfileid: "85534233"
 |生成.编译|Ctrl+F7 [全局]|
 |生成.对解决方案运行代码分析|Alt+F11 [全局]|
 
-## <a name="debug"></a><a name="bkmk_debug"></a>Debug.exe
+## <a name="debug"></a><a name="bkmk_debug"></a>调试
 
 |命令|键盘快捷键 [上下文]|
 |--------------|-------------------------------------|
@@ -159,7 +159,7 @@ dit.SurroundWith|Ctrl+K、Ctrl+S [全局]|
 |-------------|-----------------------------------|
 |工具.附加到进程|Ctrl+Alt+P [全局]|
 
-## <a name="view"></a><a name="bkmk_view"></a>显示
+## <a name="view"></a><a name="bkmk_view"></a>视图
 
 |命令|键盘快捷键 [上下文]|
 |--------------|-------------------------------------|
