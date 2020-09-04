@@ -1411,6 +1411,8 @@
       href: ide/whats-new-visual-studio-2019.md
     - name: Visual Studio 新增功能文档
       href: ide/whats-new-visual-studio-docs.md
+    - name: Visual Studio 中的新增功能历史记录文档
+      href: ide/whats-new-visual-studio-docs-history.md
     - name: 发行说明和系统要求
       items:
         - name: 发行节奏
