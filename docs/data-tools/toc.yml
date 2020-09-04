@@ -32,7 +32,7 @@
           href: work-with-datasets-in-n-tier-applications.md
     - name: 数据库项目和数据层应用程序 (DAC)
       href: creating-and-managing-databases-and-data-tier-applications-in-visual-studio.md
-    - name: n 层数据应用程序概述
+    - name: N 层数据应用程序概述
       href: n-tier-data-applications-overview.md
 - name: 操作指南
   items:
@@ -132,7 +132,7 @@
               href: save-a-dataset-as-xml.md
         - name: 查询数据集
           href: query-datasets.md
-        - name: n 层应用程序
+        - name: N 层应用程序
           items:
             - name: 向 n 层数据集添加验证
               href: add-validation-to-an-n-tier-dataset.md
