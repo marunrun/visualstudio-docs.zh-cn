@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: e20427ae3d64a485bb25da2f4482bbbec51e3dda
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ac5103b15cee6e44650d9b8aef6fdf755874b2d2
+ms.sourcegitcommit: fb8babf5cd72f1fc2f97ffe4ad7b62d91f325f61
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89219772"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89490282"
 ---
 # <a name="use-code-analyzers"></a>使用代码分析器
 
@@ -76,6 +76,13 @@ ms.locfileid: "89219772"
 以下屏幕截图显示的是错误列表中显示的三个冲突：
 
 ![错误列表中的错误、警告和信息冲突](media/diagnostics-severities-in-error-list.png)
+
+### <a name="hidden-severity-versus-none-severity"></a>"Hidden" 严重性与 "无" 严重性
+
+`Hidden` 默认情况下启用的严重级别规则不同于禁用或 `None` 严重性规则。
+
+- 如果已为某个严重性规则注册了任何代码修复，则在 `Hidden` Visual Studio 中将此修补程序作为灯泡代码重构操作提供，即使用户看不到隐藏的诊断也是如此。 这不是已禁用的 `None` 严重性规则的情况。
+- `Hidden` 可以通过在 [EditorConfig 文件中同时设置多个分析器规则的规则严重性的](#set-rule-severity-of-multiple-analyzer-rules-at-once-in-an-editorconfig-file)项来批量配置严重级别规则。 `None` 不能以这种方式配置严重级别规则。 相反，必须通过在 [EditorConfig 文件中为每个规则 ID 设置规则严重性](#set-rule-severity-in-an-editorconfig-file)的条目来配置它们。
 
 ::: moniker range=">=vs-2019"
 
