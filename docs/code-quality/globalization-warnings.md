@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0ff17a56be7d7908ced0e37d1b13e8296ffc2c3d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cd215a8b5c8dfb5905117638883d94d09268ce3d
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89219681"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89509843"
 ---
 # <a name="globalization-warnings"></a>全球化警告
 全球化警告支持世界通用库和应用程序。
@@ -29,9 +29,6 @@ ms.locfileid: "89219681"
 
 |规则|描述|
 |----------|-----------------|
-|[CA1300:指定 MessageBoxOptions](../code-quality/ca1300.md)|为了让使用从右到左阅读顺序的文化区域正确显示消息框，必须将 MessageBoxOptions 枚举的 RightAlign 和 RtlReading 成员传递给 Show 方法。|
-|[CA1301:避免快捷键重复](../code-quality/ca1301.md)|访问键也称为快捷键，它通过使用 Alt 键来实现对控件的键盘访问。 如果多个控件具有重复的访问键，则访问键的行为定义不正确。|
-|[CA1302:请不要对区域设置特定的字符串进行硬编码](../code-quality/ca1302.md)|System.Environment.SpecialFolder 枚举包含表示特殊系统文件夹的成员。 对于不同的操作系统，这些文件夹的位置可能具有不同的值；用户也可能会更改某些位置；或者这些位置已经进行了本地化。 GetFolderPath 方法返回与环境关联的位置。 System.environment.specialfolder 枚举、本地化和适用于当前正在运行的计算机。|
 |[CA1303:请不要将文本作为本地化参数传递](../code-quality/ca1303.md)|外部可见方法将字符串文本作为参数传递给 .NET 构造函数或方法，并且该字符串应可本地化。|
 |[CA1304:指定 CultureInfo](../code-quality/ca1304.md)|某方法或构造函数调用的成员有一个接受 System.Globalization.CultureInfo 参数的重载，但该方法或构造函数没有调用接受 CultureInfo 参数的重载。 如果未提供 CultureInfo 或 System.IFormatProvider 对象，则重载成员提供的默认值可能不会在所有区域设置中产生您想要的效果。|
 |[CA1305:指定 IFormatProvider](../code-quality/ca1305.md)|某方法或构造函数调用的一个或多个成员有接受 System.IFormatProvider 参数的重载，但该方法或构造函数没有调用接受 IFormatProvider 参数的重载。 如果未提供 System.Globalization.CultureInfo 或 IFormatProvider 对象，则重载成员提供的默认值可能不会在所有区域设置中产生您想要的效果。|

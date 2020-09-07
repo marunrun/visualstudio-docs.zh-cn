@@ -8,12 +8,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2076bc9fe3cabbfef8d3f3fb0248724835fa83f5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d66ed0ab2d93bb46983becd191b1dcc2de648659
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "81444565"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89509401"
 ---
 # <a name="roslyn-analyzers-and-code-aware-library-for-immutablearrays"></a>用于 ImmutableArrays 的 Roslyn 分析器和代码识别库
 
@@ -25,7 +25,7 @@ ms.locfileid: "81444565"
 
 * Visual Studio 2015 (速成版) 或更高版本。 你可以使用免费的 [Visual Studio 社区版](https://visualstudio.microsoft.com/vs/community/)
 * [Visual STUDIO SDK](../extensibility/visual-studio-sdk.md)。 你还可以在安装 Visual Studio 时，查看 "**常用工具**" 下的**VISUAL STUDIO 扩展性工具**同时安装 SDK。 如果你已经安装了 Visual Studio，则还可以通过转到主菜单**文件**"  >  **新建**  >  **项目**"，在左侧导航窗格中选择 " **c #** "，然后选择 "**扩展性**" 来安装此 SDK。 选择 "**安装 Visual Studio 扩展性工具**" 痕迹导航项目模板时，会提示您下载并安装 SDK。
-* [.NET Compiler Platform ( "Roslyn" ) SDK](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.NETCompilerPlatformSDK)。 还可以通过转到主菜单**文件**"  >  **新建**  >  **项目**"，在左侧导航窗格中选择 " **c #** "，然后选择 "**扩展性**" 来安装此 SDK。 选择 "**下载 .NET COMPILER PLATFORM sdk**" 痕迹导航项目模板时，会提示您下载并安装 sdk。 此 SDK 包括 [Roslyn Syntax Visualizer](https://github.com/dotnet/roslyn/wiki/Syntax%20Visualizer)。 这一有用的工具可帮助你确定应在分析器中查找的代码模型类型。 分析器基础结构针对特定代码模型类型调入您的代码，因此，您的代码仅在必要时才执行，并且只能重点分析相关的代码。
+* [.NET Compiler Platform ( "Roslyn" ) SDK](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.NETCompilerPlatformSDK)。 还可以通过转到主菜单**文件**"  >  **新建**  >  **项目**"，在左侧导航窗格中选择 " **c #** "，然后选择 "**扩展性**" 来安装此 SDK。 选择 "**下载 .NET COMPILER PLATFORM sdk**" 痕迹导航项目模板时，会提示您下载并安装 sdk。 此 SDK 包括 [Roslyn Syntax Visualizer](https://github.com/dotnet/roslyn/blob/master/docs/wiki/Syntax-Visualizer.md)。 这一有用的工具可帮助你确定应在分析器中查找的代码模型类型。 分析器基础结构针对特定代码模型类型调入您的代码，因此，您的代码仅在必要时才执行，并且只能重点分析相关的代码。
 
 ## <a name="whats-the-problem"></a>怎么了？
 
@@ -306,7 +306,7 @@ private async Task<Document> ChangeToImmutableArrayEmpty(
 
 可在 [此处](https://github.com/DustinCampbell/CoreFxAnalyzers/tree/master/Source/CoreFxAnalyzers)查看全部完成的代码。 子文件夹 *DoNotUseImmutableArrayCollectionInitializer* 和 *DoNotUseImmutableArrayCtor* 各有一个 c # 文件，用于查找问题和一个 c # 文件，用于实现在 Visual Studio 灯泡 UI 中显示的代码修复。 请注意，已完成的代码具有更多抽象，以避免反复获取 ImmutableArray \<T> 类型对象。 它使用嵌套注册操作将类型对象保存在上下文中，每当子操作 (分析对象创建和分析) 执行的集合初始化时可用。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 * [\\\Build 2015 交谈](https://channel9.msdn.com/events/Build/2015/3-725)
 * [GitHub 上的已完成代码](https://github.com/DustinCampbell/CoreFxAnalyzers/tree/master/Source/CoreFxAnalyzers)
