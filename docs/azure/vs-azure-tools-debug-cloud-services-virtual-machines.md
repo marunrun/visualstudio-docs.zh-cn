@@ -10,12 +10,12 @@ ms.workload: azure-vs
 ms.date: 11/11/2016
 ms.author: mikejo
 ms.technology: vs-ide-debug
-ms.openlocfilehash: 68b64b3097d2b26d30593ac63de5e531d6cc7736
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 00b6d001a8764d3519f0584de88a55a000447054
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88800484"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89508478"
 ---
 # <a name="debugging-an-azure-cloud-service-or-virtual-machine-in-visual-studio"></a>在 Visual Studio 中调试云服务或虚拟机
 
@@ -75,7 +75,7 @@ Visual Studio 提供了不同的选项来调试 Azure 云服务和虚拟机。
 
     ![附加调试器](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC746719.gif)
 
-3. 将调试器附加到实例后，像往常一样进行调试。 调试器会自动附加到角色的相应主机进程。 根据具体的角色，调试器将附加到 w3wp.exe、WaWorkerHost.exe 或 WaIISHost.exe。 若要确认调试器附加到的进程，请展开“服务器资源管理器”中的实例节点。 有关 Azure 进程的详细信息，请参阅 [Azure 角色体系结构](https://blogs.msdn.microsoft.com/kwill/2011/05/05/windows-azure-role-architecture/)。
+3. 将调试器附加到实例后，像往常一样进行调试。 调试器会自动附加到角色的相应主机进程。 根据具体的角色，调试器将附加到 w3wp.exe、WaWorkerHost.exe 或 WaIISHost.exe。 若要确认调试器附加到的进程，请展开“服务器资源管理器”中的实例节点。 有关 Azure 进程的详细信息，请参阅 [Azure 角色体系结构](/archive/blogs/kwill/windows-azure-role-architecture)。
 
     ![选择代码类型对话框](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC718346.png)
 
@@ -128,7 +128,7 @@ Visual Studio 提供了不同的选项来调试 Azure 云服务和虚拟机。
 
     ![选择代码类型对话框](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC718346.png)
 
-5. 选择要在虚拟机上调试的进程，然后选择 " **附加**"。 例如，如果要调试虚拟机上的某个 Web 应用，则可以选择 w3wp.exe 进程。 有关详细信息，请参阅[在 Visual Studio 中调试一个或多个进程](https://msdn.microsoft.com/library/jj919165.aspx)和 [Azure 角色体系结构](https://blogs.msdn.microsoft.com/kwill/2011/05/05/windows-azure-role-architecture/)。
+5. 选择要在虚拟机上调试的进程，然后选择 " **附加**"。 例如，如果要调试虚拟机上的某个 Web 应用，则可以选择 w3wp.exe 进程。 有关详细信息，请参阅[在 Visual Studio 中调试一个或多个进程](../debugger/debug-multiple-processes.md)和 [Azure 角色体系结构](/archive/blogs/kwill/windows-azure-role-architecture)。
 
 ## <a name="create-a-web-project-and-a-virtual-machine-for-debugging"></a>创建用于调试的 Web 项目和虚拟机
 
@@ -167,7 +167,7 @@ Visual Studio ASP.NET 项目提供了一个选项，可创建用于应用程序�
 
     ![Azure 活动日志](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC746721.png)
 
-6. 根据[如何：在 Visual Studio 中使用一键式发布来部署 Web 项目](https://msdn.microsoft.com/library/dd465337.aspx)中所述的方法发布项目。 由于你想要在虚拟机上进行调试，因此，请在 **“发布 Web”** 向导的 **“设置”** 页上选择 **“调试”** 作为配置。 这可以确保在调试时代码符号可用。
+6. 根据[如何：在 Visual Studio 中使用一键式发布来部署 Web 项目](/previous-versions/aspnet/dd465337(v=vs.110))中所述的方法发布项目。 由于你想要在虚拟机上进行调试，因此，请在 **“发布 Web”** 向导的 **“设置”** 页上选择 **“调试”** 作为配置。 这可以确保在调试时代码符号可用。
 
     ![发布设置](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC718349.png)
 
@@ -183,7 +183,7 @@ Visual Studio ASP.NET 项目提供了一个选项，可创建用于应用程序�
 
     ![选择代码类型对话框](./media/vs-azure-tools-debug-cloud-services-virtual-machines/IC718346.png)
 
-10. 选择要在虚拟机上调试的进程，然后选择 " **附加**"。 例如，如果要调试虚拟机上的某个 Web 应用，则可以选择 w3wp.exe 进程。 有关详细信息，请参阅[在 Visual Studio 中调试一个或多个进程](https://msdn.microsoft.com/library/jj919165.aspx)。
+10. 选择要在虚拟机上调试的进程，然后选择 " **附加**"。 例如，如果要调试虚拟机上的某个 Web 应用，则可以选择 w3wp.exe 进程。 有关详细信息，请参阅[在 Visual Studio 中调试一个或多个进程](../debugger/debug-multiple-processes.md)。
 
 ## <a name="next-steps"></a>后续步骤
 

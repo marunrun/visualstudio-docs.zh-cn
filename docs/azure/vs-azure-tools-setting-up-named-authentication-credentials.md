@@ -9,12 +9,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/11/2017
 ms.author: ghogen
-ms.openlocfilehash: 57841baaf147c2aae02ac89a8401c46d3bd64ca3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 42d1f394cb4e65a3794e3e869f182ba81237eeef
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72911669"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89508387"
 ---
 # <a name="set-up-named-authentication-credentials"></a>设置命名的身份验证凭据
 
@@ -33,7 +33,7 @@ ms.locfileid: "72911669"
 - 选择一个有效订阅，并选择“编辑”****，随即打开一个对话框，可在其中编辑在身份验证中使用的现有订阅。
 - 选择“新建”****，打开“新建订阅”对话框****，并提供所需的详细信息。 若要将证书上传到对话框中注明的云服务中，登录到 Azure 门户，导航到云服务，选择“设置 > 管理证书”****，选择“上传”****，然后指定 `.cer` 文件路径。
 
-如果要自行创建证书，可以参阅[创建并上传 Azure 管理证书](https://msdn.microsoft.com/library/windowsazure/gg551722.aspx)中的说明，然后将证书手动上传到 [Azure 门户](https://portal.azure.com/)。
+如果要自行创建证书，可以参阅[创建并上传 Azure 管理证书](/azure/cloud-services/cloud-services-certs-create)中的说明，然后将证书手动上传到 [Azure 门户](https://portal.azure.com/)。
 
 ## <a name="next-steps"></a>后续步骤
 

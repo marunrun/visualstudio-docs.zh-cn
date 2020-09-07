@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 13cb3e83b06b3533d1feb1e683fb246f238da732
-ms.sourcegitcommit: 6a43ace7b84c401ebd03f65abc17ae1d2a21a130
+ms.openlocfilehash: 83e798b3a47d6a9d606e3c25768895096f752f53
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89471474"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89508985"
 ---
 # <a name="performance-warnings"></a>性能警告
 性能警告支持高性能库和应用程序。
@@ -29,20 +29,14 @@ ms.locfileid: "89471474"
 
 | 规则 | 描述 |
 | - | - |
-| [CA1800:避免进行不必要的强制转换](../code-quality/ca1800.md) | 重复强制转换会降低性能，特别是在精简的迭代语句中执行强制转换时。 |
-| [CA1801:检查未使用的参数](../code-quality/ca1801.md) | 方法签名包含一个没有在方法体中使用的参数。 |
 | [CA1802:在合适的位置使用文本](../code-quality/ca1802.md) | 字段在) 中声明为静态和只读 (共享和只读 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] ，并使用编译时可的值初始化。 由于分配给目标字段的值是在编译时可的，因此将声明更改为) 字段中的 const (Const， [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 以便在编译时而不是在运行时计算该值。 |
-| [CA1804:移除未使用的局部变量](../code-quality/ca1804.md) | 未使用的局部变量和不必要的赋值会增加程序集的大小并降低性能。 |
 | [CA1805：避免进行不必要的初始化](../code-quality/ca1805.md) | 在运行构造函数之前，.NET 运行时将引用类型的所有字段初始化为其默认值。 在大多数情况下，显式将字段初始化为其默认值是冗余的，这会增加维护成本，并可能会降低性能 (例如，通过增加) 的程序集大小。 |
 | [CA1806:不要忽略方法结果](../code-quality/ca1806.md) | 已创建新的对象，但从未使用过，或者创建并返回新字符串的方法未被使用，或者不使用新字符串，或者组件对象模型 (COM) 或 P/Invoke 方法返回从未使用过的 HRESULT 或错误代码。 |
-| [CA1809:避免过多的局部变量](../code-quality/ca1809.md) | 优化性能的常见方法是将值存储于处理器寄存器，而不是内存中，这称为“注册值”。  若要提高所有的局部变量都能注册的机会，应将局部变量的数目限制在 64 个以内。 |
 | [CA1810:以内联方式初始化引用类型的静态字段](../code-quality/ca1810.md) | 当一个类型声明显式静态构造函数时，实时 (JIT) 编译器会向该类型的每个静态方法和实例构造函数中添加一项检查，以确保之前已调用该静态构造函数。 静态构造函数检查会降低性能。 |
-| [CA1811:避免使用未调用的私有代码](../code-quality/ca1811.md) | 私有或内部 (程序集级别) 成员在程序集中没有调用方，它不是由公共语言运行时调用，并且不是由委托调用的。 |
 | [CA1812:避免未实例化的内部类](../code-quality/ca1812.md) | 程序集级别类型的实例不是由程序集中的代码创建的。 |
 | [CA1813:避免使用非密封特性](../code-quality/ca1813.md) | .NET 提供了用于检索自定义特性的方法。 默认情况下，这些方法搜索特性继承层次结构。 通过密封特性，将无需搜索继承层次结构，且能够提高性能。 |
 | [CA1814:与多维数组相比，首选使用交错数组](../code-quality/ca1814.md) | 交错数组是元素为数组的数组。 构成元素的数组可以是不同的大小，这可能会导致某些数据集的空间浪费更少。 |
 | [CA1815:重写值类型上的 Equals 和相等运算符](../code-quality/ca1815.md) | 对于值类型，Equals 的继承的实现使用反射库，并比较所有字段的内容。 反射需要消耗大量计算资源，可能没有必要比较每一个字段是否相等。 如果希望用户对实例进行比较或排序，或者希望用户将实例用作哈希表键，则值类型应实现 Equals。 |
-| [CA1816:正确调用 GC.SuppressFinalize](../code-quality/ca1816.md) | 作为 Dispose 实现的方法不调用 GC。Gc.suppressfinalize，或者不是 Dispose 的实现的方法会调用 GC。Gc.suppressfinalize 或方法调用 GC。Gc.suppressfinalize 并传递除这 (我) 的内容 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 。 |
 | [CA1819:属性不应返回数组](../code-quality/ca1819.md) | 即使属性是只读的，由属性返回的数组仍不受写保护。 若要使数组不会被更改，属性必须返回数组的副本。 通常，用户不能理解调用这种属性的负面性能影响。 |
 | [CA1820:使用字符串长度测试是否有空字符串](../code-quality/ca1820.md) | 使用 String.Length 属性或 String.IsNullOrEmpty 方法比较字符串要比使用 Equals 的速度快得多。 |
 | [CA1821:移除空终结器](../code-quality/ca1821.md) | 应尽可能避免终结器，因为跟踪对象生存期会产生额外的性能系统开销。 空的终结器会产生额外的开销，而不会带来任何好处。 |
@@ -58,7 +52,7 @@ ms.locfileid: "89471474"
 | [CA1831:在合适的情况下，为字符串使用 AsSpan 而不是基于范围的索引器](../code-quality/ca1831.md) | 对字符串使用范围索引器并将值隐式赋值给 ReadOnlySpan &lt; char &gt; 类型时， <xref:System.String.Substring%2A?#System_String_Substring_System_Int32_System_Int32_> 将使用方法而不是 <xref:System.Span%601.Slice%2A?#System_Span_1_Slice_System_Int32_System_Int32_> ，这将生成请求的字符串部分的副本。 |
 | [CA1832:使用 AsSpan 或 AsMemory 而不是基于范围的索引器来获取数组的 ReadOnlySpan 或 ReadOnlyMemory 部分](../code-quality/ca1832.md) | 在数组上使用范围索引器并将值隐式赋值给 <xref:System.ReadOnlySpan%601> 或类型时 <xref:System.ReadOnlyMemory%601> ， <xref:System.Runtime.CompilerServices.RuntimeHelpers.GetSubArray%2A> 将使用方法而不是 <xref:System.Span%601.Slice%2A?#System_Span_1_Slice_System_Int32_System_Int32_> ，这将生成数组的请求部分的副本。 |
 | [CA1833:使用 AsSpan 或 AsMemory 而不是基于范围的索引器来获取数组的 Span 或 Memory 部分](../code-quality/ca1833.md) | 在数组上使用范围索引器并将值隐式赋值给 <xref:System.Span%601> 或类型时 <xref:System.Memory%601> ， <xref:System.Runtime.CompilerServices.RuntimeHelpers.GetSubArray%2A> 将使用方法而不是 <xref:System.Span%601.Slice%2A?#System_Span_1_Slice_System_Int32_System_Int32_> ，这将生成数组的请求部分的副本。 |
-| [CA1834：对单个字符串使用 StringBuilder (char) ](../code-quality/ca1834.md) | <xref:System.Text.StringBuilder> 具有一个 `Append` 采用 `char` 作为参数的重载。 更倾向 `char` 于调用重载以提高性能。 |
+| [CA1834:对单字符字符串使用 StringBuilder.Append(char)](../code-quality/ca1834.md) | <xref:System.Text.StringBuilder> 具有一个 `Append` 采用 `char` 作为参数的重载。 更倾向 `char` 于调用重载以提高性能。 |
 | [CA1835：首选 "ReadAsync" 和 "WriteAsync" 的基于 Memory' 的重载](../code-quality/ca1835.md) | "Stream" 有一个 "ReadAsync" 重载，该重载采用 "Memory &lt; byte &gt; " 作为第一个参数，而 "WriteAsync" 重载采用 "ReadOnlyMemory &lt; Byte &gt; " 作为第一个参数。 更愿意调用基于内存的重载，这些重载更有效。 |
 | [CA1836：优先 `IsEmpty` `Count` 使用（如果可用）](../code-quality/ca1836.md) | 首选 `IsEmpty` 比、或更有效的属性， `Count` `Length` <xref:System.Linq.Enumerable.Count%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29> <xref:System.Linq.Enumerable.LongCount%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29> 以确定对象是否包含任何项。 |
 | [CA1837：使用 `Environment.ProcessId` 而不是 `Process.GetCurrentProcess().Id`](../code-quality/ca1837.md) | `Environment.ProcessId` 比更简单、更快 `Process.GetCurrentProcess().Id` 。 |

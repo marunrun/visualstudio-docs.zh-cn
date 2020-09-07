@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 236a95cd8d4af8da91199bf79e7c9fe3aa0d49af
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 976e676cda09d50e34acb88a12551b1531595888
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85769477"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89508374"
 ---
 # <a name="automatic-feature-suspension"></a>自动功能挂起
 
@@ -40,7 +40,7 @@ ms.locfileid: "85769477"
 
 ## <a name="improve-visual-studio-performance"></a>提高 Visual Studio 性能
 
-有关在处理大型解决方案或内存不足的情况时如何提高 Visual Studio 性能的提示和技巧，请参阅 [大型解决方案的性能注意事项](https://github.com/dotnet/roslyn/wiki/Performance-considerations-for-large-solutions)。
+有关在处理大型解决方案或内存不足的情况时如何提高 Visual Studio 性能的提示和技巧，请参阅 [大型解决方案的性能注意事项](https://github.com/dotnet/roslyn/blob/master/docs/wiki/Performance-considerations-for-large-solutions.md)。
 
 ## <a name="live-code-analysis-is-reduced-to-minimal-scope"></a>实时代码分析降低到最小范围
 
@@ -69,4 +69,4 @@ ms.locfileid: "85769477"
 
 - [如何：配置托管代码的实时代码分析范围](./configure-live-code-analysis-scope-managed-code.md)
 - [垃圾回收基础](/dotnet/standard/garbage-collection/fundamentals)
-- [大型解决方案的性能注意事项](https://github.com/dotnet/roslyn/wiki/Performance-considerations-for-large-solutions)
+- [大型解决方案的性能注意事项](https://github.com/dotnet/roslyn/blob/master/docs/wiki/Performance-considerations-for-large-solutions.md)

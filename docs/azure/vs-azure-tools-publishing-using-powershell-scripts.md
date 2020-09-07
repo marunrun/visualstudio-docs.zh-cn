@@ -9,12 +9,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/11/2016
 ms.author: ghogen
-ms.openlocfilehash: 25943a6b3edc1a55c6d27d3c2737a9893edf5032
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5f7e2f79b5e7daea577693bc0fd54cef70bb7e4a
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "84179955"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89508400"
 ---
 # <a name="using-windows-powershell-scripts-to-publish-to-dev-and-test-environments"></a>使用 Windows PowerShell 脚本发布到开发和测试环境
 
@@ -154,7 +154,7 @@ JSON 文件是在 **Configurations** 文件夹中创建的，其中包含的配�
 
    ![创建 Web 部署包](./media/vs-azure-tools-publishing-using-powershell-scripts/IC767885.png)
 
-   有关详细信息，请参阅[如何：在 Visual Studio 中创建 Web 部署包](https://msdn.microsoft.com/library/dd465323.aspx)。 也可以自动创建 Web 部署包，如[自定义和扩展发布脚本](#customizing-and-extending-the-publish-scripts)中所述。
+   有关详细信息，请参阅[如何：在 Visual Studio 中创建 Web 部署包](/previous-versions/aspnet/dd465323(v=vs.110))。 也可以自动创建 Web 部署包，如[自定义和扩展发布脚本](#customizing-and-extending-the-publish-scripts)中所述。
 
 1. 在“解决方案资源管理器”中打开脚本的上下文菜单，并选择“使用 PowerShell ISE 打开”。********
 1. 如果首次在此计算机上运行 Windows PowerShell 脚本，请使用管理员权限打开命令提示窗口并键入以下命令：

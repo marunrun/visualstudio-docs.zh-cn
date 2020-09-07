@@ -9,12 +9,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/11/2016
 ms.author: ghogen
-ms.openlocfilehash: 8b4b7a05de87ab8b70046b51fe9f256f05d3aee5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: dd7102873047ed7331547225fa0b32efd33f853f
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62572280"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89508413"
 ---
 # <a name="publish-webapplicationvm-windows-powershell-script"></a>Publish-WebApplicationVM（Windows PowerShell 脚本）
 将 Web 应用程序部署到虚拟机。 此脚本会在 Azure 订阅中创建所需的资源（如果这些资源不存在）。
@@ -30,7 +30,7 @@ Publish-WebApplicationVM
 -Verbose
 ```
 
-### <a name="configuration"></a>配置
+### <a name="configuration"></a>Configuration
 描述部署详细信息的 JSON 配置文件的路径。
 
 | 别名 | 无 |
@@ -53,7 +53,7 @@ Publish-WebApplicationVM
 | 接受通配符？ |false |
 
 ### <a name="webdeploypackage"></a>WebDeployPackage
-要发布到虚拟机的 Web 部署包的路径。 可以在 Visual Studio 中使用“发布 Web”向导来创建此包。 请参阅[如何：在 Visual Studio 中创建 Web 部署包](https://msdn.microsoft.com/library/dd465323.aspx)。
+要发布到虚拟机的 Web 部署包的路径。 可以在 Visual Studio 中使用“发布 Web”向导来创建此包。 请参阅[如何：在 Visual Studio 中创建 Web 部署包](/previous-versions/aspnet/dd465323(v=vs.110))。
 
 | 别名 | 无 |
 | --- | --- |

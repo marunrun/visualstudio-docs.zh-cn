@@ -10,12 +10,15 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: cb338803d50b2ecc9af8c8db6a6b6dc2f3631161
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+dev_langs:
+- csharp
+- vb
+ms.openlocfilehash: 6e3e60fe873d7bcb512e56c844e76fcbef037d42
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85906175"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89508920"
 ---
 # <a name="walkthrough-outlining"></a>演练：大纲显示
 通过定义要展开或折叠的文本区域的类型，设置基于语言的功能，如大纲显示。 可在语言服务的上下文中定义区域，或定义自己的文件扩展名和内容类型，并将区域定义仅应用于该类型，或者将区域定义应用于现有内容类型 (如 "text" ) 。 此演练演示如何定义和显示大纲显示区域。
