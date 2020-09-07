@@ -9,12 +9,12 @@ ms.workload: azure-vs
 ms.topic: how-to
 ms.date: 03/21/2017
 ms.author: ghogen
-ms.openlocfilehash: 6f05f97155427d75b88bb509a6bfb09644d8c686
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 960bd86a1e0993e4d2c57514a29ceecca34cca3d
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88250852"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89508504"
 ---
 # <a name="configure-azure-cloud-service-roles-with-visual-studio"></a>使用 Visual Studio 配置 Azure 云服务角色
 一个 Azure 云服务可以有一个辅助角色或 Web 角色。 对于每个角色，需要定义该角色的设置方式，并配置该角色的运行方式。 若要详细了解云服务中的角色，请观看视频 [Introduction to Azure Cloud Services](https://channel9.msdn.com/Series/Windows-Azure-Cloud-Services-Tutorials/Introduction-to-Windows-Azure-Cloud-Services)（Azure 云服务简介）。
@@ -140,7 +140,7 @@ ms.locfileid: "88250852"
     ```
 
 ## <a name="add-custom-settings-to-use-in-your-azure-cloud-service"></a>将要使用的自定义设置添加到 Azure 云服务中
-服务配置文件中的自定义设置可让你为特定服务配置的字符串添加名称和值。 可以选择使用此设置来配置云服务中的功能，具体方法是：读取设置的值，并使用该值来控制代码中的逻辑。 无需重新生成服务包就可更改这些服务配置值；运行云服务时也可以进行更改。 设置发生更改时，代码可以检查通知。 请参阅 [RoleEnvironment.Changing 事件](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.serviceruntime.roleenvironment.changing.aspx)。
+服务配置文件中的自定义设置可让你为特定服务配置的字符串添加名称和值。 可以选择使用此设置来配置云服务中的功能，具体方法是：读取设置的值，并使用该值来控制代码中的逻辑。 无需重新生成服务包就可更改这些服务配置值；运行云服务时也可以进行更改。 设置发生更改时，代码可以检查通知。 请参阅 [RoleEnvironment.Changing 事件](/previous-versions/azure/reference/ee758134(v=azure.100))。
 
 可添加、移除或修改服务配置的自定义设置。 对于不同的服务的配置，可能需要这些字符串的不同值。
 
@@ -269,4 +269,4 @@ using (FileStream writeStream = File.Create(filePath))
 1. Windows 资源管理器窗口打开时，请在“搜索”文本框中输入“MyLocalStorageTest.txt”，并按 **Enter** 开始搜索。****
 
 ## <a name="next-steps"></a>后续步骤
-阅读[配置 Azure 项目](vs-azure-tools-configuring-an-azure-project.md)以详细了解 Visual Studio 中的 Azure 项目。 阅读[架构参考](https://msdn.microsoft.com/library/azure/dd179398)以详细了解云服务架构。
+阅读[配置 Azure 项目](vs-azure-tools-configuring-an-azure-project.md)以详细了解 Visual Studio 中的 Azure 项目。 阅读[架构参考](/previous-versions/azure/dd179398(v=azure.100))以详细了解云服务架构。

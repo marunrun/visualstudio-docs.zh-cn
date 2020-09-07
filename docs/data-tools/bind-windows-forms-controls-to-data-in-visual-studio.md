@@ -17,12 +17,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: b6a1d240c865ecc6abddd399c94122a757ee0983
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9af6c503b34d00ea88e74b8af40cd9e7ded643ff
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85283003"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89508543"
 ---
 # <a name="bind-windows-forms-controls-to-data-in-visual-studio"></a>在 Visual Studio 中将 Windows 窗体控件绑定到数据
 
@@ -53,7 +53,7 @@ ms.locfileid: "85283003"
 
 ## <a name="bind-to-data-in-a-datagridview-control"></a>绑定到 DataGridView 控件中的数据
 
-对于 [DataGridView 控件](/dotnet/framework/winforms/controls/datagridview-control-overview-windows-forms)，整个表将绑定到该单个控件。 将 **DataGridView** 拖到窗体时，还会出现用于导航记录 () 的工具条 <xref:System.Windows.Forms.BindingNavigator> 。 [数据集](../data-tools/dataset-tools-in-visual-studio.md)、 [TableAdapter](../data-tools/create-and-configure-tableadapters.md)、 <xref:System.Windows.Forms.BindingSource> 和 <xref:System.Windows.Forms.BindingNavigator> 显示在组件栏中。 在下图中，还添加了一个 [TableAdapterManager](https://msdn.microsoft.com/library/bb384426.aspx) ，因为 Customers 表与 Orders 表有一个关系。 这些变量都在自动生成的代码中声明为 form 类中的私有成员。 用于填充 **DataGridView** 的自动生成的代码位于 `Form_Load` 事件处理程序中。 用于保存用于更新数据库的数据的代码位于 `Save` **BindingNavigator**的事件处理程序中。 您可以根据需要移动或修改此代码。
+对于 [DataGridView 控件](/dotnet/framework/winforms/controls/datagridview-control-overview-windows-forms)，整个表将绑定到该单个控件。 将 **DataGridView** 拖到窗体时，还会出现用于导航记录 () 的工具条 <xref:System.Windows.Forms.BindingNavigator> 。 [数据集](../data-tools/dataset-tools-in-visual-studio.md)、 [TableAdapter](../data-tools/create-and-configure-tableadapters.md)、 <xref:System.Windows.Forms.BindingSource> 和 <xref:System.Windows.Forms.BindingNavigator> 显示在组件栏中。 在下图中，还添加了一个 [TableAdapterManager](/previous-versions/bb384426(v=vs.140)) ，因为 Customers 表与 Orders 表有一个关系。 这些变量都在自动生成的代码中声明为 form 类中的私有成员。 用于填充 **DataGridView** 的自动生成的代码位于 `Form_Load` 事件处理程序中。 用于保存用于更新数据库的数据的代码位于 `Save` **BindingNavigator**的事件处理程序中。 您可以根据需要移动或修改此代码。
 
 ![BindingNavigator 与 BindingNavigator](../data-tools/media/raddata-gridview-with-bindingnavigator.png)
 
@@ -80,7 +80,7 @@ ms.locfileid: "85283003"
 
 另请注意，每个控件都有一个智能标记。 此标记启用仅适用于该控件的自定义项。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在 Visual Studio 中将控件绑定到数据](../data-tools/bind-controls-to-data-in-visual-studio.md)
 - [Windows 窗体 ( .NET Framework 中的数据绑定) ](/dotnet/framework/winforms/windows-forms-data-binding)

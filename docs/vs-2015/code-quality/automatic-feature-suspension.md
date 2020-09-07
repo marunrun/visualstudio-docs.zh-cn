@@ -12,12 +12,12 @@ caps.latest.revision: 8
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: b9c80ba76ba2da978c9cb475299ba0fc9e614120
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1dddc235131322a61cdb0106d866b138040d8c18
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72655148"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89508154"
 ---
 # <a name="automatic-feature-suspension"></a>自动功能挂起
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "72655148"
 - Visual Studio 缓存已刷新。
 
 ## <a name="improve-visual-studio-performance"></a>提高 Visual Studio 性能
- 有关在处理大型解决方案或内存不足的情况时如何提高 Visual Studio 性能的提示和技巧，请参阅 [大型解决方案的性能注意事项](https://github.com/dotnet/roslyn/wiki/Performance-considerations-for-large-solutions)。
+ 有关在处理大型解决方案或内存不足的情况时如何提高 Visual Studio 性能的提示和技巧，请参阅 [大型解决方案的性能注意事项](https://github.com/dotnet/roslyn/blob/master/docs/wiki/Performance-considerations-for-large-solutions.md)。
 
 ## <a name="full-solution-analysis-suspended"></a>已挂起完整解决方案分析
  默认情况下，将为 Visual c # 启用 Visual Basic 和禁用完整解决方案分析。 但是，在内存不足的情况下，将自动禁用 Visual Basic 和 Visual c # 的完整解决方案分析，而不考虑它们在 "选项" 对话框中的设置。 但是，你可以通过在 "选项" 对话框中 **选择 "** **启用完整解决方案分析** " 复选框或通过重新启动 Visual Studio 来重新启用完整解决方案分析。 "选项" 对话框始终显示当前的完整解决方案分析设置。 有关详细信息，请参阅 [如何：启用和禁用完整解决方案分析](../code-quality/how-to-enable-and-disable-full-solution-analysis-for-managed-code.md)。
@@ -63,4 +63,4 @@ ms.locfileid: "72655148"
 
 - [如何：启用和禁用完整解决方案分析](../code-quality/how-to-enable-and-disable-full-solution-analysis-for-managed-code.md)
 - [垃圾回收基础](https://msdn.microsoft.com/library/67c5a20d-1be1-4ea7-8a9a-92b0b08658d2)
-- [大型解决方案的性能注意事项](https://github.com/dotnet/roslyn/wiki/Performance-considerations-for-large-solutions)
+- [大型解决方案的性能注意事项](https://github.com/dotnet/roslyn/blob/master/docs/wiki/Performance-considerations-for-large-solutions.md)

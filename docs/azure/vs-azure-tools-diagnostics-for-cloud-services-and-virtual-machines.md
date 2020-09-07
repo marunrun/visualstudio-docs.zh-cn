@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.workload: azure-vs
 ms.date: 06/28/2018
 ms.author: mikejo
-ms.openlocfilehash: 2312c636f465bd39cdcbc4ca0ab63c107151c5be
-ms.sourcegitcommit: a3edc753c951f317b67ce294cd2fc74f0c45390c
+ms.openlocfilehash: 9912a7fa0e83c5433e0eba1c7ffa23763331af6b
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89426728"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89508491"
 ---
 # <a name="set-up-diagnostics-for-azure-cloud-services-and-virtual-machines"></a>为 Azure 云服务和虚拟机设置诊断
 需要对 Azure 云服务或虚拟机进行故障排除时，可使用 Visual Studio 更轻松地设置 Azure 诊断。 诊断可以在运行云服务的虚拟机和虚拟机实例上捕获系统数据和日志记录数据。 诊断数据传输到所选的存储帐户。 有关 Azure 中诊断日志记录的详细信息，请参阅[为 Azure 应用服务中的 Web 应用启用诊断日志记录](/azure/app-service/web-sites-enable-diagnostic-log)。
@@ -156,18 +156,18 @@ ms.locfileid: "89426728"
 ```
 
 ### <a name="performance-counters"></a>性能计数器
-性能计数器信息可以帮助找到系统瓶颈，并优化系统和应用程序性能。 有关详细信息，请参阅[在 Azure 应用程序中创建和使用性能计数器](https://msdn.microsoft.com/library/azure/hh411542.aspx)。 若要捕获性能计数器，请选中“启用性能计数器的传输”复选框。**** 若要增加或减少将事件日志传输到存储帐户的时间间隔，请更改“传输周期(分钟)”值。**** 选中与要跟踪的性能计数器对应的复选框。
+性能计数器信息可以帮助找到系统瓶颈，并优化系统和应用程序性能。 有关详细信息，请参阅[在 Azure 应用程序中创建和使用性能计数器](/azure/cloud-services/diagnostics-performance-counters)。 若要捕获性能计数器，请选中“启用性能计数器的传输”复选框。**** 若要增加或减少将事件日志传输到存储帐户的时间间隔，请更改“传输周期(分钟)”值。**** 选中与要跟踪的性能计数器对应的复选框。
 
 ![性能计数器](./media/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines/IC758147.png)
 
-若要跟踪未列出的性能计数器，请使用建议的语法输入该性能计数器， 然后选择“添加”。**** 虚拟机上的操作系统决定了可以跟踪哪些性能计数器。有关语法的详细信息，请参阅 [指定计数器路径](https://msdn.microsoft.com/library/windows/desktop/aa373193.aspx)。
+若要跟踪未列出的性能计数器，请使用建议的语法输入该性能计数器， 然后选择“添加”。**** 虚拟机上的操作系统决定了可以跟踪哪些性能计数器。有关语法的详细信息，请参阅 [指定计数器路径](/windows/win32/perfctrs/specifying-a-counter-path)。
 
 ### <a name="infrastructure-logs"></a>基础结构日志
 基础结构日志包含的信息涉及 Azure 诊断基础结构、RemoteAccess 模块和 RemoteForwarder 模块。 若要收集有关基础结构日志的信息，请选中“启用基础结构日志的传输”**** 复选框。 若要增加或减少将基础结构将日志传输到存储帐户的时间间隔，请更改“传输周期(分钟)”值。****
 
 ![诊断基础结构日志](./media/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines/IC758148.png)
 
-有关详细信息，请参阅[使用 Azure 诊断收集日志记录数据](https://msdn.microsoft.com/library/azure/gg433048.aspx)。
+有关详细信息，请参阅[使用 Azure 诊断收集日志记录数据](/azure/cloud-services/cloud-services-dotnet-diagnostics)。
 
 ### <a name="log-directories"></a>日志目录
 日志目录包含从 Internet Information Services (IIS) 请求、失败的请求或所选文件夹的日志目录收集的数据。 若要捕获日志目录，请选中“启用日志目录的传输”**** 复选框。 若要增加或减少将日志传输到存储帐户的时间间隔，请更改“传输周期(分钟)”值。****
@@ -185,7 +185,7 @@ ms.locfileid: "89426728"
 
 ![ETW 日志](./media/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines/IC766025.png)
 
-ASP.NET 通过 [System.Diagnostics.aspx](https://msdn.microsoft.com/library/system.diagnostics(v=vs.110)) 命名空间中的类支持 ETW 框架。 Microsoft.WindowsAzure.Diagnostics 命名空间继承自标准 [System.Diagnostics.aspx](https://msdn.microsoft.com/library/system.diagnostics(v=vs.110)) 类并对其进行了扩展，在 Azure 环境中，可以通过该命名空间将 [System.Diagnostics.aspx](https://msdn.microsoft.com/library/system.diagnostics(v=vs.110)) 用作日志记录框架。 有关详细信息，请参阅[在 Microsoft Azure 中控制日志记录和跟踪](https://msdn.microsoft.com/magazine/ff714589.aspx)以及[在 Azure 云服务和虚拟机中启用诊断](/azure/cloud-services/cloud-services-dotnet-diagnostics)。
+ASP.NET 通过 [System.Diagnostics.aspx](/dotnet/api/system.diagnostics) 命名空间中的类支持 ETW 框架。 Microsoft.WindowsAzure.Diagnostics 命名空间继承自标准 [System.Diagnostics.aspx](/dotnet/api/system.diagnostics) 类并对其进行了扩展，在 Azure 环境中，可以通过该命名空间将 [System.Diagnostics.aspx](/dotnet/api/system.diagnostics) 用作日志记录框架。 有关详细信息，请参阅[在 Microsoft Azure 中控制日志记录和跟踪](/archive/msdn-magazine/2010/june/msdn-magazine-cloud-diagnostics-take-control-of-logging-and-tracing-in-windows-azure)以及[在 Azure 云服务和虚拟机中启用诊断](/azure/cloud-services/cloud-services-dotnet-diagnostics)。
 
 ### <a name="crash-dumps"></a>故障转储
 若要捕获有关角色实例何时发生故障的信息，请选中“启用故障转储的传输”复选框****。  (因为 ASP.NET 处理大多数异常，所以这通常仅适用于辅助角色。 ) 若要增加或减少专用于故障转储的存储空间的百分比，请更改 **目录配额 (% ) ** 值。 可以更改将故障转储存储到其中的存储容器，然后选择要捕获“完整”转储还是“微型”转储********。
@@ -194,7 +194,7 @@ ASP.NET 通过 [System.Diagnostics.aspx](https://msdn.microsoft.com/library/syst
 
 ![故障转储](./media/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines/IC766026.png)
 
-有关详细信息，请参阅[在 Microsoft Azure 中控制日志记录和跟踪](https://msdn.microsoft.com/magazine/ff714589.aspx)，以及 [Microsoft Azure Diagnostics Part 4: Custom logging components and Azure Diagnostics 1.3 changes](https://www.red-gate.com/simple-talk/cloud/platform-as-a-service/microsoft-azure-diagnostics-part-4-custom-logging-components-and-azure-diagnostics-1.3-changes/)（Microsoft Azure 诊断第 4 部分：自定义日志记录组件和 Azure 诊断 1.3 更改）。
+有关详细信息，请参阅[在 Microsoft Azure 中控制日志记录和跟踪](/archive/msdn-magazine/2010/june/msdn-magazine-cloud-diagnostics-take-control-of-logging-and-tracing-in-windows-azure)，以及 [Microsoft Azure Diagnostics Part 4: Custom logging components and Azure Diagnostics 1.3 changes](https://www.red-gate.com/simple-talk/cloud/platform-as-a-service/microsoft-azure-diagnostics-part-4-custom-logging-components-and-azure-diagnostics-1.3-changes/)（Microsoft Azure 诊断第 4 部分：自定义日志记录组件和 Azure 诊断 1.3 更改）。
 
 ## <a name="view-the-diagnostics-data"></a>查看诊断数据
 收集云服务或虚拟机的诊断数据后，可以查看这些数据。
@@ -256,7 +256,7 @@ ASP.NET 通过 [System.Diagnostics.aspx](https://msdn.microsoft.com/library/syst
     如果在服务器资源管理器中更改数据收集，则在完全重新部署云服务之前，这些更改会一直生效。 如果使用默认的发布设置，则不会覆盖这些更改。 默认的发布设置是更新现有部署，而非进行完全的重新部署。 若要确保设置在部署时清除，请转到发布向导中的“高级设置”选项卡，然后清除“部署更新”复选框。******** 在清除该复选框的情况下重新部署时，这些设置将还原为 .wadcfgx（或 .wadcfg）文件中的设置（与通过角色的“属性”编辑器进行设置一样）。**** 如果更新部署，Azure 会保留此前的设置。
 
 ## <a name="troubleshoot-azure-cloud-service-issues"></a>排查 Azure 云服务问题
-如果在处理云服务项目时遇到问题，例如陷入“繁忙”状态的某个角色反复回收或引发内部服务器错误，则可以使用一些工具和方法来诊断并解决问题。 有关常见问题和解决方案的具体示例，以及用于诊断并解决此类错误的概念和工具的概述，请参阅 [Azure PaaS compute diagnostics data](https://blogs.msdn.microsoft.com/kwill/2013/08/09/windows-azure-paas-compute-diagnostics-data/)（Azure PaaS 计算诊断数据）。
+如果在处理云服务项目时遇到问题，例如陷入“繁忙”状态的某个角色反复回收或引发内部服务器错误，则可以使用一些工具和方法来诊断并解决问题。 有关常见问题和解决方案的具体示例，以及用于诊断并解决此类错误的概念和工具的概述，请参阅 [Azure PaaS compute diagnostics data](/archive/blogs/kwill/windows-azure-paas-compute-diagnostics-data)（Azure PaaS 计算诊断数据）。
 
 ## <a name="q--a"></a>问题解答
 **什么是缓冲区大小，应设置为多大？**

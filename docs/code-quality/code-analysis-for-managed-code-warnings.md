@@ -15,19 +15,19 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: a72512eef8490f18f1179ae149b9a39c2ddaad4e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8238de0760f300b6fa418a5e3eb47eac3db77272
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89285705"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89509011"
 ---
 # <a name="net-code-analysis-rules"></a>.NET 代码分析规则
 托管代码分析工具可以发出警告，指示托管代码库中存在违反规则的情况。 这些警告将被分类到各个规则领域，例如设计、本地化、性能和安全性。 每个警告表示一次托管代码分析规则冲突。 本部分深入讨论每个托管代码分析警告，并提供相关示例。
 
  下表显示了为每个警告提供的信息类型。
 
-|项|说明|
+|项目|说明|
 |----------|-----------------|
 |类型|规则的 TypeName。|
 |CheckId|规则的唯一标识符。 CheckId 和类别用于源代码中禁止显示警告。|
@@ -44,18 +44,15 @@ ms.locfileid: "89285705"
 
 |类别|说明|
 |-|-|
-|[CheckId 的警告](../code-quality/code-analysis-warnings-for-managed-code-by-checkid.md)|列出按 CheckId 排列的所有警告|
-|[加密警告](../code-quality/cryptography-warnings.md)|支持通过正确使用加密机制提高库和应用程序安全的警告。|
-|[设计警告](../code-quality/design-warnings.md)|支持由 .NET 设计准则指定的正确库设计的警告。|
-|[文档警告](../code-quality/documentation-warnings.md)|通过正确使用 XML 文档注释来支持记录良好的库设计的警告。|
-|[全球化警告](../code-quality/globalization-warnings.md)|支持世界通用库和应用程序的警告。|
-|[互操作性警告](../code-quality/interoperability-warnings.md)|支持与 COM 客户端交互的警告。|
-|[可维护性警告](../code-quality/maintainability-warnings.md)|支持库和应用程序维护的警告。|
-|[移动性警告](../code-quality/mobility-warnings.md)|支持高效使用电源的警告。|
-|[命名警告](../code-quality/naming-warnings.md)|支持遵守 .NET 设计准则命名约定的警告。|
-|[性能警告](../code-quality/performance-warnings.md)|支持高性能库和应用程序的警告。|
-|[可移植性警告](../code-quality/portability-warnings.md)|支持跨不同平台的可移植性的警告。|
-|[可靠性警告](../code-quality/reliability-warnings.md)|支持库和应用程序可靠性（例如正确使用内存和线程）的警告。|
-|[安全警告](../code-quality/security-warnings.md)|支持更安全的库和应用程序的警告。|
-|[使用警告](../code-quality/usage-warnings.md)|支持 .NET 的适当使用的警告。|
-|[Code Analysis Policy Errors](../code-quality/code-analysis-policy-errors.md)|签入时未满足代码分析策略而发生的错误。|
+|[按 ID 的规则](../code-quality/code-analysis-warnings-for-managed-code-by-checkid.md)|按 RuleID 列出所有规则|
+|[设计规则](../code-quality/design-warnings.md)|支持由 .NET 设计准则指定的正确库设计的规则。|
+|[文档规则](../code-quality/documentation-warnings.md)|通过正确使用 XML 文档注释，支持记录良好的库设计的规则。|
+|[全球化规则](../code-quality/globalization-warnings.md)|支持世界通用库和应用程序的规则。|
+|[可维护性规则](../code-quality/maintainability-warnings.md)|支持库和应用程序维护的规则。|
+|[命名规则](../code-quality/naming-warnings.md)|支持遵守 .NET 设计准则命名约定的规则。|
+|[性能规则](../code-quality/performance-warnings.md)|支持高性能库和应用程序的规则。|
+|[可移植性和互操作性规则](../code-quality/interoperability-warnings.md)|支持跨不同平台的可移植性和与 COM 客户端交互的规则。|
+|[发布规则](../code-quality/publish-warnings.md)|支持适当发布 .NET 应用程序的规则。|
+|[可靠性规则](../code-quality/reliability-warnings.md)|支持库和应用程序可靠性（例如正确的内存和线程使用）的规则。|
+|[安全性规则](../code-quality/security-warnings.md)|支持更安全的库和应用程序的规则。|
+|[使用规则](../code-quality/usage-warnings.md)|支持 .NET 的适当用法的规则。|

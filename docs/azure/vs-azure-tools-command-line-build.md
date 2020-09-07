@@ -9,17 +9,17 @@ ms.workload: azure-vs
 ms.topic: how-to
 ms.date: 03/05/2017
 ms.author: ghogen
-ms.openlocfilehash: 179737f7a4a55fd6111338363ad6668a43689205
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9ed5e9635cbe088773336a29bc9a8853d7e0a5db
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85280760"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89508465"
 ---
 # <a name="building-azure-projects-from-the-command-line"></a>通过命令行生成 Azure 项目
 通过使用 Microsoft 生成引擎 (MSBuild)，可以在未安装 Visual Studio 的生成实验室环境中生成产品。 MSBuild 对可扩展且 Microsoft 完全支持的项目文件使用 XML 格式。 通过使用 MSBuild 文件格式，可以描述必须为一个或多个平台和配置生成的项目。
 
-还可以在命令行下运行 MSBuild，本主题介绍了该方法。 通过在命令行中设置属性，可以生成项目的特定配置。 同样，还可以定义 MSBuild 将生成的目标。 有关命令行参数和 MSBuild 的详细信息，请参阅 [MSBuild 命令行参考](https://msdn.microsoft.com/library/ms164311.aspx)。
+还可以在命令行下运行 MSBuild，本主题介绍了该方法。 通过在命令行中设置属性，可以生成项目的特定配置。 同样，还可以定义 MSBuild 将生成的目标。 有关命令行参数和 MSBuild 的详细信息，请参阅 [MSBuild 命令行参考](../msbuild/msbuild-command-line-reference.md)。
 
 ## <a name="msbuild-parameters"></a>MSBuild 参数
 创建包的最简单方法是运行 MSBuild 并使用 `/t:Publish` 选项。 默认情况下，此命令将创建与项目的根文件夹相关的目录，例如 `<ProjectDirectory>\bin\Configuration\app.publish\`。 生成 Azure 项目时，将生成两个文件，即包文件本身和附带的配置文件：

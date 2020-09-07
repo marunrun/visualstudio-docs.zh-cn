@@ -9,12 +9,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 8/24/2017
 ms.author: ghogen
-ms.openlocfilehash: 1a36dc743108d2cfbf9e5405af727b79aeda4808
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8702b9814214a902a644cc5854250b600c301caa
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88800471"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89508439"
 ---
 # <a name="browse-and-manage-storage-resources-by-using-server-explorer"></a>使用服务器资源管理器浏览和管理存储资源
 
@@ -126,7 +126,7 @@ Blob 数据在本地缓存，并且对照 Azure Blob 存储中 Blob 的最后修
 
 如果正在使用 Azure 诊断来记录 Azure 应用程序中的数据，并且已将日志传输到存储帐户，则会看到 Azure 为这些日志创建的容器。 在服务器资源管理器中查看这些日志是一种简便的确定应用程序问题的方法，尤其是当应用程序已部署到 Azure 时。
 
-有关 Azure 诊断的详细信息，请参阅 [Collect Logging Data by Using Azure Diagnostics](https://msdn.microsoft.com/library/azure/gg433048.aspx)（使用 Azure 诊断收集日志记录数据）。
+有关 Azure 诊断的详细信息，请参阅 [Collect Logging Data by Using Azure Diagnostics](/azure/cloud-services/cloud-services-dotnet-diagnostics)（使用 Azure 诊断收集日志记录数据）。
 
 ### <a name="to-get-the-url-for-a-blob"></a>获取 Blob 的 URL
 
@@ -262,7 +262,7 @@ Azure 表存储可存储大量结构化数据。 该服务是一个 NoSQL 数据
 
    ![创建 Azure 存储帐户](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC744166.png)
 
-1. 选择“创建”  。
+1. 选择“创建”。
 
 新的存储帐户随即出现在解决方案资源管理器的“存储”列表中。****
 
@@ -275,7 +275,7 @@ Azure 表存储可存储大量结构化数据。 该服务是一个 NoSQL 数据
 
    * 要附加的现有存储帐户的名称。
    * 所选存储帐户的密钥。 选择存储帐户时，通常会提供此值。 如果想要 Visual Studio 记住存储帐户密钥，请选中“记住帐户密钥”复选框****。
-   * 将用于连接到存储帐户的协议，如 HTTP、HTTPS 或自定义终结点。 有关自定义终结点的详细信息，请参阅[如何配置连接字符串](https://msdn.microsoft.com/library/azure/ee758697.aspx)。
+   * 将用于连接到存储帐户的协议，如 HTTP、HTTPS 或自定义终结点。 有关自定义终结点的详细信息，请参阅[如何配置连接字符串](/azure/storage/common/storage-configure-connection-string)。
 
 ### <a name="to-view-the-secondary-endpoints"></a>查看辅助终结点
 

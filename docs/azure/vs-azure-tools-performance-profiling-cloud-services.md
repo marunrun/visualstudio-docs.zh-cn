@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.workload: azure-vs
 ms.date: 11/11/2016
 ms.author: mikejo
-ms.openlocfilehash: 04e3ee89498447f7743fc1b5119e129f046b4fcc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5c92a2bb2349f1b5543672d7ecd944e3d82bb500
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72911777"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89508426"
 ---
 # <a name="testing-the-performance-of-a-cloud-service"></a>测试云服务的性能
 ## <a name="overview"></a>概述
@@ -54,7 +54,7 @@ ms.locfileid: "72911777"
 ## <a name="profiling-a-cloud-service-in-azure"></a>分析在 Azure 中的云服务
 从 Visual Studio 发布云服务时，可以分析服务，指定提供所需信息的分析设置。 为每个角色实例启动分析会话。 有关如何从 Visual Studio 中发布服务的详细信息，请参阅[从 Visual Studio 发布到 Azure 云服务](vs-azure-tools-publishing-a-cloud-service.md)。
 
-若要了解有关 Visual Studio 中的性能分析的详细信息，请参阅[性能分析初学者指南](https://msdn.microsoft.com/library/azure/ms182372.aspx)和[使用分析工具分析应用程序性能](https://msdn.microsoft.com/library/azure/z9z62c29.aspx)。
+若要了解有关 Visual Studio 中的性能分析的详细信息，请参阅[性能分析初学者指南](../profiling/beginners-guide-to-performance-profiling.md)和[使用分析工具分析应用程序性能](../profiling/performance-explorer.md)。
 
 > [!NOTE]
 > 发布云服务时，可以启用 IntelliTrace 或分析。 但二者不能同时启用。
@@ -68,7 +68,7 @@ ms.locfileid: "72911777"
 * **检测信息** - 此方法收集用于重点分析和分析输入/输出性能问题有用的详细计时数据。 在分析运行过程中，检测方法将记录每个进入、退出以及对模块中的函数执行的函数调用。 此方法适用于收集有关代码中某个部分的详细计时信息，以及了解输入和输出操作对应用程序性能的影响。 此方法禁用计算机运行 32 位操作系统。 仅当云服务在 Azure 中运行，而非以本地方式在计算模拟器中运行时，此选项才可用。
 * **.NET 内存分配** - 此方法通过使用采样分析方法收集 .NET Framework 内存分配数据。 所收集的数据包括数量和分配的对象的大小。
 * **并发性** - 此方法收集资源争用数据和线程执行数据，这些数据可用于分析多线程应用程序和多进程应用程序。 并发方法收集阻止代码执行（如线程等待释放对应用程序资源的锁定访问时）的每个事件的数据。 此方法可用于分析多线程应用程序。
-* 还可以启用**层交互分析**，这种方法提供了有关在可与一个或多个数据库通信的多层应用程序函数中同步 ADO.NET 调用的执行时间的更多信息。 可以使用任意分析方法收集层交互数据。 有关层交互分析的详细信息，请参阅[层交互视图](https://msdn.microsoft.com/library/azure/dd557764.aspx)。
+* 还可以启用**层交互分析**，这种方法提供了有关在可与一个或多个数据库通信的多层应用程序函数中同步 ADO.NET 调用的执行时间的更多信息。 可以使用任意分析方法收集层交互数据。 有关层交互分析的详细信息，请参阅[层交互视图](../profiling/tier-interactions-view.md)。
 
 ## <a name="configuring-profiling-settings"></a>配置分析设置
 下图演示了如何从“发布 Azure 应用程序”对话框配置分析设置。
@@ -102,7 +102,7 @@ ms.locfileid: "72911777"
 3. 若要查看实例分析报告，选择服务中的角色，打开特定实例的快捷菜单，然后选择 **“查看分析报告”**。
 
     报告是一个 .vsp 文件，它现在已从 Azure 下载，且下载状态显示在 Azure 活动日志中。 下载完成后，分析报告会显示在名为 <Role name\><Instance Number\><identifier\>.vsp 的 Visual Studio 编辑器选项卡中**。 随即会显示报告的汇总数据。
-4. 若要显示报告的其他视图，请在“当前视图”列表中，选择所需视图类型。 有关详细信息，请参阅[分析工具报告视图](https://msdn.microsoft.com/library/azure/bb385755.aspx)。
+4. 若要显示报告的其他视图，请在“当前视图”列表中，选择所需视图类型。 有关详细信息，请参阅[分析工具报告视图](../profiling/performance-report-views.md)。
 
 ## <a name="next-steps"></a>后续步骤
 [调试云服务](vs-azure-tools-debug-cloud-services-virtual-machines.md)

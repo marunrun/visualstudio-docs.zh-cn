@@ -8,21 +8,21 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 153eda065b9a6e845a39c35aaae34bbe1745f7a8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 86412b82b291ee395b35d654d3cde6d326e956f0
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85904998"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89508946"
 ---
 # <a name="walkthrough-display-light-bulb-suggestions"></a>演练：显示灯泡建议
 轻型电灯泡是 Visual Studio 编辑器中的图标，可展开以显示一组操作，例如对内置代码分析器或代码重构标识的问题的修补程序。
 
- 在 Visual c # 和 Visual Basic 编辑器中，还可以使用 .NET Compiler Platform ( "Roslyn" ) 来编写和打包自己的代码分析器，其中包含自动电灯泡显示的操作。 有关详细信息，请参阅：
+ 在 Visual c # 和 Visual Basic 编辑器中，还可以使用 .NET Compiler Platform ( "Roslyn" ) 来编写和打包自己的代码分析器，其中包含自动电灯泡显示的操作。 有关详情，请参阅：
 
-- [如何：编写 c # 诊断和代码修补程序](https://github.com/dotnet/roslyn/wiki/How-To-Write-a-C%23-Analyzer-and-Code-Fix)
+- [如何：编写 c # 诊断和代码修补程序](https://github.com/dotnet/roslyn/blob/master/docs/wiki/How-To-Write-a-C%23-Analyzer-and-Code-Fix.md)
 
-- [如何：编写 Visual Basic 诊断和代码修补程序](https://github.com/dotnet/roslyn/wiki/How-To-Write-a-Visual-Basic-Analyzer-and-Code-Fix)
+- [如何：编写 Visual Basic 诊断和代码修补程序](https://github.com/dotnet/roslyn/blob/master/docs/wiki/How-To-Write-a-Visual-Basic-Analyzer-and-Code-Fix.md)
 
   其他语言（如 c + +）还为某些快速操作提供了轻电灯泡，例如，创建该函数的存根实现的建议。
 
