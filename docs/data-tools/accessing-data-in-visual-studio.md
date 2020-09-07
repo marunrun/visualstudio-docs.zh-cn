@@ -12,12 +12,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 7c7aa1544f998a88424c0087fadceab63757d23b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 36fc3d3fd0b002c110e9184a6d7b15c9fa367c48
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77272086"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89509830"
 ---
 # <a name="work-with-data-in-visual-studio"></a>在 Visual Studio 中处理数据
 
@@ -89,7 +89,7 @@ ms.locfileid: "77272086"
 
 有关与 ASP.NET 相关的数据访问文档，请参阅使用 ASP.NET 站点上的 [数据](https://www.asp.net/web-forms/overview/presenting-and-managing-data) 。 有关将实体框架与 ASP.NET MVC 配合使用的教程，请参阅使用 [mvc 5 Code First 实体框架6入门](/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application)。
 
-通用 Windows 平台 (UWP) c # 中的应用或 Visual Basic 可以使用用于 .NET 的 Microsoft Azure SDK 访问 Azure 存储和其他 Azure 服务。 HttpClient 类启用与任何 RESTful 服务的通信。 有关详细信息，请参阅 [如何使用 Windows 连接到 http 服务器](https://msdn.microsoft.com/library/windows/apps/dn469430.aspx)。
+通用 Windows 平台 (UWP) c # 中的应用或 Visual Basic 可以使用用于 .NET 的 Microsoft Azure SDK 访问 Azure 存储和其他 Azure 服务。 HttpClient 类启用与任何 RESTful 服务的通信。 有关详细信息，请参阅 [如何使用 Windows 连接到 http 服务器](/previous-versions/windows/apps/dn469430(v=win.10))。
 
 对于本地计算机上的数据存储，推荐的方法是使用 SQLite，此方法在应用程序的进程中运行。 如果需要 (ORM) 层的对象关系映射，则可以使用实体框架。 有关详细信息，请参阅 Windows 开发人员中心中的 [数据访问](/windows/uwp/data-access/index) 。
 
@@ -123,7 +123,7 @@ ms.locfileid: "77272086"
 
 若要详细了解如何从 c + + 应用程序连接到数据库，请参阅 [Visual Studio data tools For c + +](../data-tools/visual-studio-data-tools-for-cpp.md)。 有关旧 Visual C++ 数据访问技术的详细信息，请参阅 [数据访问](/cpp/data/data-access-in-cpp)。
 
-## <a name="javascript"></a>Javascript
+## <a name="javascript"></a>JavaScript
 
 [Visual Studio 中的 JavaScript](/scripting/javascript/javascript-language-reference) 是一种用于构建跨平台应用、UWP 应用、云服务、网站和 web 应用的一流语言。 你可以从 Visual Studio 中使用 Bower、Grunt、Gulp、npm 和 NuGet 来安装你最喜欢的 JavaScript 库和数据库产品。 通过从 [azure 网站](https://azure.microsoft.com/)下载 sdk 来连接到 azure 存储和服务。 Edge.js 是将服务器端 JavaScript ( # A1) 连接到 ADO.NET 数据源的库。
 
