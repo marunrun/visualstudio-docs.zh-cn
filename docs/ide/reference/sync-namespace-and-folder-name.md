@@ -10,10 +10,10 @@ dev_langs:
 ms.workload:
 - dotnet
 ms.openlocfilehash: d7073edaf6ecc261c58bf1e5607323b9214c5ed0
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "67160753"
 ---
 # <a name="sync-namespace-and-folder-name"></a>同步命名空间和文件夹名称
@@ -32,7 +32,7 @@ ms.locfileid: "67160753"
 
 1. 请将光标置于命名空间名称中。
 2. 按“Ctrl”  + **。** 触发“快速操作和重构”  菜单。
-3. 选择“将命名空间更改为 \<文件夹名称>”  。
+3. 选择“将命名空间更改为 \<folder name>”。
 
    ![同步命名空间和文件夹名称](media/sync-namespace-and-folder-name.png)
 

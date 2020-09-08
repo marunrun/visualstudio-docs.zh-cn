@@ -23,10 +23,10 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: 529c19753d09d6335e5c9fc5e839cdb7cd0c118c
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72745781"
 ---
 # <a name="assertions-in-managed-code"></a>托管代码中的断言
@@ -154,7 +154,7 @@ Debug.Assert ( temp != 0 );
 
   如果需要在 C# 或 Visual Basic 发行版中使用 DEBUG 方法，您必须在“发布”配置中定义 DEBUG 符号。
 
-  C++ 不支持 <xref:System.Diagnostics.Debug> 类方法。 可将 <xref:System.Diagnostics.Trace> 类与条件编译（如 `#ifdef DEBUG`... `#endif`）一起使用来达到相同的效果。 可以在“\<项目> 属性页”对话框中定义这些符号。 有关详细信息，请参阅[为 Visual Basic 调试配置更改项目设置](../debugger/project-settings-for-a-visual-basic-debug-configuration.md)或[更改 C 或 C++ 调试配置的项目设置](../debugger/project-settings-for-a-cpp-debug-configuration.md)。
+  C++ 不支持 <xref:System.Diagnostics.Debug> 类方法。 可将 <xref:System.Diagnostics.Trace> 类与条件编译（如 `#ifdef DEBUG`... `#endif`）一起使用来达到相同的效果。 可以在“\<Project> 属性页”对话框中定义这些符号。 有关详细信息，请参阅[为 Visual Basic 调试配置更改项目设置](../debugger/project-settings-for-a-visual-basic-debug-configuration.md)或[更改 C 或 C++ 调试配置的项目设置](../debugger/project-settings-for-a-cpp-debug-configuration.md)。
 
 ## <a name="assert-arguments"></a><a name="BKMK_Assert_arguments"></a> 断言参数
  <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=fullName> 和 <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName> 最多有三个自变量。 第一个参数是强制的，它是要检查的条件。 如果调用仅带一个参数的 <xref:System.Diagnostics.Trace.Assert(System.Boolean)?displayProperty=fullName> 或 <xref:System.Diagnostics.Debug.Assert(System.Boolean)?displayProperty=fullName>，则 `Assert` 方法将检查条件，并且如果结果为 false，则向“输出”窗口输出调用堆栈的内容。 下面的示例显示 <xref:System.Diagnostics.Trace.Assert(System.Boolean)?displayProperty=fullName> 和 <xref:System.Diagnostics.Debug.Assert(System.Boolean)?displayProperty=fullName>：

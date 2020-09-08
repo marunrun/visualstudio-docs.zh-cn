@@ -21,10 +21,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 3468ab5a6a185a759ab43229758c0ff4e9d00e35
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77631193"
 ---
 # <a name="visual-studio-integration-msbuild"></a>Visual Studio 集成 (MSBuild)
@@ -151,7 +151,7 @@ Condition=" '$(Something)|$(Configuration)|$(SomethingElse)' == 'xxx|Debug|yyy' 
 
      该项目即被标记为 **“(不可用)”** 。
 
-2. 在“解决方案资源管理器”  中，打开不可用项目的快捷菜单，然后选择“编辑 \<项目文件>”  。
+2. 在“解决方案资源管理器”中，打开不可用项目的快捷菜单，然后选择“编辑 \<Project File>” 。
 
      该项目文件即在 Visual Studio XML 编辑器中打开。
 
@@ -161,7 +161,7 @@ Condition=" '$(Something)|$(Configuration)|$(SomethingElse)' == 'xxx|Debug|yyy' 
 
 ## <a name="intellisense-and-validation"></a>IntelliSense 和验证
 
- 使用 XML 编辑器编辑项目文件时，IntelliSense 和验证由 MSBuild 架构文件驱动。 这些安装在架构缓存中，安装目录为 \<Visual Studio 安装目录>\Xml\Schemas\1033\MSBuild  。
+ 使用 XML 编辑器编辑项目文件时，IntelliSense 和验证由 MSBuild 架构文件驱动。 这些文件安装在架构缓存中，可以在 \<Visual Studio installation directory>\Xml\Schemas\1033\MSBuild 中找到它们。
 
  核心 MSBuild 类型是在 Microsoft.Build.Core.xsd  中定义的，Visual Studio 使用的通用类型则是在 Microsoft.Build.CommonTypes.xsd  中定义的。 若要自定义架构，以便设置针对自定义项类型名称、属性和任务的 IntelliSense 和验证，可以编辑 Microsoft.Build.xsd  ，或创建包括 CommonTypes 或核心架构的自己的架构。 如果创建自己的架构，则必须使用 **“属性”** 窗口指引 XML 编辑器找到它。
 

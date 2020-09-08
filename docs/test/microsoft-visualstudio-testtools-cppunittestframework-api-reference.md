@@ -8,17 +8,17 @@ ms.workload:
 - multiple
 author: corob-msft
 ms.openlocfilehash: 16ea629312237dd859e9eb1aad21b9b219de7229
-ms.sourcegitcommit: 5ab22b8601db9c420691f8e57abe140e837aa720
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "82109424"
 ---
 # <a name="microsoftvisualstudiotesttoolscppunittestframework-api-reference"></a>Microsoft.VisualStudio.TestTools.CppUnitTestFramework API 参考
 
 本主题列出了 `Microsoft::VisualStudio::CppUnitTestFramework` 命名空间的公共成员。 使用这些 API 可编写基于 Microsoft 本机单元测试框架的 C++ 单元测试。 本主题末尾有一个[用法示例](#example)。
 
-标头和 lib 文件位于 \<Visual Studio 安装文件夹>\VC\Auxiliary\VS\UnitTest  下。
+标头和 lib 文件位于 \<Visual Studio installation folder>\VC\Auxiliary\VS\UnitTest 下。
 
 头文件和 lib 路径会在本机测试项目中自动配置。
 

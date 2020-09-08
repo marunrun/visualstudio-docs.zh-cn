@@ -8,10 +8,10 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: 0e21d0617f954c0cc34975b7f8626b83966f6b5d
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77706384"
 ---
 # <a name="how-to-insert-xml-comments-for-documentation-generation"></a>如何：为文档生成项插入 XML 注释
@@ -38,7 +38,7 @@ Visual Studio 可自动生成标准的 XML 文档注释结构，进而帮助记�
 
    - 在代码元素上或其正上方的右键单击或上下文菜单中，选择“代码段” > “插入代码段”
 
-   随即基于代码元素生成 XML 模板。 例如，对方法进行注释时，它会生成 \<summary\> 元素，针对每个参数生成一个 \<param\> 元素，并生成一个记录返回值的 \<returns\> 元素。
+   随即基于代码元素生成 XML 模板。 例如，对方法进行注释时，它会生成 \<summary\> 元素，针对每个参数生成一个 \<param\> 元素，并生成一个记录返回值的 \<returns\> 元素  。
 
    ![XML 注释模板 - C#](media/doc-preview-cs.png)
 

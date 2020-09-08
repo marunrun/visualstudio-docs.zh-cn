@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 19ae8472aaafbad1a04485ff2e3a2637f345bc00
-ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/28/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "66262865"
 ---
 # <a name="walkthrough-using-graphics-diagnostics-to-debug-a-compute-shader"></a>演练：使用图形诊断来调试计算着色器
@@ -52,7 +52,7 @@ ms.locfileid: "66262865"
 
 2. 检查呈现数据集的 draw 事件的“图形事件列表”。 若要简化此过程，请在“图形事件列表”窗口右上角的“搜索”框中输入 `Draw`。 这将筛选列表，使其仅包含在其标题中具有的“Draw”的事件。 在此方案中，你将发现发生了以下 draw 事件：
 
-    ![事件列表 (EL) 显示 draw 事件。](media/gfx_diag_demo_compute_shader_fluid_step_2.png "gfx_diag_demo_compute_shader_fluid_step_2")
+    ![事件列表 &#40;EL&#41; 显示绘图事件。](media/gfx_diag_demo_compute_shader_fluid_step_2.png "gfx_diag_demo_compute_shader_fluid_step_2")
 
 3. 查看图形日志文档选项卡中的呈现目标时，请浏览每个 draw 事件。
 
@@ -102,7 +102,7 @@ ms.locfileid: "66262865"
 
    确定错误的位置之后，可以停止调试并修改计算着色器源代码，以正确地计算相互作用的粒子之间的距离。 在此方案中，只需将行 `float2 diff = N_position + P_position;` 更改为 `float2 diff = N_position - P_position;`：
 
-   ![已更正的计算着色器代码。](media/gfx_diag_demo_compute_shader_fluid_step_10.png "gfx_diag_demo_compute_shader_fluid_step_10")
+   ![已更正的 compute&#45;着色器代码。](media/gfx_diag_demo_compute_shader_fluid_step_10.png "gfx_diag_demo_compute_shader_fluid_step_10")
 
    在此方案中，因为计算着色器是在运行时进行编译的，所以在更改后只需重新启动该应用便可观察更改对模拟的影响。 无需重新生成应用。 运行应用时，可发现此时模拟运行正常。
 

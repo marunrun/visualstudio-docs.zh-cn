@@ -19,10 +19,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 70d994e32b717ff566a2e38acee732c7525d1bb0
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77630842"
 ---
 # <a name="wpf-msbuild-task-reference"></a>WPF MSBuild 任务参考
@@ -65,7 +65,7 @@ Windows Presentation Foundation (WPF) 生成进程通过另一组生成任务扩
 
 - [UpdateManifestForBrowserApplication](../msbuild/updatemanifestforbrowserapplication-task.md)
 
- 生成 XAML 浏览器应用程序 (XBAP) 项目时，将 \<hostInBrowser />  元素添加到应用程序清单中 (\<projectname>.exe.manifest  )。
+ 生成 XAML 浏览器应用程序 (XBAP) 项目时，将 \<hostInBrowser /> 元素添加到应用程序清单中 (\<projectname>.exe.manifest)。
 
 ## <a name="see-also"></a>请参阅
 

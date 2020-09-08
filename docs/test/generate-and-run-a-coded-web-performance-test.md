@@ -15,10 +15,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 4297f60c74e32b904d7c36912a8377d33f23ebdf
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75589573"
 ---
 # <a name="generate-and-run-a-coded-web-performance-test"></a>生成和运行编码的 Web 性能测试
@@ -92,7 +92,7 @@ ms.locfileid: "75589573"
 
 当你使用数据源运行编码测试时，你可能看到以下错误消息：
 
-**无法运行测试\<测试名称 > 代理\<计算机名 >：对象引用未设置为某个对象的实例。**
+无法在代理 \<Computer Name> 上运行测试 \<Test Name> **：** 对象引用未设置为某个对象的实例。
 
 发生此错误的原因是，你有为测试类定义的 DataSourceAttribute，而没有相应的 DataBindingAttribute。 若要纠正此错误，请添加适当的 DataBindingAttribute 并将其删除，或从代码中将其注释掉。
 

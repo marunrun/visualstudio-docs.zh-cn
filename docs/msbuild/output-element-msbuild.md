@@ -19,17 +19,19 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 90fbd517608c9c36db0b1035f296b9d9402abddd
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77633026"
 ---
 # <a name="output-element-msbuild"></a>Output 元素 (MSBuild)
 
 存储项和属性中的任务输出值。
 
- \<Project> \<Target> \<Task> \<Output>
+ \<Project> \<Target>
+ \<Task>
+ \<Output>
 
 ## <a name="syntax"></a>语法
 

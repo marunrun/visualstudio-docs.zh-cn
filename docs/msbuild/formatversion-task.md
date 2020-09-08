@@ -14,21 +14,21 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 250c73ce0395f278b72c18605f1666290670e20a
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77634105"
 ---
 # <a name="formatversion-task"></a>FormatVersion 任务
 
 将修订号追加到版本号。
 
-- 案例 #1：输入：Version=\<undefined>; Revision=\<don't care>; 输出：OutputVersion ="1.0.0.0"
+- 案例 #1：输入：Version=\<undefined>；Revision=\<don't care>；输出：OutputVersion="1.0.0.0"
 
 - 案例 #2：输入：Version="1.0.0.*"  Revision="5" 输出：OutputVersion="1.0.0.5"
 
-- 案例 #3：输入：Version="1.0.0.0" Revision=\<don't care>; 输出：OutputVersion ="1.0.0.0"
+- 案例 #3：输入：Version="1.0.0.0"；Revision=\<don't care>；输出：OutputVersion="1.0.0.0"
 
 ## <a name="parameters"></a>参数
 

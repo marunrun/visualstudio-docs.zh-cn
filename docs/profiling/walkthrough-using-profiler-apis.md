@@ -13,10 +13,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 81071a44b51b1441782b25741126873fc720ed7b
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74779878"
 ---
 # <a name="walkthrough-using-profiler-apis"></a>演练：使用探查器 API
@@ -152,9 +152,9 @@ DataCollection.CurrentId);
 
      **VsPerfCLREnv /traceon**
 
-3. 键入下面的命令：VSInstr \<filename>.exe
+3. 键入以下命令：**VSInstr \<filename>.exe**
 
-4. 键入下面的命令：VSPerfCmd /start:trace /output:\<filename>.vsp
+4. 键入以下命令：**VSPerfCmd /start:trace /output:\<filename>.vsp**
 
 5. 键入下面的命令：VSPerfCmd /globaloff 
 
@@ -162,7 +162,7 @@ DataCollection.CurrentId);
 
 7. 键入下面的命令：VSPerfCmd /shutdown 
 
-8. 键入下面的命令：VSPerfReport /calltrace:\<filename>.vsp
+8. 键入以下命令：**VSPerfReport /calltrace:\<filename>.vsp**
 
      当前目录中即会创建一个 .csv 文件，该文件包含得到的性能数据  。
 

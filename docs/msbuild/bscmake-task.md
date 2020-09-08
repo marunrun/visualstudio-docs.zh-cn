@@ -21,10 +21,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 668d42cdb0bc5cfb8dd344aab51ad0c66a838cd2
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77634508"
 ---
 # <a name="bscmake-task"></a>BscMake 任务
@@ -40,7 +40,7 @@ ms.locfileid: "77634508"
 
 |参数|描述|
 |---------------|-----------------|
-|**AdditionalOptions**|可选 **String** 参数。<br /><br /> 在命令行上指定的选项列表。 例如，/\<option1> /\<option2> /\<option#>。 此参数用于指定无法由其他任何 **BscMake** 任务参数表示的选项。<br /><br /> 有关详细信息，请参阅 [BSCMAKE 选项](/cpp/build/reference/bscmake-options)中的选项。|
+|**AdditionalOptions**|可选 **String** 参数。<br /><br /> 在命令行上指定的选项列表。 例如 /\<option1> /\<option2> /\<option#>。 此参数用于指定无法由其他任何 **BscMake** 任务参数表示的选项。<br /><br /> 有关详细信息，请参阅 [BSCMAKE 选项](/cpp/build/reference/bscmake-options)中的选项。|
 |**OutputFile**|可选 **String** 参数。<br /><br /> 指定重写默认输出文件名的文件名。<br /><br /> 有关详细信息，请参阅 [BSCMAKE 选项](/cpp/build/reference/bscmake-options)中的 /o 选项。|
 |**PreserveSBR**|可选 **Boolean** 参数。<br /><br /> 如果为 `true`，则会强制非增量生成。 无论 .bsc 文件是否存在，都会发生完整的非增量生成，并防止 .sbr 文件被截断   。<br /><br /> 有关详细信息，请参阅 [BSCMAKE 选项](/cpp/build/reference/bscmake-options)中的 /n 选项。|
 |**Sources**|可选的 **ITaskItem[]** 参数。<br /><br /> 定义可以被任务使用和发出的 MSBuild 源文件项的数组。|

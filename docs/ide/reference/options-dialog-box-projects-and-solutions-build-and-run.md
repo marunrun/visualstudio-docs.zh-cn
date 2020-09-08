@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 24ba5bbf34ecc12c2508c538e74909ee0a10aef4
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68461396"
 ---
 # <a name="options-dialog-box-projects-and-solutions--build-and-run"></a>“选项”对话框：项目和解决方案 \> 生成和运行
@@ -58,7 +58,7 @@ ms.locfileid: "68461396"
 
 仅适用于 C++ 项目。 
 
-确定写入到生成日志文件中的信息数，该文件位于 \\\<ProjectName>\Debug\\\<ProjectName>.log  。
+确定写入到生成日志文件中的信息数，该文件位于 \\\<ProjectName>\Debug\\\<ProjectName>.log。
 
 ## <a name="see-also"></a>请参阅
 

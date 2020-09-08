@@ -25,10 +25,10 @@ manager: jillfra
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 8e6be79bc38e9283493bf5b7428a21c17cf9d3e0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62896615"
 ---
 # <a name="format-specifiers-for-c-in-the-visual-studio-debugger"></a>Visual Studio 调试器中的 C++ 格式说明符

@@ -16,21 +16,21 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: fbcd41461ab57e3bbb5fb48849ddde8593c587fb
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
-ms.translationtype: MT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85548234"
 ---
 # <a name="code-generation-and-t4-text-templates"></a>代码生成和 T4 文本模板
 
-在 Visual Studio 中， *T4 文本模板*是文本块和可生成文本文件的控制逻辑的混合。 控制逻辑被编写为 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 或 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]中的程序代码的片段。 使用 Visual Studio 2015 Update 2 及更高版本时，可在 T4 模板指令中使用 C# 6.0 版功能。 生成的文件可以是任何类型的文本，如网页、资源文件或任何语言的程序源代码。
+在 Visual Studio 中，T4 文本模板是文本块与可生成文本文件的控制逻辑的混合体。 控制逻辑被编写为 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 或 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]中的程序代码的片段。 使用 Visual Studio 2015 Update 2 及更高版本时，可在 T4 模板指令中使用 C# 6.0 版功能。 所生成的文件可以是任何类型的文本，例如网页、资源文件或任何语言的程序源代码。
 
 T4 文本模板有两种类型：运行时和设计时。
 
 ## <a name="run-time-t4-text-templates"></a>运行时 T4 文本模板
 
-在应用程序中执行运行时模板也称为 "预处理过的" 模板，以生成文本字符串（通常作为其输出的一部分）。 例如，你可以创建一个模板来定义 HTML 页：
+运行时模板也称为“预处理过的”模板，该模板在应用程序中执行，以生成文本字符串（通常作为其输出的一部分）。 例如，你可以创建一个模板来定义 HTML 页：
 
 ```
 <html><body>
@@ -48,15 +48,15 @@ T4 文本模板有两种类型：运行时和设计时。
 string webResponseText = new MyTemplate().TransformText();
 ```
 
-应用程序可以在未安装 Visual Studio 的计算机上运行。
+应用程序可在未安装 Visual Studio 的计算机上运行。
 
 若要创建运行时模板，将“预处理过的文本模板” **** 文件添加到你的项目中。 或者，你也可以添加一个纯文本文件，并将其“自定义工具” **** 属性设置为 **TextTemplatingFilePreprocessor**。
 
-有关详细信息，请参阅[带有 T4 文本模板的运行时文本生成](../modeling/run-time-text-generation-with-t4-text-templates.md)。 有关模板语法的详细信息，请参阅[编写 T4 文本模板](../modeling/writing-a-t4-text-template.md)。
+有关详细信息，请参阅[使用 T4 文本模板的运行时文本生成](../modeling/run-time-text-generation-with-t4-text-templates.md)。 有关模板语法的详细信息，请参阅[编写 T4 文本模板](../modeling/writing-a-t4-text-template.md)。
 
 ## <a name="design-time-t4-text-templates"></a>设计时 T4 文本模板
 
-设计时模板定义部分源代码以及应用程序的其他资源。 通常使用几个模板来读取单个输入文件或数据库中的数据，并生成一些 *.cs*、 *.vb*或其他源文件。 每个模板生成一个文件。 它们是在 Visual Studio 或 MSBuild 中执行的。
+设计时模板用于定义部分源代码以及应用程序的其他资源。 通常，你会使用多个模块读取单个输入文件或数据库中的数据，然后生成部分 .cs 文件、.vb 文件或其他源文件 。 每个模板生成一个文件。 它们在 Visual Studio 或 MSBuild 内执行。
 
 例如，输入数据可能是配置数据的 XML 文件。 每当在开发过程中编辑 XML 文件时，文本模板都会重新生成部分应用程序代码。 其中一个模板可能类似于以下示例：
 
@@ -72,7 +72,7 @@ namespace Fabrikam.<#= configurationData.SelectSingleNode("jobName").Value #>
 }
 ```
 
-根据 XML 文件中的值，生成的 *.cs*文件将类似于以下内容：
+依赖于 XML 文件中的值，所生成的 .cs 文件类似于以下示例：
 
 ```
 namespace Fabrikam.FirstJob

@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 0ffbe0b8365948dc5a69edca390f308cb55ba5a3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62929409"
 ---
 # <a name="view-events-with-intellitrace-in-visual-studio-enterprise-c-visual-basic"></a>在 Visual Studio Enterprise 中使用 IntelliTrace 查看事件（C#、Visual Basic）
@@ -70,7 +70,7 @@ ms.locfileid: "62929409"
 
     以下屏幕截图取自 Visual Studio 2015 Update 1。
 
-    ![IntelliTraceUpdate1-SingleEvent](../debugger/media/intellitraceupdate1-singleevent.png "IntelliTraceUpdate1-SingleEvent")
+    ![IntelliTraceUpdate1&#45;SingleEvent](../debugger/media/intellitraceupdate1-singleevent.png "IntelliTraceUpdate1 SingleEvent")
 
     你可以选择路径名链接以打开文件。 如果完整的路径名不可用，则将显示 **“打开文件”** 对话框。
 
@@ -78,7 +78,7 @@ ms.locfileid: "62929409"
 
     以下屏幕截图取自 Visual Studio 2015 Update 1。
 
-    ![HistoricalDebugging-Update1](../debugger/media/historicaldebugging-update1.png "HistoricalDebugging-Update1")
+    ![HistoricalDebugging&#45;Update1](../debugger/media/historicaldebugging-update1.png "HistoricalDebugging-Update1")
 
 4. 如果找不到 bug，请尝试检查导致 bug 的其他事件。 还可以让 IntelliTrace 记录调用信息，以便你可以单步执行函数调用。
 

@@ -1,5 +1,5 @@
 ---
-title: SharePoint 开发示例和演练 |Microsoft Docs
+title: SharePoint 开发示例和演练 | Microsoft Docs
 ms.date: 02/02/2017
 ms.topic: overview
 dev_langs:
@@ -14,15 +14,16 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 39f4d52b8a94409abeffb7cc9ce2329e463cf8bd
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86015802"
 ---
 # <a name="sharepoint-development-samples-and-walkthroughs"></a>SharePoint 开发示例和演练
-  本部分包含示例应用程序、示例代码和分步演练，它们阐释了用于生成 SharePoint 解决方案的语法、结构和技术。
+  本部分包含示例应用程序、示例代码和分步演练，它们反映了用于生成 SharePoint 解决方案的语法、结构和技术。
 
- 示例代码用于说明目的，不应在未修改的情况下在已部署的解决方案中使用。 特别要注意的是安全性。
+ 此示例代码仅供教学使用，不应在未修改的情况下用于已部署的解决方案。 特别要注意的是安全性。
 
 ## <a name="in-this-section"></a>在本节中
 

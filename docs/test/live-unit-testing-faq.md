@@ -9,10 +9,10 @@ ms.author: mikejo
 ms.workload:
 - dotnet
 ms.openlocfilehash: ba231e6c203197518b75a7a8c0592f01bba4ffe9
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75591536"
 ---
 # <a name="live-unit-testing-frequently-asked-questions"></a>Live Unit Testing 常见问题解答
@@ -85,7 +85,7 @@ Live Unit Testing 是否适用于 .NET Core？
 </Target>
 ```
 
-## <a name="error-messages-with-outputpath-outdir-or-intermediateoutputpath"></a>\<OutputPath>、\<OutDir> 或 \<IntermediateOutputPath> 错误消息
+## <a name="error-messages-with-outputpath-outdir-or-intermediateoutputpath"></a>\<OutputPath>、\<OutDir> 或 \<IntermediateOutputPath> 的错误消息
 
 Live Unit Testing 尝试生成解决方案时为什么出现了以下错误：“….似乎无条件地设置 `<OutputPath>` 或 `<OutDir>`。  Live Unit Testing 将不会从输出程序集执行测试”？
 

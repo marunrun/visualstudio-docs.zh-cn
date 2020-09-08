@@ -26,10 +26,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a5794d059a17f39531a7788895b604ae0e9590ce
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77633585"
 ---
 # <a name="lib-task"></a>LIB 任务
@@ -44,7 +44,7 @@ ms.locfileid: "77633585"
 |---------------|-----------------|
 |**AdditionalDependencies**|可选 **String []** 参数。<br /><br /> 指定要添加到命令行的附加项。|
 |**AdditionalLibraryDirectories**|可选 **String []** 参数。<br /><br /> 重写环境库路径。 指定目录名。<br /><br /> 有关详细信息，请参阅 [/LIBPATH（附加的 Libpath）](/cpp/build/reference/libpath-additional-libpath)。|
-|**AdditionalOptions**|可选 **String** 参数。<br /><br /> 在命令行上指定的 lib.exe 选项列表  。 例如，/\<option1> /\<option2> /\<option#>。 此参数用于指定无法由其他任何 LIB 任务参数表示的 lib.exe 选项   。<br /><br /> 有关详细信息，请参阅[运行 LIB](/cpp/build/reference/running-lib)。|
+|**AdditionalOptions**|可选 **String** 参数。<br /><br /> 在命令行上指定的 lib.exe 选项列表  。 例如 /\<option1> /\<option2> /\<option#>。 此参数用于指定无法由其他任何 LIB 任务参数表示的 lib.exe 选项   。<br /><br /> 有关详细信息，请参阅[运行 LIB](/cpp/build/reference/running-lib)。|
 |**DisplayLibrary**|可选 **String** 参数。<br /><br /> 显示有关输出库的信息。 指定一个文件名，以便将信息重定向到该文件。 指定“CON”或不指定任何内容，以便将信息重定向到该控制台。<br /><br /> 此参数对应于 lib.exe 的 /LIST 选项   。|
 |**ErrorReporting**|可选 **String** 参数。<br /><br /> 指定如果 lib.exe 在运行时失败，如何向 Microsoft 发送内部错误信息  。<br /><br /> 指定以下值之一，其中每个值对应于一个命令行选项。<br /><br /> -   **NoErrorReport** -  **/ERRORREPORT:NONE**<br />-   **PromptImmediately** -  **/ERRORREPORT:PROMPT**<br />-   **QueueForNextLogin** -  **/ERRORREPORT:QUEUE**<br />-   **SendErrorReport** -  **/ERRORREPORT:SEND**<br /><br /> 有关详细信息，请参阅[运行 LIB](/cpp/build/reference/running-lib) 中的 **/ERRORREPORT** 命令行选项。|
 |**ExportNamedFunctions**|可选 **String []** 参数。<br /><br /> 指定要导出的一个或多个函数。<br /><br /> 此参数对应于 lib.exe 的 /EXPORT: 选项   。|

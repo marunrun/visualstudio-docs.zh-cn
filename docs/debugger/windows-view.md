@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: fef652cbaa83fde61f098fb8fcef9558473fe19a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62900849"
 ---
 # <a name="windows-view"></a>窗口视图
@@ -24,7 +24,7 @@ ms.locfileid: "62900849"
 
  下图显示了一个典型的 Spy++ 窗口视图，其中顶级节点已展开。
 
- ![Spy&#43;&#43; 窗口视图](../debugger/media/spy--_windowsview.png "Spy++_WindowsView") Spy++ 窗口视图
+ ![Spy++ 窗口视图](../debugger/media/spy--_windowsview.png "Spy++_WindowsView") Spy++ 窗口视图
 
  当前桌面窗口位于树的顶部。 所有其他窗口均为桌面的子级，并且根据标准窗口层次结构列出，同级窗口按 Z 顺序排序。 通过单击节点旁边的 + 或 - 符号，可以展开或折叠树的任何父节点。
 

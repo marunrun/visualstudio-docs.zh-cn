@@ -12,14 +12,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: af28ca94639b1c6a800c0c43e41d3ccabb74d9bb
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
-ms.translationtype: MT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85532400"
 ---
 # <a name="overview-of-the-domain-specific-language-tools-user-interface"></a>域特定语言工具用户界面的概述
-首次在 Visual Studio 中打开特定于域的语言工具（DSL 工具）解决方案时，用户界面将与下图类似。
+首次在 Visual Studio 中打开特定于域的语言工具（DSL 工具）解决方案时，用户界面如下图所示。
 
  ![dsl 设计器](../modeling/media/dsl_designer.png)
 
@@ -46,7 +46,7 @@ ms.locfileid: "85532400"
 |形状和连接符|形状指定模型元素应在 DSL 关系图上的显示方式，连接符指定 DSL 关系图上用于显示关系的线。<br /><br /> 若要创建形状或连接符，请将工具拖至关系图的“关系图元素”侧  。|
 |形状映射|形状映射以线的形式在域模型关系图中显示，用于将形状链接到它显示的域类，或者将连接符链接到它显示的域关系。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [域特定语言工具的概述](../modeling/overview-of-domain-specific-language-tools.md)
 - [域特定语言工具术语表](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

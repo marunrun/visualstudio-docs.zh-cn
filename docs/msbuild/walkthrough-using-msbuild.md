@@ -1,4 +1,4 @@
-﻿---
+---
 title: 演练：使用 MSBuild | Microsoft Docs
 ms.date: 03/20/2019
 ms.topic: conceptual
@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 310fa3b6795a5e340dcd9c7fa40cb27807c132ba
-ms.sourcegitcommit: 0b8497b720eb06bed8ce2194731177161b65eb84
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "82072536"
 ---
 # <a name="walkthrough-use-msbuild"></a>演练：使用 MSBuild
@@ -147,7 +147,7 @@ Message 任务将文本属性的字符串值作为输入并显示在输出设备
 
    (Windows 10) 在任务栏的搜索框中，开始键入工具的名称，例如 `dev` 或 `developer command prompt`。 然后显示一个列表，其中包含与搜索模式匹配的已安装应用。
 
-   如需手动查找，可在“<visualstudio installation folder\>\<version>\Common7\Tools”文件夹中查找 LaunchDevCmd.bat 文件   。
+   如需手动查找，可在 <visualstudio installation folder\>\<version>\Common7\Tools 文件夹中找到 LaunchDevCmd.bat 文件 。
 
 2. 从命令窗口导航到包含项目文件的文件夹，此例中为 D:\BuildApp\BuildApp  。
 
@@ -290,7 +290,7 @@ MSBuild 创建配置属性并赋予其“发布”值。
 
 ## <a name="special-characters"></a>特殊字符
 
-某些字符在 MSBuild 项目文件中具有特殊意义。 这些字符的示例包括分号 (;) 和星号 (*)。 若要将这些特殊字符用作项目文件中的文本，必须使用语法 %\<xx> 对它们进行指定，其中 \<xx> 表示字符的 ASCII 十六进制值。
+某些字符在 MSBuild 项目文件中具有特殊意义。 这些字符的示例包括分号 (;) 和星号 (*)。 若要将这些特殊字符用作项目文件中的文本，必须使用语法 % \<xx> 指定它们，其中 \<xx> 表示字符的 ASCII 十六进制值。
 
 更改 Message 任务以显示具有特殊字符的配置属性的值，使其更易读。
 

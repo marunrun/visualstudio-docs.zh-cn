@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 18d6a2a30af4fb29a8d9e924c44c1570ff1efe29
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77633702"
 ---
 # <a name="item-definitions"></a>项定义
@@ -80,7 +80,7 @@ ItemDefinitionGroup 中定义的元数据的值可能来自许多不同的源，
 
 - ItemDefinitionGroup 中项上的常见元数据
 
-- CDATA 节 \<\!\[CDATA\[此处的所有内容均未分析\]\]\>
+- CDATA 节 \<\!\[CDATA\[anything here is not parsed\]\]\>
 
 > [!NOTE]
 > ItemGroup 中的项元数据在 ItemDefinitionGroup 元数据声明中无用，这是因为已在 ItemGroup 元素之前处理 ItemDefinitionGroup 元素。

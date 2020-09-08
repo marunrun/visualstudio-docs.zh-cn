@@ -23,10 +23,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 13ae844759cb73de6dc7bcce6c8898c21132f9d7
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77632909"
 ---
 # <a name="rc-task"></a>RC 任务
@@ -40,7 +40,7 @@ ms.locfileid: "77632909"
 |参数|描述|
 |---------------|-----------------|
 |**AdditionalIncludeDirectories**|可选 **String []** 参数。<br /><br /> 将目录添加到在其中搜索包含文件的目录列表中。<br /><br /> 有关详细信息，请参阅[使用 RC（RC 命令行）](/windows/win32/menurc/using-rc-the-rc-command-line-)中的 /I 选项。|
-|**AdditionalOptions**|可选 **String** 参数。<br /><br /> 命令行选项列表，例如，/\<option1> /\<option2> /\<option#>。 使用此参数可指定未由任何其他 RC  任务参数表示的命令行选项。<br /><br /> 有关详细信息，请参阅[使用 RC（RC 命令行）](/windows/win32/menurc/using-rc-the-rc-command-line-)中的选项。|
+|**AdditionalOptions**|可选 **String** 参数。<br /><br /> 命令行选项列表，例如 /\<option1> /\<option2> /\<option#>。 使用此参数可指定未由任何其他 RC  任务参数表示的命令行选项。<br /><br /> 有关详细信息，请参阅[使用 RC（RC 命令行）](/windows/win32/menurc/using-rc-the-rc-command-line-)中的选项。|
 |**区域性**|可选 **String** 参数。<br /><br /> 指定表示资源中使用的区域性的区域设置 ID。<br /><br /> 有关详细信息，请参阅[使用 RC（RC 命令行）](/windows/win32/menurc/using-rc-the-rc-command-line-)中的 /I 选项。|
 |**IgnoreStandardIncludePath**|可选 **Boolean** 参数。<br /><br /> 如果为 `true`，则阻止资源编译器在搜索头文件或资源文件时检查 INCLUDE 环境变量。<br /><br /> 有关详细信息，请参阅[使用 RC（RC 命令行）](/windows/win32/menurc/using-rc-the-rc-command-line-)中的 /x 选项。|
 |**NullTerminateStrings**|可选 **Boolean** 参数。<br /><br /> 如果为 `true`，则以 null 终止字符串表中的所有字符串。<br /><br /> 有关详细信息，请参阅[使用 RC（RC 命令行）](/windows/win32/menurc/using-rc-the-rc-command-line-)中的 /n 选项。|

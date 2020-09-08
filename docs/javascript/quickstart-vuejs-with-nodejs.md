@@ -13,10 +13,10 @@ dev_langs:
 ms.workload:
 - nodejs
 ms.openlocfilehash: 882c3a148164ab88412a817abd72d0608fadf9b2
-ms.sourcegitcommit: 5c804c42d24d35dcf2ba195aba9ce07031743f62
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "81744975"
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-vuejs-app"></a>快速入门：使用 Visual Studio 创建第一个 Vue.js 应用
@@ -116,7 +116,7 @@ ms.locfileid: "81744975"
 1. 检查“输出”窗口以查看生成结果，并从“显示输出来源”列表中选择“生成”    。
 ::: moniker-end
 
-JavaScript Vue.js 项目模板（以及旧版本的 TypeScript 模板）通过配置后期生成事件使用 `build` npm 脚本。 如果要修改此设置，在“Windows 资源管理器”中打开项目文件 (\<projectname\>.njsproj) 并找到下面的代码行  ：
+JavaScript Vue.js 项目模板（以及旧版本的 TypeScript 模板）通过配置后期生成事件使用 `build` npm 脚本。 如果要修改此设置，请在“Windows 资源管理器”中打开项目文件 (\<projectname\>.njsproj)，找到下面的代码行：
 
 ```xml
 <PostBuildEvent>npm run build</PostBuildEvent>

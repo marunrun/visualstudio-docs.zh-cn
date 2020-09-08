@@ -10,14 +10,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: ef80ac1c7e64eb3591e2e6b09de97c77a26e46f8
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
-ms.translationtype: MT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85532362"
 ---
 # <a name="overview-of-domain-specific-language-tools"></a>域特定语言工具的概述
-在 Visual Studio 中托管的特定于域的语言工具（DSL 工具）使你可以设计域特定语言，然后生成用户创建基于语言的模型时必须具有的所有内容。
+特定于域的语言工具（DSL 工具）托管在 Visual Studio 中，可用于设计域特定语言，然后生成用户创建基于该语言的模型必需的所有内容。
 
  DSL 工具包含以下工具：
 
@@ -48,7 +48,7 @@ ms.locfileid: "85532362"
 
   有关详细信息，请参阅[选择域特定语言解决方案模板](../modeling/choosing-a-domain-specific-language-solution-template.md)。
 
-  向导将创建一个具有以下项目的 Visual Studio 解决方案：
+  该向导创建的 Visual Studio 解决方案具有以下项目：
 
 - DSL
 
@@ -56,7 +56,7 @@ ms.locfileid: "85532362"
 
 - **DslPackage**
 
-   DslPackage 项目确定语言工具如何与 Visual Studio 集成。
+   DslPackage 项目确定语言工具与 Visual Studio 的集成方式。
 
 ## <a name="the-dsl-tools-graphical-interface"></a>DSL 工具的图形界面
  DSL 工具的图形界面可用于将元素和关系添加到你的域特定语言。 添加元素后，可以通过将元素映射到形状、自定义颜色和添加修饰器来定义外观。 还可以向工具箱添加元素。
@@ -70,9 +70,9 @@ ms.locfileid: "85532362"
  你可以提供其他代码来优化模型的行为和定义对语言的约束。 如果需要，可以通过修改文本模板进行重大更改。
 
 ## <a name="distributing-your-dsl-solution"></a>分发 DSL 解决方案
- DSL 工具会生成一个托管在 Visual Studio 中的包。 该程序包将显示一个工具箱、一个 DSL 资源管理器以及帮助用户使用你的域特定语言创建模型的其他 UI 元素。
+ DSL 工具生成一个托管在 Visual Studio 中的包。 该程序包将显示一个工具箱、一个 DSL 资源管理器以及帮助用户使用你的域特定语言创建模型的其他 UI 元素。
 
- 当你在 Visual Studio 中生成并运行 DSL 工具解决方案时，Visual Studio 的第二个实例将显示特定于域的语言对语言用户的外观。 验证一切运行正常之后，可以分发 DslPackage 项目的生成文件夹中的 `.vsix` 文件。 此文件可用于将 DSL 安装为其他计算机上的 Visual Studio 扩展。  有关详细信息，请参阅[部署域特定语言解决方案](msi-and-vsix-deployment-of-a-dsl.md)。
+ 在 Visual Studio 中生成和运行 DSL 工具解决方案时，Visual Studio 的另一个实例会向你展示使用该语言的用户所看到的你的域特定语言的外观。 验证一切运行正常之后，可以分发 DslPackage 项目的生成文件夹中的 `.vsix` 文件。 该文件可用于将 DSL 作为 Visual Studio 扩展安装在其他计算机上。  有关详细信息，请参阅[部署域特定语言解决方案](msi-and-vsix-deployment-of-a-dsl.md)。
 
 ## <a name="see-also"></a>另请参阅
 

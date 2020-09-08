@@ -1,5 +1,5 @@
 ---
-title: Docker 教程-第8部分：图像分层
+title: Docker 教程 - 第 8 部分：映像分层
 description: 如何检查和管理 Docker 映像中的映像层。
 ms.date: 08/04/2020
 author: nebuk89
@@ -10,23 +10,23 @@ ms.topic: conceptual
 ms.workload:
 - azure
 ms.openlocfilehash: eae21a729f30a0c77fa52e5774a2f5157286dab1
-ms.sourcegitcommit: c4212f40df1a16baca1247cac2580ae699f97e4c
-ms.translationtype: MT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "89176671"
 ---
-# <a name="image-layering"></a>图像分层
+# <a name="image-layering"></a>映像分层
 
-你是否知道可以查看构成映像的内容？ 使用 `docker image history` 命令，可以看到用于在映像中创建每个层的命令。
+你是否知道你可以查看映像的组成部分？ 使用 `docker image history` 命令，可以查看用于创建映像的每个层的命令。
 
-1. 使用 `docker image history` 命令查看在 `getting-started` 本教程前面创建的映像中的层。
+1. 使用 `docker image history` 命令，可查看在本教程前面部分创建的 `getting-started` 映像中的层。
 
     ```bash
     docker image history getting-started
     ```
 
-    应会看到类似于下面 (日期/Id 可能不同) 的输出。
+    获得的输出应如下所示（日期/ID 可能不同）。
 
     ```plaintext
     IMAGE               CREATED             CREATED BY                                      SIZE                COMMENT
@@ -45,9 +45,9 @@ ms.locfileid: "89176671"
     <missing>           13 days ago         /bin/sh -c #(nop) ADD file:e69d441d729412d24…   5.59MB   
     ```
 
-    每行表示图像中的一个层。 此处显示的是底部显示最新层的底部。 使用此项，还可以快速查看每个层的大小，帮助诊断大型图像。
+    每一行表示映像中的一个层。 此处，底部显示的是基本层，顶部显示的是最新的层。 使用此输出，还可以快速查看每个层的大小，帮助诊断大型映像的问题。
 
-1. 你会注意到若干行已被截断。 如果添加该 `--no-trunc` 标志，则会获得完整输出 (是的，你可以使用截断的标志来获取未截断输出) 。
+1. 可以发现，其中几行被截断。 如果添加 `--no-trunc` 标志，则可获得完整输出（是的，使用截断标志可获取未截断的输出）。
 
     ```bash
     docker image history --no-trunc getting-started
@@ -55,11 +55,11 @@ ms.locfileid: "89176671"
 
 ## <a name="layer-caching"></a>层缓存
 
-现在，你已了解了操作中的分层，接下来将介绍一个重要的课程，帮助降低容器映像的生成时间。
+现在，你已通过实际操作了解了分层，接下来有一个重要课程，介绍可如何缩短容器映像的生成时间。
 
 > 层发生更改后，还必须重新创建所有下游层
 
-让我们看一下你使用了多个时间的 Dockerfile .。。
+让我们再次看看你正在使用的 Dockerfile…
 
 ```dockerfile
 FROM node:12-alpine
@@ -69,11 +69,11 @@ RUN yarn install --production
 CMD ["node", "/app/src/index.js"]
 ```
 
-返回到映像历史记录输出，可以看到，Dockerfile 中的每个命令都成为该映像中的新层。 你可能会注意到，当你对映像进行更改时，必须重新安装 yarn 依赖项。 是否有解决此问题的方法？ 每次生成时都不会有这么多的依赖项，对吧？
+返回到映像历史记录输出，可以看到，Dockerfile 中的每个命令都成为映像中的新层。 你可能还记得，在对映像进行更改时，必须重新安装 yarn 依赖项。 是否有解决此问题的方法？ 每次进行生成时都传送相同的依赖项没有什么意义，对吧？
 
-若要解决此问题，你可以重新构建你的 Dockerfile，以帮助支持依赖项的缓存。 对于基于节点的应用程序，这些依赖项是在文件中定义的 `package.json` 。 那么，如果您首先复制了该文件，安装了依赖项， *然后再* 复制其他所有内容，该怎么办？ 如果发生更改，则只会重新创建 yarn 依赖项 `package.json` 。 有意义吗？
+要解决此问题，可以重新构建 Dockerfile，以帮助支持依赖项的缓存。 对于基于节点的应用程序，这些依赖项在 `package.json` 文件中定义。 那么，如果仅先复制该文件，安装依赖项，然后再复制其他所有内容，会发生什么情况？ 然后，仅在 `package.json` 发生更改时重新创建 yarn 依赖项。 这是否符合情理？
 
-1. 更新要在第一个中复制的 Dockerfile `package.json` ，安装依赖项，然后复制中的其他所有内容。
+1. 先更新要在 `package.json` 中复制的 Dockerfile，安装依赖项，然后再复制其他所有内容。
 
     ```dockerfile hl_lines="3 4 5"
     FROM node:12-alpine
@@ -84,13 +84,13 @@ CMD ["node", "/app/src/index.js"]
     CMD ["node", "/app/src/index.js"]
     ```
 
-1. 使用生成新映像 `docker build` 。
+1. 使用 `docker build` 生成新映像。
 
     ```bash
     docker build -t getting-started .
     ```
 
-    应会看到如下所示的输出：
+    输出应如下所示…
 
     ```plaintext
     Sending build context to Docker daemon  219.1kB
@@ -123,11 +123,11 @@ CMD ["node", "/app/src/index.js"]
     Successfully tagged getting-started:latest
     ```
 
-    你将看到所有层都已重建。 很好，因为您已更改了 Dockerfile。
+    可看到所有层都已重新生成。 这完全没问题，因为你已对 Dockerfile 进行了很多更改。
 
-1. 现在，更改 `src/static/index.html` 文件 (例如，将更改为 "令人满意 `<title>` 的待办事项" ) 。
+1. 现在，对 `src/static/index.html` 文件进行更改（例如将 `<title>` 更改为“令人惊叹的待办事项应用”）。
 
-1. 立即使用来生成 Docker 映像 `docker build` 。 这次，您的输出看起来应该略有不同。
+1. 现在，再次使用 `docker build` 生成 Docker 映像。 这次的输出看起来应该略有不同。
 
     ```plaintext hl_lines="5 8 11"
     Sending build context to Docker daemon  219.1kB
@@ -152,19 +152,19 @@ CMD ["node", "/app/src/index.js"]
     Successfully tagged getting-started:latest
     ```
 
-    首先，您应该注意到生成速度要快得多！ 而且，你会看到步骤1-4 都有 `Using cache` 。 那么，个万岁！ 你使用的是生成缓存。 将此映像和更新推送到其中会更快。 个万岁!
+    首先，可以发现生成速度要快得多！ 而且，还可看到步骤 1-4 均包含 `Using cache`。 太好了！ 你使用的是生成缓存。 推送和拉取此映像以及对其进行更新也将更快。 太好了！
 
 ## <a name="multi-stage-builds"></a>多阶段生成
 
-虽然我们不会在本教程中深入探讨这一点，但多阶段生成是一项极为强大的工具，可帮助使用多个阶段来创建映像。 它们有多个优点：
+虽然我们不会在本教程中深入探讨这一点，但多阶段生成是一种极为强大的工具，有助于通过多个阶段来创建映像。 它们有以下几个优点：
 
-- 分离运行时依赖项的生成时依赖项
-- *只*传送应用程序需要运行的内容来减少整体映像大小
+- 可将生成时依赖项与运行时依赖项分开
+- 可通过仅传送应用需要运行的内容来减小整体映像大小
 
 ### <a name="maventomcat-example"></a>Maven/Tomcat 示例
 
-构建基于 Java 的应用程序时，需要使用 JDK 将源代码编译为 Java 字节码。 但是，在生产环境中不需要 JDK。 此外，还可以使用 Maven 或 Gradle 等工具来帮助生成应用。
-最终映像中也不需要这些项。 多阶段生成帮助。
+生成基于 Java 的应用程序时，需要使用 JDK 将源代码编译为 Java 字节码。 但是，在生产环境中不需要 JDK。 此外，还可以使用 Maven 或 Gradle 等工具来帮助生成应用。
+最终映像中也不需要这些工具。 多阶段生成将有所帮助。
 
 ```dockerfile
 FROM maven AS build
@@ -176,11 +176,11 @@ FROM tomcat
 COPY --from=build /app/target/file.war /usr/local/tomcat/webapps 
 ```
 
-此示例使用一个名 `build` 为)  (阶段，通过 Maven 执行实际的 Java 生成。 第二个阶段 (`FROM tomcat` 从舞台) 的文件中复制 `build` 。 最终映像只是创建的最后一个阶段 (可以使用标志) 进行重写 `--target` 。
+此示例使用一个阶段（称为 `build`）通过 Maven 来执行实际的 Java 生成。 第二个阶段（从 `FROM tomcat` 开始）从 `build` 阶段复制文件。 最终映像只是要创建的最后一个阶段（可以使用 `--target` 标志来替代它）。
 
-### <a name="react-example"></a>响应示例
+### <a name="react-example"></a>React 示例
 
-在构建反应应用程序时，需要使用节点环境编译 JS 代码 (通常 JSX) 、SASS 样式表，以及更多的静态 HTML、JS 和 CSS。 如果未执行服务器端呈现，则无需为生产生成使用节点环境。 为什么不在静态 nginx 容器中运送静态资源？
+在生成 React 应用程序时，需要使用 Node 环境将 JS 代码（通常为 JSX）、SASS 样式表等编译为静态 HTML、JS 和 CSS。 如果未执行服务器端呈现，则无需为生产版本使用 Node 环境。 为什么不在静态 nginx 容器中传送静态资源？
 
 ```dockerfile
 FROM node:12 AS build
@@ -195,11 +195,11 @@ FROM nginx:alpine
 COPY --from=build /app/build /usr/share/nginx/html
 ```
 
-在这里，你将使用 `node:12` 映像来执行生成 (最大化层缓存) 然后将输出复制到 nginx 容器中。 很酷吧？
+此处，你将使用 `node:12` 映像执行生成（最大化层缓存），然后将输出复制到 nginx 容器中。 很酷吧！
 
 ## <a name="recap"></a>概括
 
-通过深入了解如何对图像进行结构化，可以更快地生成图像并提供较少的更改。 多阶段生成还有助于减少总体映像大小，并通过将生成时依赖项与运行时依赖关系分离，提高最终容器安全性。
+通过深入了解映像的构造方式，可以更快地生成映像并减少要传送的更改。 多阶段生成还有助于减小总映像大小，并通过将生成时依赖项与运行时依赖项分开来提高最终容器安全性。
 
 ## <a name="next-steps"></a>后续步骤
 

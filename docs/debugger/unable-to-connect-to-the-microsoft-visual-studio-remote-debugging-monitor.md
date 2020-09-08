@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: d6173d6b3525a1bd723bc859d34b889b3796d295
-ms.sourcegitcommit: c3b92a9912a5816f16c6059d1738dbc833851346
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "81397371"
 ---
 # <a name="unable-to-connect-to-the-microsoft-visual-studio-remote-debugging-monitor"></a>Unable to Connect to the Microsoft Visual Studio Remote Debugging Monitor

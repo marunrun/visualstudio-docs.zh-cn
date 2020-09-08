@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - cplusplus
 ms.openlocfilehash: d68391bbd4c6c873940bbc2714ee41db8309b629
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75590730"
 ---
 # <a name="c-classes-in-class-designer"></a>类设计器中的 C++ 类
