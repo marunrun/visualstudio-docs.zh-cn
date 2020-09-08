@@ -19,10 +19,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: bf5eda8205dbe0629d0b2801473de83c2f91257e
-ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75404271"
 ---
 # <a name="view-data-values-in-datatips-in-the-code-editor"></a>在代码编辑器中查看数据提示中的数据值
@@ -75,7 +75,7 @@ ms.locfileid: "75404271"
 
 ### <a name="close-all-datatips-for-a-specific-file"></a>关闭特定文件的所有数据提示
 
-若要关闭特定文件的所有数据提示，请在“调试”菜单上选择“清除固定到 \<文件名> 的所有数据提示” 。
+若要关闭特定文件的所有数据提示，请在“调试”菜单上选择“清除固定到 \<Filename> 的所有数据提示” 。
 
 ## <a name="expand-and-edit-information"></a>展开并编辑信息
 利用数据提示功能，可以展开数组、结构或对象以查看其成员。 从数据提示还可以编辑变量的值。

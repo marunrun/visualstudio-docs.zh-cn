@@ -1,5 +1,5 @@
 ---
-title: Visual Studio 打开文件夹扩展性概述 |Microsoft Docs
+title: Visual Studio 打开文件夹扩展性概述 | Microsoft Docs
 ms.date: 02/21/2018
 ms.topic: overview
 ms.assetid: 94c3f8bf-1de3-40ea-aded-7f40c4b314c7
@@ -9,50 +9,50 @@ manager: viveis
 ms.workload:
 - vssdk
 ms.openlocfilehash: d213a7add358c46f7088f504d8c54352cda44a1c
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
-ms.translationtype: MT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85905970"
 ---
 # <a name="open-folder-extensibility"></a>打开文件夹扩展性
 
-通过 "[打开文件夹](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md)" 功能，用户可在 Visual Studio 中打开任何基本代码，而无需项目或解决方案文件。 "打开文件夹" 提供用户期望的 Visual Studio 功能，例如：
+通过[打开文件夹](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md)功能，用户可在 Visual Studio 中打开任何代码库，而无需项目或解决方案文件。 打开文件夹提供用户期望从 Visual Studio 获得的功能，例如：
 
-* 解决方案资源管理器集成和搜索
-* 编辑器着色
-* 定位到导航
-* 在文件中查找搜索
+* “解决方案资源管理器”集成和搜索
+* “编辑器”着色
+* “转至”导航
+* “在文件中查找”搜索
 
-当用于 .NET 和 c + + 开发等工作负荷时，用户还会获得：
+当与工作负载（如对于 .NET 和 C++ 开发）一起使用时，用户还会获得：
 
-* 丰富的 Intellisense
-* 语言特定的功能
+* 丰富的 IntelliSense
+* 语言特定功能
 
-对于 "打开文件夹"，扩展创作者可以为任何语言创建丰富的功能。 存在 Api，可支持对用户的基本代码中的任何文件进行生成、调试和符号搜索。 当前扩展器可以更新其现有的 Visual Studio 功能，以了解不支持项目或解决方案的代码。
+使用打开文件夹功能，扩展插件作者可为任何语言创建丰富的功能。 支持使用 API 生成和调试用户代码库，并在代码库包含的任何文件中进行符号搜索。 当前扩展程序可以更新其现有的 Visual Studio 功能，以了解代码，而无需项目或解决方案的支持。
 
-## <a name="an-api-without-project-systems"></a>无项目系统的 API
+## <a name="an-api-without-project-systems"></a>无需项目系统的 API
 
-从历史上看，Visual Studio 只使用项目系统来理解解决方案及其项目中的文件。 项目系统负责加载的项目的功能和用户交互。 它了解项目包含的文件、项目内容的可视化表示形式、其他项目的依赖项以及基础项目文件的修改。 它通过这些层次结构和功能，其他组件可代表用户进行操作。 并非所有基本代码在项目和解决方案结构中都有很好的表示形式。 用 c + + 编写的脚本语言和开源代码都是很好的例子。 使用打开的文件夹，Visual Studio 为用户提供了与其源代码交互的新方式。
+过去，Visual Studio 仅通过项目系统了解解决方案及其项目中的文件。 项目系统负责加载项目的功能和用户交互。 它了解项目包含的文件、项目内容的直观表示、对其他项目的依赖以及基础项目文件的修改。 正是通过这些层次结构和功能，其他组件可代表用户工作。 并非所有代码库都可以在项目和解决方案结构中很好地表示。 通过适用于 Linux 的 C++ 编写的脚本语言和开放源代码就是很好的例子。 使用打开文件夹功能，Visual Studio 为用户提供了新的源代码交互方式。
 
-打开的文件夹 Api 位于 `Microsoft.VisualStudio.Workspace.*` 命名空间下，并且可供扩展程序在打开的文件夹中生成和使用有关文件的数据或操作。 扩展可以使用这些 Api 为多个领域提供功能，包括：
+打开文件夹 API 位于 `Microsoft.VisualStudio.Workspace.*` 命名空间下，可供扩展程序在打开文件夹的功能范围内围绕文件生成及使用数据或操作。 扩展可以使用这些 API 为许多领域提供功能，包括：
 
-- [工作区](workspaces.md)-打开文件夹扩展性的起点是工作区及其 api。
-- [文件上下文和操作](workspace-file-contexts.md)-文件上下文中提供的特定于文件的代码智能。
-- [索引](workspace-indexing.md)-收集和保存有关打开的文件夹工作区的数据。
-- [语言服务](workspace-language-services.md)-将语言服务集成到打开的文件夹工作区中。
-- 对打开文件夹工作区的[生成](workspace-build.md)-生成支持。
+- [工作区](workspaces.md) - 打开文件夹扩展性的起点是工作区及其 API。
+- [文件上下文和操作](workspace-file-contexts.md) - 通过文件上下文提供的文件特定代码智能。
+- [索引](workspace-indexing.md) - 收集和保留有关打开文件夹工作区的数据。
+- [语言服务](workspace-language-services.md) - 将语言服务集成到打开文件夹工作区中。
+- [生成](workspace-build.md) - 生成对打开文件夹工作区的支持。
 
-使用以下类型的功能需要采用新的 Api 来支持打开文件夹：
+使用以下类型的功能将需要采用新的 API 来支持打开文件夹：
 
 - `IVsHierarchy`
 - `IVsProject`
 - `DTE`
 
-## <a name="feedback-comments-issues"></a>反馈、评论、问题
+## <a name="feedback-comments-issues"></a>反馈、意见、问题
 
-打开文件夹， `Microsoft.VisualStudio.Workspace.*` api 处于积极开发阶段。 如果出现意外行为，请查看相关发行版的已知问题。 建议使用[开发人员社区](https://developercommunity.visualstudio.com)来投票和创建任何问题。 对于每个反馈，我们强烈建议您对问题进行详细说明。 包括你开发的 Visual Studio 版本、所使用的 Api （既是实现的，也包括你要与之交互的内容）、预期结果和实际结果。 如果可能，请包含 devenv.exe 进程的转储。 使用 GitHub 的问题跟踪提供有关此文档和相关文档的反馈。
+打开文件夹和 `Microsoft.VisualStudio.Workspace.*` API 处于积极开发阶段。 如果你发现意外行为，请查看相关版本的已知问题。 建议在[开发者社区](https://developercommunity.visualstudio.com)中进行投票和创建任何问题。 对于每个反馈，我们强烈建议你提供详细的问题描述。 包括你正在开发的 Visual Studio 版本、正在使用的 API（已实现的 API 和正在交互的 API）、预期结果和实际结果。 如果可能，请包括 devenv.exe 进程的转储。 使用 GitHub 的问题跟踪提供有关此文档和相关文档的反馈。
 
 ## <a name="next-steps"></a>后续步骤
 
-* [工作区](workspaces.md)-了解打开文件夹工作区 API。
+* [工作区](workspaces.md) - 了解打开文件夹工作区 API。

@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: d94a525f9938b6845584b6d5872bd486e947025d
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "76115409"
 ---
 # <a name="walkthrough-build-an-application"></a>演练：生成应用程序
@@ -35,13 +35,13 @@ ms.locfileid: "76115409"
 
    ![“生成”菜单-&gt;“配置管理器”命令](../ide/media/buildwalk_configurationmanagerdialogbox.png)
 
-1. 在“活动解决方案配置”列表中，选择“\<新建...\>”。
+1. 在“活动解决方案配置”列表中，选择 \<New...\>。
 
 1. 在“新建解决方案配置”对话框中，命名新配置 `Test`，复制现有“调试”配置中的设置，然后选择“确定”按钮。
 
    ![“新建解决方案配置”对话框](../ide/media/buildwalk_newsolutionconfigdlgbox.png)
 
-1. 在“活动解决方案平台”列表中，选择“\<新建...\>”。
+1. 在“活动解决方案平台”列表中，选择 \<New...\> 。
 
 1. 在“新建解决方案平台”对话框中，选择“x64”，且不要复制 x86 平台中的设置   。
 

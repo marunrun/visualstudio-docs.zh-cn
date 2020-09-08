@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 44e542bcbb801ee4035ba501b50bad81b53e8bdf
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62849294"
 ---
 # <a name="walkthrough-debugging-rendering-errors-due-to-shading"></a>演练：调试因着色引起的呈现错误
@@ -56,7 +56,7 @@ ms.locfileid: "62849294"
 
     将更新“图形像素历史记录”  窗口以反映所选像素。 在此方案中，“图形像素历史记录”  窗口如下所示：
 
-    ![“像素历史记录”显示一个 DrawIndexed 事件。](media/gfx_diag_demo_render_error_shader_step_3.png "gfx_diag_demo_render_error_shader_step_3")
+    ![像素历史记录显示一个 DrawIndexed 事件。](media/gfx_diag_demo_render_error_shader_step_3.png "gfx_diag_demo_render_error_shader_step_3")
 
     请注意，像素着色器的结果是完全不透明的黑色 (0, 0, 0, 1)，而“输出合并器”将这个像素着色器与该像素的“上一个”颜色结合，从而使“结果”也是完全不透明的黑色  。
 

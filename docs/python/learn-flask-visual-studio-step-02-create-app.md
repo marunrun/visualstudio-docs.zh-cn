@@ -12,11 +12,11 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: 03a0eb6808b2298e0727492978d9beb7cfaf2216
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "79300875"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89313739"
 ---
 # <a name="step-2-create-a-flask-app-with-views-and-page-templates"></a>步骤 2：使用视图和页面模板创建 Flask 应用
 
@@ -98,7 +98,7 @@ ms.locfileid: "79300875"
 
     ![Visual Studio 状态栏上的源代码管理更改按钮](media/flask/step02-source-control-changes-button.png)
 
-1. 在“团队资源管理器”中，输入“重构代码”等提交消息，然后选择“全部提交”   。 提交完成后，将看到一条消息“提交已在本地创建的 \<哈希>。  同步后与服务器共享你的更改。” 如果要将更改推送到远程存储库，请选择“同步”  ，然后选择“传出提交”  下的“推送”  。 在推送至远程存储库之前，还可以累积多个本地提交。
+1. 在“团队资源管理器”中，输入“重构代码”等提交消息，然后选择“全部提交”   。 提交完成后，将看到一条消息“已在本地创建提交 \<hash> **。** 同步后与服务器共享你的更改。” 如果要将更改推送到远程存储库，请选择“同步”  ，然后选择“传出提交”  下的“推送”  。 在推送至远程存储库之前，还可以累积多个本地提交。
 
     ![将提交推送到团队资源管理器中的远程存储库](media/flask/step02-source-control-push-to-remote.png)
 

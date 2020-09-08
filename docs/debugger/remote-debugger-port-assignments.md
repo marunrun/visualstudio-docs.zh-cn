@@ -10,10 +10,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 2d99a1aff2c241e81e8914a247d2f6d8981ee273
-ms.sourcegitcommit: 9c7d8693108ecd2042a70c04cebe3c44af657baf
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74239459"
 ---
 # <a name="remote-debugger-port-assignments"></a>远程调试器端口分配
@@ -42,7 +42,7 @@ Visual Studio 远程调试器可作为应用程序或后台服务运行。 当�
 
  在远程调试器窗口中，单击“工具/选项”，并设置 TCP/IP 端口号。
 
- 在命令行中，通过 /port 开关启动远程调试器：msvsmon /port \<端口号>。
+ 在命令行中，通过 /port 开关启动远程调试器：msvsmon /port \<port number> 。
 
  可以在远程调试帮助（在远程调试器窗口中按 F1 或单击“帮助 > 用法”）中找到所有远程调试器命令行开关。
 

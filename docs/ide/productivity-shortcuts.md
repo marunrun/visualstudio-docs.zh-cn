@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 71116fbc05eade8ffb89c38a922106f375b86021
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75585725"
 ---
 # <a name="shortcut-tips-for-visual-studio"></a>Visual Studio 的快捷方式提示
@@ -106,7 +106,7 @@ ms.locfileid: "75585725"
 |添加按钮|选择工具栏溢出按钮|
 |标准工具栏中的查找组合框|**Ctrl**+**D**|
 |查找文本框命令模式|键入 >|
-|新建别名|在“命令”窗口中，键入 alias \<new alias> \<command>|
+|新建别名|在“命令”窗口中键入 alias \<new alias> \<command> |
 
 ## <a name="debugging"></a>调试
 

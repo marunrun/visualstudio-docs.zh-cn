@@ -24,10 +24,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 4f65bd7a904f30f132f654b6dd718532d9d0e66e
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "67821591"
 ---
 # <a name="view-threads-in-the-visual-studio-debugger-by-using-the-threads-window-c-visual-basic-c"></a>使用“线程”窗口在 Visual Studio 调试器中查看线程（C#、Visual Basic、C++）
@@ -46,7 +46,7 @@ ms.locfileid: "67821591"
 
 - **类别**：线程类别显示为用户界面线程、远程过程调用处理程序或工作线程。 一个特殊类别标识应用程序的主线程。
 
-- **Name**：如果有的话，则按名称标识每个线程，否则标识为 \<No Name>。
+- 名称：如果有的话，则按名称标识每个线程，否则标识为 \<No Name>。
 
 - **位置**：显示线程的运行位置。 可以展开此位置以显示线程的完整调用堆栈。
 

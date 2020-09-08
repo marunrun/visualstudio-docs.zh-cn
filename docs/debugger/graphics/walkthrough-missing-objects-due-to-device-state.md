@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 0e85aa8fc5af3f32f117b112e8624962a49d90c6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62895438"
 ---
 # <a name="walkthrough-missing-objects-due-to-device-state"></a>演练：因设备状态而缺少对象
@@ -33,7 +33,7 @@ ms.locfileid: "62895438"
 
  在本演练所述方案中，你已到达了三维应用开发中的首个里程碑，并已准备好对其进行首次测试。 但是，当你运行该应用时，仅用户界面会被呈现到屏幕。 通过使用“图形诊断”，捕获图形日志文件的问题，以便调试该应用。 应用中的问题如下所示：
 
- ![问题解决之前的应用](media/vsg_walkthru1_firstview.png "vsg_walkthru1_firstview")
+ ![修复问题前的应用程序](media/vsg_walkthru1_firstview.png "vsg_walkthru1_firstview")
 
  有关如何捕获图形日志中的图形问题的信息，请参阅 [Capturing Graphics Information](capturing-graphics-information.md)。
 
@@ -104,4 +104,4 @@ ms.locfileid: "62895438"
 
    确定呈现问题的原因可能是配置错误的深度函数后，可以利用此信息以及你对代码的了解查找错误设置深度函数的位置，并解决此问题。 如果你不熟悉该代码，可以使用调试时收集的线索来查找问题。例如，根据此方案中的“深度模具描述”  ，你可以在代码中搜索“depth”或“GREATER”等单词。 修复代码后，重新生成并运行应用以查明呈现的问题是否已解决：
 
-   ![问题解决之后的应用](media/vsg_walkthru1_finalview.png "vsg_walkthru1_finalview")
+   ![修复问题后的应用程序](media/vsg_walkthru1_finalview.png "vsg_walkthru1_finalview")

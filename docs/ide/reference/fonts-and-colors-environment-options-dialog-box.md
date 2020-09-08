@@ -26,10 +26,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 9d5c9edd47e3db43735d3c6e8f6a4ec1a881214e
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75595613"
 ---
 # <a name="fonts-and-colors-environment-options-dialog-box"></a>“选项”对话框 ->“环境”->“字体和颜色”
@@ -198,10 +198,10 @@ ms.locfileid: "75595613"
 |XML 特性值 |XML 特性的内容。|
 |XML Cdata 节 |\<![CDATA[...]]> 的内容。|
 |XML 注释 |\<!-- --> 的内容。|
-|XML 分隔符 |XML 语法分隔符，包括 <、<?、<!、\<!--、-->、?\>、\<![、]]> 和 [、]。|
+|XML 分隔符 |XML 语法分隔符，包括 <、<?、<!、\<!--, -->、?\>、\<![, ]]> 和 [, ]。|
 |XML 文档特性 |xml 文档特性的值，如 \<param name="I">，其中“I”被着色。|
 |XML 文档注释 |括在 xml 文档注释中的注释。|
-|XML 文档标记 |XML 文档注释中的标记，如<br /><br /> /// \<summary>。|
+|XML 文档标记 |XML 文档注释中的标记，如<br /><br /> /// \<summary>.|
 |XML 关键字 |DTD 关键字，如 CDATA、IDREF 和 NDATA。|
 |XML 名称 |元素名称和处理指令目标名称。|
 |XML 处理指令 |处理指令的内容，不包括目标名称。|

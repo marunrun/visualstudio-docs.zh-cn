@@ -11,11 +11,11 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: 73420f5fa6a90638f4a3dbbdf484178c5e177ce9
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79307105"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89315117"
 ---
 # <a name="python-web-application-project-templates"></a>Python Web 应用程序项目模板
 
@@ -37,7 +37,7 @@ Visual Studio 中的 Python 支持在 Bottle、Flask 和 Django 框架中通过�
 
 ### <a name="blank-group"></a>空白组
 
-所有“空白 \<框架> Web 项目”模板都会创建一个项目，其中包含极少的样本代码以及 requirements.txt 文件中声明的必要依赖项。
+所有“空白 \<framework> Web 项目”模板都会创建一个项目，其中包含极少的样本代码以及 requirements.txt 文件中声明的必要依赖项。
 
 | 模板 | 描述 |
 | --- | --- |
@@ -47,7 +47,7 @@ Visual Studio 中的 Python 支持在 Bottle、Flask 和 Django 框架中通过�
 
 ### <a name="web-group"></a>Web 组
 
-所有“\<框架> Web 项目”模板都会创建一个具有相同设计的初学者 Web 应用，而与所选的框架无关。 该应用包含“主页”、“关于”和“联系人”页面，以及使用 Bootstrap 的导航栏和响应式设计。 每个应用都被适当地配置为提供静态文件（CSS、JavaScript 和字体），并使用适合框架的页面模板机制。
+所有“\<Framework> Web 项目”模板都会创建一个具有相同设计的初学者 Web 应用，而与所选的框架无关。 该应用包含“主页”、“关于”和“联系人”页面，以及使用 Bootstrap 的导航栏和响应式设计。 每个应用都被适当地配置为提供静态文件（CSS、JavaScript 和字体），并使用适合框架的页面模板机制。
 
 | 模板 | 描述 |
 | --- | --- |
@@ -58,7 +58,7 @@ Visual Studio 中的 Python 支持在 Bottle、Flask 和 Django 框架中通过�
 
 ### <a name="polls-group"></a>投票组
 
-“投票 \<框架> Web 项目”模板创建一个初学者 Web 应用，用户可以通过该应用对不同的投票问题进行投票。 每个应用都基于“Web”项目模板的结构生成，从而使用数据库来管理投票和用户响应  。 这些应用包含相应的数据模型以及用于从 samples.json 文件加载投票的特殊应用页 (/seed)  。
+“投票 \<framework> Web 项目”模板创建一个初学者 Web 应用，用户可以通过该应用对不同的投票问题进行投票。 每个应用都基于“Web”项目模板的结构生成，从而使用数据库来管理投票和用户响应  。 这些应用包含相应的数据模型以及用于从 samples.json 文件加载投票的特殊应用页 (/seed)  。
 
 | 模板 | 描述 |
 | --- | --- |

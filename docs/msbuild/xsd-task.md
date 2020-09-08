@@ -21,10 +21,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 217e045a731efa1fe3ba1dda63e89eca685d4b75
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77630777"
 ---
 # <a name="xsd-task"></a>XSD 任务
@@ -42,7 +42,7 @@ ms.locfileid: "77630777"
 
      可选 **String** 参数。
 
-     在命令行上指定的选项列表。 例如，/\<option1> /\<option2> /\<option#>。 使用此参数可指定未由任何其他 **XSD** 任务参数表示的选项。
+     在命令行上指定的选项列表。 例如 /\<option1> /\<option2> /\<option#>。 使用此参数可指定未由任何其他 **XSD** 任务参数表示的选项。
 
 - **GenerateFromSchema**
 

@@ -12,10 +12,10 @@ ms.author: ghogen
 ms.workload:
 - multiple
 ms.openlocfilehash: df75bb998d2b8c6486e20c4c3ca0d80347c8f88a
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75591666"
 ---
 # <a name="vctooltask-base-class"></a>VCToolTask 基类
@@ -28,7 +28,7 @@ ms.locfileid: "75591666"
 
 |参数|说明|
 |---------------|-----------------|
-|**ActiveToolSwitchesValues**|可选的 Dictionary\<string, ToolSwitch> 参数。|
+|**ActiveToolSwitchesValues**|可选 Dictionary\<string, ToolSwitch> 参数。|
 |**AdditionalOptions**|可选的 string  参数。|
 |**EffectiveWorkingDirectory**|可选的 string  参数。|
 |**EnableErrorListRegex**|可选的 bool  参数。<br/><br/>默认值为 `true`。|

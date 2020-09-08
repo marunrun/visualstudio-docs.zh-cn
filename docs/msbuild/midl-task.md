@@ -27,10 +27,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 7a43975244eaf064c9ed7608fa41c16854ca140f
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77633468"
 ---
 # <a name="midl-task"></a>MIDL 任务
@@ -53,7 +53,7 @@ ms.locfileid: "77633468"
 
      可选 **String** 参数。
 
-     命令行选项列表。 例如，/\<option1> /\<option2> /\<option#>。 使用此参数可指定未由任何其他 MIDL 任务参数表示的命令行选项。
+     命令行选项列表。 例如 /\<option1> /\<option2> /\<option#>。 使用此参数可指定未由任何其他 MIDL 任务参数表示的命令行选项。
 
      有关详细信息，请参阅 [MIDL 命令行参考](/windows/desktop/Midl/midl-command-line-reference)。
 
@@ -309,7 +309,7 @@ ms.locfileid: "77633468"
     |**4**|**/Zp4**|
     |**8**|**/Zp8**|
 
-     有关详细信息，请参阅 [MIDL 命令行参考](/windows/desktop/Midl/midl-command-line-reference)中的 /Zp 选项。 **/Zp** 选项相当于 **/pack** 选项以及较早的 **/align** 选项。
+     有关详细信息，请参阅 [MIDL 命令行参考](/windows/desktop/Midl/midl-command-line-reference)中的 /Zp 选项****。 **/Zp** 选项相当于 **/pack** 选项以及较早的 **/align** 选项。
 
 - **SuppressCompilerWarnings**
 
@@ -317,7 +317,7 @@ ms.locfileid: "77633468"
 
      如果为 `true`，则禁止 MIDL 任务的警告消息。
 
-     有关详细信息，请参阅 [MIDL 命令行参考](/windows/desktop/Midl/midl-command-line-reference)中的 /no_warn 选项。
+     有关详细信息，请参阅 [MIDL 命令行参考](/windows/desktop/Midl/midl-command-line-reference)中的 /no_warn 选项****。
 
 - **SuppressStartupBanner**
 
@@ -325,7 +325,7 @@ ms.locfileid: "77633468"
 
      如果为 `true`，则在任务开始时阻止显示版权和版本号消息。
 
-     有关详细信息，请参阅 [MIDL 命令行参考](/windows/desktop/Midl/midl-command-line-reference)中的 /nologo 选项。
+     有关详细信息，请参阅 [MIDL 命令行参考](/windows/desktop/Midl/midl-command-line-reference)中的 /nologo 选项****。
 
 - **TargetEnvironment**
 
@@ -335,14 +335,14 @@ ms.locfileid: "77633468"
 
      指定以下值之一，其中每个值对应于一个命令行选项。
 
-    |“值”|命令行选项|
+    |值|命令行选项|
     |-----------|--------------------------|
     |**NotSet**|*\<none>*|
     |**Win32**|**/env win32**|
     |**Itanium**|**/env ia64**|
     |**X64**|**/env x64**|
 
-     有关详细信息，请参阅 [MIDL 命令行参考](/windows/desktop/Midl/midl-command-line-reference)中的 /env 选项。
+     有关详细信息，请参阅 [MIDL 命令行参考](/windows/desktop/Midl/midl-command-line-reference)中的 /env 选项****。
 
 - **TrackerLogDirectory**
 
@@ -358,12 +358,12 @@ ms.locfileid: "77633468"
 
      指定以下值之一，其中每个值对应于一个命令行选项。
 
-    |“值”|命令行选项|
+    |值|命令行选项|
     |-----------|--------------------------|
     |**NewFormat**|**/newtlb**|
     |**OldFormat**|**/oldtlb**|
 
-     有关详细信息，请参阅 [MIDL 命令行参考](/windows/desktop/Midl/midl-command-line-reference)中的 /newtlb 选项 。
+     有关详细信息，请参阅 [MIDL 命令行参考](/windows/desktop/Midl/midl-command-line-reference)中的 /newtlb 选项********。
 
 - **TypeLibraryName**
 
@@ -371,7 +371,7 @@ ms.locfileid: "77633468"
 
      指定类型库文件的名称。
 
-     有关详细信息，请参阅 [MIDL 命令行参考](/windows/desktop/Midl/midl-command-line-reference)中的 /tlb 选项。
+     有关详细信息，请参阅 [MIDL 命令行参考](/windows/desktop/Midl/midl-command-line-reference)中的 /tlb 选项****。
 
 - **UndefinePreprocessorDefinitions**
 
@@ -379,7 +379,7 @@ ms.locfileid: "77633468"
 
      通过将名称传递到 C 预处理器，删除任何之前的名称定义，就如通过 `#undefine` 所指示那样。 指定一个或多个以前定义的名称。
 
-     有关详细信息，请参阅 [MIDL 命令行参考](/windows/desktop/Midl/midl-command-line-reference)中的 /U 选项。 另请参阅此表中的 **PreprocessorDefinitions** 参数。
+     有关详细信息，请参阅 [MIDL 命令行参考](/windows/desktop/Midl/midl-command-line-reference)中的 /U 选项****。 另请参阅此表中的 **PreprocessorDefinitions** 参数。
 
 - **ValidateAllParameters**
 
@@ -387,7 +387,7 @@ ms.locfileid: "77633468"
 
      如果为 `true`，则生成用于在运行时执行完整性检查的其他错误检查信息。 如果为 `false`，则不会生成错误检查信息。
 
-     有关详细信息，请参阅 [MIDL 命令行参考](/windows/desktop/Midl/midl-command-line-reference)中的 /robust 和 /no_robust 选项 。
+     有关详细信息，请参阅 [MIDL 命令行参考](/windows/desktop/Midl/midl-command-line-reference)中的 /robust 和 /no_robust 选项********。
 
 - **WarnAsError**
 
@@ -397,7 +397,7 @@ ms.locfileid: "77633468"
 
      如果未指定 **WarningLevel** MIDL 任务参数，则将默认级别和级别 1 的警告视为错误。
 
-     有关详细信息，请参阅 [MIDL 命令行参考](/windows/desktop/Midl/midl-command-line-reference)中的 /WX 选项。 另请参阅此表格中的 **WarningLevel** 参数。
+     有关详细信息，请参阅 [MIDL 命令行参考](/windows/desktop/Midl/midl-command-line-reference)中的 /WX 选项****。 另请参阅此表格中的 **WarningLevel** 参数。
 
 - **WarningLevel**
 
@@ -407,7 +407,7 @@ ms.locfileid: "77633468"
 
      指定以下值之一，其中每个值对应于一个命令行选项。
 
-    |“值”|命令行选项|
+    |值|命令行选项|
     |-----------|--------------------------|
     |**0**|**/W0**|
     |**1**|**/W1**|
@@ -415,7 +415,7 @@ ms.locfileid: "77633468"
     |**3**|**/W3**|
     |**4**|**/W4**|
 
-     有关详细信息，请参阅 [MIDL 命令行参考](/windows/desktop/Midl/midl-command-line-reference)中的 /W 选项。 另请参阅此表格中的 **WarnAsError** 参数。
+     有关详细信息，请参阅 [MIDL 命令行参考](/windows/desktop/Midl/midl-command-line-reference)中的 /W 选项****。 另请参阅此表格中的 **WarnAsError** 参数。
 
 ## <a name="see-also"></a>请参阅
 

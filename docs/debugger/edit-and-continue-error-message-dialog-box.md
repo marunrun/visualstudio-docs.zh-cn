@@ -19,10 +19,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 7df95eae689f7c3abbb0d75a7557ce749bdceee5
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "73188231"
 ---
 # <a name="edit-and-continue-error-message"></a>“编辑并继续”错误消息
@@ -40,7 +40,7 @@ ms.locfileid: "73188231"
 - 尝试在调试 Dr.Watson 转储期间编辑代码。
 - 尝试在发生未经处理的异常且未选择“对未经处理的异常展开调用堆栈”选项时编辑代码。
 - 尝试在调试嵌入的运行时应用程序时编辑代码。
-- 尝试使用具有 64 位应用目标，版本低于 4.5.1 的 .NET Framework 版本来编辑托管代码。 若要对版本低于 4.5.1 的 .NET Framework 使用“编辑并继续”，请在“高级编译器”设置下的“\<项目名称>” > “属性” > “编译”选项卡中将目标设置为“x86”    。
+- 尝试使用具有 64 位应用目标，版本低于 4.5.1 的 .NET Framework 版本来编辑托管代码。 要对版本低于 4.5.1 的 .NET Framework 使用“编辑并继续”，请在“高级编译器”设置下的“\<ProjectName>” > “属性” > “编译”选项卡中将目标设置为“x86”    。
 - 尝试编辑在调试过程中修改过并已重新加载的程序集中的代码。
 - 尝试编辑尚未加载的程序集中的代码。
 - 开始调试应用的旧版本，因为最新版本具有生成错误。

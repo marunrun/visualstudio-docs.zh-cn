@@ -26,10 +26,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: dd4a481a8d4f283204b99cfef4a07106d3e479cb
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72731283"
 ---
 # <a name="mfc-debugging-techniques"></a>MFC 调试方法
@@ -430,9 +430,9 @@ pMyPerson->Dump( afxDump );
 
 3. 首先，将创建一个新的项目配置。
 
-   1. 在“\<项目> 属性页”对话框中，单击“配置管理器”按钮 。
+   1. 在“\<Project> 属性页”对话框中，单击“配置管理器”按钮 。
 
-   2. 在 [“配置管理器”对话框](/previous-versions/visualstudio/visual-studio-2010/t1hy4dhz(v=vs.100))中，在网格中定位你的项目。 在“配置”列中，选择“\<新建...>” 。
+   2. 在 [“配置管理器”对话框](/previous-versions/visualstudio/visual-studio-2010/t1hy4dhz(v=vs.100))中，在网格中定位你的项目。 在“配置”列中，选择“\<New...>” 。
 
    3. 在 [“新建项目配置”对话框](/previous-versions/visualstudio/visual-studio-2010/0eh8w4cf(v=vs.100))中的 **“项目配置名”** 框中键入新配置的名称，如“Partial Debug”（部分调试）。
 
@@ -472,7 +472,7 @@ pMyPerson->Dump( afxDump );
 
    6. 单击 **“调试信息格式”** 设置并为调试信息选择所需选项（通常为 **“/ZI”** ）。
 
-   7. 如果要使用应用程序向导生成的应用程序或具有预编译头，则在编译其他模块以前必须关闭预编译头或重新编译预编译头。 否则，将收到警告 C4650 和错误消息 C2855。 通过更改“\<项目> 属性”对话框中的“创建/使用预编译标头”设置，可关闭预编译标头（该设置位于“配置属性”文件夹下的“C/C++”子文件夹中的“预编译标头”类别中）    。
+   7. 如果要使用应用程序向导生成的应用程序或具有预编译头，则在编译其他模块以前必须关闭预编译头或重新编译预编译头。 否则，将收到警告 C4650 和错误消息 C2855。 通过更改“\<Project> 属性”对话框中的“创建/使用预编译标头”设置（“配置属性”文件夹下“C/C++”子文件夹的“预编译标头”类别中），可关闭预编译标头    。
 
 7. 从 **“生成”** 菜单中选定 **“生成”** 以重新生成已过期的项目文件。
 

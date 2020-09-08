@@ -31,10 +31,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 01105e3fd4c86d57077df7804e66592e32ebae07
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "78865344"
 ---
 # <a name="link-task"></a>Link 任务
@@ -73,7 +73,7 @@ ms.locfileid: "78865344"
 
   可选 **String** 参数。
 
-  在命令行上指定的链接器选项列表。 例如，/\<option1> /\<option2> /\<option#>。 使用此参数可指定未由任何其他 **Link** 任务参数表示的链接器选项。
+  在命令行上指定的链接器选项列表。 例如 /\<option1> /\<option2> /\<option#>。 使用此参数可指定未由任何其他 **Link** 任务参数表示的链接器选项。
 
   有关详细信息，请参阅[链接器选项](/cpp/build/reference/linker-options)。
 
@@ -139,7 +139,7 @@ ms.locfileid: "78865344"
 
   指定以下值之一，其中每个值对应于一个链接器选项。
 
-  - **Default** -  *\<none>*
+  - **Default** - \<none>
 
   - **ForceIJWImage** -  **/CLRIMAGETYPE:IJW**
 
@@ -239,7 +239,7 @@ ms.locfileid: "78865344"
 
   指定以下值之一，其中每个值对应于一个链接器选项。
 
-  - **NotSet** -  *\<none>*
+  - **NotSet** - \<none>
 
   - **Driver** -  **/Driver**
 
@@ -489,7 +489,7 @@ ms.locfileid: "78865344"
 
   指定以下值之一，其中每个值对应于一个命令行选项。
 
-  - **Default** -  *\<none>*
+  - **Default** - \<none>
 
   - **UseLinkTimeCodeGeneration** -  **/LTCG**
 
@@ -683,7 +683,7 @@ ms.locfileid: "78865344"
 
   指定以下值之一，其中每个值对应于一个命令行选项。
 
-  - **NotSet** -  *\<none>*
+  - **NotSet** - \<none>
 
   - **LinkVerbose** -  **/VERBOSE**
 
@@ -745,7 +745,7 @@ ms.locfileid: "78865344"
 
   指定以下值之一，其中每个值对应于一个命令行选项。
 
-  - **NotSet** -  *\<none>*
+  - **NotSet** - \<none>
 
   - **Console** -  **/SUBSYSTEM:CONSOLE**
 
@@ -815,7 +815,7 @@ ms.locfileid: "78865344"
 
   指定以下值之一，其中每个值对应于一个命令行选项。
 
-  - **NotSet** -  *\<none>*
+  - **NotSet** - \<none>
 
   - **MachineARM** -  **/MACHINE:ARM**
 

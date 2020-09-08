@@ -10,10 +10,10 @@ ms.workload:
 - data-science
 monikerRange: vs-2017
 ms.openlocfilehash: 5a09b3f78b929fd60764be36f56c0b580c7a42d7
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75843725"
 ---
 # <a name="how-to-install-r-tools-for-visual-studio"></a>如何安装针对 Visual Studio 的 R 工具
@@ -46,7 +46,7 @@ Visual Studio for Mac 目前尚不支持 RTVS。
 
 1. 在同一工作负载名称下的右侧设置任何其他选项。 此工作负载默认包含 F# 和 Python 支持。 对于 R，最低要求是“R 语言支持”、“R 开发运行时支持”以及“Microsoft R Client”    。
 
-RTVS 的安装位置：%ProgramFiles(x86)%\Microsoft Visual Studio\<version>\<edition>Common7\IDE\Extensions\Microsoft\R Tools for Visual Studio，其中 \<version> 通常为 `2017`，\<edition> 为 `Community`、`Professional` 或 `Enterprise`。
+RTVS 的安装位置：%ProgramFiles(x86)%\Microsoft Visual Studio\<version>\<edition>Common7\IDE\Extensions\Microsoft\R Tools for Visual Studio，其中 \<version> 通常为 `2017`，\<edition> 为 `Community`、`Professional` 或 `Enterprise`  。
 
 ## <a name="install-rtvs-in-visual-studio-2015"></a>在 Visual Studio 2015 中安装 RTVS
 

@@ -18,10 +18,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: b32dc6372a6ce4983e9bd11e05a4a662d0ad44ba
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62901568"
 ---
 # <a name="using-the-tasks-window-c-visual-basic-c"></a>使用“任务”窗口（C#、Visual Basic、C++）
@@ -65,7 +65,7 @@ ms.locfileid: "62901568"
 
  通过右击列标题并选择所需的列可以向视图添加列。 （通过清除所选内容即可删除列。）你还可以通过向左或向右拖动列来对列重新排序。 列的快捷菜单如下图所示。
 
- ![“任务”窗口中的快捷视图菜单](../debugger/media/parallel_tasks_contextmenu.png "Parallel_Tasks_ContextMenu")
+ ![“任务”窗口中的“快捷视图”菜单](../debugger/media/parallel_tasks_contextmenu.png "Parallel_Tasks_ContextMenu")
 
 ## <a name="sorting-tasks"></a>对任务进行排序
  若要按列条件对任务进行排序，请单击相应的列标题。 例如，通过单击“ID”列标题，可以按任务 ID 对任务进行排序：1、2、3、4、5 等等。 若要反转排序顺序，请再次单击相应的列标题。 当前排序列和排序顺序由该列上的箭头指示。
@@ -86,7 +86,7 @@ ms.locfileid: "62901568"
 
  下图所示为每项任务的其他菜单项。
 
- ![“任务”窗口中的快捷线程菜单](../debugger/media/parallel_tasks_contextmenu2.png "Parallel_Tasks_ContextMenu2")
+ ![“任务”窗口中的“快捷线程”菜单](../debugger/media/parallel_tasks_contextmenu2.png "Parallel_Tasks_ContextMenu2")
 
 ## <a name="switching-the-active-task-or-frame"></a>切换活动任务或帧
 

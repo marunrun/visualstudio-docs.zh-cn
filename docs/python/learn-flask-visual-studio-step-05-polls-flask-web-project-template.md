@@ -12,10 +12,10 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: c540dfef9d2d46bb621432b3e37438e0b6b07298
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "70154898"
 ---
 # <a name="step-5-use-the-polls-flask-web-project-template"></a>步骤 5：使用投票 Flask Web 项目模板
@@ -242,7 +242,7 @@ def seed():
 
 剩下的部分将介绍如何查看单个投票的投票（详情）和结果视图。
 
-从主页选择某项投票时，应用将导航至 URL /poll/\<key\>，其中 key 是该项投票的唯一标识符  。 在 views.py 中，可以发现分配了 `details` 函数来处理 GET 和请求的 URL 路由。 还可发现在 URL 路由中使用 `<key>` 同时将该表单的任意路由映射到同一个函数，并生成与其同名称的函数的参数：
+从主页选择某项投票时，应用将导航到 URL /poll/\<key\>，其中 key 是该项投票的唯一标识符。 在 views.py 中，可以发现分配了 `details` 函数来处理 GET 和请求的 URL 路由。 还可发现在 URL 路由中使用 `<key>` 同时将该表单的任意路由映射到同一个函数，并生成与其同名称的函数的参数：
 
 ```python
 @app.route('/poll/<key>', methods=['GET', 'POST'])
@@ -296,9 +296,9 @@ def details(key):
 {% endblock %}
 ```
 
-“投票”按钮具有 `type="submit"`，因此选中它会生成一个 POST 请求，该请求返回再次路由到 `details` 函数的同一 URL。 不过，此时它从表单数据中提取选项并且重定向到 /results/\<choice\>。
+“投票”按钮具有 `type="submit"`，因此选中它会生成一个 POST 请求，该请求返回再次路由到 `details` 函数的同一 URL。 不过，此时它从表单数据中提取选项并重定向到 /results/\<choice\>。
 
-然后，/result/\<key\> URL 将路由到 views.py 中的 `results` 函数，该函数随后调用投票的 `calculate_stats` 方法并使用 templates\results.html 呈现：
+然后，/result/\<key\> URL 路由到 views.py 中的 `results` 函数，该函数随后调用投票的 `calculate_stats` 方法并使用 templates\results.html 呈现 ：
 
 ```python
 @app.route('/results/<key>')

@@ -1,7 +1,7 @@
 ---
 title: 创建基于网络的安装
 description: 了解如何创建用于在企业中部署 Visual Studio 的网络安装点。
-ms.date: 03/27/2020
+ms.date: 08/27/2020
 ms.custom: seodec18
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 1f9c1ffc0252f0fcd92f026c876adfc8ad694c41
-ms.sourcegitcommit: 273b657e115c1756adb84e0e56b6f2c709bcee76
+ms.openlocfilehash: 0b48f35a9467e1f69a0055ac0859083078f9cf3b
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80759727"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "88992350"
 ---
 # <a name="create-a-network-installation-of-visual-studio"></a>创建 Visual Studio 的网络安装
 
@@ -73,7 +73,7 @@ ms.locfileid: "80759727"
 必须具有 Internet 连接才能完成此步骤。 若要创建含所有语言和所有功能的脱机安装，请使用与下面示例相似的命令之一。
 
    > [!IMPORTANT]
-   > 完整的 Visual Studio 布局至少需要 35 GB 磁盘空间，可能需要一段时间才能下载完成。 若要详细了解如何创建仅包含要安装的组件的布局，请参阅[自定义网络布局](#customize-the-network-layout)部分。
+   > 对于 Visual Studio Community，单一语言区域设置的完整布局需要大约 35 GB 的磁盘空间，而对于 Visual Studio Enterprise 则需要大约 42 GB 的磁盘空间。 其他每个[语言区域设置](use-command-line-parameters-to-install-visual-studio.md#list-of-language-locales)需要大约 0.5 GB 的磁盘空间。 有关详细信息，请参阅[自定义网络布局](#customize-the-network-layout)部分。
    >
    > [!TIP]
    > 请确保从下载目录运行该命令。 通常，在运行 Windows 10 的计算机上为：`C:\Users\<username>\Downloads`。
@@ -96,7 +96,7 @@ ms.locfileid: "80759727"
 
 在网络共享上托管布局，以便用户可以从其他计算机运行。
 
-下面的示例使用 [xcopy](/windows-server/administration/windows-commands/xcopy/)。 如果需要，还可以使用 [robocopy](/windows-server/administration/windows-commands/robocopy/)。  
+下面的示例使用 [xcopy](/windows-server/administration/windows-commands/xcopy/)。 如果需要，还可以使用 [robocopy](/windows-server/administration/windows-commands/robocopy/)。
 
 ::: moniker range="vs-2017"
 

@@ -13,19 +13,19 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 008e7ca15595db249c05485f0d9e8f8b1277993e
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75595457"
 ---
 # <a name="log-devenvexe"></a>/Log (devenv.exe)
 
 将所有活动记录到日志文件以用于疑难解答。 此文件在你至少调用一次 `devenv /log` 后显示。 默认情况下，日志文件位于以下路径：
 
-%APPDATA%\\Microsoft\\VisualStudio\\\<Version\>\\ActivityLog.xml
+**%APPDATA%\\Microsoft\\VisualStudio\\** \<Version\> **\\ActivityLog.xml**
 
-其中，“版本”是 Visual Studio 的版本\<\>。 但是，可以指定一个不同的路径和文件名。
+其中，\<Version\> 是 Visual Studio 的版本。 但是，可以指定一个不同的路径和文件名。
 
 ## <a name="syntax"></a>语法
 

@@ -8,10 +8,10 @@ ms.workload:
 - multiple
 author: mikejo5000
 ms.openlocfilehash: f1e22a39035e5d3500f4dd45481319e1daecfa04
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75592056"
 ---
 # <a name="walkthrough-create-edit-and-maintain-a-coded-ui-test"></a>演练：创建、编辑和维护编码的 UI 测试
@@ -30,11 +30,11 @@ ms.locfileid: "75592056"
 
 3. 在“所有 WPF 控件”  部分，将一个“Button”  、“CheckBox”  和“ProgressBar”  控件拖动到设计图面的主窗口中。
 
-4. 选择“Button”控件  。 在“属性”窗口中，将“名称”属性的值从 \<无名称> 更改为 button1。 然后将“内容”  属性的值从 Button 更改为 Start。
+4. 选择“Button”控件  。 在“属性”窗口中，将“名称”属性的值从 \<No Name> 更改为 button1 。 然后将“内容”  属性的值从 Button 更改为 Start。
 
-5. 选择“ProgressBar”控件  。 在“属性”窗口中，将“名称”属性的值从 \<无名称> 更改为 progressBar1。 然后将“最大值”  属性的值从“100”  更改为“10000”  。
+5. 选择“ProgressBar”控件  。 在“属性”窗口中，将“名称”属性的值从 \<No Name> 更改为 progressBar1 。 然后将“最大值”  属性的值从“100”  更改为“10000”  。
 
-6. 选择“Checkbox”控件  。 在“属性”窗口中，将“名称”属性的值从 \<无名称> 更改为 checkBox1，然后清除“IsEnabled”属性。
+6. 选择“Checkbox”控件  。 在“属性”窗口中，将“名称”属性的值从 \<No Name> 更改为 checkBox1，然后清除“IsEnabled”属性  。
 
      ![简单 WPF 应用程序](../test/media/codedui_wpfapp.png)
 

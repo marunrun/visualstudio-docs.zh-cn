@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 3faa9ca73592722a950f9914437884c33122070e
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77633351"
 ---
 # <a name="msbuild-targets-files"></a>MSBuild .targets 文件
@@ -29,7 +29,7 @@ MSBuild 包括多个 .targets  文件，文件内容包含常见方案的项、�
 
  项目通常会导入一个或多个 .targets 文件以定义它们的生成进程  。 例如由 Visual Studio 创建的 C# 项目将导入 Microsoft.CSharp.targets  ，它可导入 Microsoft.Common.targets  。 C# 项目本身会定义特定于该项目的项和属性，但 C# 项目的标准生成规则在导入的 .targets  文件中进行定义。
 
- `$(MSBuildToolsPath)` 值指定这些公用 .targets 文件的路径  。 如果 `ToolsVersion` 为 4.0，则文件位于以下位置： *\<WindowsInstallationPath>\Microsoft.NET\Framework\v4.0.30319\\*
+ `$(MSBuildToolsPath)` 值指定这些公用 .targets 文件的路径  。 如果 `ToolsVersion` 为 4.0，则文件位于以下位置：\<WindowsInstallationPath>\Microsoft.NET\Framework\v4.0.30319\\
 
 > [!NOTE]
 > 若要了解如何创建自己的目标，请参阅[目标](../msbuild/msbuild-targets.md)。 有关如何使用 `Import` 元素将项目文件插入到其他项目文件的详细信息，请参阅 [Import 元素 (MSBuild)](../msbuild/import-element-msbuild.md) 和[如何：在多个项目文件中使用同一目标](../msbuild/how-to-use-the-same-target-in-multiple-project-files.md)。

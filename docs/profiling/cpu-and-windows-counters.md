@@ -14,10 +14,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 9accd3d0ab5ff1f7a3084d5973cace08e66396b9
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74779544"
 ---
 # <a name="cpu-and-windows-counters"></a>CPU 和 Windows 计数器
@@ -126,7 +126,7 @@ Visual Studio 探查器继续支持特定平台的特定事件。 例如，Penti
 
      **\<Visual Studio Performance Tools Directory>\VSPerfCmd /querycounters**
 
-     其中 *\<Visual Studio Performance Tools Directory>* 是 Visual Studio 安装的性能工具目录的路径。 若要获取性能工具的路径，请参阅[指定命令行工具的路径](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)。
+     其中 \<Visual Studio Performance Tools Directory> 是 Visual Studio 安装的性能工具目录的路径。 若要获取性能工具的路径，请参阅[指定命令行工具的路径](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)。
 
 ## <a name="see-also"></a>请参阅
 

@@ -17,12 +17,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e53c3701e31733c54869c71820956d674ed4fb8b
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 1815b0efeebf98587fe07384ea0b2c8d1f5e1d90
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75593689"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "88992363"
 ---
 # <a name="manage-application-resources-net"></a>管理应用程序资源 (.NET)
 
@@ -31,7 +31,7 @@ ms.locfileid: "75593689"
 > [!NOTE]
 > 本主题适用于 Visual Studio  Windows 版。 对于 Visual Studio for Mac，请参阅[管理应用资源 (Visual Studio for Mac)](/visualstudio/mac/managing-app-resources)。
 
-有关 .NET 桌面应用中的资源的详细信息，请参阅 [桌面应用中的资源](/dotnet/framework/resources/index)。
+有关 .NET 应用中的资源的详细信息，请参阅 [.NET 应用中的资源](/dotnet/framework/resources/index)。
 
 ## <a name="work-with-resources"></a>使用资源
 
@@ -52,5 +52,5 @@ ms.locfileid: "75593689"
 
 ## <a name="see-also"></a>请参阅
 
-- [桌面应用中的资源 (.NET Framework)](/dotnet/framework/resources/index)
+- [.NET 应用中的资源 (.NET Framework)](/dotnet/framework/resources/index)
 - [管理应用资源 (Visual Studio for Mac)](/visualstudio/mac/managing-app-resources)

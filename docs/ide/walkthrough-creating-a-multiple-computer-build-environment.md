@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 11b158854a0026de28cb2fb0a582bbaf764eeaa4
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68461541"
 ---
 # <a name="walkthrough-create-a-multiple-computer-build-environment"></a>演练：创建多计算机生成环境
@@ -130,7 +130,7 @@ ms.locfileid: "68461541"
 
     - %ProgramFiles%\Microsoft Visual Studio\\\<version>\\\<edition>\Common7\Tools\vsvars32.bat
 
-4. 仅当您在生成计算机上运行生成输出时才需要下列 Visual C++ 运行库 - 例如，作为自动测试的一部分。 这些文件一般位于 %ProgramFiles%\Microsoft Visual Studio\\\<version>\\\<edition>\VC\redist\x86 或 %ProgramFiles%\Microsoft Visual Studio\\\<version>\\\<edition>\VC\redist\x64 文件夹下的子文件夹中，具体取决于系统体系结构   。 在 x86 系统中，将 x86 二进制文件复制到 Windows\System32 文件夹  。 在 x64 系统中，将 x86 二进制文件复制到 Windows\SysWOW64 文件夹，并将 x64 二进制文件复制到 Windows\System32 文件夹   。
+4. 仅当您在生成计算机上运行生成输出时才需要下列 Visual C++ 运行库 - 例如，作为自动测试的一部分。 这些文件一般位于 %ProgramFiles%\Microsoft Visual Studio\\\<version>\\\<edition>\VC\redist\x86 或 %ProgramFiles%\Microsoft Visual Studio\\\<version>\\\<edition>\VC\redist\x64 文件夹下的子文件夹，具体取决于系统体系结构 。 在 x86 系统中，将 x86 二进制文件复制到 Windows\System32 文件夹  。 在 x64 系统中，将 x86 二进制文件复制到 Windows\SysWOW64 文件夹，并将 x64 二进制文件复制到 Windows\System32 文件夹   。
 
     - \Microsoft.VC110.ATL\atl110.dll
 
@@ -255,7 +255,7 @@ ms.locfileid: "68461541"
 
 ### <a name="use-vcvarsallbat-to-set-environment-variables"></a>使用 vcvarsall.bat 设置环境变量
 
-在生成计算机上打开“命令提示符”窗口，并运行 %Program Files%\Microsoft Visual Studio\\\<version>\\\<edition>\VC\vcvarsall.bat   。 您可以使用命令行参数指定要使用的工具集 - x86、本机 x64 或 x64 交叉编译器。 如果未指定命令行参数，则使用 x86 工具集。
+在生成计算机上打开“命令提示符”窗口，运行 %Program Files%\Microsoft Visual Studio\\\<version>\\\<edition>\VC\vcvarsall.bat。 您可以使用命令行参数指定要使用的工具集 - x86、本机 x64 或 x64 交叉编译器。 如果未指定命令行参数，则使用 x86 工具集。
 
 下表描述了 vcvarsall.bat 支持的参数  ：
 
@@ -303,7 +303,7 @@ MSBuild 需要在生成计算机的 GAC 上安装一些附加程序集。
 
      打开具有管理权限的“命令提示符”窗口，针对每个文件运行以下命令  ：
 
-     **gacutil -i \<file>**
+     gacutil -i \<file>
 
     > [!NOTE]
     > 若要将程序集完全安装到 GAC 中，可能需要重新启动。

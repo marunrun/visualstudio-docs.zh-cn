@@ -19,28 +19,28 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 079eecd6751f168a7beba32eda6d15eda712bd7f
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77631323"
 ---
 # <a name="updatemanifestforbrowserapplication-task"></a>UpdateManifestForBrowserApplication 任务
 
-生成 XAML 浏览器应用程序 (XBAP) 项目时，运行 <xref:Microsoft.Build.Tasks.Windows.UpdateManifestForBrowserApplication> 任务，以将 \<hostInBrowser />  元素添加到应用程序清单中 (\<projectname>.exe.manifest  )。
+运行 <xref:Microsoft.Build.Tasks.Windows.UpdateManifestForBrowserApplication> 任务，以便在生成 XAML 浏览器应用程序 (XBAP) 项目时，将 \<hostInBrowser /> 元素添加到应用程序清单 (\<projectname>.exe.manifest)。
 
 ## <a name="task-parameters"></a>任务参数
 
 |参数|描述|
 |---------------|-----------------|
 |`ApplicationManifest`|必需的 **ITaskItem[]** 参数。<br /><br /> 指定想要将 `<hostInBrowser />` 元素添加到其中的应用程序清单文件的路径和名称。|
-|`HostInBrowser`|所需的 **Boolean** 参数。<br /><br /> 指定是否要修改应用程序清单，以包括 **\<hostInBrowser />** 元素。 如果为 **true**，则一个新 **\<hostInBrowser />** 元素将包括在 **\<entryPoint />** 元素中。 元素包含是累计的：如果 \<hostInBrowser />  元素已存在，则不会删除或覆盖它。 相反，将创建额外的 **\<hostInBrowser />** 元素。 如果为 false  ，则不会修改应用程序清单。|
+|`HostInBrowser`|所需的 **Boolean** 参数。<br /><br /> 指定是否要修改应用程序清单以包括 \<hostInBrowser /> 元素。 如果为 True，则 \<entryPoint /> 元素中将包含一个新的 \<hostInBrowser /> 元素  。 元素包含是累计的：如果 \<hostInBrowser /> 元素已存在，则不会删除或覆盖它。 相反，将创建额外的 \<hostInBrowser /> 元素。 如果为 false  ，则不会修改应用程序清单。|
 
 ## <a name="remarks"></a>备注
 
  XBAP 通过 ClickOnce 部署运行，因此必须使用支持部署和应用程序清单进行发布。 MSBuild 使用 [GenerateApplicationManifest](generateapplicationmanifest-task.md) 任务来生成应用程序清单。
 
- 然后，若要将应用程序配置为从浏览器中进行管理，则必须将额外的 **\<hostInBrowser />** 元素添加到应用程序清单中，如以下示例所示：
+ 然后，要将应用程序配置为从浏览器中托管，则必须将额外的 \<hostInBrowser /> 元素添加到应用程序清单中，如以下示例所示：
 
 ```xml
 <!--MyXBAPApplication.exe.manifest-->

@@ -30,10 +30,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 19eed30074215b64301d7227e93ba6bf5b438d78
-ms.sourcegitcommit: 2f64b3b231900018fceafb72b5a1c65140213a18
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "84183759"
 ---
 # <a name="specify-symbol-pdb-and-source-files-in-the-visual-studio-debugger-c-c-visual-basic-f"></a>在 Visual Studio 调试器（C#、C++、Visual Basic、F#）中指定符号 (.pdb) 和源文件
@@ -190,11 +190,11 @@ ms.locfileid: "84183759"
 
   - VC\<x>.pdb，其中 \<x> 表示 Microsoft C++ 编译器版本，例如 VC11.pdb  
 
-    VC\<x>.pdb 文件存储各个项目文件的所有调试信息，并保存在与项目生成文件相同的目录中。 每当创建项目文件时，C/C++ 编译器都会将调试信息合并到 VC\<x>.pdb 中。 因此，即使每个源文件都包含公共头文件（如 \<windows.h>），这些头中的 typedef 也仅存储一次，而不是存储在每个项目文件中。 插入的信息包括类型信息，但不包括函数定义等符号信息。
+    VC\<x>.pdb 文件存储各个对象文件的所有调试信息，并保存在与项目生成文件相同的目录中。 每当创建对象文件时，C/C++ 编译器都会将调试信息合并到 VC\<x>.pdb 中。 因此，即使每个源文件都包含公共头文件（如 \<windows.h>），这些头中的 typedef 也仅存储一次，而不是存储在每个对象文件中。 插入的信息包括类型信息，但不包括函数定义等符号信息。
 
-  - *\<project>.pdb*
+  - \<project>.pdb
 
-    \<project>.pdb 文件存储项目的 .exe 文件的所有调试信息，并保存在 \debug 子目录中  。 \<project.pdb文件包含完整的调试信息（包括函数原型），而不仅仅是在 VC\<x>.pdb中找到的类型信息。
+    \<project>.pdb 文件存储项目的 .exe 文件的所有调试信息，并保存在 \debug 子目录中  。 \<project>.pdb 文件包含完整的调试信息（包括函数原型），而不仅仅是在 VC\<x>.pdb 中找到的类型信息 。
 
   VC\<x>.pdb 文件和 \<project>.pdb 文件都允许增量更新 。 链接器还在它创建的 .exe 或 .dll 文件中嵌入 .pdb 文件的路径  。
 
@@ -245,7 +245,7 @@ ms.locfileid: "84183759"
 **使用“未加载符号”文档页面来帮助查找并加载缺少的符号：**
 
 - 要更改搜索路径，请选择未选定的路径，或者选择“新路径”或“新 VSTS 路径”，然后输入或选择一个新路径 。 选择“加载”以再次搜索路径，并在找到符号文件时加载相应文件。
-- 要覆盖任何符号选项并重试搜索路径，请选择“浏览并查找 \<executable-name>”。 如果找到了符号文件，则会加载该文件，否则将打开“文件资源管理器”，以便你手动选择符号文件。
+- 若要覆盖任何符号选项并重试搜索路径，请选择“浏览并查找 \<executable-name>”。 如果找到了符号文件，则会加载该文件，否则将打开“文件资源管理器”，以便你手动选择符号文件。
 - 要打开“选项” > “调试” > “符号”页面，请选择“更改符号设置”   。
 - 要在新窗口中显示一次反汇编，请选择“查看反汇编”，或选择“选项”对话框，以便设置在找不到源或符号文件时始终显示反汇编的选项 。
 - 要显示已搜索的位置和结果，请展开“符号加载信息”。

@@ -19,11 +19,11 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 898eb0eb1489d83e97ec9f0a5b38b475bda0199d
-ms.sourcegitcommit: 95f26af1da51d4c83ae78adcb7372b32364d8a2b
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79301163"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89315065"
 ---
 # <a name="debug-dlls-in-visual-studio-c-c-visual-basic-f"></a>在 Visual Studio 中调试 DLL 项目（C#、C++、Visual Basic、F#）
 
@@ -66,7 +66,7 @@ DLL （动态链接库） 是包含可被多个程序使用的代码和数据的
 
 ### <a name="set-cc-dll-file-locations"></a><a name="vxtskdebuggingdllprojectsexternal"></a> 设置 C/C++ DLL 文件位置
 
-若要调试外部 DLL，调用项目必须能够找到该 DLL、其 [.pdb 文件](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md) 和 DLL 需要的任何其他文件。 可以创建自定义生成任务，以将这些文件复制到 \<项目文件夹>\Debug 输出文件夹，也可以手动将文件复制到其中。
+若要调试外部 DLL，调用项目必须能够找到该 DLL、其 [.pdb 文件](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md) 和 DLL 需要的任何其他文件。 可以创建自定义生成任务，以将这些文件复制到 \<project folder>\Debug 输出文件夹，也可以手动将文件复制到其中。
 
 对于 C/C++ 项目，可以在项目属性页中设置标头和 LIB 文件位置，而不必将其复制到输出文件夹。
 
@@ -90,7 +90,7 @@ DLL （动态链接库） 是包含可被多个程序使用的代码和数据的
 
 请确保在开始调试之前生成该 DLL 的调试版本。 若要调试 DLL，调用应用程序必须能够找到其 [.pdb 文件](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md) 和 DLL 要求的任何其他文件。
 
-可以创建自定义生成任务，以将 DLL 文件复制到 \<调用项目文件夹>\Debug 输出文件夹，也可以手动将文件复制到其中。
+可以创建自定义生成任务，以将 DLL 文件复制到 \<calling project folder>\Debug 输出文件夹，也可以手动将文件复制到其中。
 
 请确保调用位于正确位置的 DLL。 这似乎是理所当然的，但如果调用应用找到并加载其他不同的 DLL，调试器将永远不会命中你设置的断点。
 

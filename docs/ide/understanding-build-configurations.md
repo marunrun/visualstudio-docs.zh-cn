@@ -27,10 +27,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a37d4fa5dc92253b94dc64590c9df5fec7703ceb
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77904160"
 ---
 # <a name="understand-build-configurations"></a>了解生成配置
@@ -81,7 +81,7 @@ ms.locfileid: "77904160"
 
 在定义新的解决方案配置且未复制现有配置中的设置时，Visual Studio 会使用以下标准来分配默认的项目配置。 按所示顺序对条件进行评估。
 
-1. 如果项目的配置名称 ( *\<配置名称> \<平台名称>* ) 与新解决方案配置的名称完全一致，就会分配相应的配置。 配置名称不区分大小写。
+1. 如果项目的配置名称与新解决方案配置的名称完全匹配 (\<configuration name> \<platform name>)，则分配此配置。 配置名称不区分大小写。
 
 1. 如果项目有一个与新解决方案配置的名称部分匹配的配置名称，则分配该配置，无论平台部分是否匹配。
 
@@ -93,9 +93,9 @@ ms.locfileid: "77904160"
 
 Visual Studio 使用以下标准来分配解决方案配置。
 
-- 如果项目配置未指定平台或仅指定一个平台，则将查找或添加一个其名称与新项目配置名称匹配的解决方案配置。 此解决方案配置的默认名称不包含平台名称，采用 *\<项目配置名称>* 的形式。
+- 如果项目配置未指定平台或仅指定一个平台，则将查找或添加一个其名称与新项目配置名称匹配的解决方案配置。 此解决方案配置的默认名称不包含平台名称；它采用的形式为 \<project configuration name>。
 
-- 如果项目支持多个平台，则可为每个受支持的平台找到或添加解决方案配置。 每个解决方案配置的名称均包含项目配置名称和平台名称，采用 *\<项目配置名称> \<平台名称>* 的形式。
+- 如果项目支持多个平台，则可为每个受支持的平台找到或添加解决方案配置。 每个解决方案配置的名称均包含项目配置名称和平台名称，并采用 \<project configuration name> \<platform name> 的形式。
 
 ## <a name="see-also"></a>请参阅
 

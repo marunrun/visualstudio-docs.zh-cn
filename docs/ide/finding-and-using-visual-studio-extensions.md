@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: f016af58b5799ca37b1a8f0cc54366d639c57c03
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75594404"
 ---
 # <a name="manage-extensions-for-visual-studio"></a>管理 Visual Studio 的扩展
@@ -106,7 +106,7 @@ ms.locfileid: "75594404"
 
 ## <a name="per-user-and-administrative-extensions"></a>每用户扩展和管理扩展
 
-大多数扩展都是每用户扩展，安装在 %LocalAppData%\Microsoft\VisualStudio\\<Visual Studio version\>\Extensions\\ 文件夹中。 有几个扩展是管理扩展，安装在 *\<Visual Studio 安装文件夹>\Common7\IDE\Extensions\\* 文件夹中。
+大多数扩展都是每用户扩展，安装在 %LocalAppData%\Microsoft\VisualStudio\\<Visual Studio version\>\Extensions\\ 文件夹中。 有几个扩展是管理扩展，安装在 \<Visual Studio installation folder>\Common7\IDE\Extensions\\ 文件夹中。
 
 若要针对可能包含错误或恶意代码的扩展保护你的系统，可以限制每用户扩展，以便只在使用正常用户权限运行 Visual Studio 时加载。 这意味着在使用提升的权限运行 Visual Studio 时禁用每用户扩展。
 
