@@ -6,12 +6,12 @@ ms.author: ghogen
 ms.date: 05/14/2020
 ms.technology: vs-azure
 ms.topic: quickstart
-ms.openlocfilehash: 321d85537f210d17414be115b8f6b3f8b8d5b3c9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d92d3a22570fb21381f18f2ce353dbc2d999893b
+ms.sourcegitcommit: fb8babf5cd72f1fc2f97ffe4ad7b62d91f325f61
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88249197"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89485393"
 ---
 # <a name="quickstart-use-docker-with-a-react-single-page-app-in-visual-studio"></a>快速入门：将 Docker 与 Visual Studio 中的 React 单页面应用结合使用
 
@@ -246,7 +246,7 @@ cf5d2ef5f19a        webapplication37:dev   "tail -f /dev/null"   2 minutes ago  
 
 ## <a name="additional-resources"></a>其他资源
 
-* [利用 Visual Studio 进行容器开发](/visualstudio/containers)
+* [利用 Visual Studio 进行容器开发](./index.yml)
 * [使用 Docker 排查 Visual Studio 开发方面的问题](troubleshooting-docker-errors.md)
 * [Visual Studio 容器工具 GitHub 存储库](https://github.com/Microsoft/DockerTools)
 

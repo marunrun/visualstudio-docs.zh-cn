@@ -7,12 +7,12 @@ ms.topic: how-to
 ms.date: 01/20/2020
 ms.technology: vs-azure
 monikerRange: vs-2019
-ms.openlocfilehash: c870378cf277a6008f17ec42d960e07e18a53e86
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 45ef2d8f68ac951cc58040abb72e136b42f3b49c
+ms.sourcegitcommit: fb8babf5cd72f1fc2f97ffe4ad7b62d91f325f61
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85283120"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89490295"
 ---
 # <a name="how-to-view-and-diagnose-containers-and-images-in-visual-studio"></a>如何在 Visual Studio 中查看和诊断容器与图像
 
@@ -110,6 +110,6 @@ ms.locfileid: "85283120"
 
 ## <a name="see-also"></a>请参阅
 
-[在 Visual Studio 进行容器开发](/visualstudio/containers)
+[在 Visual Studio 进行容器开发](./index.yml)
 
 [适用于 Visual Studio 的扩展市场](https://marketplace.visualstudio.com/)

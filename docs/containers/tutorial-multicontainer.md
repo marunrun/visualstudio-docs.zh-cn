@@ -6,12 +6,12 @@ ms.author: ghogen
 ms.date: 01/10/2020
 ms.technology: vs-azure
 ms.topic: include
-ms.openlocfilehash: f20c3580d3082c69bbadb3b866d08e2c260a6827
-ms.sourcegitcommit: de98ed7edc81383e47b87ae6e61143fbbbe7bc56
+ms.openlocfilehash: 5cdb8fa2f2a2c3a6a41cab4218b06ce4786d33b4
+ms.sourcegitcommit: fb8babf5cd72f1fc2f97ffe4ad7b62d91f325f61
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88711659"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89490308"
 ---
 # <a name="tutorial-create-a-multi-container-app-with-docker-compose"></a>教程：使用 Docker Compose 创建多容器应用
 
@@ -86,7 +86,7 @@ ms.locfileid: "88711659"
    ```
    
     > [!NOTE]
-    > 在实际的代码中，不应在每次请求后释放 `HttpClient`。 有关最佳做法，请参阅[使用 HttpClientFactory 实现复原 HTTP 请求](https://docs.microsoft.com/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests)。
+    > 在实际的代码中，不应在每次请求后释放 `HttpClient`。 有关最佳做法，请参阅[使用 HttpClientFactory 实现复原 HTTP 请求](/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests)。
 
    对于 Visual Studio 2019 或更高版本中的 .NET Core 3.1，Web API 模板使用 WeatherForecast API，因此请取消注释该行，并注释掉 ASP.NET 2.x 行。
 
@@ -195,4 +195,4 @@ ms.locfileid: "88711659"
 ## <a name="see-also"></a>另请参阅
   
 [Docker Compose](https://docs.docker.com/compose/)  
-[容器工具](/visualstudio/containers/)
+[容器工具](./index.yml)

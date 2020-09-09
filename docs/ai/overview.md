@@ -8,12 +8,12 @@ ms.date: 11/13/2017
 ms.topic: overview
 ms.workload:
 - multiple
-ms.openlocfilehash: c138d09ec229343e38edc8bbba50a5cac73e000a
-ms.sourcegitcommit: 48e93538f1e352fc1f972b642bb5fcce2f6834a2
+ms.openlocfilehash: 0f4d04e64589ca8db9c53d5c4128391974b297d0
+ms.sourcegitcommit: fb8babf5cd72f1fc2f97ffe4ad7b62d91f325f61
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85371503"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89485380"
 ---
 # <a name="overview-of-visual-studio-tools-for-ai"></a>Visual Studio Tools for AI 概述
 
@@ -40,4 +40,4 @@ Visual Studio Tools for AI 是用于构建、测试和部署深度学习解决�
 要详细了解 Visual Studio Tools for AI（包括系统要求和支持选项），请参阅[关于 Visual Studio Tools for AI](about-ai-tools.md) 页面。
 
 ## <a name="see-also"></a>请参阅
-[Visual Studio 扩展性](/visualstudio/extensibility/?view=vs-2017)
+[Visual Studio 扩展性](../extensibility/index.yml?view=vs-2017)

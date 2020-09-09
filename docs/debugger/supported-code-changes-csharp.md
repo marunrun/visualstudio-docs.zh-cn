@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 44881035da14483c3ddf1f4c48cb3957a1ce8b50
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: c480fad064cad602ea3fd19153d53f0276815d30
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72729091"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89509414"
 ---
 # <a name="supported-code-changes-c-and-visual-basic"></a>支持的代码更改（C# 和 Visual Basic）
 “编辑并继续”处理方法体内的大多数类型的代码更改。 但是，方法体外的大多数更改以及方法体内的小部分更改在调试期间不能应用。 若要应用这些不受支持的更改，您必须停止调试，重新开始新版本的代码。
@@ -32,15 +32,15 @@ ms.locfileid: "72729091"
 
 |语言元素/功能|支持的编辑操作|限制|
 |-|-|-|
-|类型|添加方法、字段、构造函数等|[是](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits)|
+|类型|添加方法、字段、构造函数等|[是](https://github.com/dotnet/roslyn/blob/master/docs/wiki/EnC-Supported-Edits.md)|
 |迭代器|添加或修改|否|
-|async/await 表达式|添加或修改|[是](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits)|
+|async/await 表达式|添加或修改|[是](https://github.com/dotnet/roslyn/blob/master/docs/wiki/EnC-Supported-Edits.md)|
 |动态对象|添加或修改|否|
-|Lambda 表达式|添加或修改|[是](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits)|
-|LINQ 表达式|添加或修改|[与 lambda 表达式相同](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits)|
+|Lambda 表达式|添加或修改|[是](https://github.com/dotnet/roslyn/blob/master/docs/wiki/EnC-Supported-Edits.md)|
+|LINQ 表达式|添加或修改|[与 lambda 表达式相同](https://github.com/dotnet/roslyn/blob/master/docs/wiki/EnC-Supported-Edits.md)|
 
 > [!NOTE]
-> “编辑并继续”通常支持较新的语言功能，如字符串内插和 NULL 条件运算符。 有关最新信息，请参阅 [Enc 支持的编辑](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits)页。
+> “编辑并继续”通常支持较新的语言功能，如字符串内插和 NULL 条件运算符。 有关最新信息，请参阅 [Enc 支持的编辑](https://github.com/dotnet/roslyn/blob/master/docs/wiki/EnC-Supported-Edits.md)页。
 
 ## <a name="unsupported-changes-to-code"></a>不支持的代码更改
  在调试会话期间，不能对 C# 和 Visual Basic 代码应用下列更改：
@@ -60,7 +60,7 @@ ms.locfileid: "72729091"
 |命名空间、类型、成员|删除|
 |泛型|添加或修改|
 |接口|修改|
-|类型|添加抽象或虚拟成员、添加替代（了解[详细信息](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits)）|
+|类型|添加抽象或虚拟成员、添加替代（了解[详细信息](https://github.com/dotnet/roslyn/blob/master/docs/wiki/EnC-Supported-Edits.md)）|
 |类型|添加析构函数|
 |成员|修改引用嵌入式互操作类型的成员|
 |成员|在通过执行代码访问后修改静态成员|
@@ -75,8 +75,8 @@ ms.locfileid: "72729091"
 |捕捉块|在包含活动语句时进行修改|
 |try-catch-finally 块|在包含活动语句时进行修改|
 |using 语句|添加|
-|异步方法/lambda|在面向 .NET Framework 4 及更低版本的项目中修改异步方法/lambda（了解[详细信息](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits)）|
-|迭代器|在面向 .NET Framework 4 及更低版本的项目中修改迭代器（了解[详细信息](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits)）|
+|异步方法/lambda|在面向 .NET Framework 4 及更低版本的项目中修改异步方法/lambda（了解[详细信息](https://github.com/dotnet/roslyn/blob/master/docs/wiki/EnC-Supported-Edits.md)）|
+|迭代器|在面向 .NET Framework 4 及更低版本的项目中修改迭代器（了解[详细信息](https://github.com/dotnet/roslyn/blob/master/docs/wiki/EnC-Supported-Edits.md)）|
 
 ## <a name="unsafe-code"></a>不安全代码
  对不安全代码的更改与对安全代码的更改具有相同的限制，但它还包含一条附加限制：“编辑并继续”不支持更改存在于包含 `stackalloc` 运算符的方法内的不安全代码。

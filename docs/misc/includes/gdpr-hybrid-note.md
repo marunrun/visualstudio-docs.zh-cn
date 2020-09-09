@@ -1,14 +1,14 @@
 ---
-title: include 文件
+title: 包含文件
 ms.date: 05/01/2018
 ms.topic: include
 author: eross-msft
 ms.author: lizross
 ms.openlocfilehash: 38e23f85eac0fd25e688909c2c91239b5cfd5e53
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75564713"
 ---
 > [!NOTE]

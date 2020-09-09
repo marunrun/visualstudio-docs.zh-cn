@@ -5,12 +5,12 @@ author: madskristensen
 ms.author: madsk
 ms.date: 11/19/2019
 ms.topic: conceptual
-ms.openlocfilehash: 50d1ed4edd2e1fa52661995f4d72466646dfd879
-ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
+ms.openlocfilehash: 9fc83ac1be1a6c1db7b46845c74a4b0e7bf6017f
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88250510"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89509921"
 ---
 # <a name="how-to-increase-the-chances-of-a-performance-issue-being-fixed"></a>如何提高解决性能问题的几率
 
@@ -171,7 +171,7 @@ VS 长时间处于无响应状态。
 
 **高级性能跟踪**
 
-“报告问题”工具中的跟踪收集功能就足以应对大多数情况。 但有时需要加强控制跟踪集合（例如，缓冲区更大的跟踪），此时适合使用 PerfView 工具。 使用 PerfView 工具手动记录性能跟踪的步骤可在 [Recording performance traces with PerfView](https://github.com/dotnet/roslyn/wiki/Recording-performance-traces-with-PerfView)（使用 PerfView 记录性能跟踪）页中找到。
+“报告问题”工具中的跟踪收集功能就足以应对大多数情况。 但有时需要加强控制跟踪集合（例如，缓冲区更大的跟踪），此时适合使用 PerfView 工具。 使用 PerfView 工具手动记录性能跟踪的步骤可在 [Recording performance traces with PerfView](https://github.com/dotnet/roslyn/blob/master/docs/wiki/Recording-performance-traces-with-PerfView.md)（使用 PerfView 记录性能跟踪）页中找到。
 
 ## <a name="out-of-process-issues"></a>进程外问题
 

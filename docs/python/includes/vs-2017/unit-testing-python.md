@@ -11,17 +11,17 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: 032732f19855b9ba5c97c2e5281e8385f9ace3be
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85535316"
 ---
 ## <a name="discover-and-view-tests"></a>发现和查看测试
 
 根据惯例，Visual Studio 将测试标识为名称以“`test`”开头的方法。 若要查看此行为，请执行以下操作：
 
-1. 打开一个 Visual Studio 中加载的 [Python 项目](../../managing-python-projects-in-visual-studio.md)，右键单击该项目，选择“添加” > “新建项”，然后选择其后有“添加”的“Python 单元测试” 。
+1. 打开一个 Visual Studio 中加载的 [Python 项目](../../managing-python-projects-in-visual-studio.md)，右键单击该项目，选择“添加”**** > “新建项”****，然后选择其后有“添加”**** 的“Python 单元测试”**** 。
 
 1. 如果直接运行脚本，此操作将创建具有导入标准 `unittest` 模块的代码的 test1.py 文件，从 `unittest.TestCase` 派生一个测试类，并调用 `unittest.main()`：
 
@@ -37,9 +37,9 @@ ms.locfileid: "85535316"
         unittest.main()
     ```
 
-1. 根据需要保存该文件，然后通过“测试” > “窗口” > “测试资源管理器”菜单命令打开“测试资源管理器”。
+1. 根据需要保存该文件，然后通过“测试”**** > “窗口”**** > “测试资源管理器”**** 菜单命令打开“测试资源管理器”****。
 
-1. “测试资源管理器”  会搜索要测试的项目并进行显示，如下所示。 双击测试打开其源文件。
+1. “测试资源管理器”会搜索要测试的项目并进行显示，如下所示。 双击测试打开其源文件。
 
     ![显示默认 test_A 的测试资源管理器](../../media/unit-test-A.png)
 
@@ -47,19 +47,19 @@ ms.locfileid: "85535316"
 
     ![测试资源管理器分组工具栏菜单](../../media/unit-test-group-menu.png)
 
-1. 还可以在“搜索”  字段中输入文本以按名称筛选测试。
+1. 还可以在“搜索”字段中输入文本以按名称筛选测试。
 
 有关 `unittest` 模块和编写测试的详细信息，请参阅 [Python 2.7 文档](https://docs.python.org/2/library/unittest.html)或 [Python 3.7 文档](https://docs.python.org/3/library/unittest.html) (python.org)。
 
 ## <a name="run-tests"></a>运行测试
 
-在“测试资源管理器”  中，可以通过多种方式来运行测试：
+在“测试资源管理器”中，可以通过多种方式来运行测试：
 
-- “运行所有”  将运行所有显示的测试（取决于筛选器）。
-- “运行”  菜单提供以下命令：运行失败的、通过的或未作为一组运行的测试。
-- 可以选择一个或多个测试，右键单击，然后选择“运行选定测试”  。
+- “运行所有”将运行所有显示的测试（取决于筛选器）。
+- “运行”菜单提供以下命令：运行失败的、通过的或未作为一组运行的测试。
+- 可以选择一个或多个测试，右键单击，然后选择“运行选定测试”。
 
-测试在后台运行，每个测试完成后，“测试资源管理器”  将更新其状态：
+测试在后台运行，每个测试完成后，“测试资源管理器”将更新其状态：
 
 - 通过的测试将显示一个绿勾和运行测试所花费的时间：
 
@@ -75,15 +75,15 @@ ms.locfileid: "85535316"
 
 因为单元测试是代码片段，所以和任何其他代码一样会受到 bug 的影响，有时需要在调试器中运行。 在调试程序中，可以设置断点、检查变量和逐行执行代码。 Visual Studio 还提供了用于单元测试的诊断工具。
 
-若要开始调试，请在代码中设置初始断点，然后在“测试资源管理器”  中右键单击测试（或所做选择），然后选择“调试所选测试”  。 Visual Studio 会启动 Python 调试程序，与为应用程序代码启动 Python 调试器一样。
+若要开始调试，请在代码中设置初始断点，然后在“测试资源管理器”中右键单击测试（或所做选择），然后选择“调试所选测试”。 Visual Studio 会启动 Python 调试程序，与为应用程序代码启动 Python 调试器一样。
 
 ![调试测试](../../media/unit-test-debugging.png)
 
-还可以使用“分析所选测试的代码覆盖率”  。 有关详细信息，请参阅[使用代码覆盖率确定正在测试的代码数量](../../../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)。
+还可以使用“分析所选测试的代码覆盖率”。 有关详细信息，请参阅[使用代码覆盖率确定正在测试的代码数量](../../../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)。
 
 ### <a name="known-issues"></a>已知问题
 
-- 启动调试时，Visual Studio 会显示启动和停止调试，然后重新启动。 此行为是预期的行为。
+- 启动调试时，Visual Studio 会显示启动和停止调试，然后重新启动。 这是预期的行为。
 - 调试多个测试时，因为每个测试都是独立运行，所以会中断调试会话。
 - 调试时，Visual Studio 启动测试会间歇性地失败。 通常情况下，尝试再次调试测试会成功。
 - 调试时，可能会跳出测试转到 `unittest` 实现。 通常情况下，下一步会运行到程序结束，然后停止调试。
