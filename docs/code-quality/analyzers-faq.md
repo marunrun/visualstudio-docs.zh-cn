@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7b060ae550fd0188728c827cac01c12d51930b57
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6109c1becfae51ebf3824b5683bc66a5d89b74a0
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88711542"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89599620"
 ---
 # <a name="code-analysis-faq"></a>代码分析常见问题解答
 
@@ -92,9 +92,9 @@ ms.locfileid: "88711542"
 
 **问**：解决方案的 "代码分析" 属性页在哪里？
 
-**答**：解决方案级别的 "代码分析" 属性页已删除，以支持更可靠的共享属性组。 对于在项目级别管理代码分析，"代码分析" 属性页仍可用。 对于托管项目 (，我们还建议从规则集迁移到 EditorConfig，以便进行规则配置。 ) 用于在解决方案或存储库中的多个/所有项目间共享规则集，我们建议使用共享属性/目标文件或属性/文件中的 CodeAnalysisRuleSet 属性定义属性组。 如果你没有任何项目导入的公共属性或目标，则应考虑 [将此类属性组添加到属性或顶级解决方案目录下的目录，该目录将自动导入到目录或其子目录中定义的所有项目文件中](https://docs.microsoft.com/visualstudio/msbuild/customize-your-build?directorybuildprops-and-directorybuildtargets)。
+**答**：解决方案级别的 "代码分析" 属性页已删除，以支持更可靠的共享属性组。 对于在项目级别管理代码分析，"代码分析" 属性页仍可用。 对于托管项目 (，我们还建议从规则集迁移到 EditorConfig，以便进行规则配置。 ) 用于在解决方案或存储库中的多个/所有项目间共享规则集，我们建议使用共享属性/目标文件或属性/文件中的 CodeAnalysisRuleSet 属性定义属性组。 如果你没有任何项目导入的公共属性或目标，则应考虑 [将此类属性组添加到属性或顶级解决方案目录下的目录，该目录将自动导入到目录或其子目录中定义的所有项目文件中](../msbuild/customize-your-build.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [分析器概述](roslyn-analyzers-overview.md)
 - [EditorConfig 的 .NET 编码约定设置](../ide/editorconfig-code-style-settings-reference.md)

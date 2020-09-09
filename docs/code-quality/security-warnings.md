@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0c1208db68f2ae65775c6e0a5b6cf4bda0fb35d8
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: a40273c3230854e4b1d1a11a3fd02de54d5df745
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89509453"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89599972"
 ---
 # <a name="security-warnings"></a>安全警告
 
@@ -33,7 +33,7 @@ ms.locfileid: "89509453"
 |[CA2100:检查 SQL 查询是否存在安全漏洞](../code-quality/ca2100.md)|一个方法使用按该方法的字符串参数生成的字符串设置 System.Data.IDbCommand.CommandText 属性。 此规则假定字符串参数中包含用户输入。 基于用户输入生成的 SQL 命令字符串易于受到 SQL 注入式攻击。|
 |[CA2109:检查可见的事件处理程序](../code-quality/ca2109.md)|检测到公共事件处理方法或受保护事件处理方法。 除非绝对必要，否则不应公开事件处理方法。|
 |[CA2119:密封满足私有接口的方法](../code-quality/ca2119.md)|可继承的公共类型为 internal（在 Visual Basic 中为 Friend）接口提供可重写的方法实现。 若要修复与此规则的冲突，请禁止方法在程序集外重写。|
-|[CA2153:避免处理损坏状态异常](../code-quality/ca2153.md)|[损坏状态异常 (CSE)](https://msdn.microsoft.com/magazine/dd419661.aspx) 指示进程中存在内存损坏。 如果攻击者可以将攻击放置到损坏的内存区域，则捕获它们（而非允许进程崩溃）可能导致安全漏洞。|
+|[CA2153:避免处理损坏状态异常](../code-quality/ca2153.md)|[损坏状态异常 (CSE)](/archive/msdn-magazine/2009/february/clr-inside-out-handling-corrupted-state-exceptions) 指示进程中存在内存损坏。 如果攻击者可以将攻击放置到损坏的内存区域，则捕获它们（而非允许进程崩溃）可能导致安全漏洞。|
 |[CA2300：请勿使用不安全的反序列化程序 BinaryFormatte](../code-quality/ca2300.md)|反序列化不受信任的数据时，不安全的反会很容易 攻击者可能会修改序列化的数据，使其包含意外类型，以注入具有恶意副作用的对象。|
 |[CA2301：在未先设置 BinaryFormatter.Binder 的情况下，请不要调用 BinaryFormatter.Deserialize](../code-quality/ca2301.md)|反序列化不受信任的数据时，不安全的反会很容易 攻击者可能会修改序列化的数据，使其包含意外类型，以注入具有恶意副作用的对象。|
 |[CA2302：在调用 BinaryFormatter.Deserialize 之前，确保设置 BinaryFormatter.Binder](../code-quality/ca2302.md)|反序列化不受信任的数据时，不安全的反会很容易 攻击者可能会修改序列化的数据，使其包含意外类型，以注入具有恶意副作用的对象。|

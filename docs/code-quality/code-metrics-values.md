@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 841b73bbb0c1f226e4a31a812bf8745bda1f118c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 796d8aa15aa3612b140917ccfa9db7663c0b0ad3
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87507867"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89599462"
 ---
 # <a name="code-metrics-values"></a>代码度量值
 
@@ -34,13 +34,13 @@ ms.locfileid: "87507867"
 
 以下列表显示了 Visual Studio 计算的代码度量结果：
 
-- 可**维护性索引**-计算0到100之间的索引值，它表示维护代码的相对轻松程度。 较高的值表示更好的可维护性。 颜色编码分级可用于快速标识代码中的问题点。 绿色评级介于20和100之间，表示代码具有良好的可维护性。 黄色评分介于10和19之间，表示代码适度维护。 红色评分是0到9之间的评分，表示可维护性低。 有关详细信息，请参阅可 [维护性索引范围和含义](https://blogs.msdn.microsoft.com/codeanalysis/2007/11/20/maintainability-index-range-and-meaning/) 博客文章。
+- 可**维护性索引**-计算0到100之间的索引值，它表示维护代码的相对轻松程度。 较高的值表示更好的可维护性。 颜色编码分级可用于快速标识代码中的问题点。 绿色评级介于20和100之间，表示代码具有良好的可维护性。 黄色评分介于10和19之间，表示代码适度维护。 红色评分是0到9之间的评分，表示可维护性低。 有关详细信息，请参阅可 [维护性索引范围和含义](/archive/blogs/codeanalysis/maintainability-index-range-and-meaning) 博客文章。
 
 - **圈复杂度** -度量代码的结构复杂性。 它通过计算程序流中的不同代码路径的数目来创建。 具有复杂控制流的程序需要进行更多测试才能实现良好的代码覆盖率，并且维护性更少。 有关详细信息，请参阅 [圈复杂度的维基百科条目](https://wikipedia.org/wiki/Cyclomatic_complexity)。
 
 - **继承深度** -指示不同类的数量，这些类彼此继承，并回到基类。 继承深度类似于类耦合，因为基类中的更改可能会影响其任何继承的类。 此数字越大，继承越深入，导致重大更改的可能性越高，导致重大更改。 若要深入了解继承，值越小，值就越小。
 
-- **类耦合** -通过参数、本地变量、返回类型、方法调用、泛型或模板实例化、基类、接口实现、在外部类型上定义的字段和特性修饰来度量与唯一类的耦合。 优秀的软件设计要求类型和方法应具有较高的聚合和低耦合。 高耦合性表明，由于它对其他类型的互依关系，难于重复使用和维护的设计。 有关详细信息，请参阅 [类耦合](https://blogs.msdn.microsoft.com/zainnab/2011/05/25/code-metrics-class-coupling/) 博客文章。
+- **类耦合** -通过参数、本地变量、返回类型、方法调用、泛型或模板实例化、基类、接口实现、在外部类型上定义的字段和特性修饰来度量与唯一类的耦合。 优秀的软件设计要求类型和方法应具有较高的聚合和低耦合。 高耦合性表明，由于它对其他类型的互依关系，难于重复使用和维护的设计。 有关详细信息，请参阅 [类耦合](/archive/blogs/zainnab/code-metrics-class-coupling) 博客文章。
 
 ::: moniker range=">=vs-2019"
 
