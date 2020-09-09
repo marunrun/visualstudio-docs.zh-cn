@@ -1,11 +1,11 @@
 ---
 ms.topic: include
 ms.openlocfilehash: 47c390fbc7a6f84c25d4bde0317985bd149cae2f
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "68159603"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89326746"
 ---
 1. 启动 Visual Studio，然后选择“文件” > “新建” > “项目”    。
 

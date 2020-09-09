@@ -7,12 +7,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f90faadeaf9e1f8965aea7850fa1a12bb43b183c
-ms.sourcegitcommit: 2946d802aec1418e87bfa779d81834eeb7be5c9d
+ms.openlocfilehash: f4aefa741352e80f4a20a51fa1ab36e617403c9c
+ms.sourcegitcommit: a3edc753c951f317b67ce294cd2fc74f0c45390c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88214593"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89426997"
 ---
 # <a name="visual-studio-performance-tips-and-tricks"></a>Visual Studio 性能提示和技巧
 
@@ -82,7 +82,7 @@ Visual Studio 会自动重新打开上一个会话中处于打开状态的文档
 
 ### <a name="managed-language-service-roslyn"></a>托管的语言服务 (Roslyn)
 
-有关 .NET Compiler Platform（“Roslyn”）性能注意事项的详细信息，请参阅 [Performance considerations for large solutions](https://github.com/dotnet/roslyn/wiki/Performance-considerations-for-large-solutions)（大型解决方案的性能注意事项）。
+有关 .NET Compiler Platform（“Roslyn”）性能注意事项的详细信息，请参阅 [Performance considerations for large solutions](https://github.com/dotnet/roslyn/blob/master/docs/wiki/Performance-considerations-for-large-solutions.md)（大型解决方案的性能注意事项）。
 
 - **禁用完整解决方案分析**
 

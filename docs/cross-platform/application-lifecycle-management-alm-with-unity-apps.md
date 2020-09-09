@@ -9,12 +9,12 @@ ms.author: crdun
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: 17bdd86829da199e01a527aa382b8ed3bdfade17
-ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
+ms.openlocfilehash: be42bf1498746ce57f662f43c12ece80ac6ca9be
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80232948"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89509037"
 ---
 # <a name="devops-with-unity-apps"></a>适用于 Unity 应用的 DevOps
 
@@ -103,10 +103,10 @@ Visual Studio、Azure DevOps Services 和 Team Foundation Server 提供了各种
 |功能|通过 Unity 提供支持|其他注释|
 |-------------|--------------------------|-------------------------|
 |[分析托管代码的质量](../code-quality/code-analysis-for-managed-code-overview.md)|是|可以在 Visual Studio 中分析 C# 脚本代码。|
-|[使用代码克隆检测功能查找重复代码](https://msdn.microsoft.com/library/hh205279.aspx)|是|可以在 Visual Studio 中分析 C# 脚本代码。|
+|[使用代码克隆检测功能查找重复代码](/previous-versions/hh205279(v=vs.140))|是|可以在 Visual Studio 中分析 C# 脚本代码。|
 |[测量托管代码的复杂性和可维护性](../code-quality/code-metrics-values.md)|是|可以在 Visual Studio 中分析 C# 脚本代码。|
 |[性能工具](../profiling/performance-explorer.md)|否|使用 [Unity 探查器](https://docs.unity3d.com/Manual/Profiler.html)（Unity 网站）。|
-|[分析 .NET Framework 内存问题](https://msdn.microsoft.com/library/dn342825.aspx)|否|Visual Studio 工具没有深入 Mono 框架（用于 Unity）进行探查的挂钩。 使用 [Unity Profiler](http://docs.unity3d.com/Manual/Profiler.html)（Unity 文档）。|
+|[分析 .NET Framework 内存问题](../vs-2015/misc/analyze-dotnet-framework-memory-issues.md)|否|Visual Studio 工具没有深入 Mono 框架（用于 Unity）进行探查的挂钩。 使用 [Unity Profiler](http://docs.unity3d.com/Manual/Profiler.html)（Unity 文档）。|
 
 ## <a name="release-management"></a>发布管理
 

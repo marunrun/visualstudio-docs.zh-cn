@@ -7,11 +7,11 @@ ms.author: ghogen
 ms.topic: include
 ms.date: 03/05/2019
 ms.openlocfilehash: 81c2f7ae366efa70c3608e112dabcbfceb4087e4
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "71126003"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89326964"
 ---
 1. 在 Visual Studio“启动”窗口，选择“创建新项目”  。
 1. 选择“ASP.NET Core Web 应用程序”，然后选择“下一步”   。

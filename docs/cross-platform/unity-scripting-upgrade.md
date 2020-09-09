@@ -8,12 +8,12 @@ ms.assetid: E2C9420F-A5D5-4472-9020-2B63FB27A133
 ms.technology: vs-unity-tools
 ms.workload:
 - unity
-ms.openlocfilehash: e824951556124f080f14cdd9f440037decf5146f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9a53db2d7cb73fbbb8ea694386dbada3186957ee
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85815131"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89508972"
 ---
 # <a name="using-net-4x-in-unity"></a>在 Unity 中使用 .NET 4.x
 
@@ -233,7 +233,7 @@ TAP 是一个复杂的内容，具有相对于 Unity 的细微差别，这是开
 * 返回任务的异步函数其名称后应附加后缀“Async”  。 “Async”后缀有助于指示需始终等待某个函数。
 * 仅为从传统同步代码触发异步函数的函数使用 `async void` 返回类型。 无法等待此类函数，且不应在其名称中包含“Async”后缀。
 * 默认情况下，Unity 使用 UnitySynchronizationContext 来确保异步函数在主线程上运行。 无法在主线程外部访问 Unity API。
-* 可使用 [`Task.Run`](https://msdn.microsoft.com/library/hh195051.aspx) 和 [`Task.ConfigureAwait(false)`](https://msdn.microsoft.com/library/system.threading.tasks.task.configureawait.aspx) 等方法在后台线程上运行任务。 当从主线程移除成本高昂的操作以提高性能时，此技术非常有用。 但是，使用后台线程可能会导致发生难以调试的问题，例如[争用条件](https://wikipedia.org/wiki/Race_condition)。
+* 可使用 [`Task.Run`](/dotnet/api/system.threading.tasks.task.run) 和 [`Task.ConfigureAwait(false)`](/dotnet/api/system.threading.tasks.task.configureawait) 等方法在后台线程上运行任务。 当从主线程移除成本高昂的操作以提高性能时，此技术非常有用。 但是，使用后台线程可能会导致发生难以调试的问题，例如[争用条件](https://wikipedia.org/wiki/Race_condition)。
 * 无法在主线程外部访问 Unity API。
 * Unity WebGL 生成不支持使用线程的任务。
 

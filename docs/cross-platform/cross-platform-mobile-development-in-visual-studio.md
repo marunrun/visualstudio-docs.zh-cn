@@ -10,12 +10,12 @@ ms.author: crdun
 manager: crdun
 ms.workload:
 - multiple
-ms.openlocfilehash: 0e0f589ae3c6daa48a9bea6d8a0b561d7b8de337
-ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
+ms.openlocfilehash: 19e1a968af60b76d07e24af1d86c74e427a3cd52
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88801589"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89509050"
 ---
 # <a name="cross-platform-mobile-development-in-visual-studio"></a>Visual Studio 中的跨平台移动开发
 
@@ -82,7 +82,6 @@ ms.locfileid: "88801589"
 |[通用 Windows 平台简介](/windows/uwp/get-started/universal-application-platform-guide)|
 |[创建第一个应用](/windows/uwp/get-started/your-first-app)|
 |[开发通用 Windows 平台 (UWP) 的应用](../cross-platform/develop-apps-for-the-universal-windows-platform-uwp.md)|
-|[将应用迁移到通用 Windows 平台 (UWP)](https://msdn.microsoft.com/library/mt148501.aspx)|
 
 ::: moniker range="vs-2017"
 
