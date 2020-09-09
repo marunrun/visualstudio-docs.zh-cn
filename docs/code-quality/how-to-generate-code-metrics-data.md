@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 145525dc12070d98dae83d592ae86a675bb605d2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1b254cb2077b748f34958e33dbc456f17df530ce
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88893406"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89600230"
 ---
 # <a name="how-to-generate-code-metrics-data"></a>如何：生成代码度量数据
 
@@ -32,7 +32,7 @@ ms.locfileid: "88893406"
 
 .NET 代码质量分析器包含多个代码度量 [分析器](roslyn-analyzers-overview.md) 规则：
 
-- [CA1501](ca1501-avoid-excessive-inheritance.md)
+- [CA1501](./ca1501.md)
 - [CA1502](ca1502.md)
 - [CA1505](ca1505.md)
 - [CA1506](ca1506.md)
@@ -48,7 +48,7 @@ ms.locfileid: "88893406"
 </RuleSet>
 ```
 
-### <a name="configuration"></a>Configuration
+### <a name="configuration"></a>配置
 
 你可以配置触发代码度量规则的阈值。
 
@@ -336,7 +336,7 @@ Visual Studio 2015 附带了一个命令行代码度量工具，该工具也称�
 
 其他指标（例如 `CyclomaticComplexity` 和） `MaintainabilityIndex` 使用与 *Metrics.exe*以前版本相同的公式，但新的工具会对 (逻辑源指令的数量进行计数， `IOperations` 而不是) 中间语言 (IL) 说明。 这些数字将与 Visual Studio IDE 和以前版本的 *Metrics.exe*生成的数字略有不同。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [使用 "代码度量结果" 窗口](../code-quality/working-with-code-metrics-data.md)
 - [代码度量值](../code-quality/code-metrics-values.md)

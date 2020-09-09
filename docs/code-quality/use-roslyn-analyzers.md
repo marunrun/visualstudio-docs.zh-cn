@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: ac5103b15cee6e44650d9b8aef6fdf755874b2d2
-ms.sourcegitcommit: fb8babf5cd72f1fc2f97ffe4ad7b62d91f325f61
+ms.openlocfilehash: 22a82abab6b0c11ed57780ac69b4af9e1290ac2d
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89490282"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89599974"
 ---
 # <a name="use-code-analyzers"></a>使用代码分析器
 
@@ -118,7 +118,7 @@ ms.locfileid: "89490282"
 - 单个规则按 ID 的严重性条目优先于类别的严重性条目。
 - 对于所有分析器规则，类别的严重性项优先于严重性项。
 
-请考虑以下 EditorConfig 示例，其中 [CA1822](https://docs.microsoft.com/visualstudio/code-quality/ca1822) 的类别为 "Performance"：
+请考虑以下 EditorConfig 示例，其中 [CA1822](./ca1822.md) 的类别为 "Performance"：
 
    ```ini
    [*.cs]
@@ -402,7 +402,7 @@ msbuild myproject.csproj /target:rebuild /verbosity:minimal
 <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.0" PrivateAssets="all" />
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [Visual Studio 中的代码分析器概述](../code-quality/roslyn-analyzers-overview.md)
 - [提交代码分析器 bug](https://github.com/dotnet/roslyn-analyzers/issues)
