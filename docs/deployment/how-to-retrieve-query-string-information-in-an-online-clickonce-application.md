@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d0e177f1d41655ffa6fb6b6bbfa52cfc29d15fd6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: dc94691eda319607510619dbb37e24265bcae522
+ms.sourcegitcommit: 1803a67b516f67b209d8f4cf147314e604ef1927
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85382180"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89641591"
 ---
 # <a name="how-to-retrieve-query-string-information-in-an-online-clickonce-application"></a>如何：在联机 ClickOnce 应用程序中检索查询字符串信息
 *查询字符串* 是 URL 的一部分，它以问号 (?) 开头，并且以 *名称=值*的形式包含任意信息。 假设你有一个在 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 上承载的名为 `WindowsApp1` 的 `servername`应用程序，并且要在该应用程序启动时传入变量 `username` 的值。 你的 URL 可能类似于下面这样：
@@ -76,7 +76,7 @@ ms.locfileid: "85382180"
  如果应用程序仅处于联机状态，则它始终通过 URL 进行激活。 但是即使在这种情况下，应用程序也必须编写为可在查询字符串参数丢失或损坏的情况下正常运行。
 
 ## <a name="net-framework-security"></a>.NET Framework 安全性
- 仅当你计划在使用包含任何恶意字符的输入之前清除它时，才允许向 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序传递 URL 参数。 例如，如果在针对数据库进行的 SQL 查询中未经筛选地使用嵌入有引号、斜杠或分号的字符串，则该字符串可能会执行任意数据操作。 有关查询字符串安全性的详细信息，请参阅[脚本入侵概述](https://msdn.microsoft.com/Library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07)。
+ 仅当你计划在使用包含任何恶意字符的输入之前清除它时，才允许向 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序传递 URL 参数。 例如，如果在针对数据库进行的 SQL 查询中未经筛选地使用嵌入有引号、斜杠或分号的字符串，则该字符串可能会执行任意数据操作。 有关查询字符串安全性的详细信息，请参阅[脚本入侵概述](/previous-versions/w1sw53ds(v=vs.140))。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [保护 ClickOnce 应用程序](../deployment/securing-clickonce-applications.md)
