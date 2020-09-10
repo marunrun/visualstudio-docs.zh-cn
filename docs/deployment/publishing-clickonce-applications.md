@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 41cd62e8831ac4edd5b37337c1e72dd0b2e662e4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 41f8a790decbd3af20141c1c95fcaed678a2ec6a
+ms.sourcegitcommit: 1803a67b516f67b209d8f4cf147314e604ef1927
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85536287"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89641536"
 ---
 # <a name="publish-clickonce-applications"></a>发布 ClickOnce 应用程序
 首次发布 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序时，可以使用“发布向导”设置发布属性。 只有几个属性在向导中可用，所有其他属性均设置为其默认值。
@@ -96,10 +96,10 @@ ms.locfileid: "85536287"
 |[演练：手动部署 ClickOnce 应用程序](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)|说明如何使用 .NET Framework 实用程序部署 ClickOnce 应用程序。|
 |[演练：手动部署不需要重新签名并且保留署名信息的 ClickOnce 应用程序](../deployment/walkthrough-manually-deploying-a-clickonce-app-no-re-signing-required.md)|说明如何使用 .NET Framework 实用程序在不对清单进行重新签名的情况下部署 ClickOnce 应用程序。|
 |[如何：将项目配置为面向平台](../ide/how-to-configure-projects-to-target-platforms.md)|说明如何通过更改项目中的“目标 CPU”或“平台目标”属性发布 64 位处理器********。|
-|[演练：允许 ClickOnce 应用程序在多个 .NET Framework 版本上运行](https://msdn.microsoft.com/library/7f4383af-ed87-4853-b4d4-02a3967a5fd9)|说明如何启用 ClickOnce 应用程序以在多个版本的 NET Framework 上安装并运行。|
+|[演练：允许 ClickOnce 应用程序在多个 .NET Framework 版本上运行](/previous-versions/dd996998(v=vs.100))|说明如何启用 ClickOnce 应用程序以在多个版本的 NET Framework 上安装并运行。|
 |[演练：为 ClickOnce 应用程序创建自定义安装程序](../deployment/walkthrough-creating-a-custom-installer-for-a-clickonce-application.md)|说明如何创建自定义安装程序以安装 ClickOnce 应用程序。|
 |[如何：发布启用了视觉样式的 WPF 应用程序](../deployment/how-to-publish-a-wpf-application-with-visual-styles-enabled.md)|提供分步说明以解决在尝试发布已启用视觉样式的 WPF 应用程序时出现的错误。|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [ClickOnce 安全和部署](../deployment/clickonce-security-and-deployment.md)
 - [ClickOnce 引用](../deployment/clickonce-reference.md)

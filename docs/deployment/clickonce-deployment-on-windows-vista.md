@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4beefddd429384fadda71d9742e8c0fac606c38e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8b76804eb8c06acbcdeac017108773056ee38338
+ms.sourcegitcommit: 1803a67b516f67b209d8f4cf147314e604ef1927
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62900497"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89641489"
 ---
 # <a name="clickonce-deployment-on-windows-vista"></a>Windows Vista 上的 ClickOnce 部署
 
@@ -50,8 +50,8 @@ Visual Studio 提供了以下用于生成清单的选项：
 
   * 有关为清单生成配置 Visual Basic 项目的信息，请参阅 " [应用程序" 页，"项目设计器" (Visual Basic) ](../ide/reference/application-page-project-designer-visual-basic.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [ClickOnce 安全和部署](../deployment/clickonce-security-and-deployment.md)
-- [用户权限和 Visual Studio](https://msdn.microsoft.com/library/d5c55084-1e7b-4b61-b478-137db01c0fc0)
+- [用户权限和 Visual Studio](/previous-versions/ms165100(v=vs.100))
 - [“项目设计器”->“应用程序”页 (C#)](../ide/reference/application-page-project-designer-csharp.md)
 - [“项目设计器”->“应用程序”页 (Visual Basic)](../ide/reference/application-page-project-designer-visual-basic.md)

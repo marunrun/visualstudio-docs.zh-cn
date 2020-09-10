@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f84f91ebedd47df8c0804adee35dcbec18d8551
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 17ac6fdb6b2eaf80d927407e717954842f6e6b1b
+ms.sourcegitcommit: 1803a67b516f67b209d8f4cf147314e604ef1927
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89314857"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89641654"
 ---
 # <a name="create-bootstrapper-packages"></a>创建引导程序包
 安装程序是可配置为检测并安装可再发行组件（如 Windows Installer (.msi) 文件和可执行程序）的一般安装程序**。 安装程序也称为“引导程序”。 它通过一组 XML 清单进行编程，这些清单指定用于管理组件安装的元数据。  ClickOnce 的 " **必备** 组件" 对话框中显示的每个可再发行组件（即必备组件）都是一个引导程序包。 一个引导程序包是一组目录和文件，其中包含用于说明系统必备组件的安装方式的清单文件。
@@ -70,7 +70,7 @@ CustomBootstrapperPackage
 *\Program Files\Microsoft Visual Studio 14.0\SDK\Bootstrapper\Packages*
 ```
 
-或
+or
 
 ```
 *\Program Files (x86)\Microsoft Visual Studio 14.0\SDK\Bootstrapper\Packages*
@@ -94,7 +94,7 @@ CustomBootstrapperPackage
 
 下表显示由引导程序自动填充的属性。
 
-|属性|说明|
+|properties|说明|
 |--------------|-----------------|
 |ApplicationName|应用程序的名称。|
 |ProcessorArchitecture|可执行文件的目标平台的处理器和每字位数。 包括以下值：<br /><br /> -   Intel<br />-   IA64<br />-   AMD64|
@@ -118,8 +118,8 @@ CustomBootstrapperPackage
 </FileList>
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [如何：将必备组件与 ClickOnce 应用程序一起安装](../deployment/how-to-install-prerequisites-with-a-clickonce-application.md)
 - ["必备组件" 对话框](../ide/reference/prerequisites-dialog-box.md)
 - [产品和包架构引用](../deployment/product-and-package-schema-reference.md)
-- [使用 Visual Studio 2005 引导程序来开始安装](https://msdn.microsoft.com/magazine/cc163899.aspx)
+- [使用 Visual Studio 2005 引导程序来开始安装](/archive/msdn-magazine/2004/october/visual-studio-2005-bootstrapper-start-kick-your-installation)

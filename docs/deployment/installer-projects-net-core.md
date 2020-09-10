@@ -11,12 +11,12 @@ manager: MSLukeWest
 monikerRange: '>= vs-2019'
 ms.workload:
 - multiple
-ms.openlocfilehash: c35e6a12262083d09575b51f6c9f918ba30a27b1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a057e655df643c5ddfd85064ba84260a2644dffd
+ms.sourcegitcommit: 1803a67b516f67b209d8f4cf147314e604ef1927
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88714383"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89641582"
 ---
 # <a name="visual-studio-installer-projects-extension-and-net-core-31"></a>Visual Studio 安装程序项目扩展和 NET Core 3.1
 
@@ -31,7 +31,7 @@ ms.locfileid: "88714383"
 
 - 自包含应用程序包括运行时。
 
-若要了解有关这些部署策略的详细信息，请参阅 [.Net Core 应用程序发布概述](https://docs.microsoft.com/dotnet/core/deploying/)。
+若要了解有关这些部署策略的详细信息，请参阅 [.Net Core 应用程序发布概述](/dotnet/core/deploying/)。
 
 ### <a name="workflow-changes-for-net-core-31"></a>.NET Core 3.1 的工作流更改
 
@@ -54,7 +54,7 @@ ms.locfileid: "88714383"
 >[!NOTE]
 >Visual Studio 2019 Update 7 版本中提供了这些项。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [“系统必备”对话框](../ide/reference/prerequisites-dialog-box.md)
 - [应用程序部署先决条件](../deployment/application-deployment-prerequisites.md)
