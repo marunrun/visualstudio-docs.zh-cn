@@ -9,12 +9,12 @@ ms.technology: vs-azure
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: 4a1cba71481608803522336ad5c0f6b6354bca32
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e8f17047902ccf6c7fad164e788e64fe0b17cf14
+ms.sourcegitcommit: fb8babf5cd72f1fc2f97ffe4ad7b62d91f325f61
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89176681"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89485423"
 ---
 # <a name="update-the-app"></a>更新应用
 
@@ -82,7 +82,7 @@ docker: Error response from daemon: driver failed programming external connectiv
 > [!TIP]
 > 可通过将“force”标志添加到 `docker rm` 命令，使用单个命令停止和删除容器。 例如：`docker rm -f <the-container-id>`
 
-### <a name="remove-a-container-using-the-docker-dashboard"></a>使用 Docker 仪表板删除容器
+### <a name="remove-a-container-using-the-docker-view"></a>使用 Docker 视图删除容器
 
 如果打开了 VS Code 扩展，可通过两次单击删除容器！ 这肯定比查找容器 ID 并将其删除要容易得多。
 
@@ -92,7 +92,7 @@ docker: Error response from daemon: driver failed programming external connectiv
 
 1. 确认删除后，大功告成！
 
-![Docker 仪表板 - 删除容器](media/vs-removing-container.png)
+![Docker 视图 - 删除容器](media/vs-removing-container.png)
 
 ### <a name="start-the-updated-app-container"></a>启动更新后的应用容器
 

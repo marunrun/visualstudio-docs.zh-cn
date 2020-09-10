@@ -13,15 +13,15 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 14527e84d5bbd2d06b2d091ba7a9d4daa9763462
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 445826a2ada7b22201b7dd82948bc8bd5dd3d296
+ms.sourcegitcommit: a3edc753c951f317b67ce294cd2fc74f0c45390c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85281950"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89426858"
 ---
 # <a name="n-tier-data-applications-overview"></a>N 层数据应用程序概述
-N 层数据应用程序是分为多个层的数据应用程序 。 N 层数据应用程序也称为“分散式应用程序”和“多层应用程序”，可将处理操作分离到独立的层中，这些层分散在客户端和服务器之间。 开发访问数据的应用程序时，应在构成应用程序的各个层之间进行明确的分离。
+N 层数据应用程序是分为多个层的数据应用程序 。 n 层应用程序亦称为“分散式应用程序”和“多层应用程序”，可以将处理操作分离到独立的层中，这些层分散在客户端和服务器之间。 开发访问数据的应用程序时，应在构成应用程序的各个层之间进行明确的分离。
 
 典型的 n 层应用程序包括一个表示层、一个中间层和一个数据层。 在 n 层应用程序中，分离各层的最简单的方法是为要包括在应用程序中的每一层创建相互独立的项目。 例如，表示层可能是 Windows 窗体应用程序，而数据访问逻辑可能是位于中间层的类库。 此外，表示层可通过 Web 服务等服务与中间层中的数据访问逻辑进行通信。 将应用程序组件分离到不同的层可提高应用程序的可维护性和可伸缩性。 该结构之所以具有这种优点，是因为它能轻松采用可应用于单个层而无需重新设计整个解决方案的新技术。 此外，n 层应用程序通常将敏感信息存储在中间层中，从而与表示层保持隔离。
 
@@ -79,7 +79,7 @@ Visual Studio 包含多个功能，可帮助开发人员创建 n 层应用程序
 
 [使用 LINQ to SQL 的 n 层和远程应用程序](/dotnet/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [演练：创建 n 层数据应用程序](../data-tools/walkthrough-creating-an-n-tier-data-application.md)
 - [分层更新](../data-tools/hierarchical-update.md)

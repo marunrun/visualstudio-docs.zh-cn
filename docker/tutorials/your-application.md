@@ -9,12 +9,12 @@ ms.technology: vs-azure
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: b8470c8d7708bc51916a6f57f5aa135c3267e355
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fb92f5aae84a7c164f04145abe24eb32d7792056
+ms.sourcegitcommit: fb8babf5cd72f1fc2f97ffe4ad7b62d91f325f61
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89176677"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89485436"
 ---
 # <a name="build-and-run-the-todo-sample-app"></a>生成并运行待办事项示例应用
 
@@ -55,6 +55,8 @@ ms.locfileid: "89176677"
     ```bash
     docker build -t getting-started .
     ```
+
+    或者，也可以右键单击“Dockerfile”，选择“生成映像...”，然后在提示符处指定标记。
 
     此命令使用 Dockerfile 生成新的容器映像。 你可能已经注意到，下载了很多“层”。 这是因为你指示生成器从 `node:12-alpine` 映像开始。 但是，由于你的计算机上没有该映像，因此需要下载该映像。
 
