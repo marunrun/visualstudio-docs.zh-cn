@@ -1,5 +1,5 @@
 ---
-title: 支持旧版语言服务中的 "自动" 窗口 |Microsoft Docs
+title: 支持旧版语言服务中的 "自动" 窗口
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,19 +11,21 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 75f8c761721dde5dad4bb75b8675f71f678b06df
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3567739dabe68bc028a1bb935337c149637cfd20
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80704887"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89741459"
 ---
-# <a name="support-for-the-autos-window-in-a-legacy-language-service"></a>旧版语言服务中的自动窗口支持
+# <a name="support-for-the-autos-window-in-a-legacy-language-service"></a>支持旧版语言服务中的 "自动" 窗口
+
 " **自动" 窗口** 显示一些表达式，如正在调试的程序 (由于断点或异常) 而暂停的变量和参数。 表达式可以包括局部变量、局部变量或全局参数，以及在局部范围内已更改的参数。 "自动" 窗口还可以包括类、结构或其他 **类型的实例** 化。 表达式计算器可以评估的任何内容可能会显示 **在 "自动** " 窗口中。
 
  托管包框架 (MPF) 不提供 **对 "自动" 窗口的直接** 支持。 但是，如果你重写 <xref:Microsoft.VisualStudio.Package.LanguageService.GetProximityExpressions%2A> 方法，则可以返回要显示在 "自动" 窗口中的**Autos**表达式列表。
 
 ## <a name="implementing-support-for-the-autos-window"></a>实现对 "自动" 窗口的支持
+
  只需实现类中的方法，即可支持 " **自动"** 窗口 <xref:Microsoft.VisualStudio.Package.LanguageService.GetProximityExpressions%2A> <xref:Microsoft.VisualStudio.Package.LanguageService> 。 你的实现必须在给定的位置中确定一个位置，表达式应显示在 "自动 **" 窗口中** 。 方法返回字符串列表，其中每个字符串都表示一个表达式。 的返回值 <xref:Microsoft.VisualStudio.VSConstants.S_OK> 指示该列表包含表达式，而指示没有 <xref:Microsoft.VisualStudio.VSConstants.S_FALSE> 要显示的表达式。
 
  返回的实际表达式是在代码中出现在该位置的变量或参数的名称。 这些名称将传递给表达式计算器，以获取将在 "自动" 窗口中 **显示的值** 和类型。

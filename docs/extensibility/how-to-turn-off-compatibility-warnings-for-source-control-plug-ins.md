@@ -1,5 +1,5 @@
 ---
-title: 关闭源代码管理插件的兼容性警告 |Microsoft Docs
+title: 关闭源代码管理插件的警告
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,14 +11,15 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 22dd3821426aa1dae6265c520ddac60dd93e1c5e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 33cf57aa86608cca96924faa2caeb9eec7fbdc0e
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80710729"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89742772"
 ---
 # <a name="how-to-turn-off-compatibility-warnings-for-source-control-plug-ins"></a>如何：关闭源代码管理插件的兼容性警告
+
 在中使用源代码管理时，用户可能会看到几个兼容性警告 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 。 显示的警告取决于源代码管理插件的功能，可在此处详细说明。
 
 ### <a name="to-disable-the-warning-to-ensure-optimal-source-control-integration-with-visual-studio"></a>若要禁用警告： "确保与 Visual Studio 的最佳源代码管理集成"
@@ -41,5 +42,6 @@ ms.locfileid: "80710729"
 
      最好 (功能) 支持重入 `SCC_CAP_REENTRANT` ; 这样做会消除此警告。 但是，如果无法进行此支持，则可以设置这些注册表项。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
+
 - [功能标志](../extensibility/capability-flags.md)

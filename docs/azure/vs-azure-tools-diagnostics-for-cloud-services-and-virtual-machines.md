@@ -1,5 +1,5 @@
 ---
-title: Azure 云服务和虚拟机诊断
+title: Azure 云服务和 Vm 的诊断
 description: 了解如何在 Visual Studio 中为调试 Azure 云服务和虚拟机 (VM) 设置诊断。
 author: ghogen
 manager: jillfra
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.workload: azure-vs
 ms.date: 06/28/2018
 ms.author: mikejo
-ms.openlocfilehash: 9912a7fa0e83c5433e0eba1c7ffa23763331af6b
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: 7e0d261edfd946aed5d459ec732f652448fc46c0
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89508491"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89740137"
 ---
 # <a name="set-up-diagnostics-for-azure-cloud-services-and-virtual-machines"></a>为 Azure 云服务和虚拟机设置诊断
 需要对 Azure 云服务或虚拟机进行故障排除时，可使用 Visual Studio 更轻松地设置 Azure 诊断。 诊断可以在运行云服务的虚拟机和虚拟机实例上捕获系统数据和日志记录数据。 诊断数据传输到所选的存储帐户。 有关 Azure 中诊断日志记录的详细信息，请参阅[为 Azure 应用服务中的 Web 应用启用诊断日志记录](/azure/app-service/web-sites-enable-diagnostic-log)。
@@ -44,7 +44,7 @@ ms.locfileid: "89508491"
 ### <a name="how-visual-studio-determines-the-diagnostics-storage-account"></a>Visual Studio 如何确定诊断存储帐户
 * 如果在 .cscfg 文件中指定了诊断连接字符串，Visual Studio 会在发布时以及在打包过程中生成公共配置 XML 文件时使用它来设置诊断扩展。
 * 如果未在 .cscfg 文件中指定诊断连接字符串，Visual Studio 会在发布时以及在打包过程中生成公共配置 XML 文件时回退到使用 .wadcfgx 文件中指定的存储帐户来设置诊断扩展。
-* .cscfg 文件中的诊断连接字符串将优先于 .wadcfgx 文件中的存储帐户。 如果在 .cscfg 文件中指定了诊断连接字符串，Visual Studio 会使用该连接字符串，而忽略 .wadcfgx 中的存储帐户。
+* .cscfg 文件中的诊断连接字符串优先于 .wadcfgx 文件中的存储帐户。 如果在 .cscfg 文件中指定了诊断连接字符串，Visual Studio 会使用该连接字符串，而忽略 .wadcfgx 中的存储帐户。
 
 ### <a name="what-does-the-update-development-storage-connection-strings-check-box-do"></a>“更新开发存储连接字符串...”复选框的作用
 有了“在发布到 Microsoft Azure 时使用 Microsoft Azure 存储帐户凭据更新诊断和缓存的开发存储连接字符串”复选框，就可以方便地使用发布过程中指定的 Azure 存储帐户更新任何开发存储帐户连接字符串。****

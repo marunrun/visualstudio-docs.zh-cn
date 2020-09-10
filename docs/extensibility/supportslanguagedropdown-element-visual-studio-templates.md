@@ -1,5 +1,6 @@
 ---
-title: " (Visual Studio 模板) 的 SupportsLanguageDropDown 元素 |Microsoft Docs"
+title: SupportsLanguageDropDown 元素（Visual Studio 模板）
+titleSuffix: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,14 +15,15 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1230b493fe746a272cf4ca4cffe9d197afd8ba1b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 58c8cd8eef19c6fe5ef6129d9149ec9b650c5025
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80699469"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89741746"
 ---
 # <a name="supportslanguagedropdown-element-visual-studio-templates"></a>SupportsLanguageDropDown 元素（Visual Studio 模板）
+
 指定对于多种语言，Web 项模板是否相同，以及是否在 "**添加新项**" 对话框中启用了**Language**选项。
 
  \<VSTemplate> \<TemplateData>
@@ -29,17 +31,20 @@ ms.locfileid: "80699469"
 
 ## <a name="syntax"></a>语法
 
-```
+```xml
 <SupportsLanguageDropDown> true/false </SupportsLanguageDropDown>
 ```
 
 ## <a name="attributes-and-elements"></a>特性和元素
+
  以下各部分描述了特性、子元素和父元素。
 
 ### <a name="attributes"></a>特性
+
  无。
 
 ### <a name="child-elements"></a>子元素
+
  无。
 
 ### <a name="parent-elements"></a>父元素
@@ -49,21 +54,24 @@ ms.locfileid: "80699469"
 |[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|必需的元素。<br /><br /> 将此模板分类并定义此模板在 **“新建项目”** 或 **“添加新项”** 对话框中的显示方式。|
 
 ## <a name="text-value"></a>文本值
+
  需要一个文本值。
 
  文本必须是 `true` 或 `false` ，指示是否可从 "**添加新项**" 对话框中使用 "**语言**" 选项。
 
 ## <a name="remarks"></a>备注
- `SupportsLanguageDropDown` 是可选元素。 默认值是 `false`。
+
+ `SupportsLanguageDropDown` 是可选元素。 默认值为 `false`。
 
  `SupportsLanguageDropDown`元素仅适用于 Web 项模板。
 
  如果此元素的值设置为 `true` ，则该项模板对于所有编程语言均相同，并且在 "**添加新项**" 对话框中启用了 "**语言**" 选项。 利用此选项，您可以选择要从模板创建的新项的编程语言。
 
 ## <a name="example"></a>示例
+
  下面的示例指定显示 " **语言** " 下拉选项。
 
-```
+```xml
 <VSTemplate Version="3.0.0" Type="Project"
     xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">>
     <TemplateData>
@@ -85,6 +93,7 @@ ms.locfileid: "80699469"
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
+
 - [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
 - [创建项目和项模板](../ide/creating-project-and-item-templates.md)

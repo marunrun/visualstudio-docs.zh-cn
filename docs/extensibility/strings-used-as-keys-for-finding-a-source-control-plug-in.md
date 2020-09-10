@@ -1,5 +1,5 @@
 ---
-title: 用作查找源代码管理插件的键的字符串 |Microsoft Docs
+title: 用作查找源代码管理插件的键的字符串
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7f9333ff1b6742ca14dc5541bd15e92b2eb39085
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 038441f7bcea9fa1dafdd61505d4150ecf28a966
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80699714"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89741786"
 ---
 # <a name="strings-used-as-keys-for-finding-a-source-control-plug-in"></a>作为用于查找源代码管理插件的密钥的字符串
 以下字符串是用于访问注册表以查找有关源代码管理插件的信息的键。
@@ -46,7 +46,7 @@ ms.locfileid: "80699714"
 |`STR_UI_LANGUAGE`|UILanguage|
 |`STR_SRCSAFE_ROOT_KEY`|Software\Microsoft\SourceSafe|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [源代码管理插件](../extensibility/source-control-plug-ins.md)
 - [如何：安装源代码管理插件](../extensibility/internals/how-to-install-a-source-control-plug-in.md)
 - [MSSCCPRJ.SCC 文件](../extensibility/mssccprj-scc-file.md)

@@ -1,5 +1,5 @@
 ---
-title: 使用 DataRelation 来创建数据集之间的关系
+title: 创建数据集之间的关系
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -15,12 +15,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 95476e56ceecfca84251c1b43cf0bb9ddf84f8b5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6c30fb068a9a25c3cd8a6b6237aefbccc666e49e
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85281755"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89739226"
 ---
 # <a name="create-relationships-between-datasets"></a>创建数据集之间的关系
 包含相关数据表的数据集使用 <xref:System.Data.DataRelation> 对象来表示表之间的父/子关系，并返回彼此相关的记录。 通过使用 " **数据源配置向导**" 或 **数据集设计器**向数据集添加相关表， <xref:System.Data.DataRelation> 可为您创建和配置对象。
@@ -104,6 +104,6 @@ ms.locfileid: "85281755"
 
 2. 从 " **数据** " 菜单中，选择 " **显示关系标签** " 命令以显示关系名称。 清除该命令以隐藏关系名称。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [在 Visual Studio 中创建和配置数据集](../data-tools/create-and-configure-datasets-in-visual-studio.md)

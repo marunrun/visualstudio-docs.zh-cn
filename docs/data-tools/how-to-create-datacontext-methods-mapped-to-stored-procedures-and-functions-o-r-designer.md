@@ -1,5 +1,5 @@
 ---
-title: " (O-R 设计器将 DataContext 方法映射到 sprocs 和函数) "
+title: 将 DataContext 方法映射到 sprocs 和函数
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: e7ca32f1-50b3-48af-ad92-ceafd749296a
@@ -8,19 +8,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 0c1545313ba6852765bc86d57f2149b4481e5f57
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 21ea455e6cc29d17f9050e54dd2f8d11033320ac
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85282132"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89742909"
 ---
 # <a name="how-to-create-datacontext-methods-mapped-to-stored-procedures-and-functions-or-designer"></a>如何：创建映射到存储流程和函数的 DataContext 方法（O/R 设计器）
 
 可以将存储过程和函数作为方法添加到 **O/R 设计器** 中 <xref:System.Data.Linq.DataContext> 。 调用该方法并传入所需参数将对数据库运行存储过程或函数，并返回 <xref:System.Data.Linq.DataContext> 方法的返回类型的数据。 有关方法的详细信息 <xref:System.Data.Linq.DataContext> ，请参阅 [DataContext 方法 (O/R Designer) ](../data-tools/datacontext-methods-o-r-designer.md)。
 
 > [!NOTE]
-> 在将 [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] 更改从实体类保存到数据库时，还可以使用存储过程重写执行插入、更新和删除操作的默认运行时行为。 有关详细信息，请参阅 [如何：分配存储过程以执行 (O/R 设计器) 的更新、插入和删除 ](../data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer.md)操作。
+> 在将 [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] 更改从实体类保存到数据库时，还可以使用存储过程重写执行插入、更新和删除操作的默认运行时行为。 有关详细信息，请参阅[如何：分配存储过程以便执行更新、插入和删除操作（O/R 设计器）](../data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer.md)。
 
 ## <a name="create-datacontext-methods"></a>创建 DataContext 方法
 
@@ -50,7 +50,7 @@ ms.locfileid: "85282132"
 > [!NOTE]
 > 有关更改返回类型的现有<xref:System.Data.Linq.DataContext>方法，请参阅[如何：更改 DataContext 方法的返回类型（O/R 设计器）](../data-tools/how-to-change-the-return-type-of-a-datacontext-method-o-r-designer.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [Visual Studio 中的 LINQ to SQL 工具](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
 - [DataContext 方法 (O/R 设计器) ](../data-tools/datacontext-methods-o-r-designer.md)

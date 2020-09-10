@@ -1,5 +1,5 @@
 ---
-title: 正在为并行部署注册文件扩展名 |Microsoft Docs
+title: 为并行 Ide 注册文件扩展名
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,17 +10,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6717625a44b48a25d293f68d01cd9fa3c7c24853
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 68c343646055e6ce877d7bd15892ab1db0d0cbc5
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80701540"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89741710"
 ---
 # <a name="register-file-name-extensions-for-side-by-side-deployments"></a>为并行部署注册文件扩展名
 对于在并行环境中部署的 Vspackage，必须注册文件扩展名，以便将文件与正确版本的相关联 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 。 如果你使用特定于版本的文件扩展名，则注册使用户能够在适当版本的中打开你的项目和项目项文件 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 。
 
-## <a name="in-this-section"></a>本节内容
+## <a name="in-this-section"></a>在本节中
 - [关于文件扩展名](../extensibility/about-file-name-extensions.md) 讨论文件扩展名的注册方式。
 
 - [指定文件扩展名的文件处理程序](../extensibility/specifying-file-handlers-for-file-name-extensions.md) 提供有关如何注册可打开、编辑等特定文件扩展名的应用程序的信息。

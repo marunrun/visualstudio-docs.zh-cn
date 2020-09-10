@@ -1,5 +1,5 @@
 ---
-title: 旧版语言服务中的自定义文档属性 |Microsoft Docs
+title: 旧版语言服务中的自定义文档属性
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1b3db7f4cfa45ea96e3da3056f39c2a5c78a25ed
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e3605658dc7baa45579cc47ccfbf824c3099aa63
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80708970"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89741813"
 ---
 # <a name="custom-document-properties-in-a-legacy-language-service"></a>旧版语言服务中的自定义文档属性
 文档属性可以显示在 " [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] **属性** " 窗口中。 编程语言通常没有与单个源文件关联的属性。 但是，XML 支持影响编码、架构和样式表的文档属性。
@@ -397,5 +397,5 @@ namespace TestLanguagePackage
 }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [旧版语言服务功能](../../extensibility/internals/legacy-language-service-features1.md)

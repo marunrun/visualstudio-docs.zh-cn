@@ -1,5 +1,5 @@
 ---
-title: 演练：在数据集设计器中创建数据表
+title: 在数据集设计器中创建 DataTable
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 1526a5f4137ece5b76c282255af3da4ab20ac119
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e0b10fae4717f30f30fd98cb0ad1b5f5b8da4d35
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75585998"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89741918"
 ---
 # <a name="walkthrough-create-a-datatable-in-the-dataset-designer"></a>演练：在数据集设计器中创建 DataTable
 
@@ -81,7 +81,7 @@ ms.locfileid: "75585998"
 
 若要保存 **DataTableWalkthrough** 项目，请在 " **文件** " 菜单上，选择 " **全部保存**"。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [在 Visual Studio 中创建和配置数据集](../data-tools/create-and-configure-datasets-in-visual-studio.md)
 - [在 Visual Studio 中将控件绑定到数据](../data-tools/bind-controls-to-data-in-visual-studio.md)

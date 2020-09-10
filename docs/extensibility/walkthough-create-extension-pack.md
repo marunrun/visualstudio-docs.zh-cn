@@ -1,5 +1,6 @@
 ---
-title: 使用扩展包项目模板创建扩展包 |Microsoft Docs
+title: 创建扩展包
+description: 了解如何使用扩展包项目模板创建扩展包
 ms.date: 07/27/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +11,12 @@ ms.author: anthc
 manager: Meng
 ms.workload:
 - vssdk
-ms.openlocfilehash: fa1c141e18a3870eaad4b155d816e30ee207f45d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b5a0021061aefceafc2b048a3e231d9c0300db7b
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80697749"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89742912"
 ---
 # <a name="walkthrough-create-an-extension-pack"></a>演练：创建扩展包
 
@@ -23,7 +24,7 @@ ms.locfileid: "80697749"
 
 ## <a name="prerequisites"></a>先决条件
 
-从 Visual Studio 2015 开始，Visual Studio SDK 作为 Visual Studio 安装程序中的可选功能提供。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
+从 Visual Studio 2015 开始，Visual Studio SDK 作为 Visual Studio 安装程序中的可选功能提供。 也可稍后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
 
 从 Visual Studio 15.8 Preview 2 开始提供扩展包功能。
 
@@ -31,7 +32,7 @@ ms.locfileid: "80697749"
 
 "扩展包项目" 模板创建一个扩展包，其中包含一组可一起安装的扩展。
 
-1. 在 " **新建项目** " 对话框中，搜索 "vsix" 并选择 " **vsix 项目**"。 对于 " **项目名称**"，键入 "Test Extension Pack"。 选择“创建”  。
+1. 在 " **新建项目** " 对话框中，搜索 "vsix" 并选择 " **vsix 项目**"。 对于 " **项目名称**"，键入 "Test Extension Pack"。 选择“创建”。
 
 2. 在**解决方案资源管理器**中，右键单击项目节点，然后选择 "**添加**  >  **新项**"。 中转到 "Visual c # **扩展性** " 节点，并选择 " **扩展包**"。 保留默认文件名 (ExtensionPack1.cs) "。
 
@@ -83,7 +84,7 @@ ms.locfileid: "80697749"
 
 2. 单击 " **联机** "，然后搜索 "测试扩展包"。
 
-3. 单击“下载”  。 然后，将为安装计划扩展插件及其扩展列表。
+3. 单击“下载”。 然后，将为安装计划扩展插件及其扩展列表。
 
 4. 下面是 " **管理扩展** " 对话框的扩展包下载视图示例。 如果你希望仅安装扩展包中包含的某些扩展，则可以在 " **计划安装**" 中修改扩展列表。
 

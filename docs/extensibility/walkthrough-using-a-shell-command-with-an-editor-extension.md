@@ -1,5 +1,5 @@
 ---
-title: 演练：在编辑器扩展中使用 Shell 命令 |Microsoft Docs
+title: 结合使用 shell 命令和编辑器扩展
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9e9f7de69cfd969db8ae905ea65bbf868cf2c88a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4ebec1b2c58f5a2ae79e6f361d74e57cd935c177
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85904452"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89742037"
 ---
 # <a name="walkthrough-use-a-shell-command-with-an-editor-extension"></a>演练：在编辑器扩展中使用 shell 命令
 从 VSPackage 中，你可以向编辑器添加功能，如菜单命令。 本演练演示如何通过调用菜单命令向编辑器中的文本视图添加修饰。
@@ -23,7 +23,7 @@ ms.locfileid: "85904452"
  本演练演示如何将 VSPackage 与 Managed Extensibility Framework (MEF) 组件部分结合使用。 必须使用 VSPackage 将菜单命令注册到 Visual Studio shell。 而且，您可以使用命令来访问 MEF 组件部分。
 
 ## <a name="prerequisites"></a>先决条件
- 从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
+ 从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 也可稍后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
 
 ## <a name="create-an-extension-with-a-menu-command"></a>使用菜单命令创建扩展
  创建一个在 "**工具**" 菜单上放置名为 "**添加修饰**" 的菜单命令的 VSPackage。
@@ -691,5 +691,5 @@ ms.locfileid: "85904452"
 
      Fourscore...
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [演练：将内容类型链接到文件扩展名](../extensibility/walkthrough-linking-a-content-type-to-a-file-name-extension.md)

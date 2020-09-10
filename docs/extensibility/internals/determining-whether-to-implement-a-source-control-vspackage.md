@@ -1,5 +1,5 @@
 ---
-title: 确定是否实现源代码管理 VSPackage |Microsoft Docs
+title: 何时实现源代码管理 VSPackage
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,20 +10,23 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8707f3c1ced1cc2df9d3ae77280fc8779874a837
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: abb7ce1c737f9299ba345d5e33b98e6b6947a6e4
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80708720"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89741801"
 ---
 # <a name="determine-whether-to-implement-a-source-control-vspackage"></a>确定是否实现源代码管理 VSPackage
+
 本部分然后详细阐述源代码管理插件和源代码管理 Vspackage 的选择，用于扩展源代码管理解决方案，并提供有关选择合适的集成路径的广义指导。
 
 ## <a name="small-source-control-solution-with-limited-resources"></a>资源有限的小型源代码管理解决方案
+
  如果资源有限，而且不能承受写入源代码管理包的开销，则可以创建基于源代码管理插件的插件。这样做使您可以与源代码管理包并行工作，并且您可以根据需要在源代码管理插件和包之间进行切换。 有关详细信息，请参阅 [注册和选择](../../extensibility/internals/registration-and-selection-source-control-vspackage.md)。
 
 ## <a name="large-source-control-solution-with-a-rich-feature-set"></a>具有丰富功能集的大型源代码管理解决方案
+
  如果要实现一个源代码管理解决方案，该解决方案提供一个使用源代码管理插件 API 未充分捕获的丰富源代码管理模型，则可以将源代码管理包视为集成路径。 这尤其适用于替换源代码管理适配器包 (它与源代码管理插件通信，并提供自己的基本源代码管理 UI) ，以便能够以自定义方式处理源代码管理事件。 如果你已经有一个令人满意的源代码管理 UI，并且想要在中保留该体验 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ，则源代码管理包选项仅允许你这样做。 源代码管理包不是泛型包，而是专门为与 IDE 一起使用而设计的 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 。
 
  如果要实现一个源代码管理解决方案，该解决方案可为源代码管理逻辑和 UI 提供灵活性和更丰富的控制，您可能更倾向于源代码管理包集成路由。 你可以：
@@ -36,5 +39,6 @@ ms.locfileid: "80708720"
 
 4. 处理查询编辑和查询保存事件 (参阅 [查询编辑查询保存](../../extensibility/internals/query-edit-query-save-source-control-vspackage.md)) 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
+
 - [创建源代码管理插件](../../extensibility/internals/creating-a-source-control-plug-in.md)

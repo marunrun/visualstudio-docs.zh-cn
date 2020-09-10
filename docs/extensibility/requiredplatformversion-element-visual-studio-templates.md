@@ -1,5 +1,6 @@
 ---
-title: " (Visual Studio 模板) 的 RequiredPlatformVersion 元素 |Microsoft Docs"
+title: RequiredPlatformVersion 元素（Visual Studio 模板）
+titleSuffix: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -9,14 +10,15 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3bc22f97401fe5e3724f2e44c873c72acbf65be1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6a3873a8107c60802edd07b567d65205a37dc213
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80701493"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89741683"
 ---
 # <a name="requiredplatformversion-element-visual-studio-templates"></a> (Visual Studio 模板的 RequiredPlatformVersion 元素) 
+
 指定项目模板正常运行所需的操作系统的最低版本。 此元素用于创建应用程序的项目模板 [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] 。
 
  `RequiredPlatformVersion`该值与操作系统的版本直接进行比较。 如果 `RequiredPlatformVersion` 高于操作系统版本，则该模板不会显示在 " **新建项目** " 对话框中。 若要为 [!INCLUDE[win8](../debugger/includes/win8_md.md)] 或更高版本指定模板，请将设置 `RequiredPlatformVersion` 为6.2.0。 若要为 [!INCLUDE[win81](../debugger/includes/win81_md.md)] 或更高版本指定模板，请将设置 `RequiredPlatformVersion` 为6.3.0。
@@ -32,27 +34,33 @@ ms.locfileid: "80701493"
 ```
 
 ## <a name="attributes-and-elements"></a>特性和元素
+
  无。
 
 ### <a name="attributes"></a>特性
+
  无。
 
 ### <a name="child-elements"></a>子元素
+
  无。
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[TemplatePlatformName](../extensibility/templatedata-element-visual-studio-templates.md)|指定项目模板面向的平台。|
 
 ## <a name="text-value"></a>文本值
+
  需要一个文本值。
 
 ## <a name="remarks"></a>备注
+
  此文本指定模板所需的最低操作系统版本。
 
 ## <a name="example"></a>示例
+
  此示例指定项目模板面向 [!INCLUDE[win8](../debugger/includes/win8_md.md)] 或更高版本。
 
 ```xml
@@ -68,7 +76,8 @@ ms.locfileid: "80701493"
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
+
 - [ (Visual Studio 模板的 TargetPlatformName 元素) ](../extensibility/targetplatformname-element-visual-studio-templates.md)
 - [创建项目和项模板](../ide/creating-project-and-item-templates.md)
 - [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
