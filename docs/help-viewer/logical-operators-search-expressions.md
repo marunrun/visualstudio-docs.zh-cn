@@ -1,5 +1,5 @@
 ---
-title: 搜索表达式中的逻辑运算符/高级运算符（帮助查看器）
+title: '搜索表达式中的逻辑运算符 (帮助查看器) '
 ms.date: 11/02/2017
 ms.topic: reference
 helpviewer_keywords:
@@ -11,12 +11,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0e241df6c32fc1b0a8e88942fe5d0d178c37b9bf
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a5d17d40a34835c1c8f99f4ad446de747771fa4a
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "67824901"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89741655"
 ---
 # <a name="logical-and-advanced-operators-in-search-expressions"></a>搜索表达式中的逻辑和高级运算符
 
@@ -66,7 +66,7 @@ ms.locfileid: "67824901"
 > [!NOTE]
 > `code:` 运算符仅查找标记有编程语言标签的内容，而不查找一般标记为代码的内容。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [如何：搜索主题](../help-viewer/find-topics.md)
 - [Microsoft Help Viewer](../help-viewer/overview.md)
