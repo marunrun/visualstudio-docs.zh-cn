@@ -9,12 +9,12 @@ ms.technology: vs-azure
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: 34b3cb9465c1efb946260917d755729e25c4e259
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9a4eb5062f8f1b01e8ad5e5165d7ec9ede636124
+ms.sourcegitcommit: fb8babf5cd72f1fc2f97ffe4ad7b62d91f325f61
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89176662"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89485581"
 ---
 # <a name="persist-your-data"></a> 保留数据
 
@@ -86,7 +86,7 @@ ms.locfileid: "89176662"
     docker volume create todo-db
     ```
 
-1. 在仪表板中再次停止待办事项应用容器（或使用 `docker rm -f <id>` 停止），因为它在不使用永久卷的情况下仍在运行。
+1. 再次在 Docker 视图中（或使用 `docker rm -f <id>`）停止待办事项应用容器，因为它在没有使用永久性卷的情况下仍在运行。
 
 1. 启动待办事项应用容器，但添加 `-v` 标志来指定卷装载。 你要使用命名卷并将其装载到 `/etc/todos`，这将捕获在该路径中创建的所有文件。
 
@@ -98,7 +98,7 @@ ms.locfileid: "89176662"
 
     ![已添加到待办事项列表的项](media/items-added.png)
 
-1. 删除待办事项应用的容器。 使用仪表板或 `docker ps` 获取 ID，然后使用 `docker rm -f <id>` 将其删除。
+1. 删除待办事项应用的容器。 使用 Docker 视图或 `docker ps` 获取 ID，然后使用 `docker rm -f <id>` 删除它。
 
 1. 使用上述相同命令启动新容器。
 

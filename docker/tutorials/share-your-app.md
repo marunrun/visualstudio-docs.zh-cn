@@ -9,12 +9,12 @@ ms.technology: vs-azure
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: d5bd7a2d79bf6da710fd0f5803c2415781160143
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 46f91b3bf163f3847492a7727fa72a39908d441c
+ms.sourcegitcommit: fb8babf5cd72f1fc2f97ffe4ad7b62d91f325f61
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89176679"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89485530"
 ---
 # <a name="share-your-app"></a>共享应用
 
@@ -63,6 +63,8 @@ ms.locfileid: "89176679"
     ```bash
     docker push <username>/getting-started
     ```
+
+    也可以在 Docker 视图的“映像”部分中右键单击映像标记，然后依次选择“推送...”、“连接注册表...”和“Docker Hub”，而不使用命令行。
 
 ## <a name="run-the-image-on-a-new-instance"></a>在新的实例上运行映像
 

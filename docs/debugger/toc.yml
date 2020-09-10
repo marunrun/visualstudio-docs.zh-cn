@@ -21,11 +21,11 @@
 - name: 教程
   items:
     - name: 了解如何调试 C#
-      href: /visualstudio/get-started/csharp/tutorial-debugger?toc=/visualstudio/debugger/toc.json
+      href: ../get-started/csharp/tutorial-debugger.md?toc=%252fvisualstudio%252fdebugger%252ftoc.json
     - name: 了解如何调试 C++
       href: getting-started-with-the-debugger-cpp.md
     - name: 了解如何调试 Visual Basic
-      href: /visualstudio/get-started/visual-basic/tutorial-debugger?toc=/visualstudio/debugger/toc.json
+      href: ../get-started/visual-basic/tutorial-debugger.md?toc=%252fvisualstudio%252fdebugger%252ftoc.json
     - name: 在调试器中运行 Python 代码...
       href: ../python/tutorial-working-with-python-in-visual-studio-step-04-debugging.md
     - name: 调试实时 Azure 应用
@@ -313,7 +313,7 @@
             - name: 确保目标计算机上正确配置了 DNS
               href: error-ensure-that-dns-is-correctly-configured-on-the-target-computer.md
             - name: Microsoft Visual Studio 远程调试监视器 (MSVSMON.EXE) 似乎没有在远程计算机上运行。
-              href: /visualstudio/debugger/error-remote-debugging-monitor-msvsmon-exe-does-not-appear-to-be-running
+              href: ./error-remote-debugging-monitor-msvsmon-exe-does-not-appear-to-be-running.md
             - name: 无法连接到 Microsoft Visual Studio 远程调试监视器
               href: unable-to-connect-to-the-microsoft-visual-studio-remote-debugging-monitor.md
             - name: 无法启动 DCOM 通信
@@ -445,7 +445,7 @@
             - name: 调试安装的应用包
               href: debug-installed-app-package.md
             - name: 在调试时检查 XAML 属性
-              href: inspect-xaml-properties-while-debugging.md
+              href: ../xaml-tools/inspect-xaml-properties-while-debugging.md
             - name: 编写和调试正在运行的 XAML 代码
               href: ../xaml-tools/xaml-hot-reload.md
             - name: 在 Blend 中调试 XAML
@@ -505,7 +505,7 @@
                 - name: 调试 WPF
                   href: debugging-wpf.md
                 - name: 在调试时检查 XAML 属性
-                  href: inspect-xaml-properties-while-debugging.md
+                  href: ../xaml-tools/inspect-xaml-properties-while-debugging.md
                 - name: 编写和调试正在运行的 XAML 代码
                   href: ../xaml-tools/xaml-hot-reload.md
                 - name: 使用 WPF 树可视化工具
