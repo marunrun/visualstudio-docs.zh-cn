@@ -1,5 +1,6 @@
 ---
-title: 无法删除所选类，因为该类用作一个或多个 DataContext 方法的返回类型
+title: 无法删除所选的类
+description: 无法删除所选类，因为该类用作一个或多个 DataContext 方法的返回类型
 ms.date: 11/04/2016
 ms.topic: error-reference
 ms.assetid: d68254a0-f3a1-47e2-aed3-a83471e1d711
@@ -8,12 +9,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: faea45cc7198be91a45d0bb57a62ce2730011ee2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 84fabc7f0f1efdf06006597aec9bb813578589a8
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85281326"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89743248"
 ---
 # <a name="the-selected-class-cannot-be-deleted-because-it-is-used-as-a-return-type-for-one-or-more-datacontext-methods"></a>无法删除所选类，因为该类用作一个或多个 DataContext 方法的返回类型
 
@@ -27,6 +28,6 @@ ms.locfileid: "85281326"
 
 2. 将“返回类型”设置为其他实体类，或从方法窗格中删除该 <xref:System.Data.Linq.DataContext> 方法****。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [Visual Studio 中的 LINQ to SQL 工具](../data-tools/linq-to-sql-tools-in-visual-studio2.md)

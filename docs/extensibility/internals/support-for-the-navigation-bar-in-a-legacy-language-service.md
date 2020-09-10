@@ -1,5 +1,5 @@
 ---
-title: 旧版语言服务中对导航栏的支持 |Microsoft Docs
+title: 旧版语言服务中的支持导航栏
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +11,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f86dabb0594b1e33c45808efb387fcbe313e3de3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f22aaf552cc69074c500508621ab4d9e288ef449
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80704862"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89741901"
 ---
 # <a name="support-for-the-navigation-bar-in-a-legacy-language-service"></a>旧版语言服务中的导航栏支持
 编辑器视图顶部的导航栏显示文件中的类型和成员。 类型显示在左侧的下拉框中，成员显示在右侧下拉框中。 当用户选择某一类型时，插入符号会置于该类型的第一行。 当用户选择某个成员时，插入符号会被放置在该成员的定义上。 下拉框会进行更新，以反映插入符号的当前位置。

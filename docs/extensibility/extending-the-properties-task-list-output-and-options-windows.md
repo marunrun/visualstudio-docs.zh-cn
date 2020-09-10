@@ -15,18 +15,18 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: db14068c97ff6868f5fb73c9ddd790020e99e7c8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3059dbe1c28f0fd598e1a711952fa0bce8c4edde
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80711634"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89743343"
 ---
 # <a name="extend-the-properties-task-list-output-and-options-windows"></a>扩展 "属性"、"任务列表"、"输出" 和 "选项" 窗口
 你可以在 Visual Studio 中访问任何工具窗口。 本演练演示如何将有关工具窗口的信息集成到新的 " **选项** " 页和 " **属性** " 页上的新设置，以及如何写入 **任务列表** 和 **输出** 窗口。
 
 ## <a name="prerequisites"></a>先决条件
- 从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
+ 从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 也可稍后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
 
 ## <a name="create-an-extension-with-a-tool-window"></a>使用工具窗口创建扩展
 

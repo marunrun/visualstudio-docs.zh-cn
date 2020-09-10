@@ -1,5 +1,5 @@
 ---
-title: '使用 LINQ to SQL 中的存储过程来更新数据 (O/R 设计器) '
+title: 在 LINQ to SQL 中使用存储过程来更新数据
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: e88224ab-ff61-4a3a-b6b8-6f3694546cac
@@ -8,12 +8,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: e657de71fbf1e7c29074a09f5c51211be7b4395f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ba6ee706a7c18545a17683233e30283559542890
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85282314"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89743006"
 ---
 # <a name="how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-or-designer"></a>如何：分配存储流程来执行更新、插入和删除操作（O/R 设计器）
 
@@ -63,9 +63,9 @@ ms.locfileid: "85282314"
 
 若要恢复为使用默认运行时更新逻辑，请单击“属性”窗口中“插入”、“更新”或“删除”命令旁边的省略号，然后在“配置行为”对话框中选择“使用运行时”************************。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [Visual Studio 中的 LINQ to SQL 工具](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
 - [DataContext 方法](../data-tools/datacontext-methods-o-r-designer.md)
-- [LINQ to SQL ( .NET Framework) ](/dotnet/framework/data/adonet/sql/linq/index)
+- [LINQ to SQL (.NET Framework)](/dotnet/framework/data/adonet/sql/linq/index)
 - [ ( .NET Framework 的插入、更新和删除操作) ](/dotnet/framework/data/adonet/sql/linq/insert-update-and-delete-operations)

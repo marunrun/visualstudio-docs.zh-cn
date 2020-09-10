@@ -1,5 +1,5 @@
 ---
-title: 如何：添加、更新或移除 WCF 数据服务引用
+title: 添加、更新或删除 WCF 数据服务引用
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -14,12 +14,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: f5f5a1e14a6eab7537c8ce64636f0f34378ad7f0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c09b2d487e58e6da2b4aaf62179784d96bdfe783
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85282366"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89741389"
 ---
 # <a name="how-to-add-update-or-remove-a-wcf-data-service-reference"></a>如何：添加、更新或删除 WCF 数据服务引用
 
@@ -156,6 +156,6 @@ ms.locfileid: "85282366"
     > [!NOTE]
     > 引用服务引用的任何代码都必须手动删除。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-- [Visual Studio 中的 Windows Communication Foundation 服务和 WCF 数据服务](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)
+- [在 Visual Studio 中 Windows Communication Foundation Services 和 WCF 数据服务](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)

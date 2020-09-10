@@ -1,5 +1,5 @@
 ---
-title: 项目和编辑器的其他源代码管理指南 |Microsoft Docs
+title: 项目和编辑器的源代码管理准则
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 181f6c10ff7ce95cd3a37151f117353d1bb47d41
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b783fdf7231bd3f440686a1bef2a038d9b32f2e4
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80710107"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89743399"
 ---
 # <a name="additional-source-control-guidelines-for-projects-and-editors"></a>项目和编辑器的其他源代码管理准则
 为了支持源代码管理，项目和编辑人员应遵循一些准则。
@@ -23,7 +23,7 @@ ms.locfileid: "80710107"
 ## <a name="guidelines"></a>指南
  您的项目或编辑器还应该执行以下操作来支持源代码管理：
 
-|领域|项目|编辑器|详细信息|
+|区域|Project|编辑器|详细信息|
 |----------|-------------|------------|-------------|
 |文件的专用副本|X||环境支持文件的私有副本。 也就是说，在项目中登记的每个人都有其自己的专有文件副本。|
 |ANSI/Unicode 持久性|X|X|如果你编写持久性代码，则会将文件保存在 ANSI 形式中，因为大多数源代码管理程序当前不支持 Unicode。|

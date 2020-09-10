@@ -1,5 +1,6 @@
 ---
-title: IDebugEngineProgram2：： WatchForExpressionEvaluationOnThread |Microsoft Docs
+title: IDebugEngineProgram2::WatchForExpressionEvaluationOnThread
+titleSuffix: ''
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -15,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e988e1d64af38a55f5d946f704e1edb4df29b1d5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c1328423cd81db6e55964795ef9da23c5bb29811
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80730362"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89737002"
 ---
 # <a name="idebugengineprogram2watchforexpressionevaluationonthread"></a>IDebugEngineProgram2::WatchForExpressionEvaluationOnThread
 允许 (或不允许) 表达式计算在给定线程上发生，即使程序已停止也是如此。
@@ -71,7 +72,7 @@ int WatchForExpressionEvaluationOnThread( 
 
  由于函数求值或对任何属性的计算，一个程序中的表达式计算可能会导致代码在其他程序中运行 `IDispatch` 。 因此，此方法允许表达式计算运行并完成，即使此程序中的线程可能已停止也是如此。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [IDebugEngineProgram2](../../../extensibility/debugger/reference/idebugengineprogram2.md)
 - [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md)
 - [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)

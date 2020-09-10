@@ -1,5 +1,5 @@
 ---
-title: 演练：使用数据集设计器创建数据集
+title: 使用数据集设计器创建数据集
 ms.date: 09/11/2017
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 8c525d55de16e859005b9746eb52e5516928b9e6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 07d61ec32d48e5cb9b5421e397d743cd8c95b523
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75586024"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89742932"
 ---
 # <a name="walkthrough-create-a-dataset-with-the-dataset-designer"></a>演练：创建具有数据集设计器的数据集
 
@@ -108,7 +108,7 @@ ms.locfileid: "75586024"
 
 - 将验证逻辑添加到 <xref:System.Data.DataTable.ColumnChanging> <xref:System.Data.DataTable.RowChanging> 数据集中数据表的或事件。 有关详细信息，请参阅 [验证数据集中的数据](../data-tools/validate-data-in-datasets.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [在 Visual Studio 中创建和配置数据集](../data-tools/create-and-configure-datasets-in-visual-studio.md)
 - [在 Visual Studio 中将 Windows 窗体控件绑定到数据](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)

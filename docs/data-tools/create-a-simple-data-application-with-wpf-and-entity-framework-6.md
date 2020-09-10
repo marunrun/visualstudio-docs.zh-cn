@@ -1,5 +1,5 @@
 ---
-title: 带有 WPF 和实体框架6的简单数据应用程序
+title: 带有 WPF 和实体框架6的简单数据应用
 ms.date: 08/22/2017
 ms.topic: conceptual
 dev_langs:
@@ -9,12 +9,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 4aa978098c459d9e55ef0dc1423080357e067a5b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 078b3eedc9971dfc444e86b9f8d7ce770fcdb966
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85282756"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89743381"
 ---
 # <a name="create-a-simple-data-application-with-wpf-and-entity-framework-6"></a>使用 WPF 和 Entity Framework 6 创建简单的数据应用程序
 
@@ -423,7 +423,7 @@ Visual Studio 生成的默认布局并非适用于你的应用程序，因此我
 
 [!code-csharp[CommandHandlers#3](../data-tools/codesnippet/CSharp/CreateWPFDataApp/MainWindow.xaml.cs#3)]
 
-## <a name="run-the-application"></a>运行应用程序
+## <a name="run-the-application"></a>运行此应用程序
 
 若要启用调试，请按 F5****。 应会看到 "客户" 和 "订单" 数据已填充到网格中，导航按钮应按预期方式工作。 在输入数据后，单击 " **提交** " 将新客户或订单添加到模型。 单击 " **取消** " 以从新客户或新订单窗体中返回，而不保存数据。 您可以直接在文本框中编辑现有客户和订单，这些更改会自动写入到模型中。
 

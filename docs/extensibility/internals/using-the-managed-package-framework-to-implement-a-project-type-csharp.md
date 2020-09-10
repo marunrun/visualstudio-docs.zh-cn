@@ -1,5 +1,5 @@
 ---
-title: '为项目类型使用托管包框架 (c # ) |Microsoft Docs'
+title: '对 c # (的项目类型使用托管包框架 ) '
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7ca9dda0b699e0f70b0c945ab9ecfe9f9f4dcda6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 496a2528ae70d06696ef25b1adc6255622be3b2f
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80704123"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89741355"
 ---
 # <a name="using-the-managed-package-framework-to-implement-a-project-type-c"></a>使用托管包框架实现项目类型 (C#)
 托管包框架 (MPF) 提供可用于实现自己的项目类型的 c # 类。 MPF 实现了许多 Visual Studio 所需的接口，从而让你自由地集中精力实现项目类型的细节。

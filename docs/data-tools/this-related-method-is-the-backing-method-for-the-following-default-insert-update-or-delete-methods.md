@@ -1,5 +1,6 @@
 ---
-title: 此相关方法是以下默认插入、更新或删除方法的支持方法
+title: 无法删除后备方法
+description: 此相关方法是以下默认插入、更新或删除方法的支持方法
 ms.date: 11/04/2016
 ms.topic: error-reference
 ms.assetid: 62afa6da-97cf-48b9-8de3-33e4d72a0377
@@ -8,12 +9,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 252303c4933501dd3a4672329d66ef4910238a08
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ad7c66c6d110d09940a93e694a897a7dafd92e17
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85535247"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89743087"
 ---
 # <a name="this-related-method-is-the-backing-method-for-the-following-default-insert-update-or-delete-methods"></a>此相关方法是以下默认插入、更新或删除方法的支持方法
 
@@ -31,6 +32,6 @@ ms.locfileid: "85535247"
 
    消息框关闭，不进行任何更改。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [Visual Studio 中的 LINQ to SQL 工具](../data-tools/linq-to-sql-tools-in-visual-studio2.md)

@@ -1,5 +1,5 @@
 ---
-title: 演练：将内容类型链接到文件扩展名 |Microsoft Docs
+title: 将内容类型链接到文件扩展名
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,18 +10,18 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b4e5ba3cd82090b5fad76d48c4600e0814bd91eb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7224c98c55567ed091b09c1a69e630573eb34be8
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85904686"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89743212"
 ---
 # <a name="walkthrough-link-a-content-type-to-a-file-name-extension"></a>演练：将内容类型链接到文件扩展名
 你可以定义自己的内容类型，并使用编辑器 Managed Extensibility Framework (MEF) 扩展将文件扩展名链接到该类型。 在某些情况下，文件扩展名已由语言服务定义。 但是，若要将其与 MEF 一起使用，还必须将其链接到内容类型。
 
 ## <a name="prerequisites"></a>先决条件
- 从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
+ 从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 也可稍后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
 
 ## <a name="create-a-mef-project"></a>创建 MEF 项目
 
@@ -101,5 +101,5 @@ ms.locfileid: "85904686"
     [ContentType("hid")]
     ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [语言服务和编辑器扩展点](../extensibility/language-service-and-editor-extension-points.md)

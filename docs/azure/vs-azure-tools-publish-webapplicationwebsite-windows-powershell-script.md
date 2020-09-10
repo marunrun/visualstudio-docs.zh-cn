@@ -1,5 +1,5 @@
 ---
-title: Publish-WebApplicationWebSite（Windows PowerShell 脚本）| Microsoft Docs
+title: 使用 PowerShell 脚本发布 web 应用
 description: 了解如何将 Web 项目发布到 Azure 网站。 此脚本会在 Azure 订阅中创建所需的资源（如果这些资源不存在）。
 author: ghogen
 manager: jillfra
@@ -9,12 +9,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/11/2016
 ms.author: ghogen
-ms.openlocfilehash: c5eff35247c85783659f66b13d03c3a5f781df07
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3d8a6a73f50c331c516f1e433d7d9b1104731380
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72911760"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89739882"
 ---
 # <a name="publish-webapplicationwebsite-windows-powershell-script"></a>Publish-WebApplicationWebSite（Windows PowerShell 脚本）
 ## <a name="syntax"></a>语法
@@ -30,7 +30,7 @@ Publish-WebApplicationWebSite
 -Verbose
 ```
 
-## <a name="configuration"></a>Configuration
+## <a name="configuration"></a>配置
 描述部署详细信息的 JSON 配置文件的路径。
 
 | 参数 | 默认值 |

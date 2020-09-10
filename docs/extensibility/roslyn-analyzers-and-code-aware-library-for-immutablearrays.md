@@ -1,5 +1,6 @@
 ---
-title: 用于 ImmutableArrays 的 Roslyn 分析器和代码识别库 |Microsoft Docs
+title: 用于 ImmutableArrays 的 Roslyn 分析器和代码识别库
+titleSuffix: ''
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 0b0afa22-3fca-4d59-908e-352464c1d903
@@ -8,12 +9,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d66ed0ab2d93bb46983becd191b1dcc2de648659
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: 6fc40d229b911500cb6c196dba34546ed9ede206
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89509401"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89741662"
 ---
 # <a name="roslyn-analyzers-and-code-aware-library-for-immutablearrays"></a>用于 ImmutableArrays 的 Roslyn 分析器和代码识别库
 
@@ -306,7 +307,7 @@ private async Task<Document> ChangeToImmutableArrayEmpty(
 
 可在 [此处](https://github.com/DustinCampbell/CoreFxAnalyzers/tree/master/Source/CoreFxAnalyzers)查看全部完成的代码。 子文件夹 *DoNotUseImmutableArrayCollectionInitializer* 和 *DoNotUseImmutableArrayCtor* 各有一个 c # 文件，用于查找问题和一个 c # 文件，用于实现在 Visual Studio 灯泡 UI 中显示的代码修复。 请注意，已完成的代码具有更多抽象，以避免反复获取 ImmutableArray \<T> 类型对象。 它使用嵌套注册操作将类型对象保存在上下文中，每当子操作 (分析对象创建和分析) 执行的集合初始化时可用。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 * [\\\Build 2015 交谈](https://channel9.msdn.com/events/Build/2015/3-725)
 * [GitHub 上的已完成代码](https://github.com/DustinCampbell/CoreFxAnalyzers/tree/master/Source/CoreFxAnalyzers)

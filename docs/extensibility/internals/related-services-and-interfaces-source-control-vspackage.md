@@ -1,5 +1,6 @@
 ---
-title: 相关服务和接口 (源代码管理 VSPackage) |Microsoft Docs
+title: 相关服务和界面（源代码管理 VSPackage）
+titleSuffix: ''
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,17 +12,19 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 533f1bf4fcfbaebb25ec10908abf4a46ddacd521
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1e0806ca278305a530a4f4f3e0d4abdf7977067e
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80705631"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89743067"
 ---
 # <a name="related-services-and-interfaces-source-control-vspackage"></a>相关服务和界面（源代码管理 VSPackage）
+
 本部分列出了中与源代码管理 VSPackage 相关的所有接口 [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] 。 源代码管理 VSPackage 实现其中一些接口，并使用其他接口来完成源代码管理任务。
 
 ## <a name="interfaces-implemented-by-and-for-source-control-vspackages"></a>为源代码管理实现和实现的接口 Vspackage
+
  中介绍了以下接口 [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] ，源代码管理 VSPackage 根据所需的功能集实现这些接口的子集。 某些接口标记为必需，必须由每个源代码管理 VSPackage 实现。
 
  对于包不实现的接口， [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 提供默认实现。 请注意，默认实现适用于未注册 VSPackage 并且未控制任何项目的情况。 正确编写的源代码管理 VSPackage 实现所有必需的接口，而不是将其保留到这些接口的默认实现。
@@ -36,11 +39,11 @@ ms.locfileid: "80705631"
 
 - 可选：实体可以实现此接口以提供更丰富的功能集。
 
-| 接口 | 用途 | 实现者 | 实施? |
+| 接口 | 目的 | 实现者 | 实施? |
 | - | - |--------------------------|-------------|
 | <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2> | 编辑器在修改或保存文件之前调用此接口。 如果签出失败，则源代码管理 VSPackage 可以签出文件或拒绝操作。 | 源代码管理 VSPackage | 建议 |
 | <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccManager2> | 此接口提供了项目的基本源代码管理功能，例如，通过源代码管理注册和注销项目，并提供对基本源控件标志符号的支持。 | 源代码管理 VSPackage | 必需 |
-| <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProject2> | 此接口是 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> 使用函数获取的 <xref:System.Runtime.InteropServices.Marshal.QueryInterface%2A> ，或者只是将实现的对象强制转换 `IVsHierarchy` 为 `IVsSccProject2` 。 它用于在项目中获取源代码管理下的文件或通知项目当前源代码管理状态或位置。 | 项目 | 必需 |
+| <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProject2> | 此接口是 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> 使用函数获取的 <xref:System.Runtime.InteropServices.Marshal.QueryInterface%2A> ，或者只是将实现的对象强制转换 `IVsHierarchy` 为 `IVsSccProject2` 。 它用于在项目中获取源代码管理下的文件或通知项目当前源代码管理状态或位置。 | Project | 必需 |
 | <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProvider> | 集成模块使用此接口设置当前活动的 VSPackage。 | 源代码管理 VSPackage | 必需 |
 | <xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocuments2> | 此接口基于订阅模型。 任何 VSPackage 都可以发出信号，指示它希望接收文档事件，并在即将发生的事件上通知 shell。 它由实现并处理 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ，后者又将实现的事件传递 `IVsTrackProjectDocumentsEvents2` 给 VSPackage。 | 源代码管理存根 | 必需 |
 | <xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocuments3> | 此接口提供批处理、同步读/写操作和高级 `OnQueryAddFiles` 方法。 | 源代码管理存根 | 必需 |
@@ -53,7 +56,7 @@ ms.locfileid: "80705631"
 | <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccGlyphs> | VSPackage 使用此接口将其他标志符号定义为 **解决方案资源管理器**中的节点的源代码管理标志符号。 | 源代码管理 VSPackage | 可选 |
 | <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccAddWebProjectFromSourceControl> | Web 项目的 " **添加** " 对话框使用此接口。 它提供用于浏览源代码管理位置和打开之前在该位置添加到源代码管理存储库中的 Web 项目的方法。 | 源代码管理 VSPackage | 建议 |
 | <xref:Microsoft.VisualStudio.Shell.Interop.IVsAsynchOpenFromScc> | 此接口提供对异步 (后台) 从源代码管理加载项目的支持。 | 源代码管理 VSPackage | 可选 |
-| <xref:Microsoft.VisualStudio.Shell.Interop.IVsAsynchOpenFromSccProjectEvents> | 此接口允许项目监视由启动的异步加载的进度 <xref:Microsoft.VisualStudio.Shell.Interop.IVsAsynchOpenFromScc> 。 | 项目 | 可选 |
+| <xref:Microsoft.VisualStudio.Shell.Interop.IVsAsynchOpenFromSccProjectEvents> | 此接口允许项目监视由启动的异步加载的进度 <xref:Microsoft.VisualStudio.Shell.Interop.IVsAsynchOpenFromScc> 。 | Project | 可选 |
 | <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccToolsOptions> | 此接口允许 IDE 查询活动源代码管理 VSPackage。 即使没有已注册的活动源代码管理 VSPackage，IDE 也会查询具有意义的源代码管理设置的值。 此接口由实现和处理 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 。 | 源代码管理存根 | 必需 |
 | <xref:Microsoft.VisualStudio.Shell.Interop.IVsRegisterScciProvider> | 此接口用于注册源代码管理 VSPackage。 | 源代码管理存根 | 必需 |
 | <xref:EnvDTE.SourceControl> | 此接口在自动化中使用。 因此，它只公开可以在不显示任何用户界面的情况下执行的函数。 | 源代码管理 VSPackage | 可选 |
@@ -61,5 +64,5 @@ ms.locfileid: "80705631"
 | <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionOpts> | 此接口用于将源代码管理设置保存到解决方案选项 ( .suo) 文件中。 这可能包括用户特定的源代码管理设置，如当前用户的登记位置。 | 源代码管理 VSPackage | 建议 |
 | <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3> | 此接口用于监视事件，以便执行操作（如在关闭解决方案之前签入项目文件，或在打开项目时从源代码管理获取新文件）。 | 源代码管理 VSPackage | 建议 |
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [设计元素](../../extensibility/internals/source-control-vspackage-design-elements.md)

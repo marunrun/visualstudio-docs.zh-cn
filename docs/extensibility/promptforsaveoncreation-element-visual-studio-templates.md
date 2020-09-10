@@ -1,5 +1,6 @@
 ---
-title: " (Visual Studio 模板) 的 PromptForSaveOnCreation 元素 |Microsoft Docs"
+title: PromptForSaveOnCreation 元素（Visual Studio 模板）
+titleSuffix: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,12 +15,12 @@ manager: jillfra
 ms.workload:
 - vssdk
 monikerRange: vs-2017
-ms.openlocfilehash: 2e6bbd62120da59da1fb26e671c1aa02f33949f4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ffc610cf701bdf5be3a0b6116455ac413fbd6dcd
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80701781"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89743134"
 ---
 # <a name="promptforsaveoncreation-element-visual-studio-templates"></a> (Visual Studio 模板的 PromptForSaveOnCreation 元素) 
 
@@ -58,7 +59,7 @@ ms.locfileid: "80701781"
  文本必须是 `true` 或 `false` ，表示在 `true` 创建新项目时将提示用户输入保存位置。
 
 ## <a name="remarks"></a>备注
- `PromptForSaveOnCreation` 是可选元素。 默认值是 `false`。
+ `PromptForSaveOnCreation` 是可选元素。 默认值为 `false`。
 
  临时项目是您可以创建和修改的项目，而无需将该项目的内容保存在磁盘上。
 

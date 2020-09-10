@@ -1,5 +1,5 @@
 ---
-title: 跨多个项目连接应用设置 |Microsoft Docs
+title: 跨多个项目连接应用设置
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: bcaed0f7f2380dd36bcbffd776839025fe9efa16
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5c88a5140bf72f6801d4c7a92ebd910f410aabfb
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80710063"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89741521"
 ---
 # <a name="application-of-settings-across-multiple-project-connections"></a>跨多个项目连接应用设置
 使用源代码管理插件 API 版本1.2 生成的源代码管理插件可以使用批处理操作来跨多个项目或多个连接上下文执行相同的源代码管理操作。 批处理可用于从用户体验中消除冗余的、每个项目的对话框。

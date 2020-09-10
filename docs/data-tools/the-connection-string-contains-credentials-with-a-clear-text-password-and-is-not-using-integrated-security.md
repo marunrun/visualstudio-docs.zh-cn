@@ -1,5 +1,6 @@
 ---
-title: 连接字符串包含的凭据具有明文密码并且未使用集成安全性
+title: 连接字符串包含密码
+description: 连接字符串包含的凭据具有明文密码并且未使用集成安全性
 ms.date: 11/04/2016
 ms.topic: error-reference
 ms.assetid: 501d85af-92e0-4471-b280-8a59c0688575
@@ -8,12 +9,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 201d01d5891b1d788245b2ce61b09f43a50731b1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a928a5a223ca4f9599bf174bedff4ebc754b9619
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85281469"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89739210"
 ---
 # <a name="the-connection-string-contains-credentials-with-a-clear-text-password-and-is-not-using-integrated-security"></a>连接字符串包含的凭据具有明文密码并且未使用集成安全性
 
@@ -34,6 +35,6 @@ ms.locfileid: "85281469"
 
    连接字符串将存储为应用程序设置，但不包含密码。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [Visual Studio 中的 LINQ to SQL 工具](../data-tools/linq-to-sql-tools-in-visual-studio2.md)

@@ -1,5 +1,6 @@
 ---
-title: 将数据集和 TableAdapter 分离到不同的项目中
+title: 使用单独的项目错误
+description: 将数据集和 TableAdapter 分离到不同的项目中
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +12,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 504e2411d20a85c85047e4827d613bf4f48034e9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0e54a28a7d5c5dc9ae8353266f49234ef8468410
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85281547"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89743115"
 ---
 # <a name="separate-datasets-and-tableadapters-into-different-projects"></a>将数据集和 TableAdapter 分离到不同的项目中
 已对类型化的数据集进行了增强，以便可以将 [tableadapter](create-and-configure-tableadapters.md) 和 dataset 类生成到单独的项目中。 这使你能够快速分离应用程序层并生成 n 层数据应用程序。
@@ -57,7 +58,7 @@ ms.locfileid: "85281547"
 > [!NOTE]
 > 若要查看生成的类文件，请选择数据集或 TableAdapter 项目。 然后，在 **解决方案资源管理器**中，选择 " **显示所有文件**"。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [N 层数据应用程序概述](../data-tools/n-tier-data-applications-overview.md)
 - [演练：创建 N 层数据应用程序](../data-tools/walkthrough-creating-an-n-tier-data-application.md)

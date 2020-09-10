@@ -1,5 +1,6 @@
 ---
-title: 警告：对尚未应用的“配置行为”对话框进行了更改
+title: 未应用的更改
+description: 警告：对尚未应用的“配置行为”对话框进行了更改
 ms.date: 11/04/2016
 ms.topic: error-reference
 ms.assetid: ce5822dd-4f10-4c86-b707-7766837be216
@@ -8,12 +9,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 4eba7fb1274b36a6a6f2454f4642c1c78505719e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fbdf4e252df1063610964aaa1df37fa9bfc94132
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85535195"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89743145"
 ---
 # <a name="warning-changes-have-been-made-to-the-configure-behavior-dialog-box-that-have-not-been-applied"></a>警告：对“配置行为”对话框进行了更改但未应用这些更改
 
@@ -27,6 +28,6 @@ ms.locfileid: "85535195"
 
 - 若要取消以前的更改并继续，请单击 " **否**"。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [Visual Studio 中的 LINQ to SQL 工具](../data-tools/linq-to-sql-tools-in-visual-studio2.md)

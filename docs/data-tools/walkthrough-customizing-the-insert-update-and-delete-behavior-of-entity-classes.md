@@ -1,5 +1,5 @@
 ---
-title: 自定义实体类的插入/更新/删除行为
+title: 自定义插入/更新/删除行为
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -11,12 +11,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 105519153e92e3944971f60ae2ff6151fa6a3fdf
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 01fe4cf160ed3a7548fd8b8bed003838abee3d04
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75585946"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89741821"
 ---
 # <a name="walkthrough-customize-the-insert-update-and-delete-behavior-of-entity-classes"></a>演练：自定义实体类的插入、更新和删除行为
 
@@ -189,7 +189,7 @@ ms.locfileid: "75585946"
 
 3. 将所有三个存储过程拖到 **O/R 设计器**上。
 
-     这些存储过程将作为 <xref:System.Data.Linq.DataContext> 方法添加到方法窗格中。 有关详细信息，请参阅 [DataContext 方法 (O/R Designer) ](../data-tools/datacontext-methods-o-r-designer.md)。
+     这些存储过程将作为 <xref:System.Data.Linq.DataContext> 方法添加到方法窗格中。 有关详细信息，请参阅 [DataContext 方法（O/R 设计器）](../data-tools/datacontext-methods-o-r-designer.md)。
 
 4. 在**O/R 设计器**中选择 " **Customer** " 实体类。
 
@@ -229,7 +229,7 @@ ms.locfileid: "75585946"
 
 18. 将“Original_CustomerID”方法参数映射到“CustomerID (Original)”类属性********。
 
-19. 单击" **确定**"。
+19. 单击“确定”。 
 
 > [!NOTE]
 > 虽然这对于此特定演练并不是问题，但值得注意的是，LINQ to SQL 会自动处理数据库生成的值，以便在插入和更新期间自动 (自动增量) 、rowguidcol (数据库生成的 GUID) 和时间戳列。 在其他列类型中，数据库生成的值将意外导致 Null 值。 若要返回数据库生成的值，应手动将设置 <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> 为并将设置为 `true` 以下值 <xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A> 之一： [AutoSync](<xref:System.Data.Linq.Mapping.AutoSync.Always>)、 [AutoSync](<xref:System.Data.Linq.Mapping.AutoSync.OnInsert>)或[AutoSync。](<xref:System.Data.Linq.Mapping.AutoSync.OnUpdate>)
@@ -269,7 +269,7 @@ ms.locfileid: "75585946"
 
 - 添加 LINQ 查询以筛选数据。 有关信息，请参阅 [c # (的 LINQ 查询简介 ) ](/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq-queries)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [Visual Studio 中的 LINQ to SQL 工具](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
 - [DataContext 方法](../data-tools/datacontext-methods-o-r-designer.md)
