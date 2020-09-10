@@ -1,5 +1,5 @@
 ---
-title: 在数据绑定中使用查找表-Windows 窗体控件 |Microsoft Docs
+title: 在数据绑定中使用查找表-Windows 窗体
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +15,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: a5d6309818c251b9101b1345450ef66f3fc8f1f8
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a68121cc98a1bdbc1f7f1bfa69ce8ee0d1d797bb
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75586791"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89743352"
 ---
 # <a name="create-a-windows-forms-user-control-that-supports-lookup-data-binding"></a>创建支持查找数据绑定的 Windows 窗体用户控件
 
@@ -155,7 +155,7 @@ ms.locfileid: "75586791"
 
 6. 在“数据 UI 自定义选项”对话框中，从“关联的控件”列表中选择“LookupBox”************。
 
-7. 单击" **确定**"。
+7. 单击“确定”。 
 
 8. 单击“CustomerID”列上的下拉箭头，然后选择“LookupBox”********。
 
@@ -171,12 +171,12 @@ ms.locfileid: "75586791"
 
 此操作对数据绑定进行设置，使其显示 `Customers` 表中的 `CompanyName`同时保留 `Orders` 表中的 `CustomerID` 值。
 
-## <a name="run-the-application"></a>运行应用程序
+## <a name="run-the-application"></a>运行此应用程序
 
 - 按 **F5** 运行该应用程序。
 
 - 通过某些记录进行定位，并验证 `LookupBox` 控件中是否显示 `CompanyName`。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [在 Visual Studio 中将 Windows 窗体控件绑定到数据](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)

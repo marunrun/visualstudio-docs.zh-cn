@@ -1,5 +1,5 @@
 ---
-title: 设置从 "数据源" 窗口拖动时要创建的控件
+title: 设置拖动时要创建的控件
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 8f5a3cf2d1f34ca9a3d0c2918a8f3f0a3e05260f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f7203cc5017763a6ba0b76855f010f114ca879a6
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85281534"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89743092"
 ---
 # <a name="set-the-control-to-be-created-when-dragging-from-the-data-sources-window"></a>设置从“数据源”窗口中拖动时要创建的控件
 
@@ -69,6 +69,6 @@ ms.locfileid: "85281534"
 
      如果不想创建列或属性的控件，请在下拉菜单中选择 " **无** "。 如果要将父表或对象拖到设计器中，但又不想包含特定列或属性，这会很有用。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [在 Visual Studio 中将控件绑定到数据](../data-tools/bind-controls-to-data-in-visual-studio.md)
