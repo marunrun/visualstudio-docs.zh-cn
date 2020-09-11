@@ -14,11 +14,11 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.openlocfilehash: 2e5782c49f26925d9eda81f04653b1a20666c6b1
-ms.sourcegitcommit: 748d9cd7328a30f8c80ce42198a94a4b5e869f26
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68149182"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89312090"
 ---
 1. 在远程计算机上，从“开始”菜单中查找并启动“远程调试器” 。 
    
@@ -38,7 +38,7 @@ ms.locfileid: "68149182"
   
 1. 配置完成后，将显示“远程调试器”窗口。
   
-    ![远程调试器窗口](../media/remotedebuggerwindow.png "远程调试器窗口")
+    ![“远程调试器”窗口](../media/remotedebuggerwindow.png "“远程调试器”窗口")
   
     远程调试器正在等待连接。 使用显示的服务器名称和端口号在 Visual Studio 中设置远程连接配置。  
   

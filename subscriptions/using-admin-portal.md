@@ -2,21 +2,23 @@
 title: 订阅管理门户入门 |Visual Studio Marketplace
 author: evanwindom
 ms.author: v-evwin
-manager: lank
+manager: cabuschl
 ms.assetid: 4c099fe8-883e-4789-9468-387ce5697dfe
-ms.date: 03/03/2020
+ms.date: 09/03/2020
 ms.topic: overview
 description: 了解如何开始在订阅管理门户中管理组织的 Visual Studio 订阅。
-ms.openlocfilehash: 7687a899b1c10e95ce161973c0d84701ce91fde6
-ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
+ms.openlocfilehash: d857d4a1c9bb5568a6e4330851e0cc8a21988146
+ms.sourcegitcommit: a3edc753c951f317b67ce294cd2fc74f0c45390c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88249857"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89426871"
 ---
 # <a name="overview-of-the-visual-studio-subscriptions-administrator-portal"></a>Visual Studio 订阅管理员门户概述
 
 Visual Studio 订阅管理门户提供了集中管理组织订阅的工具。 
+
+浏览门户。
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4t9aW]
 
@@ -34,7 +36,7 @@ Visual Studio 订阅管理门户提供了集中管理组织订阅的工具。
 - 为其分配的订阅级别。
 - 为其分配订阅的日期。
 - 订阅的到期日期。
-- 可选的文本说明。
+- 用于提供附加说明的引用字段。
 - 是否启用或禁用订阅者下载的指示。
 - 订阅者所在的国家/地区。
 - 订阅者对来自管理门户的分配通信电子邮件的语言首选项。
@@ -42,7 +44,7 @@ Visual Studio 订阅管理门户提供了集中管理组织订阅的工具。
 
 在页面左上方有几个图标，你可选择它们来显示订阅分配概述、协议详细信息和最大用量报表。
 
-要详细了解已购买、已分配以及对于每个协议来说仍可在组织中使用的订阅许可证数量，请选择顶部图标来启用滑出面板。
+要详细了解已购买、已分配以及对于每个协议来说仍可在组织中使用的订阅许可证数量，请单击顶部图标来启用滑出面板。
 > [!div class="mx-imgBorder"]
 > ![Visual Studio 订阅管理员门户订阅者页](_img/using-admin-portal/subscribers-page.png)
 

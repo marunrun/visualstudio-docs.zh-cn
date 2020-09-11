@@ -26,7 +26,7 @@ ms.locfileid: "90012173"
 
 下表显示了对象中的接口 <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextView> 。
 
-|接口|说明|
+|接口|描述|
 |---------------|-----------------|
 |[IDropSource](/windows/desktop/api/oleidl/nn-oleidl-idropsource)|标准 OLE 接口。|
 |<xref:Microsoft.VisualStudio.OLE.Interop.IDropTarget>|标准 OLE 接口。|

@@ -1,18 +1,18 @@
 ---
 title: 为客户管理 Visual Studio 订阅的合作伙伴 | Microsoft Docs
 author: evanwindom
-ms.author: lank
-manager: lank
+ms.author: v-evwin
+manager: cabuschl
 ms.assetid: 6866dfab-c4fa-428e-bb0d-7b202c81f770
-ms.date: 03/09/2020
+ms.date: 09/03/2020
 ms.topic: conceptual
 description: 了解合作伙伴如何为其客户管理 Visual Studio 订阅。
-ms.openlocfilehash: 5afe34b0a28e950225e18761d22854703f466f60
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b91959431fb653385c02e6465315a02c8be18c60
+ms.sourcegitcommit: a3edc753c951f317b67ce294cd2fc74f0c45390c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85289022"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89426546"
 ---
 # <a name="partners-managing-subscriptions-on-behalf-of-customers"></a>合作伙伴代表客户管理订阅
 要在 Visual Studio [订阅管理门户](https://manage.visualstudio.com)中管理订阅，合作伙伴需要执行一些步骤。 
@@ -22,6 +22,27 @@ ms.locfileid: "85289022"
 - 客户收到通知，受邀在 [Visual Studio 订阅管理门户](https://manage.visualstudio.com)中分配管理员并访问其订阅。
 - 为代表客户管理订阅，合作伙伴需要在管理门户上注册。 以下列出了获取访问权限的各种方法（类似于 add-open 进程）。
 
+## <a name="new-partners-visiting-the-visual-studio-subscriptions-administration-portal-directly"></a>新合作伙伴直接访问 Visual Studio 订阅管理门户
+此方案适用于已订购新的开放式许可证但尚未在 [VLSC](https://www.microsoft.com/Licensing/servicecenter/default.aspx) 上注册并直接转到 [Visual Studio 订阅管理门户](https://manage.visualstudio.com)的新合作伙伴。  请执行这些步骤：
+1. 访问 <https://manage.visualstudio.com> 。
+1. 你收到一个通知，告知你无法被识别。
+1. 选择“OLP 合作伙伴”注册选项，并输入订单上使用的授权号、许可证号、客户电子邮件地址，选中复选框，然后单击“提交”   。
+
+> [!NOTE]
+> 客户将收到通知电子邮件，告知他们已将合作伙伴添加到 Open License 中。 他们可选择删除合作伙伴的访问权限。
+
+## <a name="new-partners-who-register-on-the-volume-licensing-service-center-vlsc"></a>在批量许可服务中心 (VLSC) 注册的新合作伙伴
+
+这适用于要订购新的开放式许可证、在尝试访问 [Visual Studio 订阅管理门户](https://manage.visualstudio.com)之前通过 add-open 流在 [VLSC](https://www.microsoft.com/Licensing/servicecenter/default.aspx) 上注册的新合作伙伴。 合作伙伴应执行以下步骤：
+1. 登录 VLSC 并导航到“关系摘要”。
+1. 选择所需的开放式许可证。
+1. 接下来，在“Visual Studio 订阅”下的“许可证详细信息”中，通过“单击此处”链接选择用于管理订阅的选项  。
+1. 使用被列为主要联系人的同一电子邮件地址登录到管理门户。
+1. 合作伙伴此后便可管理该 Open License 的订阅。
+
+> [!NOTE]
+> 客户将收到通知电子邮件，告知他们已将合作伙伴添加到 Open License 中。 他们可选择删除合作伙伴的访问权限。
+
 ## <a name="existing-partners-adding-a-new-license"></a>现有合作伙伴添加新许可证
 这适用于有权访问 [Visual Studio 订阅管理门户](https://manage.visualstudio.com)、订购了用于 Visual Studio 订阅的开放式许可证并需要对其进行管理的合作伙伴。  
 
@@ -30,34 +51,13 @@ ms.locfileid: "85289022"
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4vkAG]
 
 合作伙伴添加新许可证的步骤：
-- 登录 <https://manage.visualstudio.com> 。
-- 选择协议下拉列表并滚动到底部，其中有“新建开放式许可证”选项  。
-- 在弹出式面板中，输入协议上的授权号、许可证号、客户电子邮件地址，勾选复选框，然后单击“提交”  。
+1. 登录 <https://manage.visualstudio.com> 。
+1. 在协议下拉列表旁边，选择“+ 添加”协议，选择并滚动到底部，其中有“新建开放式许可证”选项。
+1. 在弹出式面板中，输入协议上的授权号、许可证号、客户电子邮件地址，勾选复选框，然后单击“提交”  。
 
 > [!NOTE]
 > 客户将收到通知电子邮件，告知他们已将合作伙伴添加到 Open License 中。 他们可选择删除合作伙伴的访问权限。
 
-## <a name="new-partners-who-register-on-the-volume-licensing-service-center-vlsc"></a>在批量许可服务中心 (VLSC) 注册的新合作伙伴
-
-这适用于要订购新的开放式许可证、在尝试访问 [Visual Studio 订阅管理门户](https://manage.visualstudio.com)之前通过 add-open 流在 [VLSC](https://www.microsoft.com/Licensing/servicecenter/default.aspx) 上注册的新合作伙伴。 合作伙伴应执行以下步骤：
-- 登录 VLSC 并导航到“关系摘要”。
-- 选择所需的开放式许可证。
-- 接下来，在“Visual Studio 订阅”下的“许可证详细信息”中，通过“单击此处”链接选择用于管理订阅的选项  。
-- 使用以前用于登录 VLSC 的同一电子邮件地址登录新的管理门户。
-- 合作伙伴此后便可管理该 Open License 的订阅。
-
-> [!NOTE]
-> 客户将收到通知电子邮件，告知他们已将合作伙伴添加到 Open License 中。 他们可选择删除合作伙伴的访问权限。
-
-
-## <a name="new-partners-visiting-the-visual-studio-subscriptions-administration-portal-directly"></a>新合作伙伴直接访问 Visual Studio 订阅管理门户
-此方案适用于已订购新的开放式许可证但尚未在 [VLSC](https://www.microsoft.com/Licensing/servicecenter/default.aspx) 上注册并直接转到 [Visual Studio 订阅管理门户](https://manage.visualstudio.com)的新合作伙伴。  请执行这些步骤：
-- 访问 <https://manage.visualstudio.com> 。
-- 你收到一个错误，指示你无法被识别。
-- 选择“OLP 合作伙伴”注册选项，并输入订单上使用的授权号、许可证号、客户电子邮件地址，选中复选框，然后单击“提交”   。
-
-> [!NOTE]
-> 客户将收到通知电子邮件，告知他们已将合作伙伴添加到 Open License 中。 他们可选择删除合作伙伴的访问权限。
 
 ## <a name="resources"></a>资源
 - [Visual Studio 许可白皮书](https://aka.ms/vslicensing)

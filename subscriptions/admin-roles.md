@@ -1,18 +1,18 @@
 ---
 title: 管理门户中的超级管理员和管理员角色
 author: evanwindom
-ms.author: lank
-manager: lank
+ms.author: v-evwin
+manager: cabuschl
 ms.assetid: 6601c395-f778-48c1-ab76-cf454b9193e4
-ms.date: 04/07/2020
+ms.date: 09/03/2020
 ms.topic: conceptual
 description: 了解超级管理员和管理员角色以及如何分配管理员。
-ms.openlocfilehash: bf10b95d44a960fea50bff6b2fba7b9a8dc98a26
-ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
+ms.openlocfilehash: f70545de45e0de284788ff3552667e9fa9bfb73f
+ms.sourcegitcommit: a3edc753c951f317b67ce294cd2fc74f0c45390c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88248441"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89426754"
 ---
 # <a name="super-admins-and-administrators-for-visual-studio-subscription-agreements"></a>Visual Studio 订阅协议的超级管理员和管理员
 
@@ -22,23 +22,24 @@ ms.locfileid: "88248441"
 
 **管理员：** 管理员只能由超级管理员分配。管理员只能在超级管理员分配给订阅者的协议中对其进行管理。
 
+观看有关如何管理管理员的演示。 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4th6L]
 
 ## <a name="assigning-administrators"></a>分配管理员
 分配新的管理员：
 1. 使用一个电子邮件地址登录到 https://manage.visualstudio.com ，该电子邮件地址在订阅协议上指定为超级管理员。
-2. 选择标有“管理管理员”的选项卡。
-3. 选择 **添加** 。
+2. 单击标有“管理管理员”的选项卡  。
+3. 单击 **添加**。
    > [!div class="mx-imgBorder"]
-   > ![添加管理员](_img/admin-roles/add-admins.png "选择“管理管理员”边栏选项卡，然后选择“添加”以分配新管理员。")
+   > ![添加管理员](_img/admin-roles/add-admins.png "单击“管理管理员”边栏选项卡，然后单击“添加”以分配新管理员。")
 4. 使用新管理员的信息完成表单。  
    > [!div class="mx-imgBorder"]
-   > ![“添加管理员”窗体](_img/admin-roles/add-form.png "输入新管理员的登录信息，并选择是否将其设置为超级管理员。然后选择“添加”。")
+   > ![“添加管理员”窗体](_img/admin-roles/add-form.png "输入新管理员的登录信息，并选择是否将其设置为超级管理员。然后单击“添加”。")
 
    > [!NOTE]
    > 如果希望此管理员能够分配其他管理员，请记得选中“超级管理员”框  。
 
-5. 选择“添加”以分配新管理员后，他们将收到一封邀请他们登录门户的电子邮件。  
+5. 单击“添加”以分配新管理员后，他们将收到一封邀请他们登录门户的电子邮件  。  
 
 ## <a name="resources"></a>资源
 - [Visual Studio 管理和订阅支持](https://visualstudio.microsoft.com/support/support-overview-vs)

@@ -1,18 +1,18 @@
 ---
-title: 向订阅管理门户添加新的每月 Visual Studio 订阅 | Microsoft Docs
+title: 向订阅管理门户添加新的每月订阅 | Microsoft Docs
 author: evanwindom
 ms.author: cabuschl
 manager: cabuschl
 ms.assetid: 36f0d9f1-fe28-469f-a54c-dc46638270a8
-ms.date: 06/23/2020
+ms.date: 09/03/2020
 ms.topic: how-to
 description: 了解如何向订阅管理门户添加新购买的每月 Visual Studio 订阅
-ms.openlocfilehash: 778a3adbc9ca2117b0328a10d52904921bd0b80c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d765e03d2c499c8e96bb97fc532596b7cfd0b903
+ms.sourcegitcommit: f8d14fab194fcb30658f23f700da07d35ffc9d4a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85904703"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89561398"
 ---
 # <a name="add-new-monthly-visual-studio-subscriptions-to-the-subscriptions-administration-portal"></a>向订阅管理门户添加新的每月 Visual Studio 订阅
 使用 Azure 订阅购买新的每月 Visual Studio 订阅后，可能需要将它们添加到订阅管理门户，以便将它们分配给用户。  
@@ -25,17 +25,17 @@ ms.locfileid: "85904703"
 
 ## <a name="how-to-add-monthly-subscriptions"></a>如何添加每月订阅
 1. 登录订阅管理门户 (<https://manage.visualstudio.com>)
-1. 在“管理订阅者”选项卡上，选择“新建协议”下拉列表 
+1. 在“管理订阅者”选项卡上，选择“添加协议”下拉列表 
 1. 在下拉列表中，选择“新建每月订阅”
    > [!div class="mx-imgBorder"]
-   > ![用于添加新的每月订阅的下拉列表](_img/add-monthly-subs/add-subs-drop-down.png)
+   > ![用于添加新的每月订阅的下拉列表](_img/add-monthly-subs/add-subs-drop-down.png "依次选择“添加协议”、“新建每月订阅”。")
 1. 系统会搜索你拥有用户访问管理员权限的任何 Azure 订阅，并导入使用这些 Azure 订阅购买的所有 Visual Studio 订阅。
 1. 如果找不到你拥有用户访问管理员权限的 Azure 订阅，或者找到了符合条件的 Azure 订阅，但找不到 Visual Studio 订阅，你会看到以下消息：
    > [!div class="mx-imgBorder"]
-   > ![找不到一个或多个新的每月订阅](_img/add-monthly-subs/no-subs-found.png)
+   > ![找不到一个或多个新的每月订阅](_img/add-monthly-subs/no-subs-found.png "指出没有 Azure 订阅或 Visual Studio 订阅可供你使用的错误消息。")
 1. 如果找到了新的每月订阅，就会向你显示一条确认消息
    > [!div class="mx-imgBorder"]
-   > ![关于已添加订阅的确认消息](_img/add-monthly-subs/subs-added-confirmation.png)
+   > ![关于已添加订阅的确认消息](_img/add-monthly-subs/subs-added-confirmation.png "确认消息将显示已添加的订阅。")
 
 ## <a name="things-to-keep-in-mind"></a>要点
 - 添加新的每月订阅的选项只在第一次购买订阅时可用。  一旦你添加了每月订阅，我们就会在你每次登录门户时检查是否有新订阅。 

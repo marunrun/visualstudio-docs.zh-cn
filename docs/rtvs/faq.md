@@ -8,12 +8,12 @@ ms.author: kraigb
 manager: jillfra
 ms.workload:
 - data-science
-ms.openlocfilehash: 4eef8e79023bdd3bde03fec33c16a1c8f6d90446
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8c89f1d59405fb7475e827cac9624c6623d7041e
+ms.sourcegitcommit: 1d74273a50ede5a90d9d64372d93aad357daef42
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 09/02/2020
-ms.locfileid: "72306262"
+ms.locfileid: "89365660"
 ---
 # <a name="frequently-asked-questions"></a>常见问题
 
@@ -79,7 +79,7 @@ A. 能，可以使用 Visual Studio 中集成的任何源代码管理系统。
 
 **问：建议对 RTVS 项目采用哪种 .gitignore 设置**？
 
-A. Github 继续使用所推荐 .gitignore 文件的主存储库**。 请访问 [R .gitignore](https://github.com/github/gitignore/blob/master/R.gitignore)
+A. GitHub 继续使用所推荐 .gitignore 文件的存储库。 请访问 [R .gitignore](https://github.com/github/gitignore/blob/master/R.gitignore)
 
 ## <a name="remote-services"></a>远程服务
 
