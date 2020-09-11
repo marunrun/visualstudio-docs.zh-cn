@@ -10,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d7605307d24aa320d2f892dc332f9ff78e14114e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0dc781160b5cc9cb60da12d063f5b6d11844f3ac
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85905945"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012082"
 ---
 # <a name="walkthrough-add-features-to-a-custom-editor"></a>演练：向自定义编辑器添加功能
 创建自定义编辑器后，可以向其添加更多功能。
@@ -34,11 +34,11 @@ ms.locfileid: "85905945"
 
 3. 通过设置接口来实现编辑器工厂 <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory> 。
 
-     有关详细信息，请参阅 [编辑器工厂](/visualstudio/extensibility/editor-factories?view=vs-2015)。
+     有关详细信息，请参阅 [编辑器工厂](../vs-2015/extensibility/editor-factories.md?view=vs-2015)。
 
 4. 决定您是否希望编辑器使用就地激活或简化嵌入来管理文档视图对象窗口。
 
-     简化的嵌入编辑器窗口承载标准文档视图，而就地激活编辑器窗口承载 ActiveX 控件或其他活动对象作为其文档视图。 有关详细信息，请参阅 [简化的嵌入](../extensibility/simplified-embedding.md) 和 [就地激活](/visualstudio/misc/in-place-activation?view=vs-2015)。
+     简化的嵌入编辑器窗口承载标准文档视图，而就地激活编辑器窗口承载 ActiveX 控件或其他活动对象作为其文档视图。 有关详细信息，请参阅 [简化的嵌入](../extensibility/simplified-embedding.md) 和 [就地激活](../vs-2015/misc/in-place-activation.md?view=vs-2015)。
 
 5. 实现 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> 接口以处理命令。
 
@@ -51,7 +51,7 @@ ms.locfileid: "85905945"
         > [!NOTE]
         > 调用 `QueryService` <xref:Microsoft.VisualStudio.Shell.Interop.SVsFileChangeEx> 以获取指向的指针 `IVsFileChangeEx` 。
 
-7. 用源代码管理协调文档编辑事件。 请执行下列步骤：
+7. 用源代码管理协调文档编辑事件。 请按照以下步骤操作：
 
     1. 通过调用来获取指向 `IVsQueryEditQuerySave2` 的 `QueryService` 指针 <xref:Microsoft.VisualStudio.Shell.Interop.SVsQueryEditQuerySave> 。
 
@@ -63,13 +63,13 @@ ms.locfileid: "85905945"
 
          如果文件尚未保存或自上次保存后发生更改，则此方法将提示用户保存该文件。
 
-8. 启用 " **属性** " 窗口，以显示在编辑器中选定的文本的属性。 请执行下列步骤：
+8. 启用 " **属性** " 窗口，以显示在编辑器中选定的文本的属性。 请按照以下步骤操作：
 
     1. <xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection.OnSelectChange%2A>每次更改文本选择时调用，并传入的实现 <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> 。
 
     2. 对 `QueryService` <xref:Microsoft.VisualStudio.Shell.Interop.STrackSelection> 服务调用以获取指向的指针 <xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection> 。
 
-9. 使用户能够在编辑器和 **工具箱**之间，或在外部编辑器 (如 Microsoft Word) 和 **工具箱**之间拖放项。 请执行下列步骤：
+9. 使用户能够在编辑器和 **工具箱**之间，或在外部编辑器 (如 Microsoft Word) 和 **工具箱**之间拖放项。 请按照以下步骤操作：
 
     1. `IDropTarget`在您的编辑器上实现以提醒 IDE 您的编辑器是拖放目标。
 
@@ -115,7 +115,7 @@ ms.locfileid: "85905945"
 
 12. 实现区分上下文的帮助支持。
 
-     此步骤允许您在编辑器中为项提供 F1 帮助和动态帮助窗口支持。 有关详细信息，请参阅 [如何：为编辑器提供上下文](/visualstudio/extensibility/how-to-provide-context-for-editors?view=vs-2015)。
+     此步骤允许您在编辑器中为项提供 F1 帮助和动态帮助窗口支持。 有关详细信息，请参阅 [如何：为编辑器提供上下文](../vs-2015/extensibility/how-to-provide-context-for-editors.md?view=vs-2015)。
 
 13. 通过实现接口，从编辑器中公开自动化对象模型 `IDispatch` 。
 
@@ -152,6 +152,6 @@ ms.locfileid: "85905945"
 
   - `Window.Object`
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [参与自动化模型](../extensibility/internals/contributing-to-the-automation-model.md)

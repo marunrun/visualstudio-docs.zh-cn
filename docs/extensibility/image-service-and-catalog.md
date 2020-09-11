@@ -8,12 +8,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7df93a801b5ec34a433849baa41f2fd255790c86
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 26d8a3c4f3458c3659ccdd3a4cde802293342e5c
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85536326"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90011952"
 ---
 # <a name="image-service-and-catalog"></a>映像服务和目录
 本指南包含的指南和最佳实践适用于 Visual studio 2015 中引入的 Visual Studio 映像服务和映像目录。
@@ -118,7 +118,7 @@ ms.locfileid: "85536326"
 
  某些符号是为所有清单预定义的。 它们可在或元素的 Uri 特性中使用 \<Source> \<Import> ，以引用本地计算机上的路径。
 
-|**符号**|**说明**|
+|**符号**|**描述**|
 |-|-|
 |CommonProgramFiles|% CommonProgramFiles% 环境变量的值|
 |LocalAppData|% LocalAppData% 环境变量的值|
@@ -147,7 +147,7 @@ ms.locfileid: "85536326"
 |ID|请求图像名字对象的 ID 部分|
 |AllowColorInversion|[可选，默认值为 true]指示在深色背景上使用时，图像是否可以通过编程方式进行反转。|
 
- **Source**
+ **源**
 
  \<Source>元素定义单个图像源资产 (XAML 和 PNG) 。
 
@@ -164,7 +164,7 @@ ms.locfileid: "85536326"
 
 \<Source>元素可以具有以下一个可选子元素：
 
-|**Element**|**属性 (所有必需的) **|**定义**|
+|**元素**|**属性 (所有必需的) **|**定义**|
 |-|-|-|
 |\<Size>|值|源将用于设备单位)  (给定大小的图像。 图像将为方形。|
 |\<SizeRange>|MinSize，MaxSize|源将用于 MinSize 中的到 MaxSize (的图像，) 包括在内。 图像将为方形。|
@@ -712,7 +712,7 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
 3. 更新你的代码，以便使用映像服务通过已更新的映射来请求名字对象。  (这可能意味着要更新到托管代码的 **CrispImages** ，或者从映像服务请求 HBITMAPs 或 HICONs，并将其传递给本机代码。 ) 
 
 ## <a name="testing-your-images"></a>测试映像
- 您可以使用 "图像库查看器" 工具来测试图像清单，以确保正确编写所有内容。 可在 [Visual Studio 2015 SDK](visual-studio-sdk.md)中找到该工具。 可在 [此处](/visualstudio/extensibility/internals/vssdk-utilities?view=vs-2015)找到有关此工具和其他工具的文档。
+ 您可以使用 "图像库查看器" 工具来测试图像清单，以确保正确编写所有内容。 可在 [Visual Studio 2015 SDK](visual-studio-sdk.md)中找到该工具。 可在 [此处](./internals/vssdk-utilities.md?view=vs-2015)找到有关此工具和其他工具的文档。
 
 ## <a name="additional-resources"></a>其他资源
 
@@ -736,7 +736,7 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
 
  图像库查看器工具可以加载图像清单，并允许用户以相同的方式对其进行操作，以确保正确编写清单。 用户可以更改背景、大小、DPI 设置、高对比度和其他设置。 它还显示加载信息以查找清单中的错误，并显示清单中每个图像的源信息。
 
-## <a name="faq"></a>FAQ
+## <a name="faq"></a>常见问题解答
 
 - 是否存在加载时必须包括的依赖项 \<Reference Include="Microsoft.VisualStudio.*.Interop.14.0.DesignTime" /> ？
 

@@ -8,12 +8,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: bc975ff4f142b85297c20f16ac399fce588c093b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4d572c49f7d528b9dbb624bf31ad5e28dc3799aa
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80711272"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012238"
 ---
 # <a name="get-started-with-roslyn-analyzers"></a>Roslyn 分析器入门
 
@@ -25,13 +25,13 @@ ms.locfileid: "80711272"
 
 [教程：编写第一个分析器和代码修补程序](/dotnet/csharp/roslyn-sdk/tutorials/how-to-write-csharp-analyzer-code-fix)
 
-[添加代码修复演练：为用户提供分析器问题的修补程序](https://msdn.microsoft.com/magazine/dn904670.aspx)
+[添加代码修复演练：为用户提供分析器问题的修补程序](/archive/msdn-magazine/2015/february/csharp-adding-a-code-fix-to-your-roslyn-analyzer)
 
 [真实的 Roslyn 分析器](../extensibility/roslyn-analyzers-and-code-aware-library-for-immutablearrays.md) ，还可以观看 [对话](https://channel9.msdn.com/events/Build/2015/3-725)
 
 [GitHub 上的几个示例，分为三类分析器](https://github.com/dotnet/roslyn/blob/master/docs/analyzers/Analyzer%20Samples.md)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [.NET 编译器平台包版本引用](roslyn-version-support.md)
 - [GitHub OSS 站点上的更多文档](https://github.com/dotnet/roslyn/tree/master/docs/analyzers)

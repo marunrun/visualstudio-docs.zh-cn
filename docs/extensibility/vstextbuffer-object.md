@@ -13,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a5ea44d2b22c96d49f334f2ea33f9db8d69b5eb0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 856a685cbf962f8b26f77932c738c758edcf1f91
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80697728"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012186"
 ---
 # <a name="vstextbuffer-object"></a>VSTextBuffer 对象
 文本缓冲区对象表示 Unicode 文本流，该流通常与文件相关联。 <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer>对象可用于核心编辑器上下文之外，如向导中所示。
@@ -41,9 +41,9 @@ ms.locfileid: "80697728"
 |<xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPointContainer>|支持事件的连接点。|
 
 ## <a name="remarks"></a>备注
- `VSTextBuffer`通常通过对的调用找到 `QueryInterface` `IVsTextBuffer` 。 有关详细信息，请参阅 [文本缓冲区](/visualstudio/extensibility/accessing-the-text-buffer-by-using-the-legacy-api?view=vs-2015)。
+ `VSTextBuffer`通常通过对的调用找到 `QueryInterface` `IVsTextBuffer` 。 有关详细信息，请参阅 [文本缓冲区](../vs-2015/extensibility/accessing-the-text-buffer-by-using-the-legacy-api.md?view=vs-2015)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer>
 - <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextView>
 - [编辑图形](https://www.microsoft.com/download/details.aspx?id=55984)

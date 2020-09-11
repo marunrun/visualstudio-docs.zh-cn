@@ -12,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 21fefb776fceeeef4db6997a5bd12a8b987af7d2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 96386c2d3b7d1e822fdd1dd6632d754740f86301
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80739884"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90011926"
 ---
 # <a name="choose-between-shared-and-versioned-vspackages"></a>在共享和版本控制之间进行选择 Vspackage
 不同版本的 Visual Studio 可以在同一台计算机上共存。 Vspackage 可以支持任意版本组合 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 。
@@ -35,7 +35,7 @@ ms.locfileid: "80739884"
 
   - 对 VSPackage 进行编程，使 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 其适应运行它的版本。 然后，如果对更新的服务进行查询失败，你的 VSPackage 可以提供更早版本的支持的其他服务 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 。
 
-- 正确注册 VSPackage。 有关详细信息，请参阅 [VSPackage registration](../extensibility/internals/vspackage-registration.md) And [Managed VSPackage registration](https://msdn.microsoft.com/library/f69e0ea3-6a92-4639-8ca9-4c9c210e58a1)。
+- 正确注册 VSPackage。 有关详细信息，请参阅 [VSPackage registration](../extensibility/internals/vspackage-registration.md) And [Managed VSPackage registration](/previous-versions/bb166783(v=vs.100))。
 
 - 适当地注册文件扩展名。 有关详细信息，请参阅将 [文件扩展名注册到并行部署](../extensibility/registering-file-name-extensions-for-side-by-side-deployments.md)。
 
@@ -61,6 +61,6 @@ ms.locfileid: "80739884"
 
   除了规划 VSPackage 二进制文件的二进制兼容性外，还应考虑解决方案和项目文件格式。 如果你的 VSPackage 创建了一个新的项目类型，则必须决定该项目类型是只能在一个版本中运行，也可以在多个版本的中运行 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 。 有关详细信息，请参阅 [升级自定义项目](../extensibility/internals/upgrading-projects.md#upgrading-custom-projects)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [安装 Vspackage 与 Windows Installer](../extensibility/internals/installing-vspackages-with-windows-installer.md)
 - [组件管理](../extensibility/internals/component-management.md)

@@ -11,12 +11,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a05dec8fbef40143f31f2c0ac484824717ea2e32
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5941a0bc5d9f9f983a616dcc22cf1260d0911fa8
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80703919"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012121"
 ---
 # <a name="vspackage-registration"></a>VSPackage 注册
 Vspackage 必须建议 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 安装并加载它们。 此过程是通过在注册表中写入信息来完成的。 这是安装程序的典型作业。
@@ -55,6 +55,6 @@ Vspackage 必须建议 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.m
 
 - 如果某个组件同时指定为 "从源运行" 并在 SelfReg 表中列出，则可以拒绝自注册代码访问网络资源（例如类型库）。 这可能会导致在管理安装过程中组件安装失败。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [Windows Installer](/windows/desktop/Msi/windows-installer-portal)
-- [托管包注册](https://msdn.microsoft.com/library/f69e0ea3-6a92-4639-8ca9-4c9c210e58a1)
+- [托管包注册](/previous-versions/bb166783(v=vs.100))

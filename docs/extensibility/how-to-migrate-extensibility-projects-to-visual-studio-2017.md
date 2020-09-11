@@ -10,12 +10,12 @@ manager: jillfra
 ms.workload:
 - vssdk
 monikerRange: vs-2017
-ms.openlocfilehash: 3cd21242bd4b5a3bdb0da9691d6efb32288d3444
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: a3c4470ea1e54178ea9104af2645c3766d79f18a
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89742871"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012277"
 ---
 # <a name="how-to-migrate-extensibility-projects-to-visual-studio-2017"></a>如何：将扩展性项目迁移到 Visual Studio 2017
 
@@ -180,7 +180,7 @@ WPF | 托管桌面工作负载核心 | Microsoft.VisualStudio.Component.ManagedD
 
 ## <a name="find-component-ids"></a>查找组件 Id
 
-按 Visual Studio 产品排序的组件列表位于 [Visual studio 2017 工作负荷和组件 id](/visualstudio/install/workload-and-component-ids?view=vs-2019)。 在清单中将这些组件 Id 用于必备 Id。
+按 Visual Studio 产品排序的组件列表位于 [Visual studio 2017 工作负荷和组件 id](../install/workload-and-component-ids.md?view=vs-2019)。 在清单中将这些组件 Id 用于必备 Id。
 
 如果不确定哪个组件包含特定的二进制文件，请下载 [组件 > 二进制映射电子表格](https://aka.ms/vs2017componentid-binaries)。
 

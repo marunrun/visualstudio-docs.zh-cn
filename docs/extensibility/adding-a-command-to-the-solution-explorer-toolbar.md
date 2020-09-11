@@ -12,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: fbb84dd8c8a8240e4fec7791305029304ccce8f7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 08513ef67dfdffbf70b5ce2ff449a9ceb4250c37
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "84183725"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012290"
 ---
 # <a name="add-a-command-to-the-solution-explorer-toolbar"></a>将命令添加到解决方案资源管理器工具栏
 本演练演示如何将按钮添加到 **解决方案资源管理器** 工具栏中。
@@ -30,7 +30,7 @@ ms.locfileid: "84183725"
 > 使用 XML 命令表 (*. .vsct*) 文件而不是命令表配置 * () * 文件来定义菜单和命令在 vspackage 中的显示方式。 有关详细信息，请参阅 [Visual Studio 命令表 (。.Vsct) 文件](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)。
 
 ## <a name="prerequisites"></a>先决条件
- 从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
+ 从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 也可稍后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
 
 ## <a name="create-an-extension-with-a-menu-command"></a>使用菜单命令创建扩展
  创建一个名为的 VSIX 项目 `SolutionToolbar` 。 添加一个名为 **ToolbarButton**的菜单命令项模板。 有关如何执行此操作的信息，请参阅 [使用菜单命令创建扩展](../extensibility/creating-an-extension-with-a-menu-command.md)。
@@ -114,7 +114,7 @@ ms.locfileid: "84183725"
 
 5. 在 **“文件”** 菜单上，单击 **“关闭解决方案”** 。 该按钮将从工具栏中消失。
 
-   在加载 VSPackage 之前，按钮的可见性受控制 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 。 加载 VSPackage 后，该按钮的可见性由 VSPackage 控制。  有关详细信息，请参阅 [menucommand 与 OleMenuCommands](/visualstudio/misc/menucommands-vs-olemenucommands?view=vs-2015)。
+   在加载 VSPackage 之前，按钮的可见性受控制 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 。 加载 VSPackage 后，该按钮的可见性由 VSPackage 控制。  有关详细信息，请参阅 [menucommand 与 OleMenuCommands](../vs-2015/misc/menucommands-vs-olemenucommands.md?view=vs-2015)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [命令、菜单和工具栏](../extensibility/internals/commands-menus-and-toolbars.md)

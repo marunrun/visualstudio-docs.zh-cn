@@ -11,12 +11,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0ddfe2b61c8ef08d77fbb7c841b3bb69c167af2f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 64edfe1088e7fb8888933d85eeef096bd8c2006a
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85903734"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012264"
 ---
 # <a name="create-custom-editors-and-designers"></a>创建自定义编辑器和设计器
 
@@ -59,7 +59,7 @@ Visual Studio 集成开发环境 (IDE) 可托管不同类型的编辑器：
 
 - 您的编辑器是否需要承载 ActiveX 控件？
 
-   如果编辑器承载 ActiveX 控件，则按 [就地激活](/visualstudio/misc/in-place-activation?view=vs-2015)中所述，实现就地激活编辑器。 如果它没有承载 ActiveX 控件，则使用简化的嵌入编辑器，或自定义 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 默认编辑器。
+   如果编辑器承载 ActiveX 控件，则按 [就地激活](../vs-2015/misc/in-place-activation.md?view=vs-2015)中所述，实现就地激活编辑器。 如果它没有承载 ActiveX 控件，则使用简化的嵌入编辑器，或自定义 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 默认编辑器。
 
 - 编辑器是否支持多个视图？ 如果希望编辑器的视图与默认编辑器同时可见，则必须支持多个视图。
 
@@ -93,7 +93,7 @@ Visual Studio 集成开发环境 (IDE) 可托管不同类型的编辑器：
 
 ## <a name="related-sections"></a>相关章节
 
-[编辑器中的旧接口](/visualstudio/extensibility/legacy-interfaces-in-the-editor?view=vs-2015)\
+[编辑器中的旧接口](../vs-2015/extensibility/legacy-interfaces-in-the-editor.md?view=vs-2015)\
 说明如何通过旧版 API 访问核心编辑器。
 
 [开发旧版语言服务](../extensibility/internals/developing-a-legacy-language-service.md)\

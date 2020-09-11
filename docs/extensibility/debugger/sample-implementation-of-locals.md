@@ -11,12 +11,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6b70e0f9091d40ed6b5fc44934606f42ccd84b21
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 86aacb096001bdf634fe019ae9a28f01745c3ce0
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80713072"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90011887"
 ---
 # <a name="sample-implementation-of-locals"></a>局部变量的示例实现
 > [!IMPORTANT]
@@ -44,7 +44,7 @@ ms.locfileid: "80713072"
 
 10. Visual Studio 为每个本地调用 [GetPropertyInfo](../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) ，以获取本地的名称、值和类型。 此信息显示在 " **局部变量** " 窗口中。
 
-## <a name="in-this-section"></a>本节内容
+## <a name="in-this-section"></a>在本节中
  [实现 GetMethodProperty](../../extensibility/debugger/implementing-getmethodproperty.md) 介绍 [GetMethodProperty](../../extensibility/debugger/reference/idebugexpressionevaluator-getmethodproperty.md)的实现。
 
  [枚举局部变量](../../extensibility/debugger/enumerating-locals.md) 描述调试引擎 (如何) 进行调用以枚举局部变量或自变量。
@@ -58,7 +58,7 @@ ms.locfileid: "80713072"
 ## <a name="related-sections"></a>相关章节
  [计算上下文](../../extensibility/debugger/evaluation-context.md) 提供在 DE 调用表达式计算器 (EE) 时传递的参数。
 
- [MyCEE 示例](https://msdn.microsoft.com/library/624a018b-9179-402f-9d48-3aec87b48f4f) 演示一种实现方法，用于创建 MyC 语言的表达式计算器。
+ [MyCEE 示例](/previous-versions/) 演示一种实现方法，用于创建 MyC 语言的表达式计算器。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [显示局部变量](../../extensibility/debugger/displaying-locals.md)

@@ -10,18 +10,18 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: fe6fb916810bc8a7e960a4723a6a7c7a6f0c1410
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a664385594f139e2c3c5a18a0d8a59e23c13df0a
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80713214"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90011835"
 ---
 # <a name="register-a-custom-debug-engine"></a>注册自定义调试引擎
 调试引擎必须在 COM 约定之后将自身注册为类工厂，并通过 Visual Studio 注册表子项注册到 Visual Studio。
 
 > [!NOTE]
-> 可以在 TextInterpreter 示例中找到如何注册调试引擎的示例，该示例作为教程的一部分生成 [：使用 ATL COM 构建调试引擎](https://msdn.microsoft.com/library/9097b71e-1fe7-48f7-bc00-009e25940c24)。
+> 可以在 TextInterpreter 示例中找到如何注册调试引擎的示例，该示例作为教程的一部分生成 [：使用 ATL COM 构建调试引擎](/previous-versions/bb147024(v=vs.90))。
 
 ## <a name="dll-server-process"></a>DLL 服务器进程
  调试引擎通常在自己的 DLL 中设置为 COM 服务器。 因此，在 Visual Studio 可以访问 Visual Studio 之前，调试引擎必须使用 COM 注册其类工厂的 CLSID。 然后，调试引擎必须向 Visual Studio 进行注册，以建立任何属性 (也称为调试引擎支持) 指标。 写入 Visual Studio 注册表子项的度量值的选择取决于调试引擎支持的功能。
@@ -48,7 +48,7 @@ HRESULT CTextInterpreterModule::RegisterServer(BOOL bRegTypeLib, const CLSID * p
 }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [创建自定义调试引擎](../../extensibility/debugger/creating-a-custom-debug-engine.md)
 - [SDK 调试帮助程序](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)
-- [教程：使用 ATL COM 构建调试引擎](https://msdn.microsoft.com/library/9097b71e-1fe7-48f7-bc00-009e25940c24)
+- [教程：使用 ATL COM 构建调试引擎](/previous-versions/bb147024(v=vs.90))

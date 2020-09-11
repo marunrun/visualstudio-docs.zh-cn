@@ -10,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 711033a4ad2e782ecbe509595266426d186bed8f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 38556eec259e91dd9e007d8e9bf1ac8d59f159a0
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80708518"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90011757"
 ---
 # <a name="document-windows"></a>文档窗口
 在 Visual Studio 中， *文档窗口* 是一个带边框的子窗口，该窗口与多文档界面 (MDI) 窗口相关联。 文档窗口通常用于显示和修改源代码或文本，但它们也可以承载其他功能类型。 文档窗口：
@@ -33,7 +33,7 @@ ms.locfileid: "80708518"
   有关 Visual Studio 中窗口行为的详细信息，请参阅 [自定义窗口布局](../../ide/customizing-window-layouts-in-visual-studio.md)。
 
 ## <a name="document-window-implementation"></a>文档窗口实现
- 文档窗口是通过实现编辑器创建的。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory>接口在实例化编辑器时创建文档窗口。 有关详细信息，请参阅 [编辑器中的旧接口](/visualstudio/extensibility/legacy-interfaces-in-the-editor?view=vs-2015)。
+ 文档窗口是通过实现编辑器创建的。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory>接口在实例化编辑器时创建文档窗口。 有关详细信息，请参阅 [编辑器中的旧接口](../../vs-2015/extensibility/legacy-interfaces-in-the-editor.md?view=vs-2015)。
 
 > [!NOTE]
 > 若要在窗口中提供向后和向后导航点，请实现 <xref:Microsoft.VisualStudio.Shell.Interop.IVsBackForwardNavigation> 接口。 文本编辑器使用文本标记来标识文档中的导航点。

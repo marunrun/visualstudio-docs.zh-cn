@@ -14,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 67ba3664ee9ea3e349aa4e5e9c01eed04ecddb45
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8acd7d52478574e8c37474426d27bc5c6a8b7efe
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "84173560"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012355"
 ---
 # <a name="visual-studio-sdk"></a>Visual Studio SDK
 Visual Studio SDK 可帮助你扩展 Visual Studio 的功能，或将新功能集成到 Visual Studio 中。 可以将扩展分发给其他用户以及 Visual Studio Marketplace。 以下是一些扩展 Visual Studio 的方式：
@@ -41,7 +41,7 @@ Visual Studio SDK 可帮助你扩展 Visual Studio 的功能，或将新功能�
   如果你之前从未编写过 Visual Studio 扩展，则应在 [开始开发 Visual studio 扩展](../extensibility/starting-to-develop-visual-studio-extensions.md)时找到有关这些功能的详细信息。
 
 ## <a name="install-the-visual-studio-sdk"></a>安装 Visual Studio SDK
- Visual Studio SDK 是 Visual Studio 安装程序中的一项可选功能。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
+ Visual Studio SDK 是 Visual Studio 安装程序中的一项可选功能。 也可稍后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
 
 ## <a name="whats-new-in-the-visual-studio-sdk"></a>Visual Studio SDK 的新增功能
  Visual Studio SDK 具有一些新功能，例如同步加载扩展警告和 VSIX v3 格式以及重大更改，这可能要求你更新扩展。 有关详细信息，请参阅 [Visual studio 2019 sdk 的新增功能](../extensibility/whats-new-visual-studio-2019-sdk.md) 和 [VISUAL studio 2017 sdk 的新增](../extensibility/what-s-new-in-the-visual-studio-2017-sdk.md)功能。
@@ -65,7 +65,7 @@ Visual Studio SDK 可帮助你扩展 Visual Studio 的功能，或将新功能�
 ## <a name="other-visual-studio-sdk-resources"></a>其他 Visual Studio SDK 资源
  如果对 VSSDK 有疑问或想要分享开发扩展的经验，可以使用 [Visual Studio 扩展性论坛](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vsx) 或 [ExtendVS Gitter Chatroom](https://gitter.im/Microsoft/extendvs)。
 
- 可以在 [VSX Arcana 博客](https://blogs.msdn.microsoft.com/vsx/) 和 Microsoft mvp 编写的大量博客中找到详细信息：
+ 可以在 [VSX Arcana 博客](/archive/blogs/vsx/) 和 Microsoft mvp 编写的大量博客中找到详细信息：
 
 - [最喜爱的 Visual Studio 扩展](https://scottdorman.blog/2014/10/05/favorite-visual-studio-extensions/)
 
@@ -77,7 +77,7 @@ Visual Studio SDK 可帮助你扩展 Visual Studio 的功能，或将新功能�
 
 - [使用菜单命令创建扩展](../extensibility/creating-an-extension-with-a-menu-command.md)
 - [如何：将扩展性项目迁移到 Visual Studio 2017](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md)
-- [常见问题解答：将外接程序转换为 VSPackage 扩展](/visualstudio/extensibility/faq-converting-add-ins-to-vspackage-extensions?view=vs-2015)
+- [常见问题解答：将外接程序转换为 VSPackage 扩展](../vs-2015/extensibility/faq-converting-add-ins-to-vspackage-extensions.md?view=vs-2015)
 - [在托管代码中管理多个线程](../extensibility/managing-multiple-threads-in-managed-code.md)
 - [扩展菜单和命令](../extensibility/extending-menus-and-commands.md)
 - [将命令添加到工具栏](../extensibility/adding-commands-to-toolbars.md)

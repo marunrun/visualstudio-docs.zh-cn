@@ -10,17 +10,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b44da532207668d9526aec0ccdcab027b94184e6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b7634802899d72eb6abcb0aa837b8fb6a532b966
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80706383"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012056"
 ---
 # <a name="project-type-essentials"></a>项目类型基础知识
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 包含多种语言的项目类型，如 [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] 或 [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] 。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 还允许您创建自己的项目类型。
 
- 如果只是想要将自定义命令、编辑器或工具窗口添加到 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ，则可以执行此操作，而无需创建新的项目类型。 有关详细信息，请参阅下列主题：
+ 如果只是想要将自定义命令、编辑器或工具窗口添加到 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ，则可以执行此操作，而无需创建新的项目类型。 有关详情，请参阅以下主题：
 
 - [命令、菜单和工具栏](../../extensibility/internals/commands-menus-and-toolbars.md)
 
@@ -52,7 +52,7 @@ ms.locfileid: "80706383"
 
 - 项目类型是实现接口所需的 VSPackage 中的对象 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 。 如果使用 c # 开发项目类型，托管包框架项目类将实现所需的接口，并使你能够继承该实现。 有关详细信息，请参阅 [使用托管包框架实现 c # )  (项目类型 ](../../extensibility/internals/using-the-managed-package-framework-to-implement-a-project-type-csharp.md)。
 
-- 对于 c + + 开发人员而言，HierUtil 库中的类的工作方式类似。 有关详细信息，请参阅 [不在生成中：使用 HierUtil7 项目类实现项目类型 (c + +) ](https://msdn.microsoft.com/library/a5c16a09-94a2-46ef-87b5-35b815e2f346)。
+- 对于 c + + 开发人员而言，HierUtil 库中的类的工作方式类似。 有关详细信息，请参阅 [不在生成中：使用 HierUtil7 项目类实现项目类型 (c + +) ](/previous-versions/bb166212(v=vs.100))。
 
 - 项目类型可以支持生成到 .exe 或 .dll 程序集中的典型源代码文件以外的其他数据。 例如， [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 数据库项目包含对存储在磁盘上的脚本和查询文件的引用，并向 **解决方案资源管理器** 添加命令以对数据库执行脚本和查询，但这些项目不支持生成行为。 有关详细信息，请参阅 [打开和保存项目项](../../extensibility/internals/opening-and-saving-project-items.md)。
 
@@ -64,5 +64,5 @@ ms.locfileid: "80706383"
 
 - 项目类型可以支持多个配置，例如调试和发布。 用户可以使用所提供的属性页更改项目的不同配置。 有关详细信息，请参阅 [管理配置选项](../../extensibility/internals/managing-configuration-options.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [部署项目类型](../../extensibility/internals/deploying-project-types.md)

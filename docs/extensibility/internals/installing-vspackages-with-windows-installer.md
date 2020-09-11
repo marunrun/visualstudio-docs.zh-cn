@@ -11,17 +11,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2eb90dbffa9f04cd17afa70d2bdfc59205bc99cb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8a7ace9203cd8f21a9e9ab5dc525bf604aeff678
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80707465"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012199"
 ---
 # <a name="installing-vspackages-with-windows-installer"></a>使用 Windows Installer 安装 VSPackage
 将 VSPackage 集成到 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 只需将文件复制到用户的计算机。 VSPackage 的安装程序必须安装 VSPackage 及其依赖文件，并将其注册并集成到中 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 。 你的 VSPackage 可以利用集成功能，如在 "初始屏幕" 和 "关于" 对话框中显示图标 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 。
 
- Microsoft Windows Installer 文件是分发 Vspackage 的建议方法。 易于使用的 Windows Installer 包可在支持的任何 Windows 操作系统上运行 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 。 有关详细信息，请参阅 [Windows Installer](https://msdn.microsoft.com/library/121be21b-b916-43e2-8f10-8b080516d2a0)。
+ Microsoft Windows Installer 文件是分发 Vspackage 的建议方法。 易于使用的 Windows Installer 包可在支持的任何 Windows 操作系统上运行 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 。 有关详细信息，请参阅 [Windows Installer](/previous-versions/2kt85ked(v=vs.120))。
 
 ## <a name="in-this-section"></a>本节内容
 - [Windows Installer 基本知识](../../extensibility/internals/windows-installer-basics.md)

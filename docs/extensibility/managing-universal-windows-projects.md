@@ -8,20 +8,20 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: dc6894bcfe3bfab3b0246d716b0bd85152ad17e2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 83e3b07bc3373070953709ffe913f37529e74bc7
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "81744938"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012303"
 ---
 # <a name="manage-universal-windows-projects"></a>管理通用 Windows 项目
 
-通用 Windows 应用是面向 Windows 8.1 和 Windows Phone 8.1 的应用，使开发人员能够在这两个平台上使用代码和其他资产。 共享代码和资源保留在共享项目中，而特定于平台的代码和资源保留在单独的项目中，一个用于 Windows，另一个用于 Windows Phone。 有关通用 Windows 应用的详细信息，请参阅 [通用 windows 应用](https://msdn.microsoft.com/library/windows/apps/dn609832.aspx)。 用于管理项目的 Visual Studio 扩展应该知道，通用 Windows 应用程序项目的结构与单平台应用程序不同。 本演练演示如何导航共享项目并管理共享项。
+通用 Windows 应用是面向 Windows 8.1 和 Windows Phone 8.1 的应用，使开发人员能够在这两个平台上使用代码和其他资产。 共享代码和资源保留在共享项目中，而特定于平台的代码和资源保留在单独的项目中，一个用于 Windows，另一个用于 Windows Phone。 有关通用 Windows 应用的详细信息，请参阅 [通用 windows 应用](/windows/uwp/get-started/create-uwp-apps)。 用于管理项目的 Visual Studio 扩展应该知道，通用 Windows 应用程序项目的结构与单平台应用程序不同。 本演练演示如何导航共享项目并管理共享项。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
-从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 你还可以在以后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
+从 Visual Studio 2015 开始，你不需要从下载中心安装 Visual Studio SDK。 它作为 Visual Studio 安装程序中的可选功能提供。 也可稍后安装 VS SDK。 有关详细信息，请参阅 [安装 Visual STUDIO SDK](../extensibility/installing-the-visual-studio-sdk.md)。
 
 ### <a name="navigate-the-shared-project"></a>导航共享项目
 
@@ -233,7 +233,7 @@ ms.locfileid: "81744938"
     ```
 
     > [!IMPORTANT]
-    > 如果用户已在实验实例中打开 c + + 通用 Windows 应用项目，则上述代码将引发异常。 这是一个已知问题。 若要避免此异常，请将 `foreach` 上面的块替换为以下内容：
+    > 如果用户已在实验实例中打开 c + + 通用 Windows 应用项目，则上述代码将引发异常。 这是已知问题。 若要避免此异常，请将 `foreach` 上面的块替换为以下内容：
 
     ```csharp
     var importingProjects = sharedAssetsProject.EnumImportingProjects();

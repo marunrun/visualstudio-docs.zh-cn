@@ -8,12 +8,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2c7d8a02de9331f268cd06ad35e19faab6494fe0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f1ba6e9af922a7a7ab4dffe555aa55d3ab7bb9dd
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80699855"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012095"
 ---
 # <a name="colors-and-styling-for-visual-studio"></a>Visual Studio 的颜色和样式
 
@@ -283,7 +283,7 @@ Windows 使用多个高对比度系统级主题，这些主题提高了文本、
 
 ### <a name="system-color-set"></a>系统颜色集
 
-[WPF 团队博客上的表： SystemColors 引用](https://blogs.msdn.microsoft.com/wpf/2010/11/30/systemcolors-reference/)指示一组完整的系统颜色名称，以及每个主题中显示的相应色相。
+[WPF 团队博客上的表： SystemColors 引用](/archive/blogs/wpf/systemcolors-reference)指示一组完整的系统颜色名称，以及每个主题中显示的相应色相。
 
 将此有限的一组颜色应用于您的 UI 时， *您将会丢失 "正常" 主题中存在的细微细节*。 下面是一个使用细小灰色颜色的 UI 示例，用于区分工具窗口内的区域。 当与高对比度模式下显示的同一窗口配对时，您可以看到所有背景都具有相同的色调，并且这些区域的边框仅由边框表示：
 
@@ -311,7 +311,7 @@ Windows 使用多个高对比度系统级主题，这些主题提高了文本、
 | --- | --- |
 | ActiveCaption | -悬停并按下时的活动 IDE 和 rafted 窗口按钮字形<br />-IDE 和 rafted 窗口的标题栏背景<br />-默认状态栏背景 |
 | ActiveCaptionText | -用于标题栏前景 (文本和字形的活动 IDE 和 rafted 窗口) <br />-悬停并按下活动窗口按钮的背景和边框 |
-| 控制 | -组合框、下拉列表和搜索控件默认和禁用的背景，包括下拉按钮<br />-"停靠目标" 按钮背景<br />-命令栏背景<br />-工具窗口背景 |
+| 控件 | -组合框、下拉列表和搜索控件默认和禁用的背景，包括下拉按钮<br />-"停靠目标" 按钮背景<br />-命令栏背景<br />-工具窗口背景 |
 | ControlDark | -IDE 背景<br />-菜单和命令栏分隔符<br />-命令栏边框<br />-菜单阴影<br />-工具窗口选项卡默认和悬停边框和分隔符<br />-"文档溢出" 按钮背景<br />-停靠目标标志符号边框 |
 | ControlDarkDark |-失去焦点，选择的文档选项卡窗口 |
 | ControlLight |-自动隐藏选项卡边框<br />-组合框和下拉列表边框<br />-停靠目标背景和边框 |
@@ -340,7 +340,7 @@ Windows 使用多个高对比度系统级主题，这些主题提高了文本、
 
 VSPackage 可以通过自定义类别和 "字体和颜色" 属性页上的 "显示项目" 来控制字体和颜色。 使用此机制时，Vspackage 必须实现 [IVsFontAndColorDefaultsProvider](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolordefaultsprovider) 接口及其关联接口。
 
-原则上，此机制可用于修改所有现有显示项以及包含它们的类别。 但是，它不应用于修改 "文本编辑器" 类别或其显示项。 有关 "文本编辑器" 类别的详细信息，请参阅 " [字体和颜色概述](/visualstudio/extensibility/font-and-color-overview?view=vs-2015)"。
+原则上，此机制可用于修改所有现有显示项以及包含它们的类别。 但是，它不应用于修改 "文本编辑器" 类别或其显示项。 有关 "文本编辑器" 类别的详细信息，请参阅 " [字体和颜色概述](../../vs-2015/extensibility/font-and-color-overview.md?view=vs-2015)"。
 
 若要实现自定义类别或显示项，VSPackage 必须：
 
@@ -423,7 +423,7 @@ IDE 缓存有关字体和颜色设置的信息。 因此，在对 IDE 字体和�
 
   **或者**
 
-- **轮询 IDE 中的更改**。 可以通过系统实现的 [以下](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage) 接口完成此操作。 尽管主要是为了支持暂留，但 [GetItem](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage.getitem) 方法可以获取显示项的字体和颜色信息。 有关字体和颜色设置的详细信息，请参阅 MSDN 文章 [访问存储的字体和颜色设置](/visualstudio/extensibility/accessing-stored-font-and-color-settings?view=vs-2015)。
+- **轮询 IDE 中的更改**。 可以通过系统实现的 [以下](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage) 接口完成此操作。 尽管主要是为了支持暂留，但 [GetItem](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage.getitem) 方法可以获取显示项的字体和颜色信息。 有关字体和颜色设置的详细信息，请参阅 MSDN 文章 [访问存储的字体和颜色设置](../../vs-2015/extensibility/accessing-stored-font-and-color-settings.md?view=vs-2015)。
 
 > [!NOTE]
 > 若要确保轮询结果正确，请使用 [IVsFontAndColorCacheManager](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorcachemanager) 接口来确定是否需要缓存刷新和更新，然后再调用 [以下](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage) 接口的检索方法。
