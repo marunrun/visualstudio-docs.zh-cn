@@ -2,17 +2,17 @@
 title: Visual Studio 订阅中的 Pluralsight 权益 | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
-manager: lank
+manager: cabuschl
 ms.assetid: bc8b526c-2fed-4ac8-aaa2-73d2495256fd
-ms.date: 04/20/2020
+ms.date: 08/04/2020
 ms.topic: how-to
 description: 了解有关所选的 Visual Studio 订阅中随附的 Pluralsight 培训订阅。
-ms.openlocfilehash: f06b2bb8d2151255cb606fd3dcb8344b1fb37411
-ms.sourcegitcommit: c620d59578db1b89f80e64ae04b4898bc4ab292d
+ms.openlocfilehash: 87cc42e2a0d4c8c95c771a88413b4a8af70bdc14
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87375893"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89509752"
 ---
 # <a name="pluralsight-training-benefits-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的 Pluralsight 培训权益
 
@@ -23,35 +23,50 @@ ms.locfileid: "87375893"
  并非所有之前使用过通过 Visual Studio 订阅提供的 Pluralsight 订阅的订阅者都无法兑换新的 Pluralsight 权益套餐，具体取决于其具有的订阅类型。 如果你没有资格兑换额外的 Pluralsight 培训权益，则在尝试激活 Pluralsight 网站上的权益时，你会收到一条通知。
 
 ## <a name="activation-steps"></a>激活步骤
-1. 要激活订阅，请连接到 [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)，然后在“专业开发”部分中的 Pluralsight 权益磁贴上单击“获取代码”链接  。
+1. 要激活订阅，请连接到 [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)，然后单击 Pluralsight 权益磁贴上的“激活”链接。  若要缩小显示的磁贴列表，可以选择组筛选器。  Pluralsight 位于“专业开发”权益组中。
    > [!div class="mx-imgBorder"]
-   > ![Pluralsight 权益磁贴](_img/vs-pluralsight/vs-pluralsight-6month-tile.png)
-   >
-   > [!IMPORTANT]
-   > 单击 Pluralsight 权益磁贴上的“获取代码”链接时，可能会收到以下消息：
-   >
-   > “请注意：  如果此前已通过 Visual Studio 订阅激活其他 Pluralsight 套餐，使用此代码可能无法创建新的 Pluralsight 帐户。”
+   > ![Pluralsight 权益磁贴](_img/vs-pluralsight/vs-pluralsight-tile.png "单击“激活”以声明权益")
 
-2. 你将收到一条通知消息，指示已成功检索到优惠券代码。  单击“激活”  。
-
-3. 将重定向到“Pluralsight”页，以获取 Visual Studio 订阅中包含的权益。
+（上面的磁贴是 Visual Studio Enterprise 订阅者将看到的内容的示例。  如果你使用的是其他 Visual Studio 订阅，则 Pluralsight 权益的持续时间将有所不同。  有关详细信息，请参阅资格表。）
+1. 将重定向到“Pluralsight”页，以获取 Visual Studio 订阅中包含的权益。
    - 在窗体上提供所需的联系人信息
-   - 单击复选框接受使用和隐私策略条款
-   - 单击“我同意，激活权益”  。
+   - 单击复选框接受使用条款
+   - 单击“兑换”。
    > [!div class="mx-imgBorder"]
-   > ![Pluralsight 激活你的权益](_img/vs-pluralsight/vs-pluralsight-create-account.png)
+   > ![Pluralsight 注册](_img/vs-pluralsight/vs-pluralsight-registration.png "填写注册表单，单击相应的复选框接受条款，然后单击“兑换”")
 
-5. 设置帐户可能需要一段时间。  设置完成后，会在页面上看到一条确认消息，并收到含有登录信息的电子邮件。  电子邮件将发送到创建帐户时指定的别名。  如果在查找邮件时遇到问题，请务必检查垃圾邮件文件夹。
+   > [!NOTE]
+   > 注册页面将在几分钟后过期。  如果在页面过期之前未完成注册过程，请返回到 <https://my.visualstudio.com/benefits> 页面上的 Pluralsight 磁贴，然后再次单击“激活”。 
+
+1. 设置帐户可能需要一段时间。  设置完成后，会在页面上看到一条确认消息，并收到含有登录信息的电子邮件。  电子邮件将发送到创建帐户时指定的别名。  如果在查找邮件时遇到问题，请务必检查垃圾邮件文件夹。
 
    > [!NOTE]
    > 如果帐户不符合兑换新产品/服务的条件，则会在收到的电子邮件中说明因不符合条件以致创建帐户时出现问题。  其中还包含用于联系 Pluralsight 支持团队的信息，他们可解答有关帐户的任何问题。
-   
 
-6. 成功创建帐户后，收到的电子邮件将包含用户名，并请求创建密码。  提供密码，再次输入以确认，然后单击“登录到 Pluralsight”。
+1. 单击“设置密码”。
 
-7. 输入欢迎电子邮件提供的用户名和刚刚创建的密码，然后单击“登录”。
+1. 在“新密码”字段中输入所需的密码，在“确认密码”字段中再次输入密码，然后单击“保存”。
 
-8. 就这么简单！  现在便可以开始学习数以千计的 Pluralsight 课程了！
+1. 就这么简单！  现在便可以开始学习数以千计的 Pluralsight 课程了！
+
+## <a name="status-of-your-pluralsight-subscription"></a>Pluralsight 订阅的状态
+激活 Pluralsight 权益后，Visual Studio 订阅门户中的磁贴外观将会更改，以帮助你跟踪订阅的状态。  
+
+### <a name="while-your-subscription-is-active"></a>当订阅处于活动状态时
+现在你会看到一个小圆形按钮（而不是“激活”按钮），如果选中，将直接转到 Pluralsight 门户，以便可以登录并继续训练。  
+
+在磁贴顶部的 Pluralsight 标题下，你会看到显示 Pluralsight 订阅剩余多少时间的文本。  如果订阅在 60 天内过期，则文本将切换为显示剩余天数（而不是月数）。  
+
+在磁贴底部，你会看到显示 Pluralsight 订阅的激活日期和到期日期的文本。
+
+   > [!div class="mx-imgBorder"]
+   > ![激活后的 Pluralsight 磁贴](_img/vs-pluralsight/vs-pluralsight-activated.png "激活后，该磁贴将显示订阅的剩余天数，以及到期日期和指向 Pluralsight 门户的链接。")
+
+### <a name="when-your-subscription-expires"></a>当订阅过期时
+当 Pluralsight 订阅过期时，状态将更改为“剩余 0天”，并删除指向 Pluralsight 门户的链接。 你仍然可以看到订阅的激活日期，以及到期日期。  
+   > [!div class="mx-imgBorder"]
+   > ![过期后的 Pluralsight 磁贴](_img/vs-pluralsight/vs-pluralsight-expired.png "过期后，将删除指向 Pluralsight 的链接，并在磁贴底部显示订阅处于活动状态的日期。")
+
 
 ## <a name="eligibility"></a>资格
 
@@ -83,6 +98,9 @@ ms.locfileid: "87375893"
 
 ### <a name="q-do-i-have-access-to-any-customized-learning--playlists-or-channels"></a>问：我是否有权访问任何自定义的学习播放列表或频道？
 答：可以。 作为 Visual Studio 订阅者，你有权访问特色角色、学习路径和自定义频道（播放列表），这属于 Pluralsight 培训权益的一部分。 特色内容由 Microsoft 和 Pluralsight 特别策划，非常适合学习相关的重要领域。 通过 Visual Studio 订阅门户 <https://my.visualstudio.com/benefits> 激活 Pluralsight 权益，获得在 Pluralsight 主页上访问此内容以及其他内容的权限。
+
+### <a name="q-the-pluralsight-tile-doesnt-have-an-activate-link-how-can-i-activate-the-benefit"></a>问：Pluralsight 磁贴没有“激活”链接。 如何激活权益？
+答：如果已激活 Pluralsight 权益，则“激活”链接将被替换为 Pluralsight 的登录页面的链接。  你还将看到激活该权益的日期，以及有关订阅剩余时间的信息。  如果已使用一个订阅，则无法激活另一个订阅。
 
 ### <a name="q-what-happens-when-my-pluralsight-subscription-runs-out"></a>问：Pluralsight 订阅到期后，会发生什么情况？
 答：免费 Pluralsight 订阅到期后，可选择直接从 Pluralsight 购买订阅。  请联系 [Pluralsight](https://www.pluralsight.com) 获取完整详细信息。

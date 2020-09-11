@@ -13,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b6aaa6309e04f5143b70ff233c0b621ab2350b9c
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: b77ea7f04377a1c531efeff780e9303f0bd3eb79
+ms.sourcegitcommit: a3edc753c951f317b67ce294cd2fc74f0c45390c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77633117"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89426958"
 ---
 # <a name="msbuild-toolset-toolsversion"></a>MSBuild 工具集 (ToolsVersion)
 
@@ -45,7 +45,7 @@ MSBuild 使用任务、目标和工具的工具集以生成应用程序。 通�
 ::: moniker-end
 
 > [!NOTE]
-> 一些项目类型使用 `sdk` 属性，而不是 `ToolsVersion`。 详情请参阅[包、元数据和框架](/dotnet/core/packages)和 [.NET Core 的 csproj 格式的新增内容](/dotnet/core/tools/csproj)。
+> 一些项目类型使用 `sdk` 属性，而不是 `ToolsVersion`。 有关详细信息，请参阅 [.NET Core 的 csproj 格式的新增内容](/dotnet/core/tools/csproj)。
 
 ## <a name="how-the-toolsversion-attribute-works"></a>ToolsVersion 特性的工作原理
 

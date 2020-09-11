@@ -3,25 +3,25 @@ title: 创建 Blazor Web 应用
 description: 提供有关 Visual Studio for Mac 中 ASP.NET Core 应用的 Blazor 支持的信息。
 author: jongalloway
 ms.author: jogallow
-ms.date: 12/17/2019
+ms.date: 08/31/2020
 ms.technology: vs-ide-general
 ms.assetid: D2717D3A-9225-40A8-8155-7D0143B2CA60
 no-loc:
 - Blazor
 - Blazor WebAssembly
 ms.topic: how-to
-ms.openlocfilehash: 86a8c35d2a379d6afbbe6cf55f53346223e7c462
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0dcc254366e0d652ab7a8442a4d0c526fd72c403
+ms.sourcegitcommit: 703c68667261df5985a73282c1cbb0541118989c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 09/02/2020
-ms.locfileid: "86211589"
+ms.locfileid: "89402496"
 ---
 # <a name="create-no-locblazor-web-apps"></a>创建 Blazor Web 应用
 
 本指南介绍如何创建你的第一个 Blazor Web 应用。 若需要更深入的指导，请参阅 [ASP.NET Core Blazor 简介](/aspnet/core/blazor/index)。
 
-ASP.NET Core Blazor 支持两种不同的托管选择：Blazor Server 和 Blazor WebAssembly。 Visual Studio for Mac 支持这两种托管模型。 Visual Studio for Mac 8.4+ 支持 Blazor Server，Visual Studio for Mac 8.6+ 同时支持两者。 有关 Blazor 托管模型的详细信息，请参阅 [ASP.NET Core Blazor 托管模型](https://docs.microsoft.com/aspnet/core/blazor/hosting-models?view=aspnetcore-3.1)。 8\.6 之后的版本将支持在 Visual Studio for Mac 中调试 Blazor WebAssembly 项目。
+ASP.NET Core Blazor 支持两种不同的托管选项：Blazor WebAssembly (WASM) 或 Blazor Server。 Visual Studio for Mac 支持这两种托管模型。 Visual Studio for Mac 8.4+ 支持 Blazor Server，Visual Studio for Mac 8.6+ 同时支持两者。 有关 Blazor 托管模型的详细信息，请参阅 [ASP.NET Core Blazor 托管模型](https://docs.microsoft.com/aspnet/core/blazor/hosting-models?view=aspnetcore-3.1)。 预览版 v8.8 中支持在 Visual Studio for Mac 中调试 Blazor WebAssembly 项目（通过“Visual Studio”>“检查更新...”菜单中的预览更新通道来实现）。
 
 什么是 Blazor？ Blazor 是一个框架，用于通过 .NET 构建交互式客户端 Web UI，进而可为 Web 开发人员提供以下优势：
 
@@ -31,6 +31,27 @@ ASP.NET Core Blazor 支持两种不同的托管选择：Blazor Server 和 Blazor
 * 受益于 .NET 的性能、可靠性和安全性。
 * 始终高效支持电脑、Linux 和 macOS 上的 Visual Studio。
 * 以一组稳定、功能丰富且易用的通用语言、框架和工具为基础来进行生成。
+
+## <a name="create-a-new-no-locblazor-webassembly-project"></a>创建新的 Blazor WebAssembly 项目
+1. 在“开始”窗口上，选择“新建”创建新项目：
+
+   ![突出显示“新建”选项的 Visual Studio for Mac“开始”窗口](media/blazor-new-project.png)
+
+1. 在“新建项目”对话框中，选择“.NET Core”>“应用”>“Blazor WebAssembly 应用”，然后选择“下一步”：![为“新建项目”对话框选择一个模板，其中选择了“Blazor Server 应用”模板](media/blazor-wasm-project-template.png)
+
+1. 选择 .NET Core 3.1 作为目标框架，然后选择“下一步”。 
+   ![配置新的 Blazor WebAssembly应用对话框，其中显示了选择了“.NET Core 3.1”的目标框架](media/blazor-wasm-select-target-framework.png)
+
+1. 为项目选择一个名称，并在需要时添加 Git 支持。 选择“创建”创建项目。
+    ![输入项目名称时配置新的 Blazor WebAssembly应用对话框](media/blazor-wasm-name-project.png)
+
+   Visual Studio for Mac 会在代码布局窗口中打开项目。
+
+1. 选择“运行” > “开始执行(不调试)”以运行应用。
+
+   Visual Studio 将启动 [Kestrel](/aspnet/core/fundamentals/servers/kestrel)，这将打开浏览器转至 `https://localhost:5001` 并显示 Blazor Web 应用。
+
+   ![Microsoft Edge 中的 Blazor Web 应用](media/blazor-new-app-in-edge.png)
 
 ## <a name="creating-a-new-no-locblazor-server-project"></a>创建新的 Blazor Server 项目
 
@@ -43,23 +64,23 @@ ASP.NET Core Blazor 支持两种不同的托管选择：Blazor Server 和 Blazor
    ![配置新的 BlazorServer 应用对话框，其中显示了选择了“.NET Core 3.1”的目标框架](media/blazor-select-target-framework.png)
 
 1. 为项目选择一个名称，并在需要时添加 Git 支持。 选择“创建”创建项目。
-   ![配置在输入项目名称时显示的新Blazor Server 应用对话框](media/blazor-name-project.png)
+   ![配置新的 BlazorBlazor Server 应用对话框](media/blazor-name-project.png)
 
    Visual Studio for Mac 会在代码布局窗口中打开项目。
 1. 选择“运行” > “开始执行(不调试)”以运行应用。
 
    Visual Studio 将启动 [Kestrel](/aspnet/core/fundamentals/servers/kestrel)，这将打开浏览器转至 `https://localhost:5001` 并显示 Blazor Web 应用。
 
-   ![Safari 中的 Blazor Web 应用](media/blazor-new-app-in-edge.png)
+   ![Microsoft Edge 中的 Blazor Web 应用](media/blazor-new-app-in-edge.png)
 
 ## <a name="no-locblazor-support-in-visual-studio-for-mac"></a>Visual Studio for Mac 中的 Blazor 支持
 
 Visual Studio for Mac（从版本 8.4 开始）包含新功能，可帮助你创建新的 Blazor Server 项目。 此外，它还提供所需的标准支持，例如生成、运行和调试 Blazor 项目。 在 Visual Studio for Mac 8.6 中，添加了对创建、生成和运行 Blazor WebAssembly 项目的支持。
 
-在上面的演练中，我们看到了 Blazor Server 应用项目模板如何帮助你创建新的 Blazor Server 应用项目。 我们来看看 Visual Studio for Mac 中用于支持 Blazor 项目开发的一些附加功能。
+在上面的演练中，我们看到了 Blazor Server 应用项目模板如何帮助你创建新的 Blazor Server 应用或 Blazor WebAssembly 应用项目。 我们来看看 Visual Studio for Mac 中用于支持 Blazor 项目开发的一些附加功能。
 
 ### <a name="editor-support-for-razor-files"></a>编辑器支持 .razor 文件
-Visual Studio for Mac 支持编辑 .razor 文件 - 这是在创建 Blazor 应用程序时将使用的大多数文件。 Windows 和 Mac 版本的 IDE 对 razor 文件共享相同的编辑器。 你将看到对 .razor 文件的完整着色和完成支持，包括项目中声明的 Razor 组件的完成情况。
+Visual Studio for Mac 支持编辑 .razor 文件 - 这是在创建 Blazor 应用程序时将使用的大多数文件。 Visual Studio for Mac 提供对 .razor 文件的完整着色和完成支持，包括项目中声明的 Razor 组件的完成情况。
 
 ![显示 Blazor 的 Intellisense 的 Visual Studio for Mac 编辑器窗口](media/blazor-intellisense.png)
 
@@ -94,12 +115,19 @@ appSettings,json 文件包含配置数据，如连接字符串。
 
 此文件包含程序的入口点。 有关详细信息，请参阅 [ASP.NET Core Web 主机](/aspnet/core/fundamentals/host/web-host)。
 
-### <a name="startupcs"></a>Startup.cs
+### <a name="no-locblazor-server-app-specific-files"></a>特定于 Blazor 服务器应用的文件
+#### <a name="app-settings"></a>应用设置
+
+appSettings,json 文件包含配置数据，如连接字符串。
+
+有关配置的详细信息，请参阅 [ASP.NET 中的配置指南](/aspnet/core/fundamentals/configuration/index)。
+
+#### <a name="startupcs"></a>Startup.cs
 
 此文件包含配置应用行为的代码，例如该应用是否需要 cookie 的同意。 有关详细信息，请参阅 [ASP.NET Core 中的应用启动](/aspnet/core/fundamentals/startup)。
 
 ## <a name="summary"></a>总结
-在本教程中，你了解了如何在 Visual Studio for Mac 中创建新的 Blazor Server 应用，并了解了在创建 Blazor 应用程序时 Visual Studio for Mac 可为你提供帮助的一些功能。
+在本教程中，你了解了如何在 Visual Studio for Mac 中创建新的 Blazor Server 应用或 Blazor WebAssembly 应用，并了解了在创建 Blazor 应用程序时 Visual Studio for Mac 可为你提供帮助的一些功能。
 
 ## <a name="see-also"></a>请参阅
 

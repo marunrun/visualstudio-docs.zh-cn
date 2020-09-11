@@ -8,16 +8,16 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4b3d50f8fcad0294adec032322229e9dd6cedac2
-ms.sourcegitcommit: 8e5b0106061bb43247373df33d0850ae68457f5e
+ms.openlocfilehash: 147a7dbc029ae894a0054837e92feb0108dc19b4
+ms.sourcegitcommit: f8d14fab194fcb30658f23f700da07d35ffc9d4a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88508075"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89561583"
 ---
 # <a name="run-profiling-tools-with-or-without-the-debugger"></a>运行带/不带调试器的分析工具
 
-Visual Studio 提供了性能测量值和分析工具选择。 某些工具（如“CPU 使用情况”和“内存使用情况”）可以在带或不带调试器的情况下运行，也可以在发布版本或调试版本配置上运行。 “应用程序时间线”等性能探查器工具可以在发布版本或调试版本上运行。 调试器集成工具（如“诊断工具”窗口和“事件”选项卡）仅在调试会话期间运行。
+Visual Studio 提供了性能测量值和分析工具选择。 某些工具（如“CPU 使用情况”和“内存使用情况”）可以在带或不带调试器的情况下运行，也可以在发布版本或调试版本配置上运行。 [“诊断工具”窗口](../profiling/profiling-feature-tour.md#view-performance-while-debugging)中显示的工具仅在调试会话期间运行。 [性能探查器](../profiling/profiling-feature-tour.md#post_mortem)中显示的工具在没有调试器的情况下运行，并在选择停止和收集数据后分析结果（用于事后分析）。
 
 >[!NOTE]
 >可以在 Windows 7 及更高版本中使用非调试器性能工具。 运行调试器集成分析工具需要 Windows 8 或更高版本。
@@ -46,6 +46,11 @@ Visual Studio 提供了性能测量值和分析工具选择。 某些工具（�
 - 如果运行的是 Visual Studio Enterprise，则可以转到“工具” > “选项” > “IntelliTrace”启用或禁用 IntelliTrace。
 
 当停止调试时，诊断会话结束。
+
+有关详细信息，请参见:
+
+- [通过分析 CPU 使用情况衡量应用程序性能](../profiling/beginners-guide-to-performance-profiling.md)
+- [在 Visual Studio 中衡量内存使用情况](../profiling/memory-usage.md)
 
 ### <a name="the-events-tab"></a>“事件”选项卡
 
@@ -86,6 +91,15 @@ Visual Studio 提供了性能测量值和分析工具选择。 某些工具（�
 可以保存报表，并从诊断工具启动页面上的“最近打开的会话”列表中将其打开。
 
 ![诊断工具最近打开的会话列表屏幕截图](../profiling/media/diaghubopenexistingdiagsession.png "PDHUB_OpenExistingDiagSession")
+
+有关详细信息，请参见:
+
+- [分析 CPU 使用情况](../profiling/cpu-usage.md)
+- [分析 .NET 代码的内存使用情况](../profiling/dotnet-alloc-tool.md)
+- [分析内存使用情况](../profiling/analyze-memory-usage.md)
+- [分析 .NET 异步代码的性能](../profiling/analyze-async.md)
+- [分析数据库性能](../profiling/analyze-database.md)
+- [分析 GPU 使用情况](../profiling/gpu-usage.md)
 
 ## <a name="collect-profiling-data-from-the-command-line"></a>通过命令行收集分析数据
 

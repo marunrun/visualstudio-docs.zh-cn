@@ -1,29 +1,29 @@
 ---
-title: Microsoft 产品和服务协议 (MPSA) 中的 Visual Studio 订阅 | Microsoft Docs
+title: MPSA 中的 Visual Studio 订阅 | Microsoft Docs
 author: evanwindom
-ms.author: lank
-manager: lank
+ms.author: v-evwin
+manager: cabuschl
 ms.assetid: b331c837-3524-42b7-820e-b4fdd5e12793
-ms.date: 03/03/2020
+ms.date: 09/03/2020
 ms.topic: conceptual
-description: Microsoft 产品和服务协议 (MPSA) 中的 Visual Studio 订阅
-ms.openlocfilehash: 90bfb27fcb80910f6add41c30d4c03ece1520ef4
-ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
+description: 了解如何管理 Microsoft 产品和服务协议 (MPSA) 中的 Visual Studio 订阅
+ms.openlocfilehash: 9d26bccebb11a59933c37ec0f29a9b6e30e86c5b
+ms.sourcegitcommit: f8d14fab194fcb30658f23f700da07d35ffc9d4a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88801459"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89561385"
 ---
 # <a name="visual-studio-subscriptions-in-a-microsoft-products-and-services-agreement-mpsa"></a>Microsoft 产品和服务协议 (MPSA) 中的 Visual Studio 订阅
 如果已通过 MPSA 计划购买 Visual Studio 订阅，在成为 Visual Studio 订阅管理员并向用户分配订阅之前，需要注意一些事项。 如果你已被设置为管理员，则可以直接转到 Visual Studio 订阅[管理门户](https://manage.visualstudio.com/)。
 
-MPSA 客户现在通过名为[业务中心](https://businessaccount.microsoft.com/Customer)的新门户管理通过 MPSA 购买的资产，该门户支持与批量许可服务中心 (VLSC) 类似的功能。 其中包括查看许可证摘要、订单、下载内容、密钥、用户等。但 MPSA 中 Visual Studio 订阅的行为与云服务非常相似。 业务中心还使用工作帐户（而不是 Microsoft 帐户 (MSA)）登录。 如果组织在使用 Microsoft 365 或 Azure Active Directory 等云服务，且这两项服务中的任意一项使用了你的电子邮件，则该帐户已经是工作帐户。 在这种情况下，可以使用现有密码注册到业务中心。 如果组织未使用云服务，且你的电子邮件不是工作帐户，你可以使用该电子邮件注册到业务中心。
+MPSA 客户通过名为[业务中心](https://businessaccount.microsoft.com/Customer)的门户管理通过 MPSA 购买的资产，该门户支持与批量许可服务中心 (VLSC) 类似的功能。 其中包括查看许可证摘要、订单、下载内容、密钥、用户等。但 MPSA 中 Visual Studio 订阅的行为与云服务非常相似。 业务中心还使用工作帐户（而不是 Microsoft 帐户 (MSA)）登录。 如果组织在使用 Office 365 或 Azure Active Directory 等云服务，且这两项服务中的任意一项使用了你的电子邮件，则该电子邮件已经是工作帐户。 在这种情况下，可以使用现有密码注册到业务中心。 如果组织未使用云服务，且你的电子邮件不是工作帐户，你可以使用该电子邮件注册到业务中心。
 
-此外，在你成为 Visual Studio 订阅管理员后，应在 Visual Studio 订阅[管理门户](https://manage.visualstudio.com/)中将订阅分配给订阅者。 在 MPSA 中，必须将 Visual Studio 订阅设置为其各自的管理门户，即 Visual Studio 订阅管理门户。 为此，需要将购买帐户关联到租户（即 contoso.onmicrosoft.com）。
+此外，在你成为 Visual Studio 订阅管理员后，应在 Visual Studio 订阅[管理门户](https://manage.visualstudio.com/)中分配订阅。 在 MPSA 中，必须将 Visual Studio 订阅设置为其各自的管理门户，即 Visual Studio 订阅管理门户。 为此，需要将购买帐户关联到租户（即 contoso.onmicrosoft.com）。
 
 请注意，存在两种类型的租户（托管租户和非托管租户）。 托管租户是指已经以组织管理员的身份对其进行管理的租户。
 
-非托管租户是未分配任何管理员的租户，不适用于 Microsoft 365 等联机服务。 使用非工作帐户的电子邮件注册到业务中心时也会创建非托管租户。 如果注册到业务中心时系统要求创建密码，则表明该电子邮件不是工作帐户，并将创建一个非托管帐户。
+非托管租户是未分配任何管理员的租户，不适用于 Office 365 等联机服务。 使用非工作帐户的电子邮件注册到业务中心时也会创建非托管租户。 如果注册到业务中心时系统要求创建密码，则表明该电子邮件不是工作帐户，并将创建一个非托管帐户。
 
 完成租户关联之前，成为 Visual Studio 订阅管理员需满足以下几个要求/执行以下几个步骤。
 
@@ -39,14 +39,14 @@ MPSA 客户现在通过名为[业务中心](https://businessaccount.microsoft.co
 
 满足上述标准后，你可按以下步骤继续将购买帐户关联到租户。
 1. 登录[业务中心](https://businessaccount.microsoft.com/Customer)。
-2. 选择“帐户”选项卡，然后选择“关联域” 。
+2. 单击“帐户”选项卡并选择“关联域”   。
 3. 选择“购买帐户”（如有多个购买帐户）  。
 4. 选择“租户”（即 contoso.onmicrosoft.com）  。
-5. 选择“关联域”。
+5. 单击“关联域”  。
 
 通常情况下，关联后，系统会在几分钟内将满足标准的所有用户都设置为 Visual Studio 订阅管理员。 但是有时可能需要长达 24 小时。 设置租户后，你便能访问 Visual Studio 订阅管理门户。 如果花费的时间超过 24 小时，请按照以下步骤联系 MPSA 支持部门：
 1. 连接到 <https://www.microsoft.com/licensing/mpsa/default>
-2. 在页面顶部选择“更多”菜单。 
+2. 在页面顶部单击“更多”菜单  。 
 3. 选择“支持” 
 4. 选择“许可支持” 
 5. 请选择最适合你的需求的支持选项。 

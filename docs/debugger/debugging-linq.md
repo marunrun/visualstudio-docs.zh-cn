@@ -19,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 256dadfeea4108f12e24864017b6e1752ece25a5
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 146519b33be19da1103aed958e42ec5ffaee8bd0
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738206"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89509765"
 ---
 # <a name="debugging-linq"></a>调试 LINQ
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 支持对语言集成查询 (LINQ) 代码进行调试，但是有一些限制。 大多数调试功能都对 LINQ 语句有效，其中包括单步执行、设置断点以及在调试器窗口中查看结果。 本主题介绍 LINQ 调试的主要限制。
@@ -105,7 +105,7 @@ End Function
  修改后的查询在每次遍历 `IsEven` 时都会调用函数 `items`。 可以使用调试器窗口来查看每个“item”是否满足指定条件，并且可以单步执行 `IsEven` 中的代码。 此示例中的谓词相当简单。 但是，如果必须调试一个更复杂的谓词，这种方法也会十分有用。
 
 ## <a name="edit-and-continue-not-supported-for-linq"></a><a name="BKMK_EditandContinueNotSupportedforLINQ"></a> LINQ 不支持“编辑并继续”
- Edit and Continue 支持对 LINQ 查询的更改，但有一些限制。 有关详细信息，请参阅 [EnC 支持的更改](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits)
+ Edit and Continue 支持对 LINQ 查询的更改，但有一些限制。 有关详细信息，请参阅 [EnC 支持的更改](https://github.com/dotnet/roslyn/blob/master/docs/wiki/EnC-Supported-Edits.md)
 
 ## <a name="see-also"></a>请参阅
 

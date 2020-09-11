@@ -21,12 +21,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 28fd0033f5ef6f83ca29432f95d6b635fcd36116
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 1c298658c7e9f385e5140ea46f8069512c0bf278
+ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77634365"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89508036"
 ---
 # <a name="copy-task"></a>Copy 任务
 
@@ -42,7 +42,7 @@ ms.locfileid: "77634365"
 |`DestinationFiles`|可选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 指定要对其复制源文件的文件的列表。 此列表应与 `SourceFiles` 参数中指定的列表具有一对一的映射关系。 也就是说，`SourceFiles` 中指定的第一个文件将复制到 `DestinationFiles` 中指定的第一个位置，依次类推。|
 |`DestinationFolder`|可选 <xref:Microsoft.Build.Framework.ITaskItem> 参数。<br /><br /> 指定要将文件复制到其中的目录。 这必须是目录，而不能是文件。 如果该目录不存在，将自动创建它。|
 |`OverwriteReadOnlyFiles`|可选 `Boolean` 参数。<br /><br /> 覆盖文件，即使它们标记为只读文件|
-|`Retries`|可选 `Int32` 参数。<br /><br /> 指定之前的所有尝试都失败后，尝试复制的次数。 默认为零。<br /><br /> **注意：** 重试的使用可以屏蔽生成过程中的同步问题。|
+|`Retries`|可选 `Int32` 参数。<br /><br /> 指定之前的所有尝试都失败后，尝试复制的次数。 默认为零。<br /><br /> 注意：重试的使用可以屏蔽生成过程中的同步问题。<br /><br /> **注意：** 尽管任务默认为零次重试，但任务的使用通常会传递 `$(CopyRetryCount)`，这在默认情况下为非零值。|
 |`RetryDelayMilliseconds`|可选 `Int32` 参数。<br /><br /> 指定任何必需的重试之间的延迟。 默认值为传递给 CopyTask 构造函数的 RetryDelayMillisecondsDefault 参数。|
 |`SkipUnchangedFiles`|可选 `Boolean` 参数。<br /><br /> 如果为`true` ，则跳过复制在源和目标之间保持不变的文件。 如果文件的大小和上次修改时间相同，则 `Copy` 任务认为文件保持不变。 <br /><br /> **注意：** 如果此参数设置为 `true`，则不应对包含目标使用依赖关系分析，因为如果源文件的上次修改时间比目标文件的上次修改时间更新，则只运行该任务。|
 |`SourceFiles`|必选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 指定要复制的文件。|
@@ -76,7 +76,7 @@ ms.locfileid: "77634365"
 
 ## <a name="example"></a>示例
 
-以下示例将 `MySourceFiles` 项集合中的项复制到文件夹 c:\MyProject\Destination  。
+以下示例将 `MySourceFiles` 项集合中的项复制到文件夹 c:\MyProject\Destination。
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -97,7 +97,7 @@ ms.locfileid: "77634365"
 
 ## <a name="example"></a>示例
 
-以下示例演示如何执行递归复制。 此项目以递归方式将所有文件从 c:\MySourceTree 复制到 c:\MyDestinationTree，同时保留目录结构   。
+以下示例演示如何执行递归复制。 此项目以递归方式将所有文件从 c:\MySourceTree 复制到 c:\MyDestinationTree，同时保留目录结构 。
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
