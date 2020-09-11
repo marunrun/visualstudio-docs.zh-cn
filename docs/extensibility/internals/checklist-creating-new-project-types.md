@@ -11,12 +11,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9372762f713b6a5ec78a92eeb96e8a616101b5bf
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f166e0b3280783dac891b3b582acd7822a3974c0
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "84183387"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90011913"
 ---
 # <a name="checklist-create-new-project-types"></a>清单：创建新的项目类型
 若要创建新的项目类型，必须完成多个任务。 以下清单提供了这些任务的指南：
@@ -33,7 +33,7 @@ ms.locfileid: "84183387"
 
     - 项目工厂，用于管理创建新项目和打开现有项目。 有关详细信息，请参阅 [使用项目工厂创建项目实例](../../extensibility/internals/creating-project-instances-by-using-project-factories.md)。
 
-    - 项目层次结构和命令处理。 有关详细信息，请参阅 [使用 HierUtil7 项目类实现项目类型 (c + +) ](https://msdn.microsoft.com/library/a5c16a09-94a2-46ef-87b5-35b815e2f346)、 [项目模型的元素](../../extensibility/internals/elements-of-a-project-model.md)、 [项目模型核心组件](../../extensibility/internals/project-model-core-components.md)、 [menucommand 与 OleMenuCommands](/visualstudio/misc/menucommands-vs-olemenucommands?view=vs-2015)。
+    - 项目层次结构和命令处理。 有关详细信息，请参阅 [使用 HierUtil7 项目类实现项目类型 (c + +) ](/previous-versions/bb166212(v=vs.100))、 [项目模型的元素](../../extensibility/internals/elements-of-a-project-model.md)、 [项目模型核心组件](../../extensibility/internals/project-model-core-components.md)、 [menucommand 与 OleMenuCommands](../../vs-2015/misc/menucommands-vs-olemenucommands.md?view=vs-2015)。
 
     - 项目项管理，包括将项目添加到 " **新建项目** " 对话框。 有关详细信息，请参阅 [添加项目和项目项模板](../../extensibility/internals/adding-project-and-project-item-templates.md) 和 [注册项目和项模板](../../extensibility/internals/registering-project-and-item-templates.md)。
 
@@ -57,7 +57,7 @@ ms.locfileid: "84183387"
 
 8. 创建 Microsoft Installer (*.msi*) 文件以安装 vspackage。 有关详细信息，请参阅 [使用 Windows Installer 安装 vspackage](../../extensibility/internals/installing-vspackages-with-windows-installer.md)、 [注册项目类型](../../extensibility/internals/registering-a-project-type.md)和 [vspackage](../../extensibility/internals/vspackages.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [Visual Studio 中的层次结构](../../extensibility/internals/hierarchies-in-visual-studio.md)
 - [何时创建项目类型](../../extensibility/internals/when-to-create-project-types.md)
 - [创建项目类型](../../extensibility/internals/creating-project-types.md)

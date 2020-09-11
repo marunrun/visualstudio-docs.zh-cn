@@ -13,12 +13,12 @@ manager: jillfra
 ms.workload:
 - vssdk
 monikerRange: vs-2017
-ms.openlocfilehash: 8000c6cc067f61a64c71b8c8ac4f5c0176504cd4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1d093ecc8afd9fe822c19c2c1f2ceb5765208865
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85903381"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90011991"
 ---
 # <a name="add-user-control-to-the-start-page"></a>将用户控件添加到起始页
 
@@ -189,7 +189,7 @@ ms.locfileid: "85903381"
 
     应显示自定义起始页。 如果要更改任何文件，则必须关闭实验实例，进行更改，复制并粘贴已更改的文件，然后重新打开实验实例以查看更改。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-- [WPF 容器控件](https://msdn.microsoft.com/library/a0177167-d7db-4205-9607-8ae316952566)
+- [WPF 容器控件](/previous-versions/bb675291(v=vs.110))
 - [演练：将自定义 XAML 添加到起始页](../extensibility/walkthrough-adding-custom-xaml-to-the-start-page.md)

@@ -11,12 +11,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e809eeb6a1a5d2c24368932713d69c7199b5af38
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9d97a7edd62540d12a0a60d15b3179ca0a623c26
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80713138"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90011822"
 ---
 # <a name="roadmap-for-extending-the-debugger"></a>扩展调试器的路线图
 此文档提供了用来扩展调试器的指南和参考信息 [!INCLUDE[vs_current_short](../../code-quality/includes/vs_current_short_md.md)] [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] 。
@@ -27,7 +27,7 @@ ms.locfileid: "80713138"
 
 - 面向 Windows 本机操作系统并写入 *。PDB* 文件，你可以通过将集成到中的本机代码调试引擎 (DE) 调试程序 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 。 不需要实现 "DE" 或 "表达式计算器"。 表达式计算器是用 c + + 编程语言的语法编写的。
 
--  (MSIL) 输出生成 Microsoft 中间语言，你可以用托管代码调试引擎 DE 调试程序，该程序也集成到中 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 。 因此，只需实现表达式计算器。 提供了一个示例表达式计算器。 有关详细信息，请参阅下列主题：
+-  (MSIL) 输出生成 Microsoft 中间语言，你可以用托管代码调试引擎 DE 调试程序，该程序也集成到中 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 。 因此，只需实现表达式计算器。 提供了一个示例表达式计算器。 有关详情，请参阅以下主题：
 
    [表达式计算](../../extensibility/debugger/expression-evaluation-visual-studio-debugging-sdk.md)
 
@@ -39,11 +39,11 @@ ms.locfileid: "80713138"
 
    [编写公共语言运行时表达式计算器](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)
 
-- 针对专有操作系统或其他一些运行时环境，需要编写自己的 DE。 提供了一个使用 ATL COM 创建简单的 DE 的教程。 有关详细信息，请参阅下列主题：
+- 针对专有操作系统或其他一些运行时环境，需要编写自己的 DE。 提供了一个使用 ATL COM 创建简单的 DE 的教程。 有关详情，请参阅以下主题：
 
    [创建自定义调试引擎](../../extensibility/debugger/creating-a-custom-debug-engine.md)
 
-   [教程：使用 ATL COM 构建调试引擎](https://msdn.microsoft.com/library/9097b71e-1fe7-48f7-bc00-009e25940c24)
+   [教程：使用 ATL COM 构建调试引擎](/previous-versions/bb147024(v=vs.90))
 
    [实现端口供应商](../../extensibility/debugger/implementing-a-port-supplier.md)
 

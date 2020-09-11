@@ -11,12 +11,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7b940677c370106ebdcc63c7984d553003251e8a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7f953add14c617d54d44cf8d6bf873c28eea8651
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80710007"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012160"
 ---
 # <a name="automation-model-overview"></a>自动化模型概述
 自动化模型包含一组对象，您可以对这些对象编写 Visual Studio 外接程序或扩展。 外接程序是一个可操作 Visual Studio 环境和自动化常见任务的应用程序。 Visual Studio 扩展可以创建自定义 Visual Studio 组件或添加到标准组件（如文本编辑器）的功能。
@@ -26,13 +26,13 @@ ms.locfileid: "80710007"
 
  ![Visual Studio 自动化对象图表](../../extensibility/internals/media/vsvisualstudioautomationobjectchart.gif "vsVisualStudioAutomationObjectChart")
 
- 有关详细信息，请参阅 [扩展 Visual Studio 环境](https://msdn.microsoft.com/Library/4173a963-7ac7-4966-9bb7-e28a9d9f6792)。
+ 有关详细信息，请参阅 [扩展 Visual Studio 环境](/previous-versions/esk3eey8(v=vs.140))。
 
  环境为不同的功能区域提供了一个模型。 例如，你可能会在代码中找到各种元素的代码模型。 每个文档元素都有一个文档模型。 项目区域是一个区域，对 VSPackage 提供程序特别感兴趣。 你可能希望你的新项目类型以与自动化模型相同的方式向自动化模型提供 [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] 。 为 [Vspackage 提供自动化](../../extensibility/internals/providing-automation-for-vspackages.md)中概述了该过程。
 
  可以考虑扩展环境自动化模型的位置：
 
-- 项目
+- Project
 
 - 文档
 
@@ -40,7 +40,7 @@ ms.locfileid: "80710007"
 
 - 构建
 
-有关自动化的详细信息，请参阅 [Visual Studio 的自动化和扩展性](/visualstudio/extensibility/extensibility-in-visual-studio?view=vs-2015)。 本文档及其提供的文档可帮助你做出有关如何为你的 VSPackage 提供自动化的决策。
+有关自动化的详细信息，请参阅 [Visual Studio 的自动化和扩展性](../../vs-2015/extensibility/extensibility-in-visual-studio.md?view=vs-2015)。 本文档及其提供的文档可帮助你做出有关如何为你的 VSPackage 提供自动化的决策。
 
-## <a name="see-also"></a>另请参阅
-- [如何：创建外接程序](https://msdn.microsoft.com/Library/50be56d2-e3a5-4cd2-8569-2a0666b268ce)
+## <a name="see-also"></a>请参阅
+- [如何：创建外接程序](/previous-versions/80493a3w(v=vs.140))

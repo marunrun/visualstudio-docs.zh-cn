@@ -10,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8f02c7ec0e453f0758ba2ab13145fcdff11b442a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a4a3dba370594397d2f247de90063f69c4195cb6
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "84173598"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012147"
 ---
 # <a name="author-vsct-files"></a>创作 .vsct 文件
 本文档演示如何创作 *.vsct* 文件，以将 (UI) 元素添加到 Visual Studio 集成开发环境 (IDE) 中的菜单项、工具栏和其他用户界面。 将 UI 元素添加到 Visual Studio 包时，请使用以下步骤 (VSPackage) ，该文件还没有 *.vsct* 文件。
@@ -108,7 +108,7 @@ ms.locfileid: "84173598"
        > [!NOTE]
        > 工具栏按钮必须具有图标。
 
-   有关详细信息，请参阅 [menucommand 与 OleMenuCommands](/visualstudio/misc/menucommands-vs-olemenucommands?view=vs-2015)。
+   有关详细信息，请参阅 [menucommand 与 OleMenuCommands](../../vs-2015/misc/menucommands-vs-olemenucommands.md?view=vs-2015)。
 
 4. 如果你的任何命令需要图标，请将一个 [位图](../../extensibility/bitmaps-element.md) 元素添加到 `Commands` 元素。 然后，对于每个图标，将 [位图](../../extensibility/bitmap-element.md) 元素添加到 `Bitmaps` 元素。 此处为指定位图资源位置的位置。 有关详细信息，请参阅 [将图标添加到菜单命令](../../extensibility/adding-icons-to-menu-commands.md)。
 

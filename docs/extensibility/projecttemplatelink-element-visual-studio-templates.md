@@ -14,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e6d402b6605f2e01a20d400c2c33573c686a1cdd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e87b33d9b4b3863b89ecd06c3ea959c6e35ec7c0
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80701823"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90011978"
 ---
 # <a name="projecttemplatelink-element-visual-studio-templates"></a>ProjectTemplateLink 元素（Visual Studio 模板）
 指定多项目模板中一个项目的 *.vstemplate* 文件的路径。
@@ -46,17 +46,17 @@ ms.locfileid: "80701823"
 
 ### <a name="attributes"></a>属性
 
-|特性|描述|
+|属性|描述|
 |---------------|-----------------|
 |`ProjectName`|可选特性。<br /><br /> 指定多项目模板中每一个项目的名称。 " **新建项目** " 对话框无法为单个项目分配名称。|
-|`CopyParameters`|使主要组模板中的所有变量可复制到每个链接模板。<br /><br /> 链接模板中的参数具有前缀 `"$ext_*$"`。 例如，如果在父组模板中，参数的 `$projectname$` 值为 **ExampleProject1**，则当链接模板获得要执行的转换时，它将获取参数，该参数 `$ext_projectname$` 是 `$projectname$` 父组模板中参数的副本。<br /><br /> 这使链接模板能够共享一些只能在父组模板中方便地创建的公用参数。<br /><br /> 此特性为可选特性，未包含此特性时，它将自动默认为 `false`。<br /><br /> 在 Visual Studio 2013 Update 2 中引入。 若要引用正确的产品版本，请参阅 [VISUAL STUDIO 2013 SDK Update 2 中提供的引用程序集](https://msdn.microsoft.com/library/42b65c3e-e42b-4c39-98c8-bea285f25ffb)。|
+|`CopyParameters`|使主要组模板中的所有变量可复制到每个链接模板。<br /><br /> 链接模板中的参数具有前缀 `"$ext_*$"`。 例如，如果在父组模板中，参数的 `$projectname$` 值为 **ExampleProject1**，则当链接模板获得要执行的转换时，它将获取参数，该参数 `$ext_projectname$` 是 `$projectname$` 父组模板中参数的副本。<br /><br /> 这使链接模板能够共享一些只能在父组模板中方便地创建的公用参数。<br /><br /> 此特性为可选特性，未包含此特性时，它将自动默认为 `false`。<br /><br /> 在 Visual Studio 2013 Update 2 中引入。 若要引用正确的产品版本，请参阅 [VISUAL STUDIO 2013 SDK Update 2 中提供的引用程序集](/previous-versions/dn632168(v=vs.120))。|
 
 ### <a name="child-elements"></a>子元素
  无。
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|说明|
+|元素|描述|
 |-------------|-----------------|
 |[ProjectCollection](../extensibility/projectcollection-element-visual-studio-templates.md)|指定多项目模板的组织和内容。|
 |[SolutionFolder](../extensibility/solutionfolder-element-visual-studio-templates.md)|对多项目模板中的项目进行分组。|

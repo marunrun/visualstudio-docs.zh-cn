@@ -11,12 +11,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2589ec24f230287306e0ff7e802d381fb6ab18b7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 91cb06a5ba0890f89a9016447066eb1196ae9e8b
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80704761"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012368"
 ---
 # <a name="syntax-coloring-in-a-legacy-language-service"></a>在旧版语言服务中进行语法着色
 
@@ -28,7 +28,7 @@ Visual Studio 使用着色服务来识别语言的元素，并在编辑器中用
  ![SVC 着色程序图](../../extensibility/internals/media/figlgsvccolorizer.gif)
 
 > [!NOTE]
-> 语法着色服务独立于着色文本的通用 Visual Studio 机制。 有关支持着色的常规机制的详细信息 [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] ，请参阅 [使用字体和颜色](/visualstudio/extensibility/using-fonts-and-colors?view=vs-2015)。
+> 语法着色服务独立于着色文本的通用 Visual Studio 机制。 有关支持着色的常规机制的详细信息 [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] ，请参阅 [使用字体和颜色](../../vs-2015/extensibility/using-fonts-and-colors.md?view=vs-2015)。
 
  除 colorizer 外，语言服务还可以提供由编辑器使用的自定义可着色项，方法是公布它提供自定义可着色项。 为此，可以 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems> 在实现接口的同一对象上实现接口 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo> 。 当编辑器调用方法时，它会返回自定义可着色项的数目 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems.GetItemCount%2A> ，当编辑器调用方法时，它将返回单个自定义可着色项 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems.GetColorableItem%2A> 。
 
@@ -60,7 +60,7 @@ Visual Studio 使用着色服务来识别语言的元素，并在编辑器中用
     3. 使用方法返回的着色信息 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer.ColorizeLine%2A> 显示选定的文本。
 
 > [!NOTE]
-> 除了使用 language service colorizer 外，VSPackage 还可以使用一般用途的 Visual Studio 文本着色机制。 有关此机制的详细信息，请参阅 [使用字体和颜色](/visualstudio/extensibility/using-fonts-and-colors?view=vs-2015)。
+> 除了使用 language service colorizer 外，VSPackage 还可以使用一般用途的 Visual Studio 文本着色机制。 有关此机制的详细信息，请参阅 [使用字体和颜色](../../vs-2015/extensibility/using-fonts-and-colors.md?view=vs-2015)。
 
 ## <a name="in-this-section"></a>本节内容
 - [实现语法着色](../../extensibility/internals/implementing-syntax-coloring.md)

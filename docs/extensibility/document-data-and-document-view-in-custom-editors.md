@@ -10,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 04e89194ff09bc273294246cc25718c999daf70f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 608396c79816606b855d49776390b0b1bf9044d7
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80712135"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012459"
 ---
 # <a name="document-data-and-document-view-in-custom-editors"></a>自定义编辑器中的文档数据和文档视图
 自定义编辑器由两部分组成：文档数据对象和文档视图对象。 顾名思义，文档数据对象表示要显示的文本数据。 同样，文档视图对象 (或 "视图" ) 表示一个或多个要在其中显示文档数据对象的窗口。
@@ -34,7 +34,7 @@ ms.locfileid: "80712135"
 
  IDE 会通知视图有关事件 (例如，当包含文档的解决方案关闭时) 通过匹配项标识符 (为正在运行的文档表中的每一项的 ItemID) 。 有关此内容的详细信息，请参阅 [运行文档表](../extensibility/internals/running-document-table.md)。
 
- 有两个选项可用于创建自定义编辑器的视图。 一种是就地激活模型，其中的视图承载于使用 ActiveX 控件或文档数据对象的窗口中。 第二个是简化的嵌入模型，视图由承载 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 并 <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane> 实现以处理窗口命令。 有关就地激活模型的信息，请参阅 [就地激活](/visualstudio/misc/in-place-activation?view=vs-2015)。 有关简化的嵌入模型的信息，请参阅 [简化嵌入](../extensibility/simplified-embedding.md)。
+ 有两个选项可用于创建自定义编辑器的视图。 一种是就地激活模型，其中的视图承载于使用 ActiveX 控件或文档数据对象的窗口中。 第二个是简化的嵌入模型，视图由承载 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 并 <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane> 实现以处理窗口命令。 有关就地激活模型的信息，请参阅 [就地激活](../vs-2015/misc/in-place-activation.md?view=vs-2015)。 有关简化的嵌入模型的信息，请参阅 [简化嵌入](../extensibility/simplified-embedding.md)。
 
 ## <a name="see-also"></a>请参阅
 

@@ -10,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b8391cbdd3a857ea4ebaf3a36655520935f1a128
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ead19e9f50201ab795e3c3f68b661037d309d98d
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80709763"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90011900"
 ---
 # <a name="choose-the-installation-directory-for-a-vspackage"></a>选择 VSPackage 的安装目录
 VSPackage 及其支持文件必须位于用户的文件系统上。 位置取决于 VSPackage 是托管的还是非托管的、并排版本控制方案和用户选择。
@@ -59,7 +59,7 @@ VSPackage 及其支持文件必须位于用户的文件系统上。 位置取决
 
 如果 VSPackage DLL 包含资源，并且 **SatelliteDll\DllName** 注册表项指向它，则 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 会尝试按上述顺序加载它们。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [在共享和版本控制之间进行选择 Vspackage](../../extensibility/choosing-between-shared-and-versioned-vspackages.md)
 - [管理 VSPackage](../../extensibility/managing-vspackages.md)
-- [管理包注册](https://msdn.microsoft.com/library/f69e0ea3-6a92-4639-8ca9-4c9c210e58a1)
+- [管理包注册](/previous-versions/bb166783(v=vs.100))

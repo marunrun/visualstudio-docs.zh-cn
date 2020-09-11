@@ -13,17 +13,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 55739b1ef577123ac0395b4c5cfb1e3c5dbc779f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d319dfd0f44646f911a01a157a92fc2e5596e492
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80697957"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012394"
 ---
 # <a name="vscodewindow-object"></a>VSCodeWindow 对象
 代码窗口是一个专用的文档窗口，它可以包含一个或多个文本视图，通常是 <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextView> 对象。
 
- 在体系结构上，代码窗口是窗口框架内的文档窗口。 在功能上，代码窗口只是包含附加功能的文档窗口。 在多文档界面 (MDI) 模式下，代码窗口是 MDI 子框架。 有关详细信息，请参阅 [使用旧版 API 自定义代码窗口](/visualstudio/extensibility/customizing-code-windows-by-using-the-legacy-api?view=vs-2015)。
+ 在体系结构上，代码窗口是窗口框架内的文档窗口。 在功能上，代码窗口只是包含附加功能的文档窗口。 在多文档界面 (MDI) 模式下，代码窗口是 MDI 子框架。 有关详细信息，请参阅 [使用旧版 API 自定义代码窗口](../vs-2015/extensibility/customizing-code-windows-by-using-the-legacy-api.md?view=vs-2015)。
 
  下表包括对象中的接口 <xref:Microsoft.VisualStudio.TextManager.Interop.VsCodeWindow> 。
 
@@ -33,6 +33,6 @@ ms.locfileid: "80697957"
 |<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindow>|表示包含一个或多个代码视图 (MDI) 子级的多文档接口。|
 |<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane>|填充窗口框架。|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider>
 - [编辑图形](https://www.microsoft.com/download/details.aspx?id=55984)

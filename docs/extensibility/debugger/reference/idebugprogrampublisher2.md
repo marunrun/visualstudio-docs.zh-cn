@@ -12,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b17f5bab02e49951eb1647af95641af807c44863
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bc6f0643066aaca4ba12d9818d449785f6edb752
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80721521"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90011861"
 ---
 # <a name="idebugprogrampublisher2"></a>IDebugProgramPublisher2
 此接口允许调试引擎 (DE) 或自定义端口供应商注册程序以进行调试。
@@ -56,7 +56,7 @@ Visual Studio 将实现此接口，以注册要调试的程序，使其在多个
 程序集： Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="example"></a>示例
-此示例演示如何实例化程序发行者并注册程序节点。 这是从教程中的 " [发布程序" 节点](https://msdn.microsoft.com/library/d0100e02-4e2b-4e72-9e90-f7bc11777bae)中获取的。
+此示例演示如何实例化程序发行者并注册程序节点。 这是从教程中的 " [发布程序" 节点](/previous-versions/bb161795(v=vs.90))中获取的。
 
 ```cpp
 // This is how m_srpProgramPublisher is defined in the class definition:
@@ -89,6 +89,6 @@ void CProgram::Start(IDebugEngine2 * pEngine)
 }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [核心接口](../../../extensibility/debugger/reference/core-interfaces.md)
 - [IDebugProgramProvider2](../../../extensibility/debugger/reference/idebugprogramprovider2.md)

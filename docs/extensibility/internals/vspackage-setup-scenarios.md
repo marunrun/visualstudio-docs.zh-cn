@@ -9,12 +9,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 01279666642adb729d4350b8a497c42d78159120
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2095087451ded8858382323aabc4048582a6db43
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80703974"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012108"
 ---
 # <a name="vspackage-setup-scenarios"></a>VSPackage 安装方案
 
@@ -74,9 +74,9 @@ ms.locfileid: "80703974"
 
 ![VS 并行 VS 包更新安装程序](../../extensibility/internals/media/vs_sbys_packageupdate.gif "VS_SbyS_PackageUpdate")
 
-有关部署并行程序集的详细信息，请参阅 [使用 .NET Framework 简化部署和解决 DLL Hell](https://msdn.microsoft.com/library/ms973843.aspx)。
+有关部署并行程序集的详细信息，请参阅 [使用 .NET Framework 简化部署和解决 DLL Hell](/previous-versions/dotnet/articles/ms973843(v=msdn.10))。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [Windows Installer](/windows/desktop/Msi/windows-installer-portal)
 - [支持多个版本的 Visual Studio](../../extensibility/supporting-multiple-versions-of-visual-studio.md)

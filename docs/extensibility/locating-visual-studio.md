@@ -9,16 +9,16 @@ ms.author: heaths
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a7187fbcc3e3aca990846176676a47f5d17aaf00
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 93a6f39a9240002cd8008c9368799e10ab63b78d
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "64878148"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012472"
 ---
 # <a name="locate-visual-studio"></a>找到 Visual Studio
 
-从 Visual Studio 2017 开始，你可以安装相同版本甚至版本的多个实例。 当您想要在主开发计算机上预览新功能，同时保留以前的安装时，这非常有用。 由于这些更改，因此没有可用于查找实例的单一环境变量或注册表值。 相反，可以使用 [COM 查询 API](https://msdn.microsoft.com/library/microsoft.visualstudio.setup.configuration.aspx) 基于与扩展相关的条件来查找实例。
+从 Visual Studio 2017 开始，你可以安装相同版本甚至版本的多个实例。 当您想要在主开发计算机上预览新功能，同时保留以前的安装时，这非常有用。 由于这些更改，因此没有可用于查找实例的单一环境变量或注册表值。 相反，可以使用 [COM 查询 API](/dotnet/api/microsoft.visualstudio.setup.configuration) 基于与扩展相关的条件来查找实例。
 
 这是一个快速的只读 API，其中包含适用于本机和托管代码的 NuGet 包。
 
@@ -39,7 +39,7 @@ ms.locfileid: "64878148"
 | [Vssetup.powershell cmdlet](https://github.com/Microsoft/vssetup.powershell) | PowerShell cmdlet 支持2.0 和更高版本，以对象的形式返回丰富信息，你可以使用这些对象基于与 _vswhere_ 相同的条件查找实例，并发现有关实例的更多属性。 有关示例，请参阅 [wiki](https://github.com/Microsoft/vssetup.powershell/wiki) 。 |
 | [VSIXBootstrapper](https://github.com/Microsoft/vsixbootstrapper) | 自动查找 _VSIXInstaller_ ，并通过传递命令行来安装 **.vsix* 文件。 此功能在不直接支持查询 Api 的安装程序中很有用。 有关示例，请参阅 [wiki](https://github.com/Microsoft/vsixbootstrapper/wiki) 。 |
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 * [Visual Studio 2017 安装程序的更改](https://devblogs.microsoft.com/setup/changes-to-visual-studio-15-setup/)
 * [使用 DTE 启动 Visual Studio](launch-visual-studio-dte.md)

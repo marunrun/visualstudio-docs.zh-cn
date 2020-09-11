@@ -10,18 +10,18 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2b9d7bd789a41f7a5e801552ca07f9f228921867
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d014627161666473d3b674f72cfec339a66fdc05
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80704223"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012485"
 ---
 # <a name="using-the-automation-model"></a>使用自动化模型
 将 VSPackage 连接到自动化后，可以通过对对象调用方法来获取属性和方法 <xref:EnvDTE.DTEClass.GetObject%2A> <xref:EnvDTE._DTE> ，同时传递表示要检索的对象的字符串。
 
 ## <a name="obtaining-project-objects"></a>获取项目对象
- 下面是两个显示自动化使用者如何获取项目自动化对象的代码示例。 有关如何获取 DTE 对象的信息，请参阅 [如何：获取对 dte 和 DTE2 对象的引用](https://msdn.microsoft.com/Library/c92e3c8e-82e6-4a67-85da-e43c50ffd8e4)。
+ 下面是两个显示自动化使用者如何获取项目自动化对象的代码示例。 有关如何获取 DTE 对象的信息，请参阅 [如何：获取对 dte 和 DTE2 对象的引用](/previous-versions/68shb4dw(v=vs.140))。
 
 ```vb
 Sub DoAutomation()
@@ -71,5 +71,5 @@ Next
 
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - <xref:EnvDTE.DTEClass.GetObject%2A>

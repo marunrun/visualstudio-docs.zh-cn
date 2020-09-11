@@ -9,12 +9,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7b3a04c925ef897171de51c73c90973a12c3b17d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d872003b319773401ef4da72c1fac8dc177ecbdb
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80739970"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90011783"
 ---
 # <a name="changes-in-visual-studio-2017-extensibility"></a>Visual Studio 2017 扩展性中的更改
 
@@ -97,7 +97,7 @@ Visual Studio 2017 中提供了用于创作新的 VSIX v3 清单格式的设计�
 
 ### <a name="global-com-registration"></a>全局 COM 注册
 
-* 以前，Visual Studio 已在 HKEY_CLASSES_ROOT 中安装多个注册表项，并 HKEY_LOCAL_MACHINE 配置单元来支持本机 COM 注册。 为了消除这种影响，Visual Studio 现在使用 [COM 组件无注册激活](https://msdn.microsoft.com/library/ms973913.aspx)。
+* 以前，Visual Studio 已在 HKEY_CLASSES_ROOT 中安装多个注册表项，并 HKEY_LOCAL_MACHINE 配置单元来支持本机 COM 注册。 为了消除这种影响，Visual Studio 现在使用 [COM 组件无注册激活](/previous-versions/dotnet/articles/ms973913(v=msdn.10))。
 * 因此，默认情况下，Visual Studio 将不再安装% ProgramFiles (x86) % \ Common Files\Microsoft Shared\MSEnv 下的大多数 TLB/.OLB/DLL 文件。 这些文件现在安装在 [INSTALLDIR] 下，其中包含 Visual Studio 主机进程使用的相应免注册 COM 清单。
 * 因此，依赖于 Visual Studio COM 接口的全局 COM 注册的外部代码将不再查找这些注册。 在 Visual Studio 进程内运行的代码看不到差异。
 
