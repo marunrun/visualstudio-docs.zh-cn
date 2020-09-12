@@ -1,5 +1,6 @@
 ---
 title: '&apos;源代码管理插件 API 1.2 中的新增功能'
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 29a3d81c3a03f4a8dcb8236057e931993f06f6ec
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: f5deb43b3b5d1a654fee82b043f06ec8219530a2
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89741554"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90037616"
 ---
 # <a name="what39s-new-in-the-source-control-plug-in-api-version-12"></a>源代码管理插件 API 版本1.2 中的新增功能&#39;
 本部分重点介绍源代码管理插件 API 版本1.2 中的高级源代码控制功能。 下面列出了版本1.2 中的新增功能：
@@ -32,5 +33,5 @@ ms.locfileid: "89741554"
 
 - [从中移除源代码管理信息。Proj 和。.Sln 文件](../../extensibility/internals/removal-of-source-control-information-from-dot-proj-and-dot-sln-files.md) 说明源代码管理插件 API 版本1.2 如何存储有关项目和解决方案的信息。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [入门](../../extensibility/internals/getting-started-with-source-control-plug-ins.md)

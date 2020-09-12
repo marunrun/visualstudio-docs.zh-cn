@@ -1,5 +1,6 @@
 ---
 title: 何时实现源代码管理 VSPackage
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +11,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: abb7ce1c737f9299ba345d5e33b98e6b6947a6e4
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: 16f96191115a509e07b5263f1d10d53ea3b2cc9c
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89741801"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90037037"
 ---
 # <a name="determine-whether-to-implement-a-source-control-vspackage"></a>确定是否实现源代码管理 VSPackage
 
@@ -39,6 +40,6 @@ ms.locfileid: "89741801"
 
 4. 处理查询编辑和查询保存事件 (参阅 [查询编辑查询保存](../../extensibility/internals/query-edit-query-save-source-control-vspackage.md)) 。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [创建源代码管理插件](../../extensibility/internals/creating-a-source-control-plug-in.md)
