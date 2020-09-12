@@ -1,6 +1,7 @@
 ---
 title: 扩展属性、任务列表、输出、选项窗口
 ms.date: 11/04/2016
+ms.custom: SEO-VS-2020
 ms.topic: conceptual
 helpviewer_keywords:
 - properties pane
@@ -15,12 +16,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3059dbe1c28f0fd598e1a711952fa0bce8c4edde
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: c968544c6bf52a901052fc7aedbbee66dcc10e62
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89743343"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90038473"
 ---
 # <a name="extend-the-properties-task-list-output-and-options-windows"></a>扩展 "属性"、"任务列表"、"输出" 和 "选项" 窗口
 你可以在 Visual Studio 中访问任何工具窗口。 本演练演示如何将有关工具窗口的信息集成到新的 " **选项** " 页和 " **属性** " 页上的新设置，以及如何写入 **任务列表** 和 **输出** 窗口。

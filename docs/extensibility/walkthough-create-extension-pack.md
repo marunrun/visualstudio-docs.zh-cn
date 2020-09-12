@@ -1,6 +1,7 @@
 ---
 title: 创建扩展包
 description: 了解如何使用扩展包项目模板创建扩展包
+ms.custom: SEO-VS-2020
 ms.date: 07/27/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +12,12 @@ ms.author: anthc
 manager: Meng
 ms.workload:
 - vssdk
-ms.openlocfilehash: b5a0021061aefceafc2b048a3e231d9c0300db7b
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: c959660b920abc18be70b228fa6b40de1ab585f8
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89742912"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90037655"
 ---
 # <a name="walkthrough-create-an-extension-pack"></a>演练：创建扩展包
 
@@ -32,7 +33,7 @@ ms.locfileid: "89742912"
 
 "扩展包项目" 模板创建一个扩展包，其中包含一组可一起安装的扩展。
 
-1. 在 " **新建项目** " 对话框中，搜索 "vsix" 并选择 " **vsix 项目**"。 对于 " **项目名称**"，键入 "Test Extension Pack"。 选择“创建”。
+1. 在 " **新建项目** " 对话框中，搜索 "vsix" 并选择 " **vsix 项目**"。 对于 " **项目名称**"，键入 "Test Extension Pack"。 选择“创建” 。
 
 2. 在**解决方案资源管理器**中，右键单击项目节点，然后选择 "**添加**  >  **新项**"。 中转到 "Visual c # **扩展性** " 节点，并选择 " **扩展包**"。 保留默认文件名 (ExtensionPack1.cs) "。
 

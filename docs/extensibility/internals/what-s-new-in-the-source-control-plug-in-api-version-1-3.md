@@ -1,5 +1,6 @@
 ---
 title: '&apos;源代码管理插件 API 1.3 中的新增功能'
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0eb580d018bbb858cd0214970bdba3d4ab4f391c
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: ac171a4ba33ed7941f2f5887ccf61ca589c31fd3
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89741541"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90037603"
 ---
 # <a name="what39s-new-in-the-source-control-plug-in-api-version-13"></a>源代码管理插件 API 版本1.3 中的新增功能&#39;
 源代码管理插件 API 版本1.3 引入了以下新函数来提供更高级的控件。
@@ -34,6 +35,6 @@ ms.locfileid: "89741541"
 |[SccBackgroundGet](../../extensibility/sccbackgroundget-function.md)|执行指定文件的无提示 "Get" (不显示用户界面) |
 |[SccGetUserOption](../../extensibility/sccgetuseroption-function.md)|允许访问特定于用户的选项|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [入门](../../extensibility/internals/getting-started-with-source-control-plug-ins.md)
 - [源代码管理插件 API 版本 1.2 中的新增功能](../../extensibility/internals/what-s-new-in-the-source-control-plug-in-api-version-1-2.md)

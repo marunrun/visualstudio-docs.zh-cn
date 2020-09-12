@@ -1,5 +1,6 @@
 ---
 title: '搜索表达式中的逻辑运算符 (帮助查看器) '
+ms.custom: SEO-VS-2020
 ms.date: 11/02/2017
 ms.topic: reference
 helpviewer_keywords:
@@ -11,12 +12,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a5d17d40a34835c1c8f99f4ad446de747771fa4a
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: 9daceca2540a2da61a46e12a458c012ce7851001
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89741655"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90038629"
 ---
 # <a name="logical-and-advanced-operators-in-search-expressions"></a>搜索表达式中的逻辑和高级运算符
 
@@ -60,13 +61,13 @@ ms.locfileid: "89741655"
 |C#|`code:c#`<br/>`code:csharp`|
 |C++|`code:cpp`<br/>`code:c++`<br/>`code:cplusplus`|
 |F#|`code:f#`<br/>`code:fsharp`|
-|Javascript|`code:javascript`<br/>`code:js`|
+|JavaScript|`code:javascript`<br/>`code:js`|
 |XAML|`code:xaml`|
 
 > [!NOTE]
 > `code:` 运算符仅查找标记有编程语言标签的内容，而不查找一般标记为代码的内容。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [如何：搜索主题](../help-viewer/find-topics.md)
 - [Microsoft Help Viewer](../help-viewer/overview.md)

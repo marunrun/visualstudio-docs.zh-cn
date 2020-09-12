@@ -1,5 +1,6 @@
 ---
 title: 项目和编辑器的源代码管理准则
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +11,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b783fdf7231bd3f440686a1bef2a038d9b32f2e4
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: 2d1066995537ff6c43a587326c1087b66f79ff52
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89743399"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90037629"
 ---
 # <a name="additional-source-control-guidelines-for-projects-and-editors"></a>项目和编辑器的其他源代码管理准则
 为了支持源代码管理，项目和编辑人员应遵循一些准则。
@@ -33,5 +34,5 @@ ms.locfileid: "89743399"
 |以可预测顺序持久保存对象和属性|X|X|以可预测的顺序（如按字母顺序）持久保存文件，以便于合并。|
 |重新加载|X|X|当文件在磁盘上更改时，编辑器必须能够重新加载它。 参与源控件时，环境将通过调用你的实现来重新加载数据 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2.ReloadDocData%2A> 。 最难的重载是：在调用 IVsQueryEditQuerySave：： <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QueryEditFiles%2A> 并且正在处理信息时，会发生签出。 但是，在这种情况下，重新加载代码必须能够运行。<br /><br /> 环境会自动重新加载项目文件。 但是， <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem2> 如果项目具有嵌套层次结构以支持重新加载嵌套的项目文件，则该项目必须实现。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [支持源代码管理](../../extensibility/internals/supporting-source-control.md)

@@ -1,5 +1,6 @@
 ---
 title: 关闭源代码管理插件的警告
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 33cf57aa86608cca96924faa2caeb9eec7fbdc0e
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: 406d063bd2df6dd1d831c3a8220d8d513596a79a
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89742772"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90037180"
 ---
 # <a name="how-to-turn-off-compatibility-warnings-for-source-control-plug-ins"></a>如何：关闭源代码管理插件的兼容性警告
 
@@ -42,6 +43,6 @@ ms.locfileid: "89742772"
 
      最好 (功能) 支持重入 `SCC_CAP_REENTRANT` ; 这样做会消除此警告。 但是，如果无法进行此支持，则可以设置这些注册表项。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [功能标志](../extensibility/capability-flags.md)

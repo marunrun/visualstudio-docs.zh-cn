@@ -1,5 +1,6 @@
 ---
 title: 语言服务和编辑器扩展入门
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +11,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 94ccda92a0ad5508b8e14ec267f32c50b64e55c0
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: 55d9f018324c32a8b39c96037058593cebf52bc2
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89742884"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90037759"
 ---
 # <a name="get-started-with-language-service-and-editor-extensions"></a>语言服务和编辑器扩展入门
 
@@ -47,7 +48,7 @@ ms.locfileid: "89742884"
 
 - 边距和滚动条
 
-- 标记
+- Tags
 
 - 修饰
 
@@ -94,6 +95,6 @@ ms.locfileid: "89742884"
 
 - [演练：在编辑器扩展中使用快捷键](../extensibility/walkthrough-using-a-shortcut-key-with-an-editor-extension.md)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [语言服务和编辑器扩展点](../extensibility/language-service-and-editor-extension-points.md)

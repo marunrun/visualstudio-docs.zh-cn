@@ -1,6 +1,7 @@
 ---
 title: SupportsCodeSeparation 元素（Visual Studio 模板）
 titleSuffix: ''
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8b5e03e7ea01b6e6f75c18da44c0233660c17f8e
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: 4dfdf3244d09c5f3418c5403a32570c382c5365c
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89741756"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90038460"
 ---
 # <a name="supportscodeseparation-element-visual-studio-templates"></a>SupportsCodeSeparation 元素（Visual Studio 模板）
 指定是否在 "**添加新项**" 对话框中启用 "将**代码放在单独的文件中**" 复选框。
@@ -55,7 +56,7 @@ ms.locfileid: "89741756"
  文本必须是 `true` 或 `false` ，指示是否在 "**添加新项**" 对话框中启用了 "将**代码放在单独的文件中**" 复选框。
 
 ## <a name="remarks"></a>备注
- `SupportsCodeSeparation` 是可选元素。 默认值为 `false`。
+ `SupportsCodeSeparation` 是可选元素。 默认值是 `false`。
 
  `SupportsCodeSeparation`元素仅适用于 Web 项模板。
 
@@ -86,6 +87,6 @@ ms.locfileid: "89741756"
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
 - [创建项目和项模板](../ide/creating-project-and-item-templates.md)

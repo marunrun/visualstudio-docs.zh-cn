@@ -1,5 +1,6 @@
 ---
 title: 使用注册表设置管理专用库
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 989426feaab04c62c31bf09ddb0431f18222e115
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: 2dcbacbe415eac6829dc51e95442905bba932d6a
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89742863"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90038538"
 ---
 # <a name="how-to-manage-a-private-gallery-by-using-registry-settings"></a>如何：通过使用注册表设置管理专用库
 如果你是独立 Shell 扩展的管理员或开发人员，则可以在 Visual Studio 库、示例库或专用库中控制对控件、模板和工具的访问。 若要使库可用或不可用，请创建一个描述修改后的注册表项及其值的 *.pkgdef* 文件。
@@ -67,5 +68,5 @@ DisplayNamePackageGuid={GUID} (REG_SZ)
 
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [专用库](../extensibility/private-galleries.md)
