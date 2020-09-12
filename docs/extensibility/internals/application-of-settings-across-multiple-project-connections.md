@@ -1,5 +1,6 @@
 ---
 title: 跨多个项目连接应用设置
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +11,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5c88a5140bf72f6801d4c7a92ebd910f410aabfb
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: 81448760f0417528fd630c4919ce516b32e518c8
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89741521"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90034915"
 ---
 # <a name="application-of-settings-across-multiple-project-connections"></a>跨多个项目连接应用设置
 使用源代码管理插件 API 版本1.2 生成的源代码管理插件可以使用批处理操作来跨多个项目或多个连接上下文执行相同的源代码管理操作。 批处理可用于从用户体验中消除冗余的、每个项目的对话框。
@@ -34,5 +35,5 @@ ms.locfileid: "89741521"
 
 `SCCBeginBatch`函数启动一组源代码管理操作。 `SccEndBatch`函数将关闭组。 这些组可能不是嵌套的。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [源代码管理插件 API 版本1.2 中的新增功能](../../extensibility/internals/what-s-new-in-the-source-control-plug-in-api-version-1-2.md)

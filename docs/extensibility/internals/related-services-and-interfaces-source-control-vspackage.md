@@ -1,6 +1,7 @@
 ---
 title: 相关服务和界面（源代码管理 VSPackage）
 titleSuffix: ''
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1e0806ca278305a530a4f4f3e0d4abdf7977067e
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: af08c8e0ea15751f5d8e6c0a1a01549fdb9227c3
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89743067"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90034788"
 ---
 # <a name="related-services-and-interfaces-source-control-vspackage"></a>相关服务和界面（源代码管理 VSPackage）
 
@@ -64,5 +65,5 @@ ms.locfileid: "89743067"
 | <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionOpts> | 此接口用于将源代码管理设置保存到解决方案选项 ( .suo) 文件中。 这可能包括用户特定的源代码管理设置，如当前用户的登记位置。 | 源代码管理 VSPackage | 建议 |
 | <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3> | 此接口用于监视事件，以便执行操作（如在关闭解决方案之前签入项目文件，或在打开项目时从源代码管理获取新文件）。 | 源代码管理 VSPackage | 建议 |
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [设计元素](../../extensibility/internals/source-control-vspackage-design-elements.md)

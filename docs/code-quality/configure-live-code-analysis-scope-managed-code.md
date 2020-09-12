@@ -1,34 +1,34 @@
 ---
-title: 配置托管代码的实时代码分析范围
-ms.date: 03/23/2018
+title: 为 .NET 配置实时代码分析范围
+ms.date: 09/01/2020
 ms.topic: conceptual
 helpviewer_keywords:
 - live code analysis
 - background analysis
 - analysis scope
 - full solution analysis
-author: Mikejo5000
-ms.author: mikejo
+author: mikadumont
+ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6df882d50d0c1d052191246605af856743ffdf3d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 57ff963de193360712e92b76f3cafd7a75ee6b89
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88249193"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90035412"
 ---
-# <a name="how-to-configure-live-code-analysis-scope-for-managed-code"></a>如何：配置托管代码的实时代码分析范围
+# <a name="configure-live-code-analysis-for-net"></a>为 .NET 配置实时代码分析
 
-## <a name="what-is-live-code-analysis-for-managed-code"></a>托管代码的 "实时代码分析" 是什么？
 当您在编辑器中编辑源文件时，Visual Studio 将执行一系列实时代码分析（也称为 *后台分析*）。 其中的一些要求是可接受的 Visual Studio IDE 编辑体验的最小分析。 其中一些是为了改进 IDE 功能的响应能力。 尽管其中一些功能是启用其他 IDE 功能，如 Roslyn 分析器中的诊断和代码修补程序。 根据功能，可以将这些分析分组如下：
 
 - **诊断的后台计算**：分析以计算源文件中的错误、警告和建议。 这些诊断显示为 "错误列表" 中的条目，在编辑器中显示为 "波形曲线"。 它们可以分为两个类别：
   - C # 和 Visual Basic 编译器诊断
   - Roslyn analyzer 诊断，其中包括：
 
-    - 用于代码样式建议和的内置 IDE 分析器
+    - 用于代码样式建议的内置 IDE 分析器
+    - 用于代码质量建议的内置 CA 分析器
     - 为当前解决方案中的项目 [安装](./install-roslyn-analyzers.md) 的第三方分析器包。
 
 - **其他后台分析**：用于提高 IDE 功能的响应能力和 Visual Studio 交互的分析。 此类分析的一些示例包括：

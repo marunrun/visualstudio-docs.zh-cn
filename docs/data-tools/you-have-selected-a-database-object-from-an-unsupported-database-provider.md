@@ -1,6 +1,7 @@
 ---
 title: 不受支持的提供程序中的对象
 description: 您从不支持的数据库提供程序选择了数据库对象
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: error-reference
 ms.assetid: c0f1298e-31aa-471e-ae19-1bafffd2ae40
@@ -9,12 +10,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: a4867ab2e7d8f269961c7d1a783a3b31d70da05d
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: 84841c5e0759618430f9c2e4f0146cbc2d21fae9
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89743159"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90036712"
 ---
 # <a name="you-have-selected-a-database-object-from-an-unsupported-database-provider"></a>您从不支持的数据库提供程序选择了数据库对象
 
@@ -29,6 +30,6 @@ ms.locfileid: "89743159"
 
 - 单击 " **取消** " 以停止此操作。 创建或使用用于 SQL Server 的 .NET Framework 提供程序的其他数据连接。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Studio 中的 LINQ to SQL 工具](../data-tools/linq-to-sql-tools-in-visual-studio2.md)

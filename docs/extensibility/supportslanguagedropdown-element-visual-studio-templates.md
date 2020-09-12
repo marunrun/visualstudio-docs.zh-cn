@@ -1,6 +1,7 @@
 ---
 title: SupportsLanguageDropDown 元素（Visual Studio 模板）
 titleSuffix: ''
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -15,12 +16,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 58c8cd8eef19c6fe5ef6129d9149ec9b650c5025
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: 2ef6cb4f96bf1b31566fef8b714ed30c270ad754
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89741746"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90036842"
 ---
 # <a name="supportslanguagedropdown-element-visual-studio-templates"></a>SupportsLanguageDropDown 元素（Visual Studio 模板）
 
@@ -61,7 +62,7 @@ ms.locfileid: "89741746"
 
 ## <a name="remarks"></a>备注
 
- `SupportsLanguageDropDown` 是可选元素。 默认值为 `false`。
+ `SupportsLanguageDropDown` 是可选元素。 默认值是 `false`。
 
  `SupportsLanguageDropDown`元素仅适用于 Web 项模板。
 
@@ -93,7 +94,7 @@ ms.locfileid: "89741746"
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)
 - [创建项目和项模板](../ide/creating-project-and-item-templates.md)
