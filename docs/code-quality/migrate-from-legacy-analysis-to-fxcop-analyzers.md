@@ -12,12 +12,12 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 9157d47278f835232308dc497965afebb294f8fd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 76f8da407c0917a3f974a55fd02a1227db5b5d63
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "78937559"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90036569"
 ---
 # <a name="migrate-from-legacy-analysis-fxcop-to-source-analysis-fxcop-analyzers"></a> (FxCop 分析器中，从旧式分析 (FxCop) 迁移到源分析) 
 
@@ -27,11 +27,11 @@ ms.locfileid: "78937559"
 
 有关旧分析与源分析之间的差异的详细信息，请参阅以下内容：
 
-- [源代码分析与传统分析](../code-quality/roslyn-analyzers-overview.md#source-code-analysis-versus-legacy-analysis)
+- [源代码分析与传统分析](../code-quality/fxcop-analyzers-faq.md#whats-the-difference-between-legacy-fxcop-and-fxcop-analyzers)
 
 - [FxCop 分析器常见问题](../code-quality/fxcop-analyzers-faq.md)
 
-若要迁移到源分析，请 [安装 FxCop 分析器](../code-quality/install-fxcop-analyzers.md)。 与传统的分析规则冲突一样，源代码分析冲突会出现在 Visual Studio 的“错误列表”窗口中。 此外，源代码分析冲突也会在代码编辑器中显示，表现为违规代码下有波浪线**。 规则的[严重性设置](../code-quality/use-roslyn-analyzers.md#rule-severity)决定波浪线的颜色。 若要查看移植到新 FxCop 分析器的规则的状态，请参阅 [移植和 unported 规则](../code-quality/fxcop-rule-port-status.md)。
+若要迁移到源分析，请 [安装 FxCop 分析器](../code-quality/install-fxcop-analyzers.md)。 与传统的分析规则冲突一样，源代码分析冲突会出现在 Visual Studio 的“错误列表”窗口中。 此外，源代码分析冲突也会在代码编辑器中显示，表现为违规代码下有波浪线**。 规则的[严重性设置](../code-quality/use-roslyn-analyzers.md#configure-severity-levels)决定波浪线的颜色。 若要查看移植到新 FxCop 分析器的规则的状态，请参阅 [移植和 unported 规则](../code-quality/fxcop-rule-port-status.md)。
 
 若要详细了解如何配置 FxCop 分析器：
 

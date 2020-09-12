@@ -15,19 +15,19 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8238de0760f300b6fa418a5e3eb47eac3db77272
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: 77428bfc815a963e8fae4ddae5e5e7a7b7d991fe
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89509011"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90034099"
 ---
 # <a name="net-code-analysis-rules"></a>.NET 代码分析规则
-托管代码分析工具可以发出警告，指示托管代码库中存在违反规则的情况。 这些警告将被分类到各个规则领域，例如设计、本地化、性能和安全性。 每个警告表示一次托管代码分析规则冲突。 本部分深入讨论每个托管代码分析警告，并提供相关示例。
+.NET 代码分析提供的规则指出了代码质量冲突或建议以提高代码质量。 这些规则组织为规则领域，例如设计、本地化、性能和安全性。 某些规则特定于 .NET API 的使用情况，而其余规则则与一般代码质量有关。 本部分提供了有关每个规则的详细讨论和示例。
 
- 下表显示了为每个警告提供的信息类型。
+ 下表显示了为每个诊断提供的信息类型。
 
-|项目|说明|
+|Item|说明|
 |----------|-----------------|
 |类型|规则的 TypeName。|
 |CheckId|规则的唯一标识符。 CheckId 和类别用于源代码中禁止显示警告。|

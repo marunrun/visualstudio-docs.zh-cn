@@ -1,54 +1,34 @@
 ---
-title: 分析器规则严重性和禁止显示
-ms.date: 03/04/2020
+title: 代码质量分析
+ms.date: 09/02/2020
 ms.topic: conceptual
 helpviewer_keywords:
 - code analysis, managed code
 - analyzers
 - Roslyn analyzers
-author: mikejo5000
-ms.author: mikejo
+author: mikadumont
+ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 22a82abab6b0c11ed57780ac69b4af9e1290ac2d
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: 4cbe22571a2485d163960cc7af58975f0a299bf9
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89599974"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90036352"
 ---
-# <a name="use-code-analyzers"></a>使用代码分析器
+# <a name="configure-code-quality-analysis"></a>配置代码质量分析
 
-.NET Compiler Platform ( "Roslyn" ) 代码分析器在你键入时分析 c # 或 Visual Basic 代码。 每个 *诊断* 或规则都有一个默认严重性和隐含状态，可以覆盖你的项目。 本文介绍如何设置规则严重性，如何使用规则集和取消冲突。
+从 .NET 5.0 开始，.NET SDK 中提供了代码质量分析器。  (之前，已将这些分析器安装为 NuGet 包。默认情况下，对于面向 .NET 5.0 或更高版本的项目，将启用 ) 代码分析。 通过将 [EnableNETAnalyzers](/dotnet/core/project-sdk/msbuild-props#enablenetanalyzers) 属性设置为，可以对面向早期 .net 版本的项目启用代码分析 `true` 。 你还可以通过将设置为来对你的项目禁用代码分析 `EnableNETAnalyzers` `false` 。
 
-## <a name="analyzers-in-solution-explorer"></a>解决方案资源管理器中的分析器
+每个代码质量分析器 *诊断* 或规则都有一个默认严重性和隐含状态，可对项目进行覆盖和自定义。 本文介绍如何设置代码质量分析器严重级别和抑制分析器冲突。
 
-您可以从 **解决方案资源管理器**中进行大多数的分析器诊断自定义。 如果以 NuGet 包的形式[安装分析器](../code-quality/install-roslyn-analyzers.md)，则**分析器**节点会出现在**解决方案资源管理器**中的 "**引用**" 或 "**依赖项**" 节点下。 如果你展开分析器，然后展开一个分析器程序 **集，则**会在程序集中看到所有诊断。
-
-![解决方案资源管理器中的分析器节点](media/analyzers-expanded-in-solution-explorer.png)
-
-您可以在 " **属性** " 窗口中查看诊断的属性，包括其说明和默认严重性。 若要查看属性，请右键单击规则，然后选择 "**属性**"，或选择规则，并按**Alt** + **enter**。
-
-![属性窗口中的诊断属性](media/analyzer-diagnostic-properties.png)
-
-若要查看诊断的联机文档，请右键单击该诊断，然后选择 " **查看帮助**"。
-
-**解决方案资源管理器**中的每个诊断旁边的图标对应于在编辑器中打开的规则集中显示的图标：
-
-- 圆圈中的 "x" 表示[严重性](#rule-severity)为 "**错误**"
-- 三角形中的 "！" 表示[严重性](#rule-severity)为 "**警告**"
-- 圆圈中的 "i" 表示**信息**的[严重性](#rule-severity)
-- 浅灰色背景上的圆圈中的 "i" 表示 [严重性](#rule-severity) 为 **隐藏**
-- 圆圈中的向下箭头表示诊断被取消
-
-![解决方案资源管理器中的诊断图标](media/diagnostics-icons-solution-explorer.png)
-
-## <a name="rule-severity"></a>规则严重性
+## <a name="configure-severity-levels"></a>配置严重级别
 
 ::: moniker range=">=vs-2019"
 
-如果将分析器作为 NuGet 包进行[安装](../code-quality/install-roslyn-analyzers.md)，则可以配置分析器规则或*诊断*的严重性。 从 Visual Studio 2019 版本16.3 开始，你可以 [在 EditorConfig 文件中](#set-rule-severity-in-an-editorconfig-file)配置规则的严重性。 你还可以 [从解决方案资源管理器](#set-rule-severity-from-solution-explorer) 或 [规则集文件中](#set-rule-severity-in-the-rule-set-file)更改规则的严重性。
+从 Visual Studio 2019 版本16.3 开始，你可以在[EditorConfig 文件](#set-rule-severity-in-an-editorconfig-file)中的 "灯泡"[菜单](#set-rule-severity-from-the-light-bulb-menu)和 "错误列表" 中配置分析器规则或*诊断*的严重性。
 
 ::: moniker-end
 
@@ -69,13 +49,19 @@ ms.locfileid: "89599974"
 | 无 | `none` | 完全取消。 | 完全取消。 |
 | 默认 | `default` | 对应于规则的默认严重性。 若要确定规则的默认值是什么，请查看属性窗口。 | 对应于规则的默认严重性。 |
 
-代码编辑器的以下屏幕截图显示了三个不同严重性的不同冲突。 请注意右侧滚动条中的波形曲线颜色和小的彩色正方形。
+如果分析器发现规则冲突，将在代码编辑器（违规代码下方有波浪线）和“错误列表”窗口中报告**。
 
-![代码编辑器中的错误、警告和信息冲突](media/diagnostics-severity-colors.png)
+错误列表中报告的分析器冲突符合规则的 [严重性级别设置](../code-quality/use-roslyn-analyzers.md#configure-severity-levels) 。 在代码编辑器中，分析器冲突还会以波形曲线的形式显示在冲突代码下。 下图显示了三个冲突 &mdash; (红色波形曲线) ，一条警告 (绿色波形曲线) ，其中一条建议 (三个灰色点) ：
+
+![Visual Studio 中代码编辑器中的波浪线](media/diagnostics-severity-colors.png)
 
 以下屏幕截图显示的是错误列表中显示的三个冲突：
 
 ![错误列表中的错误、警告和信息冲突](media/diagnostics-severities-in-error-list.png)
+
+许多分析器规则或 *诊断*，都有一个或多个关联的代码修补程序，您可以应用这些 *修补程序* 来更正规则冲突。 代码修补程序与其他类型的 [快速操作](../ide/quick-actions.md)一起显示在灯泡图标菜单中。 有关这些代码修复的信息，请参阅[常见快速操作](../ide/quick-actions.md)。
+
+![分析器冲突和快速操作代码修复](../code-quality/media/built-in-analyzer-code-fix.png)
 
 ### <a name="hidden-severity-versus-none-severity"></a>"Hidden" 严重性与 "无" 严重性
 
@@ -94,7 +80,7 @@ ms.locfileid: "89599974"
 
 `dotnet_diagnostic.<rule ID>.severity = <severity>`
 
-在 EditorConfig 文件中设置规则的严重性优先于在规则集中或解决方案资源管理器中设置的任何严重性。 您可以在 EditorConfig 文件中 [手动](#manually-configure-rule-severity) 配置严重性，也可以通过在冲突旁显示的灯泡 [自动](#automatically-configure-rule-severity) 进行配置。
+在 EditorConfig 文件中设置规则的严重性优先于在规则集中或解决方案资源管理器中设置的任何严重性。 您可以在 EditorConfig 文件中 [手动](#manually-configure-rule-severity-in-an-editorconfig-file) 配置严重性，也可以通过在冲突旁显示的灯泡 [自动](#set-rule-severity-from-the-light-bulb-menu) 进行配置。
 
 ### <a name="set-rule-severity-of-multiple-analyzer-rules-at-once-in-an-editorconfig-file"></a>在 EditorConfig 文件中同时设置多个分析器规则的规则严重性
 
@@ -129,7 +115,7 @@ ms.locfileid: "89599974"
 
 在前面的示例中，所有三个条目都适用于 CA1822。 但是，使用指定的优先规则，基于第一个规则 ID 的严重性条目将在下一条目上入选。 在此示例中，CA1822 的严重严重性为 "错误"。 所有 "性能" 类别的其余规则都将具有严重性 "警告"。 所有剩余的分析器规则（没有 "性能" 类别）都将具有严重性 "建议"。
 
-#### <a name="manually-configure-rule-severity"></a>手动配置规则严重性
+#### <a name="manually-configure-rule-severity-in-an-editorconfig-file"></a>在 EditorConfig 文件中手动配置规则严重性
 
 1. 如果你的项目还没有 EditorConfig 文件，则 [添加一个](../ide/create-portable-custom-editor-options.md#add-an-editorconfig-file-to-a-project)。
 
@@ -142,6 +128,68 @@ ms.locfileid: "89599974"
 
 > [!NOTE]
 > 对于 IDE 代码样式分析器，还可以使用不同的语法（例如）在 EditorConfig 文件中配置它们 `dotnet_style_qualification_for_field = false:suggestion` 。 但是，如果使用语法设置了严重性 `dotnet_diagnostic` ，则优先使用该语法。 有关详细信息，请参阅 [EditorConfig 的语言约定](../ide/editorconfig-language-conventions.md)。
+
+### <a name="set-rule-severity-from-the-light-bulb-menu"></a>设置灯泡菜单中的规则严重性
+
+Visual Studio 提供了一种简便的方法，可用于在 " [快速操作](../ide/quick-actions.md) " 灯泡菜单中配置规则的严重性。
+
+1. 发生冲突后，将鼠标悬停在编辑器中的冲突波形曲线上，并打开灯泡菜单。 或者，将光标放在行上，然后按**Ctrl**键 + **。** （句点）。
+
+2. 在灯泡菜单中，选择 " **配置" 或 "禁止显示问题** > **配置 \<rule ID> 严重级别**"。
+
+   ![在 Visual Studio 中配置灯泡菜单中的规则严重性](media/configure-rule-severity.png)
+
+3. 从此处选择一个严重性选项。
+
+   ![将规则严重性配置为建议](media/configure-rule-severity-suggestion.png)
+
+   Visual Studio 将向 EditorConfig 文件中添加一个条目，以将规则配置为请求的级别，如 "预览" 框中所示。
+
+   > [!TIP]
+   > 如果项目中还没有 EditorConfig 文件，则 Visual Studio 会为你创建一个。
+
+### <a name="set-rule-severity-from-the-error-list-window"></a>从 "错误列表" 窗口中设置规则严重性
+
+Visual Studio 还提供了一种简便的方法来配置 "错误列表" 上下文菜单中的规则严重性。
+
+1. 发生冲突后，右键单击 "错误列表" 中的诊断条目。
+
+2. 从上下文菜单中，选择 " **设置严重性**"。
+
+   ![在 Visual Studio 中从错误列表配置规则严重性](media/configure-rule-severity-error-list.png)
+
+3. 从此处选择一个严重性选项。
+
+   Visual Studio 将向 EditorConfig 文件中添加一个条目，以将规则配置为请求的级别。
+
+   > [!TIP]
+   > 如果项目中还没有 EditorConfig 文件，则 Visual Studio 会为你创建一个。
+
+::: moniker-end
+
+### <a name="set-rule-severity-from-solution-explorer"></a>设置解决方案资源管理器的规则严重性
+
+您可以从 **解决方案资源管理器**中进行大多数的分析器诊断自定义。 如果以 NuGet 包的形式[安装分析器](../code-quality/install-roslyn-analyzers.md)，则**分析器**节点会出现在**解决方案资源管理器**中的 "**引用**" 或 "**依赖项**" 节点下。 如果你展开分析器，然后展开一个分析器程序 **集，则**会在程序集中看到所有诊断。
+
+![解决方案资源管理器中的分析器节点](media/analyzers-expanded-in-solution-explorer.png)
+
+您可以在 " **属性** " 窗口中查看诊断的属性，包括其说明和默认严重性。 若要查看属性，请右键单击规则，然后选择 "**属性**"，或选择规则，并按**Alt** + **enter**。
+
+![属性窗口中的诊断属性](media/analyzer-diagnostic-properties.png)
+
+若要查看诊断的联机文档，请右键单击该诊断，然后选择 " **查看帮助**"。
+
+**解决方案资源管理器**中的每个诊断旁边的图标对应于在编辑器中打开的规则集中显示的图标：
+
+- 圆圈中的 "x" 表示[严重性](#configure-severity-levels)为 "**错误**"
+- 三角形中的 "！" 表示[严重性](#configure-severity-levels)为 "**警告**"
+- 圆圈中的 "i" 表示**信息**的[严重性](#configure-severity-levels)
+- 浅灰色背景上的圆圈中的 "i" 表示 [严重性](#configure-severity-levels) 为 **隐藏**
+- 圆圈中的向下箭头表示诊断被取消
+
+![解决方案资源管理器中的诊断图标](media/diagnostics-icons-solution-explorer.png)
+
+::: moniker range=">=vs-2019"
 
 #### <a name="convert-an-existing-ruleset-file-to-editorconfig-file"></a>将现有的规则集文件转换为 EditorConfig 文件
 
@@ -209,45 +257,6 @@ dotnet_diagnostic.CA2213.severity = warning
 
 dotnet_diagnostic.CA2231.severity = warning
 ```
-
-#### <a name="automatically-configure-rule-severity"></a>自动配置规则严重性
-
-##### <a name="configure-from-light-bulb-menu"></a>从灯泡菜单配置
-
-Visual Studio 提供了一种简便的方法，可用于在 " [快速操作](../ide/quick-actions.md) " 灯泡菜单中配置规则的严重性。
-
-1. 发生冲突后，将鼠标悬停在编辑器中的冲突波形曲线上，并打开灯泡菜单。 或者，将光标放在行上，然后按**Ctrl**键 + **。** （句点）。
-
-2. 在灯泡菜单中，选择 " **配置" 或 "禁止显示问题** > **配置 \<rule ID> 严重级别**"。
-
-   ![在 Visual Studio 中配置灯泡菜单中的规则严重性](media/configure-rule-severity.png)
-
-3. 从此处选择一个严重性选项。
-
-   ![将规则严重性配置为建议](media/configure-rule-severity-suggestion.png)
-
-   Visual Studio 将向 EditorConfig 文件中添加一个条目，以将规则配置为请求的级别，如 "预览" 框中所示。
-
-   > [!TIP]
-   > 如果项目中还没有 EditorConfig 文件，则 Visual Studio 会为你创建一个。
-
-##### <a name="configure-from-error-list"></a>从错误列表配置
-
-Visual Studio 还提供了一种简便的方法来配置 "错误列表" 上下文菜单中的规则严重性。
-
-1. 发生冲突后，右键单击 "错误列表" 中的诊断条目。
-
-2. 从上下文菜单中，选择 " **设置严重性**"。
-
-   ![在 Visual Studio 中从错误列表配置规则严重性](media/configure-rule-severity-error-list.png)
-
-3. 从此处选择一个严重性选项。
-
-   Visual Studio 将向 EditorConfig 文件中添加一个条目，以将规则配置为请求的级别。
-
-   > [!TIP]
-   > 如果项目中还没有 EditorConfig 文件，则 Visual Studio 会为你创建一个。
-
 ::: moniker-end
 
 ### <a name="set-rule-severity-from-solution-explorer"></a>设置解决方案资源管理器的规则严重性
@@ -377,7 +386,7 @@ Visual Studio 还提供了一种简便的方法来配置 "错误列表" 上下�
 
 - 项目的代码中违反了一个或多个规则。
 
-- 违反规则的 [严重性](#rule-severity) 设置为 " **警告**"，在这种情况下，冲突不会导致生成失败或 **错误**，在这种情况下，冲突会导致生成失败。
+- 违反规则的 [严重性](#configure-severity-levels) 设置为 " **警告**"，在这种情况下，冲突不会导致生成失败或 **错误**，在这种情况下，冲突会导致生成失败。
 
 生成输出的详细级别不会影响是否显示规则冲突。 即使是具有 **安静** 详细级别，规则冲突也会出现在生成输出中。
 
@@ -402,7 +411,7 @@ msbuild myproject.csproj /target:rebuild /verbosity:minimal
 <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.0" PrivateAssets="all" />
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Studio 中的代码分析器概述](../code-quality/roslyn-analyzers-overview.md)
 - [提交代码分析器 bug](https://github.com/dotnet/roslyn-analyzers/issues)

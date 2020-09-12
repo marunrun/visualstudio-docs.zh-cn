@@ -1,5 +1,6 @@
 ---
 title: 从 proj 和 .sln 文件中删除源代码管理信息
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +11,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 54b403d105b1c2b3a3113885189868e8bae4efcc
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: 7a5f9b6ac83df104c381d7100a5e8fda5ac48a61
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89743056"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90034671"
 ---
 # <a name="removal-of-source-control-information-from-proj-and-sln-files"></a>从 proj 和 .sln 文件中删除源代码管理信息
 
@@ -27,6 +28,6 @@ ms.locfileid: "89743056"
 
  在源代码管理插件 API 版本1.1 中，IDE 使用 ~ SAK 文件来检测插件是否支持 MSSCCPRJ.SCC。存储源代码管理信息的 SCC 方法。 源代码管理插件 API 版本1.2 提供一项新功能来检测对 MSSCCPRJ.SCC 的支持。SCC 文件，而无需使用 ~ SAK 文件。 有关详细信息，请参阅 [清除 ~ SAK 文件](../../extensibility/internals/elimination-of-tilde-sak-files.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [源代码管理插件 API 版本 1.2 中的新增功能](../../extensibility/internals/what-s-new-in-the-source-control-plug-in-api-version-1-2.md)

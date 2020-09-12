@@ -1,20 +1,20 @@
 ---
 title: 浏览和管理存储资源
 description: 使用服务器资源管理器浏览和管理存储资源
+ms.custom: vs-azure
 author: ghogen
 manager: jillfra
 assetId: 658dc064-4a4e-414b-ae5a-a977a34c930d
-ms.custom: vs-azure
 ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 8/24/2017
 ms.author: ghogen
-ms.openlocfilehash: 6e75a3822df6a5867e48693024637b901d40282b
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: 059145dbce95ade9f628f26afe4f70e1d6a065e9
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89739994"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90036439"
 ---
 # <a name="browse-and-manage-storage-resources-by-using-server-explorer"></a>使用服务器资源管理器浏览和管理存储资源
 
@@ -262,7 +262,7 @@ Azure 表存储可存储大量结构化数据。 该服务是一个 NoSQL 数据
 
    ![创建 Azure 存储帐户](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC744166.png)
 
-1. 选择“创建”。
+1. 选择“创建” 。
 
 新的存储帐户随即出现在解决方案资源管理器的“存储”列表中。****
 
