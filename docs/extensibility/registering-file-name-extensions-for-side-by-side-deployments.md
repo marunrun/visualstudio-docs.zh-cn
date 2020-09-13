@@ -1,5 +1,6 @@
 ---
 title: 为并行 Ide 注册文件扩展名
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +11,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 68c343646055e6ce877d7bd15892ab1db0d0cbc5
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: c5ebedd2861ca96d1ad96c74a54da06578d33960
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89741710"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90036946"
 ---
 # <a name="register-file-name-extensions-for-side-by-side-deployments"></a>为并行部署注册文件扩展名
 对于在并行环境中部署的 Vspackage，必须注册文件扩展名，以便将文件与正确版本的相关联 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 。 如果你使用特定于版本的文件扩展名，则注册使用户能够在适当版本的中打开你的项目和项目项文件 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 。
