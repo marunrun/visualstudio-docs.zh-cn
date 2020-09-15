@@ -1,5 +1,5 @@
 ---
-title: 代码质量分析
+title: 分析器配置
 ms.date: 09/02/2020
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,18 +11,16 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4cbe22571a2485d163960cc7af58975f0a299bf9
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 6a950a005a4669e74722742b23527a9e85ab5f02
+ms.sourcegitcommit: d77da260d79471ab139973c51d65b04e0f80fe2e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036352"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90560744"
 ---
-# <a name="configure-code-quality-analysis"></a>配置代码质量分析
+# <a name="overview"></a>概述
 
-从 .NET 5.0 开始，.NET SDK 中提供了代码质量分析器。  (之前，已将这些分析器安装为 NuGet 包。默认情况下，对于面向 .NET 5.0 或更高版本的项目，将启用 ) 代码分析。 通过将 [EnableNETAnalyzers](/dotnet/core/project-sdk/msbuild-props#enablenetanalyzers) 属性设置为，可以对面向早期 .net 版本的项目启用代码分析 `true` 。 你还可以通过将设置为来对你的项目禁用代码分析 `EnableNETAnalyzers` `false` 。
-
-每个代码质量分析器 *诊断* 或规则都有一个默认严重性和隐含状态，可对项目进行覆盖和自定义。 本文介绍如何设置代码质量分析器严重级别和抑制分析器冲突。
+每个 Roslyn 分析器 *诊断* 或规则都有一个默认严重性和隐含状态，可对项目进行覆盖和自定义。 本文介绍如何设置分析器严重级别并抑制分析器冲突。
 
 ## <a name="configure-severity-levels"></a>配置严重级别
 
