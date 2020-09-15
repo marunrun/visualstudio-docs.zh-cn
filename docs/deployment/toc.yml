@@ -14,7 +14,7 @@
       href: quickstart-deploy-to-linux.md
     - name: 部署到网站
       href: quickstart-deploy-to-a-web-site.md
-    - name: 部署到本地文件夹
+    - name: 部署到文件夹
       href: quickstart-deploy-to-local-folder.md
 - name: 教程
   items:
