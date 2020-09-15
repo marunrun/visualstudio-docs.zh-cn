@@ -127,6 +127,8 @@
               href: install/visual-studio-build-numbers-and-release-dates.md
     - name: 在 Azure 虚拟机中使用 Visual Studio
       href: install/using-visual-studio-vm.md
+    - name: 在 ARM 设备上使用 Visual Studio
+      href: install/visual-studio-on-arm-devices.md
     - name: 容器
       items:
         - name: 将生成工具安装到容器
