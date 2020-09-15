@@ -1,18 +1,20 @@
 ---
 title: 创建基于 Windows 窗体的域特定语言
+description: 提供有关如何使用 Windows 窗体显示域特定语言模型的状态的信息。
 ms.date: 11/04/2016
 ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
+ms.custom: SEO-VS-2020
 ms.workload:
 - multiple
-ms.openlocfilehash: c52b3bd352c2ecb2272ad8e229a0fe52a9ee5b41
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8e4c712eed732830da4bc1b158c8ad53a65a45d8
+ms.sourcegitcommit: a18c7e9b367c2f92f6e54c3eaef442775d457667
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88238356"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90100448"
 ---
 # <a name="create-a-windows-forms-based-domain-specific-language"></a>创建基于 Windows 窗体的域特定语言
 
@@ -67,9 +69,9 @@ ms.locfileid: "88238356"
 
 ## <a name="update-the-dsl-definition"></a>更新 DSL 定义
 
-此演练中使用了以下 DSL 定义。
+下图是本演练中使用的 DSL 定义。
 
-![DSL&#45;Wpf&#45;1](../modeling/media/dsl-wpf-1.png)
+![DSL 定义](../modeling/media/dsl-wpf-1.png)
 
 1. 在 DSL 设计器中打开 Dsldefinition.dsl。
 
@@ -127,7 +129,7 @@ ms.locfileid: "88238356"
 
      模型类的属性和关系将显示在 "数据源" 窗口中。
 
-     ![DslWpf&#45;3](../modeling/media/dslwpf-3.png)
+     ![数据源窗口](../modeling/media/dslwpf-3.png)
 
 ### <a name="connect-your-model-to-a-form"></a>将模型连接到表单
 
@@ -172,7 +174,9 @@ ms.locfileid: "88238356"
 
 - 它可确保在用户选择某一行时，属性窗口显示相应模型元素的属性，而不是显示数据网格行。
 
-  ![DslWpf4 ](../modeling/media/dslwpf4.png) 数据源和视图之间的链接架构。
+  ![DSL 绑定的架构](../modeling/media/dslwpf4.png)
+  
+  数据源和视图之间的链接架构。
 
 ### <a name="complete-the-bindings-to-the-dsl"></a>完成到 DSL 的绑定
 
@@ -298,7 +302,7 @@ ms.locfileid: "88238356"
 
     您应该能够在数据网格视图中编辑元素的名称。 你还可以从此处删除它。
 
-   ![DSL&#45;Wpf&#45;2](../modeling/media/dsl-wpf-2.png)
+   ![示例数据网格视图](../modeling/media/dsl-wpf-2.png)
 
 ### <a name="about-the-code-to-add-an-element"></a>关于要添加元素的代码
 
@@ -319,7 +323,7 @@ private void NewSheepButton_Click(object sender, EventArgs e)
 
 因此，我们建议你使用 <xref:Microsoft.VisualStudio.Modeling.ElementOperations> 来创建新元素。 有关详细信息，请参阅 [自定义元素创建和移动](../modeling/customizing-element-creation-and-movement.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [如何定义域特定语言](../modeling/how-to-define-a-domain-specific-language.md)
 - [编写代码以自定义域特定语言](../modeling/writing-code-to-customise-a-domain-specific-language.md)

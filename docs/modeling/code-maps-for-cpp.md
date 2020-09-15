@@ -1,18 +1,20 @@
 ---
 title: 请参阅 c + + 源文件和头文件之间的依赖关系
+description: 提供有关 c + + 项目的代码图的信息。
 ms.date: 05/16/2018
 ms.topic: conceptual
 author: JoshuaPartlow
 ms.author: joshuapa
+ms.custom: SEO-VS-2020
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a17015c7efbb51027450e06bd1fb571ef9820d48
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b33e9400926dd7d1f7a2dc5a66a33ec2fb244b1b
+ms.sourcegitcommit: a18c7e9b367c2f92f6e54c3eaef442775d457667
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75597238"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90100435"
 ---
 # <a name="code-maps-for-c-projects"></a>C + + 项目的代码映射
 
@@ -38,7 +40,7 @@ C 和 C++ 代码不支持这些项：
 
 当你为 C 和 c + + 代码创建代码图时，可能会出现这些问题：
 
-|**问题**|可能的原因 |**分辨率**|
+|**问题**|可能的原因 |**解决方法**|
 |-|-|-|
 |未能生成代码图。|解决方案中没有项目成功生成过。|修复出现的生成错误，然后重新生成代码图。|
 |尝试从 " **体系结构** " 菜单生成代码图时，Visual Studio 将停止响应。|程序数据库 (.pdb) 文件可能已损坏。<br /><br /> pdb 文件将存储调试信息，例如，类型、方法和源文件信息。|重新生成解决方案，然后重试。|
