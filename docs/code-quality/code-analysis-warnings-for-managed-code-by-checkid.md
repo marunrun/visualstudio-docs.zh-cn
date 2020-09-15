@@ -62,6 +62,7 @@ f1_keywords:
 - CA1309
 - CA1310
 - CA1401
+- CA1416
 - CA1417
 - CA1501
 - CA1502
@@ -253,18 +254,18 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: a298ab142ae6a44c1fb24b2cb1b752f6beb4a68e
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 24f7dbcdd324620f2076f5fab8247c9ba99a72cb
+ms.sourcegitcommit: a18c7e9b367c2f92f6e54c3eaef442775d457667
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037232"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90094221"
 ---
 # <a name="code-quality-analysis-rules-by-rule-id"></a>按规则 ID 的代码质量分析规则
 
 下表按规则标识符列出了代码质量分析规则。
 
-| CheckId | 警告 | 说明 |
+| RuleId | 警告 | 说明 |
 |---------| - | - |
 | CA1000 | [CA1000:不要在泛型类型中声明静态成员](../code-quality/ca1000.md) | 调用泛型类型的静态成员时，必须指定该类型的类型参数。 当调用不支持推理的泛型实例成员时，必须指定该成员的类型参数。 在上述两种情况下，用于指定类型自变量的语法不同，但很容易混淆。 |
 | CA1001 | [CA1001:具有可释放字段的类型应该是可释放的](../code-quality/ca1001.md) | 一个类声明并实现 System.IDisposable 类型的实例字段，但该类不实现 IDisposable。 声明 IDisposable 字段的类间接拥有非托管资源，并且应该实现 IDisposable 接口。 |
@@ -324,6 +325,7 @@ ms.locfileid: "90037232"
 | CA1309 | [CA1309:使用按顺序的 StringComparison](../code-quality/ca1309.md) | 非语义的字符串比较运算不会将 StringComparison 参数设置为 Ordinal 或 OrdinalIgnoreCase。 因此，通过将参数显式设置为 StringComparison.Ordinal 或 StringComparison.OrdinalIgnoreCase，通常可以提高代码的速度、正确性和可靠性。 |
 | CA1310 | [CA1310：为了确保正确，请指定 StringComparison](../code-quality/ca1310.md) | 在默认情况下，字符串比较操作使用未设置 StringComparison 参数并使用特定于区域性的字符串比较的方法重载。 |
 | CA1401 | [CA1401： P/Invoke 应不可见](../code-quality/ca1401.md) | 公共类型中的公共或受保护方法具有 System.Runtime.InteropServices.DllImportAttribute 特性（还在 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 中由 Declare 关键字实现）。 这些方法不能公开。 |
+| CA1416 | [CA1416：验证平台兼容性](../code-quality/ca1416.md) | 在组件上使用平台相关的 Api 使代码在所有平台上都不再工作。 |
 | CA1417 | [CA1417：不 `OutAttribute` 在 P/invoke 的字符串参数上使用](../code-quality/ca1417.md) | 如果字符串是暂存的字符串，则通过值传递的字符串参数与 `OutAttribute` 运行时的不稳定性。 |
 | CA1501 | [CA1501:避免过度继承](../code-quality/ca1501.md) | 类型在继承层次结构中的深度超过四级。 深度嵌套的类型层次结构可能很难遵循、理解和维护。 |
 | CA1502 | [CA1502:避免过度复杂](../code-quality/ca1502.md) | 此规则通过方法来测量线性独立的路径的数量，该数量是由条件分支的数量和复杂度决定的。 |

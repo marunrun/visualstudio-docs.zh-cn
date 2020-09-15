@@ -15,12 +15,12 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 77428bfc815a963e8fae4ddae5e5e7a7b7d991fe
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 566b9827f42f646cd9350cfc015a460485212a09
+ms.sourcegitcommit: a18c7e9b367c2f92f6e54c3eaef442775d457667
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90034099"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90094325"
 ---
 # <a name="net-code-analysis-rules"></a>.NET 代码分析规则
 .NET 代码分析提供的规则指出了代码质量冲突或建议以提高代码质量。 这些规则组织为规则领域，例如设计、本地化、性能和安全性。 某些规则特定于 .NET API 的使用情况，而其余规则则与一般代码质量有关。 本部分提供了有关每个规则的详细讨论和示例。
@@ -30,7 +30,7 @@ ms.locfileid: "90034099"
 |Item|说明|
 |----------|-----------------|
 |类型|规则的 TypeName。|
-|CheckId|规则的唯一标识符。 CheckId 和类别用于源代码中禁止显示警告。|
+|RuleId|规则的唯一标识符。 RuleId 和 Category 用于在源代码中禁止显示警告。|
 |类别|警告类别。|
 |重大更改|规则冲突的修复是否是一项重大更改。 重大更改意味着，在导致冲突的目标上具有依赖关系的程序集不会使用新修复的版本重新编译，或者可能会由于此更改在运行时失败。 如果有多个修补程序，并且至少有一个修复是重大更改，且一个修补程序不是，则同时指定了 "中断" 和 "非换行"。|
 |原因|导致规则生成警告的特定托管代码。|
