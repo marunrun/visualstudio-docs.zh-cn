@@ -1,18 +1,18 @@
 ---
-title: 在 Visual Studio 订阅管理门户中删除订阅分配 |Microsoft Docs
+title: 在订阅管理门户中删除分配 | Microsoft Docs
 author: evanwindom
-ms.author: lank
-manager: lank
+ms.author: v-evwin
+manager: cabuschl
 ms.assetid: e49242bc-e9f2-49e8-8caa-f574d508aba6
 ms.date: 06/16/2020
 ms.topic: how-to
-description: 了解管理员如何删除订阅分配
-ms.openlocfilehash: 4f952f574132afbd405c82c75fcddfc952bffb48
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+description: 了解管理员如何在 Visual Studio 订阅管理门户中删除订阅分配
+ms.openlocfilehash: c4e55a18bb172588bf1daf777aeee8fee1dca02b
+ms.sourcegitcommit: f8d14fab194fcb30658f23f700da07d35ffc9d4a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87434266"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89561346"
 ---
 # <a name="delete-assignments-in-visual-studio-subscriptions"></a>删除 Visual Studio 订阅中的分配
 当订阅者不再需要 Visual Studio 订阅时，比如当他们离开公司、完成项目或转换为新的作业角色时，你可以删除他们的订阅，并将订阅分配给其他人。 请注意，重新分配订阅时，并非所有订阅者权益都将重置。  新用户将能够认领任何无人认领的密钥并查看以前认领过的密钥，但认领限制**不**会重置。  组织若具有企业协议 (EA)，将重置供原始用户使用的任何权益（如 Pluralsight 培训）。 
