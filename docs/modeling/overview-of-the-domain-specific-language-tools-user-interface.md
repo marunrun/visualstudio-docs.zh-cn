@@ -1,5 +1,6 @@
 ---
 title: 域特定语言工具用户界面的概述
+description: 概述 Visual Studio 中特定于域的语言工具解决方案的用户界面。
 ms.date: 11/04/2016
 ms.topic: overview
 f1_keywords:
@@ -9,14 +10,15 @@ helpviewer_keywords:
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
+ms.custom: SEO-VS-2020
 ms.workload:
 - multiple
-ms.openlocfilehash: af28ca94639b1c6a800c0c43e41d3ccabb74d9bb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 549726d16a5fc1129f8c773ef143267e4c9bc31e
+ms.sourcegitcommit: a18c7e9b367c2f92f6e54c3eaef442775d457667
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85532400"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90100717"
 ---
 # <a name="overview-of-the-domain-specific-language-tools-user-interface"></a>域特定语言工具用户界面的概述
 首次在 Visual Studio 中打开特定于域的语言工具（DSL 工具）解决方案时，用户界面如下图所示。
