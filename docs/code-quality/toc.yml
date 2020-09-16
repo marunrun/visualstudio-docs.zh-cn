@@ -580,6 +580,8 @@
                       href: interoperability-warnings.md
                     - name: 'CA1401:P-Invokes 应该是不可见的'
                       href: ca1401.md
+                    - name: CA1416：验证平台兼容性
+                      href: ca1416.md
                     - name: 'CA1417:请勿对 P/Invokes 的字符串参数使用 OutAttribute'
                       href: ca1417.md
                 - name: 维护性警告
