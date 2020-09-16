@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d3b4e151db08ad5490ed6238223d553f9e76aa0f
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: a955304e1a0939bbe7398b48a5e9ff30461d8745
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77192398"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90037336"
 ---
 # <a name="concurrency-visualizer"></a>并发可视化工具
 
@@ -49,7 +49,7 @@ ms.locfileid: "77192398"
 |[“线程”视图](../profiling/threads-view-parallel-performance.md)|介绍如何分析程序中线程之间的交互。|
 |[“核心”视图](../profiling/cores-view.md)|介绍如何分析跨越核心的线程迁移。|
 |[性能不佳的多线程应用程序的常见模式](../profiling/common-patterns-for-poorly-behaved-multithreaded-applications.md)|描述若干常见模式并展示其在并发可视化工具中的显示方式。|
-|[Visual Studio 博客中的并行开发](https://blogs.msdn.microsoft.com/visualizeparallel/)|提供关于并发可视化工具的提示和最佳做法。|
+|[Visual Studio 博客中的并行开发](/archive/blogs/visualizeparallel/)|提供关于并发可视化工具的提示和最佳做法。|
 |[性能报告视图](../profiling/performance-report-views.md)|提供有关 Visual Studio 分析工具报告和视图的参考信息。|
 |[并发可视化工具 SDK](../profiling/concurrency-visualizer-sdk.md)|描述如何检测你的源代码，以便在并发可视化工具中显示附加信息。|
 |[并发可视化工具命令行实用工具 (CVCollectionCmd)](../profiling/concurrency-visualizer-command-line-utility-cvcollectioncmd.md)|描述如何使用并发可视化工具命令行实用程序 (CVCollectionCmd.exe) 在未安装 Visual Studio 的计算机上收集并处理跟踪信息。|

@@ -9,12 +9,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 7ec0e4eed9036a0548c4f8f162331e92a416c0cb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4c1cdbea77f8a14e8f4cedcd53b54e2eac65cf75
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88144683"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90037219"
 ---
 # <a name="use-a-lab-environment-for-your-devops"></a>使用实验室环境进行开发
 
@@ -129,23 +129,23 @@ ms.locfileid: "88144683"
 
 有关实验室管理的详细信息，请参阅：
 
-* [规划实验室](https://msdn.microsoft.com/library/ff756575%28v=vs.140%29.aspx)
-* [管理实验室](https://msdn.microsoft.com/library/dd936084%28v=vs.140%29.aspx)
-* [设置 SCVMM 环境](https://msdn.microsoft.com/library/dd380687%28v=vs.140%29.aspx)
-* [管理权限](https://msdn.microsoft.com/library/dd380760%28v=vs.140%29.aspx)
-* [更改设置](https://msdn.microsoft.com/library/ee704508%28v=vs.140%29.aspx)
-* [疑难解答](https://msdn.microsoft.com/library/ee853230%28v=vs.140%29.aspx)
+* [规划实验室](/previous-versions/ff756575(v=vs.140))
+* [管理实验室](/previous-versions/dd936084(v=vs.140))
+* [设置 SCVMM 环境](/previous-versions/dd380687(v=vs.140))
+* [管理权限](/previous-versions/dd380760(v=vs.140))
+* [更改设置](/previous-versions/ee704508(v=vs.140))
+* [疑难解答](/previous-versions/ee853230(v=vs.140))
 
 有关设置环境的信息，请参阅：
 
 * [生成和发布云环境](use-build-or-rm-instead-of-lab-management.md)
-* [标准实验室环境](https://msdn.microsoft.com/library/ee390842.aspx)
-* [SCVMM（虚拟）环境](https://msdn.microsoft.com/library/ee943322.aspx)
-* [创建和使用网络独立环境](https://msdn.microsoft.com/library/ee518924.aspx)
+* [标准实验室环境](/previous-versions/ee390842(v=vs.140))
+* [SCVMM（虚拟）环境](/previous-versions/ee943322(v=vs.140))
+* [创建和使用网络独立环境](/previous-versions/ee518924(v=vs.140))
 ::: moniker-end
 
 ## <a name="see-also"></a>另请参阅
 
 * [安装和配置测试代理](../../test/lab-management/install-configure-test-agents.md)
-* [Visual Studio 实验室管理工具版指南](https://blogs.msdn.microsoft.com/visualstudioalmrangers/2015/04/22/library-of-tooling-and-guidance-solutions-aka-msvsarsolutions/)
+* [Visual Studio 实验室管理工具版指南](/archive/blogs/visualstudioalmrangers/library-of-tooling-and-guidance-solutions-aka-msvsarsolutions)
 * [Microsoft DevOps Blog](https://devblogs.microsoft.com/devops/)

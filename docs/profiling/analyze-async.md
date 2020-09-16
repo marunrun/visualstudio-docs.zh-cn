@@ -9,12 +9,12 @@ ms.author: esherrer
 manager: AndSter
 ms.workload:
 - multiple
-ms.openlocfilehash: 49091ba472637d480c04c39f0170c2aee00595d2
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: e6f690b77b7e573fdf1c54fdaeca6237c6bbc146
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85290817"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90037538"
 ---
 # <a name="analyze-performance-of-net-asynchronous-code"></a>分析 .NET 异步代码的性能
 
@@ -41,7 +41,7 @@ ms.locfileid: "85290817"
 
 异步事件整理为按时间顺序划分的活动。 每个活动都显示它的开始时间、结束时间和持续时间。
 
-与[任务](https://docs.microsoft.com/dotnet/api/system.threading.tasks)对应的每一行都在“名称”列中有“任务”标签。 对于无法解析的任何任务名称，显示的是“任务属于”标签。 后跟任务所在方法的名称。 如果异步活动在收集会话期间没有完成，则“结束时间”列中显示“未完成”标签。
+与[任务](/dotnet/api/system.threading.tasks)对应的每一行都在“名称”列中有“任务”标签。 对于无法解析的任何任务名称，显示的是“任务属于”标签。 后跟任务所在方法的名称。 如果异步活动在收集会话期间没有完成，则“结束时间”列中显示“未完成”标签。
 
 若要进一步调查特定的任务或活动，请右键单击相应行。 然后，选择“转到源文件”，以查看活动在代码中的何处发生。
 

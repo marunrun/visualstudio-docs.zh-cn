@@ -13,12 +13,12 @@ manager: jillfra
 ms.workload:
 - multiple
 monikerRange: '>= vs-2019'
-ms.openlocfilehash: b7d9ed2f2ceeae21b85fdb8227e65715cb07bc8b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 87f8fbec389e3735b6f1c39cdd671a391c7334d7
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85350558"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89600106"
 ---
 # <a name="generate-source-code-from-net-assemblies-while-debugging"></a>在调试时从 .NET 程序集生成源代码
 
@@ -27,7 +27,7 @@ ms.locfileid: "85350558"
 > [!NOTE]
 > * 源代码生成（反向编译）仅适用于 .NET 应用程序，并且基于开放源代码 [ILSpy](https://github.com/icsharpcode/ILSpy) 项目。
 > * 反向编译功能仅在 Visual Studio 2019 16.5 及更高版本中提供。
-> * 将 [SuppressIldasmAttribute](https://docs.microsoft.com/dotnet/api/system.runtime.compilerservices.suppressildasmattribute) 属性应用于程序集或模块可防止 Visual Studio 进行反向编译尝试。
+> * 将 [SuppressIldasmAttribute](/dotnet/api/system.runtime.compilerservices.suppressildasmattribute) 属性应用于程序集或模块可防止 Visual Studio 进行反向编译尝试。
 
 ## <a name="generate-source-code"></a>生成源代码
 
@@ -99,7 +99,7 @@ ms.locfileid: "85350558"
 
 ### <a name="just-my-code"></a>仅我的代码
 
-[仅我的代码 (JMC)](https://docs.microsoft.com/visualstudio/debugger/just-my-code) 设置使 Visual Studio 可以单步跳过系统、框架、库和其他非用户调用。 在调试会话期间，“模块”窗口会显示调试器将哪些代码模块视为“我的代码”（用户代码）。
+[仅我的代码 (JMC)](./just-my-code.md) 设置使 Visual Studio 可以单步跳过系统、框架、库和其他非用户调用。 在调试会话期间，“模块”窗口会显示调试器将哪些代码模块视为“我的代码”（用户代码）。
 
 对优化或发布模块进行反向编译会生成非用户代码。 例如，如果调试器中断了反向编译的非用户代码，则会显示“无源代码”窗口。 要禁用“仅我的代码”，请导航至“工具” > “选项”（或“调试” > “选项”）>“调试” > “常规”，然后取消选择“启用仅我的代码”      。
 

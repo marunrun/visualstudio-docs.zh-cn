@@ -25,12 +25,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dd4a481a8d4f283204b99cfef4a07106d3e479cb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 06b42dbf31a8b5f4cb66de047bc1e08a4f840353
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72731283"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89600233"
 ---
 # <a name="mfc-debugging-techniques"></a>MFC 调试方法
 如果要调试 MFC 程序，这些调试技术可能会有用。
@@ -80,7 +80,7 @@ _asm int 3
 [在本主题中](#BKMK_In_this_topic)
 
 ## <a name="the-trace-macro"></a><a name="BKMK_The_TRACE_macro"></a> TRACE 宏
-若要在调试器的 [“输出”窗口](../ide/reference/output-window.md)中显示来自程序的消息，可以使用 [ATLTRACE](https://msdn.microsoft.com/Library/c796baa5-e2b9-4814-a27d-d800590b102e) 宏或 MFC [TRACE](https://msdn.microsoft.com/Library/7b6f42d8-b55a-4bba-ab04-c46251778e6f) 宏。 与 [断言](../debugger/c-cpp-assertions.md)类似，跟踪宏只在程序的“Debug”版本中起作用，在“Release”版本中编译时将消失。
+若要在调试器的 [“输出”窗口](../ide/reference/output-window.md)中显示来自程序的消息，可以使用 [ATLTRACE](/previous-versions/6xkxyz08(v=vs.140)) 宏或 MFC [TRACE](/previous-versions/6w95a4ha(v=vs.140)) 宏。 与 [断言](../debugger/c-cpp-assertions.md)类似，跟踪宏只在程序的“Debug”版本中起作用，在“Release”版本中编译时将消失。
 
 下面的示例显示几种 **TRACE** 宏的用法。 与 `printf`类似， **TRACE** 宏可处理许多参数。
 
@@ -115,7 +115,7 @@ TRACE( _T("This is a test of the TRACE macro that uses a TCHAR string: %s %d\n")
 MFC 提供一些类和函数来检测曾经被分配但从未释放的内存。
 
 ### <a name="tracking-memory-allocations"></a><a name="BKMK_Tracking_memory_allocations"></a> 跟踪内存分配
-在 MFC 中，可以使用 [DEBUG_NEW](https://msdn.microsoft.com/Library/9b379344-4093-4bec-a3eb-e0d8a63ada9d) 宏代替 **new** 运算符来帮助定位内存泄漏。 在程序的“Debug”版本中， `DEBUG_NEW` 将为所分配的每个对象跟踪文件名和行号。 当编译程序的“Release”版本时， `DEBUG_NEW` 将解析为不包含文件名和行号信息的简单 **new** 操作。 因此，在程序的“Release”版本中不会造成任何速度损失。
+在 MFC 中，可以使用 [DEBUG_NEW](/previous-versions/tz7sxz99(v=vs.140)) 宏代替 **new** 运算符来帮助定位内存泄漏。 在程序的“Debug”版本中， `DEBUG_NEW` 将为所分配的每个对象跟踪文件名和行号。 当编译程序的“Release”版本时， `DEBUG_NEW` 将解析为不包含文件名和行号信息的简单 **new** 操作。 因此，在程序的“Release”版本中不会造成任何速度损失。
 
 如果不想重写整个程序来使用 `DEBUG_NEW` 代替 **new**，则可以在源文件中定义下面的宏：
 
@@ -134,11 +134,11 @@ MFC 框架的“Debug”版本自动使用 `DEBUG_NEW` ，但代码不自动使�
 
 **启用或禁用内存诊断**
 
-- 调用全局函数 [AfxEnableMemoryTracking](https://msdn.microsoft.com/Library/0a40e0c4-855d-46e2-9577-a8f2346f47db) 来启用或禁用诊断内存分配器。 由于默认情况下内存诊断在调试库中是打开的，所以通常会使用该函数暂时关闭内存诊断，这会提高程序执行速度并减少诊断输出。
+- 调用全局函数 [AfxEnableMemoryTracking](/previous-versions/hzsxb6e8(v=vs.140)) 来启用或禁用诊断内存分配器。 由于默认情况下内存诊断在调试库中是打开的，所以通常会使用该函数暂时关闭内存诊断，这会提高程序执行速度并减少诊断输出。
 
   **使用 afxMemDF 选择特定内存诊断功能**
 
-- 如果希望对内存诊断功能进行更精确的控制，可以通过设置 MFC 全局变量 [afxMemDF](https://msdn.microsoft.com/Library/cf117501-5446-4fce-81b3-f7194bc95086)的值，来有选择地打开和关闭单个内存诊断功能。 该变量可以具有下列值（由枚举类型 **afxMemDF**所指定）。
+- 如果希望对内存诊断功能进行更精确的控制，可以通过设置 MFC 全局变量 [afxMemDF](/previous-versions/ahe4a83t(v=vs.140))的值，来有选择地打开和关闭单个内存诊断功能。 该变量可以具有下列值（由枚举类型 **afxMemDF**所指定）。
 
   |“值”|描述|
   |-----------|-----------------|

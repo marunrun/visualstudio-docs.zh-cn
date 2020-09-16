@@ -22,12 +22,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6fab5627f3d467c0df289969e4fee010dd3ea78b
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.openlocfilehash: 3f7b293270facbbfa0d2174121ff6a3ac736b75a
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85350389"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89599892"
 ---
 # <a name="how-can-i-debug-windows-api-functions"></a>如何调试 Windows API 函数？
 如果要调试加载了 NT 符号的 Windows API 函数，必须执行以下步骤。
@@ -40,7 +40,7 @@ ms.locfileid: "85350389"
     {,,USER32.DLL}_MessageBeep@4
     ```
 
-     若要获取修饰名，请参阅[查看修饰名](https://msdn.microsoft.com/library/f79e2717-a4db-4d12-a689-69830cce2be0)。
+     若要获取修饰名，请参阅[查看修饰名](/previous-versions/5x49w699(v=vs.140))。
 
      可以测试修饰名称并在反汇编代码中查看它。 在 Visual Studio 调试器的函数中暂停时，在“代码编辑器”或“调用堆栈”窗口中右键单击该函数，然后选择“转到反汇编”。
 

@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 75d044ed5ddaf4b7eb7a66bc09c8b3de3502a50f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7e2157b55915f82e79dfdac5d300046850a93879
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85350493"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89600302"
 ---
 # <a name="inspect-an-exception-using-the-exception-helper"></a>使用异常帮助程序检查异常 
 
@@ -50,7 +50,7 @@ ms.locfileid: "85350493"
 你可以在异常帮助程序的“异常设置”部分将调试器配置为在引发当前类型的异常时中断。 如果调试器在引发的异常处暂停，则可以使用复选框禁止在将来引发该异常类型时中断。 如果你不想在此特定异常在特定模块中引发时中断，请在“异常设置”窗口中的“例外引发位置:”下方勾选模块名称旁的复选框。 
 
 ## <a name="inspect-inner-exceptions"></a>检查内部异常 
-如果异常具有任何内部异常 ([InnerException](https://docs.microsoft.com/dotnet/api/system.exception.innerexception))，则可以在异常帮助程序中查看它们。 如果存在多个异常，则可以使用调用堆栈上方显示的左右箭头在它们之间进行导航。
+如果异常具有任何内部异常 ([InnerException](/dotnet/api/system.exception.innerexception))，则可以在异常帮助程序中查看它们。 如果存在多个异常，则可以使用调用堆栈上方显示的左右箭头在它们之间进行导航。
 
 ![具有内部异常的异常帮助程序](media/debugger-exception-helper-innerexception.png)
 
@@ -60,4 +60,4 @@ ms.locfileid: "85350493"
 ![具有重新引发的异常的异常帮助程序](media/debugger-exception-helper-innerexception.png)
 
 ## <a name="share-a-debug-session-with-live-share"></a>与 Live Share 共享调试会话
-在异常帮助程序中，你可以使用“启动 Live Share 会话...”链接来启动 [Live Share](https://docs.microsoft.com/visualstudio/liveshare/) 会话。加入 Live Share 会话的所有人都可以看到异常帮助程序以及任何其他调试信息。
+在异常帮助程序中，你可以使用“启动 Live Share 会话...”链接来启动 [Live Share](/visualstudio/liveshare/) 会话。加入 Live Share 会话的所有人都可以看到异常帮助程序以及任何其他调试信息。

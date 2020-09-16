@@ -19,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f37a1ee196b14ec1f8c7b03ffc6e6d826ced02d8
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.openlocfilehash: 87fdd6064492c4043723ddff960685a50f8bcb2b
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85348465"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89600271"
 ---
 # <a name="how-to-verify-iis-property-settings"></a>如何：验证 IIS 属性设置
 
@@ -59,7 +59,7 @@ ms.locfileid: "85348465"
 
    3. 单击“确定”以关闭“身份验证方法”对话框 。
 
-5. 对于 ATL Server 应用程序，请验证 DEBUG 谓词是否与您的 ISAPI 扩展相关联。 有关详细信息，请参阅[如何：将 DEBUG 谓词与扩展名关联](https://msdn.microsoft.com/library/50d261d3-4bd4-41c0-b44e-3591086f121e)。
+5. 对于 ATL Server 应用程序，请验证 DEBUG 谓词是否与您的 ISAPI 扩展相关联。 有关详细信息，请参阅[如何：将 DEBUG 谓词与扩展名关联](/previous-versions/ms165022(v=vs.100))。
 
 6. 对于 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 应用程序，请确保应用程序的虚拟文件夹中具有在“Internet Information Services (IIS) 管理器”、“Internet 服务管理器”或“Internet Information Services”中设置的应用程序名称  。
 

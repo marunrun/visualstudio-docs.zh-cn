@@ -7,12 +7,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: e45df63f36947b5f6f0aad77bb8eebcab4aca731
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 9d68e26e8503fb450d6b163ecec31c0cb6485f6c
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75585556"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90038616"
 ---
 # <a name="use-the-mstest-framework-in-unit-tests"></a>在单元测试中使用 MSTest 框架
 
@@ -43,7 +43,7 @@ ms.locfileid: "75585556"
 
 ## <a name="attributes-used-to-establish-a-calling-order"></a>用于建立调用顺序的属性
 
-使用以下属性之一进行修饰的代码元素在指定时间进行调用。 有关详细信息，请参阅[单元测试的剖析](https://msdn.microsoft.com/a03d1ee7-9999-4e7c-85df-7d9073976144)。
+使用以下属性之一进行修饰的代码元素在指定时间进行调用。 有关详细信息，请参阅[单元测试的剖析](/previous-versions/ms182517(v=vs.110))。
 
 ### <a name="attributes-for-assemblies"></a>程序集的属性
 
@@ -69,7 +69,7 @@ ClassInitialize 和 ClassCleanup 恰好在加载类之后以及恰好在卸载�
 
 ## <a name="attributes-used-to-identify-test-classes-and-methods"></a>用于标识测试类和方法的属性
 
-每个测试类都必须具有 `TestClass` 属性，每个测试方法都必须具有 `TestMethod` 属性。 有关详细信息，请参阅[单元测试的剖析](https://msdn.microsoft.com/a03d1ee7-9999-4e7c-85df-7d9073976144)。
+每个测试类都必须具有 `TestClass` 属性，每个测试方法都必须具有 `TestMethod` 属性。 有关详细信息，请参阅[单元测试的剖析](/previous-versions/ms182517(v=vs.110))。
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute>
 

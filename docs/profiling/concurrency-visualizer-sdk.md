@@ -10,15 +10,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cb48733f84dcf484d2c2d7ffb18e838faae07ab0
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 1732d62fa20e170825cba5e133a9a44f11a59a34
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "72911200"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90037349"
 ---
 # <a name="concurrency-visualizer-sdk"></a>并发可视化工具 SDK
-可通过使用并发可视化工具 SDK 检测源代码，以在并发可视化工具中显示附加信息。 可以在代码中将其他数据与阶段和事件关联。 这些其他的可视化被称为标记  。  有关介绍性演练，请参阅 [Introducing the Concurrency Visualizer SDK](https://blogs.msdn.microsoft.com/visualizeparallel/2011/10/17/introducing-the-concurrency-visualizer-sdk/)（并发可视化工具 SDK 简介）。
+可通过使用并发可视化工具 SDK 检测源代码，以在并发可视化工具中显示附加信息。 可以在代码中将其他数据与阶段和事件关联。 这些其他的可视化被称为标记  。  有关介绍性演练，请参阅 [Introducing the Concurrency Visualizer SDK](/archive/blogs/visualizeparallel/introducing-the-concurrency-visualizer-sdk)（并发可视化工具 SDK 简介）。
 
 ## <a name="properties"></a>属性
  标志、范围和消息都具有两个属性：类别和重要性。 在[高级设置](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md)对话框中，可以使用以下属性来筛选显示的标记集。 此外，这些属性还会影响标记的视觉表示形式。 例如，标志的大小用于表示重要性。 此外，颜色用于指示类别。

@@ -14,12 +14,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: c9a0537e146ead1c163941a0f552bdea7a28b89c
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 4d7483f309a3d7edb92d25c34e9665a6212c8038
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74773963"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90037512"
 ---
 # <a name="marks-view"></a>“标记”视图
 “标记”视图显示插入到应用程序的采样和 ETW 事件。
@@ -43,4 +43,4 @@ ms.locfileid: "74773963"
 ## <a name="see-also"></a>另请参阅
 - [性能报告概述](../profiling/performance-report-overview.md)
 - [如何：收集 Windows 计数器数据](../profiling/how-to-collect-windows-counter-data.md)
-- [[NIB] 数据收集控件窗口](https://msdn.microsoft.com/98d740d8-459f-4605-bf04-fb17aafaaa8f)
+- [[NIB] 数据收集控件窗口](/previous-versions/bb385767(v=vs.110))

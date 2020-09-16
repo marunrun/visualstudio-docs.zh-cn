@@ -23,12 +23,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 701d156d5fdc23a5e98ac1de43c1882f3065171e
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 6cec7b9bc2c56e16d1a5d59701d0953797ae00f4
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72728332"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89599466"
 ---
 # <a name="walkthrough-debugging-a-windows-form"></a>演练：调试 Windows 窗体
 Windows 窗体是最常见的托管应用程序之一。 Windows 窗体可创建标准的 Windows 应用程序。 可以使用 Visual Basic、C# 或 C++ 来完成本演练。
@@ -109,7 +109,7 @@ Windows 窗体是最常见的托管应用程序之一。 Windows 窗体可创建
     textBox1->Text = "Button was clicked!";
     ```
 
-     出现一个红点并且该行上的文本突出显示为红色。 红点表示一个断点。 有关详细信息，请参见[断点](https://msdn.microsoft.com/fe4eedc1-71aa-4928-962f-0912c334d583) 当您在调试器下运行该应用程序时，此调试器将在命中该代码时在该位置中断执行。 然后您可以查看应用程序的状态并调试它。
+     出现一个红点并且该行上的文本突出显示为红色。 红点表示一个断点。 有关详细信息，请参见[断点](/previous-versions/ktf38f66(v=vs.100)) 当您在调试器下运行该应用程序时，此调试器将在命中该代码时在该位置中断执行。 然后您可以查看应用程序的状态并调试它。
 
     > [!NOTE]
     > 还可以右键单击任意代码行，指向“断点”，然后单击“插入断点”在该行上添加断点 。

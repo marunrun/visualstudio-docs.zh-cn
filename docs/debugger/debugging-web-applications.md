@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b1a7727f93e3f4fe279bb9cc009e61a3fdd70a15
-ms.sourcegitcommit: ba0fef4f5dca576104db9a5b702670a54a0fcced
+ms.openlocfilehash: e2f54e80059896345abb00e955a827a00b5a35a5
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73714450"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89600120"
 ---
 # <a name="debugging-web-applications"></a>调试 Web 应用程序
 
@@ -42,7 +42,7 @@ ms.locfileid: "73714450"
 
 - 调试 AJAX 脚本应用程序
 
-  支持 AJAX 的 Web 应用程序大量使用脚本代码，从而给调试带来特别大的难度。 有关 AJAX 调试技术的信息，请参阅[调试和跟踪 Ajax 应用程序概述](https://msdn.microsoft.com/Library/92684ea0-7bb4-4a34-9203-3aa6394ce375)。
+  支持 AJAX 的 Web 应用程序大量使用脚本代码，从而给调试带来特别大的难度。 有关 AJAX 调试技术的信息，请参阅[调试和跟踪 Ajax 应用程序概述](/previous-versions/bb398817(v=vs.140))。
 
 ## <a name="see-also"></a>请参阅
 

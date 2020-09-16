@@ -19,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1e39ae29e94ff28ce10daf36e3970273d8e34e9e
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.openlocfilehash: aa88d941950cdabe0da873f9184b420c81d5a348
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85349102"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89599862"
 ---
 # <a name="how-to-specify-debugger-settings"></a>如何：指定调试器设置
 在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 中可为调试器行为指定各种设置，包括如何显示变量，是否显示某些警告，如何设置断点以及中断如何影响正在运行的程序。 在“选项”对话框中可以指定调试器设置。
@@ -43,6 +43,6 @@ ms.locfileid: "85349102"
 
 ## <a name="see-also"></a>请参阅
 - [“选项”对话框 ->“调试”->“常规”](../debugger/general-debugging-options-dialog-box.md)
-- [“选项”对话框 ->“调试”->“编辑并继续”](https://msdn.microsoft.com/library/bcew296c.aspx)
+- [“选项”对话框 ->“调试”->“编辑并继续”](./edit-and-continue.md)
 - [调试器设置和准备](../debugger/debugger-settings-and-preparation.md)
 - [用于生成命令和属性的常用宏](/cpp/build/reference/common-macros-for-build-commands-and-properties)

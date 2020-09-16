@@ -13,12 +13,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: b22341f1e4944b91f86a16af19494a85a2abd013
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.openlocfilehash: 391ce629eea295f1436708b363b54fb0213914a4
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85544685"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90036153"
 ---
 # <a name="da0021-high-rate-of-gen-1-garbage-collections"></a>DA0021：第 1 代垃圾回收率高
 
@@ -40,11 +40,11 @@ ms.locfileid: "85544685"
 
  收集 0 代中的对象时，通常频率和效率都较高。 收集 1 代中的对象时，通常频率和效率都较低。 最后，应以更低的频率收集 2 代中生存期较长的对象。 2 代回收是完整的垃圾回收运行，也是成本最高的操作。
 
- 1 代垃圾回收比例过高时将触发此规则。 如果过多生存期较短的对象通过 0 代回收，但在1 代回收中被回收，那么内存管理的成本将过高。 有关详细信息，请参阅 MSDN 网站上 Rico Mariani 关于性能问题的见解的 [Mid-life crisis](https://blogs.msdn.microsoft.com/ricom/2003/12/04/mid-life-crisis/)（中年危机）一文。
+ 1 代垃圾回收比例过高时将触发此规则。 如果过多生存期较短的对象通过 0 代回收，但在1 代回收中被回收，那么内存管理的成本将过高。 有关详细信息，请参阅 MSDN 网站上 Rico Mariani 关于性能问题的见解的 [Mid-life crisis](/archive/blogs/ricom/mid-life-crisis)（中年危机）一文。
 
 ## <a name="how-to-investigate-a-warning"></a>如何调查警告
  双击“错误列表”窗口中的消息，导航到分析数据的[标记视图](../profiling/marks-view.md)。 查找 **.NET CLR Memory\\# of Gen 0 Collections** 和 **.NET CLR Memory\\# of Gen 1 Collections** 列。 确定是否存在特定阶段的程序执行，其中垃圾回收更频繁。 将这些值与 **%Time in GC** 列进行比较，查看托管内存分配的模式是否会导致内存管理开销过多。
 
  若要了解应用程序的托管内存使用模式，请运行 .NET 内存分配分析再次进行分析，并请求“对象生存期”度量值。
 
- 有关如何提高垃圾回收性能的信息，请参阅 Microsoft 网站上的 [Garbage Collector Basics and Performance Hints](/previous-versions/dotnet/articles/ms973837(v=msdn.10))（垃圾回收器基础知识和性能提示）。 有关自动垃圾回收的开销的信息，请参阅[大型对象堆揭密](https://msdn.microsoft.com/magazine/cc534993.aspx)。
+ 有关如何提高垃圾回收性能的信息，请参阅 Microsoft 网站上的 [Garbage Collector Basics and Performance Hints](/previous-versions/dotnet/articles/ms973837(v=msdn.10))（垃圾回收器基础知识和性能提示）。 有关自动垃圾回收的开销的信息，请参阅[大型对象堆揭密](/archive/msdn-magazine/2008/june/clr-inside-out-large-object-heap-uncovered)。
