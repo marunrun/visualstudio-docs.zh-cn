@@ -14,12 +14,12 @@ dev_langs:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3af54d663cee1ad2b2dd4e8241678b88c635d376
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: ad609e9cf6a00a1b966e5d63589592239f215b01
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "70180439"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89743035"
 ---
 # <a name="tutorial-open-a-project-from-a-repo"></a>教程：打开存储库中的项目
 
@@ -180,8 +180,8 @@ ms.locfileid: "70180439"
 - [Visual Studio 教程 | C#  ](./csharp/index.yml)
 - [Visual Studio 教程 | Visual Basic  ](./visual-basic/index.yml)
 - [Visual Studio 教程 | C++  ](/cpp/get-started/tutorial-console-cpp)
-- [Visual Studio 教程 | Python  ](/visualstudio/python/)
-- [Visual Studio 教程 | JavaScript、TypeScript 和 Node.js    ](/visualstudio/javascript/)
+- [Visual Studio 教程 | Python  ](../python/index.yml)
+- [Visual Studio 教程 | JavaScript、TypeScript 和 Node.js    ](../javascript/index.yml)
 
 ## <a name="see-also"></a>请参阅
 

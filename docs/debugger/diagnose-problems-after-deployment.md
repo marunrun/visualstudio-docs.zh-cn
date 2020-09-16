@@ -8,12 +8,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8a4ae5e4f6f21208f02cbfd6513b3c5eb28124a8
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.openlocfilehash: 659167b02703cd3a51751fbe90fbd9408b5e623d
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85350584"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89599564"
 ---
 # <a name="diagnose-problems-after-deployment-using-intellitrace-c-visual-basic"></a>使用 IntelliTrace在部署后诊断问题（C#、Visual Basic）
 
@@ -153,7 +153,7 @@ Visual Studio 2017 及更高版本不包括 BuildInfo.config 文件，该文件�
  /p:BuildSymbolStorePath=\<*path to symbols*>
 
 ## <a name="step-2-release-your-app"></a><a name="DeployRelease"></a> 步骤 2：发布应用
- 如果使用生成过程创建的 [Web.Deploy 包](https://msdn.microsoft.com/library/dd394698.aspx) 来部署你的应用，则生成清单从“*ProjectName*.BuildInfo.config”自动重命名为“BuildInfo.config”，并在 Web 服务器上与应用的 Web.config 文件一起放在相同的文件夹中。
+ 如果使用生成过程创建的 [Web.Deploy 包](/previous-versions/aspnet/dd394698(v=vs.110)) 来部署你的应用，则生成清单从“*ProjectName*.BuildInfo.config”自动重命名为“BuildInfo.config”，并在 Web 服务器上与应用的 Web.config 文件一起放在相同的文件夹中。
 
  如果你使用其他方法部署应用，请确保生成清单从“*ProjectName*.BuildInfo.config”重命名为“BuildInfo.config”，并且在 Web 服务器上与应用的 Web.config 文件一起放在相同的文件夹中。
 

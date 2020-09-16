@@ -13,12 +13,12 @@ manager: jillfra
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3fa32e6155959df6e665a807af3b364923ba3f54
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.openlocfilehash: cbe2b18b9edd6f2d4634ede41d676519f1b80ad3
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85533453"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90035715"
 ---
 # <a name="language-conventions"></a>语言约定
 
@@ -76,7 +76,7 @@ Severity | 效果
 
    Visual Studio 在 EditorConfig 文件中添加或修改配置设置，如预览框中所示。
 
-若要更改代码样式冲突的严重性，请执行相同的步骤，但请选择“配置 \<rule ID> 严重性”，而不选择“配置 \<rule ID> 代码样式” 。 有关详细信息，请参阅[自动配置规则严重性](../code-quality/use-roslyn-analyzers.md#automatically-configure-rule-severity)。
+若要更改代码样式冲突的严重性，请执行相同的步骤，但请选择“配置 \<rule ID> 严重性”，而不选择“配置 \<rule ID> 代码样式” 。 有关详细信息，请参阅[自动配置规则严重性](../code-quality/use-roslyn-analyzers.md#set-rule-severity-from-the-light-bulb-menu)。
 
 ::: moniker-end
 
@@ -1049,6 +1049,30 @@ Dim v = If(o IsNot Nothing, o.ToString(), Nothing)
 | **适用的语言** | C# 6.0+ 和 Visual Basic 14+ |
 | **值** | `true` - null 检查优于引用相等性方法<br /><br />`false` - 引用相等性方法优于 null 检查 |
 | **Visual Studio 默认值** | `true:silent` |
+
+代码示例：
+
+```csharp
+// dotnet_style_prefer_is_null_check_over_reference_equality_method = true
+if (value is null)
+    return;
+
+// dotnet_style_prefer_is_null_check_over_reference_equality_method = false
+if (object.ReferenceEquals(value, null))
+    return;
+```
+
+```vb
+' dotnet_style_prefer_is_null_check_over_reference_equality_method = true
+If value Is Nothing
+    Return
+End If
+
+' dotnet_style_prefer_is_null_check_over_reference_equality_method = false
+If Object.ReferenceEquals(value, Nothing)
+    Return
+End If
+```
 
 ## <a name="net-code-quality-settings"></a>.NET 代码质量设置
 

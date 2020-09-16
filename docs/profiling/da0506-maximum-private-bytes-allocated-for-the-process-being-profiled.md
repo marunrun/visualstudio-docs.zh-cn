@@ -13,12 +13,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 663de229aa9d7d3dee22425347a3464c200b9d53
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.openlocfilehash: a5447c21e3a1049bcb2cb86e3e0419e43fc4e953
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85532088"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90036803"
 ---
 # <a name="da0506-maximum-private-bytes-allocated-for-the-process-being-profiled"></a>DA0506：为所分析进程分配的最大专用字节数
 
@@ -46,4 +46,4 @@ ms.locfileid: "85532088"
 ## <a name="how-to-use-rule-data"></a>如何使用规则数据
  若要了解不同分析方案中应用程序的性能，可使用报告的值比较不同版本程序的性能。
 
- 如果进程专用字节的最大值即将达到进程地址空间可以增长到的体系结构大小限制，则可能导致内存不足的异常。 有关详细信息，请参阅 MSDN 杂志期刊中的[调查内存问题](https://msdn.microsoft.com/magazine/cc163528.aspx)。
+ 如果进程专用字节的最大值即将达到进程地址空间可以增长到的体系结构大小限制，则可能导致内存不足的异常。 有关详细信息，请参阅 MSDN 杂志期刊中的[调查内存问题](/archive/msdn-magazine/2006/november/clr-inside-out-investigating-memory-issues)。

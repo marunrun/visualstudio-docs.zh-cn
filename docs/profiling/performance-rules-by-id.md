@@ -9,12 +9,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 5b7ef6975fe5d9d19ebd2cbb0ed10951ca6f3219
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 1762f12d791f220161867af73a823f88b9f86ec0
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74778435"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90037323"
 ---
 # <a name="performance-rules-by-id"></a>按 ID 排序的性能规则
 
@@ -28,7 +28,7 @@ ms.locfileid: "74778435"
 | [DA0006：重写值类型的 Equals()](../profiling/da0006-override-equals-parens-for-value-types.md) | 对 Equals 方法或公共值类型的相等运算符的调用在分析数据中占很大比例。 请考虑实施更有效的方法。 |
 | [DA0007：避免使用控制流异常](../profiling/da0007-avoid-using-exceptions-for-control-flow.md) | 分析数据中调用了速率较高的 .NET Framework 异常处理程序。 请考虑使用其他控制流逻辑，以便减少引发的异常数。 |
 | [DA0008：收集的样本过少](../profiling/da0008-few-samples-collected.md) | 分析运行期间仅收集了少量样本。 请考虑运行更长的时间或使用更快的采样率，以获取更有意义的结果。 |
-| [DA0009：JIT 所占时间百分比很高](https://msdn.microsoft.com/b60c1767-515c-41d9-81c2-c70d0b7024fd) | 实时 (JIT) 编译器所用的时间占应用程序执行时间的百分比很大。 |
+| [DA0009：JIT 所占时间百分比很高](/previous-versions/dd264972(v=vs.100)) | 实时 (JIT) 编译器所用的时间占应用程序执行时间的百分比很大。 |
 | [DA0010：高开销 GetHashCode](../profiling/da0010-expensive-gethashcode.md) | 对该类型的 GetHashCode 方法的调用在分析数据中占很大比例或此方法分配内存。 |
 | [DA0011：高开销的 CompareTo](../profiling/da0011-expensive-compareto.md) | 类型的 CompareTo 方法开销巨大或分配内存。 |
 | [DA0012：大量反射](../profiling/da0012-significant-amount-of-reflection.md) | 对 System.Reflection 方法（如 InvokeMember 和 GetMember）或 Type 方法（如 MemberInvoke）的调用是分析数据的重要组成部分。 如果可以，请考虑用对依赖程序集的方法的早期绑定替代这些方法。 |

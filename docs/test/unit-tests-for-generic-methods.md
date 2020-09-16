@@ -10,12 +10,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 2158c889aefc85c908aa9ee42d45858fd11d557e
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 40255c4ab86d407da4e851bd84cb65e5b4a0f8c9
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75590808"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90035672"
 ---
 # <a name="unit-tests-for-generic-methods"></a>泛型方法的单元测试
 
@@ -115,7 +115,7 @@ public void SizeOfLinkedListTest()
 ```
 
 > [!NOTE]
-> 每次运行 SizeOfLinkedListTest 测试时，都将调用两次其 TestHelper 方法。 断言语句的计算结果必须每次都为 true，测试才能通过。 如果测试失败，也许分不清是指定了 `<int>` 的调用还是指定了 `<char>` 的调用导致了失败。 要找出答案，可以检查调用堆栈，或在测试方法中设置断点并在运行测试时进行调试。 有关详细信息，请参阅[如何：在 ASP.NET 解决方案中运行测试时进行调试](https://msdn.microsoft.com/Library/de4d7aa1-4a1e-467e-a19b-4a85ec245b8b)。
+> 每次运行 SizeOfLinkedListTest 测试时，都将调用两次其 TestHelper 方法。 断言语句的计算结果必须每次都为 true，测试才能通过。 如果测试失败，也许分不清是指定了 `<int>` 的调用还是指定了 `<char>` 的调用导致了失败。 要找出答案，可以检查调用堆栈，或在测试方法中设置断点并在运行测试时进行调试。 有关详细信息，请参阅[如何：在 ASP.NET 解决方案中运行测试时进行调试](/previous-versions/ms243172(v=vs.140))。
 
 ### <a name="example-2-using-a-type-constraint"></a><a name="TypeConstraintNotSatisfied"></a> 示例 2：使用类型约束
 此示例演示使用未得到满足的类型约束的泛型方法的单元测试。 第一节显示待测试代码项目中的代码。 突出显示了类型约束。

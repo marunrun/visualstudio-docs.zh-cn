@@ -8,12 +8,12 @@ ms.author: kraigb
 manager: jillfra
 ms.workload:
 - data-science
-ms.openlocfilehash: 2b239059f445d92a5be6709ee7b7a26cb8bb7164
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2d1eb4cc53b6123acbba9741d33d3401d44cf6d7
+ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88144709"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90011874"
 ---
 # <a name="work-with-sql-server-and-r"></a>使用 SQL Server 和 R
 
@@ -50,7 +50,7 @@ RTVS 支持将 SQL 查询添加到 R 项目，允许用户在单独的上下文�
 ![SQL 窗口查询结果](media/sql-query-results.png)
 
 Transact-SQL 编辑器支持各种其他功能，例如查看查询的执行计划，查看查询调试器。
-有关详细信息，请参阅[使用 Transact-SQL 编辑器编辑和执行脚本](https://msdn.microsoft.com/library/hh272706.aspx)。
+有关详细信息，请参阅[使用 Transact-SQL 编辑器编辑和执行脚本](/previous-versions/sql/sql-server-data-tools/hh272706(v=vs.103))。
 
 ## <a name="work-with-sql-server-stored-procedures"></a>处理 SQL Server 存储过程
 

@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 83b4bea32f642cbf48acb01831bd4bccc2bb15a0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e401dd55588228a98242e08d16e227b10b162418
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85348933"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89600155"
 ---
 # <a name="how-to-trigger-suspend-resume-and-background-events-while-debugging-uwp-apps-in-visual-studio"></a>在 Visual Studio 中调试 UWP 应用时如何触发挂起、继续和后台事件
 
@@ -48,7 +48,7 @@ ms.locfileid: "85348933"
      “挂起和终止”将关闭应用并结束调试会话。
 
 ## <a name="trigger-background-tasks"></a><a name="BKMK_Trigger_background_tasks"></a> 触发后台任务
- 任何应用程序均可注册后台任务以响应某些系统事件，即使应用程序未运行也是如此。 后台任务不能运行直接更新 UI 的代码，但可通过磁贴更新、徽章更新和 toast 通知向用户显示信息。 有关详细信息，请参阅[使用后台任务支持应用](https://msdn.microsoft.com/library/4c7bb148-eb1f-4640-865e-41f627a46e8e)。
+ 任何应用程序均可注册后台任务以响应某些系统事件，即使应用程序未运行也是如此。 后台任务不能运行直接更新 UI 的代码，但可通过磁贴更新、徽章更新和 toast 通知向用户显示信息。 有关详细信息，请参阅[使用后台任务支持应用](/previous-versions/windows/apps/hh977046(v=win.10))。
 
  可从调试器触发对应用程序启动后台任务的事件。
 
@@ -110,7 +110,7 @@ ms.locfileid: "85348933"
 4. 选择 **“诊断”** 日志。
 
 ## <a name="see-also"></a>请参阅
-- [使用 Visual Studio 测试 UWP 应用](/visualstudio/test/create-and-run-unit-tests-for-a-store-app-in-visual-studio)
+- [使用 Visual Studio 测试 UWP 应用](../test/unit-test-your-code.md)
 - [在 Visual Studio 中调试应用](debugging-windows-store-and-windows-universal-apps.md)
 - [应用程序生命周期](/windows/uwp/launch-resume/app-lifecycle)
 - [Launching, resuming, and multitasking](/windows/uwp/launch-resume/index)

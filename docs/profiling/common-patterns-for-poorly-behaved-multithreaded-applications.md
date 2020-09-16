@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4aec033266ccb2a6e6dcd0342669b7c31082488a
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 6a70e77b63aa923aa51188c3db8cb0feaaf6daf0
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62788852"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90038499"
 ---
 # <a name="common-patterns-for-poorly-behaved-multithreaded-applications"></a>性能不佳的多线程应用程序的常见模式
 
@@ -30,7 +30,7 @@ ms.locfileid: "62788852"
 
 如下图所示，并发可视化工具还可在 CPU 使用率视图中公开此症状，其中，尽管存在多个线程，但该应用程序只使用一个逻辑核心。
 
-有关详细信息，请参阅 MSDN 杂志文章[线程性能 - Visual Studio 2010 中的资源争用并发分析](https://msdn.microsoft.com/magazine/ff714587.aspx)中的“从问题开始”部分。
+有关详细信息，请参阅 MSDN 杂志文章[线程性能 - Visual Studio 2010 中的资源争用并发分析](/archive/msdn-magazine/2010/june/msdn-magazine-thread-performance-resource-contention-concurrency-profiling-in-visual-studio-2010)中的“从问题开始”部分。
 
 ![锁争用](../profiling/media/lockcontention_2.png "LockContention_2")
 

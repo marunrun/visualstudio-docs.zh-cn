@@ -1,5 +1,6 @@
 ---
-title: 演练：创建多计算机生成环境
+title: 创建多计算机生成环境
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-compile
 ms.topic: conceptual
@@ -11,12 +12,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 11b158854a0026de28cb2fb0a582bbaf764eeaa4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 595317be1c3f24c9759bc5bb574a758795066659
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "68461541"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90038421"
 ---
 # <a name="walkthrough-create-a-multiple-computer-build-environment"></a>演练：创建多计算机生成环境
 

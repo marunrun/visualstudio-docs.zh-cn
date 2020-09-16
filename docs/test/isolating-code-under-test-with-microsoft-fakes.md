@@ -10,12 +10,12 @@ author: mikejo5000
 dev_langs:
 - VB
 - CSharp
-ms.openlocfilehash: 49330132321c389fc5b6a4842972769896c72637
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: f92fe91c31f2b352d9d47a2d908a25f7bfdf2a7c
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85286955"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90038408"
 ---
 # <a name="isolate-code-under-test-with-microsoft-fakes"></a>用 Microsoft Fakes 隔离测试代码
 
@@ -33,7 +33,7 @@ Fakes 有两种风格：
 
 - Visual Studio Enterprise
 - .NET Framework 项目
-- .NET Core 和 SDK 样式项目支持目前以预览版形式提供。 [阅读详细信息](https://docs.microsoft.com/visualstudio/releases/2019/release-notes#microsoft-fakes-for-net-core-and-sdk-style-projects)
+- .NET Core 和 SDK 样式项目支持目前以预览版形式提供。 [阅读详细信息](/visualstudio/releases/2019/release-notes#microsoft-fakes-for-net-core-and-sdk-style-projects)
 
 > [!NOTE]
 > - 不支持 .NET Standard 项目。

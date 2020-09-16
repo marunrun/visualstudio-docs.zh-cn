@@ -17,19 +17,19 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fd85d5564bb6f8a0a5f4ead8c5a4ef8e1be48598
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.openlocfilehash: 647f51314d5506e817fa6982aa693b62f62125cf
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85460281"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89599918"
 ---
 # <a name="error-unable-to-automatically-step-into-the-server"></a>错误：无法自动单步执行服务器
 此错误显示如下：
 
  无法自动单步执行服务器。 在远程过程执行前调试器未得到通知
 
- 当你尝试单步执行 Web 服务时，可能发生此错误（请参阅 [单步执行 XML Web services](https://msdn.microsoft.com/library/8e67de38-bf5f-41cc-a457-1b88ce63d764)）。 只要 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 未正确设置，就会发生此错误。
+ 当你尝试单步执行 Web 服务时，可能发生此错误（请参阅 [单步执行 XML Web services](/previous-versions/zc57803s(v=vs.100))）。 只要 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 未正确设置，就会发生此错误。
 
  可能的原因有：
 

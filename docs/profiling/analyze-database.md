@@ -9,19 +9,19 @@ ms.author: esherrer
 manager: AndSter
 ms.workload:
 - multiple
-ms.openlocfilehash: b369fe6998cd7ef134af765d6d849f41bc93527c
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 4ea74fd587119105577062f571b4ec8e3de76a4f
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85290816"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90037525"
 ---
 # <a name="analyze-database-performance-using-the-database-tool"></a>使用数据库工具分析数据库性能
 
 使用数据库工具记录应用在诊断会话期间所进行的数据库查询。 然后，你可以分析各个查询的相关信息，以找到应用性能可改进的地方。
 
 > [!NOTE]
-> 数据库工具需要 Visual Studio 2019 版本 16.3 或更高版本，以及使用 [ADO.NET]( https://docs.microsoft.com/dotnet/framework/data/adonet/ado-net-overview) 或 [Entity Framework Core](https://docs.microsoft.com/ef/core/) 的 Windows 上的 .NET Core 项目。
+> 数据库工具需要 Visual Studio 2019 版本 16.3 或更高版本，以及使用 [ADO.NET]( https://docs.microsoft.com/dotnet/framework/data/adonet/ado-net-overview) 或 [Entity Framework Core](/ef/core/) 的 Windows 上的 .NET Core 项目。
 
 ## <a name="setup"></a>安装
 
@@ -50,7 +50,7 @@ ms.locfileid: "85290816"
 
 ![“转到源文件”已选中](./media/db-gotosource.png "“转到源文件”已选中")
 
-如果在关系图上选择了时间范围，则查询表仅显示在该时间范围内发生的查询。 如果还运行 [CPU 使用情况工具](https://docs.microsoft.com/visualstudio/profiling/cpu-usage?view=vs-2019)，此行为将特别有用。
+如果在关系图上选择了时间范围，则查询表仅显示在该时间范围内发生的查询。 如果还运行 [CPU 使用情况工具](./cpu-usage.md?view=vs-2019)，此行为将特别有用。
 
 ## <a name="see-also"></a>请参阅
 

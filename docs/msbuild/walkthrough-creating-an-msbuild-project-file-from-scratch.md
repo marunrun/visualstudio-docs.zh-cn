@@ -1,5 +1,6 @@
 ---
-title: 演练：从头开始创建 MSBuild 项目文件 | Microsoft Docs
+title: 从头开始创建 MSBuild 项目文件
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +11,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 20ec2a10210517f291a3bb21db9e1689942786c9
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 331206ee59c7cd05dd4871c422bd6b1a7ff85419
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84184271"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90037694"
 ---
 # <a name="walkthrough-create-an-msbuild-project-file-from-scratch"></a>演练：从头开始创建 MSBuild 项目文件
 

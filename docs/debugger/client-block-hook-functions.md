@@ -21,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5b7b0ef177922f09239c8925ced1ca013e966c0e
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 881809dda7e8254f9d337b68f0c317eccfd9093d
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72745718"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89600202"
 ---
 # <a name="client-block-hook-functions"></a>客户端块挂钩函数
 如果想要验证或报告存储在 `_CLIENT_BLOCK` 块中的数据的内容，可以专为此目的编写函数。 如同 CRTDBG.H 中所定义的，所编写的函数必须有与下面类似的原型：
@@ -49,5 +49,5 @@ typedef void (__cdecl *_CRT_DUMP_CLIENT)
 ## <a name="see-also"></a>请参阅
 
 - [编写调试挂钩函数](../debugger/debug-hook-function-writing.md)
-- [crt_dbg2 示例](https://msdn.microsoft.com/library/21e1346a-6a17-4f57-b275-c76813089167)
+- [crt_dbg2 示例](/previous-versions/b31tft51(v=vs.100))
 - [_CrtReportBlockType](/cpp/c-runtime-library/reference/crtreportblocktype)

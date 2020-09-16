@@ -8,12 +8,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1c3a072408fd8f166475919d988766fb42fa7c54
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: f77fa9087673ff8e9a429caa27318a60f21d4a60
+ms.sourcegitcommit: 14637be49401f56341c93043eab560a4ff6b57f6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85285941"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90075439"
 ---
 # <a name="analyze-memory-usage"></a>分析内存使用情况
 
@@ -35,6 +35,6 @@ ms.locfileid: "85285941"
 
 ## <a name="see-also"></a>请参阅
 
+- [分析不调试的内存使用情况](../profiling/memory-usage-without-debugging2.md)
 - [使用 Visual Studio 分析](../profiling/index.yml)
 - [首先了解分析工具](../profiling/profiling-feature-tour.md)
-- [分析不调试的内存使用情况](../profiling/memory-usage-without-debugging2.md)

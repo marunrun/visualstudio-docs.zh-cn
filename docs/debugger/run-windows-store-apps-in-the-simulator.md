@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 1c208e435e63891c71fe47ebd64c5fe1307e0c82
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9b46abc4d22ddfdc551669d3bcd4cba5acf7cce4
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85348136"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89599521"
 ---
 # <a name="run-uwp-apps-in-the-simulator"></a>在模拟器中运行 UWP 应用
 
@@ -115,7 +115,7 @@ Visual Studio 的 UWP 应用模拟器并非运行在本地计算机上的某个�
 
 ## <a name="simulate-network-connection-properties"></a><a name="BKMK_Simulate_network_connection_properties"></a> 模拟网络连接属性
 
-可以通过维护感知网络连接成本或数据计划状态更改的能力并允许应用程序使用此信息避免产生额外的漫游成本或超出指定的数据传输限制，来帮助应用程序用户管理所测量网络连接的成本。 利用 [Windows.Networking.Connectivity](/uwp/api/windows.networking.connectivity) API 能够对签名的 [NetworkStatusChanged](/uwp/api/windows.networking.connectivity.networkinformation) 和 [TriggerType](/uwp/api/windows.applicationmodel.background.systemtrigger) 事件作出响应。 请参阅[快速入门：管理按流量计费的网络成本约束](https://msdn.microsoft.com/library/windows/apps/Hh750310.aspx)。
+可以通过维护感知网络连接成本或数据计划状态更改的能力并允许应用程序使用此信息避免产生额外的漫游成本或超出指定的数据传输限制，来帮助应用程序用户管理所测量网络连接的成本。 利用 [Windows.Networking.Connectivity](/uwp/api/windows.networking.connectivity) API 能够对签名的 [NetworkStatusChanged](/uwp/api/windows.networking.connectivity.networkinformation) 和 [TriggerType](/uwp/api/windows.applicationmodel.background.systemtrigger) 事件作出响应。 请参阅[快速入门：管理按流量计费的网络成本约束](/previous-versions/windows/apps/hh750310(v=win.10))。
 
 若要调试或测试网络成本感知代码，可使用模拟器模拟通过 [GetInternetConnectionProfile](/uwp/api/windows.networking.connectivity.connectionprofile) 返回的 [ConnectionProfile](/uwp/api/windows.networking.connectivity.networkinformation) 对象公开的网络的属性。
 
@@ -139,7 +139,7 @@ Visual Studio 的 UWP 应用模拟器并非运行在本地计算机上的某个�
 
 有关管理网络连接的详细信息，请参阅：
 
-[快速入门：管理按流量计费的网络成本约束](https://msdn.microsoft.com/library/windows/apps/Hh750310.aspx)
+[快速入门：管理按流量计费的网络成本约束](/previous-versions/windows/apps/hh750310(v=win.10))
 
 [网络信息示例](https://code.msdn.microsoft.com/windowsapps/Network-Information-Sample-63aaa201)
 

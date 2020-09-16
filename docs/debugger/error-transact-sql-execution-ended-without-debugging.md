@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e141fac7fba1939811c722d8e08f49531111ff7e
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.openlocfilehash: f3aa2de2f9e1bc0c5f92d13b159bfc268a25b059
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85460242"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89599921"
 ---
 # <a name="error-transact-sql-execution-ended-without-debugging"></a>错误：Transact-SQL 执行未经调试便已结束
 
@@ -40,7 +40,7 @@ ms.locfileid: "85460242"
 
   若要纠正此错误，可能需要：
 
-  - 验证权限设置。 有关详细信息，请参阅[如何：设置 SQL Server 调试权限](https://msdn.microsoft.com/84e088d0-0409-41d4-841b-f5d4b0fda414)。
+  - 验证权限设置。 有关详细信息，请参阅[如何：设置 SQL Server 调试权限](/previous-versions/w1bhybwz(v=vs.100))。
 
   - 如果设置正确，请确保 SQL 调试也正确。
 
@@ -49,6 +49,6 @@ ms.locfileid: "85460242"
 ## <a name="see-also"></a>请参阅
 
 - [设置 SQL 调试](/previous-versions/visualstudio/visual-studio-2010/s4sszxst(v=vs.100))
-- [如何：设置 SQL Server 调试权限](https://msdn.microsoft.com/84e088d0-0409-41d4-841b-f5d4b0fda414)
+- [如何：设置 SQL Server 调试权限](/previous-versions/w1bhybwz(v=vs.100))
 - [调试器设置和准备](../debugger/debugger-settings-and-preparation.md)
 - [远程调试](../debugger/remote-debugging.md)

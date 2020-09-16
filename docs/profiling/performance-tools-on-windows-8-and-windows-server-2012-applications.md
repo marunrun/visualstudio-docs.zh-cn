@@ -8,12 +8,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 3938e7dc1b3ec33c8a4cf74b6957067bbdfd6185
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 03c5897f4cbf06ad7c9dc7541a032f5b86e45d4c
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74778422"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90038603"
 ---
 # <a name="performance-tools-on-windows-8-and-windows-server-2012-applications"></a>Windows 8 和 Windows Server 2012 应用程序上的性能工具
 
@@ -42,9 +42,9 @@ Windows 8 和 Windows Server 2012 中新增的增强安全功能需要对 Visual
 - [在远程计算机上运行 UWP 应用](../debugger/run-windows-store-apps-on-a-remote-machine.md)
 - [首先了解分析工具](profiling-feature-tour.md)
 - [JavaScript 内存](../profiling/javascript-memory.md)
-- [分析本地计算机上的 UWP 应用中的 Visual C++、Visual C# 和 Visual Basic 代码](https://msdn.microsoft.com/2d0c939e-0bac-48c5-b727-46f6c6113060)
-- [分析远程设备上的 UWP 应用中的 Visual C++、Visual C# 和 Visual Basic 代码](https://msdn.microsoft.com/b932a2be-11b0-40fd-b996-75c6b6a79d22)
-- [分析 UWP 应用中的 Visual C++、Visual C# 和 Visual Basic 代码的性能数据](https://msdn.microsoft.com/5de4a413-d924-425f-afc4-e1ecfb0fca18)
+- [分析本地计算机上的 UWP 应用中的 Visual C++、Visual C# 和 Visual Basic 代码](/previous-versions/hh696631(v=vs.140))
+- [分析远程设备上的 UWP 应用中的 Visual C++、Visual C# 和 Visual Basic 代码](/previous-versions/hh972878(v=vs.140))
+- [分析 UWP 应用中的 Visual C++、Visual C# 和 Visual Basic 代码的性能数据](/previous-versions/hh780914(v=vs.140))
 
 ## <a name="collect-data-on-apps-running-on-the-windows-8-desktop-or-on-windows-server-2012-from-the-visual-studio-ide"></a>从 Visual Studio IDE 收集有关在 Windows 8 桌面上或 Windows Server 2012 上运行的应用的数据
 

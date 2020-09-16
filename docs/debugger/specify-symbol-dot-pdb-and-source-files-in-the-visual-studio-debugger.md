@@ -29,12 +29,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 19eed30074215b64301d7227e93ba6bf5b438d78
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: eceffab5b8c179734b1abb5f1005c240912115f1
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "84183759"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89599585"
 ---
 # <a name="specify-symbol-pdb-and-source-files-in-the-visual-studio-debugger-c-c-visual-basic-f"></a>在 Visual Studio 调试器（C#、C++、Visual Basic、F#）中指定符号 (.pdb) 和源文件
 
@@ -46,7 +46,7 @@ ms.locfileid: "84183759"
 
 - [了解符号文件和 Visual Studio 符号设置](https://devblogs.microsoft.com/devops/understanding-symbol-files-and-visual-studios-symbol-settings/)
 
-- [为什么 Visual Studio 要求调试器符号文件必须与同时生成的二进制文件完全匹配？](https://blogs.msdn.microsoft.com/jimgries/2007/07/06/why-does-visual-studio-require-debugger-symbol-files-to-exactly-match-the-binary-files-that-they-were-built-with/)
+- [为什么 Visual Studio 要求调试器符号文件必须与同时生成的二进制文件完全匹配？](/archive/blogs/jimgries/why-does-visual-studio-require-debugger-symbol-files-to-exactly-match-the-binary-files-that-they-were-built-with)
 
 ## <a name="how-symbol-files-work"></a>符号文件的工作方式
 
@@ -57,7 +57,7 @@ ms.locfileid: "84183759"
 
 符号文件还会显示源文件的位置，以及要从中检索它们的服务器（可选）。
 
-调试器只会加载与在生成应用时创建的 .pdb 文件完全匹配的 .pdb 文件（即原始 .pdb 文件或副本）  。 这样的[完全重复](https://blogs.msdn.microsoft.com/jimgries/2007/07/06/why-does-visual-studio-require-debugger-symbol-files-to-exactly-match-the-binary-files-that-they-were-built-with/)是必需的，因为即使代码本身未更改，应用的布局也可能会更改。
+调试器只会加载与在生成应用时创建的 .pdb 文件完全匹配的 .pdb 文件（即原始 .pdb 文件或副本）  。 这样的[完全重复](/archive/blogs/jimgries/why-does-visual-studio-require-debugger-symbol-files-to-exactly-match-the-binary-files-that-they-were-built-with)是必需的，因为即使代码本身未更改，应用的布局也可能会更改。
 
 > [!TIP]
 > 要在项目源代码之外调试代码（如项目调用的 Windows 代码或第三方代码），则必须指定外部代码的 .pdb 文件（也可以是源文件）的位置，这些文件必须与应用中生成的文件完全匹配。

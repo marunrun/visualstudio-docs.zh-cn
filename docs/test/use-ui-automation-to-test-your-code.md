@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f333cc3409056739cef7c378d9815f10439ab37e
-ms.sourcegitcommit: 5d1b2895d3a249c6bea30eb12b0ad7c0f0862d85
+ms.openlocfilehash: 3d18282cf0fbd8782eb7abce05794e0b2eb1c5c1
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80880359"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90035737"
 ---
 # <a name="use-coded-ui-test-to-test-your-code"></a>使用编码的 UI 测试来测试代码
 
@@ -446,7 +446,7 @@ myWinCheckBox.Checked = true;
 
 - [在你的生成过程中运行测试](/azure/devops/pipelines/test/getting-started-with-continuous-testing?view=vsts)
 
-- [如何：设置测试代理以运行与桌面交互的测试](https://msdn.microsoft.com/Library/3a94dd07-6d17-402c-ae8f-7947143755c9)
+- [如何：设置测试代理以运行与桌面交互的测试](/previous-versions/ee291332(v=vs.140))
 
 **添加对自定义控件的支持：** 编码的 UI 测试框架并非支持每个可能的 UI，可能不支持你要测试的 UI。 例如，不能立即创建 Microsoft Excel UI 的编码的 UI 测试。 然而，可以创建编码的 UI 测试框架的扩展来支持自定义控件。
 

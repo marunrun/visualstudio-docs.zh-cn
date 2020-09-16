@@ -21,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d9c52c76bbd8623f9ec9b0ce8f3e5463c638d8f7
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: beeba55c873e008b3e096da66f888695d719c882
+ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75916452"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89599935"
 ---
 # <a name="debugging-errors-and-warning-dialog-boxes"></a>“调试错误和警告”对话框
 以下是在调试应用程序时可能遇到的错误和警告对话框。
@@ -48,7 +48,7 @@ ms.locfileid: "75916452"
 
  [“没有可用于当前位置的源代码”对话框](../debugger/no-source-available.md)
 
- [“无符号化信息”对话框](https://msdn.microsoft.com/library/18de4888-9cca-4059-a165-48b135fee4c9)
+ [“无符号化信息”对话框](/previous-versions/d493t3ew(v=vs.100))
 
  [“解析多义性”对话框](../debugger/resolve-ambiguity-dialog-box.md)
 

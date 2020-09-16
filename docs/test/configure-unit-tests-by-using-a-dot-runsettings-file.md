@@ -7,12 +7,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: f638d60b7bd4416bb7a19cc960cac1159c755ab3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 38e542fed0f26422a88644577ec864ef006855c5
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86972291"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90038434"
 ---
 # <a name="configure-unit-tests-by-using-a-runsettings-file"></a>使用 .runsettings 文件配置单元测试
 
@@ -107,7 +107,7 @@ ms.locfileid: "86972291"
 
 - 当前 C#、VB、C++ 和 F# 项目中支持项目级运行设置。
 - 为项目指定的文件将替代解决方案中指定的任何其他运行设置文件。
-- [这些 MSBuild 属性](https://docs.microsoft.com/visualstudio/msbuild/msbuild-reserved-and-well-known-properties?view=vs-2019) 可用于指定 runsettings 文件的路径。 
+- [这些 MSBuild 属性](../msbuild/msbuild-reserved-and-well-known-properties.md) 可用于指定 runsettings 文件的路径。 
 
 指定项目的 .runsettings 文件示例：
     
@@ -307,7 +307,7 @@ public void HomePageTest()
 |Configuration|默认|值|
 |-|-|-|
 |**ForcedLegacyMode**|false|在 Visual Studio 2012 中，对 MSTest 适配器进行了优化，使其变得更快且更具可伸缩性。 某些行为（如测试的运行顺序）可能不与 Visual Studio 早期版本中的完全一致。 将此值设置为 true 可使用旧测试适配器。<br /><br />例如，如果为单元测试指定 app.config 文件，可能会用到此设置。<br /><br />我们建议你考虑重构测试以便可以使用较新的适配器。|
-|**IgnoreTestImpact**|false|当在 MSTest 中或从 Microsoft 测试管理器（在 Visual Studio 2017 中已弃用）运行时，测试影响功能会按这些测试受最新更改影响的程度对它们进行优先级排序。 此设置会停用该功能。 有关详细信息，请参阅[自上一个生成后应运行哪些测试？](https://msdn.microsoft.com/library/dd286589)。|
+|**IgnoreTestImpact**|false|当在 MSTest 中或从 Microsoft 测试管理器（在 Visual Studio 2017 中已弃用）运行时，测试影响功能会按这些测试受最新更改影响的程度对它们进行优先级排序。 此设置会停用该功能。 有关详细信息，请参阅[自上一个生成后应运行哪些测试？](/previous-versions/dd286589(v=vs.140))。|
 |**SettingsFile**||你可以指定测试设置文件以便与此处的 MSTest 适配器配合使用。 还可以[从设置菜单](#specify-a-run-settings-file-in-the-ide)指定测试设置文件。<br /><br />如果指定此值，则还必须将“ForcedlegacyMode”  设置为“true” 。<br /><br />`<ForcedLegacyMode>true</ForcedLegacyMode>`|
 |**KeepExecutorAliveAfterLegacyRun**|false|测试运行完成后，MSTest 将关闭。 测试中启动的任何进程也将终止。 如果希望测试执行程序保持活动状态，请将此值设为 true。 例如，可使用此设置让浏览器保持在编码的 UI 测试之间运行。|
 |**DeploymentEnabled**|true|如果将此值设置为 false，则不会将已在测试方法中指定的部署项目复制到部署目录中。|
@@ -463,4 +463,3 @@ RunConfiguration 节点应包含 EnvironmentVariables 节点 。 可以将环境
 - [配置测试运行](https://github.com/microsoft/vstest-docs/blob/master/docs/configure.md)
 - [自定义代码覆盖率分析](../test/customizing-code-coverage-analysis.md)
 - [Visual Studio 测试任务 (Azure Test Plans)](/azure/devops/pipelines/tasks/test/vstest?view=vsts)
-
