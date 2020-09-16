@@ -7,15 +7,13 @@
       items:
         - name: 概述
           href: roslyn-analyzers-overview.md
-        - name: 配置
+        - name: Configuration
           expanded: true
           items:
+            - name: 概述
+              href: use-roslyn-analyzers.md
             - name: 代码质量
-              items:
-                - name: 概述
-                  href: use-roslyn-analyzers.md
-                - name: 通过 EditorConfig 配置代码质量分析
-                  href: configure-fxcop-analyzers.md
+              href: configure-fxcop-analyzers.md
             - name: 配置源代码分析
               href: configure-live-code-analysis-scope-managed-code.md
             - name: 手动运行代码分析
