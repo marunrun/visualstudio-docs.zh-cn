@@ -509,6 +509,8 @@
             - name: 使用 EditorConfig 文件构造代码样式
               displayName: Configure code style analyzers
               href: ide/create-portable-custom-editor-options.md
+            - name: C++ EditorConfig 格式设置约定
+              href: ide/cpp-editorconfig-properties.md
             - name: .NET 编码约定
               items:
                 - name: 概述
