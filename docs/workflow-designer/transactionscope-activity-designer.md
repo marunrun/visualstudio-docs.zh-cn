@@ -10,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: eef35457b9f28864929ad42919fff4e9afdcb0d5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b8f9ed7822dc231fdd4888d3e44c4e3218357f95
+ms.sourcegitcommit: d97d72308ef306e7f28c3a76913caee4ff450bbb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "76114822"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90713472"
 ---
 # <a name="transactionscope-activity-designer"></a>TransactionScope 活动设计器
 
@@ -39,9 +39,9 @@ ms.locfileid: "76114822"
 |<xref:System.Activities.Statements.TransactionScope.Body%2A>|正确|指定要在单个事务中执行的活动。 若要添加 <xref:System.Activities.Statements.TransactionScope.Body%2A> 活动，请将活动从 "**工具箱**" 拖放到 " **TransactionScope** " 活动设计器上的 "**正文**" 框中，其中包含提示文本 "将活动放在此处"。|
 |<xref:System.Activities.Statements.TransactionScope.IsolationLevel%2A>|正确|指定此 <xref:System.Transactions.IsolationLevel> 的 <xref:System.Activities.Statements.TransactionScope>。|
 |<xref:System.Activities.Statements.TransactionScope.Timeout%2A>|错误|指定必须在其间完成事务的时间间隔（格式为 00:00:00，表示小时:分钟:秒）。 默认值为 1 分钟 (00:01:00)。|
-|[AbortInstanceOnTransactionFailure 的操作。](https://msdn.microsoft.com/library/system.activities.statements.transactionscope.abortinstanceontransactionfailure.aspx)|正确|指定指示在事务中止的情况下是否应中止工作流的值。|
+|<xref:System.Activities.Statements.TransactionScope.AbortInstanceOnTransactionFailure*>|正确|指定指示在事务中止的情况下是否应中止工作流的值。|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [事务](../workflow-designer/transaction-activity-designers.md)
 - [TerminateWorkflow](../workflow-designer/terminateworkflow-activity-designer.md)
