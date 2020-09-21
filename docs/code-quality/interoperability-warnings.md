@@ -6,27 +6,27 @@ f1_keywords:
 - vs.codeanalysis.Portablityrules
 - vs.codeanalysis.Interoperabilityrules
 helpviewer_keywords:
-- managed code analysis warnings, interoperability warnings, portability warnings
-- portability warnings
-- warnings, portability
-- interoperability warnings
-- warnings, interoperability
+- managed code analysis rules, interoperability rules, portability rules
+- portability rules
+- rules, portability
+- interoperability rules
+- rules, interoperability
 ms.assetid: 95de6eb3-40c4-4063-9f59-25cb70e3b2b3
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9f09ccafb79a87dff5c18bb4af11a12e1b1729a4
-ms.sourcegitcommit: a18c7e9b367c2f92f6e54c3eaef442775d457667
+ms.openlocfilehash: b8a456f4a24339b6cba5aeec2c9fe64ad3ee278b
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90100495"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90808595"
 ---
-# <a name="portability-and-interoperability-warnings"></a>可移植性和互操作性警告
+# <a name="portability-and-interoperability-rules"></a>可移植性和互操作性规则
 
-可移植性警告支持跨不同平台的可移植性。 互操作性警告支持与 COM 客户端交互。
+可移植性规则支持跨不同平台的可移植性。 互操作性规则支持与 COM 客户端的交互。
 
 ## <a name="in-this-section"></a>本节内容
 

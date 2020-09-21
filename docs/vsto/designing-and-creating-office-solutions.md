@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 385d313d0a8796d2aba93903e95e989ac1e0ced6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cd51c377ed20807c5e5e2b26f842c6152bf7c222
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "73189712"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90808215"
 ---
 # <a name="design-and-create-office-solutions"></a>设计和创建 Office 解决方案
 
@@ -50,7 +50,7 @@ Visual Studio 提供可用于创建几种不同类型的 Office 解决方案的�
 
   但是，在 Visual Studio 更改目标框架之后，你可能需要修改项目中的某些代码才能使用某些功能。 有关如何更改目标框架的详细信息，请参阅 [如何：面向某个版本的 .NET Framework](../ide/visual-studio-multi-targeting-overview.md)。 有关你可能需要在项目中进行的更改的详细信息，请参阅将 [Office 解决方案迁移到 .NET Framework 4 或更高版本](../vsto/migrating-office-solutions-to-the-dotnet-framework-4-or-later.md)。
 
-  如果 Visual Studio 更改项目的目标 .NET Framework 并且使用 ClickOnce 部署解决方案，请确保在 " **系统必备** " 对话框中选择相应的 .NET Framework 版本。 此选择不会在你更改项目的目标框架时自动更改。 有关详细信息，请参阅 [如何：在最终用户计算机上安装必备组件以运行 Office 解决方案](https://msdn.microsoft.com/74dd2c52-838f-4abf-b2b4-4d7b0c2a0a98)。
+  如果 Visual Studio 更改项目的目标 .NET Framework 并且使用 ClickOnce 部署解决方案，请确保在 " **系统必备** " 对话框中选择相应的 .NET Framework 版本。 此选择不会在你更改项目的目标框架时自动更改。 有关详细信息，请参阅 [如何：在最终用户计算机上安装必备组件以运行 Office 解决方案](/previous-versions/bb608608(v=vs.110))。
 
 > [!NOTE]
 > 不能面向通过使用 [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)] 创建的 Office 项目中的 .NET Framework 3.5 或更早版本。 通过使用 [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)] 创建的 Office 项目需要在 [!INCLUDE[net_client_v40_long](../vsto/includes/net-client-v40-long-md.md)] 中首次引入的功能
@@ -58,7 +58,7 @@ Visual Studio 提供可用于创建几种不同类型的 Office 解决方案的�
 ### <a name="understand-when-the-office-pias-are-required-on-end-user-computers"></a>了解最终用户计算机上需要 Office Pia 的时间
  默认情况下，如果项目中每个 Office PIA 引用的 " **嵌入互操作类型** " 属性设置为 " **True**" （默认值），则无需在最终用户计算机上安装 Office 主互操作程序 (集) 。 在本方案中，你的解决方案使用的 PIA 类型的类型信息会在生成项目时嵌入到解决方案程序集中。 运行的时候，将使用嵌入的类型信息而不会使用 PIA 来调入 Office 应用程序基于 COM 的对象模型。 有关如何在解决方案中嵌入 Pia 的类型的详细信息，请参阅 [类型等效性和嵌入的互操作类型](/dotnet/framework/interop/type-equivalence-and-embedded-interop-types)。
 
- 如果项目中每个 Office PIA 引用的 " **嵌入互操作类型** " 属性设置为 " **False**"，则必须在运行该解决方案的每个最终用户计算机上的全局程序集缓存中安装并注册 Office pia。 在大多数情况下，PIA 会随 Office 一起默认安装，但你还可以将PIA 可再发行组件作为解决方案的必备组件包括进去。 有关详细信息，请参阅 [部署的 Office 解决方案必备组件](https://msdn.microsoft.com/9f672809-43a3-40a1-9057-397ce3b5126e)。
+ 如果项目中每个 Office PIA 引用的 " **嵌入互操作类型** " 属性设置为 " **False**"，则必须在运行该解决方案的每个最终用户计算机上的全局程序集缓存中安装并注册 Office pia。 在大多数情况下，PIA 会随 Office 一起默认安装，但你还可以将PIA 可再发行组件作为解决方案的必备组件包括进去。 有关详细信息，请参阅 [部署的 Office 解决方案必备组件](/previous-versions/bb608617(v=vs.110))。
 
 ### <a name="understand-the-client-profile"></a>了解客户端配置文件
  .NET Framework Client Profile 是完整版 .NET Framework 的子集。 如果只需使用 .NET Framework 中的客户端功能，并且想要为你的 Office 解决方案提供最快的部署体验，则可以面向 .NET Framework Client Profile。 有关详细信息，请参阅 [.NET Framework 客户端配置文件](/dotnet/framework/deployment/client-profile)。

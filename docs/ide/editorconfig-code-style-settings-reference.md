@@ -13,12 +13,12 @@ manager: jillfra
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f383b173e012a7836d67a916ad9c16132e984602
-ms.sourcegitcommit: 703c68667261df5985a73282c1cbb0541118989c
+ms.openlocfilehash: 62709c496b9eec631a42c0e227210d3b57ecb5ef
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89402278"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89741765"
 ---
 # <a name="net-coding-convention-settings-for-editorconfig"></a>EditorConfig 的 .NET 编码约定设置
 
@@ -44,9 +44,17 @@ ms.locfileid: "89402278"
 
    与码位元素的命名有关的规则。 例如，可以指定 `async` 方法必须以“Async”结尾。
 
+::: moniker range=">=vs-2019"
+
+## <a name="enforce-coding-conventions-on-build"></a>在生成时强制实施编码约定
+
+从 Visual Studio 2019 版本 16.8（包括 .NET 5.0 RC2 SDK）开始，可以针对所有 .NET 项目[在生成时强制实施 .NET 编码约定](/dotnet/fundamentals/productivity/code-analysis.md#code-style-analysis)。 在生成时，.NET 代码样式冲突将显示为带有“IDE”前缀的警告或错误。 这样便可以在代码库中严格地强制实施一致的代码样式。
+
+::: moniker-end
+
 ## <a name="example-editorconfig-file"></a>EditorConfig 文件示例
 
-下面是具有默认选项的示例 .editorconfig 文件，可帮助你入门  。 在 Visual Studio 中，你可以生成此文件并将其保存到项目中，步骤为“工具” > “选项” > “文本编辑器”> [“C#”或“基本”] >“代码样式” > “常规”        。 然后，单击“从设置生成 .editorconfig 文件”按钮  。 有关详细信息，请参阅[代码样式首选项](code-styles-and-code-cleanup.md)。
+下面是具有默认选项的示例 .editorconfig 文件，可帮助你入门。 在 Visual Studio 中，你可以生成此文件并将其保存到项目中，步骤为“工具” > “选项” > “文本编辑器”> [“C#”或“基本”] >“代码样式” > “常规”      。 然后，单击“从设置生成 .editorconfig 文件”按钮。 有关详细信息，请参阅[代码样式首选项](code-styles-and-code-cleanup.md)。
 
 ```ini
 # Remove the line below if you want to inherit .editorconfig settings from higher directories

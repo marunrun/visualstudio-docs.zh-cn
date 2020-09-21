@@ -11,21 +11,21 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0cceeacab44f17eb30184c90f1128b8d2c3528bb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7ec27b9b4f90b1f3ec75edef6dca01b1ed7b8adf
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "76115365"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90807841"
 ---
 # <a name="properties-of-swimlanes"></a>泳道属性
 可以向关系图中添加泳道。 泳道将关系图划分为垂直或水平区域。 您可以定义要在泳道内显示的其他形状。 有关详细信息，请参阅 [如何定义域特定语言](../modeling/how-to-define-a-domain-specific-language.md)。 有关如何使用这些属性的详细信息，请参阅 [自定义和扩展域特定语言](../modeling/customizing-and-extending-a-domain-specific-language.md)。
 
  泳道具有下表中列出的属性。
 
-|属性|说明|默认|
+|Property|说明|默认|
 |-|-|-|
-|正文填充颜色|泳道主体的填充颜色。|白色|
+|正文填充颜色|泳道主体的填充颜色。|White|
 |标题填充颜色|泳道标头的填充颜色。|深灰色|
 |分隔符颜色|分隔符线的颜色。|LightGray|
 |分隔符线样式|分隔符线的样式 (`Solid` 、、、 `Dash` `Dot` `DashDot` 、 `DashDotDot` 或 `Custom`) 。|`Dash`|
@@ -37,10 +37,10 @@ ms.locfileid: "76115365"
 |具有自定义构造函数|如果为 `True` ，则在源代码中提供自定义构造函数。 有关详细信息，请参阅 [重写和扩展生成的类](../modeling/overriding-and-extending-the-generated-classes.md)。|错误|
 |继承修饰符|描述从泳道 (或) 生成的源代码类的继承类型 `none` `abstract` `sealed` 。|无|
 |基本泳道|此泳道的基类。|（无）|
-|名称|此泳道的名称。|当前名称|
+|“属性”|此泳道的名称。|当前名称|
 |命名空间|与此泳道关联的命名空间。|当前命名空间|
 |Tooltip 类型|如何定义工具提示 (`fixed` 、 `variable` 或 `none`) 。 如果 `fixed` 为，则 `Fixed Tooltip Text` 使用属性的值; 如果为 `variable` ，则在自定义代码中定义工具提示。|\<none>|
-|说明|与此泳道关联的非正式注释。|\<none>|
+|注释|与此泳道关联的非正式注释。|\<none>|
 |对齐方式|水平或垂直对齐。|垂直|
 |初始高度|此泳道的初始高度（英寸）。 仅适用于水平泳道。|0|
 |初始宽度|此泳道的初始宽度（英寸）。 仅适用于垂直泳道。|0|
@@ -52,4 +52,4 @@ ms.locfileid: "76115365"
 
 ## <a name="see-also"></a>另请参阅
 
-- [域特定语言工具术语表](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+- [域特定语言工具术语表](/previous-versions/bb126564(v=vs.100))

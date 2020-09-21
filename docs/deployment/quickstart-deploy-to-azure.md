@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - azure
-ms.openlocfilehash: deef5aeaa802d5f5b46ba81f711173dc81a32357
-ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
+ms.openlocfilehash: 60b3d471191f58a5eb612d9942b72c9d5e90e8af
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88800302"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90036413"
 ---
 # <a name="publish-a-web-app-to-azure-app-service-using-visual-studio"></a>使用 Visual Studio 将 Web 应用发布到 Azure 应用服务
 
@@ -23,7 +23,7 @@ ms.locfileid: "88800302"
 
 * 对于应用的连续（或自动）部署，请将 Azure DevOps 与 [Azure 管道](/azure/devops/pipelines/get-started-yaml?view=azdevops)结合使用。
 
-* 对于应用的一次性（或手动）部署，请使用 Visual Studio 中的“Publish”工具将 ASP.NET、ASP.NET Core、Node.js 和 .NET Core 应用部署到 Azure 应用服务或适用于 Linux 的应用服务（使用容器）。 对于 Python 应用，请按照 [Python - 发布到 Azure 应用服务](../python/publishing-python-web-applications-to-azure-from-visual-studio.md)上的步骤操作。
+* 对于应用的一次性（或手动）部署，请使用 Visual Studio 中的“发布”工具将 ASP.NET、ASP.NET Core、Node.js 和 .NET Core 应用部署到 Azure 应用服务或[适用于 Linux 的应用服务](../deployment/quickstart-deploy-to-linux.md)（使用容器）。 对于 Python 应用，请按照 [Python - 发布到 Azure 应用服务](../python/publishing-python-web-applications-to-azure-from-visual-studio.md)上的步骤操作。
 
 本文介绍如何使用“Publish”工具进行一次性部署。
 
@@ -35,7 +35,9 @@ ms.locfileid: "88800302"
 
     ![解决方案资源管理器中项目上下文菜单上的“发布”命令](../deployment/media/quickstart-publish.png "选择发布")
 
-1. 在“发布”对话框中，选择 Azure 。
+1. 如果先前配置了任何发布配置文件，则“发布”窗口会显示。 选择“新建”。
+
+1. 在“发布”窗口中，选择“Azure”。
 
     ![选择发布目标](../deployment/media/quickstart-publish-azure-new.png)
 
@@ -61,7 +63,7 @@ ms.locfileid: "88800302"
 
 ## <a name="clean-up-resources"></a>清理资源
 
-在前面步骤中，已在资源组中创建 Azure 资源。 如果以后不需要这些资源，可以通过删除资源组来删除它们。
+在前面的步骤中，你在资源组中创建了 Azure 资源。 如果以后不需要这些资源，可以通过删除资源组来删除它们。
 从 Azure 门户左侧菜单中，选择“资源组”，然后选择“myResourceGroup” 。
 在资源组页上，确保列出的资源是要删除的。
 选择“删除”，在文本框中键入“myResourceGroup”，然后选择“删除”  。

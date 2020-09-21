@@ -1,6 +1,7 @@
 ---
-title: 提交作业以在 Azure Batch AI 中训练模型
-description: 训练模型云
+title: 提交作业以训练模型
+description: 提交作业以使用 Azure Batch AI 训练模型
+ms.custom: SEO-VS-2020
 keywords: ai, visual studio, 训练模型, 云
 author: jillre
 ms.author: jillfra
@@ -10,12 +11,12 @@ ms.date: 11/13/2017
 ms.topic: how-to
 ms.workload:
 - azure
-ms.openlocfilehash: 4d705cbff1ce4e25892dfc5df896418e6d58b632
-ms.sourcegitcommit: 48e93538f1e352fc1f972b642bb5fcce2f6834a2
+ms.openlocfilehash: 110468de264370b22d64dae40cf55e9766804c31
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85371646"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90036608"
 ---
 # <a name="train-ai-models-in-azure-batch-ai"></a>在 Azure Batch AI 中训练 AI 模型
 

@@ -1,6 +1,7 @@
 ---
-title: 适用于需要多重身份验证的帐户
+title: 使用需要多重身份验证的帐户
 ms.date: 05/27/2020
+ms.custom: SEO-VS-2020
 ms.topic: conceptual
 description: 了解如何将 Visual Studio 与需要多重身份验证的帐户一起使用。
 author: ornellaalt
@@ -9,12 +10,12 @@ manager: jillfra
 ms.workload:
 - multiple
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: 699580689bcf00d00d2a6e07f814be4d1265bb1d
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: ebacdd78cbb72bbd1cb90a0b5c719d0c753a95ca
+ms.sourcegitcommit: a18c7e9b367c2f92f6e54c3eaef442775d457667
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85283541"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90093338"
 ---
 # <a name="how-to-use-visual-studio-with-accounts-that-require-multi-factor-authentication"></a>如何将 Visual Studio 与需要多重身份验证的帐户一起使用
 
@@ -49,10 +50,11 @@ ms.locfileid: "85283541"
 
 此操作将打开系统的默认 Web 浏览器，要求你登录帐户，并验证任何所需的 MFA 策略。
 
-根据你的开发活动和资源配置，系统可能会提示你在会话期间重新输入凭据。 当你添加新资源或尝试访问资源时，如果之前未满足其 CA/MFA 授权要求，可能会发生这种情况。
+在登录过程中，你可能会收到询问你是否保持登录状态的其他提示。 在第二次使用帐户登录时，可能会显示此提示。 为了最大限度地减少重新输入凭据的需要，建议选择“是”，因为这可确保在浏览器会话中保留凭据。
 
-> [!NOTE] 
-> 为了获得最佳体验，请保持浏览器打开，直到为资源验证了所有 CA/MFA 策略。 关闭浏览器可能会导致以前生成的 MFA 状态丢失，并且可能会提示其他授权提示。
+:::image type="content" source="media/kmsi.png" alt-text="保持登录状态？":::
+
+根据你的开发活动和资源配置，系统可能仍会提示你在会话期间重新输入凭据。 当你添加新资源或尝试访问资源时，如果之前未满足其 CA/MFA 授权要求，可能会发生这种情况。
 
 ## <a name="reauthenticating-an-account"></a>重新验证帐户  
 如果你的帐户有问题，Visual Studio 可能会要求你重新输入帐户凭据。  

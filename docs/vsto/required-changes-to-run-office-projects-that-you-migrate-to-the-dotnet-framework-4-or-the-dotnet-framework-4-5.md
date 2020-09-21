@@ -12,12 +12,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 82ae3f8a43b65e6ff617192dc38149691d229455
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 773a4dd319d00487b919721bf3390a7d58c8b03c
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "66836060"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810962"
 ---
 # <a name="required-changes-to-run-office-projects-that-you-migrate-to-the-net-framework-4-or-the-net-framework-45"></a>运行迁移到 .NET Framework 4 或 .NET Framework 4.5 的 Office 项目所需的更改
   如果 Office 项目的目标框架 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 从 .NET Framework 早期版本更改为或更高版本，则必须执行以下任务，以确保解决方案可以在开发计算机和最终用户计算机上运行：
@@ -64,7 +64,7 @@ ms.locfileid: "66836060"
 ## <a name="update-the-prerequisites-for-deployment"></a>更新部署的先决条件
  将 Office 项目重定向到 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 或更高版本时，还必须在 " **先决条件** " 对话框中更新相应的 .NET Framework 必备组件。 否则，ClickOnce 部署或 InstallShield Limited Edition 项目将检查并安装 .NET Framework 的早期版本。
 
- 有关更新部署到最终用户计算机的先决条件的详细信息，请参阅 [如何：在最终用户计算机上安装必备组件以运行 Office 解决方案](https://msdn.microsoft.com/74dd2c52-838f-4abf-b2b4-4d7b0c2a0a98)。
+ 有关更新部署到最终用户计算机的先决条件的详细信息，请参阅 [如何：在最终用户计算机上安装必备组件以运行 Office 解决方案](/previous-versions/bb608608(v=vs.110))。
 
 ## <a name="reinstall-solutions-on-end-user-computers"></a>在最终用户计算机上重新安装解决方案
  如果使用 ClickOnce 部署面向 .NET Framework 3.5 的 Office 解决方案，然后将项目重新定位到 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 或更高版本，则最终用户必须卸载解决方案，然后在发布解决方案后进行重新安装。 如果重新发布重定目标的解决方案，并且该解决方案在最终用户计算机上更新，最终用户在 <xref:System.Runtime.InteropServices.COMException> 运行更新的解决方案时将收到。

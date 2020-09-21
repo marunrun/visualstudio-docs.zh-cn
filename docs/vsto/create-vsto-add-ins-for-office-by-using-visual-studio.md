@@ -12,12 +12,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 1222e6603ea45e1a4172af84b9062c17a407c28c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1e8cd25b8c4c70067641468dd6fa321e9e4fbe39
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72986150"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809357"
 ---
 # <a name="create-vsto-add-ins-for-office-by-using-visual-studio"></a>使用 Visual Studio 创建 VSTO 外接程序
   可以使用 Visual Studio 中的 Microsoft Office 开发人员工具来创建可扩展 Office 的 .NET Framework 应用程序。 这些应用程序也称为“Office 解决方案” **。
@@ -28,7 +28,7 @@ ms.locfileid: "72986150"
 
  有关 Office 开发的最新信息，请参阅 [Microsoft Office 开发人员中心](https://developer.microsoft.com/office/docs)。
 
-## <a name="in-this-section"></a>本节内容
+## <a name="in-this-section"></a>在本节中
 - [开始 &#40;Visual Studio 中的 Office 开发&#41;](getting-started-office-development-in-visual-studio.md)
 
  提供一些链接，这些链接指向有关如何配置开发计算机以创建 Office 解决方案、如何开始创建 Office 解决方案以及 Visual Studio 中的 Office 开发的新增功能的信息。
@@ -116,6 +116,6 @@ ms.locfileid: "72986150"
 
 - [MSDN library Microsoft Office 开发部分](/previous-versions/office/office-12/bb726434(v=office.12)) MSDN library 的区域，可在其中找到有关开发多种 Office 版本的解决方案的文章和参考文档 (不特定于使用 Visual Studio 的 Office 开发) 。
 
-- [Visual Studio 中的应用程序开发](https://msdn.microsoft.com/97490c1b-a247-41fb-8f2c-bc4c201eff68) 包含指向一些主题的链接，这些主题说明如何使用 Visual Studio 设计、开发、调试和部署 web 应用程序、XML web 服务和传统客户端应用程序。
+- [Visual Studio 中的应用程序开发](/previous-versions/h8w79z10(v=vs.140)) 包含指向一些主题的链接，这些主题说明如何使用 Visual Studio 设计、开发、调试和部署 web 应用程序、XML web 服务和传统客户端应用程序。
 
 - [Visual Studio 中的 .NET Framework 编程](/previous-versions/visualstudio/visual-studio-2010/k1s94fta(v=vs.100)) 讨论在 Visual Basic 和 Visual c # 中具有 .NET Framework 的应用程序开发。

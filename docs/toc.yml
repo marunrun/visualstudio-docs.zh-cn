@@ -505,7 +505,7 @@
         - name: 代码样式
           items:
             - name: 代码样式首选项
-              href: /visualstudio/ide/code-styles-and-code-cleanup
+              href: ./ide/code-styles-and-code-cleanup.md
             - name: 使用 EditorConfig 文件构造代码样式
               displayName: Configure code style analyzers
               href: ide/create-portable-custom-editor-options.md
