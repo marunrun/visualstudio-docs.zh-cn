@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 619e64dc09858b7d29e05804e3c3c353882f90ef
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bd1b3b90cf4e284e558be02608cac953dc71584b
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62561733"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90811001"
 ---
 # <a name="project-upgrade-options-dialog-box"></a>项目升级，"选项" 对话框
   使用“项目升级” **** 页可指定 Visual Studio 是否将自动更改 VSTO 外接程序项目以面向开发计算机上安装的 Office 版本。
@@ -33,4 +33,4 @@ ms.locfileid: "62561733"
 
 ## <a name="see-also"></a>另请参阅
 - [升级和迁移 Office 解决方案](../vsto/upgrading-and-migrating-office-solutions.md)
-- [如何：升级 Office 解决方案](https://msdn.microsoft.com/a269e539-b717-4680-a568-2152b070347e)
+- [如何：升级 Office 解决方案](/previous-versions/4bez6837(v=vs.140))

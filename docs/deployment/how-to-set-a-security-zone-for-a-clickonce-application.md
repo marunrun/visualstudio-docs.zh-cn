@@ -1,5 +1,6 @@
 ---
-title: 如何为 ClickOnce 应用程序设置安全区域 |Microsoft Docs
+title: " (ClickOnce 应用程序设置安全区域) "
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -16,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 51515339c24ea8a0507c47d0399cde9e423f71a0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 59b099a406f31bf2a1c1266d76bb037ac3e85e19
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85382128"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809724"
 ---
 # <a name="how-to-set-a-security-zone-for-a-clickonce-application"></a>如何：为 ClickOnce 应用程序设置安全区域
 为 ClickOnce 应用程序设置代码访问安全权限时，需要在“项目设计器” **** 的“安全” **** 页上从基本权限集开始。

@@ -1,5 +1,6 @@
 ---
-title: ClickOnce 部署中的特定错误疑难解答 |Microsoft Docs
+title: '排查 ClickOnce 部署 (的错误) '
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: troubleshooting
 f1_keywords:
@@ -19,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fac7f18244aaa32667514766ad6d393408997e51
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 351aad83fe28251fcb769c76dd3d63b61b108b6b
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87235155"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809448"
 ---
 # <a name="troubleshoot-specific-errors-in-clickonce-deployments"></a>ClickOnce 部署中特定错误的疑难解答
 本文列出了在部署应用程序时可能出现的以下常见错误 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] ，并提供解决每个问题的步骤。

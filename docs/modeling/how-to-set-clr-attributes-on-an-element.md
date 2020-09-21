@@ -11,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ebda963bf1afa55fa8d7f98774c72a75d242ceef
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 49551a5e96e3c354b54b6b2ba7cedf1ba2ab4470
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85532452"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90811196"
 ---
 # <a name="how-to-set-clr-attributes-on-an-element"></a>如何：在元素上设置 CLR 特性
 自定义属性是可以添加到域元素、形状、连接符和关系图中的特殊属性。 可以添加从类继承的任何属性 `System.Attribute` 。
@@ -35,12 +35,12 @@ ms.locfileid: "85532452"
 
 5. 在 " **名称属性** " 列中，键入适当的名称，例如 `MyString` 。
 
-6. 单击 **“确定”** 。
+6. 单击“确定”。 
 
      " **自定义属性** " 属性现在按以下格式显示属性：
 
      `[`*AttributeName* `(`*ParameterName* `=`*类型*`)]`
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [域特定语言工具术语表](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+- [域特定语言工具术语表](/previous-versions/bb126564(v=vs.100))

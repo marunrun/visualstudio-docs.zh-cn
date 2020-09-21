@@ -13,12 +13,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: ebd7d500767e896ce9576a3d007a4357b9c5281c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bf9bf437c7592641f1b9020cdc16b4d702646015
+ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86014636"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90740092"
 ---
 # <a name="walkthrough-calling-into-the-sharepoint-client-object-model-in-a-server-explorer-extension"></a>演练：在服务器资源管理器扩展中调入 SharePoint 客户端对象模型
   本演练演示如何从**服务器资源管理器**中的 " **sharepoint 连接**" 节点的扩展调用 sharepoint 客户端对象模型。 有关如何使用 SharePoint 客户端对象模型的详细信息，请参阅 [调入 sharepoint 对象模型](../sharepoint/calling-into-the-sharepoint-object-models.md)。
@@ -118,7 +118,7 @@ ms.locfileid: "86014636"
 
 5. 打开 **WebPartNodeExtension** 项目的快捷菜单，然后选择 " **属性**"。
 
-     将打开“项目设计器”****。
+     将打开“项目设计器”  。
 
 6. 选择“应用程序”**** 选项卡。
 
@@ -192,7 +192,7 @@ ms.locfileid: "86014636"
 
 1. 在 **解决方案资源管理器**的 **WebPartNode** 项目中，在清单编辑器中打开 **source.extension.vsixmanifest** 文件。
 
-     Source.extension.vsixmanifest 文件是所有 VSIX 包都需要的 source.extension.vsixmanifest 文件的基础。 有关此文件的详细信息，请参阅 [VSIX 扩展架构1.0 引用](https://msdn.microsoft.com/76e410ec-b1fb-4652-ac98-4a4c52e09a2b)。
+     Source.extension.vsixmanifest 文件是所有 VSIX 包都需要的 source.extension.vsixmanifest 文件的基础。 有关此文件的详细信息，请参阅 [VSIX 扩展架构1.0 引用](/previous-versions/dd393700(v=vs.110))。
 
 2. 在 " **产品名称** " 框中，输入 **服务器资源管理器的 "Web 部件库" 节点**。
 
@@ -279,9 +279,9 @@ ms.locfileid: "86014636"
 
 5. 关闭 Visual Studio 的两个实例 (实验实例，以及在其中打开 WebPartNode 解决方案) 的 Visual Studio 实例。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [调入 SharePoint 对象模型](../sharepoint/calling-into-the-sharepoint-object-models.md)
-- [扩展中的 "SharePoint 连接" 节点服务器资源管理器](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)
+- [扩展服务器资源管理器中的“SharePoint 连接”节点](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)
 - [演练：扩展服务器资源管理器以显示 web 部件](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)
 - [图标的图像编辑器](/cpp/windows/image-editor-for-icons)
 - [为图标 &#40;图像编辑器创建图标或其他图像&#41;](/cpp/windows/creating-an-icon-or-other-image-image-editor-for-icons)

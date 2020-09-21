@@ -9,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c2e8891307520ee841fbed1591565624f2016939
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 08981e4f63c84d19d4086c75fe33a8b19a515ccf
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75565898"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809971"
 ---
 # <a name="understanding-models-classes-and-relationships"></a>了解模型、类和关系
 域特定语言 (DSL) 由其 DSL 定义文件定义，以及你可能编写的任何自定义程序代码。 DSL 解决方案中的大多数程序代码都是通过此文件生成的。
@@ -148,6 +148,6 @@ ms.locfileid: "75565898"
 
  派生关系专门用于其基本关系。 它链接的域类应派生自或与基关系链接的类相同。 在模型中创建派生关系的链接时，它是派生关系和基关系的实例。 在程序代码中，可以使用由基类或派生类生成的属性，导航到链接的另一端。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [域特定语言工具术语表](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+- [域特定语言工具术语表](/previous-versions/bb126564(v=vs.100))

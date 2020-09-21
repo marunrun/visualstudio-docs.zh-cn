@@ -1,20 +1,20 @@
 ---
-title: 使用 IntelliTrace 调试已发布的 Azure 云服务
+title: 用 IntelliTrace 调试已发布的 Azure 云服务
+ms.custom: SEO-VS-2020
 description: 了解如何使用 Visual Studio 和 IntelliTrace 调试云服务
 author: mikejo5000
 manager: jillfra
 ms.assetid: 5e6662fc-b917-43ea-bf2b-4f2fc3d213dc
 ms.topic: how-to
-ms.custom: vs-azure
 ms.workload: azure-vs
 ms.date: 03/21/2017
 ms.author: mikejo
-ms.openlocfilehash: 1e4de25f3d1b00459128b89bc5559f55cec8f077
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b89ed536e6483f54d4d7370a02935728dedfb517
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85280591"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809815"
 ---
 # <a name="debugging-a-published-azure-cloud-service-with-visual-studio-and-intellitrace"></a>使用 Visual Studio 和 IntelliTrace 调试已发布的 Azure 云服务
 通过 IntelliTrace，可以在某个角色实例在 Azure 中运行时记录该角色实例的大量调试信息。 如果需要查找问题的原因，可以从 Visual Studio 使用 IntelliTrace 日志来单步执行代码，就像它在 Azure 中运行一样。 实际上，当 Azure 应用程序以云服务的形式在 Azure 中运行时，IntelliTrace 将记录关键代码执行和环境数据，并允许从 Visual Studio 中回放已记录的数据。

@@ -9,12 +9,12 @@ ms.technology: vs-azure
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: fb92f5aae84a7c164f04145abe24eb32d7792056
-ms.sourcegitcommit: fb8babf5cd72f1fc2f97ffe4ad7b62d91f325f61
+ms.openlocfilehash: d4538becdf7627cc63ac94f65ac456123c5d9c47
+ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89485436"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90739975"
 ---
 # <a name="build-and-run-the-todo-sample-app"></a>生成并运行待办事项示例应用
 
@@ -28,7 +28,7 @@ ms.locfileid: "89485436"
 
 在运行应用程序之前，需要将应用程序源代码放到计算机上。 对于实际项目，通常会克隆存储库。 但在本教程中，你已创建了包含应用程序的 ZIP 文件。
 
-1. [下载 ZIP](/assets/app.zip)。 打开 ZIP 文件，并确保将内容解压缩。
+1. [下载 ZIP](http://localhost/assets/app.zip)。 打开 ZIP 文件，并确保将内容解压缩。
 
 1. 解压缩后，使用你最喜爱的代码编辑器打开项目。 如果需要编辑器，可以使用 [Visual Studio Code](https://code.visualstudio.com/)。 你应该会看到 `package.json` 和两个子目录（`src` 和 `spec`）。
 

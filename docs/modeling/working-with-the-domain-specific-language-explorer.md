@@ -9,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: caf7d395c08a8c1e8c21f933ba63c8943813831b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 971114a95fa43dbbcda985587d08f03ac3c7fd72
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85532179"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810778"
 ---
 # <a name="working-with-the-domain-specific-language-explorer"></a>使用域特定语言资源管理器
 **DSL 资源管理器**在树视图中显示多种类型的信息。 有关 DSL 资源管理器中的大部分项的详细信息，请参阅 [如何定义域特定语言](../modeling/how-to-define-a-domain-specific-language.md)。
@@ -43,4 +43,4 @@ ms.locfileid: "85532179"
 
 ## <a name="see-also"></a>另请参阅
 
-- [域特定语言工具术语表](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+- [域特定语言工具术语表](/previous-versions/bb126564(v=vs.100))

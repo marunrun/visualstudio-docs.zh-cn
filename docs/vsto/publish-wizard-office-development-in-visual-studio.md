@@ -18,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5d14abdd9ba6547a3aaf131084168be2e453dd04
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: be5742533280ab2ff7da04ee287b0534980d9436
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77558172"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810975"
 ---
 # <a name="publish-wizard-office-development-in-visual-studio"></a>发布向导 (Visual Studio 中的 Office 开发) 
   使用 **发布向导** 将解决方案文件复制到指定位置、创建清单文件并创建安装程序。
@@ -49,7 +49,7 @@ ms.locfileid: "77558172"
 > 如果目标计算机运行的是 Windows Vista，则有更多注意事项。 只有 Windows Vista 计算机上的管理员才能使用本地发布选项。 此外，无论是否安装了 IIS，默认位置始终为*发布 \\ *目录。
 
 ## <a name="what-is-the-default-installation-path-on-end-user-computers"></a>最终用户计算机上的默认安装路径是什么？
- 安装路径是可选的。 以后可以根据需要设置安装路径。 有关详细信息，请参阅 [如何：更改 Office 解决方案的安装路径](https://msdn.microsoft.com/d0eaa07b-2d72-4902-899f-2f9fb165b8fd)。
+ 安装路径是可选的。 以后可以根据需要设置安装路径。 有关详细信息，请参阅 [如何：更改 Office 解决方案的安装路径](/previous-versions/bb608626(v=vs.110))。
 
  安装路径是最终用户将从其中安装自定义项的目录。 这也是解决方案将用于检查更新的路径。 **发布向导**不会将解决方案部署到此位置，除非该路径与您在前一页上的 "**指定发布此应用程序的位置**" 框中输入的路径相同。
 
@@ -61,7 +61,7 @@ ms.locfileid: "77558172"
 
  Visual Studio 不会刻录 CD 或 DVD。 必须手动将输出复制到 CD 或 DVD。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [使用 ClickOnce 部署 Office 解决方案](../vsto/deploying-an-office-solution-by-using-clickonce.md)
 - [发布页，项目设计器 &#40;Visual Studio 中的 Office 开发&#41;](../vsto/publish-page-project-designer-office-development-in-visual-studio.md)
 - [部署 Office 解决方案](../vsto/deploying-an-office-solution.md)
