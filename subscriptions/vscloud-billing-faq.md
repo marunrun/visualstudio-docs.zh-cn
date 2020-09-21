@@ -7,12 +7,12 @@ ms.assetid: 21e0471d-ad59-4d21-9c6f-13f7147569af
 ms.date: 09/08/2020
 ms.topic: conceptual
 description: 云订阅的计费问题。
-ms.openlocfilehash: 8ef98fc3c6e81071984cdc0fb8ef6f6dab626b48
-ms.sourcegitcommit: f8d14fab194fcb30658f23f700da07d35ffc9d4a
+ms.openlocfilehash: 987dddcf54f218d63580995b363ad838f2de83b4
+ms.sourcegitcommit: 1803a67b516f67b209d8f4cf147314e604ef1927
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89561320"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89641441"
 ---
 # <a name="visual-studio-cloud-subscriptions-billing-faq"></a>Visual Studio 云订阅计费常见问题解答
 请确保[比较云订阅权益和定价](https://visualstudio.microsoft.com/vs/pricing/)，了解每种 Visual Studio 订阅的权益，云订阅与标准 Visual Studio 订阅之间的不同之处，以及订阅者权益的相关详细信息等。
@@ -31,7 +31,7 @@ ms.locfileid: "89561320"
 
 ## <a name="enterprise-agreement-ea-customers"></a>企业协议 (EA) 客户
 ### <a name="q-can-i-use-an-enterprise-agreement-to-buy-visual-studio-cloud-subscriptions"></a>问：我可以使用企业协议购买 Visual Studio 云订阅吗？
-答：可以。 你需要是为你的 EA 创建的 Azure 订阅的所有者或参与者。 请确保直接在 Visual Studio Marketplace 中购买 Visual Studio 云订阅。 不能使用采购订单购买 Visual Studio 云订阅。
+答：可以。 你需要是为你的 EA 创建的 Azure 订阅的参与者或更高级别的角色。 请确保直接在 Visual Studio Marketplace 中购买 Visual Studio 云订阅。 不能使用采购订单购买 Visual Studio 云订阅。
 
 ### <a name="q-how-can-i-tell-whether-i-have-the-necessary-privileges-to-buy-services-in-the-visual-studio-marketplace-through-my-organizations-enterprise-agreement"></a>问：如何通过组织的企业协议判断是否具有在 Visual Studio Marketplace 中购买服务所需的权限？
 答：确定是否拥有正确权限的最简单方法是选择“购买”按钮，查看 Visual Studio Marketplace 中提供的服务。

@@ -13,12 +13,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f4adbd08d13d26c717beeb454bd323185bb88640
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bb495b30950105d1ff19a1f4fb13da1ee624b228
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "79416557"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809344"
 ---
 # <a name="deploy-an-office-solution-by-using-clickonce"></a>使用 ClickOnce 部署 Office 解决方案
   如果使用 ClickOnce，则部署 Office 解决方案的步骤更少。 如果发布更新，解决方案将自动检测并安装更新。 不过，ClickOnce 需要你分别为计算机的每个用户安装解决方案。 因此，如果多个用户将在同一台计算机上运行你的解决方案，则应考虑使用 Windows Installer (*.msi*) 。
@@ -358,7 +358,7 @@ ms.locfileid: "79416557"
 |错误代码|定义|
 |----------------|----------------|
 |0|已成功安装或卸载解决方案，或者显示 VSTOInstaller 帮助。|
-|-100|一个或多个命令行选项无效或已被多次设置。 有关详细信息，请输入 "vstoinstaller.exe/？" 或者参阅 [为 ClickOnce Office 解决方案创建自定义安装程序](https://msdn.microsoft.com/3e5887ed-155f-485d-b8f6-3c02c074085e)。|
+|-100|一个或多个命令行选项无效或已被多次设置。 有关详细信息，请输入 "vstoinstaller.exe/？" 或者参阅 [为 ClickOnce Office 解决方案创建自定义安装程序](/previous-versions/bb772078(v=vs.110))。|
 |-101|一个或多个命令行选项无效。 有关详细信息，请输入“vstoinstaller /?”。|
 |-200|部署清单 URI 无效。 有关详细信息，请输入“vstoinstaller /?”。|
 |-201|无法安装解决方案，因为部署清单无效。 请参阅 [Office 解决方案的部署清单](../vsto/deployment-manifests-for-office-solutions.md)。|
@@ -456,11 +456,11 @@ ms.locfileid: "79416557"
 > [!NOTE]
 > 仅为解决方案的一个早期版本保存本地数据。 如果回滚两个版本，则不会保留本地数据。 有关本地数据的详细信息，请参阅 [在 ClickOnce 应用程序中访问本地数据和远程数据](../deployment/accessing-local-and-remote-data-in-clickonce-applications.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [部署 Office 解决方案](../vsto/deploying-an-office-solution.md)
 - [发布 Office 解决方案](../vsto/deploying-an-office-solution-by-using-clickonce.md)
-- [如何：使用 ClickOnce 发布 Office 解决方案](https://msdn.microsoft.com/2b6c247e-bc04-4ce4-bb64-c4e79bb3d5b8)
-- [如何：安装 ClickOnce Office 解决方案](https://msdn.microsoft.com/14702f48-9161-4190-994c-78211fe18065)
-- [如何：使用 ClickOnce 将文档级 Office 解决方案发布到 SharePoint 服务器](https://msdn.microsoft.com/2408e809-fb78-42a1-9152-00afa1522e58)
-- [为 ClickOnce office 解决方案创建自定义安装程序](https://msdn.microsoft.com/3e5887ed-155f-485d-b8f6-3c02c074085e)
+- [如何：使用 ClickOnce 发布 Office 解决方案](/previous-versions/bb386095(v=vs.110))
+- [如何：安装 ClickOnce Office 解决方案](/previous-versions/bb608592(v=vs.110))
+- [如何：使用 ClickOnce 将文档级 Office 解决方案发布到 SharePoint 服务器](/previous-versions/bb608595(v=vs.110))
+- [为 ClickOnce office 解决方案创建自定义安装程序](/previous-versions/bb772078(v=vs.110))

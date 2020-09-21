@@ -1,5 +1,6 @@
 ---
-title: 如何-指定部署更新的其他位置 |Microsoft Docs
+title: 为部署更新指定替代位置
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -15,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c71586c43fa1a71205d61ae21fb94c267daf497d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 096e962f9e334b3db9819973a0fbd82d636f7d6f
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85381907"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90808745"
 ---
 # <a name="how-to-specify-an-alternate-location-for-deployment-updates"></a>如何：指定部署更新的备用位置
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]最初可以通过 CD 或文件共享安装应用程序，但应用程序必须在 Web 上检查定期更新。 您可以在部署清单中指定更新的备用位置，以便您的应用程序在初始安装后可以从 Web 进行自我更新。

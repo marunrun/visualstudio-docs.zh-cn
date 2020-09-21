@@ -1,5 +1,6 @@
 ---
-title: 如何-指定最终用户将从中进行安装的位置 |Microsoft Docs
+title: 指定最终用户安装的位置
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -17,14 +18,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e28ad8353858b35fc1c4e83f0511a58b4162dc9d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1ba02b1cf8947fa2d1907d6316e36af8f8f54a77
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85381933"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90808719"
 ---
 # <a name="how-to-specify-the-location-where-end-users-will-install-from"></a>如何：指定最终用户将从中进行安装的位置
+
 在发布 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序时，用户下载和安装应用程序的位置不一定是最初发布应用程序的位置。 例如，在某些组织中，开发人员可能会将应用程序发布到暂存服务器，然后管理员会将该应用程序移动到 Web 服务器。
 
 在这种情况下，可以使用 `Installation URL` 属性来指定用户下载应用程序时将使用的 Web 服务器。 这是必需的，以便应用程序清单知道在何处查找更新。

@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5e421d6e4ee94d9974c0a0583db1fb495c72593e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 13cbf08e5767ec548b9fdba9bd0892e0cf50a63d
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "79416531"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90808784"
 ---
 # <a name="upgrade-and-migrate-office-solutions"></a>升级和迁移 Office 解决方案
   如果你拥有在 Visual Studio 早期版本中创建的 Microsoft Office 项目，则必须升级该项目以在 Visual Studio 当前版本中使用。 若要升级 Microsoft Office 项目，请在包含 Microsoft Office 开发人员工具的 Visual Studio 版本中打开该项目。 有关包含 Microsoft Office 开发人员工具的 Visual Studio 版本的详细信息，请参阅 [配置计算机以开发 Office 解决方案](../vsto/configuring-a-computer-to-develop-office-solutions.md)。
@@ -83,7 +83,7 @@ ms.locfileid: "79416531"
 
  如果你想要使用 ClickOnce 来部署 VSTO 外接程序，则可以完全删除安装项目或 InstallShield Limited Edition 项目。 有关使用 ClickOnce 部署 VSTO 外接程序的详细信息，请参阅 [部署 Office 解决方案](../vsto/deploying-an-office-solution.md)。
 
-## <a name="see-also"></a>请参阅
-- [如何：升级 Office 解决方案](https://msdn.microsoft.com/a269e539-b717-4680-a568-2152b070347e)
+## <a name="see-also"></a>另请参阅
+- [如何：升级 Office 解决方案](/previous-versions/4bez6837(v=vs.140))
 - [将 Office 解决方案迁移到 .NET Framework 4 或更高版本](../vsto/migrating-office-solutions-to-the-dotnet-framework-4-or-later.md)
 - [项目升级，"选项" 对话框](../vsto/project-upgrade-options-dialog-box.md)

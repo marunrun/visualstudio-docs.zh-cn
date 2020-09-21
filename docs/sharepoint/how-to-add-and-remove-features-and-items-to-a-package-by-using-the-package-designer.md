@@ -14,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 4dfbda711c42e475af5f17c8799e53b13e26611a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cd712eafb6061da89367c247475904886579d2de
+ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86014612"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90740079"
 ---
 # <a name="how-to-add-and-remove-features-and-items-to-a-package-by-using-the-package-designer"></a>如何：使用包设计器在包中添加和移除功能和项
   创建 SharePoint 解决方案时，Visual Studio 会将默认 SharePoint 功能添加到解决方案中的包。 在最终部署之前，您可以添加和删除 SharePoint 项目项和功能来修改 SharePoint 包。
@@ -56,7 +56,7 @@ ms.locfileid: "86014612"
 
      SharePoint 项显示在解决方案列表中的 **项** 上。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [创建 SharePoint 解决方案包](../sharepoint/creating-sharepoint-solution-packages.md)
 - [如何：自定义 SharePoint 解决方案包](../sharepoint/how-to-customize-a-sharepoint-solution-package.md)
-- [如何：创建包](https://msdn.microsoft.com/b24be45c-e91d-49bb-afb0-7b265404214b)
+- [如何：创建包](/previous-versions/ee231585(v=vs.110))

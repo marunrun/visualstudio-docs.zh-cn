@@ -1,5 +1,6 @@
 ---
-title: 如何-指定 ClickOnce 应用程序的发布页 |Microsoft Docs
+title: " (ClickOnce 应用指定发布页面) "
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -17,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: acf7178a6b5456d048421533b8497682d69c2ee0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 70f9853f6e15cb6d960e02491539f031bc1c44a1
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85381959"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90808771"
 ---
 # <a name="how-to-specify-a-publish-page-for-a-clickonce-application"></a>如何：指定 ClickOnce 应用程序的发布页
 在发布 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序时，将生成一个 ( # A0) 的默认网页，并随应用程序一起发布。 此页包含应用程序的名称、安装应用程序的链接和/或任何系统必备组件，并链接到描述的帮助主题 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 。 您的项目的 " **发布页** " 属性允许您为应用程序指定网页的名称 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 。

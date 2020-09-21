@@ -7,16 +7,16 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6aa4cce032a5eb80a11568a83c1166b5690bd688
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 1a738490933c6f2d1cdf89e7e974a268540af991
+ms.sourcegitcommit: 14637be49401f56341c93043eab560a4ff6b57f6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85279870"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90074964"
 ---
 # <a name="gpu-usage"></a>GPU 使用情况
 
-使用 Visual Studio 性能和诊断中心内的 GPU 使用情况工具，更好地概览 Direct3D 应用的硬件使用情况。 它有助于查看应用的性能是受限于 CPU 还是 GPU，并深入了解如何更有效地使用平台的硬件。 GPU 使用情况工具支持使用 Direct3D 12、Direct3D 11 和 Direct3D 10 的应用。 它不支持其他图形 API（如 Direct2D 或 OpenGL）。
+在性能探查器中使用“GPU 使用情况”工具，更好地了解 Direct3D 应用的高级硬件使用情况。 它有助于查看应用的性能是受限于 CPU 还是 GPU，并深入了解如何更有效地使用平台的硬件。 GPU 使用情况工具支持使用 Direct3D 12、Direct3D 11 和 Direct3D 10 的应用。 它不支持其他图形 API（如 Direct2D 或 OpenGL）。
 
 “GPU 使用情况报告”窗口如下所示：
 
@@ -43,7 +43,7 @@ ms.locfileid: "85279870"
 
 2. 在“性能和诊断”中心内，选中“GPU 使用情况”旁边的复选框。 （可选）选中你希望使用的其他工具旁的复选框。 可同时运行多个性能和诊断工具，以更全面地了解应用性能。
 
-    ![“性能和诊断”中心的屏幕截图（已选中“GPU 使用情况”）](media/gpuusageselected.png "已选中“GPU 使用情况”")
+    ![性能探查器的屏幕截图（已选中“GPU 使用情况”）](media/gpuusageselected.png "已选中“GPU 使用情况”")
 
    > [!NOTE]
    > 并非所有性能和诊断工具都可以同时使用。

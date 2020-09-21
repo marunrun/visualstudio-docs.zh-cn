@@ -1,17 +1,18 @@
 ---
-title: 使用 Docker Compose 与 ASP.NET Core 的多容器教程
+title: 使用 Docker Compose 处理多个容器
 author: ghogen
 description: 了解如何将多个容器与 Docker Compose 配合使用
+ms.custom: SEO-VS-2020
 ms.author: ghogen
 ms.date: 01/10/2020
 ms.technology: vs-azure
 ms.topic: include
-ms.openlocfilehash: 5cdb8fa2f2a2c3a6a41cab4218b06ce4786d33b4
-ms.sourcegitcommit: fb8babf5cd72f1fc2f97ffe4ad7b62d91f325f61
+ms.openlocfilehash: 0fa7d186623b69fd83c3ed7e4ab9cc12128847d2
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89490308"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90037206"
 ---
 # <a name="tutorial-create-a-multi-container-app-with-docker-compose"></a>教程：使用 Docker Compose 创建多容器应用
 

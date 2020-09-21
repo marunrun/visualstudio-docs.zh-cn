@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: fea425da8a6e49643997151c6273fbbffc7033db
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: eceaa4db4bb31870ee66fbffae8882fc93d9abbb
+ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016508"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90739910"
 ---
 # <a name="walkthrough-create-a-site-column-project-item-with-a-project-template-part-1"></a>演练：使用项目模板创建网站栏项目项（第1部分）
   SharePoint 项目是一个或多个 SharePoint 项目项的容器。 你可以通过创建自己的 SharePoint 项目项类型，然后将其与项目模板关联，在 Visual Studio 中扩展 SharePoint 项目系统。 在本演练中，您将定义用于创建网站列的项目项类型，然后您将创建一个可用于创建包含网站列项目项的新项目的项目模板。
@@ -224,7 +224,7 @@ ms.locfileid: "86016508"
 
 - *AssemblyInfo.cs* 或 *AssemblyInfo*
 
-- *Elements.xml*
+- Elements.xml
 
 - *SharePointProjectItem.spdata*
 
@@ -236,7 +236,7 @@ ms.locfileid: "86016508"
 
 - *ProjectTemplate* 或 *ProjectTemplate. .vbproj*
 
-  在以下过程中，你将向其中一些文件添加可替换参数。 可替换参数是以美元符号 ($) 字符开头和结尾的令牌。 用户使用此项目模板来创建项目时，Visual Studio 会自动将新项目中的这些参数替换为特定值。 有关详细信息，请参阅可 [替换参数](../sharepoint/replaceable-parameters.md)。
+  在以下过程中，你将向其中一些文件添加可替换参数。 可替换参数是以美元符号 ($) 字符开头和结尾的令牌。 用户使用此项目模板来创建项目时，Visual Studio 会自动将新项目中的这些参数替换为特定值。 有关详细信息，请参阅[可替换参数](../sharepoint/replaceable-parameters.md)。
 
 #### <a name="to-edit-the-assemblyinfocs-or-assemblyinfovb-file"></a>编辑 AssemblyInfo.cs 或 AssemblyInfo 文件
 
@@ -639,7 +639,7 @@ ms.locfileid: "86016508"
 
 1. 在 **解决方案资源管理器**的 **SiteColumnProjectItem** 项目中，在清单编辑器中打开 source.extension.vsixmanifest 文件。
 
-     Source.extension.vsixmanifest 文件是所有 VSIX 包都需要的 source.extension.vsixmanifest 文件的基础。 有关此文件的详细信息，请参阅 [VSIX 扩展架构1.0 引用](https://msdn.microsoft.com/76e410ec-b1fb-4652-ac98-4a4c52e09a2b)。
+     Source.extension.vsixmanifest 文件是所有 VSIX 包都需要的 source.extension.vsixmanifest 文件的基础。 有关此文件的详细信息，请参阅 [VSIX 扩展架构1.0 引用](/previous-versions/dd393700(v=vs.110))。
 
 2. 在 " **产品名称** " 框中，输入 **网站列**。
 
@@ -752,7 +752,7 @@ ms.locfileid: "86016508"
 ## <a name="next-steps"></a>后续步骤
  完成本演练后，可以将向导添加到项目模板。 当用户创建网站列项目时，向导会要求用户提供用于调试的网站 URL 以及新的解决方案是否已进行了沙盒处理，向导将使用此信息配置新的项目。 该向导还会收集有关列 (的信息，例如要在其中列出站点列库中的列的基础类型和组) 并将此信息添加到新项目中的 *Elements.xml* 文件中。 有关详细信息，请参阅 [演练：使用项目模板创建网站栏项目项（第2部分）](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [演练：使用项目模板创建网站栏项目项（第2部分）](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2.md)
 - [定义自定义 SharePoint 项目项类型](../sharepoint/defining-custom-sharepoint-project-item-types.md)
