@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7ec5ea0b52c5d0708630a30b7d2b80be2275f3a9
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 89d8acfa4bf0f5dd9f1f387389b9f7f523c153a7
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84173669"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90036400"
 ---
 # <a name="publish-a-web-app-to-a-web-site-using-visual-studio"></a>使用 Visual Studio 将 Web 应用发布到网站
 
@@ -32,9 +32,9 @@ ms.locfileid: "84173669"
 
     ![解决方案资源管理器中项目上下文菜单上的“发布”命令](../deployment/media/quickstart-publish.png "选择发布")
 
-1. 如果先前配置了任何发布配置文件，则“发布”窗格会显示。 选择“新建配置文件”。
+1. 如果先前配置了任何发布配置文件，则“发布”窗格会显示。 选择“新建”。
 
-1. 在“发布”对话框中，选择“Web 服务器(IIS)” 。
+1. 在“发布”窗口中，选择“Web 服务器(IIS)”。
 
     ![选择发布目标](../deployment/media/quickstart-publish-iis.png "选择 IIS、FTP 等。")
 
@@ -47,6 +47,8 @@ ms.locfileid: "84173669"
     ![Web 部署连接详细信息](../deployment/media/quickstart-publish-iis-web-deploy-connection-details.png)
 
 1. 要进行发布，请选择摘要页面中的“发布”。 “输出”窗口显示部署进度和结果。
+
+   有关如何对 IIS 上的 ASP.NET Core 进行故障排除的帮助，请参阅[对 Azure 应用服务和 IIS 上的 ASP.NET Core 进行故障排除](/aspnet/core/test/troubleshoot-azure-iis)。
 
 ## <a name="next-steps"></a>后续步骤
 

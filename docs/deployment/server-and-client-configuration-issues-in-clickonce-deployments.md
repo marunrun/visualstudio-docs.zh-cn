@@ -1,5 +1,6 @@
 ---
-title: ClickOnce 部署中的服务器/客户端配置问题
+title: ClickOnce)  (服务器/客户端配置问题
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -17,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4ec07e71e57c0b3875d690773b7ff2618269b8f4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9af8b864092f56150ff71d0e23b0bf59280aeb6c
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88250008"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90811229"
 ---
 # <a name="server-and-client-configuration-issues-in-clickonce-deployments"></a>ClickOnce 部署中的服务器和客户端配置问题
 如果你在 Windows Server 上使用 Internet Information Services (IIS) ，并且你的部署包含 Windows 无法识别的文件类型（如 Microsoft Word 文件），则 IIS 将拒绝传输该文件，并且你的部署将不会成功。
@@ -132,7 +133,7 @@ ms.locfileid: "88250008"
 
  有关 IIS 的详细说明，请参阅 [如何为 HTTP 压缩指定其他文档类型](https://support.microsoft.com/help/234497)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [ClickOnce 部署疑难解答](../deployment/troubleshooting-clickonce-deployments.md)
 - [选择 ClickOnce 部署策略](../deployment/choosing-a-clickonce-deployment-strategy.md)
 - [应用程序部署必备](../deployment/application-deployment-prerequisites.md)

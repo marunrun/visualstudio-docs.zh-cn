@@ -9,18 +9,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - azure
-ms.openlocfilehash: 5b0b45d586fb6eb89eb458329f611d980d9415e0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8130608f7f94efa279775f532e0022df2f2a7f1a
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85285463"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90037668"
 ---
 # <a name="publish-an-aspnet-core-app-to-app-service-on-linux-using-visual-studio"></a>使用 Visual Studio 将 ASP.NET Core 应用发布到 Linux 上的应用服务
 
 从 Visual Studio 2017 版本 15.7 开始，可以使用以下任一方法将 ASP.NET Core 应用发布到 Azure 应用服务 Linux（使用容器）。
 
-* 对于应用的连续（或自动）部署，请将 Azure DevOps 与 [Azure 管道](https://docs.microsoft.com/azure/devops/pipelines/get-started-yaml?view=azdevops)结合使用。
+* 对于应用的连续（或自动）部署，请将 Azure DevOps 与 [Azure 管道](/azure/devops/pipelines/get-started-yaml?view=azdevops)结合使用。
 
 * 对于应用的一次性（或手动）部署，请使用 Visual Studio 中的“Publish”工具将 ASP.NET Core 应用部署到适用于 Linux 的应用服务（使用容器）。
 
@@ -34,7 +34,9 @@ ms.locfileid: "85285463"
 
     ![解决方案资源管理器中项目上下文菜单上的“发布”命令](../deployment/media/quickstart-publish.png "选择发布")
 
-1. 在“发布”对话框中，选择 Azure 。
+1. 如果先前配置了任何发布配置文件，则“发布”窗口会显示。 选择“新建”。
+
+1. 在“发布”窗口中，选择“Azure”。
 
     ![选择发布目标](../deployment/media/quickstart-publish-azure-new.png)
 
@@ -60,7 +62,7 @@ ms.locfileid: "85285463"
 
 ## <a name="clean-up-resources"></a>清理资源
 
-在前面步骤中，已在资源组中创建 Azure 资源。 如果以后不需要这些资源，可以通过删除资源组来删除它们。
+在前面的步骤中，你在资源组中创建了 Azure 资源。 如果以后不需要这些资源，可以通过删除资源组来删除它们。
 从 Azure 门户左侧菜单中，选择“资源组”，然后选择“myResourceGroup” 。
 在资源组页上，确保列出的资源是要删除的。
 选择“删除”，在文本框中键入“myResourceGroup”，然后选择“删除”  。

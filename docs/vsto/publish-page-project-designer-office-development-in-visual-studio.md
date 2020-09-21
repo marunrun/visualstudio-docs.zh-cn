@@ -16,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 86d575b254209b547504ea6d746d03853990bfb4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4dfa575bea4e629c7521cc7f4c5a79707462714c
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "67329001"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810988"
 ---
 # <a name="publish-page-project-designer-office-development-in-visual-studio"></a>发布页，项目设计器 (Visual Studio 中的 Office 开发) 
   “项目设计器” **** 的“发布” **** 页面用于针对部署配置属性。
@@ -29,7 +29,7 @@ ms.locfileid: "67329001"
  若要访问此页，请在**解决方案资源管理器**中选择项目，然后在 "**项目**" 菜单上选择 "项目*名称***属性**"。 如果“发布” **** 页面未显示，请选择“发布” **** 选项卡。
 
 > [!NOTE]
-> 你也可以在“发布向导” **** 中设置发布位置。 有关详细信息，请参阅 [如何：使用 ClickOnce 发布 Office 解决方案](https://msdn.microsoft.com/2b6c247e-bc04-4ce4-bb64-c4e79bb3d5b8)。
+> 你也可以在“发布向导” **** 中设置发布位置。 有关详细信息，请参阅 [如何：使用 ClickOnce 发布 Office 解决方案](/previous-versions/bb386095(v=vs.110))。
 
 ## <a name="uielement-list"></a>UIElement 列表
  **发布文件夹位置 (网站、ftp 服务器或文件路径) ** 必填。
@@ -50,7 +50,7 @@ ms.locfileid: "67329001"
 
  如果安装文件位于相对于文档或安装程序的位置（例如使用 CD 的时候），则将此框保留为空。
 
- 此值可由管理员以后分配。 有关详细信息，请参阅 [如何：更改 Office 解决方案的安装路径](https://msdn.microsoft.com/d0eaa07b-2d72-4902-899f-2f9fb165b8fd)。
+ 此值可由管理员以后分配。 有关详细信息，请参阅 [如何：更改 Office 解决方案的安装路径](/previous-versions/bb608626(v=vs.110))。
 
  **先决条件** 系统必备组件可以随安装程序提供，也可以在安装过程中按需下载。
 
@@ -102,4 +102,4 @@ ms.locfileid: "67329001"
 
 - [部署 Office 解决方案](../vsto/deploying-an-office-solution.md)
 - [使用 ClickOnce 部署 Office 解决方案](../vsto/deploying-an-office-solution-by-using-clickonce.md)
-- [部署的 Office 解决方案先决条件](https://msdn.microsoft.com/9f672809-43a3-40a1-9057-397ce3b5126e)
+- [部署的 Office 解决方案先决条件](/previous-versions/bb608617(v=vs.110))

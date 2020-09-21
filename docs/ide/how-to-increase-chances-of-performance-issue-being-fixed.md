@@ -1,16 +1,17 @@
 ---
-title: 如何提高解决性能问题的几率
+title: 提高性能问题被解决的几率
 description: 有关在 Visual Studio 中提交性能问题的其他信息和最佳实践
+ms.custom: SEO-VS-2020
 author: madskristensen
 ms.author: madsk
 ms.date: 11/19/2019
 ms.topic: conceptual
-ms.openlocfilehash: 9fc83ac1be1a6c1db7b46845c74a4b0e7bf6017f
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: 627b597d9c8f4d68fdb90235ebf51339111374f1
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89509921"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90038590"
 ---
 # <a name="how-to-increase-the-chances-of-a-performance-issue-being-fixed"></a>如何提高解决性能问题的几率
 

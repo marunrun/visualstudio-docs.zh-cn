@@ -11,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2e5ed5703d67e4c10bd7a9e4fe2ab234c5577f65
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 58f0b35b54ddb383111ee060225528d5942b1058
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85520855"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90811144"
 ---
 # <a name="properties-of-port-shapes"></a>端口形状的属性
 可以在生成的设计器中使用端口形状来表示域类。
@@ -25,9 +25,9 @@ ms.locfileid: "85520855"
 
  端口形状具有下表中列出的属性。
 
-|属性|说明|默认|
+|Property|说明|默认|
 |-|-|-|
-|填充颜色|此形状的填充颜色。|白色|
+|填充颜色|此形状的填充颜色。|White|
 |填充渐变模式|此形状的填充渐变模式。|横向|
 |几何结构|此形状的几何图形 (矩形、圆角矩形、椭圆形或圆圈) 。|Rectangle|
 |具有默认连接点|如果为 `True` ，则形状将使用生成的设计器中的顶部、底部、左侧和右侧连接点。|错误|
@@ -41,10 +41,10 @@ ms.locfileid: "85520855"
 |具有自定义构造函数|如果为 `True` ，则在源代码中提供自定义构造函数。 有关详细信息，请参阅 [重写和扩展生成的类](../modeling/overriding-and-extending-the-generated-classes.md)。|错误|
 |继承修饰符|描述从端口 (或) 生成的源代码类的继承类型 `none` `abstract` `sealed` 。|无|
 |基端口|此形状的基类。|（无）|
-|名称|此形状的名称。|当前名称|
+|“属性”|此形状的名称。|当前名称|
 |命名空间|与此形状关联的命名空间。|当前命名空间|
 |工具提示类型|如何定义工具提示 (fixed、variable 或 none) 。 如果已修复，则属性的值 `Fixed Tooltip Text` 将用作工具提示; 如果变量为，则在自定义代码中定义工具提示。|无|
-|说明|与此形状相关联的非正式注释。|\<none>|
+|注释|与此形状相关联的非正式注释。|\<none>|
 |初始高度|此形状的初始高度（英寸）。|1|
 |初始宽度|此形状的初始宽度（英寸）。|1.5|
 |作为属性公开的填充颜色<br /><br /> 公开的填充渐变模式<br /><br /> 作为属性公开的大纲颜色<br /><br /> 已公开大纲虚线样式为属性<br /><br /> 作为属性公开的大纲粗细<br /><br /> 公开文本颜色|如果 `True` 为，则用户可以设置形状的指定属性。 若要设置此项，请右键单击形状定义，然后单击 "添加" " **公开**"。|错误|
@@ -55,4 +55,4 @@ ms.locfileid: "85520855"
 
 ## <a name="see-also"></a>另请参阅
 
-- [域特定语言工具术语表](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+- [域特定语言工具术语表](/previous-versions/bb126564(v=vs.100))

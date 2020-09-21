@@ -9,35 +9,34 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dc0d97b1e2b2e27ebc8ddb898795c1767155c1cb
-ms.sourcegitcommit: ee12b14f306ad8f49b77b08d3a16d9f54426e7ca
+ms.openlocfilehash: 3e1e6951aebac63494aada4e64c5c072eb79c6a9
+ms.sourcegitcommit: 14637be49401f56341c93043eab560a4ff6b57f6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80256187"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90074977"
 ---
 # <a name="measure-memory-usage-in-visual-studio"></a>在 Visual Studio 中衡量内存使用情况
 
-使用集成了调试器的内存使用情况  诊断工具在进行调试时查找内存泄漏和低效内存。 通过内存使用率工具可以拍摄托管和本机内存堆的一个或多个快照，帮助理解对象类型的内存使用率影响  。 可以收集 .NET、本机或混合模式（.NET 和本机）应用的快照。
-
-下图显示“诊断工具”  窗口（Visual Studio 2015 Update 1 及更高版本中提供）：
-
-![DiagnosticTools&#45;Update1](../profiling/media/diagnostictools-update1.png "DiagnosticTools-Update1")
+使用集成了调试器的内存使用情况  诊断工具在进行调试时查找内存泄漏和低效内存。 通过内存使用率工具可以拍摄托管和本机内存堆的一个或多个快照，帮助理解对象类型的内存使用率影响  。 还可以在没有附加调试器的情况下或以正在运行的应用为目标来分析内存使用情况。 有关详细信息，请参阅[运行带或不带调试器的分析工具](../profiling/running-profiling-tools-with-or-without-the-debugger.md)。
 
 虽然可以随时在 **内存使用率** 工具中收集内存快照，不过可以使用 Visual Studio 调试器在调查性能问题时控制应用程序的执行方式。 断点设置、步进、全部中断和其他调试器操作可以帮助将性能调查集中在最相关的代码路径上。 在应用运行期间执行这些操作可以消除无关紧要的代码带来的烦扰，并可以显著减少用于诊断问题所花费的时间。
 
-还可以在调试器外部使用内存工具。 请参阅[未经调试的内存使用情况](../profiling/memory-usage-without-debugging2.md)。 可在 Windows 7 及更高版本中使用未附加调试器的分析工具。 要运行带调试器的分析工具（“诊断工具”窗口），需具备 Windows 8 及更高版本  。
-
-> [!NOTE]
-> **自定义分配器支持** 本机内存探查器的工作原理是收集在运行时发出的分配 [ETW](/windows-hardware/drivers/devtest/event-tracing-for-windows--etw-) 事件数据。  CRT 和 Windows SDK 中的分配器在源级别上注释，因此可以捕获其分配数据。 若要编写自己的分配器，对于返回的指针指向新分配的堆内存的任何函数，可使用 [__declspec](/cpp/cpp/declspec)(allocator) 进行修饰，如以下 myMalloc 示例所示：
->
-> `__declspec(allocator) void* myMalloc(size_t size)`
+> [!Important]
+> Visual Studio 中的 .NET 开发（包括 ASP.NET、ASP.NET Core、本机/C++ 开发和混合模式（.NET 和本机）应用）支持集成了调试器的诊断工具。 要运行带调试器的分析工具（“诊断工具”窗口），需具备 Windows 8 及更高版本。
 
 在本教程中，你将：
 
 > [!div class="checklist"]
 > * 拍摄内存快照
 > * 分析内存使用率数据
+
+如果“内存使用情况”未提供所需数据，则[“性能探查器”](../profiling/profiling-feature-tour.md#post_mortem)中的其他分析工具可提供可能有帮助的不同种类的信息。 在许多情况下，内存以外的因素可能会导致应用程序性能瓶颈，例如 CPU、呈现 UI 或网络请求时间。
+
+> [!NOTE]
+> **自定义分配器支持** 本机内存探查器的工作原理是收集在运行时发出的分配 [ETW](/windows-hardware/drivers/devtest/event-tracing-for-windows--etw-) 事件数据。  CRT 和 Windows SDK 中的分配器在源级别上注释，因此可以捕获其分配数据。 若要编写自己的分配器，对于返回的指针指向新分配的堆内存的任何函数，可使用 [__declspec](/cpp/cpp/declspec)(allocator) 进行修饰，如以下 myMalloc 示例所示：
+>
+> `__declspec(allocator) void* myMalloc(size_t size)`
 
 ## <a name="collect-memory-usage-data"></a>收集内存使用率数据
 

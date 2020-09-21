@@ -1,30 +1,30 @@
 ---
-title: 安全警告
+title: 安全规则
 ms.date: 10/02/2019
 ms.topic: reference
 f1_keywords:
 - vs.codeanalysis.securityrules
 helpviewer_keywords:
 - security [Visual Studio ALM], Enterprise Templates
-- security warnings
-- managed code analysis warnings, security warnings
-- warnings, security
+- security rules
+- managed code analysis rules, security rules
+- rules, security
 ms.assetid: 60d4e8ea-230a-494f-aa6a-b91db77540e4
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a40273c3230854e4b1d1a11a3fd02de54d5df745
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: 2eb2356628099246aa010c0332f473955a3e976d
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89599972"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90807919"
 ---
-# <a name="security-warnings"></a>安全警告
+# <a name="security-rules"></a>安全规则
 
-安全警告支持更安全的库和应用程序。 这些警告帮助防止程序中出现安全漏洞。 如果你禁用其中的某个警告，你应当在代码中清楚标出原因，同时将你的开发项目通知指定的安全负责人。
+安全规则支持更安全的库和应用程序。 这些规则可帮助防止程序中出现安全漏洞。 如果您禁用这些规则中的任何一种，您应该清楚地标记代码中的原因，并向您的开发项目通知指定的安全官员。
 
 ## <a name="in-this-section"></a>在本节中
 
@@ -79,7 +79,7 @@ ms.locfileid: "89599972"
 |[CA5358：请勿使用不安全的密码模式](../code-quality/ca5358.md)|请勿使用不安全的密码模式|
 |[CA5359:请勿禁用证书验证](../code-quality/ca5359.md)|证书可以帮助验证服务器的身份。 客户端应验证服务器证书，以确保将请求发送到目标服务器。 如果 Servicepointmanager.servercertificatevalidationcallback 始终返回 `true` ，则任何证书将通过验证。|
 |[CA5360:在反序列化中不要调用危险的方法](../code-quality/ca5360.md)|不受信任的反序列化是指使用不受信任的数据来滥用应用程序逻辑的漏洞，导致拒绝服务 (DoS) 攻击，甚至在反序列化时执行任意代码。 当应用程序对其控制下的不受信任的数据进行反序列化时，恶意用户经常会滥用这些反序列化功能。 具体而言，就是在反序列化过程中调用危险方法。 成功的反反序列化攻击可能会允许攻击者发起攻击，如 DoS 攻击、身份验证绕过和远程代码执行。|
-|[CA5361：不禁用 SChannel 使用强加密](../code-quality/ca5361.md)|设置 `Switch.System.Net.DontEnableSchUseStrongCrypto` 为 `true` 受损传出传输层安全性 (TLS) 连接中使用的加密。 较弱的加密可能会危及应用程序与服务器之间通信的机密性，使攻击者更容易窃听敏感数据。|
+|[CA5361：不禁止 SChannel 使用强加密](../code-quality/ca5361.md)|设置 `Switch.System.Net.DontEnableSchUseStrongCrypto` 为 `true` 受损传出传输层安全性 (TLS) 连接中使用的加密。 较弱的加密可能会危及应用程序与服务器之间通信的机密性，使攻击者更容易窃听敏感数据。|
 |[CA5362:反序列化对象图中存在潜在引用循环](../code-quality/ca5362.md)|如果反序列化不受信任的数据，则处理反序列化对象图的任何代码都需要处理引用循环，而不会进入无限循环。 这包括作为反序列化回调一部分的代码和在反序列化完成后处理对象图的代码。 否则，攻击者可能会对包含引用周期的恶意数据执行拒绝服务攻击。|
 |[CA5363：请勿禁用请求验证](../code-quality/ca5363.md)|请求验证是 ASP.NET 中的一项功能，用于检查 HTTP 请求并确定这些请求是否包含可能导致注入攻击（包括跨站点脚本）的潜在危险内容。|
 |[CA5364：不使用已弃用的安全协议](../code-quality/ca5364.md)|传输层安全 (TLS) 保护计算机之间的通信，最常见的是通过超文本传输协议安全 (HTTPS) 。 较早的 TLS 协议版本不如 TLS 1.2 和 TLS 1.3 安全，更有可能出现新的漏洞。 避免旧协议版本来最大程度地降低风险。|

@@ -1,8 +1,8 @@
 ---
-title: 使用 Visual Studio 和 C# 创建通用 Windows 平台 (UWP) 应用
+title: 使用 Visual Studio 和 C# 创建 UWP 应用
 description: 使用 XAML 和 C# 在 Visual Studio 中创建 UWP 应用
 titleSuffix: ''
-ms.custom: seodec18, get-started
+ms.custom: seodec18, get-started, SEO-VS-2020
 ms.date: 09/20/2019
 ms.technology: vs-ide-general
 ms.topic: tutorial
@@ -14,12 +14,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: aec4b72e8393e241039e8c005d05275ab61111bb
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3c1f541c94804f8f5f454f6299a116a8bd1386e7
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88249256"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90037271"
 ---
 # <a name="tutorial-create-your-first-universal-windows-platform-application-in-visual-studio-with-xaml-and-c35"></a>教程：在 Visual Studio 中使用 XAML 和 C&#35 创建第一个通用 Windows 平台应用程序；
 
@@ -114,7 +114,7 @@ ms.locfileid: "88249256"
 
    如果在 XAML 编辑器中查看代码，就会看到该按钮也已添加到此处  ：
 
-   ![单击“按钮”控件并将其拖到设计画布上](media/uwp-xaml-control-code-window.png)
+   ![XAML 编辑器中的“显示”按钮](media/uwp-xaml-control-code-window.png)
 
 ### <a name="add-a-label-to-the-button"></a>向按钮添加标签
 
@@ -192,7 +192,7 @@ ms.locfileid: "88249256"
 
 1. 应用在初始屏幕消失后不久出现，请查看该应用。 此应用应类似于以下所示：
 
-   ![UWP“Hello World”应用](media/vs-2019/uwp-hello-world-app.png)
+   ![UWP“Hello world”应用](media/vs-2019/uwp-hello-world-app.png)
 
 1. 单击“Hello world”按钮  。
 

@@ -19,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 29f6c4e170bce8ae7bacfc7178ebd9386f2d4416
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9f4fe79c3a6f158eb61d624ce6c5e1566925e3fd
+ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86015836"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90740053"
 ---
 # <a name="walkthrough-create-an-external-list-in-sharepoint-by-using-business-data"></a>演练：使用业务数据在 SharePoint 中创建外部列表
 
@@ -80,7 +80,7 @@ ms.locfileid: "86015836"
 
 2. 将连接添加到 SQL Server AdventureWorks 示例数据库。
 
-     有关详细信息，请参阅 [添加/修改连接 (Microsoft SQL Server) ](https://msdn.microsoft.com/fa400910-26c3-4df7-b9d1-115e688b4ea3)。
+     有关详细信息，请参阅 [添加/修改连接 (Microsoft SQL Server) ](/previous-versions/dxb6fxah(v=vs.140))。
 
 3. 在 **“解决方案资源管理器”** 中，选择项目节点。
 
@@ -242,7 +242,7 @@ ms.locfileid: "86015836"
 运行该项目时，SharePoint 网站将打开，Visual Studio 会将模型添加到业务数据连接服务。 在 SharePoint 中创建引用 Contact 实体的外部列表。 AdventureWorks 数据库中的联系人数据将显示在列表中。
 
 > [!NOTE]
-> 你可能需要在 SharePoint 中修改安全设置，然后才能调试解决方案。 有关详细信息，请参阅 [设计业务数据连接模型](../sharepoint/designing-a-business-data-connectivity-model.md)。
+> 你可能需要在 SharePoint 中修改安全设置，然后才能调试解决方案。 有关详细信息，请参阅[设计业务数据连接模型](../sharepoint/designing-a-business-data-connectivity-model.md)。
 
 1. 选择 F5****。
 
@@ -274,7 +274,7 @@ ms.locfileid: "86015836"
 - [如何：添加更新方法](../sharepoint/how-to-add-an-updater-method.md)。
 - [如何：添加删除器方法](../sharepoint/how-to-add-a-deleter-method.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [设计业务数据连接模型](../sharepoint/designing-a-business-data-connectivity-model.md) 
 [创建业务数据连接模型](../sharepoint/creating-a-business-data-connectivity-model.md) 

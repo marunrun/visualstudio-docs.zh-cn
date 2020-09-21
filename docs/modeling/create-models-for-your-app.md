@@ -21,12 +21,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b7015583fef2323e3c53b8e786c9e8a529e0fab6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 452832785db879e75825b1c862e8e9b1b6e69f1d
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75590522"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810804"
 ---
 # <a name="create-models-for-your-app"></a>为你的应用程序创建模型
 
@@ -44,13 +44,13 @@ ms.locfileid: "75590522"
 
 ## <a name="related-tasks"></a>Related Tasks
 
-|**主题**|**任务**|
+|**主题**|**Task**|
 |-|-|
 |[代码可视化](../modeling/visualize-code.md)|创建代码图和依赖项关系图，以便更好地了解不熟悉的代码。|
 |[建立用户需求模型](../modeling/model-user-requirements.md)|使用模型来阐明和传达用户的需求。|
 |[应用体系结构建模](../modeling/model-your-app-s-architecture.md)|使用模型来描述系统的整体结构和行为，并确保它满足用户的需求。|
 |[在开发过程中验证系统](../modeling/validate-your-system-during-development.md)|确保软件与用户的需求和系统的整体体系结构保持一致。|
-|[在你的开发过程中使用模型](../modeling/use-models-in-your-development-process.md)<br /><br /> [在敏捷开发中使用模型](https://msdn.microsoft.com/592ac27c-3d3e-454a-9c38-b76658ed137f)|使用模型来帮助你在系统开发的过程中了解和更改你的系统。|
+|[在你的开发过程中使用模型](../modeling/use-models-in-your-development-process.md)<br /><br /> [在敏捷开发中使用模型](/previous-versions/ff398061(v=vs.140))|使用模型来帮助你在系统开发的过程中了解和更改你的系统。|
 |[安排你的建模解决方案](../modeling/structure-your-modeling-solution.md)|在大中型项目中组织模型。|
 
 ## <a name="resources"></a>资源

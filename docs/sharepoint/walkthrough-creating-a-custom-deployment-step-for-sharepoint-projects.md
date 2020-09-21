@@ -13,12 +13,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 56fac2be1e73de5df9da8aa13e6631c4cc9d1022
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8b739db2755336958492a0aa67c9d5f0809f74bb
+ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86015899"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90740014"
 ---
 # <a name="walkthrough-create-a-custom-deployment-step-for-sharepoint-projects"></a>演练：为 SharePoint 项目创建自定义部署步骤
   部署 SharePoint 项目时，Visual Studio 会按特定顺序执行一系列部署步骤。 Visual Studio 包含许多内置的部署步骤，但你也可以创建自己的部署步骤。
@@ -190,7 +190,7 @@ ms.locfileid: "86015899"
 
 1. 在 **解决方案资源管理器**的 " **UpgradeDeploymentStep** " 项目下，打开 **source.extension.vsixmanifest** 文件的快捷菜单，然后选择 " **打开**"。
 
-     Visual Studio 将在清单编辑器中打开该文件。 Source.extension.vsixmanifest 文件是所有 VSIX 包都需要的 source.extension.vsixmanifest 文件的基础。 有关此文件的详细信息，请参阅 [VSIX 扩展架构1.0 引用](https://msdn.microsoft.com/76e410ec-b1fb-4652-ac98-4a4c52e09a2b)。
+     Visual Studio 将在清单编辑器中打开该文件。 Source.extension.vsixmanifest 文件是所有 VSIX 包都需要的 source.extension.vsixmanifest 文件的基础。 有关此文件的详细信息，请参阅 [VSIX 扩展架构1.0 引用](/previous-versions/dd393700(v=vs.110))。
 
 2. 在 " **产品名称** " 框中，输入 **SharePoint 项目的升级部署步骤**。
 
@@ -218,7 +218,7 @@ ms.locfileid: "86015899"
 10. 在 "**类型**" 列表中 **，输入 "node.js"。**
 
     > [!NOTE]
-    > 此元素指定要包含在 Visual Studio 扩展中的自定义扩展。 有关详细信息，请参阅 [资产元素 (VSX 架构) ](https://msdn.microsoft.com/9fcfc098-edc7-484b-9d4c-acd17829d737)。
+    > 此元素指定要包含在 Visual Studio 扩展中的自定义扩展。 有关详细信息，请参阅 [资产元素 (VSX 架构) ](/previous-versions/dd393737(v=vs.110))。
 
 11. 在 " **源** " 列表中，选择 " **当前解决方案中的项目**"。
 
@@ -483,5 +483,5 @@ ms.locfileid: "86015899"
 
 4. 关闭 Visual Studio 的两个实例 (实验实例，以及在其中打开 UpgradeDeploymentStep 解决方案) 的 Visual Studio 实例。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [扩展 SharePoint 打包和部署](../sharepoint/extending-sharepoint-packaging-and-deployment.md)

@@ -7,16 +7,16 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d8793312e0ed022fc7210508efdf20a81b293f0f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3f3729c09198b331728e2cc67299ffc3ad6c3d26
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85535845"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809643"
 ---
 # <a name="vs-shell-deployment"></a>VS Shell 部署
 
-使用独立 shell 可以确定需要与域特定语言交互的 Visual Studio 功能，以及该解决方案应如何显示。 有关 Visual Studio 独立 shell 的详细信息，请参阅 [自定义独立 shell](https://docs.microsoft.com/visualstudio/extensibility/customizing-the-isolated-shell)。
+使用独立 shell 可以确定需要与域特定语言交互的 Visual Studio 功能，以及该解决方案应如何显示。 有关 Visual Studio 独立 shell 的详细信息，请参阅 [自定义独立 shell](https://visualstudio.microsoft.com/vs/older-downloads/isolated-shell/)。
 
 若要将 Visual Studio Shell 设置为部署目标：
 
