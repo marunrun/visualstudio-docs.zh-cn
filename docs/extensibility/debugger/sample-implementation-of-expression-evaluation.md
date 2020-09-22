@@ -107,6 +107,6 @@ STDMETHODIMP CExpressionEvaluator::Parse(
 }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [计算监视窗口表达式](../../extensibility/debugger/evaluating-a-watch-window-expression.md)
 - [计算监视表达式](../../extensibility/debugger/evaluating-a-watch-expression.md)
