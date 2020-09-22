@@ -7,12 +7,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f7ada5558cfdfaadca5793d9edc61f13a6d4d11b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2763ca540a6b0518eed8bf757412716616d3ae3e
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75591835"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90808059"
 ---
 # <a name="t4-template-directive"></a>T4 模板指令
 
@@ -156,7 +156,7 @@ Squares of numbers:
 
 ### <a name="inheritance-in-a-run-time-preprocessed-text-template"></a>运行时（预处理过的）文本模板中的继承
 
-可以在运行时文本模板之间使用继承，来创建具有多个派生变量的基本模板。 运行时模板是将 " **自定义工具** " 属性设置为 " **TextTemplatingFilePreprocessor**" 的模板。 运行时模板生成你可以在应用程序中调用的代码，以便创建模板中定义的文本。 有关详细信息，请参阅 [带有 T4 文本模板的运行时文本生成](../modeling/run-time-text-generation-with-t4-text-templates.md)。
+可以在运行时文本模板之间使用继承，来创建具有多个派生变量的基本模板。 运行时模板是将 " **自定义工具** " 属性设置为 " **TextTemplatingFilePreprocessor**" 的模板。 运行时模板生成你可以在应用程序中调用的代码，以便创建模板中定义的文本。 有关详细信息，请参阅[使用 T4 文本模板的运行时文本生成](../modeling/run-time-text-generation-with-t4-text-templates.md)。
 
 如果不指定 `inherits` 特性，则会从您的文本模板生成基类和派生类。 指定 `inherits` 特性时，仅生成派生类。 您可以手动编写基类，但是它必须提供派生类所使用的方法。
 
@@ -235,7 +235,7 @@ This is the common footer.
 
 对于设计时文本模板来说，可以指定从 <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation?displayProperty=fullName> 派生的任何基类。 使用 `<#@assembly#>` 指令来加载包含基类的程序集或项目。
 
-有关详细信息，请参阅 [Gareth 的 "博客中的" 文本模板中的继承 "](https://blogs.msdn.microsoft.com/garethj/2011/01/03/vs2010-sp1-t4-template-inheritance-part-i-sample-metadata/)。
+有关详细信息，请参阅 [Gareth 的 "博客中的" 文本模板中的继承 "](/archive/blogs/garethj/vs2010-sp1-t4-template-inheritance-part-i-sample-metadata)。
 
 ## <a name="linepragmas-attribute"></a>linePragmas 特性
 

@@ -14,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f949329c7db71386a12c3ab8d7fccf1483b8cca2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e8186b1a1388745527fbb9f4dd37478942c36e62
+ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86015675"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90740001"
 ---
 # <a name="walkthrough-extend-a-sharepoint-project-item-type"></a>演练：扩展 SharePoint 项目项类型
   您可以使用 " **业务数据连接模型** " 项目项在 SharePoint 中创建业务数据连接 (BDC) 服务的模型。 默认情况下，当您使用此项目项创建模型时，不会向用户显示模型中的数据。 还必须在 SharePoint 中创建外部列表，以使用户能够查看数据。
@@ -122,7 +122,7 @@ ms.locfileid: "86015675"
 
     - VisualStudio
 
-5. 选择“确定”  按钮。
+5. 选择 **“确定”** 按钮。
 
 ## <a name="define-the-project-item-extension"></a>定义项目项扩展
  创建一个类，用于定义 **业务数据连接模型** 项目项的扩展。 为了定义扩展，类实现了 <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeExtension> 接口。 每当要扩展现有类型的项目项时都实现此接口。
@@ -161,7 +161,7 @@ ms.locfileid: "86015675"
 
 1. 在 **解决方案资源管理器**中，在 GenerateExternalDataLists 项目中打开 source.extension.vsixmanifest 文件的快捷菜单，然后选择 " **打开**"。
 
-     Visual Studio 将在清单编辑器中打开该文件。 Source.extension.vsixmanifest 文件是 source.extension.vsixmanifest 文件的基础，所有 VSIX 包都需要此文件。 有关此文件的详细信息，请参阅 [VSIX 扩展架构1.0 引用](https://msdn.microsoft.com/76e410ec-b1fb-4652-ac98-4a4c52e09a2b)。
+     Visual Studio 将在清单编辑器中打开该文件。 Source.extension.vsixmanifest 文件是 source.extension.vsixmanifest 文件的基础，所有 VSIX 包都需要此文件。 有关此文件的详细信息，请参阅 [VSIX 扩展架构1.0 引用](/previous-versions/dd393700(v=vs.110))。
 
 2. 在 " **产品名称** " 框中，输入 **外部数据列表生成器**。
 
@@ -292,7 +292,7 @@ ms.locfileid: "86015675"
 
 5. 关闭 Visual Studio 的两个实例 (实验实例和在其中打开 GenerateExternalDataLists 解决方案的实例) 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [扩展 SharePoint 项目系统](../sharepoint/extending-the-sharepoint-project-system.md)
 - [创建业务数据连接模型](../sharepoint/creating-a-business-data-connectivity-model.md)
 - [设计业务数据连接模型](../sharepoint/designing-a-business-data-connectivity-model.md)

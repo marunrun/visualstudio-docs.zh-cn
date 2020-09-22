@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 0bb76de0d62ab504090d9ac1864ba7ee5627f69d
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.openlocfilehash: 6d7f3d943d621708efab8df1e2f69402a0c5f26c
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85537275"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90038343"
 ---
 # <a name="analyze-resource-consumption-and-ui-thread-activity-xaml"></a>分析资源消耗情况和 UI 线程活动 (XAML)
 
@@ -125,7 +125,7 @@ ms.locfileid: "85537275"
 
 ## <a name="see-also"></a>请参阅
 
-- [WPF 团队博客：用于 WPF 应用程序的新 UI 性能分析工具](https://blogs.msdn.microsoft.com/wpf/2015/01/16/new-ui-performance-analysis-tool-for-wpf-applications/)
+- [WPF 团队博客：用于 WPF 应用程序的新 UI 性能分析工具](/archive/blogs/wpf/new-ui-performance-analysis-tool-for-wpf-applications)
 - [使用 C++、C# 和 Visual Basic 的 UWP 应用的性能最佳做法](/previous-versions/windows/apps/hh750313\(v\=win.10\))
 - [优化 WPF 应用程序性能](/dotnet/framework/wpf/advanced/optimizing-wpf-application-performance)
 - [使用 Visual Studio 分析](../profiling/index.yml)
