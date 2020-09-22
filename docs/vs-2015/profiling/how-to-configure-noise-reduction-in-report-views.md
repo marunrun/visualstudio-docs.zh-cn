@@ -1,5 +1,5 @@
 ---
-title: 如何：在报表视图中配置降噪 | Microsoft Docs
+title: 如何：在报告视图中配置降噪 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -16,11 +16,11 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 5871473eaba749833714d6382beb487702ebe02d
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63432772"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840765"
 ---
 # <a name="how-to-configure-noise-reduction-in-report-views"></a>如何：在报告视图中配置降噪
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "63432772"
   
 3. 若要禁用修整，请清除“启用修整”。  
   
-4. 单击 **“确定”**。  
+4. 单击 **“确定”** 。  
   
 ### <a name="to-configure-folding-for-a-performance-report"></a>配置性能报告的折叠  
   
@@ -77,10 +77,10 @@ ms.locfileid: "63432772"
   
 3. 若要禁用折叠，请清除“启用折叠”。  
   
-4. 单击 **“确定”**。  
+4. 单击 **“确定”** 。  
   
-## <a name="see-also"></a>请参阅  
- [自定义性能工具报表视图](../profiling/customizing-performance-tools-report-views.md)   
- [如何：排除或包括短函数从检测](../profiling/how-to-exclude-or-include-short-functions-from-instrumentation.md)   
- [“调用关系树”视图](../profiling/call-tree-view.md)   
+## <a name="see-also"></a>另请参阅  
+ [自定义性能工具报告视图](../profiling/customizing-performance-tools-report-views.md)   
+ [如何：在检测中排除或包括短函数](../profiling/how-to-exclude-or-include-short-functions-from-instrumentation.md)   
+ [调用关系树视图](../profiling/call-tree-view.md)   
  [“分配”视图](../profiling/dotnet-memory-allocations-view.md)

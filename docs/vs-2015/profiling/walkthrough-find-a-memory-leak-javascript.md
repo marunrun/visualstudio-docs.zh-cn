@@ -1,5 +1,5 @@
 ---
-title: 演练：查找内存泄漏 (JavaScript) |Microsoft Docs
+title: 演练：查找内存泄漏 (JavaScript) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -17,16 +17,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 5617dc6cbe4b7ba096afe1f308d06e7f4aaf9c6a
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63439651"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840383"
 ---
 # <a name="walkthrough-find-a-memory-leak-javascript"></a>演练：查找内存泄漏 (JavaScript)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-适用于 Windows 和 Windows Phone] (../Image/windows_and_phone_content.png"windows_and_phone_content")  
+适用于 Windows 和 Windows Phone] (。将 windows_and_phone_content.png "windows_and_phone_content" )   
   
  本演练带领你完成使用 JavaScript 内存分析器确定并修复简单内存问题的过程。 JavaScript 内存分析器在 Visual Studio 中提供，适用于使用 JavaScript 为 Windows 生成的 Windows 应用商店应用。 在此方案中，你将创建一个在内存中错误保留 DOM 元素，而非以创建这些元素时的相同速率将其释放的应用。  
   
@@ -34,18 +34,18 @@ ms.locfileid: "63439651"
   
 ### <a name="running-the-javascript-memory-analyzer-test-app"></a>运行 JavaScript 内存分析器测试应用  
   
-1. 在 Visual Studio 中，依次选择 **“文件”**、 **“新建”**、 **“项目”**。  
+1. 在 Visual Studio 中，选择“文件”****、“新建”****、“项目”****。  
   
-2. 在左窗格中选择“JavaScript”  ，选择“Windows” 、“Windows 8” ，然后选择“通用”  或“Windows Phone 应用” 。  
+2. 在左窗格中选择“JavaScript” **** ，选择“Windows” ****、“Windows 8” ****，然后选择“通用” **** 或“Windows Phone 应用” ****。  
   
     > [!IMPORTANT]
     > 本主题中显示的内存使用量结果是针对 Windows 8 应用进行测试的。  
   
 3. 在中间窗格中选择 **“空白应用”** 项目模板。  
   
-4. 在“名称”  框中指定名称（例如 `JS_Mem_Tester`），然后选择“确定” 。  
+4. 在“名称” **** 框中指定名称（例如 `JS_Mem_Tester`），然后选择“确定” ****。  
   
-5. 在“解决方案资源管理器”中，打开 default.html，并将以下代码粘贴到 \<body> 标记之间：  
+5. 在 **解决方案资源管理器**中，打开 default.html 并在标记之间粘贴以下代码 \<body> ：  
   
     ```html  
     <div class="wrapper">  
@@ -139,13 +139,13 @@ ms.locfileid: "63439651"
    > [!TIP]
    > 对于 Windows 应用商店应用，也可以选择该列表中的 **“本地计算机”** 或 **“远程计算机”** 。 但是，使用仿真器或模拟器的优点是，你可以将其放置在 Visual Studio 旁，并且在正在运行的应用和 JavaScript 内存分析器之间轻松切换。 有关更多信息，请参阅[从 Visual Studio 运行应用](../debugger/run-store-apps-from-visual-studio.md)和[在远程计算机上运行 Windows 应用商店应用](../debugger/run-windows-store-apps-on-a-remote-machine.md)。  
   
-2. 在“调试”  菜单上，选择“性能探查器...” 。  
+2. 在 " **调试** " 菜单上，选择 " **性能探查器 ...**"。  
   
 3. 在 **“可用工具”** 中，选择 **“JavaScript 内存”**，然后选择 **“启动”**。  
   
     在本教程中，你将把内存分析器连接到启动项目。 有关其他选项的信息，如将内存分析器连接到所安装的应用，请参阅 [“JavaScript 内存”](../profiling/javascript-memory.md)。  
   
-    当您启动内存分析器时，可能会发现用户帐户控制正在请求运行 VsEtwCollector.exe 的权限。 选择 **“是”**。  
+    当您启动内存分析器时，可能会发现用户帐户控制正在请求运行 VsEtwCollector.exe 的权限。 选择 **“是”** 。  
   
 4. 连续选择 **“泄露内存”** 按钮 4 次。  
   
@@ -203,7 +203,7 @@ ms.locfileid: "63439651"
   
 13. 在快照 #3 中，选择位于右侧红色向上箭头旁的链接文本，该文本显示值 +1/-0。  
   
-     ![链接到堆对象的其他视图](../profiling/media/js-mem-app-link.png "JS_Mem_App_Link")  
+     ![链接到集合对象的其他视图](../profiling/media/js-mem-app-link.png "JS_Mem_App_Link")  
   
      这会打开一个名为 **“快照 #3 - 快照 #2”** 的堆上对象差异视图，默认显示“类型”视图。 默认情况下，你会在快照 #2 和快照 #3 之间看到添加到堆的对象列表。  
   
@@ -211,7 +211,7 @@ ms.locfileid: "63439651"
   
 15. 打开对象树顶部的 HTMLDivElement 对象（如此处所示）。  
   
-     ![堆的对象计数的“差异”视图](../profiling/media/js-mem-app-typesdiff.png "JS_Mem_App_TypesDiff")  
+     ![堆上的对象计数的“差异”视图](../profiling/media/js-mem-app-typesdiff.png "JS_Mem_App_TypesDiff")  
   
      此视图显示有关内存泄漏的有用信息，例如：  
   
@@ -219,12 +219,12 @@ ms.locfileid: "63439651"
   
     - 此对象是快照 #2 中的剩余对象，说明可能存在内存泄漏。  
   
-      对应用程序的一些了解可在此时帮助：选择**泄漏内存**按钮应能移除 DIV 元素和添加元素，因此代码似乎不起作用 （也就是说，泄漏了内存）。 下一部分将说明如何修复此问题。  
+      此时对该应用的一些了解可提供帮助：选择 **“泄漏内存”** 按钮应能移除 DIV 元素和添加元素，因此代码似乎不起作用（也就是说，泄漏了内存）。 下一部分将说明如何修复此问题。  
   
     > [!TIP]
     > 有时，定位与 `Global` 对象相关的对象可能有助于确定此问题。 为此，请打开标识符的快捷菜单，然后选择 **“在根视图中显示”**。  
   
-## <a name="FixingMemory"></a> 修复内存问题  
+## <a name="fixing-the-memory-issue"></a><a name="FixingMemory"></a> 修复内存问题  
   
 1. 通过使用探查器显示的数据，可以检查负责移除 ID 为“item”的 DOM 元素的代码。 它将出现在 `initialize()` 函数中。  
   
@@ -266,7 +266,7 @@ ms.locfileid: "63439651"
   
 4. 在 **“可用工具”** 中，选择 **“JavaScript 内存”**，然后选择 **“启动”**。  
   
-5. 按照与前面相同的步骤来拍摄三张快照。 步骤摘要如下：  
+5. 按照与前面相同的步骤来拍摄三张快照。 步骤归纳如下：  
   
    1. 在应用程序中，连续选择 **“泄露内存”** 按钮 4 次。  
   
@@ -286,5 +286,5 @@ ms.locfileid: "63439651"
   
       ![显示固定内存泄漏的快照](../profiling/media/js-mem-app-fixed-snapshot3.png "JS_Mem_App_Fixed_Snapshot3")  
   
-## <a name="see-also"></a>请参阅  
- [“JavaScript 内存”](../profiling/javascript-memory.md)
+## <a name="see-also"></a>另请参阅  
+ [JavaScript 内存](../profiling/javascript-memory.md)

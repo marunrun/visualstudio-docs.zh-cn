@@ -7,12 +7,12 @@ ms.assetid: af1f7888-6942-4515-9475-0928ecf49dab
 ms.date: 03/24/2020
 ms.topic: overview
 description: 按月或按年租赁 Visual Studio Professional 或 Visual Studio Enterprise，无需任何长期协定。
-ms.openlocfilehash: 5f289c5eb51ccaf95c88bc7e2d66a4be5e904e03
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1ea727572fc5c6aeb09f23594de54a08adbacc90
+ms.sourcegitcommit: 1803a67b516f67b209d8f4cf147314e604ef1927
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88248341"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89641560"
 ---
 # <a name="buy-visual-studio-professional-and-visual-studio-enterprise-cloud-subscriptions"></a>购买 Visual Studio Professional 和 Visual Studio Enterprise 云订阅
 可从 [Visual Studio Marketplace](https://marketplace.visualstudio.com) 购买 [Visual Studio Professional 和 Visual Studio Enterprise 订阅](https://visualstudio.microsoft.com/subscriptions/)。 这些称为“云订阅”。
@@ -26,7 +26,7 @@ ms.locfileid: "88248341"
 若要为购买的订阅计费，需要有 [Azure 订阅](https://azure.microsoft.com/pricing/purchase-options/)。 可在首次购买之前或在 Visual Studio Marketplace 中首次购买时[注册](https://portal.azure.com)。
 
 ## <a name="who-can-buy-visual-studio-cloud-subscriptions"></a>谁可以购买 Visual Studio 云订阅？
-拥有 Azure 订阅[所有者](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner)、[服务管理员或共同管理员](https://docs.microsoft.com/azure/billing/billing-add-change-azure-subscription-administrator#assign-a-subscription-administrator)访问权限的任何人都可以购买云订阅。
+你需要是为你的 EA 订阅创建的 Azure 订阅的参与者或更高级别的角色才能购买云订阅。
 
 ## <a name="how-to-buy-cloud-subscriptions"></a>如何购买云订阅
 

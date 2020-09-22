@@ -1,5 +1,5 @@
 ---
-title: 如何创建本地化的引导程序包 |Microsoft Docs
+title: 创建本地化的引导程序包 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 26858dce9c6484c1b7acb94ad2a7f38fd20447a2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2c673c6488b93802877ef088d9d9a1a4793cf50b
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85382557"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90852480"
 ---
 # <a name="how-to-create-a-localized-bootstrapper-package"></a>如何：创建本地化的引导程序包
 创建引导程序包后，您可以通过为每个区域设置创建两个文件来创建每个区域设置的本地化版本的引导程序包：软件许可条款文件 (例如 *eula*) 和包清单 (*package.xml*) 。

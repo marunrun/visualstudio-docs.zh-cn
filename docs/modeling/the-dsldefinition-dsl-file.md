@@ -9,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 97736dd9893f3a5d0c07f464ae75849395270d4b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 893f39149a9000f3672c5b3043551bcbd53e6b87
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "76114917"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90808950"
 ---
 # <a name="the-dsldefinitiondsl-file"></a>DslDefinition.dsl 文件
 
@@ -62,7 +62,7 @@ Root 元素的子元素 \<Dsl> 如下所示：
 
 本部分将定义每个连接符工具的连接生成器（用于在任意两个可以连接的类之间建立链接的工具）。 本部分将确定你是否可以连接源类和目标类。
 
-### <a name="diagram"></a>图示
+### <a name="diagram"></a>关系图
 
 本部分将定义一个关系图，你可以使用它来指定背景色和根类等属性。  (根类是由整个关系图表示的域类。 ) 关系图部分还包含 ShapeMap 和 ConnectorMap 元素，这些元素指定表示每个域类或关系的形状或连接符。
 
@@ -579,6 +579,6 @@ ComponentHasPorts . Component / ! Component /    ComponentModelHasComponents . C
 
 ## <a name="see-also"></a>另请参阅
 
-- [域特定语言工具术语表](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+- [域特定语言工具术语表](/previous-versions/bb126564(v=vs.100))
 - [如何定义域特定语言](../modeling/how-to-define-a-domain-specific-language.md)
 - [了解模型、类和关系](../modeling/understanding-models-classes-and-relationships.md)

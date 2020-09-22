@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 9d6a40bb739ea68dbc08c3dc3b3f98271261e6cf
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64791212"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840427"
 ---
-# <a name="idiasymbolgetundecoratedname"></a>IDiaSymbol::get_undecoratedName
+# <a name="idiasymbolget_undecoratedname"></a>IDiaSymbol::get_undecoratedName
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-检索的未修饰的名称C++进行修饰，或链接、 名称。  
+检索 c + + 修饰名称或链接名的未修饰名。  
   
 ## <a name="syntax"></a>语法  
   
@@ -33,15 +33,15 @@ HRESULT get_undecoratedName ( 
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>parameters  
  `pRetVal`  
- [out]返回的未修饰的名称C++修饰名。  
+ 弄返回 c + + 修饰名的未修饰名。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回`S_FALSE`或错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回 `S_FALSE` 错误代码。  
   
 > [!NOTE]
-> 返回值为`S_FALSE`表示该属性不是可用于符号。  
+> 返回值 `S_FALSE` 意味着该属性对符号不可用。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
