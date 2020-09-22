@@ -11,12 +11,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: d5dd8864484e2b41a1146f1da495251663afdb6a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: be48e7ce721c84656362a019e0cc5eec1ae2ee17
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88801498"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90808202"
 ---
 # <a name="development-best-practices-for-com-vsto-and-vba-add-ins-in-office"></a>Office 中 COM、VSTO 和 VBA 外接程序的开发最佳做法
   如果要开发适用于 Office 的 COM、VSTO 或 VBA 外接程序，请遵循本文中所述的开发最佳实践。   这有助于确保：
@@ -31,7 +31,7 @@ ms.locfileid: "88801498"
  建议你不要在外接程序安装过程中让你的加载项检测是否安装了 Office。 如果未安装 Office，则可以安装外接程序，并且用户在安装 Office 后可以访问它。
 
 ## <a name="use-embedded-interop-types-nopia"></a>使用嵌入的互操作类型 (NoPIA) 
-如果你的解决方案使用 .NET 4.0 或更高版本，请使用嵌入的互操作类型 (NoPIA) 而不是依赖于 Office 主互操作程序集 (PIA) 可再发行组件。 使用类型嵌入可降低解决方案的安装大小，并可确保将来的兼容性。 Office 2010 是交付 PIA 可再发行组件的最新版本的 Office。 有关详细信息，请参阅 [演练：嵌入类型信息 Microsoft Office 程序集](https://msdn.microsoft.com/library/ee317478.aspx) 和 [类型等效性和嵌入的互操作类型](/windows/uwp/porting/desktop-to-uwp-root)。
+如果你的解决方案使用 .NET 4.0 或更高版本，请使用嵌入的互操作类型 (NoPIA) 而不是依赖于 Office 主互操作程序集 (PIA) 可再发行组件。 使用类型嵌入可降低解决方案的安装大小，并可确保将来的兼容性。 Office 2010 是交付 PIA 可再发行组件的最新版本的 Office。 有关详细信息，请参阅 [演练：嵌入类型信息 Microsoft Office 程序集](/previous-versions/ee317478(v=vs.140)) 和 [类型等效性和嵌入的互操作类型](/windows/uwp/porting/desktop-to-uwp-root)。
 
 如果你的解决方案使用的是早期版本的 .NET，我们建议你将解决方案更新为使用 .NET 4.0 或更高版本。 使用 .NET 4.0 或更高版本可在较新版本的 Windows 上减少运行时必备组件。
 

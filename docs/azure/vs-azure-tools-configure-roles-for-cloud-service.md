@@ -9,12 +9,12 @@ ms.workload: azure-vs
 ms.topic: how-to
 ms.date: 03/21/2017
 ms.author: ghogen
-ms.openlocfilehash: 960bd86a1e0993e4d2c57514a29ceecca34cca3d
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: 7107e7f9b156f4f62e798b7f4ffb283fb8a6678c
+ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89508504"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90740040"
 ---
 # <a name="configure-azure-cloud-service-roles-with-visual-studio"></a>使用 Visual Studio 配置 Azure 云服务角色
 一个 Azure 云服务可以有一个辅助角色或 Web 角色。 对于每个角色，需要定义该角色的设置方式，并配置该角色的运行方式。 若要详细了解云服务中的角色，请观看视频 [Introduction to Azure Cloud Services](https://channel9.msdn.com/Series/Windows-Azure-Cloud-Services-Tutorials/Introduction-to-Windows-Azure-Cloud-Services)（Azure 云服务简介）。
@@ -24,7 +24,7 @@ ms.locfileid: "89508504"
 - **Servicedefinition.csdef** -服务定义文件定义了云服务的运行时设置，包括所需角色、终结点和虚拟机大小。 当角色正在运行时，无法更改 `ServiceDefinition.csdef` 中存储的任何数据。
 - **ServiceConfiguration.cscfg** - 服务配置文件则配置了角色有多少实例在运行以及为角色定义的设置的值。 当角色正在运行时，可以更改 `ServiceConfiguration.cscfg` 中存储的数据。
 
-若要存储用于控制角色运行方式的设置的不同值，可以定义多个服务配置。 对于每个部署环境可使用不同的服务配置。 例如，可以在本地服务配置中设置存储帐户连接字符串以使用本地 Azure 存储模拟器并在云中创建另一个服务配置以使用 Azure 存储。
+若要存储用于控制角色运行方式的设置的不同值，可以定义多个服务配置。 对于每个部署环境可使用不同的服务配置。 例如，可以在本地服务配置中设置存储帐户连接字符串以使用本地 Azure 存储模拟器，并在云中创建另一个服务配置以使用 Azure 存储。
 
 在 Visual Studio 中创建 Azure 云服务时，系统会自动创建两个服务配置并将其添加到 Azure 项目中：
 

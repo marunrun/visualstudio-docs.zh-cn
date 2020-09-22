@@ -11,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 625ba0d592d0dbdaa8cb910c366852fe32c5f220
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b69748ef44ce0ca2e16f431c0d13d99bfa449411
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85548364"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90807867"
 ---
 # <a name="customizing-the-model-explorer"></a>自定义模型资源管理器
 可以按如下所示更改域特定语言设计器的资源管理器的外观和行为：
@@ -111,6 +111,6 @@ ms.locfileid: "85548364"
 
      "资源管理器" 应仅显示 " **参与者** " 节点，不应显示 " **注释** " 节点。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [域特定语言工具术语表](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+- [域特定语言工具术语表](/previous-versions/bb126564(v=vs.100))

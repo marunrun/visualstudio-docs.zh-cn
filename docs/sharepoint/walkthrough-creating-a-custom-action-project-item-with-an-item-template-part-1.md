@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: eccb9038b9fd929c713422aa79082c94ade512fa
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e5b19f99cf9688191a5b6ef8ba8d4f58f4c6633c
+ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86015937"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90739936"
 ---
 # <a name="walkthrough-create-a-custom-action-project-item-with-an-item-template-part-1"></a>演练：使用项模板创建自定义操作项目项（第1部分）
   你可以通过创建自己的项目项类型，在 Visual Studio 中扩展 SharePoint 项目系统。 在本演练中，您将创建一个可以添加到 SharePoint 项目中以在 SharePoint 站点上创建自定义操作的项目项。 自定义操作将菜单项添加到 SharePoint 网站的 " **网站操作** " 菜单。
@@ -295,7 +295,7 @@ ms.locfileid: "86015937"
 
 1. 在 **解决方案资源管理器**中，在 CustomActionProjectItem 项目中打开 **source.extension.vsixmanifest** 文件的快捷菜单，然后选择 " **打开**"。
 
-     Visual Studio 将在清单编辑器中打开该文件。 Source.extension.vsixmanifest 文件是所有 VSIX 包都需要的 source.extension.vsixmanifest 文件的基础。 有关此文件的详细信息，请参阅 [VSIX 扩展架构1.0 引用](https://msdn.microsoft.com/76e410ec-b1fb-4652-ac98-4a4c52e09a2b)。
+     Visual Studio 将在清单编辑器中打开该文件。 Source.extension.vsixmanifest 文件是所有 VSIX 包都需要的 source.extension.vsixmanifest 文件的基础。 有关此文件的详细信息，请参阅 [VSIX 扩展架构1.0 引用](/previous-versions/dd393700(v=vs.110))。
 
 2. 在 " **产品名称** " 框中，输入 **自定义操作项目项**。
 
@@ -329,7 +329,7 @@ ms.locfileid: "86015937"
 
 12. 在 " **项目** " 列表中，选择 " **ProjectItemDefinition**"。
 
-13. 选择“确定”  按钮。
+13. 选择 **“确定”** 按钮。
 
 14. 在菜单栏上，选择 "**生成**" "生成  >  **解决方案**"，然后确保项目编译时不会出错。
 
@@ -449,7 +449,7 @@ ms.locfileid: "86015937"
 ## <a name="next-steps"></a>后续步骤
  完成本演练后，可以将向导添加到项模板。 当用户将自定义操作项目项添加到 SharePoint 项目时，该向导会收集有关操作的信息 (例如，在) 选择该操作时要导航到的位置和 URL），并将此信息添加到新项目项中的 *Elements.xml* 文件中。 有关详细信息，请参阅 [演练：使用项模板创建自定义操作项目项（第2部分）](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-2.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [演练：使用项模板创建自定义操作项目项（第2部分）](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-2.md)
 - [定义自定义 SharePoint 项目项类型](../sharepoint/defining-custom-sharepoint-project-item-types.md)

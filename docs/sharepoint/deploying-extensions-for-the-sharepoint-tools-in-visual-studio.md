@@ -12,12 +12,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 53e36d993e72da759c87e7d2d2f908818b3d9024
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0e7bcb4c03a274c958b097ab7869cb58120b0ee7
+ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62580639"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90740139"
 ---
 # <a name="deploy-extensions-for-the-sharepoint-tools-in-visual-studio"></a>在 Visual Studio 中部署 SharePoint 工具扩展
 
@@ -91,7 +91,7 @@ ms.locfileid: "62580639"
 
     - 如果扩展程序集以文件的形式包含在项目中，请选择 **"文件系统"**。 在 " **路径** " 列表中，输入扩展程序集文件的完整路径，或使用 " **浏览** " 按钮查找并选择程序集文件。
 
-5. 选择“确定”  按钮。
+5. 选择 **“确定”** 按钮。
 
 #### <a name="to-include-a-sharepoint-command-assembly"></a>包括 SharePoint 命令程序集
 
@@ -111,7 +111,7 @@ ms.locfileid: "62580639"
 
     - 如果命令程序集以文件的形式包含在项目中，请选择 **"文件系统"**。 在 " **路径** " 列表中，输入扩展程序集文件的完整路径，或使用 " **浏览** " 按钮查找并选择程序集文件。
 
-5. 选择“确定”  按钮。
+5. 选择 **“确定”** 按钮。
 
 #### <a name="to-include-a-template-that-you-create"></a>包含您创建的模板
 
@@ -207,7 +207,7 @@ ms.locfileid: "62580639"
 
     - 如果向导程序集以文件的形式包含在项目中，请选择 **"文件系统"**。 在 " **路径** " 字段中，输入程序集文件的完整路径，或使用 " **浏览** " 按钮查找并选择程序集。
 
-5. 选择“确定”  按钮。
+5. 选择 **“确定”** 按钮。
 
 ### <a name="related-walkthroughs"></a>相关演练
 
@@ -234,11 +234,11 @@ ms.locfileid: "62580639"
 
     - `Microsoft.VisualStudio.MefComponent`在元素下添加一个元素 `Assets` ，然后将新元素的值设置为在 VSIX 包中实现扩展的程序集的相对路径。 有关详细信息，请参阅 [Microsoft.visualstudio.mefcomponent 元素 (VSX Schema) ](/previous-versions/visualstudio/visual-studio-2010/dd393736\(v\=vs.100\))。
 
-    - 如果你的扩展插件包含调用到 SharePoint 服务器对象模型的 SharePoint 命令，请在 `Microsoft.VisualStudio.Assembly` 元素下添加一个元素 `Assets` 。 将新元素的值设置为实现 VSIX 包中的 SharePoint 命令的程序集的相对路径。 有关详细信息，请参阅 [资产元素 (VSX 架构) ](https://msdn.microsoft.com/9fcfc098-edc7-484b-9d4c-acd17829d737)。
+    - 如果你的扩展插件包含调用到 SharePoint 服务器对象模型的 SharePoint 命令，请在 `Microsoft.VisualStudio.Assembly` 元素下添加一个元素 `Assets` 。 将新元素的值设置为实现 VSIX 包中的 SharePoint 命令的程序集的相对路径。 有关详细信息，请参阅 [资产元素 (VSX 架构) ](/previous-versions/dd393737(v=vs.110))。
 
     - 如果扩展插件包括项目模板或项模板，请 `ProjectTemplate` `ItemTemplate` 在元素下添加或元素 `Assets` 。 将新元素的值设置为包含 VSIX 包中的模板的文件夹的相对路径。 有关详细信息，请参阅 [ProjectTemplate 元素 (VSX schema) ](/previous-versions/visualstudio/visual-studio-2010/dd393735\(v\=vs.100\)) 和 [ITEMTEMPLATE 元素 (VSX 架构) ](/previous-versions/visualstudio/visual-studio-2010/dd393681\(v\=vs.100\))。
 
-    - 如果扩展插件包含用于项目模板或项模板的自定义向导，请 `Assembly` 在元素下添加 `Assets` 元素。 将新元素的值设置为 VSIX 包中的程序集的相对路径，然后将 `AssemblyName` 属性设置为完整的程序集名称 (包括版本、区域性和公钥标记) 。 有关详细信息，请参阅 [依赖关系元素 (VSX 架构) ](https://msdn.microsoft.com/1f63f60a-98ad-48ec-8e44-4eba383d3e37)。
+    - 如果扩展插件包含用于项目模板或项模板的自定义向导，请 `Assembly` 在元素下添加 `Assets` 元素。 将新元素的值设置为 VSIX 包中的程序集的相对路径，然后将 `AssemblyName` 属性设置为完整的程序集名称 (包括版本、区域性和公钥标记) 。 有关详细信息，请参阅 [依赖关系元素 (VSX 架构) ](/previous-versions/dd393682(v=vs.110))。
 
 ### <a name="example"></a>示例
 
@@ -264,9 +264,9 @@ ms.locfileid: "62580639"
 </PackageManifest>
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [扩展 SharePoint 项目系统](../sharepoint/extending-the-sharepoint-project-system.md)
-- [扩展中的 "SharePoint 连接" 节点服务器资源管理器](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)
+- [扩展服务器资源管理器中的“SharePoint 连接”节点](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)
 - [调入 SharePoint 对象模型](../sharepoint/calling-into-the-sharepoint-object-models.md)
-- [Visual Studio 中的 SharePoint 工具的调试扩展](../sharepoint/debugging-extensions-for-the-sharepoint-tools-in-visual-studio.md)
+- [在 Visual Studio 中调试 SharePoint 工具扩展](../sharepoint/debugging-extensions-for-the-sharepoint-tools-in-visual-studio.md)

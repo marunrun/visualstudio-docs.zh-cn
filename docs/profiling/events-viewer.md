@@ -9,12 +9,12 @@ ms.author: sashe
 manager: AndSter
 ms.workload:
 - multiple
-ms.openlocfilehash: 4cba043d8300d47ae5ffba1c175a19fcfa2e65ed
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.openlocfilehash: 0be00f2333a2e732d9ba4472004c383b132c0bf2
+ms.sourcegitcommit: 14637be49401f56341c93043eab560a4ff6b57f6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85330330"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90075060"
 ---
 # <a name="events-viewer"></a>事件查看器
 

@@ -1,21 +1,21 @@
 ---
-title: 选择用于项目的 Python 解释器和项目
+title: 选择用于项目的 Python 环境
 description: 可以专门选择 Python 环境（包括 Anaconda 和虚拟环境）以应用于特定项目。
 ms.date: 03/18/2019
 ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
-ms.custom: seodec18
+ms.custom: seodec18, SEO-VS-2020
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 11808eeabee4d45d1d3d3b1b5cd5d6636249e7cb
-ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
+ms.openlocfilehash: 46b0a8005ea76445a1d6205c8635963dbaedd0d4
+ms.sourcegitcommit: a18c7e9b367c2f92f6e54c3eaef442775d457667
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88801199"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90097029"
 ---
 # <a name="how-to-select-a-python-environment-for-a-project"></a>如何选择用于项目的 Python 环境
 
