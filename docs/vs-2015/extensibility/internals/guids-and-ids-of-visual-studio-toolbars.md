@@ -17,53 +17,53 @@ caps.latest.revision: 8
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 6ec717707727b046ecd0d749179ea463ae3a4950
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63436281"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840348"
 ---
 # <a name="guids-and-ids-of-visual-studio-toolbars"></a>Visual Studio 工具栏中的 GUID 和 ID
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-本主题枚举包括 Visual Studio 集成的开发环境 (IDE) 中的工具栏的 GUID 和 ID 值，并包含的组。 在 Visual Studio SDK 的一部分安装的.vsct 文件中定义这些值。 有关详细信息，请参阅[IDE-Defined 命令、 菜单和组](../../extensibility/internals/ide-defined-commands-menus-and-groups.md)。
+本主题枚举 Visual Studio 集成开发环境中包含的工具栏的 GUID 和 ID 值 (IDE) 以及它们所包含的组。 这些值是在作为 Visual Studio SDK 的一部分安装的 .vsct 文件中定义的。 有关详细信息，请参阅 [IDE 定义的命令、菜单和组](../../extensibility/internals/ide-defined-commands-menus-and-groups.md)。
 
 > [!NOTE]
-> 许多发布到 Visual Studio 工具栏未定义的 Visual Studio 中，并且其 GUID 和 ID 值不是公共。 本主题列出了在 Visual Studio SDK.vsct 文件中定义的工具栏。
+> Visual studio 提供的许多工具栏都不是由 Visual Studio 定义的，并且其 GUID 和 ID 值不是公共的。 本主题仅列出在 Visual Studio .vsct 文件中定义的工具栏。
 
- 有关如何使用.vsct 文件中定义的 IDE 对象的详细信息，请参阅[扩展菜单和命令](../../extensibility/extending-menus-and-commands.md)。
+ 有关如何使用 .vsct 文件中定义的 IDE 对象的详细信息，请参阅 [扩展菜单和命令](../../extensibility/extending-menus-and-commands.md)。
 
- 提供的 Visual Studio IDE 的默认工具栏使用的 GUID `guidSHLMainMenu`，除外另行指定通过使用 guid: id 语法。
+ Visual Studio IDE 提供的默认工具栏使用 GUID `guidSHLMainMenu` ，但在其他情况下使用 guid： ID 语法来指定。
 
 ## <a name="ide-toolbars"></a>IDE 工具栏
- 以下工具栏提供了 Visual Studio IDE。 可以通过选择上显示工具栏**工具栏**的子菜单**工具**菜单。 在本部分中不包括的工具窗口的工具栏。
+ 以下工具栏由 Visual Studio IDE 提供。 可以通过在 "**工具**" 菜单的 "**工具栏**" 子菜单中选择工具栏来显示它们。 此部分不包括工具窗口中的工具栏。
 
- 只有组可以降直接从工具栏中。 若要添加一个组，将其父级设置为 GUID 和 ID 的工具栏。 若要添加到工具栏按钮，请在工具栏上向组设置其父级。
+ 只有组才能直接从工具栏中进行。 若要添加组，请将其父级设置为工具栏的 GUID 和 ID。 若要将按钮添加到工具栏，请在工具栏上将其父项设置为组。
 
-|Toolbar|Id|
+|工具栏|ID|
 |-------------|--------|
-|标准|IDM_VS_TOOL_STANDARD|
-|Build|IDM_VS_TOOL_BUILD|
+|Standard|IDM_VS_TOOL_STANDARD|
+|生成|IDM_VS_TOOL_BUILD|
 |文本编辑器|IDM_VS_TOOL_TEXTEDITOR|
-|调试|guidVSDebugGroup:IDM_DEBUG_TOOLBAR|
-|调试位置|guidVSDebugGroup:IDM_DEBUG_CONTEXT_TOOLBAR|
+|调试|guidVSDebugGroup： IDM_DEBUG_TOOLBAR|
+|调试位置|guidVSDebugGroup： IDM_DEBUG_CONTEXT_TOOLBAR|
 
 ### <a name="special-toolbars"></a>特殊工具栏
- 这些工具栏定义由 Visual Studio IDE，但它们提供专用的函数，并且未承载命令组。
+ 这些工具栏是由 Visual Studio IDE 定义的，但它们提供专用函数，并且不托管命令组。
 
-|Toolbar|Id|
+|工具栏|ID|
 |-------------|--------|
 |Add 命令|IDM_VS_TOOL_ADDCOMMAND|
-|未定义|IDM_VS_TOOL_UNDEFINED|
+|Undefined|IDM_VS_TOOL_UNDEFINED|
 |XML 架构|IDM_VS_TOOL_SCHEMA|
 |XML 数据|IDM_VS_TOOL_DATA|
 
-## <a name="groups-on-the-ide-toolbars"></a>在 IDE 工具栏上的组
- 若要添加到标准工具栏按钮，设置作为其父级的以下组之一。 组将按在父级工具栏。
+## <a name="groups-on-the-ide-toolbars"></a>IDE 工具栏上的组
+ 若要向标准工具栏添加按钮，请将以下组之一设置为其父项。 按父工具栏对组进行排序。
 
 ### <a name="standard-toolbar-groups"></a>标准工具栏组
 
-|名称|Id|
+|名称|ID|
 |----------|--------|
 |保存/打开|IDG_VS_TOOLSB_SAVEOPEN|
 |剪切/复制|IDG_VS_TOOLSB_CUTCOPY|
@@ -71,29 +71,29 @@ ms.locfileid: "63436281"
 |运行/生成|IDG_VS_TOOLSB_RUNBUILD|
 |搜索|IDG_VS_TOOLSB_SEARCH|
 |Windows|IDG_VS_TOOLSB_WINDOWS|
-|新的 Windows|IDG_VS_TOOLSB_NEWWINDOWS|
+|新窗口|IDG_VS_TOOLSB_NEWWINDOWS|
 |加载/保存|IDG_VS_WINDOWUI_LOADSAVE|
 |仪表|IDG_VS_TOOLSB_GAUGE|
 
 ### <a name="build-toolbar-groups"></a>生成工具栏组
 
-|名称|Id|
+|名称|ID|
 |----------|--------|
-|生成栏|IDG_VS_BUILDBAR|
+|构建栏|IDG_VS_BUILDBAR|
 |取消|IDG_VS_BUILD_CANCEL|
 
 ### <a name="text-editor-toolbar-groups"></a>文本编辑器工具栏组
 
-|名称|Id|
+|名称|ID|
 |----------|--------|
-|完成|IDM_VS_TOOL_TEXTEDITOR|
-|降级|IDG_VS_EDITTOOLBAR_INDENT|
-|注释|IDG_VS_EDITTOOLBAR_COMMENT|
+|Completion|IDM_VS_TOOL_TEXTEDITOR|
+|缩进|IDG_VS_EDITTOOLBAR_INDENT|
+|评论|IDG_VS_EDITTOOLBAR_COMMENT|
 |书签|IDG_VS_EDITTOOLBAR_TEMPBOOKMARKS|
 
 ### <a name="debug-toolbar-groups"></a>调试工具栏组
 
-|名称|Id|
+|名称|ID|
 |----------|--------|
 |执行|IDM_DEBUG_TOOLBAR|
 |单步执行|IDG_DEBUG_TOOLBAR_STEPPING|
@@ -102,39 +102,39 @@ ms.locfileid: "63436281"
 
 ### <a name="debug-location-toolbar-groups"></a>调试位置工具栏组
 
-|名称|Id|
+|名称|ID|
 |----------|--------|
 |调试位置|IDG_DEBUG_CONTEXT_TOOLBAR|
 
 ## <a name="tool-window-toolbars"></a>工具窗口工具栏
- 工具栏可以如出现在 IDE 中直接或工具窗口中**解决方案资源管理器**。 在.vsct 文件中未定义工具窗口，因为工具窗口工具栏不具有定义的父级。 相反，它们都放在代码中。 下表显示了在 IDE 中，工具窗口显示的工具栏和它们所包含的命令组。
+ 工具栏可以直接出现在 IDE 或工具窗口（如 **解决方案资源管理器**）中。 由于未在 .vsct 文件中定义工具窗口，因此工具窗口工具栏没有定义的父级。 而是放置在代码中。 下表显示在 IDE 中的工具窗口上显示的工具栏以及它们所包含的命令组。
 
 > [!NOTE]
-> 工具栏和组使用的 GUID `guidSHLMainMenu`，除外另行指定通过使用 guid: id 语法。 其中 GUID 指定一个工具栏，则它也适用于源自该工具栏的组中。
+> `guidSHLMainMenu`除了使用 guid： ID 语法指定的情况外，工具栏和组使用 guid。 如果为工具栏指定了 GUID，它也适用于从该工具栏中继承的组。
 
-|工具窗口|Toolbar|组|
+|工具窗口|工具栏|组|
 |-----------------|-------------|------------|
-|“解决方案资源管理器”|IDM_VS_TOOL_PROJWIN|IDG_VS_PROJ_TOOLBAR1..5|
-|服务器资源管理器|guid_SE_MenuGroup:IDM_SE_TOOLBAR_SERVEREXPLORER|IDG_SE_TOOLBAR_REFRESH|
+|解决方案资源管理器|IDM_VS_TOOL_PROJWIN|IDG_VS_PROJ_TOOLBAR1.。5|
+|服务器资源管理器|guid_SE_MenuGroup： IDM_SE_TOOLBAR_SERVEREXPLORER|IDG_SE_TOOLBAR_REFRESH|
 |属性|IDM_VS_TOOL_PROPERTIES|IDG_VS_PROPERTIES_SORT<br /><br /> IDG_VS_PROPERTIES_PAGES|
 |类视图|IDM_VS_TOOL_CLASSVIEW|IDG_VS_CLASSVIEW_FOLDERS<br /><br /> IDG_VS_CLASSVIEW_SEARCH<br /><br /> IDG_VS_CLASSVIEW_SETTINGS|
 |类视图|IDM_VS_TOOL_CLASSVIEW_GO|IDG_VS_CLASSVIEW_SEARCH2|
 |对象浏览器|IDM_VS_TOOL_OBJBROWSER|IDG_VS_OBJBROWSER_SUBSETS<br /><br /> IDG_VS_OBJBROWSER_SEARCH<br /><br /> IDG_VS_OBJBROWSER_ADDREFERENCE<br /><br /> IDG_VS_OBJBROWSER_BROWSERSETTINGS|
 |对象浏览器|IDM_VS_TOOL_OBJECT_BROWSER_GO|IDG_VS_OBJBROWSER_SEARCH2|
-|Output|IDM_VS_TOOL_OUTPUTWINDOW|IDG_VS_OUTPUTWINDOW_SELECT<br /><br /> IDG_VS_OUTPUTWINDOW_GOTO<br /><br /> IDG_VS_OUTPUTWINDOW_NEXTPREV<br /><br /> IDG_VS_OUTPUTWINDOW_CLEAR<br /><br /> IDG_VS_OUTPUTWINDOW_WORDWRAP|
+|输出|IDM_VS_TOOL_OUTPUTWINDOW|IDG_VS_OUTPUTWINDOW_SELECT<br /><br /> IDG_VS_OUTPUTWINDOW_GOTO<br /><br /> IDG_VS_OUTPUTWINDOW_NEXTPREV<br /><br /> IDG_VS_OUTPUTWINDOW_CLEAR<br /><br /> IDG_VS_OUTPUTWINDOW_WORDWRAP|
 |查找和替换|IDM_VS_TOOL_UNIFIEDFIND|IDG_VS_FINDTAB<br /><br /> IDG_VS_REPLACETAB|
-|查找结果 1|IDM_VS_TOOL_FINDRESULTS1|IDG_VS_FINDRESULTS1_GOTO<br /><br /> IDG_VS_FINDRESULTS1_NEXTPREV<br /><br /> IDG_VS_FINDRESULTS1_CLEAR<br /><br /> IDG_VS_FINDRESULTS1_STOPFIND|
-|查找结果 2|IDM_VS_TOOL_FINDRESULTS2|IDG_VS_FINDRESULTS2_GOTO<br /><br /> IDG_VS_FINDRESULTS2_NEXTPREV<br /><br /> IDG_VS_FINDRESULTS2_CLEAR<br /><br /> IDG_VS_FINDRESULTS2_STOPFIND|
-|代码片段|IDM_VS_TOOL_SNIPPETMENUS|IDG_VS_SNIPPET_REPL<br /><br /> IDG_VS_SNIPPET_REF<br /><br /> IDG_VS_SNIPPET_PROP|
+|查找结果1|IDM_VS_TOOL_FINDRESULTS1|IDG_VS_FINDRESULTS1_GOTO<br /><br /> IDG_VS_FINDRESULTS1_NEXTPREV<br /><br /> IDG_VS_FINDRESULTS1_CLEAR<br /><br /> IDG_VS_FINDRESULTS1_STOPFIND|
+|查找结果2|IDM_VS_TOOL_FINDRESULTS2|IDG_VS_FINDRESULTS2_GOTO<br /><br /> IDG_VS_FINDRESULTS2_NEXTPREV<br /><br /> IDG_VS_FINDRESULTS2_CLEAR<br /><br /> IDG_VS_FINDRESULTS2_STOPFIND|
+|片段|IDM_VS_TOOL_SNIPPETMENUS|IDG_VS_SNIPPET_REPL<br /><br /> IDG_VS_SNIPPET_REF<br /><br /> IDG_VS_SNIPPET_PROP|
 |书签|IDM_VS_TOOL_BOOKMARKWIND|IDG_VS_BWNEWFOLDER<br /><br /> IDG_VS_BWNEXTBM<br /><br /> IDG_VS_BWNEXTBMF<br /><br /> IDG_VS_BWENABLE<br /><br /> IDG_VS_BWDELETE|
 |任务列表|IDM_VS_TOOL_TASKLIST|IDG_VS_TASKLIST_PROVIDERLIST|
 |用户任务|IDM_VS_TOOL_USERTASKS|IDG_VS_TASKLIST_PROVIDERLIST<br /><br /> IDG_VS_USERTASKS_EDIT|
 |错误列表|IDM_VS_TOOL_ERRORLIST|IDG_VS_ERRORLIST_ERRORGROUP<br /><br /> IDG_VS_ERRORLIST_WARNINGGROUP<br /><br /> IDG_VS_ERRORLIST_MESSAGEGROUP|
-|调用浏览器|IDM_VS_TOOL_CALLBROWSER1..16|IDG_VS_TOOLBAR_CALLBROWSER1_ACTIONS<br /><br /> IDG_VS_TOOLBAR_CALLBROWSER1_TYPE<br /><br /> IDG_VS_TOOLBAR_CALLBROWSER1_CBSETTINGS|
-|断点|guidVSDebugGroup:IDM_BREAKPOINTS_WINDOW_TOOLBAR|IDG_BREAKPOINTS_WINDOW_NEW<br /><br /> IDG_BREAKPOINTS_WINDOW_DELETE<br /><br /> IDG_BREAKPOINTS_WINDOW_ALL<br /><br /> IDG_BREAKPOINTS_WINDOW_VIEW<br /><br /> IDG_BREAKPOINTS_WINDOW_EDIT<br /><br /> IDG_BREAKPOINTS_WINDOW_COLUMNS|
-|反汇编|guidVSDebugGroup:IDM_DISASM_WINDOW_TOOLBAR|IDG_DISASM_WINDOW_TOOLBAR|
-|内存 1-4|guidVSDebugGroup:IDM_MEMORY_WINDOW_TOOLBAR1…4|IDG_MEMORY_EXPRESSION1..4<br /><br /> IDG_MEMORY_COLUMNS1..4|
-|进程|guidVSDebugGroup:IDM_ATTACHED_PROCS_TOOLBAR|IDG_ATTACHED_PROCS_EXECCNTRL IDG_ATTACHED_PROCS_STEPPING<br /><br /> IDG_ATTACHED_PROCS_EXECCNTRL2<br /><br /> IDG_ATTACHED_PROCS_ATTACH<br /><br /> IDG_ATTACHED_PROCS_COLUMNS|
+|调用浏览器|IDM_VS_TOOL_CALLBROWSER1.。超过|IDG_VS_TOOLBAR_CALLBROWSER1_ACTIONS<br /><br /> IDG_VS_TOOLBAR_CALLBROWSER1_TYPE<br /><br /> IDG_VS_TOOLBAR_CALLBROWSER1_CBSETTINGS|
+|断点|guidVSDebugGroup： IDM_BREAKPOINTS_WINDOW_TOOLBAR|IDG_BREAKPOINTS_WINDOW_NEW<br /><br /> IDG_BREAKPOINTS_WINDOW_DELETE<br /><br /> IDG_BREAKPOINTS_WINDOW_ALL<br /><br /> IDG_BREAKPOINTS_WINDOW_VIEW<br /><br /> IDG_BREAKPOINTS_WINDOW_EDIT<br /><br /> IDG_BREAKPOINTS_WINDOW_COLUMNS|
+|反汇编|guidVSDebugGroup： IDM_DISASM_WINDOW_TOOLBAR|IDG_DISASM_WINDOW_TOOLBAR|
+|内存1-4|guidVSDebugGroup： IDM_MEMORY_WINDOW_TOOLBAR1 .。。4|IDG_MEMORY_EXPRESSION1.。4<br /><br /> IDG_MEMORY_COLUMNS1.。4|
+|进程|guidVSDebugGroup： IDM_ATTACHED_PROCS_TOOLBAR|IDG_ATTACHED_PROCS_EXECCNTRL IDG_ATTACHED_PROCS_STEPPING<br /><br /> IDG_ATTACHED_PROCS_EXECCNTRL2<br /><br /> IDG_ATTACHED_PROCS_ATTACH<br /><br /> IDG_ATTACHED_PROCS_COLUMNS|
 
-## <a name="see-also"></a>请参阅
- [将菜单控制器添加到工具栏](../../extensibility/adding-a-menu-controller-to-a-toolbar.md)[添加到工具窗口工具栏](../../extensibility/adding-a-toolbar-to-a-tool-window.md) [Visual Studio 菜单的 Guid 和 Id](../../extensibility/internals/guids-and-ids-of-visual-studio-menus.md)
+## <a name="see-also"></a>另请参阅
+ [将菜单控制器添加到工具栏](../../extensibility/adding-a-menu-controller-to-a-toolbar.md)向 [工具窗口添加工具栏添加](../../extensibility/adding-a-toolbar-to-a-tool-window.md) [Visual Studio 菜单的 guid 和 id](../../extensibility/internals/guids-and-ids-of-visual-studio-menus.md)

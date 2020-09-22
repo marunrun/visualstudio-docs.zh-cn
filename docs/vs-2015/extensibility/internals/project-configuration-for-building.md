@@ -1,5 +1,5 @@
 ---
-title: 项目生成配置 |Microsoft Docs
+title: 用于生成的项目配置 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,54 +12,54 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 953a02c27f40e92c41d2e43bc818727118eb0a27
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63434846"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840481"
 ---
 # <a name="project-configuration-for-building"></a>用于生成的项目配置
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-解决方案配置对话框中由托管给定解决方案的解决方案配置的列表。  
+给定解决方案的解决方案配置列表由 "解决方案配置" 对话框管理。  
   
- 用户可以创建其他解决方案配置，每个都有其自己唯一的名称。 当用户创建新的解决方案配置时，IDE 将默认为项目中或调试中的相应配置名称如果存在没有相应的名称。 用户可以更改所选内容以满足特定要求，如有必要。 项目支持与新解决方案配置的名称相匹配的配置时，此行为的唯一例外。 例如，假设一种解决方案包含 Project1 和 Project2。 Project1 具有调试、 零售版和 MyConfig1 项目配置。 Project2 具有调试、 零售版和 MyConfig2 项目配置。  
+ 用户可以创建其他解决方案配置，每个配置都具有自己的唯一名称。 当用户创建新的解决方案配置时，IDE 默认为项目中的相应配置名称; 如果不存在相应的名称，则为 Debug。 必要时，用户可以更改所选内容以满足特定要求。 此行为的唯一例外是当项目支持与新解决方案配置的名称相匹配的配置时。 例如，假设解决方案包含 Project1 和 Project2。 Project1 具有 "调试"、"零售" 和 "MyConfig1" 的项目配置。 Project2 具有 "调试"、"零售" 和 "MyConfig2" 的项目配置。  
   
- 如果用户创建新的解决方案配置名为 MyConfig2，Project1 其调试配置的解决方案配置为默认情况下绑定。 Project2 还将绑定其 MyConfig2 配置到解决方案配置默认情况下。  
+ 如果用户创建名为 MyConfig2 的新解决方案配置，则默认情况下，Project1 将其调试配置绑定到解决方案配置。 默认情况下，Project2 还会将其 MyConfig2 配置绑定到解决方案配置。  
   
 > [!NOTE]
-> 绑定是不区分大小写。  
+> 绑定不区分大小写。  
   
- 当用户选择**多个所选内容**项在配置下拉列表中，环境将显示一个对话框，提供了可用的配置的列表。  
+ 当用户在 "配置" 下拉列表中选择 " **多选择** " 项时，环境会显示一个对话框，其中提供了可用配置的列表。  
   
- ![多个配置](../../extensibility/internals/media/vsmultiplecfgs.gif "vsMultipleCfgs")  
+ ![多重配置](../../extensibility/internals/media/vsmultiplecfgs.gif "vsMultipleCfgs")  
 多个配置  
   
- 在此对话框中，用户可以选择一个或多个配置。 选择后，在属性页对话框上显示的属性值将反映所选配置的值的交集。  
+ 在此对话框中，用户可以选择一个或多个配置。 选择后，"属性页" 对话框中显示的属性值将反映所选配置的值的交集。  
   
- 请参阅[解决方案配置](../../extensibility/internals/solution-configuration.md)有关添加和重命名解决方案和项目的配置相关的信息。  
+ 有关添加和重命名解决方案和项目的配置的信息，请参阅 [解决方案配置](../../extensibility/internals/solution-configuration.md) 。  
   
- 项目依赖项和生成顺序是独立的解决方案配置： 也就是说，您只能设置为所有解决方案中项目的一个依赖关系树。 右键单击该解决方案或项目，然后选择**项目依赖项**或**项目生成顺序**选项将打开**项目依赖项**对话框。 也可以从打开**项目**菜单。  
+ 项目依赖项和生成顺序独立于解决方案配置：也就是说，对于解决方案中的所有项目，只能设置一个依赖项树。 右键单击解决方案或项目，然后选择 " **项目依赖项** " 或 " **项目生成顺序** " 选项，打开 " **项目依赖项** " 对话框。 也可以从 " **项目** " 菜单中打开它。  
   
  ![项目依赖项](../../extensibility/internals/media/vsprojdependencies.gif "vsProjDependencies")  
 项目依赖项  
   
- 项目依赖项确定在其中生成项目的顺序。 若要查看解决方案中的项目将生成，并使用依赖关系选项卡来修改生成顺序的确切顺序，请使用对话框的生成顺序选项卡。  
+ 项目依赖项决定项目生成的顺序。 使用对话框中的 "生成顺序" 选项卡可以查看解决方案中项目的生成顺序，并使用 "依赖项" 选项卡修改生成顺序。  
   
 > [!NOTE]
-> 已添加的环境，因为指定的显式依赖关系列表中的项目已选中其复选框，但显示为灰色<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildDependency>或<xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployDependency>接口，并且不能更改。 例如，添加项目引用从[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]到另一个项目的项目会自动添加仅可以通过删除引用删除的生成依赖项。 不能选择的项目的复选框清晰，并显示为灰色，因为执行此操作会在创建依赖关系循环 （例如，Project1 是依赖于 Project2，和将依赖于 Project1 Project2），这会停止生成。  
+> 由于或接口指定的显式依赖项，已在列表中选择了复选框但显示为灰色的项目已添加，因为这些项目由 <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildDependency> 或 <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployDependency> 接口指定，因此无法更改。 例如，将项目引用从 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 项目添加到另一个项目会自动添加一个生成依赖项，该依赖项只能通过删除引用来删除。 不能选择其复选框处于清除状态并灰显的项目，因为这样做会创建一个依赖项循环 (例如，Project1 依赖于 Project2，而 Project2 依赖于 Project1) ，这会使生成延迟。  
   
- [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 生成过程包括典型的编译和链接操作调用的单个生成命令。 也可以支持两个其他生成过程： 从之前的版本和最新检查以确定是否已更改配置中的输出项中删除所有输出项的清理操作。  
+ [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 生成过程包括使用单个生成命令调用的典型编译和链接操作。 还可以支持两个其他生成过程：一个用于删除上一生成的所有输出项的干净操作，以及一个最新的检查，以确定配置中的输出项是否已更改。  
   
- <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg2> 对象返回的相应<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildableProjectCfg>(从返回<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg2.get_CfgType%2A>) 来管理其生成过程。 若要报告生成操作的状态，正在进行中时，配置使调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildStatusCallback>、 接口实现的环境和任何其他对象是否有兴趣生成状态事件。  
+ <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg2> 对象返回 <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildableProjectCfg> 从) 返回的相应 (<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg2.get_CfgType%2A> 以管理它们的生成过程。 若要在生成操作发生时报告生成操作的状态，配置将调用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildStatusCallback> 、由环境实现的接口和任何对生成状态事件感兴趣的其他对象。  
   
- 生成后，配置设置可以用于确定可以运行这些受调试器控制。 配置实现<xref:Microsoft.VisualStudio.Shell.Interop.IVsDebuggableProjectCfg>以支持调试。  
+ 构建后，可以使用配置设置来确定是否可以在调试器的控制下运行这些设置。 实现配置 <xref:Microsoft.VisualStudio.Shell.Interop.IVsDebuggableProjectCfg> 以支持调试。  
   
- 实现项目依赖项之后, 可以以编程方式操作通过自动化模型的依赖项。 在调用<xref:EnvDTE.SolutionBuild.BuildDependencies%2A>自动化模型中。 没有可用 VSIP API 级别接口，允许直接解决方案生成管理器配置及其属性的操作。  
+ 实现项目依赖项后，可以通过自动化模型以编程方式操作依赖项。 <xref:EnvDTE.SolutionBuild.BuildDependencies%2A>在自动化模型中调用。 没有允许直接操作解决方案生成管理器配置及其属性的 VSIP API 级接口。  
   
- 此外，您可以提供项目依赖项窗口中的一个网格。 有关详细信息，请参阅[属性显示网格](../../extensibility/internals/properties-display-grid.md)。  
+ 此外，您可以在 "项目依赖项" 窗口中提供网格。 有关详细信息，请参阅 [属性显示网格](../../extensibility/internals/properties-display-grid.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [管理配置选项](../../extensibility/internals/managing-configuration-options.md)   
  [用于管理部署的项目配置](../../extensibility/internals/project-configuration-for-managing-deployment.md)   
  [用于输出的项目配置](../../extensibility/internals/project-configuration-for-output.md)

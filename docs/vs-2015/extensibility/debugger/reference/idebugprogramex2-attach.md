@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramEx2::Attach | Microsoft Docs
+title: IDebugProgramEx2：： Attach |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 4fe729f2fc196380a3db1a60d1c32f62bbd70998
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63439158"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840657"
 ---
 # <a name="idebugprogramex2attach"></a>IDebugProgramEx2::Attach
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-将会话附加到的程序。  
+将会话附加到程序。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,24 +43,24 @@ int Attach( 
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>parameters  
  `pCallback`  
- [in][IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)对象，表示附加的调试引擎将事件发送到回调函数。  
+ 中一个 [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) 对象，该对象表示附加的调试引擎将事件发送到的回调函数。  
   
  `dwReason`  
- [in]中的值[ATTACH_REASON](../../../extensibility/debugger/reference/attach-reason.md)介绍了在附加操作的原因的枚举。  
+ 中 [ATTACH_REASON](../../../extensibility/debugger/reference/attach-reason.md) 枚举中的一个值，该值描述附加操作的原因。  
   
  `pSession`  
- [in]一个值，唯一标识将附加到程序的会话。  
+ 中一个值，该值唯一标识附加到程序的会话。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则返回错误代码。 此方法应返回`E_ATTACH_DEBUGGER_ALREADY_ATTACHED`如果程序已附加。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。 如果已附加该程序，则此方法应返回 `E_ATTACH_DEBUGGER_ALREADY_ATTACHED` 。  
   
 ## <a name="remarks"></a>备注  
- 包含的程序的端口可以使用中的值`pSession`以确定哪个会话正在尝试将附加到该程序。 例如，如果一个端口允许只有一个调试会话以一次附加到进程，该端口可以确定是否同一个会话已附加到进程中其他程序。  
+ 包含程序的端口可以使用中的值 `pSession` 来确定尝试将哪个会话附加到该程序。 例如，如果一个端口一次只允许一个调试会话附加到一个进程，则该端口可以确定是否已将同一会话附加到进程中的其他程序。  
   
 > [!NOTE]
-> 接口传入`pSession`仅视为 cookie 中，用于唯一标识会话调试管理器将附加到此程序; 的值上提供的接口的方法不起作用。  
+> 传入的接口将 `pSession` 仅被视为 cookie，这是唯一标识会话调试管理器附加到此程序的值; 提供的接口上的任何方法都不起作用。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugProgramEx2](../../../extensibility/debugger/reference/idebugprogramex2.md)

@@ -18,11 +18,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: bab229a3246ac91eaa652be67e98a68aab40e820
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63439387"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840600"
 ---
 # <a name="msbuild-targets-files"></a>MSBuild .Targets 文件
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "63439387"
  `$(MSBuildToolsPath)` 值指定这些公用 .targets 文件的路径。 如果 `ToolsVersion` 为 4.0，则文件位于以下位置：`WindowsInstallationPath\Microsoft.NET\Framework\v4.0.30319\`  
   
 > [!NOTE]
-> 若要了解如何创建自己的目标，请参阅[目标](../msbuild/msbuild-targets.md)。 有关如何使用信息`Import`元素将项目文件插入到另一个项目文件，请参阅[Import 元素 (MSBuild)](../msbuild/import-element-msbuild.md)和[如何：在多个项目文件中使用同一目标](../msbuild/how-to-use-the-same-target-in-multiple-project-files.md)。  
+> 若要了解如何创建自己的目标，请参阅[目标](../msbuild/msbuild-targets.md)。 有关如何使用 `Import` 元素将项目文件插入到另一个项目文件的信息，请参阅 [Import Element (MSBuild) ](../msbuild/import-element-msbuild.md) 和 [如何：在多个项目文件中使用同一目标](../msbuild/how-to-use-the-same-target-in-multiple-project-files.md)。  
   
 ## <a name="common-targets-files"></a>公用 .Targets 文件  
   
@@ -44,7 +44,7 @@ ms.locfileid: "63439387"
 |Microsoft.CSharp.targets|定义 Visual C# 项目标准生成过程中的步骤。<br /><br /> 由 Visual C# 项目文件 (.csproj) 导入，其中包括以下语句：`<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />`|  
 |Microsoft.VisualBasic.targets|定义 Visual Basic 项目标准生成过程中的步骤。<br /><br /> 由 Visual Basic 项目文件 (.vbproj) 导入，其中包括以下语句：`<Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />`|  
   
-## <a name="see-also"></a>请参阅  
- [Import 元素 (MSBuild)](../msbuild/import-element-msbuild.md)   
- [MSBuild 参考](../msbuild/msbuild-reference.md)  
+## <a name="see-also"></a>另请参阅  
+ [ (MSBuild) 导入元素 ](../msbuild/import-element-msbuild.md)   
+ [MSBuild 引用](../msbuild/msbuild-reference.md)  
  [MSBuild](msbuild.md)

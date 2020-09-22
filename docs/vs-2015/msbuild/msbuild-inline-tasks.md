@@ -12,11 +12,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: cea0d72488bbd18972b2a2f6d87f21dfb32481d6
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63439360"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840747"
 ---
 # <a name="msbuild-inline-tasks"></a>MSBuild 内联任务
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -82,7 +82,7 @@ ms.locfileid: "63439360"
   
 - 如果 `Type` 的值为 `Fragment`，则代码将定义 `Execute` 方法的内容，但不定义签名和 `return` 语句。  
   
-  通常，该代码本身会出现在 `<![CDATA[` 标记和 `]]>` 标记之间。 由于代码位于 CDATA 部分中，因此你不必担心转义保留字符（例如，“\<”或“>”）。  
+  通常，该代码本身会出现在 `<![CDATA[` 标记和 `]]>` 标记之间。 由于代码位于 CDATA 部分中，因此你不必担心转义保留字符（例如，“\<" or ">”）。  
   
   或者，可以使用 `Code` 元素的 `Source` 属性来指定包含任务代码的文件的位置。 源文件中的代码的类型必须为由 `Type` 属性所指定的类型。 如果存在 `Source` 属性，则 `Type` 的默认值为 `Class`。 如果 `Source` 不存在，则默认值为 `Fragment`。  
   
@@ -191,6 +191,6 @@ File.WriteAllText(Path, content);
 </Project>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [任务](../msbuild/msbuild-tasks.md)   
+## <a name="see-also"></a>另请参阅  
+ [操作](../msbuild/msbuild-tasks.md)   
  [演练：创建内联任务](../msbuild/walkthrough-creating-an-inline-task.md)
