@@ -12,29 +12,29 @@ caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 3595daa51fddf5c9c027d5643382918d85f83cc1
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63435679"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90841315"
 ---
 # <a name="registering-an-expression-evaluator"></a>注册表达式计算器
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
 > [!IMPORTANT]
-> 在 Visual Studio 2015 中，这种方式实现表达式计算器已弃用。 有关实现 CLR 表达式计算器的信息，请参阅[CLR 表达式计算器](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators)并[托管表达式计算器示例](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)。  
+> 在 Visual Studio 2015 中，不推荐使用这种实现表达式计算器的方式。 有关实现 CLR 表达式计算器的信息，请参阅 [Clr 表达式计算器](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) 和 [托管表达式计算器示例](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)。  
   
- 表达式计算器 (EE) 必须将自身注册为使用 Windows COM 环境和 Visual Studio 的类工厂。 EE 作为 DLL 实现，以便它可以注入到调试引擎 (DE) 地址空间或 Visual Studio 的地址空间，具体取决于实体实例化 EE。  
+ 表达式计算器 (EE) 必须使用 Windows COM 环境和 Visual Studio 将自身注册为类工厂。 EE 作为 DLL 实现，以便可以将其注入到调试引擎 (DE) 地址空间或 Visual Studio 地址空间，具体取决于哪个实体实例化该 EE。  
   
-## <a name="managed-code-expression-evaluator"></a>托管的代码表达式计算器  
- 托管的代码类库，这是一个 DLL，它向 COM 环境，通常通过 VSIP 计划，对的调用来启动注册自身作为实现 EE **regpkg.exe**。 自动处理实际编写 COM 环境的注册表项的过程。  
+## <a name="managed-code-expression-evaluator"></a>托管代码表达式计算器  
+ 托管代码 EE 实现为类库，类库是一个 DLL，它将自身注册到 COM 环境，通常通过调用 VSIP 程序 **regpkg.exe**启动。 系统会自动处理编写 COM 环境的注册表项的实际过程。  
   
- 主类的方法标记为<xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute>，指示正在 com 注册 DLL 时要调用方法 此注册方法中，通常称为`RegisterClass`，执行向 Visual Studio 注册该 DLL 的任务。 相应`UnregisterClass`(标有<xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute>)，撤消的影响`RegisterClass`卸载 DLL 时。  
+ 主类的方法标记有 <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute> ，这表示当使用 COM 注册 DLL 时，将调用方法。 此注册方法（通常称为 `RegisterClass` ）执行向 Visual Studio 注册 DLL 的任务。 `UnregisterClass`标记有) 的相应 (<xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute> `RegisterClass` 会撤消卸载 DLL 时的影响。  
   
- 与非托管代码; 编写 EE 进行相同的注册表条目唯一的区别是，没有任何帮助器函数如`SetEEMetric`来完成工作。 此注册/取消注册过程的示例如下所示：  
+ 与用非托管代码编写的 EE 相同的注册表项;唯一的区别在于，不存在任何帮助程序函数，例如 `SetEEMetric` 来完成工作。 此注册/注销过程的示例如下所示：  
   
 ### <a name="example"></a>示例  
- 此函数显示托管的代码 EE 如何注册和注销本身与 Visual Studio。  
+ 此函数显示托管代码 EE 如何向 Visual Studio 注册和取消注册。  
   
 ```csharp  
 namespace EEMC  
@@ -100,33 +100,33 @@ namespace EEMC
 }  
 ```  
   
-## <a name="unmanaged-code-expression-evaluator"></a>非托管的代码表达式计算器  
- EE DLL 实现`DllRegisterServer`函数以将自身注册 COM 环境以及 Visual Studio。  
+## <a name="unmanaged-code-expression-evaluator"></a>非托管代码表达式计算器  
+ EE DLL 实现 `DllRegisterServer` 函数以便向 COM 环境和 Visual Studio 注册自身。  
   
 > [!NOTE]
-> 可在文件 dllentry.cpp，它位于下 EnVSDK\MyCPkgs\MyCEE VSIP 安装 MyCEE 注册表的代码示例。  
+> 可在文件 dllentry 中找到 MyCEE 代码示例注册表代码，该文件位于 EnVSDK\MyCPkgs\MyCEE. 中的 VSIP 安装下。  
   
 ### <a name="dll-server-process"></a>DLL 服务器进程  
- 当注册 EE，DLL 服务器：  
+ 注册 EE 时，DLL 服务器：  
   
-1. 注册类工厂`CLSID`根据正常 COM 约定。  
+1. 按正常的 COM 约定注册其类工厂 `CLSID` 。  
   
-2. 调用帮助器函数`SetEEMetric`若要通过 Visual Studio 注册以下表中所示的 EE 度量值。 该函数`SetEEMetric`和下面指定的指标是 dbgmetric.lib 库的一部分。 请参阅[以便进行调试的 SDK 帮助程序](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)有关详细信息。  
+2. 调用 helper 函数 `SetEEMetric` 以便向 Visual Studio 注册下表中所示的 EE 指标。 `SetEEMetric`下面指定的函数和度量值是 dbgmetric 库的一部分。 有关详细信息，请参阅 [SDK 帮助程序](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) 。  
   
-    |指标|描述|  
+    |指标|说明|  
     |------------|-----------------|  
     |`metricCLSID`|`CLSID` EE 类工厂的|  
-    |`metricName`|作为可显示字符串 EE 的名称|  
-    |`metricLanguage`|EE 的语言名称旨在评估|  
-    |`metricEngine`|`GUID`秒的处理此 EE 的调试引擎 (DE)|  
+    |`metricName`|可显示字符串形式的 EE 名称|  
+    |`metricLanguage`|用于评估 EE 的语言名称|  
+    |`metricEngine`|`GUID` (DE) 使用此 EE 的调试引擎|  
   
     > [!NOTE]
-    > `metricLanguage``GUID`标识的名称，但它的语言是`guidLang`参数`SetEEMetric`选择语言。 当编译器生成调试信息文件时，它应编写相应`guidLang`以便 DE 知道要使用哪个 EE。 DE 通常会符号提供程序要求此语言`GUID`，它存储在调试信息文件。  
+    > `metricLanguage``GUID`按名称标识语言，但它是 `guidLang` 用于选择语言的的参数 `SetEEMetric` 。 当编译器生成调试信息文件时，它应写入适当的， `guidLang` 以便 DE 知道要使用哪种 EE。 DE 通常会要求符号提供程序提供此语言，该提供程序 `GUID` 存储在调试信息文件中。  
   
-3. 注册 Visual Studio，通过创建密钥下 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\\*X.Y*，其中*X.Y*是 Visual Studio 将注册到的版本。  
+3. 通过在 HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\VisualStudio X. Y 下创建键来注册 Visual Studio \\ *X.Y*，其中， *x*是要向其注册的 Visual studio 版本。  
   
 ### <a name="example"></a>示例  
- 此函数演示如何将非托管代码 (C++) EE 注册并使用 Visual Studio 中取消注册自身。  
+ 此函数显示非托管代码 (c + +) EE 如何使用 Visual Studio 进行注册和注销。  
   
 ```cpp#  
 /*---------------------------------------------------------  
@@ -212,6 +212,6 @@ static HRESULT RegisterMetric( bool registerIt )
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [编写 CLR 表达式计算器](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)   
  [用于调试的 SDK 帮助程序](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)

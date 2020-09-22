@@ -1,5 +1,5 @@
 ---
-title: 如何启用 ClickOnce 安全设置 |Microsoft Docs
+title: 启用 ClickOnce 安全设置 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d673edac957e9625f7d948fbe766ee08b23b6b52
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5f407ac42dc9997215bfe6682bb8b974b78c7847
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85382427"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90850925"
 ---
 # <a name="how-to-enable-clickonce-security-settings"></a>如何：启用 ClickOnce 安全设置
 必须启用 ClickOnce 应用程序的代码访问安全性才能发布应用程序。 使用发布向导发布应用程序时，会自动执行此操作。

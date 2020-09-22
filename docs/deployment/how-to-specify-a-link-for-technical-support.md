@@ -1,5 +1,5 @@
 ---
-title: 如何-为技术支持指定链接 |Microsoft Docs
+title: 指定技术支持链接 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e64ef97b8b51f8a943e216bad67ec300026d5654
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c4474845d4a3f13a404773a6c8b572ff5194e033
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85382050"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90851744"
 ---
 # <a name="how-to-specify-a-link-for-technical-support"></a>如何：指定技术支持链接
 发布 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序时，" **支持 URL** " 属性标识一个网页或文件共享，用户可在其中获取有关应用程序的信息。 此属性是可选的;如果提供，URL 将显示在应用程序的 " **添加或删除程序** " 对话框中。
@@ -44,6 +44,6 @@ ms.locfileid: "85382050"
 
 5. 在 " **支持 URL** " 字段中，输入网站、网页或 UNC 共享的完全限定路径。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [发布 ClickOnce 应用程序](../deployment/publishing-clickonce-applications.md)
 - [如何：使用发布向导发布 ClickOnce 应用程序](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)

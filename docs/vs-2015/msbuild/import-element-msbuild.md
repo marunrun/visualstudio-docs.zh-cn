@@ -20,11 +20,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 9f8edefc8e097f7ada67041b807231f594774548
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63433554"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840793"
 ---
 # <a name="import-element-msbuild"></a>Import 元素 (MSBuild)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -68,9 +68,9 @@ ms.locfileid: "63433554"
   
  导入项目中的相对路径会相对于导入项目的目录进行解释。 因此，如果项目文件导入位于不同位置的多个项目文件中，则导入项目文件中的相对路径对于每个导入项目会以不同方式进行解释。  
   
- 与导入项目中引用的项目文件相关的所有 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 保留属性（例如，`MSBuildProjectDirectory` 和 `MSBuildProjectFile`）都会基于导入项目文件进行赋值。  
+ 与导入项目中引用的项目文件相关的所有 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 保留属性（例如， `MSBuildProjectDirectory` 和 `MSBuildProjectFile`）都会基于导入项目文件进行赋值。  
   
- 如果导入项目没有 `DefaultTargets` 属性，则会按导入顺序检查导入项目，并使用发现的第一个 `DefaultTargets` 属性的值。 例如，如果 ProjectA 导入 ProjectB 和 ProjectC（按照该顺序），并且 ProjectB 导入 ProjectD，则 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 会首先查找 ProjectA 上指定的 `DefaultTargets`，然后是 ProjectB，接下来是 ProjectD，最后是 ProjectC。  
+ 如果导入项目没有 `DefaultTargets` 属性，则会按导入顺序检查导入项目，并使用发现的第一个 `DefaultTargets` 属性的值。 例如，如果 ProjectA 导入 ProjectB 和 ProjectC（按照该顺序），并且 ProjectB 导入 ProjectD，则 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 会首先查找 ProjectA 上指定的 `DefaultTargets` ，然后是 ProjectB，接下来是 ProjectD，最后是 ProjectC。  
   
  导入项目的架构与标准项目相同。 虽然 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 可能能够生成导入项目，不过这不太可能，因为导入项目通常不包含有关要设置的属性或运行目标的顺序的信息。 导入项目依靠将它导入其中的项目来提供该信息。  
   
@@ -114,6 +114,6 @@ ms.locfileid: "63433554"
 </Project>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [项目文件架构参考](../msbuild/msbuild-project-file-schema-reference.md)   
  [如何：在多个项目文件中使用同一目标](../msbuild/how-to-use-the-same-target-in-multiple-project-files.md)

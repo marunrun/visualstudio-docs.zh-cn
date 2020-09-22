@@ -15,11 +15,11 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: c7a123a42c1a46faf67fb5b63b1ab4ef300735f3
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63443452"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840705"
 ---
 # <a name="how-to-reference-windows-symbol-information"></a>如何：引用 Windows 符号信息
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -35,20 +35,20 @@ Visual Studio 分析工具使用符号 (.pdb) 文件来解析符号名称，例�
   
 1. 创建用于包含符号文件信息的文件夹，如 C:\SymbolCache。  
   
-2. 在 **“工具”** 菜单上，单击 **“选项”**。  
+2. 在 **“工具”** 菜单上，单击 **“选项”** 。  
   
      这将显示 **“选项”** 对话框。  
   
-3. 展开“调试”树，然后单击“符号”。  
+3. 展开“调试”树，然后单击“符号”。   
   
-4. 在“符号文件(.pdb)位置”中，选择“Microsoft 符号服务器”  
+4. 在“符号文件(.pdb)位置”中，选择“Microsoft 符号服务器”   
   
 5. 在“将符号从符号服务器缓存到此目录”中，键入在第 1 步中创建的文件夹的路径，例如：  
   
      **C:\SymbolCache**  
   
-     还可以单击省略号按钮（“...”），然后从“浏览文件夹”对话框中选择一个目录。  
+     还可以单击省略号按钮（“...”），然后从“浏览文件夹”对话框中选择一个目录 。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [配置性能会话](../profiling/configuring-performance-sessions.md)   
- [如何：串行化符号信息](../profiling/how-to-serialize-symbol-information.md)
+ [如何：序列化符号信息](../profiling/how-to-serialize-symbol-information.md)
