@@ -1,5 +1,5 @@
 ---
-title: 'Idiasymbol:: Get_farreturn |Microsoft Docs'
+title: IDiaSymbol：： get_farReturn |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 0d412a54c88c01e02317a397b2495708833550d7
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64828667"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840755"
 ---
-# <a name="idiasymbolgetfarreturn"></a>IDiaSymbol::get_farReturn
+# <a name="idiasymbolget_farreturn"></a>IDiaSymbol::get_farReturn
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-检索用于指定此函数包含得返回的标志。  
+检索一个标志，该标志指定该函数是否包含返回的最大。  
   
 ## <a name="syntax"></a>语法  
   
@@ -33,22 +33,22 @@ HRESULT get_farReturn(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>parameters  
  `pFlag`  
- [in]返回`TRUE`如果该函数使用得返回，否则，返回`FALSE`。  
+ 中 `TRUE` 如果函数使用最大返回，则返回，否则返回 `FALSE` 。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回`S_FALSE`或错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回 `S_FALSE` 错误代码。  
   
 > [!NOTE]
-> 返回值为`S_FALSE`表示该属性不是可用于符号。  
+> 返回值意味着该 `S_FALSE` 属性对符号不可用。  
   
 ## <a name="requirements"></a>要求  
   
-|需求|描述|  
+|要求|说明|  
 |-----------------|-----------------|  
-|标头：|dia2.h|  
+|标头：|dia2|  
 |版本：|DIA SDK v8.0|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

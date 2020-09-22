@@ -1,5 +1,5 @@
 ---
-title: 可移植的 Unported 规则
+title: 可移植但已取消移植的规则
 ms.date: 05/21/2019
 ms.topic: reference
 helpviewer_keywords:
@@ -10,21 +10,20 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 904ce26ee05c6e5b9bd3d2f36a12fd7882edffc3
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: abb79b8e726bd7dd116ab3298180497f61481c61
+ms.sourcegitcommit: 4a9689890f271f9b8b73c3333e0699cce84a95d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89511004"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90832159"
 ---
-# <a name="unported-rules-that-may-be-ported"></a>可移植的 Unported 规则
+# <a name="unported-rules-that-may-be-ported"></a>可移植但已取消移植的规则
 
 以下 FxCop 旧分析规则尚未实现为分析器，但仍可能是。 这可能是由于技术原因导致的，或者只是规则的优先级较低。 有关每个规则的移植状态的详细信息，请单击 " **跟踪问题** " 列中的链接。
 
 规则 ID | 跟踪问题
 --- | ---
 [CA1004](ca1004.md) | [https://github.com/dotnet/roslyn-analyzers/issues/370](https://github.com/dotnet/roslyn-analyzers/issues/370)
-[CA1006](ca1006.md) | [https://github.com/dotnet/roslyn-analyzers/issues/372](https://github.com/dotnet/roslyn-analyzers/issues/372)
 [CA1007](ca1007.md) | [https://github.com/dotnet/roslyn-analyzers/issues/373](https://github.com/dotnet/roslyn-analyzers/issues/373)
 [CA1011](ca1011.md) | [https://github.com/dotnet/roslyn-analyzers/issues/375](https://github.com/dotnet/roslyn-analyzers/issues/375)
 [CA1013](ca1013.md) | [https://github.com/dotnet/roslyn-analyzers/issues/376](https://github.com/dotnet/roslyn-analyzers/issues/376)

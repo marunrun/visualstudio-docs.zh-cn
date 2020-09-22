@@ -13,16 +13,16 @@ caps.latest.revision: 17
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: aa5ea0a269cdbfe678328dc652b4177bdc667b99
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63432469"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840327"
 ---
 # <a name="sccdiff-function"></a>SccDiff 函数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-此函数显示 （或根据需要只需检查） 控制系统的源中的当前文件 （在本地磁盘） 和其最后一个签入的版本之间的差异。  
+此函数显示 (或选择性地检查) 本地磁盘) 上的当前文件 (与源代码管理系统中上次签入版本之间的差异。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,53 +36,53 @@ SCCRTN SccDiff(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>parameters  
  pvContext  
- [in]源控制插件上下文结构。  
+ 中源代码管理插件上下文结构。  
   
  hWnd  
- [in]它提供了任何对话框，父级可以使用源代码管理插件，则 IDE 窗口的句柄。  
+ 中IDE 窗口的句柄，源代码管理插件可将其用作它所提供的所有对话框的父级。  
   
  lpFileName  
- [in]为其请求不同之处的文件名。  
+ 中为其请求差异的文件名。  
   
- fOptions  
- [in]命令的标志。 有关详细信息，请参阅备注。  
+ 用于  
+ 中命令标志。 有关详细信息，请参阅备注。  
   
  pvOptions  
- [in]源代码管理插件特定选项。  
+ 中源代码管理插件特定的选项。  
   
 ## <a name="return-value"></a>返回值  
- 此函数的源控制插件实现应返回以下值之一：  
+ 此函数的源代码管理插件实现应返回以下值之一：  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |SCC_OK|工作副本和服务器版本是相同的。|  
-|SCC_I_FILESDIFFERS|工作副本与受源代码管理版本不同。|  
+|SCC_I_FILESDIFFERS|工作副本不同于源代码管理下的版本。|  
 |SCC_I_RELOADFILE|需要重新加载文件或项目。|  
-|SCC_E_FILENOTCONTROLLED|文件不是源代码管理下。|  
+|SCC_E_FILENOTCONTROLLED|此文件不受源代码管理。|  
 |SCC_E_NOTAUTHORIZED|不允许用户执行此操作。|  
-|SCC_E_ACCESSFAILURE|访问源代码管理系统，很可能是由于网络或争用问题时出现问题时。 建议重试。|  
-|SCC_E_NONSPECIFICERROR|非特定故障;无法获得文件差异。|  
+|SCC_E_ACCESSFAILURE|访问源代码管理系统时出现问题，可能是由于网络或争用问题导致的。 建议重试。|  
+|SCC_E_NONSPECIFICERROR|模糊失败;未获得文件差异。|  
 |SCC_E_FILENOTEXIST|找不到本地文件。|  
   
 ## <a name="remarks"></a>备注  
- 此函数有两个不同的用途。 默认情况下，它为文件显示更改的列表。 源代码管理插件将自己的窗口，打开任何格式选择，则显示磁盘上的用户的文件和源代码管理下的文件的最新版本之间的差异。  
+ 此函数有两种不同的用途。 默认情况下，它会显示文件的更改列表。 源代码管理插件以所选择的任何格式打开其自己的窗口，以显示用户在磁盘上的文件与源代码管理下的最新文件版本之间的差异。  
   
- 或者，在 IDE 可能只被需要确定文件是否已更改。 例如，在 IDE 可能需要确定它是否可以安全地签出文件，而无需通知用户。 在这种情况下，IDE 将传入`SCC_DIFF_CONTENTS`标志。 源代码管理插件必须检查该文件在磁盘上，按字节，针对受源代码管理文件并返回一个值，该值指示两个文件是否不同而不会向用户显示任何内容。  
+ 或者，IDE 可能只需要确定文件是否已更改。 例如，IDE 可能需要确定在不通知用户的情况下签出文件是否是安全的。 在这种情况下，IDE 会传入 `SCC_DIFF_CONTENTS` 标志。 源代码管理插件必须根据源代码管理的文件在磁盘上逐字节检查文件，并返回一个值，该值指示两个文件是否不同，而不会向用户显示任何内容。  
   
- 作为一种性能优化，源代码管理插件可能会使用基于校验和或时间戳而不是逐字节比较的所要求的替代方法`SCC_DIFF_CONTENTS`： 这些形式的比较都是很明显更快，但可靠性较低。 并非所有的源代码管理系统可能支持这些替代比较方法，并且该插件可能要故障回复到的内容比较。 所有源代码管理插件，至少必须都支持的内容比较。  
+ 作为一种性能优化，源代码管理插件可能会基于校验和或时间戳使用一种替代方法，而不是由调用的按字节进行的比较 `SCC_DIFF_CONTENTS` 并非所有源代码管理系统都能支持这些备用的比较方法，而且插件可能不得不回退到内容比较。 所有源代码管理插件都必须至少支持内容比较。  
   
 > [!NOTE]
-> 快速差异标志是互斥的。 有效地不传递任何标志，但它不是有效地同时传递多个。 `SCC_DIFF_QUICK_DIFF`它一个屏蔽，它结合了所有标志，可用于测试，但永远不应作为参数传递。  
+> 快速差异标志是互斥的。 传递无标志是有效的，但同时传递多个标记是无效的。 `SCC_DIFF_QUICK_DIFF`，它是合并所有标志的掩码，可用于测试，但绝不应作为参数传递。  
   
 |`fOption`|含义|  
 |---------------|-------------|  
-|SCC_DIFF_IGNORECASE|（可能为快速或视觉对象使用） 的比较不区分大小写。|  
-|SCC_DIFF_IGNORESPACE|将忽略空白区域 （可能为快速或视觉对象使用）。|  
-|SCC_DIFF_QD_CONTENTS|以无提示方式将该文件，按字节进行比较。|  
-|SCC_DIFF_QD_CHECKSUM|以无提示方式将通过校验和时支持的文件进行比较。 如果不受支持，回退到的内容比较。|  
-|SCC_DIFF_QD_TIME|以无提示方式将通过其时间戳时支持的文件进行比较。 如果不受支持，回退到的内容比较。|  
+|SCC_DIFF_IGNORECASE|不区分大小写的比较 (可用于快速或直观差异) 。|  
+|SCC_DIFF_IGNORESPACE|忽略空格 (可用于快速或视觉对象差异) 。|  
+|SCC_DIFF_QD_CONTENTS|以无提示方式按字节对文件进行比较。|  
+|SCC_DIFF_QD_CHECKSUM|如果受支持，则通过校验和自动比较文件。 如果不支持，将回退到内容的比较。|  
+|SCC_DIFF_QD_TIME|如果文件受支持，则以无提示方式对文件进行比较。 如果不支持，将回退到内容的比较。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [源代码管理插件 API 函数](../extensibility/source-control-plug-in-api-functions.md)

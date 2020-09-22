@@ -1,5 +1,5 @@
 ---
-title: ProjectType 元素 （Visual Studio 模板） |Microsoft Docs
+title: " (Visual Studio 模板) 的 ProjectType 元素 |Microsoft Docs"
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -13,19 +13,19 @@ caps.latest.revision: 20
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: b01dd370fe5e3d7a5207363c5ab7ec4f2a0254c5
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63388396"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840368"
 ---
 # <a name="projecttype-element-visual-studio-templates"></a>ProjectType 元素（Visual Studio 模板）
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-将分类的项目模板，使其显示在指定的组**新的项目**或**添加新项**对话框。  
+对项目模板进行分类，使其显示在 " **新建项目** " 或 " **添加新项** " 对话框中的指定组下。  
   
 > [!WARNING]
-> 为支持项目模板C++从 Visual Studio 2012 开始。 它们不支持C++在 Visual Studio 2010 及更早版本。  
+> 从 Visual Studio 2012 开始，c + + 支持项目模板。 Visual Studio 2010 及更早版本中不支持 c + +。  
   
  \<VSTemplate>  
  \<TemplateData>  
@@ -55,23 +55,23 @@ ms.locfileid: "63388396"
 ## <a name="text-value"></a>文本值  
  需要一个文本值。  
   
- 此值指定的类型的项目模板将创建并必须包含以下值之一：  
+ 此值指定模板将创建的项目类型，并且必须包含以下值之一：  
   
-- `CSharp`：指定此模板创建[!INCLUDE[csprcs](../includes/csprcs-md.md)]项目或项。  
+- `CSharp`：指定模板创建 [!INCLUDE[csprcs](../includes/csprcs-md.md)] 项目或项。  
   
-- `VisualBasic`：指定此模板创建[!INCLUDE[vbprvb](../includes/vbprvb-md.md)]项目或项。  
+- `VisualBasic`：指定模板创建 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 项目或项。  
   
-- `Web`：指定此模板创建 Web 项目或项。 如果`ProjectType`元素包含此值，在中定义的项目或项的语言[ProjectSubType 元素 （Visual Studio 模板）](../extensibility/projectsubtype-element-visual-studio-templates.md)。  
+- `Web`：指定模板创建 Web 项目或项。 如果 `ProjectType` 元素包含此值，则会在 ProjectSubType 元素中定义项目或项的语言 [ (Visual Studio 模板) ](../extensibility/projectsubtype-element-visual-studio-templates.md)。  
   
 ## <a name="remarks"></a>备注  
  `ProjectType` 是 `TemplateData` 的必需子元素。  
   
- 值`ProjectType`元素指定在模板中的位置**新建项目**或**添加新项**对话框。 例如，使用模板`ProjectType`的值`CSharp`下显示**Visual C#** 中的节点**新项目**对话框。  
+ 元素的值 `ProjectType` 指定模板位于 " **新建项目** " 或 " **添加新项** " 对话框中的位置。 例如， `ProjectType` 值为的模板 `CSharp` 会出现在 "**新建项目**" 对话框中的 " **Visual c #** " 节点下。  
   
- 可以通过使用指定模板子类型[ProjectSubType](../extensibility/projectsubtype-element-visual-studio-templates.md)元素。  
+ 可以使用 [ProjectSubType](../extensibility/projectsubtype-element-visual-studio-templates.md) 元素指定模板子类型。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示用于的项目模板的元数据[!INCLUDE[csprcs](../includes/csprcs-md.md)]应用程序。  
+ 下面的示例演示应用程序的项目模板的元数据 [!INCLUDE[csprcs](../includes/csprcs-md.md)] 。  
   
 ```  
 <VSTemplate Type="Project" Version="3.0.0"  
@@ -97,7 +97,7 @@ ms.locfileid: "63388396"
 </VSTemplate>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)   
  [创建项目和项模板](../ide/creating-project-and-item-templates.md)   
  [ProjectSubType 元素（Visual Studio 模板）](../extensibility/projectsubtype-element-visual-studio-templates.md)

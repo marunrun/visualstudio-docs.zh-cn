@@ -1,6 +1,7 @@
 ---
-title: 将 ASP.NET Core Linux Docker 容器部署到 Azure 应用服务 | Microsoft Docs
-description: 了解如何使用 Visual Studio 容器工具将 ASP.NET Core Web 应用部署到 Azure 应用服务
+title: 将 ASP.NET Core 容器部署到 Azure 应用服务
+description: 了解如何使用 Visual Studio 容器工具将 Docker 容器中的 ASP.NET Core Web 应用部署到 Azure 应用服务
+ms.custom: SEO-VS-2020
 author: ghogen
 manager: jillfra
 ms.technology: vs-azure
@@ -8,12 +9,12 @@ ms.devlang: dotnet
 ms.topic: how-to
 ms.date: 01/27/2020
 ms.author: ghogen
-ms.openlocfilehash: 43bd06fba795c09bfa341ce7b61a3ced0fe15214
-ms.sourcegitcommit: 510a928153470e2f96ef28b808f1d038506cce0c
+ms.openlocfilehash: c0f45f14bc8b363a0c7c4e298effa67c5fccde18
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86454158"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90036335"
 ---
 # <a name="deploy-an-aspnet-core-container-to-azure-app-service-using-visual-studio"></a>使用 Visual Studio 将 ASP.NET Core 容器部署到 Azure 应用服务
 

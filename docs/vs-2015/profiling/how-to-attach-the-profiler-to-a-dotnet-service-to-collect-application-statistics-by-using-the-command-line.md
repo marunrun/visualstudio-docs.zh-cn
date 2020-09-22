@@ -1,5 +1,5 @@
 ---
-title: 如何：Profiler 附加到.NET 服务以使用命令行收集应用程序统计信息 |Microsoft Docs
+title: 如何：将探查器附加到 .NET 服务，以使用命令行收集应用程序统计信息 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -10,13 +10,13 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: fc65d8afc75229caed524e5414abe4595d4de65a
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63433626"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840759"
 ---
-# <a name="how-to-attach-the-profiler-to-a-net-service-to-collect-application-statistics-by-using-the-command-line"></a>如何：Profiler 附加到.NET 服务以使用命令行收集应用程序统计信息
+# <a name="how-to-attach-the-profiler-to-a-net-service-to-collect-application-statistics-by-using-the-command-line"></a>如何：使用命令行将探查器附加到 .NET 服务以收集应用程序统计信息
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 本主题介绍如何使用 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 分析工具命令行工具将探查器附加 .NET Framework 服务，以及如何使用采样方法收集性能统计信息。  
@@ -54,11 +54,11 @@ ms.locfileid: "63433626"
 
 6. 启动探查器。 类型：  
 
-    **VSPerfCmd**  [/start](../profiling/start.md) **:sample**  [/output](../profiling/output.md) **:** `OutputFile` [`Options`]  
+    **VSPerfCmd**  [/start](../profiling/start.md) **： sample**  [/output](../profiling/output.md) **：** `OutputFile` [ `Options` ]  
 
    - /start:sample 选项初始化探查器。  
 
-   - **/output:**`OutputFile` 选项需要与 **/start** 一起使用。 `OutputFile` 指定分析数据 (.vsp) 文件的名称和位置。  
+   - **/output:** `OutputFile` 选项需要与 **/start** 一起使用。 `OutputFile` 指定分析数据 (.vsp) 文件的名称和位置。  
 
      可以将以下任意选项与 **/start:sample** 选项一起使用。  
 
@@ -67,7 +67,7 @@ ms.locfileid: "63433626"
 
    |                                 选项                                  |                                                                                                                                          描述                                                                                                                                           |
    |-------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-   | [/user](../profiling/user-vsperfcmd.md) **:**[`Domain`**\\**]`UserName` |      指定拥有所分析进程的帐户的域和用户名。 仅在进程以已登录用户外的用户身份运行时才需要此选项。 进程所有者在 Windows 任务管理器的“进程”选项卡上的“用户名”列中列出。       |
+   | [/user](../profiling/user-vsperfcmd.md) **:** [`Domain` **\\** ]`UserName` |      指定拥有所分析进程的帐户的域和用户名。 仅在进程以已登录用户外的用户身份运行时才需要此选项。 进程所有者在 Windows 任务管理器的“进程”选项卡上的“用户名”列中列出。       |
    |              [/crosssession](../profiling/crosssession.md)              | 启用其他会话中的进程分析。 在其他的会话中运行该服务时需要此选项。 会话 ID 在 Windows 任务管理器的“进程”选项卡上的“会话 ID”列中列出。 可以将 **/CS** 指定为 **/crosssession** 的缩写。 |
    |    [/wincounter](../profiling/wincounter.md) **:** `WinCounterPath`     |                                                                                                           指定要在分析期间收集的 Windows 性能计数器。                                                                                                            |
    |         [/automark](../profiling/automark.md) **:** `Interval`          |                                                                         仅与 **/wincounter** 一起使用。 指定两次 Windows 性能计数器收集事件相隔的毫秒数。 默认值为 500 毫秒。                                                                          |
@@ -77,7 +77,7 @@ ms.locfileid: "63433626"
 
 8. 将探查器附加到该服务。 类型：  
 
-    **VSPerfCmd**  [/attach](../profiling/attach.md) **:** {`PID`&#124;`ProcName`} [`Sample Event`] [[/targetclr](../profiling/targetclr.md)**:**`Version`]  
+    **VSPerfCmd**[/attach](../profiling/attach.md) **：** { `PID`&#124;`ProcName` } [ `Sample Event` ] [[/targetclr](../profiling/targetclr.md)**：** `Version` ]    
 
    - 指定服务的进程 ID (`PID`) 或进程名称 (ProcName)。 可以在 Windows 任务管理器中查看所有运行中的进程的进程 ID 和名称。  
 
@@ -86,11 +86,11 @@ ms.locfileid: "63433626"
    |样本事件|描述|  
    |------------------|-----------------|  
    |[/timer](../profiling/timer.md) **:** `Interval`|将采样间隔更改为 `Interval` 所指定的非暂停时钟周期数目。|  
-   |[/pf](../profiling/pf.md)[**:**`Interval`]|将采样事件更改为页面错误。 如果已指定 `Interval`，则会设置样本之间的页面错误数目。 默认值为 10。|  
-   |[/sys](../profiling/sys-vsperfcmd.md)[`:``Interval`]|将采样事件更改为从进程对操作系统内核的系统调用 (syscall)。 如果已指定 `Interval`，则会设置样本之间的调用次数。 默认值为 10。|  
+   |[/pf](../profiling/pf.md)[ **:** `Interval`]|将采样事件更改为页面错误。 如果已指定 `Interval`，则会设置样本之间的页面错误数目。 默认值为 10。|  
+   |[/sys](../profiling/sys-vsperfcmd.md)[ `:``Interval` ]|将采样事件更改为从进程对操作系统内核的系统调用 (syscall)。 如果已指定 `Interval`，则会设置样本之间的调用次数。 默认值为 10。|  
    |[/counter](../profiling/counter.md) **:** `Config`|将采样事件和间隔更改为 `Config` 中指定的处理器性能计数器和间隔。|  
 
-   - **targetclr:** `Version` 指定应用程序中加载运行时的多个版本时要分析的公共语言运行时 (CLR) 的版本。 可选。  
+   - **targetclr：** `Version` 指定在应用程序中加载运行时的多个版本时 (CLR) 要分析的公共语言运行时的版本。 可选。  
 
 ## <a name="controlling-data-collection"></a>控制数据收集  
  服务运行时，可使用 VSPerfCmd.exe 选项开始或停止将数据写入到探查器数据文件。 通过控制数据收集，可以针对程序执行的特定部分（如启动或关闭应用程序）进行数据收集。  
@@ -101,12 +101,12 @@ ms.locfileid: "63433626"
 
     |选项|描述|  
     |------------|-----------------|  
-    |[/globalon /globaloff](../profiling/globalon-and-globaloff.md)|启动 (**/globalon**) 或停止 (**/globaloff**) 所有进程的数据收集。|  
-    |[/processon](../profiling/processon-and-processoff.md) **:** `PID` [/processoff](../profiling/processon-and-processoff.md) **:** `PID`|启动 (**/processon**) 或停止 (**/processoff**) 由进程 ID (`PID`) 指定的进程的数据收集。|  
-    |**/attach:**{`PID`&#124;`ProcName`} [/detach](../profiling/detach.md)[:{`PID`&#124;`ProcName`}]|**/attach** 将启动由进程 ID 或进程名称指定的进程的数据收集。 **/detach** 将停止指定进程或所有进程（未指定任何特定进程时）的数据收集。|  
+    |[/globalon /globaloff](../profiling/globalon-and-globaloff.md)|启动 ( **/globalon**) 或停止 ( **/globaloff**) 所有进程的数据收集。|  
+    |[/processon](../profiling/processon-and-processoff.md) **:** `PID` [/processoff](../profiling/processon-and-processoff.md) **:** `PID`|启动 ( **/processon**) 或停止 ( **/processoff**) 由进程 ID (`PID`) 指定的进程的数据收集。|  
+    |**/attach：**{ `PID`&#124;`ProcName` } [/detach](../profiling/detach.md)[： { `PID`&#124;`ProcName` }]|**/attach** 将启动由进程 ID 或进程名称指定的进程的数据收集。 **/detach** 将停止指定进程或所有进程（未指定任何特定进程时）的数据收集。|  
 
 ## <a name="ending-the-profiling-session"></a>结束分析会话  
- 若要结束分析会话，必须将探查器与所有被分析进程拆离，并且必须显式关闭探查器。 可通过关闭应用程序或调用 VSPerfCmd /detach 选项从使用采样方法分析的应用程序拆离探查器。 然后，调用 **VSPerfCmd /shutdown** 选项关闭探查器和分析数据文件。  
+ 若要结束分析会话，必须将探查器与所有被分析进程拆离，并且必须显式关闭探查器。 可通过关闭应用程序或调用 VSPerfCmd /detach**** 选项从使用采样方法分析的应用程序拆离探查器。 然后，调用 **VSPerfCmd /shutdown** 选项关闭探查器和分析数据文件。  
 
  **VSPerfClrEnv /globaloff** 命令可清除分析环境变量，但在重新启动计算机前不会重置系统配置。  
 
@@ -116,7 +116,7 @@ ms.locfileid: "63433626"
 
     - 停止服务。  
 
-         或  
+         \- 或 -  
 
     - 键入 **VSPerfCmd /detach**  
 
@@ -128,8 +128,8 @@ ms.locfileid: "63433626"
 
      VSPerfClrEnv /globaloff  
 
-4. 重新启动计算机。  
+4. 重启计算机。  
 
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [分析服务](../profiling/command-line-profiling-of-services.md)   
  [采样方法数据视图](../profiling/profiler-sampling-method-data-views.md)

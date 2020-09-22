@@ -13,32 +13,32 @@ caps.latest.revision: 61
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 553c502c100cbb6ed4ae249096af408af14423b4
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63436126"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840792"
 ---
 # <a name="how-vspackages-add-user-interface-elements"></a>VSPackage 如何添加用户界面元素
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-VSPackage 可以添加用户界面 (UI) 元素，例如，菜单、 工具栏和工具窗口，Visual studio 通过.vsct 文件。  
+VSPackage 可以通过 .vsct 文件 (UI) 元素（例如，菜单、工具栏和工具窗口）添加到 Visual Studio 的用户界面。  
   
- 您可以找到在 UI 元素设计准则[Visual Studio 用户体验指南](../../extensibility/ux-guidelines/visual-studio-user-experience-guidelines.md)。  
+ 可在 [Visual Studio 用户体验指南](../../extensibility/ux-guidelines/visual-studio-user-experience-guidelines.md)中找到 UI 元素的设计指南。  
   
 ## <a name="the-visual-studio-command-table-architecture"></a>Visual Studio 命令表体系结构  
- 如所述，命令表体系结构支持前面提到的体系结构原则。 后面的抽象、 数据结构和工具的命令表体系结构原则是按如下所示：  
+ 如上所述，命令表体系结构支持上述体系结构原则。 此命令表体系结构的抽象、数据结构和工具背后的原则如下：  
   
-- 有三种基本类型的项： 菜单、 命令和组。 作为菜单、 子菜单、 工具栏或工具窗口，可以在 UI 中公开菜单。 命令是过程，其中用户可以执行在 IDE 中，并可以将它们公开为菜单项、 按钮、 列表框或其他控件。 组是菜单和命令的容器。  
+- 有三种基本类型的项：菜单、命令和组。 菜单可以在 UI 中作为菜单、子菜单、工具栏或工具窗口公开。 命令是用户可以在 IDE 中执行的过程，它们可以作为菜单项、按钮、列表框或其他控件公开。 组是用于菜单和命令的容器。  
   
-- 每个项被指定的描述项目、 相对于其他项和修改其行为的标志其优先级的定义。  
+- 每一项由描述项的定义、其相对于其他项的优先级以及修改其行为的标志指定。  
   
-- 每个项都有描述项的父级的位置。 项可以有多个父级，以便它可以出现在 UI 中的多个位置。  
+- 每个项都有一个描述项的父项的位置。 一个项可以有多个父项，因此它可以出现在 UI 中的多个位置。  
   
-     每个命令必须作为其父级具有一个组，即使它是在该组中的唯一子级。 每个标准菜单还必须具有父组。 工具栏和工具窗口用作其自己的父项。 组可以包含作为其父级主要 Visual Studio 菜单栏中，或任何菜单、 工具栏或工具窗口。  
+     每个命令都必须将组作为其父项，即使它是该组中唯一的子节点也是如此。 每个标准菜单还必须有一个父组。 工具栏和工具窗口充当其自身的父级。 组可以将主 Visual Studio 菜单栏或菜单、工具栏或工具窗口作为其父项。  
   
-### <a name="how-items-are-defined"></a>如何定义项目  
- .Vsct 文件以 XML 格式。 .Vsct 文件定义的 UI 元素的包，并确定这些元素出现在 IDE 中的位置。 每个菜单、 组或包中的命令 GUID 和 ID 中的第一次分配`Symbols`部分。 其余部分的.vsct 文件、 每个菜单、 命令和组都由其 GUID 和 ID 的组合标识。 下面的示例演示一个典型`Symbols`部分，如生成的 Visual Studio 包模板时**菜单命令**在模板中选择。  
+### <a name="how-items-are-defined"></a>如何定义项  
+ ..Vsct 文件采用 XML 格式。 .Vsct 文件定义包的 UI 元素并确定这些元素在 IDE 中的显示位置。 包中的每个菜单、组或命令首先在部分中分配了 GUID 和 ID `Symbols` 。 在 .vsct 文件的其余部分中，每个菜单、命令和组都由其 GUID 和 ID 组合标识。 以下示例显示在 `Symbols` 模板中选择了 **菜单命令** 时 Visual Studio 包模板生成的典型节。  
   
 ```xml  
 <Symbols>  
@@ -62,42 +62,42 @@ VSPackage 可以添加用户界面 (UI) 元素，例如，菜单、 工具栏和
 </Symbols>  
 ```  
   
- 顶级元素`Symbols`部分[GuidSymbol 元素](../../extensibility/guidsymbol-element.md)。 `GuidSymbol` 元素将名称映射到 IDE 用于标识包和其组件部分的 Guid。  
+ 部分的顶级元素 `Symbols` 是 [GuidSymbol 元素](../../extensibility/guidsymbol-element.md)。 `GuidSymbol` 元素将名称映射到由 IDE 用于标识包及其组件部分的 Guid。  
   
 > [!NOTE]
-> Visual Studio 包模板会自动生成的 Guid。 此外可以通过单击创建的唯一 GUID**创建 GUID**上**工具**菜单。  
+> Guid 由 Visual Studio 包模板自动生成。 还可以通过单击 "**工具**" 菜单上的 "**创建 guid** " 来创建唯一的 guid。  
   
- 第一个`GuidSymbol`元素中，"guid [包名称] Pkg"，是包本身的 GUID。 这是 Visual Studio 用来加载此包的 GUID。 通常情况下，它没有子元素。  
+ 第一个 `GuidSymbol` 元素 "guid [PackageName] .pkg" 是包本身的 guid。 这是 Visual Studio 用来加载包的 GUID。 通常，它不具有子元素。  
   
- 按照约定，菜单和命令进行分组到 1 秒`GuidSymbol`元素中，"guid [包名称] CmdSet"，和位图下为第三个`GuidSymbol`元素中，"guidImages"。 不需要遵循此约定，但每个菜单、 组、 命令和位图必须是子级`GuidSymbol`元素。  
+ 按照约定，菜单和命令在第二个 `GuidSymbol` 元素 "guid [PackageName] CmdSet" 下分组，位图位于第三个 `GuidSymbol` 元素 "guidImages" 下。 您不必遵循此约定，但每个菜单、组、命令和位图都必须是元素的子 `GuidSymbol` 元素。  
   
- 在第二个`GuidSymbol`元素，它表示包命令集，有一些`IDSymbol`元素。 每个[IDSymbol 元素](../../extensibility/idsymbol-element.md)将名称映射到数字值，并可能表示菜单、 组或命令的命令集的一部分。 `IDSymbol`元素中第三个`GuidSymbol`可能用作命令图标的元素表示位图。 因为 GUID/ID 对必须是唯一的应用程序，任何两个子级的相同`GuidSymbol`元素可能具有相同的值。  
+ 在 `GuidSymbol` 表示 package 命令集的第二个元素中，是多个 `IDSymbol` 元素。 每个 [IDSymbol 元素](../../extensibility/idsymbol-element.md) 将名称映射到一个数值，并且可能表示作为命令集的一部分的菜单、组或命令。 `IDSymbol`第三个元素中的元素 `GuidSymbol` 表示可用作命令图标的位图。 由于 GUID/ID 对在应用程序中必须是唯一的，因此，同一元素的两个子级不能 `GuidSymbol` 具有相同的值。  
   
-### <a name="menus-groups-and-commands"></a>菜单、 组和命令  
- 当菜单、 组或命令具有 GUID 和 ID 时，它可以添加到 IDE。 每个 UI 元素必须具有以下操作：  
+### <a name="menus-groups-and-commands"></a>菜单、组和命令  
+ 当菜单、组或命令具有 GUID 和 ID 时，可以将其添加到 IDE 中。 每个 UI 元素必须具有以下内容：  
   
-- 一个`guid`属性的名称相匹配`GuidSymbol`下定义的 UI 元素的元素。  
+- 一个 `guid` 属性，该属性与定义 UI 元素的元素的名称相匹配 `GuidSymbol` 。  
   
-- `id`属性关联的名称相匹配`IDSymbol`元素。  
+- `id`与关联的元素的名称相匹配的属性 `IDSymbol` 。  
   
-     共同`guid`和`id`属性 compose*签名*的 UI 元素。  
+     同时， `guid` 和 `id` 特性构成 UI 元素的 *签名* 。  
   
-- 一个`priority`确定其父菜单或组中的 UI 元素的位置的属性。  
+- 一个 `priority` 特性，确定 UI 元素在其父菜单或组中的位置。  
   
-- 一个[父元素](../../extensibility/parent-element.md)具有`guid`和`id`属性指定的父菜单或组的签名。  
+- 具有和特性的 [父元素](../../extensibility/parent-element.md) ， `guid` `id` 它们指定了父菜单或组的签名。  
   
 #### <a name="menus"></a>菜单  
- 每个菜单指[Menu Element](../../extensibility/menu-element.md)中`Menus`部分。 菜单必须具有`guid`， `id`，并`priority`属性，和一个`Parent`元素，还以下附加特性和子级：  
+ 每个菜单都定义为节中的 [Menu 元素](../../extensibility/menu-element.md) `Menus` 。 菜单必须具有 `guid` 、和 `id` 属性以及 `priority` `Parent` 元素，还必须具有以下附加属性和子级：  
   
-- 一个`type`的特性，指定是否应作为一种类型的菜单或工具栏在 IDE 中显示菜单。  
+- 一个 `type` 特性，该特性指定菜单应作为菜单类型还是作为工具栏出现在 IDE 中。  
   
-- 一个[字符串元素](../../extensibility/strings-element.md)，其中包含[ButtonText 元素](../../extensibility/buttontext-element.md)，它在 IDE 中，指定的菜单标题和一个[CommandName 元素](../../extensibility/commandname-element.md)，它指定的名称在中使用**命令**窗口来访问菜单。  
+- 一个包含[ButtonText 元素](../../extensibility/buttontext-element.md)的[string 元素](../../extensibility/strings-element.md)，该元素指定 IDE 中的菜单的标题和一个[CommandName 元素](../../extensibility/commandname-element.md)，该元素指定在**命令**窗口中用于访问菜单的名称。  
   
-- 可选标志。 一个[Command Flag 元素](../../extensibility/command-flag-element.md)可能会出现在菜单定义中，若要更改其外观或行为在 IDE 中的。  
+- 可选标志。 [命令标志元素](../../extensibility/command-flag-element.md)可能出现在菜单定义中，以更改其在 IDE 中的外观或行为。  
   
-  每个`Menu`元素必须有一组作为其父级，除非它是在可停靠的元素，如工具栏。 可停靠菜单是其自身的上级。 有关菜单和值的详细信息`type`属性，请参阅[Menu Element](../../extensibility/menu-element.md)文档。  
+  每个 `Menu` 元素都必须有一个组作为其父元素，除非它是一个可停靠的元素（如工具栏）。 可停靠菜单是其自身的父级。 有关属性的菜单和值的详细信息 `type` ，请参阅 [Menu 元素](../../extensibility/menu-element.md) 文档。  
   
-  下面的示例演示旁边显示 Visual Studio 菜单栏的菜单**工具**菜单。  
+  下面的示例显示一个菜单，该菜单显示在 Visual Studio 菜单栏上的 " **工具** " 菜单旁边。  
   
 ```xml  
 <Menu guid="guidTopLevelMenuCmdSet"  
@@ -112,9 +112,9 @@ id="TopLevelMenu" priority="0x700" type="Menu">
 ```  
   
 #### <a name="groups"></a>组  
- 组是在中定义的项`Groups`.vsct 文件的部分。 组是只是容器。 它们不作为菜单上一条分隔线显示在 IDE 中，除。 因此，[组元素](../../extensibility/group-element.md)仅由其签名、 优先级和父定义。  
+ 组是在 .vsct 文件的部分中定义的项 `Groups` 。 组只是容器。 它们不会在 IDE 中显示，除非是菜单上的分隔线。 因此， [Group 元素](../../extensibility/group-element.md) 仅由其签名、优先级和父项定义。  
   
- 组只能有一个菜单，另一个组，或自身作为父级。 但是，父级通常是将菜单或工具栏。 在前面的示例中的菜单是控件的子`IDG_VS_MM_TOOLSADDINS`组和该组是 Visual Studio 菜单栏的子级。 以下示例中的组是菜单的在前面的示例中的子级。  
+ 一个组可以有一个菜单、另一个组或其本身作为父项。 但是，父级通常是菜单或工具栏。 前面示例中的菜单是组的子级 `IDG_VS_MM_TOOLSADDINS` ，该组是 Visual Studio 菜单栏的子组。 以下示例中的组是前面示例中的菜单的子组。  
   
 ```  
  <Group guid="guidTopLevelMenuCmdSet" id="MyMenuGroup"  
@@ -123,7 +123,7 @@ priority="0x0600">
  </Group>  
 ```  
   
- 因为它是菜单的一部分，此组将通常包含命令。 但是，它还可能包含其他菜单。 这是子菜单的定义方式，如下面的示例中所示。  
+ 因为它是菜单的一部分，所以此组通常包含命令。 但是，它还可以包含其他菜单。 这就是子菜单的定义方式，如以下示例中所示。  
   
 ```xml  
 <Menu guid="guidTopLevelMenuCmdSet" id="SubMenu"  
@@ -137,12 +137,12 @@ priority="0x0100" type="Menu">
 ```  
   
 #### <a name="commands"></a>命令  
- 提供对 IDE 的命令被定义成[Button 元素](../../extensibility/button-element.md)或[组合元素](../../extensibility/combo-element.md)。 要显示菜单或工具栏上，该命令必须作为其父级具有一个组。  
+ 向 IDE 提供的命令被定义为 [Button 元素](../../extensibility/button-element.md) 或 [组合元素](../../extensibility/combo-element.md)。 若要显示在菜单或工具栏上，该命令必须具有组作为其父项。  
   
 ##### <a name="buttons"></a>按钮  
- 在定义按钮`Buttons`部分。 任何菜单项、 按钮或其他用户单击以执行单个命令的元素被视为一个按钮。 某些按钮类型还可以包含列表的功能。 按钮都有相同要求和菜单具有的可选属性，也可以有[Icon 元素](../../extensibility/icon-element.md)，它指定的 GUID 和 ID 用于表示在 IDE 中的按钮的位图。 有关按钮和及其属性的详细信息，请参阅[Buttons 元素](../../extensibility/buttons-element.md)文档。  
+ 按钮在部分中定义 `Buttons` 。 用户单击以执行单个命令的任何菜单项、按钮或其他元素都被视为按钮。 某些按钮类型还可以包含列表功能。 按钮具有菜单具有的必需属性和可选属性，并且还可以具有一个 [Icon 元素](../../extensibility/icon-element.md) ，该元素指定表示 IDE 中的按钮的位图的 GUID 和 ID。 有关按钮及其属性的详细信息，请参阅 [钮扣元素](../../extensibility/buttons-element.md) 文档。  
   
- 下面的示例中的按钮是在前面的示例中，组的子级，并将在 IDE 中显示为该组的父菜单中的菜单项。  
+ 以下示例中的按钮是前面示例中的组的子级，并将在 IDE 中显示为该组父菜单上的菜单项。  
   
 ```  
 <Button guid="guidTopLevelMenuCmdSet" id="cmdidTestCommand" priority="0x0100" type="Button">  
@@ -156,13 +156,13 @@ priority="0x0100" type="Menu">
 ```  
   
 ##### <a name="combos"></a>Combos  
- 在中定义 combos`Combos`部分。 每个`Combo`元素表示在 IDE 中的下拉列表框。 列表框可能也可能不是可写的用户，具体取决于值`type`在组合框的属性。 Combos 具有相同的元素和按钮的行为，因此还具有以下附加特性：  
+ Combos 在部分中定义 `Combos` 。 每个 `Combo` 元素都表示 IDE 中的一个下拉列表框。 用户可以或不能写入列表框，具体取决于组合的属性的值 `type` 。 Combos 具有按钮具有的相同元素和行为，还可以具有以下附加属性：  
   
-- 一个`defaultWidth`指定像素宽度的属性。  
+- `defaultWidth`指定像素宽度的特性。  
   
-- `idCommandList`的特性，指定包含在列表框中显示的项的列表。 必须在同一个声明命令列表`GuidSymbol`包含在组合框的节点。  
+- 一个 `idCommandList` 特性，该特性指定包含列表框中显示的项的列表。 命令列表必须在包含组合的同一节点中声明 `GuidSymbol` 。  
   
-  下面的示例定义一个组合元素。  
+  下面的示例定义了一个组合元素。  
   
 ```xml  
 <Combos>  
@@ -185,34 +185,34 @@ priority="0x0100" type="Menu">
 ```  
   
 ##### <a name="bitmaps"></a>位图  
- 将显示一个图标以及命令必须包括`Icon`元素表示位图，通过使用其 GUID 和 id。 每个位图指[位图元素](../../extensibility/bitmap-element.md)中`Bitmaps`部分。 唯一必需的特性`Bitmap`定义都`guid`和`href`，了指向源文件。 如果源文件位于资源 strip， **usedList**属性也是必需的若要列出可用的映像的条带中。 有关详细信息，请参阅[位图元素](../../extensibility/bitmap-element.md)文档。  
+ 将与图标一起显示的命令必须包含 `Icon` 使用其 GUID 和 ID 引用位图的元素。 每个位图定义为节中的 [位图元素](../../extensibility/bitmap-element.md) `Bitmaps` 。 定义唯一必需的属性 `Bitmap` 是 `guid` 和 `href` ，它们指向源文件。 如果源文件是资源条，则还需要 **usedList** 属性来列出条带中的可用图像。 有关详细信息，请参阅 [Bitmap 元素](../../extensibility/bitmap-element.md) 文档。  
   
-### <a name="parenting"></a>设置父级  
- 以下规则控制项如何调用另一个作为其父项。  
+### <a name="parenting"></a>父级  
+ 以下规则控制项如何将另一项作为其父级来调用。  
   
-|元素|在此部分中的命令表定义|可能包含 (作为父母，或通过中的放置位置来`CommandPlacements`部分中，或两者)|可能包含 （也称为父）|  
+|元素|在命令表的此部分中定义|可以 (作为父项，也可以在节中放置 `CommandPlacements` ，或同时包含这两种) |可能包含被称为父级)  (|  
 |-------------|--------------------------------------------------|---------------------------------------------------------------------------------------------------|---------------------------------------------|  
-|Group|[Groups 元素](../../extensibility/groups-element.md)，IDE、 其他 Vspackage|菜单上，一组项本身|菜单、 组和命令|  
-|菜单|[Menus 元素](../../extensibility/menus-element.md)，IDE、 其他 Vspackage|1 到*n*组|0 到*n*组|  
-|Toolbar|[Menus 元素](../../extensibility/menus-element.md)，IDE、 其他 Vspackage|项目本身|0 到*n*组|  
-|菜单项|[按钮元素](../../extensibility/buttons-element.md)，IDE、 其他 Vspackage|1 到*n*组，而项本身|-范围为 0 到*n*组|  
-|Button|[按钮元素](../../extensibility/buttons-element.md)，IDE、 其他 Vspackage|1 到*n*组，而项本身||  
-|组合框|[Combos 元素](../../extensibility/combos-element.md)，IDE、 其他 Vspackage|1 到*n*组，而项本身||  
+|组|[Groups 元素](../../extensibility/groups-element.md)、IDE、其他 vspackage|菜单、组、项本身|菜单、组和命令|  
+|菜单|[菜单元素](../../extensibility/menus-element.md)、IDE、其他 vspackage|1到 *n* 组|0到 *n* 组|  
+|工具栏|[菜单元素](../../extensibility/menus-element.md)、IDE、其他 vspackage|项本身|0到 *n* 组|  
+|菜单项|[按钮元素](../../extensibility/buttons-element.md)、IDE、其他 vspackage|1到 *n* 组，项本身|-0 到 *n* 组|  
+|Button|[按钮元素](../../extensibility/buttons-element.md)、IDE、其他 vspackage|1到 *n* 组，项本身||  
+|组合图|[Combos 元素](../../extensibility/combos-element.md)，IDE，其他 vspackage|1到 *n* 组，项本身||  
   
-### <a name="menu-command-and-group-placement"></a>菜单、 命令和组放置  
- 菜单、 组或命令可以显示在 IDE 中的多个位置。 若要在多个位置中显示的项，必须将它添加到`CommandPlacements`作为部分[CommandPlacement 元素](../../extensibility/commandplacement-element.md)。 可以作为命令放置添加任何菜单、 组或命令。 但是，工具栏不能以这种方式放置因为它们不能出现在多个上下文相关的位置。  
+### <a name="menu-command-and-group-placement"></a>菜单、命令和组放置  
+ 菜单、组或命令可以出现在 IDE 的多个位置中。 要使项出现在多个位置，必须将其 `CommandPlacements` 作为 [CommandPlacement 元素](../../extensibility/commandplacement-element.md)添加到节中。 任何菜单、组或命令均可作为命令位置添加。 但是，不能以这种方式定位工具栏，因为它们不能出现在多个区分上下文的位置。  
   
- 命令放置具有`guid`， `id`，和`priority`属性。 GUID 和 ID 必须与匹配的项的定位。 `priority`属性控制方面的其他项的项的位置。 IDE 将合并两个或多个具有相同的优先级的项，其位置时，未定义由于 IDE 不保证，软件包资源读取的相同顺序生成包每次。  
+ 命令放置具有 `guid` 、 `id` 和 `priority` 属性。 GUID 和 ID 必须与定位的项的 GUID 和 ID 匹配。 `priority`特性控制项相对于其他项的位置。 当 IDE 合并具有相同优先级的两个或多个项时，它们的位置是不确定的，因为 IDE 不保证每次生成包时按相同顺序读取包资源。  
   
- 如果菜单或组将出现在多个位置，该菜单或组的所有子级将都出现在每个实例。  
+ 如果菜单或组出现在多个位置，则该菜单或组的所有子级都将显示在每个实例中。  
   
-## <a name="command-visibility-and-context"></a>命令的可见性和上下文  
- 当安装多个 Vspackage 时，菜单、 菜单项和工具栏而言并非易事可能会造成混乱 IDE。 若要避免此问题，可以通过使用来控制单个 UI 元素的可见性*可见性约束*和命令标志。  
+## <a name="command-visibility-and-context"></a>命令可见性和上下文  
+ 安装多个 Vspackage 时，菜单、菜单项和工具栏的如此可能会打乱 IDE 的混乱程度。 若要避免此问题，可以使用 *可见性约束* 和命令标志来控制各个 UI 元素的可见性。  
   
 ##### <a name="visibility-constraints"></a>可见性约束  
- 可见性约束设置为[VisibilityItem 元素](../../extensibility/visibilityitem-element.md)中`VisibilityConstraints`部分。 可见性约束定义中的目标项是可见的特定 UI 上下文。 仅当定义的上下文中的一个处于活动状态，菜单或包含在本部分中的命令才可见。 如果未在本部分中引用的菜单或命令，它始终是默认情况下可见。 本部分不适用于组。  
+ 可见性约束设置为部分中的 [VisibilityItem 元素](../../extensibility/visibilityitem-element.md) `VisibilityConstraints` 。 可见性约束定义了可在其中查看目标项的特定 UI 上下文。 仅当其中一个定义的上下文处于活动状态时，才会显示此部分中包含的菜单或命令。 如果未在此部分中引用菜单或命令，默认情况下它始终可见。 本部分不适用于组。  
   
- `VisibilityItem` 元素必须具有三个属性，如下所示：`guid`并`id`目标 UI 元素的和`context`。 `context`属性指定当目标项会显示，并采用任何有效的 UI 上下文作为其值。 Visual Studio 的 UI 上下文常量均隶属于<xref:Microsoft.VisualStudio.VSConstants>类。 每个`VisibilityItem`元素可以使用只有一个上下文值。 若要应用的第二个上下文，创建另一个`VisibilityItem`指向同一个项，如下面的示例中所示的元素。  
+ `VisibilityItem` 元素必须具有三个属性，如下所示 `guid` ： `id` 目标 UI 元素和的和 `context` 。 `context`特性指定目标项何时可见，并将任何有效的 UI 上下文作为其值。 Visual Studio 的 UI 上下文常量是类的成员 <xref:Microsoft.VisualStudio.VSConstants> 。 每个 `VisibilityItem` 元素只能采用一个上下文值。 若要应用第二个上下文，请创建一个指向同一项的第二个 `VisibilityItem` 元素，如下面的示例中所示。  
   
 ```xml  
 <VisibilityConstraints>  
@@ -226,80 +226,80 @@ priority="0x0100" type="Menu">
 ```  
   
 ##### <a name="command-flags"></a>命令标志  
- 以下命令标志可能会影响菜单和它们适用于命令的可见性。  
+ 以下命令标志可能会影响应用于的菜单和命令的可见性。  
   
  AlwaysCreate  
- 即使它具有任何组或按钮创建菜单。  
+ 即使没有组或按钮，也会创建菜单。  
   
  适用于： `Menu`  
   
  CommandWellOnly  
- 适用于此标志的命令不会出现在顶级菜单上，并且你想要使其可供其他外壳自定义设置，例如，将其绑定到一个密钥。 VSPackage 安装后，用户可以通过自定义这些命令打开**选项**对话框，然后编辑下的命令放置**键盘环境**类别。 不会影响在快捷菜单、 工具栏、 菜单控制器或子菜单上的位置。  
+ 如果命令未显示在顶级菜单上，并且您要使其可用于其他外壳自定义（例如，将其绑定到密钥），请应用此标志。 安装 VSPackage 后，用户可以通过打开 " **选项** " 对话框，然后编辑 " **键盘环境** " 类别下的命令位置来自定义这些命令。 不影响快捷菜单、工具栏、菜单控制器或子菜单上的位置。  
   
- 对有效： `Button`， `Combo`  
+ 适用于： `Button` 、 `Combo`  
   
  DefaultDisabled  
- 默认情况下，如果未加载 VSPackage 实现命令或尚未调用 QueryStatus 方法，将禁用该命令。  
+ 默认情况下，如果未加载实现该命令的 VSPackage 或未调用 QueryStatus 方法，则该命令处于禁用状态。  
   
- 对有效： `Button`， `Combo`  
+ 适用于： `Button` 、 `Combo`  
   
  DefaultInvisible  
- 默认情况下，该命令是不可见，如果未加载 VSPackage 实现命令或尚未调用 QueryStatus 方法。  
+ 默认情况下，如果未加载实现命令的 VSPackage 或未调用 QueryStatus 方法，则该命令将不可见。  
   
- 应结合`DynamicVisibility`标志。  
+ 应与 `DynamicVisibility` 标志结合。  
   
- 对有效： `Button`， `Combo`， `Menu`  
+ 适用于： `Button` 、 `Combo` 、 `Menu`  
   
  DynamicVisibility  
- 可以使用 QueryStatus 方法或上下文中包含的 GUID 更改命令的可见性`VisibilityConstraints`部分。  
+ 可以通过使用 QueryStatus 方法或部分中包含的上下文 GUID 来更改命令的可见性 `VisibilityConstraints` 。  
   
- 适用于不在工具栏上的菜单显示的命令。 可以禁用，但不是能隐藏 OLECMDF_INVISIBLE 标志从 QueryStatus 方法返回时顶层工具栏项。  
+ 适用于菜单上显示的命令，而不是工具栏上的命令。 当从 QueryStatus 方法返回 OLECMDF_INVISIBLE 标志时，可以禁用顶级工具栏项，但不能隐藏这些项。  
   
- 在菜单上，此标志还指示，它时，应自动隐藏其成员处于隐藏状态。 此标志通常分配给子菜单因为顶级菜单已有此行为。  
+ 在菜单上，此标志还指示在隐藏其成员时应自动隐藏它。 此标志通常分配给子菜单，因为顶级菜单已经有了此行为。  
   
- 应结合`DefaultInvisible`标志。  
+ 应与 `DefaultInvisible` 标志结合。  
   
- 对有效： `Button`， `Combo`， `Menu`  
+ 适用于： `Button` 、 `Combo` 、 `Menu`  
   
  NoShowOnMenuController  
- 如果此标志的命令位于菜单控制器上，在下拉列表中不显示命令。  
+ 如果将具有此标志的命令定位在菜单控制器上，则该命令不会出现在下拉列表中。  
   
  适用于： `Button`  
   
- 有关命令标志的详细信息，请参阅[Command Flag 元素](../../extensibility/command-flag-element.md)文档。  
+ 有关命令标志的详细信息，请参阅 [命令标志元素](../../extensibility/command-flag-element.md) 文档。  
   
 ##### <a name="general-requirements"></a>一般要求  
- 你的命令必须通过以下一系列测试之前可以显示并启用：  
+ 你的命令必须传递以下系列的测试，然后才能显示和启用：  
   
-- 该命令是正确定位。  
+- 命令位置正确。  
   
 - `DefaultInvisible`未设置标志。  
   
-- 父菜单或工具栏是可见的。  
+- 父菜单或工具栏可见。  
   
-- 该命令不是不可见由于中的上下文项[VisibilityConstraints 元素](../../extensibility/visibilityconstraints-element.md)部分。  
+- 由于 [VisibilityConstraints 元素](../../extensibility/visibilityconstraints-element.md) 部分中的上下文条目，命令不可见。  
   
-- 实现的 VSPackage 代码<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>接口显示，并使您的命令。 没有接口代码已截获此并已按照它。  
+- 用于实现接口的 VSPackage 代码会 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> 显示并启用你的命令。 没有接口代码截获并对其进行操作。  
   
-- 当用户单击你的命令时，它将成为受中所述的过程[路由算法](../../extensibility/internals/command-routing-algorithm.md)。  
+- 当用户单击你的命令时，它将受到 [路由算法](../../extensibility/internals/command-routing-algorithm.md)中所述的过程的制约。  
   
 ## <a name="calling-pre-defined-commands"></a>调用预定义的命令  
- [UsedCommands 元素](../../extensibility/usedcommands-element.md)使 Vspackage 能够访问由其他 Vspackage 或由 IDE 提供的命令。 若要执行此操作，创建[UsedCommand 元素](../../extensibility/usedcommand-element.md)具有 GUID 以及要使用的命令 ID。 这可确保 Visual Studio 中，将加载该命令是即使它不是当前的 Visual Studio 配置的一部分。 有关详细信息，请参阅[UsedCommand 元素](../../extensibility/usedcommand-element.md)。  
+ [UsedCommands 元素](../../extensibility/usedcommands-element.md)使 vspackage 可以访问由其他 VSPACKAGE 或 IDE 提供的命令。 为此，请创建一个 [UsedCommand 元素](../../extensibility/usedcommand-element.md) ，该元素具有要使用的命令的 GUID 和 ID。 这可确保命令将由 Visual Studio 加载，即使它不是当前 Visual Studio 配置的一部分也是如此。 有关详细信息，请参阅 [UsedCommand 元素](../../extensibility/usedcommand-element.md)。  
   
-## <a name="interface-element-appearance"></a>界面元素外观  
- 选择和定位命令元素的注意事项如下所示：  
+## <a name="interface-element-appearance"></a>接口元素外观  
+ 选择和定位命令元素的注意事项如下：  
   
-- [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 提供了很多 UI 元素，具体取决于放置以不同方式显示。  
+- [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 提供了许多不同的位置显示的 UI 元素。  
   
-- 使用定义的用户界面元素`DefaultInvisible`标志将不会显示在 IDE 除非它是可以显示其 VSPackage 实现<xref:EnvDTE.IDTCommandTarget.QueryStatus%2A>方法，或与中的特定 UI 上下文关联`VisibilityConstraints`部分。  
+- 使用标志定义的 UI 元素 `DefaultInvisible` 将不会显示在 IDE 中，除非它是通过其 VSPackage 实现显示的 <xref:EnvDTE.IDTCommandTarget.QueryStatus%2A> ，或与部分中的特定 UI 上下文相关联 `VisibilityConstraints` 。  
   
-- 即使成功定位的命令不会显示。 这是因为 IDE 自动隐藏或显示某些命令，具体取决于 VSPackage 具有 （或不具有） 的接口实现的。 例如，一些的 VSPackage 的实现生成接口的原因与生成相关菜单项会自动显示。  
+- 甚至可能不会显示成功定位的命令。 这是因为 IDE 会自动隐藏或显示某些命令，具体取决于 VSPackage 已 (或未) 实现的接口。 例如，VSPackage 的某些生成接口的实现将导致自动显示生成相关菜单项。  
   
-- 将应用`CommandWellOnly`UI 元素的定义中的标记表示的命令，可以添加只能由自定义项。  
+- `CommandWellOnly`在 UI 元素的定义中应用标志意味着只能通过自定义添加该命令。  
   
-- 仅当时 IDE 位于设计视图中显示一个对话框时，可能仅适用于某些 UI 上下文中，例如，命令。  
+- 命令仅在某些 UI 上下文中可用，例如，当 IDE 在设计视图中时显示对话框。  
   
-- 若要使某些用户界面元素在 IDE 中显示，必须实现一个或多个接口，或编写一些代码。  
+- 若要使某些 UI 元素在 IDE 中显示，您必须实现一个或多个接口或编写一些代码。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [扩展菜单和命令](../../extensibility/extending-menus-and-commands.md)

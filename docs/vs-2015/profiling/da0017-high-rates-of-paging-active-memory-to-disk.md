@@ -1,5 +1,5 @@
 ---
-title: DA0017：以分页方式将活动内存移到磁盘的发生率高 | Microsoft Docs
+title: 'DA0017: 活动内存到磁盘的分页速率很高 | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,19 +14,19 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 00df8bf8757b9dba35537942716c37f66675bf32
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63435862"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840814"
 ---
 # <a name="da0017-high-rates-of-paging-active-memory-to-disk"></a>DA0017：以分页方式将活动内存移到磁盘的发生率高
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 规则 Id |DA0017 |  
 |类别 |内存和分页 |  
-|分析方法 |所有 |  
-|消息 |发生高比率的分页活动内存到磁盘。 应用程序可能受内存限制。|  
+|分析方法 |All |  
+|消息 |出现将活动内存的分页到磁盘的高速率。 应用程序可能受内存限制。|  
 |规则类型 |信息 |  
   
  使用采样法、.NET 内存或资源争用方法进行分析时，必须收集至少 10 个样本才能触发此规则。  
@@ -34,7 +34,7 @@ ms.locfileid: "63435862"
 ## <a name="cause"></a>原因  
  在分析运行中收集的系统性能数据表明：在整个分析运行期间，活动内存到磁盘的分页速率或从磁盘中分页活动内容的速率较高。 此级别的分页速率通常会影响应用程序性能和响应能力。 请考虑通过修改算法来减少内存分配。 可能还需要考虑应用程序的内存要求。  
   
-## <a name="rule-description"></a>规则说明  
+## <a name="rule-description"></a>规则描述  
   
 > [!NOTE]
 > 当活动内存的分页级别达到较高级别时，将会触发此信息规则。 当分页级别极高时，将改为触发警告规则 [DA0014：活动内存到磁盘的分页速率极高](../profiling/da0014-extremely-high-rates-of-paging-active-memory-to-disk.md)。  

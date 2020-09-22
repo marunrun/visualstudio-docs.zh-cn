@@ -14,11 +14,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 0d2eaf41ac66cd1bdf680145bef43b17cc29a505
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63425871"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840514"
 ---
 # <a name="writing-multi-processor-aware-loggers"></a>编写多处理器可识别的记录器
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -71,7 +71,7 @@ public interface INodeLogger: ILogger
   
   可根据你的需要，对 ConfigurableForwardingLogger 进行修改。 为此，请使用 MSBuild.exe 在命令行中调用记录器，并列出希望记录器转发至中心节点的生成事件。  
   
-  或者，也可以创建自定义转发记录器。 通过创建自定义转发记录器，可以微调记录器的行为。 但是，创建自定义转发记录器比仅自定义 ConfigurableForwardingLogger 更复杂。 有关详细信息，请参阅[创建转发记录器](../msbuild/creating-forwarding-loggers.md)。  
+  或者，也可以创建自定义转发记录器。 通过创建自定义转发记录器，可以微调记录器的行为。 但是，创建自定义转发记录器比仅自定义 ConfigurableForwardingLogger 更复杂。 有关详细信息，请参阅 [创建转发记录器](../msbuild/creating-forwarding-loggers.md)。  
   
 ## <a name="using-the-configurableforwardinglogger-for-simple-distributed-logging"></a>将 ConfigurableForwardingLogger 用于简单分布式日志记录  
  若要附加 ConfigurableForwardingLogger 或自定义转发记录器，请在 MSBuild.exe 命令行生成中使用 `/distributedlogger` 开关（缩写形式为 `/dl`）。 用于指定记录器类型名称和类的格式与 `/logger` 开关对应的格式相同，只是分布式记录器始终有以下两个（而不是一个）日志记录类：转发记录器和中心记录器。 下面是有关如何附加名为 XMLForwardingLogger 的自定义转发记录器的示例。  
@@ -83,7 +83,7 @@ msbuild.exe myproj.proj/distributedlogger:XMLCentralLogger,MyLogger,Version=1.0.
 > [!NOTE]
 > 必须用星号 (*) 来分隔 `/dl` 开关中的两个记录器名称。  
   
- 使用 ConfigurableForwardingLogger 与使用其他任何记录器相似（如 [获取生成日志](../msbuild/obtaining-build-logs-with-msbuild.md)中所述），区别在于要附加 ConfigurableForwardingLogger 记录器而不是通常的 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 记录器，而且要将希望 ConfigurableForwardingLogger 传递到中心节点的事件指定为参数。  
+ 使用 ConfigurableForwardingLogger 的方式与使用任何其他记录器 (如) [获取生成日志](../msbuild/obtaining-build-logs-with-msbuild.md) 中所述），不同的是，只需附加 ConfigurableForwardingLogger 记录器而不是典型的 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 记录器，并将希望 ConfigurableForwardingLogger 传递到中心节点的事件指定为参数。  
   
  例如，如果只想在生成开始、结束以及发生错误时得到通知，则需将 `BUILDSTARTEDEVENT`、`BUILDFINISHEDEVENT` 和 `ERROREVENT` 作为参数来传递。 可以传递多个参数，参数之间用分号分隔。 下面是有关如何使用 ConfigurableForwardingLogger 只转发 `BUILDSTARTEDEVENT`、`BUILDFINISHEDEVENT` 和 `ERROREVENT` 事件的示例。  
   
@@ -114,5 +114,5 @@ msbuild.exe myproj.proj /distributedlogger:XMLCentralLogger,MyLogger,Version=1.0
 |NOSUMMARY|  
 |SHOWCOMMANDLINE|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建转发记录器](../msbuild/creating-forwarding-loggers.md)

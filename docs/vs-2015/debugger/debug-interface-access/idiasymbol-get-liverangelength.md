@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::get_liveRangeLength |Microsoft Docs
+title: IDiaSymbol：： get_liveRangeLength |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 33f56615334b7d33516c6c967f165dac3942b5f8
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64825233"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840725"
 ---
-# <a name="idiasymbolgetliverangelength"></a>IDiaSymbol::get_liveRangeLength
+# <a name="idiasymbolget_liverangelength"></a>IDiaSymbol::get_liveRangeLength
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-返回本地符号无效的地址范围的长度。  
+返回本地符号有效的地址范围长度。  
   
 ## <a name="syntax"></a>语法  
   
@@ -33,24 +33,24 @@ HRESULT get_liveRangeLength ( 
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>parameters  
  `length`  
- [out]返回的地址范围的长度。  
+ 弄返回地址范围的长度。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
 > [!NOTE]
-> 返回的错误代码表示符号不具有实时范围信息。  
+> 返回的错误代码表示该符号没有活动范围信息。  
   
 ## <a name="remarks"></a>备注  
   
 ## <a name="requirements"></a>要求  
- 标头：dia2.h  
+ 标头： Dia2  
   
- 库： diaguids.lib  
+ 库： diaguids  
   
- DLL: msdia100.dll  
+ DLL： msdia100.dll  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

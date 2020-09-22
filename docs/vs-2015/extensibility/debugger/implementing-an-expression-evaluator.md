@@ -12,27 +12,27 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: e82e6f1fb4e6f78c7fb1f614144f9a836d9676fb
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63436360"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840413"
 ---
 # <a name="implementing-an-expression-evaluator"></a>实现表达式计算器
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
 > [!IMPORTANT]
-> 在 Visual Studio 2015 中，这种方式实现表达式计算器已弃用。 有关实现 CLR 表达式计算器的信息，请参阅[CLR 表达式计算器](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators)并[托管表达式计算器示例](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)。  
+> 在 Visual Studio 2015 中，不推荐使用这种实现表达式计算器的方式。 有关实现 CLR 表达式计算器的信息，请参阅 [Clr 表达式计算器](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) 和 [托管表达式计算器示例](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)。  
   
- 计算表达式是复杂叠加而在调试引擎 (DE)、 符号提供程序 (SP)、 联编程序对象和表达式计算器 (EE) 本身。 以下四个组件的接口是由一个组件实现和使用由另一个连接。  
+ 在调试引擎 (DE) 、符号提供程序 (SP) 、联编程序对象和表达式 (计算器中，计算表达式是一种复杂的相互作用。 这四个组件由一个组件实现并由另一个组件使用的接口进行连接。  
   
- EE DE 中字符串的形式从所需的表达式和解析或对其进行计算。 EE 实现以下接口，供 DE:  
+ EE 采用字符串形式的表达式，并对其进行分析或计算。 EE 实现以下接口，这些接口由 DE 使用：  
   
 - [IDebugExpressionEvaluator](../../extensibility/debugger/reference/idebugexpressionevaluator.md)  
   
 - [IDebugParsedExpression](../../extensibility/debugger/reference/idebugparsedexpression.md)  
   
-  EE 调用 DE，若要获取的符号和对象的值由提供的联编程序对象。 EE 使用由 DE 实现以下接口：  
+  EE 调用由 DE 提供的联编程序对象，以获取符号和对象的值。 EE 使用以下接口，这些接口由 DE 实现：  
   
 - [IDebugObject](../../extensibility/debugger/reference/idebugobject.md)  
   
@@ -48,9 +48,9 @@ ms.locfileid: "63436360"
   
 - [IDebugBinder](../../extensibility/debugger/reference/idebugbinder.md)  
   
-  实现 EE [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md)。 `IDebugProperty2` 提供用于描述结果的表达式计算，如本地变量、 基元或一个对象，Visual studio，然后显示中的相应信息的机制**局部变量**， **观看**，或**即时**窗口。  
+  EE 实现 [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md)。 `IDebugProperty2` 提供了一种机制，用于将表达式计算的结果（例如本地变量、基元或对象）描述为 Visual Studio，后者随后会在 " **局部变量**"、" **监视**" 或 " **即时** " 窗口中显示相应的信息。  
   
-  SP 时为指定 EE DE 通过要求提供的信息。 SP 实现接口，用于描述地址和字段，如下面的接口和及其衍生产品：  
+  在请求提供信息时，会通过 DE 将 SP 提供给 EE。 SP 实现了用于描述地址和字段的接口，如以下接口及其派生类：  
   
 - [IDebugSymbolProvider](../../extensibility/debugger/reference/idebugsymbolprovider.md)  
   
@@ -62,7 +62,7 @@ ms.locfileid: "63436360"
   
 ## <a name="in-this-section"></a>本节内容  
  [表达式计算器实施策略](../../extensibility/debugger/expression-evaluator-implementation-strategy.md)  
- 定义了表达式计算器 (EE) 实施策略一个三步骤过程。  
+ 为表达式计算器定义一个三步过程， (EE) 实现策略。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [编写 CLR 表达式计算器](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)

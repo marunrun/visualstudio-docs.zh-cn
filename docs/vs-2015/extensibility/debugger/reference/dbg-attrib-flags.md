@@ -1,5 +1,5 @@
 ---
-title: DBG_ATTRIB_FLAGS | Microsoft Docs
+title: DBG_ATTRIB_FLAGS |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 18
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 74694c903040b278ed8864b46756cac66381405a
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63444996"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840412"
 ---
-# <a name="dbgattribflags"></a>DBG_ATTRIB_FLAGS
+# <a name="dbg_attrib_flags"></a>DBG_ATTRIB_FLAGS
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-描述各种特性[IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)或[IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)接口。 成员[DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md)结构。  
+描述 [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) 或 [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) 接口的各种属性。 [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md)结构的成员。  
   
 ## <a name="syntax"></a>语法  
   
@@ -184,40 +184,40 @@ public const int DBG_ATTRIB_MULTI_CUSTOM_VIEWERS = 0x0001000000000000
  表示值是只读的。  
   
  DBG_ATTRIB_VALUE_ERROR  
- 指示值错误。  
+ 指示值为错误。  
   
  DBG_ATTRIB_VALUE_SIDE_EFFECT  
- 指示计算具有副作用。  
+ 指示计算有副作用。  
   
  DBG_ATTRIB_OVERLOADED_CONTAINER  
- 指示此属性实际上是重载的容器。  
+ 指示此属性确实是重载的容器。  
   
  DBG_ATTRIB_VALUE_BOOLEAN  
- 指示在值`DEBUG_PROPERTY_INFO::bstrValue`是布尔值。  
+ 指示中的值 `DEBUG_PROPERTY_INFO::bstrValue` 是布尔值。  
   
  DBG_ATTRIB_VALUE_BOOLEAN_TRUE  
- 指示中的值`DEBUG_PROPERTY_INFO::bstrValue`是一个布尔值和`TRUE`。  
+ 指示中的值 `DEBUG_PROPERTY_INFO::bstrValue` 为布尔值和 `TRUE` 。  
   
  DBG_ATTRIB_VALUE_INVALID  
  表示 `DEBUG_PROPERTY_INFO::bstrValue` 中的值无效。  
   
  DBG_ATTRIB_VALUE_NAT  
- 指示中的值`DEBUG_PROPERTY_INFO::bstrValue`是"*不是一件事情*"(NAT)。 NAT 介绍 Intel 64 位处理器指示延迟推理异常的寄存器标志。  
+ 指示中的值 `DEBUG_PROPERTY_INFO::bstrValue` 为 "*不是事情*" (NAT) 。 NAT 描述了指示延迟的推理异常的 Intel 64 位处理器中的寄存器标志。  
   
  DBG_ATTRIB_VALUE_AUTOEXPANDED  
- 指示在值`DEBUG_PROPERTY_INFO::bstrValue`可能已自动扩展。  
+ 指示中的值 `DEBUG_PROPERTY_INFO::bstrValue` 可能已自动展开。  
   
  DBG_ATTRIB_VALUE_TIMEOUT  
- 指示，评估已超时。  
+ 指示计算已超时。  
   
  DBG_ATTRIB_VALUE_RAW_STRING  
- 指示在值`DEBUG_PROPERTY_INFO::bstrValue`可以由原始字符串。  
+ 指示中的值 `DEBUG_PROPERTY_INFO::bstrValue` 可以由原始字符串表示。  
   
  DBG_ATTRIB_VALUE_CUSTOM_VIEWER  
- 指示此属性具有与之关联的至少一个自定义查看器。  
+ 指示此属性至少具有一个与之关联的自定义查看器。  
   
  DBG_ATTRIB_ACCESS_NONE  
- 指示一个对象，既没有`public`， `private`，也不`protected`类型访问。  
+ 指示一个对象，该对象既没有 `public` 、 `private` ，也没有 `protected` 类型访问。  
   
  DBG_ATTRIB_ACCESS_PUBLIC  
  表示对象具有公共访问。  
@@ -232,10 +232,10 @@ public const int DBG_ATTRIB_MULTI_CUSTOM_VIEWERS = 0x0001000000000000
  表示对象具有最终访问。  
   
  DBG_ATTRIB_ACCESS_ALL  
- 掩码中提取的访问特性从`DBG_ATTRIB_FLAGS`。  
+ 要从中提取访问属性的掩码 `DBG_ATTRIB_FLAGS` 。  
   
  DBG_ATTRIB_STORAGE_NONE  
- 指示不存在指定的存储类型。  
+ 指示未指定存储类型。  
   
  DBG_ATTRIB_STORAGE_GLOBAL  
  表示全局存储。  
@@ -244,77 +244,77 @@ public const int DBG_ATTRIB_MULTI_CUSTOM_VIEWERS = 0x0001000000000000
  表示静态存储。  
   
  DBG_ATTRIB_STORAGE_REGISTER  
- 表示存储在寄存器中。  
+ 指示寄存器中的存储。  
   
  DBG_ATTRIB_STORAGE_ALL  
- 掩码中提取的存储属性`DBG_ATTRIB_FLAGS`。  
+ 要从中提取存储属性的掩码 `DBG_ATTRIB_FLAGS` 。  
   
  DBG_ATTRIB_TYPE_NONE  
  指示没有类型修饰符。  
   
  DBG_ATTRIB_TYPE_VIRTUAL  
- 指示对象的类型为虚拟。  
+ 指示对象的类型为虚拟对象。  
   
  DBG_ATTRIB_TYPE_CONSTANT  
  表示对象的类型是常量。  
   
  DBG_ATTRIB_TYPE_SYNCHRONIZED  
- 指示同步的对象的类型。  
+ 指示对象的类型已同步。  
   
  DBG_ATTRIB_TYPE_VOLATILE  
- 指示对象的类型是易失性。  
+ 指示对象的类型是可变的。  
   
  DBG_ATTRIB_TYPE_ALL  
- 掩码中提取的类型属性`DBG_ATTRIB_FLAGS`。  
+ 要从中提取类型特性的掩码 `DBG_ATTRIB_FLAGS` 。  
   
  DBG_ATTRIB_DATA  
- 指示此对象为数据字段。  
+ 指示此对象是一个数据字段。  
   
  DBG_ATTRIB_METHOD  
- 指示此对象是一种方法。  
+ 指示此对象是一个方法。  
   
  DBG_ATTRIB_PROPERTY  
- 指示此对象是一个属性。  
+ 指示此对象为属性。  
   
  DBG_ATTRIB_CLASS  
  指示此对象是一个类。  
   
  DBG_ATTRIB_BASECLASS  
- 指示此对象的基类。  
+ 指示此对象是一个基类。  
   
  DBG_ATTRIB_INTERFACE  
- 指示此对象是一个接口。  
+ 指示此对象为接口。  
   
  DBG_ATTRIB_INNERCLASS  
- 指示此对象是一个内部类。  
+ 指示此对象是内部类。  
   
  DBG_ATTRIB_MOSTDERIVED  
- 指示此对象为*派生程度最高*。 术语"*派生程度最高*"意味着该对象的实际类型而非其引用的类型。  
+ 指示此对象为 "*派生程度最高*"。 术语 "*派生程度最高*" 表示对象的实际类型，而不是其引用的类型。  
   
  DBG_ATTRIB_CHILD_ALL  
- 指示的掩码`DBG_ATTRIB_DATA`通过`DBG_ATTRIB_MOSTDERIVED`。  
+ 指示的掩码 `DBG_ATTRIB_DATA` `DBG_ATTRIB_MOSTDERIVED` 。  
   
  DBG_ATTRIB_MULTI_CUSTOM_VIEWERS  
- 指示该对象具有与之关联的多个自定义查看器。  
+ 指示对象具有多个关联的自定义查看器。  
   
 ## <a name="remarks"></a>备注  
   
 > [!NOTE]
-> 实际的程序集的 C# 中未定义此枚举中的值。 相反，您必须将定义复制到您的源文件。  
+> 此枚举中的值实际上并不是在 c # 的程序集中定义的。 相反，您必须将定义复制到您的源文件中。  
   
- 这些标志也用于筛选对象，例如的子级时作为参数传递[EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md)。 可能的按位组合值`OR`。  
+ 这些标志还用于筛选对象的子对象，例如，将作为参数传递给 [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md)。 值可以与按位组合 `OR` 。  
   
- `DBG_ATTRIB_VALUE_CUSTOM_VIEWER`标志，则为表示[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]来获取[IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md)从接口[IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)接口并调用[GetCustomViewerList](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md)有关自定义查看器的列表。  
+ `DBG_ATTRIB_VALUE_CUSTOM_VIEWER`标志是为了 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 从[IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)接口获取[IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md)接口，并为自定义查看器的列表调用[GetCustomViewerList](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md) 。  
   
 ## <a name="requirements"></a>要求  
- 标头： msdbg.h  
+ 标头： msdbg  
   
- 命名空间:Microsoft.VisualStudio.Debugger.Interop  
+ 命名空间： VisualStudio  
   
- 程序集：Microsoft.VisualStudio.Debugger.Interop.dll  
+ 程序集： Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>请参阅  
- [枚举](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>另请参阅  
+ [计数](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)   
  [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md)   
  [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)   

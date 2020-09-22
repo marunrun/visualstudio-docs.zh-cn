@@ -14,12 +14,12 @@ manager: jillfra
 ms.workload:
 - uwp
 monikerRange: vs-2017
-ms.openlocfilehash: 524eb76696414cbbdba72266cc732ccb7e089f86
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.openlocfilehash: 2945ef9879e83567f37ebe410ba9f265bfd64760
+ms.sourcegitcommit: 14637be49401f56341c93043eab560a4ff6b57f6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85537236"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90075452"
 ---
 # <a name="analyze-energy-use-in-uwp-apps"></a>分析 UWP 应用中的能量使用
 
@@ -91,7 +91,7 @@ if (performance && performance.mark) {
 
 1. 在“调试”  菜单中，选择 “启动诊断（不调试）”。
 
-     ![在诊断中心选择“能量消耗”](../profiling/media/energyprof_diagnosticshub.png "ENERGYPROF_DiagnosticsHub")
+     ![在性能探查器中选择“能量消耗”](../profiling/media/energyprof_diagnosticshub.png "ENERGYPROF_DiagnosticsHub")
 
 2. 选择 **“能耗”** ，然后选择 **“启动”** 。
 
@@ -113,7 +113,7 @@ if (performance && performance.mark) {
 
 2. 从 **“选择已安装的应用程序包”** 列表中选择目标。
 
-3. 选择诊断中心页面上的 **“能耗”** 。
+3. 在“性能探查器”页上选择“能量消耗”。
 
 4. 选择 **“启动”** 开始分析。
 

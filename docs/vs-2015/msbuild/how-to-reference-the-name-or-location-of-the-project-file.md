@@ -18,11 +18,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: eae8a32d4587b71f238c023d08a1328ce83ba37d
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63431395"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840663"
 ---
 # <a name="how-to-reference-the-name-or-location-of-the-project-file"></a>如何：引用项目文件的名称或位置
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "63431395"
   
 #### <a name="to-use-the-msbuildprojectname-property"></a>使用 MSBuildProjectName 属性  
   
-- 使用 $() 表示法在项目文件中引用属性，就像引用任何其他属性一样。 例如:  
+- 使用 $() 表示法在项目文件中引用属性，就像引用任何其他属性一样。 例如：  
   
   ```  
   <CSC Sources = "@(CSFile)"   
@@ -75,6 +75,6 @@ ms.locfileid: "63431395"
 </Project>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
 [MSBuild](msbuild.md)  
  [MSBuild 保留属性和已知属性](../msbuild/msbuild-reserved-and-well-known-properties.md)

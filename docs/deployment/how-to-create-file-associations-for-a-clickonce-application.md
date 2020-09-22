@@ -1,5 +1,6 @@
 ---
-title: 如何-为 ClickOnce 应用程序创建文件关联 |Microsoft Docs
+title: " (ClickOnce 应用创建文件关联) "
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -15,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 76ecc41a852d80319f8a171ed590eb73680d92cc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fcca57415eae6480286f457755b996f22cb6507a
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85382492"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809776"
 ---
 # <a name="how-to-create-file-associations-for-a-clickonce-application"></a>如何：为 ClickOnce 应用程序创建文件关联
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序可以与一个或多个文件扩展名相关联，这样当用户打开这些类型的文件时，应用程序将自动启动。 向应用程序添加文件扩展名支持 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 非常简单。
@@ -53,7 +54,7 @@ ms.locfileid: "85382492"
 
     有关详细信息，请参阅 [Mage.exe（清单生成和编辑工具）](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [\<fileAssociation> element](../deployment/fileassociation-element-clickonce-application.md)
 - [ClickOnce 应用程序清单](../deployment/clickonce-application-manifest.md)
 - [Mage.exe（清单生成和编辑工具）](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool)

@@ -23,12 +23,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 3825ef7d2c1c90f63a90f5028063c74332543841
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4824c358f81f2cf757f037611ed70ba9b8935130
+ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86015054"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90740152"
 ---
 # <a name="create-web-parts-for-sharepoint"></a>为 SharePoint 创建 Web 部件
   通过使用 Web 部件，你可以使用浏览器来修改 SharePoint 站点页的内容、外观和行为。 Web 部件是在 Web 部件页中运行的服务器端控件：它们是在 SharePoint 站点上显示的页的构建基块。 请参阅[构建基块：Web 部件](/previous-versions/office/developer/sharepoint-2010/ee535520(v=office.14))。
@@ -85,7 +85,7 @@ ms.locfileid: "86015054"
 
 - 可视 Web 部件不直接支持 SharePoint 服务器令牌，如 $SPUrl。 有关详细信息，请参阅 [SharePoint 解决方案疑难解答](../sharepoint/troubleshooting-sharepoint-solutions.md)主题中的“沙盒可视 Web 部件中的令牌限制”。
 
-- 沙盒解决方案中的可视 Web 部件偶尔会出现以下错误：“已拒绝沙盒代码执行请求，因为沙盒代码主机服务太忙，无法处理该请求”。 有关此错误的详细信息，请参阅 [SharePoint 开发者团队博客](https://blogs.msdn.microsoft.com/sharepointdev/2011/02/08/error-the-sandboxed-code-execution-request-was-refused-because-the-sandboxed-code-host-service-was-too-busy-to-handle-the-request-ricky-kirkham/#10149157)中的这篇博文。
+- 沙盒解决方案中的可视 Web 部件偶尔会出现以下错误：“已拒绝沙盒代码执行请求，因为沙盒代码主机服务太忙，无法处理该请求”。 有关此错误的详细信息，请参阅 [SharePoint 开发者团队博客](/archive/blogs/sharepointdev/error-the-sandboxed-code-execution-request-was-refused-because-the-sandboxed-code-host-service-was-too-busy-to-handle-the-request-ricky-kirkham#10149157)中的这篇博文。
 
 - Visual Studio 不支持服务器端 JavaScript 调试，但支持客户端 JavaScript 调试。
 
