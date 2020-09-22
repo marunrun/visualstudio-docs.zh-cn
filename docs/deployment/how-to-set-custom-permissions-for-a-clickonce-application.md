@@ -1,5 +1,6 @@
 ---
-title: 如何为 ClickOnce 应用程序设置自定义权限 |Microsoft Docs
+title: " (ClickOnce 应用程序设置自定义权限) "
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -15,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 17cd398468bd1640e50f6a58004905cfdf6c2ff0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5c9952573be69299e14dc87f345febb14cdef0ec
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85382141"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809711"
 ---
 # <a name="how-to-set-custom-permissions-for-a-clickonce-application"></a>如何：设置 ClickOnce 应用程序的自定义权限
 可以部署对 Internet 或本地 Intranet 区域使用默认权限的 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序。 或者，可以为应用程序所需的特定权限创建自定义区域。 可以通过在“项目设计器” **** 的“安全” **** 页上自定义安全权限来执行此操作。

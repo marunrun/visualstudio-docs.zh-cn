@@ -24,23 +24,23 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 50df868f0e01d49d4c49bccae32d743d5291a066
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63434899"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840684"
 ---
 # <a name="create-custom-visualizers-of-data"></a>创建数据的自定义可视化工具
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-可视化工具是组件的[!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)]调试器用户界面。 一个*可视化工具*创建对话框或另一个接口，以适合于其数据类型的方式显示变量或对象。 例如，HTML 可视化工具解释 HTML 字符串，并按照该字符串出现在浏览器窗口中时的样子显示结果；位图可视化工具解释位图结构并显示该位图结构表示的图形。 某些可视化工具允许您修改数据，还允许您查看数据。  
+可视化工具是 [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] 调试器用户界面的组件。 *可视化工具*创建一个对话框或其他界面，以根据其数据类型的方式来显示变量或对象。 例如，HTML 可视化工具解释 HTML 字符串，并按照该字符串出现在浏览器窗口中时的样子显示结果；位图可视化工具解释位图结构并显示该位图结构表示的图形。 某些可视化工具允许您修改数据，还允许您查看数据。  
   
- [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] 调试器包括六个标准可视化工具。 这些是文本、 HTML、 XML 和 JSON 可视化工具，所有这些处理字符串对象;WPF 树可视化工具，用于显示 WPF 对象可视化树; 的属性和数据集可视化工具，一种用于 DataSet、 DataView 和 DataTable 对象。 将来可以从 Microsoft Corporation 以及第三方和社区下载更多的可视化工具。 此外，你可以编写自己的可视化工具，并将它们安装在 [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] 调试器中。  
+ [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] 调试器包括六个标准可视化工具。 它们分别是文本可视化工具、HTML 可视化工具、XML 可视化工具 和 JSON 可视化工具、WPF 树可视化工具以及数据集可视化工具，前四种均用于字符串对象，第五种用于显示 WPF 对象可视化树的属性，最后一种用于 DataSet、DataView 和 DataTable 对象。 将来可以从 Microsoft Corporation 以及第三方和社区下载更多的可视化工具。 此外，你可以编写自己的可视化工具，并将它们安装在 [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] 调试器中。  
   
 > [!NOTE]
-> 在中**Store**应用，仅在标准文本支持 HTML、 XML 和 JSON 可视化工具。 不支持自定义（用户创建的）可视化工具。  
+> 在应用 **商店** 应用中，仅支持标准文本、HTML、XML 和 JSON 可视化工具。 不支持自定义（用户创建的）可视化工具。  
   
- 可视化工具在调试器中用放大镜图标表示。 请参阅中的放大镜图标时**数据提示**、 在调试器变量窗口中，或在**快速监视**对话框中，可以单击该放大镜以选择适合于数据类型的可视化工具相应的对象。  
+ 可视化工具在调试器中用放大镜图标表示。 在 **数据提示**中，在调试器变量窗口或 " **快速监视** " 对话框中看到放大镜图标时，可以单击放大镜来选择适合相应对象的数据类型的可视化工具。  
   
  Compact Framework 上不支持可视化工具。  
   

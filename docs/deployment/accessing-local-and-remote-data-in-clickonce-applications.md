@@ -1,5 +1,6 @@
 ---
-title: 在 ClickOnce 应用程序中访问本地数据和远程数据 |Microsoft Docs
+title: " (ClickOnce 应用访问本地 & 远程数据) "
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2c2a4f2e9fe66ab049113111f13338cdced4e39e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e93c8479e917e74d31c3eedbb00d9d5911442b92
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "66746071"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810466"
 ---
 # <a name="access-local-and-remote-data-in-clickonce-applications"></a>在 ClickOnce 应用程序中访问本地数据和远程数据
 大多数应用程序使用或生成数据。 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 为你提供多种选项用于在本地及远程读取和写入数据。
@@ -109,4 +110,4 @@ ms.locfileid: "66746071"
 
 ## <a name="see-also"></a>另请参阅
 
-- [如何：将数据文件包括到 ClickOnce 应用程序中](../deployment/how-to-include-a-data-file-in-a-clickonce-application.md)
+- [如何：在 ClickOnce 应用程序中包含数据文件](../deployment/how-to-include-a-data-file-in-a-clickonce-application.md)

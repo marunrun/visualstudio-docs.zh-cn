@@ -1,5 +1,5 @@
 ---
-title: IDebugCoreServer2::GetMachineUtilities_V7 | Microsoft Docs
+title: IDebugCoreServer2：： GetMachineUtilities_V7 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,19 +13,19 @@ caps.latest.revision: 18
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 131f5a5f276b3f93d2ede3d088556b6832cc3651
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63445288"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840772"
 ---
-# <a name="idebugcoreserver2getmachineutilitiesv7"></a>IDebugCoreServer2::GetMachineUtilities_V7
+# <a name="idebugcoreserver2getmachineutilities_v7"></a>IDebugCoreServer2::GetMachineUtilities_V7
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
 此方法获取服务器的计算机实用程序。  
   
 > [!NOTE]
-> 此方法已过时： 不要使用 ([!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]始终返回`E_NOTIMPL`如果调用此方法)。 保留历史原因。  
+> 此方法已过时： [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] `E_NOTIMPL` 如果) 调用此方法，请不要使用 (总是返回。 由于历史原因，将保留它。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,15 +41,15 @@ int GetMachineUtilities_V7(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>parameters  
  `ppUtil`  
- [out]返回`IDebugMDMUtil2_V7`表示机实用程序信息的接口。  
+ 弄返回 `IDebugMDMUtil2_V7` 表示计算机实用工具信息的接口。  
   
 ## <a name="return-value"></a>返回值  
- 始终返回`E_NOTIMPL`，指示未实现方法。  
+ 始终返回 `E_NOTIMPL` ，指示未实现该方法。  
   
 ## <a name="remarks"></a>备注  
- [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 始终返回`E_NOTIMPL`如果调用此方法。  
+ [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]`E_NOTIMPL`如果调用此方法，则始终返回。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md)

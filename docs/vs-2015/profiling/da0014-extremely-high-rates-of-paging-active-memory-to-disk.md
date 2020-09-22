@@ -15,19 +15,19 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: dbf391f96cd21f0c473589d4992083963ff65d55
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63440918"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840614"
 ---
 # <a name="da0014-extremely-high-rates-of-paging-active-memory-to-disk"></a>DA0014：以分页方式将活动内存移到磁盘的发生率极高
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 规则 Id |DA0014 |  
 |类别 |内存和分页 |  
-|分析方法 |所有 |  
-|消息 |发生了极高比率的分页活动内存到磁盘。 应用程序可能受内存限制。|  
+|分析方法 |All |  
+|消息 |出现从活动内存到磁盘的分页速率极高。 应用程序可能受内存限制。|  
 |规则类型 |警告 |  
   
  使用采样法、.NET 内存或资源争用方法进行分析时，必须至少收集 25 个样本才能触发此规则。  
@@ -35,7 +35,7 @@ ms.locfileid: "63440918"
 ## <a name="cause"></a>原因  
  在分析运行中收集的系统性能数据表明：在整个分析运行期间，到\来自磁盘的活动内存的分页速率极高。 此级别的分页速率通常会影响应用程序性能和响应能力。 请考虑通过修改算法来减少内存分配。 可能还需要考虑应用程序的内存要求。 在具有更多内存的计算机上再次运行分析。  
   
-## <a name="rule-description"></a>规则说明  
+## <a name="rule-description"></a>规则描述  
  物理内存不足可能引起到磁盘的过度分页。 如果分页操作控制对分页文件所在物理磁盘的使用，它们将减缓对同一磁盘的其他面向应用程序的磁盘操作。  
   
  通常以批量分页操作从磁盘中读取页面或将页面写入磁盘。 例如，页面输出数/秒通常比页面写入数/秒大得多。 因为每秒页面输出还包括系统文件缓存中已更改的数据页面。 但是，确定哪个进程直接对分页负责及原因并不简单。  

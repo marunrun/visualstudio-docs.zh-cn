@@ -17,11 +17,11 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 9743fa7defbbf3321636d2ba4799454713a647db
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63432786"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840816"
 ---
 # <a name="how-to-collect-windows-counter-data"></a>如何：收集 Windows 计数器数据
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -53,7 +53,7 @@ Windows 计数器是在分析期间可按设定的时间间隔收集的系统性
   
 8. 单击“应用”。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [配置性能会话](../profiling/configuring-performance-sessions.md)   
  [性能会话属性](../profiling/performance-session-properties.md)   
  [CPU 和 Windows 计数器](../profiling/cpu-and-windows-counters.md)

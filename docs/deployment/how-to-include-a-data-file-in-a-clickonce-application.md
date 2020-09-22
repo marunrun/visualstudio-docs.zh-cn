@@ -1,5 +1,6 @@
 ---
-title: 如何-在 ClickOnce 应用程序中包含数据文件 |Microsoft Docs
+title: 在 ClickOnce 应用程序中包含数据文件
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -16,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7630d1b363afa7caeae361f607f4b73929fbba1b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cdc2154876724feb5c6a0329a2acc5df7ac80fbc
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85382401"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809141"
 ---
 # <a name="how-to-include-a-data-file-in-a-clickonce-application"></a>如何：将数据文件包括到 ClickOnce 应用程序中
 安装的每个 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序在目标计算机的本地磁盘上都分配有一个数据目录，应用程序可以在其中管理自己的数据。 数据文件可以包含任何类型的文件：文本文件、XML 文件，甚至 Microsoft Access*数据库 () 文件。* 下面的过程演示如何向应用程序中添加任何类型的数据文件 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 。
@@ -82,5 +83,5 @@ ms.locfileid: "85382401"
 
      必须对部署清单进行重新签名，因为其应用程序清单的哈希已更改。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [在 ClickOnce 应用程序中访问本地数据和远程数据](../deployment/accessing-local-and-remote-data-in-clickonce-applications.md)

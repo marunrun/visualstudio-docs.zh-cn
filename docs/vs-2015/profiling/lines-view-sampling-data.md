@@ -12,11 +12,11 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: a2e5511e9e2e1c863db8f696a70195573d75429f
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63433877"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840784"
 ---
 # <a name="lines-view---sampling-data"></a>“行”视图 - 采样数据
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -58,9 +58,9 @@ ms.locfileid: "63433877"
 |**源行结束**|源文件中收集此样本的的结束行号。|  
 |**源字符开始**|源文件行中收集此样本的起始字符的偏移量。|  
 |**源字符结束**|源文件行中收集此样本的结束字符的偏移量。|  
-|**行名**|由探查器生成的行标识符，语法为：`Source File`**;[**`Line Number Start`**,**`Character Start`**]->;[**`Line Number End`**,**`Character End`**]**|  
+|**行名**|由探查器生成的行标识符，语法为：`Source File` **;[** `Line Number Start` **,** `Character Start` **]->;[** `Line Number End` **,** `Character End` **]**|  
 |**独占样本数**|执行函数行时收集的样本总数。|  
 |**独占样本数百分比**|执行函数行时在分析运行期间收集的所有样本数的百分比。|  
   
-## <a name="see-also"></a>请参阅  
- [“行”视图 - 采样](../profiling/lines-view-dotnet-memory-sampling-data.md)
+## <a name="see-also"></a>另请参阅  
+ ["行" 视图-采样](../profiling/lines-view-dotnet-memory-sampling-data.md)
