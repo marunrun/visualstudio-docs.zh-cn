@@ -16,11 +16,11 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: d4bc6eeb208ab6d80168431f110f0f6169abbc82
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63442140"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840451"
 ---
 # <a name="how-to-specify-additional-instrumentation-options"></a>如何：指定其他检测选项
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -36,16 +36,16 @@ ms.locfileid: "63442140"
   
 ### <a name="to-specify-additional-instrumentation-option"></a>指定其他检测选项  
   
-1. 在“性能资源管理器”中，选择“性能会话”，然后右键单击并选择“属性”。  
+1. 在“性能资源管理器”中，选择“性能会话”，然后右键单击并选择“属性”  。  
   
-2. 在“属性页”中，单击“高级”属性。  
+2. 在“属性页”中 ，单击“高级”属性。  
   
 3. 在“其他检测选项”框中键入选项。  
   
      例如，使用 /CONTROL:THREAD 指定分析级别。 有关选项的完整列表，请参阅 [VSInstr](../profiling/vsinstr.md)。  
   
-4. 单击 **“确定”**。  
+4. 单击“确定”。   
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [配置性能会话](../profiling/configuring-performance-sessions.md)   
- [从命令行分析](../profiling/using-the-profiling-tools-from-the-command-line.md)
+ [通过命令行进行分析](../profiling/using-the-profiling-tools-from-the-command-line.md)
