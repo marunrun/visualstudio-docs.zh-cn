@@ -1,5 +1,5 @@
 ---
-title: 如何-配置 ClickOnce 信任提示行为 |Microsoft Docs
+title: 配置 ClickOnce 信任提示行为 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7417f9cdce21dc09aeaf306b55834ad7d3a125a6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5f4becc0244f42507b581029b2dfe21c71570db6
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85382544"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90852226"
 ---
 # <a name="how-to-configure-the-clickonce-trust-prompt-behavior"></a>如何：配置 ClickOnce 信任提示行为
 您可以配置 ClickOnce 信任提示，以控制最终用户是否提供安装 ClickOnce 应用程序的选项，例如 Windows 窗体应用程序、Windows Presentation Foundation 应用程序、控制台应用程序、WPF 浏览器应用程序和 Office 解决方案。 可以通过在每个最终用户的计算机上设置注册表项来配置信任提示。
@@ -222,7 +222,7 @@ ms.locfileid: "85382544"
 
 3. 生成并运行应用程序。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [保护 ClickOnce 应用程序](../deployment/securing-clickonce-applications.md)
 - [ClickOnce 应用程序的代码访问安全性](../deployment/code-access-security-for-clickonce-applications.md)
 - [ClickOnce 和 Authenticode](../deployment/clickonce-and-authenticode.md)

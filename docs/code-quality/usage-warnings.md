@@ -1,29 +1,29 @@
 ---
-title: 用法警告
+title: 使用规则
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - vs.codeanalysis.usagerules
 helpviewer_keywords:
-- warnings, usage
-- managed code analysis warnings, usage warnings
-- usage warnings
+- rules, usage
+- managed code analysis rules, usage rules
+- usage rules
 ms.assetid: fe7dc2a3-289d-4bf7-a1e4-0947a81287c4
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dd2f5919b0f48290ecc14cf71295e2af0bac4748
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: 45dd58978bb37dd66023d8a28b9babf017bec262
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89509713"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90806182"
 ---
-# <a name="usage-warnings"></a>用法警告
+# <a name="usage-rules"></a>使用规则
 
-使用警告支持正确使用 .NET。
+使用规则支持正确使用 .NET。
 
 ## <a name="in-this-section"></a>本节内容
 

@@ -13,11 +13,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 3f9a6f7985e3ebb3e77dcc605157f75e00a0842b
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63426040"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840446"
 ---
 # <a name="msbuild-transforms"></a>MSBuild 转换
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "63426040"
 转换是指采用一对一的方式将一个项列表转换为另一项列表。 通过转换，不仅项目可以转换项列表，而且目标还可以标识其输入和输出之间的直接映射。 本主题介绍转换以及 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 如何使用转换更有效地生成项目。  
   
 ## <a name="transform-modifiers"></a>转换修饰符  
- 转换并不是任意的，而是受特殊语法的限制，其中所有的转换修饰符都必须采用 %(ItemMetaDataName) 格式。 任何项元数据都可用作转换修饰符。 这包括在创建每个项时为其分配的常见项元数据。 要获得常见项元数据的列表，请参阅[常见项元数据](../msbuild/msbuild-well-known-item-metadata.md)。  
+ 转换并不是任意的，而是受特殊语法的限制，其中所有的转换修饰符都必须采用 %(ItemMetaDataName) 格式**。 任何项元数据都可用作转换修饰符。 这包括在创建每个项时为其分配的常见项元数据。 有关众所周知的项元数据的列表，请参阅众所周知 [的项元数据](../msbuild/msbuild-well-known-item-metadata.md)。  
   
  在以下示例中，.resx 文件列表会转换为 .resources 文件列表。 %(Filename) 转换修饰符指定每个 .resources 文件与相应的 .resx 文件具有相同的文件名。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "63426040"
 ## <a name="dependency-analysis"></a>依赖项分析  
  转换可保证在转换后的项列表和原来的项列表之间存在一对一的映射关系。 因此，如果目标创建的输出转换为输入，[!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 就可分析输入和输出的时间戳，并确定是否跳过、生成或部分重新生成目标。  
   
- 在以下示例的[复制任务](../msbuild/copy-task.md)中，`BuiltAssemblies` 项列表中的每个文件都会映射到该任务目标文件夹中的某个文件，使用 `Outputs` 属性中的转换可指定该文件。 如果 `BuiltAssemblies` 项列表中的某个文件发生更改，则 `Copy` 任务会仅针对已更改的文件运行，并跳过所有其他文件。 有关依赖项分析和如何使用转换的详细信息，请参阅[如何：以增量方式生成](../msbuild/how-to-build-incrementally.md)。  
+ 在以下示例中的 [复制任务](../msbuild/copy-task.md) 中，项列表中的每个文件都 `BuiltAssemblies` 映射到任务目标文件夹中的文件，该文件是通过在属性中使用转换指定的 `Outputs` 。 如果 `BuiltAssemblies` 项列表中的某个文件发生更改，则 `Copy` 任务会仅针对已更改的文件运行，并跳过所有其他文件。 有关依赖关系分析以及如何使用转换的详细信息，请参阅 [如何：增量生成](../msbuild/how-to-build-incrementally.md)。  
   
 ```  
 <Target Name="CopyOutputs"  
@@ -108,7 +108,7 @@ relativedir: sub1\sub2\sub3\
 extension: .xsd  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [MSBuild 概念](../msbuild/msbuild-concepts.md)   
- [MSBuild 参考](../msbuild/msbuild-reference.md)   
+ [MSBuild 引用](../msbuild/msbuild-reference.md)   
  [如何：增量生成](../msbuild/how-to-build-incrementally.md)

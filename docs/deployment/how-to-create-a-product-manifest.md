@@ -1,5 +1,5 @@
 ---
-title: 如何-创建产品清单 |Microsoft Docs
+title: 创建产品清单 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f0f4302756b089376eca8926453399768faaf58f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 97ec49438ce2382336b1b8a6f8355bd092486c2d
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85382505"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90852213"
 ---
 # <a name="how-to-create-a-product-manifest"></a>如何：创建产品清单
 若要为应用程序部署必备组件，可以创建一个引导程序包。 引导程序包包含单个产品清单文件，但每个区域设置都包含包清单。 包清单包含包的特定于本地化的方面。 这包括字符串、最终用户许可协议和语言包。

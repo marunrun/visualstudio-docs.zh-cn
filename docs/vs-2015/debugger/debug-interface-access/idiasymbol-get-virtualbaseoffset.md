@@ -1,5 +1,5 @@
 ---
-title: 'Idiasymbol:: Get_virtualbaseoffset |Microsoft Docs'
+title: IDiaSymbol：： get_virtualBaseOffset |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: c9ff5e8e65e46f9c42c5ea149a5bc5025b83d82b
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64833807"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840795"
 ---
-# <a name="idiasymbolgetvirtualbaseoffset"></a>IDiaSymbol::get_virtualBaseOffset
+# <a name="idiasymbolget_virtualbaseoffset"></a>IDiaSymbol::get_virtualBaseOffset
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-检索虚拟函数的虚函数表中的偏移量。  
+检索虚拟函数的虚拟函数表中的偏移量。  
   
 ## <a name="syntax"></a>语法  
   
@@ -33,15 +33,15 @@ HRESULT get_virtualBaseOffset ( 
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>parameters  
  `pRetVal`  
- [out]虚函数的虚函数表中返回的偏移量。  
+ 弄返回虚拟函数的虚拟函数表中的偏移量。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回`S_FALSE`或错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回 `S_FALSE` 错误代码。  
   
 > [!NOTE]
-> 返回值为`S_FALSE`表示该属性不是可用于符号。  
+> 返回值 `S_FALSE` 意味着该属性对符号不可用。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

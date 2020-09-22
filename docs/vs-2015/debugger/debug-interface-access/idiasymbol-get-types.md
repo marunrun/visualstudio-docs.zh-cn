@@ -1,5 +1,5 @@
 ---
-title: 'Idiasymbol:: Get_types |Microsoft Docs'
+title: IDiaSymbol：： get_types |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 813dcd692669d823548e52ce6bb7eccc9546de61
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64832255"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840777"
 ---
-# <a name="idiasymbolgettypes"></a>IDiaSymbol::get_types
+# <a name="idiasymbolget_types"></a>IDiaSymbol::get_types
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-检索此符号的特定于编译器的类型的数组。  
+检索此符号的编译器特定类型的数组。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,21 +35,21 @@ HRESULT get_types ( 
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>parameters  
  `cTypes`  
- [in]若要保存的数据缓冲区的大小。  
+ 中用于保存数据的缓冲区大小。  
   
  `pcTypes`  
- [out]返回的类型编写的或者，如果`types`参数是`NULL`，然后可用类型的总数。  
+ 弄返回写入的类型的数目，或者如果 `types` 参数为 `NULL` ，则返回可用的类型总数。  
   
  `types[]`  
- [out]数组，它是在用来填充[IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)表示此符号的所有类型的对象。  
+ 弄要使用表示此符号的所有类型的 [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) 对象填充的数组。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回`S_FALSE`或错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回 `S_FALSE` 错误代码。  
   
 > [!NOTE]
-> 返回值为`S_FALSE`表示该属性不是可用于符号。  
+> 返回值 `S_FALSE` 意味着该属性对符号不可用。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

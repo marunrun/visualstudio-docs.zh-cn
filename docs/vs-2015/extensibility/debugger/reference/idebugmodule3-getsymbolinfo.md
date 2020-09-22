@@ -1,5 +1,5 @@
 ---
-title: IDebugModule3::GetSymbolInfo | Microsoft Docs
+title: IDebugModule3：： GetSymbolInfo |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -14,16 +14,16 @@ caps.latest.revision: 18
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 48dd08b8ef1a8b32497d03dc7989b32a22ee5a9c
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63426358"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840794"
 ---
 # <a name="idebugmodule3getsymbolinfo"></a>IDebugModule3::GetSymbolInfo
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-检索的符号，以及搜索每个路径的结果的搜索路径的列表。  
+检索搜索符号以及搜索每个路径的结果的路径列表。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,31 +42,31 @@ int GetSymbolInfo(
   
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>parameters  
  `dwFields`  
- [in]中的标志的组合[SYMBOL_SEARCH_INFO_FIELDS](../../../extensibility/debugger/reference/symbol-search-info-fields.md)枚举，它指定的哪些字段`pInfo`要填充的。  
+ 中 [SYMBOL_SEARCH_INFO_FIELDS](../../../extensibility/debugger/reference/symbol-search-info-fields.md) 枚举中的标志的组合， `pInfo` 用于指定要填写的字段。  
   
  `pInfo`  
- [out]一个[MODULE_SYMBOL_SEARCH_INFO](../../../extensibility/debugger/reference/module-symbol-search-info.md)其成员是否使用指定的信息填充的结构。 如果这是一个 null 值，此方法返回`E_INVALIDARG`。  
+ 弄一个 [MODULE_SYMBOL_SEARCH_INFO](../../../extensibility/debugger/reference/module-symbol-search-info.md) 结构，其成员将使用指定的信息进行填充。 如果这是 null 值，则此方法返回 `E_INVALIDARG` 。  
   
 ## <a name="return-value"></a>返回值  
- 如果此方法成功，它将返回`S_OK`; 否则为它将返回错误代码。  
+ 如果该方法成功，则返回 `S_OK` ; 否则返回错误代码。  
   
 > [!NOTE]
-> 返回的字符串 (在`MODULE_SYMBOL_SEARCH_INFO`结构) 可能是空即使`S_OK`返回。 在这种情况下，没有要返回的搜索信息。  
+> `MODULE_SYMBOL_SEARCH_INFO`即使返回，结构) 中返回的字符串 (也可能为空 `S_OK` 。 在这种情况下，没有要返回的搜索信息。  
   
 ## <a name="remarks"></a>备注  
- 如果`bstrVerboseSearchInfo`字段的`MODULE_SYMBOL_SEARCH_INFO`结构不为空，则它包含搜索路径和该搜索的结果的列表。 列表格式的路径后, 跟省略号 （"..."） 后, 跟结果。 如果有多个路径结果对，然后由"\r\n"（回车符-/ 换行） 对分隔每个对。 该模式如下所示：  
+ 如果 `bstrVerboseSearchInfo` 结构的字段 `MODULE_SYMBOL_SEARCH_INFO` 不为空，则它包含搜索的路径列表和该搜索的结果。 该列表的格式为路径，后面跟有省略号 ( "..." ) ，然后是结果。 如果有多个路径结果对，则每个对都由 "\r\n" (回车/换行) 对分隔。 模式如下所示：  
   
- \<path>...\<result>\r\n\<path>...\<result>\r\n\<path>...\<result>  
+ \<path>...\<result>\r\n \<path> ... \<result>\r\n \<path> .。。\<result>  
   
- 请注意，最后一项没有 \r\n 序列。  
+ 请注意，最后一个条目没有 \r\n 序列。  
   
 ## <a name="example"></a>示例  
- 在此示例中，此方法返回具有三个不同的搜索结果的三个路径。 每个行结尾的回车/换行符对。 示例输出只作为单个字符串输出搜索结果。  
+ 在此示例中，此方法返回三个路径，其中包含三个不同的搜索结果。 每行都以回车符/换行符对结尾。 示例输出只是以单个字符串的形式打印搜索结果。  
   
 > [!NOTE]
-> 所有内容的"..."在行结束之前，紧跟状态结果。  
+> 状态结果是紧跟在 "..."直到行的末尾。  
   
 ```cpp#  
 void ShowSymbolSearchResults(IDebugModule3 *pIDebugModule3)  
@@ -86,8 +86,8 @@ void ShowSymbolSearchResults(IDebugModule3 *pIDebugModule3)
   
  **c:\symbols\user32.pdb...找不到文件。**  
 **c:\winnt\symbols\user32.pdb...版本不匹配。**  
-**\\\symbols\symbols\user32.dll\0a8sd0ad8ad\user32.pdb...加载符号。**   
-## <a name="see-also"></a>请参阅  
+**\\\symbols\symbols\user32.dll \0a8sd0ad8ad\user32.pdb.。。已加载符号。**   
+## <a name="see-also"></a>另请参阅  
  [SYMBOL_SEARCH_INFO_FIELDS](../../../extensibility/debugger/reference/symbol-search-info-fields.md)   
  [MODULE_SYMBOL_SEARCH_INFO](../../../extensibility/debugger/reference/module-symbol-search-info.md)   
  [IDebugModule3](../../../extensibility/debugger/reference/idebugmodule3.md)

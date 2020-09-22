@@ -15,11 +15,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 15a6eeea6ebf75513419cc763b2e29a6b6264391
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63436797"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840728"
 ---
 # <a name="item-metadata-in-task-batching"></a>任务批处理中的项元数据
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -135,7 +135,7 @@ ms.locfileid: "63436797"
  `Number: 3 -- Items in ExampColl: Item3 ExampColl2: Item6`  
   
 ## <a name="batching-one-item-at-a-time"></a>一次对一个项进行批处理  
- 此外，还可对创建时分配给每个项的常见项元数据执行批处理。 这保证了集合中每个项具有用于批处理的元数据。 `Identity` 元数据值对每个项都唯一，可用于将项列表中的每个项划分为单独的批。 若要获得常见项元数据的完整列表，请参阅[常见项元数据](../msbuild/msbuild-well-known-item-metadata.md)。  
+ 此外，还可对创建时分配给每个项的常见项元数据执行批处理。 这保证了集合中每个项具有用于批处理的元数据。 `Identity` 元数据值对每个项都唯一，可用于将项列表中的每个项划分为单独的批。 有关众所周知的项元数据的完整列表，请参阅众所周知的 [项元数据](../msbuild/msbuild-well-known-item-metadata.md)。  
   
  以下示例演示了如何一次对项列表中的每个项执行批处理。 由于每个项的 `Identity` 元数据值都是唯一的，因此 `ExampColl` 项列表被划分为六个批，其中每个批包含项目列表的一个项。 若 `Text` 属性中存在 `%(Identity)`，则会通知 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 应执行批处理。  
   
@@ -220,10 +220,10 @@ Identity: "Item6" -- Items in ExampColl: Item6
 Items in ExampColl: Item2;Item5  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [常见项元数据](../msbuild/msbuild-well-known-item-metadata.md)   
- [Item 元素 (MSBuild)](../msbuild/item-element-msbuild.md)   
- [ItemMetadata 元素 (MSBuild)](../msbuild/itemmetadata-element-msbuild.md)   
+## <a name="see-also"></a>另请参阅  
+ [众所周知的项元数据](../msbuild/msbuild-well-known-item-metadata.md)   
+ [Item 元素 (MSBuild) ](../msbuild/item-element-msbuild.md)   
+ [ItemMetadata 元素 (MSBuild) ](../msbuild/itemmetadata-element-msbuild.md)   
  [批处理](../msbuild/msbuild-batching.md)   
  [MSBuild 概念](../msbuild/msbuild-concepts.md)   
- [MSBuild 参考](../msbuild/msbuild-reference.md)
+ [MSBuild 引用](../msbuild/msbuild-reference.md)
