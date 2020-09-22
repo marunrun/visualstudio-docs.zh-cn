@@ -11,86 +11,86 @@ caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: ac681879e0f7ad0902358be23d74d57ccee406f8
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63435972"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840351"
 ---
 # <a name="how-to-create-custom-text-markers"></a>如何：创建自定义文本标记
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-如果你想要创建自定义文本标记，以强调或组织代码，必须执行以下步骤：  
+若要创建自定义文本标记以强调或组织代码，必须执行以下步骤：  
   
-- 注册新文本标记，以便其他工具可以访问它  
+- 注册新的文本标记，以便其他工具可以访问它  
   
-- 提供的默认实现和文本标记的配置  
+- 提供文本标记的默认实现和配置  
   
-- 创建一个服务用于其他进程可用于使文本标记的使用  
+- 创建可由其他进程用来利用文本标记的服务  
   
-  有关如何将文本标记应用到某个区域的代码的详细信息，请参阅[如何：使用文本标记](../extensibility/how-to-use-text-markers.md)。  
+  有关如何对代码区域应用文本标记的详细信息，请参阅 [如何：使用文本标记](../extensibility/how-to-use-text-markers.md)。  
   
-### <a name="to-register-a-custom-marker"></a>若要注册自定义标记  
+### <a name="to-register-a-custom-marker"></a>注册自定义标记  
   
-1. 创建一个注册表项，如下所示：  
+1. 按如下所示创建注册表项：  
   
-    HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\\ *\<Version>* \Text Editor\External Markers\\ *\<MarkerGUID>*  
+    HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\VisualStudio \\ *\<Version>* \Text Editor\External 标记\\*\<MarkerGUID>*  
   
-    <em>\<MarkerGUID ></em>是`GUID`用于标识要添加的标记  
+    <em>\<MarkerGUID></em>`GUID`用于标识要添加的标记的。  
   
-    *\<版本 >* 新版[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]，例如 8.0  
+    *\<Version>* 是的版本 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ，例如8。0  
   
-    *\<PackageGUID >* 是实现自动化对象的 vspackage 的 GUID。  
+    *\<PackageGUID>* 实现自动化对象的 VSPackage 的 GUID。  
   
    > [!NOTE]
-   > 根路径的 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\\ *\<版本 >* 初始化 Visual Studio shell 时，有关详细信息，请参阅时，可以使用备用根覆盖[命令行开关](../extensibility/command-line-switches-visual-studio-sdk.md)。  
+   > \\ *\<Version>* 初始化 Visual Studio shell 时，可以使用备用根覆盖 HKEY_LOCAL_MACHINE \software\microsoft\visualstudio 的根路径。有关详细信息，请参阅[命令行开关](../extensibility/command-line-switches-visual-studio-sdk.md)。  
   
-2. 创建四个值下 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\\ *\<版本 >* \Text Editor\External 标记\\ *\<MarkerGUID>*  
+2. 在 HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\VisualStudio \\ *\<Version>* \Text Editor\External 标记下创建四个值\\*\<MarkerGUID>*  
   
-   - (默认)  
+   - （默认值）  
   
    - 服务  
   
    - DisplayName  
   
-   - package  
+   - 包  
   
-   - `Default` 是 REG_SZ 类型的可选项。 设置时，该条目的值是包含一些有用的标识信息，例如"自定义文本标记"的字符串。  
+   - `Default` REG_SZ 类型的可选条目。 设置后，该条目的值是一个字符串，其中包含一些有用的标识信息，例如 "自定义文本标记"。  
   
-   - `Service` 类型为 REG_SZ 的条目包含通过 proffering 提供自定义文本标记的服务的 GUID 字符串<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerTypeProvider>。 格式为 {XXXXXX XXXX XXXX XXXX XXXXXXXXX}。  
+   - `Service` REG_SZ 类型的条目，其中包含通过 proffering 提供自定义文本标记的服务的 GUID 字符串 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerTypeProvider> 。 格式为 {XXXXXX XXXX xxxx XXXX XXXXXXXXX}。  
   
-   - `DisplayName` 类型为 REG_SZ 的条目包含自定义文本标记的名称的资源 ID。 格式为 #YYYY。  
+   - `DisplayName` REG_SZ 类型的条目，其中包含自定义文本标记的名称的资源 ID。 格式为 #YYYY。  
   
-   - `Package` 条目的类型 REG_SZ 包含`GUID`VSPackage 提供服务的服务下列出。 格式为 {XXXXXX XXXX XXXX XXXX XXXXXXXXX}。  
+   - `Package` REG_SZ 类型的输入 `GUID` ，它包含提供服务中列出的服务的 VSPackage 的。 格式为 {XXXXXX XXXX xxxx XXXX XXXXXXXXX}。  
   
-### <a name="to-create-a-custom-text-marker"></a>若要创建自定义文本标记  
+### <a name="to-create-a-custom-text-marker"></a>创建自定义文本标记  
   
 1. 实现 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsPackageDefinedTextMarkerType> 接口。  
   
-     此接口的实现定义的行为和外观的自定义标记类型。  
+     此接口的实现定义自定义标记类型的行为和外观。  
   
-     时，将调用此接口  
+     此接口在  
   
     1. 用户首次启动 IDE。  
   
-    2. 用户选择**重置默认值**按钮下**字体和颜色**中的属性页**环境**文件夹，位于左窗格中的**选项**从对话框获取**工具**IDE 的菜单。  
+    2. 用户选择 "**环境**" 文件夹中 "**字体和颜色**" 属性页下的 "**重置默认值**" 按钮，该按钮位于从 IDE 的 "**工具**" 菜单中获取的 "**选项**" 对话框的左窗格中。  
   
-2. 实现<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerTypeProvider.GetTextMarkerType%2A>方法，指定其`IVsPackageDefinedTextMarkerType`实现应用于根据返回的标记类型的方法调用中指定的 GUID。  
+2. 实现 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerTypeProvider.GetTextMarkerType%2A> 方法，指定 `IVsPackageDefinedTextMarkerType` 应根据方法调用中指定的标记类型 GUID 返回的实现。  
   
-     环境调用此方法第一次你自定义标记的类型创建，并指定标识的自定义标记类型的 GUID。  
+     在首次创建自定义标记类型时，环境将调用此方法，并指定标识自定义标记类型的 GUID。  
   
-### <a name="to-proffer-your-marker-type-as-a-service"></a>若要为服务提供标记类型  
+### <a name="to-proffer-your-marker-type-as-a-service"></a>将标记类型提供为服务  
   
-1. 调用<xref:Microsoft.VisualStudio.OLE.Interop.IOleComponentManager.QueryService%2A>方法<xref:Microsoft.VisualStudio.Shell.Interop.SProfferService>。  
+1. 调用的 <xref:Microsoft.VisualStudio.OLE.Interop.IOleComponentManager.QueryService%2A> 方法 <xref:Microsoft.VisualStudio.Shell.Interop.SProfferService> 。  
   
-     一个指向<xref:Microsoft.VisualStudio.Shell.Interop.IProfferService>返回。  
+     返回指向的指针 <xref:Microsoft.VisualStudio.Shell.Interop.IProfferService> 。  
   
-2. 调用<xref:Microsoft.VisualStudio.Shell.Interop.IProfferService.ProfferService%2A>方法，指定 GUID 标识你自定义标记类型的服务并提供指向您的实现的<xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider>接口。 你<xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider>实现应返回一个指针，向您实施的<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerTypeProvider>接口。  
+2. 调用 <xref:Microsoft.VisualStudio.Shell.Interop.IProfferService.ProfferService%2A> 方法，并指定标识自定义标记类型服务的 GUID，并提供指向接口的实现的指针 <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider> 。 你的 <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider> 实现应返回指向接口的实现的指针 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerTypeProvider> 。  
   
-     一个标识，所以你的服务将返回唯一的 cookie。 更高版本可以使用此 cookie 撤消你自定义标记类型的服务通过调用<xref:Microsoft.VisualStudio.Shell.Interop.IProfferService.RevokeService%2A>方法的<xref:Microsoft.VisualStudio.Shell.Interop.IProfferService>接口指定此 cookie 值。  
+     标识服务返回的唯一 cookie。 稍后可以通过调用 <xref:Microsoft.VisualStudio.Shell.Interop.IProfferService.RevokeService%2A> <xref:Microsoft.VisualStudio.Shell.Interop.IProfferService> 指定此 cookie 值的接口的方法，使用此 cookie 来撤消自定义标记类型服务。  
   
-## <a name="see-also"></a>请参阅  
- [旧版 API 中使用文本标记](../extensibility/using-text-markers-with-the-legacy-api.md)   
+## <a name="see-also"></a>另请参阅  
+ [将文本标记与旧版 API 一起使用](../extensibility/using-text-markers-with-the-legacy-api.md)   
  [如何：添加标准文本标记](../extensibility/how-to-add-standard-text-markers.md)   
  [如何：实现错误标记](../extensibility/how-to-implement-error-markers.md)   
  [如何：使用文本标记](../extensibility/how-to-use-text-markers.md)

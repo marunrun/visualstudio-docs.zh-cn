@@ -14,19 +14,19 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: cd1ee4c024894e5752277a5000d37745c88c4ac6
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63442106"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840593"
 ---
-# <a name="cvcalle"></a>CV_call_e
+# <a name="cv_call_e"></a>CV_call_e
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-指定的函数的调用约定。  
+指定函数的调用约定。  
   
 > [!NOTE]
-> 此处介绍了仅是最常见的枚举值。 完整的枚举是 cvconst.h 标头文件中。  
+> 此处仅介绍最常见的枚举值。 Cvconst 头文件中提供了完整的枚举。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,29 +43,29 @@ typedef enum CV_call_e { 
   
 ## <a name="elements"></a>元素  
  CV_CALL_NEAR_C  
- 指定使用近右到左推送的函数调用约定。 调用函数清除堆栈。  
+ 使用接近的右到左推送指定函数调用约定。 调用函数清除堆栈。  
   
  CV_CALL_NEAR_FAST  
- 指定使用寄存器使用几乎从左到右推式函数调用约定。 被调用的函数使用参数的字节数之和来清除堆栈。  
+ 使用与寄存器接近的从左到右推送指定函数调用约定。 被调用的函数使用参数字节的和来清除堆栈。  
   
  CV_CALL_NEAR_STD  
- 指定使用近乎标准调用 （从右到左推送） 的函数调用约定。  
+ 使用接近标准调用 (从右到左推送) 指定函数调用约定。  
   
  CV_CALL_NEAR_SYS  
- 指定通过近乎系统调用的函数调用约定。  
+ 使用近系统调用指定函数调用约定。  
   
  CV_CALL_THISCALL  
- 函数调用约定使用指定`this`调用 (`this`在寄存器中传递的指针)。  
+ 使用 `this`) 注册 (指针指定函数调用约定 `this` 。  
   
  CV_CALL_CLRCALL  
- 指定使用由公共语言运行时 (CLR) （也称为托管代码调用约定） 的函数调用约定。  
+ 指定公共语言运行时 (CLR) 使用的函数调用约定， (也称为托管代码调用约定) 。  
   
 ## <a name="remarks"></a>备注  
- 此枚举中的值返回通过调用[idiasymbol:: Get_callingconvention](../../debugger/debug-interface-access/idiasymbol-get-callingconvention.md)方法。  
+ 此枚举中的值由对 [IDiaSymbol：： get_callingConvention](../../debugger/debug-interface-access/idiasymbol-get-callingconvention.md) 方法的调用返回。  
   
 ## <a name="requirements"></a>要求  
- 标头： cvconst.h  
+ 标头： cvconst  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [枚举和结构](../../debugger/debug-interface-access/enumerations-and-structures.md)   
  [IDiaSymbol::get_callingConvention](../../debugger/debug-interface-access/idiasymbol-get-callingconvention.md)

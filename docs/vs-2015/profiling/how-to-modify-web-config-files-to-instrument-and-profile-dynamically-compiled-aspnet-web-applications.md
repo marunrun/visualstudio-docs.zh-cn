@@ -10,11 +10,11 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: d9e4fc4dfdff336b9ddcbd04bd031b48a8acc4dd
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63432607"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840435"
 ---
 # <a name="how-to-modify-webconfig-files-to-instrument-and-profile-dynamically-compiled-aspnet-web-applications"></a>如何：修改 Web.Config 文件以检测和分析动态编译的 ASP.NET Web 应用程序
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "63432607"
 > [!NOTE]
 > 使用采样分析方法时或要检测预编译的 [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] 模块时，不必修改 web.config 文件。  
   
- web.config 文件的根元素为 **configuration** 元素。 若要检测和分析动态编译的 [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Web 应用程序，必须添加或修改以下元素：  
+ web.config 文件的根是 **配置** 元素。 若要检测和分析动态编译的 [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Web 应用程序，必须添加或修改以下元素：  
   
 - **configuration/runtime/assemblyBinding/dependentAssembly** 元素，它标识控制分析的 Microsoft.VisualStudio.Enterprise.ASPNetHelper 程序集。 **dependentAssembly** 元素包含两个子元素：**assemblyIdentity** 和 **codeBase**。  
   
@@ -141,7 +141,7 @@ ms.locfileid: "63432607"
     |特性名|特性值|  
     |--------------------|---------------------|  
     |**key**|**Microsoft.VisualStudio.Enterprise.AspNetHelper.VsInstrLocation**|  
-    |**值**|`PerformanceToolsFolder` **\VSInstr.Exe**|  
+    |**value**|`PerformanceToolsFolder` **\VSInstr.Exe**|  
   
 4. 再添加一个 **add** 元素作为 **appSettings** 元素的子元素。  
   
@@ -150,7 +150,7 @@ ms.locfileid: "63432607"
     |特性名|特性值|  
     |--------------------|---------------------|  
     |**key**|**Microsoft.VisualStudio.Enterprise.AspNetHelper.VsInstrTools**|  
-    |**值**|`PerformanceToolsFolder`|  
+    |**value**|`PerformanceToolsFolder`|  
   
      `PerformanceToolsFolder` 是探查器可执行文件的路径。 如果 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 安装在默认位置，则该值将为 **C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Performance Tools**  
   
@@ -221,6 +221,6 @@ ms.locfileid: "63432607"
   
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [如何：检测动态编译的 ASP.NET 应用程序并收集详细计时数据](../profiling/how-to-instrument-a-dynamically-compiled-aspnet-web-application-and-collect-detailed-timing-data-with-the-profiler-by-using-the-command-line.md)   
  [如何：检测动态编译的 ASP.NET 应用程序并收集内存数据](/visualstudio/profiling/how-to-instrument-a-dynamically-compiled-aspnet-web-application-and-collect-memory-data?view=vs-2015)

@@ -1,5 +1,5 @@
 ---
-title: 演练：使用检测进行命令行分析 |Microsoft Docs
+title: 演练：使用检测进行命令行分析 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,13 +14,13 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 3a37350cf274fbb551326ac96387330b0f3956e7
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63439701"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840653"
 ---
-# <a name="walkthrough-command-line-profiling-using-instrumentation"></a>演练：命令行使用检测进行分析
+# <a name="walkthrough-command-line-profiling-using-instrumentation"></a>演练：使用检测进行命令行分析
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 本演练将演示通过使用分析工具的检测方法分析 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 独立应用程序以收集详细的计时和调用计数数据。 在本演练中，你将完成以下任务：  
@@ -33,7 +33,7 @@ ms.locfileid: "63439701"
   
 - 使用 [VSPerfReport](../profiling/vsperfreport.md) 工具生成基于文件的分析数据的报告。  
   
-## <a name="prerequisites"></a>系统必备  
+## <a name="prerequisites"></a>先决条件  
   
 - [!INCLUDE[vsprvsts](../includes/vsprvsts-md.md)]  
   
@@ -43,7 +43,7 @@ ms.locfileid: "63439701"
   
 - [PeopleTrax 示例](../profiling/peopletrax-sample-profiling-tools.md)的副本  
   
-- 若要使用分析提供的信息，最好有可用的调试符号信息。 有关详细信息，请参阅[如何：引用 Windows 符号信息](../profiling/how-to-reference-windows-symbol-information.md)。  
+- 若要使用分析提供的信息，最好有可用的调试符号信息。 有关详细信息，请参阅 [如何：引用 Windows 符号信息](../profiling/how-to-reference-windows-symbol-information.md)。  
   
 ## <a name="command-line-profiling-using-the-instrumentation-method"></a>使用检测方法进行命令行分析  
  检测是一种分析方法，通过它，被检测二进制文件的特别生成的版本中将包含可在被监测模块中收集函数进入和退出时的计时信息的探测函数。 由于这种分析方法比采样更具侵入性，因此将导致更多的开销。 被检测的二进制文件也大于调试或发布二进制文件，并且不适用于部署。  
@@ -91,13 +91,13 @@ ms.locfileid: "63439701"
   
 8. 在跟踪模式下启动探查器后，请运行 PeopleTrax.exe 进程的被检测版本以收集数据。  
   
-     将出现“PeopleTrax”应用程序窗口。  
+     此时将显示 " **PeopleTrax** " 应用程序窗口。  
   
-9. 单击“获取人员”。  
+9. 单击“获取人员”****。  
   
      PeopleTrax 数据网格将使用数据填充。  
   
-10. 单击“导出数据”。  
+10. 单击“导出数据”****。  
   
      记事本将启动并显示其中包含 **PeopleTrax** 应用程序中的人员列表的新文件。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "63439701"
     VSPerfCLREnv /off  
     ```  
   
-14. 使用 VSPerfReport 工具生成逗号分隔值 (.csv) 报表文件。 类型:  
+14. 使用 VSPerfReport 工具生成逗号分隔值 (.csv) 报表文件。 键入：  
   
     ```  
     VSPerfReport Reports\Report.vsp /output:Reports /summary:all  
@@ -123,9 +123,9 @@ ms.locfileid: "63439701"
   
      可以在电子表格程序中分析生成的报表，也可以使用 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] IDE 分析 Report.vsp 文件中的分析数据。 有关详细信息，请参阅[分析性能工具数据](../profiling/analyzing-performance-tools-data.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [性能会话概述](../profiling/performance-session-overview.md)   
- [从命令行分析](../profiling/using-the-profiling-tools-from-the-command-line.md)   
+ [通过命令行进行分析](../profiling/using-the-profiling-tools-from-the-command-line.md)   
  [VSPerfCmd](../profiling/vsperfcmd.md)   
  [了解采样数据值](../profiling/understanding-sampling-data-values.md)   
  [性能报告视图](../profiling/performance-report-views.md)

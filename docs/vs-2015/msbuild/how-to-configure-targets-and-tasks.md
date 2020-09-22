@@ -10,11 +10,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: c8ef52638858160822fcc271a53513b130afc3f4
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63440043"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840552"
 ---
 # <a name="how-to-configure-targets-and-tasks"></a>如何；配置目标和任务
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -110,5 +110,5 @@ ms.locfileid: "63440043"
 > [!NOTE]
 > 任务参数在父节点的上下文中，而不是任务主机的上下文中进行计算；运行时相关或体系结构相关的环境变量（例如程序文件位置）将计算为与该父节点匹配的值。  但是，如果同一个环境变量直接由任务读取，则它会在任务主机的上下文中正确计算。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [配置目标和任务](../msbuild/configuring-targets-and-tasks.md)

@@ -12,68 +12,68 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: b7e710cec4536a5a1327580e56c60cb23ca36f4c
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: fb8babf5cd72f1fc2f97ffe4ad7b62d91f325f61
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63436362"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "90840475"
 ---
 # <a name="how-to-debug-a-custom-debug-engine"></a>如何：调试自定义调试引擎
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-项目类型启动的调试引擎 (DE) 从<xref:Microsoft.VisualStudio.Shell.Interop.IVsDebuggableProjectCfg.DebugLaunch%2A>方法。 这意味着，受控制的实例的启动 DE[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]控制项目类型。 但是，该实例的[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]不能调试 DE。 接下来是使你能够调试自定义设备的步骤。  
+项目类型从方法中启动调试引擎 (DE) <xref:Microsoft.VisualStudio.Shell.Interop.IVsDebuggableProjectCfg.DebugLaunch%2A> 。 这意味着在控制项目类型的实例的控制下启动 DE [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 。 但是，此实例 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 无法调试 DE。 下面是允许您调试自定义 DE 的步骤。  
   
 > [!NOTE]
-> :   在"调试自定义调试引擎"过程中，你必须等待 DE 来启动，然后可以将附加到它。 如果 DE 启动时显示在 DE 开始后不久将一个消息框，您可以附加在该点，然后清除消息框以继续。 这样一来，您可以捕获所有 DE 事件。  
+> ：在 "调试自定义调试引擎" 过程中，您必须等待该操作启动后才能附加到它。 如果在开始时显示的 "de" 开头附近放置一个消息框，则可以在该点附加该消息框，然后清除该消息框以继续。 这样一来，您就可以捕获所有的消除事件。  
   
 > [!WARNING]
-> 您必须具有远程调试安装，然后尝试以下过程。 请参阅[远程调试](../../debugger/remote-debugging.md)有关详细信息。  
+> 在尝试以下过程之前，必须先安装远程调试。 有关详细信息，请参阅 [远程调试](../../debugger/remote-debugging.md) 。  
   
 ### <a name="debugging-a-custom-debug-engine"></a>调试自定义调试引擎  
   
-1. 启动 msvsmon.exe，远程调试监视器。  
+1. 启动 msvsmon.exe 远程调试监视器。  
   
-2. 从**工具**菜单中选择 msvsmon.exe**选项**以打开**选项**对话框。  
+2. 从 msvsmon.exe 中的 " **工具** " 菜单中，选择 " **选项** " 以打开 " **选项** " 对话框。  
   
-3. 选择"无身份验证"选项，然后单击**确定**。  
+3. 选择 "无身份验证" 选项，然后单击 **"确定**"。  
   
-4. 启动的实例[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]并打开自定义 DE 项目。  
+4. 启动实例 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ，并打开自定义 DE 项目。  
   
-5. 启动的第二个实例[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]并打开自定义项目，它启动了 DE （对于开发，这通常是在 VSIP 安装时设置的实验性注册表配置单元中）。  
+5. 启动的第二个实例 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ，然后打开您的自定义项目，该项目将启动用于开发的 (，这通常在安装 VSIP) 时设置的实验性注册表配置单元中。  
   
-6. 在此第二个实例中[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]，加载源文件从你的自定义项目并启动要调试的程序。 等待一段时间，以允许 DE 加载，或等待，直到遇到断点。  
+6. 在的第二个实例中 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ，从自定义项目加载源文件，并启动要调试的程序。 请稍等片刻以允许取消加载，或等待，直到命中断点。  
   
-7. 中的第一个实例[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]（与 DE 项目），选择**附加到进程**从**调试**菜单。  
+7. 在 (的第一个实例中 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ，) 的 "**调试**" 菜单中选择 "**附加到进程**"。  
   
-8. 在中**附加到进程**对话框中，更改**传输**到**远程 （无身份验证时仅限本机）**。  
+8. 在 " **附加到进程** " 对话框中，将 " **传输** " 改为 " **仅限本地 (仅) 身份验证 **"。  
   
-9. 更改**限定符**为你的计算机的名称 (注意： 还有历史记录条目，因此需要一次键入此名称)。  
+9. 将 **限定符** 更改为计算机的名称 (注意：存在条目历史记录，因此只需在) 中键入此名称一次。  
   
-10. 在中**可用进程**列表中，选择的实例正在运行，并单击你 DE**附加**按钮。  
+10. 在 " **可用进程** " 列表中，选择正在运行的正在运行的实例，然后单击 " **附加** " 按钮。  
   
-11. 在你 DE 中已加载符号后，DE 代码中放置断点。  
+11. 在您的 DE 中加载符号后，在您的 DE 代码中放置断点。  
   
-12. 每次停止并重新启动调试的过程，重复步骤 6 至 10。  
+12. 每次停止并重新启动调试进程时，请重复步骤6到步骤10。  
   
 ### <a name="debugging-a-custom-project-type"></a>调试自定义项目类型  
   
-1. 启动[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]正常注册表配置单元和负载在你的项目中，键入的项目 （这是，根据项目类型，不在项目类型的实例化的源）。  
+1. [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]在普通注册表配置单元中启动并加载项目类型项目 (这是项目类型的源，而不是项目类型) 的实例化。  
   
-2. 打开项目属性，请转到**调试**页。 有关**命令**，键入的路径[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]IDE (默认情况下，这是 *[驱动器]* \Program Files\Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 8\Common7\IDE\devenv.exe)。  
+2. 打开项目属性，并中转到 " **调试** " 页。 对于 **命令**，在 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 默认情况下键入 IDE (的路径，此路径为 *[drive]* \Program Files\Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 8\Common7\IDE\devenv.exe) 。  
   
-3. 有关**命令参数**，类型`/rootsuffix exp`实验注册表配置单元 （VSIP 安装时创建）。  
+3. 对于 " **命令参数**"，键入 `/rootsuffix exp` 在安装 VSIP 时 (创建的实验性注册表配置单元) 。  
   
-4. 单击“确定”  接受这些更改。  
+4. 单击“确定” **** 接受这些更改。  
   
-5. 按 F5 启动您的项目类型。 这将启动的第二个实例[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]。  
+5. 按 F5 启动项目类型。 这将启动的第二个实例 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 。  
   
-6. 此时，您可以在项目类型源代码中放置断点。  
+6. 此时，可以将断点放置在项目类型源代码中。  
   
-7. 第二个实例中[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]、 加载或创建您的项目类型的新实例。 在负载或创建中，可能会命中断点。  
+7. 在的第二个实例中 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ，加载或创建项目类型的新实例。 在加载或创建过程中，可能会命中断点。  
   
-8. 调试您的项目类型。  
+8. 调试项目类型。  
   
-9. 如果您选择要调试的启动部署过程，您可以在"调试自定义调试引擎"过程中将它启动后附加到你 DE 执行步骤。 这将使您的三个实例[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]运行： 一个用于您的项目类型源、 实例化的项目类型和第三个附加到你 DE 第二个。  
+9. 如果选择调试启动 DE 的过程，则可以执行 "调试自定义调试引擎" 过程中的步骤，以便在启动后将其附加到您的 DE。 这将为您提供三个 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 运行实例：一个用于项目类型源，另一个用于实例化项目类型，第三个实例附加到您的 DE。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建自定义调试引擎](../../extensibility/debugger/creating-a-custom-debug-engine.md)

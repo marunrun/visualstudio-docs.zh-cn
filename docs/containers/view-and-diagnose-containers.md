@@ -1,5 +1,5 @@
 ---
-title: Docker 容器日志、环境变量与文件系统访问
+title: 查看和诊断 Docker 容器与图像
 description: 介绍如何通过使用工具窗口查看托管应用的容器内正在进行的操作，提高在 Visual Studio 中调试和诊断基于容器的应用的能力。
 author: ghogen
 ms.author: ghogen
@@ -7,12 +7,12 @@ ms.topic: how-to
 ms.date: 01/20/2020
 ms.technology: vs-azure
 monikerRange: vs-2019
-ms.openlocfilehash: 45ef2d8f68ac951cc58040abb72e136b42f3b49c
-ms.sourcegitcommit: fb8babf5cd72f1fc2f97ffe4ad7b62d91f325f61
+ms.openlocfilehash: 626666fc912fcff85fcfcc49425d59018778d1f6
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89490295"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89742783"
 ---
 # <a name="how-to-view-and-diagnose-containers-and-images-in-visual-studio"></a>如何在 Visual Studio 中查看和诊断容器与图像
 

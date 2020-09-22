@@ -14,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 1b0856d3832d31dd7027b2f264dd0a9cd1d657ec
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c82b4dec0c92f19933b045040ed0f1fcecb5b10b
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "63007322"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809854"
 ---
 # <a name="common-tasks-in-office-programming"></a>Office 编程中的常见任务
   本主题旨在帮助针对使用 Visual Studio 对 Office 解决方案编程的下列常见问题找到解决方法。
@@ -44,7 +44,7 @@ ms.locfileid: "63007322"
 
 - [如何：在 Visual Studio 中创建 Office 项目](../vsto/how-to-create-office-projects-in-visual-studio.md)。
 
-- [如何：升级 Office 解决方案](https://msdn.microsoft.com/a269e539-b717-4680-a568-2152b070347e)。
+- [如何：升级 Office 解决方案](/previous-versions/4bez6837(v=vs.140))。
 
 - [如何：安装 Office 主互操作程序集](../vsto/how-to-install-office-primary-interop-assemblies.md)。
 
@@ -216,19 +216,19 @@ ms.locfileid: "63007322"
 
 ## <a name="deployment-tasks"></a><a name="deployment"></a> 部署任务
 
-- [如何：使用 ClickOnce 发布 Office 解决方案](https://msdn.microsoft.com/2b6c247e-bc04-4ce4-bb64-c4e79bb3d5b8)。
+- [如何：使用 ClickOnce 发布 Office 解决方案](/previous-versions/bb386095(v=vs.110))。
 
-- [如何：使用 ClickOnce 将文档级 Office 解决方案发布到 SharePoint 服务器](https://msdn.microsoft.com/2408e809-fb78-42a1-9152-00afa1522e58)。
+- [如何：使用 ClickOnce 将文档级 Office 解决方案发布到 SharePoint 服务器](/previous-versions/bb608595(v=vs.110))。
 
-- [如何：安装 ClickOnce Office 解决方案](https://msdn.microsoft.com/14702f48-9161-4190-994c-78211fe18065)。
+- [如何：安装 ClickOnce Office 解决方案](/previous-versions/bb608592(v=vs.110))。
 
-- [如何：在最终用户计算机上安装必备组件以运行 Office 解决方案](https://msdn.microsoft.com/74dd2c52-838f-4abf-b2b4-4d7b0c2a0a98)。
+- [如何：在最终用户计算机上安装必备组件以运行 Office 解决方案](/previous-versions/bb608608(v=vs.110))。
 
-- [如何：为部署 Office 解决方案准备 IIS](https://msdn.microsoft.com/f62bce70-81d4-4f8b-86e6-2f2afec5d9b4)。
+- [如何：为部署 Office 解决方案准备 IIS](/previous-versions/bb608629(v=vs.110))。
 
-- [如何：更新部署的 Office 解决方案](https://msdn.microsoft.com/be96db53-b6ea-46ab-b8d9-b76b098b3b13)。
+- [如何：更新部署的 Office 解决方案](/previous-versions/bb157871(v=vs.110))。
 
-- [如何：更改 Office 解决方案的安装路径](https://msdn.microsoft.com/d0eaa07b-2d72-4902-899f-2f9fb165b8fd)。
+- [如何：更改 Office 解决方案的安装路径](/previous-versions/bb608626(v=vs.110))。
 
 ## <a name="see-also"></a>另请参阅
 - [开始 &#40;Visual Studio 中的 Office 开发&#41;](../vsto/getting-started-office-development-in-visual-studio.md)

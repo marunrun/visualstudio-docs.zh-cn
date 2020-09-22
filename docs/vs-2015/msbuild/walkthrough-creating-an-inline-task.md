@@ -13,16 +13,16 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: ad081a4d6954d402aa295a94edae3f5bdf50ef4c
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63445618"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840756"
 ---
 # <a name="walkthrough-creating-an-inline-task"></a>演练：创建内联任务
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-通常，MSBuild 任务通过编译实现 <xref:Microsoft.Build.Framework.ITask> 接口的类进行创建。 从 .NET Framework 版本 4 开始，可以在项目文件中创建内联任务。 无需创建单独的程序集来承载该任务。 有关详细信息，请参阅[内联任务](../msbuild/msbuild-inline-tasks.md)。  
+通常，MSBuild 任务通过编译实现 <xref:Microsoft.Build.Framework.ITask> 接口的类进行创建。 从 .NET Framework 版本 4 开始，可以在项目文件中创建内联任务。 无需创建单独的程序集来承载该任务。 有关详细信息，请参阅 [内联任务](../msbuild/msbuild-inline-tasks.md)。  
   
  此演练演示如何创建和运行以下内联任务：  
   
@@ -47,13 +47,13 @@ ms.locfileid: "63445618"
   
 #### <a name="to-create-and-modify-a-project-file"></a>创建和修改项目文件  
   
-1. 在 Visual Studio 中的“文件”菜单上，单击“新建”，然后单击“项目”。  
+1. 在 Visual Studio 的 " **文件** " 菜单上，单击 " **新建** "，然后单击 " **项目**"。  
   
-2. 在“新建项目”对话框中，选择 Visual C# 项目类型，然后选择“Windows 窗体应用程序”模板。 在“名称”框中键入 `InlineTasks`。 键入解决方案的“位置”，例如 `D:\`。 请确保选择“创建解决方案目录”和清除“添加到源代码管理”，并确保“解决方案名称”为 `InlineTasks`。  
+2. 在“新建项目”**** 对话框中，选择“Visual C#”项目类型，然后选择“Windows 窗体应用程序”**** 模板。 在“名称”  框中键入 `InlineTasks`。 键入解决方案的“位置”****，例如 `D:\`。 请确保选择“创建解决方案目录”**** 和清除“添加到源代码管理”****，并确保“解决方案名称”**** 为 `InlineTasks`。  
   
      单击“确定”创建项目文件。  
   
-3. 在“解决方案资源管理器”中，右键单击 InlineTasks 项目节点，然后单击“卸载项目”。  
+3. 在 **解决方案资源管理器**中，右键单击 inlinetasks.csproj 项目节点，然后单击 " **卸载项目**"。  
   
 4. 再次右键单击项目节点，然后单击“编辑 InlineTasks.csproj”。  
   
@@ -95,9 +95,9 @@ ms.locfileid: "63445618"
   
 1. 单击“开始”，然后单击“所有程序”，找到“Visual Studio Tools”文件夹并单击“Visual Studio 命令提示符”。  
   
-2. 在“命令提示符窗口”中找到包含项目文件的文件夹（本例中为：D:\InlineTasks\InlineTasks\\）。  
+2. 在 " **命令提示符" 窗口**中，找到包含项目文件的文件夹，在本例中为 D:\InlineTasks\InlineTasks \\ 。  
   
-3. 无需命令开关，键入“msbuild”，然后按 Enter。 默认情况下，这会生成 InlineTasks.csproj 文件并处理将调用 Hello 任务的默认目标 TestBuild。  
+3. 键入 **msbuild** ，无需命令开关，然后按 enter。 默认情况下，这会生成 InlineTasks.csproj 文件并处理将调用 Hello 任务的默认目标 TestBuild。  
   
 4. 在“命令提示符窗口”中检查输出。 应看到此行：  
   
@@ -131,7 +131,7 @@ ms.locfileid: "63445618"
    </Target>  
    ```  
   
-2. 在“命令提示符窗口”中，无需命令开关，键入“msbuild”，然后按 Enter。 默认情况下，这会处理调用 Echo 任务的默认目标 TestBuild。  
+2. 在 " **命令提示符" 窗口**中，键入 **msbuild** 而不键入命令开关，然后按 enter。 默认情况下，这会处理调用 Echo 任务的默认目标 TestBuild。  
   
 3. 在“命令提示符窗口”中检查输出。 应看到此行：  
   
@@ -167,7 +167,7 @@ ms.locfileid: "63445618"
    </Target>  
    ```  
   
-2. 在“命令提示符窗口”中，无需命令开关，键入“msbuild”，然后按 Enter。 默认情况下，这会处理调用 Echo 任务的默认目标 TestBuild。  
+2. 在 " **命令提示符" 窗口**中，键入 **msbuild** 而不键入命令开关，然后按 enter。 默认情况下，这会处理调用 Echo 任务的默认目标 TestBuild。  
   
 3. 在“命令提示符窗口”中检查输出。 应看到此行：  
   
@@ -222,7 +222,7 @@ ms.locfileid: "63445618"
    </Target>  
    ```  
   
-2. 在“命令提示符窗口”中，无需命令开关，键入“msbuild”，然后按 Enter。 默认情况下，这会处理调用 RegX 任务的默认目标 TestBuild。  
+2. 在 " **命令提示符" 窗口**中，键入 **msbuild** 而不键入命令开关，然后按 enter。 默认情况下，这会处理调用 RegX 任务的默认目标 TestBuild。  
   
 3. 在“命令提示符窗口”中检查输出。 应看到这些行：  
   
@@ -241,7 +241,7 @@ ms.locfileid: "63445618"
   TestBuild 目标调用 RegX 任务时会设置输入参数的值。 RegX 任务会读取每个文件并返回与正则表达式匹配的文件列表。 此列表作为 `Result` 输出参数返回，而该输出参数作为 MSBuild 项 `MatchedFiles` 发出。  
   
 ### <a name="handling-reserved-characters"></a>处理保留字符  
- MSBuild 分析器将内联任务当做 XML 处理。 XML 中具有保留意义的字符（例如“\<” 和“>”）会被检测到并当作 XML 而不是 .NET 源代码进行处理。 若要在代码表达式中包含保留字符（例如 `Files.Length > 0`），请写入 `Code` 元素，其内容就可以包含在 CDATA 表达式中，如下所示：  
+ MSBuild 分析器将内联任务当做 XML 处理。 XML 中具有保留意义的字符（例如“\<" and ">”）会被检测到，并当作 XML 而不是 .NET 源代码进行处理。 若要在代码表达式中包含保留字符（例如 `Files.Length > 0`），请写入 `Code` 元素，其内容就可以包含在 CDATA 表达式中，如下所示：  
   
  `<Code Type="Fragment" Language="cs">`  
   
@@ -253,7 +253,7 @@ ms.locfileid: "63445618"
   
  `</Code>`  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [内联任务](../msbuild/msbuild-inline-tasks.md)   
- [任务](../msbuild/msbuild-tasks.md)   
+ [操作](../msbuild/msbuild-tasks.md)   
  [目标](../msbuild/msbuild-targets.md)
