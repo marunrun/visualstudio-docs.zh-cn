@@ -15,11 +15,11 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 76dac6e20cc85eeb5784b0b6e29ee8d1b23fbd92
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63432800"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840707"
 ---
 # <a name="how-to-collect-cpu-counter-data"></a>如何：收集 CPU 计数器数据
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -50,7 +50,7 @@ CPU 事件计数器用于收集特定于硬件的性能数据。 本主题演示
   
 - 通过检测进行分析时，从一个或多个计数器中收集数据。  
   
-- 通过采样进行分析时，指定一个计数器事件作为采样间隔。 有关详细信息，请参阅[如何：选择采样事件](../profiling/how-to-choose-sampling-events.md)。  
+- 通过采样进行分析时，指定一个计数器事件作为采样间隔。 有关详细信息，请参阅 [如何：选择采样事件](../profiling/how-to-choose-sampling-events.md)。  
   
 ### <a name="to-collect-cpu-performance-counter-data-when-you-profile-by-instrumentation"></a>通过检测进行分析时收集 CPU 性能计数器数据  
   
@@ -65,7 +65,7 @@ CPU 事件计数器用于收集特定于硬件的性能数据。 本主题演示
     > [!NOTE]
     > 仅在选择“收集 CPU 计数器”复选框时，“可用的性能计数器”才会启用。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [配置性能会话](../profiling/configuring-performance-sessions.md)   
  [性能会话属性](../profiling/performance-session-properties.md)   
  [CPU 和 Windows 计数器](../profiling/cpu-and-windows-counters.md)   

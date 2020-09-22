@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 3d97a70e661796c681916b60d5eacb364e90ada3
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64834531"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840802"
 ---
-# <a name="idiasymbolgetsymbolsfilename"></a>IDiaSymbol::get_symbolsFileName
+# <a name="idiasymbolget_symbolsfilename"></a>IDiaSymbol::get_symbolsFileName
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-检索已从其加载符号的文件的名称。  
+检索从中加载符号的文件的名称。  
   
 ## <a name="syntax"></a>语法  
   
@@ -33,19 +33,19 @@ HRESULT get_symbolsFileName ( 
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>parameters  
  `pRetVal`  
- [out]返回已从其加载符号的文件的名称。  
+ 弄返回从中加载符号的文件的名称。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回`S_FALSE`或错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回 `S_FALSE` 错误代码。  
   
 > [!NOTE]
-> 返回值为`S_FALSE`表示该属性不是可用于符号。  
+> 返回值 `S_FALSE` 意味着该属性对符号不可用。  
   
 ## <a name="remarks"></a>备注  
- 此属性是仅对包含符号的有效[SymTagEnum 枚举](../../debugger/debug-interface-access/symtagenum.md)的值`SymTagExe`还具有全局作用域。  
+ 此属性仅对 [SymTagEnum 枚举](../../debugger/debug-interface-access/symtagenum.md) 值为且 `SymTagExe` 具有全局作用域的符号有效。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
  [SymTagEnum 枚举](../../debugger/debug-interface-access/symtagenum.md)

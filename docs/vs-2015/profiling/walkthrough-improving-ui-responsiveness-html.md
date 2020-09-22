@@ -1,5 +1,5 @@
 ---
-title: 演练：改进 UI 响应能力 (HTML) |Microsoft Docs
+title: 演练： 改进 UI 响应能力 (HTML) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -20,29 +20,29 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 7224dc1ddcffc203c930a3ead01c2f541af2122f
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63433174"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840438"
 ---
-# <a name="walkthrough-improving-ui-responsiveness-html"></a>演练：改进 UI 响应能力 (HTML)
+# <a name="walkthrough-improving-ui-responsiveness-html"></a>演练： 改进 UI 响应能力 (HTML)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 本演练引导你使用 [HTML UI 响应能力探查器](../profiling/html-ui-responsiveness.md)确定并修复性能问题。 探查器可用于 Visual Studio 中的使用 JavaScript 的 Windows Universal 和 Windows 应用商店应用。 在此方案中，你将创建一个过于频繁地更新 DOM 元素的性能测试应用，并使用探查器确定并修复此问题。  
   
 ### <a name="creating-and-running-the-performance-test-app"></a>创建并运行性能测试应用  
   
-1. 在 Visual Studio 中，创建一个新的 Windows Universal JavaScript 项目。 （选择“文件”/“新建”/“项目”。 在左窗格中选择“JavaScript”，然后选择“Windows”、“Windows 10”，再选择“通用”或“Windows Phone”。  
+1. 在 Visual Studio 中，创建一个新的 Windows Universal JavaScript 项目。  (选择 " **文件/新建/项目**"。 在左窗格中选择“JavaScript”，然后选择“Windows”、“Windows 10”，再选择“通用”或“Windows Phone”。********************  
   
 2. > [!IMPORTANT]
     > 本主题中显示的诊断结果是针对 Windows 8 应用显示的。  
   
-3. 在中间窗格中选择一个空白项目模板，如“空白应用”。  
+3. 在中间窗格中选择一个空白项目模板，如“空白应用”。****  
   
-4. 在“名称”  框中指定名称（例如 `JS_Perf_Tester`），然后选择“确定” 。  
+4. 在“名称” **** 框中指定名称（例如 `JS_Perf_Tester`），然后选择“确定” ****。  
   
-5. 在“解决方案资源管理器”中，打开 default.html，并将以下代码粘贴到 \<body> 标记之间：  
+5. 在 **解决方案资源管理器**中，打开 default.html 并在标记之间粘贴以下代码 \<body> ：  
   
     ```html  
     <div class="wrapper">  
@@ -148,9 +148,9 @@ ms.locfileid: "63433174"
   
     ```  
   
-8. 选择 F5 键开始调试。 确认“等待值”按钮显示在此页中。  
+8. 选择 F5 键开始调试。 确认“等待值”按钮显示在此页中。****  
   
-9. 选择“等待值”，并验证按钮文本和颜色是否约每秒更新一次。 这是设计使然。  
+9. 选择“等待值”，并验证按钮文本和颜色是否约每秒更新一次。**** 这是设计的结果。  
   
 10. 切换回 Visual Studio (Alt+Tab)，然后按 Shift+F5 停止调试。  
   
@@ -158,25 +158,25 @@ ms.locfileid: "63433174"
   
 ### <a name="analyzing-performance-data"></a>分析性能数据  
   
-1. 在“调试”工具栏上的“开始调试”列表中，选择一个 Windows Phone 仿真器或“模拟器”。  
+1. 在“调试”工具栏上的“开始调试”列表中，选择一个 Windows Phone 仿真器或“模拟器”。************  
   
 2. 在 **“调试”** 菜单上，选择 **“性能和诊断”**。  
   
-3. 在“可用工具”中，选择“HTML UI 响应能力”，然后选择“启动”。  
+3. 在“可用工具”中，选择“HTML UI 响应能力”，然后选择“启动”。************  
   
     在本教程中，你将把探查器连接到启动项目。 有关其他选项的信息（例如将探查器连接到所安装的应用），请参阅 [HTML UI 响应能力](../profiling/html-ui-responsiveness.md)。  
   
-    当你启动探查器时，可能会显示“用户帐户控制”，要求你提供运行 VsEtwCollector.exe 的权限。 选择 **“是”**。  
+    当你启动探查器时，可能会显示“用户帐户控制”，要求你提供运行 VsEtwCollector.exe 的权限。 选择 **“是”** 。  
   
-4. 在正在运行的应用中，选择“等待值”并等待大约 10 秒。 验证按钮文本和颜色是否约每秒更新一次。  
+4. 在正在运行的应用中，选择“等待值”并等待大约 10 秒。**** 验证按钮文本和颜色是否约每秒更新一次。  
   
 5. 从正在运行的应用程序中，切换到 Visual Studio (Alt+Tab)。  
   
-6. 选择“停止收集”。  
+6. 选择“停止收集”。****  
   
     探查器在 Visual Studio 的新选项卡中显示信息。 查看 CPU 使用率和可视吞吐量 (FPS) 数据时，可以轻松确定一些趋势：  
   
-   - CPU 使用率在按下“等待值”按钮后大约 3 秒显著提高，并显示从此时起所发生的事件（脚本编写、样式设置和绘制事件的一致组合）的清晰模式。  
+   - CPU 使用率在按下“等待值”按钮后大约 3 秒显著提高，并显示从此时起所发生的事件（脚本编写、样式设置和绘制事件的一致组合）的清晰模式。****  
   
    - 可视吞吐量不受影响，FPS 保持在 60 吞吐量（即不丢弃帧）。  
   
@@ -186,11 +186,11 @@ ms.locfileid: "63433174"
   
     ![CPU 使用率图](../profiling/media/js-htmlviz-app-cpu.png "JS_HTMLViz_App_CPU")  
   
-8. 选择“放大”。  
+8. 选择“放大”。****  
   
     此图将更改，更详细地显示选定时间段。 下图显示了放大后的“CPU 使用率”图。 （具体数据可能不同，但常规模式是明显的。）  
   
-    ![放大视图](../profiling/media/js-htmlviz-app-zoom.png "JS_HTMLViz_App_Zoom")  
+    ![放大的视图](../profiling/media/js-htmlviz-app-zoom.png "JS_HTMLViz_App_Zoom")  
   
     下方窗格中的“时间线详细信息”显示选定时间段的详细信息的示例。  
   
@@ -198,7 +198,7 @@ ms.locfileid: "63433174"
   
     “时间线详细信息”中的事件可确认“CPU 使用率”图中的明显趋势：在短时间内发生大量事件。 “时间线详细信息”显示这些事件是 `Timer`、`Layout` 和 `Paint` 事件。  
   
-9. 从上下文菜单中选择（或右键单击）下方窗格中的某个 `Timer` 事件，然后选择“筛选到事件”。 下图显示了此测试应用程序中的某个 `Timer` 事件的特定详细信息的示例。  
+9. 从上下文菜单中选择（或右键单击）下方窗格中的某个 `Timer` 事件，然后选择“筛选到事件”。**** 下图显示了此测试应用程序中的某个 `Timer` 事件的特定详细信息的示例。  
   
      ![计时器事件](../profiling/media/js-htmlviz-app-timer.png "JS_HTMLViz_App_Timer")  
   
@@ -206,7 +206,7 @@ ms.locfileid: "63433174"
   
     - 每个 `Timer` 事件，这些事件经过彩色编码以标识为脚本事件，包括对 `document.createElement` 的调用，后跟样式计算和对 `style.backgroundColor` 和 `appendChild()` 的调用。  
   
-    - 在选定的短时间范围（约一到两秒）内，有大量 `Timer`、`Layout` 和 `Paint` 事件发生。 `Timer` 事件发生的频率远高于每秒一次更新，这在运行应用并选择“等待值”按钮后非常明显。  
+    - 在选定的短时间范围（约一到两秒）内，有大量 `Timer`、`Layout` 和 `Paint` 事件发生。 `Timer` 事件发生的频率远高于每秒一次更新，这在运行应用并选择“等待值”按钮后非常明显。****  
   
 10. 要进行调查，请对左下方窗格中的一个 `Timer` 事件选择匿名函数的链接。 以下函数将在 default.js 中打开：  
   
@@ -242,5 +242,5 @@ ms.locfileid: "63433174"
   
 2. 再次运行“HTML UI 响应能力”探查器，然后查看“CPU 使用率”图。 你将看到过多事件已消失，CPU 使用率降到接近零值。 问题已修复！  
   
-## <a name="see-also"></a>请参阅  
- [HTML UI 响应能力](../profiling/html-ui-responsiveness.md)
+## <a name="see-also"></a>另请参阅  
+ [HTML UI responsiveness](../profiling/html-ui-responsiveness.md)

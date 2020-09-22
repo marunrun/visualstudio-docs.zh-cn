@@ -1,5 +1,5 @@
 ---
-title: DEBUG_ADDRESS | Microsoft Docs
+title: DEBUG_ADDRESS |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,13 +13,13 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: d001d29433573fedde3b4310f989667538b4b69c
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63444957"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840703"
 ---
-# <a name="debugaddress"></a>DEBUG_ADDRESS
+# <a name="debug_address"></a>DEBUG_ADDRESS
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
 此结构表示地址。  
@@ -46,26 +46,26 @@ public struct DEBUG_ADDRESS {
   
 ## <a name="terms"></a>术语  
  ulAppDomainID  
- 进程 id。  
+ 进程 ID。  
   
  guidModule  
  包含此地址的模块的 GUID。  
   
  tokClass  
- 确定类或类型的地址，此标记。  
+ 标识此地址的类或类型的标记。  
   
 > [!NOTE]
-> 此值是特定于符号提供程序，因此具有以外的其他任何常规含义为类类型的标识符。  
+> 此值特定于符号提供程序，因此除了作为类类型的标识符外，没有任何常规含义。  
   
  addr  
- 一个[DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md)结构，其中包含描述单个地址类型的结构的并集。 值`addr`。`dwKind` 来自[ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md)枚举，其中介绍了如何解释并集。  
+ 一个 [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) 结构，它包含描述各个地址类型的结构的并集。 值 `addr` 。`dwKind` 来自 [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) 枚举，该枚举说明了如何解释联合。  
   
 ## <a name="remarks"></a>备注  
- 此结构传递给[GetAddress](../../../extensibility/debugger/reference/idebugaddress-getaddress.md)要填充的方法。  
+ 此结构传递到要填写的 [GetAddress](../../../extensibility/debugger/reference/idebugaddress-getaddress.md) 方法。  
   
- **警告 [C++仅]**  
+ **警告 [仅 c + +]**  
   
- 如果`addr.dwKind`是`ADDRESS_KIND_METADATA_LOCAL`; 如果`addr.addr.addrLocal.pLocal`不为空值，则必须调用`Release`上标记的指针：  
+ 如果 `addr.dwKind` 为，并且不是 `ADDRESS_KIND_METADATA_LOCAL` `addr.addr.addrLocal.pLocal` null 值，则必须 `Release` 对标记指针调用：  
   
 ```  
 if (addr.dwKind == ADDRESS_KIND_METADATA_LOCAL &&  addr.addr.addrLocal.pLocal != NULL)  
@@ -75,13 +75,13 @@ if (addr.dwKind == ADDRESS_KIND_METADATA_LOCAL &&  addr.addr.addrLocal.pLocal !=
 ```  
   
 ## <a name="requirements"></a>要求  
- 标头： sh.h  
+ 标头： sh。h  
   
- 命名空间:Microsoft.VisualStudio.Debugger.Interop  
+ 命名空间： VisualStudio  
   
- 程序集：Microsoft.VisualStudio.Debugger.Interop.dll  
+ 程序集： Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [结构和联合](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [GetAddress](../../../extensibility/debugger/reference/idebugaddress-getaddress.md)   
  [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md)   

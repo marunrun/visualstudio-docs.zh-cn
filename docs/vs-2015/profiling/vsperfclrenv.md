@@ -16,11 +16,11 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: afee2c56a7f29d50f46c7cbb734bc0297223845c
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63446684"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840760"
 ---
 # <a name="vsperfclrenv"></a>VSPerfCLREnv
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -97,7 +97,7 @@ VSPerfCmd /Attach:MyService.exe
 |**GlobalSampleGC**|启用使用采样方法的全局内存分配分析。 不会启用对象生存期数据收集。|  
 |**GlobalSampleGCLife**|启用使用采样方法的全局内存分配分析。 还启用对象生存期数据收集。|  
   
- **删除环境设置的 VSPerfCLREnv 选项**  
+ **用于删除环境设置的 VSPerfCLREnv 选项**  
   
  在分析完托管应用程序后，请使用下列选项之一删除由 VSPerfCLREnv 添加的环境变量。 下表描述了如何删除标准和全局环境变量：  
   
@@ -111,5 +111,5 @@ VSPerfCmd /Attach:MyService.exe
   
  如果在分析期间未设置正确的环境，在分析期间将报告警告，并且将无法正确地解析托管函数名称。  
   
-## <a name="see-also"></a>请参阅  
- [从命令行分析](../profiling/using-the-profiling-tools-from-the-command-line.md)
+## <a name="see-also"></a>另请参阅  
+ [通过命令行进行分析](../profiling/using-the-profiling-tools-from-the-command-line.md)

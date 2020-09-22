@@ -13,11 +13,11 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 720f37afbeea3c7440ad2ced9649039d671b1f1c
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63383394"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840553"
 ---
 # <a name="call-tree-view---sampling-data"></a>“调用关系树”视图 - 采样数据
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -32,14 +32,14 @@ ms.locfileid: "63383394"
  “调用关系树”视图中的值对应于调用树中父函数所调用的函数实例。 通过将函数实例值与分析运行中的样本总数进行对比得出百分比值。  
   
 ## <a name="highlighting-the-execution-hot-path"></a>突出显示执行热路径  
- “调用关系树”视图可以展开并突出显示进程的执行路径或采样频率最高的函数。 若要显示最活跃的路径，请右键单击该进程或函数，然后单击“展开热路径”。  
+ “调用关系树”视图可以展开并突出显示进程的执行路径或采样频率最高的函数。 若要显示最活跃的路径，请右键单击该进程或函数，然后单击“展开热路径”  。  
   
 ## <a name="setting-the-call-tree-root-node"></a>设置调用树根节点  
- 分析运行中的每个进程均显示为根节点。 若要设置“调用关系树”视图的开始节点，请右键单击要设置为开始节点的节点，然后选择“设置根节点”。  
+ 分析运行中的每个进程均显示为根节点。 若要设置“调用关系树”视图的开始节点，请右键单击要设置为开始节点的节点，然后选择“设置根节点”  。  
   
- 设置根节点后，将从视图中排除所选节点的子树之外的所有其他条目。 若要将根节点重置回原始节点，请在“调用树视图”窗口中右键单击并选择“重置根节点”。  
+ 设置根节点后，将从视图中排除所选节点的子树之外的所有其他条目。 若要将根节点重置回原始节点，请在“调用树视图”窗口中右键单击并选择“重置根节点”  。  
   
-|列|说明|  
+|列|描述|  
 |------------|-----------------|  
 |**进程 ID**|分析运行的进程 ID (PID)。|  
 |**进程名**|进程的名称。|  
@@ -55,9 +55,9 @@ ms.locfileid: "63383394"
 |**非独占样本数**|当调用树中的父函数调用此函数时，此函数中收集的样本数。 此数值包括此函数调用的函数中收集的样本。|  
 |**非独占样本数百分比**|调用关系树中的父函数调用此函数时，分析运行中属于此函数的非独占样本的所有样本数的百分比。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [如何：自定义报告视图列](../profiling/how-to-customize-report-view-columns.md)   
- [“调用关系树”视图 - 探查器采样数据](../profiling/call-tree-view-sampling-data.md)   
- [“调用关系树”视图 - 采样](../profiling/call-tree-view-dotnet-memory-sampling-data.md)   
- [“调用关系树”视图 - 检测](../profiling/call-tree-view-dotnet-memory-instrumentation-data.md)   
+ ["调用树" 视图-探查器采样数据](../profiling/call-tree-view-sampling-data.md)   
+ ["调用关系树" 视图-采样](../profiling/call-tree-view-dotnet-memory-sampling-data.md)   
+ ["调用关系树" 视图-检测](../profiling/call-tree-view-dotnet-memory-instrumentation-data.md)   
  [“调用关系树”视图](../profiling/call-tree-view-instrumentation-data.md)

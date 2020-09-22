@@ -14,13 +14,13 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 96dfe49ce4e174680202cd60c3e8bca83cfbf575
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63439686"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840681"
 ---
-# <a name="walkthrough-command-line-profiling-using-sampling"></a>演练：命令行使用采样分析
+# <a name="walkthrough-command-line-profiling-using-sampling"></a>演练：使用采样进行命令行分析
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 本演练演示如何使用命令行工具和采样功能分析应用程序以确定性能问题。  
@@ -33,7 +33,7 @@ ms.locfileid: "63439686"
   
 - 分析被采样的分析结果，以便查找并修复性能问题。  
   
-## <a name="prerequisites"></a>系统必备  
+## <a name="prerequisites"></a>先决条件  
   
 - [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)]、[!INCLUDE[vsUltLong](../includes/vsultlong-md.md)] 或 [!INCLUDE[vsPro](../includes/vspro-md.md)]  
   
@@ -73,11 +73,11 @@ ms.locfileid: "63439686"
   
      探查器进程启动，并附加到 PeopleTrax.exe 进程。 探查器进程开始将收集的分析数据写入报表文件。  
   
-6. 单击“获取人员”。  
+6. 单击“获取人员”****。  
   
-7. 单击“导出数据”。  
+7. 单击“导出数据”****。  
   
-     记事本随即打开并显示其中包含从“PeopleTrax”导出的数据的新文件。  
+     记事本随即打开并显示其中包含从“PeopleTrax”**** 导出的数据的新文件。  
   
 8. 关闭记事本，然后关闭 **PeopleTrax** 应用程序。  
   
@@ -105,9 +105,9 @@ ms.locfileid: "63439686"
         VSPerfReport <dir> PeopleTraxReport.vsp /output:<dir> /summary:all  
         ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [性能会话概述](../profiling/performance-session-overview.md)   
- [从命令行分析](../profiling/using-the-profiling-tools-from-the-command-line.md)   
+ [通过命令行进行分析](../profiling/using-the-profiling-tools-from-the-command-line.md)   
  [VSPerfCmd](../profiling/vsperfcmd.md)   
  [了解采样数据值](../profiling/understanding-sampling-data-values.md)   
  [性能报告视图](../profiling/performance-report-views.md)

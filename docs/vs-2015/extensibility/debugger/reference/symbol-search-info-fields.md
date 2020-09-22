@@ -1,5 +1,5 @@
 ---
-title: SYMBOL_SEARCH_INFO_FIELDS | Microsoft Docs
+title: SYMBOL_SEARCH_INFO_FIELDS |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: a988e8f5409a3a9e1f9fd8a4b5bd863a3309acc3
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63429030"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840769"
 ---
-# <a name="symbolsearchinfofields"></a>SYMBOL_SEARCH_INFO_FIELDS
+# <a name="symbol_search_info_fields"></a>SYMBOL_SEARCH_INFO_FIELDS
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-指定要检索的符号信息的类型。  
+指定要检索的符号信息的种类。  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,24 +46,24 @@ public enum enum_SYMBOL_SEARCH_INFO_FIELDS
   
 ## <a name="members"></a>成员  
  SSIF_NONE  
- 不指示任何标志  
+ 指示无标志  
   
  SSIF_VERBOSE_SEARCH_INFO  
- 返回所有搜索路径用于查找符号  
+ 返回用于查找符号的所有搜索路径  
   
 ## <a name="remarks"></a>备注  
- 这些标志作为参数传递给[GetSymbolInfo](../../../extensibility/debugger/reference/idebugmodule3-getsymbolinfo.md)方法来确定的少量信息返回。  
+ 这些标志作为参数传递给 [GetSymbolInfo](../../../extensibility/debugger/reference/idebugmodule3-getsymbolinfo.md) 方法，以确定返回的信息量。  
   
 > [!NOTE]
-> 目前，仅`SSIF_VERBOSE_SEARCH_INFO`受支持，且它必须指定为`dwFlags`参数`IDebugModule3::GetSymbolInfo`。 所有其他值返回错误。  
+> 目前仅 `SSIF_VERBOSE_SEARCH_INFO` 支持，且必须将其指定为的 `dwFlags` 参数 `IDebugModule3::GetSymbolInfo` 。 所有其他值都将返回错误。  
   
 ## <a name="requirements"></a>要求  
- 标头： msdbg.h  
+ 标头： msdbg  
   
- 命名空间:Microsoft.VisualStudio.Debugger.Interop  
+ 命名空间： VisualStudio  
   
- 程序集：Microsoft.VisualStudio.Debugger.Interop.dll  
+ 程序集： Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>请参阅  
- [枚举](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>另请参阅  
+ [计数](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [GetSymbolInfo](../../../extensibility/debugger/reference/idebugmodule3-getsymbolinfo.md)

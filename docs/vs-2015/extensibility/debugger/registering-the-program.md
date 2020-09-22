@@ -1,5 +1,5 @@
 ---
-title: 正在注册程序 |Microsoft Docs
+title: 注册程序 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,35 +12,35 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 31d03f12a31953cbc0e20d06820dd49b5f9827e6
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63441969"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840713"
 ---
 # <a name="registering-the-program"></a>注册程序
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-调试引擎已获取某个端口后，由[IDebugPort2](../../extensibility/debugger/reference/idebugport2.md)接口，启用要进行调试的程序的下一步是将其注册到该端口。 注册后，该程序是可用于调试通过以下方法之一：  
+调试引擎获取端口（由 [IDebugPort2](../../extensibility/debugger/reference/idebugport2.md) 接口表示）后，启用程序调试的下一步是将其注册到该端口。 注册后，可通过以下方法之一进行调试：  
   
-- 连接的过程，这使调试器能够获取正在运行的应用程序的完整调试控件。  
+- 附加的过程，它允许调试器对正在运行的应用程序进行完全的调试控制。  
   
-- 在实时 (JIT) 调试时，这允许事实后调试的一个独立于调试器运行程序。 当运行时体系结构会捕获错误时，调试器通知操作系统之前或运行时环境释放的内存和出错的程序的资源。  
+- 实时 (JIT) 调试，这允许对独立于调试器运行的程序进行事后调试。 当运行时体系结构捕获到错误时，将在操作系统或运行时环境释放错误程序的内存和资源之前通知调试器。  
   
-## <a name="registering-procedure"></a>注册过程  
+## <a name="registering-procedure"></a>正在注册过程  
   
-#### <a name="to-register-your-program"></a>若要注册你的程序  
+#### <a name="to-register-your-program"></a>注册程序  
   
-1. 调用[AddProgramNode](../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md)方法实现的端口。  
+1. 调用由端口实现的 [AddProgramNode](../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md) 方法。  
   
-     `IDebugPortNotify2::AddProgramNode` 要求一个指向[IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md)接口。  
+     `IDebugPortNotify2::AddProgramNode` 需要指向 [IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md) 接口的指针。  
   
-     通常情况下，当操作系统或运行时环境加载程序，它创建的程序节点。 如果调试引擎 (DE) 需要加载程序 DE 创建，并注册程序节点。  
+     通常，当操作系统或运行时环境加载程序时，它会创建程序节点。 如果要求 (DE) 调试引擎加载程序，则取消创建并注册程序节点。  
   
-     下面的示例演示调试引擎启动该程序并注册一个端口。  
+     下面的示例演示了如何启动程序并使用端口注册程序。  
   
     > [!NOTE]
-    > 这不是唯一的方法来启动和恢复过程;这是主要与端口注册一个程序的示例。  
+    > 这不是启动和恢复进程的唯一方法;这主要是使用端口注册程序的一个示例。  
   
     ```cpp#  
     // This is an IDebugEngineLaunch2 method.  
@@ -106,6 +106,6 @@ ms.locfileid: "63441969"
   
     ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [获取端口](../../extensibility/debugger/getting-a-port.md)   
  [启用要进行调试的程序](../../extensibility/debugger/enabling-a-program-to-be-debugged.md)

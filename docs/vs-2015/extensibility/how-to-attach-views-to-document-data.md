@@ -1,5 +1,5 @@
 ---
-title: 如何：附加文档数据的视图 |Microsoft Docs
+title: 如何：将视图附加到文档数据 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,39 +11,39 @@ caps.latest.revision: 23
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 6bc1b57e189902624c13149d0264142ff66af050
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63436008"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840489"
 ---
 # <a name="how-to-attach-views-to-document-data"></a>如何：将视图附加到文档数据
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-如果您有一个新的文档视图，您可能能够将其附加到现有的文档数据对象。  
+如果有新的文档视图，则可以将其附加到现有的文档数据对象。  
   
-### <a name="to-determine-if-you-can-attach-a-view-to-an-existing-document-data-object"></a>若要确定是否可以将视图附加到现有的文档数据对象  
+### <a name="to-determine-if-you-can-attach-a-view-to-an-existing-document-data-object"></a>确定是否可以将视图附加到现有的文档数据对象  
   
 1. 实现 <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A>。  
   
-2. 中的实现`IVsEditorFactory::CreateEditorInstance`，调用`QueryInterface`现有文档的数据对象时 IDE 调用你`CreateEditorInstance`实现。  
+2. 在的实现中 `IVsEditorFactory::CreateEditorInstance` ， `QueryInterface` 当 IDE 调用实现时，对现有文档数据对象调用 `CreateEditorInstance` 。  
   
-     调用`QueryInterface`，可以检查现有的文档数据对象，它指定在`punkDocDataExisting`参数。  
+     通过调用， `QueryInterface` 可以检查在参数中指定的现有文档数据对象 `punkDocDataExisting` 。  
   
-     确切的接口必须查询，但是，取决于正在打开文档，编辑器在步骤 4 中所述。  
+     但是，必须查询的确切接口取决于打开文档的编辑器，如步骤4中所述。  
   
-3. 如果找不到现有的文档数据对象上的相应接口，然后返回到你，该值指示文档数据对象与您的编辑器不兼容的编辑器的错误代码。  
+3. 如果在现有文档数据对象上找不到相应的接口，则会将错误代码返回到编辑器，指出文档数据对象与编辑器不兼容。  
   
-     在 IDE 的实现中的<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A>，一个消息框会通知你，文档在另一个编辑器中打开，并询问您是否将其关闭。  
+     在 IDE 的实现中 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A> ，消息框通知您文档已在另一个编辑器中打开，并询问您是否要将其关闭。  
   
-4. 如果关闭此文档，然后 Visual Studio 调用编辑器工厂的第二次。 在此调用时，`DocDataExisting`参数等于 NULL。 编辑器工厂实现然后可以在自己的编辑器中打开文档数据对象。  
+4. 如果关闭此文档，则 Visual Studio 将再次调用编辑器工厂。 在此调用中， `DocDataExisting` 参数等于 NULL。 然后，您的编辑器工厂实现可以在您自己的编辑器中打开文档数据对象。  
   
     > [!NOTE]
-    > 若要确定是否可以使用现有的文档数据对象，您还可以使用专用接口实现的知识通过强制转换为实际的指针[!INCLUDE[vcprvc](../includes/vcprvc-md.md)]私有实现的类。 例如，所有的标准编辑器实现`IVsPersistFileFormat`，后者又继承<xref:Microsoft.VisualStudio.OLE.Interop.IPersist>。 因此，可以调用`QueryInterface`为<xref:Microsoft.VisualStudio.OLE.Interop.IPersist.GetClassID%2A>，并在现有的文档数据对象的类 ID 是否匹配你的实现的类 ID，然后可以使用文档数据对象。  
+    > 若要确定是否可以使用现有的文档数据对象，还可以通过将指针转换为私有实现的实际类，来使用接口实现的私有知识 [!INCLUDE[vcprvc](../includes/vcprvc-md.md)] 。 例如，所有标准编辑器都实现 `IVsPersistFileFormat` ，它们继承自 <xref:Microsoft.VisualStudio.OLE.Interop.IPersist> 。 因此，你可以调用 `QueryInterface` <xref:Microsoft.VisualStudio.OLE.Interop.IPersist.GetClassID%2A> ，如果现有文档数据对象上的类 id 与实现的类 id 匹配，则可以使用文档数据对象。  
   
 ## <a name="robust-programming"></a>可靠编程  
- 当 Visual Studio 调用的实现<xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A>方法，它返回将指针传递到现有的文档数据对象中`punkDocDataExisting`参数，如果存在。 检查文档数据对象中返回`punkDocDataExisting`来确定文档数据对象是否适合于您的编辑器中的此主题中的过程步骤 4 中的说明所述。 如果合适，则编辑器工厂应提供第二个视图的数据中所述[Supporting Multiple Document Views](../extensibility/supporting-multiple-document-views.md)。 如果没有，则它应显示相应的错误消息。  
+ 当 Visual Studio 调用方法的实现时 <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A> ，它会传递回 `punkDocDataExisting` 参数（如果存在）中的现有文档数据对象的指针。 检查中返回的文档数据对象 `punkDocDataExisting` ，以确定文档数据对象是否适用于你的编辑器，如本主题中的过程的步骤4中所述。 如果适用，则编辑器工厂应提供 [支持多文档视图](../extensibility/supporting-multiple-document-views.md)中所述的数据的另一个视图。 如果不是，则它应显示适当的错误消息。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [支持多个文档视图](../extensibility/supporting-multiple-document-views.md)   
  [自定义编辑器中的文档数据和文档视图](../extensibility/document-data-and-document-view-in-custom-editors.md)

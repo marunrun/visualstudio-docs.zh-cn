@@ -14,11 +14,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: c4b2e6dd825cfcf67ffffd9ace27017c8d01aa33
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63431403"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840811"
 ---
 # <a name="how-to-build-incrementally"></a>如何：增量生成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "63431403"
 </Target>  
 ```  
   
- 当目标中指定了输入和输出时，要么每个输出只能映射到一个输入，要么在输出和输入之间不能有任何直接映射。 例如，在前面的 [Csc 任务](../msbuild/csc-task.md)中，输出 hello.exe 不能映射到任何一个单独的输入，因为它依赖于所有输入。  
+ 当目标中指定了输入和输出时，要么每个输出只能映射到一个输入，要么在输出和输入之间不能有任何直接映射。 例如，在上一 [Csc 任务](../msbuild/csc-task.md)中，输出 hello.exe 不能映射到任何单个输入，它取决于所有输入。  
   
 > [!NOTE]
 > 对于输入和输出之间不存在直接映射的目标，它的生成频率总是比每个输出只能映射到一个输入的目标高，因为如果某些输入发生了更改， [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 无法确定需要重新生成哪些输出。  
@@ -61,9 +61,9 @@ ms.locfileid: "63431403"
 ## <a name="example"></a>示例  
  以下示例使用的项目为假设的帮助系统生成帮助文件。 执行该项目时，会将 .txt 源文件转换为 .content 中间文件，随后，.content 中间文件与 XML 元数据文件合并，生成帮助系统使用的 .help 最终文件。 该项目使用以下假设任务：  
   
-- `GenerateContentFiles`：将.txt 文件转换成.content 文件。  
+- `GenerateContentFiles`：将 .txt 文件转换成 .content 文件。  
   
-- `BuildHelp`：将合并.content 文件与 XML 元数据文件，生成.help 最终文件。  
+- `BuildHelp`：将 .content 文件与 XML 元数据文件合并，生成 .help 最终文件。  
   
   该项目通过转换过程来建立 `GenerateContentFiles` 任务中输入和输出之间的一一映射。 有关详细信息，请参阅[转换](../msbuild/msbuild-transforms.md)。 此外，设置了 `Output` 元素，以便自动将 `GenerateContentFiles` 任务的输出用作 `BuildHelp` 任务的输入。  
   
@@ -104,9 +104,9 @@ ms.locfileid: "63431403"
 </Project>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [目标](../msbuild/msbuild-targets.md)   
- [Target 元素 (MSBuild)](../msbuild/target-element-msbuild.md)   
- [转换](../msbuild/msbuild-transforms.md)   
+## <a name="see-also"></a>另请参阅  
+ [攻击](../msbuild/msbuild-targets.md)   
+ [目标元素 (MSBuild) ](../msbuild/target-element-msbuild.md)   
+ [可转换](../msbuild/msbuild-transforms.md)   
  [Csc 任务](../msbuild/csc-task.md)   
  [Vbc 任务](../msbuild/vbc-task.md)

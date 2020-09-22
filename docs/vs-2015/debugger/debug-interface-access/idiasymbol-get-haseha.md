@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 87adaa2e43068784e5ec6488030f147891a027dd
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64817264"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840649"
 ---
-# <a name="idiasymbolgethaseha"></a>IDiaSymbol::get_hasEHa
+# <a name="idiasymbolget_haseha"></a>IDiaSymbol::get_hasEHa
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-检索一个标志，指定该函数是否包含异步 （结构化） 异常处理。  
+检索一个标志，该标志指定该函数是否包含异步 (结构化) 异常处理。  
   
 ## <a name="syntax"></a>语法  
   
@@ -33,25 +33,25 @@ HRESULT get_hasEHa(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>parameters  
  `pFlag`  
- [out]返回`TRUE`如果函数具有任何异步异常处理; 否则，返回`FALSE`。  
+ 弄 `TRUE` 如果函数具有任何异步异常处理，则返回; 否则返回 `FALSE` 。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回`S_FALSE`或错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回 `S_FALSE` 错误代码。  
   
 > [!NOTE]
-> 返回值为`S_FALSE`表示该属性不是可用于符号。  
+> 返回值意味着该 `S_FALSE` 属性对符号不可用。  
   
 ## <a name="remarks"></a>备注  
- 它是可以混合使用异步或结构化异常处理，并C++-样式异常处理，但它要求特定的编译器开关，/EHa，若要启用它。  
+ 可以使用 c + + 样式的异常处理混合使用异步或结构化异常处理，但需要使用特定的编译器开关/EHa 来启用它。  
   
 ## <a name="requirements"></a>要求  
   
-|需求|描述|  
+|要求|说明|  
 |-----------------|-----------------|  
-|标头：|dia2.h|  
+|标头：|dia2|  
 |版本：|DIA SDK v8.0|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

@@ -14,16 +14,16 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: eaf927b1049709a04d8a883615d1997e9316599e
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63445385"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840507"
 ---
 # <a name="task-writing"></a>任务写入
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-任务提供在生成过程中运行的代码。 任务包含在目标中。 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 附带一个典型任务库，也可以创建自己的任务。 有关 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 附带的任务库的详细信息，请参阅[任务参考](../msbuild/msbuild-task-reference.md)。  
+任务提供在生成过程中运行的代码。 任务包含在目标中。 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 附带一个典型任务库，也可以创建自己的任务。 有关随附的任务库的详细信息 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] ，请参阅 [任务参考](../msbuild/msbuild-task-reference.md)。  
   
 ## <a name="tasks"></a>任务  
  任务的示例包括用于复制一个或多个文件的 [Copy](../msbuild/copy-task.md)、用于创建目录的 [MakeDir](../msbuild/makedir-task.md) 以及用于编译 [!INCLUDE[csprcs](../includes/csprcs-md.md)] 源代码文件的 [Csc](../msbuild/csc-task.md)。 每个任务作为 .NET 类实现，此类实现 Microsoft.Build.Framework.dll 程序集中定义的 <xref:Microsoft.Build.Framework.ITask> 接口。  
@@ -100,7 +100,7 @@ namespace MyTasks
 ```  
   
 ## <a name="registering-tasks"></a>注册任务  
- 如果项目将要运行任务，[!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 必须知道如何找到包含任务类的程序集。 任务是使用 [UsingTask 元素 (MSBuild)](../msbuild/usingtask-element-msbuild.md) 注册的。  
+ 如果项目将要运行任务，[!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 必须知道如何找到包含任务类的程序集。 使用 UsingTask 元素将任务注册 [ (MSBuild) ](../msbuild/usingtask-element-msbuild.md)。  
   
  [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 文件 Microsoft.Common.Tasks 是一个包含 `UsingTask` 元素列表的项目文件，这些元素注册随 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 一起提供的所有任务。 生成每个项目时会自动包括该文件。 如果在 Microsoft.Common.Tasks 中注册的任务也在当前项目文件中进行了注册，则当前项目文件具有优先权；也就是说，可以使用自己的同名任务重写默认任务。  
   
@@ -244,7 +244,7 @@ namespace SimpleTask2
   
 ## <a name="example"></a>示例  
   
-### <a name="description"></a>说明  
+### <a name="description"></a>描述  
  此 [!INCLUDE[csprcs](../includes/csprcs-md.md)] 类演示一个从 <xref:Microsoft.Build.Utilities.Task> 帮助器类派生的任务。 它有一个必需的字符串属性，并引发一个由所有注册的记录器显示的事件。  
   
 ### <a name="code"></a>代码  
@@ -252,7 +252,7 @@ namespace SimpleTask2
   
 ## <a name="example"></a>示例  
   
-### <a name="description"></a>说明  
+### <a name="description"></a>描述  
  以下示例显示一个调用上一示例任务 SimpleTask3 的项目文件。  
   
 ### <a name="code"></a>代码  
@@ -268,6 +268,6 @@ namespace SimpleTask2
 </Project>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [任务参考](../msbuild/msbuild-task-reference.md)   
- [任务参考](../msbuild/msbuild-task-reference.md)
+## <a name="see-also"></a>另请参阅  
+ [任务引用](../msbuild/msbuild-task-reference.md)   
+ [任务引用](../msbuild/msbuild-task-reference.md)

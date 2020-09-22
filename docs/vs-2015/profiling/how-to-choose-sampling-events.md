@@ -20,11 +20,11 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 017414bdbf8e0e1a3a664782aab1ea44bda030c4
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63432834"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840333"
 ---
 # <a name="how-to-choose-sampling-events"></a>如何：选择采样事件
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -61,9 +61,9 @@ ms.locfileid: "63432834"
   
 5. 选择示例事件时，“采样间隔”文本框中将显示默认的采样间隔值。 如有必要，可在文本框中输入想要的值。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [配置性能会话](../profiling/configuring-performance-sessions.md)   
  [如何：选择收集方法](../profiling/how-to-choose-collection-methods.md)   
  [CPU 和 Windows 计数器](../profiling/cpu-and-windows-counters.md)   
  [了解采样数据值](../profiling/understanding-sampling-data-values.md)   
- [从命令行分析](../profiling/using-the-profiling-tools-from-the-command-line.md)
+ [通过命令行进行分析](../profiling/using-the-profiling-tools-from-the-command-line.md)

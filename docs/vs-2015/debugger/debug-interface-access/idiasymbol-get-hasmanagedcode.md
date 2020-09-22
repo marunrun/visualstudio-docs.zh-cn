@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 49e78c062ba92bf93edfce9aa7dac215a96faeb1
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: fb8babf5cd72f1fc2f97ffe4ad7b62d91f325f61
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64807251"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "90840565"
 ---
-# <a name="idiasymbolgethasmanagedcode"></a>IDiaSymbol::get_hasManagedCode
+# <a name="idiasymbolget_hasmanagedcode"></a>IDiaSymbol::get_hasManagedCode
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-检索一个标志，指示模块是否包含托管的代码。  
+检索一个标志，该标志指示该模块是否包含托管代码。  
   
 ## <a name="syntax"></a>语法  
   
@@ -33,26 +33,26 @@ HRESULT get_hasManagedCode(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>parameters  
  `pFlag`  
- [out]返回`TRUE`如果该模块包含在托管的代码; 否则，返回`FALSE`，代码为非托管的代码。  
+ 弄 `TRUE` 如果模块包含托管代码，则返回; 否则返回 `FALSE` ，则代码为非托管代码。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回`S_FALSE`或错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回 `S_FALSE` 错误代码。  
   
 > [!NOTE]
-> 返回值为`S_FALSE`表示该属性不是可用于符号。  
+> 返回值意味着该 `S_FALSE` 属性对符号不可用。  
   
 ## <a name="remarks"></a>备注  
- 此属性是可从`SymTagCompilandDetails`符号类型 (请参阅[CompilandDetails](../../debugger/debug-interface-access/compilanddetails.md))。  
+ 此属性可从 " `SymTagCompilandDetails` 符号类型" (参阅 [CompilandDetails](../../debugger/debug-interface-access/compilanddetails.md)) 。  
   
 ## <a name="requirements"></a>要求  
   
-|需求|描述|  
+|要求|说明|  
 |-----------------|-----------------|  
-|标头：|dia2.h|  
+|标头：|dia2|  
 |版本：|DIA SDK v8.0|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
  [CompilandDetails](../../debugger/debug-interface-access/compilanddetails.md)

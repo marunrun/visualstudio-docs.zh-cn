@@ -11,32 +11,32 @@ caps.latest.revision: 17
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: b8e1ac2fa17409ac3228f87eb71c99ce9e725521
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63447199"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840350"
 ---
 # <a name="simplified-embedding"></a>简化的嵌入
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-当其文档视图对象的父级 （即，做出的子级） 简化的嵌入在编辑器中启用[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]，和<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane>接口实现以处理其窗口命令。 简化的嵌入编辑器不能托管活动控件。 在下图显示用于创建编辑器具有简化的嵌入的对象。  
+如果在编辑器的文档视图对象的父级为 (即成为) 的子级，则在编辑器中启用简化嵌入， [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 并 <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane> 实现接口以处理其窗口命令。 简化的嵌入编辑器无法承载活动控件。 下图显示了用于创建具有简化嵌入的编辑器的对象。  
   
- ![简化的嵌入式编辑器图形](../extensibility/media/vssimplifiedembeddingeditor.gif "vsSimplifiedEmbeddingEditor")  
-使用简化的嵌入编辑器  
+ ![图：简化的嵌入式编辑器](../extensibility/media/vssimplifiedembeddingeditor.gif "vsSimplifiedEmbeddingEditor")  
+具有简化嵌入的编辑器  
   
 > [!NOTE]
-> 在此图中，仅对象的`CYourEditorFactory`创建标准的基于文件的编辑器所需的对象。 如果要创建自定义编辑器，不需要实现<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2>，因为你的编辑器可能具有其自己的专用持久性机制。 为非自定义编辑器，但是，则必须这样做。  
+> 在此图中的对象中，只 `CYourEditorFactory` 需要对象来创建基于文件的标准编辑器。 如果你正在创建自定义编辑器，则不需要实现 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2> ，因为你的编辑器可能具有自己的专用持久性机制。 但对于非自定义编辑器，必须这样做。  
   
- 中包含所有接口实现以创建具有简化的嵌入编辑器`CYourEditorDocument`对象。 但是，若要支持文档数据的多个视图，拆分到单独的数据与视图对象上的接口下表中所示。  
+ 为创建具有简化嵌入的编辑器而实现的所有接口都包含在 `CYourEditorDocument` 对象中。 但是，若要支持文档数据的多个视图，请将接口拆分为单独的数据并查看对象，如下表所示。  
   
 |接口|接口的位置|使用|  
 |---------------|---------------------------|---------|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane>|视图|提供连接到父窗口。|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane>|视图|提供与父窗口的连接。|  
 |<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>|视图|处理命令。|  
 |<xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbarUser>|视图|启用状态栏更新。|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsToolboxUser>|视图|使**工具箱**项。|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsFileChangeEvents>|数据|文件发生更改时，会发送通知。|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat>|数据|启用文件类型的另存为功能。|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsToolboxUser>|视图|启用 **工具箱** 项。|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsFileChangeEvents>|数据|当文件发生更改时发送通知。|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat>|数据|为文件类型启用 "另存为" 功能。|  
 |<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2>|数据|实现文档持久性。|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsDocDataFileChangeControl>|数据|允许文件更改事件，例如触发重新加载禁止的显示。|
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsDocDataFileChangeControl>|数据|允许禁止显示文件更改事件，如重新加载触发。|

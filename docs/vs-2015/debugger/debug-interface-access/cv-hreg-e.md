@@ -14,19 +14,19 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: ace9f28c0726a762e0ffe2abcf0538c5a629b06c
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63443502"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840730"
 ---
-# <a name="cvhrege"></a>CV_HREG_e
+# <a name="cv_hreg_e"></a>CV_HREG_e
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-指定目标注册。  
+指定目标寄存器。  
   
 > [!NOTE]
-> 因为`CV_HREG_e`枚举太大，无法复制无法全部展示，作为参考提供的简化的版本。 在斜体标记缺失的条目。 完整的枚举是 cvconst.h 标头文件中。  
+> 由于 `CV_HREG_e` 枚举太大而无法在此处完整复制，因此提供了一个缩写形式作为参考。 缺失项以斜体形式存在。 Cvconst 头文件中提供了完整的枚举。  
   
 ## <a name="syntax"></a>语法  
   
@@ -413,42 +413,42 @@ enum CV_HREG_e { 
   
 ## <a name="elements"></a>元素  
  CV_REG_*  
- 注册由 Intel 80x86 和 ix86 处理器和 p 代码。  
+ Intel 80x86 和 ix86 处理器以及 p 代码使用的寄存器。  
   
  CV_R68_*  
- 68 K 处理器使用的寄存器。  
+ 注册由68K 处理器使用。  
   
  CV_M4_*  
- 由 MIPS 4000 系列处理器的寄存器。  
+ MIPS 4000 系列处理器使用的寄存器。  
   
  CV_ALPHA_*  
- 使用的数字设备 Corporation Alpha AXP 系列处理器的寄存器。  
+ 数字设备 Corporation Alpha AXP 系列处理器使用的寄存器。  
   
  CV_PPC_*  
- / IBM Motorola PowerPC 处理器使用的寄存器。  
+ 注册由 Motorola/IBM PowerPC 处理器使用。  
   
  CV_SH3_ * 和 CV_SH_\*  
- 使用的人： Hitachi SH3 和 Hitachi SH 系列处理器的寄存器。  
+ Hitachi SH3 和 Hitachi SH 系列处理器使用的寄存器。  
   
  CV_ARM_*  
- 使用高级 RISC 计算机 (ARM) 处理器的寄存器。  
+ 高级 RISC 计算机 (ARM) 处理器使用的寄存器。  
   
  CV_IA64_*  
- 由 Intel IA64 系列处理器的寄存器。  
+ Intel IA64 系列处理器使用的寄存器。  
   
  CV_TRI_*  
- Infineon 技术 TriCore 处理器使用的寄存器。  
+ 注册由 Infineon 技术 TriCore 处理器使用。  
   
  CV_AM33_*  
- 注册和使用 Matsushita/Panasonic AM33，与处理器相关。  
+ 注册由 Matsushita/Panasonic AM33 和相关处理器使用。  
   
  CV_M32R_*  
- Mitsubishi M32R 处理器使用的寄存器。  
+ 注册由 Mitsubishi M32R 处理器使用。  
   
 ## <a name="remarks"></a>备注  
- 每个处理器类型使用其自己独特的寄存器。  
+ 每个处理器类型都使用其自己的唯一寄存器集。  
   
- 此枚举中的值将传递到以下方法：  
+ 此枚举中的值将传递给以下方法：  
   
 - [IDiaStackWalkFrame::get_registerValue](../../debugger/debug-interface-access/idiastackwalkframe-get-registervalue.md)  
   
@@ -461,12 +461,12 @@ enum CV_HREG_e { 
 - [IDiaStackFrame::get_registerValue](../../debugger/debug-interface-access/idiastackframe-get-registervalue.md)  
   
 ## <a name="requirements"></a>要求：  
- 标头： cvconst.h  
+ 标头： cvconst  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [枚举和结构](../../debugger/debug-interface-access/enumerations-and-structures.md)   
- [IDiaStackWalkFrame::get_registerValue](../../debugger/debug-interface-access/idiastackwalkframe-get-registervalue.md)   
- [IDiaStackWalkFrame::put_registerValue](../../debugger/debug-interface-access/idiastackwalkframe-put-registervalue.md)   
- [IDiaStackWalkHelper::get_registerValue](../../debugger/debug-interface-access/idiastackwalkhelper-get-registervalue.md)   
- [IDiaStackWalkHelper::put_registerValue](../../debugger/debug-interface-access/idiastackwalkhelper-put-registervalue.md)   
+ [IDiaStackWalkFrame：： get_registerValue](../../debugger/debug-interface-access/idiastackwalkframe-get-registervalue.md)   
+ [IDiaStackWalkFrame：:p ut_registerValue](../../debugger/debug-interface-access/idiastackwalkframe-put-registervalue.md)   
+ [IDiaStackWalkHelper：： get_registerValue](../../debugger/debug-interface-access/idiastackwalkhelper-get-registervalue.md)   
+ [IDiaStackWalkHelper：:p ut_registerValue](../../debugger/debug-interface-access/idiastackwalkhelper-put-registervalue.md)   
  [IDiaStackFrame::get_registerValue](../../debugger/debug-interface-access/idiastackframe-get-registervalue.md)

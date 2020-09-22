@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 5e0fa57c38c8451bde84d96ab32bc7980c5e2d8b
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63442221"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840494"
 ---
-# <a name="idiaaddressmapputimagealign"></a>IDiaAddressMap::put_imageAlign
+# <a name="idiaaddressmapput_imagealign"></a>IDiaAddressMap::put_imageAlign
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-设置的图像对齐方式。  
+设置图像的对齐方式。  
   
 ## <a name="syntax"></a>语法  
   
@@ -33,21 +33,21 @@ HRESULT put_imageAlign ( 
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>parameters  
  NewVal  
- [in]新的图像对齐方式可执行文件有值。  
+ 中可执行文件的新图像对齐值。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
 ## <a name="remarks"></a>备注  
- 指定的内存边界对齐图像 （加载可执行文件）。 由当前的系统体系结构以及编译和链接时间选项，可能会影响此对齐方式。 图像对齐方式是始终在字节边界上。 下面的图像对齐方式值是有效的：1、 2、 4、 8、 16、 32 和 64 字节边界。  
+  (加载的可执行文件) 的图像与指定的内存边界对齐。 此对齐方式可能受到当前系统体系结构以及编译和链接时间选项的影响。 图像对齐始终在字节边界上。 以下图像对齐值有效：1、2、4、8、16、32和64字节边界。  
   
- 可以通过调用检索当前的图像对齐方式[idiaaddressmap:: Get_imagealign](../../debugger/debug-interface-access/idiaaddressmap-get-imagealign.md)方法。  
+ 可以通过调用 [IDiaAddressMap：： get_imageAlign](../../debugger/debug-interface-access/idiaaddressmap-get-imagealign.md) 方法检索当前图像对齐方式。  
   
 > [!NOTE]
-> 可以调用此方法时已加载图像。 `put_imageAlign`图像已被移动或更改和新的对齐方式是所需时通常使用方法。  
+> 此方法可被调用时已加载。 此 `put_imageAlign` 方法通常在图像已移动或更改并且需要新对齐时使用。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDiaAddressMap](../../debugger/debug-interface-access/idiaaddressmap.md)   
  [IDiaAddressMap::get_imageAlign](../../debugger/debug-interface-access/idiaaddressmap-get-imagealign.md)

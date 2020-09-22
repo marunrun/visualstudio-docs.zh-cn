@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 6d5d6a365a7f8455b62e6144f212d853a5f57e2f
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64782148"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840355"
 ---
-# <a name="idiasymbolgetoffsetinudt"></a>IDiaSymbol::get_offsetInUdt
+# <a name="idiasymbolget_offsetinudt"></a>IDiaSymbol::get_offsetInUdt
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-检索到用户定义类型 (UDT) 的用户定义的类型中的成员开始的偏移量。  
+检索 UDT 中成员 (UDT) 的用户定义类型的开始偏移量。  
   
 ## <a name="syntax"></a>语法  
   
@@ -33,25 +33,25 @@ HRESULT get_offsetInUdt( 
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>parameters  
  `pRetVal`  
- [out]返回以字节为单位的符号位置的偏移量。  
+ 弄返回符号位置的偏移量（以字节为单位）。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回`S_FALSE`或错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回 `S_FALSE` 错误代码。  
   
 > [!NOTE]
-> 返回值为`S_FALSE`表示该属性不是可用于符号。  
+> 返回值 `S_FALSE` 意味着该属性对符号不可用。  
   
 ## <a name="remarks"></a>备注  
- 仅在优化版本中的本地记录中使用此函数。  
+ 此函数仅用于优化生成中的本地记录。  
   
 ## <a name="requirements"></a>要求  
- 标头：dia2.h  
+ 标头： Dia2  
   
- 库： diaguids.lib  
+ 库： diaguids  
   
- DLL: msdia100.dll  
+ DLL： msdia100.dll  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
