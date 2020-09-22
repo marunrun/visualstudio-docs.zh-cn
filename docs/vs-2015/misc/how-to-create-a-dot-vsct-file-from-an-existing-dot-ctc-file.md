@@ -1,5 +1,5 @@
 ---
-title: 如何：创建。从现有的 Vsct 文件。启动 Ctc 文件 |Microsoft Docs
+title: 如何：创建。来自现有的 .vsct 文件。.Ctc 文件 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: devlang-csharp
@@ -10,20 +10,20 @@ ms.assetid: 700e80a4-c1e1-4178-af53-45e86dd2c08b
 caps.latest.revision: 9
 manager: jillfra
 ms.openlocfilehash: 7b963436e9d968dd5ba3829e97d0fd0c52e49641
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63443010"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840466"
 ---
-# <a name="how-to-create-a-vsct-file-from-an-existing-ctc-file"></a>如何：创建。从现有的 Vsct 文件。启动 Ctc 文件
+# <a name="how-to-create-a-vsct-file-from-an-existing-ctc-file"></a>如何：从现有的 .Ctc 文件创建 .Vsct 文件
 可以从现有的命令表 .ctc 源文件创建一个基于 XML 的 .vsct 文件。 通过执行此操作，可以利用基于 XML 的新 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 命令表 (VSCT) 编译器格式。  
   
 ### <a name="to-create-a-vsct-file-from-a-ctc-file"></a>从 .ctc 文件创建 .vsct  文件  
   
 1. 获取 Perl 语言的副本。  
   
-2. 获取 Perl 脚本 ConvertCTCToVSCT.pl，通常位于一份 *\<Visual Studio SDK 安装路径 >* \VisualStudioIntegration\Tools\bin 文件夹。  
+2. 获取 Perl 脚本 ConvertCTCToVSCT.pl 的副本（通常位于 \VisualStudioIntegration\Tools\bin 文件夹中） *\<Visual Studio SDK installation path>* 。  
   
 3. 获取要转换的 .ctc 源文件的副本。  
   
@@ -44,6 +44,6 @@ ms.locfileid: "63443010"
     > [!NOTE]
     > 可以通过重新格式化 XML 注释来提高 .vsct 文件的可读性。  
   
-## <a name="see-also"></a>请参阅  
- [如何：创建。Vsct 文件](../extensibility/internals/how-to-create-a-dot-vsct-file.md)   
+## <a name="see-also"></a>另请参阅  
+ [如何：创建。.Vsct 文件](../extensibility/internals/how-to-create-a-dot-vsct-file.md)   
  [Visual Studio 命令表格 (.Vsct) 文件](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

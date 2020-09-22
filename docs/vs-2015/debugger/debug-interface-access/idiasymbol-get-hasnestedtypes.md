@@ -1,5 +1,5 @@
 ---
-title: 'Idiasymbol:: Get_hasnestedtypes |Microsoft Docs'
+title: IDiaSymbol：： get_hasNestedTypes |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: fc50ea9121ad974f27b670c3f01d5ff28398d211
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64811702"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840603"
 ---
-# <a name="idiasymbolgethasnestedtypes"></a>IDiaSymbol::get_hasNestedTypes
+# <a name="idiasymbolget_hasnestedtypes"></a>IDiaSymbol::get_hasNestedTypes
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-检索指定用户定义数据类型是否具有嵌套类型定义的标志。  
+检索一个标志，该标志指定用户定义数据类型是否具有嵌套类型定义。  
   
 ## <a name="syntax"></a>语法  
   
@@ -33,22 +33,22 @@ HRESULT get_hasNestedTypes ( 
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>parameters  
  `pRetVal`  
- [out]返回`TRUE`如果用户定义数据类型有嵌套类型定义; 否则，返回`FALSE`。  
+ 弄 `TRUE` 如果用户定义数据类型具有嵌套类型定义，则返回; 否则返回 `FALSE` 。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回`S_FALSE`或错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回 `S_FALSE` 错误代码。  
   
 > [!NOTE]
-> 返回值为`S_FALSE`表示该属性不是可用于符号。  
+> 返回值意味着该 `S_FALSE` 属性对符号不可用。  
   
 ## <a name="requirements"></a>要求  
   
-|需求|描述|  
+|要求|说明|  
 |-----------------|-----------------|  
-|标头：|dia2.h|  
+|标头：|dia2|  
 |版本：|DIA SDK v7.0|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

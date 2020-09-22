@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 911295730548e905e55a61fa16fc3adc792a1bbb
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64793144"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840440"
 ---
-# <a name="idiasymbolgettargetvirtualaddress"></a>IDiaSymbol::get_targetVirtualAddress
+# <a name="idiasymbolget_targetvirtualaddress"></a>IDiaSymbol::get_targetVirtualAddress
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-检索转换 （thunk） 目标的虚拟地址 (VA)。  
+检索 thunk 目标 (VA) 的虚拟地址。  
   
 ## <a name="syntax"></a>语法  
   
@@ -33,21 +33,21 @@ HRESULT get_targetVirtualAddress ( 
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>parameters  
  `pRetVal`  
- [out]返回转换 （thunk） 目标的 VA。  
+ 弄返回 thunk 目标的 VA。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回`S_FALSE`或错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回 `S_FALSE` 错误代码。  
   
 > [!NOTE]
-> 返回值为`S_FALSE`表示该属性不是可用于符号。  
+> 返回值 `S_FALSE` 意味着该属性对符号不可用。  
   
 ## <a name="remarks"></a>备注  
- 此属性才有效才形式的符号[SymTagEnum 枚举](../../debugger/debug-interface-access/symtagenum.md)的值`SymTagThunk`。  
+ 仅当符号为的 [SymTagEnum 枚举](../../debugger/debug-interface-access/symtagenum.md) 值时，此属性才有效 `SymTagThunk` 。  
   
- "转换 （thunk）"是代码的一种 32 位内存地址空间 （也称为平面地址空间） 和一个 16 位地址空间 （称为分段的地址空间） 之间进行转换。  
+ "Thunk" 是一段代码，用于在32位内存地址 (空间（也称为平面地址空间) ）和16位地址空间（)  (称为分段地址空间）之间进行转换。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
  [SymTagEnum 枚举](../../debugger/debug-interface-access/symtagenum.md)

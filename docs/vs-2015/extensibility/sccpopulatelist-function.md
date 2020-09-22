@@ -13,16 +13,16 @@ caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 5efdddc448dc8e04ee963eaa1b342a93666d9b62
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63446776"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840698"
 ---
 # <a name="sccpopulatelist-function"></a>SccPopulateList 函数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-此函数可更新特定的源控制命令的文件的列表，并提供所有给定文件的源代码管理状态。  
+此函数更新特定源代码管理命令的文件列表，并提供所有给定文件的源代码管理状态。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,53 +39,53 @@ SCCRTN SccPopulateList (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>parameters  
  pvContext  
- [in]源控制插件上下文结构。  
+ 中源代码管理插件上下文结构。  
   
- nCommand  
- [in]将应用于所有文件的源控制命令`lpFileNames`数组 (请参阅[命令代码](../extensibility/command-code-enumerator.md)有关的可能的命令列表)。  
+ N 命令  
+ 中将应用到数组中所有文件的源代码管理命令 `lpFileNames` (参阅 [命令代码](../extensibility/command-code-enumerator.md) ，获取) 可能命令的列表。  
   
- nFiles  
- [in]中的文件数`lpFileNames`数组。  
+ n  
+ 中数组中的文件数 `lpFileNames` 。  
   
  lpFileNames  
- [in]已知的 IDE 的文件名称的数组。  
+ 中IDE 已知的文件名的数组。  
   
  pfnPopulate  
- [in]要调用以添加和删除文件的 IDE 回调函数 (请参阅[POPLISTFUNC](../extensibility/poplistfunc.md)有关详细信息)。  
+ 中要调用的 IDE 回调函数以添加和删除文件 (参阅 [POPLISTFUNC](../extensibility/poplistfunc.md) 了解详细信息) 。  
   
  pvCallerData  
- [in]要传递的值保持不变的回调函数。  
+ 中将以不更改的形式传递给回调函数的值。  
   
  lpStatus  
- [in、 out]源代码管理插件返回的每个文件的状态标志的数组。  
+ [in，out]用于源控件插件的数组，用于返回每个文件的状态标志。  
   
- fOptions  
- [in]命令标志 (请参阅的"PopulateList 标志"部分[位标志由特定命令](../extensibility/bitflags-used-by-specific-commands.md)有关详细信息)。  
+ 用于  
+ 中命令标志 (参阅 [特定命令使用的 Bitflags](../extensibility/bitflags-used-by-specific-commands.md) 的 "PopulateList 标志" 部分以获取详细信息) 。  
   
 ## <a name="return-value"></a>返回值  
- 此函数的源控制插件实现应返回以下值之一：  
+ 此函数的源代码管理插件实现应返回以下值之一：  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |SCC_OK|成功。|  
 |SCC_E_NONSPECIFICERROR|非特定故障。|  
   
 ## <a name="remarks"></a>备注  
- 此函数将检查其当前状态的文件的列表。 它使用`pfnPopulate`回调函数，以通知调用方，当文件不匹配的条件时`nCommand`。 例如，如果该命令是`SCC_COMMAND_CHECKIN`并在列表中的文件未签出，然后使用回调来通知调用方。 有时，源代码管理插件可能会发现可以命令的一部分并将其添加其他文件。 这样，例如，Visual Basic 用户签出一个.bmp 文件，由其自己的项目，但没有显示在 Visual Basic 项目文件中。 用户选择**获取**命令在 IDE 中。 IDE 将显示它认为可以获取用户，所有文件的列表，但在该列表显示之前,`SccPopulateList`函数调用以确保要显示的列表是最新。  
+ 此函数检查文件的列表中是否有当前状态。 它使用 `pfnPopulate` 回调函数在文件与的条件不匹配时通知调用方 `nCommand` 。 例如，如果命令为 `SCC_COMMAND_CHECKIN` 且列表中的某个文件未签出，则使用回调来通知调用方。 有时，源代码管理插件可能会找到可能是命令的一部分并添加的其他文件。 例如，这允许 Visual Basic 用户签出其项目使用但未出现在 Visual Basic 项目文件中的 .bmp 文件。 用户选择 IDE 中的 **Get** 命令。 IDE 将显示它认为用户可以获取的所有文件的列表，但在显示列表之前，将 `SccPopulateList` 调用函数以确保显示的列表是最新的。  
   
 ## <a name="example"></a>示例  
- 在 IDE 中生成它认为用户可以获取的文件的列表。 它将显示此列表之前，它会调用`SccPopulateList`函数中，为源代码管理插件提供到机会添加并从列表中删除文件。 插件通过调用给定的回调函数来修改列表 (请参阅[POPLISTFUNC](../extensibility/poplistfunc.md)的更多详细信息)。  
+ IDE 将生成它认为用户可以获取的文件的列表。 在显示此列表之前，它会调用 `SccPopulateList` 函数，使源代码管理插件可以在列表中添加和删除文件。 该插件通过调用给定的回调函数来修改该列表 (有关更多详细信息) ，请参阅 [POPLISTFUNC](../extensibility/poplistfunc.md) 。  
   
- 该插件将继续调用`pfnPopulate`函数，它将添加或删除文件，直到它完成，然后返回从`SccPopulateList`函数。 然后，IDE 可以显示其列表。 `lpStatus`数组均表示由 IDE 传入的原始列表中的所有文件。 回调函数的使用中的所有这些文件除了要让状态插件的填充。  
+ 插件继续调用 `pfnPopulate` 函数，该函数将添加和删除文件，直到它完成，然后从 `SccPopulateList` 函数返回。 然后，IDE 可以显示其列表。 `lpStatus`数组表示 IDE 传入的原始列表中的所有文件。 插件除了使用回调函数外，还会填充所有这些文件的状态。  
   
 > [!NOTE]
-> 源代码管理插件始终可以选择只是此函数，因为它是离开列表立即返回。 如果插件实现此函数，则可以通过设置表示此`SCC_CAP_POPULATELIST`功能对的第一个调用中的位标志[SccInitialize](../extensibility/sccinitialize-function.md)。 默认情况下，该插件应始终假定要传入的所有项都是文件。 但是，如果 IDE 设置`SCC_PL_DIR`标记中`fOptions`参数中传递的所有项都都视为目录。 插件应在目录中添加属于的所有文件。 IDE 永远不会将传入文件和目录的混合。  
+> 源代码管理插件始终可以选择直接从该函数返回，使列表保持原样。 如果插件实现了此函数，则可以通过 `SCC_CAP_POPULATELIST` 在第一次调用 [SccInitialize](../extensibility/sccinitialize-function.md)时设置功能位标志来指示这一点。 默认情况下，插件应始终假定传入的所有项都是文件。 但是，如果 IDE 在 `SCC_PL_DIR` 参数中设置了标志 `fOptions` ，则传入的所有项都将被视为目录。 此插件应该添加目录中的所有文件。 IDE 将永远不会传入文件和目录。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [源代码管理插件 API 函数](../extensibility/source-control-plug-in-api-functions.md)   
  [SccInitialize](../extensibility/sccinitialize-function.md)   
  [POPLISTFUNC](../extensibility/poplistfunc.md)   
- [使用特定命令的位标志](../extensibility/bitflags-used-by-specific-commands.md)   
+ [特定命令使用的 Bitflags](../extensibility/bitflags-used-by-specific-commands.md)   
  [命令代码](../extensibility/command-code-enumerator.md)

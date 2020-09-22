@@ -10,11 +10,11 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: f7d56f0d8540da90925ebe2f5fc4ab8f6372bc3f
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63427997"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840385"
 ---
 # <a name="collecting-concurrency-data-for-a-service-by-using-the-profiler-command-line"></a>使用探查器命令行收集服务的并发数据
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "63427997"
 > [!NOTE]
 > Windows 8 和 Windows Server 2012 中增强的安全功能需要以 Visual Studio 探查器在这些平台上收集数据的方式进行重大更改。 Windows 应用商店应用程序也需要新的收集技术。 请参阅 [Windows 8 和 Windows Server 2012 应用程序上的性能工具](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)。  
   
-## <a name="common-tasks"></a>常规任务  
+## <a name="common-tasks"></a>常见任务  
   
 |任务|相关内容|  
 |----------|---------------------|  
@@ -32,13 +32,13 @@ ms.locfileid: "63427997"
 |**添加层交互数据**|-   [收集层交互数据](../profiling/adding-tier-interaction-data-from-the-command-line.md)|  
 |**附加到正在运行的 C/C++ 服务**|-   [如何：将探查器附加到本机服务以收集并发数据](../profiling/how-to-attach-the-profiler-to-a-native-service-to-collect-concurrency-data-by-using-the-command-line.md)|  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
   
 ### <a name="profiling-windows-services"></a>分析 Windows 服务  
   
 |任务|相关内容|  
 |----------|---------------------|  
-|**使用采样方法进行分析**|-   [使用采样法收集应用程序统计信息](../profiling/collecting-application-statistics-for-services-by-using-the-profiler-sampling-method.md)|  
+|**使用采样方法进行分析**|-   [使用采样收集应用程序统计信息](../profiling/collecting-application-statistics-for-services-by-using-the-profiler-sampling-method.md)|  
 |**使用检测方法进行分析**|-   [使用检测收集详细计时数据](../profiling/collecting-detailed-timing-data-for-services-by-using-the-instrumentation-method-from-the-profiler-command-line.md)|  
 |**分析 .NET 内存分配和垃圾回收**|-   [收集 .NET 内存数据](../profiling/collecting-memory-data-from-dotnet-framework-services-by-using-the-profiler-command-line.md)|  
   
@@ -54,5 +54,5 @@ ms.locfileid: "63427997"
   
  [并发可视化工具](../profiling/concurrency-visualizer.md)  
   
-## <a name="reference"></a>参考  
- [命令行分析工具参考](../profiling/command-line-profiling-tools-reference.md)
+## <a name="reference"></a>引用  
+ [命令行分析工具引用](../profiling/command-line-profiling-tools-reference.md)

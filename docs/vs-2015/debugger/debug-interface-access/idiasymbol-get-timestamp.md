@@ -14,13 +14,13 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 0147f291518438e812be01dbf9d6858eb72eaf3f
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64789853"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840418"
 ---
-# <a name="idiasymbolgettimestamp"></a>IDiaSymbol::get_timeStamp
+# <a name="idiasymbolget_timestamp"></a>IDiaSymbol::get_timeStamp
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
 检索基础可执行文件的时间戳。  
@@ -33,15 +33,15 @@ HRESULT get_timeStamp ( 
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>parameters  
  `pRetVal`  
- [out]返回基础可执行文件的时间戳。  
+ 弄返回基础可执行文件的时间戳。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回`S_FALSE`或错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回 `S_FALSE` 错误代码。  
   
 > [!NOTE]
-> 返回值为`S_FALSE`表示该属性不是可用于符号。  
+> 返回值 `S_FALSE` 意味着该属性对符号不可用。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

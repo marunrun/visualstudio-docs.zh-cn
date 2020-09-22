@@ -14,19 +14,19 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 6821b6a6504fd82e0e6180149120b71bc2daf47c
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63444477"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840389"
 ---
-# <a name="cvcputypee"></a>CV_CPU_TYPE_e
+# <a name="cv_cpu_type_e"></a>CV_CPU_TYPE_e
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
 指定目标处理器。  
   
 > [!NOTE]
-> 枚举元素后中识别处理器`CV_CFL_*`前缀。  
+> 在此前缀后的枚举元素中标识处理器 `CV_CFL_*` 。  
   
 ## <a name="syntax"></a>语法  
   
@@ -98,11 +98,11 @@ typedef enum CV_CPU_TYPE_e { 
 ```  
   
 ## <a name="remarks"></a>备注  
- 此枚举中的值返回通过调用[idiasymbol:: Get_platform](../../debugger/debug-interface-access/idiasymbol-get-platform.md)方法。  
+ 此枚举中的值由对 [IDiaSymbol：： get_platform](../../debugger/debug-interface-access/idiasymbol-get-platform.md) 方法的调用返回。  
   
 ## <a name="requirements"></a>要求  
- 标头： cvconst.h  
+ 标头： cvconst  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [枚举和结构](../../debugger/debug-interface-access/enumerations-and-structures.md)   
  [IDiaSymbol::get_platform](../../debugger/debug-interface-access/idiasymbol-get-platform.md)

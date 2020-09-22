@@ -20,11 +20,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: bf2882120f2e4c27e33b105585ba56261122055d
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63445656"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840631"
 ---
 # <a name="usingtask-element-msbuild"></a>UsingTask 元素 (MSBuild)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -58,14 +58,14 @@ ms.locfileid: "63445656"
   
 ### <a name="child-elements"></a>子元素  
   
-|元素|说明|  
+|元素|描述|  
 |-------------|-----------------|  
 |[ParameterGroup](../msbuild/parametergroup-element.md)|参数集，在指定 `TaskFactory` 生成的任务中显示。|  
 |[Task](../msbuild/task-element-msbuild.md)|传递给 `TaskFactory` 的数据，用于生成任务的实例。|  
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|说明|  
+|元素|描述|  
 |-------------|-----------------|  
 |[Project](../msbuild/project-element-msbuild.md)|[!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 项目文件必需的根元素。|  
   
@@ -101,7 +101,7 @@ ms.locfileid: "63445656"
               AssemblyFile="c:\myTasks\myTask.dll" />  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [任务](../msbuild/msbuild-tasks.md)   
- [任务参考](../msbuild/msbuild-task-reference.md)   
+## <a name="see-also"></a>另请参阅  
+ [操作](../msbuild/msbuild-tasks.md)   
+ [任务引用](../msbuild/msbuild-task-reference.md)   
  [项目文件架构参考](../msbuild/msbuild-project-file-schema-reference.md)

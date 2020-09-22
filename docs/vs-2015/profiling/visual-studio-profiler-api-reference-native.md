@@ -13,11 +13,11 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 3b296ae403658f4d39558c28e11a425adee7650a
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63431118"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840524"
 ---
 # <a name="visual-studio-profiler-api-reference-native"></a>Visual Studio 探查器 API 参考（本机）
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "63431118"
 Visual Studio 探查器 API 允许你以编程方式控制收集的数据量，并在分析期间插入时间戳和分析标记。 若要使用本机 API，请包含 VSPerf.h 头文件，并在项目中添加 VSPerf.lib。  
   
 > [!NOTE]
-> 默认情况下，VSPerf.h 和 VSPerf.lib 位于\<驱动器>：\Program Files\Microsoft Visual Studio 9\Team Tools\Performance Tools\PerfSDK 目录中。  
+> 默认情况下，VSPerf 和 VSPerf 位于 \<drive> ： \Program Files\Microsoft Visual Studio 9 \ Team Tools\Performance Tools\PerfSDK 目录中。  
   
 ## <a name="in-this-section"></a>本节内容  
  [CommentMarkAtProfile](../profiling/commentmarkatprofile.md)  
@@ -46,6 +46,6 @@ Visual Studio 探查器 API 允许你以编程方式控制收集的数据量，�
   
  [PROFILE_CURRENTID](../profiling/profile-currentid.md)  
   
-## <a name="see-also"></a>请参阅  
- [分析工具 API](../profiling/profiling-tools-apis.md)   
- [演练：使用探查器 API](../profiling/walkthrough-using-profiler-apis.md)
+## <a name="see-also"></a>另请参阅  
+ [分析工具 Api](../profiling/profiling-tools-apis.md)   
+ [演练：使用探查器 Api](../profiling/walkthrough-using-profiler-apis.md)

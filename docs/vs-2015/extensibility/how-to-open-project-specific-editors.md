@@ -13,47 +13,47 @@ caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 2439a07f63b8da854ca8dc331d26e30f49503257
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63435942"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840751"
 ---
 # <a name="how-to-open-project-specific-editors"></a>如何：打开项目特定的编辑器
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-如果要打开的项目项文件本质上绑定到该项目的特定编辑器中，项目必须使用特定于项目的编辑器打开文件。 该文件不能被委派到 IDE 的机制，用于选择一个编辑器。 例如，而不是使用标准的位图编辑器，您可以使用此项目特定的编辑器选项来指定一个特定的位图编辑器，识别仅适用于你的项目文件中的信息。  
+如果项目打开的项文件在本质上绑定到该项目的特定编辑器，则该项目必须使用特定于项目的编辑器打开该文件。 此文件不能被委派到 IDE 用于选择编辑器的机制。 例如，您可以使用特定于项目的编辑器选项来指定特定的位图编辑器，该编辑器可识别您的项目特有的文件中的信息，而不是使用标准的位图编辑器。  
   
- IDE 调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.OpenItem%2A>方法时它会确定应由特定项目打开的文件。 有关详细信息，请参阅[通过使用打开文件命令显示文件](../extensibility/internals/displaying-files-by-using-the-open-file-command.md)。 使用以下指导原则来实现`OpenItem`方法，以使您通过使用特定于项目的编辑器打开文件的项目。  
+ IDE <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.OpenItem%2A> 在确定文件应由特定项目打开时调用方法。 有关详细信息，请参阅 [使用 "打开文件" 命令显示文件](../extensibility/internals/displaying-files-by-using-the-open-file-command.md)。 使用以下准则来实现 `OpenItem` 方法，使你的项目使用特定于项目的编辑器打开文件。  
   
-### <a name="to-implement-the-openitem-method-with-a-project-specific-editor"></a>若要使用特定于项目的编辑器实现 OpenItem 方法  
+### <a name="to-implement-the-openitem-method-with-a-project-specific-editor"></a>使用特定于项目的编辑器实现 OpenItem 方法  
   
-1. 调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.FindAndLockDocument%2A>方法 (RDT_EditLock)，以确定文件 （文档数据对象） 是否已打开。  
+1. 调用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.FindAndLockDocument%2A> 方法 (RDT_EditLock) 确定文件 (文档数据对象) 是否已打开。  
   
     > [!NOTE]
-    > 有关文档数据和文档视图对象的详细信息，请参阅[文档数据和自定义编辑器中的文档视图](../extensibility/document-data-and-document-view-in-custom-editors.md)。  
+    > 有关文档数据和文档视图对象的详细信息，请参阅 [文档数据和自定义编辑器中的文档视图](../extensibility/document-data-and-document-view-in-custom-editors.md)。  
   
-2. 如果该文件已打开，通过调用 resurface 文件<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.IsDocumentOpen%2A>方法，并将值指定为 IDO_ActivateIfOpen`grfIDO`参数。  
+2. 如果文件已打开，请通过调用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.IsDocumentOpen%2A> 方法并为参数指定 IDO_ActivateIfOpen 的值来 resurface 文件 `grfIDO` 。  
   
-     如果文件已打开，并且该文档拥有的而不是调用项目的项目，将向正在打开的编辑器是从另一个项目的用户显示一条警告。 然后显示文件窗口中。  
+     如果文件已打开，并且文档由项目而不是调用项目所拥有，则会向用户显示一条警告，指示正在打开的编辑器来自其他项目。 然后，将显示 "文件" 窗口。  
   
-3. 如果在文本缓冲区 （文档数据对象） 已打开并且你想要将另一个视图附加到它，您负责挂接该视图。 从项目中，实例化视图 （文档视图对象） 的建议的方法是按如下所示：  
+3. 如果文本缓冲区 (文档数据对象) 已打开，并且您想要将另一个视图附加到该对象，则您负责连接该视图。 从项目) 实例化视图 (建议的方法如下所示：  
   
-    1. 调用`QueryService`上<xref:Microsoft.VisualStudio.Shell.Interop.SLocalRegistry>服务以获取一个指向<xref:Microsoft.VisualStudio.Shell.Interop.ILocalRegistry2>接口。  
+    1. 对 `QueryService` 服务调用 <xref:Microsoft.VisualStudio.Shell.Interop.SLocalRegistry> 以获取指向接口的指针 <xref:Microsoft.VisualStudio.Shell.Interop.ILocalRegistry2> 。  
   
-    2. 调用<xref:Microsoft.VisualStudio.Shell.Interop.ILocalRegistry2.CreateInstance%2A>方法来创建文档视图类的实例。  
+    2. 调用 <xref:Microsoft.VisualStudio.Shell.Interop.ILocalRegistry2.CreateInstance%2A> 方法来创建文档视图类的实例。  
   
-4. 调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.CreateDocumentWindow%2A>方法，指定您的文档视图对象。  
+4. 调用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.CreateDocumentWindow%2A> 方法，并指定文档视图对象。  
   
-     此方法站点在文档窗口中的文档视图对象。  
+     此方法在文档窗口中显示文档视图对象。  
   
-5. 执行到相应的调用<xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat.InitNew%2A>或<xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat.Load%2A>方法。  
+5. 对或方法执行适当的调用 <xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat.InitNew%2A> <xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat.Load%2A> 。  
   
-     此时，该视图应该是完全初始化并准备打开。  
+     此时，视图应完全初始化并可以打开。  
   
-6. 调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.Show%2A>方法来显示和打开该视图。  
+6. 调用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.Show%2A> 方法以显示并打开该视图。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [打开和保存项目项](../extensibility/internals/opening-and-saving-project-items.md)   
  [如何：打开标准编辑器](../extensibility/how-to-open-standard-editors.md)   
  [如何：打开开放文档的编辑器](../extensibility/how-to-open-editors-for-open-documents.md)

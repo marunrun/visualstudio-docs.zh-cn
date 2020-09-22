@@ -1,5 +1,5 @@
 ---
-title: 更改值的实现示例 |Microsoft Docs
+title: 更改值的示例实现 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,35 +12,35 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 6a7f8f8c352db4f2fcd0230f4eac66e8bddb94e6
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63436675"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840557"
 ---
 # <a name="sample-implementation-of-changing-values"></a>更改值的实现示例
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
 > [!IMPORTANT]
-> 在 Visual Studio 2015 中，这种方式实现表达式计算器已弃用。 有关实现 CLR 表达式计算器的信息，请参阅[CLR 表达式计算器](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators)并[托管表达式计算器示例](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)。  
+> 在 Visual Studio 2015 中，不推荐使用这种实现表达式计算器的方式。 有关实现 CLR 表达式计算器的信息，请参阅 [Clr 表达式计算器](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) 和 [托管表达式计算器示例](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)。  
   
- 显示在每个本地**局部变量**窗口具有[IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md)对象与之关联。 这`IDebugProperty2`对象包含的本地名称、 值和类型。 当用户更改局部值时，Visual Studio 会调用[SetValueAsString](../../extensibility/debugger/reference/idebugproperty2-setvalueasstring.md)更新内存中的本地值。 在此示例中，由表示本地`CFieldProperty`类，该类实现`IDebugProperty2`接口。  
+ 在 " **局部变量** " 窗口中显示的每个本地都具有与之关联的 [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) 对象。 此 `IDebugProperty2` 对象包含本地的名称、值和类型。 当用户更改本地值时，Visual Studio 将调用 [SetValueAsString](../../extensibility/debugger/reference/idebugproperty2-setvalueasstring.md) 来更新内存中本地的值。 在此示例中，本地由 `CFieldProperty` 实现接口的类表示 `IDebugProperty2` 。  
   
 > [!NOTE]
-> 有关**Watch**和**快速监视**表达式，由表示值发生更改`CValueProperty`MyCEE 示例中的类。 但是，实现`IDebugProperty2::SetValueAsString`相同，如下所示。  
+> 对于 " **监视** " 和 " **快速监视** " 表达式，要更改的值由 `CValueProperty` MyCEE 示例中的类表示。 但是，的实现 `IDebugProperty2::SetValueAsString` 是相同的，如下所示。  
   
- 此实现`IDebugProperty2::SetValueAsString`执行下列任务：  
+ 此实现 `IDebugProperty2::SetValueAsString` 执行以下任务：  
   
-1. 要生成值的表达式的计算结果。  
+1. 计算用于生成值的表达式。  
   
-2. 将绑定相关联[IDebugField](../../extensibility/debugger/reference/idebugfield.md)对象到其内存位置，并生成[IDebugObject](../../extensibility/debugger/reference/idebugobject.md)对象。  
+2. 将关联的 [IDebugField](../../extensibility/debugger/reference/idebugfield.md) 对象绑定到其内存位置，并生成 [IDebugObject](../../extensibility/debugger/reference/idebugobject.md) 对象。  
   
 3. 将值转换为一系列字节。  
   
-4. 调用[SetValue](../../extensibility/debugger/reference/idebugobject-setvalue.md)来在内存中存储的字节。  
+4. 调用 [SetValue](../../extensibility/debugger/reference/idebugobject-setvalue.md) 将字节存储在内存中。  
   
 ## <a name="managed-code"></a>托管代码  
- 这是一个实现的`IDebugProperty2::SetValueAsString`在托管代码中。  
+ 这是 `IDebugProperty2::SetValueAsString` 托管代码中的的实现。  
   
 ```  
 [C#]  
@@ -226,7 +226,7 @@ namespace EEMC
 ```  
   
 ## <a name="unmanaged-code"></a>非托管代码  
- 这是一个实现的`IDebugProperty2::SetValueAsString`在托管代码中。 帮助器函数`FieldCoerceValueType`（未显示） 强制`VARIANT`为特定类型和可确保值是一种类型`FieldSetValue`可以处理。  
+ 这是 `IDebugProperty2::SetValueAsString` 托管代码中的的实现。 `FieldCoerceValueType` (不显示 helper 函数) 强制将 `VARIANT` 指定为特定类型，并确保值是可处理的类型之一 `FieldSetValue` 。  
   
 ```  
 [C++]  
@@ -424,6 +424,6 @@ HRESULT FieldSetValue(
   
 ```  
   
-## <a name="see-also"></a>请参阅  
- [更改局部值](../../extensibility/debugger/changing-the-value-of-a-local.md)   
+## <a name="see-also"></a>另请参阅  
+ [更改本地的值](../../extensibility/debugger/changing-the-value-of-a-local.md)   
  [计算上下文](../../extensibility/debugger/evaluation-context.md)

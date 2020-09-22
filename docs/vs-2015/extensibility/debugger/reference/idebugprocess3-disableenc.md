@@ -1,5 +1,5 @@
 ---
-title: IDebugProcess3::DisableENC | Microsoft Docs
+title: IDebugProcess3：:D isableENC |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 0db9eb44b8074a5c5e3b35a5a5dadcf04f37fb2f
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63405723"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840533"
 ---
 # <a name="idebugprocess3disableenc"></a>IDebugProcess3::DisableENC
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-此方法显式禁用编辑并继续此过程 （和其包含的所有程序）。 自定义端口提供程序应始终返回`E_NOTIMPL`。  
+此方法显式禁用此进程上的 "编辑并继续" (以及它包含的所有程序) 。 自定义端口供应商应该总是返回 `E_NOTIMPL` 。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,19 +37,19 @@ HRESULT DisableENC(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>parameters  
  `reason`  
- [in]中的值[EncUnavailableReason](../../../extensibility/debugger/reference/encunavailablereason.md)枚举。  
+ 中 [EncUnavailableReason](../../../extensibility/debugger/reference/encunavailablereason.md) 枚举中的一个值。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为将返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
 > [!NOTE]
-> 自定义端口提供程序应始终返回`E_NOTIMPL`。  
+> 自定义端口供应商应该总是返回 `E_NOTIMPL` 。  
   
 ## <a name="remarks"></a>备注  
- 一次编辑并继续禁用的进程，它可以重新启用仅通过重新启动进程。  
+ 为某个进程禁用了 "编辑并继续" 后，只能通过重新启动该过程来重新启用它。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugProcess3](../../../extensibility/debugger/reference/idebugprocess3.md)   
  [EncUnavailableReason](../../../extensibility/debugger/reference/encunavailablereason.md)

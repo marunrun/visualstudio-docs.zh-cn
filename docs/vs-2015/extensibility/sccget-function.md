@@ -13,16 +13,16 @@ caps.latest.revision: 15
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 2a5d5065ca427f0319174aa59e6b87d356816d4c
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63432434"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840523"
 ---
 # <a name="sccget-function"></a>SccGet 函数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-此函数可检索一个或多个文件用于查看和编译但不能用于编辑的副本。 在大多数系统中，将文件标记为只读的。  
+此函数检索一个或多个文件的副本，以便进行查看和编译，但不能进行编辑。 在大多数系统中，文件被标记为只读。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,71 +37,71 @@ SCCRTN SccGet(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>parameters  
  pvContext  
- [in]源代码管理插件上下文结构。  
+ 中源代码管理插件的上下文结构。  
   
  hWnd  
- [in]它提供了任何对话框，父级可以使用源代码管理插件，则 IDE 窗口的句柄。  
+ 中IDE 窗口的句柄，源代码管理插件可将其用作它所提供的所有对话框的父级。  
   
- nFiles  
- [in]中指定的文件数`lpFileNames`数组。  
+ n  
+ 中数组中指定的文件数 `lpFileNames` 。  
   
  lpFileNames  
- [in]要检索的文件的完全限定名称的数组。  
+ 中要检索的文件的完全限定的名称数组。  
   
- fOptions  
- [in]命令标志 (`SCC_GET_ALL`， `SCC_GET_RECURSIVE`)。  
+ 用于  
+ 中命令标志 (`SCC_GET_ALL` ， `SCC_GET_RECURSIVE`) 。  
   
  pvOptions  
- [in]源代码管理插件特定选项。  
+ 中源代码管理插件特定的选项。  
   
 ## <a name="return-value"></a>返回值  
- 此函数的源控制插件实现应返回以下值之一：  
+ 此函数的源代码管理插件实现应返回以下值之一：  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
-|SCC_OK|获取操作的成功。|  
-|SCC_E_FILENOTCONTROLLED|文件不是源代码管理下。|  
+|SCC_OK|获取操作成功。|  
+|SCC_E_FILENOTCONTROLLED|此文件不受源代码管理。|  
 |SCC_E_OPNOTSUPPORTED|源代码管理系统不支持此操作。|  
-|SCC_E_FILEISCHECKEDOUT|无法获取当前用户已签出文件。|  
-|SCC_E_ACCESSFAILURE|访问源代码管理系统，很可能是由于网络或争用问题时出现问题时。 建议重试。|  
-|SCC_E_NOSPECIFIEDVERSION|指定的版本无效或日期/时间。|  
-|SCC_E_NONSPECIFICERROR|非特定故障;未同步文件。|  
-|SCC_I_OPERATIONCANCELED|在完成之前取消操作。|  
+|SCC_E_FILEISCHECKEDOUT|无法获取用户当前已签出的文件。|  
+|SCC_E_ACCESSFAILURE|访问源代码管理系统时出现问题，可能是由于网络或争用问题导致的。 建议重试。|  
+|SCC_E_NOSPECIFIEDVERSION|指定了无效的版本或日期/时间。|  
+|SCC_E_NONSPECIFICERROR|模糊失败;文件未同步。|  
+|SCC_I_OPERATIONCANCELED|操作在完成之前已取消。|  
 |SCC_E_NOTAUTHORIZED|用户无权执行此操作。|  
   
 ## <a name="remarks"></a>备注  
- 此函数调用计数、 要检索的文件的名称的数组。 如果 IDE 将标志传递`SCC_GET_ALL`，这意味着，中的项`lpFileNames`不是文件而是目录，并在给定目录中的源代码管理下的所有文件都都要检索。  
+ 将调用此函数，其中包含要检索的文件的计数和名称数组。 如果 IDE 传递了标志 `SCC_GET_ALL` ，这意味着中的项 `lpFileNames` 不是文件，而是目录，并且会检索给定目录中的所有受源代码管理的文件。  
   
- `SCC_GET_ALL`可以结合标志`SCC_GET_RECURSIVE`标志，用于检索在给定目录中的所有文件和所有子目录。  
+ `SCC_GET_ALL`标志可与 `SCC_GET_RECURSIVE` 标志结合，以检索给定目录和所有子目录中的所有文件。  
   
 > [!NOTE]
-> `SCC_GET_RECURSIVE` 应永远不会传递而无需`SCC_GET_ALL`。 另请注意，是否目录 C:\A 和 C:\A\B 传递递归 get，C:\A\B 及其所有的子目录将实际检索两次。 IDE 的负责 — 并不是源代码管理插件的 — 若要确保从数组的保持这种重复项。  
+> `SCC_GET_RECURSIVE` 不应在没有的情况下传递 `SCC_GET_ALL` 。 另请注意，如果在递归 get 上传递目录 C:\A 和 C:\A\B，则将实际检索到 C:\A\B 及其所有子目录。 这是 IDE 的责任（而不是源代码管理插件），以确保将此类重复项（如此项）保留在数组之外。  
   
- 最后，即使在进行源代码管理插件指定`SCC_CAP_GET_NOUI`上初始化，表示它没有 Get 命令的用户界面，在 IDE 中检索文件可能仍调用此函数的标志。 该标志只是意味着 IDE 不会显示 Get 菜单项和，该插件不需要提供任何 UI。  
+ 最后，即使源代码管理插件在初始化时指定了 `SCC_CAP_GET_NOUI` 标志，指示它没有 Get 命令的用户界面，IDE 仍可调用此函数来检索文件。 该标志只是表示 IDE 不显示 Get 菜单项，并且该插件不应提供任何 UI。  
   
 ## <a name="renaming-and-sccget"></a>重命名和 SccGet  
- 情况： 用户签出文件，例如，a.txt，并对其进行修改。 A.txt 可以签入之前，第二个用户将 a.txt 重命名为 b.txt 源代码管理数据库中签出 b.txt、 使对该文件，某些修改，签入该文件。 第一个用户想要使第一个用户将其本地版本的 a.txt 文件重命名为 b.txt 并获取对该文件，第二个用户所做的更改。 但是，本地缓存，跟踪版本号仍然认为 a.txt 的第一个版本存储在本地，并且因此源代码管理无法解决的差异。  
+ 情况：用户签出文件（例如 a.txt），并对其进行修改。 在签入 a.txt 之前，第二个用户会将 a.txt 重命名为在源代码管理数据库中 b.txt，并签出 b.txt，对文件进行一些修改，并检查中的文件。 第一个用户需要第二个用户所做的更改，以便第一个用户将 a.txt 文件的本地版本重命名为 b.txt，并对该文件执行 get 操作。 但是，跟踪版本号的本地缓存仍会认为第一个版本的 a.txt 存储在本地，因此源代码管理无法解决这些差异。  
   
- 有两种方法来解决这种情况下，源控制版本的本地缓存变得与源代码管理数据库不同步：  
+ 可以通过两种方法来解决这种情况：源代码管理版本的本地缓存与源代码管理数据库不同步：  
   
-1. 不允许重命名当前已签出源代码管理数据库中的文件。  
+1. 不允许重命名当前签出的源代码管理数据库中的文件。  
   
-2. 执行操作"删除旧"后跟"添加新"的等效项。 下面的算法是一种方法来实现此目的。  
+2. 等效于 "删除旧项"，然后执行 "添加新项"。 以下算法是实现此目的的一种方法。  
   
-    1. 调用[SccQueryChanges](../extensibility/sccquerychanges-function.md)若要了解如何重命名为 b.txt 源代码管理数据库中的 a.txt 的函数。  
+    1. 调用 [SccQueryChanges](../extensibility/sccquerychanges-function.md) 函数可了解如何重命名源代码管理数据库中 b.txt 的 a.txt。  
   
     2. 将本地 a.txt 重命名为 b.txt。  
   
-    3. 调用`SccGet`a.txt 和 b.txt 函数。  
+    3. `SccGet`为 a.txt 和 b.txt 调用函数。  
   
-    4. 源代码管理数据库中不存在 a.txt，因为本地版本缓存会清除缺失 a.txt 版本信息。  
+    4. 由于源代码管理数据库中不存在 a.txt，因此会清除缺少的 a.txt 版本信息的本地版本缓存。  
   
-    5. 正在签出的 b.txt 文件与本地 b.txt 文件的内容合并。  
+    5. 要签出的 b.txt 文件与本地 b.txt 文件的内容合并。  
   
-    6. 现在可以检查更新的 b.txt 文件。  
+    6. 现在可以签入更新后的 b.txt 文件。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [源代码管理插件 API 函数](../extensibility/source-control-plug-in-api-functions.md)   
  [特定命令使用的位标志](../extensibility/bitflags-used-by-specific-commands.md)

@@ -12,11 +12,11 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 502ab8dbafd12f3b00949b5b52609c4c8c8ddce9
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63433918"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840675"
 ---
 # <a name="instruction-pointers-ips-view---sampling-data"></a>“指令指针”(IP) 视图 - 采样数据
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -44,5 +44,5 @@ ms.locfileid: "63433918"
 |**独占样本数**|执行指令时收集的样本总数。|  
 |**独占样本数百分比**|执行指令时在分析运行期间收集的所有样本数的百分比。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [“指令指针”(IP) 视图 - 采样](../profiling/instruction-pointers-ips-view-dotnet-memory-sampling-data.md)

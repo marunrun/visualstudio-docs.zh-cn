@@ -1,5 +1,5 @@
 ---
-title: 保存项目项的属性 |Microsoft Docs
+title: 保持项目项的属性 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,24 +12,24 @@ caps.latest.revision: 8
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 4adcf0f5c5770f5d3ffc0e0ed9bffdb108869c7f
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63441548"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840454"
 ---
 # <a name="persisting-the-property-of-a-project-item"></a>保留项目项的属性
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-您可能想要保留的属性添加到项目项，例如源代码文件的作者。 可以通过将属性存储在项目文件中执行此操作。  
+你可能希望保留添加到项目项的属性，例如源文件的作者。 可以通过将属性存储在项目文件中来实现此目的。  
   
- 若要保存项目文件中的属性的第一步是获取作为项目的层次结构<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy>接口。 你可以通过使用自动化功能或通过使用获取此接口<xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection>。 一旦获取该接口，可用于确定当前未选择的项目项。 项目项 ID 后，可以使用<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage.SetItemAttribute%2A>添加属性。  
+ 将属性保存在项目文件中的第一步是获取作为接口的项目的层次结构 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> 。 可以通过使用自动化或使用来获取此接口 <xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection> 。 获取接口后，可以使用它来确定当前选择的项目项。 获得项目项 ID 后，可以使用 <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage.SetItemAttribute%2A> 添加属性。  
   
- 在以下过程中，保留 VsPkg.cs 属性`Author`具有值`Tom`项目文件中。  
+ 在下面的过程中，将 VsPkg.cs 属性 `Author` 与项目文件中的值保持一致 `Tom` 。  
   
-### <a name="to-obtain-the-project-hierarchy-with-the-dte-object"></a>若要获取 DTE 对象使用的项目层次结构  
+### <a name="to-obtain-the-project-hierarchy-with-the-dte-object"></a>用 DTE 对象获取项目层次结构  
   
-1. 将以下代码添加到你的 VSPackage 中：  
+1. 将以下代码添加到 VSPackage：  
   
     ```csharp  
     EnvDTE.DTE dte = (EnvDTE.DTE)Package.GetGlobalService(typeof(EnvDTE.DTE));  
@@ -41,9 +41,9 @@ ms.locfileid: "63441548"
     solution.GetProjectOfUniqueName(uniqueName, out hierarchy);  
     ```  
   
-### <a name="to-persist-the-project-item-property-with-the-dte-object"></a>若要保存项目项属性与 DTE 对象  
+### <a name="to-persist-the-project-item-property-with-the-dte-object"></a>用 DTE 对象持久保存项目项属性  
   
-1. 将以下代码添加到在上一个过程中的方法中提供的代码：  
+1. 将以下代码添加到上一过程的方法中给定的代码：  
   
     ```csharp  
     IVsBuildPropertyStorage buildPropertyStorage =   
@@ -58,9 +58,9 @@ ms.locfileid: "63441548"
     }  
     ```  
   
-### <a name="to-obtain-the-project-hierarchy-using-ivsmonitorselection"></a>若要获取使用 IVsMonitorSelection 的项目层次结构  
+### <a name="to-obtain-the-project-hierarchy-using-ivsmonitorselection"></a>使用 IVsMonitorSelection 获取项目层次结构  
   
-1. 将以下代码添加到你的 VSPackage 中：  
+1. 将以下代码添加到 VSPackage：  
   
     ```csharp  
     IVsHierarchy hierarchy = null;  
@@ -104,9 +104,9 @@ ms.locfileid: "63441548"
   
 2. 
   
-### <a name="to-persist-the-selected-project-item-property-given-the-project-hierarchy"></a>若要保留选定的项目项属性，给定的项目层次结构  
+### <a name="to-persist-the-selected-project-item-property-given-the-project-hierarchy"></a>如果为，则在给定项目层次结构的情况下保留所选项目项属性  
   
-1. 将以下代码添加到在上一个过程中的方法中提供的代码：  
+1. 将以下代码添加到上一过程的方法中给定的代码：  
   
     ```  
     IVsBuildPropertyStorage buildPropertyStorage =   
@@ -117,18 +117,18 @@ ms.locfileid: "63441548"
     }  
     ```  
   
-### <a name="to-verify-that-the-property-is-persisted"></a>若要验证属性保持不变  
+### <a name="to-verify-that-the-property-is-persisted"></a>验证属性是否持久保存  
   
-1. 启动[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]然后打开或创建解决方案。  
+1. 启动 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ，然后打开或创建一个解决方案。  
   
-2. 选择的项目项中的 VsPkg.cs**解决方案资源管理器**。  
+2. 在 **解决方案资源管理器**中选择项目项 "VsPkg.cs"。  
   
-3. 使用断点或否则来确定加载你的 VSPackage 和 SetItemAttribute 运行。  
+3. 使用断点或以其他方式确定是否已加载 VSPackage 并运行 SetItemAttribute。  
   
     > [!NOTE]
-    > 你可以自动加载 VSPackage 的 UI 上下文中<xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.SolutionExists_guid>。 有关详细信息，请参阅[加载 Vspackage](../extensibility/loading-vspackages.md)。  
+    > 可以在 UI 上下文中 autoload VSPackage <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.SolutionExists_guid> 。 有关详细信息，请参阅 [加载 vspackage](../extensibility/loading-vspackages.md)。  
   
-4. 关闭[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]，然后在记事本中打开项目文件。 应会看到\<作者 > 标记值 Tom，按如下所示：  
+4. 关闭 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ，然后在记事本中打开项目文件。 你应看到 \<Author> 带有值 Tom 的标记，如下所示：  
   
     ```  
     <Compile Include="VsPkg.cs">  
@@ -136,5 +136,5 @@ ms.locfileid: "63441548"
     </Compile>  
     ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [自定义工具](../extensibility/internals/custom-tools.md)

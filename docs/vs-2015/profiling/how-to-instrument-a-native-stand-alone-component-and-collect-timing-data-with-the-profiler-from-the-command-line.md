@@ -10,13 +10,13 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 39773bbf821a4b7cec416ff726bf84cbb46935f9
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63432658"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840823"
 ---
-# <a name="how-to-instrument-a-native-stand-alone-component-and-collect-timing-data-with-the-profiler-from-the-command-line"></a>如何：检测本机独立组件并收集计时数据与从命令行 Profiler
+# <a name="how-to-instrument-a-native-stand-alone-component-and-collect-timing-data-with-the-profiler-from-the-command-line"></a>如何：从命令行用探查器检测本机独立组件并收集计时数据
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 本主题介绍如何使用 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 分析工具命令行工具检测 C++、.exe 或 .dll 文件等本机组件和收集详细计时数据。  
@@ -40,15 +40,15 @@ ms.locfileid: "63432658"
 
     **VSPerfCmd /start:trace /output:** `OutputFile` [`Options`]  
 
-   - [/start](../profiling/start.md)**:trace** 选项初始化探查器。  
+   - [/start](../profiling/start.md) **:trace** 选项初始化探查器。  
 
-   - [/output](../profiling/output.md)**:**`OutputFile` 选项需要与 **/start** 一起使用。 `OutputFile` 指定分析数据 (.vsp) 文件的名称和位置。  
+   - [/output](../profiling/output.md) **:** `OutputFile` 选项需要与 **/start** 一起使用。 `OutputFile` 指定分析数据 (.vsp) 文件的名称和位置。  
 
      可以将以下一个或多个选项与 /start:trace 选项一起使用。  
 
    |                                 选项                                  |                                                                                                                                                 描述                                                                                                                                                 |
    |-------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-   | [/user](../profiling/user-vsperfcmd.md) **:**[`Domain`**\\**]`UserName` |             指定拥有所分析进程的帐户的域和用户名。 仅当运行进程的用户不是已登录用户时，才需要此选项。 进程所有者在 Windows 任务管理器的“进程”选项卡上的“用户名”列中列出。             |
+   | [/user](../profiling/user-vsperfcmd.md) **:** [`Domain` **\\** ]`UserName` |             指定拥有所分析进程的帐户的域和用户名。 仅当运行进程的用户不是已登录用户时，才需要此选项。 进程所有者在 Windows 任务管理器的“进程”选项卡上的“用户名”列中列出。             |
    |              [/crosssession](../profiling/crosssession.md)              | 启用其他会话中的进程分析。 如果应用程序在其他会话中运行，则需要此选项。 会话标识符在 Windows 任务管理器的“进程”选项卡上的“会话 ID”列中列出。 可以将 **/CS** 指定为 **/crosssession** 的缩写。 |
    |          [/globaloff](../profiling/globalon-and-globaloff.md)           |                                                                                        在暂停数据收集的情况下启动探查器。 使用 [/globalon](../profiling/globalon-and-globaloff.md) 可恢复分析。                                                                                        |
    |           [/counter](../profiling/counter.md) **:** `Config`            |                                                               从 `Config` 中所指定的处理器性能计数器收集信息。 计数器信息将添加到在每个分析事件中收集的数据中。                                                                |
@@ -67,12 +67,12 @@ ms.locfileid: "63432658"
 
     |选项|描述|  
     |------------|-----------------|  
-    |[/globalon /globaloff](../profiling/globalon-and-globaloff.md)|启动 (**/globalon**) 或停止 (**/globaloff**) 所有进程的数据收集。|  
-    |[/processon](../profiling/processon-and-processoff.md) **:** `PID` [/processoff](../profiling/processon-and-processoff.md) **:** `PID`|启动 (**/processon**) 或停止 (**/processoff**) 由进程 ID (`PID`) 指定的进程的数据收集。|  
-    |[/threadon](../profiling/threadon-and-threadoff.md) **:** `TID` [/threadoff](../profiling/threadon-and-threadoff.md) **:** `TID`|启动 (**/threadon**) 或停止 (**/threadoff**) 由线程 ID (`TID`) 指定的线程的数据收集。|  
+    |[/globalon /globaloff](../profiling/globalon-and-globaloff.md)|启动 ( **/globalon**) 或停止 ( **/globaloff**) 所有进程的数据收集。|  
+    |[/processon](../profiling/processon-and-processoff.md) **:** `PID` [/processoff](../profiling/processon-and-processoff.md) **:** `PID`|启动 ( **/processon**) 或停止 ( **/processoff**) 由进程 ID (`PID`) 指定的进程的数据收集。|  
+    |[/threadon](../profiling/threadon-and-threadoff.md) **:** `TID` [/threadoff](../profiling/threadon-and-threadoff.md) **:** `TID`|启动 ( **/threadon**) 或停止 ( **/threadoff**) 由线程 ID (`TID`) 指定的线程的数据收集。|  
 
 ## <a name="ending-the-profiling-session"></a>结束分析会话  
- 若要结束分析会话，请关闭正在运行受检测组件的应用程序，然后调用 **VSPerfCmd** [/shutdown](../profiling/shutdown.md) 选项来关闭探查器和分析数据文件。  
+ 若要结束分析会话，请关闭正在运行受检测组件的应用程序，然后调用 VSPerfCmd [/shutdown](../profiling/shutdown.md) 选项来关闭探查器和分析数据文件。  
 
 #### <a name="to-end-a-profiling-session"></a>结束分析会话  
 
@@ -82,6 +82,6 @@ ms.locfileid: "63432658"
 
      **VSPerfCmd /shutdown**  
 
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [分析独立应用程序](../profiling/command-line-profiling-of-stand-alone-applications.md)   
  [检测方法数据视图](../profiling/instrumentation-method-data-views.md)

@@ -14,13 +14,13 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 88800887a9bcc6a8108220097db41365f356b9b3
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64812365"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840609"
 ---
-# <a name="idiasymbolgetsymtag"></a>IDiaSymbol::get_symTag
+# <a name="idiasymbolget_symtag"></a>IDiaSymbol::get_symTag
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
 检索符号类型分类器。  
@@ -33,15 +33,15 @@ HRESULT get_symTag ( 
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>parameters  
  `pRetVal`  
- [out]返回一个值从[SymTagEnum 枚举](../../debugger/debug-interface-access/symtagenum.md)枚举，用于指定符号类型分类器。  
+ 弄返回 [SymTagEnum 枚举](../../debugger/debug-interface-access/symtagenum.md) 枚举中的一个值，该值指定符号类型分类器。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回`S_FALSE`或错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回 `S_FALSE` 错误代码。  
   
 > [!NOTE]
-> 返回值为`S_FALSE`表示该属性不是可用于符号。  
+> 返回值 `S_FALSE` 意味着该属性对符号不可用。  
   
 ## <a name="example"></a>示例  
   
@@ -51,6 +51,6 @@ DWORD       tag = 0;
 pType->get_symTag( &tag );  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
  [SymTagEnum 枚举](../../debugger/debug-interface-access/symtagenum.md)

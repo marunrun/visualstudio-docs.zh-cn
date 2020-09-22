@@ -13,11 +13,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: d08a7eb20c01568b3501f16348eb19afdcaefa2c
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63444375"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840517"
 ---
 # <a name="standard-and-custom-toolset-configurations"></a>标准和自定义工具集配置
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,14 +29,14 @@ MSBuild 工具集包含对可用来生成应用程序项目的任务、目标和
 
 | ToolsVersion | 工具集路径（如 MSBuildToolsPath 或 MSBuildBinPath 生成属性中所指定） |
 |--------------|--------------------------------------------------------------------------------------|
-|     2.0      |           Windows installation path  \Microsoft.Net\Framework\v2.0.50727\            |
-|     3.5      |              Windows installation path  \Microsoft.NET\Framework\v3.5\               |
-|     4.0      |           Windows installation path  \Microsoft.NET\Framework\v4.0.30319\            |
-|     12.0     |                          %ProgramFiles%  \MSBuild\12.0\bin                           |
+|     2.0      |           Windows installation path** \Microsoft.Net\Framework\v2.0.50727\            |
+|     3.5      |              Windows installation path** \Microsoft.NET\Framework\v3.5\               |
+|     4.0      |           Windows installation path** \Microsoft.NET\Framework\v4.0.30319\            |
+|     12.0     |                          %ProgramFiles%** \MSBuild\12.0\bin                           |
 
- `ToolsVersion` 值确定 Visual Studio 生成的项目使用哪个工具集。 [!INCLUDE[vs_dev12](../includes/vs-dev12-md.md)] 中的默认值为“12.0”（不管在项目文件中指定了哪个版本），但可以在命令提示符使用 /toolsversion  开关重写该属性。 有关此属性和其他指定 `ToolsVersion` 的方式的信息，请参阅[重写 ToolsVersion 设置](../msbuild/overriding-toolsversion-settings.md)。  
+ `ToolsVersion` 值确定 Visual Studio 生成的项目使用哪个工具集。 [!INCLUDE[vs_dev12](../includes/vs-dev12-md.md)] 中的默认值为“12.0”（不管在项目文件中指定了哪个版本），但可以在命令提示符使用 /toolsversion**** 开关重写该属性。 有关此属性和指定的其他方式的信息 `ToolsVersion` ，请参阅 [重写 ToolsVersion 设置](../msbuild/overriding-toolsversion-settings.md)。  
 
- 如果未指定 `ToolsVersion`，注册表项 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSBuild\\<Version Number\>\DefaultToolsVersion  将定义 `ToolsVersion`（始终为 2.0）。  
+ 如果未指定 `ToolsVersion`，注册表项 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSBuild\\<Version Number\>\DefaultToolsVersion**** 将定义 `ToolsVersion`（始终为 2.0）。  
 
  以下注册表项指定 MSBuild.exe 的安装路径。  
 
@@ -97,9 +97,9 @@ MSBuild 工具集包含对可用来生成应用程序项目的任务、目标和
 
 - **$(MSBuildBinPath)** 设置为 `ToolsPath` 值，该值在定义 `ToolsVersion` 的注册表或配置文件中指定。 注册表或配置文件中的 `$(MSBuildToolsPath)` 设置指定核心任务和目标的位置。 在项目文件中，此值映射到 $(MSBuildBinPath) 属性和 $(MSBuildToolsPath) 属性。  
 
-- `$(MSBuildToolsPath)` 是一个由在配置文件中指定的 MSBuildToolsPath 属性提供的保留属性。 （此属性取代了 `$(MSBuildBinPath)`。 但是，`$(MSBuildBinPath)` 的目的是实现兼容性。）自定义工具集必须定义 `$(MSBuildToolsPath)` 或 `$(MSBuildBinPath)`，但不能同时定义二者，除非它们具有相同的值。  
+- `$(MSBuildToolsPath)` 是一个由在配置文件中指定的 MSBuildToolsPath 属性提供的保留属性。 （此属性取代了 `$(MSBuildBinPath)`。 不过， `$(MSBuildBinPath)` 为了实现兼容性，将继续执行。 ) 自定义工具集必须定义 `$(MSBuildToolsPath)` 或 `$(MSBuildBinPath)` ，但不能同时定义两者，除非它们都具有相同的值。  
 
   还可以使用添加 MSBuildToolsPath 属性时所用的语法向配置文件添加特定于 ToolsVersion 的自定义属性。 如果要使这些自定义属性可在项目文件中使用，请使用与配置文件中指定的值相同的名称。 可以在配置文件中定义工具集但不能定义子工具集。  
 
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [工具集 (ToolsVersion)](../msbuild/msbuild-toolset-toolsversion.md)

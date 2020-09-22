@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty3::CreateObjectID | Microsoft Docs
+title: IDebugProperty3：： CreateObjectID |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 0035faad9078acd70886d597f039c0d8de5ee12f
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63403210"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840403"
 ---
 # <a name="idebugproperty3createobjectid"></a>IDebugProperty3::CreateObjectID
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-创建此属性的唯一 ID，以确保它是唯一的而所有其他属性。  
+为此属性创建一个唯一的 ID，以确保它在所有其他属性中是唯一的。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,16 +37,16 @@ int CreateObjectID();
 ```  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
 ## <a name="remarks"></a>备注  
- 当会话调试管理器想要确保此属性唯一地标识在所有其他属性之间时，调用此方法。 调试引擎 (DE) 支持此方法，除非已唯一标识它可以处理的属性。 如果设备不支持此方法，它将返回`E_NOTIMPL`。  
+ 当会话调试管理器需要确保在所有其他属性中唯一标识该属性时，将调用此方法。 调试引擎 (DE) 支持此方法，除非它处理的属性已唯一标识。 如果 DE 不支持此方法，则返回 `E_NOTIMPL` 。  
   
- 使用创建的任何唯一 ID`CreateObjectID`时销毁[DestroyObjectID](../../../extensibility/debugger/reference/idebugproperty3-destroyobjectid.md)调用方法; 这也表示用于唯一地标识此属性需要的结束。  
+ 在 `CreateObjectID` 调用 [DestroyObjectID](../../../extensibility/debugger/reference/idebugproperty3-destroyobjectid.md) 方法时，将销毁用创建的任何唯一 ID; 这还会发出信号，以唯一标识此属性。  
   
 > [!NOTE]
-> 没有方法来检索此唯一 ID，因此 DE 可以随意的唯一 Id 时`CreateObjectID`调用方法。  
+> 没有方法可以检索此唯一 ID，因此，在调用方法时，DE 可以为唯一 Id 执行任何所需的操作 `CreateObjectID` 。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md)   
  [DestroyObjectID](../../../extensibility/debugger/reference/idebugproperty3-destroyobjectid.md)
