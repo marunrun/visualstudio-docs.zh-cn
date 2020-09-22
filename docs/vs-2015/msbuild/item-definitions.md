@@ -12,16 +12,16 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 7097311c3d1aae718096c3bf74ec04c3e5ea8818
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63433590"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840329"
 ---
 # <a name="item-definitions"></a>项定义
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-[!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 2.0 使用 [ItemGroup](../msbuild/itemgroup-element-msbuild.md) 元素来启用项目文件中项的静态声明。 但是，只能在项级别添加元数据，即使所有项的元数据均相同，也是如此。 从 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 3.5 开始引入了一个名为 [ItemDefinitionGroup](../msbuild/itemdefinitiongroup-element-msbuild.md) 的项目元素，从而克服了这一限制。 使用 *ItemDefinitionGroup* 可以定义一组项定义，这些项定义将默认元数据值添加到命名项类型中的所有项中。  
+[!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 2.0 通过使用 [ItemGroup](../msbuild/itemgroup-element-msbuild.md) 元素，启用项目文件中项的静态声明。 但是，只能在项级别添加元数据，即使所有项的元数据均相同，也是如此。 从 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 3.5 开始引入了一个名为 [ItemDefinitionGroup](../msbuild/itemdefinitiongroup-element-msbuild.md) 的项目元素，从而克服了这一限制。 使用 *ItemDefinitionGroup* 可以定义一组项定义，这些项定义将默认元数据值添加到命名项类型中的所有项中。  
   
  *ItemDefinitionGroup* 元素紧跟在项目文件的 [Project](../msbuild/project-element-msbuild.md) 元素之后。 项定义提供以下功能：  
   
@@ -41,7 +41,7 @@ ms.locfileid: "63433590"
 > [!NOTE]
 > 在本主题的诸多示例中，尽管显示了 ItemDefinitionGroup 元素，但为清楚起见，省略了相应的 ItemGroup 定义。  
   
- ItemGroup 中显式定义的元数据优先于 ItemDefinitionGroup 中的元数据。 ItemDefinitionGroup 中的元数据仅应用于 ItemGroup 中未定义的元数据。 例如:  
+ ItemGroup 中显式定义的元数据优先于 ItemDefinitionGroup 中的元数据。 ItemDefinitionGroup 中的元数据仅应用于 ItemGroup 中未定义的元数据。 例如：  
   
 ```  
 <ItemDefinitionGroup>  
@@ -80,7 +80,7 @@ ms.locfileid: "63433590"
   
 - ItemDefinitionGroup 中项上的常见元数据  
   
-- CDATA 节 \<\!\[CDATA\[此处的所有内容均未分析\]\]\>  
+- CDATA 节 \<\!\[CDATA\[anything here is not parsed\]\]\>  
   
 > [!NOTE]
 > ItemGroup 中的项元数据在 ItemDefinitionGroup 元数据声明中无用，这是因为已在 ItemGroup 元素之前处理 ItemDefinitionGroup 元素。  
@@ -92,7 +92,7 @@ ms.locfileid: "63433590"
   
 - 最新规范优先。  
   
-  当拥有多个 ItemDefinitionGroup 时，每个后续规范将其元数据添加至先前的定义。 例如:  
+  当拥有多个 ItemDefinitionGroup 时，每个后续规范将其元数据添加至先前的定义。 例如：  
   
 ```  
 <ItemDefinitionGroup>  
@@ -110,7 +110,7 @@ ms.locfileid: "63433590"
   
  在本例中，向“m”和“n”添加元数据“o”。  
   
- 此外，还可以添加先前定义的元数据值。 例如:  
+ 此外，还可以添加先前定义的元数据值。 例如：  
   
 ```  
 <ItemDefinitionGroup>  
@@ -146,7 +146,7 @@ ms.locfileid: "63433590"
 ```  
   
 ## <a name="using-conditions-in-an-itemdefinitiongroup"></a>在 ItemDefinitionGroup 中使用条件  
- 可使用 ItemDefinitionGroup 中的条件来控制元数据的包含。 例如:  
+ 可使用 ItemDefinitionGroup 中的条件来控制元数据的包含。 例如：  
   
 ```  
 <ItemDefinitionGroup Condition="'$(Configuration)'=='Debug'">  
@@ -161,7 +161,7 @@ ms.locfileid: "63433590"
 > [!NOTE]
 > 在条件中仅支持本地元数据引用。  
   
- 对项（而非定义组）而言，在先前的 ItemDefinitionGroup 中定义的元数据的引用是本地的。 也就是说，引用的范围特定于项\-。 例如:  
+ 对项（而非定义组）而言，在先前的 ItemDefinitionGroup 中定义的元数据的引用是本地的。 也就是说，引用的范围特定于项\-。 例如：  
   
 ```  
 <ItemDefinitionGroup>  
@@ -177,7 +177,7 @@ ms.locfileid: "63433590"
  在此示例中，项“i”在条件中引用项“test”。  
   
 ## <a name="overriding-and-deleting-metadata"></a>替代和删除元数据  
- 通过将元数据值设置为空白，在 ItemDefinitionGroup 元素中定义的元数据可以在之后的 ItemDefinitionGroup 元素中被替代。 还可通过将元数据项设置为空值，高效删除元数据项。 例如:  
+ 通过将元数据值设置为空白，在 ItemDefinitionGroup 元素中定义的元数据可以在之后的 ItemDefinitionGroup 元素中被替代。 还可通过将元数据项设置为空值，高效删除元数据项。 例如：  
   
 ```  
 <ItemDefinitionGroup>  
@@ -228,7 +228,7 @@ ms.locfileid: "63433590"
 </ItemDefinitionGroup>  
 ```  
   
- 从[!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 3.5 开始，ItemGroups 可以自引用。 例如:  
+ 从[!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 3.5 开始，ItemGroups 可以自引用。 例如：  
   
 ```  
 <ItemGroup>  
@@ -239,5 +239,5 @@ ms.locfileid: "63433590"
 </ItemGroup>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [批处理](../msbuild/msbuild-batching.md)

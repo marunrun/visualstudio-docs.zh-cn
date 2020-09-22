@@ -16,11 +16,11 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 03991f3d5900377ceca5464bf41cfb90fcae650e
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63440596"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90841320"
 ---
 # <a name="how-to-set-permissions"></a>如何：设置权限
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -42,19 +42,19 @@ ms.locfileid: "63440596"
   
 ### <a name="to-create-a-user-account-that-has-user-permissions"></a>创建拥有用户权限的用户帐户  
   
-1. 右键单击“我的电脑”，然后单击“管理”。  
+1. 右键单击“我的电脑”，然后单击“管理” 。  
   
      随即打开“计算机管理”窗口。  
   
 2. 展开“本地用户和组”。  
   
-3. 右键单击“用户”文件夹，然后单击“新建用户”。  
+3. 右键单击“用户”文件夹，然后单击“新建用户” 。  
   
      随即出现“新建用户”对话框。  
   
 4. 将所创建的用户帐户的信息填写在此对话框的字段中。 指定一个密码。 还可以选中要求用户下次登录时更改密码的复选框。  
   
-5. 单击“创建”，然后单击“关闭”。  
+5. 单击“创建”，然后单击“关闭” 。  
   
      新用户将出现在用户组（一组没有管理员权限的用户）中。  
   
@@ -70,15 +70,15 @@ ms.locfileid: "63440596"
   
 2. 右键单击该文件夹，然后单击“属性”。  
   
-     随即显示“\<文件夹名称> 属性”对话框。  
+     此时将显示“\<folder name> 属性”对话框。  
   
 3. 单击 **“安全”** 选项卡。  
   
 4. 单击“组或用户名”框中的用户帐户的名称。  
   
-5. 在“\<用户名> 的权限”框中，选中“完全控制”复选框。  
+5. 在“\<user name> 的权限”框中，选中“完全控制”复选框 。  
   
-6. 单击 **“确定”**。  
+6. 单击 **“确定”** 。  
   
      这将授予用户对从第 5 步所选文件夹开始的共享文件夹树的权限。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "63440596"
    vsperfcmd /admin:security,allow,<right[,right],<user name|group name>  
    ```  
   
-    此命令为 \<用户名> 或 \<组名称> 帐户授予对分析工具的访问权限。 \<权限> 选项用于确定用户可访问的分析功能。 \<权限> 选项可以是下面的一个或多个值：  
+    此命令为 \<user name> 或 \<group name> 帐户授予对分析工具的访问权限。 \<right> 选项用于确定用户可访问的分析功能。 \<right> 选项可以是下面的一个或多个值：  
   
    - FullAccess — 允许访问所有分析方法，包括从服务、采样和跨会话分析收集性能数据。  
   
@@ -126,7 +126,7 @@ ms.locfileid: "63440596"
   
    现在，指定的用户登录后，能在没有管理员权限的情况下使用分析工具。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [配置性能会话](../profiling/configuring-performance-sessions.md)   
  [VSPerfCmd](../profiling/vsperfcmd.md)   
  [分析和 Windows Vista 安全性](../profiling/profiling-and-windows-vista-security.md)

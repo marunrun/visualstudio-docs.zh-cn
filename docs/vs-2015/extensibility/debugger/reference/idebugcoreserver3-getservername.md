@@ -1,5 +1,5 @@
 ---
-title: IDebugCoreServer3::GetServerName | Microsoft Docs
+title: IDebugCoreServer3：： GetServerName |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,11 +13,11 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 886cfbf95216064764e9f5b3e48d092d3fecc047
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63445260"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90841323"
 ---
 # <a name="idebugcoreserver3getservername"></a>IDebugCoreServer3::GetServerName
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -38,19 +38,19 @@ int GetServerName(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>parameters  
  `pbstrName`  
- [out]返回的服务器的名称。  
+ 弄返回服务器的名称。  
   
 > [!NOTE]
 > 调用方负责释放字符串。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为将返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
 ## <a name="remarks"></a>备注  
- 输入服务器的友好名称时，调用[GetServerFriendlyName](../../../extensibility/debugger/reference/idebugcoreserver3-getserverfriendlyname.md)方法。  
+ 对于友好服务器名称，请调用 [GetServerFriendlyName](../../../extensibility/debugger/reference/idebugcoreserver3-getserverfriendlyname.md) 方法。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md)   
  [GetServerFriendlyName](../../../extensibility/debugger/reference/idebugcoreserver3-getserverfriendlyname.md)

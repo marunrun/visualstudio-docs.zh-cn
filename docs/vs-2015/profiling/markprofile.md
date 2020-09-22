@@ -12,11 +12,11 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 566cb2e7222aacbf992dc1693d8ce1de102605a3
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63434969"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840436"
 ---
 # <a name="markprofile"></a>MarkProfile
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -100,5 +100,5 @@ void ExerciseMarkProfile()
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [Visual Studio 探查器 API 参考（本机）](../profiling/visual-studio-profiler-api-reference-native.md)
+## <a name="see-also"></a>另请参阅  
+ [Visual Studio 探查器 API 参考 (本机) ](../profiling/visual-studio-profiler-api-reference-native.md)

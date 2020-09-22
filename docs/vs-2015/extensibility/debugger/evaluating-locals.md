@@ -1,5 +1,5 @@
 ---
-title: 计算局部 |Microsoft Docs
+title: 计算局部变量 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,32 +12,32 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 7e31aa560422c9f18ec30a6e203559ef3ed10c52
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63444772"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90841324"
 ---
 # <a name="evaluating-locals"></a>计算局部
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
 > [!IMPORTANT]
-> 在 Visual Studio 2015 中，这种方式实现表达式计算器已弃用。 有关实现 CLR 表达式计算器的信息，请参阅[CLR 表达式计算器](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators)并[托管表达式计算器示例](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)。  
+> 在 Visual Studio 2015 中，不推荐使用这种实现表达式计算器的方式。 有关实现 CLR 表达式计算器的信息，请参阅 [Clr 表达式计算器](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) 和 [托管表达式计算器示例](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)。  
   
- [GetPropertyInfo](../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md)调用以获取本地，以及计算机的本地名称和类型的值。 由于局部变量的值是依赖于该程序的当前状态，则必须从内存获取局部变量的值。 [IDebugBinder](../../extensibility/debugger/reference/idebugbinder.md)对象用于绑定[IDebugField](../../extensibility/debugger/reference/idebugfield.md)到合适的位置在内存中包含的值表示本地对象。 表示在内存中的此位置[IDebugObject](../../extensibility/debugger/reference/idebugobject.md)对象。  
+ 调用[GetPropertyInfo](../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md)可获取本地的值，以及本地的名称和类型。 由于本地的值依赖于程序的当前状态，因此必须从内存中获取本地的值。 [IDebugBinder](../../extensibility/debugger/reference/idebugbinder.md)对象用于将表示本地的[IDebugField](../../extensibility/debugger/reference/idebugfield.md)对象绑定到内存中包含该值的适当位置。 内存中的此位置由 [IDebugObject](../../extensibility/debugger/reference/idebugobject.md) 对象表示。  
   
- 检索本地值的此功能会封装在一个 helper 函数，将执行以下任务：  
+ 检索本地的值的此功能封装在执行以下任务的 helper 函数中：  
   
-1. 将绑定`IDebugField`对象的内存来获取`IDebugObject`对象。  
+1. 将 `IDebugField` 对象绑定到内存以获取 `IDebugObject` 对象。  
   
-2. 从内存中获取的值。 此值表示为一系列字节。  
+2. 从内存中获取值。 此值表示为一系列字节。  
   
-3. 设置基于本地的类型的值的格式。  
+3. 根据本地的类型设置值的格式。  
   
-4. 返回泛型对象，其中包含的本地值。 在C#，这是`object`，然后在C++，这是`VARIANT`。  
+4. 返回一个包含本地值的泛型对象。 在 c # 中，这是一个 `object` ，而在 c + + 中，它是一个 `VARIANT` 。  
   
 ## <a name="managed-code"></a>托管代码  
- 这是函数的本地的检索在托管代码中值的实现。  
+ 这是在托管代码中检索本地的值的函数的实现。  
   
 ```csharp  
 namespace EEMC  
@@ -79,7 +79,7 @@ namespace EEMC
 ```  
   
 ## <a name="unmanaged-code"></a>非托管代码  
- 这是函数的本地的检索的非托管代码中值的实现。 `FieldGetType` 中所示[获取本地值](../../extensibility/debugger/getting-local-values.md)。  
+ 这是在非托管代码中检索局部值的函数的实现。 `FieldGetType` 在 [获取本地值](../../extensibility/debugger/getting-local-values.md)时显示。  
   
 ```cpp#  
 HRESULT FieldGetPrimitiveValue(  
@@ -191,7 +191,7 @@ HRESULT FieldGetPrimitiveValue(
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [局部的实现示例](../../extensibility/debugger/sample-implementation-of-locals.md)   
- [获取局部值](../../extensibility/debugger/getting-local-values.md)   
+## <a name="see-also"></a>另请参阅  
+ [局部变量的示例实现](../../extensibility/debugger/sample-implementation-of-locals.md)   
+ [获取本地值](../../extensibility/debugger/getting-local-values.md)   
  [计算上下文](../../extensibility/debugger/evaluation-context.md)
