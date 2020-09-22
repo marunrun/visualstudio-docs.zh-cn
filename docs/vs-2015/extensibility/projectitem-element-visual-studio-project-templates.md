@@ -1,5 +1,5 @@
 ---
-title: ProjectItem 元素 （Visual Studio 项目模板） |Microsoft Docs
+title: 项目项元素 (Visual Studio 项目模板) |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -14,11 +14,11 @@ caps.latest.revision: 19
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 84fb371460bc697660e176ca9df4c984d2b234bf
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63438375"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840490"
 ---
 # <a name="projectitem-element-visual-studio-project-templates"></a>ProjectItem 元素（Visual Studio 项目模板）
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "63438375"
 指定项目模板中包含的文件。  
   
 > [!NOTE]
-> `ProjectItem`元素接受不同的属性，具体取决于该模板是针对某个项目或项。 本主题介绍了`ProjectItem`项目模板的元素。 有关的说明`ProjectItem`元素的项模板，请参阅[ProjectItem 元素 （Visual Studio 项模板）](../extensibility/projectitem-element-visual-studio-item-templates.md)。  
+> `ProjectItem`元素根据模板是用于项目还是项来接受不同的属性。 本主题介绍 `ProjectItem` 项目模板的元素。 有关 `ProjectItem` 项模板元素的说明，请参阅项目项 [元素 (Visual Studio 项模板) ](../extensibility/projectitem-element-visual-studio-item-templates.md)。  
   
  \<VSTemplate>  
  \<TemplateContent>  
@@ -50,16 +50,16 @@ ms.locfileid: "63438375"
 ## <a name="attributes-and-elements"></a>特性和元素  
  以下各部分描述了特性、子元素和父元素。  
   
-### <a name="attributes"></a>特性  
+### <a name="attributes"></a>属性  
   
 |特性|描述|  
 |---------------|-----------------|  
-|`TargetFileName`|可选特性。<br /><br /> 从模板创建项目时指定的名称和项目项的路径。 此属性是对于在模板.zip 文件中，创建目录结构的目录结构不同，或者使用参数替换创建的项名称。|  
-|`ReplaceParameters`|可选特性。<br /><br /> 一个布尔值，该值指定项是否可以从模板创建项目时，必须将其替换的参数值。 默认值是 `false`。|  
-|`OpenInEditor`|可选特性。<br /><br /> 一个布尔值，指定此项是否应在其各自编辑器中打开[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]从模板创建项目时。<br /><br /> `OpenInWebBrowser`并`OpenInHelpBrowser`将忽略具有的项上的属性`OpenInEditor`的值`true`。<br /><br /> 默认值为 `false`。|  
-|`OpenInWebBrowser`|可选特性。<br /><br /> 一个布尔值，该值指定项是否应该打开 Web 浏览器从模板创建项目。<br /><br /> 只有 HTML 文件和文本文件是本地的项目可以在 Web 浏览器中打开。 外部 Url 不能打开与此特性。<br /><br /> 默认值为 `false`。|  
-|`OpenInHelpBrowser`|可选特性。<br /><br /> 一个布尔值，该值指定从模板创建项目项是否应在帮助查看器中打开。<br /><br /> 只有 HTML 文件和文本文件是本地的项目可以帮助浏览器中打开。 外部 Url 不能打开与此特性。<br /><br /> 默认值为 `false`。|  
-|`OpenOrder`|可选特性。<br /><br /> 指定数字值，该值表示项将在其各自的编辑器中打开的顺序。 所有值都必须为 10 的倍数。 更高版本的项与`OpenOrder`值首先打开。|  
+|`TargetFileName`|可选特性。<br /><br /> 指定从模板创建项目时项目项的名称和路径。 此属性用于创建与模板 .zip 文件中的目录结构不同的目录结构，或用于创建项名称的。|  
+|`ReplaceParameters`|可选特性。<br /><br /> 一个布尔值，指定在从模板创建项目时，项是否具有必须替换的参数值。 默认值为 `false`。|  
+|`OpenInEditor`|可选特性。<br /><br /> 一个布尔值，指定在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 从模板创建项目时，是否应在其各自的编辑器中打开该项。<br /><br /> `OpenInWebBrowser` `OpenInHelpBrowser` 对于值为的项，将忽略和特性 `OpenInEditor` `true` 。<br /><br /> 默认值为 `false`。|  
+|`OpenInWebBrowser`|可选特性。<br /><br /> 一个布尔值，指定从模板创建项目时是否应在 Web 浏览器中打开该项。<br /><br /> 只有项目的本地 HTML 文件和文本文件才能在 Web 浏览器中打开。 不能用此属性打开外部 Url。<br /><br /> 默认值为 `false`。|  
+|`OpenInHelpBrowser`|可选特性。<br /><br /> 一个布尔值，指定在从模板创建项目时是否应在帮助查看器中打开该项。<br /><br /> 只有项目的本地 HTML 文件和文本文件才能在帮助浏览器中打开。 不能用此属性打开外部 Url。<br /><br /> 默认值为 `false`。|  
+|`OpenOrder`|可选特性。<br /><br /> 指定一个数字值，该值表示将在各自的编辑器中打开项的顺序。 所有值都必须是10的倍数。 `OpenOrder`将首先打开值较高的项。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -68,52 +68,52 @@ ms.locfileid: "63438375"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[Project](../extensibility/project-element-visual-studio-templates.md)|指定的文件或目录将添加到项目。|  
+|[Project](../extensibility/project-element-visual-studio-templates.md)|指定要添加到项目中的文件或目录。|  
   
 ## <a name="text-value"></a>文本值  
  需要一个文本值。  
   
- 一个`string`表示到模板的.zip 文件中的文件的名称或路径。  
+ `string`，它表示模板 .zip 文件中的文件的名称或路径。  
   
 ## <a name="remarks"></a>备注  
- `ProjectItem` 是的一个可选子级`Project`。  
+ `ProjectItem` 是的一个可选子级 `Project` 。  
   
- `TargetFileName`属性可用于创建目录结构模板.zip 文件中的目录结构不同。 例如，如果该文件`MyFile.vb`.zip 模板文件的根目录中存在你想要放在目录中名为的文件，但`CustomFiles`中从模板创建的所有项目，将使用下面的 XML:  
+ `TargetFileName`特性可用于创建与模板 .zip 文件中的目录结构不同的目录结构。 例如，如果文件位于 `MyFile.vb` 模板 .zip 文件的根目录中，但你希望将该文件放在从该模板创建的所有项目中指定的目录中， `CustomFiles` 则可以使用以下 XML：  
   
 ```  
 <ProjectItem TargetFileName="CustomFiles\MyFile.vb">MyFile.vb</ProjectItem>  
 ```  
   
- `TargetFileName`属性还可用于重命名文件，其中包含在其文件名中的国际字符。 例如，模板.zip 文件不能包含文件名称包含 Unicode 字符，因此必须之前可以压缩为.zip 文件重命名该文件。 `TargetFileName`属性可用于将文件名称设置回原始的 Unicode 文件名。  
+ `TargetFileName`特性还可用于重命名文件名中包含国际字符的文件。 例如，模板 .zip 文件不能包含带有 Unicode 字符的文件名，因此必须先重命名该文件，然后才能将其压缩为 .zip 文件。 `TargetFileName`特性可用于将文件名称设置回原始 Unicode 文件名。  
   
- `TargetFileName`属性还可用于使用参数重命名文件。 以下过程说明如何将文件重命名`MyFile.vb`，其中存在的模板.zip 文件，基于项目名称的文件名称的根目录中。  
+ `TargetFileName`特性还可用于重命名具有参数的文件。 下面的过程说明如何将位于 `MyFile.vb` 模板 .zip 文件的根目录中的文件重命名为基于项目名称的文件名。  
   
-### <a name="to-rename-files-with-parameters"></a>若要使用的参数重命名文件  
+### <a name="to-rename-files-with-parameters"></a>用参数重命名文件  
   
-1. 在.vstemplate 文件中使用以下 XML:  
+1. 在 .vstemplate 文件中使用以下 XML：  
   
     ```  
     <ProjectItem TargetFileName="$safeprojectname$.vb">MyFile.vb</ProjectItem>  
     ```  
   
-2. 打开项目文件 (对于.vbproj[!INCLUDE[vbprvb](../includes/vbprvb-md.md)]项目) 中的文本编辑器或[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]。  
+2. [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]在文本编辑器或中打开项目) 的项目文件 ( [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 。  
   
-3. 看起来类似于下面的 XML 项目文件中找到的行：  
+3. 在项目文件中查找类似于以下 XML 的行：  
   
     ```  
     <Compile Include="MyFile.vb">  
     ```  
   
-4. 代码行替换为以下 XML:  
+4. 将代码行替换为以下 XML：  
   
     ```  
     <Compile Include="$safeprojectname$.vb">  
     ```  
   
-     通过此模板创建项目，文件名称基于用户输入中的名称**新的项目**对话框中的，所有不安全字符和删除空格。 有关详细信息，请参阅[模板参数](../ide/template-parameters.md)。  
+     从此模板创建项目时，文件名将基于用户在 " **新建项目** " 对话框中输入的名称，并删除所有不安全字符和空格。 有关详细信息，请参阅 [模板参数](../ide/template-parameters.md)。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示用于的项目模板的元数据[!INCLUDE[csprcs](../includes/csprcs-md.md)]应用程序。  
+ 下面的示例演示应用程序的项目模板的元数据 [!INCLUDE[csprcs](../includes/csprcs-md.md)] 。  
   
 ```  
 <VSTemplate Type="Project" Version="3.0.0"  
@@ -139,7 +139,7 @@ ms.locfileid: "63438375"
 </VSTemplate>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Visual Studio 模板架构参考](../extensibility/visual-studio-template-schema-reference.md)   
  [创建项目和项模板](../ide/creating-project-and-item-templates.md)   
  [模板参数](../ide/template-parameters.md)   

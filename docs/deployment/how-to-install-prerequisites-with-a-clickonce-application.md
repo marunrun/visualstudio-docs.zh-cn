@@ -1,5 +1,6 @@
 ---
-title: 如何使用 ClickOnce 应用程序安装必备组件 |Microsoft Docs
+title: 使用 ClickOnce 应用安装必备组件
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -16,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ce4ad97439d330a6fc51e741e9ea05ef53a5798a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 52e815c45f776635d811c073114e22c3bd002de0
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85382375"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809115"
 ---
 # <a name="how-to-install-prerequisites-with-a-clickonce-application"></a>如何：与 ClickOnce 应用程序一起安装系统必备组件
 所有 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序都需要在计算机上安装 .NET Framework 的正确版本，然后才能运行该计算机; 许多应用程序也有其他必备组件。 发布 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序时，可以选择要与应用程序一起打包的一组系统必备组件。 在安装时，将针对每个先决条件执行检查，以确定它是否已存在;如果不是，则会在安装应用程序之前安装该 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序。
@@ -67,6 +68,6 @@ ms.locfileid: "85382375"
     > [!NOTE]
     > 必须确保指定组件的安装程序存在于指定位置。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [发布 ClickOnce 应用程序](../deployment/publishing-clickonce-applications.md)
 - [如何：使用发布向导发布 ClickOnce 应用程序](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)

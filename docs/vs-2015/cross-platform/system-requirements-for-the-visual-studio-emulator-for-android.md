@@ -1,5 +1,5 @@
 ---
-title: 适用于 Android 的仿真程序的系统需求 |Microsoft Docs
+title: 适用于 Android 的仿真程序的系统要求 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: tgt-pltfrm-cross-plat
@@ -9,11 +9,11 @@ caps.latest.revision: 7
 ms.author: crdun
 manager: crdun
 ms.openlocfilehash: b1b77dc7e01ae791379dda52b305ebcdbbf68447
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63433916"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840425"
 ---
 # <a name="system-requirements-for-the-visual-studio-emulator-for-android"></a>System requirements for the Visual Studio Emulator for Android
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "63433916"
 
 - [Hyper-V 需要未经压缩且未经加密的文件](#Files)
 
-## <a name="Checklist"></a> 快速清单
+## <a name="quick-checklist"></a><a name="Checklist"></a> 快速清单
  以下是 Visual Studio Emulator for Android 运行要求的快速清单。 有关更多详细信息，请参阅本主题的后续章节。
 
  系统要求
@@ -62,9 +62,9 @@ ms.locfileid: "63433916"
 
 - 在 BIOS 中，必须支持以下功能：
 
-  - 硬件辅助虚拟化
+  - 硬件协助的虚拟化
 
-  - 第二级别的地址转换 (SLAT)
+  - 二级地址转换 (SLAT)
 
   - 基于硬件的数据执行保护 (DEP)
 
@@ -72,8 +72,8 @@ ms.locfileid: "63433916"
 
 - 你需要成为本地 Hyper-V 管理员组的成员。
 
-## <a name="System"></a> 系统要求
- 计算机必须满足以下要求：
+## <a name="system-requirements"></a><a name="System"></a> 系统要求
+ 你的计算机必须满足以下要求：
 
 - Hyper-V 支持（请参阅 [Hyper-V 要求](#HyperV)）
 
@@ -85,12 +85,12 @@ ms.locfileid: "63433916"
 
   ![验证系统要求](../cross-platform/media/android-emu-system-requirements.png "Android_Emu_System_Requirements")
 
-## <a name="Network"></a>网络要求
+## <a name="network-requirements"></a><a name="Network"></a> 网络要求
  网络必须满足以下要求：
 
 - DHCP
 
-   仿真程序需要 DHCP，因为它将自身配置为网络上具有自己的 IP 地址的一个单独的设备。
+   仿真程序需要 DHCP，因为它将自身配置为网络上具有自己的 IP 地址的一个单独的设备
 
 - 自动配置的 DNS 和网关设置
 
@@ -100,14 +100,14 @@ ms.locfileid: "63433916"
 
 - [Troubleshooting the Visual Studio Emulator for Android](../cross-platform/troubleshooting-the-visual-studio-emulator-for-android.md)
 
-## <a name="HyperV"></a> Hyper-V 要求
+## <a name="hyper-v-requirements"></a><a name="HyperV"></a> Hyper-v 要求
  BIOS 中的 Hyper-V 要求
 
  计算机的 BIOS 必须支持下列要求，且必须实现这些要求：
 
-- 硬件辅助虚拟化
+- 硬件协助的虚拟化
 
-- 第二级别的地址转换 (SLAT)
+- 二级地址转换 (SLAT)
 
 - 基于硬件的数据执行保护 (DEP)
 
@@ -118,7 +118,7 @@ ms.locfileid: "63433916"
 |需求|如何检查并实现此要求|
 |-----------------|----------------------------------------------|
 |必须安装 Hyper-V|按照用于 [为 Windows Phone 仿真程序启用 Hyper-V](https://msdn.microsoft.com/library/windows/apps/jj863509\(v=vs.105\).aspx)相同说明操作。<br /><br /> 检查服务管理单元中的 **Hyper-V 虚拟机管理** 服务的状态。|
-|必须正在运行 Hyper-V。|有关管理服务的详细信息，请参阅以下主题：<br /><br /> -   [启动、停止、暂停、继续或重新启动服务](https://technet.microsoft.com/library/cc736564\(v=WS.10\).aspx)<br />-   [配置服务启动方式](https://technet.microsoft.com/%20library/cc739213\(v=ws.10\))|
+|必须正在运行 Hyper-V。|有关管理服务的详细信息，请参阅以下主题：<br /><br /> -   [启动、停止、暂停、继续或重新启动服务](https://technet.microsoft.com/library/cc736564\(v=WS.10\).aspx)<br />-   [配置服务的启动方式](https://technet.microsoft.com/%20library/cc739213\(v=ws.10\))|
 
  你需要成为本地 Hyper-V 管理员组的成员。
 
@@ -129,16 +129,16 @@ ms.locfileid: "63433916"
 > [!IMPORTANT]
 > 加入该组后，注销或重启以使更改生效。
 
- ![加入 Hyper-V 管理员安全组](../cross-platform/media/android-emu-hyperv-admin.png "Android_Emu_HyperV_Admin")
+ ![加入 Hyper&#45;V 管理员安全组](../cross-platform/media/android-emu-hyperv-admin.png "Android_Emu_HyperV_Admin")
 
  要手动将自己添加到组中，请打开本地用户和组管理单元。
 
-## <a name="BootableVHD"></a> 不支持从可启动 VHD 运行仿真器
- 从可启动 VHD 运行 Windows 时，如果尝试在 Visual Studio Emulator for Android 上运行应用，则仿真器通常需要几分钟时间才能启动，或会启动失败。 当仿真程序启动失败时，将出现以下消息：应用部署失败。 请重试。
+## <a name="running-the-emulator-from-a-bootable-vhd-is-not-supported"></a><a name="BootableVHD"></a> 不支持从可启动 VHD 运行仿真器
+ 从可启动 VHD 运行 Windows 时，如果尝试在 Visual Studio Emulator for Android 上运行应用，则仿真器通常需要几分钟时间才能启动，或会启动失败。 当仿真器启动失败时，你将看到以下消息：应用部署失败。 请重试。
 
  此配置不受支持。 有关相关问题的信息，请参阅 [Troubleshooting the Visual Studio Emulator for Android](../cross-platform/troubleshooting-the-visual-studio-emulator-for-android.md)。
 
-## <a name="Files"></a> Hyper-V 需要未经压缩且未经加密的文件
+## <a name="hyper-v-requires-uncompressed-and-unencrypted-files"></a><a name="Files"></a> Hyper-v 需要未压缩和未加密的文件
  在配置了 NTFS 文件系统的硬盘上，Hyper-V 使用的虚拟硬盘文件必须是未经压缩且未经加密的。 请确保不要压缩或加密以下目录：
 
 - %localappdata%\Microsoft\XDE
@@ -154,5 +154,5 @@ ms.locfileid: "63433916"
 ## <a name="hardware-graphics-forwarding-opengl-es-support-requirements"></a>硬件图形转发（OpenGL ES 支持）要求
  为了让仿真器能够仿真对 GPU 的调用（例如 OpenGL ES 使用的那些调用），计算机必须具有兼容 DirectX 的 GPU 且安装了合适的 DirectX 驱动程序。
 
-## <a name="see-also"></a>请参阅
- [适用于 Android 的 Visual Studio 模拟器疑难解答](../cross-platform/troubleshooting-the-visual-studio-emulator-for-android.md)
+## <a name="see-also"></a>另请参阅
+ [Troubleshooting the Visual Studio Emulator for Android](../cross-platform/troubleshooting-the-visual-studio-emulator-for-android.md)

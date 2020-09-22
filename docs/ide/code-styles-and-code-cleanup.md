@@ -10,12 +10,12 @@ f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.Basic.Code_Style.General
 ms.workload:
 - multiple
-ms.openlocfilehash: 9d540339ca25fc42fc05df4818a6d05204ccae0e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4faeff1e60fa77e3bf9e995c61c841f626468a1b
+ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89312582"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89743329"
 ---
 # <a name="code-style-preferences"></a>代码样式首选项
 
@@ -60,40 +60,48 @@ ms.locfileid: "89312582"
 
 对于此页上的每个样式设置，可使用每行相应的下拉列表设置“首选项”  和“严重性”  值。 严重性可设置为“仅重构”  、“建议”  、“警告”  或“错误”  。 如果想要为某个代码样式启用[快速操作](../ide/quick-actions.md)，请确保“严重性”  设置为“仅重构”  以外的其他项。 “快速操作”灯泡![灯泡](media/light-bulb-dropdown.png)、错误灯泡![错误灯泡](media/error-bulb.png)或螺丝刀![螺丝刀](media/screwdriver.png)图标将在使用了非首选样式时出现，你可选择“快速操作”列表上的选项将代码自动重写为首选样式   。
 
+::: moniker range=">=vs-2019"
+
+## <a name="enforce-code-styles-on-build"></a>在生成时强制实施代码样式
+
+从 Visual Studio 2019 版本 16.8（包括 .NET 5.0 RC2 SDK）开始，可以针对所有 .NET 项目[在生成时强制实施 .NET 编码约定](/dotnet/fundamentals/productivity/code-analysis.md#code-style-analysis)。 在生成时，.NET 代码样式冲突将显示为带有“IDE”前缀的警告或错误。 这样便可以在代码库中严格地强制实施一致的代码样式。
+
+::: moniker-end
+
 ## <a name="apply-code-styles"></a>应用代码样式
 
 ::: moniker range="vs-2017"
 
-可以配置“设置文档格式”命令（“编辑” > “高级” > “设置文档格式”）以应用代码样式设置（来自 EditorConfig 文件或“代码样式”选项）及其执行的常规设置格式（如缩进）      。 如果项目存在 .editorconfig 文件，则优先采用这些设置  。
+可以配置“设置文档格式”命令（“编辑” > “高级” > “设置文档格式”）以应用代码样式设置（来自 EditorConfig 文件或“代码样式”选项）及其执行的常规设置格式（如缩进）********************。 如果项目存在 .editorconfig 文件，则优先采用这些设置**。
 
 > [!NOTE]
-> 使用“设置文档格式”命令应用代码样式仅适用于 C# 代码文件  。 这是一项实验性功能。
+> 使用“设置文档格式”命令应用代码样式仅适用于 C# 代码文件****。 这是一项实验性功能。
 
-配置希望“设置文档格式”在[“设置文档格式”选项页](reference/options-text-editor-csharp-formatting.md#format-document-settings)上应用的设置  。
+配置希望“设置文档格式”在[“设置文档格式”选项页](reference/options-text-editor-csharp-formatting.md#format-document-settings)上应用的设置****。
 
 ![Visual Studio 2017 中格式文档的代码样式设置](media/format-document-settings-experiment.png)
 
 > [!TIP]
-> 严重性配置为“无”的规则不参与代码清理，但可通过“快速操作和重构”菜单单独应用   。
+> 严重性配置为“无”的规则不参与代码清理，但可通过“快速操作和重构”菜单单独应用********。
 
-首次触发“设置文档格式”命令时，将显示一个黄色信息栏，提示你配置代码清理设置  。
+首次触发“设置文档格式”命令时，将显示一个黄色信息栏，提示你配置代码清理设置****。
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-对于 C# 代码文件，Visual Studio 2019 在编辑器底部有一个“代码清理”按钮  （键盘：“Ctrl”+“K”、“Ctrl”+“E”），可通过此按钮从 EditorConfig 文件或从“代码样式”选项页应用代码样式      。 如果项目存在 .editorconfig 文件，则优先采用这些设置  。
+对于 C# 代码文件，Visual Studio 2019 在编辑器底部有一个“代码清理”按钮（键盘：“Ctrl”+“K”、“Ctrl”+“E”），可通过此按钮从 EditorConfig 文件或从“代码样式”选项页应用代码样式    。 如果项目存在 .editorconfig 文件，则优先采用这些设置**。
 
 ![在 Visual Studio 2019 中执行代码清理](media/execute-code-cleanup.png)
 
 > [!TIP]
-> 严重性配置为“无”的规则不参与代码清理，但可通过“快速操作和重构”菜单单独应用   。
+> 严重性配置为“无”的规则不参与代码清理，但可通过“快速操作和重构”菜单单独应用********。
 
-首先，在“配置代码清理”对话框中配置要应用的代码样式（在两个配置文件中的某个文件中）  。 要打开此对话框，请单击代码清理扫帚图标旁边的展开箭头，然后选择“配置代码清理”  。
+首先，在“配置代码清理”对话框中配置要应用的代码样式（在两个配置文件中的某个文件中）****。 要打开此对话框，请单击代码清理扫帚图标旁边的展开箭头，然后选择“配置代码清理”****。
 
 ![在 Visual Studio 2019 中配置代码清理](media/configure-code-cleanup.png)
 
-配置代码清理后，可以单击扫把图标，或者按“Ctrl+K，Ctrl+E”，来运行代码清理。     此外，还可以在整个项目或解决方中运行代码清理功能。 在“解决方案资源管理器”中右键单击项目或解决方案名称，选择“分析和代码清理”，然后选择“运行代码清理”。   
+配置代码清理后，可以单击扫把图标，或者按“Ctrl+K，Ctrl+E”，来运行代码清理。    此外，还可以在整个项目或解决方中运行代码清理功能。 在“解决方案资源管理器”中右键单击项目或解决方案名称，选择“分析和代码清理”，然后选择“运行代码清理”。************
 
 ![在整个项目或解决方中运行代码清理功能](media/run-code-cleanup-project-solution.png)
 

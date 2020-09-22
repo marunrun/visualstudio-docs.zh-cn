@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: fd8732a914581b39566bac88fe73698850893f77
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63434274"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840381"
 ---
 # <a name="performance-report-overview"></a>性能报告概述
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-在 Visual Studio Team System Development Edition 集成开发环境 (IDE) 的“性能报告”窗口中，可以查看性能会话的分析数据。 分析数据保存在 .vsp 和 .vsps 文件中。 报告视图窗口可用于查看和分析应用程序性能问题。  
+在 Visual Studio Team System Development Edition 集成开发环境 (IDE) 的“性能报告”  窗口中，可以查看性能会话的分析数据。 分析数据保存在 .vsp 和 .vsps 文件中。 报告视图窗口可用于查看和分析应用程序性能问题。  
   
 > [!CAUTION]
 > 分析数据文件包含敏感信息，如计算机名、操作系统的版本、文件路径、内存信息和其他计算机设置信息。 无论是采用本机 .vsp 格式，还是导出到 .csv 或 .xml 文件时，都应对数据的分发保持严格控制。  
@@ -33,7 +33,7 @@ ms.locfileid: "63434274"
 ## <a name="performance-report-window"></a>“性能报告”窗口  
  “性能报告”窗口是一个工具窗口，用于查看、管理和筛选性能数据，包含可自定义查询控制。  
   
- 在“性能报告”窗口的主工具栏上，可以访问每个视图。 单击“当前视图”列表旁的箭头可显示并选择可用的各个视图。  
+ 在“性能报告”窗口的主工具栏上，可以访问每个视图。 单击“当前视图”  列表旁的箭头可显示并选择可用的各个视图。  
   
  “性能报告”窗口提供以下数据视图：  
   
@@ -54,7 +54,7 @@ ms.locfileid: "63434274"
 ### <a name="call-tree-view"></a>“调用关系树”视图  
  “调用关系树”视图显示在分析应用程序中遍历的函数执行路径。 树的根是应用程序或组件的入口点。 每个函数节点都列出它调用的所有函数以及有关这些函数调用的性能数据。  
   
- “调用关系树”视图还可以展开以及突出显示消耗了最多时间或采样频率最高的函数的执行路径。 若要显示最活跃的路径，请右键单击函数，然后单击“展开热路径”。 有关详细信息，请参阅[“调用关系树”视图](../profiling/call-tree-view.md)。  
+ “调用关系树”视图还可以展开以及突出显示消耗了最多时间或采样频率最高的函数的执行路径。 若要显示最活跃的路径，请右键单击函数，然后单击“展开热路径”  。 有关详细信息，请参阅[“调用关系树”视图](../profiling/call-tree-view.md)。  
   
 ### <a name="process-view"></a>“进程”视图  
  “进程”视图显示进行分析的每个进程和线程的性能数据。 有关详细信息，请参阅[“进程”视图](../profiling/process-view.md)。  
@@ -72,7 +72,7 @@ ms.locfileid: "63434274"
  “指令指针”视图可用于查看在采样分析过程中执行的特定指令。 有关详细信息，请参阅[“指令指针”(IP) 视图](../profiling/instruction-pointers-ips-view.md)。  
   
 ### <a name="allocation-view"></a>“分配”视图  
- 如果在“性能会话”属性对话框的“常规”页上选择了“收集 .NET 对象分配”，则可使用“分配”视图。 请参阅[性能会话概述](../profiling/performance-session-overview.md)。 “分配”视图列出应用程序或组件分配的 .NET 对象。 展开某个对象行时，会显示调用树。 调用树显示对象创建所产生的执行路径。 还会在调用树中显示有关每个函数的非独占和独占分配数量的信息。 “分配”视图还可以展开以及突出显示分配了最大对象数的函数的执行路径。 若要显示最活跃的路径，请右键单击函数，然后单击“展开热路径”。 有关详细信息，请参阅[收集 .NET 内存分配数据和生存期数据](../profiling/collecting-dotnet-memory-allocation-and-lifetime-data.md)和[“分配”视图](../profiling/dotnet-memory-allocations-view.md)。  
+ 如果在“性能会话”属性对话框的“常规”页上选择了“收集 .NET 对象分配”，则可使用“分配”视图。 请参阅 [性能会话概述](../profiling/performance-session-overview.md)。 “分配”视图列出应用程序或组件分配的 .NET 对象。 展开某个对象行时，会显示调用树。 调用树显示对象创建所产生的执行路径。 还会在调用树中显示有关每个函数的非独占和独占分配数量的信息。 “分配”视图还可以展开以及突出显示分配了最大对象数的函数的执行路径。 若要显示最活跃的路径，请右键单击函数，然后单击“展开热路径”  。 有关详细信息，请参阅[收集 .NET 内存分配数据和生存期数据](../profiling/collecting-dotnet-memory-allocation-and-lifetime-data.md)和[“分配”视图](../profiling/dotnet-memory-allocations-view.md)。  
   
 ### <a name="objects-lifetime-view"></a>“对象生存期”视图  
  如果在“性能会话”属性对话框的“常规”页上选择了“收集 .NET 对象分配信息”和“同时收集 .NET 对象的生存期信息”，则可使用“对象生存期”视图。  
@@ -96,6 +96,6 @@ ms.locfileid: "63434274"
   
 - **导出** - 将当前报告保存在 .CVS 格式或 .XML 格式文件中（可以选择保存不同的视图）。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [分析性能工具数据](../profiling/analyzing-performance-tools-data.md)   
  [性能报告视图](../profiling/performance-report-views.md)

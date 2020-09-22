@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 1000504ad83706bd028af4bd668da7483e478b7a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c838eddea5b3118c28fb33411a8c58a19d7b4a2d
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62978363"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810949"
 ---
 # <a name="secure-deployment"></a>保护部署
   当你创建 Office 解决方案时，你的开发计算机会自动更新，以允许你的项目中的代码运行。 但是，在部署解决方案时，必须通过使用证书或使用信任提示密钥对解决方案进行签名，来提供信任决策所依据的证据 [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] 。 有关详细信息，请参阅 [向 Office 解决方案授予信任](../vsto/granting-trust-to-office-solutions.md)。
@@ -46,5 +46,5 @@ ms.locfileid: "62978363"
 
 ## <a name="see-also"></a>另请参阅
 - [部署 Office 解决方案](../vsto/deploying-an-office-solution.md)
-- [准备计算机以运行或托管 Office 解决方案](https://msdn.microsoft.com/be1b173f-7261-4d74-aa4e-94ccd43db8d8)
+- [准备计算机以运行或托管 Office 解决方案](/previous-versions/bb772092(v=vs.110))
 - [保护 Office 解决方案](../vsto/securing-office-solutions.md)

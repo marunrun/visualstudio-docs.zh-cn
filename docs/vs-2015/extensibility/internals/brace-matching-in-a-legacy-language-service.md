@@ -1,5 +1,5 @@
 ---
-title: 旧版语言服务中的括号匹配 |Microsoft Docs
+title: 旧版语言服务中的大括号匹配 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,47 +12,47 @@ caps.latest.revision: 28
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: d6d7243c8032b22f9abe89021af138f638729011
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63437636"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840391"
 ---
 # <a name="brace-matching-in-a-legacy-language-service"></a>旧版语言服务中的大括号匹配
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-大括号匹配可帮助开发人员跟踪需要发生在一起，例如成对的圆括号和大括号的语言元素。 当开发人员输入一个右大括号时，左大括号突出显示。  
+大括号匹配有助于开发人员跟踪需要同时出现的语言元素，如括号和大括号。 当开发人员输入右大括号时，将突出显示左大括号。  
   
- 你可以匹配两个或三个一起出现的元素，调用对和三元组。 三元组是三个一起出现的元素的集合。 例如，在 C#`foreach`语句构成三元组:"`foreach()`"，"`{`"，并"`}`"。 键入右大括号时，将突出显示所有三个元素。  
+ 可以匹配两个或三个共同发生的元素，称为对等。 三元组是三个共同发生的元素的集合。 例如，在 c # 中， `foreach` 语句形成了三个： " `foreach()` "、" `{` " 和 " `}` "。 键入右大括号时，将突出显示所有三个元素。  
   
- 旧版语言服务实现 VSPackage 的一部分，但实现语言服务功能的较新方法是使用 MEF 扩展。 若要了解有关实现的大括号匹配的新方法的详细信息，请参阅[演练：显示匹配的括号](../../extensibility/walkthrough-displaying-matching-braces.md)。  
+ 旧版语言服务是作为 VSPackage 的一部分实现的，但实现语言服务功能的更新方法是使用 MEF 扩展。 若要了解有关实现大括号匹配的新方法的详细信息，请参阅 [演练：显示匹配的大括号](../../extensibility/walkthrough-displaying-matching-braces.md)。  
   
 > [!NOTE]
-> 我们建议在开始尽可能快地使用新编辑器 API。 这将提高您的语言服务的性能，让您充分利用新的编辑器功能。  
+> 建议你尽快开始使用新的编辑器 API。 这将提高语言服务的性能，并使你能够利用新的编辑器功能。  
   
- <xref:Microsoft.VisualStudio.Package.AuthoringSink>类支持这两个对，用两倍<xref:Microsoft.VisualStudio.Package.AuthoringSink.MatchPair%2A>和<xref:Microsoft.VisualStudio.Package.AuthoringSink.MatchTriple%2A>方法。  
+ <xref:Microsoft.VisualStudio.Package.AuthoringSink>类支持和三对 <xref:Microsoft.VisualStudio.Package.AuthoringSink.MatchPair%2A> 和 <xref:Microsoft.VisualStudio.Package.AuthoringSink.MatchTriple%2A> 方法。  
   
 ## <a name="implementation"></a>实现  
- 语言服务需要确定语言中的所有匹配的元素，然后查找所有匹配对。 这通常通过实现<xref:Microsoft.VisualStudio.Package.IScanner>检测匹配的语言，然后使用<xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>方法来匹配的元素。  
+ 语言服务需要标识语言中的所有匹配元素，然后查找所有匹配对。 这通常通过实现 <xref:Microsoft.VisualStudio.Package.IScanner> 来检测匹配的语言，然后使用 <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> 方法匹配元素。  
   
- <xref:Microsoft.VisualStudio.Package.Source.OnCommand%2A>方法调用的扫描程序以对行进行词汇切分并返回之前插入符号的标记。 通过设置令牌触发器值找到了一个语言元素对扫描程序指示<xref:Microsoft.VisualStudio.Package.TokenTriggers>上当前的令牌。 <xref:Microsoft.VisualStudio.Package.Source.OnCommand%2A>方法调用<xref:Microsoft.VisualStudio.Package.Source.MatchBraces%2A>又会调用的方法<xref:Microsoft.VisualStudio.Package.LanguageService.BeginParse%2A>方法的分析原因值<xref:Microsoft.VisualStudio.Package.ParseReason>查找匹配的语言元素。 当找到匹配的语言元素时，这两个元素将突出显示。  
+ <xref:Microsoft.VisualStudio.Package.Source.OnCommand%2A>方法调用扫描器以标记行并在插入符号的紧前面返回标记。 扫描程序通过 <xref:Microsoft.VisualStudio.Package.TokenTriggers> 在当前令牌上设置的令牌触发器值来指示已找到语言元素对。 <xref:Microsoft.VisualStudio.Package.Source.OnCommand%2A>方法调用方法 <xref:Microsoft.VisualStudio.Package.Source.MatchBraces%2A> ，该方法将调用 <xref:Microsoft.VisualStudio.Package.LanguageService.BeginParse%2A> 具有分析原因值的方法 <xref:Microsoft.VisualStudio.Package.ParseReason> 来查找匹配的语言元素。 当找到匹配的语言元素时，将突出显示这两个元素。  
   
- 有关如何键入大括号触发的大括号突出显示的完整说明，请参阅本主题中的"示例分析操作"部分[旧版语言服务分析器和扫描程序](../../extensibility/internals/legacy-language-service-parser-and-scanner.md)。  
+ 有关键入大括号如何触发大括号突出显示的完整说明，请参阅主题 [旧版语言服务分析器和扫描程序](../../extensibility/internals/legacy-language-service-parser-and-scanner.md)中的 "示例分析操作" 一节。  
   
-## <a name="enabling-support-for-brace-matching"></a>启用支持的大括号匹配  
- <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute>属性可以设置`MatchBraces`， `MatchBracesAtCaret`，和`ShowMatchingBrace`名为设置相应的属性的参数<xref:Microsoft.VisualStudio.Package.LanguagePreferences>类。 此外可以由用户设置语言首选项属性。  
+## <a name="enabling-support-for-brace-matching"></a>启用对大括号匹配的支持  
+ <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute>特性可以设置 `MatchBraces` 、 `MatchBracesAtCaret` 和 `ShowMatchingBrace` 命名参数，这些参数用于设置类的对应属性 <xref:Microsoft.VisualStudio.Package.LanguagePreferences> 。 还可以由用户设置语言首选项属性。  
   
-|注册表项|属性|描述|  
+|注册表项|Property|说明|  
 |--------------------|--------------|-----------------|  
 |`MatchBraces`|<xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableMatchBraces%2A>|启用大括号匹配|  
-|`MatchBracesAtCaret`|<xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableMatchBracesAtCaret%2A>|启用大括号匹配作为插入点移动。|  
-|`ShowMatchingBrace`|<xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableShowMatchingBrace%2A>|会突出显示匹配括号。|  
+|`MatchBracesAtCaret`|<xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableMatchBracesAtCaret%2A>|启用与插入符号移动的大括号匹配。|  
+|`ShowMatchingBrace`|<xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableShowMatchingBrace%2A>|突出显示匹配的大括号。|  
   
 ## <a name="matching-conditional-statements"></a>匹配条件语句  
- 如与匹配条件语句`if`， `else if`，并`else`，或`#if`， `#elif`， `#else`， `#endif`，方式与匹配的分隔符相同。 你可以子类化<xref:Microsoft.VisualStudio.Package.AuthoringSink>类，并提供到内部数组的匹配元素的分隔符以及跨越可以添加文本的方法。  
+ 可以通过与 `if` `else if` `else` `#if` `#elif` `#else` `#endif` 匹配分隔符相同的方式匹配条件语句，如、、和。 您可以为 <xref:Microsoft.VisualStudio.Package.AuthoringSink> 类添加子类，并提供一个方法，该方法可以将文本范围以及分隔符添加到匹配元素的内部数组。  
   
 ## <a name="setting-the-trigger"></a>设置触发器  
- 下面的示例演示如何检测到匹配的括号、 大括号和方括号，并在扫描程序中为其设置触发器。 <xref:Microsoft.VisualStudio.Package.Source.OnCommand%2A>方法<xref:Microsoft.VisualStudio.Package.Source>类检测该触发器，并调用分析器来查找匹配的对 （请参阅本主题中的"查找匹配项"部分）。 此示例是仅供说明用途。 它假定您的扫描仪，包含一种方法`GetNextToken`的标识，并返回从文本行的令牌。  
+ 下面的示例演示如何检测匹配的括号、大括号和方括号，并在扫描程序中为其设置触发器。 <xref:Microsoft.VisualStudio.Package.Source.OnCommand%2A>类上的方法将 <xref:Microsoft.VisualStudio.Package.Source> 检测触发器，并调用分析器来查找匹配对 (参阅本主题中的 "查找匹配项" 部分) 。 此示例仅用于说明目的。 它假定您的扫描程序包含一个方法 `GetNextToken` ，该方法用于标识和返回文本行中的标记。  
   
 ```csharp  
 using Microsoft.VisualStudio.Package;  
@@ -87,7 +87,7 @@ namespace TestLanguagePackage
 ```  
   
 ## <a name="matching-the-braces"></a>匹配大括号  
- 下面是一个简化的示例匹配的语言元素 {}，（） 和 []，并添加到其范围<xref:Microsoft.VisualStudio.Package.AuthoringSink>对象。 此方法不是分析源代码; 的建议的方法它是仅供说明用途。  
+ 下面是一个简化的示例，用于匹配语言元素 {}、 ( ) 和 []，并将其范围添加到 <xref:Microsoft.VisualStudio.Package.AuthoringSink> 对象。 此方法不是用于分析源代码的建议方法;它仅用于说明目的。  
   
 ```csharp  
 using Microsoft.VisualStudio.Package;  
@@ -137,6 +137,6 @@ namespace TestLanguagePackage
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [旧版语言服务功能](../../extensibility/internals/legacy-language-service-features1.md)   
  [旧版语言服务分析器和扫描程序](../../extensibility/internals/legacy-language-service-parser-and-scanner.md)

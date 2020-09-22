@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5e5221d1cce065a352051ca700cf0fc5ef4ae843
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 915a1762782b2bf7177b87a3a5f4cdc6e08c6405
+ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86015631"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90739988"
 ---
 # <a name="walkthrough-extend-server-explorer-to-display-web-parts"></a>演练：扩展服务器资源管理器以显示 web 部件
   在 Visual Studio 中，可以使用**服务器资源管理器**的 " **sharepoint 连接**" 节点来查看 SharePoint 站点上的组件。 但是，默认情况下 **服务器资源管理器** 不显示某些组件。 在本演练中，您将扩展 **服务器资源管理器** 以便它在每个连接的 SharePoint 站点上显示 Web 部件库。
@@ -138,7 +138,7 @@ ms.locfileid: "86015631"
 
 5. 在 **解决方案资源管理器**中，打开 **WebPartNodeExtension** 项目节点的快捷菜单，然后选择 " **属性**"。
 
-     将打开“项目设计器”****。
+     将打开“项目设计器”  。
 
 6. 选择“应用程序”**** 选项卡。
 
@@ -166,7 +166,7 @@ ms.locfileid: "86015631"
 
 7. 在 **解决方案资源管理器**中，再次打开 **WebPartCommands** 项目的快捷菜单，然后选择 " **属性**"。
 
-     将打开“项目设计器”****。
+     将打开“项目设计器”  。
 
 8. 选择“应用程序”**** 选项卡。
 
@@ -179,7 +179,7 @@ ms.locfileid: "86015631"
 
 1. 在 **解决方案资源管理器**中，打开 **WebPartNodeExtension** 项目的快捷菜单，然后选择 " **属性**"。
 
-2. 将打开“项目设计器”****。
+2. 将打开“项目设计器”  。
 
 3. 选择 " **资源** " 选项卡，然后选择 " **此项目不包含默认资源文件"。单击此处创建一个** 链接。
 
@@ -275,7 +275,7 @@ ms.locfileid: "86015631"
 
 1. 在 **解决方案资源管理器**的 WebPartNode 项目下，在清单编辑器中打开 **source.extension.vsixmanifest** 文件。
 
-     Source.extension.vsixmanifest 文件是所有 VSIX 包都需要的 source.extension.vsixmanifest 文件的基础。 有关此文件的详细信息，请参阅 [VSIX 扩展架构1.0 引用](https://msdn.microsoft.com/76e410ec-b1fb-4652-ac98-4a4c52e09a2b)。
+     Source.extension.vsixmanifest 文件是所有 VSIX 包都需要的 source.extension.vsixmanifest 文件的基础。 有关此文件的详细信息，请参阅 [VSIX 扩展架构1.0 引用](/previous-versions/dd393700(v=vs.110))。
 
 2. 在 " **产品名称** " 框中，输入 **服务器资源管理器的 "Web 部件库" 节点**。
 
@@ -303,7 +303,7 @@ ms.locfileid: "86015631"
 10. 在 "**类型**" 框中 **，输入 "node.js"。**
 
     > [!NOTE]
-    > 此元素指定要包含在 Visual Studio 扩展中的自定义扩展。 有关详细信息，请参阅 [资产元素 (VSX 架构) ](https://msdn.microsoft.com/9fcfc098-edc7-484b-9d4c-acd17829d737)。
+    > 此元素指定要包含在 Visual Studio 扩展中的自定义扩展。 有关详细信息，请参阅 [资产元素 (VSX 架构) ](/previous-versions/dd393737(v=vs.110))。
 
 11. 在 " **源** " 列表中，选择 " **当前解决方案中的项目** " 列表项。
 
@@ -369,8 +369,8 @@ ms.locfileid: "86015631"
 
 4. 关闭 Visual Studio 的两个实例 (实验实例，以及在其中打开 WebPartNode 解决方案) 的 Visual Studio 实例。
 
-## <a name="see-also"></a>另请参阅
-- [扩展中的 "SharePoint 连接" 节点服务器资源管理器](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)
+## <a name="see-also"></a>请参阅
+- [扩展服务器资源管理器中的“SharePoint 连接”节点](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)
 - [演练：在服务器资源管理器扩展中调入 SharePoint 客户端对象模型](../sharepoint/walkthrough-calling-into-the-sharepoint-client-object-model-in-a-server-explorer-extension.md)
 - [图标的图像编辑器](/cpp/windows/image-editor-for-icons)
 - [为图标 &#40;图像编辑器创建图标或其他图像&#41;](/cpp/windows/creating-an-icon-or-other-image-image-editor-for-icons)

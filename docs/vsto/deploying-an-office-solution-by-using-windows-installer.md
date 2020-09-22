@@ -18,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a44781c6fea0ecf75dcdb8a5ab2e2b3bed8e52e9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1336af7469b030492b486004940b730d372760bb
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72986138"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90807958"
 ---
 # <a name="deploy-an-office-solution-by-using-windows-installer"></a>使用 Windows Installer 部署 Office 解决方案
 
@@ -333,7 +333,7 @@ ms.locfileid: "72986138"
 
 7. 重复此过程以创建以下值。
 
-|值类型<br /><br />|名称<br /><br />|
+|值类型<br /><br />|“属性”<br /><br />|
 |--------------|--------|
 |“字符串值”<br /><br />|**FriendlyName**<br /><br />|
 |DWORD 值<br /><br />|**LoadBehavior**<br /><br />|
@@ -502,9 +502,9 @@ ms.locfileid: "72986138"
 
    生成完成后，可以在以下位置找到**officeaddinsetup "** 项目的*setup.exe*文件： <em>OfficeAddInSetupProjectRoot</em>**\OfficeAddInSetup\Express\SingleImage\DiskImages\DISK1 \\ **
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [部署的 Office 解决方案先决条件](https://msdn.microsoft.com/library/9f672809-43a3-40a1-9057-397ce3b5126e)
+- [部署的 Office 解决方案先决条件](/previous-versions/bb608617(v=vs.110))
 - [部署 Office 解决方案](../vsto/deploying-an-office-solution.md)
 - [VSTO 外接程序的注册表项](../vsto/registry-entries-for-vsto-add-ins.md)
 - [自定义文档属性概述](../vsto/custom-document-properties-overview.md)

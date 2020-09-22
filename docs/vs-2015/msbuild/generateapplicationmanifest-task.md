@@ -21,11 +21,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 3493c487c446bb66e99bf98a7c3f5599599801fd
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63424137"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840641"
 ---
 # <a name="generateapplicationmanifest-task"></a>GenerateApplicationManifest 任务
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -60,23 +60,23 @@ ms.locfileid: "63424137"
 |`Publisher`|可选 `String` 参数。<br /><br /> 指定应用程序的发布者。 如果未指定此参数，则将从注册的用户或生成的清单的标识中推断该名称。 该名称将用作“开始”菜单上的文件夹名称，且将作为“添加或删除程序”对话框中显示的名称的一部分。|  
 |`RequiresMinimumFramework35SP1`|可选 `Boolean` 参数。<br /><br /> 如果为 true，则该应用程序要求 .NET Framework 3.5 SP1 或更新的版本。|  
 |`TargetCulture`|可选 `String` 参数。<br /><br /> 标识应用程序的区域性，并指定生成的清单的程序集标识的 `Language` 字段。 如果未指定此参数，则会假定该应用程序的区域性是固定的。|  
-|`TargetFrameworkMoniker`|Optional <!-- TODO: review code entity reference <xref:assetId:///String?qualifyHint=False&amp;autoUpgrade=True>  --> 参数。<br /><br /> 指定目标框架名字对象。|  
-|`TargetFrameworkProfile`|Optional <!-- TODO: review code entity reference <xref:assetId:///String?qualifyHint=False&amp;autoUpgrade=True>  --> 参数。<br /><br /> 指定目标框架配置文件。|  
-|`TargetFrameworkSubset`|Optional <!-- TODO: review code entity reference <xref:assetId:///String?qualifyHint=False&amp;autoUpgrade=True>  --> 参数。<br /><br /> 指定要面向的 .NET Framework 子集的名称。|  
-|`TargetFrameworkVersion`|Optional <!-- TODO: review code entity reference <xref:assetId:///String?qualifyHint=False&amp;autoUpgrade=True>  --> 参数。<br /><br /> 指定项目的目标 .NET Framework。|  
+|`TargetFrameworkMoniker`|可选 <!-- TODO: review code entity reference <xref:assetId:///String?qualifyHint=False&amp;autoUpgrade=True>  --> 个参数。<br /><br /> 指定目标框架名字对象。|  
+|`TargetFrameworkProfile`|可选 <!-- TODO: review code entity reference <xref:assetId:///String?qualifyHint=False&amp;autoUpgrade=True>  --> 个参数。<br /><br /> 指定目标框架配置文件。|  
+|`TargetFrameworkSubset`|可选 <!-- TODO: review code entity reference <xref:assetId:///String?qualifyHint=False&amp;autoUpgrade=True>  --> 个参数。<br /><br /> 指定要面向的 .NET Framework 子集的名称。|  
+|`TargetFrameworkVersion`|可选 <!-- TODO: review code entity reference <xref:assetId:///String?qualifyHint=False&amp;autoUpgrade=True>  --> 个参数。<br /><br /> 指定项目的目标 .NET Framework。|  
 |`TrustInfoFile`|可选 <xref:Microsoft.Build.Framework.ITaskItem> 参数。<br /><br /> 指示用于指定应用程序安全性的 XML 文档。 XML 文档中的根元素必须是 asmv2 命名空间中的 trustInfo 节点。 如果任务正在生成本机清单，将忽略此参数。|  
-|`UseApplicationTrust`|Optional <!-- TODO: review code entity reference <xref:assetId:///Boolean?qualifyHint=False&amp;autoUpgrade=True>  --> 参数。<br /><br /> 如果为 true，则将 `Product`、`Publisher` 和 `SupportUrl` 属性写入应用程序清单中。|  
+|`UseApplicationTrust`|可选 <!-- TODO: review code entity reference <xref:assetId:///Boolean?qualifyHint=False&amp;autoUpgrade=True>  --> 个参数。<br /><br /> 如果为 true，则将 `Product`、`Publisher` 和 `SupportUrl` 属性写入应用程序清单中。|  
   
 ## <a name="remarks"></a>备注  
- 除上面列出的参数外，此任务还从 <xref:Microsoft.Build.Tasks.GenerateManifestBase> 类继承参数，后者自身继承自 <xref:Microsoft.Build.Utilities.Task> 类。 有关任务类的参数列表，请参阅[任务基类](../msbuild/task-base-class.md)。  
+ 除上面列出的参数外，此任务还从 <xref:Microsoft.Build.Tasks.GenerateManifestBase> 类继承参数，后者自身继承自 <xref:Microsoft.Build.Utilities.Task> 类。 有关任务类的参数列表，请参阅 [任务基类](../msbuild/task-base-class.md)。  
   
- 有关如何使用 `GenerateDeploymentManifest` 任务的信息，请参阅 [GenerateApplicationManifest 任务](../msbuild/generateapplicationmanifest-task.md)。  
+ 有关如何使用任务的信息 `GenerateDeploymentManifest` ，请参阅 [GenerateApplicationManifest 任务](../msbuild/generateapplicationmanifest-task.md)。  
   
  可使用项元数据进一步修饰依赖项和文件的输入，为每个项指定其他部署状态。  
   
 ## <a name="item-metadata"></a>项元数据  
   
-|元数据名称|描述|  
+|元数据名称|说明|  
 |-------------------|-----------------|  
 |`DependencyType`|指示依赖项是随应用程序一起发布并安装还是一个必备组件。 此元数据对所有依赖项均有效，但不可用于文件。 可用于此元数据的值有：<br /><br /> -   `Install`<br />-   `Prerequisite`<br /><br /> Install 是默认值。|  
 |`AssemblyType`|指示依赖项是托管程序集还是本机程序集。 此元数据对所有依赖项均有效，但不可用于文件。 可用于此元数据的值有：<br /><br /> -   `Managed`<br />-   `Native`<br />-   `Unspecified`<br /><br /> `Unspecified` 是默认值，指示清单生成器将自动确定程序集类型。|  
@@ -93,7 +93,7 @@ ms.locfileid: "63424137"
 > 在下面的示例中，为将重点放在清单生成方面上，预先生成了所有应用程序二进制文件。 此示例会生成一个完全可用的 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 部署。  
   
 > [!NOTE]
-> 有关在此示例的 `SignFile` 任务中使用的 `Thumbprint` 属性的详细信息，请参阅 [SignFile 任务](../msbuild/signfile-task.md)。  
+> 有关 `Thumbprint` 此示例中任务使用的属性的详细信息 `SignFile` ，请参阅 [SignFile 任务](../msbuild/signfile-task.md)。  
   
 ```  
 <Project DefaultTargets="Build"  
@@ -146,7 +146,7 @@ ms.locfileid: "63424137"
 > 在下面的示例中，为将重点放在清单生成方面上，预先生成了所有应用程序二进制文件。 此示例会生成一个完全可用的 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 部署。  
   
 > [!NOTE]
-> 有关在此示例的 `SignFile` 任务中使用的 `Thumbprint` 属性的详细信息，请参阅 [SignFile 任务](../msbuild/signfile-task.md)。  
+> 有关 `Thumbprint` 此示例中任务使用的属性的详细信息 `SignFile` ，请参阅 [SignFile 任务](../msbuild/signfile-task.md)。  
   
 ```  
 <Project DefaultTargets="Build"  
@@ -204,7 +204,7 @@ ms.locfileid: "63424137"
 > 在下面的示例中，为将重点放在清单生成方面上，预先生成了所有应用程序二进制文件。 此示例会生成一个完全可用的 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 部署。  
   
 > [!NOTE]
-> 有关在此示例的 `SignFile` 任务中使用的 `Thumbprint` 属性的详细信息，请参阅 [SignFile 任务](../msbuild/signfile-task.md)。  
+> 有关 `Thumbprint` 此示例中任务使用的属性的详细信息 `SignFile` ，请参阅 [SignFile 任务](../msbuild/signfile-task.md)。  
   
 ```  
 <Project DefaultTargets="Build"  
@@ -352,8 +352,8 @@ ms.locfileid: "63424137"
 </Project>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [任务](../msbuild/msbuild-tasks.md)   
+## <a name="see-also"></a>另请参阅  
+ [操作](../msbuild/msbuild-tasks.md)   
  [GenerateDeploymentManifest 任务](../msbuild/generatedeploymentmanifest-task.md)   
  [SignFile 任务](../msbuild/signfile-task.md)   
- [任务参考](../msbuild/msbuild-task-reference.md)
+ [任务引用](../msbuild/msbuild-task-reference.md)

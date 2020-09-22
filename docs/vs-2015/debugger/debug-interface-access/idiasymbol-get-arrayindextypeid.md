@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 6b33d5280e73521e636aaaf1d56861ce450c7df1
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64789195"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840411"
 ---
-# <a name="idiasymbolgetarrayindextypeid"></a>IDiaSymbol::get_arrayIndexTypeId
+# <a name="idiasymbolget_arrayindextypeid"></a>IDiaSymbol::get_arrayIndexTypeId
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-检索的符号的数组索引类型标识符。  
+检索符号的数组索引类型标识符。  
   
 ## <a name="syntax"></a>语法  
   
@@ -33,25 +33,25 @@ HRESULT get_arrayIndexTypeId ( 
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>parameters  
  `pRetVal`  
- [out]返回的符号的数组索引类型 ID。  
+ 弄返回符号的数组索引类型 ID。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回`S_FALSE`或错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回 `S_FALSE` 错误代码。  
   
 > [!NOTE]
-> 返回值为`S_FALSE`表示该属性不是可用于符号。  
+> 返回值意味着该 `S_FALSE` 属性对符号不可用。  
   
 ## <a name="remarks"></a>备注  
- 标识符是唯一的值创建的 DIA SDK，可将标记为唯一的所有符号。  
+ 标识符是由 DIA SDK 创建的唯一值，用于将所有符号标记为唯一。  
   
 ## <a name="requirements"></a>要求  
   
-|需求|描述|  
+|要求|说明|  
 |-----------------|-----------------|  
-|标头：|dia2.h|  
+|标头：|dia2|  
 |版本：|DIA SDK v7.0|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

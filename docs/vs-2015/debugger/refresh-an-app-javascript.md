@@ -1,5 +1,5 @@
 ---
-title: 刷新应用程序 (JavaScript) |Microsoft Docs
+title: " (JavaScript) 中刷新应用 |Microsoft Docs"
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -20,18 +20,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: b5b8be97212f4510002a78e6565fc9884930db89
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63446087"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840574"
 ---
 # <a name="refresh-an-app-javascript"></a>刷新应用程序 (JavaScript)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-适用于 Windows 和 Windows Phone] (../Image/windows_and_phone_content.png"windows_and_phone_content")  
+适用于 Windows 和 Windows Phone] (。将 windows_and_phone_content.png "windows_and_phone_content" )   
   
- 你进行调试，然后刷新通过选择使用 JavaScript 的应用商店应用时，可以对代码进行更改**刷新 Windows 应用**按钮**调试**工具栏。 选择此按钮将重新加载应用程序，但不会停止并重新启动调试器。 通过“刷新”功能，可修改 HTML、CSS 和 JavaScript 代码并迅速看到结果。 Windows 应用商店和 Windows Phone 应用商店应用均支持此功能。  
+ 你可以在调试时对代码进行更改，然后通过选择 "**调试**" 工具栏上的 "**刷新 Windows 应用程序**" 按钮，使用 JavaScript 刷新应用商店应用。 选择此按钮将重新加载应用程序，但不会停止并重新启动调试器。 通过“刷新”功能，可修改 HTML、CSS 和 JavaScript 代码并迅速看到结果。 Windows 应用商店和 Windows Phone 应用商店应用均支持此功能。  
   
  刷新功能不保持应用程序状态，也不反映对应用程序的以下更改：  
   
@@ -56,7 +56,7 @@ ms.locfileid: "63446087"
   
 2. 在 Visual Studio 中打开模板后，选择一个调试目标。  
   
-     如果 Windows Phone 项目是你的当前启动项目，请将 Windows Phone 仿真程序选为调试目标。 否则，请选择**模拟器**或**本地计算机**。  
+     如果 Windows Phone 项目是你的当前启动项目，请将 Windows Phone 仿真程序选为调试目标。 否则，请选择 " **模拟器** " 或 " **本地计算机**"。  
   
      ![选择调试目标列表](../debugger/media/js-select-target.png "JS_Select_Target")  
   
@@ -64,7 +64,7 @@ ms.locfileid: "63446087"
   
 4. 切换到 Visual Studio。 （按 F12。）  
   
-5. 在中**解决方案资源管理器**，在**页面** > **家庭**文件夹中，打开 home.html。  
+5. 在**解决方案资源管理器**的**页面**  >  **主**文件夹中，打开 home.html。  
   
 6. 将页标题文本从  
   
@@ -78,9 +78,9 @@ ms.locfileid: "63446087"
     Hello!  
     ```  
   
-7. 单击**刷新 Windows 应用**按钮，如下：![刷新 Windows 应用按钮](../debugger/media/js-refresh.png "JS_Refresh")。 （或按 F4。）  
+7. 单击“刷新 Windows 应用”按钮，该按钮如下所示：![“刷新 Windows 应用”按钮](../debugger/media/js-refresh.png "JS_Refresh")。 （或按 F4。）  
   
 8. 切换到该应用程序。 将重新加载该应用程序，但不重新启动调试器，并显示新的页面标题。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [快速入门：调试 HTML 和 CSS](../debugger/quickstart-debug-html-and-css.md)

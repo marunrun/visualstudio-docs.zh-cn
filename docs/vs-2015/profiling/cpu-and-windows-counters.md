@@ -15,11 +15,11 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: eceadf1b1bf82876a20027a9d29c8336e381d18d
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63434304"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840583"
 ---
 # <a name="cpu-and-windows-counters"></a>CPU 和 Windows 计数器
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -88,31 +88,31 @@ ms.locfileid: "63434304"
   
 ##### <a name="to-view-a-list-of-a-list-of-all-cpu-counters-that-are-supported-on-the-current-platform"></a>查看当前平台上支持的所有 CPU 计数器列表的列表  
   
-1. 在“性能资源管理器”中，右键单击性能会话，然后单击“属性”。  
+1. 在“性能资源管理器”中，右键单击性能会话，然后单击“属性”  。  
   
 2. 执行下列操作之一：  
   
-   - 单击“采样”，然后从“采样”事件列表中选择“性能计数器”。 CPU 计数器列在“可用的性能计数器”中。  
+   - 单击“采样”  ，然后从“采样”  事件列表中选择“性能计数器”  。 CPU 计数器列在“可用的性能计数器”  中。  
   
-      **请注意**：单击“取消”可返回到上一个采样配置。  
+      **请注意**：单击“取消”  可返回到上一个采样配置。  
   
-     或  
+     \- 或 -  
   
-   - 选择“CPU 计数器”，然后选择“收集 CPU 计数器”。 CPU 计数器列在“可用的计数器”中。  
+   - 选择“CPU 计数器”  ，然后选择“收集 CPU 计数器”  。 CPU 计数器列在“可用的计数器”  中。  
   
-      **请注意**：单击“取消”可返回到上一个计数器收集配置。  
+      **请注意**：单击“取消”  可返回到上一个计数器收集配置。  
   
 ##### <a name="to-view-a-list-of-a-list-of-window-counters-that-are-supported-on-the-current-platform"></a>查看当前平台上支持的 Windows 计数器列表的列表  
   
-1. 在“性能资源管理器”中，右键单击性能会话，然后单击“属性”。  
+1. 在“性能资源管理器”中，右键单击性能会话，然后单击“属性”  。  
   
-2. 单击“Windows 计数器”。  
+2. 单击“Windows 计数器”  。  
   
-3. 选择“收集 Windows 计数器”。  
+3. 选择“收集 Windows 计数器”  。  
   
-4. 从“计数器类别”列表中，选择一个计数器组。 该组的 Windows 计数器将显示在列表框中。  
+4. 从“计数器类别”  列表中，选择一个计数器组。 该组的 Windows 计数器将显示在列表框中。  
   
-     **注意：** 单击“取消”可返回到上一个计数器收集配置。  
+     **注意：** 单击“取消”可返回到上一个计数器收集配置  。  
   
 ### <a name="command-line"></a>命令行  
  通过使用 [VSPerfCmd](../profiling/vsperfcmd.md) 命令行工具，可以从命令行中列出计算机上可用的 CPU 计数器。  
@@ -125,11 +125,11 @@ ms.locfileid: "63434304"
   
      **\<Visual Studio Performance Tools Directory>\VSPerfCmd /querycounters**  
   
-     其中 **\<Visual Studio Performance Tools Directory>** 是 Visual Studio 安装的性能工具目录的路径，通常为  
+     其中 **\<Visual Studio Performance Tools Directory>** 是 Visual Studio 安装的 "性能工具" 目录的路径，通常是  
   
      C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Performance Tools  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [概述](../profiling/overviews-performance-tools.md)   
  [如何：选择采样事件](../profiling/how-to-choose-sampling-events.md)   
  [如何：收集 CPU 计数器数据](../profiling/how-to-collect-cpu-counter-data.md)   

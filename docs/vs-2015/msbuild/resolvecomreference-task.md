@@ -20,11 +20,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: fc9ca34d8b8afc01787db594ffba5a1a36ec190e
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63439348"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840633"
 ---
 # <a name="resolvecomreference-task"></a>ResolveComReference 任务
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -40,16 +40,16 @@ ms.locfileid: "63439348"
 |`EnvironmentVariables`|可选 `String[]` 参数。<br /><br /> 环境变量对的数组（使用等号分隔）。 这些变量会传递给生成的 tlbimp.exe 和 aximp.exe 以及常规环境块，或有选择地重写常规环境块。|  
 |`ExecuteAsTool`|可选 `Boolean` 参数。<br /><br /> 如果为 `true`，请于进程外从适当的目标框架运行 tlbimp.exe 和 aximp.exe 来生成所需的包装器程序集。 此参数支持多目标。|  
 |`IncludeVersionInInteropName`|可选 `Boolean` 参数。<br /><br /> 如果为 `true`，包装器名称中将包含 TypeLib 版本。 默认值为 `false`。|  
-|`KeyContainer`|可选 `String` 参数。<br /><br /> 指定保存公钥/私钥对<br /><br /> 的容器。|  
+|`KeyContainer`|可选 `String` 参数。<br /><br /> 指定保存公钥/私钥对<br /><br /> 的项。|  
 |`KeyFile`|可选 `String` 参数。<br /><br /> 指定保存公钥/私钥对<br /><br /> 的项。|  
 |`NoClassMembers`|可选 `Boolean` 参数。|  
 |`ResolvedAssemblyReferences`|可选的 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 输出参数。<br /><br /> 指定已解析的程序集引用。|  
 |`ResolvedFiles`|可选的 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 输出参数。<br /><br /> 指定磁盘上的完全限定文件，这些文件与作为此任务的输入提供的类型库的物理位置相对应。|  
 |`ResolvedModules`|可选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。|  
 |`SdkToolsPath`|可选 [String](<!-- TODO: review code entity reference <xref:assetId:///String?qualifyHint=False&amp;autoUpgrade=True>  -->) 参数。<br /><br /> 如果 `ExecuteAsTool` 为 `true`，则必须将此参数设置为作为目标的框架版本的 SDK 工具路径。|  
-|`StateFile`|Optional <!-- TODO: review code entity reference <xref:assetId:///String?qualifyHint=False&amp;autoUpgrade=True>  --> 参数。<br /><br /> 指定 COM 组件时间戳的缓存文件。 如果不存在，则每次运行将重新生成所有包装器。|  
-|`TargetFrameworkVersion`|Optional <!-- TODO: review code entity reference <xref:assetId:///String?qualifyHint=False&amp;autoUpgrade=True>  --> 参数。<br /><br /> 指定项目目标框架版本。<br /><br /> 默认值为 `String.Empty`。 这意味着没有基于目标框架的引用的筛选。|  
-|`TargetProcessorArchitecture`|Optional <!-- TODO: review code entity reference <xref:assetId:///String?qualifyHint=False&amp;autoUpgrade=True>  --> 参数。<br /><br /> 指定首选的目标处理器体系结构。 转换后传递给 tlbimp.exe /machine 标志。<br /><br /> 参数值应属于 <xref:Microsoft.Build.Utilities.ProcessorArchitecture>。|  
+|`StateFile`|可选 <!-- TODO: review code entity reference <xref:assetId:///String?qualifyHint=False&amp;autoUpgrade=True>  --> 个参数。<br /><br /> 指定 COM 组件时间戳的缓存文件。 如果不存在，则每次运行将重新生成所有包装器。|  
+|`TargetFrameworkVersion`|可选 <!-- TODO: review code entity reference <xref:assetId:///String?qualifyHint=False&amp;autoUpgrade=True>  --> 个参数。<br /><br /> 指定项目目标框架版本。<br /><br /> 默认值为 `String.Empty`。 这意味着没有基于目标框架的引用的筛选。|  
+|`TargetProcessorArchitecture`|可选 <!-- TODO: review code entity reference <xref:assetId:///String?qualifyHint=False&amp;autoUpgrade=True>  --> 个参数。<br /><br /> 指定首选的目标处理器体系结构。 转换后传递给 tlbimp.exe /machine 标志。<br /><br /> 参数值应属于 <xref:Microsoft.Build.Utilities.ProcessorArchitecture>。|  
 |`TypeLibFiles`|可选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 指定 COM 引用的类型库文件路径。 此参数中包含的项可能包含项元数据。 有关详细信息，请参阅下面的“TypeLibFiles 项元数据”部分。|  
 |`TypeLibNames`|可选 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 参数。<br /><br /> 指定要解析的类型库名称。 此参数中包含的项必须包含一些项元数据。 有关详细信息，请参阅下面的“TypeLibNames 项元数据”部分。|  
 |`WrapperOutputDirectory`|可选 `String` 参数。<br /><br /> 生成的互操作程序集放置在磁盘上的位置。 如果未指定此项元数据，任务将使用项目文件所在目录的绝对路径。|  
@@ -78,8 +78,8 @@ ms.locfileid: "63439348"
 > 为类型库提供的唯一标识符信息越多，任务能解析磁盘上正确文件的可能性就越大。  
   
 ## <a name="remarks"></a>备注  
- 除上面列出的参数外，此任务还从 <xref:Microsoft.Build.Utilities.Task> 类继承参数。 有关这些其他参数的列表及其说明，请参阅[任务基类](../msbuild/task-base-class.md)。  
+ 除上面列出的参数外，此任务还从 <xref:Microsoft.Build.Utilities.Task> 类继承参数。 有关这些其他参数及其说明的列表，请参阅 [任务基类](../msbuild/task-base-class.md)。  
   
-## <a name="see-also"></a>请参阅  
- [任务](../msbuild/msbuild-tasks.md)   
- [任务参考](../msbuild/msbuild-task-reference.md)
+## <a name="see-also"></a>另请参阅  
+ [操作](../msbuild/msbuild-tasks.md)   
+ [任务引用](../msbuild/msbuild-task-reference.md)

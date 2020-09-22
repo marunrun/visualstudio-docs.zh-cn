@@ -14,39 +14,67 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7125be46a894072f034bf1fce3060d2bda564aff
-ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
+ms.openlocfilehash: cccba4c299d5b12bdc00666a0b00f073fba12278
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88800823"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90036675"
 ---
 # <a name="deploy-your-app-to-a-folder-iis-azure-or-another-destination"></a>将应用部署到文件夹、IIS、Azure 或其他目标
 
 通过部署应用程序、服务或组件，你可以将其分发以便安装于其他计算机、设备、服务器或云中。 你需要在 Visual Studio 中为所需的部署类型选择适当的方法。
 
-对于许多常见的应用类型，可在 Visual Studio 中直接从解决方案资源管理器部署应用程序。 有关此功能的快速概览，请参阅[初探部署](../deployment/deploying-applications-services-and-components.md)。
+获取有关部署任务的帮助：
 
-![选择发布选项](../deployment/media/quickstart-publish-dialog.png)
+- 不确定要选择哪个部署选项？ 请参阅[哪些发布选项适合我？](#what-publishing-options-are-right-for-me)
+- 有关 Azure 应用服务或 IIS 的部署问题的帮助，请参阅[对 Azure 应用服务和 IIS 上的 ASP.NET Core 进行故障排除](/aspnet/core/test/troubleshoot-azure-iis)。
+- 有关配置 .NET 部署设置的帮助，请参阅[配置 .NET 部署设置](#configure-net-deployment-settings)。
+- 若要部署到新目标，如果之前创建了发布配置文件，请从已配置的配置文件的“发布”窗口中选择“新建”。
+
+   ![创建新的发布配置文件](../deployment/media/create-a-new-publish-profile.png)
+
+   然后，在“发布”窗口中选择部署选项。 有关发布选项的详细信息，请参阅以下部分。
 
 ## <a name="what-publishing-options-are-right-for-me"></a>哪些发布选项适合我？
 
 在 Visual Studio 中，应用程序可以直接发布到以下目标：
 
+::: moniker range=">=vs-2019"
 - [Azure](#azure)
 - [Docker 容器注册表](#docker-container-registry)
 - [文件夹](#folder)
 - [FTP/FTPS 服务器](#ftpftps-server)
 - [Web 服务器 (IIS)](#web-server-iis)
 - [导入配置文件](#import-profile)
+::: moniker-end
+::: moniker range="vs-2017"
+- [应用服务](#azure-app-service)
+- [应用服务 Linux](#azure-app-service)
+- [IIS（选择 IIS、FTP 等）](#web-server-iis)
+- [FTP/FTPS（选择 IIS、FTP 等）](#ftpftps-server)
+- [文件夹](#folder)
+- [导入配置文件](#import-profile)
+::: moniker-end
+
+创建新的发布配置文件时，将显示上述选项，如下图所示。
+
+::: moniker range=">=vs-2019"
+![选择发布选项](../deployment/media/quickstart-publish-dialog.png)
+::: moniker-end
+::: moniker range="vs-2017"
+![选择发布选项](../deployment/media/quickstart-publish-dialog-vs-2017.png)
+::: moniker-end
+
+若要快速浏览更常见的应用程序部署选项，请参阅[初探部署](../deployment/deploying-applications-services-and-components.md)。
 
 ## <a name="azure"></a>Azure 
 
 当你选择 Azure 时，可以在以下选项中进行选择：
 
-- 在 Windows、Linux 上运行或作为 Docker 映像运行的 Azure 应用服务
-- 部署到 Azure 容器注册表的 Docker 映像
-- Azure 虚拟机
+- 在 Windows、Linux 上运行或作为 Docker 映像运行的 [Azure 应用服务](#azure-app-service)
+- 部署到 [Azure 容器注册表](#azure-container-registry)的 Docker 映像
+- [Azure 虚拟机](#azure-virtual-machine)
 
 ![选择一项 Azure 服务](../deployment/media/quickstart-choose-azure-service.png)
 
@@ -66,7 +94,9 @@ ms.locfileid: "88800823"
 > 如果想在自己的数据中心或其他本地计算机中使用 Azure 应用服务，可以使用 [Azure 堆栈](https://azure.microsoft.com/overview/azure-stack/)来实现。
 
 有关发布到应用服务的详细信息，请参阅以下链接：
-- [快速入门 - 发布到 Azure 应用服务](quickstart-deploy-to-azure.md)和[快速入门 - 将 ASP.NET Core 发布到 Linux](quickstart-deploy-to-linux.md)。
+- [快速入门 - 发布到 Azure 应用服务](quickstart-deploy-to-azure.md)
+- [快速入门 - 将 ASP.NET Core 发布到 Linux](quickstart-deploy-to-linux.md)。
+- [将 ASP.NET Core 应用发布到 Azure 应用服务](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs)
 - [对 Azure 应用服务和 IIS 上的 ASP.NET Core 进行故障排除](/aspnet/core/test/troubleshoot-azure-iis)。
 
 ### <a name="azure-container-registry"></a>Azure 容器注册表
@@ -78,13 +108,17 @@ ms.locfileid: "88800823"
 - 有现成的 Docker 容器开发和部署管道。
 - 要在 Azure 中生成 Docker 容器映像。
 
-### <a name="azure-virtual-machines"></a>Azure 虚拟机
+更多相关信息：
+
+- [将 ASP.NET 容器部署到容器注册表](../containers/hosting-web-apps-in-docker.md)
+
+### <a name="azure-virtual-machine"></a>Azure 虚拟机
 
 [Azure 虚拟机 (VM)](https://azure.microsoft.com/documentation/services/virtual-machines/) 可用于在云中创建和管理任意数量的计算资源。 通过负责 VM 上的所有软件和更新，你可以根据应用程序的需求尽可能地对这些 VM 进行自定义。 此外，可以通过远程桌面直接访问虚拟机，只要需要，各服务器就会一直维持分配给它的 IP 地址。
 
 缩放虚拟机上托管的应用程序时，需要根据需求起转额外的 VM，然后部署必要的软件。 利用这种额外的控制能力，可以在全球不同区域以不同方式进行缩放。 例如，如果应用程序要为多个地区办事处的员工提供服务，则可以根据这些地区的员工人数来缩放 VM，从而潜在地降低成本。
 
-有关其他信息，请参阅 Azure 应用服务、Azure 虚拟机以及可通过 Visual Studio 中的“自定义”选项设置为部署目标的其他 Azure 服务之间的[详细比较](https://azure.microsoft.com/documentation/articles/choose-web-site-cloud-service-vm/)。
+有关其他信息，请参阅 Azure 应用服务、Azure 虚拟机以及可通过 Visual Studio 中的“自定义”选项设置为部署目标的其他 Azure 服务之间的[详细比较](/azure/architecture/guide/technology-choices/compute-decision-tree)。
 
 #### <a name="when-to-choose-azure-virtual-machines"></a>何时选择 Azure 虚拟机
 
@@ -103,6 +137,11 @@ ms.locfileid: "88800823"
 
 - 需要部署容器化应用程序
 
+有关详细信息，请参阅以下部分：
+
+- [将 ASP.NET 容器部署到容器注册表](../containers/hosting-web-apps-in-docker.md)
+- [部署到 Docker Hub](../containers/deploy-docker-hub.md)
+
 ## <a name="folder"></a>文件夹
 
 部署到文件系统意味着只需将应用程序文件复制到你自己的计算机上的特定文件夹中。 这种部署方式最常用于测试目的，如果计算机还运行服务器，则可以通过这种方式将应用程序部署为供数量有限的人员使用。 如果目标文件夹在网络上共享，那么，通过部署到文件系统能够使 Web 应用程序文件可供其他人访问，这些人随后可将其部署到特定服务器。
@@ -117,7 +156,13 @@ ms.locfileid: "88800823"
 - 仅需要本地测试部署。
 - 在将应用程序文件发送到另一个部署目标之前，想单独对文件进行检查并在必要时进行修改。
 
-有关详细信息，请参阅[快速入门 - 部署到本地文件夹](quickstart-deploy-to-local-folder.md)
+有关详细信息，请参阅[快速入门 - 部署到本地文件夹](quickstart-deploy-to-local-folder.md)。
+
+有关选择设置的更多帮助，请参阅以下内容：
+
+- [依赖于框架的部署与自包含部署](/dotnet/core/deploying/)
+- [目标运行时标识符（可移植 RID 等）](/dotnet/core/rid-catalog)
+- [调试和发布配置](../ide/understanding-build-configurations.md)
 
 ## <a name="ftpftps-server"></a>FTP/FTPS 服务器
 
@@ -157,7 +202,9 @@ ms.locfileid: "88800823"
 - 希望用来进行部署的凭据不是在 Visual Studio 中所用的凭据或直接与 Azure 帐户相关联的凭据。
 - 希望在每次部署时从目标中删除文件。
 
-有关详细信息，请参阅[快速入门 - 部署到网站](quickstart-deploy-to-a-web-site.md)。 有关排查 IIS 上的 ASP.NET Core 故障的帮助信息，请参阅[排查 Azure 应用服务和 IIS 上的 ASP.NET Core 故障](/aspnet/core/test/troubleshoot-azure-iis)。
+有关详细信息，请参阅[快速入门 - 部署到网站](quickstart-deploy-to-a-web-site.md)。
+
+有关排查 IIS 上的 ASP.NET Core 故障的帮助信息，请参阅[排查 Azure 应用服务和 IIS 上的 ASP.NET Core 故障](/aspnet/core/test/troubleshoot-azure-iis)。
 
 ## <a name="import-profile"></a>导入配置文件
 
@@ -174,6 +221,14 @@ ms.locfileid: "88800823"
 
 - [导入发布设置并部署到 IIS](tutorial-import-publish-settings-iis.md)
 - [导入发布设置并部署到 Azure](tutorial-import-publish-settings-azure.md)
+
+## <a name="configure-net-deployment-settings"></a>配置 .NET 部署设置
+
+有关选择设置的更多帮助，请参阅以下内容：
+
+- [依赖于框架的部署与自包含部署](/dotnet/core/deploying/)
+- [目标运行时标识符（可移植 RID 等）](/dotnet/core/rid-catalog)
+- [调试和发布配置](../ide/understanding-build-configurations.md)
 
 ## <a name="next-steps"></a>后续步骤
 
