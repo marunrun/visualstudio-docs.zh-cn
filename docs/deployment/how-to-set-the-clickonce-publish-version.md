@@ -1,5 +1,5 @@
 ---
-title: 如何设置 ClickOnce 发布版本 |Microsoft Docs
+title: 设置 ClickOnce 发布版本 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: df5e1d91de14e3da4f188c276ef7dd74943d8978
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bf99590bb78c425f570128ff7fae03c61d644b47
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85382115"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90851770"
 ---
 # <a name="how-to-set-the-clickonce-publish-version"></a>如何：设置 ClickOnce 发布版本
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] `Publish Version` 属性确定你要发布的应用程序是否将被视为更新。 每次版本递增时，应用程序将作为更新发布。
@@ -42,7 +42,7 @@ ms.locfileid: "85382115"
     > [!NOTE]
     > 永远不应减小版本号;这样做可能会导致意外的更新行为。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [选择 ClickOnce 更新策略](../deployment/choosing-a-clickonce-update-strategy.md)
 - [如何：自动递增 ClickOnce 发布版本](../deployment/how-to-automatically-increment-the-clickonce-publish-version.md)
 - [发布 ClickOnce 应用程序](../deployment/publishing-clickonce-applications.md)
