@@ -1,5 +1,6 @@
 ---
-title: 手动部署 ClickOnce 应用，保留品牌
+title: 手动部署 ClickOnce 应用 & 保持品牌
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -22,12 +23,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 47db202d07fd88bfb5e922964caf2cdd5008c6fd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9e3f21f9e377b7d3e2d71d499eed25079c7769c7
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "66263428"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809219"
 ---
 # <a name="walkthrough-manually-deploy-a-clickonce-application-that-does-not-require-re-signing-and-that-preserves-branding-information"></a>演练：手动部署不需要重新签名并且保留署名信息的 ClickOnce 应用程序
 当你创建 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 应用程序并将其提供给客户进行发布和部署时，客户通常必须更新部署清单并对其进行重新签名。 虽然这在大多数情况下仍是首选方法，但 .NET Framework 3.5 使你可以创建 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 可由客户部署的部署，而无需重新生成新的部署清单。 有关详细信息，请参阅 [部署 ClickOnce 应用程序用于测试和生产服务器而无需让步](../deployment/deploying-clickonce-applications-for-testing-and-production-without-resigning.md)。

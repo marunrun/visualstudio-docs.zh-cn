@@ -13,11 +13,11 @@ author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.openlocfilehash: 26e059d4fdc8eadd422924dd6bbda6f7c945ccfb
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: MTE95
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63433053"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840791"
 ---
 # <a name="how-to-create-and-run-an-unattended-installation-of-visual-studio"></a>How to: Create and Run an Unattended Installation of Visual Studio
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,21 +29,21 @@ ms.locfileid: "63433053"
 
 #### <a name="to-create-a-network-image"></a>创建网络映像
 
-1. 在服务器上创建文件夹（例如，Drive:\IDEinstall\\）。
+1. 在服务器上创建文件夹（例如，Drive:\IDEinstall\\）**。
 
-2. 从 [My.VisualStudio.com](https://my.visualstudio.com/downloads?q=visual%20studio%20enterprise%202015) 下载安装程序，然后运行 Product.exe /Layout Drive:\IDEinstall\
+2. 从 [My.VisualStudio.com](https://my.visualstudio.com/downloads?q=visual%20studio%20enterprise%202015) 下载安装程序，然后运行 Product**.exe /Layout Drive**:\IDEinstall\
 
 3. 在网络上共享 IDEinstall 文件夹，然后设置适当的安全设置。
 
-     [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的安装应用程序的网络路径类似于 \\\\ServerName\IDEinstall\\Product.exe。
+     [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的安装应用程序的网络路径类似于 \\\\ServerName** \IDEinstall\\Product**.exe。
 
     > [!NOTE]
     > 如果任何路径和文件名的组合超过 260 个字符，则安装可能失败。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中的路径的最大长度为 221 个字符。  本地路径名称不应超过 70 个字符，并且网络路径名称不应超过 39 个字符。
 
-     如果路径中的文件夹名称包含嵌入的空格（例如，“\\\\ServerName\IDE install”或 \\\\ServerName\Visual Studio\\），则安装也可能失败。
+     如果路径中的文件夹名称中包含嵌入的空格 (例如 " \\ \\ *ServerName*\IDE install" 或 \\ \\ *ServerName*\Visual Studio \\) ，则安装也可能会失败。
 
 ## <a name="deploying-visual-studio-in-unattended-mode"></a>在无人参与模式下部署 Visual Studio
- 若要在无人参与模式下部署 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ，则必须修改 AdminDeployment.xml 文件。 若要执行此操作，必须首先使用 `/CreateAdminFile` \<file location> 命令行参数创建 AdminDeployment.xml 文件。 然后，可以使用此文件将 Visual Studio 的部署推送到你的网络或拉入安装（如果将该文件放入 *Drive*:\IDEinstall\packages 目录中）。 AdminDeployment.xml 文件对于某个操作系统、体系结构、Visual Studio 版本或操作系统语言不是唯一的。
+ 若要在无人参与模式下部署 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ，则必须修改 AdminDeployment.xml 文件。 为此，必须先使用 `/CreateAdminFile` *\<file location>* 命令行参数创建 AdminDeployment.xml 文件。 然后，可以使用此文件将 Visual Studio 的部署推送到你的网络或拉入安装（如果将该文件放入 *Drive*:\IDEinstall\packages 目录中）。 AdminDeployment.xml 文件对于某个操作系统、体系结构、Visual Studio 版本或操作系统语言不是唯一的。
 
 > [!CAUTION]
 > 有时，依照 AdminDeployment.xml 文件中的所选内容而列出的项无法安装。 若要解决此问题，将标记为“Selected="yes"”的项放在 AdminDeployment.xml 文件的 **末尾** 。
@@ -59,7 +59,7 @@ ms.locfileid: "63433053"
 
  AdminDeployment 文件架构包含下列元素：
 
-|元素|特性|值|说明|
+|元素|Attribute|值|说明|
 |-------------|---------------|------------|-----------------|
 |BundleCustomizations|TargetDir|*路径*|行为与在安装应用程序的用户界面中重写路径相同。 如果已安装 Visual Studio，则忽略此元素。|
 |BundleCustomizations|NoWeb|是|默认值|如果此元素的值为“yes”，则安装应用程序永远不会尝试在安装操作期间转到 Web。|
@@ -77,7 +77,7 @@ ms.locfileid: "63433053"
 
 1. 在 *Drive*:\IDEinstall\AdminDeployment.xml 文件中，将 BundleCustomizations 元素的 NoWeb 属性的值从“default”更改为“yes”，如以下示例所示：
 
-     将 `<BundleCustomizations TargetDir="default" NoWeb="default"/>` 更改为 `<BundleCustomizations TargetDir="default" NoWeb="yes"/>`。
+     将 `<BundleCustomizations TargetDir="default" NoWeb="default"/>` 更改为 `<BundleCustomizations TargetDir="default" NoWeb="yes"/>`
 
 2. 根据可选组件的需要更改 SelectableItemCustomization 属性，然后保存该文件。
 
@@ -86,13 +86,13 @@ ms.locfileid: "63433053"
 
 #### <a name="to-run-an-unattended-installation-on-a-client-computer"></a>在客户端计算机上运行无人参与安装
 
-- 打开“开始”菜单，选择“运行”，然后输入 \\\\ServerName\IDEinstall\vs_Product.exe /adminfile PathOfTheAdmindeployment.xmlFile<em>AdditionalParametersAsNeeded</em>
+- 打开“开始”**** 菜单，选择“运行”****，然后输入 \\\\ServerName** \IDEinstall\vs_Product**.exe /adminfile PathOfTheAdmindeployment.xmlFile**<em>AdditionalParametersAsNeeded</em>
 
    例如，可以指定以下命令行：`\\server1\IDEinstall\vs_enterprise.exe /adminfile \\server1\ IDEinstall\AdminDeployment.xml /quiet /norestart`
 
 #### <a name="to-enable-clients-to-manually-install-visual-studio-with-pre-defined-settings"></a>使客户端能够使用预定义的设置手动安装 Visual Studio
 
-1. 将自定义的 AdminDeployment.xml 文件复制到只读的网络共享（例如，\\\\ServerName\IDEinstall\packages\AdminDeployment.xml）。
+1. 将自定义的 AdminDeployment.xml 文件复制到只读的网络共享（例如，\\\\ServerName\IDEinstall\packages\AdminDeployment.xml）**。
 
 2. 使用户能够从该共享安装。
 
@@ -114,7 +114,7 @@ ms.locfileid: "63433053"
 
 2. 打开 **“开始”** 菜单，然后选择 **“运行”**。
 
-3. 输入以下文本：\\\\ServerName\IDEinstall\vs_Product.exe /AdminFile PathToAdmindeployment.xml 文件
+3. 输入以下文本：\\\\ServerName** \IDEinstall\vs_Product**.exe /AdminFile PathToAdmindeployment.xml 文件
 
     AdditionalParametersAsNeeded
 
@@ -127,41 +127,41 @@ ms.locfileid: "63433053"
 
 #### <a name="to-update-an-unattended-installation-of-visual-studio"></a>更新 Visual Studio 的无人参与安装
 
-1. 在现有网络映像中找到 Product.exe 文件，右键单击它，然后单击“属性”。
+1. 在现有网络映像中找到 Product.exe 文件，右键单击它，然后单击“属性”****。
 
-2. 单击“详细信息”选项卡，然后记下“产品版本”属性。
+2. 单击“详细信息”**** 选项卡，然后记下“产品版本”**** 属性。
 
-    ![Visual Studio 无人参与安装中的“属性”对话框示例](../install/media/unattended-install-properties-dialog-box.PNG "无人参与安装 - “属性”对话框")
+    ![Visual Studio 的无人参与安装中的 "属性" 对话框的示例](../install/media/unattended-install-properties-dialog-box.PNG "无人参与安装-"属性" 对话框")
 
 3. ###### <a name="if-the-product-version-is-140247200-or-140247201-follow-these-steps"></a>如果产品版本为 14.0.24720.0 或 14.0.24720.1，请执行以下步骤：
-   1. 在可访问 Internet 的计算机上运行 Product.exe /Layout Drive:\IDEinstall。 （例如，运行：`vs_enterprise.exe /Layout d:\IDEinstall`。）
+   1. 在可访问 Internet 的计算机上运行 Product.exe** /Layout Drive:** \IDEinstall。 （例如，运行：`vs_enterprise.exe /Layout d:\IDEinstall`。）
 
    2. /Layout 完成后，将新映像复制到新位置。
 
-   3. 创建和修改 AdminDeployment.xml 文件。 若要执行此操作，请使用 `/CreateAdminFile`\<file location> 命令行参数。 （有关详细信息，请参阅本文的“在无人参与模式下部署 Visual Studio”部分）。
+   3. 创建和修改 AdminDeployment.xml 文件。 为此，请使用 `/CreateAdminFile` *\<file location>* 命令行参数。 （有关详细信息，请参阅本文的“在无人参与模式下部署 Visual Studio”部分）。
 
-   4. 在客户端计算机上运行以下命令以更新以前安装的 Visual Studio 的副本：“\\\\server1\IDEinstall_Updated_1\\Product.exe /adminfile \\\server1\ IDEinstall_Updated_1\AdminDeployment.xml /quiet /norestart”。
+   4. 在客户端计算机上运行以下命令以更新以前安装的 Visual Studio 的副本：“\\\\server1** \IDEinstall_Updated_1\\Product.exe** /adminfile \\\server1\ IDEinstall_Updated_1\AdminDeployment.xml /quiet /norestart”。
 
         例如，运行：`\\server1\IDEinstall_Updated_1\vs_enterprise.exe /adminfile \\server1\IDEinstall_Updated_1\AdminDeployment.xml /quiet /norestart`
 5. ###### <a name="for-other-product-version-values-follow-these-steps"></a>有关其他产品版本值，请按照以下步骤操作：
-   1. 在可访问 Internet 的计算机上运行 Product.exe /Layout Drive:\IDEinstall。 （例如，运行：`vs-enterprise.exe /Layout d:\IDEinstall`。）
+   1. 在可访问 Internet 的计算机上运行 Product.exe** /Layout Drive:** \IDEinstall。 （例如，运行：`vs-enterprise.exe /Layout d:\IDEinstall`。）
 
    2. /Layout 完成后，将新映像复制到新位置。 （或者，可以改为覆盖现有的网络映像。）
 
-   3. 创建并修改 AdminDeployment.xml 文件。 若要执行此操作，请使用 `/CreateAdminFile`\<file location> 命令行参数。 （有关详细信息，请参阅本文的“在无人参与模式下部署 Visual Studio”部分）。
+   3. 创建并修改 AdminDeployment.xml 文件。 为此，请使用 `/CreateAdminFile` *\<file location>* 命令行参数。 （有关详细信息，请参阅本文的“在无人参与模式下部署 Visual Studio”部分）。
 
-   4. 如果将映像复制到新位置，则必须在客户端计算机上运行以下命令来更新以前安装的 Visual Studio 的副本：“\\\\server1\IDEinstall_Updated_1\\Product.exe /adminfile \\\server1\ IDEinstall_Updated_1\AdminDeployment.xml /quiet /norestart”。
+   4. 如果将映像复制到新位置，则必须在客户端计算机上运行以下命令来更新以前安装的 Visual Studio 的副本：“\\\\server1** \IDEinstall_Updated_1\\Product.exe** /adminfile \\\server1\ IDEinstall_Updated_1\AdminDeployment.xml /quiet /norestart”。
 
         例如，运行：`\\server1\IDEinstall_Updated_1\vs_enterprise.exe /adminfile \\server1\IDEinstall_Updated_1\AdminDeployment.xml /quiet /norestart`
 
    5. 如果覆盖现有网络映像，可以运行在上一步骤中列出的命令，也可以执行以下操作：
        1. 打开 **“控制面板”**，然后选择 **“程序和功能”**。
 
-       2. 选择“Visual Studio”，然后选择“更改”。
+       2. 选择“Visual Studio”****，然后选择“更改”****。
 
-       3. 在维护模式下启动 Visual Studio 后，单击“修改”。
+       3. 在维护模式下启动 Visual Studio 后，单击“修改”****。
 
-       4. “功能”页上应显示最新更新。 选择要安装的其他功能，单击“下一步”，然后单击“更新”以安装更新和新功能。
+       4. “功能”页上应显示最新更新。 选择要安装的其他功能，单击“下一步”****，然后单击“更新”**** 以安装更新和新功能。
 
 ## <a name="registering-the-product"></a>注册产品
  安装完成后，可以从 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 内部注册 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]的副本。
@@ -174,5 +174,5 @@ ms.locfileid: "63433053"
 
      （有关详细信息，请参阅[如何：查找 Visual Studio 产品密钥](../install/how-to-locate-the-visual-studio-product-key.md)和[如何：在部署 Visual Studio 时自动应用产品密钥](../install/how-to-automatically-apply-product-keys-when-deploying-visual-studio.md)主题。）
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
  [安装 Visual Studio](../install/install-visual-studio-2015.md)

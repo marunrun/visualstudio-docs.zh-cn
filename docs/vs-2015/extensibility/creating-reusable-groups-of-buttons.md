@@ -1,5 +1,5 @@
 ---
-title: 创建可重用的按钮的组 |Microsoft Docs
+title: 创建可重用的按钮组 |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,28 +13,28 @@ caps.latest.revision: 45
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 6ac1fd0dc242ae8b8979a3f420f5e1c4d837f62b
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63405720"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840656"
 ---
 # <a name="creating-reusable-groups-of-buttons"></a>创建可重复使用的按钮组
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-命令组是始终一起出现的菜单或工具栏的命令的集合。 可以将其分配给不同的父菜单 CommandPlacements 节的.vsct 文件重新使用任何命令组。  
+命令组是始终在菜单或工具栏上一起显示的命令的集合。 可以通过在 .vsct 文件的 CommandPlacements 节中将命令组分配给不同的父菜单来重新使用该命令组。  
   
- 命令组通常包含按钮，但它们还可以包含其他菜单或组合框。  
+ 命令组通常包含按钮，但也可以包含其他菜单或组合框。  
   
-### <a name="to-create-a-reusable-group-of-buttons"></a>若要创建可重用的一组按钮  
+### <a name="to-create-a-reusable-group-of-buttons"></a>创建可重用的按钮组  
   
-1. 创建一个名为的 VSIX 项目`ReusableButtons`。 有关详细信息，请参阅[使用菜单命令创建扩展](../extensibility/creating-an-extension-with-a-menu-command.md)。  
+1. 创建一个名为的 VSIX 项目 `ReusableButtons` 。 有关详细信息，请参阅 [使用菜单命令创建扩展](../extensibility/creating-an-extension-with-a-menu-command.md)。  
   
-2. 项目打开后，添加名为的自定义命令项模板**ReusableCommand**。 在中**解决方案资源管理器**，右键单击项目节点并选择**添加 / 新项**。 在中**添加新项**对话框中，转到**Visual C# / 可扩展性**，然后选择**自定义命令**。 在中**名称**在窗口底部字段中，将命令文件名称更改为**ReusableCommand.cs**。  
+2. 当项目打开时，添加一个名为 **ReusableCommand**的自定义命令项模板。 在 **解决方案资源管理器**中，右键单击项目节点，然后选择 " **添加/新建项**"。 在 " **添加新项** " 对话框中，切换到 " **Visual c #/扩展性** "，然后选择 " **自定义命令**"。 在窗口底部的 " **名称** " 字段中，将命令文件名更改为 **ReusableCommand.cs**。  
   
-3. 在.vsct 文件中，转到符号部分，并找到包含组和项目的命令的 GuidSymbol 元素。 它应命名 guidReusableCommandPackageCmdSet。  
+3. 在 .vsct 文件中，请参阅符号部分，并查找包含项目的组和命令的 GuidSymbol 元素。 它应命名为 guidReusableCommandPackageCmdSet。  
   
-4. 添加将添加到组，如以下示例所示的每个按钮 IDSymbol。  
+4. 为将添加到组中的每个按钮添加一个 IDSymbol，如以下示例中所示。  
   
     ```xml  
     <GuidSymbol name="guidReusableCommandPackageCmdSet" value="{7f383b2a-c6b9-4c1d-b4b8-a26dc5b60ca1}">  
@@ -44,9 +44,9 @@ ms.locfileid: "63405720"
     </GuidSymbol>  
     ```  
   
-     默认情况下，该命令项模板将创建一个名为组**MyGroup**和一个按钮，已提供，以及每个 IDSymbol 条目的名称。  
+     默认情况下，命令项模板会创建一个名为 **MyGroup** 的组，以及一个具有你提供的名称的按钮，以及每个名称的 IDSymbol 项。  
   
-5. 在组部分中，创建一个具有相同的 GUID 和 ID 属性与符号部分中提供的组元素。 您还可以使用现有的组，或使用提供的命令模板，如以下示例所示的条目。 此组显示在**工具**菜单  
+5. 在 "组" 部分中，创建一个组元素，该元素具有与 "符号" 部分中指定的 GUID 和 ID 属性相同的 GUID 和 ID 属性。 你还可以使用现有组，或使用命令模板提供的条目，如以下示例中所示。 此组显示在 " **工具** " 菜单上  
   
     ```xml  
     <Groups>  
@@ -56,11 +56,11 @@ ms.locfileid: "63405720"
     </Groups>  
     ```  
   
-### <a name="to-create-a-group-of-buttons-for-reuse"></a>若要创建一组以供重复使用的按钮  
+### <a name="to-create-a-group-of-buttons-for-reuse"></a>创建一组用于重用的按钮  
   
-1. 通过使用组作为父定义中的命令或菜单中，或通过将命令或菜单组中置于使用 CommandPlacements 部分，可在组中将命令或菜单。  
+1. 您可以通过在命令或菜单的定义中使用该组作为父项，或通过使用 CommandPlacements 部分将命令或菜单放入组，来将命令或菜单放入组。  
   
-     按钮部分中定义一个按钮，将组作为其父级，或使用由包模板提供的按钮，如下面的示例中所示。  
+     在 "按钮" 部分中，定义一个将组作为其父项的按钮，或使用由包模板提供的按钮，如以下示例中所示。  
   
     ```xml  
     <Button guid="guidReusableCommandPackageCmdSet" id="ReusableCommandId" priority="0x0100" type="Button">  
@@ -72,7 +72,7 @@ ms.locfileid: "63405720"
     </Button>  
     ```  
   
-2. 如果一个按钮必须出现在多个组，一个条目为其创建后的命令部分必须放置在 CommandPlacements 部分中。 设置 CommandPlacement 元素以匹配你想要放置，该按钮的 GUID 和 ID 属性，然后设置的 GUID 和其父元素的 ID 与目标组中，如下面的示例中所示。  
+2. 如果按钮必须出现在多个组中，请在 "CommandPlacements" 部分为其创建一个条目，该部分必须位于命令部分之后。 设置 CommandPlacement 元素的 GUID 和 ID 属性，使其与要定位的按钮相匹配，然后将其父元素的 GUID 和 ID 设置为目标组中的元素，如下面的示例中所示。  
   
     ```xml  
     <CommandPlacements>  
@@ -83,13 +83,13 @@ ms.locfileid: "63405720"
     ```  
   
     > [!NOTE]
-    > 优先级字段的值确定该命令在新的命令组中的位置。 在元素中的项定义设置会覆盖的 CommandPlacement 中设置优先级。 在具有较高优先级值的命令之前将显示具有较低优先级值的命令。 允许使用重复的优先级值，但不能保证具有相同的优先级值的命令的相对位置，因为依据的顺序**devenv /setup**命令从注册表中创建的最后一个接口可能不一致。  
+    > "优先级" 字段的值决定了命令在新命令组中的位置。 在 CommandPlacement 元素中设置的优先级将覆盖项定义中的这些设置。 具有较低优先级值的命令将显示在具有较高优先级值的命令之前。 允许使用重复的优先级值，但无法保证具有相同优先级值的命令的相对位置，因为 **devenv/setup** 命令从注册表创建最终接口的顺序可能不一致。  
   
-### <a name="to-put-a-reusable-group-of-buttons-on-a-menu"></a>将在菜单上的一组可重用按钮  
+### <a name="to-put-a-reusable-group-of-buttons-on-a-menu"></a>在菜单上放置一组可重用的按钮  
   
-1. 创建中的条目`CommandPlacements`部分。 设置的 GUID 和 ID`CommandPlacement`元素与你的组，并将父 GUID 和 ID 为的目标位置。  
+1. 在部分中创建一个条目 `CommandPlacements` 。 将元素的 GUID 和 ID 设置为组的 GUID 和 ID `CommandPlacement` ，并将父 GUID 和 id 设置为目标位置的 guid 和 id。  
   
-     CommandPlacements 部分应放置命令节的后面：  
+     应将 CommandPlacements 节放置在命令部分之后：  
   
     ```xml  
     <CommandTable>  
@@ -100,9 +100,9 @@ ms.locfileid: "63405720"
     </CommandTable>  
     ```  
   
-     命令组可以包含多个菜单上。 父菜单可以是你创建一个由提供[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]（按中所述 ShellCmdDef.vsct 或 SharedCmdDef.vsct），或在另一个 VSPackage 中定义的其中一个。 子女教养层数不受限制，只要父菜单最终连接到[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]或向显示的 vspackage 的快捷菜单。  
+     命令组可以包含在多个菜单上。 父菜单可以是你创建的菜单， [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] (如 .vsct 或 SharedCmdDef) 中所述，或在另一个 VSPackage 中定义的菜单。 只要父菜单最终连接到 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 或 VSPackage 显示的快捷菜单，则父层的数目不受限制。  
   
-     下面的示例将此组放**解决方案资源管理器**工具栏右侧的其他按钮。  
+     下面的示例将 **解决方案资源管理器** 工具栏上的组放在其他按钮的右侧。  
   
     ```xml  
     <CommandPlacements>  

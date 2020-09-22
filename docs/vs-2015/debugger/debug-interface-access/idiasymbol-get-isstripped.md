@@ -1,5 +1,5 @@
 ---
-title: 'Idiasymbol:: Get_isstripped |Microsoft Docs'
+title: IDiaSymbol：： get_isStripped |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 37fd166696d8fbcc913f26fb654ea5e709eb3a3d
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64806117"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840547"
 ---
-# <a name="idiasymbolgetisstripped"></a>IDiaSymbol::get_isStripped
+# <a name="idiasymbolget_isstripped"></a>IDiaSymbol::get_isStripped
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-检索标志，指示是否从符号文件中已去除私有符号。  
+检索一个标志，该标志指示是否从符号文件中去除私有符号。  
   
 ## <a name="syntax"></a>语法  
   
@@ -33,26 +33,26 @@ HRESULT get_isStripped(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>parameters  
  `pFlag`  
- [out]返回`TRUE`私有符号已从符号文件中; 否则，返回`FALSE`。  
+ 弄 `TRUE` 如果已从符号文件中移除私有符号，则返回; 否则返回 `FALSE` 。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回`S_FALSE`或错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回 `S_FALSE` 错误代码。  
   
 > [!NOTE]
-> 返回值为`S_FALSE`表示该属性不是可用于符号。  
+> 返回值 `S_FALSE` 意味着该属性对符号不可用。  
   
 ## <a name="remarks"></a>备注  
- 此属性是可从`SymTagExe`符号类型 (请参阅[Exe](../../debugger/debug-interface-access/exe.md))。  
+ 此属性可从 " `SymTagExe` 符号类型" (参阅 [Exe](../../debugger/debug-interface-access/exe.md)) 。  
   
 ## <a name="requirements"></a>要求  
   
-|需求|描述|  
+|要求|说明|  
 |-----------------|-----------------|  
-|标头：|dia2.h|  
+|标头：|dia2|  
 |版本：|DIA SDK v8.0|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
  [Exe](../../debugger/debug-interface-access/exe.md)

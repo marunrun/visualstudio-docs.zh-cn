@@ -1,5 +1,5 @@
 ---
-title: 如何-创建包清单 |Microsoft Docs
+title: 创建包清单 |Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dc3a1263136fe4c50b2c7020e1557a7a693691b6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fe51ac8bc8af07038e6bfe6ddb2c5730485ca60b
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85382518"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90851705"
 ---
 # <a name="how-to-create-a-package-manifest"></a>如何：创建程序包清单
 若要为应用程序部署先决条件，可以使用引导程序包。 引导程序包包含单个产品清单文件，但每个区域设置都包含包清单。 不同本地化版本间的共享功能应进入产品清单。

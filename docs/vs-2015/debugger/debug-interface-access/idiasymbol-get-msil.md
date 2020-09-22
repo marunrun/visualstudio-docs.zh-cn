@@ -1,5 +1,5 @@
 ---
-title: 'Idiasymbol:: Get_msil |Microsoft Docs'
+title: IDiaSymbol：： get_msil |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 451f9b610f6493c83706f881c16e4fe577274ce9
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64791282"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840430"
 ---
-# <a name="idiasymbolgetmsil"></a>IDiaSymbol::get_msil
+# <a name="idiasymbolget_msil"></a>IDiaSymbol::get_msil
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-检索一个标志，指定是否符号是指 Microsoft 中间语言 (MSIL) 代码。  
+检索一个标志，该标志指定符号是否引用 Microsoft 中间语言 (MSIL) 代码。  
   
 ## <a name="syntax"></a>语法  
   
@@ -33,15 +33,15 @@ HRESULT get_msil ( 
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>parameters  
  `pRetVal`  
- [out]返回`TRUE`如果符号所引用的 MSIL 代码; 否则，返回`FALSE`。  
+ 弄 `TRUE` 如果符号引用 MSIL 代码，则返回; 否则返回 `FALSE` 。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回`S_FALSE`或错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回 `S_FALSE` 错误代码。  
   
 > [!NOTE]
-> 返回值为`S_FALSE`表示该属性不是可用于符号。  
+> 返回值 `S_FALSE` 意味着该属性对符号不可用。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

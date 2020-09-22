@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty3::GetStringChars |Microsoft Docs
+title: IDebugProperty3：： GetStringChars |Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,16 +13,16 @@ caps.latest.revision: 7
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 661cf6833c292d5ff4015649d494ee3a7d04fdbb
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63419888"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840674"
 ---
 # <a name="idebugproperty3getstringchars"></a>IDebugProperty3::GetStringChars
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-检索与此属性关联的字符串并将其存储在用户提供的缓冲区。  
+检索与此属性关联的字符串，并将其存储在用户提供的缓冲区中。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,26 +42,26 @@ int GetStringChars(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>parameters  
  `buflen`  
- [in]用户提供缓冲区可容纳最大字符数。  
+ 中用户提供的缓冲区可以容纳的最大字符数。  
   
  `rgString`  
- [out]返回的字符串。  
+ 弄返回字符串。  
   
- [C++仅]，`rgString`指向该缓冲区用于接收字符串的 Unicode 字符的指针。 此缓冲区必须至少为`buflen`中大小的字符 （而非字节）。  
+ [仅限 c + +] `rgString` 是指向接收字符串的 Unicode 字符的缓冲区的指针。 此缓冲区必须至少为 `buflen` 个字符， (大小不能) 字节。  
   
  `pceltFetched`  
- [out]其中返回的实际存储在缓冲区中的字符数。 (可以是`NULL`在C++。)  
+ 弄返回缓冲区中实际存储的字符数。  (可以是 `NULL` c + + 中的 )   
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则返回错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回错误代码。  
   
 ## <a name="remarks"></a>备注  
- 在C++，必须格外小心以确保缓冲区至少`buflen`Unicode 字符。 请注意，Unicode 字符 2 个字节长。  
+ 在 c + + 中，必须小心确保缓冲区的长度至少为 `buflen` Unicode 字符。 请注意，Unicode 字符的长度为2个字节。  
   
 > [!NOTE]
-> 在C++，则返回的字符串不包括终止 null 字符。 如果给定，`pceltFetched`将在字符串中指定的字符数。  
+> 在 c + + 中，返回的字符串不包含终止 null 字符。 如果给定， `pceltFetched` 将指定字符串中的字符数。  
   
 ## <a name="example"></a>示例  
 <!-- TODO: review snippet reference  [!CODE [[cpp]]([cpp])]  -->  
@@ -88,7 +88,7 @@ CStringW RetrievePropertyString(IDebugProperty2 *pPropInfo)
   
 <!-- TODO: review snippet reference  [!CODE [}](})]  -->  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [GetStringCharLength](../../../extensibility/debugger/reference/idebugproperty3-getstringcharlength.md)   
  [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md)   
  [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)
