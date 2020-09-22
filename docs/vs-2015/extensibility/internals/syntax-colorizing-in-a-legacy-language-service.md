@@ -14,45 +14,45 @@ caps.latest.revision: 29
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 64e57ebc80320ccc133261781eb8ee6611c8e2a0
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63441230"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "90840680"
 ---
 # <a name="syntax-colorizing-in-a-legacy-language-service"></a>旧版语言服务中的语法着色
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-语法颜色设置是一项功能，使不同的编程语言来显示不同的颜色和样式中的源代码文件中的元素。 若要支持此功能，您需要提供分析器或扫描程序识别词法元素或在文件中的标记的类型。 许多语言的着色它们以不同的方式加以区别关键字、 分隔符 （例如圆括号或大括号） 和注释。  
+语法着色是一项功能，它使编程语言的不同元素显示在不同颜色和样式的源文件中。 若要支持此功能，需要提供可在文件中标识词法元素类型或标记的分析器或扫描程序。 许多语言将关键字、分隔符 (如圆括号或大括号) 以及注释通过以不同方式着色来区分。  
   
- 旧版语言服务实现 VSPackage 的一部分，但实现语言服务功能的较新方法是使用 MEF 扩展。 若要获取详细信息，请参阅[扩展编辑器和语言服务](../../extensibility/extending-the-editor-and-language-services.md)。  
+ 旧版语言服务是作为 VSPackage 的一部分实现的，但实现语言服务功能的更新方法是使用 MEF 扩展。 若要了解详细信息，请参阅 [扩展编辑器和语言服务](../../extensibility/extending-the-editor-and-language-services.md)。  
   
 > [!NOTE]
-> 我们建议在开始尽可能快地使用新编辑器 API。 这将提高您的语言服务的性能，让您充分利用新的编辑器功能。  
+> 建议你尽快开始使用新的编辑器 API。 这将提高语言服务的性能，并使你能够利用新的编辑器功能。  
   
 ## <a name="implementation"></a>实现  
- 若要支持着色，托管的包框架 (MPF) 包括<xref:Microsoft.VisualStudio.Package.Colorizer>类，该类实现<xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer>接口。 与此类交互<xref:Microsoft.VisualStudio.Package.IScanner>以确定令牌和颜色。 扫描程序的详细信息，请参阅[旧版语言服务分析器和扫描程序](../../extensibility/internals/legacy-language-service-parser-and-scanner.md)。 <xref:Microsoft.VisualStudio.Package.Colorizer>类，然后将标记每个字符的具有颜色信息的令牌和该信息返回到编辑器中显示的源文件。  
+ 为了支持着色，托管包框架 (MPF) 包括 <xref:Microsoft.VisualStudio.Package.Colorizer> 实现接口的类 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer> 。 此类与进行交互 <xref:Microsoft.VisualStudio.Package.IScanner> ，以确定标记和颜色。 有关扫描仪的详细信息，请参阅 [旧版语言服务分析器和扫描仪](../../extensibility/internals/legacy-language-service-parser-and-scanner.md)。 <xref:Microsoft.VisualStudio.Package.Colorizer>然后，类将标记的每个字符标记为颜色信息，并将该信息返回到显示源文件的编辑器中。  
   
- 返回到编辑器的颜色信息是为一系列可着色项的索引。 每个可着色项指定颜色值和一系列的字体特性，如粗体或删除线。 编辑器中提供语言服务可以使用的默认可着色项的组。 需要做的就是指定每种令牌类型的适当的颜色索引。 但是，可以提供一组自定义可着色项和您提供的索引的令牌，并引用而不是默认列表可着色项的列表。 您还必须设置`RequestStockColors`为 0 的注册表项 (或不指定`RequestStockColors`处所有项) 来支持自定义颜色。 可以设置到一个命名参数与此注册表项<xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute>用户定义的属性。 注册语言服务并设置其选项的详细信息，请参阅[注册旧版语言服务](../../extensibility/internals/registering-a-legacy-language-service1.md)。  
+ 返回到编辑器的颜色信息是可着色项列表中的索引。 每个可着色项指定一个颜色值和一组字体特性，例如粗体或删除线。 编辑器提供您的语言服务可以使用的一组默认可着色项。 只需为每个标记类型指定相应的颜色索引。 但是，你可以提供一组自定义可着色项和你为令牌提供的索引，并引用你自己的可着色项列表，而不是引用默认列表。 还必须将 `RequestStockColors` 注册表项设置为 0 (或不要指定 `RequestStockColors` 所有) 中的项以支持自定义颜色。 可以使用命名参数将此注册表项设置为 <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute> 用户定义的属性。 有关注册语言服务并设置其选项的详细信息，请参阅 [注册旧版语言服务](../../extensibility/internals/registering-a-legacy-language-service1.md)。  
   
 ## <a name="custom-colorable-items"></a>自定义可着色项  
- 若要提供自己的自定义可着色项，必须重写<xref:Microsoft.VisualStudio.Package.LanguageService.GetItemCount%2A>并<xref:Microsoft.VisualStudio.Package.LanguageService.GetColorableItem%2A>方法<xref:Microsoft.VisualStudio.Package.LanguageService>类。 第一种方法返回的语言服务支持的自定义可着色项数和第二个按索引获取自定义可着色项。 创建自定义可着色项的默认列表。 在语言服务的构造函数中，您需要做是提供一个名称与每个可着色项。 Visual Studio 会自动处理其中用户选择一组不同的可着色项的情况。 此名称将会出现在**字体和颜色**上的属性页**选项**对话框 (可从 Visual Studio**工具**菜单) 和此名称确定将哪个用户已重写的颜色。 在注册表中缓存中存储和访问的颜色名称的用户的选择。 **字体和颜色**属性页列出了所有的颜色名称按字母顺序，因此可以按你的语言名称; 每个颜色名称之前分组自定义颜色，如"**TestLanguage 注释**"和"**TestLanguage-关键字**"。 可以按类型，你可着色项进行分组或者"**注释 (TestLanguage)**"和"**关键字 (TestLanguage)**"。 按语言名称分组是首选方法。  
+ 若要提供自己的自定义可着色项，必须重 <xref:Microsoft.VisualStudio.Package.LanguageService.GetItemCount%2A> 写 <xref:Microsoft.VisualStudio.Package.LanguageService.GetColorableItem%2A> 类的和方法 <xref:Microsoft.VisualStudio.Package.LanguageService> 。 第一种方法返回语言服务支持的自定义可着色项的数量，第二种方法按索引获取自定义可着色项。 创建自定义可着色项的默认列表。 在语言服务的构造函数中，只需为每个可着色项提供一个名称。 Visual Studio 会自动处理用户选择一组不同的可着色项的情况。 此名称显示在 "**选项**" 对话框中的 "**字体和颜色**" 属性页中， (Visual Studio "**工具**" 菜单中提供) ，此名称确定用户重写的颜色。 用户的选择存储在注册表的缓存中，并由颜色名称访问。 " **字体和颜色** " 属性页按字母顺序列出所有颜色名称，因此你可以通过将每个颜色名称放在你的语言名称前面来分组自定义颜色;例如，"**TestLanguage**" 和 "**TestLanguage**"。 或者，可以按类型 "**Comment (TestLanguage) **" 和 "**关键字 (TestLanguage) **" 对可着色项分组。 首选按语言名称进行分组。  
   
 > [!CAUTION]
-> 强烈建议在要避免与现有的可着色项名称发生冲突的可着色项名称中包括的语言名称。  
+> 强烈建议在可着色项名称中包含语言名称，以避免与现有可着色项名称冲突。  
   
 > [!NOTE]
-> 如果在开发过程中更改一个您的颜色的名称，必须重置 Visual Studio 创建第一次访问了您的颜色的缓存。 可以执行此操作通过运行**重置实验性配置单元**从 Visual Studio SDK 程序菜单命令。  
+> 如果在开发过程中更改某一种颜色的名称，则必须重置 Visual Studio 在第一次访问颜色时创建的缓存。 若要执行此操作，可从 Visual Studio SDK 程序菜单运行 " **重置实验 Hive"** 命令。  
   
- 请注意，永远不会引用可着色项列表中的第一个项。 Visual Studio 始终会将默认文本颜色和该项的属性提供。 解决此问题的最简单方法是提供作为第一项的占位符可着色项。  
+ 请注意，从不引用可着色项列表中的第一项。 Visual Studio 始终为该项提供默认文本颜色和特性。 处理此项的最简单方法是提供占位符可着色项作为第一项。  
   
 ### <a name="high-color-colorable-items"></a>高颜色可着色项  
- 可着色项还可以支持 24 位或高颜色值到<xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiColorItem>接口。 MPF<xref:Microsoft.VisualStudio.Package.ColorableItem>类支持<xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiColorItem>正常颜色以及构造函数中指定接口和 24 位颜色。 有关更多详细信息，请参见 <xref:Microsoft.VisualStudio.Package.ColorableItem> 类。 下面的示例演示如何设置关键字和注释的 24 位颜色。 在用户的桌面上; 支持 24 位颜色时，将使用 24 位颜色否则，使用普通文本颜色。  
+ 可着色项还可以通过接口支持24位或高颜色值 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiColorItem> 。 MPF <xref:Microsoft.VisualStudio.Package.ColorableItem> 类支持 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiColorItem> 接口，并在构造函数中指定24位颜色以及正常颜色。 有关更多详细信息，请参见 <xref:Microsoft.VisualStudio.Package.ColorableItem> 类。 下面的示例演示如何为关键字和注释设置24位颜色。 如果用户桌面上支持24位颜色，则使用24位颜色;否则，将使用普通文本颜色。  
   
- 请记住，这些是你的语言; 的默认颜色用户可以更改为所需的任何这些颜色。  
+ 请记住，这些是你的语言的默认颜色;用户可以将这些颜色更改为所需的颜色。  
   
 ### <a name="example"></a>示例  
- 此示例演示一种方法来声明和使用自定义可着色项数组中填充<xref:Microsoft.VisualStudio.Package.ColorableItem>类。 此示例设置关键字和注释使用 24 位颜色的颜色。  
+ 此示例演示使用类声明和填充自定义可着色项数组的一种方法 <xref:Microsoft.VisualStudio.Package.ColorableItem> 。 此示例使用24位颜色设置关键字和注释颜色。  
   
 ```csharp  
 using Microsoft.VisualStudio.Package;  
@@ -96,17 +96,17 @@ namespace TestLanguagePackage
 }  
 ```  
   
-## <a name="the-colorizer-class-and-the-scanner"></a>着色器类和扫描程序  
- 基<xref:Microsoft.VisualStudio.Package.LanguageService>类具有<xref:Microsoft.VisualStudio.Package.LanguageService.GetColorizer%2A>方法的 instantiantes<xref:Microsoft.VisualStudio.Package.Colorizer>类。 从返回的扫描程序<xref:Microsoft.VisualStudio.Package.LanguageService.GetScanner%2A>方法将传递给<xref:Microsoft.VisualStudio.Package.Colorizer>类构造函数。  
+## <a name="the-colorizer-class-and-the-scanner"></a>Colorizer 类和扫描程序  
+ 基类 <xref:Microsoft.VisualStudio.Package.LanguageService> 具有 <xref:Microsoft.VisualStudio.Package.LanguageService.GetColorizer%2A> instantiantes 类的方法 <xref:Microsoft.VisualStudio.Package.Colorizer> 。 从方法返回的扫描程序 <xref:Microsoft.VisualStudio.Package.LanguageService.GetScanner%2A> 将传递给 <xref:Microsoft.VisualStudio.Package.Colorizer> 类构造函数。  
   
- 必须实现<xref:Microsoft.VisualStudio.Package.LanguageService.GetScanner%2A>自己的版本中的方法<xref:Microsoft.VisualStudio.Package.LanguageService>类。 <xref:Microsoft.VisualStudio.Package.Colorizer>类使用扫描程序获取令牌的颜色的所有信息。  
+ 你必须 <xref:Microsoft.VisualStudio.Package.LanguageService.GetScanner%2A> 在自己的类版本中实现方法 <xref:Microsoft.VisualStudio.Package.LanguageService> 。 <xref:Microsoft.VisualStudio.Package.Colorizer>类使用扫描器获取所有令牌颜色信息。  
   
- 扫描程序需要填充<xref:Microsoft.VisualStudio.Package.TokenInfo>进行安排为每个令牌中找到。 此结构包含的信息，如跨度令牌占用，颜色索引可以使用，是哪种类型的令牌和令牌触发器 (请参阅<xref:Microsoft.VisualStudio.Package.TokenTriggers>)。 仅跨和颜色索引所需的通过着色<xref:Microsoft.VisualStudio.Package.Colorizer>类。  
+ 扫描程序需要为 <xref:Microsoft.VisualStudio.Package.TokenInfo> 它找到的每个令牌填充结构。 此结构包含诸如令牌占用范围、要使用的颜色索引、令牌类型以及令牌触发器 (参阅) 的信息 <xref:Microsoft.VisualStudio.Package.TokenTriggers> 。 类只需使用范围和颜色索引进行着色 <xref:Microsoft.VisualStudio.Package.Colorizer> 。  
   
- 颜色索引存储在<xref:Microsoft.VisualStudio.Package.TokenInfo>结构通常是一个介于<xref:Microsoft.VisualStudio.Package.TokenColor>枚举，它提供了一定数量的命名对应于各种语言元素，如关键字和运算符的索引。 如果你的自定义可着色项列表中的匹配项中显示项<xref:Microsoft.VisualStudio.Package.TokenColor>枚举，则你可以只使用枚举作为颜色为每个令牌。 但是，如果其他可着色项或不想使用该顺序中的现有值，您可以排列自定义可着色项列表来满足您的需要并返回到该列表中的适当的索引。 只是一定要强制转换到的索引<xref:Microsoft.VisualStudio.Package.TokenColor>时将其存储在<xref:Microsoft.VisualStudio.Package.TokenInfo>结构;[!INCLUDE[vs_current_short](../../includes/vs-current-short-md.md)]会看到仅索引。  
+ 结构中存储的颜色索引 <xref:Microsoft.VisualStudio.Package.TokenInfo> 通常是枚举中的一个值 <xref:Microsoft.VisualStudio.Package.TokenColor> ，它提供了与各种语言元素（如关键字和运算符）对应的多个命名索引。 如果自定义可着色项列表与枚举中显示的项相匹配 <xref:Microsoft.VisualStudio.Package.TokenColor> ，则可以只使用枚举作为每个标记的颜色。 但是，如果你有其他可着色项，或者你不希望按顺序使用现有值，则可以排列自定义可着色项列表以满足你的需求，并将相应的索引返回到该列表中。 在将索引存储到结构中时，只需确保将索引强制转换为， <xref:Microsoft.VisualStudio.Package.TokenColor> <xref:Microsoft.VisualStudio.Package.TokenInfo> 只会 [!INCLUDE[vs_current_short](../../includes/vs-current-short-md.md)] 看到索引。  
   
 ### <a name="example"></a>示例  
- 下面的示例演示如何扫描程序可能会识别三种令牌类型： 数字、 标点符号和标识符 （任何不是数字或标点）。 此示例仅供说明用途，并不表示一个全面的分析器和扫描程序实现。 它假定存在`Lexer`类的`GetNextToken()`方法返回的字符串。  
+ 下面的示例演示扫描仪如何识别三个令牌类型：数字、标点和标识符 (不是数字或标点) 的任何内容。 此示例仅用于说明目的，并不表示完整的分析器和扫描程序实现。 它假定存在一个 `Lexer` 具有 `GetNextToken()` 返回字符串的方法的类。  
   
 ```csharp  
 using Microsoft.VisualStudio.Package;  
@@ -146,7 +146,7 @@ namespace TestLanguagePackage
         }  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [旧版语言服务功能](../../extensibility/internals/legacy-language-service-features1.md)   
  [旧版语言服务分析器和扫描程序](../../extensibility/internals/legacy-language-service-parser-and-scanner.md)   
  [注册旧版语言服务](../../extensibility/internals/registering-a-legacy-language-service1.md)
