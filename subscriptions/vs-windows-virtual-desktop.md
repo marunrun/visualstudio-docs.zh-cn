@@ -7,12 +7,12 @@ ms.assetid: 872c5746-5357-4764-949b-aa525a0adf1a
 ms.date: 09/08/2020
 ms.topic: conceptual
 description: 了解如何通过 Visual Studio 订阅利用 Microsoft Windows 虚拟桌面
-ms.openlocfilehash: f598aca8d277ca443b10dac289fae756ccd95432
-ms.sourcegitcommit: f8d14fab194fcb30658f23f700da07d35ffc9d4a
+ms.openlocfilehash: 4e619b9c1140611be5236edfff70e8b0aa560b23
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89561359"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005041"
 ---
 # <a name="access-windows-virtual-desktop-in-subscriptions"></a>在订阅中访问 Windows 虚拟桌面 
 Visual Studio 订阅者现在可以将其 Azure 开发/测试个人额度用于 Microsoft Windows 虚拟桌面服务。  
@@ -23,7 +23,7 @@ Windows 虚拟桌面是在云中运行的综合性桌面和应用虚拟化服务
 - 为 Windows 7 虚拟桌面提供免费的扩展安全更新
 - 将现有的远程桌面服务 (RDS) 和 Windows Server 桌面与应用迁移到任何计算机
 - 虚拟化桌面和应用
-- 使用统一的管理体验管理 Windows 10、Windows Server 和 Windows 7 桌面与应用。有关可以使用 Windows 虚拟桌面执行哪些操作的详细信息，请观看[介绍视频](https://docs.microsoft.com/azure/virtual-desktop/overview)。
+- 使用统一的管理体验管理 Windows 10、Windows Server 和 Windows 7 桌面与应用。有关可以使用 Windows 虚拟桌面执行哪些操作的详细信息，请观看[介绍视频](/azure/virtual-desktop/overview)。
 
 ## <a name="use-windows-virtual-desktop-with-azure"></a>将 Windows 虚拟桌面与 Azure 配合使用 
 Visual Studio 订阅者现在可通过多种方法使用 Azure 订阅为 Windows 虚拟桌面服务付费：
@@ -35,13 +35,13 @@ Visual Studio 订阅者现在可通过多种方法使用 Azure 订阅为 Windows
 Windows 虚拟桌面需要 Azure Active Directory (Azure AD)，VM 将加入到其中。  用户必须是此 Azure AD 的成员。  可通过两个选项实现 Azure AD：
 - Azure AD Directory 服务。  对于大多数用户而言，这是较简单的实现选项。
 - 运行域控制器提升的虚拟机。  此选项需要执行更多设置工作，但大多数用户的操作成本更低。
-若要查看使用 Windows 虚拟桌面的先决条件的完整列表，请访问 Windows 虚拟桌面[概述页](https://docs.microsoft.com/azure/virtual-desktop/overview#requirements)。 
+若要查看使用 Windows 虚拟桌面的先决条件的完整列表，请访问 Windows 虚拟桌面[概述页](/azure/virtual-desktop/overview#requirements)。 
 
 ## <a name="get-started"></a>入门 
 满足所有先决条件后，将需要完成几项操作来完成实现。  请查看以下入门教程：
-- [创建 Windows 虚拟桌面租户](https://docs.microsoft.com/azure/virtual-desktop/virtual-desktop-fall-2019/tenant-setup-azure-active-directory)
-- 使用 Azure 门户[创建主机池](https://docs.microsoft.com/azure/virtual-desktop/create-host-pools-azure-marketplace)
-- [管理 Windows 虚拟桌面的应用组](https://docs.microsoft.com/azure/virtual-desktop/manage-app-groups)
+- [创建 Windows 虚拟桌面租户](/azure/virtual-desktop/virtual-desktop-fall-2019/tenant-setup-azure-active-directory)
+- 使用 Azure 门户[创建主机池](/azure/virtual-desktop/create-host-pools-azure-marketplace)
+- [管理 Windows 虚拟桌面的应用组](/azure/virtual-desktop/manage-app-groups)
 
 ## <a name="eligibility"></a>资格
 | 订阅级别                                                 |     信道                                            | 好处                                                          | 是否续订？    |
@@ -63,11 +63,11 @@ Windows 虚拟桌面需要 Azure Active Directory (Azure AD)，VM 将加入到�
 无法确定正在使用哪些订阅？  连接到 [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs)，查看分配给电子邮件地址的所有订阅。 如果没有看到所有订阅，则可能是有一个或多个订阅分配给了不同的电子邮件地址。  你需要使用其他电子邮件地址登录来查看那些订阅。
 
 ## <a name="see-also"></a>请参阅
-- [Azure 文档](https://docs.microsoft.com/azure/)
-- [Windows 虚拟桌面文档](https://docs.microsoft.com/azure/virtual-desktop/)
+- [Azure 文档](/azure/)
+- [Windows 虚拟桌面文档](/azure/virtual-desktop/)
 
 ## <a name="next-steps"></a>后续步骤
 -   如果需要购买 Visual Studio 订阅，请查看：
      - 通过 Microsoft Store [购买的零售定价](https://visualstudio.microsoft.com/vs/pricing/)
      - [批量许可计划](https://www.microsoft.com/licensing/default)
--   了解 [Windows 虚拟桌面](https://docs.microsoft.com/azure/virtual-desktop/overview) 
+-   了解 [Windows 虚拟桌面](/azure/virtual-desktop/overview)

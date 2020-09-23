@@ -7,12 +7,12 @@ ms.assetid: 76654645-08ee-445d-b9ee-123126d1f0fb
 ms.date: 04/13/2020
 ms.topic: how-to
 description: 了解如何在 Microsoft Store 中购买 Visual Studio 订阅，以及如何在 Visual Studio 订阅门户中激活该订阅。
-ms.openlocfilehash: 9eb4812d22096e9d36089e464dc9a37478480458
-ms.sourcegitcommit: f8d14fab194fcb30658f23f700da07d35ffc9d4a
+ms.openlocfilehash: 244d6e6a0e5ccd6bf98b0e95d2165459cbe492c4
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89561570"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005958"
 ---
 # <a name="visual-studio-subscriptions-are-available-through-the-microsoft-store"></a>Visual Studio 订阅可通过 Microsoft Store 获得
 Visual Studio 订阅可通过多种渠道获得，包括 [批量许可](https://www.microsoft.com/licensing/default)、云解决方案提供商、[Visual Studio Marketplace](https://marketplace.visualstudio.com/subscriptions) 和 Microsoft Store。  本文将探讨如何通过 [Microsoft Store](https://www.microsoft.com/store/collections/visualstudio) 购买和激活订阅。  
@@ -48,10 +48,10 @@ Visual Studio 订阅可通过多种渠道获得，包括 [批量许可](https://
 如果你对通过 Microsoft Store 进行购买有任何疑问，请向我们寻求帮助。  请联系 [Microsoft Store 支持部门](https://support.microsoft.com/help/28808/microsoft-store-contact-support?ocid=MSCOMStoreFooter-ContactUs)。
 
 ## <a name="see-also"></a>请参阅
-- [Visual Studio 文档](https://docs.microsoft.com/visualstudio/)
-- [Azure DevOps 文档](https://docs.microsoft.com/azure/devops/)
-- [Azure 文档](https://docs.microsoft.com/azure/)
-- [Microsoft 365 文档](https://docs.microsoft.com/microsoft-365/)
+- [Visual Studio 文档](/visualstudio/)
+- [Azure DevOps 文档](/azure/devops/)
+- [Azure 文档](/azure/)
+- [Microsoft 365 文档](/microsoft-365/)
 
 ## <a name="next-steps"></a>后续步骤
 激活订阅后，请访问[权益](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)页面，查看订阅中包含的所有工具、服务、培训和支持权益。  建议设置以下权益来开始：

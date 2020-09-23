@@ -7,12 +7,12 @@ ms.assetid: b26b31dc-1eeb-4871-9ce6-2c980e703f1e
 ms.date: 09/03/2019
 ms.topic: conceptual
 description: 了解订阅管理员的职责。
-ms.openlocfilehash: 242fe28346b1264833939202936fa46a47d4f4d3
-ms.sourcegitcommit: a3edc753c951f317b67ce294cd2fc74f0c45390c
+ms.openlocfilehash: c0c30eb8bc5b63720bd2377990a390df8a173035
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89426884"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91006132"
 ---
 # <a name="overview-of-administrator-responsibilities"></a>管理员职责概述
 管理员可以管理组织的订阅。  管理员角色还负责确保按照许可条款管理订阅。 本文概述了管理员角色的职责、权益和限制。
@@ -37,10 +37,10 @@ Visual Studio 订阅管理员有四大职责：
 | 最终用户特例                  | 在软件开发项目末期，最终用户通常会检查应用程序，确定其是否符合必要的发布条件。 此过程称为用户验收测试 (UAT)。 业务发起人或产品经理等团队成员可以充当最终用户代理。 没有 Visual Studio 订阅的最终用户如果以其他符合所有 Visual Studio 许可条款的方式使用软件，则可访问软件进行 UAT。 仅在极少数情况下，一些主要职责是设计、开发或测试软件的人员也有资格充当“最终用户”。 |
 
 ## <a name="see-also"></a>请参阅
-- [Visual Studio 文档](https://docs.microsoft.com/visualstudio/)
-- [Azure DevOps 文档](https://docs.microsoft.com/azure/devops/)
-- [Azure 文档](https://docs.microsoft.com/azure/)
-- [Microsoft 365 文档](https://docs.microsoft.com/microsoft-365/)
+- [Visual Studio 文档](/visualstudio/)
+- [Azure DevOps 文档](/azure/devops/)
+- [Azure 文档](/azure/)
+- [Microsoft 365 文档](/microsoft-365/)
 
 ## <a name="next-steps"></a>后续步骤
 详细了解管理员的职责：

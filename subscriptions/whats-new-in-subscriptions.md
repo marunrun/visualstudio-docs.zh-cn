@@ -8,12 +8,12 @@ author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: 2dc938b5-37e9-4dfc-8676-5d0a91d366ab
-ms.openlocfilehash: c19bb72a7d5262c5d0864d12d44266c8ef016acf
-ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
+ms.openlocfilehash: c7276666b5ff02fbee03ebe8f88987257b0e50c1
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81649666"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005285"
 ---
 # <a name="what39s-new-in-visual-studio-subscriptions"></a>Visual Studio 订阅中的新增功能
 
@@ -33,7 +33,7 @@ ms.locfileid: "81649666"
 我们使你可以轻松地将使用 Microsoft 帐户 (MSA) 的订阅者匹配到 Azure Active Directory (Azure AD)，以便可以快速关联这两个标识。  使用 Azure AD 标识可提高安全性并简化订阅管理。  有关更多详细信息，请查看我们的[个人登录文章](personal-email-sign-ins.md)。 
 
 #### <a name="add-subscribers-using-azure-active-directory-groups"></a>使用 Azure Active Directory 组添加订阅者
-如果组织使用 Azure Active Directory (Azure AD)，则现在可以使用 Azure AD 组来管理订阅。  通过将订阅分配给组，可以非常快速地向多个用户提供相同类型的订阅。  将新用户添加到 Azure AD 组时，系统会自动为其分配一个订阅。  如果从 Azure AD 组中删除某用户，则其订阅也将一并删除。  这有助于组织自动进行订阅管理，进而节省管理员时间和精力。  有关详细信息，请查看文档中的[添加多个用户](https://docs.microsoft.com/visualstudio/subscriptions/assign-license-bulk#use-azure-active-directory-groups-to-assign-subscriptions)一文。 
+如果组织使用 Azure Active Directory (Azure AD)，则现在可以使用 Azure AD 组来管理订阅。  通过将订阅分配给组，可以非常快速地向多个用户提供相同类型的订阅。  将新用户添加到 Azure AD 组时，系统会自动为其分配一个订阅。  如果从 Azure AD 组中删除某用户，则其订阅也将一并删除。  这有助于组织自动进行订阅管理，进而节省管理员时间和精力。  有关详细信息，请查看文档中的[添加多个用户](./assign-license-bulk.md#use-azure-active-directory-groups-to-assign-subscriptions)一文。 
 
 ### <a name="cast-highlight"></a>CAST 突出显示
 我们非常高兴地宣布，我们的合作伙伴提供了权益扩展，CAST Highlight。 

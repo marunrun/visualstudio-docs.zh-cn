@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 20f9328b7e048eaf68184925fa1b7ac7a56540af
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.openlocfilehash: eab8798dfb5c1666ef2829361adb8c48202c3981
+ms.sourcegitcommit: 4affcf2830337e6aba84621c3eda5faf5d0d4a01
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85533635"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91022212"
 ---
 # <a name="default-keyboard-shortcuts-in-visual-studio"></a>Visual Studio 中的默认键盘快捷方式
 
@@ -35,7 +35,7 @@ ms.locfileid: "85533635"
 - [分析](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_analyze)
 - [编辑](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_edit)
 - [Project](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_project)
-- [测试](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_test)|
+- [Test](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_test)
 - [体系结构](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_architecture)
 - [编辑器上下文菜单](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_editorContext)
 - [项目和解决方案上下文菜单](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_projectContext)

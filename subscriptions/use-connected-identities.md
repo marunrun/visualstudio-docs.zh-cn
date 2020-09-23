@@ -8,12 +8,12 @@ ms.date: 03/11/2020
 ms.topic: conceptual
 robots: noindex, nofollow
 description: 了解如何使用已连接的 Microsoft 帐户和 Azure Active Directory 标识
-ms.openlocfilehash: f7b2cad08eb94b15e35015db7e8ac3fe084a00ea
-ms.sourcegitcommit: 78face15e71c305a2146358df51f8f1fefe3388f
+ms.openlocfilehash: 6d67576ab715f3ff8a49287155423a3dd6c20867
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87805602"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005233"
 ---
 # <a name="how-to-use-connected-identities-in-visual-studio-subscriptions"></a>如何在 Visual Studio 订阅中使用连接的标识
 如果你通过工作或学校收到 Visual Studio 订阅，并使用你的 Microsoft 帐户 (MSA) 登录，则你的订阅管理员可能会将你的 MSA 连接到组织的 Azure Active Directory (Azure AD) 中的标识。  这会改变你访问订阅中包含的一些权益的方式。 
@@ -43,10 +43,10 @@ ms.locfileid: "87805602"
 答：实现连接标识非常简单。  有关详细信息，请查看[此文章](personal-email-sign-ins.md)。 
 
 ## <a name="see-also"></a>请参阅
-- [Visual Studio 文档](https://docs.microsoft.com/visualstudio/)
-- [Azure DevOps 文档](https://docs.microsoft.com/azure/devops/)
-- [Azure 文档](https://docs.microsoft.com/azure/)
-- [Microsoft 365 文档](https://docs.microsoft.com/microsoft-365/)
+- [Visual Studio 文档](/visualstudio/)
+- [Azure DevOps 文档](/azure/devops/)
+- [Azure 文档](/azure/)
+- [Microsoft 365 文档](/microsoft-365/)
 
 ## <a name="next-steps"></a>后续步骤
-管理员连接 Azure AD 和 MSA 帐户后，我们建议验证你是否可以登录到[订阅门户](https://my.visualstudio.com?wt.mc_id=o~msft~docs)并访问 Azure DevOps、Visual Studio 和 Azure 开发测试个人额度等权益。 
+管理员连接 Azure AD 和 MSA 帐户后，我们建议验证你是否可以登录到[订阅门户](https://my.visualstudio.com?wt.mc_id=o~msft~docs)并访问 Azure DevOps、Visual Studio 和 Azure 开发测试个人额度等权益。
