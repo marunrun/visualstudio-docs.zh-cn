@@ -12,29 +12,29 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 0dcdfe3f6e488514bb2ee1ca950e952b16039b42
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63433839"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "91102524"
 ---
 # <a name="creating-a-multi-instance-tool-window"></a>创建多实例工具窗口
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-您可以编程的工具窗口，以便它的多个实例可以同时打开。 默认情况下，工具窗口可以打开的仅一个实例。  
+您可以对工具窗口进行编程，以便可以同时打开该工具窗口的多个实例。 默认情况下，工具窗口只能打开一个实例。  
   
- 当使用多实例工具窗口时，可以显示多个相关的源的信息，请参阅在同一时间。 例如，您可以将多行<xref:System.Windows.Forms.TextBox>控件的多实例工具窗口中，以便多个代码段编程会话期间可同时提供。 此外例如，您可以将<xref:System.Windows.Forms.DataGrid>控件和下拉列表框中的多实例工具窗口，以便可以同时跟踪多个实时数据源。  
+ 使用多实例工具窗口时，可以同时显示多个相关的信息源。 例如，可以 <xref:System.Windows.Forms.TextBox> 在多实例工具窗口中放置一个多行控件，以便在编程会话过程中同时提供多个代码片段。 例如，您可以将 <xref:System.Windows.Forms.DataGrid> 控件和下拉列表框放在多实例工具窗口中，以便可以同时跟踪多个实时数据源。  
   
-## <a name="creating-a-basic-single-instance-tool-window"></a>创建基本 （单实例） 的工具窗口  
+## <a name="creating-a-basic-single-instance-tool-window"></a>创建基本 (单实例) 工具窗口  
   
-1. 创建一个名为项目**MultiInstanceToolWindow**使用 VSIX 模板，并添加一个名为的自定义工具窗口项模板**MIToolWindow**。  
+1. 使用 VSIX 模板创建名为 **MultiInstanceToolWindow** 的项目，并添加一个名为 **MIToolWindow**的自定义工具窗口项模板。  
   
     > [!NOTE]
-    > 有关使用工具窗口创建扩展的详细信息，请参阅[与工具窗口创建扩展](../extensibility/creating-an-extension-with-a-tool-window.md)。  
+    > 有关使用工具窗口创建扩展的详细信息，请参阅 [使用工具窗口创建扩展](../extensibility/creating-an-extension-with-a-tool-window.md)。  
   
-## <a name="making-a-tool-window-multi-instance"></a>使工具窗口的多实例  
+## <a name="making-a-tool-window-multi-instance"></a>创建工具窗口多实例  
   
-1. 打开**MIToolWindowPackage.cs**文件并查找`ProvideToolWindow`属性。 和`MultiInstances=true`参数，如下面的示例中所示。  
+1. 打开 **MIToolWindowPackage.cs** 文件并找到 `ProvideToolWindow` 属性。 和 `MultiInstances=true` 参数，如以下示例中所示。  
   
     ```csharp  
     [PackageRegistration(UseManagedResourcesOnly = true)]  
@@ -46,15 +46,15 @@ ms.locfileid: "63433839"
     {. . .}  
     ```  
   
-2. 在 MIToolWindowCommand.cs 文件中，找到 ShowToolWindos() 方法。 在此方法中，调用<xref:Microsoft.VisualStudio.Shell.Package.FindToolWindow%2A>方法，设置其`create`标记，用于`false`，以便它将循环访问现有的工具窗口实例之前是可用`id`找到。  
+2. 在 MIToolWindowCommand.cs 文件中，找到 ShowToolWindos ( # A1 方法。 在此方法中调用 <xref:Microsoft.VisualStudio.Shell.Package.FindToolWindow%2A> 方法，并将其 `create` 标志设置为， `false` 以便它将循环访问现有的工具窗口实例，直到找到可用的 `id` 。  
   
-3. 若要创建工具窗口实例，调用<xref:Microsoft.VisualStudio.Shell.Package.FindToolWindow%2A>方法，设置其`id`为可用的值并将其`create`标记，用于`true`。  
+3. 若要创建工具窗口实例，请调用 <xref:Microsoft.VisualStudio.Shell.Package.FindToolWindow%2A> 方法，并将其设置 `id` 为可用值，并将其 `create` 标志设置为 `true` 。  
   
-     默认情况下的值`id`的参数<xref:Microsoft.VisualStudio.Shell.Package.FindToolWindow%2A>方法是`0`。 这样，单实例工具窗口。 对于要托管的多个实例，每个实例必须具有自己的唯一`id`。  
+     默认情况下，该方法的 `id` 参数值 <xref:Microsoft.VisualStudio.Shell.Package.FindToolWindow%2A> 为 `0` 。 这会生成单实例工具窗口。 对于要承载的多个实例，每个实例都必须具有其自己的唯一 `id` 。  
   
-4. 调用<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.Show%2A>方法<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame>返回的对象<xref:Microsoft.VisualStudio.Shell.ToolWindowPane.Frame%2A>工具窗口实例的属性。  
+4. 对 <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.Show%2A> <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame> 工具窗口实例的属性所返回的对象调用方法 <xref:Microsoft.VisualStudio.Shell.ToolWindowPane.Frame%2A> 。  
   
-5. 默认情况下，`ShowToolWindow`方法创建的工具窗口项模板创建单实例工具窗口。 下面的示例演示如何修改`ShowToolWindow`方法来创建多个实例。  
+5. 默认情况下， `ShowToolWindow` 由工具窗口项模板创建的方法将创建单实例工具窗口。 下面的示例演示如何修改 `ShowToolWindow` 方法以创建多个实例。  
   
     ```csharp  
     private void ShowToolWindow(object sender, EventArgs e)  
