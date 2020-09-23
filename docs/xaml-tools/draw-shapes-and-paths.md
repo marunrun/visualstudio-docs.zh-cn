@@ -1,7 +1,8 @@
 ---
 title: 绘制形状和路径
+description: 使用 Blend for Visual Studio 向形状和路径添加更多详细信息
 titleSuffix: Blend for Visual Studio
-ms.date: 07/31/2019
+ms.date: 09/22/2020
 ms.topic: conceptual
 ms.assetid: d5378c59-e2e5-49f0-91f1-aa82d984a33c
 author: TerryGLee
@@ -9,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b87ed03c8f513f6a9a750186d8763e56061bed98
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 368619a55316e0af59fc5351e187ced8892a6116
+ms.sourcegitcommit: 4affcf2830337e6aba84621c3eda5faf5d0d4a01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85350818"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91022498"
 ---
 # <a name="draw-shapes-and-paths"></a>绘制形状和路径
 
@@ -26,7 +27,7 @@ ms.locfileid: "85350818"
 
 在“资产”**** 窗口中查找形状。
 
-![“资产”窗口上的“形状”类别](media/blend-shapes.png)
+:::image type="content" source="media/blend-shapes.png" alt-text="Blend for Visual Studio 中 "资产" 窗口的 "形状" 类别的屏幕截图":::
 
 将所需的任何形状拖到美工板上。 然后，使用形状的图柄缩放、旋转、移动或扭曲形状。
 
