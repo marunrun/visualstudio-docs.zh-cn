@@ -1,5 +1,5 @@
 ---
-title: 如何 - 从“查找窗口”打开消息视图 | Microsoft Docs
+title: 从“查找窗口”打开消息视图 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3258e45e47c263912957ff5066ea9d02ad03e57e
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.openlocfilehash: 9b6240807eb82313182278251b353894545b957d
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85349479"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90852265"
 ---
 # <a name="how-to-open-messages-view-from-find-window"></a>如何：从“查找”窗口打开消息视图
 你可能会发现使用“查找窗口”对话框选择目标窗口，然后打开该窗口的消息视图会十分方便。

@@ -1,5 +1,5 @@
 ---
-title: 如何 - 调试插入的代码 | Microsoft Docs
+title: 调试插入的代码 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -24,12 +24,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a63a593a907908205d6724f3faf2c06d405bf0e2
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.openlocfilehash: e2dfcd81def9b3662f410120f370566354726498
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85350038"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90852095"
 ---
 # <a name="how-to-debug-injected-code"></a>如何：调试插入的代码
 

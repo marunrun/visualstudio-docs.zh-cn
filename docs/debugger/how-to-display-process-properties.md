@@ -1,5 +1,5 @@
 ---
-title: 如何 - 显示进程属性 | Microsoft Docs
+title: 显示进程属性 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 41e36baf8d44aab6904362e25ba4706fc7fb1417
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.openlocfilehash: 6dee3bf419470a41ce31b1f1a1ea9164acdbe5bd
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85349829"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90852330"
 ---
 # <a name="how-to-display-process-properties"></a>如何：显示进程属性
 若要详细了解[“进程”视图](../debugger/processes-view.md)中列出的进程，请使用[“进程属性”对话框](../debugger/process-properties-dialog-box.md)。

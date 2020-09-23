@@ -1,5 +1,5 @@
 ---
-title: 如何 - 显示线程属性 | Microsoft Docs
+title: 显示线程属性 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ab3f98b5a47c6d950f2d95e732e05e5734c783b5
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.openlocfilehash: acc57df5258675be42473c502a8d31d1a73e8c00
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85349869"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90852304"
 ---
 # <a name="how-to-display-thread-properties"></a>如何：显示线程属性
 若要详细了解[线程视图](../debugger/threads-view.md)中列出的线程，请使用[“线程属性”对话框](../debugger/thread-properties-dialog-box.md)。
