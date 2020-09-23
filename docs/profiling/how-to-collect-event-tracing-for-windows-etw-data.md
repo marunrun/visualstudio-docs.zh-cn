@@ -1,5 +1,5 @@
 ---
-title: 如何 - 收集 Windows 事件跟踪 (ETW) 数据 | Microsoft Docs
+title: 收集 Windows 事件跟踪 (ETW) 数据 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -14,12 +14,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 0545ee7fe64d26e21d2a9f34def8dd618c08e630
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.openlocfilehash: fc5f1877ff6530dbe0bbc888824a6ae60215eca1
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85330907"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90851263"
 ---
 # <a name="how-to-collect-event-tracing-for-windows-etw-data"></a>如何：收集 Windows 事件跟踪 (ETW) 数据
 

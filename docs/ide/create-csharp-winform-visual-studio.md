@@ -13,12 +13,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: 79fb60f05d12b1105febc12a218b1f36ee498deb
-ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
+ms.openlocfilehash: a06a6885c3d0858f60c8de48dd61054534aad40f
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88248737"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809041"
 ---
 # <a name="create-a-windows-forms-app-in-visual-studio-with-c"></a>在 Visual Studio 中使用 C\# 创建 Windows 窗体应用
 
@@ -164,6 +164,6 @@ ms.locfileid: "88248737"
 
 ## <a name="see-also"></a>请参阅
 
-* [更多 C# 教程](/visualstudio/get-started/csharp/)
-* [Visual Basic 教程](/visualstudio/get-started/visual-basic/)
+* [更多 C# 教程](../get-started/csharp/index.yml)
+* [Visual Basic 教程](../get-started/visual-basic/index.yml)
 * [C++ 教程](/cpp/get-started/tutorial-console-cpp)

@@ -16,12 +16,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 02ce09aebae0d6e5225ba1cdfa7484aa887135fd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 56a6142d7217d6afa7d48ea708c642a32d8cb3c8
+ms.sourcegitcommit: d97d72308ef306e7f28c3a76913caee4ff450bbb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88247638"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90713433"
 ---
 # <a name="visual-studio-enterprise-guide"></a>Visual Studio Enterprise 指南
 如果你想节省在 Visual Studio 上正常运行公司业务的时间，请阅读本文。 本企业指南提供了一些提示，可帮助你在常见的企业场景中安装和更新 Visual Studio、在遇到问题时解决问题，并了解如何在需要更多帮助的情况下报告问题。 
@@ -63,7 +63,7 @@ ms.locfileid: "88247638"
 
 - **[修复 Visual Studio](repair-visual-studio.md) 以解决更新问题**。 Visual Studio 安装有时会损毁或损坏。 修复对于修复所有安装操作（包括更新）中的安装时问题非常有用。 
 
-- **按照** [Windows 安全基线](https://docs.microsoft.com/windows/security/threat-protection/windows-security-baselines)的说明操作。 Microsoft 专注于为客户提供安全的操作系统（如 Windows 10 和 Windows Server）以及安全的应用（如 Microsoft Edge）。 除了产品的安全保障，Microsoft 还通过提供各种配置功能使你良好地控制环境。 
+- **按照** [Windows 安全基线](/windows/security/threat-protection/windows-security-baselines)的说明操作。 Microsoft 专注于为客户提供安全的操作系统（如 Windows 10 和 Windows Server）以及安全的应用（如 Microsoft Edge）。 除了产品的安全保障，Microsoft 还通过提供各种配置功能使你良好地控制环境。 
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 

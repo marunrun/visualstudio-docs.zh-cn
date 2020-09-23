@@ -16,12 +16,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f8ac7beac67a2f1d0010ee64ae7af31108d7ec3b
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 49963df35aa5bebd126aa241fca6cb1712a0b111
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "70107838"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90808989"
 ---
 # <a name="resources-for-designing-accessible-applications"></a>用于设计易于访问的应用程序的资源
 
@@ -48,9 +48,9 @@ ms.locfileid: "70107838"
 
 ## <a name="websites"></a>网站
 
-- [演练：使用图像控件、菜单控件以及 AutoPostBack 的辅助功能准则](https://msdn.microsoft.com/Library/ff7b5021-48b3-46bf-921f-9fe1e0e32202) 本文提供用于在示例网页中包含可访问控件的分步说明。 还提供针对 Web 的一些辅助功能设计提示。
+- [演练：使用图像控件、菜单控件以及 AutoPostBack 的辅助功能准则](/previous-versions/3has1x30(v=vs.140)) 本文提供用于在示例网页中包含可访问控件的分步说明。 还提供针对 Web 的一些辅助功能设计提示。
 
-- **使用 DHTML 创建可访问网页** 此技术文章列出了可访问的 HTML 4.0 元素以及可访问 Web 设计提示。 有关详细信息，请参阅[使用 DHTML 创建可访问的网页](https://msdn.microsoft.com/library/ms528445.aspx)。
+- **使用 DHTML 创建可访问网页** 此技术文章列出了可访问的 HTML 4.0 元素以及可访问 Web 设计提示。 有关详细信息，请参阅[使用 DHTML 创建可访问的网页](/previous-versions//ms528445(v=vs.85))。
 
 ### <a name="third-party-resources"></a>第三方资源
 

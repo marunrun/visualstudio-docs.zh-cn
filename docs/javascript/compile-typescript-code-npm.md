@@ -10,12 +10,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 58603db021d7aeebe3272711e5ba92d96eb22075
-ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
+ms.openlocfilehash: 7d70f1e95ce2dd5163eb017684620c403a77f74a
+ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88250173"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90740027"
 ---
 # <a name="compile-typescript-code-nodejs"></a>编译 TypeScript 代码 (Node.js)
 
@@ -27,7 +27,7 @@ ms.locfileid: "88250173"
 
 [TypeScript npm 包](https://www.npmjs.com/package/typescript)添加 TypeScript 支持。 当 TypeScript 2.1 或更高版本的 npm 包安装到项目中时，将在编辑器中加载相应版本的 TypeScript 语言服务。
 
-1. [按照说明](/visualstudio/ide/quickstart-nodejs?toc=/visualstudio/javascript/toc.json)安装 Node.js 开发工作负载和 Node.js 运行时。
+1. [按照说明](../ide/quickstart-nodejs.md?toc=%252fvisualstudio%252fjavascript%252ftoc.json)安装 Node.js 开发工作负载和 Node.js 运行时。
 
    若要与 Visual Studio 进行最简单的集成，请使用 Node.js TypeScript 模板之一（如 Blank Node.js Web 应用程序模板）创建项目。 否则，请使用 Visual Studio 随附的 Node.js JavaScript 模板并按照此处的说明进行操作，或使用[打开文件夹](../javascript/develop-javascript-code-without-solutions-projects.md)项目。
 

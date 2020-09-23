@@ -6,16 +6,16 @@ author: madskristensen
 ms.author: madsk
 ms.date: 11/19/2019
 ms.topic: conceptual
-ms.openlocfilehash: 627b597d9c8f4d68fdb90235ebf51339111374f1
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 2ae6304e206b2cfe47fa587590b740a91c7fec9f
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90038590"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810856"
 ---
 # <a name="how-to-increase-the-chances-of-a-performance-issue-being-fixed"></a>如何提高解决性能问题的几率
 
-Visual Studio 用户常使用[报告问题](/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2019)工具来报告一系列问题。 Visual Studio 团队在用户反馈中发现故障和运行缓慢的趋势，并解决影响大量用户的问题。 特定反馈工单的可操作性越高，产品团队就越有可能快速诊断和解决问题。 本文档介绍了在报告故障或运行缓慢问题时可用于提高这些问题的可操作性的最佳做法。
+Visual Studio 用户常使用[报告问题](./how-to-report-a-problem-with-visual-studio.md?view=vs-2019)工具来报告一系列问题。 Visual Studio 团队在用户反馈中发现故障和运行缓慢的趋势，并解决影响大量用户的问题。 特定反馈工单的可操作性越高，产品团队就越有可能快速诊断和解决问题。 本文档介绍了在报告故障或运行缓慢问题时可用于提高这些问题的可操作性的最佳做法。
 
 ## <a name="general-best-practices"></a>一般最佳实践
 
@@ -56,7 +56,7 @@ Visual Studio 是一个大型的综合平台，支持多种语言、项目类型
 
 - 可以在能够通过链接访问或在反馈中提供的示例代码或项目中重现（如果步骤涉及打开项目或文档）
 
-对于这类问题，请按照“[如何报告问题](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)”中的步骤进行操作，并确保包含：
+对于这类问题，请按照“[如何报告问题](./how-to-report-a-problem-with-visual-studio.md)”中的步骤进行操作，并确保包含：
 
 - 问题重现步骤
 
@@ -103,7 +103,7 @@ reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Windows Error Reporting\L
 
 2. 如果可能，请在提交反馈之前压缩文件 (\*.zip) 以减小其大小
 
-3. 按照“[如何报告问题](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)”中的步骤操作，并将堆转储附加到新的反馈项。
+3. 按照“[如何报告问题](./how-to-report-a-problem-with-visual-studio.md)”中的步骤操作，并将堆转储附加到新的反馈项。
 
 > [!NOTE] 
 > **最有价值的反馈：** 对于这种情况，最有价值的反馈是发生故障时捕获的堆转储。
@@ -118,7 +118,7 @@ VS 长时间处于无响应状态。
 **未知的无响应**
 
 如果无响应状态以一种不可预知的方式出现，请在下一次发生时启动 Visual Studio 的新实例并从该实例报告问题。
-在[“记录”屏幕](/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2019#record-a-repro)中，确保选择无响应的 Visual Studio 会话。
+在[“记录”屏幕](./how-to-report-a-problem-with-visual-studio.md?view=vs-2019#record-a-repro)中，确保选择无响应的 Visual Studio 会话。
 
 如果无响应的 Visual Studio 实例是在管理员模式下启动的，那么第二个实例也需要在管理员模式下启动。
 
@@ -145,7 +145,7 @@ VS 长时间处于无响应状态。
 
 3. 在 Visual Studio 的新副本中，打开“报告问题”工具 
 
-4. 按照[如何报告问题](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)中的步骤操作，直到完成“提供跟踪和堆转储（可选）”步骤。
+4. 按照[如何报告问题](./how-to-report-a-problem-with-visual-studio.md)中的步骤操作，直到完成“提供跟踪和堆转储（可选）”步骤。
 
 5. 选择记录 Visual Studio 的第一个副本（即遇到性能问题的副本）并开始记录。
 
@@ -165,7 +165,7 @@ VS 长时间处于无响应状态。
 
 记录性能跟踪时，如果要报告的运行缓慢的操作或 CPU 使用率过高的事件结束，则立即停止记录。 如果收集的信息过多，最早的信息将被覆盖。 如果在感兴趣的操作之后没有很快（几秒钟内）停止跟踪，有用的跟踪数据将被覆盖。
 
-请勿直接将性能跟踪附加到开发者社区网站中的现有反馈项。 请求/提供附加信息是 Visual Studio 内置“报告问题”工具中受支持的工作流。 如果需要进行性能跟踪才能解析以前的反馈项，我们会将反馈项的状态设置为“需要更多信息”，然后可以用报告新问题的方式对其进行回应。 有关详细说明，请参阅“报告问题”工具文档中的[“需要更多信息”部分](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017?view=vs-2017#when-further-information-is-needed-need-more-info)。
+请勿直接将性能跟踪附加到开发者社区网站中的现有反馈项。 请求/提供附加信息是 Visual Studio 内置“报告问题”工具中受支持的工作流。 如果需要进行性能跟踪才能解析以前的反馈项，我们会将反馈项的状态设置为“需要更多信息”，然后可以用报告新问题的方式对其进行回应。 有关详细说明，请参阅“报告问题”工具文档中的[“需要更多信息”部分](./how-to-report-a-problem-with-visual-studio.md?view=vs-2017#when-further-information-is-needed-need-more-info)。
 
 > [!NOTE] 
 > **最有价值的反馈：** 几乎对于所有运行缓慢/CPU 使用率过高的问题来说，最有价值的反馈都概括说明了你已尝试的操作，以及在该时间段内捕获行为的性能跟踪 (\*.etl.zip)。

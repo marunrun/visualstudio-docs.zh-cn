@@ -10,12 +10,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: a8b0fd53164cb98921b111d49fa04a76c9d0d8a8
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 5e801d417280d5d9ce8225c2185b582544fe2cef
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79094306"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810332"
 ---
 # <a name="simplify-string-interpolation-refactoring"></a>简化字符串内插重构
 
@@ -25,7 +25,7 @@ ms.locfileid: "79094306"
 
 - Visual Basic
 
-**功能：** 让你可以[简化字符串内插](https://docs.microsoft.com/dotnet/csharp/tutorials/string-interpolation)。
+**功能：** 让你可以[简化字符串内插](/dotnet/csharp/tutorials/string-interpolation)。
 
 **使用时机：** 当你有可简化的字符串内插时。
 

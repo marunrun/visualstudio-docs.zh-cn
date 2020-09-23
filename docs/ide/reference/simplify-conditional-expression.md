@@ -9,12 +9,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: d0571c01217441d4a39fbfe6fb58ccfe95fd0c5a
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 0242c8c89848e3e76673ddfbca8a27c20605048d
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85290791"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810345"
 ---
 # <a name="simplify-conditional-expression-refactoring"></a>简化条件表达式重构
 
@@ -22,7 +22,7 @@ ms.locfileid: "85290791"
 
 - C#
 
-**功能：** 允许简化[条件表达式](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/conditional-operator)。
+**功能：** 允许简化[条件表达式](/dotnet/csharp/language-reference/operators/conditional-operator)。
 
 **使用时机：** 需要删除不必要的代码以提高清晰度。
 

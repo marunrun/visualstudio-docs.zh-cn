@@ -15,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f9c6934c816574796d59f978c3d2f37f590cf578
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: eebdccf44580442b87e3d31e33ddcd7052838306
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75565118"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810896"
 ---
 # <a name="develop-globalized-and-localized-apps"></a>开发全球化和本地化应用
 
@@ -43,7 +43,7 @@ Visual Studio 利用 [.NET](/dotnet/standard/globalization-localization/) 中内
 
 - Web 应用
 
-   Web 服务支持发送和接收 UTF-8 及 Unicode 文本，从而使它们适用于涉及双向语言的应用程序。 Web 客户端应用程序需借助浏览器的用户界面，因此，Web 应用程序中的双向支持程度取决于用户的浏览器对这些双向功能的支持程度。 在 Visual Studio 中，创建的应用程序可以支持阿拉伯语或希伯来语文本、从右向左读取顺序、文件编码和本地区域性设置。 有关详细信息，请参阅 [ASP.NET Web 应用程序的双向支持](https://msdn.microsoft.com/Library/5576f9b1-9b86-41ef-8354-092d366bcd03)。
+   Web 服务支持发送和接收 UTF-8 及 Unicode 文本，从而使它们适用于涉及双向语言的应用程序。 Web 客户端应用程序需借助浏览器的用户界面，因此，Web 应用程序中的双向支持程度取决于用户的浏览器对这些双向功能的支持程度。 在 Visual Studio 中，创建的应用程序可以支持阿拉伯语或希伯来语文本、从右向左读取顺序、文件编码和本地区域性设置。 有关详细信息，请参阅 [ASP.NET Web 应用程序的双向支持](/previous-versions/6eedwbtt(v=vs.140))。
 
 > [!NOTE]
 > 控制台应用不包括对双向语言的文本支持。 这是 Windows 与控制台应用程序搭配使用方式的结果。

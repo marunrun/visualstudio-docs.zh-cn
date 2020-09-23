@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: ornellaalt
 ms.author: ornella
 manager: jillfra
-ms.openlocfilehash: 717a9cd3f4157c276ce7d0dd5c41cac625581ba6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b0e5a2d09cad35266bacc73580b2284f66bd32f5
+ms.sourcegitcommit: d97d72308ef306e7f28c3a76913caee4ff450bbb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88250249"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90713459"
 ---
 # <a name="install-visual-studio-versions-side-by-side"></a>并排安装 Visual Studio 版本
 
@@ -50,7 +50,7 @@ ms.locfileid: "88250249"
 
 默认情况下，从 Visual Studio 的一个次要版本升级到下一个版本时，Visual Studio 安装程序会将当前安装版本更新为该通道中的下一个版本。 例如，在安装 16.6.4 预览版时，安装程序将尝试替换当前安装的 16.6.3 预览版，因为这两个版本都处于 16.6 预览通道中。 这有助于确保较早版本的 Visual Studio 不会占用计算机上的空间。 在某些特定情况下，并行安装次要版本可能会有所帮助。 在本示例中，这意味着同一台计算机上同时具备 16.6.3 和 16.6.4。
 
-1. 下载要与现有 Visual Studio 版本并行安装的次要版本的 [Visual Studio 引导程序文件](https://docs.microsoft.com/visualstudio/releases/2019/history#installing-an-earlier-release)。
+1. 下载要与现有 Visual Studio 版本并行安装的次要版本的 [Visual Studio 引导程序文件](/visualstudio/releases/2019/history#installing-an-earlier-release)。
 2. 在管理员模式下打开命令提示符。 为此，请打开 Windows“开始”菜单，键入“cmd”，右键单击命令提示符搜索结果，然后选择“以管理员身份运行”。 在命令提示符中，将目录更改为 Visual Studio 引导程序文件所在的文件夹。
 3. 运行以下命令，为安装位置指定一个新文件夹路径，并将 .exe 文件名替换为要安装的 Visual Studio 版本的相应引导程序名称。 .exe 文件名应与以下文件名之一匹配或类似：
    * 对于 Visual Studio Community，应与 vs_community.exe 匹配或类似

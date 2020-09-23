@@ -7,12 +7,12 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2c69f73989e898c44bdef6cf008d48f6c918652a
-ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
+ms.openlocfilehash: 44c3b64d9fb8944a578d054b7d98d4bf39bde3bc
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88801316"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810371"
 ---
 # <a name="add-file-header"></a>添加文件头
 
@@ -22,7 +22,7 @@ ms.locfileid: "88801316"
 
 - Visual Basic
 
-**功能：** 使用 [EditorConfig](https://docs.microsoft.com/visualstudio/ide/create-portable-custom-editor-options#add-an-editorconfig-file-to-a-project) 向现有文件、项目和解决方案添加文件头。
+**功能：** 使用 [EditorConfig](../create-portable-custom-editor-options.md#add-an-editorconfig-file-to-a-project) 向现有文件、项目和解决方案添加文件头。
 
 **使用时机：** 你希望能够轻松地向文件、项目和解决方案添加文件头。
 
@@ -30,7 +30,7 @@ ms.locfileid: "88801316"
 
 ## <a name="how-to"></a>操作说明
 
-1. 向项目或解决方案添加 [EditorConfig](https://docs.microsoft.com/visualstudio/ide/create-portable-custom-editor-options#add-an-editorconfig-file-to-a-project)（如果还没有的话）。
+1. 向项目或解决方案添加 [EditorConfig](../create-portable-custom-editor-options.md#add-an-editorconfig-file-to-a-project)（如果还没有的话）。
 
 2. 将以下规则添加到 EditorConfig 文件：file_header_template。
 

@@ -19,12 +19,12 @@ helpviewer_keywords:
 - conversion, projects
 - asset compatibility
 - projects, conversion
-ms.openlocfilehash: 7ae4e0f865b35787663313277eb4df37169b72b7
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 9c16f16a8c44b50fd7c637dbd921fd8cd3779dc4
+ms.sourcegitcommit: d97d72308ef306e7f28c3a76913caee4ff450bbb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85286058"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90713970"
 ---
 # <a name="project-migration-and-upgrade-reference-for-visual-studio"></a>Visual Studio 的项目迁移和升级参考
 
@@ -43,7 +43,7 @@ Visual Studio 的每个版本通常都支持大部分以前的项目、文件和
 
 以下列表描述了 Visual Studio 2017 中对在之前版本中创建的项目的支持。
 
-如果未看到本应在此列出的项目或文件类型，请查阅[本文的 Visual Studio 2015 版本](/visualstudio/porting/porting-migrating-and-upgrading-visual-studio-projects?view=vs-2015)，并使用此页底部的“发送以下项的反馈” > “本页”按钮来提供有关项目的详细信息 。 （如果使用匿名“此页是否有帮助？” 控件，则我们无法对你的反馈作出响应。）
+如果未看到本应在此列出的项目或文件类型，请查阅[本文的 Visual Studio 2015 版本](../vs-2015/porting/porting-migrating-and-upgrading-visual-studio-projects.md?view=vs-2015)，并使用此页底部的“发送以下项的反馈” > “本页”按钮来提供有关项目的详细信息 。 （如果使用匿名“此页是否有帮助？” 控件，则我们无法对你的反馈作出响应。）
 
 | 项目类型 | 支持 |
 | --- | --- |
@@ -56,12 +56,12 @@ Visual Studio 的每个版本通常都支持大部分以前的项目、文件和
 | LightSwitch | Visual Studio 2017 中不再支持 LightSwitch。 使用 Visual Studio 2012 及早期版本创建并在 Visual Studio 2013 或 Visual Studio 2015 中打开的项目进行升级，之后只能在 Visual Studio 2013 或 Visual Studio 2015 中打开。 |
 | Microsoft Azure Tools for Visual Studio | 若要打开这些类型的项目，请首先安装 [Azure SDK for .NET](https://azure.microsoft.com/downloads/)，然后打开该项目。 如有必要，请更新项目。 |
 | 模型-视图-控制器框架 (ASP.NET MVC) | 对 MVC 版本和 Visual Studio 的支持：<ul><li>Visual Studio 2010 SP1 支持 MVC 2 和 MVC 3；通过[ASP.NET 4 MVC 4 for Visual Studio 2010 SP1 下载](https://www.microsoft.com/download/details.aspx?id=30683)添加 MVC 4 支持</li><li>Visual Studio 2012 仅支持 MVC 3 和 MVC 4</li><li>Visual Studio 2013 仅支持 MVC 4 和 MVC 5</li><li>Visual Studio 2017 和 Visual Studio 2015 支持 MVC 4（可打开现有项目但无法创建新项目）和 MVC 5</li></ul><br/>升级 MVC 版本：<ul><li>有关如何从 MVC 2 自动升级到 MVC 3 的信息，请参阅 [ASP.NET MVC 3 应用程序升级程序](https://archive.codeplex.com/?p=aspnet)。</li><li>有关如何从 MVC 2 手动升级到 MVC 3 的信息，请参阅 [将 ASP.NET MVC 2 项目升级到 ASP.NET MVC 3 Tools 更新](https://archive.codeplex.com/?p=aspnet)。</li><li>有关如何从 MVC3 手动升级到 MVC 4 的信息，请参阅 [将 ASP.NET MVC 3 项目升级到 ASP.NET MVC 4](/aspnet/whitepapers/mvc4-release-notes)。 如果你的项目以 .NET Framework 3.5 SP1 为目标，则必须重定目标才能使用 .NET Framework 4。</li><li>有关如何从 MVC 4 手动升级到 MVC 5 的信息，请参阅[如何将 ASP.NET MVC 4 和 Web API 项目升级到 ASP.NET MVC 5 和 Web API 2](https://www.asp.net/mvc/overview/releases/how-to-upgrade-an-aspnet-mvc-4-and-web-api-project-to-aspnet-mvc-5-and-web-api-2)。</li></ul> |
-| 建模 | 如果允许 Visual Studio 自动更新项目，则可以在 Visual Studio 2015、Visual Studio 2013 或 Visual Studio 2012 中打开该项目。<br/><br/>Visual Studio 2015 和 Visual Studio 2017 之间未更改建模项目的格式，并且项目可以在任一版本中打开和修改。 但是，Visual Studio 2017 中的行为具有差异：<ul><li>建模项目现被称为菜单和模板中的“依赖关系验证”项目。</li><li>Visual Studio 2017 中不再支持 UML 关系图。 UML 文件照常在解决方案资源管理器中列出，但会以 XML 文件形式打开。 使用 Visual Studio 2015 查看、创建或编辑 UML 关系图。</li><li>在 Visual Studio 2017 中，生成建模项目时不再验证体系结构依赖关系。 但将在生成每个代码时进行验证。 此更改不会影响建模项目，但它需要对所验证的代码项目进行更改。 Visual Studio 2017 可以自动对代码项目执行必要的更改（[详细信息](/visualstudio/modeling/validate-code-with-layer-diagrams?view=vs-2017#live-dependency-validation)）。</li></ul> |
+| 建模 | 如果允许 Visual Studio 自动更新项目，则可以在 Visual Studio 2015、Visual Studio 2013 或 Visual Studio 2012 中打开该项目。<br/><br/>Visual Studio 2015 和 Visual Studio 2017 之间未更改建模项目的格式，并且项目可以在任一版本中打开和修改。 但是，Visual Studio 2017 中的行为具有差异：<ul><li>建模项目现被称为菜单和模板中的“依赖关系验证”项目。</li><li>Visual Studio 2017 中不再支持 UML 关系图。 UML 文件照常在解决方案资源管理器中列出，但会以 XML 文件形式打开。 使用 Visual Studio 2015 查看、创建或编辑 UML 关系图。</li><li>在 Visual Studio 2017 中，生成建模项目时不再验证体系结构依赖关系。 但将在生成每个代码时进行验证。 此更改不会影响建模项目，但它需要对所验证的代码项目进行更改。 Visual Studio 2017 可以自动对代码项目执行必要的更改（[详细信息](../modeling/validate-code-with-layer-diagrams.md?view=vs-2017#live-dependency-validation)）。</li></ul> |
 | MSI 安装程序 (vdproj) | 请参阅 InstallShield 项目。 |
 | Office 2007 VSTO | 需要 Visual Studio 2017 单向升级。 |
 | Office 2010 VSTO | 如果项目面向 .NET Framework 4，则可以在 Visual Studio 2010 SP1 及更高版本中打开此项目。 所有其他项目需要单向升级。 |
 | Service Fabric (sfproj) | 可在 Visual Studio 2015 或 Visual Studio 2017 中打开 Service Fabric 应用程序项目，除非 Service Fabric 应用程序项目引用 ASP.NET Core 服务项目。 来自 Visual Studio 2015 在 Visual Studio 2017 中打开的 Service Fabric 项目从 xproj 格式单向迁移到 csproj。 请参阅此表前面的“.NET Core 项目 (xproj)”。 |
-| SharePoint 2010 | 使用 Visual Studio 2017 打开 SharePoint 解决方案项目时，它将升级到 SharePoint 2013 或 SharePoint 2016。 “.NET 桌面开发”工作负载必须安装于 Visual Studio 2017 中，以便升级。<br/><br/>若要深入了解如何升级 SharePoint 项目，请参阅 [Upgrade to SharePoint 2013](https://technet.microsoft.com/library/cc303420.aspx)（升级到 SharePoint 2013）、[Update Workflow in SharePoint Server 2013](https://technet.microsoft.com/library/dn133867.aspx)（更新 SharePoint 2013 中的工作流）和 [Create the SharePoint Server 2016 farm for a database attach upgrade](https://technet.microsoft.com/library/cc263026(v=office.16).aspx)（创建 SharePoint Server 2016 场用于数据库附加升级）。 |
+| SharePoint 2010 | 使用 Visual Studio 2017 打开 SharePoint 解决方案项目时，它将升级到 SharePoint 2013 或 SharePoint 2016。 “.NET 桌面开发”工作负载必须安装于 Visual Studio 2017 中，以便升级。<br/><br/>若要深入了解如何升级 SharePoint 项目，请参阅 [Upgrade to SharePoint 2013](/SharePoint/upgrade-and-update/upgrade-to-sharepoint-server-2016)（升级到 SharePoint 2013）、[Update Workflow in SharePoint Server 2013](/SharePoint/governance/update-workflow-in-sharepoint-server)（更新 SharePoint 2013 中的工作流）和 [Create the SharePoint Server 2016 farm for a database attach upgrade](/SharePoint/upgrade-and-update/create-the-sharepoint-server-2016-farm-for-a-database-attach-upgrade)（创建 SharePoint Server 2016 场用于数据库附加升级）。 |
 | SharePoint 2016 | 不能在 Visual Studio 2017 中打开 Office 开发人员工具预览版 2 中创建的 SharePoint 外接程序项目。 若要解除此限制，需要在 csproj vbproj 文件中将 `MinimumVisualStudioVersion` 更新到 12.0 并将 `MinimumOfficeToolsVersion` 更新到 12.2。 |
 | Silverlight | Visual Studio 2017 不支持 Silverlight 项目。 若要继续使用 Silverlight 应用程序，请继续使用 Visual Studio 2015。 |
 | SQL Server Reporting Services 和 SQL Server Analysis Services（SSRS、SSDT、SSAS、MSAS） | 通过 Visual Studio 库中的两个扩展提供对这些项目类型的支持：[Microsoft Analysis Services 建模项目](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects)和 [Microsoft Reporting Services 项目](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio)。 Visual Studio 2017 的数据存储和处理工作负载中还包括 SSDT 支持。 有关详细信息，请参阅[下载并安装 SQL Server Data Tools (SSDT) for Visual Studio](/sql/ssdt/download-sql-server-data-tools-ssdt) 页。|
@@ -127,7 +127,7 @@ Visual Studio 的每个新版本都支持大部分项目、文件和其他资产
 
 以下列表描述了 Visual Studio 2019 中对在之前版本中创建的项目的支持。
 
-如果在此处未看到任何项目或文件类型（此处本应出现这些内容），请参阅[本文的 Visual Studio 2017 版本](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects?view=vs-2017)。 还可以使用本页底部的“发送有关以下内容的反馈” > “本页”按钮来提供项目的详细信息。 （如果使用匿名“此页是否有帮助？” 控件，则我们无法对你的反馈作出响应。）
+如果在此处未看到任何项目或文件类型（此处本应出现这些内容），请参阅[本文的 Visual Studio 2017 版本](?view=vs-2017)。 还可以使用本页底部的“发送有关以下内容的反馈” > “本页”按钮来提供项目的详细信息。 （如果使用匿名“此页是否有帮助？” 控件，则我们无法对你的反馈作出响应。）
 
 | 项目类型 | 支持 |
 | --- | --- |
@@ -151,7 +151,7 @@ Visual Studio 的每个新版本都支持大部分项目、文件和其他资产
 | Python 工作负荷 | Visual Studio 2019 删除了 Python Windows IoT Core 应用的支持。 在 Visual Studio 2019 预览版中没有相应的功能，因此，此类项目没有自动迁移路径。<br/><br/>可以继续使用 Visual Studio 2017。 |
 | R Tools for Visual Studio | 已从 Visual Studio 2019 的数据科学工作负载中删除了针对 Visual Studio 的 R 工具。<br/><br/>可以继续使用 Visual Studio 2017 或替代产品（例如 RStudio）。 |
 | Service Fabric (sfproj) | 可在 Visual Studio 2015、Visual Studio 2017 或 Visual Studio 2019 预览版中打开 Service Fabric 应用程序项目，除非 Service Fabric 应用程序项目引用 ASP.NET Core 服务项目。 来自 Visual Studio 2015 在 Visual Studio 2017 或 Visual Studio 2019 预览版中打开的 Service Fabric 项目从 xproj 格式单向迁移到 csproj。 请参阅此表前面的“.NET Core 项目 (xproj)”。 |
-| SharePoint 2010 | 使用 Visual Studio 2019 打开 SharePoint 解决方案项目时，它将升级为 SharePoint 2013 或 SharePoint 2016。 “.NET 桌面开发”工作负载必须安装到 Visual Studio 2019 中，以便升级。<br/><br/>若要深入了解如何升级 SharePoint 项目，请参阅 [Upgrade to SharePoint 2013](https://technet.microsoft.com/library/cc303420.aspx)（升级到 SharePoint 2013）、[Update Workflow in SharePoint Server 2013](https://technet.microsoft.com/library/dn133867.aspx)（更新 SharePoint 2013 中的工作流）和 [Create the SharePoint Server 2016 farm for a database attach upgrade](https://technet.microsoft.com/library/cc263026(v=office.16).aspx)（创建 SharePoint Server 2016 场用于数据库附加升级）。 |
+| SharePoint 2010 | 使用 Visual Studio 2019 打开 SharePoint 解决方案项目时，它将升级为 SharePoint 2013 或 SharePoint 2016。 “.NET 桌面开发”工作负载必须安装到 Visual Studio 2019 中，以便升级。<br/><br/>若要深入了解如何升级 SharePoint 项目，请参阅 [Upgrade to SharePoint 2013](/SharePoint/upgrade-and-update/upgrade-to-sharepoint-server-2016)（升级到 SharePoint 2013）、[Update Workflow in SharePoint Server 2013](/SharePoint/governance/update-workflow-in-sharepoint-server)（更新 SharePoint 2013 中的工作流）和 [Create the SharePoint Server 2016 farm for a database attach upgrade](/SharePoint/upgrade-and-update/create-the-sharepoint-server-2016-farm-for-a-database-attach-upgrade)（创建 SharePoint Server 2016 场用于数据库附加升级）。 |
 | SharePoint 2016 | 不能在 Visual Studio 2019 中打开 Office 开发人员工具预览版 2 中创建的 SharePoint 加载项项目。 若要解除此限制，需要在 csproj vbproj 文件中将 `MinimumVisualStudioVersion` 更新到 12.0 并将 `MinimumOfficeToolsVersion` 更新到 12.2。 |
 | Silverlight | Visual Studio 2019 不支持 Silverlight 项目。 若要继续使用 Silverlight 应用程序，请继续使用 Visual Studio 2015。 |
 | SQL - Redgate | Visual Studio 安装程序中不再随附 Redgate 的 SQL Change Automation Core（以前称为 ReadyRoll Core）、SQL Prompt Core 和 SQL 搜索。<br/><br/>可以继续使用 Visual Studio 2017 获取这些功能。 在 Visual Studio 2019 中，可以升级到 Redgate 的 SQL Toolbelt 中提供的付费 SQL Change Automation 和 SQL Prompt 产品。|
@@ -200,7 +200,7 @@ Visual Studio 的每个新版本都支持大部分项目、文件和其他资产
 
 ## <a name="see-also"></a>请参阅
 
-- [Visual Studio 2017 的项目迁移和升级参考](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects?view=vs-2017)
+- [Visual Studio 2017 的项目迁移和升级参考](?view=vs-2017)
 - [Visual Studio 产品生命周期和维护](/visualstudio/releases/2019/servicing/)
 
 ::: moniker-end

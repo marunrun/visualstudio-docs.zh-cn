@@ -1,5 +1,5 @@
 ---
-title: 错误 - “Microsoft Visual Studio 远程调试监视器”(MSVSMON.EXE) 似乎没有在远程计算机上运行。
+title: Microsoft Visual Studio 远程调试监视器 (MSVSMON.EXE) 似乎没有在远程计算机上运行。
 titleSuffix: ''
 ms.custom: seodec18
 ms.date: 11/04/2016
@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6ba7fb30bcb5ac04a823b4ba654382ac23a966fe
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.openlocfilehash: fe0fc33c142c1bc70655817f833ae7c80fc628e7
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85460606"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90852571"
 ---
 # <a name="error-the-microsoft-visual-studio-remote-debugging-monitor-msvsmonexe-does-not-appear-to-be-running-on-the-remote-computer"></a>错误：Microsoft Visual Studio 远程调试监视器 (MSVSMON.EXE) 似乎没有在远程计算机上运行。
 此错误消息表示 Visual Studio 未能在远程计算机上找到 Visual Studio 远程调试监视器的正确实例。 必须安装 Visual Studio 远程调试监视器以便进行远程调试。 有关下载和设置远程调试器的信息，请参阅[远程调试](../debugger/remote-debugging.md)。

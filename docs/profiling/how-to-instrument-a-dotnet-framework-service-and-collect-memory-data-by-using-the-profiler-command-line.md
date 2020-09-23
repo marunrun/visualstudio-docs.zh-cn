@@ -9,14 +9,15 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: 042f01bcc53f12c240276374bdce5fb965c67be4
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.openlocfilehash: 8ff00f9a8a79dadc0cc037b707db057610b904e8
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85330124"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809604"
 ---
 # <a name="how-to-instrument-a-net-framework-service-and-collect-memory-data-by-using-the-profiler-command-line"></a>如何：使用探查器命令行检测 .NET Framework 服务，并收集内存数据
+
 本文介绍如何使用 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 分析工具命令行工具检测 .NET Framework 服务和收集内存使用情况数据。 可以收集内存分配数据，也可以同时收集内存分配数据和对象生存期数据。
 
 > [!NOTE]

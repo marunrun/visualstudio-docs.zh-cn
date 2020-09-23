@@ -7,12 +7,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: aa4a768f8ebd8b39918fa3ba51d4eb9b3f773151
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8a10b1f9b3dd6dda643a2775cf7b89221fba71d8
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89219759"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90808137"
 ---
 # <a name="productivity-guide-for-visual-studio"></a>Visual Studio 实用指南
 
@@ -32,9 +32,9 @@ ms.locfileid: "89219759"
 
 - **使 Visual Studio 更易于访问**。 Visual Studio 具有内置辅助功能，这些辅助功能与屏幕阅读器以及其他辅助技术兼容。 有关可用功能的完整列表，请参阅 [Visual Studio 的辅助功能提示和技巧](../ide/reference/accessibility-tips-and-tricks.md)。 
 
-- **查看 Visual Studio 产品生命周期和维护**。 要了解如何获取 Visual Studio 更新、适用于企业和专业客户的支持选项、对旧版 Visual Studio 的支持以及 Visual Studio 维护未包含的组件，请参阅 [Visual Studio 产品生命周期和维护](https://docs.microsoft.com/visualstudio/releases/2019/servicing)。 
+- **查看 Visual Studio 产品生命周期和维护**。 要了解如何获取 Visual Studio 更新、适用于企业和专业客户的支持选项、对旧版 Visual Studio 的支持以及 Visual Studio 维护未包含的组件，请参阅 [Visual Studio 产品生命周期和维护](/visualstudio/releases/2019/servicing)。 
 
-- **在 Visual Studio 中安装和管理 NuGet 包**。 通过 Windows 版 Visual Studio 中的 NuGet 包管理器 UI，可轻松安装、卸载和更新项目和解决方案中的 NuGet 包。 有关详细信息，请参阅[使用 NuGet 包管理器在 Visual Studio 中安装和管理包](https://docs.microsoft.com/nuget/consume-packages/install-use-packages-visual-studio)。
+- **在 Visual Studio 中安装和管理 NuGet 包**。 通过 Windows 版 Visual Studio 中的 NuGet 包管理器 UI，可轻松安装、卸载和更新项目和解决方案中的 NuGet 包。 有关详细信息，请参阅[使用 NuGet 包管理器在 Visual Studio 中安装和管理包](/nuget/consume-packages/install-use-packages-visual-studio)。
 
 ## <a name="write-code"></a>编写代码
 
@@ -60,7 +60,7 @@ ms.locfileid: "89219759"
 
 - **使用示例应用程序**。 可通过从 [Microsoft Developer Network](https://code.msdn.microsoft.com/) 下载并安装示例应用程序来加速应用程序的开发。 还可以通过下载并探索相关领域的示例包学习特定的技术或编程概念。
 
-- **使用格式设置/换行更改大括号格式**。 通过“格式设置”选项页面，可在代码编辑器中设定代码格式设置选项，其中包括换行。 有关如何在 C# 中使用此设置的详细信息，请参阅[“选项”对话框：“文本编辑器”>“C#”>“代码样式”>“格式设置”](../ide/reference/options-text-editor-csharp-formatting.md)。 对于 C++，请参阅[在 Visual Studio 中设置 C++ 代码首选项](https://docs.microsoft.com/cpp/ide/how-to-set-preferences)。 对于 Python，请参阅[设置 Python 代码格式](../python/formatting-python-code.md)。
+- **使用格式设置/换行更改大括号格式**。 通过“格式设置”选项页面，可在代码编辑器中设定代码格式设置选项，其中包括换行。 有关如何在 C# 中使用此设置的详细信息，请参阅[“选项”对话框：“文本编辑器”>“C#”>“代码样式”>“格式设置”](../ide/reference/options-text-editor-csharp-formatting.md)。 对于 C++，请参阅[在 Visual Studio 中设置 C++ 代码首选项](/cpp/ide/how-to-set-preferences)。 对于 Python，请参阅[设置 Python 代码格式](../python/formatting-python-code.md)。
 
 - **使用制表符更改缩进**。 使用自定义编辑器设置（专为每个代码库定制）对在不同编辑器和 IDE 中处理同一项目的多个开发人员强制实施一致的编码样式。 确保整个团队遵循相同的语言约定、命名约定和格式设置规则。 由于这些自定义设置是可移植的，可随代码移动，因此即使在 Visual Studio 外部也可以强制执行编码样式。 有关详细信息，请参阅[选项、文本编辑器、所有语言、制表符](../ide/reference/options-text-editor-all-languages-tabs.md#tabs)。
 
@@ -118,7 +118,7 @@ ms.locfileid: "89219759"
 
 - **使用 Visual Studio 调试器工具**。 在 Visual Studio 上下文中，当调试应用时，这通常意味着你在调试器模式下运行应用程序。 调试器在运行过程中可提供许多方法让你查看代码的情况。 有关入门指南，请参阅[初步了解 Visual Studio 调试器](../debugger/debugger-feature-tour.md)。 
 
-- **在不同的浏览器中测试相同的页、应用程序或站点**。 在调试代码时，可在安装的 Web 浏览器（包括 [Page Inspector (Visual Studio)](https://msdn.microsoft.com/Library/65880969-1ad2-47be-85b9-bb12c81bf209)）之间轻松进行切换，而无需打开“浏览方式”对话框。 可使用“调试目标”列表（位于“标准”工具栏中的“启动调试”按钮旁）来快速验证在调试或查看页面时使用的浏览器  。
+- **在不同的浏览器中测试相同的页、应用程序或站点**。 在调试代码时，可在安装的 Web 浏览器（包括 [Page Inspector (Visual Studio)](/previous-versions/hh974728(v=vs.140))）之间轻松进行切换，而无需打开“浏览方式”对话框。 可使用“调试目标”列表（位于“标准”工具栏中的“启动调试”按钮旁）来快速验证在调试或查看页面时使用的浏览器  。
 
     ![选择 Web 浏览器调试选项](../ide/media/webbrowserdropdowntoolbar.png)
 
@@ -140,7 +140,7 @@ ms.locfileid: "89219759"
 
 - **[使用 CodeLens 查找代码更改和其他历史记录](../ide/find-code-changes-and-other-history-with-codelens.md)** 。 通过 CodeLens，你可以在专注于工作的同时了解代码所发生的情况 &mdash; 而无需离开编辑器。 可以查找代码引用、代码更改、关联的 Bug、工作项、代码评审和单元测试。
 
-- **使用 Live Share 与其他人一起实时调试**。 使用 Live Share，无论使用什么编程语言、要生成哪种类型的应用，均可以与他人实时协作进行编辑和调试。 有关详细信息，请参阅[什么是 Visual Studio Live Share？](https://docs.microsoft.com/visualstudio/liveshare/)
+- **使用 Live Share 与其他人一起实时调试**。 使用 Live Share，无论使用什么编程语言、要生成哪种类型的应用，均可以与他人实时协作进行编辑和调试。 有关详细信息，请参阅[什么是 Visual Studio Live Share？](/visualstudio/liveshare/)
 
 - **使用交互窗口来编写和测试小型代码**。 Visual Studio 提供了一个读取-求值-打印循环 (REPL) 交互窗口，你可以在该窗口输入任意代码并查看即时结果。 这种编码方式有助于你了解与实验 API 和库，并以交互方式开发要包含在项目中的工作代码。 对于 Python，请参阅[使用 Python 交互窗口](../python/python-interactive-repl-in-visual-studio.md)。 此交互窗口功能还可用于 C#。 
 
