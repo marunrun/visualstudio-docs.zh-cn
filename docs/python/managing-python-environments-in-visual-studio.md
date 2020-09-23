@@ -9,12 +9,12 @@ manager: jillfra
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 1b6782a95793f222ba15fe8f928ecd9d7337c90f
-ms.sourcegitcommit: 50bbb62525c91c5a31bab57e1caf37c5638872c8
+ms.openlocfilehash: 9416862ad18bc297696e765d6664a4d08f2cc8dc
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87913315"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809906"
 ---
 # <a name="how-to-create-and-manage-python-environments-in-visual-studio"></a>如何在 Visual Studio 中创建和管理 Python 环境
 
@@ -124,7 +124,7 @@ Visual Studio 可使用全局、虚拟和 conda 环境。
 
 Visual Studio 为创建项目的虚拟环境提供直接支持。 例如，如果打开包含 requirements.txt 的项目，或者通过包含该文件的模板创建项目，Visual Studio 会提示你自动创建虚拟环境并安装这些依赖项  。
 
-在打开的项目中，可随时创建新的虚拟环境。 在“解决方案资源管理器”中，展开项目节点，右键单击“Python 环境”并选择“添加虚拟环境”   。 有关详细信息，请参阅[创建虚拟环境](/visualstudio/python/selecting-a-python-environment-for-a-project?view=vs-2019#create-a-virtual-environment-1)。
+在打开的项目中，可随时创建新的虚拟环境。 在“解决方案资源管理器”中，展开项目节点，右键单击“Python 环境”并选择“添加虚拟环境”   。 有关详细信息，请参阅[创建虚拟环境](./selecting-a-python-environment-for-a-project.md?view=vs-2019#create-a-virtual-environment-1)。
 
 Visual Studio 还提供可从虚拟环境生成 requirements.txt 文件的命令，简化了在其他计算机上重新创建环境的过程  。 有关详细信息，请参阅[使用虚拟环境](selecting-a-python-environment-for-a-project.md#use-virtual-environments)。
 

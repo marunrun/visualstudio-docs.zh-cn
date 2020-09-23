@@ -24,12 +24,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e6be79bc38e9283493bf5b7428a21c17cf9d3e0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 287ef3ccfd344786bd98098c5f28d0a2bd6573f6
+ms.sourcegitcommit: 4a9689890f271f9b8b73c3333e0699cce84a95d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62896615"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90832315"
 ---
 # <a name="format-specifiers-for-c-in-the-visual-studio-debugger"></a>Visual Studio 调试器中的 C++ 格式说明符
 你可以使用格式说明符更改在“监视”、“自动”和“局部变量”窗口中显示的值所用的格式。
@@ -78,7 +78,7 @@ int main() {
 |bb|无符号二进制整数（没有前导 0b）|25|00000000000000000000000000011001|
 |e|科学记数法|25000000|2.500000e+07|
 |g|科学记数或浮点（以较短者为准）|25000000|2.5e+07|
-|c|单个字符|0x0065, c|101 'e'|
+|c|单个字符|0x0065|101 'e'|
 |s|const char* 字符串（加引号）|\<location> "hello world"|"hello world"|
 |**sb**|const char * 字符串（无引号）|\<location> "hello world"|hello world|
 |s8|UTF-8 字符串|\<location> "This is a UTF-8 coffee cup â˜•"|"This is a UTF-8 coffee cup ☕"|

@@ -12,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ae70a2bf989b73dedc5becaac6f4b49bd0108730
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: c1813c4e399a125aca0185436b4a7216b72b5842
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75595782"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809002"
 ---
 # <a name="assembly-information-dialog-box"></a>“程序集信息”对话框
 
@@ -68,4 +68,4 @@ ms.locfileid: "75595782"
 ## <a name="see-also"></a>另请参阅
 
 - [“项目设计器”->“应用程序”页 (Visual Basic)](../../ide/reference/application-page-project-designer-visual-basic.md)
-- [特性](https://msdn.microsoft.com/Library/ae334cee-d96c-4243-a5e3-06dd7fcaf205)
+- [特性](/previous-versions/z0w1kczw(v=vs.140))

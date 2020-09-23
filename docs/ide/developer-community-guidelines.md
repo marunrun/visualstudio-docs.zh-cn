@@ -8,12 +8,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b39b62ade75687a61981712c47e9876a0ef082fd
-ms.sourcegitcommit: 615c8f39216ee2500161fa3aa1b3fe2f3e4386fa
+ms.openlocfilehash: 7da5a229ec345a4f360aeb6051dc33130fa3d99a
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87972468"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810114"
 ---
 # <a name="developer-community-guidelines"></a>开发者社区指南
 
@@ -57,7 +57,7 @@ ms.locfileid: "87972468"
 
 会审问题这一过程涉及多个步骤，是在功能团队中协作完成的。 会审通常需要一周时间，但也可能要花更长时间。 会审的目标是让你明白我们将如何处理你的问题。 例如，在会审后，你知道我们是计划解决你的问题还是计划等待更多社区反馈。
 
-报告问题后，可通过状态了解你的提交在其生命周期中所处的位置。 Visual Studio 产品团队在评审你的反馈时，会将它设为适当的状态。 可查看[问题状态和常见问题解答](https://docs.microsoft.com/visualstudio/ide/report-a-problem)来跟踪问题报告的进度。
+报告问题后，可通过状态了解你的提交在其生命周期中所处的位置。 Visual Studio 产品团队在评审你的反馈时，会将它设为适当的状态。 可查看[问题状态和常见问题解答](./report-a-problem.md)来跟踪问题报告的进度。
 
 如果问题缺少重要信息，我们将分配“需要更多信息”状态。 我们将在问题上评论称我们需要该特定信息，你也将收到电子邮件通知。 如果我们在 7 天内未收到该信息，将向你发送提醒。 之后，如果你 14 天内未操作，我们将关闭该票证。
 
@@ -78,8 +78,8 @@ ms.locfileid: "87972468"
 
 #### <a name="additional-information"></a>其他信息
 
-- [如何提高性能问题被解决的几率](https://docs.microsoft.com/visualstudio/ide/how-to-increase-chances-of-performance-issue-being-fixed)
-- [排查 MSBuild 问题并为其创建日志](https://docs.microsoft.com/visualstudio/ide/msbuild-logs)
+- [如何提高性能问题被解决的几率](./how-to-increase-chances-of-performance-issue-being-fixed.md)
+- [排查 MSBuild 问题并为其创建日志](./msbuild-logs.md)
 
 ## <a name="managing-feature-suggestions"></a>管理功能建议
 
@@ -91,7 +91,7 @@ ms.locfileid: "87972468"
 
 - 它是否符合我们的一般产品方向？
 - 我们能负担得起构建和维护它的费用吗？
-- 它符合我们的总体[路线图](https://docs.microsoft.com/visualstudio/productinfo/vs-roadmap)策略吗？
+- 它符合我们的总体[路线图](/visualstudio/productinfo/vs-roadmap)策略吗？
 - 如投票和评论所示，它得到社区的支持了吗？
 - 即使社区支持度低，我们还是喜欢它吗？
 
@@ -99,7 +99,7 @@ ms.locfileid: "87972468"
 
 如果建议不符合我们的整体产品方向，则会以超出范围的缘由将其关闭。 例如，我们可能具有相似的对 Visual Studio 产品系列中其他成员的投资。 或者建议的功能可能只与少数人相关，进行扩展会更适合提供此功能。
 
-可查看[建议状态和常见问题解答](https://docs.microsoft.com/visualstudio/ide/report-a-problem)来跟踪功能建议的进度。
+可查看[建议状态和常见问题解答](./report-a-problem.md)来跟踪功能建议的进度。
 
 ## <a name="discussion-etiquette"></a>讨论礼节
 
@@ -111,7 +111,7 @@ ms.locfileid: "87972468"
 
 ## <a name="data-privacy"></a>数据隐私
 
-评论和回复公开可见，但任何附加的文件仅私下与 Microsoft 共享。 公开这些信息很有益，可让所有社区成员看到其他用户发现的问题和解决方案。 如果担心数据或身份隐私，可选择其他方式。 详细了解[开发者社区数据隐私](https://docs.microsoft.com/visualstudio/ide/developer-community-privacy)。
+评论和回复公开可见，但任何附加的文件仅私下与 Microsoft 共享。 公开这些信息很有益，可让所有社区成员看到其他用户发现的问题和解决方案。 如果担心数据或身份隐私，可选择其他方式。 详细了解[开发者社区数据隐私](./developer-community-privacy.md)。
 
 ## <a name="next-steps"></a>后续步骤
 

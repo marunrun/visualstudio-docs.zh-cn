@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
-ms.openlocfilehash: a9c71837b83aa31b56ba1bd8ccb3384e4552d1be
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3b50ec910c6d5880ead2df48db2ef763753379bb
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85769990"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90807880"
 ---
 # <a name="visual-studio-feedback-options"></a>Visual Studio 反馈选项
 
@@ -71,7 +71,7 @@ ms.locfileid: "85769990"
 有两种方法可以帮助我们改进文档：
 
 * 使用文档页面右上角的“此页面有帮助吗?”  应答工具。
-* 使用 GitHub 帐户提供与 [docs.microsoft.com](/visualstudio/) 上任何 Visual Studio 页面相关的反馈。 要执行此操作，请选择文档页面底部的“发送相关反馈” > “本页”按钮。
+* 使用 GitHub 帐户提供与 [docs.microsoft.com](../index.yml) 上任何 Visual Studio 页面相关的反馈。 要执行此操作，请选择文档页面底部的“发送相关反馈” > “本页”按钮。
 
 ## <a name="contact-microsoft-support"></a>联系 Microsoft 支持部门
 

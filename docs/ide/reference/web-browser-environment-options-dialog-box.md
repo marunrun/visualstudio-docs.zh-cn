@@ -21,12 +21,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8915bef3bba477dd515b1d176971cfb9949e9899
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 85592076b99cf54991d21e1249cf30c609413733
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75596497"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90808673"
 ---
 # <a name="options-dialog-box-environment--web-browser"></a>“选项”对话框：环境 \> Web 浏览器
 
@@ -52,7 +52,7 @@ ms.locfileid: "75596497"
 
 - **源编辑器**：选择此选项可在[编辑器](../../ide/writing-code-in-the-code-and-text-editor.md)中查看源。
 
-- **HTML 编辑器**：选择此选项可在 [HTML 设计器](https://msdn.microsoft.com/Library/640043cc-3657-4677-a091-bc315e636477)中查看源。 使用此选择以两种视图之一编辑网页：设计视图或标准的基于文本的源视图。
+- **HTML 编辑器**：选择此选项可在 [HTML 设计器](/previous-versions/ex0hkwbx(v=vs.140))中查看源。 使用此选择以两种视图之一编辑网页：设计视图或标准的基于文本的源视图。
 
 - **外部编辑器** 选择此选项可在其他编辑器中查看源。 指定所选任何编辑器（例如 Notepad.exe）的路径。
 
@@ -66,4 +66,4 @@ ms.locfileid: "75596497"
 ## <a name="see-also"></a>请参阅
 
 - [“选项”对话框 ->“环境”->“常规”](../../ide/reference/general-environment-options-dialog-box.md)
-- [HTML Designer](https://msdn.microsoft.com/Library/640043cc-3657-4677-a091-bc315e636477)（HTML 设计器）
+- [HTML Designer](/previous-versions/ex0hkwbx(v=vs.140))（HTML 设计器）

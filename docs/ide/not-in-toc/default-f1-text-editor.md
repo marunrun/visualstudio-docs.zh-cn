@@ -10,12 +10,12 @@ f1_keywords:
 manager: jillfra
 author: mikejo5000
 ms.author: mikejo
-ms.openlocfilehash: 726d0daed76212e9bda498a5afca0c84cd84281e
-ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
+ms.openlocfilehash: 7a26e102ad71025edf92a499a1439022d9735eab
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88802286"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90808241"
 ---
 # <a name="f1-help-for-the-text-editor"></a>文本编辑器的 F1 帮助
 
@@ -37,7 +37,7 @@ ms.locfileid: "88802286"
 ## <a name="search-for-help-on-a-keyword-or-api-name"></a>搜索关键字或 API 名称的帮助
 
 如果要查找关键字或 API 名称的 F1 帮助，请执行以下操作：
-- 尝试在 [docs.microsoft.com](https://docs.microsoft.com) 上搜索
+- 尝试在 [docs.microsoft.com](/) 上搜索
 - 尝试使用搜索引擎进行搜索。
 - 在 [.NET API 浏览器](/dotnet/api/)中搜索参考文档。
 

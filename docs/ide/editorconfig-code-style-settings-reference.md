@@ -13,12 +13,12 @@ manager: jillfra
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 62709c496b9eec631a42c0e227210d3b57ecb5ef
-ms.sourcegitcommit: 2a201c93ed526b0f7e5848657500f1111b08ac2a
+ms.openlocfilehash: 67a9a6f7ec63686003f6e6535b213e9c6fa606f0
+ms.sourcegitcommit: 5a5f31a1a91bf243852c7da872211e63ab37fdaa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89741765"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90682647"
 ---
 # <a name="net-coding-convention-settings-for-editorconfig"></a>EditorConfig 的 .NET 编码约定设置
 
@@ -48,7 +48,7 @@ ms.locfileid: "89741765"
 
 ## <a name="enforce-coding-conventions-on-build"></a>在生成时强制实施编码约定
 
-从 Visual Studio 2019 版本 16.8（包括 .NET 5.0 RC2 SDK）开始，可以针对所有 .NET 项目[在生成时强制实施 .NET 编码约定](/dotnet/fundamentals/productivity/code-analysis.md#code-style-analysis)。 在生成时，.NET 代码样式冲突将显示为带有“IDE”前缀的警告或错误。 这样便可以在代码库中严格地强制实施一致的代码样式。
+从 Visual Studio 2019 版本 16.8（包括 .NET 5.0 RC2 SDK）开始，可以针对所有 .NET 项目[在生成时强制实施 .NET 编码约定](/dotnet/fundamentals/productivity/code-analysis#code-style-analysis)。 在生成时，.NET 代码样式冲突将显示为带有“IDE”前缀的警告或错误。 这样便可以在代码库中严格地强制实施一致的代码样式。
 
 ::: moniker-end
 

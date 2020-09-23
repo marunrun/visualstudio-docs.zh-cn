@@ -7,12 +7,12 @@ ms.assetid: 97bf7474-c6c2-49b3-b2c9-f1b2808eed1a
 ms.date: 03/02/2020
 ms.topic: conceptual
 description: 如果别名或友好名称已被使用，登录可能会失败
-ms.openlocfilehash: 1b6c465bc3e850d8582abde200ac9e5bd995e431
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f73aa52be518de627d468e8e1171de5f3145753b
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87234635"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91006210"
 ---
 # <a name="signing-into-visual-studio-subscriptions-may-fail-when-using-aliases"></a>使用别名登录 Visual Studio 订阅可能会失败
 根据用于登录的帐户类型，登录 [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) 时，可用订阅可能无法正确显示。 一个潜在的原因是使用了“别名”或“友好名称”来代替订阅所分配到的登录标识。 这就是所谓的“别名”。
@@ -86,16 +86,16 @@ Visual Studio 平台会排定主要别名的优先级，以显示订阅详细信
 
 0. 如果要更改单个用户，请在表中选中该用户，然后右键单击“编辑”。 这会打开一个面板，你可以在其中修改登录电子邮件地址。 在“登录电子邮件地址”字段中进行必要的更新。 单击“保存”，更改将生效。  
 
-0. 如果需要对大量用户进行这些更改，可以使用批量编辑功能。 有关详细信息，请阅读[使用批量编辑功能编辑多个订阅者](https://docs.microsoft.com/visualstudio/subscriptions/edit-license#edit-multiple-subscribers-using-bulk-edit)一文。
+0. 如果需要对大量用户进行这些更改，可以使用批量编辑功能。 有关详细信息，请阅读[使用批量编辑功能编辑多个订阅者](./edit-license.md#edit-multiple-subscribers-using-bulk-edit)一文。
 
 > [!NOTE]
 > 不管是使用单独更改还是批量更改，订阅者都会收到一封电子邮件，其中说明已更改其登录电子邮件地址，并提示他们需要使用更新后的电子邮件地址登录。 另请注意，如果订阅者以前通过其他登录地址激活了权益，则需要继续使用该登录地址来访问权益。  
 
 ## <a name="see-also"></a>请参阅
-- [Visual Studio 文档](https://docs.microsoft.com/visualstudio/)
-- [Azure DevOps 文档](https://docs.microsoft.com/azure/devops/)
-- [Azure 文档](https://docs.microsoft.com/azure/)
-- [Microsoft 365 文档](https://docs.microsoft.com/microsoft-365/)
+- [Visual Studio 文档](/visualstudio/)
+- [Azure DevOps 文档](/azure/devops/)
+- [Azure 文档](/azure/)
+- [Microsoft 365 文档](/microsoft-365/)
 
 
 ## <a name="next-steps"></a>后续步骤
@@ -104,5 +104,3 @@ Visual Studio 平台会排定主要别名的优先级，以显示订阅详细信
 - [分配多个订阅](assign-license-bulk.md)
 - [编辑订阅](edit-license.md)
 - [确定最大使用量](maximum-usage.md)
-
-

@@ -7,12 +7,12 @@ ms.assetid: 8b30e2bc-2ac3-4fcc-b296-128731471032
 ms.date: 03/03/2020
 ms.topic: how-to
 description: 设置月度订阅的管理员
-ms.openlocfilehash: 7a0d28e4cd75749db430353234060f72a8f86485
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fbb8d1f7a1519950e84c6f6fe726dd8f52ff29c5
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87434313"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91006106"
 ---
 # <a name="set-up-administrators-for-visual-studio-monthly-subscriptions"></a>设置 Visual Studio 月度订阅的管理员
 
@@ -60,10 +60,10 @@ Visual Studio 月度订阅由管理员进行管理。 管理员可以分配订�
 有关 Visual Studio 月度订阅的信息，请参阅“购买订阅”下的[概述](vscloud-overview.md)。 要购买 Visual Studio 月度订阅，请访问 Visual Studio Marketplace：[https://marketplace.visualstudio.com/subscriptions](https://marketplace.visualstudio.com/subscription)。
 
 ## <a name="see-also"></a>请参阅
-- [Visual Studio 文档](https://docs.microsoft.com/visualstudio/)
-- [Azure DevOps 文档](https://docs.microsoft.com/azure/devops/)
-- [Azure 文档](https://docs.microsoft.com/azure/)
-- [Microsoft 365 文档](https://docs.microsoft.com/microsoft-365/)
+- [Visual Studio 文档](/visualstudio/)
+- [Azure DevOps 文档](/azure/devops/)
+- [Azure 文档](/azure/)
+- [Microsoft 365 文档](/microsoft-365/)
 
 ## <a name="next-steps"></a>后续步骤
 了解有关管理 Visual Studio 订阅的详细信息。
@@ -71,6 +71,3 @@ Visual Studio 月度订阅由管理员进行管理。 管理员可以分配订�
 - [分配多个订阅](assign-license-bulk.md)
 - [编辑订阅](edit-license.md)
 - [确定最大使用量](maximum-usage.md)
-
-
-

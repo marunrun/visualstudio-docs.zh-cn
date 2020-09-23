@@ -12,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d68391bbd4c6c873940bbc2714ee41db8309b629
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d7af49e94045e519e32aacd12ec33a4a31a4c905
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75590730"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90808124"
 ---
 # <a name="c-classes-in-class-designer"></a>类设计器中的 C++ 类
 
@@ -54,7 +54,7 @@ class Penguin : public Bird, public Swimmer {};
 > [!NOTE]
 > C++ 代码不支持“显示派生类”  命令。 可以转到类视图，依次展开类型节点和“Derived Types”子文件夹，然后将这些类型拖到类图上，即可显示派生类   。
 
-有关多类继承的详细信息，请参阅[多重继承](https://msdn.microsoft.com/library/6td5yws2.aspx)和[多个基类](/cpp/cpp/multiple-base-classes)。
+有关多类继承的详细信息，请参阅[多重继承](/previous-versions/6td5yws2(v=vs.140))和[多个基类](/cpp/cpp/multiple-base-classes)。
 
 ## <a name="abstract-classes"></a>抽象类
 
@@ -177,6 +177,6 @@ typedef struct
 - [使用 C++ 代码](working-with-visual-cpp-code.md)
 - [类和结构](/cpp/cpp/classes-and-structs-cpp)
 - [匿名类类型](/cpp/cpp/anonymous-class-types)
-- [多重继承](https://msdn.microsoft.com/library/6td5yws2.aspx)
+- [多重继承](/previous-versions/6td5yws2(v=vs.140))
 - [多个基类](/cpp/cpp/multiple-base-classes)
 - [模板](/cpp/cpp/templates-cpp)

@@ -11,12 +11,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 31db7813521632539827f404c05625ff4b6121ca
-ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
+ms.openlocfilehash: d88d936a4b470f891f3b2bf2c353f4ef4e595c57
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88801563"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90811040"
 ---
 # <a name="step-3-use-the-interactive-repl-window"></a>步骤 3：使用交互式 REPL 窗口
 
@@ -25,7 +25,7 @@ ms.locfileid: "88801563"
 适用于 Python 的 Visual Studio 交互窗口  提供丰富的“读取–求值–打印-循环”(REPL) 体验，极大地缩短了常用的“编辑-生成-调试”周期。 该交互  窗口提供 Python 命令行 REPL 体验的所有功能。 通过该窗口还可以非常轻松地与 Visual Studio 编辑器中的源文件交换代码，免去了使用命令行时的繁琐操作。
 
 > [!NOTE]
-> 对于 REPL 问题，请确保已安装 `ipython` 和 `ipykernel` 包，为了帮助安装包，请参阅 [Python 环境包选项卡](/en-us/visualstudio/python/python-environments-window-tab-reference#packages-tab)。
+> 对于 REPL 问题，请确保已安装 `ipython` 和 `ipykernel` 包，为了帮助安装包，请参阅 [Python 环境包选项卡](./python-environments-window-tab-reference.md#packages-tab)。
 
 1. 通过以下方式打开交互  窗口：在“解决方案资源管理器”  中右键单击项目的 Python 环境（比如先前图片中显示的“Python 3.6（32 位）”  ），选择“打开交互窗口”  。 也可以从 Visual Studio 主菜单选择“视图”   > “其他窗口”   > “Python 交互窗口”  。
 
