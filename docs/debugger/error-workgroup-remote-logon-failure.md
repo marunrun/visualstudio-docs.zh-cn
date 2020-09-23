@@ -1,5 +1,5 @@
 ---
-title: 错误 - 工作组远程登录失败 | Microsoft Docs
+title: 工作组远程登录失败 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: error-reference
 f1_keywords:
@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 97045215098b1f59d5f76a928e9e0a1ab8362756
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.openlocfilehash: 36f6c236d306d952785e4d1974b5a31e8040e74b
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85460087"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90851653"
 ---
 # <a name="error-workgroup-remote-logon-failure"></a>错误：工作组远程登录失败
 此错误显示如下：

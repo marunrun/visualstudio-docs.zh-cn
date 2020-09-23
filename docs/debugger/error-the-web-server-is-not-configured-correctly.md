@@ -1,5 +1,5 @@
 ---
-title: 错误 - Web 服务器配置不正确 | Microsoft Docs
+title: Web 服务器配置不正确 | Microsoft Docs
 ms.date: 09/20/2017
 ms.topic: error-reference
 f1_keywords:
@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 711297ef00c064c482ed3a86b896566b6e019534
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.openlocfilehash: 9dc8253896bfdcf818e0848482a6c637350f590f
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85460320"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90851536"
 ---
 # <a name="error-the-web-server-is-not-configured-correctly"></a>错误：Web 服务器配置不正确
 

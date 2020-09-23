@@ -1,5 +1,5 @@
 ---
-title: 如何 - 从 DLL 项目调试 | Microsoft Docs
+title: 从 DLL 项目调试 | Microsoft Docs
 ms.date: 10/10/2018
 ms.topic: how-to
 dev_langs:
@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 081e897b0ff76dd97d2c174bf8c6fbfa2334f8ff
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.openlocfilehash: d1102eb61f6cfda42f6e4e879f5c592c0c064ce0
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85350116"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90852134"
 ---
 # <a name="how-to-debug-from-a-dll-project-in-visual-studio-c-c-visual-basic-f"></a>如何：在 Visual Studio 中从 DLL 项目调试（C#、C++、Visual Basic、F#）
 

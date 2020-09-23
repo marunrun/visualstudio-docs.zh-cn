@@ -1,5 +1,5 @@
 ---
-title: 如何 - 查看脚本文档 | Microsoft Docs
+title: 查看脚本文档 | Microsoft Docs
 ms.date: 11/05/2019
 ms.topic: how-to
 dev_langs:
@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dcd9823e414005a1711ddccf9d972da929090920
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.openlocfilehash: 5f6d60d11737cde2beebdaeeccae8e547df78853
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85348439"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90851029"
 ---
 # <a name="how-to-view-script-documents-javascript"></a>如何：查看脚本文档 (JavaScript)
 

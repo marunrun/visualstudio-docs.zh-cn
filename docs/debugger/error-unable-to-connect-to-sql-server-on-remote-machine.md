@@ -1,5 +1,5 @@
 ---
-title: 错误 - 无法连接到远程计算机上的 SQL Server | Microsoft Docs
+title: 无法连接到远程计算机上的 SQL Server | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: error-reference
 f1_keywords:
@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f1d5b162a483a7552c89b0b1c49f0967caf73170
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.openlocfilehash: 86f2d9397248806a4c996fabfcd20d325afbf533
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85460229"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90852519"
 ---
 # <a name="error-unable-to-connect-to-sql-server-on-remote-machine"></a>错误：无法连接到远程计算机上的 SQL Server
 无法连接到远程计算机 *name* 上的 SQL Server。 访问被拒绝。 请验证远程计算机上是否安装了远程调试器。 如果远程计算机不在域内，或者以本地帐户的身份运行 Visual Studio，那么远程计算机必须拥有与本地帐户的用户名和密码相同的帐户。

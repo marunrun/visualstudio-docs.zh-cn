@@ -1,5 +1,5 @@
 ---
-title: 如何 - 显示 WPF 跟踪信息 | Microsoft Docs
+title: 显示 WPF 跟踪信息 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 362376176cfb95c4e285f6837c53d277110e3439
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.openlocfilehash: 086dc96051323941b25766fb836b5020bca0ec43
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85349778"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90852291"
 ---
 # <a name="how-to-display-wpf-trace-information"></a>如何：显示 WPF 跟踪信息
 [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] 可接收来自 WPF 应用程序的调试跟踪信息，并将该信息显示在“输出”窗口中。 若要显示调试跟踪信息，必须启用 WPF 跟踪。

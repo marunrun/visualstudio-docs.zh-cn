@@ -1,5 +1,5 @@
 ---
-title: 错误 - 无法设置数据断点 | Microsoft Docs
+title: 无法设置数据断点 | Microsoft Docs
 ms.date: 12/3/2019
 ms.topic: error-reference
 f1_keywords:
@@ -15,12 +15,12 @@ ms.author: waan
 manager: caslan
 ms.workload:
 - multiple
-ms.openlocfilehash: 20e3ea1cb0124e6bdfb93e023021673ca2e34602
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c9f06b72673ea73e68f6c224ec9734568d70e25a
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88248751"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90852252"
 ---
 # <a name="troubleshooting-data-breakpoint-errors"></a>数据断点错误疑难解答
 此页面将引导你解决在使用“值发生更改时中断”时出现的常见错误

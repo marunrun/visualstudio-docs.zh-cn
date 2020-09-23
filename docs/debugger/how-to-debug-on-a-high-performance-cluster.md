@@ -1,5 +1,5 @@
 ---
-title: 如何 - 在高性能群集上进行调试 | Microsoft Docs
+title: 在高性能群集上进行调试 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 905a196b0872ac0d8665293200837861adf49795
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.openlocfilehash: f5f33fe5fd556830d0276f3e7cbfef3731dfe7db
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85350064"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90852434"
 ---
 # <a name="how-to-debug-on-a-high-performance-cluster-c-visual-basic-c"></a>如何：在高性能群集上进行调试（C#、Visual Basic、C++）
 
