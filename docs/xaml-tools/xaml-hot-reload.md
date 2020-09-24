@@ -11,12 +11,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 875608fbaa2e5c7532371fd95858fe87cdc81ca1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b40da28cce9d2189b2f30ff6ea958926f3041836
+ms.sourcegitcommit: bccc6503542e1517e0e96a9f02f5a89d69c60c25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85815885"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91135074"
 ---
 # <a name="write-and-debug-running-xaml-code-with-xaml-hot-reload-in-visual-studio"></a>在 Visual Studio 中使用 XAML 热重载编写和调试正在运行的 XAML 代码
 
@@ -49,15 +49,15 @@ XAML 热重载在这些情况下特别有用：
 
 |限制|WPF|UWP|说明|
 |-|-|-|-|
-|在应用程序运行时将事件布线到控件|不受支持|不支持|请参阅错误： *确保事件失败*。 请注意，在 WPF 中，可以引用现有的事件处理程序。 在 UWP 应用中，不支持引用现有的事件处理程序。|
+|在应用程序运行时将事件布线到控件|不支持|不支持|请参阅错误： *确保事件失败*。 请注意，在 WPF 中，可以引用现有的事件处理程序。 在 UWP 应用中，不支持引用现有的事件处理程序。|
 |在资源字典中创建资源对象，如应用的页面/窗口或*应用程序*中的资源对象。|从 Visual Studio 2019 Update 2 开始支持|支持|示例：将添加 `SolidColorBrush` 到资源字典，以用作 `StaticResource` 。</br>注意：可以在使用 XAML 热重载时应用/使用静态资源、样式转换器和写入资源字典的其他元素。 仅资源的创建不受支持。</br> 更改资源字典 `Source` 属性。|
 |在应用程序运行时向项目添加新控件、类、窗口或其他文件|不支持|不支持|无|
 | (添加/删除/更新包来管理 NuGet 包) |不支持|不支持|无|
 |更改使用 {x:Bind} 标记扩展的数据绑定|空值|从 Visual Studio 2019 开始支持|这需要 Windows 10 版本 1809 (生成 10.0.17763) 。 在 Visual Studio 2017 或早期版本中不受支持。|
 |不支持更改 X：Uid 指令|N/A|不受支持|无|
-|多个进程 | 不支持 | 不支持 | 热重载一次只能对一个进程使用。 |
+|多个进程 | 支持 | 支持 | 在 Visual Studio 2019 [版本 16.6](/visualstudio/releases/2019/release-notes-v16.6) 及更高版本中受支持 |
 
-## <a name="error-messages"></a>Error messages
+## <a name="error-messages"></a>错误消息
 
 使用 XAML 热重载时，可能会遇到以下错误。
 
