@@ -1,5 +1,5 @@
 ---
-title: 如何：还原隐藏的调试器命令 |Microsoft Docs
+title: 如何：还原隐藏的调试器命令 | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -23,11 +23,11 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 297be3a3a4ad3c70ad28c627d5dc8d64c6ba1c7a
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: bccc6503542e1517e0e96a9f02f5a89d69c60c25
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63442080"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91147228"
 ---
 # <a name="how-to-restore-hidden-debugger-commands"></a>如何：还原隐藏的调试器命令
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "63442080"
   
 3. 在“菜单栏:”下拉列表中，选择要包含已还原命令的“调试”菜单。  
   
-4. 单击**添加命令...** 按钮。  
+4. 单击 "**添加命令 ...** " 按钮。  
   
 5. 在“添加命令”框中，选择要添加的命令，然后单击“确定”。  
   
@@ -68,16 +68,16 @@ ms.locfileid: "63442080"
   
 4. 在“选择要导入的设置集合”页面上的“默认设置”文件夹下，选择一个包含要使用的命令的开发设置集合。 如果不知道应选择哪个集合，请尝试“常规开发设置”或“Visual C++ 开发设置”，这两个集合提供了大部分的调试器命令。  
   
-5. 单击 **“下一步”**。  
+5. 单击 **“下一步”** 。  
   
 6. 在“选择要导入的设置”页面上的“选项”下，确保选中了“调试”。 清除其他复选框，除非还要导入这些复选框对应的设置。  
   
-7. 单击 **“完成”**。  
+7. 单击 **“完成”** 。  
   
 8. 在“导入完成”页面上，检查“详细信息”部分，查看是否有任何与重置您的设置相关联的错误。  
   
-9. 单击 **“关闭”**。  
+9. 单击 **“关闭”** 。  
   
-## <a name="see-also"></a>请参阅  
- [调试器安全](../debugger/debugger-security.md)   
+## <a name="see-also"></a>另请参阅  
+ [调试器安全性](../debugger/debugger-security.md)   
  [调试器基础知识](../debugger/debugger-basics.md)
