@@ -46,8 +46,6 @@
           href: container-launch-settings.md
 - name: 通过 Kubernetes 进行开发
   items:
-    - name: Visual Studio 中的 Kubernetes
-      href: tutorial-kubernetes-tools.md
     - name: Kubernetes 桥接
       href: bridge-to-kubernetes.md
     - name: Kubernetes 桥接的工作原理
