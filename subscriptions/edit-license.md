@@ -1,18 +1,18 @@
 ---
 title: 在管理门户中编辑订阅 | Microsoft Docs
 author: evanwindom
-ms.author: lank
+ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 97ac8e4d-7a03-42f8-98cb-15bcaa90ef65
-ms.date: 07/30/2020
+ms.date: 09/21/2020
 ms.topic: how-to
 description: 了解管理员如何编辑订阅分配。
-ms.openlocfilehash: fb43f9ceae86acf5804a6cd32dd383dcd2e9af38
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 060ae7c7679eb1bf9dc4da99ea9a1bf952ebc58b
+ms.sourcegitcommit: 4affcf2830337e6aba84621c3eda5faf5d0d4a01
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87453731"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91022525"
 ---
 # <a name="edit-visual-studio-subscription-assignments"></a>编辑 Visual Studio 订阅分配
 作为订阅管理员，可以更改分配给组织内个人的订阅。  本文讨论可以进行更改的类型并提供必要的步骤。
@@ -34,6 +34,7 @@ ms.locfileid: "87453731"
 
 可使用批量编辑进程一次编辑多个订阅者。 此功能主要用于正在更改公司电子邮件地址的组织，或者决定对下载进行限制的组织。
 
+观看此视频或继续阅读，了解如何使用批量编辑对多个订阅者进行编辑。 
 <br>
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4vkAF]
@@ -56,10 +57,10 @@ ms.locfileid: "87453731"
 5. 文件上传后，将看到上传成功的通知。 此时，编辑将反映到订阅者信息当中。
 
 ## <a name="see-also"></a>请参阅
-- [Visual Studio 文档](https://docs.microsoft.com/visualstudio/)
-- [Azure DevOps 文档](https://docs.microsoft.com/azure/devops/)
-- [Azure 文档](https://docs.microsoft.com/azure/)
-- [Microsoft 365 文档](https://docs.microsoft.com/microsoft-365/)
+- [Visual Studio 文档](/visualstudio/)
+- [Azure DevOps 文档](/azure/devops/)
+- [Azure 文档](/azure/)
+- [Microsoft 365 文档](/microsoft-365/)
 
 ## <a name="next-steps"></a>后续步骤
 - 是否需要分配特定订阅 ID？ 请查看分配订阅 ID。 

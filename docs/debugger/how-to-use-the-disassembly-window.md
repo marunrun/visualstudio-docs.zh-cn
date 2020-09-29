@@ -22,12 +22,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0570aec5e8571e75cf64418a2c8c7c95cf507d31
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 23f297aa3fc549714a9b6327232a8a0b69c6138f
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85348699"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90808163"
 ---
 # <a name="view-disassembly-code-in-the-visual-studio-debugger-c-c-visual-basic-f"></a>在 Visual Studio 调试器中查看反汇编代码（C#、C++、Visual Basic、F#）
 
@@ -58,7 +58,7 @@ ms.locfileid: "85348699"
 
 ## <a name="use-the-disassembly-window"></a>使用“反汇编”窗口
 
-若要启用“反汇编”窗口，请在“工具” > “选项”（或“工具” > “选项”）>“调试”下，选择“启用地址级调试”。
+若要启用“反汇编”窗口，请在“工具” > “选项” > “调试”下，选择“启用地址级调试”    。
 
 若要在调试期间打开“反汇编”窗口，请选择“窗口” > “反汇编”或按 Alt+8 。
 

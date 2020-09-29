@@ -12,12 +12,12 @@ caps.latest.revision: 1
 author: bowdenk7
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 9df1b66f1a2407d523e38cd71fc9ffa993cd2d92
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fdb59c51fe38e3d2e3f2f1fd0b00db285b0de7f1
+ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "81649632"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90739884"
 ---
 # <a name="javascript-in-visual-studio-2017"></a>Visual Studio 2017 中的 JavaScript
 
@@ -35,7 +35,7 @@ Visual Studio 现在支持 ECMAScript 语言更新（例如 ECMAScript 2015/2016
 JavaScript 作为一种编程语言仍在不断更新，而 [TC39](https://www.ecma-international.org/memento/tc39-m.htm) 是负责进行更新的委员会。
 ECMAScript 2015 是对 JavaScript 语言的更新，提供了有帮助的新语法和功能。 要深入了解 ES6 的功能，请查看[此](http://es6-features.org/#Constants)引用站点。
 
-除了支持 ECMAScript 2015，Visual Studio 还支持 ECMAScript 2016，并会在发布 ECMAScript 的将来版本后提供对这些版本的支持。 要与 TC39 和 ECMAScript 中的最新更改保持同步，请关注它们在 [github](https://github.com/tc39) 上的文章。
+除了支持 ECMAScript 2015，Visual Studio 还支持 ECMAScript 2016，并会在发布 ECMAScript 的将来版本后提供对这些版本的支持。 若要与 TC39 和 ECMAScript 中的最新更改保持同步，请关注 [Github](https://github.com/tc39) 上相关文章。
 
 ### <a name="transpile-javascript"></a>转译 JavaScript
 
@@ -116,7 +116,7 @@ exports.default = Subscription_1.Subscription;
 
 ## <a name="better-intellisense"></a>更好的 IntelliSense
 
-[!include[vs_dev15](../../docs/misc/includes/vs_dev15_md.md)] 中的 JavaScript IntelliSense 现将显示有关参数和成员列表的详细信息。 此新信息由 TypeScript 语言服务提供，该服务在后台使用静态分析来更好地了解使用者的代码。 可以在[此处](/visualstudio/ide/javascript-intellisense/)阅读有关新的 IntelliSense 体验及其工作原理的详细信息。
+[!include[vs_dev15](../../docs/misc/includes/vs_dev15_md.md)] 中的 JavaScript IntelliSense 现将显示有关参数和成员列表的详细信息。 此新信息由 TypeScript 语言服务提供，该服务在后台使用静态分析来更好地了解使用者的代码。 可以在[此处](../ide/javascript-intellisense.md)阅读有关新的 IntelliSense 体验及其工作原理的详细信息。
 
 ## <a name="jsx-syntax-support"></a><a name="JSX"></a>JSX 语法支持
 
@@ -241,7 +241,7 @@ var x = React.createElement(comps_1.RepoDisplay, {description: "test"});
 
 以前，在任何时候要了解 IntelliSense 作用域中有哪些文件的过程相当复杂。 有时，需要所有文件都位于作用域，其他情况下则不需要，但这会导致涉及手动引用管理的复杂配置。 今后，无需再考虑引用管理，因此也无需对引用、注释或`_references.js` 文件添加三斜杠。
 
-有关 IntelliSense 工作原理的详细信息，请参阅 [JavaScript IntelliSense](/visualstudio/ide/javascript-intellisense/) 页。
+有关 IntelliSense 工作原理的详细信息，请参阅 [JavaScript IntelliSense](../ide/javascript-intellisense.md) 页。
 
 ### <a name="vsdoc"></a>VSDoc
 
@@ -250,7 +250,7 @@ XML 文档注释（有时称为 VSDoc）以前可用于修饰包含额外可强�
 
 ### <a name="intellisensejs-extensions"></a>`.intellisense.js` 扩展
 
-以前，可以创建 [IntelliSense 扩展](https://msdn.microsoft.com/library/hh874692.aspx)，通过此扩展可以为第三方库添加自定义完成结果。
+以前，可以创建 [IntelliSense 扩展](../vs-2015/ide/extending-javascript-intellisense.md)，通过此扩展可以为第三方库添加自定义完成结果。
 这些扩展难以编写并且安装和引用它们也很繁琐，因此，以后的新语言服务不再支持这些文件。
 作为更简单的替代方法，可以编写 TypeScript 定义文件，来提供与旧版 `.intellisense.js` 扩展相同的 IntelliSense 优势。
 可以在[此处](http://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html)了解有关声明 (`.d.ts`) 文件创作的详细信息。

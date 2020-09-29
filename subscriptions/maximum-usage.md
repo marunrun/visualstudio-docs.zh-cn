@@ -1,38 +1,41 @@
 ---
 title: 在管理门户中使用最大用量功能
 author: evanwindom
-ms.author: lank
-manager: lank
+ms.author: v-evwin
+manager: cabuschl
 ms.assetid: c473b01f-2dfe-4cc2-ad29-bb5e2a268123
-ms.date: 04/07/2020
+ms.date: 09/21/2020
 ms.topic: conceptual
 description: 了解如何在管理门户中查看分配的最大订阅数
-ms.openlocfilehash: 0fe9dbe494867c99ba62bcb5f56c372da7ac50aa
-ms.sourcegitcommit: 1f7aed335c48215dff5c151f76f22e3f10e8b564
+ms.openlocfilehash: b9ff33623311e4bfeff6b6067d5631d4e65efda9
+ms.sourcegitcommit: 4affcf2830337e6aba84621c3eda5faf5d0d4a01
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80808347"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91022161"
 ---
 # <a name="use-the-maximum-usage-feature-to-track-the-number-of-assigned-subscriptions"></a>使用最大用量功能跟踪分配的订阅数
 Visual Studio 订阅管理门户中的新功能有助于跟踪已购买和分配的订阅数量，并确定在过去一年和整个协议期间分配的每个级别的峰值订阅数。 
 
 ## <a name="maximum-usage-overview"></a>最大用量概述
+观看视频或继续阅读，了解如何使用最大用量功能。 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4tdQK] 
 
 ## <a name="view-your-maximum-usage"></a>查看最大用量
 查看为任何协议和订阅级别分配的峰值订阅数：
 1. 在门户左上角的下拉列表中选择要查看的协议。 （若只有一个协议，则已经选择了该协议。）
 2. 单击“最大用量”图标，它是从订阅者网格左侧顶部开始的第三个图标  。  
+
     > [!div class="mx-imgBorder"]
-    > ![最大用量菜单](_img/maximum-usage/maximum-usage-menu.png)
+    > ![最大用量浮出控件](_img/maximum-usage/maximum-usage-menu.png "单击“最大用量”按钮，查看已分配的每种订阅类型的最大数目。")
+
 3. 随即显示“12 个月最大用量”、过去一年为各个级别分配的最大订阅数，以及达到该峰值的月份。    
 
 ## <a name="view-your-assignment-history"></a>查看分配历史记录
 除了查看各个订阅级别的峰值分配外，还可以单击“导出完整报表”按钮，查看协议上活动的运行帐户，包括购买和分配  。  （可能需要向下滚动才能看到该按钮。）  
 
 > [!div class="mx-imgBorder"]
-> ![最大用量完整报表](_img/maximum-usage/maximum-usage-full-report.png)
+> ![最大用量完整报表](_img/maximum-usage/maximum-usage-full-report.png "完整报告包含所有订阅购买和分配的记录。")
 
 对于每个订阅级别，该报表会显示达到新的最大分配级别的日期以及截至该日期购买的订阅数，可用于轻松查看任何超额分配的日期。  
 
@@ -46,12 +49,11 @@ Visual Studio 订阅管理门户中的新功能有助于跟踪已购买和分配
 - [批量许可条款](https://www.microsoft.com/licensing/product-licensing/products.aspx)
 
 ## <a name="see-also"></a>请参阅
-- [Visual Studio 文档](https://docs.microsoft.com/visualstudio/)
-- [Azure DevOps 文档](https://docs.microsoft.com/azure/devops/)
-- [Azure 文档](https://docs.microsoft.com/azure/)
-- [Microsoft 365 文档](https://docs.microsoft.com/microsoft-365/)
+- [Visual Studio 文档](/visualstudio/)
+- [Azure DevOps 文档](/azure/devops/)
+- [Azure 文档](/azure/)
+- [Microsoft 365 文档](/microsoft-365/)
 
 ## <a name="next-steps"></a>后续步骤
 - 如果对订阅分配或门户管理的其他方面有任何疑问，请联系 https://visualstudio.microsoft.com/subscriptions/support/ 获取帮助。 
 - 详细了解如果分配的订阅数超过了所购买的订阅数（称为[超额分配](handle-overclaimed-license.md)）应该怎么办。
-

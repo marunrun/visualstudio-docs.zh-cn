@@ -1,5 +1,6 @@
 ---
-title: 从命令行创建基本分析报告 | Microsoft Docs
+title: 分析命令行 - 创建基础报告
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: 6d73e21e-c04e-48ea-91cc-e517a5f2cd3f
@@ -9,12 +10,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: bca944b67b19fdbb4138c479acf5693994d1c717
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c9ee74732c917ee4267e08f7ff1c60715971ed71
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85329049"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90808846"
 ---
 # <a name="create-basic-profiling-reports-from-the-command-line"></a>从命令行创建基本分析报告
 本文介绍从 .vsp 或 .vsps 分析数据文件生成逗号分隔值 (.csv) 报告的基本 VSPerfReport 命令    。 有关所有报告选项的介绍，请参阅 [VSPerfReport](../profiling/vsperfreport.md)。

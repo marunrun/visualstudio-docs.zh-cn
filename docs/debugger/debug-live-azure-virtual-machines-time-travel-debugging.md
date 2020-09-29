@@ -1,7 +1,7 @@
 ---
-title: “按时间顺序查看调试”实时 ASP.NET Azure 虚拟机
+title: Azure VM 上的“按时间顺序查看调试”实时 ASP.NET
 description: 了解如何使用 Snapshot Debugger 在 Azure 虚拟机上记录和重播实时 ASP.NET 应用。
-ms.custom: ''
+ms.custom: SEO-VS-2020
 ms.date: 04/11/2019
 ms.topic: how-to
 helpviewer_keywords:
@@ -13,12 +13,12 @@ monikerRange: '>= vs-2019'
 ms.workload:
 - aspnet
 - azure
-ms.openlocfilehash: a44ecd7faeb3ec4cea7665678050580d7e4063a9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: eb0db0bab5295925f71a81645e64fdeb5f2077df
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85350623"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809565"
 ---
 # <a name="record-and-replay-live-aspnet-apps-on-azure-virtual-machines-using-the-snapshot-debugger"></a>使用 Snapshot Debugger 在 Azure 虚拟机上记录和重播实时 ASP.NET 应用
 

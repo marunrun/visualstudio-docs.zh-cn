@@ -15,12 +15,12 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 389315d7ec48c85fbab96b5270cbcef54faf7e8e
-ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
+ms.openlocfilehash: ff0188a93b8c7b6470aeaeced7e3f48dbad0f28b
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88801056"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005364"
 ---
 # <a name="whats-new-in-visual-studio-2019"></a>Visual Studio 2019 中的新增功能
 
@@ -214,17 +214,17 @@ Visual Studio 2019 中会默认安装此服务。
 
 与此同时，以下是我们目前正在开发的一些新功能。
 
-- **Visual Studio 2019 对 Visual Studio Codespaces 的支持（预览版）**
+- **Visual Studio 2019 对 GitHub Codespaces 的支持（预览）**
 
-  如今，开发人员要在工作和家庭中兼顾多个项目（比以往更甚）。 新功能、bug 修复、PR 评审和原型都在争用时间，并需要不断地切换上下文。 [Visual Studio Codespaces](https://visualstudio.microsoft.com/services/visual-studio-codespaces/) 可以提供帮助。 你可以完全在云中进行开发，并为每个项目创建专用的自定义环境（以秒为单位）。 使用 Visual Studio 2019，可以连接到 codespace，并像在本地那样工作。
+  如今，开发人员要在工作和家庭中兼顾多个项目（比以往更甚）。 新功能、bug 修复、PR 评审和原型都在争用时间，并需要不断地切换上下文。 [GitHub Codespaces](https://github.com/features/codespaces) 可以提供帮助。 你可以完全在云中进行开发，并为每个项目创建专用的自定义环境（以秒为单位）。 使用 Visual Studio 2019，可以连接到 codespace，并像在本地那样工作。
 
-  有关详细信息，请参阅[什么是 Visual Studio Codespaces](/visualstudio/codespaces/overview/what-is-vsonline/) 页。
+  有关详细信息，请参阅[什么是 GitHub Codespaces](codespaces/codespaces-overview.md) 页面。
 
 - **Visual Studio 2019 中改进了 Git 体验（预览版）**
 
    我们将继续迭代改进后的 Git 体验，以提高你在 GitHub、Azure Repos 和其他远程托管服务上使用代码的效率。 可以在 Visual Studio 2019 中通过单个操作（或单击）进行初始化和推送。 还可以创建新的分支，管理当前分支，并解决合并冲突。
 
-   有关详细信息，请参阅[Visual Studio 中针对 Git 体验的精彩新更新](https://devblogs.microsoft.com/visualstudio/exciting-new-updates-to-the-git-experience-in-visual-studio/)博客文章。
+   有关详细信息，请参阅 [Visual Studio 中的新 Git 体验](git-with-visual-studio.md)页面。
 
 若要详细了解预览版（和下载链接，如果你希望试用），请参阅 [Visual Studio Preview](https://visualstudio.microsoft.com/vs/preview/) 页。
 

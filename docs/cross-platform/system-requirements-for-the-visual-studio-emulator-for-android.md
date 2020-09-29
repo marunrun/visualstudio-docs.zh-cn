@@ -1,6 +1,6 @@
 ---
-title: 适用于 Android 的 Visual Studio 模拟器的系统要求 | Microsoft Docs
-ms.custom: ''
+title: 适用于 Android 的 VS 模拟器的系统要求
+ms.custom: SEO-VS-2020
 ms.prod: visual-studio-dev15
 ms.date: 11/04/2016
 ms.technology: vs-ide-mobile
@@ -12,12 +12,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: f1462769a4ba9929a000bca998c1fe3708908798
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 327713a59b7c5c8da5c5b92cd16f3a20a76a7458
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77272054"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90808254"
 ---
 # <a name="system-requirements-for-the-visual-studio-emulator-for-android"></a>适用于 Android 的 Visual Studio 仿真程序的系统要求
 

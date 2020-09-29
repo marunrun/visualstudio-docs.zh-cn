@@ -1,5 +1,6 @@
 ---
-title: 创建适用于 Web 性能测试的请求级插件
+title: 创建请求级插件（Web 性能测试）
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -9,12 +10,12 @@ ms.assetid: d0b5b23c-7e94-4637-be6c-2620a5442d46
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 03de870da2cd75c8a254010db682903f314cc10d
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 5f136214b787820396fdbcff37f9f3b78574e9c8
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85287969"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810267"
 ---
 # <a name="how-to-create-a-request-level-plug-in"></a>如何：创建请求级插件
 

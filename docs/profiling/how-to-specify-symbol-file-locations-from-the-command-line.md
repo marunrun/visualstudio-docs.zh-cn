@@ -1,5 +1,6 @@
 ---
-title: 如何 - 从命令行指定符号文件位置 | Microsoft Docs
+title: 通过命令行指定符号文件位置
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: 8aa067bb-e8bf-4081-aff0-cfbcf65934a0
@@ -9,12 +10,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: f9238c922b8adda3ce7d99571182d4b5ce91f35f
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.openlocfilehash: 66f06bf9482bf719eb2025a8ee6c496b6b679046
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85329019"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809578"
 ---
 # <a name="how-to-specify-symbol-file-locations-from-the-command-line"></a>如何：从命令行指定符号文件位置
 为了显示函数名称和行号等符号信息，VSPerfReport 命令行工具要求访问被分析组件的符号 (.pdb) 文件以及 Windows 系统文件。 编译组件时会创建符号文件。 有关详细信息，请参阅 [VSPerfReport](../profiling/vsperfreport.md)。 VSPerfReport 自动搜索以下位置的符号文件：

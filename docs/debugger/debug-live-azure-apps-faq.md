@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5e0d8839daac2d470f4275257bfcfbc83fc7a62f
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: f8afc67b92a943dd571847bb1a00fb7e4db4514b
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72911398"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90851094"
 ---
 # <a name="frequently-asked-questions-for-snapshot-debugging-in-visual-studio"></a>在 Visual Studio 中进行快照调试的常见问答解答
 
@@ -103,7 +103,7 @@ Snapshot Debugger 必须打开一组端口才能调试在 Azure 中获取的快�
 
 2. 删除证书和 Azure KeyVault
 
-   在为虚拟机或虚拟机规模集安装远程调试器扩展时，将同时创建客户端证书和服务器证书，以使用 Azure 虚拟机/虚拟机规模集资源对 VS 客户端进行身份验证。
+   在为虚拟机或虚拟机规模集安装远程调试器扩展时，将同时创建客户端证书和服务器证书，以使用 Azure 虚拟机/虚拟机规模集资源对 Visual Studio 客户端进行身份验证。
 
    - 客户端证书
 
@@ -124,7 +124,7 @@ Snapshot Debugger 必须打开一组端口才能调试在 Azure 中获取的快�
       ```
 
    - 服务器证书
-      - 相应的服务器证书指纹已作为机密部署到 Azure KeyVault。 VS 将尝试在对应于虚拟机或虚拟机规模集资源的区域中找到或创建带有 MSVSAZ* 前缀的 KeyVault。 因此，部署到该区域的所有虚拟机或虚拟机规模集资源都将共享同一 KeyVault。
+      - 相应的服务器证书指纹已作为机密部署到 Azure KeyVault。 Visual Studio 将尝试在对应于虚拟机或虚拟机规模集资源的区域中找到或创建带有 MSVSAZ* 前缀的 KeyVault。 因此，部署到该区域的所有虚拟机或虚拟机规模集资源都将共享同一 KeyVault。
       - 若要删除服务器证书指纹机密，请转到 Azure 门户，然后在托管资源的同一区域中找到 MSVSAZ* KeyVault。 删除标记为 `remotedebugcert<<ResourceName>>` 的机密
       - 你还需要通过 PowerShell 从资源中删除服务器机密。
 

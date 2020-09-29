@@ -1,5 +1,6 @@
 ---
-title: 适用于负载测试运行设置的计时详细信息存储属性
+title: “计时详细信息存储”属性（负载测试运行设置）
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -9,12 +10,12 @@ ms.assetid: 867a9c21-0909-4963-bc02-d41e9393008c
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 0225ae23ed141b317d4424da573593d446766f43
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 132c55b4cd6f716d8983358064f749eabeb9ba88
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85287306"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810557"
 ---
 # <a name="how-to-specify-the-timing-details-storage-property-for-a-load-test-run-setting"></a>如何：为负载测试运行设置指定计时详细信息存储属性
 

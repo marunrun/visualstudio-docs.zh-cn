@@ -12,12 +12,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 6b53fb34b3cff444e57491f878f8385bdb523c6e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1269049adad3fe2d26caa79721452f7f313e60d5
+ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85285044"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90739897"
 ---
 # <a name="manage-npm-packages-in-visual-studio"></a>在 Visual Studio 中管理 npm 包
 
@@ -42,7 +42,7 @@ Visual Studio 与 npm 的集成因项目类型而异。
 
 ### <a name="prerequisites"></a>先决条件
 
-需要安装“Node.js 开发”工作负载和 Node.js 运行时，以便将 npm 支持添加到项目  。 有关详细步骤，请参阅[创建 Node.js 项目](/visualstudio/ide/quickstart-nodejs?toc=/visualstudio/javascript/toc.json)。
+需要安装“Node.js 开发”工作负载和 Node.js 运行时，以便将 npm 支持添加到项目  。 有关详细步骤，请参阅[创建 Node.js 项目](../ide/quickstart-nodejs.md?toc=%252fvisualstudio%252fjavascript%252ftoc.json)。
 
 > [!NOTE]
 > 对于现有的 Node.js 项目，请使用“基于现有 Node.js 代码”解决方案模板或 [Open folder (Node.js)](../javascript/develop-javascript-code-without-solutions-projects.md) 项目类型来在项目中启用 npm  。
@@ -86,12 +86,12 @@ npm 包显示在解决方案资源管理器中。 “npm”节点下的条目模
 
 * **安装新的 npm 包** 打开 UI 以安装新的包。
 * **安装 npm 包** 运行 npm 安装命令以安装 package.json 中列出的所有包  。 （运行 `npm install`。）
-* **更新 npm 包** 根据 package.json 指定的 SemVer 范围，将包更新到最新版本  。 （运行 `npm update --save`。）。 通常使用“~”或“^”指定 SemVer 范围。 有关详细信息，请参阅 [package.json 配置](../javascript/configure-packages-with-package-json.md)。
+* **更新 npm 包** 根据 package.json 指定的语义版本控制 (semver) 范围，将包更新到最新版本。 （运行 `npm update --save`。）。 通常使用“~”或“^”指定 SemVer 范围。 有关详细信息，请参阅 [package.json 配置](../javascript/configure-packages-with-package-json.md)。
 
 右键单击包节点，执行以下操作之一：
 
 * **安装 npm 包** 运行 npm 安装命令以安装 package.json 中列出的所有包版本  。 （运行 `npm install`。）
-* **更新 npm 包** 根据 package.json 指定的 SemVer 范围，将包更新到最新版本  。 （运行 `npm update --save`。）通常使用“~”或“^”指定 SemVer 范围。
+* **更新 npm 包** 根据 package.json 指定的 SemVer 范围，将包更新到最新版本。 （运行 `npm update --save`。）通常使用“~”或“^”指定 SemVer 范围。
 * **卸载 npm 包** 卸载包并将其从 package.json 中删除（运行 `npm uninstall --save`。） 
 ::: moniker-end
 ::: moniker range="vs-2017"
@@ -126,7 +126,7 @@ npm 包显示在解决方案资源管理器中。 “npm”节点下的条目模
 * [使用 package.json 安装包](#npmInstallPackage)
 
 >[!NOTE]
-> 对于 ASP.NET Core 项目，还可以使用[库管理器](https://docs.microsoft.com/aspnet/core/client-side/libman/?view=aspnetcore-3.1)或 yarn（而非 npm）来安装客户端 JavaScript 和 CSS 文件。
+> 对于 ASP.NET Core 项目，还可以使用[库管理器](/aspnet/core/client-side/libman/?view=aspnetcore-3.1)或 yarn（而非 npm）来安装客户端 JavaScript 和 CSS 文件。
 
 ### <a name="add-npm-support-to-a-project-aspnet-core"></a><a name="npmAdd"></a>向项目添加 npm 支持 (ASP.NET Core)
 
@@ -164,7 +164,7 @@ npm 包显示在解决方案资源管理器中。 “npm”节点下的条目模
 
 package.json 中的 IntelliSense 可帮助选择特定版本的 npm 包  。
 
-:::image type="content" source="../javascript/media/npm-add-package-intellisense.png" alt-text="选择 npm 包版本" border="true":::
+:::image type="content" source="../javascript/media/npm-add-package-intellisense.png" alt-text="从解决方案资源管理器安装新的 npm 包" border="true":::
 
 保存文件时，Visual Studio 会将包添加到解决方案资源管理器中的“依赖项/npm”节点下  。 如果未显示该节点，请右键单击“package.json”并选择“还原包”   。
 
@@ -181,4 +181,3 @@ package.json 中的 IntelliSense 可帮助选择特定版本的 npm 包  。
 * 在某些情况下，由于[此处](https://github.com/aspnet/Tooling/issues/479)所述的已知问题，解决方案资源管理器可能无法正确显示已安装 npm 包的状态。 例如，在安装包时，可能会显示为未安装。 在大多数情况下，可以通过删除 package.json，重启 Visual Studio 并重新添加 package.json 文件来更新解决方案资源管理器，如本文前面所述   。 也可在安装包时使用“npm 输出”窗口来验证安装状态。
 
 * 如果在生成应用或转译 TypeScript 代码时看到任何错误，请检查 npm 包是否由于潜在错误源而不兼容。 若要帮助识别错误，请在安装包时检查“npm 输出”窗口，如本文前面所述。 例如，如果所使用的一个或多个 npm 包版本是已弃用的版本，并导致发生错误，则可能需要安装较新版本以消除错误。 有关使用 package.json  控制 npm 包版本的信息，请参阅 [package.json 配置](../javascript/configure-packages-with-package-json.md)。
-

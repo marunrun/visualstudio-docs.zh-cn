@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 0fe9eaa4-f589-429e-a443-13bf86637d5a
-ms.date: 09/03/2020
+ms.date: 09/21/2020
 ms.topic: conceptual
 description: 了解如何在管理门户中设置语言、联系人、订阅级别等的首选项
-ms.openlocfilehash: 7f562e6ca0087a92fcc02550165aa32d23321955
-ms.sourcegitcommit: a3edc753c951f317b67ce294cd2fc74f0c45390c
+ms.openlocfilehash: 58819995966f5cdf17335de474e83d2a77eccc37
+ms.sourcegitcommit: 4affcf2830337e6aba84621c3eda5faf5d0d4a01
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89426782"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91022601"
 ---
 # <a name="set-preferences-for-your-agreements-in-the-administration-portal"></a>在管理门户中设置协议的首选项
 超级管理员可以在管理门户中设置某些首选项，这些首选项将全局应用于每个协议。  这些首选项将在管理员添加订阅者时为管理员自动填充订阅详细信息，并且只能由超级管理员进行全局修改。  
@@ -76,10 +76,10 @@ ms.locfileid: "89426782"
 - [Visual Studio 管理和订阅支持](https://visualstudio.microsoft.com/support/support-overview-vs)
 
 ## <a name="see-also"></a>请参阅
-- [Visual Studio 文档](https://docs.microsoft.com/visualstudio/)
-- [Azure DevOps 文档](https://docs.microsoft.com/azure/devops/)
-- [Azure 文档](https://docs.microsoft.com/azure/)
-- [Microsoft 365 文档](https://docs.microsoft.com/microsoft-365/)
+- [Visual Studio 文档](/visualstudio/)
+- [Azure DevOps 文档](/azure/devops/)
+- [Azure 文档](/azure/)
+- [Microsoft 365 文档](/microsoft-365/)
 
 ## <a name="next-steps"></a>后续步骤
 了解有关管理 Visual Studio 订阅的详细信息。
