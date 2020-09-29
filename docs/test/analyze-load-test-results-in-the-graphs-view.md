@@ -1,5 +1,6 @@
 ---
-title: 在负载测试分析器的关系图视图中分析负载测试结果
+title: 分析负载测试结果 - 关系图视图（负载测试分析器）
+ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: conceptual
 f1_keywords:
@@ -15,12 +16,12 @@ ms.assetid: 4a919cd8-541c-40ee-be3b-352fabc56140
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: dac639b8513e8ef675c6246476791b9351241130
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: b48162da7a753516ce0c1ae0dba4cfe1f94387e4
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75591263"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810648"
 ---
 # <a name="analyze-load-test-results-in-the-graphs-view-of-the-load-test-analyzer"></a>在负载测试分析器的关系图视图中分析负载测试结果
 

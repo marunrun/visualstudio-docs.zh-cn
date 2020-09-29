@@ -1,5 +1,6 @@
 ---
-title: 探查器命令行 - 检测以获取服务计时详细信息
+title: 探查器命令行 - 获取服务的计时数据
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: 6116e1df-ed3e-4b0d-ac7f-22f7d7ac00ea
@@ -9,12 +10,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 502ae620dc8641fabc8a5f6225b5673d5530c7f0
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.openlocfilehash: 9fa021ea7602b2268c720bf3e02bab0ed93af775
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85331795"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90810752"
 ---
 # <a name="collect-detailed-timing-data-for-services-by-using-the-instrumentation-method-from-the-profiler-command-line"></a>使用检测方法通过探查器命令行收集服务的详细计时数据
 本部分介绍从命令行使用检测方法收集 Windows 服务的详细性能数据的步骤和选项。

@@ -1,5 +1,6 @@
 ---
-title: 从命令行创建探查器报告 | Microsoft Docs
+title: 分析命令行 - 创建报告
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: c886f8af-2014-4fec-9b24-d98b68ecafb7
@@ -9,12 +10,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 475c8da2d10dea4953486fc9c564c5bde7fb0887
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5eb0f1fa0f9bbe760b1ea89074d02044cf26ab7d
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85329079"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90808820"
 ---
 # <a name="create-profiler-reports-from-the-command-line"></a>通过命令行创建探查器报告
 使用 VSPerfReport 命令行工具可从分析数据 (.vsp) 文件创建 .xml 或逗号分隔值 (.csv) 报告     。 VSPerfReport 报告类型非常类似基于表的 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 界面视图。 可以筛选报告，使之仅显示您的代码以及分析数据文件中的一段。 有关详细信息，请参阅 [VSPerfReport](../profiling/vsperfreport.md)。

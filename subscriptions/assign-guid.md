@@ -1,21 +1,23 @@
 ---
 title: 向 Visual Studio 订阅者分配特定 GUID | Microsoft Docs
 author: evanwindom
-ms.author: lank
-manager: lank
-ms.date: 04/20/2020
+ms.author: v-evwin
+manager: cabuschl
+ms.date: 09/21/2020
 ms.topic: conceptual
 description: 了解管理员如何将特定订阅 GUID 分配给订阅者
-ms.openlocfilehash: e6c50239721d810964f2b95e0ec3509999d2f4d5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 31544718683b10a186d4c38486bf0cd7923cd4cf
+ms.sourcegitcommit: 4affcf2830337e6aba84621c3eda5faf5d0d4a01
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "87235181"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91022471"
 ---
 # <a name="assign-specific-subscriptions-in-the-visual-studio-subscriptions-administration-portal"></a>在 Visual Studio 订阅管理门户中分配特定订阅
 
 管理员现可使用 Visual Studio 订阅管理门户为个人用户分配订阅。  在组织具有需要短期访问订阅的临时员工或供应商的情况下，这非常有用。  管理员可以分配已部分使用的订阅，让其新订阅的使用时间更长一点。  
+
+观看视频或继续阅读，了解如何将特定订阅 GUID 分配给用户。 
 
 <br>
 
@@ -57,7 +59,7 @@ ms.locfileid: "87235181"
 > - GUID 尚未分配给导出列表中的其他用户。 
 
 ## <a name="frequently-asked-questions"></a>常见问题
-### <a name="qhow-do-i-change-which-subscription-is-currently-assigned-to-an-individual-user"></a>问：如何更改当前分配给单个用户的订阅？
+### <a name="q-how-do-i-change-which-subscription-is-currently-assigned-to-an-individual-user"></a>问：如何更改当前分配给单个用户的订阅？
 答：如果要更改分配给用户的 GUID，必须首先删除该用户的订阅。  有关详细信息，请参阅[删除订阅](delete-license.md)一文。  删除该用户的订阅后，请使用上述过程导出列表并上传新的订阅信息。  
 
 ## <a name="see-also"></a>请参阅

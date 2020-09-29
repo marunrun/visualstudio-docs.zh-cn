@@ -1,23 +1,23 @@
 ---
 title: 将许可证分配给 Visual Studio 订阅的用户组 | Microsoft Docs
 author: evanwindom
-ms.author: lank
-manager: lank
+ms.author: v-evwin
+manager: cabuschl
 ms.assetid: c2853359-18fd-4be4-97a6-02230c862f92
-ms.date: 05/10/2020
+ms.date: 09/21/2020
 ms.topic: how-to
 description: 了解管理员如何使用批量添加功能或 Microsoft Azure Active Directory 组将许可证分配给多个订阅者
-ms.openlocfilehash: da7ce369e1d9aaa13b0c346005914b7f64ceb780
-ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
+ms.openlocfilehash: 6154e9796e1ba021eedf86bcee7d508e285b6645
+ms.sourcegitcommit: 4affcf2830337e6aba84621c3eda5faf5d0d4a01
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88249621"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91022387"
 ---
 # <a name="assign-subscriptions-to-multiple-users"></a>将订阅分配给多个用户
 你可以在订阅管理门户中一次添加一个多个用户，也可以采用大用户组形式添加。  要添加各个用户，请参阅[添加单个用户](assign-license.md)。
 
-若要添加大批量用户，可以使用批量添加功能，或者，如果你的组织使用的是 Microsoft Azure Active Directory (Azure AD)，则可以使用 Azure AD 组。 本文将介绍这两种方法的具体过程。 
+若要添加大批量用户，可以使用批量添加功能，或者，如果你的组织使用的是 Microsoft Azure Active Directory (Azure AD)，则可以使用 Azure AD 组。 本文将介绍这两种方法的具体过程。  观看此视频或继续阅读，了解有关批量添加功能的详细信息。 
 
 <br>
 
@@ -64,7 +64,8 @@ ms.locfileid: "88249621"
 
    如果失败，请按照以下步骤操作：
    1. 打开你创建的 Excel 文件、更正问题，然后保存文件。
-   0. 返回到管理门户，再选择“添加”。
+   0. 返回到管理门户并关闭错误消息。
+   0. 选择“添加”。
    0. 选择“批量添加”。
    0. 由于你已保存 Excel 文件，因此无需下载模板。  选择“浏览”，找到刚才保存的文件，然后选择“打开” 。
    0. 选择“确定” 。
@@ -89,6 +90,7 @@ ms.locfileid: "88249621"
 > - 组的所有成员都必须具有与其 Azure AD 帐户关联的电子邮件地址。
 > - 对于使用 Azure AD 组添加的订阅，不支持对通知使用不同的电子邮件地址。  
 
+观看此视频或继续阅读，了解有关使用 Azure Active Directory 组功能添加订阅者的详细信息。 
 <br>
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4rvvW]
@@ -130,10 +132,10 @@ ms.locfileid: "88249621"
 答：根据组织对 Azure AD 的配置，在看到已添加的用户之前，可能存在延迟（最多可能有 24 小时）。 如果延迟超过 24 小时，请[联系支持人员](https://visualstudio.microsoft.com/support/support-overview-vs)。  
 
 ## <a name="see-also"></a>请参阅
-- [Visual Studio 文档](https://docs.microsoft.com/visualstudio/)
-- [Azure DevOps 文档](https://docs.microsoft.com/azure/devops/)
-- [Azure 文档](https://docs.microsoft.com/azure/)
-- [Microsoft 365 文档](https://docs.microsoft.com/microsoft-365/)
+- [Visual Studio 文档](/visualstudio/)
+- [Azure DevOps 文档](/azure/devops/)
+- [Azure 文档](/azure/)
+- [Microsoft 365 文档](/microsoft-365/)
 
 ## <a name="next-steps"></a>后续步骤
 - 只有一两个订阅者要添加？  请查阅[添加单个用户](assign-license.md)

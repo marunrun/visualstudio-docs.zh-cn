@@ -1,5 +1,6 @@
 ---
-title: 性能不佳的多线程应用程序的常见模式 | Microsoft Docs
+title: 性能不佳的多线程应用的常见模式
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -11,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6a70e77b63aa923aa51188c3db8cb0feaaf6daf0
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 0f45c22684ef737de7235caebd4ad0b1b4189155
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90038499"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90808937"
 ---
 # <a name="common-patterns-for-poorly-behaved-multithreaded-applications"></a>性能不佳的多线程应用程序的常见模式
 

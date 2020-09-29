@@ -1,6 +1,6 @@
 ---
 title: 将探查器附加到 .NET 服务以收集内存数据
-ms.custom: seodec18
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: aeac39af-ad99-479f-aa36-4104356ca512
@@ -10,14 +10,14 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6552ca62be6de2e99b4e650daaa117e4025746cf
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 50a77d3cc8d2bb3df73542b273ec3697e0a9ccd9
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85328690"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90811066"
 ---
-# <a name="how-to-attach-the-profiler-to-a-net-service-to-collect-memory-data-by-using-the-command-line"></a>如何：将探查器附加到 .NET 服务，以使用命令行收集内存数据
+# <a name="how-to-attach-the-profiler-to-a-net-framework-service-to-collect-memory-data-by-using-the-command-line"></a>如何：使用命令行将探查器附加到 .NET Framework 服务以收集内存数据
 本文介绍如何使用 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 分析工具命令行工具将探查器附加 .NET Framework 服务并收集内存数据。 可以收集有关内存分配数量和大小的数据，还可以收集有关内存对象生存期的数据。
 
 > [!NOTE]

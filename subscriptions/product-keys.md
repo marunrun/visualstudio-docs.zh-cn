@@ -1,18 +1,18 @@
 ---
 title: 使用产品密钥 | Microsoft 文档
 author: evanwindom
-ms.author: lank
-manager: lank
+ms.author: v-evwin
+manager: cabuschl
 ms.assetid: 89e3fcf9-fe5d-4266-8dd7-5567d05fe869
-ms.date: 03/09/2020
+ms.date: 09/18/2020
 ms.topic: conceptual
 description: 了解如何获取和管理 Visual Studio 订阅中的产品密钥。
-ms.openlocfilehash: 10b09275dc1ba3d20e47c097888677e733e21ced
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 389a57fb2e8fe0ea6ee81ee163fed052c441c209
+ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84183920"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91005841"
 ---
 # <a name="using-product-keys-in-visual-studio-subscriptions"></a>使用 Visual Studio 订阅中的产品密钥
 
@@ -52,12 +52,12 @@ Microsoft 致力于维护 Visual Studio 订阅计划的完整性以及该计划�
 某些产品将其多个版本捆绑到单次下载中。 在这种情况下，输入的产品密钥决定安装的产品版本。
 某些密钥会自动提供，例如“静态”密钥，同一个密钥可以根据需要使用无数次，因为不需要激活。 其他密钥必须通过选择该产品的“获取密钥”链接来索取。
 > [!div class="mx-imgBorder"]
-> ![从“下载”页获取密钥](_img/product-keys/download-get-key.png)
+> ![从“下载”页获取密钥](_img/product-keys/download-get-key.png "单击“获取密钥”，为正在下载的产品声明一个密钥。")
 
 所有密钥都可在“[产品密钥](https://my.visualstudio.com/productkeys?wt.mc_id=o~msft~docs)”页查找到。 可在该页面找到适用于产品所有用户的静态密钥、获取仅供你使用的自定义密钥、查看密钥声明限制的状态以及导出所有产品密钥。 
 
 > [!div class="mx-imgBorder"]
-> ![产品密钥页](_img/product-keys/product-keys-page.png)
+> ![产品密钥页](_img/product-keys/product-keys-page.png "“产品密钥”页提供了特定订阅的完整产品密钥信息。")
 
 根据具体的产品，有多种密钥类型可供选择。
 
@@ -80,10 +80,10 @@ Microsoft 致力于维护 Visual Studio 订阅计划的完整性以及该计划�
 可从产品的下载页索取密钥，或者在[“产品密钥”](https://my.visualstudio.com/productkeys)页上搜索所需的密钥。
 
 ## <a name="see-also"></a>请参阅
-- [Visual Studio 文档](https://docs.microsoft.com/visualstudio/)
-- [Azure DevOps 文档](https://docs.microsoft.com/azure/devops/)
-- [Azure 文档](https://docs.microsoft.com/azure/)
-- [Microsoft 365 文档](https://docs.microsoft.com/microsoft-365/)
+- [Visual Studio 文档](/visualstudio/)
+- [Azure DevOps 文档](/azure/devops/)
+- [Azure 文档](/azure/)
+- [Microsoft 365 文档](/microsoft-365/)
 
 ## <a name="next-steps"></a>后续步骤
 要声明密钥，请访问 https://my.visualstudio.com/productkeys 。  

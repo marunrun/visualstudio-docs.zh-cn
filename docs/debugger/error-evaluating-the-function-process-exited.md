@@ -1,5 +1,5 @@
 ---
-title: 错误 - 评估函数“function”时，目标进程退出并生成代码“code”| Microsoft Docs
+title: 评估函数 &apos;function&apos; 时，目标进程退出并生成代码 &apos;code&apos; | Microsoft Docs
 ms.date: 4/06/2018
 ms.topic: error-reference
 f1_keywords:
@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 94effc8a5f75e7b38fb7275d175eb324c479a7a9
-ms.sourcegitcommit: de98ed7edc81383e47b87ae6e61143fbbbe7bc56
+ms.openlocfilehash: 97751ae2cbc44429bc1c0fb363366faa830beb68
+ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88711633"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90852727"
 ---
 # <a name="error-the-target-process-exited-with-code-39code39-while-evaluating-the-function-39function39"></a>错误：评估函数“function”时，目标进程退出并生成代码“code”
 

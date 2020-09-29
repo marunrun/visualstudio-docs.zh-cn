@@ -1,5 +1,6 @@
 ---
-title: 收集 .NET 内存分配数据和生存期数据 | Microsoft Docs
+title: 收集 .NET 内存分配和生存期数据
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,16 +12,16 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1c256fcedf3ea1733f620a18528704fe455d1131
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1354fb95b543e73a67d19204871f3b79aec9ece9
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85331719"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90809422"
 ---
-# <a name="collect-net-memory-allocation-and-lifetime-data"></a>收集 .NET 内存分配和生存期数据
+# <a name="collect-net-framework-memory-allocation-and-lifetime-data"></a>收集 .NET Framework 内存分配和生存期数据
 
-Visual Studio 分析工具支持收集 .NET 内存分配和对象生存期数据，此数据有助于检测应用程序中与内存相关的性能问题。
+Visual Studio 分析工具支持收集 .NET Framework 内存分配和对象生存期数据，此数据有助于检测应用程序中与内存相关的性能问题。
 
 - 有关 .NET 内存分配的数据包括所分配的 .NET Framework 内存对象的大小和数量。
 
