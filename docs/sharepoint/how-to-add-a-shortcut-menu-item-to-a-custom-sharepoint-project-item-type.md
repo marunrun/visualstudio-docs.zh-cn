@@ -1,5 +1,6 @@
 ---
 title: 向自定义 SharePoint 项目项类型添加快捷菜单项
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: eef99509048b1dd54576a20449b9d4f51c11439e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 39de735c09c97541684628c8e4140aa42d119500
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86014887"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91585870"
 ---
 # <a name="how-to-add-a-shortcut-menu-item-to-a-custom-sharepoint-project-item-type"></a>如何：向自定义 SharePoint 项目项类型添加快捷菜单项
   定义自定义 SharePoint 项目项类型时，可以将快捷菜单项添加到项目项。 当用户在 **解决方案资源管理器**中右键单击项目项时，将显示菜单项。

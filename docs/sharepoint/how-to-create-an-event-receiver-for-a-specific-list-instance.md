@@ -1,5 +1,6 @@
 ---
 title: 如何：为特定列表实例创建事件接收器 |Microsoft Docs
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 54c384742afba3d5af7f08ee62a9ec56c7f1438c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c37da8b798c3b6a0fdc093d5c443584f68b4b5cc
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016966"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91585831"
 ---
 # <a name="how-to-create-an-event-receiver-for-a-specific-list-instance"></a>如何：为特定列表实例创建事件接收器
   列表实例事件接收器对在列表定义的任何实例中发生的事件做出响应。 尽管事件接收器模板不启用特定列表实例的目标，但你可以修改作用域为列表定义的事件接收器，以响应特定列表实例中的事件。
