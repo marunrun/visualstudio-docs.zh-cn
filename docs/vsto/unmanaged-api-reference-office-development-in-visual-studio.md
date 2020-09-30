@@ -1,5 +1,6 @@
 ---
 title: 'Visual Studio 中的 Office 开发 (非托管 API 参考) '
+titleSuffix: ''
 ms.date: 08/14/2019
 ms.topic: reference
 dev_langs:
@@ -13,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 4c1616d24ae9b2c072df4e5708eb98e86611a83d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 79f48e7771b3e62c0c58fbc59bd9f9b534069d71
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85540980"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91584420"
 ---
 # <a name="unmanaged-api-reference-office-development-in-visual-studio"></a>Visual Studio 中的 Office 开发 (非托管 API 参考) 
 
@@ -26,7 +27,7 @@ ms.locfileid: "85540980"
 
 [!include[Add-ins note](includes/addinsnote.md)]
 
-## <a name="in-this-section"></a>本节内容
+## <a name="in-this-section"></a>在此部分中
 
 [IManagedAddin 接口](../vsto/imanagedaddin-interface.md)
 

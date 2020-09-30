@@ -1,5 +1,6 @@
 ---
 title: 演练：将文本从操作窗格插入到文档中
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 61e71f31ce887c7e1ea9ec57b0aa3f24a45be364
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5c65027d7670c4d6789f32eb4d9080df061d904a
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "90840815"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91584958"
 ---
 # <a name="walkthrough-insert-text-into-a-document-from-an-actions-pane"></a>演练：将文本从操作窗格插入到文档中
   本演练演示如何在 Microsoft Office Word 文档中创建操作窗格。 操作窗格包含两个控件，这些控件收集输入，然后将文本发送到文档。
@@ -61,7 +62,7 @@ ms.locfileid: "90840815"
 
     **2008年3月21日**
 
-    **名称**
+    **Name**
 
     **Address**
 
@@ -109,7 +110,7 @@ ms.locfileid: "90840815"
 
 4. 向操作窗格控件添加 **Textbox** 控件，并更改以下属性。
 
-    |Property|值|
+    |properties|值|
     |--------------|-----------|
     |**名称**|**getName**|
     |**大小**|**130, 20**|
@@ -118,7 +119,7 @@ ms.locfileid: "90840815"
 
 6. 将第二个 **Textbox** 控件添加到操作窗格控件，并更改以下属性。
 
-    |Property|值|
+    |properties|值|
     |--------------|-----------|
     |**名称**|**getAddress**|
     |**接受返回**|**True**|
@@ -127,10 +128,10 @@ ms.locfileid: "90840815"
 
 7. 向 "操作" 窗格控件添加 " **按钮** " 控件，并更改以下属性。
 
-    |Property|值|
+    |properties|值|
     |--------------|-----------|
     |**名称**|**Shapes.addtext**|
-    |**Text**|插入 |
+    |**Text**|**插入**|
 
 ## <a name="add-code-to-insert-text-into-the-document"></a>添加代码以在文档中插入文本
  在 "操作" 窗格中，编写将文本框中的文本插入 <xref:Microsoft.Office.Tools.Word.Bookmark> 文档中相应控件的代码。 您可以使用 `Globals` 类从 "操作" 窗格上的控件访问文档上的控件。 有关详细信息，请参阅 [对 Office 项目中对象的全局访问](../vsto/global-access-to-objects-in-office-projects.md)。
@@ -179,7 +180,7 @@ ms.locfileid: "90840815"
 
 - 将数据绑定到操作窗格上的控件。 有关详细信息，请参阅 [演练：将数据绑定到 Word 操作窗格上的控件](../vsto/walkthrough-binding-data-to-controls-on-a-word-actions-pane.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [操作窗格概述](../vsto/actions-pane-overview.md)
 - [如何：向 Word 文档或 Excel 工作簿添加操作窗格](../vsto/how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks.md)
 - [如何：向 Excel 工作簿添加操作窗格](/previous-versions/visualstudio/visual-studio-2010/e3zbk0hz(v=vs.100))

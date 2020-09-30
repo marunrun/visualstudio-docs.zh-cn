@@ -1,5 +1,6 @@
 ---
 title: Office 文档 Windows 窗体控件的限制
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -20,12 +21,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 81a7da585f49b2a2d1f7df4df11d0c78b7a35d69
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ade7da21a8d07fbd429a88303ad2be375877c1ec
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71251917"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91583731"
 ---
 # <a name="limitations-of-windows-forms-controls-on-office-documents"></a>Office 文档 Windows 窗体控件的限制
 
@@ -182,7 +183,7 @@ Windows 窗体控件在 Office 文档中的行为通常与 Windows 窗体上的�
 
 如果创建的文档级 Office 项目使用的是包含 ActiveX 控件的现有 Word 文档或 Excel 工作簿，则 ActiveX 控件的功能不会丢失;但是，不支持从 Visual Studio 中向文档添加新的 ActiveX 控件。 例如，如果 Word 文档的 " **控件** 工具箱" 中有一个按钮，该按钮运行 (VBA) 宏的 Visual Basic for Applications，则在 Office 项目中使用该文档后，该文档将继续运行该宏。 但是，建议删除 ActiveX 控件和 VBA 宏，并将其替换为 Windows 窗体控件和托管代码。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Office 文档上的控件](../vsto/controls-on-office-documents.md)
 - [Office 文档上的 Windows 窗体控件概述](../vsto/windows-forms-controls-on-office-documents-overview.md)

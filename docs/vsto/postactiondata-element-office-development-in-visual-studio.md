@@ -1,5 +1,6 @@
 ---
-title: '&lt;&gt;Visual Studio 中的 postActionData 元素 (Office 开发) '
+title: '&lt;postActionData &gt; 元素 (Office 开发) '
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: reference
 dev_langs:
@@ -14,14 +15,14 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 104af55fdc11b6afae757eff95a964dad83418a6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 85e1a02dbb85094cf84e1bba05e900d0e3f2c641
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85541864"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91583718"
 ---
-# <a name="ltpostactiondatagt-element-office-development-in-visual-studio"></a>&lt;&gt;Visual Studio 中的 postActionData 元素 (Office 开发) 
+# <a name="ltpostactiondatagt-element-office-development"></a>&lt;postActionData &gt; 元素 (Office 开发) 
   `postActionData` 命名空间的 `vstav3` 元素指定与任何部署后操作关联的数据，这些操作在 Office 解决方案安装后运行。
 
 ## <a name="syntax"></a>语法

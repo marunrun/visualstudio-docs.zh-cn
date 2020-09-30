@@ -18,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 2037842e57b6152990144d9ea652936e65517e13
-ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
+ms.openlocfilehash: 87312b5db9357462c822f876220cc239b79106aa
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90739949"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91585714"
 ---
 # <a name="profile-the-performance-of-sharepoint-applications"></a>分析 SharePoint 应用程序的性能
 
@@ -55,18 +55,18 @@ Web 性能测试模拟最终用户可能与 SharePoint 应用程序交互的方�
 
 ## <a name="test-user-interfaces"></a>测试用户界面
 
-编码的 UI 测试通过其用户界面 (UI) 自动驱动您的 SharePoint 应用程序。 这些测试涵盖了 UI 控件（如按钮和菜单）来验证它们是否正常工作。 如果在 UI 中执行验证或其他逻辑（例如在网页中），则这种测试特别有用。 你还可以使用编码的 UI 测试来自动执行手动测试。 为 SharePoint 应用程序创建编码的 UI 测试的方式与为其他类型的应用程序创建测试的方式相同。 有关详细信息，请参阅 [通过编码的 UI 测试来测试 SharePoint 2010 应用程序](../vs-2015/test/testing-sharepoint-2010-applications-with-coded-ui-tests.md?view=vs-2015)。
+编码的 UI 测试通过其用户界面 (UI) 自动驱动您的 SharePoint 应用程序。 这些测试涵盖了 UI 控件（如按钮和菜单）来验证它们是否正常工作。 如果在 UI 中执行验证或其他逻辑（例如在网页中），则这种测试特别有用。 你还可以使用编码的 UI 测试来自动执行手动测试。 为 SharePoint 应用程序创建编码的 UI 测试的方式与为其他类型的应用程序创建测试的方式相同。 有关详细信息，请参阅 [通过编码的 UI 测试来测试 SharePoint 2010 应用程序](../vs-2015/test/testing-sharepoint-2010-applications-with-coded-ui-tests.md?view=vs-2015&preserve-view=true)。
 
 ## <a name="related-topics"></a>相关主题
 
-|Title|描述|
+|Title|说明|
 |-----------|-----------------|
 |[演练：分析 SharePoint 应用程序](../sharepoint/walkthrough-profiling-a-sharepoint-application.md)|演示如何对 SharePoint 应用程序执行采样分析分析。|
-|[发布前对应用进行性能测试](/azure/devops/test/load-test/run-performance-tests-app-before-release?view=vsts)|介绍如何创建负载测试，从而帮助你对 SharePoint 应用程序进行压力测试。|
+|[发布前对应用进行性能测试](/azure/devops/test/load-test/run-performance-tests-app-before-release?view=vsts&preserve-view=true)|介绍如何创建负载测试，从而帮助你对 SharePoint 应用程序进行压力测试。|
 |[对代码进行单元测试](../test/unit-test-your-code.md)|介绍如何使用单元测试在代码中查找逻辑错误。|
-|[使用编码的 UI 测试来测试 SharePoint 2010 应用程序](../vs-2015/test/testing-sharepoint-2010-applications-with-coded-ui-tests.md?view=vs-2015)|介绍如何测试您的 SharePoint 应用程序的用户界面。|
+|[使用编码的 UI 测试来测试 SharePoint 2010 应用程序](../vs-2015/test/testing-sharepoint-2010-applications-with-coded-ui-tests.md?view=vs-2015&preserve-view=true)|介绍如何测试您的 SharePoint 应用程序的用户界面。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [生成和调试 SharePoint 解决方案](../sharepoint/building-and-debugging-sharepoint-solutions.md)
 - [提高代码质量](../test/improve-code-quality.md)

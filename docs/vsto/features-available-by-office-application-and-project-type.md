@@ -1,5 +1,6 @@
 ---
 title: 按 Office 应用程序和项目类型提供的功能
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -19,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 24344a643e9ec2b4a7bb90dc62df67209b3eb183
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: ba24bdeac9ad51d0173e765c8cb793be2473baf6
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90808176"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91585427"
 ---
 # <a name="features-available-by-office-application-and-project-type"></a>按 Office 应用程序和项目类型提供的功能
   Visual Studio 具有几种类型的项目模板，它们支持 Microsoft Office 应用程序的不同业务方案，包括以下类型：
@@ -49,7 +50,7 @@ ms.locfileid: "90808176"
 ## <a name="features-available-in-different-project-types"></a>不同项目类型中的可用功能
  下表显示了提供每项功能的项目类型。
 
-|Feature|提供该功能的项目类型|进一步阅读|
+|功能|提供该功能的项目类型|其他阅读材料|
 |-------------|--------------------------------------------|---------------------|
 |操作窗格。|文档级项目。|[操作窗格概述](../vsto/actions-pane-overview.md)|
 |ClickOnce 部署。|VS 与文档级项目。|[部署 Office 解决方案](../vsto/deploying-an-office-solution.md)|

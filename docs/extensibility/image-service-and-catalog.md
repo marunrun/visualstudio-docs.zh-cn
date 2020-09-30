@@ -8,12 +8,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 26d8a3c4f3458c3659ccdd3a4cde802293342e5c
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: a098e78e8895aea72d830a88e436a06f15de6133
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90011952"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91584537"
 ---
 # <a name="image-service-and-catalog"></a>映像服务和目录
 本指南包含的指南和最佳实践适用于 Visual studio 2015 中引入的 Visual Studio 映像服务和映像目录。
@@ -104,7 +104,7 @@ ms.locfileid: "90011952"
 |**子元素**|**定义**|
 |-|-|
 |导入|导入给定清单文件的符号，以便在当前清单中使用|
-|Guid|符号表示 GUID 并且必须与 GUID 格式匹配|
+|GUID|符号表示 GUID 并且必须与 GUID 格式匹配|
 |ID|符号表示 ID，必须为非负整数|
 |字符串|符号表示任意字符串值|
 
@@ -143,11 +143,11 @@ ms.locfileid: "90011952"
 
 |**Attribute**|**定义**|
 |-|-|
-|Guid|请求图像名字对象的 GUID 部分|
+|GUID|请求图像名字对象的 GUID 部分|
 |ID|请求图像名字对象的 ID 部分|
 |AllowColorInversion|[可选，默认值为 true]指示在深色背景上使用时，图像是否可以通过编程方式进行反转。|
 
- **源**
+ **Source**
 
  \<Source>元素定义单个图像源资产 (XAML 和 PNG) 。
 
@@ -195,7 +195,7 @@ ms.locfileid: "90011952"
 
 |**Attribute**|**定义**|
 |-|-|
-|Guid|请求图像名字对象的 GUID 部分|
+|GUID|请求图像名字对象的 GUID 部分|
 |ID|请求图像名字对象的 ID 部分|
 |外部|[可选，默认值为 false]指示图像名字对象是否引用当前清单中的图像。|
 
@@ -712,7 +712,7 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
 3. 更新你的代码，以便使用映像服务通过已更新的映射来请求名字对象。  (这可能意味着要更新到托管代码的 **CrispImages** ，或者从映像服务请求 HBITMAPs 或 HICONs，并将其传递给本机代码。 ) 
 
 ## <a name="testing-your-images"></a>测试映像
- 您可以使用 "图像库查看器" 工具来测试图像清单，以确保正确编写所有内容。 可在 [Visual Studio 2015 SDK](visual-studio-sdk.md)中找到该工具。 可在 [此处](./internals/vssdk-utilities.md?view=vs-2015)找到有关此工具和其他工具的文档。
+ 您可以使用 "图像库查看器" 工具来测试图像清单，以确保正确编写所有内容。 可在 [Visual Studio 2015 SDK](visual-studio-sdk.md)中找到该工具。 可在 [此处](./internals/vssdk-utilities.md?view=vs-2015&preserve-view=true)找到有关此工具和其他工具的文档。
 
 ## <a name="additional-resources"></a>其他资源
 
@@ -819,7 +819,7 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
 
   - 我正在更新完成列表提供程序。 哪些 **KnownMonikers** 与旧的 **StandardGlyphGroup** 和 **StandardGlyph** 值匹配？
 
-    |名称|名称|名称|
+    |“属性”|“属性”|“属性”|
     |-|-|-|
     |GlyphGroupClass|GlyphItemPublic|ClassPublic|
     |GlyphGroupClass|GlyphItemInternal|ClassInternal|

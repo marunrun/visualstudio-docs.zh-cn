@@ -12,12 +12,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 08513ef67dfdffbf70b5ce2ff449a9ceb4250c37
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: f32b7de4d3e62c2f1d9de5126217ccede48dfca8
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90012290"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91583692"
 ---
 # <a name="add-a-command-to-the-solution-explorer-toolbar"></a>将命令添加到解决方案资源管理器工具栏
 本演练演示如何将按钮添加到 **解决方案资源管理器** 工具栏中。
@@ -114,7 +114,7 @@ ms.locfileid: "90012290"
 
 5. 在 **“文件”** 菜单上，单击 **“关闭解决方案”** 。 该按钮将从工具栏中消失。
 
-   在加载 VSPackage 之前，按钮的可见性受控制 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 。 加载 VSPackage 后，该按钮的可见性由 VSPackage 控制。  有关详细信息，请参阅 [menucommand 与 OleMenuCommands](../vs-2015/misc/menucommands-vs-olemenucommands.md?view=vs-2015)。
+   在加载 VSPackage 之前，按钮的可见性受控制 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 。 加载 VSPackage 后，该按钮的可见性由 VSPackage 控制。  有关详细信息，请参阅 [menucommand 与 OleMenuCommands](../vs-2015/misc/menucommands-vs-olemenucommands.md?view=vs-2015&preserve-view=true)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [命令、菜单和工具栏](../extensibility/internals/commands-menus-and-toolbars.md)

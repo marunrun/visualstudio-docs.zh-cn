@@ -1,5 +1,6 @@
 ---
 title: 在运行时在 VSTO 外接程序项目中向工作表添加控件
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5bf2610ca1f3f3767082bf50953f821d37d1af2a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ec1d1361d7ca58d4292cbbb7bc4ea3b707a748ff
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71253898"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91584342"
 ---
 # <a name="walkthrough-add-controls-to-a-worksheet-at-run-time-in-vsto-add-in-project"></a>演练：在运行时在 VSTO 外接程序项目中向工作表添加控件
   可通过使用 Excel VSTO 外接程序向任何打开的工作表添加控件。 本演练演示如何利用功能区使用户能够向工作表添加 <xref:Microsoft.Office.Tools.Excel.Controls.Button>、<xref:Microsoft.Office.Tools.Excel.NamedRange> 和 <xref:Microsoft.Office.Tools.Excel.ListObject>。 有关信息，请参阅 [在运行时向 Office 文档添加控件](../vsto/adding-controls-to-office-documents-at-run-time.md)。
@@ -70,24 +71,24 @@ ms.locfileid: "71253898"
 
 5. 在 **“属性”** 窗口中，更改下列属性。
 
-    |属性|值|
+    |properties|值|
     |--------------|-----------|
     |**名称**|**Button**|
-    |**标签**|**Button**|
+    |**Label**|**Button**|
 
 6. 将第二个复选框添加到 **group1**，然后更改下列属性。
 
-    |属性|值|
+    |properties|值|
     |--------------|-----------|
     |**名称**|**NamedRange**|
-    |**标签**|**NamedRange**|
+    |**Label**|**NamedRange**|
 
 7. 将第三个复选框添加到 **group1**，然后更改以下属性。
 
-    |属性|值|
+    |properties|值|
     |--------------|-----------|
     |**名称**|**ListObject**|
-    |**标签**|**ListObject**|
+    |**Label**|**ListObject**|
 
 ## <a name="add-controls-to-the-worksheet"></a>向工作表添加控件
  托管的控件只能添加到主机项，充当容器。 因为 VSTO 外接程序项目使用任何打开的工作簿，所以 VSTO 外接程序会将工作表转换为主机项，或获取现有的主机项，然后才添加控件。 将代码添加到每个控件的单击事件处理程序中以生成基于打开的工作表的 <xref:Microsoft.Office.Tools.Excel.Worksheet> 主机项。 然后，在工作表当前所选内容中添加 <xref:Microsoft.Office.Tools.Excel.Controls.Button>、<xref:Microsoft.Office.Tools.Excel.NamedRange> 和 <xref:Microsoft.Office.Tools.Excel.ListObject>。

@@ -1,5 +1,6 @@
 ---
 title: 用项模板创建自定义操作项目项（第2部分）
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +12,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c96546f85b21ee0ca8a559059a16158b743cb915
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 957af3fdb4a86f4973ff8ac24251bae923ec299c
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016101"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91585466"
 ---
 # <a name="walkthrough-create-a-custom-action-project-item-with-an-item-template-part-2"></a>演练：使用项模板创建自定义操作项目项（第2部分）
   在定义自定义类型的 SharePoint 项目项并将其与 Visual Studio 中的项模板关联后，你可能还需要为模板提供向导。 当用户使用模板向项目添加项目项的新实例时，可以使用该向导收集用户的信息。 你收集的信息可用于初始化项目项。
@@ -213,7 +214,7 @@ ms.locfileid: "86016101"
 ## <a name="add-replaceable-parameters-to-the-elementsxml-file-in-the-item-template"></a>将可替换参数添加到项模板中的 *Elements.xml* 文件
  向 ItemTemplate 项目中的 *Elements.xml* 文件添加几个可替换参数。 这些参数在 `PopulateReplacementDictionary` 之前定义的类的方法中进行初始化 `CustomActionWizard` 。 当用户将自定义操作项目项添加到项目时，Visual Studio 会自动将新项目项的 *Elements.xml* 文件中的这些参数替换为在向导中指定的值。
 
- 可替换参数是以美元符号 ($) 字符开头和结尾的令牌。 除了定义你自己的可替换参数外，还可以使用 SharePoint 项目系统定义和初始化的内置参数。 有关详细信息，请参阅可 [替换参数](../sharepoint/replaceable-parameters.md)。
+ 可替换参数是以美元符号 ($) 字符开头和结尾的令牌。 除了定义你自己的可替换参数外，还可以使用 SharePoint 项目系统定义和初始化的内置参数。 有关详细信息，请参阅[可替换参数](../sharepoint/replaceable-parameters.md)。
 
 #### <a name="to-add-replaceable-parameters-to-the-elementsxml-file"></a>向 *Elements.xml* 文件添加可替换参数
 

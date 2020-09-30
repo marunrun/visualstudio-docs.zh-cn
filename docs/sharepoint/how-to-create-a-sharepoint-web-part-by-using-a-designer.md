@@ -1,5 +1,6 @@
 ---
 title: 如何：使用设计器创建 SharePoint Web 部件 |Microsoft Docs
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 0830cec748d68f010397c42334a5ed83365ee6b7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: d19822237f61d5404f42e30078541a735eb206bc
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016485"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91584108"
 ---
 # <a name="how-to-create-a-sharepoint-web-part-by-using-a-designer"></a>如何：使用设计器创建 SharePoint Web 部件
   您可以通过向任何 SharePoint 项目添加 " **可视 Web 部件** " 项来创建 web 部件。 这会打开 visual Studio 中的 Visual Web Developer 设计器，你可以在其中向 Web 部件添加控件和代码。 可视化 web 部件的工作方式与 web 部件的工作方式相同。 唯一的区别是，在 Visual Web Developer 设计器中设计可视 web 部件。
@@ -51,7 +52,7 @@ ms.locfileid: "86016485"
      在 **解决方案资源管理器**中，将显示你的 web 部件。 在 Visual Web Developer 设计器中设计 web 部件之后，您将在您指定的站点上对其进行测试。
 
 ## <a name="see-also"></a>另请参阅
-- [为 SharePoint 创建 web 部件](../sharepoint/creating-web-parts-for-sharepoint.md)
-- [如何：创建 SharePoint web 部件](../sharepoint/how-to-create-a-sharepoint-web-part.md)
-- [演练：为 SharePoint 创建 web 部件](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint.md)
-- [演练：使用设计器为 SharePoint 创建 web 部件](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint-by-using-a-designer.md)
+- [为 SharePoint 创建 Web 部件](../sharepoint/creating-web-parts-for-sharepoint.md)
+- [如何：创建 SharePoint Web 部件](../sharepoint/how-to-create-a-sharepoint-web-part.md)
+- [演练：为 SharePoint 创建 Web 部件](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint.md)
+- [演练：使用设计器为 SharePoint 创建 Web 部件](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint-by-using-a-designer.md)
