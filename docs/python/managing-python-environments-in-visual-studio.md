@@ -9,12 +9,12 @@ manager: jillfra
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 9416862ad18bc297696e765d6664a4d08f2cc8dc
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: f331c794c50d6b6573ad9708da6d153c77f4d77c
+ms.sourcegitcommit: 13cf7569f62c746708a6ced1187d8173eda7397c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809906"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352344"
 ---
 # <a name="how-to-create-and-manage-python-environments-in-visual-studio"></a>如何在 Visual Studio 中创建和管理 Python 环境
 
@@ -124,7 +124,7 @@ Visual Studio 可使用全局、虚拟和 conda 环境。
 
 Visual Studio 为创建项目的虚拟环境提供直接支持。 例如，如果打开包含 requirements.txt 的项目，或者通过包含该文件的模板创建项目，Visual Studio 会提示你自动创建虚拟环境并安装这些依赖项  。
 
-在打开的项目中，可随时创建新的虚拟环境。 在“解决方案资源管理器”中，展开项目节点，右键单击“Python 环境”并选择“添加虚拟环境”   。 有关详细信息，请参阅[创建虚拟环境](./selecting-a-python-environment-for-a-project.md?view=vs-2019#create-a-virtual-environment-1)。
+在打开的项目中，可随时创建新的虚拟环境。 在“解决方案资源管理器”中，展开项目节点，右键单击“Python 环境”并选择“添加虚拟环境”   。 有关详细信息，请参阅[创建虚拟环境](./selecting-a-python-environment-for-a-project.md?view=vs-2019&preserve-view=true#create-a-virtual-environment-1)。
 
 Visual Studio 还提供可从虚拟环境生成 requirements.txt 文件的命令，简化了在其他计算机上重新创建环境的过程  。 有关详细信息，请参阅[使用虚拟环境](selecting-a-python-environment-for-a-project.md#use-virtual-environments)。
 
@@ -239,7 +239,7 @@ conda 环境文件夹如下所示：
 
     ![“添加环境”对话框中的“自定义环境”选项](media/environments/environments-custom-2-2019.png)
 
-1. 在对话框中提供的字段中，输入或浏览（使用 ...  ）到“前缀路径”下的解释器路径  ，它将填充大多数其他字段。 在检查这些值并根据需要修改后，选择“添加”  。 
+1. 在对话框中提供的字段中，输入或浏览（使用 ...  ）到“前缀路径”下的解释器路径  ，它将填充大多数其他字段。 在检查这些值并根据需要修改后，选择“添加”  。
 
     ![用于在“添加环境”对话框中指定自定义环境选项详细信息的字段](media/environments/environments-custom-3-2019.png)
 
@@ -271,7 +271,7 @@ conda 环境文件夹如下所示：
     - 如果计算机上仍存在该环境，请将 ExecutablePath 的值更改为正确位置  。 还根据需要更正“(默认)”值和 WindowedExecutablePath 值   。
     - 如果计算机上不再存在该环境，且想将其从“Python 环境”窗口中删除，请删除 InstallPath 的父节点，例如上图中的 3.6    。
     - HKEY_CURRENT_USER\SOFTWARE\Python 中的无效设置替代 HKEY_LOCAL_MACHINE\SOFTWARE\Python 中的设置
-    
+
 ## <a name="see-also"></a>请参阅
 
 - [安装 Python 解释器](installing-python-interpreters.md)

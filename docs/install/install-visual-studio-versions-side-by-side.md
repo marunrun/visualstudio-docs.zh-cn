@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: ornellaalt
 ms.author: ornella
 manager: jillfra
-ms.openlocfilehash: b0e5a2d09cad35266bacc73580b2284f66bd32f5
-ms.sourcegitcommit: d97d72308ef306e7f28c3a76913caee4ff450bbb
+ms.openlocfilehash: 1a57d124029f5c654d41dcea621d6df95e29842f
+ms.sourcegitcommit: da7f093db52df5dcd67e0a030e616b307f0dc2a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90713459"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91211308"
 ---
 # <a name="install-visual-studio-versions-side-by-side"></a>并排安装 Visual Studio 版本
 
@@ -28,7 +28,7 @@ ms.locfileid: "90713459"
 
 * 如果使用 Visual Studio 2017 打开在 Visual Studio 2015 中创建的解决方案，则稍后可以在旧版本中再次打开和修改该解决方案，前提是你没有执行任何 Visual Studio 2017 特有的功能。
 
-* 如果你尝试使用 Visual Studio 2017 打开在 Visual Studio 2015 或更早的版本中创建的解决方案，则可能需要修改你的项目和文件才能与 Visual Studio 2017 兼容。 有关详细信息，请参阅[移植、迁移和升级 Visual Studio 项目](../porting/port-migrate-and-upgrade-visual-studio-projects.md?view=vs-2017)页。
+* 如果你尝试使用 Visual Studio 2017 打开在 Visual Studio 2015 或更早的版本中创建的解决方案，则可能需要修改你的项目和文件才能与 Visual Studio 2017 兼容。 有关详细信息，请参阅[移植、迁移和升级 Visual Studio 项目](../porting/port-migrate-and-upgrade-visual-studio-projects.md?view=vs-2017&preserve-view=true)页。
 
 ::: moniker-end
 
@@ -75,17 +75,17 @@ Visual Basic、Visual C# 和 Visual F# 项目使用“项目设计器”中的�
 
 | 语言 | 主题 |
 |--------------|-----------|
-| Visual Basic | [“项目设计器”->“应用程序”页 (Visual Basic)](../ide/reference/application-page-project-designer-visual-basic.md?view=vs-2017) |
-| Visual C# | [“项目设计器”->“应用程序”页 (C#)](../ide/reference/application-page-project-designer-csharp.md?view=vs-2017) |
-| Visual F# | [在 Visual Studio 中使用 Visual F# 进行开发](../ide/fsharp-visual-studio.md?view=vs-2017) |
+| Visual Basic | [“项目设计器”->“应用程序”页 (Visual Basic)](../ide/reference/application-page-project-designer-visual-basic.md?view=vs-2017&preserve-view=true) |
+| Visual C# | [“项目设计器”->“应用程序”页 (C#)](../ide/reference/application-page-project-designer-csharp.md?view=vs-2017&preserve-view=true) |
+| Visual F# | [在 Visual Studio 中使用 Visual F# 进行开发](../ide/fsharp-visual-studio.md?view=vs-2017&preserve-view=true) |
 |C++ | [如何：修改目标框架和平台工具集](/cpp/build/how-to-modify-the-target-framework-and-platform-toolset/) |
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
 ## <a name="see-also"></a>请参阅
 
-* [安装 Visual Studio](install-visual-studio.md?view=vs-2017)
-* [移植、迁移和升级 Visual Studio 项目](../porting/port-migrate-and-upgrade-visual-studio-projects.md?view=vs-2017)
+* [安装 Visual Studio](install-visual-studio.md?view=vs-2017&preserve-view=true)
+* [移植、迁移和升级 Visual Studio 项目](../porting/port-migrate-and-upgrade-visual-studio-projects.md?view=vs-2017&preserve-view=true)
 * [生成 C/C++ 独立应用程序和并行程序集](/cpp/build/building-c-cpp-isolated-applications-and-side-by-side-assemblies/)
 
 ::: moniker-end

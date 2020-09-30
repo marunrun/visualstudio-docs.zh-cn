@@ -15,12 +15,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6c864a10af9ad15d47e2342bb148af464b8f2a0d
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 068c80221a572747ab99e41e78945fe55c57c451
+ms.sourcegitcommit: da7f093db52df5dcd67e0a030e616b307f0dc2a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75591497"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91211256"
 ---
 # <a name="options-dialog-box-visual-studio"></a>“选项”对话框 (Visual Studio)
 
@@ -33,16 +33,12 @@ ms.locfileid: "75591497"
 在一个 IDE 功能加载到内存之前，该功能的选项不会显示在导航窗格中。 因此，如果在结束一个会话的同时开始一个新的会话，可能不会显示之前的选项。 创建项目或运行使用特定应用程序的命令时，相关选项的节点将添加到“选项”对话框中。 只要 IDE 功能保留在内存中，这些添加的选项将保持可用。
 
 > [!NOTE]
-> 某些设置集合会限定显示在“选项”对话框的导航窗格中的页面数。 可以通过选择“显示所有设置”  ，来选择查看所有可能的页面。
+> 某些设置集合会限定显示在“选项”对话框的导航窗格中的页面数。
 
 ## <a name="how-options-are-applied"></a>如何应用选项
 
-在“选项”  对话框中单击“确定”将保存所有页面上的所有设置。 单击任意页面上的“取消”将取消所有更改请求，包括刚刚在其他“选项”  页面上所做的更改。 对选项设置（例如[“字体和颜色”、“环境”、“选项”对话框](../../ide/reference/fonts-and-colors-environment-options-dialog-box.md)）所做的某些更改只有在关闭并重新打开 Visual Studio 后才会生效。
+在“选项”**** 对话框中单击“确定”将保存所有页面上的所有设置。 单击任意页面上的“取消”将取消所有更改请求，包括刚刚在其他“选项”**** 页面上所做的更改。 对选项设置（例如[“字体和颜色”、“环境”、“选项”对话框](../../ide/reference/fonts-and-colors-environment-options-dialog-box.md)）所做的某些更改只有在关闭并重新打开 Visual Studio 后才会生效。
 
-### <a name="show-all-settings"></a>显示所有设置
-
-选择或取消选择“显示所有设置”  将应用在“选项”  对话框中所做的所有更改，即使尚未单击“确定”  亦是如此。
-
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [自定义编辑器](../how-to-change-text-case-in-the-editor.md)

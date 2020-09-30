@@ -8,12 +8,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2def56c6a3860ce0476f448f87bdde25c7970807
-ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
+ms.openlocfilehash: 7b811cc3538e3bbb108e50acf50c2fe7a977fe3d
+ms.sourcegitcommit: da7f093db52df5dcd67e0a030e616b307f0dc2a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393537"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91211282"
 ---
 # <a name="debug-and-analyze-unit-tests-with-test-explorer"></a>使用测试资源管理器调试和分析单元测试
 
@@ -38,11 +38,11 @@ ms.locfileid: "86393537"
 ## <a name="diagnose-test-method-performance-issues"></a>诊断测试方法性能问题
 
 ::: moniker range="vs-2017"
-若要诊断测试方法为何花费过多时间，请在测试资源管理器中依次选择方法和右键单击菜单中的“配置文件选定测试”。 请参阅[检测分析报告](../profiling/understanding-instrumentation-data-values.md?view=vs-2017)。
+若要诊断测试方法为何花费过多时间，请在测试资源管理器中依次选择方法和右键单击菜单中的“配置文件选定测试”。 请参阅[检测分析报告](../profiling/understanding-instrumentation-data-values.md?view=vs-2017&preserve-view=true)。
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
-若要诊断测试方法为何花费过多时间，请在测试资源管理器中依次选择方法和右键单击菜单中的“配置文件”。 请参阅[检测分析报告](../profiling/understanding-instrumentation-data-values.md?view=vs-2017)。
+若要诊断测试方法为何花费过多时间，请在测试资源管理器中依次选择方法和右键单击菜单中的“配置文件”。 请参阅[检测分析报告](../profiling/understanding-instrumentation-data-values.md?view=vs-2017&preserve-view=true)。
 ::: moniker-end
 
 > [!NOTE]

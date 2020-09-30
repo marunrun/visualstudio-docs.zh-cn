@@ -8,12 +8,12 @@ ms.topic: include
 ms.date: 05/23/2018
 ms.author: mikejo
 ms.custom: include file
-ms.openlocfilehash: 1e90a1d9e03892cf81bd2257d3dcc6e25ab36246
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 86bc2a1b73b492dc5f8d9977f05c3b2ba0dde6dc
+ms.sourcegitcommit: 13cf7569f62c746708a6ced1187d8173eda7397c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89327160"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91376500"
 ---
 在要调试的远程设备或服务器上（而不是 Visual Studio 计算机上），请从下表中的链接下载并安装正确的远程工具版本。
 
@@ -36,7 +36,7 @@ ms.locfileid: "89327160"
 
 |Version|链接|说明|
 |-|-|-|
-|Visual Studio 2017|[远程工具](https://my.visualstudio.com/Downloads?q=remote%20tools%20visual%20studio%202017)|兼容所有 Visual Studio 2017 版本。 下载与设备操作系统（x86、x64 或 ARM64）匹配的版本。 在 Windows 服务器上，请参阅[取消阻止文件下载](../../debugger/remote-debugging-unblock-file-download.md)，获取有关下载远程工具的帮助。 有关最新版本远程工具的信息，请打开 [Visual Studio 2019 文档](../../debugger/remote-debugging.md?view=vs-2019)。|
+|Visual Studio 2017|[远程工具](https://my.visualstudio.com/Downloads?q=remote%20tools%20visual%20studio%202017)|兼容所有 Visual Studio 2017 版本。 下载与设备操作系统（x86、x64 或 ARM64）匹配的版本。 在 Windows 服务器上，请参阅[取消阻止文件下载](../../debugger/remote-debugging-unblock-file-download.md)，获取有关下载远程工具的帮助。 有关最新版本远程工具的信息，请打开 [Visual Studio 2019 文档](../../debugger/remote-debugging.md?view=vs-2019&preserve-view=true)。|
 |Visual Studio 2015|[远程工具](https://my.visualstudio.com/Downloads?q=remote%20tools%20visual%20studio%202015)|Visual Studio 2015 的远程工具可从 My.VisualStudio.com 获取。 如果出现提示，请加入免费的 [Visual Studio Dev Essentials](https://visualstudio.microsoft.com/dev-essentials/) 计划，或使用 Visual Studio 订阅 ID 登录。 在 Windows 服务器上，请参阅[取消阻止文件下载](../../debugger/remote-debugging-unblock-file-download.md)，获取有关下载远程工具的帮助。|
 |Visual Studio 2013|[远程工具](/previous-versions/visualstudio/visual-studio-2013/bt727f1t(v=vs.120)#installing-the-remote-tools)|Visual Studio 2013 文档中的下载页面|
 |Visual Studio 2012|[远程工具](/previous-versions/visualstudio/visual-studio-2012/bt727f1t(v=vs.110)#installing-the-remote-tools)|Visual Studio 2012 文档中的下载页面|

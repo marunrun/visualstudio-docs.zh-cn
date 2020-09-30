@@ -14,16 +14,16 @@ monikerRange: vs-2017
 ms.workload:
 - uwp
 - cordova
-ms.openlocfilehash: b30b59b95b09cac8308474b2b2963f9b96d58146
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 301461caa15321b5a77f42872c93f52f3ec2c9c1
+ms.sourcegitcommit: da7f093db52df5dcd67e0a030e616b307f0dc2a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72731701"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91211269"
 ---
 # <a name="javascript-console-commands-in-visual-studio"></a>Visual Studio 中的 JavaScript 控制台命令
 
-你可以在 Visual Studio 的“JavaScript 控制台”窗口中使用命令发送消息和执行其他任务。 有关如何使用该窗口的示例，请参阅[快速入门：调试 JavaScript](../debugger/quickstart-debug-javascript-using-the-console.md?view=vs-2017)。 本主题中的信息适用于 Node.js 应用、UWP 应用，以及使用 Visual Studio Tools for Apache Cordova 创建的应用。
+你可以在 Visual Studio 的“JavaScript 控制台”窗口中使用命令发送消息和执行其他任务。 有关如何使用该窗口的示例，请参阅[快速入门：调试 JavaScript](../debugger/quickstart-debug-javascript-using-the-console.md?view=vs-2017&preserve-view=true)。 本主题中的信息适用于 Node.js 应用、UWP 应用，以及使用 Visual Studio Tools for Apache Cordova 创建的应用。
 
 如果“JavaScript 控制台”窗口已关闭，可在 Visual Studio 中调试时，选择“调试” > “窗口” > “JavaScript 控制台”将其打开  。
 
@@ -127,5 +127,5 @@ console.log("%s is %f years old!", user.first, user.age);
 ```
 
 ## <a name="see-also"></a>请参阅
-- [快速入门：调试 JavaScript](../debugger/quickstart-debug-javascript-using-the-console.md?view=vs-2017)
-- [快速入门：调试 HTML 和 CSS](../debugger/quickstart-debug-html-and-css.md?view=vs-2017)
+- [快速入门：调试 JavaScript](../debugger/quickstart-debug-javascript-using-the-console.md?view=vs-2017&preserve-view=true)
+- [快速入门：调试 HTML 和 CSS](../debugger/quickstart-debug-html-and-css.md?view=vs-2017&preserve-view=true)

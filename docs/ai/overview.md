@@ -8,12 +8,12 @@ ms.date: 11/13/2017
 ms.topic: overview
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f4d04e64589ca8db9c53d5c4128391974b297d0
-ms.sourcegitcommit: fb8babf5cd72f1fc2f97ffe4ad7b62d91f325f61
+ms.openlocfilehash: b4f2f9b1e827bc7bcb53f37693b811dcaecf1d09
+ms.sourcegitcommit: da7f093db52df5dcd67e0a030e616b307f0dc2a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89485380"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91211045"
 ---
 # <a name="overview-of-visual-studio-tools-for-ai"></a>Visual Studio Tools for AI 概述
 
@@ -23,7 +23,7 @@ Visual Studio Tools for AI 是用于构建、测试和部署深度学习解决�
 
 请参阅[安装 Visual Studio Tools for AI](installation.md) 页面，了解如何下载和安装扩展。
 
-## <a name="5-minute-quickstart"></a>5 分钟快速入门 
+## <a name="5-minute-quickstart"></a>5 分钟快速入门
 
 通过 [TensorFlow 和 Python](tensorflow-local.md) 了解如何运行深度学习解决方案
 
@@ -40,4 +40,4 @@ Visual Studio Tools for AI 是用于构建、测试和部署深度学习解决�
 要详细了解 Visual Studio Tools for AI（包括系统要求和支持选项），请参阅[关于 Visual Studio Tools for AI](about-ai-tools.md) 页面。
 
 ## <a name="see-also"></a>请参阅
-[Visual Studio 扩展性](../extensibility/index.yml?view=vs-2017)
+[Visual Studio 扩展性](../extensibility/index.yml?view=vs-2017&preserve-view=true)

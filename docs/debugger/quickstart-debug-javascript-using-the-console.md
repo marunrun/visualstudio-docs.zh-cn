@@ -16,16 +16,16 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: e56350c2fd0583d3fef4e77e559a4df1fd894663
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: aca36c56bfeed4fd5d8b240cce6bea5b55b75d85
+ms.sourcegitcommit: da7f093db52df5dcd67e0a030e616b307f0dc2a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85348101"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91211071"
 ---
 # <a name="debug-javascript-using-the-console-in-visual-studio"></a>在 Visual Studio 中使用控制台调试 JavaScript
 
-可以使用 JavaScript 控制台窗口中与使用 JavaScript 生成的 UWP 应用进行交互并对它进行调试。 这些功能支持 UWP 应用以及使用用于 Apache Cordova 的 Visual Studio 工具创建的应用。 有关控制台命令参考的信息，请参见 [JavaScript Console commands](../debugger/javascript-console-commands.md?view=vs-2017)。
+可以使用 JavaScript 控制台窗口中与使用 JavaScript 生成的 UWP 应用进行交互并对它进行调试。 这些功能支持 UWP 应用以及使用用于 Apache Cordova 的 Visual Studio 工具创建的应用。 有关控制台命令参考的信息，请参见 [JavaScript Console commands](../debugger/javascript-console-commands.md?view=vs-2017&preserve-view=true)。
 
 “JavaScript 控制台”窗口允许你执行以下操作：
 
@@ -39,7 +39,7 @@ ms.locfileid: "85348101"
 
 - 查看 JavaScript 错误和异常，以及文档对象模型 (DOM) 和 Windows 运行时异常。
 
-- 执行其他任务，如清除屏幕。 有关完整的命令列表，请参见 [JavaScript Console commands](../debugger/javascript-console-commands.md?view=vs-2017) 。
+- 执行其他任务，如清除屏幕。 有关完整的命令列表，请参见 [JavaScript Console commands](../debugger/javascript-console-commands.md?view=vs-2017&preserve-view=true) 。
 
 > [!TIP]
 > 如果 JavaScript 控制台窗口处于关闭状态，请依次选择“调试” >  >  以重新打开它。 该窗口仅在脚本调试会话期间出现。
@@ -251,9 +251,9 @@ JavaScript 控制台窗口允许一次与单个执行上下文（表示 Web 平�
 
 ## <a name="see-also"></a>请参阅
 - [在 Visual Studio 中调试应用](debugging-windows-store-and-windows-universal-apps.md)
-- [JavaScript Console commands](../debugger/javascript-console-commands.md?view=vs-2017)
+- [JavaScript Console commands](../debugger/javascript-console-commands.md?view=vs-2017&preserve-view=true)
 - [刷新应用 (JavaScript)](../debugger/refresh-an-app-javascript.md)
-- [键盘快捷键](../debugger/keyboard-shortcuts-html-and-javascript.md?view=vs-2017)
+- [键盘快捷键](../debugger/keyboard-shortcuts-html-and-javascript.md?view=vs-2017&preserve-view=true)
 - [调试 HTML、CSS 和 JavaScript 示例代码](../debugger/debug-html-css-and-javascript-sample-code.md)
 - [快速入门：调试 HTML 和 CSS](../debugger/quickstart-debug-html-and-css.md)
 - [调试 WebView 控件](../debugger/debug-a-webview-control.md)
