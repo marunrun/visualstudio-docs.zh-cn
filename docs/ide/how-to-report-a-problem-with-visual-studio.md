@@ -9,12 +9,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b2deb3f8ff19c2d7805031c0c3ba02bc82b8a3e7
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: d8e0718eb01f422ad435492304e77d73c14b4dee
+ms.sourcegitcommit: da7f093db52df5dcd67e0a030e616b307f0dc2a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810869"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91211170"
 ---
 # <a name="how-to-report-a-problem-with-visual-studio-or-visual-studio-installer"></a>如何报告 Visual Studio 或 Visual Studio 安装程序的问题
 
@@ -51,11 +51,11 @@ ms.locfileid: "90810869"
 
     你甚至可以直接在浏览器中裁剪屏幕截图，以删除任何敏感或无关的部分。
 
-4. 要帮助 Visual Studio 工程团队解决问题，最佳方法之一是提供跟踪和堆转储文件供其查看。 可以通过记录导致 bug 的步骤轻松执行此操作。 
+4. 要帮助 Visual Studio 工程团队解决问题，最佳方法之一是提供跟踪和堆转储文件供其查看。 可以通过记录导致 bug 的步骤轻松执行此操作。
 
     ![记录你的操作](../ide/media/feedback-recording.png)仅 Microsoft 工程师可以查看该记录
 
-5. 查看附加的文件，并上传其他文件（如果你认为这有助于诊断问题）。   
+5. 查看附加的文件，并上传其他文件（如果你认为这有助于诊断问题）。
 
     ![附加的文件](../ide/media/feedback-attachments.png)仅 Microsoft 工程师可以查看附加的文件
 

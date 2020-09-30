@@ -14,12 +14,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - uwp
-ms.openlocfilehash: a96e4db66ec26870ac92c52209d7aa6f22225b21
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f0cab4a77c601414e766851aaf048fb3c32f6458
+ms.sourcegitcommit: da7f093db52df5dcd67e0a030e616b307f0dc2a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85350636"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91211110"
 ---
 # <a name="debug-a-webview-control-in-a-uwp-app"></a>调试 UWP 应用中的 WebView 控件
 
@@ -27,7 +27,7 @@ ms.locfileid: "85350636"
 
 - 打开 `WebView` 实例的 [DOM 资源管理器](../debugger/quickstart-debug-html-and-css.md)，然后检查 DOM 元素、调查 CSS 样式问题并测试动态呈现的样式的更改。
 
-- 在 [JavaScript 控制台](../debugger/javascript-console-commands.md?view=vs-2017)窗口中选择 `WebView` 实例中显示为目标的网页或 `iFrame`，然后使用控制台命令与网页交互。 控制台提供对当前脚本执行上下文的访问。
+- 在 [JavaScript 控制台](../debugger/javascript-console-commands.md?view=vs-2017&preserve-view=true)窗口中选择 `WebView` 实例中显示为目标的网页或 `iFrame`，然后使用控制台命令与网页交互。 控制台提供对当前脚本执行上下文的访问。
 
 ### <a name="attach-the-debugger-c-visual-basic-c"></a>附加调试器（C#、Visual Basic、C++）
 
@@ -81,7 +81,7 @@ ms.locfileid: "85350636"
     > [!NOTE]
     > 通过使用控制台，可以与单个 `WebView`、`iFrame` 交互，每次还可以共享协定或 Web Worker。 每个元素都需要单独的 Web 平台主机 (WWAHost.exe) 的实例。 一次可与一个主机交互。
 
-6. 查看并修改应用中的变量或使用控制台命令，如[快速入门：调试 JavaScript](../debugger/quickstart-debug-javascript-using-the-console.md) 和 [JavaScript 控制台命令](../debugger/javascript-console-commands.md?view=vs-2017)中所述。
+6. 查看并修改应用中的变量或使用控制台命令，如[快速入门：调试 JavaScript](../debugger/quickstart-debug-javascript-using-the-console.md) 和 [JavaScript 控制台命令](../debugger/javascript-console-commands.md?view=vs-2017&preserve-view=true)中所述。
 
 ## <a name="see-also"></a>请参阅
 

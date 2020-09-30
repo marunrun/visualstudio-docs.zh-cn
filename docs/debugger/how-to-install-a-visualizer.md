@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1cce59dfb39da71b8ff87efd49de9e2e0f6cdbd0
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: 6410e9ba1250da5a0a247c786e4aada310186c4a
+ms.sourcegitcommit: da7f093db52df5dcd67e0a030e616b307f0dc2a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90851406"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91211360"
 ---
 # <a name="how-to-install-a-visualizer"></a>如何：安装可视化工具
 创建了可视化工具后，您还必须安装该可视化工具，这样您才可在 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 中使用它。 安装可视化工具是个简单的过程。
@@ -32,7 +32,7 @@ ms.locfileid: "90851406"
 
 ::: moniker range=">=vs-2019"
 ### <a name="to-install-a-visualizer-for-visual-studio-2019"></a>安装适用于 Visual Studio 2019 的可视化工具
-  
+
 1. 找到包含已创建的可视化工具的 DLL。
 
    通常，最理想的情况是调试器端 DLL 和调试对象端 DLL 指定任意 CPU 作为目标平台。 调试器端 DLL 必须为“任意 CPU”或“32 位” 。 调试对象端 DLL 的目标平台应对应于调试对象进程。
@@ -42,7 +42,7 @@ ms.locfileid: "90851406"
     - VisualStudioInstallPath `\Common7\Packages\Debugger\Visualizers`
 
     - `My Documents\` VisualStudioVersion `\Visualizers`
-    
+
 3. 将[调试对象端](create-custom-visualizers-of-data.md#to-create-the-visualizer-object-source-for-the-debuggee-side) DLL 复制到下列位置之一：
 
     - VisualStudioInstallPath `\Common7\Packages\Debugger\Visualizers\` Framework 
@@ -61,7 +61,7 @@ ms.locfileid: "90851406"
 4. 重新启动调试会话。
 
 > [!NOTE]
-> 此过程在 Visual Studio 2017 及更早版本中是不同的。 请参阅本文的[早期版本](how-to-install-a-visualizer.md?view=vs-2017)。
+> 此过程在 Visual Studio 2017 及更早版本中是不同的。 请参阅本文的[早期版本](how-to-install-a-visualizer.md?view=vs-2017&preserve-view=true)。
 ::: moniker-end
 
 ::: moniker range="vs-2017"

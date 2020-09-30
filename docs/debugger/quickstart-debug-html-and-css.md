@@ -17,12 +17,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - uwp
-ms.openlocfilehash: a43ac0930c4805d18c60a18e1b48882b2fed76de
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: 5e270956fc6c8f1d7432cb65e1eaf37fdc58907c
+ms.sourcegitcommit: da7f093db52df5dcd67e0a030e616b307f0dc2a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89600192"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91211084"
 ---
 # <a name="debug-html-and-css-in-uwp-apps-in-visual-studio"></a>在 Visual Studio 中调试 UWP 应用中的 HTML 和 CSS
 
@@ -237,7 +237,7 @@ DOM 资源管理器展示所呈现的页面的视图，还可使用 DOM 资源�
 
 - 通过使用 **“选择元素”** 按钮 (Ctrl+B)。
 
-- 通过使用 `select` 命令（该命令是 [JavaScript Console commands](../debugger/javascript-console-commands.md?view=vs-2017)。
+- 通过使用 `select` 命令（该命令是 [JavaScript Console commands](../debugger/javascript-console-commands.md?view=vs-2017&preserve-view=true)。
 
   在使用“DOM 资源管理器”窗口选择元素并将鼠标指针置于一个元素上时，正在运行的应用程序中会突出显示相应的元素。 必须在 DOM 资源管理器中单击该元素以将其选定，也可以使用箭头键突出显示并选择元素。此外，还可以使用 **“选择元素”** 按钮在 DOM 资源管理器中选择元素。 下图显示 **“选择元素”** 按钮。
 
@@ -259,7 +259,7 @@ DOM 资源管理器展示所呈现的页面的视图，还可使用 DOM 资源�
 - [在 Visual Studio 中调试应用](debugging-windows-store-and-windows-universal-apps.md)
 - [刷新应用 (JavaScript)](../debugger/refresh-an-app-javascript.md)
 - [调试 WebView 控件](../debugger/debug-a-webview-control.md)
-- [键盘快捷键](../debugger/keyboard-shortcuts-html-and-javascript.md?view=vs-2017)
-- [JavaScript Console commands](../debugger/javascript-console-commands.md?view=vs-2017)
+- [键盘快捷键](../debugger/keyboard-shortcuts-html-and-javascript.md?view=vs-2017&preserve-view=true)
+- [JavaScript Console commands](../debugger/javascript-console-commands.md?view=vs-2017&preserve-view=true)
 - [调试 HTML、CSS 和 JavaScript 示例代码](../debugger/debug-html-css-and-javascript-sample-code.md)
 - [产品支持和辅助功能](/previous-versions/tzbxw1af(v=vs.120))

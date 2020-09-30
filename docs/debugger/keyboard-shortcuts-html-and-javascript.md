@@ -13,12 +13,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 824d0787de78ddc679d1060179e65043e0bf5299
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 32a3dcc48e34cc3ecc429f7f2b4ca62221263fe0
+ms.sourcegitcommit: da7f093db52df5dcd67e0a030e616b307f0dc2a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72731486"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91211334"
 ---
 # <a name="keyboard-shortcuts-html-and-javascript"></a>键盘快捷键（HTML 和 JavaScript）
 
@@ -59,6 +59,6 @@ Visual Studio 中使用 HTML 和 JavaScript 的用于调试 UWP 应用的键盘�
 |使选定的 CSS 值减少 1|向下键|
 
 ## <a name="see-also"></a>请参阅
-- [JavaScript Console commands](../debugger/javascript-console-commands.md?view=vs-2017)
-- [快速入门：调试 HTML 和 CSS](../debugger/quickstart-debug-html-and-css.md?view=vs-2017)
-- [快速入门：调试 JavaScript](../debugger/quickstart-debug-javascript-using-the-console.md?view=vs-2017)
+- [JavaScript Console commands](../debugger/javascript-console-commands.md?view=vs-2017&preserve-view=true)
+- [快速入门：调试 HTML 和 CSS](../debugger/quickstart-debug-html-and-css.md?view=vs-2017&preserve-view=true)
+- [快速入门：调试 JavaScript](../debugger/quickstart-debug-javascript-using-the-console.md?view=vs-2017&preserve-view=true)
