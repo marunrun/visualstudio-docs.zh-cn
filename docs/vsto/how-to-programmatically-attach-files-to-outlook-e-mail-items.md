@@ -1,5 +1,6 @@
 ---
 title: 如何：以编程方式将文件附加到 Outlook 电子邮件项
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -15,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a6cde83fa59f45cbc45e56738f09ccf3099f5c02
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2427ffc634976462e27eb788259184ce69347769
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85546128"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91585322"
 ---
 # <a name="how-to-programmatically-attach-files-to-outlook-email-items"></a>如何：以编程方式将文件附加到 Outlook 电子邮件项
   此示例将文件附加到新的邮件项，并将其发送给 Armando Pinto。 该示例假定名为 Armando Pinto 的人员作为接收方存在。

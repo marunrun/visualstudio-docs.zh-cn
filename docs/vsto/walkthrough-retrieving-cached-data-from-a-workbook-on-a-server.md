@@ -1,5 +1,6 @@
 ---
 title: 演练：从服务器上的工作簿中检索缓存的数据
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: b70283e63a2f71c0c85bf26a24f2e6f4a3492880
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 69d5a9932a781260609a0b00c8576c9ecc85ad1d
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72985409"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91584945"
 ---
 # <a name="walkthrough-retrieve-cached-data-from-a-workbook-on-a-server"></a>演练：从服务器上的工作簿中检索缓存的数据
   本演练演示如何从 Microsoft Office Excel 工作簿中缓存的数据集检索数据，而无需通过使用类启动 Excel <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> 。
@@ -77,7 +78,7 @@ ms.locfileid: "72985409"
 
 7. 在 " **新建项目** " 对话框中，确保未选中 " **创建解决方案的目录** " 复选框。
 
-8. 单击 **“确定”** 。
+8. 单击“确定”。
 
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 将 **AdventureWorksDataSet** 项目添加到 **解决方案资源管理器** ，并打开 *Class1.cs* 或 *Class1* 代码文件。
 
@@ -135,7 +136,7 @@ ms.locfileid: "72985409"
 
 5. 在 " **名称** " 框中，键入 **AdventureWorksReport**。 请勿修改位置。
 
-6. 单击 **“确定”** 。
+6. 单击“确定”。
 
      将打开“Visual Studio Tools for Office 项目向导” **** 。
 
@@ -224,7 +225,7 @@ ms.locfileid: "72985409"
 
 4. 在 " **名称** " 框中，键入 **DataReader**。 请勿修改位置。
 
-5. 单击 **“确定”** 。
+5. 单击“确定”。
 
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 将 **DataReader** 项目添加到 **解决方案资源管理器** 并打开 *Program.cs* 或 *Module1* 代码文件。
 
@@ -237,7 +238,7 @@ ms.locfileid: "72985409"
 
 2. 在 " **.net** " 选项卡上，选择 " **VisualStudio**"。
 
-3. 单击 **“确定”** 。
+3. 单击“确定”。
 
 4. 在 **解决方案资源管理器**中，右键单击 **DataReader** 项目，然后单击 " **添加引用**"。
 
@@ -293,7 +294,7 @@ ms.locfileid: "72985409"
 
 - 更改缓存数据集中的数据而不启动 Excel。 有关详细信息，请参阅 [演练：更改服务器上工作簿中的缓存数据](../vsto/walkthrough-changing-cached-data-in-a-workbook-on-a-server.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [演练：将数据插入到服务器上的工作簿](../vsto/walkthrough-inserting-data-into-a-workbook-on-a-server.md)
 - [演练：更改服务器上的工作簿中的缓存数据](../vsto/walkthrough-changing-cached-data-in-a-workbook-on-a-server.md)

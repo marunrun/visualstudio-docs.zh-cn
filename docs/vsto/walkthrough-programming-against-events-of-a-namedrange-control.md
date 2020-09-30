@@ -1,5 +1,6 @@
 ---
 title: 演练：针对 NamedRange 控件的事件进行编程
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 9b510e7464708891db0cab23d61cb22896a74602
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2e5ce12e2de8274afd2c27d4ece36529563a6386
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "90840727"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91584932"
 ---
 # <a name="walkthrough-program-against-events-of-a-namedrange-control"></a>演练：针对 NamedRange 控件的事件进行编程
   本演练演示如何 <xref:Microsoft.Office.Tools.Excel.NamedRange> 使用 Visual Studio 中的 Office 开发工具将控件添加到 Microsoft Office Excel 工作表并针对其事件进行编程。
@@ -70,7 +71,7 @@ ms.locfileid: "90840727"
 
 3. 验证 "可编辑" 文本框中是否显示 **$A $1** ，并选中 " **A1** 单元格"。 如果不是，请单击单元格 **A1** 将其选中。
 
-4. 单击“确定”。 
+4. 单击“确定”。
 
      单元格 **A1** 变为名为的范围 `namedRange1` 。 工作表上没有可见的指示，但 `namedRange1` 显示在 " **名称** " 框中 (在选择单元格 **A1** 时) 左侧工作表的上方。
 
@@ -78,7 +79,7 @@ ms.locfileid: "90840727"
 
 6. 验证 "可编辑" 文本框中是否显示了 **$B $3** ，并选中了 "单元格 **B3** "。 如果不是，请单击单元格 **B3** 将其选中。
 
-7. 单击“确定”。 
+7. 单击“确定”。
 
      单元格 **B3** 成为名为的范围 `namedRange2` 。
 
@@ -155,7 +156,7 @@ ms.locfileid: "90840727"
 
 - 部署项目。 有关详细信息，请参阅 [部署 Office 解决方案](../vsto/deploying-an-office-solution.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [主机项和主机控件概述](../vsto/host-items-and-host-controls-overview.md)
 - [使用扩展对象实现 Excel 自动化](../vsto/automating-excel-by-using-extended-objects.md)
 - [NamedRange 控件](../vsto/namedrange-control.md)

@@ -1,5 +1,6 @@
 ---
 title: 演练：文档级项目中的复杂数据绑定
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 026dc77573bbedce7882f9b3cceab049ef1066e4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7aba307bcd76cc055e42c11418d42f3dd0cfba1f
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "67692346"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91584316"
 ---
 # <a name="walkthrough-complex-data-binding-in-a-document-level-project"></a>演练：文档级项目中的复杂数据绑定
   本演练演示文档级项目中的复杂数据绑定的基本知识。 可以将 Microsoft Office Excel 工作表中的多个单元格绑定到 Northwind SQL Server 数据库中的字段。
@@ -178,7 +179,7 @@ ms.locfileid: "67692346"
 
 2. 在空行中添加以下信息。
 
-   |EmployeeID|LastName|FirstName|Title|
+   |EmployeeID|LastName|FirstName|标题|
    |----------------|--------------|---------------|-----------|
    |10|Ito|Shu|销售经理|
 

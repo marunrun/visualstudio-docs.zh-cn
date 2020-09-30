@@ -1,5 +1,6 @@
 ---
 title: 用项目模板创建网站栏项目项（第2部分）
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +12,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c3b84d901a1fd94d72ff14ec5c481e04676c5cbc
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 51fb7a4fb3d2ccba8c0a811619d7793e730a8ec4
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86016396"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91585453"
 ---
 # <a name="walkthrough-create-a-site-column-project-item-with-a-project-template-part-2"></a>演练：使用项目模板创建网站栏项目项（第2部分）
   在定义自定义类型的 SharePoint 项目项并将其与 Visual Studio 中的项目模板关联后，你可能还需要为模板提供向导。 当用户使用模板创建包含项目项的新项目时，可以使用该向导收集用户的信息。 你收集的信息可用于初始化项目项。
@@ -410,7 +411,7 @@ ms.locfileid: "86016396"
 ## <a name="add-replaceable-parameters-to-the-elementsxml-file-in-the-project-template"></a>将可替换参数添加到项目模板中的 Elements.xml 文件
  将多个可替换参数添加到 SiteColumnProjectTemplate 项目中的 *Elements.xml* 文件。 这些参数在 `RunStarted` 之前定义的类的方法中进行初始化 `SiteColumnProjectWizard` 。 当用户创建网站列项目时，Visual Studio 会自动将新项目中的 *Elements.xml* 文件中的这些参数替换为在向导中指定的值。
 
- 可替换参数是以美元符号 ($) 字符开头和结尾的令牌。 除了定义你自己的可替换参数外，还可以使用由 SharePoint 项目系统定义和初始化的内置参数。 有关详细信息，请参阅可 [替换参数](../sharepoint/replaceable-parameters.md)。
+ 可替换参数是以美元符号 ($) 字符开头和结尾的令牌。 除了定义你自己的可替换参数外，还可以使用由 SharePoint 项目系统定义和初始化的内置参数。 有关详细信息，请参阅[可替换参数](../sharepoint/replaceable-parameters.md)。
 
 #### <a name="to-add-replaceable-parameters-to-the-elementsxml-file"></a>向 Elements.xml 文件添加可替换参数
 

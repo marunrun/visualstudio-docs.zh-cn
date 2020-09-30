@@ -10,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 71a38d6718c22419a0a61ffbab4fe2bf6fe6c552
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: 43048ee57e51b80becc12b282f86c971f65bef16
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90012433"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91584576"
 ---
 # <a name="editor-and-language-service-extensions"></a>编辑器和语言服务扩展
 可以扩展 Visual Studio 代码编辑器的大多数功能。 该编辑器基于 (WPF) Windows Presentation Foundation，并用托管代码编写。 尽管此设计与 Visual Studio 早期版本中的设计不同，但它提供了大多数相同的功能。 若要扩展编辑器，请使用 (MEF) Managed Extensibility Framework。
@@ -24,11 +24,11 @@ ms.locfileid: "90012433"
 
 ## <a name="related-topics"></a>相关主题
 
-|Title|描述|
+|Title|说明|
 |-----------|-----------------|
 |[使用编辑器项模板创建扩展](../extensibility/creating-an-extension-with-an-editor-item-template.md)|使用编辑器项模板的简介。|
 |[扩展编辑器和语言服务](../extensibility/extending-the-editor-and-language-services.md)|指向介绍核心编辑器设计和功能的文档的链接，并演示如何对其进行扩展。|
-|[编辑器中的旧接口](../vs-2015/extensibility/legacy-interfaces-in-the-editor.md?view=vs-2015)|说明如何从现有代码访问核心编辑器的文档链接。|
+|[编辑器中的旧接口](../vs-2015/extensibility/legacy-interfaces-in-the-editor.md?view=vs-2015&preserve-view=true)|说明如何从现有代码访问核心编辑器的文档链接。|
 |[创建自定义编辑器和设计器](../extensibility/creating-custom-editors-and-designers.md)|说明如何创建自定义编辑器的文档的链接。|
 |[旧版语言服务扩展性](../extensibility/internals/legacy-language-service-extensibility.md)|介绍如何将编程语言集成到 Visual Studio 的文档的链接。|
 |[Managed Extensibility Framework (MEF)](/dotnet/framework/mef/index)|介绍 (MEF) Managed Extensibility Framework。|

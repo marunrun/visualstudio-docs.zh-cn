@@ -1,5 +1,6 @@
 ---
 title: 服务器资源管理器：扩展 SharePoint 连接节点
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: bf9bf437c7592641f1b9020cdc16b4d702646015
-ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
+ms.openlocfilehash: d7f1ac5b0fb1f25d04139d76efa816ebd059d7da
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90740092"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91585571"
 ---
 # <a name="walkthrough-calling-into-the-sharepoint-client-object-model-in-a-server-explorer-extension"></a>演练：在服务器资源管理器扩展中调入 SharePoint 客户端对象模型
   本演练演示如何从**服务器资源管理器**中的 " **sharepoint 连接**" 节点的扩展调用 sharepoint 客户端对象模型。 有关如何使用 SharePoint 客户端对象模型的详细信息，请参阅 [调入 sharepoint 对象模型](../sharepoint/calling-into-the-sharepoint-object-models.md)。
@@ -279,7 +280,7 @@ ms.locfileid: "90740092"
 
 5. 关闭 Visual Studio 的两个实例 (实验实例，以及在其中打开 WebPartNode 解决方案) 的 Visual Studio 实例。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [调入 SharePoint 对象模型](../sharepoint/calling-into-the-sharepoint-object-models.md)
 - [扩展服务器资源管理器中的“SharePoint 连接”节点](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)
 - [演练：扩展服务器资源管理器以显示 web 部件](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)

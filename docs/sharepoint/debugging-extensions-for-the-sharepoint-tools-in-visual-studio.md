@@ -1,5 +1,6 @@
 ---
 title: Visual Studio 中的 SharePoint 工具调试扩展 |Microsoft Docs
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,14 +13,14 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e170a5ed703a9bf5aae2e73126de52ecf88e8084
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1179779d07e7674babc51231ba629d7e25556f89
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "64785347"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91584628"
 ---
-# <a name="debug-extensions-for-the-sharepoint-tools-in-visual-studio"></a>Visual Studio 中的 SharePoint 工具的调试扩展
+# <a name="debug-extensions-for-the-sharepoint-tools-in-visual-studio"></a>在 Visual Studio 中调试 SharePoint 工具扩展
   可以在实验实例中调试 SharePoint 工具扩展，或在 Visual Studio 的常规实例中调试。 如果需要对扩展的行为进行故障排除，还可以修改注册表值以显示其他错误信息，并配置 Visual Studio 执行 SharePoint 命令的方式。
 
 ## <a name="debug-extensions-in-the-experimental-instance-of-visual-studio"></a>Visual Studio 的实验实例中的调试扩展
@@ -129,5 +130,5 @@ ms.locfileid: "64785347"
 
 ## <a name="see-also"></a>另请参阅
 
-- [在 Visual Studio 中扩展 SharePoint 工具](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)
+- [扩展 Visual Studio 中的 SharePoint 工具](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)
 - [在 Visual Studio 中部署 SharePoint 工具扩展](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md)

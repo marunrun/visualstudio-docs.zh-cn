@@ -1,5 +1,6 @@
 ---
 title: 演练：扩展要显示 Web 部件的服务器资源管理器 |Microsoft Docs
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -15,12 +16,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 915a1762782b2bf7177b87a3a5f4cdc6e08c6405
-ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
+ms.openlocfilehash: 52dc3f418c3e86e126cbcf196fca2cf73fad35b2
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90739988"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91583848"
 ---
 # <a name="walkthrough-extend-server-explorer-to-display-web-parts"></a>演练：扩展服务器资源管理器以显示 web 部件
   在 Visual Studio 中，可以使用**服务器资源管理器**的 " **sharepoint 连接**" 节点来查看 SharePoint 站点上的组件。 但是，默认情况下 **服务器资源管理器** 不显示某些组件。 在本演练中，您将扩展 **服务器资源管理器** 以便它在每个连接的 SharePoint 站点上显示 Web 部件库。
@@ -369,7 +370,7 @@ ms.locfileid: "90739988"
 
 4. 关闭 Visual Studio 的两个实例 (实验实例，以及在其中打开 WebPartNode 解决方案) 的 Visual Studio 实例。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [扩展服务器资源管理器中的“SharePoint 连接”节点](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)
 - [演练：在服务器资源管理器扩展中调入 SharePoint 客户端对象模型](../sharepoint/walkthrough-calling-into-the-sharepoint-client-object-model-in-a-server-explorer-extension.md)
 - [图标的图像编辑器](/cpp/windows/image-editor-for-icons)

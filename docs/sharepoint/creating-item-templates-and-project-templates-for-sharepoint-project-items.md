@@ -1,5 +1,6 @@
 ---
 title: SharePoint 项目项的项模板/项目模板
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -17,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 65bbd58bf9b3e0b399603a083615daccc382a98f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ec97eb2dfab7ab92c1e324c89fd044c1a50c2173
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72981166"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91585610"
 ---
 # <a name="create-item-templates-and-project-templates-for-sharepoint-project-items"></a>为 SharePoint 项目项创建项模板和项目模板
 
@@ -47,7 +48,7 @@ ms.locfileid: "72981166"
 
 | 可选文件 | 说明 |
 |----------------------| - |
-| *Elements.xml* | *功能元素*文件。 此文件定义由项目项创建的自定义项的 UI 和行为。 每种类型的自定义（例如，列表实例、内容类型或自定义操作）都有不同的架构，用于定义此文件的内容。 有关详细信息，请参阅 [构建基块：功能](/previous-versions/office/developer/sharepoint-2010/ee537350(v=office.14)) 和 [功能架构](/previous-versions/office/developer/sharepoint-2010/ms414322(v=office.14))。 |
+| Elements.xml | *功能元素*文件。 此文件定义由项目项创建的自定义项的 UI 和行为。 每种类型的自定义（例如，列表实例、内容类型或自定义操作）都有不同的架构，用于定义此文件的内容。 有关详细信息，请参阅 [构建基块：功能](/previous-versions/office/developer/sharepoint-2010/ee537350(v=office.14)) 和 [功能架构](/previous-versions/office/developer/sharepoint-2010/ms414322(v=office.14))。 |
 | *Schema.xml* | 列表定义的架构文件。 有关详细信息，请参阅 [构建基块：列表和文档库](/previous-versions/office/developer/sharepoint-2010/ee534985(v=office.14)) 和 [Schema.xml](/previous-versions/office/developer/sharepoint-2010/ms459356(v=office.14))。 |
 | *webpart* | *Web 部件定义*文件。 此文件包含 Web 部件的属性设置。 有关详细信息，请参阅 [构建基块： Web 部件](/previous-versions/office/developer/sharepoint-2010/ee535520(v=office.14))。 |
 | *.ascx* | ASP.NET UserControl 文件。 此文件定义可视 Web 部件的 UI。 |

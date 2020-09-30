@@ -1,5 +1,6 @@
 ---
-title: 如何：使用资源文件指定本地化名称、属性和权限 |Microsoft Docs
+title: 如何使用 SharePoint 项目中的资源文件 |Microsoft Docs
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -19,14 +20,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a87cc8a3eb8f98ea19a87e93c37aae5303151ecf
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1693308c591e60a2df0e4d8e18ece8cc9b598fd2
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86015399"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91585740"
 ---
-# <a name="how-to-use-a-resource-file-to-specify-localized-names-properties-and-permissions"></a>如何：使用资源文件指定本地化名称、属性和权限
+# <a name="how-to-use-a-resource-file-in-a-sharepoint-project"></a>如何使用 SharePoint 项目中的资源文件
+
   通过使用资源文件，您可以对在业务数据连接 (BDC) 模型中定义的对象提供本地化名称、定义属性和应用权限。 若要指定此信息，请将 **业务数据连接资源** 项添加到包含 **业务数据连接模型** 项的项目。 然后通过编辑资源文件的 XML 来指定名称、属性和权限。
 
 ### <a name="to-add-a-bdc-resource-file-to-a-sharepoint-project"></a>向 SharePoint 项目添加 BDC 资源文件
@@ -48,7 +50,7 @@ ms.locfileid: "86015399"
      有关如何定义这些元素的详细信息，请参阅 [模型和资源文件](/previous-versions/office/developer/sharepoint-2010/aa674515(v=office.14))。
 
 ## <a name="see-also"></a>另请参阅
-- [如何：向 SharePoint 项目添加现有 BDC 模型文件](../sharepoint/how-to-add-an-existing-bdc-model-file-to-a-sharepoint-project.md)
+- [如何：将现有 BDC 模型文件添加到 SharePoint 项目](../sharepoint/how-to-add-an-existing-bdc-model-file-to-a-sharepoint-project.md)
 - [创建业务数据连接模型](../sharepoint/creating-a-business-data-connectivity-model.md)
 - [如何：创建 BDC 模型](../sharepoint/how-to-create-a-bdc-model.md)
 - [如何：在 BDC 功能中包含自定义程序集](../sharepoint/how-to-include-a-custom-assembly-in-a-bdc-feature.md)

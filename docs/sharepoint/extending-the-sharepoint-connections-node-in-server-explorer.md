@@ -1,5 +1,6 @@
 ---
 title: 扩展 "SharePoint 连接" 节点服务器资源管理器 |Microsoft Docs
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -14,14 +15,14 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 6b1d461419497a0a45f50f12589cf3ac978a7666
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6615e02d84e1f252800597cb37666557e3c3fee6
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62967352"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91584602"
 ---
-# <a name="extend-the-sharepoint-connections-node-in-server-explorer"></a>扩展中的 "SharePoint 连接" 节点服务器资源管理器
+# <a name="extend-the-sharepoint-connections-node-in-server-explorer"></a>扩展服务器资源管理器中的“SharePoint 连接”节点
   在 Visual Studio 中，可以使用 "**服务器资源管理器**" 窗口中的 " **SharePoint 连接**" 节点连接到开发计算机上的本地 SharePoint 站点。 此节点在分层树视图中显示本地 SharePoint 站点的多个组件。 例如，你可以在本地站点上查看列表、文档库和内容类型。 有关使用 **服务器资源管理器** 连接到本地 SharePoint 站点的详细信息，请参阅 [使用服务器资源管理器浏览 SharePoint 连接](../sharepoint/browsing-sharepoint-connections-using-server-explorer.md)。
 
  您可以通过为现有节点创建扩展，或通过创建自定义节点类型并将其添加到节点的层次结构中来扩展 " **SharePoint 连接** " 节点。
@@ -58,7 +59,7 @@ ms.locfileid: "62967352"
 |内容类型|<xref:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IContentTypeNodeInfo>|
 |功能|<xref:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IFeatureNodeInfo>|
 |字段|<xref:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IFieldNodeInfo>|
-|列表|<xref:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IListNodeInfo>|
+|列出|<xref:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IListNodeInfo>|
 |列表模板|<xref:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IListTemplateNodeInfo>|
 | (Microsoft.sharepoint.spview 的列表视图) |<xref:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IListViewNodeInfo>|
 |工作流关联|<xref:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IWorkflowAssociationNodeInfo>|
@@ -73,4 +74,4 @@ ms.locfileid: "62967352"
 - [如何：在服务器资源管理器中为内置 SharePoint 节点获取数据](../sharepoint/how-to-get-data-for-a-built-in-sharepoint-node-in-server-explorer.md)
 - [将自定义数据与 SharePoint 工具扩展相关联](../sharepoint/associating-custom-data-with-sharepoint-tools-extensions.md)
 - [使用服务器资源管理器浏览 SharePoint 连接](../sharepoint/browsing-sharepoint-connections-using-server-explorer.md)
-- [在 Visual Studio 中扩展 SharePoint 工具](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)
+- [扩展 Visual Studio 中的 SharePoint 工具](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)

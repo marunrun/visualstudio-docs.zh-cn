@@ -1,5 +1,6 @@
 ---
 title: 演练：文档级项目中的简单数据绑定
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f3b573842aee5f00f161213cf3e01dfcc4c8ba93
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 0c22947e572a29c2b49a5ce9bb808c3cf2fe2902
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62981057"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91584919"
 ---
 # <a name="walkthrough-simple-data-binding-in-a-document-level-project"></a>演练：文档级项目中的简单数据绑定
   本演练演示了文档级项目中的数据绑定基础知识。 SQL Server 数据库中的单个数据字段绑定到 Microsoft Office Excel 中的命名范围。 本演练还演示如何添加控件，使您可以滚动浏览表中的所有记录。

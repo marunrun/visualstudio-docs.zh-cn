@@ -1,5 +1,6 @@
 ---
 title: Convert： SharePoint 项目系统类型与其他类型之间的转换
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,12 +13,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 40ea60a8df5bc0bcd033c60a83d742ed3249cc53
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 44b3e32114b10eae776f39e4c3d7337bba636f3f
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "66835998"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91584641"
 ---
 # <a name="convert-between-sharepoint-project-system-types-and-other-visual-studio-project-types"></a>在 SharePoint 项目系统类型和其他 Visual Studio 项目类型之间转换
   在某些情况下，您可能在 SharePoint 项目系统中有一个对象，并且您想要使用 Visual Studio 自动化对象模型或集成对象模型中的相应对象的功能，反之亦然。 在这些情况下，可以使用 <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.Convert%2A> SharePoint 项目服务的方法将对象转换为不同的对象模型。
@@ -42,7 +43,7 @@ ms.locfileid: "66835998"
 
  此示例需要：
 
-- 具有对 *EnvDTE.dll* 程序集的引用的 SharePoint 项目系统的扩展。 有关详细信息，请参阅 [扩展 SharePoint 项目系统](../sharepoint/extending-the-sharepoint-project-system.md)。
+- 具有对 *EnvDTE.dll* 程序集的引用的 SharePoint 项目系统的扩展。 有关详细信息，请参阅[扩展 SharePoint 项目系统](../sharepoint/extending-the-sharepoint-project-system.md)。
 
 - 注册 `projectService_ProjectAdded` 方法以处理对象的事件的代码 <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectAdded> <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService> 。 有关示例，请参阅 [如何：创建 SharePoint 项目扩展](../sharepoint/how-to-create-a-sharepoint-project-extension.md)。
 

@@ -10,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a4a3dba370594397d2f247de90063f69c4195cb6
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: 11e55da5f2eb1d8b4671543672a79b508e20a929
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90012147"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91583679"
 ---
 # <a name="author-vsct-files"></a>创作 .vsct 文件
 本文档演示如何创作 *.vsct* 文件，以将 (UI) 元素添加到 Visual Studio 集成开发环境 (IDE) 中的菜单项、工具栏和其他用户界面。 将 UI 元素添加到 Visual Studio 包时，请使用以下步骤 (VSPackage) ，该文件还没有 *.vsct* 文件。
@@ -108,7 +108,7 @@ ms.locfileid: "90012147"
        > [!NOTE]
        > 工具栏按钮必须具有图标。
 
-   有关详细信息，请参阅 [menucommand 与 OleMenuCommands](../../vs-2015/misc/menucommands-vs-olemenucommands.md?view=vs-2015)。
+   有关详细信息，请参阅 [menucommand 与 OleMenuCommands](../../vs-2015/misc/menucommands-vs-olemenucommands.md?view=vs-2015&preserve-view=true)。
 
 4. 如果你的任何命令需要图标，请将一个 [位图](../../extensibility/bitmaps-element.md) 元素添加到 `Commands` 元素。 然后，对于每个图标，将 [位图](../../extensibility/bitmap-element.md) 元素添加到 `Bitmaps` 元素。 此处为指定位图资源位置的位置。 有关详细信息，请参阅 [将图标添加到菜单命令](../../extensibility/adding-icons-to-menu-commands.md)。
 
@@ -233,7 +233,7 @@ ms.locfileid: "90012147"
 
    - 菜单控制器：菜单控制器是一个按钮，该按钮旁有一个箭头。 单击箭头将打开一个列表。 若要将菜单控制器添加到 UI，请创建一个 `Menu` 元素，并将其 `type` 属性设置为 `MenuController` 或 `MenuControllerLatched` ，具体取决于所需的行为。 若要填充菜单控制器，请将其设置为元素的父项 `Group` 。 菜单控制器会在其下拉列表中显示该组的所有子级。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [扩展菜单和命令](../../extensibility/extending-menus-and-commands.md)
 - [Visual Studio 命令表 ( .vsct) 文件](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
 - [.VSCT XML 架构引用](../../extensibility/vsct-xml-schema-reference.md)

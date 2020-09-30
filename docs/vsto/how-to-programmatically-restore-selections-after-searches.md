@@ -1,5 +1,6 @@
 ---
 title: 如何：以编程方式在搜索后还原选定内容
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 30daa81c33070db3f9418b45b84b4acc6e243dc9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 452e483600f6da0eacd5337b42c728145bcfe8aa
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85547090"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91584776"
 ---
 # <a name="how-to-programmatically-restore-selections-after-searches"></a>如何：以编程方式在搜索后还原选定内容
   如果查找并替换文档中的文本，则可能需要在搜索完成后还原用户的原始选择。

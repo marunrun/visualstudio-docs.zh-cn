@@ -1,5 +1,5 @@
 ---
-title: 如何：以编程方式将网页与 Outlook 文件夹关联
+title: 将网页与 Outlook 文件夹关联
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,14 +14,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: b8d44ffc46557243d2681b8f8b4a3b85d1cd9be6
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 35eb2dc3b1b595a4bf960af67ac5006cd9839c6e
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85546141"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91585335"
 ---
-# <a name="how-to-programmatically-associate-a-web-page-with-an-outlook-folder"></a>如何：以编程方式将网页与 Outlook 文件夹关联
+# <a name="associate-a-web-page-with-an-outlook-folder"></a>将网页与 Outlook 文件夹关联
+
   此示例 `HtmlView` 在 Microsoft Office Outlook 中检查名为的文件夹。 如果该文件夹不存在，则代码会创建该文件夹并向其分配网页。 如果该文件夹存在，则代码将显示文件夹内容。
 
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]

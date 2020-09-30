@@ -1,5 +1,5 @@
 ---
-title: .ofs 文件中的一个或多个属性对于选定的消息类无效
+title: 邮件类的 .ofs 文件中的属性无效 "
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -12,15 +12,16 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: d58ad6ff89d8cf41ec60135cfbfe3deac1382f1e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 66e8ecacffb58e945a3f80d03f47edc1329668d1
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "62977856"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91584654"
 ---
-# <a name="one-or-more-properties-in-the-ofs-file-are-not-valid-for-the-message-class-selected"></a>.ofs 文件中的一个或多个属性对于选定的消息类无效
-  当您导入在 Outlook 中设计的窗体区域时，将出现此错误，但是窗体区域中的一个或多个字段与在 " **新建窗体区域** " 向导的最后一页上选择的邮件类不兼容。
+# <a name="invalid-properties-in-the-ofs-file-for-the-message-class"></a>Message 类的 .ofs 文件中的属性无效
+
+  当您导入在 Outlook 中设计的窗体区域时，.ofs 文件中的一个或多个属性对于所选邮件类无效，但窗体区域中的一个或多个字段与在 " **新建窗体区域** " 向导的最后一页上选择的邮件类不兼容。
 
 例如，你可能在“新建窗体区域” **** 向导最后一页上选择了“任务(IPM.Task)” **** 。 如果窗体区域包含 " **业务地址** " 字段，则会收到此错误，因为任务没有企业地址。 因此，" **业务地址** " 字段与 `IPM.Task` 邮件类不兼容。
 

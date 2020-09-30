@@ -10,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f2520eb4d1fe9480f1421016883d65c9bde9b422
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: 155c703ebbeb2705ac7abbba5cd2c095f520c698
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90012316"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91584550"
 ---
 # <a name="extend-the-editor-and-language-services"></a>扩展编辑器和语言服务
 可以将语言服务功能 (例如 IntelliSense) 添加到自己的编辑器中，并扩展 Visual Studio 代码编辑器的大多数功能。  有关可以扩展的内容的完整列表，请参阅 [语言服务和编辑器扩展点](../extensibility/language-service-and-editor-extension-points.md)。
@@ -28,7 +28,7 @@ ms.locfileid: "90012316"
 
 ## <a name="related-topics"></a>相关主题
 
-|Title|描述|
+|Title|说明|
 |-----------|-----------------|
 |[语言服务和编辑器扩展入门](../extensibility/getting-started-with-language-service-and-editor-extensions.md)|说明如何为编辑器创建扩展。|
 |[在编辑器内](../extensibility/inside-the-editor.md)|介绍编辑器的一般结构，并列出它的一些功能。|
@@ -36,7 +36,7 @@ ms.locfileid: "90012316"
 |[语言服务和编辑器扩展点](../extensibility/language-service-and-editor-extension-points.md)|列出编辑器的扩展点。 扩展点表示可以扩展的编辑器功能。|
 |[演练：创建 "视图修饰"、"命令" 和 "设置" ("列参考线") ](../extensibility/walkthrough-creating-a-view-adornment-commands-and-settings-column-guides.md)|演练和说明如何构建一个视图修饰，以绘制列参考线以帮助你将代码保持在特定的显示宽度。  还介绍了如何读取和写入设置，以及如何声明和实现可从 "命令" 窗口调用的命令。|
 |[编辑器导入](../extensibility/editor-imports.md)|列出扩展可以导入的服务。|
-|[将旧代码调整为编辑器](../vs-2015/extensibility/adapting-legacy-code-to-the-editor.md?view=vs-2015)|说明用于改编旧代码 (Visual Studio 2010 前) 的不同方法来扩展编辑器。|
+|[将旧代码调整为编辑器](../vs-2015/extensibility/adapting-legacy-code-to-the-editor.md?view=vs-2015&preserve-view=true)|说明用于改编旧代码 (Visual Studio 2010 前) 的不同方法来扩展编辑器。|
 |[迁移旧版语言服务](../extensibility/internals/migrating-a-legacy-language-service.md)|说明如何迁移基于 VSPackage 的语言服务。|
 |[演练：将内容类型链接到文件扩展名](../extensibility/walkthrough-linking-a-content-type-to-a-file-name-extension.md)|演示如何将内容类型链接到文件扩展名。|
 |[演练：创建边距标志符号](../extensibility/walkthrough-creating-a-margin-glyph.md)|演示如何向边距添加图标。|

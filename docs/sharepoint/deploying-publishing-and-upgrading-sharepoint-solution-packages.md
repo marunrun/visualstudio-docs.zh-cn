@@ -1,5 +1,6 @@
 ---
 title: 部署、发布、& 升级 SharePoint 解决方案包
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +17,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: d8e55b01173e749395f60d189366a08907bdaccd
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 574712b870256fa7422e64a3c29ae8733f4c2251
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "81444965"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91583874"
 ---
 # <a name="deploy-publish-and-upgrade-sharepoint-solution-packages"></a>部署、发布和升级 SharePoint 解决方案包
   在 Visual Studio 中开发 SharePoint 解决方案后，可以将其包 ( .wsp) 文件部署到本地 SharePoint 服务器，或者将其发布到远程或本地 SharePoint 服务器。 如果部署这些文件，可以自定义包文件 ( 的部署) 的部署方式。
@@ -49,7 +50,7 @@ ms.locfileid: "81444965"
 |默认|默认的部署配置。 执行以下部署步骤：<br /><br /> 1. 运行预先部署命令。<br />2. 回收 IIS 应用程序池。<br />3. 收回解决方案。<br />4. 添加解决方案。<br />5. 激活功能。<br />6. 运行后期部署命令。<br /><br /> 卸载包时，将执行以下收回步骤。<br /><br /> 1. 回收 IIS 应用程序池。<br />2. 收回解决方案。|
 |无激活|此部署配置与默认配置运行相同的步骤，但会跳过激活步骤。|
 
- 你可以创建自己的部署配置来完成单个步骤或更改部署过程中的步骤顺序。 有关详细信息，请参阅 [如何：编辑 SharePoint 部署配置](../sharepoint/how-to-edit-a-sharepoint-deployment-configuration.md)。
+ 你可以创建自己的部署配置来完成单个步骤或更改部署过程中的步骤顺序。 有关详细信息，请参阅[如何：编辑 SharePoint 部署配置](../sharepoint/how-to-edit-a-sharepoint-deployment-configuration.md)。
 
  你还可以添加在部署之前和之后运行的命令。 有关详细信息，请参阅 [如何：设置 SharePoint 部署命令](../sharepoint/how-to-set-sharepoint-deployment-commands.md)。
 
@@ -63,5 +64,5 @@ ms.locfileid: "81444965"
 ### <a name="upgrade-published-packages"></a>升级发布的包
  如果你在发布 Visual Studio 中的 SharePoint 项目后对其进行任何更改，则必须升级已发布的包以包含这些更改。 若要成功升级，包必须具有唯一的名称。 如果在 SharePoint 站点上找到具有相同名称的包（在更新现有应用程序时可能会发生此错误），则会出现文件名冲突，并允许您重命名此包。 重新发布后，新的包将显示在 SharePoint 站点上并可进行升级。 升级的包使用较旧包中的数据更新解决方案，然后在 SharePoint 中激活解决方案。 有关详细信息，请参阅 [如何：在远程服务器上部署、发布和升级 SharePoint 解决方案](../sharepoint/how-to-deploy-publish-and-upgrade-sharepoint-solutions-on-a-remote-server.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [打包和部署 SharePoint 解决方案](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)

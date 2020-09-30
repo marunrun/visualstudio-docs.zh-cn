@@ -10,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e4f6214aa67040a4eb7a4b781cf1612762c87b2e
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: dec1cf1e3ec4301b1f219f7345957877ea420528
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90012420"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91585636"
 ---
 # <a name="syntax-coloring-in-custom-editors"></a>自定义编辑器中的语法着色
 Visual Studio 环境 SDK 编辑器（包括核心编辑器）使用语言服务来识别特定的语法项，并为给定的文档视图以指定的颜色显示它们。
@@ -52,9 +52,9 @@ Visual Studio 环境 SDK 编辑器（包括核心编辑器）使用语言服务�
 3. 使用返回的着色信息 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer.ColorizeLine%2A> 重绘并显示其文本。
 
 > [!NOTE]
-> 除了使用语言服务的 colorizer 外，VSPackage 还可以选择使用通用 Visual Studio 环境 SDK 文本着色机制。 有关此机制的详细信息，请参阅 [使用字体和颜色](../vs-2015/extensibility/using-fonts-and-colors.md?view=vs-2015)。
+> 除了使用语言服务的 colorizer 外，VSPackage 还可以选择使用通用 Visual Studio 环境 SDK 文本着色机制。 有关此机制的详细信息，请参阅 [使用字体和颜色](../vs-2015/extensibility/using-fonts-and-colors.md?view=vs-2015&preserve-view=true)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [在旧版语言服务中进行语法着色](../extensibility/internals/syntax-coloring-in-a-legacy-language-service.md)
 - [实现语法着色](../extensibility/internals/implementing-syntax-coloring.md)

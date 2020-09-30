@@ -14,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8acd7d52478574e8c37474426d27bc5c6a8b7efe
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: aceed2833d0083beccf197c4c681f92270a1f9a4
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90012355"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91583653"
 ---
 # <a name="visual-studio-sdk"></a>Visual Studio SDK
 Visual Studio SDK 可帮助你扩展 Visual Studio 的功能，或将新功能集成到 Visual Studio 中。 可以将扩展分发给其他用户以及 Visual Studio Marketplace。 以下是一些扩展 Visual Studio 的方式：
@@ -73,11 +73,11 @@ Visual Studio SDK 可帮助你扩展 Visual Studio 的功能，或将新功能�
 
 - [扩展 Visual Studio](https://blog.slaks.net/2013-10-18/extending-visual-studio-part-1-getting-started/)
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [使用菜单命令创建扩展](../extensibility/creating-an-extension-with-a-menu-command.md)
 - [如何：将扩展性项目迁移到 Visual Studio 2017](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md)
-- [常见问题解答：将外接程序转换为 VSPackage 扩展](../vs-2015/extensibility/faq-converting-add-ins-to-vspackage-extensions.md?view=vs-2015)
+- [常见问题解答：将外接程序转换为 VSPackage 扩展](../vs-2015/extensibility/faq-converting-add-ins-to-vspackage-extensions.md?view=vs-2015&preserve-view=true)
 - [在托管代码中管理多个线程](../extensibility/managing-multiple-threads-in-managed-code.md)
 - [扩展菜单和命令](../extensibility/extending-menus-and-commands.md)
 - [将命令添加到工具栏](../extensibility/adding-commands-to-toolbars.md)

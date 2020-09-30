@@ -1,5 +1,6 @@
 ---
 title: Excel：文档级自定义项编程入门
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -13,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 2c1ff264eb1a4ca7afdc424cef7edf15bae06554
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: cb3b27a4020e2b8947ca0868bb46b5945b5d89de
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "66402162"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91585675"
 ---
 # <a name="get-started-programming-document-level-customizations-for-excel"></a>开始编程 Excel 文档级自定义项
   如果只是开始使用 Visual Studio 创建 Microsoft Office Excel 的文档级自定义项，则需要了解以下内容。

@@ -1,5 +1,6 @@
 ---
 title: 如何：向 SharePoint 项目项扩展添加属性 |Microsoft Docs
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -14,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 337536d2219ce8494f96769bc79f10967883e61a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 752a782bb4aafd977ff10a0b57dd971f7ad6bed4
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86015980"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91584251"
 ---
 # <a name="how-to-add-a-property-to-a-sharepoint-project-item-extension"></a>如何：向 SharePoint 项目项扩展添加属性
   可以使用项目项扩展将属性添加到已在 Visual Studio 中安装的任何 SharePoint 项目项。 在**解决方案资源管理器**中选择项目项时，属性将显示在 "**属性**" 窗口中。

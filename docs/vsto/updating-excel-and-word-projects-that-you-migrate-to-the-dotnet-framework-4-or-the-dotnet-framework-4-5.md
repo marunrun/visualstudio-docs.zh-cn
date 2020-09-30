@@ -1,5 +1,6 @@
 ---
-title: 更新 Excel 或 Word 项目已迁移到 .NET Framework 4/4。5
+title: 更新 Excel 或 Word 项目已迁移到 .NET Framework 4。5
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,14 +13,14 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 4bc211f4d30359c885b22a45910363bbadca236f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 06f4742317e3702273c5fe7c91ccc76a153c1b3e
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71253723"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91584407"
 ---
-# <a name="update-excel-and-word-projects-that-you-migrate-to-the-net-framework-4-or-the-net-framework-45"></a>更新迁移到 .NET Framework 4 或 .NET Framework 4.5 的 Excel 和 Word 项目
+# <a name="update-excel-and-word-projects-that-you-migrate-to-the-net-framework-45"></a>更新迁移到 .NET Framework 4.5 的 Excel 和 Word 项目
   如果你的一个 Excel 或 Word 项目使用以下任何功能，且如果目标框架更改为 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 或更高版本，则必须修改你的代码：
 
 - [GetVstoObject 和 HasVstoObject 方法](#GetVstoObject)
