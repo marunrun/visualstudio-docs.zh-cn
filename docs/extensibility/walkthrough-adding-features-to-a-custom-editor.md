@@ -10,12 +10,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0dc781160b5cc9cb60da12d063f5b6d11844f3ac
-ms.sourcegitcommit: 4b29efeb3a5f05888422417c4ee236e07197fb94
+ms.openlocfilehash: e0340b89ed87872833f554fb00e24aca2f4759f3
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90012082"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91583588"
 ---
 # <a name="walkthrough-add-features-to-a-custom-editor"></a>演练：向自定义编辑器添加功能
 创建自定义编辑器后，可以向其添加更多功能。
@@ -34,11 +34,11 @@ ms.locfileid: "90012082"
 
 3. 通过设置接口来实现编辑器工厂 <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory> 。
 
-     有关详细信息，请参阅 [编辑器工厂](../vs-2015/extensibility/editor-factories.md?view=vs-2015)。
+     有关详细信息，请参阅 [编辑器工厂](../vs-2015/extensibility/editor-factories.md?view=vs-2015&preserve-view=true)。
 
 4. 决定您是否希望编辑器使用就地激活或简化嵌入来管理文档视图对象窗口。
 
-     简化的嵌入编辑器窗口承载标准文档视图，而就地激活编辑器窗口承载 ActiveX 控件或其他活动对象作为其文档视图。 有关详细信息，请参阅 [简化的嵌入](../extensibility/simplified-embedding.md) 和 [就地激活](../vs-2015/misc/in-place-activation.md?view=vs-2015)。
+     简化的嵌入编辑器窗口承载标准文档视图，而就地激活编辑器窗口承载 ActiveX 控件或其他活动对象作为其文档视图。 有关详细信息，请参阅 [简化的嵌入](../extensibility/simplified-embedding.md) 和 [就地激活](../vs-2015/misc/in-place-activation.md?view=vs-2015&preserve-view=true)。
 
 5. 实现 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> 接口以处理命令。
 
@@ -115,7 +115,7 @@ ms.locfileid: "90012082"
 
 12. 实现区分上下文的帮助支持。
 
-     此步骤允许您在编辑器中为项提供 F1 帮助和动态帮助窗口支持。 有关详细信息，请参阅 [如何：为编辑器提供上下文](../vs-2015/extensibility/how-to-provide-context-for-editors.md?view=vs-2015)。
+     此步骤允许您在编辑器中为项提供 F1 帮助和动态帮助窗口支持。 有关详细信息，请参阅 [如何：为编辑器提供上下文](../vs-2015/extensibility/how-to-provide-context-for-editors.md?view=vs-2015&preserve-view=true)。
 
 13. 通过实现接口，从编辑器中公开自动化对象模型 `IDispatch` 。
 
@@ -152,6 +152,6 @@ ms.locfileid: "90012082"
 
   - `Window.Object`
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [参与自动化模型](../extensibility/internals/contributing-to-the-automation-model.md)
