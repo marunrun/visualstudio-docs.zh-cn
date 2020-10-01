@@ -9,12 +9,12 @@ ms.author: esherrer
 manager: AndSter
 ms.workload:
 - multiple
-ms.openlocfilehash: 4ea74fd587119105577062f571b4ec8e3de76a4f
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 0aeb2341d905be8f34d47c477f35861b8575dc69
+ms.sourcegitcommit: 13cf7569f62c746708a6ced1187d8173eda7397c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037525"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352311"
 ---
 # <a name="analyze-database-performance-using-the-database-tool"></a>使用数据库工具分析数据库性能
 
@@ -50,7 +50,7 @@ ms.locfileid: "90037525"
 
 ![“转到源文件”已选中](./media/db-gotosource.png "“转到源文件”已选中")
 
-如果在关系图上选择了时间范围，则查询表仅显示在该时间范围内发生的查询。 如果还运行 [CPU 使用情况工具](./cpu-usage.md?view=vs-2019)，此行为将特别有用。
+如果在关系图上选择了时间范围，则查询表仅显示在该时间范围内发生的查询。 如果还运行 [CPU 使用情况工具](./cpu-usage.md?view=vs-2019&preserve-view=true)，此行为将特别有用。
 
 ## <a name="see-also"></a>请参阅
 

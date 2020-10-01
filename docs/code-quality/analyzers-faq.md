@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9408e8615e2a3591a5e93f569546b6161fe40e4c
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: e59fd8ef3210a19683b428438d2e58ab816e9a40
+ms.sourcegitcommit: 56a40b7861640d7922e39256985bb542d67b8020
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037245"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91604601"
 ---
 # <a name="code-analysis-faq"></a>代码分析常见问题解答
 
@@ -34,7 +34,7 @@ ms.locfileid: "90037245"
 
 但是，EditorConfig 文件还提供了其他配置规则的方法：
 
-- 对于 .NET 代码质量分析器，EditorConfig 文件允许 [定义要分析的代码类型](fxcop-analyzer-options.md)。
+- 对于 .NET 代码质量分析器，EditorConfig 文件允许 [定义要分析的代码类型](/dotnet/fundamentals/code-analysis/code-quality-rule-options)。
 - 对于内置于 Visual Studio 中的 .NET 代码样式分析器，EditorConfig 文件允许你为基本代码 [定义首选代码样式](../ide/editorconfig-code-style-settings-reference.md) 。
 
 除了规则集和 EditorConfig 文件外，某些分析器还通过使用标记为 c # 和 VB 编译器的 [附加文件](../ide/build-actions.md#build-action-values) 的文本文件进行配置。

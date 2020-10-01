@@ -1,5 +1,5 @@
 ---
-title: 禁止显示代码分析冲突
+title: 禁止显示代码分析违规情况
 ms.date: 08/27/2020
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,14 +14,14 @@ dev_langs:
 - CPP
 ms.workload:
 - multiple
-ms.openlocfilehash: aa650197f291c48c0c025563098181ea1cfa19a7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: adf8e969af4a903aa6ed55b1c92f4ddaffcf77e0
+ms.sourcegitcommit: 56a40b7861640d7922e39256985bb542d67b8020
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89091433"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91604639"
 ---
-# <a name="suppress-code-analysis-violations"></a>禁止显示代码分析冲突
+# <a name="suppress-code-analysis-violations"></a>禁止显示代码分析违规情况
 
 它通常用于指示警告不适用。 这向团队成员表明代码已评审，并且可以禁止显示该警告。  (ISS) 中的源代码中禁止 <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> 显示警告。 特性可放置在生成警告的代码段附近。 可以 <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> 通过在源文件中键入来将其添加到源文件中，也可以使用 **错误列表** 中的警告的快捷菜单来自动添加该属性。
 
@@ -183,12 +183,7 @@ public class Animal
 
 托管代码编译器和一些第三方工具生成代码，以加速代码开发。 出现在源文件中的编译器生成的代码通常用 `GeneratedCodeAttribute` 特性标记。
 
-对于源代码分析，可以使用项目或解决方案根目录中的 [editorconfig](../code-quality/configure-fxcop-analyzers.md) 文件来取消生成的代码中的消息。 使用文件模式与生成的代码匹配。 例如，若要排除 **designer.cs* 文件中的 CS1591 警告，请在配置文件中使用它。
-
-``` cmd
-[*.designer.cs]
-dotnet_diagnostic.CS1591.severity = none
-```
+对于源代码分析，可以在文件中取消生成的代码中的消息 `.editorconfig` 。 有关详细信息，请参阅 [排除生成的代码](/dotnet/fundamentals/code-analysis/configuration-options#exclude-generated-code)。
 
 对于旧的代码分析，可以选择是否取消生成代码的代码分析警告和错误。 有关如何禁止显示这些警告和错误的信息，请参阅 [如何：取消显示生成代码的警告](../code-quality/how-to-suppress-code-analysis-warnings-for-generated-code.md)。
 

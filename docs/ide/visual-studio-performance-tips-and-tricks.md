@@ -7,12 +7,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a5531a85bcdff90db816e942d196e0bab3b66139
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: a70199f6a46fc5fd78c9b40dc5c68ed1e1c85a56
+ms.sourcegitcommit: 13cf7569f62c746708a6ced1187d8173eda7397c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810319"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352357"
 ---
 # <a name="visual-studio-performance-tips-and-tricks"></a>Visual Studio 性能提示和技巧
 
@@ -63,7 +63,7 @@ Visual Studio 会自动重新打开上一个会话中处于打开状态的文档
 
     将选项设置为“仅指定模块”  ，而不是“所有模块”  ，然后指定要加载的负载。 调试时，还可以在“模块”  窗口中右键单击特定模块，将其显示包含在系统加载中。 （要在调试时打开窗口，请选择“调试”   > “窗口”   > “模块”  。）
 
-    有关详细信息，请参阅[了解符号文件](?view=vs-2019)。
+    有关详细信息，请参阅[了解符号文件](?view=vs-2019&preserve-view=true)。
 
 - **禁用诊断工具**
 
