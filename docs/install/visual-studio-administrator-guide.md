@@ -17,12 +17,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: db1e57097b492a8847be6d96719054a6b917e4bd
-ms.sourcegitcommit: dda98068c0f62ccd1a19fdfde4bdb822428d0125
+ms.openlocfilehash: ea12076e41185e9de4ee10afe3056ff97403d6ea
+ms.sourcegitcommit: 13cf7569f62c746708a6ced1187d8173eda7397c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87425402"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352265"
 ---
 # <a name="visual-studio-administrator-guide"></a>Visual Studio 管理员指南
 
@@ -52,9 +52,9 @@ ms.locfileid: "87425402"
 
   对于未连接到 Internet 的计算机，创建最小布局是更新脱机 Visual Studio 实例的最简单、最快捷的方法。 有关详细信息，请参阅[使用最小脱机布局更新 Visual Studio](update-minimal-layout.md)。
 
-* 确定公司所需的[工作负载和组件](workload-and-component-ids.md?view=vs-2019)。
+* 确定公司所需的[工作负载和组件](workload-and-component-ids.md?view=vs-2019&preserve-view=true)。
 
-* 确定是否使用[响应文件](automated-installation-with-response-file.md?view=vs-2019)（这可简化脚本文件中的管理细节）。
+* 确定是否使用[响应文件](automated-installation-with-response-file.md?view=vs-2019&preserve-view=true)（这可简化脚本文件中的管理细节）。
 
 * 确定是否要启用组策略，以及是否要在个人计算机上将 Visual Studio 配置为禁用客户反馈。
 
@@ -78,9 +78,9 @@ ms.locfileid: "87425402"
 
   对于未连接到 Internet 的计算机，创建最小布局是更新脱机 Visual Studio 实例的最简单、最快捷的方法。 有关详细信息，请参阅[使用最小脱机布局更新 Visual Studio](update-minimal-layout.md)。
 
-* 确定公司所需的[工作负载和组件](workload-and-component-ids.md?view=vs-2017)。
+* 确定公司所需的[工作负载和组件](workload-and-component-ids.md?view=vs-2017&preserve-view=true)。
 
-* 确定是否使用[响应文件](automated-installation-with-response-file.md?view=vs-2017)（这可简化脚本文件中的管理细节）。
+* 确定是否使用[响应文件](automated-installation-with-response-file.md?view=vs-2017&preserve-view=true)（这可简化脚本文件中的管理细节）。
 
 * 确定是否要启用组策略，以及是否要在个人计算机上将 Visual Studio 配置为禁用客户反馈。
 
@@ -90,22 +90,22 @@ ms.locfileid: "87425402"
 
 ## <a name="step-1---download-visual-studio-product-files"></a>第 1 步 - 下载 Visual Studio 产品文件
 
-* [选择要安装的工作负载和组件](workload-and-component-ids.md?view=vs-2019)。
+* [选择要安装的工作负载和组件](workload-and-component-ids.md?view=vs-2019&preserve-view=true)。
 
-* [创建 Visual Studio 产品文件的网络共享](create-a-network-installation-of-visual-studio.md?view=vs-2019)。
+* [创建 Visual Studio 产品文件的网络共享](create-a-network-installation-of-visual-studio.md?view=vs-2019&preserve-view=true)。
 
 ## <a name="step-2---build-an-installation-script"></a>第 2 步 - 生成安装脚本
 
-* 生成使用[命令行参数](use-command-line-parameters-to-install-visual-studio.md?view=vs-2019)来控制安装的安装脚本。
+* 生成使用[命令行参数](use-command-line-parameters-to-install-visual-studio.md?view=vs-2019&preserve-view=true)来控制安装的安装脚本。
 
   >[!NOTE]
-  > 可通过使用[响应文件](automated-installation-with-response-file.md?view=vs-2019)来简化脚本。 确保创建包含默认安装选项的响应文件。
+  > 可通过使用[响应文件](automated-installation-with-response-file.md?view=vs-2019&preserve-view=true)来简化脚本。 确保创建包含默认安装选项的响应文件。
 
-* （可选）[应用批量许可证产品密钥](automatically-apply-product-keys-when-deploying-visual-studio.md?view=vs-2019)作为安装脚本的一部分，这样用户便无需单独激活软件。
+* （可选）[应用批量许可证产品密钥](automatically-apply-product-keys-when-deploying-visual-studio.md?view=vs-2019&preserve-view=true)作为安装脚本的一部分，这样用户便无需单独激活软件。
 
-* （可选）将网络布局更新为[控制何时何地向最终用户提供产品更新](controlling-updates-to-visual-studio-deployments.md?view=vs-2019)。
+* （可选）将网络布局更新为[控制何时何地向最终用户提供产品更新](controlling-updates-to-visual-studio-deployments.md?view=vs-2019&preserve-view=true)。
 
-* （可选）设置影响 Visual Studio 部署的注册表策略，例如与其他版本或实例共享的一些包的安装位置、[缓存包的位置](set-defaults-for-enterprise-deployments.md?view=vs-2019)或[是否缓存包](disable-or-move-the-package-cache.md?view=vs-2019)。
+* （可选）设置影响 Visual Studio 部署的注册表策略，例如与其他版本或实例共享的一些包的安装位置、[缓存包的位置](set-defaults-for-enterprise-deployments.md?view=vs-2019&preserve-view=true)或[是否缓存包](disable-or-move-the-package-cache.md?view=vs-2019&preserve-view=true)。
 
 * （可选）设置组策略。 还可在个人计算机上[将 Visual Studio 配置为禁用客户反馈](../ide/visual-studio-experience-improvement-program.md)。
 
@@ -115,13 +115,13 @@ ms.locfileid: "87425402"
 
 ## <a name="step-4---deploy-updates"></a>第 4 步 - 部署更新
 
-* 定期运行第 1 步中的命令来添加更新后的组件，使用 Visual Studio [最新更新刷新网络位置](update-a-network-installation-of-visual-studio.md?view=vs-2019)。
+* 定期运行第 1 步中的命令来添加更新后的组件，使用 Visual Studio [最新更新刷新网络位置](update-a-network-installation-of-visual-studio.md?view=vs-2019&preserve-view=true)。
 
-  可以使用更新脚本来更新 Visual Studio。 为此，请使用 [`update`](use-command-line-parameters-to-install-visual-studio.md?view=vs-2019) 命令行参数。
+  可以使用更新脚本来更新 Visual Studio。 为此，请使用 [`update`](use-command-line-parameters-to-install-visual-studio.md?view=vs-2019&preserve-view=true) 命令行参数。
 
 ## <a name="step-5---optional-use-visual-studio-tools"></a>第 5 步 -（可选）使用 Visual Studio 工具
 
-我们提供了几种工具来帮助你在客户端计算机上[检测和管理安装的 Visual Studio 实例](tools-for-managing-visual-studio-instances.md?view=vs-2019)。
+我们提供了几种工具来帮助你在客户端计算机上[检测和管理安装的 Visual Studio 实例](tools-for-managing-visual-studio-instances.md?view=vs-2019&preserve-view=true)。
 
 ## <a name="advanced-configuration"></a>高级配置
 
@@ -129,7 +129,7 @@ ms.locfileid: "87425402"
 
 **“PutCustomTypeInBingSearch” DWORD 0**
 
-注册表位于专用注册表配置单元的 *Software\Microsoft\VisualStudio\16.0_{InstanceId}\Roslyn\Internal\Diagnostics\* 目录中。 有关如何打开注册表配置单元的说明，请参阅[编辑 Visual Studio 实例的注册表](tools-for-managing-visual-studio-instances.md?view=vs-2019#editing-the-registry-for-a-visual-studio-instance)。
+注册表位于专用注册表配置单元的 *Software\Microsoft\VisualStudio\16.0_{InstanceId}\Roslyn\Internal\Diagnostics\* 目录中。 有关如何打开注册表配置单元的说明，请参阅[编辑 Visual Studio 实例的注册表](tools-for-managing-visual-studio-instances.md?view=vs-2019&preserve-view=true#editing-the-registry-for-a-visual-studio-instance)。
 
 ::: moniker-end
 
@@ -137,22 +137,22 @@ ms.locfileid: "87425402"
 
 ## <a name="step-1---download-visual-studio-product-files"></a>第 1 步 - 下载 Visual Studio 产品文件
 
-* [选择要安装的工作负载和组件](workload-and-component-ids.md?view=vs-2017)。
+* [选择要安装的工作负载和组件](workload-and-component-ids.md?view=vs-2017&preserve-view=true)。
 
-* [创建 Visual Studio 产品文件的网络共享](create-a-network-installation-of-visual-studio.md?view=vs-2017)。
+* [创建 Visual Studio 产品文件的网络共享](create-a-network-installation-of-visual-studio.md?view=vs-2017&preserve-view=true)。
 
 ## <a name="step-2---build-an-installation-script"></a>第 2 步 - 生成安装脚本
 
-* 生成使用[命令行参数](use-command-line-parameters-to-install-visual-studio.md?view=vs-2017)来控制安装的安装脚本。
+* 生成使用[命令行参数](use-command-line-parameters-to-install-visual-studio.md?view=vs-2017&preserve-view=true)来控制安装的安装脚本。
 
   >[!NOTE]
-  > 可通过使用[响应文件](automated-installation-with-response-file.md?view=vs-2017)来简化脚本。 确保创建包含默认安装选项的响应文件。
+  > 可通过使用[响应文件](automated-installation-with-response-file.md?view=vs-2017&preserve-view=true)来简化脚本。 确保创建包含默认安装选项的响应文件。
 
-* （可选）[应用批量许可证产品密钥](automatically-apply-product-keys-when-deploying-visual-studio.md?view=vs-2017)作为安装脚本的一部分，这样用户便无需单独激活软件。
+* （可选）[应用批量许可证产品密钥](automatically-apply-product-keys-when-deploying-visual-studio.md?view=vs-2017&preserve-view=true)作为安装脚本的一部分，这样用户便无需单独激活软件。
 
-* （可选）将网络布局更新为[控制何时何地向最终用户提供产品更新](controlling-updates-to-visual-studio-deployments.md?view=vs-2017)。
+* （可选）将网络布局更新为[控制何时何地向最终用户提供产品更新](controlling-updates-to-visual-studio-deployments.md?view=vs-2017&preserve-view=true)。
 
-* （可选）设置影响 Visual Studio 部署的注册表策略，例如与其他版本或实例共享的一些包的安装位置、[缓存包的位置](set-defaults-for-enterprise-deployments.md?view=vs-2019)或[是否缓存包](disable-or-move-the-package-cache.md?view=vs-2017)。
+* （可选）设置影响 Visual Studio 部署的注册表策略，例如与其他版本或实例共享的一些包的安装位置、[缓存包的位置](set-defaults-for-enterprise-deployments.md?view=vs-2019&preserve-view=true)或[是否缓存包](disable-or-move-the-package-cache.md?view=vs-2017&preserve-view=true)。
 
 * （可选）设置组策略。 还可在个人计算机上[将 Visual Studio 配置为禁用客户反馈](../ide/visual-studio-experience-improvement-program.md)。
 
@@ -162,13 +162,13 @@ ms.locfileid: "87425402"
 
 ## <a name="step-4---deploy-updates"></a>第 4 步 - 部署更新
 
-* 定期运行第 1 步中的命令来添加更新后的组件，使用 Visual Studio [最新更新刷新网络位置](update-a-network-installation-of-visual-studio.md?view=vs-2017)。
+* 定期运行第 1 步中的命令来添加更新后的组件，使用 Visual Studio [最新更新刷新网络位置](update-a-network-installation-of-visual-studio.md?view=vs-2017&preserve-view=true)。
 
-  可以使用更新脚本来更新 Visual Studio。 为此，请使用 [`update`](use-command-line-parameters-to-install-visual-studio.md?view=vs-2019) 命令行参数。
+  可以使用更新脚本来更新 Visual Studio。 为此，请使用 [`update`](use-command-line-parameters-to-install-visual-studio.md?view=vs-2019&preserve-view=true) 命令行参数。
 
 ## <a name="step-5---optional-use-visual-studio-tools"></a>第 5 步 -（可选）使用 Visual Studio 工具
 
-我们提供了几种工具来帮助你在客户端计算机上[检测和管理安装的 Visual Studio 实例](tools-for-managing-visual-studio-instances.md?view=vs-2017)。
+我们提供了几种工具来帮助你在客户端计算机上[检测和管理安装的 Visual Studio 实例](tools-for-managing-visual-studio-instances.md?view=vs-2017&preserve-view=true)。
 
 ## <a name="advanced-configuration"></a>高级配置
 
@@ -176,7 +176,7 @@ ms.locfileid: "87425402"
 
 **“PutCustomTypeInBingSearch” DWORD 0**
 
-注册表位于专用注册表配置单元的 *Software\Microsoft\VisualStudio\15.0_{InstanceId}\Roslyn\Internal\Diagnostics\* 目录中。 有关如何打开注册表配置单元的说明，请参阅[编辑 Visual Studio 实例的注册表](tools-for-managing-visual-studio-instances.md?view=vs-2017#editing-the-registry-for-a-visual-studio-instance)。
+注册表位于专用注册表配置单元的 *Software\Microsoft\VisualStudio\15.0_{InstanceId}\Roslyn\Internal\Diagnostics\* 目录中。 有关如何打开注册表配置单元的说明，请参阅[编辑 Visual Studio 实例的注册表](tools-for-managing-visual-studio-instances.md?view=vs-2017&preserve-view=true#editing-the-registry-for-a-visual-studio-instance)。
 
 ::: moniker-end
 

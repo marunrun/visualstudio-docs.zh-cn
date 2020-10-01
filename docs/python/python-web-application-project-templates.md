@@ -10,12 +10,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 246c23f2eb0cb92a2120db5071b6460ff0efb293
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 572e02d614f0c6b5f782d683ff7e42e954b54441
+ms.sourcegitcommit: 13cf7569f62c746708a6ced1187d8173eda7397c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809880"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352331"
 ---
 # <a name="python-web-application-project-templates"></a>Python Web 应用程序项目模板
 
@@ -75,7 +75,7 @@ Visual Studio 中的 Python 支持在 Bottle、Flask 和 Django 框架中通过�
 
 如果使用的是源代码管理，通常会忽略虚拟环境文件夹，因为该环境只能使用 requirements.txt 重新创建  。 排除文件夹的最佳方法是先在上面的提示中选择“我将自行安装”  ，然后在创建虚拟环境之前禁用自动提交。 有关详细信息，请参阅[学习 Django 教程 - 步骤 1-2 和 1-3](learn-django-in-visual-studio-step-01-project-and-solution.md#step-1-2-examine-the-git-controls-and-publish-to-a-remote-repository) 以及[学习 Flask 教程 - 步骤 1-2 和 1-3](learn-flask-visual-studio-step-01-project-solution.md#step-1-2-examine-the-git-controls-and-publish-to-a-remote-repository)。
 
-部署到 Microsoft Azure App Service 时，选择一个 Python 版本作为[站点扩展](./managing-python-on-azure-app-service.md?view=vs-2019)并手动安装包。 此外，因为 Azure 应用服务从 Visual Studio 部署时不会自动安装 requirements.txt 文件中的包，请遵照 [aka.ms/PythonOnAppService](managing-python-on-azure-app-service.md) 上的配置详细信息操作。
+部署到 Microsoft Azure App Service 时，选择一个 Python 版本作为[站点扩展](./managing-python-on-azure-app-service.md?view=vs-2019&preserve-view=true)并手动安装包。 此外，因为 Azure 应用服务从 Visual Studio 部署时不会自动安装 requirements.txt 文件中的包，请遵照 [aka.ms/PythonOnAppService](managing-python-on-azure-app-service.md) 上的配置详细信息操作。
 
 Microsoft Azure 云服务支持 requirements.txt 文件   。 有关详细信息，请参阅 [Azure 云服务项目](python-azure-cloud-service-project-template.md)。
 
