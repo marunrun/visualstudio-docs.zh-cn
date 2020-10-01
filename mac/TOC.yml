@@ -185,7 +185,7 @@
         - name: 更改日志
           href: /visualstudio/cross-platform/change-log-visual-studio-tools-for-unity-mac?context=visualstudio/mac/context
     - name: 使用 Xamarin 的移动应用
-      href: /visualstudio/mac/xamarin
+      href: ./xamarin.md
 - name: 可访问性
   items:
     - name: 概述
