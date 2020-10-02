@@ -17,12 +17,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 0e127006976c484d1e4fc2fe011af979af7eb7a9
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 0abe51b9f01d0c1f380c4762a7d0d4f457964aa7
+ms.sourcegitcommit: bccc6503542e1517e0e96a9f02f5a89d69c60c25
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "76114984"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91135126"
 ---
 # <a name="troubleshoot-network-related-errors-when-you-install-or-use-visual-studio"></a>安装或使用 Visual Studio 时与网络相关错误的疑难解答
 
@@ -92,11 +92,27 @@ ms.locfileid: "76114984"
 
 ::: moniker-end
 
+## <a name="error-disconnected-from-visual-studio-when-attempting-to-report-a-problem"></a>错误：尝试报告问题时发生“与 Visual Studio 的连接断开”错误
+
+当用户通过代理服务器连接到 Internet，而代理服务器阻止 Visual Studio 对某些网络资源进行的调用时，通常会发生此错误。
+
+### <a name="to-fix-this-proxy-error"></a>修复此代理错误
+
+1. 在以下位置查找 feedback.exe.config（feedback.exe 配置文件）：%ProgramFiles(x86)%\Microsoft Visual Studio\Installer 或 %ProgramFiles%\Microsoft Visual Studio\Installer  。
+
+2. 在配置文件中，检查是否存在以下代码：如果不存在，请将其添加到最后的 `</configuration>` 行之前。
+
+   ```xml
+   <system.net>
+       <defaultProxy useDefaultCredentials="true" />
+   </system.net>
+   ```
+
 ## <a name="error-the-underlying-connection-was-closed"></a>错误：“基础连接已关闭”
 
 如果在有防火墙的专用网络中使用 Visual Studio，则 Visual Studio 可能无法连接到某些网络资源。 这些资源可能会包括用于登录和授权的 Azure DevOps Services、NuGet 和 Azure 服务。 如果 Visual Studio 无法连接到上述某个资源，则可能出现以下错误消息：
 
-  **基础连接已关闭：发送时出现了意外错误**
+  **基础连接已关闭：发送时出现意外错误**
 
 Visual Studio 使用传输层安全性 (TLS) 1.2 协议连接到网络资源。 Visual Studio 使用 TLS 1.2 时，某些专用网络上的安全设备会阻止某些服务器连接。
 
@@ -137,7 +153,7 @@ Visual Studio 使用传输层安全性 (TLS) 1.2 协议连接到网络资源。 
 
 在网络驱动器上使用 Visual Studio 引导程序和 response.json 文件时，可能会遇到此错误消息。 错误的来源是 Windows 中的用户帐户控制 (UAC)。
 
-下面是可能出现此错误的原因：映射的网络驱动器或 [UNC](/dotnet/standard/io/file-path-formats#unc-paths) 共享已链接到用户的访问令牌。 启用 UAC 后，将创建两个用户[访问令牌](/windows/win32/secauthz/access-tokens)：一个具有管理员访问权限，另一个不具有管理员访问权限   。 创建网络驱动器或共享后，用户的当前访问令牌会链接到它们。 因为必须以管理员身份运行引导程序，所以如果驱动器或共享未链接到具有管理员访问权限的用户访问令牌，则无法访问网络驱动器或共享。
+下面是可能出现此错误的原因：映射的网络驱动器或 [UNC](/dotnet/standard/io/file-path-formats#unc-paths) 共享已链接到用户的访问令牌。 启用 UAC 后，将创建两个用户[访问令牌](/windows/win32/secauthz/access-tokens)：一个具有管理员访问权限，另一个不具有管理员访问权限 。 创建网络驱动器或共享后，用户的当前访问令牌会链接到它们。 因为必须以管理员身份运行引导程序，所以如果驱动器或共享未链接到具有管理员访问权限的用户访问令牌，则无法访问网络驱动器或共享。
 
 ### <a name="to-fix-this-error"></a>修复此错误的方法
 
@@ -148,7 +164,7 @@ Visual Studio 使用传输层安全性 (TLS) 1.2 协议连接到网络资源。 
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 * [在防火墙或代理服务器后面安装和使用 Visual Studio](install-and-use-visual-studio-behind-a-firewall-or-proxy-server.md)
 * [Visual Studio 管理员指南](visual-studio-administrator-guide.md)

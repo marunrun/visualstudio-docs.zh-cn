@@ -1,5 +1,6 @@
 ---
-title: 将探查器附加到 .NET 以收集并发数据
+title: 将探查器附加到 .NET 以收集并发数据 - 命令行
+titleSuffix: ''
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -10,12 +11,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: f4b97994a3e24e4c3d4bc13cfe3b28455e0cecc2
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 7b9b2e9a90df1b9dcfaaa2fd7b77410e24e32a9a
+ms.sourcegitcommit: 822e61c69514e9f564d37ba6ca6832ccf7fbc60d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90811092"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91421802"
 ---
 # <a name="how-to-attach-the-profiler-to-a-net-service-to-collect-concurrency-data-by-using-the-command-line"></a>如何：将探查器附加到 .NET 服务，以使用命令行收集并发数据
 本文介绍如何使用 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 分析工具命令行工具将探查器附加到 .NET Framework 服务，并使用采样方法收集进程和线程并发数据。
