@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1b254cb2077b748f34958e33dbc456f17df530ce
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: 25fc255d0e04dd45400fa5da2b81c2e050a2150f
+ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89600230"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91658524"
 ---
 # <a name="how-to-generate-code-metrics-data"></a>如何：生成代码度量数据
 
@@ -32,10 +32,10 @@ ms.locfileid: "89600230"
 
 .NET 代码质量分析器包含多个代码度量 [分析器](roslyn-analyzers-overview.md) 规则：
 
-- [CA1501](./ca1501.md)
-- [CA1502](ca1502.md)
-- [CA1505](ca1505.md)
-- [CA1506](ca1506.md)
+- [CA1501](/dotnet/fundamentals/code-analysis/quality-rules/ca1501)
+- [CA1502](/dotnet/fundamentals/code-analysis/quality-rules/ca1502)
+- [CA1505](/dotnet/fundamentals/code-analysis/quality-rules/ca1505)
+- [CA1506](/dotnet/fundamentals/code-analysis/quality-rules/ca1506)
 
 默认情况下，这些规则是禁用的，但你可以从 [**解决方案资源管理器**](use-roslyn-analyzers.md#set-rule-severity-from-solution-explorer) 或 [规则集](using-rule-sets-to-group-code-analysis-rules.md) 文件中启用它们。 例如，若要启用规则 CA1502 作为警告，你的文件将包含以下条目：
 
@@ -48,7 +48,7 @@ ms.locfileid: "89600230"
 </RuleSet>
 ```
 
-### <a name="configuration"></a>配置
+### <a name="configuration"></a>Configuration
 
 你可以配置触发代码度量规则的阈值。
 
@@ -60,7 +60,7 @@ ms.locfileid: "89600230"
    CA1502: 10
    ```
 
-   在此示例中，规则 [CA1502](ca1502.md) 配置为在方法的圈复杂度大于10时激发。
+   在此示例中，规则 [CA1502](/dotnet/fundamentals/code-analysis/quality-rules/ca1502) 配置为在方法的圈复杂度大于10时激发。
 
 3. 在 Visual Studio 的 " **属性** " 窗口中，或者在项目文件中，将配置文件的生成操作标记为 " [**AdditionalFiles**](../ide/build-actions.md#build-action-values)"。 例如：
 
@@ -313,7 +313,7 @@ msbuild /m /v:m /t:rebuild /p:LEGACY_CODE_METRICS_MODE=true Metrics.csproj
 
 有关详细信息，请参阅 [在传统模式下启用生成代码度量值](https://github.com/dotnet/roslyn-analyzers/pull/1841)。
 
-### <a name="previous-versions"></a>旧版
+### <a name="previous-versions"></a>以前的版本
 
 ::: moniker range=">=vs-2019"
 Visual Studio 2015 附带了一个命令行代码度量工具，该工具也称为 *Metrics.exe*。 此工具的以前版本执行二进制分析，即基于程序集的分析。 较新版本的 *Metrics.exe* 工具改为分析源代码。 由于较新 *Metrics.exe* 工具是基于源代码的，因此，命令行代码度量结果可能与 VISUAL Studio IDE 和以前版本的 *Metrics.exe*所生成的结果不同。 从 Visual Studio 2019 开始，Visual Studio IDE 将分析类似于命令行工具的源代码，结果应相同。

@@ -8,12 +8,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5d44b12815f24ea14d35df0e27e5b3f72c296e16
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: edacd898cc1deb0382dd8e8b4b048af895c3b579
+ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89599581"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91658459"
 ---
 # <a name="mixed-minimum-rules-rule-set"></a>“混合最少量规则”规则集
 
@@ -153,7 +153,7 @@ Microsoft 混合的最小规则重点介绍支持公共语言运行时的 c + + 
 |[C28305](/cpp/code-quality/c28305)|在分析标记时发现错误。|
 |[C28350](/cpp/code-quality/c28350)|批注介绍了无条件适用的情形。|
 |[C28351](/cpp/code-quality/c28351)|批注介绍了在条件中无法使用动态值（变量）的位置。|
-|[CA1001](../code-quality/ca1001.md)|具有可释放字段的类型应该是可释放的|
-|[CA1821](../code-quality/ca1821.md)|移除空终结器|
-|[CA2213](../code-quality/ca2213.md)|应释放可释放的字段|
-|[CA2231](../code-quality/ca2231.md)|重写 ValueType.Equals 时应重载相等运算符|
+|[CA1001](/dotnet/fundamentals/code-analysis/quality-rules/ca1001)|具有可释放字段的类型应该是可释放的|
+|[CA1821](/dotnet/fundamentals/code-analysis/quality-rules/ca1821)|移除空终结器|
+|[CA2213](/dotnet/fundamentals/code-analysis/quality-rules/ca2213)|应释放可释放的字段|
+|[CA2231](/dotnet/fundamentals/code-analysis/quality-rules/ca2231)|重写 ValueType.Equals 时应重载相等运算符|

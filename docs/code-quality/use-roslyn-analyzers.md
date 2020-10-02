@@ -11,12 +11,12 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6a950a005a4669e74722742b23527a9e85ab5f02
-ms.sourcegitcommit: d77da260d79471ab139973c51d65b04e0f80fe2e
+ms.openlocfilehash: 08d033deb09f8b91cfc183e121bac7c3f2839d08
+ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90560744"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91659213"
 ---
 # <a name="overview"></a>概述
 
@@ -38,18 +38,18 @@ ms.locfileid: "90560744"
 
 下表显示了不同的严重性选项：
 
-| 严重性 (解决方案资源管理器)  | 严重性 (EditorConfig 文件)  | 生成时行为 | 编辑器行为 |
+| 严重性（解决方案资源管理器） | 严重性（EditorConfig 文件） | 生成时行为 | 编辑器行为 |
 |-|-|-|
-| 错误 | `error` | 冲突在错误列表和命令行生成输出中显示为 *错误* ，并导致生成失败。| 令人讨厌的代码带有红色波形曲线，并由滚动条中的小红色框标记。 |
-| 警告 | `warning` | 冲突在错误列表和命令行生成输出中显示为 *警告* ，但不会导致生成失败。 | 令人讨厌的代码带有绿色波形曲线，并由滚动条中的小绿色框标记。 |
-| 信息 | `suggestion` | 冲突显示为错误列表中的消息，而不是命令行生成输出中的 *消息* 。 | 令人讨厌的代码带有灰色波形曲线，并由滚动条中的小灰色框标记。 |
-| Hidden | `silent` | 对用户不可见。 | 对用户不可见。 但会将诊断报告给 IDE 诊断引擎。 |
-| 无 | `none` | 完全取消。 | 完全取消。 |
-| 默认 | `default` | 对应于规则的默认严重性。 若要确定规则的默认值是什么，请查看属性窗口。 | 对应于规则的默认严重性。 |
+| 错误 | `error` | 此类冲突在错误列表和命令行生成输出中显示为“错误”，并导致生成失败。| 违规代码用红色波浪下划线表示，并用滚动条中的红色小框标记。 |
+| 警告 | `warning` | 此类冲突在错误列表和命令行生成输出中显示为“警告”，但不会导致生成失败。 | 违规代码用绿色波浪下划线表示，并用滚动条中的绿色小框标记。 |
+| 信息 | `suggestion` | 此类冲突在错误列表中显示为“消息”，而不会在命令行生成输出中显示。 | 违规代码用灰色波浪下划线表示，并用滚动条中的灰色小框标记。 |
+| Hidden | `silent` | 对用户不可见。 | 对用户不可见。 但是，诊断会报告给 IDE 诊断引擎。 |
+| 无 | `none` | 完全禁止显示。 | 完全禁止显示。 |
+| 默认 | `default` | 对应于规则的默认严重性。 若要确定规则的默认值，请查看“属性”窗口。 | 对应于规则的默认严重性。 |
 
 如果分析器发现规则冲突，将在代码编辑器（违规代码下方有波浪线）和“错误列表”窗口中报告**。
 
-错误列表中报告的分析器冲突符合规则的 [严重性级别设置](../code-quality/use-roslyn-analyzers.md#configure-severity-levels) 。 在代码编辑器中，分析器冲突还会以波形曲线的形式显示在冲突代码下。 下图显示了三个冲突 &mdash; (红色波形曲线) ，一条警告 (绿色波形曲线) ，其中一条建议 (三个灰色点) ：
+错误列表中报告的分析器冲突与规则的[严重性级别设置](../code-quality/use-roslyn-analyzers.md#configure-severity-levels)相匹配。 分析器冲突也会在代码编辑器中以波浪线的形式显示在违规代码下。 下图显示了三个冲突&mdash;一个错误（红色波浪线）、一个警告（绿色波浪线）和一个建议（三个灰点）：
 
 ![Visual Studio 中代码编辑器中的波浪线](media/diagnostics-severity-colors.png)
 
@@ -57,7 +57,7 @@ ms.locfileid: "90560744"
 
 ![错误列表中的错误、警告和信息冲突](media/diagnostics-severities-in-error-list.png)
 
-许多分析器规则或 *诊断*，都有一个或多个关联的代码修补程序，您可以应用这些 *修补程序* 来更正规则冲突。 代码修补程序与其他类型的 [快速操作](../ide/quick-actions.md)一起显示在灯泡图标菜单中。 有关这些代码修复的信息，请参阅[常见快速操作](../ide/quick-actions.md)。
+许多分析器规则或诊断都有一个或多个相关的代码修复程序，可以应用它们来纠正规则冲突。 代码修复以及其他类型的[快速操作](../ide/quick-actions.md)显示在灯泡图标菜单中。 有关这些代码修复的信息，请参阅[常见快速操作](../ide/quick-actions.md)。
 
 ![分析器冲突和快速操作代码修复](../code-quality/media/built-in-analyzer-code-fix.png)
 
@@ -102,7 +102,7 @@ ms.locfileid: "90560744"
 - 单个规则按 ID 的严重性条目优先于类别的严重性条目。
 - 对于所有分析器规则，类别的严重性项优先于严重性项。
 
-请考虑以下 EditorConfig 示例，其中 [CA1822](./ca1822.md) 的类别为 "Performance"：
+请考虑以下 EditorConfig 示例，其中 [CA1822](/dotnet/fundamentals/code-analysis/quality-rules/ca1822) 的类别为 "Performance"：
 
    ```ini
    [*.cs]
@@ -117,7 +117,7 @@ ms.locfileid: "90560744"
 
 1. 如果你的项目还没有 EditorConfig 文件，则 [添加一个](../ide/create-portable-custom-editor-options.md#add-an-editorconfig-file-to-a-project)。
 
-2. 在相应的文件扩展名下为要配置的每个规则添加一个条目。 例如，若要将 [CA1822](ca1822.md) 的严重性设置为 `error` c # 文件，该条目如下所示：
+2. 在相应的文件扩展名下为要配置的每个规则添加一个条目。 例如，若要将 [CA1822](/dotnet/fundamentals/code-analysis/quality-rules/ca1822) 的严重性设置为 `error` c # 文件，该条目如下所示：
 
    ```ini
    [*.cs]
@@ -125,7 +125,7 @@ ms.locfileid: "90560744"
    ```
 
 > [!NOTE]
-> 对于 IDE 代码样式分析器，还可以使用不同的语法（例如）在 EditorConfig 文件中配置它们 `dotnet_style_qualification_for_field = false:suggestion` 。 但是，如果使用语法设置了严重性 `dotnet_diagnostic` ，则优先使用该语法。 有关详细信息，请参阅 [EditorConfig 的语言约定](../ide/editorconfig-language-conventions.md)。
+> 对于 IDE 代码样式分析器，还可以使用不同的语法（例如）在 EditorConfig 文件中配置它们 `dotnet_style_qualification_for_field = false:suggestion` 。 但是，如果使用语法设置了严重性 `dotnet_diagnostic` ，则优先使用该语法。 有关详细信息，请参阅 [EditorConfig 的语言约定](/dotnet/fundamentals/code-analysis/style-rules/language-rules)。
 
 ### <a name="set-rule-severity-from-the-light-bulb-menu"></a>设置灯泡菜单中的规则严重性
 
@@ -409,7 +409,7 @@ msbuild myproject.csproj /target:rebuild /verbosity:minimal
 <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.0" PrivateAssets="all" />
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [Visual Studio 中的代码分析器概述](../code-quality/roslyn-analyzers-overview.md)
 - [提交代码分析器 bug](https://github.com/dotnet/roslyn-analyzers/issues)

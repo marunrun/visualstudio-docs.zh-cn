@@ -8,12 +8,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2af6126c751d03968dc7ecd87693e3546376c12a
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: 0c3b899ec8e19160d9ee4a307a86c576d217004c
+ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89509856"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91658537"
 ---
 # <a name="globalization-rules-rule-set-for-managed-code"></a>托管代码的“全球化规则”规则集
 
@@ -21,11 +21,11 @@ ms.locfileid: "89509856"
 
 |规则|描述|
 |----------|-----------------|
-|[CA1303](../code-quality/ca1303.md)|请不要将文本作为本地化参数传递|
-|[CA1304](../code-quality/ca1304.md)|指定 CultureInfo|
-|[CA1305](../code-quality/ca1305.md)|指定 IFormatProvider|
-|[CA1307](../code-quality/ca1307.md)|为清楚起见指定 StringComparison|
-|[CA1308](../code-quality/ca1308.md)|将字符串规范化为大写|
-|[CA1309](../code-quality/ca1309.md)|使用按顺序的 StringComparison|
-|[CA1310](../code-quality/ca1310.md)|指定 StringComparison 是否正确|
-|[CA2101](../code-quality/ca2101.md)|指定对 P/Invoke 字符串参数进行封送处理|
+|[CA1303](/dotnet/fundamentals/code-analysis/quality-rules/ca1303)|请不要将文本作为本地化参数传递|
+|[CA1304](/dotnet/fundamentals/code-analysis/quality-rules/ca1304)|指定 CultureInfo|
+|[CA1305](/dotnet/fundamentals/code-analysis/quality-rules/ca1305)|指定 IFormatProvider|
+|[CA1307](/dotnet/fundamentals/code-analysis/quality-rules/ca1307)|为清楚起见指定 StringComparison|
+|[CA1308](/dotnet/fundamentals/code-analysis/quality-rules/ca1308)|将字符串规范化为大写|
+|[CA1309](/dotnet/fundamentals/code-analysis/quality-rules/ca1309)|使用按顺序的 StringComparison|
+|[CA1310](/dotnet/fundamentals/code-analysis/quality-rules/ca1310)|指定 StringComparison 是否正确|
+|[CA2101](/dotnet/fundamentals/code-analysis/quality-rules/ca2101)|指定对 P/Invoke 字符串参数进行封送处理|

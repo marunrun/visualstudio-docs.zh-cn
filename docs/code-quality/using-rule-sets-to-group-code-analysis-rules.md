@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ca48d0cad8ad6e22aa2264390d230590438e8579
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 47019ecd01a4ad432a853a7f1a4f7d7112be163c
+ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "77506465"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91659200"
 ---
 # <a name="use-rule-sets-to-group-code-analysis-rules"></a>使用规则集对代码分析规则进行分组
 
@@ -24,7 +24,7 @@ ms.locfileid: "77506465"
 
 你可以通过添加或删除规则或将规则严重性更改为在 **错误列表**中显示为警告或错误来自定义规则集。 自定义规则集可以满足特定开发环境的需求。 自定义规则集时，规则集编辑器会提供搜索和筛选工具，以帮助您在此过程中使用。
 
-规则集可用于 [托管代码分析](analyzer-rule-sets.md)、 [托管代码的传统分析](how-to-configure-code-analysis-for-a-managed-code-project.md)和 [c + + 代码分析](/cpp/code-quality/using-rule-sets-to-specify-the-cpp-rules-to-run)。
+规则集可用于 [托管代码分析](/dotnet/fundamentals/code-analysis/code-quality-rule-options)、 [托管代码的传统分析](how-to-configure-code-analysis-for-a-managed-code-project.md)和 [c + + 代码分析](/cpp/code-quality/using-rule-sets-to-specify-the-cpp-rules-to-run)。
 
 ## <a name="rule-set-format"></a>规则集格式
 
@@ -67,6 +67,6 @@ ms.locfileid: "77506465"
 </PropertyGroup>
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [代码分析规则集参考](../code-quality/rule-set-reference.md)
