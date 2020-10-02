@@ -18,12 +18,12 @@ ms.topic: conceptual
 ms.workload:
 - multiple
 monikerRange: vs-2017
-ms.openlocfilehash: 18e373dd8218c9019c2a5ec8a923fdbb2c24cf99
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: db777df991b48d1b6e26d40426d32c07a495efb1
+ms.sourcegitcommit: 13cf7569f62c746708a6ced1187d8173eda7397c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809513"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352172"
 ---
 # <a name="whats-new-in-visual-studio-2017"></a>Visual Studio 2017 中的新增功能
 
@@ -104,7 +104,7 @@ Visual Studio 可以移动自身的扩展（以及第三方扩展），从而根
 
 漫游扩展管理器会跟踪安装的所有扩展，但你可以选择要添加到漫游列表的扩展。
 
-![Visual Studio 2017 -“扩展和更新”对话框](media/vs2017ide-RoamingExtensionManager.png)
+![Visual Studio 2017 - 漫游扩展管理器](media/vs2017ide-RoamingExtensionManager.png)
 
 使用漫游扩展管理器时，列表中会出现 3 种图标类型：
 
@@ -222,7 +222,7 @@ Visual Studio 中的若干改进包括：使用 Visual Studio 分发 C++ 核心�
 
 可以通过使用“调试”工具栏中的“后退”和前进”按钮浏览和查看快照  。 这些按钮用于浏览“诊断工具”窗口中“事件”选项卡上显示的事件。  后退或前进到某个事件会自动激活所选事件的历史调试。
 
-![Visual Studio 中“新异常帮助程序”对话框](../debugger/media/intellitrace-step-back-icons-description.png  "“后退”和“前进”按钮")
+![Visual Studio 中的 IntelliTrace 后退示例](../debugger/media/intellitrace-step-back-icons-description.png  "“后退”和“前进”按钮")
 
 有关详细信息，请参阅[使用 IntelliTrace 后退查看快照](../debugger/view-historical-application-state.md)页。
 
