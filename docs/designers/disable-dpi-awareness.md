@@ -1,17 +1,17 @@
 ---
 title: 在 Visual Studio 中禁用 DPI 感知
 description: 讨论 HDPI 监视器上 Windows 窗体设计器的限制，以及如何以非 DPI 感知进程的形式运行 Visual Studio。
-ms.date: 04/05/2019
+ms.date: 09/28/2020
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.topic: conceptual
-ms.openlocfilehash: 749a267d4fc33153cfc609f331ecd1d269706e12
-ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
+ms.openlocfilehash: 08eb15914ad381fd81a838f5e09a1350bedff4fd
+ms.sourcegitcommit: 31f216b5f7491d5558de5b7ea4ebb0eb1faa3b9d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88249961"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91493304"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>在 Visual Studio 中禁用 DPI 感知
 
@@ -43,6 +43,9 @@ Visual Studio 中的 Windows 窗体设计器不支持缩放  。 因此，在高
 - [以非 DPI 感知进程的形式重启 Visual Studio](#restart-visual-studio-as-a-dpi-unaware-process)
 - [添加注册表项](#add-a-registry-entry)
 - [将显示缩放比例设置为 100%](#set-your-display-scaling-setting-to-100)
+
+> [!TIP]
+> 如果更希望通过命令行管理设置，可使用 [`devenv.exe`](../ide/reference/devenv-command-line-switches.md) 将 `/noscale` 作为命令行参数，在 100% 缩放模式下运行。
 
 ### <a name="restart-visual-studio-as-a-dpi-unaware-process"></a>以非 DPI 感知进程的形式重启 Visual Studio
 
