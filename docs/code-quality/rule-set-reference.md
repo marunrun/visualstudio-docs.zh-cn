@@ -9,19 +9,19 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d380346b7e049a6ffc4e8d03a5be27983de10249
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2b20974d2e44661ed7f4a0288ecb9eff82b2035a
+ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75587233"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91658420"
 ---
 # <a name="code-analysis-rule-set-reference"></a>代码分析规则集参考
 
 在 Visual Studio 中配置托管代码项目的旧分析时，可以从内置 *规则集*列表中进行选择。 某些规则包含在多个内置规则集中，例如，"基本更正规则" 规则集包含 "托管建议规则" 规则集中的规则。
 
 > [!NOTE]
-> 本部分中的规则集与旧式分析相关。 有关适用于代码分析器包的规则集的信息，请参阅 [将规则集与代码分析器一起使用](analyzer-rule-sets.md)。
+> 本部分中的规则集与旧式分析相关。 有关适用于代码分析器包的规则集的信息，请参阅 [将规则集与代码分析器一起使用](/dotnet/fundamentals/code-analysis/code-quality-rule-options)。
 
 您可以使用其中一个内置规则集，也可以 [自定义规则集](../code-quality/how-to-create-a-custom-rule-set.md) 以满足您的项目要求。 如果在自定义规则集中包含多个包含同一规则的规则集，则该规则只在自定义规则集中出现一次。
 
@@ -41,4 +41,4 @@ ms.locfileid: "75587233"
 | [混合建议规则](mixed-recommended-rules-rule-set.md) | 包括混合的最小规则以及用于 CLR c + + 代码中的关键问题的更多规则 |
 | [本机最低规则](native-minimum-rules-rule-set.md) | 包括针对本机代码中的关键问题的规则 |
 | [本机建议规则](native-recommended-rules-rule-set.md) | 包含本机代码中的严重问题的本机最低规则和更多规则 |
-| [安全性规则](security-rules-rule-set-for-managed-code.md) | 包括用于查找安全漏洞的规则 |
+| [安全规则](security-rules-rule-set-for-managed-code.md) | 包括用于查找安全漏洞的规则 |

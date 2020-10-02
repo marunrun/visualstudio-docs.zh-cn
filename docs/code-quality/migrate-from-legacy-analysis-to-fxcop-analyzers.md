@@ -13,12 +13,12 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 2109d7cbcaaf56600812e27c3055fb3198848228
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 9ce3c8feb3d3bbd458c14ee702d6e8a1668078f3
+ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90810202"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91658472"
 ---
 # <a name="migrate-from-legacy-analysis-fxcop-to-source-analysis-fxcop-analyzers"></a> (FxCop 分析器中，从旧式分析 (FxCop) 迁移到源分析) 
 
@@ -36,6 +36,6 @@ ms.locfileid: "90810202"
 
 若要详细了解如何配置 FxCop 分析器：
 
-- 若要配置 FxCop 分析器，请参阅 [配置 fxcop 分析器](../code-quality/configure-fxcop-analyzers.md)。
+- 若要配置 FxCop 分析器，请参阅 [配置 fxcop 分析器](/dotnet/fundamentals/code-analysis/code-quality-rule-options)。
 
-- 若要了解如何使用预定义的规则和 EditorConfig 或规则集文件来配置分析器，请参阅 [启用规则类别](../code-quality/analyzer-rule-sets.md)。
+- 若要了解如何使用预定义的规则和 EditorConfig 或规则集文件来配置分析器，请参阅 [启用规则类别](/dotnet/fundamentals/code-analysis/code-quality-rule-options)。

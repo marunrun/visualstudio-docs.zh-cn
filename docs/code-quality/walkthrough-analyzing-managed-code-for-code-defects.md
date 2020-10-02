@@ -10,12 +10,12 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: ab1e0b890d6241742770ed38ff61fc1c2c0ed2f4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ab8a834de307cf7803b93f025a68b95defe12466
+ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72535701"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91659187"
 ---
 # <a name="walkthrough-use-static-code-analysis-to-find-code-defects"></a>演练：使用静态代码分析查找代码缺陷
 
@@ -93,15 +93,15 @@ ms.locfileid: "72535701"
 
 1. 使用以下提示来更正警告：
 
-   [CA1014：用 CLSCompliantAttribute 标记程序集](../code-quality/ca1014.md)：将代码添加 `[assembly: CLSCompliant(true)]` 到 AssemblyInfo.cs 文件的末尾。
+   [CA1014：用 CLSCompliantAttribute 标记程序集](/dotnet/fundamentals/code-analysis/quality-rules/ca1014)：将代码添加 `[assembly: CLSCompliant(true)]` 到 AssemblyInfo.cs 文件的末尾。
 
-   [CA1032：实现标准异常构造函数](../code-quality/ca1032.md)：将构造函数添加 `public demo (String s) : base(s) { }` 到类 `demo` 。
+   [CA1032：实现标准异常构造函数](/dotnet/fundamentals/code-analysis/quality-rules/ca1032)：将构造函数添加 `public demo (String s) : base(s) { }` 到类 `demo` 。
 
-   [CA1032：实现标准异常构造函数](../code-quality/ca1032.md)：将构造函数添加 `public demo (String s, Exception e) : base(s, e) { }` 到类 `demo` 。
+   [CA1032：实现标准异常构造函数](/dotnet/fundamentals/code-analysis/quality-rules/ca1032)：将构造函数添加 `public demo (String s, Exception e) : base(s, e) { }` 到类 `demo` 。
 
-   [CA1032：实现标准异常构造函数](../code-quality/ca1032.md)：将构造函数添加 `protected demo (SerializationInfo info, StreamingContext context) : base(info, context) { }` 到类演示。 还需要为添加 `using` 语句 <xref:System.Runtime.Serialization?displayProperty=fullName> 。
+   [CA1032：实现标准异常构造函数](/dotnet/fundamentals/code-analysis/quality-rules/ca1032)：将构造函数添加 `protected demo (SerializationInfo info, StreamingContext context) : base(info, context) { }` 到类演示。 还需要为添加 `using` 语句 <xref:System.Runtime.Serialization?displayProperty=fullName> 。
 
-   [CA1032：实现标准异常构造函数](../code-quality/ca1032.md)：将构造函数添加 `public demo () : base() { }` 到类 `demo` 。
+   [CA1032：实现标准异常构造函数](/dotnet/fundamentals/code-analysis/quality-rules/ca1032)：将构造函数添加 `public demo () : base() { }` 到类 `demo` 。
 
    [CA1709：标识符应采用正确的大小](../code-quality/ca1709.md)写：将命名空间的大小写更改 `testCode` 为 `TestCode` 。
 
@@ -109,9 +109,9 @@ ms.locfileid: "72535701"
 
    [CA1709：标识符应采用正确的大小写](../code-quality/ca1709.md)：将成员的名称更改为 `Item` 。
 
-   [CA1710：标识符应具有正确的后缀](../code-quality/ca1710.md)：将类及其构造函数的名称更改为 `DemoException` 。
+   [CA1710：标识符应具有正确的后缀](/dotnet/fundamentals/code-analysis/quality-rules/ca1710)：将类及其构造函数的名称更改为 `DemoException` 。
 
-   [CA2237：用 SerializableAttribute 标记 ISerializable 类型](../code-quality/ca2237.md)：将 `[Serializable ()]` 特性添加到类 `demo` 。
+   [CA2237：用 SerializableAttribute 标记 ISerializable 类型](/dotnet/fundamentals/code-analysis/quality-rules/ca2237)：将 `[Serializable ()]` 特性添加到类 `demo` 。
 
    [CA2210：程序集应具有有效的强名称](../code-quality/ca2210.md)：使用强名称密钥签名 "CodeAnalysisManagedDemo"：
 
@@ -170,6 +170,6 @@ ms.locfileid: "72535701"
 
      项目生成时不会出现任何警告或错误。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [托管代码分析](../code-quality/code-analysis-for-managed-code-overview.md)

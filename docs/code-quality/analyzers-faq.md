@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e59fd8ef3210a19683b428438d2e58ab816e9a40
-ms.sourcegitcommit: 56a40b7861640d7922e39256985bb542d67b8020
+ms.openlocfilehash: 134f91531b9485f5a887b2d9785a490fcea605fc
+ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91604601"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91659161"
 ---
 # <a name="code-analysis-faq"></a>代码分析常见问题解答
 
@@ -24,7 +24,7 @@ ms.locfileid: "91604601"
 
 **问**：我是否应该使用代码分析或 EditorConfig 来检查代码样式？
 
-**答**：代码分析和 EditorConfig 文件的工作方式非常好。 在 [EditorConfig 文件](../ide/editorconfig-code-style-settings-reference.md) 或 " [文本编辑器" 选项](../ide/code-styles-and-code-cleanup.md) 页上定义代码样式时，实际上是在配置 Visual Studio 中内置的代码分析器。 EditorConfig 文件可用于启用或禁用分析器规则，还可用于配置 NuGet 分析器包。
+**答**：代码分析和 EditorConfig 文件的工作方式非常好。 在 [EditorConfig 文件](/dotnet/fundamentals/code-analysis/code-style-rule-options) 或 " [文本编辑器" 选项](../ide/code-styles-and-code-cleanup.md) 页上定义代码样式时，实际上是在配置 Visual Studio 中内置的代码分析器。 EditorConfig 文件可用于启用或禁用分析器规则，还可用于配置 NuGet 分析器包。
 
 ## <a name="editorconfig-versus-rule-sets"></a>EditorConfig 与规则集
 
@@ -35,7 +35,7 @@ ms.locfileid: "91604601"
 但是，EditorConfig 文件还提供了其他配置规则的方法：
 
 - 对于 .NET 代码质量分析器，EditorConfig 文件允许 [定义要分析的代码类型](/dotnet/fundamentals/code-analysis/code-quality-rule-options)。
-- 对于内置于 Visual Studio 中的 .NET 代码样式分析器，EditorConfig 文件允许你为基本代码 [定义首选代码样式](../ide/editorconfig-code-style-settings-reference.md) 。
+- 对于内置于 Visual Studio 中的 .NET 代码样式分析器，EditorConfig 文件允许你为基本代码 [定义首选代码样式](/dotnet/fundamentals/code-analysis/code-style-rule-options) 。
 
 除了规则集和 EditorConfig 文件外，某些分析器还通过使用标记为 c # 和 VB 编译器的 [附加文件](../ide/build-actions.md#build-action-values) 的文本文件进行配置。
 
@@ -94,7 +94,7 @@ ms.locfileid: "91604601"
 
 **答**：解决方案级别的 "代码分析" 属性页已删除，以支持更可靠的共享属性组。 对于在项目级别管理代码分析，"代码分析" 属性页仍可用。 对于托管项目 (，我们还建议从规则集迁移到 EditorConfig，以便进行规则配置。 ) 用于在解决方案或存储库中的多个/所有项目间共享规则集，我们建议使用共享属性/目标文件或属性/文件中的 CodeAnalysisRuleSet 属性定义属性组。 如果你没有任何项目导入的公共属性或目标，则应考虑 [将此类属性组添加到属性或顶级解决方案目录下的目录，该目录将自动导入到目录或其子目录中定义的所有项目文件中](../msbuild/customize-your-build.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [分析器概述](roslyn-analyzers-overview.md)
-- [EditorConfig 的 .NET 编码约定设置](../ide/editorconfig-code-style-settings-reference.md)
+- [EditorConfig 的 .NET 编码约定设置](/dotnet/fundamentals/code-analysis/code-style-rule-options)

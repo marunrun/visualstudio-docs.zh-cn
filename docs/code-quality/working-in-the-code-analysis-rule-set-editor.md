@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d1e53df97c0535f59d0b96e9608ad55f2cb5ab21
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ffaf964b24fea41d8e364d610806ba92980b1dc7
+ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88893302"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91659174"
 ---
 # <a name="use-the-code-analysis-rule-set-editor"></a>使用代码分析规则集编辑器
 
@@ -53,7 +53,7 @@ ms.locfileid: "88893302"
 |**全部展开**|显示所有组中的规则。|
 |**全部折叠**|隐藏所有组中的规则。|
 |**分组依据**|指定对规则进行分组所依据的字段。 单击 **\<None>** 以显示没有组的规则。|
-|**Column 选项**|指定要显示的规则字段。|
+|**列选项**|指定要显示的规则字段。|
 |**隐藏不适用于当前解决方案的规则**|显示或隐藏与解决方案不属于同一目标类型的规则。|
 |**显示可以生成代码分析错误的规则**|显示或隐藏分配了 "错误" 操作的规则。|
 |**显示可以生成代码分析警告的规则**|显示或隐藏分配了 "警告" 操作的规则。|
@@ -70,8 +70,8 @@ ms.locfileid: "88893302"
 |字段|说明|
 |-----------|-----------------|
 |**ID**|规则的标识符。|
-|**类别**|除了规则集中的成员身份外，代码分析规则还按类别分组。 有关详细信息，请参阅 [代码分析警告](../code-quality/code-analysis-for-managed-code-warnings.md)。|
-|**名称**|规则的标题。|
+|**类别**|除了规则集中的成员身份外，代码分析规则还按类别分组。 有关详细信息，请参阅 [代码分析警告](/dotnet/fundamentals/code-analysis/quality-rules/index)。|
+|**Name**|规则的标题。|
 |**Namespace**|规则的命名空间。|
 |**目标类型**|指示规则是适用于本机、托管代码还是数据库代码。|
 |**操作**|代码分析运行中违反规则时执行的操作。 可以编辑 " **操作** " 字段。|
@@ -85,6 +85,6 @@ ms.locfileid: "88893302"
 
 - 若要按字段的值筛选规则集，请在要筛选的字段的列标题上选择 "筛选器" 按钮。 选中要显示的值的复选框，并清除要隐藏的值的复选框。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [创建自定义规则集](../code-quality/how-to-create-a-custom-rule-set.md)

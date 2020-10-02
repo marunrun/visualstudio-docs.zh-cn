@@ -8,12 +8,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: c7ce330a8a2994f827234aae8b8db416da016b29
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: 5f3205bf3c81bbb9dac19c810e3a89a5fcd2227b
+ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89509869"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91658394"
 ---
 # <a name="security-rules-rule-set-for-managed-code"></a>托管代码的“安全规则”规则集
 
@@ -21,7 +21,7 @@ ms.locfileid: "89509869"
 
 |规则|描述|
 |----------|-----------------|
-|[CA2100](../code-quality/ca2100.md)|检查 SQL 查询是否存在安全漏洞|
+|[CA2100](/dotnet/fundamentals/code-analysis/quality-rules/ca2100)|检查 SQL 查询是否存在安全漏洞|
 |[CA2102](../code-quality/ca2102.md)|在常规处理程序中捕捉非 CLSCompliant 异常|
 |[CA2103](../code-quality/ca2103.md)|检查命令性安全|
 |[CA2104](../code-quality/ca2104.md)|不要声明只读可变引用类型|
@@ -29,7 +29,7 @@ ms.locfileid: "89509869"
 |[CA2106](../code-quality/ca2106.md)|保护断言|
 |[CA2107](../code-quality/ca2107.md)|检查 deny 权限和 permit only 权限的使用情况|
 |[CA2108](../code-quality/ca2108.md)|检查有关值类型的声明性安全|
-|[CA2109](../code-quality/ca2109.md)|检查可见的事件处理程序|
+|[CA2109](/dotnet/fundamentals/code-analysis/quality-rules/ca2109)|检查可见的事件处理程序|
 |[CA2111](../code-quality/ca2111.md)|指针应为不可见|
 |[CA2112](../code-quality/ca2112.md)|受保护的类型不应公开字段|
 |[CA2114](../code-quality/ca2114.md)|方法安全性应是类型安全性的超集|
@@ -37,7 +37,7 @@ ms.locfileid: "89509869"
 |[CA2116](../code-quality/ca2116.md)|APTCA 方法应只调用 APTCA 方法|
 |[CA2117](../code-quality/ca2117.md)|APTCA 类型应只扩展 APTCA 基类型|
 |[CA2118](../code-quality/ca2118.md)|检查 SuppressUnmanagedCodeSecurityAttribute 用法|
-|[CA2119](../code-quality/ca2119.md)|密封满足私有接口的方法|
+|[CA2119](/dotnet/fundamentals/code-analysis/quality-rules/ca2119)|密封满足私有接口的方法|
 |[CA2120](../code-quality/ca2120.md)|保护序列化构造函数|
 |[CA2121](../code-quality/ca2121.md)|静态构造函数应为私有|
 |[CA2122](../code-quality/ca2122.md)|不要使用链接请求间接公开方法|
@@ -64,27 +64,27 @@ ms.locfileid: "89509869"
 |[CA2147](../code-quality/ca2147.md)|透明方法不得使用安全断言|
 |[CA2149](../code-quality/ca2149.md)|透明方法不得调入本机代码|
 |[CA2210](../code-quality/ca2210.md)|程序集应具有有效的强名称|
-|[CA2300](ca2300.md)|请勿使用不安全的反序列化程序 BinaryFormatte|
-|[CA2301](ca2301.md)|在未先设置 BinaryFormatter.Binder 的情况下，请不要调用 BinaryFormatter.Deserialize|
-|[CA2302](ca2302.md)|在调用 BinaryFormatter.Deserialize 之前，确保设置 BinaryFormatter.Binder|
-|[CA2305](ca2305.md)|请勿使用不安全的反序列化程序 LosFormatter|
-|[CA2310](ca2310.md)|请勿使用不安全的反序列化程序 NetDataContractSerializer|
-|[CA2311](ca2311.md)|在未先设置 NetDataContractSerializer.Binder 的情况下，请不要反序列化|
-|[CA2312](ca2312.md)|确保在反序列化之前设置 NetDataContractSerializer.Binder|
-|[CA2315](ca2315.md)|请勿使用不安全的反序列化程序 ObjectStateFormatter|
-|[CA2321](ca2321.md)|请勿使用 SimpleTypeResolver 对 JavaScriptSerializer 进行反序列化|
-|[CA2322](ca2322.md)|确保在反序列化之前没有使用 SimpleTypeResolver 初始化 JavaScriptSerializer|
-|[CA3001](../code-quality/ca3001.md)|查看 SQL 注入漏洞的代码|
-|[CA3002](../code-quality/ca3002.md)|查看 XSS 漏洞的代码|
-|[CA3003](../code-quality/ca3003.md)|查看文件路径注入漏洞的代码|
-|[CA3004](../code-quality/ca3004.md)|查看信息泄露漏洞的代码|
-|[CA3005](../code-quality/ca3005.md)|查看 LDAP 注入漏洞的代码|
-|[CA3006](../code-quality/ca3006.md)|查看进程命令注入漏洞的代码|
-|[CA3007](../code-quality/ca3007.md)|查看公开重定向漏洞的代码|
-|[CA3008](../code-quality/ca3008.md)|查看 XPath 注入漏洞的代码|
-|[CA3009](../code-quality/ca3009.md)|查看 XML 注入漏洞的代码|
-|[CA3010](../code-quality/ca3010.md)|查看 XAML 注入漏洞的代码|
-|[CA3011](../code-quality/ca3011.md)|查看 DLL 注入漏洞的代码|
-|[CA3012](../code-quality/ca3012.md)|查看正则表达式注入漏洞的代码|
-|[CA5358](../code-quality/ca5358.md)|请勿使用不安全的密码模式|
-|[CA5403](../code-quality/ca5403.md)|请勿硬编码证书|
+|[CA2300](/dotnet/fundamentals/code-analysis/quality-rules/ca2300)|请勿使用不安全的反序列化程序 BinaryFormatte|
+|[CA2301](/dotnet/fundamentals/code-analysis/quality-rules/ca2301)|在未先设置 BinaryFormatter.Binder 的情况下，请不要调用 BinaryFormatter.Deserialize|
+|[CA2302](/dotnet/fundamentals/code-analysis/quality-rules/ca2302)|在调用 BinaryFormatter.Deserialize 之前，确保设置 BinaryFormatter.Binder|
+|[CA2305](/dotnet/fundamentals/code-analysis/quality-rules/ca2305)|请勿使用不安全的反序列化程序 LosFormatter|
+|[CA2310](/dotnet/fundamentals/code-analysis/quality-rules/ca2310)|请勿使用不安全的反序列化程序 NetDataContractSerializer|
+|[CA2311](/dotnet/fundamentals/code-analysis/quality-rules/ca2311)|在未先设置 NetDataContractSerializer.Binder 的情况下，请不要反序列化|
+|[CA2312](/dotnet/fundamentals/code-analysis/quality-rules/ca2312)|确保在反序列化之前设置 NetDataContractSerializer.Binder|
+|[CA2315](/dotnet/fundamentals/code-analysis/quality-rules/ca2315)|请勿使用不安全的反序列化程序 ObjectStateFormatter|
+|[CA2321](/dotnet/fundamentals/code-analysis/quality-rules/ca2321)|请勿使用 SimpleTypeResolver 对 JavaScriptSerializer 进行反序列化|
+|[CA2322](/dotnet/fundamentals/code-analysis/quality-rules/ca2322)|确保在反序列化之前没有使用 SimpleTypeResolver 初始化 JavaScriptSerializer|
+|[CA3001](/dotnet/fundamentals/code-analysis/quality-rules/ca3001)|查看 SQL 注入漏洞的代码|
+|[CA3002](/dotnet/fundamentals/code-analysis/quality-rules/ca3002)|查看 XSS 漏洞的代码|
+|[CA3003](/dotnet/fundamentals/code-analysis/quality-rules/ca3003)|查看文件路径注入漏洞的代码|
+|[CA3004](/dotnet/fundamentals/code-analysis/quality-rules/ca3004)|查看信息泄露漏洞的代码|
+|[CA3005](/dotnet/fundamentals/code-analysis/quality-rules/ca3005)|查看 LDAP 注入漏洞的代码|
+|[CA3006](/dotnet/fundamentals/code-analysis/quality-rules/ca3006)|查看进程命令注入漏洞的代码|
+|[CA3007](/dotnet/fundamentals/code-analysis/quality-rules/ca3007)|查看公开重定向漏洞的代码|
+|[CA3008](/dotnet/fundamentals/code-analysis/quality-rules/ca3008)|查看 XPath 注入漏洞的代码|
+|[CA3009](/dotnet/fundamentals/code-analysis/quality-rules/ca3009)|查看 XML 注入漏洞的代码|
+|[CA3010](/dotnet/fundamentals/code-analysis/quality-rules/ca3010)|查看 XAML 注入漏洞的代码|
+|[CA3011](/dotnet/fundamentals/code-analysis/quality-rules/ca3011)|查看 DLL 注入漏洞的代码|
+|[CA3012](/dotnet/fundamentals/code-analysis/quality-rules/ca3012)|查看正则表达式注入漏洞的代码|
+|[CA5358](/dotnet/fundamentals/code-analysis/quality-rules/ca5358)|请勿使用不安全的密码模式|
+|[CA5403](/dotnet/fundamentals/code-analysis/quality-rules/ca5403)|请勿硬编码证书|

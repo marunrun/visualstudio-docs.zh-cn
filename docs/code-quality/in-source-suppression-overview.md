@@ -14,12 +14,12 @@ dev_langs:
 - CPP
 ms.workload:
 - multiple
-ms.openlocfilehash: adf8e969af4a903aa6ed55b1c92f4ddaffcf77e0
-ms.sourcegitcommit: 56a40b7861640d7922e39256985bb542d67b8020
+ms.openlocfilehash: 4ef64528d8686267677020458374ef96143f6e34
+ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91604639"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91658511"
 ---
 # <a name="suppress-code-analysis-violations"></a>禁止显示代码分析违规情况
 
@@ -68,7 +68,7 @@ CA_SUPPRESS_MESSAGE("Rule Category", "Rule Id", Justification = "Justification",
 
 属性的属性包括：
 
-- **类别** -定义规则的类别。 有关代码分析规则类别的详细信息，请参阅 [托管代码警告](../code-quality/code-analysis-for-managed-code-warnings.md)。
+- **类别** -定义规则的类别。 有关代码分析规则类别的详细信息，请参阅 [托管代码警告](/dotnet/fundamentals/code-analysis/quality-rules/index)。
 
 - **CheckId** -规则的标识符。 支持包括规则标识符的短名称和长名称。 短名称为 CAXXXX;长名称为 CAXXXX： FriendlyTypeName。
 
@@ -190,7 +190,7 @@ public class Animal
 > [!NOTE]
 > `GeneratedCodeAttribute`当应用于整个程序集或单个参数时，代码分析将忽略。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.Scope>
 - <xref:System.Diagnostics.CodeAnalysis>
