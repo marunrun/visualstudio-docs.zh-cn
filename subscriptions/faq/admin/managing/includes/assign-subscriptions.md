@@ -6,13 +6,13 @@ ms.topic: include
 ms.assetid: 59eb35fd-ec94-41ce-b24c-a8a120976bac
 author: CaityBuschlen
 ms.author: cabuschl
-ms.date: 3/3/2020
-ms.openlocfilehash: 192cb7118a9f431ce2e7a9396b67a919fad10bb9
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.date: 09/30/2020
+ms.openlocfilehash: add0bac2a9e7eb053c183d66fcee17c8133bb921
+ms.sourcegitcommit: ea3c985a23851b424127f2205f617446b6536578
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84200326"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91644758"
 ---
 ## <a name="how-do-i-assign-visual-studio-subscriptions"></a>如何分配 Visual Studio 订阅？
 
@@ -39,4 +39,12 @@ ms.locfileid: "84200326"
 4. 返回 [manage.visualstudio.com](https://manage.visualstudio.com)，选择“批量添加”，然后上传保存的 Excel 模板副本。
 5. 上传成功后，你将看到确认页面，并且订阅者列表中已填充新订阅者。 你的订阅者将收到一封电子邮件，并且可以立即开始使用各自的 Visual Studio 订阅（订阅者无需激活）。
 
-阅读有关[在 Visual Studio 订阅管理员门户中分配订阅](https://docs.microsoft.com/visualstudio/subscriptions/assign-license#individual-assignments)的更多信息，详细了解如何快速轻松地分配订阅。
+[阅读有关在 Visual Studio 订阅管理员门户中分配订阅的更多信息](https://docs.microsoft.com/visualstudio/subscriptions/assign-license#add-a-single-subscriber)，以详细了解如何快速轻松地分配订阅。  [详细了解](https://docs.microsoft.com/visualstudio/subscriptions/assign-github)如何管理带有 GitHub Enterprise 的 Visual Studio 订阅。 
+
+## <a name="what-is-the-github-enterprise-setup-process"></a>GitHub Enterprise 的设置过程是怎样的？ 
+
+GitHub Enterprise 的设置和管理独立于 Visual Studio 订阅。 购买带有 GitHub Enterprise 的 Visual Studio 后，与在 manage.visualstudio.com 中建立协议的同时（但独立于此），GitHub Enterprise 帐户设置过程将会启动。 建立此 GitHub Enterprise 帐户可能需要一些时间。  
+
+你的公司设置了 GitHub Enterprise 帐户后，已被分配了带有 GitHub Enterprise 的 Visual Studio 订阅的订阅者将收到来自 GitHub 的一封电子邮件，通知他们其 Visual Studio 订阅已链接。 订阅者收到此电子邮件后，他们可以联系其 GitHub 组织管理员，以收到相应组织的邀请。 
+
+[详细了解](https://docs.microsoft.com/visualstudio/subscriptions/assign-github)如何管理带有 GitHub Enterprise 的 Visual Studio 订阅。 有关 GitHub Enterprise 设置过程的更多详细信息，请参阅[订阅者文档](https://docs.microsoft.com/visualstudio/subscriptions/access-github)。 
