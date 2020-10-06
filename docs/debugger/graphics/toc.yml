@@ -2,6 +2,8 @@
   href: visual-studio-graphics-diagnostics.md
 - name: Visual Studio 图形诊断概述
   href: overview-of-visual-studio-graphics-diagnostics.md
+- name: Visual Studio 中的 DirectX12 支持
+  href: visual-studio-graphics-diagnostics-directx-12.md
 - name: Visual Studio 图形诊断入门
   href: getting-started-with-visual-studio-graphics-diagnostics.md
 - name: 捕获图形信息
