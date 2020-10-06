@@ -19,10 +19,10 @@ manager: jillfra
 ms.workload:
 - aspnet
 ms.openlocfilehash: f23f5bb2588c179f47593b1ecbcf5d6cd7fa9f0d
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85349752"
 ---
 # <a name="debug-aspnet-or-aspnet-core-apps-in-visual-studio"></a>在 Visual Studio 中调试 ASP.NET 或 ASP.NET Core 应用
@@ -142,7 +142,7 @@ ASP.NET 项目默认有 web.config 文件，其中包含应用配置、启动信
 
 一个网站可包含多个虚拟目录和子目录，其中每个目录中都有 web.config 文件。 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 应用从 URL 路径中更高级别的 web.config 文件继承配置设置。 分层 web.config 文件设置应用于层次结构中的所有下级 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 应用。 在层次结构下较低级别的 web.config 文件中设置其他配置将覆盖较高级别文件中的设置。
 
-例如，如果在 www.microsoft.com/aaa/web.config 中指定 `debug="true"`，则 aaa 文件夹或 aaa 任何子文件夹中的任何应用都将继承该设置，除非其中一个应用使用自己的 web.config 文件覆盖设置  。
+例如，如果在 www\.microsoft.com/aaa/web.config 中指定 `debug="true"`，则 aaa 文件夹或 aaa 任何子文件夹中的任何应用都将继承该设置，除非其中一个应用使用自己的 web.config 文件覆盖设置  。
 
 ## <a name="publish-in-debug-mode-using-the-file-system"></a>使用文件系统在调试模式下发布
 
