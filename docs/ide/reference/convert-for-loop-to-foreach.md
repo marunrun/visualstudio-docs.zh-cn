@@ -10,12 +10,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: af52761f5cb199c7f842d01589c35501898b09aa
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 47aa5a328f158d890908bf1ddcb69a838ad1ed66
+ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79094608"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91659376"
 ---
 # <a name="refactoring-to-convert-between-a-for-loop-and-a-foreach-statement"></a>重构，以便在 for 循环和 foreach 语句之间进行转换
 
@@ -83,7 +83,7 @@ ms.locfileid: "79094608"
 1. 因为重构会引入一个新迭代计数变量，因此，“重命名”  框将出现在编辑器的右上角。 如果想要为变量选择不同名称，键入该名称，然后按“Enter”或选择“重命名”框中的“应用”。 如果不想选择新名称，按“Esc”  或选择“应用”  以关闭“重命名”  框。
 
 > [!NOTE]
-> 对于 C#，由这些重构生成的代码对集合中的项目类型使用显式类型或 [var](/dotnet/csharp/language-reference/keywords/var)。 生成代码中的类型（显式或隐式）取决于范围内的代码样式设置。 这些特定的代码样式设置在“工具” > “选项” > “文本编辑器” > “C#” > “代码样式” > “常规” > “var 首选项”\'下以计算机级别进行配置，或在 [EditorConfig](../../ide/editorconfig-language-conventions.md#implicit-and-explicit-types) 文件下以解决方案级别进行配置。 如果在“选项”  中更改了代码样式设置，请重新打开代码文件以使更改生效。
+> 对于 C#，由这些重构生成的代码对集合中的项目类型使用显式类型或 [var](/dotnet/csharp/language-reference/keywords/var)。 生成代码中的类型（显式或隐式）取决于范围内的代码样式设置。 这些特定的代码样式设置在“工具” > “选项” > “文本编辑器” > “C#” > “代码样式” > “常规” > “var 首选项”\'下以计算机级别进行配置，或在 [EditorConfig](/dotnet/fundamentals/code-analysis/style-rules/language-rules#implicit-and-explicit-types) 文件下以解决方案级别进行配置。 如果在“选项”  中更改了代码样式设置，请重新打开代码文件以使更改生效。
 
 ## <a name="see-also"></a>另请参阅
 
