@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6b9b61d25d0a08763d55dcfb5d5ddb245471effc
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 350c32ea0904913b20f346243de9cb464667289a
+ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "76113783"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91659350"
 ---
 # <a name="code-analysis-project-designer"></a>“项目设计器”->“代码分析”
 
@@ -64,6 +64,6 @@ ms.locfileid: "76113783"
 
 ## <a name="see-also"></a>另请参阅
 
-- [托管代码的代码分析警告](../../code-quality/code-analysis-for-managed-code-warnings.md)
+- [托管代码的代码分析警告](/dotnet/fundamentals/code-analysis/quality-rules/index)
 - [托管代码的代码分析概述](../../code-quality/code-analysis-for-managed-code-overview.md)
 - [演练：对托管代码进行代码缺陷分析](../../code-quality/walkthrough-analyzing-managed-code-for-code-defects.md)

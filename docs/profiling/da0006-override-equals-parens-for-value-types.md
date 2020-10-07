@@ -14,12 +14,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 4309b1a38e99cda262bf7558f050754656419e88
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.openlocfilehash: ba62555f786b2280de9a07c435a3e32d5cc3e7d9
+ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85520817"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91659285"
 ---
 # <a name="da0006-override-equals-for-value-types"></a>DA0006：替代值类型的 Equals()
 
@@ -40,4 +40,4 @@ ms.locfileid: "85520817"
  有关如何重写 Equals 和相等运算符的详细信息，请参阅 [Equals 和相等运算符 (==) 的实现准则](/dotnet/standard/design-guidelines/equality-operators)。
 
 ## <a name="how-to-investigate-a-warning"></a>如何调查警告
- 有关实现 Equals 和相等运算符的示例，请参阅代码分析规则 [CA1815：替代值类型上的 Equals 和相等运算符](../code-quality/ca1815.md)
+ 有关实现 Equals 和相等运算符的示例，请参阅代码分析规则 [CA1815：替代值类型上的 Equals 和相等运算符](/dotnet/fundamentals/code-analysis/quality-rules/ca1815)
