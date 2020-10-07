@@ -12,12 +12,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 1269049adad3fe2d26caa79721452f7f313e60d5
-ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
+ms.openlocfilehash: fed525f62466d096aa7868cc57c7fd7c75bf46f8
+ms.sourcegitcommit: a778dffddb05d2f0f15969eadaf9081c9b466196
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90739897"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91781026"
 ---
 # <a name="manage-npm-packages-in-visual-studio"></a>在 Visual Studio 中管理 npm 包
 
@@ -126,7 +126,7 @@ npm 包显示在解决方案资源管理器中。 “npm”节点下的条目模
 * [使用 package.json 安装包](#npmInstallPackage)
 
 >[!NOTE]
-> 对于 ASP.NET Core 项目，还可以使用[库管理器](/aspnet/core/client-side/libman/?view=aspnetcore-3.1)或 yarn（而非 npm）来安装客户端 JavaScript 和 CSS 文件。
+> 对于 ASP.NET Core 项目，还可以使用[库管理器](/aspnet/core/client-side/libman/?view=aspnetcore-3.1&preserve-view=true)或 yarn（而非 npm）来安装客户端 JavaScript 和 CSS 文件。
 
 ### <a name="add-npm-support-to-a-project-aspnet-core"></a><a name="npmAdd"></a>向项目添加 npm 支持 (ASP.NET Core)
 

@@ -12,22 +12,22 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: d0489950b9132a36aef8ecb3d8374c02d1a1aee2
-ms.sourcegitcommit: d77da260d79471ab139973c51d65b04e0f80fe2e
+ms.openlocfilehash: e8c99677396ab9b3d005d4079fd37fa633df4913
+ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90560731"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91658433"
 ---
 # <a name="overview-of-source-code-analysis"></a>源代码分析概述
 
-.NET Compiler Platform (Roslyn) 分析器检查 C# 或 Visual Basic 代码的样式、质量、可维护性、设计及其他问题。 此检查或分析是在设计时在所有打开的文件中完成的。 
+.NET Compiler Platform (Roslyn) 分析器检查 C# 或 Visual Basic 代码的样式、质量、可维护性、设计及其他问题。 此检查或分析是在设计时在所有打开的文件中完成的。
 
 分析器可以分为以下几组：
 
-- [代码样式](/visualstudio/ide/editorconfig-code-style-settings-reference?view=vs-2019#convention-categories)分析器内置于 Visual Studio 中。 对于这些分析器，诊断 ID 或代码的格式为 IDExxxx，如 IDE0067。 可以在[文本编辑器选项页](../ide/code-styles-and-code-cleanup.md)上或在 [EditorConfig 文件](../ide/editorconfig-code-style-settings-reference.md)中配置首选项。 从 .NET 5.0 开始，代码样式分析器包含在 .NET SDK 中，并且可以作为生成警告或错误严格地强制实施。 有关详细信息，请参阅[此文](/dotnet/fundamentals/productivity/code-analysis#code-style-analysis)。
+- [代码样式](/visualstudio/ide/editorconfig-code-style-settings-reference?view=vs-2019&preserve-view=true#convention-categories)分析器内置于 Visual Studio 中。 对于这些分析器，诊断 ID 或代码的格式为 IDExxxx，如 IDE0067。 可以在[文本编辑器选项页](../ide/code-styles-and-code-cleanup.md)上或在 [EditorConfig 文件](/dotnet/fundamentals/code-analysis/code-style-rule-options)中配置首选项。 从 .NET 5.0 开始，代码样式分析器包含在 .NET SDK 中，并且可以作为生成警告或错误严格地强制实施。 有关详细信息，请参阅[此文](/dotnet/fundamentals/productivity/code-analysis#code-style-analysis)。
 
-- 现在，[代码质量](code-analysis-warnings-for-managed-code-by-checkid.md)分析器包含在 .NET 5 SDK 中并且在默认情况下已启用。 对于这些分析器，诊断 ID 或代码的格式为 CAxxxx，如 CA1822。 有关详细信息，请参阅 [.NET 代码质量分析概述](/dotnet/fundamentals/productivity/code-analysis#code-quality-analysis)。
+- 现在，[代码质量](/dotnet/fundamentals/code-analysis/quality-rules/index)分析器包含在 .NET 5 SDK 中并且在默认情况下已启用。 对于这些分析器，诊断 ID 或代码的格式为 CAxxxx，如 CA1822。 有关详细信息，请参阅 [.NET 代码质量分析概述](/dotnet/fundamentals/productivity/code-analysis#code-quality-analysis)。
 
 - 可以将第三方分析器作为 NuGet 包或 Visual Studio 扩展进行安装。 第三方分析器，例如 [StyleCop](https://www.nuget.org/packages/StyleCop.Analyzers/)、[Roslynator](https://www.nuget.org/packages/Roslynator.Analyzers/)、[XUnit Analyzers](https://www.nuget.org/packages/xunit.analyzers/) 和 [Sonar Analyzer](https://www.nuget.org/packages/SonarAnalyzer.CSharp/)。
 
@@ -58,7 +58,7 @@ ms.locfileid: "90560731"
 
 ## <a name="configure-analyzer-severity-levels"></a>配置分析器严重性级别
 
-可以在 [EditorConfig 文件](../code-quality/use-roslyn-analyzers.md#set-rule-severity-in-an-editorconfig-file)中或从[灯泡菜单](../code-quality/use-roslyn-analyzers.md#set-rule-severity-from-the-light-bulb-menu)中配置分析器规则的严重性或诊断。 
+可以在 [EditorConfig 文件](../code-quality/use-roslyn-analyzers.md#set-rule-severity-in-an-editorconfig-file)中或从[灯泡菜单](../code-quality/use-roslyn-analyzers.md#set-rule-severity-from-the-light-bulb-menu)中配置分析器规则的严重性或诊断。
 
 分析器还可以配置为在生成时检查代码，并在键入时保持运行状态。 你可配置实时代码分析的范围，以仅对当前文档执行、对所有打开的文档执行或对整个解决方案执行。 请参阅[如何：配置实时代码分析范围](./configure-live-code-analysis-scope-managed-code.md)。
 

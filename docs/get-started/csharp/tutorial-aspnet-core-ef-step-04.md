@@ -16,12 +16,12 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 5ea9468bdf86986ab542fb1cabc873c9aeb75fd6
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: 9a2ee576808698e19726cadfea7ba560ce3bdb7c
+ms.sourcegitcommit: a778dffddb05d2f0f15969eadaf9081c9b466196
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "77580035"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91780933"
 ---
 # <a name="step-4-expose-a-web-api-from-your-aspnet-core-app"></a>步骤 4：从 ASP.NET Core 应用中公开 Web API
 
@@ -208,7 +208,7 @@ services.AddSwaggerGen(c =>
 // Enable middleware to serve generated Swagger as a JSON endpoint.
 app.UseSwagger();
 
-// Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.), 
+// Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.),
 // specifying the Swagger JSON endpoint.
 app.UseSwaggerUI(c =>
 {
@@ -216,7 +216,7 @@ app.UseSwaggerUI(c =>
 });
 ```
 
-现在，应能够生成并运行应用。 在浏览器中，导航到地址栏中的 `/swagger`。 应看到应用 API 终结点和模型的列表。 
+现在，应能够生成并运行应用。 在浏览器中，导航到地址栏中的 `/swagger`。 应看到应用 API 终结点和模型的列表。
 
 ![浏览器中的 Visual Studio 2019 Swagger 页](media/vs-2019/vs2019-swagger-browser.png)
 
@@ -230,5 +230,5 @@ app.UseSwaggerUI(c =>
 
 ## <a name="see-also"></a>请参阅
 
-- [Swashbuckle 和 ASP.NET Core 入门](/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-2.2&tabs=visual-studio)
-- [带有 Swagger/OpenAPI 的 ASP.NET Core Web API 帮助页](/aspnet/core/tutorials/web-api-help-pages-using-swagger?view=aspnetcore-2.2)
+- [Swashbuckle 和 ASP.NET Core 入门](/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-2.2&tabs=visual-studio&preserve-view=true)
+- [带有 Swagger/OpenAPI 的 ASP.NET Core Web API 帮助页](/aspnet/core/tutorials/web-api-help-pages-using-swagger?view=aspnetcore-2.2&preserve-view=true)

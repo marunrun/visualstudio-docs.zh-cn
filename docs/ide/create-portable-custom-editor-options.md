@@ -7,12 +7,12 @@ helpviewer_keywords:
 author: mikadumont
 ms.author: midumont
 manager: jillfra
-ms.openlocfilehash: 59e226fc0cc09b1eda5197d6accddfa9bd1a20ed
-ms.sourcegitcommit: 703c68667261df5985a73282c1cbb0541118989c
+ms.openlocfilehash: 277e5cd03d4006ced0791356be73ca1fcbe5c217
+ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89402252"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91659246"
 ---
 # <a name="create-portable-custom-editor-settings-with-editorconfig"></a>使用 EditorConfig 创建可移植的自定义编辑器设置
 
@@ -68,7 +68,7 @@ Visual Studio 中的编辑器支持 [EditorConfig 属性](https://editorconfig.o
 - insert\_final_newline
 - 根
 
-所有 Visual Studio 支持的语言（XML 除外）均支持 EditorConfig 编辑器设置。 此外，EditorConfig 还支持适用于 C# 和 Visual Basic 的[代码样式](../ide/editorconfig-code-style-settings-reference.md)约定（包括[语言](../ide/editorconfig-language-conventions.md)、[格式设置](../ide/editorconfig-formatting-conventions.md)）和[命名](../ide/editorconfig-naming-conventions.md)约定。
+所有 Visual Studio 支持的语言（XML 除外）均支持 EditorConfig 编辑器设置。 此外，EditorConfig 还支持适用于 C# 和 Visual Basic 的[代码样式](/dotnet/fundamentals/code-analysis/code-style-rule-options)约定（包括[语言](/dotnet/fundamentals/code-analysis/style-rules/language-rules)、[格式设置](/dotnet/fundamentals/code-analysis/style-rules/formatting-rules)）和[命名](/dotnet/fundamentals/code-analysis/style-rules/naming-rules)约定。
 
 ## <a name="add-and-remove-editorconfig-files"></a>添加和删除 EditorConfig 文件
 
@@ -90,7 +90,7 @@ Visual Studio 中的编辑器支持 [EditorConfig 属性](https://editorconfig.o
 
    ![Visual Studio 中的 EditorConfig 文件项模板](media/editorconfig-item-templates.png)
 
-1. 选择“editorconfig 文件(默认)”模板，添加使用针对缩进样式和尺寸的两个核心 EditorConfig 选项预填充的 EditorConfig 文件。 或者，选择“editorconfig 文件(.NET)”模板，添加使用默认的 [.NET 代码样式、格式设置和命名约定](../ide/editorconfig-code-style-settings-reference.md)预填充的 EditorConfig 文件。
+1. 选择“editorconfig 文件(默认)”模板，添加使用针对缩进样式和尺寸的两个核心 EditorConfig 选项预填充的 EditorConfig 文件。 或者，选择“editorconfig 文件(.NET)”模板，添加使用默认的 [.NET 代码样式、格式设置和命名约定](/dotnet/fundamentals/code-analysis/code-style-rule-options)预填充的 EditorConfig 文件。
 
    解决方案资源管理器中随即显示一个 .editorconfig 文件，且文件在编辑器中打开。
 
@@ -180,7 +180,7 @@ dir .editorconfig /s
 
 ## <a name="see-also"></a>请参阅
 
-- [.NET 代码样式约定](../ide/editorconfig-code-style-settings-reference.md)
+- [.NET 代码样式约定](/dotnet/fundamentals/code-analysis/code-style-rule-options)
 - [支持语言服务的 EditorConfig](../extensibility/supporting-editorconfig.md)
 - [EditorConfig.org](https://editorconfig.org/)
 - [代码编辑器功能](writing-code-in-the-code-and-text-editor.md)

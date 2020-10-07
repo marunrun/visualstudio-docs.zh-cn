@@ -16,12 +16,12 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 55dd48ed2c319984fcc96e806c97a7ae24ce7170
-ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
+ms.openlocfilehash: fc0729eccc6f1392561959dcdac0cf13dfc8e04a
+ms.sourcegitcommit: a778dffddb05d2f0f15969eadaf9081c9b466196
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88248714"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91780946"
 ---
 # <a name="step-5-deploy-your-aspnet-core-app-to-azure"></a>步骤 5：将 ASP.NET Core 应用部署到 Azure
 
@@ -111,4 +111,4 @@ ms.locfileid: "88248714"
 
 ## <a name="see-also"></a>另请参阅
 
-- [使用 Visual Studio 将 ASP.NET Core 应用发布到 Azure](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs?view=aspnetcore-2.2)
+- [使用 Visual Studio 将 ASP.NET Core 应用发布到 Azure](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs?view=aspnetcore-2.2&preserve-view=true)

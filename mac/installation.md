@@ -8,12 +8,12 @@ ms.technology: vs-ide-install
 ms.assetid: 22B1F2CD-32AE-464D-80AC-C8AB4786B015
 ms.custom: video
 ms.topic: how-to
-ms.openlocfilehash: 8020106ed189b1b67b7cc2f475784809fc93aa1e
-ms.sourcegitcommit: a3edc753c951f317b67ce294cd2fc74f0c45390c
+ms.openlocfilehash: f971237ecc829fcc4ab660263a1b66c701f86f62
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89426897"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91583952"
 ---
 # <a name="install-visual-studio-2019-for-mac"></a>安装 Visual Studio 2019 for Mac
 
@@ -62,7 +62,7 @@ ms.locfileid: "89426897"
    |**.NET Core 应用程序**|         |选择“.NET Core”平台。|         |
    |**ASP.NET Core Web 应用程序**|         |选择“.NET Core”平台。|         |
    |**Azure Functions**|         |选择“.NET Core”平台。|         |
-   |**跨平台 Unity 游戏开发**|         |除了 Visual Studio for Mac 之外，无需安装任何其他平台。| 若要详细了解如何安装 Unity 扩展，请参阅 [Unity 安装指南](/visualstudio/mac/setup-vsmac-tools-unity)。|
+   |**跨平台 Unity 游戏开发**|         |除了 Visual Studio for Mac 之外，无需安装任何其他平台。| 若要详细了解如何安装 Unity 扩展，请参阅 [Unity 安装指南](./setup-vsmac-tools-unity.md)。|
 
 7. 完成选择后，按下“安装”按钮。
 8. 安装程序将在下载并安装 Visual Studio for Mac 和所选工作负载时显示进度。 系统将提示输入密码以授予安装所需的权限。
@@ -75,7 +75,7 @@ ms.locfileid: "89426897"
 
     [![选择要使用的键盘快捷方式](media/ide-tour-2019-keyboard-shortcut.png)](media/ide-tour-2019-keyboard-shortcut.png#lightbox)
 
-如果在企业环境中安装时遇到网络问题，请查看[在有防火墙或代理的情况下进行安装](/visualstudio/mac/installation#install-visual-studio-for-mac-behind-a-firewall-or-proxy-server)的说明。
+如果在企业环境中安装时遇到网络问题，请查看[在有防火墙或代理的情况下进行安装](#install-visual-studio-for-mac-behind-a-firewall-or-proxy-server)的说明。
 
 了解有关[发行说明](/visualstudio/releasenotes/vs2019-mac-relnotes)中的更改详细信息。
 
@@ -88,7 +88,7 @@ ms.locfileid: "89426897"
 
 配置网络以允许访问下列位置：
 
-- [Visual Studio 终结点](/visualstudio/mac/install-behind-a-firewall-or-proxy-server)
+- [Visual Studio 终结点](./install-behind-a-firewall-or-proxy-server.md)
 
 ## <a name="next-steps"></a>后续步骤
 

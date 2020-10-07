@@ -16,12 +16,12 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: ef41e28d994f27f66f616623d1b2c9798b65ede4
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: a6b089309ca7202c01028b3323ccabfd3668e909
+ms.sourcegitcommit: a778dffddb05d2f0f15969eadaf9081c9b466196
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "77580060"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91780977"
 ---
 # <a name="tutorial-get-started-with-c-and-aspnet-core-in-visual-studio"></a>教程：Visual Studio 中的 C# 和 ASP.NET Core 入门
 
@@ -139,7 +139,7 @@ ms.locfileid: "77580060"
 
 ### <a name="about-your-solution"></a>关于解决方案
 
-此解决方案遵循 Razor 页面  设计模式。 它与 [Model-View-Controller (MVC)](/aspnet/core/tutorials/first-mvc-app/start-mvc?view=aspnetcore-2.1&tabs=aspnetcore2x) 设计模式的不同之处在于，它进行了优化，以包含 Razor Page 本身的模型和控制器代码。
+此解决方案遵循 Razor 页面  设计模式。 它与 [Model-View-Controller (MVC)](/aspnet/core/tutorials/first-mvc-app/start-mvc?view=aspnetcore-2.1&tabs=aspnetcore2x&preserve-view=true) 设计模式的不同之处在于，它进行了优化，以包含 Razor Page 本身的模型和控制器代码。
 
 ::: moniker range="vs-2017"
 ## <a name="tour-your-solution"></a>浏览解决方案
@@ -366,7 +366,7 @@ Visual Studio 是适用于开发人员的生产力工具集成开发套件。 �
 恭喜你完成本教程！ 希望你已对 C#、ASP.NET Core 和 Visual Studio IDE 有了一定了解。 要详细了解如何使用 C# 和 ASP.NET 创建 Web 应用或网站，请继续学习以下教程：
 
 > [!div class="nextstepaction"]
-> [使用 ASP.NET Core 创建 Razor 页面 Web 应用](/aspnet/core/tutorials/razor-pages/?view=aspnetcore-2.1)
+> [使用 ASP.NET Core 创建 Razor 页面 Web 应用](/aspnet/core/tutorials/razor-pages/?view=aspnetcore-2.1&preserve-view=true)
 
 ## <a name="see-also"></a>请参阅
 
