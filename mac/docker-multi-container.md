@@ -6,12 +6,12 @@ author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 07/03/2020
 ms.topic: tutorial
-ms.openlocfilehash: e46a66ab9ec05f8e7ad13091fdced01bffbd93b5
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: b883979921b3fa1493188a8d0fe75a1c493d5d97
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90038668"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91583991"
 ---
 # <a name="create-a-multi-container-app-with-docker-compose"></a>使用 Docker Compose 创建多容器应用
 
@@ -84,7 +84,7 @@ services:
    ```
    
     > [!NOTE]
-    > 在生产代码中，不应在每次请求后释放 `HttpClient`。 有关最佳做法，请参阅[使用 HttpClientFactory 实现复原 HTTP 请求](https://docs.microsoft.com/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests)。
+    > 在生产代码中，不应在每次请求后释放 `HttpClient`。 有关最佳做法，请参阅[使用 HttpClientFactory 实现复原 HTTP 请求](/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests)。
 
 1. 在 Index.cshtml 文件中，添加一行以显示 `ViewData["Message"]`，以便该文件看起来如以下代码：
 
@@ -102,7 +102,7 @@ services:
       </div>
       ```
   
-1. 在前端项目和 Web API 项目中，注释掉 Startup.cs 的 `Configure` 方法中对 [Microsoft.AspNetCore.Builder.HttpsPolicyBuilderExtensions.UseHttpsRedirection](https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.builder.httpspolicybuilderextensions.usehttpsredirection) 的调用，因为此示例代码使用 HTTP（而不是 HTTPS）来调用 Web API。
+1. 在前端项目和 Web API 项目中，注释掉 Startup.cs 的 `Configure` 方法中对 [Microsoft.AspNetCore.Builder.HttpsPolicyBuilderExtensions.UseHttpsRedirection](/dotnet/api/microsoft.aspnetcore.builder.httpspolicybuilderextensions.usehttpsredirection) 的调用，因为此示例代码使用 HTTP（而不是 HTTPS）来调用 Web API。
 
       ```csharp
                   //app.UseHttpsRedirection();

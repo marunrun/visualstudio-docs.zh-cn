@@ -10,18 +10,18 @@ no-loc:
 - Blazor
 - Blazor WebAssembly
 ms.topic: how-to
-ms.openlocfilehash: 0dcc254366e0d652ab7a8442a4d0c526fd72c403
-ms.sourcegitcommit: 703c68667261df5985a73282c1cbb0541118989c
+ms.openlocfilehash: 3280e63ae92a99cfa076b79e499a7b18952285c4
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89402496"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91584030"
 ---
 # <a name="create-no-locblazor-web-apps"></a>创建 Blazor Web 应用
 
 本指南介绍如何创建你的第一个 Blazor Web 应用。 若需要更深入的指导，请参阅 [ASP.NET Core Blazor 简介](/aspnet/core/blazor/index)。
 
-ASP.NET Core Blazor 支持两种不同的托管选项：Blazor WebAssembly (WASM) 或 Blazor Server。 Visual Studio for Mac 支持这两种托管模型。 Visual Studio for Mac 8.4+ 支持 Blazor Server，Visual Studio for Mac 8.6+ 同时支持两者。 有关 Blazor 托管模型的详细信息，请参阅 [ASP.NET Core Blazor 托管模型](https://docs.microsoft.com/aspnet/core/blazor/hosting-models?view=aspnetcore-3.1)。 预览版 v8.8 中支持在 Visual Studio for Mac 中调试 Blazor WebAssembly 项目（通过“Visual Studio”>“检查更新...”菜单中的预览更新通道来实现）。
+ASP.NET Core Blazor 支持两种不同的托管选项：Blazor WebAssembly (WASM) 或 Blazor Server。 Visual Studio for Mac 支持这两种托管模型。 Visual Studio for Mac 8.4+ 支持 Blazor Server，Visual Studio for Mac 8.6+ 同时支持两者。 有关 Blazor 托管模型的详细信息，请参阅 [ASP.NET Core Blazor 托管模型](/aspnet/core/blazor/hosting-models?view=aspnetcore-3.1)。 预览版 v8.8 中支持在 Visual Studio for Mac 中调试 Blazor WebAssembly 项目（通过“Visual Studio”>“检查更新...”菜单中的预览更新通道来实现）。
 
 什么是 Blazor？ Blazor 是一个框架，用于通过 .NET 构建交互式客户端 Web UI，进而可为 Web 开发人员提供以下优势：
 

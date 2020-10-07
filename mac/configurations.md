@@ -5,18 +5,18 @@ author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 09/18/2019
 ms.assetid: 78107CFA-9308-4293-A92A-9B552A259E15
-ms.openlocfilehash: d1511434a34017a7f0f7da65fe1ea6956d45d497
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 911d8d3a65c414bc3c98494bda75c46b778e5b2b
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71128403"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91584017"
 ---
 # <a name="understanding-build-configurations"></a>了解生成配置
 
 在开发过程中，可以存储不同的解决方案配置和项目属性以便在各种生成中使用。 由 Visual Studio for Mac 使用模板创建的项目通常包括“调试”和“发布”配置，分别支持应用的调试和部署。 
 
-若要创建自定义配置，请参阅[创建和编辑生成配置](/visualstudio/mac/create-and-edit-configurations)。
+若要创建自定义配置，请参阅[创建和编辑生成配置](./create-and-edit-configurations.md)。
 
 >[!NOTE]
 >本主题适用于 Visual Studio for Mac。 对于 Windows 上的 Visual Studio，请参阅[了解生成配置](/visualstudio/ide/understanding-build-configurations)。

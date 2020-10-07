@@ -16,12 +16,12 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 1d382e83aa9672cfdcbdca64b89be79d090f2aac
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: 6852ac1148c9a8001476eb9bb68e9e97d66e3eed
+ms.sourcegitcommit: a778dffddb05d2f0f15969eadaf9081c9b466196
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "77580083"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91780989"
 ---
 # <a name="step-2-create-your-first-aspnet-core-web-app"></a>步骤 2：创建首个 ASP.NET Core Web 应用
 
@@ -100,7 +100,7 @@ public void OnGet()
 
 向 `OnGet` 方法添加一个断点，向其中的 `Time` 赋值，并在此次开始执行时调试应用程序。
 
-执行过程在包含该断点的行处停止，可看到 `DateTime.Today` 包括日期，但时间始终是午夜，因为它不包括时间数据。 
+执行过程在包含该断点的行处停止，可看到 `DateTime.Today` 包括日期，但时间始终是午夜，因为它不包括时间数据。
 
 ![Visual Studio 2019 浏览器中的 ASP.NET Core 项目](media/vs-2019/vs2019-breakpoint.png)
 
@@ -128,4 +128,4 @@ public void OnGet()
 
 ## <a name="see-also"></a>请参阅
 
-- [教程：使用 ASP.NET Core 创建 Razor Pages Web 应用](/aspnet/core/tutorials/razor-pages/?view=aspnetcore-2.1)
+- [教程：使用 ASP.NET Core 创建 Razor Pages Web 应用](/aspnet/core/tutorials/razor-pages/?view=aspnetcore-2.1&preserve-view=true)

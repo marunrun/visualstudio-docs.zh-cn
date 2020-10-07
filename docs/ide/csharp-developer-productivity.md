@@ -10,12 +10,12 @@ helpviewer_keywords:
 - editor
 ms.workload:
 - dotnet
-ms.openlocfilehash: f6cf9e1c3f0011a282048939a994e47b897a314b
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: 23b50221845cf2b02b963c98f912a218a60630c6
+ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89509934"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91658407"
 ---
 # <a name="visual-studio-productivity-guide-for-c-developers"></a>面向 C# 开发人员的 Visual Studio 工作效率指南
 
@@ -101,7 +101,7 @@ Visual Studio 有一种名为“转到全部”(Ctrl+T) 的功能。 通过“�
 
    ![在编辑器中直接配置代码样式规则的严重性级别](../ide/media/configure-severity-level.png)
 
-请参阅 [.NET 编码约定选项](editorconfig-code-style-settings-reference.md)文档，其中也包含完整的 EditorConfig 文件的示例。
+请参阅 [.NET 编码约定选项](/dotnet/fundamentals/code-analysis/code-style-rule-options)文档，其中也包含完整的 EditorConfig 文件的示例。
 
 ::: moniker range=">=vs-2019"
 

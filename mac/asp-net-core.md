@@ -10,12 +10,12 @@ no-loc:
 - Blazor
 - Blazor WebAssembly
 ms.topic: how-to
-ms.openlocfilehash: ed92205388202c457f4d6c8e3fbba567a0d5944e
-ms.sourcegitcommit: 5e82a428795749c594f71300ab03a935dc1d523b
+ms.openlocfilehash: 7f8795b798b492370a08e55171c5627485c7869a
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86211654"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91584056"
 ---
 # <a name="getting-started-with-aspnet-core"></a>ASP.NET Core 入门
 
@@ -23,7 +23,7 @@ ms.locfileid: "86211654"
 
 ## <a name="installing-net-core"></a>安装 .NET Core
 
-安装 Visual Studio for Mac 时，将自动安装 .NET Core 3.1。 有关 Visual Studio for Mac 中支持的 .NET Core 版本的详细信息，请参阅 [.NET Core 支持](/visualstudio/mac/net-core-support)。
+安装 Visual Studio for Mac 时，将自动安装 .NET Core 3.1。 有关 Visual Studio for Mac 中支持的 .NET Core 版本的详细信息，请参阅 [.NET Core 支持](./net-core-support.md)。
 
 ## <a name="creating-an-aspnet-core-app-in-visual-studio-for-mac"></a>在 Visual Studio for Mac 中创建 ASP.NET Core 应用
 

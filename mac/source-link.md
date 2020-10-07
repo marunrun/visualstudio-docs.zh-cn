@@ -5,12 +5,12 @@ author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 12/16/2019
 ms.assetid: 4bcb8acf-db50-4bd8-a48e-86248f00c90b
-ms.openlocfilehash: 530ad09bbf72d9696621f328c2df40b37f362c13
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: 307196dc7e33d268c45a9bb126c002ad426c5558
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "75439084"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91583913"
 ---
 # <a name="debugging-into-nuget-packages-with-source-link"></a>通过源链接调试 NuGet 包
 
@@ -38,4 +38,4 @@ ms.locfileid: "75439084"
 ## <a name="see-also"></a>请参阅
 
 - [源链接 GitHub 存储库](https://github.com/dotnet/sourcelink/blob/master/README.md)
-- 有关源链接以及如何向包添加源链接支持的详细信息，请参阅 [.NET 文档](https://docs.microsoft.com/dotnet/standard/library-guidance/sourcelink)
+- 有关源链接以及如何向包添加源链接支持的详细信息，请参阅 [.NET 文档](/dotnet/standard/library-guidance/sourcelink)

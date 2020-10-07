@@ -18,12 +18,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1176232eb3354a9b425e9432eb83037367ee7706
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 57d95cd3f3dcf68e7af143bdde3a16474beda20c
+ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89312530"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91659272"
 ---
 # <a name="options-dialog-box-text-editor--c--code-style--formatting"></a>“选项”对话框：文本编辑器 \> C# \> 代码样式 \> 格式设置
 
@@ -62,19 +62,19 @@ ms.locfileid: "89312530"
 
 |Label|描述|相应的 EditorConfig 和工具 > 选项规则|
 |-----------|-----------------|-----------------|-----------------|
-|**应用所有 C# 格式规则（缩进、换行、间距）**|“设置文档格式”命令始终修复格式问题  。 此设置不可更改。| [Core EditorConfig 选项](../../ide/create-portable-custom-editor-options.md)<br/>[.NET EditorConfig 格式设置选项](../../ide/editorconfig-formatting-conventions.md)<br/><br/>“工具” > “选项” > “文本编辑器” > “C#” > “格式设置”> [“缩进”、“新行”、“间距”或“换行”]         |
+|**应用所有 C# 格式规则（缩进、换行、间距）**|“设置文档格式”命令始终修复格式问题  。 此设置不可更改。| [Core EditorConfig 选项](../../ide/create-portable-custom-editor-options.md)<br/>[.NET EditorConfig 格式设置选项](/dotnet/fundamentals/code-analysis/style-rules/formatting-rules)<br/><br/>“工具” > “选项” > “文本编辑器” > “C#” > “格式设置”> [“缩进”、“新行”、“间距”或“换行”]         |
 |**在格式设置期间执行额外的代码清理**|选中后，在 Edit.FormatDocument 命令上应用以下指定规则的修复程序  。| 不可用 |
 |**删除不必要的 Using**|选中后，触发 Edit.FormatDocument 时删除不必要的 `using` 指令  。| 不可用 |
 |**对 Using 排序**|选中后，触发 Edit.FormatDocument 时对 `using` 指令排序  。| dotnet_sort_system_directives_first<br/><br/>“工具” > “选项” > “文本编辑器” > “C#” > “高级” > [对 using 排序时将“System”指令排在第一位]       |
 |**为单行控制语句添加/删除大括号**|选中后，触发 Edit.FormatDocument 时，在单行控制语句中添加或删除大括号  。| csharp_prefer_braces<br/><br/>“工具” > “选项” > “文本编辑器” > “C#” > “代码样式” > “代码块首选项” > “首选大括号”        |
 |**添加可访问性修饰符**|选中后，在触发 Edit.FormatDocument 时添加缺少的可访问性修饰符  。| dotnet_style_require_accessibility_modifiers |
 |**对可访问性修饰符排序**|选中后，在触发 Edit.FormatDocument 时对可访问性修饰符排序  。| csharp_preferred_modifier_order<br/>visual_basic_preferred_modifier_order |
-|**应用表达式/程序块主体首选项**|选中后，触发 Edit.FormatDocument 时将 expression-bodied 成员转换为程序块主体，反之亦然  。| [Expression-bodied 成员 EditorConfig 选项](../../ide/editorconfig-language-conventions.md#expression-bodied-members)<br/><br/>“工具” > “选项” > “文本编辑器” > “C#” > “代码样式” > “表达式首选项” > “将表达式主体用于方法、构造函数等”        。 |
-|**应用隐式/显式类型首选项**|选中后，触发 Edit.FormatDocument 时将 `var` 转换为显式类型，反之亦然  。| [显式类型 EditorConfig 选项](../../ide/editorconfig-language-conventions.md#implicit-and-explicit-types)<br/><br/>“工具” > “选项” > “文本编辑器” > “C#” > “代码样式” > [“var”首选项]       |
+|**应用表达式/程序块主体首选项**|选中后，触发 Edit.FormatDocument 时将 expression-bodied 成员转换为程序块主体，反之亦然  。| [Expression-bodied 成员 EditorConfig 选项](/dotnet/fundamentals/code-analysis/style-rules/language-rules#expression-bodied-members)<br/><br/>“工具” > “选项” > “文本编辑器” > “C#” > “代码样式” > “表达式首选项” > “将表达式主体用于方法、构造函数等”        。 |
+|**应用隐式/显式类型首选项**|选中后，触发 Edit.FormatDocument 时将 `var` 转换为显式类型，反之亦然  。| [显式类型 EditorConfig 选项](/dotnet/fundamentals/code-analysis/style-rules/language-rules#implicit-and-explicit-types)<br/><br/>“工具” > “选项” > “文本编辑器” > “C#” > “代码样式” > [“var”首选项]       |
 |**应用内联“out”变量首选项**|选中后，触发 Edit.FormatDocument 时尽可能内联 `out` 变量  。| csharp_style_inlined_variable_declaration<br/><br/>“工具” > “选项” > “文本编辑器” > “C#” > “代码样式” > “变量首选项” > “首选内联变量声明”        |
 |**应用语言/框架类型首选项**|选中后，触发 Edit.FormatDocument 时将语言类型转换为框架类型，反之亦然  。| dotnet_style_predefined_type_for_locals_parameters_members<br/>dotnet_style_predefined_type_for_member_access<br/><br/>“工具” > “选项” > “文本编辑器” > “C#” > “代码样式” > “预定义类型首选项”       |
 |**应用对象/集合初始化首选项**|选中后，触发 Edit.FormatDocument 时尽可能使用对象和集合初始值设定项  。| dotnet_style_object_initializer<br/>dotnet_style_collection_initializer<br/><br/>“工具” > “选项” > “文本编辑器” > “C#” > “代码样式” > “表达式首选项” > “首选对象初始值设定项”或“首选集合初始值设定项”         |
-|**应用“this”限定首选项**|选中后，触发 Edit.FormatDocument 时应用 `this.` 首选项  。| [this. 限定 EditorConfig 选项](../../ide/editorconfig-language-conventions.md#this-and-me)<br/><br/>“工具” > “选项” > “文本编辑器” > “C#” > “代码样式” > [“this.”首选项]       |
+|**应用“this”限定首选项**|选中后，触发 Edit.FormatDocument 时应用 `this.` 首选项  。| [this. 限定 EditorConfig 选项](/dotnet/fundamentals/code-analysis/style-rules/language-rules#this-and-me)<br/><br/>“工具” > “选项” > “文本编辑器” > “C#” > “代码样式” > [“this.”首选项]       |
 |**尽可能将私有字段设为只读**|选中后，触发 Edit.FormatDocument 时尽可能将私有字段设为 `readonly`  。| dotnet_style_readonly_field<br/><br/>“工具” > “选项” > “文本编辑器” > “C#” > “代码样式” > “字段首选项” > “首选只读”        |
 |**删除不必要的强制转换**|选中后，触发 Edit.FormatDocument 时尽可能删除不必要的强制转换  。| 不可用 |
 |**删除未使用的变量**|选中后，触发 Edit.FormatDocument 时删除未使用的变量  。| 不可用 |

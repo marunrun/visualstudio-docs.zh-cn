@@ -2,20 +2,20 @@
 title: 代码样式选项和代码清理
 ms.date: 04/25/2019
 ms.topic: conceptual
-author: TerryGLee
-ms.author: tglee
+author: mikejo5000
+ms.author: mikejo
 manager: jillfra
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.CSharp.Code_Style.General
 - VS.ToolsOptionsPages.Text_Editor.Basic.Code_Style.General
 ms.workload:
 - multiple
-ms.openlocfilehash: 75b301f66f597f8b53a2561ffbbe05dfb8a4cb1c
-ms.sourcegitcommit: 5a5f31a1a91bf243852c7da872211e63ab37fdaa
+ms.openlocfilehash: 82eec2a911ec113c42423fe14b06539e465e8bb3
+ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90682685"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91658381"
 ---
 # <a name="code-style-preferences"></a>代码样式首选项
 
@@ -26,7 +26,7 @@ ms.locfileid: "90682685"
 
 ## <a name="code-styles-in-editorconfig-files"></a>EditorConfig 文件中的代码样式
 
-通过将 [EditorConfig](create-portable-custom-editor-options.md) 文件添加到项目，可以指定 .NET 的[代码样式设置](../ide/editorconfig-code-style-settings-reference.md)。 EditorConfig 文件与基本代码（而不是 Visual Studio 个性化帐户）相关联。 EditorConfig 文件中的设置优先于“选项”对话框中指定的代码样式  。 如果想要将所有参与者的编码样式强制执行到存储库或项目，请使用 EditorConfig 文件。
+通过将 [EditorConfig](create-portable-custom-editor-options.md) 文件添加到项目，可以指定 .NET 的[代码样式设置](/dotnet/fundamentals/code-analysis/code-style-rule-options)。 EditorConfig 文件与基本代码（而不是 Visual Studio 个性化帐户）相关联。 EditorConfig 文件中的设置优先于“选项”对话框中指定的代码样式  。 如果想要将所有参与者的编码样式强制执行到存储库或项目，请使用 EditorConfig 文件。
 
 ::: moniker range=">=vs-2019"
 
@@ -112,5 +112,5 @@ ms.locfileid: "90682685"
 ## <a name="see-also"></a>请参阅
 
 - [快速操作](../ide/quick-actions.md)
-- [EditorConfig 的 .NET 编码约定设置](../ide/editorconfig-code-style-settings-reference.md)
+- [EditorConfig 的 .NET 编码约定设置](/dotnet/fundamentals/code-analysis/code-style-rule-options)
 - [编辑器行为 (Visual Studio for Mac)](/visualstudio/mac/editor-behavior)

@@ -5,12 +5,12 @@ author: sayedihashimi
 ms.author: sayedha
 ms.date: 01/08/2020
 ms.assetid: 8B8CEBE8-00DA-4AD1-8193-77F58B57F244
-ms.openlocfilehash: b9892a322c0264a1bdb68d672c7fe6c6e9b08d4f
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 4009e6c139ef33bcd4caa01a9313695628757884
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84183595"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91583926"
 ---
 # <a name="net-core-support"></a>.NET Core 支持
 
@@ -37,4 +37,4 @@ ms.locfileid: "84183595"
 * 默认为使用安装程序安装 .NET Core v2.1.701（对于 8.1，则默认安装 v2.1.700）。
 * 若要访问任何其他 .NET Core 版本，请访问 [dotnet 页面](https://dotnet.microsoft.com/download/dotnet-core)。
 * 使用 .NET Core 3.0 时，默认情况下将使用 C# 版本 8。 使用 .NET Core 2.x 时，默认情况下使用 C# 7.3。 请参阅 [C# 语言版本控制](/dotnet/csharp/language-reference/configure-language-version)了解更多信息。
-* 有关如何安装 Visual Studio for Mac 预览版的信息，请参阅[安装预览版](/visualstudio/mac/install-preview)指南。
+* 有关如何安装 Visual Studio for Mac 预览版的信息，请参阅[安装预览版](./install-preview.md)指南。
