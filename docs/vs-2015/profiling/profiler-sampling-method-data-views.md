@@ -13,11 +13,11 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 5a0a5664b4c22aa8a31ab4f0f620c14b4aeadc50
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: MTE95
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63442517"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "91838454"
 ---
 # <a name="profiler-sampling-method-data-views"></a>探查器采样方法数据视图
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "63442517"
  [“模块”视图](../profiling/modules-view-sampling-data.md)  
  按模块组织分析数据，并列出函数、源代码行和收集样本时执行的说明。  
   
- [“调用方/被调用方”视图 - 采样数据](../profiling/caller-callee-view-sampling-data.md)  
+ [调用方/被调用方视图-采样数据](../profiling/caller-callee-view-sampling-data.md)  
  显示所选函数和调用所选函数及被所选函数调用的函数之间的分析数据。  
   
  [“函数”视图](../profiling/functions-view-sampling-data.md)  
@@ -49,14 +49,14 @@ ms.locfileid: "63442517"
  [“指令指针”(IP) 视图](../profiling/instruction-pointers-ips-view-sampling-data.md)  
  列出收集样本时执行的源代码行。  
   
-## <a name="reference"></a>参考  
+## <a name="reference"></a>引用  
  [“进程”视图](../profiling/process-view.md)  
  列出进程和线程的开始和结束时间。  
   
  [“标记”视图](../profiling/marks-view.md)  
  列出插入到分析数据文件的 ETW 和采样事件。  
   
- [“函数详细信息”视图](../profiling/function-details-view.md)  
+ [函数详细信息视图](../profiling/function-details-view.md)  
  显示所选函数和调用所选函数及被所选函数调用的函数之间的关系图形图表。  
   
 ## <a name="related-sections"></a>相关章节  
@@ -66,5 +66,5 @@ ms.locfileid: "63442517"
  [.NET 内存数据视图](../profiling/dotnet-memory-data-views.md)  
  有关包含 .NET 内存数据的探查器数据文件的视图和报告的参考信息。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [了解采样数据值](../profiling/understanding-sampling-data-values.md)
