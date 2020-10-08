@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 5a67a55ee5c25dc002d107815fb136420641159d
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64825918"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "91838450"
 ---
-# <a name="idiasymbolgetdatakind"></a>IDiaSymbol::get_dataKind
+# <a name="idiasymbolget_datakind"></a>IDiaSymbol::get_dataKind
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-检索数据符号的变量的分类。  
+检索数据符号的变量分类。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,21 +35,21 @@ HRESULT get_dataKind ( 
   
 #### <a name="parameters"></a>参数  
  `pRetVal`  
- [out]返回一个值从[DataKind 枚举](../../debugger/debug-interface-access/datakind.md)例如指定的全局、 静态的或常量，例如数据类型的枚举。  
+ 弄返回 [DataKind 枚举](../../debugger/debug-interface-access/datakind.md) 枚举中的一个值，该值指定数据类型（例如 global、static 或常量）。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回`S_OK`; 否则为返回`S_FALSE`或错误代码。  
+ 如果成功， `S_OK` 则返回; 否则返回 `S_FALSE` 错误代码。  
   
 > [!NOTE]
-> 返回值为`S_FALSE`表示该属性不是可用于符号。  
+> 返回值意味着该 `S_FALSE` 属性对符号不可用。  
   
 ## <a name="requirements"></a>要求  
   
-|需求|描述|  
+|要求|说明|  
 |-----------------|-----------------|  
-|标头：|dia2.h|  
+|标头：|dia2|  
 |版本：|DIA SDK v7.0|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
  [DataKind 枚举](../../debugger/debug-interface-access/datakind.md)
