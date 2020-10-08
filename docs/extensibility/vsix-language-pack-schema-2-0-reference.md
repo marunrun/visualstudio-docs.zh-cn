@@ -8,15 +8,15 @@ helpviewer_keywords:
 - localize package
 - localize extension
 ms.assetid: 2a2932bc-cdbe-4d32-91fa-a3e0474f9098
-ms.author: zorio
-author: zoeyr
+author: acangialosi
+ms.author: anthc
 manager: jillfra
-ms.openlocfilehash: f97fd5aee27cdc97cf6eb5731da9fad9cb999e18
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f0eee51c0654c6e517209e23baf43c6b262d8f73
+ms.sourcegitcommit: c31815e140f2ec79e00a9a9a19900778ec11e860
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "78169334"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91830703"
 ---
 # <a name="vsix-language-pack-schema-20-reference"></a>VSIX 语言包架构2.0 引用
 
@@ -30,7 +30,7 @@ VSIX 语言包架构为 VSIX 包提供本地化的安装信息。 此架构的�
 
 在 `<PackageLanguagePackManifest>` 元素中，以下元素必须存在：
 
-|Title|说明|
+|标题|说明|
 |-----------|-----------------|
 |`<Metadata>`| 所有本地化包元数据的包含元素
 
@@ -38,7 +38,7 @@ VSIX 语言包架构为 VSIX 包提供本地化的安装信息。 此架构的�
 
 在 `<Metadata>` 元素中，可以包含以下元素：
 
-|Title|说明|
+|标题|说明|
 |-----------|-----------------|
 |`<DisplayName>`|要安装的扩展的本地化名称|
 |`<Description>`|要安装的扩展的本地化说明|
