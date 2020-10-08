@@ -14,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f4677cd2d178781d79b11ac3b1010a76fd6fcf00
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 25dad2d4601974e70e80377e634d05b60523318e
+ms.sourcegitcommit: c31815e140f2ec79e00a9a9a19900778ec11e860
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72985717"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91830757"
 ---
 # <a name="office-primary-interop-assemblies"></a>Office 主互操作程序集
 
@@ -100,15 +100,15 @@ Visual Studio 中的每个 Office 项目模板旨在与单个 Microsoft Office �
 |-------------------------------------|-----------------------------------|
 |Microsoft Access 14.0 对象库<br /><br /> Microsoft Access 15.0 对象库|Microsoft.Office.Interop.Access.dll|
 |Microsoft Office 14.0 Access 数据库引擎对象库<br /><br /> Microsoft Office 15.0 Access 数据库引擎对象库|Microsoft.Office.Interop.Access.Dao.dll|
-|Microsoft Excel 14.0 对象库<br /><br /> Microsoft Excel 15.0 对象库|[Microsoft.Office.Interop.Excel.dll](/dotnet/api/microsoft.office.interop.excel?view=excel-pia)|
+|Microsoft Excel 14.0 对象库<br /><br /> Microsoft Excel 15.0 对象库|[Microsoft.Office.Interop.Excel.dll](/dotnet/api/microsoft.office.interop.excel?view=excel-pia&preserve-view=true)|
 |Microsoft Graph 14.0 对象库（PowerPoint、Access 和 Word 将该对象库用于图形）<br /><br /> Microsoft Graph 15.0 对象库|Microsoft.Office.Interop.Graph.dll|
-|Microsoft InfoPath 2.0 类型库（仅用于 InfoPath 2007）|[Microsoft.Office.Interop.InfoPath.dll](/dotnet/api/microsoft.office.interop.infopath?view=infopath-form)|
+|Microsoft InfoPath 2.0 类型库（仅用于 InfoPath 2007）|[Microsoft.Office.Interop.InfoPath.dll](/dotnet/api/microsoft.office.interop.infopath?view=infopath-form&preserve-view=true)|
 |Microsoft InfoPath XML 互操作程序集（仅用于 InfoPath 2007）|Microsoft.Office.Interop.InfoPath.Xml.dll|
 |Microsoft Office 14.0 对象库（Office 共享的功能）<br /><br /> Microsoft Office 15.0 对象库（Office 共享的功能）|office.dll|
 |Microsoft Office Outlook 视图控件（在网页和应用程序中可用来访问收件箱）|Microsoft.Office.Interop.OutlookViewCtl.dll|
-|Microsoft Outlook 14.0 对象库<br /><br /> Microsoft Outlook 15.0 对象库|[Microsoft.Office.Interop.Outlook.dll](/dotnet/api/microsoft.office.interop.outlook?view=outlook-pia)|
+|Microsoft Outlook 14.0 对象库<br /><br /> Microsoft Outlook 15.0 对象库|[Microsoft.Office.Interop.Outlook.dll](/dotnet/api/microsoft.office.interop.outlook?view=outlook-pia&preserve-view=true)|
 |Microsoft PowerPoint 14.0 对象库<br /><br /> Microsoft PowerPoint 15.0 对象库|Microsoft.Office.Interop.PowerPoint.dll|
-|Microsoft Project 14.0 对象库<br /><br /> Microsoft Project 15.0 对象库|[Microsoft.Office.Interop.MSProject.dll](/dotnet/api/microsoft.office.interop.msproject?view=office-project-server)|
+|Microsoft Project 14.0 对象库<br /><br /> Microsoft Project 15.0 对象库|[Microsoft.Office.Interop.MSProject.dll](/dotnet/api/microsoft.office.interop.msproject?view=office-project-server&preserve-view=true)|
 |Microsoft Publisher 14.0 对象库<br /><br /> Microsoft Publisher 15.0 对象库|Microsoft.Office.Interop.Publisher.dll|
 |Microsoft SharePoint Designer 14.0 Web 对象引用库|Microsoft.Office.Interop.SharePointDesigner.dll|
 |Microsoft SharePoint Designer 14.0 Page 对象引用库|Microsoft.Office.Interop.SharePointDesignerPage.dll|
@@ -116,7 +116,7 @@ Visual Studio 中的每个 Office 项目模板旨在与单个 Microsoft Office �
 |Microsoft Visio 14.0 类型库<br /><br /> Microsoft Visio 15.0 类型库|Microsoft.Office.Interop.Visio.dll|
 |Microsoft Visio 14.0 Save As Web 类型库<br /><br /> Microsoft Visio 15.0 Save As Web 类型库|Microsoft.Office.Interop.Visio.SaveAsWeb.dll|
 |Microsoft Visio 14.0 绘图控件类型库<br /><br /> Microsoft Visio 15.0 绘图控件类型库|Microsoft.Office.Interop.VisOcx.dll|
-|Microsoft Word 14.0 对象库<br /><br /> Microsoft Word 15.0 对象库|[Microsoft.Office.Interop.Word.dll](/dotnet/api/microsoft.office.interop.word?view=word-pia)|
+|Microsoft Word 14.0 对象库<br /><br /> Microsoft Word 15.0 对象库|[Microsoft.Office.Interop.Word.dll](/dotnet/api/microsoft.office.interop.word?view=word-pia&preserve-view=true)|
 |Microsoft Visual Basic for Applications Extensibility 5.3|Microsoft.Vbe.Interop.dll|
 
 ### <a name="binding-redirect-assemblies"></a>绑定重定向程序集
@@ -127,7 +127,7 @@ Visual Studio 中的每个 Office 项目模板旨在与单个 Microsoft Office �
 
 有关详细信息，请参阅 [如何：启用和禁用自动绑定重定向](/dotnet/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [如何：通过主互操作程序集面向 Office 应用程序](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md)
 - [Excel 对象模型概述](../vsto/excel-object-model-overview.md)
