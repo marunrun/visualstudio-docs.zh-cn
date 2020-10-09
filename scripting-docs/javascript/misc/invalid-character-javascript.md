@@ -14,12 +14,12 @@ ms.assetid: b6a54a93-7fc9-459a-bdd6-f42d1ce40b5f
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c2dc3e733afdb4f3d25595e819163ff56e397c6e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 4978e272017b990501a953062df3a77750f4a837
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85816938"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862620"
 ---
 # <a name="invalid-character-javascript"></a>无效字符 (JavaScript)
 使用字符 (或字符编写的标识符) 不被编译器识别为有效 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 。 有效字符使用以下规则：  
@@ -34,7 +34,7 @@ ms.locfileid: "85816938"
   
 - 避免使用不属于 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 语言定义的字符。  
   
-## <a name="see-also"></a>另请参阅  
- [变化](../../javascript/variables-javascript.md)   
- [特殊字符](../../javascript/advanced/special-characters-javascript.md)   
- [数据类型](../../javascript/data-types-javascript.md)
+## <a name="see-also"></a>请参阅  
+ [变化](https://developer.mozilla.org/docs/Learn/JavaScript/First_steps/Variables)   
+ [特殊字符](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Grammar_and_types)   
+ [数据类型](https://developer.mozilla.org/docs/Web/JavaScript/Data_structures)

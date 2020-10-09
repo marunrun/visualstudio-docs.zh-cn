@@ -14,12 +14,12 @@ ms.assetid: c51c66a4-a543-4e95-b18d-2cfbcb3d1fdd
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 30e02f4f90300e2c05076553419cda5f8c353ab0
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8e0016c7a0a6acb3f08121d8636ccdf848dcf201
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85817679"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862810"
 ---
 # <a name="array-length-must-be-assigned-a-finite-positive-number"></a>数组长度必须赋值为有限正数
 在设置现有**数组**对象的**length**属性时，指定的数组长度不是正数或零。 将值分配给对象的 **length** 属性时，如果该 `Array` 对象为负数 () ，则会发生此错误 `NaN` 。 请注意， [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 会自动将小数值转换为整数。  
@@ -33,5 +33,5 @@ ms.locfileid: "85817679"
     my_array.length = 99;  
     ```  
   
-## <a name="see-also"></a>另请参阅  
- [使用数组](../../javascript/advanced/using-arrays-javascript.md)
+## <a name="see-also"></a>请参阅  
+ [使用数组](https://developer.mozilla.org/docs/Learn/JavaScript/First_steps/Arrays)

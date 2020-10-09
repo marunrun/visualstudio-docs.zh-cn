@@ -14,12 +14,12 @@ ms.assetid: d6ab82e6-ca64-46b4-a06c-5c6b0aa057cb
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 969f2bcb578d74ac02a7bdaa6984de5948e49e27
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 28531c1ac1dc73ca2bf309d412b08d23dd17bfb8
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85817601"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862642"
 ---
 # <a name="date-object-expected"></a>缺少日期对象
 您尝试对类型之外的对象调用**valueOf** **方法，而**不是对该对象调用 `Date` 。 此类调用的对象必须是类型 `Date` 。 例如：  
@@ -34,7 +34,7 @@ o.f();
   
 - 仅**对类型**为的对象调用 valueOf 或**Date.prototype.valueOf** `Date` 方法。  
   
-## <a name="see-also"></a>另请参阅  
- [Date 对象](../../javascript/reference/date-object-javascript.md)   
- [getDate 方法 (日期) ](../../javascript/reference/getdate-method-date-javascript.md)   
- [内部对象](../../javascript/intrinsic-objects-javascript.md)
+## <a name="see-also"></a>请参阅  
+ [Date 对象](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)   
+ [getDate 方法 (日期) ](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date/getdate)   
+ [内部对象](https://developer.mozilla.org/docs/Learn/JavaScript/Objects)

@@ -14,12 +14,12 @@ ms.assetid: cc7cc32b-e444-4afa-9be1-802c83fdf5ae
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d6151825391fb01a027f67cb66568eb6b2edfc44
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 754285b22f0da6f45d63f86f774d24279aeb7f22
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85816808"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862549"
 ---
 # <a name="javascript-object-expected"></a>缺少 JavaScript 对象
 尝试将非 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 对象传递到需要对象的内置函数 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 。 各种内置函数需要 (中定义的对象 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] ，而不是由宿主定义的对象或外部组件（如控件) ）。  
@@ -28,6 +28,6 @@ ms.locfileid: "85816808"
   
 - 确保作为参数传入的对象类型正确。  
   
-## <a name="see-also"></a>另请参阅  
- [对象和数组](../../javascript/objects-and-arrays-javascript.md)   
- [使用数组](../../javascript/advanced/using-arrays-javascript.md)
+## <a name="see-also"></a>请参阅  
+ [对象和数组](https://developer.mozilla.org/docs/Learn/JavaScript/Objects)   
+ [使用数组](https://developer.mozilla.org/docs/Learn/JavaScript/First_steps/Arrays)

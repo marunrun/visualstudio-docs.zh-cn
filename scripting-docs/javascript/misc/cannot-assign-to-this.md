@@ -14,12 +14,12 @@ ms.assetid: ba2b0a2b-f0f8-4698-b335-a4ab6c166671
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f5c52153da64ff477d89b09d4af17169da18e4e1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8985c7201a8e315353dd89ab5e1f5a3ad3b403ea
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85817315"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862776"
 ---
 # <a name="cannot-assign-to-this"></a>无法给“this”赋值
 您尝试为 **此**分配一个值。 **这** 是一个 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 关键字，引用：
@@ -39,7 +39,7 @@ ms.locfileid: "85817315"
   > [!NOTE]
   > 不能将用户创建 **的变量命名**为：它是 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 保留字。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-- [此语句](../../javascript/reference/this-statement-javascript.md)
-- [脚本疑难解答](../../javascript/advanced/troubleshooting-your-scripts-javascript.md)
+- [此语句](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/this)
+- [脚本疑难解答](https://developer.mozilla.org/docs/Learn/JavaScript/First_steps/What_went_wrong)
