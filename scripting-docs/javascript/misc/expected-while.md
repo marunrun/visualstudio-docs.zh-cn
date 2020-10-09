@@ -14,12 +14,12 @@ ms.assetid: 867c10d0-7df6-4ba3-bbe6-7d5b3900cb22
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a9381f990c8a43e848370e1251e163dad81a10e9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7f2dfdaecc0e41e1c4d267a466f47ff26b76a720
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85817341"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862184"
 ---
 # <a name="expected-while"></a>应有“while”
 未 `while` 在循环中包含条件 `do...while` 。 **Do**语句必须在代码块的末尾有一个相应的 `while` 测试。  
@@ -28,6 +28,6 @@ ms.locfileid: "85817341"
   
 - 在 `while` 右大括号后面包含测试语句。  
   
-## <a name="see-also"></a>另请参阅  
- [while 语句](../../javascript/reference/while-statement-javascript.md)   
- [控制程序流](../../javascript/controlling-program-flow-javascript.md)
+## <a name="see-also"></a>请参阅  
+ [while 语句](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/while)   
+ [控制程序流](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)

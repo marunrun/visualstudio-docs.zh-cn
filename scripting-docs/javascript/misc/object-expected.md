@@ -14,12 +14,12 @@ ms.assetid: 5d88c93d-e5b5-4b11-9bb5-bf1a5e41ccc3
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 28eec125914f0207fbdf79a39ea2140dd74d6d0d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2a3b8510c92e15a5b1bf5e15bb774ba031f7181f
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85816223"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862109"
 ---
 # <a name="object-expected"></a>缺少对象
 你尝试调用了 `Object` 类型以外的对象上的方法或属性，或在需要 `Object` 时传递了 `Object` 类型以外的自变量。  
@@ -46,6 +46,6 @@ ms.locfileid: "85816223"
     }  
     ```  
   
-## <a name="see-also"></a>另请参阅  
- [Object 对象](../../javascript/reference/object-object-javascript.md)   
- [对象和数组](../../javascript/objects-and-arrays-javascript.md)
+## <a name="see-also"></a>请参阅  
+ [Object 对象](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)   
+ [对象和数组](https://developer.mozilla.org/docs/Learn/JavaScript/Objects)

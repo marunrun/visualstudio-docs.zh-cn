@@ -25,12 +25,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 804fbf7e6d9069f6d0fb406e2a5191dcbafbbcee
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 361b04edf2b677c2842376bd9d8fee0d6f3bda12
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71254394"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862352"
 ---
 # <a name="custom-task-panes"></a>自定义任务窗格
   任务窗格是一个用户界面面板，通常停靠在 Microsoft Office 应用程序中某一窗口的一侧。 自定义任务窗格为你提供了一钟方法，使你可以创建自己的任务窗格并为用户提供熟悉的界面来访问你的解决方案的功能。 例如，界面中可以包含运行代码以修改文档或显示来自数据源的数据的控件。
@@ -102,7 +102,7 @@ ms.locfileid: "71254394"
 
  下表列出了使用 <xref:Microsoft.Office.Tools.CustomTaskPane> 属性可以对自定义任务窗格做出的更改。
 
-|任务|属性|
+|任务|properties|
 |----------|--------------|
 |更改任务窗格的大小|<xref:Microsoft.Office.Tools.CustomTaskPane.Height%2A><br /><br /> <xref:Microsoft.Office.Tools.CustomTaskPane.Width%2A>|
 |更改任务窗格的位置|<xref:Microsoft.Office.Tools.CustomTaskPane.DockPosition%2A>|
@@ -122,7 +122,7 @@ ms.locfileid: "71254394"
 ## <a name="clean-up-resources-used-by-the-task-pane"></a>清理任务窗格使用的资源
  创建自定义任务窗格之后，只要 VSTO 外接程序在运行，<xref:Microsoft.Office.Tools.CustomTaskPane> 对象就会保留在内存中。 即使用户单击任务窗格角部)  (X **，对象** 仍保留在内存中。
 
- 若要在 VSTO 外接程序仍在运行时清理任务窗格使用的资源，请使用 <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Remove%2A> 或 <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.RemoveAt%2A> 方法。 这些方法从 `CustomTaskPanes` 集合中删除指定的 <xref:Microsoft.Office.Tools.CustomTaskPane> 对象，并调用该对象的 <xref:Microsoft.Office.Tools.CustomTaskPane.Dispose%2A> 方法。
+ 若要在 VSTO 外接程序仍在运行时清理任务窗格使用的资源，请使用 <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Remove%2A> 或 <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.RemoveAt%2A> 方法。 这些方法从 `CustomTaskPanes` 集合中删除指定的 <xref:Microsoft.Office.Tools.CustomTaskPane> 对象，并调用该对象的 `Dispose` 方法。
 
  [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] 会在卸载 VSTO 外接程序时自动清理自定义任务窗格使用的资源。 不要 <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Remove%2A> <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.RemoveAt%2A> 在项目中的事件处理程序中调用或方法 `ThisAddIn_Shutdown` 。 这些方法将引发 <xref:System.ObjectDisposedException>，因为 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] 会在调用 `ThisAddIn_Shutdown` 之前清理 <xref:Microsoft.Office.Tools.CustomTaskPane> 对象使用的资源。 有关的详细信息 `ThisAddIn_Shutdown` ，请参阅 [Office 项目中的事件](../vsto/events-in-office-projects.md)。
 
@@ -203,19 +203,19 @@ ms.locfileid: "71254394"
 ### <a name="powerpoint-events"></a>PowerPoint 事件
  若要监视 PowerPoint 中文档窗口的状态，你可以处理以下事件：
 
-- [AfterNewPresentation. EApplication_Event。](/previous-versions/office/developer/office-2010/ff761105(v%3doffice.14))
+- [Microsoft.Office.Interop.PowerPoint.EApplication_Event. AfterNewPresentation](/previous-versions/office/developer/office-2010/ff761105(v%3doffice.14))
 
-- [AfterPresentationOpen. EApplication_Event。](/previous-versions/office/developer/office-2010/ff762843(v%3doffice.14))
+- [Microsoft.Office.Interop.PowerPoint.EApplication_Event. AfterPresentationOpen](/previous-versions/office/developer/office-2010/ff762843(v%3doffice.14))
 
-- [NewPresentation. EApplication_Event。](/previous-versions/office/developer/office-2010/ff761498(v%3doffice.14))
+- [Microsoft.Office.Interop.PowerPoint.EApplication_Event. NewPresentation](/previous-versions/office/developer/office-2010/ff761498(v%3doffice.14))
 
-- [PresentationOpen. EApplication_Event。](/previous-versions/office/developer/office-2010/ff760423(v=office.14))
+- [Microsoft.Office.Interop.PowerPoint.EApplication_Event. PresentationOpen](/previous-versions/office/developer/office-2010/ff760423(v=office.14))
 
-- [WindowActivate. EApplication_Event。](/previous-versions/office/developer/office-2010/ff761153(v=office.14))
+- [Microsoft.Office.Interop.PowerPoint.EApplication_Event. WindowActivate](/previous-versions/office/developer/office-2010/ff761153(v=office.14))
 
-- [WindowDeactivate. EApplication_Event。](/previous-versions/office/developer/office-2010/ff763093(v=office.14))
+- [Microsoft.Office.Interop.PowerPoint.EApplication_Event. WindowDeactivate](/previous-versions/office/developer/office-2010/ff763093(v=office.14))
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [如何：向应用程序添加自定义任务窗格](../vsto/how-to-add-a-custom-task-pane-to-an-application.md)
 - [演练：从自定义任务窗格自动化应用程序](../vsto/walkthrough-automating-an-application-from-a-custom-task-pane.md)
 - [演练：将自定义任务窗格与功能区按钮同步](../vsto/walkthrough-synchronizing-a-custom-task-pane-with-a-ribbon-button.md)
