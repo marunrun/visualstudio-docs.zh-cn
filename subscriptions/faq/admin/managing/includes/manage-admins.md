@@ -8,12 +8,12 @@ ms.technology: ''
 author: CaityBuschlen
 ms.author: cabuschl
 ms.date: 3/3/2020
-ms.openlocfilehash: 8bbeb8a5e13ad000939057a7d476f6979b15dca8
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 496c8ecc16c67997de3999a48850afdcc7c1f58b
+ms.sourcegitcommit: c31815e140f2ec79e00a9a9a19900778ec11e860
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84200531"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91838438"
 ---
 ## <a name="how-do-i-manage-administrators"></a>如何管理管理员？
 
@@ -39,4 +39,4 @@ ms.locfileid: "84200531"
 8. 在窗格顶部单击“角色”下拉列表，向下滚动，然后选择“用户访问管理员”。
 9. 单击“保存”。
 
-[详细了解](https://docs.microsoft.com/visualstudio/subscriptions/cloud-admin)云订阅的管理。
+[详细了解](../../../../cloud-admin.md)云订阅的管理。

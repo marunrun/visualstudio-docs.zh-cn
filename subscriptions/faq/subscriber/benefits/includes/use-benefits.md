@@ -7,12 +7,12 @@ author: CaityBuschlen
 ms.author: cabuschl
 ms.date: 09/30/2020
 ms.faqid: q3_2
-ms.openlocfilehash: 8dc5e87e5299f735e8c7b21dab1bb7e3afdbc5a7
-ms.sourcegitcommit: ea3c985a23851b424127f2205f617446b6536578
+ms.openlocfilehash: 8c0bcb40d775be6184f420cdd79156645333d260
+ms.sourcegitcommit: c31815e140f2ec79e00a9a9a19900778ec11e860
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91640223"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91838239"
 ---
 ## <a name="how-do-i-use-my-benefits"></a>如何使用权益？
 
@@ -20,7 +20,7 @@ ms.locfileid: "91640223"
 
 对于订阅者门户中可用的每项权益，我们分别提供了相应的文章，文章中说明了哪些订阅包含这些权益以及激活这些权益的步骤等信息。
 
-查看文档以[了解详细信息](https://docs.microsoft.com/visualstudio/subscriptions/whats-new-in-subscriptions)（单击左侧导航窗格中的“订阅”，然后选择“权益”）。
+查看文档以[了解详细信息](../../../../whats-new-in-subscriptions.md)（单击左侧导航窗格中的“订阅”，然后选择“权益”）。
 
 ## <a name="what-is-the-visual-studio-with-github-enterprise-setup-process"></a>带有 GitHub Enterprise 的 Visual Studio 的设置过程是怎样的？ 
 
@@ -36,4 +36,4 @@ GitHub Enterprise 由 GitHub 管理员管理（独立于 Visual Studio 订阅）
 
 接受 GitHub 组织邀请后，<https://my.visualstudio.com/benefits> 上的权益磁贴的外观将从“挂起”更改为“已激活”，并且你现在可以开始使用 GitHub Enterprise 了。 
 
-[详细了解](https://docs.microsoft.com/visualstudio/subscriptions/access-github.md) GitHub Enterprise 设置过程。 
+[详细了解](../../../../access-github.md) GitHub Enterprise 设置过程。 
