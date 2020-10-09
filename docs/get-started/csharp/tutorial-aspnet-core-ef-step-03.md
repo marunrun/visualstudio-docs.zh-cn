@@ -16,12 +16,12 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 42bc0442dc5901f92fc8a83b7af41c1fc42f4be4
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 9d01d991daf5c24c02b8cd4976663a9399b251cc
+ms.sourcegitcommit: a778dffddb05d2f0f15969eadaf9081c9b466196
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88250797"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91780961"
 ---
 # <a name="step-3-work-with-data-using-entity-framework"></a>步骤 3：使用实体框架处理数据
 
@@ -54,7 +54,7 @@ public class Game
 
 现在我们已经准备好创建将用于管理游戏库的页面。 这听起来可能有点吓人，但实际上非常简单。 首先，我们需要决定应将此功能放在应用中的哪个位置。 打开 Web 项目中的“Pages”文件夹，并在其中添加一个新文件夹。 称之为“Games”  。
 
-现在右键单击“Games”并选择“添加”   > “新搭建基架的项目”  。 使用“实体框架(CRUD)”  选项选择 Razor Pages。 CRUD 代表“创建、读取、更新、删除”，此模板将为上述每个操作创建页面（包括“列出所有”页和“查看一个项目的详细信息”页）。
+现在右键单击“Games”并选择“添加” > “新搭建基架的项目”。 使用“实体框架(CRUD)”  选项选择 Razor Pages。 CRUD 代表“创建、读取、更新、删除”，此模板将为上述每个操作创建页面（包括“列出所有”页和“查看一个项目的详细信息”页）。
 
 ![Visual Studio 2019 ASP.NET Core 添加已搭建基架页](media/vs-2019/vs2019-add-scaffold.png)
 
@@ -79,7 +79,7 @@ services.AddDbContext<AppDbContext>(options =>
 
 还会发现 `AppDbContext` 连接字符串已添加到项目的“appsettings.json”  文件。
 
-如果现在运行应用，它可能会失败，因为尚未创建数据库。 如果需要，可以将应用配置为自动创建数据库，方法是[将一些代码添加到 Program.cs](/aspnet/core/data/ef-rp/intro?view=aspnetcore-2.1&tabs=visual-studio#update-main)：
+如果现在运行应用，它可能会失败，因为尚未创建数据库。 如果需要，可以将应用配置为自动创建数据库，方法是[将一些代码添加到 Program.cs](/aspnet/core/data/ef-rp/intro?view=aspnetcore-2.1&tabs=visual-studio&preserve-view=true#update-main)：
 
 ```csharp
 public static void Main(string[] args)
@@ -135,5 +135,5 @@ using WebApplication1.Models;
 
 ## <a name="see-also"></a>请参阅
 
-- [在 ASP.NET Core 中结合使用 Razor Pages 和 Entity Framework Core](/aspnet/core/data/ef-rp/intro?view=aspnetcore-2.1&tabs=visual-studio)
-- [ASP.NET Core Razor Pages 和 EF Core](/aspnet/core/data/?view=aspnetcore-2.1)
+- [在 ASP.NET Core 中结合使用 Razor Pages 和 Entity Framework Core](/aspnet/core/data/ef-rp/intro?view=aspnetcore-2.1&tabs=visual-studio&preserve-view=true)
+- [ASP.NET Core Razor Pages 和 EF Core](/aspnet/core/data/?view=aspnetcore-2.1&preserve-view=true)
