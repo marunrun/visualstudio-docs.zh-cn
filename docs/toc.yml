@@ -523,7 +523,7 @@
               href: ide/create-portable-custom-editor-options.md
             - name: C++ EditorConfig 格式设置约定
               href: ide/cpp-editorconfig-properties.md
-            - name: .NET 编码约定
+            - name: .NET 编码约定 >>
               href: /dotnet/fundamentals/code-analysis/code-style-rule-options
         - name: 自定义滚动条
           href: ide/how-to-track-your-code-by-customizing-the-scrollbar.md

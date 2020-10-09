@@ -7,12 +7,12 @@ ms.assetid: 754c7033-72db-49ea-b99b-cea892261834
 author: CaityBuschlen
 ms.author: cabuschl
 ms.date: 3/3/2020
-ms.openlocfilehash: 2e0fb2462e392e2672ccf347103afe4a56b07abb
-ms.sourcegitcommit: cc58ca7ceae783b972ca25af69f17c9f92a29fc2
+ms.openlocfilehash: 3707dc584eb9aa7c200526efbe7815d19b4d1451
+ms.sourcegitcommit: c31815e140f2ec79e00a9a9a19900778ec11e860
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81386136"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91838231"
 ---
 ## <a name="how-do-i-renew-my-subscriptions"></a>如何续订订阅？
 
@@ -22,6 +22,6 @@ ms.locfileid: "81386136"
 
 云订阅：如果你使用的是云订阅，则无需续订。 它们会自动续订，除非你取消。
 
-详细了解如何[购买云订阅](https://docs.microsoft.com/visualstudio/subscriptions/vscloud-overview)。
+详细了解如何[购买云订阅](../../../../vscloud-overview.md)。
 
 批量许可：要续订通过批量许可购买的订阅，请与经销商联系。 [查找你所在区域的经销商](https://www.microsoft.com/licensing/how-to-buy/how-to-buy)。

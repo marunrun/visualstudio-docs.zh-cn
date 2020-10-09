@@ -14,7 +14,20 @@
             - name: 概述
               href: use-roslyn-analyzers.md
             - name: 代码质量
-              href: /dotnet/fundamentals/code-analysis/code-quality-rule-options
+              items:
+                - name: 代码质量选项
+                  href: /dotnet/fundamentals/code-analysis/code-quality-rule-options?toc=%252fvisualstudio%252fcode-quality%252ftoc.json
+                - name: 使用 EditorConfig 文件提高代码质量
+                  href: /dotnet/fundamentals/code-analysis/configuration-files?toc=%252fvisualstudio%252fcode-quality%252ftoc.json
+            - name: 代码样式
+              items:
+                - name: 代码样式首选项
+                  href: ../ide/code-styles-and-code-cleanup.md?toc=%252fvisualstudio%252fcode-quality%252ftoc.json
+                - name: 使用 EditorConfig 文件构造代码样式
+                  displayName: Configure code style analyzers
+                  href: ../ide/create-portable-custom-editor-options.md?toc=%252fvisualstudio%252fcode-quality%252ftoc.json
+                - name: 规则选项
+                  href: /dotnet/fundamentals/code-analysis/code-style-rule-options?toc=%252fvisualstudio%252fcode-quality%252ftoc.json
             - name: 配置源代码分析
               href: configure-live-code-analysis-scope-managed-code.md
             - name: 手动运行代码分析
@@ -434,3 +447,11 @@
           href: how-to-generate-code-metrics-data.md
         - name: 使用代码度量数据
           href: working-with-code-metrics-data.md
+- name: C++ 代码分析
+  items:
+    - name: 分析 C 和 C++ 代码
+      href: /cpp/code-quality/code-analysis-for-c-cpp-overview
+    - name: EditorConfig 格式设置约定
+      href: ../ide/cpp-editorconfig-properties.md
+    - name: C++ 代码分析警告
+      href: /cpp/code-quality/code-analysis-for-c-cpp-warnings

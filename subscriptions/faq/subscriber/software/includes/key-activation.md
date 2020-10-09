@@ -7,12 +7,12 @@ author: CaityBuschlen
 ms.author: cabuschl
 ms.date: 4/3/2020
 ms.faqid: q2_2
-ms.openlocfilehash: d214130bfdc2832ad540fa6fac274e4f52cced5f
-ms.sourcegitcommit: cc58ca7ceae783b972ca25af69f17c9f92a29fc2
+ms.openlocfilehash: e18550018a593c0a3eae0d521148cd240b40f5df
+ms.sourcegitcommit: c31815e140f2ec79e00a9a9a19900778ec11e860
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81385896"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91838360"
 ---
 ## <a name="how-do-i-activate-the-software-i-just-downloaded-using-product-keys"></a>如何使用产品密钥激活刚刚下载的软件？
 
@@ -25,5 +25,5 @@ ms.locfileid: "81385896"
 
 有关获取和使用产品密钥的详细信息，请参阅以下文章：
 
-- [产品密钥概述](https://docs.microsoft.com/visualstudio/subscriptions/product-keys)
-- [查找和声明密钥](https://docs.microsoft.com/visualstudio/subscriptions/find-keys)
+- [产品密钥概述](../../../../product-keys.md)
+- [查找和声明密钥](../../../../find-keys.md)
