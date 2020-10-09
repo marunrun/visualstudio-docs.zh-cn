@@ -1,5 +1,6 @@
 ---
 title: 图形诊断概述 | Microsoft Docs
+description: Visual Studio 图形诊断综合概述
 ms.custom: seodec18
 ms.date: 02/09/2017
 ms.topic: conceptual
@@ -8,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0bf8cbcc699f015cae954400744d9bd724d70c57
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 6f9193555ef3c9c69f494a78ac779a3724417f63
+ms.sourcegitcommit: a1cb4e2025045c2ad79167645c4c0f33b94b1152
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73187911"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91671401"
 ---
 # <a name="overview-of-visual-studio-graphics-diagnostics"></a>Visual Studio 图形诊断概述
 Visual Studio“图形诊断”是一套工具，用于记录、然后分析 Direct3D 应用中的呈现问题和性能问题。 可对在 Windows 电脑上或在远程电脑或设备上本地运行的应用使用图形诊断。
@@ -27,6 +28,10 @@ Visual Studio“图形诊断”是一套工具，用于记录、然后分析 Dir
  图形诊断支持使用 Direct3D 10 及更高版本的应用，并对使用 Direct2D 的应用提供有限支持。 它不支持使用 Direct3D、DirectDraw 或其他图形 API 的更早版本的应用。
 
 ### <a name="windows-10-and-direct3d-12"></a>Windows 10 和 Direct3D 12
+> [!NOTE]
+> Visual Studio 建议对 DirectX 12 游戏使用 Windows 上的 PIX。 [Windows 上的 PIX](https://aka.ms/PIXonWindows) 是一个完全支持 DirectX 12 的性能优化和调试工具。 [了解更多信息](visual-studio-graphics-diagnostics-directx-12.md)或[在此下载](https://aka.ms/downloadPIX)。
+
+
  Windows 10 引入了 Direct3D 12，后者与 Direct3D 10 和 Direct3D 11 具有显著差异。 这些差异使 DirectX 重新符合现代图形硬件要求，并充分发挥其最大潜力，但是它们也导致对 API 的较大更改，并使程序员在管理资源生存期和争用方面具有更大的责任。 尽管存在差异，支持 Direct3D 12 的图形诊断保持了与支持 Direct3D 11.2 的图形诊断同等的功能。
 
  Windows 10 还保持对以前版本的 Direct3D 及依赖于它的游戏和应用程序的支持。 Visual Studio 中的图形诊断将在 Windows 10 上继续支持 Direct3D 10 和 Direct3D 11。

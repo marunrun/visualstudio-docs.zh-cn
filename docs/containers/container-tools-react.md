@@ -3,17 +3,17 @@ title: 带有 ASP.NET Core 和 React.js 的 Visual Studio 容器工具
 titleSuffix: ''
 ms.custom: SEO-VS-2020
 author: ghogen
-description: 了解如何使用 Visual Studio 容器工具和用于 Windows 的 Docker
+description: 了解如何使用 Visual Studio 容器工具和 Docker 创建容器化 React SPA 应用
 ms.author: ghogen
 ms.date: 05/14/2020
 ms.technology: vs-azure
 ms.topic: quickstart
-ms.openlocfilehash: 45dc1f16f1655c5c738804a1c4e0093dd9c8b1f8
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 783d7a116dbdf530008c3271d38d15f7db3c3c98
+ms.sourcegitcommit: 503f82045b9236d457b79712cd71405d4a62a53d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90036322"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91750705"
 ---
 # <a name="quickstart-use-docker-with-a-react-single-page-app-in-visual-studio"></a>快速入门：将 Docker 与 Visual Studio 中的 React 单页面应用结合使用
 
@@ -31,7 +31,7 @@ ms.locfileid: "90036322"
 ::: moniker range=">=vs-2019"
 * [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
 * 安装了“Web 开发”、“Azure 工具”工作负载和/或“.NET Core 跨平台开发”工作负载的 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads)  
-* 用于使用 .NET Core 2.2 进行开发的 [.NET Core 2.2 开发工具](https://dotnet.microsoft.com/download/dotnet-core/2.2)
+* 用于使用 .NET Core 3.1 进行开发的 [.NET Core 3.1 开发工具](https://dotnet.microsoft.com/download/dotnet-core/3.1)。
 * 若要发布到 Azure 容器注册表，需要 Azure 订阅。 [注册免费试用版](https://azure.microsoft.com/offers/ms-azr-0044p/)。
 * [Node.js](https://nodejs.org/en/download/)
 * 对于 Windows 容器、Windows 10 版本 1903 或更高版本，使用本文中引用的 Docker 映像。
@@ -47,11 +47,11 @@ ms.locfileid: "90036322"
 1. 使用“ASP.NET Core Web 应用程序”模板创建新项目。
 1. 选择“React.js”。 你无法选择“启用 Docker 支持”，但不要担心，你可以在创建项目后添加该支持。
 
-   ![新 React.js 项目的屏幕截图](media/container-tools-react/vs2017/new-react-project.png)
+   ![新 React.js 项目的屏幕截图](media/container-tools-react/vs-2017/new-react-project.png)
 
 1. 右键单击项目节点，然后选择“添加”>“Docker 支持”，将 Dockerfile 添加到你的项目中 。
 
-   ![添加 Docker 支持](media/container-tools-react/vs2017/add-docker-support.png)
+   ![添加 Docker 支持](media/container-tools-react/vs-2017/add-docker-support.png)
 
 1. 选择容器类型，然后单击“确定”。
 ::: moniker-end
@@ -59,11 +59,11 @@ ms.locfileid: "90036322"
 1. 使用“ASP.NET Core Web 应用程序”模板创建新项目。
 1. 选择“React.js”，然后单击“创建”。 你无法选择“启用 Docker 支持”，但不要担心，你可以稍后添加该支持。
 
-   ![新 React.js 项目的屏幕截图](media/container-tools-react/vs2019/new-react-project.png)
+   ![新 React.js 项目的屏幕截图](media/container-tools-react/vs-2019/new-react-project.png)
 
 1. 右键单击项目节点，然后选择“添加”>“Docker 支持”，将 Dockerfile 添加到你的项目中 。
 
-   ![添加 Docker 支持](media/container-tools-react/vs2017/add-docker-support.png)
+   ![添加 Docker 支持](media/container-tools-react/vs-2017/add-docker-support.png)
 
 1. 选择容器类型。
 ::: moniker-end
@@ -84,30 +84,32 @@ RUN apt-get install -y nodejs
 “Dockerfile”现在看起来如下所示：
 
 ```Dockerfile
-FROM microsoft/dotnet:2.2-aspnetcore-runtime-stretch-slim AS base
+#See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
+
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-buster-slim AS base
 WORKDIR /app
-EXPOSE 80 
+EXPOSE 80
 EXPOSE 443
 RUN curl -sL https://deb.nodesource.com/setup_10.x |  bash -
 RUN apt-get install -y nodejs
 
-FROM microsoft/dotnet:2.2-sdk-stretch AS build
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 RUN curl -sL https://deb.nodesource.com/setup_10.x |  bash -
 RUN apt-get install -y nodejs
 WORKDIR /src
-COPY ["WebApplication37/WebApplication37.csproj", "WebApplication37/"]
-RUN dotnet restore "WebApplication37/WebApplication37.csproj"
+COPY ["WebApplication-ReactSPA/WebApplication-ReactSPA.csproj", "WebApplication-ReactSPA/"]
+RUN dotnet restore "WebApplication-ReactSPA/WebApplication-ReactSPA.csproj"
 COPY . .
-WORKDIR "/src/WebApplication37"
-RUN dotnet build "WebApplication37.csproj" -c Release -o /app
+WORKDIR "/src/WebApplication-ReactSPA"
+RUN dotnet build "WebApplication-ReactSPA.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "WebApplication37.csproj" -c Release -o /app
+RUN dotnet publish "WebApplication-ReactSPA.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
-COPY --from=publish /app .
-ENTRYPOINT ["dotnet", "WebApplication37.dll"]
+COPY --from=publish /app/publish .
+ENTRYPOINT ["dotnet", "WebApplication-ReactSPA.dll"]
 ```
 
 前面的 Dockerfile 基于 [microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) 映像，并包括通过构建项目并将其添加到容器中修改基本映像的说明。
@@ -155,13 +157,13 @@ ENTRYPOINT ["dotnet", "WebApplication37.dll"]
       Expand-Archive nodejs.zip -DestinationPath C:\; `
       Rename-Item "C:\node-v10.16.3-win-x64" c:\nodejs
 
-      FROM mcr.microsoft.com/dotnet/core/aspnet:2.2-nanoserver-1903 AS base
+      FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-nanoserver-1903 AS base
       WORKDIR /app
       EXPOSE 80
       EXPOSE 443
       COPY --from=downloadnodejs C:\nodejs\ C:\Windows\system32\
 
-      FROM mcr.microsoft.com/dotnet/core/sdk:2.2-nanoserver-1903 AS build
+      FROM mcr.microsoft.com/dotnet/core/sdk:3.1-nanoserver-1903 AS build
       COPY --from=downloadnodejs C:\nodejs\ C:\Windows\system32\
       WORKDIR /src
       COPY ["WebApplication7/WebApplication37.csproj", "WebApplication37/"]
@@ -190,10 +192,10 @@ ENTRYPOINT ["dotnet", "WebApplication37.dll"]
 浏览器将显示应用的主页。
 
 ::: moniker range="vs-2017"
-   ![正在运行的应用的屏幕截图](media/container-tools-react/vs2017/running-app.png)
+   ![正在运行的应用的屏幕截图](media/container-tools-react/vs-2017/running-app.png)
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-   ![正在运行的应用的屏幕截图](media/container-tools-react/vs2019/running-app.png)
+   ![正在运行的应用的屏幕截图](media/container-tools-react/vs-2019/running-app.png)
 ::: moniker-end
 
 尝试导航到“计数器”页面，并单击“递增”按钮测试计数器的客户端代码。
@@ -222,9 +224,11 @@ cf5d2ef5f19a        webapplication37:dev   "tail -f /dev/null"   2 minutes ago  
 
 完成应用程序的开发和调试循环后，可以创建应用程序的生产映像。
 
+:::moniker range="vs-2017"
+
 1. 将配置下拉列表更改为“发布”，然后生成应用。
 1. 在解决方案资源管理器中右键单击项目，并选择“发布” 。
-1. 在发布目标对话框上，选择“容器注册表”选项卡。
+1. 在“发布目标”对话框中，选择“容器注册表”。
 1. 选择“创建新的 Azure 容器注册表”并单击“发布” 。
 1. 在“创建新 Azure 容器注册表”中填写所需的值。
 
@@ -236,11 +240,48 @@ cf5d2ef5f19a        webapplication37:dev   "tail -f /dev/null"   2 minutes ago  
     | **[SKU](/azure/container-registry/container-registry-skus)** | 标准 | 容器注册表的服务层  |
     | **注册表位置** | 靠近你的位置 | 在你附近或将使用容器注册表的其他服务附近的[区域](https://azure.microsoft.com/regions/)中，选择位置。 |
 
-    ![Visual Studio 的创建 Azure 容器注册表对话框][0]
+    ![Visual Studio 的创建 Azure 容器注册表对话框](media/hosting-web-apps-in-docker/vs-acr-provisioning-dialog.png)
 
-1. 单击 **“创建”** 。
+1. 选择“创建”。
 
    ![显示成功发布的屏幕截图](media/container-tools/publish-succeeded.png)
+:::moniker-end
+
+:::moniker range=">=vs-2019"
+
+1. 将配置下拉列表更改为“发布”，然后生成应用。
+1. 在解决方案资源管理器中右键单击项目，并选择“发布” 。
+1. 在“发布目标”对话框中，选择“Docker 容器注册表”。
+
+   ![选择“Docker 容器注册表”](media/container-tools-react/vs-2019/publish-dialog1.png)
+
+1. 接下来，选择“Azure 容器注册表”。
+
+   ![选择“Azure 容器注册表”](media/container-tools-react/vs-2019/publish-dialog-acr.png)
+
+1. 选择“新建 Azure 容器注册表”。
+1. 在“新建 Azure 容器注册表”屏幕中填写所需的值。
+
+    | 设置      | 建议的值  | 描述                                |
+    | ------------ |  ------- | -------------------------------------------------- |
+    | **DNS 前缀** | 全局唯一名称 | 用于唯一标识容器注册表的名称。 |
+    | **订阅** | 选择订阅 | 要使用的 Azure 订阅。 |
+    | **[资源组](/azure/azure-resource-manager/resource-group-overview)** | myResourceGroup |  要在其中创建容器注册表的资源组的名称。 选择“新建”  创建新的资源组。|
+    | **[SKU](/azure/container-registry/container-registry-skus)** | 标准 | 容器注册表的服务层  |
+    | **注册表位置** | 靠近你的位置 | 在你附近或将使用容器注册表的其他服务附近的[区域](https://azure.microsoft.com/regions/)中，选择位置。 |
+
+    ![Visual Studio 的创建 Azure 容器注册表对话框](media/container-tools-react/vs-2019/azure-container-registry-details.png)
+
+1. 选择“创建”，然后选择“完成” 。
+
+   ![选择或创建新的 ACR](media/container-tools-react/vs-2019/publish-dialog2.png)
+
+   发布过程结束时，你可查看发布设置并在需要时对其进行编辑，也可使用“发布”按钮再次发布该图像。
+
+   ![显示成功发布的屏幕截图](media/container-tools-react/vs-2019/publish-finished.png)
+
+   若要使用“发布”对话框重新开始，请使用此页上的“删除”链接删除发布配置文件，然后再次选择“发布”  。
+:::moniker-end
 
 ## <a name="next-steps"></a>后续步骤
 
@@ -252,9 +293,3 @@ cf5d2ef5f19a        webapplication37:dev   "tail -f /dev/null"   2 minutes ago  
 * [使用 Docker 排查 Visual Studio 开发方面的问题](troubleshooting-docker-errors.md)
 * [Visual Studio 容器工具 GitHub 存储库](https://github.com/Microsoft/DockerTools)
 
-::: moniker range="vs-2017"
-[0]:media/hosting-web-apps-in-docker/vs-acr-provisioning-dialog.png
-::: moniker-end
-::: moniker range=">=vs-2019"
-[0]:media/hosting-web-apps-in-docker/vs-acr-provisioning-dialog-2019.png
-::: moniker-end

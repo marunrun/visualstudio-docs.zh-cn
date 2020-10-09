@@ -11,12 +11,12 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 monikerRange: vs-2019
-ms.openlocfilehash: c86fc99fe6bd2ae17b6ce222b04549db07d7687e
-ms.sourcegitcommit: 062615c058d2ff44751e8d0c704ccfa3c5543469
+ms.openlocfilehash: eee21ca84acdcf5bbf774232d8d23ceda954b730
+ms.sourcegitcommit: 503f82045b9236d457b79712cd71405d4a62a53d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90862325"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91749500"
 ---
 # <a name="supported-visual-studio-features-preview"></a>受支持的 Visual Studio 功能（预览）
 
@@ -42,15 +42,15 @@ ms.locfileid: "90862325"
 * 语法突出显示
 * 快速信息*
 * HTML、CSS、Razor 编辑器* - 部分支持。
-* JavaScript 编辑器* - 部分支持。
+* JavaScript 和 TypeScript 编辑器* - 部分支持。
 
 以下内容尚不可用：
 
 * IntelliSense* - 某些自动完成/成员列表筛选器不可用。 监视窗口中未导入类型和 IntelliSense 的补全尚不可用。
-* 代码导航* - 支持大多数命令，但尚不支持路径说明中的“转到基本”和“在文件中查找”。
+* 代码导航* - 支持大多数命令。 目前尚不支持带有路径规范的“转到基类”和“在文件中查找”。
 * 快速信息* - 不支持快速信息中的着色。
-* HTML、CSS、Razor 编辑器* - 诊断、Intellisense 补全、快速信息、智能缩进。 当前不支持语义着色、导航命令等。
-* JavaScript 编辑器* - 尚不支持脚本块（例如 HTML 和 CSHTML 文件中的 JavaScript 内容）和语义突出显示。 带有灯泡特征和 Lint 分析的已知问题。
+* HTML、CSS、Razor 编辑器* - 诊断、IntelliSense 补全、快速信息、智能缩进。 当前不支持语义着色、导航命令等。
+* JavaScript 和 TypeScript 编辑器* - 尚不支持脚本块（例如 HTML 和 CSHTML 文件中的 JavaScript 内容）和语义突出显示。 带有灯泡特征和 Lint 分析的已知问题。
 * CMake 目标视图
 * CMake 项目设置编辑器
 * Ctrl+F7（编译文件）
@@ -65,14 +65,14 @@ ms.locfileid: "90862325"
 * 项目和项模板
 * .NET Core 和 ASP.NET Core 项目
 * C++ 控制台应用 - 支持 CMake 和 vcxproj
-* 面向 Linux 的 C++ 应用 - 大部分都支持非 GUI。 能够安装和预配 WSL、特定于平台的 Intellisense 和内部版本。
+* 面向 Linux 的 C++ 应用 - 大部分都支持非 GUI。 能够安装和预配 WSL、特定于平台的 IntelliSense 和内部版本。
 * 项目文件编辑 - 大部分都支持。 缺少某些补全、语法突出显示和高级编辑功能。
 * GitHub 帐户 - 可用于创建和连接到 Codespaces，并访问 GitHub 上该帐户可用的资源。
 * Azure CLI - 不共享已登录的 Visual Studio 标识或密钥链帐户。 不支持基于浏览器的登录，但可以使用 `az login --use-device-code` 在集成终端内进行身份验证。
 
 以下内容尚不可用：
 
-* UI 设计器 - WinForms 和 WPF 设计器
+* UI 设计器 - WinForms、WPF 和资源设计器
 * Visual Basic 和 F# 项目
 * 目标是 .NET Framework 的项目
 * Docker Compose 项目

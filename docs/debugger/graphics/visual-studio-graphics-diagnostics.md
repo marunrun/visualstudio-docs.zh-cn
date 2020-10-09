@@ -1,5 +1,6 @@
 ---
 title: 图形诊断 | Microsoft Docs
+description: Visual Studio 图形诊断简介
 ms.custom: seodec18
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -11,15 +12,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e69d88bb5764836d82232cec26606009eaf694d7
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 829c51c0e2020a154dc485dbfc4db25e0b399e57
+ms.sourcegitcommit: a1cb4e2025045c2ad79167645c4c0f33b94b1152
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73187744"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91671374"
 ---
 # <a name="visual-studio-graphics-diagnostics"></a>Visual Studio 图形诊断
-Visual Studio 图形诊断是一套工具，用于记录、然后分析 Direct3D 应用中的呈现问题和性能问题。 可对在 Windows PC 上、在 Windows 设备模拟器中或在远程 PC 或设备上本地运行的应用使用图形诊断。
+>[!NOTE]
+> Visual Studio 建议对 DirectX 12 游戏使用 Windows 上的 PIX。 [Windows 上的 PIX](https://aka.ms/PIXonWindows) 是一个完全支持 DirectX 12 的性能优化和调试工具。 [了解更多信息](visual-studio-graphics-diagnostics-directx-12.md)或[在此下载](https://aka.ms/downloadPIX)。
+
+Visual Studio“图形诊断”是一套工具，用于记录、然后分析 Direct3D 应用中的呈现问题和性能问题。 可对在 Windows PC 上、在 Windows 设备模拟器中或在远程 PC 或设备上本地运行的应用使用图形诊断。
 
  图形诊断工作流一开始会捕获你的应用如何使用 Direct3D 的记录（在其运行时实时捕获），因此，可以立即对其行为进行分析、共享或保存以供稍候使用。 捕获会话可以通过 Visual Studio 或使用命令行捕获工具“dxcap.exe”手动启动和进行控制。 也可以通过使用图形诊断捕获 API 以编程方式启动和控制捕获会话。
 
@@ -68,3 +72,4 @@ Visual Studio 图形诊断是一套工具，用于记录、然后分析 Direct3D
 | - | - |
 | [调试器功能简介](../debugger-feature-tour.md) | 介绍 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 中的调试功能。 |
 | [DirectX 图形和游戏](/windows/win32/directx) | 提供讨论 DirectX 图形技术的文章。 |
+| [Visual Studio 中的 DirectX 12 支持](visual-studio-graphics-diagnostics-directx-12.md) | 了解 Visual Studio 中的 DirectX 12 支持 |
