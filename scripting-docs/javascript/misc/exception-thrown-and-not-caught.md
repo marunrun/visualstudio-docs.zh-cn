@@ -14,12 +14,12 @@ ms.assetid: b5235490-a8e7-42e3-804e-d85235bc6f05
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 44f207d2e32a7ca79ee0d5851a80261c5da9743d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 6a0e3eb6d1275e5598ad44ea553e22f0b53eeb45
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85814585"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862767"
 ---
 # <a name="exception-thrown-and-not-caught"></a>引发了异常且未被捕获
 你在代码中包含了一个 `throw` 语句，但该语句未包含在 **try** 块中，或者没有关联的 **catch** 块捕获该错误。 使用**throw**语句从**try**块内部引发异常，并使用**catch**语句在**try**块外捕获异常。  
@@ -32,7 +32,7 @@ ms.locfileid: "85814585"
   
 - 如果重新引发异常，请确保有另一个相应的 catch 语句。  
   
-## <a name="see-also"></a>另请参阅  
- [Error 对象](../../javascript/reference/error-object-javascript.md)   
- [throw 语句](../../javascript/reference/throw-statement-javascript.md)   
- [尝试 .。。catch .。。finally 语句](../../javascript/reference/try-dot-dot-dot-catch-dot-dot-dot-finally-statement-javascript.md)
+## <a name="see-also"></a>请参阅  
+ [Error 对象](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error)   
+ [throw 语句](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/throw)   
+ [尝试 .。。catch .。。finally 语句](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/try...catch)

@@ -14,12 +14,12 @@ ms.assetid: 4c214c4b-9cd7-473b-8d90-2344c0375c25
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 96c08b8b50b64ccfb7d770ade41510897ad0ff5a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5c56acfd14ceebf2cb4ff582363ece558b189e14
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85817536"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862750"
 ---
 # <a name="string-expected"></a>缺少字符串
 您尝试对类型之外的对象调用**valueOf**方法，而不是**调用的方法** `String` 。 此类调用的对象必须是类型 `String` 。  
@@ -28,6 +28,6 @@ ms.locfileid: "85817536"
   
 - 仅对类型为的对象调用 valueOf 或**String.prototype.valueOf** **方法。** `String`  
   
-## <a name="see-also"></a>另请参阅  
- [String 对象](../../javascript/reference/string-object-javascript.md)   
- [toString 方法 (Object)](../../javascript/reference/tostring-method-object-javascript.md)
+## <a name="see-also"></a>请参阅  
+ [String 对象](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)   
+ [toString 方法 (Object)](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/tostring)

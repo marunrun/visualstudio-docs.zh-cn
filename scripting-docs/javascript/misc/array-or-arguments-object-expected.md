@@ -14,12 +14,12 @@ ms.assetid: 22b83e2f-8916-46db-8d8c-50c8481b7c90
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 266eed585f1d45e15c084e424d441220f6e671ee
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2e4b3eaee0a244f9d14d88d1393742ab6d31a509
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85815768"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862666"
 ---
 # <a name="array-or-arguments-object-expected"></a>缺少 Array 或 arguments 对象
 未将数组作为参数提供。 此错误仅适用于**函数。** 如果指定此参数，则此函数的第二个参数必须是 `Array` 对象或 **参数** 对象。  
@@ -28,7 +28,7 @@ ms.locfileid: "85815768"
   
 - 将 `Array` 或 **参数** 对象指定为第二个参数。  
   
-## <a name="see-also"></a>另请参阅  
- [使用数组](../../javascript/advanced/using-arrays-javascript.md)   
- [ (函数应用方法) ](../../javascript/reference/apply-method-function-javascript.md)   
- [函数](../../javascript/functions-javascript.md)
+## <a name="see-also"></a>请参阅  
+ [使用数组](https://developer.mozilla.org/docs/Learn/JavaScript/First_steps/Arrays)   
+ [ (函数应用方法) ](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)   
+ [函数](https://developer.mozilla.org/docs/Learn/JavaScript/Building_blocks/Functions)

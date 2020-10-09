@@ -14,12 +14,12 @@ ms.assetid: 35d71b7f-53fd-44c4-a7c7-b1550c65cfd4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4dbb7e55f6afe6d3edfe4e98749807732ffa05ac
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b6d88815a33187e209bcba248d3c363afdd91227
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85817666"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862662"
 ---
 # <a name="boolean-expected"></a>缺少布尔值
 您尝试对类型之外的对象调用**valueOf**方法，而不是**调用的方法** `Boolean` 。 此类调用的对象必须是类型 `Boolean` 。 例如：
@@ -34,9 +34,9 @@ o.f();
 
 - 仅对**布尔**类型的对象调用**valueOf** **方法或布尔**方法。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-- [Boolean 对象](../../javascript/reference/boolean-object-javascript.md)
-- [数据类型](../../javascript/data-types-javascript.md)
-- [控制程序流](../../javascript/controlling-program-flow-javascript.md)
-- [复制、传递和比较数据](../../javascript/advanced/copying-passing-and-comparing-data-javascript.md)
+- [Boolean 对象](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
+- [数据类型](https://developer.mozilla.org/docs/Web/JavaScript/Data_structures)
+- [控制程序流](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
+- [复制、传递和比较数据](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Functions)

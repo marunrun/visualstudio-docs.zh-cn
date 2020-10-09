@@ -15,12 +15,12 @@ caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 452af60c37e4a56996438cc2957e9b69ccee98ef
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b6a77675a1cb618210d9c44104cf6397dda03c11
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85816821"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862567"
 ---
 # <a name="invalid-replacer-argument"></a>无效的替换器参数
 尝试使用无效的 `JSON.stringify` 自变量进行调用。 `replacer`参数必须是函数或数组。  
@@ -44,7 +44,7 @@ var memberfilter = new Object();
 var jsontext = JSON.stringify(contact, memberfilter, "\t");  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [JSON 对象](../../javascript/reference/json-object-javascript.md)   
- [JSON。 parse 函数](../../javascript/reference/json-parse-function-javascript.md)   
- [JavaScript 运行时错误](../../javascript/reference/javascript-run-time-errors.md)
+## <a name="see-also"></a>请参阅  
+ [JSON 对象](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/JSON)   
+ [JSON。 parse 函数](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse)   
+ [JavaScript 运行时错误](/microsoft-edge/devtools-guide/console/error-and-status-codes#javascript-run-time-errors)

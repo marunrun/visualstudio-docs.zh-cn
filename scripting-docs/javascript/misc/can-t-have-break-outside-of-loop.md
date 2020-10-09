@@ -14,12 +14,12 @@ ms.assetid: 11d02172-2a78-4705-a730-d21111db5f42
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 0959bad452d3b24ca1475b66e37fbdab1e9c3e7f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ee177c8070fc5af8123d7fd78e69b1f767a5b700
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85817653"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862795"
 ---
 # <a name="cant-have-break-outside-of-loop"></a>“break”不能位于循环外
 尝试在循环外使用 **break** 关键字。 **Break**关键字用于终止循环或 `switch` 语句。 它必须嵌入到循环或语句的主体中 `switch` 。 但是， **标签** 可以跟在 break 关键字之后。  
@@ -34,7 +34,7 @@ break labelname;
   
 - 请确保 **break** 关键字显示在封闭循环或 switch 语句内。  
   
-## <a name="see-also"></a>另请参阅  
- [break 语句](../../javascript/reference/break-statement-javascript.md)   
- [控制程序流](../../javascript/controlling-program-flow-javascript.md)   
- [脚本疑难解答](../../javascript/advanced/troubleshooting-your-scripts-javascript.md)
+## <a name="see-also"></a>请参阅  
+ [break 语句](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/break)   
+ [控制程序流](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)   
+ [脚本疑难解答](https://developer.mozilla.org/docs/Learn/JavaScript/First_steps/What_went_wrong)
