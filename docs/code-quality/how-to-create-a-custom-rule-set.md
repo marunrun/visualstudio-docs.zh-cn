@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3d498ee0acfdc87f340a3c5c8848680eaed6276d
-ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
+ms.openlocfilehash: 8fe0d6ad545a197ca03c12acf68d779a42fd91ae
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91658550"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91860505"
 ---
 # <a name="customize-a-rule-set"></a>自定义规则集
 
@@ -61,7 +61,7 @@ ms.locfileid: "91658550"
 
 2. 在 " **新建文件** " 对话框中，选择左侧的 " **常规** " 类别，然后选择 " **代码分析规则集**"。
 
-3. 选择“打开”。
+3. 选择“打开”  。
 
    *新的*文件组文件将在规则集编辑器中打开。
 

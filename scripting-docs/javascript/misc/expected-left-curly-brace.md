@@ -14,12 +14,12 @@ ms.assetid: ffdb55c0-e361-4bcd-b1a6-6158e7d9b557
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ca69e9d3a20bff5d5f22548448d404a7d042f449
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7c4005352551031cedc3e2c6c803be66f830d02a
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85815365"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91861881"
 ---
 # <a name="expected-"></a>应有“{”
 未包括标记函数体开始的左大括号。 构成函数主体的代码（即使是单个行）必须包含在左大括号和右大括号中。 请注意，在函数主体中使用大括号比在循环中使用更严格。  
@@ -28,5 +28,5 @@ ms.locfileid: "85815365"
   
 - 添加标记函数体开头的左大括号。  
   
-## <a name="see-also"></a>另请参阅  
- [Function 对象](../../javascript/reference/function-object-javascript.md)
+## <a name="see-also"></a>请参阅  
+ [Function 对象](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Function)

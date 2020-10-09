@@ -14,12 +14,12 @@ ms.assetid: 35f7a9b4-74fa-4ddb-b9f2-1a92345cb2ff
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 7a63b73e27de4e33aaa5c833c79f339da66954d3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: bf4afa6e3a9dc26b40ddbc8fbd2dbcedb92a74c3
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85815729"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91861451"
 ---
 # <a name="object-doesnt-support-this-property-or-method"></a>对象不支持此属性或方法
 你指定的属性或方法不在此对象中。 并非所有对象都支持所有的属性和方法。  
@@ -32,6 +32,6 @@ ms.locfileid: "85815729"
   
 - 有关更多信息，请参见对象的文档。  
   
-## <a name="see-also"></a>另请参阅  
- [Object 对象](../../javascript/reference/object-object-javascript.md)   
- [JavaScript 对象](../../javascript/reference/javascript-objects.md)
+## <a name="see-also"></a>请参阅  
+ [Object 对象](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)   
+ [JavaScript 对象](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects)

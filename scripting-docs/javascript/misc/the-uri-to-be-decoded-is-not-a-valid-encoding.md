@@ -14,12 +14,12 @@ ms.assetid: 029e0790-ffd1-496d-8700-3b3dbac1b6fd
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 98d2ee08a52e86c435c58502da1ab4f68b594905
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 38ea642cece501804b6ee2efaac778c3b8d520fc
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85816158"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91861871"
 ---
 # <a name="the-uri-to-be-decoded-is-not-a-valid-encoding"></a>要解码的 URI 不是有效编码
 尝试将格式不正确的 URI 解码 (统一资源标识符) 。 Uri 具有特殊的语法;大多数非字母数字字符必须先进行编码，然后才能在 URI 中使用。 您可以使用 `encodeURI` 和 `encodeURIComponent` 方法从普通字符串创建 URI [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 。  
@@ -36,6 +36,6 @@ ms.locfileid: "85816158"
   
 - 确保仅尝试解码有效的 Uri。 不能解码正常 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 字符串，因为它们可能包含无效字符。  
   
-## <a name="see-also"></a>另请参阅  
- [decodeURI 函数](../../javascript/reference/decodeuri-function-javascript.md)   
- [decodeURIComponent 函数](../../javascript/reference/decodeuricomponent-function-javascript.md)
+## <a name="see-also"></a>请参阅  
+ [decodeURI 函数](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/decodeuri)   
+ [decodeURIComponent 函数](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/decodeuricomponent)

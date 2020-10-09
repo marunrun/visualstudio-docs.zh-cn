@@ -14,12 +14,12 @@ ms.assetid: a3f0fdbb-8d4b-41ae-a396-43dfc9483760
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e6091968dcbdd98240b1705e0fa7dc855dad3bda
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 310db785041de0beb0ebbba0cdd9b7c356397bc4
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85816067"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862384"
 ---
 # <a name="the-uri-to-be-encoded-contains-an-invalid-character"></a>要编码的 URI 包含无效字符
 您尝试将字符串编码为 URI (统一资源标识符) ，但它包含无效字符。 尽管大多数字符在要转换为 Uri 的字符串内有效，但某些 Unicode 字符序列是非法的。  
@@ -32,6 +32,6 @@ ms.locfileid: "85816067"
     <Scheme>:<first>/<second>;<third>?<fourth>  
     ```  
   
-## <a name="see-also"></a>另请参阅  
- [encodeURI 函数](../../javascript/reference/encodeuri-function-javascript.md)   
- [encodeURIComponent 函数](../../javascript/reference/encodeuricomponent-function-javascript.md)
+## <a name="see-also"></a>请参阅  
+ [encodeURI 函数](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/encodeuri)   
+ [encodeURIComponent 函数](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/encodeuricomponent)

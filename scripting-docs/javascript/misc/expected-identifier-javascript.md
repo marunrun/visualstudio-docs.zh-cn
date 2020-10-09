@@ -14,12 +14,12 @@ ms.assetid: 92eaa97f-7084-4618-9608-768b51a0600b
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 71f5e4363481745887371e7d25e308b2856dc00c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: b70f42775d627e7e3683aa2cbc771f091b58e761
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85816522"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91861915"
 ---
 # <a name="expected-identifier-javascript"></a>应为标识符 (JavaScript)
 您在需要的上下文中使用了除标识符以外的其他内容。 标识符可以是：  
@@ -36,5 +36,5 @@ ms.locfileid: "85816522"
   
 - 更改表达式，使标识符出现在等号的左侧。  
   
-## <a name="see-also"></a>另请参阅  
- [使用数组](../../javascript/advanced/using-arrays-javascript.md)
+## <a name="see-also"></a>请参阅  
+ [使用数组](https://developer.mozilla.org/docs/Learn/JavaScript/First_steps/Arrays)

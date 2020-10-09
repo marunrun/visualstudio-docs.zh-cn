@@ -14,12 +14,12 @@ ms.assetid: b272f51a-97c2-4398-8b46-9cc49a5c0bd6
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b8148e18fba3fca24cc6615f4f345c4883306ca3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 09a49fb0cbff746f11606e4cef7417a5c9a68d0b
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85816431"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862517"
 ---
 # <a name="number-expected"></a>缺少数字
 试图对不是**number**的类型的对象调用**valueOf**方法，则尝试**调用此方法**。 此类调用的对象必须是 **Number**类型。  
@@ -28,6 +28,6 @@ ms.locfileid: "85816431"
   
 - 仅对**number**类型的对象调用 ValueOf 或**number** .**方法。**  
   
-## <a name="see-also"></a>另请参阅  
- [Number 对象](../../javascript/reference/number-object-javascript.md)   
- [number 属性 (Error)](../../javascript/reference/number-property-error-javascript.md)
+## <a name="see-also"></a>请参阅  
+ [Number 对象](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)   
+ [number 属性 (Error)](https://developer.mozilla.org/docs/Archive/Web/JavaScript/Microsoft_Extensions/Error.number)

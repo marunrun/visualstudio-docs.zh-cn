@@ -14,12 +14,12 @@ ms.assetid: c2608995-944e-4d35-8b7e-1cfe264d2458
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 7ff759681ca3e4f48f264e00f9e376487dfe4d24
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 761e940ae6f88040bf5e24cd3a622a14261fa68e
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85817302"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91861633"
 ---
 # <a name="expected-end"></a>应为 " \@ end"
 您尝试创建有条件编译的代码块，但没有在 <strong>@end</strong> 末尾包含语句。 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 通过在块中包含语句，可以有条件地编译 <strong>@if/@end</strong> 。  
@@ -28,6 +28,6 @@ ms.locfileid: "85817302"
   
 - 添加相应的 <strong>@end</strong> 语句。  
   
-## <a name="see-also"></a>另请参阅  
- [条件编译](../../javascript/advanced/conditional-compilation-javascript.md)   
- [条件编译变量](../../javascript/advanced/conditional-compilation-variables-javascript.md)
+## <a name="see-also"></a>请参阅  
+ [条件编译](/previous-versions/windows/internet-explorer/ie-developer/scripting-articles/121hztk3(v=vs.84))   
+ [条件编译变量](/previous-versions/windows/internet-explorer/ie-developer/scripting-articles/s59bkzce(v=vs.84))

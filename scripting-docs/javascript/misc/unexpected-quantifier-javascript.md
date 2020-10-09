@@ -14,12 +14,12 @@ ms.assetid: ba6d34f9-2d6f-486c-a929-6cd9818be322
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: da4ff08ae667b868670364c7ad6b9a6b69ae6ad3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f67f9a2fc81b0bd950e171e4274eb09eacd88bbc
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85815326"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91861852"
 ---
 # <a name="unexpected-quantifier-javascript"></a>意外的限定符 (JavaScript)
 编写正则表达式搜索模式时，创建的模式元素具有非法的重复因子。 例如，模式  
@@ -47,6 +47,6 @@ ms.locfileid: "85815326"
   
 - 请确保搜索模式元素仅包含法律重复因素。  
   
-## <a name="see-also"></a>另请参阅  
- [正则表达式对象](../../javascript/reference/regular-expression-object-javascript.md)   
- [JavaScript)  (正则表达式语法 ](https://msdn.microsoft.com/library/1400241x)
+## <a name="see-also"></a>请参阅  
+ [正则表达式对象](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp)   
+ [JavaScript)  (正则表达式语法 ](/previous-versions/1400241x(v=vs.100))
