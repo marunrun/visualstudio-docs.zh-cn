@@ -1,5 +1,6 @@
 ---
 title: Help Content Manager 的命令行参数
+description: '使用帮助内容管理器 ( # A0) 的命令行参数指定如何部署和管理本地帮助内容。'
 ms.date: 11/01/2017
 ms.topic: reference
 ms.assetid: 3aa9890a-1147-42ba-adea-17935d184038
@@ -8,12 +9,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d9bead01c6440d5232a91a5e8fe2007b3e30340c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 24011c50cf6f8d2204abdaa8b6119f7873470bcf
+ms.sourcegitcommit: dfbbf041e68ec3a4cd97196b19c9226a4793e702
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72631968"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91879042"
 ---
 # <a name="command-line-arguments-for-the-help-content-manager"></a>Help Content Manager 的命令行参数
 
@@ -46,7 +47,7 @@ hlpctntmgr.exe /operation install /catalogname VisualStudio15 /locale en-us /sou
 
 下表定义了可以用于 Help Content Manager 的命令行工具的开关和参数：
 
-|交换机|必需？|参数|
+|开关|必需？|参数|
 |------------|---------------|---------------|
 |/operation|是|-   **Install** -- 将书籍从指定安装源添加到本地内容存储区。<br />     此开关需要 /booklist 自变量、/sourceURI 自变量或两者。 如果未指定 /sourceURI 参数，则默认 Visual Studio URI 用作安装源。 如果未指定 /booklist 变量，则会安装 /sourceUri 上的所有书籍。<br />-   **Uninstall** -- 从本地内容存储区中删除指定的书籍。<br />     此开关需要 /booklist 自变量或 /sourceURI 自变量。  如果指定 /sourceURI 自变量，则会移除所有书籍，并且会忽略 /booklist 自变量。<br />-   **Move** -- 将本地存储区移动到指定的路径。 默认本地存储区路径设置为 *% ProgramData%* 下的目录<br />     此开关需要 /locationPath 和 /catalogName 自变量。 如果指定的路径无效或驱动器未包含足够的可用空间来存放内容，则会在事件日志中记录错误消息。<br />-   **Refresh** -- 更新自安装或最近更新以来已更改的主题。<br />     此开关需要 /sourceURI 自变量。|
 |/catalogName|是|指定内容目录的名称。 对于 Visual Studio 2017 和 Visual Studio 2019，这是 VisualStudio15。|
@@ -90,7 +91,7 @@ OnlineHelpPreferenceDisabled = 1201
 UpdateAlreadyRunning = 1300 - (Signals that the update didn't run because another was in progress.)
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [Help Viewer 管理员指南](../help-viewer/administrator-guide.md)
 - [Help Content Manager 替代](../help-viewer/behavior-overrides.md)

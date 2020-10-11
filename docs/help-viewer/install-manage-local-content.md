@@ -1,5 +1,6 @@
 ---
 title: 安装本地帮助文档
+description: 使用 Microsoft Help Viewer 安装和管理本地帮助文档。 添加、删除、更新和移动安装在计算机上的帮助内容。
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -23,12 +24,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 70bb90856fb88738bbc82434c47e375ea453fd08
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 3401c12e35308b07a3c1bb1884af5acda221e71d
+ms.sourcegitcommit: dfbbf041e68ec3a4cd97196b19c9226a4793e702
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85284901"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91879094"
 ---
 # <a name="install-and-manage-local-content"></a>安装和管理本地内容
 
@@ -129,6 +130,6 @@ ms.locfileid: "85284901"
 
 3. 移动内容后，选择“关闭”**** 按钮。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [Microsoft Help Viewer](../help-viewer/overview.md)

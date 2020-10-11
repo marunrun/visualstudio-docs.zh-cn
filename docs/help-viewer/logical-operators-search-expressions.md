@@ -1,5 +1,6 @@
 ---
 title: '搜索表达式中的逻辑运算符 (帮助查看器) '
+description: 了解如何在 Microsoft Help Viewer 中使用逻辑运算符和高级搜索运算符来优化搜索表达式。
 ms.custom: SEO-VS-2020
 ms.date: 11/02/2017
 ms.topic: reference
@@ -12,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9daceca2540a2da61a46e12a458c012ce7851001
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 2bfa869bed2bc4462c050ac77e08665958f60598
+ms.sourcegitcommit: dfbbf041e68ec3a4cd97196b19c9226a4793e702
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90038629"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91878925"
 ---
 # <a name="logical-and-advanced-operators-in-search-expressions"></a>搜索表达式中的逻辑和高级运算符
 
@@ -67,7 +68,7 @@ ms.locfileid: "90038629"
 > [!NOTE]
 > `code:` 运算符仅查找标记有编程语言标签的内容，而不查找一般标记为代码的内容。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [如何：搜索主题](../help-viewer/find-topics.md)
 - [Microsoft Help Viewer](../help-viewer/overview.md)
