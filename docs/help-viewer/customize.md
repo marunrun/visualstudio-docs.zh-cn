@@ -1,5 +1,6 @@
 ---
 title: 自定义帮助查看器
+description: 了解如何自定义帮助查看器。 配置布局、字体大小、最大结果数，以及是否包含英语内容。
 ms.date: 11/02/2017
 ms.topic: how-to
 f1_keywords:
@@ -13,12 +14,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5d1f4de5e5ace63f748c6a75d45d8311ea3eb71b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 402aa5deaae6b082c8360b9867807516f11d935d
+ms.sourcegitcommit: dfbbf041e68ec3a4cd97196b19c9226a4793e702
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85284967"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91879029"
 ---
 # <a name="customize-the-help-viewer"></a>自定义 Help Viewer
 可以自定义 Help Viewer 窗口的布局以及其他选项，如字号、最大结果数以及是否包括英语内容。
@@ -45,6 +46,6 @@ Help Viewer 支持标准停靠功能。 默认情况下，Help Viewer 中的所�
 |更改在“收藏夹”**** 窗口中出现的最大历史记录条目数|在“保存的最大历史记录条目”**** 列表中选择一个值。|
 |在查看产品的非英语版本内容时包括或排除英语内容。|选中或清除“在所有导航选项卡和 F1 请求中包括英语内容”**** 复选框。 **注意：** 此功能还控制是否可以在“管理内容”**** 选项卡中下载英语内容。|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [Microsoft Help Viewer](../help-viewer/overview.md)

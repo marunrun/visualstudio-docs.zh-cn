@@ -1,5 +1,6 @@
 ---
 title: 脱机帮助文档
+description: 使用 Microsoft Help Viewer 安装和查看各种产品和技术（如 Visual Studio 和 .NET）的脱机帮助文档。
 ms.date: 11/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -19,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9c9c9bf7e6447f222b63ad9a07c0e27ce4567374
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 76e0ec4755584a7021d4f5489500aa53b9bad87e
+ms.sourcegitcommit: dfbbf041e68ec3a4cd97196b19c9226a4793e702
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "67824879"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91878964"
 ---
 # <a name="microsoft-help-viewer"></a>Microsoft Help Viewer
 
@@ -91,7 +92,7 @@ ms.locfileid: "67824879"
 
 - 右侧的小三角形将打开选项卡列表，包括主题选项卡和 " **管理内容** " 选项卡。您可以选择选项卡名称使其成为活动选项卡。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [Microsoft Help Viewer 安装](../help-viewer/installation.md)
 - [Help Viewer 管理员指南](../help-viewer/administrator-guide.md)

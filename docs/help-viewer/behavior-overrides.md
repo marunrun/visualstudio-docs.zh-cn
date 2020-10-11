@@ -1,5 +1,6 @@
 ---
 title: Help Content Manager 重写
+description: 了解帮助内容管理器替代，它在 Visual Studio IDE 中更改 Help Viewer 和帮助相关功能的默认行为。
 ms.date: 11/01/2017
 ms.topic: conceptual
 ms.assetid: 95fe6396-276b-4ee5-b03d-faacec42765f
@@ -8,12 +9,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5c03d631be1bc4a38e514e1019fa230775427a53
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 60f4e46d8c43c90759c964dbf01145d876a9f413
+ms.sourcegitcommit: dfbbf041e68ec3a4cd97196b19c9226a4793e702
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "67825092"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91879055"
 ---
 # <a name="help-content-manager-overrides"></a>Help Content Manager 重写
 
@@ -61,7 +62,7 @@ ms.locfileid: "67825092"
 |替代 BITS 作业优先级|HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node（64 位计算机上）\Microsoft\Help\v2.3|BITSPriority|**foreground**、**high**、**normal** 或 **low**|
 |指向网络共享上的本地内容存储区|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Help\ v2.3\Catalogs\VisualStudio15|LocationPath|“*ContentStoreNetworkShare*”|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [Help Viewer 管理员指南](../help-viewer/administrator-guide.md)
 - [Help Content Manager 的命令行参数](../help-viewer/command-line-arguments.md)

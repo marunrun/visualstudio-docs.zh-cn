@@ -1,5 +1,6 @@
 ---
 title: 使用帮助查看器索引
+description: 使用 "Microsoft Help Viewer" 索引查找主题，其中包含与已安装内容中的主题关联的关键字列表。
 ms.date: 11/02/2017
 ms.topic: how-to
 helpviewer_keywords:
@@ -15,12 +16,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ff72fc3e65b48e195c8ffc9587bdbb3c5fc382be
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 695bcabc195b97551b2943a557d591bdfb85c991
+ms.sourcegitcommit: dfbbf041e68ec3a4cd97196b19c9226a4793e702
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85284953"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91879016"
 ---
 # <a name="find-topics-by-using-the-help-viewer-index"></a>使用 Help Viewer 索引查找主题
 
@@ -77,7 +78,7 @@ ms.locfileid: "85284953"
 
     例如，如果输入了“building”一词，请尝试改用“creating”。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [如何：在 TOC 中查找主题](../help-viewer/find-topics-toc.md)
 - [如何：搜索主题](../help-viewer/find-topics.md)

@@ -1,5 +1,6 @@
 ---
 title: 搜索主题（帮助查看器）
+description: 了解如何在 Microsoft Help Viewer 中搜索主题。 使用通配符表达式、逻辑运算符和高级搜索运算符自定义搜索。
 ms.date: 11/02/2017
 ms.topic: how-to
 ms.assetid: 683f1b0c-1551-4bba-91fe-3855f03fdd69
@@ -8,12 +9,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4581d7ea0b40e2b6b519f0beafaee8744e0b46c1
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 46eb9c21b5bc6f7d0a577b85d043933b48bf60bc
+ms.sourcegitcommit: dfbbf041e68ec3a4cd97196b19c9226a4793e702
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85284914"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91878990"
 ---
 # <a name="how-to-search-for-topics"></a>如何：搜索主题
 
@@ -76,7 +77,7 @@ ms.locfileid: "85284914"
 
 全文索引搜索期间，会自动忽略经常出现的单词或数字（有时也称停用字）。 例如，如果搜索短语“pass through”，搜索结果将显示包含“pass”而非“through”的主题。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [逻辑运算符和高级运算符](../help-viewer/logical-operators-search-expressions.md)
 - [如何：在索引中查找主题](../help-viewer/find-topics-index.md)

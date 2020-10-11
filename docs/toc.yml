@@ -878,7 +878,7 @@
       href: msbuild/msbuild.md
     - name: Azure Pipelines 和 TFS >>
       displayName: VSTS Azure DevOps CI/CD Continuous integration delivery
-      href: /azure/devops/pipelines/index?view=vsts
+      href: /azure/devops/pipelines/index?view=vsts&preserve-view=true
     - name: 指定生成事件 (Visual Basic)
       href: ide/how-to-specify-build-events-visual-basic.md
     - name: 指定生成事件 (C#)

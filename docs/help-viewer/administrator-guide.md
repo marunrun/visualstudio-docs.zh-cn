@@ -1,5 +1,6 @@
 ---
 title: Help Viewer 管理员指南
+description: 阅读 Microsoft Help Viewer 管理员指南。 从 internet 部署本地帮助内容，或在客户端计算机上部署预安装的本地帮助内容。
 ms.date: 11/01/2017
 ms.topic: conceptual
 ms.assetid: 4340c69f-b96b-4932-bb82-38b16a5ab149
@@ -8,12 +9,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 037ee411c156d21145160dc95b40078fd841493c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 312b886ee0becc794f657ecaaba7fb028d4b3cf1
+ms.sourcegitcommit: dfbbf041e68ec3a4cd97196b19c9226a4793e702
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "67825129"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91878886"
 ---
 # <a name="help-viewer-administrator-guide"></a>Help Viewer 管理员指南
 
@@ -124,7 +125,7 @@ ms.locfileid: "67825129"
 
      `Xcopy %ProgramData%\Microsoft\HelpLibrary2 \<*foldername*>\ /y /e /k /o`
 
-     例如：`Xcopy %ProgramData%\Microsoft\HelpLibrary2 c:\VSHelp\ /y /e /k /o`
+     例如： `Xcopy %ProgramData%\Microsoft\HelpLibrary2 c:\VSHelp\ /y /e /k /o`
 
 ### <a name="deploy-the-content"></a>部署内容
 
@@ -142,7 +143,7 @@ ms.locfileid: "67825129"
 
 3. 在要安装帮助内容的本地计算机上运行 .bat 文件**。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [Help Content Manager 的命令行参数](../help-viewer/command-line-arguments.md)
 - [Help Content Manager 替代](../help-viewer/behavior-overrides.md)

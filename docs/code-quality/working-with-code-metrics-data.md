@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6d62baf32685832072266438de003b523399137f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c01543b290d991a189c0851c64526c9c513068ba
+ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75587077"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91927973"
 ---
 # <a name="use-the-code-metrics-results-window"></a>使用 "代码度量结果" 窗口
 
@@ -82,9 +82,9 @@ ms.locfileid: "75587077"
 
 ## <a name="create-a-work-item-based-on-code-metric-results"></a>基于代码度量结果创建工作项
 
-你可以创建基于 "**代码度量结果**" 窗口中的结果的[Azure Boards](/azure/devops/boards/index?view=vsts)工作项。 创建工作项后，Visual Studio 会自动在 "**历史记录**" 选项卡下的 "**标题**" 字段和代码度量数据中输入一个标题。
+你可以创建基于 "**代码度量结果**" 窗口中的结果的[Azure Boards](/azure/devops/boards/index?view=vsts&preserve-view=true)工作项。 创建工作项后，Visual Studio 会自动在 "**历史记录**" 选项卡下的 "**标题**" 字段和代码度量数据中输入一个标题。
 
-有关 Azure Boards 工作项的详细信息，请参阅 [工作项](/azure/devops/boards/work-items/index?view=vsts)。
+有关 Azure Boards 工作项的详细信息，请参阅 [工作项](/azure/devops/boards/work-items/index?view=vsts&preserve-view=true)。
 
 ### <a name="to-create-a-work-item-based-on-a-result"></a>基于结果创建工作项
 
@@ -106,7 +106,7 @@ ms.locfileid: "75587077"
 
 4. 在 " **文件** " 菜单上，单击 " **全部保存** " 以保存工作项。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [代码度量值](../code-quality/code-metrics-values.md)
 - [如何：生成代码度量数据](../code-quality/how-to-generate-code-metrics-data.md)
