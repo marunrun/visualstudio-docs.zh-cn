@@ -12,12 +12,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 36fc3d3fd0b002c110e9184a6d7b15c9fa367c48
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: d1a82cc5fc5ea34f007750a08c0e8140421a9f41
+ms.sourcegitcommit: 3e05bd4bfac6f0b8b3534d8c013388f67e288651
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89509830"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91959817"
 ---
 # <a name="work-with-data-in-visual-studio"></a>在 Visual Studio 中处理数据
 
@@ -113,7 +113,7 @@ ms.locfileid: "89509830"
 
 ## <a name="native-c"></a>本机 C++
 
-在大多数情况下，连接到 SQL Server 的 c + + 应用程序应使用 [Microsoft® ODBC 驱动程序13.1 进行 SQL Server](https://www.microsoft.com/download/details.aspx?id=53339) 。 如果服务器已链接，则 OLE DB 是必需的，并且你使用 [SQL Server Native Client](/sql/relational-databases/native-client/sql-server-native-client)。 您可以直接使用 [ODBC](/sql/odbc/microsoft-open-database-connectivity-odbc?view=sql-server-2017) 或 OLE DB 驱动程序来访问其他数据库。 ODBC 是当前的标准数据库接口，但大多数数据库系统都提供无法通过 ODBC 接口访问的自定义功能。 OLE DB 是一种旧的 COM 数据访问技术，仍受支持，但不建议用于新应用程序。 有关详细信息，请参阅 [Visual C++ 中的数据访问](/cpp/data/data-access-in-cpp)。
+在大多数情况下，连接到 SQL Server 的 c + + 应用程序应使用 [Microsoft® ODBC 驱动程序13.1 进行 SQL Server](https://www.microsoft.com/download/details.aspx?id=53339) 。 如果服务器已链接，则 OLE DB 是必需的，并且你使用 [SQL Server Native Client](/sql/relational-databases/native-client/sql-server-native-client)。 您可以直接使用 [ODBC](/sql/odbc/microsoft-open-database-connectivity-odbc?view=sql-server-2017&preserve-view=true) 或 OLE DB 驱动程序来访问其他数据库。 ODBC 是当前的标准数据库接口，但大多数数据库系统都提供无法通过 ODBC 接口访问的自定义功能。 OLE DB 是一种旧的 COM 数据访问技术，仍受支持，但不建议用于新应用程序。 有关详细信息，请参阅 [Visual C++ 中的数据访问](/cpp/data/data-access-in-cpp)。
 
 使用 REST 服务的 c + + 程序可使用 [c + + REST SDK](https://github.com/Microsoft/cpprestsdk)。
 
