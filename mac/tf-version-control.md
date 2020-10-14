@@ -7,12 +7,12 @@ ms.date: 09/02/2019
 ms.technology: vs-ide-general
 ms.assetid: 52D3D26A-4D01-4FD1-AAA1-AE7D7BD39746
 ms.topic: troubleshooting
-ms.openlocfilehash: c51f3cd50598cd0c33b019c09f95554cc5f9058b
-ms.sourcegitcommit: 5335a9864d5747bc917ed28d4ebeade3076b10e7
+ms.openlocfilehash: 0808f86f8571210a9048faf2e825b483120e73ca
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "85950494"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91584199"
 ---
 # <a name="does-visual-studio-for-mac-support-team-foundation-version-control"></a>Visual Studio for Mac 是否支持 Team Foundation 版本控制？
 
@@ -24,7 +24,7 @@ ms.locfileid: "85950494"
 
 为了在 macOS 上获得最佳版本控制体验，建议使用 Git 而不是 Team Foundation 版本控制 (TFVC)。 
 
-Git 在 Visual Studio for Mac 中受支持，并且是托管在 Team Foundation Server (TFS)/Azure DevOps 中的存储库的默认选项。 要了解有关在 TFS/Azure DevOps 中使用 Git 的详细信息，请参阅[设置 Git 存储库](/visualstudio/mac/set-up-git-repository)指南。
+Git 在 Visual Studio for Mac 中受支持，并且是托管在 Team Foundation Server (TFS)/Azure DevOps 中的存储库的默认选项。 要了解有关在 TFS/Azure DevOps 中使用 Git 的详细信息，请参阅[设置 Git 存储库](./set-up-git-repository.md)指南。
 
 ## <a name="unsupported-workarounds-for-tfvc"></a>TFVC 不受支持的解决方法
 
