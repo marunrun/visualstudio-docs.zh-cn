@@ -6,12 +6,12 @@ ms.author: dominicn
 ms.date: 07/03/2020
 ms.assetid: 7DC64A52-AA41-4F3A-A8A1-8A20BCD81CC7
 ms.custom: video
-ms.openlocfilehash: 56af8f7cd30ec8e41ece2772dc63d67a2dbf3976
-ms.sourcegitcommit: 703c68667261df5985a73282c1cbb0541118989c
+ms.openlocfilehash: a385e58f73edbcea6eb25b7b2e2728e00f9bcb8d
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89402608"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91584004"
 ---
 # <a name="visual-studio-2019-for-mac-tour"></a>Visual Studio 2019 for Mac 导览
 
@@ -66,7 +66,7 @@ Solution Pad 在解决方案中组织项目：
 
 在此位置，源代码、资源、用户界面和依赖关系的文件被组织到特定于平台的项目中。
 
-有关在 Visual Studio for Mac 中使用项目和解决方案的详细信息，请参阅[项目和解决方案](/visualstudio/mac/projects-and-solutions)一文。
+有关在 Visual Studio for Mac 中使用项目和解决方案的详细信息，请参阅[项目和解决方案](./projects-and-solutions.md)一文。
 
 ## <a name="assembly-references"></a>程序集引用
 
@@ -78,7 +78,7 @@ Solution Pad 在解决方案中组织项目：
 
 ![“编辑引用”对话框](media/ide-tour-image20.png)
 
-有关在 Visual Studio for Mac 中使用引用的详细信息，请参阅[管理项目中的引用](/visualstudio/mac/managing-references-in-a-project)一文。
+有关在 Visual Studio for Mac 中使用引用的详细信息，请参阅[管理项目中的引用](./managing-references-in-a-project.md)一文。
 
 ## <a name="dependencies--packages"></a>依赖项/包
 
@@ -90,7 +90,7 @@ NuGet 是 .NET 开发最常用的程序包管理器。 通过 Visual Studio 的 
 
 ![添加 NuGet 包](media/ide-tour-image21.png)
 
-可在[在项目中包括 NuGet 包](/visualstudio/mac/nuget-walkthrough)一文中找到在应用程序中使用 NuGet 包的相关信息。
+可在[在项目中包括 NuGet 包](./nuget-walkthrough.md)一文中找到在应用程序中使用 NuGet 包的相关信息。
 
 ## <a name="source-editor"></a>源编辑器
 
@@ -111,7 +111,7 @@ NuGet 是 .NET 开发最常用的程序包管理器。 通过 Visual Studio 的 
 * 设置选定内容的格式
 * 内联灯泡
 
-有关在 Visual Studio for Mac 中使用源编辑器的详细信息，请参阅[源编辑器](/visualstudio/mac/source-editor)文档。
+有关在 Visual Studio for Mac 中使用源编辑器的详细信息，请参阅[源编辑器](./source-editor.md)文档。
 
 若要始终显示选项卡，可以固定这些选项卡。 这可确保每次启动项目时，都将始终显示需要的选项卡。 若要固定选项卡，请将鼠标悬停在该选项卡上，并单击固定图标__：
 
@@ -119,15 +119,15 @@ NuGet 是 .NET 开发最常用的程序包管理器。 通过 Visual Studio 的 
 
 ## <a name="refactoring"></a>重构
 
-Visual Studio for Mac 提供用于重构代码的两种有用途径：上下文操作和源分析。 可在[重构](/visualstudio/mac/refactoring)一文中阅读更多相关信息。
+Visual Studio for Mac 提供用于重构代码的两种有用途径：上下文操作和源分析。 可在[重构](./refactoring.md)一文中阅读更多相关信息。
 
 ## <a name="debugging"></a>调试
 
-Visual Studio for Mac 提供支持 .Net Core、.NET Framework、Unity 和 Xamarin 项目的调试器。 Visual Studio for Mac 使用 .NET Core 调试器和 Mono 软调试器，以便 IDE 跨所有平台调试托管代码。 有关调试的其他信息，请访问[调试](/visualstudio/mac/debugging)一文。
+Visual Studio for Mac 提供支持 .Net Core、.NET Framework、Unity 和 Xamarin 项目的调试器。 Visual Studio for Mac 使用 .NET Core 调试器和 Mono 软调试器，以便 IDE 跨所有平台调试托管代码。 有关调试的其他信息，请访问[调试](./debugging.md)一文。
 
 调试器包含丰富的可视化工具，可用于字符串、颜色、URL、大小、坐标和贝塞尔曲线等特殊类型。
 
-有关调试器的数据可视化效果的详细信息，请访问[数据可视化效果](/visualstudio/mac/data-visualizations)一文。
+有关调试器的数据可视化效果的详细信息，请访问[数据可视化效果](./data-visualizations.md)一文。
 
 ## <a name="version-control"></a>版本控制
 
@@ -139,7 +139,7 @@ Visual Studio for Mac 与 Git 和 Subversion 源控件系统集成。 源控件�
 
 ![Solution Pad 中的未提交文件](media/ide-tour-image23.png)
 
-有关在 Visual Studio 中使用版本控制的详细信息，请参阅[版本控制](/visualstudio/mac/version-control)一文。
+有关在 Visual Studio 中使用版本控制的详细信息，请参阅[版本控制](./version-control.md)一文。
 
 ## <a name="next-steps"></a>后续步骤
 
