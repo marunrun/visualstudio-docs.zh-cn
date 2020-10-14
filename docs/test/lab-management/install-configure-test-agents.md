@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3c374951b4d4875e4e754035ac52afb7f8fc5a2e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2b75ae05a65ae15e82c45ec0cf43935fb0809160
+ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85286890"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91928601"
 ---
 # <a name="install-test-agents-and-test-controllers"></a>安装测试代理和测试控制器
 
@@ -83,7 +83,7 @@ ms.locfileid: "85286890"
 
 | Agents for Visual Studio 2013 支持的方案 | TFS 和 Azure Test Plans 中的替代方案 |
 | - | - |
-| Visual Studio 中的“生成-部署-测试工”作流 | 用户可以在 TFS 中使用[生成管道](/azure/devops/pipelines/index?view=vsts)（而不是 XAML 生成）生成、部署和测试方案。 |
+| Visual Studio 中的“生成-部署-测试工”作流 | 用户可以在 TFS 中使用[生成管道](/azure/devops/pipelines/index?view=vsts&preserve-view=true)（而不是 XAML 生成）生成、部署和测试方案。 |
 | 使用本地远程计算机进行负载测试（性能测试） | 使用 Test Controller 和 Test Agents 2013 Update 5 在本地运行负载测试。 |
 | 使用实验室环境从 Microsoft 测试管理器（在 Visual Studio 2017 中已弃用）远程执行自动测试 | 目前此方案没有替代方案。 建议在生成和发布定义（而不是 XAML 生成）中使用“运行功能测试”任务来远程执行测试。 |
 | 开发人员在 Visual Studio 中执行远程测试 | 不再支持。 |

@@ -7,18 +7,18 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 38e542fed0f26422a88644577ec864ef006855c5
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 8998a9e761716b28bd2815120e350b98804a6395
+ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90038434"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91928666"
 ---
 # <a name="configure-unit-tests-by-using-a-runsettings-file"></a>使用 .runsettings 文件配置单元测试
 
 通过使用 .runsettings 文件，可配置 Visual Studio 中的单元测试。 例如，可更改正在运行测试的 .NET 版本、测试结果的目录，或者在测试运行期间收集的数据。 .runsettings 文件常见的用途是自定义[代码覆盖率分析](../test/customizing-code-coverage-analysis.md)。
 
-可以使用运行设置文件配置测试，这些测试可以从[命令行](vstest-console-options.md)IDE 运行，或者在使用 Azure Test Plans 或 Team Foundation Server (TFS) 的[生成工作流](/azure/devops/pipelines/test/getting-started-with-continuous-testing?view=vsts)中运行。
+可以使用运行设置文件配置测试，这些测试可以从[命令行](vstest-console-options.md)IDE 运行，或者在使用 Azure Test Plans 或 Team Foundation Server (TFS) 的[生成工作流](/azure/devops/pipelines/test/getting-started-with-continuous-testing?view=vsts&preserve-view=true)中运行。
 
 运行设置文件是可选的。 如果不需要执行任何特殊配置，则无需 .runsettings 文件。
 
@@ -35,7 +35,7 @@ ms.locfileid: "90038434"
 
    - [Visual Studio IDE](#specify-a-run-settings-file-in-the-ide)
    - [命令行](#specify-a-run-settings-file-from-the-command-line)
-   - 使用 Azure Test Plans 或 Team Foundation Server (TFS) [生成工作流](/azure/devops/pipelines/test/getting-started-with-continuous-testing?view=vsts)。
+   - 使用 Azure Test Plans 或 Team Foundation Server (TFS) [生成工作流](/azure/devops/pipelines/test/getting-started-with-continuous-testing?view=vsts&preserve-view=true)。
 
 4. 运行单元测试以使用自定义运行设置。
 
@@ -83,20 +83,20 @@ ms.locfileid: "90038434"
 若要自动检测运行设置文件，请将其放在解决方案的根目录下。
 
 如果启用了自动检测运行设置文件，则此文件中的设置将应用到所有测试运行。 可使用两种方法打开 runsettings 文件自动检测：
-  
+
 - 选择“工具”>“选项”>“测试”>“自动检测 runsettings 文件”   
 
    ![Visual Studio 2019 自动检测 runsettings 文件选项](media/vs-2019/auto-detect-runsettings-tools-window.png)
-      
+
 - 选择“测试”>“配置运行设置”>“自动检测 runsettings 文件”  
-    
+
    ![Visual Studio 2019 自动检测 runsettings 文件菜单](media/vs-2019/auto-detect-runsettings-menu.png)
 
 #### <a name="manually-select-the-run-settings-file"></a>手动选择运行设置文件
 
 在 IDE 中，选择“测试”>“配置运行设置”>“选择解决方案范围的 runsettings 文件”，然后选择 .runsettings 文件。
 
-   - 此文件替代解决方案根目录下的 .runsettings 文件（如果存在），并应用于所有测试运行。  
+   - 此文件替代解决方案根目录下的 .runsettings 文件（如果存在），并应用于所有测试运行。
    - 此文件选择仅在本地保留。
 
 ![在 Visual Studio 2019 中选择测试解决方案范围的 runsettings 文件菜单](media/vs-2019/select-solution-settings-file.png)
@@ -107,10 +107,10 @@ ms.locfileid: "90038434"
 
 - 当前 C#、VB、C++ 和 F# 项目中支持项目级运行设置。
 - 为项目指定的文件将替代解决方案中指定的任何其他运行设置文件。
-- [这些 MSBuild 属性](../msbuild/msbuild-reserved-and-well-known-properties.md) 可用于指定 runsettings 文件的路径。 
+- [这些 MSBuild 属性](../msbuild/msbuild-reserved-and-well-known-properties.md) 可用于指定 runsettings 文件的路径。
 
 指定项目的 .runsettings 文件示例：
-    
+
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
@@ -186,7 +186,7 @@ RunConfiguration 元素可以包含下列元素：
 |**TreatTestAdapterErrorsAsWarnings**|false|false、true|
 |**TestAdaptersPaths**||TestAdapters 所在目录的一个或多个路径|
 |**TestSessionTimeout**||当测试会话超过给定时间，允许用户终止测试会话。 设置超时可确保资源被充分利用，并且测试会话被限制在一个设定时间内。 Visual Studio 2017 版本 15.5 及更高版本中提供了此设置。|
-|**DotnetHostPath**||指定用于运行测试主机的 dotnet 主机的自定义路径。 这在生成自己的 dotnet 时非常有用，例如在生成 dotnet/运行时存储库时。 指定此选项将跳过查找 testhost.exe，并将始终使用 testhost.dll。 
+|**DotnetHostPath**||指定用于运行测试主机的 dotnet 主机的自定义路径。 这在生成自己的 dotnet 时非常有用，例如在生成 dotnet/运行时存储库时。 指定此选项将跳过查找 testhost.exe，并将始终使用 testhost.dll。
 
 ## <a name="datacollectors-element-diagnostic-data-adapters"></a>DataCollectors 元素（诊断数据适配器）
 
@@ -231,7 +231,7 @@ DataCollectors 元素指定诊断数据适配器的设置。 诊断数据适配�
 
 ### <a name="blame-data-collector"></a>意见数据收集器
 
-此选项可帮助你隔离导致测试主机崩溃的有问题的测试。 运行此收集器会在 TestResults 中创建一个输出文件 (Sequence.xml)，该文件在主机崩溃之前会捕获执行测试的顺序 。 
+此选项可帮助你隔离导致测试主机崩溃的有问题的测试。 运行此收集器会在 TestResults 中创建一个输出文件 (Sequence.xml)，该文件在主机崩溃之前会捕获执行测试的顺序 。
 
 ```xml
 <DataCollector friendlyName="blame" enabled="True">
@@ -268,7 +268,7 @@ public void HomePageTest()
 
 ```xml
 <LoggerRunSettings>
-    <Loggers>        
+    <Loggers>
       <Logger friendlyName="console" enabled="True">
         <Configuration>
             <Verbosity>quiet</Verbosity>
@@ -392,10 +392,10 @@ public void HomePageTest()
     <Parameter name="webAppUserName" value="Admin" />
     <Parameter name="webAppPassword" value="Password" />
   </TestRunParameters>
-  
+
   <!-- Configuration for loggers -->
   <LoggerRunSettings>
-    <Loggers>      
+    <Loggers>
       <Logger friendlyName="console" enabled="True">
         <Configuration>
             <Verbosity>quiet</Verbosity>
@@ -462,4 +462,4 @@ RunConfiguration 节点应包含 EnvironmentVariables 节点 。 可以将环境
 
 - [配置测试运行](https://github.com/microsoft/vstest-docs/blob/master/docs/configure.md)
 - [自定义代码覆盖率分析](../test/customizing-code-coverage-analysis.md)
-- [Visual Studio 测试任务 (Azure Test Plans)](/azure/devops/pipelines/tasks/test/vstest?view=vsts)
+- [Visual Studio 测试任务 (Azure Test Plans)](/azure/devops/pipelines/tasks/test/vstest?view=vsts&preserve-view=true)

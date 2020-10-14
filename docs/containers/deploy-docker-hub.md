@@ -9,12 +9,12 @@ ms.topic: how-to
 ms.date: 07/23/2019
 ms.author: ghogen
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: 2a6db2771525010d73fdeeea12ff4aebd99a1bd2
-ms.sourcegitcommit: fb8babf5cd72f1fc2f97ffe4ad7b62d91f325f61
+ms.openlocfilehash: 5bbdbffa9de9ac7789495249d3e7bfb0a8d65377
+ms.sourcegitcommit: c31815e140f2ec79e00a9a9a19900778ec11e860
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89485133"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91829895"
 ---
 # <a name="deploy-to-docker-hub"></a>部署到 Docker Hub
 
@@ -40,7 +40,7 @@ Docker Hub 为映像存储库提供了一种便利的托管服务。 可以轻�
 
    ![Docker Hub 对话框的屏幕截图](media/deploy-docker-hub/container-tools-docker-hub-credentials.png)
 
-1. 如果要连接到自己的存储库（不属于组织），请选中“发布到个人存储库”复选框。 如果存储库归组织所有，请清除该复选框，然后输入组织名称。 输入具有要连接到的存储库的访问权限的 Docker 帐户的 Docker 用户名和密码，然后选择“保存”。  
+1. 如果要连接到自己的存储库（不属于组织），请选中“发布到个人存储库”复选框。 如果存储库归组织所有，请清除该复选框，然后输入组织名称。 输入具有要连接到的存储库的访问权限的 Docker 帐户的 Docker 用户名和密码，然后选择“保存”。
 
    Visual Studio 尝试将映像部署到 Docker Hub。  如果成功，系统将显示“发布”屏幕，其中包含存储库映像的 URL、映像标记、存储库和生成配置（例如，“版本”） 。
 
@@ -52,7 +52,7 @@ Docker Hub 为映像存储库提供了一种便利的托管服务。 可以轻�
 
 请按照[部署到 Azure 容器注册表](hosting-web-apps-in-docker.md)中的步骤发布到 [Azure 容器注册表](/azure/container-registry/)。
 
-使用 [Azure Pipelines](/azure/devops/pipelines/?view=azure-devops) 设置持续集成和持续交付 (CI/CD)。
+使用 [Azure Pipelines](/azure/devops/pipelines/?view=azure-devops&preserve-view=true) 设置持续集成和持续交付 (CI/CD)。
 
 ## <a name="see-also"></a>请参阅
 

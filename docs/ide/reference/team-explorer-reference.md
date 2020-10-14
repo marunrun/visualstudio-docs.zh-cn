@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: kaelli
 author: KathrynEE
 ms.manager: jillfra
-ms.openlocfilehash: b1a956579b527de9df9d24bd09dda6ae48eff961
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: fa73894d713ded42696f5e47d40dffb2d2405b1a
+ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74538576"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91928077"
 ---
 # <a name="team-explorer-reference"></a>团队资源管理器参考
 
@@ -26,7 +26,7 @@ ms.locfileid: "74538576"
 - [Web 门户](/azure/devops/project/navigation/index)
 - [任务板](/azure/devops/boards/sprints/task-board)
 
-根据用户是连接到 [Git](/azure/devops/repos/git/gitquickstart?view=vsts&tabs=visual-studio) 还是 [Team Foundation 版本控制 (TFVC)](/azure/devops/repos/tfvc/overview) 存储库，“开始”页具有不同功能。
+根据用户是连接到 [Git](/azure/devops/repos/git/gitquickstart?view=vsts&tabs=visual-studio&preserve-view=true) 还是 [Team Foundation 版本控制 (TFVC)](/azure/devops/repos/tfvc/overview) 存储库，“开始”页具有不同功能。
 
 > [!TIP]
 > 要比较这两个版本控制系统，请参见[为项目 (Azure DevOps) 选择正确的版本控制](/azure/devops/repos/tfvc/comparison-git-tfvc)。

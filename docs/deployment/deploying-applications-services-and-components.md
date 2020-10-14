@@ -23,12 +23,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8eeb44d08f4b966bed4aef526c12263bdd1a2b77
-ms.sourcegitcommit: 1803a67b516f67b209d8f4cf147314e604ef1927
+ms.openlocfilehash: 3a8301fcca5fd915b130477600ed9fe0b5b90f46
+ms.sourcegitcommit: c31815e140f2ec79e00a9a9a19900778ec11e860
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89641674"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91830771"
 ---
 # <a name="first-look-at-deployment-in-visual-studio"></a>先查看 Visual Studio 中的部署
 
@@ -50,7 +50,7 @@ ms.locfileid: "89641674"
 
 - **ASP.NET**、**ASP.NET Core**、**Python** 和 **Node.js**：使用以下任一方法发布到 Azure 应用服务或 Azure 应用服务 Linux（使用容器）。
 
-  - 对于应用的连续（或自动）部署，请将 Azure DevOps 与 [Azure 管道](/azure/devops/pipelines/get-started-yaml?view=azdevops)结合使用。
+  - 对于应用的连续（或自动）部署，请将 Azure DevOps 与 [Azure 管道](/azure/devops/pipelines/get-started-yaml?view=azdevops&preserve-view=true)结合使用。
 
   - 对于应用的一次性（或手动）部署，请使用 Visual Studio 中的“发布”工具。
 
@@ -107,7 +107,7 @@ ms.locfileid: "89641674"
 
 - 可以使用 [WiX 工具集 Visual Studio 2017 扩展](https://marketplace.visualstudio.com/items?itemName=RobMensching.WixToolsetVisualStudio2017Extension)创建基于 MSI 的安装程序包。 这是一个命令行工具集。
 
-- 可以使用 Flexera Software 中的 [InstallShield](https://www.flexerasoftware.com/producer/products/software-installation/installshield-software-installer/tab/requirements) 创建 MSI 或 EXE 安装程序包。 InstallShield 可与 Visual Studio 2017 及更高版本（不支持 Community Edition）一起使用。 
+- 可以使用 Flexera Software 中的 [InstallShield](https://www.flexerasoftware.com/producer/products/software-installation/installshield-software-installer/tab/requirements) 创建 MSI 或 EXE 安装程序包。 InstallShield 可与 Visual Studio 2017 及更高版本（不支持 Community Edition）一起使用。
 
   > [!NOTE]
   > InstallShield Limited Edition 不再包含在 Visual Studio 中，且不受 Visual Studio 2017 及更高版本支持；请查看 [Flexera Software](http://learn.flexerasoftware.com/content/IS-EVAL-InstallShield-Limited-Edition-Visual-Studio)，了解其未来的可用性。
@@ -122,7 +122,7 @@ ms.locfileid: "89641674"
 
 ## <a name="continuous-deployment"></a>连续部署
 
-可以使用 Azure Pipelines 以实现应用的连续部署。 有关详细信息，请参阅 [Azure Pipelines](/azure/devops/pipelines/index?view=vsts) 和[部署到 Azure](/azure/devops/deploy-azure/index?view=vsts)。
+可以使用 Azure Pipelines 以实现应用的连续部署。 有关详细信息，请参阅 [Azure Pipelines](/azure/devops/pipelines/index?view=vsts&preserve-view=true) 和[部署到 Azure](/azure/devops/deploy-azure/index?view=vsts&preserve-view=true)。
 
 ## <a name="deploy-a-sql-database"></a>部署 SQL 数据库
 

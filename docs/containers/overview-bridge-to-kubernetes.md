@@ -9,12 +9,12 @@ monikerRange: '>=vs-2019'
 manager: jillfra
 author: ghogen
 ms.author: ghogen
-ms.openlocfilehash: fbb3cfe6453c68079cb4b4cc6b57f8494f45c0cc
-ms.sourcegitcommit: f9179a3a6d74fbd871f62b72491e70b9e7b05637
+ms.openlocfilehash: a224135e366c7a266defa525772dadf445208f3b
+ms.sourcegitcommit: c31815e140f2ec79e00a9a9a19900778ec11e860
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90845916"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91829883"
 ---
 # <a name="how-bridge-to-kubernetes-works"></a>Kubernetes 桥接的工作原理
 
@@ -40,7 +40,7 @@ Bridge to Kubernetes 与群集建立连接时会执行以下操作：
 * 将群集上 pod 中的容器替换为远程代理容器，它会将流量重定向到开发计算机。
 * 在开发计算机上运行 [kubectl port-forward][kubectl-port-forward]，将流量从开发计算机转发到群集中运行的远程代理。
 * 使用远程代理从群集收集环境信息。 此环境信息包括环境变量、可见服务、卷装载和机密装载。
-* 在 Visual Studio 中设置环境，以便开发计算机上的服务可以访问相同变量，就像它在该群集上运行一样。  
+* 在 Visual Studio 中设置环境，以便开发计算机上的服务可以访问相同变量，就像它在该群集上运行一样。
 * 更新主机文件，以将群集上的服务映射到开发计算机上的本地 IP 地址。 这些主机文件条目允许开发计算机上运行的代码向群集中运行的其他服务发出请求。 为更新主机文件，Bridge to Kubernetes 将在连接到群集时请求对开发计算机的管理员访问权限。
 * 开始在开发计算机上运行和调试代码。 如有必要，Bridge to Kubernetes 将释放开发计算机上的所需端口，方法是停止当前正在使用这些端口的服务或进程。
 
@@ -72,7 +72,7 @@ Bridge to Kubernetes 与群集建立连接时会执行以下操作：
 如果 Bridge to Kubernetes 检测到已在 Kubernetes 群集上启用 Azure Dev Spaces，系统将提示你禁用 Azure Dev Spaces，然后才能使用 Bridge to Kubernetes。
 
 路由管理器在启动时执行以下操作：
-* 使用子域的 GENERATED_NAME 复制在命名空间中找到的所有流入量。 
+* 使用子域的 GENERATED_NAME 复制在命名空间中找到的所有流入量。
 * 使用 GENERATED_NAME 子域为与复制的流入量关联的每个服务创建 envoy pod。
 * 为正在独立使用的服务创建一个额外的 envoy pod。 这允许将包含子域的请求路由到开发计算机。
 * 为每个 envoy pod 配置传递规则，以处理包含子域的服务的路由。
@@ -92,7 +92,7 @@ Bridge to Kubernetes 与群集建立连接时会执行以下操作：
 > [!IMPORTANT]
 > 发出额外请求时，群集上的每个服务都必须转发 kubernetes-route-as=GENERATED_NAME 标头。 例如，当 serviceA 收到请求时，它会先向 serviceB 发出请求，然后再返回响应 。 在此示例中，serviceA 需要将其请求中的 kubernetes-route-as=GENERATED_NAME 标头转发到 serviceB  。 某些语言（如 [ASP.NET][asp-net-header]）可能具有处理标头传播的方法。
 
-默认情况下，断开与群集的连接时，Bridge to Kubernetes 将删除所有 envoy pod 和复制的服务。 
+默认情况下，断开与群集的连接时，Bridge to Kubernetes 将删除所有 envoy pod 和复制的服务。
 
 > [!NOTE]
 > 路由管理器部署和服务将仍在命名空间中保持运行状态。 要删除部署和服务，请对命名空间运行以下命令。
@@ -126,7 +126,7 @@ Bridge to Kubernetes 具有以下限制：
 [asp-net-header]: https://www.nuget.org/packages/Microsoft.AspNetCore.HeaderPropagation/
 [azds-cli]: /azure/dev-spaces/how-to/install-dev-spaces#install-the-client-side-tools
 [azds-tmp-dir]: /azure/dev-spaces/troubleshooting#before-you-begin
-[azure-cli]: /cli/azure/install-azure-cli?view=azure-cli-latest
+[azure-cli]: /cli/azure/install-azure-cli?view=azure-cli-latest&preserve-view=true
 [bridge-to-kubernetes-vs]: bridge-to-kubernetes.md
 [kubectl-port-forward]: https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#port-forward
 [visual-studio]: https://visualstudio.microsoft.com/downloads/

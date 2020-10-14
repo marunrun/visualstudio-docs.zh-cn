@@ -1,5 +1,6 @@
 ---
 title: 调试实时 ASP.NET Azure 应用
+titleSuffix: Visual Studio Enterprise
 description: 了解如何使用 Snapshot Debugger 设置快照点并查看快照。
 ms.custom: ''
 ms.date: 03/16/2018
@@ -12,12 +13,12 @@ manager: jillfra
 ms.workload:
 - aspnet
 - azure
-ms.openlocfilehash: 07ebe8a583717689ca424bf969e7c19e87ebf08e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 526f7b7cc1af3dd5a370c74baa09cbab50b3d866
+ms.sourcegitcommit: dfbbf041e68ec3a4cd97196b19c9226a4793e702
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85350662"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91879081"
 ---
 # <a name="debug-live-aspnet-azure-apps-using-the-snapshot-debugger"></a>使用 Snapshot Debugger 调试实时 ASP.NET Azure 应用
 

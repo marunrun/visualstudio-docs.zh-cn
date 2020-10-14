@@ -7,12 +7,12 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 4f186e8c10d894b98e789480046d43fc957edd8a
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: d883d531737caf32ec202955ff951382b5ff9009
+ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "75566405"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91928575"
 ---
 # <a name="quickstart-create-a-load-test-project"></a>快速入门：创建负载测试项目
 
@@ -78,7 +78,7 @@ Web 性能和负载测试项目仅在 Visual Studio Enterprise Edition 中可用
 
    此时将打开“新建负载测试向导”  。
 
-1. 选择“本地负载测试”选项，然后选择“下一步”   。 可在[此处](/azure/devops/test/load-test/get-started-simple-cloud-load-test?view=vsts)了解有关基于云的负载测试的详细信息。
+1. 选择“本地负载测试”选项，然后选择“下一步”   。 可在[此处](/azure/devops/test/load-test/get-started-simple-cloud-load-test?view=vsts&preserve-view=true)了解有关基于云的负载测试的详细信息。
 
    ![“新建负载测试向导” - 第一页](media/load-test-wizard-page-1.png)
 
