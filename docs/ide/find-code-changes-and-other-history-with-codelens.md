@@ -9,12 +9,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9859366f6e4b9a0d1c219adc2080e6415b1e44a7
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 98bdbecb12897602a70c590b9cee64b992193b7d
+ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75588650"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91928497"
 ---
 # <a name="find-code-changes-and-other-history-with-codelens"></a>使用 CodeLens 查找代码更改和其他历史记录
 
@@ -217,7 +217,7 @@ ms.locfileid: "75588650"
 
 1. 转到具有关联的[单元测试代码](../test/unit-test-your-code.md)的应用程序代码。
 
-2. 如果还没有，请生成应用程序以加载 CodeLens 测试指示器。 
+2. 如果还没有，请生成应用程序以加载 CodeLens 测试指示器。
 
 3. 按 Alt  +3  ，查看代码的测试。
 
@@ -268,7 +268,7 @@ ms.locfileid: "75588650"
 
 - 如果代码存储在 TFS 中，请确保使用 [CodeIndex 命令](../ide/codeindex-command.md) 和 [TFS Config 命令](/azure/devops/server/command-line/tfsconfig-cmd)打开代码索引。
 
-- 仅当工作项已链接到代码并且你有权打开链接的工作项时，才显示与 DevOps 相关的指示器。 确认具有[团队成员权限](/azure/devops/organizations/security/view-permissions?view=vsts)。
+- 仅当工作项已链接到代码并且你有权打开链接的工作项时，才显示与 DevOps 相关的指示器。 确认具有[团队成员权限](/azure/devops/organizations/security/view-permissions?view=vsts&preserve-view=true)。
 
 - 当应用程序代码没有单元测试时，单元测试指示器不显示。 测试状态指示器自动显示在测试项目中。 如果知道应用程序代码具有单元测试，但测试指示器未显示，请尝试生成解决方案 (Ctrl  +Shift  +B  )。
 

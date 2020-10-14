@@ -12,12 +12,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c55f229550dfe74606f4dfb0880b4e91d689d5ad
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 2180d535dbdbdc88290a48cf166879525f10b4bb
+ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809028"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91928536"
 ---
 # <a name="compile-and-build-in-visual-studio"></a>在 Visual Studio 中编译和生成
 
@@ -32,7 +32,7 @@ ms.locfileid: "90809028"
 | MSBuild 命令行| - 在无需安装 Visual Studio 的情况下生成项目。<br />- 运行所有项目类型的多处理器生成。<br />- 自定义生成系统的大多数区域。|
 | Azure Pipelines | - 自动执行生成过程作为持续集成/持续交付管道的一部分。<br />- 将自动测试应用于每个生成。<br />- 为生成过程采用几乎无限的基于云的资源。<br />- 修改生成工作流，并创建生成活动以执行深层的自定义任务。|
 
-本节中的文档将详细介绍基于 IDE 的生成过程。 有关其他方法的详细信息，请分别参阅 [MSBuild](../msbuild/msbuild.md) 和 [Azure Pipelines](/azure/devops/pipelines/index?view=vsts)。
+本节中的文档将详细介绍基于 IDE 的生成过程。 有关其他方法的详细信息，请分别参阅 [MSBuild](../msbuild/msbuild.md) 和 [Azure Pipelines](/azure/devops/pipelines/index?view=vsts&preserve-view=true)。
 
 > [!NOTE]
 > 本主题适用于 Visual Studio  Windows 版。 对于 Visual Studio for Mac，请参阅[在 Visual Studio for Mac 中编译和生成](/visualstudio/mac/compiling-and-building)。

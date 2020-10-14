@@ -6,12 +6,12 @@ ms.author: ghogen
 ms.topic: overview
 ms.date: 03/20/2019
 ms.technology: vs-azure
-ms.openlocfilehash: 0d5859016a02de259c24c213c6cfef8cb5fce005
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: f1473c731dbf9413cf695e1b2331039c3880b8d7
+ms.sourcegitcommit: c31815e140f2ec79e00a9a9a19900778ec11e860
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75916569"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91829875"
 ---
 # <a name="container-tools-in-visual-studio"></a>Visual Studio 中的容器工具
 
@@ -29,7 +29,7 @@ Visual Studio 中用于使用容器进行开发的工具易于使用，并大大
 
 Docker 支持适用于 ASP.NET 项目、ASP.NET Core 项目，以及 .NET Core 和 .NET Framework 控制台项目。
 
-Visual Studio 中的 Docker 支持因版本而异，以响应客户需求。 可以向项目添加两个级别的 Docker 支持，并且受支持的选项因项目类型和 Visual Studio 版本而异。 借助某些受支持的项目类型，如果只想将容器用于单个项目，而不使用业务流程，则可以通过添加 Docker 支持来完成。  下一级别是容器业务流程支持，该支持可为所选的特定业务流程协调程序添加相应的支持文件。  
+Visual Studio 中的 Docker 支持因版本而异，以响应客户需求。 可以向项目添加两个级别的 Docker 支持，并且受支持的选项因项目类型和 Visual Studio 版本而异。 借助某些受支持的项目类型，如果只想将容器用于单个项目，而不使用业务流程，则可以通过添加 Docker 支持来完成。  下一级别是容器业务流程支持，该支持可为所选的特定业务流程协调程序添加相应的支持文件。
 
 借助 Visual Studio 2017，可以将 Docker Compose 和 Service Fabric 用作容器业务流程服务。  如果安装 [Visual Studio Tools for Kubernetes](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vs-tools-for-kubernetes)，则也可以使用 Kubernetes。
 
@@ -51,7 +51,7 @@ Visual Studio 中的 Docker 支持因版本而异，以响应客户需求。 可
 
 Docker 支持适用于 ASP.NET 项目、ASP.NET Core 项目，以及 .NET Core 和 .NET Framework 控制台项目。
 
-Visual Studio 中的 Docker 支持因版本而异，以响应客户需求。 可以向项目添加两个级别的 Docker 支持，并且受支持的选项因项目类型和 Visual Studio 版本而异。 借助某些受支持的项目类型，如果只想将容器用于单个项目，而不使用业务流程，则可以通过添加 Docker 支持来完成。  下一级别是容器业务流程支持，该支持可为所选的特定业务流程协调程序添加相应的支持文件。  
+Visual Studio 中的 Docker 支持因版本而异，以响应客户需求。 可以向项目添加两个级别的 Docker 支持，并且受支持的选项因项目类型和 Visual Studio 版本而异。 借助某些受支持的项目类型，如果只想将容器用于单个项目，而不使用业务流程，则可以通过添加 Docker 支持来完成。  下一级别是容器业务流程支持，该支持可为所选的特定业务流程协调程序添加相应的支持文件。
 
 借助 Visual Studio 2019，可以将 Docker Compose、Kubernetes 和 Service Fabric 用作容器业务流程服务。
 
@@ -140,11 +140,11 @@ Visual Studio 2019 支持使用 Windows 容器和 Service Fabric 业务流程来
 
 ## <a name="continuous-delivery-and-continuous-integration-cicd"></a>持续交付和持续集成 (CI/CD)
 
-Visual Studio 与 Azure Pipelines 轻松集成，以便自动完成服务代码和配置更改的持续集成和交付。 若要开始使用，请参阅[创建第一个管道](/azure/devops/pipelines/create-first-pipeline?view=azure-devops&tabs=tfs-2018-2)。
+Visual Studio 与 Azure Pipelines 轻松集成，以便自动完成服务代码和配置更改的持续集成和交付。 若要开始使用，请参阅[创建第一个管道](/azure/devops/pipelines/create-first-pipeline?view=azure-devops&tabs=tfs-2018-2&preserve-view=true)。
 
 有关 Service Fabric 的信息，请参阅[教程：使用 Azure DevOps Projects 将 ASP.NET Core 应用部署到 Azure Service Fabric](/azure/devops-project/azure-devops-project-service-fabric)。
 
-有关 Kubernetes 的信息，请参阅[将 Docker 容器应用部署到 Azure Kubernetes 服务](/azure/devops/pipelines/apps/cd/deploy-aks?view=azure-devops)。
+有关 Kubernetes 的信息，请参阅[将 Docker 容器应用部署到 Azure Kubernetes 服务](/azure/devops/pipelines/apps/cd/deploy-aks?view=azure-devops&preserve-view=true)。
 
 ## <a name="next-steps"></a>后续步骤
 

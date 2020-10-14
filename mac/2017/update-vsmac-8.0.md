@@ -7,12 +7,12 @@ ms.date: 06/20/2018
 ms.technology: vs-ide-install
 ms.assetid: BC836802-CC65-41F7-BAEC-A42AED0371A9
 hide_comments: false
-ms.openlocfilehash: 092cf0c8794d143a6e563183fdea96fd5e6cf8cc
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: a7f5a3eb25fb4bb1e27ef41f79f325c38e13046d
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "74985144"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91860884"
 ---
 # <a name="update-visual-studio-2017-for-mac-version-7-to-visual-studio-2019-for-mac-version-80"></a>将 Visual Studio 2017 for Mac（版本 7）更新到 Visual Studio 2019 for Mac（版本 8.0）
 
@@ -22,9 +22,9 @@ Visual Studio 2019 for Mac 引入了许多新改进：全新的 C# 编辑器、�
 - [Visual Studio 2019 for Mac 版本 8.1 现已推出（并已推出 8.2 版本的预览版）](https://devblogs.microsoft.com/visualstudio/visual-studio-2019-for-mac-version-8-1-is-now-available-and-a-preview-for-8-2/)
 
 > [!IMPORTANT]
-> Visual Studio 2017 for Mac 版本 7.7.3 存在以下已知问题：更新程序将持续显示“检索更新信息时出错”。  若出现此问题，请[下载 Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/)，并按照步骤[安装](/visualstudio/mac/installation?view=vsmac-2019) Visual Studio 2019 for Mac。 请注意，这将覆盖现有的 Visual Studio 2017 for Mac 实例。
+> Visual Studio 2017 for Mac 版本 7.7.3 存在以下已知问题：更新程序将持续显示“检索更新信息时出错”。  若出现此问题，请[下载 Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/)，并按照步骤[安装](./installation.md?view=vsmac-2019) Visual Studio 2019 for Mac。 请注意，这将覆盖现有的 Visual Studio 2017 for Mac 实例。
 
-若要获取最新版本，可以通过浏览到“Visual Studio > 检查更新…”使用[更新程序](/visualstudio/mac/update?view=vsmac-2017)  ：
+若要获取最新版本，可以通过浏览到“Visual Studio > 检查更新…”使用[更新程序](./update.md?view=vsmac-2017)  ：
 
 ![更新程序对话框](media/update-vsmac-updater.png)
 

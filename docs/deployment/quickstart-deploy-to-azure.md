@@ -10,18 +10,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - azure
-ms.openlocfilehash: d17675f5babcdade8e6f96982f175553482920a9
-ms.sourcegitcommit: 036b0dfa651f7218ed33e6a19425613599ee58fa
+ms.openlocfilehash: 5881e1dfb1842e2a6d85efe73534f8db2e2f734e
+ms.sourcegitcommit: c31815e140f2ec79e00a9a9a19900778ec11e860
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91636824"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91830751"
 ---
 # <a name="publish-a-web-app-to-azure-app-service-using-visual-studio"></a>使用 Visual Studio 将 Web 应用发布到 Azure 应用服务
 
 对于 ASP.NET、ASP.NET Core、Node.js 和 .NET Core 应用，请使用以下任一方法发布到 Azure 应用服务或 Azure 应用服务 Linux（使用容器）。
 
-* 对于应用的连续（或自动）部署，请将 Azure DevOps 与 [Azure 管道](/azure/devops/pipelines/get-started-yaml?view=azdevops)结合使用。
+* 对于应用的连续（或自动）部署，请将 Azure DevOps 与 [Azure 管道](/azure/devops/pipelines/get-started-yaml?view=azdevops&preserve-view=true)结合使用。
 
 * 对于应用的一次性（或手动）部署，请使用 Visual Studio 中的“发布”工具将 ASP.NET、ASP.NET Core、Node.js 和 .NET Core 应用部署到 Azure 应用服务或[适用于 Linux 的应用服务](../deployment/quickstart-deploy-to-linux.md)（使用容器）。 对于 Python 应用，请按照 [Python - 发布到 Azure 应用服务](../python/publishing-python-web-applications-to-azure-from-visual-studio.md)上的步骤操作。
 

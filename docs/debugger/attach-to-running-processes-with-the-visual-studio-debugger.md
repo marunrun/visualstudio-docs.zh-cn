@@ -28,12 +28,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f4b4a90cc06396f9fb6afb8a356385e966ed1b3d
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7decb23bb6d307732c1f675fb14a96c1fc0dcda1
+ms.sourcegitcommit: 3e05bd4bfac6f0b8b3534d8c013388f67e288651
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88249210"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91959856"
 ---
 # <a name="attach-to-running-processes-with-the-visual-studio-debugger"></a>使用 Visual Studio 调试器附加到正在运行的进程
 
@@ -182,16 +182,16 @@ ms.locfileid: "88249210"
 3. 通过“选择 Docker 容器”对话框选择“查找...”，以设置“连接目标”。
 
     可以在本地或远程调试 Docker 容器进程。
-    
+
     **在本地调试 Docker 容器进程：**
     1. 将“Docker CLI 主机”设置为“本地计算机”。
     1. 从列表中选择要附加到的正在运行的容器，然后点击“确定”。
-    
+
     ![“选择 Docker 容器”菜单](../debugger/media/select-docker-container.png "Select_Docker_Container_Menu")
- 
+
     **B.远程调试 Docker 容器进程：**
-    
-    > [!NOTE] 
+
+    > [!NOTE]
     > 可通过两个选项远程连接到 Docker 容器中正在运行的进程。 第一个选项是使用 SSH，它适用于未在本地计算机上安装 Docker 工具的情况。  如果在本地安装了 Docker 工具，并且具有配置为接受远程请求的 Docker 守护程序，请尝试第二个选项 - 使用 Docker 守护程序。
 
     1. ***通过 SSH 连接到远程计算机：***
@@ -205,7 +205,7 @@ ms.locfileid: "88249210"
 
 4. 从“可用进程”列表中选择相应的容器进程并选择“附加”，开始在 Visual Studio 中调试 C# 容器进程！
 
-    ![已完成的 Docker 附加菜单](../debugger/media/docker-attach-complete.png "已完成的 Linux Docker 附加菜单")    
+    ![已完成的 Docker 附加菜单](../debugger/media/docker-attach-complete.png "已完成的 Linux Docker 附加菜单")
 
 ## <a name="attach-to-a-process-running-on-a-windows-docker-container"></a><a name="BKMK_Windows_Docker_Attach"></a> 附加到正在 Windows Docker 容器上运行的进程
 
@@ -225,14 +225,14 @@ ms.locfileid: "88249210"
 
     > [!IMPORTANT]
     > 目标进程必须与运行它的 Docker Windows 容器具有相同的处理器体系结构。
-    
+
    当前无法通过 SSH 将目标设置为远程容器，而只能使用 Docker 守护程序来完成。
-    
+
     ***通过 [Docker 守护程序](https://docs.docker.com/engine/reference/commandline/dockerd/)将目标设置为正在运行进程的远程容器***
-    1. 在“Docker 主机(可选)”下指定守护程序地址（即通过 TCP、IP 等），然后单击刷新链接。 
+    1. 在“Docker 主机(可选)”下指定守护程序地址（即通过 TCP、IP 等），然后单击刷新链接。
 
     1. 成功连接到守护程序后，选择要附加到的正在运行的容器，然后选择“确定”。
-    
+
 4. 从“可用进程”列表中选择相应的容器进程并选择“附加”，以开始调试 C# 容器进程。
 
     ![已完成的 Docker 附加菜单](../debugger/media/docker-attach-complete-windows.png "已完成的 Windows Docker 附加菜单")
@@ -263,7 +263,7 @@ ms.locfileid: "88249210"
 |方案|调试方法|进程名|备注和链接|
 |-|-|-|-|
 |远程调试 IIS 服务器上的 ASP.NET 4 或 4.5|使用远程工具和“附加到进程”|w3wp.exe|请参阅[远程调试远程 IIS 计算机上的 ASP.NET](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md)|
-|远程调试 IIS 服务器上的 ASP.NET Core|使用远程工具和“附加到进程”|w3wp.exe 或 dotnet.exe|从 .NET Core 3 开始，w3wp.exe 进程用于默认的[应用内托管模型](/aspnet/core/host-and-deploy/aspnet-core-module?view=aspnetcore-3.1#hosting-models)。 有关应用部署，请参阅[发布到 IIS](/aspnet/core/host-and-deploy/iis/)。 有关更多详细信息，请参阅[远程调试远程 IIS 计算机上的 ASP.NET Core](../debugger/remote-debugging-aspnet-on-a-remote-iis-computer.md#BKMK_attach)|
+|远程调试 IIS 服务器上的 ASP.NET Core|使用远程工具和“附加到进程”|w3wp.exe 或 dotnet.exe|从 .NET Core 3 开始，w3wp.exe 进程用于默认的[应用内托管模型](/aspnet/core/host-and-deploy/aspnet-core-module?view=aspnetcore-3.1&preserve-view=true#hosting-models)。 有关应用部署，请参阅[发布到 IIS](/aspnet/core/host-and-deploy/iis/)。 有关更多详细信息，请参阅[远程调试远程 IIS 计算机上的 ASP.NET Core](../debugger/remote-debugging-aspnet-on-a-remote-iis-computer.md#BKMK_attach)|
 |针对受支持的应用类型，调试本地 IIS 服务器上的客户端脚本 |使用“附加到进程”|chrome.exe、MicrosoftEdgeCP.exe 或 iexplore.exe|必须启用脚本调试。 对于 Chrome，还必须在调试模式下运行 Chrome（在命令行中键入 `chrome.exe --remote-debugging-port=9222`），并在“附加到”字段中选择“JavaScript (Chrome)”。|
 |调试本地计算机上的 C#、Visual Basic 或 C++ 应用|使用标准调试 (F5) 或“附加到进程”|\<appname>.exe|在大多数情况下，请使用标准调试，而不是“附加到进程”。|
 |远程调试 Windows 桌面应用|远程工具|不可用| 请参阅[远程调试 C# 或 Visual Basic 应用](../debugger/remote-debugging-csharp.md)或[远程调试 C++ 应用](../debugger/remote-debugging-cpp.md)|

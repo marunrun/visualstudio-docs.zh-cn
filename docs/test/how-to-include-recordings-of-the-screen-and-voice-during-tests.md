@@ -8,12 +8,12 @@ ms.assetid: 2cefe8c2-430a-4cb4-bbe0-f3edb2e5bc03
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 4fb186c97126d843cc47c16fa16a836914ed2e9b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 2366e77b0b66e2a31ce17e1aefb9240e4f45df2d
+ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85287761"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91928640"
 ---
 # <a name="how-to-include-recordings-of-the-screen-and-voice-during-tests-using-test-settings"></a>如何：使用测试设置在测试期间包括屏幕和语音录制
 
@@ -28,7 +28,7 @@ ms.locfileid: "85287761"
 
 ## <a name="to-configure-screen-and-voice-recording-for-your-test-settings"></a>为测试设置配置屏幕和语音录制
 
-1. 打开要为录制屏幕和语音配置的测试设置。 有关详细信息，请参阅[在测试时收集诊断数据 (Azure Test Plans)](/azure/devops/test/collect-diagnostic-data?view=vsts) 或[使用测试设置收集诊断信息](../test/collect-diagnostic-information-using-test-settings.md)。
+1. 打开要为录制屏幕和语音配置的测试设置。 有关详细信息，请参阅[在测试时收集诊断数据 (Azure Test Plans)](/azure/devops/test/collect-diagnostic-data?view=vsts&preserve-view=true) 或[使用测试设置收集诊断信息](../test/collect-diagnostic-information-using-test-settings.md)。
 
 2. 在测试设置中，选择要用于录制屏幕和语音的“角色”  。
 
@@ -69,7 +69,7 @@ ms.locfileid: "85287761"
 
 ## <a name="see-also"></a>请参阅
 
-- [在测试时收集诊断数据 (Azure Test Plans)](/azure/devops/test/collect-diagnostic-data?view=vsts)
-- [在手动测试中收集诊断数据 (Azure Test Plans)](/azure/devops/test/mtm/collect-more-diagnostic-data-in-manual-tests?view=vsts)
+- [在测试时收集诊断数据 (Azure Test Plans)](/azure/devops/test/collect-diagnostic-data?view=vsts&preserve-view=true)
+- [在手动测试中收集诊断数据 (Azure Test Plans)](/azure/devops/test/mtm/collect-more-diagnostic-data-in-manual-tests?view=vsts&preserve-view=true)
 - [使用测试设置收集诊断信息](../test/collect-diagnostic-information-using-test-settings.md)
-- [运行手动测试 (Azure Test Plans)](/azure/devops/test/run-manual-tests?view=vsts)
+- [运行手动测试 (Azure Test Plans)](/azure/devops/test/run-manual-tests?view=vsts&preserve-view=true)

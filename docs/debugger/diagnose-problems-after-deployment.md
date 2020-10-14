@@ -8,12 +8,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 659167b02703cd3a51751fbe90fbd9408b5e623d
-ms.sourcegitcommit: ed4372bb6f4ae64f1fd712b2b253bf91d9ff96bf
+ms.openlocfilehash: 97499a88a04b2ae7b61b847c4aec133d297e613a
+ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89599564"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91928051"
 ---
 # <a name="diagnose-problems-after-deployment-using-intellitrace-c-visual-basic"></a>使用 IntelliTrace在部署后诊断问题（C#、Visual Basic）
 
@@ -49,7 +49,7 @@ Visual Studio 2017 及更高版本不包括 BuildInfo.config 文件，该文件�
 #### <a name="team-foundation-server-2013"></a><a name="TFS2013"></a> Team Foundation Server 2013
  设置生成管道以将源、生成和符号的位置添加到生成清单（BuildInfo.config 文件）。 Team Foundation Build 自动创建此文件并将其放置在项目的输出文件夹中。
 
-1. [编辑生成管道或创建新的生成管道。](/azure/devops/pipelines/get-started-designer?view=vsts)
+1. [编辑生成管道或创建新的生成管道。](/azure/devops/pipelines/get-started-designer?view=vsts&preserve-view=true)
 
      ![在 TFS 2013 中查看生成管道](../debugger/media/ffr_tfs2013viewbuilddefinition.png "FFR_TFS2013ViewBuildDefinition")
 
@@ -63,7 +63,7 @@ Visual Studio 2017 及更高版本不包括 BuildInfo.config 文件，该文件�
 
      ![在生成管道 TFS 2013 中设置符号路径](../debugger/media/ffr_tfs2013builddefsymbolspath.png "FFR_TFS2013BuildDefSymbolsPath")
 
-     有关符号的详细信息，请参阅 [发布符号数据](/azure/devops/pipelines/tasks/build/index-sources-publish-symbols?view=vsts)。
+     有关符号的详细信息，请参阅 [发布符号数据](/azure/devops/pipelines/tasks/build/index-sources-publish-symbols?view=vsts&preserve-view=true)。
 
 4. 添加此 MSBuild 参数以在生成清单文件中包含 TFS 和符号位置：
 
@@ -319,7 +319,7 @@ Visual Studio 2017 及更高版本不包括 BuildInfo.config 文件，该文件�
 
    有关生成系统（ `"TeamBuild"` 或 `"MSBuild"`）以及以下所需属性的信息：
 
-  - BuildLabel（用于 TeamBuild）：生成名称和编号。 此标签也用作部署事件的名称。 有关生成号的详细信息，请参阅 [使用生成号为已完成的生成提供有意义的名称](/azure/devops/pipelines/build/options?view=vsts)。
+  - BuildLabel（用于 TeamBuild）：生成名称和编号。 此标签也用作部署事件的名称。 有关生成号的详细信息，请参阅 [使用生成号为已完成的生成提供有意义的名称](/azure/devops/pipelines/build/options?view=vsts&preserve-view=true)。
 
   - SymbolPath（推荐）：你的符号（PDB 文件）位置的 URI 列表，采用分号分隔。 这些 URI 可以是 URL 或 UNC。 它使 Visual Studio 更易于查找匹配的符号以帮助你进行调试。
 
@@ -379,7 +379,7 @@ Visual Studio 2017 及更高版本不包括 BuildInfo.config 文件，该文件�
      ![从源代码管理打开 - 已迁移](../debugger/media/ffr_openprojectfromsourcecontrol_migrated.png "FFR_OpenProjectFromSourceControl_Migrated")
 
 #### <a name="q-whats-a-workspace"></a><a name="WhatWorkspace"></a> 问：什么是工作区？
- **答：** [工作区存储源的副本](/azure/devops/repos/tfvc/create-work-workspaces?view=vsts)，因此在签入工作之前，可以对其进行单独开发和测试。 如果尚未具备专门映射到找到的解决方案或项目的工作区，那么 Visual Studio 会提示你选择一个可用的工作区，或以你的计算机名称作为默认工作区名称创建新的工作区。
+ **答：** [工作区存储源的副本](/azure/devops/repos/tfvc/create-work-workspaces?view=vsts&preserve-view=true)，因此在签入工作之前，可以对其进行单独开发和测试。 如果尚未具备专门映射到找到的解决方案或项目的工作区，那么 Visual Studio 会提示你选择一个可用的工作区，或以你的计算机名称作为默认工作区名称创建新的工作区。
 
 #### <a name="q-why-do-i-get-this-message-about-untrusted-symbols"></a><a name="UntrustedSymbols"></a> 问：为什么我收到了有关不受信任的符号的消息？
  ![使用不受信任的符号路径进行调试？](../debugger/media/ffr_ituntrustedsymbolpaths.png "FFR_ITUntrustedSymbolPaths")

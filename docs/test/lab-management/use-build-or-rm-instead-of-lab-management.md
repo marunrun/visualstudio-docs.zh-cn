@@ -9,16 +9,16 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 37455c05a010681eac343287abf25aad642328c7
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 052e2c794ba765573923fba89413e0192c582c15
+ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85286838"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91928588"
 ---
 # <a name="use-azure-test-plans-instead-of-lab-management-for-automated-testing"></a>使用 Azure Test Plans 代替实验室管理工具版进行自动测试
 
-如果使用 Microsoft 测试管理器和实验室管理工具版进行自动测试或生成-部署-测试自动化，请参阅本主题，本主题介绍了如何使用 Azure Pipelines 和 Team Foundation Server (TFS) 中的[生成和发布](/azure/devops/pipelines/index?view=vsts)功能实现相同的目的。
+如果使用 Microsoft 测试管理器和实验室管理工具版进行自动测试或生成-部署-测试自动化，请参阅本主题，本主题介绍了如何使用 Azure Pipelines 和 Team Foundation Server (TFS) 中的[生成和发布](/azure/devops/pipelines/index?view=vsts&preserve-view=true)功能实现相同的目的。
 
 > [!NOTE]
 > Microsoft 测试管理器已在 Visual Studio 2017 中弃用，并已从 Visual Studio 2019 中删除。
@@ -31,7 +31,7 @@ Microsoft 测试管理器和实验室管理工具版依赖 XAML 生成定义来�
 |-------|----------------------|-----------------|
 | 确定部署生成和运行测试的计算机。 | 使用这些计算机在 Microsoft 测试管理器中创建标准实验室环境。 | n/a |
 | 确定要运行的测试。 | 在 Microsoft 测试管理器中创建测试套件、创建测试用例并将自动化与每个测试用例关联。 在 Microsoft 测试管理器中创建测试设置，标识计算机在测试应运行的实验室环境中的角色。 | 如果打算通过测试计划管理测试，则以相同的方式在 Microsoft 测试管理器中创建自动测试套件。 如果想从生成产生的测试二进制文件直接运行测试，则可以跳过此步骤。 两种情况下都无需创建测试设置。 |
-| 自动部署和测试。 | 使用 LabDefaultTemplate.*.xaml 创建 XAML 生成定义。 在生成定义中指定生成、测试套件和实验室环境。 | 使用单一环境创建[生成或发布管道](/azure/devops/pipelines/index?view=vsts)。 使用命令行任务从 XAML 生成定义运行相同的部署脚本，并使用“测试代理部署”和“运行功能测试”任务运行自动测试。 将一系列计算机及其凭据指定为这些任务的输入。 |
+| 自动部署和测试。 | 使用 LabDefaultTemplate.*.xaml 创建 XAML 生成定义。 在生成定义中指定生成、测试套件和实验室环境。 | 使用单一环境创建[生成或发布管道](/azure/devops/pipelines/index?view=vsts&preserve-view=true)。 使用命令行任务从 XAML 生成定义运行相同的部署脚本，并使用“测试代理部署”和“运行功能测试”任务运行自动测试。 将一系列计算机及其凭据指定为这些任务的输入。 |
 
 此方案中使用 Azure Pipelines 或 TFS 的一些好处是：
 
@@ -46,7 +46,7 @@ Microsoft 测试管理器和实验室管理工具版依赖 XAML 生成定义来�
 
 ## <a name="self-service-management-of-scvmm-environments"></a>SCVMM 环境的自助式管理
 
-[Microsoft 测试管理器的测试中心](/azure/devops/test/mtm/guidance-mtm-usage?view=vsts)可以管理环境模板库，并使用 [SCVMM 服务器](/system-center/vmm/overview?view=sc-vmm-1801)根据需要配置环境。
+[Microsoft 测试管理器的测试中心](/azure/devops/test/mtm/guidance-mtm-usage?view=vsts&preserve-view=true)可以管理环境模板库，并使用 [SCVMM 服务器](/system-center/vmm/overview?view=sc-vmm-1801&preserve-view=true)根据需要配置环境。
 
 实验室中心的自助式预配功能有两个不同的目标：
 
@@ -76,4 +76,4 @@ Microsoft 测试管理器和实验室管理工具版依赖 XAML 生成定义来�
 * 启动和停止虚拟机
 * 针对 SCVMM 运行自定义 PowerShell 脚本
 
-详情请参阅[创建用于生成-部署-测试方案的虚拟网络隔离环境](/azure/devops/pipelines/targets/create-virtual-network?view=vsts)。
+详情请参阅[创建用于生成-部署-测试方案的虚拟网络隔离环境](/azure/devops/pipelines/targets/create-virtual-network?view=vsts&preserve-view=true)。

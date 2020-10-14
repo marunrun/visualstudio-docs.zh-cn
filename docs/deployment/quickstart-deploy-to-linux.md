@@ -9,18 +9,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - azure
-ms.openlocfilehash: 8130608f7f94efa279775f532e0022df2f2a7f1a
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 790e88edcd5d0d77e09cc349c82c242cd3da876d
+ms.sourcegitcommit: c31815e140f2ec79e00a9a9a19900778ec11e860
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037668"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91830730"
 ---
 # <a name="publish-an-aspnet-core-app-to-app-service-on-linux-using-visual-studio"></a>使用 Visual Studio 将 ASP.NET Core 应用发布到 Linux 上的应用服务
 
 从 Visual Studio 2017 版本 15.7 开始，可以使用以下任一方法将 ASP.NET Core 应用发布到 Azure 应用服务 Linux（使用容器）。
 
-* 对于应用的连续（或自动）部署，请将 Azure DevOps 与 [Azure 管道](/azure/devops/pipelines/get-started-yaml?view=azdevops)结合使用。
+* 对于应用的连续（或自动）部署，请将 Azure DevOps 与 [Azure 管道](/azure/devops/pipelines/get-started-yaml?view=azdevops&preserve-view=true)结合使用。
 
 * 对于应用的一次性（或手动）部署，请使用 Visual Studio 中的“Publish”工具将 ASP.NET Core 应用部署到适用于 Linux 的应用服务（使用容器）。
 

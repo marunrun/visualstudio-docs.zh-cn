@@ -8,12 +8,12 @@ ms.assetid: ff275cfb-5df9-4710-9a91-9caabaaad34f
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 55daa1e16af45c153efced3736c46c3c27d748ac
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 27de590cc40808eb3bebf18857c0ba4b254c39d1
+ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85288177"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91928653"
 ---
 # <a name="how-to-configure-network-emulation-using-test-settings-in-visual-studio"></a>如何：在 Visual Studio 中使用测试设置配置网络仿真
 
@@ -93,4 +93,4 @@ Visual Studio 对所有测试类型使用基于软件的真实网络仿真。 �
 ## <a name="see-also"></a>请参阅
 
 - [使用测试设置收集诊断信息](../test/collect-diagnostic-information-using-test-settings.md)
-- [运行手动测试 (Azure Test Plans)](/azure/devops/test/run-manual-tests?view=vsts)
+- [运行手动测试 (Azure Test Plans)](/azure/devops/test/run-manual-tests?view=vsts&preserve-view=true)
