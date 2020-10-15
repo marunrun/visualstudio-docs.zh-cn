@@ -11,12 +11,12 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 monikerRange: vs-2019
-ms.openlocfilehash: eee21ca84acdcf5bbf774232d8d23ceda954b730
-ms.sourcegitcommit: 503f82045b9236d457b79712cd71405d4a62a53d
+ms.openlocfilehash: f253ba9b7e46f809bc107aa2b3e26f635d778770
+ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91749500"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91928549"
 ---
 # <a name="supported-visual-studio-features-preview"></a>受支持的 Visual Studio 功能（预览）
 
@@ -65,7 +65,7 @@ ms.locfileid: "91749500"
 * 项目和项模板
 * .NET Core 和 ASP.NET Core 项目
 * C++ 控制台应用 - 支持 CMake 和 vcxproj
-* 面向 Linux 的 C++ 应用 - 大部分都支持非 GUI。 能够安装和预配 WSL、特定于平台的 IntelliSense 和内部版本。
+* 面向 Linux 的 C++ 应用 - 大部分都支持非 GUI。 能够安装和预配 WSL、平台特定的 IntelliSense 以及版本。
 * 项目文件编辑 - 大部分都支持。 缺少某些补全、语法突出显示和高级编辑功能。
 * GitHub 帐户 - 可用于创建和连接到 Codespaces，并访问 GitHub 上该帐户可用的资源。
 * Azure CLI - 不共享已登录的 Visual Studio 标识或密钥链帐户。 不支持基于浏览器的登录，但可以使用 `az login --use-device-code` 在集成终端内进行身份验证。
