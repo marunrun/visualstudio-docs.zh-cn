@@ -9,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2981d510b5f56b89a2cb68d1a6bee93222d71b3b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 22c18fd457d4827d3abf3a3494ad622873eb5c7b
+ms.sourcegitcommit: 9c57730000d5ced37d3887f3928b17076f49d0f7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "75596653"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92099292"
 ---
 # <a name="develop-tests-from-a-model"></a>基于模型开发测试
 可以使用要求模型和体系结构模型来帮助组织系统及其组件的测试。 这种做法有助于确保你测试了对于用户和其他利益干系人而言非常重要的要求，并可帮助你在要求发生变化时快速更新测试。 如果你使用 [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)]，还可以维护模型和测试之间的链接。
@@ -59,7 +59,7 @@ ms.locfileid: "75596653"
 
 1. 在 [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)] 中，创建一个要 求并使测试套件基于该需求。
 
-    所创建的要求是 [!INCLUDE[vstsTfsShort](../modeling/includes/vststfsshort_md.md)] 中的工作项。 它可能是用户情景、要求或用例工作项，具体取决于你的项目与 Team Foundation 一起使用的过程模板。 有关详细信息，请参阅 [关于 Agile 工具和敏捷项目管理](/azure/devops/boards/backlogs/backlogs-overview?view=vsts)。
+    所创建的要求是 [!INCLUDE[vstsTfsShort](../modeling/includes/vststfsshort_md.md)] 中的工作项。 它可能是用户情景、要求或用例工作项，具体取决于你的项目与 Team Foundation 一起使用的过程模板。 有关详细信息，请参阅 [关于 Agile 工具和敏捷项目管理](/azure/devops/boards/backlogs/backlogs-overview?view=vsts&preserve-view=true)。
 
 2. 将要求工作项链接到模型中的一个或多个用例。
 
@@ -147,7 +147,7 @@ Assert (countAfter == countBefore = 1);
 
 1. 在 [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)] 中，创建一个要 求并使测试套件基于该需求。
 
-    所创建的要求是 [!INCLUDE[vstsTfsShort](../modeling/includes/vststfsshort_md.md)] 中的工作项。 它可能是用户情景、要求或用例工作项，具体取决于你的项目与 Team Foundation 一起使用的过程模板。 有关详细信息，请参阅 [关于 Agile 工具和敏捷项目管理](/azure/devops/boards/backlogs/backlogs-overview?view=vsts)。
+    所创建的要求是 [!INCLUDE[vstsTfsShort](../modeling/includes/vststfsshort_md.md)] 中的工作项。 它可能是用户情景、要求或用例工作项，具体取决于你的项目与 Team Foundation 一起使用的过程模板。 有关详细信息，请参阅 [关于 Agile 工具和敏捷项目管理](/azure/devops/boards/backlogs/backlogs-overview?view=vsts&preserve-view=true)。
 
 2. 将要求工作项链接到模型中的一个或多个元素。
 

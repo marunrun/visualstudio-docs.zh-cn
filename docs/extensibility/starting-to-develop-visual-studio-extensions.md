@@ -11,12 +11,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8745acd9af9009a7206eada7ffb64f95759e8399
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 812c5b2366e40226011a15acfc1cae2327e4b897
+ms.sourcegitcommit: 9c57730000d5ced37d3887f3928b17076f49d0f7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85286188"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92099383"
 ---
 # <a name="starting-to-develop-visual-studio-extensions"></a>开始开发 Visual Studio 扩展
 
@@ -91,9 +91,9 @@ ms.locfileid: "85286188"
 ## <a name="how-can-i-distribute-my-extension"></a>如何分发我的扩展？
  你可以在另一台计算机上安装你的扩展，或将其作为 .vsix 文件发送给你的朋友，你可以通过双击该文件进行安装。 有关 VSIX 包的详细信息，请参阅 [发布 Visual Studio 扩展](../extensibility/shipping-visual-studio-extensions.md)。
 
- 你还可以在 Visual Studio Marketplace 上发布扩展，使其对大量 Visual Studio 客户可见。 有关将扩展打包到 Marketplace 的示例，请参阅 [演练：发布 Visual Studio 扩展](../extensibility/walkthrough-publishing-a-visual-studio-extension.md)。 若要详细了解如何在 Marketplace 上发布内容，请参阅 [Visual Studio 产品和扩展](/azure/devops/extend/overview?view=vsts)。
+ 你还可以在 Visual Studio Marketplace 上发布扩展，使其对大量 Visual Studio 客户可见。 有关将扩展打包到 Marketplace 的示例，请参阅 [演练：发布 Visual Studio 扩展](../extensibility/walkthrough-publishing-a-visual-studio-extension.md)。 若要详细了解如何在 Marketplace 上发布内容，请参阅 [Visual Studio 产品和扩展](/azure/devops/extend/overview?view=vsts&preserve-view=true)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [扩展 Visual Studio for Mac](/visualstudio/mac/extending-visual-studio-mac)
 - [扩展 Visual Studio Code](https://code.visualstudio.com/api)
