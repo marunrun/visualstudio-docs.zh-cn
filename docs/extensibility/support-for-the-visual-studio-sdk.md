@@ -14,12 +14,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9b10e4b211bb1a187f51f95aa6eb78d2de451516
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ddcdf62fbfe6d683159cccce24280bdb08cedc2a
+ms.sourcegitcommit: 9c57730000d5ced37d3887f3928b17076f49d0f7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "80699646"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92099370"
 ---
 # <a name="support-for-the-visual-studio-sdk"></a>支持 Visual Studio SDK
 有关于如何)  (IDE 中扩展 Visual Studio 集成开发环境的客户，可以使用多个支持选项。
@@ -30,7 +30,7 @@ ms.locfileid: "80699646"
  Visual Studio 开发团队的成员和扩展 Visual Studio 的其他开发人员通常参与 vstudio 新闻组。 此新闻组是托管新闻组。 如果你是 MSDN 通用订阅者，请确保注册一个无垃圾邮件别名，使 Microsoft 能够做出响应。
 
 ### <a name="msdn-forums"></a>MSDN 论坛
- [MSDN 论坛](https://social.msdn.microsoft.com/Forums/en-US/home)提供另一种与同行和专家聊天的方式。 论坛 (UI) 的图形用户界面旨在使其比新闻组更易于使用。 [Visual Studio 扩展性论坛](/azure/devops/integrate/index?view=azure-devops&viewFallbackFrom=vsts)是开始搜索扩展性问题答案的好地方。 在提出问题之前始终搜索，因为其他人可能已经请求了相同的问题。
+ [MSDN 论坛](https://social.msdn.microsoft.com/Forums/en-US/home)提供另一种与同行和专家聊天的方式。 论坛 (UI) 的图形用户界面旨在使其比新闻组更易于使用。 [Visual Studio 扩展性论坛](/azure/devops/integrate/index?view=azure-devops&viewFallbackFrom=vsts&preserve-view=true)是开始搜索扩展性问题答案的好地方。 在提出问题之前始终搜索，因为其他人可能已经请求了相同的问题。
 
 ### <a name="visual-studio-gallery"></a>Visual Studio 库
  [Visual Studio Marketplace](https://marketplace.visualstudio.com/)是扩展和代码示例的位置。 你可以使用 Visual Studio 查找提高工作效率和用户体验的工具、演示如何使用 Vspackage 的示例应用程序和 Managed Extensibility Framework (MEF) 和其他类型的示例。
