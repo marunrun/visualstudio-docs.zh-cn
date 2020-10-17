@@ -1,18 +1,18 @@
 ---
 title: 我有一个新协议。 如何迁移订阅者？
 description: 你可以从上一个协议中导出订阅者，然后使用“批量添加”按钮将他们添加到新协议中。 注意：…
-ms.faqid: group1_5
+ms.faqid: group1_6
 ms.topic: include
 ms.assetid: cc15e1c7-6b3a-43bf-8ce0-4120dbbb5a47
 author: CaityBuschlen
 ms.author: cabuschl
 ms.date: 3/3/2020
-ms.openlocfilehash: 0ec8a2b1236ad5504e054dfa4d87b5254ae247db
-ms.sourcegitcommit: c31815e140f2ec79e00a9a9a19900778ec11e860
+ms.openlocfilehash: 978792dc43c4606cb703e8f2718d1452690a8996
+ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91838346"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92157913"
 ---
 ## <a name="i-have-a-new-agreement--how-do-i-move-my-subscribers"></a>我有一个新协议。  如何迁移订阅者？
 
