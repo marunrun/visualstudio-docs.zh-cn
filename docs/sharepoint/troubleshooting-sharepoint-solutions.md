@@ -16,15 +16,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: fcb30056021a865d0b0e605de462ff72ced5a383
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e79a08d3f8dbc4b579a52501afb08ffb7dca33f2
+ms.sourcegitcommit: 7a46232242783ebe23f2527f91eac8eb84b3ae05
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "73661887"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "92298403"
 ---
 # <a name="troubleshoot-sharepoint-solutions"></a>SharePoint 解决方案疑难解答
-  使用调试器调试 SharePoint 解决方案时，可能会出现以下问题或警报 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 。 有关详细信息，请参阅 [调试 SharePoint 2007 工作流解决方案](https://msdn.microsoft.com/3a5392f3-66f3-48be-956e-02de23fa6247)。
+  使用调试器调试 SharePoint 解决方案时，可能会出现以下问题或警报 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 。 有关详细信息，请参阅 [调试 SharePoint 2007 工作流解决方案](/previous-versions/bb386166(v=vs.100))。
 
 ## <a name="token-restrictions-in-sandboxed-visual-web-parts"></a>沙盒可视 web 部件中的标记限制
  沙盒解决方案中的可视 Web 部件无法处理标准标记，例如 SharePoint 运行时支持的 $SPUrl。 因此不会解析 URL，并且如果您直接在脚本元素中引用 URL，则无法在可视 Web 部件设计器的“设计”视图中预览内容：
@@ -163,7 +163,7 @@ ms.locfileid: "73661887"
 ## <a name="deployment-error-appears-after-the-name-of-an-identifier-in-a-business-data-connectivity-model-project-is-changed"></a>更改业务数据连接模型项目中的标识符名称后，将显示部署错误
  如果在业务数据连接 (BDC) 模型中更改实体的标识符名称，然后尝试部署解决方案，则会出现此问题。
 
-### <a name="error-messages"></a>Error messages
+### <a name="error-messages"></a>错误消息
 
 - \<*model name*> 具有以下外部内容类型激活错误 .。。
 
@@ -179,7 +179,7 @@ ms.locfileid: "73661887"
 ## <a name="an-error-appears-when-you-try-to-view-a-visual-web-part-in-sharepoint"></a>尝试在 SharePoint 中查看可视 web 部件时出现错误
  如果用户控件的 **Path** 属性不以字符串 "CONTROLTEMPLATES" 开头，则会出现此问题 \\ 。
 
-### <a name="error-messages"></a>Error messages
+### <a name="error-messages"></a>错误消息
 
 - 文件 "/_CONTROLTEMPLATES/ *\<project name>* / *\<Web Part name>* / *\<user control name>* .ascx" 不存在。
 

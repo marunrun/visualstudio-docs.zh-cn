@@ -1,5 +1,6 @@
 ---
 title: 演练：在 Visual Basic 项目中调用 VBA 中的代码
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -19,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 46fa903b0025279fec3b33d3c14ce1661d076926
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ad50ed0f55a148a05c0fedc6fe0ccb0dd5b890b9
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "90840762"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "92298264"
 ---
 # <a name="walkthrough-call-code-from-vba-in-a-visual-basic-project"></a>演练：在 Visual Basic 项目中调用 VBA 中的代码
   本演练演示如何在 Microsoft Office Word 的文档级自定义项中从文档的 Visual Basic for Applications (VBA) 代码中调用方法。 该过程包括三个基本步骤：向 `ThisDocument` 主机项类添加方法，向 VBA 代码公开方法，然后从文档中的 VBA 代码调用方法。
@@ -105,7 +106,7 @@ ms.locfileid: "90840762"
 
 6. 在“名称” **** 框中，键入 **CallingCodeFromVBA**。
 
-7. 单击“确定”。 
+7. 单击“确定”。
 
      将打开“Visual Studio Tools for Office 项目向导” **** 。
 
@@ -202,7 +203,7 @@ ms.locfileid: "90840762"
     End Sub
     ```
 
-5. 按 **F5**。
+5. 按 F5 ****。
 
 6. 验证新表格已添加到文档。
 
@@ -215,7 +216,7 @@ ms.locfileid: "90840762"
 
 - 从 VBA 调用 VSTO 外接程序中的代码。 有关详细信息，请参阅 [演练：从 VBA 调用 VSTO 外接程序中的代码](../vsto/walkthrough-calling-code-in-a-vsto-add-in-from-vba.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [合并 VBA 和文档级自定义项](../vsto/combining-vba-and-document-level-customizations.md)
 - [程序文档级自定义项](../vsto/programming-document-level-customizations.md)
 - [如何：在 Visual Basic 项目中向 VBA 公开代码](../vsto/how-to-expose-code-to-vba-in-a-visual-basic-project.md)

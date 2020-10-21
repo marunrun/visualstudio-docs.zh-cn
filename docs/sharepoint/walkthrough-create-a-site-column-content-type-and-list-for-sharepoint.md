@@ -1,5 +1,6 @@
 ---
 title: 为 SharePoint 创建网站栏、内容类型和列表
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
 f1_keywords:
@@ -19,14 +20,14 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 9ce76c72bad138a5c6c40afe717aadafec02c677
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 041c0ba5174450fca7acf7247b1cf40a98ac147d
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86015271"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "92298365"
 ---
-# <a name="walkthrough-create-a-site-column-content-type-and-list-for-sharepoint"></a>演练：为 SharePoint 创建网站栏、内容类型和列表
+# <a name="walkthrough-create-a-site-column-content-type-and-list-for-sharepoint"></a>演练：创建 SharePoint 的站点栏、内容类型和列表
   下面的过程演示如何创建自定义 SharePoint 网站列（或 *字段*）以及使用网站列的内容类型。 它还演示如何创建使用新内容类型的列表。
 
  本演练包含以下任务：
@@ -239,7 +240,7 @@ ms.locfileid: "86015271"
      新记录将显示在列表中。
 
 ## <a name="see-also"></a>另请参阅
-- [创建 SharePoint 的网站栏、内容类型和列表](../sharepoint/creating-site-columns-content-types-and-lists-for-sharepoint.md)
+- [创建 SharePoint 的站点栏、内容类型和列表](../sharepoint/creating-site-columns-content-types-and-lists-for-sharepoint.md)
 - [开发 SharePoint 解决方案](../sharepoint/developing-sharepoint-solutions.md)
 - [如何：创建自定义字段类型](/previous-versions/office/developer/sharepoint-2010/bb862248(v=office.14))
 - [内容类型](/previous-versions/office/developer/sharepoint-2010/ms479905(v=office.14))

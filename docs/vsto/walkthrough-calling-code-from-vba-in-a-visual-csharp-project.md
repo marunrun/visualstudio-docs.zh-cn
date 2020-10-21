@@ -19,12 +19,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 46f88b47e135331e5f1dc010aa4a73abed520f51
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 1c089a3156d005da7d49976f6c96bb10daac0662
+ms.sourcegitcommit: e38419bb842d587fd9e37c24b6cf3fc5c2e74817
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "90840529"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "92297950"
 ---
 # <a name="walkthrough-call-code-from-vba-in-a-visual-c-project"></a>演练：在 Visual c # 项目中调用 VBA 中的代码
   此演练演示如何从工作簿的 Visual Basic for Applications (VBA) 代码调用 Microsoft Office Excel 文档级自定义项中的方法。 该过程包括三个基本步骤：向 `Sheet1` 主机项类添加方法、向工作簿中的 VBA 代码公开方法，然后从工作簿的 VBA 代码中调用该方法。
@@ -66,7 +66,7 @@ ms.locfileid: "90840529"
 
 1. 启动 Excel。
 
-2. 将活动文档另存为启用了宏的 Excel 工作簿， (名为**WorkbookWithVBA**的** \* xlsm) ** 。 将其保存在一个方便的位置，例如桌面。
+2. 将活动文档另存为名为**WorkbookWithVBA**的**Excel Macro-Enabled 工作簿 (\* xlsm) ** 。 将其保存在一个方便的位置，例如桌面。
 
 3. 在功能区上，单击 **“开发人员”** 选项卡。
 
@@ -107,7 +107,7 @@ ms.locfileid: "90840529"
 
 6. 在“名称” **** 框中，键入 **CallingCodeFromVBA**。
 
-7. 单击“确定”。 
+7. 单击“确定”。
 
      将打开“Visual Studio Tools for Office 项目向导” **** 。
 
@@ -161,7 +161,7 @@ ms.locfileid: "90840529"
 
      [!code-csharp[Trin_CallingCSCustomizationFromVBA#2](../vsto/codesnippet/CSharp/CallingCodeFromVBA/Sheet1.cs#2)]
 
-3. 将以下方法添加到 `Sheet1` 类。 此方法将替代 <xref:Microsoft.Office.Tools.Excel.Worksheet.GetAutomationObject%2A> 方法，以返回 `Sheet1` 类的当前实例。
+3. 将以下方法添加到 `Sheet1` 类。 此方法将替代 <xref:Microsoft.Office.Tools.Excel.WorksheetBase.GetAutomationObject%2A> 方法，以返回 `Sheet1` 类的当前实例。
 
      [!code-csharp[Trin_CallingCSCustomizationFromVBA#3](../vsto/codesnippet/CSharp/CallingCodeFromVBA/Sheet1.cs#3)]
 
@@ -180,7 +180,7 @@ ms.locfileid: "90840529"
 
 3. 在 **“提取接口”** 对话框中，在 **“选择构成接口的公共成员”** 框中，单击 `CreateVstoNamedRange` 方法项。
 
-4. 单击“确定”。 
+4. 单击“确定”。
 
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 会生成名为 `ISheet1`的新接口，并修改 `Sheet1` 的定义，以便实现 `ISheet1` 接口。 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 还将在代码编辑器中打开 **ISheet1.cs** 文件。
 
@@ -233,7 +233,7 @@ ms.locfileid: "90840529"
     End Sub
     ```
 
-5. 按 **F5**。
+5. 按 F5 ****。
 
 6. 在打开的工作簿中，单击 **“Sheet1”** 上的单元格 **“A1”**。 验证是否显示消息框。
 
@@ -246,7 +246,7 @@ ms.locfileid: "90840529"
 
 - 从 VBA 调用 VSTO 外接程序中的代码。 有关详细信息，请参阅 [演练：从 VBA 调用 VSTO 外接程序中的代码](../vsto/walkthrough-calling-code-in-a-vsto-add-in-from-vba.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [合并 VBA 和文档级自定义项](../vsto/combining-vba-and-document-level-customizations.md)
 - [程序文档级自定义项](../vsto/programming-document-level-customizations.md)
 - [如何：在 Visual Basic 项目中向 VBA 公开代码](../vsto/how-to-expose-code-to-vba-in-a-visual-basic-project.md)

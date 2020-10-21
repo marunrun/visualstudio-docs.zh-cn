@@ -10,12 +10,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: dccff7206aa9ef71596816d34a863695a10aff6b
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 7529c69270b5f33cde32e8a7907f1b80589c43b7
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "79416544"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "92298515"
 ---
 # <a name="improve-the-performance-of-a-vsto-add-in"></a>提高 VSTO 外接程序的性能
   可以通过优化为 Office 应用程序创建的 VSTO 外接程序为用户提供更好的体验，以便他们快速启动、关闭和打开项，以及执行其他任务。 如果你的 VSTO 外接程序是用于 Outlook 的，则还可以降低由于性能不佳而禁用 VSTO 外接程序的风险。 可以通过实现以下策略来提高 VSTO 外接程序的性能：
@@ -113,8 +113,8 @@ ms.locfileid: "79416544"
 > [!NOTE]
 > 调入 Office 对象模型的所有代码都必须在主线程中执行。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-- [按需加载 VSTO 外接程序](https://blogs.msdn.microsoft.com/andreww/2008/07/14/demand-loading-vsto-add-ins/)
-- [延迟加载 Office 外接程序中的 CLR](https://blogs.msdn.microsoft.com/andreww/2008/04/19/delay-loading-the-clr-in-office-add-ins/)
+- [按需加载 VSTO 外接程序](/archive/blogs/andreww/demand-loading-vsto-add-ins)
+- [延迟加载 Office 外接程序中的 CLR](/archive/blogs/andreww/delay-loading-the-clr-in-office-add-ins)
 - [使用 Visual Studio 创建 VSTO 外接程序](create-vsto-add-ins-for-office-by-using-visual-studio.md)

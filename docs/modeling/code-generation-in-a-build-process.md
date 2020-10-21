@@ -13,12 +13,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 1fd7538782bff80ee12ac0aa0e66c0daa4da2d5c
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: af0039fb8c945062bc19fa647b477c40c44d5346
+ms.sourcegitcommit: a876fcc75321f9c30729121cae83f400973f9d9d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85546713"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92298207"
 ---
 # <a name="invoke-text-transformation-in-the-build-process"></a>在生成过程中调用文本转换
 
@@ -153,13 +153,13 @@ ms.locfileid: "85546713"
 <PropertyGroup>
     <BeforeTransform>CustomPreTransform</BeforeTransform>
     <AfterTransform>CustomPostTransform</AfterTransform>
-  </PropertyGroup>
-  <Target Name="CustomPreTransform">
+</PropertyGroup>
+<Target Name="CustomPreTransform">
     <Message Text="In CustomPreTransform..." Importance="High" />
-  </Target>
-  <Target Name="CustomPostTransform">
+</Target>
+<Target Name="CustomPostTransform">
     <Message Text="In CustomPostTransform..." Importance="High" />
-  </Target>
+</Target>
 ```
 
 在 `AfterTransform` 中，你可以引用文件列表：
@@ -283,7 +283,7 @@ Visual Studio 宏（如 **$ (SolutionDir) ** 在 MSBuild 中不起作用。 你�
 
 这些指令在 MSBuild 和 Visual Studio 主机中都通过 T4parameterValues 获取值。
 
-## <a name="q--a"></a>问题解答
+## <a name="q--a"></a>问与答
 
 **为什么要在生成服务器中转换模板？在我签入我的代码之前，我已经在 Visual Studio 中转换了模板。**
 

@@ -13,17 +13,17 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 844f3eb97ed9e07aa8125688d2bfe8944249b008
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c47b16bbb9fe5eb352171e6e1cf4c13890890265
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85541786"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "92298656"
 ---
 # <a name="how-to-create-a-domain-specific-language-solution"></a>如何：创建域特定语言解决方案
 使用专用 Visual Studio 解决方案创建 (DSL) 域特定语言。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 在开始此过程之前，请安装以下组件：
 
@@ -33,7 +33,7 @@ ms.locfileid: "85541786"
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 
-## <a name="creating-a-domain-specific-language-solution"></a>创建域特定语言解决方案
+## <a name="creating-a-domain-specific-language-solution"></a>创建 Domain-Specific 语言解决方案
 
 1. 通过创建新的 **特定于域的语言设计器** 项目来启动 DSL 向导。
 
@@ -48,9 +48,9 @@ ms.locfileid: "85541786"
 
 2. 选择 DSL 模板。
 
-    在 " **选择域特定语言选项** " 页面上，选择一个解决方案模板（例如 **最小语言**）。 选择类似于要创建的 DSL 的模板。
+    在 " **选择 Domain-Specific 语言选项** " 页面上，选择一个解决方案模板（例如 **最小语言**）。 选择类似于要创建的 DSL 的模板。
 
-    有关解决方案模板的详细信息，请参阅 [选择域特定语言解决方案模板](../modeling/choosing-a-domain-specific-language-solution-template.md)。
+    有关解决方案模板的详细信息，请参阅 [选择 Domain-Specific 语言解决方案模板](../modeling/choosing-a-domain-specific-language-solution-template.md)。
 
 3. 在 " **文件扩展名** " 页上输入文件扩展名。 它在您的计算机以及您想要安装 DSL 的任何计算机中都应该是唯一的。 应会看到消息 " **无应用程序或 Visual Studio 编辑器使用此扩展名**"。
 
@@ -70,7 +70,7 @@ ms.locfileid: "85541786"
 
 ### <a name="solution-settings-page"></a>"解决方案设置" 页
  **你要将哪个模板基于域特定语言？**
-选择类似于要创建的 DSL 的模板。 不同的模板提供便利的起点。 选择解决方案模板时，向导会显示说明。 有关解决方案模板的详细信息，请参阅 [选择域特定语言解决方案模板](../modeling/choosing-a-domain-specific-language-solution-template.md)。
+选择类似于要创建的 DSL 的模板。 不同的模板提供便利的起点。 选择解决方案模板时，向导会显示说明。 有关解决方案模板的详细信息，请参阅 [选择 Domain-Specific 语言解决方案模板](../modeling/choosing-a-domain-specific-language-solution-template.md)。
 
  **要如何命名域特定语言？**
 默认为解决方案名称。 此值生成代码。 它必须是有效的 c # 类名称。
@@ -114,9 +114,9 @@ ms.locfileid: "85541786"
 
  **使用现有的强名称密钥** 如果要将 DSL 与其他程序集集成，请使用此选项。
 
- 有关强命名的详细信息，请参阅 [创建和使用具有强名称的程序集](/dotnet/standard/assembly/create-use-strong-named)。
+ 有关强命名的详细信息，请参阅 [创建和使用 Strong-Named 程序集](/dotnet/standard/assembly/create-use-strong-named)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [如何定义域特定语言](../modeling/how-to-define-a-domain-specific-language.md)
-- [域特定语言工具术语表](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+- [域特定语言工具术语表](/previous-versions/bb126564(v=vs.100))
