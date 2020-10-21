@@ -9,12 +9,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 4c1cdbea77f8a14e8f4cedcd53b54e2eac65cf75
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 1a5958b03b9797882b3df37f4ba99c75ff832d22
+ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037219"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91928103"
 ---
 # <a name="use-a-lab-environment-for-your-devops"></a>使用实验室环境进行开发
 
@@ -45,7 +45,7 @@ ms.locfileid: "90037219"
 
 ## <a name="use-the-cloud-with-azure-pipelines-or-team-foundation-server-build-and-release"></a>通过 Azure Pipelines 或 Team Foundation Server 生成和发布使用云
 
-使用 Team Foundation Server (TFS) 和 Azure Test Plans 中的[生成和发布](/azure/devops/pipelines/index?view=vsts)功能可以执行自动测试和生成-部署-测试自动化。 部分优势包括：
+使用 Team Foundation Server (TFS) 和 Azure Test Plans 中的[生成和发布](/azure/devops/pipelines/index?view=vsts&preserve-view=true)功能可以执行自动测试和生成-部署-测试自动化。 部分优势包括：
 
 * 不需要生成控制器或测试控制器。
 * 生成或发布过程中会通过任务安装测试代理。
@@ -94,7 +94,7 @@ ms.locfileid: "90037219"
 > [!NOTE]
 > 实验室管理工具版不支持 SCVMM 2016。
 
-有关 SCVMM 的信息，请参阅 [Virtual Machine Manager](/azure/devops/pipelines/?view=vsts)。
+有关 SCVMM 的信息，请参阅 [Virtual Machine Manager](/azure/devops/pipelines/?view=vsts&preserve-view=true)。
 
 标准环境和 SCVMM 环境支持许多相同功能。 但是，有一些重要的区别需要注意。 下表比较了可用于标准环境和 SCVMM 环境的功能。
 

@@ -10,12 +10,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 0517d03db180ce76940723ca935be258d0cf1818
-ms.sourcegitcommit: ee12b14f306ad8f49b77b08d3a16d9f54426e7ca
+ms.openlocfilehash: 5d61ab4ec7647921a928841d2a9c89fb84becdf9
+ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80256226"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91928064"
 ---
 # <a name="first-look-at-testing-tools-in-visual-studio"></a>首先介绍 Visual Studio 中的测试工具
 
@@ -94,7 +94,7 @@ IntelliTest 会自动为托管代码生成单元测试和测试数据。 Intelli
 
 ## <a name="related-scenarios"></a>相关方案
 
-* [探索和手动测试 (Azure Test Plans)](/azure/devops/test/index?view=vsts)
-* [负载测试（Azure Test Plans）](/azure/devops/test/load-test/index?view=vsts)
-* [持续测试（Azure Test Plans）](/azure/devops/pipelines/test/getting-started-with-continuous-testing?view=vsts)
+* [探索和手动测试 (Azure Test Plans)](/azure/devops/test/index?view=vsts&preserve-view=true)
+* [负载测试（Azure Test Plans）](/azure/devops/test/load-test/index?view=vsts&preserve-view=true)
+* [持续测试（Azure Test Plans）](/azure/devops/pipelines/test/getting-started-with-continuous-testing?view=vsts&preserve-view=true)
 * [代码分析工具](../code-quality/code-analysis-for-managed-code-overview.md)

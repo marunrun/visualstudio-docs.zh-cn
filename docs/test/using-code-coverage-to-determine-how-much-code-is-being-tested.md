@@ -11,12 +11,12 @@ dev_langs:
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 6dd6dde83720c6e6f37bd6827bb5d97526202aa7
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 2d1b51661d9fc9a5492d123bdacd6c49d241ed87
+ms.sourcegitcommit: 3e05bd4bfac6f0b8b3534d8c013388f67e288651
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75585595"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91959770"
 ---
 # <a name="use-code-coverage-to-determine-how-much-code-is-being-tested"></a>使用代码覆盖率确定所测试的代码量
 
@@ -272,7 +272,7 @@ ExcludeSourceFromCodeCoverage(Exclusion4, L"*\\unittest1.cpp");
 
 ## <a name="analyze-code-coverage-in-azure-pipelines"></a>分析 Azure Pipelines 中的代码覆盖率
 
-签入代码时，你的测试以及其他团队成员的测试将在生成服务器中运行。 这对分析 Azure Pipelines 中的代码覆盖率很有用，以提供整个项目中最新、最全面的覆盖率信息。 它还包含用户不常在开发计算机上运行的自动系统测试和其他编码的测试。 有关详细信息，请参阅[使用你的生成运行单元测试](/azure/devops/pipelines/test/getting-started-with-continuous-testing?view=vsts)。
+签入代码时，你的测试以及其他团队成员的测试将在生成服务器中运行。 这对分析 Azure Pipelines 中的代码覆盖率很有用，以提供整个项目中最新、最全面的覆盖率信息。 它还包含用户不常在开发计算机上运行的自动系统测试和其他编码的测试。 有关详细信息，请参阅[使用你的生成运行单元测试](/azure/devops/pipelines/test/getting-started-with-continuous-testing?view=vsts&preserve-view=true)。
 
 ## <a name="analyze-code-coverage-from-the-command-line"></a>从命令行分析代码覆盖率
 

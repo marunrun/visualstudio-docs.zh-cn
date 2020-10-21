@@ -10,12 +10,12 @@ manager: jillfra
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 4d2f2e2a698063dfb5ac6261d8a9b01a073d112e
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 389fe1491a92cacecd772244c2a0facd0d12c887
+ms.sourcegitcommit: a778dffddb05d2f0f15969eadaf9081c9b466196
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84173862"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "92298761"
 ---
 # <a name="remote-debug-aspnet-core-on-a-remote-iis-computer-in-visual-studio"></a>在 Visual Studio 中远程调试远程 IIS 计算机上的 ASP.NET Core
 
@@ -53,7 +53,7 @@ ms.locfileid: "84173862"
 
 ## <a name="create-the-aspnet-core-application-on-the-visual-studio-computer"></a>在 Visual Studio 计算机上创建 ASP.NET Core 应用程序
 
-1. 创建新的 ASP.NET Core Web 应用呈现。 
+1. 创建新的 ASP.NET Core Web 应用呈现。
 
     ::: moniker range=">=vs-2019"
     在 Visual Studio 2019 中，键入 Ctrl + Q 打开搜索框，键入“asp.net”，选择“模板”，然后选择“创建新的 ASP.NET Core Web 应用程序”   。 在出现的对话框中，将项目命名为“MyASPApp”，然后选择“创建” 。 接下来，选择“Web 应用程序(模型-视图-控制器)”，然后选择“创建” 。
@@ -209,7 +209,7 @@ ms.locfileid: "84173862"
 
 6. 键入进程名称的第一个字母，以快速查找应用。
 
-    * 如果正在 IIS 上使用[进程内托管模型](/aspnet/core/host-and-deploy/aspnet-core-module?view=aspnetcore-3.1#hosting-models)，请选择正确的 w3wp.exe 进程。 从 .NET Core 3 开始，这是默认设置。
+    * 如果正在 IIS 上使用[进程内托管模型](/aspnet/core/host-and-deploy/aspnet-core-module?view=aspnetcore-3.1&preserve-view=true#hosting-models)，请选择正确的 w3wp.exe 进程。 从 .NET Core 3 开始，这是默认设置。
 
     * 否则，请选择 dotnet.exe 进程。 （这是进程外托管模型。）
 

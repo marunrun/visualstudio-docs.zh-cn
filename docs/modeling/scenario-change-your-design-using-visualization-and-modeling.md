@@ -1,5 +1,6 @@
 ---
-title: 方案：使用可视化和建模更改设计
+title: 使用可视化和建模更改设计
+description: Visual Studio 中可视化和建模工具的概述。
 ms.date: 11/04/2016
 ms.topic: overview
 helpviewer_keywords:
@@ -12,15 +13,16 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio ALM], modeling software
 author: JoshuaPartlow
 ms.author: joshuapa
+ms.custom: SEO-VS-2020
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: db584adc01a3f0f161d451d73df6a8deab08b869
-ms.sourcegitcommit: d8609a78b460d4783f5d59c0c89454910a4dbd21
+ms.openlocfilehash: a6ad330c083a97e8a098f05a9e0398a806a9153b
+ms.sourcegitcommit: c31815e140f2ec79e00a9a9a19900778ec11e860
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88238889"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "92298593"
 ---
 # <a name="scenario-change-your-design-using-visualization-and-modeling"></a>方案：使用可视化和建模更改设计
 
@@ -214,9 +216,9 @@ Visual Studio 建模图与 Team Foundation Server 集成在一起，方便你更
 
 请参阅：
 
-- [有关敏捷工具和敏捷项目管理](/azure/devops/boards/backlogs/backlogs-overview?view=vsts)
+- [有关敏捷工具和敏捷项目管理](/azure/devops/boards/backlogs/backlogs-overview?view=vsts&preserve-view=true)
 
-- [图表、仪表板和小组件 (Azure DevOps Services)](/azure/devops/report/dashboards/overview?view=vsts)
+- [图表、仪表板和小组件 (Azure DevOps Services)](/azure/devops/report/dashboards/overview?view=vsts&preserve-view=true)
 
 - [使用 Project 创建积压工作 (backlog) 和任务](/azure/devops/boards/backlogs/office/create-your-backlog-tasks-using-project)
 
@@ -236,13 +238,13 @@ Dinner Now 提供了大批自动测试，Lucerne 可以重用这些测试，因�
 
 请参阅：
 
-- [测试应用程序](/azure/devops/test/overview?view=vsts)
+- [测试应用程序](/azure/devops/test/overview?view=vsts&preserve-view=true)
 
 - [在开发过程中验证系统](../modeling/validate-your-system-during-development.md)
 
-- [使用版本控制](/azure/devops/repos/tfvc/overview?view=azure-devops)
+- [使用版本控制](/azure/devops/repos/tfvc/overview?view=azure-devops&preserve-view=true)
 
-- [Azure Pipelines](/azure/devops/pipelines/index?view=vsts)
+- [Azure Pipelines](/azure/devops/pipelines/index?view=vsts&preserve-view=true)
 
 ## <a name="update-the-system-using-visualization-and-modeling"></a>通过可视化和建模更新系统
 
@@ -484,5 +486,5 @@ Lucerne 和 Dinner Now 必须集成其支付系统。 以下各部分介绍了�
 
 - [代码可视化](../modeling/visualize-code.md)
 - [在你的开发过程中使用模型](../modeling/use-models-in-your-development-process.md)
-- [在敏捷开发中使用模型](https://msdn.microsoft.com/592ac27c-3d3e-454a-9c38-b76658ed137f)
+- [在敏捷开发中使用模型](/previous-versions/ff398061(v=vs.140))
 - [在开发过程中验证系统](../modeling/validate-your-system-during-development.md)

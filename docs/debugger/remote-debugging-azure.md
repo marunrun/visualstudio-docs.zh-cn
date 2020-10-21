@@ -11,12 +11,12 @@ ms.workload:
 - aspnet
 - dotnetcore
 - azure
-ms.openlocfilehash: debf44bfe8187a7fd84e04b4362283658f636f17
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.openlocfilehash: 926bd4a6630d9d99726ee6c1479d04c476756c18
+ms.sourcegitcommit: a778dffddb05d2f0f15969eadaf9081c9b466196
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85536781"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "92298752"
 ---
 # <a name="remote-debug-aspnet-core-on-iis-in-azure-in-visual-studio"></a>在 Azure 中的 IIS 上的 Visual Studio 中远程调试 ASP.NET Core
 
@@ -255,7 +255,7 @@ ms.locfileid: "85536781"
 
 6. 键入进程名称的第一个字母，以快速查找应用。
 
-    * 如果正在 IIS 上使用[进程内托管模型](/aspnet/core/host-and-deploy/aspnet-core-module?view=aspnetcore-3.1#hosting-models)，请选择正确的 w3wp.exe 进程。 从 .NET Core 3 开始，这是默认设置。
+    * 如果正在 IIS 上使用[进程内托管模型](/aspnet/core/host-and-deploy/aspnet-core-module?view=aspnetcore-3.1&preserve-view=true#hosting-models)，请选择正确的 w3wp.exe 进程。 从 .NET Core 3 开始，这是默认设置。
 
     * 否则，请选择 dotnet.exe 进程。 （这是进程外托管模型。）
 

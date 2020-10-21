@@ -7,12 +7,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0785686c9292e346c698c6f2b233cfe20edf796a
-ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
+ms.openlocfilehash: 60f5a5545152b9bf262f652e2fce5ce04e7b71cb
+ms.sourcegitcommit: 9c57730000d5ced37d3887f3928b17076f49d0f7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88800757"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92099422"
 ---
 # <a name="features-of-visual-studio"></a>Visual Studio 的功能
 
@@ -124,7 +124,7 @@ Team Foundation Server (TFS) 是 Visual Studio 的应用程序生命周期管理
 
 ![Visual Studio 团队资源管理器](../ide/media/vs2017_teamexplorer_devops.png)
 
-还可以自动执行生成过程以生成团队中的开发人员签入到版本控制的代码。 例如，您可以在夜间或每次签入此代码时生成一个或多个项目。 有关详细信息，请参阅 [Azure Pipelines](/azure/devops/pipelines/index?view=vsts)。
+还可以自动执行生成过程以生成团队中的开发人员签入到版本控制的代码。 例如，您可以在夜间或每次签入此代码时生成一个或多个项目。 有关详细信息，请参阅 [Azure Pipelines](/azure/devops/pipelines/index?view=vsts&preserve-view=true)。
 
 ## <a name="extend-visual-studio"></a>扩展 Visual Studio
 

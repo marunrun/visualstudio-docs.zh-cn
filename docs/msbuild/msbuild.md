@@ -11,12 +11,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c1bd4c4ab15364e9e2ac8e189fcde01f65244b7a
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 7e9f4614967f1307bc1faaaaba12a2dde1e8cad0
+ms.sourcegitcommit: 9c57730000d5ced37d3887f3928b17076f49d0f7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85289191"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92099266"
 ---
 # <a name="msbuild"></a>MSBuild
 
@@ -47,7 +47,7 @@ Microsoft 生成引擎是一个用于生成应用程序的平台。 此引擎（
 你可以在 Visual Studio IDE 中编写代码，但使用 MSBuild 来运行生成。 或者，你也可以在开发计算机的 IDE 中生成代码，但从命令行运行 MSBuild 来生成从多个开发人员集成的代码。 还可以使用 [.NET Core 命令行接口 (CLI)](/dotnet/core/tools/)（使用 MSBuild）来生成 .NET Core 项目。
 
 > [!NOTE]
-> 你可以使用 Azure Pipelines 自动编译、测试和部署应用程序。 你的生成系统会在开发人员签入代码（例如，作为持续集成策略的一部分）时或按照计划（例如，夜间版本验证测试生成）自动运行生成。 Azure Pipelines 使用 MSBuild 来编译代码。 有关详细信息，请参阅 [Azure Pipelines](/azure/devops/pipelines/index?view=vsts)。
+> 你可以使用 Azure Pipelines 自动编译、测试和部署应用程序。 你的生成系统会在开发人员签入代码（例如，作为持续集成策略的一部分）时或按照计划（例如，夜间版本验证测试生成）自动运行生成。 Azure Pipelines 使用 MSBuild 来编译代码。 有关详细信息，请参阅 [Azure Pipelines](/azure/devops/pipelines/index?view=vsts&preserve-view=true)。
 
 本文提供 MSBuild 的概述。 有关介绍性教程，请参阅[演练：使用 MSBuild](../msbuild/walkthrough-using-msbuild.md)。
 

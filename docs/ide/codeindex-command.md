@@ -12,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4bd2a6cc947c5f52212029bebe590d59906f5aee
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 07338e83f0c58331345cd3f4c6eb61855a16fd4f
+ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75591159"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91928484"
 ---
 # <a name="codeindex-command"></a>CodeIndex 命令
 
@@ -25,7 +25,7 @@ ms.locfileid: "75591159"
 
 ## <a name="required-permissions"></a>所需的权限
 
-若要使用 **CodeIndex** 命令，必须是“Team Foundation Administrators”  安全组的成员。 请参阅[为 Azure DevOps Services 和 TFS 定义的权限和组](/azure/devops/organizations/security/permissions?view=vsts)。
+若要使用 **CodeIndex** 命令，必须是“Team Foundation Administrators”  安全组的成员。 请参阅[为 Azure DevOps Services 和 TFS 定义的权限和组](/azure/devops/organizations/security/permissions?view=vsts&preserve-view=true)。
 
 > [!NOTE]
 > 即使你使用管理凭据进行登录，也必须使用提升权限打开命令提示符窗口以运行此命令。 你还必须从 Team Foundation 的应用层运行此命令。
