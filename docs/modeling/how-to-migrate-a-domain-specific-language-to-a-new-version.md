@@ -1,18 +1,20 @@
 ---
-title: 如何：将域特定语言迁移至新版本
+title: 如何：迁移 Domain-Specific 语言项目
+description: 提供有关如何将域特定语言项目迁移到较新版本的 Visual Studio 的信息。
 ms.date: 11/04/2016
 ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
+ms.custom: SEO-VS-2020
 ms.workload:
 - multiple
-ms.openlocfilehash: f8bdaea1267d0bf69078aec5739291e72db8dfda
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: dacb13ef14768f4f59a414f6159bbea8d24c4de8
+ms.sourcegitcommit: a18c7e9b367c2f92f6e54c3eaef442775d457667
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85532606"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "92298414"
 ---
 # <a name="how-to-migrate-a-domain-specific-language-to-a-new-version"></a>如何：将域特定语言迁移至新版本
 你可以将定义和使用特定于域的语言的项目 [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)] 从随分发的版本中迁移 [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] [!INCLUDE[vs_orcas_long](../debugger/includes/vs_orcas_long_md.md)] 。
@@ -84,6 +86,6 @@ ms.locfileid: "85532606"
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [相关的博客文章](https://devblogs.microsoft.com/devops/the-visual-studio-modeling-sdk-is-now-available-with-visual-studio-2017/)

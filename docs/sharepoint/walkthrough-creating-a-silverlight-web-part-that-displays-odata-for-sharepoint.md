@@ -1,5 +1,6 @@
 ---
 title: 创建显示 OData for SharePoint 的 Silverlight web 部件
+titleSuffix: ''
 ms.date: 02/22/2017
 ms.topic: how-to
 f1_keywords:
@@ -12,12 +13,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 75653f0357bcc605e666ee271a527b616985b641
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 652f34e6a062d2c8129266a10c859c8d24abd83e
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86017167"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "92298506"
 ---
 # <a name="walkthrough-create-a-silverlight-web-part-that-displays-odata-for-sharepoint"></a>演练：创建显示 OData for SharePoint 的 Silverlight web 部件
   SharePoint 2010 通过 OData 公开其列表数据。 在 SharePoint 中，OData 服务由 RESTful 服务 ListData 实现。 本演练演示如何创建承载 Silverlight 应用程序的 SharePoint web 部件。 Silverlight 应用程序使用 ListData 显示 SharePoint 公告列表信息。 有关详细信息，请参阅 [SharePoint FOUNDATION REST 接口](/previous-versions/office/developer/sharepoint-2010/ff521587(v=office.14)) 和 [Open Data Protocol](https://www.odata.org/)。
@@ -68,7 +69,7 @@ ms.locfileid: "86017167"
 
 #### <a name="to-customize-the-silverlight-application"></a>自定义 Silverlight 应用程序
 
-1. 在 Silverlight 应用程序中添加对 System.web 的程序集引用。 有关详细信息，请参阅 [如何：使用 "添加引用" 对话框添加或删除引用](https://msdn.microsoft.com/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)。
+1. 在 Silverlight 应用程序中添加对 System.web 的程序集引用。 有关详细信息，请参阅 [如何：使用 "添加引用" 对话框添加或删除引用](/previous-versions/wkze6zky(v=vs.140))。
 
 2. 在 **解决方案资源管理器**中，打开 " **引用**" 的快捷菜单，然后选择 " **添加服务引用**"。
 
@@ -231,5 +232,5 @@ ms.locfileid: "86017167"
     > 跨域访问 Silverlight 中的数据时，Silverlight 会防止可用于利用 web 应用程序的安全漏洞。 如果在访问 Silverlight 中的远程数据时遇到问题，请参阅 [使服务跨域边界可用](/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc197955(v=vs.95))。
 
 ## <a name="see-also"></a>另请参阅
-- [为 SharePoint 创建 web 部件](../sharepoint/creating-web-parts-for-sharepoint.md)
+- [为 SharePoint 创建 Web 部件](../sharepoint/creating-web-parts-for-sharepoint.md)
 - [部署、发布和升级 SharePoint 解决方案包](../sharepoint/deploying-publishing-and-upgrading-sharepoint-solution-packages.md)

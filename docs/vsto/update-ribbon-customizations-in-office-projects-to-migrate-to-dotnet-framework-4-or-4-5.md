@@ -1,5 +1,6 @@
 ---
-title: 在 Office 项目中更新功能区自定义已迁移到 .NET Framework 4，4。5
+title: 更新已迁移到 .NET Framework 4.5 的功能区自定义项
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,14 +13,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c7d7ab5755f592e57e76dcd68f3dcb9dc2a7eab9
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8024d6fba419dfe437ca8492010c7e4786861862
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71254354"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "92298604"
 ---
-# <a name="update-ribbon-customizations-in-office-projects-that-you-migrate-to-the-net-framework-4-or-the-net-framework-45"></a>更新迁移到 .NET Framework 4 的 Office 项目中的功能区自定义项或 .NET Framework 4。5
+# <a name="update-ribbon-customizations-migrated-to-net-framework-45"></a>更新已迁移到 .NET Framework 4.5 的功能区自定义项
+
   如果你的项目包含使用 **功能区 (可视化设计器 ** 创建的功能区自定义项) 项目项，则在目标框架更改为 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 或更高版本时，必须对项目代码进行以下更改。
 
 - 修改生成的功能区代码。
@@ -183,6 +185,6 @@ Me.tab1.Position = Me.Factory.RibbonPosition.AfterOfficeId("TabHome")
 this.tab1.Position = this.Factory.RibbonPosition.AfterOfficeId("TabHome");
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 - [将 Office 解决方案迁移到 .NET Framework 4 或更高版本](../vsto/migrating-office-solutions-to-the-dotnet-framework-4-or-later.md)
 - [功能区设计器](../vsto/ribbon-designer.md)

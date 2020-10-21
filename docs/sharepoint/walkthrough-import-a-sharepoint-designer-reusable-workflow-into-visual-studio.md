@@ -1,5 +1,6 @@
 ---
-title: 演练：将 SharePoint Designer 可重用工作流导入 Visual Studio |Microsoft Docs
+title: 演练：导入 SharePoint 设计器可重用工作流 |Microsoft Docs
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
 f1_keywords:
@@ -15,14 +16,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 6a589f14ea60d50c0062d85be81523f27c81b455
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8e6680c6ff95808db56e5bb32e02e0775c935011
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86015697"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "92298039"
 ---
-# <a name="walkthrough-import-a-sharepoint-designer-reusable-workflow-into-visual-studio"></a>演练：将 SharePoint Designer 可重用工作流导入 Visual Studio
+# <a name="walkthrough-import-a-sharepoint-designer-reusable-workflow"></a>演练：导入 SharePoint 设计器可重用工作流
+
   本演练演示如何将在 SharePoint Designer 2010 中创建的可重用工作流导入到 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] sharepoint 工作流项目中。
 
  在 SharePoint 设计器或 *声明性工作流*中创建的工作流由 [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] 语句而不是代码组成。 SharePoint Designer 2010 引入了可移植的 *工作流，这些工作流*可供 SharePoint 站点中的不同列表使用。
@@ -186,7 +188,7 @@ ms.locfileid: "86015697"
 
      调试项目时，这会立即显示列表。
 
-11. 因为 " **导入可重用的 SharePoint 2010 工作流** " 模板不会导入导入工作流的关联属性值，所以必须输入这些值。 要执行此操作：
+11. 因为 " **导入可重用的 SharePoint 2010 工作流** " 模板不会导入导入工作流的关联属性值，所以必须输入这些值。 为此，请按以下步骤操作：
 
     1. 在 **解决方案资源管理器**中，选择 " **SPD_Workflow_TestFT** " 节点。
 
@@ -261,6 +263,6 @@ ms.locfileid: "86015697"
      请注意，工作流执行两个操作：你的名称显示在任务的 " **分配到** " 列中，" **公告** " 列表中会显示一条公告。
 
 ## <a name="see-also"></a>另请参阅
-- [从现有 SharePoint 站点导入项](../sharepoint/importing-items-from-an-existing-sharepoint-site.md)
+- [从现有的 SharePoint 网站导入项](../sharepoint/importing-items-from-an-existing-sharepoint-site.md)
 - [开发 SharePoint 解决方案](../sharepoint/developing-sharepoint-solutions.md)
-- [为 web 部件或应用程序页创建可重用控件](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md)
+- [为 Web 部件或应用程序页创建可重用控件](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md)

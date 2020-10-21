@@ -1,5 +1,6 @@
 ---
 title: 演练：从现有 SharePoint 站点导入项 |Microsoft Docs
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -13,14 +14,14 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 46bc2ceacfde599a70b4e84bba134c4a4d5f9757
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: c5f9fd5e3cc9b0df5feb60149e58e895996bb1f0
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "86017122"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "92298643"
 ---
-# <a name="walkthrough-import-items-from-an-existing-sharepoint-site"></a>演练：从现有 SharePoint 网站导入项
+# <a name="walkthrough-import-items-from-an-existing-sharepoint-site"></a>演练：从现有的 SharePoint 网站导入项
   本演练演示如何将项从现有 SharePoint 网站导入 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] sharepoint 项目。
 
  本演练演示了下列任务：
@@ -141,6 +142,6 @@ ms.locfileid: "86017122"
      请注意，从第一个 SharePoint 站点导入的自定义网站列将出现在列表中。
 
 ## <a name="see-also"></a>另请参阅
-- [从现有 SharePoint 站点导入项](../sharepoint/importing-items-from-an-existing-sharepoint-site.md)
+- [从现有的 SharePoint 网站导入项](../sharepoint/importing-items-from-an-existing-sharepoint-site.md)
 - [开发 SharePoint 解决方案](../sharepoint/developing-sharepoint-solutions.md)
-- [为 web 部件或应用程序页创建可重用控件](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md)
+- [为 Web 部件或应用程序页创建可重用控件](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md)

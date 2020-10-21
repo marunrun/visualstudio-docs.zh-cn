@@ -1,5 +1,6 @@
 ---
 title: 使用 ServerDocument 类管理服务器上的文档
+titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -14,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 739946fc7fc6ea7014fb93010ca85094a7fc7056
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: e91653734b804693584808478e44443563cdb823
+ms.sourcegitcommit: 9d2829dc30b6917e89762d602022915f1ca49089
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "71251937"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "92298274"
 ---
 # <a name="manage-documents-on-a-server-by-using-the-serverdocument-class"></a>使用 ServerDocument 类管理服务器上的文档
   你可以使用 `ServerDocument` 中的类 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] 来管理文档级自定义项的多个方面，即使未安装 Microsoft Office Word 和 Microsoft Office Excel。 你可以执行下列任务：

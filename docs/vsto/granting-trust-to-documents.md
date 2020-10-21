@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 9d245ddf00e4005b763bcd4437d3f8c18d05291e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a631e8d8cffe6bfde925dfbae4a7350e6a0ef95a
+ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "72986045"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "92298619"
 ---
 # <a name="grant-trust-to-documents"></a>向文档授予信任
   文档级项目与应用程序级项目具有相同的安全要求：使用证书对清单进行签名，或单击信任提示。 此外，文档或工作簿必须位于指定为受信任位置的目录中。
@@ -41,7 +41,7 @@ ms.locfileid: "72986045"
 
 - 尽管通过使用受信任的位置使文档本身受到信任，但仍需要其他权限来信任该自定义项。 你可以通过使用证书对清单进行签名，单击信任提示，或将 Office 解决方案安装到 *Program Files* 目录，为自定义授予完全信任。
 
-- 可以在与程序集相同或不同的目录中存储文档级解决方案的文档或工作薄。 例如，文档可以位于 SharePoint 服务器，而程序集可以位于网络文件共享中。 有关详细信息，请参阅 [如何：使用 ClickOnce 将文档级 Office 解决方案发布到 SharePoint 服务器](https://msdn.microsoft.com/2408e809-fb78-42a1-9152-00afa1522e58)。
+- 可以在与程序集相同或不同的目录中存储文档级解决方案的文档或工作薄。 例如，文档可以位于 SharePoint 服务器，而程序集可以位于网络文件共享中。 有关详细信息，请参阅 [如何：使用 ClickOnce 将文档级 Office 解决方案发布到 SharePoint 服务器](/previous-versions/bb608595(v=vs.110))。
 
 ## <a name="see-also"></a>另请参阅
 - [向 Office 解决方案授予信任](../vsto/granting-trust-to-office-solutions.md)
