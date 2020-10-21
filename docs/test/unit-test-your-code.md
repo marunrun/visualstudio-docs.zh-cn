@@ -11,12 +11,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: ffe383d2195feb6689954a8ec858b196bae8c06a
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: be0f8f7eeb116a251477ce57027a2176119c2d17
+ms.sourcegitcommit: 9c57730000d5ced37d3887f3928b17076f49d0f7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75565989"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92099305"
 ---
 # <a name="unit-test-your-code"></a>对代码进行单元测试
 
@@ -47,8 +47,8 @@ ms.locfileid: "75565989"
 |**对 C++ 代码进行单元测试**|- [编写适用于 C/C++ 的单元测试](../test/writing-unit-tests-for-c-cpp.md)|
 |**隔离单元测试**|- [使用 Microsoft Fakes 隔离受测代码](../test/isolating-code-under-test-with-microsoft-fakes.md)|
 |**使用代码覆盖率来确定项目代码的测试比例：** 了解 Visual Studio 测试工具的代码覆盖功能。|- [使用代码覆盖率确定正在测试的代码量](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)|
-|**使用负载测试执行压力和性能分析：** 了解如何创建负载测试，帮助隔离应用程序中的性能和压力问题。|- [快速入门：创建负载测试项目](../test/quickstart-create-a-load-test-project.md)<br />- [负载测试（Azure Test Plans 和 TFS）](/azure/devops/test/load-test/index?view=vsts)|
-|**设置质量要求：** 了解如何创建质量要求以在签入或合并代码之前强制运行测试。|- [签入策略 (Azure Repos TFVC)](/azure/devops/repos/tfvc/add-check-policies?view=vsts)|
+|**使用负载测试执行压力和性能分析：** 了解如何创建负载测试，帮助隔离应用程序中的性能和压力问题。|- [快速入门：创建负载测试项目](../test/quickstart-create-a-load-test-project.md)<br />- [负载测试（Azure Test Plans 和 TFS）](/azure/devops/test/load-test/index?view=vsts&preserve-view=true)|
+|**设置质量要求：** 了解如何创建质量要求以在签入或合并代码之前强制运行测试。|- [签入策略 (Azure Repos TFVC)](/azure/devops/repos/tfvc/add-check-policies?view=vsts&preserve-view=true)|
 |**设置测试选项：** 了解如何配置测试选项（如存储测试结果的位置）。|[使用 .runsettings 文件配置单元测试](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md)|
 
 ## <a name="api-reference-documentation"></a>API 参考文档

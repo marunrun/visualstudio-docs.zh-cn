@@ -178,6 +178,8 @@
       href: ide/index-writing-code.yml
     - name: 在 IDE 中移动
       href: ide/how-to-move-around-in-the-visual-studio-ide.md
+    - name: 使用 Visual Studio 搜索
+      href: ide/visual-studio-search.md
     - name: 解决方案和项目
       items:
         - name: 使用解决方案和项目

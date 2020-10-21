@@ -12,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 731fe05e90e01c60f0a7ff3a14917d6d7625bc1e
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 28576fab1ed4b39810b6f4cc32fb2955a7a44039
+ms.sourcegitcommit: 9c57730000d5ced37d3887f3928b17076f49d0f7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75570552"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92099344"
 ---
 # <a name="choose-toolbox-items-wpf-components"></a>“选择工具箱项”->“WPF 组件”
 
@@ -41,7 +41,7 @@ ms.locfileid: "75570552"
 
 **命名空间**
 
-显示定义组件结构的 [.NET API](/dotnet/api/?view=netframework-4.7) 命名空间的层次结构。 对此列排序可列出计算机上安装的每个 .NET 命名空间中的可用组件。
+显示定义组件结构的 [.NET API](/dotnet/api/?view=netframework-4.7&preserve-view=true) 命名空间的层次结构。 对此列排序可列出计算机上安装的每个 .NET 命名空间中的可用组件。
 
 **程序集名称**
 

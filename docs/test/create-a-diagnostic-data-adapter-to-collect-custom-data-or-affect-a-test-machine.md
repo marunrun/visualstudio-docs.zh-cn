@@ -9,12 +9,12 @@ ms.assetid: b0b53fae-7007-4ad9-a604-21685937622f
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 2a9b6880b2f71079b6b70eeb6c2e9f7b4e81fc19
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 65d311ec522e5ba5b5c92193a8af3e53a9e9eb35
+ms.sourcegitcommit: 9c57730000d5ced37d3887f3928b17076f49d0f7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85288736"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92099318"
 ---
 # <a name="create-a-diagnostic-data-adapter-to-collect-custom-data-or-affect-a-test-machine"></a>创建诊断数据适配器以收集自定义数据或影响测试计算机
 
@@ -39,7 +39,7 @@ ms.locfileid: "85288736"
 |任务|相关主题|
 |-|-----------------------|
 |**创建诊断数据适配器：** 可通过创建类库来创建诊断数据适配器，然后使用诊断数据适配器 API 来收集所需的信息或对正在用于运行测试的测试系统产生影响。|-   [如何：创建诊断数据适配器](../test/how-to-create-a-diagnostic-data-adapter.md)|
-|**选择运行测试时使用的自定义诊断数据适配器：** 可以选择用于测试设置的诊断数据适配器，以便运行测试时使用该适配器。|-   [在测试时收集诊断数据 (Azure Test Plans)](/azure/devops/test/collect-diagnostic-data?view=vsts)<br />-   [在手动测试中收集诊断数据 (Azure Test Plans)](/azure/devops/test/mtm/collect-more-diagnostic-data-in-manual-tests?view=vsts)|
+|**选择运行测试时使用的自定义诊断数据适配器：** 可以选择用于测试设置的诊断数据适配器，以便运行测试时使用该适配器。|-   [在测试时收集诊断数据 (Azure Test Plans)](/azure/devops/test/collect-diagnostic-data?view=vsts&preserve-view=true)<br />-   [在手动测试中收集诊断数据 (Azure Test Plans)](/azure/devops/test/mtm/collect-more-diagnostic-data-in-manual-tests?view=vsts&preserve-view=true)|
 
 ## <a name="see-also"></a>请参阅
 
