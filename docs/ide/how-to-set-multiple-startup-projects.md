@@ -1,5 +1,7 @@
 ---
 title: 如何：设置多个启动项目
+description: 了解如何在 Visual Studio 中指定启动调试器时多个项目的运行方式。
+ms.custom: SEO-VS-2020
 ms.date: 06/21/2017
 ms.topic: how-to
 helpviewer_keywords:
@@ -11,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 369b0f0dd41f028e49378d73ebb65c59931bbd60
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 348e3997f5136ab343639062f2b1d4dbdda08e78
+ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85284082"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92136987"
 ---
 # <a name="how-to-set-multiple-startup-projects"></a>如何：设置多个启动项目
 
@@ -28,7 +30,7 @@ Visual Studio 允许指定在启动调试器时如何运行多个项目。
 
 2. 选择解决方案节点的上下文（右键单击）菜单，然后选择“属性”  。 “解决方案属性页”对话框随即显示  。
 
-3. 展开“通用属性”节点，然后选择“启动项目”   。
+3. 展开“通用属性”节点，然后选择“启动项目”  。
 
 4. 选择“多个启动项目”选项并设置适当的操作  。
 

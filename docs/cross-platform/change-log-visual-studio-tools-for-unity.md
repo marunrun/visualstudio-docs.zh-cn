@@ -1,5 +1,6 @@
 ---
 title: 更改日志（Visual Studio Tools for Unity、Windows）| Microsoft Docs
+description: 查看 Visual Studio Tools for Unity、Windows 的更改日志。 查看版本 1.0.0.0 到 4.7.0.0 及更高版本的版本变化。
 ms.custom: ''
 ms.date: 7/30/2020
 ms.technology: vs-unity-tools
@@ -10,12 +11,12 @@ ms.author: johmil
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: 2a069753040be65f963c1047ef376bef653bfbc1
-ms.sourcegitcommit: 43df639b2cd99200f725a8ebb941477481a6f0ff
+ms.openlocfilehash: f745cca14202c87386dc276b00e89fb70b399404
+ms.sourcegitcommit: 01c1b040b12d9d43e3e8ccadee20d6282154faad
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87471514"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039433"
 ---
 # <a name="change-log-visual-studio-tools-for-unity-windows"></a>更改日志（Visual Studio Tools for Unity、Windows）
 
@@ -568,7 +569,7 @@ Visual Studio Tools for Unity 更改日志。
 
 ### <a name="bug-fixes"></a>Bug 修复
 
-- **项目生成：**
+- **Project Generation:**
 
   - 回滚了针对 Unity 性能缺陷的解决方案（此缺陷已由 Unity 修复）。
 
@@ -626,7 +627,7 @@ Visual Studio Tools for Unity 更改日志。
 
 ### <a name="bug-fixes"></a>Bug 修复
 
-- **项目生成：**
+- **Project Generation:**
 
   - （从 3.9.0.0 版向后移植）回滚了针对 Unity 性能缺陷的解决方案（此缺陷已由 Unity 修复）。
 
@@ -636,7 +637,7 @@ Visual Studio Tools for Unity 更改日志。
 
 ### <a name="bug-fixes"></a>Bug 修复
 
-- **项目生成：**
+- **Project Generation:**
 
   - Unity 性能 Bug 的暂时解决方法：生成项目时缓存 MonoIsland。
 
@@ -676,7 +677,7 @@ Visual Studio Tools for Unity 更改日志。
 
 ### <a name="bug-fixes"></a>Bug 修复
 
-- **项目生成：**
+- **Project Generation:**
 
   - 使用新版 Unity 运行时，不要再将可移植 pdb 转换为 mdb。
 
@@ -746,7 +747,7 @@ Visual Studio Tools for Unity 更改日志。
 
 ### <a name="bug-fixes"></a>Bug 修复
 
-- **项目生成：**
+- **Project Generation:**
 
   - 修复了 Mono 版本检测的问题。
 
@@ -766,7 +767,7 @@ Visual Studio Tools for Unity 更改日志。
 
 ### <a name="bug-fixes"></a>Bug 修复
 
-- **项目生成：**
+- **Project Generation:**
 
   - 修复了 Unity 目标框架检测的问题。
 
@@ -826,7 +827,7 @@ Visual Studio Tools for Unity 更改日志。
 
 ### <a name="bug-fixes"></a>Bug 修复
 
-- **项目生成：**
+- **Project Generation:**
 
   - 修复了播放器项目的项目 GUID 计算。
 
@@ -1668,7 +1669,7 @@ Visual Studio Tools for Unity 更改日志。
 
 - 通过消除配置 Unity 的共享文件夹的必要来简化远程调试。 现在只需具有从 Windows 访问 Unity 项目的权限。
 
-- 将自定义 Unity 配置文件作为标准的 .net target 配置文件安装。 这修复了 ReSharper 可能显示的所有误报。
+- 将自定义 Unity 配置文件作为标准的 .NET target 配置文件安装。 这修复了 ReSharper 可能显示的所有误报。
 
 - 解决 Unity 脚本引擎 bug，以便调试器不会中断非正常注册的线程。
 
@@ -1678,7 +1679,7 @@ Visual Studio Tools for Unity 更改日志。
 
 ### <a name="bug-fixes"></a>Bug 修复
 
-- 修复了自定义的 .net 配置文件
+- 修复了自定义的 .NET 配置文件
 
 - 修复了主题集成，即修复了 VS 2012 深色主题问题。
 
@@ -1776,7 +1777,7 @@ Visual Studio Tools for Unity 更改日志。
 
 - 修复了 Visual Studio 2012 中 Unity 项目资源管理器后台的回归问题。
 
-- 修复了完整 .net 配置文件的用户的项目生成。
+- 修复了完整 .NET 配置文件的用户的项目生成。
 
 - 修复了 Web 目标用户的项目生成。
 

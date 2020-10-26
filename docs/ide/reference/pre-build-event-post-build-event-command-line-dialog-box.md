@@ -1,5 +1,6 @@
 ---
 title: 生成前事件/生成后事件命令行对话框
+description: 了解如何直接在编辑框中实现生成前或生成后事件，或者如何从可用宏列表中选择预生成和生成后宏。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-compile
@@ -35,12 +36,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9a9ec2acb6802c19b48ba6254fb0a8812935d400
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 538b6c0dc3a163936e04a85b374a239d43e46e8e
+ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90038356"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92136805"
 ---
 # <a name="pre-build-eventpost-build-event-command-line-dialog-box"></a>生成前事件/生成后事件命令行对话框
 

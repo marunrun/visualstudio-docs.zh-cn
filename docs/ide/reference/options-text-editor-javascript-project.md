@@ -1,5 +1,7 @@
 ---
 title: “选项”>“文本编辑器”>“JavaScript”>“项目”
+description: 了解如何使用“选项”对话框中的“项目”页，指定代码编辑器中的 JavaScript 和 TypeScript 项目选项。
+ms.custom: SEO-VS-2020
 ms.date: 06/19/2020
 ms.technology: vs-javascript
 ms.topic: reference
@@ -13,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f6e4f5ff4e1081bbbe6aced4465afb40318048a5
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 86ee8f59a91cc772d6a86a9e29268b4465b2c639
+ms.sourcegitcommit: a7944c325bedd8efbb244452741864089a02f5db
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85285356"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91947695"
 ---
 # <a name="options-text-editor-javascript-project"></a>“选项”>“文本编辑器”>“JavaScript”>“项目”
 

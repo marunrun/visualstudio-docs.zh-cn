@@ -1,5 +1,5 @@
 ---
-title: 分析不调试的内存使用情况 | Microsoft Docs
+title: 分析性能探查器中的内存使用情况
 ms.custom: ''
 ms.date: 04/02/2020
 ms.topic: how-to
@@ -13,18 +13,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5fe336962a9d631a01438fdd4620fd27e2affc44
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.openlocfilehash: e4e99652e343510962959830b327237ee018c8fa
+ms.sourcegitcommit: 172aaf05596a9d8ded298b7b104569c1cce6160e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85543346"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92007205"
 ---
-# <a name="analyze-memory-usage-without-the-debugger"></a>分析不调试的内存使用情况
+# <a name="analyze-memory-usage-without-debugging-in-the-performance-profiler"></a>在进行调试的情况下分析性能探查器中的内存使用情况
 
-“内存使用情况”工具监视应用的内存使用情况。 可以使用该工具来研究在 Visual Studio 中正在积极开发的场景的实时内存效果。 可以获取应用内存状态的详细情况快照，并比较快照以找出内存问题的根本原因。
+“内存使用情况”工具监视应用的内存使用情况。 可以使用该工具来研究在 Visual Studio 中正在积极开发的场景的实时内存效果。 可以获取应用内存状态的详细情况快照，并比较快照以找出内存问题的根本原因。 “内存使用”工具支持在 .NET、ASP.NET、C++ 或混合模式（.NET 和本机）应用上使用。
 
-“内存使用情况”工具在[带或不带调试器](../profiling/running-profiling-tools-with-or-without-the-debugger.md)的情况下都可以运行。 本文介绍如何在 Visual Studio“性能探查器”中使用不带调试器的“内存使用情况”工具 。
+“内存使用情况”工具在带或不带调试器的情况下都可以运行。 本文介绍如何在 Visual Studio“性能探查器”中使用不带调试器的“内存使用情况”工具。
 
 ## <a name="memory-usage-diagnostic-sessions"></a>内存使用情况诊断会话
 
@@ -32,7 +32,7 @@ ms.locfileid: "85543346"
 
 1. 在 Visual Studio 中打开项目。
 
-   “内存使用情况”工具支持 .NET、ASP.NET、本机或混合模式（.NET 和本机）应用。
+   “内存使用”工具支持 .NET、ASP.NET、C++ 或混合模式（.NET 和本机）应用。
 
 1. 在“调试”菜单中，将解决方案配置设置为“发布”，然后选择“本地 Windows 调试器”（或“本地计算机”）作为部署目标  。
 
@@ -97,7 +97,7 @@ ms.locfileid: "85543346"
 
 在快照报表中：
 
-- “托管堆”树在报表中显示类型和实例。 通过选择类型或实例，可以显示选定项的**根路径**和**引用的对象**树。
+- “托管堆”树在报表中显示类型和实例。 通过选择类型或实例，可以显示选定项的 **根路径** 和 **引用的对象** 树。
 
 - “根的路径”树显示引用类型或实例的对象链。 .NET 垃圾回收器仅在释放对某个对象的所有引用后清理该对象的内存。
 
@@ -124,7 +124,7 @@ ms.locfileid: "85543346"
 这两个链接都会打开同一个报表。 唯一的区别是“托管堆”树的起始排序顺序不同。 大小链接按“非独占大小(字节)”列对报表进行排序。 对象链接按“计数”列对报表进行排序。 可以在报表打开后更改排序列或顺序。
 
 ### <a name="managed-heap-tree-snapshot-details-reports"></a><a name="BKMK_Managed_Heap_tree__Snapshot_details_"></a>托管堆树（快照详细信息报表）
- **托管堆**树列出了内存中保存的对象类型。 可以展开类型名称以查看十大类型示例（按大小排列）。 通过选择类型或实例，以显示选定项的“根的路径”和“引用对象”树 。
+ **托管堆** 树列出了内存中保存的对象类型。 可以展开类型名称以查看十大类型示例（按大小排列）。 通过选择类型或实例，以显示选定项的“根的路径”和“引用对象”树 。
 
  ![托管堆树](../profiling/media/memuse__snapshotdetails_managedheaptree.png "托管堆树")
 
@@ -170,7 +170,7 @@ ms.locfileid: "85543346"
 
 ### <a name="managed-heap-tree-snapshot-diff-reports"></a><a name="BKMK_Managed_Heap_tree__Snapshot_diff_"></a>托管堆树（快照差异报表）
 
- **托管堆**树列出了内存中保存的对象类型。 你可以展开类型名称以查看十大类型示例（按大小排列）。 通过选择类型或实例，以显示选定项的“根的路径”和“引用对象”树 。
+ **托管堆** 树列出了内存中保存的对象类型。 你可以展开类型名称以查看十大类型示例（按大小排列）。 通过选择类型或实例，以显示选定项的“根的路径”和“引用对象”树 。
 
  ![差异报表中类型的托管堆树](../profiling/media/memuse_snapshotdiff_type_heap.png "差异报表中类型的托管堆树")
 

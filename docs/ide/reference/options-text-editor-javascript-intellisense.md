@@ -1,5 +1,7 @@
 ---
 title: 选项，文本编辑器，JavaScript，IntelliSense
+description: 了解如何使用“选项”对话框的“IntelliSense”页，修改影响 IntelliSense for JavaScript 行为的设置。
+ms.custom: SEO-VS-2020
 ms.date: 10/29/2018
 ms.technology: vs-javascript
 ms.topic: reference
@@ -13,16 +15,16 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e3d030e028332bd57afe66eee31c888713721212
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 41256882433bc95db7af380d27cc8dc63fbcd387
+ms.sourcegitcommit: a7944c325bedd8efbb244452741864089a02f5db
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "68605981"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91947721"
 ---
 # <a name="options-dialog-box-text-editor--javascript--intellisense"></a>“选项”对话框：“文本编辑器”\>“JavaScript”\>“IntelliSense”
 
-使用 **“选项”** 对话框的 **“IntelliSense”** 页可以修改影响 IntelliSense for JavaScript 行为的设置。 可以通过选择菜单栏上的“工具” > “选项”，然后展开“文本编辑器” > “JavaScript/TypeScript” > “IntelliSense”来访问“IntelliSense”页       。
+使用 **“选项”** 对话框的 **“IntelliSense”** 页可以修改影响 IntelliSense for JavaScript 行为的设置。 可以通过选择菜单栏上的“工具” > “选项”，然后展开“文本编辑器” > “JavaScript/TypeScript” > “IntelliSense”来访问“IntelliSense”页  。
 
 [!INCLUDE[note_settings_general](../../data-tools/includes/note_settings_general_md.md)]
 
@@ -36,9 +38,9 @@ ms.locfileid: "68605981"
 
 **仅使用 Tab 或 Enter 键提交**
 
-选中此复选框时，JavaScript 代码编辑器仅将在你选择“Tab”或“Enter”键后，才会附加完成列表中选定项目的语句   。 取消选中此复选框时，其他字符（如句点、逗号、冒号、左括号和左大括号 ({)） - 也可以附加具有选定项的语句。
+选中此复选框时，JavaScript 代码编辑器仅将在你选择“Tab”或“Enter”键后，才会附加完成列表中选定项目的语句  。 取消选中此复选框时，其他字符（如句点、逗号、冒号、左括号和左大括号 ({)） - 也可以附加具有选定项的语句。
 
-## <a name="references"></a>reference
+## <a name="references"></a>参考
 
 可以使用这些选项来指定位于不同 JavaScript 项目类型的范围内的 IntelliSense .js 文件类型。 IntelliSense 引用通常用于为全局对象提供 IntelliSense 支持。 还可以使用此页对必须在运行时加载的脚本设置加载顺序以及添加 IntelliSense 扩展文件。
 
@@ -50,7 +52,7 @@ ms.locfileid: "68605981"
 
 可以使用预定义的引用组指定特定 IntelliSense .js 文件位于不同 JavaScript 项目的范围内。 提供四个引用组：
 
-- 隐式 (Windows *version*)，用于使用 JavaScript 的 [!INCLUDE[win8_appname_long](../../debugger/includes/win8_appname_long_md.md)] 应用。 包含在该组中的文件位于代码编辑器中打开的每个 .js 文件的范围内，用于使用 JavaScript 的 [!INCLUDE[win8_appname_long](../../debugger/includes/win8_appname_long_md.md)] 应用。
+- 隐式 (Windows *version* )，用于使用 JavaScript 的 [!INCLUDE[win8_appname_long](../../debugger/includes/win8_appname_long_md.md)] 应用。 包含在该组中的文件位于代码编辑器中打开的每个 .js 文件的范围内，用于使用 JavaScript 的 [!INCLUDE[win8_appname_long](../../debugger/includes/win8_appname_long_md.md)] 应用。
 
 - 隐式 (Web)，用于 HTML5 项目。 包含在该组中的文件位于代码编辑器中为这些项目类型打开的每个 .js 文件的范围中。
 
@@ -76,6 +78,6 @@ ms.locfileid: "68605981"
 > [!NOTE]
 > 对于 Web 项目，默认下载你的项目中所引用的远程文件。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [JavaScript IntelliSense](../../ide/javascript-intellisense.md)

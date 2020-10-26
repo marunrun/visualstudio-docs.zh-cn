@@ -8,12 +8,12 @@ ms.author: tglee
 author: prnadago
 ms.manager: jillfra
 monikerRange: vs-2019
-ms.openlocfilehash: e8bc35a6434ab619e7232b5351ba95aae68db2cd
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 1f9dc891219e5563ad6ea72085b0ad28469c7171
+ms.sourcegitcommit: a876fcc75321f9c30729121cae83f400973f9d9d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91005124"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92082052"
 ---
 # <a name="new-git-experience-in-visual-studio-preview"></a>Visual Studio 中的 Git 新体验（预览版）
 
@@ -79,9 +79,9 @@ Visual Studio 将根据你在解决方案资源管理器中加载的视图文件
 
 当你操作时，Git 会跟踪存储库中的文件更改，并将存储库中的文件分为三类。 这些更改等效于在命令行中输入 `git status` 命令时看到的内容：
 
-- **未修改的文件**：自上次提交以来，这些文件未更改。
-- **已修改的文件**：自上次提交以来，这些文件已更改，但尚未被暂存以用于下一次提交。
-- **已暂存的文件**：这些文件已更改并将添加到下一次提交中。
+- **未修改的文件** ：自上次提交以来，这些文件未更改。
+- **已修改的文件** ：自上次提交以来，这些文件已更改，但尚未被暂存以用于下一次提交。
+- **已暂存的文件** ：这些文件已更改并将添加到下一次提交中。
 
 当你执行操作时，Visual Studio 会在“Git 更改”窗口的“更改”部分中跟踪对项目的文件更改 。
 
@@ -96,6 +96,9 @@ Visual Studio 将根据你在解决方案资源管理器中加载的视图文件
 还可通过 Visual Studio 的“全部提交并推送”和“全部提交并同步”快捷方式，轻松地一键提交和同步 。 双击“更改”和“已暂存的更改”部分中的任何文件时，可以看到与该文件的未修改版本的逐行比较 。
 
 :::image type="content" source="media/git-file-version-compare.png" alt-text="Visual Studio 中“选项”对话框的“预览功能”部分的屏幕截图":::
+
+> [!TIP]
+> 如果已连接到 Azure DevOps 存储库，可使用“#”字符将 Azure DevOps 工作项和提交相关联。 可通过“团队资源管理器”>“管理连接”连接 Azure DevOps 存储库
 
 ### <a name="select-an-existing-branch"></a>选择一个现有分支
 

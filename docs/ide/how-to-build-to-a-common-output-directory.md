@@ -1,5 +1,7 @@
 ---
 title: 如何：生成到公共输出目录
+description: 了解如何通过更改项目的生成输出路径来强制将所有输出都放到相同的文件夹中。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-compile
 ms.topic: how-to
@@ -13,12 +15,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9a499b5ca5ea64dd9ded10f82b1af43258f346d3
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: a39dae210c2cb9afe3e4b77962b75ddb3be4baeb
+ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85284771"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92136961"
 ---
 # <a name="how-to-build-to-a-common-output-directory"></a>如何：生成到公共输出目录
 
@@ -30,7 +32,7 @@ ms.locfileid: "85284771"
 
 2. 在 **“项目”** 菜单上，单击 **“属性”** 。
 
-3. 根据项目的类型，单击“编译”选项卡或“生成”选项卡，并将“输出路径”设置为适用于解决方案中所有项目的文件夹    。
+3. 根据项目的类型，单击“编译”选项卡或“生成”选项卡，并将“输出路径”设置为适用于解决方案中所有项目的文件夹  。
 
 4. 为解决方案中的所有项目重复 1-3 步骤。
 

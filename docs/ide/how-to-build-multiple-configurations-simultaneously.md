@@ -1,5 +1,7 @@
 ---
 title: 如何：生成多个配置
+description: 了解如何只通过一个 IDE 操作生成大多数类型的具有多个甚至所有生成配置的项目。
+ms.custom: SEO-VS-2020
 ms.date: 05/13/2020
 ms.technology: vs-ide-compile
 ms.topic: how-to
@@ -9,12 +11,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d7820d56bcb266e8361f36cb5350475f31445800
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8cc5963ed3a16ffba16a52bfcde7425fb1f10cba
+ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85284757"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92136974"
 ---
 # <a name="how-to-build-multiple-configurations-in-a-single-build-request"></a>如何：在单个生成请求中生成多个配置
 

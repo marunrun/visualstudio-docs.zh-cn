@@ -1,5 +1,6 @@
 ---
 title: 使用 Visual Studio Tools for Unity | Microsoft Docs
+description: 了解如何使用 Visual Studio Tools for Unity 的集成和工作效率功能。 还可使用 Visual Studio 调试器进行 Unity 开发。
 ms.custom: ''
 ms.date: 07/03/2018
 ms.technology: vs-unity-tools
@@ -10,12 +11,12 @@ ms.author: johmil
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: d8a0db05788682bf08f9899cebb517370a1627b6
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: d6bf19060d029ee20b4c5c06d594e3b16cb391a3
+ms.sourcegitcommit: 01c1b040b12d9d43e3e8ccadee20d6282154faad
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89508959"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039854"
 ---
 # <a name="use-visual-studio-tools-for-unity"></a>使用 Visual Studio Tools for Unity
 
@@ -49,7 +50,7 @@ Intellisense 代码完成简化了在 MonoBehaviour 脚本中实现 Unity API �
 
 4. 可通过以下三种方式更改列表中的选择：
 
-    - 使用向上键和向下键 。
+    - 使用向上键和向下键   。
 
     - 使用鼠标单击所需项。
 
@@ -107,7 +108,7 @@ Visual Studio Tools for Unity 让你可以使用 Visual Studio 功能强大的�
 
    ![在 Visual Studio 中单击“播放”](media/vstu_play-button.png)
 
-2. 切换到 Unity 并单击“Play”按钮，在编辑器中运行游戏。
+2. 切换到 Unity 并单击“Play”按钮，在编辑器中运行游戏  。
 
    ![在 Unity 中单击“播放”](media/vstu_unity-play-button.png)
 

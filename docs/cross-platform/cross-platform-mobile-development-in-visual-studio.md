@@ -1,5 +1,6 @@
 ---
 title: Visual Studio 中的跨平台移动开发 | Microsoft Docs
+description: 在本文中，了解如何使用 Visual Studio 生成适用于 Android、iOS 和 Windows 设备的应用。
 titleSuffix: ''
 ms.custom: SEO-VS-2020
 ms.date: 10/17/2019
@@ -11,12 +12,12 @@ ms.author: crdun
 manager: crdun
 ms.workload:
 - multiple
-ms.openlocfilehash: 12c0da32014581e6e9cc0ea22cb80414462f03bd
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 09b200538f7d6bee55d12a79334811c8ba57515a
+ms.sourcegitcommit: 3e05bd4bfac6f0b8b3534d8c013388f67e288651
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037258"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91959830"
 ---
 # <a name="cross-platform-mobile-development-in-visual-studio"></a>Visual Studio 中的跨平台移动开发
 
@@ -163,7 +164,7 @@ ms.locfileid: "90037258"
 |[阅读有关 Visual Studio Tools for Unity 的详细信息](../cross-platform/visual-studio-tools-for-unity.md) |
 |[开始使用 Visual Studio Tools for Unity](../cross-platform/getting-started-with-visual-studio-tools-for-unity.md) |
 |[了解关于 Visual Studio Tools for Unity 2.0 预览版的最新增强功能](https://devblogs.microsoft.com/visualstudio/visual-studio-tools-for-unity-2-0-preview/) （Visual Studio 博客）|
-|[观看 Visual Studio Tools for Unity 2.0 预览版的简介视频](https://www.bing.com/videos/search?q=visual+studio+tools+for+unity&qs=n&form=QBVLPG&pq=visual+studio+tools+for+unity&sc=6-29&sp=-1&sk=#view=detail&mid=0A13177F0BC7463A24080A13177F0BC7463A2408) （视频）|
+|[观看 Visual Studio Tools for Unity 2.0 预览版的简介视频](https://www.bing.com/videos/search?q=visual+studio+tools+for+unity&qs=n&form=QBVLPG&pq=visual+studio+tools+for+unity&sc=6-29&sp=-1&sk=#view=detail&mid=0A13177F0BC7463A24080A13177F0BC7463A2408&preserve-view=true) （视频）|
 |[了解 Unity](https://unity.com/) （Unity 网站）|
 
 ## <a name="see-also"></a>请参阅

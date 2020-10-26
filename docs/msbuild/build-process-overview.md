@@ -9,12 +9,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c3c1cdc4738f60301435932b3700f14377f12172
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 65e386b71c0b7ece3aee8185574d53955b7326a1
+ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85290822"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92136857"
 ---
 # <a name="how-msbuild-builds-projects"></a>MSBuild 如何生成项目
 
@@ -50,7 +50,7 @@ MSBuild 项目文件的 SDK 功能相对较新。 在进行此更改之前，项
 
 本节讨论如何处理和分析这些输入文件，以生成确定将生成内容的内存中对象。
 
-评估阶段的目的是基于输入 XML 文件和本地环境在内存中创建对象结构。 评估阶段包含五个处理输入文件（如项目 XML 文件或/和导入的 XML 文件（通常名 .props 或 .targets 文件））的环节，具体取决于它们主要是设置属性还是定义生成目标。 每个环节都会生成一部分内存中对象，这些对象稍后会在执行阶段用于生成项目，但在评估阶段不会发生实际的生成操作。 在每个环节中，将按照元素的显示顺序对其进行处理。
+评估阶段的目的是基于输入 XML 文件和本地环境在内存中创建对象结构。 评估阶段包含六个处理输入文件（如项目 XML 文件或/和导入的 XML 文件（通常名 .props 或 .targets 文件））的环节，具体取决于它们主要是设置属性还是定义生成目标 。 每个环节都会生成一部分内存中对象，这些对象稍后会在执行阶段用于生成项目，但在评估阶段不会发生实际的生成操作。 在每个环节中，将按照元素的显示顺序对其进行处理。
 
 评估阶段中的各个环节如下：
 

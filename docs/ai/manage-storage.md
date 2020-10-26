@@ -1,5 +1,7 @@
 ---
 title: 浏览存储以上传数据
+description: 了解如何在远程计算机或 Azure 文件共享上访问所有存储，以上传数据或下载模型和日志。
+ms.custom: SEO-VS-2020
 author: jillre
 ms.author: jillfra
 manager: jillfra
@@ -8,12 +10,12 @@ ms.date: 11/13/2017
 ms.topic: how-to
 ms.workload:
 - multiple
-ms.openlocfilehash: 188ebee353261ba49f6677a0f96db68b7e8d46d9
-ms.sourcegitcommit: 48e93538f1e352fc1f972b642bb5fcce2f6834a2
+ms.openlocfilehash: ae419c67b493ef03b08f6fcf627ad0fbe42ca6d0
+ms.sourcegitcommit: 9c57730000d5ced37d3887f3928b17076f49d0f7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85371607"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92099201"
 ---
 # <a name="browse-storage-to-upload-data-or-download-models-and-logs"></a>浏览存储以上传数据或下载模型和日志
 

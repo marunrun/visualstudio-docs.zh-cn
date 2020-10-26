@@ -15,12 +15,12 @@ dev_langs:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 981f18857beb83ef2a4902f50985ca8e9f7ed901
-ms.sourcegitcommit: 8e5b0106061bb43247373df33d0850ae68457f5e
+ms.openlocfilehash: fd0d2b3e112a4bf08481fa8f043f70121d827010
+ms.sourcegitcommit: cea9e5787ff33e0e18aa1942bf4236748e0ef547
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88507951"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197473"
 ---
 # <a name="tutorial-extend-a-simple-c-console-app"></a>教程：扩展简单的 C# 控制台应用
 
@@ -120,9 +120,10 @@ ms.locfileid: "88507951"
 
 ## <a name="reference-net-libraries-write-to-a-log"></a>引用 .NET 库：写入日志
 
-1. 假设你现在要添加所有操作的日志，并将其写出到文本文件。 .NET `Trace` 类提供了此功能。 （这也适用于基本的打印调试技术。）Trace 类位于 System.Diagnostics 中，因此请首先添加 using 指令：
+1. 假设你现在要添加所有操作的日志，并将其写出到文本文件。 .NET `Trace` 类提供了此功能。 （这也适用于基本的打印调试技术。）Trace 类位于 System.Diagnostics 中，并且我们需要诸如 `StreamWriter` 的 System.IO 类，因此请首先添加 using 指令：
 
    ```csharp
+   using System.IO;
    using System.Diagnostics;
    ```
 
@@ -217,7 +218,7 @@ ms.locfileid: "88507951"
 
    下载此包并将其添加到项目中后，解决方案资源管理器的“引用”节点中将显示一个新条目。
 
-1. 在 CalculatorLibrary.cs 的开头为 Newtonsoft.Json 包添加 using 指令。
+1. 在 CalculatorLibrary.cs 的开头为 System.IO 和 Newtonsoft.Json 包添加 using 指令。
 
    ```csharp
    using Newtonsoft.Json;
@@ -307,7 +308,7 @@ ms.locfileid: "88507951"
         }
    ```
 
-1. 生成并运行应用，并在完成输入一些操作后，使用“n”命令正确关闭该应用。  现在，打开 consolelog.json 文件，你应看到如下所示的内容：
+1. 生成并运行应用，并在完成输入一些操作后，使用“n”命令正确关闭该应用。  现在，打开 calculatorlog.json 文件，你应看到如下所示的内容：
 
    ```json
    {

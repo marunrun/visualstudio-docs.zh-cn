@@ -1,5 +1,6 @@
 ---
 title: 创建多计算机生成环境
+description: 在组织内创建生成环境，方式为在主计算机上安装 Visual Studio，然后将各种文件和设置复制到其他计算机。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-compile
@@ -12,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 595317be1c3f24c9759bc5bb574a758795066659
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 1c8fa7756763a668f6e97d90d8a405c660519189
+ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90038421"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92136948"
 ---
 # <a name="walkthrough-create-a-multiple-computer-build-environment"></a>演练：创建多计算机生成环境
 
@@ -387,9 +388,9 @@ MSBuild 需要在生成计算机的 GAC 上安装一些附加程序集。
 
 6. 更改命令行环境，如下所示：
 
-    - 设置 Depot=*在第 1 步中创建的 Depot 目录的位置*
+    - 设置 Depot= *在第 1 步中创建的 Depot 目录的位置*
 
-    - 设置 path=%path%;*计算机上的 MSBuild 位置*;%Depot%\Windows\System32;%Depot%\Windows\SysWOW64;%Depot%\Microsoft Visual Studio 15.0\Common7\IDE\
+    - 设置 path=%path%; *计算机上的 MSBuild 位置* ;%Depot%\Windows\System32;%Depot%\Windows\SysWOW64;%Depot%\Microsoft Visual Studio 15.0\Common7\IDE\
 
        对于本机 64 位生成，请指向 64 位版本的 MSBuild。
 
@@ -399,9 +400,9 @@ MSBuild 需要在生成计算机的 GAC 上安装一些附加程序集。
 
 6. 更改命令行环境，如下所示：
 
-    - 设置 Depot=*在第 1 步中创建的 Depot 目录的位置*
+    - 设置 Depot= *在第 1 步中创建的 Depot 目录的位置*
 
-    - 设置 path=%path%;*计算机上的 MSBuild 位置*;%Depot%\Windows\System32;%Depot%\Windows\SysWOW64;%Depot%\Microsoft Visual Studio 16.0\Common7\IDE\
+    - 设置 path=%path%; *计算机上的 MSBuild 位置* ;%Depot%\Windows\System32;%Depot%\Windows\SysWOW64;%Depot%\Microsoft Visual Studio 16.0\Common7\IDE\
 
        对于本机 64 位生成，请指向 64 位版本的 MSBuild。
 

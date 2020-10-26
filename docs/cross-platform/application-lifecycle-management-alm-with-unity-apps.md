@@ -1,5 +1,6 @@
 ---
 title: 适用于 Unity 应用的应用程序生命周期管理 (ALM) | Microsoft Docs
+description: 了解适用于 Unity 应用的应用程序生命周期管理 (ALM)。 查看 Agile 工具、模型、代码、生成、测试，并提高代码质量。
 ms.date: 08/21/2018
 ms.technology: vs-unity-tools
 ms.topic: conceptual
@@ -9,12 +10,12 @@ ms.author: crdun
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: be42bf1498746ce57f662f43c12ece80ac6ca9be
-ms.sourcegitcommit: 5caad925ca0b5d136416144a279e984836d8f28c
+ms.openlocfilehash: 17cfe2dd0a1ba25eeab6b0bb31ad849303207a02
+ms.sourcegitcommit: 01c1b040b12d9d43e3e8ccadee20d6282154faad
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89509037"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039919"
 ---
 # <a name="devops-with-unity-apps"></a>适用于 Unity 应用的 DevOps
 
@@ -26,7 +27,7 @@ Visual Studio、Azure DevOps Services 和 Team Foundation Server 提供了各种
 
 ## <a name="agile-tools"></a>敏捷工具
 
-参考链接：[关于敏捷工具和敏捷项目管理](/azure/devops/boards/backlogs/backlogs-overview?view=vsts)（使用 Azure Boards 或 TFS，包括 Team Explorer Everywhere）
+参考链接：[关于敏捷工具和敏捷项目管理](/azure/devops/boards/backlogs/backlogs-overview?view=vsts&preserve-view=true)（使用 Azure Boards 或 TFS，包括 Team Explorer Everywhere）
 
 常规注释：所有的计划和跟踪功能均独立于项目类型和编码语言。
 
@@ -59,8 +60,8 @@ Visual Studio、Azure DevOps Services 和 Team Foundation Server 提供了各种
 
 |功能|通过 Unity 提供支持|其他注释|
 |-------------|--------------------------|-------------------------|
-|[使用 Team Foundation 版本控制 (TFVC)](/azure/devops/repos/tfvc/overview?view=vsts) 或 Azure Repos|是|Unity项目是一个文件集合，可以像任何其他项目一样放置到版本控制系统中，但有几点需要特别注意，请参见此表后内容。|
-|[Azure Repos 中的 Git 入门](/azure/devops/repos/git/gitquickstart?view=vsts&tabs=visual-studio)|是|请参阅表后的注释。|
+|[使用 Team Foundation 版本控制 (TFVC)](/azure/devops/repos/tfvc/overview?view=vsts&preserve-view=true) 或 Azure Repos|是|Unity项目是一个文件集合，可以像任何其他项目一样放置到版本控制系统中，但有几点需要特别注意，请参见此表后内容。|
+|[Azure Repos 中的 Git 入门](/azure/devops/repos/git/gitquickstart?view=vsts&tabs=visual-studio&preserve-view=true)|是|请参阅表后的注释。|
 |[提高代码质量](../test/improve-code-quality.md)|是||
 |[查找代码更改和其他历史记录](../ide/find-code-changes-and-other-history-with-codelens.md)|是||
 |[使用代码图调试应用程序](../modeling/use-code-maps-to-debug-your-applications.md)|是||
@@ -75,12 +76,12 @@ Visual Studio、Azure DevOps Services 和 Team Foundation Server 提供了各种
 
 ## <a name="build"></a>生成
 
-参考链接： **[Azure Pipelines](/azure/devops/pipelines/index?view=vsts)**
+参考链接： **[Azure Pipelines](/azure/devops/pipelines/index?view=vsts&preserve-view=true)**
 
 |功能|通过 Unity 提供支持|其他注释|
 |-------------|--------------------------|-------------------------|
 |本地 Team Foundation Server (TFS)|可能|Unity 项目通过 Unity 环境生成，而不是 Visual Studio 生成系统（在 Visual Studio Tools 中为 Unity 生成项目将对脚本进行编译，但不是会生成可执行文件）。 可以[从命令行生成 Unity 项目](https://docs.unity3d.com/Manual/CommandLineArguments.html)（Unity 文档），因此用户可以在 TFS 服务器上配置 MSBuild 进程，以执行相应的 Unity 命令，前提是该计算机已经安装了 Unity。<br /><br /> Unity 也提供 [Unity 云生成](https://build.cloud.unity3d.com/landing/)，它会监视 Git 或 SVN 储存库，并定期运行生成。 目前，它不适用于 TFVC 或 Azure DevOps Services。|
-|链接到 Azure DevOps Services 的本地生成服务器|可能|给定上述相同条件，更有可能指向通过 Azure DevOps Services 触发的生成，以便使用本地 TFS 计算机。 请参阅[生成和发布代理](/azure/devops/pipelines/agents/agents?view=vsts)了解相关介绍。|
+|链接到 Azure DevOps Services 的本地生成服务器|可能|给定上述相同条件，更有可能指向通过 Azure DevOps Services 触发的生成，以便使用本地 TFS 计算机。 请参阅[生成和发布代理](/azure/devops/pipelines/agents/agents?view=vsts&preserve-view=true)了解相关介绍。|
 |Azure DevOps Services 的托管控制器服务|否|目前不支持 Unity 生成。|
 |生成带有前脚本和后脚本的定义|是|使用 Unity 命令行运行生成的自定义生成定义还可以配置为预生成和后生成脚本。|
 |包括封闭签入的持续集成|是|仅在 Git 用于拉取请求（而非签入）时，封闭签入才适用于 TFVC。|
@@ -110,7 +111,7 @@ Visual Studio、Azure DevOps Services 和 Team Foundation Server 提供了各种
 
 ## <a name="release-management"></a>发布管理
 
-参考链接：[Azure Pipelines 和 TFS 中的生成和发布](/azure/devops/pipelines/overview?view=vsts)
+参考链接：[Azure Pipelines 和 TFS 中的生成和发布](/azure/devops/pipelines/overview?view=vsts&preserve-view=true)
 
 |功能|通过 Unity 提供支持|其他注释|
 |-------------|--------------------------|-------------------------|

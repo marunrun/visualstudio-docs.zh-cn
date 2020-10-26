@@ -6,12 +6,12 @@ ms.author: tglee
 author: TerryGLee
 manager: jillfra
 ms.topic: include
-ms.openlocfilehash: 1563efb15f98720352a25eec59c8eca045f77ddc
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: 03e5f806b428b7ecf08038ef34d6b1dddcd92f9e
+ms.sourcegitcommit: cea9e5787ff33e0e18aa1942bf4236748e0ef547
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91025217"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92210888"
 ---
 Visual Studio 集成开发环境是一种创新启动板，可用于编辑、调试并生成代码，然后发布应用  。 集成开发环境 (IDE) 是一个功能丰富的程序，可用于软件开发的许多方面。 除了大多数 IDE 提供的标准编辑器和调试器之外，Visual Studio 还包括编译器、代码完成工具、图形设计器和许多其他功能，以简化软件开发过程。
 
@@ -91,12 +91,9 @@ Visual Studio 中的一些常用功能可帮助你在开发软件时提高工作
 
    ![Visual Studio 成员列表](../media/intellisense-list-members.png)
 
-- 搜索框
+- [Visual Studio 搜索](../../ide/visual-studio-search.md)
 
-   visual Studio 有时会因为有如此多的菜单、选项和属性而让人不知所措。 使用搜索框可以在 Visual Studio 中快速找到所需内容。 开始键入要查找内容的名称时，Visual Studio 会列出结果，这些结果可以准确地将你导向目标位置。 如果需要向 Visual Studio 添加功能，例如添加对其他编程语言的支持，可使用搜索框提供的结果打开 Visual Studio 安装程序以安装工作负载或单个组件。
-
-   > [!TIP]
-   > 按 Ctrl+Q 作为启动搜索框的快捷方式   。
+   visual Studio 有时会因为有如此多的菜单、选项和属性而让人不知所措。 Visual Studio 搜索 (Ctrl+Q) 是在同一位置快速查找 IDE 功能和代码的绝佳方法 。
 
    ::: moniker range="vs-2017"
 
@@ -109,6 +106,8 @@ Visual Studio 中的一些常用功能可帮助你在开发软件时提高工作
    ::: moniker range="vs-2019"
 
    ![Visual Studio 2019 中的搜索框](../media/vs-2019/quick-launch-nuget.png)
+
+    有关信息和工作效率提示，请参阅[如何使用 Visual Studio 搜索](../../ide/visual-studio-search.md)。
 
    ::: moniker-end
 
@@ -146,13 +145,13 @@ Visual Studio 中的一些常用功能可帮助你在开发软件时提高工作
 
 ::: moniker range="vs-2017"
 
-首先，请[下载 Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) 并将其安装到你的系统上。 通过模块化安装程序，可以选择和安装工作负荷。工作负荷是你习惯使用的编程语言或平台所需的一些功能  。 若要执行[创建程序](#create-a-program)所需的步骤，请务必在安装过程中选择“.NET Core 跨平台开发”工作负载  。
+首先，请[下载 Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) 并将其安装到你的系统上。 通过模块化安装程序，可以选择和安装工作负荷。工作负荷是你习惯使用的编程语言或平台所需的一些功能  。 若要执行  。
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-首先，请[下载 Visual Studio](https://visualstudio.microsoft.com/downloads) 并将其安装到你的系统上。 通过模块化安装程序，可以选择和安装工作负荷。工作负荷是你习惯使用的编程语言或平台所需的一些功能  。 若要执行[创建程序](#create-a-program)所需的步骤，请务必在安装过程中选择“.NET Core 跨平台开发”工作负载  。
+首先，请[下载 Visual Studio](https://visualstudio.microsoft.com/downloads) 并将其安装到你的系统上。 通过模块化安装程序，可以选择和安装工作负荷。工作负荷是你习惯使用的编程语言或平台所需的一些功能  。 若要执行  。
 
 ::: moniker-end
 
@@ -174,12 +173,12 @@ Visual Studio 中的一些常用功能可帮助你在开发软件时提高工作
 
    “新建项目”  对话框中会显示几个项目模板  。 模板包含给定项目类型所需的基本文件和设置。
 
-1. 在“Visual C#”  下选择“.NET Core”  模板类别，然后选择“控制台应用(.NET Core)”  模板。 在“名称”文本框中，键入“HelloWorld”，然后选择“确定”按钮    。
+1. 在“Visual C#”  下选择“.NET Core”  模板类别，然后选择“控制台应用(.NET Core)”  模板。 在“名称”文本框中，键入“HelloWorld”，然后选择“确定”按钮  。
 
    ![.NET Core 应用模板](../media/overview-new-project-dialog.png)
 
    > [!NOTE]
-   > 如果未看到“.NET Core”类别，则需要安装“.NET Core 跨平台开发”工作负载   。 为此，选择“新建项目”  对话框左下角的“打开 Visual Studio 安装程序”  链接。 “Visual Studio 安装程序”打开后，向下滚动并选择“.NET Core 跨平台开发”工作负载，然后选择“修改”   。
+   > 如果未看到“.NET Core”类别，则需要安装“.NET Core 跨平台开发”工作负载  。 为此，选择“新建项目”  对话框左下角的“打开 Visual Studio 安装程序”  链接。 “Visual Studio 安装程序”打开后，向下滚动并选择“.NET Core 跨平台开发”工作负载，然后选择“修改”  。
 
    Visual Studio 随即创建项目。 它是简单的“Hello World”应用程序，可调用 <xref:System.Console.WriteLine?displayProperty=nameWithType> 方法在控制台窗口中 显示文本字符串“Hello World!”。
 
@@ -193,7 +192,7 @@ Visual Studio 中的一些常用功能可帮助你在开发软件时提高工作
 
    还提供了一些其他的菜单和工具窗口，但是现在我们继续下一步操作。
 
-1. 现在启动该应用。 可从菜单栏的“调试”菜单中选择“开始执行(不调试)”，以执行此操作   。 还可按 Ctrl+F5   。
+1. 现在启动该应用。 可从菜单栏的“调试”菜单中选择“开始执行(不调试)”，以执行此操作  。 还可按 Ctrl+F5 。
 
    ![“调试”>“开始执行(不调试)”菜单](../media/overview-start-without-debugging.png)
 
@@ -210,7 +209,7 @@ Visual Studio 中的一些常用功能可帮助你在开发软件时提高工作
    var name = Console.ReadLine();
    ```
 
-   此代码在控制台窗口中显示“What is your name?”，然后等待用户输入文本并按 Enter 键   。
+   此代码在控制台窗口中显示“What is your name?”，然后等待用户输入文本并按 Enter 键  。
 
 1. 将显示 `Console.WriteLine("Hello World!");` 的行更改为以下代码：
 
@@ -218,7 +217,7 @@ Visual Studio 中的一些常用功能可帮助你在开发软件时提高工作
    Console.WriteLine($"\nHello {name}!");
    ```
 
-1. 通过选择“调试”>“启动但不调试”或通过按“Ctrl+F5”再次运行该应用     。
+1. 选择“调试”  ，或按 Ctrl +F5  ，再次运行该应用。
 
    Visual Studio 重新生成应用，控制台窗口随即打开，并提示输入姓名。
 
@@ -236,7 +235,7 @@ Visual Studio 中的一些常用功能可帮助你在开发软件时提高工作
 
    “启动”窗口中会显示有关克隆存储库、打开最近的项目或创建全新项目的各种选项。
 
-1. 选择“创建新项目”  。
+1. 选择“创建新项目”。
 
    ![Visual Studio“启动”窗口创建新项目](../media/vs-2019/start-window-create-new-project.png)
 
@@ -262,7 +261,7 @@ Visual Studio 中的一些常用功能可帮助你在开发软件时提高工作
 
    还提供了一些其他的菜单和工具窗口，但是现在我们继续下一步操作。
 
-1. 现在启动该应用。 可从菜单栏的“调试”菜单中选择“开始执行(不调试)”，以执行此操作   。 还可按 Ctrl+F5   。
+1. 现在启动该应用。 可从菜单栏的“调试”菜单中选择“开始执行(不调试)”，以执行此操作  。 还可按 Ctrl+F5 。
 
    ![“调试”>“开始执行(不调试)”菜单](../media/overview-start-without-debugging.png)
 
@@ -279,7 +278,7 @@ Visual Studio 中的一些常用功能可帮助你在开发软件时提高工作
    var name = Console.ReadLine();
    ```
 
-   此代码在控制台窗口中显示“What is your name?”，然后等待用户输入文本并按 Enter 键   。
+   此代码在控制台窗口中显示“What is your name?”，然后等待用户输入文本并按 Enter 键  。
 
 1. 将显示 `Console.WriteLine("Hello World!");` 的行更改为以下代码：
 
@@ -287,7 +286,7 @@ Visual Studio 中的一些常用功能可帮助你在开发软件时提高工作
    Console.WriteLine($"\nHello {name}!");
    ```
 
-1. 通过选择“调试”>“启动但不调试”或通过按“Ctrl+F5”再次运行该应用     。
+1. 选择“调试”  ，或按 Ctrl +F5  ，再次运行该应用。
 
    Visual Studio 重新生成应用，控制台窗口随即打开，并提示输入姓名。
 
@@ -339,7 +338,7 @@ Visual Studio 中的一些常用功能可帮助你在开发软件时提高工作
 
    ![Visual Studio 中的 IntelliSense 列表成员](../media/intellisense-list-members.png)
 
-5. 通过双击或按 Tab 选择名为“Now”（该类的一个属性）的成员   。通过向末尾添加分号来完成代码行。
+5. 通过双击或按 Tab 选择名为“Now”（该类的一个属性）的成员 。通过向末尾添加分号来完成代码行。
 
 6. 在它的下方，键入或粘贴以下代码行：
 
@@ -365,7 +364,7 @@ Visual Studio 中的一些常用功能可帮助你在开发软件时提高工作
 
 ::: moniker range="vs-2017"
 
-10. 按 Ctrl+F5 重新运行程序   。 输出的内容与以下类似：
+10. 按 Ctrl+F5 重新运行程序 。 输出的内容与以下类似：
 
     ![显示程序输出的控制台窗口](../media/overview-console-final.png)
 
@@ -373,7 +372,7 @@ Visual Studio 中的一些常用功能可帮助你在开发软件时提高工作
 
 ::: moniker range=">=vs-2019"
 
-10. 按 Ctrl+F5 重新运行程序   。 输出的内容与以下类似：
+10. 按 Ctrl+F5 重新运行程序 。 输出的内容与以下类似：
 
     ![显示程序输出的控制台窗口](../media/vs-2019/overview-console-final.png)
 
@@ -391,13 +390,13 @@ Visual Studio 中的一些常用功能可帮助你在开发软件时提高工作
 
    ![Visual Studio 中代码行上的断点](../media/breakpoint.png)
 
-1. 选择“调试” > “启动调试”或按 F5，开始调试    。
+1. 选择“调试” > “启动调试”或按 F5，开始调试  。
 
 1. 控制台窗口出现并询问姓名时，请键入姓名，然后按 Enter  。
 
    Visual Studio 代码编辑器重新获得焦点，有断点的代码行突出显示为黄色。 这表示它是程序将执行的下一个代码行。
 
-1. 将鼠标悬停在 `username` 变量上，即可查看它的值。 或者，可以右键单击 `username` 并选择“添加监视”，将变量添加到监视窗口，这样也可查看它的值   。
+1. 将鼠标悬停在 `username` 变量上，即可查看它的值。 或者，可以右键单击 `username` 并选择“添加监视”，将变量添加到监视窗口，这样也可查看它的值  。
 
    ![在 Visual Studio 中进行调试时的变量值](../media/debugging-variable-value.png)
 
@@ -409,11 +408,11 @@ Visual Studio 中的一些常用功能可帮助你在开发软件时提高工作
 
 可个性化设置 Visual Studio 用户界面，包括更改默认颜色主题。 更改为“深色”主题  ：
 
-1. 在菜单栏中，选择“工具” > “选项”，打开“选项”对话框    。
+1. 在菜单栏中，选择“工具” > “选项”，打开“选项”对话框  。
 
 ::: moniker range="vs-2017"
 
-2. 在“环境”>“常规”选项页上，将“颜色主题”选择内容更改为“深色”，然后选择“确定”      。
+2. 在“环境”>“常规”选项页上，将“颜色主题”选择内容更改为“深色”，然后选择“确定”    。
 
    此时，整个 IDE 的颜色主题更改为“深色”  。
 
@@ -423,7 +422,7 @@ Visual Studio 中的一些常用功能可帮助你在开发软件时提高工作
 
 ::: moniker range=">=vs-2019"
 
-2. 在“环境”>“常规”选项页上，将“颜色主题”选择内容更改为“深色”，然后选择“确定”      。
+2. 在“环境”>“常规”选项页上，将“颜色主题”选择内容更改为“深色”，然后选择“确定”    。
 
    此时，整个 IDE 的颜色主题更改为“深色”  。
 

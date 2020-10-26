@@ -1,5 +1,6 @@
 ---
 title: 为项目和 NuGet 包取消显示警告
+description: 了解如何通过筛选出一个或多个类型的编译器警告，使用 Visual Studio 整理生成日志。
 ms.custom: SEO-VS-2020
 ms.date: 01/24/2018
 ms.technology: vs-ide-compile
@@ -9,12 +10,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 33abc359dea3e1c7982e5d1689debc1f8e881106
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: a59f3706e2d33e87e760d2b88c4c7ba78eca4ef2
+ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90038577"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92136362"
 ---
 # <a name="how-to-suppress-compiler-warnings"></a>如何：取消编译器警告
 
@@ -24,7 +25,7 @@ ms.locfileid: "90038577"
 
 使用“生成”属性页可取消显示特定的 C# 和 F# 项目警告。
 
-1. 在**解决方案资源管理器**中，选择想要取消显示警告的项目。
+1. 在 **解决方案资源管理器** 中，选择想要取消显示警告的项目。
 
 1. 在菜单栏上，依次选择“查看” > “属性页”。
 
@@ -38,7 +39,7 @@ ms.locfileid: "90038577"
 
 使用“配置属性”属性页可取消显示特定的 C++ 项目警告。
 
-1. 在**解决方案资源管理器**中，选择想要取消显示警告的项目或源文件。
+1. 在 **解决方案资源管理器** 中，选择想要取消显示警告的项目或源文件。
 
 1. 在菜单栏上，依次选择“查看” > “属性页”。
 
@@ -60,7 +61,7 @@ ms.locfileid: "90038577"
 
 此示例演示如何编辑 .vbproj 文件以取消显示特定的编译器警告。
 
-1. 在**解决方案资源管理器**中，选择想要取消显示警告的项目。
+1. 在 **解决方案资源管理器** 中，选择想要取消显示警告的项目。
 
 1. 在菜单栏上，依次选择“项目” > “卸载项目”。
 

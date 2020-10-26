@@ -1,6 +1,7 @@
 ---
 title: “选项”对话框、项目和解决方案、生成和运行
-ms.custom: SEO-VS-2020
+description: 在 Visual Studio 中指定可同时生成的 C++ 或 C# 项目的最大数、某些默认生成行为及一些生成日志设置。
+'\ms.custom': SEO-VS-2020
 ms.date: 07/14/2017
 ms.technology: vs-ide-compile
 ms.topic: reference
@@ -16,12 +17,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ff1ec236c85aeaeed655c611a88cead4380258f0
-ms.sourcegitcommit: 4ae5e9817ad13edd05425febb322b5be6d3c3425
+ms.openlocfilehash: 5c91a016d91addc4f9e4b06acb32614bd6f6a162
+ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90037707"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92136766"
 ---
 # <a name="options-dialog-box-projects-and-solutions--build-and-run"></a>“选项”对话框：项目和解决方案 \> 生成和运行
 

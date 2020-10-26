@@ -1,5 +1,6 @@
 ---
 title: 适用于 Android 的 VS 模拟器的系统要求
+description: 了解适用于 Android 的 Visual Studio 仿真程序在 Hyper-V 上作为虚拟机运行的系统要求。
 ms.custom: SEO-VS-2020
 ms.prod: visual-studio-dev15
 ms.date: 11/04/2016
@@ -12,12 +13,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 327713a59b7c5c8da5c5b92cd16f3a20a76a7458
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: 726a02c852c4b41dacc2cab73ab4000ebda53a8a
+ms.sourcegitcommit: dfbbf041e68ec3a4cd97196b19c9226a4793e702
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90808254"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91878938"
 ---
 # <a name="system-requirements-for-the-visual-studio-emulator-for-android"></a>适用于 Android 的 Visual Studio 仿真程序的系统要求
 
@@ -54,7 +55,7 @@ Hyper-V 要求
 
   - 硬件辅助虚拟化
 
-  - 第二级别的地址转换 (SLAT)
+  - 二级地址转换 (SLAT)
 
   - 基于硬件的数据执行保护 (DEP)
 
@@ -99,7 +100,7 @@ BIOS 中的 Hyper-V 要求
 
 - 硬件辅助虚拟化
 
-- 第二级别的地址转换 (SLAT)
+- 二级地址转换 (SLAT)
 
 - 基于硬件的数据执行保护 (DEP)
 

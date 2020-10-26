@@ -1,5 +1,6 @@
 ---
 title: Visual Studio Tools for Unity 入门 | Microsoft Docs
+description: Visual Studio Tools for Unity 入门。 安装 Visual Studio，配置 Unity 以与 Visual Studio 一起使用，并了解对较旧版本的支持。
 ms.custom: ''
 ms.date: 05/11/2020
 ms.technology: vs-unity-tools
@@ -10,12 +11,12 @@ ms.author: crdun
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: a8f3e183bd72e9894eae55a5ed7c4f9322d44953
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 223458a448a4b32c3e9480f7189d5dc636ce8375
+ms.sourcegitcommit: 01c1b040b12d9d43e3e8ccadee20d6282154faad
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "88250100"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039446"
 ---
 # <a name="get-started-with-visual-studio-tools-for-unity"></a>Visual Studio Tools for Unity 入门
 
@@ -76,7 +77,7 @@ ms.locfileid: "88250100"
 
 自 Unity 2018.1 起，Visual Studio 应为 Unity 的默认外部脚本编辑器。 可以确认下是否如此，或者将外部脚本编辑器更改为特定版本的 Visual Studio：
 
-1. 从**Edit**菜单选择**Preferences**。
+1. 从 **Edit** 菜单选择 **Preferences** 。
 
    :::moniker range="vs-2017"
    ![选择首选项](media/vs-2017/vstu-unity-preferences.png)
@@ -87,7 +88,7 @@ ms.locfileid: "88250100"
 
 2. 在“Preferences”对话框中，选择“External Tools”选项卡。
 
-3. 从**External Script Editor**下拉列表中，选择所需版本的 Visual Studio（如果列出此项），否则选择**Browse...** 。
+3. 从 **External Script Editor** 下拉列表中，选择所需版本的 Visual Studio（如果列出此项），否则选择 **Browse...** 。
 
    :::moniker range="vs-2017"
    ![选择 Visual Studio](media/vs-2017/vstu-unity-external-tools.png)
@@ -96,7 +97,7 @@ ms.locfileid: "88250100"
    ![选择 Visual Studio](media/vs-2019/vstu-unity-external-tools.png)
    :::moniker-end
 
-4. 如果已选择**Browse...** ，请导航到 Visual Studio 安装目录中的**Common7/IDE**目录，然后选择**devenv.exe**。 然后单击**Open**。
+4. 如果已选择 **Browse...** ，请导航到 Visual Studio 安装目录中的 **Common7/IDE** 目录，然后选择 **devenv.exe** 。 然后单击 **Open** 。
 
    :::moniker range="vs-2017"
    ![选择“打开”](media/vs-2017/vstu-browse-for-application.png)
@@ -105,9 +106,9 @@ ms.locfileid: "88250100"
    ![选择“打开”](media/vs-2019/vstu-browse-for-application.png)
    :::moniker-end
 
-5. 在**External Script Editor**列表中选择 Visual Studio 后，确认已选中**Editor Attaching**复选框。
+5. 在 **External Script Editor** 列表中选择 Visual Studio 后，确认已选中 **Editor Attaching** 复选框。
 
-6. 关闭**Preferences**对话框以完成配置过程。
+6. 关闭 **Preferences** 对话框以完成配置过程。
 
 ## <a name="support-for-older-versions"></a>支持旧版本
 

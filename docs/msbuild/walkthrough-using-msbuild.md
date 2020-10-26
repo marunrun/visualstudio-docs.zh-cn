@@ -1,6 +1,7 @@
 ---
-title: 演练：使用 MSBuild | Microsoft Docs
-ms.date: 03/20/2019
+title: 使用 MSBuild
+description: 了解 MSBuild 项目文件的各个部分，包括项、项元数据、属性、目标和任务。
+ms.date: 10/19/2020
 ms.topic: conceptual
 ms.custom: contperfq2
 helpviewer_keywords:
@@ -11,12 +12,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6f074e69f23e20ecb92d32efb69fe011c0dbf797
-ms.sourcegitcommit: bccc6503542e1517e0e96a9f02f5a89d69c60c25
+ms.openlocfilehash: b26c13765daf5a82a9961e6509b36e24e18f4e0c
+ms.sourcegitcommit: 6b62e09026b6f1446187c905b789645f967a371c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91134813"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92298541"
 ---
 # <a name="walkthrough-use-msbuild"></a>演练：使用 MSBuild
 
@@ -29,6 +30,24 @@ MSBuild 是 Microsoft 和 Visual Studio 的生成平台。 本演练介绍 MSBui
 - 如何使用生成项。
 
 可从 Visual Studio 或命令窗口  运行 MSBuild。 本演练将使用 Visual Studio 创建 MSBuild 项目文件。 可在 Visual Studio 中编辑项目文件，并使用命令窗口  生成项目并检查结果。
+
+## <a name="install-msbuild"></a>安装 MSBuild
+
+::: moniker range="vs-2017"
+
+如果具有 Visual Studio，表示已经安装了 MSBuild。 若要在没有 Visual Studio 的系统上安装 MSBuild 15，请转到 [Visual Studio 早期版本下载](https://visualstudio.microsoft.com/vs/older-downloads/)，展开“Visual Studio 2017”并选择“下载”按钮 。 如果有 Visual Studio 订阅，请登录并找到下载 Visual Studio 2017 生成工具最新版本的链接。 如果没有 Visual Studio 订阅，仍然可以安装生成工具的最新版本。 在此页上，使用版本选择器切换到 2019 版本的页面，然后按照安装说明进行操作。
+::: moniker-end
+
+::: moniker range="vs-2019"
+如果具有 Visual Studio，表示已经安装了 MSBuild。 在 Visual Studio 2019 中，它安装在 Visual Studio 安装文件夹下。 对于 Windows 10 上的典型默认安装，MSBuild.exe 位于 MSBuild\Current\Bin 中的安装文件夹下。
+
+若要在没有 Visual Studio 的系统上安装 MSBuild，请转到 [Visual Studio 下载](https://visualstudio.microsoft.com/downloads/)并向下滚动到“所有下载”，然后展开“Visual Studio 2019 工具” 。 安装 Visual Studio 2019 生成工具（包含 MSBuild），或安装 [.NET Core SDK](/dotnet/core/sdk#acquiring-the-net-core-sdk)。
+
+在安装程序中，确保选择要为工作负载使用的 MSBuild 工具，然后选择“安装”。
+
+![安装 MSBuild](media/walkthrough-using-msbuild/installation-msbuild-tools.png)
+
+::: moniker-end
 
 ## <a name="create-an-msbuild-project"></a>创建 MSBuild 项目
 
@@ -53,7 +72,7 @@ MSBuild 是 Microsoft 和 Visual Studio 的生成平台。 本演练介绍 MSBui
 
 ## <a name="examine-the-project-file"></a>检查项目文件
 
- 上一节中使用 Visual Studio 创建了一个 Visual C# 项目文件。 该项目文件在**解决方案资源管理器**中由名为 BuildApp 的项目节点表示。 可使用 Visual Studio 代码编辑器来检查项目文件。
+ 上一节中使用 Visual Studio 创建了一个 Visual C# 项目文件。 该项目文件在 **解决方案资源管理器** 中由名为 BuildApp 的项目节点表示。 可使用 Visual Studio 代码编辑器来检查项目文件。
 
 **检查项目文件**
 

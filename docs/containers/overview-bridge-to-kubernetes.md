@@ -9,12 +9,12 @@ monikerRange: '>=vs-2019'
 manager: jillfra
 author: ghogen
 ms.author: ghogen
-ms.openlocfilehash: a224135e366c7a266defa525772dadf445208f3b
-ms.sourcegitcommit: c31815e140f2ec79e00a9a9a19900778ec11e860
+ms.openlocfilehash: afeb612e1d092ebc1f5c33394a62dd9cef6b6a1c
+ms.sourcegitcommit: 54ec951bcfa87fd80a42e3ab4539084634a5ceb4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91829883"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92116098"
 ---
 # <a name="how-bridge-to-kubernetes-works"></a>Kubernetes 桥接的工作原理
 
@@ -112,6 +112,8 @@ Bridge to Kubernetes 具有以下限制：
 
 * 服务必须由单个 pod 支持，才能连接到该服务。 不能连接到具有多个 pod 的服务，例如具有副本的服务。
 * 要使 Bridge to Kubernetes 成功连接，一个 pod 只能有一个容器在该 pod 中运行。 Bridge to Kubernetes 不能连接到具有附加容器（如服务网格注入的 sidecar 容器）的 pod 的服务。
+* 目前，Bridge to Kubernetes pod 必须是 Linux 容器。 不支持 Windows 容器。
+* 隔离不能与 HTTPS 一起使用。
 * Bridge to Kubernetes 需要提升的权限才能在开发计算机上运行，以便编辑主机文件。
 * Bridge to Kubernetes 不能用于已启用 Azure Dev Spaces 的群集。
 

@@ -1,5 +1,6 @@
 ---
 title: 使用 Visual Basic 开发人员设置管理生成配置
+description: 了解应用 Visual Basic 开发人员设置时隐藏的高级生成配置选项，以及如何手动启用这些生成设置。
 titleSuffix: ''
 ms.custom: SEO-VS-2020
 ms.date: 11/21/2018
@@ -16,12 +17,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ee729a0dfe27bf54a64b42ff64b23bf851c14d06
-ms.sourcegitcommit: bccc6503542e1517e0e96a9f02f5a89d69c60c25
+ms.openlocfilehash: bd13c0a9f64ce484d9ba4e3193f7da94d0b1e446
+ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91135113"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92136714"
 ---
 # <a name="how-to-manage-build-configurations-with-visual-basic-developer-settings-applied"></a>如何：在应用 Visual Basic 开发人员设置后管理生成配置
 
@@ -29,17 +30,17 @@ ms.locfileid: "91135113"
 
 ## <a name="enable-advanced-build-configurations"></a>启用高级生成配置
 
-默认情况下，Visual Basic 开发人员设置将隐藏用于打开“Configuration Manager”对话框以及[项目设计器](../ide/reference/application-page-project-designer-visual-basic.md)中的“配置”和“平台”列表的选项 。
+默认情况下，Visual Basic 开发人员设置将隐藏用于打开“Configuration Manager”  对话框以及  。
 
-1. 在 **“工具”** 菜单上，单击 **“选项”** 。
+1. 在“工具”  菜单上，单击“选项” 。
 
-2. 展开“项目和解决方案”并单击“常规”   。
+2. 展开“项目和解决方案”并单击“常规”  。
 
-3. 单击“显示高级生成配置”****。
+3. 单击“显示高级生成配置”  。
 
 4. 单击“确定”。
 
-     现在可在“生成”菜单上使用“Configuration Manager”，并且“项目设计器”上会显示“配置”和“平台”列表********************。
+     现在可在“生成”菜单上使用“Configuration Manager”，并且“项目设计器”上会显示“配置”和“平台”列表  。
 
 ## <a name="see-also"></a>请参阅
 

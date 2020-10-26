@@ -1,5 +1,7 @@
 ---
 title: 选项, 文本编辑器, JavaScript, 代码验证
+description: 了解如何使用“代码验证”页的“选项”对话框修改影响 JavaScript 处理错误的方式的设置。
+ms.custom: SEO-VS-2020
 ms.date: 10/29/2018
 ms.technology: vs-javascript
 ms.topic: reference
@@ -10,16 +12,16 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2090eeac014feb6a3a4308c920140d7934d3b0e4
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: a3335f4bc5d59b7b4aab3e7341d9f1574d095eeb
+ms.sourcegitcommit: a7944c325bedd8efbb244452741864089a02f5db
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "68606004"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91947747"
 ---
 # <a name="options-dialog-box-text-editor--javascripttypescript--code-validation"></a>“选项”对话框：“文本编辑器”\>“JavaScript/TypeScript”\>“代码验证”
 
-使用“代码验证”页的“选项”对话框修改影响 JavaScript 处理错误的方式的设置   。 可以通过选择菜单栏上的“工具” > “选项”，然后展开“文本编辑器” > “JavaScript/TypeScript” > “代码验证”来访问“代码验证”页       。
+使用“代码验证”页的“选项”对话框修改影响 JavaScript 处理错误的方式的设置  。 可以通过选择菜单栏上的“工具” > “选项”，然后展开“文本编辑器” > “JavaScript/TypeScript” > “代码验证”来访问“代码验证”页  。
 
 [!INCLUDE[note_settings_general](../../data-tools/includes/note_settings_general_md.md)]
 
@@ -37,8 +39,8 @@ ms.locfileid: "68606004"
 
 **将错误显示为警告**
 
-当设置为“True”时，JavaScript 错误将显示为警告而不是”错误列表”中的错误   。
+当设置为“True”时，JavaScript 错误将显示为警告而不是”错误列表”中的错误  。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [JavaScript IntelliSense](../../ide/javascript-intellisense.md)

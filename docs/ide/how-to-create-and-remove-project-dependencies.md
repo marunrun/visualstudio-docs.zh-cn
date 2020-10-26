@@ -1,5 +1,7 @@
 ---
 title: 如何：创建和删除项目依赖项
+description: 了解如何使用 Visual Studio 创建和删除项目在其他项目的代码上的依赖项。
+ms.custom: SEO-VS-2020
 ms.date: 06/21/2017
 ms.topic: how-to
 f1_keywords:
@@ -18,12 +20,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ad21aeae2d348f56cb722365cd1e2ded249bbefe
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 8b2a99e297b4ce7291c0dd94947155794cf8c3d4
+ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85284459"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92137020"
 ---
 # <a name="how-to-create-and-remove-project-dependencies"></a>如何：创建和删除项目依赖项
 
@@ -31,7 +33,7 @@ ms.locfileid: "85284459"
 
 ## <a name="to-assign-dependencies-to-projects"></a>将依赖项分配给项目
 
-1. 在“解决方案资源管理器”中，选择一个项目  。
+1. 在“解决方案资源管理器”中，选择一个项目。
 
 2. 在“项目”  菜单上，选择“项目依赖项”  。
 
@@ -48,7 +50,7 @@ ms.locfileid: "85284459"
 
 ## <a name="to-remove-dependencies-from-projects"></a>删除项目中的依赖项
 
-1. 在“解决方案资源管理器”中，选择一个项目  。
+1. 在“解决方案资源管理器”中，选择一个项目。
 
 2. 在“项目”  菜单上，选择“项目依赖项”  。
 
@@ -61,7 +63,7 @@ ms.locfileid: "85284459"
 
 4. 在“依赖对象”  字段中，清除不再属于此项目依赖项的任何其他项目的复选框。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [在 Visual Studio 中生成和清理项目和解决方案](../ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md)
 - [编译和生成](../ide/compiling-and-building-in-visual-studio.md)

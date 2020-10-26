@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: lank
 manager: lank
 ms.assetid: 97bf7474-c6c2-49b3-b2c9-f1b2808eed1a
-ms.date: 03/02/2020
+ms.date: 10/20/2020
 ms.topic: conceptual
 description: 如果别名或友好名称已被使用，登录可能会失败
-ms.openlocfilehash: f73aa52be518de627d468e8e1171de5f3145753b
-ms.sourcegitcommit: 09d1f5cef5360cdc1cdfd4b22a1a426b38079618
+ms.openlocfilehash: c5c211cd674e86edc4528e6e2c5e75bd5b02132d
+ms.sourcegitcommit: 6b62e09026b6f1446187c905b789645f967a371c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91006210"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92298190"
 ---
 # <a name="signing-into-visual-studio-subscriptions-may-fail-when-using-aliases"></a>使用别名登录 Visual Studio 订阅可能会失败
 根据用于登录的帐户类型，登录 [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) 时，可用订阅可能无法正确显示。 一个潜在的原因是使用了“别名”或“友好名称”来代替订阅所分配到的登录标识。 这就是所谓的“别名”。
@@ -33,10 +33,10 @@ ms.locfileid: "91006210"
 
 1. 使用订阅分配电子邮件中提到的登录地址登录到 https://my.visualstudio.com/subscriptions 。
 
-2. 验证页面右上角列出的登录电子邮件地址是否与你用于登录的地址匹配。  如果不匹配，则你的 UPN 不匹配，你将无法查看订阅。 
+2. 在页面右上角单击你的名字。  这样将打开配置文件。  验证配置文件中列出的登录电子邮件地址是否与你用于登录的地址匹配。  如果不匹配，则你的 UPN 不匹配，你将无法查看订阅。 
 
 > [!div class="mx-imgBorder"]
-> ![登录电子邮件地址](_img//aliasing/sign-in-email.png "确保右上方显示的电子邮件地址与用于登录的电子邮件地址匹配。")
+> ![登录电子邮件地址](_img//aliasing/sign-in-email.png "确保配置文件中显示的电子邮件地址与用于登录的电子邮件地址匹配。")
 
 #### <a name="how-to-fix-a-upn-mismatch"></a>如何修复 UPN 不匹配的问题
 
@@ -64,7 +64,7 @@ ms.locfileid: "91006210"
 
 Visual Studio 平台会排定主要别名的优先级，以显示订阅详细信息。 
 
-1. 转到**管理登录到 Microsoft 的方式**。 如果系统提示，则登录到 Microsoft 帐户。 
+1. 转到 **管理登录到 Microsoft 的方式** 。 如果系统提示，则登录到 Microsoft 帐户。 
 
 2. 在“帐户别名”下，选择用于分配订阅的电子邮件旁的“设为主要”。 
 

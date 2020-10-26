@@ -1,5 +1,7 @@
 ---
 title: “项目设计器”->“生成事件”页 (C#)
+description: 了解如何指定生成配置说明。 还可以指定任何生成后事件运行的条件。
+ms.custom: SEO-VS-2020
 ms.date: 10/17/2019
 ms.technology: vs-ide-compile
 ms.topic: reference
@@ -16,16 +18,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: a56093ab14b9be72f99e36b03eefe7abb895183f
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5f70557338a48931a3d109f345714d219f428f50
+ms.sourcegitcommit: c9a84e6c01e12ccda9ec7072dd524830007e02a3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85419050"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92136844"
 ---
 # <a name="build-events-page-project-designer-c"></a>“项目设计器”->“生成事件”页 (C#)
 
-使用“项目设计器”的“生成事件”页指定生成配置说明   。 还可以指定任何生成后事件运行的条件。 有关详细信息，请参阅[如何：指定生成事件 (C#)](../../ide/how-to-specify-build-events-csharp.md) 以及[如何：指定生成事件 (Visual Basic)](../../ide/how-to-specify-build-events-visual-basic.md)。
+使用“项目设计器”的“生成事件”页指定生成配置说明  。 还可以指定任何生成后事件运行的条件。 有关详细信息，请参阅[如何：指定生成事件 (C#)](../../ide/how-to-specify-build-events-csharp.md) 以及[如何：指定生成事件 (Visual Basic)](../../ide/how-to-specify-build-events-visual-basic.md)。
 
 ## <a name="uielement-list"></a>UIElement 列表
 
@@ -37,33 +39,33 @@ ms.locfileid: "85419050"
 
 此控件在本页面上不可编辑。 有关此控件的说明，请参阅[“项目设计器”->“生成”页 (C#)](../../ide/reference/build-page-project-designer-csharp.md)。
 
-预生成事件命令行 
+**预生成事件命令行**
 
-在生成开始之前，指定要执行的任何命令。 要键入长命令，单击“编辑预生成”，显示[预生成事件/生成后事件命令行对话框](../../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md)  。
+在生成开始之前，指定要执行的任何命令。 要键入长命令，单击“编辑预生成”，显示  。
 
 > [!NOTE]
 > 如果项目是最新的且没有触发任何生成，则不会运行预生成事件。
 
-生成后事件命令行 
+**生成后事件命令行**
 
-在生成结束之后，指定要执行的任何命令。 要键入长命令，单击“编辑生成后”，显示“预生成事件/生成后事件命令行对话框”   。
+在生成结束之后，指定要执行的任何命令。 要键入长命令，单击“编辑生成后”，显示“预生成事件/生成后事件命令行对话框” 。
 
 > [!NOTE]
 > 在运行 .bat 文件的所有生成后命令之前添加 `call` 语句。 例如，`call C:\MyFile.bat` 或 `call C:\MyFile.bat call C:\MyFile2.bat`。
 
-运行生成后事件 
+**运行生成后事件**
 
 指定以下生成后事件运行的条件，如下表所示。
 
 |选项|结果|
 |------------|------------|
-|始终 |无论生成是否成功，均运行生成后事件。|
-|成功生成时 |如果生成成功，则运行生成后事件。 因此，即使项目已为最新状态，但只要生成成功，就会运行该事件。|
+|**始终**|无论生成是否成功，均运行生成后事件。|
+|**成功生成时**|如果生成成功，则运行生成后事件。 因此，即使项目已为最新状态，但只要生成成功，就会运行该事件。|
 |生成更新项目输出时 |生成后事件仅在编译器的输出文件 (.exe or .dll) 不同于之前的编译器输出文件时才运行。 因此，如果项目为最新状态，则不会运行生成后事件。|
 
 ## <a name="in-the-project-file"></a>在项目文件中
 
-在早期版本的 Visual Studio 中，当你更改 IDE 中的 PreBuildEvent 或 PostBuildEvent 设置时，Visual Studio 会将 `PreBuildEvent` 或 `PostBuildEvent` 属性添加到项目文件   。 例如，如果 IDE 中的 PreBuildEvent 命令行设置如下  ：
+在早期版本的 Visual Studio 中，当你更改 IDE 中的 PreBuildEvent 或 PostBuildEvent 设置时，Visual Studio 会将 `PreBuildEvent` 或 `PostBuildEvent` 属性添加到项目文件  。 例如，如果 IDE 中的 PreBuildEvent 命令行设置如下  ：
 
 ```input
 "$(ProjectDir)PreBuildEvent.bat" "$(ProjectDir)..\" "$(ProjectDir)" "$(TargetDir)"
@@ -77,7 +79,7 @@ ms.locfileid: "85419050"
 </PropertyGroup>
 ```
 
-对于 .NET Core 项目，Visual Studio 2019（以及较新更新中的 Visual Studio 2017）为 PreBuildEvent 和 PostBuildEvent 设置添加了名为 `PreBuild` 或 `PostBuild` 的 MSBuild 目标   。 这些目标使用 BeforeTargets 和 AfterTargets 属性，它们是 MSBuild 可识别的属性   。 例如，对于前面的示例，Visual Studio 现在生成以下代码：
+对于 .NET Core 项目，Visual Studio 2019（以及较新更新中的 Visual Studio 2017）为 PreBuildEvent 和 PostBuildEvent 设置添加了名为 `PreBuild` 或 `PostBuild` 的 MSBuild 目标  。 这些目标使用 BeforeTargets 和 AfterTargets 属性，它们是 MSBuild 可识别的属性  。 例如，对于前面的示例，Visual Studio 现在生成以下代码：
 
 ```xml
 <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
@@ -96,7 +98,7 @@ ms.locfileid: "85419050"
 > [!NOTE]
 > 对这些项目文件进行了更改以支持 SDK 样式的项目。 如果要将项目文件从旧格式手动迁移到 SDK 样式的格式，则应删除 `PreBuildEvent` 和 `PostBuildEvent` 属性，并将其替换为 `PreBuild` 和 `PostBuild` 目标，如前面的代码所示。 若要了解如何判断你的项目是否为 SDK 样式的项目，请参阅[检查项目格式](/nuget/resources/check-project-format)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [如何：指定生成事件 (Visual Basic)](../../ide/how-to-specify-build-events-visual-basic.md)
 - [如何：指定生成事件 (C#)](../../ide/how-to-specify-build-events-csharp.md)

@@ -21,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9918a2de67693c0232c94a736f12c7af0a0b959c
-ms.sourcegitcommit: 95f26af1da51d4c83ae78adcb7372b32364d8a2b
+ms.openlocfilehash: e8051b83e0022361e4cb1cb61602dfcf8991062e
+ms.sourcegitcommit: dfbbf041e68ec3a4cd97196b19c9226a4793e702
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79301055"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "92298681"
 ---
 # <a name="remote-debugging"></a>Remote Debugging
 你可以调试已部署在另一台计算机的 Visual Studio 应用程序。 要进行此操作，可使用 Visual Studio 远程调试器。
@@ -35,7 +35,7 @@ ms.locfileid: "79301055"
 
 |方案|链接|
 |-|-|-|
-|Azure 应用服务|[Snapshot Debugger](../debugger/debug-live-azure-applications.md) 或 [远程调试 Azure 上的 ASP.NET](../debugger/remote-debugging-azure.md)|
+|Azure 应用服务|[远程调试 Azure 上的 ASP.NET](../debugger/remote-debugging-azure.md)，或 Visual Studio Enterprise 的 [Snapshot Debugger](../debugger/debug-live-azure-applications.md)|
 |Azure VM|[远程调试 Azure 上的 ASP.NET](../debugger/remote-debugging-azure.md)|
 |Azure Service Fabric|[调试 Azure Service Fabric 应用程序](/azure/service-fabric/service-fabric-debugging-your-application#debug-a-remote-service-fabric-application)|
 |ASP.NET|[远程调试 ASP.NET Core](../debugger/remote-debugging-aspnet-on-a-remote-iis-computer.md) 或[远程调试 ASP.NET](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md)|
@@ -93,7 +93,7 @@ ms.locfileid: "79301055"
      > [!IMPORTANT]
      > 可以在其他用户帐户（不同于你在 Visual Studio 计算机上使用的用户帐户）下运行远程调试器，但你必须将该用户帐户添加到远程调试器权限中。
 
-     或者，你可以从具有 /allow \<username> 参数的命令行启动远程调试器：msvsmon /allow \<username@computer>。
+     或者，你可以从具有 /allow \<username> 参数的命令行启动远程调试器：msvsmon /allow \<username@computer> 。
 
 - 如果需要为远程工具更改身份验证模式或端口号，或指定超时值：选择“工具”>“选项”。
 
